@@ -29,11 +29,6 @@ Oznacza to, że będziesz musiał uiścić opłatę transakcyjną, więc upewnij
 - Skrypt wdrażania lub wtyczka.
 - Dostęp do [węzła Ethereum](/developers/docs/nodes-and-clients/) — można go uzyskać, uruchamiając własny węzeł, łącząc się z węzłem publicznym lub za pośrednictwem klucza API przy użyciu usługi takiej jak Infura lub Alchemy
 
-<!-- TODO Elaborate on options: e.g. run a node, use a node as a service etc. -->
-
-<!-- TODO! -->
-<!-- ### Steps to deploy a smart contract -->
-
 Po wdrożeniu Twój kontrakt będzie miał adres Ethereum, podobnie jak inne [konta](/developers/docs/accounts/).
 
 ## Powiązane narzędzia {#related-tools}
@@ -60,4 +55,4 @@ _Znasz jakieś zasoby społeczności, które Ci pomogły? Wyedytuj tę stronę 
 
 ## Powiązane tematy
 
-- [Frameworki programistyczne](/en/developers/docs/frameworks/)
+- [Frameworki programistyczne](/developers/docs/frameworks/)

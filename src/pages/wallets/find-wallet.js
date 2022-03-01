@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
 import styled from "styled-components"
-import Img from "gatsby-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 import { translateMessageId } from "../../utils/translations"
 import Translation from "../../components/Translation"
@@ -15,18 +15,15 @@ import WalletCompare from "../../components/WalletCompare"
 import { Divider, Page } from "../../components/SharedStyledComponents"
 
 const Subtitle = styled.div`
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 140%;
+  max-width: 45ch;
   text-align: center;
   color: ${(props) => props.theme.colors.text200};
-`
 
-const SubtitleTwo = styled.div`
-  font-size: 20px;
-  line-height: 140%;
-  margin-bottom: 2rem;
-  text-align: center;
-  color: ${(props) => props.theme.colors.text300};
+  &:last-of-type {
+    margin-bottom: 2rem;
+  }
 `
 
 const HeroContainer = styled.div`
@@ -50,7 +47,7 @@ const HeroContainer = styled.div`
   }
 `
 
-const Hero = styled(Img)`
+const Hero = styled(GatsbyImage)`
   position: absolute !important;
   z-index: -1;
   width: 100%;
@@ -98,7 +95,7 @@ const FindWalletPage = ({ location, data }) => {
 
       <HeroContainer>
         <Hero
-          fluid={data.hero.childImageSharp.fluid}
+          image={getImage(data.hero)}
           alt={translateMessageId("page-find-wallet-image-alt", intl)}
           loading="eager"
         />
@@ -110,9 +107,9 @@ const FindWalletPage = ({ location, data }) => {
           <Subtitle>
             <Translation id="page-find-wallet-description" />
           </Subtitle>
-          <SubtitleTwo>
+          <Subtitle>
             <Translation id="page-find-wallet-desc-2" />
-          </SubtitleTwo>
+          </Subtitle>
         </Header>
       </HeroContainer>
       <InfoBannerContainer>
@@ -126,12 +123,9 @@ const FindWalletPage = ({ location, data }) => {
       <WalletCompare location={location} />
       <Divider />
       <CalloutBanner
-        title={translateMessageId("page-find-wallet-use-your-wallet", intl)}
-        description={translateMessageId(
-          "page-find-wallet-use-wallet-desc",
-          intl
-        )}
-        image={data.dapps.childImageSharp.fluid}
+        titleKey={"page-find-wallet-use-your-wallet"}
+        descriptionKey={"page-find-wallet-use-wallet-desc"}
+        image={getImage(data.dapps)}
         alt={translateMessageId(
           "page-index-sections-individuals-image-alt",
           intl
@@ -151,19 +145,20 @@ const FindWalletPage = ({ location, data }) => {
 export default FindWalletPage
 
 export const query = graphql`
-  query {
+  {
     hero: file(relativePath: { eq: "wallets/find-wallet-hero.png" }) {
       childImageSharp {
-        fluid(maxWidth: 1440) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
       }
     }
     dapps: file(relativePath: { eq: "doge-computer.png" }) {
       childImageSharp {
-        fluid(maxWidth: 600) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(
+          width: 600
+          layout: CONSTRAINED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
   }

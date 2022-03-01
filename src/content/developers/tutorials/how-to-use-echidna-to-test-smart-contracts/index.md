@@ -11,8 +11,6 @@ source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/echidna
 ---
 
-<!-- Probably turn into a serialised tutorial -->
-
 ## Installation {#installation}
 
 Echidna can be installed through docker or using the pre-compiled binary.
@@ -43,7 +41,7 @@ Echidna is a property-based fuzzer, we described in our previous blogposts ([1](
 
 ### Fuzzing {#fuzzing}
 
-[Fuzzing](https://en.wikipedia.org/wiki/Fuzzing) is a well-known technique in the security community. It consists to generate more or less randomly inputs to find bugs in the program. Fuzzers for traditional software (such as [AFL](http://lcamtuf.coredump.cx/afl/) or [LibFuzzer](https://llvm.org/docs/LibFuzzer.html)) are known to be efficient tools to find bugs.
+[Fuzzing](https://wikipedia.org/wiki/Fuzzing) is a well-known technique in the security community. It consists to generate more or less randomly inputs to find bugs in the program. Fuzzers for traditional software (such as [AFL](http://lcamtuf.coredump.cx/afl/) or [LibFuzzer](https://llvm.org/docs/LibFuzzer.html)) are known to be efficient tools to find bugs.
 
 Beyond the purely random generation of inputs, there are many techniques and strategies to generate good inputs, including:
 
@@ -53,7 +51,7 @@ Beyond the purely random generation of inputs, there are many techniques and str
 
 ### Property-based fuzzing {#property-based-fuzzing}
 
-Echidna belongs to a specific family of fuzzer: property-based fuzzing heavily inspired by [QuickCheck](https://en.wikipedia.org/wiki/QuickCheck). In contrast to classic fuzzer that will try to find crashes, Echidna will try to break user-defined invariants.
+Echidna belongs to a specific family of fuzzer: property-based fuzzing heavily inspired by [QuickCheck](https://wikipedia.org/wiki/QuickCheck). In contrast to classic fuzzer that will try to find crashes, Echidna will try to break user-defined invariants.
 
 In smart contracts, invariants are Solidity functions, that can represent any incorrect or invalid state that the contract can reach, including:
 
@@ -331,7 +329,7 @@ contract Incrementor {
 
 ### Run Echidna {#run-echidna-2}
 
-To enable the assertion failture testing, create an [Echidna configuration file](https://github.com/crytic/echidna/wiki/Config) `config.yaml`:
+To enable the assertion failure testing, create an [Echidna configuration file](https://github.com/crytic/echidna/wiki/Config) `config.yaml`:
 
 ```yaml
 checkAsserts: true
@@ -355,7 +353,7 @@ As you can see, Echidna reports some assertion failure in the `inc` function. Ad
 
 ### When and how use assertions {#when-and-how-use-assertions}
 
-Assertions can be used as alternatives to explicit properties, specially if the conditions to check are directly related with the correct use of some operation `f`. Adding assertions after some code will enforce that the check will happen inmediately after it was executed:
+Assertions can be used as alternatives to explicit properties, specially if the conditions to check are directly related with the correct use of some operation `f`. Adding assertions after some code will enforce that the check will happen immediately after it was executed:
 
 ```solidity
 function f(..) public {
@@ -551,11 +549,11 @@ Seed: -7293830866560616537
 
 ```
 
-This time, it found that the property is violated inmmediately.
+This time, it found that the property is violated immediately.
 
 ## Finding transactions with high gas consumption {#finding-transactions-with-high-gas-consumption}
 
-We will see how to find the transactions with has gas consumption with Echidna. The target is the following smart contract:
+We will see how to find the transactions with high gas consumption with Echidna. The target is the following smart contract:
 
 ```solidity
 contract C {
@@ -595,7 +593,7 @@ Seed: 2320549945714142710
 
 ### Measuring Gas Consumption {#measuring-gas-consumption}
 
-To enable the gas consumption with Echidna, create an configuration file `config.yaml`:
+To enable the gas consumption with Echidna, create a configuration file `config.yaml`:
 
 ```yaml
 estimateGas: true

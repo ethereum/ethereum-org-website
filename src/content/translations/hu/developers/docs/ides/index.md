@@ -5,7 +5,7 @@ lang: hu
 sidebar: true
 ---
 
-Amikor egy [integrált fejlesztői környezet (IDE)](https://en.wikipedia.org/wiki/Integrated_development_environment) felállításáról van szó, az Ethereumon történő fejlesztés hasonló bármely más szoftver projekthez. Sok lehetőség közül lehet választani, így végül válaszd azt, mely a legjobban megfelel a preferenciáidnak.
+Amikor egy [integrált fejlesztői környezet (IDE)](https://wikipedia.org/wiki/Integrated_development_environment) felállításáról van szó, az Ethereumon történő fejlesztés hasonló bármely más szoftver projekthez. Sok lehetőség közül lehet választani, így végül válaszd azt, mely a legjobban megfelel a preferenciáidnak.
 
 ## Web alapú IDE-k {#web-based-ides}
 

@@ -1,10 +1,9 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { useIntl } from "gatsby-plugin-intl"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import styled from "styled-components"
-import Img from "gatsby-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import ButtonLink from "../components/ButtonLink"
 import ButtonDropdown from "../components/ButtonDropdown"
 import BannerNotification from "../components/BannerNotification"
@@ -23,20 +22,21 @@ import PageMetadata from "../components/PageMetadata"
 import Pill from "../components/Pill"
 import RandomAppList from "../components/RandomAppList"
 import Roadmap from "../components/Roadmap"
-import Eth2TableOfContents from "../components/Eth2TableOfContents"
+import UpgradeTableOfContents from "../components/UpgradeTableOfContents"
 import TableOfContents from "../components/TableOfContents"
 import TranslationsInProgress from "../components/TranslationsInProgress"
 import Translation from "../components/Translation"
 import SectionNav from "../components/SectionNav"
 import { isLangRightToLeft } from "../utils/translations"
+import { getSummaryPoints } from "../utils/getSummaryPoints"
 import {
   Divider,
   Paragraph,
   Header1,
   Header4,
-  H5,
 } from "../components/SharedStyledComponents"
 import Emoji from "../components/Emoji"
+import YouTube from "../components/YouTube"
 
 const Page = styled.div`
   display: flex;
@@ -99,14 +99,6 @@ const ContentContainer = styled.article`
   }
 `
 
-const LastUpdated = styled.p`
-  color: ${(props) => props.theme.colors.text200};
-  font-style: italic;
-  padding-top: 1rem;
-  margin-bottom: 0rem;
-  border-top: 1px solid ${(props) => props.theme.colors.border};
-`
-
 const Pre = styled.pre`
   max-width: 100%;
   overflow-x: scroll;
@@ -117,30 +109,33 @@ const Pre = styled.pre`
   white-space: pre-wrap;
 `
 
-const H1 = styled.h1`
-  font-size: 48px;
+const InfoTitle = styled.h2`
+  font-size: 3rem;
   font-weight: 700;
   text-align: right;
   margin-top: 0rem;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     text-align: left;
-    font-size: 40px;
+    font-size: 2.5rem
     display: none;
   }
 `
 
 const H2 = styled.h2`
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: 700;
   margin-top: 4rem;
+
   a {
     display: none;
   }
 
   /* Anchor tag styles */
+
   a {
     position: relative;
-    display: none;
+    display: initial;
+    opacity: 0;
     margin-left: -1.5em;
     padding-right: 0.5rem;
     font-size: 1rem;
@@ -148,6 +143,7 @@ const H2 = styled.h2`
     &:hover {
       display: initial;
       fill: ${(props) => props.theme.colors.primary};
+      opacity: 1;
     }
   }
 
@@ -155,21 +151,25 @@ const H2 = styled.h2`
     a {
       display: initial;
       fill: ${(props) => props.theme.colors.primary};
+      opacity: 1;
     }
   }
 `
 
 const H3 = styled.h3`
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 700;
+
   a {
     display: none;
   }
 
   /* Anchor tag styles */
+
   a {
     position: relative;
-    display: none;
+    display: initial;
+    opacity: 0;
     margin-left: -1.5em;
     padding-right: 0.5rem;
     font-size: 1rem;
@@ -177,6 +177,7 @@ const H3 = styled.h3`
     &:hover {
       display: initial;
       fill: ${(props) => props.theme.colors.primary};
+      opacity: 1;
     }
   }
 
@@ -184,6 +185,7 @@ const H3 = styled.h3`
     a {
       display: initial;
       fill: ${(props) => props.theme.colors.primary};
+      opacity: 1;
     }
   }
 `
@@ -196,7 +198,6 @@ const components = {
   h2: H2,
   h3: H3,
   h4: Header4,
-  h5: H5,
   p: Paragraph,
   pre: Pre,
   table: MarkdownTable,
@@ -216,16 +217,17 @@ const components = {
   UpgradeStatus,
   DocLink,
   ExpandableCard,
+  YouTube,
 }
 
 const Title = styled.h1`
-  font-size: 40px;
+  font-size: 2.5rem;
   font-weight: 700;
   margin-top: 1rem;
 `
 
 const SummaryPoint = styled.li`
-  font-size: 16px;
+  font-size: 1rem;
   color: ${(props) => props.theme.colors.text300};
   margin-bottom: 0rem;
   line-height: auto;
@@ -273,7 +275,7 @@ const HeroContainer = styled.div`
   }
 `
 
-const Image = styled(Img)`
+const Image = styled(GatsbyImage)`
   flex: 1 1 100%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -351,6 +353,7 @@ const UseCasePage = ({ data, pageContext }) => {
   const mdx = data.pageData
   const isRightToLeft = isLangRightToLeft(mdx.frontmatter.lang)
   const tocItems = mdx.tableOfContents.items
+  const summaryPoints = getSummaryPoints(mdx.frontmatter)
 
   const { editContentUrl } = data.siteData.siteMetadata
   const { relativePath } = pageContext
@@ -400,7 +403,7 @@ const UseCasePage = ({ data, pageContext }) => {
           <Title>{mdx.frontmatter.title}</Title>
           <SummaryBox>
             <ul>
-              {mdx.frontmatter.summaryPoints.map((point, idx) => (
+              {summaryPoints.map((point, idx) => (
                 <SummaryPoint key={idx}>{point}</SummaryPoint>
               ))}
             </ul>
@@ -413,7 +416,7 @@ const UseCasePage = ({ data, pageContext }) => {
         </TitleCard>
         <Image
           useCase={useCase}
-          fluid={mdx.frontmatter.image.childImageSharp.fluid}
+          image={getImage(mdx.frontmatter.image)}
           alt={mdx.frontmatter.alt}
         />
       </HeroContainer>
@@ -427,10 +430,10 @@ const UseCasePage = ({ data, pageContext }) => {
         />
         <InfoColumn>
           <StyledButtonDropdown list={dropdownLinks} />
-          <H1>{mdx.frontmatter.title}</H1>
+          <InfoTitle>{mdx.frontmatter.title}</InfoTitle>
 
           {mdx.frontmatter.sidebar && tocItems && (
-            <Eth2TableOfContents
+            <UpgradeTableOfContents
               items={tocItems}
               maxDepth={mdx.frontmatter.sidebarDepth}
             />
@@ -467,13 +470,17 @@ export const useCasePageQuery = graphql`
         sidebar
         emoji
         sidebarDepth
-        summaryPoints
+        summaryPoint1
+        summaryPoint2
+        summaryPoint3
         alt
         image {
           childImageSharp {
-            fluid(maxHeight: 640) {
-              ...GatsbyImageSharpFluid
-            }
+            gatsbyImageData(
+              layout: FULL_WIDTH
+              placeholder: BLURRED
+              quality: 100
+            )
           }
         }
         isOutdated

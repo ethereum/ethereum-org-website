@@ -25,7 +25,7 @@ Wiele firm i konsorcjów wdrożyło prywatne, autoryzowane łańcuchy bloków dl
 ### Kluczowe różnice {#key-differences}
 
 - Bezpieczeństwo/niezmienność blockchainu — odporność blockchainu na manipulacje jest określana przez jego algorytm konsensusu. Sieć główna Ethereum jest zabezpieczona przez interakcję tysięcy niezależnych węzłów prowadzonych przez osoby fizyczne i górników na całym świecie. Łańcuchy prywatne zazwyczaj mają niewielką liczbę węzłów, które są kontrolowane przez jedną lub kilka organizacji; te węzły mogą być ściśle kontrolowane, ale przepisanie łańcucha lub dokonanie oszukańczych transakcji wymaga naruszenia tylko kilku z nich.
-- Wydajność — ponieważ prywatne sieci Enterprise Ethereum mogą używać węzłów o wysokiej wydajności ze specjalnymi wymaganiami sprzętowymi i różnymi algorytmami konsensusu, takimi jak Proof of Authority, mogą osiągnąć wyższą przepustowość transakcji w warstwie podstawowej (Warstwa 1). W sieci głównej Ethereum wysoką przepustowość można osiągnąć przy użyciu [rozwiązań skalowania warstwy 2](/developers/docs/layer-2-scaling/).
+- Wydajność — ponieważ prywatne sieci Enterprise Ethereum mogą używać węzłów o wysokiej wydajności ze specjalnymi wymaganiami sprzętowymi i różnymi algorytmami konsensusu, takimi jak proof-of-authority, mogą osiągnąć wyższą przepustowość transakcji w warstwie podstawowej (Warstwa 1). W sieci głównej Ethereum wysoką przepustowość można osiągnąć przy użyciu [rozwiązań skalowania warstwy 2](/developers/docs/layer-2-scaling/).
 - Koszt — koszt obsługi sieci prywatnej odzwierciedla się przede wszystkim w pracy związanej z konfiguracją sieci i zarządzaniem nią oraz serwerami do jej obsługi. Chociaż połączenie z siecią główną Ethereum nie wiąże się z żadnymi kosztami, każda transakcja wiąże się z opłatą za gaz, za którą należy zapłacić Etherem. Przekaźniki transakcyjne (znane również jako stacje gazu) są opracowywane w celu wyeliminowania potrzeby, aby użytkownicy końcowi, a nawet przedsiębiorstwa, bezpośrednio wykorzystywali Ether w swoich transakcjach. Niektóre [analizy](https://github.com/EYBlockchain/fundamental-cost-of-ownership/blob/master/EY%20Total%20Cost%20of%20Ownership%20for%20Blockchain%20Solutions.pdf) wykazały, że całkowity koszt obsługi aplikacji może być niższy w sieci głównej niż w przypadku uruchomienia prywatnego łancucha.
 - Zezwalanie na węzły — tylko autoryzowane węzły mogą dołączać do łańcuchów prywatnych. Każdy może skonfigurować węzeł w sieci głównej Ethereum.
 - Prywatność — dostęp do danych zapisanych w prywatnych łańcuchach można kontrolować, ograniczając dostęp do sieci, a także w bardziej szczegółowy sposób za pomocą kontroli dostępu i transakcji prywatnych. Wszystkie dane zapisane w warstwie 1 sieci mainnet są widoczne dla każdego, więc poufne informacje powinny być przechowywane i przesyłane poza łańcuchem lub szyfrowane. Pojawiają się wzorce projektowe, które to ułatwiają (np. Baseline, Aztec), a także rozwiązania warstwy 2, które mogą utrzymywać dane w podziale i poza warstwą 1.
@@ -54,7 +54,7 @@ Różne organizacje podjęły pewne wspólne działania, aby uczynić Ethereum p
 - [Blockapps](https://blockapps.net/) _implementation of the Enterprise Ethereum protocol, tooling and APIs that form the STRATO platform_
 - [ConsenSys](https://consensys.net/) _zapewnia szereg produktów i narzędzi do budowania na Ethereum, a także doradztwo i niestandardowe usługi programistyczne _
 - [Envision Blockchain](https://envisionblockchain.com/) _zapewnia usługi konsultingowe i programistyczne zorientowane na przedsiębiorstwa, specjalizujące się w sieciach głównych Ethereum_
-- [EY OpsChain](https://blockchain.ey.com/products/procurement) _zapewnia przepływ pracy poprzez wystawianie zapytań ofertowych, umów, zamówień zakupu i faktury w Twojej sieci zaufanych partnerów biznesowych_
+- [EY OpsChain](https://blockchain.ey.com/products/contract-manager) _zapewnia przepływ pracy poprzez wystawianie zapytań ofertowych, umów, zamówień zakupu i faktury w Twojej sieci zaufanych partnerów biznesowych_
 - [Hyperledger Besu](https://www.hyperledger.org/use/besu) _ukierunkowany na przedsiębiorstwa klient Ethereum typu open source opracowany na licencji Apache 2.0 i napisany w Javie_
 - [Infura](https://infura.io/) _scalable API access to the Ethereum and IPFS networks_
 - [Zapewnij](https://provide.services/) _infrastrukturę i interfejsy API dla aplikacji Enterprise Web3_
@@ -73,7 +73,7 @@ Różne organizacje podjęły pewne wspólne działania, aby uczynić Ethereum p
 
 [Warstwa 2](/developers/docs/layer-2-scaling/) to zestaw technologii lub systemów, które działają na wierzchu Ethereum (Warstwa 1), dziedziczą właściwości zabezpieczeń z warstwy 1 i zapewniają większą wydajność przetwarzania transakcji (przepustowość), niższe opłaty transakcyjne (koszty operacyjne) i szybsze potwierdzenia transakcji niż warstwa 1. Rozwiązania skalowania warstwy 2 są zabezpieczone przez warstwę 1, ale umożliwiają aplikacjom łańcucha bloków obsługę znacznie większej liczby użytkowników, działań lub danych, niż może pomieścić warstwa 1. Wiele z nich wykorzystuje najnowsze postępy w kryptografii i dowody zerowej wiedzy (ZK), aby zmaksymalizować wydajność i bezpieczeństwo.
 
-Zbudowanie aplikacji na bazie rozwiązania skalowalności warstwy 2 może pomóc [rozwiązuje wiele problemów, które wcześniej skłaniały firmy do budowania na prywatnych blockchainach](https://entethalliance.org/how-ethereum-layer-2-scaling-solutions-address-barriers-to-enterprises-building-on- mainnet/), zachowując jednak korzyści płynące z budowania na sieci głównej.
+Zbudowanie aplikacji na bazie rozwiązania skalowalności warstwy 2 może pomóc [rozwiązuje wiele problemów, które wcześniej skłaniały firmy do budowania na prywatnych blockchainach](https://entethalliance.org/how-ethereum-layer-2-scaling-solutions-address-barriers-to-enterprises-building-on-mainnet/), zachowując jednak korzyści płynące z budowania na sieci głównej.
 
 Przykłady rozwiązań L2, które są gotowe do produkcji lub wkrótce będą:
 
@@ -102,7 +102,6 @@ Przykłady rozwiązań L2, które są gotowe do produkcji lub wkrótce będą:
   - [Skale](https://skale.network)
   - [Sieć POA](https://www.poa.network/)
 - Rozwiązania hybrydowe łączące właściwości wielu kategorii
-  - [Offchain Labs Arbitrum SCSC](https://https://offchainlabs.com/arbitrum.pdf)
   - [Celer](https://celer.network)
 
 ## Aplikacje korporacyjne działają w sieci głównej {#enterprise-live-on-mainnet}
@@ -140,7 +139,7 @@ Oto niektóre aplikacje dla przedsiębiorstw, które zostały wdrożone w public
 - [Minespider](https://www.minespider.com/) _śledzenie łańcucha dostaw_
 - [ShipChain](https://shipchain.io) _publiczny łańcuch boczny Ethereum i system korporacyjny zapewniający widoczność i zaufanie łańcucha dostaw, zwłaszcza w przypadku logistyki multimodalnej_
 - [Follow Our Fibre](https://www.followourfibre.com) _monitorowanie łańcucha dostaw wiskozy_
-- [EY OpsChain Network Procurement](https://blockchain.ey.com/products/procurement) _umożliwia firmom angażowanie się w proces zamówień poprzez wystawianie zapytań ofertowych, umowy, zamówienia i faktury w Twojej sieci zaufanych partnerów biznesowych_
+- [EY OpsChain Network Procurement](https://blockchain.ey.com/products/contract-manager) _umożliwia firmom angażowanie się w proces zamówień poprzez wystawianie zapytań ofertowych, umowy, zamówienia i faktury w Twojej sieci zaufanych partnerów biznesowych_
 - [Treum](https://treum.io/) _zapewnia przejrzystość, identyfikowalność i możliwość handlu w łańcuchach dostaw, wykorzystując technologię blockchain_
 
 ### Poświadczenia i certyfikaty {#credentials}
@@ -158,4 +157,4 @@ Oto niektóre aplikacje dla przedsiębiorstw, które zostały wdrożone w public
 
 - [GridPlus](https://blog.gridplus.io/gridplus-is-live-in-texas-efc83c814601) _płatności za energię elektryczną_
 
-Jeśli chcesz dodać coś do tej listy, zapoznaj się z [instrukcjami dotyczącymi wkładu](https://ethereum.org/en/contributing/).
+Jeśli chcesz dodać coś do tej listy, zapoznaj się z [instrukcjami dotyczącymi wkładu](/contributing/).

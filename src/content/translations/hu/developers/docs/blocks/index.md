@@ -9,15 +9,13 @@ A blokkok tranzakciókból álló csoportosítások a láncban lévő előző bl
 
 ## Előfeltételek {#prerequisites}
 
-A blokkok könnyen feldolgozhatók még a legkezdőbb felhasználóknak is. De ennek az oldalnak a jobb megértése érdekében javasoljuk, hogy először olvasd el a [Számlák](/en/developers/docs/accounts/), [Tranzakciók](/en/developers/docs/transactions/), és a [Bevezetés az Ethereumba](/en/developers/docs/intro-to-ethereum/) cikkeinket.
-
-<!--The content below was provided by Brian Gu with exception of "what's in a block"-->
+A blokkok könnyen feldolgozhatók még a legkezdőbb felhasználóknak is. De ennek az oldalnak a jobb megértése érdekében javasoljuk, hogy először olvasd el a [Számlák](/developers/docs/accounts/), [Tranzakciók](/developers/docs/transactions/), és a [Bevezetés az Ethereumba](/developers/docs/intro-to-ethereum/) cikkeinket.
 
 ## Miért kellenek a blokkok? {#why-blocks}
 
 Hogy biztosítsuk azt, hogy az Ethereum hálózat minden résztvevője egy szinkronizált állapotot tart fenn és megegyezik a pontos tranzakciós történetben, a tranzakciókat blokkokba rendezzük. Ez azt jelenti, hogy tucatnyi (vagy több száz) tranzakció felett van elköteleződés, egyetértés és szinkronizáció egyszerre.
 
-![Egy diagram, mely egy tranzakciót mutat egy blokkban ahogy az állapotot változatja](./tx-block.png) _Diagram átvéve az [Ethereum EVM illusztrálva](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_ anyagból
+![Egy diagram, mely egy tranzakciót mutat egy blokkban ahogy az állapotot változatja](../../../../../developers/docs/blocks/tx-block.png) _Diagram átvéve az [Ethereum EVM illusztrálva](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_ anyagból
 
 Az elkötelezettségek elosztásával elegendő időt adunk az összes hálózati résztvevőnek konszenzusra jutni: annak ellenére, hogy a tranzakciós kérelmek másodpercenként több tucatszor fordulnak elő, az Ethereum blokkjai körülbelül tizenöt másodpercenként köteleződnek el.
 
@@ -25,9 +23,11 @@ Az elkötelezettségek elosztásával elegendő időt adunk az összes hálózat
 
 Hogy megőrizzük a tranzakciós történetet, a blokkoknak szigorú sorrendet kell betartaniuk (minden létrejövő új blokk tartalmaz egy referenciát a szülő blokkjára), és a blokkokban lévő tranzakciók is szigorú sorrendet követnek. Ritka esetek kivételével bármikor amikor a hálózat összes résztvevője egyetért a blokkok pontos számában és előzményeiben, és azon dolgozik, hogy az aktuális élő tranzakciós kérelmeket a következő blokkba csomagolja.
 
-Amint egy blokk össze van állítva (ki van bányászva) egy bányász által a hálózaton, tovább terjed a hálózat többi része számára; az összes csomópont hozzáfűzi ezt a blokkot a blokkláncukra és folytatódik a bányászat. A pontos blokk összeállítási (bányászati) folyamatot és az elköteleződés/konszenzus folyamatot jelenleg az Ethereum “Proof-of-Work” protokollja specifikálja.
+Amint egy blokk össze van állítva (ki van bányászva) egy bányász által a hálózaton, tovább terjed a hálózat többi része számára; az összes csomópont hozzáfűzi ezt a blokkot a blokkláncukra és folytatódik a bányászat. A pontos blokk összeállítási (bányászati) folyamatot és az elköteleződés/konszenzus folyamatot jelenleg az Ethereum “proof-of-work” protokollja specifikálja.
 
-### Egy vizuális bemutató {#a-visual-demo} <iframe width="100%" height="315" src="https://www.youtube.com/embed/_160oMzblY8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+### Egy vizuális bemutató {#a-visual-demo}
+
+<YouTube id="_160oMzblY8" />
 
 ## A proof-of-work protokoll {#proof-of-work-protocol}
 
@@ -37,7 +37,7 @@ A proof-of-work a következőket jelenti:
 - A többi bányásznak, aki hall az érvényes igazolással rendelkező új blokkról, muszáj elfogadni az új blokkot, mint egy kanonikus következő blokkot a blokkláncon.
 - A pontos idő, mely egy adott bányász számára szükséges, hogy előteremtse az igazolást, egy random változó nagy varianciával. Ez biztosítja azt, hogy valószínűtlen*, hogy két bányász egyszerre teremti meg az igazolást a következő felterjesztett blokkra; amikor egy bányász elkészít és tovább terjeszt egy igazolt blokkot, szinte teljesen biztosak lehetnek abban, hogy a hálózat elfogadja ezt a blokkot, mint egy következő kanonikus blokkok a blokkláncban, konfliktus nélkül* (habár van egy protokoll a nézeteltérések megoldására, arra az esetre amikor két igazolt blokkokból álló lánc egy időben elkészül).
 
-[Többet a bányászatról](/en/developers/docs/consensus-mechanisms/pow/mining/)
+[Többet a bányászatról](/developers/docs/consensus-mechanisms/pow/mining/)
 
 ## Mi van egy blokkban? {#block-anatomy}
 
@@ -60,6 +60,6 @@ _Ismersz olyan közösségi anyagot, amely segített neked? Módosítsd az oldal
 
 ## Kapcsolódó témák {#related-topics}
 
-- [Bányászat](/en/developers/docs/consensus-mechanisms/pow/mining/)
-- [Tranzakciók](/en/developers/docs/transactions/)
-- [Gáz](/en/developers/docs/gas/)
+- [Bányászat](/developers/docs/consensus-mechanisms/pow/mining/)
+- [Tranzakciók](/developers/docs/transactions/)
+- [Gáz](/developers/docs/gas/)

@@ -56,39 +56,39 @@ This is the flow of data and control that happens when you perform the three mai
 
 This is most common flow, used by traders:
 
-#### Caller
+#### Caller {#caller}
 
 1. Provide the periphery account with an allowance in the amount to be swapped.
 2. Call one of the periphery contract's many swap functions (which one depends on whether ETH is involved
    or not, whether the trader specifies the amount of tokens to deposit or the amount of tokens to get back, etc).
    Every swap function accepts a `path`, an array of exchanges to go through.
 
-#### In the periphery contract (UniswapV2Router02.sol)
+#### In the periphery contract (UniswapV2Router02.sol) {#in-the-periphery-contract-uniswapv2router02-sol}
 
 3. Identify the amounts that need to be traded on each exchange along the path.
 4. Iterates over the path. For every exchange along the way it sends the input token and then calls the exchange's `swap` function.
    In most cases the destination address for the tokens is the next pair exchange in the path. In the final exchange it is the address
    provided by the trader.
 
-#### In the core contract (UniswapV2Pair.sol)
+#### In the core contract (UniswapV2Pair.sol) {#in-the-core-contract-uniswapv2pairsol-2}
 
 5. Verify that the core contract is not being cheated and can maintain sufficient liquidity after the swap.
 6. See how many extra tokens we have in addition to the known reserves. That amount is the number of input tokens we received to exchange.
 7. Send the output tokens to the destination.
 8. Call `_update` to update the reserve amounts
 
-#### Back in the periphery contract (UniswapV2Router02.sol)
+#### Back in the periphery contract (UniswapV2Router02.sol) {#back-in-the-periphery-contract-uniswapv2router02-sol}
 
 9. Perform any necessary cleanup (for example, burn WETH tokens to get back ETH to send the trader)
 
 ### Add Liquidity {#add-liquidity-flow}
 
-#### Caller
+#### Caller {#caller-2}
 
 1. Provide the periphery account with an allowance in the amounts to be added to the liquidity pool.
 2. Call one of the periphery contract's addLiquidity functions.
 
-#### In the periphery contract (UniswapV2Router02.sol)
+#### In the periphery contract (UniswapV2Router02.sol) {#in-the-periphery-contract-uniswapv2router02sol-2}
 
 3. Create a new pair exchange if necessary
 4. If there is an existing pair exchange, calculate the amount of tokens to add. This is supposed to be identical value for
@@ -96,23 +96,23 @@ This is most common flow, used by traders:
 5. Check if the amounts are acceptable (callers can specify a minimum amount below which they'd rather not add liquidity)
 6. Call the core contract.
 
-#### In the core contract (UniswapV2Pair.sol)
+#### In the core contract (UniswapV2Pair.sol) {#in-the-core-contract-uniswapv2pairsol-2}
 
 7. Mint liquidity tokens and send them to the caller
 8. Call `_update` to update the reserve amounts
 
 ### Remove Liquidity {#remove-liquidity-flow}
 
-#### Caller
+#### Caller {#caller-3}
 
 1. Provide the periphery account with an allowance of liquidity tokens to be burned in exchange for the underlying tokens.
-2. Call one of the periphery contract's addLiquidity functions.
+2. Call one of the periphery contract's removeLiquidity functions.
 
-#### In the periphery contract (UniswapV2Router02.sol)
+#### In the periphery contract (UniswapV2Router02.sol) {#in-the-periphery-contract-uniswapv2router02sol-3}
 
 3. Send the liquidity tokens to the pair exchange
 
-#### In the core contract (UniswapV2Pair.sol)
+#### In the core contract (UniswapV2Pair.sol) {#in-the-core-contract-uniswapv2pairsol-3}
 
 4. Send the destination address the underlying tokens in proportion to the burned tokens. For example if
    there are 1000 A tokens in the pool, 500 B tokens, and 90 liquidity tokens, and we receive 9 tokens
@@ -211,7 +211,7 @@ and therefore each token0 is worth reserve1/reserve0 token1's.
     uint32  private blockTimestampLast; // uses single storage slot, accessible via getReserves
 ```
 
-The timestamp for the last block in which an exchange occured, used to track exchange rates across time.
+The timestamp for the last block in which an exchange occurred, used to track exchange rates across time.
 
 ```solidity
     uint public price0CumulativeLast;
@@ -233,7 +233,7 @@ The way the pair exchange decides on the exchange rate between token0 and token1
 the two reserves constant during trades. `kLast` is this value. It changes when a liquidity provider
 deposits or withdraws tokens, and it increases slightly because of the 0.3% market fee.
 
-Here is a simple example. Note that for the sake of simplicity the table only has has three digits after the decimal point, and we ignore the
+Here is a simple example. Note that for the sake of simplicity the table only has three digits after the decimal point, and we ignore the
 0.3% trading fee so the numbers are not accurate.
 
 | Event                                       |  reserve0 |  reserve1 | reserve0 \* reserve1 | Average exchange rate (token1 / token0) |
@@ -318,7 +318,7 @@ To avoid having to import an interface for the token function, we "manually" cre
 
 There are two ways in which an ERC-20 transfer call can report failure:
 
-1. Revert. If a call to an external contract reverts than the boolean return value is `false`
+1. Revert. If a call to an external contract reverts, then the boolean return value is `false`
 2. End normally but report a failure. In that case the return value buffer has a non-zero length, and when decoded as a boolean value it is `false`
 
 If either of these conditions happen, revert.
@@ -428,7 +428,7 @@ between them. For example, assume this sequence of events:
 | Trader D deposits 100 token1 and gets 109.01 token0 back |   990.990 | 1,009.090 | 5,110     |                                        1.018 |    91.37+10\*0.826 = 99.63 |
 | Trader E deposits 10 token0 and gets 10.079 token1 back  | 1,000.990 |   999.010 | 5,150     |                                        0.998 | 99.63+40\*1.1018 = 143.702 |
 
-Lets say we want to calculate the average price of **Token0** between the timestamps 5,030 and 5,150. The difference in the value of
+Let's say we want to calculate the average price of **Token0** between the timestamps 5,030 and 5,150. The difference in the value of
 `price0Cumulative` is 143.702-29.07=114.632. This is the average across two minutes (120 seconds). So the average price is
 114.632/120 = 0.955.
 
@@ -453,7 +453,7 @@ Finally, update the global variables and emit a `Sync` event.
 
 In Uniswap 2.0 traders pay a 0.30% fee to use the market. Most of that fee (0.25% of the trade)
 always goes to the liquidity providers. The remaining 0.05% can go either to the liquidity
-providers or to an address specified by the factory as a protocol fee, which pays Unisoft for
+providers or to an address specified by the factory as a protocol fee, which pays Uniswap for
 their development effort.
 
 To reduce calculations (and therefore gas costs), this fee is only calculated when liquidity
@@ -587,8 +587,8 @@ out of it.
 
 | Event                                                        | reserve0 | reserve1 | reserve0 \* reserve1 | Value of the pool (reserve0 + reserve1) |
 | ------------------------------------------------------------ | -------: | -------: | -------------------: | --------------------------------------: |
-| Initial setup                                                |        8 |       32 |                 1024 |                                      40 |
-| Trader deposits 8 **Token0** tokens, gets back 16 **Token1** |       16 |       16 |                 1024 |                                      32 |
+| Initial setup                                                |        8 |       32 |                  256 |                                      40 |
+| Trader deposits 8 **Token0** tokens, gets back 16 **Token1** |       16 |       16 |                  256 |                                      32 |
 
 As you can see, the trader earned an extra 8 tokens, which come from a reduction in the value of the pool, hurting the depositor that owns it.
 
@@ -650,7 +650,7 @@ Is should also be called [from a periphery account](#UniswapV2Router02).
         uint liquidity = balanceOf[address(this)];
 ```
 
-The periphery contract transfered the liquidity to be burned to this contract before the call. That way
+The periphery contract transferred the liquidity to be burned to this contract before the call. That way
 we know how much liquidity to burn, and we can make sure that it gets burned.
 
 ```solidity
@@ -739,8 +739,8 @@ called by other entities than our periphery contract).
             require(balance0Adjusted.mul(balance1Adjusted) >= uint(_reserve0).mul(_reserve1).mul(1000**2), 'UniswapV2: K');
 ```
 
-This is a sanity check to make sure we don't lose from the swap. There is no circumnstance in which a swap should reduce
-`reserve0*reserve1`.
+This is a sanity check to make sure we don't lose from the swap. There is no circumstance in which a swap should reduce
+`reserve0*reserve1`. This is also where we ensure a fee of 0.3% is being sent on the swap; before sanity checking the value of K, we multiply both balances by 1000 subtracted by the amounts multiplied by 3, this means 0.3% (3/1000 = 0.003 = 0.3%) is being deducted from the balance before comparing its K value with the current reserves K value.
 
 ```solidity
         }
@@ -758,11 +758,11 @@ It is possible for the real balances to get out of sync with the reserves that t
 There is no way to withdraw tokens without the contract's consent, but deposits are a different matter. An account
 can transfer tokens to the exchange without calling either `mint` or `swap`.
 
-In that case there are are two solutions:
+In that case there are two solutions:
 
 - `sync`, update the reserves to the current balances
 - `skim`, withdraw the extra amount. Note that any account is allowed to call `skim` because we don't know who
-  depoisted the tokens. This information is emitted in an event, but events are not accessible from the blockchain.
+  deposited the tokens. This information is emitted in an event, but events are not accessible from the blockchain.
 
 ```solidity
     // force balances to match reserves
@@ -865,7 +865,7 @@ exchange.
 ```
 
 We want the address of the new exchange to be deterministic, so it can be calculated in advance off chain
-(this can be useful for [layer 2 transactions](https://ethereum.org/en/developers/docs/layer-2-scaling/)).
+(this can be useful for [layer 2 transactions](/developers/docs/layer-2-scaling/)).
 To do this we need to have a consistent order of the token addresses, regardless of the order in which we have
 received them, so we sort them here.
 
@@ -939,7 +939,7 @@ I will only explain the part that is different, the `permit` functionality.
 
 Transactions on Ethereum cost ether (ETH), which is equivalent to real money. If you have ERC-20 tokens but not ETH, you can't send
 transactions, so you can't do anything with them. One solution to avoid this problem is
-[meta-transactions](https://uniswap.org/docs/v2/smart-contract-integration/supporting-meta-transactions/).
+[meta-transactions](https://docs.uniswap.org/protocol/V2/guides/smart-contract-integration/supporting-meta-transactions/).
 The owner of the tokens signs a transaction that allows somebody else to withdraw tokens off chain and sends it using the Internet to
 the recipient. The recipient, which does have ETH, then submits the permit on behalf of the owner.
 
@@ -957,8 +957,8 @@ one we support here is `Permit` with these parameters.
 ```
 
 It is not feasible for a recipient to fake a digital signature. However, it is trivial to send the same transaction twice
-(this is a form of [replay attack](https://en.wikipedia.org/wiki/Replay_attack)). To prevent this, we use
-a [nonce](https://en.wikipedia.org/wiki/Cryptographic_nonce). If the nonce of a new `Permit` is not one more than the last one
+(this is a form of [replay attack](https://wikipedia.org/wiki/Replay_attack)). To prevent this, we use
+a [nonce](https://wikipedia.org/wiki/Cryptographic_nonce). If the nonce of a new `Permit` is not one more than the last one
 used, we assume it is invalid.
 
 ```solidity
@@ -1012,7 +1012,7 @@ Don't accept transactions after the deadline.
 ```
 
 `abi.encodePacked(...)` is the message we expect to get. We know what the nonce should be, so there is no need for us to
-get it as a paramete
+get it as a parameter
 
 The Ethereum signature algorithm expects to get 256 bits to sign, so we use the `keccak256` hash function.
 
@@ -1232,7 +1232,7 @@ thousand B tokens (red line). The x axis is the exchange rate, A/B. If x=1, they
 a thousand of each. If x=2, A is twice the value of B (you get two B tokens for each A token) so you deposit a thousand
 B tokens, but only 500 A tokens. If x=0.5, the situation is reversed, a thousand A tokens and five hundred B tokens.
 
-![Graph](liquidityProviderDeposit.png "Tokens to deposit at different exchange rates")
+![Graph](liquidityProviderDeposit.png)
 
 ```solidity
             }
@@ -1335,7 +1335,7 @@ than the user thought), we need to issue a refund.
 
 #### Remove Liquidity {#remove-liquidity}
 
-The functions to remove liquidity and pay back the liquidity provider.
+These functions will remove liquidity and pay back the liquidity provider.
 
 ```solidity
     // **** REMOVE LIQUIDITY ****
@@ -1757,7 +1757,7 @@ each transfer (the way we do before calling the original `_swap`). Instead we ha
 many tokens we got back.
 
 Note: In theory we could just use this function instead of `_swap`, but in certain cases (for example, if the transfer
-ends up beign reverted because there isn't enough at the end to meet the required minimum) that would end up costing more
+ends up being reverted because there isn't enough at the end to meet the required minimum) that would end up costing more
 gas. Transfer fee tokens are pretty rare, so while we need to accommodate them there's no need to all swaps to assume they
 go through at least one of them.
 
@@ -1913,7 +1913,7 @@ library Math {
         z = x < y ? x : y;
     }
 
-    // babylonian method (https://en.wikipedia.org/wiki/Methods_of_computing_square_roots#Babylonian_method)
+    // babylonian method (https://wikipedia.org/wiki/Methods_of_computing_square_roots#Babylonian_method)
     function sqrt(uint y) internal pure returns (uint z) {
         if (y > 3) {
             z = y;
@@ -1930,7 +1930,7 @@ Start with x as an estimate that is higher than the square root (that is the rea
 
 Get a closer estimate, the average of the previous estimate and the number whose square root we're trying to find divided by
 the previous estimate. Repeat until the new estimate isn't lower than the existing one. For more details,
-[see here](https://en.wikipedia.org/wiki/Methods_of_computing_square_roots#Babylonian_method).
+[see here](https://wikipedia.org/wiki/Methods_of_computing_square_roots#Babylonian_method).
 
 ```solidity
             }
@@ -1955,7 +1955,7 @@ as _x\*2^112_. This lets us use the original addition and subtraction opcodes wi
 ```solidity
 pragma solidity =0.5.16;
 
-// a library for handling binary fixed point numbers (https://en.wikipedia.org/wiki/Q_(number_format))
+// a library for handling binary fixed point numbers (https://wikipedia.org/wiki/Q_(number_format))
 
 // range: [0, 2**112 - 1]
 // resolution: 1 / 2**112
@@ -1973,7 +1973,7 @@ library UQ112x112 {
     }
 ```
 
-Because y is `uint112`, the most if can be is 2^113-1. That number can still be encoded as a `UQ112x112`.
+Because y is `uint112`, the most if can be is 2^112-1. That number can still be encoded as a `UQ112x112`.
 
 ```solidity
     // divide a UQ112x112 by a uint112, returning a UQ112x112
@@ -2087,7 +2087,7 @@ the numerator by 997 and the denominator by 1000, achieving the same effect.
     }
 ```
 
-This function does roughtly the same thing, but it gets the output amount and provides the input.
+This function does roughly the same thing, but it gets the output amount and provides the input.
 
 ```solidity
 
@@ -2211,8 +2211,8 @@ don't need to actually call any function, we don't send any data with the call.
 
 ## Conclusion {#Conclusion}
 
-This is a long article of about 50 pages. If you made it here, congratulations. Hopefully now you understand the considerations
-in writing a real-life application (as opoosed to short sample programs) and are better able to write contracts for your own
+This is a long article of about 50 pages. If you made it here, congratulations! Hopefully by now you've understood the considerations
+in writing a real-life application (as opposed to short sample programs) and are better to be able to write contracts for your own
 use cases.
 
 Now go and write something useful and amaze us.

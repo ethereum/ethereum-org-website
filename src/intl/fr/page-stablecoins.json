@@ -27,7 +27,7 @@
   "page-stablecoins-accordion-earn-project-2-description": "Technologie, contenu et autre travail pour la communauté MakerDao (l'équipe qui a créé Dai).",
   "page-stablecoins-accordion-earn-project-3-description": "Quand vous vous y connaissez vraiment, trouvez des bogues pour gagner du Dai.",
   "page-stablecoins-accordion-earn-project-bounties": "Récompenses Gitcoin",
-  "page-stablecoins-accordion-earn-project-bug-bounties": "Prime de bogues Eth2",
+  "page-stablecoins-accordion-earn-project-bug-bounties": "Primes de bogues sur la couche de consensus",
   "page-stablecoins-accordion-earn-project-community": "Communauté MakerDao",
   "page-stablecoins-accordion-earn-projects-copy": "Ce sont des plateformes qui vous paieront avec des stablecoins pour votre travail.",
   "page-stablecoins-accordion-earn-projects-title": "Où gagner des stablecoins",
@@ -141,5 +141,6 @@
   "page-stablecoins-usdc-logo": "Le logo USDC",
   "page-stablecoins-why-stablecoins": "Pourquoi les stablecoins ?",
   "page-stablecoins-how-they-work-button": "Comment ça marche ?",
-  "page-stablecoins-why-stablecoins-body": "L'ETH, comme le Bitcoin, a un prix volatile parce que c'est une nouvelle technologie. Vous pouvez donc ne pas vouloir le dépenser trop souvent. Les stablecoins reflètent la valeur des monnaies traditionnelles pour vous donner accès à de l'argent stable que vous pouvez utiliser sur Ethereum."
+  "page-stablecoins-why-stablecoins-body": "L'ETH, comme le Bitcoin, a un prix volatile parce que c'est une nouvelle technologie. Vous pouvez donc ne pas vouloir le dépenser trop souvent. Les stablecoins reflètent la valeur des monnaies traditionnelles pour vous donner accès à de l'argent stable que vous pouvez utiliser sur Ethereum.",
+  "page-stablecoins-more-defi-button": "En savoir plus sur la finance décentralisée (DeFi)"
 }

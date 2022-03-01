@@ -31,7 +31,7 @@ npm install @alch/alchemy-web3
 
 ## Step 2: Create a mint-nft.js file {#create-mintnftjs}
 
-Inside your scripts directory, create an mint-nft.js file and add the following lines of code:
+Inside your scripts directory, create a mint-nft.js file and add the following lines of code:
 
 ```js
 require("dotenv").config()
@@ -70,15 +70,15 @@ We will use Pinata, a convenient IPFS API and toolkit, to store our NFT asset an
 
 Once you’ve created an account:
 
-- Navigate to the “Pinata Upload” button on the top right
+- Navigate to the “Files” page and click the blue "Upload" button at the top-left of the page.
 
 - Upload an image to pinata — this will be the image asset for your NFT. Feel free to name the asset whatever you wish
 
-- After you upload, at the top of the page, there should be a green popup that allows you to view the hash of your upload → Copy that hashcode. You can view your upload at: `https://gateway.pinata.cloud/ipfs/<hash-code>`. You can find the image we used on IPFS [here](https://gateway.pinata.cloud/ipfs/QmarPqdEuzh5RsWpyH2hZ3qSXBCzC5RyK3ZHnFkAsk7u2f), for example.
+- After you upload, you'll see the file info in the table on the Files page. You'll also see a CID column. You can copy the CID by clicking the copy button next to it. You can view your upload at: `https://gateway.pinata.cloud/ipfs/<CID>`. You can find the image we used on IPFS [here](https://gateway.pinata.cloud/ipfs/QmarPqdEuzh5RsWpyH2hZ3qSXBCzC5RyK3ZHnFkAsk7u2f), for example.
 
 For the more visual learners, the steps above are summarized here:
 
-![How to upload your image to Pinata](./instructionsPinata.gif)
+![How to upload your image to Pinata](https://gateway.pinata.cloud/ipfs/Qmcdt5VezYzAJDBc4qN5JbANy5paFg9iKDjq8YksRvZhtL)
 
 Now, we’re going to want to upload one more document to Pinata. But before we do that, we need to create it!
 
@@ -245,7 +245,7 @@ async function mintNFT(tokenURI) {
 
 ## Step 9: Call mintNFT and run node contract-interact.js {#call-mintnft-fn}
 
-Remember the metadata.json you uploaded to Pinata? Get its hashcode from Pinata and pass the following into a call to mintNFT `https://gateway.pinata.cloud/ipfs/<metadata-hash-code>`
+Remember the metadata.json you uploaded to Pinata? Get its hashcode from Pinata and pass the following as parameter to the function mintNFT `https://gateway.pinata.cloud/ipfs/<metadata-hash-code>`
 
 Here’s how to get the hashcode:
 

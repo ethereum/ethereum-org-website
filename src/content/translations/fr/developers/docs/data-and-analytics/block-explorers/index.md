@@ -10,7 +10,7 @@ Les explorateurs de blocs sont votre portail vers les données Ethereum. Vous po
 
 ## Prérequis {#prerequisites}
 
-Pour que les données fournies par un explorateur de blocs aient du sens, vous devez avoir compris les concepts de base d'Ethereum. Commencez par lire la page [Introduction à Ethereum](/en/developers/docs/intro-to-ethereum/).
+Pour que les données fournies par un explorateur de blocs aient du sens, vous devez avoir compris les concepts de base d'Ethereum. Commencez par lire la page [Introduction à Ethereum](/developers/docs/intro-to-ethereum/).
 
 ## Services {#services}
 
@@ -148,11 +148,11 @@ Bien sûr, certaines données parlent de la santé du réseau. Elle sont très s
 - Offre totale d'ETH - Nombre d'ETH en circulation. Rappelez-vous que des ETH sont créés avec chaque nouveau bloc sous la forme de récompenses.
 - Valorisation au prix du marché - Prix d'un ETH x l'offre totale.
 
-## Données Eth2 {#eth2-data}
+## Données Eth2 {#consensus-layer-data}
 
 Les mises à niveau Eth2 sont toujours en cours de développement, mais il est intéressant de parler des points de données que les explorateurs seront capables de vous fournir. En fait, toutes ces données sont déjà disponibles pour les réseaux de test.
 
-Si vous n'êtes pas familiarisé avec Eth2, lisez cette [présentation des mises à niveau Eth2](/eth2/).
+Si vous n'êtes pas familiarisé avec Eth2, lisez cette [présentation des mises à niveau Eth2](/upgrades/).
 
 ### Période {#epoch}
 
@@ -251,13 +251,13 @@ Les données Eth2 de haut niveau comprennent les éléments suivants :
   - POA - Chaîne latérale et réseau autonome sécurisés par un groupe de validateurs de confiance. Tous les validateurs du réseau sont des notaires américains, et leurs informations sont publiquement disponibles.
   - Réseau de test POA Sokol.
   - ARTIS - Blockchain compatible avec Ethereum.
-  - [LUKSO L14](https://blockscout. com/lukso/l14) - L14 fonctionne comme premier réseau de test pour permettre à la communauté LUKSO de construire et de tester une infrastructure commune.
+  - [LUKSO L14](https://blockscout.com/lukso/l14) - L14 fonctionne comme premier réseau de test pour permettre à la communauté LUKSO de construire et de tester une infrastructure commune.
   - qDai.
 - [Etherchain](https://www.etherchain.org/) - Explorateur de blocs pour le réseau principal Ethereum.
 - [Ethplorer](https://ethplorer.io/) - Explorateur de blocs qui se focalise sur les jetons du réseau principal Ethereum ainsi que sur le réseau de test Kovan.
 - [Blockchair](https://blockchair.com/ethereum) - L'explorateur Ethereum le plus privé. Aussi pour le tri et le filtrage des données (mempool).
 
-## Explorateurs de blocs Eth2 {#eth2-block-explorers}
+## Explorateurs de blocs Eth2 {#beacon-chain-block-explorers}
 
 - [https://beaconcha.in/](https://beaconcha.in/)
 - [https://beaconscan.com/](https://beaconscan.com/)

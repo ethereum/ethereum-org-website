@@ -11,7 +11,7 @@ published: 2020-06-14
 
 Probabil ești interesat să rulezi un [nod Ethereum](/developers/docs/noses-and-clients/). Unul dintre cele mai simple moduri de a face acest lucru este prin descărcarea, instalarea și rularea Geth. Cu Geth, putem avea un nod ușor gata și funcțional în câteva minute.
 
-Mai întâi, trebuie să [instalezi Geth](https://github.com/ethereum/go-ethereum/wiki/Building-Ethereum).
+Mai întâi, trebuie să [instalezi Geth](https://geth.ethereum.org/docs/install-and-build/installing-geth).
 
 După ce ai instalat Geth, rularea unui nod complet Ethereum este la fel de simplă ca tastarea
 

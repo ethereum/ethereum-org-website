@@ -4,39 +4,40 @@ import styled from "styled-components"
 import Link from "./Link"
 import Emoji from "./Emoji"
 import Translation from "./Translation"
+import { isMobile } from "../utils/isMobile"
 
 const OpenTitle = styled.h3`
-  font-size: 40px;
+  font-size: 2.5rem;
   font-weight: 700;
   margin-top: 0rem;
   @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    font-size: 32px;
+    font-size: 2rem;
   }
 `
 
 const Title = styled.h3`
-  font-size: 40px;
+  font-size: 2.5rem;
   font-weight: 400;
   margin-top: 0rem;
   @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    font-size: 32px;
+    font-size: 2rem;
   }
 `
 
 const Subtitle = styled.h4`
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: 600;
   margin-top: 0rem;
   padding: 0.5rem;
   padding-bottom: 1rem;
   border-bottom: 1px solid ${(props) => props.theme.colors.black300};
   @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    font-size: 24px;
+    font-size: 1.5rem;
   }
 `
 
 const Body = styled.div`
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 140%;
   color: ${(props) => props.theme.colors.black300};
 `
@@ -237,8 +238,7 @@ const StablecoinBoxGrid = ({ items }) => {
   // TODO generalize
   const handleSelect = (idx) => {
     setOpenIndex(idx)
-    const isMobile = document && document.documentElement.clientWidth < 1024
-    if (isMobile) {
+    if (isMobile()) {
       navigate(`/stablecoins/#type-${idx}`)
     }
   }

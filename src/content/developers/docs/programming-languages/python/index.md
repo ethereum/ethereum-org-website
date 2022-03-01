@@ -46,7 +46,7 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 
 ## Python projects and tools {#python-projects-and-tools}
 
-### Active:
+### Active: {#active}
 
 - [Web3.py](https://github.com/ethereum/web3.py) - _Python library for interacting with Ethereum_
 - [Brownie](https://github.com/eth-brownie/brownie) - _Python framework for deploying, testing and interacting with Ethereum smart contracts_
@@ -58,15 +58,17 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 - [py-wasm](https://github.com/ethereum/py-wasm) - _Python implementation of the web assembly interpreter_
 - [pydevp2p](https://github.com/ethereum/pydevp2p) - _implementation of the Ethereum P2P stack_
 - [pymaker](https://github.com/makerdao/pymaker) - _Python API for Maker contracts_
+- [siwe](https://github.com/spruceid/siwe-py) - _Sign in with Ethereum (siwe) for Python_
+- [Smart contracts for testing](https://github.com/tradingstrategy-ai/smart-contracts-for-testing) - _A Python package that comes with ERC-20, Uniswap and other common contracts for writing tests with Web3.py_
 
-### Archived / No longer maintained:
+### Archived / No longer maintained: {#archived--no-longer-maintained}
 
 - [Trinity](https://github.com/ethereum/trinity) - _Ethereum Python client_
 - [Mamba](https://mamba.black) - _framework to write, compile, and deploy smart contracts written in Vyper language_
 
 Looking for more resources? Check out [ethereum.org/developers](/developers/).
 
-## Projects using Python tooling
+## Projects using Python tooling {#projects-using-python-tooling}
 
 The following Ethereum-based projects use tools mentioned on this page. The related open-source repositories serve as a good reference for example code and best practices.
 

@@ -11,7 +11,7 @@ Las redes son diferentes entornos de Ethereum a los que se puede acceder para de
 
 ## Requisitos previos {#prerequisites}
 
-Te recomendamos que comprendas los conceptos básicos de Ethereum antes de explorar las diferentes redes, ya que las redes de prueba te darán una versión económica y segura de Ethereum con la que comenzar a probar. Comienza con nuestra [introducción a Ethereum](/en/developers/docs/intro-to-ethereum/).
+Te recomendamos que comprendas los conceptos básicos de Ethereum antes de explorar las diferentes redes, ya que las redes de prueba te darán una versión económica y segura de Ethereum con la que comenzar a probar. Comienza con nuestra [introducción a Ethereum](/developers/docs/intro-to-ethereum/).
 
 ## Redes públicas {#public-networks}
 
@@ -54,7 +54,6 @@ Los ETH no tienen un valor real en las redes de prueba; por lo tanto, no hay mer
 - [Faucet Görli](https://faucet.goerli.mudit.blog/)
 - [Faucet Kovan](https://faucet.kovan.network/)
 - [Faucet Rinkeby](https://faucet.rinkeby.io/)
-- [Faucet Ropsten](https://faucet.ropsten.be/)
 
 ## Redes privadas {#private-networks}
 
@@ -71,20 +70,6 @@ Hay proyectos y herramientas exclusivos para ayudarte con esto. Más informació
 El proceso de consenso se controla mediante un conjunto predefinido de nodos de confianza. Por ejemplo, una red privada de conocidas instituciones académicas en las que cada una gobierna un único nodo y los bloques se validan mediante un umbral de signatarios en la red.
 
 Si una red pública de Ethereum es como la red pública de Internet, puedes entender una red de consorcio como una intranet privada.
-
-<!-- TODO
-
-## Interacting with testnets
-
-### Your own local network {#your-own-local-network}
-
-`geth -—networkid="12345" console`
-
-### Testnets {#testnets-1}
-
-Wallets like MetaMask or MyEtherWallet will allow you to switch networks so you can test your apps using your test ETH.
-
--->
 
 ## Leer más {#further-reading}
 

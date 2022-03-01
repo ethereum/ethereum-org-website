@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import ButtonLink from "./ButtonLink"
 import { Content } from "./SharedStyledComponents"
 
@@ -28,7 +28,7 @@ const HeroContent = styled.div`
   }
 `
 
-const HeroImg = styled(Img)`
+const HeroImg = styled(GatsbyImage)`
   flex: 1 1 50%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -46,12 +46,12 @@ const HeroImg = styled(Img)`
 
 const Header = styled.h2`
   font-weight: 700;
-  font-size: 48px;
+  font-size: 3rem;
   max-width: 100%;
   margin-bottom: 0rem;
   color: ${(props) => props.theme.colors.text00};
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    font-size: 40px;
+    font-size: 2.5rem;
   }
 `
 
@@ -59,18 +59,18 @@ const Title = styled.h1`
   text-transform: uppercase;
   font-size: 1rem;
   font-weight: 400;
-  margin-bottom: -2rem;
+  margin-bottom: 1rem;
   color: ${(props) => props.theme.colors.text300};
 `
 
 const Subtitle = styled.div`
-  font-size: 24px;
+  font-size: 1.5rem;
   line-height: 140%;
   color: ${(props) => props.theme.colors.text200};
   margin-top: 1rem;
   margin-bottom: 2rem;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    font-size: 20px;
+    font-size: 1.25rem;
   }
 `
 
@@ -105,6 +105,7 @@ const PageHero = ({ content, children, className, isReverse }) => {
                   isSecondary={button.isSecondary}
                   key={idx}
                   to={button.path}
+                  toId={button.pathId}
                 >
                   {button.content}
                 </StyledButtonLink>
@@ -113,7 +114,7 @@ const PageHero = ({ content, children, className, isReverse }) => {
           )}
           {children}
         </HeroContent>
-        <HeroImg fluid={image} alt={alt} loading="eager" />
+        <HeroImg image={image} alt={alt} loading="eager" />
       </HeroContainer>
     </Content>
   )

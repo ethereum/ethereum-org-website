@@ -29,11 +29,6 @@ Ez azt jelenti, hogy egy tranzakciós díjat kell fizetned, így biztosítsd sz�
 - egy telepítő szkript vagy plugin.
 - hozzáférés egy [Ethereum csomóponthoz](/developers/docs/nodes-and-clients/), vagy a sajátod futtatásával, egy nyilvános csomóponthoz történő csatlakozással vagy egy API kulcson keresztül egy szolgáltatás használatával, mint az Infura vagy az Alchemy
 
-<!-- TODO Elaborate on options: e.g. run a node, use a node as a service etc. -->
-
-<!-- TODO! -->
-<!-- ### Steps to deploy a smart contract -->
-
 A telepítés befejeztével a szerződésednek lesz egy Ethereum címe, mint bármely más [számlának](/developers/docs/accounts/).
 
 ## Kapcsolódó eszközök {#related-tools}
@@ -60,4 +55,4 @@ _Ismersz olyan közösségi anyagot, amely segített neked? Módosítsd az oldal
 
 ## Kapcsolódó témák
 
-- [Fejlesztői keretrendszerek](/en/developers/docs/frameworks/)
+- [Fejlesztői keretrendszerek](/developers/docs/frameworks/)

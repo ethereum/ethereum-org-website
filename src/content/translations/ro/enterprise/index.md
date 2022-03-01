@@ -54,7 +54,7 @@ Diverse organizații au depus eforturi comune pentru a face Ethereum Enterprise 
 - [Blockapps](https://blockapps.net/) _implementare a protocolului Ethereum Enterprise, instrumente și APIs care formează platforma STRATO_
 - [ConsenSys](https://consensys.net/) _oferă o gamă de produse și instrumente pentru construirea pe Ethereum, precum și servicii de consultanță și dezvoltare personalizată_
 - [Envision Blockchain](https://envisionblockchain.com/) _furnizează servicii de consultanță și dezvoltare axate pe întreprindere specializate în rețeaua principală Ethereum_
-- [EY OpsChain](https://blockchain.ey.com/products/procurement) _oferă un flux de lucru pentru achiziții prin emiterea de cereri de ofertă, contracte, ordine de cumpărare și facturi în rețeaua ta de parteneri de afaceri de încredere_
+- [EY OpsChain](https://blockchain.ey.com/products/contract-manager) _oferă un flux de lucru pentru achiziții prin emiterea de cereri de ofertă, contracte, ordine de cumpărare și facturi în rețeaua ta de parteneri de afaceri de încredere_
 - [Hyperledger Besu](https://www.hyperledger.org/use/besu) _un client Ethereum open-source dedicat unei întreprinderi dezvoltat sub licența Apache 2.0 și scris în Java_
 - [Infura](https://infura.io/) _acces API scalabil la Ethereum și rețele IPFS_
 - [Provide](https://provide.services/) _infrastructură și API-uri pentru aplicații Enterprise Web3_
@@ -71,7 +71,7 @@ Diverse organizații au depus eforturi comune pentru a face Ethereum Enterprise 
 
 ### Soluții de scalabilitate {#scalability-solutions}
 
-[Nivelul 2](/developers/docs/scaling/layer-2-rollups/) este un set de tehnologii sau sisteme care rulează peste Ethereum (Nivelul 1), moștenesc proprietăți de securitate din Nivelul 1 și oferă o capacitate mai mare de procesare a tranzacțiilor (transfer), taxe de tranzacție mai mici (cost de operare) și confirmări mai rapide ale tranzacțiilor decât Nivelul 1. Soluțiile de scalare Nivel 2 sunt securizate de Nivelul 1, dar permit aplicațiilor blockchain să gestioneze mai mulți utilizatori sau acțiuni sau date decât ar putea găzdui Nivelul 1. Multe dintre ele valorifică progresele recente în criptografie și dovezile de cunoaștere-zero (ZK) pentru a maximiza performanța și securitatea.
+[Nivelul 2](/developers/docs/scaling/#rollups) este un set de tehnologii sau sisteme care rulează peste Ethereum (Nivelul 1), moștenesc proprietăți de securitate din Nivelul 1 și oferă o capacitate mai mare de procesare a tranzacțiilor (transfer), taxe de tranzacție mai mici (cost de operare) și confirmări mai rapide ale tranzacțiilor decât Nivelul 1. Soluțiile de scalare Nivel 2 sunt securizate de Nivelul 1, dar permit aplicațiilor blockchain să gestioneze mai mulți utilizatori sau acțiuni sau date decât ar putea găzdui Nivelul 1. Multe dintre ele valorifică progresele recente în criptografie și dovezile de cunoaștere-zero (ZK) pentru a maximiza performanța și securitatea.
 
 Construirea aplicației tale pe o soluție de scalabilitate Nivel 2, poate ajuta la [soluționarea multor preocupări, care anterior au determinat companiile să construiască pe blockchain-uri private](https://entethalliance.org/how-ethereum-layer-2-scaling-solutions-address-barriers-to-enterprises-building-on-mainnet/), dar păstrând beneficiile construirii pe rețeaua principală.
 
@@ -102,7 +102,6 @@ Exemple de soluții L2 care sunt pregătite pentru producție sau care vor fi î
   - [Skale](https://skale.network)
   - [POA Network](https://www.poa.network/)
 - Soluții hibride care combină proprietăți din categorii multiple
-  - [Offchain Labs Arbitrum SCSC (SideChains/StateChannels)](https://https://offchainlabs.com/arbitrum.pdf)
   - [Celer](https://celer.network)
 
 ## Aplicațiile de întreprindere „active” pe rețeaua principală {#enterprise-live-on-mainnet}
@@ -140,7 +139,7 @@ Iată câteva dintre aplicațiile de întreprindere care au fost implementate pe
 - [Minespider](https://www.minespider.com/) _urmărirea lanțului de aprovizionare_
 - [ShipChain](https://shipchain.io) _lanț public al Ethereum și sistemului pentru întreprinderi pentru vizibilitatea și încrederea lanțului de aprovizionare, în special pentru logistica multi-modală_
 - [Follow Our Fibre](https://www.followourfibre.com) _trasabilitatea lanțului de aprovizionare cu viscoză_
-- [EY OpsChain Network Procurement](https://blockchain.ey.com/products/procurement) _permite companiilor să se angajeze într-un flux de lucru de achiziții publice prin emiterea de cereri de ofertă, contracte, ordine de cumpărare și facturi în rețeaua ta de parteneri de afaceri de încredere_
+- [EY OpsChain Network Procurement](https://blockchain.ey.com/products/contract-manager) _permite companiilor să se angajeze într-un flux de lucru de achiziții publice prin emiterea de cereri de ofertă, contracte, ordine de cumpărare și facturi în rețeaua ta de parteneri de afaceri de încredere_
 - [Treum](https://treum.io/) _aduce transparență, trasabilitate și comercializare lanțurilor de aprovizionare, utilizând tehnologia blockchain_
 
 ### Acreditări și certificări {#credentials}
@@ -158,4 +157,4 @@ Iată câteva dintre aplicațiile de întreprindere care au fost implementate pe
 
 - [GridPlus](https://blog.gridplus.io/gridplus-is-live-in-texas-efc83c814601) _plățile de energie electrică_
 
-Dacă dorești să adaugi la această listă, consultă [instrucțiunile pentru contribuție](https://ethereum.org/en/contributing/).
+Dacă dorești să adaugi la această listă, consultă [instrucțiunile pentru contribuție](/contributing/).

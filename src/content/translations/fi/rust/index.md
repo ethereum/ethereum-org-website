@@ -27,21 +27,19 @@ Tarvitsetko perusteellisempaa aloitusta? Katso [ethereum.org/fi/learn](/learn/) 
 
 - [Ethereum-asiakasohjelman valinta](https://www.trufflesuite.com/docs/truffle/reference/choosing-an-ethereum-client)
 - [Rust Ethereum -asiakasohjelma](https://wiki.parity.io/Setup)
-- [Liiketapahtuman lähettäminen Ethereumiin käyttäen Rustia](https://kauri.io/article/97c85229c66445759bb0ce642224d364/sending-ethereum-transactions-with-rust)
+- [Liiketapahtuman lähettäminen Ethereumiin käyttäen Rustia](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/sending-ethereum-transactions-with-rust/)
 - [Opastus älysopimuksiin Parity Ethereum -asiakasohjelmalla](https://wiki.parity.io/Smart-Contracts)
-- [Oman Oasis SDK-kehitysympäristön luominen](https://docs.oasis.dev/quickstart.html#set-up-the-oasis-sdk)
+- [Oman Oasis SDK-kehitysympäristön luominen](https://docs.oasis.dev/oasis-sdk/guide/getting-started)
 - [Vaiheittainen ohje sopimusten kirjoittamiseen Rust Wasmilla Kovaniin](https://github.com/paritytech/pwasm-tutorial)
 
 ## Keskitason artikkelit {#intermediate-articles}
 
 - [Rust-Web3 -dokumentaatio](https://tomusdrw.github.io/rust-web3/web3/index.html)
 - [Rust-Web3 -työskentelyesimerkit](https://github.com/tomusdrw/rust-web3/blob/master/examples)
-- [Vaalisalaisuuden luominen OASIS SDK:lla](https://docs.oasis.dev/tutorials/ballot.html#prerequisites)
-- [Yksityisen chat-serverin luominen OASIS SDK:lla](https://docs.oasis.dev/tutorials/messaging.html#prerequisites)
 
 ## Edistyneet käyttösuunnittelumallit {#advanced-use-patterns}
 
-- [pwasm_ethereum ulkoisten muuttujien kirjasto Ethereumin kaltaisille verkoille](https://paritytech.github.io/pwasm-ethereum/pwasm_ethereum/)
+- [pwasm_ethereum ulkoisten muuttujien kirjasto Ethereumin kaltaisille verkoille](https://github.com/openethereum/pwasm-ethereum)
 - [Luo hajautettu chatti käyttäen JavaScriptiä ja Rustia](https://medium.com/perlin-network/build-a-decentralized-chat-using-javascript-rust-webassembly-c775f8484b52)
 - [Rakenna hajautettu Todo-sovellus käyttäen Vue.js:ää ja Rustia ](https://medium.com/@jjmace01/build-a-decentralized-todo-app-using-vue-js-rust-webassembly-5381a1895beb)
 - [Enigmalla alkuun pääseminen - Rust-ohjelmointikieli](https://blog.enigma.co/getting-started-with-discovery-the-rust-programming-language-4d1e0b06de15)
@@ -53,7 +51,7 @@ Tarvitsetko perusteellisempaa aloitusta? Katso [ethereum.org/fi/learn](/learn/) 
 - [pwasm-ethereum](https://github.com/paritytech/pwasm-ethereum) - _Kokoelma ulkoisia muuttujia vuorovaikuttamiseen ethereumin kaltaisten verkkojen kanssa._
 - [Ethereum WebAssembly](https://ewasm.readthedocs.io/en/mkdocs/)
 - [oasis_std](https://docs.rs/oasis-std/0.2.7/oasis_std/) - _OASIS API -referenssi_
-- [eth-utils](https://github.com/ethereum/eth-utils/) - _Hyötyfunktioita Etherumiin liittyvien koodipohjien kanssa työskentelyyn_
+- [eth-utils](https://github.com/ethereum/eth-utils/) - _Hyötyfunktioita Ethereumiin liittyvien koodipohjien kanssa työskentelyyn_
 - [Solaris](https://github.com/paritytech/sol-rs)
 - [SputnikVM](https://github.com/sorpaas/rust-evm) - _Rust Ethereum-virtuaalikonetoteutus_
 - [Parity](https://github.com/paritytech/parity-ethereum) - _Ethereum Rust-asiakasohjelma_

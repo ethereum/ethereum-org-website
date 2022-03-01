@@ -36,8 +36,6 @@ Al momento, il Web3 ha alcune limitazioni:
 
 ## Centralizzazione e decentralizzazione {#centralization-vs-decentralization}
 
-<!--Content below provided by Brian Gu-->
-
 Nella tabella seguente elenchiamo alcuni dei vantaggi e degli svantaggi delle reti centralizzate e decentralizzate.
 
 | Sistema centralizzato                                                                                                                                                                                                                          | Sistema decentralizzato                                                                                                                                                                                                                                                 |

@@ -36,8 +36,6 @@ Le Web3 a actuellement quelques limitations :
 
 ## Centralisation et décentralisation {#centralization-vs-decentralization}
 
-<!--Content below provided by Brian Gu-->
-
 Dans le tableau ci-dessous, nous répertorions certains des avantages et inconvénients des réseaux numériques centralisés et décentralisés.
 
 | Systèmes centralisés                                                                                                                                                                                                                                                             | Systèmes décentralisés                                                                                                                                                                                                                                                                   |

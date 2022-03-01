@@ -11,7 +11,7 @@ El gas es esencial para la red de Ethereum. Se trata del combustible que le perm
 
 ## Requisitos previos {#prerequisites}
 
-Para comprender mejor esta página, te recomendamos que en primer lugar leas sobre [las transacciones](/en/developers/docs/transactions/) y [la EVM](/en/developers/docs/evm/).
+Para comprender mejor esta página, te recomendamos que en primer lugar leas sobre [las transacciones](/developers/docs/transactions/) y [la EVM](/developers/docs/evm/).
 
 ## ¿Qué es el gas? {#what-is-gas}
 
@@ -19,11 +19,13 @@ El gas hace referencia a la unidad que mide la cantidad de esfuerzo computaciona
 
 Como cada transacción de Ethereum requiere recursos computacionales para ejecutarse, cada transacción requiere una comisión. El gas hace referencia a la comisión necesaria para llevar a cabo una transacción en Ethereum con éxito.
 
-![Un diagrama que muestra dónde se precisa el gas en las operaciones de la EVM.](./gas.png) _Diagrama adaptado de [Ethereum EVM ilustrado](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![Un diagrama que muestra dónde se precisa el gas en las operaciones de la EVM.](../../../../../developers/docs/gas/gas.png) _Diagrama adaptado de [Ethereum EVM ilustrado](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 En esencia, las comisiones de gas son pagadas en la moneda nativa de Ethereum, es decir, el ether (ETH). Los precios del gas están indicados en Gwei, que es una denominación de ETH; cada Gwei equivale a 0,000000001 ETH (10<sup>-9</sup> ETH). Por ejemplo, en lugar de decir que el gas cuesta 0,000000001 Ether, puedes decir que cuesta 1 Gwei.
 
-Este video proporciona una visión concisa de qué es el gas y por qué existe: <iframe width="100%" height="315" src="https://www.youtube.com/embed/AJvzNICwcwc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+Este video proporciona una visión concisa de qué es el gas y por qué existe:
+
+<YouTube id="AJvzNICwcwc" />
 
 ## ¿Por qué existen tarifas de gas? {#why-do-gas-fees-exist}
 
@@ -31,7 +33,7 @@ En resumen, las comisiones de gas ayudan a mantener la red de Ethereum segura. A
 
 Aunque una transacción incluye un límite, el gas que no se utilice en la transacción se le devuelve al usuario.
 
-![Diagrama que muestra la devolución del gas no utilizado.](../transactions/gas-tx.png) _Diagrama adaptado de [Ethereum EVM ilustrado](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![Diagrama que muestra la devolución del gas no utilizado.](../../../../../developers/docs/transactions/gas-tx.png) _Diagrama adaptado de [Ethereum EVM ilustrado](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 ## Seguir leyendo {#further-reading}
 
@@ -46,4 +48,4 @@ Aunque una transacción incluye un límite, el gas que no se utilice en la trans
 
 ## Temas relacionados {#related-topics}
 
-- [Minando](/en/developers/docs/consensus-mechanisms/pow/mining/)
+- [Minando](/developers/docs/consensus-mechanisms/pow/mining/)

@@ -275,7 +275,7 @@ A gyakorlatban azonban a kibocsátók nem mindig megbízhatóak, és egyes esete
 
 ### Identitás és Hírnév Rendszerek {#identity-and-reputation-systems}
 
-A legkorábbi alternatív kriptovaluta, a, [Namecoin](http://namecoin.org/), egy Bitcoinhoz hasonló blokkláncot próbált meg használni egy névregisztrációs rendszer biztosításához, ahol a felhasználók a nevüket egy nyilvános adatbázisba regisztrálhatták több más adat mellett. A leggyakrabban idézett alkalmazási eset [DNS](https://en.wikipedia.org/wiki/Domain_Name_System) rendszerre, a domain nevek, például "bitcoin.org" (vagy a Namecoin esetében "bitcoin.bit") leképezése egy IP címre. Egyéb alkalmazási esetek például az e-mail autentikációk és a potenciálisan haladóbb reputációs rendszerek. Nézzünk egy alap szerződést, amely Namecoin-féle név regisztrációt biztosít az Ethereumon:
+A legkorábbi alternatív kriptovaluta, a, [Namecoin](http://namecoin.org/), egy Bitcoinhoz hasonló blokkláncot próbált meg használni egy névregisztrációs rendszer biztosításához, ahol a felhasználók a nevüket egy nyilvános adatbázisba regisztrálhatták több más adat mellett. A leggyakrabban idézett alkalmazási eset [DNS](https://wikipedia.org/wiki/Domain_Name_System) rendszerre, a domain nevek, például "bitcoin.org" (vagy a Namecoin esetében "bitcoin.bit") leképezése egy IP címre. Egyéb alkalmazási esetek például az e-mail autentikációk és a potenciálisan haladóbb reputációs rendszerek. Nézzünk egy alap szerződést, amely Namecoin-féle név regisztrációt biztosít az Ethereumon:
 
     def register(name, value):
         if !self.storage[name]:
@@ -301,7 +301,7 @@ A DAO-k kódolásának általános leírása a következő. A legegyszerűbb meg
 - `[1,i]` amely egy szavazatot regisztrál az `i` javaslat előnyben részesítésére
 - `[2,i]` az `i` javaslat véglegesítésére, ha elég szavazat érkezett be
 
-A szerződésben ezután mindegyikre szerepel egy klauzula. Ezután rögzíti az összes nyitott tárolási módosítást, és azt a listát is, hogy ki szavazott rájuk. Tartalmazza a tagok listáját is. Amikor valamelyik tárolási módosításra a tagok kétharmada szavazott, a véglegesítési tranzakció hajtja végre a módosítást. Egy kifinomultabb vázban lehet beépített szavazási lehetőség is olyan funkciókra, mint például tranzakció küldése, tagok hozzáadása vagy eltávolítása, valamint lehetővé kell tenni egy [Liquid Democracy](https://en.wikipedia.org/wiki/Delegative_democracy)-stílusú szavazási delegálást is (azaz egyvalaki kijelölheti, hogy ki szavazzon helyette, majd a kijelölés átadható, tehát, ha A B-t bízza meg a szavazással, majd B C-t bízza meg, C határozza meg A szavazatát). A tervezés lehetővé teszi, hogy a DAO organikusan nőjjön decentralizált közösségként, és a tagok végül delegálhassák azt a feladatot egy specialistának, hogy kiszűrjék a tagokat, szemben a specialisták "jelenlegi rendszerével" akik a közösség egyes tagjait érintő változások függvényében könnyen ki- vagy beugorhatnak.
+A szerződésben ezután mindegyikre szerepel egy klauzula. Ezután rögzíti az összes nyitott tárolási módosítást, és azt a listát is, hogy ki szavazott rájuk. Tartalmazza a tagok listáját is. Amikor valamelyik tárolási módosításra a tagok kétharmada szavazott, a véglegesítési tranzakció hajtja végre a módosítást. Egy kifinomultabb vázban lehet beépített szavazási lehetőség is olyan funkciókra, mint például tranzakció küldése, tagok hozzáadása vagy eltávolítása, valamint lehetővé kell tenni egy [Liquid Democracy](https://wikipedia.org/wiki/Delegative_democracy)-stílusú szavazási delegálást is (azaz egyvalaki kijelölheti, hogy ki szavazzon helyette, majd a kijelölés átadható, tehát, ha A B-t bízza meg a szavazással, majd B C-t bízza meg, C határozza meg A szavazatát). A tervezés lehetővé teszi, hogy a DAO organikusan nőjjön decentralizált közösségként, és a tagok végül delegálhassák azt a feladatot egy specialistának, hogy kiszűrjék a tagokat, szemben a specialisták "jelenlegi rendszerével" akik a közösség egyes tagjait érintő változások függvényében könnyen ki- vagy beugorhatnak.
 
 Alternatív mód a decentralizált vállalat modell, amikor valamelyik számlán nulla vagy több részvény van, és a döntéshozatalhoz a részvények kétharmadára van szükség. Egy teljes vázban ideális esetben van egy eszközkezelő funkció, lehetőség részvények vásárlására vagy eladására szóló ajánlattételre, valamint lehetőség az ajánlatok elfogadására (lehetőség szerint a szerződésen belül egy ajánlat-egyeztető mechanizmussal). A delegálás szintén Liquid Democracy-stílusban létezik, általánosítva az "igazgatótanács" koncepciót.
 
@@ -464,8 +464,6 @@ Az Ethereum protokollban implementált tetszőleges állapot átmenet függvény
 
 ## Jegyzetek és további olvasnivaló {#notes-and-further-reading}
 
-<!--Invisible HTML comment used for navigation with CTRL+F footnote or fn.-->
-
 ### Jegyzetek {#notes}
 
 1.  A kifinomult olvasó észreveheti, hogy gyakorlatilag egy Bitcoin cím az elliptikus görbe nyilvános kulcs hash-e, és nem a nyilvános kulcs maga. Azonban gyakorlatilag teljesen legitim kriptográfiai terminológia a pubkey hash nyilvános kulcsként történő hivatkozása. Ez azért van, mert a Bitcoin kriptográfiáját tekinthetjük egy egyedi digitális aláírás algoritmusnak, ahol a nyilvános kulcs az ECC pubkey hashjéből áll, az aláírás az ECC pubkey és az ECC aláírás együttesen, a hitelesítő algoritmusban pedig az aláírásban lévő ECC pubkey-t a nyilvános kulcsként rendelkezésre bocsátott ECC pubkey hashhel vetik összes, majd az ECC aláírást az ECC pubkey értékével hitelesítik.
@@ -485,13 +483,13 @@ Az Ethereum protokollban implementált tetszőleges állapot átmenet függvény
 6.  [Biztonságos tulajdonság címek tulajdonosi rendelkezéssel](http://szabo.best.vwh.net/securetitle.html)
 7.  [Bitcoin fehérkönyv](http://bitcoin.org/bitcoin.pdf)
 8.  [Namecoin](https://namecoin.org/)
-9.  [Zooko háromszög](https://en.wikipedia.org/wiki/Zooko's_triangle)
+9.  [Zooko háromszög](https://wikipedia.org/wiki/Zooko's_triangle)
 10. [Colored coins fehérkönyv](https://docs.google.com/a/buterin.com/document/d/1AnkP_cVZTCMLIzw4DvsW6M8Q2JC0lIzrTLuoWu2z1BE/edit)
 11. [Mastercoin fehérkönyv](https://github.com/mastercoin-MSC/spec)
 12. [Decentralizált autonóm vállalatok, Bitcoin Magazine](http://bitcoinmagazine.com/7050/bootstrapping-a-decentralized-autonomous-corporation-part-i/)
 13. [Egyszerűsített fizetés hitelesítés](https://en.bitcoin.it/wiki/Scalability#Simplifiedpaymentverification)
-14. [Merkle fák](https://en.wikipedia.org/wiki/Merkle_tree)
-15. [Patricia fák](https://en.wikipedia.org/wiki/Patricia_tree)
+14. [Merkle fák](https://wikipedia.org/wiki/Merkle_tree)
+15. [Patricia fák](https://wikipedia.org/wiki/Patricia_tree)
 16. [GHOST](https://eprint.iacr.org/2013/881.pdf)
 17. [StorJ és Autonóm ügynökök, Jeff Garzik](http://garzikrants.blogspot.ca/2013/01/storj-and-bitcoin-autonomous-agents.html)
 18. [Mike Hearn az Okos tulajdonságokról a Turing Fesztiválon](http://www.youtube.com/watch?v=Pu4PAMFPo5Y)

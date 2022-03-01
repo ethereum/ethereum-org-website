@@ -29,7 +29,7 @@ const ButtonContainer = styled.div`
 `
 
 const Subtitle = styled.div`
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 140%;
   margin-bottom: 2rem;
   color: ${(props) => props.theme.colors.text200};
@@ -85,9 +85,12 @@ const ClearLink = styled.button`
 export const walletCardImage = graphql`
   fragment walletCardImage on File {
     childImageSharp {
-      fluid(maxWidth: 64) {
-        ...GatsbyImageSharpFluid
-      }
+      gatsbyImageData(
+        width: 64
+        layout: CONSTRAINED
+        placeholder: BLURRED
+        quality: 100
+      )
     }
   }
 `
@@ -218,9 +221,6 @@ const WalletCompare = ({ location }) => {
       dcent: file(relativePath: { eq: "wallets/dcent.png" }) {
         ...walletCardImage
       }
-      dharma: file(relativePath: { eq: "wallets/dharma.png" }) {
-        ...walletCardImage
-      }
       enjin: file(relativePath: { eq: "wallets/enjin.png" }) {
         ...walletCardImage
       }
@@ -312,6 +312,18 @@ const WalletCompare = ({ location }) => {
         ...walletCardImage
       }
       bitkeep: file(relativePath: { eq: "wallets/bitkeep.png" }) {
+        ...walletCardImage
+      }
+      keystone: file(relativePath: { eq: "wallets/keystone.png" }) {
+        ...walletCardImage
+      }
+      loopring: file(relativePath: { eq: "wallets/loopring.png" }) {
+        ...walletCardImage
+      }
+      numio: file(relativePath: { eq: "wallets/numio.png" }) {
+        ...walletCardImage
+      }
+      airgap: file(relativePath: { eq: "wallets/airgap.png" }) {
         ...walletCardImage
       }
     }
@@ -497,10 +509,7 @@ const WalletCompare = ({ location }) => {
           <ResultsContainer>
             <Emoji text=":crying_face:" size={3} mb={`2em`} mt={`2em`} />
             <h2>
-              <Translation id="page-find-wallet-not-all-features" />{" "}
-              <b>
-                <Translation id="page-find-wallet-yet" />
-              </b>
+              <Translation id="page-find-wallet-not-all-features" />
             </h2>
             <p>
               <Translation id="page-find-wallet-try-removing" />
@@ -518,7 +527,7 @@ const WalletCompare = ({ location }) => {
           <p>
             <em>
               <Translation id="page-find-wallet-not-endorsements" />{" "}
-              <Link to="/en/contributing/adding-products/">
+              <Link to="/contributing/adding-products/">
                 <Translation id="page-find-wallet-listing-policy" />
               </Link>
               <Translation id="page-find-wallet-add-wallet" />{" "}

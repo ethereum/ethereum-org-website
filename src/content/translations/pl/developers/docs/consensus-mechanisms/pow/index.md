@@ -1,22 +1,22 @@
 ---
-title: Proof of work (PoW)
+title: Proof-of-work (PoW)
 description: Wyjaśnienie protokołu konsensusu proof-of-work i jego roli w Ethereum.
 lang: pl
 sidebar: true
 incomplete: true
 ---
 
-Ethereum, podobnie jak Bitcoin, używa obecnie protokołu konsensusu o nazwie [Proof of Work (PoW)](https://en.wikipedia.org/wiki/Proof_of_work). Pozwala to węzłom sieci Ethereum na uzgodnienie stanu wszystkich informacji zapisanych w blockchainie Ethereum i zapobiega niektórym rodzajom ataków ekonomicznych.
+Ethereum, podobnie jak Bitcoin, używa obecnie protokołu konsensusu o nazwie [proof-of-work (PoW)](https://wikipedia.org/wiki/Proof_of_work). Pozwala to węzłom sieci Ethereum na uzgodnienie stanu wszystkich informacji zapisanych w blockchainie Ethereum i zapobiega niektórym rodzajom ataków ekonomicznych.
 
 ## Warunki wstępne {#prerequisites}
 
-Aby lepiej zrozumieć tę stronę, zalecamy najpierw zapoznać się z [transakcjami](/en/developers/docs/transactions/) i [blokami](/en/developers/docs/blocks/).
+Aby lepiej zrozumieć tę stronę, zalecamy najpierw zapoznać się z [transakcjami](/developers/docs/transactions/) i [blokami](/developers/docs/blocks/).
 
-## Czym jest proof-of-Work (PoW)? {#what-is-pow}
+## Czym jest proof-of-work (PoW)? {#what-is-pow}
 
-Proof-of-Work (PoW) jest mechanizmem pozwalającym zdecentralizowanej sieci Ethereum na osiągnięcie konsensusu, lub akceptuje takie rzeczy jak salda konta i kolejność transakcji. Zapobiega to „podwójnemu wydawaniu” swoich monet przez użytkowników i zapewnia, że ​​łańcuch Ethereum jest niezwykle trudny do zaatakowania lub nadpisania.
+Proof-of-work (PoW) jest mechanizmem pozwalającym zdecentralizowanej sieci Ethereum na osiągnięcie konsensusu, lub akceptuje takie rzeczy jak salda konta i kolejność transakcji. Zapobiega to „podwójnemu wydawaniu” swoich monet przez użytkowników i zapewnia, że ​​łańcuch Ethereum jest niezwykle trudny do zaatakowania lub nadpisania.
 
-## Proof-of-Work i wydobycie {#pow-and-mining}
+## Proof-of-work i wydobycie {#pow-and-mining}
 
 Proof-of-work to podstawowy algorytm, który określa poziom trudności i zasady wykonywania pracy przez górników. Wydobycie to sama „praca”. Jest to akt dodawania prawidłowych bloków do łańcucha. Jest to ważne, ponieważ długość łańcucha pomaga sieci wykryć prawidłowy łańcuch Ethereum i zrozumieć aktualny stan Ethereum. Im więcej „pracy” zostanie wykonane, im dłuższy łańcuch i im wyższy numer bloku, tym większa pewność co do aktualnego stanu rzeczy w sieci.
 
@@ -50,7 +50,7 @@ Celem programu PoW jest rozszerzenie łańcucha. Najdłuższy łańcuch jest naj
 
 Aby konsekwentnie tworzyć złośliwe, ale ważne bloki, potrzebujesz ponad 51% mocy wydobycia sieci, aby pokonać wszystkich innych. Potrzebujesz dużo mocy obliczeniowej, aby móc wykonać tę ilość „pracy”. A wydatkowanie energii może nawet przewyższyć zyski, jakie możesz osiągnąć w ataku.
 
-### Ekonomia Proof-of-work {#economics}
+### Ekonomia proof-of-work {#economics}
 
 PoW jest również odpowiedzialny za emisję nowej waluty do systemu i zachęcanie górników do wykonywania pracy.
 
@@ -85,7 +85,7 @@ Na wysokim poziomie proof of stake ma ten sam cel co proof of work: pomoc w osi�
 - Walidatorzy nie konkurują o tworzenie bloków, zamiast tego są wybierani losowo przez algorytm.
 - Nieodwołalność jest jaśniejsza: w niektórych punktach kontrolnych, jeżeli 2/3 zatwierdzających zgadza się co do stanu bloku, jest on uważany za ostateczny. Walidatorzy muszą postawić na to całą swoją stawkę, więc jeśli spróbują się zmówić, stracą ją.
 
-[Więcej o proof of stake](/developers/docs/consensus-mechanisms/pos/)
+[Więcej o proof-of-stake](/developers/docs/consensus-mechanisms/pos/)
 
 ## Dalsza lektura {#further-reading}
 
@@ -95,4 +95,4 @@ Na wysokim poziomie proof of stake ma ten sam cel co proof of work: pomoc w osi�
 ## Tematy powiązane {#related-topics}
 
 - [Wydobywanie](/developers/docs/consensus-mechanisms/pow/mining/)
-- [Proof of stake](/developers/docs/consensus-mechanisms/pos/)
+- [proof-of-stake](/developers/docs/consensus-mechanisms/pos/)

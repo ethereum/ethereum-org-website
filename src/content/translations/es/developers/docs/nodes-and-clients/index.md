@@ -11,7 +11,7 @@ Para que Ethereum funcione de forma descentralizada, necesita de una red de nodo
 
 ## Requisitos previos {#prerequisites}
 
-Es recomendable que primero entiendas el concepto de red descentralizada antes de profundizar y ejecutar tu propia instancia de un cliente de Ethereum. Echa un vistazo a nuestra [introducción a Ethereum](/en/developers/docs/intro-to-ethereum/).
+Es recomendable que primero entiendas el concepto de red descentralizada antes de profundizar y ejecutar tu propia instancia de un cliente de Ethereum. Echa un vistazo a nuestra [introducción a Ethereum](/developers/docs/intro-to-ethereum/).
 
 ## ¿Qué son los nodos y clientes? {#what-are-nodes-and-clients}
 
@@ -19,13 +19,13 @@ Un "nodo" se refiere a una pieza de software conocida como cliente. Un cliente e
 
 Puedes observar la red de Ethereum en tiempo real accediendo este [mapa de nodos](https://etherscan.io/nodetracker).
 
-Varias [implementaciones de clientes de Ethereum](/developers/docs/nodes-and-clients/#clients) existen en una variedad lenguajes de programación. Lo que estas implementaciones de clientes tienen en común es que todas siguen una especificación formal. Esta especificación determina cómo funcionan la red de Ethereum y las funciones de la blockchain.
+Varias [implementaciones de clientes de Ethereum](/developers/docs/nodes-and-clients/#execution-clients) existen en una variedad lenguajes de programación. Lo que estas implementaciones de clientes tienen en común es que todas siguen una especificación formal. Esta especificación determina cómo funcionan la red de Ethereum y las funciones de la blockchain.
 
-![Cliente de Eth1x](./client-diagram.png) Diagrama simplificado de las características del cliente de Ethereum.
+![Cliente de Eth1x](../../../../../developers/docs/nodes-and-clients/client-diagram.png) Diagrama simplificado de las características del cliente de Ethereum.
 
 ## Tipos de nodos {#node-types}
 
-Si deseas ejecutar tu propio nodo, primero debes saber que hay diferentes tipos de nodos que consumen datos de forma diferente. De hecho, los clientes pueden ejecutar 3 diferentes tipos de nodos: ligero, completo y de almacenamiento. Además, hay opciones de diferentes estrategias de sincronización que permiten un tiempo de sincronización más rápido. La sincronización se refiere a la rapidez con que puede obtener la información más actualizada sobre el estado de Ethereum.
+    Si deseas ejecutar tu propio nodo, primero debes saber que hay diferentes tipos de nodos que consumen datos de forma diferente. De hecho, los clientes pueden ejecutar 3 diferentes tipos de nodos: ligero, completo y de almacenamiento. Además, hay opciones de diferentes estrategias de sincronización que permiten un tiempo de sincronización más rápido. La sincronización se refiere a la rapidez con que puede obtener la información más actualizada sobre el estado de Ethereum.
 
 ### Nodo completo {#full-node}
 
@@ -59,13 +59,13 @@ Ejecutar tu propio nodo te permite utilizar Ethereum de una manera realmente pri
 - No tendrás que filtrar tus direcciones y saldos a nodos aleatorios. Todo puede ser verificado con tu propio cliente.
 - Tu dapp puede ser más segura y privada si utilizas tu propio nodo. [Metamask](https://metamask.io), [MyEtherWallet](https://myetherwallet.com) y algunas otras carteras pueden ser configuradas fácilmente para apuntar a tu propio nodo local.
 
-![Cómo accedes a Ethereum a través de tu aplicación y nodos](./nodes.png)
+![Cómo accedes a Ethereum a través de tu aplicación y nodos](../../../../../developers/docs/nodes-and-clients/nodes.png)
 
 ### Beneficios de la red {#network-benefits}
 
 Un conjunto diverso de nodos es importante para la salud, seguridad y resiliencia operativa de Ethereum.
 
-- Proporcionan acceso a los datos de blockchain para clientes ligeros que dependen de ello. En picos de alto uso, es necesario que hayan suficientes nodos completos para ayudar a los nodos lgeros a sincronizarse. Los nodos ligeros no almacenan la blockchain completa, sino que verifican los datos usando [ los estados raíz en las cabeceras de los bloques](/en/developers/docs/blocks/#block-anatomy). Ellos pueden solicitar más información de los bloques si lo necesitan.
+- Proporcionan acceso a los datos de blockchain para clientes ligeros que dependen de ello. En picos de alto uso, es necesario que hayan suficientes nodos completos para ayudar a los nodos ligeros a sincronizarse. Los nodos ligeros no almacenan la blockchain completa, sino que verifican los datos usando [ los estados raíz en las cabeceras de los bloques](/developers/docs/blocks/#block-anatomy). Ellos pueden solicitar más información de los bloques si lo necesitan.
 - Los nodos completos hacen cumplir las reglas de consenso de prueba de trabajo, de modo que no se les puede engañar para que acepten bloques que no siguen dichas reglas. Esto proporciona seguridad extra a la red porque, si todos los nodos fueran nodos ligeros y no realizaran la verificación completa, los mineros podrían atacar la red, y por ejemplo, crear bloques con mayores recompensas.
 
 Si ejecuta un nodo completo, toda la red Ethereum se beneficia de él.
@@ -99,7 +99,7 @@ Si alguien ejecuta un nodo de Ethereum con una API pública en tu comunidad, pod
 
 Por otra parte, si administras un cliente, puedes compartirlo con tus amigos que lo necesiten.
 
-## Clientes {#clients}
+## Clientes {#execution-clients}
 
 Ethereum esta diseñado para ofrecer diferentes clientes, desarrollados por diferentes equipos que utilizan diferentes lenguajes de programación. Esto hace que la red sea mas fuerte y más diversa. El objetivo ideal es lograr la diversidad sin que ningún cliente tenga una posición dominante para reducir así los puntos de fracaso.
 
@@ -113,7 +113,7 @@ Esta tabla resume los diferentes clientes. En todos ellos se ha trabajado activa
 | [Besu](https://pegasys.tech/solutions/hyperledger-besu/)     | Java     | Linux, Windows, macOS | Mainnet, Rinkeby, Ropsten, y Görli     | Rápido, completo                  | Archivo, podado |
 | [Trinity](https://trinity.ethereum.org/)                     | Python   | Linux, macOS          | Mainnet, Görli, Ropsten, etc.          | Beam, Completo, Rápido/Encabezado | Archivo         |
 
-Si deseas obtener más información sobre redes compatibles, puedes leer [Redes de Ethereum](/en/developers/docs/networks/).
+Si deseas obtener más información sobre redes compatibles, puedes leer [Redes de Ethereum](/developers/docs/networks/).
 
 ### Ventajas de las diferentes implementaciones {#advantages-of-different-implementations}
 
@@ -184,7 +184,7 @@ Antes de instalar un cliente, asegúrate de que tu equipo tiene suficientes recu
 
 #### Especificaciones recomendadas {#recommended-specifications}
 
-- CPU rapido con 4 o más núcleos
+- CPU rápido con 4 o más núcleos
 - 16 GB o más de RAM
 - SSD rápido con al menos 500 GB de espacio libre
 - 25 o más MBit/s de banda ancha
@@ -198,23 +198,23 @@ Dependiendo de qué software y modo de sincronización vas a usar, se necesitan 
 | Nethermind   | 200 GB o más                             | 3TB+                                |
 | Besu         | 750GB+                                   | 4TB+                                |
 
-![Un gráfico que muestra los GB necesarios para una sincronización completa tiene un tendencia hacia arriba](./full-sync.png)
+![Un gráfico que muestra los GB necesarios para una sincronización completa tiene un tendencia hacia arriba](../../../../../developers/docs/nodes-and-clients/full-sync.png)
 
-![Un gráfico que muestra los GB necesarios para una sincronización de archivo tiene un tendencia hacia arriba](./archive-sync.png)
+![Un gráfico que muestra los GB necesarios para una sincronización de archivo tiene un tendencia hacia arriba](../../../../../developers/docs/nodes-and-clients/archive-sync.png)
 
 Estos gráficos muestran que los requisitos de almacenamiento siempre están cambiando. Para obtener los datos más actualizados para Geth and Parity, consulta los [datos de sincronización completa](https://etherscan.io/chartsync/chaindefault) y los [datos de sincronización de archivos](https://etherscan.io/chartsync/chainarchive).
 
 ### Ethereum en un ordenador de una sola placa {#ethereum-on-a-single-board-computer}
 
-La manera más conveniente y barata de ejecutar un nodo de Ethereum es usar una computadora de placa única con arquitectura ARM como Raspberry Pi. [Ethereum en ARM](https://twitter.com/EthereumOnARM) proporciona imágenes de clientes de Geth, Parity y Besu. Aquí se incluye un simple tutorial sobre [cómo construir y configurar un cliente ARM](/en/developers/tutorials/run-node-raspberry-pi/).
+La manera más conveniente y barata de ejecutar un nodo de Ethereum es usar una computadora de placa única con arquitectura ARM como Raspberry Pi. [Ethereum en ARM](https://twitter.com/EthereumOnARM) proporciona imágenes de clientes de Geth, Parity y Besu. Aquí se incluye un simple tutorial sobre [cómo construir y configurar un cliente ARM](/developers/tutorials/run-node-raspberry-pi/).
 
 Los dispositivos pequeños, económicos y eficientes como estos son ideales para ejecutar un nodo en casa.
 
-## Clientes eth2 {#eth2-clients}
+## Clientes eth2 {#consensus-clients}
 
-Hay nuevos clientes que soportan las [actualizaciones de Eth2](/eth2/beacon-chain/). Ellos ejecutarán la cadena de baliza y apoyarán el nuevo mecanismo de consenso [a prueba de estaturas](/developers/docs/consensus-mechanisms/pos/).
+Hay nuevos clientes que soportan las [actualizaciones de Eth2](/upgrades/beacon-chain/). Ellos ejecutarán la cadena de baliza y apoyarán el nuevo mecanismo de consenso [a prueba de estaturas](/developers/docs/consensus-mechanisms/pos/).
 
-[Ver clientes de Eth2](/eth2/get-involved/#clients).
+[Ver clientes de Eth2](/upgrades/get-involved/#clients).
 
 ## Más lectura {#further-reading}
 
@@ -228,8 +228,8 @@ Hay muchas instrucciones e información sobre los clientes de Ethereum en Intern
 
 ## Temas relacionados {#related-topics}
 
-- [Bloques](/en/developers/docs/blocks/)
-- [Redes](/en/developers/docs/networks/)
+- [Bloques](/developers/docs/blocks/)
+- [Redes](/developers/docs/networks/)
 
 ## Tutoriales relacionados {#related-tutorials}
 

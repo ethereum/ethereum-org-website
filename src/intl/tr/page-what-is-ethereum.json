@@ -53,5 +53,17 @@
   "page-what-is-ethereum-wallets": "Cüzdanlar",
   "page-what-is-ethereum-wallets-desc": "ETH'nizi ve Ethereum hesabınızı nasıl yönetiyorsunuz. Başlamak için bir cüzdana ihtiyacınız olacak - birini seçmenize yardımcı olacağız.",
   "page-what-is-ethereum-welcome": "Ethereum'a hoş geldiniz",
-  "page-what-is-ethereum-welcome-2": "Umarız kalırsınız."
+  "page-what-is-ethereum-welcome-2": "Umarız kalırsınız.",
+  "page-what-is-ethereum-defi-title": "Merkeziyetsiz finans (DeFi)",
+  "page-what-is-ethereum-defi-description": "Size paranız üzerinde daha fazla kontrol sağlayan ve yeni olasılıkların kilidini açan daha açık bir finansal sistem.",
+  "page-what-is-ethereum-defi-alt": "Lego tuğlalarından yapılmış bir Eth logosu.",
+  "page-what-is-ethereum-nft-title": "Değiştirilemeyen tokenler (NFT'ler)",
+  "page-what-is-ethereum-nft-description": "Benzersiz öğeleri takas edilebilen, sahiplik kanıtı olarak kullanılabilen ve içerik oluşturucular için yeni fırsatlar yaratan Ethereum varlıkları olarak temsil etmenin bir yolu.",
+  "page-what-is-ethereum-nft-alt": "Hologram aracılığıyla görüntülenen bir Eth logosu.",
+  "page-what-is-ethereum-dao-title": "Merkeziyetsiz özerk organizasyonlar (DAO'lar)",
+  "page-what-is-ethereum-dao-description": "Ortak hedefler ve havuzda toplanan fonlarla işbirliği yapmanın ve çevrimiçi topluluklar oluşturmanın yeni bir yolu.",
+  "page-what-is-ethereum-dao-alt": "Bir teklif üzerinde oy kullanan bir DAO'nun temsili.",
+  "page-what-is-ethereum-use-cases-title": "Ethereum kullanım örneklerini keşfedin",
+  "page-what-is-ethereum-use-cases-subtitle": "Ethereum, hayatımızın farklı alanlarını iyileştirebilecek yeni ürün ve hizmetlerin yaratılmasına yol açtı.",
+  "page-what-is-ethereum-use-cases-subtitle-two": "Henüz erken aşamadayız ama heyecanlanacak çok şey var."
 }

@@ -17,7 +17,7 @@ const StyledTag = styled.div`
   );
   border-radius: 4px;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 0.875rem;
   box-shadow: ${(props) =>
     props.isActive ? 0 : props.theme.colors.tableBoxShadow};
   border: 1px solid

@@ -10,21 +10,25 @@ const StyledBannerNotification = styled(BannerNotification)`
 `
 
 const StyledEmoji = styled(Emoji)`
+  align-self: center;
   margin-right: 1rem;
   flex-shrink: 0;
 `
 
-export default UpgradeBannerNotification = () => (
+const StyledBannerContent = styled.div`
+  align-self: center;
+`
+
+const UpgradeBannerNotification = () => (
   <StyledBannerNotification shouldShow>
     <StyledEmoji text=":megaphone:" />
-    <div>
-      <b>Calling all Beacon Chain node operators!</b> Time to upgrade your
-      client to support the Altair upgrade set for{" "}
-      <Link to="/history#altair">Oct 27</Link>. See communications from your
-      client developer team for further details.{" "}
-      <Link to="https://blog.ethereum.org/2021/10/05/altair-announcement/">
-        Follow updates
+    <StyledBannerContent>
+      <b>We've deprecated our use of 'Eth1' and 'Eth2' terms.</b>{" "}
+      <Link to="https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/">
+        Read the full announcement
       </Link>
-    </div>
+    </StyledBannerContent>
   </StyledBannerNotification>
 )
+
+export default UpgradeBannerNotification

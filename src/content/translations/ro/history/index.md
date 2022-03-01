@@ -31,11 +31,13 @@ Aceste modificări de regulă pot crea o divizare temporară în rețea. Blocuri
 
 #### Rezumat {#beacon-chain-genesis-summary}
 
-[Lanțul Beacon](/eth2/beacon-chain/) a necesitat 16.384 de depozite de 32 de mize ETH pentru a fi expediate în siguranță. Acest lucru s-a întâmplat pe 27 noiembrie, ceea ce înseamnă că lanțul Beacon a început să producă blocuri pe 1 decembrie 2020. Acesta este un prim pas important în realizarea [viziunii Eth2](/eth2/vision/).
+[Lanțul Beacon](/upgrades/beacon-chain/) a necesitat 16.384 de depozite de 32 de mize ETH pentru a fi expediate în siguranță. Acest lucru s-a întâmplat pe 27 noiembrie, ceea ce înseamnă că lanțul Beacon a început să producă blocuri pe 1 decembrie 2020. Acesta este un prim pas important în realizarea [viziunii Eth2](/upgrades/vision/).
 
 [Citește anunțul Fundației Ethereum](https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21/)
 
-<DocLink to="/eth2/beacon-chain/" title="Lanțul Beacon" />
+<DocLink to="/upgrades/beacon-chain/">
+  Lanțul Beacon
+</DocLink>
 
 ---
 
@@ -45,11 +47,13 @@ Aceste modificări de regulă pot crea o divizare temporară în rețea. Blocuri
 
 #### Rezumat {#deposit-contract-summary}
 
-Contractul de depozit de miză a introdus [miza](/glossary/#staking) în ecosistemul Ethereum. Deși este un contract [Mainnet](/glossary/#mainnet) (rețea principală), acesta a avut un impact direct asupra cronologiei lansării [lanțului Beacon](/eth2/beacon-chain/), un important [upgrade Eth2](/eth2/).
+Contractul de depozit de miză a introdus [miza](/glossary/#staking) în ecosistemul Ethereum. Deși este un contract [Mainnet](/glossary/#mainnet) (rețea principală), acesta a avut un impact direct asupra cronologiei lansării [lanțului Beacon](/upgrades/beacon-chain/), un important [upgrade Eth2](/upgrades/).
 
 [Citește anunțul Fundației Ethereum](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/)
 
-<DocLink to="/eth2/staking/" title="Mizare" />
+<DocLink to="/staking/">
+  Mizare
+</DocLink>
 
 ---
 
@@ -84,7 +88,7 @@ Furculița Istanbul:
 
 - A optimizat costul [gazului](/glossary/#gas) anumitor acțiuni din [EVM](/developers/docs/ethereum-stack/#ethereum-virtual-machine).
 - A îmbunătățit rezistența la atacul prin refuz de serviciu.
-- A făcut soluțiile de [scalare Layer 2](/developers/docs/scaling/layer-2-rollups/) bazate pe SNARK-uri și STARK-uri mai performante.
+- A făcut soluțiile de [scalare Layer 2](/developers/docs/scaling/#rollups) bazate pe SNARK-uri și STARK-uri mai performante.
 - A permis interoperabilitatea dintre Ethereum și Zcash.
 - A permis contractelor să introducă funcții mai creative.
 
@@ -96,7 +100,7 @@ Furculița Istanbul:
 - [EIP-1108](https://eips.ethereum.org/EIPS/eip-1108) –_criptografie mai ieftină pentru a îmbunătăți costurile de [gas](/glossary/#gas)._
 - [EIP-1344](https://eips.ethereum.org/EIPS/eip-1344) – _protejează Ethereum împotriva atacurilor de reluare prin adăugarea „CHAINID” [opcode](/developers/docs/ethereum-stack/#ethereum-virtual-machine)._
 - [EIP-1884](https://eips.ethereum.org/EIPS/eip-1884) – _optimizarea prețurilor gazului opcode pe baza consumului._
-- [EIP-2028](https://eips.ethereum.org/EIPS/eip-2028) – _reduce costul CallData pentru a permite mai multe date în blocuri – bun pentru [scalarea Layer 2](/developers/docs/scaling/layer-2-rollups/)._
+- [EIP-2028](https://eips.ethereum.org/EIPS/eip-2028) – _reduce costul CallData pentru a permite mai multe date în blocuri – bun pentru [scalarea Layer 2](/developers/docs/scaling/#rollups)._
 - [EIP-2200](https://eips.ethereum.org/EIPS/eip-2200) – _alte modificări ale prețului gazului opcode._
 
 </ExpandableCard>
@@ -141,7 +145,7 @@ Furculița Byzantium:
 - A redus recompensele [miniere](/developers/docs/consensus-mechanisms/pow/mining/) pe bloc de la 5 la 3 ETH.
 - A amânat [bomba de dificultate](/glossary/#difficulty-bomb) cu un an.
 - A adăugat capacitatea de a efectua apeluri către alte contracte care nu modifică starea.
-- A adăugat anumite metode de criptografie pentru a permite [scalarea layer-ului 2](/developers/docs/scaling/layer-2-rollups/).
+- A adăugat anumite metode de criptografie pentru a permite [scalarea layer-ului 2](/developers/docs/scaling/#rollups).
 
 [Citește anunțul Fundației Ethereum](https://blog.ethereum.org/2017/10/12/byzantium-hf-announcement/)
 
@@ -149,8 +153,8 @@ Furculița Byzantium:
 
 - [EIP-140](https://eips.ethereum.org/EIPS/eip-140) – _adaugă opcodul „REVERT”._
 - [EIP-658](https://eips.ethereum.org/EIPS/eip-658) – _adaugă câmpul „stare” la recepțiile tranzacției pentru a indica succesul sau eșecul_
-- [EIP-196](https://eips.ethereum.org/EIPS/eip-196) – _adaugă curba eliptică și înmulțirea scalară pentru a permite [ZK-Snarks](/developers/docs/scaling/layer-2-rollups/)._
-- [EIP-197](https://eips.ethereum.org/EIPS/eip-197) – _adaugă curba eliptică și înmulțirea scalară pentru a permite [ZK-Snarks](/developers/docs/scaling/layer-2-rollups/)._
+- [EIP-196](https://eips.ethereum.org/EIPS/eip-196) – _adaugă curba eliptică și înmulțirea scalară pentru a permite [ZK-Snarks](/developers/docs/scaling/#rollups)._
+- [EIP-197](https://eips.ethereum.org/EIPS/eip-197) – _adaugă curba eliptică și înmulțirea scalară pentru a permite [ZK-Snarks](/developers/docs/scaling/#rollups)._
 - [EIP-198](https://eips.ethereum.org/EIPS/eip-198) – _permite verificarea semnăturii RSA._
 - [EIP-211](https://eips.ethereum.org/EIPS/eip-211) – _adaugă suport pentru valorile de returnare de lungime variabilă._
 - [EIP-214](https://eips.ethereum.org/EIPS/eip-214) – _adaugă opcodul „STATICCALL”, care permite apeluri care nu modifică starea către alte contracte._
@@ -301,4 +305,6 @@ Yellow Paper, scris de Dr. Gavin Wood, este o definiție tehnică a protocolului
 
 Lucrarea introductivă, publicată în 2013 de Vitalik Buterin, fondatorul Ethereum, înainte de lansarea proiectului în 2015.
 
-<DocLink to="/whitepaper/" title="Whitepaper" />
+<DocLink to="/whitepaper/">
+  Whitepaper
+</DocLink>

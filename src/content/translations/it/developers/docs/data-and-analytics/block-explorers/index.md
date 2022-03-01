@@ -10,7 +10,7 @@ I block explorer sono il tuo portale sui dati di Ethereum. Puoi usarli per veder
 
 ## Prerequisiti {#prerequisites}
 
-È consigliabile conoscere i concetti base di Ethereum in modo da capire quali dati si possono consultare in un block explorer. Inizia con [un'introduzione a Ethereum](/en/developers/docs/intro-to-ethereum/).
+È consigliabile conoscere i concetti base di Ethereum in modo da capire quali dati si possono consultare in un block explorer. Inizia con [un'introduzione a Ethereum](/developers/docs/intro-to-ethereum/).
 
 ## Servizi {#services}
 
@@ -50,7 +50,7 @@ A Ethereum vengono aggiunti nuovi blocchi ogni ~12 secondi (il dato può fluttua
 - Hash padre: hash del blocco precedente a quello attuale.
 - Sha3Uncles: hash combinato di tutti i blocchi zio per un determinato blocco padre.
 - StateRoot: hash root dell'albero di Merkel che conserva l'intero stato del sistema.
-- Nonce: valore usato per dimostrare la Proof of Work per un blocco da parte del miner.
+- Nonce: valore usato per dimostrare la proof-of-work per un blocco da parte del miner.
 
 **Blocchi zio**
 
@@ -138,7 +138,7 @@ I token sono un tipo di contratto, quindi hanno dati simili a quelli di uno Smar
 
 ### Rete {#network}
 
-Naturalmente ci sono alcuni dati che indicano la salute della rete. Sono abbastanza specifici del meccanismo di consenso Proof of Work di Ethereum. Quando Ethereum passerà a Eth2 alcuni di questi dati saranno ridondanti
+Naturalmente ci sono alcuni dati che indicano la salute della rete. Sono abbastanza specifici del meccanismo di consenso proof-of-work di Ethereum. Quando Ethereum passerà a Eth2 alcuni di questi dati saranno ridondanti
 
 - Difficoltà: l'attuale difficoltà di mining.
 - Tasso di hash: stima di quanti hash sono stati generati dai miner di Ethereum tentando di risolvere il blocco corrente o un blocco specifico.
@@ -148,11 +148,11 @@ Naturalmente ci sono alcuni dati che indicano la salute della rete. Sono abbasta
 - Quantità totale di ETH: numero di ETH in circolazione. Rricorda che nuovi ETH vengono creati con la creazione di ogni blocco, sotto forma di ricompensa.
 - Capitalizzazione di mercato: capitalizzazione calcolata come prezzo\*quantità totale in circolazione.
 
-## Dati di Eth2 {#eth2-data}
+## Dati di Eth2 {#consensus-layer-data}
 
 Gli upgrade a Eth2 sono ancora in fase di sviluppo ma vale la pena parlare di alcuni dati che gli explorer saranno in grado di fornire. Di fatto, tutti questi dati sono già disponibili per le reti di prova.
 
-Se non hai familiarità con Eth2, consulta la [nostra panoramica sugli aggiornamenti a Eth2](/eth2/).
+Se non hai familiarità con Eth2, consulta la [nostra panoramica sugli aggiornamenti a Eth2](/upgrades/).
 
 ### Epoch {#epoch}
 
@@ -257,7 +257,7 @@ I dati di primo livello di Eth2 comprendono quanto segue:
 - [Ethplorer](https://ethplorer.io/): block explorer che si concentra sui token per la rete principale Ethereum e la rete di prova Kovan.
 - [Blockchair](https://blockchair.com/ethereum): l'explorer Ethereum più privato. Anche per ordinare e filtrare dati (mempool).
 
-## Block explorer Eth2 {#eth2-block-explorers}
+## Block explorer Eth2 {#beacon-chain-block-explorers}
 
 - [https://beaconcha.in/](https://beaconcha.in/)
 - [https://beaconscan.com/](https://beaconscan.com/)

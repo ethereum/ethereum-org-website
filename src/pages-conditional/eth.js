@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import Img from "gatsby-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { useIntl } from "gatsby-plugin-intl"
 import { graphql } from "gatsby"
 
@@ -32,12 +32,12 @@ import {
 const Slogan = styled.p`
   font-style: normal;
   font-weight: normal;
-  font-size: 32px;
+  font-size: 2rem;
   line-height: 140%;
 `
 
 const Title = styled.h1`
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 140%;
   letter-spacing: 0.04em;
   font-weight: 500;
@@ -52,12 +52,12 @@ const StyledTwoColumnContent = styled(TwoColumnContent)`
 `
 
 const Subtitle = styled.div`
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 140%;
   color: ${(props) => props.theme.colors.text200};
 `
 const SubtitleTwo = styled.div`
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 140%;
   margin-bottom: 2rem;
   color: ${(props) => props.theme.colors.text300};
@@ -75,7 +75,7 @@ const HeroContainer = styled.div`
   }
 `
 
-const Hero = styled(Img)`
+const Hero = styled(GatsbyImage)`
   flex: 1 1 100%;
   max-width: 800px;
   align-self: center;
@@ -221,21 +221,25 @@ const benefits = [
 
 const tokenLinks = [
   {
+    link: "/stablecoins/",
     caption: "",
     title: <Translation id="page-eth-tokens-stablecoins" />,
     description: <Translation id="page-eth-tokens-stablecoins-description" />,
   },
   {
+    link: "/defi/",
     caption: "",
     title: <Translation id="page-eth-tokens-defi" />,
     description: <Translation id="page-eth-tokens-defi-description" />,
   },
   {
+    link: "/nft/",
     caption: "",
     title: <Translation id="page-eth-tokens-nft" />,
     description: <Translation id="page-eth-tokens-nft-description" />,
   },
   {
+    link: "/dao/",
     caption: "",
     title: <Translation id="page-eth-tokens-dao" />,
     description: <Translation id="page-eth-tokens-dao-description" />,
@@ -256,15 +260,14 @@ const cardListContent = [
     caption: <Translation id="page-eth-last-updated" />,
   },
   {
-    link:
-      "https://support.mycrypto.com/how-to/getting-started/how-to-buy-ether-with-usd",
+    link: "https://support.mycrypto.com/how-to/getting-started/how-to-buy-ether-with-usd",
     title: <Translation id="page-eth-how-to-buy" />,
     description: "MyCrypto",
     caption: <Translation id="page-eth-how-to-buy-caption" />,
   },
 ]
 
-const WhatIsEthereumPage = (props) => {
+const EthPage = (props) => {
   const intl = useIntl()
   const data = props.data
   return (
@@ -272,7 +275,7 @@ const WhatIsEthereumPage = (props) => {
       <PageMetadata
         title={translateMessageId("page-eth-whats-eth-meta-title", intl)}
         description={translateMessageId("page-eth-whats-eth-meta-desc", intl)}
-        image={data.ogImage.childImageSharp.fixed.src}
+        image={getImage(data.ogImage)?.images.fallback.src}
       />
       <Content>
         <HeroContainer>
@@ -295,7 +298,7 @@ const WhatIsEthereumPage = (props) => {
             </ButtonLink>
           </Header>
           <Hero
-            fluid={data.eth.childImageSharp.fluid}
+            image={getImage(data.eth)}
             alt={translateMessageId("page-eth-whats-eth-hero-alt", intl)}
             loading="eager"
           />
@@ -361,7 +364,7 @@ const WhatIsEthereumPage = (props) => {
             </p>
             <p>
               <Translation id="page-eth-fuels-staking" />{" "}
-              <Link to="/eth2/staking/">
+              <Link to="/staking/">
                 <Translation id="page-eth-fuels-more-staking" />
               </Link>
             </p>
@@ -373,7 +376,7 @@ const WhatIsEthereumPage = (props) => {
               "page-eth-whats-ethereum-desc",
               intl
             )}
-            image={data.ethereum.childImageSharp.fixed}
+            image={getImage(data.ethereum)}
           />
           <TextDivider />
           <div>
@@ -393,7 +396,7 @@ const WhatIsEthereumPage = (props) => {
                 "page-eth-whats-defi-description",
                 intl
               )}
-              image={data.defi.childImageSharp.fixed}
+              image={getImage(data.defi)}
             />
           </div>
           <TextDivider />
@@ -437,9 +440,9 @@ const WhatIsEthereumPage = (props) => {
           <Divider />
         </CentralColumn>
         <StyledCalloutBanner
-          title={translateMessageId("page-eth-where-to-buy", intl)}
-          description={translateMessageId("page-eth-where-to-buy-desc", intl)}
-          image={data.ethCat.childImageSharp.fluid}
+          titleKey={"page-eth-where-to-buy"}
+          descriptionKey={"page-eth-where-to-buy-desc"}
+          image={getImage(data.ethCat)}
           alt={translateMessageId("page-eth-cat-img-alt", intl)}
           maxImageWidth={300}
         >
@@ -511,57 +514,58 @@ const WhatIsEthereumPage = (props) => {
   )
 }
 
-export default WhatIsEthereumPage
+export default EthPage
 
 export const query = graphql`
-  query {
-    banner: file(relativePath: { eq: "home/eth-tokens.png" }) {
-      childImageSharp {
-        fluid(maxHeight: 400) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    dapps: file(relativePath: { eq: "doge-computer.png" }) {
-      childImageSharp {
-        fixed(width: 372) {
-          ...GatsbyImageSharpFixed
-        }
-      }
-    }
+  {
     eth: file(relativePath: { eq: "eth.png" }) {
       childImageSharp {
-        fluid(maxWidth: 800) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(
+          width: 800
+          layout: CONSTRAINED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     ogImage: file(relativePath: { eq: "eth.png" }) {
       childImageSharp {
-        fixed(width: 1200) {
-          src
-        }
+        gatsbyImageData(
+          width: 1200
+          layout: FIXED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     ethereum: file(relativePath: { eq: "what-is-ethereum.png" }) {
       childImageSharp {
-        fixed(width: 220) {
-          ...GatsbyImageSharpFixed
-        }
+        gatsbyImageData(
+          width: 220
+          layout: FIXED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     defi: file(relativePath: { eq: "finance_transparent.png" }) {
       childImageSharp {
-        fixed(width: 220) {
-          ...GatsbyImageSharpFixed
-        }
+        gatsbyImageData(
+          width: 220
+          layout: FIXED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     ethCat: file(relativePath: { eq: "eth-gif-cat.png" }) {
       childImageSharp {
-        fluid(maxWidth: 600) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(
+          width: 600
+          layout: CONSTRAINED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
   }

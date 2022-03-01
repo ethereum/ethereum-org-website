@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useMemo } from "react"
 import styled from "styled-components"
-import Img from "gatsby-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { graphql } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
 
@@ -46,13 +46,13 @@ const StyledGradientContainer = styled(GradientContainer)`
   background: ${(props) => props.theme.colors.ednBackground};
 ` */
 
-const Image = styled(Img)`
+const Image = styled(GatsbyImage)`
   background-size: cover;
   background-repeat: repeat;
   align-self: center;
   width: 100%;
-  min-width: 240px;
   max-width: 240px;
+  flex: 1;
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     margin: 2rem 2rem;
     min-width: 160px;
@@ -80,7 +80,7 @@ const StyledGhostCard = styled(GhostCard)`
 const Row = styled.div`
   display: flex;
   width: 100%;
-  align-items: flex-start;
+  align-items: stretch;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     flex-direction: column;
   }
@@ -135,7 +135,7 @@ const USDCBanner = styled(DaiBanner)`
 `
 
 const DaiSubtitle = styled.p`
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 140%;
   color: ${(props) => props.theme.colors.text200};
 `
@@ -145,7 +145,7 @@ const H2 = styled.h2`
 `
 
 const H3 = styled.h3`
-  font-size: 20px;
+  font-size: 1.25rem;
   font-style: normal;
   font-weight: 700;
   text-align: left;
@@ -180,10 +180,11 @@ const FullWidthContainer = styled(Page)`
 `
 
 const DaiH2 = styled.h2`
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: 700;
   margin-top: 0;
   margin-bottom: 0.5rem;
+
   a {
     display: none;
   }
@@ -239,7 +240,7 @@ const ButtonColumn = styled.div`
   flex-direction: column;
 `
 
-const APY = styled.p`
+const Apy = styled.p`
   font-size: 64px;
   line-height: 100%;
 `
@@ -249,8 +250,15 @@ const InfoIcon = styled(Icon)`
   fill: ${(props) => props.theme.colors.text};
 `
 
-const ButtonLinkRight = styled(ButtonLink)`
-  margin-left: 1rem;
+const ButtonLinkWrap = styled(ButtonLink)`
+  white-space: break-spaces;
+`
+
+const ButtonLinkContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap;
+  gap: 1em;
 `
 
 const tooltipContent = (
@@ -455,25 +463,8 @@ const StablecoinsPage = ({ data }) => {
       background: "linear-gradient(225deg, #AA589B 0%, #5CB8C4 100%)",
       url: "https://aave.com",
       alt: translateMessageId("aave-logo", intl),
-      image: data.aave.childImageSharp.fixed,
+      image: getImage(data.aave),
       name: "Aave",
-      /* data: [
-        {
-          logo: data.tether.childImageSharp.fixed,
-          apy: "4",
-          coin: "Tether",
-        },
-        {
-          logo: data.daitable.childImageSharp.fixed,
-          apy: "3.5",
-          coin: "Dai",
-        },
-        {
-          logo: data.usdc.childImageSharp.fixed,
-          apy: "7",
-          coin: "USDC",
-        },
-      ], */
       description: translateMessageId(
         "page-stablecoins-stablecoins-dapp-description-1",
         intl
@@ -483,25 +474,8 @@ const StablecoinsPage = ({ data }) => {
       background: "#F9FAFB",
       url: "https://compound.finance",
       alt: translateMessageId("compound-logo", intl),
-      image: data.compound.childImageSharp.fixed,
+      image: getImage(data.compound),
       name: "Compound",
-      /* data: [
-        {
-          logo: data.tether.childImageSharp.fixed,
-          apy: "4",
-          coin: "Tether",
-        },
-        {
-          logo: data.daitable.childImageSharp.fixed,
-          apy: "3.5",
-          coin: "Dai",
-        },
-        {
-          logo: data.usdc.childImageSharp.fixed,
-          apy: "7",
-          coin: "USDC",
-        },
-      ], */
       description: translateMessageId(
         "page-stablecoins-stablecoins-dapp-description-2",
         intl
@@ -511,25 +485,8 @@ const StablecoinsPage = ({ data }) => {
       background: "#212121",
       url: "https://trade.dydx.exchange/portfolio/overview",
       alt: translateMessageId("dydx-logo", intl),
-      image: data.dydx.childImageSharp.fixed,
+      image: getImage(data.dydx),
       name: "dYdX",
-      /* data: [
-        {
-          logo: data.tether.childImageSharp.fixed,
-          apy: "4",
-          coin: "Tether",
-        },
-        {
-          logo: data.daitable.childImageSharp.fixed,
-          apy: "3.5",
-          coin: "Dai",
-        },
-        {
-          logo: data.usdc.childImageSharp.fixed,
-          apy: "7",
-          coin: "USDC",
-        },
-      ], */
       description: translateMessageId(
         "page-stablecoins-stablecoins-dapp-description-3",
         intl
@@ -539,25 +496,8 @@ const StablecoinsPage = ({ data }) => {
       background: "linear-gradient(135deg, #C7EFE6 0%, #EEEAC7 100%)",
       url: "https://oasis.app",
       alt: translateMessageId("oasis-logo", intl),
-      image: data.oasis.childImageSharp.fixed,
+      image: getImage(data.oasis),
       name: "Oasis",
-      /* data: [
-        {
-          logo: data.tether.childImageSharp.fixed,
-          apy: "4",
-          coin: "Tether",
-        },
-        {
-          logo: data.daitable.childImageSharp.fixed,
-          apy: "3.5",
-          coin: "Dai",
-        },
-        {
-          logo: data.usdc.childImageSharp.fixed,
-          apy: "7",
-          coin: "USDC",
-        },
-      ], */
       description: translateMessageId(
         "page-stablecoins-stablecoins-dapp-description-4",
         intl
@@ -584,7 +524,7 @@ const StablecoinsPage = ({ data }) => {
     title: translateMessageId("page-stablecoins-title", intl),
     header: translateMessageId("page-stablecoins-hero-header", intl),
     subtitle: translateMessageId("page-stablecoins-hero-subtitle", intl),
-    image: data.stablecoins.childImageSharp.fluid,
+    image: getImage(data.stablecoins),
     alt: translateMessageId("page-stablecoins-hero-alt", intl),
     buttons: [
       {
@@ -722,7 +662,7 @@ const StablecoinsPage = ({ data }) => {
                 </div>
               </StyledLeftColumn>
               <Image
-                fluid={data.dailarge.childImageSharp.fluid}
+                image={getImage(data.dailarge)}
                 alt={translateMessageId("page-stablecoins-dai-logo", intl)}
               />
             </StyledDaiBanner>
@@ -757,7 +697,7 @@ const StablecoinsPage = ({ data }) => {
                 </div>
               </StyledLeftColumn>
               <Image
-                fluid={data.usdclarge.childImageSharp.fluid}
+                image={getImage(data.usdclarge)}
                 alt={translateMessageId("page-stablecoins-usdc-logo", intl)}
               />
             </USDCBanner>
@@ -792,29 +732,25 @@ const StablecoinsPage = ({ data }) => {
       <Divider />
       <Content>
         <StyledCalloutBanner
-          title={translateMessageId(
-            "page-stablecoins-stablecoins-dapp-callout-title",
-            intl
-          )}
-          description={translateMessageId(
-            "page-stablecoins-stablecoins-dapp-callout-description",
-            intl
-          )}
-          image={data.doge.childImageSharp.fluid}
+          titleKey={"page-stablecoins-stablecoins-dapp-callout-title"}
+          descriptionKey={
+            "page-stablecoins-stablecoins-dapp-callout-description"
+          }
+          image={getImage(data.doge)}
           maxImageWidth={600}
           alt={translateMessageId(
             "page-stablecoins-stablecoins-dapp-callout-image-alt",
             intl
           )}
         >
-          <div>
+          <ButtonLinkContainer>
             <ButtonLink to="/dapps/">
               <Translation id="page-stablecoins-explore-dapps" />
             </ButtonLink>
-            <ButtonLinkRight isSecondary to="/defi/">
+            <ButtonLinkWrap isSecondary to="/defi/">
               <Translation id="page-stablecoins-more-defi-button" />
-            </ButtonLinkRight>
-          </div>
+            </ButtonLinkWrap>
+          </ButtonLinkContainer>
         </StyledCalloutBanner>
         <h2>
           <Translation id="page-stablecoins-save-stablecoins" />
@@ -834,9 +770,9 @@ const StablecoinsPage = ({ data }) => {
           <StyledRightColumn>
             <div>
               <Emoji size={5} mb={"1rem"} text=":bank:" />
-              <APY>
+              <Apy>
                 <Translation id="page-stablecoins-bank-apy" />
-              </APY>
+              </Apy>
               <em>
                 <Translation id="page-stablecoins-bank-apy-source" />{" "}
                 <Link to="https://www.nytimes.com/2020/09/18/your-money/savings-interest-rates.html">
@@ -881,75 +817,105 @@ const StablecoinsPage = ({ data }) => {
 export default StablecoinsPage
 
 export const query = graphql`
-  query {
+  {
     stablecoins: file(relativePath: { eq: "stablecoins/hero.png" }) {
       childImageSharp {
-        fluid(maxWidth: 624) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(
+          width: 624
+          layout: CONSTRAINED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     dai: file(relativePath: { eq: "stablecoins/dai-large.png" }) {
       childImageSharp {
-        fluid(maxWidth: 600) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(
+          width: 600
+          layout: CONSTRAINED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     dailarge: file(relativePath: { eq: "stablecoins/dai-large.png" }) {
       childImageSharp {
-        fluid(maxWidth: 300) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(
+          width: 300
+          layout: CONSTRAINED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     usdclarge: file(relativePath: { eq: "stablecoins/usdc-large.png" }) {
       childImageSharp {
-        fluid(maxWidth: 300) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(
+          width: 300
+          layout: CONSTRAINED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     doge: file(relativePath: { eq: "doge-computer.png" }) {
       childImageSharp {
-        fluid(maxWidth: 600) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(
+          width: 600
+          layout: CONSTRAINED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     compound: file(relativePath: { eq: "stablecoins/compound.png" }) {
       childImageSharp {
-        fixed(width: 160) {
-          ...GatsbyImageSharpFixed
-        }
+        gatsbyImageData(
+          width: 160
+          layout: FIXED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     aave: file(relativePath: { eq: "stablecoins/aave.png" }) {
       childImageSharp {
-        fixed(width: 64) {
-          ...GatsbyImageSharpFixed
-        }
+        gatsbyImageData(
+          width: 64
+          layout: FIXED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     dydx: file(relativePath: { eq: "exchanges/dydx.png" }) {
       childImageSharp {
-        fixed(width: 80) {
-          ...GatsbyImageSharpFixed
-        }
+        gatsbyImageData(
+          width: 80
+          layout: FIXED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     oasis: file(relativePath: { eq: "stablecoins/dai-large.png" }) {
       childImageSharp {
-        fixed(width: 80) {
-          ...GatsbyImageSharpFixed
-        }
+        gatsbyImageData(
+          width: 80
+          layout: FIXED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     oasissmall: file(relativePath: { eq: "stablecoins/dai-large.png" }) {
       childImageSharp {
-        fixed(width: 24) {
-          ...GatsbyImageSharpFixed
-        }
+        gatsbyImageData(
+          width: 24
+          layout: FIXED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
   }

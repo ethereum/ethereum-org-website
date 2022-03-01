@@ -6,9 +6,9 @@ sidebar: true
 incomplete: true
 ---
 
-Ethereum, like Bitcoin, currently uses a consensus protocol called **[Proof-of-work (PoW)](https://en.wikipedia.org/wiki/Proof_of_work)**. This allows the nodes of the Ethereum network to agree on the state of all information recorded on the Ethereum blockchain and prevents certain kinds of economic attacks.
+Ethereum, like Bitcoin, currently uses a consensus protocol called **[Proof-of-work (PoW)](https://wikipedia.org/wiki/Proof_of_work)**. This allows the nodes of the Ethereum network to agree on the state of all information recorded on the Ethereum blockchain and prevents certain kinds of economic attacks.
 
-Over the next year, proof-of-work will be phased out in favour of **[Proof-of-stake (PoS)](/developers/docs/consensus-mechanisms/pos)**. The transition to proof-of-stake will also phase out mining from Ethereum. For more details on timing, check the progress of the [Eth2 merge upgrade](/eth2/merge/).
+Over the next year, proof-of-work will be phased out in favour of **[Proof-of-stake (PoS)](/developers/docs/consensus-mechanisms/pos)**. The transition to proof-of-stake will also phase out mining from Ethereum. [More on The Merge.](/upgrades/merge/)
 
 ## Prerequisites {#prerequisites}
 
@@ -82,7 +82,7 @@ A major criticism of proof-of-work is the amount of energy output required to ke
 | Proof-of-work is a tried and tested consensus mechanism that has kept Bitcoin and Ethereum secure and decentralized for many years.                                                                                          | If you want to mine, you need such specialized equipment that it's a big investment to start.                                                |
 | Compared to proof-of-stake it's relatively easy to implement.                                                                                                                                                                | Due to increasing computation needed, mining pools could potentially dominate the mining game, leading to centralization and security risks. |
 
-## Compared to proof of stake {#compared-to-pos}
+## Compared to proof-of-stake {#compared-to-pos}
 
 At a high level, proof-of-stake has the same end goal as proof-of-work: to help the decentralized network reach consensus securely. But it has some differences in process and personnel:
 
@@ -95,11 +95,11 @@ At a high level, proof-of-stake has the same end goal as proof-of-work: to help 
 
 ## More of a visual learner? {#visual-learner}
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/3EUAcxhuoU4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<YouTube id="3EUAcxhuoU4" />
 
 ## Further Reading {#further-reading}
 
-- [Majority attack](https://en.bitcoin.it/wiki/Majority_attack/)
+- [Majority attack](https://en.bitcoin.it/wiki/Majority_attack)
 - [On settlement finality](https://blog.ethereum.org/2016/05/09/on-settlement-finality/)
 
 ### Videos {#videos}
@@ -109,4 +109,4 @@ At a high level, proof-of-stake has the same end goal as proof-of-work: to help 
 ## Related Topics {#related-topics}
 
 - [Mining](/developers/docs/consensus-mechanisms/pow/mining/)
-- [Proof of stake](/developers/docs/consensus-mechanisms/pos/)
+- [Proof-of-stake](/developers/docs/consensus-mechanisms/pos/)

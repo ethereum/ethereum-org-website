@@ -57,7 +57,7 @@ Un altro esempio noto è [SafeMath](https://docs.openzeppelin.com/contracts/3.x/
 
 Per promuovere la [componibilità e l'interoperabilità](/developers/docs/smart-contracts/composability/), la community di Ethereum ha definito diversi standard sotto forma di **ERC**. Puoi leggere di più nella sezione dedicata agli [standard](/developers/docs/standards/).
 
-Se desideri includere un ERC all'interno di un contratto, è consigliabile cercare implementazioni standard anziché crearne di proprie. Molte librerie degli Smart Contract includono implementazioni per gran parte degli ERC più popolari. Per esempio, l'onnipresente [standard per token fungibile ERC20](/developers/tutorials/understand-the-erc-20-token-smart-contract/) si può trovare in [HQ20](https://github.com/HQ20/contracts/blob/master/contracts/token/README.md), [DappSys](http://dapp.tools/dappsys/ds-token.html) e [OpenZeppelin](https://docs.openzeppelin.com/contracts/3.x/erc20). Inoltre, alcuni ERC forniscono implementazioni canoniche come parte dello stesso ERC.
+Se desideri includere un ERC all'interno di un contratto, è consigliabile cercare implementazioni standard anziché crearne di proprie. Molte librerie degli Smart Contract includono implementazioni per gran parte degli ERC più popolari. Per esempio, l'onnipresente [standard per token fungibile ERC20](/developers/tutorials/understand-the-erc-20-token-smart-contract/) si può trovare in [HQ20](https://github.com/HQ20/contracts/blob/master/contracts/token/README.md), [DappSys](https://github.com/dapphub/ds-token/) e [OpenZeppelin](https://docs.openzeppelin.com/contracts/3.x/erc20). Inoltre, alcuni ERC forniscono implementazioni canoniche come parte dello stesso ERC.
 
 Vale la pena ricordare che alcuni ERC non sono singoli, ma sono aggiunte di altri ERC. Per esempio, [ERC2612](https://eips.ethereum.org/EIPS/eip-2612) aggiunge un'estensione a ERC20 per migliorarne l'utilizzabilità.
 
@@ -96,7 +96,7 @@ Infine, per decidere se includere una libreria, considera l'uso generale che ne 
 
 **DappSys -** **_Blocchi di programmazione sicuri, semplici e flessibili per Smart Contract_**
 
-- [Documentazione](https://dapp.tools/dappsys/)
+- [Documentazione](https://dappsys.readthedocs.io/)
 - [GitHub](https://github.com/dapphub/dappsys)
 
 **HQ20 -** **_Progetto in Solidity con contratti, librerie ed esempi per creare applicazioni complete distribuite per il mondo reale._**
@@ -105,7 +105,7 @@ Infine, per decidere se includere una libreria, considera l'uso generale che ne 
 
 ## Tutorial correlati {#related-tutorials}
 
-- [Security considerations for Ethereum developers](/developers/docs/security/) _– Tutorial sulle considerazioni di sicurezza durante lo sviluppo di Smart Contract che include l'uso della libreria._
+- [Security considerations for Ethereum developers](/developers/docs/smart-contracts/security/) _– Tutorial sulle considerazioni di sicurezza durante lo sviluppo di Smart Contract che include l'uso della libreria._
 - [Understand the ERC-20 token smart contract](/developers/tutorials/understand-the-erc-20-token-smart-contract/) _-Tutorial sullo standard ERC20, fornito da diverse librerie._
 
 ## Letture consigliate {#further-reading}

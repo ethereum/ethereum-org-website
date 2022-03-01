@@ -11,7 +11,7 @@ Le reti sono ambienti Ethereum diversi ai quali si può accedere per sviluppare,
 
 ## Prerequisiti {#prerequisites}
 
-È consigliabile conoscere le basi di Ethereum prima di informarsi sulle diverse reti. Le reti di test rappresentano una versione semplificata e sicura di Ethereum nella quale è possibile sperimentare. Consulta la nostra [introduzione ad Ethereum](/en/developers/docs/intro-to-ethereum/).
+È consigliabile conoscere le basi di Ethereum prima di informarsi sulle diverse reti. Le reti di test rappresentano una versione semplificata e sicura di Ethereum nella quale è possibile sperimentare. Consulta la nostra [introduzione ad Ethereum](/developers/docs/intro-to-ethereum/).
 
 ## Reti pubbliche {#public-networks}
 
@@ -29,23 +29,23 @@ Oltre alla rete principale, sono disponibili reti di test pubbliche. Si tratta d
 
 In genere è importante testare il codice di un contratto su una rete di prova prima di distribuirlo sulla rete principale. Se crei dapp che si integrano con gli Smart Contract esistenti, la maggior parte dei progetti ha copie distribuite sulle reti di prova con le quali è possibile interagire.
 
-La maggior parte delle reti di prova utilizza un meccanismo di consenso Proof of Authority. Significa che viene scelto un ristretto numero di nodi per convalidare le transazioni e creare nuovi blocchi, e questi fanno staking con la propria identità in questo processo. È difficile incentivare il mining su una rete di prova con meccanismo Proof of work, e questo potrebbe renderla vulnerabile.
+La maggior parte delle reti di prova utilizza un meccanismo di consenso proof-of-authority. Significa che viene scelto un ristretto numero di nodi per convalidare le transazioni e creare nuovi blocchi, e questi fanno staking con la propria identità in questo processo. È difficile incentivare il mining su una rete di prova con meccanismo proof-of-work, e questo potrebbe renderla vulnerabile.
 
 #### Görli {#goerli}
 
-Rete di prova di tipo Proof of Authority che funziona su client.
+Rete di prova di tipo proof-of-authority che funziona su client.
 
 #### Kovan {#kovan}
 
-Rete di prova Proof of Authority per client che eseguono OpenEthereum.
+Rete di prova proof-of-authority per client che eseguono OpenEthereum.
 
 #### Rinkeby {#rinkeby}
 
-Rete di prova Proof of Authority per chi esegue client Geth.
+Rete di prova proof-of-authority per chi esegue client Geth.
 
 #### Ropsten {#ropsten}
 
-Rete di prova Proof of Work. Significa che è la rappresentazione più simile a Ethereum.
+Rete di prova proof-of-work. Significa che è la rappresentazione più simile a Ethereum.
 
 ### Faucet della rete di prova {#testnet-faucets}
 
@@ -54,7 +54,6 @@ Gli ETH sulle reti di prova non hanno valore reale, quindi non c'è un mercato p
 - [Faucet Görli](https://faucet.goerli.mudit.blog/)
 - [Faucet Kovan](https://faucet.kovan.network/)
 - [Faucet Rinkeby](https://faucet.rinkeby.io/)
-- [Faucet Ropsten](https://faucet.ropsten.be/)
 
 ## Reti private {#private-networks}
 
@@ -71,20 +70,6 @@ Ci sono progetti e strumenti dedicati a questo scopo. Scopri di più sulle [reti
 Il processo di consenso è controllato da un set di nodi predefinito considerati attendibili. Un esempio può essere una rete privata di istituti accademici noti, dove ogni istituto controlla un nodo singolo e i blocchi vengono convalidati da una soglia di firmatari all'interno della rete.
 
 Se una rete Ethereum pubblica è come la rete Internet pubblica, un consorzio può essere paragonato a una Intranet privata.
-
-<!-- TODO
-
-## Interacting with testnets
-
-### Your own local network {#your-own-local-network}
-
-`geth -—networkid="12345" console`
-
-### Testnets {#testnets-1}
-
-Wallets like MetaMask or MyEtherWallet will allow you to switch networks so you can test your apps using your test ETH.
-
--->
 
 ## Letture consigliate {#further-reading}
 

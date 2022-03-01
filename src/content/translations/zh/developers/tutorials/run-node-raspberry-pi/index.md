@@ -16,13 +16,13 @@ sourceUrl: https://www.reddit.com/r/ethereum/comments/gf3nhg/ethereum_on_arm_ras
 
 **TL;DR**：刷写您的 Raspberry PI 4，插入以太网电缆，连接 SSD 磁盘并打开设备电源，将 Raspberry PI 4 变为完整的以太坊 1.0 节点或以太坊 2.0 节点（信标链/验证器）
 
-[了解以太坊 2.0 (Eth2)](/en/eth2/)
+[了解以太坊 2.0 (Eth2)](/upgrades/)
 
-首先是一些背景。 如您所知，运行 Raspberry Pi 4 镜像时，我们已经遇到了一些内存问题[[1]](/en/developers/tutorials/run-node-raspberry-pi/#references)，因为 Raspbian 操作系统仍然在 32 位上运行[[2]](/en/developers/tutorials/run-node-raspberry-pi/#references)（至少 userland 如此）。 虽然我们更愿意坚持使用官方操作系统，但我们得出的结论是，为了解决这些问题，我们需要迁移原生的 64 位操作系统。
+首先是一些背景。 如您所知，运行 Raspberry Pi 4 镜像时，我们已经遇到了一些内存问题[[1]](/developers/tutorials/run-node-raspberry-pi/#references)，因为 Raspbian 操作系统仍然是 32 位操作系统[[2]](/developers/tutorials/run-node-raspberry-pi/#references)（至少用户区是如此）。 虽然我们更愿意坚持使用官方操作系统，但我们得出的结论是，为了解决这些问题，我们需要迁移原生的 64 位操作系统。
 
 此外，[Eth 2.0 客户端](href)不支持 32 位二进制文件，因此使用 Raspbian 会将 Raspberry PI 4 排除在运行 Eth 2.0 节点（以及进行权益质押的可能性）之外。
 
-因此，几经测试，我们现在将发布基于 Ubuntu 20.04 64 位[[3]](/en/developers/tutorials/run-node-raspberry-pi/#references)的两个不同映像：Eth 1.0 版和 Eth 2.0 版。
+因此，几经测试，我们现在将发布基于 Ubuntu 20.04 64 位[[3]](/developers/tutorials/run-node-raspberry-pi/#references) 的两个不同映像：Eth 1.0 版和 Eth 2.0 版。
 
 基本上，两者都是相同的映像，并且包含基于 Raspbian 的映像的相同功能。 但它们被设置为默认运行 Eth 1.0 或 Eth 2.0 软件。
 
@@ -32,7 +32,7 @@ sourceUrl: https://www.reddit.com/r/ethereum/comments/gf3nhg/ethereum_on_arm_ras
 
 - 基于 Ubuntu 20.04 64 位
 - 自动完成 USB 磁盘分区和格式化
-- 在 Armbian 工作的基础上增加了交换内存（ZRAM 内核模块+一个交换文件）[[7]](/en/developers/tutorials/run-node-raspberry-pi/#references)。
+- 在 Armbian 工作的基础上增加了交换内存（ZRAM 内核模块 + 一个交换文件）[[7]](/developers/tutorials/run-node-raspberry-pi/#references)。
 - 根据 MAC 哈希值将主机名改为像“ethnode-e2a3e6fe”这样的名称。
 - 将软件作为 systemd 服务运行并开始同步区块链
 - 包括一个用于安装和升级以太坊软件的 APT 存储库
@@ -42,25 +42,25 @@ sourceUrl: https://www.reddit.com/r/ethereum/comments/gf3nhg/ethereum_on_arm_ras
 
 两个映像都包括相同的软件包，它们之间唯一的区别是 Eth 1.0 默认运行 Geth，Eth 2.0 默认运行 Prysm 信标链。
 
-### 以太坊 1.0 客户端 {#ethereum-10-clients}
+### 以太坊 1.0 客户端 {#execution-clients}
 
-- Geth[[8]](/en/developers/tutorials/run-node-raspberry-pi/#references)：1.9.13 (官方二进制文件)
-- Parity[[9]](/en/developers/tutorials/run-node-raspberry-pi/#references)：2.7.2（交叉编译）。
-- Nethermind [[10]](/en/developers/tutorials/run-node-raspberry-pi/#references)：1.8.28（交叉编译）。
-- Hyperledger Besu[[11]](/en/developers/tutorials/run-node-raspberry-pi/#references)：1.4.4（已编译）。
+- Geth[[8]](/developers/tutorials/run-node-raspberry-pi/#references)：1.9.13 (官方二进制文件)
+- Parity[[9]](/developers/tutorials/run-node-raspberry-pi/#references)：2.7.2（交叉编译）。
+- Nethermind [[10]](/developers/tutorials/run-node-raspberry-pi/#references)：1.8.28（交叉编译）。
+- Hyperledger Besu[[11]](/developers/tutorials/run-node-raspberry-pi/#references)：1.4.4（已编译）。
 
-### 以太坊 2.0 客户端 {#ethereum-20-clients}
+### 以太坊 2.0 客户端 {#consensus-clients}
 
-- Prysm[[12]](/en/developers/tutorials/run-node-raspberry-pi/#references)：1.0.0-alpha6（官方二进制文件）。
-- Lighthouse[[13]](/en/developers/tutorials/run-node-raspberry-pi/#references)：0.1.1（已编译）。
+- Prysm[[12]](/developers/tutorials/run-node-raspberry-pi/#references)：1.0.0-alpha6（官方二进制文件）。
+- Lighthouse[[13]](/developers/tutorials/run-node-raspberry-pi/#references)：0.1.1（已编译）。
 
 ### 以太坊框架 {#ethereum-framework}
 
-- Swarm[[14]](/en/developers/tutorials/run-node-raspberry-pi/#references)：0.5.7（官方二进制文件）。
-- Raiden Network[[15]](/en/developers/tutorials/run-node-raspberry-pi/#references)：0.200.0~rc1（官方二进制文件）。
-- IPFS[[16]](/en/developers/tutorials/run-node-raspberry-pi/#references)：0.5.0（官方二进制文件）。
-- Statusd[[17]](/en/developers/tutorials/run-node-raspberry-pi/#references)：0.52.3（已编译）。
-- Vipnode[[18]](/en/developers/tutorials/run-node-raspberry-pi/#references)：2.3.3（官方二进制文件）。
+- Swarm[[14]](/developers/tutorials/run-node-raspberry-pi/#references)：0.5.7（官方二进制文件）。
+- Raiden Network[[15]](/developers/tutorials/run-node-raspberry-pi/#references)：0.200.0~rc1（官方二进制文件）。
+- IPFS[[16]](/developers/tutorials/run-node-raspberry-pi/#references)：0.5.0（官方二进制文件）。
+- Statusd[[17]](/developers/tutorials/run-node-raspberry-pi/#references)：0.52.3（已编译）。
+- Vipnode[[18]](/developers/tutorials/run-node-raspberry-pi/#references)：2.3.3（官方二进制文件）。
 
 ## 安装指南和使用方法 {#installation-guide-and-usage}
 
@@ -71,13 +71,13 @@ sourceUrl: https://www.reddit.com/r/ethereum/comments/gf3nhg/ethereum_on_arm_ras
 - SSD USB 3.0 磁盘（见存储部分）
 - 电源
 - 以太网电缆
-- 30303 端口转发（Eth 1.0）和 13000 端口转发（Eth 2.0） [[4]](/en/developers/tutorials/run-name-raspberry-pi/#references)。
+- 30303 端口转发 (Eth 1.0) 和 13000 端口转发 (Eth 2.0) [[4]](/developers/tutorials/run-node-raspberry-pi/#references)
 - 带散热片和风扇的机箱（可选，但强烈推荐）
 - USB 键盘、显示器和 HDMI 电缆（微型 HDMI）（可选）。
 
 ## 存储 {#storage}
 
-您将需要 SSD 来运行以太坊客户端（如果没有 SSD 驱动器，则绝对不可能同步以太坊区块链）。 有两种选择：
+你将需要一个固态硬盘来运行以太坊客户端（没有固态硬盘，就绝对没有机会同步以太坊区块链）。 有两种选择：
 
 - 使用 USB 便携式 SSD 磁盘，如三星 T5 便携式 SSD。
 - 使用带有 SSD 磁盘的 USB3.0 外置硬盘盒。 在我们的例子中，我们使用了 Inateck 2.5 硬盘盒 FE2011。 请确保购买带有 UAS 兼容芯片的机箱，特别是这些芯片之一：JMicron（JMS567 或 JMS578）或 ASMedia（ASM1153E）。
@@ -88,13 +88,9 @@ sourceUrl: https://www.reddit.com/r/ethereum/comments/gf3nhg/ethereum_on_arm_ras
 
 ## 映像下载和安装 {#image-download-and-installation}
 
-### 1. 下载 Eth 1.0 或 Eth 2.0 映像 {#1-download-eth-10-or-eth-20-images}
+### 1. 下载 Eth 1.0 或 Eth 2.0 映像 {#1-download-execution-or-consensus-images}<ButtonLink to="https://ethraspbian.com/downloads/ubuntu-20.04-preinstalled-server-arm64+raspi-eth1.img.zip">下载 Eth 1.0 映像</ButtonLink>
 
-<ButtonLink to="https://ethraspbian.com/downloads/ubuntu-20.04-preinstalled-server-arm64+raspi-eth1.img.zip">下载 Eth 1.0 映像</ButtonLink>
-
-ssha256 7fa9370d13857dd6abcc8fde637c7a9a7e3a66b307d5c28b0c0d29a09c73c55c
-
-<ButtonLink to="https://ethraspbian.com/downloads/ubuntu-20.04-preinstalled-server-arm64+raspi-eth2.img.zip">下载 Eth2 映像</ButtonLink>
+ssha256 7fa9370d13857dd6abcc8fde637c7a9a7e3a66b307d5c28b0c0d29a09c73c55c<ButtonLink to="https://ethraspbian.com/downloads/ubuntu-20.04-preinstalled-server-arm64+raspi-eth2.img.zip">下载 Eth2 映像</ButtonLink>
 
 sha256 74c0c15b708720e5ae5cac324f1afded6316537fb17166109326755232cd316e
 
@@ -159,11 +155,11 @@ sudo tail -f /var/log/syslog
 
 现在您需要等待区块链同步。 在 Eth 1.0 的情况下，这将需要几天的时间，具体取决于若干因素，但可以预计最多需要 5-7 天。
 
-如果运行的是 Eth2 Topaz 测试网，则可以预期约 1-2 天的信标链同步时间。 请记住，您需要稍后设置验证器才能启动权益质押过程。 [如何运行 Eth 2.0 验证器](/en/developers/tutorials/run-node-raspberry-pi/#validator)
+如果运行的是 Eth2 Topaz 测试网，则可以预期约 1-2 天的信标链同步时间。 请记住，您需要稍后设置验证器才能启动权益质押过程。 [如何运行 Eth 2.0 验证器](/developers/tutorials/run-node-raspberry-pi/#validator)
 
 ## 监测仪表板 {#monitoring-dashboards}
 
-在这第一个版本中，包括了 3 个基于 Prometheus 的监测仪表板[[5]](/en/developers/tutorials/run-node-raspberry-pi/#references) / Grafana[[6]](/en/developers/tutorials/run-node-raspberry-pi/#references)，以便监测节点和客户端的数据（Geth 和 Besu）。 您可以通过您的 Web 浏览器访问：
+在这第一个版本中，包括了 3 个基于 Prometheus 的监测仪表板[[5]](/developers/tutorials/run-node-raspberry-pi/#references) / Grafana[[6]](/developers/tutorials/run-node-raspberry-pi/#references)，以便监测节点和客户端的数据（Geth 和 Besu）。 您可以通过您的 Web 浏览器访问：
 
 ```bash
 URL：http://your_raspberrypi_IP:3000
@@ -198,7 +194,7 @@ sudo systemctl start lighthouse && sudo systemctl enable lighthouse
 
 ## 更改参数 {#changing-parameters}
 
-客户端的配置文件位于/etc/ethereum/目录中。 您可以编辑这些文件，并重启 systemd 服务，以使更改生效。 唯一的例外是 Nethermind，它另外有位于此处的主网配置文件：
+客户端的配置文件位于/etc/ethereum/目录中。 您可以编辑这些文件，并重启 systemd 服务，以使更改生效。 唯一的例外是 Nethermind，它还有一个在以下位置的主网配置文件：
 
 ```bash
 /etc/nethermind/configs/mainnet.cfg
@@ -206,7 +202,7 @@ sudo systemctl start lighthouse && sudo systemctl enable lighthouse
 
 区块链客户端的数据存储在以太坊主帐户上，如下所示（注意目录名称前的点）。
 
-### Eth 1.0 {#eth-10}
+### Eth 1.0 {#execution-layer}
 
 ```bash
 /home/ethereum/.geth
@@ -215,7 +211,7 @@ sudo systemctl start lighthouse && sudo systemctl enable lighthouse
 /home/ethereum/.nethermind
 ```
 
-### Eth2 {#eth2}
+### Eth2 {#consensus-layer}
 
 ```bash
 /home/ethereum/.eth2
@@ -239,14 +235,14 @@ sudo systemctl start lighthouse && sudo systemctl enable lighthouse
 
 我们投入了大量的工作，试图将 Raspberry Pi 4 设置为一个完整的以太坊节点，因为我们知道这个设备的庞大用户群可能对网络产生非常积极的影响。
 
-请考虑到这是基于 Ubuntu 20.04 的第一个映像，所以可能会有一些错误。 如果是这样，请在[GitHub](https://github.com/diglos/pi-gen)上开立问题，或在[Twitter](https://twitter.com/EthereumOnARM)上联系我们。
+请考虑到这是基于 Ubuntu 20.04 的第一个映像，所以可能会有一些错误。 如果是这样，请在[Github](https://github.com/diglos/pi-gen)上开立问题，或在[Twitter](https://twitter.com/EthereumOnARM)上联系我们。
 
 ## 参考： {#references}
 
 1. [Geth 反复出现 SIGSEGV 崩溃](https://github.com/ethereum/go-ethereum/issues/20190)
 2. [https://github.com/diglos/pi-gen](https://github.com/diglos/pi-gen)
 3. https://ubuntu.com/download/raspberry-pi
-4. https://en.wikipedia.org/wiki/Port_forwarding
+4. https://wikipedia.org/wiki/Port_forwarding
 5. https://prometheus.io
 6. https://grafana.com
 7. https://forum.armbian.com/topic/5565-zram-vs-swap/

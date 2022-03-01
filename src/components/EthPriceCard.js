@@ -35,7 +35,7 @@ const Card = styled.div`
 
 const Title = styled.h4`
   margin: 0;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 140%;
   letter-spacing: 0.04em;
   text-transform: uppercase;
@@ -60,7 +60,7 @@ const ChangeContainer = styled.div`
 `
 
 const Change = styled.div`
-  font-size: 24px;
+  font-size: 1.5rem;
   line-height: 140%;
   margin-right: 1rem;
   color: ${(props) =>
@@ -70,7 +70,7 @@ const Change = styled.div`
 `
 
 const ChangeTime = styled.div`
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 140%;
   letter-spacing: 0.04em;
   text-transform: uppercase;
@@ -93,9 +93,8 @@ const EthPriceCard = ({ className, isLeftAlign }) => {
       .then((response) => {
         if (response.data && response.data.ethereum) {
           const currentPriceUSD = response.data.ethereum.usd
-          const percentChangeUSD = +response.data.ethereum.usd_24h_change.toFixed(
-            2
-          )
+          const percentChangeUSD =
+            +response.data.ethereum.usd_24h_change.toFixed(2)
           setState({
             currentPriceUSD,
             percentChangeUSD,

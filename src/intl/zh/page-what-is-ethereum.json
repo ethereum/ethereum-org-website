@@ -39,7 +39,7 @@
   "page-what-is-ethereum-native-alt": "以太币(ETH)",
   "page-what-is-ethereum-native-crypto": "类似于比特币的以太坊原生加密货币。您可以将它作为价值存储发送给家人和朋友，或者在去中心化应用中消费它。",
   "page-what-is-ethereum-native-img-alt": "插图：一个自带保险箱的机器人，用来代表以太坊钱包",
-  "page-what-is-ethereum-native-title": "以太币(ETH)",
+  "page-what-is-ethereum-native-title": "以太币（ETH）",
   "page-what-is-ethereum-p2p-card": "P2P网络",
   "page-what-is-ethereum-p2p-card-desc": "以太坊允许您跳过中间商，直接和任何人转移资产或者签订协议。",
   "page-what-is-ethereum-singlecard-desc": "如果您对区块链及以太坊的技术细节感兴趣，请点击查看相关内容。",
@@ -53,5 +53,17 @@
   "page-what-is-ethereum-wallets": "钱包",
   "page-what-is-ethereum-wallets-desc": "立即创建一个钱包来管理您的以太坊账户和以太币吧。",
   "page-what-is-ethereum-welcome": "欢迎来到以太坊",
-  "page-what-is-ethereum-welcome-2": "这里有你想要的一切。"
+  "page-what-is-ethereum-welcome-2": "这里有您想要的一切。",
+  "page-what-is-ethereum-defi-title": "去中心化金融 (DeFi)",
+  "page-what-is-ethereum-defi-description": "更加开放的金融系统，让您对自己的资金有更多控制权，并解锁新的可能性。",
+  "page-what-is-ethereum-defi-alt": "由乐高积木拼成的 ETH 徽标。",
+  "page-what-is-ethereum-nft-title": "非同质化代币 (NFT)",
+  "page-what-is-ethereum-nft-description": "一种将独特物品作为以太坊资产的方式，这种资产可以交易，可用作所有权证明，并为创建人开辟新机会。",
+  "page-what-is-ethereum-nft-alt": "通过全息图显示的 ETH 徽标。",
+  "page-what-is-ethereum-dao-title": "去中心化自治组织 (DAO)",
+  "page-what-is-ethereum-dao-description": "合作和建立具有共同目标和汇集资金的在线社区的新方式。",
+  "page-what-is-ethereum-dao-alt": "DAO 代表在对提案投票。",
+  "page-what-is-ethereum-use-cases-title": "探索以太坊使用案例",
+  "page-what-is-ethereum-use-cases-subtitle": "以太坊促进了新产品和服务的产生，可以改善我们生活的方方面面。",
+  "page-what-is-ethereum-use-cases-subtitle-two": "我们仍处于早期阶段，但有很多东西值得期待。"
 }

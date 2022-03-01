@@ -15,7 +15,7 @@ Un viaggio nel tempo per illustrare tutte le principali pietre miliari, diramazi
 
 Le diramazioni si verificano quando è necessario apportare aggiornamenti o modifiche tecniche importanti nella rete. Tipicamente derivano da [proposte di miglioramento di Ethereum (EIP)](/eips/) e cambiano le "regole" del protocollo.
 
-Quando sono necessari aggiornamenti in software tradizionali controllati centralmente, l'azienda pubblica una nuova versione per l'utente finale. Le blockchain funzionano diversamente perché non esiste una proprietà centrale. I [client Ethereum](/developers/docs/nodes-and-clients/) devono aggiornare il proprio software per implementare le nuove regole di diramazione. Inoltre i creatori dei blocchi (miner in contesto Proof of Work e validatori in contesto Proof of Stake) e i nodi devono creare blocchi e convalidarli in base alle nuove regole. [Ulteriori informazioni sui meccanismi di consenso](/developers/docs/consensus-mechanisms/)
+Quando sono necessari aggiornamenti in software tradizionali controllati centralmente, l'azienda pubblica una nuova versione per l'utente finale. Le blockchain funzionano diversamente perché non esiste una proprietà centrale. I [client Ethereum](/developers/docs/nodes-and-clients/) devono aggiornare il proprio software per implementare le nuove regole di diramazione. Inoltre i creatori dei blocchi (miner in contesto proof-of-work e validatori in contesto proof-of-stake) e i nodi devono creare blocchi e convalidarli in base alle nuove regole. [Ulteriori informazioni sui meccanismi di consenso](/developers/docs/consensus-mechanisms/)
 
 Queste modifiche alle regole possono creare una divisione temporanea nella rete. I nuovi blocchi potrebbero essere creati in base alle nuove regole o a quelle vecchie. Le diramazioni di solito sono concordate in anticipo in modo che i client adottino le modifiche all'unisono e la diramazione legata agli upgrade diventi la catena principale. Tuttavia, in rari casi, disaccordi sulle diramazioni possono causare una divisione permanente della rete, come è successo con la creazione di Ethereum Classic con la [diramazione DAO](#dao-fork).
 
@@ -31,11 +31,13 @@ Queste modifiche alle regole possono creare una divisione temporanea nella rete.
 
 #### Riepilogo {#beacon-chain-genesis-summary}
 
-La [beacon chain](/eth2/beacon-chain/) necessitava di 16384 depositi di 32 ETH in staking per funzionare in sicurezza. Questo è successo il 27 Novembre, quindi la beacon chain ha iniziato a produrre blocchi il 1 dicembre 2020. Si tratta di un primo passaggio importante per realizzare la [visione Eth2](/eth2/vision/).
+La [beacon chain](/upgrades/beacon-chain/) necessitava di 16384 depositi di 32 ETH in staking per funzionare in sicurezza. Questo è successo il 27 Novembre, quindi la beacon chain ha iniziato a produrre blocchi il 1 dicembre 2020. Si tratta di un primo passaggio importante per realizzare la [visione Eth2](/upgrades/vision/).
 
 [Leggi l'annuncio della Ethereum Foundation](https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21/)
 
-<DocLink to="/eth2/beacon-chain/" title="La beacon chain" />
+<DocLink to="/upgrades/beacon-chain/">
+  La beacon chain
+</DocLink>
 
 ---
 
@@ -45,11 +47,13 @@ La [beacon chain](/eth2/beacon-chain/) necessitava di 16384 depositi di 32 ETH i
 
 #### Riepilogo {#deposit-contract-summary}
 
-Il contratto di deposito in staking ha introdotto lo [staking](/glossary/#staking) nell'ecosistema di Ethereum. Nonostante fosse un contratto della [rete principale](/glossary/#mainnet), ha avuto un impatto diretto sulla linea temporale per il lancio della [beacon chain](/eth2/beacon-chain/), un importante [upgrade a Eth2](/eth2/).
+Il contratto di deposito in staking ha introdotto lo [staking](/glossary/#staking) nell'ecosistema di Ethereum. Nonostante fosse un contratto della [rete principale](/glossary/#mainnet), ha avuto un impatto diretto sulla linea temporale per il lancio della [beacon chain](/upgrades/beacon-chain/), un importante [upgrade a Eth2](/upgrades/).
 
 [Leggi l'annuncio della Ethereum Foundation](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/)
 
-<DocLink to="/eth2/staking/" title="Staking" />
+<DocLink to="/staking/">
+  Staking
+</DocLink>
 
 ---
 
@@ -59,7 +63,7 @@ Il contratto di deposito in staking ha introdotto lo [staking](/glossary/#stakin
 
 #### Riepilogo {#muir-glacier-summary}
 
-La diramazione di Muir Glacier ha introdotto un ritardo nella [bomba di difficoltà](/glossary/#difficulty-bomb). Aumenta la difficoltà del blocco del meccanismo di consenso [Proof of Work](/developers/docs/consensus-mechanisms/pow/), che rischiava di degradare l'utilizzabilità di Ethereum, aumentando i tempi d'attesa per l'invio delle transazioni e l'uso delle dapp.
+La diramazione di Muir Glacier ha introdotto un ritardo nella [bomba di difficoltà](/glossary/#difficulty-bomb). Aumenta la difficoltà del blocco del meccanismo di consenso [proof-of-work](/developers/docs/consensus-mechanisms/pow/), che rischiava di degradare l'utilizzabilità di Ethereum, aumentando i tempi d'attesa per l'invio delle transazioni e l'uso delle dapp.
 
 - [Leggi l'annuncio della Ethereum Foundation](https://blog.ethereum.org/2019/12/23/ethereum-muir-glacier-upgrade-announcement/)
 - [Leggi la spiegazione del Cat Herder di Ethereum](https://medium.com/ethereum-cat-herders/ethereum-muir-glacier-upgrade-89b8cea5a210)
@@ -111,7 +115,7 @@ La diramazione di Instanbul:
 
 La diramazione Constantinople:
 
-- Ha assicurato che la blockchain non si bloccasse prima dell'[implementazione della Proof of Stake](#beacon-chain-genesis).
+- Ha assicurato che la blockchain non si bloccasse prima dell'[implementazione della proof-of-stake](#beacon-chain-genesis).
 - Ha ottimizzato i prezzi del [carburante](/glossary/#gas) di certe azioni nell'[EVM](/developers/docs/ethereum-stack/#ethereum-virtual-machine).
 - Ha aggiunto la capacità di interagire con gli indirizzi non ancora creati.
 
@@ -122,7 +126,7 @@ La diramazione Constantinople:
 - [EIP-145](https://eips.ethereum.org/EIPS/eip-145) – _ottimizza il costo di certe azioni sulla catena_
 - [EIP-1014](https://eips.ethereum.org/EIPS/eip-1014) – _consente di interagire con gli indirizzi che ancora devono essere creati._
 - [EIP-1052](https://eips.ethereum.org/EIPS/eip-1052) – _ottimizza il costo di certe azioni sulla catena._
-- [EIP-1234](https://eips.ethereum.org/EIPS/eip-1234) – _fa in modo che la blockchain non si blocchi prima della Proof of Stake._
+- [EIP-1234](https://eips.ethereum.org/EIPS/eip-1234) – _fa in modo che la blockchain non si blocchi prima della proof-of-stake._
 
 </ExpandableCard>
 
@@ -148,14 +152,14 @@ La diramazione di Byzantium:
 <ExpandableCard title="EIP Byzantium" contentPreview="Official improvements included in this fork.">
 
 - [EIP-140](https://eips.ethereum.org/EIPS/eip-140) – _aggiunge l'opcode `REVERT`._
-- [EIP-658](https://eips.ethereum. rg/EIPS/eip-658) – campo di stato aggiunto alle ricevute delle transazioni per indicare il successo o il fallimento.\_
-- [EIP-196](https://eips.ethereum. rg/EIPS/eip-196) – _aggiunge una curva ellittica e una moltiplicazione scalare per consentire [ZK-Snarks](/developers/docs/layer-2-scaling/#rollups)._
-- [EIP-197](https://eips.ethereum. rg/EIPS/eip-197) – _aggiunge la curva ellittica e la moltiplicazione scalare per consentire [ZK-Snarks](/developers/docs/layer-2-scaling/#rollups)._
-- [EIP-198](https://eips. thereum.org/EIPS/eip-198) – _abilita la verifica della firma RSA._
+- [EIP-658](https://eips.ethereum.org/EIPS/eip-658) – campo di stato aggiunto alle ricevute delle transazioni per indicare il successo o il fallimento.\_
+- [EIP-196](https://eips.ethereum.org/EIPS/eip-196) – _aggiunge una curva ellittica e una moltiplicazione scalare per consentire [ZK-Snarks](/developers/docs/layer-2-scaling/#rollups)._
+- [EIP-197](https://eips.ethereum.org/EIPS/eip-197) – _aggiunge la curva ellittica e la moltiplicazione scalare per consentire [ZK-Snarks](/developers/docs/layer-2-scaling/#rollups)._
+- [EIP-198](https://eips.ethereum.org/EIPS/eip-198) – _abilita la verifica della firma RSA._
 - [EIP-211](https://eips.ethereum.org/EIPS/eip-211) – _aggiunge supporto per i valori restituiti a lunghezza variabile._
 - [EIP-214](https://eips.ethereum.org/EIPS/eip-214) – _aggiunge l'opcode `STATICCALL`, consentendo chiamate che non modificano lo stato ad altri contratti._
 - [EIP-100](https://eips.ethereum.org/EIPS/eip-100) – _cambia la formula di modifica della difficoltà._
-- [EIP-649](https://eips. thereum.org/EIPS/eip-649) – _ritarda la [bomba di difficoltà](/glossario/#difficulty-bomb) di 1 anno e riduce la ricompensa per i blocchi da 5 a 3 ETH._
+- [EIP-649](https://eips.ethereum.org/EIPS/eip-649) – _ritarda la [bomba di difficoltà](/glossario/#difficulty-bomb) di 1 anno e riduce la ricompensa per i blocchi da 5 a 3 ETH._
 
 </ExpandableCard>
 
@@ -179,8 +183,8 @@ La diramazione Spurious Dragon è stata la seconda risposta agli attacchi denial
 
 <ExpandableCard title="EIP Spurious Dragon" contentPreview="Official improvements included in this fork.">
 
-- [EIP-155](https://eips.ethereum. rg/EIPS/eip-155) – _impedisce che le transazioni provenienti da una catena Ethereum siano ritrasmesse su una catena alternativa, ad esempio una transazione sulla rete di test che viene eseguita nuovamente sulla catena principale Ethereum._
-- [EIP-160](https://eips.ethereum. rg/EIPS/eip-160) – _ottimizza i prezzi dell'opcode `EXP`, rende più difficile rallentare la rete attraverso operazioni sui contratti costose dal punto di vista del calcolo._
+- [EIP-155](https://eips.ethereum.org/EIPS/eip-155) – _impedisce che le transazioni provenienti da una catena Ethereum siano ritrasmesse su una catena alternativa, ad esempio una transazione sulla rete di test che viene eseguita nuovamente sulla catena principale Ethereum._
+- [EIP-160](https://eips.ethereum.org/EIPS/eip-160) – _ottimizza i prezzi dell'opcode `EXP`, rende più difficile rallentare la rete attraverso operazioni sui contratti costose dal punto di vista del calcolo._
 - [EIP-161](https://eips.ethereum.org/EIPS/eip-161) – _permette la rimozione di account vuoti aggiunti tramite attacchi DOS._
 - [EIP-170](https://eips.ethereum.org/EIPS/eip-170) – _cambia la dimensione massima del codice che può avere un contratto sulla blockchain a 24576 byte._
 
@@ -301,4 +305,6 @@ Lo yellowpaper, redatto dal dott. Gavin Wood, è una definizione tecnica del pro
 
 Documento introduttivo, pubblicato nel 2013 da Vitalik Buterin, il fondatore di Ethereum, prima del lancio del progetto nel 2015.
 
-<DocLink to="/whitepaper/" title="Whitepaper" />
+<DocLink to="/whitepaper/">
+  Whitepaper
+</DocLink>

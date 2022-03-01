@@ -11,7 +11,7 @@ Les réseaux sont différents environnements Ethereum auxquels vous pouvez accé
 
 ## Prérequis {#prerequisites}
 
-Vous devez comprendre les bases d'Ethereum avant de vous renseigner sur les différents réseaux, car les réseaux de test vous donneront une version bon marché et sûre d'Ethereum avec laquelle vous pourrez jouer. Commencez par lire la page [Introduction à Ethereum](/en/developers/docs/intro-to-ethereum/).
+Vous devez comprendre les bases d'Ethereum avant de vous renseigner sur les différents réseaux, car les réseaux de test vous donneront une version bon marché et sûre d'Ethereum avec laquelle vous pourrez jouer. Commencez par lire la page [Introduction à Ethereum](/developers/docs/intro-to-ethereum/).
 
 ## Réseaux public {#public-networks}
 
@@ -54,7 +54,6 @@ L'ETH des réseaux de test n'a pas de valeur réelle, il n'existe donc pas de ma
 - [Robinet Görli](https://faucet.goerli.mudit.blog/)
 - [Robinet Kovan](https://faucet.kovan.network/)
 - [Robinet Rinkeby](https://faucet.rinkeby.io/)
-- [Robinet Ropsten](https://faucet.ropsten.be/)
 
 ## Réseaux privés {#private-networks}
 
@@ -71,20 +70,6 @@ Il existe des projets et des outils dédiés pour y contribuer. En savoir plus s
 Le processus de consensus est contrôlé par un ensemble de nœuds prédéfinis qui sont fiables. Par exemple, un réseau privé d'institutions académiques connues régissant chacune un seul nœud, et où les blocs sont validés par un seuil de signataires au sein du réseau.
 
 Si un réseau public Ethereum est comme l'Internet public, vous pouvez considérer un réseau de consortium comme un intranet privé.
-
-<!-- TODO
-
-## Interacting with testnets
-
-### Your own local network {#your-own-local-network}
-
-`geth -—networkid="12345" console`
-
-### Testnets {#testnets-1}
-
-Wallets like MetaMask or MyEtherWallet will allow you to switch networks so you can test your apps using your test ETH.
-
--->
 
 ## Complément d'information {#further-reading}
 

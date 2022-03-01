@@ -44,6 +44,8 @@
       items:
         - id: docs-nav-run-a-node
           to: /developers/docs/nodes-and-clients/run-a-node/
+        - id: docs-nav-client-diversity
+          to: /developers/docs/nodes-and-clients/client-diversity/
         - id: docs-nav-nodes-as-a-service
           to: /developers/docs/nodes-and-clients/nodes-as-a-service/
     - id: docs-nav-networks
@@ -82,6 +84,9 @@
           to: /developers/docs/smart-contracts/compiling/
         - id: docs-nav-deploying-smart-contracts
           to: /developers/docs/smart-contracts/deploying/
+        - id: docs-nav-smart-contract-security
+          to: /developers/docs/smart-contracts/security/
+          description: docs-nav-smart-contract-security-description
         - id: docs-nav-composability
           to: /developers/docs/smart-contracts/composability/
     - id: docs-nav-development-networks
@@ -105,9 +110,6 @@
       items:
         - id: docs-nav-block-explorers
           to: /developers/docs/data-and-analytics/block-explorers/
-    - id: docs-nav-security
-      to: /developers/docs/security/
-      description: docs-nav-security-description
     - id: docs-nav-storage
       to: /developers/docs/storage/
       description: docs-nav-storage-description
@@ -162,8 +164,10 @@
       to: /developers/docs/scaling/
       description: docs-nav-scaling-description
       items:
-        - id: docs-nav-scaling-layer-2
-          to: /developers/docs/scaling/layer-2-rollups/
+        - id: docs-nav-scaling-optimistic-rollups
+          to: /developers/docs/scaling/optimistic-rollups/
+        - id: docs-nav-scaling-zk-rollups
+          to: /developers/docs/scaling/zk-rollups
         - id: docs-nav-scaling-channels
           to: /developers/docs/scaling/state-channels/
         - id: docs-nav-scaling-sidechains

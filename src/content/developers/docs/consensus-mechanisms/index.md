@@ -6,7 +6,7 @@ sidebar: true
 incomplete: true
 ---
 
-Blockchains, like Ethereum, are distributed databases. The network's nodes must reach an agreement on the network's current state. Users of the blockchain all want to write to the database at the same time. It's the job of a consensus protocol to coordinate the network to agree on the same decisions and arrive at the same state. 
+Blockchains, like Ethereum, are distributed databases. The network's nodes must reach an agreement on the network's current state. Users of the blockchain all want to write to the database at the same time. It's the job of a consensus protocol to coordinate the network to agree on the same decisions and arrive at the same state.
 
 Although consensus mechanisms aren't directly related to building a dapp, understanding them will illuminate concepts relevant to you and your users' experience, like gas prices and transaction times.
 
@@ -16,7 +16,7 @@ To better understand this page, we recommend you first read our [introduction to
 
 ## What is consensus? {#what-is-consensus}
 
-By consensus, we mean that a general agreement has been reached. Consider a group of five people going to the cinema. If three out of five agree on a film, a consensus is achieved — majority rules.
+By consensus, we mean that a general agreement has been reached. Consider a group of people going to the cinema. If there is not a disagreement on a proposed choice of film, then a consensus is achieved. In the extreme case the group will eventually split.
 
 ## What is a consensus mechanism? {#what-is-a-consensus-mechanism}
 
@@ -26,25 +26,9 @@ For decades, these mechanisms have been used to establish consensus among databa
 
 A consensus mechanism in a cryptoeconomic system also helps prevent certain kinds of economic attacks. In Nakamoto consensus, an attacker can compromise the database (known as a "safety violation") by controlling 51% of the network hash power. Consensus mechanisms are designed to make this "51% attack" unfeasible. Different protocols are engineered to solve this security problem in different ways.
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/dylgwcPH4EA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-<!-- ### Consensus -->
-
-<!-- Formal requirements for a consensus protocol may include: -->
-
-<!-- - Agreement: All correct processes must agree on the same value. -->
-<!-- - Weak validity: For each correct process, its output must be the input of some correct process. -->
-<!-- - Strong validity: If all correct processes receive the same input value, then they must all output that value. -->
-<!-- - Termination: All processes must eventually decide on an output value -->
-
-<!-- ### Fault tolerance -->
-<!-- TODO explain how protocols must be fault tolerant -->
+<YouTube id="dylgwcPH4EA" />
 
 ## Types of consensus mechanisms {#types-of-consensus-mechanisms}
-
-<!-- TODO -->
-<!-- Why do different consensus protocols exist? -->
-<!-- What are the tradeoffs of each? -->
 
 ### Nakamoto Consensus {#nakamoto-consensus}
 
@@ -52,7 +36,7 @@ Ethereum, like Bitcoin, currently uses the Nakamoto, or "Longest Chain", consens
 
 #### Block creation {#pow-block-creation}
 
-Nakamoto consensus is done by [miners](/developers/docs/consensus-mechanisms/pow/mining/) who compete to create new blocks full of processed transactions. They do this through a process known as "proof-of-work" mining (PoW). In PoW, miners are creating random numbers, called a nonce, and plugging that into a hash function to see if they produce a hash which satisfies a condition difficult enough to show they've put work into solving the problem. Once discovered, the miner who found the nonce proposes a new block to the rest of the network. In this new block, the miner pays itself in ETH. If the network decides to continue to build on his block, it becomes part of the "cannonical chain" and the miner has some freshly minted ETH. 
+Nakamoto consensus is done by [miners](/developers/docs/consensus-mechanisms/pow/mining/) who compete to create new blocks full of processed transactions. They do this through a process known as "proof-of-work" mining (PoW). In PoW, miners are creating random numbers, called a nonce, and plugging that into a hash function to see if they produce a hash which satisfies a condition difficult enough to show they've put work into solving the problem. Once discovered, the miner who found the nonce proposes a new block to the rest of the network. In this new block, the miner pays itself in ETH. If the network decides to continue to build on his block, it becomes part of the "canonical chain" and the miner has some freshly minted ETH.
 
 The race is won by whosever computer can solve a math puzzle fastest – this produces the cryptographic link between the current block and the block that went before. Solving this puzzle puts the work in "proof-of-work".
 
@@ -80,7 +64,7 @@ More on [proof-of-stake](/developers/docs/consensus-mechanisms/pos/)
 
 Watch more on the different types of consensus protocols used on Ethereum:
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/ojxfbN78WFQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<YouTube id="ojxfbN78WFQ" />
 
 ### Sybil resistance {#sybil-chain}
 
@@ -115,6 +99,6 @@ _Know of a community resource that helped you? Edit this page and add it!_
 
 ## Related topics {#related-topics}
 
-- [Proof of work](/developers/docs/consensus-mechanisms/pow/)
+- [Proof-of-work](/developers/docs/consensus-mechanisms/pow/)
 - [Mining](/developers/docs/consensus-mechanisms/pow/mining/)
-- [Proof of stake](/developers/docs/consensus-mechanisms/pos/)
+- [Proof-of-stake](/developers/docs/consensus-mechanisms/pos/)

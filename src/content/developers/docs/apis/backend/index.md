@@ -21,8 +21,6 @@ These libraries abstract away much of the complexity of interacting directly wit
 
 ## Available libraries {#available-libraries}
 
-<!-- TODO separate APIs-as-a-service vs. connect your own -->
-
 **Alchemy -** **_Ethereum Development Platform._**
 
 - [alchemy.com](https://www.alchemy.com/)
@@ -44,6 +42,11 @@ These libraries abstract away much of the complexity of interacting directly wit
 **Cloudflare Ethereum Gateway.**
 
 - [cloudflare-eth.com](https://cloudflare-eth.com)
+
+**DataHub by Figment -** **_Web3 API services with Ethereum Mainnet and testnets._**
+
+- [DataHub](https://www.figment.io/datahub)
+- [Documentation](https://docs.figment.io/introduction/what-is-datahub)
 
 **Nodesmith -** **_JSON-RPC API access to Ethereum Mainnet and testnets._**
 
@@ -93,6 +96,19 @@ These libraries abstract away much of the complexity of interacting directly wit
 - [GitHub](https://github.com/tatumio/)
 - [Documentation](https://docs.tatum.io/)
 - [Discord](https://discord.gg/EDmW3kjTC9)
+
+**Watchdata -** **_Provide simple and reliable API access to Ethereum blockchain._**
+
+- [Watchdata](https://watchdata.io/)
+- [Documentation](https://docs.watchdata.io/)
+- [Discord](https://discord.com/invite/TZRJbZ6bdn)
+
+**Zmok -** **_Speed-oriented Ethereum nodes as JSON-RPC/WebSockets API_**
+
+- [zmok.io](https://zmok.io/)
+- [GitHub](https://github.com/zmok-io)
+- [Documentation](https://docs.zmok.io/)
+- [Discord](https://discord.gg/fAHeh3ka6s)
 
 ## Further reading {#further-reading}
 

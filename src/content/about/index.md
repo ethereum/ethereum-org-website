@@ -38,7 +38,7 @@ Ethereum and the community are always evolving, so ethereum.org will too. That's
 
 We're open source, with a community of contributors, so you can propose changes or help us out too.
 
-[Learn about contributing](/en/contributing/)
+[Learn about contributing](/contributing/)
 
 ### 3. ethereum.org is not a typical product website 🦄 {#core-principles-3}
 
@@ -49,15 +49,15 @@ This means the website needs to handle many different user journeys, from “a d
 
 ## Design principles {#design-principles}
 
-We use a set of [design principles](/en/contributing/design-principles/) to guide our content and design decisions on the site.
+We use a set of [design principles](/contributing/design-principles/) to guide our content and design decisions on the site.
 
 ## Style guide {#style-guide}
 
-We have a [style guide](/en/contributing/style-guide/) to standardize certain aspects of writing content to make the contribution process smoother.
+We have a [style guide](/contributing/style-guide/) to standardize certain aspects of writing content to make the contribution process smoother.
 
 We welcome feedback on both the design principles and the style guide. Remember, ethereum.org is for the community, by the community.
 
-Make sure you read [our principles](/en/contributing/design-principles/) and [our style guide](/en/contributing/style-guide/) if you'd like to [contribute to the site](/en/contributing/).
+Make sure you read [our principles](/contributing/design-principles/) and [our style guide](/contributing/style-guide/) if you'd like to [contribute to the site](/contributing/).
 
 ## Roadmap {#roadmap}
 

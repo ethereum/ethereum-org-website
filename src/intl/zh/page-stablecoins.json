@@ -27,7 +27,7 @@
   "page-stablecoins-accordion-earn-project-2-description": "MakerDao社区（为您带来Dai的团队）的技术、内容和其他工作。",
   "page-stablecoins-accordion-earn-project-3-description": "当您精通此道时，可以通过寻找漏洞赢得Dai。",
   "page-stablecoins-accordion-earn-project-bounties": "Gitcoin悬赏",
-  "page-stablecoins-accordion-earn-project-bug-bounties": "Eth2漏洞悬赏",
+  "page-stablecoins-accordion-earn-project-bug-bounties": "共识层漏洞悬赏",
   "page-stablecoins-accordion-earn-project-community": "MakerDao社区",
   "page-stablecoins-accordion-earn-projects-copy": "这些平台将为您的工作支付稳定币作为酬劳。",
   "page-stablecoins-accordion-earn-projects-title": "从哪里赚取稳定币",
@@ -141,5 +141,6 @@
   "page-stablecoins-usdc-logo": "USDC徽标",
   "page-stablecoins-why-stablecoins": "为什么使用稳定币？",
   "page-stablecoins-how-they-work-button": "它们如何运作",
-  "page-stablecoins-why-stablecoins-body": "ETH，和比特币一样是一种新技术，所以价值存在波动。因此您可能不会想在日常生活中使用它。稳定币作为传统货币价值的替代品，成为您能够在以太坊上使用的稳定资金。"
+  "page-stablecoins-why-stablecoins-body": "ETH，和比特币一样是一种新技术，所以价值存在波动。因此您可能不会想在日常生活中使用它。稳定币作为传统货币价值的替代品，成为您能够在以太坊上使用的稳定资金。",
+  "page-stablecoins-more-defi-button": "关于去中心化金融 (DeFi) 的更多信息"
 }

@@ -21,7 +21,7 @@ Cuando escribas contratos inteligentes, hay una gran posibilidad de que te encue
 
 Las bibliotecas de contratos inteligentes suelen proporcionar implementaciones reutilizables de estos comportamientos como [bibliotecas](https://solidity.readthedocs.io/en/v0.7.2/contracts.html#libraries) o a través de [herencia](https://solidity.readthedocs.io/en/v0.7.2/contracts.html#inheritance) en Solidity.
 
-Como ejemplo, a continuación se muestra una versión simplificada del [`contrato de propietario ` ](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.2.0/contracts/access/Ownable.sol) de la [biblioteca de contractos OpenZeppelin](https://github.com/OpenZeppelin/openzeppelin-contracts), que diseña una dirección como el propietario de un contrato y proporciona un modificador para restringir el acceso a un método únicamente a dicho propietario.
+Como ejemplo, a continuación se muestra una versión simplificada del [`contrato de propietario ` ](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.2.0/contracts/access/Ownable.sol) de la [biblioteca de contratos OpenZeppelin](https://github.com/OpenZeppelin/openzeppelin-contracts), que diseña una dirección como el propietario de un contrato y proporciona un modificador para restringir el acceso a un método únicamente a dicho propietario.
 
 ```solidity
 contract Ownable {
@@ -57,7 +57,7 @@ Otro ejemplo popular es [SafeMath](https://docs.openzeppelin.com/contracts/3.x/u
 
 Para facilitar la [composibilidad e interoperabilidad](/developers/docs/smart-contracts/composability/), la comunidad Ethereum ha definido varios estándares en forma de **ERC**. Puedes leer más sobre ellos en la sección de [estándares](/developers/docs/standards/).
 
-Al incluir un ERC como parte de sus contratos, recomendamos buscar implementaciones estándar, en lugar de intentar desplegar las tuyas. Muchas bibliotecas de contratos inteligentes incluyen implementaciones para los ERC más populares. Por ejemplo, el ubicuo [ERC20 fungible token estándar](/developers/tutorials/understand-the-erc-20-token-smart-contract/) puede encontrarse en [HQ20](https://github.com/HQ20/contracts/blob/master/contracts/token/README.md), [DappSys](http://dapp.tools/dappsys/ds-token.html) y [OpenZeppelin](https://docs.openzeppelin.com/contracts/3.x/erc20). Adicionalmente, algunos ERC también proveen implementaciones canónicas como parte del propio ERC.
+Al incluir un ERC como parte de sus contratos, recomendamos buscar implementaciones estándar, en lugar de intentar desplegar las tuyas. Muchas bibliotecas de contratos inteligentes incluyen implementaciones para los ERC más populares. Por ejemplo, el ubicuo [ERC20 fungible token estándar](/developers/tutorials/understand-the-erc-20-token-smart-contract/) puede encontrarse en [HQ20](https://github.com/HQ20/contracts/blob/master/contracts/token/README.md), [DappSys](https://github.com/dapphub/ds-token/) y [OpenZeppelin](https://docs.openzeppelin.com/contracts/3.x/erc20). Adicionalmente, algunos ERC también proveen implementaciones canónicas como parte del propio ERC.
 
 Vale la pena mencionar que algunos ERC no son autónomos, sino adiciones a otros ERC. Por ejemplo, [ERC2612](https://eips.ethereum.org/EIPS/eip-2612) añade una extensión a ERC20 para mejorar su usabilidad.
 
@@ -96,7 +96,7 @@ Por último, al decidir si incluir o no una biblioteca, considera su uso general
 
 **DappSys: \*\***_Bloques de creación simples, flexibles y seguros para contratos inteligentes. _\*\*
 
-- [Documentación](https://dapp.tools/dappsys/)
+- [Documentación](https://dappsys.readthedocs.io/)
 - [GitHub](https://github.com/dapphub/dappsys)
 
 **HQ20: \*\***_Un proyecto de Solidity con contratos, bibliotecas y ejemplos para ayudarte a construir aplicaciones distribuidas con todas las características para el mundo real._\*\*
@@ -105,7 +105,7 @@ Por último, al decidir si incluir o no una biblioteca, considera su uso general
 
 ## Tutoriales relacionados {#related-tutorials}
 
-- [Consideraciones de seguridad para desarrolladores de Ethereum](/developers/docs/security/)_: Un tutorial sobre consideraciones de seguridad que deben tenerse en cuenta al construir contratos inteligentes, incluyendo el uso de bibliotecas._
+- [Consideraciones de seguridad para desarrolladores de Ethereum](/developers/docs/smart-contracts/security/)_: Un tutorial sobre consideraciones de seguridad que deben tenerse en cuenta al construir contratos inteligentes, incluyendo el uso de bibliotecas._
 - [Entender el contrato inteligente de token ERC-20](/developers/tutorials/understand-the-erc-20-token-smart-contract/) _: Tutorial en el estándar ERC-20, proporcionado por múltiples bibliotecas._
 
 ## Más lectura {#further-reading}

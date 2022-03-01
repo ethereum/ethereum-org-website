@@ -39,13 +39,13 @@ sidebarDepth: 1
 
 - [Go 이더리움 개발 문서](https://geth.ethereum.org/docs/) - _Go 언어를 사용한 공식 이더리움 개발 문서_
 - [Go 이더리움 GoDoc](https://godoc.org/github.com/ethereum/go-ethereum)
-- [게스(Geth)를 사용하여 Go로 디앱 제작](https://kauri.io/article/60a36c1b17d645939f63415218dc24f9/creating-a-dapp-in-go-with-geth)
+- [게스(Geth)를 사용하여 Go로 디앱 제작](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/creating-a-dapp-in-go-with-geth/)
 - [Go 언어 및 게스(Geth)를 사용하여 이더리움 비공개 네트워크 지원](https://myhsts.org/tutorial-learn-how-to-work-with-ethereum-private-network-with-golang-with-geth.php)
 - [Go를 사용하여 이더리움 기반 솔리디티 컨트랙트 유닛 테스트](https://medium.com/coinmonks/unit-testing-solidity-contracts-on-ethereum-with-go-3cc924091281)
 
 ## 고급 사용 패턴 {#advanced-use-patterns}
 
-- [게스(GETH)로 시뮬레이션된 백엔드](https://kauri.io/article/6285c9692883411aa041b6b970405a17/v1/the-geth-simulated-backend)
+- [게스(GETH)로 시뮬레이션된 백엔드](https://kauri.io/#collections/An%20ethereum%20test%20toolkit%20in%20Go/the-geth-simulated-backend/#_top)
 - [이더리움 및 Quorum을 사용한 BaaS(Blockchain-as-a-Service) 앱](https://blockchain.dcwebmakers.com/blockchain-as-a-service-apps-using-ethereum-and-quorum.html)
 - [이더리움 블록체인 애플리케이션의 분산 스토리지 IPFS 및 Swarm](https://blockchain.dcwebmakers.com/work-with-distributed-storage-ipfs-and-swarm-in-ethereum.html)
 - [모바일 클라이언트: 라이브러리 및 Inproc 이더리움 노드](https://github.com/ethereum/go-ethereum/wiki/Mobile-Clients:-Libraries-and-Inproc-Ethereum-Nodes)

@@ -29,11 +29,6 @@ Esto significa que tendrás que pagar una cuota de transacción para que asegúr
 - un script o plugin para implementación.
 - acceso a un [nodo de Ethereum](/developers/docs/nodes-and-clients/), o bien manejar uno tuyo, o, conectarte a un nodo público, o a través de una llave API utilizando un servicio como Infura o Alchemy
 
-<!-- TODO Elaborate on options: e.g. run a node, use a node as a service etc. -->
-
-<!-- TODO! -->
-<!-- ### Steps to deploy a smart contract -->
-
 Una vez desplegado, tu contrato tendrá una dirección de Ethereum como otras [cuentas](/developers/docs/accounts/).
 
 ## Herramientas relacionadas {#related-tools}
@@ -60,4 +55,4 @@ _¿Conoces algún recurso en la comunidad que te haya servido de ayuda? Edita es
 
 ## Temas relacionados
 
-- [Frameworks de desarrollo](/en/developers/docs/frameworks/)
+- [Frameworks de desarrollo](/developers/docs/frameworks/)

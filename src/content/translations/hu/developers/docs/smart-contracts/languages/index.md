@@ -202,13 +202,13 @@ Ha neked még új az Ethereum és nem programoztál okosszerződés nyelveken, a
 **Yul**
 
 - Haladó nyelv Ethereumra.
-- Támogatja az [EVM-et](en/developers/docs/evm) és az [eWASM-t](https://github.com/ewasm), ami egy Ethereummal fűszerezett WebAssembly, amit a két platform közös nevezőjének terveztek.
+- Támogatja az [EVM-et](/developers/docs/evm) és az [eWASM-t](https://github.com/ewasm), ami egy Ethereummal fűszerezett WebAssembly, amit a két platform közös nevezőjének terveztek.
 - Jó cél a magas szintű optimizációs szinteknek, melyek az EVM-ből és az eWASM-ból is tudnak profitálni.
 
 **Yul+**
 
 - A Yul egy alacsony szintű, nagy hatékonyságú kiterjesztése.
-- Eredetileg az [optimista összegző](en/developers/docs/layer-2-scaling/#rollups-and-sidechains) szerződésre lett kifejlesztve.
+- Eredetileg az [optimista összegző](/developers/docs/layer-2-scaling/#rollups-and-sidechains) szerződésre lett kifejlesztve.
 - A Yul+-ra úgy is tekinthetünk, mint a Yul-nak egy kísérleti fejlesztési javaslatára, melyhez új funkciók tartoznak.
 
 ### Fontos linkek {#important-links-2}
@@ -251,7 +251,7 @@ Mint minden más programozási nyelvnél, itt is leginkább a megfelelő eszköz
 
 ### Mi a jó a Solidity-ben? {#solidity-advantages}
 
-- Ha kezdő vagy, akkor sok útmutató és tanulási anyag áll rendelkezésedre. További anyagért látogasd meg [Tanulás kódolással](https://ethereum.org/en/developers/learning-tools/) szekciót.
+- Ha kezdő vagy, akkor sok útmutató és tanulási anyag áll rendelkezésedre. További anyagért látogasd meg [Tanulás kódolással](/developers/learning-tools/) szekciót.
 - Jó fejlesztői eszközök érhetők el.
 - A Solidity-nek nagy a fejlesztői közössége, ami azt jelenti, hogy nagy valószínűséggel gyorsan választ kapsz majd a kérdéseidre.
 

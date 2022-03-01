@@ -15,17 +15,19 @@ La mejor manera de describir una blockchain es definirla como una especie de bas
 
 Cada nodo de la red debe acordar cada nuevo bloque y la cadena como conjunto. Así, todo el mundo dispone de los mismos datos. Para que esto funcione, las cadenas de bloques necesitan disponer de un mecanismo de consenso.
 
-Actualmente Ethereum utiliza un mecanismo de consenso llamado "Prueba de trabajo". Esto significa que cualquiera que quiera añadir nuevos bloques a la cadena deberá resolver un difícil rompecabezas, para el que se precisa mucha potencia computacional. Resolver el rompecabezas "prueba" que has invertido los recursos computacionales necesarios. Este proceso se denomina [minería](/en/developers/docs/consensus-mechanisms/pow/mining/). La minería puede entenderse como un proceso de prueba y error, pero la exitosa adición de un bloque se recompensa con Eth. Por otro lado, el envío de bloques fraudulentos no es una opción atractiva considerando los recursos que se invierten en producir el bloque.
+Actualmente Ethereum utiliza un mecanismo de consenso llamado "Prueba de trabajo". Esto significa que cualquiera que quiera añadir nuevos bloques a la cadena deberá resolver un difícil rompecabezas, para el que se precisa mucha potencia computacional. Resolver el rompecabezas "prueba" que has invertido los recursos computacionales necesarios. Este proceso se denomina [minería](/developers/docs/consensus-mechanisms/pow/mining/). La minería puede entenderse como un proceso de prueba y error, pero la exitosa adición de un bloque se recompensa con Eth. Por otro lado, el envío de bloques fraudulentos no es una opción atractiva considerando los recursos que se invierten en producir el bloque.
 
 Los nuevos bloques son transmitidos a los nodos de la red, y una vez revisados y verificados, se actualiza el estado para todos.
 
 En resumen, cuando envías ETH a alguien, la transacción se debe minar e incluir en un bloque nuevo. A continuación, el estado actualizado se comparte con toda la red. Se incluyen más detalles a continuación.
 
-Observa cómo Austin te guía a través de la blockchain: <iframe width="100%" height="315" src="https://www.youtube.com/embed/zcX7OJ-L8XQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+Observa cómo Austin te guía a través de la blockchain:
+
+<YouTube id="zcX7OJ-L8XQ" />
 
 ## ¿Qué es Ethereum? {#what-is-ethereum}
 
-En el universo Ethereum, hay un computador único y canónico (llamado máquina virtual de Etherum o EVM), cuyo estado han acordado todos los participantes de la red. Cualquiera que participe en la red de Ethereum (cada nodo de Ethereum) mantiene una copia del estado de este ordenador. Adicionalmente, cualquier participante puede emitir una petición para que este ordenador realice un cálculo arbitrario. Cuando se transmite una solicitud de este tipo, los demás participantes de la red verifican, validan y ejecutan el cálculo. Esto causa un cambio de estado en la EVM, que se realiza y propaga a través de toda la red.
+En el universo Ethereum, hay un computador único y canónico (llamado máquina virtual de Ethereum o EVM), cuyo estado han acordado todos los participantes de la red. Cualquiera que participe en la red de Ethereum (cada nodo de Ethereum) mantiene una copia del estado de este ordenador. Adicionalmente, cualquier participante puede emitir una petición para que este ordenador realice un cálculo arbitrario. Cuando se transmite una solicitud de este tipo, los demás participantes de la red verifican, validan y ejecutan el cálculo. Esto causa un cambio de estado en la EVM, que se realiza y propaga a través de toda la red.
 
 Las peticiones de cálculo se llaman solicitudes de transacción; el registro de todas las transacciones así como el estado actual de la EVM se almacena en la blockchain que, a su vez, almacenan y acuerdan todos los nodos.
 
@@ -95,9 +97,9 @@ El volumen de transacciones es muy alto, así las transacciones se "consensúan"
 
 ### Contratos inteligentes {#smart-contracts}
 
-Un fragmento de código reutilizable (un programa), que publica un desarrollador en la memoria de la EVM. Cualquiera que pueda solicitar que el código del contrato inteligente se ejecute al hacer una solicitud de transacción. Como los desarrolladores pueden escribir arbitrariamente aplicaciones ejecutables en la EVM (juegos, mercados, instrumentos financieros, etc.) mediante la publicación de contratos inteligentes, estos suelen denominarse [dapps o aplicaciones descentralizadas](/developers/docs/dapps/).
+Un fragmento de código reutilizable (un programa), que publica un desarrollador en la memoria de la EVM. Cualquiera puede solicitar que el código del contrato inteligente se ejecute al hacer una solicitud de transacción. Como los desarrolladores pueden escribir arbitrariamente aplicaciones ejecutables en la EVM (juegos, mercados, instrumentos financieros, etc.) mediante la publicación de contratos inteligentes, estos suelen denominarse [dapps o aplicaciones descentralizadas](/developers/docs/dapps/).
 
-[Más sobre Contratos Inteligentes](/en/developers/docs/smart-contracts/)
+[Más sobre Contratos Inteligentes](/developers/docs/smart-contracts/)
 
 ## Leer más {#further-reading}
 

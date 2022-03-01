@@ -6,7 +6,7 @@ sidebar: true
 incomplete: true
 ---
 
-Ethereum is moving to a consensus mechanism called proof-of-stake (PoS) from [proof-of-work (PoW)](/developers/docs/consensus-mechanisms/pow/). This was always the plan as it's a key part in the community's strategy to scale Ethereum via [the Eth2 upgrades](/eth2/). However getting PoS right is a big technical challenge and not as straightforward as using PoW to reach consensus across the network.
+Ethereum is moving to a consensus mechanism called proof-of-stake (PoS) from [proof-of-work (PoW)](/developers/docs/consensus-mechanisms/pow/). This was always the plan as it's a key part in the community's strategy to scale Ethereum via [upgrades](/upgrades/). However getting PoS right is a big technical challenge and not as straightforward as using PoW to reach consensus across the network.
 
 ## Prerequisites {#prerequisites}
 
@@ -14,7 +14,7 @@ To better understand this page, we recommend you first read up on [consensus mec
 
 ## What is proof-of-stake (PoS)? {#what-is-pos}
 
-Proof of stake is a type of [consensus mechanism](/developers/docs/consensus-mechanisms/) used by blockchain networks to achieve distributed consensus.
+Proof-of-stake is a type of [consensus mechanism](/developers/docs/consensus-mechanisms/) used by blockchain networks to achieve distributed consensus.
 
 It requires users to stake their ETH to become a validator in the network. Validators are responsible for the same thing as miners in [proof-of-work](/developers/docs/consensus-mechanisms/pow/): ordering transactions and creating new blocks so that all nodes can agree on the state of the network.
 
@@ -23,7 +23,7 @@ Proof-of-stake comes with a number of improvements to the proof-of-work system:
 - better energy efficiency – you don't need to use lots of energy mining blocks
 - lower barriers to entry, reduced hardware requirements – you don't need elite hardware to stand a chance of creating new blocks
 - stronger immunity to centralization – proof-of-stake should lead to more nodes in the network
-- stronger support for [shard chains](/eth2/shard-chains/) – a key upgrade in scaling the Ethereum network
+- stronger support for [shard chains](/upgrades/shard-chains/) – a key upgrade in scaling the Ethereum network
 
 ## Proof-of-stake, staking, and validators {#pos-staking-validators}
 
@@ -37,7 +37,7 @@ If you attest to malicious blocks, you lose your stake.
 
 ### The beacon chain {#the-beacon-chain}
 
-When Ethereum replaces proof-of-work with proof-of-stake, there will be the added complexity of [shard chains](/eth2/shard-chains/). These are separate blockchains that will need validators to process transactions and create new blocks. The plan is to have 64 shard chains, with each having a shared understanding of the state of the network. As a result, extra coordination is necessary and will be done by [the beacon chain](/eth2/beacon-chain/).
+When Ethereum replaces proof-of-work with proof-of-stake, there will be the added complexity of [shard chains](/upgrades/shard-chains/). These are separate blockchains that will need validators to process transactions and create new blocks. The plan is to have 64 shard chains, with each having a shared understanding of the state of the network. As a result, extra coordination is necessary and will be done by [the beacon chain](/upgrades/beacon-chain/).
 
 The beacon chain receives state information from shards and makes it available for other shards, allowing the network to stay in sync. The beacon chain will also manage the validators from registering their stake deposits to issuing their rewards and penalties.
 
@@ -85,9 +85,14 @@ Stake slashings, ejections, and other penalties, coordinated by the beacon chain
 
 ## Further reading {#further-reading}
 
+- [Proof of Stake FAQ](https://vitalik.ca/general/2017/12/31/pos_faq.html) _Vitalik Buterin_
 - [What is Proof of Stake](https://consensys.net/blog/blockchain-explained/what-is-proof-of-stake/) _ConsenSys_
+- [What Proof of Stake Is And Why It Matters](https://bitcoinmagazine.com/culture/what-proof-of-stake-is-and-why-it-matters-1377531463) _Vitalik Buterin_
 - [The Beacon Chain Ethereum 2.0 explainer you need to read first](https://ethos.dev/beacon-chain/) _Ethos.dev_
+- [Why Proof of Stake (Nov 2020)](https://vitalik.ca/general/2020/11/06/pos2020.html) _Vitalik Buterin_
+- [Proof of Stake: How I Learned to Love Weak Subjectivity](https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity/) _Vitalik Buterin_
+- [A Proof of Stake Design Philosophy](https://medium.com/@VitalikButerin/a-proof-of-stake-design-philosophy-506585978d51) _Vitalik Buterin_
 
 ## Related topics {#related-topics}
 
-- [Proof of work](/developers/docs/consensus-mechanisms/pow/)
+- [Proof-of-work](/developers/docs/consensus-mechanisms/pow/)

@@ -57,13 +57,13 @@ Smart kontrakt – „inteligentná zmluva“ je v jednoduchosti časť kódu, k
 - [What is a Smart Contract?](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract) _12. novembra 2018 - Andreas M. Antonopoulos, Gavin Wood_
 - [What are Smart Contracts/Decentralized Applications?](https://docs.ethhub.io/ethereum-basics/what-is-ethereum/#what-are-smart-contracts-and-decentralized-applications) _pravidelne aktualizované - Ethhub_
 
-## Proof of Work a ťaženie {#proof-of-work-and-mining}
+## Proof-of-work a ťaženie {#proof-of-work-and-mining}
 
-Ethereum v súčasnosti používa systém s názvom „Proof of Work“. Ten umožňuje uzlom siete Etherea dohodnúť sa na stave všetkých informácií zaznamenaných na blockchaine Etherea a bráni určitým typom ekonomických útokov.
+Ethereum v súčasnosti používa systém s názvom „proof-of-work. Ten umožňuje uzlom siete Etherea dohodnúť sa na stave všetkých informácií zaznamenaných na blockchaine Etherea a bráni určitým typom ekonomických útokov.
 
 - [What does it mean to mine Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) _Pravidelne aktualizované – Ethhub_
 
-V rámci nového Etherea 2.0 sa však bude využívať iný systém s názvom „Proof of Stake“. [Prečítajte si viac o Ethereu 2.0 nižšie](#eth-2-0).
+V rámci nového Etherea 2.0 sa však bude využívať iný systém s názvom „proof-of-stake. [Prečítajte si viac o Ethereu 2.0 nižšie](#consensus-layer-upgrades).
 
 ## Klienty a uzly {#clients-and-nodes}
 
@@ -82,7 +82,7 @@ Prečítajte si viac o [Ethereu pre podniky](/sk/enterprise/).
 
 Je vyvíjané veľké úsilie o to, aby bolo Ethereum „škálovateľnejšie“ zlepšením jeho rýchlosti a celkovej realizovateľnosti transakcií. Spravidla je rozdelené na riešenia „vrstvy 1“ a „vrstvy 2“.
 
-„Vrstva 1“ je zamerané na vylepšenie základného protokolu Ethereum. Hlavným projektom, ktorým sa to má dosiahnuť, je [ETH 2.0](#eth-2-0).
+„Vrstva 1“ je zamerané na vylepšenie základného protokolu Ethereum. Hlavným projektom, ktorým sa to má dosiahnuť, je [ETH 2.0](#consensus-layer-upgrades).
 
 „Vrstva 2“ označuje technológie, ktoré sú budované „nad“ základným protokolom Etherea a umožňujú väčšiu škálovateľnosť bez rizika ohrozenia bezpečnosti. Existujú tiež „off-chain“ technológie, ako napríklad side-chains, ktoré umožňujú väčšiu škálovateľnosť vďaka zavedeniu určitých kompromisov na úrovni zabezpečenia.
 
@@ -106,7 +106,7 @@ Je vyvíjané veľké úsilie o to, aby bolo Ethereum „škálovateľnejšie“
 - [Understanding Plasma](https://education.district0x.io/general-topics/understanding-ethereum/understanding-plasma/) _District0x_
 - [Learn Plasma – náučný zdroj informácií pre rozhranie Plasma](https://www.learnplasma.org/en/)
 
-## Ethereum 2.0 {#eth-2-0}
+## Ethereum 2.0 {#consensus-layer-upgrades}
 
 Ethereum 2.0 (známe aj ako „Serenity“) je ďalšou významnou inováciou základného protokolu Etherea. Kombinuje niekoľko vylepšení základného protokolu Etherea, teda „vrstvy 1“.
 
@@ -119,7 +119,7 @@ Ethereum 2.0 (známe aj ako „Serenity“) je ďalšou významnou inováciou z�
 - [ETH 2.0 Researchers AMA Part 2](https://docs.ethhub.io/other/ethereum-2.0-ama/#part-2) _15. júla 2019 - EthHub_
 - [9 Things You Didn't Know About Ethereum 2.0](https://our.status.im/9-things-you-didnt-know-about-ethereum-2-0/) _18. júla 2019 - Bruno Škvorc_
 
-## Ethereum 1.x {#eth-1x}
+## Ethereum 1.x {#execution-layer-upgrades}
 
 Ethereum 1.x je názov pre súbor inovácií existujúceho protokolu Etherea. Cieľom je pokračovať v zdokonaľovaní a udržiavaní funkčnosti Etherea, pokiaľ nebude implementované Ethereum 2.0.
 

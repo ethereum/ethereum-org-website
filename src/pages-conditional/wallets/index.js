@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 import styled from "styled-components"
-import Img from "gatsby-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { useIntl } from "gatsby-plugin-intl"
 import { graphql } from "gatsby"
 import { shuffle } from "lodash"
@@ -64,21 +64,21 @@ const StyledGrayContainer = styled(GrayContainer)`
 `
 
 const SubtitleTwo = styled.div`
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 140%;
   margin-bottom: 1.5rem;
   color: ${(props) => props.theme.colors.text300};
 `
 
 const SubtitleThree = styled.div`
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 140%;
   color: ${(props) => props.theme.colors.text};
   margin-bottom: 1.5rem;
   text-align: center;
 `
 
-const FindWallet = styled(Img)`
+const FindWallet = styled(GatsbyImage)`
   margin-top: 2rem;
   max-width: 800px;
   background-size: cover;
@@ -202,20 +202,17 @@ const articles = [
   {
     title: <Translation id="page-wallets-protecting-yourself" />,
     description: "MyCrypto",
-    link:
-      "https://support.mycrypto.com/staying-safe/protecting-yourself-and-your-funds",
+    link: "https://support.mycrypto.com/staying-safe/protecting-yourself-and-your-funds",
   },
   {
     title: <Translation id="page-wallets-keys-to-safety" />,
     description: <Translation id="page-wallets-blog" />,
-    link:
-      "https://blog.coinbase.com/the-keys-to-keeping-your-crypto-safe-96d497cce6cf",
+    link: "https://blog.coinbase.com/the-keys-to-keeping-your-crypto-safe-96d497cce6cf",
   },
   {
     title: <Translation id="page-wallets-how-to-store" />,
     description: "ConsenSys",
-    link:
-      "https://media.consensys.net/how-to-store-digital-assets-on-ethereum-a2bfdcf66bd0",
+    link: "https://media.consensys.net/how-to-store-digital-assets-on-ethereum-a2bfdcf66bd0",
   },
 ]
 
@@ -228,7 +225,7 @@ const WalletsPage = ({ data }) => {
     // Add fields for CardList
     const randomWallets = shuffle(
       nodes.map((node) => {
-        node.image = data[node.id].childImageSharp.fixed
+        node.image = getImage(data[node.id])
         node.title = node.name
         node.description = translateMessageId(
           `page-find-wallet-description-${node.id}`,
@@ -264,7 +261,7 @@ const WalletsPage = ({ data }) => {
     title: translateMessageId("page-wallets-title", intl),
     header: translateMessageId("page-wallets-slogan", intl),
     subtitle: translateMessageId("page-wallets-subtitle", intl),
-    image: data.hero.childImageSharp.fluid,
+    image: getImage(data.hero),
     alt: translateMessageId("page-wallets-alt", intl),
     buttons: [
       {
@@ -279,7 +276,7 @@ const WalletsPage = ({ data }) => {
       <PageMetadata
         title={translateMessageId("page-wallets-meta-title", intl)}
         description={translateMessageId("page-wallets-meta-description", intl)}
-        image={data.ogImage.childImageSharp.fixed.src}
+        image={getImage(data.ogImage)?.images.fallback.src}
       />
       <PageHero content={heroContent} />
       <StyledGrayContainer>
@@ -420,7 +417,7 @@ const WalletsPage = ({ data }) => {
             <ButtonLink to="/wallets/find-wallet/">
               <Translation id="page-wallets-find-wallet-btn" />
             </ButtonLink>
-            <FindWallet fluid={data.findWallet.childImageSharp.fluid} alt="" />
+            <FindWallet image={getImage(data.findWallet)} alt="" />
           </CentralColumn>
         </Content>
       </GradientContainer>
@@ -503,10 +500,10 @@ const WalletsPage = ({ data }) => {
         </H2>
         <CalloutCardContainer>
           <StyledCallout
-            image={data.eth.childImageSharp.fixed}
-            title={translateMessageId("page-wallets-get-some", intl)}
+            image={getImage(data.eth)}
+            titleKey="page-wallets-get-some"
             alt={translateMessageId("page-wallets-get-some-alt", intl)}
-            description={translateMessageId("page-wallets-get-some-desc", intl)}
+            descriptionKey="page-wallets-get-some-desc"
           >
             <div>
               <ButtonLink to="/get-eth/">
@@ -515,13 +512,10 @@ const WalletsPage = ({ data }) => {
             </div>
           </StyledCallout>
           <StyledCallout
-            image={data.dapps.childImageSharp.fixed}
-            title={translateMessageId("page-wallets-try-dapps", intl)}
+            image={getImage(data.dapps)}
+            titleKey="page-wallets-try-dapps"
             alt={translateMessageId("page-wallets-try-dapps-alt", intl)}
-            description={translateMessageId(
-              "page-wallets-try-dapps-desc",
-              intl
-            )}
+            descriptionKey="page-wallets-try-dapps-desc"
           >
             <div>
               <ButtonLink to="/dapps/">
@@ -540,9 +534,12 @@ export default WalletsPage
 export const calloutImage = graphql`
   fragment calloutImage on File {
     childImageSharp {
-      fixed(height: 200) {
-        ...GatsbyImageSharpFixed
-      }
+      gatsbyImageData(
+        height: 200
+        layout: FIXED
+        placeholder: BLURRED
+        quality: 100
+      )
     }
   }
 `
@@ -550,34 +547,41 @@ export const calloutImage = graphql`
 export const listImage = graphql`
   fragment listImage on File {
     childImageSharp {
-      fixed(height: 20) {
-        ...GatsbyImageSharpFixed
-      }
+      gatsbyImageData(
+        height: 20
+        layout: FIXED
+        placeholder: BLURRED
+        quality: 100
+      )
     }
   }
 `
 
 export const query = graphql`
-  query {
+  {
     hero: file(relativePath: { eq: "wallet.png" }) {
       childImageSharp {
-        fluid(maxHeight: 600) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
       }
     }
     findWallet: file(relativePath: { eq: "wallets/find-wallet.png" }) {
       childImageSharp {
-        fluid(maxWidth: 800, quality: 100) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(
+          width: 800
+          layout: CONSTRAINED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     ogImage: file(relativePath: { eq: "wallet-cropped.png" }) {
       childImageSharp {
-        fixed(width: 738) {
-          src
-        }
+        gatsbyImageData(
+          width: 738
+          layout: FIXED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     eth: file(relativePath: { eq: "eth-logo.png" }) {
@@ -642,9 +646,6 @@ export const query = graphql`
       ...listImage
     }
     dcent: file(relativePath: { eq: "wallets/dcent.png" }) {
-      ...listImage
-    }
-    dharma: file(relativePath: { eq: "wallets/dharma.png" }) {
       ...listImage
     }
     eidoo: file(relativePath: { eq: "wallets/eidoo.png" }) {
@@ -747,6 +748,18 @@ export const query = graphql`
       ...listImage
     }
     bitkeep: file(relativePath: { eq: "wallets/bitkeep.png" }) {
+      ...listImage
+    }
+    keystone: file(relativePath: { eq: "wallets/keystone.png" }) {
+      ...listImage
+    }
+    loopring: file(relativePath: { eq: "wallets/loopring.png" }) {
+      ...listImage
+    }
+    numio: file(relativePath: { eq: "wallets/numio.png" }) {
+      ...listImage
+    }
+    airgap: file(relativePath: { eq: "wallets/airgap.png" }) {
       ...listImage
     }
   }

@@ -44,7 +44,7 @@ const HorizontalContainer = styled.div`
   margin-bottom: 1.5rem;
   flex-wrap: wrap;
   margin-top: -1rem;
-  font-size: 14px;
+  font-size: 0.875rem;
   color: ${(props) => props.theme.colors.text300};
   justify-content: flex-start;
 `
@@ -67,7 +67,8 @@ const Code = styled.div`
   background: ${(props) => props.theme.colors.ednBackground};
   padding-left: 0.25rem;
   padding-right: 0.25rem;
-  font-size: 14px;
+  font-size: 0.875rem;
+
   &:hover {
     background: ${(props) => props.theme.colors.primary100};
   }
@@ -115,7 +116,7 @@ const TutorialMetadata = ({ tutorial, data }) => {
         )}
         <DataContainer>
           <Emoji size={1} mr={`0.5em`} text=":stopwatch:" />
-          {tutorial.timeToRead}{" "}
+          {Math.round(tutorial.fields.readingTime.minutes)}{" "}
           <Translation id="comp-tutorial-metadata-minute-read" />
         </DataContainer>
       </HorizontalContainer>

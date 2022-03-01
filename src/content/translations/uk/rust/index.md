@@ -27,21 +27,19 @@ sidebarDepth: 1
 
 - [Вибір клієнта Ethereum](https://www.trufflesuite.com/docs/truffle/reference/choosing-an-ethereum-client)
 - [Клієнт Ethereum на Rust](https://wiki.parity.io/Setup)
-- [Надсилання транзакції до Ethereum із використанням Rust](https://kauri.io/article/97c85229c66445759bb0ce642224d364/sending-ethereum-transactions-with-rust)
+- [Надсилання транзакції до Ethereum із використанням Rust](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/sending-ethereum-transactions-with-rust/)
 - [Введення до смарт-контрактів із використанням клієнта Parity Ethereum](https://wiki.parity.io/Smart-Contracts)
-- [Налаштування середовища розробки Oasis SDK](https://docs.oasis.dev/quickstart.html#set-up-the-oasis-sdk)
+- [Налаштування середовища розробки Oasis SDK](https://docs.oasis.dev/oasis-sdk/guide/getting-started)
 - [Покрокове керівництво з написання контрактів на rust Wasm для Kovan](https://github.com/paritytech/pwasm-tutorial)
 
 ## Проміжні статті {#intermediate-articles}
 
 - [Документація Rust-Web3](https://tomusdrw.github.io/rust-web3/web3/index.html)
 - [Демонстраційні приклади Rust-Web3](https://github.com/tomusdrw/rust-web3/blob/master/examples)
-- [Створення тайного голосування з використанням OASIS SDK](https://docs.oasis.dev/tutorials/ballot.html#prerequisites)
-- [Створення сервера приватних чатів із використанням OASIS SDK](https://docs.oasis.dev/tutorials/messaging.html#prerequisites)
 
 ## Розширене використання шаблонів {#advanced-use-patterns}
 
-- [Зовнішня бібліотека pwasm_ethereum для взаємодії з Ethereum-подібною мережею](https://paritytech.github.io/pwasm-ethereum/pwasm_ethereum/)
+- [Зовнішня бібліотека pwasm_ethereum для взаємодії з Ethereum-подібною мережею](https://github.com/openethereum/pwasm-ethereum)
 - [Створення децентралізованого чата з використанням JavaScript та Rust](https://medium.com/perlin-network/build-a-decentralized-chat-using-javascript-rust-webassembly-c775f8484b52)
 - [Створення децентралізованої програми виконання справ із використанням Vue.js та Rust ](https://medium.com/@jjmace01/build-a-decentralized-todo-app-using-vue-js-rust-webassembly-5381a1895beb)
 - [Початок роботи з Enigma — на мові програмування Rust](https://blog.enigma.co/getting-started-with-discovery-the-rust-programming-language-4d1e0b06de15)

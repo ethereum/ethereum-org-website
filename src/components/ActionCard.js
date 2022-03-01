@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 import Link from "./Link"
 
@@ -32,7 +32,7 @@ const Title = styled.h3`
   margin-bottom: 1rem;
 `
 
-const Image = styled(Img)`
+const Image = styled(GatsbyImage)`
   width: 100%;
   height: 100%;
   min-width: 100px;
@@ -81,7 +81,7 @@ const ActionCard = ({
         isBottom={isBottom}
         className="action-card-image-wrapper"
       >
-        {!isImageURL && <Image fixed={image} alt={alt} />}
+        {!isImageURL && <Image image={image} alt={alt} />}
         {isImageURL && (
           <img src={image} alt={alt} className="action-card-image" />
         )}

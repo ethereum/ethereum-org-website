@@ -39,13 +39,13 @@ sidebarDepth: 1
 
 - [Go Ethereum のドキュメント](https://geth.ethereum.org/docs/) - _公式のイーサリアムの Golang についてのドキュメント_
 - [Go Ethereum GoDoc](https://godoc.org/github.com/ethereum/go-ethereum)
-- [Geth を使って Go で DApp を作成する](https://kauri.io/article/60a36c1b17d645939f63415218dc24f9/creating-a-dapp-in-go-with-geth)
+- [Geth を使って Go で DApp を作成する](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/creating-a-dapp-in-go-with-geth/)
 - [Golang と Geth を使ったイーサリアムプライベートネットワークでの作業](https://myhsts.org/tutorial-learn-how-to-work-with-ethereum-private-network-with-golang-with-geth.php)
 - [Go を使ってイーサリアム上で Solidity コントラクトをユニットテストする](https://medium.com/coinmonks/unit-testing-solidity-contracts-on-ethereum-with-go-3cc924091281)
 
 ## 高度な利用パターン {#advanced-use-patterns}
 
-- [GETH のシミュレーティッド・バックエンド](https://kauri.io/article/6285c9692883411aa041b6b970405a17/v1/the-geth-simulated-backend)
+- [GETH のシミュレーティッド・バックエンド](https://kauri.io/#collections/An%20ethereum%20test%20toolkit%20in%20Go/the-geth-simulated-backend/#_top)
 - [イーサリアムと Quorum を利用した Blockchain-as-a-Service アプリ](https://blockchain.dcwebmakers.com/blockchain-as-a-service-apps-using-ethereum-and-quorum.html)
 - [イーサリアムブロックチェーンアプリケーションにおける分散型ストレージ IPFS と Swarm](https://blockchain.dcwebmakers.com/work-with-distributed-storage-ipfs-and-swarm-in-ethereum.html)
 - [Mobile Clients: ライブラリとインプロックなイーサリアムノード](https://github.com/ethereum/go-ethereum/wiki/Mobile-Clients:-Libraries-and-Inproc-Ethereum-Nodes)

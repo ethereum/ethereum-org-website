@@ -11,7 +11,7 @@ Aby Ethereum działało w sposób zdecentralizowany, potrzebuje rozproszonej sie
 
 ## Wymagania wstępne {#prerequisites}
 
-Powinieneś zrozumieć koncepcję zdecentralizowanej sieci, zanim zagłębisz się w nią i uruchomisz własną instancję klienta Ethereum. Spójrz na nasze [wprowadzenie do Ethereum](/en/developers/docs/intro-to-ethereum/).
+Powinieneś zrozumieć koncepcję zdecentralizowanej sieci, zanim zagłębisz się w nią i uruchomisz własną instancję klienta Ethereum. Spójrz na nasze [wprowadzenie do Ethereum](/developers/docs/intro-to-ethereum/).
 
 ## Czym są węzły i klienci? {#what-are-nodes-and-clients}
 
@@ -19,7 +19,7 @@ Powinieneś zrozumieć koncepcję zdecentralizowanej sieci, zanim zagłębisz si
 
 Możesz zobaczyć widok sieci Ethereum w czasie rzeczywistym, patrząc na [mapę węzłów](https://etherscan.io/nodetracker).
 
-Wiele [implementacji klientów Ethereum](/developers/docs/nodes-and-clients/#clients) istnieje w wielu językach. Cechą wspólną tych implementacji klienckich jest to, że wszystkie są zgodne z formalną specyfikacją. Ta specyfikacja określa, jak działa sieć Ethereum i blockchain.
+Wiele [implementacji klientów Ethereum](/developers/docs/nodes-and-clients/#execution-clients) istnieje w wielu językach. Cechą wspólną tych implementacji klienckich jest to, że wszystkie są zgodne z formalną specyfikacją. Ta specyfikacja określa, jak działa sieć Ethereum i blockchain.
 
 ![Klient Eth1x](../../../../../developers/docs/nodes-and-clients/client-diagram.png) Uproszczony schemat funkcji klienta Ethereum.
 
@@ -65,7 +65,7 @@ Prowadzenie własnego węzła umożliwia korzystanie z Ethereum w sposób napraw
 
 Różnorodny zestaw węzłów jest ważny dla zdrowia, bezpieczeństwa i odporności operacyjnej Ethereum.
 
-- Zapewniają one dostęp do danych blockchainu dla niewielkich klientów, którzy od niego zależą. W szczytowych okresach użytkowania musi być wystarczająca liczba pełnych węzłów, aby ułatwić synchronizację lekkich węzłów. Lekkie węzły nie przechowują całego łańcucha bloków, zamiast tego weryfikują dane za pomocą [głównych stanów w nagłówkach bloków](/en/developers/docs/blocks/#block-anatomy). Mogą żądać więcej informacji od bloków, jeśli ich potrzebują.
+- Zapewniają one dostęp do danych blockchainu dla niewielkich klientów, którzy od niego zależą. W szczytowych okresach użytkowania musi być wystarczająca liczba pełnych węzłów, aby ułatwić synchronizację lekkich węzłów. Lekkie węzły nie przechowują całego łańcucha bloków, zamiast tego weryfikują dane za pomocą [głównych stanów w nagłówkach bloków](/developers/docs/blocks/#block-anatomy). Mogą żądać więcej informacji od bloków, jeśli ich potrzebują.
 - Pełne węzły wymuszają reguły konsensusu proof-of-work, więc nie można ich oszukać w celu zaakceptowania bloków, które ich nie przestrzegają. Zapewnia to dodatkowe bezpieczeństwo w sieci, ponieważ jeśli wszystkie węzły były lekkimi węzłami, które nie przeprowadzają pełnej weryfikacji, górnicy mogą zaatakować sieć i na przykład tworzyć bloki z wyższymi nagrodami.
 
 Jeśli uruchomisz pełny węzeł, korzysta z niego cała sieć Ethereum.
@@ -99,7 +99,7 @@ Jeśli ktoś uruchamia węzeł Ethereum z publicznym API w Twojej społeczności
 
 Z drugiej strony, jeśli uruchamiasz klienta, możesz podzielić się nim ze znajomymi, którzy mogą tego potrzebować.
 
-## Klienci {#clients}
+## Klienci {#execution-clients}
 
 Ethereum jest zaprojektowany do oferowania różnych klientów, stworzonych przez różne zespoły przy użyciu różnych języków programowania. Dzięki temu sieć jest silniejsza i bardziej zróżnicowana. Idealnym celem jest osiągnięcie różnorodności bez zdominowania przez żadnego klienta w celu zmniejszenia pojedynczych punktów niepowodzenia.
 
@@ -113,7 +113,7 @@ W tabeli przedstawiono podsumowanie poszczególnych klientów. Wszystkie z nich 
 | [Besu](https://pegasys.tech/solutions/hyperledger-besu/)     | Java     | Linux, Windows, macOS | Mainnet, Rinkeby, Ropsten, i Görli        | Szybka, pełna                  | Archive, Pruned |
 | [Trinity](https://trinity.ethereum.org/)                     | Python   | Linux, macOS          | Mainnet, Görli, Ropsten, Rinkeby i więcej | Pełna, wiązka, szybka/nagłówek | Archive         |
 
-Więcej informacji o obsługiwanych sieciach znajdziesz w rozdziale [Sieci Ethereum](/en/developers/docs/networks/).
+Więcej informacji o obsługiwanych sieciach znajdziesz w rozdziale [Sieci Ethereum](/developers/docs/networks/).
 
 ### Zalety różnych implementacji {#advantages-of-different-implementations}
 
@@ -191,12 +191,12 @@ Przed zainstalowaniem klienta upewnij się, że komputer ma wystarczającą ilo�
 
 W zależności od tego, które oprogramowanie i tryb synchronizacji mają być używane, potrzebne są setki GB przestrzeni dyskowej. Przybliżone wartości i wzrost można znaleźć poniżej.
 
-| Klient         | Rozmiar dysku (szybka synchronizacja) | Rozmiar dysku (pełne archiwum) |
-| -------------- | ------------------------------------- | ------------------------------ |
-| Klient Etherum | 400 GB+                               | 4,7 TB+                        |
-| OpenEthereum   | 280 GB+                               | 4,6 TB+                        |
-| Nethermind     | 200 GB+                               | 3 TB+                          |
-| Besu           | 750 GB+                               | 4 TB+                          |
+| Klient          | Rozmiar dysku (szybka synchronizacja) | Rozmiar dysku (pełne archiwum) |
+| --------------- | ------------------------------------- | ------------------------------ |
+| Klient Ethereum | 400 GB+                               | 4,7 TB+                        |
+| OpenEthereum    | 280 GB+                               | 4,6 TB+                        |
+| Nethermind      | 200 GB+                               | 3 TB+                          |
+| Besu            | 750 GB+                               | 4 TB+                          |
 
 ![Wykres pokazujący, że ilość GB potrzebna do pełnej synchronizacji ma tendencję wzrostową](../../../../../developers/docs/nodes-and-clients/full-sync.png)
 
@@ -206,15 +206,15 @@ Te wykresy pokazują, jak zawsze zmieniają się wymagania dotyczące przechowyw
 
 ### Ethereum na komputerze jednopłytowym {#ethereum-on-a-single-board-computer}
 
-Najbardziej wygodnym i tanim sposobem uruchomienia węzła Ethereum jest korzystanie z jednego komputera z architekturą ARM jak Raspberry Pi. [Ethereum na ARM](https://twitter.com/EthereumOnARM) dostarcza obrazy klientów Geth, Parity, Netherumd i Besu. Oto prosty samouczek [jak zbudować i skonfigurować klienta ARM](/en/developers/tutorials/run-node-raspberry-pi/).
+Najbardziej wygodnym i tanim sposobem uruchomienia węzła Ethereum jest korzystanie z jednego komputera z architekturą ARM jak Raspberry Pi. [Ethereum na ARM](https://twitter.com/EthereumOnARM) dostarcza obrazy klientów Geth, Parity, Nethereumd i Besu. Oto prosty samouczek [jak zbudować i skonfigurować klienta ARM](/developers/tutorials/run-node-raspberry-pi/).
 
 Małe, niedrogie i wydajne urządzenia, takie jak te, są idealne do uruchomienia węzła w domu.
 
-## Klienci Eth2 {#eth2-clients}
+## Klienci Eth2 {#consensus-clients}
 
-Pojawili się nowi klienci obsługujący [aktualizacje Eth2](/eth2/beacon-chain/). Będą obsługiwać łańcuch śledzący i wspierać nowy mechanizm konsensusu [proof-of-stake](/developers/docs/consensus-mechanisms/pos/).
+Pojawili się nowi klienci obsługujący [aktualizacje Eth2](/upgrades/beacon-chain/). Będą obsługiwać łańcuch śledzący i wspierać nowy mechanizm konsensusu [proof-of-stake](/developers/docs/consensus-mechanisms/pos/).
 
-[Wyświetl klientów Eth2](/eth2/get-involved/#clients).
+[Wyświetl klientów Eth2](/upgrades/get-involved/#clients).
 
 ## Dalsza lektura {#further-reading}
 
@@ -228,8 +228,8 @@ W Internecie jest wiele instrukcji i informacji o klientach Ethereum, tutaj jest
 
 ## Powiązane tematy {#related-topics}
 
-- [Bloki](/en/developers/docs/blocks/)
-- [Sieci](/en/developers/docs/networks/)
+- [Bloki](/developers/docs/blocks/)
+- [Sieci](/developers/docs/networks/)
 
 ## Powiązane samouczki {#related-tutorials}
 

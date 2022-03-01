@@ -6,7 +6,7 @@ sidebar: true
 incomplete: true
 ---
 
-Ethereum przechodzi na mechanizm konsensusu zwany dowodem stawki (ang. proof-of-stake, skr. PoS) z poprzednio wykorzystywanego [dowodu wykonanej pracy](/developers/docs/consensus-mechanisms/pow/) (ang. proof-of-work, skr. PoW). Taki plan istniał od zawsze, ponieważ skalowanie Ethereum przez uaktualnienia do [Eth2](/eth2/) jest kluczowym elementem strategii obranej przez społeczność. Właściwe opracowanie PoS jest jednak dużym wyzwaniem technicznym i nie tak oczywistym jak wykorzystanie PoW do uzyskiwania konsensusu w obrębie sieci.
+Ethereum przechodzi na mechanizm konsensusu zwany dowodem stawki (ang. proof-of-stake, skr. PoS) z poprzednio wykorzystywanego [dowodu wykonanej pracy](/developers/docs/consensus-mechanisms/pow/) (ang. proof-of-work, skr. PoW). Taki plan istniał od zawsze, ponieważ skalowanie Ethereum przez uaktualnienia do [Eth2](/upgrades/) jest kluczowym elementem strategii obranej przez społeczność. Właściwe opracowanie PoS jest jednak dużym wyzwaniem technicznym i nie tak oczywistym jak wykorzystanie PoW do uzyskiwania konsensusu w obrębie sieci.
 
 ## Wymagania wstępne {#prerequisites}
 
@@ -37,7 +37,7 @@ Jeżeli poświadczasz szkodliwe bloki, tracisz zastaw.
 
 ### Łańcuch śledzący {#the-beacon-chain}
 
-Gdy Ethereum zastąpi proof-of-work przez proof-of-stake, zostanie dodana złożoność [łańcuchów odłamkowych](/eth2/shard-chains/). Są to oddzielne blockchainy, które będą potrzebowały walidatorów do przetwarzania transakcji i tworzenia nowych bloków. Planowane są 64 łańcuchy odłamkowe, a wszystkie one wymagają współdzielonego porozumienia w kwestii stanu sieci. Potrzebna jest więc dodatkowa koordynacja, która zostanie zrealizowana z użyciem [łańcucha nawigacyjnego](/eth2/beacon-chain/).
+Gdy Ethereum zastąpi proof-of-work przez proof-of-stake, zostanie dodana złożoność [łańcuchów odłamkowych](/upgrades/shard-chains/). Są to oddzielne blockchainy, które będą potrzebowały walidatorów do przetwarzania transakcji i tworzenia nowych bloków. Planowane są 64 łańcuchy odłamkowe, a wszystkie one wymagają współdzielonego porozumienia w kwestii stanu sieci. Potrzebna jest więc dodatkowa koordynacja, która zostanie zrealizowana z użyciem [łańcucha nawigacyjnego](/upgrades/beacon-chain/).
 
 Łańcuch śledzący odbiera informację o stanie z odłamków (fragmentów) i udostępnia ją innym odłamkom, aby sieć mogła pozostać zsynchronizowana. Łańcuch śledzący zarządza również walidatorami, od rejestrowania ich depozytów zastawnych po wydawanie im nagród i kar.
 
@@ -90,4 +90,4 @@ Aby zapobiegać innym aktom złego zachowania, łańcuch śledzący będzie koor
 
 ## Tematy powiązane {#related-topics}
 
-- [Proof of work](/developers/docs/consensus-mechanisms/pow/)
+- [Proof-of-work](/developers/docs/consensus-mechanisms/pow/)

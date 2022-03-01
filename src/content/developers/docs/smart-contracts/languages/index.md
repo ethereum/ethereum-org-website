@@ -5,7 +5,7 @@ lang: en
 sidebar: true
 ---
 
-A great aspect about Ethereum is that smart contracts can be programmed using relatively developer-friendly languages. If you're experienced with Python or any [curly-bracket language](https://en.wikipedia.org/wiki/List_of_programming_languages_by_type#Curly-bracket_languages), you can find a language with familiar syntax.
+A great aspect about Ethereum is that smart contracts can be programmed using relatively developer-friendly languages. If you're experienced with Python or any [curly-bracket language](https://wikipedia.org/wiki/List_of_programming_languages_by_type#Curly-bracket_languages), you can find a language with familiar syntax.
 
 The two most active and maintained languages are:
 
@@ -212,7 +212,7 @@ If you're new to Ethereum and haven't done any coding with smart contract langua
 **Yul+**
 
 - A low-level, highly efficient extension to Yul.
-- Initially designed for an [optimistic rollup](/developers/docs/scaling/layer-2-rollups/#optimistic-rollups) contract.
+- Initially designed for an [optimistic rollup](/developers/docs/scaling/optimistic-rollups/) contract.
 - Yul+ can be looked at as an experimental upgrade proposal to Yul, adding new features to it.
 
 ### Important links {#important-links-2}

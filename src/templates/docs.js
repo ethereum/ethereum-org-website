@@ -23,6 +23,7 @@ import Translation from "../components/Translation"
 import Emoji from "../components/Emoji"
 import DocsNav from "../components/DocsNav"
 import DeveloperDocsLinks from "../components/DeveloperDocsLinks"
+import YouTube from "../components/YouTube"
 
 import { ZenModeContext } from "../contexts/ZenModeContext.js"
 
@@ -95,14 +96,6 @@ const H1 = styled(Header1)`
     margin-top: 0;
     margin-bottom: 1rem;
   }
-
-  &:before {
-    height: 180px;
-    margin-top: -180px;
-    @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-      margin-top: -240px;
-    }
-  }
 `
 
 const H2 = styled(Header2)`
@@ -112,11 +105,6 @@ const H2 = styled(Header2)`
   font-size: 1.5rem;
   padding-bottom: 0.5rem;
   border-bottom: 1px solid ${(props) => props.theme.colors.border};
-
-  &:before {
-    height: 160px;
-    margin-top: -160px;
-  }
 `
 
 const H3 = styled(Header3)`
@@ -126,22 +114,12 @@ const H3 = styled(Header3)`
     font-size: 1rem;
     font-weight: 600;
   }
-
-  &:before {
-    height: 160px;
-    margin-top: -160px;
-  }
 `
 
 const H4 = styled(Header4)`
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     font-size: 1rem;
     font-weight: 600;
-  }
-
-  &:before {
-    height: 160px;
-    margin-top: -160px;
   }
 `
 
@@ -176,6 +154,7 @@ const components = {
   CallToContribute,
   Emoji,
   DeveloperDocsLinks,
+  YouTube,
 }
 
 const Contributors = styled(FileContributors)`

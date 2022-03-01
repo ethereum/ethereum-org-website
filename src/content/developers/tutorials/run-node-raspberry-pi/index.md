@@ -1,8 +1,8 @@
 ---
 title: How to turn your Raspberry Pi 4 into a node just by flashing the MicroSD card
-description: Flash your Raspberry Pi 4, plug in an ethernet cable, connect the SSD disk and power up the device to turn the Raspberry Pi 4 into a full Ethereum 1.0 node or an Ethereum 2.0 node (beacon chain / validator)
+description: Flash your Raspberry Pi 4, plug in an ethernet cable, connect the SSD disk and power up the device to turn the Raspberry Pi 4 into a full Ethereum node running the execution layer, or consensus layer (Beacon Chain / validator)
 author: "EthereumOnArm"
-tags: ["clients", "eth2", "nodes"]
+tags: ["clients", "execution layer", "consensus layer", "nodes"]
 lang: en
 sidebar: true
 skill: intermediate
@@ -11,17 +11,17 @@ source: r/ethereum
 sourceUrl: https://www.reddit.com/r/ethereum/comments/gf3nhg/ethereum_on_arm_raspberry_pi_4_images_release/
 ---
 
-**TL;DR**: Flash your Raspberry Pi 4, plug in an ethernet cable, connect the SSD disk and power up the device to turn the Raspberry Pi 4 into a full Ethereum 1.0 node or an Ethereum 2.0 node (beacon chain / validator)
+**TL;DR**: Flash your Raspberry Pi 4, plug in an ethernet cable, connect the SSD disk and power up the device to turn the Raspberry Pi 4 into a full Ethereum node running the execution layer, or the consensus layer (Beacon Chain / validator)
 
-[Learn about Ethereum 2.0 (Eth2)](/eth2/)
+[Learn about Ethereum upgrades](/upgrades/)
 
 Some background first. As you know, we’ve been running into some memory issues [[1]](/developers/tutorials/run-node-raspberry-pi/#references) with the Raspberry Pi 4 image as Raspbian OS is still on 32bits [[2]](/developers/tutorials/run-node-raspberry-pi/#references) (at least the userland). While we prefer to stick with the official OS we came to the conclusion that, in order to solve these issues, we need to migrate to a native 64 bits OS
 
-Besides, [Eth 2.0 clients](/eth2/get-involved/#eth2-clients) don’t support 32 bits binaries so using Raspbian would exclude the Raspberry Pi 4 from running an Eth 2.0 node (and the possibility of staking).
+Besides, [consensus clients](/upgrades/get-involved/#clients) don’t support 32 bits binaries so using Raspbian would exclude the Raspberry Pi 4 from running a consensus layer node (and the possibility of staking).
 
-So, after several tests we are now releasing 2 different images based on Ubuntu 20.04 64bit [[3]](/developers/tutorials/run-node-raspberry-pi/#references): Eth 1.0 and Eth 2.0 editions.
+So, after several tests we are now releasing 2 different images based on Ubuntu 20.04 64bit [[3]](/developers/tutorials/run-node-raspberry-pi/#references): execution layer and consensus layer editions.
 
-Basically, both are the same image and include the same features of the Raspbian based images. But they are setup for running Eth 1.0 or Eth 2.0 software by default.
+Basically, both are the same image and include the same features of the Raspbian based images. But they are setup for running execution layer or consensus layer software by default.
 
 **Images take care of all the necessary steps**, from setting up the environment and formatting the SSD disk to installing and running the Ethereum software as well as starting the blockchain synchronization.
 
@@ -37,16 +37,16 @@ Basically, both are the same image and include the same features of the Raspbian
 
 ## Software included {#software-included}
 
-Both images include the same packages, the only difference between them is that Eth 1.0 runs Geth by default and Eth 2.0 runs Prysm beacon chain by default.
+Both images include the same packages, the only difference between them is that the execution version runs Geth by default and the consensus version runs Prysm beacon chain by default.
 
-### Ethereum 1.0 clients {#ethereum-10-clients}
+### Execution clients {#execution-clients}
 
 - Geth [[8]](/developers/tutorials/run-node-raspberry-pi/#references): 1.9.13 (official binary)
 - Parity [[9]](/developers/tutorials/run-node-raspberry-pi/#references): 2.7.2 (cross compiled)
 - Nethermind [[10]](/developers/tutorials/run-node-raspberry-pi/#references): 1.8.28 (cross compiled)
 - Hyperledger Besu [[11]](/developers/tutorials/run-node-raspberry-pi/#references): 1.4.4 (compiled)
 
-### Ethereum 2.0 clients {#ethereum-20-clients}
+### Consensus clients {#consensus-clients}
 
 - Prysm [[12]](/developers/tutorials/run-node-raspberry-pi/#references): 1.0.0-alpha6 (official binary)
 - Lighthouse [[13]](/developers/tutorials/run-node-raspberry-pi/#references): 0.1.1 (compiled)
@@ -64,11 +64,11 @@ Both images include the same packages, the only difference between them is that 
 ### Recommended hardware and setup {#recommended-hardware-and-setup}
 
 - Raspberry 4 (model B) - 4GB
-- MicroSD Card (16 GB Class 10 minimun)
+- MicroSD Card (16 GB Class 10 minimum)
 - SSD USB 3.0 disk (see storage section)
 - Power supply
 - Ethernet cable
-- 30303 Port forwarding (Eth 1.0) and 13000 port forwarding (Eth 2.0) [[4]](/developers/tutorials/run-node-raspberry-pi/#references)
+- 30303 Port forwarding (execution layer) and 13000 port forwarding (consensus layer) [[4]](/developers/tutorials/run-node-raspberry-pi/#references)
 - A case with heatsink and fan (optional but strongly recommended)
 - USB keyboard, Monitor and HDMI cable (micro-HDMI) (optional)
 
@@ -85,19 +85,23 @@ Keep in mind that you need to plug the disk to an USB 3.0 port (blue)
 
 ## Image download and installation {#image-download-and-installation}
 
-### 1. Download Eth 1.0 or Eth 2.0 images {#1-download-eth-10-or-eth-20-images}
+### 1. Download the execution and consensus layer images {#1-download-execution-or-consensus-images}
 
-<ButtonLink to="https://ethraspbian.com/downloads/ubuntu-20.04-preinstalled-server-arm64+raspi-eth1.img.zip">Download Eth 1.0 image</ButtonLink>
+<ButtonLink to="https://ethraspbian.com/downloads/ubuntu-20.04-preinstalled-server-arm64+raspi-eth1.img.zip">
+  Download execution layer image
+</ButtonLink>
 
 sha256 7fa9370d13857dd6abcc8fde637c7a9a7e3a66b307d5c28b0c0d29a09c73c55c
 
-<ButtonLink to="https://ethraspbian.com/downloads/ubuntu-20.04-preinstalled-server-arm64+raspi-eth2.img.zip">Download Eth2 image</ButtonLink>
+<ButtonLink to="https://ethraspbian.com/downloads/ubuntu-20.04-preinstalled-server-arm64+raspi-eth2.img.zip">
+  Download consensus layer image
+</ButtonLink>
 
 sha256 74c0c15b708720e5ae5cac324f1afded6316537fb17166109326755232cd316e
 
 ### 2. Flash the image {#2-flash-the-image}
 
-Insert the microSD in your Desktop / Laptop and download the file (Eth 1.0, for instance):
+Insert the microSD in your Desktop / Laptop and download the file (execution layer, for instance):
 
 ```bash
 wget https://ethraspbian.com/downloads/ubuntu-20.04-preinstalled-server-arm64+raspi-eth1.img.zip
@@ -126,8 +130,8 @@ The Ubuntu OS will boot up in less than one minute but **you will need to wait a
 
 Depending on the image, you will be running:
 
-- Eth 1.0: Geth as the default client syncing the blockchain
-- Eth2: Prysm as default client syncing the beacon chain (Topaz testnet)
+- Execution client: Geth as the default client syncing the blockchain
+- Consensus client: Prysm as default client syncing the beacon chain (Prater testnet)
 
 ### 5. Log in {#5-log-in}
 
@@ -154,9 +158,9 @@ sudo tail -f /var/log/syslog
 
 ## Syncing the Blockchain {#syncing-the-blockchain}
 
-Now you need to wait for the blockchain to be synced. In the case of Eth 1.0 This will take a few days depending on several factors but you can expect up to about 5-7 days.
+Now you need to wait for the blockchain to be synced. In the case of the execution layer this will take a few days depending on several factors but you can expect up to about 5-7 days.
 
-If you are running the Eth2 Topaz tesnet you can expect 1-2 days of Beacon chain synchronization time. Remember that you will need to setup the validator later in order to start the staking process. [How to run the Eth 2.0 validator](/developers/tutorials/run-node-raspberry-pi/#validator)
+If you are running the consensus layer Prater testnet you can expect 1-2 days of Beacon chain synchronization time. Remember that you will need to setup the validator later in order to start the staking process. [How to run the consensus layer validator](/developers/tutorials/run-node-raspberry-pi/#validator)
 
 ## Monitoring dashboards {#monitoring-dashboards}
 
@@ -172,13 +176,13 @@ Password: ethereum
 
 All clients run as a systemd service. This is important because if a problem arises the system will respawn the process automatically.
 
-Geth and Prysm beacon chain run by default (depending on what you are synchronizing, Eth 1.0 or Eth2) so, if you want to switch to other clients (from Geth to Nethermind, for instance), you need to stop and disable Geth first, and enable and start the other client:
+Geth and Prysm beacon chain run by default (depending on what you are synchronizing, execution later or consensus layer) so, if you want to switch to other clients (from Geth to Nethermind, for instance), you need to stop and disable Geth first, and enable and start the other client:
 
 ```bash
 sudo systemctl stop geth && sudo systemctl disable geth
 ```
 
-Commands to enable and start each Eth 1.0 client:
+Commands to enable and start each execution client:
 
 ```bash
 sudo systemctl enable besu && sudo systemctl start besu
@@ -186,7 +190,7 @@ sudo systemctl enable nethermind && sudo systemctl start nethermind
 sudo systemctl enable parity && sudo systemctl start parity
 ```
 
-Eth2:
+Consensus clients:
 
 ```bash
 sudo systemctl stop prysm-beacon && sudo systemctl disable prysm-beacon
@@ -203,7 +207,7 @@ Clients’ config files are located in the /etc/ethereum/ directory. You can edi
 
 Blockchain clients’ data is stored on the Ethereum home account as follows (note the dot before the directory name):
 
-### Eth 1.0 {#eth-10}
+### Execution layer {#execution-layer}
 
 ```bash
 /home/ethereum/.geth
@@ -212,7 +216,7 @@ Blockchain clients’ data is stored on the Ethereum home account as follows (no
 /home/ethereum/.nethermind
 ```
 
-### Eth2 {#eth2}
+### Consensus layer {#consensus-layer}
 
 ```bash
 /home/ethereum/.eth2
@@ -222,13 +226,13 @@ Blockchain clients’ data is stored on the Ethereum home account as follows (no
 
 ## Nethermind and Hyperledger Besu {#nethermind-and-hyperledger-besu}
 
-These 2 great Eth 1.0 clients have become a great alternative to Geth and Parity. The more diversity in the network, the better, so you may give them a try and contribute to the network health.
+These 2 great execution clients have become a great alternative to Geth and Parity. The more diversity in the network, the better, so you may give them a try and contribute to the network health.
 
 Both need further testing so feel free to play with them and report back your feedback.
 
-## How to run the Eth 2.0 validator (staking) {#validator}
+## How to run the consensus validator (staking) {#validator}
 
-Once the Topaz testnet beacon chain is synchronized you can run a validator in the same device. You will need to follow [these participation steps](https://prylabs.net/participate).
+Once the Prater testnet beacon chain is synchronized you can run a validator in the same device. You will need to follow [these participation steps](https://prylabs.net/participate).
 
 The first time, you need to create manually an account by running the “validator” binary and setup a password. Once you have completed this step you can add the password to `/etc/ethereum/prysm-validator.conf` and start the validator as a systemd service.
 
@@ -236,19 +240,19 @@ The first time, you need to create manually an account by running the “validat
 
 We put a lot of work trying to setup the Raspberry Pi 4 as a full Ethereum node as we know the massive user base of this device may have a very positive impact in the network.
 
-Please, take into account that this is the first image based on Ubuntu 20.04 so there may be some bugs. If so, open an issue on [GitHub](https://github.com/diglos/pi-gen) or reach us on [Twitter](https://twitter.com/EthereumOnARM).
+Please, take into account that this is the first image based on Ubuntu 20.04 so there may be some bugs. If so, open an issue on [GitHub](https://github.com/diglos/ethereumonarm) or reach us on [Twitter](https://twitter.com/EthereumOnARM).
 
 ## References {#references}
 
 1. [geth repeatedly crashes with SIGSEGV](https://github.com/ethereum/go-ethereum/issues/20190)
-2. [https://github.com/diglos/pi-gen](https://github.com/diglos/pi-gen)
+2. [https://github.com/diglos/ethereumonarm](https://github.com/diglos/ethereumonarm)
 3. https://ubuntu.com/download/raspberry-pi
-4. https://en.wikipedia.org/wiki/Port_forwarding
+4. https://wikipedia.org/wiki/Port_forwarding
 5. https://prometheus.io
 6. https://grafana.com
 7. https://forum.armbian.com/topic/5565-zram-vs-swap/
 8. https://geth.ethereum.org
-9. https://github.com/openethereum/openethereum
+9. https://github.com/openethereum/openethereum \* **Note that OpenEthereum [has been deprecated](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd) and is no longer being maintained.** Use it with caution and preferably switch to another client implementation.
 10. https://nethermind.io
 11. https://www.hyperledger.org/projects/besu
 12. https://github.com/prysmaticlabs/prysm

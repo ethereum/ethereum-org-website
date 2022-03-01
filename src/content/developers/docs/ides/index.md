@@ -5,7 +5,7 @@ lang: en
 sidebar: true
 ---
 
-When it comes to setting up an [integrated development environment (IDE)](https://en.wikipedia.org/wiki/Integrated_development_environment), building with Ethereum is similar to any other software project. There's many options to choose from, so at the end of the day, pick the one that best suits your preferences.
+When it comes to setting up an [integrated development environment (IDE)](https://wikipedia.org/wiki/Integrated_development_environment), programming applications on Ethereum is similar to programming any other software project. There are many options to choose from, so at the end of the day, pick the IDE or code editor that best suits your preferences. Most likely the best IDE choice for your Ethereum development is the IDE you already use for traditional software development.
 
 ## Web-based IDEs {#web-based-ides}
 
@@ -19,6 +19,14 @@ If you're looking to fiddle with code before you [set up a local development env
 
 - [ethfiddle.com](https://ethfiddle.com/)
 - [Gitter](https://gitter.im/loomnetwork/ethfiddle)
+
+**ChainIDE -** **_A Cloud-Based Multi-Chain IDE_**
+
+- [chainide.com](https://chainide.com/)
+
+**Replit -** **_A customizable development environment for Ethereum with hot reloading, error checking, and first-class testnet support._**
+
+- [Solidity starter](https://replit.com/@replit/Solidity-starter-beta)
 
 ## Desktop IDEs {#desktop-ides}
 

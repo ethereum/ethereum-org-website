@@ -27,7 +27,7 @@
   "page-stablecoins-accordion-earn-project-2-description": "Технология, материалы и другая работа для сообщества MakerDao (команда, которая дала вам Dai).",
   "page-stablecoins-accordion-earn-project-3-description": "Если вы действительно знаете свое дело, найдите ошибки, чтобы заработать Dai.",
   "page-stablecoins-accordion-earn-project-bounties": "Награды Gitcoin",
-  "page-stablecoins-accordion-earn-project-bug-bounties": "Награды за ошибки Eth2",
+  "page-stablecoins-accordion-earn-project-bug-bounties": "Награды за обнаружение ошибок уровня консенсуса",
   "page-stablecoins-accordion-earn-project-community": "Сообщество MakerDao",
   "page-stablecoins-accordion-earn-projects-copy": "Это платформы, которые заплатят вам в стабильных монетах за вашу работу.",
   "page-stablecoins-accordion-earn-projects-title": "Где заработать стабильные монеты",
@@ -141,5 +141,6 @@
   "page-stablecoins-usdc-logo": "Логотип USDC",
   "page-stablecoins-why-stablecoins": "Почему стабильные монеты?",
   "page-stablecoins-how-they-work-button": "Как они работают",
-  "page-stablecoins-why-stablecoins-body": "ETH, как и Bitcoin, отличается волатильностью, потому что это новая технология. Поэтому, возможно, вы не станете регулярно тратить их. Стабильные монеты отражают стоимость традиционных валют и предоставляют вам доступ к стабильным деньгам, которыми вы можете пользоваться на Ethereum."
+  "page-stablecoins-why-stablecoins-body": "ETH, как и Bitcoin, отличается волатильностью, потому что это новая технология. Поэтому, возможно, вы не станете регулярно тратить их. Стабильные монеты отражают стоимость традиционных валют и предоставляют вам доступ к стабильным деньгам, которыми вы можете пользоваться на Ethereum.",
+  "page-stablecoins-more-defi-button": "Подробнее о децентрализованных финансах (DeFi)"
 }

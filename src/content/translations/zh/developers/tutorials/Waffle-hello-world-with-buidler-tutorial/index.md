@@ -15,7 +15,7 @@ sidebar: true
 published: 2020-10-16
 ---
 
-### 在这个[Waffle](https://ethereum-waffle.readthedocs.io)教程中，我们将学习如何使用[hardhat](https://hardhat.org/)和[ethers.js](https://docs.ethers.io/v5/)设置一个简单的“Hello world”智能合约项目。 然后我们将学习如何向我们的智能合约中添加一个新功能，以及如何使用 Waffle 测试它。
+在这个 [Waffle](https://ethereum-waffle.readthedocs.io) 教程中，我们将学习如何使用 [hardhat](https://hardhat.org/) 和 [ethers.js](https://docs.ethers.io/v5/) 设置一个简单的“Hello world”智能合约项目。 然后我们将学习如何向我们的智能合约中添加一个新功能，以及如何使用 Waffle 测试它。
 
 让我们从创建新项目开始：
 
@@ -45,7 +45,7 @@ npm install -D hardhat
 @nomiclabs/hardhat-waffle ethereum-waffle chai
 ```
 
-下一步是通过运行`npx hardhat`创建一个示例 hardhat 项目。
+下一步是通过运行 `npx hardhat` 创建一个示例 hardhat 项目。
 
 ```bash
 888    888                      888 888               888
@@ -67,7 +67,7 @@ Create an empty hardhat.config.js
 Quit
 ```
 
-选择`Create a sample project`（创建示例项目）
+选择 `Create a sample project`（创建示例项目）
 
 我们的项目结构应如下所示：
 
@@ -86,7 +86,7 @@ MyWaffleProject
 └── package.json
 ```
 
-### 现在让我们来谈谈其中一些文件：
+### 现在让我们来谈谈其中一些文件： {#now-lets-talk}
 
 - Greeter.sol - 我们的智能合约是用 solidity 编写的；
 
@@ -133,20 +133,20 @@ describe("Greeter", function () {
 })
 ```
 
-### 下一步是编译我们的合约并运行测试：
+### 下一步是编译我们的合约并运行测试： {#compiling-and-testing}
 
-Waffle 测试使用 Mocha（测试框架）与 Chai（一个断言库）。 您只需运行`npx hardhat test`并等待以下消息出现。
+Waffle 测试使用 Mocha（测试框架）与 Chai（一个断言库）。 您只需运行 `npx hardhat test` 并等待以下消息出现。
 
 ```bash
 ✓ Should return the new greeting once it's changed（更改后应立即返回新问候语）
 ```
 
-### 到目前为止，一切看起来都很好，让我们将一些更加复杂的内容添加到项目:)
+### 到目前为止，一切看起来都很好，让我们为我们的项目增加一些复杂性吧 <Emoji text=":slightly_smiling_face:" size={1}/> {#adding-complexity}
 
-想象一下，如果有人添加了一个空字符串作为问候语。 这不是一种热情的问候，对吗？  
+想象一下这种情况，有人添加了一个空字符串作为问候语。 这不是一种热情的问候，对吗？  
 让我们确保这一点不会发生：
 
-当有人传递空字符串时，我们想使用 solidity 的`revert`。 一件好事是，我们可以使用 Waffle 的 chai 匹配器`to.bo.revertedWith()`轻松测试此功能。
+当有人传递空字符串时，我们想使用 solidity 的 `revert`。 一件好事是，我们可以使用 Waffle 的 chai 匹配器 `to.be.revertedWith()` 轻松测试此功能。
 
 ```js
 it("Should revert when passing an empty string", async () => {
@@ -178,7 +178,7 @@ Changing greeting from 'Hello, world!' to ''
 让我们在智能合约中实现这个功能：
 
 ```solidity
-require(bytes(_greeting).length > 0, "Greeting message is empty");
+require(bytes(_greeting).length > 0, "Greeting should not be empty");
 ```
 
 现在，我们的 setGreeting 函数如下所示：
@@ -202,7 +202,7 @@ greeting = _greeting;
 
 恭喜！ 您做到了:)
 
-### 结论
+### 结论 {#conclusion}
 
 我们使用 Waffle、Hardhat 和 ethers.js 制作了一个简单的项目。 我们学习了如何设置项目、添加测试和实现新功能。
 

@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
+import { getImage } from "gatsby-plugin-image"
 import { useIntl } from "gatsby-plugin-intl"
 import Select from "react-select"
 import styled from "styled-components"
@@ -125,7 +126,7 @@ const SuccessContainer = styled.div`
 
 const EmptyStateText = styled.p`
   margin: 2rem;
-  font-size: 20px;
+  font-size: 1.25rem;
   max-width: 450px;
   text-align: center;
 `
@@ -136,7 +137,7 @@ const EmptyStateTextSingle = styled.p`
 `
 
 const Intro = styled.p`
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 140%;
   margin-top: 0rem;
   margin-bottom: 2rem;
@@ -174,15 +175,23 @@ const NoResultsSingle = ({ children }) => (
 export const cardListImage = graphql`
   fragment cardListImage on File {
     childImageSharp {
-      fixed(width: 20) {
-        ...GatsbyImageSharpFixed
-      }
+      gatsbyImageData(
+        width: 20
+        layout: FIXED
+        placeholder: BLURRED
+        quality: 100
+      )
     }
   }
 `
 
 // TODO move component into get-eth.js page?
 const EthExchanges = () => {
+  const intl = useIntl()
+  const placeholderString = translateMessageId(
+    "page-get-eth-exchanges-search",
+    intl
+  )
   const data = useStaticQuery(graphql`
     query {
       exchangesByCountry: allExchangesByCountryCsv {
@@ -241,9 +250,6 @@ const EthExchanges = () => {
         ...cardListImage
       }
       cryptocom: file(relativePath: { eq: "exchanges/crypto.com.png" }) {
-        ...cardListImage
-      }
-      dharma: file(relativePath: { eq: "wallets/dharma.png" }) {
         ...cardListImage
       }
       gemini: file(relativePath: { eq: "exchanges/gemini.png" }) {
@@ -374,12 +380,6 @@ const EthExchanges = () => {
           platform: "Web",
           image: data.squarelink,
         },
-        Dharma: {
-          url: "https://www.dharma.io/	",
-          platform: "Mobile",
-          image: data.dharma,
-          isUsaOnly: true,
-        },
       },
     },
     moonpay: {
@@ -431,7 +431,6 @@ const EthExchanges = () => {
     },
   }
 
-  const intl = useIntl()
   const lastUpdated = getLocaleTimestamp(
     intl.locale,
     data.timestamp.parent.fields.gitLogLatestDate
@@ -489,7 +488,7 @@ const EthExchanges = () => {
           title: exchanges[exchange].name,
           description,
           link: exchanges[exchange].url,
-          image: exchanges[exchange].image.childImageSharp.fixed,
+          image: getImage(exchanges[exchange].image),
         }
       })
       .sort((a, b) => a.title.localeCompare(b.title))
@@ -530,7 +529,7 @@ const EthExchanges = () => {
               title: currentWallet,
               description,
               link: walletObject.url,
-              image: walletObject.image.childImageSharp.fixed,
+              image: getImage(walletObject.image),
             })
           }, [])
         )
@@ -554,7 +553,7 @@ const EthExchanges = () => {
         classNamePrefix="react-select"
         options={exchangesByCountry}
         onChange={handleSelectChange}
-        placeholder={"Type where you live..."}
+        placeholder={placeholderString}
       />
       {!hasSelectedCountry && (
         <EmptyStateContainer>

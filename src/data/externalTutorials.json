@@ -31,6 +31,57 @@
     "publishDate": "09/09/2021"
   },
   {
+    "url": "https://www.youtube.com/watch?v=ZurrDzuurQs",
+    "title": "Learn Dapptools | Code like MakerDAO & the DAI team",
+    "description": "We look at how to make all you wonderful web3, blockchain, and smart contract developers even BETTER by showing you how to use dapptools!",
+    "author": "Patrick Collins",
+    "authorGithub": "https://github.com/PatrickAlphaC",
+    "tags": [
+      "solidity",
+      "events",
+      "dapptools",
+      "smart contracts",
+      "bash",
+      "video"
+    ],
+    "skillLevel": "beginner",
+    "timeToRead": "25",
+    "lang": "en",
+    "publishDate": "01/17/2022"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=e1N4aWIJMN0",
+    "title": "How to become a blockchain engineer",
+    "description": "We explore the steps one needs to take to enter the world as a blockchain developer and engineer. We talk about how to get there.",
+    "author": "Patrick Collins",
+    "authorGithub": "https://github.com/PatrickAlphaC",
+    "tags": ["career", "solidity"],
+    "skillLevel": "beginner",
+    "timeToRead": "12",
+    "lang": "en",
+    "publishDate": "11/08/2021"
+  },
+  {
+    "url": "https://blog.chain.link/events-and-logging-in-solidity/",
+    "title": "Events and Logging in Solidity",
+    "description": "Learn all about solidity events and logging, with hardhat and brownie examples! With video example: https://www.youtube.com/watch?v=KDYJC85eS5M",
+    "author": "Patrick Collins",
+    "authorGithub": "https://github.com/PatrickAlphaC",
+    "tags": [
+      "solidity",
+      "events",
+      "hardhat",
+      "brownie",
+      "smart contracts",
+      "javascript",
+      "python"
+    ],
+    "skillLevel": "beginner",
+    "timeToRead": "5",
+    "lang": "en",
+    "publishDate": "11/25/2021"
+  },
+  {
     "url": "https://www.youtube.com/watch?v=EXas4uBqQr8",
     "title": "What is Multicall?",
     "description": "Learn how to make multiple API calls to a blockchain node with a single API call to a multicall contract.",
@@ -213,17 +264,6 @@
     "skillLevel": "beginner",
     "lang": "en",
     "publishDate": "08/15/2021"
-  },
-  {
-    "url": "https://blog.chain.link/fetch-current-crypto-price-data-solidity/",
-    "title": "How to Fetch the Current Price of Ethereum in Solidity",
-    "description": "Learn how to fetch the current price of Bitcoin, Ethereum and other cryptocurrencies in your Solidity smart contracts.",
-    "author": "Harry Papacharissiou",
-    "authorGithub": "https://github.com/kwsantiago",
-    "tags": ["solidity", "oracles"],
-    "skillLevel": "beginner",
-    "lang": "en",
-    "publishDate": "01/05/2021"
   },
   {
     "url": "https://blog.chain.link/fetch-current-crypto-price-data-solidity/",

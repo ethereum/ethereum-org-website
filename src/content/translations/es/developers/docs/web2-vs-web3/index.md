@@ -36,8 +36,6 @@ Web3 tiene algunas limitaciones ahora mismo:
 
 ## Centralización vs descentralización {#centralization-vs-decentralization}
 
-<!--Content below provided by Brian Gu-->
-
 En siguiente la tabla, enumeramos algunas de las ventajas y desventajas de las redes digitales centralizadas y descentralizadas.
 
 | Sistemas centralizados                                                                                                                                                                                                                                                | Sistemas descentralizados                                                                                                                                                                                                                                                |
@@ -56,3 +54,4 @@ Ten en cuenta que estos son patrones generales que pueden no mantenerse auténti
 
 - [El significado de la descentralización ](https://medium.com/@VitalikButerin/the-meaning-of-decentralization-a0c92b76a274) _ 6 de Febrero de 2017 - Vitalik Buterin_
 - [Por qué la descentralización importa](https://medium.com/s/story/why-decentralization-matters-5e3f79f7638e) _18 de Febrero de 2018, Chris Dixon_
+- [Qué es Web3 y por qué importa](https://medium.com/fabric-ventures/what-is-web-3-0-why-it-matters-934eb07f3d2b) _31 de Diciembre de 2019 - Max Mersch and Richard Muirhead_

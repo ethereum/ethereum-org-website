@@ -52,7 +52,7 @@ pragma solidity >=0.6.0 <0.8.0;
 ```
 
 The Solidity language is still evolving quickly, and new versions may not be compatible with old code
-([see here](https://docs.soliditylang.org/en/v0.7.0/070-breaking-changes.html)). Therefore, it is a goood idea to specify not just a minimum
+([see here](https://docs.soliditylang.org/en/v0.7.0/070-breaking-changes.html)). Therefore, it is a good idea to specify not just a minimum
 version of the language, but also a maximum version, the latest with which you tested the code.
 
 &nbsp;
@@ -86,7 +86,7 @@ By convention, interface names start with `I`.
 This function is `external`, meaning [it can only be called from outside the contract](https://docs.soliditylang.org/en/v0.7.0/cheatsheet.html#index-2).
 It returns the total supply of tokens in the contract. This value is returned using the most common type in Ethereum, unsigned 256 bits (256 bits is the
 native word size of the EVM). This function is also a `view`, which means that it does not change the state, so it can be executed on a single node instead of having
-every node in the blockchain run it. This kind of function does not generate a transaction and does not cost [gas](https://ethereum.org/en/developers/docs/gas/).
+every node in the blockchain run it. This kind of function does not generate a transaction and does not cost [gas](/developers/docs/gas/).
 
 **Note:** In theory it might appear that a contract's creator could cheat by returning a smaller total supply than the real value, making each token appear
 more valuable than it actually is. However, that fear ignores the true nature of the blockchain. Everything that happens on the blockchain can be verified by
@@ -315,7 +315,7 @@ secrets on the blockchain_, the software on every node has the state of every co
 at every block. By convention, state variables are named `_<something>`.
 
 The first two variables are [mappings](https://www.tutorialspoint.com/solidity/solidity_mappings.htm),
-meaning they behave roughly the same as [associative arrays](https://en.wikipedia.org/wiki/Associative_array),
+meaning they behave roughly the same as [associative arrays](https://wikipedia.org/wiki/Associative_array),
 except that the keys are numeric values. Storage is only allocated for entries that have values different
 from the default (zero).
 
@@ -613,7 +613,7 @@ Alice meant to authorize. This technique is called
 
 To avoid this problem, these two functions (`increaseAllowance` and `decreaseAllowance`) allow you
 to modify the allowance by a specific amount. So if Bill had already spent five tokens, he'll just
-be able to spend five more. Depending on the timing, there are two ways ways this can work, both of
+be able to spend five more. Depending on the timing, there are two ways this can work, both of
 which end with Bill only getting ten tokens:
 
 A:
@@ -734,7 +734,7 @@ it is clear what are the functions you modify, and to trust your contract people
 
 It is often useful to perform a function each time tokens change hands. However,`_transfer` is a very important function and it is
 possible to write it insecurely (see below), so it is best not to override it. The solution is `_beforeTokenTransfer`, a
-[hook function](https://en.wikipedia.org/wiki/Hooking). You can override this function, and it will be called on each transfer.
+[hook function](https://wikipedia.org/wiki/Hooking). You can override this function, and it will be called on each transfer.
 
 &nbsp;
 

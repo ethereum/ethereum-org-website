@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { useIntl } from "gatsby-plugin-intl"
 import styled from "styled-components"
-import Img from "gatsby-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { motion } from "framer-motion"
 import Emoji from "./Emoji"
 import Pill from "./Pill"
@@ -58,7 +58,7 @@ const CardBack = styled(CardFace)`
   &:hover {
     cursor: pointer;
   }
-  &:hover path {
+  &:hover svg {
     fill: ${({ theme }) => theme.colors.primary};
   }
 `
@@ -84,7 +84,7 @@ const ImageWrapper = styled.div`
   border-radius: 4px;
 `
 
-const Image = styled(Img)`
+const Image = styled(GatsbyImage)`
   width: 100%;
 `
 
@@ -104,7 +104,7 @@ const FlipTitle = styled.div`
 
 const TypePill = styled(Pill)`
   margin-right: 0.75rem;
-  font-size: 14px;
+  font-size: 0.875rem;
   background: ${({ theme }) => theme.colors.background};
   color: ${({ theme }) => theme.colors.text200};
   padding: 0;
@@ -130,7 +130,7 @@ const BackContent = styled(Content)`
 const Title = styled.h3`
   margin-bottom: 0rem;
   margin-top: 0rem;
-  font-size: 20px;
+  font-size: 1.25rem;
 `
 
 const Description = styled.p`
@@ -262,10 +262,7 @@ const WalletCard = ({ wallet }) => {
           <Wrapper onClick={() => setIsCardFlipped(!isCardFlipped)}>
             <HeaderRow>
               <ImageWrapper background={wallet.brand_color}>
-                <Image
-                  fluid={wallet.image.childImageSharp.fluid}
-                  alt={wallet.alt}
-                />
+                <Image image={getImage(wallet.image)} alt={wallet.alt} />
               </ImageWrapper>
               <Title>{wallet.name}</Title>
             </HeaderRow>
@@ -325,10 +322,7 @@ const WalletCard = ({ wallet }) => {
             <FlipTitle>
               <BackHeaderRow>
                 <ImageWrapper background={wallet.brand_color}>
-                  <Image
-                    fluid={wallet.image.childImageSharp.fluid}
-                    alt={wallet.alt}
-                  />
+                  <Image image={getImage(wallet.image)} alt={wallet.alt} />
                 </ImageWrapper>
                 <Title>{wallet.name}</Title>
               </BackHeaderRow>

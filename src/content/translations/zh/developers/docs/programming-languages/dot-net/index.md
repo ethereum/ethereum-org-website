@@ -1,5 +1,5 @@
 ---
-title: 面向 .NET 开发者的以太坊资源
+title: 面向 .NET 开发者的以太坊
 description: 学习如何使用并通过基于 .NET 的项目及工具参与以太坊的开发
 lang: zh
 sidebar: true
@@ -44,7 +44,7 @@ incomplete: true
   - 转账 ETH 至一个帐户中[C#](http://playground.nethereum.com/csharp/id/1003) [VB.NET](http://playground.nethereum.com/vb/id/2003)
   - ... 以及更多！
 
-## 面向中等程度者的文章 {#intermediate-articles}
+## 面向中等程度用户的文章 {#intermediate-articles}
 
 - [Nethereum 练习册/样本列表](http://docs.nethereum.com/en/latest/Nethereum.Workbooks/docs/)
 - [部署您自己的开发测试链](https://github.com/Nethereum/Testchains)
@@ -57,13 +57,13 @@ incomplete: true
 - [Kaleido 和 Nethereum](https://kaleido.io/kaleido-and-nethereum/)
 - [Quorum 和 Nethereum](https://github.com/Nethereum/Nethereum/blob/master/src/Nethereum.Quorum/README.md)
 
-## 面向高等程度者的使用模式 {#advanced-use-patterns}
+## 面向高等程度用户的使用模式 {#advanced-use-patterns}
 
 - [Azure Key Vault 和 Nethereum](https://github.com/Azure-Samples/bc-community-samples/tree/master/akv-nethereum)
 - [Nethereum.DappHybrid](https://github.com/Nethereum/Nethereum.DappHybrid)
 - [Ujo Nethereum 后端参考架构](https://docs.nethereum.com/en/latest/nethereum-ujo-backend-sample/)
 
-## .NET 项目、工具和其他有趣的实践 {#dot-net-projects-tools-and-other-fun-stuff}
+## .NET 项目、工具和其他有趣内容 {#dot-net-projects-tools-and-other-fun-stuff}
 
 - [Nethereum 训练场](http://playground.nethereum.com/) - _在浏览器中编译、创建和运行 Nethereum 代码片段_
 - [Nethereum Codegen Blazor](https://github.com/Nethereum/Nethereum.CodeGen.Blazor) - _在 Blazor 中具有 UI 的 Nethereum 代码生成_
@@ -77,7 +77,7 @@ incomplete: true
 
 ## .NET 社区贡献者 {#dot-net-community-contributors}
 
-在 Nethereum，我们主要活跃于 [Gitter](https://gitter.im/Nethereum/Nethereum) 上，任何人都可以前来提问/回答问题，获得帮助或者前来逛逛。 您可以自由地在 [Nethereum GitHub 库](https://github.com/Nethereum)上提交 PR 或者开启问题，或者只是前来浏览我们已有的许多小项目/样本项目。 你可以在[ Discord ](https://discord.gg/jQPrR58FxX)上找到我们！
+在 Nethereum，我们主要活跃于 [Gitter](https://gitter.im/Nethereum/Nethereum) 上，任何人都可以前来提问/回答问题，获得帮助或者前来逛逛。 您可以自由地在 [Nethereum GitHub 库](https://github.com/Nethereum)上提交 PR 或者开启问题，或者只是前来浏览我们已有的许多小项目/样本项目。 您可以在[ Discord ](https://discord.gg/jQPrR58FxX)上找到我们！
 
 在 Nethermind，让我们通过 [Gitter](https://gitter.im/nethermindeth/nethermind) 取得联系。 关于 PR 或者问题，请查看 [Nethermind GitHub 库](https://github.com/NethermindEth/nethermind)。
 

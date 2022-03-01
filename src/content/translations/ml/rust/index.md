@@ -26,21 +26,19 @@ sidebar: true
 
 - [ഒരു Ethereum ക്ലയന്‍റിനെ തിരഞ്ഞെടുക്കുന്നത്](https://www.trufflesuite.com/docs/truffle/reference/choosing-an-ethereum-client)
 - [റസ്റ്റ് Ethereum ക്ലയൻറ്](https://wiki.parity.io/Setup)
-- [റസ്റ്റ് ഉപയോഗിച്ച് Ethereum-ലേക്ക് ഇടപാട് അയയ്ക്കുന്നു](https://kauri.io/article/97c85229c66445759bb0ce642224d364/sending-ethereum-transactions-with-rust)
+- [റസ്റ്റ് ഉപയോഗിച്ച് Ethereum-ലേക്ക് ഇടപാട് അയയ്ക്കുന്നു](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/sending-ethereum-transactions-with-rust/)
 - [പാരിറ്റി Ethereum ക്ലയന്റുമായുള്ള സ്മാർട്ട് കരാറുകളുടെ ഒരു ആമുഖം](https://wiki.parity.io/Smart-Contracts)
-- [നിങ്ങളുടെ ഒയാസിസ് SDK dev പരിസ്ഥിതി സജ്ജമാക്കുന്നു](https://docs.oasis.dev/quickstart.html#set-up-the-oasis-sdk)
+- [നിങ്ങളുടെ ഒയാസിസ് SDK dev പരിസ്ഥിതി സജ്ജമാക്കുന്നു](https://docs.oasis.dev/oasis-sdk/guide/getting-started)
 - [കോവന് വേണ്ടി റസ്ര്റ് വാസമില്‍ എങ്ങനെ കരാറുകൾ എഴുതാം എന്നതിനെക്കുറിച്ചുള്ള ഒരു ഘട്ടം ഘട്ടമായുള്ള ട്യൂട്ടോറിയൽ](https://github.com/paritytech/pwasm-tutorial)
 
 ## ഇന്റർമീഡിയറ്റ് ലേഖനങ്ങൾ {#intermediate-articles}
 
 - [റസ്റ്റ്-വെബ് 3 ഡോക്യുമെന്റേഷൻ](https://tomusdrw.github.io/rust-web3/web3/index.html)
 - [റസ്റ്റ്-വെബ് 3 പ്രവർത്തന ഉദാഹരണങ്ങൾ](https://github.com/tomusdrw/rust-web3/blob/master/examples)
-- [OASIS SDK ഉപയോഗിച്ച് ഒരു രഹസ്യ ബാലറ്റ് സൃഷ്ടിക്കുന്നു](https://docs.oasis.dev/tutorials/ballot.html#prerequisites)
-- [OASIS SDK ഉപയോഗിച്ച് ഒരു സ്വകാര്യ ചാറ്റ് സെർവർ സൃഷ്ടിക്കുന്നു](https://docs.oasis.dev/tutorials/messaging.html#prerequisites)
 
 ## നൂതന ഉപയോഗ പാറ്റേണുകൾ {#advanced-use-patterns}
 
-- [എതിരെയും പോലുള്ള നെറ്റ്‌വർക്കുമായി സംവദിക്കുന്നതിന് pwasm_ethereum ബാഹ്യ ലൈബ്രറി](https://paritytech.github.io/pwasm-ethereum/pwasm_ethereum/)
+- [എതിരെയും പോലുള്ള നെറ്റ്‌വർക്കുമായി സംവദിക്കുന്നതിന് pwasm_ethereum ബാഹ്യ ലൈബ്രറി](https://github.com/openethereum/pwasm-ethereum)
 - [ജാവാസ്ക്രിപ്റ്റും റസ്റ്റും ഉപയോഗിച്ച് വികേന്ദ്രീകൃത ചാറ്റ് നിർമ്മിക്കുക](https://medium.com/perlin-network/build-a-decentralized-chat-using-javascript-rust-webassembly-c775f8484b52)
 - [Vue.js & Rust ഉപയോഗിച്ച് വികേന്ദ്രീകൃത ടോഡോ അപ്ലിക്കേഷൻ നിർമ്മിക്കുക ](https://medium.com/@jjmace01/build-a-decentralized-todo-app-using-vue-js-rust-webassembly-5381a1895beb)
 - [എനിഗ്മ ഉപയോഗിച്ച് ആരംഭിക്കുക - റസ്റ്റ് പ്രോഗ്രാമിംഗ് ഭാഷയിൽ](https://blog.enigma.co/getting-started-with-discovery-the-rust-programming-language-4d1e0b06de15)

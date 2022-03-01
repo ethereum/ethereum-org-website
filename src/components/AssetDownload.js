@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import Img from "gatsby-image"
+import { GatsbyImage, getImage, getSrc } from "gatsby-plugin-image"
 import Emoji from "./Emoji"
 
 import Translation from "../components/Translation"
@@ -19,7 +19,7 @@ const Container = styled.div`
   }
 `
 
-const Image = styled(Img)`
+const Image = styled(GatsbyImage)`
   align-self: center;
   width: 100%;
 `
@@ -67,9 +67,10 @@ const AssetDownload = ({
   src,
   shouldHide = false,
   title,
+  isSvg = false,
 }) => {
   const baseUrl = `https://ethereum.org`
-  const downloadUri = src ? src : image.fluid.src
+  const downloadUri = src ? src : getSrc(image)
   const downloadUrl = `${baseUrl}${downloadUri}`
 
   return (
@@ -79,7 +80,11 @@ const AssetDownload = ({
         {children && <ImageContainer>{children}</ImageContainer>}
         {!children && (
           <ImageContainer>
-            <Image fluid={image.fluid} alt={alt} />
+            {isSvg ? (
+              <img src={image} alt={alt} />
+            ) : (
+              <Image image={getImage(image)} alt={alt} />
+            )}
           </ImageContainer>
         )}
         {artistName && (
@@ -94,9 +99,11 @@ const AssetDownload = ({
         )}
       </div>
       <ButtonContainer>
-        <ButtonLink to={downloadUrl}>
-          <Translation id="page-assets-download-download" />
-        </ButtonLink>
+        {!isSvg && (
+          <ButtonLink to={downloadUrl}>
+            <Translation id="page-assets-download-download" />
+          </ButtonLink>
+        )}
       </ButtonContainer>
     </Container>
   )

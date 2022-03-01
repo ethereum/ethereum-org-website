@@ -9,7 +9,7 @@ sidebar: true
 
 Content on [ethereum.org](/) is crowdsourced and primarily written by our incredible contributors. This style guide aims to standardize certain aspects of writing content to make the contribution process smoother.
 
-You should read this style guide before you [contribute to ethereum.org](/en/contributing/).
+You should read this style guide before you [contribute to ethereum.org](/contributing/).
 
 ## Who can submit content to ethereum.org {#who-can-help}
 
@@ -75,7 +75,7 @@ Ethereum.org documentation (and content at large) aims to maintain a credibly ne
 
 The tone of the content on the site should be welcoming, friendly and straightforward. Jargon should be minimized and simple language used instead.
 
-Read the [ethereum.org design principles](/en/contributing/design-principles/) for more on direction tone.
+Read the [ethereum.org design principles](/contributing/design-principles/) for more on direction tone.
 
 ## Best practices {#best-practices}
 
@@ -244,6 +244,22 @@ This site uses **sentence casing** for header names as a convention. Only the fi
 ### Setting Up Your Wallet
 
 ### Getting Enough Ether
+```
+
+### Article authors {#authors}
+
+When citing articles from a specific author or organization, use the article's name as a link, followed by a dash, then the author's name italicized.
+
+```md
+<--- Good --->
+
+- [A rollup-centric ethereum roadmap](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698) — _Vitalik Buterin_
+- [Oracles](https://docs.ethhub.io/built-on-ethereum/oracles/what-are-oracles/) – _EthHub_
+
+<--- Bad--->
+
+- [A rollup-centric ethereum roadmap by Vitalik Buterin](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698)
+- [EthHub on Oracles](https://docs.ethhub.io/built-on-ethereum/oracles/what-are-oracles/) – _EthHub_
 ```
 
 ## Anything else? {#anything-else}

@@ -11,7 +11,7 @@ skill: 初学者
 lang: zh
 sidebar: true
 published: 2020-04-19
-source: EtherumDev
+source: EthereumDev
 sourceUrl: https://ethereumdev.io/calling-a-smart-contract-from-javascript/
 address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 ---
@@ -99,9 +99,9 @@ const receiverAddress = "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 
 ## 调用：从智能合约读取值 {#call-reading-value-from-a-smart-contract}
 
-第一个例子，将调用“常量（constant）”方法并且在 EVM 中执行这个智能合约方法，并不发送任何交易。 为此我们将读取一个地址的 ECR20 余额。 [阅读关于 ECR20 代币的文章](/developers/tutorials/understand-the-erc20-token-smart-contract/).
+第一个例子，将调用“常量（constant）”方法并且在 EVM 中执行这个智能合约方法，并不发送任何交易。 为此我们将读取一个地址的 ECR20 余额。 [阅读关于 ECR20 代币的文章](/developers/tutorials/understand-the-erc-20-token-smart-contract/).
 
-您可以访问一个实例化的智能合约方法，用这种方式提供 ABI： `yourContract.methods.methodname`。 通过使用`call`函数，您可以接收执行函数的结果。
+您可以访问为其提供 ABI 的实例化智能合约方法，如下所示：`yourContract.methods.methodname`。 通过使用`call`函数，您可以接收执行函数的结果。
 
 ```js
 daiToken.methods.balanceOf(senderAddress).call(function (err, res) {
@@ -133,4 +133,4 @@ daiToken.methods
 
 调用函数返回将被在区块链中挖矿(mine) 的交易的哈希。 在以太坊中，交易哈希是可以预测的 - 这里是我们在执行前获得交易哈希值的方法([了解如何计算哈希](https://ethereum.stackexchange.com/questions/45648/how-to-calculate-the-assigned-txhash-of-a-transaction))。
 
-因为该函数只向区块链提交交易，除非通过挖矿并包含在区块链中，否则我们无法看到结果。 在下一个教程中，我们将学习[如何通过了解交易的哈希来等待交易在区块链上执行](https://ethereumdev.io/waiting-for-a-transaction-to-be-mined-on-ethereum-with-js/)。
+因为该函数只向区块链提交交易，除非通过挖矿并包含在区块链中，否则我们无法看到结果。 在下一个教程中，我们将学习[如何通过了解其哈希值来等待一个交易在区块链上的执行](https://ethereumdev.io/waiting-for-a-transaction-to-be-mined-on-ethereum-with-js/)。

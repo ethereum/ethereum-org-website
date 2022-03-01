@@ -1,6 +1,6 @@
 ---
 title: Minería
-description: Una explicación sobre el funcionamiento de la minería en Etherum y sobre cómo mantiene a Etherum seguro y descentralizado.
+description: Una explicación sobre el funcionamiento de la minería en Ethereum y sobre cómo mantiene a Ethereum seguro y descentralizado.
 lang: es
 sidebar: true
 incomplete: true
@@ -8,7 +8,7 @@ incomplete: true
 
 ## Requisitos previos {#prerequisites}
 
-Para comprender mejor esta página, te recomendamos que en primer lugar leas sobre las [transacciones](/en/developers/docs/transactions/), [los bloques](/en/developers/docs/blocks/) y [la Prueba de trabajo](/developers/docs/consensus-mechanisms/pow/).
+Para comprender mejor esta página, te recomendamos que en primer lugar leas sobre las [transacciones](/developers/docs/transactions/), [los bloques](/developers/docs/blocks/) y [la Prueba de trabajo](/developers/docs/consensus-mechanisms/pow/).
 
 ## ¿Qué es la minería de Ethereum? {#what-is-ethereum-mining}
 
@@ -24,10 +24,10 @@ En sistemas descentralizados como Ethereum, necesitamos cerciorarnos de que todo
 
 ## ¿Cómo se minan las transacciones en Ethereum? {#how-ethereum-transactions-are-mined}
 
-1. Un usuario escribe y firma una solicitud de [transacción](/en/developers/docs/transactions/) con una clave privada de alguna [cuenta](/en/developers/docs/accounts/).
-2. El usuario transmite la solicitud de la transacción a toda la red de Ethereum desde algún [nodo](/en/developers/docs/nodes-and-clients/).
+1. Un usuario escribe y firma una solicitud de [transacción](/developers/docs/transactions/) con una clave privada de alguna [cuenta](/developers/docs/accounts/).
+2. El usuario transmite la solicitud de la transacción a toda la red de Ethereum desde algún [nodo](/developers/docs/nodes-and-clients/).
 3. Al enterarse de la nueva solicitud de la transacción, cada nodo de la red Ethereum agrega la solicitud a sus bases de datos temporales locales (mempool), una lista que incluye todas las solicitudes de transacciones de las que se obtiene información, pero que todavía no se han comprometido a la blockchain de un bloque.
-4. En algún punto, un nodo de minería agrega varias decenas o cientos de solicitudes de transacciones a un [bloque](/en/developers/docs/blocks/) potencial de manera que maximiza las [comisiones de transacción](/en/developers/docs/gas/) que obtienen mientras permanecen bajo el límite de gas del bloque. A continuación, el nodo de minería debe:
+4. En algún punto, un nodo de minería agrega varias decenas o cientos de solicitudes de transacciones a un [bloque](/developers/docs/blocks/) potencial de manera que maximiza las [comisiones de transacción](/developers/docs/gas/) que obtienen mientras permanecen bajo el límite de gas del bloque. A continuación, el nodo de minería debe:
    1. Comprobar la veracidad de cada solicitud de transacción (es decir que nadie esté intentando transferir ether desde una cuenta de la que no ha producido una firma de la solicitud, etc.) y, a continuación, ejecutar el código de la solicitud, alterando el estado de su copia local de la EVM. El minero otorga la comisión por transacción para cada solicitud de transacción a su propia cuenta.
    2. Iniciar el proceso de producción del "certificado de legitimidad" de la Prueba de trabajo para el bloque potencial, una vez que todas las solicitudes de las transacciones en el bloque hayan sido verificadas y ejecutadas en la copia local de la EVM.
 5. En algún momento en el futuro, un minero finalizará la producción de un certificado para un bloque que incluye nuestra solicitud de transacción específica. A continuación, el minero transmite el bloque completo, que incluye el certificado y una suma de verificación del nuevo estado del EVM mencionado.
@@ -39,7 +39,9 @@ Cada transacción se mina (es decir, se incluye en un nuevo bloque y se propaga 
 
 ## Una demostración visual {#a-visual-demo}
 
-Observa a Austin mientras te guía por el proceso de minería y la blockchain de la Prueba de trabajo. <iframe width="100%" height="315" src="https://www.youtube.com/embed/zcX7OJ-L8XQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+Observa a Austin mientras te guía por el proceso de minería y la blockchain de la Prueba de trabajo.
+
+<YouTube id="zcX7OJ-L8XQ" />
 
 ## Más información {#further-reading}
 

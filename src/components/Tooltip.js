@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import styled from "styled-components"
+import * as utils from "../utils/isMobile"
 
 const Container = styled.div`
   position: relative;
@@ -23,7 +24,8 @@ const Content = styled.div`
   cursor: default;
   border-radius: 4px;
   bottom: calc(100% + 1rem);
-  left: 50%;
+  left: 25%;
+  bottom: 125%;
   transform: translateX(-50%);
   @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
     width: 140px;
@@ -53,14 +55,19 @@ const ModalReturn = styled.div`
 // TODO add `position` prop
 const Tooltip = ({ content, children }) => {
   const [isVisible, setIsVisible] = useState(false)
+  const isMobile = utils.isMobile()
 
-  // TODO add hover effects
-  // onMouseLeave={() => setIsVisible(false)}
-  // onMouseEnter={() => setIsVisible(true)}
   return (
     <>
-      {isVisible && <ModalReturn onClick={() => setIsVisible(false)} />}
-      <Container title="More info" onClick={() => setIsVisible(!isVisible)}>
+      {isVisible && isMobile && (
+        <ModalReturn onClick={() => setIsVisible(false)} />
+      )}
+      <Container
+        title="More info"
+        onMouseEnter={!isMobile ? () => setIsVisible(true) : null}
+        onMouseLeave={!isMobile ? () => setIsVisible(false) : null}
+        onClick={isMobile ? () => setIsVisible(!isVisible) : null}
+      >
         {children}
         {isVisible && (
           <Content>

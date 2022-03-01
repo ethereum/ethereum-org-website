@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import Img from "gatsby-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { graphql } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
 
@@ -30,12 +30,12 @@ const HeroContent = styled(Content)`
 const Slogan = styled.p`
   font-style: normal;
   font-weight: normal;
-  font-size: 32px;
+  font-size: 2rem;
   line-height: 140%;
 `
 
 const Title = styled.h1`
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 140%;
   letter-spacing: 0.04em;
   font-weight: 500;
@@ -46,12 +46,12 @@ const Title = styled.h1`
 `
 
 const Subtitle = styled.div`
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 140%;
   color: ${(props) => props.theme.colors.text200};
 `
 const SubtitleTwo = styled.div`
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 140%;
   color: ${(props) => props.theme.colors.text300};
 `
@@ -64,7 +64,7 @@ const HeroContainer = styled.div`
   }
 `
 
-const Hero = styled(Img)`
+const Hero = styled(GatsbyImage)`
   flex: 1 1 100%;
   max-width: 800px;
   background-size: cover;
@@ -138,7 +138,7 @@ const StyledCard = styled(Card)`
   }
 `
 
-const Banner = styled(Img)`
+const Banner = styled(GatsbyImage)`
   opacity: 0.3;
   width: 100%;
   height: 400px;
@@ -157,12 +157,12 @@ const BannerMessage = styled.h2`
   padding: 0.5rem;
   top: 30%;
   text-align: center;
-  font-size: 48px;
+  font-size: 3rem;
   line-height: 140%;
   margin-top: 0;
   color: ${(props) => props.theme.colors.text};
   @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    font-size: 32px;
+    font-size: 2rem;
     top: 35%;
   }
 `
@@ -259,14 +259,14 @@ const WhatIsEthereumPage = ({ data }) => {
       title: <Translation id="page-what-is-ethereum-native-title" />,
       to: "/eth/",
       alt: translateMessageId("page-what-is-ethereum-native-alt", intl),
-      image: data.eth.childImageSharp.fixed,
+      image: getImage(data.eth),
       description: <Translation id="page-what-is-ethereum-native-crypto" />,
     },
     {
       title: <Translation id="page-what-is-ethereum-wallets" />,
       to: "/wallets/",
       alt: translateMessageId("page-what-is-ethereum-native-img-alt", intl),
-      image: data.wallets.childImageSharp.fixed,
+      image: getImage(data.wallets),
 
       description: <Translation id="page-what-is-ethereum-wallets-desc" />,
     },
@@ -274,7 +274,7 @@ const WhatIsEthereumPage = ({ data }) => {
       title: <Translation id="page-what-is-ethereum-dapps-title" />,
       to: "/dapps/",
       alt: translateMessageId("page-what-is-ethereum-dapps-img-alt", intl),
-      image: data.dapps.childImageSharp.fixed,
+      image: getImage(data.dapps),
       description: <Translation id="page-what-is-ethereum-dapps-desc" />,
     },
   ]
@@ -283,21 +283,21 @@ const WhatIsEthereumPage = ({ data }) => {
       title: <Translation id="page-what-is-ethereum-defi-title" />,
       to: "/defi/",
       alt: translateMessageId("page-what-is-ethereum-defi-alt", intl),
-      image: data.defi.childImageSharp.fixed,
+      image: getImage(data.defi),
       description: <Translation id="page-what-is-ethereum-defi-description" />,
     },
     {
       title: <Translation id="page-what-is-ethereum-nft-title" />,
       to: "/nft/",
       alt: translateMessageId("page-what-is-ethereum-nft-alt", intl),
-      image: data.nft.childImageSharp.fixed,
+      image: getImage(data.nft),
       description: <Translation id="page-what-is-ethereum-nft-description" />,
     },
     {
       title: <Translation id="page-what-is-ethereum-dao-title" />,
       to: "/dao/",
       alt: translateMessageId("page-what-is-ethereum-dao-alt", intl),
-      image: data.dao.childImageSharp.fixed,
+      image: getImage(data.dao),
       description: <Translation id="page-what-is-ethereum-dao-description" />,
     },
   ]
@@ -309,7 +309,7 @@ const WhatIsEthereumPage = ({ data }) => {
           "page-what-is-ethereum-meta-description",
           intl
         )}
-        image={data.ogImage.childImageSharp.fixed.src}
+        image={getImage(data.ogImage)?.images.fallback.src}
       />
       <HeroContent>
         <HeroContainer>
@@ -328,7 +328,7 @@ const WhatIsEthereumPage = ({ data }) => {
             </SubtitleTwo>
           </Header>
           <Hero
-            fluid={data.hero.childImageSharp.fluid}
+            image={getImage(data.hero)}
             alt={translateMessageId(
               "page-what-is-ethereum-alt-img-bazaar",
               intl
@@ -356,7 +356,7 @@ const WhatIsEthereumPage = ({ data }) => {
       </StyledGrayContatiner>
       <BannerContainer>
         <Banner
-          fluid={data.banner.childImageSharp.fluid}
+          image={getImage(data.banner)}
           alt={translateMessageId("page-what-is-ethereum-alt-img-social", intl)}
         />
         <BannerMessage>
@@ -473,13 +473,10 @@ const WhatIsEthereumPage = ({ data }) => {
       <Content>
         <CardContainer>
           <StyledCallout
-            image={data.developers.childImageSharp.fixed}
-            title={translateMessageId("page-what-is-ethereum-build", intl)}
+            image={getImage(data.developers)}
+            titleKey="page-what-is-ethereum-build"
             alt={translateMessageId("page-what-is-ethereum-alt-img-lego", intl)}
-            description={translateMessageId(
-              "page-what-is-ethereum-build-desc",
-              intl
-            )}
+            descriptionKey="page-what-is-ethereum-build-desc"
           >
             <div>
               <ButtonLink to="/developers/">
@@ -488,13 +485,10 @@ const WhatIsEthereumPage = ({ data }) => {
             </div>
           </StyledCallout>
           <StyledCallout
-            image={data.community.childImageSharp.fixed}
-            title={translateMessageId("page-what-is-ethereum-community", intl)}
+            image={getImage(data.community)}
+            titleKey="page-what-is-ethereum-community"
             alt={translateMessageId("page-what-is-ethereum-alt-img-comm", intl)}
-            description={translateMessageId(
-              "page-what-is-ethereum-comm-desc",
-              intl
-            )}
+            descriptionKey="page-what-is-ethereum-comm-desc"
           >
             <div>
               <ButtonLink to="/community/">
@@ -513,52 +507,55 @@ export default WhatIsEthereumPage
 export const useCaseImage = graphql`
   fragment useCaseImage on File {
     childImageSharp {
-      fixed(height: 260) {
-        ...GatsbyImageSharpFixed
-      }
+      gatsbyImageData(
+        height: 260
+        layout: FIXED
+        placeholder: BLURRED
+        quality: 100
+      )
     }
   }
 `
 export const actionCardImage = graphql`
   fragment actionCardImage on File {
     childImageSharp {
-      fixed(width: 368) {
-        ...GatsbyImageSharpFixed
-      }
+      gatsbyImageData(
+        width: 368
+        layout: FIXED
+        placeholder: BLURRED
+        quality: 100
+      )
     }
   }
 `
 export const calloutImage = graphql`
   fragment calloutImage on File {
     childImageSharp {
-      fixed(height: 200) {
-        ...GatsbyImageSharpFixed
-      }
+      gatsbyImageData(
+        height: 200
+        layout: FIXED
+        placeholder: BLURRED
+        quality: 100
+      )
     }
   }
 `
 
 export const query = graphql`
-  query {
+  {
     hero: file(relativePath: { eq: "what-is-ethereum.png" }) {
       childImageSharp {
-        fluid(maxWidth: 800) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
       }
     }
     ogImage: file(relativePath: { eq: "what-is-ethereum.png" }) {
       childImageSharp {
-        fixed(width: 1200) {
-          src
-        }
+        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
       }
     }
     banner: file(relativePath: { eq: "home/hero.png" }) {
       childImageSharp {
-        fluid(maxHeight: 400) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
       }
     }
     dapps: file(relativePath: { eq: "doge-computer.png" }) {

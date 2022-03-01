@@ -91,7 +91,8 @@ test command:
 git repository:
 keywords:
 author:
-license: (ISC)About to write to /Users/.../.../.../hello-world/package.json:
+license: (ISC)
+About to write to /Users/.../.../.../hello-world/package.json:
 
 {
   "name": "hello-world",
@@ -233,7 +234,11 @@ PRIVATE_KEY = "your-metamask-private-key"
 
 To actually connect these to our code, we’ll reference these variables in our `hardhat.config.js` file on step 13.
 
-## Step 12: Install Ethers.js {step-12}
+<InfoBanner isWarning={true}>
+Don't commit <code>.env</code>! Please make sure never to share or expose your <code>.env</code> file with anyone, as you are compromising your secrets in doing so. If you are using version control, add your <code>.env</code> to a <a href="https://git-scm.com/docs/gitignore">gitignore</a> file.
+</InfoBanner>
+
+## Step 12: Install Ethers.js {#step-12-install-ethersjs}
 
 Ethers.js is a library that makes it easier to interact and make requests to Ethereum by wrapping [standard JSON-RPC methods](/developers/docs/apis/json-rpc/) with more user friendly methods.
 
@@ -247,7 +252,7 @@ npm install --save-dev @nomiclabs/hardhat-ethers "ethers@^5.0.0"
 
 We’ll also require ethers in our `hardhat.config.js` in the next step.
 
-## Step 13: Update hardhat.config.js {step-13}
+## Step 13: Update hardhat.config.js {#step-13-update-hardhatconfigjs}
 
 We’ve added several dependencies and plugins so far, now we need to update `hardhat.config.js` so that our project knows about all of them.
 
@@ -275,7 +280,7 @@ module.exports = {
 }
 ```
 
-## Step 14: Compile our contract {step-14}
+## Step 14: Compile our contract {#step-14-compile-our-contracts}
 
 To make sure everything is working so far, let’s compile our contract. The `compile` task is one of the built-in hardhat tasks.
 
@@ -287,7 +292,7 @@ npx hardhat compile
 
 You might get a warning about `SPDX license identifier not provided in source file` , but no need to worry about that — hopefully everything else looks good! If not, you can always message in the [Alchemy discord](https://discord.gg/u72VCg3).
 
-## Step 15: Write our deploy script {step-15}
+## Step 15: Write our deploy script {#step-15-write-our-deploy-scripts}
 
 Now that our contract is written and our configuration file is good to go, it’s time to write our contract deploy script.
 
@@ -323,7 +328,7 @@ const hello_world = await HelloWorld.deploy();
 
 Calling `deploy()` on a `ContractFactory` will start the deployment, and return a `Promise` that resolves to a `Contract`. This is the object that has a method for each of our smart contract functions.
 
-## Step 16: Deploy our contract {step-16}
+## Step 16: Deploy our contract {#step-16-deploy-our-contract}
 
 We’re finally ready to deploy our smart contract! Navigate to the command line and run:
 
@@ -351,7 +356,7 @@ To understand what’s going on under the hood, let’s navigate to the Explorer
 ![hello world explorer](./hello-world-explorer.png)
 
 Here you’ll see a handful of JSON-RPC calls that Hardhat/Ethers made under the hood for us when we called the `.deploy()` function. Two important ones to call out here are [`eth_sendRawTransaction`](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_sendrawtransaction), which is the request to actually write our contract onto the Ropsten chain, and [`eth_getTransactionByHash`](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_gettransactionbyhash) which is a request to read information about our transaction given the hash (a typical pattern when
-transactions). To learn more about sending transactions, check out this tutorial on [sending transactions using Web3](https://docs.alchemyapi.io/alchemy/tutorials/sending-transactions-using-web3-and-alchemy)
+transactions). To learn more about sending transactions, check out this tutorial on [sending transactions using Web3](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)
 
 That’s all for part 1 of this tutorial, in part 2 we’ll actually [interact with our smart contract](https://docs.alchemyapi.io/alchemy/tutorials/hello-world-smart-contract#part-2-interact-with-your-smart-contract) by updated our initial message, and in part 3 we’ll [publish our smart contract to Etherscan](https://docs.alchemyapi.io/alchemy/tutorials/hello-world-smart-contract#optional-part-3-publish-your-smart-contract-to-etherscan) so everyone will know how to interact with it.
 
