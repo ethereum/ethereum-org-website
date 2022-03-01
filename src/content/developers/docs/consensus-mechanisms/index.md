@@ -38,7 +38,7 @@ Ethereum, like Bitcoin, currently uses the Nakamoto, or "Longest Chain", consens
 
 Nakamoto consensus is done by [miners](/developers/docs/consensus-mechanisms/pow/mining/) who compete to create new blocks full of processed transactions. They do this through a process known as "proof-of-work" mining (PoW). In PoW, miners are creating random numbers, called a nonce, and plugging that into a hash function to see if they produce a hash which satisfies a condition difficult enough to show they've put work into solving the problem. Once discovered, the miner who found the nonce proposes a new block to the rest of the network. In this new block, the miner pays itself in ETH. If the network decides to continue to build on his block, it becomes part of the "canonical chain" and the miner has some freshly minted ETH.
 
-The race is won by whosever computer can solve a math puzzle fastest – this produces the cryptographic link between the current block and the block that went before. Solving this puzzle puts the work in "proof-of-work".
+The race is won by whosever computer can solve a math puzzle fastest – this produces the cryptographic link between the current block and the block that went before. Solving this puzzle puts the work in "proof-of-work."
 
 #### Security {#pow-security}
 
@@ -68,9 +68,9 @@ Watch more on the different types of consensus protocols used on Ethereum:
 
 ### Sybil resistance {#sybil-chain}
 
-Have you ever seen a website that's being spammed by a ton of fake accounts? These fake accounts are run by bots which try to sell you something. To get around that, a lot of sites employ a system called "captchas". These captchas are difficult for computers to solve but easy for humans, preventing automation from making fake identities. Another way to prevent fake accounts is to force users to pay for a service. This payment associates a cost with automation, preventing armies of bots from taking over a site.
+Have you ever seen a website that's being spammed by a ton of fake accounts? These fake accounts are run by bots which try to sell you something. To get around that, a lot of sites employ a system called "captchas." These captchas are difficult for computers to solve but easy for humans, preventing automation from making fake identities. Another way to prevent fake accounts is to force users to pay for a service. This payment associates a cost with automation, preventing armies of bots from taking over a site.
 
-Blockchains have a form of captcha of their own. This process of preventing fake identities from taking over a network is called "Sybil resistance". Like captcha or premium accounts on a website, Sybil resistance mechanisms associate some kind of work or value to participating in the blockchain. This causes an innate investment in the success of the network.
+Blockchains have a form of captcha of their own. This process of preventing fake identities from taking over a network is called "Sybil resistance." Like captcha or premium accounts on a website, Sybil resistance mechanisms associate some kind of work or value to participating in the blockchain. This causes an innate investment in the success of the network.
 
 **Sybil resistance** describes how a protocol fares against a [Sybil attack](https://en.wikipedia.org/wiki/Sybil_attack). Sybil attacks are when one user or group pretends to be many users. Resistance to this type of attack is essential for a decentralized blockchain and enables miners and validators to be rewarded equally based on resources put in. Proof-of-work and proof-of-stake protect against this by making users expend a lot of energy or put up a lot of collateral. These protections are an economic deterrent to Sybil attacks.
 
@@ -78,7 +78,7 @@ Proof-of-work and proof-of-stake are not consensus protocols by themselves, but 
 
 ### Proposal mechanism {#proposal-mechanism}
 
-A proposal mechanism is what's used to determine the next block proposed on the network. In Nakamoto consensus, a person who mines a winning nonce gets the right to be the leader for the next block. They propose that block to the network. In Eth2, a random beacon decides the order of proposers from the list of available validators. In both cases, after a block is proposed, it's up to the next proposer to decide if they want to build on that block or on another block proposed in the case of competing proposals. This is what's known as the "chain selection rule".
+A proposal mechanism is what's used to determine the next block proposed on the network. In Nakamoto consensus, a person who mines a winning nonce gets the right to be the leader for the next block. They propose that block to the network. In the new proof-of-stake system, a random beacon decides the order of proposers from the list of available validators. In both cases, after a block is proposed, it's up to the next proposer to decide if they want to build on that block or on another block proposed in the case of competing proposals. This is what's known as the "chain selection rule."
 
 ### Chain selection rule {#chain-selection-rule}
 
@@ -86,7 +86,7 @@ A **chain selection rule** is used to decide which chain is the "correct" chain.
 
 The combination of proof-of-work and longest chain rule makes up Nakamoto consensus.
 
-Eth2 (the [beacon chain](/eth2/beacon-chain/)) uses a consensus protocol called [Casper the Friendly Finality Gadget](https://arxiv.org/abs/1710.09437), which is proof-of-stake based.
+The [Beacon Chain](/eth2/beacon-chain/) uses a consensus protocol called [Casper the Friendly Finality Gadget](https://arxiv.org/abs/1710.09437), which is proof-of-stake based.
 
 ## Further reading {#further-reading}
 
