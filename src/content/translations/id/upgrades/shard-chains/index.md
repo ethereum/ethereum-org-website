@@ -31,13 +31,12 @@ Sharding adalah cara yang baik untuk mengubah ukuran apabila Anda ingin tetap me
 
 Sharding pada akhirnya akan memampukan Anda menjalankan Ethereum di laptop atau ponsel pribadi. Jadi semakin banyak orang seharusnya berpartisipasi, atau menjalankan [klien](/developers/docs/nodes-and-clients/), dengan Ethereum yang memiliki shard. Ini akan meningkatkan keamanan karena semakin jaringan terdesentralisasi, semakin kecil pula daerah serangan.
 
-Dengan persyaratan spesifikasi perangkat keras yang rendah, sharding akan mempermudah menjalankan [klien](/developers/docs/nodes-and-clients/) Anda secara mandiri tanpa harus bergantung pada jasa perantara. Dan jika memungkinkan, pertimbangkan untuk menjalankan beberapa klien. Ini bisa mendukung kesehatan jaringan dengan semakin mengurangi titik kegagalan. [Jalankan klien Eth2](/upgrades/get-involved/)
+Dengan persyaratan spesifikasi perangkat keras yang rendah, sharding akan mempermudah menjalankan [klien](/developers/docs/nodes-and-clients/) Anda secara mandiri tanpa harus bergantung pada jasa perantara. Dan jika memungkinkan, pertimbangkan untuk menjalankan beberapa klien. Ini bisa mendukung kesehatan jaringan dengan semakin mengurangi titik kegagalan. [Jalankan klien Rantai Suar](/upgrades/get-involved/)
 
 <br />
 
 <InfoBanner isWarning={true}>
-  Pertama, Anda perlu menjalankan klien jaringan utama bersama-sama dengan klien Eth2 Anda. <a href="https://launchpad.ethereum.org" target="_blank">Launchpad</a> akan membantu Anda dalam persyaratan spesifikasi perangkat keras dan prosesnya. 
-Sebagai alternatif, Anda juga dapat menggunakan <a href="/developers/docs/apis/backend/#available-libraries">API backend</a>.
+  Pertama - tama, Anda perlu menjalankan klien Jaringan Utama bersamaan dengan klien Rantai Suar Anda. <a href="https://launchpad.ethereum.org" target="_blank">Launchpad</a> akan membantu Anda dalam persyaratan spesifikasi perangkat keras dan prosesnya. Sebagai alternatif, Anda juga dapat menggunakan <a href="/developers/docs/apis/backend/#available-libraries">API backend</a>.
 </InfoBanner>
 
 ## Rantai shard versi 1: ketersediaan data {#data-availability}
@@ -49,7 +48,7 @@ Rollup adalah teknologi "lapisan 2" yang sudah ada sekarang. Rollup memampukan d
 <InfoBanner isWarning={false}>
   Mengingat kemajuan baru-baru ini pada pengembangan dan penelitian solusi penskalaan lapisan 2, ini telah mendorong prioritas peningkatan penggabungan lebih utama dari peluncuran rantai shard. Ini akan menjadi fokus pengerjaan setelah transisi jaringan utama ke sistem bukti taruhan.
 
-[Lebih lanjut tentang rollup](/developers/docs/scaling/#rollups)
+[Lebih lanjut tentang rollup](/developers/docs/scaling/layer-2-rollups/)
 </InfoBanner>
 
 ## Rantai shard versi 2: eksekusi kode {#code-execution}
@@ -68,7 +67,7 @@ Ini berarti kita tidak memberikan shard kemampuan untuk menangani kontrak pintar
 
 #### 2. Memerlukan beberapa shard eksekusi {#some-execution-shards}
 
-Kedepannya ada kompromi di mana kita tidak membutuhkan semua shard (jumlahnya 64 sedang direncanakan sekarang) untuk menjadi lebih pintar. Kita hanya dapat menambahkan fungsi ini ke beberapa dan meninggalkan sisanya. Dengan ini kita bisa menambah kecepatan pengiriman.
+Kedepannya, akan ada kompromi saat kita tidak membutuhkan semua shard (64 shard sedang direncanakan sekarang) untuk menjadi lebih pintar. Kita hanya dapat menambahkan fungsionalitas ini ke beberapa dan membiarkan sisanya. Dengan ini kita bisa menambah kecepatan pengiriman.
 
 #### 3. Tunggu sampai kita bisa melakukan snark Zero Knowledge (ZK) {#wait-for-zk-snarks}
 
@@ -84,7 +83,7 @@ Ini masih menjadi topik diskusi yang sedang berlangsung. Kami akan memperbarui h
 
 ## Hubungan antar peningkatan {#relationship-between-upgrades}
 
-Semua peningkatan Eth2 saling terkait. Jadi mari kita rekap bagaimana rantai shard menghubungkan peningkatan lainnya.
+Semua peningkatan Ethereum saling terkait. Jadi mari kita rekap bagaimana rantai shard menghubungkan peningkatan lainnya.
 
 ### Shard dan rantai suar {#shards-and-beacon-chain}
 
@@ -96,13 +95,13 @@ Rantai Suar berisi semua logika untuk menjaga shard tetap aman dan tersinkronisa
 
 ### Shard dan penggabungan {#shards-and-docking}
 
-Pada waktu shard tambahan ditambahkan, Jaringan Utama Ethereum sudah diamankan oleh Rantai Suar menggunakan sistem bukti taruhan. Ini memungkinkan jaringan utama yang subur untuk membangun rantai shard, yang digerakkan solusi lapisan 2 yang memperkuat skalabilitas.
+Pada waktu shard tambahan ditambahkan, Jaringan Utama Ethereum sudah diamankan oleh Rantai Suar menggunakan sistem bukti taruhan. Ini memungkinkan Jaringan Utama yang subur untuk membangun rantai shard, yang digerakkan solusi lapisan 2 yang memperkuat skalabilitas.
 
-Masih harus dilihat apakah jaringan utama akan hadir sebagai shard “pintar” satu-satunya yang bisa menangani eksekusi kode – tapi bagaimanapun juga, keputusan untuk memperluas shard bisa ditinjau ulang sesuai kebutuhan.
+Masih harus dilihat apakah Jaringan Utama akan hadir sebagai shard “pintar” satu-satunya yang bisa menangani eksekusi kode – tapi bagaimanapun juga, keputusan untuk memperluas shard bisa ditinjau ulang sesuai kebutuhan.
 
-<div>
-  <ButtonLink to="/upgrades/merge/">Penggabungan</ButtonLink>
-</div>
+<ButtonLink to="/upgrades/merge/">
+  Penggabungan
+</ButtonLink>
 
 <Divider />
 

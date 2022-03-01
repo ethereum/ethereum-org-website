@@ -12,7 +12,7 @@ summaryPoint4: Sebelumnya kami menyebutnya sebagai "docking."
 ---
 
 <UpgradeStatus dateKey="page-upgrades-merge-date">
-  Peningkatan ini mewakilkan peralihan resmi ke konsensus bukti taruhan. Ini menghilangkan kebutuhan akan penambangan dengan energi besar, dan alih-alih mengamankan jaringan yang menggunakan ether yang ditaruhkan. Satu langkah yang sangat menyenangkan dalam mewujudkan <a href="/upgrades/vision/">visi Eth2</a> – lebih banyak skalabilitas, keamanan, dan keberlanjutan.
+  Peningkatan ini mewakilkan peralihan resmi ke konsensus bukti taruhan. Ini menghilangkan kebutuhan akan penambangan dengan energi besar, dan alih-alih mengamankan jaringan yang menggunakan ether yang ditaruhkan. Satu langkah yang sangat menyenangkan dalam mewujudkan <a href="/upgrades/vision/">visi Ethereum</a> – lebih banyak skalabilitas, keamanan, dan keberlanjutan.
 </UpgradeStatus>
 
 ## Apa itu penggabungan? {#what-is-the-docking}
@@ -29,21 +29,23 @@ Jaringan Utama akan memampukan pengoperasian kontrak pintar menjadi sistem bukti
 
 ## Setelah penggabungan {#after-the-merge}
 
-Ini akan menandakan akhir dari bukti kerja untuk Ethereum dan memulai era Ethereum yang lebih berkelanjutan dan ramah lingkungan. Pada titik ini Ethereum akan satu langkah lebih dekat pada pencapaian penskalaan, keamanan, dan keberlanjutan penuh yang digariskan dalam [visi Eth2](/upgrades/vision/).
+Ini akan menandakan akhir dari bukti kerja untuk Ethereum dan memulai era Ethereum yang lebih berkelanjutan dan ramah lingkungan. Pada titik ini Ethereum akan satu langkah lebih dekat pada pencapaian penskalaan, keamanan, dan keberlanjutan penuh yang digariskan dalam [visi Ethereum](/upgrades/vision/).
 
 Penting untuk dicatat bahwa satu tujuan implementasi dari penggabungan adalah kemudahan untuk mempercepat transisi dari sistem bukti kerja ke bukti taruhan. Pengembang sedang memusatkan usaha mereka pada transisi ini, dan mengurangi fitur tambahan yang bisa menunda pencapaian tujuan ini.
 
-**Ini berati beberapa fitur, seperti kemampuan untuk menarik ETH yang ditaruhkan, harus menunggu sedikit lebih lama setelah penggabungan selesai.** Rencananya mencakup peningkatan "pembersihan" pasca penggabungan untuk menyelesaikan fitur ini, yang diharapkan terjadi sesegera mungkin setelah penggabungan selesai.
+**Ini berarti beberapa fitur, seperti kemampuan untuk menarik ETH yang dipertaruhkan, harus menunggu sedikit lebih lama setelah penggabungan selesai.** Rencananya mencakup peningkatan "pembersihan" pascapenggabungan untuk menyelesaikan fitur ini, yang diharapkan terjadi sesegera mungkin setelah penggabungan selesai.
 
 ## Hubungan antar peningkatan {#relationship-between-upgrades}
 
-Semua peningkatan Eth2 saling terkait. Jadi mari kita ringkas bagaimana penggabungan ini berhubungan dengan peningkatan lain.
+Semua peningkatan Ethereum saling terkait. Jadi mari kita ringkas bagaimana penggabungan ini berhubungan dengan peningkatan lain.
 
 ### Penggabungan dan Rantai Suar {#docking-and-beacon-chain}
 
-Saat penggabungan terjadi, penaruh akan ditugaskan untuk memvalidasi Jaringan Utama Ethereum. [Penambangan](/developers/docs/consensus-mechanisms/pow/mining/) tidak lagi diperlukan sehingga penambang kemungkinan akan menginvestasikan penghasilan mereka ke dalam penaruhan pada sistem bukti taruhan yang baru.
+Saat penggabungan terjadi, penaruh akan ditugaskan untuk memvalidasi Jaringan Utama Ethereum. [Menambang](/developers/docs/consensus-mechanisms/pow/mining/) tidak akan lagi diperlukan, jadi para penambang mungkin akan menginvestasikan pendapatan mereka dengan bertaruh dalam sistem bukti taruhan yang baru.
 
-<ButtonLink to="/upgrades/beacon-chain/">Rantai Suar</ButtonLink>
+<ButtonLink to="/upgrades/beacon-chain/">
+  Rantai Suar
+</ButtonLink>
 
 ### Penggabungan dan pembersihan pasca penggabungan {#merge-and-post-merge-cleanup}
 
@@ -57,4 +59,10 @@ Pada awalnya, rencananya adalah melanjutkan pengembangan rantai shard sebelum pe
 
 Ini akan menjadi penilaian berkelanjutan dari komunitas seiring dengan kebutuhan akan potensi beberapa putaran rantai shard untuk memungkinkan skalabilitas yang tak terbatas.
 
-<ButtonLink to="/upgrades/shard-chains/">Rantai shard</ButtonLink>
+<ButtonLink to="/upgrades/shard-chains/">
+  Pecahan rantai jaringan
+</ButtonLink>
+
+## Baca lebih lanjut {#read-more}
+
+<MergeArticleList />
