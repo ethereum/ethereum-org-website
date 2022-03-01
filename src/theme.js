@@ -94,8 +94,8 @@ const baseColors = {
   black200,
   black100,
   black50,
-  boxShadow: "#0000001f",
-  boxShadowHover: "#0000003d",
+  boxShadow: "rgba(#000000, 0.12)",
+  boxShadowHover: "rgba(#000000, 0.24)",
   secondary: "#b2b2b2", // TODO replace
   success900,
   success800,
@@ -150,9 +150,9 @@ const lightColors = {
   upgradesGradient:
     "linear-gradient(285.24deg, #f7cbc0 0%, #f4b1ab 29.8%, #8476d9 49.78%, #85acf9 54.14%, #1c1ce1 61.77%, #000000 69.77%)",
   runNodeGradient:
-    "linear-gradient(0deg, #999df41a 0%, #999df4 100%), linear-gradient(270.72deg, #fdf0ff 0.62%, #ecc3c38e 32.61%, #cfbde64c 49.67%, #c4c4c4 72.88%);",
+    "linear-gradient(0deg, rgba(#999df4, 0.1) 0%, #999df4 100%), linear-gradient(270.72deg, #fdf0ff 0.62%, rgba(#ecc3c3, 0.56) 32.61%, rgba(#cfbde6, 0.3) 49.67%, #c4c4c4 72.88%);",
   runNodeGradient2:
-    "linear-gradient(135deg, #4f71eb33 9.8%, #e84feb33 92.84%);",
+    "linear-gradient(135deg, rgba(#4f71eb, 0.2) 9.8%, rgba(#e84feb, 0.2) 92.84%);",
   ghostCardBackground: white,
   ghostCardGhost: white600,
   secondaryButtonBackgroundActive: white700,
@@ -167,12 +167,13 @@ const lightColors = {
   primary300: primaryLight300,
   primary200: primaryLight200,
   primary100: primaryLight100,
-  primaryHover: "#1c1ce1cc",
+  primaryHover: "rgba(#1c1ce1, 0.8)",
   primaryActive: primaryLight600,
   lightBorder: "#ececec",
-  priceCardBackgroundPositive: "linear-gradient( 0, #cfece099 0%,	#cfece0 100%)",
+  priceCardBackgroundPositive:
+    "linear-gradient( 0, rgba(#cfece0, 0.6) 0%,	#cfece0 100%)",
   priceCardBackgroundNegative:
-    "linear-gradient(180deg, #f1cccc66 0%, #f1cccc 100%)",
+    "linear-gradient(180deg, rgba(#f1cccc, 0.4) 0%, #f1cccc 100%)",
   priceCardBorder: "#ececec",
   priceCardBorderNegative: "#ececec",
   searchBorder: "#7f7f7f",
@@ -185,9 +186,9 @@ const lightColors = {
   dropdownBackground: white,
   dropdownBackgroundHover: "#f2f2f2",
   dropdownBorder: "#e5e5e5",
-  markBackground: "#8fbbed1a",
-  markUnderline: "#8fbbed80",
-  modalBackground: "#b2b2b2e6",
+  markBackground: "rgba(#8fbbed, 0.1)",
+  markUnderline: "rgba(#8fbbed, 0.5)",
+  modalBackground: "rgba(#b2b2b2, 0.9)",
   text: "#333333",
   text200: "#666666",
   text300: "#4c4c4c",
@@ -196,7 +197,7 @@ const lightColors = {
   ednBackground: white600,
   border: white700,
   tableBoxShadow:
-    "0 14px 66px #00000012, 0 10px 17px #00000008, 0 4px 7px #0000000d",
+    "0 14px 66px rgba(#000000, 0.07), 0 10px 17px rgba(#000000, 0.03), 0 4px 7px rgba(#000000, 0.05)",
   tableItemBoxShadow: "#000000",
   tableBackgroundHover: "#f2f2f2",
   preBackground: "#f2f2f2",
@@ -208,9 +209,9 @@ const lightColors = {
   cardGradient:
     "radial-gradient(46.28% 66.31% at 66.95% 58.35%, #e6e6f7 0%, #e7edfa 50%, #e9fbfa 100%)",
   upgradeStatusBackground:
-    "linear-gradient(180deg, #00f0ff33 0%, #ffffff 100%), linear-gradient(0deg, #ffffffcc, #ffffffcc), #1c1ce1",
+    "linear-gradient(180deg, rgba(#00f0ff, 0.2) 0%, #ffffff 100%), linear-gradient(0deg, rgba(#ffffff, 0.8), rgba(#ffffff, 0.8)), #1c1ce1",
   upgradeStatusShippedBackground:
-    "linear-gradient(180deg, #00f0ff33 0%, #ffffff 100%), linear-gradient(0deg, #ffffffcc, #ffffffcc), #109e62",
+    "linear-gradient(180deg, rgba(#00f0ff, 0.2) 0%, #ffffff 100%), linear-gradient(0deg, rgba(#ffffff, 0.8), rgba(#ffffff, 0.8)), #109e62",
   upgradeStatusBorder: "none",
   upgradeStatusShippedBorder: "none",
   warning: primaryDark100,
@@ -232,7 +233,7 @@ const lightColors = {
   homeBoxPurple: primaryLight50,
   homeBoxPink: pink,
   codeBackground: codeBoxLight,
-  beta: "radial-gradient(25.56% 133.51% at 28.36% 45.54%, #1c1ce1 0%, #1c1ce10f 100%)",
+  beta: "radial-gradient(25.56% 133.51% at 28.36% 45.54%, #1c1ce1 0%, rgba(#1c1ce1, 0.06) 100%)",
 }
 
 // TODO replace random variables w/ baseColor variables
@@ -241,9 +242,9 @@ const darkColors = {
   upgradesGradient:
     "linear-gradient(285.24deg, #f7cbc0 0%, #fbeae3 17.81%, #f4b1ab 29.8%, #8476d9 49.78%, #8db4ff 69.77%);",
   runNodeGradient:
-    "linear-gradient(0deg, #999df459 0%, #999df4 100%), linear-gradient(89.24deg, #fdf0ffb3 -64.3%, #d4777763 -7.43%, #bca3dc35 46.66%, #c4c4c4 99.16%);",
+    "linear-gradient(0deg, rgba(#999df4, 0.35) 0%, #999df4 100%), linear-gradient(89.24deg, rgba(#fdf0ff, 0.7) -64.3%, rgba(#d47777, 0.4) -7.43%, rgba(#bca3dc, 0.2) 46.66%, #c4c4c4 99.16%);",
   runNodeGradient2:
-    "linear-gradient(135deg, #4f71eb33 9.8%, #e84feb33 92.84%);",
+    "linear-gradient(135deg, rgba(#4f71eb, 0.2) 9.8%, rgba(#e84feb, 0.2) 92.84%);",
   primaryHover: primaryDark400,
   primaryActive: primaryDark200,
   ghostCardBackground: black300,
@@ -274,22 +275,22 @@ const darkColors = {
   dropdownBackground: "#191919",
   dropdownBackgroundHover: "#000000",
   dropdownBorder: "#333333",
-  markBackground: "#ff73241a",
-  markUnderline: "#ff732480",
-  modalBackground: "#191919cc",
+  markBackground: "rgba(#ff7324, 0.1)",
+  markUnderline: "rgba(#ff7324, 0.5)",
+  modalBackground: "rgba(#191919, 0.8)",
   text: "#f2f2f2",
   text200: "#b2b2b2",
   text300: "#cccccc",
-  textTableOfContents: "#b2b2b2cc",
+  textTableOfContents: "rgba(#b2b2b2, 0.8)",
   background: "#222222",
   ednBackground: black400,
   border: black300,
   tableBoxShadow:
-    "0 14px 66px #f5f5f512, 0 10px 17px #f5f5f508, 0 4px 7px #f5f5f50d",
+    "0 14px 66px rgba(#f5f5f5, 0.07), 0 10px 17px rgba(#f5f5f5, 0.03), 0 4px 7px rgba(#f5f5f5, 0.05)",
   tableItemBoxShadow: "#ffffff",
   tableBackgroundHover: "#ff7324",
   preBackground: "#191919",
-  preBorder: "#ffffff0d",
+  preBorder: "rgba(#ffffff, 0.05)",
   homeDivider: "#ffc7a7",
   displayDark: "block",
   displayLight: "none",
@@ -317,9 +318,9 @@ const darkColors = {
   homeBoxPurple: purpleDark,
   homeBoxPink: pinkDark,
   codeBackground: codeBoxDark,
-  beta: "background: radial-gradient(25.56% 133.51% at 28.36% 45.54%, #ff8f50b8 0%, #ff8f5038 100%)",
+  beta: "background: radial-gradient(25.56% 133.51% at 28.36% 45.54%, rgba(#ff8f50, 0.72) 0%, rgba(#ff8f50, 0.22) 100%)",
   cardGradient:
-    "linear-gradient(49.21deg, #7f7fd533 19.87%, #86a8e733 58.46%, #91eae433 97.05% )",
+    "linear-gradient(49.21deg, rgba(#7f7fd5, 0.2) 19.87%, rgba(#86a8e7, 0.2) 58.46%, rgba(#91eae4, 0.2) 97.05% )",
 }
 
 const lightThemeColors = Object.assign({}, baseColors, lightColors)
