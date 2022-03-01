@@ -23,7 +23,7 @@ import { useKeyPress } from "../hooks/useKeyPress"
 
 import { isLangRightToLeft } from "../utils/translations"
 import { isMobile } from "../utils/isMobile"
-import SkipLink from "./SkipLink"
+import { SkipLink, SkipLinkAnchor } from "./SkipLink"
 
 const ContentContainer = styled.div`
   position: relative;
@@ -165,7 +165,8 @@ const Layout = (props) => {
                 />
                 {shouldShowSideNav && <SideNavMobile path={path} />}
               </VisuallyHidden>
-              <MainContainer id="main-content">
+              <SkipLinkAnchor id="main-content" />
+              <MainContainer>
                 {shouldShowSideNav && (
                   <VisuallyHidden isHidden={isZenMode}>
                     <SideNav path={path} />
