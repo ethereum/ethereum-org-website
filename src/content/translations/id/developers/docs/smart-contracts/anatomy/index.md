@@ -13,7 +13,7 @@ Pastikan Anda telah membaca tentang [kontrak pintar](/developers/docs/smart-cont
 
 ## Data {#data}
 
-Setiap data kontrak harus ditetapkan ke suatu lokasi: baik ke `storage` atau `memory`. Untuk memodifikasi penyimpanan di sebuah kontrak pintar biayanya mahal, jadi Anda perlu mempertimbangkan tempat untuk menyimpan data Anda.
+Setiap data kontrak harus ditetapkan ke suatu lokasi: baik ke `penyimpanan` atau `memori`. Untuk memodifikasi penyimpanan di sebuah kontrak pintar biayanya mahal, jadi Anda perlu mempertimbangkan tempat untuk menyimpan data Anda.
 
 ### Penyimpanan {#storage}
 
@@ -32,9 +32,9 @@ contract SimpleStorage {
 storedData: int128
 ```
 
-Jika Anda telah memprogram bahasa yang berorientasi objek, Anda mungkin akan lebih mengenal sebagian besar jenisnya. Namun `address` mungkin terdengar asing jika Anda seorang pengembang pemula di Ethereum.
+Jika Anda telah memprogram bahasa yang berorientasi objek, Anda mungkin akan lebih mengenal sebagian besar jenisnya. Namun `alamat` mungkin terdengar asing jika Anda seorang pengembang pemula di Ethereum.
 
-Suatu jenis `address` bisa menampung alamat Ethereum yang setara dengan 20 bita atau 160 bit. Alamat kembali dalam notasi heksadesimal dengan awalan 0x.
+Suatu jenis `alamat` bisa menampung alamat Ethereum yang setara dengan 20 bita atau 160 bit. Alamat kembali dalam notasi heksadesimal dengan awalan 0x.
 
 Jenis lainnya meliputi:
 
@@ -78,13 +78,13 @@ Ada dua jenis pemanggilan fungsi:
 
 - `internal` - ini tidak menghasilkan pemanggilan EVM
   - Fungsi internal dan variabel state hanya bisa diakses secara internal (yaitu dari dalam kontrak saat ini atau kontrak yang diturunkan darinya)
-- `external` - ini menghasilkan pemanggilan EVM
+- `eksternal` - ini menghasilkan pemanggilan EVM
   - Fungsi eksternal adalah bagian dari antarmuka kontrak, yang berarti bisa dipanggil dari kontrak lain dan melalui transaksi. Fungsi eksternal `f` tidak bisa dipanggil secara internal (yaitu `f()` tidak berfungsi, tapi `this.f()` dapat berfungsi).
 
-Fungsi pemanggilan juga bisa bersifat `public` atau `private`
+Fungsi pemanggilan juga bisa bersifat `publik` atau `privat`
 
-- Fungsi `public` bisa dipanggil secara internal dari dalam kontrak atau secara eksternal melalui message
-- Fungsi `private` hanya terlihat untuk kontrak yang ditetapkan di dalam dan bukan dalam kontrak turunan
+- Fungsi `publik` bisa dipanggil secara internal dari dalam kontrak atau secara eksternal melalui message
+- Fungsi `privat` hanya terlihat untuk kontrak yang ditetapkan di dalam dan bukan dalam kontrak turunan
 
 Kedua fungsi dan variabel state ini bisa dibuat menjadi publik atau privat
 
@@ -97,8 +97,8 @@ function update_name(string value) public {
 }
 ```
 
-- `value` parameter dari `string` jenis diteruskan ke dalam fungsi: `update_name`
-- Fungsi dideklarasikan sebagai `public`, berarti siapa pun bisa mengaksesnya
+- `Nilai` parameter dari `string` jenis diteruskan ke dalam fungsi: `update_name`
+- Fungsi dideklarasikan sebagai `publik`, berarti siapa pun bisa mengaksesnya
 - Fungsi tidak dideklarasikan sebagai `view`, sehingga bisa memodifikasi state kontrak
 
 ### Fungsi view {#view-functions}
@@ -134,11 +134,11 @@ Apa yang dianggap sebagai memodifikasi state:
 
 ### Fungsi pembangun {#constructor-functions}
 
-Fungsi `constructor` hanya dijalankan sekali saat kontrak digunakan untuk pertama kalinya. Seperti `constructor` di banyak bahasa pemrograman berbasis kelas, fungsi ini sering menjalankan variabel state sesuai dengan nilai yang telah ditentukan.
+Fungsi `pembangun` hanya dijalankan sekali saat kontrak digunakan untuk pertama kalinya. Seperti `pembangun` di banyak bahasa pemrograman berbasis kelas, fungsi ini sering menjalankan variabel state sesuai dengan nilai yang telah ditentukan.
 
 ```solidity
 // Contoh Solidity
-// Jalankan data kontrak, siapkan `owner` (pemilik)
+// Jalankan data kontrak, siapkan `pemilik`
 // sesuai dengan alamat dari pembuat kontrak.
 constructor() public {
     // Semua kontrak pintar bergantung pada transaksi eksternal untuk memicu fungsinya.
@@ -200,11 +200,11 @@ kontrak ExampleDapp {
 }
 ```
 
-Sebuah kontrak lengkap mungkin tampak seperti ini. Di sini, fungsi `constructor` menyediakan nilai awal untuk variabel `dapp_name`.
+Sebuah kontrak lengkap mungkin tampak seperti ini. Di sini, fungsi `pembangun` menyediakan nilai awal untuk variabel `dapp_name`.
 
 ## Aksi dan log {#events-and-logs}
 
-Aksi memungkinkan Anda berkomunikasi dengan kontrak pintar dari frontend Anda atau aplikasi berbayar lainnya. Ketika sebuah transaksi ditambang, kontrak pintar bisa menerbitkan aski dan menulis log pada blockchain yang kemudian dapat diproses frontend.
+Aksi memungkinkan Anda berkomunikasi dengan kontrak pintar dari frontend Anda atau aplikasi berbayar lainnya. Ketika sebuah transaksi ditambang, kontrak pintar bisa menerbitkan aksi dan menulis log pada blockchain yang kemudian dapat diproses frontend.
 
 ## Contoh dengan anotasi {#annotated-examples}
 
@@ -217,17 +217,17 @@ Ini adalah beberapa contoh yang ditulis dalam Solidity. Jika Anda ingin bermain 
 // Pelajari lebih banyak: https://solidity.readthedocs.io/en/v0.5.10/layout-of-source-files.html#pragma
 pragma solidity ^0.5.10;
 
-// Tentukan sebuah kontak bernama `HelloWorld`.
+// Tentukan sebuah kontak bernama `HaloDunia`.
 // Satu kontrak adalah koleksi dari fungsi dan data (statenya).
 // Setelah disebarkan, sebuah kontrak tinggal di alamat spesifik pada blockchain Ethereum.
 // Pelajari lebih banyak: https://solidity.readthedocs.io/en/v0.5.10/structure-of-a-contract.html
-contract HelloWorld {
+kontrak HaloDunia {
 
     // Deklarasikan `message` variabel state dari `string` tipe.
     // Variabel state adalah variabel yang nilainya secara permanen disimpan dalam penyimpanan kontrak.
-    // Kata kunci `public` membuat variabel dapat diakses dari luar kontrak
+    // Kata kunci `publik` membuat variabel dapat diakses dari luar kontrak
     //dan menciptakan fungsi yang dengannya kontrak atau klien lain bisa memanggil untuk mengakses nilai.
-    string public message;
+    message publik string;
 
     // Sama seperti banyak bahasa berorientasi objek yang berbasis kelas, sebuah pembangun adalah
     // sebuah fungsi spesial yang hanya dieksekusi saat pembuatan kontrak.
@@ -235,12 +235,12 @@ contract HelloWorld {
     // Pelajari lebih banyak: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#constructors
     constructor(string memory initMessage) public {
         // Menerima satu argumen string `initMessage` dan tetapkan nilai
-        // ke dalam variabel penyimpanan `message` kontrak).
+        // ke dalam variabel penyimpanan`message` kontrak).
         message = initMessage;
     }
 
     // Sebuah fungsi publik yang menerima argumen string
-    // dan memperbarui variabel penyimpanan `message`.
+    // dan memperbarui variabel penyimpanan`message`.
     function update(string memory newMessage) public {
         message = newMessage;
     }
@@ -253,7 +253,7 @@ contract HelloWorld {
 pragma solidity ^0.5.10;
 
 contract Token {
-    // Sebuah `address` dapat disamakan dengan sebuah alamat email - ia digunakan untuk mengidentifikasi sebuah akun di Ethereum.
+    //Sebuah `alamat` dapat disamakan dengan sebuah alamat email - ia digunakan untuk mengidentifikasi sebuah akun di Ethereum.
     // Alamat bisa mewakilkan sebuah kontrak pintar atau satu akun (pengguna) eksternal.
     // Pelajari lebih banyak: https://solidity.readthedocs.io/en/v0.5.10/types.html#address
     address public owner;
@@ -268,7 +268,7 @@ contract Token {
     // Pelajari lebih banyak: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#events
     event Transfer(address from, address to, uint amount);
 
-    // Jalankan data kontrak, siapkan `owner` (pemilik)
+    // Jalankan data kontrak, siapkan `pemilik`
     // di alamat dari pembuat kontrak.
     constructor() public {
         // Semua kontrak pintar bergantung pada transaksi eksternal untuk memicu fungsinya.
@@ -281,7 +281,7 @@ contract Token {
     // Membuat sejumlah token baru dan mengirimkan mereka ke satu alamat.
     function mint(address receiver, uint amount) public {
         // `require` is struktur kontrol yang digunakan untuk melaksanakan kondisi tertentu.
-        // Jika sebuah pernyataan `require` mengevaluasi ke `false` (palsu), satu pengecualian terpicu,
+        // Jika sebuah pernyataan `require` mengevaluasi ke `palsu`, satu pengecualian terpicu,
         // yang membalikkan semua perubahan yang dibuat pada state selama pemanggilan saat ini.
         //Pelajari lebih banyak: https://solidity.readthedocs.io/en/v0.5.10/control-structures.html#error-handling-assert-require-revert-and-exceptions
 
@@ -291,7 +291,7 @@ contract Token {
         // Melaksanakan sejumlah maksimum token
         require(amount < 1e60, "Maximum issuance exceeded");
 
-        // Meningkatkan saldo dari `receiver` dalam `amount`
+        // Meningkatkan saldo dari `penerima` dalam `jumlah`
         balances[receiver] += amount;
     }
 
@@ -415,7 +415,7 @@ contract CryptoPizza is IERC721, ERC165 {
         view
         returns (uint256[] memory)
     {
-        // Gunakan lokasi penyimpanan `memory` untuk menyimpan nilai hanya untuk
+        // Gunakan lokasi penyimpanan `memori` untuk menyimpan nilai hanya untuk
         // siklus hidup dari pemanggilan fungsi ini.
         // Pelajari lebih banyak: https://solidity.readthedocs.io/en/v0.5.10/introduction-to-smart-contracts.html#storage-memory-and-the-stack
         uint256[] memory result = new uint256[](ownerPizzaCount[_owner]);
@@ -500,7 +500,7 @@ contract CryptoPizza is IERC721, ERC165 {
     }
 
     // Bakar satu Pizza - hancurkan Token secara total
-    // Modifier fungsi `external` berarti fungsi ini adalah
+    // Modifier fungsi `eksternal` berarti fungsi ini adalah
     // bagian dari antarmuka kontrak dan kontrak lain bisa memanggilnya
     function burn(uint256 _pizzaId) external {
         require(msg.sender != address(0), "Invalid address.");
@@ -652,4 +652,4 @@ Lihat dokumentasi Solidity dan Vyper untuk gambaran umum yang lebih lengkap tent
 
 - [Memperkecil kontrak untuk mengatasi batas ukuran kontrak](/developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/) _– Beberapa tips praktis untuk mengurangi ukuran kontrak pintar Anda._
 - [Pembuatan log data dari kontrak pintar dengan aksi](/developers/tutorials/logging-events-smart-contracts/) _– Pengantar aksi kontrak pintar dan cara menggunakannya untuk log data._
-- [Berinteraksi dengan kontrak lain dari Solidity](/developers/tutorials/interact-with-other-contracts-from-solidity/) _– Bagaimana menyebarkan kontrak pintar dari kontrak yang sudah ada dan berinteraksi dengan kontrak tersebut._
+- [Berinteraksi dengan kontrak lain dari Solidity](/developers/tutorials/interact-with-other-contracts-from-solidity/) _– Cara menggunakan kontrak pintar dari kontrak yang sudah ada dan berinteraksi dengan kontrak pintar tersebut._

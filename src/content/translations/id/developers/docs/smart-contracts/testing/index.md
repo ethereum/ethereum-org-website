@@ -40,7 +40,7 @@ incomplete: true
 
 ## Tutorial terkait {#related-tutorials}
 
-- [Pengaturan Integrasi Berkelanjutan Solidity dan Truffle](/developers/tutorials/solidity-and-truffle-continuous-integration-setup/) _– Bagaimana menyiapkan Travis atau Circle CI untuk pengujian Truffle bersamaan dengan plugin yang berguna._
+- [Pengaturan Integrasi Berkelanjutan Solidity dan Truffle](/developers/tutorials/solidity-and-truffle-continuous-integration-setup/) _– Cara menyiapkan Travis atau Circle CI untuk pengujian Truffle bersama dengan plugin yang berguna._
 - [Gambaran umum produk pengujian](/developers/tutorials/guide-to-smart-contract-security-tools/) _– Gambaran umum dan perbandingan dari produk pengujian berbeda._
 - [Cara menggunakan Echidna untuk menguji kontrak pintar](/developers/tutorials/how-to-use-echidna-to-test-smart-contracts/)
 - [Cara menggunakan Manticore untuk menemukan bug kontrak pintar](/developers/tutorials/how-to-use-manticor-to-find-smart-contract-bugs/)
