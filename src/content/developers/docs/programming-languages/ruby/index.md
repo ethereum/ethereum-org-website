@@ -3,12 +3,12 @@ title: Ethereum for Ruby Developers
 description: Learn how to develop for Ethereum using Ruby-based projects and tooling.
 lang: en
 sidebar: true
-incomplete: true
+incomplete: false
 ---
 
 <div class="featured">Learn how to develop for Ethereum using Ruby-based projects and tooling.</div>
 
-Use Ethereum to create decentralized applications (or "dapps") that utilize the benefits of cryptocurrency and blockchain technology. These dapps can be trustworthy, meaning that once they are deployed to Ethereum, they will always run as programmed. They can control digital assets to create new kinds of financial applications. They can be decentralized, meaning that no single entity or person controls them and are nearly impossible to censor.
+Use Ethereum to create decentralized applications (or "dapps") that utilize the benefits of cryptocurrency and blockchain technology. These dapps can be trustless, meaning that once they are deployed to Ethereum, they will always run as programmed. They can control digital assets to create new kinds of financial applications. They can be decentralized, meaning that no single entity or person controls them and are nearly impossible to censor.
 
 ## Getting started with smart contracts and the Solidity language {#getting-started-with-smart-contracts-and-solidity}
 
@@ -35,7 +35,7 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 
 ## Ruby projects and tools {#ruby-projects-and-tools}
 
-### Active: {#active}
+### Active {#active}
 
 - [eth.rb](https://github.com/q9f/eth.rb) - _Ruby library and RPC-client to handle Ethereum accounts, messages, and transactions_
 - [keccak.rb](https://github.com/q9f/keccak.rb) - _The Keccak (SHA3) hash used by Ethereum_
@@ -46,7 +46,7 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 - [omniauth-nft](https://github.com/valthon/omniauth-nft) - _OmniAuth strategy for authenticating via NFT ownership._
 - [ethereum-on-rails](https://github.com/q9f/ethereum-on-rails) - _Ethereum on Rails template which allows to connect MetaMask to Ruby on Rails_
 
-### Archived / No longer maintained: {#archived--no-longer-maintained}
+### Archived / No longer maintained {#archived--no-longer-maintained}
 
 - [web3-eth](https://github.com/spikewilliams/vtada-ethereum) - _Calling RPC methods of Ethereum node with Ruby_
 - [ethereum_tree](https://github.com/longhoangwkm/ethereum_tree) - _Ruby library to generate ETH addresses from a Hierarchical Deterministic wallet according to the BIP32 standard_
@@ -54,8 +54,8 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 - [ethereum.rb](https://github.com/EthWorks/ethereum.rb) - _Ruby Ethereum client using the JSON-RPC interface for sending transactions, creating and interacting with contracts as well as usefull toolkit to work with Ethereum node._
 - [omniauth-ethereum.rb](https://github.com/q9f/omniauth-ethereum.rb) - _Implements the Ethereum provider strategy for OmniAuth._
 
-Looking for more resources? Check out [ethereum.org/developers](/developers/).
+Looking for more resources? Check out [our Developer's home](/developers/).
 
-## Ruby Community Contributors {#ruby-community-contributors}
+## Ruby community contributors {#ruby-community-contributors}
 
-The [Ethereum Ruby Telegram Group](https://t.me/ruby_eth) is a host to a rapidly growing community and is the dedicated resource for discussions on any of the above projects and related topics.
+The [Ethereum Ruby Telegram group](https://t.me/ruby_eth) is a host to a rapidly growing community and is the dedicated resource for discussions on any of the above projects and related topics.
