@@ -15,7 +15,7 @@ Token yang Tidak Dapat Dipertukarkan (NFT) digunakan untuk mengenali sesuatu ata
 
 ERC-721 memperkenalkan sebuah standar untuk NFT, dengan kata lain, tipe Token ini adalah unik dan bisa memiliki nilai yang berbeda dari Token lainnya yang berasal dari Kontrak Pintar yang sama, mungkin dikarenakan usia, keunikan, atau bahkan hal lain seperti visualnya. Tunggu, visualnya?
 
-Ya! Semua NFT memiliki variabel `uint256` yang disebut `tokenId`, sehingga untuk Kontrak ERC-721 mana pun, pasangan `contract address, uint256 tokenId` harus bersifat unik secara global. Anggap saja, dApp bisa memiliki "konverter" yang menggunakan `tokenId` sebagai input dan output gambar dari sesuatu yang keren, seperti zombi, senjata, kemampuan, atau anak kucing yang menakjubkan!
+Ya! Semua NFT memiliki variabel `uint256` yang disebut `tokenId`, sehingga untuk Kontrak ERC-721 mana pun, pasangan `alamat kontrak, uint256 tokenId` harus bersifat unik secara global. Anggap saja, dApp bisa memiliki "konverter" yang menggunakan `tokenId` sebagai input dan output gambar dari sesuatu yang keren, seperti zombi, senjata, kemampuan, atau anak kucing yang menakjubkan!
 
 ## Prasyarat {#prerequisites}
 
@@ -231,9 +231,10 @@ recent_births = [get_event_data(w3.codec, ck_extra_events_abi[1], log)["args"] f
 - [Pelacak NFT Etherscan](https://etherscan.io/tokens-nft) mendaftarkan NFT populer di Ethereum berdasarkan volume transfer.
 - [CryptoKitties](https://www.cryptokitties.co/) adalah sebuah game yang berpusat pada mahluk yang dapat dikembangbiakkan, dikoleksi, dan begitu menggemaskan yang kita sebut CryptoKitties.
 - [Sorare](https://sorare.com/) adalah sebuah game sepakbola fantasi global di mana Anda bisa mengumpulkan item koleksi edisi terbatas, mengatur tim Anda, dan berkompetisi untuk mendapatkah hadiah.
-- [Layanan Nama Ethereum (ENS)](https://ens.domains/) menawarkan cara yang aman & terdesentralisasi untuk mengelola sumber daya baik on dan off blockchain menggunakan nama yang sederhana dan mudah dimengerti.
+- [Layanan Nama Ethereum (ENS)](https://ens.domains/) menawarkan cara yang aman dan terdesentralisasi untuk mengelola sumber daya baik on dan off blockchain menggunakan nama yang sederhana dan mudah dimengerti.
 - [Unstoppable Domains](https://unstoppabledomains.com/) adalah sebuah perusahaan berbasis di San Fransisco yang membangun domain di blockchain. Domain blockchain menggantikan alamat mata uang kripto dengan nama yang mudah dimengerti dan bisa digunakan untuk memungkinkan situs web yang tahan penyensoran.
 - [Gods Unchained Cards](https://godsunchained.com/) adalah sebuah TCG pada blockchain Ethereum yang menggunakan NFT untuk membawa kepemilikan asli ke aset dalam game.
+- [Bored Ape Yacht Club](https://boredapeyachtclub.com) adalah koleksi dari 10.000 NFT unik, yang, selain merupakan karya seni langkah yang terbukti, bertindak sebagai token keanggotaan klub, yang menyediakan fasilitas dan keuntungan yang bertambah seiring dengan waktu sebagai hasil dari usaha komunitas.
 
 ## Bacaan lebih lanjut {#further-reading}
 
