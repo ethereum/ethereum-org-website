@@ -54,6 +54,7 @@ sidebar: true
 - [Görli 水龙头](https://faucet.goerli.mudit.blog/)
 - [Kovan 水龙头](https://faucet.kovan.network/)
 - [Rinkeby 水龙头](https://faucet.rinkeby.io/)
+- [Ropsten 水龙头](https://faucet.ropsten.be/)
 
 ## 私有网络 {#private-networks}
 
@@ -63,7 +64,7 @@ sidebar: true
 
 要开发以太坊应用程序，你需要在专用网络上运行它，以便在部署它之前了解它的工作方式。 与在计算机上创建用于 web 开发的本地服务器类似，你可以创建本地区块链实例来测试你的 dapp。 这允许比公共测试网更快的迭代。
 
-有一些项目和工具专门协助这方面的工作。 进一步了解[开发网络](/developers/docs/development-networks/)。
+有一些项目和工具专门协助这方面的工作。 进一步了解[开发网络](/developers/docs/development/networks/)。
 
 ### 联盟网络 {#consortium-networks}
 
@@ -71,6 +72,11 @@ sidebar: true
 
 如果公共以太坊网络类似于公共互联网，那么你可以将联合体网络视为专用内部网。
 
+## 相关工具 {#related-tools}
+
+- [Chainlist](https://chainlist.org/) _EVM 网络列表，可以帮钱包和供应商连接到需要的链 ID 和网络 ID_
+- [基于 EVM 的链](https://github.com/ethereum-lists/chains) _给 Chainlist 提供链元数据的 GitHub 库_
+
 ## 延伸阅读 {#further-reading}
 
-_你知道有什么社区资源帮助过你吗？ 编辑并添加本页面！_
+_还有哪些社区资源对您有所帮助？ 编辑并添加本页面！_

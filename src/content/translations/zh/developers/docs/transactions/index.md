@@ -9,15 +9,15 @@ sidebar: true
 
 ## 前置要求 {#prerequisites}
 
-为了帮助您更好地理解这个页面，我们建议您先阅读[帐户](/developers/docs/accounts/)和我们的[以太坊简介](/developers/docs/intro-to-ethereum/)。
+为了帮助您更好地理解这个页面，我们建议您先阅读[账户](/developers/docs/accounts/)和我们的[以太坊简介](/developers/docs/intro-to-ethereum/)。
 
 ## 什么是交易？ {#whats-a-transaction}
 
-以太坊交易是指由外部持有的帐户发起的行动，换句话说，是指由人管理而不是智能合约管理的帐户。 例如，如果 Bob 发送 Alice 1 ETH，Bob 的帐户必须减少，Alice 必须被增加。 此状态更改的操作发生在交易中。
+以太坊交易是指由外部持有账户发起的行动，换句话说，是指由人管理而不是智能合约管理的账户。 例如，如果 Bob 发送 Alice 1 ETH，则 Bob 的帐户必须减少 1 ETH，而 Alice 的账户必须增加 1 ETH。 此项操作发生在交易中，会变更状态。
 
-![显示交易导致状态更改的图表](../../../../../developers/docs/transactions/tx.png) _图表来自 [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![显示交易导致状态更改的图表](./tx.png) _图表来自 [Ethereum EVM 插图](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
-改变 EVM 状态的交易需要向整个网络广播。 任何节点都可以在 EVM 上广播交易请求； 此后，矿工将执行交易并将由此产生的状态变化传播到网络的其他部分。
+改变 EVM 状态的交易需要广播到整个网络。 任何节点都可以在 EVM 上广播交易请求；此后，矿工将执行交易并将由此产生的状态变化传播到网络的其他部分。
 
 交易需要收费并且必须开采才能有效。 为了使这种概述更加简单，我们将其称为 Gas 费和挖矿。
 
@@ -31,7 +31,7 @@ sidebar: true
 - `maxPriorityFeePerGas` - 作为矿工小费包含的最大 gas 数量
 - `maxFeePerGas` - 愿意为交易支付的最大 gas 数量（包括 `baseFeePerGas` 和 `maxPriorityFeePerGas`）
 
-Gas 是指矿工处理交易所需的算力。 用户必须为计算支付费用。 `gasLimit` 和 `gasPrice` 决定支付给矿工的最高交易费用。 [关于 Gas 的更多信息](/developers/docs/gas/)。
+Gas 是指矿工处理交易所需的算力。 用户必须为此计算支付费用。 `gasLimit` 和 `gasPrice` 决定支付给矿工的最高交易费用。 [关于 Gas 的更多信息](/developers/docs/gas/)。
 
 交易对象看起来像这样：
 
@@ -47,7 +47,7 @@ Gas 是指矿工处理交易所需的算力。 用户必须为计算支付费用
 }
 ```
 
-但交易对象需要使用发送者的私钥签名。 这证明交易只可能来自发送者，而不是以欺诈方式发送。
+但交易对象需要使用发送者的私钥签名。 这证明交易只可能来自发送者，而不是欺诈。
 
 Geth 这样的以太坊客户端将处理此签名过程。
 
@@ -101,7 +101,7 @@ Geth 这样的以太坊客户端将处理此签名过程。
 - `raw` 是已签名交易的 RLP（Recursive Length Prefix）编码形式。
 - `tx` 是已签名交易的 JSON 形式。
 
-具备签名哈希，可通过加密技术证明交易来自发送者并提交网络。
+如有签名哈希，可通过加密技术证明交易来自发送者并提交网络。
 
 ## 交易类型 {#types-of-transactions}
 
@@ -114,7 +114,7 @@ Geth 这样的以太坊客户端将处理此签名过程。
 
 如上所述，执行交易需要花费 [Gas](/developers/docs/gas/)。 简单的转让交易需要 21000 个 Gas。
 
-假设 Bob 要为 Alice 发送 1ETH，需支付 190 gwei 的 `baseFeePergas` 和 10 gwei 的 `maxPriorityFeePerGas`，Bob 需要支付以下费用：
+假设 Bob 要向 Alice 发送 1 ETH，需支付 190 gwei 的 `baseFeePergas` 和 10 gwei 的 `maxPriorityFeePerGas`，那么 Bob 需要支付以下费用：
 
 ```
 (190 + 10) * 21000 = 4,200,000 gwei
@@ -122,23 +122,23 @@ Geth 这样的以太坊客户端将处理此签名过程。
 0.0042 ETH
 ```
 
-Bob 的帐户将会减少 **-1.0042 ETH**
+Bob 的账户将会减少 **1.0042 ETH**
 
-Alice 的帐户将会增加 **+1.0 ETH**
+Alice 的账户将会增加 **+1.0 ETH**
 
-此基本费用将会燃烧 **-0.00399 ETH**
+扣掉 **0.00399 ETH** 的基本费用
 
 矿工保留小费 **+0.000210 ETH**
 
 任何智能合约交互也需要 Gas。
 
-![未使用的 Gas 退款情况图](../../../../../developers/docs/transactions/gas-tx.png) _该图改编自 [以太坊 EVM 说明](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![未使用 Gas 退款情况图](./gas-tx.png) _图表来自 [Ethereum EVM 插图](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
-任何未用于交易的 gas 都退还给用户帐户。
+任何未用于交易的 gas 都退还至用户账户。
 
 ## 交易生命周期 {#transaction-lifecycle}
 
-一旦交易被提交，就会发生以下情况：
+一旦提交交易，就会发生以下情况：
 
 1. 一旦您发送交易，加密法生成交易哈希： `0x97d99bc7729211111a21b12c933c949d4f31684f1d6954ff477d0477538ff017`
 2. 然后将该交易转播到网络，并且与大量其他交易一起包含在一个集合中。
@@ -150,7 +150,7 @@ Alice 的帐户将会增加 **+1.0 ETH**
 
 ## 直观演示 {#a-visual-demo}
 
-跟随 Austin 了解交易、Gas 和挖矿。
+观看 Austin 引导您了解交易、Gas 和挖矿。
 
 <YouTube id="er-0ihqFQB0" />
 
@@ -160,9 +160,9 @@ Alice 的帐户将会增加 **+1.0 ETH**
 
 `RLP([nonce, gasPrice, gasLimit, to, value, data, v, r, s])`
 
-以太坊经过演变，已经支持多种类型的交易，从而能够在不影响传统交易格式的情况下实现访问列表和 [EIP-1559](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md) 等新功能。
+以太坊经过演变，现已支持多种类型的交易，能够在不影响传统交易格式的情况下实现接入列表和 [EIP-1559](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md) 等新功能。
 
-[EIP-2718：Typed Transaction Envelope](https://eips.ethereum.org/EIPS/eip-2718) 定义了交易类型，是未来交易类型的”信封“。
+[EIP-2718：Typed Transaction Envelope](https://eips.ethereum.org/EIPS/eip-2718) 定义了交易类型，是未来交易类型的“信封”。
 
 EIP-2718 是用于类型化交易的新通用信封。 在新的标准中，交易被理解为：
 
@@ -170,11 +170,8 @@ EIP-2718 是用于类型化交易的新通用信封。 在新的标准中，交�
 
 字段定义为：
 
-## 视觉演示 {#a-visual-demo}
-
-观看 Austin 引导您了解交易、Gas 和挖矿。
-
-<YouTube id="er-0ihqFQB0" />
+- `TransactionType` - 一个在 0 到 0x7f 之间的数字，总共为 128 种可能的交易类型。
+- `TransactionPayload` - 由交易类型定义的任意字节数组。
 
 ## 延伸阅读 {#further-reading}
 
