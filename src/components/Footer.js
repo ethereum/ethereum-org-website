@@ -144,6 +144,10 @@ const Footer = () => {
           text: "layer-2",
         },
         {
+          to: "/run-a-node/",
+          text: "run-a-node",
+        },
+        {
           to: `/stablecoins/`,
           text: "page-stablecoins-title",
         },
