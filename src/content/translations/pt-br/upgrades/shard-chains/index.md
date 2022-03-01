@@ -5,14 +5,14 @@ lang: pt-br
 template: upgrade
 sidebar: true
 image: ../../../../../assets/upgrades/newrings.png
-summaryPoint1: A fragmentação é uma atualização para melhorar o dimensionamento e a capacidade da Ethereum.
+summaryPoint1: A fragmentação é uma atualização para melhorar o dimensionamento e a capacidade do Ethereum.
 summaryPoint2: As cadeias de fragmentos distribuem a carga da rede por 64 novas cadeias.
 summaryPoint3: Elas facilitam a execução de um nó mantendo os requisitos de hardware baixos.
 summaryPoint4: Esta atualização está planejada para logo depois da integração da rede principal com a Beacon Chain.
 ---
 
 <UpgradeStatus dateKey="page-upgrades-shards-date">
-    As cadeias de fragmentos devem ser introduzidas em algum momento de 2022, dependendo do andamento do trabalho depois da <a href="/upgrades/merge/">a integração</a>. Esses fragmentos darão a Ethereum mais capacidade de armazenamento e acesso aos dados, mas eles não serão usados para execução de código. Os detalhes disso ainda estão sendo avaliados.
+    As cadeias de fragmentos devem ser introduzidas em algum momento de 2022, dependendo do andamento do trabalho depois da <a href="/upgrades/merge/">a fusão</a>. Esses fragmentos darão ao Ethereum mais capacidade de armazenamento e acesso aos dados, mas eles não serão usados para execução de código. Os detalhes disso ainda estão sendo avaliados.
 </UpgradeStatus>
 
 ## O que é a fragmentação (sharding)? {#what-is-sharding}
@@ -29,14 +29,14 @@ A fragmentação é uma boa maneira de escalar se você quiser manter as coisas 
 
 ### Mais participação na rede {#more-network-participation}
 
-A fragmentação eventualmente permitirá você rodar o Ethereum em um laptop ou smartphone. Portanto, mais pessoas devem poder participar ou executar os [clientes](/developers/docs/nodes-and-clients/) num Ethereum fragmentado. Isso aumentará a segurança pois quanto mais descentralizada for a rede, menor será a área de ataque.
+A fragmentação eventualmente permitirá você executar o Ethereum em um laptop ou smartphone. Portanto, mais pessoas devem poder participar ou executar os [clientes](/developers/docs/nodes-and-clients/) em um Ethereum com fragmentação. Isso aumentará a segurança pois quanto mais descentralizada for a rede, menor será a área de ataque.
 
-Com requisitos de hardware mais baixos, a fragmentação tornará mais fácil a execução dos [clientes](/developers/docs/nodes-and-clients/) por conta própria, sem depender de nenhum serviço intermediário. E, se puder, considere a execução de vários clientes. Isso pode ajudar a melhorar a integridade da rede reduzindo ainda mais os pontos de falha. [Execute um cliente Eth2](/upgrades/get-involved/)
+Com requisitos de hardware mais baixos, a fragmentação tornará mais fácil a execução dos [clientes](/developers/docs/nodes-and-clients/) por conta própria, sem depender de nenhum serviço intermediário. E, se puder, considere a execução de vários clientes. Isso pode ajudar a melhorar a integridade da rede reduzindo ainda mais os pontos de falha. [Execute um cliente da Beacon Chain](/upgrades/get-involved/)
 
 <br />
 
 <InfoBanner isWarning={true}>
-  A princípio, você precisará executar um cliente da rede principal ao mesmo tempo que seu cliente Eth2. <a href="https://launchpad.ethereum.org" target="_blank">O launchpad</a> o guiará através dos requisitos e processos de hardware. Como alternativa, você pode usar uma <a href="/developers/docs/apis/backend/#available-libraries">API de backend</a>.
+  Inicialmente, você precisará executar um cliente da rede principal de forma simultânea com um cliente da Beacon Chain. <a href="https://launchpad.ethereum.org" target="_blank">O launchpad</a> o guiará através dos requisitos e processos de hardware. Como alternativa, você pode usar uma <a href="/developers/docs/apis/backend/#available-libraries">API de back-end</a>.
 </InfoBanner>
 
 ## Cadeias de fragmentos versão 1: disponibilidade de dados {#data-availability}
@@ -48,7 +48,7 @@ Os rollups são uma tecnologia de "camada 2" que existe hoje. Eles permitem que 
 <InfoBanner isWarning={false}>
   Dado os avanços recentes em termos de pesquisa e desenvolvimento da solução de dimensionamento da camada 2, isso nos levou a priorizar a melhoria da integração, e não as cadeias de fragmentos. Estas serão priorizadas logo após a transição da rede principal para o sistema de prova de participação.
 
-[Mais sobre rollups](/developers/docs/scaling/#rollups)
+[Mais sobre rollups](/developers/docs/scaling/layer-2-rollups/)
 </InfoBanner>
 
 ## Cadeias de fragmentos versão 2: código de execução {#code-execution}
@@ -63,15 +63,15 @@ Vitalik Buterin, em uma conversa no podcast Bankless, apresentou 3 opções poss
 
 #### 1. A execução do estado não é necessária {#state-execution-not-needed}
 
-Isso significaria não dar aos fragmentos a capacidade de lidar com contratos inteligentes e deixá-los como depósitos de dados.
+Isso significaria não darmos aos fragmentos a capacidade de lidar com contratos inteligentes e deixá-los como depósitos de dados.
 
 #### 2. Tenha alguns fragmentos de execução {#some-execution-shards}
 
-Talvez haja um acordo em que não precisamos que todos os fragmentos (64 estão planejados neste momento) sejam mais inteligentes. Poderíamos simplesmente adicionar essa funcionalidade a alguns e deixar o resto. Isso poderá acelerar o processo de entrega.
+Talvez haja um compromisso no qual não necessitemos de todos os fragmentos (64 estão planejados neste momento) para ser mais inteligentes. Poderíamos simplesmente adicionar essa funcionalidade a alguns e deixar de lado os demais. Isso poderá acelerar o processo de entrega.
 
 #### 3. Esperar até que possamos fazer snarks de Conhecimento Zero (CZ) {#wait-for-zk-snarks}
 
-Finalmente, talvez devamos discutir esse tema novamente quando haja uma maior definição com respeito aos snarks ZK. Essa é uma tecnologia que pode ajudar a trazer transações verdadeiramente privadas para a rede. Provavelmente sejam necessários fragmentos mais inteligentes, mas eles ainda estão em pesquisa e desenvolvimento.
+Finalmente, talvez devamos reabrir este debate quando os snarks (prova de validade da informação) ZK estiverem concretizados. Essa é uma tecnologia que pode ajudar a trazer transações verdadeiramente privadas para a rede. Provavelmente serão necessários fragmentos mais inteligentes, mas eles ainda estão em fase de pesquisa e desenvolvimento.
 
 #### Outras fontes {#other-sources}
 
@@ -79,15 +79,15 @@ Aqui você pode ver mais ideias sobre o mesmo tema:
 
 - [Fase 1 e o que foi feito: Eth2 como um mecanismo de disponibilidade de dados](https://ethresear.ch/t/phase-one-and-done-eth2-as-a-data-availability-engine/5269/8) – _cdetrio, ethresear.ch_
 
-Esse continua a ser um ponto de discussão atual. Assim que soubermos mais, atualizaremos estas páginas.
+Esse continua a ser um ponto de discussão ativo. Assim que soubermos mais, atualizaremos estas páginas.
 
 ## Relação entre as melhorias {#relationship-between-upgrades}
 
-Todas as atualizações da Eth2 estão de alguma forma interligadas. Vamos ver como as cadeias de fragmentos se relacionam com as outras atualizações.
+Todas as melhorias do Ethereum estão, de alguma forma, interrelacionadas. Vamos recapitular como as cadeias de fragmentos se relacionam às outras melhorias.
 
 ### Fragmentos e a beacon chain {#shards-and-beacon-chain}
 
-A Beacon Chain contém toda a lógica para manter os fragmentos seguros e sincronizados. A Beacon Chain coordenará os participantes na rede, atribuindo-os aos fragmentos nos quais eles precisam trabalhar. E também facilitará a comunicação entre fragmentos ao receber e armazenar dados de transações de fragmentos acessíveis por outros fragmentos. Isso dará aos fragmentos um panorama do estado de Ethereum, para manter tudo atualizado.
+A Beacon Chain contém toda a lógica para manter os fragmentos seguros e sincronizados. A Beacon Chain coordenará os participantes na rede, atribuindo-os aos fragmentos nos quais eles precisam trabalhar. E também facilitará a comunicação entre fragmentos recebendo e armazenando dados de transações de fragmentos acessíveis por outros fragmentos. Isso dará aos fragmentos uma fotografia do estado de Ethereum para manter tudo atualizado.
 
 <ButtonLink to="/upgrades/beacon-chain/">
   A Beacon Chain
@@ -99,9 +99,9 @@ Quando for feita a adição de fragmentos extras, a rede principal de Ethereum j
 
 Resta saber se a rede principal existirá como o único fragmento "inteligente" que poderá lidar com a execução de código. No entanto, a decisão de expandir fragmentos pode ser revista, se necessário.
 
-<div>
-  <ButtonLink to="/upgrades/merge/">A integração</ButtonLink>
-</div>
+<ButtonLink to="/upgrades/merge/">
+  A fusão
+</ButtonLink>
 
 <Divider />
 
