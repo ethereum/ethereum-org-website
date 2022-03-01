@@ -1,5 +1,5 @@
 ---
-title: Program Terjemahan
+title: Program Penerjemahan
 lang: id
 description: Bagaimana berkontribusi pada Program Terjemahan ethereum.org
 sidebar: true
@@ -11,15 +11,16 @@ Program Terjemahan adalah sebuah usaha kolaboratif untuk menerjemahkan ethereum.
 
 Kemajuan kami sejauh ini:
 
-- **2.000 +** penerjemah
-- **37** bahasa ada di situs
-- **1,9 juta** kata diterjemahkan pada tahun 2021
+- [**2.500+** penerjemah](/contributing/translation-program/acknowledgements/)
+- [**40** bahasa ada di situs](/languages/)
+- [**2,9 juta** kata telah diterjemahkan di 2021](/contributing/translation-program/acknowledgements/)
 
 Jika Anda ingin terlibat dan membantu kami mengembangkan komunitas Ethereum global dengan menerjemahkan situs web ke dalam bahasa Anda, ikuti langkah-langkah di bawah ini!
 
-<InfoBanner shouldCenter emoji=":tada:">
-  Klaim token POAP Anda! Jika Anda menerjemahkan ethereum.org pada tahun 2021, ada POAP unik yang menunggu Anda.{" "}
-  <a href="https://ethereum.org/contributing/#poap">Selengkapnya tentang POAP</a>
+<InfoBanner emoji=":tada:">
+  Lihat halaman <Link to="/contributing/translation-program/acknowledgements/">Penghargaan Penerjemah</Link> kami, dan{" "}
+  ambil token POAP Anda! Jika Anda menerjemahkan ethereum.org pada tahun 2021, ada POAP unik yang menunggu Anda.{" "}
+  <Link to="/contributing/translation-program/acknowledgements/#poap">Selengkapnya tentang POAP</Link>
 </InfoBanner>
 
 ## Misi dan visi {#mission-and-vision}
@@ -44,26 +45,31 @@ Program Terjemahan ethereum.org bertujuan untuk membuat Ethereum dapat diakses o
 
 ## Cara menerjemahkan {#how-to-translate}
 
+<InfoBanner shouldCenter emoji=":light_bulb:">
+  Kami menyarankan Anda untuk melihat Panduan Gaya Penerjemahan ethereum.org. Ini berisi beberapa panduan, instruksi, dan tips yang paling penting bagi para penerjemah dan bisa menjadi rujukan saat melokalkan situs web.
+  {" "}<Link to="/en/contributing/translation-program/translators-guide/">Lihat Panduan Gaya Penerjemahan</Link>
+</InfoBanner>
+
 1. **[Bergabung dengan projek kami di Crowdin](https://crowdin.com/project/ethereum-org/invite)**  
    Anda harus masuk ke akun Crowdin atau mendaftar jika belum memilikinya. Yang diperlukan untuk mendaftar hanyalah akun email dan kata sandi.
 
 2. **Buka bahasa yang ingin Anda terjemahkan dan cari dokumen yang akan dikerjakan**  
    Konten situs web dibagi menjadi beberapa versi dokumen dan bahasa. Anda dapat memeriksa kemajuan setiap dokumen di sebelah kanan – jika kemajuan terjemahan di bawah 100%, silakan beri kontribusi!
 
-   Tidak melihat bahasa Anda dicantumkan? [Buka sebuah masalah](https://github.com/ethereum/ethereum-org-website/issues/new/choose)
+   Tidak melihat bahasa Anda dicantumkan? [Buat masalah](https://github.com/ethereum/ethereum-org-website/issues/new/choose) atau ajukan pertanyaan di [Discord](https://discord.gg/6WX7E97) kami
 
-   ![File yang diterjemahkan dan tidak diterjemahkan di Crowdin](../../../../contributing/translation-program/crowdin-files.png)
+   ![File yang diterjemahkan dan tidak diterjemahkan di Crowdin](./crowdin-files.png)
 
-   Catatan tentang versi konten: kami menggunakan manajemen versi dalam Crowdin untuk menghindari penundaan terjemahan konten tambahan. Ketika memeriksa sebuah bahasa, misalkan, [Filipina](https://crowdin.com/project/ethereum-org/fil#) Anda akan melihat folder untuk setiap versi situs ("v2.0", "v2.1", dll.).
+   Catatan tentang versi konten: kami menggunakan 'ember konten' di dalam Crowdin untuk membuat konten berprioritas tertinggi dirilis terlebih dahulu. Ketika Anda memeriksa sebuah bahasa, misalkan, [Filipina](https://crowdin.com/project/ethereum-org/fil#) Anda akan melihat folder untuk ember konten ("1. Halaman beranda", "2. Gunakan Halaman Ethereum", dll.).
 
-   Kami mendorong agar Anda menerjemahkan versi terendah terlebih dahulu dan bekerja dengan cara Anda ke versi yang lebih tinggi (v.2.0 → v.2.1 → v.2.2 → ⋯) karena versi yang lebih rendah akan diperbarui di situs terlebih dahulu.
+   Kami mendorong Anda untuk menerjemahkan dalam urutan numerik ini (1 → 2 → 3 → ⋯) untuk memastikan halaman dengan dampak tertinggi diterjemahkan terlebih dahulu.
 
    [Pelajari selengkapnya tentang versi konten ethereum.org](/contributing/translation-program/content-versions/)
 
 3. **Terjemahkan**  
    Setelah memilih file yang ingin diterjemahkan, file itu akan terbuka di editor online. Jika belum pernah menggunakan Crowdin sebelumnya, Anda dapat menggunakan panduan cepat ini untuk melihat dasar-dasarnya.
 
-   ![Editor online Crowdin](../../../../contributing/translation-program/online-editor.png)
+   ![Editor online Crowdin](./online-editor.png)
 
    **_1 – Sidebar kiri_**
 
@@ -90,39 +96,54 @@ Program Terjemahan ethereum.org bertujuan untuk membuat Ethereum dapat diakses o
 4. **Proses peninjauan**  
    Setelah Anda menyelesaikan terjemahan (yaitu semua file untuk tampilan versi konten sudah 100%), layanan terjemahan profesional kami akan meninjau (dan berpotensi mengedit) konten. Setelah peninjauan selesai (yaitu kemajuan peninjauan sudah 100%), kami akan menambahkannya ke situs web.
 
+<InfoBanner shouldCenter emoji=":warning:">
+  Harap tdak menggunakan terjemahan mesin untuk menerjemahkan proyek tersebut. Semua terjemahan akan diulas sebelum ditambahkan ke situs web. Jika terjemahan usulan Anda didapati sebagai diterjemahkan mesin, terjemahan akan ditolak dan para kontributor yang sering menggunakan terjemahan mesin akan dikeluarkan dari proyek.
+</InfoBanner>
+
 Ada pertanyaan? Atau ingin kolaborasi dengan tim kami atau penerjemah lainnya? Silakan posting di kanal #translations dari server [Discord ethereum.org](https://discord.gg/6WX7E97) kami
 
 Anda juga dapat menghubungi kami ke translations@ethereum.org
 
 Terima kasih atas partisipasi Anda dalam Program Terjemahan ethereum.org!
 
+**Jam kerja untuk para penerjemah**
+
+Ada jam kerja bagi para penerjemah pada hari Rabu kedua setiap bulannya. Ini diadakan di kanal suara #office-hours di [Discord ethereum.org](https://discord.gg/geKhWjtF), tempat Anda juga dapat menemukan waktu yang tepat dan detail tambahannya.
+
+Tujuan dari jam kerja adalah untuk memungkinkan para penerjemah kami menanyakan pertanyaan tentang proses penerjemahan, memberikan umpan balik tentang program, membagikan ide-ide mereka, atau hanya sekadar mengobrol dengan kami. Para peserta juga dapat belajar lebih banyak tentang program penerjemahan dan mendapatkan beberapa informasi tentang menjadi penerjemah ethereum.org. Terakhir, kami ingin menggunakan panggilan ini untuk mengomunikasikan pengembangan terkini tentang program penerjemahan dan membagikan tips serta instruksi kunci dengan para kontributor kami.
+
+Jika Anda adalah seorang penerjemah ethereum.org atau ingin menjadi salah satunya, silakan bergabung dengan kami dalam salah satu sesi ini.
+
 <InfoBanner shouldCenter emoji=":information_source:">
-  Jika Anda membantu kami dengan terjemahan, Anda mungkin menemukan beberapa informasi yang berguna dalam FAQ terjemahan kami. 
-  {" "}<a href="/contributing/translation-program/faq/">FAQ Menerjemahkan ethereum.org</a>
+  Jika Anda membantu kami dengan terjemahan, Anda mungkin menemukan beberapa informasi yang berguna dalam Pertanyaan yang Sering Diajukan tentang terjemahan kami.
+  {" "}<Link to="/en/contributing/translation-program/faq/">Pertanyaan yang Sering Diajukan tentang menerjemahkan ethereum.org</Link>
 </InfoBanner>
 
 ## Sumber Daya {#resources}
 
-**Peralatan**
+### Panduan {#guides}
+
+- [Panduan Gaya Penerjemahan](/contributing/translation-program/translators-guide/) _– Instruksi dan tips untuk penerjemah ethereum.org_
+- [Pertanyaan yang Sering Diajukan tentang penerjemahan](/contributing/translation-program/faq/) _– Pertanyaan yang paling sering diajukan dan jawabannya tentang Program Penerjemahan ethereum.org_
+- [Versi konten](/contributing/translation-program/content-versions/) _– halaman mana yang termasuk dalam setiap versi konten ethereum.org_
+
+### Perangkat {#tools}
 
 - [Portal Bahasa Microsoft](https://www.microsoft.com/en-us/language) _– berguna untuk menemukan dan memeriksa terjemahan standar istilah_
 - [Linguee](https://www.linguee.com/) _– mesin pencarian khusus terjemahan dan kamus yang memungkinkan pencarian berdasarkan kata atau frasa_
 - [Pencarian istilah Proz](https://www.proz.com/search/) _– database kamus terjemahan dan glosarium untuk istilah khusus_
-- [Eurotermbank](https://www.eurotermbank.com/) _–koleksi terminologi Eropa dalam 42 bahasa_
+- [Eurotermbank](https://www.eurotermbank.com/) _– koleksi terminologi Eropa dalam 42 bahasa_
 
-**Komunitas**
+### Komunitas {#communities}
 
-- [Grup Terjemahan Khusus Bahasa](https://discord.gg/6WX7E97) _– sebuah inisiatif untuk menghubungkan penerjemah ethereum.org ke dalam Grup Terjemahan_
+- [Grup penerjemahan Discord khusus bahasa](https://discord.gg/6WX7E97) _– sebuah inisiatif untuk menghubungkan para penerjemah ethereum.org ke dalam Grup Penerjemahan_
 - [Grup penerjemah bahasa Mandarin](https://www.notion.so/Ethereum-org-05375fe0a94c4214acaf90f42ba40171) _– Halaman gagasan untuk memudahkan koordinasi di antara para penerjemah bahasa Mandarin_
 
-**Ikhtisar versi**
-
-- [Versi konten](/contributing/translation-program/content-versions/) _– Halaman mana yang termasuk dalam setiap versi konten ethereum.org_
-
-**Pembaruan terbaru**
+### Pembaruan terbaru {#latest-updates}
 
 Untuk tetap mendapatkan info terkini tentang kemajuan Program Terjemahan terbaru, Anda dapat mengikuti [blog Yayasan Ethereum](https://blog.ethereum.org/):
 
+- [Pembaruan tonggak pencapaian Oktober 2021](https://blog.ethereum.org/2021/10/04/translation-program-update/)
 - [Pembaruan tonggak pencapaian Desember 2020](https://blog.ethereum.org/2020/12/21/translation-program-milestones-updates-20/)
 - [Pembaruan tonggak pencapaian Juli 2020](https://blog.ethereum.org/2020/07/29/ethdotorg-translation-milestone/)
 - [Peluncuran Program Terjemahan Agustus 2019](https://blog.ethereum.org/2019/08/20/translating-ethereum-for-our-global-community/)
