@@ -60,7 +60,7 @@ Per poter distribuire il nostro smart contract alla rete di prova, avremo bisogn
 
 Per ricontrollare che ci sia il saldo, facciamo una richiesta [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) usando lo [strumento compositore di Alchemy](https://composer.alchemyapi.io?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). Questo restituirà l'importo di ETH nel nostro portafoglio. Dopo aver inserito l'indirizzo del tuo account di MetaMask e aver cliccato “Invia richiesta”, dovresti vedere una risposta come questa:
 
-    `{"jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000"}`
+    {"jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000"}
 
 **NOTA:** Questo risultato è in wei non in ETH. Wei è usato come taglio più piccolo dell'ether. La conversione da wei a ETH è: 1 eth = 10<sup>18</sup> wei. Quindi se convertiamo 0xde0b6b3a7640000 in decimali, otteniamo 1\*10<sup>18</sup> wei, pari a 1 ETH.
 
