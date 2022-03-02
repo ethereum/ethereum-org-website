@@ -106,7 +106,7 @@ const TranslationBannerLegal = ({
     } else {
       setIsOpen(shouldShow)
     }
-  }, [originalPagePath, shouldShow])
+  }, [shouldShow])
 
   return (
     <BannerContainer isOpen={isOpen}>
