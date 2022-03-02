@@ -413,6 +413,14 @@ exports.createSchemaCustomization = ({ actions }) => {
       location: String
       type: String
       link: String
+      address: String
+      skill: String
+      published: String
+      sourceUrl: String
+      source: String
+      author: String
+      tags: [String]
+      isOutdated: Boolean
     }
     type ConsensusBountyHuntersCsv implements Node {
       username: String,
@@ -421,6 +429,13 @@ exports.createSchemaCustomization = ({ actions }) => {
     }
   `
   createTypes(typeDefs)
+
+  // Optimization. Ref: https://www.gatsbyjs.com/docs/scaling-issues/#switch-off-type-inference-for-sitepagecontext
+  createTypes(`
+    type SitePage implements Node @dontInfer {
+      path: String!
+    }
+  `)
 }
 
 // Build lambda functions when the build is complete and the `/public` folder exists

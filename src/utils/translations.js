@@ -1,5 +1,22 @@
-const defaultStrings = require("../intl/en.json")
-const languageMetadata = require("../data/translations.json")
+const allLanguages = require("../data/translations.json")
+
+const buildLangs = (process.env.GATSBY_BUILD_LANGS || "")
+  .split(",")
+  .filter(Boolean)
+
+// will take the same shape as `allLanguages`. Only thing we are doing
+// here is filtering the desired langs to be built
+const languageMetadata = Object.fromEntries(
+  Object.entries(allLanguages).filter(([lang]) => {
+    // BUILD_LANGS === empty means to build all the langs
+    // English is the default lang, it's always enabled
+    if (!buildLangs.length) {
+      return true
+    }
+
+    return buildLangs.includes(lang)
+  })
+)
 
 const supportedLanguages = Object.keys(languageMetadata)
 const legacyHomepageLanguages = supportedLanguages.filter(
@@ -15,6 +32,7 @@ const consoleError = (message) => {
 
 // Returns the en.json value
 const getDefaultMessage = (key) => {
+  const defaultStrings = require("../intl/en.json")
   const defaultMessage = defaultStrings[key]
   if (defaultMessage === undefined) {
     consoleError(
@@ -51,6 +69,7 @@ const translateMessageId = (id, intl) => {
 }
 
 // Must export using ES5 to import in gatsby-node.js
+module.exports.allLanguages = allLanguages
 module.exports.languageMetadata = languageMetadata
 module.exports.supportedLanguages = supportedLanguages
 module.exports.getDefaultMessage = getDefaultMessage

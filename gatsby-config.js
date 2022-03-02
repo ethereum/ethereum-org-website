@@ -1,9 +1,19 @@
-const translations = require("./src/utils/translations")
 require("dotenv").config()
 
-const supportedLanguages = translations.supportedLanguages
+const { supportedLanguages, allLanguages } = require("./src/utils/translations")
+
 const defaultLanguage = `en`
 const siteUrl = `https://ethereum.org`
+
+const ignoreContent = (process.env.IGNORE_CONTENT || "")
+  .split(",")
+  .filter(Boolean)
+
+const ignoreTranslations = Object.keys(allLanguages)
+  .filter((lang) => {
+    return !supportedLanguages.includes(lang)
+  })
+  .map((lang) => `**/translations\/${lang}`)
 
 module.exports = {
   siteMetadata: {
@@ -184,6 +194,7 @@ module.exports = {
       options: {
         name: `content`,
         path: `${__dirname}/src/content`,
+        ignore: [...ignoreContent, ...ignoreTranslations],
       },
     },
     // Source data
