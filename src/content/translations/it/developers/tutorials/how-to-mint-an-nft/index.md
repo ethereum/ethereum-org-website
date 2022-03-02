@@ -192,7 +192,7 @@ Il tuo file mint-nft.js dovrebbe somigliare a questo ora:
 
 Ora che abbiamo creato la nostra transazione, dobbiamo firmarla per inviarla. Ecco dove useremo la nostra chiave privata.
 
-`web3.eth. endSignedTransaction` ci darà l'hash della transazione, che possiamo usare per assicurarci che la nostra transazione sia stata minata e non sia stata eliminata dalla rete. Noterai nella sezione di firma della transazione che abbiamo aggiunto dei controlli degli errori, per poter sapere se la nostra transazione è passata correttamente.
+`web3.eth.endSignedTransaction` ci darà l'hash della transazione, che possiamo usare per assicurarci che la nostra transazione sia stata minata e non sia stata eliminata dalla rete. Noterai nella sezione di firma della transazione che abbiamo aggiunto dei controlli degli errori, per poter sapere se la nostra transazione è passata correttamente.
 
 ```js
 require("dotenv").config()
