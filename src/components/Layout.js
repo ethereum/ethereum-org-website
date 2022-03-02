@@ -16,6 +16,7 @@ import SideNavMobile from "./SideNavMobile"
 // TODO: Remove Feb 9 2022
 import UpgradeBannerNotification from "./UpgradeBannerNotification"
 import TranslationBanner from "./TranslationBanner"
+import TranslationBannerLegal from "./TranslationBannerLegal"
 
 import { ZenModeContext } from "../contexts/ZenModeContext"
 
@@ -126,6 +127,7 @@ const Layout = (props) => {
 
   const isPageLanguageEnglish = intl.language === intl.defaultLanguage
   const isPageContentEnglish = !!props.pageContext.isContentEnglish
+  const isLegal = !!props.pageContext.isLegal
   const isTranslationBannerIgnored = !!props.pageContext.ignoreTranslationBanner
   const isPageTranslationOutdated =
     !!props.pageContext.isOutdated ||
@@ -153,6 +155,11 @@ const Layout = (props) => {
             <TranslationBanner
               shouldShow={shouldShowTranslationBanner}
               isPageContentEnglish={isPageContentEnglish}
+              isPageRightToLeft={isPageRightToLeft}
+              originalPagePath={intl.originalPath}
+            />
+            <TranslationBannerLegal
+              shouldShow={isLegal}
               isPageRightToLeft={isPageRightToLeft}
               originalPagePath={intl.originalPath}
             />
