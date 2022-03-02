@@ -9,7 +9,6 @@ const buildLangs = (process.env.GATSBY_BUILD_LANGS || "")
 const languageMetadata = Object.fromEntries(
   Object.entries(allLanguages).filter(([lang]) => {
     // BUILD_LANGS === empty means to build all the langs
-    // English is the default lang, it's always enabled
     if (!buildLangs.length) {
       return true
     }
