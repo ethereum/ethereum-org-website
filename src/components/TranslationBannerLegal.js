@@ -124,7 +124,7 @@ const TranslationBannerLegal = ({
           <ButtonRow>
             <ButtonPrimary
               onClick={() => {
-                localStorage.setItem("dont-show-translation-legal-banner", true)
+                localStorage.setItem(`dont-show-translation-legal-banner-${originalPagePath}`, true)
                 setIsOpen(false)
               }}
             >
