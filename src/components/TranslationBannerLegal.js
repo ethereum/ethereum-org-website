@@ -101,12 +101,16 @@ const TranslationBannerLegal = ({
   const [isOpen, setIsOpen] = useState(false)
 
   useEffect(() => {
-    if (localStorage.getItem("dont-show-translation-legal-banner") === "true") {
+    if (
+      localStorage.getItem(
+        `dont-show-translation-legal-banner-${originalPagePath}`
+      ) === "true"
+    ) {
       setIsOpen(false)
     } else {
       setIsOpen(shouldShow)
     }
-  }, [shouldShow])
+  }, [originalPagePath, shouldShow])
 
   return (
     <BannerContainer isOpen={isOpen}>
@@ -124,7 +128,10 @@ const TranslationBannerLegal = ({
           <ButtonRow>
             <ButtonPrimary
               onClick={() => {
-                localStorage.setItem(`dont-show-translation-legal-banner-${originalPagePath}`, true)
+                localStorage.setItem(
+                  `dont-show-translation-legal-banner-${originalPagePath}`,
+                  true
+                )
                 setIsOpen(false)
               }}
             >
