@@ -1,5 +1,5 @@
 ---
-title: Ethereum per Sviluppatori JavaScript
+title: Ethereum per sviluppatori JavaScript
 description: Impara a sviluppare per Ethereum usando progetti e strumenti basati su JavaScript.
 lang: it
 sidebar: true
@@ -7,7 +7,7 @@ sidebar: true
 
 JavaScript è tra i linguaggi più popolari nell'ecosistema Ethereum. C'è persino un [team](https://github.com/ethereumjs) che si occupa di trasferire Ethereum il più possibile in JavaScript.
 
-Ci sono opportunità di scrivere in JavaScript (o simile) a [tutti i livelli dello stack](/developers/docs/ethereum-stack/).
+Esistono opportunità per scrivere in JavaScript (o simile) a [tutti i livelli dello stack](/developers/docs/ethereum-stack/).
 
 ## Interagire con Ethereum {#interact-with-ethereum}
 
@@ -32,7 +32,7 @@ Scopri di più sugli [Smart Contract](/developers/docs/smart-contracts/).
 
 ### La macchina virtuale Ethereum {#the-ethereum-virtual-machine}
 
-Esiste un'implementazione Javascript della [macchina virtuale di Ethereum](/developers/docs/evm/), che supporta le regole più recenti relative alle diramazioni della rete. Le regole relative alle diramazioni si riferiscono alle modifiche apportate alla macchina virtuale di Ethereum (EVM) a seguito di upgrade pianificati.
+Esiste un'implementazione Javascript della [macchina virtuale di Ethereum](/en/developers/docs/evm/), che supporta le regole più recenti relative alle diramazioni della rete. Le regole relative alle diramazioni si riferiscono alle modifiche apportate alla macchina virtuale di Ethereum (EVM) a seguito di upgrade pianificati.
 
 È suddivisa in vari pacchetti JavaScript che puoi leggere per comprendere meglio:
 

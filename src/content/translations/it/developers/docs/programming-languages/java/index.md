@@ -21,7 +21,7 @@ Hai prima bisogno di nozioni di base? Dai un'occhiata a [ethereum.org/learn](/le
 - [Write your First Smart Contract](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
 - [Learn How to Compile and Deploy Solidity](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 
-## Lavorare con client Ethereum
+## Lavorare con client Ethereum {#working-with-ethereum-clients}
 
 Scopri come utilizzare [Web3J](https://github.com/web3j/web3j) e Hyperledger Besu, due dei principali client Java Ethereum
 
@@ -53,7 +53,7 @@ Scopri come utilizzare [Web3J](https://github.com/web3j/web3j) e Hyperledger Bes
 
 Cerchi altre risorse? Dai un'occhiata a [ethereum.org/developers.](/developers/)
 
-## Collaboratori della community Java {#java-community-contributors}
+## Collaboratori della community di Java {#java-community-contributors}
 
 - [IO Builders](https://io.builders)
 - [Kauri](https://kauri.io)

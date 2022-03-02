@@ -19,7 +19,7 @@ I framework sono già dotati di molte funzionalità, come:
 
 ## Prerequisiti {#prerequisites}
 
-Prima di iniziare a studiare i framework, raccomandiamo la lettura della nostra introduzione alle [dapps](/developers/docs/dapps/) e allo [stack Ethereum](/developers/docs/ethereum-stack/).
+Prima di iniziare a studiare i framework, raccomandiamo la lettura della nostra introduzione alle [dApp](/developers/docs/dapps/) e allo [stack di Ethereum](/developers/docs/ethereum-stack/).
 
 ## Framework disponibili {#available-frameworks}
 
@@ -28,21 +28,26 @@ Prima di iniziare a studiare i framework, raccomandiamo la lettura della nostra 
 - [trufflesuite.com](https://www.trufflesuite.com/)
 - [GitHub](https://github.com/trufflesuite/truffle)
 
-**Embark:** **_ ambiente di sviluppo, framework di test e altri strumenti integrati con Ethereum, IPFS e Whisper_**
-
-- [Documentazione](https://embark.status.im/docs/)
-- [GitHub](https://github.com/embark-framework/embark)
-
-**Epirus:** **_ piattaforma per sviluppare, distribuire e monitorare applicazioni blockchain sulla JVM_**
-
-- [Home page](https://www.web3labs.com/epirus)
-- [Documentazione](https://docs.epirus.io)
-- [GitHub](https://github.com/epirus-io/epirus-cli)
-
 **Hardhat:** **_ ambiente di sviluppo Ethereum per professionisti_**
 
 - [hardhat.org](https://hardhat.org)
 - [GitHub](https://github.com/nomiclabs/hardhat)
+
+**Brownie:** **_ ambiente di sviluppo e framework per il test basati su Python _**
+
+- [Documentazione](https://eth-brownie.readthedocs.io/en/latest/)
+- [GitHub](https://github.com/eth-brownie/brownie)
+
+**Embark:** **_ ambiente di sviluppo, framework di test e altri strumenti integrati con Ethereum, IPFS e Whisper._**
+
+- [Documentazione](https://embark.status.im/docs/)
+- [GitHub](https://github.com/embark-framework/embark)
+
+**Web3j -** **_Una piattaforma per sviluppare applicazioni della blockchain sulla JVM_**
+
+- [Home page](https://www.web3labs.com/web3j-sdk)
+- [Documentazione](https://docs.web3j.io)
+- [GitHub](https://github.com/web3j/web3j)
 
 **OpenZeppelin SDK:** **_ strumenti per Smart Contract all'avanguardia. Suite di strumenti per sviluppare, compilare, aggiornare, distribuire Smart Contract e interagirvi_**
 
@@ -50,17 +55,12 @@ Prima di iniziare a studiare i framework, raccomandiamo la lettura della nostra 
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-sdk)
 - [Forum della community](https://forum.openzeppelin.com/c/support/17)
 
-**Brownie:** **_ ambiente di sviluppo e framework per il test basati su Python _**
-
-- [Documentazione](https://eth-brownie.readthedocs.io/en/latest/)
-- [GitHub](https://github.com/eth-brownie/brownie)
-
-**Create Eth App:** **_ crea app per Ethereum con un comando. Offre una vasta scelta di framework per l'interfaccia utente e modelli DeFI tra cui scegliere_**
+**Create Eth App:** **_crea app per Ethereum con un comando. Offre una vasta scelta di framework per l'interfaccia utente e modelli DeFI tra cui scegliere._**
 
 - [GitHub](https://github.com/paulrberg/create-eth-app)
-- [Templates](https://github.com/PaulRBerg/create-eth-app/tree/develop/templates)
+- [Template](https://github.com/PaulRBerg/create-eth-app/tree/develop/templates)
 
-**scaffold-eth:** **_ Hardhat + Create Eth App: tutto ciò che serve per iniziare a costruire applicazioni decentralizzate sulla base di Smart Contract._**
+**Scaffold-Eth:** **_I componenti Ethers.js + Hardhat + React e gli hook per web3: tutto ciò che occorre per iniziare a creare applicazioni decentralizzate alimentate da smart contract._**
 
 - [GitHub](https://github.com/austintgriffith/scaffold-eth)
 
@@ -69,11 +69,16 @@ Prima di iniziare a studiare i framework, raccomandiamo la lettura della nostra 
 - [Sito Web](https://thegraph.com/)
 - [Guida](/developers/tutorials/the-graph-fixing-web3-data-querying/)
 
-**Alchemy:** **_ piattaforma di sviluppo Ethereum._**
+**Alchemy:** **_ piattaforma di sviluppo di Ethereum._**
 
-- [alchemyapi.io](https://alchemyapi.io/)
+- [alchemy.com](https://www.alchemy.com/)
 - [GitHub](https://github.com/alchemyplatform)
-- [Discord](https://discord.gg/kwqVnrA)
+- [Discord](https://discord.com/invite/A39JVCM)
+
+**Dapptools:** **_una suite di strumenti CLI incentrati su Ethereum che segue la filosofia di progettazione di Unix, che favorisce la componibilità, la configurabilità e l'estensibilità._**
+
+- [Home page](https://dapp.tools/)
+- [GitHub](https://github.com/dapphub/dapptools/)
 
 ## Letture consigliate {#further-reading}
 
