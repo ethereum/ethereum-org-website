@@ -10,9 +10,7 @@ const ignoreContent = (process.env.IGNORE_CONTENT || "")
   .filter(Boolean)
 
 const ignoreTranslations = Object.keys(allLanguages)
-  .filter((lang) => {
-    return !supportedLanguages.includes(lang)
-  })
+  .filter((lang) => !supportedLanguages.includes(lang))
   .map((lang) => `**/translations\/${lang}`)
 
 module.exports = {
