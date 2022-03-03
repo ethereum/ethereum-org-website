@@ -17,7 +17,7 @@ sidebar: true
 
 ### 行为 {#behaviors}
 
-当编写智能合约时，您很可能会发现自己在写重复的代码。 比如说在智能合约中指派一个*管理员*地址执行受保护的操作，或添加一个紧急暂停按钮以应对预料不到的问题。
+当编写智能合约时，您很可能会发现自己在写重复的代码。 比如说在智能合约中指派一个*管理员*地址执行受保护的操作，或添加一个紧急*暂停*按钮以应对预料不到的问题。
 
 智能合约库通常提供这些行为的可复用实现方式为[标准库](https://solidity.readthedocs.io/en/v0.7.2/contracts.html#libraries)或在 solidity 中通过[继承](https://solidity.readthedocs.io/en/v0.7.2/contracts.html#inheritance)的方式实现。
 
