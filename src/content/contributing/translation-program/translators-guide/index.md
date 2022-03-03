@@ -129,7 +129,7 @@ Some terms might not have established translations in other languages, and are w
 
 While translating these terms can sound unnatural, since the English version is commonly used in other languages as well, it is highly recommended that they are translated.
 
-When translating them, feel free to get creative, use descriptive translations, or simply translate them literally. If you strongly suspect that translating such terms will lead to confusion, because most people know them by their English equivalent, you can add the original term in brackets.
+When translating them, feel free to get creative, use descriptive translations, or simply translate them literally.
 
 **The reason why most terms should be translated, instead of leaving some in English, is the fact that this new terminology will become more widespread in the future, as more people start using Ethereum and related technologies. If we want to onboard more people from all over the world to this space, we need to provide understandable terminology in as many languages as possible, even if we need to create it ourselves.**
 
