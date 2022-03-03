@@ -21,7 +21,7 @@ Because of this context, we need some specific information when you suggest a la
 
 Some information we will need beyond standard information of the Layer 2 are:
 
-- [L2Beat page](https://l2beat.com) - in order to be considered we need this project to be featured on L2beat. This resource provides a great risk assessment of layer 2 projects.
+- [L2Beat page](https://l2beat.com) - in order to be considered we need this project to be featured on L2beat. This resource provides a great risk assessment of layer 2 projects. If the project is not featured on L2Beat, they will not be considered for ethereum.org.
 - Is the project open source
 - What kind of layer 2 is it? Optimistic? ZK? Validium?
 - Bridges - how are users able to onboard to the layer 2.
