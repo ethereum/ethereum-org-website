@@ -1404,6 +1404,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="http://fault.dev"><img src="https://avatars.githubusercontent.com/u/58883403?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Afr Schoe</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=q9f" title="Code">💻</a> <a href="https://github.com/ethereum/ethereum-org-website/commits?author=q9f" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/jamongeon1"><img src="https://avatars.githubusercontent.com/u/94926423?v=4?s=100" width="100px;" alt=""/><br /><sub><b>jamongeon1</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=jamongeon1" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/JayGreck"><img src="https://avatars.githubusercontent.com/u/56350730?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Jay</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=JayGreck" title="Code">💻</a></td>
   </tr>
 </table>
 
