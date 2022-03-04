@@ -51,7 +51,7 @@ EVM 作为一个[堆栈机](https://wikipedia.org/wiki/Stack_machine)运行，�
 
 已编译的智能合约字节码作为许多 EVM [ opcodes ](/developers/docs/evm/opcodes)执行，它们执行标准的堆栈操作，例如 ` XOR`、` AND`、` ADD`、`SUB`等。 EVM 还实现了一些区块链特定的堆栈操作，如 `ADDRESS`、`BALANCE`、`BLOCKHASH` 等。
 
-![表明 EVM 操作需要 Gas 的图表](../gas/gas.png) _图表改编自[以太坊 EVM 说明](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![表明 EVM 操作需要 Gas 的图表](../../../../../developers/docs/gas/gas.png) _图表改编自[以太坊 EVM 说明](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 ## EVM 实现 {#evm-implementations}
 
