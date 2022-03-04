@@ -1,5 +1,5 @@
 ---
-title: Yayasan Ethereum & program hibah masyarakat
+title: Yayasan Ethereum dan program hibah masyarakat
 description: Daftar program hibah di seluruh ekosistem Ethereum.
 sidebar: true
 lang: id
@@ -11,7 +11,7 @@ Program-program yang tercantum di bawah menawarkan berbagai hibah pendanaan untu
 
 Daftar ini dikurasi oleh komunitas kami. Jika ada yang kurang atau salah, mohon edit halaman ini!
 
-### Ekosistem Ethereum yang luas {#broad-ethereum-ecosystem}
+## Ekosistem Ethereum yang luas {#broad-ethereum-ecosystem}
 
 Program-program ini mendukung ekosistem Ethereum yang luas dengan menawarkan hibah untuk cakupan proyek yang luas. Mencakup solusi untuk skalabilitas, membangun komunitas, keamanan, privasi, dan lainnya. Hibah ini tidak spesifik untuk satu platform Ethereum dan merupakan tempat yang baik untuk memulai jika Anda tidak yakin.
 
@@ -22,18 +22,22 @@ Program-program ini mendukung ekosistem Ethereum yang luas dengan menawarkan hib
 - [Moloch DAO](https://www.molochdao.com/) - _Privasi, penskalaan lapisan 2, keamanan klien, dan lainnya_
 - [Hibah Terbuka](https://opengrants.com/explore)
 
-### Proyek tertentu {#project-specific}
+## Proyek tertentu {#project-specific}
 
 Proyek-proyek ini telah menciptakan hibah sendiri untuk proyek-proyek yang bertujuan untuk mengembangkan dan bereksperimen dengan teknologi sendiri.
 
-- [The Graph](https://airtable.com/shrdfvnFvVch3IOVm) – _ekosistem [The Graph](https://thegraph.com/)_
-- [Uniswap](https://www.unigrants.org/) – _[komunitas](https://uniswap.org/) Uniswap_
+- [TheGraph](https://airtable.com/shrdfvnFvVch3IOVm) – _ekosistem [The Graph](https://thegraph.com/)_
+- [Program Hibah Uniswap](https://www.unigrants.org/) – _komunitas [Uniswap](https://uniswap.org/)_
 - [Balancer](https://forms.gle/c68e4fM7JHCQkPkN7) – _Dana Ekosistem [Balancer](https://balancer.fi/)_
 - [mStable](https://docs.mstable.org/advanced/grants-program) - _[komunitas](https://mstable.org/) mStable_
 
-### Pendanaan kuadrat {#quadratic-funding}
+## Pendanaan kuadrat {#quadratic-funding}
 
-Akar sumber terbuka Ethereum telah menyebabkan pertumbuhan model penggalangan dana baru yang menarik: pendanaan kuadrat. Hal ini berpotensi memperbaiki cara kita mendanai semua jenis barang publik di masa depan. Pendanaan kuadrat memastikan bahwa proyek yang menerima pendanaan paling banyak adalah proyek dengan permintaan paling unik. Dengan kata lain, proyek yang dibuat untuk meningkatkan kehidupan kebanyakan orang. [Selengkapnya tentang pendanaan kuadrat.](/defi/#quadratic-funding)
+Akar sumber terbuka Ethereum telah menyebabkan pertumbuhan model penggalangan dana baru yang menarik: pendanaan kuadrat. Hal ini berpotensi memperbaiki cara kita mendanai semua jenis barang publik di masa depan. Pendanaan kuadrat memastikan bahwa proyek yang menerima pendanaan terbanyak adalah proyek dengan permintaan paling unik. Dengan kata lain, proyek yang dibuat untuk meningkatkan kehidupan kebanyakan orang. [Selengkapnya tentang pendanaan kuadrat.](/defi/#quadratic-funding)
 
 - [Gitcoin](https://gitcoin.co/grants)
 - [clr.fund](https://clr.fund/)
+
+## Pekerjaan di Ethereum {#work-in-ethereum}
+
+Tidak siap untuk memulai proyek Anda sendiri? Ada ratusan perusahaan yang secara aktif mencari individu yang penuh semangat untuk bekerja dan berkontribusi di ekosistem Ethereum. Perlu informasi lebih lanjut? [Lihat pekerjaan terkait Ethereum](/community/get-involved/#ethereum-jobs)
