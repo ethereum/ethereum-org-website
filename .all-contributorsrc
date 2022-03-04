@@ -6648,6 +6648,15 @@
         "code",
         "doc"
       ]
+    },
+    {
+      "login": "jamongeon1",
+      "name": "jamongeon1",
+      "avatar_url": "https://avatars.githubusercontent.com/u/94926423?v=4",
+      "profile": "https://github.com/jamongeon1",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
