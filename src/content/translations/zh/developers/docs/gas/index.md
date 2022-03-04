@@ -118,7 +118,7 @@ Gas 是指在以太坊网络上执行特定操作所需的计算工作量。
 
 尽管交易中包含费用限制，但交易中未使用的 gas 将退还给用户（如：返还`最高费用 -（基本费用 + 小费）`）。
 
-![未使用 Gas 退款情况图](../transactions/gas-tx.png) _图表来自 [Ethereum EVM 插图](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![未使用 Gas 退款情况图](../../../../../developers/docs/transactions/gas-tx.png) _图表来自 [Ethereum EVM 插图](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 ## 什么是 gas 限额？ {#what-is-gas-limit}
 
