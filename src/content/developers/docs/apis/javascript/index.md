@@ -268,6 +268,11 @@ ethers.utils.formatEther(balance)
 - [Documentation](https://docs.alchemyapi.io/documentation/alchemy-web3)
 - [GitHub](https://github.com/alchemyplatform/alchemy-web3)
 
+**Alchemy NFT API -** **_API for fetching NFT data, including ownership, metadata attributes and more._**
+
+- [Documentation](https://docs.alchemy.com/alchemy/enhanced-apis/nft-api)
+- [GitHub](https://github.com/alchemyplatform/alchemy-web3)
+
 ## Further reading {#further-reading}
 
 _Know of a community resource that helped you? Edit this page and add it!_

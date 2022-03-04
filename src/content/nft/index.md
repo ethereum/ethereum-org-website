@@ -359,9 +359,6 @@ The process has already started. [The Beacon Chain](/upgrades/beacon-chain/), th
 
 Most NFTs are built using a consistent standard known as [ERC-721](/developers/docs/standards/tokens/erc-721/). However there are other standards that you might want to look into. The [ERC-1155](https://blog.enjincoin.io/erc-1155-the-crypto-item-standard-ac9cf1c5a226) standard allows for semi-fungible tokens which is particularly useful in the realm of gaming. And more recently, [EIP-2309](https://eips.ethereum.org/EIPS/eip-2309) has been proposed to make minting NFTs a lot more efficient. This standard lets you mint as many as you like in one transaction!
 
-After building and deploying an NFT contract, interact with it on-chain or using using services like the [Alchemy NFT API](https://docs.alchemy.com/alchemy/enhanced-apis/nft-api) to instantly find, verify, and display your NFT. Get started with Alchemy [here](https://alchemy.com/?a=a089e4c0b3
-).
-
 ## Further reading {#further-reading}
 
 - [Crypto art data](https://cryptoart.io/data) – Richard Chen, updated automatically
