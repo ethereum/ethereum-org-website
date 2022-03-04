@@ -1,5 +1,5 @@
 ---
-title: La Cadena de Baliza
+title: La Beacon Chain
 description: Informati rigurado alla Beacon Chain - l'aggiornamento che ha introdotto la prova-di-interesse Ethereum.
 lang: it
 template: upgrade
