@@ -41,7 +41,7 @@ Dengan menghubungkan aplikasi Anda ke node Ethereum (melalui [API JSON-RPC](/dev
 
 Banyak pustaka praktis (dibangun dan dikelola oleh komunitas sumber terbuka Ethereum) yang memungkinkan aplikasi Anda terhubung ke dan berkomunikasi dengan blockchain Ethereum.
 
-Jika aplikasi sisi pengguna Anda adalah aplikasi web, Anda boleh memilih `menginstal npm` [API JavaScript](/developers/docs/apis/javascript/) secara langsung pada frontend Anda. Atau mungkin Anda akan memilih untuk menerapkan fungsionalitas ini pada sisi server, menggunakan API [Python](/developers/docs/programming-languages/python/) atau [Java](/developers/docs/programming-languages/java/).
+Jika aplikasi sisi pengguna Anda adalah aplikasi web, Anda boleh memilih `npm install` [API JavaScript](/developers/docs/apis/javascript/) secara langsung pada frontend Anda. Atau mungkin Anda akan memilih untuk menerapkan fungsionalitas ini pada sisi server, menggunakan API [Python](/developers/docs/programming-languages/python/) atau [Java](/developers/docs/programming-languages/java/).
 
 Meskipun API ini bukan bagian penting dari tumpukan, API ini meringkas banyak kerumitan berinteraksi langsung dengan node Ethereum. Juga menyediakan fungsi utilitas (seperti mengubah ETH ke Gwei) agar pengembang dapat menghemat waktu dalam menangani kerumitan klien Ethereum dan dapat lebih memusatkan perhatian pada fungsi khusus aplikasi Anda.
 
