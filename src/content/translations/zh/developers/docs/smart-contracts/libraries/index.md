@@ -9,7 +9,7 @@ sidebar: true
 
 ## 前置要求 {#prerequisites}
 
-在我们跳转到智能合约库之前，清楚地了解一个智能合约的构成是一个不错的主意。 如果尚未进行智能合约的了解，请直接点击</[智能合约](/developers/docs/smart-contracts/anatomy/)。
+在我们跳转到智能合约库之前，清楚地了解一个智能合约的构成是一个不错的主意。 如果尚未进行智能合约的了解，请直接点击[智能合约](/developers/docs/smart-contracts/anatomy/)。
 
 ## 资料库中的内容 {#whats-in-a-library}
 
