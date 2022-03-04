@@ -1406,6 +1406,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/jamongeon1"><img src="https://avatars.githubusercontent.com/u/94926423?v=4?s=100" width="100px;" alt=""/><br /><sub><b>jamongeon1</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=jamongeon1" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/JayGreck"><img src="https://avatars.githubusercontent.com/u/56350730?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Jay</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=JayGreck" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/ArnaudSpanneut"><img src="https://avatars.githubusercontent.com/u/2766935?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Arnaud Spanneut</b></sub></a><br /><a href="#translation-ArnaudSpanneut" title="Translation">🌍</a></td>
+    <td align="center"><a href="https://github.com/yuliyu123"><img src="https://avatars.githubusercontent.com/u/8566390?v=4?s=100" width="100px;" alt=""/><br /><sub><b>yuliyu123</b></sub></a><br /><a href="#translation-yuliyu123" title="Translation">🌍</a></td>
   </tr>
 </table>
 
