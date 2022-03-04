@@ -22,6 +22,7 @@ These programs support the broad Ethereum ecosystem by offering grants to a wide
   Grants ranging from $1K - $8K USD.
 - [Moloch DAO](https://www.molochdao.com/) - _Privacy, layer 2 scaling, client security, and more_
 - [Open Grants](https://opengrants.com/explore)
+- [DAO Grants](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) - _Google spreadsheet of organizations offering grants_
 
 ## Project specific {#project-specific}
 
