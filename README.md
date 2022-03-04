@@ -1401,6 +1401,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/Kansas-Guy"><img src="https://avatars.githubusercontent.com/u/87861134?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Zach</b></sub></a><br /><a href="#content-Kansas-Guy" title="Content">🖋</a></td>
     <td align="center"><a href="https://github.com/bestpilotingalaxy"><img src="https://avatars.githubusercontent.com/u/59182467?v=4?s=100" width="100px;" alt=""/><br /><sub><b>bestpilotingalaxy</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=bestpilotingalaxy" title="Documentation">📖</a></td>
   </tr>
+  <tr>
+    <td align="center"><a href="http://fault.dev"><img src="https://avatars.githubusercontent.com/u/58883403?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Afr Schoe</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=q9f" title="Code">💻</a> <a href="https://github.com/ethereum/ethereum-org-website/commits?author=q9f" title="Documentation">📖</a></td>
+  </tr>
 </table>
 
 <!-- markdownlint-restore -->
