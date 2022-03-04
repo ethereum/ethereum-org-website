@@ -6638,6 +6638,16 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "q9f",
+      "name": "Afr Schoe",
+      "avatar_url": "https://avatars.githubusercontent.com/u/58883403?v=4",
+      "profile": "http://fault.dev",
+      "contributions": [
+        "code",
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
