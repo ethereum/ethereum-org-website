@@ -11,7 +11,7 @@ Web2 fait référence à la version d'Internet que la plupart d'entre nous conna
 
 De nombreux développeurs Web3 ont choisi de construire des DApps en raison de la décentralisation inhérente à Ethereum :
 
-- Quiconque est sur le réseau à l'autorisation d'utiliser le service. En d'autres termes, aucune autorisation n'est requise.
+- Quiconque sur le réseau a l'autorisation d'utiliser le service. En d'autres termes, aucune autorisation n'est requise.
 - Personne ne peut vous bloquer ni vous refuser l'accès au service.
 - Les paiements sont intégrés via le jeton natif, l'ether (ETH).
 - Ethereum est "Turing-complet", ce qui signifie que vous pouvez programmer à peu près tout ce que vous voulez.
