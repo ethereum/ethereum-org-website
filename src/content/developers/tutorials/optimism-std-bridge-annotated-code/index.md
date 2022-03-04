@@ -21,8 +21,37 @@ Those assets can then be used, transferred, etc. on L2.
 Eventually, whoever ends up with them might want to bridge them back to L1. 
 When doing this, the assets are burned on L2 and then released back to the user on L1.
 
-This is the way the [Optimism standard bridge](https://community.optimism.io/docs/developers/bridge/standard-bridge/#) works. 
+This is the way the [Optimism standard bridge](https://community.optimism.io/docs/developers/bridge/standard-bridge) works. 
 In this article we go over the source code for that bridge to see how it works and study it as an example of well written Solidity code.
+
+## Control and data flows {#control-and-data-flows}
+
+The bridge has two main flows:
+1. Deposit (from L1 to L2)
+1. Withdrawal (from L2 to L1)
+
+### Deposit flow {#deposit-flow}
+
+#### Layer 1
+
+1. (ERC-20 only) the depositor gives the bridge an allowance to spend the amount being deposited
+1. The depositor calls the bridge (`depositERC20`, `depositERC20To`, `depositETH`, or `depositETHTo`)
+1. The bridge takes possession of the bridged asset
+   - ETH: The asset is transferred by the depositor as part of the call
+   - ERC-20: The asset is transferred by the bridge to itself using the allowance provided by the depositor
+1. The bridge uses the cross domain message mechanism to call `finalizeDeposit` on the L2 bridge.
+1. The bridge emits an event
+
+
+#### Layer 2
+
+1. The L2 bridge 
+
+
+### Withdrawal flow {#withdrawal-flow}
+
+
+
 
 
 ## L1 Code {#l1-code}
@@ -393,7 +422,7 @@ We need to make sure that the message we received came from the other bridge.
 ```
 
 This function returns the cross domain messenger. 
-We use a function than the variable `messenger` to allow contracts than inherit from this one to use an algorithm to specify which cross domain messenger to use. 
+We use a function rather than the variable `messenger` to allow contracts than inherit from this one to use an algorithm to specify which cross domain messenger to use. 
 
 ```solidity
 
@@ -915,18 +944,167 @@ Update the `deposits` data structure.
 }
 ```
 
-This function lets us transfer ETH from the previous version of the bridge to this one.
+There was an earlier implementation of the bridge.
+When we moved from the implementation to this one, we had to move all the assets.
+ERC-20 tokens can just be moved.
+However, to transfer ETH to a contract you need that contract's approval, which is what `donateETH` provides us.
 
 
-## ERC-20 Tokens on L2
+## ERC-20 Tokens on L2 {#erc-20-tokens-on-l2}
+
+For an ERC-20 token to fit into the standard bridge, it needs to allow the standard bridge, and *only* the standard bridge, to mint token.
+This is necessary because the bridges need to ensure that the number of tokens circulating on Optimism is equal to the number of tokens locked inside the L1 bridge contract.
+If there are too many tokens on L2 some users would be unable to bridge their assets back to L1.
+Instead of a trusted bridge, we would essentially recreate [fractional reserve banking](https://www.investopedia.com/terms/f/fractionalreservebanking.asp).
+If there are too many tokens on L1, some of those tokens would stay locked inside the bridge contract forever because there is no way to release them without burning L2 tokens.
 
 
-## L2 Code {#l2-code}
+### IL2StandardERC20 {#il2standarderc20}
 
-This is code that runs 
+Every ERC-20 token on L2 that uses the standard bridge needs to provide [this interface](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/standards/IL2StandardERC20.sol), which has the functions and events that the standard bridge needs.
 
-### The L2 bridge contract {#the-l2-bridge-contract}
 
+```solidity
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.9;
+
+import { IERC20 } from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
+```
+
+[The standard ERC-20 interface](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol) does not include the `mint` and `burn` functions.
+Those methods are not required by [the ERC-20 standard](https://eips.ethereum.org/EIPS/eip-20), which leaves unspecified the mechanisms to create and destroy tokens.
+
+
+```solidity
+import { IERC165 } from "@openzeppelin/contracts/utils/introspection/IERC165.sol";
+```
+
+[The ERC-165 interface](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/introspection/IERC165.sol) is used to specify what functions a contract provides.
+[You can read the standard here](https://eips.ethereum.org/EIPS/eip-165).
+
+
+```solidity
+interface IL2StandardERC20 is IERC20, IERC165 {
+    function l1Token() external returns (address);
+```
+
+This function provides the address of the L1 token which is bridged to this one.
+Note that we do not have a similar function in the opposite direction. 
+We need to be able to bridge any L1 token, regardless of whether L2 support was planned when it was implemented or not.
+
+```solidity
+
+    function mint(address _to, uint256 _amount) external;
+
+    function burn(address _from, uint256 _amount) external;
+
+    event Mint(address indexed _account, uint256 _amount);
+    event Burn(address indexed _account, uint256 _amount);
+}
+```
+
+Functions and events to mint (create) and burn (destroy) tokens. 
+The bridge should be the only entity that can run these functions to ensure the number of tokens is correct (equal to the number of tokens locked on L1). 
+
+
+### L2StandardERC20 {#L2StandardERC20}
+
+
+[This is our implementation of the `IL2StandardERC20` interface](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/standards/L2StandardERC20.sol). 
+Unless you need some kind of custom logic, you should use this one.
+
+
+```solidity
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.9;
+
+import { ERC20 } from "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+```
+
+[The OpenZeppelin ERC-20 contract](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol).
+Optimism does not believe in reinventing the wheel, especially when the wheel is well audited and holds valuable assets.
+
+```solidity
+import "./IL2StandardERC20.sol";
+
+contract L2StandardERC20 is IL2StandardERC20, ERC20 {
+    address public l1Token;
+    address public l2Bridge;
+```
+
+These are the two additional configuration parameters that we require and ERC-20 normally does not.
+
+```solidity
+
+    /**
+     * @param _l2Bridge Address of the L2 standard bridge.
+     * @param _l1Token Address of the corresponding L1 token.
+     * @param _name ERC20 name.
+     * @param _symbol ERC20 symbol.
+     */
+    constructor(
+        address _l2Bridge,
+        address _l1Token,
+        string memory _name,
+        string memory _symbol
+    ) ERC20(_name, _symbol) {
+        l1Token = _l1Token;
+        l2Bridge = _l2Bridge;
+    }
+```
+
+First call the constructor for the contract we inherit from (`ERC20(_name, _symbol)`) and then set our own variables.
+
+```solidity
+
+    modifier onlyL2Bridge() {
+        require(msg.sender == l2Bridge, "Only L2 Bridge can mint and burn");
+        _;
+    }
+
+
+    // slither-disable-next-line external-function
+    function supportsInterface(bytes4 _interfaceId) public pure returns (bool) {
+        bytes4 firstSupportedInterface = bytes4(keccak256("supportsInterface(bytes4)")); // ERC165
+        bytes4 secondSupportedInterface = IL2StandardERC20.l1Token.selector ^
+            IL2StandardERC20.mint.selector ^
+            IL2StandardERC20.burn.selector;
+        return _interfaceId == firstSupportedInterface || _interfaceId == secondSupportedInterface;
+    }
+```
+
+This is the way [ERC-165](https://eips.ethereum.org/EIPS/eip-165) works.
+Every interface is a number of supported functions, and is identified as the [exclusive or](https://en.wikipedia.org/wiki/Exclusive_or) of the [ABI function selectors](https://docs.soliditylang.org/en/v0.8.12/abi-spec.html#function-selector) of those functions.
+
+The L2 bridge uses ERC-165 as a sanity check to make sure that the ERC-20 contract to which it sends assets is an `IL2StandardERC20`.
+
+**Note:** There is nothing to prevent rogue contract from providing false answers to `supportsInterface`, so this is a sanity check mechanism, *not* a security mechanism.
+
+```solidity
+    // slither-disable-next-line external-function
+    function mint(address _to, uint256 _amount) public virtual onlyL2Bridge {
+        _mint(_to, _amount);
+
+        emit Mint(_to, _amount);
+    }
+
+    // slither-disable-next-line external-function
+    function burn(address _from, uint256 _amount) public virtual onlyL2Bridge {
+        _burn(_from, _amount);
+
+        emit Burn(_from, _amount);
+    }
+}
+```
+Only the L2 bridge is allowed to mint and burn assets.
+
+`_mint` and `_burn` are actually defined in the [OpenZeppelin ERC-20 contract](https://ethereum.org/en/developers/tutorials/erc20-annotated-code/#the-_mint-and-_burn-functions-_mint-and-_burn). 
+That contract just doesn't expose them externally, because the conditions to mint and burn tokens are as varied as the number of ERF-20 uses.
+
+
+## L2 Bridge Code {#l2-bridge-code}
+
+This is code that runs the bridge on Optimism. 
 [The source for this contract is here](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L2/messaging/L2StandardBridge.sol).
 
 
@@ -938,7 +1116,17 @@ pragma solidity ^0.8.9;
 import { IL1StandardBridge } from "../../L1/messaging/IL1StandardBridge.sol";
 import { IL1ERC20Bridge } from "../../L1/messaging/IL1ERC20Bridge.sol";
 import { IL2ERC20Bridge } from "./IL2ERC20Bridge.sol";
+```
 
+The [IL2ERC20Bridge](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L2/messaging/IL2ERC20Bridge.sol) interface is very similar to the [L1 equivalent](#IL1ERC20Bridge) we saw above. 
+There are two significant differences:
+1. On L1 you initiate deposits and finalize withdrawals. 
+   Here you initiate withdrawals and finalize deposits.
+1. On L1 it is necessary to distinguish between ETH and ERC-20 tokens. 
+   On L2 we can use the same functions for both because internally ETH balances on Optimism are handled as an ERC-20 token with the address [0xDeadDeAddeAddEAddeadDEaDDEAdDeaDDeAD0000](https://optimistic.etherscan.io/address/0xDeadDeAddeAddEAddeadDEaDDEAdDeaDDeAD0000).
+
+
+```solidity
 /* Library Imports */
 import { ERC165Checker } from "@openzeppelin/contracts/utils/introspection/ERC165Checker.sol";
 import { CrossDomainEnabled } from "../../libraries/bridge/CrossDomainEnabled.sol";
@@ -962,6 +1150,13 @@ contract L2StandardBridge is IL2ERC20Bridge, CrossDomainEnabled {
      ********************************/
 
     address public l1TokenBridge;
+```
+
+Keep track of the address of the L1 bridge.
+Note that in contrast to the L1 equivalent, here we *need* this variable.
+The address of the L1 bridge is not known in advance.
+
+```solidity
 
     /***************
      * Constructor *
@@ -1005,15 +1200,23 @@ contract L2StandardBridge is IL2ERC20Bridge, CrossDomainEnabled {
     ) external virtual {
         _initiateWithdrawal(_l2Token, msg.sender, _to, _amount, _l1Gas, _data);
     }
+```
+
+These two functions initiate withdrawals.
+Note that there is no needs to specify the L1 token address. 
+L2 tokens are expected to tell us the L1 equivalent's address.
+
+
+```solidity
 
     /**
-     * @dev Performs the logic for deposits by storing the token and informing the L2 token Gateway
-     * of the deposit.
-     * @param _l2Token Address of L2 token where withdrawal was initiated.
-     * @param _from Account to pull the deposit from on L2.
+     * @dev Performs the logic for withdrawals by burning the token and informing
+     *      the L1 token Gateway of the withdrawal.
+     * @param _l2Token Address of L2 token where withdrawal is initiated.
+     * @param _from Account to pull the withdrawal from on L2.
      * @param _to Account to give the withdrawal to on L1.
      * @param _amount Amount of the token to withdraw.
-     * param _l1Gas Unused, but included for potential forward compatibility considerations.
+     * @param _l1Gas Unused, but included for potential forward compatibility considerations.
      * @param _data Optional data to forward to L1. This data is provided
      *        solely as a convenience for external contracts. Aside from enforcing a maximum
      *        length, these contracts provide no guarantees about its content.
@@ -1030,6 +1233,11 @@ contract L2StandardBridge is IL2ERC20Bridge, CrossDomainEnabled {
         // usage
         // slither-disable-next-line reentrancy-events
         IL2StandardERC20(_l2Token).burn(msg.sender, _amount);
+```
+
+Notice that we are *not* relying on the `_from` parameter but on `msg.sender` which is a lot more trustworthy.
+
+```solidity
 
         // Construct calldata for l1TokenBridge.finalizeERC20Withdrawal(_to, _amount)
         // slither-disable-next-line reentrancy-events
@@ -1037,6 +1245,11 @@ contract L2StandardBridge is IL2ERC20Bridge, CrossDomainEnabled {
         bytes memory message;
 
         if (_l2Token == Lib_PredeployAddresses.OVM_ETH) {
+```
+
+On L1 it is necessary to distinguish between ETH and ERC-20.
+
+```solidity
             message = abi.encodeWithSelector(
                 IL1StandardBridge.finalizeETHWithdrawal.selector,
                 _from,
@@ -1078,13 +1291,32 @@ contract L2StandardBridge is IL2ERC20Bridge, CrossDomainEnabled {
         address _to,
         uint256 _amount,
         bytes calldata _data
+```
+
+This function is called by `L1StandardBridge`. 
+
+```solidity
     ) external virtual onlyFromCrossDomainAccount(l1TokenBridge) {
+```
+
+Make sure the source of the message is legitimate.
+This is important because this function calls `_mint` and could be used to give tokens that are not covered by tokens the bridge owns on L1.
+
+```solidity
         // Check the target token is compliant and
         // verify the deposited token on L1 matches the L2 deposited token representation here
         if (
             // slither-disable-next-line reentrancy-events
             ERC165Checker.supportsInterface(_l2Token, 0x1d1d8b63) &&
             _l1Token == IL2StandardERC20(_l2Token).l1Token()
+```
+
+Sanity checks:
+
+1. The correct interface is supported
+1. The L2 ERC-20 contract's L1 address matches the L1 source of the tokens
+
+```solidity
         ) {
             // When a deposit is finalized, we credit the account on L2 with the same amount of
             // tokens.
@@ -1092,6 +1324,13 @@ contract L2StandardBridge is IL2ERC20Bridge, CrossDomainEnabled {
             IL2StandardERC20(_l2Token).mint(_to, _amount);
             // slither-disable-next-line reentrancy-events
             emit DepositFinalized(_l1Token, _l2Token, _from, _to, _amount, _data);
+```
+
+If the sanity checks pass, finalize the deposit:
+1. Mint the tokens
+1. Emit the appropriate event
+
+```solidity
         } else {
             // Either the L2 token which is being deposited-into disagrees about the correct address
             // of its L1 token, or does not support the correct interface.
@@ -1101,6 +1340,12 @@ contract L2StandardBridge is IL2ERC20Bridge, CrossDomainEnabled {
             // message so that users can get their funds out in some cases.
             // There is no way to prevent malicious token contracts altogether, but this does limit
             // user error and mitigate some forms of malicious contract behavior.
+```
+
+If a user made a detectable error by using the wrong L2 token address, we want to cancel the deposit and return the tokens on L1.
+The only way we can do this from L2 is to send a message that will have to wait the fault challenge period, but that is much better for the user than losing the tokens permanently.
+
+```solidity
             bytes memory message = abi.encodeWithSelector(
                 IL1ERC20Bridge.finalizeERC20Withdrawal.selector,
                 _l1Token,
@@ -1120,3 +1365,8 @@ contract L2StandardBridge is IL2ERC20Bridge, CrossDomainEnabled {
     }
 }
 ```
+
+
+## Conclusion {#conclusion}
+
+Hopefully reading this article helped you learn how to write good and safe Solidity contracts.
