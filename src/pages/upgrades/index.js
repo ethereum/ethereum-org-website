@@ -625,6 +625,23 @@ const Eth2IndexPage = ({ data }) => {
                 </Link>
               </p>
             </ExpandableCard>
+            <ExpandableCard
+              contentPreview={translateMessageId(
+                "page-upgrades-question-11-desc",
+                intl
+              )}
+              title={translateMessageId(
+                "page-upgrades-question-11-title",
+                intl
+              )}
+            >
+              <p>
+                <Translation id="page-upgrades-question-11-answer-1" />
+                <Link to="/security/#eth2-token-scam/">
+                  <Translation id="page-upgrades-question-11-answer-2" />
+                </Link>
+              </p>
+            </ExpandableCard>
           </LeftColumn>
           <RightColumn>
             <ExpandableCard
