@@ -7,7 +7,7 @@ incomplete: true
 sidebarDepth: 3
 ---
 
-Menggunakan bukti validitas seperti [rollup ZK](/developers/docs/scaling/zk-rollups/) tetapi data tidak disimpan pada rantai Ethereum lapisan 1 utama. Ini dapat menghasilkan 10rb transaksi per detik per rantai validium dan berbagai rantai dapat dijalankan secara paralel.
+Menggunakan bukti validitas seperti [rollup ZK](/developers/docs/scaling/layer-2-rollups#zk-rollups) tetapi data tidak disimpan pada rantai Ethereum lapisan 1 utama. Ini dapat menghasilkan 10rb transaksi per detik per rantai validium dan berbagai rantai dapat dijalankan secara paralel.
 
 ## Prasyarat {#prerequisites}
 
