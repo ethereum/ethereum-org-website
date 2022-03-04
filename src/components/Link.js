@@ -157,7 +157,7 @@ const Link = ({
   // Download link for internally hosted PDF's (ex: whitepaper)
   if (isPdf && !isExternal) {
     return (
-      <a href={to} download>
+      <a href={to} target="_blank">
         {children}
       </a>
     )

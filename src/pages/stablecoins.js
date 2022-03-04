@@ -309,6 +309,11 @@ const StablecoinsPage = ({ data }) => {
       DUSD: { type: CRYPTO, url: "https://dusd.finance/" },
       PAXG: { type: ASSET, url: "https://www.paxos.com/paxgold/" },
       AMPL: { type: ALGORITHMIC, url: "https://www.ampleforth.org/" },
+      UST: { type: ALGORITHMIC, url: "https://www.terra.money/"}, 
+      FRAX: { type: ASSET, url: "https://frax.finance/"}, 
+      MIM: { type: ASSET, url: "https://abracadabra.money/"}, 
+      USDP: { type: FIAT, url: "https://paxos.com/usdp/"}, 
+      FEI: { type: ALGORITHMIC, url: "https://fei.money/"},
     }),
     [ALGORITHMIC, ASSET, CRYPTO, FIAT]
   )

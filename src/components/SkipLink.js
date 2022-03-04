@@ -19,7 +19,7 @@ const Anchor = styled.a`
   }
 `
 
-const SkipLink = ({ hrefId }) => {
+export const SkipLink = ({ hrefId }) => {
   return (
     <Div>
       <Anchor href={hrefId}>
@@ -29,4 +29,6 @@ const SkipLink = ({ hrefId }) => {
   )
 }
 
-export default SkipLink
+export const SkipLinkAnchor = ({ id }) => {
+  return <div id={id}></div>
+}

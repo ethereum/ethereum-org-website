@@ -56,6 +56,8 @@ incomplete: true
 
 ## 直观演示 {#a-visual-demo}
 
+跟随 Austin 了解挖矿和工作量证明区块链。
+
 <YouTube id="zcX7OJ-L8XQ" />
 
 ## 延伸阅读 {#further-reading}

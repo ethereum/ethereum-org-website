@@ -55,6 +55,24 @@ A common misconception is that Ethereum should always be written in Latin. This 
 
 **The above doesn’t apply to languages, where proper nouns shouldn’t be translated as a rule.**
 
+### Translating page metadata {#translating-metadata}
+
+Some pages contain metadata on the page, like 'title', 'lang', 'description', 'sidebar', etc.
+
+We hide the content that translators should never translate when uploading new pages to Crowdin, meaning that all the metadata visible to translators in Crowdin should get translated.
+
+Please be especially mindful when translating any strings where the source text is 'en'. This represents the language that the page is available in and should be translated to the [ISO language code for your language](https://www.andiamo.co.uk/resources/iso-language-codes/). These strings should always be translated using Latin characters, not the writing script, native to the target language.
+
+If you are unsure which language code to use, you can check the translation memory in Crowdin or find the language code for your language in the URL of the page in the Crowdin online editor.
+
+Some examples of language codes for the most widely spoken languages:
+
+- Arabic - ar
+- Chinese Simplified - zn
+- French - fr
+- Hindi - hi
+- Spanish - es
+
 ### Dealing with tags and code snippets {#dealing-with-tags}
 
 A lot of the source content contains tags and variables, which are highlighted in yellow in the Crowdin editor. These serve different functions and should be approached correctly.
@@ -129,7 +147,7 @@ Some terms might not have established translations in other languages, and are w
 
 While translating these terms can sound unnatural, since the English version is commonly used in other languages as well, it is highly recommended that they are translated.
 
-When translating them, feel free to get creative, use descriptive translations, or simply translate them literally. If you strongly suspect that translating such terms will lead to confusion, because most people know them by their English equivalent, you can add the original term in brackets.
+When translating them, feel free to get creative, use descriptive translations, or simply translate them literally.
 
 **The reason why most terms should be translated, instead of leaving some in English, is the fact that this new terminology will become more widespread in the future, as more people start using Ethereum and related technologies. If we want to onboard more people from all over the world to this space, we need to provide understandable terminology in as many languages as possible, even if we need to create it ourselves.**
 

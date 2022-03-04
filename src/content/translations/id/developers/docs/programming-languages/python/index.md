@@ -10,7 +10,7 @@ incomplete: true
 
 Gunakan Ethereum untuk membuat aplikasi terdesentralisasi (atau "dapp") yang menggunakan keuntungan teknologi mata uang kripto dan blockchain. Dapp ini dapat dipercaya, yang berarti setelah diterapkan ke Ethereum, dapp akan selalu berjalan seperti yang telah diprogramkan. Dapp dapat mengontrol aset digital untuk membuat aplikasi keuangan jenis baru. Dapp juga terdesentralisasi, yang berarti tidak ada entitas atau orang yang mengontrolnya dan hampir mustahil untuk disensor.
 
-## Memulai dengan kontrak pintar dan bahasa pemrograman Solidity {#getting-started-with-smart-contracts-and-solidity}
+## Mulai menggunakan kontrak pintar dan bahasa Solidity {#getting-started-with-smart-contracts-and-solidity}
 
 **Ambillah langkah awal untuk mengintegrasikan Phyton dengan Ethereum**
 
@@ -46,33 +46,35 @@ Perlu penjelasan yang lebih mendasar? Kunjungi [ethereum.org/learn](/learn/) ata
 
 ## Proyek dan peralatan Python {#python-projects-and-tools}
 
-### Aktif:
+### Aktif: {#active}
 
 - [Web3.py](https://github.com/ethereum/web3.py) - _Pustaka Python untuk berinteraksi dengan Ethereum_
 - [Brownie](https://github.com/eth-brownie/brownie) - _Kerangka kerja Python untuk menggunakan, menguji, dan berinteraksi dengan kontrak pintar Ethereum_
 - [Vyper](https://github.com/ethereum/vyper/) - _Bahasa Kontrak Pintar berbasis Python untuk EVM_
 - [py-evm](https://github.com/ethereum/py-evm) - _implementasi Mesin Virtual Ethereum_
-- [Mamba](https://mamba.black) - _kerangka kerja untuk menulis, mengompilasi, dan menggunakan kontrak pintar yang ditulis dalam bahasa Vyper_
-- [eth-tester](https://github.com/ethereum/eth-tester) - _peralatan untuk menguji aplikasi berbasis Ethereum_
-- [eth-utils](https://github.com/ethereum/eth-utils/) - _Fungsi utilitas untuk bekerja dengan basis kode yang terkait dengan Ethereum_
-- [py-solc-x](https://pypi.org/project/py-solc-x/) - _Wrapper Python yang terkait dengan pengompilasi solidity solc dengan dukungan 0.5.x_
-- [py-wasm](https://github.com/ethereum/py-wasm) - _Implementasi Python untuk penerjemah perakitan web_
+- [eth-tester](https://github.com/ethereum/eth-tester) - _perangkat untuk menguji aplikasi berbasis Ethereum_
+- [eth-utils](https://github.com/ethereum/eth-utils/) - _fungsi utilitas untuk bekerja dengan basis kode yang terkait dengan Ethereum_
+- [py-solc-x](https://pypi.org/project/py-solc-x/) - _wrapper Python yang terkait dengan pengompilasi solidity solc dengan dukungan 0.5.x_
+- [py-wasm](https://github.com/ethereum/py-wasm) - _implementasi Python untuk penerjemah perakitan web_
 - [pydevp2p](https://github.com/ethereum/pydevp2p) - _implementasi tumpukan P2P Ethereum_
 - [pymaker](https://github.com/makerdao/pymaker) - _API Python untuk Pembuat kontrak_
 
-### Diarsipkan / Tidak lagi dipertahankan:
+### Diarsipkan / Tidak lagi dipertahankan: {#archived--no-longer-maintained}
 
 - [Trinity](https://github.com/ethereum/trinity) - _Klien Python Ethereum_
+- [Mamba](https://mamba.black) - _kerangka kerja untuk menulis, mengompilasi, dan menyebarkan kontrak pintar yang ditulis dalam bahasa Vyper_
 
 Ingin mencari informasi tambahan? Kunjungi [ethereum.org/developers](/developers/).
 
-## Proyek yang menggunakan peralatan Python
+## Proyek yang menggunakan perangkat Python {#projects-using-python-tooling}
 
 Proyek berbasis Ethereum berikut ini menggunakan peralatan yang disebutkan di halaman ini. Repositori sumber terbuka terkait yang berfungsi sebagai referensi yang bagus untuk kode percontohan dan praktik terbaik.
 
 - [Yearn Finance](https://yearn.finance/) dan [Repositori Kontrak Lemari Besi Yearn](https://github.com/yearn/yearn-vaults)
 - [Curve](https://curve.fi/) dan [Repositori kontrak pintar Curve](https://github.com/curvefi/curve-contract)
 - [BadgerDAO](https://badger.com/) dan [kontrak pintar yang menggunakan rantai alat Brownie](https://github.com/Badger-Finance/badger-system)
+- [Sushi](https://sushi.com/) menggunakan [Python dalam mengelola dan menyebarkan kontrak vesting mereka](https://github.com/sushiswap/sushi-vesting-protocols)
+- [Alpha Finance](https://alphafinance.io/), dari kepopuleran Alpha Homora, menggunakan [Brownie untuk menguji dan menyebarkan kontrak pintar](https://github.com/AlphaFinanceLab/alpha-staking-contract)
 
 ## Kontributor Komunitas Python {#python-community-contributors}
 

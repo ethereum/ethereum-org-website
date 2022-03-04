@@ -5,7 +5,7 @@ lang: id
 sidebar: true
 ---
 
-Aspek keren tentang Ethereum adalah kontrak pintar bisa diprogram menggunakan bahasa yang ramah bagi pengembang. Jika Anda berpengalaman dalam penggunaan Python atau [bahasa tanda kurung kurawal](https://en.wikipedia.org/wiki/List_of_programming_languages_by_type#Curly-bracket_languages), Anda dapat menemukan bahasa dengan sintaksis yang dikenal.
+Aspek keren tentang Ethereum adalah kontrak pintar bisa diprogram menggunakan bahasa yang ramah bagi pengembang. Jika Anda berpengalaman dalam penggunaan Python atau [bahasa tanda kurung kurawal](https://wikipedia.org/wiki/List_of_programming_languages_by_type#Curly-bracket_languages), Anda dapat menemukan bahasa dengan sintaksis yang dikenal.
 
 Dua bahasa yang paling aktif dan dipertahankan adalah:
 
@@ -82,7 +82,7 @@ contract Coin {
 }
 ```
 
-Contoh ini seharusnya memberi Anda pemahaman seperti apa sintaksis kontrak Solidity. Untuk deskripsi lebih detail tentang fungsi dan variabielnya, [lihat dokumen](https://docs.soliditylang.org/en/latest/contracts.html).
+Contoh ini seharusnya memberi Anda pemahaman seperti apa sintaksis kontrak Solidity. Untuk deskripsi lebih detail tentang fungsi dan variabelnya, [lihat dokumen](https://docs.soliditylang.org/en/latest/contracts.html).
 
 ## Vyper {#vyper}
 
@@ -212,7 +212,7 @@ Jika Anda baru mengenal Ethereum dan belum pernah melakukan pengodean apa pun de
 **Yul+**
 
 - Ekstensi level rendah yang sangat efisien untuk Yul.
-- Didesain pada awalnya untuk kontrak [rollup optimistic](/developers/docs/scaling/optimistic-rollups/).
+- Didesain pada awalnya untuk kontrak [rollup optimistic](/developers/docs/scaling/layer-2-rollups/#optimistic-rollups).
 - Yul+ bisa dianggap sebagai proposal peningkatan eksperimental untuk Yul, yang menambahkan fitur baru ke dalamnya.
 
 ### Tautan penting {#important-links-2}
