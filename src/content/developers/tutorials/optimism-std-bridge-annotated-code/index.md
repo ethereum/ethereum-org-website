@@ -35,22 +35,44 @@ The bridge has two main flows:
 #### Layer 1
 
 1. (ERC-20 only) the depositor gives the bridge an allowance to spend the amount being deposited
-1. The depositor calls the bridge (`depositERC20`, `depositERC20To`, `depositETH`, or `depositETHTo`)
-1. The bridge takes possession of the bridged asset
+1. The depositor calls the L1 bridge (`depositERC20`, `depositERC20To`, `depositETH`, or `depositETHTo`)
+1. The L1 bridge takes possession of the bridged asset
    - ETH: The asset is transferred by the depositor as part of the call
    - ERC-20: The asset is transferred by the bridge to itself using the allowance provided by the depositor
-1. The bridge uses the cross domain message mechanism to call `finalizeDeposit` on the L2 bridge.
-1. The bridge emits an event
+1. The L1 bridge uses the cross domain message mechanism to call `finalizeDeposit` on the L2 bridge
+1. The L1 bridge  emits an event
 
 
 #### Layer 2
 
-1. The L2 bridge 
+1. The L2 bridge verifies the call to `finalizeDeposit` is legitimate:
+   - Came from the cross message mechanism
+   - Was originally from the bridge on L1
+1. The L2 bridge checks if the ERC-20 token contract on L2 is the correct one:
+   - The L2 contract reports that its L1 counterpart is the same as the one the tokens came from on L1
+   - The L2 contract reports that it supports the correct interface ([using ERC-165](https://eips.ethereum.org/EIPS/eip-165)).
+1. If the L2 contract is correct, call it to mint the appropriate number of tokens to the appropriate address
+1. The L2 contract emits an event
 
 
 ### Withdrawal flow {#withdrawal-flow}
 
 
+#### Layer 2
+
+1. The withdrawer calls the L2 bridge (`withdraw` or `withdrawTo`)
+1. The L2 bridge burns the appropriate number of tokens belonging to `msg.sender`
+1. The L2 bridge uses the cross domain message mechanism to call `finalizeETHWithdrawal` or `finalizeERC20Withdrawal` on the L1 bridge 
+1. The L2 bridge emits an event
+
+
+#### Layer 1
+
+1. The L1 bridge verifies the call to `finalizeETHWithdrawal` or `finalizeERC20Withdrawal` is legitimate:
+   - Came from the cross message mechanism
+   - Was originally from the bridge on L2
+1. The L1 bridge transfers the appropriate asset (ETH or ERC-20) to the appropriate address
+1. The L1 bridge emits an event
 
 
 
