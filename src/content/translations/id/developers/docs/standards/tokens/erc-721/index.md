@@ -15,7 +15,7 @@ Token yang Tidak Dapat Dipertukarkan (NFT) digunakan untuk mengenali sesuatu ata
 
 ERC-721 memperkenalkan sebuah standar untuk NFT, dengan kata lain, tipe Token ini adalah unik dan bisa memiliki nilai yang berbeda dari Token lainnya yang berasal dari Kontrak Pintar yang sama, mungkin dikarenakan usia, keunikan, atau bahkan hal lain seperti visualnya. Tunggu, visualnya?
 
-Ya! Semua NFT memiliki variabel `uint256` yang disebut `tokenId`, sehingga untuk Kontrak ERC-721 mana pun, pasangan `alamat kontrak, uint256 tokenId` harus bersifat unik secara global. Anggap saja, dApp bisa memiliki "konverter" yang menggunakan `tokenId` sebagai input dan output gambar dari sesuatu yang keren, seperti zombi, senjata, kemampuan, atau anak kucing yang menakjubkan!
+Ya! Semua NFT memiliki variabel `uint256` yang disebut `tokenId`, sehingga untuk Kontrak ERC-721 mana pun, pasangan `contract address, uint256 tokenId` harus bersifat unik secara global. Anggap saja, dApp bisa memiliki "konverter" yang menggunakan `tokenId` sebagai input dan output gambar dari sesuatu yang keren, seperti zombi, senjata, kemampuan, atau anak kucing yang menakjubkan!
 
 ## Prasyarat {#prerequisites}
 
