@@ -11,8 +11,8 @@ lang: en
 
 ## Introduction {#introduction}
 
-[Optimism](https://www.optimism.io/) is an [Optimistic Rollup](/developers/docs/scaling/optimistic-rollups/#top).
-Optimism can process transactions for a much lower price than the Ethereum mainnet (also known as layer 1 or L1) because transactions are processed a few times, rather than once on each node. 
+[Optimism](https://www.optimism.io/) is an [Optimistic Rollup](/developers/docs/scaling/optimistic-rollups/#top).g
+Optimistic rollups can process transactions for a much lower price than the Ethereum mainnet (also known as layer 1 or L1) because transactions are only processed by a few nodes, instead of the every node on the network. 
 At the same time, the data is all writted to L1 so everything can be proved and reconstructed with all the integrity and availability guarantees of mainnet.
 
 To use L1 assets on Optimism (or any other layer 2, or L2), those assets need to be [bridged](/bridges/#prerequisites).
@@ -24,7 +24,7 @@ When doing this, the assets are burned on L2 and then released back to the user 
 This is the way the [Optimism standard bridge](https://community.optimism.io/docs/developers/bridge/standard-bridge) works. 
 In this article we go over the source code for that bridge to see how it works and study it as an example of well written Solidity code.
 
-## Control and data flows {#control-and-data-flows}
+## Control flows {#control-flows}
 
 The bridge has two main flows:
 1. Deposit (from L1 to L2)
@@ -40,19 +40,17 @@ The bridge has two main flows:
    - ETH: The asset is transferred by the depositor as part of the call
    - ERC-20: The asset is transferred by the bridge to itself using the allowance provided by the depositor
 1. The L1 bridge uses the cross domain message mechanism to call `finalizeDeposit` on the L2 bridge
-1. The L1 bridge  emits an event
 
 
 #### Layer 2
 
-1. The L2 bridge verifies the call to `finalizeDeposit` is legitimate:
-   - Came from the cross message mechanism
+4. The L2 bridge verifies the call to `finalizeDeposit` is legitimate:
+   - Came from the cross domain message contract
    - Was originally from the bridge on L1
 1. The L2 bridge checks if the ERC-20 token contract on L2 is the correct one:
    - The L2 contract reports that its L1 counterpart is the same as the one the tokens came from on L1
    - The L2 contract reports that it supports the correct interface ([using ERC-165](https://eips.ethereum.org/EIPS/eip-165)).
-1. If the L2 contract is correct, call it to mint the appropriate number of tokens to the appropriate address
-1. The L2 contract emits an event
+1. If the L2 contract is the correct one, call it to mint the appropriate number of tokens to the appropriate address. If not, start a withdrawal process to allow the user to claim the tokens on L1.
 
 
 ### Withdrawal flow {#withdrawal-flow}
@@ -63,16 +61,14 @@ The bridge has two main flows:
 1. The withdrawer calls the L2 bridge (`withdraw` or `withdrawTo`)
 1. The L2 bridge burns the appropriate number of tokens belonging to `msg.sender`
 1. The L2 bridge uses the cross domain message mechanism to call `finalizeETHWithdrawal` or `finalizeERC20Withdrawal` on the L1 bridge 
-1. The L2 bridge emits an event
 
 
 #### Layer 1
 
-1. The L1 bridge verifies the call to `finalizeETHWithdrawal` or `finalizeERC20Withdrawal` is legitimate:
-   - Came from the cross message mechanism
+4. The L1 bridge verifies the call to `finalizeETHWithdrawal` or `finalizeERC20Withdrawal` is legitimate:
+   - Came from the cross domain message mechanism
    - Was originally from the bridge on L2
 1. The L1 bridge transfers the appropriate asset (ETH or ERC-20) to the appropriate address
-1. The L1 bridge emits an event
 
 
 
@@ -149,6 +145,7 @@ It is possible to add notes to transfers, in which case they are added to the ev
 ```
 
 The same bridge contract handles transfers in both directions.
+In the case of the L1 bridge, this means initialization of deposits and finalization of withdrawals.
 
 ```solidity
 
@@ -255,7 +252,8 @@ Withdrawals (and other messages from L2 to L1) in Optimism are a two step proces
 ### IL1StandardBridge {#il1standardbridge}
 
 [This interface is defined here](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L1/messaging/IL1StandardBridge.sol).
-The events and functions are nearly identical to those defined in `IL1ERC20Bridge` above.
+This file contains event and function definitions for ETH.
+These definitions are very similar to those defined in `IL1ERC20Bridge` above for ERC-20.
 
 The bridge interface is divided between two files because some ERC-20 tokens require custom processing and cannot be handled by the standard bridge.
 This way the custom bridge that handles such a token can implement `IL1ERC20Bridge` and not have to also bridge ETH.
@@ -398,7 +396,7 @@ This parameter is set once, in the constructor, and never changes.
     modifier onlyFromCrossDomainAccount(address _sourceDomainAccount) {
 ```
 
-The cross domain messaging is accessible by any contract on the blockchain (either Ethereum mainnet or Optimism). 
+The cross domain messaging is accessible by any contract on the blockchain where it is running (either Ethereum mainnet or Optimism). 
 But we need the bridge on each side to *only* trust certain messages if they come from the bridge on the other side.
 
 
@@ -420,7 +418,7 @@ Only messages from the appropriate cross domain messenger (`messenger`, as you s
 ```
 
 The way the cross domain messenger provides the address that sent a message with the other layer is [the `.xDomainMessageSender()` function](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L1/messaging/L1CrossDomainMessenger.sol#L122-L128). 
-As long as it is called in the same transaction as the one that receives the message, it can provide this data.
+As long as it is called in the transaction that was initiated by the message it can provide this information.
 
 We need to make sure that the message we received came from the other bridge.
 
@@ -542,12 +540,12 @@ Note that this isn't a perfect solution, because there is no way to distinguish 
 import { SafeERC20 } from "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol";
 ```
 
-[The ERC-20 standard](https://eips.ethereum.org/EIPS/eip-20) supports to ways for a contract to report failure:
+[The ERC-20 standard](https://eips.ethereum.org/EIPS/eip-20) supports two ways for a contract to report failure:
 
 1. Revert
 1. Return `false`
 
-Handling both cases makes our code more complicated, so instead we use [OpenZeppelin's `SafeERC20`](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/utils/SafeERC20.sol), which makes sure [all failures result in a revert](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/utils/SafeERC20.sol#L96).
+Handling both cases would make our code more complicated, so instead we use [OpenZeppelin's `SafeERC20`](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/utils/SafeERC20.sol), which makes sure [all failures result in a revert](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/utils/SafeERC20.sol#L96).
 
 
 
@@ -597,10 +595,9 @@ Only cells that are set to a different value are written to storage.
     constructor() CrossDomainEnabled(address(0)) {}
 ```
 
-To be able to upgrade this contract transparently without having to modify other components that use it we use a [`Proxy`](https://docs.openzeppelin.com/contracts/3.x/api/proxy). 
-Proxies are contract that use [`delegatecall`](https://solidity-by-example.org/delegatecall/) to transfer calls to a separate contact whose address is stored by the proxy contract.
-When you use `delegatecall` the storage remains the storage of the *calling* contract, so the value of all the contract state variables is unaffected.
-This allows us to preserve all the stored values while updating the functionality.
+To want to be able to upgrade this contract without having to copy all the variables in the storage.
+To do that we use a [`Proxy`](https://docs.openzeppelin.com/contracts/3.x/api/proxy), a contract that uses [`delegatecall`](https://solidity-by-example.org/delegatecall/) to transfer calls to a separate contact whose address is stored by the proxy contract (when you upgrade you tell the proxy to change that address).
+When you use `delegatecall` the storage remains the storage of the *calling* contract, so the values of all the contract state variables are unaffected.
 
 One effect of this pattern is that the storage of the contract that is the *callee* of `delegatecall` is not used and therefore the constructor values passed to it do not matter. 
 This is the reason we can provide a nonsensical value to the `CrossDomainEnabled` constructor.
@@ -621,10 +618,10 @@ It is also the reason the initialization below is separate from the constructor.
 
 This [Slither test](https://github.com/crytic/slither/wiki/Detector-Documentation#public-function-that-could-be-declared-external) identifies functions that are not called from the contract code and could therefore be declared `external` instead of `public`. 
 The gas cost of `external` functions can be lower, because they can be provided with parameters in the calldata. 
-Functions declared `public` have to be callable from within the contract.
+Functions declared `public` have to be accessible from within the contract.
 Contracts cannot modify their own calldata, so the parameters have to be in memory.
 When such a function is called externally, it is necessary to copy the calldata to memory, which costs gas.
-This is case the function is only called once, so the inefficiency does not matter to us.
+In this case the function is only called once, so the inefficiency does not matter to us.
 
 ```solidity
     function initialize(address _l1messenger, address _l2TokenBridge) public {
@@ -730,7 +727,7 @@ These two functions are wrappers around `_initiateETHDeposit`, the function that
 
 The way that cross domain messages work is that the destination contract is called with the message as its calldata.
 Solidity contracts always interpret their calldata is accordance with 
-[the ABI specifications])(https://docs.soliditylang.org/en/v0.8.12/abi-spec.html).
+[the ABI specifications](https://docs.soliditylang.org/en/v0.8.12/abi-spec.html).
 The Solidity function [`abi.encodeWithSelector`](https://docs.soliditylang.org/en/v0.8.12/units-and-global-variables.html#abi-encoding-and-decoding-functions) creates that calldata. 
 
 
@@ -751,7 +748,7 @@ The message here is to call [the `finalizeDeposit` function](https://github.com/
 | Parameter | Value     | Meaning |
 | --------- | --------- | ------- |
 | _l1Token | address(0) | Special value to stand for ETH (which isn't an ERC-20 token) on L1 |
-| _l2Token | Lib_PredeployAddresses.OVM_ETH | The L2 contract that manages ETH on Optimism, `0xDeadDeAddeAddEAddeadDEaDDEAdDeaDDeAD0000` (don't call this contract) |
+| _l2Token | Lib_PredeployAddresses.OVM_ETH | The L2 contract that manages ETH on Optimism, `0xDeadDeAddeAddEAddeadDEaDDEAdDeaDDeAD0000` (this contract is for internal Optimism use only) |
 | _from    | _from      | The address on L1 that sends the ETH |
 | _to      | _to        | The address on L2 that receives the ETH |
 | amount   | msg.value  | Amount of wei sent (which has already been sent to the bridge) |
@@ -829,6 +826,7 @@ These two functions are wrappers around `_initiateERC20Deposit`, the function th
 
 This function is similar to `_initiateETHDeposit` above, with a few important differences.
 The first difference is that this function receives the token addresses and the amount to transfer as parameters.
+In the case of ETH the call to the bridge already includes the transfer of asset to the bridge acount (`msg.value`).
 
 ```solidity
         // When a deposit is initiated on L1, the L1 Bridge transfers the funds to itself for future
@@ -838,8 +836,8 @@ The first difference is that this function receives the token addresses and the 
         IERC20(_l1Token).safeTransferFrom(_from, address(this), _amount);
 ```
 
-In the case of ETH the call to the bridge already includes the transfer of asset to the bridge acount (`msg.value`).
-ERC-20 token transfers follow a different process:
+
+ERC-20 token transfers follow a different process from ETH:
 
 1. The user (`_from`) gives an allowance to the bridge to transfer the appropriate tokens.
 1. The user calls the bridge with the address of the token contract, the amount, etc.
@@ -869,7 +867,7 @@ However, front-running is not a problem because the two functions that call `_in
 ```
 
 Add the deposited amount of tokens to the `deposits` data structure.
-In theory there could be multiple addresses on L2 that correspond to the same L1 ERC-20 token, so it is not sufficient to use the bridge's balance of the L1 ERC-20 token to keep track of deposits.
+There could be multiple addresses on L2 that correspond to the same L1 ERC-20 token, so it is not sufficient to use the bridge's balance of the L1 ERC-20 token to keep track of deposits.
 
 ```solidity
 
@@ -1010,7 +1008,7 @@ interface IL2StandardERC20 is IERC20, IERC165 {
     function l1Token() external returns (address);
 ```
 
-This function provides the address of the L1 token which is bridged to this one.
+This function provides the address of the L1 token which is bridged to this contract.
 Note that we do not have a similar function in the opposite direction. 
 We need to be able to bridge any L1 token, regardless of whether L2 support was planned when it was implemented or not.
 
@@ -1044,7 +1042,7 @@ import { ERC20 } from "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 ```
 
 [The OpenZeppelin ERC-20 contract](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol).
-Optimism does not believe in reinventing the wheel, especially when the wheel is well audited and holds valuable assets.
+Optimism does not believe in reinventing the wheel, especially when the wheel is well audited and needs to be trustworthy enough to hold assets.
 
 ```solidity
 import "./IL2StandardERC20.sol";
@@ -1121,7 +1119,7 @@ The L2 bridge uses ERC-165 as a sanity check to make sure that the ERC-20 contra
 Only the L2 bridge is allowed to mint and burn assets.
 
 `_mint` and `_burn` are actually defined in the [OpenZeppelin ERC-20 contract](https://ethereum.org/en/developers/tutorials/erc20-annotated-code/#the-_mint-and-_burn-functions-_mint-and-_burn). 
-That contract just doesn't expose them externally, because the conditions to mint and burn tokens are as varied as the number of ERF-20 uses.
+That contract just doesn't expose them externally, because the conditions to mint and burn tokens are as varied as the number of ways to use ERC-20.
 
 
 ## L2 Bridge Code {#l2-bridge-code}
@@ -1257,7 +1255,7 @@ L2 tokens are expected to tell us the L1 equivalent's address.
         IL2StandardERC20(_l2Token).burn(msg.sender, _amount);
 ```
 
-Notice that we are *not* relying on the `_from` parameter but on `msg.sender` which is a lot more trustworthy.
+Notice that we are *not* relying on the `_from` parameter but on `msg.sender` which is a lot harder to fake (impossible, as far as I know).
 
 ```solidity
 
@@ -1391,4 +1389,11 @@ The only way we can do this from L2 is to send a message that will have to wait 
 
 ## Conclusion {#conclusion}
 
-Hopefully reading this article helped you learn how to write good and safe Solidity contracts.
+The standard bridge is the most flexible mechanism for asset transfers.
+However, because it is so generic it is not always the easiest mechanism to use.
+Especially for withdrawals, most users prefer to use [third party bridges](https://www.optimism.io/apps/bridges) that do not wait the challenge period and do not require a Merkle proof to finalize the withdrawal.
+
+These bridges typically work by having assets on L1, which they provide immediately for a small fee (often less than the cost of gas for a standard bridge withdrawal).
+When the bridge (or the people running it) anticipates being short on L1 assets it transfers sufficient assets from L2. As these are very big withdrawals, the withdrawal cost is amortized over a large amount and is a much smaller percentage.
+
+Hopefully this article helped you understand more about how layer 2 works, and how to write Solidity code that is clear and secure.
