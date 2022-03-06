@@ -32,6 +32,9 @@ These projects have created their own grants for projects aimed at developing an
 - [Uniswap Grants Program](https://www.unigrants.org/) – _[Uniswap](https://uniswap.org/) community_
 - [Balancer](https://forms.gle/c68e4fM7JHCQkPkN7) – _[Balancer](https://balancer.fi/) Ecosystem Fund_
 - [mStable](https://docs.mstable.org/advanced/grants-program) - _[mStable](https://mstable.org/) community_
+- [ICON CPS](https://cps.icon.community/) - _[ICON](https://cps.icon.community/) blockchain_
+- [Algorand Grants Program](https://algorand.foundation/grants-program) - _[Algorand](https://algorand.foundation/) foundation_
+- [Web3 Foundation Grants Program](https://github.com/w3f/Grants-Program) - _[Web3](https://github.com/w3f) ecosystem_
 
 ## Quadratic funding {#quadratic-funding}
 
