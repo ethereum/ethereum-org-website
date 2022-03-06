@@ -104,6 +104,35 @@ Example response:
 
 With the signature hash, the transaction can be cryptographically proven that it came from the sender and submitted to the network.
 
+### The data field {#the-data-field}
+
+The vast majority of transactions access a contract from an externally owned account (EOA).
+Most contracts are written in Solidity and interpret their data field in accordance with the [application binary interface (ABI)](https://docs.soliditylang.org/en/v0.8.12/abi-spec.html).
+
+The first four bytes specify which function to call, using the hash of the function's name and arguments.
+You can sometimes identify the function from the selector using [this database](https://www.4byte.directory/signatures/).
+
+The rest of the calldata is the arguments, [encoded as specified in the ABI specs](https://docs.soliditylang.org/en/v0.8.12/abi-spec.html#formal-specification-of-the-encoding).
+
+For example, lets look at [this transaction](https://etherscan.io/tx/0xd0dcbe007569fcfa1902dae0ab8b4e078efe42e231786312289b1eee5590f6a1).
+Use **Click to see More** to see the calldata.
+
+The function selector is `0xa9059cbb`. There are several [known functions with this signature](https://www.4byte.directory/signatures/?bytes4_signature=0xa9059cbb).
+In this case [the contract source code](https://etherscan.io/address/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48#code) has been uploaded to Etherscan, so we know the function is `transfer(address,uint256)`.
+
+The rest of the data is:
+
+```
+0000000000000000000000004f6742badb049791cd9a37ea913f2bac38d01279
+000000000000000000000000000000000000000000000000000000003b0559f4
+```
+
+According to the specifications integer nunbers, such as addresses, appear in the ABI as 32 byte words.
+So we know that the `to` address is [`4f6742badb049791cd9a37ea913f2bac38d01279`](https://etherscan.io/address/0x4f6742badb049791cd9a37ea913f2bac38d01279). 
+The `value` is 0x3b0559f4 = 990206452.
+
+
+
 ## Types of transactions {#types-of-transactions}
 
 On Ethereum there are a few different types of transactions:
