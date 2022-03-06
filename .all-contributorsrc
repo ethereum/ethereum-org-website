@@ -6016,7 +6016,8 @@
       "profile": "https://github.com/juliangeissler",
       "contributions": [
         "doc",
-        "bug"
+        "bug",
+        "code"
       ]
     },
     {
@@ -6608,7 +6609,9 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/64414414?v=4",
       "profile": "https://www.linkedin.com/in/rahul-bansal-66a9581a6/",
       "contributions": [
-        "ideas"
+        "ideas",
+        "doc",
+        "content"
       ]
     },
     {
@@ -6628,6 +6631,70 @@
       "profile": "https://github.com/Kansas-Guy",
       "contributions": [
         "content"
+      ]
+    },
+    {
+      "login": "bestpilotingalaxy",
+      "name": "bestpilotingalaxy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/59182467?v=4",
+      "profile": "https://github.com/bestpilotingalaxy",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "q9f",
+      "name": "Afr Schoe",
+      "avatar_url": "https://avatars.githubusercontent.com/u/58883403?v=4",
+      "profile": "http://fault.dev",
+      "contributions": [
+        "code",
+        "doc"
+      ]
+    },
+    {
+      "login": "jamongeon1",
+      "name": "jamongeon1",
+      "avatar_url": "https://avatars.githubusercontent.com/u/94926423?v=4",
+      "profile": "https://github.com/jamongeon1",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "JayGreck",
+      "name": "Jay",
+      "avatar_url": "https://avatars.githubusercontent.com/u/56350730?v=4",
+      "profile": "https://github.com/JayGreck",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "ArnaudSpanneut",
+      "name": "Arnaud Spanneut",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2766935?v=4",
+      "profile": "https://github.com/ArnaudSpanneut",
+      "contributions": [
+        "translation"
+      ]
+    },
+    {
+      "login": "yuliyu123",
+      "name": "yuliyu123",
+      "avatar_url": "https://avatars.githubusercontent.com/u/8566390?v=4",
+      "profile": "https://github.com/yuliyu123",
+      "contributions": [
+        "translation"
+      ]
+    },
+    {
+      "login": "VignetteApril",
+      "name": "Jack",
+      "avatar_url": "https://avatars.githubusercontent.com/u/28882898?v=4",
+      "profile": "https://vignetteapril.github.io",
+      "contributions": [
+        "translation"
       ]
     }
   ],

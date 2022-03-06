@@ -542,6 +542,10 @@ A network [node](#node) that finds valid [proof-of-work](#pow) for new blocks, b
   Mining
 </DocLink>
 
+### Mint {#mint}
+
+Minting is the process of creating new tokens and bringing them into circulation so that they can be used. It's a decentralized mechanism to create a new token without the involvement of the central authority.
+
 <Divider />
 
 ## N {#section-n}

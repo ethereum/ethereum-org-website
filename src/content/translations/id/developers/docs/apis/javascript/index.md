@@ -241,7 +241,7 @@ ethers.utils.formatEther(balance)
 - [Dokumentasi](https://web3js.readthedocs.io/en/1.0/)
 - [GitHub](https://github.com/ethereum/web3.js/)
 
-**Ethers.js -** **_Implementasi dan utilitas dompet Ethereum secara lengkap dalam JavaScript dan TypeScript._**
+**Ethers.js -** **_Implementasi dompet Ethereum secara lengkap dengan JavaScript and TypeScript._**
 
 - [Dokumentasi](https://docs.ethers.io/)
 - [GitHub](https://github.com/ethers-io/ethers.js/)
@@ -254,7 +254,7 @@ ethers.utils.formatEther(balance)
 - [GitHub](https://github.com/graphprotocol/)
 - [Discord](https://thegraph.com/discord)
 
-**light.js -** **_Library JS reaktif tingkat tinggi yang dioptimalkan untuk klien ringan._**
+**light.js -** **_Pustaka JS reaktif tingkat tinggi yang dioptimalkan untuk klien ringan._**
 
 - [GitHub](https://github.com/openethereum/js-libs/tree/master/packages/light.js)
 
@@ -270,7 +270,7 @@ ethers.utils.formatEther(balance)
 
 ## Bacaan lebih lanjut {#further-reading}
 
-_Tahu tentang bahan rujukan komunitas yang membantu Anda? Edit halaman ini dan tambahkan!_
+_Tahu tentang sumber daya komunitas yang membantu Anda? Edit halaman ini dan tambahkan!_
 
 ## Topik terkait {#related-topics}
 

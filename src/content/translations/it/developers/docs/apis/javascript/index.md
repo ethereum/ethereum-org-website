@@ -7,7 +7,7 @@ sidebar: true
 
 Per interagire con la blockchain Ethereum (ad esempio leggere i dati della blockchain e/o inviare transazioni alla rete), una web app deve connettersi a un nodo Ethereum.
 
-A questo scopo, ogni client Ethereum implementa la specifica JSON-RPC, così che ci sia un set uniforme di endpoint a cui le applicazioni possono fare riferimento.
+Per questo scopo, ogni client di Ethereum implementa la specifica [JSON-RPC](/developers/docs/apis/json-rpc/), quindi esiste una serie uniforme di [endpoint](/developers/docs/apis/json-rpc/endpoints/) su cui possono basarsi le applicazioni.
 
 Se desideri utilizzare JavaScript per connetterti a un nodo Ethereum, puoi usare Javascript vanilla, ma tieni presente che ci sono già molte librerie all'interno dell'ecosistema che possono facilitarti la vita. Con queste librerie, gli sviluppatori possono scrivere metodi a una riga intuitivi per inizializzare le richieste RPC JSON (under the hood) che interagiscono con Ethereum.
 
@@ -30,7 +30,7 @@ Utilizzando i provider, queste librerie consentono di connettersi a Ethereum e l
 ```js
 // Un Web3Provider esegue il wrapping di un provider Web3 standard, che è
 // ciò che Metamask inserisce come window.ethereum in ogni pagina
-const provider = new ethers.providers.eb3Provider(window.ethereum)
+const provider = new ethers.providers.Web3Provider(window.ethereum)
 
 // Il plugin Metamask permette anche di firmare le transazioni per
 // inviare ether e pagare per cambiare stato all'interno della blockchain.
@@ -71,7 +71,7 @@ Una volta eseguita la configurazione, sarà possibile interrogare la blockchain 
 
 ### Funzionalità del portafoglio {#wallet-functionality}
 
-Queste librerie offrono le funzionalità per creare portafogli, gestire chiavi e firmare transazioni.
+Queste librerie offrono funzionalità per creare portafogli, gestire chiavi e firmare transazioni.
 
 Ecco un esempio da Ethers
 
@@ -153,7 +153,7 @@ Una volta eseguita la configurazione, sarà possibile:
 
 ### Interagire con le funzioni degli Smart Contract {#interact-with-smart-contract-functions}
 
-Le librerie client Javascript consentono a un'applicazione di chiamare le funzioni degli Smart Contract leggendo l'ABI ( Application Binary Interface) di un contratto compilato.
+Le librerie client Javascript consentono a un'applicazione di chiamare le funzioni degli Smart Contract leggendo l'ABI (Application Binary Interface) di un contratto compilato.
 
 L'ABI spiega essenzialmente le funzioni del contratto in un formato JSON e consente di utilizzarlo come un normale oggetto JavaScript.
 
@@ -215,9 +215,9 @@ Ciò significa che è possibile:
 
 ### Funzioni di utilità {#utility-functions}
 
-Le funzioni di utilità forniscono pratiche scorciatoie che facilitano un po' la programmazione con Ethereum.
+Le funzioni di utilità forniscono pratiche scorciatoie che rendono la programmazione con Ethereum un po’ più semplice.
 
-I valori ETH sono in Wei per default. 1 ETH = 1.000.000.000.000.000 WEI, cioè veramente tante cifre! `web3.utils.toWei` converte ether in Wei.
+I valori ETH sono in Wei per default. 1 ETH = 1.000.000.000.000.000 WEI, un numero di cifre veramente elevato! `web3.utils.toWei` converte ether in Wei.
 
 E in ethers funziona così:
 
@@ -242,9 +242,9 @@ ethers.utils.formatEther(balance)
 - [Documentazione](https://web3js.readthedocs.io/en/1.0/)
 - [GitHub](https://github.com/ethereum/web3.js/)
 
-**Ethers.js -** **_Implementazione completa del portafoglio di Ethereum e utilità in JavaScript e TypeScript_**
+**Ethers.js -** **_Implementazione completa del portafoglio Ethereum e delle utility in JavaScript e TypeScript._**
 
-- [Documentazione](https://docs.ethers.io/ethers.js/html/)
+- [Documentazione](https://docs.ethers.io/)
 - [GitHub](https://github.com/ethers-io/ethers.js/)
 
 **The Graph -** **_Protocollo per indicizzare i dati Ethereum e IPFS ed eseguire query con GraphQL_**
@@ -271,7 +271,7 @@ ethers.utils.formatEther(balance)
 
 ## Letture consigliate {#further-reading}
 
-_Conosci una risorsa della community che ti è stata utile? Modifica questa pagina e aggiungila!_
+_Conosci una risorsa pubblica che ti è stata utile? Modifica questa pagina e aggiungila!_
 
 ## Argomenti correlati {#related-topics}
 

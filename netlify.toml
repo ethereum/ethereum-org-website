@@ -16,3 +16,8 @@
   # Directory with the serverless Lambda functions to deploy to AWS.
   # netlify-lambda needs this netlify.toml file in order to build
   functions = "public/functions"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "https://esp.ethereum.foundation"

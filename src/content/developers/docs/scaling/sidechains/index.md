@@ -27,8 +27,8 @@ You should have a good understanding of all the foundational topics and a high-l
 
 Multiple projects provide implementations of sidechains that you can integrate into your dapps:
 
+- [Polygon PoS](https://polygon.technology/solutions/polygon-pos)
 - [Skale](https://skale.network/)
-- [POA Network](https://www.poa.network/)
 - [Gnosis Chain (formerly xDai)](https://www.xdaichain.com/)
 
 ## Further reading {#further-reading}

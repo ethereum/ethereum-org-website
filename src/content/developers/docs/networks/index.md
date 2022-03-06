@@ -100,7 +100,6 @@ A proof-of-work testnet. This means it's the best like-for-like representation o
 ##### Ropsten faucets
 
 - [FaucETH](https://fauceth.komputing.org)(Multi-Chain faucet without the need for social account)
-- [Ropsten faucet](https://faucet.ropsten.be/)
 - [Paradigm faucet](https://faucet.paradigm.xyz/)
 
 ## Private networks {#private-networks}

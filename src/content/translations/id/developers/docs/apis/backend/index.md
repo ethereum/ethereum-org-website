@@ -43,6 +43,11 @@ Pustaka ini menyederhanakan banyak kerumitan dalam interaksi langsung dengan nod
 
 - [cloudflare-eth.com](https://cloudflare-eth.com)
 
+**DataHub oleh Figment -** **_layanan API Web3 dengan Jaringan Utama Ethereum dan testnet._**
+
+- [DataHub](https://www.figment.io/datahub)
+- [Dokumentasi](https://docs.figment.io/introduction/what-is-datahub)
+
 **Nodesmith -** **_Akses API JSON-RPC ke Jaringan Utama dan testnet Ethereum._**
 
 - [nodesmith.io](https://nodesmith.io/network/ethereum/)
@@ -61,7 +66,7 @@ Pustaka ini menyederhanakan banyak kerumitan dalam interaksi langsung dengan nod
 
 - [quiknode.io](https://quiknode.io)
 
-**Peralatan Python -** **_Berbagai macam pustaka untuk interaksi Ethereum dengan Python._**
+**Perangkat Python -** **_Berbagai macam pustaka untuk interaksi Ethereum dengan Python._**
 
 - [py.ethereum.org](http://python.ethereum.org/)
 - [GitHub web3.py](https://github.com/ethereum/web3.py)
@@ -70,7 +75,7 @@ Pustaka ini menyederhanakan banyak kerumitan dalam interaksi langsung dengan nod
 **web3j -** **_Pustaka integrasi Java/Android/Kotlin/Scala untuk Ethereum._**
 
 - [GitHub](https://github.com/web3j/web3j)
-- [Dokumentasi](https://docs.web3j.io/)
+- [Dokumen](https://docs.web3j.io/)
 - [Gitter](https://gitter.im/web3j/web3j)
 
 **Rivet -** **_Ethereum dan API Klasik Ethereum sebagai layanan yang didukung oleh sumber terbuka._**

@@ -1,75 +1,74 @@
 ---
-title: Account Ethereum
+title: Conti di Ethereum
 description: "Informazioni sugli account Ethereum: struttura dei dati e rapporto con la crittografia con coppie di chiavi."
 lang: it
 sidebar: true
-isOutdated: true
 ---
 
-Un account Ethereum è un'entità con un saldo in ether (ETH) che può inviare transazioni su Ethereum. Gli account possono essere controllati da utenti o distribuiti come Smart Contract.
+Un account Ethereum è un'entità con un saldo in ether (ETH) che può inviare transazioni su Ethereum. I conti sono controllabili da utenti o distribuibili come Contratti Intelligenti.
 
 ## Prerequisiti {#prerequisites}
 
-Gli account sono un argomento piuttosto basico. Per capire meglio questa pagina, consigliamo tuttavia di leggere prima la nostra [introduzione a Ethereum](/developers/docs/intro-to-ethereum/).
+I conti sono un argomento piuttosto basilare. Ma per meglio comprendere questa pagina, ti consigliamo innanzi tutto di leggere la nostra [introduzione a Ethereum](/developers/docs/intro-to-ethereum/).
 
-## Tipi di account {#types-of-account}
+## Tipi di conto {#types-of-account}
 
-Ethereum ha due tipi di account:
+Ethereum ha due tipi di conto:
 
-- Di proprietà esterna: controllato da chiunque possieda chiavi private
-- Contratto: uno Smart Contract distribuito sulla rete, controllato da codice. Scopri di più sugli [Smart Contract](/developers/docs/smart-contracts/)
+- Di proprietà esterna: controllato da chiunque possieda le chiavi private
+- Contratto: un Contratto Intelligente distribuito in rete, controllato dal codice. Scopri di più sugli [Smart Contract](/developers/docs/smart-contracts/)
 
-Entrambi i tipi di account hanno la possibilità di:
+Entrambi i tipi di conto hanno l'abilità di:
 
 - Ricevere, conservare e inviare ETH e token
-- Interagire con gli Smart Contract distribuiti
+- Interagire con i contratti intelligenti distribuiti
 
 ### Differenze fondamentali {#key-differences}
 
-**Di proprietà esterna**
+**Posseduti esternamente**
 
-- Creare un account non costa nulla
+- Creare un conto non costa nulla
 - Può avviare transazioni
-- Le transazioni tra account di proprietà esterna possono essere solo trasferimenti di ETH
+- Le transazioni tra account esterni possono riguardare unicamente trasferimenti di ETH/token
 
 **Contratto**
 
-- La creazione di un account ha un costo perché utilizzi spazio di archiviazione della rete
+- Creare un contratto ha un costo, poiché l'utente utilizza l'archiviazione di rete
 - Può inviare transazioni solo in risposta alla ricezione di una transazione
-- Le transazioni da un account esterno a un account contratto possono attivare codice, che a sua volta può eseguire molte azioni diverse, come il trasferimento di token o anche la creazione di un nuovo contratto
+- Le transazioni da un account esterno a un account basato su un contratto possono innescare un codice che può eseguire le azioni più svariate, come il trasferimento di token o persino la creazione di un nuovo contratto
 
-## Un account da vicino {#an-account-examined}
+## Esaminando un conto {#an-account-examined}
 
-Gli account Ethereum hanno quattro campi:
+I conti di Ethereum hanno quattro campi:
 
-- `nonce`: contatore che indica il numero di transazioni inviate dall'account. Garantisce che le transazioni vengano elaborate una sola volta. Se si tratta di un account contratto, questo numero rappresenta il numero di contratti creati dall'account
-- `balance`: il numero di Wei di proprietà di questo indirizzo. Wei è un taglio dell'ETH. Ci sono 1e+18 Wei per ogni ETH.
-- `codeHash`: tutti questi frammenti di codice sono contenuti nel database di stato sotto i relativi hash per un recupero futuro. Per gli account contratto, è il codice a cui viene applicato un hash e che viene archiviato come codeHash. Per gli account di proprietà esterna, il campo codeHash è l'hash della stringa vuota.
-- `storageRoot`: detto anche hash di archiviazione. Hash a 256 bit del nodo radice di un albero di Merkle Patricia che codifica il contenuto dello spazio di archiviazione dell'account (una mappatura tra valori interi a 256 bit), codificato nel trie come mappatura tra l'hash di Keccak a 256 bit delle chiavi intere a 256 bit e i valori interi codificati in RLP a 256 bit. Questo albero codifica l'hash del contenuto dello storage di questo account ed è vuoto di default.
+- `nonce`: un contatore che indica il numero di transazioni inviate dal conto. Questo assicura che le transazioni siano elaborate una volta. In un account basato su contratto, questo numero rappresenta il numero di contratti creati dall'account.
+- `balance`: il numero di wei posseduti da questo indirizzo. Wei è una denominazione di ETH e ci sono 1e+18 wei per ETH.
+- `codeHash`: questo hash si riferisce al _codice_ di un account sulla Macchina virtuale Ethereum (EVM). Gli account basati su contratto contengono frammenti di codice programmati per eseguire diverse operazioni. Questo codice EVM viene eseguito se l'account riceve una chiamata di messaggio. Non è modificabile, a differenza degli altri campi dell'account. Tutti i frammenti di codice sono conservati nel database di stato sotto gli hash corrispondenti, per riferimento futuro. Questo valore dell'hash è noto come un codeHash. Per gli account esterni, il campo del codeHarsh è l'hash di una stringa vuota.
+- `storageRoot`: detto anche hash di archiviazione. Hash a 256 bit del nodo radice di un trie di Merkle Patricia che codifica il contenuto dello spazio di archiviazione dell'account (una mappatura tra valori interi a 256 bit), codificato nel trie come mappatura tra l'hash di Keccak a 256 bit delle chiavi intere a 256 bit e i valori interi codificati in RLP a 256 bit. Questo trie codifica l'hash dei contenuti d'archiviazione di questo account ed è vuoto di default.
 
-![Diagramma che mostra la composizione di un account](../../../../../developers/docs/accounts/accounts.png) _Diagramma adattato da [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![Un diagramma mostra la composizione di un conto](./accounts.png) _Diagramma adattato da [Ethereum EVM illustrato](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
-## Account di proprietà esterna e coppie di chiavi {#externally-owned-accounts-and-key-pairs}
+## I conti posseduti esternamente e le coppie di chiavi {#externally-owned-accounts-and-key-pairs}
 
-Un account è costituito da una coppia di chiavi crittografiche: pubblica e privata. Le chiavi contribuiscono a dimostrare che una transazione è stata effettivamente firmata dal mittente e a prevenire falsificazioni. La chiave privata è ciò che viene utilizzato per firmare le transazioni, quindi garantisce la custodia dei fondi associati all'account. La proprietà delle criptovalute non è mai veramente dell'utente. L'utente possiede le chiavi private, i fondi si trovano sempre nel ledger di Ethereum.
+Un conto è composto da una coppia di chiavi crittografiche: pubblica e privata. Aiutano a provare che una transazione è stata realmente firmata dal mittente e prevenire le falsificazioni. La tua chiave privata è ciò che usi per firmare le transazioni, quindi ti concede la custodia dei fondi associati al tuo conto. Non possiedi mai realmente le criptovalute, possiedi le chiavi private; i fondi sono sempre nel registro mastro di Ethereum.
 
 Questo impedisce ai malintenzionati di trasmettere transazioni false perché è sempre possibile verificare il mittente di una transazione.
 
-Se Alice vuole inviare ether dal suo account a quello di Bob, deve creare una richiesta di transazione e inviarla alla rete per la verifica. L’uso di Ethereum della crittografia a chiave pubblica garantisce che Alice possa dimostrare di aver avviato originariamente la richiesta di transazione. Senza meccanismi crittografici, un utente malintenzionato, ad esempio Eva, potrebbe semplicemente trasmettere pubblicamente una richiesta del tipo “inviare 5 ETH dall'account di Alice a quello di Eva", e nessuno sarebbe in grado di verificare che non provenga da Alice.
+Se Alice vuole inviare ether dal proprio conto a quello di Bob, Alice deve creare una richiesta di transazione e inviarla alla rete per la verifica. L'uso di Ethereum della crittografia a chiave pubblica assicura che Alice possa provare che abbia originariamente avviato la richiesta di transazione. Senza i meccanismi crittografici, un utente malintenzionato "Eve" potrebbe semplicemente trasmettere pubblicamente una richiesta che somiglia a qualcosa del tipo "invia 5 ETH dal conto di Alice a quello di Eve" e nessuno potrebbe verificare che non fosse provenuto da Alice.
 
-## Creazione di account {#account-creation}
+## Creazione del conto {#account-creation}
 
 Quando vuoi creare un account, la maggior parte delle librerie generano genereranno una chiave privata casuale.
 
-Una chiave privata è composta da un massimo di 64 caratteri esadecimali e può essere crittografata con una password.
+Una chiave privata si compone di 64 caratteri hex ed è codificabile con una password.
 
 Esempio:
 
 `fffffffffffffffffffffffffffffffebaaedce6af48a03bbfd25e8cd036415f`
 
-La chiave pubblica viene generata dalla chiave privata usando l'algoritmo di firma digitale della curva ellittica. Ottieni un indirizzo pubblico per il tuo account prendendo gli ultimi 20 byte della chiave pubblica e aggiungendo `0x` all'inizio.
+La chiave pubblica è generata dalla chiave privata usando [Elliptic Curve Digital Signature Algorithm](https://wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm). Puoi ottenere un indirizzo pubblico per il tuo account impiegando gli ultimi 20 byte dell'hash Keccak-256 della chiave pubblica e aggiungendo `0x` all'inizio.
 
-Ecco un esempio di creazione di un account nella console utilizzando `personal_newAccount` di GETH
+Ecco un esempio di creazione di un conto nella console usando il `personal_newAccount` di GETH
 
 ```go
 > personal.newAccount()
@@ -81,11 +80,11 @@ Repeat passphrase:
 "0x3d80b31a78c30fc628f20b2c89d7ddbf6e53cedc"
 ```
 
-[Documentazione GETH](https://geth.ethereum.org/docs)
+[Documentazione di GETH](https://geth.ethereum.org/docs)
 
-È possibile ricavare nuove chiavi pubbliche dalla chiave privata ma non è possibile ricavare una chiave privata da chiavi pubbliche. Significa che è fondamentale mantenere le chiavi private al sicuro e, come suggerisce il nome, **PRIVATE**.
+È possibile derivare nuove chiavi pubbliche dalla tua chiave privata ma non puoi derivare una chiave privata dalle chiavi pubbliche. Questo significa che è vitale mantenere al sicuro una chiave privata, come suggerito dal nome, **PRIVATA**.
 
-Serve una chiave privata per firmare i messaggi e le transazioni che producono una firma. Gli altri utenti possono quindi utilizzare la firma per ricavare la chiave pubblica e dimostrare chi è l'autore del messaggio. Nelle applicazioni ch si creano, è possibile utilizzare una libreria javascript per inviare transazioni alla rete.
+Necessiti di una chiave privata per firmare i messaggi e le transazioni che producono una firma. Gli altri possono quindi prendere la firma per derivare la tua chiave pubblica, provando l'autore del messaggio. Nella tua applicazione, puoi usare una libreria javascript per inviare le transazioni alla rete.
 
 ## Account contratto {#contract-accounts}
 
@@ -99,13 +98,21 @@ L'indirizzo dell'account contratto viene solitamente indicato quando un contratt
 
 ## Una nota sui portafogli {#a-note-on-wallets}
 
-Un account non è un portafoglio. Un portafoglio è una coppia di chiavi associata a un account di proprietà di un utente, che permette all'utente di eseguire transazioni dall'account e di gestirlo.
+Un account non è un portafoglio. Un account è la coppia di chiavi per un account Ethereum di proprietà dell'utente. Un portafoglio è un'interfaccia o un'applicazione che ti permette di interagire con il tuo account Ethereum.
 
-## Letture consigliate {#further-reading}
+## Demo visiva {#a-visual-demo}
 
-_Conosci una risorsa della community che ti è stata utile? Modifica questa pagina e aggiungila!_
+Fatti guidare da Austin attraverso le funzionalità di hash e le coppie di chiavi.
+
+<YouTube id="QJ010l-pBpE" />
+
+<YouTube id="9LtBDy67Tho" />
+
+## Lettura consigliate {#further-reading}
+
+_Conosci una risorsa pubblica che ti è stata utile? Modifica questa pagina e aggiungila!_
 
 ## Argomenti correlati {#related-topics}
 
-- [Smart Contract](/developers/docs/smart-contracts/)
+- [Contratti intelligenti](/developers/docs/smart-contracts/)
 - [Transazioni](/developers/docs/transactions/)

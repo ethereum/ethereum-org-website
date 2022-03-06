@@ -49,7 +49,7 @@ You can download and create a MetaMask account for free [here](https://metamask.
 
 ## Step 4: Add ether from a Faucet {#step-4-add-ether-from-a-faucet}
 
-In order to deploy our smart contract to the test network, we’ll need some fake ETH. To get ETH you can go to the [Ropsten faucet](https://faucet.ropsten.be/) and enter your Ropsten account address, then click “Send Ropsten ETH.” You should see ETH in your MetaMask account soon after!
+In order to deploy our smart contract to the test network, we’ll need some fake ETH. To get ETH you can go to the [FaucETH](https://fauceth.komputing.org) and enter your Ropsten account address, click “Request funds”, then select “Ethereum Testnet Ropsten” in the dropdown and finally click “Request funds” button again. You should see ETH in your MetaMask account soon after!
 
 ## Step 5: Check your Balance {#check-balance}
 
@@ -265,7 +265,7 @@ Update your hardhat.config.js to look like this:
     require("@nomiclabs/hardhat-ethers");
     const { API_URL, PRIVATE_KEY } = process.env;
     module.exports = {
-       solidity: "0.8.0",
+       solidity: "0.8.1",
        defaultNetwork: "ropsten",
        networks: {
           hardhat: {},

@@ -34,7 +34,7 @@ Kami ingin agar minat pengguna kami terusik dan pertanyaan mereka dijawab. Jadi 
 
 ### 2. ethereum.org selalu berkembang 🛠 {#core-principles-2}
 
-Ethereum dan komunitas selalu berkembang, begitu juga ethereum.org. Itu sebabnya situs ini memiliki sistem desain sederhana & struktur modular. Kami membuat perubahan berulang saat kami mempelajari lebih lanjut tentang bagaimana orang menggunakan situs dan apa yang diinginkan komunitas darinya.
+Ethereum dan komunitas selalu berkembang, begitu juga ethereum.org. Itu sebabnya situs ini memiliki sistem desain sederhana dan struktur modular. Kami membuat perubahan berulang saat kami mempelajari lebih lanjut tentang bagaimana orang menggunakan situs dan apa yang diinginkan komunitas darinya.
 
 Kami adalah sumber daya terbuka, dengan komunitas kontributor, sehingga Anda dapat mengusulkan perubahan atau membantu kami juga.
 
@@ -48,7 +48,7 @@ Ethereum adalah hal yang besar: itu mencakup komunitas, teknologi, serangkaian i
 
 ## Prinsip desain {#design-principles}
 
-Kami menggunakan serangkaian [prinsip desain](/contributing/design-principles/) untuk memandu konten dan pilihan desain kami di situs.
+Kami menggunakan serangkaian [prinsip desain](/contributing/design-principles/) untuk memandu pemilihan konten dan desain kami di situs.
 
 ## Panduan gaya penulisan {#style-guide}
 
@@ -67,5 +67,6 @@ Pastikan Anda membaca [prinsip-prinsip kami](/contributing/design-principles/) d
 Meskipun situs web ini adalah sumber terbuka dan siapa pun dapat mengerjakannya, kami memiliki sebuah tim yang didedikasikan untuk ethereum.org dan proyek web Yayasan Ethereum lainnya.
 
 Kami akan memposting lowongan pekerjaan apa pun di sini. Jika Anda tidak melihat posisi pekerjaan yang sesuai untuk Anda, kunjungi [Discord](https://discord.gg/CetY6Y4) dan beri tahu kami bagaimana Anda ingin bekerja dengan kami!
+
 
 Ingin pekerjaan di luar tim ethereum.org? [Lihat pekerjaan terkait Ethereum lainnya](/community/#ethereum-jobs).

@@ -295,7 +295,6 @@ const frameworksList = [
     githubUrl: "https://github.com/nomiclabs/hardhat",
     background: "#faf8fb",
     name: "Hardhat",
-    image: "https://hardhat.org/assets/img/Hardhat-logo.652a7049.svg",
     description: "page-local-environment-hardhat-desc",
     alt: "page-local-environment-hardhat-logo-alt",
   },
@@ -620,6 +619,9 @@ export const query = graphql`
           quality: 100
         )
       }
+    }
+    hardhat: file(relativePath: { eq: "dev-tools/hardhat.png" }) {
+      ...devtoolImage
     }
     dapptools: file(relativePath: { eq: "dev-tools/dapptools.png" }) {
       ...devtoolImage
