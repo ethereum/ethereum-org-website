@@ -231,7 +231,7 @@ How to prepare your content for translation depends on whether you're working on
 
 **- MDX pages (`/src/content/page/`)**
 
-Markdown will be translated as whole pages of content, so no specific action is required. Simply create a new folder within `/src/content/` with the name of the page, then place index markdown file (ie. `index.md`) within new folder.
+Markdown will be translated as whole pages of content, so no specific action is required. Simply create a new folder within `/src/content/` with the name of the page, then place index markdown file (ie. `index.md`) within the new folder.
 
 **- React component page**
 
@@ -252,7 +252,7 @@ Markdown will be translated as whole pages of content, so no specific action is 
   - This minimizes issues during translation, and allows consistent styling to all languages
 - _Please avoid_ embedding links within a sentence. For a word/phrase to be a link, it requires a key/string in the intl JSON. If this is in the middle of another sentence, this results in the sentence being broken into multiple pieces, and requires coding the sentence structure into the JavaScript.
 
-  - This results in significant challenges during translation process, as written syntax for each language will very in terms of ordering subjects/verbs/etc.
+  - This results in significant challenges during the translation process, as written syntax for each language will vary in terms of ordering subjects/verbs/etc.
   - If you're wanting to link to something within your sentence, create a link at the end of the sentence or paragraph:
 
   ```
