@@ -197,7 +197,7 @@ To get more information about the program, learn how to use Crowdin, check on th
   - Primary implementation: `/src/components/Search/index.js`
 - [Crowdin](https://crowdin.com/) - crowdsourcing for our translation efforts (See "Translation initiative" below)
 - [GitHub Actions](https://github.com/features/actions) - Manages CI/CD, and issue tracking
-- [Netlify](https://yarnpkg.com/cli/install) - DNS management and primary host for `master` build. Also provides automatic preview deployments for all pull requests
+- [Netlify](https://www.netlify.com/) - DNS management and primary host for `master` build. Also provides automatic preview deployments for all pull requests
 
 ### Code structure
 
@@ -231,7 +231,7 @@ How to prepare your content for translation depends on whether you're working on
 
 **- MDX pages (`/src/content/page/`)**
 
-Markdown will be translated as whole pages of content, so no specific action is required. Simply create a new folder within `/src/content/` with the name of the page, then place index markdown file (ie. `index.md`) within new folder.
+Markdown will be translated as whole pages of content, so no specific action is required. Simply create a new folder within `/src/content/` with the name of the page, then place index markdown file (ie. `index.md`) within the new folder.
 
 **- React component page**
 
@@ -252,7 +252,7 @@ Markdown will be translated as whole pages of content, so no specific action is 
   - This minimizes issues during translation, and allows consistent styling to all languages
 - _Please avoid_ embedding links within a sentence. For a word/phrase to be a link, it requires a key/string in the intl JSON. If this is in the middle of another sentence, this results in the sentence being broken into multiple pieces, and requires coding the sentence structure into the JavaScript.
 
-  - This results in significant challenges during translation process, as written syntax for each language will very in terms of ordering subjects/verbs/etc.
+  - This results in significant challenges during the translation process, as written syntax for each language will vary in terms of ordering subjects/verbs/etc.
   - If you're wanting to link to something within your sentence, create a link at the end of the sentence or paragraph:
 
   ```
@@ -1408,6 +1408,12 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/ArnaudSpanneut"><img src="https://avatars.githubusercontent.com/u/2766935?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Arnaud Spanneut</b></sub></a><br /><a href="#translation-ArnaudSpanneut" title="Translation">🌍</a></td>
     <td align="center"><a href="https://github.com/yuliyu123"><img src="https://avatars.githubusercontent.com/u/8566390?v=4?s=100" width="100px;" alt=""/><br /><sub><b>yuliyu123</b></sub></a><br /><a href="#translation-yuliyu123" title="Translation">🌍</a></td>
     <td align="center"><a href="https://vignetteapril.github.io"><img src="https://avatars.githubusercontent.com/u/28882898?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Jack</b></sub></a><br /><a href="#translation-VignetteApril" title="Translation">🌍</a></td>
+    <td align="center"><a href="https://github.com/JayGhb"><img src="https://avatars.githubusercontent.com/u/29868879?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Jason Manoloudis</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=JayGhb" title="Documentation">📖</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/Medzhidov-Omardibir"><img src="https://avatars.githubusercontent.com/u/95706785?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Medzhidov-Omardibir</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=Medzhidov-Omardibir" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/ApostolisGaros"><img src="https://avatars.githubusercontent.com/u/45716978?v=4?s=100" width="100px;" alt=""/><br /><sub><b>ApoGrs</b></sub></a><br /><a href="#ideas-ApostolisGaros" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="https://github.com/m-zaink"><img src="https://avatars.githubusercontent.com/u/32197186?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Mohammed Sadiq</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=m-zaink" title="Documentation">📖</a></td>
   </tr>
 </table>
 

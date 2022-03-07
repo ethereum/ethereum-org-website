@@ -6696,6 +6696,42 @@
       "contributions": [
         "translation"
       ]
+    },
+    {
+      "login": "JayGhb",
+      "name": "Jason Manoloudis",
+      "avatar_url": "https://avatars.githubusercontent.com/u/29868879?v=4",
+      "profile": "https://github.com/JayGhb",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "Medzhidov-Omardibir",
+      "name": "Medzhidov-Omardibir",
+      "avatar_url": "https://avatars.githubusercontent.com/u/95706785?v=4",
+      "profile": "https://github.com/Medzhidov-Omardibir",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "ApostolisGaros",
+      "name": "ApoGrs",
+      "avatar_url": "https://avatars.githubusercontent.com/u/45716978?v=4",
+      "profile": "https://github.com/ApostolisGaros",
+      "contributions": [
+        "ideas"
+      ]
+    },
+    {
+      "login": "m-zaink",
+      "name": "Mohammed Sadiq",
+      "avatar_url": "https://avatars.githubusercontent.com/u/32197186?v=4",
+      "profile": "https://github.com/m-zaink",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
