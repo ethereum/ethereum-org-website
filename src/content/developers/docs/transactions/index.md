@@ -112,7 +112,7 @@ Most contracts are written in Solidity and interpret their data field in accorda
 The first four bytes specify which function to call, using the hash of the function's name and arguments.
 You can sometimes identify the function from the selector using [this database](https://www.4byte.directory/signatures/).
 
-The rest of the calldata is the arguments, [encoded as specified in the ABI specs](https://docs.soliditylang.org/en/v0.8.12/abi-spec.html#formal-specification-of-the-encoding).
+The rest of the calldata is the arguments, [encoded as specified in the ABI specs](https://docs.soliditylang.org/en/latest/abi-spec.html#formal-specification-of-the-encoding).
 
 For example, lets look at [this transaction](https://etherscan.io/tx/0xd0dcbe007569fcfa1902dae0ab8b4e078efe42e231786312289b1eee5590f6a1).
 Use **Click to see More** to see the calldata.
