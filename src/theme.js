@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components"
+import { mix } from "polished"
 
 const white = "#ffffff"
 const black = "#000000"
@@ -25,60 +26,60 @@ const gridBlue = "#a7d0f4"
 const gridPink = "#ffa1c3"
 
 const white500 = white
-const white600 = "#f7f7f7"
-const white700 = "#e5e5e5"
-const white800 = "#cccccc"
-const white900 = "#b2b2b2"
+const white600 = mix(0.03, black, white)
+const white700 = mix(0.1, black, white)
+const white800 = mix(0.2, black, white)
+const white900 = mix(0.3, black, white)
 
-const black50 = "#7f7f7f"
-const black100 = "#666666"
-const black200 = "#4c4c4c"
-const black300 = "#333333"
-const black400 = "#191919"
+const black50 = mix(0.5, white, black)
+const black100 = mix(0.4, white, black)
+const black200 = mix(0.3, white, black)
+const black300 = mix(0.2, white, black)
+const black400 = mix(0.1, white, black)
 const black500 = black
 
-const primaryLight950 = "#040426"
-const primaryLight900 = "#050532"
-const primaryLight800 = "#0b0b66"
-const primaryLight700 = "#101099"
-const primaryLight600 = "#1616cc"
+const primaryLight950 = mix(0.85, black, primaryLight)
+const primaryLight900 = mix(0.8, black, primaryLight)
+const primaryLight800 = mix(0.6, black, primaryLight)
+const primaryLight700 = mix(0.4, black, primaryLight)
+const primaryLight600 = mix(0.2, black, primaryLight)
 const primaryLight500 = primaryLight
-const primaryLight400 = "#4949ff"
-const primaryLight300 = "#7676ff"
-const primaryLight200 = "#a4a4ff"
-const primaryLight100 = "#d1d1ff"
-const primaryLight50 = "#e8e8ff"
+const primaryLight400 = mix(0.2, white, primaryLight)
+const primaryLight300 = mix(0.4, white, primaryLight)
+const primaryLight200 = mix(0.6, white, primaryLight)
+const primaryLight100 = mix(0.8, white, primaryLight)
+const primaryLight50 = mix(0.9, white, primaryLight)
 
-const primaryDark950 = "#190b03"
-const primaryDark900 = "#321607"
-const primaryDark800 = "#662e0e"
-const primaryDark700 = "#994515"
-const primaryDark600 = "#cc5c1c"
+const primaryDark950 = mix(0.9, black, primaryDark)
+const primaryDark900 = mix(0.8, black, primaryDark)
+const primaryDark800 = mix(0.6, black, primaryDark)
+const primaryDark700 = mix(0.4, black, primaryDark)
+const primaryDark600 = mix(0.2, black, primaryDark)
 const primaryDark500 = primaryDark
-const primaryDark400 = "#ff8f4f"
-const primaryDark300 = "#ffab7b"
-const primaryDark200 = "#ffc7a7"
-const primaryDark100 = "#ffe3d3"
+const primaryDark400 = mix(0.2, white, primaryDark)
+const primaryDark300 = mix(0.4, white, primaryDark)
+const primaryDark200 = mix(0.6, white, primaryDark)
+const primaryDark100 = mix(0.8, white, primaryDark)
 
-const success900 = "#031f13"
-const success800 = "#063f27"
-const success700 = "#095e3a"
-const success600 = "#0c7e4e"
+const success900 = mix(0.8, black, success)
+const success800 = mix(0.6, black, success)
+const success700 = mix(0.4, black, success)
+const success600 = mix(0.2, black, success)
 const success500 = success
-const success400 = "#3fb181"
-const success300 = "#6fc4a0"
-const success200 = "#9fd8c0"
-const success100 = "#cfebdf"
+const success400 = mix(0.2, white, success)
+const success300 = mix(0.4, white, success)
+const success200 = mix(0.6, white, success)
+const success100 = mix(0.8, white, success)
 
-const fail900 = "#240000"
-const fail800 = "#490000"
-const fail700 = "#6e0000"
-const fail600 = "#930000"
+const fail900 = mix(0.8, black, fail)
+const fail800 = mix(0.6, black, fail)
+const fail700 = mix(0.4, black, fail)
+const fail600 = mix(0.2, black, fail)
 const fail500 = fail
-const fail400 = "#c63333"
-const fail300 = "#d46666"
-const fail200 = "#e29999"
-const fail100 = "#f0cccc"
+const fail400 = mix(0.2, white, fail)
+const fail300 = mix(0.4, white, fail)
+const fail200 = mix(0.6, white, fail)
+const fail100 = mix(0.8, white, fail)
 
 const baseColors = {
   white,
