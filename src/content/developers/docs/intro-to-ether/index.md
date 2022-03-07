@@ -41,7 +41,6 @@ As well as creating ether through block rewards, ether can get destroyed by a pr
 
 Ether burn occurs in every transaction on Ethereum. When users pay for their transactions, their base gas fee gets destroyed by the protocol. Depending on network demand, [some blocks](https://etherscan.io/block/12965263) burn more ether than they mint.
 
-> Ether is burned to prevent inflation by reducing its overall supply.
 
 ## Denominations of ether {#denominations}
 
