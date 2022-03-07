@@ -117,7 +117,7 @@ In Optimism bridge terminology *deposit* means transfer from L1 to L2, and *with
 
 In most cases the address of an ERC-20 on L1 is not the same the address of the equivalent ERC-20 on L2.
 [You can see the list of token addresses here](https://static.optimism.io/optimism.tokenlist.json).
-The address with `chainId` 1 is on L1 (mainnet) and the address with `chainId` 10 is on L2 (Optimism).
+The address with `chainId` 1 is on L1 (Mainnet) and the address with `chainId` 10 is on L2 (Optimism).
 The other two `chainId` values are for the Kovan test network (42) and the Optimistic Kovan test network (69).
 
 
