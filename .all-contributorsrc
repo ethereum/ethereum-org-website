@@ -6723,6 +6723,15 @@
       "contributions": [
         "ideas"
       ]
+    },
+    {
+      "login": "m-zaink",
+      "name": "Mohammed Sadiq",
+      "avatar_url": "https://avatars.githubusercontent.com/u/32197186?v=4",
+      "profile": "https://github.com/m-zaink",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
