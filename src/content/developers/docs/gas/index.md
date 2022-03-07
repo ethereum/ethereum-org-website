@@ -54,7 +54,7 @@ Using the formula above we can calculate this as `21,000 * (100 + 10) = 2,310,00
 
 When Jordan sends the money, 1.00231 ETH will be deducted from Jordan's account.
 Taylor will be credited 1.0000 ETH.
-Miner receives the tip of 0.00021 ETH.
+Miner receives the tip of 0.00010 ETH.
 Base fee of 0.0021 ETH is burned.
 
 Additionally, Jordan can also set a max fee (`maxFeePerGas`) for the transaction. The difference between the max fee and the actual fee is refunded to Jordan, i.e. `refund = max fee - (base fee + priority fee)`. Jordan can set a maximum amount to pay for the transaction to execute and not worry about overpaying "beyond" the base fee when the transaction is executed.
