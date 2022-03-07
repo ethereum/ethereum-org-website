@@ -441,7 +441,7 @@ We need to make sure that the message we received came from the other bridge.
 ```
 
 This function returns the cross domain messenger. 
-We use a function rather than the variable `messenger` to allow contracts than inherit from this one to use an algorithm to specify which cross domain messenger to use. 
+We use a function rather than the variable `messenger` to allow contracts that inherit from this one to use an algorithm to specify which cross domain messenger to use. 
 
 ```solidity
 
@@ -469,7 +469,7 @@ Finally, the function that sends a message to the other layer.
 In this case, the following line triggers two vulnerabilities:
 
 1. [Reentrancy events](https://github.com/crytic/slither/wiki/Detector-Documentation#reentrancy-vulnerabilities-3)
-1. [Benigh reentrancy](https://github.com/crytic/slither/wiki/Detector-Documentation#reentrancy-vulnerabilities-2)
+1. [Benign reentrancy](https://github.com/crytic/slither/wiki/Detector-Documentation#reentrancy-vulnerabilities-2)
 
 ```solidity
         getCrossDomainMessenger().sendMessage(_crossDomainTarget, _message, _gasLimit);
