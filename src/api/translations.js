@@ -1,7 +1,7 @@
-import { handler as lambda } from "../lambda/translations"
+import { lambda } from "../lambda/translations"
 
 async function handler(__req, res) {
-  const { statusCode, body } = await lambda()
+  const { statusCode, body } = await lambda(process.env.CROWDIN_API_KEY)
   res.status(statusCode).send(body)
 }
 

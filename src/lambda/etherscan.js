@@ -1,6 +1,6 @@
 const axios = require("axios")
 
-const handler = async () => {
+const lambda = async (apiKey) => {
   const daysToFetch = 90
   const now = new Date()
   const endDate = now.toISOString().split("T")[0] // YYYY-MM-DD
@@ -9,7 +9,7 @@ const handler = async () => {
     .split("T")[0] // {daysToFetch} days ago
   try {
     const response = await axios.get(
-      `https://api.etherscan.io/api?module=stats&action=nodecounthistory&startdate=${startDate}&enddate=${endDate}&sort=desc&apikey=${process.env.ETHERSCAN_API_KEY}`
+      `https://api.etherscan.io/api?module=stats&action=nodecounthistory&startdate=${startDate}&enddate=${endDate}&sort=desc&apikey=${apiKey}`
     )
     if (response.status < 200 || response.status >= 300) {
       return { statusCode: response.status, body: response.statusText }
@@ -22,4 +22,8 @@ const handler = async () => {
   }
 }
 
-module.exports = { handler }
+const handler = () => {
+  return lambda(process.env.ETHERSCAN_API_KEY)
+}
+
+module.exports = { handler, lambda }

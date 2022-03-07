@@ -1,9 +1,9 @@
 const axios = require("axios")
 
-const handler = async () => {
+const lambda = async (apiKey) => {
   try {
     const response = await axios.get(
-      `https://api.etherscan.io/api?module=block&action=getblockcountdown&blockno=12965000&apikey=${process.env.ETHERSCAN_API_KEY}`
+      `https://api.etherscan.io/api?module=block&action=getblockcountdown&blockno=12965000&apikey=${apiKey}`
     )
     if (response.status < 200 || response.status >= 300) {
       return { statusCode: response.status, body: response.statusText }
@@ -20,4 +20,8 @@ const handler = async () => {
   }
 }
 
-module.exports = { handler }
+const handler = () => {
+  return lambda(process.env.ETHERSCAN_API_KEY)
+}
+
+module.exports = { handler, lambda }

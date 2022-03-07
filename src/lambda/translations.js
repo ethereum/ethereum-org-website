@@ -1,11 +1,10 @@
 const axios = require("axios")
 
-exports.handler = async function (event, context) {
+const lambda = async function (apiKey) {
   try {
     const baseURL = "https://api.crowdin.com/api/project/ethereum-org/status"
-    const { CROWDIN_API_KEY } = process.env
 
-    const resp = await axios.get(`${baseURL}?key=${CROWDIN_API_KEY}&json`)
+    const resp = await axios.get(`${baseURL}?key=${apiKey}&json`)
 
     if (resp.status < 200 || resp.status >= 300) {
       return { statusCode: resp.status, body: resp.statusText }
@@ -24,3 +23,9 @@ exports.handler = async function (event, context) {
     }
   }
 }
+
+const handler = () => {
+  return lambda(process.env.CROWDIN_API_KEY)
+}
+
+module.exports = { handler, lambda }

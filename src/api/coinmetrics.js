@@ -1,4 +1,4 @@
-import { handler as lambda } from "../lambda/coinmetrics"
+import { lambda } from "../lambda/coinmetrics"
 
 async function handler(__req, res) {
   const { statusCode, body } = await lambda()
