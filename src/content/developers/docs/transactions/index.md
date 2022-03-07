@@ -127,7 +127,7 @@ The rest of the data is:
 000000000000000000000000000000000000000000000000000000003b0559f4
 ```
 
-According to the specifications integer nunbers, such as addresses, appear in the ABI as 32 byte words.
+According to the specifications,  integer numbers (such as addresses) appear in the ABI as 32-byte words.
 So we know that the `to` address is [`4f6742badb049791cd9a37ea913f2bac38d01279`](https://etherscan.io/address/0x4f6742badb049791cd9a37ea913f2bac38d01279). 
 The `value` is 0x3b0559f4 = 990206452.
 
