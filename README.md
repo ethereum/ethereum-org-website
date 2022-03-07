@@ -1413,6 +1413,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="https://github.com/Medzhidov-Omardibir"><img src="https://avatars.githubusercontent.com/u/95706785?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Medzhidov-Omardibir</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=Medzhidov-Omardibir" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/ApostolisGaros"><img src="https://avatars.githubusercontent.com/u/45716978?v=4?s=100" width="100px;" alt=""/><br /><sub><b>ApoGrs</b></sub></a><br /><a href="#ideas-ApostolisGaros" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="https://github.com/m-zaink"><img src="https://avatars.githubusercontent.com/u/32197186?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Mohammed Sadiq</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=m-zaink" title="Documentation">📖</a></td>
   </tr>
 </table>
 
