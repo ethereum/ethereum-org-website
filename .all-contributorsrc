@@ -6696,6 +6696,15 @@
       "contributions": [
         "translation"
       ]
+    },
+    {
+      "login": "JayGhb",
+      "name": "Jason Manoloudis",
+      "avatar_url": "https://avatars.githubusercontent.com/u/29868879?v=4",
+      "profile": "https://github.com/JayGhb",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
