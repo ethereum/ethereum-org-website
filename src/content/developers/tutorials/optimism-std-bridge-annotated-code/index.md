@@ -1,23 +1,21 @@
 ---
-title: "Optimism Standard Bridge Contract Walk-Through"
+title: "Optimism standard bridge contract walkthrough"
 description: How does the standard bridge for Optimism work? Why does it work this way?
 author: Ori Pomerantz
 sidebar: true
-tags: ["solidity", "optimism", "bridge", "layer 2", "l2"]
+tags: ["solidity", "optimism", "bridge", "layer 2" ]
 skill: intermediate
 published: 2022-03-30
 lang: en
 ---
 
-## Introduction {#introduction}
 
-[Optimism](https://www.optimism.io/) is an [Optimistic Rollup](/developers/docs/scaling/optimistic-rollups/#top).g
-Optimistic rollups can process transactions for a much lower price than the Ethereum mainnet (also known as layer 1 or L1) because transactions are only processed by a few nodes, instead of the every node on the network. 
-At the same time, the data is all writted to L1 so everything can be proved and reconstructed with all the integrity and availability guarantees of mainnet.
+[Optimism](https://www.optimism.io/) is an [Optimistic Rollup](/developers/docs/scaling/optimistic-rollups/).
+Optimistic rollups can process transactions for a much lower price than Ethereum Mainnet (also known as layer 1 or L1) because transactions are only processed by a few nodes, instead of every node on the network. 
+At the same time, the data is all written to L1 so everything can be proved and reconstructed with all the integrity and availability guarantees of Mainnet.
 
-To use L1 assets on Optimism (or any other layer 2, or L2), those assets need to be [bridged](/bridges/#prerequisites).
-One way to achieve this is for users to lock assets (ETH and [ERC-20 tokens](https://ethereum.org/en/developers/docs/standards/tokens/erc-20/) are the most common ones) on L1, and receive equivalent assets on L2. 
-Those assets can then be used, transferred, etc. on L2. 
+To use L1 assets on Optimism (or any other L2), the assets need to be [bridged](/bridges/#prerequisites).
+One way to achieve this is for users to lock assets (ETH and [ERC-20 tokens](https://ethereum.org/en/developers/docs/standards/tokens/erc-20/) are the most common ones) on L1, and receive equivalent assets to use on L2. 
 Eventually, whoever ends up with them might want to bridge them back to L1. 
 When doing this, the assets are burned on L2 and then released back to the user on L1.
 
@@ -27,54 +25,55 @@ In this article we go over the source code for that bridge to see how it works a
 ## Control flows {#control-flows}
 
 The bridge has two main flows:
-1. Deposit (from L1 to L2)
-1. Withdrawal (from L2 to L1)
+
+- Deposit (from L1 to L2)
+- Withdrawal (from L2 to L1)
 
 ### Deposit flow {#deposit-flow}
 
-#### Layer 1
+#### Layer 1 {#deposit-flow-layer-1}
 
-1. (ERC-20 only) the depositor gives the bridge an allowance to spend the amount being deposited
-1. The depositor calls the L1 bridge (`depositERC20`, `depositERC20To`, `depositETH`, or `depositETHTo`)
-1. The L1 bridge takes possession of the bridged asset
+1. If depositing an ERC-20, the depositor gives the bridge an allowance to spend the amount being deposited
+2. The depositor calls the L1 bridge (`depositERC20`, `depositERC20To`, `depositETH`, or `depositETHTo`)
+3. The L1 bridge takes possession of the bridged asset
    - ETH: The asset is transferred by the depositor as part of the call
    - ERC-20: The asset is transferred by the bridge to itself using the allowance provided by the depositor
-1. The L1 bridge uses the cross domain message mechanism to call `finalizeDeposit` on the L2 bridge
+4. The L1 bridge uses the cross-domain message mechanism to call `finalizeDeposit` on the L2 bridge
 
 
-#### Layer 2
+#### Layer 2 {#deposit-flow-layer-2}
 
-4. The L2 bridge verifies the call to `finalizeDeposit` is legitimate:
+5. The L2 bridge verifies the call to `finalizeDeposit` is legitimate:
    - Came from the cross domain message contract
    - Was originally from the bridge on L1
-1. The L2 bridge checks if the ERC-20 token contract on L2 is the correct one:
+6. The L2 bridge checks if the ERC-20 token contract on L2 is the correct one:
    - The L2 contract reports that its L1 counterpart is the same as the one the tokens came from on L1
    - The L2 contract reports that it supports the correct interface ([using ERC-165](https://eips.ethereum.org/EIPS/eip-165)).
-1. If the L2 contract is the correct one, call it to mint the appropriate number of tokens to the appropriate address. If not, start a withdrawal process to allow the user to claim the tokens on L1.
+7. If the L2 contract is the correct one, call it to mint the appropriate number of tokens to the appropriate address. If not, start a withdrawal process to allow the user to claim the tokens on L1.
 
 
 ### Withdrawal flow {#withdrawal-flow}
 
 
-#### Layer 2
+#### Layer 2 {#withdrawl-flow-layer-2}
 
 1. The withdrawer calls the L2 bridge (`withdraw` or `withdrawTo`)
-1. The L2 bridge burns the appropriate number of tokens belonging to `msg.sender`
-1. The L2 bridge uses the cross domain message mechanism to call `finalizeETHWithdrawal` or `finalizeERC20Withdrawal` on the L1 bridge 
+2. The L2 bridge burns the appropriate number of tokens belonging to `msg.sender`
+3. The L2 bridge uses the cross-domain message mechanism to call `finalizeETHWithdrawal` or `finalizeERC20Withdrawal` on the L1 bridge 
 
 
-#### Layer 1
+#### Layer 1 {#withdrawl-flow-layer-1}
 
 4. The L1 bridge verifies the call to `finalizeETHWithdrawal` or `finalizeERC20Withdrawal` is legitimate:
    - Came from the cross domain message mechanism
    - Was originally from the bridge on L2
-1. The L1 bridge transfers the appropriate asset (ETH or ERC-20) to the appropriate address
+5. The L1 bridge transfers the appropriate asset (ETH or ERC-20) to the appropriate address
 
 
 
-## L1 Code {#l1-code}
+## Layer 1 code {#layer-1-code}
 
-This is the code that runs on L1, the mainnet Ethereum network.
+This is the code that runs on L1, the Ethereum Mainnet.
 
 
 ### IL1ERC20Bridge {#IL1ERC20Bridge}
