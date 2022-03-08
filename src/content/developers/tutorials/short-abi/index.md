@@ -24,7 +24,7 @@ As I'm writing this, on Optimism the cost of L2 gas is 0.001 [Gwei](https://ethe
 The cost of L1 gas, on the other hand, is approximately 40 Gwei.
 [You can see the current prices here](https://public-grafana.optimism.io/d/9hkhMxn7z/public-dashboard?orgId=1&refresh=5m).
 
-A byte of call data costs either 4 gas (if it is zero) or 16 gas (if it is any other value), currently that is 640 Gwei.
+A byte of call data costs either 4 gas (if it is zero) or 16 gas (if it is any other value).
 One of the most expensive operations on the EVM is writing to storage.
 The maximum cost of writing a 32 byte word to storage on L2 is 22100 gas, currently that is 22.1 Gwei.
 So if we can save a single zero byte of calldata, we'll be able to write about 200 bytes to storage and still come out ahead.
