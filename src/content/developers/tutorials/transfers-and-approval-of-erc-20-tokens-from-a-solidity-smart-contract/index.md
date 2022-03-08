@@ -55,7 +55,6 @@ contract ERC20Basic is IERC20 {
 
     uint256 totalSupply_ = 10 ether;
 
-    using SafeMath for uint256;
 
    constructor() {
 	balances[msg.sender] = totalSupply_;
@@ -71,8 +70,8 @@ contract ERC20Basic is IERC20 {
 
     function transfer(address receiver, uint256 numTokens) public override returns (bool) {
         require(numTokens <= balances[msg.sender]);
-        balances[msg.sender] = balances[msg.sender].sub(numTokens);
-        balances[receiver] = balances[receiver].add(numTokens);
+        balances[msg.sender] = balances[msg.sender]-numTokens;
+        balances[receiver] = balances[receiver]+numTokens;
         emit Transfer(msg.sender, receiver, numTokens);
         return true;
     }
@@ -91,26 +90,14 @@ contract ERC20Basic is IERC20 {
         require(numTokens <= balances[owner]);
         require(numTokens <= allowed[owner][msg.sender]);
 
-        balances[owner] = balances[owner].sub(numTokens);
-        allowed[owner][msg.sender] = allowed[owner][msg.sender].sub(numTokens);
-        balances[buyer] = balances[buyer].add(numTokens);
+        balances[owner] = balances[owner]-numTokens;
+        allowed[owner][msg.sender] = allowed[owner][msg.sender]+numTokens;
+        balances[buyer] = balances[buyer]+numTokens;
         emit Transfer(owner, buyer, numTokens);
         return true;
     }
 }
 
-library SafeMath {
-    function sub(uint256 a, uint256 b) internal pure returns (uint256) {
-      assert(b <= a);
-      return a - b;
-    }
-
-    function add(uint256 a, uint256 b) internal pure returns (uint256) {
-      uint256 c = a + b;
-      assert(c >= a);
-      return c;
-    }
-}
 
 ```
 
@@ -226,7 +213,6 @@ contract ERC20Basic is IERC20 {
 
     uint256 totalSupply_ = 10 ether;
 
-    using SafeMath for uint256;
 
    constructor() {
 	balances[msg.sender] = totalSupply_;
@@ -242,8 +228,8 @@ contract ERC20Basic is IERC20 {
 
     function transfer(address receiver, uint256 numTokens) public override returns (bool) {
         require(numTokens <= balances[msg.sender]);
-        balances[msg.sender] = balances[msg.sender].sub(numTokens);
-        balances[receiver] = balances[receiver].add(numTokens);
+        balances[msg.sender] = balances[msg.sender]-numTokens;
+        balances[receiver] = balances[receiver]+numTokens;
         emit Transfer(msg.sender, receiver, numTokens);
         return true;
     }
@@ -262,26 +248,14 @@ contract ERC20Basic is IERC20 {
         require(numTokens <= balances[owner]);
         require(numTokens <= allowed[owner][msg.sender]);
 
-        balances[owner] = balances[owner].sub(numTokens);
-        allowed[owner][msg.sender] = allowed[owner][msg.sender].sub(numTokens);
-        balances[buyer] = balances[buyer].add(numTokens);
+        balances[owner] = balances[owner]-numTokens;
+        allowed[owner][msg.sender] = allowed[owner][msg.sender]+numTokens;
+        balances[buyer] = balances[buyer]+numTokens;
         emit Transfer(owner, buyer, numTokens);
         return true;
     }
 }
 
-library SafeMath {
-    function sub(uint256 a, uint256 b) internal pure returns (uint256) {
-      assert(b <= a);
-      return a - b;
-    }
-
-    function add(uint256 a, uint256 b) internal pure returns (uint256) {
-      uint256 c = a + b;
-      assert(c >= a);
-      return c;
-    }
-}
 
 contract DEX {
 
