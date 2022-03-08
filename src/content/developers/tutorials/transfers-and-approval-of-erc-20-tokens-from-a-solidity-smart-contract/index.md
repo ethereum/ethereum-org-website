@@ -24,7 +24,7 @@ For this tutorial we’ll use the code we wrote in the previous tutorial as a ba
 We’ll start our Decentralized exchange code by adding our simple ERC20 codebase:
 
 ```solidity
-pragma solidity ^0.6.0;
+pragma solidity ^0.8.0;
 
 interface IERC20 {
 
@@ -49,19 +49,15 @@ contract ERC20Basic is IERC20 {
     uint8 public constant decimals = 18;
 
 
-    event Approval(address indexed tokenOwner, address indexed spender, uint tokens);
-    event Transfer(address indexed from, address indexed to, uint tokens);
-
-
     mapping(address => uint256) balances;
 
     mapping(address => mapping (address => uint256)) allowed;
 
-    uint256 totalSupply_ = 100 ether;
+    uint256 totalSupply_ = 10 ether;
 
     using SafeMath for uint256;
 
-   constructor(uint256 total) public {
+   constructor() {
 	balances[msg.sender] = totalSupply_;
     }
 
@@ -115,6 +111,7 @@ library SafeMath {
       return c;
     }
 }
+
 ```
 
 Our new DEX smart contract will deploy the ERC-20 and get all the supplied:
@@ -127,7 +124,7 @@ contract DEX {
     event Bought(uint256 amount);
     event Sold(uint256 amount);
 
-    constructor() public {
+    constructor() {
         token = new ERC20Basic();
     }
 
@@ -159,7 +156,7 @@ To keep things simple, we just exchange 1 token for 1 Wei.
 function buy() payable public {
     uint256 amountTobuy = msg.value;
     uint256 dexBalance = token.balanceOf(address(this));
-    require(amountTobuy > 0, "You need to send some ether");
+    require(amountTobuy > 0, "You need to send some Ether");
     require(amountTobuy <= dexBalance, "Not enough tokens in the reserve");
     token.transfer(msg.sender, amountTobuy);
     emit Bought(amountTobuy);
@@ -180,7 +177,7 @@ function sell(uint256 amount) public {
     uint256 allowance = token.allowance(msg.sender, address(this));
     require(allowance >= amount, "Check the token allowance");
     token.transferFrom(msg.sender, address(this), amount);
-    msg.sender.transfer(amount);
+    payable(msg.sender).transfer(amount);
     emit Sold(amount);
 }
 ```
@@ -198,7 +195,7 @@ Once you make a transaction we have a Javascript tutorial to [wait and get detai
 Here is the complete code for the tutorial:
 
 ```solidity
-pragma solidity ^0.6.0;
+pragma solidity ^0.8.0;
 
 interface IERC20 {
 
@@ -223,10 +220,6 @@ contract ERC20Basic is IERC20 {
     uint8 public constant decimals = 18;
 
 
-    event Approval(address indexed tokenOwner, address indexed spender, uint tokens);
-    event Transfer(address indexed from, address indexed to, uint tokens);
-
-
     mapping(address => uint256) balances;
 
     mapping(address => mapping (address => uint256)) allowed;
@@ -235,7 +228,7 @@ contract ERC20Basic is IERC20 {
 
     using SafeMath for uint256;
 
-   constructor() public {
+   constructor() {
 	balances[msg.sender] = totalSupply_;
     }
 
@@ -298,14 +291,14 @@ contract DEX {
 
     IERC20 public token;
 
-    constructor() public {
+    constructor() {
         token = new ERC20Basic();
     }
 
     function buy() payable public {
         uint256 amountTobuy = msg.value;
         uint256 dexBalance = token.balanceOf(address(this));
-        require(amountTobuy > 0, "You need to send some ether");
+        require(amountTobuy > 0, "You need to send some Ether");
         require(amountTobuy <= dexBalance, "Not enough tokens in the reserve");
         token.transfer(msg.sender, amountTobuy);
         emit Bought(amountTobuy);
@@ -316,7 +309,7 @@ contract DEX {
         uint256 allowance = token.allowance(msg.sender, address(this));
         require(allowance >= amount, "Check the token allowance");
         token.transferFrom(msg.sender, address(this), amount);
-        msg.sender.transfer(amount);
+        payable(msg.sender).transfer(amount);
         emit Sold(amount);
     }
 
