@@ -1,9 +1,9 @@
 const axios = require("axios")
 
-const handler = async () => {
+const lambda = async (apiKey) => {
   try {
     const response = await axios.get(
-      `https://data-api.defipulse.com/api/v1/defipulse/api/GetHistory?api-key=${process.env.DEFI_PULSE_API_KEY}&period=3m&length=1`
+      `https://data-api.defipulse.com/api/v1/defipulse/api/GetHistory?api-key=${apiKey}&period=3m&length=1`
     )
     if (response.status < 200 || response.status >= 300) {
       return {
@@ -19,4 +19,8 @@ const handler = async () => {
   }
 }
 
-module.exports = { handler }
+const handler = () => {
+  return lambda(process.env.DEFI_PULSE_API_KEY)
+}
+
+module.exports = { handler, lambda }

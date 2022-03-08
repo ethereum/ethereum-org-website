@@ -339,7 +339,7 @@ const StatsBoxGrid = () => {
       try {
         const { result } = await getData(
           process.env.NODE_ENV === "production"
-            ? "/.netlify/functions/etherscan"
+            ? `${process.env.GATSBY_FUNCTIONS_PATH}/etherscan`
             : "http://localhost:9000/etherscan"
         )
         const data = result
@@ -368,7 +368,7 @@ const StatsBoxGrid = () => {
       try {
         const response = await getData(
           process.env.NODE_ENV === "production"
-            ? "/.netlify/functions/defipulse"
+            ? `${process.env.GATSBY_FUNCTIONS_PATH}/defipulse`
             : "http://localhost:9000/defipulse"
         )
         const data = response
@@ -397,7 +397,7 @@ const StatsBoxGrid = () => {
       try {
         const response = await getData(
           process.env.NODE_ENV === "production"
-            ? "/.netlify/functions/txs"
+            ? `${process.env.GATSBY_FUNCTIONS_PATH}/txs`
             : "http://localhost:9000/txs"
         )
         const data = response.result
