@@ -123,11 +123,10 @@ const Button = styled.button`
   background: ${(props) => props.theme.colors.background};
   font-family: ${(props) => props.theme.fonts.monospace};
   font-size: 1.25rem;
-  color: ${({theme}) => theme.colors.text};
+  color: ${({ theme }) => theme.colors.text};
   padding: 2px 15px;
   border-radius: 1px;
-  border: 1px solid ${({theme, color}) => theme.colors[color]};
-  outline: none;
+  border: 1px solid ${({ theme, color }) => theme.colors[color]};
   cursor: pointer;
 
   &:disabled {
