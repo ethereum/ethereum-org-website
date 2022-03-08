@@ -12,7 +12,7 @@ const ImageWrapper = styled.div`
   justify-content: center;
   align-items: center;
   background: ${(props) => props.background};
-  box-shadow: inset 0px -1px 0px rgba(#000000, 0.1);
+  box-shadow: inset 0px -1px 0px rgba(0, 0, 0, 0.1);
   min-height: 200px;
 `
 
@@ -28,7 +28,7 @@ const Image = styled(GatsbyImage)`
 
 const Card = styled.div`
   color: ${(props) => props.theme.colors.text};
-  box-shadow: 0px 14px 66px rgba(#000000, 0.07);
+  box-shadow: 0px 14px 66px rgba(0, 0, 0, 0.07);
   display: flex;
   flex-direction: column;
   justify-content: space-between;

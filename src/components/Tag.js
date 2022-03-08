@@ -9,12 +9,10 @@ const StyledTag = styled.div`
   padding: 4px 8px;
   margin-bottom: 0.5rem;
   margin-right: 0.5rem;
-  background: radial-gradient(
-    46.28% 66.31% at 66.95% 58.35%,
-    rgba(#7f7fd5, 0.2) 0%,
-    rgba(#86a8e7, 0.2) 50%,
-    rgba(#91eae4, 0.2) 100%
-  );
+  background: radial-gradient(46.28% 66.31% at 66.95% 58.35%,
+  rgba(127, 127, 213, 0.2) 0%,
+  rgba(134, 168, 231, 0.2) 50%,
+  rgba(145, 234, 228, 0.2) 100%);
   border-radius: 4px;
   text-transform: uppercase;
   font-size: 0.875rem;

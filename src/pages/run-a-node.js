@@ -412,9 +412,9 @@ const DiscordIcon = styled(Icon)`
 const StakingCalloutContainer = styled(SplitContent)`
   background: linear-gradient(
     262.78deg,
-    rgba(#98baf9, 0.25) 0%,
-    rgba(#cfb1fb, 0.25) 53.12%,
-    rgba(#97fcf6, 0.25) 100%
+    rgba(152, 186, 249, 0.25) 0%,
+    rgba(207, 177, 251, 0.25) 53.12%,
+    rgba(151, 252, 246, 0.25) 100%
   );
   width: 100%;
   padding: 2rem;

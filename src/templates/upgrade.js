@@ -290,7 +290,7 @@ const Container = styled.div`
 
 const HeroContainer = styled.div`
   background: ${(props) => props.theme.colors.cardGradient};
-  box-shadow: inset 0px -1px 0px rgba(#000000, 0.1);
+  box-shadow: inset 0px -1px 0px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: flex-end;
   max-height: 608px;
