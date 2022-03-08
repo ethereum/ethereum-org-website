@@ -115,7 +115,7 @@ Code snippets should be approached slightly differently to the other tags, since
 
 Example: `<code>`nonce`</code>`
 
-`<code>` - _Opening tax, which contains a code snippet_
+`<code>` - _Opening tag, which contains a code snippet_
 
 nonce - _Non-translatable text_
 
@@ -228,7 +228,7 @@ Some examples of what to be particularly mindful of:
     - Spanish – **1.000,50**
     - French – **1 000,50**
 - Another important consideration when translating numbers is the percent sign. It can be written in different ways: **100%**, **100 %** or **%100**.
-- Finally, negative numbers can be displayed differently, depending on the language: -100, 100-. (100) or [100].
+- Finally, negative numbers can be displayed differently, depending on the language: -100, 100-, (100) or [100].
 
 **Dates**
 
