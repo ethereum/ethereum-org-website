@@ -181,6 +181,8 @@ contract ERC20Basic is IERC20 {
     }
 }
 
+// note that the SafeMath library is not required for Solidity v0.8 and above.
+
 library SafeMath {
     function sub(uint256 a, uint256 b) internal pure returns (uint256) {
       assert(b <= a);
@@ -195,6 +197,6 @@ library SafeMath {
 }
 ```
 
-This implementation uses the SafeMath library. Read our tutorial about it if you’d like to learn [how the library helps you with handling overflows and underflows in your smart contracts](https://ethereumdev.io/using-safe-math-library-to-prevent-from-overflows/).
+This implementation uses the SafeMath library. Read our tutorial about it if you’d like to learn [how the library helps you with handling overflows and underflows in your smart contracts](https://ethereumdev.io/using-safe-math-library-to-prevent-from-overflows/). Solidity 0.8 introduced compiler overflow and underflow protections that make the SafeMath unnecessary in many contracts.
 
 Another excellent implementation of the ERC-20 token standard is the [OpenZeppelin ERC-20 implementation](https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master/contracts/token/ERC20).

@@ -1,7 +1,7 @@
 ---
 title: Transfers and approval of ERC-20 tokens from a solidity smart contract
 description: How to use a smart contract to interact with a token using the Solidity language
-author: "jdourlens"
+author: "jdourlens, updated 2022 by jcook"
 tags: ["smart contracts", "tokens", "solidity", "getting started", "erc-20"]
 skill: intermediate
 lang: en
@@ -156,7 +156,31 @@ In the case where the buy is successful we should see two events in the transact
 
 ## The sell function {#the-sell-function}
 
-The function responsible for the sell will first require the user to have approved the amount by calling the approve function beforehand. Then when the sell function is called, we’ll check if the transfer from the caller address to the contract address was successful and then send the Ethers back to the caller address.
+The function responsible for the sell will first require the user to have approved the amount by calling the approve function beforehand. Approving the transfer requires the ERC20Basic token instantiated by the DEX to be called by the user. This can be achieved by first calling the DEX contract's `token()` function to retrieve the address where DEX deployed the ERC20Basic contract called `token`. Then we create an instance of that contract in our session and call its `approve` function. Then we are able to call the DEX's `sell` function and swap our tokens back for ether. For example, this is how this looks in an interactive brownie session:
+
+```python
+#### Python in interactive brownie console...
+
+# deploy the DEX
+dex = DEX.deploy({'from':account1})
+
+# call the buy function to swap ether for token
+# 1e18 is 1 ether denominated in wei
+dex.buy({'from': account2, 1e18})
+
+# get the deployment address for the ERC20 token
+# that was deployed during DEX contract creation
+# dex.token() returns the deployed address for token
+token = ERC20Basic.at(dex.token())
+
+# call the token's approve function
+# approve the dex address as spender
+# and how many of your tokens it is allowed to spend
+token.approve(dex.address, 3e18, {'from':account2})
+
+```
+
+Then when the sell function is called, we’ll check if the transfer from the caller address to the contract address was successful and then send the Ethers back to the caller address.
 
 ```solidity
 function sell(uint256 amount) public {
