@@ -41,6 +41,8 @@ Web3 has become a catch-all term for the vision of a new, better internet. At it
 
 #### Core ideas of web3 {#core-ideas}
 
+Although it's challenging to provide a rigid definition of is and is not web3, a few core principles guide its creation.
+
 - **Web3 is decentralized:** instead of large swathes of the internet controlled and owned by centralized entities, ownership gets distributed amongst its builders and users.
 - **Web3 is permissionless:** everyone has equal access to participate in web3, and no one gets excluded.
 - **Web3 has native payments:** it uses cryptocurrency for spending and sending money online instead of relying on the infrastructure banks and payment processors.
@@ -121,7 +123,9 @@ The Web3 ecosystem is young and quickly evolving. As a result, it currently depe
 
 ## A decentralized future {#decentralized-future}
 
-test
+Web3 is a young and evolving ecosystem. Gavin Wood coined the term in 2014, but many of these ideas have only recently become a reality. In the last year alone, there has been a considerable surge in the interest in cryptocurrency, improvements to layer 2 scaling solutions, massive experiments with new forms of governance, and revolutions in digital identity.
+
+We are only at the beginning of creating a better internet with web3, but as we continue to improve the infrastructure that will support it, the future of the internet looks bright.
 
 ## Further reading {#further-reading}
 
