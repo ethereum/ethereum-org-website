@@ -11,6 +11,24 @@ published: 2022-04-01
 
 ## Introduction {#introduction}
 
+In this article you learn about [optimistic rollups](/developers/docs/scaling/optimistic-rollups), the cost of transactions on them, and how that different cost structure requires us to optimize for different things than on the Ethereum mainnet.
+You also learn how to implement this optimization.
+
+### Proper disclosure {#proper-disclosure}
+
+I'm a full time [Optimism](https://www.optimism.io/) employee, so most of the examples in this article are going to come from there.
+However, the technique explained here should work for other rollups too.
+
+### Terminology   {#terminology}
+
+When discussing rollups the term "layer 1" (or L1) is used for mainnet, the production Etherum network.
+The term "layer 2" (or L2) is used for the rollup, or any other system that relies on L1 for security but does most of its processing offchain.
+
+
+## The problem {#the-problem}
+
+### Cost of L2 transactions  {#cost-of-l2-transactions}
+
 [Optimistic rollups](/developers/docs/scaling/optimistic-rollups) have to preserve a record of every historical transaction in such a manner that anybody will be able to go through them and verify that the current state is correct.
 The cheapest way to get data into the Ethereum mainnet is to write it as calldata.
 This solution was chosen by both [Optimism](https://help.optimism.io/hc/en-us/articles/4413163242779-What-is-a-rollup-) and [Arbitrum](https://developer.offchainlabs.com/docs/rollup_basics#intro-to-rollups).
@@ -35,11 +53,15 @@ So if we can save a single zero byte of calldata, we'll be able to write about 2
 The vast majority of transactions access a contract from an externally-owned account. 
 Most contracts are written in Solidity and interpret their data field in accordance with [the application binary interface (ABI)](https://docs.soliditylang.org/en/latest/abi-spec.html#formal-specification-of-the-encoding).
 
-However, the ABI was designed for L1. 
+However, the ABI was designed for L1 where a byte of calldata costs approximately the same as four arithmetic operations, not L2 where a byte of calldata costs more than a thousand arithmetic operations.
+For example, [here is an ERC-20 transfer transaction](https://kovan-optimistic.etherscan.io/tx/0xf1e3b1cf210d3319afd89132dfb24bfcb9cd93c651d3d9e495c224549416c578).
+The call data is divided like this:
+
+| Function Selector | Zeroes | Destination Address | Amount
+| - | - | - | - |
+| 0-3 | 4-15 | 16-35 | 36-63
 
 
-### Proper disclosure {#proper-disclosure}
 
-I'm a full time [Optimism](https://www.optimism.io/) employee, so most of the examples in this article are going to come from there.
-However, the technique explained here should work for other rollups too.
+
 
