@@ -46,12 +46,7 @@ Watch Finematics explain optimistic rollups:
 
 Multiple implementations of Optimistic rollups exist that you can integrate into your dapps:
 
-- [Arbitrum](https://arbitrum.io/)
-- [Optimism](https://optimism.io/) \* While Optimism hasn't fully reached L2 status, they have [fault proofs on their roadmap](https://www.optimism.io/about)
-- [Metis](https://www.metis.io/) \* While Metis hasn't fully reached L2 status, they have [fraud proofs on their roadmap](https://twitter.com/MetisDAO/status/1491516382844006401?s=20&t=H6YhDnCPJ8k3R1EFOqSK2g)
-- [Boba](https://boba.network/)
-- [Fuel Network](https://fuel.sh/)
-- [Cartesi](https://cartesi.io/)
+<RollupProductDevDoc rollupType="optimistic" />
 
 **Optimistic rollups reading**
 
