@@ -73,6 +73,27 @@ Some examples of language codes for the most widely spoken languages:
 - Hindi - hi
 - Spanish - es
 
+### Titles of external articles {#external-articles}
+
+Some strings contain titles of external articles. Most of the pages in our developer documentation
+section contain links to external articles for further reading. The strings containing titles of
+such articles need to be translated, regardless of the language the article is available in, to ensure a more uniform user experience for the visitors, viewing the page in their language.
+
+You can find some examples of what these strings look like for translators and how to identify them below (links to articles can be found mostly at the bottom of these pages, in the 'Further reading' section):
+
+![Article titles in sidebar.png](./article-titles-in-sidebar.png)
+![Article titles in editor.png](./article-titles-in-editor.png)
+
+### Crowdin warnings {#crowdin-warnings}
+
+Crowdin has a built-in feature that warns translators when they are about to make a mistake. If you suggest a translation and forget to include a tag from the source, translate elements that should not be translated, add several consecutive spaces, forget end punctuation, etc., Crowdin will automatically warn you of this before saving your translation.
+If you see a warning like this, please go back and double check the suggested translation.
+
+**Never ignore these warnings, as they usually mean that something is wrong, or that the translation is missing a key part of the source text.**
+
+An example of a Crowdin warning when you forget to add a tag to your translation:
+![Example of a Crowdin warning.png](./crowdin-warning-example.png)
+
 ### Dealing with tags and code snippets {#dealing-with-tags}
 
 A lot of the source content contains tags and variables, which are highlighted in yellow in the Crowdin editor. These serve different functions and should be approached correctly.
