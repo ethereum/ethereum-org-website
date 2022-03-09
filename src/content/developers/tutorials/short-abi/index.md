@@ -54,7 +54,7 @@ The vast majority of transactions access a contract from an externally-owned acc
 Most contracts are written in Solidity and interpret their data field in accordance with [the application binary interface (ABI)](https://docs.soliditylang.org/en/latest/abi-spec.html#formal-specification-of-the-encoding).
 
 However, the ABI was designed for L1 where a byte of calldata costs approximately the same as four arithmetic operations, not L2 where a byte of calldata costs more than a thousand arithmetic operations.
-For example, [here is an ERC-20 transfer transaction](https://kovan-optimistic.etherscan.io/tx/0xf1e3b1cf210d3319afd89132dfb24bfcb9cd93c651d3d9e495c224549416c578).
+For example, [here is an ERC-20 transfer transaction](https://kovan-optimistic.etherscan.io/tx/0x7ce4c144ebfce157b4de99d8ad53a352ae91b57b3fa06d8a1c79439df6bfa998).
 The call data is divided like this:
 
 | Section | Length | Bytes | Wasted bytes | Wasted gas | Necessary bytes | Necessary gas |
@@ -63,7 +63,7 @@ The call data is divided like this:
 | Zeroes | 12 | 4-15 | 12 | 48 | 0 | 0
 | Destination address | 20 | 16-35 | 0 | 0 | 20 | 320 
 | Amount | 32 | 36-67 | 17 | 64 | 15 | 240
-| Total  | 68 | | | | 160 | | 576
+| Total  | 68 | | | 160 | | 576
 
 Explanation:
 
@@ -76,9 +76,19 @@ Explanation:
   256<sup>15</sup> &gt; 10<sup>36</sup>, so fifteen bytes are enough.
   
 A waste of 160 gas on L1 is normally negligible. A transaction costs at least [21,000 gas](https://yakkomajuri.medium.com/blockchain-definition-of-the-week-ethereum-gas-2f976af774ed), so an extra 0.8% doesn't matter.
-However, on L2 things are different, almost the entire cost of the transaction is the calldata.
-We are wasting 21.7% of the transaction cost.
+However, on L2 things are different, almost the entire cost of the transaction is writing it to L1.
+In addition to the transaction calldata, there are 109 bytes of transaction header (destination address, signature, etc.).
+The total cost is therefore `109*16+576+160=2480`, and we are wasting about 6.5% of that.
 
-### The solution {#the-solution}
+## The solution {#the-solution}
 
+Assuming that 
+
+
+Example transaction of it working: https://kovan-optimistic.etherscan.io/tx/0x4c823826f9e19e7befe4ba78b9496e4e5fbb81007605030e8a2f8562a49ae82c
+
+
+## Conclusion
+
+You can do more if you control the destination contract too
 
