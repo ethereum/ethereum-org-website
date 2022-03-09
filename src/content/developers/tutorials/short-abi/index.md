@@ -57,10 +57,12 @@ However, the ABI was designed for L1 where a byte of calldata costs approximatel
 For example, [here is an ERC-20 transfer transaction](https://kovan-optimistic.etherscan.io/tx/0xf1e3b1cf210d3319afd89132dfb24bfcb9cd93c651d3d9e495c224549416c578).
 The call data is divided like this:
 
-| Function Selector | Zeroes | Destination Address | Amount
-| - | - | - | - |
-| 0-3 | 4-15 | 16-35 | 36-63
-
+| Segment | Length | Bytes | Wasted bytes | Wasted gas
+| - | -: | -: | - : | -: |
+| Function selector | 4 | 0-3 | 3 | 48
+| Zeroes | 12 | 4-15 | 12 | 48
+| Destination address | 20 | 16-35 | 0 | 0 
+| Amount | 32 | 36-63 | 30 | 120
 
 
 
