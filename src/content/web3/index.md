@@ -5,10 +5,14 @@ lang: en
 sidebar: true
 ---
 
+# Introduction to web3 {#introduction}
+
 Centralization has helped onboard billions of people to the internet and created the stable, robust infrastructure on which it lives. At the same time, these centralized entities have a stronghold on large swathes of the internet, undemocratically deciding what should and should not be allowed.
 
 Web3 is the answer to this dilemma. Instead of an internet monopolized by large technology companies, web3 embraces decentralization and is being built, operated, and owned by its users.
 Before we talk about web3, let's explore how we got here.
+
+<Divider />
 
 ## The early internet {#early-internet}
 
@@ -20,7 +24,7 @@ In 1989, in CERN, Geneva, Tim Berners-Lee was busy developing the protocols that
 
 The first inception of the internet, now known as 'Web 1.0', occurred roughly between 1990 to 2004. The internet on Web 1.0 mainly was static websites owned by companies, and there was close to zero interaction between users, leading to it being known as the read-only web.
 
-### What is Web 2.0? {#web2}
+### What is Web 2.0? {#web2}
 
 The Web 2.0 period began in 2004 with the emergence of social media platforms. Instead of a read-only, the web evolved to be read-write. Instead of companies providing content to users, they also began to provide platforms to share user-generated content and engage in user-to-user interactions.
 As more people came online, a handful of top companies began to control a disproportionate amount of the traffic and value generated on the web.
@@ -35,14 +39,14 @@ The premise of 'Web 3.0' was coined by Ethereum co-founder Gavin Wood shortly af
 
 Web3 has become a catch-all term for the vision of a new, better internet. At its core, Web3 uses blockchain, cryptocurrency, and NFTs to give power back to the users in the form of ownership. Chris Dixon said it best: web1 was read-only, web2 is read/write, web3 will be read/write/own.
 
-#### Core ideas of web3 {#core-ideas}
+#### Core ideas of web3 {#core-ideas}
 
 - **Web3 is decentralized:** instead of large swathes of the internet controlled and owned by centralized entities, ownership gets distributed amongst its builders and users.
 - **Web3 is permissionless:** everyone has equal access to participate in web3, and no one gets excluded.
 - **Web3 has native payments:** it uses cryptocurrency for spending and sending money online instead of relying on the infrastructure banks and payment processors.
 - **Web3 is trustless:** it operates using incentives and mechanisms instead of relying on trusted third-parties
 
-### Why is web 3.0 important? {#why-is-web3-important}
+### Why is web 3.0 important? {#why-is-web3-important}
 
 So why does web3 matter so much? Web3's killer features aren't isolated and don't fit into neat categories. But, for simplicity, we've tried to separate them to make them easier to understand.
 
@@ -76,7 +80,7 @@ OnlyFans is a user-generated adult content site with over 1-million content crea
 
 Web 2.0 requires content creators to trust platforms not to change the rules, but censorship resistance is a native feature of a web3 platform.
 
-### Identity {#identity}
+### Identity {#identity}
 
 Traditionally, you would create an account for every platform you use. For example, you might have a Twitter account, a YouTube account, and a Reddit account. Want to change your display name or profile picture? You have to do it across every account. You can use social sign-ins in some cases, but this presents a familiar problem—censorship. In a single click, these platforms can lock you out of your entire online life. Even worse, many platforms require you to trust them with personally identifiable information to create an account.
 
@@ -86,7 +90,7 @@ Web3 solves these problems by allowing you to control your digital identity with
   Sign-in with Ethereum
 </ButtonLink>
 
-### Native payments {#native-payments}
+### Native payments {#native-payments}
 
 Web2's payment infrastructure relies on banks and payment processors, excluding people without bank accounts or those who happen to live within the borders of the wrong country.
 Web3 uses tokens like ETH to send money directly in the browser and requires no trusted third party.
@@ -107,7 +111,7 @@ Web3 is less likely to be utilized in less-wealthy, developing nations due to hi
   More on layer 2
 </ButtonLink>
 
-### User experience {#user-experience}
+### User experience {#user-experience}
 
 The technical barrier to entry to using Web3 is currently too high. Users must comprehend security concerns, understand complex technical documentation, and navigate unintuitive user interfaces. Wallet providers, in particular, are working to solve this, but more progress is needed before Web3 gets adopted en masse.
 
