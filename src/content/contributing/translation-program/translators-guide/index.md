@@ -75,9 +75,7 @@ Some examples of language codes for the most widely spoken languages:
 
 ### Titles of external articles {#external-articles}
 
-Some strings contain titles of external articles. Most of the pages in our developer documentation
-section contain links to external articles for further reading. The strings containing titles of
-such articles need to be translated, regardless of the language the article is available in, to ensure a more uniform user experience for the visitors, viewing the page in their language.
+Some strings contain titles of external articles. Most of our developer documentation pages contain links to external articles for further reading. The strings containing titles of articles need to be translated, regardless of the article's language, to ensure a more consistent user experience for the visitors viewing the page in their language.
 
 You can find some examples of what these strings look like for translators and how to identify them below (links to articles can be found mostly at the bottom of these pages, in the 'Further reading' section):
 
