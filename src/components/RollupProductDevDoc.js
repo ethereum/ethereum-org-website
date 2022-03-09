@@ -4,10 +4,10 @@ import styled from "styled-components"
 
 // Components
 import Link from "./Link"
+import Translation from "./Translation"
 
 // Data
-import optimisticRollupList from "../data/layer-2-data-files/optimistic-rollups.json"
-import zkRollupList from "../data/layer-2-data-files/zk-rollups.json"
+import rollups from "../data/layer-2.json"
 
 // Styles
 const H4 = styled.h4`
@@ -26,38 +26,43 @@ const Content = styled.div`
 `
 
 const RollupProductDevDoc = ({ rollupType }) => {
-  const data = {
-    optimistic: optimisticRollupList,
-    zk: zkRollupList,
-  }
-
   return (
     <div>
-      {data[rollupType].map((rollup) => {
-        return (
-          <ProductCard>
-            <Content>
-              <div>
-                <H4>
-                  {rollup.name}
-                  {rollup.note.length > 0 && ` (${rollup.note})`}
-                </H4>
-                <ul>
-                  <li>
-                    <Link to={rollup.website}>Website</Link>
-                  </li>
-                  <li>
-                    <Link to={rollup.developerDocs}>Developer docs</Link>
-                  </li>
-                  <li>
-                    <Link to={rollup.l2beat}>Technology and risk summary</Link>
-                  </li>
-                </ul>
-              </div>
-            </Content>
-          </ProductCard>
-        )
-      })}
+      {rollups[rollupType].map(
+        ({ name, noteKey, website, developerDocs, l2beat }) => {
+          return (
+            <ProductCard>
+              <Content>
+                <div>
+                  <H4>{name}</H4>
+                  {noteKey.length > 0 && (
+                    <p>
+                      * <Translation id={noteKey} />
+                    </p>
+                  )}
+                  <ul>
+                    <li>
+                      <Link to={website}>
+                        <Translation id="rollup-component-website" />
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to={developerDocs}>
+                        <Translation id="rollup-component-developer-docs" />
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to={l2beat}>
+                        <Translation id="rollup-component-technology-and-risk-summary" />
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+              </Content>
+            </ProductCard>
+          )
+        }
+      )}
     </div>
   )
 }
