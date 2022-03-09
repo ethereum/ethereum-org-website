@@ -74,7 +74,7 @@ _In Web2, you can refuse to use a platform; in Web3, you can vote to change it._
   More on DAOs
 </ButtonLink>
 
-### Censorship resistance {#censorship-resistance}
+#### Censorship resistance {#censorship-resistance}
 
 The power dynamic between platforms and content creators is massively imbalanced.
 
@@ -103,9 +103,9 @@ Web3 uses tokens like ETH to send money directly in the browser and requires no 
 
 ## Web3 limitations {#web3-limitations}
 
-How is web3 limited?
+Despite the numerous benefits of Web3 in its current form, there are still many limitations that the ecosystem must address for it to flourish.
 
-### Accessibility {#accessibility}
+### Accessibility {#accessibility}
 
 Web3 is less likely to be utilized in less-wealthy, developing nations due to high transaction fees. On Ethereum, these challenges are being solved right through network upgrades and layer 2 scaling solutions. The technology is ready, but we need higher levels of adoption on layer 2 to make Web3 accessible to everyone.
 
