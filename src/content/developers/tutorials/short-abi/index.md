@@ -57,13 +57,22 @@ However, the ABI was designed for L1 where a byte of calldata costs approximatel
 For example, [here is an ERC-20 transfer transaction](https://kovan-optimistic.etherscan.io/tx/0xf1e3b1cf210d3319afd89132dfb24bfcb9cd93c651d3d9e495c224549416c578).
 The call data is divided like this:
 
-| Segment | Length | Bytes | Wasted bytes | Wasted gas
-| - | -: | -: | - : | -: |
+| Section | Length | Bytes | Wasted bytes | Wasted gas |
+| ------- | -----: | ----: | -----------: | ---------: |
 | Function selector | 4 | 0-3 | 3 | 48
 | Zeroes | 12 | 4-15 | 12 | 48
 | Destination address | 20 | 16-35 | 0 | 0 
-| Amount | 32 | 36-63 | 30 | 120
+| Amount | 32 | 36-63 | 17 | 64
 
+Explanation:
+
+- **Function selector**: The contract has less than 256 functions, so we can distinguish them with a single byte.
+  These bytes are typically non-zero and therefore [cost sixteen gas](https://eips.ethereum.org/EIPS/eip-2028).
+- **Zeroes**: These bytes are always zero because a twenty byte address does not require a thirty two byte word to hold it.
+  Bytes that hold zero cost four gas ([see the yellow paper](https://ethereum.github.io/yellowpaper/paper.pdf), Appendix G,
+  p. 27, the value for `G`<sub>`txdatazero`</sub>).
+- **Amount**: If we assume that in this contract `decimals` is eighteen (the normal value) and the maximum amount of tokens we transfer will be 10<sup>18</sup>, we get a maximum amount of 10<sup>36</sup>.
+  256<sup>15</sup> &gt; 10<sup>36</sup>, so fifteen bytes are enough.
 
 
 
