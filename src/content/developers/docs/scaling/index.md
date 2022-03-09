@@ -30,6 +30,8 @@ Sharding is the process of splitting a database horizontally to spread the load.
 
 Learn more about [sharding](/upgrades/shard-chains/).
 
+On a private blockchain, implementation of Layer-1 solution is to increase the Block gas limit or reduce the Block period in genesis file as Throughput or tps = Blockgaslimit/(transactional gaslimit * block period)
+
 ## Off-chain scaling {#off-chain-scaling}
 
 Off-chain solutions are implemented separately from layer 1 Mainnet - they require no changes to the existing Ethereum protocol. Some solutions, known as "layer 2" solutions, derive their security directly from layer 1 Ethereum consensus, such as [optimistic rollups](/developers/docs/scaling/optimistic-rollups/), [zero-knowledge rollups](/developers/docs/scaling/zk-rollups/) or [state channels](/developers/docs/scaling/state-channels/). Other solutions involve the creation of new chains in various forms that derive their security separately from Mainnet, such as [sidechains](#sidechains) or [plasma](#plasma) chains. These solutions communicate with Mainnet, but derive their security differently to obtain a variety of goals.
