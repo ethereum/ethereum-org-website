@@ -57,12 +57,13 @@ However, the ABI was designed for L1 where a byte of calldata costs approximatel
 For example, [here is an ERC-20 transfer transaction](https://kovan-optimistic.etherscan.io/tx/0xf1e3b1cf210d3319afd89132dfb24bfcb9cd93c651d3d9e495c224549416c578).
 The call data is divided like this:
 
-| Section | Length | Bytes | Wasted bytes | Wasted gas |
-| ------- | -----: | ----: | -----------: | ---------: |
-| Function selector | 4 | 0-3 | 3 | 48
-| Zeroes | 12 | 4-15 | 12 | 48
-| Destination address | 20 | 16-35 | 0 | 0 
-| Amount | 32 | 36-63 | 17 | 64
+| Section | Length | Bytes | Wasted bytes | Wasted gas | Necessary bytes | Necessary gas |
+| ------- | -----: | ----: | -----------: | ---------: | --------------: | ------------: |
+| Function selector | 4 | 0-3 | 3 | 48 | 1 | 16
+| Zeroes | 12 | 4-15 | 12 | 48 | 0 | 0
+| Destination address | 20 | 16-35 | 0 | 0 | 20 | 320 
+| Amount | 32 | 36-67 | 17 | 64 | 15 | 240
+| Total  | 68 | | | | 160 | | 576
 
 Explanation:
 
@@ -73,6 +74,11 @@ Explanation:
   p. 27, the value for `G`<sub>`txdatazero`</sub>).
 - **Amount**: If we assume that in this contract `decimals` is eighteen (the normal value) and the maximum amount of tokens we transfer will be 10<sup>18</sup>, we get a maximum amount of 10<sup>36</sup>.
   256<sup>15</sup> &gt; 10<sup>36</sup>, so fifteen bytes are enough.
+  
+A waste of 160 gas on L1 is normally negligible. A transaction costs at least [21,000 gas](https://yakkomajuri.medium.com/blockchain-definition-of-the-week-ethereum-gas-2f976af774ed), so an extra 0.8% doesn't matter.
+However, on L2 things are different, almost the entire cost of the transaction is the calldata.
+We are wasting 21.7% of the transaction cost.
 
+### The solution {#the-solution}
 
 
