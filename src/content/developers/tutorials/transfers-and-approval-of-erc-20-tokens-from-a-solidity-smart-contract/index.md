@@ -143,7 +143,7 @@ To keep things simple, we just exchange 1 token for 1 Wei.
 function buy() payable public {
     uint256 amountTobuy = msg.value;
     uint256 dexBalance = token.balanceOf(address(this));
-    require(amountTobuy > 0, "You need to send some Ether");
+    require(amountTobuy > 0, "You need to send some ether");
     require(amountTobuy <= dexBalance, "Not enough tokens in the reserve");
     token.transfer(msg.sender, amountTobuy);
     emit Bought(amountTobuy);
