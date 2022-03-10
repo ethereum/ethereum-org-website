@@ -50,7 +50,7 @@ Once enabled, run `curl http://127.0.0.1:8545`. This should report no error.
 
 ### Allow remote connections {#allow-remote-connections}
 
-Remote hosts will be able to connect to your node if the following command is used to launch Geth:
+To allow remote hosts to connect to your node, launch Geth with the following command:
 ```
 geth --syncmode light --http --http.addr 0.0.0.0
 ```
@@ -59,9 +59,10 @@ Note: this assumes that there is no process blocking requests to your localhost,
 
 ## Geth JavaScript console {#geth-javascript-console}
 
-It is possible to interact directly with Ethereum by using the Geth JavaScript console.
+You can directly interact with Ethereum by using the Geth JavaScript console.
 
-To do so, simply run:
+To do so, run:
+
 ```
 geth attach
 ```
