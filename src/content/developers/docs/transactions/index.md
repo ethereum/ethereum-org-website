@@ -139,7 +139,7 @@ On Ethereum there are a few different types of transactions:
 
 - Regular transactions: a transaction from one wallet to another.
 - Contract deployment transactions: a transaction without a 'to' address, where the data field is used for the contract code.
-- Execution of Contract: a transaction which interacts with the already deployed smart contract. In this case, 'to' address is the smart contract address
+- Execution of a contract: a transaction that interacts with a deployed smart contract. In this case, 'to' address is the smart contract address.
 
 ### On gas {#on-gas}
 
