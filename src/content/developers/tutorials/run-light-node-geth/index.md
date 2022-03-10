@@ -63,7 +63,7 @@ Geth has a built-in JavaScript console and a JavaScript API called [web3js](http
 
 To use the Javascript console run: 
 
-```
+```bash
 geth attach
 ```
 
