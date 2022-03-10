@@ -80,10 +80,10 @@ However, on L2 things are different, almost the entire cost of the transaction i
 In addition to the transaction calldata, there are 109 bytes of transaction header (destination address, signature, etc.).
 The total cost is therefore `109*16+576+160=2480`, and we are wasting about 6.5% of that.
 
-## The solution {#the-solution}
+## The solution when you don't control the destination {#the-solution-when-you-dont-control-the-destination}
 
 Assuming that you do not have control over the destination contract, you can still use a solution similar to [this one](https://github.com/qbzzt/ethereum.org-20220330-shortABI).
-Let's go over the files one by one.
+Let's go over the relevant files.
 
 ### Token.sol {#token.sol}
 
@@ -201,12 +201,31 @@ This has the added advantage of moving the value to the right of the field, so i
     fallback() external {
 ```
 
+When a call to a Solidity contract does not match any of the function signatures, it calls [the `fallback()` function](https://docs.soliditylang.org/en/v0.8.12/contracts.html#fallback-function) (assuming there is one).
+In the case of `CalldataInterpreter`, *any* call gets here because there are no other `external` or `public` functions.
+
 
 
 ```solidity
         uint _func;
 
         _func = calldataVal(0, 1);
+```
+
+Read the first byte of the calldata, which tells us the function.
+There are two reasons why a function would not be available here:
+
+1. Functions that are `pure` or `view` don't change the state and don't cost gas (when called off-chain).
+   It makes no sense to try to reduce their gas cost.
+   
+2. Functions that rely on [`msg.sender`](https://docs.soliditylang.org/en/v0.8.12/units-and-global-variables.html#block-and-transaction-properties).
+   The value of `msg.sender` is going to be `CalldataInterpreter`'s address, not the caller.
+   
+Unfortunately, [looking at the ERC-20 specifications](https://eips.ethereum.org/EIPS/eip-20), this leaves only one function, `transfer`.
+This leaves us with only two functions: `transfer` (because we can call `transferFrom`) and `faucet` (because we can transfer the tokens back to whever called us).
+
+
+```solidity
 
         // Call the state changing methods of token using
         // information from the calldata
@@ -226,6 +245,11 @@ This has the added advantage of moving the value to the right of the field, so i
                 calldataVal(21, 2)
             );
         }
+```
+
+
+```solidity
+        
     }   // fallback
 
 }       // contract CalldataInterpreter
@@ -234,6 +258,10 @@ This has the added advantage of moving the value to the right of the field, so i
 
 Example transaction of it working: https://kovan-optimistic.etherscan.io/tx/0x4c823826f9e19e7befe4ba78b9496e4e5fbb81007605030e8a2f8562a49ae82c
 
+
+### If you do control the destination contract
+
+Why we still need two contracts.
 
 ## Conclusion
 
