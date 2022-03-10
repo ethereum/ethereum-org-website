@@ -1,7 +1,7 @@
 ---
 title: How to run a light node with Geth
-description: How to download, install and run Geth "light".
-authors: ["Brian Gu", "Chris Hobcroft"]
+description: How to download, install and run a lightclient with Geth.
+authors: "Brian Gu"
 tags: ["clients", "geth", "nodes"]
 skill: beginner
 lang: en
@@ -11,7 +11,7 @@ published: 2022-03-04
 
 You may be interested in running an [Ethereum node](/developers/docs/nodes-and-clients/). One of the easiest ways to do so is by downloading, installing, and running Geth. With Geth, we can have a light node up and running in minutes.
 
-The advantage of running a light client is that it requires less than 400MB of storage, whilst still allowing full interactivity with the chainstate. Some queries may take longer to respond compared with other sync modes, as data must be retrieved from remote peers.
+A light client requires less than 400MB of storage whilst still allowing full interactivity with the Ethereum state. Light clients retrieve data from remote peers, so some queries may take longer to respond in comparison to other sync modes.
 
 For an explanation of the differences between the different sync modes, read our [nodes and clients developer docs](developers/docs/nodes-and-clients/#node-types).
 
@@ -19,14 +19,15 @@ For an explanation of the differences between the different sync modes, read our
 
 First, [install Geth](https://geth.ethereum.org/docs/install-and-build/installing-geth).
 
-Once installed, running an Ethereum node in "light" mode is as simple as running the following command in a Terminal window:
+After installing Geth, you can run an Ethereum node in "light" mode by running the following command in a Terminal window:
+
 ```
 geth --syncmode light
 ```
 
-Once launched, Geth will begin connecting to other nodes on Ethereum - known as "peers".
+Once launched, Geth will begin connecting to other nodes on Ethereum - known as "peers". The process of connecting to peers may take a while.
 
-Once it has sufficient peers, it will begin to import headers from new blocks in the chain.
+When your Geth node has enough peers, it will import headers from new blocks on the chain. 
 
 When new block headers no longer have an "age", Geth will be synced to the chain's head.
 
@@ -38,9 +39,9 @@ When restarting the node, Geth will take a few minutes to download block headers
 
 ## Enable the HTTP-RPC server {#enable-the-http-rpc-server}
 
-Enabling the HTTP-RPC server allows connections to Ethereum from other software. Such software may include wallets, browser extensions, or custom software libraries.
+Enabling the HTTP-RPC server lets you connect your Ethereum node to other software like wallets, browser extensions, or custom software libraries.
 
-The HTTP-RPC server can be enabled by running the following command when to launch Geth:
+You can enable the HTTP-RPC server by running the following command when launching Geth:
 ```
 geth --syncmode light --http
 ```
