@@ -244,7 +244,7 @@ This function is almost identical to `depositERC20`, but it lets you send the ER
 Withdrawals (and other messages from L2 to L1) in Optimism are a two step process:
 
 1. An initiating transaction on L2. 
-1. A finalizing or claiming transaction on L1.
+2. A finalizing or claiming transaction on L1.
    This transaction needs to happen after the [fault challenge period](https://community.optimism.io/docs/how-optimism-works/#fault-proofs) for the L2 transaction ends.
    
 
@@ -469,7 +469,7 @@ Finally, the function that sends a message to the other layer.
 In this case, the following line triggers two vulnerabilities:
 
 1. [Reentrancy events](https://github.com/crytic/slither/wiki/Detector-Documentation#reentrancy-vulnerabilities-3)
-1. [Benign reentrancy](https://github.com/crytic/slither/wiki/Detector-Documentation#reentrancy-vulnerabilities-2)
+2. [Benign reentrancy](https://github.com/crytic/slither/wiki/Detector-Documentation#reentrancy-vulnerabilities-2)
 
 ```solidity
         getCrossDomainMessenger().sendMessage(_crossDomainTarget, _message, _gasLimit);
@@ -542,7 +542,7 @@ import { SafeERC20 } from "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.s
 [The ERC-20 standard](https://eips.ethereum.org/EIPS/eip-20) supports two ways for a contract to report failure:
 
 1. Revert
-1. Return `false`
+2. Return `false`
 
 Handling both cases would make our code more complicated, so instead we use [OpenZeppelin's `SafeERC20`](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/utils/SafeERC20.sol), which makes sure [all failures result in a revert](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/utils/SafeERC20.sol#L96).
 
@@ -635,7 +635,7 @@ Note that this function does not have any mechanism that restricts *who* can cal
 This means that in theory an attacker could wait until we deploy the proxy and the first version of the bridge and then [front-run](https://solidity-by-example.org/hacks/front-running/) to get to the `initialize` function before the legitimate user does. But there are two methods to prevent this:
 
 1. If the contracts are deployed not directly by an EOA but [in a transaction that has another contract create them](https://medium.com/upstate-interactive/creating-a-contract-with-a-smart-contract-bdb67c5c8595) the entire process can be atomic, and finish before any other transaction is executed.
-1. If the legitimate call to `initialize` fails it is always possible to ignore the newly created proxy and bridge and create new ones. 
+2. If the legitimate call to `initialize` fails it is always possible to ignore the newly created proxy and bridge and create new ones. 
 
 ```solidity
         messenger = _l1messenger;
@@ -839,8 +839,8 @@ In the case of ETH the call to the bridge already includes the transfer of asset
 ERC-20 token transfers follow a different process from ETH:
 
 1. The user (`_from`) gives an allowance to the bridge to transfer the appropriate tokens.
-1. The user calls the bridge with the address of the token contract, the amount, etc.
-1. The bridge transfers the tokens (to itself) as part of the deposit process.
+2. The user calls the bridge with the address of the token contract, the amount, etc.
+3. The bridge transfers the tokens (to itself) as part of the deposit process.
 
 The first step may happen in a separate transaction from the last two.
 However, front-running is not a problem because the two functions that call `_initiateERC20Deposit` (`depositERC20` and `depositERC20To`) only call this function with `msg.sender` as the `_from` parameter.
@@ -1141,7 +1141,7 @@ The [IL2ERC20Bridge](https://github.com/ethereum-optimism/optimism/blob/develop/
 There are two significant differences:
 1. On L1 you initiate deposits and finalize withdrawals. 
    Here you initiate withdrawals and finalize deposits.
-1. On L1 it is necessary to distinguish between ETH and ERC-20 tokens. 
+2. On L1 it is necessary to distinguish between ETH and ERC-20 tokens. 
    On L2 we can use the same functions for both because internally ETH balances on Optimism are handled as an ERC-20 token with the address [0xDeadDeAddeAddEAddeadDEaDDEAdDeaDDeAD0000](https://optimistic.etherscan.io/address/0xDeadDeAddeAddEAddeadDEaDDEAdDeaDDeAD0000).
 
 
@@ -1333,7 +1333,7 @@ This is important because this function calls `_mint` and could be used to give 
 Sanity checks:
 
 1. The correct interface is supported
-1. The L2 ERC-20 contract's L1 address matches the L1 source of the tokens
+2. The L2 ERC-20 contract's L1 address matches the L1 source of the tokens
 
 ```solidity
         ) {
@@ -1347,7 +1347,7 @@ Sanity checks:
 
 If the sanity checks pass, finalize the deposit:
 1. Mint the tokens
-1. Emit the appropriate event
+2. Emit the appropriate event
 
 ```solidity
         } else {
