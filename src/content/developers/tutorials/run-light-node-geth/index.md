@@ -1,5 +1,5 @@
 ---
-title: How to run a "light" node with Geth
+title: How to run a light node with Geth
 description: How to download, install and run Geth "light".
 authors: ["Brian Gu", "Chris Hobcroft"]
 tags: ["clients", "geth", "nodes"]
@@ -9,11 +9,11 @@ sidebar: true
 published: 2022-03-04
 ---
 
-You may be interested in running your own [node](/developers/docs/nodes-and-clients/), in order to interact with Ethereum. One of the easiest ways to do so is by downloading, installing, and running Geth. With Geth, we can have a "light" node up and running in minutes.
+You may be interested in running an [Ethereum node](/developers/docs/nodes-and-clients/). One of the easiest ways to do so is by downloading, installing, and running Geth. With Geth, we can have a light node up and running in minutes.
 
-The advantage of running in "light" syncmode is that it requires less than 400MB of available storage, whilst still allowing full interactivity with the chainstate. Some queries may take longer to respond compared with other syncmodes, as data must be retrieved from remote peers.
+The advantage of running a light client is that it requires less than 400MB of storage, whilst still allowing full interactivity with the chainstate. Some queries may take longer to respond compared with other sync modes, as data must be retrieved from remote peers.
 
-For an explanation of the differences between the different syncmodes, see this [stack exchange answer](https://ethereum.stackexchange.com/questions/11297/what-is-geths-light-sync-and-why-is-it-so-fast).
+For an explanation of the differences between the different sync modes, read our [nodes and clients developer docs](developers/docs/nodes-and-clients/#node-types).
 
 ## Install and run {#install-and-run}
 
@@ -32,9 +32,9 @@ When new block headers no longer have an "age", Geth will be synced to the chain
 
 ## Stopping and restarting your node {#stopping-and-restarting-your-node}
 
-You can stop your node at any time by pressing `ctrl-C`.
+You can stop your node at any time by pressing <kbd>CTRL</kbd>+<kbd>C</kbd>.
 
-When restarting the node, Geth will take a few minutes to download block headers created since the node was last stopped.
+When restarting the node, Geth will take a few minutes to download block headers created since the node was last run.
 
 ## Enable the HTTP-RPC server {#enable-the-http-rpc-server}
 
@@ -67,15 +67,16 @@ geth attach
 
 This console allows direct interaction with Ethereum. For example, running the `eth.blockNumber` command will print the latest known block number.
 
-## Mainnet and Testnets {#mainnet-and-testnets}
+## Mainnet and testnets {#mainnet-and-testnets}
 
-By default, Geth runs a node on Ethereum's main network ("Mainnet").
+Geth runs your node on [Ethereum Mainnet](/glossary/#mainnet/) by default.
 
-It is also possible to use Geth to run a node on one of the public test networks, by running one of the following commands in Terminal:
+It is also possible to use Geth to run a node on one of the [public test networks](/networks/#testnets/), by running one of the following commands in Terminal:
 ```
 geth --syncmode light --ropsten
 geth --syncmode light --rinkeby
 geth --syncmode light --goerli
 ```
 
-[Learn more about different networks](/developers/docs/networks/).
+- [Learn more about different networks](/developers/docs/networks/).
+- [Run a full node](/run-a-node/)
