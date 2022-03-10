@@ -5,7 +5,7 @@ lang: ar
 sidebar: true
 ---
 
-# إثيريوم لمطوري JavaScript {#ethereum-for-javascript-devs}
+# إثيريوم لمطوري JavaScript {#ethereum-for-JavaScript-devs}
 
 <div class="featured">تعرف على كيفية التطوير لصالح إثيريوم باستخدام مشروعات وأدوات قائمة على JavaScript</div><br/>
 

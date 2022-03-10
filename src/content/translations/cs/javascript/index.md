@@ -1,20 +1,20 @@
 ---
-title: Ethereum pro vývojáře v JavaScriptu
+title: Ethereum pro vývojáře v JavaScript
 description: Naučte se vyvíjet pro Ethereum pomocí projektů a nástrojů založených na JavaScriptu
 lang: cs
 sidebar: true
 sidebarDepth: 1
 ---
 
-# Ethereum pro vývojáře v JavaScriptu {#ethereum-for-javascript-devs}
+# Ethereum pro vývojáře v JavaScript {#ethereum-for-javascript-devs}
 
-<div class="featured">Naučte se vyvíjet pro Ethereum pomocí projektů a nástrojů založených na JavaScriptu</div>
+<div class="featured">Naučte se vyvíjet pro Ethereum pomocí projektů a nástrojů založených na JavaScript</div>
 
 Na platformě Ethereum můžete vytvářet decentralizované aplikace (neboli dapps), které využívají výhody kryptoměn a blockchainové technologie. Tyto aplikace mohou být důvěryhodné, což znamená, že jakmile je jednou nasadíte na Ethereum, budou vždy spouštěny přesně tak, jak jsou naprogramovány. Aplikace dapp mohou kontrolovat digitální aktiva, a tím vytvářet nové druhy finančních aplikací. Mohou být decentralizované, což znamená, že je nemůže ovládat jediná entita nebo osoba a že jsou téměř necenzurovatelné.
 
 ## Začínáme s chytrými kontrakty a jazykem Solidity {#getting-started-with-smart-contracts-and-solidity}
 
-**Udělejte své první kroky k integraci JavaScriptu s Ethereem**
+**Udělejte své první kroky k integraci JavaScript s Ethereem**
 
 Potřebujete nejdříve úplně základní informace? Podívejte se na [ethereum.org/learn](/learn/) nebo [ethereum.org/developers](/developers/)
 
@@ -25,9 +25,9 @@ Potřebujete nejdříve úplně základní informace? Podívejte se na [ethereum
 
 - [Full Stack Hello World Voting Ethereum Dapp Tutorial](https://medium.com/@mvmurthy/full-stack-hello-world-voting-ethereum-dapp-tutorial-part-1-40d2d0d807c2)
 
-## Projekty a nástroje v JavaScriptu {#javascript-project-and-tools}
+## Projekty a nástroje v JavaScript {#javascript-project-and-tools}
 
-**Solidity -** **_Nejoblíbenější jazyk pro Ethereum, inspirovaný JavaScriptem._**
+**Solidity -** **_Nejoblíbenější jazyk pro Ethereum, inspirovaný JavaScript._**
 
 - [Dokumentace](https://solidity.readthedocs.io)
 - [GitHub](https://github.com/ethereum/solidity/)
@@ -38,27 +38,27 @@ Potřebujete nejdříve úplně základní informace? Podívejte se na [ethereum
 - [trufflesuite.com](https://www.trufflesuite.com/)
 - [GitHub](https://github.com/trufflesuite/truffle)
 
-**Web3.js -** **_javascriptové API pro Ethereum._**
+**Web3.js -** **_JavaScript API pro Ethereum._**
 
 - [Dokumentace](https://web3js.readthedocs.io/en/1.0/)
 - [GitHub](https://github.com/ethereum/web3.js/)
 
-**Ethers.js -** **_kompletní implementace peněženky pro Ethereum a nástrojů v JavaScriptu a v TypeScriptu_**
+**Ethers.js -** **_kompletní implementace peněženky pro Ethereum a nástrojů v JavaScript a v TypeScriptu_**
 
 - [Dokumentace](https://docs.ethers.io/)
 - [GitHub](https://github.com/ethers-io/ethers.js/)
 
-**ethereumjs-vm -** **_Ethereum virtuální stroj (VM) implementovaný v JavaScriptu_**
+**ethereumjs-vm -** **\_Ethereum virtuální stroj (VM) implementovaný v JavaScript**
 
 - [GitHub](https://github.com/ethereumjs/ethereumjs-vm)
 
-**Ethereum Grid -** **desktopová aplikace s nástroji pro Ethereum, rozšiřitelná pomocí JavaScriptu.**
+**Ethereum Grid -** **desktopová aplikace s nástroji pro Ethereum, rozšiřitelná pomocí JavaScript.**
 
 - [grid.ethereum.org](https://grid.ethereum.org)
 - [GitHub](https://github.com/ethereum/grid)
 
 Hledáte další informační zdroje? Zkuste [ethereum.org/developers.](/developers/)
 
-## Přispěvatelé do komunity v JavaScriptu {#javascript-community-contributors}
+## Přispěvatelé do komunity v JavaScript {#javascript-community-contributors}
 
 - [EthereumJS](https://ethereumjs.github.io)
