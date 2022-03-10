@@ -59,15 +59,17 @@ Note: this assumes that there is no process blocking requests to your localhost,
 
 ## Geth JavaScript console {#geth-javascript-console}
 
-You can directly interact with Ethereum by using the Geth JavaScript console.
+Geth has a built-in JavaScript console and a JavaScript API called [web3js](https://github.com/ethereum/web3.js/) that you can use to interact with your node.
 
-To do so, run:
+To use the Javascript console run: 
 
 ```
 geth attach
 ```
 
 This console allows direct interaction with Ethereum. For example, running the `eth.blockNumber` command will print the latest known block number.
+
+[Full web3js documentation](http://web3js.readthedocs.io/)
 
 ## Mainnet and testnets {#mainnet-and-testnets}
 
@@ -79,6 +81,20 @@ geth --syncmode light --ropsten
 geth --syncmode light --rinkeby
 geth --syncmode light --goerli
 ```
+
+## Where is the blockchain and EVM data stored? {#where-is-the-blockchain-and-evm-data-stored}
+
+The directory which Geth uses to store raw blockchain data depends on your operating system. Upon running Geth, look for a message that looks like
+
+bash
+INFO [11-18|14:04:47] Allocated cache and file handles         database=/Users/bgu/Library/Ethereum/testnet/geth/lightchaindata cache=768 handles=128
+
+
+The path following `“database=”` should tell you where the blockchain data is stored on your machine. If you’re running a full node, this directory will contain all of the data about every block that has ever been committed to the blockchain. Since we’re running a light node, this directory only contains the block headers.
+
+It’s worth emphasizing here that, at the lowest level, this is where the blockchain lives. The full contents of the blockchain and the EVM state are stored on every full node in the Ethereum network, in directories that look very much like the one on your computer.
+
+## Further reading {#further-reading}
 
 - [Learn more about different networks](/developers/docs/networks/).
 - [Run a full node](/run-a-node/)
