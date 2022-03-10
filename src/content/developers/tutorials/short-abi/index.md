@@ -82,7 +82,154 @@ The total cost is therefore `109*16+576+160=2480`, and we are wasting about 6.5%
 
 ## The solution {#the-solution}
 
-Assuming that 
+Assuming that you do not have control over the destination contract, you can still use a solution similar to [this one](https://github.com/qbzzt/ethereum.org-20220330-shortABI).
+Let's go over the files one by one.
+
+### Token.sol {#token.sol}
+
+[This is the destinatjon contract](https://github.com/qbzzt/ethereum.org-20220330-shortABI/blob/master/contracts/Token.sol).
+It is a standard ERC-20 contract, with one additional feature.
+This `faucet` function lets any user get some token to use. 
+It would make a production ERC-20 contract useless, but it makes life easier when an ERC-20 exists only to facilitate testing.
+
+```solidity
+    /**
+     * @dev Gives the caller 1000 tokens to play with
+     */
+    function faucet() external {
+        _mint(msg.sender, 1000);
+    }   // function faucet
+```
+
+[You can see an example of this contract being deployed here](https://kovan-optimistic.etherscan.io/address/0x950c753c0edbde44a74d3793db738a318e9c8ce8).
+
+
+### Calldata.sol {#calldata.sol}
+
+[This is the contract that transactions are supposed to call with shorter calldata](https://github.com/qbzzt/ethereum.org-20220330-shortABI/blob/master/contracts/CalldataInterpreter.sol).
+Let's go over it line by line.
+
+```solidity
+//SPDX-License-Identifier: Unlicense
+pragma solidity ^0.8.0;
+
+
+import { OrisUselessToken } from "./Token.sol";
+```
+
+We need the token function to know how to call it.
+
+```solidity
+contract CalldataInterpreter {
+
+    OrisUselessToken public immutable token;
+```
+
+The address of the token for which we are a proxy.
+
+```solidity
+    
+    /**
+     * @dev Specify the token address
+     * @param tokenAddr_ ERC-20 contract address
+     */
+    constructor(
+        address tokenAddr_
+    )  {
+        token = OrisUselessToken(tokenAddr_);
+    }   // constructor
+```
+
+The token address is the only parameter we need to specify.
+
+```solidity
+    function calldataVal(uint startByte, uint length)
+        private pure returns (uint) {
+```
+
+Read a value from the call data.
+
+
+```solidity
+        uint _calldatasize;
+        uint _retVal;
+
+        assembly {
+            _calldatasize := calldatasize()
+        }
+```
+
+Solidity interprets the calldata for us, which is *not* the desired behavior here.
+[Yul](https://docs.soliditylang.org/en/v0.8.12/yul.html), the assembly language of the EVM, lets us decide what we want to happen.
+Here we use [the CALLDATASIZE opcode](https://www.evm.codes/#36) to get the size of the calldata.
+
+```solidity
+        require(length < 0x21, 
+            "calldataVal length limit is 32 bytes");
+
+        require(length + startByte <= _calldatasize,
+            "calldataVal trying to read beyond calldatasize");
+```
+
+We are going to load a single 32 byte (256 bit) word to memory and remove the bytes that aren't part of the field we want.
+This algorithm doesn't work for values longer than 32 bytes, and of course we can't read past the end of the calldata.
+On L1 it might be necessary to skip these tests to save on gas, but on L2 gas is extremely cheap, which enables whatever sanity checks we can think of.
+
+```solidity
+        assembly {
+            _retVal := calldataload(startByte)
+        }
+```
+
+Here we use [the CALLDATALOAD opcode](https://www.evm.codes/#35) to read bytes `startByte` to `startByte+31` into the stack.
+In general, the syntax of an opcode in Yul is `<opcode name>(<first stack value, if any>,<second stack value, if any>...)`.
+
+```solidity
+
+        _retVal = _retVal >> (256-length*8);
+```
+
+Only the most significant `length` bytes are part of the field, so we [right-shift](https://en.wikipedia.org/wiki/Logical_shift) to get rid of the other values.
+This has the added advantage of moving the value to the right of the field, so it is the value itself rather than the value times 256<sup>something</sup>.
+
+```solidity
+
+        return _retVal;
+    }
+
+
+    fallback() external {
+```
+
+
+
+```solidity
+        uint _func;
+
+        _func = calldataVal(0, 1);
+
+        // Call the state changing methods of token using
+        // information from the calldata
+
+        // faucet
+        if (_func == 1) {
+            token.faucet();
+            token.transfer(msg.sender,
+                token.balanceOf(address(this)));
+        }
+
+        // transfer (assume we have an allowance for it)
+        if (_func == 2) {
+            token.transferFrom(
+                msg.sender,
+                address(uint160(calldataVal(1, 20))),
+                calldataVal(21, 2)
+            );
+        }
+    }   // fallback
+
+}       // contract CalldataInterpreter
+```
 
 
 Example transaction of it working: https://kovan-optimistic.etherscan.io/tx/0x4c823826f9e19e7befe4ba78b9496e4e5fbb81007605030e8a2f8562a49ae82c
