@@ -539,8 +539,10 @@ code {
   line-height: 1.45em;
 }
 kbd {
-  font-size: 0.85rem;
-  line-height: 1.45rem;
+  font-family: "SFMono-Regular", Consolas, "Roboto Mono", "Droid Sans Mono",
+    "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 0.625rem;
+  line-height: 1.56rem;
 }
 samp {
   font-size: 0.85rem;
