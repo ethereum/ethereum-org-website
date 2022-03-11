@@ -3,9 +3,14 @@ import React from "react"
 import { graphql } from "gatsby"
 import { getImage } from "gatsby-plugin-image"
 import styled from "styled-components"
+import { useIntl } from "gatsby-plugin-intl"
 
 // Assets
 import privacyGlyph from "../assets/run-a-node/privacy-glyph.svg"
+
+// Data
+import layer2Data from "../data/layer-2.json"
+import validiumData from "../data/validium.json"
 
 // Components
 import ExpandableCard from "../components/ExpandableCard"
@@ -13,7 +18,12 @@ import InfoBanner from "../components/InfoBanner"
 import Link from "../components/Link"
 import PageHero from "../components/PageHero"
 import PageMetadata from "../components/PageMetadata"
+import Pill from "../components/Pill"
+import ProductCard from "../components/ProductCard"
 import { CardGrid, Content, Page } from "../components/SharedStyledComponents"
+
+// Utils
+import { translateMessageId } from "../utils/translations"
 
 // Styles
 const GappedPage = styled(Page)`
@@ -78,6 +88,7 @@ const StyledCardGrid = styled(CardGrid)`
 `
 
 const Layer2Page = ({ data }) => {
+  const intl = useIntl()
   const heroContent = {
     title: "Layer 2",
     header: "Layer 2",
@@ -127,6 +138,8 @@ const Layer2Page = ({ data }) => {
       alt: "test",
     },
   ]
+
+  const layer2DataCombined = [...layer2Data.optimistic, ...layer2Data.zk]
 
   return (
     <GappedPage>
@@ -347,13 +360,56 @@ const Layer2Page = ({ data }) => {
       </Content>
 
       <Content>
-        <h2>Types of layer 2</h2>
+        <h2>Generalized layer 2's</h2>
         <p>
           Generalized layer 2s behave just like Ethereum—but cheaper. Anything
           that you can do on Ethereum layer 1, you can also do on layer 2. Many
           dapps have already begun to migrate to these networks, or are skipping
           deploying to mainnet altogether.
         </p>
+        <StyledCardGrid>
+          {layer2DataCombined
+            .filter((l2) => !l2.purpose.indexOf("universal"))
+            .map((l2, idx) => {
+              return (
+                <ProductCard
+                  key={idx}
+                  background="black"
+                  description={l2.description}
+                  url={l2.website}
+                  note={translateMessageId(l2.noteKey, intl)}
+                  name={l2.name}
+                />
+              )
+            })}
+        </StyledCardGrid>
+
+        <h2>Application specific layer 2's</h2>
+        <p>
+          Application specific layer 2's are projects that specialize in
+          optimizing for a specific application space, bringing improved
+          performance.
+        </p>
+        <StyledCardGrid>
+          {layer2DataCombined
+            .filter((l2) => l2.purpose.indexOf("universal"))
+            .map((l2, idx) => {
+              return (
+                <ProductCard
+                  key={idx}
+                  background="black"
+                  description={l2.description}
+                  url={l2.website}
+                  note={translateMessageId(l2.noteKey, intl)}
+                  name={l2.name}
+                >
+                  {l2.purpose.map((purpose) => (
+                    <Pill>{purpose}</Pill>
+                  ))}
+                </ProductCard>
+              )
+            })}
+        </StyledCardGrid>
       </Content>
 
       <Content>

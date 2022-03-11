@@ -139,6 +139,7 @@ const ProductCard = ({
   image,
   name,
   description,
+  note = "",
   alt = "",
   children,
   githubUrl = "",
@@ -186,6 +187,7 @@ const ProductCard = ({
           )}
           <Title gitHidden={!hasRepoData}>{name}</Title>
           <Description>{description}</Description>
+          {note.length > 0 && <Description>Note: {note}</Description>}
         </div>
         {children && <Children>{children}</Children>}
       </Content>
