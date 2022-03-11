@@ -27,5 +27,5 @@ Meskipun Anda dapat memilih untuk berinteraksi secara langsung dengan klien Ethe
 ## Topik terkait {#related-topics}
 
 - [Node dan klien](/developers/docs/nodes-and-clients/)
-- [API Javascript](/developers/docs/apis/javascript/)
+- [API JavaScript](/developers/docs/apis/javascript/)
 - [API Backend](/developers/docs/apis/backend/)
