@@ -42,6 +42,7 @@ When restarting the node, Geth will take a few minutes to download block headers
 Enabling the HTTP-RPC server lets you connect your Ethereum node to other software like wallets, browser extensions, or custom software libraries.
 
 You can enable the HTTP-RPC server by running the following command when launching Geth:
+
 ```
 geth --syncmode light --http
 ```
@@ -51,6 +52,7 @@ Once enabled, run `curl http://127.0.0.1:8545`. This should report no error.
 ### Allow remote connections {#allow-remote-connections}
 
 To allow remote hosts to connect to your node, launch Geth with the following command:
+
 ```
 geth --syncmode light --http --http.addr 0.0.0.0
 ```
@@ -76,6 +78,7 @@ This console allows direct interaction with Ethereum. For example, running the `
 Geth runs your node on [Ethereum Mainnet](/glossary/#mainnet/) by default.
 
 It is also possible to use Geth to run a node on one of the [public test networks](/networks/#testnets/), by running one of the following commands in Terminal:
+
 ```
 geth --syncmode light --ropsten
 geth --syncmode light --rinkeby
@@ -86,9 +89,9 @@ geth --syncmode light --goerli
 
 The directory which Geth uses to store raw blockchain data depends on your operating system. Upon running Geth, look for a message that looks like
 
-bash
+```bash
 INFO [11-18|14:04:47] Allocated cache and file handles         database=/Users/bgu/Library/Ethereum/testnet/geth/lightchaindata cache=768 handles=128
-
+```
 
 The path following `“database=”` should tell you where the blockchain data is stored on your machine. If you’re running a full node, this directory will contain all of the data about every block that has ever been committed to the blockchain. Since we’re running a light node, this directory only contains the block headers.
 
