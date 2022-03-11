@@ -130,7 +130,7 @@ Po skonfigurowaniu będziesz w stanie:
 
 ### Interakcja z funkcjami inteligentnego kontraktu {#interact-with-smart-contract-functions}
 
-Biblioteki klienta Javascript pozwalają aplikacji na wywołanie funkcji inteligentnych kontraktów poprzez odczyt interfejsu binarnego aplikacji (ABI) skompilowanego kontraktu.
+Biblioteki klienta JavaScript pozwalają aplikacji na wywołanie funkcji inteligentnych kontraktów poprzez odczyt interfejsu binarnego aplikacji (ABI) skompilowanego kontraktu.
 
 ABI zasadniczo wyjaśnia funkcje kontraktu w formacie JSON i pozwala na używanie go jak zwykłego obiektu JavaScript.
 
@@ -257,6 +257,6 @@ _Wiesz o zasobach społecznościowych, które Ci pomogły? Wyedytuj tę stronę 
 
 ## Powiązane samouczki {#related-tutorials}
 
-- [Skonfiguruj Web3js, aby używać blockchain Ethereum w Javascript](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– Instrukcje dotyczące konfiguracji web3.js w Twoim projekcie._
+- [Skonfiguruj Web3js, aby używać blockchain Ethereum w JavaScript](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– Instrukcje dotyczące konfiguracji web3.js w Twoim projekcie._
 - [Wywołanie inteligentnego kontraktu z JavaScript](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– za pomocą tokena DAI zobacz jak wywołać funkcję kontraktów przy użyciu JavaScript._
 - [Wysyłanie transakcji przy użyciu web3 i Alchemy](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) _– krok po kroku do wysyłania transakcji z backendu._
