@@ -304,5 +304,5 @@ Ada banyak informasi tentang klien Ethereum di internet. Berikut adalah beberapa
 
 ## Tutorial terkait {#related-tutorials}
 
-- [Menjalankan Node dengan Geth](/developers/tutorials/run-light-node-geth/) _– Cara mengunduh, menginstal, dan menjalankan Geth. Menjelaskan tentang mode sinkronisasi, konsol Javascript, dan banyak lagi._
+- [Menjalankan Node dengan Geth](/developers/tutorials/run-light-node-geth/) _– Cara mengunduh, menginstal, dan menjalankan Geth. Menjelaskan tentang mode sinkronisasi, konsol JavaScript, dan banyak lagi._
 - [Mengubah Raspberry Pi 4 Anda menjadi node Eth 1.0 atau Eth 2.0 hanya dengan flashing memori MicroSD – Panduan Instalasi](/developers/tutorials/run-node-raspberry-pi/) _– Flash Raspberry Pi 4 Anda, plug in pada kabel ethernet, hubungkan disk SSD dan tambah tenaga perangkat untuk mengubah Raspberry Pi 4 menjadi node penuh Ethereum 1.0 atau node penuh Ethereum 2.0 (rantai suar / validator)._
