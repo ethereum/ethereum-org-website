@@ -1,5 +1,9 @@
 [
   {
+    "fromPath": "/discord",
+    "toPath": "https://discord.gg/rZz26QWfCg"
+  },
+  {
     "fromPath": "/pdfs/*",
     "toPath": "/en/"
   },
