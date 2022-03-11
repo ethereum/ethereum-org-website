@@ -7,7 +7,7 @@ import Link from "./Link"
 import Translation from "./Translation"
 
 // Data
-import rollups from "../data/layer-2.json"
+import rollups from "../data/layer-2/layer-2.json"
 
 // Styles
 const H4 = styled.h4`

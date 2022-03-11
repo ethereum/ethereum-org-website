@@ -1,0 +1,22 @@
+{
+  "Binance": {
+    "supports_withdrawals": ["arbitrum"],
+    "supports_deposits": ["arbitrum"]
+  },
+  "crypto.com": {
+    "supports_withdrawals": ["arbitrum"],
+    "supports_deposits": ["arbitrum"]
+  },
+  "OKX": {
+    "supports_withdrawals": ["arbitrum"],
+    "supports_deposits": ["arbitrum"]
+  },
+  "FTX": {
+    "supports_withdrawals": ["arbitrum"],
+    "supports_deposits": ["arbitrum"]
+  },
+  "Huobi": {
+    "supports_withdrawals": ["arbitrum"],
+    "supports_deposits": ["arbitrum"]
+  }
+}

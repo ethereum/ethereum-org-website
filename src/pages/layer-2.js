@@ -9,7 +9,8 @@ import { useIntl } from "gatsby-plugin-intl"
 import privacyGlyph from "../assets/run-a-node/privacy-glyph.svg"
 
 // Data
-import layer2Data from "../data/layer-2.json"
+import cexSupport from "../data/layer-2/cex-layer-2-support.json"
+import layer2Data from "../data/layer-2/layer-2.json"
 import validiumData from "../data/validium.json"
 
 // Components
@@ -291,72 +292,49 @@ const Layer2Page = ({ data }) => {
             </p>
           </Flex50>
         </TwoColumnContent>
-        <h3>DYOR! Risks of layer 2</h3>
-        <p>
-          Because layer 2 chains inherit security from Ethereum, in an ideal
-          world, they are as safe as L1 Ethereum. However, many of the projects
-          are still young and somewhat experimental. After years of R&D, many of
-          the L2 technologies that will scale Ethereum went live in 2021. This
-          is not to say these L2s are not secure, only that no layer 2 is as
-          battle tested as Ethereum Mainnet. Always do your own research and
-          decide if you're comfortable with any risks involved.
-        </p>
-        <p>
-          For more information on the technology, risks and trust assumptions of
-          layer 2s, we recommend checking out L2BEAT, which provides a
-          comprehensive risk assessment framework of each project.
-        </p>
-        <p>
-          <Link to="https://l2beat.com">L2BEAT</Link>
-        </p>
-      </Content>
-
-      <Content>
         <InfoBanner isWarning={true}>
-          <h2>A note on alt L1s, sidechains, and validiums</h2>
+          <h2>DYOR! Risks of layer 2</h2>
           <p>
-            Many alternative layer 1s have higher throughput and lower
-            transaction fees than Ethereum. These alt L1s have had to sacrifice
-            on security or decentralization in order to achieve higher
-            transactions per second and lower fees. The Ethereum ecosystem is
-            firmly aligned that layer 2 scaling is the only way to solve the
-            scalability trilemma and remain decentralized and secure.
+            Because layer 2 chains inherit security from Ethereum, in an ideal
+            world, they are as safe as L1 Ethereum. However, many of the
+            projects are still young and somewhat experimental. After years of
+            R&D, many of the L2 technologies that will scale Ethereum went live
+            in 2021. This is not to say these L2s are not secure, only that no
+            layer 2 is as battle tested as Ethereum Mainnet. Always do your own
+            research and decide if you're comfortable with any risks involved.
           </p>
           <p>
-            Sidechains and validiums are blockchains that allow assets from one
-            blockchain to be bridged over and used on another blockchain.
-            Sidechains and validiums run in parallel with the main chian, and
-            interact with the main chain through bridges, but they do not derive
-            their security or data availability from the main chain. They scale
-            similarly to layer 2's, but have different trust assumptions. They
-            offer lower transaction fees, and higher transaction throughput.
-            More on{" "}
-            <Link to="/developers/docs/scaling/sidechains/">sidechains</Link>{" "}
-            and <Link to="/developers/docs/scaling/validium/">validiums</Link>.
+            For more information on the technology, risks and trust assumptions
+            of layer 2s, we recommend checking out L2BEAT, which provides a
+            comprehensive risk assessment framework of each project.
+          </p>
+          <p>
+            <Link to="https://l2beat.com">L2BEAT</Link>
           </p>
         </InfoBanner>
       </Content>
 
       <Content>
-        <h2>How to get onto a layer 2</h2>
-        <TwoColumnContent>
-          <Flex50>
-            <h4>Funds in your wallet?</h4>
-            <p>
-              If you've already got your ETH in your wallet, you'll need to use
-              a bridge to move it from Ethereum mainnet to a layer 2.{" "}
-              <Link to="/bridges/">More on bridges</Link>.
-            </p>
-          </Flex50>
-          <Flex50>
-            <h4>Funds on an exchange?</h4>
-            <p>
-              Some centralized exchanges now to offer direct withdrawals to
-              layer 2s.
-            </p>
-            {/* TODO: create cex/bridging component */}
-          </Flex50>
-        </TwoColumnContent>
+        <h2>A note on alt L1s, sidechains, and validiums</h2>
+        <p>
+          Many alternative layer 1s have higher throughput and lower transaction
+          fees than Ethereum. These alt L1s have had to sacrifice on security or
+          decentralization in order to achieve higher transactions per second
+          and lower fees. The Ethereum ecosystem is firmly aligned that layer 2
+          scaling is the only way to solve the scalability trilemma and remain
+          decentralized and secure.
+        </p>
+        <p>
+          Sidechains and validiums are blockchains that allow assets from one
+          blockchain to be bridged over and used on another blockchain.
+          Sidechains and validiums run in parallel with the main chian, and
+          interact with the main chain through bridges, but they do not derive
+          their security or data availability from the main chain. They scale
+          similarly to layer 2's, but have different trust assumptions. They
+          offer lower transaction fees, and higher transaction throughput. More
+          on <Link to="/developers/docs/scaling/sidechains/">sidechains</Link>{" "}
+          and <Link to="/developers/docs/scaling/validium/">validiums</Link>.
+        </p>
       </Content>
 
       <Content>
@@ -413,6 +391,30 @@ const Layer2Page = ({ data }) => {
       </Content>
 
       <Content>
+        <InfoBanner>
+          <h2>How to get onto a layer 2</h2>
+          <TwoColumnContent>
+            <Flex50>
+              <h4>Funds in your wallet?</h4>
+              <p>
+                If you've already got your ETH in your wallet, you'll need to
+                use a bridge to move it from Ethereum mainnet to a layer 2.{" "}
+                <Link to="/bridges/">More on bridges</Link>.
+              </p>
+            </Flex50>
+            <Flex50>
+              <h4>Funds on an exchange?</h4>
+              <p>
+                Some centralized exchanges now to offer direct withdrawals to
+                layer 2s.
+              </p>
+              {/* TODO: create cex/bridging component */}
+            </Flex50>
+          </TwoColumnContent>
+        </InfoBanner>
+      </Content>
+
+      <Content>
         <h2>Tools and tips to be effective on layer 2</h2>
         <div>
           <h3>L2BEAT</h3>
@@ -447,6 +449,17 @@ const Layer2Page = ({ data }) => {
             recommend using a wallet manager to track your assets as you enter
             layer 2.
           </p>
+          <ul>
+            <li>
+              <Link to="https://zapper.fi/">Zapper</Link>
+            </li>
+            <li>
+              <Link to="https://zerion.io/">Zerion</Link>
+            </li>
+            <li>
+              <Link to="https://debank.com/">DeBank</Link>
+            </li>
+          </ul>
         </div>
         <div>
           <h3>Dapp portals</h3>
