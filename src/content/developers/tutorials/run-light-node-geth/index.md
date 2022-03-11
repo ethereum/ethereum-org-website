@@ -1,6 +1,6 @@
 ---
 title: How to run a light node with Geth
-description: How to download, install and run Geth. Covering syncmodes, the Javascript console, and more
+description: How to download, install and run Geth. Covering syncmodes, the JavaScript console, and more
 author: "Brian Gu"
 tags: ["clients", "geth", "nodes"]
 skill: intermediate
@@ -122,11 +122,11 @@ The path following `“database=”` should tell you where the blockchain data i
 
 It’s worth emphasizing here that, at the lowest level, this is where the blockchain lives. The full contents of the blockchain and the EVM state are stored on every full node in the Ethereum network, in directories that look very much like the one on your computer.
 
-## Attaching to the Javascript Console {#attaching-to-the-javascript-console}
+## Attaching to the JavaScript Console {#attaching-to-the-javascript-console}
 
-Running a node isn’t useful unless we can actually interact with it. For example, we might want to broadcast transaction requests or look up EVM/blockchain data (such as an account balance). Geth has a built-in Javascript console and a Javascript API called [web3js](https://github.com/ethereum/web3.js/) that you can use to interact with your node.
+Running a node isn’t useful unless we can actually interact with it. For example, we might want to broadcast transaction requests or look up EVM/blockchain data (such as an account balance). Geth has a built-in JavaScript console and a JavaScript API called [web3js](https://github.com/ethereum/web3.js/) that you can use to interact with your node.
 
-To use the Javascript console:
+To use the JavaScript console:
 
 1. Start running a node in a terminal window (either full and light node are OK).
 2. Look for a message that looks like:
@@ -141,11 +141,11 @@ This message should be logged before block synchronization starts.
 4. Open a new terminal window or tab, and run the following command:
    `$ geth attach [your IPC endpoint path]`
 
-This should open the Javascript console. We can now use web3js to interact with the node.
+This should open the JavaScript console. We can now use web3js to interact with the node.
 
 [Full web3js documentation](http://web3js.readthedocs.io/)
 
-Here are a few helpful objects exposed by this API. You access these by typing them into the Javascript console.
+Here are a few helpful objects exposed by this API. You access these by typing them into the JavaScript console.
 
 - `eth.syncing` returns an object if your node has started but not completed block synchronization, or the value `false` if it has either completed synchronization or has not started. If the node is still synchronizing, `eth.syncing` will tell you the latest block number whose data you’ve received, as well as the total number of blocks in the current blockchain.
 - `net.peerCount` returns the number of peers you’re connected to. If this is 0, you’ll probably have to either wait a few minutes or else start Googling for solutions (could be a firewall or network issue, or something else).
