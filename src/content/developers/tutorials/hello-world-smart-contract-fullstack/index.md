@@ -22,7 +22,7 @@ sidebar: true
 published: 2021-10-25
 ---
 
-This guide is for you if you are new to blockchain development and don't know where to start or how to deploy and interact with smart contracts. We will walk through creating and deploying a simple, smart contract on the Ropsten test network using [Metamask](https://metamask.io), [Solidity](https://docs.soliditylang.org/en/v0.8.0/), [Hardhat](https://hardhat.org), and [Alchemy](https://alchemyapi.io/eth).
+This guide is for you if you are new to blockchain development and don't know where to start or how to deploy and interact with smart contracts. We will walk through creating and deploying a simple, smart contract on the Ropsten test network using [MetaMask](https://metamask.io), [Solidity](https://docs.soliditylang.org/en/v0.8.0/), [Hardhat](https://hardhat.org), and [Alchemy](https://alchemyapi.io/eth).
 
 You'll need an Alchemy account to complete this tutorial. [Sign up for a free account](https://www.alchemy.com/).
 
@@ -52,9 +52,9 @@ Click **Create app**. Your app will appear in the table below.
 
 ### Create an Ethereum account {#create-an-ethereum-account}
 
-You need an Ethereum account to send and receive transactions. We'll use Metamask, a virtual wallet in the browser that lets users manage their Ethereum account address.
+You need an Ethereum account to send and receive transactions. We'll use MetaMask, a virtual wallet in the browser that lets users manage their Ethereum account address.
 
-You can download and create a Metamask account for free [here](https://metamask.io/download.html). When you are creating an account, or if you already have an account, make sure to switch over to the “Ropsten Test Network” in the upper right (so that we’re not dealing with real money).
+You can download and create a MetaMask account for free [here](https://metamask.io/download.html). When you are creating an account, or if you already have an account, make sure to switch over to the “Ropsten Test Network” in the upper right (so that we’re not dealing with real money).
 
 ![](./metamask-ropsten-example.png)
 
@@ -69,7 +69,7 @@ _Note: due to network congestion, this might take a while._
 
 To double-check the ETH is in your wallet, let’s make an [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) request using [Alchemy’s composer tool](https://composer.alchemyapi.io/?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). This will return the amount of ETH in our wallet. To learn more check out [Alchemy's short tutorial on how to use the composer tool](https://youtu.be/r6sjRxBZJuU).
 
-Enter you input your Metamask account address and click **Send Request**. You will see a response that looks like the code snippet below.
+Enter you input your MetaMask account address and click **Send Request**. You will see a response that looks like the code snippet below.
 
 ```json
 { "jsonrpc": "2.0", "id": 0, "result": "0x2B5E3AF16B1880000" }
@@ -223,9 +223,9 @@ contract HelloWorld {
 
 This is a basic smart contract that stores a message upon creation. It can be updated by calling the `update` function.
 
-### Step 11: Connect Metamask & Alchemy to your project {#step-11-connect-metamask-&-alchemy-to-your-project}
+### Step 11: Connect MetaMask & Alchemy to your project {#step-11-connect-metamask-&-alchemy-to-your-project}
 
-We’ve created a Metamask wallet, Alchemy account, and written our smart contract, now it’s time to connect the three.
+We’ve created a MetaMask wallet, Alchemy account, and written our smart contract, now it’s time to connect the three.
 
 Every transaction sent from your wallet requires a signature using your unique private key. To provide our program with this permission, we can safely store our private key in an environment file. We will also store an API key for Alchemy here.
 
@@ -237,7 +237,7 @@ First, install the dotenv package in your project directory:
 npm install dotenv --save
 ```
 
-Then, create a `.env` file in the root directory of the project. Add your Metamask private key and HTTP Alchemy API URL to it.
+Then, create a `.env` file in the root directory of the project. Add your MetaMask private key and HTTP Alchemy API URL to it.
 
 Your environment file must be named `.env` or it won't be recognized as an environment file.
 
@@ -367,7 +367,7 @@ If we go to the [Ropsten etherscan](https://ropsten.etherscan.io) and search for
 
 ![](./etherscan-contract.png)
 
-The `From` address should match your Metamask account address and the `To` address will say **Contract Creation**. If we click into the transaction we’ll see our contract address in the `To` field.
+The `From` address should match your MetaMask account address and the `To` address will say **Contract Creation**. If we click into the transaction we’ll see our contract address in the `To` field.
 
 ![](./etherscan-transaction.png)
 
@@ -682,9 +682,9 @@ When you navigate to the link provided in your terminal, you should be able to s
 
 By the end of this tutorial, you'll know how to:
 
-- Connect a Metamask wallet to your dapp
+- Connect a MetaMask wallet to your dapp
 - Read data from your smart contract using the [Alchemy Web3](https://docs.alchemy.com/alchemy/documentation/alchemy-web3) API
-- Sign Ethereum transactions using Metamask
+- Sign Ethereum transactions using MetaMask
 
 For this dapp, we'll be using [React](https://reactjs.org/) as our frontend framework; however, it's important to note that we won't be spending much time breaking down its fundamentals, as we'll mostly be focusing on bringing Web3 functionality to our project.
 
@@ -798,8 +798,8 @@ const onUpdatePressed = async () => {
 
 - [`useEffect`](https://reactjs.org/docs/hooks-effect.html)- this is a React hook that is called after your component is rendered. Because it has an empty array `[]` prop passed into it \(see line 4\), it will only be called on the component's _first_ render. Here we'll load the current message stored in our smart contract, call our smart contract and wallet listeners, and update our UI to reflect whether a wallet is already connected.
 - `addSmartContractListener`- this function sets up a listener that will watch for our HelloWorld contract's `UpdatedMessages` event and update our UI when the message is changed in our smart contract.
-- `addWalletListener`- this function sets up a listener that detects changes in the user's Metamask wallet state, such as when the user disconnects their wallet or switches addresses.
-- `connectWalletPressed`- this function will be called to connect the user's Metamask wallet to our dapp.
+- `addWalletListener`- this function sets up a listener that detects changes in the user's MetaMask wallet state, such as when the user disconnects their wallet or switches addresses.
+- `connectWalletPressed`- this function will be called to connect the user's MetaMask wallet to our dapp.
 - `onUpdatePressed` - this function will be called when the user wants to update the message stored in the smart contract.
 
 Near the end of this file, we have the UI of our component.
@@ -885,9 +885,9 @@ You'll notice at the top of the file that we've commented out the `helloWorldCon
 The four unimplemented functions after our `helloWorldContract` object do the following:
 
 - `loadCurrentMessage` - this function handles the logic of loading the current message stored in the smart contract. It will make a _read_ call to the Hello World smart contract using the [Alchemy Web3 API](https://github.com/alchemyplatform/alchemy-web3).
-- `connectWallet` - this function will connect the user's Metamask to our dApp.
+- `connectWallet` - this function will connect the user's MetaMask to our dApp.
 - `getCurrentWalletConnected` - this function will check if an Ethereum account is already connected to our dApp on page load and update our UI accordingly.
-- `updateMessage` - this function will update the message stored in the smart contract. It will make a _write_ call to the Hello World smart contract, so the user's Metamask wallet will have to sign an Ethereum transaction to update the message.
+- `updateMessage` - this function will update the message stored in the smart contract. It will make a _write_ call to the Hello World smart contract, so the user's MetaMask wallet will have to sign an Ethereum transaction to update the message.
 
 Now that we understand what we're working with, let's figure out how to read from our smart contract!
 
@@ -1115,25 +1115,25 @@ useEffect(async () => {
 
 Now that we're able to read from our smart contract, it would be great to figure out how to write to it too! However, to write to our dApp, we must first have an Ethereum wallet connected to it.
 
-So, next we'll tackle setting up our Ethereum wallet \(Metamask\) and then connecting it to our dApp!
+So, next we'll tackle setting up our Ethereum wallet \(MetaMask\) and then connecting it to our dApp!
 
 ### Step 4: Set up your Ethereum wallet {#step-4-set-up-your-ethereum-wallet}
 
-To write anything to the Ethereum chain, users must sign transactions using their virtual wallet's private keys. For this tutorial, we’ll use [Metamask](https://metamask.io/), a virtual wallet in the browser used to manage your Ethereum account address, as it makes this transaction signing super easy for the end-user.
+To write anything to the Ethereum chain, users must sign transactions using their virtual wallet's private keys. For this tutorial, we’ll use [MetaMask](https://metamask.io/), a virtual wallet in the browser used to manage your Ethereum account address, as it makes this transaction signing super easy for the end-user.
 
 If you want to understand more about how transactions on Ethereum work, check out [this page](/developers/docs/transactions/) from the Ethereum foundation.
 
-#### Download Metamask {#download-metamask}
+#### Download MetaMask {#download-metamask}
 
-You can download and create a Metamask account for free [here](https://metamask.io/download.html). When you are creating an account, or if you already have an account, make sure to switch over to the “Ropsten Test Network” in the upper right \(so that we’re not dealing with real money\).
+You can download and create a MetaMask account for free [here](https://metamask.io/download.html). When you are creating an account, or if you already have an account, make sure to switch over to the “Ropsten Test Network” in the upper right \(so that we’re not dealing with real money\).
 
 #### Add ether from a Faucet {#add-ether-from-a-faucet}
 
-To sign a transaction on the Ethereum blockchain, we’ll need some fake Eth. To get Eth you can go to the [FaucETH](https://fauceth.komputing.org) and enter your Ropsten account address, click “Request funds”, then select “Ethereum Testnet Ropsten” in the dropdown and finally click “Request funds” button again. You should see Eth in your Metamask account soon after!
+To sign a transaction on the Ethereum blockchain, we’ll need some fake Eth. To get Eth you can go to the [FaucETH](https://fauceth.komputing.org) and enter your Ropsten account address, click “Request funds”, then select “Ethereum Testnet Ropsten” in the dropdown and finally click “Request funds” button again. You should see Eth in your MetaMask account soon after!
 
 #### Check your Balance {#check-your-balance}
 
-To double check our balance is there, let’s make an [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) request using [Alchemy’s composer tool](https://composer.alchemyapi.io/?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). This will return the amount of Eth in our wallet. After you input your Metamask account address and click “Send Request”, you should see a response like this:
+To double check our balance is there, let’s make an [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) request using [Alchemy’s composer tool](https://composer.alchemyapi.io/?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). This will return the amount of Eth in our wallet. After you input your MetaMask account address and click “Send Request”, you should see a response like this:
 
 ```text
 {"jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000"}
@@ -1143,9 +1143,9 @@ To double check our balance is there, let’s make an [eth_getBalance](https://d
 
 Phew! Our fake money is all there! 🤑
 
-### Step 5: Connect Metamask to your UI {#step-5-connect-metamask-to-your-UI}
+### Step 5: Connect MetaMask to your UI {#step-5-connect-metamask-to-your-UI}
 
-Now that our Metamask wallet is set up, let's connect our dApp to it!
+Now that our MetaMask wallet is set up, let's connect our dApp to it!
 
 #### The `connectWallet` function {#the-connectWallet-function}
 
@@ -1181,7 +1181,7 @@ export const connectWallet = async () => {
           <p>
             {" "}
             🦊 <a target="_blank" href={`https://metamask.io/download.html`}>
-              You must install Metamask, a virtual Ethereum wallet, in your
+              You must install MetaMask, a virtual Ethereum wallet, in your
               browser.
             </a>
           </p>
@@ -1196,13 +1196,13 @@ So what does this giant block of code do exactly?
 
 Well, first, it checks if it `window.ethereum` is enabled in your browser.
 
-`window.ethereum` is a global API injected by Metamask and other wallet providers that allows websites to request users' Ethereum accounts. If approved, it can read data from the blockchains the user is connected to, and suggest that the user sign messages and transactions . Check out the [Metamask docs](https://docs.metamask.io/guide/ethereum-provider.html#table-of-contents) for more info!
+`window.ethereum` is a global API injected by MetaMask and other wallet providers that allows websites to request users' Ethereum accounts. If approved, it can read data from the blockchains the user is connected to, and suggest that the user sign messages and transactions . Check out the [MetaMask docs](https://docs.metamask.io/guide/ethereum-provider.html#table-of-contents) for more info!
 
-If `window.ethereum` _is not_ present, then that means Metamask is not installed. This results in a JSON object being returned, where `address` returned is an empty string, and the `status` JSX object relays that the user must install Metamask.
+If `window.ethereum` _is not_ present, then that means MetaMask is not installed. This results in a JSON object being returned, where `address` returned is an empty string, and the `status` JSX object relays that the user must install MetaMask.
 
 Now if `window.ethereum` _is_ present, then that's when things get interesting.
 
-Using a try/catch loop, we'll try to connect to Metamask by calling[`window.ethereum.request({ method: "eth_requestAccounts" });`](https://docs.metamask.io/guide/rpc-api.html#eth-requestaccounts). Calling this function will open up Metamask in the browser, whereby the user will be prompted to connect their wallet to your dApp.
+Using a try/catch loop, we'll try to connect to MetaMask by calling[`window.ethereum.request({ method: "eth_requestAccounts" });`](https://docs.metamask.io/guide/rpc-api.html#eth-requestaccounts). Calling this function will open up MetaMask in the browser, whereby the user will be prompted to connect their wallet to your dApp.
 
 - If the user chooses to connect, `method: "eth_requestAccounts"` will return an array that contains all of the user's account addresses that connected to the dApp. Altogether, our `connectWallet` function will return a JSON object that contains the _first_ `address` in this array \(see line 9\) and a `status` message that prompts the user to write a message to the smart contract.
 - If the user rejects the connection, then the JSON object will contain an empty string for the `address` returned and a `status` message that reflects that the user rejected the connection.
@@ -1231,11 +1231,11 @@ Now, let's save both files \(`HelloWorld.js` and `interact.js`\) and test out ou
 
 Open your browser on the [http://localhost:3000/](http://localhost:3000/) page, and press the "Connect Wallet" button on the top right of the page.
 
-If you have Metamask installed, you should be prompted to connect your wallet to your dApp. Accept the invitation to connect.
+If you have MetaMask installed, you should be prompted to connect your wallet to your dApp. Accept the invitation to connect.
 
 You should see that the wallet button now reflects that your address is connected! Yasssss 🔥
 
-Next, try refreshing the page... this is strange. Our wallet button is prompting us to connect Metamask, even though it is already connected...
+Next, try refreshing the page... this is strange. Our wallet button is prompting us to connect MetaMask, even though it is already connected...
 
 However, have no fear! We easily can address that (get it?) by implementing `getCurrentWalletConnected`, which will check if an address is already connected to our dApp and update our UI accordingly!
 
@@ -1260,7 +1260,7 @@ export const getCurrentWalletConnected = async () => {
       } else {
         return {
           address: "",
-          status: "🦊 Connect to Metamask using the top right button.",
+          status: "🦊 Connect to MetaMask using the top right button.",
         }
       }
     } catch (err) {
@@ -1277,7 +1277,7 @@ export const getCurrentWalletConnected = async () => {
           <p>
             {" "}
             🦊 <a target="_blank" href={`https://metamask.io/download.html`}>
-              You must install Metamask, a virtual Ethereum wallet, in your
+              You must install MetaMask, a virtual Ethereum wallet, in your
               browser.
             </a>
           </p>
@@ -1290,7 +1290,7 @@ export const getCurrentWalletConnected = async () => {
 
 This code is _very_ similar to the `connectWallet` function we just wrote in the previous step.
 
-The main difference is that instead of calling the method `eth_requestAccounts`, which opens Metamask for the user to connect their wallet, here we call the method `eth_accounts`, which simply returns an array containing the Metamask addresses currently connected to our dApp.
+The main difference is that instead of calling the method `eth_requestAccounts`, which opens MetaMask for the user to connect their wallet, here we call the method `eth_accounts`, which simply returns an array containing the MetaMask addresses currently connected to our dApp.
 
 To see this function in action, let's call it in our `useEffect` function of our `HelloWorld.js` component:
 
@@ -1331,7 +1331,7 @@ function addWalletListener() {
         setStatus("👆🏽 Write a message in the text-field above.")
       } else {
         setWallet("")
-        setStatus("🦊 Connect to Metamask using the top right button.")
+        setStatus("🦊 Connect to MetaMask using the top right button.")
       }
     })
   } else {
@@ -1339,7 +1339,7 @@ function addWalletListener() {
       <p>
         {" "}
         🦊 <a target="_blank" href={`https://metamask.io/download.html`}>
-          You must install Metamask, a virtual Ethereum wallet, in your browser.
+          You must install MetaMask, a virtual Ethereum wallet, in your browser.
         </a>
       </p>
     )
@@ -1349,9 +1349,9 @@ function addWalletListener() {
 
 I bet you don't even need our help to understand what's going on here at this point, but for thoroughness purposes, let's quickly break it down:
 
-- First, our function checks if `window.ethereum` is enabled \(i.e. Metamask is installed\).
-  - If it's not, we simply set our `status` state variable to a JSX string that prompts the user to install Metamask.
-  - If it is enabled, we set up the listener `window.ethereum.on("accountsChanged")` on line 3 that listens for state changes in the Metamask wallet, which include when the user connects an additional account to the dApp, switches accounts, or disconnects an account. If there is at least one account connected, the `walletAddress` state variable is updated as the first account in the `accounts` array returned by the listener. Otherwise, `walletAddress` is set as an empty string.
+- First, our function checks if `window.ethereum` is enabled \(i.e. MetaMask is installed\).
+  - If it's not, we simply set our `status` state variable to a JSX string that prompts the user to install MetaMask.
+  - If it is enabled, we set up the listener `window.ethereum.on("accountsChanged")` on line 3 that listens for state changes in the MetaMask wallet, which include when the user connects an additional account to the dApp, switches accounts, or disconnects an account. If there is at least one account connected, the `walletAddress` state variable is updated as the first account in the `accounts` array returned by the listener. Otherwise, `walletAddress` is set as an empty string.
 
 Last but not least, we must call it in our `useEffect` function:
 
@@ -1378,7 +1378,7 @@ And that's it! We've successfully completed programming all of our wallet functi
 Alrighty fam, we've arrived at the home stretch! In the `updateMessage` of your `interact.js` file, we're going to do the following:
 
 1. Make sure the message we wish to publish in our smart contact is valid
-2. Sign our transaction using Metamask
+2. Sign our transaction using MetaMask
 3. Call this function from our `HelloWorld.js` frontend component
 
 This won't take very long; let's finish this dApp!
@@ -1387,7 +1387,7 @@ This won't take very long; let's finish this dApp!
 
 Naturally, it makes sense to have some sort of input error handling at the start of the function.
 
-We'll want our function to return early if there is no Metamask extension installed, there is no wallet connected \(i.e. the `address` passed in is an empty string\), or the `message` is an empty string. Let's add the following error handling to `updateMessage`:
+We'll want our function to return early if there is no MetaMask extension installed, there is no wallet connected \(i.e. the `address` passed in is an empty string\), or the `message` is an empty string. Let's add the following error handling to `updateMessage`:
 
 ```javascript
 // interact.js
@@ -1396,7 +1396,7 @@ export const updateMessage = async (address, message) => {
   if (!window.ethereum || address === null) {
     return {
       status:
-        "💡 Connect your Metamask wallet to update the message on the blockchain.",
+        "💡 Connect your MetaMask wallet to update the message on the blockchain.",
     }
   }
 
@@ -1408,7 +1408,7 @@ export const updateMessage = async (address, message) => {
 }
 ```
 
-Now that it have proper input error handling, it's time to sign the transaction via Metamask!
+Now that it have proper input error handling, it's time to sign the transaction via MetaMask!
 
 #### Signing our transaction {#signing-our-transaction}
 
@@ -1456,9 +1456,9 @@ Let's breakdown what's happening. First, we set up our transactions parameters, 
 - `from` specifies the signer of the transaction, the `address` variable we passed into our function
 - `data` contains the call to our Hello World smart contract's `update` method, receiving our `message` string variable as input
 
-Then, we make an await call, `window.ethereum.request`, where we ask Metamask to sign the transaction. Notice, on lines 11 and 12, we're specifying our eth method, `eth_sendTransaction`and passing in our `transactionParameters`.
+Then, we make an await call, `window.ethereum.request`, where we ask MetaMask to sign the transaction. Notice, on lines 11 and 12, we're specifying our eth method, `eth_sendTransaction`and passing in our `transactionParameters`.
 
-At this point, Metamask will open up in the browser, and prompt the user to sign or reject the transaction.
+At this point, MetaMask will open up in the browser, and prompt the user to sign or reject the transaction.
 
 - If the transaction is successful, the function will return a JSON object where the `status` JSX string prompts the user to check out Etherscan for more information about their transaction.
 - If the transaction fails, the function will return a JSON object where the `status` string relays the error message.
@@ -1473,7 +1473,7 @@ export const updateMessage = async (address, message) => {
   if (!window.ethereum || address === null) {
     return {
       status:
-        "💡 Connect your Metamask wallet to update the message on the blockchain.",
+        "💡 Connect your MetaMask wallet to update the message on the blockchain.",
     }
   }
 
@@ -1540,9 +1540,9 @@ Go ahead and test out the **Update** button!
 
 Wooooo, you made it to the end of the tutorial! To recap, you learned how to:
 
-- Connect a Metamask wallet to your dApp project
+- Connect a MetaMask wallet to your dApp project
 - Read data from your smart contract using the [Alchemy Web3](https://docs.alchemy.com/alchemy/documentation/alchemy-web3) API
-- Sign Ethereum transactions using Metamask
+- Sign Ethereum transactions using MetaMask
 
 Now you're fully equipped to apply the skills from this tutorial to build out your own custom dApp project! As always, if you have any questions, don't hesitate to reach out to us for help in the [Alchemy Discord](https://discord.gg/gWuC7zB). 🧙‍♂️
 

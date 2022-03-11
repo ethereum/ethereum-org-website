@@ -29,10 +29,10 @@ Menggunakan penyedia, pustaka ini memungkinkan Anda terhubung ke Ethereum dan me
 
 ```js
 // Web3Provider membungkus provider Web3 standar, yaitu
-// apa yang disuntikkan Metamask sebagai window.ethereum ke setiap halaman
+// apa yang disuntikkan MetaMask sebagai window.ethereum ke setiap halaman
 const provider = new ethers.providers.Web3Provider(window.ethereum)
 
-// Plugin Metamask juga memungkinkan penandatanganan transaksi ke
+// Plugin MetaMask juga memungkinkan penandatanganan transaksi ke
 // kirim ether dan bayar untuk mengubah state di dalam blockchain.
 // Untuk ini, kita membutuhkan penandatangan akun...
 const signer = provider.getSigner()

@@ -28,7 +28,7 @@ Korzystając z dostawców, biblioteki te pozwalają Ci połączyć się z Ethere
 **Przykładowy Ether**
 
 ```js
-// Web3Provider otacza standardowego dostawcę Web3, którym jest // Metamask co wstrzykuje jako window.ethereum do każdej strony const provider = nowy ethers.providers.Web3Provider(window.ethereum) // Wtyczka Metamask umożliwia również podpisywanie transakcji do // wyślij ether i zapłać, aby zmienić stan w łańcuchu bloków.
+// Web3Provider otacza standardowego dostawcę Web3, którym jest // MetaMask co wstrzykuje jako window.ethereum do każdej strony const provider = nowy ethers.providers.Web3Provider(window.ethereum) // Wtyczka MetaMask umożliwia również podpisywanie transakcji do // wyślij ether i zapłać, aby zmienić stan w łańcuchu bloków.
 // W tym celu potrzebujemy podpisującego konto...
 const signer = provider.getSigner()
 ```

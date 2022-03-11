@@ -29,10 +29,10 @@ Mediante proveedores, estas bibliotecas te permiten conectarte a Ethereum y leer
 
 ```js
 // Un Web3Provider enlaza un proveedor estándar Web3, en el
-// que Metamask se inyecta como window.ethereum en cada página
+// que MetaMask se inyecta como window.ethereum en cada página
 const provider = new ethers.providers.Web3Provider(window.ethereum)
 
-// El plugin Metamask también permite firmar transacciones para
+// El plugin MetaMask también permite firmar transacciones para
 // enviar Ether y pagar el cambio de estado dentro de la blockchain.
 // Para esto, necesitamos al titular de la cuenta...
 const signer = provider.getSigner()

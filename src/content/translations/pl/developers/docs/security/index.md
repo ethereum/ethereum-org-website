@@ -77,7 +77,7 @@ Aby zezwolić użytkownikowi na wycofanie ETH, który wcześniej przechowywał w
 2. Wysyła mu kwotę tego salda w ETH
 3. Resetuje saldo do do 0, więc nie może ponownie wypłacić swojego salda.
 
-W przypadku wywołania ze zwykłego konta (takiego jak własne konto Metamask), działa to zgodnie z oczekiwaniami: msg.sender.call.value() po prostu wysyła ETH z twojego konta. Inteligentne kontrakty mogą jednak również wywoływać połączenia. Jeśli niestandardowy, złośliwy kontrakt jest tym, który wywołuje `withdraw()`, msg.sender.call.value() nie tylko wyśle `amount` w ETH, ale będzie także niejawnie wywoływać kontrakt, aby rozpocząć wykonywanie kodu. Wyobraź sobie, że ten złośliwy kontrakt:
+W przypadku wywołania ze zwykłego konta (takiego jak własne konto MetaMask), działa to zgodnie z oczekiwaniami: msg.sender.call.value() po prostu wysyła ETH z twojego konta. Inteligentne kontrakty mogą jednak również wywoływać połączenia. Jeśli niestandardowy, złośliwy kontrakt jest tym, który wywołuje `withdraw()`, msg.sender.call.value() nie tylko wyśle `amount` w ETH, ale będzie także niejawnie wywoływać kontrakt, aby rozpocząć wykonywanie kodu. Wyobraź sobie, że ten złośliwy kontrakt:
 
 ```solidity
 contract Attacker {

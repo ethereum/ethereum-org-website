@@ -23,16 +23,16 @@ Les bibliothèques suppriment une grande partie de la complexité de l'interacti
 
 ### Se connecter à des nœud Ethereum {#connect-to-ethereum-nodes}
 
-En utilisant des fournisseurs, les bibliothèques vous permettent de vous connecter à Ethereum et de lire ses données, que ce soit sur JSON-RPC, INFURA, Etherscan, Alchemy ou Metamask.
+En utilisant des fournisseurs, les bibliothèques vous permettent de vous connecter à Ethereum et de lire ses données, que ce soit sur JSON-RPC, INFURA, Etherscan, Alchemy ou MetaMask.
 
 **Exemple Ether**
 
 ```js
 // Un Web3Provider enveloppe un fournisseur Web3 standard, qui est
-// ce que Metamask injecte comme window.ethereum dans chaque page.
+// ce que MetaMask injecte comme window.ethereum dans chaque page.
 const provider = new ethers.providers.Web3Provider(window.ethereum)
 
-// Le plugin Metamask permet également de signer des transactions pour
+// Le plugin MetaMask permet également de signer des transactions pour
 // envoyer de l'ether et payer pour changer l'état de la blockchain.
 // Pour cela, nous avons besoin du signataire du compte...
 const signer = provider.getSigner()
