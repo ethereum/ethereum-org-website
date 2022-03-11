@@ -152,7 +152,7 @@ Once set up you'll be able to:
 
 ### Interact with smart contract functions {#interact-with-smart-contract-functions}
 
-Javascript client libraries allow your application to call smart contract functions by reading the Application Binary Interface (ABI) of a compiled contract.
+JavaScript client libraries allow your application to call smart contract functions by reading the Application Binary Interface (ABI) of a compiled contract.
 
 The ABI essentially explains the contract's functions in a JSON format and allows you to use it like a normal JavaScript object.
 
