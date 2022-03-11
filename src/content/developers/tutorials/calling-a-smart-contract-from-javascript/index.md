@@ -2,7 +2,7 @@
 title: Calling a smart contract from JavaScript
 description: How to call a smart contract function from JavaScript using a Dai token example
 author: jdourlens
-tags: ["transactions", "frontend", "javascript", "web3.js"]
+tags: ["transactions", "frontend", "JavaScript", "web3.js"]
 skill: beginner
 lang: en
 sidebar: true
