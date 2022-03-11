@@ -30,6 +30,7 @@ Multiple projects provide implementations of sidechains that you can integrate i
 - [Polygon PoS](https://polygon.technology/solutions/polygon-pos)
 - [Skale](https://skale.network/)
 - [Gnosis Chain (formerly xDai)](https://www.xdaichain.com/)
+- [Meter](https://www.meter.io/)
 
 ## Further reading {#further-reading}
 
