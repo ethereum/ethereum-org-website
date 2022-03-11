@@ -33,7 +33,7 @@ Ha ez az első próbálkozásod az Ethereum fejlesztéssel kapcsolatban, akkor a
 - [Bevezetés a stack-be](/developers/docs/ethereum-stack/) _– Áttekintő az Ethereum/web3 stack-ről_
 - [Okosszerződések](/developers/docs/smart-contracts/) _– Programok, melyek egy Ethereum címen élnek és funkciókat futtatnak, melyeket tranzakciók váltanak ki_
 - [Programozási nyelvek](/developers/docs/programming-languages/) _– Hogyan kezdj az Ethereum fejlesztéshez olyan nyelvekkel, melyeket már ismerhetsz_
-- [Javascript kliens könyvtárak](/developers/docs/apis/javascript/) _– Kényelmi könyvtárak, melyek lehetővé teszik, hogy a web alkalmazásod interakcióba lépjen az Ethereummal és az okosszerződésekkel_
+- [JavaScript kliens könyvtárak](/developers/docs/apis/javascript/) _– Kényelmi könyvtárak, melyek lehetővé teszik, hogy a web alkalmazásod interakcióba lépjen az Ethereummal és az okosszerződésekkel_
 - [Biztonság](/developers/docs/smart-contracts/security/)
 - [Tárhely](/developers/docs/storage/)
 - [Fejlesztői keretrendszerek](/developers/docs/frameworks/) _– Eszközök, melyek egyszerűbbé teszik az Ethereum fejlesztést_
