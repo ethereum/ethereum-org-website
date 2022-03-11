@@ -701,7 +701,7 @@ Open the cloned repository locally. Notice that it contains two folders: `starte
 
 Next, open your copy of `starter-files` to your favorite code editor, and then navigate into the `src` folder.
 
-All of the code we'll write will live under the `src` folder. We'll be editing the `HelloWorld.js` component and the `util/interact.js` Javascript files to give our project Web3 functionality.
+All of the code we'll write will live under the `src` folder. We'll be editing the `HelloWorld.js` component and the `util/interact.js` JavaScript files to give our project Web3 functionality.
 
 ### Check out the starter files {#check-out-the-starter-files}
 
