@@ -27,5 +27,5 @@ While you may choose to interact directly with Ethereum clients via the JSON-RPC
 ## Related topics {#related-topics}
 
 - [Nodes and clients](/developers/docs/nodes-and-clients/)
-- [Javascript APIs](/developers/docs/apis/javascript/)
+- [JavaScript APIs](/developers/docs/apis/javascript/)
 - [Backend APIs](/developers/docs/apis/backend/)
