@@ -5,7 +5,7 @@ lang: it
 sidebar: true
 ---
 
-Come ogni stack software, lo "stack di Ethereum" varia da progetto a progetto, in base agli obiettivi di business.
+Come ogni stack di software, lo "stack di Ethereum" completo varia da progetto a progetto in base ai propri obiettivi.
 
 Sono comunque disponibili tecnologie base di Ethereum che aiutano a fornire un modello mentale di come le applicazioni software interagiscono con la blockchain Ethereum. Comprendere i livelli dello stack aiuterà anche a comprendere i molti modi in cui Ethereum può essere integrato all'interno di progetti software.
 
@@ -25,17 +25,17 @@ Gli [Smart Contract](/developers/docs/smart-contracts/) sono i programmi che ven
 
 Sono scritti in un [linguaggio di programmazione](/developers/docs/smart-contracts/languages/) specifico, che viene compilato in bytecode EVM (istruzioni macchina di basso livello dette opcode).
 
-Gli Smart Contract fungono non solo da librerie open source ma sono essenzialmente servizi open API che vengono eseguiti 24 ore su 24 e 7 giorni su 7, e non possono essere disattivati. Assicurano funzioni pubbliche con cui le applicazioni ([dapp](/developers/docs/dapps/)) possono interagire, senza bisogno di permessi. Ogni applicazione può essere integrata con Smart Contract distribuiti per comporre funzionalità (come ad esempio feed di dati o scambi decentralizzati). Chiunque può distribuire nuovi Smart Contract su Ethereum per aggiungere funzionalità personalizzate che soddisfino le esigenze della propria applicazione.
+Gli Smart Contract fungono non solo da librerie open source ma sono essenzialmente servizi open API che vengono eseguiti 24 ore su 24 e 7 giorni su 7, e non possono essere disattivati. Gli smart contract forniscono funzioni pubbliche con cui gli utenti e le applicazioni ([dApp](/developers/docs/dapps/)) possono interagire, senza necessitare di permessi. Qualsiasi applicazione può essere integrata con smart contract distribuiti per comporre funzionalità, come aggiungere i [feed di dati](/developers/docs/oracles/) o supportare gli scambi di token. Chiunque può distribuire nuovi Smart Contract su Ethereum per aggiungere funzionalità personalizzate che soddisfino le esigenze della propria applicazione.
 
 Uno sviluppatore di dapp deve scrivere Smart Contract solo se intende aggiungere funzionalità personalizzate alla blockchain Ethereum. È infatti possibile soddisfare la maggior parte delle esigenze di un progetto (se non tutte) semplicemente integrando gli Smart Contract esistenti, ad esempio per supportare pagamenti con stablecoin o abilitare lo scambio decentralizzato di token.
 
 ## Livello 3: nodi Ethereum {#ethereum-nodes}
 
-Per interagire con la blockchain Ethereum (cioè leggere dati dalla blockchain e/o inviare transazioni alla rete), un'applicazione deve essere connessa a un [nodo Ethereum](/developers/docs/nodes-and-clients/).
+Affinché un'applicazione interagisca con la blockchain di Ethereum, deve connettersi a un [nodo di Ethereum](/developers/docs/nodes-and-clients/). Connettersi a un nodo permette di leggere i dati della blockchain e/o inviare transazioni alla rete.
 
 I nodi Ethereum sono computer che eseguono software, ovvero un client Ethereum. Un client è una implementazione di Ethereum che verifica tutte le transazioni presenti in un blocco, facendo in modo che la rete rimanga sicura e i dati siano accurati. I nodi Ethereum sono essi stessi la blockchain Ethereum. Memorizzano in maniera collettiva lo stato della blockchain Ethereum e raggiungono il consenso sulle transazioni per modificare lo stato della blockchain.
 
-Un'applicazione collegata a un nodo Ethereum (per mezzo della specifica JSON RPC) è in grado di leggere i dati dalla blockchain (ad esempio il saldo di un account utente) e inviare nuove transazioni alla rete (ad esempio trasferire ETH tra account utente o eseguire funzioni di Smart Contract).
+Connettendo la propria applicazione a un nodo di Ethereum (tramite l'[API di JSON-RPC](/developers/docs/apis/json-rpc/)), l'applicazione può leggere i dati dalla blockchain (come i saldi dell'account dell'utente) nonché trasmettere le nuove transazioni alla rete (ad es. trasferire ETH tra gli account degli utenti o eseguire le funzioni degli smart contract).
 
 ## Livello 4: API client Ethereum {#ethereum-client-apis}
 
@@ -56,5 +56,7 @@ Il modo di progettare queste interfacce utente rimane essenzialmente invariato. 
 Consulta la nostra guida per [configurare un ambiente di sviluppo locale](/developers/local-environment/) per un'applicazione Ethereum.
 
 ## Letture consigliate {#further-reading}
+
+- [L'Architettura di un'applicazione Web 3.0](https://www.preethikasireddy.com/post/the-architecture-of-a-web-3-0-application) - _Preethi Kasireddy_
 
 _Conosci una risorsa pubblica che ti è stata utile? Modifica questa pagina e aggiungila!_

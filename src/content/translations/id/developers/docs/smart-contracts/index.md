@@ -22,7 +22,7 @@ Mungkin perumpamaan terbaik untuk kontrak pintar adalah sebuah mesin penjual oto
 Untuk mendapatkan sebuah kudapan ringan dari mesin penjual otomatis:
 
 ```
-uang + pemilihan kudapan ringan = kudapan ringan dikeluarkan
+money + snack selection = snack dispensed
 ```
 
 Logika ini diprogramkan ke dalam mesin penjual otomatis.
@@ -34,25 +34,25 @@ pragma solidity 0.8.7;
 
 contract VendingMachine {
 
-    // Deklarasikan variabel state dari alamat
+    // Declare state variables of the contract
     address public owner;
     mapping (address => uint) public cupcakeBalances;
 
-    // Saat kontrak 'VendingMachine' disebarkan:
-    // 1. tetapkan alamat penggunaan sebagai pemilik kontrak tersebut
-    // 2. tetapkan saldo cupcake kontrak pintar yang disebarkan ke 100
+    // When 'VendingMachine' contract is deployed:
+    // 1. set the deploying address as the owner of the contract
+    // 2. set the deployed smart contract's cupcake balance to 100
     constructor() {
         owner = msg.sender;
         cupcakeBalances[address(this)] = 100;
     }
 
-    // Izinkan pemilik untuk meningkatkan saldo cupcake kontrak pintar
+    // Allow the owner to increase the smart contract's cupcake balance
     function refill(uint amount) public {
         require(msg.sender == owner, "Only the owner can refill.");
         cupcakeBalances[address(this)] += amount;
     }
 
-    // Izinkan siapa saja untuk membeli cupcake
+    // Allow anyone to purchase cupcakes
     function purchase(uint amount) public payable {
         require(msg.value >= amount * 1 ether, "You must pay at least 1 ETH per cupcake");
         require(cupcakeBalances[address(this)] >= amount, "Not enough cupcakes in stock to complete this purchase");
@@ -66,7 +66,7 @@ Seperti sebuah mesin penjual otomatis yang menghapus kebutuhan akan karyawan ven
 
 ## Tanpa izin {#permissionless}
 
-Siapa pun dapat menulis kontrak pintar dan menerapkannya ke jaringan. Anda hanya perlu belajar cara mengodekan dalam [bahasa kontrak pintar](/developers/docs/smart-contracts/languages/) dan memiliki cukup ETH untuk menggunakan kontrak Anda. Menggunakan kontrak pintar secara teknis sama dengan melakukan transaksi, sehingga Anda perlu membayar [Gas](/developers/docs/gas/) sama seperti Anda perlu membayar gas untuk transfer ETH sederhana. Namun, biaya gas untuk penggunaan kontrak jauh lebih tinggi.
+Siapa pun dapat menulis kontrak pintar dan menyebarkannya ke jaringan. Anda hanya perlu belajar cara mengodekan dalam [bahasa kontrak pintar](/developers/docs/smart-contracts/languages/) dan memiliki cukup ETH untuk menyebarkan kontrak Anda. Menggunakan kontrak pintar secara teknis sama dengan melakukan transaksi, sehingga Anda perlu membayar [Gas](/developers/docs/gas/) sama seperti Anda perlu membayar gas untuk transfer ETH sederhana. Namun, biaya gas untuk penggunaan kontrak jauh lebih tinggi.
 
 Ethereum memiliki bahasa ramah pengembang untuk menulis kontrak pintar:
 
@@ -79,7 +79,7 @@ Namun, kontrak harus dikompilasikan sebelum bisa digunakan agar mesin virtual Et
 
 ## Komposabilitas {#composability}
 
-Kontrak pintar bersifat publik di Ethereum dan bisa dianggap sebagai API terbuka. Ini berarti Anda bisa memanggil kontrak pintar orang lain di dalam kontrak pintar Anda untuk lebih memperluas apa yang mungkin diperluas. Kontrak bahkan bisa menggunakan kontrak lainnya.
+Kontrak pintar bersifat publik di Ethereum dan bisa dianggap sebagai API terbuka. Ini berarti Anda bisa memanggil kontrak pintar orang lain di dalam kontrak pintar Anda untuk lebih memperluas apa yang mungkin diperluas. Kontrak bahkan bisa menyebarkan kontrak lainnya.
 
 Pelajari selengkapnya tentang [komposabilitas kontrak pintar](/developers/docs/smart-contracts/composability/).
 

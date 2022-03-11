@@ -24,7 +24,7 @@ For this tutorial we’ll use the code we wrote in the previous tutorial as a ba
 We’ll start our Decentralized exchange code by adding our simple ERC20 codebase:
 
 ```solidity
-pragma solidity ^0.6.0;
+pragma solidity ^0.8.0;
 
 interface IERC20 {
 
@@ -49,19 +49,14 @@ contract ERC20Basic is IERC20 {
     uint8 public constant decimals = 18;
 
 
-    event Approval(address indexed tokenOwner, address indexed spender, uint tokens);
-    event Transfer(address indexed from, address indexed to, uint tokens);
-
-
     mapping(address => uint256) balances;
 
     mapping(address => mapping (address => uint256)) allowed;
 
-    uint256 totalSupply_ = 100 ether;
+    uint256 totalSupply_ = 10 ether;
 
-    using SafeMath for uint256;
 
-   constructor(uint256 total) public {
+   constructor() {
 	balances[msg.sender] = totalSupply_;
     }
 
@@ -75,8 +70,8 @@ contract ERC20Basic is IERC20 {
 
     function transfer(address receiver, uint256 numTokens) public override returns (bool) {
         require(numTokens <= balances[msg.sender]);
-        balances[msg.sender] = balances[msg.sender].sub(numTokens);
-        balances[receiver] = balances[receiver].add(numTokens);
+        balances[msg.sender] = balances[msg.sender]-numTokens;
+        balances[receiver] = balances[receiver]+numTokens;
         emit Transfer(msg.sender, receiver, numTokens);
         return true;
     }
@@ -95,26 +90,15 @@ contract ERC20Basic is IERC20 {
         require(numTokens <= balances[owner]);
         require(numTokens <= allowed[owner][msg.sender]);
 
-        balances[owner] = balances[owner].sub(numTokens);
-        allowed[owner][msg.sender] = allowed[owner][msg.sender].sub(numTokens);
-        balances[buyer] = balances[buyer].add(numTokens);
+        balances[owner] = balances[owner]-numTokens;
+        allowed[owner][msg.sender] = allowed[owner][msg.sender]+numTokens;
+        balances[buyer] = balances[buyer]+numTokens;
         emit Transfer(owner, buyer, numTokens);
         return true;
     }
 }
 
-library SafeMath {
-    function sub(uint256 a, uint256 b) internal pure returns (uint256) {
-      assert(b <= a);
-      return a - b;
-    }
 
-    function add(uint256 a, uint256 b) internal pure returns (uint256) {
-      uint256 c = a + b;
-      assert(c >= a);
-      return c;
-    }
-}
 ```
 
 Our new DEX smart contract will deploy the ERC-20 and get all the supplied:
@@ -127,7 +111,7 @@ contract DEX {
     event Bought(uint256 amount);
     event Sold(uint256 amount);
 
-    constructor() public {
+    constructor() {
         token = new ERC20Basic();
     }
 
@@ -172,7 +156,31 @@ In the case where the buy is successful we should see two events in the transact
 
 ## The sell function {#the-sell-function}
 
-The function responsible for the sell will first require the user to have approved the amount by calling the approve function beforehand. Then when the sell function is called, we’ll check if the transfer from the caller address to the contract address was successful and then send the Ethers back to the caller address.
+The function responsible for the sell will first require the user to have approved the amount by calling the approve function beforehand. Approving the transfer requires the ERC20Basic token instantiated by the DEX to be called by the user. This can be achieved by first calling the DEX contract's `token()` function to retrieve the address where DEX deployed the ERC20Basic contract called `token`. Then we create an instance of that contract in our session and call its `approve` function. Then we are able to call the DEX's `sell` function and swap our tokens back for ether. For example, this is how this looks in an interactive brownie session:
+
+```python
+#### Python in interactive brownie console...
+
+# deploy the DEX
+dex = DEX.deploy({'from':account1})
+
+# call the buy function to swap ether for token
+# 1e18 is 1 ether denominated in wei
+dex.buy({'from': account2, 1e18})
+
+# get the deployment address for the ERC20 token
+# that was deployed during DEX contract creation
+# dex.token() returns the deployed address for token
+token = ERC20Basic.at(dex.token())
+
+# call the token's approve function
+# approve the dex address as spender
+# and how many of your tokens it is allowed to spend
+token.approve(dex.address, 3e18, {'from':account2})
+
+```
+
+Then when the sell function is called, we’ll check if the transfer from the caller address to the contract address was successful and then send the Ethers back to the caller address.
 
 ```solidity
 function sell(uint256 amount) public {
@@ -180,7 +188,7 @@ function sell(uint256 amount) public {
     uint256 allowance = token.allowance(msg.sender, address(this));
     require(allowance >= amount, "Check the token allowance");
     token.transferFrom(msg.sender, address(this), amount);
-    msg.sender.transfer(amount);
+    payable(msg.sender).transfer(amount);
     emit Sold(amount);
 }
 ```
@@ -198,7 +206,7 @@ Once you make a transaction we have a Javascript tutorial to [wait and get detai
 Here is the complete code for the tutorial:
 
 ```solidity
-pragma solidity ^0.6.0;
+pragma solidity ^0.8.0;
 
 interface IERC20 {
 
@@ -223,19 +231,14 @@ contract ERC20Basic is IERC20 {
     uint8 public constant decimals = 18;
 
 
-    event Approval(address indexed tokenOwner, address indexed spender, uint tokens);
-    event Transfer(address indexed from, address indexed to, uint tokens);
-
-
     mapping(address => uint256) balances;
 
     mapping(address => mapping (address => uint256)) allowed;
 
     uint256 totalSupply_ = 10 ether;
 
-    using SafeMath for uint256;
 
-   constructor() public {
+   constructor() {
 	balances[msg.sender] = totalSupply_;
     }
 
@@ -249,8 +252,8 @@ contract ERC20Basic is IERC20 {
 
     function transfer(address receiver, uint256 numTokens) public override returns (bool) {
         require(numTokens <= balances[msg.sender]);
-        balances[msg.sender] = balances[msg.sender].sub(numTokens);
-        balances[receiver] = balances[receiver].add(numTokens);
+        balances[msg.sender] = balances[msg.sender]-numTokens;
+        balances[receiver] = balances[receiver]+numTokens;
         emit Transfer(msg.sender, receiver, numTokens);
         return true;
     }
@@ -269,26 +272,14 @@ contract ERC20Basic is IERC20 {
         require(numTokens <= balances[owner]);
         require(numTokens <= allowed[owner][msg.sender]);
 
-        balances[owner] = balances[owner].sub(numTokens);
-        allowed[owner][msg.sender] = allowed[owner][msg.sender].sub(numTokens);
-        balances[buyer] = balances[buyer].add(numTokens);
+        balances[owner] = balances[owner]-numTokens;
+        allowed[owner][msg.sender] = allowed[owner][msg.sender]+numTokens;
+        balances[buyer] = balances[buyer]+numTokens;
         emit Transfer(owner, buyer, numTokens);
         return true;
     }
 }
 
-library SafeMath {
-    function sub(uint256 a, uint256 b) internal pure returns (uint256) {
-      assert(b <= a);
-      return a - b;
-    }
-
-    function add(uint256 a, uint256 b) internal pure returns (uint256) {
-      uint256 c = a + b;
-      assert(c >= a);
-      return c;
-    }
-}
 
 contract DEX {
 
@@ -298,7 +289,7 @@ contract DEX {
 
     IERC20 public token;
 
-    constructor() public {
+    constructor() {
         token = new ERC20Basic();
     }
 
@@ -316,7 +307,7 @@ contract DEX {
         uint256 allowance = token.allowance(msg.sender, address(this));
         require(allowance >= amount, "Check the token allowance");
         token.transferFrom(msg.sender, address(this), amount);
-        msg.sender.transfer(amount);
+        payable(msg.sender).transfer(amount);
         emit Sold(amount);
     }
 

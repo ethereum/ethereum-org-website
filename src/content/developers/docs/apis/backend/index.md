@@ -62,9 +62,11 @@ These libraries abstract away much of the complexity of interacting directly wit
 - [chainstack.com](https://chainstack.com)
 - [Documentation](https://docs.chainstack.com)
 
-**QuikNode -** **_Blockchain developer platform._**
+**QuickNode -** **_Blockchain Infrastructure as a Service._**
 
-- [quiknode.io](https://quiknode.io)
+- [quicknode.com](https://quicknode.com)
+- [Documentation](https://www.quicknode.com/docs)
+- [Discord](https://discord.gg/NaR7TtpvJq)
 
 **Python Tooling -** **_Variety of libraries for Ethereum interaction via Python._**
 

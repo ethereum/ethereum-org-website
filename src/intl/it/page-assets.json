@@ -1,6 +1,10 @@
 {
   "page-assets-bazaar": "Bazaar Ethereum",
+  "page-assets-beacon-chain": "Beacon Chain",
   "page-assets-blocks": "Unità modulari",
+  "page-assets-dao": "OAD",
+  "page-assets-defi": "DeFi",
+  "page-assets-merge": "La Fusione",
   "page-assets-doge": "Doge che usa dapp",
   "page-assets-download-artist": "Artista:",
   "page-assets-download-download": "Scarica",
@@ -23,14 +27,21 @@
   "page-assets-eth-wordmark-purple": "Testo ETH (viola)",
   "page-assets-eth-wordmark-white": "Testo ETH (bianco)",
   "page-assets-ethereum-brand-assets": "Risorse del marchio Ethereum",
+  "page-assets-finance": "Finanza",
+  "page-assets-future": "Futuro",
   "page-assets-h1": "Risorse ethereum.org",
   "page-assets-hero": "Banner inizio pagina ethereum.org",
   "page-assets-hero-particles": "Immagine di particelle ETH",
   "page-assets-historical-artwork": "Grafica storica",
   "page-assets-illustrations": "Illustrazioni",
+  "page-assets-impact": "Impatto",
+  "page-assets-infrastructure": "Infrastruttura",
   "page-assets-meta-desc": "Esplora e scarica risorse del marchio Ethereum e ethereum.org, illustrazioni e media.",
   "page-assets-meta-title": "Risorse del marchio Ethereum",
+  "page-assets-mainnet": "Rete principale",
   "page-assets-page-assets-solid-background": "Sfondo solido",
   "page-assets-page-assets-transparent-background": "Sfondo trasparente",
-  "page-assets-robot": "Portafoglio robot"
+  "page-assets-robot": "Portafoglio robot",
+  "page-assets-sharding": "Sharding",
+  "page-assets-hackathon": "Hackathon"
 }

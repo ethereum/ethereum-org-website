@@ -234,6 +234,7 @@ const lightColors = {
   homeBoxPurple: primaryLight50,
   homeBoxPink: pink,
   codeBackground: codeBoxLight,
+  rollupDevDocList: primaryLight50,
   beta: "radial-gradient(25.56% 133.51% at 28.36% 45.54%, rgba(28, 28, 225, 0) 0%, rgba(28, 28, 225, 0.06) 100%)",
 }
 
@@ -319,6 +320,7 @@ const darkColors = {
   homeBoxPurple: purpleDark,
   homeBoxPink: pinkDark,
   codeBackground: codeBoxDark,
+  rollupDevDocList: "#4c4c4c",
   beta: "background: radial-gradient(25.56% 133.51% at 28.36% 45.54%, rgba(255, 143, 80, 0.72) 0%, rgba(255, 143, 80, 0.22) 100%)",
   cardGradient:
     "linear-gradient(49.21deg, rgba(127, 127, 213, 0.2) 19.87%, rgba(134, 168, 231, 0.2) 58.46%, rgba(145, 234, 228, 0.2) 97.05% )",

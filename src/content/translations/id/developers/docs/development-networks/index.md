@@ -19,9 +19,9 @@ Jaringan pengembangan pada dasarnya adalah klien Ethereum (implementasi Ethereum
 
 **Mengapa tidak menjalankan saja node Ethereum standar secara lokal?**
 
-Anda _bisa_ [menjalankan node](/developers/docs/nodes-and-clients/#running-your-own-node) (seperti Geth, OpenEthereum, atau Nethermind) tapi karena jaringan pengembangan dibuat dengan tujuan untuk pengembangan, sering kali tersedia dengan fitur yang praktis seperti:
+Anda _dapat_ [menjalankan node](/developers/docs/nodes-and-clients/#running-your-own-node) (seperti Geth, Erigon, atau Nethermind) tetapi karena jaringan pengembangan dibuat dengan tujuan untuk pengembangan, sering kali tersedia dengan fitur yang praktis seperti:
 
-- Secara deterministik melakukan seeding terhadap blockchain lokal Anda dengan dengan data (seperti akun dengan saldo ETH)
+- Secara deterministik melakukan seeding terhadap blockchain lokal Anda dengan data (seperti akun dengan saldo ETH)
 - Secara instan menambang blok dengan tiap transaksi yang diterima, secara berurutan dan tanpa penundaan
 - Fungsionalitas pembuatan log dan melakukan debug yang disempurnakan
 

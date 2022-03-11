@@ -6,7 +6,7 @@ sidebar: true
 incomplete: true
 ---
 
-以太坊正在将其共识机制从[工作量证明(PoW)](/developers/docs/consensus-mechanisms/pow/)转变为权益证明(PoS)。 这一直在计划之中，因为这是社区策略中通过 [Eth2 升级](/upgrades/)扩展以太坊的关键部分。 然而正确实现 PoS 是一项巨大的技术挑战,，并不像使用 PoW 在整个网络中达成共识那样简单。
+以太坊正在将其共识机制从[工作量证明(PoW)](/developers/docs/consensus-mechanisms/pow/)转变为权益证明(PoS)。 这一直在计划之中，因为这是社区策略中通过[升级](/upgrades/)来实现以太坊扩展的关键部分。 然而正确实现 PoS 是一项巨大的技术挑战,，并不像使用 PoW 在整个网络中达成共识那样简单。
 
 ## 前置要求 {#prerequisites}
 
@@ -37,7 +37,7 @@ incomplete: true
 
 ### 信标链 {#the-beacon-chain}
 
-当以太坊用权益证明取代工作量证明时， [分片链](/upgrades/shard-chains/) 的复杂性会增加。 这是需要验证者来处理交易和创建新区块的独立区块链。 计划中将有 64 个分片链，并且它们都需要对网络的当下状态有一个共同的理解。 所以这需要额外的协调工作，这将由[信标链](/upgrades/beacon-chain/)来完成。
+以太坊用权益证明取代工作量证明时，[分片链](/upgrades/shard-chains/)的复杂性会增加。 这是需要验证者来处理交易和创建新区块的独立区块链。 计划中将有 64 个分片链，并且它们都需要对网络的当下状态有一个共同的理解。 所以这需要额外的协调工作，这将由[信标链](/upgrades/beacon-chain/)来完成。
 
 信标链从碎片接收状态信息，并可供其他碎片使用，以便网络能够一直保持同步。 信标链也会管理验证者，从注册其股份存储到发布奖励和惩罚。
 
@@ -85,8 +85,13 @@ incomplete: true
 
 ## 延伸阅读 {#further-reading}
 
-- [什么是权益证明（PoS）](https://consensys.net/blog/blockchain-explained/what-is-proof-of-stake/) _ConsenSys_
-- [你需要先读一读的以太坊 2.0 信标链全解](https://ethos.dev/beacon-chain/) _Ethos.dev_
+- [Proof of Stake FAQ](https://vitalik.ca/general/2017/12/31/pos_faq.html) _Vitalik Buterin_
+- [What is Proof of Stake](https://consensys.net/blog/blockchain-explained/what-is-proof-of-stake/) _ConsenSys_
+- [What Proof of Stake Is And Why It Matters](https://bitcoinmagazine.com/culture/what-proof-of-stake-is-and-why-it-matters-1377531463) _Vitalik Buterin_
+- [The Beacon Chain Ethereum 2.0 explainer you need to read first](https://ethos.dev/beacon-chain/) _Ethos.dev_
+- [Why Proof of Stake (Nov 2020)](https://vitalik.ca/general/2020/11/06/pos2020.html) _Vitalik Buterin_
+- [Proof of Stake: How I Learned to Love Weak Subjectivity](https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity/) _Vitalik Buterin_
+- [A Proof of Stake Design Philosophy](https://medium.com/@VitalikButerin/a-proof-of-stake-design-philosophy-506585978d51) _Vitalik Buterin_
 
 ## 相关主题 {#related-topics}
 

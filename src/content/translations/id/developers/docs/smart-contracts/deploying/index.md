@@ -60,7 +60,7 @@ Setelah digunakan, kontrak Anda akan memiliki alamat Ethereum seperti [akun](/de
 ## Tutorial terkait {#related-tutorials}
 
 - [Menggunakan kontrak pintar pertama Anda](/developers/tutorials/deploying-your-first-smart-contract/) _– Pengantar tentang menggunakan kontrak pintar pertama Anda di jaringan percobaan Ethereum._
-- [Berinteraksi dengan kontrak lain dari Solidity](/developers/tutorials/interact-with-other-contracts-from-solidity/) _– Bagaimana menyebarkan kontrak pintar dari kontrak yang sudah ada dan berinteraksi dengan kontrak tersebut._
+- [Berinteraksi dengan kontrak lain dari Solidity](/developers/tutorials/interact-with-other-contracts-from-solidity/) _– Cara menggunakan kontrak pintar dari kontrak yang sudah ada dan berinteraksi dengan kontrak pintar tersebut._
 - [Bagaimana memperkecil ukuran kontrak Anda](/developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/) _- Bagaimana mengurangi ukuran kontrak Anda agar tetap di bawah batasan dan menghemat pemakaian gas_
 
 ## Bacaan lebih lanjut {#further-reading}

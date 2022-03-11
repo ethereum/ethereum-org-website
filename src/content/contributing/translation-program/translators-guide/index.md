@@ -55,6 +55,43 @@ A common misconception is that Ethereum should always be written in Latin. This 
 
 **The above doesn’t apply to languages, where proper nouns shouldn’t be translated as a rule.**
 
+### Translating page metadata {#translating-metadata}
+
+Some pages contain metadata on the page, like 'title', 'lang', 'description', 'sidebar', etc.
+
+We hide the content that translators should never translate when uploading new pages to Crowdin, meaning that all the metadata visible to translators in Crowdin should get translated.
+
+Please be especially mindful when translating any strings where the source text is 'en'. This represents the language that the page is available in and should be translated to the [ISO language code for your language](https://www.andiamo.co.uk/resources/iso-language-codes/). These strings should always be translated using Latin characters, not the writing script, native to the target language.
+
+If you are unsure which language code to use, you can check the translation memory in Crowdin or find the language code for your language in the URL of the page in the Crowdin online editor.
+
+Some examples of language codes for the most widely spoken languages:
+
+- Arabic - ar
+- Chinese Simplified - zn
+- French - fr
+- Hindi - hi
+- Spanish - es
+
+### Titles of external articles {#external-articles}
+
+Some strings contain titles of external articles. Most of our developer documentation pages contain links to external articles for further reading. The strings containing titles of articles need to be translated, regardless of the article's language, to ensure a more consistent user experience for the visitors viewing the page in their language.
+
+You can find some examples of what these strings look like for translators and how to identify them below (links to articles can be found mostly at the bottom of these pages, in the 'Further reading' section):
+
+![Article titles in sidebar.png](./article-titles-in-sidebar.png)
+![Article titles in editor.png](./article-titles-in-editor.png)
+
+### Crowdin warnings {#crowdin-warnings}
+
+Crowdin has a built-in feature that warns translators when they are about to make a mistake. If you suggest a translation and forget to include a tag from the source, translate elements that should not be translated, add several consecutive spaces, forget end punctuation, etc., Crowdin will automatically warn you of this before saving your translation.
+If you see a warning like this, please go back and double-check the suggested translation.
+
+**Never ignore these warnings, as they usually mean that something is wrong, or that the translation is missing a key part of the source text.**
+
+An example of a Crowdin warning when you forget to add a tag to your translation:
+![Example of a Crowdin warning.png](./crowdin-warning-example.png)
+
 ### Dealing with tags and code snippets {#dealing-with-tags}
 
 A lot of the source content contains tags and variables, which are highlighted in yellow in the Crowdin editor. These serve different functions and should be approached correctly.
@@ -97,7 +134,7 @@ Code snippets should be approached slightly differently to the other tags, since
 
 Example: `<code>`nonce`</code>`
 
-`<code>` - _Opening tax, which contains a code snippet_
+`<code>` - _Opening tag, which contains a code snippet_
 
 nonce - _Non-translatable text_
 
@@ -129,7 +166,7 @@ Some terms might not have established translations in other languages, and are w
 
 While translating these terms can sound unnatural, since the English version is commonly used in other languages as well, it is highly recommended that they are translated.
 
-When translating them, feel free to get creative, use descriptive translations, or simply translate them literally. If you strongly suspect that translating such terms will lead to confusion, because most people know them by their English equivalent, you can add the original term in brackets.
+When translating them, feel free to get creative, use descriptive translations, or simply translate them literally.
 
 **The reason why most terms should be translated, instead of leaving some in English, is the fact that this new terminology will become more widespread in the future, as more people start using Ethereum and related technologies. If we want to onboard more people from all over the world to this space, we need to provide understandable terminology in as many languages as possible, even if we need to create it ourselves.**
 
@@ -210,7 +247,7 @@ Some examples of what to be particularly mindful of:
     - Spanish – **1.000,50**
     - French – **1 000,50**
 - Another important consideration when translating numbers is the percent sign. It can be written in different ways: **100%**, **100 %** or **%100**.
-- Finally, negative numbers can be displayed differently, depending on the language: -100, 100-. (100) or [100].
+- Finally, negative numbers can be displayed differently, depending on the language: -100, 100-, (100) or [100].
 
 **Dates**
 

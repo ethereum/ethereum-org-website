@@ -16,7 +16,7 @@ Anda harus memahami konsep dasar Ethereum agar Anda dapat memahami data yang dib
 
 - [Etherscan](https://etherscan.io/) –_Juga tersedia dalam bahasa Mandarin, Korea, Rusia, dan Jepang_
 - [Etherchain](https://www.etherchain.org/)
-- [Ethplorer](https://ethplorer.io/) –_Juga tersedia dalam bahasa Mandarin, Spanyol, Prancis, Turki, dan Rusia_
+- [Ethplorer](https://ethplorer.io/) –_Juga tersedia dalam bahasa Mandarin, Spanyol, Prancis, Turki, Rusia, Korea, dan Vietnam_
 - [Blockchair](https://blockchair.com/ethereum) –_Juga tersedia dalam bahasa Spanyol, Prancis, Italia, Belanda, Portugis, Rusia, Mandarin, dan Persia_
 - [Blockscout](https://blockscout.com/)
 - [OKLink](https://www.oklink.com/eth)
@@ -96,7 +96,7 @@ Penjelajah blok telah menjadi tempat umum bagi orang-orang untuk mengikuti perke
 - Batas gas – Jumlah maksimum unit gas yang bisa digunakan oleh transaksi ini.
 - Gas yang digunakan – Jumlah sebenarnya unit gas yang digunakan oleh transaksi.
 - Harga gas – Harga yang ditetapkan untuk setiap unit gas.
-- Nonce – Nomor transaksi untuk alamat `dari` (ingat ini dimulai dari angka 0 jadi nonce bernilai `100` sebenarnya akan menjadi transaksi ke 101 yang dikirimkan oleh akun ini.
+- Nonce – Nomor transaksi untuk alamat `dari` (ingat ini dimulai dari angka 0 jadi nonce bernilai `100` sebenarnya akan menjadi transaksi ke-101 yang dikirimkan oleh akun ini.
 - Data input – Informasi ekstra yang diperlukan oleh transaksi.
 
 ### Akun {#accounts}
@@ -138,7 +138,7 @@ Token adalah suatu jenis kontrak sehingga akan memiliki data yang sama dengan ko
 
 ### Jaringan {#network}
 
-Tentu ada beberapa data yang berbicara tentang kesehatan jaringan. Ini cukup spesifik dalam mekanisme konsensus bukti kerja Ethereum. Ketika Ethereum beralih ke Eth2, beberapa data ini akan menjadi mubazir
+Tentu ada beberapa data yang berbicara tentang kesehatan jaringan. Ini cukup spesifik dalam mekanisme konsensus bukti kerja Ethereum. Ketika Ethereum beralih ke bukti taruhan, beberapa data ini akan menjadi mubazir
 
 - Tingkat kesulitan – Tingkat kesulitan penambangan saat ini.
 - Tingkat hash – Estimasi berapa banyak hash yang akan dihasilkan oleh penambang Ethereum yang mencoba menyelesaikan blok Ethereum saat ini atau blok tertentu.
@@ -148,15 +148,15 @@ Tentu ada beberapa data yang berbicara tentang kesehatan jaringan. Ini cukup spe
 - Persediaan ETH total – Jumlah ETH dalam perederan – ingat ETH baru dihasilkan bersamaan dengan pembuatan tiap blok dalam bentuk imbalan blok.
 - Kapitalisasi pasar – Penghitungan harga\*persediaan.
 
-## Data Eth2 {#eth2-data}
+## Data lapisan konsensus {#consensus-layer-data}
 
-Peningkatan Eth2 masih dalam pengembangan tapi rasanya layak membicarakan tentang beberapa poin data yang dapat disediakan oleh penjelajah. Sebenarnya, semua data ini tersedia saat ini dalam testnet.
+Peningkatan skalabilitas masih dalam pengembangan, tetapi rasanya layak membicarakan tentang beberapa poin data yang dapat disediakan oleh penjelajah. Sebenarnya, semua data ini tersedia saat ini dalam testnet.
 
-Jika Anda belum terbiasa dengan Eth2, lihat [gambaran umum kami tentang peningkatan Eth2](/eth2/).
+Jika Anda belum terbiasa dengan road map, lihat [gambaran umum kami tentang peningkatan Ethereum](/upgrades/).
 
 ### Epoch {#epoch}
 
-Peningkatan Eth2 pertama, rantai suar, akan membuat komite validator yang dipilih secara acak pada akhir dari setiap epoch (setiap 6,4 menit) untuk alasan keamanan. Data epoch meliputi:
+Rantai Suar akan membuat komite validator yang dipilih secara acak pada akhir dari setiap epoch (setiap 6,4 menit) untuk alasan keamanan. Data epoch meliputi:
 
 - Nomor epoch.
 - Status terselesaikan – Apakah epoch telah diselesaikan (Ya/Tidak).
@@ -184,7 +184,7 @@ Slot adalah kesempatan untuk pembuatan blok, data yang tersedia untuk tiap slot 
 - Tanda tangan.
 - Pengungkapan Randao.
 - Graffiti – Pengusul blok dapat memasukkan pesan sepanjang 32 bita untuk proses pengajuan bloknya.
-- Data ETH1.
+- Data Eksekusi.
   - Hash blok.
   - Jumlah deposito.
   - Akar deposito.
@@ -196,12 +196,12 @@ Slot adalah kesempatan untuk pembuatan blok, data yang tersedia untuk tiap slot 
 
 ### Blok {#blocks-1}
 
-Di Eth2, cara kerja blok berbeda karena penambang digantikan oleh validator dan rantai suar memperkenalkan slot dan epoch ke Ethereum. Jadi ini berarti data yang baru!
+Blok lapisan konsensus bekerja secara berbeda karena penambang digantikan oleh validator dan Rantai Suar memperkenalkan slot dan epoch ke Ethereum. Jadi ini berarti data yang baru!
 
 - Pengusul – Validator yang terpilih secara algoritma untuk mengajukan blok baru.
 - Epoch – Epoch di mana blok diusulkan.
 - Slot – Slot di mana blok diusulkan.
-- Atestasi – Jumlah pengesahan yang tercakup dalam slot. Atestasi seperti pengambilan suara yang menunjukkan blok siap untuk beralih ke rantai suar.
+- Atestasi – Jumlah pengesahan yang tercakup dalam slot. Atestasi adalah seperti pengambilan suara yang menunjukkan blok siap untuk beralih ke Rantai Suar.
 
 ### Validator {#validators}
 
@@ -234,7 +234,7 @@ Atestasi adalah pengambilan suara "ya" untuk memasukkan blok ke dalam rantai. Da
 
 ### Jaringan {#network-1}
 
-Data level atas Eth2 mencakup yang berikut ini:
+Data tingkat atas lapisan konsensus mencakup berikut ini:
 
 - Epoch saat ini.
 - Slot saat ini.
@@ -257,12 +257,11 @@ Data level atas Eth2 mencakup yang berikut ini:
 - [Ethplorer](https://ethplorer.io/) – penjelajah blok dengan fokus pada token untuk Jaringan Utama Ethereum dan testnet Kovan.
 - [Blockchair](https://blockchair.com/ethereum) - penjelajah Ethereum yang paling privat. Juga digunakan untuk pemilihan dan penyaringan (mempool) data.
 
-## Penjelajah blok Eth2 {#eth2-block-explorers}
+## Penjelajah blok (lapisan konsensus) rantai suar {#beacon-chain-block-explorers}
 
 - [https://beaconcha.in/](https://beaconcha.in/)
 - [https://beaconscan.com/](https://beaconscan.com/)
-- [https://eth2stats.io/](https://eth2stats.io/medalla-testnet)
-- [https://ethscan.org/](https://ethscan.org/) (fork of beaconcha.in)
+- [https://ethscan.org/](https://ethscan.org/) (fork beaconcha.in)
 
 ## Bacaan lebih lanjut {#further-reading}
 
