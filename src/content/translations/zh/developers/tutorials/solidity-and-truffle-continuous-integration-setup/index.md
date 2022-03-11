@@ -192,7 +192,7 @@ Solidity coverage 启动了它自己的 ganache-cli，所以我们不必担心�
 ## 进一步的想法 {#further-ideas}
 
 - [MythX](https://mythx.io/)：使用 MythX，您可以自动分析智能合约的安全性。 因此， [将其添加到您的 CI](https://blog.mythx.io/howto/mythx-and-continuous-integration-part-1-circleci/) 是非常有意义的。
-- [检查](https://wikipedia.org/wiki/Lint_%28software%29)：好的代码在某种程度上可以通过检查工具来实现。 [Eslint](https://eslint.org/) 对于 Javascript 来说非常有用，[很容易设置](https://eslint.org/docs/user-guide/getting-started)，[Solhint](https://protofire.github.io/solhint/) 可以用于 Solidity。
+- [检查](https://wikipedia.org/wiki/Lint_%28software%29)：好的代码在某种程度上可以通过检查工具来实现。 [Eslint](https://eslint.org/) 对于 JavaScript 来说非常有用，[很容易设置](https://eslint.org/docs/user-guide/getting-started)，[Solhint](https://protofire.github.io/solhint/) 可以用于 Solidity。
 - 长测试：有时您可能想要添加极端测试，例如使用数百名用户测试一个合约。 这需要很长时间。 不要在每次测试运行中都运行它们，而是将它们添加到 CI 中。
 
 这是全部内容了。 持续集成是您开发中非常有用的战略。 您可以在 [Truffle-CI-example](https://github.com/gorgos/Truffle-CI-Example) 查看完整的示例。 请务必移除 Circle-CI 或 Travis，只使用一个就够了！
