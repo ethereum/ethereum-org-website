@@ -405,9 +405,18 @@ If you want to see these files in action without running them yourself, follow t
 
 ### If you do control the destination contract
 
-If you do have control over the destination contract you can do more. See [].
+If you do have control over the destination contract you can create functions that bypass the `msg.sender` checks because they trust the calldata interpreter.
+[You can see an example of how this works here, in the `control-contract` branch](https://github.com/qbzzt/ethereum.org-20220330-shortABI/tree/control-contract).
 
-Why we still need two contracts.
+If the contract were responding only to external transactions, we could get by with having just one contract.
+However, that would break [composability](/developers/docs/smart-contracts/composability/).
+It is much better to have a contract that responds to normal ERC-20 calls, and another contract that responds to transactions with short call data.
+
+
+
+
+
+
 
 ## Conclusion
 
