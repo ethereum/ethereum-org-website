@@ -63,7 +63,7 @@ Note: this assumes that there is no process blocking requests to your localhost,
 
 Geth has a built-in JavaScript console and a JavaScript API called [web3js](https://github.com/ethereum/web3.js/) that you can use to interact with your node.
 
-To use the Javascript console run:
+To use the JavaScript console run:
 
 ```bash
 geth attach
