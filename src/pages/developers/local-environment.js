@@ -193,7 +193,7 @@ const H2 = styled.h2`
 //       background: "#fff",
 //       name: "Solidity",
 //       description:
-//         "Solidity, the Contract-Oriented Programming Language. Inspired by C++ and Javascript.",
+//         "Solidity, the Contract-Oriented Programming Language. Inspired by C++ and JavaScript.",
 //     },
 //     {
 //       id: "vyper",
@@ -563,7 +563,7 @@ const ChooseStackPage = ({ data }) => {
         <Subtitle>Frontend JavaScript libraries</Subtitle>
         <p>Description</p>
         <Link to="/developers/docs/apis/javascript/">
-          More on Javascript libraries
+          More on JavaScript libraries
         </Link>
         <CardGrid>
           {jslibraries.map((jslibrary, idx) => {
