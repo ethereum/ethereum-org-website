@@ -104,7 +104,7 @@ It would make a production ERC-20 contract useless, but it makes life easier whe
 [You can see an example of this contract being deployed here](https://kovan-optimistic.etherscan.io/address/0x950c753c0edbde44a74d3793db738a318e9c8ce8).
 
 
-### Calldata.sol {#calldata.sol}
+### CalldataInterpreter.sol {#calldatainterpreter.sol}
 
 [This is the contract that transactions are supposed to call with shorter calldata](https://github.com/qbzzt/ethereum.org-20220330-shortABI/blob/master/contracts/CalldataInterpreter.sol).
 Let's go over it line by line.
@@ -159,8 +159,7 @@ Read a value from the call data.
         }
 ```
 
-Solidity interprets the calldata for us, which is *not* the desired behavior here.
-[Yul](https://docs.soliditylang.org/en/v0.8.12/yul.html), the assembly language of the EVM, lets us decide what we want to happen.
+We could have copied the data from the call to `fallback()` (see below), but it is easier to use [Yul](https://docs.soliditylang.org/en/v0.8.12/yul.html), the assembly language of the EVM.
 Here we use [the CALLDATASIZE opcode](https://www.evm.codes/#36) to get the size of the calldata.
 
 ```solidity
@@ -232,28 +231,155 @@ This leaves us with only two functions: `transfer` (because we can call `transfe
 
         // faucet
         if (_func == 1) {
+```
+
+A call to `faucet()`, which doesn't have parameters.
+
+```solidity
             token.faucet();
             token.transfer(msg.sender,
                 token.balanceOf(address(this)));
         }
-
-        // transfer (assume we have an allowance for it)
-        if (_func == 2) {
-            token.transferFrom(
-                msg.sender,
-                address(uint160(calldataVal(1, 20))),
-                calldataVal(21, 2)
-            );
-        }
 ```
+
+After we call `token.faucet()` we get tokens. However, as the proxy contract, we do not **need** tokens. 
+The EOA (externally owned account) or contract that called us does.
+So we transfer all of our tokens to whoever called us.
 
 
 ```solidity
-        
+        // transfer (assume we have an allowance for it)
+        if (_func == 2) {
+```
+
+Transfer tokens.
+Transferring tokens requires two parameters: the destination address and the amount
+
+```solidity
+            token.transferFrom(
+                msg.sender,
+```
+
+We only allow callers to transfer tokens they own
+
+```
+                address(uint160(calldataVal(1, 20))),
+```
+
+The destination address starts at byte #1 (byte #0 is the function).
+As an address, it is 20 bytes long.
+
+```solidity
+                calldataVal(21, 2)
+```
+
+For this particular contract we assume that the maximum number of tokens anybody would want to transfer fits in two bytes (less than 65536).
+
+```solidity
+            );
+        }     
+```
+
+Overall, a transfer takes 35 bytes of calldata:
+
+| Section              | Length | Bytes | 
+| -------------------- | -----: | ----: |
+| Function selector    | 1      | 0     |
+| Destination address  | 32     | 1-32  |
+| Amount               | 2      | 33-34 |
+
+```solidity
     }   // fallback
 
 }       // contract CalldataInterpreter
 ```
+
+
+#### test.js   {#test.js}
+
+[This JavaScript unit test](https://github.com/qbzzt/ethereum.org-20220330-shortABI/blob/master/test/test.js) shows us how to use this mechanism (and how to verify it works correctly). 
+I am going to assume you understand [chai](https://www.chaijs.com/) and [ethers](https://docs.ethers.io/v5/) and only explain the parts that specifically apply to the contract.
+
+```js
+const { expect } = require("chai");
+
+describe("CalldataInterpreter", function () {
+  it("Should let us use tokens", async function () {
+    const Token = await ethers.getContractFactory("OrisUselessToken")
+    const token = await Token.deploy()
+    await token.deployed()
+    console.log("Token addr:", token.address)
+   
+    const Cdi = await ethers.getContractFactory("CalldataInterpreter")
+    const cdi = await Cdi.deploy(token.address)
+    await cdi.deployed()
+    console.log("CalldataInterpreter addr:", cdi.address)
+
+    const signer = await ethers.getSigner()
+```
+
+Deploy both contracts.
+
+```javascript
+    // Get tokens to play with    
+    const faucetTx = {
+```
+
+We can't use the high-level functions we'd normally use (such as `token.faucet()`) to create transactions, because we do not follow the ABI.
+Instead, we have to build the transaction ourselves and then send them.
+
+```javascript
+      to: cdi.address,
+      data: "0x01"
+```
+
+There are two parameters we need to provide for the transaction:
+
+1. `to`, the destination address.
+   This is the call data interpreter contract.
+2. `data`, the calldata to send.
+   In the case of a faucet call, the data is a single byte, `0x01`.
+
+```javascript
+      
+    }
+    await (await signer.sendTransaction(faucetTx)).wait()
+```
+
+We call [the signer's `sendTransaction` method](https://docs.ethers.io/v5/api/signer/#Signer-sendTransaction) because we already specified the destination (`faucetTx.to`) and we need the transaction to be signed.
+
+
+```javascript
+    // Check the faucet provides the tokens correctly
+    expect (await token.balanceOf(signer.address)).to.equal(1000)
+```
+
+Here we verify the 
+
+```javascript
+    // Give the CDI an allowance (approvals cannot be proxied)
+    const approveTX = await token.approve(cdi.address, 10000)
+    await approveTX.wait()
+    expect (await token.allowance(signer.address, cdi.address))
+      .to.equal(10000)
+      
+    // Transfer tokens
+    const destAddr = "0xf5a6ead936fb47f342bb63e676479bddf26ebe1d"
+    const transferTx = {
+      to: cdi.address,
+      data: "0x02" + destAddr.slice(2,42) + "0100"
+    }
+    await (await signer.sendTransaction(transferTx)).wait()
+
+    // Check that we have 256 tokens less
+    expect (await token.balanceOf(signer.address)).to.equal(1000-256)    
+
+    // And that our destination got them
+    expect (await token.balanceOf(destAddr)).to.equal(256)        
+  })    // it
+})      // describe
+```
+
 
 
 Example transaction of it working: https://kovan-optimistic.etherscan.io/tx/0x4c823826f9e19e7befe4ba78b9496e4e5fbb81007605030e8a2f8562a49ae82c
