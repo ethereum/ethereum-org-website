@@ -16,8 +16,8 @@ You also learn how to implement this optimization.
 
 ### Proper disclosure {#proper-disclosure}
 
-I'm a full time [Optimism](https://www.optimism.io/) employee, so most of the examples in this article are going to come from there.
-However, the technique explained here should work for other rollups too.
+I'm a full time [Optimism](https://www.optimism.io/) employee, so  examples in this article are going to run on Optimism.
+However, the technique explained here should work just as well for other rollups.
 
 ### Terminology   {#terminology}
 
@@ -295,7 +295,7 @@ Overall, a transfer takes 35 bytes of calldata:
 ```
 
 
-#### test.js   {#test.js}
+### test.js   {#test.js}
 
 [This JavaScript unit test](https://github.com/qbzzt/ethereum.org-20220330-shortABI/blob/master/test/test.js) shows us how to use this mechanism (and how to verify it works correctly). 
 I am going to assume you understand [chai](https://www.chaijs.com/) and [ethers](https://docs.ethers.io/v5/) and only explain the parts that specifically apply to the contract.
@@ -391,7 +391,7 @@ Create a transfer transaction. The first byte is "0x02", followed by the destina
 ```
 
 
-#### Example
+### Example {#example}
 
 If you want to see these files in action without running them yourself, follow these links:
 
@@ -522,7 +522,7 @@ Here we have a proxy version these operations which:
 2. Gets the address that would normally be `msg.sender` as an extra parameter.
 
 
-#### CalldataInterpreter.sol {#calldatainterpreter.sol-2}
+### CalldataInterpreter.sol {#calldatainterpreter.sol-2}
 
 The calldata interpreter is nearly identical to the one above, except that the proxied functions receive a `msg.sender` parameter and there is no need for an allowance for `transfer`.
 
@@ -557,31 +557,36 @@ The calldata interpreter is nearly identical to the one above, except that the p
 ```       
 
 
-#### Test.js {#test.js-2}
+### Test.js {#test.js-2}
 
+There are a few changes between the previous testing code and this one.
 
 ```js
     const Cdi = await ethers.getContractFactory("CalldataInterpreter")
     const cdi = await Cdi.deploy(token.address)
     await cdi.deployed()
     await token.setProxy(cdi.address)
+```
+
+We need to tell the ERC-20 contract which proxy to trust
+
+```js
     console.log("CalldataInterpreter addr:", cdi.address)
 
     // Need two signers to verify allowances
     const signers = await ethers.getSigners()
     const signer = signers[0]
     const poorSigner = signers[1]
+```
 
-    // Get tokens to play with
-    const faucetTx = {
-      to: cdi.address,
-      data: "0x01"
-    }
-    await (await signer.sendTransaction(faucetTx)).wait()
+To check `approve()` and `transferFrom()` we need a second signer. 
+We call it `poorSigner` because it does not get any of our tokens (it does need to have ETH, of course).
 
-    // Check the faucet provides the tokens correctly
-    expect (await token.balanceOf(signer.address)).to.equal(1000)
-      
+```js
+    .
+    .
+    .
+
     // Transfer tokens
     const destAddr = "0xf5a6ead936fb47f342bb63e676479bddf26ebe1d"
     const transferTx = {
@@ -589,13 +594,15 @@ The calldata interpreter is nearly identical to the one above, except that the p
       data: "0x02" + destAddr.slice(2,42) + "0100"
     }
     await (await signer.sendTransaction(transferTx)).wait()
+```
 
-    // Check that we have 256 tokens less
-    expect (await token.balanceOf(signer.address)).to.equal(1000-256)    
+Because the ERC-20 contract trusts us, we don't need an allowance to relay transfers.
 
-    // And that our destination got them
-    expect (await token.balanceOf(destAddr)).to.equal(256)        
-
+```js
+    .
+    .
+    .
+    
     // approval and transferFrom
     const approveTx = {
       to: cdi.address,
@@ -613,12 +620,27 @@ The calldata interpreter is nearly identical to the one above, except that the p
     await (await poorSigner.sendTransaction(transferFromTx)).wait()    
 
     // Check the approve / transeferFrom combo was done correctly
-    expect (await token.balanceOf(destAddr2)).to.equal(255)    
-    
+    expect (await token.balanceOf(destAddr2)).to.equal(255)        
 ```
 
+Test the two new functions. 
+Note that `transeferFromTx` requires two address parameters: the giver of the allowance and the receiver.
+
+
+### Example  {#example-2}
+
+If you want to see these files in action without running them yourself, follow these links:
+
+1. [Deployment of `OrisUselessToken-2`](https://kovan-optimistic.etherscan.io/tx/1475397) at address [`0xb47c1f550d8af70b339970c673bbdb2594011696`](https://kovan-optimistic.etherscan.io/address/0xb47c1f550d8af70b339970c673bbdb2594011696).
+2. [Deployment of `CalldataInterpreter`](https://kovan-optimistic.etherscan.io/tx/1475400) at address [`0x0dccfd03e3aaba2f8c4ea4008487fd0380815892`](https://kovan-optimistic.etherscan.io/address/0x0dccfd03e3aaba2f8c4ea4008487fd0380815892).
+3. [Call to `setProxy()`](https://kovan-optimistic.etherscan.io/tx/1475402).
+4. [Call to `faucet()`](https://kovan-optimistic.etherscan.io/tx/1475409). 
+5. [Call to `transferProxy()`](https://kovan-optimistic.etherscan.io/tx/1475416).
+6. [Call to `approveProxy()`](https://kovan-optimistic.etherscan.io/tx/1475419).
+7. [Call to `transferFromProxy()`](https://kovan-optimistic.etherscan.io/tx/1475421).
+   Note that this call comes from a different address than the other ones, `poorSigner` instead of `signer`.
 
 ## Conclusion
 
-You can do more if you control the destination contract too
+***NEED TO WRITE THIS***
 
