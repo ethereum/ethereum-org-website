@@ -42,7 +42,7 @@ As I'm writing this, on Optimism the cost of L2 gas is 0.001 [Gwei](https://ethe
 The cost of L1 gas, on the other hand, is approximately 40 Gwei.
 [You can see the current prices here](https://public-grafana.optimism.io/d/9hkhMxn7z/public-dashboard?orgId=1&refresh=5m).
 
-A byte of call data costs either 4 gas (if it is zero) or 16 gas (if it is any other value).
+A byte of calldata costs either 4 gas (if it is zero) or 16 gas (if it is any other value).
 One of the most expensive operations on the EVM is writing to storage.
 The maximum cost of writing a 32 byte word to storage on L2 is 22100 gas, currently that is 22.1 Gwei.
 So if we can save a single zero byte of calldata, we'll be able to write about 200 bytes to storage and still come out ahead.
@@ -55,7 +55,7 @@ Most contracts are written in Solidity and interpret their data field in accorda
 
 However, the ABI was designed for L1 where a byte of calldata costs approximately the same as four arithmetic operations, not L2 where a byte of calldata costs more than a thousand arithmetic operations.
 For example, [here is an ERC-20 transfer transaction](https://kovan-optimistic.etherscan.io/tx/0x7ce4c144ebfce157b4de99d8ad53a352ae91b57b3fa06d8a1c79439df6bfa998).
-The call data is divided like this:
+The calldata is divided like this:
 
 | Section | Length | Bytes | Wasted bytes | Wasted gas | Necessary bytes | Necessary gas |
 | ------- | -----: | ----: | -----------: | ---------: | --------------: | ------------: |
@@ -147,7 +147,7 @@ The token address is the only parameter we need to specify.
         private pure returns (uint) {
 ```
 
-Read a value from the call data.
+Read a value from the calldata.
 
 
 ```solidity
@@ -318,7 +318,7 @@ describe("CalldataInterpreter", function () {
     const signer = await ethers.getSigner()
 ```
 
-Deploy both contracts.
+We start by deploying both contracts.
 
 ```javascript
     // Get tokens to play with    
@@ -326,7 +326,7 @@ Deploy both contracts.
 ```
 
 We can't use the high-level functions we'd normally use (such as `token.faucet()`) to create transactions, because we do not follow the ABI.
-Instead, we have to build the transaction ourselves and then send them.
+Instead, we have to build the transaction ourselves and then send it.
 
 ```javascript
       to: cdi.address,
@@ -336,7 +336,7 @@ Instead, we have to build the transaction ourselves and then send them.
 There are two parameters we need to provide for the transaction:
 
 1. `to`, the destination address.
-   This is the call data interpreter contract.
+   This is the calldata interpreter contract.
 2. `data`, the calldata to send.
    In the case of a faucet call, the data is a single byte, `0x01`.
 
@@ -354,7 +354,8 @@ We call [the signer's `sendTransaction` method](https://docs.ethers.io/v5/api/si
     expect (await token.balanceOf(signer.address)).to.equal(1000)
 ```
 
-Here we verify the 
+Here we verify the balance. 
+There is no need to save gas on `view` functions, so we just run them normally.
 
 ```javascript
     // Give the CDI an allowance (approvals cannot be proxied)
@@ -362,13 +363,22 @@ Here we verify the
     await approveTX.wait()
     expect (await token.allowance(signer.address, cdi.address))
       .to.equal(10000)
-      
+```
+
+Give the calldata interpreter an allowance to be able to do transfers.
+
+```javascript
     // Transfer tokens
     const destAddr = "0xf5a6ead936fb47f342bb63e676479bddf26ebe1d"
     const transferTx = {
       to: cdi.address,
       data: "0x02" + destAddr.slice(2,42) + "0100"
     }
+```
+
+Create a transfer transaction. The first byte is "0x02", followed by the destination address, and finally the amount (0x0100, which is 256 in decimal).
+
+```javascript
     await (await signer.sendTransaction(transferTx)).wait()
 
     // Check that we have 256 tokens less
@@ -381,11 +391,21 @@ Here we verify the
 ```
 
 
+#### Example
 
-Example transaction of it working: https://kovan-optimistic.etherscan.io/tx/0x4c823826f9e19e7befe4ba78b9496e4e5fbb81007605030e8a2f8562a49ae82c
+If you want to see these files in action without running them yourself, follow these links:
+
+1. [Deployment of `OrisUselessToken`](https://kovan-optimistic.etherscan.io/tx/1410744) to [address `0x950c753c0edbde44a74d3793db738a318e9c8ce8`](https://kovan-optimistic.etherscan.io/address/0x950c753c0edbde44a74d3793db738a318e9c8ce8).
+2. [Deployment of `CalldataInterpreter`](https://kovan-optimistic.etherscan.io/tx/1410745) to [address `0x16617fea670aefe3b9051096c0eb4aeb4b3a5f55`](https://kovan-optimistic.etherscan.io/address/0x16617fea670aefe3b9051096c0eb4aeb4b3a5f55).
+3. [Call to `faucet()`](https://kovan-optimistic.etherscan.io/tx/1410746).
+4. [Call to `OrisUselessToken.approve()`](https://kovan-optimistic.etherscan.io/tx/1410747).
+   This call has to go directly to the token contract because the processing relies on `msg.sender`.
+5. [Call to `transfer()`](https://kovan-optimistic.etherscan.io/tx/1410748). 
 
 
 ### If you do control the destination contract
+
+If you do have control over the destination contract you can do more. See [].
 
 Why we still need two contracts.
 
