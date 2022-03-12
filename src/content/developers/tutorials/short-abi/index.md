@@ -403,7 +403,7 @@ If you want to see these files in action without running them yourself, follow t
 5. [Call to `transfer()`](https://kovan-optimistic.etherscan.io/tx/1410748). 
 
 
-### If you do control the destination contract
+### If you do control the destination contract   {#if-you-do-control-the-destination-contract}
 
 If you do have control over the destination contract you can create functions that bypass the `msg.sender` checks because they trust the calldata interpreter.
 [You can see an example of how this works here, in the `control-contract` branch](https://github.com/qbzzt/ethereum.org-20220330-shortABI/tree/control-contract).
@@ -413,9 +413,209 @@ However, that would break [composability](/developers/docs/smart-contracts/compo
 It is much better to have a contract that responds to normal ERC-20 calls, and another contract that responds to transactions with short call data.
 
 
+### Token.sol  {#token.sol-2}
+
+In this example we can modify `Token.sol`. 
+This lets us have a number of functions that only the proxy may call.
+Here are the new parts:
+
+```solidity
+    // The only address allowed to specify the CalldataInterpreter address
+    address owner;
+
+    // The CalldataInterpreter address
+    address proxy = address(0);  
+```
+
+The ERC-20 contract needs to know the identity of the authorized proxy.
+However, we cannot set this variable in the constructor, because we don't know the value yet.
+This contract is instantiated first because the proxy expects the token's address in its constructor.
+
+```solidity
+    /**
+     * @dev Calls the ERC20 constructor. 
+     */
+    constructor(
+    ) ERC20("Oris useless token-2", "OUT-2") {
+        owner = msg.sender;
+    }
+```
+
+The address of the creator (called `owner`) is stored here because that is the only address allowed to set the proxy.
+
+```solidity
+    /**
+     * @dev set the address for the proxy (the CalldataInterpreter). 
+     * Can only be called once by the owner
+     */
+    function setProxy(address _proxy) external {
+        require(msg.sender == owner, "Can only be called by owner");
+        require(proxy == address(0), "Proxy is already set");
+
+        proxy = _proxy;        
+    }    // function setProxy
+```
+
+The proxy has privileged access, because it can bypass security checks.
+To make sure we can trust the proxy we only let `owner` call this function, and only once.
+Once `proxy` has a real value (not zero), that value cannot change, so even if the owner decides to become rogue, or the mnemonic for it is revealed, we are still safe.
 
 
+```solidity
+    /**
+     * @dev Some functions may only be called by the proxy.
+     */
+    modifier onlyProxy {
+```
 
+This is a [`modifier` function](https://www.tutorialspoint.com/solidity/solidity_function_modifiers.htm), it modifies the way other functions work.
+
+```solidity
+      require(msg.sender == proxy);
+```
+
+First, verify we got called by the proxy and nobody else.
+If not, `revert`.
+
+```solidity
+      _;
+    }
+```
+
+If so, run the function which we modify.
+
+
+```solidity
+   /* Functions that allow the proxy to actually proxy for accounts */
+
+    function transferProxy(address from, address to, uint256 amount) 
+        public virtual onlyProxy() returns (bool) 
+    {
+        _transfer(from, to, amount);
+        return true;
+    }
+
+    function approveProxy(address from, address spender, uint256 amount) 
+        public virtual onlyProxy() returns (bool) 
+    {
+        _approve(from, spender, amount);
+        return true;
+    }
+
+    function transferFromProxy(
+        address spender,
+        address from,
+        address to,
+        uint256 amount
+    ) public virtual onlyProxy() returns (bool) 
+    {
+        _spendAllowance(from, spender, amount);
+        _transfer(from, to, amount);
+        return true;
+    }
+```
+
+These are three operations that normally require the message to come directly from the entity transfering tokens or approving an allowance.
+Here we have a proxy version these operations which:
+
+1. Is modified by `onlyProxy()` so nobody else is allowed to control them.
+2. Gets the address that would normally be `msg.sender` as an extra parameter.
+
+
+#### CalldataInterpreter.sol {#calldatainterpreter.sol-2}
+
+The calldata interpreter is nearly identical to the one above, except that the proxied functions receive a `msg.sender` parameter and there is no need for an allowance for `transfer`.
+
+```solidity
+        // transfer (no need for allowance)
+        if (_func == 2) {
+            token.transferProxy(
+                msg.sender, 
+                address(uint160(calldataVal(1, 20))),
+                calldataVal(21, 2)
+            );
+        }
+
+        // approve
+        if (_func == 3) {
+            token.approveProxy(
+                msg.sender,
+                address(uint160(calldataVal(1, 20))),
+                calldataVal(21, 2)
+            );
+        }
+
+        // transferFrom
+        if (_func == 4) {
+            token.transferFromProxy(
+                msg.sender,
+                address(uint160(calldataVal( 1, 20))),
+                address(uint160(calldataVal(21, 20))),
+                calldataVal(41, 2)
+            );    
+        }
+```       
+
+
+#### Test.js {#test.js-2}
+
+
+```js
+    const Cdi = await ethers.getContractFactory("CalldataInterpreter")
+    const cdi = await Cdi.deploy(token.address)
+    await cdi.deployed()
+    await token.setProxy(cdi.address)
+    console.log("CalldataInterpreter addr:", cdi.address)
+
+    // Need two signers to verify allowances
+    const signers = await ethers.getSigners()
+    const signer = signers[0]
+    const poorSigner = signers[1]
+
+    // Get tokens to play with
+    const faucetTx = {
+      to: cdi.address,
+      data: "0x01"
+    }
+    await (await signer.sendTransaction(faucetTx)).wait()
+
+    // Check the faucet provides the tokens correctly
+    expect (await token.balanceOf(signer.address)).to.equal(1000)
+      
+    // Transfer tokens
+    const destAddr = "0xf5a6ead936fb47f342bb63e676479bddf26ebe1d"
+    const transferTx = {
+      to: cdi.address,
+      data: "0x02" + destAddr.slice(2,42) + "0100"
+    }
+    await (await signer.sendTransaction(transferTx)).wait()
+
+    // Check that we have 256 tokens less
+    expect (await token.balanceOf(signer.address)).to.equal(1000-256)    
+
+    // And that our destination got them
+    expect (await token.balanceOf(destAddr)).to.equal(256)        
+
+    // approval and transferFrom
+    const approveTx = {
+      to: cdi.address,
+      data: "0x03" + poorSigner.address.slice(2,42) + "00FF"
+    }
+    await (await signer.sendTransaction(approveTx)).wait()
+    
+
+    const destAddr2 = "0xE1165C689C0c3e9642cA7606F5287e708d846206"
+
+    const transferFromTx = {
+      to: cdi.address,
+      data: "0x04" + signer.address.slice(2,42) + destAddr2.slice(2,42) + "00FF"
+    }
+    await (await poorSigner.sendTransaction(transferFromTx)).wait()    
+
+    // Check the approve / transeferFrom combo was done correctly
+    expect (await token.balanceOf(destAddr2)).to.equal(255)    
+    
+```
 
 
 ## Conclusion
