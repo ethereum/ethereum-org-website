@@ -416,117 +416,122 @@ const Layer2Page = ({ data }) => {
 
       <Content>
         <h2>Tools and tips to be effective on layer 2</h2>
-        <div>
-          <h3>L2BEAT</h3>
-          <p>
-            <Link to="https://l2beat.com">L2BEAT</Link> is a great resource for
-            looking at technical risk assessments of layer 2 projects. We
-            recommend checking out their resources when researching specific
-            layer 2 projects.
-          </p>
-        </div>
-        <div>
-          <h3>L2 Fees</h3>
-          <p>
-            <Link to="https://l2fees.info">L2 Fees</Link> lets you see the
-            current cost (denominated in USD) for doing transactions on
-            different layer 2 networks.
-          </p>
-        </div>
-        <div>
-          <h3>Chainlist</h3>
-          <p>
-            <Link to="https://chainlist.org">Chainlist</Link> is a great
-            resource for importing network RPC's into your favorite wallet. You
-            will be able to find the various RPC's for layer 2 projects here to
-            get you connected to their network.
-          </p>
-        </div>
-        <div>
-          <h3>Wallet managers</h3>
-          <p>
-            To help you get a holistic view of your assets across networks, we
-            recommend using a wallet manager to track your assets as you enter
-            layer 2.
-          </p>
-          <ul>
-            <li>
-              <Link to="https://zapper.fi/">Zapper</Link>
-            </li>
-            <li>
-              <Link to="https://zerion.io/">Zerion</Link>
-            </li>
-            <li>
-              <Link to="https://debank.com/">DeBank</Link>
-            </li>
-          </ul>
-        </div>
-        <div>
-          <h3>Dapp portals</h3>
-          <p>
-            Some layer 2 projects provide a application portal for users to see
-            what projects are apart of their ecosystem. Check out some here!
-          </p>
-          <ul>
-            <li>
-              <Link to="https://portal.arbitrum.one/">Arbitrum One Portal</Link>
-            </li>
-            <li>
-              <Link to="https://www.optimism.io/apps/all">
-                Optimism ecosystem
-              </Link>
-            </li>
-          </ul>
-        </div>
-        <div>
-          <h3>Token lists</h3>
-          <p>
-            Finding token lists can be hard. Many of your favorite dapps and
-            wallets will already import a token list, but incase you need to
-            import a token contract address here are some to get you started!
-          </p>
-          <ul>
-            <li>
-              <Link to="https://tokenlists.org/token-list?url=https://static.optimism.io/optimism.tokenlist.json">
-                tokenlists.org
-              </Link>{" "}
-              list for Optimism
-            </li>
-            <li>
-              <Link to="https://arbucks.io/tokens/">arbucks.io</Link> list for
-              Arbitrum
-            </li>
-          </ul>
-        </div>
-        <div>
-          <h3>Block explorers</h3>
-          <ul>
-            <li>
-              <Link to="https://explorer.arbitrum.io/">Arbitrum</Link>
-            </li>
-            <li>
-              <Link to="https://optimistic.etherscan.io/">Optimism</Link>
-            </li>
-            <li>
-              <Link to="https://zkscan.io/">zkSync</Link>
-            </li>
-            <li>
-              <Link to="https://andromeda-explorer.metis.io/">Metis</Link>
-            </li>
-            <li>
-              <Link to="https://blockexplorer.boba.network/">Boba Network</Link>
-            </li>
-            <li>
-              <Link to="https://explorer.loopring.io/">Loopring</Link>
-            </li>
-            <li>
-              <Link to="https://voyager.online/">StarkNet</Link>
-            </li>
-            <li>
-              <Link to="https://explorer.hermez.io/">Hermez</Link>
-            </li>
-          </ul>
-        </div>
+        <TwoColumnContent>
+          <Flex50>
+            <ExpandableCard title="L2BEAT">
+              <p>
+                <Link to="https://l2beat.com">L2BEAT</Link> is a great resource
+                for looking at technical risk assessments of layer 2 projects.
+                We recommend checking out their resources when researching
+                specific layer 2 projects.
+              </p>
+            </ExpandableCard>
+            <ExpandableCard title="Chainlist">
+              <p>
+                <Link to="https://chainlist.org">Chainlist</Link> is a great
+                resource for importing network RPC's into your favorite wallet.
+                You will be able to find the various RPC's for layer 2 projects
+                here to get you connected to their network.
+              </p>
+            </ExpandableCard>
+            <ExpandableCard title="Dapp portals">
+              <p>
+                Some layer 2 projects provide a application portal for users to
+                see what projects are apart of their ecosystem. Check out some
+                here!
+              </p>
+              <ul>
+                <li>
+                  <Link to="https://portal.arbitrum.one/">
+                    Arbitrum One Portal
+                  </Link>
+                </li>
+                <li>
+                  <Link to="https://www.optimism.io/apps/all">
+                    Optimism ecosystem
+                  </Link>
+                </li>
+              </ul>
+            </ExpandableCard>
+            <ExpandableCard title="Block explorers">
+              <ul>
+                <li>
+                  <Link to="https://explorer.arbitrum.io/">Arbitrum</Link>
+                </li>
+                <li>
+                  <Link to="https://optimistic.etherscan.io/">Optimism</Link>
+                </li>
+                <li>
+                  <Link to="https://zkscan.io/">zkSync</Link>
+                </li>
+                <li>
+                  <Link to="https://andromeda-explorer.metis.io/">Metis</Link>
+                </li>
+                <li>
+                  <Link to="https://blockexplorer.boba.network/">
+                    Boba Network
+                  </Link>
+                </li>
+                <li>
+                  <Link to="https://explorer.loopring.io/">Loopring</Link>
+                </li>
+                <li>
+                  <Link to="https://voyager.online/">StarkNet</Link>
+                </li>
+                <li>
+                  <Link to="https://explorer.hermez.io/">Hermez</Link>
+                </li>
+              </ul>
+            </ExpandableCard>
+          </Flex50>
+          <Flex50>
+            <ExpandableCard title="L2 Fees">
+              <p>
+                <Link to="https://l2fees.info">L2 Fees</Link> lets you see the
+                current cost (denominated in USD) for doing transactions on
+                different layer 2 networks.
+              </p>
+            </ExpandableCard>
+            <ExpandableCard title="Wallet Managers">
+              <p>
+                To help you get a holistic view of your assets across networks,
+                we recommend using a wallet manager to track your assets as you
+                enter layer 2.
+              </p>
+              <ul>
+                <li>
+                  <Link to="https://zapper.fi/">Zapper</Link>
+                </li>
+                <li>
+                  <Link to="https://zerion.io/">Zerion</Link>
+                </li>
+                <li>
+                  <Link to="https://debank.com/">DeBank</Link>
+                </li>
+              </ul>
+            </ExpandableCard>
+            <ExpandableCard title="Token lists">
+              <p>
+                Finding token lists can be hard. Many of your favorite dapps and
+                wallets will already import a token list, but incase you need to
+                import a token contract address here are some to get you
+                started!
+              </p>
+              <ul>
+                <li>
+                  <Link to="https://tokenlists.org/token-list?url=https://static.optimism.io/optimism.tokenlist.json">
+                    tokenlists.org
+                  </Link>{" "}
+                  list for Optimism
+                </li>
+                <li>
+                  <Link to="https://arbucks.io/tokens/">arbucks.io</Link> list
+                  for Arbitrum
+                </li>
+              </ul>
+            </ExpandableCard>
+          </Flex50>
+        </TwoColumnContent>
       </Content>
 
       <Content>
@@ -589,6 +594,12 @@ const Layer2Page = ({ data }) => {
             <Link to="/upgrades/shard-chains/">
               Scaling layer 1 with shard chains
             </Link>
+          </li>
+          <li>
+            <Link to="https://barnabe.substack.com/p/understanding-rollup-economics-from?s=r">
+              Understanding rollup economics from first principals
+            </Link>{" "}
+            <i>- Barnabé Monnot</i>
           </li>
         </ul>
       </Content>
