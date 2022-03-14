@@ -15,7 +15,7 @@ For this reason, an increasing number of projects in the space are looking to ge
 
 Providing multilingual content is a simple and effective way of growing your global community, providing education to non-English speakers, making sure your content and communications reach a wider audience, and onboarding more people to the space.
 
-This guide aims to address the common challenges and misconceptions about content localization, as well as provide a step-by-step guide to managing content, the translation and review process, quality assurance, translator outreach, and other key aspects of the localization process.
+This guide aims to address the common challenges and misconceptions about content localization. It provides a step-by-step guide to managing content, the translation and review process, quality assurance, translator outreach, and other vital aspects of the localization process.
 
 ## Content Management {#content-management}
 
@@ -35,9 +35,9 @@ Read more about content management:
 
 ### Translation Management Software {#translation-management-software}
 
-There are a number of translation management systems and localization tools, and the choice of software depends largely on your needs.
+There are many translation management systems and localization tools, and the choice of software depends mainly on your needs.
 
-While some projects decide against the use of translation management systems and prefer to handle translations manually – either directly in bilingual files or on hosting services, such as GitHub – this greatly reduces control, productivity, quality, scalability, and collaboration capabilities. Such an approach might be most useful for small-scale or one-off translation projects.
+While some projects decide against using translation management systems and prefer to handle translations manually – either directly in bilingual files or on hosting services, such as GitHub – this dramatically reduces control, productivity, quality, scalability, and collaboration capabilities. Such an approach might be most beneficial for small-scale or one-off translation projects.
 
 A quick look at some of the most powerful and widely used translation management tools:
 
@@ -124,21 +124,21 @@ In its essence, it is the ‘flow of work’ from starting to think about transl
 
 An example workflow in this case would be:
 
-1. **Preparing the files for translation** – It sounds simple, however, there are a couple of important things you need to consider. At this step, you should have a clear plan on how the entire process should work. 
+1. **Preparing the files for translation** – It sounds simple; however, you need to consider a couple of important things. At this step, you should have a clear plan on how the entire process should work. 
 - *Which file types will you be using? What format do you want to receive your translated files in?*
     - If your content is available in DOCX or MD format, the approach will be much more straightforward than if you are translating a PDF version of your Whitepaper or other documents.
 - *Which localization tools support this file type? Can the file be translated in a way that retains the original formatting?*
-    - Not all file types support direct localization (e.g., PDF files, image files) and not all localization tools support all file types.
-- *Who will be translating the content? Will you be ordering professional translations, or relying on volunteers?*
+    - Not all file types support direct localization (e.g., PDF files, image files), and not all localization tools support all file types.
+- *Who will be translating the content? Will you be ordering professional translations or relying on volunteers?*
     - This affects a number of other decisions you need to make. For example, professional translators are more comfortable working with advanced localization tools than volunteers.
 - *What are your expectations for the linguists? If you are using a language service provider, what do they expect from you?*
     - This is the step to make sure your goals, expectations, and timelines are aligned.
 - *Is all the content for translation equally important? Should some content be translated first?*
-    - There are a number of ways to prioritize certain content, which should be translated and implemented first. If you have a lot of content for translation, you can use version control to make sure the translators are aware of which content should be prioritized.
-    
-2. **Sharing the files for translation** – This step also requires some long-term thinking, and is not as straightforward as sending the source files to a language service provider.
+    - There are some ways to prioritize certain content, which should be translated and implemented first. For example, if you have a lot of content for translation, you can use version control to make sure the translators are aware of which they should prioritize.
+
+2. **Sharing the files for translation** – This step also requires some long-term thinking and is not as straightforward as sending the source files to a language service provider.
 - *Who will be translating the content? How many people will be involved in this process?*
-    - If you are planning on using a localization tool, this step is simplified, since you can upload the source files to the tool directly. This is also true if the translation process will take place on the hosting service, since the source files don’t need to be exported anywhere.
+    - If you plan to use a localization tool, this step is simplified since you can upload the source files to the tool directly. This is also true if the translation process takes place on the hosting service since the source files don’t need to be exported anywhere.
 - *Will the source files be handled manually, or can this process be automated?*
     - Most localization tools allow for some type of integration or automation of the file management process. On the other hand, if you are working with individual translators and not using a localization tool, manually sending source files to hundreds or thousands of translators is not a scalable process.
 - *Which tools will be used for the localization?*
@@ -147,22 +147,22 @@ An example workflow in this case would be:
     - At this point, you should be ready to share the source files with the language service provider or pool of translators. The language service provider can help you analyze the word count and provide a quote, including the rates and timeline for the translation process.
 - *Are you planning on making changes/updating the source content during this process?*
     - If your content is dynamic and changes often, any changes or updates can disrupt the translation progress. Using a Translation Memory can help mitigate this significantly, though it is still important to think about how the process will work and how you can prevent setting back the progress the translators are making.
-        
+
 3. **Managing the translation process** – Your work isn’t done once the source content is handed off to the language service provider or the translators. To ensure optimal quality of the translations, content creators should be as involved with the translation process as possible.
 - *How are you planning on communicating with the translators?*
-    - If you are planning on using a localization tool, the communication can take place directly in the tool. Setting up an alternative communication channel with the translators is also recommended, since they might be less hesitant to reach out and messaging tools allow for more free-flowing communication.
+    - If you are planning on using a localization tool, the communication can take place directly in the tool. Setting up an alternative communication channel with the translators is also recommended since they might be less hesitant to reach out, and messaging tools allow for more free-flowing communication.
 - *How to handle questions from translators? Who should be answering these questions?*
     - Translators (both professional and non-professional) will often reach out with questions and requests for clarification or additional context, as well as feedback and ideas for improvements. Replying to these inquiries can often lead to better engagement and quality of translated content. It is also valuable to provide them with as many resources as possible (e.g., guides, tips, terminology guidelines, FAQs, etc.).
 - *How to handle the review process? Do you want to outsource it, or do you have the capacity to perform reviews internally?*
     - While not always necessary, reviews are an integral part of an optimal translation process. Usually, it is easiest to outsource the review process to professional reviewers. However, if you have a large international team, the reviews or QA can also be handled internally.
-    
+
 4. **Implementing the translated content** – The last part of the workflow, though still important to consider ahead of time.
 - *Will all the translations be completed at the same time?*
     - If not, you should think about which translations should be prioritized, how to keep track of the translations in progress, and how the implementation is handled while the translations are done.
 - *How will the translated content be delivered to you? What format will it be in?*
-    - This is an important consideration, regardless of which approach you use. Localization tools allow you to maintain control over the target file format and export process, and usually support automation, e.g., by enabling integration with the hosting service.
+    - This is an important consideration, regardless of which approach you use. Localization tools allow you to maintain control over the target file format and export process and usually support automation, e.g., by enabling integration with the hosting service.
 - *How will you be implementing the translations in your project?*
-    - In some cases, this could be as simple as uploading the translated file or adding it to your docs. However, with more complex projects, like website or app translations, you should make sure the code supports internationalization, and establish how the implementation process will be handled ahead of time.
+    - In some cases, this could be as simple as uploading the translated file or adding it to your docs. However, with more complex projects, like website or app translations, you should make sure the code supports internationalization and establish how the implementation process will be handled ahead of time.
 - *What happens if the formatting is different to the source?*
     - Similar to the above, if you are translating simple text files, the formatting probably isn’t crucially important. However, with more complex files, like content for a website or application, the formatting and code need to be identical to the source in order to be implemented in your project. If not, the target files will need to be edited, either by the translators or your developers.
 
@@ -218,17 +218,17 @@ Read more about terminology management:
 
 ### Translation Memory and Glossary {#tm-and-glossary}
 
-The Translation Memory and Glossary are important tools in the translation industry, and something most language service providers rely on.
+The Translation Memory and Glossary are important tools in the translation industry and something most language service providers rely on.
 
 Let’s look at what these terms mean and how they are different to each other:
 
-**Translation memory (TM)** – A database that automatically stores segments or strings, including longer blocks of text, full sentences, paragraphs, and individual terms, as well as their current and previous translations in every language.
+**Translation memory (TM)** – A database that automatically stores segments or strings, including longer blocks of text, complete sentences, paragraphs, and individual terms, as well as their current and previous translations in every language.
 
 Most localization tools, translation management systems, and computer-assisted translation tools have built-in translation memories, which can usually be exported and used in other similar tools as well.
 
 The benefits of using a translation memory include faster translations, better translation quality, the ability to retain certain translations when updating or changing source content, and cheaper translation costs for repetitive content.
 
-Translation memories work based on a percentage match between different segments, and are usually most useful when two segments contain over 50% of the same content. They are also used to automatically translate repetitive segments, which are 100% matches, thus removing the need to ever translate repetitive content more than once.
+Translation memories work based on a percentage match between different segments and are usually most useful when two segments contain over 50% of the same content. They are also used to automatically translate repetitive segments, which are 100% matches, thus removing the need to ever translate repetitive content more than once.
 
 Read more about translation memories:
 
@@ -238,11 +238,11 @@ Read more about translation memories:
 
 **Glossary –** A list of important or sensitive terms, their definitions, functions, and established translations. The main difference between a glossary and a translation memory is that a glossary is not created automatically, and that it does not contain translations of full sentences.
 
-Most localization tools, translation management systems, and computer-assisted translation tools have built-in glossaries that you can maintain to ensure they contain terminology, important for your project. Similar to the TM, the glossary can usually be exported and used in other localization tools.
+Most localization tools, translation management systems, and computer-assisted translation tools have built-in glossaries that you can maintain to ensure they contain terminology important for your project. Like the TM, the glossary can usually be exported and used in other localization tools.
 
-Before starting your translation project, it is highly recommended to take some time and create a glossary for your translators and reviewers. Using a glossary ensures that important terms are translated correctly, provides translators with much needed context, and guarantees consistency in translations.
+Before starting your translation project, it is highly recommended to take some time and create a glossary for your translators and reviewers. Using a glossary ensures that important terms are translated correctly, provides translators with much-needed context, and guarantees consistency in translations.
 
-While glossaries most often contain established translations in the target languages, they are also useful without this. Even without established translations, a glossary can contain definitions of technical terms, highlight terms that should not be translated, and inform translators whether a certain term is used as a noun, verb, proper noun, or any other part of speech.
+While glossaries most often contain established translations in the target languages, they are also useful without this. Even without established translations, a glossary can have definitions of technical terms, highlight terms that should not get translated, and inform translators whether a specific term is used as a noun, verb, proper noun, or any other part of speech.
 
 Read more about glossaries:
 
@@ -267,36 +267,36 @@ In this case, it is important to select a language service provider with the cap
 While it might be tempting to select a language service provider solely based on their offered rates, it is important to note that the largest language service providers have higher rates for a reason.
 
 - They have tens of thousands of linguists in their database, which means that they will be able to assign translators with sufficient experience and knowledge of your particular sector to your project (i.e., technical translators).
-- They have significant experience working on different types of projects and meeting their clients’ diverse needs. This means they will be more likely to adapt to your particular workflow, offer valuable suggestions and potential improvements for your translation process, and meet your needs, requirements, and deadlines.
+- They have significant experience working on different projects and meeting their clients’ diverse needs. This means they will be more likely to adapt to your particular workflow, offer valuable suggestions and potential improvements for your translation process, and meet your needs, requirements, and deadlines.
 - Most of the largest language service providers also have their own localization tools, translation memories, and glossaries that you can use. If not, they at least have enough linguists in their pool to make sure that their translators will be familiar with and able to work with any localization tool you want to use.
 
 You can find an in-depth comparison of the largest language service providers in the world, some details about each of them and breakdowns by the services they provide, geographical data, etc. in the [2021 Nimdzi 100 report](https://www.nimdzi.com/nimdzi-100-top-lsp/).
 
 **Working with non-professional translators**
 
-You might be working with non-professional translators and looking for volunteers to help you with the translations.
+You might be working with non-professional translators and looking for volunteers to help you translate.
 
-There are a number of ways to reach people and invite them to join your project. This will largely depend on what your product is and how big of a community you already have.
+There are several ways to reach people and invite them to join your project. This will largely depend on your product and how big of a community you already have.
 
 Some ways of onboarding volunteers are outlined below:
 
 **Outreach –** While this is somewhat covered in the points below, reaching out to potential volunteers and making sure they are aware of your translation initiative can be effective in itself. 
 
-A lot of people want to get involved and contribute to their favorite projects, but often don’t see a clear way of doing that without being a developer or having special technical skills. If you can spread awareness about your project, it is likely that a lot of bilinguals will be keen to get involved.
+A lot of people want to get involved and contribute to their favorite projects, but often don’t see a clear way of doing that without being a developer or having special technical skills. If you can spread awareness about your project, a lot of bilinguals will likely be keen to get involved.
 
 **Looking within your community –** Most projects in the space already have large and active communities. A lot of your community members would probably appreciate the chance to contribute to the project in a simple way.
 
-While contributing to open-source projects is often based on intrinsic motivation, it is usually also an amazing learning experience. Anyone interested in learning more about your project would likely be happy to get involved with a translation program as a volunteer, since it would allow them to combine the fact that they have contributed to something they care about with an intensive hands-on learning experience.
+While contributing to open-source projects is often based on intrinsic motivation, it is also a fantastic learning experience. Anyone interested in learning more about your project would likely be happy to get involved with a translation program as a volunteer, since it would allow them to combine the fact that they have contributed to something they care about with an intensive hands-on learning experience.
 
 **Mentioning the initiative in your product –** If your product is popular and used by a large number of people, highlighting your translation program and calling users to action while using the product can be extremely effective.
 
-For applications and websites, this could be as simple as adding a banner or pop-up with a CTA to your product, meaning that most of your users will notice it. This is also effective because your target audience is your community - the people who are most likely to get involved in the first place.
+This could be as simple as adding a banner or pop-up with a CTA to your product for applications and websites. This is effective because your target audience is your community - the people who are most likely to get involved in the first place.
 
-**Social media –** Social media can be an effective way of spreading awareness about your translation program and reaching out to your community members, as well as other people, who aren’t members of your community yet.
+**Social media –** Social media can be an effective way of spreading awareness about your translation program and reaching out to your community members, as well as other people who aren’t members of your community yet.
 
 If you have a Discord server or Telegram channel, it is easy to use that for outreach, communication with your translators, and acknowledging your contributors.
 
-Platforms like Twitter can also be useful for onboarding new community members and publicly acknowledging your contributors.
+Platforms like Twitter can also be helpful for onboarding new community members and publicly acknowledging your contributors.
 
  
 
@@ -306,8 +306,8 @@ The Linux Foundation has created an extensive report on the [2020 FOSS open-sour
 
 This document contains some key considerations every translation program should be aware of. It is by no means an exhaustive guide, though it can help anyone with no experience in the translation industry organize a translation program for their project.
 
-If you are looking for more detailed instructions and breakdowns of different tools, processes, and key aspects of managing a translation program, some of the largest language service providers maintain blogs and often publish articles on different aspects of the localization process. These are the best resources if you want to dive deeper into any of the topics above and understand how the localization process works on a professional level.
+If you are looking for more detailed instructions and breakdowns of different tools, processes, and critical aspects of managing a translation program, some of the largest language service providers maintain blogs and often publish articles on different aspects of the localization process. These are the best resources if you want to dive deeper into any of the topics above and understand how the localization process works professionally.
 
-Some relevant links are included at the end of each section, however, you can find a lot of other resources online.
+Some relevant links are included at the end of each section; however, you can find many other resources online.
 
-For proposals for cooperation or additional information, learnings, and best practices, we’ve picked up by maintaining the ethereum.org Translation Program, feel free to reach out to us at translations@ethereum.org.
+For proposals for cooperation or additional information, learnings, and best practices we’ve picked up by maintaining the ethereum.org Translation Program, feel free to reach out to us at translations@ethereum.org.
