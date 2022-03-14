@@ -44,6 +44,6 @@ Is the project being actively maintained. We don't want to list layer 2's that d
 
 If you want to add a layer 2 to ethereum.org, create an issue on GitHub.
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new/choose">
+<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?&template=suggest_layer2.md">
   Create an issue
 </ButtonLink>
