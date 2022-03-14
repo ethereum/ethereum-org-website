@@ -68,7 +68,7 @@ If it does, complete the following information which we need to accurately list 
 
 <!-- Please provide an approximate date for when the layer 2 went live -->
 
-**Is this project a fork?**
+**Is this project a fork? If yes, what is this project a fork of?**
 
 <!-- Please provide information about if this project is a fork -->
 
@@ -80,10 +80,14 @@ If it does, complete the following information which we need to accurately list 
 
 <!-- Please provide a link to a report or repo. If you haven't been audited but think your layer 2 should be listed anyway, explain here. -->
 
-**TVL history of the layer 2**
+**Is the layer 2 widely used?**
 
-<!-- Please provide a link to the TVL history of the project. We want to see sustained adoption of the network. -->
+<!-- Please provide supporting information such as TVL history, transaction statistics, and whether it is used by known companies or projects. -->
 
 **Is the project being actively maintained?**
 
 <!-- Is there an active team developing the project? -->
+
+**Is there a block explorer?**
+
+<!-- Is there a block explorer for the network? -->

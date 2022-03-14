@@ -57,20 +57,22 @@ Layer 2 submissions will be assessed by the following criteria:
 
 **What wallets can users use to access this layer 2?**
 
-- Can users just import an RPC? What is that RPC?
+- What is the public RPC information for the network? (RPC URL, Chain ID, Currency Symbol, Block Explorer URL)
 - What wallets natively support this layer 2?
 
 **Has the project been externally audited?**
 
 - Include links to report and/or repo.
 
-**TVL history of the layer 2**
+**Is the layer 2 widely used?**
 
-- We want to see sustained adoption of the network, so if it is only being used short term for uses like yield farming and then liquidity leaves, we will take this into consideration when choosing to accept a project or not.
+- We will consider metrics such as TVL history, transaction statistics, and whether it is used by known companies or projects
 
 **Is the project being actively maintained?**
 
 - We won't list layer 2s that don't have an active team supporting the project.
+
+**Is there a block explorer?**
 
 ## Add your layer 2 {#add-exchange}
 
