@@ -134,7 +134,7 @@ const Layer2Page = ({ data }) => {
       preview: "Layer 2 is cashing a cheque, layer 1 is going to court",
       body: [
         "We need need scaling solutions that inherit Ethereums security. Layer 2 networks settle their transactions on the Ethereum mainnet, allowing users who use them to benefit from the security of the Ethereum network.",
-        "Layer 2's take advantage of the consensus mechanism of its parent Layer 1, in this case Ethereum, instead of providing their own consensus mechanism.",
+        "Layer 2s take advantage of the consensus mechanism of its parent Layer 1, in this case Ethereum, instead of providing their own consensus mechanism.",
       ],
       alt: "test",
     },
@@ -156,10 +156,14 @@ const Layer2Page = ({ data }) => {
       <Content>
         <h2>What is Layer 1?</h2>
         <p>
-          Layer 1 blockchains, like Ethereum and Bitcoin, are the underlying
-          foundation that layer 2 projects build on top of. Some examples of
-          layer 2 projects being build on top of these networks are zk-rollups
-          and optimistic-rollups on Ethereum, and the Lighting Network on top of
+          Before diving into "layer 2", it helps to understand what we consider
+          "layer 1".
+        </p>
+        <p>
+          Layer 1 blockchains, such as Ethereum and Bitcoin, are the underlying
+          foundation that layer 2 projects build on top of. Examples of layer 2
+          projects built on top of these networks include zero-knowledge rollups
+          and optimistic rollups on Ethereum and the Lighting Network on top of
           Bitcoin.
         </p>
         <p>
@@ -167,8 +171,8 @@ const Layer2Page = ({ data }) => {
           of transaction data, a network of miners (soon to be validators after{" "}
           <Link to="/upgrades/merge/">The Merge</Link>) proposing blocks, a
           network of node operators to secure and validate the network, and the
-          consensus mechanism for the network. Ethereum also function as a data
-          availability layer for Layer 2's, and if there are any disputes on
+          consensus mechanism for the network. Ethereum also functions as a data
+          availability layer for Layer 2s, and if there are any disputes on
           previous transactions data is provided from Ethereum for these
           disputes.
         </p>
@@ -182,7 +186,7 @@ const Layer2Page = ({ data }) => {
           need for further scaling to round out the trilemma for Ethereum. This
           is where Layer 2 technology is being developed to step in and bring
           further scaling to Ethereum. As time has progressed, Ethereum as a
-          layer 1 is a settlement layer for layer 2's, and not the layer for end
+          layer 1 is a settlement layer for layer 2s, and not the layer for end
           users.
         </p>
       </Content>
@@ -246,7 +250,7 @@ const Layer2Page = ({ data }) => {
           of layer 1, and requires no changes to the layer 1 protocol. This lets
           layer 1 handle security, data availability, and decentralization,
           whilst everything on the layer above (layer 2) can handle scaling.
-          Layer 2's takes the transactional burden away from the Layer 1, and
+          Layer 2s takes the transactional burden away from the Layer 1, and
           posts finalized proofs back to the Layer 1 to finalize the state. By
           taking this load away from Layer 1, the base layer will become less
           congested, and everything becomes more scalable.
@@ -330,7 +334,7 @@ const Layer2Page = ({ data }) => {
           Sidechains and validiums run in parallel with the main chian, and
           interact with the main chain through bridges, but they do not derive
           their security or data availability from the main chain. They scale
-          similarly to layer 2's, but have different trust assumptions. They
+          similarly to layer 2s, but have different trust assumptions. They
           offer lower transaction fees, and higher transaction throughput. More
           on <Link to="/developers/docs/scaling/sidechains/">sidechains</Link>{" "}
           and <Link to="/developers/docs/scaling/validium/">validiums</Link>.
@@ -338,7 +342,7 @@ const Layer2Page = ({ data }) => {
       </Content>
 
       <Content>
-        <h2>Generalized layer 2's</h2>
+        <h2>Generalized layer 2s</h2>
         <p>
           Generalized layer 2s behave just like Ethereum—but cheaper. Anything
           that you can do on Ethereum layer 1, you can also do on layer 2. Many
@@ -362,9 +366,9 @@ const Layer2Page = ({ data }) => {
             })}
         </StyledCardGrid>
 
-        <h2>Application specific layer 2's</h2>
+        <h2>Application specific layer 2s</h2>
         <p>
-          Application specific layer 2's are projects that specialize in
+          Application specific layer 2s are projects that specialize in
           optimizing for a specific application space, bringing improved
           performance.
         </p>
@@ -543,7 +547,7 @@ const Layer2Page = ({ data }) => {
             version of a layer 2, and the ecosystem as a whole will benefit from
             diversity in these clients as a decentralizing point. Much like we
             have multiple Ethereum clients developed by multiple teams in order
-            to have diversity in the network, this too will be how layer 2's
+            to have diversity in the network, this too will be how layer 2s
             develop in the future.
           </p>
         </ExpandableCard>
