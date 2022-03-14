@@ -34,20 +34,19 @@ If it does, complete the following information which we need to accurately list 
 
 **L2Beat page**
 
-<!-- Please provide the link to the layer 2's page on L2BEAT-->
+<!-- Please provide the link to the layer 2s page on L2BEAT-->
 
 **Open source**
 
 <!-- If yes, please provide a link to the repository -->
 
-**Type of layer 2 (Optimistic, ZK, Validium)**
+**Type of layer 2 (Optimistic, ZK, State channel)**
 
 <!-- Please provide some information on what kind of layer 2 this is -->
 
 **Purpose / use case**
 
-<!-- Please provide some information on the use case for this L
-layer 2 -->
+<!-- Please provide some information on the use case for this layer 2 -->
 
 **Bridges**
 
@@ -57,13 +56,13 @@ layer 2 -->
 
 <!-- If there is exchange support for deposits/withdrawals, please provide information for this -->
 
-**Link to ecosystem (if applicable)**
+**Link to dapp ecosystem (if applicable)**
 
-<!-- Please provide a link to the project ecosystem -->
+<!-- Please provide a link to the dapp ecosystem -->
 
 **Token contract list (if applicable)**
 
-<!-- Please provide a trusted resource for contract addresses for assets -->
+<!-- Since assets will have a new address on layer 2, if there is a token list resource available please share  -->
 
 **How long has this project been live?**
 
@@ -73,6 +72,18 @@ layer 2 -->
 
 <!-- Please provide information about if this project is a fork -->
 
-**Is this project audited?**
+**What wallets support this layer 2?**
+
+<!-- Please list wallets that support this network -->
+
+**Is this project externally audited?**
 
 <!-- Please provide a link to a report or repo. If you haven't been audited but think your layer 2 should be listed anyway, explain here. -->
+
+**TVL history of the layer 2**
+
+<!-- Please provide a link to the TVL history of the project. We want to see sustained adoption of the network. -->
+
+**Is the project being actively maintained?**
+
+<!-- Is there an active team developing the project? -->
