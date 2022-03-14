@@ -276,7 +276,7 @@ const darkColors = {
   dropdownBackground: "#191919",
   dropdownBackgroundHover: "#000000",
   dropdownBorder: "#333333",
-  markBackground: "rgb(255, 115, 36, .1)"
+  markBackground: "rgb(255, 115, 36, .1)",
   markUnderline: "rgb(255, 115, 36, .5)",
   modalBackground: "rgba(25,25,25,0.8)",
   text: "#f2f2f2",
