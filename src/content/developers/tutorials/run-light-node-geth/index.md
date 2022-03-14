@@ -162,7 +162,7 @@ eth.getBalance('0x85d918c2B7F172d033D190152AEc58709Fb6D048')
 
 ## Stopping and restarting your node {#stopping-and-restarting-your-node}
 
-You can stop your node at any time by pressing `CTRL+C`. If you want to restart the node, Geth will take a few seconds or minutes to re-synchronize (downloading the blocks and/or block headers from where it left off when the node last stopped running). If any of the above instructions aren’t working, the first thing you should do is try restarting your node.
+You can stop your node at any time by pressing <kbd>CTRL</kbd> + <kbd>C</kbd>`. If you want to restart the node, Geth will take a few seconds or minutes to re-synchronize (downloading the blocks and/or block headers from where it left off when the node last stopped running). If any of the above instructions aren’t working, the first thing you should do is try restarting your node.
 
 ```bash
 $ geth --ropsten --syncmode "light"
