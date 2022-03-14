@@ -14,6 +14,23 @@ Although consensus mechanisms aren't directly related to building a dapp, unders
 
 To better understand this page, we recommend you first read our [introduction to Ethereum](/developers/docs/intro-to-ethereum/).
 
+## Dictation as a consensus metaphor 
+
+Before digging a bit deeper on consensus mechanisms, I believe that it is important to make a recap to understand how the previously described fundamental abstractions and concepts are relating one another.
+
+To connect all the elements at play, think about a dictation exercise, like the ones you did as a child in elementary school.
+For the sake of this example, say that you were distracted, and you did not write down some passage from the teacher’s dictation exercise. You would raise your hand and ask about that passage you missed, and your classmates will be able to tell you in a unanimous way the exact passage you missed.
+
+The teacher -> the consensus mechanism, 
+you and your classmates -> the nodes, 
+the pages of your notebook in which you are writing -> the blocks, 
+and the sentences you are writing -> pieces of data in the blocks.
+
+Let us imagine now that you want to make a prank and you want to modify a previous passage from the dictation exercise, if you are alone, it would be very hard as you must edit everyone’s pages in their notebooks to change the class consensus. 
+
+If you are a little bit advanced, you might be asking, how does the teacher get sentences?
+To keep up with the example, we can say that such sentences are given by the "teacher’s helper". Teacher helper -> Validator/Miner.
+
 ## What is consensus? {#what-is-consensus}
 
 By consensus, we mean that a general agreement has been reached. Consider a group of people going to the cinema. If there is not a disagreement on a proposed choice of film, then a consensus is achieved. In the extreme case the group will eventually split.
