@@ -339,7 +339,7 @@ const DappNodeButtonLink = styled(ResponsiveButtonLink)`
   }
   &:hover {
     background-color: #0f5f5f;
-    box-shadow: 4px 4px 0 0 #187d7677;
+    box-shadow: 4px 4px 0 0 rgba(#187d76, 0.47);
   }
 `
 
@@ -350,7 +350,7 @@ const AvadoButtonLink = styled(ResponsiveButtonLink)`
   }
   &:hover {
     background-color: #2e6d2e;
-    box-shadow: 4px 4px 0 0 #37822e77;
+    box-shadow: 4px 4px 0 0 rgba(#37822e, 0.47);
   }
 `
 

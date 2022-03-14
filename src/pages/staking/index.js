@@ -72,7 +72,8 @@ const StyledCard = styled(Card)`
 `
 
 const BoxText = styled.div`
-  font-size: 1.25rem;`
+  font-size: 1.25rem;
+`
 
 const Box = styled.div`
   padding: 1.5rem;

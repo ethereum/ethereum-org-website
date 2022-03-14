@@ -16,10 +16,10 @@ const Container = styled.span`
   width: 1px;
   word-wrap: normal !important;
   &:focus {
-    background-color: #eee;
+    background-color: #eeeeee;
     clip: auto !important;
     clip-path: none;
-    color: #444;
+    color: #444444;
     display: block;
     font-size: 1em;
     height: auto;

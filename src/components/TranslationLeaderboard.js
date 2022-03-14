@@ -34,7 +34,7 @@ const Header = styled.div`
   margin-bottom: 1px;
   padding: 1rem;
   width: 100%;
-  color: #000;
+  color: #000000;
 `
 
 const Item = styled.div`
@@ -47,7 +47,7 @@ const Item = styled.div`
   margin-bottom: 1px;
   padding: 0.5rem 1rem;
   width: 100%;
-  color: #000;
+  color: #000000;
   &:hover {
     border-radius: 4px;
     box-shadow: 0 0 1px ${(props) => props.theme.colors.primary};

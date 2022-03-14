@@ -107,7 +107,6 @@ To ensure a certain level of quality and consistency in our translations, we wor
 
 The review process is straightforward; once a certain [content bucket](/contributing/translation-program/content-buckets) is 100% translated, we order a review for that content bucket. The review process takes place directly in Crowdin. Once the review is complete, we update the website with the translated content.
 
-
 ## How do I add content in my language? {#adding-foreign-language-content}
 
 Currently, all non-English content is translated directly from the English source content, and any content that does not exist in English cannot be added to other languages.

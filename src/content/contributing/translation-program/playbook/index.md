@@ -43,7 +43,7 @@ A quick look at some of the most powerful and widely used translation management
 
 **Best for crowdsourcing and collaboration**
 
-[Crowdin](https://crowdin.com/) 
+[Crowdin](https://crowdin.com/)
 
 - Free for open-source projects (unlimited number of strings and projects)
 - TM and glossary available with all plans
@@ -124,47 +124,51 @@ In its essence, it is the ‘flow of work’ from starting to think about transl
 
 An example workflow in this case would be:
 
-1. **Preparing the files for translation** – It sounds simple; however, you need to consider a couple of important things. At this step, you should have a clear plan on how the entire process should work. 
-- *Which file types will you be using? What format do you want to receive your translated files in?*
-    - If your content is available in DOCX or MD format, the approach will be much more straightforward than if you are translating a PDF version of your Whitepaper or other documents.
-- *Which localization tools support this file type? Can the file be translated in a way that retains the original formatting?*
-    - Not all file types support direct localization (e.g., PDF files, image files), and not all localization tools support all file types.
-- *Who will be translating the content? Will you be ordering professional translations or relying on volunteers?*
-    - This affects a number of other decisions you need to make. For example, professional translators are more comfortable working with advanced localization tools than volunteers.
-- *What are your expectations for the linguists? If you are using a language service provider, what do they expect from you?*
-    - This is the step to make sure your goals, expectations, and timelines are aligned.
-- *Is all the content for translation equally important? Should some content be translated first?*
-    - There are some ways to prioritize certain content, which should be translated and implemented first. For example, if you have a lot of content for translation, you can use version control to make sure the translators are aware of which they should prioritize.
+1. **Preparing the files for translation** – It sounds simple; however, you need to consider a couple of important things. At this step, you should have a clear plan on how the entire process should work.
+
+- _Which file types will you be using? What format do you want to receive your translated files in?_
+  - If your content is available in DOCX or MD format, the approach will be much more straightforward than if you are translating a PDF version of your Whitepaper or other documents.
+- _Which localization tools support this file type? Can the file be translated in a way that retains the original formatting?_
+  - Not all file types support direct localization (e.g., PDF files, image files), and not all localization tools support all file types.
+- _Who will be translating the content? Will you be ordering professional translations or relying on volunteers?_
+  - This affects a number of other decisions you need to make. For example, professional translators are more comfortable working with advanced localization tools than volunteers.
+- _What are your expectations for the linguists? If you are using a language service provider, what do they expect from you?_
+  - This is the step to make sure your goals, expectations, and timelines are aligned.
+- _Is all the content for translation equally important? Should some content be translated first?_
+  - There are some ways to prioritize certain content, which should be translated and implemented first. For example, if you have a lot of content for translation, you can use version control to make sure the translators are aware of which they should prioritize.
 
 2. **Sharing the files for translation** – This step also requires some long-term thinking and is not as straightforward as sending the source files to a language service provider.
-- *Who will be translating the content? How many people will be involved in this process?*
-    - If you plan to use a localization tool, this step is simplified since you can upload the source files to the tool directly. This is also true if the translation process takes place on the hosting service since the source files don’t need to be exported anywhere.
-- *Will the source files be handled manually, or can this process be automated?*
-    - Most localization tools allow for some type of integration or automation of the file management process. On the other hand, if you are working with individual translators and not using a localization tool, manually sending source files to hundreds or thousands of translators is not a scalable process.
-- *Which tools will be used for the localization?*
-    - The answer to this question will determine how you approach everything else. Selecting the proper tool can help you automate content management, managing the Translation Memory and Glossary, managing translators, keeping track of the translation/review progress, etc., so take some time and do some research on which tool you want to use. If you are not planning on using a localization tool, all of the above will need to be done manually.
-- *How long will the translation process take? How much will it cost?*
-    - At this point, you should be ready to share the source files with the language service provider or pool of translators. The language service provider can help you analyze the word count and provide a quote, including the rates and timeline for the translation process.
-- *Are you planning on making changes/updating the source content during this process?*
-    - If your content is dynamic and changes often, any changes or updates can disrupt the translation progress. Using a Translation Memory can help mitigate this significantly, though it is still important to think about how the process will work and how you can prevent setting back the progress the translators are making.
+
+- _Who will be translating the content? How many people will be involved in this process?_
+  - If you plan to use a localization tool, this step is simplified since you can upload the source files to the tool directly. This is also true if the translation process takes place on the hosting service since the source files don’t need to be exported anywhere.
+- _Will the source files be handled manually, or can this process be automated?_
+  - Most localization tools allow for some type of integration or automation of the file management process. On the other hand, if you are working with individual translators and not using a localization tool, manually sending source files to hundreds or thousands of translators is not a scalable process.
+- _Which tools will be used for the localization?_
+  - The answer to this question will determine how you approach everything else. Selecting the proper tool can help you automate content management, managing the Translation Memory and Glossary, managing translators, keeping track of the translation/review progress, etc., so take some time and do some research on which tool you want to use. If you are not planning on using a localization tool, all of the above will need to be done manually.
+- _How long will the translation process take? How much will it cost?_
+  - At this point, you should be ready to share the source files with the language service provider or pool of translators. The language service provider can help you analyze the word count and provide a quote, including the rates and timeline for the translation process.
+- _Are you planning on making changes/updating the source content during this process?_
+  - If your content is dynamic and changes often, any changes or updates can disrupt the translation progress. Using a Translation Memory can help mitigate this significantly, though it is still important to think about how the process will work and how you can prevent setting back the progress the translators are making.
 
 3. **Managing the translation process** – Your work isn’t done once the source content is handed off to the language service provider or the translators. To ensure optimal quality of the translations, content creators should be as involved with the translation process as possible.
-- *How are you planning on communicating with the translators?*
-    - If you are planning on using a localization tool, the communication can take place directly in the tool. Setting up an alternative communication channel with the translators is also recommended since they might be less hesitant to reach out, and messaging tools allow for more free-flowing communication.
-- *How to handle questions from translators? Who should be answering these questions?*
-    - Translators (both professional and non-professional) will often reach out with questions and requests for clarification or additional context, as well as feedback and ideas for improvements. Replying to these inquiries can often lead to better engagement and quality of translated content. It is also valuable to provide them with as many resources as possible (e.g., guides, tips, terminology guidelines, FAQs, etc.).
-- *How to handle the review process? Do you want to outsource it, or do you have the capacity to perform reviews internally?*
-    - While not always necessary, reviews are an integral part of an optimal translation process. Usually, it is easiest to outsource the review process to professional reviewers. However, if you have a large international team, the reviews or QA can also be handled internally.
+
+- _How are you planning on communicating with the translators?_
+  - If you are planning on using a localization tool, the communication can take place directly in the tool. Setting up an alternative communication channel with the translators is also recommended since they might be less hesitant to reach out, and messaging tools allow for more free-flowing communication.
+- _How to handle questions from translators? Who should be answering these questions?_
+  - Translators (both professional and non-professional) will often reach out with questions and requests for clarification or additional context, as well as feedback and ideas for improvements. Replying to these inquiries can often lead to better engagement and quality of translated content. It is also valuable to provide them with as many resources as possible (e.g., guides, tips, terminology guidelines, FAQs, etc.).
+- _How to handle the review process? Do you want to outsource it, or do you have the capacity to perform reviews internally?_
+  - While not always necessary, reviews are an integral part of an optimal translation process. Usually, it is easiest to outsource the review process to professional reviewers. However, if you have a large international team, the reviews or QA can also be handled internally.
 
 4. **Implementing the translated content** – The last part of the workflow, though still important to consider ahead of time.
-- *Will all the translations be completed at the same time?*
-    - If not, you should think about which translations should be prioritized, how to keep track of the translations in progress, and how the implementation is handled while the translations are done.
-- *How will the translated content be delivered to you? What format will it be in?*
-    - This is an important consideration, regardless of which approach you use. Localization tools allow you to maintain control over the target file format and export process and usually support automation, e.g., by enabling integration with the hosting service.
-- *How will you be implementing the translations in your project?*
-    - In some cases, this could be as simple as uploading the translated file or adding it to your docs. However, with more complex projects, like website or app translations, you should make sure the code supports internationalization and establish how the implementation process will be handled ahead of time.
-- *What happens if the formatting is different to the source?*
-    - Similar to the above, if you are translating simple text files, the formatting probably isn’t crucially important. However, with more complex files, like content for a website or application, the formatting and code need to be identical to the source in order to be implemented in your project. If not, the target files will need to be edited, either by the translators or your developers.
+
+- _Will all the translations be completed at the same time?_
+  - If not, you should think about which translations should be prioritized, how to keep track of the translations in progress, and how the implementation is handled while the translations are done.
+- _How will the translated content be delivered to you? What format will it be in?_
+  - This is an important consideration, regardless of which approach you use. Localization tools allow you to maintain control over the target file format and export process and usually support automation, e.g., by enabling integration with the hosting service.
+- _How will you be implementing the translations in your project?_
+  - In some cases, this could be as simple as uploading the translated file or adding it to your docs. However, with more complex projects, like website or app translations, you should make sure the code supports internationalization and establish how the implementation process will be handled ahead of time.
+- _What happens if the formatting is different to the source?_
+  - Similar to the above, if you are translating simple text files, the formatting probably isn’t crucially important. However, with more complex files, like content for a website or application, the formatting and code need to be identical to the source in order to be implemented in your project. If not, the target files will need to be edited, either by the translators or your developers.
 
 **Meaning 2**
 
@@ -172,15 +176,18 @@ An alternative translation workflow, which does not account for internal decisio
 
 An example workflow in this case would be:
 
-1. *Translation → Implementation*
+1. _Translation → Implementation_
+
 - The simplest workflow, where the translation will likely be human translation, since there is no review or QA process to evaluate the quality and edit the translations before implementation.
 - With this workflow, it is important that the translators can maintain a certain level of quality, which will require appropriate resources and communication between the project managers and translators.
 
-2. *Translation → Review → Implementation*
+2. _Translation → Review → Implementation_
+
 - A more advanced workflow, which includes a review and editing process, to ensure the quality of the translations is acceptable and consistent.
 - There are a number of approaches to this workflow, where the translations could be performed by professional translators or volunteers, while the review process will likely be handled by professional reviewers, who are familiar with all the grammar and orthography rules that need to be observed in the target language.
 
-3. *Translation → Review → QA → Implementation*
+3. _Translation → Review → QA → Implementation_
+
 - The optimal workflow to ensure the highest level of quality. While QA is not always necessary, it could be useful to give you a better sense of the quality of the translated text after translation and review.
 - With this workflow, translations could be performed exclusively by volunteers or even machine translation. The review process should be performed by professional translators, while the QA can be performed by a language service provider or internally, if you have employees who are native speakers of the target languages.
 
@@ -254,7 +261,7 @@ If you are not planning on using a localization tool for your project, you will 
 
 This means that all repetitive and similar content would have to be manually translated every time. Additionally, translators would have to reach out with questions on whether a certain term needs to be translated or not, how it is used in the text, and whether a term already has an established translation.
 
-*Do you want to use the ethereum.org translation memory and glossary in your project? Reach out to us at translations@ethereum.org.*
+_Do you want to use the ethereum.org translation memory and glossary in your project? Reach out to us at translations@ethereum.org._
 
 ## Translator Outreach {#translator-outreach}
 
@@ -280,7 +287,7 @@ There are several ways to reach people and invite them to join your project. Thi
 
 Some ways of onboarding volunteers are outlined below:
 
-**Outreach –** While this is somewhat covered in the points below, reaching out to potential volunteers and making sure they are aware of your translation initiative can be effective in itself. 
+**Outreach –** While this is somewhat covered in the points below, reaching out to potential volunteers and making sure they are aware of your translation initiative can be effective in itself.
 
 A lot of people want to get involved and contribute to their favorite projects, but often don’t see a clear way of doing that without being a developer or having special technical skills. If you can spread awareness about your project, a lot of bilinguals will likely be keen to get involved.
 
@@ -297,8 +304,6 @@ This could be as simple as adding a banner or pop-up with a CTA to your product 
 If you have a Discord server or Telegram channel, it is easy to use that for outreach, communication with your translators, and acknowledging your contributors.
 
 Platforms like Twitter can also be helpful for onboarding new community members and publicly acknowledging your contributors.
-
- 
 
 The Linux Foundation has created an extensive report on the [2020 FOSS open-source contributor survey](https://www.linuxfoundation.org/wp-content/uploads/2020FOSSContributorSurveyReport_121020.pdf), analyzing open-source contributors and their motivations.
 
