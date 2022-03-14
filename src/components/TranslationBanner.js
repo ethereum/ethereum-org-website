@@ -138,13 +138,13 @@ const TranslationBanner = ({
           </p>
           <ButtonRow>
             <div>
-              <ButtonLink to="/en/contributing/translation-program/">
+              <ButtonLink to="/contributing/translation-program/">
                 <Translation id="translation-banner-button-translate-page" />
               </ButtonLink>
             </div>
             {!isPageContentEnglish && (
               <div>
-                <SecondaryButtonLink isSecondary to={`/en${originalPagePath}`}>
+                <SecondaryButtonLink isSecondary to={`${originalPagePath}`}>
                   <Translation id="translation-banner-button-see-english" />
                 </SecondaryButtonLink>
               </div>

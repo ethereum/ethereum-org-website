@@ -34,11 +34,11 @@ Kami ingin agar minat pengguna kami terusik dan pertanyaan mereka dijawab. Jadi 
 
 ### 2. ethereum.org selalu berkembang 🛠 {#core-principles-2}
 
-Ethereum dan komunitas selalu berkembang, begitu juga ethereum.org. Itu sebabnya situs ini memiliki sistem desain sederhana & struktur modular. Kami membuat perubahan berulang saat kami mempelajari lebih lanjut tentang bagaimana orang menggunakan situs dan apa yang diinginkan komunitas darinya.
+Ethereum dan komunitas selalu berkembang, begitu juga ethereum.org. Itu sebabnya situs ini memiliki sistem desain sederhana dan struktur modular. Kami membuat perubahan berulang saat kami mempelajari lebih lanjut tentang bagaimana orang menggunakan situs dan apa yang diinginkan komunitas darinya.
 
 Kami adalah sumber daya terbuka, dengan komunitas kontributor, sehingga Anda dapat mengusulkan perubahan atau membantu kami juga.
 
-[Pelajari tentang berkontribusi](/en/contributing/)
+[Pelajari tentang berkontribusi](/contributing/)
 
 ### 3. ethereum.org bukan situs web produk biasa 🦄 {#core-principles-3}
 
@@ -48,15 +48,15 @@ Ethereum adalah hal yang besar: itu mencakup komunitas, teknologi, serangkaian i
 
 ## Prinsip desain {#design-principles}
 
-Kami menggunakan serangkaian [prinsip desain](/en/contributing/design-principles/) untuk memandu konten dan pilihan desain kami di situs.
+Kami menggunakan serangkaian [prinsip desain](/contributing/design-principles/) untuk memandu pemilihan konten dan desain kami di situs.
 
 ## Panduan gaya penulisan {#style-guide}
 
-Kami memiliki [panduan gaya penulisan](/en/contributing/style-guide/) untuk menstandardisasi beberapa aspek penulisan konten agar proses kontribusi lebih mudah.
+Kami memiliki [panduan gaya penulisan](/contributing/style-guide/) untuk menstandardisasi beberapa aspek penulisan konten agar proses kontribusi lebih mudah.
 
 Kami menyambut umpan balik baik untuk prinsip desain maupun panduan gaya penulisan. Ingat, ethereum.org adalah untuk komunitas, oleh komunitas.
 
-Pastikan Anda membaca [prinsip-prinsip kami](/en/contributing/design-principles/) dan [panduan gaya penulisan kami](/en/contributing/style-guide/) jika Anda ingin [berkontribusi ke situs ini](/en/contributing/).
+Pastikan Anda membaca [prinsip-prinsip kami](/contributing/design-principles/) dan [panduan gaya penulisan kami](/contributing/style-guide/) jika Anda ingin [berkontribusi ke situs ini](/contributing/).
 
 ## Rencana kerja {#roadmap}
 

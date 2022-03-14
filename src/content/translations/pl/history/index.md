@@ -137,7 +137,7 @@ Fork Istanbul:
 
 - Zoptymalizował koszt <a href="/glossary/#gas">gazu</a> w niektórych działaniach [EVM](/developers/docs/ethereum-stack/#ethereum-virtual-machine).
 - Poprawa odporności na ataki typu „denial-of-service”.
-- Poprawił działanie rozwiązań [skalowania warstwy 2](/developers/docs/scaling/layer-2-rollups/) opartych na SNARKs i STARKs.
+- Poprawił działanie rozwiązań [skalowania warstwy 2](/developers/docs/scaling/#rollups) opartych na SNARKs i STARKs.
 - Umożliwił współpracę Ethereum i Zcash.
 - Umożliwił wprowadzenie bardziej kreatywnych funkcji kontraktu.
 
@@ -145,7 +145,7 @@ Fork Istanbul:
 
 <ExpandableCard title="EIP Istanbul" contentPreview="Official improvements included in this fork.">
 
-- [EIP-152](https://eips.ethereum.org/EIPS/eip-152) – _umożliwia Ethereum korzystanie z waluty chroniącej prywatność takiej jak Zcash._- [EIP-1108](https://eips.ethereum.org/EIPS/eip-1108) – _tańsza kryptografia w celu obniżenia kosztów [gas](/glossary/#gas)._- [EIP-1344](https://eips.ethereum.org/EIPS/eip-1344) – _chroni Ethereum przed atakami metodą powtórzenia dzięki dodaniu [opcode] `CHAINID` (/developers/docs/ethereum-stack/#ethereum-virtual-machine)._- [EIP-1884](https://eips.ethereum.org/EIPS/eip-1884) – _optymalizacja cen gazu dla kodów operacyjnych na podstawie zużycia._- [EIP-2028](https://eips.ethereum.org/EIPS/eip-2028) – _ograniczenie kosztów CallData w celu zwiększenia ilość danych w blokach – korzystne dla [skalowania warstwy 2](/developers/docs/scaling/layer-2-rollups/)._- [EIP-2200](https://eips.ethereum.org/EIPS/eip-2200) – _inne zmiany dotyczące cen gazu dla kodów operacyjnych._
+- [EIP-152](https://eips.ethereum.org/EIPS/eip-152) – _umożliwia Ethereum korzystanie z waluty chroniącej prywatność takiej jak Zcash._- [EIP-1108](https://eips.ethereum.org/EIPS/eip-1108) – _tańsza kryptografia w celu obniżenia kosztów [gas](/glossary/#gas)._- [EIP-1344](https://eips.ethereum.org/EIPS/eip-1344) – _chroni Ethereum przed atakami metodą powtórzenia dzięki dodaniu [opcode] `CHAINID` (/developers/docs/ethereum-stack/#ethereum-virtual-machine)._- [EIP-1884](https://eips.ethereum.org/EIPS/eip-1884) – _optymalizacja cen gazu dla kodów operacyjnych na podstawie zużycia._- [EIP-2028](https://eips.ethereum.org/EIPS/eip-2028) – _ograniczenie kosztów CallData w celu zwiększenia ilość danych w blokach – korzystne dla [skalowania warstwy 2](/developers/docs/scaling/#rollups)._- [EIP-2200](https://eips.ethereum.org/EIPS/eip-2200) – _inne zmiany dotyczące cen gazu dla kodów operacyjnych._
 
 </ExpandableCard>
 
@@ -189,13 +189,13 @@ Fork Byzantium:
 - Zmniejszenie nagród za [wydobywanie](/developers/docs/consensus-mechanisms/pow/mining/) bloków z 5 do 3 ETH.
 - Opóźnienie o rok [bomby trudności](/glossary/#difficulty-bomb).
 - Dodano możliwość wykonywania niezmieniających stanów wywołań innych kontraktów.
-- Dodano niektóre metody kryptografii, aby umożliwić [skalowanie warstwy 2](/developers/docs/scaling/layer-2-rollups/).
+- Dodano niektóre metody kryptografii, aby umożliwić [skalowanie warstwy 2](/developers/docs/scaling/#rollups).
 
 [Przeczytaj ogłoszenie Fundacji Ethereum](https://blog.ethereum.org/2017/10/12/byzantium-hf-announcement/)
 
 <ExpandableCard title="EIP Byzantium" contentPreview="Official improvements included in this fork.">
 
-- [EIP-140](https://eips.ethereum.org/EIPS/eip-140) – _dodaje kod operacyjny `REVERT._- [EIP-658](https://eips.ethereum.org/EIPS/eip-658) – _do pokwitowań transakcji dodano pole statusu, aby wskazać powodzenie lub niepowodzenie._- [EIP-196](https://eips.ethereum.org/EIPS/eip-196) – _dodaje krzywą eliptyczną i mnożenie skalarne, aby zezwolić na [ZK-Snarks](/developers/docs/scaling/layer-2-rollups/#zk-rollups)._- [EIP-197](https://eips.ethereum.org/EIPS/eip-197) – _dodaje krzywą eliptyczną i mnożenie skalarne, aby zezwolić na [ZK-Snarks](/developers/docs/scaling/layer-2-rollups/#zk-rollups)._- [EIP-198](https://eips.ethereum.org/EIPS/eip-198) – _umożliwia weryfikację podpisu RSA._- [EIP-211](https://eips.ethereum.org/EIPS/eip-211) – _dodaje obsługę wartości zwracanych o różnych długościach._- [EIP-214](https://eips.ethereum.org/EIPS/eip-214) – _dodaje kod operacyjny `STATICCALL` umożliwiający wykonywanie niezmieniających stanu wywołań innych kontraktów._- [EIP-100](https://eips.ethereum.org/EIPS/eip-100) – _zmienia wzór dostosowywania trudności._- [EIP-649](https://eips.ethereum.org/EIPS/eip-649) – _opóźnia [bombę trudności](/glossary/#difficulty-bomb) o 1 rok i zmniejsza nagrody za blok z 5 do 3 ETH._
+- [EIP-140](https://eips.ethereum.org/EIPS/eip-140) – _dodaje kod operacyjny `REVERT._- [EIP-658](https://eips.ethereum.org/EIPS/eip-658) – _do pokwitowań transakcji dodano pole statusu, aby wskazać powodzenie lub niepowodzenie._- [EIP-196](https://eips.ethereum.org/EIPS/eip-196) – _dodaje krzywą eliptyczną i mnożenie skalarne, aby zezwolić na [ZK-Snarks](/developers/docs/scaling/zk-rollups/)._- [EIP-197](https://eips.ethereum.org/EIPS/eip-197) – _dodaje krzywą eliptyczną i mnożenie skalarne, aby zezwolić na [ZK-Snarks](/developers/docs/scaling/zk-rollups/)._- [EIP-198](https://eips.ethereum.org/EIPS/eip-198) – _umożliwia weryfikację podpisu RSA._- [EIP-211](https://eips.ethereum.org/EIPS/eip-211) – _dodaje obsługę wartości zwracanych o różnych długościach._- [EIP-214](https://eips.ethereum.org/EIPS/eip-214) – _dodaje kod operacyjny `STATICCALL` umożliwiający wykonywanie niezmieniających stanu wywołań innych kontraktów._- [EIP-100](https://eips.ethereum.org/EIPS/eip-100) – _zmienia wzór dostosowywania trudności._- [EIP-649](https://eips.ethereum.org/EIPS/eip-649) – _opóźnia [bombę trudności](/glossary/#difficulty-bomb) o 1 rok i zmniejsza nagrody za blok z 5 do 3 ETH._
 
 </ExpandableCard>
 

@@ -440,8 +440,8 @@ const EthPage = (props) => {
           <Divider />
         </CentralColumn>
         <StyledCalloutBanner
-          title={translateMessageId("page-eth-where-to-buy", intl)}
-          description={translateMessageId("page-eth-where-to-buy-desc", intl)}
+          titleKey={"page-eth-where-to-buy"}
+          descriptionKey={"page-eth-where-to-buy-desc"}
           image={getImage(data.ethCat)}
           alt={translateMessageId("page-eth-cat-img-alt", intl)}
           maxImageWidth={300}

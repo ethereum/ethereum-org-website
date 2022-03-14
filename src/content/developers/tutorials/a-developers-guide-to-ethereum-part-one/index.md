@@ -116,7 +116,7 @@ This will print out some information about the versions of Python and IPython yo
 In [1]:
 ```
 
-You’re looking at an interactive Python shell now. Essentially, its a sandbox to play in. If you’ve made it this far, its time to import Web.py:
+You’re looking at an interactive Python shell now. Essentially, its a sandbox to play in. If you’ve made it this far, its time to import Web3.py:
 
 ```python
 In [1]: from web3 import Web3
@@ -248,7 +248,8 @@ We’re stuck at block zero until there’s a transaction to mine, so let’s gi
 In [10]: tx_hash = w3.eth.send_transaction({
    'from': w3.eth.accounts[0],
    'to': w3.eth.accounts[1],
-   'value': w3.toWei(3, 'ether')
+   'value': w3.toWei(3, 'ether'),
+   'gas': 21000
 })
 ```
 
@@ -282,13 +283,13 @@ We can also easily verify the success of this transaction by checking the balanc
 
 ```python
 In [12]: w3.eth.get_balance(w3.eth.accounts[0])
-Out[12]: 999996999999999999979000
+Out[12]: 999996999999999999969000
 
 In [13]: w3.eth.get_balance(w3.eth.accounts[1])
 Out[13]: 1000003000000000000000000
 ```
 
-The latter looks good! The balance went from 1,000,000 to 1,000,003 ether. But what happened to the first account? It appears to have lost slightly more than three ether. Alas, nothing in life is free, and using the Ethereum public network requires that you compensate your peers for their supporting role. A small transaction fee was deducted from the account making the transaction to the tune of 21000 wei.
+The latter looks good! The balance went from 1,000,000 to 1,000,003 ether. But what happened to the first account? It appears to have lost slightly more than three ether. Alas, nothing in life is free, and using the Ethereum public network requires that you compensate your peers for their supporting role. A small transaction fee was deducted from the account making the transaction to the tune of 31000 wei.
 
 <div class="featured">Note: On the public network, transaction fees are variable based on network demand and how quickly you'd like a transaction to be processed. If you're interested in a breakdown of how fees are calculated, see my earlier post on <a href="https://medium.com/ethereum-grid/ethereum-101-how-are-transactions-included-in-a-block-9ae5f491853f">how transactions are included in a block</a>.</div>
 

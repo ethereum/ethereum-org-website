@@ -56,10 +56,10 @@ This is what we will be using in this tutorial.
 
 Okay, now that we have a few of these questions out of the way, let’s move on to the tutorial. Feel free to ask questions anytime in the Alchemy [discord](https://discord.gg/gWuC7zB)!
 
-**NOTE:** This guide requires an Alchemy account, an Ethereum address or Metamask wallet, NodeJs, and npm installed. If not, follow these steps:
+**NOTE:** This guide requires an Alchemy account, an Ethereum address or MetaMask wallet, NodeJs, and npm installed. If not, follow these steps:
 
 1.  [Create a free Alchemy account](https://dashboard.alchemyapi.io/signup/)
-2.  [Create Metamask account](https://metamask.io/) (or get an Ethereum address)
+2.  [Create MetaMask account](https://metamask.io/) (or get an Ethereum address)
 3.  [Follow these steps to install NodeJs and NPM](https://docs.alchemy.com/alchemy/guides/alchemy-for-macs)
 
 ## Steps to Sending your Transaction {#steps-to-sending-your-transaction}
@@ -70,7 +70,7 @@ Navigate to your [Alchemy Dashboard](https://dashboard.alchemyapi.io/) and creat
 
 ### 2\. Request ETH from the Rinkeby faucet {#request-eth-from-rinkeby-faucet}
 
-Follow the instructions on the [Alchemy Rinkeby faucet](https://www.rinkebyfaucet.com/) to receive ETH. Make sure to include your **Rinkeby** Ethereum address (from Metamask) and not another network. After following the instructions, double-check that you’ve received the ETH in your wallet.
+Follow the instructions on the [Alchemy Rinkeby faucet](https://www.rinkebyfaucet.com/) to receive ETH. Make sure to include your **Rinkeby** Ethereum address (from MetaMask) and not another network. After following the instructions, double-check that you’ve received the ETH in your wallet.
 
 ### 3\. Create a new project directory and `cd` into it {#create-a-new-project-direction}
 
@@ -99,15 +99,19 @@ npm install dotenv --save
 
 ### 6\. Create the .env file {#create-the-dotenv-file}
 
-Create a .env file in your project directory and add the following (replacing “`your-api-url`" and "`your-private-key`")
+Create a `.env` file in your project directory and add the following (replacing “`your-api-url`" and "`your-private-key`")
 
 - To find your Alchemy API URL, navigate to the app details page of the app you just created on your dashboard, click “View Key” in the top right corner, and grab the HTTP URL.
-- To find your private key using Metamask, check out this [guide](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key).
+- To find your private key using MetaMask, check out this [guide](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key).
 
 ```
 API_URL = "your-api-url"
 PRIVATE_KEY = "your-private-key"
 ```
+
+<InfoBanner isWarning={true}>
+Don't commit <code>.env</code>! Please make sure never to share or expose your <code>.env</code> file with anyone, as you are compromising your secrets in doing so. If you are using version control, add your <code>.env</code> to a <a href="https://git-scm.com/docs/gitignore">gitignore</a> file.
+</InfoBanner>
 
 ### 7\. Create `sendTx.js` file {#create-sendtx-js}
 

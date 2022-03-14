@@ -193,7 +193,7 @@ const H2 = styled.h2`
 //       background: "#fff",
 //       name: "Solidity",
 //       description:
-//         "Solidity, the Contract-Oriented Programming Language. Inspired by C++ and Javascript.",
+//         "Solidity, the Contract-Oriented Programming Language. Inspired by C++ and JavaScript.",
 //     },
 //     {
 //       id: "vyper",
@@ -295,7 +295,6 @@ const frameworksList = [
     githubUrl: "https://github.com/nomiclabs/hardhat",
     background: "#faf8fb",
     name: "Hardhat",
-    image: "https://hardhat.org/assets/img/Hardhat-logo.652a7049.svg",
     description: "page-local-environment-hardhat-desc",
     alt: "page-local-environment-hardhat-logo-alt",
   },
@@ -564,7 +563,7 @@ const ChooseStackPage = ({ data }) => {
         <Subtitle>Frontend JavaScript libraries</Subtitle>
         <p>Description</p>
         <Link to="/developers/docs/apis/javascript/">
-          More on Javascript libraries
+          More on JavaScript libraries
         </Link>
         <CardGrid>
           {jslibraries.map((jslibrary, idx) => {
@@ -620,6 +619,9 @@ export const query = graphql`
           quality: 100
         )
       }
+    }
+    hardhat: file(relativePath: { eq: "dev-tools/hardhat.png" }) {
+      ...devtoolImage
     }
     dapptools: file(relativePath: { eq: "dev-tools/dapptools.png" }) {
       ...devtoolImage

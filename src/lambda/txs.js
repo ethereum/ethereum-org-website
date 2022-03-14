@@ -1,6 +1,6 @@
 const axios = require("axios")
 
-const handler = async () => {
+const lambda = async (apiKey) => {
   try {
     const daysToFetch = 90
     const now = new Date()
@@ -9,7 +9,7 @@ const handler = async () => {
       .toISOString()
       .split("T")[0] // {daysToFetch} days ago
     const response = await axios.get(
-      `https://api.etherscan.io/api?module=stats&action=dailytx&startdate=${startDate}&enddate=${endDate}&sort=asc&apikey=${process.env.ETHERSCAN_API_KEY}`
+      `https://api.etherscan.io/api?module=stats&action=dailytx&startdate=${startDate}&enddate=${endDate}&sort=asc&apikey=${apiKey}`
     )
     if (response.status < 200 || response.status >= 300) {
       return { statusCode: response.status, body: response.statusText }
@@ -25,4 +25,8 @@ const handler = async () => {
   }
 }
 
-module.exports = { handler }
+const handler = () => {
+  return lambda(process.env.ETHERSCAN_API_KEY)
+}
+
+module.exports = { handler, lambda }

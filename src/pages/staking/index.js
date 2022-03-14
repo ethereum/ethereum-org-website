@@ -72,7 +72,8 @@ const StyledCard = styled(Card)`
 `
 
 const BoxText = styled.div`
-  font-size: 1.25rem;`
+  font-size: 1.25rem;
+`
 
 const Box = styled.div`
   padding: 1.5rem;
@@ -269,6 +270,14 @@ const StakingPage = ({ data, location }) => {
               <H3>
                 <Translation id="page-staking-pool" />
               </H3>
+              <p>
+                <Translation id="page-staking-rocket-pool" />
+              </p>
+              <p>
+                <Link to="https://rocketpool.net">
+                  <Translation id="Learn more on their website" />
+                </Link>
+              </p>
               <p>
                 <Translation id="page-staking-pool-desc" />
               </p>

@@ -11,8 +11,8 @@ The Translation Program is a collaborative effort to translate ethereum.org into
 
 Our progress so far:
 
-- [**2,500 +** translators](/contributing/translation-program/acknowledgements/)
-- [**40** languages live on site](/languages/)
+- [**3,200 +** translators](/contributing/translation-program/acknowledgements/)
+- [**43** languages live on site](/languages/)
 - [**2.9 million** words translated in 2021](/contributing/translation-program/acknowledgements/)
 
 If you want to get involved and help us grow the global Ethereum community by translating the website into your language, follow the steps below!
@@ -47,7 +47,7 @@ The ethereum.org Translation Program aims to make Ethereum accessible to everyon
 
 <InfoBanner shouldCenter emoji=":light_bulb:">
   We encourage you to check out the ethereum.org Translation Style Guide. It contains some of the most important guidelines, instructions, and tips for translators to help localize the website.
-  {" "}<Link to="/en/contributing/translation-program/translators-guide/">View the Translation Style Guide</Link>
+  {" "}<Link to="/contributing/translation-program/translators-guide/">View the Translation Style Guide</Link>
 </InfoBanner>
 
 1. **[Join our project on Crowdin](https://crowdin.com/project/ethereum-org/invite)**  
@@ -119,15 +119,16 @@ If you are an ethereum.org translator or would like to become one, feel free to 
 
 <InfoBanner shouldCenter emoji=":information_source:">
   If you're helping us with translations, you might find some useful information in our translations FAQ.
-  {" "}<Link to="/en/contributing/translation-program/faq/">Translating ethereum.org FAQ</Link>
+  {" "}<Link to="/contributing/translation-program/faq/">Translating ethereum.org FAQ</Link>
 </InfoBanner>
 
 ## Resources {#resources}
 
 ### Guides {#guides}
 
-- [Translation Style Guide](/contributing/translation-program/translators-guide/) _– Instructions and tips for ethereum.org translators_
-- [Translation FAQs](/contributing/translation-program/faq/) _– Frequently asked questions and answers about the ethereum.org Translation Program_
+- [Translation Style Guide](/contributing/translation-program/translators-guide/) _– instructions and tips for ethereum.org translators_
+- [Translation FAQs](/contributing/translation-program/faq/) _– frequently asked questions and answers about the ethereum.org Translation Program_
+- [Crowdin online editor guide](https://support.crowdin.com/online-editor/) _– an in-depth guide to using the Crowdin online editor and some of Crowdin's advanced features_
 - [Content buckets](/contributing/translation-program/content-buckets/) _– which pages are included in each content bucket of ethereum.org_
 
 ### Tools {#tools}
@@ -166,6 +167,15 @@ To keep up-to-date with the latest Translation Program progress, you can follow 
 Our translation community is also working on the [Staking Launchpad](https://launchpad.ethereum.org/en/). This allows anyone to set up an Ethereum validator and help secure the Ethereum network. The Launchpad is currently live in 17 languages.
 
 If you're interested, [join the Ethereum Staking Launchpad translation project on Crowdin](https://crowdin.com/project/ethereum-staking-launchpad). You can [create an issue](https://github.com/ethereum/staking-launchpad/issues/new) on GitHub to request the addition of a new language, if your language is not available on Crowdin.
+
+## Starting your own translation program {#starting-a-translation-program}
+
+We are dedicated to translating Ethereum content into as many languages as possible and making educational content available to everyone.
+In line with our focus on translations, we want to help other Ethereum projects organize, manage, and improve their own translation efforts.
+
+For this reason, we have created a [Translation Program playbook](/contributing/translation-program/playbook/) that contains some tips and best practices we have picked up in the process of translating ethereum.org.
+
+Want to collaborate further or use some of our translation resources? Have any feedback on the playbook? We would love to hear from you at translations@ethereum.org.
 
 ## In-progress translations {#in-progress}
 

@@ -29,10 +29,12 @@ If you are bilingual and want to help us reach more people, you can also get inv
 
 - [BeInCrypto](http://www.beincrypto.com.br) - cryptocurrency news and articles, including a list of exchanges, available in Brazil
 - [Cointelegraph](http://cointelegraph.com.br/category/analysis) - Brazilian version of Cointelegraph, a major cryptocurrency news outlet
+- [Livecoins](http://www.livecoins.com.br/ethereum) - cryptocurrency news and tools
 - [Seudinheiro](http://www.seudinheiro.com/criptomoedas/) - cryptocurrency news and reports
 
 **Education**
 
+- [web3dev](https://www.web3dev.com.br/) - Content hub and Discord community for web 3 developers.
 - [Web3Brasil](https://github.com/web3brasil/web3brasil) - resources for learning Web3 and DeFi
 - [CriptoFacil](http://www.criptofacil.com/ultimas-noticias/) - cryptocurrency news and education, including ‘Ethereum for beginners’ and ‘DeFi’ for beginners
 - [CriptoAtivos](http://www.criptoativos.wiki.br/) - insights from the cryptocurrency space, education and blog
@@ -63,8 +65,8 @@ If you are bilingual and want to help us reach more people, you can also get inv
 
 **For cryptography researchers**
 
-- [SecbitLabs](https://mp.weixin.qq.com/s/69_tqBJpr_sbaKtR1sBRMw) - a WeChat acccount, explaining cryptography, security, etc.
-- [Sparkbyte](https://mp.weixin.qq.com/s/9KgKTc_jtJ7bWKdbNPoqvQ) - a WeChat acccount, explaining zk technology
+- [SecbitLabs](https://mp.weixin.qq.com/s/69_tqBJpr_sbaKtR1sBRMw) - a WeChat account, explaining cryptography, security, etc.
+- [Sparkbyte](https://mp.weixin.qq.com/s/9KgKTc_jtJ7bWKdbNPoqvQ) - a WeChat account, explaining zk technology
 
 ### French {#fr}
 

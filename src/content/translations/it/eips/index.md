@@ -30,9 +30,15 @@ Gli editor di EIP devono revisionare le EIP verificando solidità tecnica, gramm
 - Alex Beregszaszi (EWASM/Ethereum Foundation)
 - Greg Colvin (Community)
 - Casey Detrio (EWASM/Ethereum Foundation)
+- Matt Garnett (Quilt)
 - Hudson James (Ethereum Foundation)
 - Nick Johnson (ENS)
-- Nick Savers (Community)
+- Nick Savers (comunità)
+- Micah Zoltu (comunità)
+
+I redattori delle EIP, insieme ai membri della comunità di [Ethereum Cat Herders](https://ethereumcatherders.com/) e [Ethereum Magicians](https://ethereum-magicians.org/), stanno decidendo quale EIP implementare, sono responsabili della promozione delle EIP nonché dello spostamento di esse alla fase "Finale" o "Ritirata".
+
+Il processo di standardizzazione completa insieme al grafico sono descritti in [EIP-1](https://eips.ethereum.org/EIPS/eip-1)
 
 ## Maggiori informazioni {#learn-more}
 
@@ -44,7 +50,9 @@ Se ti interessa leggere di più sulle EIP, dai un'occhiata al [sito web delle EI
 
 ## Partecipa {#participate}
 
-Se ti interessa partecipare o condividere il tuo input sulle EIP, dai un'occhiata al [forum Ethereum Magicians](https://ethereum-magicians.org/), dove le EIP sono discusse con la community.
+Chiunque può creare EIP o ERC sebbene dovresti leggere [EIP-1](https://eips.ethereum.org/EIPS/eip-1), che delinea il processo dell'EPI, cos'è, i suoi tipi, che documentazione dovrebbe contenere, il formato e il modello, l'elenco degli Editor di EIP e tutto ciò che devi sapere a riguardo prima di crearne una. La tua nuova EIP dovrebbe definire nuove funzionalità che non siano ancora molto complesse, ma non super di nicchia e utilizzabili nei progetti dell'ecosistema di Ethereum. La parte più dura è la facilitazione, tu come autore devi facilitare le persone intorno alla tua EIP, raccogliere feedback, scrivere articoli descriventi i problemi risolti dalla tua EIP e collaborare ai progetti per implementarla.
+
+Se sei interessato a seguire il processo di discussione o condividere che pensi sulle EIP, dai un'occhiata al [forum dei Magicians di Ethereum](https://ethereum-magicians.org/), dove le EIP sono discusse con la community.
 
 Vedi anche:
 

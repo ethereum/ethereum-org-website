@@ -37,6 +37,7 @@
   "page-index-developers": "Otevřený vývoj",
   "page-index-developers-description": "Ethereum a jeho aplikace jsou transparentní a open source. Můžete forknout kód a znovu použít funkce, které již ostatní vytvořili. Pokud se nechcete učit nový jazyk, můžete komunikovat s otevřeným kódem pomocí JavaScriptu a dalších existujících jazyků.",
   "page-index-developers-button": "Vývojářský portál",
+  "page-index-developers-code-examples": "Code examples",
   "page-index-developers-code-example-title-0": "Vaše vlastní banka",
   "page-index-developers-code-example-description-0": "Můžete vytvořit vlastní banku s pravidly, která naprogramujete.",
   "page-index-developers-code-example-title-1": "Vaše vlastní měna",

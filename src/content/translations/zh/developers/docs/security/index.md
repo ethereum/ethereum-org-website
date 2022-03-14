@@ -77,7 +77,7 @@ contract Victim {
 2. 发送用户的余额
 3. 将余额重置为 0，因此它们不能再次提取余额。
 
-如果收到来自一个普通帐户的调用（例如你自己的 Metamask 帐户），这个函数 msg.sender.call.value() 能够发送你的帐户里的 ETH。 但是，智能合约也能调用其他合约。 如果一个自制的恶意合约调用 `withdraw()`，msg.sender.call.value() 会不仅发送 `amount` 个 ETH，还会暗中调用合约来开始执行代码。 想象这个恶意合约：
+如果收到来自一个普通帐户的调用（例如你自己的 MetaMask 帐户），这个函数 msg.sender.call.value() 能够发送你的帐户里的 ETH。 但是，智能合约也能调用其他合约。 如果一个自制的恶意合约调用 `withdraw()`，msg.sender.call.value() 会不仅发送 `amount` 个 ETH，还会暗中调用合约来开始执行代码。 想象这个恶意合约：
 
 ```solidity
 contract Attacker {

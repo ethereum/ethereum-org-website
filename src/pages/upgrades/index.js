@@ -317,8 +317,8 @@ const Eth2IndexPage = ({ data }) => {
       <StyledCallout
         image={getImage(data.oldship)}
         alt={translateMessageId("page-eth-whats-eth-hero-alt", intl)}
-        titleKey="page-upgrades-dive"
-        descriptionKey="page-upgrades-dive-desc"
+        titleKey={"page-upgrades-dive"}
+        descriptionKey={"page-upgrades-dive-desc"}
       >
         <div>
           <ButtonLink to="/upgrades/vision/">
@@ -622,6 +622,23 @@ const Eth2IndexPage = ({ data }) => {
               <p>
                 <Link to="/staking/">
                   <Translation id="page-staking-deposit-contract-staking-more-link" />
+                </Link>
+              </p>
+            </ExpandableCard>
+            <ExpandableCard
+              contentPreview={translateMessageId(
+                "page-upgrades-question-11-desc",
+                intl
+              )}
+              title={translateMessageId(
+                "page-upgrades-question-11-title",
+                intl
+              )}
+            >
+              <p>
+                <Translation id="page-upgrades-question-11-answer-1" />
+                <Link to="/security/#eth2-token-scam/">
+                  <Translation id="page-upgrades-question-11-answer-2" />
                 </Link>
               </p>
             </ExpandableCard>

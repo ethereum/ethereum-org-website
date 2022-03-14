@@ -69,7 +69,7 @@ const Roadmap = () => {
     axios
       .get(
         process.env.NODE_ENV === "production"
-          ? "/.netlify/functions/roadmap"
+          ? `${process.env.GATSBY_FUNCTIONS_PATH}/roadmap`
           : "http://localhost:9000/roadmap"
       )
       .then((response) => {

@@ -54,7 +54,6 @@ L'ETH des réseaux de test n'a pas de valeur réelle, il n'existe donc pas de ma
 - [Robinet Görli](https://faucet.goerli.mudit.blog/)
 - [Robinet Kovan](https://faucet.kovan.network/)
 - [Robinet Rinkeby](https://faucet.rinkeby.io/)
-- [Robinet Ropsten](https://faucet.ropsten.be/)
 
 ## Réseaux privés {#private-networks}
 

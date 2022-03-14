@@ -27,13 +27,13 @@ A greener future for Ethereum is already being built in the form of a [**proof-o
 
 Similarly to proof-of-work, a malicious entity would require at least 51% of the total ETH staked in the network to execute a [51% attack](/glossary/#51-attack). However, unlike on proof-of-work, where the potential loss of a failed attack is only the cost of generating the hash power needed to mine, on proof-of-stake, the possible loss of an attack is the entire amount of ETH used as collateral. This disincentive structure allows for network security with proof-of-stake while eliminating the need to expend energy on arbitrary computations. Detailed explanations of the network security under proof-of-stake can be found [here](/developers/docs/consensus-mechanisms/pos/) and [here](https://vitalik.ca/general/2017/12/31/pos_faq.html).
 
-## The merge {#the-merge}
+## The Merge {#the-merge}
 
-There is a functional proof-of-stake chain called the [Beacon Chain](/upgrades/beacon-chain/) that has been running since December 2020 that is demonstrating the viability of the proof-of-stake protocol. The merge refers to the point in time when Ethereum leaves proof-of-work behind and fully adopts proof-of-stake. The merge is expected to happen ~Q2 2022. [More on the merge](/upgrades/merge/).
+There is a functional proof-of-stake chain called the [Beacon Chain](/upgrades/beacon-chain/) that has been running since December 2020 that is demonstrating the viability of the proof-of-stake protocol. The Merge refers to the point in time when Ethereum leaves proof-of-work behind and fully adopts proof-of-stake. The Merge is expected to happen ~Q2 2022. [More on The Merge](/upgrades/merge/).
 
 ## Proof-of-stake energy expenditure {#proof-of-stake-energy}
 
-As well as building confidence in the proof-of-stake mechanism, the Beacon Chain also enables estimates of Ethereum's post-merge energy usage. A [recent estimate](https://blog.ethereum.org/2021/05/18/country-power-no-more/) suggested that the merge to proof-of-stake could result in a 99.95% reduction in total energy use, with proof-of-stake being ~2000x more energy-efficient than proof-of-work. The energy expenditure of Ethereum will be roughly equal to the cost of running a home computer for each node on the network.
+As well as building confidence in the proof-of-stake mechanism, the Beacon Chain also enables estimates of Ethereum's post-merge energy usage. A [recent estimate](https://blog.ethereum.org/2021/05/18/country-power-no-more/) suggested that The Merge to proof-of-stake could result in a 99.95% reduction in total energy use, with proof-of-stake being ~2000x more energy-efficient than proof-of-work. The energy expenditure of Ethereum will be roughly equal to the cost of running a home computer for each node on the network.
 
 ![image](energy_use_per_transaction.png)
 
@@ -70,6 +70,7 @@ While Ethereum's energy consumption has historically been substantial, there has
 ## Further reading {#further-reading}
 
 - [A country's worth of power, no more](https://blog.ethereum.org/2021/05/18/country-power-no-more/) – _Carl Beekhuizen, May 18 2021_
+- [Ethereum's energy consumption](https://mirror.xyz/jmcook.eth/ODpCLtO4Kq7SCVFbU4He8o8kXs418ZZDTj0lpYlZkR8)
 - [Ethereum Emissions: A Bottom-up Estimate](https://kylemcdonald.github.io/ethereum-emissions/) _ Kyle McDonald_
 - [Ethereum Energy Consumption Index](https://digiconomist.net/ethereum-energy-consumption/) – _Digiconomist_
 - [ETHMerge.com](https://ethmerge.com/) — *[@InsideTheSim](https://twitter.com/InsideTheSim)*
@@ -78,7 +79,7 @@ While Ethereum's energy consumption has historically been substantial, there has
 
 - [Ethereum's vision](/upgrades/vision/)
 - [The Beacon Chain](/upgrades/beacon-chain)
-- [The merge](/upgrades/merge/)
+- [The Merge](/upgrades/merge/)
 - [Sharding](/upgrades/beacon-chain/)
 
 ### Footnotes and sources {#footnotes-and-sources}

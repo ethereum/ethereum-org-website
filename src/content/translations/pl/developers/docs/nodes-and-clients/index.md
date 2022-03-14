@@ -57,7 +57,7 @@ Prowadzenie własnego węzła umożliwia korzystanie z Ethereum w sposób napraw
 
 - Twój węzeł samodzielnie weryfikuje wszystkie transakcje i bloki pod kątem zasad konsensusu. Oznacza to, że nie musisz polegać na żadnych innych węzłach w sieci ani w pełni im zaufać.
 - Nie będziesz musiał ujawniać swoich adresów i sald do przypadkowych węzłów. Wszystko można sprawdzić z własnym klientem.
-- Twoja zdecentralizowana aplikacja może być bezpieczniejsza i bardziej prywatna, jeśli używasz własnego węzła. [Metamask](https://metamask.io), [MyEtherWallet](https://myetherwallet.com) i kilka innych portfeli można łatwo skierować na swój własny lokalny węzeł.
+- Twoja zdecentralizowana aplikacja może być bezpieczniejsza i bardziej prywatna, jeśli używasz własnego węzła. [MetaMask](https://metamask.io), [MyEtherWallet](https://myetherwallet.com) i kilka innych portfeli można łatwo skierować na swój własny lokalny węzeł.
 
 ![Jak uzyskać dostęp do Ethereum za pośrednictwem aplikacji i węzłów](../../../../../developers/docs/nodes-and-clients/nodes.png)
 
@@ -233,5 +233,5 @@ W Internecie jest wiele instrukcji i informacji o klientach Ethereum, tutaj jest
 
 ## Powiązane samouczki {#related-tutorials}
 
-- [Uruchamianie węzła za pomocą Geth](/developers/tutorials/run-light-node-geth/) _– Jak pobrać, zainstalować i uruchomić Geth. Omówienie trybów synchronizacji, konsoli Javascript i więcej._
+- [Uruchamianie węzła za pomocą Geth](/developers/tutorials/run-light-node-geth/) _– Jak pobrać, zainstalować i uruchomić Geth. Omówienie trybów synchronizacji, konsoli JavaScript i więcej._
 - [Turn your Raspberry Pi 4 into an Eth 1.0 or Eth 2.0 node just by flashing the MicroSD card – Installation guide](/developers/tutorials/run-node-raspberry-pi/) _– Flash your Raspberry Pi 4, plug in an ethernet cable, connect the SSD disk and power up the device to turn the Raspberry Pi 4 into a full Ethereum 1.0 node or an Ethereum 2.0 node (beacon chain / validator)._

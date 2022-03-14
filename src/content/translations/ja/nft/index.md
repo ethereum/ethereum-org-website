@@ -64,7 +64,7 @@ NFT の世界は比較的新しいものです。 理論的には、NFT の扱�
 
 ethereum.org への貢献で、POAP NFT を取得できます。 これはイベントに参加したことを証明するコレクションです。 仮想通貨ミートアップの中には、POAP をイベントのチケットとして使用している場合もあります。 [貢献の詳細](/contributing/#poap).
 
-![ethereum.orgのPOAP](../../../../assets/use-cases/poap.png)
+![ethereum.orgのPOAP](./poap.png)
 
 #### ethereum.eth {#ethereum-dot-eth}
 
@@ -353,7 +353,7 @@ _また、Ethereum は金融取引だけでなく、アプリケーションの�
 
 While we wait for Eth2, products are moving to a "layer 2" technology known as rollups. Working on top of Ethereum, this technology lets you "roll up" or batch many transactions into a single one that is submitted to the chain. By moving as many things off the chain and only submitting the truly important bits (the cryptographic proofs), demand for block space will decrease. This will in turn lower the amount of computing power needed to create new blocks.
 
-[More on rollups and layer 2 technology](/developers/docs/scaling/layer-2-rollups/)
+[More on rollups and layer 2 technology](/developers/docs/scaling/#rollups)
 
 #### A more efficient NFT standard...
 

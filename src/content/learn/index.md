@@ -62,7 +62,7 @@ Ethereum currently uses a system called "proof-of-work". This allows the Ethereu
 
 You can learn more about [proof of work](/developers/docs/consensus-mechanisms/pow/) and [mining](/developers/docs/consensus-mechanisms/pow/mining/) within our developer documentation.
 
-After [the merge](/upgrades/merge/), Ethereum will be moving to a different system called "proof-of-stake". [Read more about consensus layer upgrades below](#consensus-layer-upgrades).
+After [The Merge](/upgrades/merge/), Ethereum will be moving to a different system called "proof-of-stake". [Read more about consensus layer upgrades below](#consensus-layer-upgrades).
 
 ## Clients and Nodes {#clients-and-nodes}
 
@@ -84,7 +84,7 @@ There are many efforts underway to make Ethereum more “scalable” by improvin
 
 “Layer 2” refers to technologies that are built “on top” of the base Ethereum protocol, enabling greater scalability without compromising on security. There are also “off-chain” technologies like side-chains, which enable greater scalability by making a different set of security tradeoffs.
 
-[More on Layer 2](/developers/docs/scaling/layer-2-rollups/)
+[More on Layer 2](/developers/docs/scaling/#layer-2-scaling)
 
 ## Consensus layer upgrades {#consensus-layer-upgrades}
 

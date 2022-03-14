@@ -107,6 +107,10 @@ The first of two [hard forks](#hard-fork) for the [Metropolis](#metropolis) deve
 
 ## C {#section-c}
 
+### checkpoint {#checkpoint}
+
+The [Beacon Chain](#beacon-chain) has a tempo divided into slots (12 seconds) and epochs (32 slots). The first slot in each epoch is a checkpoint. When a [supermajority](#supermajority) of validators attests to the link between two checkpoints, they can be [justified](#justification) and then when another checkpoint is justified on top, they can be [finalized](#finality).
+
 ### compiling {#compiling}
 
 Converting code written in a high-level programming language (e.g., [Solidity](#solidity)) into a lower-level language (e.g., EVM [bytecode](#bytecode)).
@@ -346,11 +350,15 @@ A denomination of [ether](#ether). 1 finney = 10<sup>15</sup> [wei](#wei). 10<su
 
 A change in protocol causing the creation of an alternative chain, or a temporal divergence in two potential block paths during mining.
 
+### fork-choice algorithm {#fork-choice-algorithm}
+
+The algorithm used to identify the head of the blockchain. On the execution layer the head of the chain is identified as the one with the greatest total difficulty behind it. This means the true head of the chain is the one that required the most work to mine it. On the consensus layer the algorithm observes the accumulated attestations from validators ([LMD_GHOST](#lmd-ghost)).
+
 ### fraud proof {#fraud-proof}
 
 A security model for certain [layer 2](#layer-2) solutions where, to increase speed, transactions are [rolled up](#rollups) into batches and submitted to Ethereum in a single transaction. They are assumed valid but can be challenged if fraud is suspected. A fraud proof will then run the transaction to see if fraud took place. This method increases the amount of transactions possible while maintaining security. Some [rollups](#rollups) use [validity proofs](#validity-proof).
 
-<DocLink to="/developers/docs/scaling/layer-2-rollups/#optimistic-rollups">
+<DocLink to="/developers/docs/scaling/optimistic-rollups/">
   Optimistic rollups
 </DocLink>
 
@@ -478,7 +486,7 @@ A JSON-encoded file that contains a single (randomly generated) [private key](#p
 
 An area of development focused on layering improvements on top of the Ethereum protocol. These improvements are related to [transaction](#transaction) speeds, cheaper [transaction fees](#transaction-fee), and transaction privacy.
 
-<DocLink to="/developers/docs/scaling/layer-2-rollups/">
+<DocLink to="/developers/docs/scaling/#layer-2-scaling">
   Layer 2
 </DocLink>
 
@@ -499,6 +507,10 @@ A special type of [contract](#smart-contract) that has no payable functions, no 
 An Ethereum client that does not store a local copy of the [blockchain](#blockchain), or validate blocks and [transactions](#transaction). It offers the functions of a [wallet](#wallet) and can create and broadcast transactions.
 
 <Divider />
+
+### LMD_GHOST {#lmd-ghost}
+
+The [fork-choice algorithm](#fork-choice-algorithm) used by Ethereum's consensus clients to identify the head of the chain. LMD-GHOST is an acronym standing for "Latest Message Driven Greediest Heaviest Observed SubTree" which means that the head of the chain is the block with the greatest accumulation of [attestations](#attestation) in its history.
 
 ## M {#section-m}
 
@@ -529,6 +541,10 @@ A network [node](#node) that finds valid [proof-of-work](#pow) for new blocks, b
 <DocLink to="/developers/docs/consensus-mechanisms/pow/mining/">
   Mining
 </DocLink>
+
+### Mint {#mint}
+
+Minting is the process of creating new tokens and bringing them into circulation so that they can be used. It's a decentralized mechanism to create a new token without the involvement of the central authority.
 
 <Divider />
 
@@ -577,7 +593,7 @@ When a [miner](#miner) finds a valid [block](#block), another miner may have pub
 
 A [rollup](#rollups) of transactions that use [fraud proofs](#fraud-proof) to offer increased [layer 2](#layer-2) transaction throughput while using the security provided by [Mainnet](#mainnet) (layer 1). Unlike [Plasma](#plasma), a similar layer 2 solution, Optimistic rollups can handle more complex transaction types – anything possible in the [EVM](#evm). They do have latency issues compared to [Zero-knowledge rollups](#zk-rollups) because a transaction can be challenged via the fraud proof.
 
-<DocLink to="/developers/docs/scaling/layer-2-rollups/#optimistic-rollups">
+<DocLink to="/developers/docs/scaling/optimistic-rollups/">
   Optimistic Rollups
 </DocLink>
 
@@ -657,7 +673,7 @@ An encoding standard designed by the Ethereum developers to encode and serialize
 
 A type of [layer 2](#layer-2) scaling solution that batches multiple transactions and submits them to [the Ethereum main chain](#mainnet) in a single transaction. This allows for reductions in [gas](#gas) costs and increases in [transaction](#transaction) throughput. There are Optimistic and Zero-knowledge rollups which use different security methods to offer these scalability gains.
 
-<DocLink to="/developers/docs/scaling/layer-2-rollups/">
+<DocLink to="/developers/docs/scaling/#rollups">
   Rollups
 </DocLink>
 
@@ -717,7 +733,7 @@ A program that executes on the Ethereum computing infrastructure.
 
 Short for "succinct non-interactive argument of knowledge", a SNARK is a type of [zero-knowledge proof](#zk-proof).
 
-<DocLink to="/developers/docs/scaling/layer-2-rollups/#zk-rollups">
+<DocLink to="/developers/docs/scaling/zk-rollups/">
   Zero-knowledge rollups
 </DocLink>
 
@@ -757,7 +773,7 @@ Depositing a quantity of [ether](#ether) (your stake) to become a validator and 
 
 Short for "scalable transparent argument of knowledge", a STARK is a type of [zero-knowledge proof](#zk-proof).
 
-<DocLink to="/developers/docs/scaling/layer-2-rollups/#zk-rollups">
+<DocLink to="/developers/docs/scaling/zk-rollups/">
   Zero-knowledge rollups
 </DocLink>
 
@@ -768,6 +784,14 @@ A [layer 2](#layer-2) solution where a channel is set up between participants, w
 <DocLink to="/developers/docs/scaling/state-channels/#state-channels">
   State channels
 </DocLink>
+
+### supermajority {#supermajority}
+
+Supermajority is the term given for an amount exceeding 2/3 (66%) of the total staked ether on the [Beacon Chain](#beacon-chain). A supermajority vote is required for blocks to be [finalized](#finality) on the Beacon Chain.
+
+### sync committee {#sync-committee}
+
+A sync committee is a randomly selected group of [validators](#validator) on the [Beacon Chain](#beacon-chain) that refresh every ~27 hours. Their purpose is to add their signatures to valid block headers. Sync committees allow [light clients](#lightweight-client) to keep track of the head of the blockchain without having to access the entire validator set.
 
 ### szabo {#szabo}
 
@@ -836,7 +860,7 @@ A [node](#node) in a [proof-of-stake](#pos) system responsible for storing data,
 
 A security model for certain [layer 2](#layer-2) solutions where, to increase speed, transactions are [rolled up](/#rollups) into batches and submitted to Ethereum in a single transaction. The transaction computation is done off-chain and then supplied to the main chain with a proof of their validity. This method increases the amount of transactions possible while maintaining security. Some [rollups](#rollups) use [fraud proofs](#fraud-proof).
 
-<DocLink to="/developers/docs/scaling/layer-2-rollups/#zk-rollups">
+<DocLink to="/developers/docs/scaling/zk-rollups/">
   Zero-knowledge rollups
 </DocLink>
 
@@ -892,7 +916,7 @@ A special Ethereum address, composed entirely of zeros, that is specified as the
 
 A zero-knowledge proof is a cryptographic method that allows an individual to prove that a statement is true without conveying any additional information.
 
-<DocLink to="/developers/docs/scaling/layer-2-rollups/#zk-rollups">
+<DocLink to="/developers/docs/scaling/zk-rollups/">
   Zero-knowledge rollups
 </DocLink>
 
@@ -900,7 +924,7 @@ A zero-knowledge proof is a cryptographic method that allows an individual to pr
 
 A [rollup](#rollups) of transactions that use [validity proofs](#validity-proof) to offer increased [layer 2](#layer-2) transaction throughput while using the security provided by [Mainnet](#mainnet) (layer 1). Although they can't handle complex transaction types, like [Optimistic rollups](#optimistic-rollups), they don't have latency issues because transactions are provably valid when submitted.
 
-<DocLink to="/developers/docs/scaling/layer-2-rollups/#zk-rollups">
+<DocLink to="/developers/docs/scaling/zk-rollups/">
   Zero-knowledge Rollups
 </DocLink>
 

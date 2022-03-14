@@ -14,12 +14,12 @@ Kerangka kerja tersedia dengan banyak fungsionalitas non-konvensional, seperti:
 - Fitur untuk memutar instance blockchain lokal.
 - Utilitas untuk mengompilasi dan menguji kontrak pintar Anda.
 - Add-on pengembangan klien untuk membangun aplikasi sisi pengguna dalam proyek/repositori yang sama.
-- Konfigurasi untuk menghubungkan ke jaringan Ethereum dan menggunakan kontrak, baik ke instance yang beroperasi secara lokal, atau salah satu dari jaringan publik Ethereum.
+- Konfigurasi untuk menghubungkan ke jaringan Ethereum dan menggunakan kontrak, baik ke instance yang berjalansecara lokal, atau salah satu dari jaringan publik Ethereum.
 - Pendistribusian aplikasi terdesentralisasi - integrasi dengan opsi penyimpanan seperti IPFS.
 
 ## Prasyarat {#prerequisites}
 
-Sebelum menyelami kerangka kerja, kami menyarankan Anda terlebih dahulu membaca pengantar kami tentang [dapp](/developers/docs/dapps/) dan [tumpukan Ethereum](/developers/docs/ethereum-stack/).
+Sebelum menyelami kerangka kerja, kami menyarankan Anda terlebih dahulu membaca pengantar kami tentang [dapps](/developers/docs/dapps/) dan [tumpukan Ethereum](/developers/docs/ethereum-stack/).
 
 ## Kerangka kerja yang tersedia {#available-frameworks}
 

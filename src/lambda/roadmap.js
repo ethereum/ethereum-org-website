@@ -1,14 +1,13 @@
 const axios = require("axios")
 
-exports.handler = async function (event, context) {
+const lambda = async function (githubToken) {
   try {
     const baseURL =
       "https://api.github.com/repos/ethereum/ethereum-org-website/issues?per_page=100&state=all"
-    const { GITHUB_TOKEN } = process.env
 
     const resp = await axios.get(`${baseURL}`, {
       headers: {
-        Authorization: `token ${GITHUB_TOKEN}`,
+        Authorization: `token ${githubToken}`,
       },
     })
 
@@ -29,3 +28,9 @@ exports.handler = async function (event, context) {
     }
   }
 }
+
+const handler = () => {
+  return lambda(process.env.GITHUB_TOKEN)
+}
+
+module.exports = { handler, lambda }

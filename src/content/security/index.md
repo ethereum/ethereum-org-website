@@ -101,7 +101,7 @@ Browser extensions like Chrome extensions or Add-ons for Firefox can augment use
 - Removing unused browser extensions
 - Install Chrome extensions locally to stop auto-updating (Advanced)
 
-[More on the risks of browser extentions](https://www.kaspersky.co.uk/blog/browser-extensions-security/12750/)
+[More on the risks of browser extensions](https://www.kaspersky.co.uk/blog/browser-extensions-security/12750/)
 
 <Divider />
 
@@ -254,7 +254,7 @@ Some things to remember:
 
 ### 'Eth2' token scam {#eth2-token-scam}
 
-With [the merge](/upgrades/merge/) coming in 2022, scammers have taken advantage of the confusion around the term 'Eth2' to try and get users to redeem their ETH for an 'ETH2' token. There is no 'ETH2' or any other new token introduced with the merge. The ETH that you own today will continue to be the same ETH after the merge, and there is no need to do any swaps of your ETH for the merge.
+With [The Merge](/upgrades/merge/) coming in 2022, scammers have taken advantage of the confusion around the term 'Eth2' to try and get users to redeem their ETH for an 'ETH2' token. There is no 'ETH2' or any other new token introduced with The Merge. The ETH that you own today will continue to be the same ETH after The Merge, and there is no need to do any swaps of your ETH for The Merge.
 
 Scammers may appear in the form of "support" telling you if you deposit your ETH you will receive back 'ETH2'. There is no [official Ethereum support](/community/support/), and there is no new token. Never share your wallet seed phrase with anyone.
 

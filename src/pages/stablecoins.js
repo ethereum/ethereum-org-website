@@ -309,6 +309,11 @@ const StablecoinsPage = ({ data }) => {
       DUSD: { type: CRYPTO, url: "https://dusd.finance/" },
       PAXG: { type: ASSET, url: "https://www.paxos.com/paxgold/" },
       AMPL: { type: ALGORITHMIC, url: "https://www.ampleforth.org/" },
+      UST: { type: ALGORITHMIC, url: "https://www.terra.money/" },
+      FRAX: { type: ASSET, url: "https://frax.finance/" },
+      MIM: { type: ASSET, url: "https://abracadabra.money/" },
+      USDP: { type: FIAT, url: "https://paxos.com/usdp/" },
+      FEI: { type: ALGORITHMIC, url: "https://fei.money/" },
     }),
     [ALGORITHMIC, ASSET, CRYPTO, FIAT]
   )
@@ -732,14 +737,10 @@ const StablecoinsPage = ({ data }) => {
       <Divider />
       <Content>
         <StyledCalloutBanner
-          title={translateMessageId(
-            "page-stablecoins-stablecoins-dapp-callout-title",
-            intl
-          )}
-          description={translateMessageId(
-            "page-stablecoins-stablecoins-dapp-callout-description",
-            intl
-          )}
+          titleKey={"page-stablecoins-stablecoins-dapp-callout-title"}
+          descriptionKey={
+            "page-stablecoins-stablecoins-dapp-callout-description"
+          }
           image={getImage(data.doge)}
           maxImageWidth={600}
           alt={translateMessageId(

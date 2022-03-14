@@ -125,11 +125,11 @@ INFO [11-18|14:04:47] Allocated cache and file handles         database=/Users/b
 
 Warto w tym miejscu podkreślić, że na najniższym poziomie to właśnie tutaj żyje blockchain. Pełna zawartość łańcucha bloków i stan EVM są przechowywane na każdym pełnym węźle w sieci Ethereum, w katalogach, które wyglądają bardzo podobnie do tego na twoim komputerze.
 
-## Dołączanie do konsoli Javascript {#attaching-to-the-javascript-console}
+## Dołączanie do konsoli JavaScript {#attaching-to-the-javascript-console}
 
 Uruchamianie węzła nie jest przydatne, chyba że faktycznie możemy z nim wchodzić w interakcje. Na przykład możemy chcieć rozgłaszać żądania transakcji lub wyszukiwać dane EVM/blockchainu (takie jak saldo konta). Geth ma wbudowaną konsolę JavaScript i interfejs API JavaScript o nazwie [web3js](https://github.com/ethereum/web3.js/), którego możesz użyć do interakcji z węzłem.
 
-Aby użyć konsoli Javascript:
+Aby użyć konsoli JavaScript:
 
 1. Rozpocznij uruchamianie węzła w oknie terminala (zarówno pełny, jak i lekki węzeł są akceptowane).
 2. Poszukaj wiadomości, która wygląda tak:
@@ -143,7 +143,7 @@ Ten komunikat powinien zostać zarejestrowany przed rozpoczęciem synchronizacji
 3. Ten komunikat wskazuje ścieżkę do punktu końcowego IPC (komunikacja między procesami). Skopiuj tę ścieżkę (w powyższym przykładzie jest to `/Users/bgu/Library/Ethereum/testnet/geth.ipc`).
 4. Otwórz nowe okno lub kartę terminala i uruchom następujące polecenie: `$ geth attach [ścieżka Twojego punktu końcowego IPC]`
 
-To powinno otworzyć konsolę Javascript. Możemy teraz używać web3js do interakcji z węzłem.
+To powinno otworzyć konsolę JavaScript. Możemy teraz używać web3js do interakcji z węzłem.
 
 [Pełna dokumentacja web3js](http://web3js.readthedocs.io/)
 

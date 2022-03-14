@@ -140,6 +140,10 @@ const Footer = () => {
           text: "decentralized-applications-dapps",
         },
         {
+          to: "/run-a-node/",
+          text: "run-a-node",
+        },
+        {
           to: `/stablecoins/`,
           text: "page-stablecoins-title",
         },
@@ -187,6 +191,10 @@ const Footer = () => {
         {
           text: "ethereum-governance",
           to: "/governance/",
+        },
+        {
+          text: "bridges",
+          to: "/bridges/",
         },
         {
           text: "energy-consumption",

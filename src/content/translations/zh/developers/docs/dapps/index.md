@@ -50,29 +50,30 @@ dapp 可以用任何语言编写（就像是一个 app）。它有前端代码�
 
 ## Dapp 工具 {#dapp-tools}
 
-**Scaffold-ETH - _使用适应智能合约的前端，快速尝试使用 Solidity_**
+**Scaffold-ETH _ - 使用能自适应智能合约的前端，快速尝试 Solidity。_**
 
 - [GitHub](https://github.com/austintgriffith/scaffold-eth)
 - [示例 dapp](https://punkwallet.io/)
 
-**创建 ETH App - _使用一个命令创建以太坊驱动的应用程序。_**
+**创建 Eth App _- 使用一个命令创建支持以太坊的应用程序。_**
 
 - [GitHub](https://github.com/paulrberg/create-eth-app)
 
-**单击 Dapp - _免费和开放源代码软件工具，用于从 [ABI](/glossary/#abi) 生成 dapp 前端。_**
+**一键去中心化 _- 用于从 [ABI](/glossary/#abi) 生成去中心化应用程序前端的免费和开放源代码软件工具。_**
 
 - [oneclickdapp.com](https://oneclickdapp.com)
-- [GitHub](https://github.com/One-Click-Dapp/one-click-dApp)
+- [GitHub](https://github.com/oneclickdapp/oneclickdapp-v1)
 
-**Etherflow - _供以太坊开发者测试节点的免费和开放源代码软件工具，并从浏览器中编写并调试 RPC 调用。_**
+**Etherflow _ - 供以太坊开发者测试节点，并在浏览器中编写和调试 RPC 调用的免费和开放源代码软件工具。_**
 
 - [etherflow.quiknode.io](https://etherflow.quiknode.io/)
 - [GitHub](https://github.com/abunsen/etherflow)
 
 ## 延伸阅读 {#further-reading}
 
-- [ 2021 去中心化应用指南](https://limechain.tech/blog/what-are-dapps-the-2021-guide/) - _LimeChain_
-- [What Are Decentralized Apps?（什么是去中心化应用？）](https://www.gemini.com/cryptopedia/decentralized-applications-defi-dapps)- _Gemini_
+- [The Architecture of a Web 3.0 application](https://www.preethikasireddy.com/post/the-architecture-of-a-web-3-0-application) - _Preethi Kasireddy_
+- [A 2021 guide to decentralized applications](https://limechain.tech/blog/what-are-dapps-the-2021-guide/) - _LimeChain_
+- [What Are Decentralized Apps?](https://www.gemini.com/cryptopedia/decentralized-applications-defi-dapps) - _Gemini_
 
 _还有哪些社区资源对您有所帮助？ 请编辑本页面并添加！_
 

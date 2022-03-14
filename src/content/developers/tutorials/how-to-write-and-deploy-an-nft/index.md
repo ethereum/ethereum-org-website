@@ -17,7 +17,7 @@ In this tutorial, we will walk through creating and deploying an ERC-721 smart c
 
 In Part 2 of this tutorial we’ll go through how we can use our smart contract to mint an NFT, and in Part 3 we’ll explain how to view your NFT on MetaMask.
 
-And of course, if you have questions at any point, don’t hesitate to reach out in the [Alchemy Discord](https://discord.gg/gWuC7zB) or visit [Alchemy's NFT API docs](https://docs.alchemy.com/alchemy/enhanced-apis/nft-api#what-chains-and-networks-are-supported)!
+And of course, if you have questions at any point, don’t hesitate to reach out in the [Alchemy Discord](https://discord.gg/gWuC7zB) or visit [Alchemy's NFT API docs](https://docs.alchemy.com/alchemy/enhanced-apis/nft-api)!
 
 ## Step 1: Connect to the Ethereum network {#connect-to-ethereum}
 
@@ -49,7 +49,7 @@ You can download and create a MetaMask account for free [here](https://metamask.
 
 ## Step 4: Add ether from a Faucet {#step-4-add-ether-from-a-faucet}
 
-In order to deploy our smart contract to the test network, we’ll need some fake ETH. To get ETH you can go to the [Ropsten faucet](https://faucet.ropsten.be/) and enter your Ropsten account address, then click “Send Ropsten ETH.” You should see ETH in your MetaMask account soon after!
+In order to deploy our smart contract to the test network, we’ll need some fake ETH. To get ETH you can go to the [FaucETH](https://fauceth.komputing.org) and enter your Ropsten account address, click “Request funds”, then select “Ethereum Testnet Ropsten” in the dropdown and finally click “Request funds” button again. You should see ETH in your MetaMask account soon after!
 
 ## Step 5: Check your Balance {#check-balance}
 
@@ -221,7 +221,7 @@ First, install the dotenv package in your project directory:
 
     npm install dotenv --save
 
-Then, create a .env file in the root directory of our project, and add your MetaMask private key and HTTP Alchemy API URL to it.
+Then, create a `.env` file in the root directory of our project, and add your MetaMask private key and HTTP Alchemy API URL to it.
 
 - Follow [these instructions](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key) to export your private key from MetaMask
 
@@ -229,12 +229,16 @@ Then, create a .env file in the root directory of our project, and add your Meta
 
 ![Copy your Alchemy API URL](./copy-alchemy-api-url.gif)
 
-Your .env should now look like this:
+Your `.env` should now look like this:
 
     API_URL="https://eth-ropsten.alchemyapi.io/v2/your-api-key"
     PRIVATE_KEY="your-metamask-private-key"
 
 To actually connect these to our code, we’ll reference these variables in our hardhat.config.js file on step 13.
+
+<InfoBanner isWarning={true}>
+Don't commit <code>.env</code>! Please make sure never to share or expose your <code>.env</code> file with anyone, as you are compromising your secrets in doing so. If you are using version control, add your <code>.env</code> to a <a href="https://git-scm.com/docs/gitignore">gitignore</a> file.
+</InfoBanner>
 
 ## Step 12: Install Ethers.js {#install-ethers}
 
@@ -261,7 +265,7 @@ Update your hardhat.config.js to look like this:
     require("@nomiclabs/hardhat-ethers");
     const { API_URL, PRIVATE_KEY } = process.env;
     module.exports = {
-       solidity: "0.8.0",
+       solidity: "0.8.1",
        defaultNetwork: "ropsten",
        networks: {
           hardhat: {},
@@ -326,7 +330,7 @@ You should then see something like:
 
     Contract deployed to address: 0x81c587EB0fE773404c42c1d2666b5f557C470eED
 
-If we go to the [Ropsten etherscan](https://ropsten.etherscan.io/) and search for our contract address we should able to see that it has been deployed successfully. The transaction will look something like this:
+If we go to the [Ropsten etherscan](https://ropsten.etherscan.io/) and search for our contract address we should be able to see that it has been deployed successfully. If you can't see it immediately, please wait a while as it can take some time. The transaction will look something like this:
 
 ![View your transaction address on Etherscan](./etherscan-transaction.png)
 

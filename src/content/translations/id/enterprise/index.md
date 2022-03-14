@@ -52,10 +52,10 @@ Beberapa usaha kolaboratif untuk membuat Ethereum ramah bagi perusahaan telah di
 
 - [Alchemy](https://www.alchemy.com/) _menyediakan layanan dan peralatan API untuk membangun dan mengawasi aplikasi di Ethereum_
 - [Blockapps](https://blockapps.net/) _implementasi protokol Enterprise Ethereum, peralatan, dan API yang membentuk platform STRATO_
-- [Chainstack](https://chainstack.com/) _infrastruktur jaringan utama dan testnet Ethereum yang dihost di cloud pelanggan publik & terisolasi_
+- [Chainstack](https://chainstack.com/) _infrastruktur jaringan utama dan testnet Ethereum yang dihost di cloud pelanggan publik dan terisolasi_
 - [ConsenSys](https://consensys.net/) _menyediakan daftar produk dan peralatan untuk membangun di Ethereum, maupun layanan konsultasi dan pengembangan kustom_
 - [Envision Blockchain](https://envisionblockchain.com/) _menyediakan layanan konsultasi dan pengembangan yang berfokus pada perusahaan yang dikhususkan di Jaringan Utama Ethereum_
-- [EY OpsChain](https://blockchain.ey.com/products/contract-manager) _menyediakan alur kerja pengadaan dengan menerbitkan RFQ, kotrak, pesanan pembelian, dan faktur di keseluruhan jaringan partner bisnis terpercaya Anda_
+- [EY OpsChain](https://blockchain.ey.com/products/contract-manager) _menyediakan alur kerja pengadaan dengan menerbitkan RFQ, kontrak, pesanan pembelian, dan faktur di keseluruhan jaringan partner bisnis terpercaya Anda_
 - [Hyperledger Besu](https://www.hyperledger.org/use/besu) _sebuah klien Ethereum sumber terbuka berfokus pada perusahaan yang dikembangkan di bawah lisensi Apache 2.0 dan ditulis dalam bahasa Java_
 - [Infura](https://infura.io/) _akses API yang dapat diukur untuk jaringan Ethereum dan IPFS_
 - [Provide](https://provide.services/) _infrastruktur dan API untuk aplikasi Web3 Perusahaan_
@@ -72,7 +72,7 @@ Beberapa usaha kolaboratif untuk membuat Ethereum ramah bagi perusahaan telah di
 
 ### Solusi skalabilitas {#scalability-solutions}
 
-[Lapisan 2](/developers/docs/scaling/layer-2-rollups/) adalah serangkaian teknologi atau sistem yang beroperasi di atas Ethereum (Lapisan 1), mewarisi properti keamanan dari Lapisan 1, dan menyediakan kapasitas pemrosesan transaksi (throughput) yang lebih banyak, biaya transaksi(biaya pengoperasian) yang lebih rendah, dan konfirmasi transaksi yang lebih cepat daripada Lapisan 1. Solusi penskalaan Lapisan 2 diamankan oleh Lapisan 1, tetapi memungkinkan aplikasi blockchain menangani lebih banyak pengguna atau aksi atau data daripada yang bisa diakomodasi Lapisan 1. Banyak dari mereka memanfaatkan kemajuan terkini dalam kriptografi dan bukti zero-knowledge (ZK) untuk memaksimalkan kinerja dan keamanan.
+[Lapisan 2](/developers/docs/scaling/layer-2-rollups/) adalah serangkaian teknologi atau sistem yang beroperasi di atas Ethereum (Lapisan 1), mewarisi properti keamanan dari Lapisan 1, dan menyediakan kapasitas pemrosesan transaksi (throughput) yang lebih banyak, biaya transaksi (biaya pengoperasian) yang lebih rendah, dan konfirmasi transaksi yang lebih cepat daripada Lapisan 1. Solusi penskalaan Lapisan 2 diamankan oleh Lapisan 1, tetapi memungkinkan aplikasi blockchain menangani lebih banyak pengguna atau aksi atau data daripada yang bisa diakomodasi Lapisan 1. Banyak dari mereka memanfaatkan kemajuan terkini dalam kriptografi dan bukti zero-knowledge (ZK) untuk memaksimalkan kinerja dan keamanan.
 
 Membangun aplikasi Anda di atas solusi penskalaan Lapisan 2 bisa membantu [menyelesaikan banyak masalah yang sebelumnya membuat perusahaan membangun di blockchain privat](https://entethalliance.org/how-ethereum-layer-2-scaling-solutions-address-barriers-to-enterprises-building-on-mainnet/), namun tetap mempertahankan manfaat dari membangun di Jaringan Utama.
 
@@ -104,7 +104,6 @@ Contoh solusi L2 yang siap dipakai atau yang akan segera dimasukkan:
   - [Skale](https://skale.network)
   - [POA Network](https://www.poa.network/)
 - Solusi hibrida yang menggabungkan properti dari berbagai kategori
-  - [Offchain Labs Arbitrum SCSC](https://offchainlabs.com/arbitrum.pdf)
   - [Celer](https://celer.network)
 
 ## Aplikasi perusahaan yang ada di Jaringan Utama {#enterprise-live-on-mainnet}
@@ -138,11 +137,11 @@ Berikut adalah beberapa aplikasi perusahaan yang telah digunakan pada Jaringan U
 ### Rantai pasokan {#supply-chain}
 
 - [CargoX](https://cargox.io/press-releases/full/cargox-becomes-first-public-blockchain-ethereum-bill-lading-provider-approved-international-group-pi-clubs) _penyedia konosemen dan pemindahan dokumen_
-- [Morpheus.network](https://morpheus.network/) _platform otomatisasi rantai pasokan yang mengimplementasikan gabungan rantai privat dengan data ternotarisasi di Jaringan Utama Ethereum, dan digunakan oleh perusahaan seperti distributor makanan, minyak, & gas di Kanada yaitu Federated Co-op Ltd. dan penyedia makanan binatang peliharaan di Argentina Vitalcan_
+- [Morpheus.network](https://morpheus.network/) _platform otomatisasi rantai pasokan yang mengimplementasikan gabungan rantai privat dengan data ternotarisasi di Jaringan Utama Ethereum, dan digunakan oleh perusahaan seperti distributor makanan, minyak, dan gas di Kanada yaitu Federated Co-op Ltd. dan penyedia makanan binatang peliharaan di Argentina Vitalcan_
 - [Minespider](https://www.minespider.com/) _pelacakan rantai pasokan_
 - [ShipChain](https://shipchain.io) _sidechain Ethereum publik dan sistem perusahaan untuk visibilitas dan kepercayaan rantai pasokan, khususnya untuk logistik multimodal_
 - [Follow Our Fibre](https://www.followourfibre.com) _keterlacakan rantai pasokan viscose_
-- [EY OpsChain Network Procurement](https://blockchain.ey.com/products/contract-manager) _memungkinkan perusahaan terlibat dalam sebuah alur kerja pengadaan dengan menerbitkan RFQ, kontrak, pemesanan pembelian, dan faktur di keseluruhan jaringan dari rekan bisnis terpercaya Anda_
+- [Pengadaan Jaringan EY OpsChain](https://blockchain.ey.com/products/contract-manager) _memungkinkan perusahaan terlibat dalam sebuah alur kerja pengadaan dengan menerbitkan RFQ, kontrak, pemesanan pembelian, dan faktur di keseluruhan jaringan dari rekan bisnis terpercaya Anda_
 - [Treum](https://treum.io/) _menghadirkan transparansi, keterlacakan, dan kemampuan untuk diperdagangan pada rantai pasokan, menggunakan teknologi blockchain_
 
 ### Kredensial dan sertifikasi {#credentials}
@@ -160,4 +159,4 @@ Berikut adalah beberapa aplikasi perusahaan yang telah digunakan pada Jaringan U
 
 - [GridPlus](https://blog.gridplus.io/gridplus-is-live-in-texas-efc83c814601) _pembayaran pemakaian listrik_
 
-Jika Anda ingin menambahkan daftar ini, silahkan baca [instruksi untuk berkontribusi](https://ethereum.org/en/contributing/).
+Jika Anda ingin menambahkan daftar ini, silahkan baca [instruksi untuk berkontribusi](/contributing/).

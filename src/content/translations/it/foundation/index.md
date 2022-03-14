@@ -29,6 +29,14 @@ Puoi accedere ai contenuti video o alle conferenze di ogni anno, a partire da qu
 
 Scopri di più su [devcon.org](https://devcon.org/), dai un'occhiata al [Devcon Blog](https://blog.ethereum.org/category/devcon/) o segui [@efdevcon](https://twitter.com/EFDevcon) per le ultime novità.
 
+### Programma Fellowship {#fellowship-program}
+
+Il [Programma Fellowship dell'Ethereum Foundation](https://fellowship.ethereum.foundation/) è un progetto pilota incentrato sulla ricerca di opportunità nelle economie emergenti. I paesi in via di sviluppo rappresentano oggi oltre l'80% della popolazione mondiale. Tra i circa 400.000 bambini nati ogni giorno in tutto il mondo, più di 360.000 sono nati in paesi in via di sviluppo. Le persone nei paesi in via di sviluppo rappresentano non solo il nostro futuro in termini demografici, ma anche il prossimo miliardo di utenti attivi di Ethereum.
+
+Il Programma Fellowship offre all'EF l'opportunità di lavorare con i fautori del cambiamento, i cui progetti hanno un elevato potenziale di impatto nelle economie emergenti utilizzando Ethereum. Il programma offre un'esperienza unica che include mentorship, competenza e accesso ai leader nell'ecosistema Ethereum.
+
+Scopri di più su [fellowship.ethereum.foundation](https://fellowship.ethereum.foundation/) o consulta il [recente post del blog sul Programma Fellowship](https://blog.ethereum.org/2021/05/07/ethereum-for-the-next-billion/).
+
 <br/>
 
-Per avere più informazioni sulla Foundation e sul suo lavoro, visita [ethereum.foundation](http://ethereum.foundation/) o leggi il blog [Ethereum Foundation Blog](https://blog.ethereum.org/) per tutti gli annunci e le ultime notizie.
+Per avere più informazioni sulla Foundation e sul suo operato, visita [ethereum.foundation](http://ethereum.foundation/) o leggi il blog della [Ethereum Foundation](https://blog.ethereum.org/) per scoprire tutti gli annunci e le ultime notizie.

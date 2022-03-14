@@ -1,5 +1,5 @@
 ---
-title: Ethereum per Sviluppatori JavaScript
+title: Ethereum per sviluppatori JavaScript
 description: Impara a sviluppare per Ethereum usando progetti e strumenti basati su JavaScript.
 lang: it
 sidebar: true
@@ -7,7 +7,7 @@ sidebar: true
 
 JavaScript è tra i linguaggi più popolari nell'ecosistema Ethereum. C'è persino un [team](https://github.com/ethereumjs) che si occupa di trasferire Ethereum il più possibile in JavaScript.
 
-Ci sono opportunità di scrivere in JavaScript (o simile) a [tutti i livelli dello stack](/developers/docs/ethereum-stack/).
+Esistono opportunità per scrivere in JavaScript (o simile) a [tutti i livelli dello stack](/developers/docs/ethereum-stack/).
 
 ## Interagire con Ethereum {#interact-with-ethereum}
 
@@ -24,7 +24,7 @@ Se vuoi scrivere in JavaScript per interrogare la blockchain, inviare transazion
 
 ### Smart Contract {#smart-contracts}
 
-Se sei uno sviluppatore JavaScript e vuoi scrivere uno Smart Contract personalizzato, consigliamo di familiarizzare con [Solidity](https://solidity.readthedocs.io). È il linguaggio più popolare per gli Smart Contract ed è fortemente ispirato a Javascript.
+Se sei uno sviluppatore JavaScript e vuoi scrivere uno Smart Contract personalizzato, consigliamo di familiarizzare con [Solidity](https://solidity.readthedocs.io). È il linguaggio più popolare per gli Smart Contract ed è fortemente ispirato a JavaScript.
 
 Scopri di più sugli [Smart Contract](/developers/docs/smart-contracts/).
 
@@ -32,7 +32,7 @@ Scopri di più sugli [Smart Contract](/developers/docs/smart-contracts/).
 
 ### La macchina virtuale Ethereum {#the-ethereum-virtual-machine}
 
-Esiste un'implementazione Javascript della [macchina virtuale di Ethereum](/developers/docs/evm/), che supporta le regole più recenti relative alle diramazioni della rete. Le regole relative alle diramazioni si riferiscono alle modifiche apportate alla macchina virtuale di Ethereum (EVM) a seguito di upgrade pianificati.
+Esiste un'implementazione JavaScript della [macchina virtuale di Ethereum](/en/developers/docs/evm/), che supporta le regole più recenti relative alle diramazioni della rete. Le regole relative alle diramazioni si riferiscono alle modifiche apportate alla macchina virtuale di Ethereum (EVM) a seguito di upgrade pianificati.
 
 È suddivisa in vari pacchetti JavaScript che puoi leggere per comprendere meglio:
 
