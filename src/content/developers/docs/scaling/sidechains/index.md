@@ -21,7 +21,7 @@ You should have a good understanding of all the foundational topics and a high-l
 | ------------------------------------------------ | ---------------------------------------------------------------------------------------------- |
 | Established technology.                          | Less decentralized.                                                                            |
 | Supports general computation, EVM compatibility. | Uses a separate consensus mechanism. Not secured by layer 1 (so technically it’s not layer 2). |
-|                                                  | A quorum of sidechain validators can commit fraud.                                             |
+| Faster and cheaper than Mainnet                  | A quorum of sidechain validators can commit fraud.                                             |
 
 ### Use Sidechains {#use-sidechains}
 
@@ -30,6 +30,7 @@ Multiple projects provide implementations of sidechains that you can integrate i
 - [Polygon PoS](https://polygon.technology/solutions/polygon-pos)
 - [Skale](https://skale.network/)
 - [Gnosis Chain (formerly xDai)](https://www.xdaichain.com/)
+- [Binance Smart Chain](https://academy.binance.com/en/articles/how-to-get-started-with-binance-smart-chain-bsc)
 
 ## Further reading {#further-reading}
 
