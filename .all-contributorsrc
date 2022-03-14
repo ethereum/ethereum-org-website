@@ -6779,6 +6779,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "brokenprogrammer",
+      "name": "Oskar Mendel",
+      "avatar_url": "https://avatars.githubusercontent.com/u/16289144?v=4",
+      "profile": "http://www.oskarmendel.me",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
