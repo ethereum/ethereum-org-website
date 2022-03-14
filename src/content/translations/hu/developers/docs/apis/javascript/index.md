@@ -29,10 +29,10 @@ Szolgáltatók használatakor ezen könyvtárak használatával rácsatlakozhats
 
 ```js
 // Egy Web3Provider bewrappol egy standard Web3 szolgáltatót, ez az
-// amit a Metamask beinjektál minden oldalra úgy mint, window.ethereum
+// amit a MetaMask beinjektál minden oldalra úgy mint, window.ethereum
 const provider = new ethers.providers.Web3Provider(window.ethereum)
 
-// A Metamask plugin továbbá lehetővé teszi tranzakciók aláírását
+// A MetaMask plugin továbbá lehetővé teszi tranzakciók aláírását
 // ether küldésekor és hogy kifizessük az állapotváltást a blokkláncon.
 // Ehhez kell egy számla aláíró (account signer)...
 const signer = provider.getSigner()

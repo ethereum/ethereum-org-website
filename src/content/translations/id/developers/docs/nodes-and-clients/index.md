@@ -56,7 +56,7 @@ Menjalankan node sendiri memungkinkan Anda menggunakan Ethereum dengan cara yang
 
 - Node Anda memverifikasi semua transaksi dan blok dibandingkan dengan aturan konsensus itu sendiri. Ini berarti Anda tidak harus mengandalkan node lain dalam jaringan atau sepenuhnya mempercayainya.
 - Anda tidak akan harus membocorkan alamat dan saldo Anda ke node acak. Semua hal bisa dicek dengan klien Anda sendiri.
-- Dapp Anda bisa lebih aman dan privat jika Anda menggunakan node Anda sendiri. [Metamask](https://metamask.io), [MyEtherWallet](https://myetherwallet.com) dan beberapa dompet lain bisa dengan mudah ditunjukkan ke node lokal Anda sendiri.
+- Dapp Anda bisa lebih aman dan privat jika Anda menggunakan node Anda sendiri. [MetaMask](https://metamask.io), [MyEtherWallet](https://myetherwallet.com) dan beberapa dompet lain bisa dengan mudah ditunjukkan ke node lokal Anda sendiri.
 - Anda dapat memrogram endpoint RPC kustom Anda sendiri.
 - Anda dapat menghubungkan node Anda dengan menggunakan **Komunikasi Antar Proes (IPC)** atau menulis kembali node untuk memuat program Anda sebagai plugin. Ini menghasilkan latensi yang rendah, yang diperlukan untuk menggantikan transaksi Anda secepat mungkin (maksudnya frontrunning).
 

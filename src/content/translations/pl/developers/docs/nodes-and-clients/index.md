@@ -57,7 +57,7 @@ Prowadzenie własnego węzła umożliwia korzystanie z Ethereum w sposób napraw
 
 - Twój węzeł samodzielnie weryfikuje wszystkie transakcje i bloki pod kątem zasad konsensusu. Oznacza to, że nie musisz polegać na żadnych innych węzłach w sieci ani w pełni im zaufać.
 - Nie będziesz musiał ujawniać swoich adresów i sald do przypadkowych węzłów. Wszystko można sprawdzić z własnym klientem.
-- Twoja zdecentralizowana aplikacja może być bezpieczniejsza i bardziej prywatna, jeśli używasz własnego węzła. [Metamask](https://metamask.io), [MyEtherWallet](https://myetherwallet.com) i kilka innych portfeli można łatwo skierować na swój własny lokalny węzeł.
+- Twoja zdecentralizowana aplikacja może być bezpieczniejsza i bardziej prywatna, jeśli używasz własnego węzła. [MetaMask](https://metamask.io), [MyEtherWallet](https://myetherwallet.com) i kilka innych portfeli można łatwo skierować na swój własny lokalny węzeł.
 
 ![Jak uzyskać dostęp do Ethereum za pośrednictwem aplikacji i węzłów](../../../../../developers/docs/nodes-and-clients/nodes.png)
 

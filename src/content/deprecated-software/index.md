@@ -150,7 +150,7 @@ Mist was an important early experiment because it explored how to manage Ethereu
 
 **Alternatives**
 
-[Metamask](https://metamask.io/) is an in-browser wallet enabling you to manage Ethereum keys and interact with dapps. It is available as an extension for Google Chrome and Firefox, and is included in [Brave Browser](https://brave.com/).
+[MetaMask](https://metamask.io/) is an in-browser wallet enabling you to manage Ethereum keys and interact with dapps. It is available as an extension for Google Chrome and Firefox, and is included in [Brave Browser](https://brave.com/).
 
 ### Mix {#mix}
 

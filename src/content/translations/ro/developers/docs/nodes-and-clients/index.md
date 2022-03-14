@@ -57,7 +57,7 @@ Rularea propriul nod îți permite să utilizezi Ethereum într-un mod cu adevă
 
 - Nodul tău verifică autonom toate tranzacțiile și blocurile în raport cu regulile de consens. Aceasta înseamnă că nu trebuie să te bazezi pe alte noduri din rețea sau să ai încredere deplină în ele.
 - Nu va trebui să-ți dezvălui adresele și soldurile către noduri aleatorii. Totul poate fi verificat cu propriul client.
-- Aplicația ta dapp poate fi mai sigură și mai privată dacă folosești propriul nod. [Metamask](https://metamask.io), [MyEtherWallet](https://myetherwallet.com) și alte portofele pot fi ușor direcționate către propriul nod local.
+- Aplicația ta dapp poate fi mai sigură și mai privată dacă folosești propriul nod. [MetaMask](https://metamask.io), [MyEtherWallet](https://myetherwallet.com) și alte portofele pot fi ușor direcționate către propriul nod local.
 
 ![Cum să accesezi Ethereum prin intermediul aplicației și nodurilor](../../../../../developers/docs/nodes-and-clients/nodes.png)
 

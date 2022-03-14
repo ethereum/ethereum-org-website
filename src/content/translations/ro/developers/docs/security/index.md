@@ -77,7 +77,7 @@ Pentru a permite unui utilizator să retragă ETH-ul stocat anterior în contrac
 2. Le trimite valoarea soldului în ETH
 3. Resetează soldul la 0, deci nu își mai pot retrage din nou soldul.
 
-Dacă este apelată dintr-un cont obișnuit (cum ar fi propriul tău cont Metamask), acest lucru funcționează așa cum te aștepți: msg.sender.call.value() pur și simplu trimite contul ETH. Cu toate acestea, contractele inteligente pot efectua și ele apeluri. Dacă un contract personalizat, rău intenționat este cel care apelează `withdraw()`, msg.sender.call.value() nu numai că va trimite `amount` din ETH, va apela implicit și contractul pentru a începe executarea codului. Imaginează-ți acest contract răuvoitor:
+Dacă este apelată dintr-un cont obișnuit (cum ar fi propriul tău cont MetaMask), acest lucru funcționează așa cum te aștepți: msg.sender.call.value() pur și simplu trimite contul ETH. Cu toate acestea, contractele inteligente pot efectua și ele apeluri. Dacă un contract personalizat, rău intenționat este cel care apelează `withdraw()`, msg.sender.call.value() nu numai că va trimite `amount` din ETH, va apela implicit și contractul pentru a începe executarea codului. Imaginează-ți acest contract răuvoitor:
 
 ```solidity
 contract Attacker {
