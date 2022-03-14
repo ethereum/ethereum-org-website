@@ -403,7 +403,7 @@ If you want to see these files in action without running them yourself, follow t
 5. [Call to `transfer()`](https://kovan-optimistic.etherscan.io/tx/1410748). 
 
 
-### If you do control the destination contract   {#if-you-do-control-the-destination-contract}
+## If you do control the destination contract   {#if-you-do-control-the-destination-contract}
 
 If you do have control over the destination contract you can create functions that bypass the `msg.sender` checks because they trust the calldata interpreter.
 [You can see an example of how this works here, in the `control-contract` branch](https://github.com/qbzzt/ethereum.org-20220330-shortABI/tree/control-contract).
