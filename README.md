@@ -1419,6 +1419,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/hma23"><img src="https://avatars.githubusercontent.com/u/33968559?v=4?s=100" width="100px;" alt=""/><br /><sub><b>hma23</b></sub></a><br /><a href="#ideas-hma23" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/ethereum/ethereum-org-website/commits?author=hma23" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/KaranKaira"><img src="https://avatars.githubusercontent.com/u/46125192?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Karan Kaira</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=KaranKaira" title="Documentation">📖</a></td>
   </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/Re-Drawn"><img src="https://avatars.githubusercontent.com/u/54480926?v=4?s=100" width="100px;" alt=""/><br /><sub><b>ReDrawn</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=Re-Drawn" title="Documentation">📖</a></td>
+  </tr>
 </table>
 
 <!-- markdownlint-restore -->
