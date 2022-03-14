@@ -152,9 +152,9 @@ Ha be van állítva, akkor már tudsz:
 
 ### Interakció okosszerződés függvényekkel {#interact-with-smart-contract-functions}
 
-A Javascript kliens könyvtárak lehetővé teszik az alkalmazásod számára, hogy okosszerződés függvényeket hívjanak meg egy befordított szerződés Application Binary Interface-ének (ABI) olvasásával.
+A JavaScript kliens könyvtárak lehetővé teszik az alkalmazásod számára, hogy okosszerződés függvényeket hívjanak meg egy befordított szerződés Application Binary Interface-ének (ABI) olvasásával.
 
-Az ABI lényegében elmagyarázza a szerződés függvényeit egy JSON formátumban és lehetővé teszi, hogy normáls Javascript objectként használd.
+Az ABI lényegében elmagyarázza a szerződés függvényeit egy JSON formátumban és lehetővé teszi, hogy normáls JavaScript objectként használd.
 
 A következő Solidity szerződés tehát:
 
@@ -279,6 +279,6 @@ _Ismersz olyan közösségi anyagot, mely segített neked? Módosítsd az oldalt
 
 ## Kapcsolódó útmutatók {#related-tutorials}
 
-- [Állítsd be a Web3js, hogy Javascriptben használd az Ethereum blokkláncot](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– Instrukciók arról, hogyan állítsd be a web3.js-t a projektedben._
+- [Állítsd be a Web3js, hogy JavaScriptben használd az Ethereum blokkláncot](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– Instrukciók arról, hogyan állítsd be a web3.js-t a projektedben._
 - [Okosszerződés hívása JavaScriptből](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– A DAI token használata, hogy lásd hogyan lehet szerződés függvényeket meghívni JavaScript használatával._
 - [Tranzakció küldés web3-mal és Alchemy-vel](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) _– Egy step-by-step útmutató arról, hogyan lehet tranzakciókat küldeni a backendből._

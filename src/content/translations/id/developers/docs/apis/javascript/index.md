@@ -152,7 +152,7 @@ Setelah disiapkan, Anda dapat:
 
 ### Berinteraksi dengan fungsi kontrak pintar {#interact-with-smart-contract-functions}
 
-Pustaka klien Javascript memungkinkan aplikasi Anda memanggil fungsi kontrak pintar dengan membaca Antarmuka Biner Aplikasi (ABI) dari kontrak yang dikompilasi.
+Pustaka klien JavaScript memungkinkan aplikasi Anda memanggil fungsi kontrak pintar dengan membaca Antarmuka Biner Aplikasi (ABI) dari kontrak yang dikompilasi.
 
 ABI pada dasarnya menjelaskan fungsi kontrak dalam format JSON dan memungkinkan Anda untuk menggunakannya seperti objek JavaScript biasa.
 
@@ -279,6 +279,6 @@ _Tahu tentang sumber daya komunitas yang membantu Anda? Edit halaman ini dan tam
 
 ## Tutorial terkait {#related-tutorials}
 
-- [Menyiapkan Web3js untuk menggunakan blockchain Ethereum dalam Javascript](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– Instruksi untuk menyiapkan web3.js dalam proyek Anda._
+- [Menyiapkan Web3js untuk menggunakan blockchain Ethereum dalam JavaScript](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– Instruksi untuk menyiapkan web3.js dalam proyek Anda._
 - [Memanggil kontrak pintar dari JavaScript](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– Menggunakan token DAI, lihat cara memanggil fungsi kontrak menggunakan JavaScript._
 - [Mengirim transaksi menggunakan web3 dan Alchemy](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) _– Panduan langkah demi langkah untuk mengirim transaksi dari backend._

@@ -151,7 +151,7 @@ wallet.sendTransaction(tx)
 
 ### 与智能合约交互的方法 {#interact-with-smart-contract-functions}
 
-Javascript 客户端库可以让开发者的应用通过读取汇编合约的应用二进制接口 (ABI) 来调用智能合约函数。
+JavaScript 客户端库可以让开发者的应用通过读取汇编合约的应用二进制接口 (ABI) 来调用智能合约函数。
 
 ABI 本质上是基于 JSON 格式解释了合约的函数，并且允许您像普通 JavaScript 对象一样使用它。
 
@@ -278,6 +278,6 @@ _还有哪些社区资源对您有所帮助？ 编辑并添加本页面！_
 
 ## 相关教程 {#related-tutorials}
 
-- [设置 Web3js 并在 Javascript 中使用以太坊区块链](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _关于在您的项目中设置 web3.js 的说明。_
+- [设置 Web3js 并在 JavaScript 中使用以太坊区块链](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _关于在您的项目中设置 web3.js 的说明。_
 - [在 JavaScript 中调用智能合约](/developers/tutorials/calling-a-smart-contract-from-javascript/) _使用 DAI token，从而使用 JavaScript 调用合约函数。_
 - [使用 web3 和 Alchemy](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) 发送交易。 _- 一步步带您了解如何从后端发送一笔交易。_

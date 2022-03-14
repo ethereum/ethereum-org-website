@@ -155,7 +155,7 @@ Une fois la configuration effectuée, vous pourrez :
 
 ### Interagir avec les fonctions d'un contrat intelligent {#interact-with-smart-contract-functions}
 
-Les bibliothèques clientes javascript autorisent votre application à appeler des fonctions de contrat intelligent en lisant l'interface binaire-programme (ABI) d'un contrat compilé.
+Les bibliothèques clientes JavaScript autorisent votre application à appeler des fonctions de contrat intelligent en lisant l'interface binaire-programme (ABI) d'un contrat compilé.
 
 L'ABI explique principalement les fonctions du contrat au format JSON et vous permet de l'utiliser comme un objet JavaScript standard.
 

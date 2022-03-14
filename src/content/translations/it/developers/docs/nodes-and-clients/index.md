@@ -312,5 +312,5 @@ Su internet si trovano molte informazioni sui client Ethereum. Ecco alcune risor
 
 ## Tutorial correlati {#related-tutorials}
 
-- [Running a Node with Geth](/developers/tutorials/run-light-node-geth/) _– Come scaricare, installare ed eseguire Geth. Si parla di modalità di sincronizzazione, console Javascript e altro._
+- [Running a Node with Geth](/developers/tutorials/run-light-node-geth/) _– Come scaricare, installare ed eseguire Geth. Si parla di modalità di sincronizzazione, console JavaScript e altro._
 - [Trasforma il tuo Raspberry Pi 4 in un nodo validatore semplicemente eseguendo il flash della scheda MicroSD - Guida d'installazione](/developers/tutorials/run-node-raspberry-pi/) _ - Esegui il flash del tuo Raspberry Pi 4, collega un cavo Ethernet, connetti il disco SSD e alimenta il dispositivo per trasformare il Raspberry Pi 4 in un nodo completo di Ethereum eseguendo il livello d'esecuzione (rete principale) e/o il livello di consenso (Beacon Chain / validatore)._

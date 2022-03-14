@@ -54,7 +54,7 @@ Deprecated on December 10, 2020
 
 **Summary**
 
-Grid was a Javascript-based desktop application that allowed you to securely access Ethereum, IPFS, and other decentralized networks. It provided a user-friendly interface to assist a less technical audience in safely interacting with dapps, which increased accessibility for everyone.
+Grid was a JavaScript-based desktop application that allowed you to securely access Ethereum, IPFS, and other decentralized networks. It provided a user-friendly interface to assist a less technical audience in safely interacting with dapps, which increased accessibility for everyone.
 
 **Archives**
 
@@ -62,7 +62,7 @@ Grid was a Javascript-based desktop application that allowed you to securely acc
 
 **History**
 
-Grid could be seen as a successor to Mist, also a standalone, Javascript-based desktop app which included a Geth node. Grid removed the wallet aspect, and added a plugin-style approach for running different kinds of nodes.
+Grid could be seen as a successor to Mist, also a standalone, JavaScript-based desktop app which included a Geth node. Grid removed the wallet aspect, and added a plugin-style approach for running different kinds of nodes.
 
 **Alternatives**
 
