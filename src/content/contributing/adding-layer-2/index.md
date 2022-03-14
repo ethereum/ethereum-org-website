@@ -5,7 +5,7 @@ lang: en
 sidebar: true
 ---
 
-# Adding layer 2's {#adding-layer-2}
+# Adding layer 2s {#adding-layer-2}
 
 Anyone is free to suggest new layer 2's on ethereum.org.
 
