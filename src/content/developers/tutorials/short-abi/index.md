@@ -596,7 +596,7 @@ We call it `poorSigner` because it does not get any of our tokens (it does need 
     await (await signer.sendTransaction(transferTx)).wait()
 ```
 
-Because the ERC-20 contract trusts us, we don't need an allowance to relay transfers.
+Because the ERC-20 contract trusts the proxy (`cdi`), we don't need an allowance to relay transfers.
 
 ```js
     .
