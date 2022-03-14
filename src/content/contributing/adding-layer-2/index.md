@@ -1,5 +1,5 @@
 ---
-title: Adding Layer 2's
+title: Adding Layer 2s
 description: The policy we use when adding layer 2's to ethereum.org
 lang: en
 sidebar: true
