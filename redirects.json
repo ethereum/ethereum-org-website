@@ -4,6 +4,10 @@
     "toPath": "https://discord.gg/rZz26QWfCg"
   },
   {
+    "fromPath": "/*/discord",
+    "toPath": "https://discord.gg/rZz26QWfCg"
+  },
+  {
     "fromPath": "/pdfs/*",
     "toPath": "/en/"
   },
