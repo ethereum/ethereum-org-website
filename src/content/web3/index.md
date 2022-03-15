@@ -1,15 +1,15 @@
 ---
-title: Web3
-description: What is web3 and why is it important?
+title: What is web3 and why is it important?
+description: An introduction to web3 - the next evolution of the internet - and why it matters.
 lang: en
 sidebar: true
 ---
 
 # Introduction to web3 {#introduction}
 
-Centralization has helped onboard billions of people to the internet and created the stable, robust infrastructure on which it lives. At the same time, these centralized entities have a stronghold on large swathes of the internet, undemocratically deciding what should and should not be allowed.
+Centralization has helped onboard billions of people to the internet and created the stable, robust infrastructure on which it lives. At the same time, a handful of centralized entities have a stronghold on large swathes of the internet, undemocratically deciding what should and should not be allowed.
 
-Web3 is the answer to this dilemma. Instead of an internet monopolized by large technology companies, web3 embraces decentralization and is being built, operated, and owned by its users.
+Web3 is the answer to this dilemma. Instead of an internet monopolized by large technology companies, web3 embraces decentralization and is being built, operated, and owned by its users. Web3 will put power in the hands of communities rather than corporations.
 Before we talk about web3, let's explore how we got here.
 
 <Divider />
@@ -18,22 +18,22 @@ Before we talk about web3, let's explore how we got here.
 
 Most people think of the internet as a continuous pillar of modern life—it was invented and has just existed since. However, the internet most of us know today is quite different from originally imagined. To understand this better, it's helpful to break the internet's short history into loose periods—web 1.0 and web 2.0.
 
-### What is Web 1.0? {#web1}
+### Web1: Read-Only {#web1}
 
 In 1989, in CERN, Geneva, Tim Berners-Lee was busy developing the protocols that would become the internet. His idea? To create open, decentralized protocols that allowed information-sharing from anywhere on Earth.
 
-The first inception of the internet, now known as 'Web 1.0', occurred roughly between 1990 to 2004. The internet on Web 1.0 mainly was static websites owned by companies, and there was close to zero interaction between users, leading to it being known as the read-only web.
+The first inception of the internet, now known as 'Web 1.0', occurred roughly between 1990 to 2004. The internet on Web 1.0 mainly was static websites owned by companies, and there was close to zero interaction between users - individuals seldom produced content - leading to it being known as the read-only web.
 
-### What is Web 2.0? {#web2}
+### Web2:  Read-Write {#web2}
 
 The Web 2.0 period began in 2004 with the emergence of social media platforms. Instead of a read-only, the web evolved to be read-write. Instead of companies providing content to users, they also began to provide platforms to share user-generated content and engage in user-to-user interactions.
 As more people came online, a handful of top companies began to control a disproportionate amount of the traffic and value generated on the web.
 
 <Divider />
 
-## Web 3.0 {#web3}
+## Web3: Read-Write-Own {#web3}
 
-The premise of 'Web 3.0' was coined by Ethereum co-founder Gavin Wood shortly after Ethereum launched in 2014. Gavin put into words a solution for a problem that many early crypto adopters felt: the internet required too much trust. That is, most of the internet that people know and use today relies on trusting a handful of private companies to act in the public's best interests.
+The premise of 'Web 3.0' was coined by [Ethereum](/what-is-ethereum/) co-founder Gavin Wood shortly after Ethereum launched in 2014. Gavin put into words a solution for a problem that many early crypto adopters felt: the internet required too much trust. That is, most of the internet that people know and use today relies on trusting a handful of private companies to act in the public's best interests.
 
 ### What is web3? {#what-is-web3}
 
@@ -41,22 +41,22 @@ Web3 has become a catch-all term for the vision of a new, better internet. At it
 
 #### Core ideas of web3 {#core-ideas}
 
-Although it's challenging to provide a rigid definition of is and is not web3, a few core principles guide its creation.
+Although it's challenging to provide a rigid definition what web3 is, a few core principles guide its creation.
 
 - **Web3 is decentralized:** instead of large swathes of the internet controlled and owned by centralized entities, ownership gets distributed amongst its builders and users.
 - **Web3 is permissionless:** everyone has equal access to participate in web3, and no one gets excluded.
-- **Web3 has native payments:** it uses cryptocurrency for spending and sending money online instead of relying on the infrastructure banks and payment processors.
-- **Web3 is trustless:** it operates using incentives and mechanisms instead of relying on trusted third-parties
+- **Web3 has native payments:** it uses cryptocurrency for spending and sending money online instead of relying on the outdated infrastructure of banks and payment processors.
+- **Web3 is trustless:** it operates using incentives and economic mechanisms instead of relying on trusted third-parties
 
 ### Why is web 3.0 important? {#why-is-web3-important}
 
-So why does web3 matter so much? Web3's killer features aren't isolated and don't fit into neat categories. But, for simplicity, we've tried to separate them to make them easier to understand.
+So why does web3 matter? Web3's killer features aren't isolated and don't fit into neat categories. But, for simplicity, we've tried to separate them to make them easier to understand.
 
 #### Ownership {#ownership}
 
 Web3 gives you ownership of your digital assets in an unprecedented way. For example, say you're playing a web2 game. If you purchase an in-game item, it is tied directly to your account. If the game creators delete your account, you will lose these items. Or, if you stop playing the game, you lose the value you invested into your in-game items.
 
-Web3 allows for direct ownership through [non-fungible tokens (NFTs)](/nft/). No one, even the game's creators, has the power to take away your ownership. And, if you stop playing, you can sell your in-game items and recoup their value.
+Web3 allows for direct ownership through [non-fungible tokens (NFTs)](/nft/). No one, not even the game's creators, has the power to take away your ownership. And, if you stop playing, you can sell or trade your in-game items on open markets and recoup their value.
 
 <ButtonLink to="/nft/">
   More on NFTs
@@ -64,9 +64,9 @@ Web3 allows for direct ownership through [non-fungible tokens (NFTs)](/nft/). No
 
 #### Governance {#governance}
 
-As a Web2 platform increases in popularity, the power of the individual user's opinion decreases. Simultaneously, the power of the platform's governing body wields also increases. Over time, this power imbalance can spiral out of control until the platform can ignore grievances with no repercussions.
+As a Web2 platform increases in popularity, the power of the individual user's opinion decreases. Simultaneously, the power of the platform's governing body also increases. Over time, this power imbalance can spiral out of control until the platform can ignore grievances with no repercussions.
 
-Web3 lets users participate in the decision making of a platform through tokens. A recent example of this is Ethereum Name Service (ENS), which distributed 25% of its voting rights to existing users by sending ENS tokens to their wallets. Anyone with ENS tokens can vote on proposals about the future of ENS. ENS is a decentralized autonomous organization (DAO) because its ownership gets distributed amongst its token holders.
+Web3 empowers users to participate in the decision making of a platform through tokens. A recent example of this is Ethereum Name Service (ENS), which distributed 25% of its voting rights to existing users by sending ENS tokens to their wallets. Anyone with ENS tokens can vote on proposals about the future of ENS. ENS is a decentralized autonomous organization (DAO) because its ownership gets distributed amongst its token holders.
 
 _In Web2, you can refuse to use a platform; in Web3, you can vote to change it._
 
@@ -95,7 +95,7 @@ Web3 solves these problems by allowing you to control your digital identity with
 ### Native payments {#native-payments}
 
 Web2's payment infrastructure relies on banks and payment processors, excluding people without bank accounts or those who happen to live within the borders of the wrong country.
-Web3 uses tokens like ETH to send money directly in the browser and requires no trusted third party.
+Web3 uses tokens like [ETH](/eth/) to send money directly in the browser and requires no trusted third party.
 
 <ButtonLink to="/eth/">
   More on ETH
@@ -107,7 +107,7 @@ Despite the numerous benefits of Web3 in its current form, there are still many 
 
 ### Accessibility {#accessibility}
 
-Web3 is less likely to be utilized in less-wealthy, developing nations due to high transaction fees. On Ethereum, these challenges are being solved right through network upgrades and layer 2 scaling solutions. The technology is ready, but we need higher levels of adoption on layer 2 to make Web3 accessible to everyone.
+Web3 is less likely to be utilized in less-wealthy, developing nations due to high transaction fees. On Ethereum, these challenges are being solved through [network upgrades](/upgrades/) and [layer 2 scaling solutions](/developers/docs/scaling/). The technology is ready, but we need higher levels of adoption on layer 2 to make Web3 accessible to everyone.
 
 <ButtonLink to="/layer-2/">
   More on layer 2
@@ -115,7 +115,7 @@ Web3 is less likely to be utilized in less-wealthy, developing nations due to hi
 
 ### User experience {#user-experience}
 
-The technical barrier to entry to using Web3 is currently too high. Users must comprehend security concerns, understand complex technical documentation, and navigate unintuitive user interfaces. Wallet providers, in particular, are working to solve this, but more progress is needed before Web3 gets adopted en masse.
+The technical barrier to entry to using Web3 is currently too high. Users must comprehend security concerns, understand complex technical documentation, and navigate unintuitive user interfaces. [Wallet providers](/wallets/find-wallet/), in particular, are working to solve this, but more progress is needed before Web3 gets adopted en masse.
 
 ### Centralized infrastructure {#centralized-infrastructure}
 
