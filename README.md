@@ -1423,6 +1423,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/Re-Drawn"><img src="https://avatars.githubusercontent.com/u/54480926?v=4?s=100" width="100px;" alt=""/><br /><sub><b>ReDrawn</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=Re-Drawn" title="Documentation">📖</a></td>
     <td align="center"><a href="http://www.oskarmendel.me"><img src="https://avatars.githubusercontent.com/u/16289144?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Oskar Mendel</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=brokenprogrammer" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/thewild-being"><img src="https://avatars.githubusercontent.com/u/82868359?v=4?s=100" width="100px;" alt=""/><br /><sub><b>thewild-being</b></sub></a><br /><a href="#ideas-thewild-being" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="http://mihrac.com"><img src="https://avatars.githubusercontent.com/u/18642701?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Mihrac Cerrahoglu</b></sub></a><br /><a href="#ideas-mydearcode" title="Ideas, Planning, & Feedback">🤔</a></td>
   </tr>
 </table>
 
