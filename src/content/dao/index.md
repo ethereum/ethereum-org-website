@@ -44,6 +44,7 @@ To help this make more sense, here's a few examples of how you could use a DAO:
 - A charity – you can accept membership and donations from anyone in the world and the group can decide how they want to spend donations.
 - A freelancer network – you could create a network of contractors who pool their funds for office spaces and software subscriptions.
 - Ventures and grants – you could create a venture fund that pools investment capital and votes on ventures to back. Repaid money could later be redistributed amongst DAO-members.
+- Protocol/product development & governance - you can form a global decentralized community collaborating trustlessly in the development and governance of protocols and applications.
 
 ## DAO membership {#dao-membership}
 
@@ -68,6 +69,17 @@ _Typically used for more closer-knit, human-centric organizations like charities
 #### A famous example {#share-example}
 
 [MolochDAO](http://molochdao.com/) – MolochDAO is focused on funding Ethereum projects. They require a proposal for membership so the group can assess whether you have the necessary expertise and capital to make informed judgments about potential grantees. You can't just buy access to the DAO on the open market.
+
+### Reputation-based membership {#reputation-based-membership}
+
+Reputation represents ‘proof-of-work’ and grants voting power, but unlike shares - no ownership, and members do not have a claim on the treasury. Unlike liquid tokens, reputation cannot be bought, sold, transferred or delegated - it is only earned, but it can also be slashed. Reputation-based DAOs do not require reputation or tokens for someone to submit a proposal for on-chain voting, it is permissionless. Prospective members can freely submit proposals to join the DAO, and in exchange for their contributions request to receive reputation and tokens as a reward.
+Due to their unique nature, wich doesn't share the constraints of token governance, reputation-based systems allow DAOs to expand to multiple networks and conduct cross-chain governance, without relying on bridges. That paired with holographic consensus also allows for DAOs to scale without compromising on resiliency.
+
+_Typical for decentralized development and governance of protocols and dApps, but also well suited to a diverse set of organizations like charities, worker collectives, investment clubs, etc._
+
+#### A famous example {#reputation-example}
+
+[DXdao](https://DXdao.eth.link) – DXdao is a global sovereign collective that has been building and governing decentralized protocols and applications since 2019. It leverages reputation-based governance and holographic consensus to coordinate and mananage funds trustlessly. It's not possible for anyone to buy they way into influencing its future.
 
 ## How do DAOs work? {#how-daos-work}
 
@@ -100,7 +112,7 @@ Ethereum is the perfect foundation for DAOs for a number of reasons:
 - [Summon a DAO with DAOHaus](https://app.daohaus.club/summon)
 - [Create an Aragon-powered DAO](https://aragon.org/product)
 - [Start a colony](https://colony.io/)
-- [Build a DAO with DAOstack](https://daostack.io/)
+- [Create a DAO with DAOstack's holographic consensus](https://alchemy.daostack.io/daos/create)
 
 ## Further reading {#further-reading}
 
@@ -111,7 +123,10 @@ Ethereum is the perfect foundation for DAOs for a number of reasons:
 - [What is a DAO and what is it for?](https://daohaus.substack.com/p/-what-is-a-dao-and-what-is-it-for) – [DAOhaus](https://daohaus.club/)
 - [How to Start a DAO-Powered Digital Community](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) – [DAOhaus](https://daohaus.club/)
 - [What is a DAO?](https://coinmarketcap.com/alexandria/article/what-is-a-dao) – [Coinmarketcap](https://coinmarketcap.com)
+- [What is Holographic Consensus?](https://medium.com/daostack/holographic-consensus-part-1-116a73ba1e1c) - [DAOstack](https://daostack.io/)
+- [Tokens, reputation, or maybe both?](https://forum.bprotocol.org/t/tokenized-governance/19/26) [DXdao](https://dxdocs.eth.link/)
 
 ### Videos {#videos}
 
 - [What is a DAO in crypto?](https://youtu.be/KHm0uUPqmVE)
+- [DAOs ownining decentralized frontends](https://www.youtube.com/watch?v=2V6OHbYjCVg)
