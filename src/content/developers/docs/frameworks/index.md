@@ -41,6 +41,11 @@ Before diving into frameworks, we recommend you first read through our introduct
 - [hardhat.org](https://hardhat.org)
 - [GitHub](https://github.com/nomiclabs/hardhat)
 
+**Ape -** **_The smart contract development tool for Pythonistas, Data Scientists, and Security Professionals._**
+
+- [Documentation](https://docs.apeworx.io/ape/stable/)
+- [GitHub](https://github.com/ApeWorX/ape)
+
 **Brownie -** **_Python-based development environment and testing framework._**
 
 - [Documentation](https://eth-brownie.readthedocs.io/en/latest/)
