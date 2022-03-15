@@ -18,7 +18,7 @@ published: 2021-02-26
 ## Assumptions {#assumptions}
 
 - You can create a new JavaScript or TypeScript project
-- You have some basic experience with tests in Javascript
+- You have some basic experience with tests in JavaScript
 - You have used some package managers like yarn or npm
 - You possess very basic knowledge of smart contracts and Solidity
 

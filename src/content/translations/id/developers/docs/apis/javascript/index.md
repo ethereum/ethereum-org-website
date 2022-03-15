@@ -29,10 +29,10 @@ Menggunakan penyedia, pustaka ini memungkinkan Anda terhubung ke Ethereum dan me
 
 ```js
 // Web3Provider membungkus provider Web3 standar, yaitu
-// apa yang disuntikkan Metamask sebagai window.ethereum ke setiap halaman
+// apa yang disuntikkan MetaMask sebagai window.ethereum ke setiap halaman
 const provider = new ethers.providers.Web3Provider(window.ethereum)
 
-// Plugin Metamask juga memungkinkan penandatanganan transaksi ke
+// Plugin MetaMask juga memungkinkan penandatanganan transaksi ke
 // kirim ether dan bayar untuk mengubah state di dalam blockchain.
 // Untuk ini, kita membutuhkan penandatangan akun...
 const signer = provider.getSigner()
@@ -152,7 +152,7 @@ Setelah disiapkan, Anda dapat:
 
 ### Berinteraksi dengan fungsi kontrak pintar {#interact-with-smart-contract-functions}
 
-Pustaka klien Javascript memungkinkan aplikasi Anda memanggil fungsi kontrak pintar dengan membaca Antarmuka Biner Aplikasi (ABI) dari kontrak yang dikompilasi.
+Pustaka klien JavaScript memungkinkan aplikasi Anda memanggil fungsi kontrak pintar dengan membaca Antarmuka Biner Aplikasi (ABI) dari kontrak yang dikompilasi.
 
 ABI pada dasarnya menjelaskan fungsi kontrak dalam format JSON dan memungkinkan Anda untuk menggunakannya seperti objek JavaScript biasa.
 
@@ -279,6 +279,6 @@ _Tahu tentang sumber daya komunitas yang membantu Anda? Edit halaman ini dan tam
 
 ## Tutorial terkait {#related-tutorials}
 
-- [Menyiapkan Web3js untuk menggunakan blockchain Ethereum dalam Javascript](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– Instruksi untuk menyiapkan web3.js dalam proyek Anda._
+- [Menyiapkan Web3js untuk menggunakan blockchain Ethereum dalam JavaScript](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– Instruksi untuk menyiapkan web3.js dalam proyek Anda._
 - [Memanggil kontrak pintar dari JavaScript](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– Menggunakan token DAI, lihat cara memanggil fungsi kontrak menggunakan JavaScript._
 - [Mengirim transaksi menggunakan web3 dan Alchemy](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) _– Panduan langkah demi langkah untuk mengirim transaksi dari backend._

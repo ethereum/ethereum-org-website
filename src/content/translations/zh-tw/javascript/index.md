@@ -26,7 +26,7 @@ sidebar: true
 
 ## JavaScript 項目和工具 {#javascript-project-and-tools}
 
-**Solidity -** **_以太坊上最受歡迎的智能合約語言，靈感來自 Javascript _**
+**Solidity -** **_以太坊上最受歡迎的智能合約語言，靈感來自 JavaScript _**
 
 - [文件](https://solidity.readthedocs.io)
 - [GitHub](https://github.com/ethereum/solidity/)

@@ -108,5 +108,5 @@ _Conosci una risorsa pubblica che ti è stata utile? Modifica questa pagina e ag
 
 ## Tutorial correlati {#related-tutorials}
 
-- [Set up Web3js to use the Ethereum blockchain in Javascript](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– Istruzioni per utilizzare e configurare web3.js in un progetto_
+- [Set up Web3js to use the Ethereum blockchain in JavaScript](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– Istruzioni per utilizzare e configurare web3.js in un progetto_
 - [Calling a Smart Contract from JavaScript](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– Usando il token Dai, impara a chiamare le funzioni dei contratti con JavaScript_

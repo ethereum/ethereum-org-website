@@ -1416,6 +1416,12 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/m-zaink"><img src="https://avatars.githubusercontent.com/u/32197186?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Mohammed Sadiq</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=m-zaink" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/Sahilsen"><img src="https://avatars.githubusercontent.com/u/41318044?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Sahil sen</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=Sahilsen" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/collincusce"><img src="https://avatars.githubusercontent.com/u/6778681?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Collin K Cusce</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=collincusce" title="Documentation">📖</a> <a href="#ideas-collincusce" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="https://github.com/hma23"><img src="https://avatars.githubusercontent.com/u/33968559?v=4?s=100" width="100px;" alt=""/><br /><sub><b>hma23</b></sub></a><br /><a href="#ideas-hma23" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/ethereum/ethereum-org-website/commits?author=hma23" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/KaranKaira"><img src="https://avatars.githubusercontent.com/u/46125192?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Karan Kaira</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=KaranKaira" title="Documentation">📖</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/Re-Drawn"><img src="https://avatars.githubusercontent.com/u/54480926?v=4?s=100" width="100px;" alt=""/><br /><sub><b>ReDrawn</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=Re-Drawn" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://www.oskarmendel.me"><img src="https://avatars.githubusercontent.com/u/16289144?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Oskar Mendel</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=brokenprogrammer" title="Code">💻</a></td>
   </tr>
 </table>
 

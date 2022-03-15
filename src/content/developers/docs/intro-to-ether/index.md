@@ -43,7 +43,6 @@ Ether burn occurs in every transaction on Ethereum. When users pay for their tra
 
 Burning the base fee prevents various ways the miners could manipulate it otherwise. For example, if miners got the base fee, they could include their own transactions for free and raise the base fee for everyone else. Alternatively, they could refund the base fee to some users off-chain, leading to a more opaque and complex transaction fee market.
 
-
 ## Denominations of ether {#denominations}
 
 Since many transactions on Ethereum are small, ether has several denominations which may be referenced for smaller amounts. Of these denominations, Wei and gwei are particularly important.

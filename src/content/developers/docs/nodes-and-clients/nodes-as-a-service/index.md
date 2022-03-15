@@ -129,7 +129,7 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Sophisticated user management for both administrators and end users
     - Highly scalable, resilient, enterprise-grade infrastructure
     - Cloud HSM private key management
-    - Ethereum Mainnet Tethering 
+    - Ethereum Mainnet Tethering
     - ISO 27k and SOC 2, Type 2 certifications
     - Dynamic runtime configuration (e.g. adding cloud integrations, altering node ingresses, etc.)
     - Support for multi-cloud, multi-region and hybrid deployment orchestrations

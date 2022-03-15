@@ -127,11 +127,9 @@ The rest of the data is:
 000000000000000000000000000000000000000000000000000000003b0559f4
 ```
 
-According to the ABI specifications,  integer values (such as addresses, which are 20-byte integers) appear in the ABI as 32-byte words, padded with zeros in the front.
-So we know that the `to` address is [`4f6742badb049791cd9a37ea913f2bac38d01279`](https://etherscan.io/address/0x4f6742badb049791cd9a37ea913f2bac38d01279). 
+According to the ABI specifications, integer values (such as addresses, which are 20-byte integers) appear in the ABI as 32-byte words, padded with zeros in the front.
+So we know that the `to` address is [`4f6742badb049791cd9a37ea913f2bac38d01279`](https://etherscan.io/address/0x4f6742badb049791cd9a37ea913f2bac38d01279).
 The `value` is 0x3b0559f4 = 990206452.
-
-
 
 ## Types of transactions {#types-of-transactions}
 

@@ -198,7 +198,7 @@ Se tutto funziona come previsto, dovresti vedere 2 eventi (`Transfer` e `Sold`) 
 
 In questo tutorial abbiamo visto come controllare il saldo e la disponibilità di un token ERC-20 e come chiamare `Transfer` e `TransferFrom` di uno Smart Contract ERC20 usando l'interfaccia.
 
-Una volta creata una transazione, abbiamo un tutorial Javascript per [attendere e ottenere dettagli sulle transazioni](https://ethereumdev.io/waiting-for-a-transaction-to-be-mined-on-ethereum-with-js/) eseguite sul contratto e un [tutorial per decodificare gli eventi generati dai trasferimenti di token o da altri tipi di eventi](https://ethereumdev.io/how-to-decode-event-logs-in-javascript-using-abi-decoder/) se si è in possesso dell'ABI.
+Una volta creata una transazione, abbiamo un tutorial JavaScript per [attendere e ottenere dettagli sulle transazioni](https://ethereumdev.io/waiting-for-a-transaction-to-be-mined-on-ethereum-with-js/) eseguite sul contratto e un [tutorial per decodificare gli eventi generati dai trasferimenti di token o da altri tipi di eventi](https://ethereumdev.io/how-to-decode-event-logs-in-javascript-using-abi-decoder/) se si è in possesso dell'ABI.
 
 Ecco il codice completo del tutorial:
 

@@ -6751,6 +6751,43 @@
         "doc",
         "ideas"
       ]
+    },
+    {
+      "login": "hma23",
+      "name": "hma23",
+      "avatar_url": "https://avatars.githubusercontent.com/u/33968559?v=4",
+      "profile": "https://github.com/hma23",
+      "contributions": [
+        "ideas",
+        "doc"
+      ]
+    },
+    {
+      "login": "KaranKaira",
+      "name": "Karan Kaira",
+      "avatar_url": "https://avatars.githubusercontent.com/u/46125192?v=4",
+      "profile": "https://github.com/KaranKaira",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "Re-Drawn",
+      "name": "ReDrawn",
+      "avatar_url": "https://avatars.githubusercontent.com/u/54480926?v=4",
+      "profile": "https://github.com/Re-Drawn",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "brokenprogrammer",
+      "name": "Oskar Mendel",
+      "avatar_url": "https://avatars.githubusercontent.com/u/16289144?v=4",
+      "profile": "http://www.oskarmendel.me",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,

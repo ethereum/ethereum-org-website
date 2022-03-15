@@ -32,7 +32,7 @@ More on [smart contracts](/developers/docs/smart-contracts/).
 
 ### The Ethereum virtual machine {#the-ethereum-virtual-machine}
 
-There is a Javascript implementation of [Ethereum's virtual machine](/developers/docs/evm/). It supports the latest fork rules. Fork rules refer to changes made to the EVM as a result of planned upgrades.
+There is a JavaScript implementation of [Ethereum's virtual machine](/developers/docs/evm/). It supports the latest fork rules. Fork rules refer to changes made to the EVM as a result of planned upgrades.
 
 It's split out into various JavaScript packages that you can check out to better understand:
 
