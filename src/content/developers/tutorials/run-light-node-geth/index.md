@@ -21,7 +21,7 @@ First, [install Geth](https://geth.ethereum.org/docs/install-and-build/installin
 
 After installing Geth, you can run an Ethereum node in "light" mode by running the following command in a Terminal window:
 
-```
+```bash
 geth --syncmode light
 ```
 
@@ -43,7 +43,7 @@ Enabling the HTTP-RPC server lets you connect your Ethereum node to other softwa
 
 You can enable the HTTP-RPC server by running the following command when launching Geth:
 
-```
+```bash
 geth --syncmode light --http
 ```
 
@@ -79,7 +79,7 @@ Geth runs your node on [Ethereum Mainnet](/glossary/#mainnet/) by default.
 
 It is also possible to use Geth to run a node on one of the [public test networks](/networks/#testnets/), by running one of the following commands in Terminal:
 
-```
+```bash
 geth --syncmode light --ropsten
 geth --syncmode light --rinkeby
 geth --syncmode light --goerli
@@ -87,7 +87,7 @@ geth --syncmode light --goerli
 
 ## Where is the blockchain and EVM data stored? {#where-is-the-blockchain-and-evm-data-stored}
 
-The directory which Geth uses to store raw blockchain data depends on your operating system. Upon running Geth, look for a message that looks like
+The directory which Geth uses to store raw blockchain data depends on your operating system. Upon running Geth, look for a message that looks like this:
 
 ```bash
 INFO [11-18|14:04:47] Allocated cache and file handles         database=/Users/bgu/Library/Ethereum/testnet/geth/lightchaindata cache=768 handles=128
