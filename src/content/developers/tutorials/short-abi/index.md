@@ -151,22 +151,12 @@ Read a value from the calldata.
 
 
 ```solidity
-        uint _calldatasize;
         uint _retVal;
 
-        assembly {
-            _calldatasize := calldatasize()
-        }
-```
-
-We could have copied the data from the call to `fallback()` (see below), but it is easier to use [Yul](https://docs.soliditylang.org/en/v0.8.12/yul.html), the assembly language of the EVM.
-Here we use [the CALLDATASIZE opcode](https://www.evm.codes/#36) to get the size of the calldata.
-
-```solidity
         require(length < 0x21, 
             "calldataVal length limit is 32 bytes");
 
-        require(length + startByte <= _calldatasize,
+        require(length + startByte <= msg.data.length,
             "calldataVal trying to read beyond calldatasize");
 ```
 
@@ -179,6 +169,8 @@ On L1 it might be necessary to skip these tests to save on gas, but on L2 gas is
             _retVal := calldataload(startByte)
         }
 ```
+
+We could have copied the data from the call to `fallback()` (see below), but it is easier to use [Yul](https://docs.soliditylang.org/en/v0.8.12/yul.html), the assembly language of the EVM.
 
 Here we use [the CALLDATALOAD opcode](https://www.evm.codes/#35) to read bytes `startByte` to `startByte+31` into the stack.
 In general, the syntax of an opcode in Yul is `<opcode name>(<first stack value, if any>,<second stack value, if any>...)`.
