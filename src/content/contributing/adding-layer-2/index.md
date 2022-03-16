@@ -17,7 +17,9 @@ We currently list L2s on the following pages:
 - [Zero-knowledge rollups](/developers/docs/scaling/zk-rollups/)
 <!-- TODO: Add layer-2 page -->
 
-## How we decide {#how-we-decide}
+Layer 2 is a relatively new and exciting paradigm for Ethereum. We've tried to create a fair framework for consideration on ethereum.org but the listing criteria will change and evolve over time.
+
+## Information we require {#information-we-require}
 
 Layer 2 submissions will be assessed by the following criteria:
 
@@ -45,7 +47,7 @@ Layer 2 submissions will be assessed by the following criteria:
 
 **Links to dapps in the layer 2 ecosystem**
 
-- We want to be able to provide information on what users can expect to be able to do on this layer 2.
+- We want to be able to provide information on what users can expect to be able to do on this layer 2. (ex: https://portal.arbitrum.one/, https://www.optimism.io/apps/all)
 
 **Token contract lists**
 
@@ -55,18 +57,18 @@ Layer 2 submissions will be assessed by the following criteria:
 
 **Is the project a fork?**
 
-- If the layer 2 is a fork, what project is it a fork of?
+- If the layer 2 is a fork, which project was forked?
 
 **What wallets can users use to access this layer 2?**
 
 - What is the public RPC information for the network? (RPC URL, Chain ID, Currency Symbol, Block Explorer URL)
 - What wallets natively support this layer 2?
 
-**Has the project been externally audited?**
+**Has this project undergone an external security audit?**
 
 - Include links to report and/or repo.
 
-**Is the layer 2 widely used?**
+**Has the project maintained its users over time?**
 
 - We will consider metrics such as TVL history, transaction statistics, and whether it is used by known companies or projects
 

@@ -22,7 +22,7 @@ If it does, complete the following information which we need to accurately list 
 
 **Description**
 
-<!-- Please provide a 1-2 sentence of the layer 2-->
+<!-- Please provide a 1-2 sentence (240 character max) of the layer 2. -->
 
 **Website**
 
@@ -36,29 +36,25 @@ If it does, complete the following information which we need to accurately list 
 
 <!-- Please provide the link to the layer 2s page on L2BEAT-->
 
-**Open source**
+**Is the project open source?**
 
 <!-- If yes, please provide a link to the repository -->
 
-**Type of layer 2 (Optimistic, ZK, State channel)**
+**What category of layer 2 is it? (Optimistic, ZK, State channel)**
 
 <!-- Please provide some information on what kind of layer 2 this is -->
 
-**Purpose / use case**
-
-<!-- Please provide some information on the use case for this layer 2 -->
-
-**Bridges**
+**Which bridges are used to onbaord?**
 
 <!-- Please provide some information on how to bridge assets onto this layer 2 -->
 
-**Exchange support**
+**Which exchanges off support for the project?**
 
 <!-- If there is exchange support for deposits/withdrawals, please provide information for this -->
 
 **Link to dapp ecosystem (if applicable)**
 
-<!-- Please provide a link to the dapp ecosystem -->
+<!-- Please provide a link to the dapp ecosystem. (ex: https://portal.arbitrum.one/, https://www.optimism.io/apps/all) -->
 
 **Token contract list (if applicable)**
 
@@ -80,7 +76,7 @@ If it does, complete the following information which we need to accurately list 
 
 <!-- Please provide a link to a report or repo. If you haven't been audited but think your layer 2 should be listed anyway, explain here. -->
 
-**Is the layer 2 widely used?**
+**Has the project maintained its users over time?**
 
 <!-- Please provide supporting information such as TVL history, transaction statistics, and whether it is used by known companies or projects. -->
 
