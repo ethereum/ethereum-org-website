@@ -66,7 +66,7 @@ If it does, complete the following information which we need to accurately list 
 
 **What date did this project go live?**
 
-<!-- Please provide an approximate date for when the layer 2 went live -->
+<!-- Please provide proof to substantiate this date -->
 
 **Is this project a fork? If yes, what is this project a fork of?**
 
