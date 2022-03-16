@@ -76,7 +76,7 @@ If it does, complete the following information which we need to accurately list 
 
 <!-- Please list wallets that support this network -->
 
-**Is this project externally audited?**
+**Has this project undergone an external security audit?**
 
 <!-- Please provide a link to a report or repo. If you haven't been audited but think your layer 2 should be listed anyway, explain here. -->
 
