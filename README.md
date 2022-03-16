@@ -309,23 +309,23 @@ Markdown will be translated as whole pages of content, so no specific action is 
 
 - Components and pages are written using arrow function syntax with React hooks in lieu of using class-based components
 
-```
+```jsx
 // Example
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from "react"
 
-const ComponentName = props => {
+const ComponentName = (props) => {
   // useState hook for managing state variables
-  const [greeting, setGreeting] = useState('')
+  const [greeting, setGreeting] = useState("")
 
   useEffect(() => {
     // useEffect hook for handling component lifecycle
-    setGreeting('Hello world')
+    setGreeting("Hello world")
   }, [])
 
   return <div>{greeting}</div>
-};
+}
 
-export default ComponentName;
+export default ComponentName
 ```
 
 ## Styling
