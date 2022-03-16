@@ -23,7 +23,7 @@ Layer 2 submissions will be assessed by the following criteria:
 
 **[Listing on L2BEAT](https://l2beat.com)**
 
-- In order to be considered, this project to be featured on L2BEAT. This resource provides a great risk assessment of layer 2 projects. **If the project is not featured on L2BEAT, they will not be considered for ethereum.org.**
+- In order to be considered, this project must be featured on L2BEAT. L2BEAT provides a great risk assessment of layer 2 projects that we lean on for evaluating L2 projects. **If the project is not featured on L2BEAT, we will not list them as an L2 on ethereum.org.**
 
 [Learn how to add your L2 project to L2BEAT](https://github.com/l2beat/l2beat/blob/master/CONTRIBUTING.md).
 
