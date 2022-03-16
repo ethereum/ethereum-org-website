@@ -39,7 +39,7 @@ Layer 2 submissions will be assessed by the following criteria:
 
 - How are users able to onboard to the layer 2?
 
-**Exchange support**
+**Which exchanges offer support for the project?**
 
 - Are users able to deposit and/or withdraw directly from an exchange? If yes, which exchanges?
 
