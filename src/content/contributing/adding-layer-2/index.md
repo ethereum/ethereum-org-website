@@ -72,7 +72,7 @@ Layer 2 submissions will be assessed by the following criteria:
 
 **Is the project being actively maintained?**
 
-- We won't list layer 2s that don't have an active team supporting the project.
+- We won't list a layer 2 that doesn't have an active team working on project.
 
 **Is there a block explorer?**
 
