@@ -1134,7 +1134,7 @@ const DappsPage = ({ data, location }) => {
           <Translation id="get-started" />
         </H2>
         <p>
-          <Translation id="page-dapps-get-started-subtitle" />{" "}
+          <Translation id="page-dapps-get-started-subtitle" />
           <Link to="/glossary/#transaction-fee">
             <Translation id="transaction-fees" />
           </Link>
@@ -1236,7 +1236,7 @@ const DappsPage = ({ data, location }) => {
             <IntroRow>
               <Column>
                 <H2>
-                  <Translation id="page-dapps-finance-title" />{" "}
+                  <Translation id="page-dapps-finance-title" />
                   <Emoji
                     size={"2rem"}
                     ml={"0.5rem"}
@@ -1354,7 +1354,7 @@ const DappsPage = ({ data, location }) => {
             <IntroRow>
               <Column>
                 <H2>
-                  <Translation id="page-dapps-gaming-title" />{" "}
+                  <Translation id="page-dapps-gaming-title" />
                   <Emoji size={"2rem"} ml={"0.5rem"} text=":video_game:" />
                 </H2>
                 <Subtitle>
@@ -1395,7 +1395,7 @@ const DappsPage = ({ data, location }) => {
             <IntroRow>
               <Column>
                 <H2>
-                  <Translation id="page-dapps-technology-title" />{" "}
+                  <Translation id="page-dapps-technology-title" />
                   <Emoji size={"2rem"} ml={"0.5rem"} text=":keyboard:" />
                 </H2>
                 <Subtitle>
@@ -1456,7 +1456,7 @@ const DappsPage = ({ data, location }) => {
             <IntroRow>
               <Column>
                 <H2>
-                  <Translation id="page-dapps-collectibles-title" />{" "}
+                  <Translation id="page-dapps-collectibles-title" />
                   <Emoji
                     size={"2rem"}
                     ml={"0.5rem"}
@@ -1512,7 +1512,7 @@ const DappsPage = ({ data, location }) => {
                 <Translation id="page-dapps-add-title" />
               </H2>
               <TextNoMargin>
-                <Translation id="listing-policy-disclaimer" />{" "}
+                <Translation id="listing-policy-disclaimer" />
               </TextNoMargin>
             </div>
             <AddDappButton
@@ -1526,9 +1526,9 @@ const DappsPage = ({ data, location }) => {
           {categories[selectedCategory].benefits && (
             <About>
               <h2>
-                <Translation id="page-dapps-magic-title-1" />{" "}
-                <Emoji size={"1rem"} text=":sparkles:" />{" "}
-                <Translation id="page-dapps-magic-title-2" />{" "}
+                <Translation id="page-dapps-magic-title-1" />
+                <Emoji size={"1rem"} text=":sparkles:" />
+                <Translation id="page-dapps-magic-title-2" />
                 {categories[selectedCategory].benefitsTitle}
               </h2>
               <p>{categories[selectedCategory.benefitsDescription]}</p>
