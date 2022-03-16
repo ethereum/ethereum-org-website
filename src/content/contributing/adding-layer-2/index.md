@@ -76,6 +76,8 @@ Layer 2 submissions will be assessed by the following criteria:
 
 **Is there a block explorer?**
 
+- Please provide a link to the block explorer.
+
 ## Add your layer 2 {#add-exchange}
 
 If you want to add a layer 2 to ethereum.org, create an issue on GitHub.
