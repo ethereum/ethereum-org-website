@@ -105,7 +105,7 @@ export const SloganGradient = styled.div`
   -webkit-text-fill-color: transparent;
   margin-bottom: 0rem;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    font-size: 2.5rem
+    font-size: 2.5rem;
   }
 `
 
@@ -373,6 +373,13 @@ export const Header4 = styled.h4`
       fill: ${(props) => props.theme.colors.primary};
     }
   }
+`
+
+export const KBD = styled.kbd`
+  vertical-align: middle;
+  padding: 0.15rem 0.45rem;
+  border-radius: 2px;
+  border: 1px solid ${(props) => props.theme.colors.primary};
 `
 
 export const ListItem = styled.li`

@@ -94,8 +94,8 @@ const SecondaryButtonLink = styled(ButtonLink)`
     margin-left: 0rem;
     margin-top: 0.5rem;
   }
-  color: #333;
-  border: 1px solid #333;
+  color: #333333;
+  border: 1px solid #333333;
   background-color: transparent;
 `
 

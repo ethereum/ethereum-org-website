@@ -2940,7 +2940,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/3859395?v=4",
       "profile": "https://github.com/fubuloubu",
       "contributions": [
-        "content"
+        "content",
+        "doc"
       ]
     },
     {
@@ -6759,6 +6760,60 @@
       "profile": "https://github.com/hma23",
       "contributions": [
         "ideas",
+        "doc"
+      ]
+    },
+    {
+      "login": "KaranKaira",
+      "name": "Karan Kaira",
+      "avatar_url": "https://avatars.githubusercontent.com/u/46125192?v=4",
+      "profile": "https://github.com/KaranKaira",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "Re-Drawn",
+      "name": "ReDrawn",
+      "avatar_url": "https://avatars.githubusercontent.com/u/54480926?v=4",
+      "profile": "https://github.com/Re-Drawn",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "brokenprogrammer",
+      "name": "Oskar Mendel",
+      "avatar_url": "https://avatars.githubusercontent.com/u/16289144?v=4",
+      "profile": "http://www.oskarmendel.me",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "thewild-being",
+      "name": "thewild-being",
+      "avatar_url": "https://avatars.githubusercontent.com/u/82868359?v=4",
+      "profile": "https://github.com/thewild-being",
+      "contributions": [
+        "ideas"
+      ]
+    },
+    {
+      "login": "mydearcode",
+      "name": "Mihrac Cerrahoglu",
+      "avatar_url": "https://avatars.githubusercontent.com/u/18642701?v=4",
+      "profile": "http://mihrac.com",
+      "contributions": [
+        "ideas"
+      ]
+    },
+    {
+      "login": "smartcontracts",
+      "name": "smartcontracts",
+      "avatar_url": "https://avatars.githubusercontent.com/u/14298799?v=4",
+      "profile": "https://github.com/smartcontracts",
+      "contributions": [
         "doc"
       ]
     }

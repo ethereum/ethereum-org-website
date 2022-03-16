@@ -23,16 +23,16 @@ Les bibliothèques suppriment une grande partie de la complexité de l'interacti
 
 ### Se connecter à des nœud Ethereum {#connect-to-ethereum-nodes}
 
-En utilisant des fournisseurs, les bibliothèques vous permettent de vous connecter à Ethereum et de lire ses données, que ce soit sur JSON-RPC, INFURA, Etherscan, Alchemy ou Metamask.
+En utilisant des fournisseurs, les bibliothèques vous permettent de vous connecter à Ethereum et de lire ses données, que ce soit sur JSON-RPC, INFURA, Etherscan, Alchemy ou MetaMask.
 
 **Exemple Ether**
 
 ```js
 // Un Web3Provider enveloppe un fournisseur Web3 standard, qui est
-// ce que Metamask injecte comme window.ethereum dans chaque page.
+// ce que MetaMask injecte comme window.ethereum dans chaque page.
 const provider = new ethers.providers.Web3Provider(window.ethereum)
 
-// Le plugin Metamask permet également de signer des transactions pour
+// Le plugin MetaMask permet également de signer des transactions pour
 // envoyer de l'ether et payer pour changer l'état de la blockchain.
 // Pour cela, nous avons besoin du signataire du compte...
 const signer = provider.getSigner()
@@ -155,7 +155,7 @@ Une fois la configuration effectuée, vous pourrez :
 
 ### Interagir avec les fonctions d'un contrat intelligent {#interact-with-smart-contract-functions}
 
-Les bibliothèques clientes javascript autorisent votre application à appeler des fonctions de contrat intelligent en lisant l'interface binaire-programme (ABI) d'un contrat compilé.
+Les bibliothèques clientes JavaScript autorisent votre application à appeler des fonctions de contrat intelligent en lisant l'interface binaire-programme (ABI) d'un contrat compilé.
 
 L'ABI explique principalement les fonctions du contrat au format JSON et vous permet de l'utiliser comme un objet JavaScript standard.
 

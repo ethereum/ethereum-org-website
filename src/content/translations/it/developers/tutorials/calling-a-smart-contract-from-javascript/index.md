@@ -113,7 +113,7 @@ daiToken.methods.balanceOf(senderAddress).call(function (err, res) {
 })
 ```
 
-Ricorda che il ERC20 DAI ha 18 cifre decimali, che significa che devi rimuovere 18 zeri per ottenere l'importo corretto. I valori uint256 sono restituiti come stringhe poiché Javascript non gestisce grandi valori numerici. Se non sai [come gestire i grandi numeri in JS consulta il nostro tutorial su bignumber.js](https://ethereumdev.io/how-to-deal-with-big-numbers-in-javascript/).
+Ricorda che il ERC20 DAI ha 18 cifre decimali, che significa che devi rimuovere 18 zeri per ottenere l'importo corretto. I valori uint256 sono restituiti come stringhe poiché JavaScript non gestisce grandi valori numerici. Se non sai [come gestire i grandi numeri in JS consulta il nostro tutorial su bignumber.js](https://ethereumdev.io/how-to-deal-with-big-numbers-in-javascript/).
 
 ## Send: invio di una transazione a una funzione di Smart Contract {#send-sending-a-transaction-to-a-smart-contract-function}
 

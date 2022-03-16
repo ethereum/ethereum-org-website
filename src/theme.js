@@ -1,29 +1,29 @@
 import { createGlobalStyle } from "styled-components"
 import { mix } from "polished"
 
-const white = "#fff"
-const black = "rgb(0,0,0)"
-const primaryLight = "rgb(28,28,225)"
-const primaryDark = "rgb(255, 115, 36)"
-const success = "rgb(16,158,98)"
-const fail = "rgb(184,0,0)"
-const turquoise = "#CCFCFF"
-const turquoiseDark = "rgb(41,50,51,1)"
-const yellow = "#FFF8DF"
-const mint = "#E1FEFA"
-const mintDark = "rgb(45,51,50,1)"
+const white = "#ffffff"
+const black = "#000000"
+const primaryLight = "#1c1cff"
+const primaryDark = "#ff7324"
+const success = "#109e62"
+const fail = "#b80000"
+const turquoise = "#ccfcff"
+const turquoiseDark = "#293233"
+const yellow = "#fff8df"
+const mint = "#e1fefa"
+const mintDark = "#2d3332"
 const codeBoxDark = "#2a2734"
 const codeBoxLight = "#fafafa"
 
 // purple and orangeDark introduced for dark mode alts for homepage boxes
-const purpleDark = "rgb(33,33,49,1)"
-const orangeDark = "rgb(51,40,33,1)"
-const pink = "#FFE5F9"
-const pinkDark = "rgb(51,32,39,1)"
-const gridYellow = "#FFE78E"
-const gridRed = "#EF7D7D"
-const gridBlue = "#A7D0F4"
-const gridPink = "#FFA1C3"
+const purpleDark = "#212131"
+const orangeDark = "#332821"
+const pink = "#ffe5f9"
+const pinkDark = "#332027"
+const gridYellow = "#ffe78e"
+const gridRed = "#ef7d7d"
+const gridBlue = "#a7d0f4"
+const gridPink = "#ffa1c3"
 
 const white500 = white
 const white600 = mix(0.03, black, white)
@@ -190,8 +190,8 @@ const lightColors = {
   markBackground: "rgba(143,187,237,.1)",
   markUnderline: "rgba(143,187,237,.5)",
   modalBackground: "hsla(0, 0%, 69.8%, 0.9)",
-  text: "#333",
-  text200: "#666",
+  text: "#333333",
+  text200: "#666666",
   text300: "#4c4c4c",
   textTableOfContents: "#7f7f7f",
   background: white,
@@ -210,9 +210,9 @@ const lightColors = {
   cardGradient:
     "radial-gradient(46.28% 66.31% at 66.95% 58.35%, #e6e6f7 0%, #e7edfa 50%, #e9fbfa 100%)",
   upgradeStatusBackground:
-    "linear-gradient(180deg,rgba(0, 240, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(0deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), #1c1ce1",
+    "linear-gradient(180deg, rgba(0, 240, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(0deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), #1c1ce1",
   upgradeStatusShippedBackground:
-    "linear-gradient(180deg,rgba(0, 240, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(0deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),#109e62",
+    "linear-gradient(180deg, rgba(0, 240, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(0deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), #109e62",
   upgradeStatusBorder: "none",
   upgradeStatusShippedBorder: "none",
   warning: primaryDark100,
@@ -227,7 +227,7 @@ const lightColors = {
   shardBorder: black50,
   infoLink: primaryLight800,
   infoLinkHover: primaryLight900,
-  cardBoxShadow: "4px 4px 0px 0px #D2D2F9",
+  cardBoxShadow: "4px 4px 0px 0px #d2d2f9",
   homeBoxMint: mint,
   homeBoxTurquoise: turquoise,
   homeBoxOrange: primaryDark100,
@@ -242,7 +242,7 @@ const lightColors = {
 const darkColors = {
   buttonColor: black300,
   upgradesGradient:
-    "linear-gradient(285.24deg, #F7CBC0 0%, #FBEAE3 17.81%, #F4B1AB 29.8%, #8476D9 49.78%, #8DB4FF 69.77%);",
+    "linear-gradient(285.24deg, #f7cbc0 0%, #fbeae3 17.81%, #f4b1ab 29.8%, #8476d9 49.78%, #8db4ff 69.77%);",
   runNodeGradient:
     "linear-gradient(0deg, rgba(153, 157, 244, 0.35) 0%, rgba(153, 157, 244, 0) 100%), linear-gradient(89.24deg, rgba(253, 240, 255, 0.7) -64.3%, rgba(212, 119, 119, 0.390104) -7.43%, rgba(188, 163, 220, 0.207813) 46.66%, rgba(196, 196, 196, 0) 99.16%);",
   runNodeGradient2:
@@ -269,20 +269,20 @@ const darkColors = {
   priceCardBorderNegative: fail300,
   searchBorder: "#b2b2b2",
   searchBackground: "#4c4c4c",
-  searchBackgroundEmpty: "#333",
+  searchBackgroundEmpty: "#333333",
   searchResultText: "#f1f3f5",
   searchResultBackground: "#33363d",
   selectHover: primaryDark700,
   selectActive: primaryDark600,
   dropdownBackground: "#191919",
-  dropdownBackgroundHover: "#000",
-  dropdownBorder: "#333",
+  dropdownBackgroundHover: "#000000",
+  dropdownBorder: "#333333",
   markBackground: "rgb(255, 115, 36, .1)",
   markUnderline: "rgb(255, 115, 36, .5)",
   modalBackground: "rgba(25,25,25,0.8)",
   text: "#f2f2f2",
   text200: "#b2b2b2",
-  text300: "#ccc",
+  text300: "#cccccc",
   textTableOfContents: "hsla(0,0%,69.8%,.8)",
   background: "#222222",
   ednBackground: black400,
@@ -313,7 +313,7 @@ const darkColors = {
   shardBorder: primaryDark500,
   infoLink: primaryLight800,
   infoLinkHover: primaryLight900,
-  cardBoxShadow: "4px 4px 0px 0px #FFAB7C",
+  cardBoxShadow: "4px 4px 0px 0px #ffab7c",
   homeBoxMint: mintDark,
   homeBoxTurquoise: turquoiseDark,
   homeBoxOrange: orangeDark,

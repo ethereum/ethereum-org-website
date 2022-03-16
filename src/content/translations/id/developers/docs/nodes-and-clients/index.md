@@ -56,7 +56,7 @@ Menjalankan node sendiri memungkinkan Anda menggunakan Ethereum dengan cara yang
 
 - Node Anda memverifikasi semua transaksi dan blok dibandingkan dengan aturan konsensus itu sendiri. Ini berarti Anda tidak harus mengandalkan node lain dalam jaringan atau sepenuhnya mempercayainya.
 - Anda tidak akan harus membocorkan alamat dan saldo Anda ke node acak. Semua hal bisa dicek dengan klien Anda sendiri.
-- Dapp Anda bisa lebih aman dan privat jika Anda menggunakan node Anda sendiri. [Metamask](https://metamask.io), [MyEtherWallet](https://myetherwallet.com) dan beberapa dompet lain bisa dengan mudah ditunjukkan ke node lokal Anda sendiri.
+- Dapp Anda bisa lebih aman dan privat jika Anda menggunakan node Anda sendiri. [MetaMask](https://metamask.io), [MyEtherWallet](https://myetherwallet.com) dan beberapa dompet lain bisa dengan mudah ditunjukkan ke node lokal Anda sendiri.
 - Anda dapat memrogram endpoint RPC kustom Anda sendiri.
 - Anda dapat menghubungkan node Anda dengan menggunakan **Komunikasi Antar Proes (IPC)** atau menulis kembali node untuk memuat program Anda sebagai plugin. Ini menghasilkan latensi yang rendah, yang diperlukan untuk menggantikan transaksi Anda secepat mungkin (maksudnya frontrunning).
 
@@ -304,5 +304,5 @@ Ada banyak informasi tentang klien Ethereum di internet. Berikut adalah beberapa
 
 ## Tutorial terkait {#related-tutorials}
 
-- [Menjalankan Node dengan Geth](/developers/tutorials/run-light-node-geth/) _– Cara mengunduh, menginstal, dan menjalankan Geth. Menjelaskan tentang mode sinkronisasi, konsol Javascript, dan banyak lagi._
+- [Menjalankan Node dengan Geth](/developers/tutorials/run-light-node-geth/) _– Cara mengunduh, menginstal, dan menjalankan Geth. Menjelaskan tentang mode sinkronisasi, konsol JavaScript, dan banyak lagi._
 - [Mengubah Raspberry Pi 4 Anda menjadi node Eth 1.0 atau Eth 2.0 hanya dengan flashing memori MicroSD – Panduan Instalasi](/developers/tutorials/run-node-raspberry-pi/) _– Flash Raspberry Pi 4 Anda, plug in pada kabel ethernet, hubungkan disk SSD dan tambah tenaga perangkat untuk mengubah Raspberry Pi 4 menjadi node penuh Ethereum 1.0 atau node penuh Ethereum 2.0 (rantai suar / validator)._

@@ -77,7 +77,7 @@ Gran parte delle librerie di Web3 sono asincrone perché, in background, la libr
 
 Se lavori nel browser, alcuni portafogli iniettano direttamente un'istanza web3 e dovresti provare a usarla appena possibile, specialmente se prevedi di interagire con l'indirizzo di Ethereum dell'utente per effettuare le transazioni.
 
-Qui riportiamo il frammento che permette di rilevare se è disponibile un portafoglio di Metamask e, in tal caso, provare ad abilitarlo. In seguito, ti consentirà di leggere il saldo dell'utente e abilitarlo per convalidare le transazioni che vorresti effettuasse sulla blockchain di Ethereum:
+Qui riportiamo il frammento che permette di rilevare se è disponibile un portafoglio di MetaMask e, in tal caso, provare ad abilitarlo. In seguito, ti consentirà di leggere il saldo dell'utente e abilitarlo per convalidare le transazioni che vorresti effettuasse sulla blockchain di Ethereum:
 
 ```js
 if (window.ethereum != null) {

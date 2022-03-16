@@ -28,10 +28,13 @@ These programs support the broad Ethereum ecosystem by offering grants to a wide
 
 These projects have created their own grants for projects aimed at developing and experimenting with their own technology.
 
+- [Aave Grants Program](https://aavegrants.org/) – _[Aave](https://aave.com/) grants DAO_
+- [Balancer](https://forms.gle/c68e4fM7JHCQkPkN7) – _[Balancer](https://balancer.fi/) ecosystem fund_
+- [Compound Grants Program](https://compoundgrants.org/) – _[Compound](https://compound.finance/) finance ecosystem_
+- [Consensys Grants Program](https://consensys.net/grants/) – _[Consensys](https://consensys.net/) blockchain funding & Ethereum grants_
+- [mStable](https://docs.mstable.org/advanced/grants-program) - _[mStable](https://mstable.org/) community_
 - [The Graph](https://airtable.com/shrdfvnFvVch3IOVm) – _[The Graph](https://thegraph.com/) ecosystem_
 - [Uniswap Grants Program](https://www.unigrants.org/) – _[Uniswap](https://uniswap.org/) community_
-- [Balancer](https://forms.gle/c68e4fM7JHCQkPkN7) – _[Balancer](https://balancer.fi/) Ecosystem Fund_
-- [mStable](https://docs.mstable.org/advanced/grants-program) - _[mStable](https://mstable.org/) community_
 
 ## Quadratic funding {#quadratic-funding}
 
