@@ -29,7 +29,7 @@ Layer 2 submissions will be assessed by the following criteria:
 
 **Is the project open source?**
 
-**What kind of layer 2 is it?**
+**What category of layer 2 is it?**
 
 - Optimistic rollup
 - Zero-knowledge rollup
