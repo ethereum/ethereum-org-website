@@ -35,7 +35,7 @@ Layer 2 submissions will be assessed by the following criteria:
 - Zero-knowledge rollup
 - State channel
 
-**Bridges**
+**Which bridges are used to onboard?**
 
 - How are users able to onboard to the layer 2?
 
