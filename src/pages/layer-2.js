@@ -98,12 +98,12 @@ const Layer2Page = ({ data }) => {
     alt: "test",
     buttons: [
       {
-        content: "Use Layer 2",
-        pathId: "use-layer-2",
+        content: "What is layer 2",
+        pathId: "what-is-layer-2",
       },
       {
-        content: "Wait, what's Ethereum?",
-        pathId: "/",
+        content: "Use Layer 2",
+        pathId: "use-layer-2",
         isSecondary: "isSecondary",
       },
     ],
@@ -112,7 +112,7 @@ const Layer2Page = ({ data }) => {
   const layer2Cards = [
     {
       image: privacyGlyph,
-      title: "Inclusivity",
+      title: "Reduce gas fees",
       preview: "Lower fees and better user experience",
       body: [
         "By combining multiple transactions into a single transaction on layer 1, transaction fees are massively reduced, making Ethereum more accessible for all.",
@@ -124,14 +124,14 @@ const Layer2Page = ({ data }) => {
       title: "Expand Use Cases",
       preview: "Increase the scope of projects",
       body: [
-        "With higher transactions per second, cheaper fees, and new technology, the scope of projects is able to expand into new use cases we have yet to see come online. Opportunities for gaming, exchanges, and applications yet to be created will be able to come online with better user experience.",
+        "With higher transactions per second, cheaper fees, and new technology, the scope of projects are able to expand into new use cases such as gaming, exchanges, and applications we have yet to see come online with improved user experience.",
       ],
       alt: "test",
     },
     {
       image: privacyGlyph,
-      title: "Security",
-      preview: "Layer 2 is cashing a cheque, layer 1 is going to court",
+      title: "Maintain Security",
+      preview: "Inherit the security of Ethereum",
       body: [
         "We need need scaling solutions that inherit Ethereums security. Layer 2 networks settle their transactions on the Ethereum mainnet, allowing users who use them to benefit from the security of the Ethereum network.",
         "Layer 2s take advantage of the consensus mechanism of its parent Layer 1, in this case Ethereum, instead of providing their own consensus mechanism.",
@@ -168,26 +168,9 @@ const Layer2Page = ({ data }) => {
         </p>
         <p>
           Ethereum as the layer 1 includes the blockchain itself and the history
-          of transaction data, a network of miners (soon to be validators after{" "}
-          <Link to="/upgrades/merge/">The Merge</Link>) proposing blocks, a
-          network of node operators to secure and validate the network, and the
-          consensus mechanism for the network. Ethereum also functions as a data
-          availability layer for Layer 2s, and if there are any disputes on
-          previous transactions data is provided from Ethereum for these
-          disputes.
-        </p>
-        <p>
-          While Ethereum has been a breakthrough technology in smart contract
-          blockchains, it faces the same trilemma between scaling,
-          decentralization, and security as any other blockchain. Ethereum has
-          done a great job addressing decentralization, and security, with plans
-          to address scalability with sharding in the future. While there are
-          roadmap plans to improve the scalability of Ethereum, there is still a
-          need for further scaling to round out the trilemma for Ethereum. This
-          is where Layer 2 technology is being developed to step in and bring
-          further scaling to Ethereum. As time has progressed, Ethereum as a
-          layer 1 is a settlement layer for layer 2s, and not the layer for end
-          users.
+          of transaction data, a network of block proposers, a network of node
+          operators to secure and validate the network, and the consensus
+          mechanism for the network.
         </p>
       </Content>
 
@@ -201,7 +184,7 @@ const Layer2Page = ({ data }) => {
           decentralization.
         </p>
         <p>
-          Ethereum has reached the networks capacity with{" "}
+          Ethereum has reached the network's current capacity with{" "}
           <Link to="https://etherscan.io/chart/tx">
             1+ million transactions per day
           </Link>
@@ -211,8 +194,8 @@ const Layer2Page = ({ data }) => {
           <Link to="/developers/docs/scaling/">need for scaling solutions</Link>
           . The main goal of scalability is to increase transaction speed
           (faster finality), and transaction throughput (high transactions per
-          second), without sacrificing decentralization or security (more on the
-          Ethereum vision).
+          second), without sacrificing decentralization or security (
+          <Link to="/upgrades/vision/  ">more on the Ethereum vision</Link>).
         </p>
         <p>
           The Ethereum community has taken a strong stance that it would not
@@ -221,7 +204,7 @@ const Layer2Page = ({ data }) => {
           roughly 15 transactions per second. When demand to use Ethereum is
           high this causes network congestion, increasing transaction fees, and
           pricing out those who cannot afford it from using Ethereum until the
-          fees reduce. That is where layer 2 comes in.
+          fees reduce. That is where layer 2 comes in to scale Ethereum today.
         </p>
       </Content>
 
@@ -243,11 +226,16 @@ const Layer2Page = ({ data }) => {
         </InfoGrid>
       </Content>
 
-      <Content>
+      <Content id="what-is-layer-2">
         <h2>Layer 2</h2>
         <p>
-          Layer 2 refers to building other Ethereum compatible networks on top
-          of layer 1, and requires no changes to the layer 1 protocol. This lets
+          Layer 2 is a collective term for Ethereum scaling solutions that
+          handle transactions off Ethereum layer 1 while taking advantage of the
+          robust decentralized security model of Ethereum layer 1. A layer 2 is
+          a separate blockchain that is connected to Ethereum. It regularly
+          communicates with Ethereum (by submitting bundles of transactions) in
+          order to ensure it has similar security and decentralization
+          guarantees, and requires no changes to the layer 1 protocol. This lets
           layer 1 handle security, data availability, and decentralization,
           whilst everything on the layer above (layer 2) can handle scaling.
           Layer 2s takes the transactional burden away from the Layer 1, and
@@ -263,7 +251,7 @@ const Layer2Page = ({ data }) => {
           when comparison to a layer 1 transaction.
         </p>
         <p>
-          Rollups bundle (or ’roll-up’) hundreds of transactions into a single
+          Rollups bundle (or ’roll up’) hundreds of transactions into a single
           transaction on layer 1. This allows the transaction fees to be shared
           across everyone in the rollup. These bundled transactions are posted
           to the Layer 1 as validity, fraud, or fault proofs. Rollup
@@ -341,7 +329,7 @@ const Layer2Page = ({ data }) => {
         </p>
       </Content>
 
-      <Content>
+      <Content id="use-layer-2">
         <h2>Generalized layer 2s</h2>
         <p>
           Generalized layer 2s behave just like Ethereum—but cheaper. Anything
@@ -607,6 +595,8 @@ const Layer2Page = ({ data }) => {
           </li>
         </ul>
       </Content>
+
+      {/* TODO: add note and information on other scaling solutions. Validiums/sidechains. clear up some of the definition on layer 2's and projects that arent layer 2's */}
     </GappedPage>
   )
 }
