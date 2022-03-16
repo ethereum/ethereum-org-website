@@ -133,8 +133,7 @@ const Layer2Page = ({ data }) => {
       title: "Maintain Security",
       preview: "Inherit the security of Ethereum",
       body: [
-        "We need need scaling solutions that inherit Ethereums security. Layer 2 networks settle their transactions on the Ethereum mainnet, allowing users who use them to benefit from the security of the Ethereum network.",
-        "Layer 2s take advantage of the consensus mechanism of its parent Layer 1, in this case Ethereum, instead of providing their own consensus mechanism.",
+        "Layer 2 blockchains settle their transactions on the Ethereum mainnet, allowing users who use them to benefit from the security of the Ethereum network.",
       ],
       alt: "test",
     },
