@@ -64,7 +64,7 @@ If it does, complete the following information which we need to accurately list 
 
 <!-- Since assets will have a new address on layer 2, if there is a token list resource available please share  -->
 
-**How long has this project been live?**
+**What date did this project go live?**
 
 <!-- Please provide an approximate date for when the layer 2 went live -->
 
