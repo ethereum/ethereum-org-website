@@ -68,7 +68,7 @@ If it does, complete the following information which we need to accurately list 
 
 <!-- Please provide proof to substantiate this date -->
 
-**Is this project a fork? If yes, what is this project a fork of?**
+**Is this project a fork? If yes, which project was forked?**
 
 <!-- Please provide information about if this project is a fork -->
 
