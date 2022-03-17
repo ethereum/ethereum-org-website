@@ -36,7 +36,7 @@ The premise of 'Web 3.0' was coined by [Ethereum](/what-is-ethereum/) co-founder
 
 ### What is web3? {#what-is-web3}
 
-Web3 has become a catch-all term for the vision of a new, better internet. At its core, Web3 uses blockchain, cryptocurrency, and NFTs to give power back to the users in the form of ownership. Chris Dixon said it best: web1 was read-only, web2 is read/write, web3 will be read/write/own.
+Web3 has become a catch-all term for the vision of a new, better internet. At its core, Web3 uses blockchains, cryptocurrencies, and NFTs to give power back to the users in the form of ownership. Chris Dixon said it best: web1 was read-only, web2 is read/write, web3 will be read/write/own.
 
 #### Core ideas of web3 {#core-ideas}
 
