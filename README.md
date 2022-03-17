@@ -1425,6 +1425,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/thewild-being"><img src="https://avatars.githubusercontent.com/u/82868359?v=4?s=100" width="100px;" alt=""/><br /><sub><b>thewild-being</b></sub></a><br /><a href="#ideas-thewild-being" title="Ideas, Planning, & Feedback">🤔</a></td>
     <td align="center"><a href="http://mihrac.com"><img src="https://avatars.githubusercontent.com/u/18642701?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Mihrac Cerrahoglu</b></sub></a><br /><a href="#ideas-mydearcode" title="Ideas, Planning, & Feedback">🤔</a></td>
     <td align="center"><a href="https://github.com/smartcontracts"><img src="https://avatars.githubusercontent.com/u/14298799?v=4?s=100" width="100px;" alt=""/><br /><sub><b>smartcontracts</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=smartcontracts" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://thetaclubai.com"><img src="https://avatars.githubusercontent.com/u/47613687?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Samay Lakhani</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=BlockchainRev" title="Documentation">📖</a></td>
   </tr>
 </table>
 
