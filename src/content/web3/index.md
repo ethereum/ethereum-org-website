@@ -24,10 +24,9 @@ In 1989, in CERN, Geneva, Tim Berners-Lee was busy developing the protocols that
 
 The first inception of the internet, now known as 'Web 1.0', occurred roughly between 1990 to 2004. The internet on Web 1.0 mainly was static websites owned by companies, and there was close to zero interaction between users - individuals seldom produced content - leading to it being known as the read-only web.
 
-### Web2:  Read-Write {#web2}
+### Web2: Read-Write {#web2}
 
-The Web 2.0 period began in 2004 with the emergence of social media platforms. Instead of a read-only, the web evolved to be read-write. Instead of companies providing content to users, they also began to provide platforms to share user-generated content and engage in user-to-user interactions.
-As more people came online, a handful of top companies began to control a disproportionate amount of the traffic and value generated on the web.
+The Web 2.0 period began in 2004 with the emergence of social media platforms. Instead of a read-only, the web evolved to be read-write. Instead of companies providing content to users, they also began to provide platforms to share user-generated content and engage in user-to-user interactions. As more people came online, a handful of top companies began to control a disproportionate amount of the traffic and value generated on the web. Web 2.0 also birthed the advertising-driven revenue model. While users could create content, they didn't own it or benefit from its monetization.
 
 <Divider />
 
@@ -70,7 +69,7 @@ Web3 empowers users to participate in the decision making of a platform through 
 
 _In Web2, you can refuse to use a platform; in Web3, you can vote to change it._
 
-<ButtonLink to="/nft/">
+<ButtonLink to="/dao/">
   More on DAOs
 </ButtonLink>
 
@@ -109,13 +108,15 @@ Despite the numerous benefits of Web3 in its current form, there are still many 
 
 Web3 is less likely to be utilized in less-wealthy, developing nations due to high transaction fees. On Ethereum, these challenges are being solved through [network upgrades](/upgrades/) and [layer 2 scaling solutions](/developers/docs/scaling/). The technology is ready, but we need higher levels of adoption on layer 2 to make Web3 accessible to everyone.
 
-<ButtonLink to="/layer-2/">
-  More on layer 2
-</ButtonLink>
-
 ### User experience {#user-experience}
 
 The technical barrier to entry to using Web3 is currently too high. Users must comprehend security concerns, understand complex technical documentation, and navigate unintuitive user interfaces. [Wallet providers](/wallets/find-wallet/), in particular, are working to solve this, but more progress is needed before Web3 gets adopted en masse.
+
+### Education {#education}
+
+Web3 introduces new paradigms that require learning different mental models than the ones used in Web2.0. A similar education drive happened as Web1.0 was gaining popularity in the late 1990s; proponents of the world wide web used a slew of educational techniques to educate the public from simple metaphors (the information highway, browsers, surfing the web) to [television broadcasts](https://www.youtube.com/watch?v=SzQLI7BxfYI). Web3 isn't difficult, but it is different. Educational initiatives informing Web2 users of these Web3 paradigms are vital for its success.
+
+Ethereum.org contributes to Web3 education through our [Translation Program](/contributing/translation-program/), aiming to translate important Ethereum content to as many languages as possible.
 
 ### Centralized infrastructure {#centralized-infrastructure}
 
@@ -127,11 +128,21 @@ Web3 is a young and evolving ecosystem. Gavin Wood coined the term in 2014, but 
 
 We are only at the beginning of creating a better internet with web3, but as we continue to improve the infrastructure that will support it, the future of the internet looks bright.
 
+## How can I get involved {#get-involved}
+
+- [Get a wallet](/wallets/)
+- [Find a community](/community/)
+- [Explore web3 applications](/dapps/)
+- [Join a DAO](/dao/)
+- [Build on web3](/developers/)
+
 ## Further reading {#further-reading}
 
 Web3 isn’t rigidly defined. Various community participants have different perspectives on it. Here are a few of them:
 
-- [The web3 Landscape](https://a16z.com/wp-content/uploads/2021/10/The-web3-Readlng-List.pdf) – _a16z_
-- [Making Sense of Web 3](https://medium.com/l4-media/making-sense-of-web-3-c1a9e74dcae) – _Josh Stark_
 - [What is Web3? The Decentralized Interent of the Future Explained](https://www.freecodecamp.org/news/what-is-web3/) – _Nader Dabit_
+- [Making Sense of Web 3](https://medium.com/l4-media/making-sense-of-web-3-c1a9e74dcae) – _Josh Stark_
+- [Why Web3 Matters](https://future.a16z.com/why-web3-matters/) — _Chris Dixon_
+- [Why Decentralization Matters](https://onezero.medium.com/why-decentralization-matters-5e3f79f7638e) - _Chris Dixon_
+- [The web3 Landscape](https://a16z.com/wp-content/uploads/2021/10/The-web3-Readlng-List.pdf) – _a16z_
 - [The Web3 Debate](https://www.notboring.co/p/the-web3-debate?s=r) – _Packy McCormick_
