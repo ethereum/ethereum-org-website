@@ -7,7 +7,8 @@
       "l2beat": "https://l2beat.com/projects/arbitrum/",
       "noteKey": "",
       "purpose": ["universal"],
-      "description": "Arbitrum is an Optimistic Rollup that aims to feel exactly like interacting with Ethereum, but with transactions costing a fraction of what they do on L1."
+      "description": "Arbitrum is an Optimistic Rollup that aims to feel exactly like interacting with Ethereum, but with transactions costing a fraction of what they do on L1.",
+      "imageKey": "arbitrum"
     },
     {
       "name": "Optimism",
@@ -16,7 +17,8 @@
       "l2beat": "https://l2beat.com/projects/optimism/",
       "noteKey": "layer-2-optimism-note",
       "purpose": ["universal"],
-      "description": "Optimistic Ethereum is an EVM-compatible Optimistic Rollup chain. It aims to be fast, simple, and secure. With the Nov 2021 upgrade to \"EVM equivalent\" OVM 2.0 old fraud proof system has been disabled while the new fraud-proof system is being built (https://github.com/geohot/cannon)."
+      "description": "Optimistic Ethereum is an EVM-compatible Optimistic Rollup chain. It aims to be fast, simple, and secure. With the Nov 2021 upgrade to \"EVM equivalent\" OVM 2.0 old fraud proof system has been disabled while the new fraud-proof system is being built (https://github.com/geohot/cannon).",
+      "imageKey": "optimism"
     },
     {
       "name": "Metis Andromeda",
@@ -25,7 +27,8 @@
       "l2beat": "https://l2beat.com/projects/metis/",
       "noteKey": "layer-2-metis-note",
       "purpose": ["universal"],
-      "description": "Metis is an EVM-equivalent Optimistic Rollup chain originally forked from Optimism. It provides support for multiple, interconnected rollups with main focus on supporting easy creation of DACs (Decentralized Autonomous Companies)."
+      "description": "Metis is an EVM-equivalent Optimistic Rollup chain originally forked from Optimism. It provides support for multiple, interconnected rollups with main focus on supporting easy creation of DACs (Decentralized Autonomous Companies).",
+      "imageKey": "metis"
     },
     {
       "name": "Boba Network",
@@ -34,7 +37,8 @@
       "l2beat": "https://l2beat.com/projects/bobanetwork/",
       "noteKey": "layer-2-boba-note",
       "purpose": ["universal"],
-      "description": "Boba is an L2 Ethereum scaling & augmenting solution built by the Enya team as core contributors to the OMG Foundation. Boba is an Optimistic Rollup scaling solution that claims to reduce gas fees, improve transaction throughput, and extend the capabilities of smart contracts."
+      "description": "Boba is an L2 Ethereum scaling & augmenting solution built by the Enya team as core contributors to the OMG Foundation. Boba is an Optimistic Rollup scaling solution that claims to reduce gas fees, improve transaction throughput, and extend the capabilities of smart contracts.",
+      "imageKey": "boba"
     }
   ],
   "zk": [
@@ -45,7 +49,8 @@
       "l2beat": "https://l2beat.com/projects/dydx/",
       "noteKey": "",
       "purpose": ["exchange"],
-      "description": "dYdX aims to build a powerful and professional exchange for trading crypto assets where users can truly own their trades and, eventually, the exchange itself."
+      "description": "dYdX aims to build a powerful and professional exchange for trading crypto assets where users can truly own their trades and, eventually, the exchange itself.",
+      "imageKey": "dydx"
     },
     {
       "name": "Loopring",
@@ -54,7 +59,8 @@
       "l2beat": "https://l2beat.com/projects/loopring/",
       "noteKey": "",
       "purpose": ["payments", "exchange"],
-      "description": "Loopring's zkRollup L2 solution aims to offer the same security guarantees as Ethereum mainnet, with a big scalability boost: throughput increased by 1000x, and cost reduced to just 0.1% of L1."
+      "description": "Loopring's zkRollup L2 solution aims to offer the same security guarantees as Ethereum mainnet, with a big scalability boost: throughput increased by 1000x, and cost reduced to just 0.1% of L1.",
+      "imageKey": "loopring"
     },
     {
       "name": "zkSync",
@@ -63,7 +69,8 @@
       "l2beat": "https://l2beat.com/projects/zksync/",
       "noteKey": "",
       "purpose": ["tokens", "nft"],
-      "description": "zkSync is a user-centric zk rollup platform from Matter Labs. It is a scaling solution for Ethereum, already live on Ethereum mainnet. It supports payments, token swaps and NFT minting."
+      "description": "zkSync is a user-centric zk rollup platform from Matter Labs. It is a scaling solution for Ethereum, already live on Ethereum mainnet. It supports payments, token swaps and NFT minting.",
+      "imageKey": "zksync"
     },
     {
       "name": "ZKSpace",
@@ -72,7 +79,8 @@
       "l2beat": "https://l2beat.com/projects/zkswap/",
       "noteKey": "",
       "purpose": ["payments", "exchange"],
-      "description": "The ZKSpace platform consists of three main parts: a Layer 2 AMM DEX utilizing ZK-Rollups technology called ZKSwap, a payment service called ZKSquare, and an NFT marketplace called ZKSea."
+      "description": "The ZKSpace platform consists of three main parts: a Layer 2 AMM DEX utilizing ZK-Rollups technology called ZKSwap, a payment service called ZKSquare, and an NFT marketplace called ZKSea.",
+      "imageKey": "zkspace"
     }
   ]
 }

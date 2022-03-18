@@ -181,7 +181,7 @@ const Layer2Page = ({ data }) => {
         description:
           "L2BEAT is a great resource for looking at technical risk assessments of layer 2 projects. We recommend checking out their resources when researching specific layer 2 projects.",
         link: "https://l2beat.com",
-        image: getImage(data.impact),
+        image: getImage(data.l2beat),
         alt: "L2BEAT",
       },
       {
@@ -197,7 +197,7 @@ const Layer2Page = ({ data }) => {
         description:
           "Chainlist is a great resource for importing network RPC's into supporting wallets. You will find RPC's for layer 2 projects here to help get you connected.",
         link: "https://chainlist.org",
-        image: getImage(data.impact),
+        image: getImage(data.chainlist),
         alt: "Chainlist",
       },
     ],
@@ -207,7 +207,7 @@ const Layer2Page = ({ data }) => {
         link: "https://zapper.fi/",
         description:
           "Manage your entire web3 portfolio from DeFi to NFTs and whatever comes next. Invest in the latest opportunities from one convenient place.",
-        image: getImage(data.impact),
+        image: getImage(data.zapper),
         alt: "Zapper",
       },
       {
@@ -215,7 +215,7 @@ const Layer2Page = ({ data }) => {
         description:
           "Build and manage your entire DeFi portfolio from one place. Discover the world of decentralized finance today.",
         link: "https://zerion.io",
-        image: getImage(data.impact),
+        image: getImage(data.zerion),
         alt: "Zerion",
       },
       {
@@ -223,7 +223,7 @@ const Layer2Page = ({ data }) => {
         description:
           "Keep up with all the important happenings in the web3 world",
         link: "https://debank.com",
-        image: getImage(data.impact),
+        image: getImage(data.debank),
         alt: "DeBank",
       },
     ],
@@ -232,14 +232,14 @@ const Layer2Page = ({ data }) => {
         title: "tokenlists.org",
         description: "Token list for Optimism",
         link: "https://tokenlists.org/token-list?url=https://static.optimism.io/optimism.tokenlist.json",
-        image: getImage(data.impact),
+        image: getImage(data.optimism),
         alt: "tokenlists.org",
       },
       {
         title: "arbucks",
         description: "Token list for Arbitrum One",
         link: "https://arbucks.io/tokens/",
-        image: getImage(data.impact),
+        image: getImage(data.arbitrum),
         alt: "arbucks",
       },
     ],
@@ -248,14 +248,14 @@ const Layer2Page = ({ data }) => {
         title: "Arbitrum One Portal",
         description: "Dapp portal for Arbitrum One",
         link: "https://portal.arbitrum.one/",
-        image: getImage(data.impact),
+        image: getImage(data.arbitrum),
         alt: "Arbitrum One",
       },
       {
         title: "Optimism ecosystem",
         description: "Dapp portal for Optimism",
         link: "https://www.optimism.io/apps/all",
-        image: getImage(data.impact),
+        image: getImage(data.optimism),
         alt: "Optimism",
       },
     ],
@@ -264,42 +264,42 @@ const Layer2Page = ({ data }) => {
         title: "Arbitrum One",
         description: "Arbitrum One block explorer",
         link: "https://explorer.arbitrum.io/",
-        image: getImage(data.impact),
+        image: getImage(data.arbitrum),
         alt: "Arbitrum One",
       },
       {
         title: "Optimism",
         descrition: "Optimism block explorer",
         link: "https://optimistic.etherscan.io/",
-        image: getImage(data.impact),
+        image: getImage(data.optimism),
         alt: "Optimism",
       },
       {
         title: "zkSync",
         description: "zkSync block explorer",
         link: "https://zkscan.io/",
-        image: getImage(data.impact),
+        image: getImage(data.zksync),
         alt: "zkSync",
       },
       {
         title: "Metis",
         description: "Metis block explorer",
         link: "https://andromeda-explorer.metis.io/",
-        image: getImage(data.impact),
+        image: getImage(data.metis),
         alt: "Metis",
       },
       {
         title: "Boba Network",
         description: "Boba Network block explorer",
         link: "https://blockexplorer.boba.network/",
-        image: getImage(data.impact),
+        image: getImage(data.boba),
         alt: "Boba Network",
       },
       {
         title: "Loopring",
         description: "Loopring block explorer",
         link: "https://explorer.loopring.io/",
-        image: getImage(data.impact),
+        image: getImage(data.loopring),
         alt: "Loopring",
       },
     ],
@@ -510,6 +510,7 @@ const Layer2Page = ({ data }) => {
                 <ProductCard
                   key={idx}
                   background="black"
+                  image={getImage(data[l2.imageKey])}
                   description={l2.description}
                   url={l2.website}
                   note={translateMessageId(l2.noteKey, intl)}
@@ -533,6 +534,7 @@ const Layer2Page = ({ data }) => {
                 <ProductCard
                   key={idx}
                   background="black"
+                  image={getImage(data[l2.imageKey])}
                   description={l2.description}
                   url={l2.website}
                   note={translateMessageId(l2.noteKey, intl)}
@@ -730,6 +732,136 @@ export const query = graphql`
         gatsbyImageData(
           width: 300
           layout: CONSTRAINED
+          placeholder: BLURRED
+          quality: 100
+        )
+      }
+    }
+    arbitrum: file(relativePath: { eq: "layer-2-logos/arbitrum.png" }) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 80
+          layout: FIXED
+          placeholder: BLURRED
+          quality: 100
+        )
+      }
+    }
+    boba: file(relativePath: { eq: "layer-2-logos/boba.png" }) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 80
+          layout: FIXED
+          placeholder: BLURRED
+          quality: 100
+        )
+      }
+    }
+    chainlist: file(relativePath: { eq: "layer-2-logos/chainlist.png" }) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 80
+          layout: FIXED
+          placeholder: BLURRED
+          quality: 100
+        )
+      }
+    }
+    debank: file(relativePath: { eq: "layer-2-logos/debank.png" }) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 80
+          layout: FIXED
+          placeholder: BLURRED
+          quality: 100
+        )
+      }
+    }
+    dydx: file(relativePath: { eq: "layer-2-logos/dydx.jpg" }) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 80
+          layout: FIXED
+          placeholder: BLURRED
+          quality: 100
+        )
+      }
+    }
+    l2beat: file(relativePath: { eq: "layer-2-logos/l2beat.jpg" }) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 80
+          layout: FIXED
+          placeholder: BLURRED
+          quality: 100
+        )
+      }
+    }
+    loopring: file(relativePath: { eq: "layer-2-logos/loopring.png" }) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 80
+          layout: FIXED
+          placeholder: BLURRED
+          quality: 100
+        )
+      }
+    }
+    metis: file(relativePath: { eq: "layer-2-logos/metis.png" }) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 80
+          layout: FIXED
+          placeholder: BLURRED
+          quality: 100
+        )
+      }
+    }
+    optimism: file(relativePath: { eq: "layer-2-logos/optimism.png" }) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 80
+          layout: FIXED
+          placeholder: BLURRED
+          quality: 100
+        )
+      }
+    }
+    zapper: file(relativePath: { eq: "layer-2-logos/zapper.png" }) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 80
+          layout: FIXED
+          placeholder: BLURRED
+          quality: 100
+        )
+      }
+    }
+    zerion: file(relativePath: { eq: "layer-2-logos/zerion.jpeg" }) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 80
+          layout: FIXED
+          placeholder: BLURRED
+          quality: 100
+        )
+      }
+    }
+    zkspace: file(relativePath: { eq: "layer-2-logos/zkspace.png" }) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 80
+          layout: FIXED
+          placeholder: BLURRED
+          quality: 100
+        )
+      }
+    }
+    zksync: file(relativePath: { eq: "layer-2-logos/zksync.png" }) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 80
+          layout: FIXED
           placeholder: BLURRED
           quality: 100
         )
