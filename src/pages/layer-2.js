@@ -1,7 +1,7 @@
 // Libraries
 import React from "react"
 import { graphql } from "gatsby"
-import { getImage } from "gatsby-plugin-image"
+import { getImage, GatsbyImage } from "gatsby-plugin-image"
 import styled from "styled-components"
 import { useIntl } from "gatsby-plugin-intl"
 
@@ -14,6 +14,8 @@ import layer2Data from "../data/layer-2/layer-2.json"
 import validiumData from "../data/validium.json"
 
 // Components
+import Card from "../components/Card"
+import Emoji from "../components/Emoji"
 import ExpandableCard from "../components/ExpandableCard"
 import InfoBanner from "../components/InfoBanner"
 import Link from "../components/Link"
@@ -21,6 +23,7 @@ import PageHero from "../components/PageHero"
 import PageMetadata from "../components/PageMetadata"
 import Pill from "../components/Pill"
 import ProductCard from "../components/ProductCard"
+import ProductList from "../components/ProductList"
 import { CardGrid, Content, Page } from "../components/SharedStyledComponents"
 
 // Utils
@@ -38,12 +41,18 @@ const GappedPage = styled(Page)`
 `
 
 const HeroContainer = styled.div`
-  background: ${({ theme }) => theme.colors.runNodeGradient};
   width: 100%;
 `
 
 const Hero = styled(PageHero)`
   padding-bottom: 2rem;
+`
+
+const FlexContainer = styled.div`
+  flex: ${(props) => props.flexPercent}%;
+  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
+    flex: 100%;
+  }
 `
 
 const Flex50 = styled.div`
@@ -88,12 +97,27 @@ const StyledCardGrid = styled(CardGrid)`
   margin-top: 4rem;
 `
 
+const RollupCard = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: ${(props) => props.theme.colors.ednBackground};
+  border-radius: 2px;
+  border: 1px solid ${(props) => props.theme.colors.lightBorder};
+  padding: 1.5rem;
+  flex: 50%;
+  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
+    flex: 100%;
+  }
+`
+
 const Layer2Page = ({ data }) => {
   const intl = useIntl()
   const heroContent = {
     title: "Layer 2",
     header: "Layer 2",
-    subtitle: "Smart solutions to scale Ethereum",
+    subtitle:
+      "Scaling Ethereum without compromising on security and decentralization.",
     image: getImage(data.ethBlocks),
     alt: "test",
     buttons: [
@@ -111,33 +135,175 @@ const Layer2Page = ({ data }) => {
 
   const layer2Cards = [
     {
-      image: privacyGlyph,
-      title: "Reduce gas fees",
-      preview: "Lower fees and better user experience",
-      body: [
+      emoji: ":money_with_wings:",
+      title: "Lower fees",
+      description:
         "By combining multiple transactions into a single transaction on layer 1, transaction fees are massively reduced, making Ethereum more accessible for all.",
-      ],
-      alt: "test",
     },
     {
-      image: privacyGlyph,
-      title: "Expand Use Cases",
-      preview: "Increase the scope of projects",
-      body: [
-        "With higher transactions per second, cheaper fees, and new technology, the scope of projects are able to expand into new use cases such as gaming, exchanges, and applications we have yet to see come online with improved user experience.",
-      ],
-      alt: "test",
-    },
-    {
-      image: privacyGlyph,
+      emoji: ":closed_lock_with_key:",
+      className: "security-card",
       title: "Maintain Security",
-      preview: "Inherit the security of Ethereum",
-      body: [
+      description:
         "Layer 2 blockchains settle their transactions on the Ethereum Mainnet, allowing users who use them to benefit from the security of the Ethereum network.",
-      ],
-      alt: "test",
+    },
+    {
+      emoji: ":hammer_and_wrench:",
+      title: "Expand Use Cases",
+      description:
+        "With higher transactions per second, lower fees, and new technology, projects will expand into new applications with improved user experience.",
     },
   ]
+
+  const rollupCards = [
+    {
+      emoji: ":page_with_curl:",
+      title: "Optimistic Rollups",
+      description:
+        "Optimistic rollups use fault proofs where transactions are assumed to be valid, but can be challenged if an invalid transaction is suspected. If an invalid tranaction is suspected, a fault proof is ran to see if this has taken place.",
+      childSentence: "More on optimistic rollups",
+      childLink: "/developers/docs/scaling/optimistic-rollups/",
+    },
+    {
+      emoji: ":scroll:",
+      title: "Zero Knowledge Rollups",
+      description:
+        "Zero Knowledge rollups use validity proofs where transactions calculations are computed off-chain, and then this data is then supplied to Ethereum Mainnet with a proof of their validity.",
+      childSentence: "More on zk-rollups",
+      childLink: "/developers/docs/scaling/zk-rollups/",
+    },
+  ]
+
+  const toolsData = {
+    information: [
+      {
+        title: "L2BEAT",
+        description:
+          "L2BEAT is a great resource for looking at technical risk assessments of layer 2 projects. We recommend checking out their resources when researching specific layer 2 projects.",
+        link: "https://l2beat.com",
+        image: getImage(data.impact),
+        alt: "L2BEAT",
+      },
+      {
+        title: "L2 Fees",
+        description:
+          "L2 Fees lets you see the current cost (denominated in USD) for doing transactions on different layer 2s.",
+        link: "https://l2fees.info",
+        image: getImage(data.impact),
+        alt: "L2 Fees",
+      },
+      {
+        title: "Chainlist",
+        description:
+          "Chainlist is a great resource for importing network RPC's into supporting wallets. You will find RPC's for layer 2 projects here to help get you connected.",
+        link: "https://chainlist.org",
+        image: getImage(data.impact),
+        alt: "Chainlist",
+      },
+    ],
+    walletManagers: [
+      {
+        title: "Zapper",
+        link: "https://zapper.fi/",
+        description:
+          "Manage your entire web3 portfolio from DeFi to NFTs and whatever comes next. Invest in the latest opportunities from one convenient place.",
+        image: getImage(data.impact),
+        alt: "Zapper",
+      },
+      {
+        title: "Zerion",
+        description:
+          "Build and manage your entire DeFi portfolio from one place. Discover the world of decentralized finance today.",
+        link: "https://zerion.io",
+        image: getImage(data.impact),
+        alt: "Zerion",
+      },
+      {
+        title: "DeBank",
+        description:
+          "Keep up with all the important happenings in the web3 world",
+        link: "https://debank.com",
+        image: getImage(data.impact),
+        alt: "DeBank",
+      },
+    ],
+    tokenLists: [
+      {
+        title: "tokenlists.org",
+        description: "Token list for Optimism",
+        link: "https://tokenlists.org/token-list?url=https://static.optimism.io/optimism.tokenlist.json",
+        image: getImage(data.impact),
+        alt: "tokenlists.org",
+      },
+      {
+        title: "arbucks",
+        description: "Token list for Arbitrum One",
+        link: "https://arbucks.io/tokens/",
+        image: getImage(data.impact),
+        alt: "arbucks",
+      },
+    ],
+    dappPortal: [
+      {
+        title: "Arbitrum One Portal",
+        description: "Dapp portal for Arbitrum One",
+        link: "https://portal.arbitrum.one/",
+        image: getImage(data.impact),
+        alt: "Arbitrum One",
+      },
+      {
+        title: "Optimism ecosystem",
+        description: "Dapp portal for Optimism",
+        link: "https://www.optimism.io/apps/all",
+        image: getImage(data.impact),
+        alt: "Optimism",
+      },
+    ],
+    blockExplorers: [
+      {
+        title: "Arbitrum One",
+        description: "Arbitrum One block explorer",
+        link: "https://explorer.arbitrum.io/",
+        image: getImage(data.impact),
+        alt: "Arbitrum One",
+      },
+      {
+        title: "Optimism",
+        descrition: "Optimism block explorer",
+        link: "https://optimistic.etherscan.io/",
+        image: getImage(data.impact),
+        alt: "Optimism",
+      },
+      {
+        title: "zkSync",
+        description: "zkSync block explorer",
+        link: "https://zkscan.io/",
+        image: getImage(data.impact),
+        alt: "zkSync",
+      },
+      {
+        title: "Metis",
+        description: "Metis block explorer",
+        link: "https://andromeda-explorer.metis.io/",
+        image: getImage(data.impact),
+        alt: "Metis",
+      },
+      {
+        title: "Boba Network",
+        description: "Boba Network block explorer",
+        link: "https://blockexplorer.boba.network/",
+        image: getImage(data.impact),
+        alt: "Boba Network",
+      },
+      {
+        title: "Loopring",
+        description: "Loopring block explorer",
+        link: "https://explorer.loopring.io/",
+        image: getImage(data.impact),
+        alt: "Loopring",
+      },
+    ],
+  }
 
   const layer2DataCombined = [...layer2Data.optimistic, ...layer2Data.zk]
 
@@ -153,47 +319,73 @@ const Layer2Page = ({ data }) => {
       </HeroContainer>
 
       <Content>
-        <h2>What is layer 1?</h2>
-        <p>
-          Before diving into "layer 2", it helps to understand what we consider
-          "layer 1".
-        </p>
-        <p>
-          Layer 1 blockchains, such as Ethereum and Bitcoin, are the underlying
-          foundation that layer 2 projects build on top of. Examples of layer 2
-          projects built on top of these networks include zero-knowledge rollups
-          and optimistic rollups on Ethereum and the Lighting Network on top of
-          Bitcoin.
-        </p>
-        <p>
-          Ethereum as the layer 1 includes the blockchain itself and the history
-          of transaction data, a network of block proposers, a network of node
-          operators to secure and validate the blockchain, and the consensus
-          mechanism for the protocol.
-        </p>
+        <TwoColumnContent>
+          <FlexContainer flexPercent="65">
+            <h2>What is layer 1?</h2>
+            <p>
+              Before diving into "layer 2", it helps to understand what we
+              consider "layer 1". Layer 1 blockchains, such as Ethereum and
+              Bitcoin, are the{" "}
+              <b>underlying foundation that layer 2 projects build on top of</b>
+              . Examples of layer 2 projects built on top of these networks
+              include <b>zero-knowledge rollups</b>
+              and <b>optimistic rollups</b> on Ethereum and the Lighting Network
+              on top of Bitcoin.
+            </p>
+            <p>
+              <b>Ethereum as the layer 1 includes:</b>
+            </p>
+            <ul>
+              <li>
+                <b>a network of node operators</b> to secure and validate the
+                network
+              </li>
+              <li>
+                <b>a network of block proposers</b>
+              </li>
+              <li>
+                <b>the blockchain</b> itself and the history of transaction data
+              </li>
+              <li>
+                <b>the consensus mechanism</b> for the network
+              </li>
+            </ul>
+          </FlexContainer>
+          <FlexContainer flexPercent="35">
+            <GatsbyImage image={getImage(data.impact)} />
+          </FlexContainer>
+        </TwoColumnContent>
       </Content>
 
       <Content>
         <h2>Why do we need layer 2?</h2>
         <p>
           The three desirable properties of a blockchain are that it is
-          decentralized, secure, and scalable. The scalability trilemma states
-          that a simple blockchain architecture can only achieve two out of
-          three. Want a secure and decentralized blockchain? You need to
-          sacrifice scalability.
+          <b>decentralized, secure, and scalable</b>. The{" "}
+          <Link to="https://www.ledger.com/academy/what-is-the-blockchain-trilemma">
+            blockchain trilemma
+          </Link>{" "}
+          states that a simple blockchain architecture can only achieve two out
+          of three. Want a secure and decentralized blockchain? You need to
+          sacrifice scalability. This is where layer 2 networks come in.
         </p>
         <p>
           Ethereum has reached the network's current capacity with{" "}
           <Link to="https://etherscan.io/chart/tx">
             1+ million transactions per day
           </Link>
-          , with high demand for each of these transactions. Due to the success
-          of Ethereum and the demand to use it, gas prices have risen
-          substantially, increasing the{" "}
-          <Link to="/developers/docs/scaling/">need for scaling solutions</Link>
-          . The main goal of scalability is to increase transaction speed
-          (faster finality), and transaction throughput (high transactions per
-          second), without sacrificing decentralization or security (more on the{" "}
+          , with high demand for each of these transactions. The success of
+          Ethereum and the demand to use it has caused gas prices to rise
+          substantially. Therefore the{" "}
+          <Link to="/developers/docs/scaling/">need for scaling solutions</Link>{" "}
+          has peaked as well.
+        </p>
+
+        <h3>Scalability</h3>
+        <p>
+          The main goal of scalability is to increase transaction speed (faster
+          finality), and transaction throughput (high transactions per second),
+          without sacrificing decentralization or security (more on the{" "}
           <Link to="/upgrades/vision/  ">Ethereum vision</Link>).
         </p>
         <p>
@@ -208,94 +400,88 @@ const Layer2Page = ({ data }) => {
           it from using Ethereum until the fees reduce. That is where layer 2
           comes in to scale Ethereum today.
         </p>
-      </Content>
 
-      <Content>
+        <h3>Benefits</h3>
         <InfoGrid>
-          {layer2Cards.map(({ image, title, preview, body, alt }, idx) => (
-            <ExpandableCard
-              contentPreview={preview}
+          {layer2Cards.map(({ emoji, title, description }, idx) => (
+            <Card
+              description={description}
               title={title}
-              svg={image}
-              alt={alt}
+              emoji={emoji}
               key={idx}
-            >
-              {body.map((item, idx) => (
-                <p key={idx}>{item}</p>
-              ))}
-            </ExpandableCard>
+            />
           ))}
         </InfoGrid>
       </Content>
 
       <Content id="what-is-layer-2">
-        <h2>Layer 2</h2>
+        <h2>What is layer 2</h2>
         <p>
           Layer 2 is a collective term for Ethereum scaling solutions that
           handle transactions off Ethereum layer 1 while taking advantage of the
           robust decentralized security model of Ethereum layer 1. A layer 2 is
-          a separate blockchain that is connected to Ethereum. It regularly
-          communicates with Ethereum (by submitting bundles of transactions) in
-          order to ensure it has similar security and decentralization
-          guarantees, and requires no changes to the layer 1 protocol. This lets
-          layer 1 handle security, data availability, and decentralization,
-          whilst everything on the layer above (layer 2) can handle scaling.
-          Layer 2s takes the transactional burden away from the layer 1, and
-          posts finalized proofs back to the layer 1 to finalize the state. By
-          taking this load away from layer 1, the base layer will become less
-          congested, and everything becomes more scalable.
-        </p>
-        <h3>Rollups</h3>
-        <p>
-          Rollups are currently the preferred layer 2 solution for scaling
-          Ethereum. By using rollups, users can{" "}
-          <Link to="https://l2fees.info/">reduce gas fees by up to 100x</Link>{" "}
-          when comparison to a layer 1 transaction.
-        </p>
-        <p>
-          Rollups bundle (or ’roll up’) hundreds of transactions into a single
-          transaction on layer 1. This allows the transaction fees to be shared
-          across everyone in the rollup. These bundled transactions are posted
-          to the layer 1 as validity, fraud, or fault proofs. Rollup
-          transactions get executed outside of layer 1 but the transaction data
-          gets posted to layer 1. By posting transaction data onto layer 1,
-          rollups are able to inherit the security of Ethereum.
+          a <b>separate blockchain that is connected to Ethereum</b>. It
+          regularly communicates with Ethereum (by submitting bundles of
+          transactions) in order to ensure it has similar security and
+          decentralization guarantees, and requires no changes to the layer 1
+          protocol. This lets layer 1 handle security, data availability, and
+          decentralization, whilst everything on the layer above (layer 2) can
+          handle scaling. Layer 2s takes the transactional burden away from the
+          layer 1, and posts finalized proofs back to the layer 1 to finalize
+          the state. By taking this load away from layer 1, the base layer will
+          become less congested, and everything becomes more scalable.
         </p>
         <TwoColumnContent>
-          <Flex50>
-            <h4>Optimistic Rollups</h4>
+          <FlexContainer flexPercent="65">
+            <h3>Rollups</h3>
             <p>
-              Optimistic rollups use fault proofs where transactions are assumed
-              to be valid, but can be challenged if an invalid transaction is
-              suspected. If an invalid tranaction is suspected, a fault proof is
-              ran to see if this has taken place.{" "}
-              <Link to="/developers/docs/scaling/optimistic-rollups/">
-                More on optimistic rollups
-              </Link>
+              Rollups are currently the preferred layer 2 solution for scaling
+              Ethereum. By using rollups, users can{" "}
+              <Link to="https://l2fees.info/">
+                reduce gas fees by up to 100x
+              </Link>{" "}
+              when comparison to a layer 1 transaction.
             </p>
-          </Flex50>
-          <Flex50>
-            <h4>Zero Knowledge Rollups</h4>
             <p>
-              Zero Knowledge rollups use validity proofs where transactions
-              calculations are computed off-chain, and then this data is then
-              supplied to Ethereum Mainnet with a proof of their validity.{" "}
-              <Link to="/developers/docs/scaling/zk-rollups/">
-                More on zk-rollups
-              </Link>
+              Rollups bundle (or ’roll up’) hundreds of transactions into a
+              single transaction on layer 1. This allows the transaction fees to
+              be shared across everyone in the rollup. These bundled
+              transactions are posted to the layer 1 as validity, fraud, or
+              fault proofs. Rollup transactions get executed outside of layer 1
+              but the transaction data gets posted to layer 1. By posting
+              transaction data onto layer 1, rollups are able to inherit the
+              security of Ethereum.
             </p>
-          </Flex50>
+          </FlexContainer>
+          <FlexContainer flexPercent="35">
+            <GatsbyImage image={getImage(data.impact)} />
+          </FlexContainer>
         </TwoColumnContent>
-        <InfoBanner isWarning={true}>
-          <h2>DYOR! Risks of layer 2</h2>
+        <TwoColumnContent>
+          {rollupCards.map(
+            ({ emoji, title, description, childSentence, childLink }) => (
+              <RollupCard>
+                {emoji && <Emoji size={3} text={emoji} />}
+                <h3>{title}</h3>
+                <p>{description}</p>
+                <p>
+                  <Link to={childLink}>{childSentence}</Link>
+                </p>
+              </RollupCard>
+            )
+          )}
+        </TwoColumnContent>
+        <InfoBanner>
+          <h2>Do your own research: Risks of layer 2</h2>
           <p>
             Because layer 2 chains inherit security from Ethereum, in an ideal
             world, they are as safe as L1 Ethereum. However, many of the
-            projects are still young and somewhat experimental. After years of
-            R&D, many of the L2 technologies that will scale Ethereum went live
-            in 2021. This is not to say these L2s are not secure, only that no
-            layer 2 is as battle tested as Ethereum Mainnet. Always do your own
-            research and decide if you're comfortable with any risks involved.
+            <b>projects are still young and somewhat experimental</b>. After
+            years of R&D, many of the L2 technologies that will scale Ethereum
+            went live in 2021. This is not to say these L2s are not secure, only
+            that no layer 2 is as battle tested as Ethereum Mainnet. Always do
+            your own research and decide if you're comfortable with any risks
+            involved.
           </p>
           <p>
             For more information on the technology, risks and trust assumptions
@@ -306,29 +492,6 @@ const Layer2Page = ({ data }) => {
             <Link to="https://l2beat.com">L2BEAT</Link>
           </p>
         </InfoBanner>
-      </Content>
-
-      <Content>
-        <h2>A note on alt L1s, sidechains, and validiums</h2>
-        <p>
-          Many alternative layer 1s have higher throughput and lower transaction
-          fees than Ethereum. These alt L1s have had to sacrifice on security or
-          decentralization in order to achieve higher transactions per second
-          and lower fees. The Ethereum ecosystem is firmly aligned that layer 2
-          scaling is the only way to solve the scalability trilemma and remain
-          decentralized and secure.
-        </p>
-        <p>
-          Sidechains and validiums are blockchains that allow assets from one
-          blockchain to be bridged over and used on another blockchain.
-          Sidechains and validiums run in parallel with the main chain, and
-          interact with the main chain through bridges, but they do not derive
-          their security or data availability from the main chain. They scale
-          similarly to layer 2s, but have different trust assumptions. They
-          offer lower transaction fees, and higher transaction throughput. More
-          on <Link to="/developers/docs/scaling/sidechains/">sidechains</Link>{" "}
-          and <Link to="/developers/docs/scaling/validium/">validiums</Link>.
-        </p>
       </Content>
 
       <Content id="use-layer-2">
@@ -385,6 +548,41 @@ const Layer2Page = ({ data }) => {
       </Content>
 
       <Content>
+        <h2>A note on alt L1s, sidechains, and validiums</h2>
+        <TwoColumnContent>
+          <Flex50>
+            <p>
+              <b>Alternative layer 1s</b> have higher throughput and lower
+              transaction fees than Ethereum. These alt L1s have had to{" "}
+              <b>sacrifice on security or decentralization</b> in order to
+              achieve higher transactions per second and lower fees. The
+              Ethereum ecosystem is firmly aligned that{" "}
+              <b>
+                layer 2 scaling is the only way to solve the scalability
+                trilemma
+              </b>{" "}
+              and remain decentralized and secure.
+            </p>
+          </Flex50>
+          <Flex50>
+            <p>
+              <b>Sidechains and validiums</b> are blockchains that allow assets
+              from one blockchain to be bridged over and used on another
+              blockchain. Sidechains and validiums run in parallel with the main
+              chain, and interact with the main chain through bridges, but they
+              do not derive their security or data availability from the main
+              chain. They scale similarly to layer 2s, but have different trust
+              assumptions. They offer lower transaction fees, and higher
+              transaction throughput. More on{" "}
+              <Link to="/developers/docs/scaling/sidechains/">sidechains</Link>{" "}
+              and <Link to="/developers/docs/scaling/validium/">validiums</Link>
+              .
+            </p>
+          </Flex50>
+        </TwoColumnContent>
+      </Content>
+
+      <Content>
         <InfoBanner>
           <h2>How to get onto a layer 2</h2>
           <TwoColumnContent>
@@ -409,121 +607,31 @@ const Layer2Page = ({ data }) => {
       </Content>
 
       <Content>
-        <h2>Tools and tips to be effective on layer 2</h2>
+        <h2>Tools to be effective on layer 2</h2>
         <TwoColumnContent>
           <Flex50>
-            <ExpandableCard title="L2BEAT">
-              <p>
-                <Link to="https://l2beat.com">L2BEAT</Link> is a great resource
-                for looking at technical risk assessments of layer 2 projects.
-                We recommend checking out their resources when researching
-                specific layer 2 projects.
-              </p>
-            </ExpandableCard>
-            <ExpandableCard title="Chainlist">
-              <p>
-                <Link to="https://chainlist.org">Chainlist</Link> is a great
-                resource for importing network RPC's into your favorite wallet.
-                You will be able to find the various RPC's for layer 2 projects
-                here to get you connected to their network.
-              </p>
-            </ExpandableCard>
-            <ExpandableCard title="Dapp portals">
-              <p>
-                Some layer 2 projects provide an application portal for users to
-                see what projects are a part of their ecosystem. Check out some
-                here!
-              </p>
-              <ul>
-                <li>
-                  <Link to="https://portal.arbitrum.one/">
-                    Arbitrum One Portal
-                  </Link>
-                </li>
-                <li>
-                  <Link to="https://www.optimism.io/apps/all">
-                    Optimism ecosystem
-                  </Link>
-                </li>
-              </ul>
-            </ExpandableCard>
-            <ExpandableCard title="Block explorers">
-              <ul>
-                <li>
-                  <Link to="https://explorer.arbitrum.io/">Arbitrum</Link>
-                </li>
-                <li>
-                  <Link to="https://optimistic.etherscan.io/">Optimism</Link>
-                </li>
-                <li>
-                  <Link to="https://zkscan.io/">zkSync</Link>
-                </li>
-                <li>
-                  <Link to="https://andromeda-explorer.metis.io/">Metis</Link>
-                </li>
-                <li>
-                  <Link to="https://blockexplorer.boba.network/">
-                    Boba Network
-                  </Link>
-                </li>
-                <li>
-                  <Link to="https://explorer.loopring.io/">Loopring</Link>
-                </li>
-                <li>
-                  <Link to="https://voyager.online/">StarkNet</Link>
-                </li>
-                <li>
-                  <Link to="https://explorer.hermez.io/">Hermez</Link>
-                </li>
-              </ul>
-            </ExpandableCard>
+            <ProductList
+              category="Information"
+              content={toolsData.information}
+            />
+            <ProductList
+              category="Block explorers"
+              content={toolsData.blockExplorers}
+            />
           </Flex50>
           <Flex50>
-            <ExpandableCard title="L2 Fees">
-              <p>
-                <Link to="https://l2fees.info">L2 Fees</Link> lets you see the
-                current cost (denominated in USD) for doing transactions on
-                different layer 2 networks.
-              </p>
-            </ExpandableCard>
-            <ExpandableCard title="Wallet Managers">
-              <p>
-                To help you get a holistic view of your assets across networks,
-                we recommend using a wallet manager to track your assets as you
-                enter layer 2.
-              </p>
-              <ul>
-                <li>
-                  <Link to="https://zapper.fi/">Zapper</Link>
-                </li>
-                <li>
-                  <Link to="https://zerion.io/">Zerion</Link>
-                </li>
-                <li>
-                  <Link to="https://debank.com/">DeBank</Link>
-                </li>
-              </ul>
-            </ExpandableCard>
-            <ExpandableCard title="Token lists">
-              <p>
-                Finding token lists can be hard. Many of your favorite dapps and
-                wallets will already import a token list, but in case you need
-                to import a token contract address here are some to get you
-                started!
-              </p>
-              <ul>
-                <li>
-                  <Link to="https://tokenlists.org/token-list?url=https://static.optimism.io/optimism.tokenlist.json">
-                    tokenlists.org
-                  </Link>{" "}
-                  list for Optimism
-                </li>
-                <li>
-                  <Link to="https://arbucks.io/tokens/">arbucks.io</Link> list
-                  for Arbitrum
-                </li>
-              </ul>
-            </ExpandableCard>
+            <ProductList
+              category="Wallet managers"
+              content={toolsData.walletManagers}
+            />
+            <ProductList
+              category="Token lists"
+              content={toolsData.tokenLists}
+            />
+            <ProductList
+              category="Dapp portal"
+              content={toolsData.dappPortal}
+            />
           </Flex50>
         </TwoColumnContent>
       </Content>
@@ -611,6 +719,16 @@ export const query = graphql`
       childImageSharp {
         gatsbyImageData(
           width: 624
+          layout: CONSTRAINED
+          placeholder: BLURRED
+          quality: 100
+        )
+      }
+    }
+    impact: file(relativePath: { eq: "impact_transparent.png" }) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 300
           layout: CONSTRAINED
           placeholder: BLURRED
           quality: 100
