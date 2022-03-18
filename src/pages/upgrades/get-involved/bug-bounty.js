@@ -100,17 +100,16 @@ const ClientRow = styled.div`
 const ButtonRow = styled.div`
   display: flex;
   align-items: center;
+  margin-top: 1rem;
+  flex-wrap: wrap;
 `
 
 const StyledButton = styled(ButtonLink)`
-  margin-top: 1rem;
   flex: 0 1 7.75rem;
   margin-right: 1rem;
-`
-
-const StyledButtonSecondry = styled(ButtonLink)`
-  margin-top: 1rem;
-  flex: 0 1 7.75rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    margin-bottom: 1rem;
+  }
 `
 
 const StyledCardContainer = styled(CardContainer)`
@@ -299,9 +298,9 @@ const BugBountiesPage = ({ data, location }) => {
               <StyledButton to="https://forms.gle/Gnh4gzGh66Yc3V7G8">
                 <Translation id="page-upgrades-bug-bounty-submit" />
               </StyledButton>
-              <StyledButtonSecondry isSecondary to="#rules">
+              <StyledButton isSecondary to="#rules">
                 <Translation id="page-upgrades-bug-bounty-rules" />
-              </StyledButtonSecondry>
+              </StyledButton>
             </ButtonRow>
           </HeroContainer>
           <LeaderboardContainer>
