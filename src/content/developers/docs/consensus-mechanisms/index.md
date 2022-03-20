@@ -111,6 +111,7 @@ The [Beacon Chain](/upgrades/beacon-chain/) uses a consensus mechanism called [C
 - [What is Nakamoto Consensus? Complete Beginner’s Guide](https://blockonomi.com/nakamoto-consensus/)
 - [How Does Casper work?](https://medium.com/unitychain/intro-to-casper-ffg-9ed944d98b2d)
 - [On the Security and Performance of Proof of Work Blockchains](https://eprint.iacr.org/2016/555.pdf)
+- [Byzantine fault & Byzanatine Generalss Problem](https://en.wikipedia.org/wiki/Byzantine_fault)
 
 _Know of a community resource that helped you? Edit this page and add it!_
 
