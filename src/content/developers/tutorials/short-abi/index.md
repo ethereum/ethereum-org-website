@@ -4,7 +4,7 @@ description: Optimizing smart contracts for Optimistic Rollups
 author: Ori Pomerantz
 lang: en
 sidebar: true
-tags: ["layer 2", "l2", "optimism"]
+tags: ["layer 2", "l2", "optimism", "gas"]
 skill: intermediate
 published: 2022-04-01
 ---
@@ -44,7 +44,7 @@ The cost of L1 gas, on the other hand, is approximately 40 Gwei.
 
 A byte of calldata costs either 4 gas (if it is zero) or 16 gas (if it is any other value).
 One of the most expensive operations on the EVM is writing to storage.
-The maximum cost of writing a 32 byte word to storage on L2 is 22100 gas, currently that is 22.1 Gwei.
+The maximum cost of writing a 32-byte word to storage on L2 is 22100 gas, currently that is 22.1 Gwei.
 So if we can save a single zero byte of calldata, we'll be able to write about 200 bytes to storage and still come out ahead.
 
 
@@ -69,7 +69,7 @@ Explanation:
 
 - **Function selector**: The contract has less than 256 functions, so we can distinguish them with a single byte.
   These bytes are typically non-zero and therefore [cost sixteen gas](https://eips.ethereum.org/EIPS/eip-2028).
-- **Zeroes**: These bytes are always zero because a twenty byte address does not require a thirty two byte word to hold it.
+- **Zeroes**: These bytes are always zero because a twenty-byte address does not require a thirty-two-byte word to hold it.
   Bytes that hold zero cost four gas ([see the yellow paper](https://ethereum.github.io/yellowpaper/paper.pdf), Appendix G,
   p. 27, the value for `G`<sub>`txdatazero`</sub>).
 - **Amount**: If we assume that in this contract `decimals` is eighteen (the normal value) and the maximum amount of tokens we transfer will be 10<sup>18</sup>, we get a maximum amount of 10<sup>36</sup>.
@@ -87,7 +87,7 @@ Let's go over the relevant files.
 
 ### Token.sol {#token.sol}
 
-[This is the destinatjon contract](https://github.com/qbzzt/ethereum.org-20220330-shortABI/blob/master/contracts/Token.sol).
+[This is the destination contract](https://github.com/qbzzt/ethereum.org-20220330-shortABI/blob/master/contracts/Token.sol).
 It is a standard ERC-20 contract, with one additional feature.
 This `faucet` function lets any user get some token to use. 
 It would make a production ERC-20 contract useless, but it makes life easier when an ERC-20 exists only to facilitate testing.
@@ -160,7 +160,7 @@ Read a value from the calldata.
             "calldataVal trying to read beyond calldatasize");
 ```
 
-We are going to load a single 32 byte (256 bit) word to memory and remove the bytes that aren't part of the field we want.
+We are going to load a single 32-byte (256-bit) word to memory and remove the bytes that aren't part of the field we want.
 This algorithm doesn't work for values longer than 32 bytes, and of course we can't read past the end of the calldata.
 On L1 it might be necessary to skip these tests to save on gas, but on L2 gas is extremely cheap, which enables whatever sanity checks we can think of.
 
@@ -575,10 +575,6 @@ To check `approve()` and `transferFrom()` we need a second signer.
 We call it `poorSigner` because it does not get any of our tokens (it does need to have ETH, of course).
 
 ```js
-    .
-    .
-    .
-
     // Transfer tokens
     const destAddr = "0xf5a6ead936fb47f342bb63e676479bddf26ebe1d"
     const transferTx = {
@@ -591,10 +587,6 @@ We call it `poorSigner` because it does not get any of our tokens (it does need 
 Because the ERC-20 contract trusts the proxy (`cdi`), we don't need an allowance to relay transfers.
 
 ```js
-    .
-    .
-    .
-    
     // approval and transferFrom
     const approveTx = {
       to: cdi.address,
