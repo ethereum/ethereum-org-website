@@ -1,12 +1,9 @@
 // Libraries
-import React from "react"
+import React, { useEffect, useState } from "react"
 import { graphql } from "gatsby"
 import { getImage, GatsbyImage } from "gatsby-plugin-image"
 import styled from "styled-components"
 import { useIntl } from "gatsby-plugin-intl"
-
-// Assets
-import privacyGlyph from "../assets/run-a-node/privacy-glyph.svg"
 
 // Data
 import cexSupport from "../data/layer-2/cex-layer-2-support.json"
@@ -111,8 +108,95 @@ const RollupCard = styled.div`
   }
 `
 
+const StatsContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin-bottom: 4rem;
+  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
+    flex-direction: column;
+  }
+`
+
+const StatBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex: 33%;
+  padding: 0 20px;
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
+    flex: 100%;
+  }
+`
+
+const StatPrimary = styled.p`
+  font-weight: bold;
+  font-size: ${(props) => props.theme.fontSizes.xl};
+  color: ${(props) => props.theme.colors.primary};
+`
+
+const StatDescription = styled.p`
+  opacity: 0.8;
+  margin: 0;
+`
+
+const StatDivider = styled.div`
+  border-left: 1px solid ${({ theme }) => theme.colors.homeDivider};
+  max-height: 100px;
+  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
+    border-left: none;
+    border-bottom: 1px solid ${({ theme }) => theme.colors.homeDivider};
+    width: 100%;
+    height: 0%;
+    margin: 2rem 0;
+  }
+`
+
 const Layer2Page = ({ data }) => {
   const intl = useIntl()
+  // Data is [data, usd, eth] reference: https://l2beat.com/api/tvl.json
+  const [tvl, setTVL] = useState(NaN)
+  const [percentChangeL2, setL2PercentChange] = useState(NaN)
+  // Denominated in USD
+  const [averageFee, setAverageFee] = useState(NaN)
+
+  useEffect(async () => {
+    const l2beatResponse = await fetch("https://l2beat.com/api/tvl.json")
+    const l2BeatData = await l2beatResponse.json()
+    // formatted TVL from L2beat API formatted
+    setTVL(
+      new Intl.NumberFormat(intl.locale, {
+        style: "currency",
+        currency: "USD",
+        notation: "compact",
+        minimumSignificantDigits: 2,
+        maximumSignificantDigits: 3,
+      }).format(l2BeatData.data[l2BeatData.data.length - 1][1])
+    )
+
+    // Calculate percent change ((new value - old value) / old value) *100)
+    setL2PercentChange(
+      ((l2BeatData.data[l2BeatData.data.length - 1][1] -
+        l2BeatData.data[l2BeatData.data.length - 31][1]) /
+        l2BeatData.data[l2BeatData.data.length - 31][1]) *
+        100
+    )
+
+    // Average eth transfer fee from L2's supported by cryptostats API
+    const feeResponse = await fetch(
+      "https://api.cryptostats.community/api/v1/l2-fees/feeTransferEth?metadata=false"
+    )
+    const feeData = await feeResponse.json()
+    const feeAverage =
+      feeData.data.reduce(
+        (acc, curr) => (acc += curr.results.feeTransferEth),
+        0
+      ) / feeData.data.length
+    setAverageFee(feeAverage)
+  }, [])
+
   const heroContent = {
     title: "Layer 2",
     header: "Layer 2",
@@ -319,6 +403,22 @@ const Layer2Page = ({ data }) => {
       </HeroContainer>
 
       <Content>
+        <StatsContainer>
+          <StatBox>
+            <StatPrimary>{tvl} (USD)</StatPrimary>
+            <StatDescription>TVL locked in L2</StatDescription>
+          </StatBox>
+          <StatDivider />
+          <StatBox>
+            <StatPrimary>${averageFee.toFixed(2)} (USD)</StatPrimary>
+            <StatDescription>Average ETH transfer fee</StatDescription>
+          </StatBox>
+          <StatDivider />
+          <StatBox>
+            <StatPrimary>{percentChangeL2.toFixed(2)}%</StatPrimary>
+            <StatDescription>Last 30 days</StatDescription>
+          </StatBox>
+        </StatsContainer>
         <TwoColumnContent>
           <FlexContainer flexPercent="65">
             <h2>What is layer 1?</h2>
@@ -509,7 +609,7 @@ const Layer2Page = ({ data }) => {
               return (
                 <ProductCard
                   key={idx}
-                  background="black"
+                  background={l2.background}
                   image={getImage(data[l2.imageKey])}
                   description={l2.description}
                   url={l2.website}
@@ -533,7 +633,7 @@ const Layer2Page = ({ data }) => {
               return (
                 <ProductCard
                   key={idx}
-                  background="black"
+                  background={l2.background}
                   image={getImage(data[l2.imageKey])}
                   description={l2.description}
                   url={l2.website}
@@ -737,131 +837,126 @@ export const query = graphql`
         )
       }
     }
-    arbitrum: file(relativePath: { eq: "layer-2-logos/arbitrum.png" }) {
+    arbitrum: file(relativePath: { eq: "layer-2/arbitrum.png" }) {
       childImageSharp {
         gatsbyImageData(
-          width: 80
-          layout: FIXED
+          width: 200
+          layout: CONSTRAINED
           placeholder: BLURRED
           quality: 100
         )
       }
     }
-    boba: file(relativePath: { eq: "layer-2-logos/boba.png" }) {
+    boba: file(relativePath: { eq: "layer-2/boba.png" }) {
       childImageSharp {
         gatsbyImageData(
-          width: 80
-          layout: FIXED
+          width: 200
+          layout: CONSTRAINED
           placeholder: BLURRED
           quality: 100
         )
       }
     }
-    chainlist: file(relativePath: { eq: "layer-2-logos/chainlist.png" }) {
+    chainlist: file(relativePath: { eq: "layer-2/chainlist.png" }) {
       childImageSharp {
         gatsbyImageData(
-          width: 80
-          layout: FIXED
+          width: 200
+          layout: CONSTRAINED
           placeholder: BLURRED
           quality: 100
         )
       }
     }
-    debank: file(relativePath: { eq: "layer-2-logos/debank.png" }) {
+    debank: file(relativePath: { eq: "layer-2/debank.png" }) {
       childImageSharp {
         gatsbyImageData(
-          width: 80
-          layout: FIXED
+          width: 200
+          layout: CONSTRAINED
           placeholder: BLURRED
           quality: 100
         )
       }
     }
-    dydx: file(relativePath: { eq: "layer-2-logos/dydx.jpg" }) {
+    dydx: file(relativePath: { eq: "layer-2/dydx.jpg" }) {
       childImageSharp {
         gatsbyImageData(
-          width: 80
-          layout: FIXED
+          width: 200
+          layout: CONSTRAINED
           placeholder: BLURRED
           quality: 100
         )
       }
     }
-    l2beat: file(relativePath: { eq: "layer-2-logos/l2beat.jpg" }) {
+    l2beat: file(relativePath: { eq: "layer-2/l2beat.jpg" }) {
       childImageSharp {
         gatsbyImageData(
-          width: 80
-          layout: FIXED
+          width: 200
+          layout: CONSTRAINED
           placeholder: BLURRED
           quality: 100
         )
       }
     }
-    loopring: file(relativePath: { eq: "layer-2-logos/loopring.png" }) {
+    loopring: file(relativePath: { eq: "layer-2/loopring.png" }) {
       childImageSharp {
         gatsbyImageData(
-          width: 80
-          layout: FIXED
+          width: 200
+          layout: CONSTRAINED
           placeholder: BLURRED
           quality: 100
         )
       }
     }
-    metis: file(relativePath: { eq: "layer-2-logos/metis.png" }) {
+    metis: file(relativePath: { eq: "layer-2/metis-light.png" }) {
       childImageSharp {
         gatsbyImageData(
-          width: 80
-          layout: FIXED
+          width: 200
+          layout: CONSTRAINED
           placeholder: BLURRED
           quality: 100
         )
       }
     }
-    optimism: file(relativePath: { eq: "layer-2-logos/optimism.png" }) {
+    optimism: file(relativePath: { eq: "layer-2/optimism.png" }) {
+      childImageSharp {
+        gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED, quality: 100)
+      }
+    }
+    zapper: file(relativePath: { eq: "layer-2/zapper.png" }) {
       childImageSharp {
         gatsbyImageData(
-          width: 80
-          layout: FIXED
+          width: 200
+          layout: CONSTRAINED
           placeholder: BLURRED
           quality: 100
         )
       }
     }
-    zapper: file(relativePath: { eq: "layer-2-logos/zapper.png" }) {
+    zerion: file(relativePath: { eq: "layer-2/zerion.png" }) {
       childImageSharp {
         gatsbyImageData(
-          width: 80
-          layout: FIXED
+          width: 200
+          layout: CONSTRAINED
           placeholder: BLURRED
           quality: 100
         )
       }
     }
-    zerion: file(relativePath: { eq: "layer-2-logos/zerion.jpeg" }) {
+    zkspace: file(relativePath: { eq: "layer-2/zkspace.png" }) {
       childImageSharp {
         gatsbyImageData(
-          width: 80
-          layout: FIXED
+          width: 200
+          layout: CONSTRAINED
           placeholder: BLURRED
           quality: 100
         )
       }
     }
-    zkspace: file(relativePath: { eq: "layer-2-logos/zkspace.png" }) {
+    zksync: file(relativePath: { eq: "layer-2/zksync.png" }) {
       childImageSharp {
         gatsbyImageData(
           width: 80
-          layout: FIXED
-          placeholder: BLURRED
-          quality: 100
-        )
-      }
-    }
-    zksync: file(relativePath: { eq: "layer-2-logos/zksync.png" }) {
-      childImageSharp {
-        gatsbyImageData(
-          width: 80
-          layout: FIXED
+          layout: CONSTRAINED
           placeholder: BLURRED
           quality: 100
         )
