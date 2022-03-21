@@ -9,6 +9,7 @@ import Breadcrumbs from "../components/Breadcrumbs"
 import Card from "../components/Card"
 import Callout from "../components/Callout"
 import Contributors from "../components/Contributors"
+import FeedbackCard from "../components/FeedbackCard"
 import InfoBanner from "../components/InfoBanner"
 import Link from "../components/Link"
 import MarkdownTable from "../components/MarkdownTable"
@@ -123,6 +124,7 @@ const components = {
   ButtonLink,
   Contributors,
   InfoBanner,
+  FeedbackCard,
   Card,
   Divider,
   SectionNav,
@@ -179,6 +181,7 @@ const StaticPage = ({ data: { siteData, pageData: mdx }, pageContext }) => {
         <MDXProvider components={components}>
           <MDXRenderer>{mdx.body}</MDXRenderer>
         </MDXProvider>
+        {intl.locale === "en" && <FeedbackCard />}
       </ContentContainer>
       {mdx.frontmatter.sidebar && tocItems && (
         <TableOfContents
