@@ -6835,6 +6835,16 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "wd021",
+      "name": "wd021",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2752586?v=4",
+      "profile": "https://github.com/wd021",
+      "contributions": [
+        "doc",
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
