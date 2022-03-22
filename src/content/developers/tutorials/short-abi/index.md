@@ -16,7 +16,7 @@ You also learn how to implement this optimization.
 
 ### Full disclosure {#full-disclosure}
 
-I'm a full time [Optimism](https://www.optimism.io/) employee, so  examples in this article are going to run on Optimism.
+I'm a full time [Optimism](https://www.optimism.io/) employee, so examples in this article will run on Optimism.
 However, the technique explained here should work just as well for other rollups.
 
 ### Terminology   {#terminology}
