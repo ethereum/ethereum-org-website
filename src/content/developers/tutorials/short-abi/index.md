@@ -626,6 +626,6 @@ If you want to see these files in action without running them yourself, follow t
 ## Conclusion
 
 Both [Optimism](https://medium.com/ethereum-optimism/the-road-to-sub-dollar-transactions-part-2-compression-edition-6bb2890e3e92) and [Arbitrum](https://developer.offchainlabs.com/docs/special_features) are looking for ways to reduce the size of the calldata written to L1 and therefore the cost of transactions. 
-However, as infrastructure providers looking for generic solutions our abilities are limited. 
-As the dapp developer you know information specific to your application, which lets you optimize for it much better than we could in a generic solution.
-Hopefully this article helps you find the ideal solution for your needs.
+However, as infrastructure providers looking for generic solutions, our abilities are limited. 
+As the dapp developer, you have application-specific knowledge, which lets you optimize your calldata much better than we could in a generic solution.
+Hopefully, this article helps you find the ideal solution for your needs.
