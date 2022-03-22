@@ -168,7 +168,6 @@ const Contributors = styled(FileContributors)`
 const DocsPage = ({ data, pageContext }) => {
   const { isZenMode } = useContext(ZenModeContext)
   const mdx = data.pageData
-  const { locale } = useIntl()
   const isRightToLeft = isLangRightToLeft(mdx.frontmatter.lang)
 
   const tocItems = mdx.tableOfContents.items
