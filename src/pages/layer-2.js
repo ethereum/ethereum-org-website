@@ -219,9 +219,9 @@ const ButtonLinkMargin = styled(ButtonLink)`
 const Layer2Page = ({ data }) => {
   const intl = useIntl()
 
-  const [tvl, setTVL] = useState(NaN)
-  const [percentChangeL2, setL2PercentChange] = useState(NaN)
-  const [averageFee, setAverageFee] = useState(NaN)
+  const [tvl, setTVL] = useState("-")
+  const [percentChangeL2, setL2PercentChange] = useState("-")
+  const [averageFee, setAverageFee] = useState("-")
   const [selectedExchange, setSelectedExchange] = useState(undefined)
   const [selectedL2, setSelectedL2] = useState(undefined)
 
