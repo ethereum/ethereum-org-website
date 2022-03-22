@@ -420,7 +420,7 @@
     {
       "name": "Stakefish",
       "launchDate": "2020-12-01",
-      "url": "https://stake.fish/",
+      "url": "https://stake.fish/ethereum-shared/",
       "audits": [
         {
           "name": "Solidified",
@@ -432,7 +432,7 @@
       "tokens": [],
       "isFoss": false,
       "hasBugBounty": false,
-      "isTrustless": false,
+      "isTrustless": true,
       "hasPermissionlessNodes": false,
       "percentSupermajority": 0.0,
       "platforms": ["browser"],
