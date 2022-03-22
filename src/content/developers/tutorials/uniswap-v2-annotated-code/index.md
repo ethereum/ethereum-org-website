@@ -395,9 +395,9 @@ This function is called every time tokens are deposited or withdrawn.
         require(balance0 <= uint112(-1) && balance1 <= uint112(-1), 'UniswapV2: OVERFLOW');
 ```
 
-If the update makes either balance higher than 2^111 (so it would be interpreted as a negative number) refuse
-to do it to prevent overflows. With a normal token that can be subdivided into 10^18 units, this means each
-exchange is limited to about 2.5\*10^15 of each tokens. So far that has not been a problem.
+If either balance0 or balance1 (uint256) is higher than uint112(-1) (=2^112-1) (so it overflows & wraps back to 0 when converted to uint112) refuse
+to continue the \_update to prevent overflows. With a normal token that can be subdivided into 10^18 units, this means each
+exchange is limited to about 5.1\*10^15 of each tokens. So far that has not been a problem.
 
 ```solidity
         uint32 blockTimestamp = uint32(block.timestamp % 2**32);
