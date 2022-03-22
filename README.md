@@ -44,7 +44,7 @@ If you're ready to contribute and create your PR, it will help to set up a local
 
 If this is your first time forking our repo, this is all you need to do for this step:
 
-```
+```sh
 $ git clone git@github.com:[your_github_handle]/ethereum-org-website.git && cd ethereum-org-website
 ```
 
@@ -52,13 +52,13 @@ If you've already forked the repo, you'll want to ensure your fork is configured
 
 To [configure your fork](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/configuring-a-remote-for-a-fork):
 
-```
+```sh
 $ git remote add upstream https://github.com/ethereum/ethereum-org-website.git
 ```
 
 To [sync your fork with the latest changes](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/syncing-a-fork):
 
-```
+```sh
 $ git checkout dev
 $ git fetch upstream
 $ git merge upstream/dev
@@ -66,7 +66,7 @@ $ git merge upstream/dev
 
 3. Install dependencies
 
-```
+```sh
 $ yarn
 ```
 
@@ -79,8 +79,8 @@ We recommend setting this up when running the project locally, as we use the Git
 > - In local repo root directory: Make a copy of `.env.example` and name it `.env`
 > - Copy & paste your new GitHub API token into `.env`
 
-```
-// .env Example:
+```sh
+# .env Example:
 GATSBY_GITHUB_TOKEN_READ_ONLY=48f84de812090000demo00000000697cf6e6a059
 ```
 
@@ -91,8 +91,8 @@ GATSBY_GITHUB_TOKEN_READ_ONLY=48f84de812090000demo00000000697cf6e6a059
 > - In the sidebar, click on 'API-KEYs' and add a new token
 > - Copy & paste your Api-Key Token from Etherscan into `.env`
 
-```
-// .env Example:
+```sh
+# .env Example:
 ETHERSCAN_API_KEY=K6NUTARFJZJCIXHF1F1E1YGJZ8RQ29BE4U
 ```
 
@@ -101,8 +101,8 @@ ETHERSCAN_API_KEY=K6NUTARFJZJCIXHF1F1E1YGJZ8RQ29BE4U
 > - [Follow this guide](https://docs.defipulse.com/quick-start-guide) to create an account and get your DeFiPulse API token
 > - Copy & paste your Active API Key from DeFiPulse into `.env`
 
-```
-// .env Example:
+```sh
+# .env Example:
 DEFI_PULSE_API_KEY=4953aaf7966dad9c129397e197a0630ed0594f66962dd5fb058972b250da
 ```
 
@@ -110,28 +110,32 @@ DEFI_PULSE_API_KEY=4953aaf7966dad9c129397e197a0630ed0594f66962dd5fb058972b250da
 
 1. Create new branch for your changes
 
-```
+```sh
 $ git checkout -b new_branch_name
 ```
 
 2. Start developing!
 
-```
+```sh
 $ yarn start
 ```
 
 - Open this directory in your favorite text editor / IDE, and see your changes live by visiting `localhost:8000` from your browser
-- Pro Tip: Explore scripts within `package.json` for more build options
+- Pro Tip:
+  - Explore scripts within `package.json` for more build options
+  - Get **faster** local builds by building only one language. E.g. in your `.env` file, set `GATSBY_BUILD_LANGS=en` to build the content only in English
+
+By default the script will build all the languages (complete list in `data/translations.json`) and will ignore the `/docs` and `/tutorials` folders. To control this behavior you can play with the `GATSBY_BUILD_LANGS` and `IGNORE_CONTENT` env variables. Check out `.env.example` to read more about them.
 
 3. Commit and prepare for pull request (PR). In your PR commit message, reference the issue it resolves (see [how to link a commit message to an issue using a keyword](https://docs.github.com/en/free-pro-team@latest/github/managing-your-work-on-github/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword)).
 
-```
+```sh
 $ git commit -m "brief description of changes [Fixes #1234]"
 ```
 
 4. Push to your GitHub account
 
-```
+```sh
 $ git push
 ```
 
@@ -144,7 +148,7 @@ There may be times where you develop features that make external API requests to
 3. Add the relevant API key to the `.env` file.
 4. After you have started your development server for ethereum.org (above), start up a netlify lambda server using:
 
-```
+```sh
 yarn start:lambda
 ```
 
@@ -155,9 +159,9 @@ yarn start:lambda
 - After your changes are committed to your GitHub fork, submit a pull request (PR) to the `dev` branch of the `ethereum/ethereum-org-website` repo
 - In your PR description, reference the issue it resolves (see [linking a pull request to an issue using a keyword](https://docs.github.com/en/free-pro-team@latest/github/managing-your-work-on-github/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword))
   - ex. `Updates out of date content [Fixes #1234]`
-- Netlify (our hosting service) deploys all PRs to a publicly accessible preview URL, e.g.:
-  ![Netlify deploy preview](./netlify-deploy-preview.png)
-- _Confirm your Netlify preview deploy looks & functions as expected_
+- Gatsby Cloud (our hosting service for build previews) deploys all PRs to a publicly accessible preview URL, e.g.:
+  ![Gatsby Cloud deploy preview](./GC-preview-deploy.png)
+- _Confirm your GC preview deploy looks & functions as expected_
 - Why not say hi and draw attention to your PR in [our discord server](https://discord.gg/CetY6Y4)?
 
 ### Wait for review
@@ -255,14 +259,22 @@ Markdown will be translated as whole pages of content, so no specific action is 
   - This results in significant challenges during the translation process, as written syntax for each language will vary in terms of ordering subjects/verbs/etc.
   - If you're wanting to link to something within your sentence, create a link at the end of the sentence or paragraph:
 
-  ```
-  <p>All Ethereum transactions require a fee, known as Gas, that gets paid to the miner. <Link to="link">More on Gas</Link></p>
+  ```jsx
+  <p>
+    All Ethereum transactions require a fee, known as Gas, that gets paid to the
+    miner. <Link to="link">More on Gas</Link>
+  </p>
   ```
 
   Once, you've added your English content to the appropriate JSON file, the above code should look something more like:
 
-  ```
-   <p><Translation id="page-transactions" />{" "}<Link to="link"><Translation id="page-transactions-gas-link" /></Link></p>
+  ```jsx
+  <p>
+    <Translation id="page-transactions" />{" "}
+    <Link to="link">
+      <Translation id="page-transactions-gas-link" />
+    </Link>
+  </p>
   ```
 
   - _tl;dr Each individual JSON entry should be a complete phrase by itself_
@@ -271,16 +283,16 @@ Markdown will be translated as whole pages of content, so no specific action is 
 
   - **Method one: `<Translation />` component (preferred if only needed in JSX)**
 
-    ```
+    ```jsx
     import { Translation } from "src/components/Translation"
 
     // Utilize in JSX using
-    <Translation id="language-json-key" />
+    ;<Translation id="language-json-key" />
     ```
 
   - **Method two: `translateMessageId()`**
 
-    ```
+    ```jsx
     import { useIntl } from "gatsby-plugin-intl"
     import { translateMessageId } from "src/utils/translations"
 
@@ -289,7 +301,7 @@ Markdown will be translated as whole pages of content, so no specific action is 
     translateMessageId("language-json-key", intl)
     ```
 
-    ```
+    ```jsx
     const siteTitle = translateMessageId("site-title", intl)
     ```
 
@@ -297,23 +309,23 @@ Markdown will be translated as whole pages of content, so no specific action is 
 
 - Components and pages are written using arrow function syntax with React hooks in lieu of using class-based components
 
-```
+```jsx
 // Example
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from "react"
 
-const ComponentName = props => {
+const ComponentName = (props) => {
   // useState hook for managing state variables
-  const [greeting, setGreeting] = useState('')
+  const [greeting, setGreeting] = useState("")
 
   useEffect(() => {
     // useEffect hook for handling component lifecycle
-    setGreeting('Hello world')
+    setGreeting("Hello world")
   }, [])
 
   return <div>{greeting}</div>
-};
+}
 
-export default ComponentName;
+export default ComponentName
 ```
 
 ## Styling
@@ -323,7 +335,7 @@ export default ComponentName;
 
   - Tagged template literals are used to style custom components
 
-  ```
+  ```jsx
   // Example of styling syntax using styled-components
 
   import styled from "styled-components"
@@ -347,7 +359,7 @@ export default ComponentName;
 
 - Values from `src/theme.js` are automatically passed as a prop object to styled components
 
-  ```
+  ```jsx
   // Example of theme.js usage
 
   import styled from "styled-components"
@@ -363,12 +375,12 @@ export default ComponentName;
 - [Framer Motion](https://www.framer.com/motion/) - An open source and production-ready motion library for React on the web, used for our animated designs
 - **Emojis**: We use [Twemoji](https://twemoji.twitter.com/), an open-source emoji set created by Twitter. These are hosted by us, and used to provide a consistent experience across operating systems.
 
-```
+```jsx
 // Example of emoji use
 import Emoji from "./Emoji"
 
 // Within JSX:
-<Emoji text=":star:" size={1} /> // sized in `em`
+;<Emoji text=":star:" size={1} /> // sized in `em`
 ```
 
 - **Icons**: We use [React Icons](https://react-icons.github.io/react-icons/)
@@ -377,22 +389,24 @@ import Emoji from "./Emoji"
 
 `src/components/Icon.js`:
 
-```
+```jsx
 // Example of how to add new icon not listed
 import { ZzIconName } from "react-icons/zz"
 
 // Then add to IconContect.Provider children:
-{name === "alias" && <ZzIconName />}
+{
+  name === "alias" && <ZzIconName />
+}
 ```
 
 From React component:
 
-```
+```jsx
 // Example of icon use
 import Icon from "./Icon"
 
 // Within JSX:
-<Icon name="alias" />
+;<Icon name="alias" />
 ```
 
 ## Image loading and API calls using GraphQL
@@ -400,7 +414,7 @@ import Icon from "./Icon"
 - [Gatsby + GraphQL](https://www.gatsbyjs.com/docs/graphql/) used for loading of images and preferred for API calls (in lieu of REST, if possible/practical). Utilizes static page queries that run at build time, not at run time, optimizing performance.
 - Image loading example:
 
-```
+```jsx
 import { graphql } from "gatsby"
 
 export const query = graphql`
@@ -422,7 +436,7 @@ export const query = graphql`
 
 - API call example:
 
-```
+```jsx
 import { graphql } from "gatsby"
 
 export const repoInfo = graphql`
@@ -1379,7 +1393,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="http://blog.codefront.net/"><img src="https://avatars.githubusercontent.com/u/213?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Cheah Chu Yeow</b></sub></a><br /><a href="#content-chuyeow" title="Content">🖋</a></td>
     <td align="center"><a href="https://www.linkedin.com/in/yanluiz/"><img src="https://avatars.githubusercontent.com/u/39248465?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Yan Luiz</b></sub></a><br /><a href="#content-nomadbitcoin" title="Content">🖋</a></td>
     <td align="center"><a href="https://github.com/chabroA"><img src="https://avatars.githubusercontent.com/u/9203826?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Alexandre Chabrolin</b></sub></a><br /><a href="#content-chabroA" title="Content">🖋</a></td>
-    <td align="center"><a href="https://github.com/Sergey1997"><img src="https://avatars.githubusercontent.com/u/22988415?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Sergey Danilovich</b></sub></a><br /><a href="#content-Sergey1997" title="Content">🖋</a></td>
+    <td align="center"><a href="https://github.com/Sergey1997"><img src="https://avatars.githubusercontent.com/u/22988415?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Sergey Danilovich</b></sub></a><br /><a href="#content-Sergey1997" title="Content">🖋</a> <a href="https://github.com/ethereum/ethereum-org-website/commits?author=Sergey1997" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/chelorope"><img src="https://avatars.githubusercontent.com/u/6799516?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Marcelo Rodriguez</b></sub></a><br /><a href="#content-chelorope" title="Content">🖋</a> <a href="https://github.com/ethereum/ethereum-org-website/commits?author=chelorope" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/parkedtruck"><img src="https://avatars.githubusercontent.com/u/90351322?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Anna</b></sub></a><br /><a href="#content-parkedtruck" title="Content">🖋</a></td>
   </tr>
@@ -1425,6 +1439,8 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/thewild-being"><img src="https://avatars.githubusercontent.com/u/82868359?v=4?s=100" width="100px;" alt=""/><br /><sub><b>thewild-being</b></sub></a><br /><a href="#ideas-thewild-being" title="Ideas, Planning, & Feedback">🤔</a></td>
     <td align="center"><a href="http://mihrac.com"><img src="https://avatars.githubusercontent.com/u/18642701?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Mihrac Cerrahoglu</b></sub></a><br /><a href="#ideas-mydearcode" title="Ideas, Planning, & Feedback">🤔</a></td>
     <td align="center"><a href="https://github.com/smartcontracts"><img src="https://avatars.githubusercontent.com/u/14298799?v=4?s=100" width="100px;" alt=""/><br /><sub><b>smartcontracts</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=smartcontracts" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://thetaclubai.com"><img src="https://avatars.githubusercontent.com/u/47613687?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Samay Lakhani</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=BlockchainRev" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/vdusart"><img src="https://avatars.githubusercontent.com/u/43795504?v=4?s=100" width="100px;" alt=""/><br /><sub><b>vdusart</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=vdusart" title="Documentation">📖</a></td>
   </tr>
 </table>
 

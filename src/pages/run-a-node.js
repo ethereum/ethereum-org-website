@@ -39,6 +39,7 @@ import NakedButton from "../components/NakedButton"
 
 // Utils
 import { translateMessageId } from "../utils/translations"
+import { scrollIntoView } from "../utils/scrollIntoView"
 
 // Styles
 const GappedPage = styled(Page)`
@@ -522,12 +523,6 @@ const RunANodePage = ({ data }) => {
     },
   ]
 
-  const scrollToId = (id) => {
-    const element = document.getElementById(id)
-    if (!element) return
-    element.scrollIntoView({ behavior: "smooth", block: "start" })
-  }
-
   return (
     <GappedPage>
       <PageMetadata
@@ -754,7 +749,7 @@ const RunANodePage = ({ data }) => {
               </ul>
             </div>
             <ScrollButtonSecondary
-              onClick={() => scrollToId("build-your-own")}
+              onClick={() => scrollIntoView("build-your-own")}
               isSecondary
             >
               <Translation id="page-run-a-node-choose-your-adventure-build-start" />
@@ -793,12 +788,14 @@ const RunANodePage = ({ data }) => {
                     <Translation id="page-run-a-node-build-your-own-min-ram" />
                   </p>
                   <p>
-                    <ScrollLink onClick={() => scrollToId("plan-on-staking")}>
+                    <ScrollLink
+                      onClick={() => scrollIntoView("plan-on-staking")}
+                    >
                       <Translation id="page-run-a-node-build-your-own-ram-note-1" />
                     </ScrollLink>
                   </p>
                   <p>
-                    <ScrollLink onClick={() => scrollToId("rasp-pi")}>
+                    <ScrollLink onClick={() => scrollIntoView("rasp-pi")}>
                       <Translation id="page-run-a-node-build-your-own-ram-note-2" />
                     </ScrollLink>
                   </p>
