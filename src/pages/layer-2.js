@@ -493,9 +493,9 @@ const Layer2Page = ({ data }) => {
               Bitcoin, are the{" "}
               <b>underlying foundation that layer 2 projects build on top of</b>
               . Examples of layer 2 projects built on top of these networks
-              include <b>zero-knowledge rollups</b>
-              and <b>optimistic rollups</b> on Ethereum and the Lighting Network
-              on top of Bitcoin.
+              include <b>zero-knowledge rollups</b> and{" "}
+              <b>optimistic rollups</b> on Ethereum and the Lighting Network on
+              top of Bitcoin.
             </p>
             <p>
               <b>Ethereum as the layer 1 includes:</b>
