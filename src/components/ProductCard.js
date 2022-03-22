@@ -177,7 +177,7 @@ const ProductCard = ({
         {isSvg ? (
           <img src={image} alt={alt} />
         ) : (
-          <Image image={image} alt={alt} />
+          <Image image={image} alt={alt} objectFit="contain" />
         )}
       </ImageWrapper>
       <Content className="hover">

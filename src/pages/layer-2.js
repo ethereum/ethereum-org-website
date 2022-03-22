@@ -973,7 +973,7 @@ export const query = graphql`
     arbitrum: file(relativePath: { eq: "layer-2/arbitrum.png" }) {
       childImageSharp {
         gatsbyImageData(
-          width: 200
+          width: 100
           layout: CONSTRAINED
           placeholder: BLURRED
           quality: 100
@@ -983,7 +983,7 @@ export const query = graphql`
     boba: file(relativePath: { eq: "layer-2/boba.png" }) {
       childImageSharp {
         gatsbyImageData(
-          width: 200
+          width: 100
           layout: CONSTRAINED
           placeholder: BLURRED
           quality: 100
@@ -993,7 +993,7 @@ export const query = graphql`
     chainlist: file(relativePath: { eq: "layer-2/chainlist.png" }) {
       childImageSharp {
         gatsbyImageData(
-          width: 200
+          width: 100
           layout: CONSTRAINED
           placeholder: BLURRED
           quality: 100
@@ -1003,17 +1003,17 @@ export const query = graphql`
     debank: file(relativePath: { eq: "layer-2/debank.png" }) {
       childImageSharp {
         gatsbyImageData(
-          width: 200
+          width: 100
           layout: CONSTRAINED
           placeholder: BLURRED
           quality: 100
         )
       }
     }
-    dydx: file(relativePath: { eq: "layer-2/dydx.jpg" }) {
+    dydx: file(relativePath: { eq: "layer-2/dydx.png" }) {
       childImageSharp {
         gatsbyImageData(
-          width: 200
+          width: 100
           layout: CONSTRAINED
           placeholder: BLURRED
           quality: 100
@@ -1023,7 +1023,7 @@ export const query = graphql`
     l2beat: file(relativePath: { eq: "layer-2/l2beat.jpg" }) {
       childImageSharp {
         gatsbyImageData(
-          width: 200
+          width: 100
           layout: CONSTRAINED
           placeholder: BLURRED
           quality: 100
@@ -1033,17 +1033,17 @@ export const query = graphql`
     loopring: file(relativePath: { eq: "layer-2/loopring.png" }) {
       childImageSharp {
         gatsbyImageData(
-          width: 200
+          width: 100
           layout: CONSTRAINED
           placeholder: BLURRED
           quality: 100
         )
       }
     }
-    metis: file(relativePath: { eq: "layer-2/metis-light.png" }) {
+    metis: file(relativePath: { eq: "layer-2/metis-dark.png" }) {
       childImageSharp {
         gatsbyImageData(
-          width: 200
+          width: 100
           layout: CONSTRAINED
           placeholder: BLURRED
           quality: 100
@@ -1052,13 +1052,18 @@ export const query = graphql`
     }
     optimism: file(relativePath: { eq: "layer-2/optimism.png" }) {
       childImageSharp {
-        gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED, quality: 100)
+        gatsbyImageData(
+          width: 100
+          layout: CONSTRAINED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     zapper: file(relativePath: { eq: "layer-2/zapper.png" }) {
       childImageSharp {
         gatsbyImageData(
-          width: 200
+          width: 100
           layout: CONSTRAINED
           placeholder: BLURRED
           quality: 100
@@ -1068,7 +1073,7 @@ export const query = graphql`
     zerion: file(relativePath: { eq: "layer-2/zerion.png" }) {
       childImageSharp {
         gatsbyImageData(
-          width: 200
+          width: 100
           layout: CONSTRAINED
           placeholder: BLURRED
           quality: 100
@@ -1078,7 +1083,7 @@ export const query = graphql`
     zkspace: file(relativePath: { eq: "layer-2/zkspace.png" }) {
       childImageSharp {
         gatsbyImageData(
-          width: 200
+          width: 100
           layout: CONSTRAINED
           placeholder: BLURRED
           quality: 100
@@ -1088,7 +1093,7 @@ export const query = graphql`
     zksync: file(relativePath: { eq: "layer-2/zksync.png" }) {
       childImageSharp {
         gatsbyImageData(
-          width: 80
+          width: 100
           layout: CONSTRAINED
           placeholder: BLURRED
           quality: 100

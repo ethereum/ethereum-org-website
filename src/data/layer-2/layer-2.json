@@ -9,7 +9,8 @@
       "noteKey": "",
       "purpose": ["universal"],
       "description": "Arbitrum is an Optimistic Rollup that aims to feel exactly like interacting with Ethereum, but with transactions costing a fraction of what they do on L1.",
-      "imageKey": "arbitrum"
+      "imageKey": "arbitrum",
+      "background": "white"
     },
     {
       "name": "Optimism",
@@ -20,7 +21,8 @@
       "noteKey": "layer-2-optimism-note",
       "purpose": ["universal"],
       "description": "Optimistic Ethereum is an EVM-compatible Optimistic Rollup chain. It aims to be fast, simple, and secure. With the Nov 2021 upgrade to \"EVM equivalent\" OVM 2.0 old fraud proof system has been disabled while the new fraud-proof system is being built (https://github.com/geohot/cannon).",
-      "imageKey": "optimism"
+      "imageKey": "optimism",
+      "background": "white"
     },
     {
       "name": "Metis Andromeda",
@@ -31,7 +33,8 @@
       "noteKey": "layer-2-metis-note",
       "purpose": ["universal"],
       "description": "Metis is an EVM-equivalent Optimistic Rollup chain originally forked from Optimism. It provides support for multiple, interconnected rollups with main focus on supporting easy creation of DACs (Decentralized Autonomous Companies).",
-      "imageKey": "metis"
+      "imageKey": "metis",
+      "background": "#0b2435"
     },
     {
       "name": "Boba Network",
@@ -42,7 +45,8 @@
       "noteKey": "layer-2-boba-note",
       "purpose": ["universal"],
       "description": "Boba is an L2 Ethereum scaling & augmenting solution built by the Enya team as core contributors to the OMG Foundation. Boba is an Optimistic Rollup scaling solution that claims to reduce gas fees, improve transaction throughput, and extend the capabilities of smart contracts.",
-      "imageKey": "boba"
+      "imageKey": "boba",
+      "background": "black"
     }
   ],
   "zk": [
@@ -55,7 +59,8 @@
       "noteKey": "",
       "purpose": ["exchange"],
       "description": "dYdX aims to build a powerful and professional exchange for trading crypto assets where users can truly own their trades and, eventually, the exchange itself.",
-      "imageKey": "dydx"
+      "imageKey": "dydx",
+      "background": "#121223"
     },
     {
       "name": "Loopring",
@@ -66,7 +71,8 @@
       "noteKey": "",
       "purpose": ["payments", "exchange"],
       "description": "Loopring's zkRollup L2 solution aims to offer the same security guarantees as Ethereum mainnet, with a big scalability boost: throughput increased by 1000x, and cost reduced to just 0.1% of L1.",
-      "imageKey": "loopring"
+      "imageKey": "loopring",
+      "background": "white"
     },
     {
       "name": "zkSync",
@@ -77,7 +83,8 @@
       "noteKey": "",
       "purpose": ["tokens", "nft"],
       "description": "zkSync is a user-centric zk rollup platform from Matter Labs. It is a scaling solution for Ethereum, already live on Ethereum mainnet. It supports payments, token swaps and NFT minting.",
-      "imageKey": "zksync"
+      "imageKey": "zksync",
+      "background": "#11142b"
     },
     {
       "name": "ZKSpace",
@@ -88,7 +95,8 @@
       "noteKey": "",
       "purpose": ["payments", "exchange"],
       "description": "The ZKSpace platform consists of three main parts: a Layer 2 AMM DEX utilizing ZK-Rollups technology called ZKSwap, a payment service called ZKSquare, and an NFT marketplace called ZKSea.",
-      "imageKey": "zkspace"
+      "imageKey": "zkspace",
+      "background": "black"
     }
   ]
 }
