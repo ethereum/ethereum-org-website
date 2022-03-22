@@ -608,7 +608,6 @@ Because the ERC-20 contract trusts the proxy (`cdi`), we don't need an allowance
 Test the two new functions. 
 Note that `transeferFromTx` requires two address parameters: the giver of the allowance and the receiver.
 
-
 ### Example  {#example-2}
 
 If you want to see these files in action without running them yourself, follow these links:
