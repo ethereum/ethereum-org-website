@@ -57,7 +57,7 @@ L'exécution de votre propre nœud vous permet d'utiliser Ethereum de façon vra
 
 - Votre nœud vérifie lui-même toutes les transactions et tous les blocs par rapport aux règles de consensus. Cela signifie que vous n’avez ni à vous fier à d’autres nœuds du réseau ni à leur faire entièrement confiance.
 - Vous n'aurez pas à divulguer vos adresses et vos soldes à des nœuds aléatoires. Tout peut être contrôlé avec votre propre client.
-- Votre DApp peut être privée et plus sécurisée si vous utilisez votre propre nœud. [Metamask](https://metamask.io), [MyEtherWallet](https://myetherwallet.com) et d'autres portefeuilles peuvent être facilement pointés vers votre propre nœud local.
+- Votre DApp peut être privée et plus sécurisée si vous utilisez votre propre nœud. [MetaMask](https://metamask.io), [MyEtherWallet](https://myetherwallet.com) et d'autres portefeuilles peuvent être facilement pointés vers votre propre nœud local.
 
 ![Comment accéder à Ethereum via votre application et vos nœuds](../../../../../developers/docs/nodes-and-clients/nodes.png)
 

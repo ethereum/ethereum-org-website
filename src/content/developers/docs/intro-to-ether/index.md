@@ -39,7 +39,9 @@ Ether is minted when a miner creates a block on the Ethereum blockchain. As an i
 
 As well as creating ether through block rewards, ether can get destroyed by a process called 'burning'. When ether gets burned, it gets removed from circulation permanently.
 
-Ether burn occurs in every transaction on Ethereum. When users pay for their transactions, their base gas fee gets destroyed by the protocol. Depending on network demand, [some blocks](https://etherscan.io/block/12965263) burn more ether than they mint.
+Ether burn occurs in every transaction on Ethereum. When users pay for their transactions, a base gas fee, set by the network according to transactional demand, gets destroyed. This, coupled with variable block sizes and a maximum gas fee, simplifies transaction fee estimation on Ethereum. When network demand is high, [blocks](https://etherscan.io/block/12965263) can burn more ether than they mint, effectively offsetting ether issuance.
+
+Burning the base fee prevents various ways the miners could manipulate it otherwise. For example, if miners got the base fee, they could include their own transactions for free and raise the base fee for everyone else. Alternatively, they could refund the base fee to some users off-chain, leading to a more opaque and complex transaction fee market.
 
 ## Denominations of ether {#denominations}
 

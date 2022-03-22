@@ -21,6 +21,7 @@ import { ZenModeContext } from "../contexts/ZenModeContext"
 import { useKeyPress } from "../hooks/useKeyPress"
 
 import { isLangRightToLeft } from "../utils/translations"
+import { scrollIntoView } from "../utils/scrollIntoView"
 import { isMobile } from "../utils/isMobile"
 import { SkipLink, SkipLinkAnchor } from "./SkipLink"
 
@@ -90,9 +91,7 @@ const Layout = (props) => {
 
     if (props.location.hash && !props.location.hash.includes("gatsby")) {
       const idTag = props.location.hash.split("#")
-      if (document.getElementById(idTag[1]) !== null) {
-        document.getElementById(idTag[1]).scrollIntoView(false)
-      }
+      scrollIntoView(idTag[1])
     }
   }, [props.path, props.location])
 

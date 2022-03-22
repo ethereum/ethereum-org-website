@@ -48,7 +48,7 @@ module.exports = {
         name: `ethereum.org`,
         short_name: `ethereum.org`,
         start_url: `/en/`,
-        background_color: `#fff`,
+        background_color: `#ffffff`,
         theme_color: `#1c1ce1`,
         display: `standalone`,
         icon: `src/assets/favicon.png`,

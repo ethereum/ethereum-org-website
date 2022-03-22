@@ -168,6 +168,15 @@ Our translation community is also working on the [Staking Launchpad](https://lau
 
 If you're interested, [join the Ethereum Staking Launchpad translation project on Crowdin](https://crowdin.com/project/ethereum-staking-launchpad). You can [create an issue](https://github.com/ethereum/staking-launchpad/issues/new) on GitHub to request the addition of a new language, if your language is not available on Crowdin.
 
+## Starting your own translation program {#starting-a-translation-program}
+
+We are dedicated to translating Ethereum content into as many languages as possible and making educational content available to everyone.
+In line with our focus on translations, we want to help other Ethereum projects organize, manage, and improve their own translation efforts.
+
+For this reason, we have created a [Translation Program playbook](/contributing/translation-program/playbook/) that contains some tips and best practices we have picked up in the process of translating ethereum.org.
+
+Want to collaborate further or use some of our translation resources? Have any feedback on the playbook? We would love to hear from you at translations@ethereum.org.
+
 ## In-progress translations {#in-progress}
 
 <TranslationsInProgress />

@@ -40,7 +40,7 @@ Pengompilasi juga akan menghasilkan **Antarmuka Biner Aplikasi (ABI)** yang Anda
 
 ABI adalah file JSON yang mendeskripsikan penggunaan kontrak dan fungsi kontrak pintarnya. Ini menolong menjembatani celah antara web2 dan web3
 
-[Pustaka klien Javascript](/developers/docs/apis/javascript/) akan membaca **ABI** agar Anda memanggil kontrak pintar di antarmuka aplikasi web Anda.
+[Pustaka klien JavaScript](/developers/docs/apis/javascript/) akan membaca **ABI** agar Anda memanggil kontrak pintar di antarmuka aplikasi web Anda.
 
 Di bawah ini adalah ABI untuk kontrak token ERC-20. ERC-20 adalah token yang bisa Anda perdagangkan di Ethereum.
 
@@ -275,5 +275,5 @@ Di bawah ini adalah ABI untuk kontrak token ERC-20. ERC-20 adalah token yang bis
 
 ## Topik terkait {#related-topics}
 
-- [Pustaka klien Javascript](/developers/docs/apis/javascript/)
+- [Pustaka klien JavaScript](/developers/docs/apis/javascript/)
 - [Mesin virtual Ethereum](/developers/docs/ethereum-virtual-machine/)

@@ -77,7 +77,7 @@ Ahhoz, hogy egy felhasználó ETH-et utalhasson ki, amit korábban a szerződés
 2. Elküldi neki az egyenleg összegét ETH-ben
 3. Visszaállítja 0-ra az egyenleget, így nem tudja még egyszer kiutalni az összeget.
 
-Ha meghívja egy normál számla (mint a saját Metamask számlád), akkor az elvártnak megfelelően működik: msg.sender.call.value() egyszerűen ETH-et küld a számládra. Azonban az okosszerződések is tudnak hívásokat intézni. Ha egy egyedi, rosszindulatú szerződés a `withdraw()` függvény meghívója, akkor a msg.sender.call.value() nem csak `amount` összegű ETH-et fog küldeni, hanem implicit módon meghívja a szerződést, hogy elindítsa a kód végrehajtást. Képzeld el ezt a következő rosszindulatú szerződést:
+Ha meghívja egy normál számla (mint a saját MetaMask számlád), akkor az elvártnak megfelelően működik: msg.sender.call.value() egyszerűen ETH-et küld a számládra. Azonban az okosszerződések is tudnak hívásokat intézni. Ha egy egyedi, rosszindulatú szerződés a `withdraw()` függvény meghívója, akkor a msg.sender.call.value() nem csak `amount` összegű ETH-et fog küldeni, hanem implicit módon meghívja a szerződést, hogy elindítsa a kód végrehajtást. Képzeld el ezt a következő rosszindulatú szerződést:
 
 ```solidity
 contract Attacker {

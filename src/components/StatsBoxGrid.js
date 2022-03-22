@@ -123,11 +123,10 @@ const Button = styled.button`
   background: ${(props) => props.theme.colors.background};
   font-family: ${(props) => props.theme.fonts.monospace};
   font-size: 1.25rem;
-  color: ${({theme}) => theme.colors.text};
+  color: ${({ theme }) => theme.colors.text};
   padding: 2px 15px;
   border-radius: 1px;
-  border: 1px solid ${({theme, color}) => theme.colors[color]};
-  outline: none;
+  border: 1px solid ${({ theme, color }) => theme.colors[color]};
   cursor: pointer;
 
   &:disabled {
@@ -339,7 +338,7 @@ const StatsBoxGrid = () => {
       try {
         const { result } = await getData(
           process.env.NODE_ENV === "production"
-            ? "/.netlify/functions/etherscan"
+            ? `${process.env.GATSBY_FUNCTIONS_PATH}/etherscan`
             : "http://localhost:9000/etherscan"
         )
         const data = result
@@ -368,7 +367,7 @@ const StatsBoxGrid = () => {
       try {
         const response = await getData(
           process.env.NODE_ENV === "production"
-            ? "/.netlify/functions/defipulse"
+            ? `${process.env.GATSBY_FUNCTIONS_PATH}/defipulse`
             : "http://localhost:9000/defipulse"
         )
         const data = response
@@ -397,7 +396,7 @@ const StatsBoxGrid = () => {
       try {
         const response = await getData(
           process.env.NODE_ENV === "production"
-            ? "/.netlify/functions/txs"
+            ? `${process.env.GATSBY_FUNCTIONS_PATH}/txs`
             : "http://localhost:9000/txs"
         )
         const data = response.result
