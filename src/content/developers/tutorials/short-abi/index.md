@@ -50,9 +50,9 @@ So if we can save a single zero byte of calldata, we'll be able to write about 2
 ### The ABI {#the-abi}
 
 The vast majority of transactions access a contract from an externally-owned account. 
-Most contracts are written in Solidity and interpret their data field in accordance with [the application binary interface (ABI)](https://docs.soliditylang.org/en/latest/abi-spec.html#formal-specification-of-the-encoding).
+Most contracts are written in Solidity and interpret their data field per [the application binary interface (ABI)](https://docs.soliditylang.org/en/latest/abi-spec.html#formal-specification-of-the-encoding).
 
-However, the ABI was designed for L1 where a byte of calldata costs approximately the same as four arithmetic operations, not L2 where a byte of calldata costs more than a thousand arithmetic operations.
+However, the ABI was designed for L1, where a byte of calldata costs approximately the same as four arithmetic operations, not L2 where a byte of calldata costs more than a thousand arithmetic operations.
 For example, [here is an ERC-20 transfer transaction](https://kovan-optimistic.etherscan.io/tx/0x7ce4c144ebfce157b4de99d8ad53a352ae91b57b3fa06d8a1c79439df6bfa998).
 The calldata is divided like this:
 
@@ -212,7 +212,6 @@ There are two reasons why a function would not be available here:
 Unfortunately, [looking at the ERC-20 specifications](https://eips.ethereum.org/EIPS/eip-20), this leaves only one function, `transfer`.
 This leaves us with only two functions: `transfer` (because we can call `transferFrom`) and `faucet` (because we can transfer the tokens back to whever called us).
 
-
 ```solidity
 
         // Call the state changing methods of token using
@@ -235,7 +234,6 @@ After we call `token.faucet()` we get tokens. However, as the proxy contract, we
 The EOA (externally owned account) or contract that called us does.
 So we transfer all of our tokens to whoever called us.
 
-
 ```solidity
         // transfer (assume we have an allowance for it)
         if (_func == 2) {
@@ -256,7 +254,7 @@ We only allow callers to transfer tokens they own
 ```
 
 The destination address starts at byte #1 (byte #0 is the function).
-As an address, it is 20 bytes long.
+As an address, it is 20-bytes long.
 
 ```solidity
                 calldataVal(21, 2)
@@ -284,7 +282,7 @@ Overall, a transfer takes 35 bytes of calldata:
 ```
 
 
-### test.js   {#test.js}
+### test.js {#test.js}
 
 [This JavaScript unit test](https://github.com/qbzzt/ethereum.org-20220330-shortABI/blob/master/test/test.js) shows us how to use this mechanism (and how to verify it works correctly). 
 I am going to assume you understand [chai](https://www.chaijs.com/) and [ethers](https://docs.ethers.io/v5/) and only explain the parts that specifically apply to the contract.
@@ -542,7 +540,6 @@ The calldata interpreter is nearly identical to the one above, except that the p
             );    
         }
 ```       
-
 
 ### Test.js {#test.js-2}
 
