@@ -516,6 +516,7 @@ const Layer2Page = ({ data }) => {
               </li>
             </ul>
           </FlexContainer>
+          {/* TODO: Convert these inline styles into styled components */}
           <FlexContainer
             flexPercent="35"
             style={{
@@ -526,7 +527,7 @@ const Layer2Page = ({ data }) => {
           >
             <GatsbyImage
               image={getImage(data.impact)}
-              style={{ width: "100%", height: "100*" }}
+              style={{ width: "100%" }}
               objectFit="contain"
             />
           </FlexContainer>
@@ -607,9 +608,9 @@ const Layer2Page = ({ data }) => {
           the state. By taking this load away from layer 1, the base layer will
           become less congested, and everything becomes more scalable.
         </p>
+        <h3>Rollups</h3>
         <TwoColumnContent>
           <FlexContainer flexPercent="65">
-            <h3>Rollups</h3>
             <p>
               Rollups are currently the preferred layer 2 solution for scaling
               Ethereum. By using rollups, users can{" "}
@@ -629,8 +630,20 @@ const Layer2Page = ({ data }) => {
               security of Ethereum.
             </p>
           </FlexContainer>
-          <FlexContainer flexPercent="35">
-            <GatsbyImage image={getImage(data.impact)} />
+          {/* TODO: Convert these inline styles into styled components */}
+          <FlexContainer
+            flexPercent="35"
+            style={{
+              display: "flex",
+              alignContent: "center",
+              justifyContent: "center",
+            }}
+          >
+            <GatsbyImage
+              image={getImage(data.rollup)}
+              style={{ width: "100%" }}
+              objectFit="contain"
+            />
           </FlexContainer>
         </TwoColumnContent>
         <TwoColumnContent>
@@ -964,6 +977,16 @@ export const query = graphql`
       childImageSharp {
         gatsbyImageData(
           width: 300
+          layout: CONSTRAINED
+          placeholder: BLURRED
+          quality: 100
+        )
+      }
+    }
+    rollup: file(relativePath: { eq: "layer-2/rollup.png" }) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 500
           layout: CONSTRAINED
           placeholder: BLURRED
           quality: 100
