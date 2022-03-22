@@ -610,7 +610,7 @@ const Layer2Page = ({ data }) => {
         </p>
         <h3>Rollups</h3>
         <TwoColumnContent>
-          <FlexContainer flexPercent="65">
+          <FlexContainer flexPercent="60">
             <p>
               Rollups are currently the preferred layer 2 solution for scaling
               Ethereum. By using rollups, users can{" "}
@@ -632,7 +632,7 @@ const Layer2Page = ({ data }) => {
           </FlexContainer>
           {/* TODO: Convert these inline styles into styled components */}
           <FlexContainer
-            flexPercent="35"
+            flexPercent="40"
             style={{
               display: "flex",
               alignContent: "center",
