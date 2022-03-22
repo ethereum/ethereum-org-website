@@ -29,8 +29,8 @@ The term 'layer 2' (L2) is used for the rollup or any other system that relies o
 
 ### Cost of L2 transactions {#cost-of-l2-transactions}
 
-[Optimistic rollups](/developers/docs/scaling/optimistic-rollups) have to preserve a record of every historical transaction in such a manner that anybody will be able to go through them and verify that the current state is correct.
-The cheapest way to get data into the Ethereum mainnet is to write it as calldata.
+[Optimistic rollups](/developers/docs/scaling/optimistic-rollups) have to preserve a record of every historical transaction so that anybody will be able to go through them and verify that the current state is correct.
+The cheapest way to get data into the Ethereum Mainnet is to write it as calldata.
 This solution was chosen by both [Optimism](https://help.optimism.io/hc/en-us/articles/4413163242779-What-is-a-rollup-) and [Arbitrum](https://developer.offchainlabs.com/docs/rollup_basics#intro-to-rollups).
 
 Therefore, the cost of L2 transactions is composed of two components:
