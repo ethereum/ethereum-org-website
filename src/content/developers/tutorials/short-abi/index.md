@@ -382,7 +382,6 @@ Create a transfer transaction. The first byte is "0x02", followed by the destina
 })      // describe
 ```
 
-
 ### Example {#example}
 
 If you want to see these files in action without running them yourself, follow these links:
