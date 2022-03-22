@@ -241,10 +241,12 @@ const Layer2Page = ({ data }) => {
 
     // Calculate percent change ((new value - old value) / old value) *100)
     setL2PercentChange(
-      ((l2BeatData.data[l2BeatData.data.length - 1][1] -
-        l2BeatData.data[l2BeatData.data.length - 31][1]) /
-        l2BeatData.data[l2BeatData.data.length - 31][1]) *
+      (
+        ((l2BeatData.data[l2BeatData.data.length - 1][1] -
+          l2BeatData.data[l2BeatData.data.length - 31][1]) /
+          l2BeatData.data[l2BeatData.data.length - 31][1]) *
         100
+      ).toFixed(2)
     )
 
     // Average eth transfer fee from L2's supported by cryptostats API
@@ -257,7 +259,7 @@ const Layer2Page = ({ data }) => {
         (acc, curr) => (acc += curr.results.feeTransferEth),
         0
       ) / feeData.data.length
-    setAverageFee(feeAverage)
+    setAverageFee(feeAverage.toFixed(2))
   }, [])
 
   const heroContent = {
@@ -473,18 +475,18 @@ const Layer2Page = ({ data }) => {
           </StatBox>
           <StatDivider />
           <StatBox>
-            <StatPrimary>${averageFee.toFixed(2)} (USD)</StatPrimary>
+            <StatPrimary>${averageFee} (USD)</StatPrimary>
             <StatDescription>Average ETH transfer fee</StatDescription>
           </StatBox>
           <StatDivider />
           <StatBox>
-            <StatPrimary>{percentChangeL2.toFixed(2)}%</StatPrimary>
+            <StatPrimary>{percentChangeL2}%</StatPrimary>
             <StatDescription>Last 30 days</StatDescription>
           </StatBox>
         </StatsContainer>
+        <h2>What is layer 1?</h2>
         <TwoColumnContent>
           <FlexContainer flexPercent="65">
-            <h2>What is layer 1?</h2>
             <p>
               Before diving into "layer 2", it helps to understand what we
               consider "layer 1". Layer 1 blockchains, such as Ethereum and
@@ -514,8 +516,19 @@ const Layer2Page = ({ data }) => {
               </li>
             </ul>
           </FlexContainer>
-          <FlexContainer flexPercent="35">
-            <GatsbyImage image={getImage(data.impact)} />
+          <FlexContainer
+            flexPercent="35"
+            style={{
+              display: "flex",
+              alignContent: "center",
+              justifyContent: "center",
+            }}
+          >
+            <GatsbyImage
+              image={getImage(data.impact)}
+              style={{ width: "100%", height: "100*" }}
+              objectFit="contain"
+            />
           </FlexContainer>
         </TwoColumnContent>
       </Content>
