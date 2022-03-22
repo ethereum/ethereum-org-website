@@ -500,17 +500,17 @@ const Layer2Page = ({ data }) => {
             </p>
             <ul>
               <li>
-                <b>a network of node operators</b> to secure and validate the
+                <b>A network of node operators</b> to secure and validate the
                 network
               </li>
               <li>
-                <b>a network of block proposers</b>
+                <b>A network of block proposers</b>
               </li>
               <li>
-                <b>the blockchain</b> itself and the history of transaction data
+                <b>The blockchain</b> itself and the history of transaction data
               </li>
               <li>
-                <b>the consensus mechanism</b> for the network
+                <b>The consensus mechanism</b> for the network
               </li>
             </ul>
           </FlexContainer>
