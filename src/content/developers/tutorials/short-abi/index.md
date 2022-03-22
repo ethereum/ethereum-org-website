@@ -14,7 +14,7 @@ published: 2022-04-01
 In this article you learn about [optimistic rollups](/developers/docs/scaling/optimistic-rollups), the cost of transactions on them, and how that different cost structure requires us to optimize for different things than on the Ethereum mainnet.
 You also learn how to implement this optimization.
 
-### Proper disclosure {#proper-disclosure}
+### Full disclosure {#full-disclosure}
 
 I'm a full time [Optimism](https://www.optimism.io/) employee, so  examples in this article are going to run on Optimism.
 However, the technique explained here should work just as well for other rollups.
