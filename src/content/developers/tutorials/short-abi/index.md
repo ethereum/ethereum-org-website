@@ -36,17 +36,16 @@ This solution was chosen by both [Optimism](https://help.optimism.io/hc/en-us/ar
 Therefore, the cost of L2 transactions is composed of two components:
 
 1. L2 processing, which is usually extremely cheap
-1. L1 storage, which is tied to mainnet gas costs
+2. L1 storage, which is tied to Mainnet gas costs
 
 As I'm writing this, on Optimism the cost of L2 gas is 0.001 [Gwei](https://ethereum.org/en/developers/docs/gas/#pre-london).
-The cost of L1 gas, on the other hand, is approximately 40 Gwei.
+The cost of L1 gas, on the other hand, is approximately 40 gwei.
 [You can see the current prices here](https://public-grafana.optimism.io/d/9hkhMxn7z/public-dashboard?orgId=1&refresh=5m).
 
 A byte of calldata costs either 4 gas (if it is zero) or 16 gas (if it is any other value).
 One of the most expensive operations on the EVM is writing to storage.
-The maximum cost of writing a 32-byte word to storage on L2 is 22100 gas, currently that is 22.1 Gwei.
+The maximum cost of writing a 32-byte word to storage on L2 is 22100 gas. Currently, this is 22.1 gwei.
 So if we can save a single zero byte of calldata, we'll be able to write about 200 bytes to storage and still come out ahead.
-
 
 ### The ABI {#the-abi}
 
@@ -76,7 +75,7 @@ Explanation:
   256<sup>15</sup> &gt; 10<sup>36</sup>, so fifteen bytes are enough.
   
 A waste of 160 gas on L1 is normally negligible. A transaction costs at least [21,000 gas](https://yakkomajuri.medium.com/blockchain-definition-of-the-week-ethereum-gas-2f976af774ed), so an extra 0.8% doesn't matter.
-However, on L2 things are different, almost the entire cost of the transaction is writing it to L1.
+However, on L2, things are different. Almost the entire cost of the transaction is writing it to L1.
 In addition to the transaction calldata, there are 109 bytes of transaction header (destination address, signature, etc.).
 The total cost is therefore `109*16+576+160=2480`, and we are wasting about 6.5% of that.
 
@@ -102,7 +101,6 @@ It would make a production ERC-20 contract useless, but it makes life easier whe
 ```
 
 [You can see an example of this contract being deployed here](https://kovan-optimistic.etherscan.io/address/0x950c753c0edbde44a74d3793db738a318e9c8ce8).
-
 
 ### CalldataInterpreter.sol {#calldatainterpreter.sol}
 
@@ -148,7 +146,6 @@ The token address is the only parameter we need to specify.
 ```
 
 Read a value from the calldata.
-
 
 ```solidity
         uint _retVal;
