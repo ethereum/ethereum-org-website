@@ -1,22 +1,32 @@
-{
-  "Binance": {
-    "supports_withdrawals": ["arbitrum"],
-    "supports_deposits": ["arbitrum"]
+[
+  {
+    "name": "Binance",
+    "supports_withdrawals": ["Arbitrum"],
+    "supports_deposits": ["Arbitrum"],
+    "url": "https://www.binance.com/"
   },
-  "crypto.com": {
-    "supports_withdrawals": ["arbitrum"],
-    "supports_deposits": ["arbitrum"]
+  {
+    "name": "Crypto.com",
+    "supports_withdrawals": ["Arbitrum"],
+    "supports_deposits": ["Arbitrum"],
+    "url": "https://crypto.com/"
   },
-  "OKX": {
-    "supports_withdrawals": ["arbitrum"],
-    "supports_deposits": ["arbitrum"]
+  {
+    "name": "OKX",
+    "supports_withdrawals": ["Arbitrum"],
+    "supports_deposits": ["Arbitrum"],
+    "url": "https://www.okx.com/"
   },
-  "FTX": {
-    "supports_withdrawals": ["arbitrum"],
-    "supports_deposits": ["arbitrum"]
+  {
+    "name": "FTX",
+    "supports_withdrawals": ["Arbitrum"],
+    "supports_deposits": ["Arbitrum"],
+    "url": "https://ftx.com/"
   },
-  "Huobi": {
-    "supports_withdrawals": ["arbitrum"],
-    "supports_deposits": ["arbitrum"]
+  {
+    "name": "Huobi",
+    "supports_withdrawals": ["Arbitrum"],
+    "supports_deposits": ["Arbitrum"],
+    "url": "https://www.huobi.com/"
   }
-}
+]
