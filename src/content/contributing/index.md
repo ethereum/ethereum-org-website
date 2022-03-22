@@ -36,6 +36,7 @@ The ethereum.org website, like Ethereum more broadly, is an open-source project.
   _– Help us continue to expand the Ethereum [glossary](/glossary/)_
 - [Create/edit content](/contributing/#how-to-update-content)
   _– Suggest new pages or makes tweaks to what's here already_
+- [Add a staking product or service](/contributing/adding-staking-product/)
 
 _Any questions?_ 🤔 Reach out on our [Discord server](https://discord.gg/CetY6Y4)
 
