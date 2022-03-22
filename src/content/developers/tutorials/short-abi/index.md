@@ -25,15 +25,15 @@ When discussing rollups, the term 'layer 1' (L1) is used for Mainnet, the produc
 The term 'layer 2' (L2) is used for the rollup or any other system that relies on L1 for security but does most of its processing off-chain.
 
 
-## The problem {#the-problem}
-
-### Cost of L2 transactions {#cost-of-l2-transactions}
+## How can we further reduce the cost of L2 transactions? {#how-can-we-further-reduce-the-cost-of-L2-transactions}
 
 [Optimistic rollups](/developers/docs/scaling/optimistic-rollups) have to preserve a record of every historical transaction so that anybody will be able to go through them and verify that the current state is correct.
 The cheapest way to get data into the Ethereum Mainnet is to write it as calldata.
 This solution was chosen by both [Optimism](https://help.optimism.io/hc/en-us/articles/4413163242779-What-is-a-rollup-) and [Arbitrum](https://developer.offchainlabs.com/docs/rollup_basics#intro-to-rollups).
 
-Therefore, the cost of L2 transactions is composed of two components:
+### Cost of L2 transactions {#cost-of-l2-transactions}
+
+The cost of L2 transactions is composed of two components:
 
 1. L2 processing, which is usually extremely cheap
 2. L1 storage, which is tied to Mainnet gas costs
@@ -79,7 +79,7 @@ However, on L2, things are different. Almost the entire cost of the transaction 
 In addition to the transaction calldata, there are 109 bytes of transaction header (destination address, signature, etc.).
 The total cost is therefore `109*16+576+160=2480`, and we are wasting about 6.5% of that.
 
-## The solution when you don't control the destination {#the-solution-when-you-dont-control-the-destination}
+## Reducing costs when you don't control the destination {#reducing-costs-when-you-dont-control-the-destination}
 
 Assuming that you do not have control over the destination contract, you can still use a solution similar to [this one](https://github.com/qbzzt/ethereum.org-20220330-shortABI).
 Let's go over the relevant files.
@@ -239,8 +239,7 @@ So we transfer all of our tokens to whoever called us.
         if (_func == 2) {
 ```
 
-Transfer tokens.
-Transferring tokens requires two parameters: the destination address and the amount
+Transferring tokens requires two parameters: the destination address and the amount.
 
 ```solidity
             token.transferFrom(
@@ -249,7 +248,7 @@ Transferring tokens requires two parameters: the destination address and the amo
 
 We only allow callers to transfer tokens they own
 
-```
+```solidity
                 address(uint160(calldataVal(1, 20))),
 ```
 
@@ -389,7 +388,7 @@ If you want to see these files in action without running them yourself, follow t
 5. [Call to `transfer()`](https://kovan-optimistic.etherscan.io/tx/1410748). 
 
 
-## If you do control the destination contract   {#if-you-do-control-the-destination-contract}
+## Reducing the cost when you do control the destination contract   {#reducing-the-cost-when-you-do-control-the-destination-contract}
 
 If you do have control over the destination contract you can create functions that bypass the `msg.sender` checks because they trust the calldata interpreter.
 [You can see an example of how this works here, in the `control-contract` branch](https://github.com/qbzzt/ethereum.org-20220330-shortABI/tree/control-contract).
@@ -398,7 +397,7 @@ If the contract were responding only to external transactions, we could get by w
 However, that would break [composability](/developers/docs/smart-contracts/composability/).
 It is much better to have a contract that responds to normal ERC-20 calls, and another contract that responds to transactions with short call data.
 
-### Token.sol  {#token.sol-2}
+### Token.sol {#token.sol-2}
 
 In this example we can modify `Token.sol`. 
 This lets us have a number of functions that only the proxy may call.
@@ -445,7 +444,6 @@ The proxy has privileged access, because it can bypass security checks.
 To make sure we can trust the proxy we only let `owner` call this function, and only once.
 Once `proxy` has a real value (not zero), that value cannot change, so even if the owner decides to become rogue, or the mnemonic for it is revealed, we are still safe.
 
-
 ```solidity
     /**
      * @dev Some functions may only be called by the proxy.
@@ -468,7 +466,6 @@ If not, `revert`.
 ```
 
 If so, run the function which we modify.
-
 
 ```solidity
    /* Functions that allow the proxy to actually proxy for accounts */
@@ -505,7 +502,6 @@ Here we have a proxy version these operations which:
 
 1. Is modified by `onlyProxy()` so nobody else is allowed to control them.
 2. Gets the address that would normally be `msg.sender` as an extra parameter.
-
 
 ### CalldataInterpreter.sol {#calldatainterpreter.sol-2}
 
