@@ -404,7 +404,6 @@ If the contract were responding only to external transactions, we could get by w
 However, that would break [composability](/developers/docs/smart-contracts/composability/).
 It is much better to have a contract that responds to normal ERC-20 calls, and another contract that responds to transactions with short call data.
 
-
 ### Token.sol  {#token.sol-2}
 
 In this example we can modify `Token.sol`. 
