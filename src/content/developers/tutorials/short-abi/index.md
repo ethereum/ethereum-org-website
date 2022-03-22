@@ -19,15 +19,15 @@ You also learn how to implement this optimization.
 I'm a full time [Optimism](https://www.optimism.io/) employee, so examples in this article will run on Optimism.
 However, the technique explained here should work just as well for other rollups.
 
-### Terminology   {#terminology}
+### Terminology {#terminology}
 
 When discussing rollups, the term 'layer 1' (L1) is used for Mainnet, the production Ethereum network.
-The term "layer 2" (or L2) is used for the rollup, or any other system that relies on L1 for security but does most of its processing offchain.
+The term 'layer 2' (L2) is used for the rollup or any other system that relies on L1 for security but does most of its processing off-chain.
 
 
 ## The problem {#the-problem}
 
-### Cost of L2 transactions  {#cost-of-l2-transactions}
+### Cost of L2 transactions {#cost-of-l2-transactions}
 
 [Optimistic rollups](/developers/docs/scaling/optimistic-rollups) have to preserve a record of every historical transaction in such a manner that anybody will be able to go through them and verify that the current state is correct.
 The cheapest way to get data into the Ethereum mainnet is to write it as calldata.
