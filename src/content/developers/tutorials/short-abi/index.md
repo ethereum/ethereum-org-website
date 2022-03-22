@@ -21,7 +21,7 @@ However, the technique explained here should work just as well for other rollups
 
 ### Terminology   {#terminology}
 
-When discussing rollups the term "layer 1" (or L1) is used for mainnet, the production Etherum network.
+When discussing rollups, the term 'layer 1' (L1) is used for Mainnet, the production Ethereum network.
 The term "layer 2" (or L2) is used for the rollup, or any other system that relies on L1 for security but does most of its processing offchain.
 
 
