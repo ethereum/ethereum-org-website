@@ -24,15 +24,21 @@ In 1989, in CERN, Geneva, Tim Berners-Lee was busy developing the protocols that
 
 The first inception of the internet, now known as 'Web 1.0', occurred roughly between 1990 to 2004. The internet on Web 1.0 mainly was static websites owned by companies, and there was close to zero interaction between users - individuals seldom produced content - leading to it being known as the read-only web.
 
-### Web 2.0: Read-Write (2004-2020) {#web2}
+![Client-server architecture, representing Web 1.0](./web1.png)
+
+### Web 2.0: Read-Write (2004-2014) {#web2}
 
 The Web 2.0 period began in 2004 with the emergence of social media platforms. Instead of a read-only, the web evolved to be read-write. Instead of companies providing content to users, they also began to provide platforms to share user-generated content and engage in user-to-user interactions. As more people came online, a handful of top companies began to control a disproportionate amount of the traffic and value generated on the web. Web 2.0 also birthed the advertising-driven revenue model. While users could create content, they didn't own it or benefit from its monetization.
 
+![Client-server architecture, representing Web 2.0](./web2.png)
+
 <Divider />
 
-## Web 3.0: Read-Write-Own (2020-now) {#web3}
+## Web 3.0: Read-Write-Own (2014-now) {#web3}
 
 The premise of 'Web 3.0' was coined by [Ethereum](/what-is-ethereum/) co-founder Gavin Wood shortly after Ethereum launched in 2014. Gavin put into words a solution for a problem that many early crypto adopters felt: the internet required too much trust. That is, most of the internet that people know and use today relies on trusting a handful of private companies to act in the public's best interests.
+
+![Decentralized node architecture, representing Web3](./web3.png)
 
 ### What is Web3? {#what-is-web3}
 
