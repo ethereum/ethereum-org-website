@@ -4,7 +4,7 @@ description: Optimizing smart contracts for Optimistic Rollups
 author: Ori Pomerantz
 lang: en
 sidebar: true
-tags: ["layer 2", "l2", "optimism", "gas"]
+tags: ["layer 2", "optimism", "gas"]
 skill: intermediate
 published: 2022-04-01
 ---
