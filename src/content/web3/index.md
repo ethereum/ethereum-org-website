@@ -64,18 +64,6 @@ Web3 allows for direct ownership through [non-fungible tokens (NFTs)](/nft/). No
   </ButtonLink>
 </InfoBanner>
 
-#### Governance {#governance}
-
-As a Web2 platform increases in popularity, the power of the individual user's opinion decreases. Simultaneously, the power of the platform's governing body also increases. Over time, this power imbalance can spiral out of control until the platform can ignore grievances with no repercussions.
-
-Web3 empowers users to participate in the decision making of a platform through tokens. A recent example of this is Ethereum Name Service (ENS), which distributed 25% of its voting rights to existing users by sending ENS tokens to their wallets. Anyone with ENS tokens can vote on proposals about the future of ENS. ENS is a decentralized autonomous organization (DAO) because its ownership gets distributed amongst its token holders.
-
-_In Web2, you can refuse to use a platform; in Web3, you can vote to change it._
-
-<ButtonLink to="/dao/">
-  More on DAOs
-</ButtonLink>
-
 #### Censorship resistance {#censorship-resistance}
 
 The power dynamic between platforms and content creators is massively imbalanced.
