@@ -44,7 +44,7 @@ If it does, complete the following information which we need to accurately list 
 
 <!-- Please provide some information on what kind of layer 2 this is -->
 
-**Which bridges are used to onbaord?**
+**Which bridges are used to onboard?**
 
 <!-- Please provide some information on how to bridge assets onto this layer 2 -->
 
