@@ -1,8 +1,36 @@
-# Solo stake your ETH
+---
+title: Solo stake your ETH
+description: An overview of how to get started solo staking your ETH
+lang: en
+template: staking
+emoji: ":money_with_wings:"
+sidebar: true
+image: ../../../assets/staking/leslie-solo.png
+alt: Leslie the rhino on her own computer chip.
+sidebarDepth: 2
+summaryPoints:
+  - Solo stakers running home hardware provide the most possible benefit to the health and decentralization of the Ethereum network.
+---
 
-Solo stakers are responsible for operating hardware that is running both an Ethereum execution client, as well as a consensus client (Beacon Chain). This is extremely important and beneficial to the health of the network.
+## What is solo staking?
 
-They are eligible to propose blocks and receive rewards, while also being held responsible to being online and not breaking the rules.
+Solo staking is the act of running an Ethereum node connected to the internet and depositing 32 ETH to activate a [validator](#what-is-a-validator), giving you the ability to participate directly in network consensus.
+
+Running an Ethereum node consists of running both an execution layer (EL) client, as well as a consensus layer (CL) client. These clients are software that work together, along with a valid set of signing keys, to verify transactions and blocks, attest to the correct head of the chain, aggregate attestations, and propose blocks.
+
+Solo stakers are responsible for operating the hardware needed to run these clients. It is highly recommended to use a dedicated machine for this that you operate from home – this is extremely beneficial to the health of the network.
+
+A solo staker receives rewards directly from the protocol for simply being online and properly fulfilling tasks assigned to it when needed. Note, the user just needs to keep the node powered and online with clients running; the client software will do the rest.
+
+Being offline results in small penalties roughly in the amount of what you would have earned in that same amount of time. Slashing is a more serious penalty reserved for malicious behavior, which results in losing at least 0.5 ETH and ejection from the network.
+
+## What is a validator? {#what-is-a-validator}
+
+A _validator_ is a virtual entity that lives on the Beacon Chain, represented by a balance, public key, and other properties. A _validator client_ is the software that acts on behalf of the validator by holding and using its private key. A single validator client can hold many key pairs, controlling many validators.
+
+Each key-pair associated with a validator requires 32 ETH to be activated. More ETH deposited to a single set of keys does not increase rewards potential, as each validator is limited to an [effective balance]() of 32 ETH. This means that staking is done in 32 ETH increments, each with it's own set of keys and balance.
+
+Do not deposit more than 32 ETH for a single validator. It will be locked until the planned Shanghai update.
 
 ## What is solo staking?
 
@@ -38,9 +66,9 @@ If you think you’d be more comfortable with a less technical option, check out
 4. Generate your keys: Load them into your validator client
 5. Monitor and maintain your node
 
-<!-- TODO: Figure out where to put this:  -->
+If ever desired, you can exit as a validator which eliminates the requirement to be online, and stops any further rewards. Be aware that until the planned Shanghai upgrade _withdrawing_ those funds will not be possible.
 
-If ever desired, you can exit as a validator which eliminates the requirement to be online, and stops any further rewards. Be aware that until the planned Shanghai upgrade withdrawing those funds will not be possible. After Shanghai, users will be able to withdraw their rewards as well as their stake if they chose.
+After Shanghai, users will be able to withdraw their rewards as well as their stake if they choose.
 
 ## Get started on the Staking Launchpad
 
@@ -54,7 +82,11 @@ The Staking Launchpad is an open source application that will help you become a 
 
 Solo validators are expected to **test their setup** and operational skills on the prater testnet before risking funds.
 
-You may want to also check out some of the tools and guides below that can help you alongside the Staking Launchpad to get your clients set up with ease. It is important to choose a [minority client](/client-diversity) as it improves the security of the network, and limits your risk.
+If you're comfortable with it, you can set up everything needed from the command line using the Staking Launchpad alone.
+
+To make things easier, check out some of the tools and guides below that can help you alongside the Staking Launchpad to get your clients set up with ease.
+
+It is important to choose a [minority client](/client-diversity) as it improves the security of the network, and limits your risk.
 
 If you need help along the way, check out some of the solo staking tools or guides below.
 
@@ -63,7 +95,7 @@ If you need help along the way, check out some of the solo staking tools or guid
 
 </LaunchpadWidget>
 
-## What to consider with staking tools
+## What to consider with node and client setup tools
 
 There are a growing number of tools and services to help you solo stake your ETH, but each come with different risks and benefits.
 
@@ -87,7 +119,7 @@ Attribute indicators are used below to signal notable strengths or weaknesses a 
 - **Self custody**: User maintains custody of any validator credentials, including signing and withdrawal keys
 - **Economical**: Users can operate a validator by staking less than 32 ETH, utilizing pooled funds from others
 
-## 🛠 Explore solo staking tools
+## 🛠 Explore node and client setup tools
 
 Variety options are available to choose from. Please be aware tha it is also important to choose a [minority client](/client-diversity) as it improves the security of the network.
 
