@@ -687,7 +687,7 @@ const Layer2Page = ({ data }) => {
                 layer 2 scaling is the only way to solve the scalability
                 trilemma
               </b>{" "}
-              and remain decentralized and secure.
+              while remaining decentralized and secure.
             </p>
           </Flex50>
           <Flex50>
