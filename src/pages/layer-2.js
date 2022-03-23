@@ -303,7 +303,7 @@ const Layer2Page = ({ data }) => {
   const rollupCards = [
     {
       emoji: ":page_with_curl:",
-      title: "Optimistic Rollups",
+      title: "Optimistic rollups",
       description:
         "Optimistic rollups use fault proofs where transactions are assumed to be valid, but can be challenged if an invalid transaction is suspected. If an invalid tranaction is suspected, a fault proof is ran to see if this has taken place.",
       childSentence: "More on optimistic rollups",
