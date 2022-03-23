@@ -217,7 +217,7 @@ Tipurile de atac de mai sus acoperă probleme de codificare a contractelor intel
 
 Referințe suplimentare:
 
-- [Atacuri cunoscute a contractelor inteligente Consensys](https://consensys.github.io/smart-contract-best-practices/known_attacks/) - O explicație foarte lizibilă a celor mai semnificative vulnerabilități, majoritatea cu un exemplu de cod.
+- [Atacuri cunoscute a contractelor inteligente Consensys](https://consensys.github.io/smart-contract-best-practices/attacks/) - O explicație foarte lizibilă a celor mai semnificative vulnerabilități, majoritatea cu un exemplu de cod.
 - [Registru SWC](https://swcregistry.io/docs/SWC-128) - Lista selectată de CWE-uri care se aplică la Ethereum și la contractele inteligente
 
 ## Instrumente de securitate {#security-tools}
