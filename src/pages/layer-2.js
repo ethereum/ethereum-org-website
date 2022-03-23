@@ -313,7 +313,7 @@ const Layer2Page = ({ data }) => {
       emoji: ":scroll:",
       title: "Zero Knowledge Rollups",
       description:
-        "Zero Knowledge rollups use validity proofs where transactions calculations are computed off-chain, and then this data is then supplied to Ethereum Mainnet with a proof of their validity.",
+        "Zero-knowledge rollups use validity proofs where transactions calculations are computed off-chain, and then this data is then supplied to Ethereum Mainnet with a proof of their validity.",
       childSentence: "More on zk-rollups",
       childLink: "/developers/docs/scaling/zk-rollups/",
     },
