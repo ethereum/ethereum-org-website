@@ -949,7 +949,6 @@ export const query = graphql`
     rollup: file(relativePath: { eq: "layer-2/rollup-2.png" }) {
       childImageSharp {
         gatsbyImageData(
-          width: 500
           layout: CONSTRAINED
           placeholder: BLURRED
           quality: 100
