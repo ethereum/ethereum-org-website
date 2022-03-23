@@ -40,6 +40,8 @@ We currently consider the following to be layer 2 solutions:
 - Zero-knowledge rollup
 - State channel
 
+_We do not consider other scaling solutions to be layer 2._
+
 **Which bridges are used to onboard?**
 
 - How are users able to onboard to the layer 2?
