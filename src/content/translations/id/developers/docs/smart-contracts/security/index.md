@@ -217,7 +217,7 @@ Jenis serangan di atas mencakup masalah pengodean kontrak pintar (re-entrancy) d
 
 Bacaan lebih lanjut:
 
-- [Serangan yang Diketahui pada Kontrak Pintar Consensys](https://consensys.github.io/smart-contract-best-practices/known_attacks/) - Penjelasan yang sangat mudah dibaca tentang kerentanan paling signifikan, disertai contoh kode untuk sebagian besar kerentanan.
+- [Serangan yang Diketahui pada Kontrak Pintar Consensys](https://consensys.github.io/smart-contract-best-practices/attacks/) - Penjelasan yang sangat mudah dibaca tentang kerentanan paling signifikan, disertai contoh kode untuk sebagian besar kerentanan.
 - [Daftar SWC](https://swcregistry.io/docs/SWC-128) - Daftar terkurasi CWE yang berlaku untuk Ethereum dan kontrak pintar
 
 ## Perangkat keamanan {#security-tools}
