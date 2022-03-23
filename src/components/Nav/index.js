@@ -247,6 +247,10 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
           to: "/eips/",
         },
         {
+          text: "web3",
+          to: "/web3/",
+        },
+        {
           text: "guides-and-resources",
           to: "/learn/",
         },
