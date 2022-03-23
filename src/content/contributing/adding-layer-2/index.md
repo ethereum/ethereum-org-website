@@ -15,13 +15,14 @@ We currently list L2s on the following pages:
 
 - [Optimistic rollups](/developers/docs/scaling/optimistic-rollups/)
 - [Zero-knowledge rollups](/developers/docs/scaling/zk-rollups/)
+- [State channels](/developers/docs/scaling/state-channels/)
 <!-- TODO: Add layer-2 page -->
 
 Layer 2 is a relatively new and exciting paradigm for Ethereum. We've tried to create a fair framework for consideration on ethereum.org but the listing criteria will change and evolve over time.
 
-## Information we require {#information-we-require}
+## The decision framework {#decision-framework}
 
-Layer 2 submissions will be assessed by the following criteria:
+### Criteria for inclusion: the must-haves {#criteria-for-inclusion-the-must-haves}
 
 **[Listing on L2BEAT](https://l2beat.com)**
 
@@ -33,6 +34,8 @@ Layer 2 submissions will be assessed by the following criteria:
 
 **What category of layer 2 is it?**
 
+We currently consider the following to be layer 2 solutions:
+
 - Optimistic rollup
 - Zero-knowledge rollup
 - State channel
@@ -41,9 +44,9 @@ Layer 2 submissions will be assessed by the following criteria:
 
 - How are users able to onboard to the layer 2?
 
-**Which exchanges offer support for the project?**
+**Exchange support for the project**
 
-- Are users able to deposit and/or withdraw directly from an exchange? If yes, which exchanges?
+- Are users able to deposit and/or withdraw directly from an exchange?
 
 **Links to dapps in the layer 2 ecosystem**
 
@@ -53,11 +56,9 @@ Layer 2 submissions will be assessed by the following criteria:
 
 - Since assets will have a new address on layer 2, if there is a token list resource available please share.
 
-**How long has the layer 2 been live?**
+**How long has the project been live?**
 
-**Is the project a fork?**
-
-- If the layer 2 is a fork, which project was forked?
+- Newer projects that have not been battle-tested by users are less likely to be listed.
 
 **What wallets can users use to access this layer 2?**
 
@@ -66,7 +67,7 @@ Layer 2 submissions will be assessed by the following criteria:
 
 **Has this project undergone an external security audit or bug bounty?**
 
-- Include links to any reports and/or repos.
+- Whether through audit, an internal security team or some other method, your product's security must be reliably tested. This reduces the risk to our users and shows us that you take security seriously.
 
 **Has the project maintained its users over time?**
 
@@ -78,7 +79,9 @@ Layer 2 submissions will be assessed by the following criteria:
 
 **Is there a block explorer?**
 
-- Please provide a link to the block explorer.
+- Listed projects require a working block explorer to allow users to easily navigate the chain.
+
+### Other criteria: the nice-to-haves {#other-criteria-the nice-to-haves}
 
 ## Add your layer 2 {#add-exchange}
 
