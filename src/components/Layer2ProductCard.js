@@ -98,9 +98,9 @@ const Layer2ProductCard = ({
           {note.length > 0 && <Description>Note: {note}</Description>}
         </div>
         {children && <Children>{children}</Children>}
+        {bridge && <Link to={bridge}>{name} Bridge</Link>}
         {ecosystemPortal && <Link to={bridge}>{name} Ecosystem Portal</Link>}
         {tokenLists && <Link to={bridge}>{name} Token Lists</Link>}
-        {bridge && <Link to={bridge}>{name} Bridge</Link>}
       </Content>
       <StyledButtonLink to={url} hideArrow={true}>
         Explore {name}
