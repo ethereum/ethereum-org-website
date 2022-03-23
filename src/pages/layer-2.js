@@ -718,7 +718,7 @@ const Layer2Page = ({ data }) => {
           </p>
           <TwoColumnContent>
             <Flex50>
-              <h4>Funds in your wallet?</h4>
+              <h3>Funds in your wallet?</h3>
               <p>
                 If you've already got your ETH in your wallet, you'll need to
                 use a bridge to move it from Ethereum Mainnet to a layer 2.{" "}
