@@ -6491,7 +6491,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/22988415?v=4",
       "profile": "https://github.com/Sergey1997",
       "contributions": [
-        "content"
+        "content",
+        "doc"
       ]
     },
     {
@@ -6815,6 +6816,44 @@
       "profile": "https://github.com/smartcontracts",
       "contributions": [
         "doc"
+      ]
+    },
+    {
+      "login": "BlockchainRev",
+      "name": "Samay Lakhani",
+      "avatar_url": "https://avatars.githubusercontent.com/u/47613687?v=4",
+      "profile": "http://thetaclubai.com",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "vdusart",
+      "name": "vdusart",
+      "avatar_url": "https://avatars.githubusercontent.com/u/43795504?v=4",
+      "profile": "https://github.com/vdusart",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "wd021",
+      "name": "wd021",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2752586?v=4",
+      "profile": "https://github.com/wd021",
+      "contributions": [
+        "doc",
+        "code"
+      ]
+    },
+    {
+      "login": "brian7346",
+      "name": "Max Roslow",
+      "avatar_url": "https://avatars.githubusercontent.com/u/14194522?v=4",
+      "profile": "https://github.com/brian7346",
+      "contributions": [
+        "doc",
+        "translation"
       ]
     }
   ],

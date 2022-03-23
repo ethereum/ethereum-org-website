@@ -247,6 +247,10 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
           to: "/eips/",
         },
         {
+          text: "web3",
+          to: "/web3/",
+        },
+        {
           text: "guides-and-resources",
           to: "/learn/",
         },
@@ -405,7 +409,7 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
               )}
             </LeftItems>
             <RightItems>
-              <Search />
+              <Search useKeyboardShortcuts />
               <ThemeToggle
                 onClick={handleThemeChange}
                 aria-label={
