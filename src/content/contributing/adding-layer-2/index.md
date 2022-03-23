@@ -9,7 +9,7 @@ sidebar: true
 
 We want to make sure we list the best resources possible so users can navigate the layer 2 space in a safe and confident manner.
 
-Anyone is free to suggest adding a layer 2 on ethereum.org. If there's a layer 2 that we have missed, **please suggest it!**
+Anyone is free to suggest adding a layer 2 on ethereum.org. If there's a layer 2 that we have missed, **[please suggest it](https://github.com/ethereum/ethereum-org-website/issues/new?&template=suggest_layer2.md)!**
 
 We currently list L2s on the following pages:
 
@@ -26,7 +26,7 @@ Layer 2 is a relatively new and exciting paradigm for Ethereum. We've tried to c
 
 **[Listing on L2BEAT](https://l2beat.com)**
 
-- In order to be considered, this project must be featured on L2BEAT. L2BEAT provides a great risk assessment of layer 2 projects that we lean on for evaluating L2 projects. **If the project is not featured on L2BEAT, we will not list them as an L2 on ethereum.org.**
+- In order to be considered, this project must be listed on L2BEAT. L2BEAT provides a robust risk assessment of layer 2 projects that we lean on for evaluating L2 projects. **If the project is not featured on L2BEAT, we will not list them as an L2 on ethereum.org.**
 
 [Learn how to add your L2 project to L2BEAT](https://github.com/l2beat/l2beat/blob/master/CONTRIBUTING.md).
 
@@ -81,7 +81,7 @@ We currently consider the following to be layer 2 solutions:
 
 - Listed projects require a working block explorer to allow users to easily navigate the chain.
 
-### Other criteria: the nice-to-haves {#other-criteria-the nice-to-haves}
+### Other criteria: the nice-to-haves {#nice-to-haves}
 
 ## Add your layer 2 {#add-exchange}
 
