@@ -207,11 +207,16 @@ by this pool.
 The reserves the pool has for each token type. We assume that the two represent the same amount of value,
 and therefore each token0 is worth reserve1/reserve0 token1's.
 
+
 ```solidity
     uint32  private blockTimestampLast; // uses single storage slot, accessible via getReserves
 ```
 
 The timestamp for the last block in which an exchange occurred, used to track exchange rates across time.
+
+One of the biggest gas expenses of Ethereum contracts is storage, which persists from one call of the contract
+to the next. Each storage cell is 256 bits long. So three variables, reserve0, reserve1, and blockTimestampLast, are allocated in such
+a way a single storage value can include all three of them (112+112+32=256).
 
 ```solidity
     uint public price0CumulativeLast;
@@ -221,9 +226,7 @@ The timestamp for the last block in which an exchange occurred, used to track ex
 These variables hold the cumulative costs for each token (each in term of the other). They can be used to calculate
 the average exchange rate over a period of time.
 
-One of the biggest gas expenses of Ethereum contracts is storage, which persists from one call of the contract
-to the next. Each storage cell is 256 bits long. So there variable, and `kLast` below, are allocated in such
-a way a single storage value can include all three of them (112+112+32=256).
+
 
 ```solidity
     uint public kLast; // reserve0 * reserve1, as of immediately after the most recent liquidity event
