@@ -48,7 +48,7 @@ If it does, complete the following information which we need to accurately list 
 
 <!-- Please provide some information on how to bridge assets onto this layer 2 -->
 
-**Which exchanges off support for the project?**
+**Which exchanges offer support for the project?**
 
 <!-- If there is exchange support for deposits/withdrawals, please provide information for this -->
 
