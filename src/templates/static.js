@@ -181,7 +181,7 @@ const StaticPage = ({ data: { siteData, pageData: mdx }, pageContext }) => {
         <MDXProvider components={components}>
           <MDXRenderer>{mdx.body}</MDXRenderer>
         </MDXProvider>
-        {intl.locale === "en" && <FeedbackCard />}
+        <FeedbackCard />
       </ContentContainer>
       {mdx.frontmatter.sidebar && tocItems && (
         <TableOfContents
