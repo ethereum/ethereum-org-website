@@ -201,6 +201,10 @@ const Footer = () => {
           to: "/energy-consumption/",
         },
         {
+          text: "web3",
+          to: "/web3/",
+        },
+        {
           to: "/eips/",
           text: "eips",
         },
