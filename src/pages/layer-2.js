@@ -823,7 +823,7 @@ const Layer2Page = ({ data }) => {
             develop in the future.
           </p>
         </ExpandableCard>
-        <ExpandableCard title="What is the difference between optimistic and zero knowledge rollups?">
+        <ExpandableCard title="What is the difference between optimistic and zero-knowledge rollups?">
           <p>
             Main difference being, validity proofs run the computations and post
             a proof, whereas fraud proofs only run the computations when fraud
