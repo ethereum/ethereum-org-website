@@ -64,9 +64,9 @@ Layer 2 submissions will be assessed by the following criteria:
 - What is the public RPC information for the network? (RPC URL, Chain ID, Currency Symbol, Block Explorer URL)
 - What wallets natively support this layer 2?
 
-**Has this project undergone an external security audit?**
+**Has this project undergone an external security audit or bug bounty?**
 
-- Include links to report and/or repo.
+- Include links to any reports and/or repos.
 
 **Has the project maintained its users over time?**
 
