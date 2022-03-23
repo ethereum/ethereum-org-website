@@ -303,7 +303,7 @@ const Layer2Page = ({ data }) => {
   const rollupCards = [
     {
       emoji: ":page_with_curl:",
-      title: "Optimistic Rollups",
+      title: "Optimistic rollups",
       description:
         "Optimistic rollups use fault proofs where transactions are assumed to be valid, but can be challenged if an invalid transaction is suspected. If an invalid tranaction is suspected, a fault proof is ran to see if this has taken place.",
       childSentence: "More on optimistic rollups",
@@ -311,9 +311,9 @@ const Layer2Page = ({ data }) => {
     },
     {
       emoji: ":scroll:",
-      title: "Zero Knowledge Rollups",
+      title: "Zero-knowledge rollups",
       description:
-        "Zero Knowledge rollups use validity proofs where transactions calculations are computed off-chain, and then this data is then supplied to Ethereum Mainnet with a proof of their validity.",
+        "Zero-knowledge rollups use validity proofs where transactions calculations are computed off-chain, and then this data is then supplied to Ethereum Mainnet with a proof of their validity.",
       childSentence: "More on zk-rollups",
       childLink: "/developers/docs/scaling/zk-rollups/",
     },
@@ -591,7 +591,7 @@ const Layer2Page = ({ data }) => {
           <h2>Do your own research: Risks of layer 2</h2>
           <p>
             Because layer 2 chains inherit security from Ethereum, in an ideal
-            world, they are as safe as L1 Ethereum. However, many of the
+            world, they are as safe as L1 Ethereum. However, many of the{" "}
             <b>projects are still young and somewhat experimental</b>. After
             years of R&D, many of the L2 technologies that will scale Ethereum
             went live in 2021. This is not to say these L2s are not secure, only
@@ -687,7 +687,7 @@ const Layer2Page = ({ data }) => {
                 layer 2 scaling is the only way to solve the scalability
                 trilemma
               </b>{" "}
-              and remain decentralized and secure.
+              while remaining decentralized and secure.
             </p>
           </Flex50>
           <Flex50>
@@ -718,7 +718,7 @@ const Layer2Page = ({ data }) => {
           </p>
           <TwoColumnContent>
             <Flex50>
-              <h4>Funds in your wallet?</h4>
+              <h3>Funds in your wallet?</h3>
               <p>
                 If you've already got your ETH in your wallet, you'll need to
                 use a bridge to move it from Ethereum Mainnet to a layer 2.{" "}
@@ -823,7 +823,7 @@ const Layer2Page = ({ data }) => {
             develop in the future.
           </p>
         </ExpandableCard>
-        <ExpandableCard title="What is the difference between optimistic and zero knowledge rollups?">
+        <ExpandableCard title="What is the difference between optimistic and zero-knowledge rollups?">
           <p>
             Main difference being, validity proofs run the computations and post
             a proof, whereas fraud proofs only run the computations when fraud
@@ -949,7 +949,6 @@ export const query = graphql`
     rollup: file(relativePath: { eq: "layer-2/rollup-2.png" }) {
       childImageSharp {
         gatsbyImageData(
-          width: 500
           layout: CONSTRAINED
           placeholder: BLURRED
           quality: 100
