@@ -18,7 +18,7 @@ If it does, complete the following information which we need to accurately list 
 
 **Logo**
 
-<!-- Please provide a hi-res SVG or transparent PNG -->
+<!-- Please provide an SVG or hi-res transparent PNG -->
 
 **Description**
 
