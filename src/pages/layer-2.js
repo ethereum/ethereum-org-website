@@ -16,12 +16,13 @@ import ButtonLink from "../components/ButtonLink"
 import Card from "../components/Card"
 import Emoji from "../components/Emoji"
 import ExpandableCard from "../components/ExpandableCard"
+import FeedbackCard from "../components/FeedbackCard"
 import InfoBanner from "../components/InfoBanner"
 import Link from "../components/Link"
 import PageHero from "../components/PageHero"
 import PageMetadata from "../components/PageMetadata"
 import Pill from "../components/Pill"
-import ProductCard from "../components/ProductCard"
+import Layer2ProductCard from "../components/Layer2ProductCard"
 import ProductList from "../components/ProductList"
 import { CardGrid, Content, Page } from "../components/SharedStyledComponents"
 
@@ -29,15 +30,6 @@ import { CardGrid, Content, Page } from "../components/SharedStyledComponents"
 import { translateMessageId } from "../utils/translations"
 
 // Styles
-const GappedPage = styled(Page)`
-  gap: 4rem;
-  @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
-    gap: 3rem;
-  }
-  * {
-    scroll-margin-top: 5.5rem;
-  }
-`
 
 const HeroContainer = styled.div`
   width: 100%;
@@ -45,6 +37,15 @@ const HeroContainer = styled.div`
 
 const Hero = styled(PageHero)`
   padding-bottom: 2rem;
+`
+
+const PaddedContent = styled(Content)`
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+`
+
+const LightGrayContent = styled(PaddedContent)`
+  background: ${(props) => props.theme.colors.layer2ContentSecondary};
 `
 
 const FlexContainer = styled.div`
@@ -64,7 +65,6 @@ const Flex50 = styled.div`
 const TwoColumnContent = styled.div`
   display: flex;
   justify-content: space-between;
-  margin-bottom: 2rem;
   gap: 2rem;
   @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
     flex-direction: column;
@@ -89,11 +89,6 @@ const InfoGrid = styled(CardGrid)`
       }
     }
   }
-`
-
-const StyledCardGrid = styled(CardGrid)`
-  margin-bottom: 4rem;
-  margin-top: 4rem;
 `
 
 const RollupCard = styled.div`
@@ -137,6 +132,7 @@ const StatPrimary = styled.p`
   font-weight: bold;
   font-size: ${(props) => props.theme.fontSizes.xl};
   color: ${(props) => props.theme.colors.primary};
+  font-family: monospace;
 `
 
 const StatDescription = styled.p`
@@ -338,7 +334,7 @@ const Layer2Page = ({ data }) => {
         description:
           "L2 Fees lets you see the current cost (denominated in USD) for doing transactions on different layer 2s.",
         link: "https://l2fees.info",
-        image: getImage(data.impact),
+        image: getImage(data.doge),
         alt: "L2 Fees",
       },
       {
@@ -346,7 +342,7 @@ const Layer2Page = ({ data }) => {
         description:
           "Chainlist is a great resource for importing network RPC's into supporting wallets. You will find RPC's for layer 2 projects here to help get you connected.",
         link: "https://chainlist.org",
-        image: getImage(data.chainlist),
+        image: getImage(data.doge),
         alt: "Chainlist",
       },
     ],
@@ -376,88 +372,12 @@ const Layer2Page = ({ data }) => {
         alt: "DeBank",
       },
     ],
-    tokenLists: [
-      {
-        title: "tokenlists.org",
-        description: "Token list for Optimism",
-        link: "https://tokenlists.org/token-list?url=https://static.optimism.io/optimism.tokenlist.json",
-        image: getImage(data.optimism),
-        alt: "tokenlists.org",
-      },
-      {
-        title: "arbucks",
-        description: "Token list for Arbitrum One",
-        link: "https://arbucks.io/tokens/",
-        image: getImage(data.arbitrum),
-        alt: "arbucks",
-      },
-    ],
-    dappPortal: [
-      {
-        title: "Arbitrum One Portal",
-        description: "Dapp portal for Arbitrum One",
-        link: "https://portal.arbitrum.one/",
-        image: getImage(data.arbitrum),
-        alt: "Arbitrum One",
-      },
-      {
-        title: "Optimism ecosystem",
-        description: "Dapp portal for Optimism",
-        link: "https://www.optimism.io/apps/all",
-        image: getImage(data.optimism),
-        alt: "Optimism",
-      },
-    ],
-    blockExplorers: [
-      {
-        title: "Arbitrum One",
-        description: "Arbitrum One block explorer",
-        link: "https://explorer.arbitrum.io/",
-        image: getImage(data.arbitrum),
-        alt: "Arbitrum One",
-      },
-      {
-        title: "Optimism",
-        descrition: "Optimism block explorer",
-        link: "https://optimistic.etherscan.io/",
-        image: getImage(data.optimism),
-        alt: "Optimism",
-      },
-      {
-        title: "zkSync",
-        description: "zkSync block explorer",
-        link: "https://zkscan.io/",
-        image: getImage(data.zksync),
-        alt: "zkSync",
-      },
-      {
-        title: "Metis",
-        description: "Metis block explorer",
-        link: "https://andromeda-explorer.metis.io/",
-        image: getImage(data.metis),
-        alt: "Metis",
-      },
-      {
-        title: "Boba Network",
-        description: "Boba Network block explorer",
-        link: "https://blockexplorer.boba.network/",
-        image: getImage(data.boba),
-        alt: "Boba Network",
-      },
-      {
-        title: "Loopring",
-        description: "Loopring block explorer",
-        link: "https://explorer.loopring.io/",
-        image: getImage(data.loopring),
-        alt: "Loopring",
-      },
-    ],
   }
 
   const layer2DataCombined = [...layer2Data.optimistic, ...layer2Data.zk]
 
   return (
-    <GappedPage>
+    <Page>
       <PageMetadata
         title={"Layer 2"}
         description={"Introduction page to layer 2"}
@@ -467,7 +387,7 @@ const Layer2Page = ({ data }) => {
         <Hero content={heroContent} isReverse />
       </HeroContainer>
 
-      <Content>
+      <PaddedContent>
         <StatsContainer>
           <StatBox>
             <StatPrimary>{tvl} (USD)</StatPrimary>
@@ -476,7 +396,7 @@ const Layer2Page = ({ data }) => {
           <StatDivider />
           <StatBox>
             <StatPrimary>${averageFee} (USD)</StatPrimary>
-            <StatDescription>Average ETH transfer fee</StatDescription>
+            <StatDescription>Average L2 ETH transfer fee</StatDescription>
           </StatBox>
           <StatDivider />
           <StatBox>
@@ -484,6 +404,9 @@ const Layer2Page = ({ data }) => {
             <StatDescription>Last 30 days</StatDescription>
           </StatBox>
         </StatsContainer>
+      </PaddedContent>
+
+      <PaddedContent>
         <h2>What is layer 1?</h2>
         <TwoColumnContent>
           <FlexContainer flexPercent="65">
@@ -515,6 +438,7 @@ const Layer2Page = ({ data }) => {
                 <b>The consensus mechanism</b> for the network
               </li>
             </ul>
+            <ButtonLink to="/what-is-ethereum/">What is Ethereum</ButtonLink>
           </FlexContainer>
           {/* TODO: Convert these inline styles into styled components */}
           <FlexContainer
@@ -526,15 +450,15 @@ const Layer2Page = ({ data }) => {
             }}
           >
             <GatsbyImage
-              image={getImage(data.impact)}
+              image={getImage(data.whatIsEthereum)}
               style={{ width: "100%" }}
               objectFit="contain"
             />
           </FlexContainer>
         </TwoColumnContent>
-      </Content>
+      </PaddedContent>
 
-      <Content>
+      <LightGrayContent>
         <h2>Why do we need layer 2?</h2>
         <p>
           The three desirable properties of a blockchain are that it is
@@ -589,9 +513,9 @@ const Layer2Page = ({ data }) => {
             />
           ))}
         </InfoGrid>
-      </Content>
+      </LightGrayContent>
 
-      <Content id="what-is-layer-2">
+      <PaddedContent id="what-is-layer-2">
         <h2>What is layer 2</h2>
         <p>
           Layer 2 is a collective term for Ethereum scaling solutions that
@@ -660,7 +584,10 @@ const Layer2Page = ({ data }) => {
             )
           )}
         </TwoColumnContent>
-        <InfoBanner>
+      </PaddedContent>
+
+      <PaddedContent>
+        <InfoBanner isWarning={true}>
           <h2>Do your own research: Risks of layer 2</h2>
           <p>
             Because layer 2 chains inherit security from Ethereum, in an ideal
@@ -678,12 +605,12 @@ const Layer2Page = ({ data }) => {
             comprehensive risk assessment framework of each project.
           </p>
           <p>
-            <Link to="https://l2beat.com">L2BEAT</Link>
+            <ButtonLink to="https://l2beat.com">Go to L2BEAT</ButtonLink>
           </p>
         </InfoBanner>
-      </Content>
+      </PaddedContent>
 
-      <Content id="use-layer-2">
+      <PaddedContent id="use-layer-2">
         <h2>Generalized layer 2s</h2>
         <p>
           Generalized layer 2s behave just like Ethereum — but cheaper. Anything
@@ -691,12 +618,12 @@ const Layer2Page = ({ data }) => {
           dapps have already begun to migrate to these networks, or are skipping
           deploying to Mainnet altogether.
         </p>
-        <StyledCardGrid>
+        <CardGrid>
           {layer2DataCombined
             .filter((l2) => !l2.purpose.indexOf("universal"))
             .map((l2, idx) => {
               return (
-                <ProductCard
+                <Layer2ProductCard
                   key={idx}
                   background={l2.background}
                   image={getImage(data[l2.imageKey])}
@@ -704,23 +631,28 @@ const Layer2Page = ({ data }) => {
                   url={l2.website}
                   note={translateMessageId(l2.noteKey, intl)}
                   name={l2.name}
+                  bridge={l2.bridge}
+                  ecosystemPortal={l2.ecosystemPortal}
+                  tokenLists={l2.tokenLists}
                 />
               )
             })}
-        </StyledCardGrid>
+        </CardGrid>
+      </PaddedContent>
 
+      <PaddedContent>
         <h2>Application specific layer 2s</h2>
         <p>
           Application specific layer 2s are projects that specialize in
           optimizing for a specific application space, bringing improved
           performance.
         </p>
-        <StyledCardGrid>
+        <CardGrid>
           {layer2DataCombined
             .filter((l2) => l2.purpose.indexOf("universal"))
             .map((l2, idx) => {
               return (
-                <ProductCard
+                <Layer2ProductCard
                   key={idx}
                   background={l2.background}
                   image={getImage(data[l2.imageKey])}
@@ -728,17 +660,20 @@ const Layer2Page = ({ data }) => {
                   url={l2.website}
                   note={translateMessageId(l2.noteKey, intl)}
                   name={l2.name}
+                  bridge={l2.bridge}
+                  ecosystemPortal={l2.ecosystemPortal}
+                  tokenLists={l2.tokenLists}
                 >
                   {l2.purpose.map((purpose) => (
                     <Pill>{purpose}</Pill>
                   ))}
-                </ProductCard>
+                </Layer2ProductCard>
               )
             })}
-        </StyledCardGrid>
-      </Content>
+        </CardGrid>
+      </PaddedContent>
 
-      <Content>
+      <PaddedContent>
         <h2>A note on alt L1s, sidechains, and validiums</h2>
         <TwoColumnContent>
           <Flex50>
@@ -771,9 +706,9 @@ const Layer2Page = ({ data }) => {
             </p>
           </Flex50>
         </TwoColumnContent>
-      </Content>
+      </PaddedContent>
 
-      <Content>
+      <PaddedContent>
         <InfoBanner>
           <h2>How to get onto a layer 2</h2>
           <p>
@@ -789,6 +724,7 @@ const Layer2Page = ({ data }) => {
                 use a bridge to move it from Ethereum Mainnet to a layer 2.{" "}
                 <Link to="/bridges/">More on bridges</Link>.
               </p>
+              {/* Make card list instead of dropdown. */}
               <StyledSelect
                 className="react-select-container"
                 classNamePrefix="react-select"
@@ -854,9 +790,9 @@ const Layer2Page = ({ data }) => {
             </Flex50>
           </TwoColumnContent>
         </InfoBanner>
-      </Content>
+      </PaddedContent>
 
-      <Content>
+      <PaddedContent>
         <h2>Tools to be effective on layer 2</h2>
         <TwoColumnContent>
           <Flex50>
@@ -864,29 +800,17 @@ const Layer2Page = ({ data }) => {
               category="Information"
               content={toolsData.information}
             />
-            <ProductList
-              category="Block explorers"
-              content={toolsData.blockExplorers}
-            />
           </Flex50>
           <Flex50>
             <ProductList
               category="Wallet managers"
               content={toolsData.walletManagers}
             />
-            <ProductList
-              category="Token lists"
-              content={toolsData.tokenLists}
-            />
-            <ProductList
-              category="Dapp portal"
-              content={toolsData.dappPortal}
-            />
           </Flex50>
         </TwoColumnContent>
-      </Content>
+      </PaddedContent>
 
-      <Content>
+      <PaddedContent>
         <h2>FAQ</h2>
         <ExpandableCard title="Why is there no 'official' Ethereum L2?">
           <p>
@@ -932,15 +856,36 @@ const Layer2Page = ({ data }) => {
             . <Link to="/bridges/">More information on bridges</Link>.
           </p>
         </ExpandableCard>
-      </Content>
+      </PaddedContent>
 
-      <Content>
+      <PaddedContent>
         <h2>Further reading</h2>
         <ul>
           <li>
-            <Link to="https://eips.Ethereum.org/EIPS/eip-4488">
-              EIP-4488 proposed to reduce transaction call data gas cost
-            </Link>
+            <Link to="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">
+              A rollup-centric ethereum roadmap
+            </Link>{" "}
+            <i>- Vitalik Buterin </i>
+          </li>
+          <li>
+            <Link to="https://vitalik.ca/general/2021/01/05/rollup.html">
+              An Incomplete Guide to Rollups
+            </Link>{" "}
+            <i>- Vitalik Buterin</i>
+          </li>
+          <li>
+            <Link to="https://www.youtube.com/watch?v=DyNbmgkyxJI">
+              Polygon sidechain vs Ethereum rollups: Layer 2 scaling approaches
+              | Vitalik Buterin and Lex Fridman
+            </Link>{" "}
+            <i>- Lex Clips</i>
+          </li>
+          <li>
+            <Link to="https://www.youtube.com/watch?v=7pWxCklcNsU">
+              ROLLUPS - The Ultimate Ethereum Scaling Strategy? Arbitrum &
+              Optimism Explained
+            </Link>{" "}
+            <i>- Finematics</i>
           </li>
           <li>
             <Link to="/upgrades/shard-chains/">
@@ -953,9 +898,17 @@ const Layer2Page = ({ data }) => {
             </Link>{" "}
             <i>- Barnabé Monnot</i>
           </li>
+          <li>
+            <Link to="https://eips.Ethereum.org/EIPS/eip-4488">
+              EIP-4488 proposed to reduce transaction call data gas cost
+            </Link>
+          </li>
         </ul>
-      </Content>
-    </GappedPage>
+      </PaddedContent>
+      <PaddedContent>
+        <FeedbackCard />
+      </PaddedContent>
+    </Page>
   )
 }
 
@@ -963,6 +916,16 @@ export default Layer2Page
 
 export const query = graphql`
   query {
+    doge: file(relativePath: { eq: "doge-computer.png" }) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 624
+          layout: CONSTRAINED
+          placeholder: BLURRED
+          quality: 100
+        )
+      }
+    }
     ethBlocks: file(relativePath: { eq: "developers-eth-blocks.png" }) {
       childImageSharp {
         gatsbyImageData(
@@ -983,10 +946,20 @@ export const query = graphql`
         )
       }
     }
-    rollup: file(relativePath: { eq: "layer-2/rollup.png" }) {
+    rollup: file(relativePath: { eq: "layer-2/rollup-2.png" }) {
       childImageSharp {
         gatsbyImageData(
           width: 500
+          layout: CONSTRAINED
+          placeholder: BLURRED
+          quality: 100
+        )
+      }
+    }
+    whatIsEthereum: file(relativePath: { eq: "what-is-ethereum.png" }) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 624
           layout: CONSTRAINED
           placeholder: BLURRED
           quality: 100

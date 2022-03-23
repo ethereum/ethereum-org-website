@@ -7,8 +7,6 @@ import Translation from "./Translation"
 
 const Product = styled.div`
   width: 100%;
-  margin-bottom: 2rem;
-  margin-top: 4rem;
 `
 
 const Item = styled.div`
