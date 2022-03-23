@@ -72,9 +72,9 @@ If it does, complete the following information which we need to accurately list 
 
 <!-- Please list wallets that support this network -->
 
-**Has this project undergone an external security audit?**
+**Has this project undergone an external security audit and/or bug bounty?**
 
-<!-- Please provide a link to a report or repo. If you haven't been audited but think your layer 2 should be listed anyway, explain here. -->
+<!-- Please provide a link to a report or repo for any audits or bug bounties. If you haven't been audited but think your layer 2 should be listed anyway, explain here. -->
 
 **Has the project maintained its users over time?**
 
