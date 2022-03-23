@@ -30,9 +30,9 @@ Layer 2 is a relatively new and exciting paradigm for Ethereum. We've tried to c
 
 [Learn how to add your L2 project to L2BEAT](https://github.com/l2beat/l2beat/blob/master/CONTRIBUTING.md).
 
-**Is the project open source?**
+**Open source**
 
-**What category of layer 2 is it?**
+**Layer 2 category**
 
 We currently consider the following to be layer 2 solutions:
 
@@ -40,9 +40,36 @@ We currently consider the following to be layer 2 solutions:
 - Zero-knowledge rollup
 - State channel
 
-**Which bridges are used to onboard?**
+**Bridge**
 
 - How are users able to onboard to the layer 2?
+
+**Date project went live**
+
+- Newer projects that have not been battle-tested by users are less likely to be listed.
+
+**Wallet support**
+
+- What is the public RPC information for the network? (RPC URL, Chain ID, Currency Symbol, Block Explorer URL)
+- What wallets natively support this layer 2?
+
+**External security audit**
+
+- Whether through audit, an internal security team or some other method, your product's security must be reliably tested. This reduces the risk to our users and shows us that you take security seriously.
+
+**Maintaining users**
+
+- We will consider metrics such as TVL history, transaction statistics, and whether it is used by known companies or projects
+
+**Active development team**
+
+- We won't list a layer 2 that doesn't have an active team working on project.
+
+**Block explorer**
+
+- Listed projects require a working block explorer to allow users to easily navigate the chain.
+
+### Other criteria: the nice-to-haves {#nice-to-haves}
 
 **Exchange support for the project**
 
@@ -55,33 +82,6 @@ We currently consider the following to be layer 2 solutions:
 **Token contract lists**
 
 - Since assets will have a new address on layer 2, if there is a token list resource available please share.
-
-**How long has the project been live?**
-
-- Newer projects that have not been battle-tested by users are less likely to be listed.
-
-**What wallets can users use to access this layer 2?**
-
-- What is the public RPC information for the network? (RPC URL, Chain ID, Currency Symbol, Block Explorer URL)
-- What wallets natively support this layer 2?
-
-**Has this project undergone an external security audit or bug bounty?**
-
-- Whether through audit, an internal security team or some other method, your product's security must be reliably tested. This reduces the risk to our users and shows us that you take security seriously.
-
-**Has the project maintained its users over time?**
-
-- We will consider metrics such as TVL history, transaction statistics, and whether it is used by known companies or projects
-
-**Is the project being actively maintained?**
-
-- We won't list a layer 2 that doesn't have an active team working on project.
-
-**Is there a block explorer?**
-
-- Listed projects require a working block explorer to allow users to easily navigate the chain.
-
-### Other criteria: the nice-to-haves {#nice-to-haves}
 
 ## Add your layer 2 {#add-exchange}
 
