@@ -49,6 +49,7 @@ A proof-of-authority testnet that works across clients.
 
 ##### Görli faucets
 
+- [Alchemy Goerli Faucet](https://goerlifaucet.com/)
 - [Görli faucet](https://faucet.goerli.mudit.blog/)
 - [Chainlink faucet](https://faucets.chain.link/)
 
