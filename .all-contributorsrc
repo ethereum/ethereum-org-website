@@ -6864,6 +6864,16 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "nloureiro",
+      "name": "Nuno Loureiro",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1120748?v=4",
+      "profile": "http://nloureiro.com",
+      "contributions": [
+        "code",
+        "design"
+      ]
     }
   ],
   "contributorsPerLine": 7,
