@@ -11,13 +11,11 @@ We want to make sure we list the best resources possible while keeping users saf
 
 Anyone is free to suggest adding a staking products or service on ethereum.org. If there's one that we have missed, **please suggest it!**
 
-<!-- TODO: Add this section back in when pages are available
 We currently list staking products and services on the following pages:
 
 - [Solo staking](/staking/solo/)
 - [Staking-as-a-service](/staking/saas/)
 - [Staking pools](/staking/pools/)
--->
 
 Proof-of-stake on the Beacon Chain has been live since December 1, 2020. While it's relatively new, we've tried to create a fair framework for consideration on ethereum.org but the listing criteria will change and evolve over time.
 

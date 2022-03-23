@@ -37,11 +37,9 @@
       "platforms": ["Linux", "macOS", "Windows"],
       "ui": ["cli"],
       "socials": {
-        "discord": "https://discord.com/invite/vgdPfhZ",
-        "twitter": "https://twitter.com/lidofinance",
-        "telegram": "https://t.me/lidofinance",
-        "reddit": "https://www.reddit.com/r/lidofinance/",
-        "github": "https://github.com/lidofinance/lido-dao"
+        "discord": "https://discord.gg/rocketpool",
+        "twitter": "https://twitter.com/Rocket_Pool",
+        "github": "https://github.com/rocket-pool"
       }
     },
     {
@@ -322,7 +320,7 @@
         }
       ],
       "minEth": 0.01,
-      "feePercentage": 10,
+      "feePercentage": 15,
       "tokens": [
         {
           "name": "Rocket Pool ETH",

@@ -220,7 +220,7 @@ const StakingPage = ({ data, location }) => {
               onClick={() => setIsSoloStaking(true)}
             >
               <Emoji mr={`1rem`} text=":moneybag:" />
-              <OptionText>32 ETH</OptionText>
+              <OptionText>32 ETH</OptionText>
             </Option>
             <Option
               isActive={!isSoloStaking}
@@ -228,7 +228,7 @@ const StakingPage = ({ data, location }) => {
             >
               <Emoji mr={`1rem`} text=":swimmer:" />
               <OptionText>
-                <Translation id="page-staking-less-than" /> 32 ETH
+                <Translation id="page-staking-less-than" /> 32 ETH
               </OptionText>
             </Option>
           </OptionContainer>

@@ -44,13 +44,13 @@ Check out some solo staking tools, then get started staking on the Prater Testne
 
 ## Staking as a service
 
-> Your 32 ETH, your validator keys, entrusted node operation
+> Your 32 ETH, your validator keys, entrusted node operation
 
 Running your own hardware is always recommended if possible for the strength and health of the network, but we recognize this isn’t always reasonable for all users.
 
-If you don’t want or feel comfortable dealing with hardware, but still want to stake your 32 ETH, staking-as-a-service options allow you to delegate the hard part, while you earn native block rewards.
+If you don’t want or feel comfortable dealing with hardware, but still want to stake your 32 ETH, staking-as-a-service options allow you to delegate the hard part, while you earn native block rewards.
 
-These options usually walk you through creating a set of validator credentials, uploading your signing keys to them, and depositing your 32 ETH. This allows the service to validate on your behalf.
+These options usually walk you through creating a set of validator credentials, uploading your signing keys to them, and depositing your 32 ETH. This allows the service to validate on your behalf.
 
 This method of staking requires a certain level of trust in the provider. To limit counter-party risk, the keys to withdrawal your ETH are usually kept in your possession.
 
@@ -60,7 +60,7 @@ This method of staking requires a certain level of trust in the provider. To lim
 
 > Stake what you can, earn rewards, keep it simple (Popular)
 
-Several pooling solutions now exist to assist users who do not have or feel comfortable staking 32 ETH.
+Several pooling solutions now exist to assist users who do not have or feel comfortable staking 32 ETH.
 
 Many of these options include what is known as “liquid staking” which involves an ERC-20 liquidity token that represents your staked ETH.
 
