@@ -591,7 +591,7 @@ const Layer2Page = ({ data }) => {
           <h2>Do your own research: Risks of layer 2</h2>
           <p>
             Because layer 2 chains inherit security from Ethereum, in an ideal
-            world, they are as safe as L1 Ethereum. However, many of the
+            world, they are as safe as L1 Ethereum. However, many of the{" "}
             <b>projects are still young and somewhat experimental</b>. After
             years of R&D, many of the L2 technologies that will scale Ethereum
             went live in 2021. This is not to say these L2s are not secure, only
