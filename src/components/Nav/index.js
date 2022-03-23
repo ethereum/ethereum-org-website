@@ -409,7 +409,7 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
               )}
             </LeftItems>
             <RightItems>
-              <Search />
+              <Search useKeyboardShortcuts />
               <ThemeToggle
                 onClick={handleThemeChange}
                 aria-label={
