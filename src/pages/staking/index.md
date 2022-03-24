@@ -166,5 +166,3 @@ r/ethstaker is a community for everyone to discuss staking on Ethereum – join 
 - How are the staking rewards calculated?
 - More on staking economics
 <!-- TODO: FAQs -->
-
-<FeedbackCard prompt="Was this page helpful?" />

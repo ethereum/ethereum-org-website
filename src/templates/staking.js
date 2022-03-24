@@ -26,6 +26,7 @@ import UpgradeTableOfContents from "../components/UpgradeTableOfContents"
 import TableOfContents from "../components/TableOfContents"
 import TranslationsInProgress from "../components/TranslationsInProgress"
 import Translation from "../components/Translation"
+import FeedbackCard from "../components/FeedbackCard"
 import SectionNav from "../components/SectionNav"
 import { isLangRightToLeft } from "../utils/translations"
 import {
@@ -439,6 +440,7 @@ const StakingPage = ({ data, pageContext }) => {
           <MDXProvider components={components}>
             <MDXRenderer>{mdx.body}</MDXRenderer>
           </MDXProvider>
+          <FeedbackCard prompt="Was this page helpful?" />
         </ContentContainer>
         <MobileButton>
           <MobileButtonDropdown list={dropdownLinks} />
