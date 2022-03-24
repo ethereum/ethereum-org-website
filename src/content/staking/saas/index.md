@@ -9,18 +9,73 @@ image: ../../../assets/staking/leslie-saas.png
 alt: Leslie the rhino floating in the clouds.
 sidebarDepth: 2
 summaryPoints:
-  - Staking-as-a-service (“SaaS services”) involves third-party node operators that will handle the operation of your validator client.
+  - Staking-as-a-service involves third-party node operators that will handle the operation of your validator client.
   - SaaS services are a great option for anyone with 32 ETH who doesn't feel comfortable dealing with the technical complexity of running a node.
 ---
 
 ## What is staking as a service?
 
+Staking as a service (“SaaS") represents a category of staking services where you deposit your own 32 ETH for a validator, but delegate node operations to a third-party operator. This process usually involved being guided through the initial setup, including key generation and deposit, then uploading your signing keys to the operator. This allows the service to operate your validator on your behalf, usually for a monthly fee.
+
 ## Why stake with a service?
+
+The Ethereum protocol does not natively support delegation of stake, so these services have been built out to fill this demand. If you have 32 ETH to stake, but don't feel comfortable dealing with hardware, SaaS services allow you to delegate the hard part, while you earn native block rewards.
+
+<Card title="Your own validator">
+  Deposit your own 32 ETH to activate your own set of signing keys that will participate in Ethereum consensus. Monitor your progress with dashboards to watch those ETH rewards accumulate.
+</Card>
+<Card title="Easy to start">
+  Forget about hardware specs, setup, node maintenance and upgrades.
+  SaaS providers let you to outsource the hard part by uploading your own signing credentials, allowing them to run a validator on your behalf, for a small cost.
+</Card>
+<Card title="Limit your risk">
+  In many cases users do not have to give up access to the keys that enable withdrawing or transferring staked funds. These are different than the signing keys, and can be stored separately to limit (but not eliminate) your risk as a staker.
+</Card>
 
 ## How does it compare?
 
+**Solo staking** - Similarities include having your own validator keys without having to pool funds, but with SaaS you must trust a third-party, who may potentially act maliciously or become a target of attack or regulation themselves. If these trust assumptions or centralization risks concern you, we recommend learning [more about solo staking](/staking/solo), the gold standard of self-sovereign staking.
+
+**Pooled staking** - These are similar in that you're generally relying on someone else to run the validator, but unlike SaaS, pooled staking allows you to participate with smaller amounts of ETH. If you're looking to stake with less than 32 ETH, consider learning [more about pooled staking](/staking/pools) services.
+
 ## What to consider
+
+There are a growing number of staking-as-a-service providers to help you stake your ETH, but each come with different risks and benefits.
+
+Attribute indicators are used below to signal notable strengths or weaknesses a listed SaaS provider may have. Use this section as a reference for how we define these attributes while you're choosing a service to help with your staking journey.
+
+- **Open source**: Essential code is 100% open source and available to the public to fork and use
+- **Audited**: Essential code has undergone formal auditing with results published and available publicly
+- **Bug bounty**: A public bug bounty has been performed on any essential code to rewards users for safely reporting and/or fixing vulnerabilities
+  - ✅ Currently active
+- **Battle tested**: Service has been available and used by the public for a period of time
+  - ✅ Live for over one year
+  - 🟡 Live for over six months
+  - ⛔️ Live for less than six months
+- **Permissionless**: User does not require any special permission, account sign up or KYC to participate with the service
+- **Diverse clients**: Service should not run more than 50% of their aggregate validators with a supermajority validator client
+  - ⭐️ Less than 25%
+  - ✅ Less than 50%
+  - ⛔️ More than 50%
+  - 🟡 Currently unknown
+- **Self custody**: User maintains custody of any validator credentials, including signing and withdrawal keys
 
 ## Explore staking service providers
 
+Below are some available SaaS provider. Use the above indicators to help guide you through these services
+
+> Please note the importance of supporting [client diversity](/client-diversity) as it improves the security of the network, and limits your risk. Services that have evidence of limiting supermajority client use are marked as "diverse clients."
+
+```
+<CardGrid>
+  {stakingProducts.saas.map(service => <ProductCard product={service} />)}
+</CardGrid>
+```
+
+Have a suggestion for a staking-as-a-service provider we missed? Check out our [product listing policy](/contributing/adding-staking-product) to see if it would be a good fit, and to submit it for review.
+
 ## FAQs of staking services
+
+- Who holds the keys?
+- When can I withdraw?
+<!-- TODO: Fill out FAQ -->
