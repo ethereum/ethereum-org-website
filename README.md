@@ -1445,6 +1445,8 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="https://github.com/wd021"><img src="https://avatars.githubusercontent.com/u/2752586?v=4?s=100" width="100px;" alt=""/><br /><sub><b>wd021</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=wd021" title="Documentation">📖</a> <a href="https://github.com/ethereum/ethereum-org-website/commits?author=wd021" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/brian7346"><img src="https://avatars.githubusercontent.com/u/14194522?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Max Roslow</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=brian7346" title="Documentation">📖</a> <a href="#translation-brian7346" title="Translation">🌍</a></td>
+    <td align="center"><a href="https://github.com/tnkrxyz"><img src="https://avatars.githubusercontent.com/u/97625120?v=4?s=100" width="100px;" alt=""/><br /><sub><b>tnkrxyz</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=tnkrxyz" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://nloureiro.com"><img src="https://avatars.githubusercontent.com/u/1120748?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Nuno Loureiro</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=nloureiro" title="Code">💻</a> <a href="#design-nloureiro" title="Design">🎨</a></td>
   </tr>
 </table>
 
