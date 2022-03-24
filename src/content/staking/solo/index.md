@@ -122,7 +122,7 @@ Attribute indicators are used below to signal notable strengths or weaknesses a 
 - **Audited**: Essential code has undergone formal auditing with results published and available publicly
 - **Bug bounty**: A public bug bounty has been performed on any essential code to rewards users for safely reporting and/or fixing vulnerabilities
   - ✅ Currently active
-- **Battle tested**: Software has been available and used by the public for a period of time
+- **Battle tested**: Software has been available and used by the public for the indicated period of time
   - ✅ Live for over one year
   - 🟡 Live for over six months
   - 🛑 Live for less than six months
