@@ -395,7 +395,8 @@ const StakingPage = ({ data, pageContext }) => {
   const showKeyGens =
     pageContext.slug.includes("solo") || pageContext.slug.includes("saas")
 
-  const listing = stakingProducts[stakingType]
+  const listings = stakingType ? stakingProducts[stakingType] : []
+  const keyGens = showKeyGens ? stakingProducts.keyGens : []
 
   return (
     <Container>
