@@ -245,6 +245,7 @@ const StakingPage = ({ data, location }) => {
       <StakingStatsBox />
       <Divider />
       <Content>
+        <Breadcrumbs slug={location.pathname} startDepth={1} />
         <h2>What is staking?</h2>
         <p>
           Staking is the act of locking up ETH to give you the right to

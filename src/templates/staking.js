@@ -38,6 +38,7 @@ import {
 import Emoji from "../components/Emoji"
 import YouTube from "../components/YouTube"
 import LaunchpadWidget from "../components/LaunchpadWidget"
+import Breadcrumbs from "../components/Breadcrumbs"
 
 import { isLangRightToLeft } from "../utils/translations"
 import stakingProducts from "../data/staking-products.json"
@@ -231,14 +232,19 @@ const Title = styled.h1`
   margin-top: 1rem;
 `
 
-const SummaryPoint = styled.li`
-  font-size: 1rem;
+const SummaryPoint = styled.p`
+  /* font-size: 1rem; */
   color: ${(props) => props.theme.colors.text300};
-  margin-bottom: 0rem;
-  line-height: auto;
+  /* margin-bottom: 0rem; */
+  /* line-height: auto; */
 `
 
-const SummaryBox = styled.div``
+const SummaryBox = styled.div`
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+`
 
 const StyledButtonDropdown = styled(ButtonDropdown)`
   margin-bottom: 2rem;
@@ -267,15 +273,16 @@ const Container = styled.div`
 `
 
 const HeroContainer = styled.div`
-  background: ${(props) => props.theme.colors.cardGradient};
-  box-shadow: inset 0px -1px 0px rgba(0, 0, 0, 0.1);
   display: flex;
-  justify-content: flex-end;
-  max-height: 608px;
-  min-height: 608px;
-  width: 100%;
+  /* width: 100%; */
+  /* background: ${(props) => props.theme.colors.cardGradient}; */
+  /* box-shadow: inset 0px -1px 0px rgba(0, 0, 0, 0.1); */
+  /* justify-content: flex-end; */
+  /* max-height: 608px; */
+  /* min-height: 608px; */
+  padding: 2rem;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column-reverse;
+    flex-direction: column;
     max-height: 100%;
   }
 `
@@ -325,32 +332,32 @@ const StyledBannerNotification = styled(BannerNotification)`
 `
 
 const TitleCard = styled.div`
-  background: ${(props) => props.theme.colors.background};
+  /* background: ${(props) => props.theme.colors.background};
   border: 1px solid ${(props) => props.theme.colors.border};
-  box-shadow: ${(props) => props.theme.colors.cardBoxShadow};
+  box-shadow: ${(props) => props.theme.colors.cardBoxShadow}; */
   padding: 2rem;
   display: flex;
-  position: absolute;
+  /* position: absolute;
   left: 6rem;
-  top: 6rem;
+  top: 6rem; */
   flex-direction: column;
   justify-content: flex-start;
-  border-radius: 2px;
-  z-index: 10;
-  max-width: 640px;
-  margin-top: 3rem;
+  /* border-radius: 2px; */
+  /* z-index: 10; */
+  /* max-width: 640px; */
+  /* margin-top: 3rem; */
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     max-width: 100%;
-    position: relative;
-    left: 0rem;
-    top: 0rem;
-    background: ${(props) => props.theme.colors.ednBackground};
-    box-shadow: none;
-    margin-top: 0;
+    /* position: relative; */
+    /* left: 0rem; */
+    /* top: 0rem; */
+    /* background: ${(props) => props.theme.colors.ednBackground}; */
+    /* box-shadow: none; */
+    /* margin-top: 0; */
   }
 `
 
-const StakingPage = ({ data, pageContext }) => {
+const StakingPage = ({ data, pageContext, location }) => {
   const mdx = data.pageData
   const isRightToLeft = isLangRightToLeft(mdx.frontmatter.lang)
   const tocItems = mdx.tableOfContents.items
@@ -400,24 +407,22 @@ const StakingPage = ({ data, pageContext }) => {
 
   return (
     <Container>
-      <StyledBannerNotification shouldShow>
+      {/* <StyledBannerNotification shouldShow>
         <StyledEmoji text=":pencil:" />
         <div>
           Uses of Ethereum are always developing and evolving. Add any info you
           think will make things clearer or more up to date.
           <Link to={absoluteEditPath}>Edit page</Link>
         </div>
-      </StyledBannerNotification>
+      </StyledBannerNotification> */}
       <HeroContainer>
         <TitleCard>
-          <Emoji size={4} text={mdx.frontmatter.emoji} />
+          <Breadcrumbs slug={location.pathname} startDepth={2} />
           <Title>{mdx.frontmatter.title}</Title>
           <SummaryBox>
-            <ul>
-              {summaryPoints.map((point, idx) => (
-                <SummaryPoint key={idx}>{point}</SummaryPoint>
-              ))}
-            </ul>
+            {summaryPoints.map((point, idx) => (
+              <SummaryPoint key={idx}>{point}</SummaryPoint>
+            ))}
           </SummaryBox>
           <MobileTableOfContents
             items={tocItems}
@@ -431,9 +436,9 @@ const StakingPage = ({ data, pageContext }) => {
           objectFit="contain"
         />
       </HeroContainer>
-      <MoreContent to="#content">
+      {/* <MoreContent to="#content">
         <Icon name="chevronDown" />
-      </MoreContent>
+      </MoreContent> */}
       <Page dir={isRightToLeft ? "rtl" : "ltr"}>
         <PageMetadata
           title={mdx.frontmatter.title}
