@@ -1,9 +1,10 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
-import styled from "styled-components"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { MDXProvider } from "@mdx-js/react"
+import styled from "styled-components"
+
 import ButtonLink from "../components/ButtonLink"
 import ButtonDropdown from "../components/ButtonDropdown"
 import BannerNotification from "../components/BannerNotification"
@@ -28,7 +29,6 @@ import TranslationsInProgress from "../components/TranslationsInProgress"
 import Translation from "../components/Translation"
 import FeedbackCard from "../components/FeedbackCard"
 import SectionNav from "../components/SectionNav"
-import { isLangRightToLeft } from "../utils/translations"
 import {
   Divider,
   Paragraph,
@@ -37,6 +37,9 @@ import {
 } from "../components/SharedStyledComponents"
 import Emoji from "../components/Emoji"
 import YouTube from "../components/YouTube"
+
+import { isLangRightToLeft } from "../utils/translations"
+import stakingProducts from "../data/staking-products.json"
 
 const Page = styled.div`
   display: flex;
@@ -277,11 +280,9 @@ const HeroContainer = styled.div`
 
 const Image = styled(GatsbyImage)`
   flex: 1 1 100%;
-  background-size: cover;
   background-repeat: no-repeat;
   right: 0;
   bottom: 0;
-  background-size: cover;
   max-width: 400px;
   @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
     width: 100%;
@@ -357,32 +358,42 @@ const StakingPage = ({ data, pageContext }) => {
   const { relativePath } = pageContext
   const absoluteEditPath = `${editContentUrl}${relativePath}`
 
-  let stakingType = "solo"
-  if (pageContext.slug.includes("saas")) {
-    stakingType = "saas"
-  }
-  if (pageContext.slug.includes("pools")) {
-    stakingType = "pools"
-  }
-
   const dropdownLinks = {
     text: "Staking Options",
     ariaLabel: "Staking options dropdown menu",
     items: [
       {
+        text: "Staking Home",
+        to: "/staking",
+      },
+      {
         text: "Solo staking",
-        to: "/staking/solo/",
+        to: "/staking/solo",
       },
       {
         text: "Staking as a service",
-        to: "/staking/saas/",
+        to: "/staking/saas",
       },
       {
         text: "Pooled staking",
-        to: "/staking/pools/",
+        to: "/staking/pools",
       },
     ],
   }
+
+  let stakingType = ""
+  if (pageContext.slug.includes("solo")) {
+    stakingType = "nodeTools"
+  } else if (pageContext.slug.includes("saas")) {
+    stakingType = "saas"
+  } else if (pageContext.slug.includes("pools")) {
+    stakingType = "pools"
+  }
+
+  const showKeyGens =
+    pageContext.slug.includes("solo") || pageContext.slug.includes("saas")
+
+  const listing = stakingProducts[stakingType]
 
   return (
     <Container>
@@ -412,9 +423,9 @@ const StakingPage = ({ data, pageContext }) => {
           />
         </TitleCard>
         <Image
-          stakingType={stakingType}
           image={getImage(mdx.frontmatter.image)}
           alt={mdx.frontmatter.alt}
+          objectFit="contain"
         />
       </HeroContainer>
       <MoreContent to="#content">
@@ -473,7 +484,7 @@ export const stakingPageQuery = graphql`
         image {
           childImageSharp {
             gatsbyImageData(
-              width: 400
+              width: 500
               layout: CONSTRAINED
               placeholder: BLURRED
               quality: 100
