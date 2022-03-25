@@ -29,7 +29,6 @@ const Section = styled.div`
 `
 
 const StakingHierarchy = () => {
-  console.log("inside staking hierarchy")
   return (
     <Container>
       <Section color="#F2BB2F">
