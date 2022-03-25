@@ -40,12 +40,12 @@ Web3 has become a catch-all term for the vision of a new, better internet. At it
 
 #### Core ideas of web3 {#core-ideas}
 
-Although it's challenging to provide a rigid definition what web3 is, a few core principles guide its creation.
+Although it's challenging to provide a rigid definition of what web3 is, a few core principles guide its creation.
 
 - **Web3 is decentralized:** instead of large swathes of the internet controlled and owned by centralized entities, ownership gets distributed amongst its builders and users.
 - **Web3 is permissionless:** everyone has equal access to participate in web3, and no one gets excluded.
 - **Web3 has native payments:** it uses cryptocurrency for spending and sending money online instead of relying on the outdated infrastructure of banks and payment processors.
-- **Web3 is trustless:** it operates using incentives and economic mechanisms instead of relying on trusted third-parties
+- **Web3 is trustless:** it operates using incentives and economic mechanisms instead of relying on trusted third-parties.
 
 ### Why is web 3.0 important? {#why-is-web3-important}
 
