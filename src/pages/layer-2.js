@@ -409,7 +409,7 @@ const Layer2Page = ({ data }) => {
       <PaddedContent id="what-is-layer-2">
         <h2>What is layer 2?</h2>
         <p>
-          "Layer 2" (L2) is a collective term to describe a specific set of
+          Layer 2 (L2) is a collective term to describe a specific set of
           Ethereum scaling solutions.{" "}
           <b>
             A layer 2 is separate blockchain that's connected to Ethereum and
@@ -427,13 +427,16 @@ const Layer2Page = ({ data }) => {
         <TwoColumnContent>
           <FlexContainer flexPercent="65">
             <p>
-              Layer 1 is the base chain. Ethereum and Bitcoin are both layer 1
-              blockchains because they are the{" "}
-              <b>underlying foundation that layer 2 networks build on top of</b>
+              Layer 1 is the base blockchain. Ethereum and Bitcoin are both
+              layer 1 blockchains because they are the{" "}
+              <b>
+                underlying foundation that various layer 2 networks build on top
+                of
+              </b>
               . Examples of layer 2 projects include "rollups" on Ethereum and
-              the Lighting Network on top of Bitcoin. All activity on these
-              layer 2 projects can ultimately settle back to the layer 1
-              blockchain.
+              the Lighting Network on top of Bitcoin. All user transaction
+              activity on these layer 2 projects can ultimately settle back to
+              the layer 1 blockchain.
             </p>
             <p>
               <b>Ethereum as the layer 1 includes:</b>
