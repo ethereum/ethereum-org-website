@@ -86,6 +86,7 @@ Consensus Layer:
 [Rated.network](https://www.rated.network/)
 [clientdiversity.org](https://clientdiversity.org/)
 [pools.invis.cloud](https://pools.invis.cloud/)
+[slashed.info](https://www.slashed.info/)
 
 Execution Layer:
 [Ethernodes](https://ethernodes.org/)
