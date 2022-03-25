@@ -184,7 +184,7 @@ Decentralized application. At a minimum, it is a [smart contract](#smart-contrac
 A type of [dapp](#dapp) that lets you swap tokens with peers on the network. You need [ether](#ether) to use one (to pay [transactions fees](#transaction-fee)) but they are not subject to geographical restrictions like centralized exchanges – anyone can participate.
 
 <DocLink to="/get-eth/#dex">
-  Decentalized exchanges
+  Decentralized exchanges
 </DocLink>
 
 ### deed {#deed}
