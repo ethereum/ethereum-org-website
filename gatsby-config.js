@@ -176,6 +176,15 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
+    // SVG support
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: `${__dirname}/src/assets`,
+        },
+      },
+    },
     // CSS in JS
     `gatsby-plugin-styled-components`,
     // Source assets
