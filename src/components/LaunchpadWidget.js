@@ -13,13 +13,6 @@ const Container = styled.div`
 const LaunchpadWidget = () => {
   return (
     <Container>
-      <h2>Get started on the Staking Launchpad</h2>
-      <p>
-        The Staking Launchpad is an open source application that will help you
-        become a validator. It walks you through a preparation checklist, how to
-        choose clients, generate your keys and assists with depositing your ETH
-        to the staking deposit contract.
-      </p>
       <div>
         <p>Choose network</p>
         <select>
