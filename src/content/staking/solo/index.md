@@ -74,14 +74,14 @@ As much as we wish that solo staking was accessible and risk free to everyone, t
   <a href="">More on slashing</a>
 </Card>
 
-## How does it compare?
+## How does it compare? {#how-does-it-compare}
 
 **Staking as a service (SaaS)** - With SaaS providers you're still required to deposit 32 ETH, but don't have to run hardware. You typically maintain access to your validator keys, but also need to share your signing keys so the operator can act on behalf of your validator. This introduces a layer of trust not present when running your own hardware, and unlike solo staking at home, SaaS does not help as much with geographic distribution of nodes. If you're uncomfortable operating hardware but still looking to stake 32 ETH, [learn more about staking as a service](/staking/as-a-service).
 
 **Pooled staking** -
 Solo staking is significantly more involved than staking with a pooling service, but offer full access to ETH rewards, and full control over the setup and security of your validator. Pooled staking has a significantly lower barrier to entry. Users can stake small amounts of ETH, are not required to generate validator keys, and have no hardware requirements beyond a standard internet connection. Liquidity tokens enable the ability to exit from staking before this is enabled at the protocol level. If you're interested, [learn more about pooled staking](/staking/pools).
 
-## How it works
+## How it works {#how-it-works}
 
 1. Get some hardware: You need to run a node to stake. [Learn more](/run-a-node)
 2. Sync an execution layer (EL) client
@@ -93,13 +93,13 @@ If ever desired, you can exit as a validator which eliminates the requirement to
 
 After Shanghai, users will be able to withdraw their rewards as well as their stake if they choose.
 
-## Get started on the Staking Launchpad
+## Get started on the Staking Launchpad {#get-started-on-the-staking-launchpad}
 
 The Staking Launchpad is an open source application that will help you become a validator. It walks you through a preparation checklist, how to choose clients, generate your keys and assists with depositing your ETH to the staking deposit contract.
 
 <LaunchpadWidget />
 
-## What to consider with node and client setup tools
+## What to consider with node and client setup tools {#node-tool-considerations}
 
 There are a growing number of tools and services to help you solo stake your ETH, but each come with different risks and benefits.
 
@@ -123,7 +123,7 @@ Attribute indicators are used below to signal notable strengths or weaknesses a 
 - **Self custody**: User maintains custody of any validator credentials, including signing and withdrawal keys
 - **Economical**: Users can operate a validator by staking less than 32 ETH, utilizing pooled funds from others
 
-## 🛠 Explore node and client setup tools
+## 🛠 Explore node and client setup tools {#node-and-client-tools}
 
 There are a variety of options available to help you with your setup. Use the above indicators to help guide you through the tools below.
 
@@ -137,13 +137,13 @@ There are a variety of options available to help you with your setup. Use the ab
 
 Have a suggestion for a staking tool we missed? Check out our [product listing policy](/contributing/adding-staking-product) to see if it would be a good fit, and to submit it for review.
 
-## 📖 Explore solo staking guides
+## 📖 Explore solo staking guides {#staking-guides}
 
 - **CoinCashew's Ethereum 2.0 Guide** - Linux (CLI)
 - **Somer Esat** - Linux (CLI)
 - **Rocket Pool Node Operators** - Linux, macOS (CLI)
 
-## Things to know
+## Things to know {#things-to-know}
 
 These are a few of the most common questions about staking that are worth knowing about.
 

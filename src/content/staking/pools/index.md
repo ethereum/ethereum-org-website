@@ -12,13 +12,13 @@ summaryPoints:
   - Staking pools allow users to participate in the validating process of Ethereum and earn rewards with less than the required 32 ETH by joining forces with others.
 ---
 
-## What are staking pools?
+## What are staking pools? {#what-are-staking-pools}
 
 Staking pools are a collaborative approach to allow many with smaller amounts of ETH to obtain the 32 ETH required to activate a set of validator keys. Pooling functionality is not natively supported within the protocol, so solutions were built out separately to address this need.
 
 Some pools operate using smart contracts, where funds can be deposited to a contract, which trustlessly manages and tracks your stake, and issues you a token that represents this value. Other pools may not involve smart contracts and are instead mediated off-chain.
 
-## Why stake with a pool?
+## Why stake with a pool? {#why-stake-with-a-pool}
 
 In addition to the benefits we outlined in our [intro to staking](/staking), staking with a pool comes with a number of distinct benefits.
 
@@ -32,13 +32,13 @@ In addition to the benefits we outlined in our [intro to staking](/staking), sta
   Many staking pools provide a token that represents a claim on your staked ETH and the rewards it generates. This allows you to make use of your staked ETH, e.g. as collateral in DeFi applications.
 </Card>
 
-## How does it compare?
+## How does it compare? {#how-does-it-compare}
 
 **Solo staking** - Pooled staking has a significantly lower barrier to entry when compared to solo staking, but comes with additional risk by delegating all node operations to a third-party, and with a fee. Solo staking gives full sovereignty and control over the choices that go into choosing a staking setup. Stakers never have to hand over their keys, and they earn full rewards without any middlemen taking a cut. If this sounds like what you're looking for, learn more about [solo staking](/staking/solo).
 
 **Staking as a service (SaaS)** - These are similar in that stakers do not run the validator software themselves, but unlike pooling options, SaaS requires a full 32 ETH deposit to activate a validator. Rewards accumulate to the staker, and usually involve a monthly fee or other stake to use the service. If you'd prefer your own validator keys and are looking to stake at least 32 ETH, check out [staking as a service](/staking/staking-as-a-service).
 
-## What to consider
+## What to consider {#what-to-consider}
 
 Pooled or delegated staking is not natively supported by the Ethereum protocol, but given the demand for users to stake less than 32 ETH a growing number of solutions have been built out to serve this demand.
 
@@ -63,7 +63,7 @@ Attribute indicators are used below to signal notable strengths or weaknesses a 
   - 🟡 Currently unknown
 - **Liquidity token**: Offers tradable liquidity token representing your staked ETH, held in your own wallet
 
-## Explore staking pools
+## Explore staking pools {#explore-staking-pools}
 
 There are a variety of options available to help you with your setup. Use the above indicators to help guide you through the tools below.
 
@@ -77,6 +77,6 @@ There are a variety of options available to help you with your setup. Use the ab
 
 Have a suggestion for a staking tool we missed? Check out our [product listing policy](/contributing/adding-staking-product) to see if it would be a good fit, and to submit it for review.
 
-## FAQs of pooled staking
+## FAQs of pooled staking {#faqs-of-pooled-staking}
 
 <!-- TODO: Add pool FAQs -->

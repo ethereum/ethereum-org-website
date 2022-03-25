@@ -13,11 +13,11 @@ summaryPoints:
   - SaaS services are a great option for anyone with 32 ETH who doesn't feel comfortable dealing with the technical complexity of running a node.
 ---
 
-## What is staking as a service?
+## What is staking as a service? {#what-is-staking-as-a-service}
 
 Staking as a service (“SaaS") represents a category of staking services where you deposit your own 32 ETH for a validator, but delegate node operations to a third-party operator. This process usually involved being guided through the initial setup, including key generation and deposit, then uploading your signing keys to the operator. This allows the service to operate your validator on your behalf, usually for a monthly fee.
 
-## Why stake with a service?
+## Why stake with a service? {#why-stake-with-a-service}
 
 The Ethereum protocol does not natively support delegation of stake, so these services have been built out to fill this demand. If you have 32 ETH to stake, but don't feel comfortable dealing with hardware, SaaS services allow you to delegate the hard part, while you earn native block rewards.
 
@@ -32,13 +32,13 @@ The Ethereum protocol does not natively support delegation of stake, so these se
   In many cases users do not have to give up access to the keys that enable withdrawing or transferring staked funds. These are different than the signing keys, and can be stored separately to limit (but not eliminate) your risk as a staker.
 </Card>
 
-## How does it compare?
+## How does it compare? {#how-does-it-compare}
 
 **Solo staking** - Similarities include having your own validator keys without having to pool funds, but with SaaS you must trust a third-party, who may potentially act maliciously or become a target of attack or regulation themselves. If these trust assumptions or centralization risks concern you, we recommend learning [more about solo staking](/staking/solo), the gold standard of self-sovereign staking.
 
 **Pooled staking** - These are similar in that you're generally relying on someone else to run the validator, but unlike SaaS, pooled staking allows you to participate with smaller amounts of ETH. If you're looking to stake with less than 32 ETH, consider learning [more about pooled staking](/staking/pools) services.
 
-## What to consider
+## What to consider {#what-to-consider}
 
 There are a growing number of staking-as-a-service providers to help you stake your ETH, but each come with different risks and benefits.
 
@@ -60,7 +60,7 @@ Attribute indicators are used below to signal notable strengths or weaknesses a 
   - 🟡 Currently unknown
 - **Self custody**: User maintains custody of any validator credentials, including signing and withdrawal keys
 
-## Explore staking service providers
+## Explore staking service providers {#saas-providers}
 
 Below are some available SaaS provider. Use the above indicators to help guide you through these services
 
@@ -74,7 +74,7 @@ Below are some available SaaS provider. Use the above indicators to help guide y
 
 Have a suggestion for a staking-as-a-service provider we missed? Check out our [product listing policy](/contributing/adding-staking-product) to see if it would be a good fit, and to submit it for review.
 
-## FAQs of staking services
+## FAQs of staking services {#faqs}
 
 - Who holds the keys?
 - When can I withdraw?
