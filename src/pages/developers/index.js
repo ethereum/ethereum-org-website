@@ -514,6 +514,13 @@ const DevelopersPage = ({ data }) => {
             <p>
               <Translation id="page-developers-scaling-desc" />
             </p>
+
+            <Link to="/developers/docs/data-structures/">
+              <Translation id="page-developers-data-structures-link" />
+            </Link>
+            <p>
+              <Translation id="page-developers-data-structures-desc" />
+            </p>
           </RightColumn>
         </ThreeColumnContent>
       </GrayContainer>

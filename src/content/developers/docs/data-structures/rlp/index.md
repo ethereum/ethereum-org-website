@@ -8,7 +8,7 @@ sidebarDepth: 2
 
 Recurisive length prefix serialization is used extensively in Ethereum's execution clients. It's purpose is to standardize the transfer of data between nodes in a space-efficient format. Once established, these RLP sessions allow the transfer of data between clients. The purpose of RLP (Recursive Length Prefix) is to encode arbitrarily nested arrays of binary data, and RLP is the main encoding method used to serialize objects in Ethereum's execution layer. The only purpose of RLP is to encode structure; encoding specific data types (eg. strings, floats) is left up to higher-order protocols; but positive RLP integers must be represented in big endian binary form with no leading zeroes (thus making the integer value zero be equivalent to the empty byte array). Deserialised positive integers with leading zeroes must be treated as invalid. The integer representation of string length must also be encoded this way, as well as integers in the payload. Additional information can be found in the Ethereum yellow paper Appendix B.
 
-If one wishes to use RLP to encode a dictionary, the two suggested canonical forms are to either use `[[k1,v1],[k2,v2]...]` with keys in lexicographic order or to use the higher-level [Patricia Tree](./patricia-tree.md) encoding as Ethereum does.
+If one wishes to use RLP to encode a dictionary, the two suggested canonical forms are to either use `[[k1,v1],[k2,v2]...]` with keys in lexicographic order or to use the higher-level Patricia Tree encoding as Ethereum does.
 
 ## Definition
 

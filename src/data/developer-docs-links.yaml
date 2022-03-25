@@ -178,3 +178,9 @@
           to: /developers/docs/scaling/plasma/
         - id: docs-nav-scaling-validium
           to: /developers/docs/scaling/validium/
+    - id: docs-nav-data-structures
+      to: /developers/docs/data-structures/
+      description: docs-nav-data-structures-description
+      items:
+        - id: docs-nav-data-structures-rlp
+          to: /developers/docs/data-structures/rlp/
