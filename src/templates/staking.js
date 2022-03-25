@@ -232,7 +232,7 @@ const Title = styled.h1`
   margin-top: 1rem;
 `
 
-const SummaryPoint = styled.p`
+const SummaryPoint = styled.li`
   /* font-size: 1rem; */
   color: ${(props) => props.theme.colors.text300};
   /* margin-bottom: 0rem; */
@@ -240,10 +240,10 @@ const SummaryPoint = styled.p`
 `
 
 const SummaryBox = styled.div`
-  ul {
+  /* ul {
     list-style: none;
     padding-left: 0;
-  }
+  } */
 `
 
 const StyledButtonDropdown = styled(ButtonDropdown)`
@@ -274,12 +274,7 @@ const Container = styled.div`
 
 const HeroContainer = styled.div`
   display: flex;
-  /* width: 100%; */
-  /* background: ${(props) => props.theme.colors.cardGradient}; */
-  /* box-shadow: inset 0px -1px 0px rgba(0, 0, 0, 0.1); */
-  /* justify-content: flex-end; */
-  /* max-height: 608px; */
-  /* min-height: 608px; */
+  align-items: center;
   padding: 2rem;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     flex-direction: column;
@@ -420,9 +415,11 @@ const StakingPage = ({ data, pageContext, location }) => {
           <Breadcrumbs slug={location.pathname} startDepth={2} />
           <Title>{mdx.frontmatter.title}</Title>
           <SummaryBox>
-            {summaryPoints.map((point, idx) => (
-              <SummaryPoint key={idx}>{point}</SummaryPoint>
-            ))}
+            <ul>
+              {summaryPoints.map((point, idx) => (
+                <SummaryPoint key={idx}>{point}</SummaryPoint>
+              ))}
+            </ul>
           </SummaryBox>
           <MobileTableOfContents
             items={tocItems}
