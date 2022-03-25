@@ -10,35 +10,39 @@ alt: Leslie the rhino on her own computer chip.
 sidebarDepth: 2
 summaryPoints:
   - Solo stakers running home hardware provide the most possible benefit to the health and decentralization of the Ethereum network.
+  - Staking at home gives you complete control over the security of your funds.
+  - Stakers receive rewards directly from the protocol for keeping their validator properly functioning and online.
 ---
 
 ## What is solo staking? {#what-is-solo-staking}
 
 Solo staking is the act of running an Ethereum node connected to the internet and depositing 32 ETH to activate a [validator](#what-is-a-validator), giving you the ability to participate directly in network consensus.
 
-Running an Ethereum node consists of running both an execution layer (EL) client, as well as a consensus layer (CL) client. These clients are software that work together, along with a valid set of signing keys, to verify transactions and blocks, attest to the correct head of the chain, aggregate attestations, and propose blocks.
+An Ethereum node consists of both an execution layer (EL) client, as well as a consensus layer (CL) client. These clients are software that work together, along with a valid set of signing keys, to verify transactions and blocks, attest to the correct head of the chain, aggregate attestations, and propose blocks.
 
-Solo stakers are responsible for operating the hardware needed to run these clients. It is highly recommended to use a dedicated machine for this that you operate from home – this is extremely beneficial to the health of the network.
+Solo stakers are responsible for operating the hardware needed to run these clients. It is highly recommended to use a dedicated machine for this that you operate from home–this is extremely beneficial to the health of the network.
 
-A solo staker receives rewards directly from the protocol for simply being online and properly fulfilling tasks assigned to it when needed. Note, the user just needs to keep the node powered and online with clients running; the client software will do the rest.
-
-Being offline results in small penalties roughly in the amount of what you would have earned in that same amount of time. Slashing is a more serious penalty reserved for malicious behavior, which results in losing at least 0.5 ETH and ejection from the network.
+A solo staker receives rewards directly from the protocol for keeping their validator properly functioning and online.
 
 ## Why stake solo? {#why-stake-solo}
 
-Solo staking provides you with maximum power as well as maximum responsibility. Here's a few things to consider when deciding if you'd like to solo stake vs. using a staking service or joining a staking pool.
+Solo staking comes with more responsibility, but provides you with maximum control over your funds and staking setup.
 
+<Card title="Earn fresh ETH">
+  Earn ETH denominated rewards directly from the protocol when your validator is online, without any middlemen taking a cut.
+</Card>
 <Card title="Full control">
-  Solo staking allows you to completely customize your staking setup. You can configure your hardware, your software clients, your monitoring setup, choose which upgrades you support, etc. Unlike pool services that often make this decisions for you.
+  Keep your own keys, and choose the combination of clients and hardware that allows you to minimize your risk, and best contribute to the health and security of the network. Third-party staking services make this decision for you.
+  <br/><br/>
+  <a href="https://pools.invis.cloud/">This is not always the safest.</a>
 </Card>
 <Card title="Network security">
-  Solo staking is the most impactful way to stake. By running a validator on your own hardware, you help ensure the Ethereum protocol remains robust, decentralized, and secure.
-</Card>
-<Card title="Maximum rewards">
-  You'll earn full rewards from the Ethereum protocol when you solo stake, unlike staking pools or staking services that all extract a fee..
+  Solo staking is the most impactful way to stake. By running a validator on your own hardware at home, you strengthen the robustness, decentralization, and security of the Ethereum protocol.
 </Card>
 
 ## Considerations before staking solo {#considerations-before-staking-solo}
+
+<!-- TODO: Add slashing link in card below -->
 
 As much as we wish that solo staking was accessible and risk free to everyone, this is not reality. There are some practical and serious considerations to keep in mind before choosing to solo stake your ETH.
 
@@ -52,18 +56,22 @@ As much as we wish that solo staking was accessible and risk free to everyone, t
 </Card>
 <Card title="Secure key management">
   Just like how private keys secure your Ethereum address, you will need to generate keys specifically for your validator. You must understand how to keep any seed phrases or private keys safe and secure.
-
-<ButtonLink to="/security">Ethereum security and scam prevention</ButtonLink>
+  <ButtonLink to="/security">Ethereum security and scam prevention</ButtonLink>
 </Card>
 <Card title="No withdrawing (for now)">
-Withdrawing staked ETH or rewards from a validator balance is not yet supported. Support for withdrawals are planned for the Shanghai upgrade following The Merge. You should anticipate your ETH being locked for at least one-to-two years. After Shanghai, this will no longer be the case, at which point you will be able to freely withdraw portions or all of your stake if you wish.
+  Withdrawing staked ETH or rewards from a validator balance is not yet supported. Support for withdrawals are planned for the Shanghai upgrade following The Merge. You should anticipate your ETH being locked for at least one-to-two years. After Shanghai, this will no longer be the case, at which point you will be able to freely withdraw portions or all of your stake if you wish.
 </Card>
 <Card title="Maintenance">
-Hardware occasionally fails, connections error out, and client software occasionally needs upgrading. Node maintenance is inevitable and will occasionally require your attention. You'll want to be sure you stay aware of any anticipated network upgrades, or other critical client upgrades.
+  Hardware occasionally fails, connections error out, and client software occasionally needs upgrading. Node maintenance is inevitable and will occasionally require your attention. You'll want to be sure you stay aware of any anticipated network upgrades, or other critical client upgrades.
 </Card>
 <Card title="Reliable Uptime">
-Your rewards are proportional to the time your validator is online and properly attesting. Downtime incurs penalties roughly equal to what you would have earned in that same amount of time. Being offline while the network is finalizing does not result in slashing.
-Epoch rewards are inversely proportional to how long it takes your attestations to be included, meaning internet bandwidth also matter. This can vary, but a minimum of 10 Mb/s up and down is recommended.
+  Your rewards are proportional to the time your validator is online and properly attesting. Downtime incurs penalties roughly equal to what you would have earned in that same amount of time. Being offline while the network is finalizing does not result in slashing.
+  Epoch rewards are inversely proportional to how long it takes your attestations to be included, meaning internet bandwidth also matter. This can vary, but a minimum of 10 Mb/s up and down is recommended.
+</Card>
+<Card title="Slashing risk">
+  Different from inactivity penalties for being offline, <em>slashing</em> is a much more serious penalty reserved for malicious offenses. By running a minority client with your keys loaded on only one machine at time, your risk of being slashed is minimized. That being said, all stakers must be aware of the risks of slashing.
+  
+  <a href="">More on slashing</a>
 </Card>
 
 ## How does it compare?
@@ -97,7 +105,7 @@ There are a growing number of tools and services to help you solo stake your ETH
 
 Attribute indicators are used below to signal notable strengths or weaknesses a listed staking tool may have. Use this section as a reference for how we define these attributes while you’re choosing what tools to help with your staking journey.
 
-<!-- Card grid: -->
+<!-- TODO: Create card grid component for these items -->
 
 - **Open source**: Essential code is 100% open source and available to the public to fork and use
 - **Audited**: Essential code has undergone formal auditing with results published and available publicly
@@ -119,7 +127,7 @@ Attribute indicators are used below to signal notable strengths or weaknesses a 
 
 There are a variety of options available to help you with your setup. Use the above indicators to help guide you through the tools below.
 
-> Please note the importance of choosing a [minority client](/client-diversity) as it improves the security of the network, and limits your risk. Tools that allow you to setup minority client are denoted as "multi-client."
+> Please note the importance of choosing a [minority client](/developers/docs/nodes-and-clients/client-diversity) as it improves the security of the network, and limits your risk. Tools that allow you to setup minority client are denoted as "multi-client."
 
 ```
 <CardGrid>
@@ -137,21 +145,9 @@ Have a suggestion for a staking tool we missed? Check out our [product listing p
 
 ## Things to know
 
-These are some of the most common questions about solo staking on Ethereum.
+These are a few of the most common questions about staking that are worth knowing about.
 
-<!-- TODO: Edit and fill this out, and reevaluate placement on page -->
-
-- What do I need to know before solo staking?
-  <!-- TODO: Answer -->
-- Initial setup: Internet and hardware requirements
-  <!-- TODO: Answer -->
-- Choosing the right client
-  <!-- TODO: Answer -->
-- Summary of penalties
-  <!-- TODO: Answer -->
-- Changes after the merge
-  <!-- TODO: Answer -->
-- **What is a validator?**
+**What is a validator?**
 
 A _validator_ is a virtual entity that lives on the Beacon Chain, represented by a balance, public key, and other properties. A _validator client_ is the software that acts on behalf of the validator by holding and using its private key. A single validator client can hold many key pairs, controlling many validators.
 
@@ -160,3 +156,27 @@ Each key-pair associated with a validator requires 32 ETH to be activated. More
 Do not deposit more than 32 ETH for a single validator. It will be locked until the planned Shanghai update.
 
 If solo staking seems too demanding you you, consider using a [staking-as-a-service](/staking/saas) provider, or if you're working with less than 32 ETH, check out the [staking pools](/staking/pools).
+
+**Is staking already live?**
+
+<!-- TODO: Answer to try and clarify a synopsis of the Beacon Chain and The Merge. -->
+
+**I'm running the Beacon Chain, is that enough?**
+
+<!-- TODO: Answer about how you need to run both clients as of The Merge... content on Figma? -->
+
+**Which client is best?**
+
+Individual clients may vary slightly in terms of performance of user interface, as each are developed by different teams, using a variety of programming languages. That being said, none of them are "the best." All production clients are excellent pieces of software, that all perform the same basic functions to sync and interact with the blockchain.
+
+Since all production clients provide the same basic functionality, it is actually very important that you choose a **minority client**, meaning a client that is NOT currently being used by a majority of validators on the network. This may sound counterintuitive, but running a majority or supermajority client puts you at an increased risk of slashing in the event of a bug in that client. Running a minority client drastically limits these risks.
+
+[Learn more about why client diversity is critical](https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA)
+
+**Can I just use a VPS (virtual private service)?**
+
+<!-- TODO: Answer about cloud servers being detrimental to centralization of the network. If AWS or DigitalOcean go down, you're penalties will be much larger, and you'll be at an increased risk of slashing. ie: >1/3 the network uses AWS and it goes down or is targetted by regulation... The network would no longer finalize, and you, by using AWS, could be part of the validators set that would be subject to quadratic leaking.-->
+
+**Do I need to do anything before The Merge?**
+
+<!-- TODO: Answer -->
