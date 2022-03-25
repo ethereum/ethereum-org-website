@@ -89,26 +89,7 @@ After Shanghai, users will be able to withdraw their rewards as well as their st
 
 The Staking Launchpad is an open source application that will help you become a validator. It walks you through a preparation checklist, how to choose clients, generate your keys and assists with depositing your ETH to the staking deposit contract.
 
-<!-- <LaunchpadWidget> -->
-
-Choose network
-<select>
-
-<option value="prater">Goerli/Prater Testnets</option>
-<option value="mainnet">Mainnet</option>
-</select>
-
-🧪 Solo validators are expected to **test their setup** and operational skills on the prater testnet before risking funds. Remember it is important to choose a [minority client](/client-diversity) as it improves the security of the network, and limits your risk.
-
-<code>If you're comfortable with it, you can set up everything needed from the command line using the Staking Launchpad alone.</code>
-
-🛠 To make things easier, check out some of the tools and guides below that can help you alongside the Staking Launchpad to get your clients set up with ease.
-
-<ButtonLink to="https://prater.launchpad.ethereum.org">Start staking</ButtonLink>
-
-<ButtonLink to="#tools">Software tools and guide</ButtonLink>
-
-<!-- </LaunchpadWidget> -->
+<LaunchpadWidget />
 
 ## What to consider with node and client setup tools
 

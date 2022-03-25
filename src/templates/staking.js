@@ -37,6 +37,7 @@ import {
 } from "../components/SharedStyledComponents"
 import Emoji from "../components/Emoji"
 import YouTube from "../components/YouTube"
+import LaunchpadWidget from "../components/LaunchpadWidget"
 
 import { isLangRightToLeft } from "../utils/translations"
 import stakingProducts from "../data/staking-products.json"
@@ -221,6 +222,7 @@ const components = {
   DocLink,
   ExpandableCard,
   YouTube,
+  LaunchpadWidget,
 }
 
 const Title = styled.h1`
