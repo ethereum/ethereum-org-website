@@ -13,7 +13,7 @@ You may be interested in running an [Ethereum node](/developers/docs/nodes-and-c
 
 A light client requires less than 400MB of storage whilst still allowing full interactivity with the Ethereum state. Light clients retrieve data from remote peers, so some queries may take longer to respond in comparison to other sync modes.
 
-For an explanation of the differences between the different sync modes, read our [nodes and clients developer docs](developers/docs/nodes-and-clients/#node-types).
+For an explanation of the differences between the different sync modes, read our [nodes and clients developer docs](/developers/docs/nodes-and-clients/#node-types).
 
 ## Install and run {#install-and-run}
 
