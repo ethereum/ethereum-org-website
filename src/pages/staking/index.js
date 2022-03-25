@@ -31,107 +31,6 @@ const StyledCallout = styled(CalloutBanner)`
   margin-right: 0rem;
 `
 
-const Row = styled.div`
-  display: flex;
-  align-items: flex-start;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column;
-  }
-`
-
-const H2 = styled.h2`
-  font-size: 1.5rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 22px;
-  letter-spacing: 0px;
-  margin-top: 0.5rem;
-`
-
-const H3 = styled.h3`
-  margin-top: 0rem;
-`
-
-const Column = styled.div`
-  flex: 1 1 33%;
-  margin-bottom: 1.5rem;
-  margin-right: 2rem;
-  width: 100%;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-right: 0rem;
-    margin-left: 0rem;
-  }
-`
-
-const StyledCard = styled(Card)`
-  flex: 1 1 30%;
-  min-width: 240px;
-  margin: 1rem;
-  padding: 1.5rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex: 1 1 30%;
-  }
-`
-
-const BoxText = styled.div`
-  font-size: 1.25rem;
-`
-
-const Box = styled.div`
-  padding: 1.5rem;
-  border: 1px solid ${(props) => props.theme.colors.border};
-  margin: 2rem 4rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    margin: 2rem 0;
-  }
-`
-
-const Vision = styled.div`
-  margin-top: 4rem;
-`
-
-const OptionContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  margin-bottom: 4rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    flex-direction: column;
-  }
-`
-
-const Option = styled.div`
-  border-radius: 32px;
-  border: 1px solid
-    ${(props) =>
-      props.isActive ? props.theme.colors.primary : props.theme.colors.text};
-  color: ${(props) =>
-    props.isActive ? props.theme.colors.primary : props.theme.colors.text};
-  box-shadow: ${(props) =>
-    props.isActive ? props.theme.colors.tableBoxShadow : `none`};
-  display: flex;
-  align-items: center;
-  padding: 1rem 1.5rem;
-  margin: 0.5rem;
-  cursor: pointer;
-`
-
-const OptionText = styled.div`
-  font-size: 1.5rem;
-  line-height: 100%;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    font-size: 1rem;
-    font-weight: 600;
-  }
-`
-
-const StakeContainer = styled.div`
-  margin: 0 auto;
-  max-width: ${(props) => props.theme.breakpoints.m};
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-`
-
 const Page = styled.div`
   display: flex;
   justify-content: space-between;
@@ -288,7 +187,6 @@ const benefits = [
 
 const StakingPage = ({ data, location }) => {
   const intl = useIntl()
-  const [isSoloStaking, setIsSoloStaking] = useState(true)
 
   const heroContent = {
     title: "How to stake your ETH",
