@@ -6,6 +6,38 @@ import Translation from "./Translation"
 import { getData } from "../utils/cache"
 import calculateStakingRewards from "../utils/calculateStakingRewards"
 
+const Container = styled.div`
+  display: flex;
+`
+
+const Cell = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-left: 1px solid #33333355;
+  &:first-child {
+    border-left: none;
+  }
+`
+
+const Value = styled.p`
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 42px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  color: ${({ theme }) => theme.colors.primary};
+`
+
+const Label = styled.p`
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+`
+
 const IndicatorSpan = styled.span`
   font-size: 2rem;
 `
@@ -24,18 +56,10 @@ const LoadingMessage = () => (
 
 const StatsBoxGrid = () => {
   const intl = useIntl()
-  const [totalEth, setTotalEth] = useState({
-    value: 0,
-    hasError: false,
-  })
-  const [totalValidators, setTotalValidators] = useState({
-    value: 0,
-    hasError: false,
-  })
-  const [currentApr, setCurrentApr] = useState({
-    value: 0,
-    hasError: false,
-  })
+  const [totalEth, setTotalEth] = useState(0)
+  const [totalValidators, setTotalValidators] = useState(0)
+  const [currentApr, setCurrentApr] = useState(0)
+  const [error, setError] = useState(false)
 
   useEffect(() => {
     const formatInteger = (amount) =>
@@ -52,10 +76,7 @@ const StatsBoxGrid = () => {
       try {
         const {
           data: { totalvalidatorbalance, validatorscount },
-        } = await getData(
-          "https://mainnet.beaconcha.in/api/v1/epoch/latest",
-          true
-        )
+        } = await getData("https://mainnet.beaconcha.in/api/v1/epoch/latest")
 
         const valueTotalEth = formatInteger(
           (totalvalidatorbalance * 1e-9).toFixed(0)
@@ -65,29 +86,38 @@ const StatsBoxGrid = () => {
           totalvalidatorbalance * 1e-9
         )
         const valueCurrentApr = formatPercentage(currentAprDecimal)
-        setTotalEth({
-          value: valueTotalEth,
-          hasError: false,
-        })
-        setTotalValidators({
-          value: valueTotalValidators,
-          hasError: false,
-        })
-        setCurrentApr({
-          value: valueCurrentApr,
-          hasError: false,
-        })
+        setTotalEth(valueTotalEth)
+        setTotalValidators(valueTotalValidators)
+        setCurrentApr(valueCurrentApr)
+        setError(false)
       } catch (error) {
-        setTotalEth({ ...totalEth, hasError: true })
-        setTotalValidators({ ...totalValidators, hasError: true })
-        setCurrentApr({ ...currentApr, hasError: true })
+        setTotalEth("n/a")
+        setTotalValidators("n/a")
+        setCurrentApr("n/a")
+        setError(true)
       }
-      // TODO: Verify all data is pulling and being formatted correctly, and available when page loads
     })()
   }, [])
 
-  // TODO: Create component structure
-  return null
+  // TODO: Improve error handling
+  if (error) return <ErrorMessage />
+
+  return (
+    <Container>
+      <Cell>
+        <Value>{totalEth}</Value>
+        <Label>Total ETH staked</Label>
+      </Cell>
+      <Cell>
+        <Value>{totalValidators}</Value>
+        <Label>Total validators</Label>
+      </Cell>
+      <Cell>
+        <Value>{currentApr}</Value>
+        <Label>Current APR</Label>
+      </Cell>
+    </Container>
+  )
 }
 
 export default StatsBoxGrid
