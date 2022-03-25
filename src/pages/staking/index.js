@@ -152,11 +152,11 @@ const ComparisonGrid = styled.div`
       "solo-risks saas-risks"
       "solo-reqs saas-reqs"
       "solo-cta saas-cta"
-      "pool-title ."
-      "pool-rewards ."
-      "pool-risks ."
-      "pool-reqs ."
-      "pool-cta .";
+      "pool-title pool-title"
+      "pool-rewards pool-rewards"
+      "pool-risks pool-risks"
+      "pool-reqs pool-reqs"
+      "pool-cta pool-cta";
   }
 
   @media (max-width: 600px) {
@@ -178,11 +178,9 @@ const ComparisonGrid = styled.div`
       "pool-reqs"
       "pool-cta";
   }
-`
 
-const ComparisonColumn = styled.div`
-  h2 {
-    color: ${({ color }) => color};
+  h4 {
+    color: #787878;
   }
 `
 
@@ -292,7 +290,6 @@ const StakingPage = ({ data, location }) => {
           unique. Here we'll compare some of the risks, rewards and requirements
           of the different ways you can stake.
         </p>
-
         <ComparisonGrid>
           <h3 style={{ gridArea: "solo-title", color: "#F2BB2F" }}>
             Solo staking
