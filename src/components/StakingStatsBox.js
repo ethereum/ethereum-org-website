@@ -21,10 +21,10 @@ const Cell = styled.div`
   }
 `
 
-const Value = styled.p`
+const Value = styled.code`
   font-weight: 700;
-  font-size: 32px;
-  line-height: 42px;
+  font-size: 2rem;
+  background: none;
   display: flex;
   align-items: center;
   text-align: center;
@@ -34,7 +34,7 @@ const Value = styled.p`
 
 const Label = styled.p`
   text-transform: uppercase;
-  font-size: 0.8rem;
+  font-size: 0.875rem;
   margin-top: 0.5rem;
 `
 
