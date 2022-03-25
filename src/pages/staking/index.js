@@ -256,8 +256,10 @@ const StakingPage = ({ data, location }) => {
       <Content>
         <h2>Why solo stake your ETH?</h2>
         <CardGrid>
-          {benefits.map(({ title, description }) => (
-            <Card title={title}>{description}</Card>
+          {benefits.map(({ title, description }, idx) => (
+            <Card title={title} key={idx}>
+              {description}
+            </Card>
           ))}
         </CardGrid>
       </Content>
