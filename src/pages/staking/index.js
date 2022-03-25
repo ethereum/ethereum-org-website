@@ -15,10 +15,12 @@ import PageHero from "../../components/PageHero"
 import InfoBanner from "../../components/InfoBanner"
 import CalloutBanner from "../../components/CalloutBanner"
 import Link from "../../components/Link"
-
+import StakingStatsBox from "../../components/StakingStatsBox"
 import PageMetadata from "../../components/PageMetadata"
+import StakingHierarchy from "../../components/StakingHierarchy"
 import {
   CardContainer,
+  CardGrid,
   Content,
   Page,
   Divider,
@@ -130,6 +132,60 @@ const StakeContainer = styled.div`
   text-align: center;
 `
 
+const ComparisonGrid = styled.div`
+  display: grid;
+  gap: 1rem;
+  grid-auto-rows: minmax(64px, auto);
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    "solo-title saas-title pool-title"
+    "solo-rewards saas-rewards pool-rewards"
+    "solo-risks saas-risks pool-risks"
+    "solo-reqs saas-reqs pool-reqs"
+    "solo-cta saas-cta pool-cta";
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "solo-title saas-title"
+      "solo-rewards saas-rewards"
+      "solo-risks saas-risks"
+      "solo-reqs saas-reqs"
+      "solo-cta saas-cta"
+      "pool-title ."
+      "pool-rewards ."
+      "pool-risks ."
+      "pool-reqs ."
+      "pool-cta .";
+  }
+
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "solo-title"
+      "solo-rewards"
+      "solo-risks"
+      "solo-reqs"
+      "solo-cta"
+      "saas-title"
+      "saas-rewards"
+      "saas-risks"
+      "saas-reqs"
+      "saas-cta"
+      "pool-title"
+      "pool-rewards"
+      "pool-risks"
+      "pool-reqs"
+      "pool-cta";
+  }
+`
+
+const ComparisonColumn = styled.div`
+  h2 {
+    color: ${({ color }) => color};
+  }
+`
+
 const paths = [
   {
     emoji: ":money_with_wings:",
@@ -150,22 +206,35 @@ const paths = [
   },
 ]
 
+const benefits = [
+  {
+    title: "More sustainable",
+    description:
+      "Stakers don't need energy-intensive computers in order to participate in a proof-of-stake system–just a laptop or smartphone. This will make Ethereum better for the environment.",
+  },
+  {
+    title: "Better security",
+    description:
+      "The network gets stronger against attacks as more ETH is staked, as it then requires more ETH to control a majority of the network. To become a threat, you would need to hold the majority of validators, which means you'd need to control the majority of ETH in the system–that's a lot!",
+  },
+  {
+    title: "Earn rewards",
+    description:
+      "Rewards are given for actions that help the network reach consensus. You'll get rewards for batching transactions into a new block or checking the work of other validators because that's what keeps the chain running securely.",
+  },
+]
 const StakingPage = ({ data, location }) => {
   const intl = useIntl()
   const [isSoloStaking, setIsSoloStaking] = useState(true)
 
   const heroContent = {
-    title: translateMessageId("page-staking-title-4", intl),
-    header: translateMessageId("page-staking-header-1", intl),
-    subtitle: translateMessageId("page-staking-subtitle", intl),
+    title: "How to stake your ETH",
+    header: "Stake your ETH to earn rewards while securing Ethereum",
+    subtitle:
+      "Staking is a public good for the Ethereum ecosystem. Any user with any amount of ETH can help secure the network and earn rewards in the process.",
     image: getImage(data.rhino),
     alt: translateMessageId("page-staking-image-alt", intl),
-    buttons: [
-      {
-        path: "#stake",
-        content: translateMessageId("page-staking-start", intl),
-      },
-    ],
+    buttons: [],
   }
 
   return (
@@ -175,228 +244,248 @@ const StakingPage = ({ data, location }) => {
         description={translateMessageId("page-staking-meta-description", intl)}
       />
       <PageHero content={heroContent} />
+      <StakingStatsBox />
       <Divider />
       <Content>
-        <Vision>
-          <Breadcrumbs slug={location.pathname} startDepth={1} />
-          <h2>
-            <Translation id="page-staking-just-staking" />
-          </h2>
-          <p>
-            <Translation id="page-staking-description" />{" "}
-            <Link to="/upgrades/beacon-chain/">
-              <Translation id="page-staking-the-beacon-chain" />
-            </Link>
-          </p>
-          <CardContainer>
-            {paths.map((path, idx) => (
-              <StyledCard
-                key={idx}
-                emoji={path.emoji}
-                title={path.title}
-                description={path.description}
-              >
-                {path.url && <Link to={path.url}>{path.link}</Link>}
-              </StyledCard>
-            ))}
-          </CardContainer>
-        </Vision>
+        <h2>What is staking?</h2>
+        <p>
+          Staking is the act of locking up ETH to give you the right to
+          participate in block proposals on the network. Anyone who holds even a
+          small amount of ETH can consider staking.
+        </p>
       </Content>
-      <Divider id="stake" />
       <Content>
-        <StakeContainer>
-          <h2>
-            <Translation id="page-staking-how-to-stake" />
-          </h2>
-          <p>
-            <Translation id="page-staking-how-to-stake-desc" />{" "}
-          </p>
-          <h3>
-            <Translation id="page-staking-how-much" />
+        <h2>Why solo stake your ETH?</h2>
+        <CardGrid>
+          {benefits.map(({ title, description }) => (
+            <Card title={title}>{description}</Card>
+          ))}
+        </CardGrid>
+      </Content>
+      <Content>
+        <h2>How to stake ETH?</h2>
+        <p>
+          It all depends on how much you are willing to stake. You'll need
+          32 ETH to activate your own validator, but it is possible to stake
+          less.
+        </p>
+        <p>
+          Check out the options below and go for the one that is best for you,
+          and for the network.
+        </p>
+      </Content>
+      <Content>
+        <StakingHierarchy />
+        <p>
+          Given the number of these unique solutions, they vary in terms of
+          risks, rewards, and trust assumptions. Some of them are more
+          decentralized, battle-tested and/or risky than others. We'll provide
+          some information on popular projects in the space, but{" "}
+          <em>always do your own research</em> before sending ETH anywhere.
+        </p>
+      </Content>
+      <Divider />
+      <Content>
+        <h2>Comparison of staking options</h2>
+        <p>
+          There is no one-size-fits-all solution for staking, and each is
+          unique. Here we'll compare some of the risks, rewards and requirements
+          of the different ways you can stake.
+        </p>
+
+        <ComparisonGrid>
+          <h3 style={{ gridArea: "solo-title", color: "#F2BB2F" }}>
+            Solo staking
           </h3>
-          <OptionContainer>
-            <Option
-              isActive={isSoloStaking}
-              onClick={() => setIsSoloStaking(true)}
-            >
-              <Emoji mr={`1rem`} text=":moneybag:" />
-              <OptionText>32 ETH</OptionText>
-            </Option>
-            <Option
-              isActive={!isSoloStaking}
-              onClick={() => setIsSoloStaking(false)}
-            >
-              <Emoji mr={`1rem`} text=":swimmer:" />
-              <OptionText>
-                <Translation id="page-staking-less-than" /> 32 ETH
-              </OptionText>
-            </Option>
-          </OptionContainer>
-          {isSoloStaking && (
-            <GhostCard>
-              <InfoBanner isWarning={true} mb={`2rem`}>
-                <H2>
-                  <Translation id="page-staking-withdrawals" />
-                </H2>
-                <div>
-                  <Translation id="page-staking-withdrawals-desc" />{" "}
-                  <Link to="/upgrades/merge/">
-                    <Translation id="page-staking-docked" />
-                  </Link>
-                </div>
-              </InfoBanner>
-              <h3>
-                <Translation id="page-staking-solo" />
-              </h3>
-              <p>
-                <Translation id="page-staking-solo-desc" />
-              </p>
-              <ButtonLink mb={`2rem`} to="https://launchpad.ethereum.org">
-                <Translation id="page-staking-start" />
-              </ButtonLink>
-              <h3>
-                <Translation id="page-staking-deposit-address" />
-              </h3>
-              <p>
-                <Translation id="page-staking-deposit-address-desc" />
-              </p>
-              <ButtonLink mb={`2rem`} to="/staking/deposit-contract/">
-                <Translation id="page-staking-check-address" />
-              </ButtonLink>
-            </GhostCard>
-          )}
-          {!isSoloStaking && (
-            <GhostCard>
-              <H3>
-                <Translation id="page-staking-pool" />
-              </H3>
-              <p>
-                <Translation id="page-staking-rocket-pool" />
-              </p>
-              <p>
-                <Link to="https://rocketpool.net">
-                  <Translation id="Learn more on their website" />
-                </Link>
-              </p>
-              <p>
-                <Translation id="page-staking-pool-desc" />
-              </p>
-              <p>
-                <Link to="https://beaconcha.in/stakingServices">
-                  <Translation id="page-staking-services" />
-                </Link>
-              </p>
-              <InfoBanner isWarning={true}>
-                <H2>
-                  <Translation id="page-staking-dyor" />
-                </H2>
-                <div>
-                  <Translation id="page-staking-dyor-desc" />{" "}
-                </div>
-              </InfoBanner>
-            </GhostCard>
-          )}
-        </StakeContainer>
+          <div
+            style={{
+              gridArea: "solo-rewards",
+              borderBottom: "1px solid #3335",
+            }}
+          >
+            <h4>Rewards</h4>
+            <ul>
+              <li>
+                Receive rewards directly from the protocol for actions that help
+                the network reach consensus.
+              </li>
+              <li>
+                You'll get rewards for batching transactions into a new block or
+                checking the work of other validators to keep the chain running
+                securely.
+              </li>
+            </ul>
+          </div>
+          <div
+            style={{ gridArea: "solo-risks", borderBottom: "1px solid #3335" }}
+          >
+            <h4>Risks</h4>
+            <ul>
+              <li>Your ETH is at stake.</li>
+              <li>There are penalties, which cost ETH, for going offline.</li>
+              <li>
+                Malicious behavior can result in “slashing” of larger amounts of
+                ETH and forced ejection from the network.
+              </li>
+            </ul>
+          </div>
+          <div style={{ gridArea: "solo-reqs" }}>
+            <h4>Requirements</h4>
+            <ul>
+              <li>You must deposit 32 ETH.</li>
+              <li>
+                Maintain hardware that runs both an Ethereum execution client
+                and consensus client while connected to the internet.
+              </li>
+              <li>
+                The{" "}
+                <Link to="https://prater.launchpad.ethereum.org">
+                  Staking Launchpad
+                </Link>{" "}
+                will walk you through the process and hardware requirements.
+              </li>
+            </ul>
+          </div>
+          <div style={{ gridArea: "solo-cta" }}>
+            <ButtonLink to="/staking/solo">More on solo staking</ButtonLink>
+          </div>
+
+          <h3 style={{ gridArea: "saas-title", color: "#49DE96" }}>
+            Staking as a service
+          </h3>
+          <div
+            style={{
+              gridArea: "saas-rewards",
+              borderBottom: "1px solid #3335",
+            }}
+          >
+            <h4>Rewards</h4>
+            <ul>
+              <li>
+                Usually involved full protocol rewards minus monthly fee for
+                node operations.
+              </li>
+              <li>
+                Dashboards often available to easily track your validator
+                client.
+              </li>
+            </ul>
+          </div>
+          <div
+            style={{ gridArea: "saas-risks", borderBottom: "1px solid #3335" }}
+          >
+            <h4>Risks</h4>
+            <ul>
+              <li>
+                Subject to same risks as solo staking plus counter-party risk of
+                service provider.
+              </li>
+              <li>
+                Your ETH is at stake, and safe use of your signing keys is
+                entrusted to someone else who could behave maliciously.
+              </li>
+            </ul>
+          </div>
+          <div style={{ gridArea: "saas-reqs" }}>
+            <h4>Requirements</h4>
+            <ul>
+              <li>Deposit 32 ETH and generate your keys with assistance.</li>
+              <li>Store your keys securely.</li>
+              <li>
+                The rest is taken care of, though specific services will vary.
+              </li>
+            </ul>
+          </div>
+          <div style={{ gridArea: "saas-cta" }}>
+            <ButtonLink to="/staking/saas">
+              More on staking as a service
+            </ButtonLink>
+          </div>
+
+          <h3 style={{ gridArea: "pool-title", color: "#A9D3F2" }}>
+            Pooled staking
+          </h3>
+          <div
+            style={{
+              gridArea: "pool-rewards",
+              borderBottom: "1px solid #3335",
+            }}
+          >
+            <h4>Rewards</h4>
+            <ul>
+              <li>
+                Pooled stakers accrue rewards differently, depending on which
+                method of pooled staking chosen.
+              </li>
+              <li>
+                Many pooled staking services offer one or more liquidity tokens
+                that represents your staked ETH plus your share of the validator
+                rewards.
+              </li>
+              <li>
+                Liquidity tokens can be held in your own wallet, used in defi
+                and sold if you decide to exit.
+              </li>
+            </ul>
+          </div>
+          <div
+            style={{ gridArea: "pool-risks", borderBottom: "1px solid #3335" }}
+          >
+            <h4>Risks</h4>
+            <ul>
+              <li>
+                The risks to pooled staking vary depending on the method used.
+              </li>
+              <li>
+                In general risks consist of a combination of counter-party,
+                smart contract and execution risk.
+              </li>
+            </ul>
+          </div>
+          <div style={{ gridArea: "pool-reqs" }}>
+            <h4>Requirements</h4>
+            <ul>
+              <li>
+                To join a pool, you will need to have some ETH in your own
+                wallet.
+              </li>
+              <li>
+                From there you can deposit directly to different pooled staking
+                platforms, or you can simply trade for one of the staking
+                liquidity tokens.
+              </li>
+            </ul>
+          </div>
+          <div style={{ gridArea: "pool-cta" }}>
+            <ButtonLink to="/staking/pools/">More on pooled staking</ButtonLink>
+          </div>
+        </ComparisonGrid>
       </Content>
       <Divider />
       <StyledCallout
-        image={getImage(data.rhino)}
+        image={getImage(data.community)}
         alt={translateMessageId("page-staking-image-alt", intl)}
         titleKey={"page-staking-join-community"}
         descriptionKey={"page-staking-join-community-desc"}
       >
-        <div>
-          <ButtonLink to="https://www.reddit.com/r/ethstaker/">
-            <Translation id="page-staking-join" /> r/ethstaker
+        <div style={{ display: "flex", gap: "1rem" }}>
+          <ButtonLink to="https://discord.io/ethstaker">
+            Join Discord
           </ButtonLink>
+          <ButtonLink to="https://reddit.com/r/ethstaker">
+            Join Reddit
+          </ButtonLink>
+          <ButtonLink to="https://ethstaker.cc">Visit Website</ButtonLink>
         </div>
       </StyledCallout>
       <Content>
-        <Row>
-          <Column>
-            <H2>
-              <Translation id="page-staking-pos-explained" />
-            </H2>
-            <p>
-              <Translation id="page-staking-pos-explained-desc" />{" "}
-              <Link to="/developers/docs/consensus-mechanisms/">
-                <Translation id="page-staking-consensus" />
-              </Link>
-            </p>
-
-            <p>
-              <Translation id="page-staking-pos-explained-desc-1" />
-            </p>
-            <h3>
-              <Translation id="page-staking-at-stake" />
-            </h3>
-            <p>
-              <Translation id="page-staking-at-stake-desc" />
-            </p>
-            <h3>
-              <Translation id="page-staking-validators" />
-            </h3>
-            <p>
-              <Translation id="page-staking-validators-desc" />
-            </p>
-          </Column>
-          <Column>
-            <Box>
-              <H2>
-                <Translation id="page-staking-upgrades-title" />
-              </H2>
-              <BoxText>
-                <ul>
-                  <li>
-                    <Translation id="page-staking-upgrades-li" />
-                  </li>
-                  <li>
-                    <Translation id="page-staking-upgrades-li-2" />
-                  </li>
-                  <li>
-                    <Translation id="page-staking-upgrades-li-3" />
-                  </li>
-                  <li>
-                    <Translation id="page-staking-upgrades-li-4" />
-                  </li>
-                  <li>
-                    <Translation id="page-staking-upgrades-li-5" />
-                  </li>
-                </ul>
-              </BoxText>
-            </Box>
-          </Column>
-        </Row>
-        <H2>
-          <Translation id="page-staking-benefits" />
-        </H2>
-        <CardContainer>
-          <StyledCard
-            emoji=":evergreen_tree:"
-            title={translateMessageId("page-staking-sustainability", intl)}
-            description={translateMessageId(
-              "page-staking-sustainability-desc",
-              intl
-            )}
-          />
-          <StyledCard
-            emoji=":globe_showing_americas:"
-            title={translateMessageId("page-staking-accessibility", intl)}
-            description={translateMessageId(
-              "page-staking-accessibility-desc",
-              intl
-            )}
-          />
-          <StyledCard
-            emoji=":old_key:"
-            title={translateMessageId("page-staking-sharding", intl)}
-            description={translateMessageId("page-staking-sharding-desc", intl)}
-          >
-            <Link to="/upgrades/shard-chains/">
-              <Translation id="page-staking-more-sharding" />
-            </Link>
-          </StyledCard>
-        </CardContainer>
+        {/* TODO: Select FAQs, and answer them */}
+        <h2>FAQs of staking</h2>
+        <ul>
+          <li>How do I withdraw my stake?</li>
+          <li>How are the staking rewards calculated?</li>
+          <li>More on staking economics</li>
+        </ul>
       </Content>
     </Page>
   )
@@ -404,22 +493,9 @@ const StakingPage = ({ data, location }) => {
 
 export default StakingPage
 
-export const poolImage = graphql`
-  fragment poolImage on File {
-    childImageSharp {
-      gatsbyImageData(
-        height: 20
-        layout: FIXED
-        placeholder: BLURRED
-        quality: 100
-      )
-    }
-  }
-`
-
 export const query = graphql`
   {
-    rhino: file(relativePath: { eq: "upgrades/upgrade_rhino.png" }) {
+    community: file(relativePath: { eq: "enterprise-eth.png" }) {
       childImageSharp {
         gatsbyImageData(
           width: 500
@@ -429,16 +505,15 @@ export const query = graphql`
         )
       }
     }
-    consensys: file(relativePath: { eq: "projects/consensys.png" }) {
-      ...poolImage
-    }
-    ethhub: file(relativePath: { eq: "projects/ethhub.png" }) {
-      ...poolImage
-    }
-    etherscan: file(
-      relativePath: { eq: "projects/etherscan-logo-circle.png" }
-    ) {
-      ...poolImage
+    rhino: file(relativePath: { eq: "upgrades/upgrade_rhino.png" }) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 500
+          layout: CONSTRAINED
+          placeholder: BLURRED
+          quality: 100
+        )
+      }
     }
   }
 `
