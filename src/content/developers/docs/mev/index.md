@@ -1,6 +1,6 @@
 ---
 title: Maximal extractable value (MEV)
-description: An introduction to maximal extractable value (MEV), formerly known as miner extractable value.
+description: An introduction to maximal extractable value (MEV)
 lang: en
 sidebar: true
 ---
