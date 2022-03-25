@@ -306,7 +306,7 @@ const StakingPage = ({ data, location }) => {
           </Content>
           <Content>
             <StakingHierarchy />
-            <p>
+            <p style={{ marginTop: "1rem" }}>
               Given the number of these unique solutions, they vary in terms of
               risks, rewards, and trust assumptions. Some of them are more
               decentralized, battle-tested and/or risky than others. We'll

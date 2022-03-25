@@ -30,7 +30,7 @@ const StyledCard = styled.div`
 `
 
 const Content = styled.div`
-  padding-left: 5rem;
+  padding-left: 2rem;
   flex: 1 0 50%;
   display: flex;
   flex-direction: column;
