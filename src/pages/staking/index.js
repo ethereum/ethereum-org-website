@@ -73,9 +73,8 @@ const InfoColumn = styled.aside`
   position: sticky;
   top: 6.25rem; /* account for navbar */
   height: calc(100vh - 80px);
-  flex: 0 1 400px;
-  margin-right: 4rem;
-  margin-left: 2rem;
+  flex: 0 1 340px;
+  margin: 0 3rem 0 2rem;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     display: none;
   }
