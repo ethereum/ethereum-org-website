@@ -421,7 +421,7 @@ The issuance model will be as follows:
 | Reserve used post-sale | 8.26%     | 6.79%        | 3.96%         |
 | Miners                 | 0%        | 17.8%        | 52.0%         |
 
-**Long-Term Supply Growth Rate (percent)**
+#### Long-Term Supply Growth Rate (percent)
 
 ![Ethereum inflation](./ethereum-inflation.png)
 
