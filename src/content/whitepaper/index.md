@@ -425,7 +425,7 @@ The issuance model will be as follows:
 
 ![Ethereum inflation](./ethereum-inflation.png)
 
-_Despite the linear currency issuance, just like with Bitcoin over time the supply growth rate nevertheless tends to zero_
+_Despite the linear currency issuance, just like with Bitcoin over time the supply growth rate nevertheless tends to zero._
 
 The two main choices in the above model are (1) the existence and size of an endowment pool, and (2) the existence of a permanently growing linear supply, as opposed to a capped supply as in Bitcoin. The justification of the endowment pool is as follows. If the endowment pool did not exist, and the linear issuance reduced to 0.217x to provide the same inflation rate, then the total quantity of ether would be 16.5% less and so each unit would be 19.8% more valuable. Hence, in the equilibrium 19.8% more ether would be purchased in the sale, so each unit would once again be exactly as valuable as before. The organization would also then have 1.198x as much BTC, which can be considered to be split into two slices: the original BTC, and the additional 0.198x. Hence, this situation is _exactly equivalent_ to the endowment, but with one important difference: the organization holds purely BTC, and so is not incentivized to support the value of the ether unit.
 
@@ -501,6 +501,6 @@ The concept of an arbitrary state transition function as implemented by the Ethe
 20. [Ethereum Merkle Patricia trees](https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-Patricia-Tree)
 21. [Peter Todd on Merkle sum trees](http://sourceforge.net/p/bitcoin/mailman/message/31709140/)
 
-_For history of the white paper, see [this wiki](https://github.com/ethereum/wiki/blob/old-before-deleting-all-files-go-to-wiki-wiki-instead/old-whitepaper-for-historical-reference.md)_
+_For history of the white paper, see [this wiki](https://github.com/ethereum/wiki/blob/old-before-deleting-all-files-go-to-wiki-wiki-instead/old-whitepaper-for-historical-reference.md)._
 
 _Ethereum, like many community-driven, open-source software projects, has evolved since its initial inception. To learn about the latest developments of Ethereum, and how changes to the protocol are made, we recommend [this guide](/learn/)._
