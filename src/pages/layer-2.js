@@ -305,7 +305,7 @@ const Layer2Page = ({ data }) => {
       emoji: ":page_with_curl:",
       title: "Optimistic rollups",
       description:
-        "Optimistic rollups use fault proofs where transactions are assumed to be valid, but can be challenged if an invalid transaction is suspected. If an invalid tranaction is suspected, a fault proof is ran to see if this has taken place.",
+        "Optimistic rollups use fault proofs where transactions are assumed to be valid, but can be challenged if the alleged state after the transaction is suspected. If an invalid tranaction is suspected, a fault proof is ran to see if this has taken place.",
       childSentence: "More on optimistic rollups",
       childLink: "/developers/docs/scaling/optimistic-rollups/",
     },
@@ -479,7 +479,7 @@ const Layer2Page = ({ data }) => {
           Ethereum and the demand to use it has caused gas prices to rise
           substantially. Therefore the{" "}
           <Link to="/developers/docs/scaling/">need for scaling solutions</Link>{" "}
-          has peaked as well.
+          has increased in demand as well.
         </p>
 
         <h3>Scalability</h3>
@@ -526,11 +526,11 @@ const Layer2Page = ({ data }) => {
           transactions) in order to ensure it has similar security and
           decentralization guarantees, and requires no changes to the layer 1
           protocol. This lets layer 1 handle security, data availability, and
-          decentralization, whilst everything on the layer above (layer 2) can
-          handle scaling. Layer 2s takes the transactional burden away from the
-          layer 1, and posts finalized proofs back to the layer 1 to finalize
-          the state. By taking this load away from layer 1, the base layer will
-          become less congested, and everything becomes more scalable.
+          decentralization, while the layer above (layer 2) handles scaling.
+          Layer 2s takes the transactional burden away from the layer 1, and
+          posts sufficient information to reconstruct the L2 state and verify it
+          is accurate. By taking this load away from layer 1, the base layer
+          will become less congested, and everything becomes more scalable.
         </p>
         <h3>Rollups</h3>
         <TwoColumnContent>
@@ -541,7 +541,7 @@ const Layer2Page = ({ data }) => {
               <Link to="https://l2fees.info/">
                 reduce gas fees by up to 100x
               </Link>{" "}
-              when comparison to a layer 1 transaction.
+              in comparison to a layer 1 transaction.
             </p>
             <p>
               Rollups bundle (or ’roll up’) hundreds of transactions into a
@@ -826,7 +826,7 @@ const Layer2Page = ({ data }) => {
         <ExpandableCard title="What is the difference between optimistic and zero-knowledge rollups?">
           <p>
             Main difference being, validity proofs run the computations and post
-            a proof, whereas fraud proofs only run the computations when fraud
+            a proof, whereas fault proofs only run the computations when faults
             is suspected and needs to be checked. At the moment, most zk-rollups
             are application specific, in contrast with optimistic rollups which
             have largely been generalizable.
@@ -948,11 +948,7 @@ export const query = graphql`
     }
     rollup: file(relativePath: { eq: "layer-2/rollup-2.png" }) {
       childImageSharp {
-        gatsbyImageData(
-          layout: CONSTRAINED
-          placeholder: BLURRED
-          quality: 100
-        )
+        gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED, quality: 100)
       }
     }
     whatIsEthereum: file(relativePath: { eq: "what-is-ethereum.png" }) {
