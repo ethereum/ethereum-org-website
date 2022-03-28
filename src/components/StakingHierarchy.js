@@ -278,9 +278,8 @@ const StakingHierarchy = () => {
           <p>
             If you are not yet comfortable holding ETH in your own wallet,
             options such as centralized exchanges and other custodial providers
-            provide staking-as-a-service and can be a fallback to allow you to
-            earn some yield on your ETH holdings, with minimal oversight or
-            effort.
+            provide staking services and can be a fallback to allow you to earn
+            some yield on your ETH holdings, with minimal oversight or effort.
           </p>
           <p>
             The trade-off here is that centralized providers consolidate large
@@ -297,7 +296,7 @@ const StakingHierarchy = () => {
           <p>
             In the meantime, consider checking out our{" "}
             <Link to="/wallets">wallets page</Link>, where you can get started
-            learning how to take true ownership over your funds. When you’re
+            learning how to take true ownership over your funds. When you're
             ready, come back and level up your staking game by trying one of the
             self-custody pooled staking services offered.
           </p>
