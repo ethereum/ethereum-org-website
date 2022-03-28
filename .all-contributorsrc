@@ -5887,7 +5887,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/67071462?v=4",
       "profile": "https://linktr.ee/kumarkalyan",
       "contributions": [
-        "bug"
+        "bug",
+        "doc"
       ]
     },
     {
@@ -6873,6 +6874,79 @@
       "contributions": [
         "code",
         "design"
+      ]
+    },
+    {
+      "login": "polarpunklabs",
+      "name": "polarpunklabs",
+      "avatar_url": "https://avatars.githubusercontent.com/u/84196983?v=4",
+      "profile": "https://github.com/polarpunklabs",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "neographer",
+      "name": "Neographer",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1559973?v=4",
+      "profile": "https://github.com/neographer",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "britodiego",
+      "name": "Voll",
+      "avatar_url": "https://avatars.githubusercontent.com/u/84880186?v=4",
+      "profile": "https://github.com/britodiego",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "SurpriseMF3000",
+      "name": "SurpriseMF3000",
+      "avatar_url": "https://avatars.githubusercontent.com/u/99681009?v=4",
+      "profile": "https://github.com/SurpriseMF3000",
+      "contributions": [
+        "doc",
+        "code"
+      ]
+    },
+    {
+      "login": "htimsk",
+      "name": "htimsk",
+      "avatar_url": "https://avatars.githubusercontent.com/u/16523856?v=4",
+      "profile": "https://github.com/htimsk",
+      "contributions": [
+        "eventOrganizing"
+      ]
+    },
+    {
+      "login": "odysseus0",
+      "name": "George Zhang",
+      "avatar_url": "https://avatars.githubusercontent.com/u/8635094?v=4",
+      "profile": "https://github.com/odysseus0",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "nitin094-hub",
+      "name": "Nitin Rajesh",
+      "avatar_url": "https://avatars.githubusercontent.com/u/73329655?v=4",
+      "profile": "https://github.com/nitin094-hub",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "rakeshhotker",
+      "name": "Rakesh Hotker",
+      "avatar_url": "https://avatars.githubusercontent.com/u/55056403?v=4",
+      "profile": "https://github.com/rakeshhotker",
+      "contributions": [
+        "doc"
       ]
     }
   ],

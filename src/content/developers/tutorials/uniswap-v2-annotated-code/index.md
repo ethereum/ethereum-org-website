@@ -1976,7 +1976,7 @@ library UQ112x112 {
     }
 ```
 
-Because y is `uint112`, the most if can be is 2^112-1. That number can still be encoded as a `UQ112x112`.
+Because y is `uint112`, the most it can be is 2^112-1. That number can still be encoded as a `UQ112x112`.
 
 ```solidity
     // divide a UQ112x112 by a uint112, returning a UQ112x112
