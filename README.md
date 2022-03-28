@@ -66,6 +66,8 @@ $ git merge upstream/dev
 
 3. Install dependencies
 
+We recommend using a node manager to use multiple node versions in your system. We use [Volta](https://volta.sh/). In case you don't use a manager or you use `nvm`, you can check the currently supported versions under the `"volta"` section on our `package.json` file.
+
 ```sh
 $ yarn
 ```
