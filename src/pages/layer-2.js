@@ -412,8 +412,8 @@ const Layer2Page = ({ data }) => {
           Layer 2 (L2) is a collective term to describe a specific set of
           Ethereum scaling solutions.{" "}
           <b>
-            A layer 2 is separate blockchain that's connected to Ethereum and
-            inherits the security guarantees of Ethereum
+            A layer 2 is separate blockchain that extends Ethereum and inherits
+            the security guarantees of Ethereum
           </b>
           .
         </p>
@@ -553,12 +553,12 @@ const Layer2Page = ({ data }) => {
           submitting bundles of transactions) in order to ensure it has similar
           security and decentralization guarantees, and requires no changes to
           the layer 1 protocol (Ethereum). This lets layer 1 handle security,
-          data availability, and decentralization, whilst everything on the
-          layer 2 can handle scaling. Layer 2s takes the transactional burden
-          away from the layer 1, and posts finalized proofs back to the layer 1
-          to finalize the state. By taking this transaction load away from layer
-          1, the base layer will become less congested, and everything becomes
-          more scalable.
+          data availability, and decentralization, while the layer above (layer
+          2) handles scaling. Layer 2s takes the transactional burden away from
+          the layer 1, and posts finalized proofs back to the layer 1 to
+          finalize the state. By taking this transaction load away from layer 1,
+          the base layer will become less congested, and everything becomes more
+          scalable.
         </p>
         <h3>Rollups</h3>
         <TwoColumnContent>
