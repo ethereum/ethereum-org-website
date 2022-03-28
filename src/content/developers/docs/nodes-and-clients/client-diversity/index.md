@@ -77,9 +77,25 @@ Addressing client diversity requires more than individual users to choose minori
 
 Technical users can help accelerate this process by writing more tutorials and documentation for minority clients and encouraging their node-operating peers to migrate away from the dominant clients. Guides for switching to a minority consensus client are available on [clientdiversity.org](https://clientdiversity.org/).
 
+## Client diversity dashboards {#client-diversity-dashboards}
+
+Several dashboards give real-time client diversity statistics for the execution and consensus layer.
+
+**Consensus layer:**
+
+- [Rated.network](https://www.rated.network/)
+- [clientdiversity.org](https://clientdiversity.org/)
+- [pools.invis.cloud](https://pools.invis.cloud/)
+- [slashed.info](https://www.slashed.info/)
+
+**Execution layer:**
+
+- [Ethernodes](https://ethernodes.org/)
+
 ## Further reading {#further-reading}
 
 - [Client diversity on Ethereum's consensus layer](https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA)
+- [Ethereum Merge: Run the majority client at your own peril!](https://dankradfeist.de/ethereum/2022/03/24/run-the-majority-client-at-your-own-peril.html) – _Dankrad Fiest, March 24 2022_
 - [Importance of client diversity](https://our.status.im/the-importance-of-client-diversity/)
 - [List of Ethereum node services](https://ethereumnodes.com/)
 - ["Five Whys" of the client diversity problem](https://notes.ethereum.org/@afhGjrKfTKmksTOtqhB9RQ/BJGj7uh08)
