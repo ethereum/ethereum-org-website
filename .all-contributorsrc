@@ -6948,6 +6948,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "sebastiendan",
+      "name": "Sébastien Dan",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12198372?v=4",
+      "profile": "https://sebastiendan.github.io/tokyo-stories-8bits/",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
