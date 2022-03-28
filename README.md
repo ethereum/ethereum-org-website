@@ -1454,6 +1454,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="https://github.com/SurpriseMF3000"><img src="https://avatars.githubusercontent.com/u/99681009?v=4?s=100" width="100px;" alt=""/><br /><sub><b>SurpriseMF3000</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=SurpriseMF3000" title="Documentation">📖</a> <a href="https://github.com/ethereum/ethereum-org-website/commits?author=SurpriseMF3000" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/htimsk"><img src="https://avatars.githubusercontent.com/u/16523856?v=4?s=100" width="100px;" alt=""/><br /><sub><b>htimsk</b></sub></a><br /><a href="#eventOrganizing-htimsk" title="Event Organizing">📋</a></td>
+    <td align="center"><a href="https://github.com/odysseus0"><img src="https://avatars.githubusercontent.com/u/8635094?v=4?s=100" width="100px;" alt=""/><br /><sub><b>George Zhang</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=odysseus0" title="Documentation">📖</a></td>
   </tr>
 </table>
 
