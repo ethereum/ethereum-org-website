@@ -99,7 +99,13 @@ const ContentContainer = styled.article`
   position: relative;
   padding: 2rem;
   padding-top: 0rem;
-
+  gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
+    padding: 0rem;
+  }
   .featured {
     padding-left: 1rem;
     margin-left: -1rem;
