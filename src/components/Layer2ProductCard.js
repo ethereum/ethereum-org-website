@@ -5,6 +5,7 @@ import { GatsbyImage } from "gatsby-plugin-image"
 
 // Components
 import ButtonLink from "./ButtonLink"
+import Link from "./Link"
 
 // Styles
 const ImageWrapper = styled.div`
@@ -69,6 +70,7 @@ const StyledButtonLink = styled(ButtonLink)`
 
 const Children = styled.div`
   margin-top: 1rem;
+  margin-bottom: 1rem;
 `
 
 const Layer2ProductCard = ({
@@ -84,14 +86,6 @@ const Layer2ProductCard = ({
   tokenLists,
   ecosystemPortal,
 }) => {
-  // Check if image is an svg as gatsby-plugin-image doesn't support svg
-  let isSvg = false
-  if (typeof image === "string") {
-    if (image.includes("svg")) {
-      isSvg = true
-    }
-  }
-
   return (
     <Card>
       <ImageWrapper background={background}>
@@ -104,22 +98,12 @@ const Layer2ProductCard = ({
           {note.length > 0 && <Description>Note: {note}</Description>}
         </div>
         {children && <Children>{children}</Children>}
+        {bridge && <Link to={bridge}>{name} Bridge</Link>}
+        {ecosystemPortal && (
+          <Link to={ecosystemPortal}>{name} Ecosystem Portal</Link>
+        )}
+        {tokenLists && <Link to={tokenLists}>{name} Token Lists</Link>}
       </Content>
-      {ecosystemPortal && (
-        <StyledButtonLink to={bridge} hideArrow={true}>
-          {name} Ecosystem Portal
-        </StyledButtonLink>
-      )}
-      {tokenLists && (
-        <StyledButtonLink to={bridge} hideArrow={true}>
-          {name} Token Lists
-        </StyledButtonLink>
-      )}
-      {bridge && (
-        <StyledButtonLink to={bridge} hideArrow={true}>
-          {name} Bridge
-        </StyledButtonLink>
-      )}
       <StyledButtonLink to={url} hideArrow={true}>
         Explore {name}
       </StyledButtonLink>

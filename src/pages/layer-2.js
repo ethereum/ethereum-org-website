@@ -303,17 +303,17 @@ const Layer2Page = ({ data }) => {
   const rollupCards = [
     {
       emoji: ":page_with_curl:",
-      title: "Optimistic Rollups",
+      title: "Optimistic rollups",
       description:
-        "Optimistic rollups use fault proofs where transactions are assumed to be valid, but can be challenged if an invalid transaction is suspected. If an invalid tranaction is suspected, a fault proof is ran to see if this has taken place.",
+        "Optimistic rollups use fault proofs where transactions are assumed to be valid, but can be challenged if the alleged state after the transaction is suspected. If an invalid tranaction is suspected, a fault proof is ran to see if this has taken place.",
       childSentence: "More on optimistic rollups",
       childLink: "/developers/docs/scaling/optimistic-rollups/",
     },
     {
       emoji: ":scroll:",
-      title: "Zero Knowledge Rollups",
+      title: "Zero-knowledge rollups",
       description:
-        "Zero Knowledge rollups use validity proofs where transactions calculations are computed off-chain, and then this data is then supplied to Ethereum Mainnet with a proof of their validity.",
+        "Zero-knowledge rollups use validity proofs where transactions calculations are computed off-chain, and then this data is then supplied to Ethereum Mainnet with a proof of their validity.",
       childSentence: "More on zk-rollups",
       childLink: "/developers/docs/scaling/zk-rollups/",
     },
@@ -500,7 +500,7 @@ const Layer2Page = ({ data }) => {
           Ethereum and the demand to use it has caused gas prices to rise
           substantially. Therefore the{" "}
           <Link to="/developers/docs/scaling/">need for scaling solutions</Link>{" "}
-          has peaked as well.
+          has increased in demand as well.
         </p>
 
         <h3>Scalability</h3>
@@ -569,7 +569,7 @@ const Layer2Page = ({ data }) => {
               <Link to="https://l2fees.info/">
                 reduce gas fees by up to 100x
               </Link>{" "}
-              when comparison to a layer 1 transaction.
+              in comparison to a layer 1 transaction.
             </p>
             <p>
               Rollups bundle (or ’roll up’) hundreds of transactions into a
@@ -633,7 +633,9 @@ const Layer2Page = ({ data }) => {
             comprehensive risk assessment framework of each project.
           </p>
           <p>
-            <ButtonLink to="https://l2beat.com">Go to L2BEAT</ButtonLink>
+            <ButtonLink to="https://l2beat.com/?view=risk">
+              Go to L2BEAT
+            </ButtonLink>
           </p>
         </InfoBanner>
       </PaddedContent>
@@ -856,10 +858,10 @@ const Layer2Page = ({ data }) => {
             develop in the future.
           </p>
         </ExpandableCard>
-        <ExpandableCard title="What is the difference between optimistic and zero knowledge rollups?">
+        <ExpandableCard title="What is the difference between optimistic and zero-knowledge rollups?">
           <p>
             Main difference being, validity proofs run the computations and post
-            a proof, whereas fraud proofs only run the computations when fraud
+            a proof, whereas fault proofs only run the computations when faults
             is suspected and needs to be checked. At the moment, most zk-rollups
             are application specific, in contrast with optimistic rollups which
             have largely been generalizable.
@@ -981,11 +983,7 @@ export const query = graphql`
     }
     rollup: file(relativePath: { eq: "layer-2/rollup-2.png" }) {
       childImageSharp {
-        gatsbyImageData(
-          layout: CONSTRAINED
-          placeholder: BLURRED
-          quality: 100
-        )
+        gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED, quality: 100)
       }
     }
     whatIsEthereum: file(relativePath: { eq: "what-is-ethereum.png" }) {

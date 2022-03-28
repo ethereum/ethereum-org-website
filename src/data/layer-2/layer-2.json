@@ -26,7 +26,7 @@
       "tokenLists": "https://tokenlists.org/token-list?url=https://static.optimism.io/optimism.tokenlist.json",
       "noteKey": "layer-2-optimism-note",
       "purpose": ["universal"],
-      "description": "Optimistic Ethereum is an EVM-compatible Optimistic Rollup chain. It aims to be fast, simple, and secure.",
+      "description": "Optimistic Ethereum is an EVM-equivalent Optimistic Rollup chain. It aims to be fast, simple, and secure.",
       "imageKey": "optimism",
       "background": "white"
     },
@@ -56,7 +56,7 @@
       "tokenLists": "",
       "noteKey": "layer-2-boba-note",
       "purpose": ["universal"],
-      "description": "Boba is an Optimistic Rollup scaling solution that aims to reduce gas fees, improve transaction throughput, and extend the capabilities of smart contracts.",
+      "description": "Boba is an Optimistic Rollup originally forked from Optimism which is a scaling solution that aims to reduce gas fees, improve transaction throughput, and extend the capabilities of smart contracts.",
       "imageKey": "boba",
       "background": "black"
     }
