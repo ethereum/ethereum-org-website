@@ -4,10 +4,10 @@
 [![Twitter Follow](https://img.shields.io/twitter/follow/ethdotorg.svg?style=social)](https://twitter.com/ethdotorg)
 [![Crowdin](https://badges.crowdin.net/ethereum-org/localized.svg)](https://crowdin.com/project/ethereum-org)
 
-<h1 align="center" style="margin-top: 1em; margin-bottom: 3em;">
-  <p><a href="https://ethereum.org"><img alt="ethereum logo" src="./eth-transparent.png" alt="ethereum.org" width="125"></a></p>
-  <p>👋 Welcome to ethereum.org!</p>
-</h1>
+<div align="center" style="margin-top: 1em; margin-bottom: 3em;">
+  <a href="https://ethereum.org"><img alt="ethereum logo" src="./eth-transparent.png" alt="ethereum.org" width="125"></a>
+  <h1>👋 Welcome to ethereum.org!</h1>
+</div>
 
 This is the repo for the [ethereum.org](https://ethereum.org) website, a resource for the Ethereum community. The purpose of the site is to _“Be the best portal to Ethereum for our growing global community"_ - read more about what this means [here](https://ethereum.org/en/about/).
 
@@ -19,22 +19,27 @@ If you're looking for the Ethereum blockchain itself, there is no single repo. I
 
 <hr style="margin-top: 3em; margin-bottom: 3em;">
 
-# How to contribute
+## Table of contents
+
+- [How to contribute](#how-to-contribute)
+- [Translation Program](docs/translation-program.md)
+- [The ethereum.org website stack](docs/stack.md)
+- [Website conventions / best practices](docs/best-practices.md)
+
+## How to contribute
 
 This project follows the [all-contributors](https://allcontributors.org/docs/en/overview) specification. Contributions of any kind welcome!
 
-## How updates are made to ethereum.org:
-
-### Submit an issue
+### 1. Submit an issue
 
 - Create a [new issue](https://github.com/ethereum/ethereum-org-website/issues/new/choose).
 - Comment on the issue (if you'd like to be assigned to it) - that way [our team can assign the issue to you](https://github.blog/2019-06-25-assign-issues-to-issue-commenters/).
 
-### Fork the repository (repo)
+### 2. Fork the repository (repo)
 
 - If you're not sure, here's how to [fork the repo](https://help.github.com/en/articles/fork-a-repo).
 
-### Set up your local environment (optional)
+### 3. Set up your local environment (optional)
 
 If you're ready to contribute and create your PR, it will help to set up a local environment so you can see your changes.
 
@@ -72,43 +77,7 @@ We recommend using a node manager to use multiple node versions in your system. 
 $ yarn
 ```
 
-4. Add personal GitHub API token (free)
-
-We recommend setting this up when running the project locally, as we use the GitHub API to fetch repository data for many projects & files.
-
-> - [Follow these instructions](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token) to create a personal GitHub API token
->   - When selecting scopes in step 8, leave everything unchecked (the data we fetch doesn't require any [scope](https://docs.github.com/en/developers/apps/scopes-for-oauth-apps#available-scopes))
-> - In local repo root directory: Make a copy of `.env.example` and name it `.env`
-> - Copy & paste your new GitHub API token into `.env`
-
-```sh
-# .env Example:
-GATSBY_GITHUB_TOKEN_READ_ONLY=48f84de812090000demo00000000697cf6e6a059
-```
-
-5. Add Etherscan API token (free)
-
-> - [Create an account](https://etherscan.io/) on Etherscan
-> - Navigate to your Account Settings page
-> - In the sidebar, click on 'API-KEYs' and add a new token
-> - Copy & paste your Api-Key Token from Etherscan into `.env`
-
-```sh
-# .env Example:
-ETHERSCAN_API_KEY=K6NUTARFJZJCIXHF1F1E1YGJZ8RQ29BE4U
-```
-
-6. Add DeFiPulse API token (free)
-
-> - [Follow this guide](https://docs.defipulse.com/quick-start-guide) to create an account and get your DeFiPulse API token
-> - Copy & paste your Active API Key from DeFiPulse into `.env`
-
-```sh
-# .env Example:
-DEFI_PULSE_API_KEY=4953aaf7966dad9c129397e197a0630ed0594f66962dd5fb058972b250da
-```
-
-### Make awesome changes!
+### 4. Make awesome changes!
 
 1. Create new branch for your changes
 
@@ -141,13 +110,13 @@ $ git commit -m "brief description of changes [Fixes #1234]"
 $ git push
 ```
 
-### Local development with lambda functions
+### 5. Local development with lambda functions
 
 There may be times where you develop features that make external API requests to other services. For these we write lambda functions to obfuscate API keys. In order to test these locally, you will need to do the following:
 
 1. Download a CORS enabling browser extension (ex: https://chrome.google.com/webstore/search/cors).
 2. Enable CORS in the downloaded browser extension.
-3. Add the relevant API key to the `.env` file.
+3. Add the relevant API key to the `.env` file. [Check how to get your own API keys](docs/api-keys.md).
 4. After you have started your development server for ethereum.org (above), start up a netlify lambda server using:
 
 ```sh
@@ -156,7 +125,7 @@ yarn start:lambda
 
 5. Where you reference /.netlify functions for server calls, add a conditional to call localhost:9000 endpoints when not in the production environment.
 
-### Submit your PR
+### 6. Submit your PR
 
 - After your changes are committed to your GitHub fork, submit a pull request (PR) to the `dev` branch of the `ethereum/ethereum-org-website` repo
 - In your PR description, reference the issue it resolves (see [linking a pull request to an issue using a keyword](https://docs.github.com/en/free-pro-team@latest/github/managing-your-work-on-github/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword))
@@ -166,303 +135,17 @@ yarn start:lambda
 - _Confirm your GC preview deploy looks & functions as expected_
 - Why not say hi and draw attention to your PR in [our discord server](https://discord.gg/CetY6Y4)?
 
-### Wait for review
+### 7. Wait for review
 
 - The website team reviews every PR
 - See [how decisions are made on content changes](https://ethereum.org/en/contributing/#how-decisions-about-the-site-are-made)
 - Acceptable PRs will be approved & merged into the `dev` branch
 
-### Release
+### 8. Release
 
 - `master` is continually synced to Netlify and will automatically deploy new commits to ethereum.org
 - The [website team](https://ethereum.org/en/contributing/#how-decisions-about-the-site-are-made) will periodically merge `dev` into `master` (typically multiple times per week)
 - You can [view the history of releases](https://github.com/ethereum/ethereum-org-website/releases), which include PR highlights
-
-## Translation Program
-
-_The Translation Program is an initiative to translate ethereum.org into different languages and make the website accessible to people from all over the world._
-
-If you are looking to get involved as a translator, you can [join our project in Crowdin](https://crowdin.com/project/ethereum-org/invite/) and start translating the website to your language immediately.
-
-To get more information about the program, learn how to use Crowdin, check on the progress or find some useful tools for translators, please visit the [Translation Program page](https://ethereum.org/en/contributing/translation-program/).
-
-<hr style="margin-top: 3em; margin-bottom: 3em;">
-
-## The ethereum.org website stack
-
-- [Node.js](https://nodejs.org/)
-- [Yarn package manager](https://yarnpkg.com/cli/install)
-- [Gatsby](https://www.gatsbyjs.org/)
-  - Manages page builds and deployment
-  - Configurable in `gatsby-node.js`, `gatsby-browser.js`, `gatsby-config.js`, and `gatsby-ssr.js`
-  - [Gatsby Tutorial](https://www.gatsbyjs.com/docs/tutorial/)
-  - [Gatsby Docs](https://www.gatsbyjs.org/docs/)
-- [React](https://reactjs.org/) - A JavaScript library for building component-based user interfaces
-- [GraphQL](https://graphql.org/) - A query language for APIs
-- [Algolia](https://www.algolia.com/) - Site indexing, rapid intra-site search results, and search analytics. [Learn more on how we implement Algolia for site search](./docs/ALGOLIA_DOCSEARCH.md).
-  - Primary implementation: `/src/components/Search/index.js`
-- [Crowdin](https://crowdin.com/) - crowdsourcing for our translation efforts (See "Translation initiative" below)
-- [GitHub Actions](https://github.com/features/actions) - Manages CI/CD, and issue tracking
-- [Netlify](https://www.netlify.com/) - DNS management and primary host for `master` build. Also provides automatic preview deployments for all pull requests
-
-### Code structure
-
-| Folder                                   | Primary use                                                                                                                                                                                                         |
-| ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `/src`                                   | Main source folder for development                                                                                                                                                                                  |
-| `/src/assets`                            | Image assets                                                                                                                                                                                                        |
-| `/src/components`                        | React components that do not function as standalone pages                                                                                                                                                           |
-| `/src/content`                           | Markdown/MDX files for site content stored here. <br>For example: `ethereum.org/en/about/` is built from `src/content/about/index.md` <br>The markdown files are parsed and rendered by `src/templates/static.js`\* |
-| `/src/content/developers/docs`           | \*Markdown files in here use the Docs template: `src/templates/docs.js`                                                                                                                                             |
-| `/src/content/developers/tutorials`      | \*Markdown files in here use the Tutorial template: `src/templates/tutorial.js`                                                                                                                                     |
-| `/src/data`                              | General data files importable by components                                                                                                                                                                         |
-| `/src/hooks`                             | Custom React hooks                                                                                                                                                                                                  |
-| `/src/intl`                              | Language translation JSON files                                                                                                                                                                                     |
-| `/src/lambda`                            | Lambda function scripts for API calls                                                                                                                                                                               |
-| `/src/pages`<br>`/src/pages-conditional` | React components that function as standalone pages. <br>For example: `ethereum.org/en/wallets/find-wallet` is built from `src/pages/wallets/find-wallet.js`                                                         |
-| `/src/scripts`<br>`/src/utils`           | Custom utility scripts                                                                                                                                                                                              |
-| `/src/styles`                            | Stores `layout.css` which contains root level css styling                                                                                                                                                           |
-| `/src/templates`                         | JSX templates that define layouts of different regions of the site                                                                                                                                                  |
-| `/src/theme.js`                          | Declares site color themes, breakpoints and other constants (try to utilize these colors first)                                                                                                                     |
-
-<hr style="margin-top: 3em; margin-bottom: 3em;">
-
-## Website conventions / best practices
-
-### ❗️ Translation initiative
-
-_Please read carefully if adding or altering any written language content_
-
-How to prepare your content for translation depends on whether you're working on a simple Markdown/MDX page or a React component page.
-
-**- MDX pages (`/src/content/page/`)**
-
-Markdown will be translated as whole pages of content, so no specific action is required. Simply create a new folder within `/src/content/` with the name of the page, then place index markdown file (ie. `index.md`) within the new folder.
-
-**- React component page**
-
-- **English text should be placed into `/src/intl/en/page-CORRESPONDING-PAGE.json`**
-- [Crowdin](https://crowdin.com/) is the platform we use to manage & crowdsource translation efforts. Please use the following conventions to help streamline this process.
-- Use kebab casing (utilizing-dashes-between-words) for file names and JSON keys
-- Use standard sentence casing for entry values
-  - If capitalization styling required, it is preferable to style with CSS
-    - Do this:
-      ```
-        JSON `"page-warning": "Be very careful"`
-        CSS `text-transform: uppercase`
-      ```
-    - Not this:
-      ```
-        JSON `"page-warning": "BE VERY CAREFUL"`
-      ```
-  - This minimizes issues during translation, and allows consistent styling to all languages
-- _Please avoid_ embedding links within a sentence. For a word/phrase to be a link, it requires a key/string in the intl JSON. If this is in the middle of another sentence, this results in the sentence being broken into multiple pieces, and requires coding the sentence structure into the JavaScript.
-
-  - This results in significant challenges during the translation process, as written syntax for each language will vary in terms of ordering subjects/verbs/etc.
-  - If you're wanting to link to something within your sentence, create a link at the end of the sentence or paragraph:
-
-  ```jsx
-  <p>
-    All Ethereum transactions require a fee, known as Gas, that gets paid to the
-    miner. <Link to="link">More on Gas</Link>
-  </p>
-  ```
-
-  Once, you've added your English content to the appropriate JSON file, the above code should look something more like:
-
-  ```jsx
-  <p>
-    <Translation id="page-transactions" />{" "}
-    <Link to="link">
-      <Translation id="page-transactions-gas-link" />
-    </Link>
-  </p>
-  ```
-
-  - _tl;dr Each individual JSON entry should be a complete phrase by itself_
-
-- This is done using the `Translation` component. However there is an alternative method for regular JS: `gatsby-plugin-intl` with `/src/utils/translations.js`
-
-  - **Method one: `<Translation />` component (preferred if only needed in JSX)**
-
-    ```jsx
-    import { Translation } from "src/components/Translation"
-
-    // Utilize in JSX using
-    ;<Translation id="language-json-key" />
-    ```
-
-  - **Method two: `translateMessageId()`**
-
-    ```jsx
-    import { useIntl } from "gatsby-plugin-intl"
-    import { translateMessageId } from "src/utils/translations"
-
-    // Utilize anywhere in JS using
-    const intl = useIntl()
-    translateMessageId("language-json-key", intl)
-    ```
-
-    ```jsx
-    const siteTitle = translateMessageId("site-title", intl)
-    ```
-
-## React Hooks
-
-- Components and pages are written using arrow function syntax with React hooks in lieu of using class-based components
-
-```jsx
-// Example
-import React, { useState, useEffect } from "react"
-
-const ComponentName = (props) => {
-  // useState hook for managing state variables
-  const [greeting, setGreeting] = useState("")
-
-  useEffect(() => {
-    // useEffect hook for handling component lifecycle
-    setGreeting("Hello world")
-  }, [])
-
-  return <div>{greeting}</div>
-}
-
-export default ComponentName
-```
-
-## Styling
-
-- `src/theme.js` - Declares site color themes, breakpoints and other constants (try to utilize these colors first)
-- We use [styled-components](https://styled-components.com/)
-
-  - Tagged template literals are used to style custom components
-
-  ```jsx
-  // Example of styling syntax using styled-components
-
-  import styled from "styled-components"
-
-  const GenericButton = styled.div`
-    width: 200px;
-    height: 50px;
-  `
-  const PrimaryButton = styled(GenericButton)`
-    background: blue;
-  `
-  const SecondaryButton = styled(GenericButton)`
-    background: red;
-  `
-
-  // These are each components, capitalized by convention, and can be used within JSX code
-  // ie: <PrimaryButton>Text</PrimaryButton>
-  ```
-
-  - Recommended VS Code Plugin: `vscode-styled-components` <br>To install: Open VS Code > `Ctrl+P` / `Cmd+P` > Run: <br>`ext install vscode-styled-components`
-
-- Values from `src/theme.js` are automatically passed as a prop object to styled components
-
-  ```jsx
-  // Example of theme.js usage
-
-  import styled from "styled-components"
-
-  const Container = styled.div`
-    background: ${(props) => props.theme.colors.background};
-    @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-      font-size: #{(props) => props.theme.fontSized.s};
-    }
-  `
-  ```
-
-- [Framer Motion](https://www.framer.com/motion/) - An open source and production-ready motion library for React on the web, used for our animated designs
-- **Emojis**: We use [Twemoji](https://twemoji.twitter.com/), an open-source emoji set created by Twitter. These are hosted by us, and used to provide a consistent experience across operating systems.
-
-```jsx
-// Example of emoji use
-import Emoji from "./Emoji"
-
-// Within JSX:
-;<Emoji text=":star:" size={1} /> // sized in `em`
-```
-
-- **Icons**: We use [React Icons](https://react-icons.github.io/react-icons/)
-  - `src/components/Icon.js` is the component used to import icons to be used
-  - If an icon you want to use is not listed you will need to add it to this file
-
-`src/components/Icon.js`:
-
-```jsx
-// Example of how to add new icon not listed
-import { ZzIconName } from "react-icons/zz"
-
-// Then add to IconContect.Provider children:
-{
-  name === "alias" && <ZzIconName />
-}
-```
-
-From React component:
-
-```jsx
-// Example of icon use
-import Icon from "./Icon"
-
-// Within JSX:
-;<Icon name="alias" />
-```
-
-## Image loading and API calls using GraphQL
-
-- [Gatsby + GraphQL](https://www.gatsbyjs.com/docs/graphql/) used for loading of images and preferred for API calls (in lieu of REST, if possible/practical). Utilizes static page queries that run at build time, not at run time, optimizing performance.
-- Image loading example:
-
-```jsx
-import { graphql } from "gatsby"
-
-export const query = graphql`
-  query {
-    hero: file(relativePath: { eq: "developers-eth-blocks.png" }) {
-      childImageSharp {
-        gatsbyImageData(
-          width: 800
-          layout: FIXED
-          placeholder: BLURRED
-          quality: 100
-        )
-      }
-    }
-  }
-`
-// These query results get passed as an object `props.data` to your component
-```
-
-- API call example:
-
-```jsx
-import { graphql } from "gatsby"
-
-export const repoInfo = graphql`
-  fragment repoInfo on GitHub_Repository {
-    stargazerCount
-    languages(orderBy: { field: SIZE, direction: DESC }, first: 2) {
-      nodes {
-        name
-      }
-    }
-    url
-  }
-`
-export const query = graphql`
-  query {
-    hardhatGitHub: github {
-      repository(owner: "nomiclabs", name: "hardhat") {
-        ...repoInfo
-      }
-    }
-  }
-`
-// These query results get passed as an object `props.data` to your component
-```
 
 <hr style="margin-top: 3em; margin-bottom: 3em;">
 
