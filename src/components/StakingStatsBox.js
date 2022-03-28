@@ -8,6 +8,9 @@ import calculateStakingRewards from "../utils/calculateStakingRewards"
 
 const Container = styled.div`
   display: flex;
+  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
+    flex-direction: column;
+  }
 `
 
 const Cell = styled.div`
@@ -15,9 +18,14 @@ const Cell = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 1rem 2rem;
-  border-left: 1px solid #33333355;
+  border-left: 1px solid ${({ theme }) => theme.colors.preBorder};
+  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
+    border-left: none;
+    border-top: 1px solid #33333355;
+  }
   &:first-child {
     border-left: none;
+    border-top: none;
   }
 `
 
