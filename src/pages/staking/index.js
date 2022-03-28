@@ -172,6 +172,20 @@ const ComparisonGrid = styled.div`
   }
 `
 
+const ButtonContaier = styled.div`
+  display: flex;
+  gap: 1rem;
+  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
+    flex-direction: column;
+  }
+`
+
+const StyledButtonLink = styled(ButtonLink)`
+  @media (max-width: ${({ theme }) => theme.breakpoints.s}) {
+    width: 100%;
+  }
+`
+
 const benefits = [
   {
     title: "More sustainable",
@@ -255,7 +269,7 @@ const StakingPage = ({ data, location }) => {
   }
 
   const tocArray = Object.keys(tocItems).map((item) => tocItems[item])
-  console.log({ tocItems, tocArray })
+
   return (
     <PageContainer>
       <PageMetadata
@@ -388,7 +402,9 @@ const StakingPage = ({ data, location }) => {
                 </ul>
               </div>
               <div style={{ gridArea: "solo-cta" }}>
-                <ButtonLink to="/staking/solo">More on solo staking</ButtonLink>
+                <StyledButtonLink to="/staking/solo">
+                  More on solo staking
+                </StyledButtonLink>
               </div>
 
               <h3 style={{ gridArea: "saas-title", color: "#49DE96" }}>
@@ -444,9 +460,9 @@ const StakingPage = ({ data, location }) => {
                 </ul>
               </div>
               <div style={{ gridArea: "saas-cta" }}>
-                <ButtonLink to="/staking/saas">
+                <StyledButtonLink to="/staking/saas">
                   More on staking as a service
-                </ButtonLink>
+                </StyledButtonLink>
               </div>
 
               <h3 style={{ gridArea: "pool-title", color: "#A9D3F2" }}>
@@ -508,9 +524,9 @@ const StakingPage = ({ data, location }) => {
                 </ul>
               </div>
               <div style={{ gridArea: "pool-cta" }}>
-                <ButtonLink to="/staking/pools/">
+                <StyledButtonLink to="/staking/pools/">
                   More on pooled staking
-                </ButtonLink>
+                </StyledButtonLink>
               </div>
             </ComparisonGrid>
           </Content>
@@ -522,15 +538,17 @@ const StakingPage = ({ data, location }) => {
             descriptionKey={"page-staking-join-community-desc"}
             id={tocItems.joinTheCommunity.id}
           >
-            <div style={{ display: "flex", gap: "1rem" }}>
-              <ButtonLink to="https://discord.io/ethstaker">
+            <ButtonContaier>
+              <StyledButtonLink to="https://discord.io/ethstaker">
                 Join Discord
-              </ButtonLink>
-              <ButtonLink to="https://reddit.com/r/ethstaker">
+              </StyledButtonLink>
+              <StyledButtonLink to="https://reddit.com/r/ethstaker">
                 Join Reddit
-              </ButtonLink>
-              <ButtonLink to="https://ethstaker.cc">Visit Website</ButtonLink>
-            </div>
+              </StyledButtonLink>
+              <StyledButtonLink to="https://ethstaker.cc">
+                Visit Website
+              </StyledButtonLink>
+            </ButtonContaier>
           </StyledCallout>
           <Content>
             {/* TODO: Select FAQs, and answer them */}
