@@ -16,20 +16,39 @@ const Container = styled.div`
     rgba(75, 231, 156, 0.1) 44.21%,
     rgba(231, 202, 200, 0.1) 82.88%
   );
-  padding: 1rem 2rem;
+  padding: 2rem;
+  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
+    border-image: linear-gradient(
+        to bottom,
+        #f2bb2f 5%,
+        #49de96 25%,
+        #a9d3f2 50%,
+        #d6bbb9 75%
+      )
+      1 100%;
+    border-left: solid 4px;
+    padding-left: 1rem;
+    margin: 0 -2rem;
+  }
 `
 
 const Section = styled.div`
   --color: ${({ color }) => color};
   --next-color: ${({ nextColor }) => nextColor};
   display: grid;
+  position: relative;
   gap: 0 2rem;
-  /* 3 x 2 ... x4 Section */
   grid-template-columns: 5rem 1fr 5rem;
   grid-template-areas:
     "ether header glyph"
     "decorator content content";
-
+  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
+    gap: 0 0.75rem;
+    grid-template-columns: 10vw 1fr;
+    grid-template-areas:
+      "ether header"
+      "decorator content";
+  }
   h2 {
     color: var(--color);
   }
@@ -44,11 +63,15 @@ const Section = styled.div`
     margin: 0;
   }
 
-  aside::after,
-  aside::before {
-    border-color: var(--color);
+  aside::after {
     border-image: linear-gradient(to bottom, var(--color), var(--next-color)) 1
       100%;
+    --scale: ${({ number }) => 1.05 + number / 90};
+    --translate: ${({ number }) => number}px;
+    transform: scale(var(--scale)) translateY(var(--translate));
+    @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
+      border: none;
+    }
   }
 `
 
@@ -58,7 +81,6 @@ const Header = styled.div`
   flex-direction: column;
   justify-content: center;
   gap: 0.5rem;
-  /* line-height: 200%; */
   h2 {
     margin: 0;
   }
@@ -69,21 +91,22 @@ const Content = styled.div`
   margin: 1rem 0 3rem;
 `
 
-const Glyph = styled.div`
-  grid-area: glyph;
+const FlexCentered = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-
-  /* svg {
-    --size: 4rem;
-    width: var(--size);
-    height: var(--size);
-  } */
 `
 
-const Ether = styled(Glyph)`
+const Glyph = styled(FlexCentered)`
+  grid-area: glyph;
+  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
+    display: none;
+  }
+`
+
+const Ether = styled(FlexCentered)`
   grid-area: ether;
+  z-index: 2;
 `
 
 const StyledEtherSvg = styled(EtherSvg)`
@@ -99,8 +122,7 @@ const Line = styled.aside`
   text-align: center;
   font-size: 28px;
   position: relative;
-  &::after,
-  &::before {
+  &::after {
     content: "";
     height: 100%;
     border-left: solid 4px orange;
@@ -114,9 +136,9 @@ const Line = styled.aside`
 const StakingHierarchy = () => {
   return (
     <Container>
-      <Section color="#F2BB2F" nextColor="#49DE96">
+      <Section color="#F2BB2F" nextColor="#49DE96" number="1">
         <Ether>
-          <StyledEtherSvg size="5rem" />
+          <StyledEtherSvg size="100%" />
         </Ether>
         <Line />
         <Header>
@@ -156,9 +178,9 @@ const StakingHierarchy = () => {
           <ButtonLink to="/staking/solo">More on solo staking</ButtonLink>
         </Content>
       </Section>
-      <Section color="#49DE96" nextColor="#A9D3F2">
+      <Section color="#49DE96" nextColor="#A9D3F2" number="2">
         <Ether>
-          <StyledEtherSvg size="4rem" />
+          <StyledEtherSvg size="80%" />
         </Ether>
         <Line />
         <Header>
@@ -197,9 +219,9 @@ const StakingHierarchy = () => {
           </ButtonLink>
         </Content>
       </Section>
-      <Section color="#A9D3F2" nextColor="#D6BBB9">
+      <Section color="#A9D3F2" nextColor="#D6BBB9" number="3">
         <Ether>
-          <StyledEtherSvg size="3rem" />
+          <StyledEtherSvg size="60%" />
         </Ether>
         <Line />
         <Header>
@@ -233,9 +255,9 @@ const StakingHierarchy = () => {
           <ButtonLink to="/staking/pools">More on pooled staking</ButtonLink>
         </Content>
       </Section>
-      <Section color="#D6BBB9" nextColor="#0000">
+      <Section color="#D6BBB9" nextColor="#00000000" number="4">
         <Ether>
-          <StyledEtherSvg size="2rem" />
+          <StyledEtherSvg size="40%" />
         </Ether>
         <Line />
         <Header>
