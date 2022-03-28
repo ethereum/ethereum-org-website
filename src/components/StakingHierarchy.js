@@ -18,6 +18,8 @@ const Container = styled.div`
   );
   padding: 2rem;
   @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
+    display: flex;
+    flex-direction: column;
     border-image: linear-gradient(
         to bottom,
         #f2bb2f 5%,
@@ -27,8 +29,11 @@ const Container = styled.div`
       )
       1 100%;
     border-left: solid 4px;
-    padding-left: 1rem;
-    margin: 0 -2rem;
+    border-radius: 0;
+    gap: 4rem;
+    a {
+      width: 100%;
+    }
   }
 `
 
@@ -43,11 +48,11 @@ const Section = styled.div`
     "ether header glyph"
     "decorator content content";
   @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
-    gap: 0 0.75rem;
+    gap: 1rem;
     grid-template-columns: 10vw 1fr;
     grid-template-areas:
       "ether header"
-      "decorator content";
+      "content content";
   }
   h2 {
     color: var(--color);
@@ -69,9 +74,6 @@ const Section = styled.div`
     --scale: ${({ number }) => 1.05 + number / 90};
     --translate: ${({ number }) => number}px;
     transform: scale(var(--scale)) translateY(var(--translate));
-    @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
-      border: none;
-    }
   }
 `
 
@@ -89,6 +91,9 @@ const Header = styled.div`
 const Content = styled.div`
   grid-area: content;
   margin: 1rem 0 3rem;
+  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
+    margin: 0;
+  }
 `
 
 const FlexCentered = styled.div`
@@ -130,6 +135,9 @@ const Line = styled.aside`
     left: calc(50% - 2px);
     top: 0;
     z-index: 1;
+  }
+  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
+    display: none;
   }
 `
 
