@@ -15,7 +15,7 @@ summaryPoints:
 
 ## What is staking as a service? {#what-is-staking-as-a-service}
 
-Staking as a service (“SaaS") represents a category of staking services where you deposit your own 32 ETH for a validator, but delegate node operations to a third-party operator. This process usually involved being guided through the initial setup, including key generation and deposit, then uploading your signing keys to the operator. This allows the service to operate your validator on your behalf, usually for a monthly fee.
+Staking as a service (“SaaS") represents a category of staking services where you deposit your own 32 ETH for a validator, but delegate node operations to a third-party operator. This process usually involves being guided through the initial setup, including key generation and deposit, then uploading your signing keys to the operator. This allows the service to operate your validator on your behalf, usually for a monthly fee.
 
 ## Why stake with a service? {#why-stake-with-a-service}
 
