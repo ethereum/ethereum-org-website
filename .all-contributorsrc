@@ -6884,6 +6884,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "neographer",
+      "name": "Neographer",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1559973?v=4",
+      "profile": "https://github.com/neographer",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
