@@ -406,19 +406,37 @@ const Layer2Page = ({ data }) => {
         </StatsContainer>
       </PaddedContent>
 
+      <PaddedContent id="what-is-layer-2">
+        <h2>What is layer 2?</h2>
+        <p>
+          Layer 2 (L2) is a collective term to describe a specific set of
+          Ethereum scaling solutions.{" "}
+          <b>
+            A layer 2 is separate blockchain that extends Ethereum and inherits
+            the security guarantees of Ethereum
+          </b>
+          .
+        </p>
+        <p>
+          Now let’s dig into it a bit more, and to do this we need to explain
+          layer 1 (L1).
+        </p>
+      </PaddedContent>
       <PaddedContent>
         <h2>What is layer 1?</h2>
         <TwoColumnContent>
           <FlexContainer flexPercent="65">
             <p>
-              Before diving into "layer 2", it helps to understand what we
-              consider "layer 1". Layer 1 blockchains, such as Ethereum and
-              Bitcoin, are the{" "}
-              <b>underlying foundation that layer 2 projects build on top of</b>
-              . Examples of layer 2 projects built on top of these networks
-              include <b>zero-knowledge rollups</b> and{" "}
-              <b>optimistic rollups</b> on Ethereum and the Lighting Network on
-              top of Bitcoin.
+              Layer 1 is the base blockchain. Ethereum and Bitcoin are both
+              layer 1 blockchains because they are the{" "}
+              <b>
+                underlying foundation that various layer 2 networks build on top
+                of
+              </b>
+              . Examples of layer 2 projects include "rollups" on Ethereum and
+              the Lighting Network on top of Bitcoin. All user transaction
+              activity on these layer 2 projects can ultimately settle back to
+              the layer 1 blockchain.
             </p>
             <p>
               <b>Ethereum as the layer 1 includes:</b>
@@ -429,7 +447,7 @@ const Layer2Page = ({ data }) => {
                 network
               </li>
               <li>
-                <b>A network of block proposers</b>
+                <b>A network of block producers</b>
               </li>
               <li>
                 <b>The blockchain</b> itself and the history of transaction data
@@ -438,7 +456,10 @@ const Layer2Page = ({ data }) => {
                 <b>The consensus mechanism</b> for the network
               </li>
             </ul>
-            <ButtonLink to="/what-is-ethereum/">What is Ethereum</ButtonLink>
+            <p>
+              Still confused on Ethereum?{" "}
+              <Link to="/what-is-ethereum/">Learn what Ethereum is</Link>.
+            </p>
           </FlexContainer>
           {/* TODO: Convert these inline styles into styled components */}
           <FlexContainer
@@ -515,22 +536,29 @@ const Layer2Page = ({ data }) => {
         </InfoGrid>
       </LightGrayContent>
 
-      <PaddedContent id="what-is-layer-2">
-        <h2>What is layer 2</h2>
+      <PaddedContent>
+        <h2>How layer 2 works</h2>
         <p>
-          Layer 2 is a collective term for Ethereum scaling solutions that
-          handle transactions off Ethereum layer 1 while taking advantage of the
-          robust decentralized security model of Ethereum layer 1. A layer 2 is
-          a <b>separate blockchain that is connected to Ethereum</b>. It
-          regularly communicates with Ethereum (by submitting bundles of
-          transactions) in order to ensure it has similar security and
-          decentralization guarantees, and requires no changes to the layer 1
-          protocol. This lets layer 1 handle security, data availability, and
-          decentralization, while the layer above (layer 2) handles scaling.
-          Layer 2s takes the transactional burden away from the layer 1, and
-          posts sufficient information to reconstruct the L2 state and verify it
-          is accurate. By taking this load away from layer 1, the base layer
-          will become less congested, and everything becomes more scalable.
+          As we mentioned above, Layer 2 is a collective term for Ethereum
+          scaling solutions that handle transactions off Ethereum layer 1 while
+          taking advantage of the robust decentralized security model of
+          Ethereum layer 1.{" "}
+          <b>
+            A layer 2 is a separate blockchain that is connected to Ethereum
+          </b>
+          . How does that work?
+        </p>
+        <p>
+          A layer 2 blockchain regularly communicates with Ethereum (by
+          submitting bundles of transactions) in order to ensure it has similar
+          security and decentralization guarantees, and requires no changes to
+          the layer 1 protocol (Ethereum). This lets layer 1 handle security,
+          data availability, and decentralization, while the layer above (layer
+          2) handles scaling. Layer 2s takes the transactional burden away from
+          the layer 1, and posts finalized proofs back to the layer 1 to
+          finalize the state. By taking this transaction load away from layer 1,
+          the base layer will become less congested, and everything becomes more
+          scalable.
         </p>
         <h3>Rollups</h3>
         <TwoColumnContent>
@@ -613,6 +641,11 @@ const Layer2Page = ({ data }) => {
       </PaddedContent>
 
       <PaddedContent id="use-layer-2">
+        <h1>Use layer 2</h1>
+        <p>
+          Now that you understand why layer 2 exists and how it works, let's get
+          you up and running!
+        </p>
         <h2>Generalized layer 2s</h2>
         <p>
           Generalized layer 2s behave just like Ethereum — but cheaper. Anything
