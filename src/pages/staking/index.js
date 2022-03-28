@@ -186,6 +186,14 @@ const StyledButtonLink = styled(ButtonLink)`
   }
 `
 
+const StyledCard = styled(Card)`
+  justify-content: flex-start;
+  h3 {
+    font-weight: 700;
+    margin: 0 0 1rem;
+  }
+`
+
 const benefits = [
   {
     title: "More sustainable",
@@ -303,9 +311,9 @@ const StakingPage = ({ data, location }) => {
             </h2>
             <CardGrid>
               {benefits.map(({ title, description }, idx) => (
-                <Card title={title} key={idx}>
+                <StyledCard title={title} key={idx}>
                   {description}
-                </Card>
+                </StyledCard>
               ))}
             </CardGrid>
           </Content>
