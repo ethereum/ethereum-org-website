@@ -1451,6 +1451,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/neographer"><img src="https://avatars.githubusercontent.com/u/1559973?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Neographer</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=neographer" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/britodiego"><img src="https://avatars.githubusercontent.com/u/84880186?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Voll</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=britodiego" title="Documentation">📖</a></td>
   </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/SurpriseMF3000"><img src="https://avatars.githubusercontent.com/u/99681009?v=4?s=100" width="100px;" alt=""/><br /><sub><b>SurpriseMF3000</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=SurpriseMF3000" title="Documentation">📖</a> <a href="https://github.com/ethereum/ethereum-org-website/commits?author=SurpriseMF3000" title="Code">💻</a></td>
+  </tr>
 </table>
 
 <!-- markdownlint-restore -->
