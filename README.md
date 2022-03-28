@@ -1448,6 +1448,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/tnkrxyz"><img src="https://avatars.githubusercontent.com/u/97625120?v=4?s=100" width="100px;" alt=""/><br /><sub><b>tnkrxyz</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=tnkrxyz" title="Documentation">📖</a></td>
     <td align="center"><a href="http://nloureiro.com"><img src="https://avatars.githubusercontent.com/u/1120748?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Nuno Loureiro</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=nloureiro" title="Code">💻</a> <a href="#design-nloureiro" title="Design">🎨</a></td>
     <td align="center"><a href="https://github.com/polarpunklabs"><img src="https://avatars.githubusercontent.com/u/84196983?v=4?s=100" width="100px;" alt=""/><br /><sub><b>polarpunklabs</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=polarpunklabs" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/neographer"><img src="https://avatars.githubusercontent.com/u/1559973?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Neographer</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=neographer" title="Documentation">📖</a></td>
   </tr>
 </table>
 
