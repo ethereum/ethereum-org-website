@@ -605,7 +605,9 @@ const Layer2Page = ({ data }) => {
             comprehensive risk assessment framework of each project.
           </p>
           <p>
-            <ButtonLink to="https://l2beat.com">Go to L2BEAT</ButtonLink>
+            <ButtonLink to="https://l2beat.com/?view=risk">
+              Go to L2BEAT
+            </ButtonLink>
           </p>
         </InfoBanner>
       </PaddedContent>
