@@ -99,8 +99,10 @@ const Layer2ProductCard = ({
         </div>
         {children && <Children>{children}</Children>}
         {bridge && <Link to={bridge}>{name} Bridge</Link>}
-        {ecosystemPortal && <Link to={bridge}>{name} Ecosystem Portal</Link>}
-        {tokenLists && <Link to={bridge}>{name} Token Lists</Link>}
+        {ecosystemPortal && (
+          <Link to={ecosystemPortal}>{name} Ecosystem Portal</Link>
+        )}
+        {tokenLists && <Link to={tokenLists}>{name} Token Lists</Link>}
       </Content>
       <StyledButtonLink to={url} hideArrow={true}>
         Explore {name}
