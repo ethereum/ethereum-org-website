@@ -21,9 +21,9 @@ const Container = styled.div`
     border-image: linear-gradient(
         to bottom,
         #f2bb2f 5%,
-        #49de96 25%,
-        #a9d3f2 50%,
-        #d6bbb9 75%
+        #49de96 30%,
+        #a9d3f2 55%,
+        #d6bbb9 80%
       )
       1 100%;
     border-left: solid 4px;
