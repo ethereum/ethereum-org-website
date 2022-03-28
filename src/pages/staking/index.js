@@ -249,7 +249,7 @@ const StakingPage = ({ data, location }) => {
   }
 
   const tocArray = Object.keys(tocItems).map((item) => tocItems[item])
-
+  console.log({ tocItems, tocArray })
   return (
     <PageContainer>
       <PageMetadata
@@ -269,7 +269,7 @@ const StakingPage = ({ data, location }) => {
           <Content>
             <Breadcrumbs slug={location.pathname} startDepth={1} />
             <h2 id={tocItems.whatIsStaking.id}>
-              {tocItems.whatIsStaking.label}
+              {tocItems.whatIsStaking.title}
             </h2>
             <p>
               Staking is the act of locking up ETH to give you the right to
@@ -279,7 +279,7 @@ const StakingPage = ({ data, location }) => {
           </Content>
           <Content>
             <h2 id={tocItems.whyStakeYourEth.id}>
-              {tocItems.whyStakeYourEth.label}
+              {tocItems.whyStakeYourEth.title}
             </h2>
             <CardGrid>
               {benefits.map(({ title, description }, idx) => (
@@ -291,7 +291,7 @@ const StakingPage = ({ data, location }) => {
           </Content>
           <Content>
             <h2 id={tocItems.howToStakeYourEth.id}>
-              {tocItems.howToStakeYourEth.label}
+              {tocItems.howToStakeYourEth.title}
             </h2>
             <p>
               It all depends on how much you are willing to stake. You'll need
@@ -528,7 +528,7 @@ const StakingPage = ({ data, location }) => {
           </StyledCallout>
           <Content>
             {/* TODO: Select FAQs, and answer them */}
-            <h2 id={tocItems.faq.id}>{tocItems.faq.label}</h2>
+            <h2 id={tocItems.faq.id}>{tocItems.faq.title}</h2>
             <ul>
               <li>How do I withdraw my stake?</li>
               <li>How are the staking rewards calculated?</li>
