@@ -68,11 +68,6 @@ const ItemsList = ({ items }) =>
 const StakingHomeTableOfContents = ({ items, className }) => {
   if (!items) return null
 
-  // Exclude <h1> from TOC
-  if (items.length === 1) {
-    items = items[0].items
-  }
-
   return (
     <Aside className={className}>
       <OuterList>

@@ -220,41 +220,35 @@ const StakingPage = ({ data, location }) => {
     ],
   }
 
-  const tocItems = [
-    {
+  // TODO: use translateMessageId() for these strings
+  const tocItems = {
+    whatIsStaking: {
       id: "what-is-staking",
       title: "What is staking?",
     },
-    {
+    whyStakeYourEth: {
       id: "why-stake-your-eth",
       title: "Why stake your ETH?",
     },
-    {
+    howToStakeYourEth: {
       id: "how-to-stake-your-eth",
       title: "How to stake your ETH",
     },
-    {
+    comparisonOfOptions: {
       id: "comparison-of-options",
       title: "Comparison of staking options",
     },
-    {
+    joinTheCommunity: {
       id: "join-the-community",
-      title: "Join the community",
+      title: translateMessageId("page-staking-join-community", intl),
     },
-    {
+    faq: {
       id: "faq",
       title: "FAQs of staking",
     },
-  ]
+  }
 
-  const [
-    whatIsStakingId,
-    whyStakeYourEthId,
-    howToStakeYourEthId,
-    comparisonOfOptionsId,
-    joinTheCommunityId,
-    faqId,
-  ] = tocItems.map(({ id }) => `${id}`)
+  const tocArray = Object.keys(tocItems).map((item) => tocItems[item])
 
   return (
     <PageContainer>
@@ -269,12 +263,14 @@ const StakingPage = ({ data, location }) => {
         <InfoColumn>
           <StyledButtonDropdown list={dropdownLinks} />
           <InfoTitle>Staking with Ethereum</InfoTitle>
-          <StakingHomeTableOfContents items={tocItems} />
+          <StakingHomeTableOfContents items={tocArray} />
         </InfoColumn>
         <ContentContainer id="content">
           <Content>
             <Breadcrumbs slug={location.pathname} startDepth={1} />
-            <h2 id={whatIsStakingId}>What is staking?</h2>
+            <h2 id={tocItems.whatIsStaking.id}>
+              {tocItems.whatIsStaking.label}
+            </h2>
             <p>
               Staking is the act of locking up ETH to give you the right to
               participate in block proposals on the network. Anyone who holds
@@ -282,7 +278,9 @@ const StakingPage = ({ data, location }) => {
             </p>
           </Content>
           <Content>
-            <h2 id={whyStakeYourEthId}>Why stake your ETH?</h2>
+            <h2 id={tocItems.whyStakeYourEth.id}>
+              {tocItems.whyStakeYourEth.label}
+            </h2>
             <CardGrid>
               {benefits.map(({ title, description }, idx) => (
                 <Card title={title} key={idx}>
@@ -292,7 +290,9 @@ const StakingPage = ({ data, location }) => {
             </CardGrid>
           </Content>
           <Content>
-            <h2 id={howToStakeYourEthId}>How to stake ETH?</h2>
+            <h2 id={tocItems.howToStakeYourEth.id}>
+              {tocItems.howToStakeYourEth.label}
+            </h2>
             <p>
               It all depends on how much you are willing to stake. You'll need
               32 ETH to activate your own validator, but it is possible to stake
@@ -303,8 +303,8 @@ const StakingPage = ({ data, location }) => {
               you, and for the network.
             </p>
           </Content>
+          <StakingHierarchy />
           <Content>
-            <StakingHierarchy />
             <p style={{ marginTop: "1rem" }}>
               Given the number of these unique solutions, they vary in terms of
               risks, rewards, and trust assumptions. Some of them are more
@@ -315,7 +315,9 @@ const StakingPage = ({ data, location }) => {
           </Content>
           <Divider />
           <Content>
-            <h2 id={comparisonOfOptionsId}>Comparison of staking options</h2>
+            <h2 id={tocItems.comparisonOfOptions.id}>
+              {tocItems.comparisonOfOptions.title}
+            </h2>
             <p>
               There is no one-size-fits-all solution for staking, and each is
               unique. Here we'll compare some of the risks, rewards and
@@ -512,7 +514,7 @@ const StakingPage = ({ data, location }) => {
             alt={translateMessageId("page-staking-image-alt", intl)}
             titleKey={"page-staking-join-community"}
             descriptionKey={"page-staking-join-community-desc"}
-            id={joinTheCommunityId}
+            id={tocItems.joinTheCommunity.id}
           >
             <div style={{ display: "flex", gap: "1rem" }}>
               <ButtonLink to="https://discord.io/ethstaker">
@@ -526,7 +528,7 @@ const StakingPage = ({ data, location }) => {
           </StyledCallout>
           <Content>
             {/* TODO: Select FAQs, and answer them */}
-            <h2 id={faqId}>FAQs of staking</h2>
+            <h2 id={tocItems.faq.id}>{tocItems.faq.label}</h2>
             <ul>
               <li>How do I withdraw my stake?</li>
               <li>How are the staking rewards calculated?</li>
