@@ -56,7 +56,7 @@ To consistently create malicious yet valid blocks, you'd need over 51% of the ne
 
 Proof-of-work is also responsible for issuing new currency into the system and incentivizing miners to do the work.
 
-Miners who successfully create a block get rewarded with two freshly minted ETH and all the transaction fees within the block. A miner may also get 1.75 ETH for an uncle block. Uncle blocks are valid blocks created by a miner practically at the same time as another miner mined the successful block. Uncle blocks usually happen due to network latency.
+Miners who successfully create a block get rewarded with two freshly minted ETH but no longer receives all the transaction fees, as the base fee gets burned, while the tip and block reward goes to the miner. A miner may also get 1.75 ETH for an uncle block. Uncle blocks are valid blocks created by a miner practically at the same time as another miner mined the successful block. Uncle blocks usually happen due to network latency.
 
 ## Finality {#finality}
 
