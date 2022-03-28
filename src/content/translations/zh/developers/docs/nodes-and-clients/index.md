@@ -56,7 +56,7 @@ sidebarDepth: 2
 
 - 您的节点根据一致性规则自己验证所有交易和区块。 这意味着您不必依赖网络中的任何其他节点或完全信任它们。
 - 您不必将地址和余额泄露到随机节点。 一切都可以由您自己的客户检查。
-- 如果您使用自己的节点，则去中心化应用可以更安全和私有。 [Metamask](https://metamask.io)、[MyEtherWallet](https://myetherwallet.com) 和其他钱包可以轻松指向您自己的本地节点。
+- 如果您使用自己的节点，则去中心化应用可以更安全和私有。 [MetaMask](https://metamask.io)、[MyEtherWallet](https://myetherwallet.com) 和其他钱包可以轻松指向您自己的本地节点。
 - 您可以编程自己的自定义 RPC 端点。
 - 您可以使用**进程间通信 (IPC)**连接到节点，或者重写节点，将您的程序作为插件加载。 这会降低延迟，您需要尽快替换您的交易（例如抢跑交易）。
 
@@ -99,7 +99,7 @@ sidebarDepth: 2
 
 运行您自己的节点可能很难，您不必总是运行您自己的实例。 在这种情况下，您可以使用第三方 API 提供商，如 [Infura](https://infura.io)、[Alchemy](https://alchemyapi.io) 或 [QuikNode](https://www.quiknode.io)。 另外，[ArchiveNode](https://archivenode.io/) 是一个社区资助的归档节点，希望将以太坊上的数据带给无法运行自己节点的独立开发者。 如果想了解使用这些服务的概况，请查看[节点即服务](/developers/docs/nodes-and-clients/nodes-as-a-service/)。
 
-如果有人在您的社区里运行一个包含公共 API 的以太坊节点，您可以[通过自定义 RPC](https://metamask.zendesk.com/hc/en-us/articles/360015290012-Using-a-Local-Node) 将您的轻量级钱包（如 Metamask）指向社区节点，并比随机受托的第三方隐私性更强。
+如果有人在您的社区里运行一个包含公共 API 的以太坊节点，您可以[通过自定义 RPC](https://metamask.zendesk.com/hc/en-us/articles/360015290012-Using-a-Local-Node) 将您的轻量级钱包（如 MetaMask）指向社区节点，并比随机受托的第三方隐私性更强。
 
 另一方面，如果您运行一个客户端，则可以与可能需要它的朋友分享。
 
@@ -313,5 +313,5 @@ Erigon（前称 TurbohyGeth）是 Go Ethereum 的一个分叉，注重速度和�
 
 ## 相关教程 {#related-tutorials}
 
-- [用 Geth 运行一个节点](/developers/tutorials/run-light-node-geth/) _- 如何下载、安装和运行 Geth。 涵盖了同步模式、Javascript 控制台等内容。_
+- [用 Geth 运行一个节点](/developers/tutorials/run-light-node-geth/) _- 如何下载、安装和运行 Geth。 涵盖了同步模式、JavaScript 控制台等内容。_
 - [将您的 Raspberry Pi 4 通过写入 MicroSD 卡变成验证节点 - 安装指南](/developers/tutorials/run-node-raspberry-pi/) _- 写入你的 Raspberry Pi 4，插入网线，连接固态磁盘并给设备供电，将 Raspberry Pi 4 变成一个运行执行层（主网）和/或共识层（信标链/验证者）的完整以太坊节点。_

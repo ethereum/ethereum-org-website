@@ -56,7 +56,7 @@ Eseguire un nodo permette di utilizzare Ethereum in modo veramente privato, auto
 
 - Il nodo verifica in autonomia tutte le transazioni e i blocchi in base alle regole del consenso. Significa che non devi fare affidamento su altri nodi della rete o fidarti completamente di loro.
 - Non dovrai comunicare i tuoi indirizzi e saldi a nodi casuali. Tutto può essere controllato con il proprio client.
-- La dapp che si sviluppa può essere più sicura e privata se si utilizza un nodo personale. [Metamask](https://metamask.io), [MyEtherWallet](https://myetherwallet.com) e altri portafogli possono essere facilmente impostati per puntare al nodo locale.
+- La dapp che si sviluppa può essere più sicura e privata se si utilizza un nodo personale. [MetaMask](https://metamask.io), [MyEtherWallet](https://myetherwallet.com) e altri portafogli possono essere facilmente impostati per puntare al nodo locale.
 - Puoi programmare i tuoi endpoint RPC personalizzati.
 - Puoi connetterti al tuo nodo usando le **Comunicazioni Tra Processi (IPC)** o riscrivere il nodo per caricare il tuo programma come plugin. Ciò conferisce una bassa latenza, necessaria per sostituire le tue transazioni il più velocemente possibile (ad es. frontrunning).
 
@@ -312,5 +312,5 @@ Su internet si trovano molte informazioni sui client Ethereum. Ecco alcune risor
 
 ## Tutorial correlati {#related-tutorials}
 
-- [Running a Node with Geth](/developers/tutorials/run-light-node-geth/) _– Come scaricare, installare ed eseguire Geth. Si parla di modalità di sincronizzazione, console Javascript e altro._
+- [Running a Node with Geth](/developers/tutorials/run-light-node-geth/) _– Come scaricare, installare ed eseguire Geth. Si parla di modalità di sincronizzazione, console JavaScript e altro._
 - [Trasforma il tuo Raspberry Pi 4 in un nodo validatore semplicemente eseguendo il flash della scheda MicroSD - Guida d'installazione](/developers/tutorials/run-node-raspberry-pi/) _ - Esegui il flash del tuo Raspberry Pi 4, collega un cavo Ethernet, connetti il disco SSD e alimenta il dispositivo per trasformare il Raspberry Pi 4 in un nodo completo di Ethereum eseguendo il livello d'esecuzione (rete principale) e/o il livello di consenso (Beacon Chain / validatore)._

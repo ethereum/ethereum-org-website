@@ -27,7 +27,7 @@ Cần một hướng dẫn cơ bản hơn? Tham khảo [ethereum.org/learn](/vi/
 
 ## Các dự án và công cụ JavaScript {#javascript-project-and-tools}
 
-**Solidity -** **_Ngôn ngữ phổ biến nhất trên Ethereum, lấy cảm hứng từ Javascript._**
+**Solidity -** **_Ngôn ngữ phổ biến nhất trên Ethereum, lấy cảm hứng từ JavaScript._**
 
 - [Tài liệu tham khảo](https://solidity.readthedocs.io)
 - [GitHub](https://github.com/ethereum/solidity/)

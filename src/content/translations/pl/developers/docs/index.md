@@ -33,7 +33,7 @@ Jeśli jest to Twoja pierwsza próba rozwoju Ethereum, zalecamy zacząć od pocz
 - [Wprowadzenie do stosu](/developers/docs/ethereum-stack/) <em x-id="4">– przegląd stosu Ethereum/web3</em>
 - [Kontrakty inteligentne](/developers/docs/smart-contracts/) _– programy, które są zlokalizowane pod adresem Ethereum i uruchamiają funkcje, gdy są wyzwalane przez transakcje_
 - [Języki programowania](/developers/docs/programming-languages/) _– jak zacząć z Ethereum, używając języków, które już znasz,_
-- [Biblioteki klienta Javascript](/developers/docs/apis/javascript/) _– wygodne biblioteki, które pozwalają aplikacji internetowej na interakcję z Ethereum i inteligentnymi kontraktami_
+- [Biblioteki klienta JavaScript](/developers/docs/apis/javascript/) _– wygodne biblioteki, które pozwalają aplikacji internetowej na interakcję z Ethereum i inteligentnymi kontraktami_
 - [Ochrona](/developers/docs/smart-contracts/security/)
 - [Pamięć](/developers/docs/storage/)
 - [Frameworki programistyczne](/developers/docs/frameworks/) _– narzędzia ułatwiające programowanie w Ethereum_

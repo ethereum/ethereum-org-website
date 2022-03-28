@@ -32,7 +32,6 @@ If you are bilingual and want to help us reach more people, you can also get inv
 - [Livecoins](http://www.livecoins.com.br/ethereum) - cryptocurrency news and tools
 - [Seudinheiro](http://www.seudinheiro.com/criptomoedas/) - cryptocurrency news and reports
 
-
 **Education**
 
 - [web3dev](https://www.web3dev.com.br/) - Content hub and Discord community for web 3 developers.

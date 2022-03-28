@@ -148,7 +148,7 @@ const Row = styled.div`
 `
 
 const ImageContainer = styled.div`
-  background: "#F1FFFD";
+  background: "#f1fffd";
   display: flex;
   height: 100%;
   width: 100%;
@@ -380,7 +380,7 @@ const H2 = styled.h2`
 
 const StyledH2 = styled.h2`
   margin-bottom: 0.5rem;
-  font-family: serif;
+  font-family: sans-serif;
   @media (max-width: ${(props) => props.theme.breakpoints.s}) {
     font-size: 1.5rem;
   }
