@@ -6975,6 +6975,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "mikoto-studio",
+      "name": "mikoto-studio",
+      "avatar_url": "https://avatars.githubusercontent.com/u/83389134?v=4",
+      "profile": "https://github.com/mikoto-studio",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
