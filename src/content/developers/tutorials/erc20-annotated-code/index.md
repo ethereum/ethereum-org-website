@@ -294,7 +294,7 @@ This comment explains the purpose of the contract.
 contract ERC20 is Context, IERC20 {
 ```
 
-This line specifies the inheritence, in this case from `IERC20` from above and `Context`, for OpenGSN.
+This line specifies the inheritance, in this case from `IERC20` from above and `Context`, for OpenGSN.
 
 &nbsp;
 
