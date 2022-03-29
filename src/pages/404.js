@@ -10,16 +10,18 @@ const StyledPage = styled(Page)`
   margin-top: 4rem;
 `
 
-// TODO is there a way to translate this page?
 const NotFoundPage = () => (
   <StyledPage>
     <Content>
       <h1>
-        <Translation id="about-us" />
+        <Translation id="we-couldnt-find-that-page" />
       </h1>
       <p>
-        Try using search to find what you're looking for or{" "}
-        <Link to="/">return home</Link>.
+        <Translation id="try-using-search" />{" "}
+        <Link to="/">
+          <Translation id="return-home" />
+        </Link>
+        .
       </p>
     </Content>
   </StyledPage>
