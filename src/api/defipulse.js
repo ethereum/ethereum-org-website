@@ -1,4 +1,4 @@
-import { lambda } from "../lambda/tvl"
+import { lambda } from "../lambda/defipulse"
 
 async function handler(__req, res) {
   // passing env vars as arguments due to a bug on GC functions where env vars

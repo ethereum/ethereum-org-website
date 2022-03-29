@@ -367,8 +367,8 @@ const StatsBoxGrid = () => {
       try {
         const response = await getData(
           process.env.NODE_ENV === "production"
-            ? `${process.env.GATSBY_FUNCTIONS_PATH}/tvl`
-            : "http://localhost:9000/tvl"
+            ? `${process.env.GATSBY_FUNCTIONS_PATH}/defipulse`
+            : "http://localhost:9000/defipulse"
         )
         const data = response
           .map(({ date, totalLiquidityUSD }) => ({
