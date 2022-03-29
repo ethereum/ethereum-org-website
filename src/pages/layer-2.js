@@ -423,7 +423,7 @@ const Layer2Page = ({ data }) => {
         </p>
       </PaddedContent>
       <LightGrayContent>
-        <h2>What is layer 1?</h2>
+        <h2>Layer 1 function</h2>
         <TwoColumnContent>
           <FlexContainer flexPercent="65">
             <p>
