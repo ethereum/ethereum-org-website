@@ -2,22 +2,20 @@
 import React, { useEffect, useState } from "react"
 import { graphql } from "gatsby"
 import { getImage, GatsbyImage } from "gatsby-plugin-image"
-import Select from "react-select"
 import styled from "styled-components"
 import { useIntl } from "gatsby-plugin-intl"
 
 // Data
-import cexSupport from "../data/layer-2/cex-layer-2-support.json"
 import layer2Data from "../data/layer-2/layer-2.json"
 import validiumData from "../data/validium.json"
 
 // Components
 import ButtonLink from "../components/ButtonLink"
 import Card from "../components/Card"
-import Emoji from "../components/Emoji"
 import ExpandableCard from "../components/ExpandableCard"
 import FeedbackCard from "../components/FeedbackCard"
 import InfoBanner from "../components/InfoBanner"
+import Layer2Onboard from "../components/Layer2/Layer2Onboard"
 import Link from "../components/Link"
 import PageHero from "../components/PageHero"
 import PageMetadata from "../components/PageMetadata"
@@ -152,74 +150,12 @@ const StatDivider = styled.div`
   }
 `
 
-// https://react-select.com/styles#using-classnames
-// Pass menuIsOpen={true} to component to debug
-const StyledSelect = styled(Select)`
-  width: 100%;
-  max-width: 640px;
-  color: black;
-  /* Component */
-  .react-select__control {
-    border: 1px solid ${(props) => props.theme.colors.searchBorder};
-    background: ${(props) => props.theme.colors.searchBackground};
-    /* Dropdown arrow */
-    .react-select__indicator {
-      color: ${(props) => props.theme.colors.searchBorder};
-    }
-    &.react-select__control--is-focused {
-      border-color: ${(props) => props.theme.colors.primary} !important;
-      box-shadow: 0 0 0 1px ${(props) => props.theme.colors.primary} !important;
-      .react-select__value-container {
-        border-color: ${(props) => props.theme.colors.primary} !important;
-      }
-    }
-  }
-  .react-select__placeholder {
-    color: ${(props) => props.theme.colors.text200};
-  }
-  .react-select__single-value {
-    color: ${(props) => props.theme.colors.text};
-  }
-  .react-select__menu {
-    background: ${(props) => props.theme.colors.searchBackground};
-    color: ${(props) => props.theme.colors.text};
-  }
-  .react-select__input {
-    color: ${(props) => props.theme.colors.text};
-  }
-  .react-select__option {
-    &:hover {
-      background-color: ${(props) => props.theme.colors.selectHover};
-    }
-    &:active {
-      background-color: ${(props) => props.theme.colors.selectActive};
-      color: ${(props) => props.theme.colors.buttonColor} !important;
-    }
-  }
-  .react-select__option--is-focused {
-    background-color: ${(props) => props.theme.colors.selectHover};
-  }
-  .react-select__option--is-selected {
-    background-color: ${(props) => props.theme.colors.primary};
-    color: ${(props) => props.theme.colors.buttonColor};
-    &:hover {
-      background-color: ${(props) => props.theme.colors.primary};
-    }
-  }
-`
-
-const ButtonLinkMargin = styled(ButtonLink)`
-  margin-top: 2.5rem;
-`
-
 const Layer2Page = ({ data }) => {
   const intl = useIntl()
 
   const [tvl, setTVL] = useState("-")
   const [percentChangeL2, setL2PercentChange] = useState("-")
   const [averageFee, setAverageFee] = useState("-")
-  const [selectedExchange, setSelectedExchange] = useState(undefined)
-  const [selectedL2, setSelectedL2] = useState(undefined)
 
   useEffect(async () => {
     const l2beatResponse = await fetch("https://l2beat.com/api/tvl.json")
@@ -302,7 +238,7 @@ const Layer2Page = ({ data }) => {
 
   const rollupCards = [
     {
-      emoji: ":page_with_curl:",
+      image: getImage(data.optimisticRollup),
       title: "Optimistic rollups",
       description:
         "Optimistic rollups use fault proofs where transactions are assumed to be valid, but can be challenged if the alleged state after the transaction is suspected. If an invalid tranaction is suspected, a fault proof is ran to see if this has taken place.",
@@ -310,7 +246,7 @@ const Layer2Page = ({ data }) => {
       childLink: "/developers/docs/scaling/optimistic-rollups/",
     },
     {
-      emoji: ":scroll:",
+      image: getImage(data.zkRollup),
       title: "Zero-knowledge rollups",
       description:
         "Zero-knowledge rollups use validity proofs where transactions calculations are computed off-chain, and then this data is then supplied to Ethereum Mainnet with a proof of their validity.",
@@ -391,17 +327,17 @@ const Layer2Page = ({ data }) => {
         <StatsContainer>
           <StatBox>
             <StatPrimary>{tvl} (USD)</StatPrimary>
-            <StatDescription>TVL locked in L2</StatDescription>
+            <StatDescription>TVL locked in layer 2</StatDescription>
           </StatBox>
           <StatDivider />
           <StatBox>
             <StatPrimary>${averageFee} (USD)</StatPrimary>
-            <StatDescription>Average L2 ETH transfer fee</StatDescription>
+            <StatDescription>Average layer 2 ETH transfer fee</StatDescription>
           </StatBox>
           <StatDivider />
           <StatBox>
             <StatPrimary>{percentChangeL2}%</StatPrimary>
-            <StatDescription>Last 30 days</StatDescription>
+            <StatDescription>Layer 2 TVL Last 30 days</StatDescription>
           </StatBox>
         </StatsContainer>
       </PaddedContent>
@@ -636,9 +572,13 @@ const Layer2Page = ({ data }) => {
         </TwoColumnContent>
         <TwoColumnContent>
           {rollupCards.map(
-            ({ emoji, title, description, childSentence, childLink }) => (
+            ({ image, title, description, childSentence, childLink }) => (
               <RollupCard>
-                {emoji && <Emoji size={3} text={emoji} />}
+                <GatsbyImage
+                  image={image}
+                  objectPosition="0"
+                  objectFit="contain"
+                />
                 <h3>{title}</h3>
                 <p>{description}</p>
                 <p>
@@ -781,85 +721,7 @@ const Layer2Page = ({ data }) => {
 
       <PaddedContent>
         <InfoBanner>
-          <h2>How to get onto a layer 2</h2>
-          <p>
-            There are two primary ways to get your assets onto a layer 2: bridge
-            funds from Ethereum via a smart contract or withdraw your funds on
-            an exchange directly onto the layer 2 network.
-          </p>
-          <TwoColumnContent>
-            <Flex50>
-              <h3>Funds in your wallet?</h3>
-              <p>
-                If you've already got your ETH in your wallet, you'll need to
-                use a bridge to move it from Ethereum Mainnet to a layer 2.{" "}
-                <Link to="/bridges/">More on bridges</Link>.
-              </p>
-              {/* Make card list instead of dropdown. */}
-              <StyledSelect
-                className="react-select-container"
-                classNamePrefix="react-select"
-                options={layer2DataCombined.map((l2) => {
-                  l2.label = l2.name
-                  l2.value = l2.name
-                  return l2
-                })}
-                onChange={(selectedOption) => setSelectedL2(selectedOption)}
-                placeholder={"Select L2 you want to bridge to"}
-              />
-              {selectedL2 && (
-                <ButtonLinkMargin to={selectedL2.bridge}>
-                  {selectedL2.name} Bridge
-                </ButtonLinkMargin>
-              )}
-            </Flex50>
-            <Flex50>
-              <h4>Funds on an exchange?</h4>
-              <p>
-                Some centralized exchanges now offer direct withdrawals and
-                deposits to layer 2s. Check which exchanges support layer 2
-                withdrawals and which layer 2s they support.
-              </p>
-              <StyledSelect
-                className="react-select-container"
-                classNamePrefix="react-select"
-                options={cexSupport.map((cex) => {
-                  cex.label = cex.name
-                  cex.value = cex.name
-                  return cex
-                })}
-                onChange={(selectedOption) =>
-                  setSelectedExchange(selectedOption)
-                }
-                placeholder={"Check exchanges that support L2"}
-              />
-              {selectedExchange && (
-                <div>
-                  <TwoColumnContent>
-                    <Flex50>
-                      <h3>Deposits</h3>
-                      <ul>
-                        {selectedExchange.supports_deposits.map((l2) => (
-                          <li>{l2}</li>
-                        ))}
-                      </ul>
-                    </Flex50>
-                    <Flex50>
-                      <h3>Withdrawals</h3>
-                      <ul>
-                        {selectedExchange.supports_withdrawals.map((l2) => (
-                          <li>{l2}</li>
-                        ))}
-                      </ul>
-                    </Flex50>
-                  </TwoColumnContent>
-                  <ButtonLink to={selectedExchange.url}>
-                    Go to {selectedExchange.name}
-                  </ButtonLink>
-                </div>
-              )}
-            </Flex50>
-          </TwoColumnContent>
+          <Layer2Onboard layer2DataCombined={layer2DataCombined} />
         </InfoBanner>
       </PaddedContent>
 
@@ -1037,9 +899,31 @@ export const query = graphql`
         )
       }
     }
+    optimisticRollup: file(
+      relativePath: { eq: "layer-2/optimistic_rollup.png" }
+    ) {
+      childImageSharp {
+        gatsbyImageData(
+          layout: CONSTRAINED
+          placeholder: BLURRED
+          quality: 100
+          width: 122
+        )
+      }
+    }
     rollup: file(relativePath: { eq: "layer-2/rollup-2.png" }) {
       childImageSharp {
         gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED, quality: 100)
+      }
+    }
+    zkRollup: file(relativePath: { eq: "layer-2/zk_rollup.png" }) {
+      childImageSharp {
+        gatsbyImageData(
+          layout: CONSTRAINED
+          placeholder: BLURRED
+          quality: 100
+          width: 122
+        )
       }
     }
     whatIsEthereum: file(relativePath: { eq: "what-is-ethereum.png" }) {
