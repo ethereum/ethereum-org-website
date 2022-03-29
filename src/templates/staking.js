@@ -39,6 +39,7 @@ import Emoji from "../components/Emoji"
 import YouTube from "../components/YouTube"
 import LaunchpadWidget from "../components/LaunchpadWidget"
 import Breadcrumbs from "../components/Breadcrumbs"
+import StakingProductsCardGrid from "../components/StakingProductsCardGrid"
 
 import { isLangRightToLeft } from "../utils/translations"
 
@@ -223,6 +224,7 @@ const components = {
   ExpandableCard,
   YouTube,
   LaunchpadWidget,
+  StakingProductsCardGrid,
 }
 
 const Title = styled.h1`

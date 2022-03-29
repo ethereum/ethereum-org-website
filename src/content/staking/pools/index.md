@@ -69,11 +69,7 @@ There are a variety of options available to help you with your setup. Use the ab
 
 > Please note the importance of choosing a [minority client](/client-diversity) as it improves the security of the network, and limits your risk. Tools that allow you to setup minority client are denoted as "multi-client."
 
-```
-<CardGrid>
-  {stakingProducts.nodeTools.map(tool => <ProductCard product={tool} />)}
-</CardGrid>
-```
+<StakingProductsCardGrid category="pools" />
 
 Have a suggestion for a staking tool we missed? Check out our [product listing policy](/contributing/adding-staking-product) to see if it would be a good fit, and to submit it for review.
 

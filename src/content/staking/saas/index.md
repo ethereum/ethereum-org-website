@@ -66,11 +66,11 @@ Below are some available SaaS provider. Use the above indicators to help guide y
 
 > Please note the importance of supporting [client diversity](/client-diversity) as it improves the security of the network, and limits your risk. Services that have evidence of limiting supermajority client use are marked as "diverse clients."
 
-```
-<CardGrid>
-  {stakingProducts.saas.map(service => <ProductCard product={service} />)}
-</CardGrid>
-```
+<StakingProductsCardGrid category="saas" />
+
+**Key Generators**
+
+<StakingProductsCardGrid category="keyGen" />
 
 Have a suggestion for a staking-as-a-service provider we missed? Check out our [product listing policy](/contributing/adding-staking-product) to see if it would be a good fit, and to submit it for review.
 
