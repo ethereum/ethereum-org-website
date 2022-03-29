@@ -8,6 +8,10 @@ sidebarDepth: 2
 
 Ethereum nodes have to identify themselves with some basic information so that they can connect to peers. To ensure this information can be interpreted by any potential peer it is relayed in one of three standardized formats that any Ethereum node can understand: multiaddr, enode and Ethereum Node Records.
 
+## Prerequisites {#prerequisites}
+
+Some understanding of Ethereum's [networking layer](/src/content/developers/docs/networking-layer/) will be helpful to understand this page.
+
 ## Multiaddr {multiaddr}
 
 The original network address format was the "multiaddr". This is a universal format not only designed for Ethereum nodes but other peer-to-peer networks too. Addresses are represented as key-value pairs with keys and values separated with a forward slash, e.g. the multiaddr for a node with IPv4 address `192.168.22.27` listening to TCP port `33000` looks like:
@@ -29,3 +33,9 @@ In the following example, the node URL describes a node with IP address `10.3.58
 ## Ethereum Node Records (ENRs) {enr}
 
 Ethereum Node Records (ENRs) are a standardized format for network addresses on Ethereum. They supercede multiaddresses and enodes. These are especially useful because they allow greater informational exchange between nodes. The ENR contains a signature, sequence number and fields detailing the identity scheme used to generate and validate signatures. The rest of the record can be populated with arbitrary data organised as key-value pairs. These key-value pairs contain the node's IP address and information about the sub-protocols the node is able to use. Consensus clients use a [specific ENR structure](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/p2p-interface.md#enr-structure) to identify boot nodes and also include an `eth2` field containing information about the current Ethereum fork and the attestation gossip subnet (this connects the node to a particular set of peers whose attestations are aggregated together).
+
+## Further Reading
+
+[ENR EIP](https://eips.ethereum.org/EIPS/eip-778)
+[Network addresses in Ethereum](https://dean.eigenmann.me/blog/2020/01/21/network-addresses-in-ethereum/)
+[LibP2P: Multiaddr-Enode-ENR?!](https://consensys.net/diligence/blog/2020/09/libp2p-multiaddr-enode-enr/)

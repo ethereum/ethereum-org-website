@@ -8,6 +8,10 @@ sidebarDepth: 2
 
 Ethereum's networking layer is the stack of protocols that allows nodes to find each other and exchange information. After the merge there will be two pieces of client software (execution clients and consensus clients) each with their own separate networking stack. As well as communicating with other nodes on the Ethereum network, the execution and consensus clients also have to communicate with each other. This page gives an introductory explanation of the protocols that enable this communication to take place.
 
+## Prerequisites {prerequisites}
+
+Some knowledge of Ethereum [nodes and clients](/src/content/developers/docs/nodes-and-clients/) will be helpful for understanding this page.
+
 ## The Execution Layer {execution-layer}
 
 The execution layer's networking protocols can be divided into two stacks: the first is the discovery stack which is built on top of UDP and allows a new node to find peers to connect to. The second is the [DevP2P](https://github.com/ethereum/devp2p) stack that sits on top of TCP and allows nodes to exchange information. These layers act in parallel, with the discovery layer feeding new network participants into the network, and the DevP2P layer enabling their interactions. DevP2P is itself a whole stack of protocols that are implemented by Ethereum to establish and maintain the peer-to-peer network.
@@ -136,15 +140,18 @@ A summary of the control flow is shown beloiw, with the relevant networking stac
 Once the block has been attested by sufficient validators it is added to the head of the chain, justified and eventually finalised.
 
 <br></br>
-<img src="./assets/cons_client_net_layer.png" width=500>
+<img src="./cons_client_net_layer.png" width=500>
 <br></br>
-<img src="./assets/exe_client_net_layer.png" width=500>
+<img src="./exe_client_net_layer.png" width=500>
 
 Network layer schematic for post-merge consensus and execution clients, from [ethresear.ch](https://ethresear.ch/t/eth1-eth2-client-relationship/7248)
 <br></br>
 
-## Further Reading:
+## Further Reading
 
+[DevP2p](https://github.com/ethereum/devp2p)
+[LibP2p](https://github.com/libp2p/specs)
+[Consensus layer network specs](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/p2p-interface.md#enr-structure)
 [kademlia to discv5](https://vac.dev/kademlia-to-discv5)
 [kademlia paper](https://pdos.csail.mit.edu/~petar/papers/maymounkov-kademlia-lncs.pdf)
 [intro to Ethereum p2p](https://p2p.paris/en/talks/intro-ethereum-networking/)
