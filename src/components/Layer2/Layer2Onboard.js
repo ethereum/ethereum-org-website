@@ -1,4 +1,5 @@
 // Libraries
+import { GatsbyImage } from "gatsby-plugin-image"
 import React, { useState } from "react"
 import Select from "react-select"
 import styled from "styled-components"
@@ -11,6 +12,16 @@ import Link from "../../components/Link"
 import cexSupport from "../../data/layer-2/cex-layer-2-support.json"
 
 // Styles
+const Content = styled.div`
+  background: ${(props) => props.theme.colors.layer2Gradient};
+  padding: 1.5rem;
+  border-radius: 2px;
+`
+
+const H3 = styled.h3`
+  margin-top: 0;
+`
+
 const Flex50 = styled.div`
   flex: 50%;
   @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
@@ -34,7 +45,6 @@ const TwoColumnContent = styled.div`
 // Pass menuIsOpen={true} to component to debug
 const StyledSelect = styled(Select)`
   width: 100%;
-  max-width: 640px;
   color: black;
   /* Component */
   .react-select__control {
@@ -86,31 +96,126 @@ const StyledSelect = styled(Select)`
   }
 `
 
+const SelectedContainer = styled.div`
+  background: rgba(255, 255, 255, 0.02);
+  margin-top: 0.5rem;
+  padding: 21px;
+`
+
 const ButtonLinkMargin = styled(ButtonLink)`
   margin-top: 2.5rem;
 `
 
-const Layer2Onboard = ({ layer2DataCombined }) => {
+const Grid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(21, 1fr);
+  gap: 10px;
+
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    grid-template-columns: repeat(11, 1fr);
+  }
+`
+
+const LeftDescription = styled.div`
+  grid-column: 1/11;
+  grid-row: 1;
+
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    grid-column: 1/11;
+    grid-row: 1;
+  }
+`
+
+const LeftSelect = styled.div`
+  grid-column: 1/11;
+  grid-row: 2;
+
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    grid-column: 1/11;
+    grid-row: 2;
+  }
+`
+
+const RightDescription = styled.div`
+  grid-column: 12/22;
+  grid-row: 1;
+
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    grid-column: 1/11;
+    grid-row: 5;
+  }
+`
+
+const RightSelect = styled.div`
+  grid-column: 12/22;
+  grid-row: 2;
+
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    grid-column: 1/11;
+    grid-row: 6;
+  }
+`
+
+const LeftSelected = styled.div`
+  grid-column: 1/11;
+  grid-row: 3/6;
+
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    grid-column: 1/11;
+    grid-row: 3;
+  }
+`
+
+const EthLogo = styled.div`
+  grid-column: 11;
+  grid-row: 4;
+
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    grid-column: 1/11;
+    grid-row: 4;
+  }
+`
+
+const Image = styled(GatsbyImage)`
+  width: 100%;
+
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    margin-top: 1.5rem;
+  }
+`
+
+const RightSelected = styled.div`
+  grid-column: 12/22;
+  grid-row: 3/6;
+
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    grid-column: 1/11;
+    grid-row: 7;
+  }
+`
+
+const Layer2Onboard = ({ layer2DataCombined, ethIcon }) => {
   const [selectedExchange, setSelectedExchange] = useState(undefined)
   const [selectedL2, setSelectedL2] = useState(undefined)
 
   return (
-    <div>
+    <Content>
       <h2>How to get onto a layer 2</h2>
       <p>
         There are two primary ways to get your assets onto a layer 2: bridge
         funds from Ethereum via a smart contract or withdraw your funds on an
         exchange directly onto the layer 2 network.
       </p>
-      <TwoColumnContent>
-        <Flex50>
-          <h3>Funds in your wallet?</h3>
+      <Grid>
+        <LeftDescription>
+          <h4>Funds in your wallet?</h4>
           <p>
             If you've already got your ETH in your wallet, you'll need to use a
             bridge to move it from Ethereum Mainnet to a layer 2.{" "}
             <Link to="/bridges/">More on bridges</Link>.
           </p>
-          {/* Make card list instead of dropdown. */}
+        </LeftDescription>
+        <LeftSelect>
           <StyledSelect
             className="react-select-container"
             classNamePrefix="react-select"
@@ -122,19 +227,28 @@ const Layer2Onboard = ({ layer2DataCombined }) => {
             onChange={(selectedOption) => setSelectedL2(selectedOption)}
             placeholder={"Select L2 you want to bridge to"}
           />
-          {selectedL2 && (
-            <ButtonLinkMargin to={selectedL2.bridge}>
-              {selectedL2.name} Bridge
-            </ButtonLinkMargin>
-          )}
-        </Flex50>
-        <Flex50>
+        </LeftSelect>
+        {selectedL2 && (
+          <LeftSelected>
+            <SelectedContainer>
+              <p>
+                <b>You can connect to {selectedL2.name} using these wallets:</b>
+              </p>
+              <ButtonLinkMargin to={selectedL2.bridge}>
+                {selectedL2.name} Bridge
+              </ButtonLinkMargin>
+            </SelectedContainer>
+          </LeftSelected>
+        )}
+        <RightDescription>
           <h4>Funds on an exchange?</h4>
           <p>
             Some centralized exchanges now offer direct withdrawals and deposits
             to layer 2s. Check which exchanges support layer 2 withdrawals and
             which layer 2s they support.
           </p>
+        </RightDescription>
+        <RightSelect>
           <StyledSelect
             className="react-select-container"
             classNamePrefix="react-select"
@@ -146,11 +260,16 @@ const Layer2Onboard = ({ layer2DataCombined }) => {
             onChange={(selectedOption) => setSelectedExchange(selectedOption)}
             placeholder={"Check exchanges that support L2"}
           />
-          {selectedExchange && (
-            <div>
+        </RightSelect>
+        <EthLogo>
+          <Image image={ethIcon} objectFit="contain" />
+        </EthLogo>
+        {selectedExchange && (
+          <RightSelected>
+            <SelectedContainer>
               <TwoColumnContent>
                 <Flex50>
-                  <h3>Deposits</h3>
+                  <H3>Deposits</H3>
                   <ul>
                     {selectedExchange.supports_deposits.map((l2) => (
                       <li>{l2}</li>
@@ -158,7 +277,7 @@ const Layer2Onboard = ({ layer2DataCombined }) => {
                   </ul>
                 </Flex50>
                 <Flex50>
-                  <h3>Withdrawals</h3>
+                  <H3>Withdrawals</H3>
                   <ul>
                     {selectedExchange.supports_withdrawals.map((l2) => (
                       <li>{l2}</li>
@@ -169,11 +288,11 @@ const Layer2Onboard = ({ layer2DataCombined }) => {
               <ButtonLink to={selectedExchange.url}>
                 Go to {selectedExchange.name}
               </ButtonLink>
-            </div>
-          )}
-        </Flex50>
-      </TwoColumnContent>
-    </div>
+            </SelectedContainer>
+          </RightSelected>
+        )}
+      </Grid>
+    </Content>
   )
 }
 

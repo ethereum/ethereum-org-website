@@ -7,7 +7,6 @@ import { useIntl } from "gatsby-plugin-intl"
 
 // Data
 import layer2Data from "../data/layer-2/layer-2.json"
-import validiumData from "../data/validium.json"
 
 // Components
 import ButtonLink from "../components/ButtonLink"
@@ -28,6 +27,10 @@ import { CardGrid, Content, Page } from "../components/SharedStyledComponents"
 import { translateMessageId } from "../utils/translations"
 
 // Styles
+
+const HeroBackground = styled.div`
+  background: ${(props) => props.theme.colors.layer2Gradient};
+`
 
 const HeroContainer = styled.div`
   width: 100%;
@@ -157,41 +160,55 @@ const Layer2Page = ({ data }) => {
   const [percentChangeL2, setL2PercentChange] = useState("-")
   const [averageFee, setAverageFee] = useState("-")
 
-  useEffect(async () => {
-    const l2beatResponse = await fetch("https://l2beat.com/api/tvl.json")
-    const l2BeatData = await l2beatResponse.json()
-    // formatted TVL from L2beat API formatted
-    setTVL(
-      new Intl.NumberFormat(intl.locale, {
-        style: "currency",
-        currency: "USD",
-        notation: "compact",
-        minimumSignificantDigits: 2,
-        maximumSignificantDigits: 3,
-      }).format(l2BeatData.data[l2BeatData.data.length - 1][1])
-    )
+  useEffect(() => {
+    const fetchL2Beat = async () => {
+      try {
+        const l2beatResponse = await fetch("https://l2beat.com/api/tvl.json")
+        const l2BeatData = await l2beatResponse.json()
+        // formatted TVL from L2beat API formatted
+        setTVL(
+          new Intl.NumberFormat(intl.locale, {
+            style: "currency",
+            currency: "USD",
+            notation: "compact",
+            minimumSignificantDigits: 2,
+            maximumSignificantDigits: 3,
+          }).format(l2BeatData.data[l2BeatData.data.length - 1][1])
+        )
+        // Calculate percent change ((new value - old value) / old value) *100)
+        setL2PercentChange(
+          (
+            ((l2BeatData.data[l2BeatData.data.length - 1][1] -
+              l2BeatData.data[l2BeatData.data.length - 31][1]) /
+              l2BeatData.data[l2BeatData.data.length - 31][1]) *
+            100
+          ).toFixed(2)
+        )
+      } catch (error) {
+        console.error(error)
+      }
+    }
 
-    // Calculate percent change ((new value - old value) / old value) *100)
-    setL2PercentChange(
-      (
-        ((l2BeatData.data[l2BeatData.data.length - 1][1] -
-          l2BeatData.data[l2BeatData.data.length - 31][1]) /
-          l2BeatData.data[l2BeatData.data.length - 31][1]) *
-        100
-      ).toFixed(2)
-    )
+    fetchL2Beat()
 
-    // Average eth transfer fee from L2's supported by cryptostats API
-    const feeResponse = await fetch(
-      "https://api.cryptostats.community/api/v1/l2-fees/feeTransferEth?metadata=false"
-    )
-    const feeData = await feeResponse.json()
-    const feeAverage =
-      feeData.data.reduce(
-        (acc, curr) => (acc += curr.results.feeTransferEth),
-        0
-      ) / feeData.data.length
-    setAverageFee(feeAverage.toFixed(2))
+    const fetchCryptoStats = async () => {
+      try {
+        // Average eth transfer fee from L2's supported by cryptostats API
+        const feeResponse = await fetch(
+          "https://api.cryptostats.community/api/v1/l2-fees/feeTransferEth?metadata=false"
+        )
+        const feeData = await feeResponse.json()
+        const feeAverage =
+          feeData.data.reduce(
+            (acc, curr) => (acc += curr.results.feeTransferEth),
+            0
+          ) / feeData.data.length
+        setAverageFee(feeAverage.toFixed(2))
+      } catch (error) {
+        console.error(error)
+      }
+    }
+    fetchCryptoStats()
   }, [])
 
   const heroContent = {
@@ -319,28 +336,32 @@ const Layer2Page = ({ data }) => {
         description={"Introduction page to layer 2"}
       />
 
-      <HeroContainer>
-        <Hero content={heroContent} isReverse />
-      </HeroContainer>
+      <HeroBackground>
+        <HeroContainer>
+          <Hero content={heroContent} isReverse />
+        </HeroContainer>
 
-      <PaddedContent>
-        <StatsContainer>
-          <StatBox>
-            <StatPrimary>{tvl} (USD)</StatPrimary>
-            <StatDescription>TVL locked in layer 2</StatDescription>
-          </StatBox>
-          <StatDivider />
-          <StatBox>
-            <StatPrimary>${averageFee} (USD)</StatPrimary>
-            <StatDescription>Average layer 2 ETH transfer fee</StatDescription>
-          </StatBox>
-          <StatDivider />
-          <StatBox>
-            <StatPrimary>{percentChangeL2}%</StatPrimary>
-            <StatDescription>Layer 2 TVL Last 30 days</StatDescription>
-          </StatBox>
-        </StatsContainer>
-      </PaddedContent>
+        <PaddedContent>
+          <StatsContainer>
+            <StatBox>
+              <StatPrimary>{tvl} (USD)</StatPrimary>
+              <StatDescription>TVL locked in layer 2</StatDescription>
+            </StatBox>
+            <StatDivider />
+            <StatBox>
+              <StatPrimary>${averageFee} (USD)</StatPrimary>
+              <StatDescription>
+                Average layer 2 ETH transfer fee
+              </StatDescription>
+            </StatBox>
+            <StatDivider />
+            <StatBox>
+              <StatPrimary>{percentChangeL2}%</StatPrimary>
+              <StatDescription>Layer 2 TVL Last 30 days</StatDescription>
+            </StatBox>
+          </StatsContainer>
+        </PaddedContent>
+      </HeroBackground>
 
       <PaddedContent id="what-is-layer-2">
         <TwoColumnContent>
@@ -720,9 +741,10 @@ const Layer2Page = ({ data }) => {
       </PaddedContent>
 
       <PaddedContent>
-        <InfoBanner>
-          <Layer2Onboard layer2DataCombined={layer2DataCombined} />
-        </InfoBanner>
+        <Layer2Onboard
+          layer2DataCombined={layer2DataCombined}
+          ethIcon={getImage(data.ethHome)}
+        />
       </PaddedContent>
 
       <PaddedContent>
@@ -873,6 +895,16 @@ export const query = graphql`
       childImageSharp {
         gatsbyImageData(
           width: 624
+          layout: CONSTRAINED
+          placeholder: BLURRED
+          quality: 100
+        )
+      }
+    }
+    ethHome: file(relativePath: { eq: "eth-home-icon.png" }) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 50
           layout: CONSTRAINED
           placeholder: BLURRED
           quality: 100

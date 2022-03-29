@@ -38,6 +38,7 @@ const Card = styled.div`
   border-radius: 4px;
   border: 1px solid ${(props) => props.theme.colors.lightBorder};
   text-decoration: none;
+  padding: 0.5rem;
   &:hover {
     transition: transform 0.1s;
     transform: scale(1.02);
@@ -53,7 +54,7 @@ const Content = styled.div`
 `
 
 const Title = styled.h3`
-  margin-top: ${(props) => (props.gitHidden ? "2rem" : "3rem")};
+  margin-top: 0;
   margin-bottom: 0.75rem;
 `
 
