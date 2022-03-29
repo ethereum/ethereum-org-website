@@ -105,7 +105,12 @@ const FlexCentered = styled.div`
 const Glyph = styled(FlexCentered)`
   grid-area: glyph;
   @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
-    display: none;
+    grid-area: content;
+    svg {
+      width: 50%;
+      height: 50%;
+      opacity: 0.05;
+    }
   }
 `
 
