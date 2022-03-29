@@ -1,5 +1,9 @@
 [
   {
+    "fromPath": "/sitemap.xml",
+    "toPath": "/sitemap/sitemap-index.xml"
+  },
+  {
     "fromPath": "/discord",
     "toPath": "https://discord.gg/rZz26QWfCg"
   },
