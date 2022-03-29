@@ -1,4 +1,5 @@
 const axios = require("axios")
+const takeRightWhile = require("lodash/takeRightWhile")
 
 const lambda = async () => {
   try {
@@ -9,8 +10,21 @@ const lambda = async () => {
         body: response.statusText,
       }
     }
+
     const { data } = response
-    return { statusCode: 200, body: JSON.stringify(data) }
+
+    // get only the last 90 days
+    const daysToFetch = 90
+    const now = new Date()
+    const startDate = new Date(now.setDate(now.getDate() - daysToFetch))
+    const startTimestamp = Math.round(startDate.getTime() / 1000)
+
+    const trimmedData = takeRightWhile(
+      data,
+      ({ date }) => Number(date) > startTimestamp
+    )
+
+    return { statusCode: 200, body: JSON.stringify(trimmedData) }
   } catch (error) {
     console.error(error)
     return { statusCode: 500, body: JSON.stringify({ msg: error.message }) }
