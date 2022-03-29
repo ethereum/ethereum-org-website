@@ -348,7 +348,7 @@ Legacy Wiki and eth.wiki were wikis maintained by the Ethereum Foundation for th
 
 **History**
 
-Legacy Wiki was a GitHub wiki and a very early locus of technical content (including the original Ethereum White Paper). Over time, Ethereum developers migrated their documentation, specifications, and technical description work to other platforms like [Read the Docs](https://readthedocs.org/) and GitHub-hosted content.
+Legacy Wiki was a GitHub wiki and a very early locus of technical content (including the original Ethereum Whitepaper). Over time, Ethereum developers migrated their documentation, specifications, and technical description work to other platforms like [Read the Docs](https://readthedocs.org/) and GitHub-hosted content.
 
 In 2019 and 2020, eth.wiki became the successor to Legacy Wiki, but an enduring community of contributors did not materialize.
 
