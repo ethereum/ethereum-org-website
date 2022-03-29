@@ -1460,6 +1460,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://sebastiendan.github.io/tokyo-stories-8bits/"><img src="https://avatars.githubusercontent.com/u/12198372?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Sébastien Dan</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=sebastiendan" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/krsakshi"><img src="https://avatars.githubusercontent.com/u/85516345?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Sakshi</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=krsakshi" title="Documentation">📖</a></td>
   </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/theanshi"><img src="https://avatars.githubusercontent.com/u/85395224?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Anshi</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=theanshi" title="Documentation">📖</a></td>
+  </tr>
 </table>
 
 <!-- markdownlint-restore -->
