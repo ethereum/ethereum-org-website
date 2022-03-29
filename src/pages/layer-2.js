@@ -537,32 +537,32 @@ const Layer2Page = ({ data }) => {
       </LightGrayContent>
 
       <PaddedContent>
-        <h2>How layer 2 works</h2>
-        <p>
-          As we mentioned above, Layer 2 is a collective term for Ethereum
-          scaling solutions that handle transactions off Ethereum layer 1 while
-          taking advantage of the robust decentralized security model of
-          Ethereum layer 1.{" "}
-          <b>
-            A layer 2 is a separate blockchain that is connected to Ethereum
-          </b>
-          . How does that work?
-        </p>
-        <p>
-          A layer 2 blockchain regularly communicates with Ethereum (by
-          submitting bundles of transactions) in order to ensure it has similar
-          security and decentralization guarantees, and requires no changes to
-          the layer 1 protocol (Ethereum). This lets layer 1 handle security,
-          data availability, and decentralization, while the layer above (layer
-          2) handles scaling. Layer 2s takes the transactional burden away from
-          the layer 1, and posts finalized proofs back to the layer 1 to
-          finalize the state. By taking this transaction load away from layer 1,
-          the base layer will become less congested, and everything becomes more
-          scalable.
-        </p>
-        <h3>Rollups</h3>
         <TwoColumnContent>
-          <FlexContainer flexPercent="60">
+          <FlexContainer flexPercent="50">
+            <h2>How layer 2 works</h2>
+            <p>
+              As we mentioned above, Layer 2 is a collective term for Ethereum
+              scaling solutions that handle transactions off Ethereum layer 1 while
+              taking advantage of the robust decentralized security model of
+              Ethereum layer 1.{" "}
+              <b>
+                A layer 2 is a separate blockchain that is connected to Ethereum
+              </b>
+              . How does that work?
+            </p>
+            <p>
+              A layer 2 blockchain regularly communicates with Ethereum (by
+              submitting bundles of transactions) in order to ensure it has similar
+              security and decentralization guarantees, and requires no changes to
+              the layer 1 protocol (Ethereum). This lets layer 1 handle security,
+              data availability, and decentralization, while the layer above (layer
+              2) handles scaling. Layer 2s takes the transactional burden away from
+              the layer 1, and posts finalized proofs back to the layer 1 to
+              finalize the state. By taking this transaction load away from layer 1,
+              the base layer will become less congested, and everything becomes more
+              scalable.
+            </p>
+            <h3>Rollups</h3>
             <p>
               Rollups are currently the preferred layer 2 solution for scaling
               Ethereum. By using rollups, users can{" "}
