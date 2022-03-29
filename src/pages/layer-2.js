@@ -407,25 +407,42 @@ const Layer2Page = ({ data }) => {
       </PaddedContent>
 
       <PaddedContent id="what-is-layer-2">
-        <h2>What is layer 2?</h2>
-        <p>
-          Layer 2 (L2) is a collective term to describe a specific set of
-          Ethereum scaling solutions.{" "}
-          <b>
-            A layer 2 is separate blockchain that extends Ethereum and inherits
-            the security guarantees of Ethereum
-          </b>
-          .
-        </p>
-        <p>
-          Now let’s dig into it a bit more, and to do this we need to explain
-          layer 1 (L1).
-        </p>
+        <TwoColumnContent>
+          <Flex50>
+            <GatsbyImage
+              image={getImage(data.whatIsEthereum)}
+              style={{ maxHeight: "400px" }}
+              objectFit="contain"
+            />
+          </Flex50>
+          <Flex50
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+            }}
+          >
+            <h2>What is layer 2?</h2>
+            <p>
+              Layer 2 (L2) is a collective term to describe a specific set of
+              Ethereum scaling solutions.{" "}
+              <b>
+                A layer 2 is separate blockchain that extends Ethereum and
+                inherits the security guarantees of Ethereum
+              </b>
+              .
+            </p>
+            <p>
+              Now let’s dig into it a bit more, and to do this we need to
+              explain layer 1 (L1).
+            </p>
+          </Flex50>
+        </TwoColumnContent>
       </PaddedContent>
       <LightGrayContent>
-        <h2>Layer 1 function</h2>
         <TwoColumnContent>
-          <FlexContainer flexPercent="65">
+          <Flex50>
+            <h2>Layer 1 function</h2>
             <p>
               Layer 1 is the base blockchain. Ethereum and Bitcoin are both
               layer 1 blockchains because they are the{" "}
@@ -460,10 +477,9 @@ const Layer2Page = ({ data }) => {
               Still confused on Ethereum?{" "}
               <Link to="/what-is-ethereum/">Learn what Ethereum is</Link>.
             </p>
-          </FlexContainer>
+          </Flex50>
           {/* TODO: Convert these inline styles into styled components */}
-          <FlexContainer
-            flexPercent="35"
+          <Flex50
             style={{
               display: "flex",
               alignContent: "center",
@@ -471,73 +487,76 @@ const Layer2Page = ({ data }) => {
             }}
           >
             <GatsbyImage
-              image={getImage(data.whatIsEthereum)}
+              image={getImage(data.financeTransparent)}
               style={{ width: "100%" }}
               objectFit="contain"
             />
-          </FlexContainer>
+          </Flex50>
         </TwoColumnContent>
       </LightGrayContent>
 
       <PaddedContent>
         <TwoColumnContent>
           <FlexContainer
-              flexPercent="50"
-              style={{
-                display: "flex",
-                alignContent: "center",
-                justifyContent: "center",
-              }}
-            >
-              <GatsbyImage
+            flexPercent="50"
+            style={{
+              display: "flex",
+              alignContent: "center",
+              justifyContent: "center",
+            }}
+          >
+            <GatsbyImage
               image={getImage(data.dao)}
               style={{ width: "100%" }}
               objectFit="contain"
             />
-            </FlexContainer>
+          </FlexContainer>
           <FlexContainer flexPercent="50">
-          <h2>Why do we need layer 2?</h2>
-          <p>
-            The three desirable properties of a blockchain are that it is
-            <b>decentralized, secure, and scalable</b>. The{" "}
-            <Link to="https://www.ledger.com/academy/what-is-the-blockchain-trilemma">
-              blockchain trilemma
-            </Link>{" "}
-            states that a simple blockchain architecture can only achieve two out
-            of three. Want a secure and decentralized blockchain? You need to
-            sacrifice scalability. This is where layer 2 networks come in.
-          </p>
-          <p>
-            Ethereum has reached the network's current capacity with{" "}
-            <Link to="https://etherscan.io/chart/tx">
-              1+ million transactions per day
-            </Link>
-            , with high demand for each of these transactions. The success of
-            Ethereum and the demand to use it has caused gas prices to rise
-            substantially. Therefore the{" "}
-            <Link to="/developers/docs/scaling/">need for scaling solutions</Link>{" "}
-            has increased in demand as well.
-          </p>
+            <h2>Why do we need layer 2?</h2>
+            <p>
+              The three desirable properties of a blockchain are that it is
+              <b>decentralized, secure, and scalable</b>. The{" "}
+              <Link to="https://www.ledger.com/academy/what-is-the-blockchain-trilemma">
+                blockchain trilemma
+              </Link>{" "}
+              states that a simple blockchain architecture can only achieve two
+              out of three. Want a secure and decentralized blockchain? You need
+              to sacrifice scalability. This is where layer 2 networks come in.
+            </p>
+            <p>
+              Ethereum has reached the network's current capacity with{" "}
+              <Link to="https://etherscan.io/chart/tx">
+                1+ million transactions per day
+              </Link>
+              , with high demand for each of these transactions. The success of
+              Ethereum and the demand to use it has caused gas prices to rise
+              substantially. Therefore the{" "}
+              <Link to="/developers/docs/scaling/">
+                need for scaling solutions
+              </Link>{" "}
+              has increased in demand as well.
+            </p>
 
-          <h3>Scalability</h3>
-          <p>
-            The main goal of scalability is to increase transaction speed (faster
-            finality), and transaction throughput (high transactions per second),
-            without sacrificing decentralization or security (more on the{" "}
-            <Link to="/upgrades/vision/  ">Ethereum vision</Link>).
-          </p>
-          <p>
-            The Ethereum community has taken a strong stance that it would not
-            throw out decentralization or security in order to scale. Until
-            sharding, Ethereum Mainnet (layer 1) will only be able to process{" "}
-            <Link to="https://ethtps.info/Network/Ethereum">
-              roughly 15 transactions per second
-            </Link>
-            . When demand to use Ethereum is high this causes network congestion,
-            increasing transaction fees, and pricing out those who cannot afford
-            it from using Ethereum until the fees reduce. That is where layer 2
-            comes in to scale Ethereum today.
-          </p>
+            <h3>Scalability</h3>
+            <p>
+              The main goal of scalability is to increase transaction speed
+              (faster finality), and transaction throughput (high transactions
+              per second), without sacrificing decentralization or security
+              (more on the <Link to="/upgrades/vision/  ">Ethereum vision</Link>
+              ).
+            </p>
+            <p>
+              The Ethereum community has taken a strong stance that it would not
+              throw out decentralization or security in order to scale. Until
+              sharding, Ethereum Mainnet (layer 1) will only be able to process{" "}
+              <Link to="https://ethtps.info/Network/Ethereum">
+                roughly 15 transactions per second
+              </Link>
+              . When demand to use Ethereum is high this causes network
+              congestion, increasing transaction fees, and pricing out those who
+              cannot afford it from using Ethereum until the fees reduce. That
+              is where layer 2 comes in to scale Ethereum today.
+            </p>
           </FlexContainer>
         </TwoColumnContent>
         <h3>Benefits</h3>
@@ -559,9 +578,9 @@ const Layer2Page = ({ data }) => {
             <h2>How layer 2 works</h2>
             <p>
               As we mentioned above, Layer 2 is a collective term for Ethereum
-              scaling solutions that handle transactions off Ethereum layer 1 while
-              taking advantage of the robust decentralized security model of
-              Ethereum layer 1.{" "}
+              scaling solutions that handle transactions off Ethereum layer 1
+              while taking advantage of the robust decentralized security model
+              of Ethereum layer 1.{" "}
               <b>
                 A layer 2 is a separate blockchain that is connected to Ethereum
               </b>
@@ -569,15 +588,15 @@ const Layer2Page = ({ data }) => {
             </p>
             <p>
               A layer 2 blockchain regularly communicates with Ethereum (by
-              submitting bundles of transactions) in order to ensure it has similar
-              security and decentralization guarantees, and requires no changes to
-              the layer 1 protocol (Ethereum). This lets layer 1 handle security,
-              data availability, and decentralization, while the layer above (layer
-              2) handles scaling. Layer 2s takes the transactional burden away from
-              the layer 1, and posts finalized proofs back to the layer 1 to
-              finalize the state. By taking this transaction load away from layer 1,
-              the base layer will become less congested, and everything becomes more
-              scalable.
+              submitting bundles of transactions) in order to ensure it has
+              similar security and decentralization guarantees, and requires no
+              changes to the layer 1 protocol (Ethereum). This lets layer 1
+              handle security, data availability, and decentralization, while
+              the layer above (layer 2) handles scaling. Layer 2s takes the
+              transactional burden away from the layer 1, and posts finalized
+              proofs back to the layer 1 to finalize the state. By taking this
+              transaction load away from layer 1, the base layer will become
+              less congested, and everything becomes more scalable.
             </p>
             <h3>Rollups</h3>
             <p>
@@ -968,6 +987,16 @@ export default Layer2Page
 
 export const query = graphql`
   query {
+    dao: file(relativePath: { eq: "use-cases/dao-2.png" }) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 500
+          layout: CONSTRAINED
+          placeholder: BLURRED
+          quality: 100
+        )
+      }
+    }
     doge: file(relativePath: { eq: "doge-computer.png" }) {
       childImageSharp {
         gatsbyImageData(
@@ -982,6 +1011,16 @@ export const query = graphql`
       childImageSharp {
         gatsbyImageData(
           width: 624
+          layout: CONSTRAINED
+          placeholder: BLURRED
+          quality: 100
+        )
+      }
+    }
+    financeTransparent: file(relativePath: { eq: "finance_transparent.png" }) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 300
           layout: CONSTRAINED
           placeholder: BLURRED
           quality: 100
