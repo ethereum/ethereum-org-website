@@ -422,7 +422,7 @@ const Layer2Page = ({ data }) => {
           layer 1 (L1).
         </p>
       </PaddedContent>
-      <PaddedContent>
+      <LightGrayContent>
         <h2>What is layer 1?</h2>
         <TwoColumnContent>
           <FlexContainer flexPercent="65">
@@ -477,52 +477,69 @@ const Layer2Page = ({ data }) => {
             />
           </FlexContainer>
         </TwoColumnContent>
-      </PaddedContent>
+      </LightGrayContent>
 
-      <LightGrayContent>
-        <h2>Why do we need layer 2?</h2>
-        <p>
-          The three desirable properties of a blockchain are that it is
-          <b>decentralized, secure, and scalable</b>. The{" "}
-          <Link to="https://www.ledger.com/academy/what-is-the-blockchain-trilemma">
-            blockchain trilemma
-          </Link>{" "}
-          states that a simple blockchain architecture can only achieve two out
-          of three. Want a secure and decentralized blockchain? You need to
-          sacrifice scalability. This is where layer 2 networks come in.
-        </p>
-        <p>
-          Ethereum has reached the network's current capacity with{" "}
-          <Link to="https://etherscan.io/chart/tx">
-            1+ million transactions per day
-          </Link>
-          , with high demand for each of these transactions. The success of
-          Ethereum and the demand to use it has caused gas prices to rise
-          substantially. Therefore the{" "}
-          <Link to="/developers/docs/scaling/">need for scaling solutions</Link>{" "}
-          has increased in demand as well.
-        </p>
+      <PaddedContent>
+        <TwoColumnContent>
+          <FlexContainer
+              flexPercent="50"
+              style={{
+                display: "flex",
+                alignContent: "center",
+                justifyContent: "center",
+              }}
+            >
+              <GatsbyImage
+              image={getImage(data.dao)}
+              style={{ width: "100%" }}
+              objectFit="contain"
+            />
+            </FlexContainer>
+          <FlexContainer flexPercent="50">
+          <h2>Why do we need layer 2?</h2>
+          <p>
+            The three desirable properties of a blockchain are that it is
+            <b>decentralized, secure, and scalable</b>. The{" "}
+            <Link to="https://www.ledger.com/academy/what-is-the-blockchain-trilemma">
+              blockchain trilemma
+            </Link>{" "}
+            states that a simple blockchain architecture can only achieve two out
+            of three. Want a secure and decentralized blockchain? You need to
+            sacrifice scalability. This is where layer 2 networks come in.
+          </p>
+          <p>
+            Ethereum has reached the network's current capacity with{" "}
+            <Link to="https://etherscan.io/chart/tx">
+              1+ million transactions per day
+            </Link>
+            , with high demand for each of these transactions. The success of
+            Ethereum and the demand to use it has caused gas prices to rise
+            substantially. Therefore the{" "}
+            <Link to="/developers/docs/scaling/">need for scaling solutions</Link>{" "}
+            has increased in demand as well.
+          </p>
 
-        <h3>Scalability</h3>
-        <p>
-          The main goal of scalability is to increase transaction speed (faster
-          finality), and transaction throughput (high transactions per second),
-          without sacrificing decentralization or security (more on the{" "}
-          <Link to="/upgrades/vision/  ">Ethereum vision</Link>).
-        </p>
-        <p>
-          The Ethereum community has taken a strong stance that it would not
-          throw out decentralization or security in order to scale. Until
-          sharding, Ethereum Mainnet (layer 1) will only be able to process{" "}
-          <Link to="https://ethtps.info/Network/Ethereum">
-            roughly 15 transactions per second
-          </Link>
-          . When demand to use Ethereum is high this causes network congestion,
-          increasing transaction fees, and pricing out those who cannot afford
-          it from using Ethereum until the fees reduce. That is where layer 2
-          comes in to scale Ethereum today.
-        </p>
-
+          <h3>Scalability</h3>
+          <p>
+            The main goal of scalability is to increase transaction speed (faster
+            finality), and transaction throughput (high transactions per second),
+            without sacrificing decentralization or security (more on the{" "}
+            <Link to="/upgrades/vision/  ">Ethereum vision</Link>).
+          </p>
+          <p>
+            The Ethereum community has taken a strong stance that it would not
+            throw out decentralization or security in order to scale. Until
+            sharding, Ethereum Mainnet (layer 1) will only be able to process{" "}
+            <Link to="https://ethtps.info/Network/Ethereum">
+              roughly 15 transactions per second
+            </Link>
+            . When demand to use Ethereum is high this causes network congestion,
+            increasing transaction fees, and pricing out those who cannot afford
+            it from using Ethereum until the fees reduce. That is where layer 2
+            comes in to scale Ethereum today.
+          </p>
+          </FlexContainer>
+        </TwoColumnContent>
         <h3>Benefits</h3>
         <InfoGrid>
           {layer2Cards.map(({ emoji, title, description }, idx) => (
@@ -534,7 +551,7 @@ const Layer2Page = ({ data }) => {
             />
           ))}
         </InfoGrid>
-      </LightGrayContent>
+      </PaddedContent>
 
       <PaddedContent>
         <TwoColumnContent>
@@ -584,7 +601,7 @@ const Layer2Page = ({ data }) => {
           </FlexContainer>
           {/* TODO: Convert these inline styles into styled components */}
           <FlexContainer
-            flexPercent="40"
+            flexPercent="50"
             style={{
               display: "flex",
               alignContent: "center",
