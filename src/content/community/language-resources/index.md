@@ -111,5 +111,6 @@ If you are bilingual and want to help us reach more people, you can also get inv
 - [Coin68](https://coin68.com/ethereum-tieu-diem/) - cryptocurrency portal with Ethereum news and educational content
 
 ### Japanese {#ja}
+
 - [Japan Virtual and Crypto assets Exchange Association](https://jvcea.or.jp/)
 - [Japan Cryptoasset Business Association](https://cryptocurrency-association.org/)
