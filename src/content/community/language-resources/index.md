@@ -114,4 +114,3 @@ If you are bilingual and want to help us reach more people, you can also get inv
 - [Japan Virtual and Crypto assets Exchange Association](https://jvcea.or.jp/)
 - [Japan Cryptoasset Business Association](https://cryptocurrency-association.org/)
 - [Crypto Investment Guide for Beginners](https://www.crypto-currencies.jp/)
-- [Wikipedia - Ethreum](https://ja.wikipedia.org/wiki/%E3%82%A4%E3%83%BC%E3%82%B5%E3%83%AA%E3%82%A2%E3%83%A0)
