@@ -7,11 +7,11 @@ import styled from "styled-components"
 
 import ButtonLink from "../components/ButtonLink"
 import ButtonDropdown from "../components/ButtonDropdown"
-import BannerNotification from "../components/BannerNotification"
+// import BannerNotification from "../components/BannerNotification"
 import Card from "../components/Card"
 import ExpandableCard from "../components/ExpandableCard"
 import DocLink from "../components/DocLink"
-import Icon from "../components/Icon"
+// import Icon from "../components/Icon"
 import Contributors from "../components/Contributors"
 import InfoBanner from "../components/InfoBanner"
 import UpgradeStatus from "../components/UpgradeStatus"
@@ -26,7 +26,7 @@ import Roadmap from "../components/Roadmap"
 import UpgradeTableOfContents from "../components/UpgradeTableOfContents"
 import TableOfContents from "../components/TableOfContents"
 import TranslationsInProgress from "../components/TranslationsInProgress"
-import Translation from "../components/Translation"
+// import Translation from "../components/Translation"
 import FeedbackCard from "../components/FeedbackCard"
 import SectionNav from "../components/SectionNav"
 import {
@@ -41,7 +41,6 @@ import LaunchpadWidget from "../components/LaunchpadWidget"
 import Breadcrumbs from "../components/Breadcrumbs"
 
 import { isLangRightToLeft } from "../utils/translations"
-import stakingProducts from "../data/staking-products.json"
 
 const Page = styled.div`
   display: flex;
@@ -256,10 +255,10 @@ const StyledButtonDropdown = styled(ButtonDropdown)`
   }
 `
 
-const StyledEmoji = styled(Emoji)`
-  margin-right: 1rem;
-  flex-shrink: 0;
-`
+// const StyledEmoji = styled(Emoji)`
+//   margin-right: 1rem;
+//   flex-shrink: 0;
+// `
 
 const MobileButtonDropdown = styled(StyledButtonDropdown)`
   margin-bottom: 0rem;
@@ -299,32 +298,32 @@ const Image = styled(GatsbyImage)`
   }
 `
 
-const MoreContent = styled(Link)`
-  width: 100%;
-  background: ${(props) => props.theme.colors.ednBackground};
-  padding: 1rem;
-  display: flex;
-  justify-content: center;
-  &:hover {
-    background: ${(props) => props.theme.colors.background};
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    display: none;
-  }
-`
+// const MoreContent = styled(Link)`
+//   width: 100%;
+//   background: ${(props) => props.theme.colors.ednBackground};
+//   padding: 1rem;
+//   display: flex;
+//   justify-content: center;
+//   &:hover {
+//     background: ${(props) => props.theme.colors.background};
+//   }
+//   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+//     display: none;
+//   }
+// `
 
 const MobileTableOfContents = styled(TableOfContents)`
   position: relative;
   z-index: 2;
 `
 
-const StyledBannerNotification = styled(BannerNotification)`
-  display: flex;
-  justify-content: center;
-  @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
-    display: none;
-  }
-`
+// const StyledBannerNotification = styled(BannerNotification)`
+//   display: flex;
+//   justify-content: center;
+//   @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
+//     display: none;
+//   }
+// `
 
 const TitleCard = styled.div`
   /* background: ${(props) => props.theme.colors.background};
@@ -358,9 +357,9 @@ const StakingPage = ({ data, pageContext, location }) => {
   const tocItems = mdx.tableOfContents.items
   const { summaryPoints } = mdx.frontmatter
 
-  const { editContentUrl } = data.siteData.siteMetadata
-  const { relativePath } = pageContext
-  const absoluteEditPath = `${editContentUrl}${relativePath}`
+  // const { editContentUrl } = data.siteData.siteMetadata
+  // const { relativePath } = pageContext
+  // const absoluteEditPath = `${editContentUrl}${relativePath}`
 
   const dropdownLinks = {
     text: "Staking Options",
@@ -384,21 +383,6 @@ const StakingPage = ({ data, pageContext, location }) => {
       },
     ],
   }
-
-  let stakingType = ""
-  if (pageContext.slug.includes("solo")) {
-    stakingType = "nodeTools"
-  } else if (pageContext.slug.includes("saas")) {
-    stakingType = "saas"
-  } else if (pageContext.slug.includes("pools")) {
-    stakingType = "pools"
-  }
-
-  const showKeyGens =
-    pageContext.slug.includes("solo") || pageContext.slug.includes("saas")
-
-  const listings = stakingType ? stakingProducts[stakingType] : []
-  const keyGens = showKeyGens ? stakingProducts.keyGens : []
 
   return (
     <Container>
