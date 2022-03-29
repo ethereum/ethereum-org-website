@@ -73,7 +73,7 @@ All of the code we'll write will live under the `src` folder. We'll be editing t
 
 Before we start coding, it's important to check out what's already provided for us in the starter files.
 
-### Get your react project running
+### Get your react project running {#get-your-react-project-running}
 
 Let's start by running the React project in our browser. The beauty of React is that once we have our project running in our browser, any changes we save will be updated live in our browser.
 
@@ -681,7 +681,7 @@ export const mintNFT = async (url, name, description) => {
 
 Essentially, if any of the input parameters are an empty string, then we return a JSON object where the `success` boolean is false, and the `status` string relays that all fields in our UI must be complete.
 
-### Upload the metadata to IPFS
+### Upload the metadata to IPFS {#upload-metadata-to-ipfs}
 
 Once we know our metadata is formatted properly, the next step is to wrap it into a JSON object and upload it to IPFS via the `pinJSONToIPFS` we wrote!
 
