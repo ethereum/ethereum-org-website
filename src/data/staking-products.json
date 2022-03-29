@@ -2,6 +2,7 @@
   "nodeTools": [
     {
       "name": "Rocket Pool CLI",
+      "svgPath": "rocket-pool-glyph.svg",
       "launchDate": "2021-11-08",
       "url": "https://rocketpool.net/node-operators",
       "audits": [
@@ -44,6 +45,7 @@
     },
     {
       "name": "Stereum",
+      "svgPath": "stereum-glyph.svg",
       "launchDate": "2021-02-06",
       "url": "https://stereum.net/ethereum-node-setup/",
       "audits": [
@@ -69,6 +71,7 @@
     },
     {
       "name": "DAppNode",
+      "svgPath": "dappnode-glyph.svg",
       "launchDate": "2020-12-01",
       "url": "https://dappnode.io",
       "audits": [],
@@ -89,6 +92,7 @@
     },
     {
       "name": "Ethereum on Arm",
+      "svgPath": "default-open-source-glyph.svg",
       "launchDate": "2021-03-25",
       "url": "https://ethereum-on-arm-documentation.readthedocs.io/",
       "audits": [],
@@ -107,6 +111,7 @@
     },
     {
       "name": "eth-docker",
+      "svgPath": "default-open-source-glyph.svg",
       "launchDate": "2021-06-05",
       "url": "https://eth-docker.net",
       "audits": [],
@@ -125,6 +130,7 @@
     },
     {
       "name": "Vouch + Dirk",
+      "svgPath": "default-open-source-glyph.svg",
       "launchDate": "2020-12-01",
       "url": "https://www.attestant.io/posts/introducing-vouch/",
       "audits": [
@@ -153,6 +159,7 @@
   "keyGen": [
     {
       "name": "Wagyu Key Gen",
+      "svgPath": "wagyu-glyph.svg",
       "launchDate": "2021-12-01",
       "url": "https://wagyu.gg/",
       "audits": [
@@ -176,6 +183,7 @@
     },
     {
       "name": "ethdo",
+      "svgPath": "default-open-source-glyph.svg",
       "launchDate": "2020-12-01",
       "url": "https://github.com/wealdtech/ethdo",
       "audits": [
@@ -199,6 +207,7 @@
   "saas": [
     {
       "name": "Allnodes",
+      "svgPath": "allnodes.svg",
       "launchDate": "2020-12-01",
       "url": "https://www.allnodes.com/eth2/staking",
       "audits": [],
@@ -223,6 +232,7 @@
     },
     {
       "name": "BloxStaking",
+      "svgPath": "bloxstaking-glyph.svg",
       "launchDate": "2020-12-08",
       "url": "https://www.bloxstaking.com/",
       "audits": [
@@ -252,6 +262,7 @@
     },
     {
       "name": "Abyss Finance",
+      "svgPath": "abyss-glyph.svg",
       "launchDate": "2020-12-01",
       "url": "https://abyss.finance/hosting",
       "audits": [],
@@ -276,6 +287,7 @@
     },
     {
       "name": "Stakewise Solo",
+      "svgPath": "stakewise-glyph.svg",
       "launchDate": "2021-02-01",
       "url": "https://stakewise.io/app/solo",
       "audits": [],
@@ -303,6 +315,7 @@
   "pools": [
     {
       "name": "Rocket Pool",
+      "svgPath": "rocket-pool-glyph.svg",
       "launchDate": "2021-11-08",
       "url": "https://rocketpool.net/",
       "audits": [
@@ -343,6 +356,7 @@
     },
     {
       "name": "Lido",
+      "svgPath": "lido-glyph.svg",
       "launchDate": "2020-12-17",
       "url": "https://lido.fi/",
       "audits": [
@@ -385,8 +399,9 @@
     },
     {
       "name": "StakeWise Pool",
+      "svgPath": "stakewise-glyph.svg",
       "launchDate": "2021-02-01",
-      "url": "https://stakewise.io/app/pool",
+      "url": "https://app.stakewise.io/",
       "audits": [],
       "minEth": 0,
       "feePercentage": 10,
@@ -416,7 +431,8 @@
       }
     },
     {
-      "name": "Stakefish",
+      "name": "stakefish",
+      "svgPath": "stakefish-glyph.svg",
       "launchDate": "2020-12-01",
       "url": "https://stake.fish/ethereum-shared/",
       "audits": [
@@ -443,6 +459,7 @@
     },
     {
       "name": "Ankr Staking",
+      "svgPath": "ankr-glyph.svg",
       "launchDate": "2020-11-20",
       "url": "https://stakefi.ankr.com/liquid-staking",
       "audits": [],
@@ -475,6 +492,7 @@
     },
     {
       "name": "StaFi",
+      "svgPath": "stafi-glyph.svg",
       "launchDate": "2020-10-16",
       "url": "https://stafi.io",
       "audits": [
