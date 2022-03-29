@@ -1458,6 +1458,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/nitin094-hub"><img src="https://avatars.githubusercontent.com/u/73329655?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Nitin Rajesh</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=nitin094-hub" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/rakeshhotker"><img src="https://avatars.githubusercontent.com/u/55056403?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Rakesh Hotker</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=rakeshhotker" title="Documentation">📖</a></td>
     <td align="center"><a href="https://sebastiendan.github.io/tokyo-stories-8bits/"><img src="https://avatars.githubusercontent.com/u/12198372?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Sébastien Dan</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=sebastiendan" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/krsakshi"><img src="https://avatars.githubusercontent.com/u/85516345?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Sakshi</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=krsakshi" title="Documentation">📖</a></td>
   </tr>
 </table>
 
