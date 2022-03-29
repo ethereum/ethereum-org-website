@@ -113,4 +113,3 @@ If you are bilingual and want to help us reach more people, you can also get inv
 ### Japanese {#ja}
 - [Japan Virtual and Crypto assets Exchange Association](https://jvcea.or.jp/)
 - [Japan Cryptoasset Business Association](https://cryptocurrency-association.org/)
-- [Crypto Investment Guide for Beginners](https://www.crypto-currencies.jp/)
