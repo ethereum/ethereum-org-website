@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react"
 import styled from "styled-components"
 import { useIntl } from "gatsby-plugin-intl"
 import axios from "axios"
+import { kebabCase } from "lodash"
 
 import { AreaChart, ResponsiveContainer, Area, XAxis } from "recharts"
 import Translation from "./Translation"
@@ -182,11 +183,11 @@ const GridItem = ({ metric, dir }) => {
         margin={{ left: -5, right: -5 }}
       >
         <defs>
-          <linearGradient id="colorUv-${chartType}" x1="0" y1="0" x2="0" y2="1">
+          <linearGradient id="colorUv-${_.kebabCase(title)}" x1="0" y1="0" x2="0" y2="1">
             <stop offset="5%" stopColor="#8884d8" stopOpacity={1} />
             <stop offset="95%" stopColor="#8884d8" stopOpacity={0} />
           </linearGradient>
-          <linearGradient id="colorPv-${chartType}" x1="0" y1="0" x2="0" y2="1">
+          <linearGradient id="colorPv-${_.kebabCase(title)}" x1="0" y1="0" x2="0" y2="1">
             <stop offset="5%" stopColor="#82ca9d" stopOpacity={0.8} />
             <stop offset="95%" stopColor="#82ca9d" stopOpacity={0} />
           </linearGradient>
