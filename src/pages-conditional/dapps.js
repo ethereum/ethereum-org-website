@@ -1183,7 +1183,7 @@ const DappsPage = ({ data, location }) => {
           </StepBoxContainer>
         </Row>
         <h3>
-          <Translation id="page-dapps-editors-choice-header" />
+          <Translation id="page-dapps-editors-choice-header" />{" "}
           <Emoji text=":+1:" size={1} />
         </h3>
         <p>
