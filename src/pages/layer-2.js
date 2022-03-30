@@ -365,19 +365,6 @@ const Layer2Page = ({ data }) => {
       <PaddedContent id="what-is-layer-2">
         <TwoColumnContent>
           <Flex50>
-            <GatsbyImage
-              image={getImage(data.whatIsEthereum)}
-              style={{ maxHeight: "400px" }}
-              objectFit="contain"
-            />
-          </Flex50>
-          <Flex50
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-            }}
-          >
             <h2>What is layer 2?</h2>
             <p>
               Layer 2 (L2) is a collective term to describe a specific set of
@@ -392,6 +379,13 @@ const Layer2Page = ({ data }) => {
               Now let’s dig into it a bit more, and to do this we need to
               explain layer 1 (L1).
             </p>
+          </Flex50>
+          <Flex50>
+            <GatsbyImage
+              image={getImage(data.whatIsEthereum)}
+              style={{ maxHeight: "400px" }}
+              objectFit="contain"
+            />
           </Flex50>
         </TwoColumnContent>
       </PaddedContent>
