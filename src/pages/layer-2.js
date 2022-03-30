@@ -664,7 +664,7 @@ const Layer2Page = ({ data }) => {
       </PaddedContent>
 
       <PaddedContent>
-        <h2>Application specific layer 2s</h2>
+        <h3>Application specific layer 2s</h3>
         <p>
           Application specific layer 2s are projects that specialize in
           optimizing for a specific application space, bringing improved
