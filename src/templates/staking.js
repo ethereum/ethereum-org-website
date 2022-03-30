@@ -90,6 +90,10 @@ const ContentContainer = styled.article`
   padding: 2rem;
   padding-top: 0rem;
 
+  h2:first-of-type {
+    margin-top: 0;
+  }
+
   .featured {
     padding-left: 1rem;
     margin-left: -1rem;
@@ -276,6 +280,9 @@ const HeroContainer = styled.div`
   display: flex;
   align-items: center;
   padding: 2rem;
+  --height: 500px;
+  max-height: var(--height);
+  min-height: var(--height);
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     flex-direction: column;
     max-height: 100%;
