@@ -51,10 +51,6 @@ _We do not consider other scaling solutions to be layer 2._
 
 - Newer projects that have not been battle-tested by users are less likely to be listed.
 
-**Wallet and tooling support**
-
-- What is the public RPC information for the network? (RPC URL, Chain ID, Currency Symbol, Block Explorer URL)
-
 **External security audit**
 
 - Whether through audit, an internal security team or some other method, your product's security must be reliably tested. This reduces the risk to our users and shows us that you take security seriously.
