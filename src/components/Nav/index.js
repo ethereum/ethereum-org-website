@@ -378,7 +378,7 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
 
   return (
     <NavContainer>
-      <StyledNav>
+      <StyledNav aria-label={"Primary"}>
         <NavContent>
           <HomeLogoNavLink to="/">
             <HomeLogo
@@ -438,7 +438,7 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
         </NavContent>
       </StyledNav>
       {shouldShowSubNav && (
-        <SubNav>
+        <SubNav aria-label={"Developer docs"}>
           {ednLinks.map((link, idx) => (
             <NavLink
               key={idx}
