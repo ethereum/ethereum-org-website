@@ -396,9 +396,9 @@ const Layer2Page = ({ data }) => {
         </TwoColumnContent>
       </PaddedContent>
       <LightGrayContent>
+        <h2>Layer 1 function</h2>
         <TwoColumnContent>
           <Flex50>
-            <h2>Layer 1 function</h2>
             <p>
               Layer 1 is the base blockchain. Ethereum and Bitcoin are both
               layer 1 blockchains because they are the{" "}
@@ -412,12 +412,15 @@ const Layer2Page = ({ data }) => {
               the layer 1 blockchain.
             </p>
             <p>
-              <b>Ethereum as the layer 1 includes:</b>
+              Ethereum also functions as a data availability layer for Layer 2s, and if there are any disputes on previous transactions data is provided from Ethereum for these disputes.
             </p>
-            <ul>
+          </Flex50>
+          {/* TODO: Convert these inline styles into styled components */}
+          <Flex50>
+           <p><b>Ethereum as the layer 1 includes:</b></p>
+           <ol>
               <li>
-                <b>A network of node operators</b> to secure and validate the
-                network
+                <b>A network of node operators</b> to secure and validate the network
               </li>
               <li>
                 <b>A network of block producers</b>
@@ -428,25 +431,11 @@ const Layer2Page = ({ data }) => {
               <li>
                 <b>The consensus mechanism</b> for the network
               </li>
-            </ul>
+            </ol>
             <p>
               Still confused on Ethereum?{" "}
               <Link to="/what-is-ethereum/">Learn what Ethereum is</Link>.
             </p>
-          </Flex50>
-          {/* TODO: Convert these inline styles into styled components */}
-          <Flex50
-            style={{
-              display: "flex",
-              alignContent: "center",
-              justifyContent: "center",
-            }}
-          >
-            <GatsbyImage
-              image={getImage(data.financeTransparent)}
-              style={{ width: "100%" }}
-              objectFit="contain"
-            />
           </Flex50>
         </TwoColumnContent>
       </LightGrayContent>
