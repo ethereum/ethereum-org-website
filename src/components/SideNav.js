@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react"
 import styled from "styled-components"
 import { motion } from "framer-motion"
+import { useIntl } from "gatsby-plugin-intl"
 
 import Icon from "./Icon"
 import Link from "./Link"
@@ -9,7 +10,6 @@ import { dropdownIconContainerVariant } from "./SharedStyledComponents"
 
 import docLinks from "../data/developer-docs-links.yaml"
 import { translateMessageId } from "../utils/translations"
-import { useIntl } from "gatsby-plugin-intl"
 
 const IconContainer = styled(motion.div)`
   cursor: pointer;
