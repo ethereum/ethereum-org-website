@@ -206,7 +206,7 @@ Tervezési dokumentum, amely információkat nyújt az Ethereum közösség szá
 
 Az ENS jegyzés az egyedüli, központi [szerződés](#smart-contract), mely egy leképezést szolgáltat a domén nevek és a tulajdonosok és a feloldók között, ahogy az [EIP](#eip) 137-ben elő van írva.
 
-[Olvass róla többet a github.comon](https://github.com/ethereum/ens)
+[Olvass róla többet a ens.domains](https://ens.domains)
 
 ### entrópia {#entropy}
 

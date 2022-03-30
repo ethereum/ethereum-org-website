@@ -226,7 +226,7 @@ Dokumen desain yang menyediakan informasi bagi komunitas Ethereum, yang mendeskr
 
 Pendaftaran ENS adalah [kontrak](#smart-contract) sentral tunggal yang menyediakan pemetaan dari nama domain pemilik dan pembaru, seperti dideskripsikan dalam [EIP](#eip) 137.
 
-[Baca lebih lanjut di github.com](https://github.com/ethereum/ens)
+[Baca lebih lanjut di ens.domains](https://ens.domains)
 
 ### entropi {#entropy}
 
