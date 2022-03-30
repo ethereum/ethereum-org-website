@@ -6,13 +6,13 @@ sidebar: true
 sidebarDepth: 2
 ---
 
-A Patricia Merkle Trie provides a cryptographically authenticated data structure that can be used to store all (key, value) bindings. They are fully deterministic, meaning that a Patricia trie with the same (key,value) bindings is guaranteed to be exactly the same down to the last byte and therefore have the same root hash, provide the holy grail of O(log(n)) efficiency for inserts, lookups and deletes, and are much easier to understand and code than more complex comparison-based alternatives like red-black tries.
+A Patricia Merkle Trie provides a cryptographically authenticated data structure that can be used to store all (key, value) bindings. They are fully deterministic, meaning that a Patricia trie with the same (key,value) bindings is guaranteed to be exactly the same down to the last byte and therefore have the same root hash, provide the holy grail of O(log(n)) efficiency for inserts, lookups and deletes, and are much easier to understand and code than more complex comparison-based alternatives like red-black tries. These are used extensively across Ethereum's execution layer.
 
-## Prerequisites
+## Prerequisites {#prerequisites}
 
 It would be helpful to have basic knowledge of Merkle trees and serialization to understand this page.
 
-## Basic Radix Tries
+## Basic Radix Tries {#basic-radix-tries}
 
 In a basic radix trie, every node looks as follows:
 
@@ -59,11 +59,11 @@ The "Merkle" part of the radix trie arises in the fact that a deterministic cryp
 
 While traversing a path 1 nibble at a time as described above, most nodes contain a 17-element array. 1 index for each possible value held by the next hex character (nibble) in the path, and 1 to hold the final target value in the case that the path has been fully traversed. These 17-element array nodes are called `branch` nodes.
 
-## Merkle Patricia Trie
+## Merkle Patricia Trie {#merkle-patricia-trees}
 
 However, radix tries have one major limitation: they are inefficient. If you want to store just one (path,value) binding where the path is (in the case of the ethereum state trie), 64 characters long (number of nibbles in `bytes32`), you will need over a kilobyte of extra space to store one level per character, and each lookup or delete will take the full 64 steps. The Patricia trie introduced here solves this issue.
 
-### Optimization
+### Optimization {#optimization}
 
 Merkle Patricia tries solve the inefficiency issue by adding some extra complexity to the data structure. A node in a Merkle Patricia trie is one of the following:
 
@@ -80,7 +80,7 @@ The optimization above however introduces some ambiguity.
 
 When traversing paths in nibbles, we may end up with an odd number of nibbles to traverse, but because all data is stored in `bytes` format, it is not possible to differentiate between, for instance, the nibble `1`, and the nibbles `01` (both must be stored as `<01>`). To specify odd length, the partial path is prefixed with a flag.
 
-### Specification: Compact encoding of hex sequence with optional terminator
+### Specification: Compact encoding of hex sequence with optional terminator {specification}
 
 The flagging of both _odd vs. even remaining partial path length_ and _leaf vs. extension node_ as described above reside in the first nibble of the partial path of any 2-item node. They result in the following:
 
@@ -143,7 +143,7 @@ Here is the extended code for getting a node in the Merkle Patricia trie:
         path2.push(16)
         return get_helper(node,path2)
 
-### Example Trie
+### Example Trie {#example-trie}
 
 Suppose we want a trie containing four path/value pairs `('do', 'verb')`, `('dog', 'puppy')`, `('doge', 'coin')`, `('horse', 'stallion')`.
 
@@ -166,9 +166,9 @@ When one node is referenced inside another node, what is included is `H(rlp.enco
 
 Note that when updating a trie, one needs to store the key/value pair `(sha3(x), x)` in a persistent lookup table _if_ the newly-created node has length >= 32. However, if the node is shorter than that, one does not need to store anything, since the function f(x) = x is reversible.
 
-## Tries in Ethereum
+## Tries in Ethereum {#tries-in-ethereum}
 
-All of the merkle tries in Ethereum use a Merkle Patricia Trie.
+All of the merkle tries in Ethereum's execution layer use a Merkle Patricia Trie.
 
 From a block header there are 3 roots from 3 of these tries.
 
@@ -176,24 +176,24 @@ From a block header there are 3 roots from 3 of these tries.
 2.  transactionsRoot
 3.  receiptsRoot
 
-### State Trie
+### State Trie {#state-trie}
 
 There is one global state trie, and it updates over time. In it, a `path` is always: `sha3(ethereumAddress)` and a `value` is always: `rlp(ethereumAccount)`. More specifically an ethereum `account` is a 4 item array of `[nonce,balance,storageRoot,codeHash]`. At this point it's worth noting that this `storageRoot` is the root of another patricia trie:
 
-### Storage Trie
+### Storage Trie {#storage-trie}
 
 Storage trie is where _all_ contract data lives. There is a separate storage trie for each account. To calculate a 'path' in this trie first understand how solidity organizes a [variable's position](/json-rpc/API#eth_getstorageat). To get the `path` there is one extra hashing (the link does not describe this). For instance the `path` for the zeroith variable is `sha3(<0000000000000000000000000000000000000000000000000000000000000000>)` which is always `290decd9548b62a8d60345a988386fc84ba6bc95484008f6362f93160ef3e563`. The value at the leaf is the rlp encoding of the storage value `1234` (`0x04d2`), which is `<82 04 d2>`.
 For the mapping example, the `path` is `sha3(<6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9>)`
 
-### Transactions Trie
+### Transactions Trie {#transaction-trie}
 
 There is a separate transactions trie for every block. A `path` here is: `rlp(transactionIndex)`. `transactionIndex` is its index within the block it's mined. The ordering is mostly decided by a miner so this data is unknown until mined. After a block is mined, the transaction trie never updates.
 
-### Receipts Trie
+### Receipts Trie {#receipts-trie}
 
 Every block has its own Receipts trie. A `path` here is: `rlp(transactionIndex)`. `transactionIndex` is its index within the block it's mined. The receipts trie never updates.
 
-## Further Reading
+## Further Reading {#further-reading}
 
 [Modified Merkle Patricia Trie — How Ethereum saves a state](https://medium.com/codechain/modified-merkle-patricia-trie-how-ethereum-saves-a-state-e6d7555078dd)
 [Merkling in Ethereum](https://blog.ethereum.org/2015/11/15/merkling-in-ethereum/)

@@ -8,7 +8,7 @@ sidebarDepth: 2
 
 Simple serialize (SSZ) is the serialization method used on the Beacon Chain. It replaces the RLP serialization used on the execution layer everywhere across the consensus layer except the peer discovery protocol. SSZ is specifically designed to be deterministic and compatible with Merkleization.
 
-## How does SSZ work? {how-does-ssz-work}
+## How does SSZ work? {#how-does-ssz-work}
 
 ### Serialization
 
@@ -86,13 +86,13 @@ So the actual values for variable-length types are stored in a heap at the end o
 
 There are also some special cases that require spoecific treatment, such as the `BitList` typoe that requires a length cap to be added during serialization and removed during deserialization. Full details are available in the [SSZ spec](https://github.com/ethereum/consensus-specs/blob/dev/ssz/simple-serialize.md).
 
-### Deserialization
+### Deserialization {#deserialization}
 
 To deserialize this object requires the <b>schema</b>. The schema defines the precise layout of the serialized data so that each specific element can be deserialized from a blob of bytes into some meaningful object with the elements having the right type, value, size and position. It is the schema that tells the deserializer which values are actual values and which ones are offsets. All field names disappear when an object is serialized, but reinstantiated on deserialization according to the schema.
 
 NB See [ssz.dev](https://www.ssz.dev/overview) for an interactive explainer on this.
 
-## Merkleization
+## Merkleization {#merkleization}
 
 This SSZ serialized object can then be merkleized - that is transformed into a Merkle-tree representation of the same data. First, the number of 32-byte chunks in the serialized object is determined. These are the "leaves" of the tree. The total number of leaves must be a power of 2 so that hashign together the leaves eventually produces a single hash-tree-root. If this is not naturally the case, additional leaves containing 32 bytes of zeros are added. Diagramatically:
 
@@ -114,20 +114,20 @@ There are also cases where the leaves of the tree do not naturally evenly distri
 
 Instead of referring to these tree elements as leaf X, node X etc, we can give them generalized indices, starting with root = 1 and counting from left to right along each level. This is the generalized index explained above. Each element in the serialized list has a generalized index equal to `2**depth + idx` where idx is its zero-indexed position in the serialized object and the depth is the number of levels in the Merkle tree, which can be determined as the square root of the number of elements (leaves).
 
-## Generalized indices
+## Generalized indices {#generalized-indices}
 
 A generalized index is an integer that represents a node in a binary merkle tree where each node has a generalized index `2 ** depth + index in row`.
 
 ```
         1           --depth = 0  2**0 + 0 = 1
     2       3       --depth = 1  2**1 + 0 = 2, 2**1+1 = 3
-  4   5   6   7     --depth = 2  2**2 + 0 = 4, 2**2 + 1 = 5, 2**2 + 2 = 6, 2**2 + 3 = 7
+  4   5   6   7     --depth = 2  2**2 + 0 = 4, 2**2 + 1 = 5...
 
 ```
 
 This representation yields a node index for each piece of data in the merkle tree.
 
-## Multiproofs
+## Multiproofs {#multiproofs}
 
 Providing the list of generalized indices representing a specific element allows us to verify it against the hash-tree-root. This root is our accepted version of reality. Any data we are provided can be verified against that reality by inserting it into the right place in the Merkle tree (determined by its generalized index) and observing that the root remains constant. There are functions in the spec [here](https://github.com/ethereum/consensus-specs/blob/dev/ssz/merkle-proofs.md#merkle-multiproofs) that show how to compute the minimal set of nodes required to verify the contents of a particular set of generalized indices.
 
@@ -144,7 +144,7 @@ The hash of (8,9) should equal hash (4), which hashes with 5 to produce 2, which
 
 ```
 
-## Further Reading
+## Further Reading {#further-reading}
 
 [Upgrading Ethereum: SSZ](https://eth2book.info/altair/part2/building_blocks/ssz)
 [Upgrading Ethereum: Merkleization](https://eth2book.info/altair/part2/building_blocks/merkleization)
