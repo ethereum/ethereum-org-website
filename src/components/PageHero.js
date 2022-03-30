@@ -37,6 +37,7 @@ const HeroImg = styled(GatsbyImage)`
   margin-left: 3rem;
   width: 100%;
   max-width: 624px;
+  transform: scale(1.1);
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     margin-top: 0;
     margin-left: 0;
@@ -51,7 +52,7 @@ const Header = styled.h2`
   margin-bottom: 0rem;
   color: ${(props) => props.theme.colors.text00};
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    font-size: 2.5rem
+    font-size: 2.5rem;
   }
 `
 
@@ -114,7 +115,7 @@ const PageHero = ({ content, children, className, isReverse }) => {
           )}
           {children}
         </HeroContent>
-        <HeroImg image={image} alt={alt} loading="eager" />
+        <HeroImg image={image} objectFit="contain" alt={alt} loading="eager" />
       </HeroContainer>
     </Content>
   )
