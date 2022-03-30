@@ -255,7 +255,7 @@ A design document providing information to the Ethereum community, describing a 
 
 The ENS registry is a single central [contract](#smart-contract) that provides a mapping from domain names to owners and resolvers, as described in [EIP](#eip) 137.
 
-[Read more at github.com](https://github.com/ethereum/ens)
+[Read more at ens.domains](https://ens.domains)
 
 ### entropy {#entropy}
 
