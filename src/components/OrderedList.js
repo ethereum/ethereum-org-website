@@ -18,7 +18,7 @@ const NumberCircle = styled.div`
   border-radius: 50%;
   line-height: ${({ size }) => size};
   text-align: center;
-  background: ${({ theme ) => theme.colors.grayBackground};
+  background: ${({ theme }) => theme.colors.grayBackground};
 `
 
 const Data = styled.div`
