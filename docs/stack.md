@@ -13,7 +13,8 @@
   - Primary implementation: `/src/components/Search/index.js`
 - [Crowdin](https://crowdin.com/) - crowdsourcing for our translation efforts (See "Translation initiative" below)
 - [GitHub Actions](https://github.com/features/actions) - Manages CI/CD, and issue tracking
-- [Netlify](https://www.netlify.com/) - DNS management and primary host for `master` build. Also provides automatic preview deployments for all pull requests
+- [Netlify](https://www.netlify.com/) - DNS management and primary host for `master` build.
+- [Gatsby Cloud](https://www.gatsbyjs.com/) - Site builds and automatic preview deployments for all pull requests
 
 ## Code structure
 
