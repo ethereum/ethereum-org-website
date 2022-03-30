@@ -72,6 +72,10 @@ If it does, complete the following information which we need to accurately list 
 
 <!-- Please list wallets that support this network -->
 
+**How can users and/or developers connect to this layer 2?**
+
+<!-- What is the public RPC information for the network? (RPC URL, Chain ID, Currency Symbol) -->
+
 **Has this project undergone an external security audit and/or bug bounty?**
 
 <!-- Please provide a link to a report or repo for any audits or bug bounties. If you haven't been audited but think your layer 2 should be listed anyway, explain here. -->
@@ -86,4 +90,4 @@ If it does, complete the following information which we need to accurately list 
 
 **Is there a block explorer?**
 
-<!-- Is there a block explorer for the network? -->
+<!-- Are there block explorers for the network? Please share URLs. -->
