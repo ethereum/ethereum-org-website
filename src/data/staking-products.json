@@ -37,7 +37,7 @@
       "multiClient": true,
       "easyClientSwitching": true,
       "platforms": ["Linux", "macOS", "Windows"],
-      "ui": ["cli"],
+      "ui": ["CLI"],
       "socials": {
         "discord": "https://discord.gg/rocketpool",
         "twitter": "https://twitter.com/Rocket_Pool",
@@ -64,7 +64,7 @@
       "multiClient": true,
       "easyClientSwitching": true,
       "platforms": ["Linux", "macOS", "Windows"],
-      "ui": ["gui"],
+      "ui": ["GUI"],
       "socials": {
         "discord": "https://discord.com/invite/4vxZnyEDty",
         "twitter": "https://twitter.com/stereumdev",
@@ -85,8 +85,8 @@
       "isPermissionless": true,
       "multiClient": false,
       "easyClientSwitching": false,
-      "platforms": ["browser"],
-      "ui": ["gui"],
+      "platforms": ["Browser"],
+      "ui": ["GUI"],
       "socials": {
         "discord": "https://discord.gg/c28an8dA5k",
         "twitter": "https://twitter.com/dappnode",
@@ -108,7 +108,7 @@
       "multiClient": true,
       "easyClientSwitching": false,
       "platforms": ["Linux"],
-      "ui": ["cli"],
+      "ui": ["CLI"],
       "socials": {
         "github": "https://github.com/diglos/ethereumonarm"
       }
@@ -128,7 +128,7 @@
       "multiClient": true,
       "easyClientSwitching": true,
       "platforms": ["Linux"],
-      "ui": ["cli"],
+      "ui": ["CLI"],
       "socials": {
         "github": "https://github.com/eth-educators/eth-docker"
       }
@@ -152,8 +152,8 @@
       "isPermissionless": true,
       "multiClient": true,
       "easyClientSwitching": false,
-      "platforms": ["Linux, Windows"],
-      "ui": ["cli"],
+      "platforms": ["Linux", "Windows"],
+      "ui": ["CLI"],
       "socials": {
         "discord": "https://invite.gg/attestant",
         "twitter": "https://twitter.com/attestantio",
@@ -181,7 +181,7 @@
       "isPermissionless": true,
       "isSelfCustody": true,
       "platforms": ["Linux", "macOS", "Windows"],
-      "ui": ["gui"],
+      "ui": ["GUI"],
       "socials": {
         "discord": "https://discord.io/ethstaker",
         "twitter": "https://twitter.com/wagyutools",
@@ -206,7 +206,7 @@
       "isPermissionless": true,
       "isSelfCustody": true,
       "platforms": ["Linux", "Windows"],
-      "ui": ["cli"],
+      "ui": ["CLI"],
       "socials": {
         "github": "https://github.com/wealdtech/ethdo"
       }
@@ -231,8 +231,8 @@
       "isPermissionless": false,
       "pctMajorityClient": null,
       "isSelfCustody": true,
-      "platforms": ["browser"],
-      "ui": ["gui"],
+      "platforms": ["Browser"],
+      "ui": ["GUI"],
       "socials": {
         "discord": "https://discord.allnodes.com/",
         "twitter": "https://twitter.com/allnodes",
@@ -263,7 +263,7 @@
       "pctMajorityClient": null,
       "isSelfCustody": true,
       "platforms": ["Linux", "macOS", "Windows"],
-      "ui": ["gui"],
+      "ui": ["GUI"],
       "socials": {
         "discord": "https://discord.gg/AbYHBfjkDY",
         "twitter": "https://twitter.com/ssv_network",
@@ -288,8 +288,8 @@
       "isPermissionless": true,
       "pctMajorityClient": 3.61,
       "isSelfCustody": true,
-      "platforms": ["browser"],
-      "ui": ["gui"],
+      "platforms": ["Browser"],
+      "ui": ["GUI"],
       "socials": {
         "twitter": "https://twitter.com/AbyssFinance",
         "telegram": "https://t.me/abyssfinance",
@@ -314,8 +314,8 @@
       "isPermissionless": true,
       "pctMajorityClient": null,
       "isSelfCustody": false,
-      "platforms": ["browser"],
-      "ui": ["gui"],
+      "platforms": ["Browser"],
+      "ui": ["GUI"],
       "socials": {
         "discord": "https://discord.gg/8Zf7tKyXeZ",
         "twitter": "https://twitter.com/stakewise_io",
@@ -359,8 +359,8 @@
       "isTrustless": true,
       "hasPermissionlessNodes": true,
       "pctMajorityClient": 10.67,
-      "platforms": ["browser"],
-      "ui": ["gui"],
+      "platforms": ["Browser"],
+      "ui": ["GUI"],
       "socials": {
         "discord": "https://discord.gg/rocketpool",
         "twitter": "https://twitter.com/Rocket_Pool",
@@ -401,8 +401,8 @@
       "isTrustless": false,
       "hasPermissionlessNodes": false,
       "pctMajorityClient": 42.83,
-      "platforms": ["browser", "wallet"],
-      "ui": ["gui"],
+      "platforms": ["Browser", "Wallet"],
+      "ui": ["GUI"],
       "socials": {
         "discord": "https://discord.com/invite/vgdPfhZ",
         "twitter": "https://twitter.com/lidofinance",
@@ -437,8 +437,8 @@
       "isTrustless": false,
       "hasPermissionlessNodes": false,
       "pctMajorityClient": null,
-      "platforms": ["browser"],
-      "ui": ["gui"],
+      "platforms": ["Browser"],
+      "ui": ["GUI"],
       "socials": {
         "discord": "https://discord.com/invite/2BSdr2g",
         "twitter": "https://twitter.com/stakewise_io",
@@ -465,8 +465,8 @@
       "isTrustless": true,
       "hasPermissionlessNodes": false,
       "pctMajorityClient": 0.0,
-      "platforms": ["browser"],
-      "ui": ["gui"],
+      "platforms": ["Browser"],
+      "ui": ["GUI"],
       "twitter": "https://twitter.com/stakefish",
       "telegram": "https://t.me/stakefish",
       "socials": {
@@ -499,8 +499,8 @@
       "isTrustless": false,
       "hasPermissionlessNodes": false,
       "pctMajorityClient": 67.94,
-      "platforms": ["browser"],
-      "ui": ["gui"],
+      "platforms": ["Browser"],
+      "ui": ["GUI"],
       "socials": {
         "telegram": "https://t.me/stkrsupport",
         "twitter": "https://twitter.com/ankr",
@@ -533,8 +533,8 @@
       "isTrustless": false,
       "hasPermissionlessNodes": false,
       "pctMajorityClient": null,
-      "platforms": ["browser"],
-      "ui": ["gui"],
+      "platforms": ["Browser"],
+      "ui": ["GUI"],
       "socials": {
         "discord": "https://discord.com/invite/jB77etn",
         "telegram": "https://t.co/9MsQSkT34Q",

@@ -122,7 +122,7 @@ const baseColors = {
   tagOrange: primaryDark100,
   tagGreen: success100,
   tagRed: fail100,
-  tagTurqouise: turquoise,
+  tagTurquoise: turquoise,
   tagGray: white700,
   tagYellow: yellow,
   tagMint: mint,
@@ -237,6 +237,8 @@ const lightColors = {
   rollupDevDocList: primaryLight50,
   beta: "radial-gradient(25.56% 133.51% at 28.36% 45.54%, rgba(28, 28, 225, 0) 0%, rgba(28, 28, 225, 0.06) 100%)",
   offBackground: "#fafafa",
+  stakingPillPlatform: "#cd9df3",
+  stakingPillUI: "#ebd27a",
 }
 
 // TODO replace random variables w/ baseColor variables
@@ -326,6 +328,8 @@ const darkColors = {
   cardGradient:
     "linear-gradient(49.21deg, rgba(127, 127, 213, 0.2) 19.87%, rgba(134, 168, 231, 0.2) 58.46%, rgba(145, 234, 228, 0.2) 97.05% )",
   offBackground: "#181818",
+  stakingPillPlatform: "#cd9df3",
+  stakingPillUI: "#ebd27a",
 }
 
 const lightThemeColors = Object.assign({}, baseColors, lightColors)
