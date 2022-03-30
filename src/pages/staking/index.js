@@ -181,16 +181,19 @@ const StyledCard = styled(Card)`
 const benefits = [
   {
     title: "More sustainable",
+    emoji: "🍃",
     description:
       "Stakers don't need energy-intensive computers in order to participate in a proof-of-stake system–just a laptop or smartphone. This will make Ethereum better for the environment.",
   },
   {
     title: "Better security",
+    emoji: ":shield:",
     description:
       "The network gets stronger against attacks as more ETH is staked, as it then requires more ETH to control a majority of the network. To become a threat, you would need to hold the majority of validators, which means you'd need to control the majority of ETH in the system–that's a lot!",
   },
   {
     title: "Earn rewards",
+    emoji: "💰",
     description:
       "Rewards are given for actions that help the network reach consensus. You'll get rewards for batching transactions into a new block or checking the work of other validators because that's what keeps the chain running securely.",
   },
@@ -294,8 +297,8 @@ const StakingPage = ({ data, location }) => {
               {tocItems.whyStakeYourEth.title}
             </h2>
             <CardGrid>
-              {benefits.map(({ title, description }, idx) => (
-                <StyledCard title={title} key={idx}>
+              {benefits.map(({ title, description, emoji }, idx) => (
+                <StyledCard title={title} emoji={emoji} key={idx}>
                   {description}
                 </StyledCard>
               ))}
