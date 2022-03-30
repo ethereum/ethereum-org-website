@@ -619,7 +619,7 @@ const EthExchanges = () => {
           </ResultsContainer>
           <Disclaimer>
             <Translation id="page-get-eth-exchanges-disclaimer" />{" "}
-            <Link to="mailto:website@ethereum.org">website@ethereum.org</Link>.
+            <Link to="mailto:website@ethereum.org">website@ethereum.org</Link>.{" "}
             <Translation id="page-find-wallet-last-updated" />{" "}
             <strong>{lastUpdated}</strong>
           </Disclaimer>

@@ -2,20 +2,26 @@ import React from "react"
 import styled from "styled-components"
 
 import Link from "../components/Link"
+import Translation from "../components/Translation"
+
 import { Page, Content } from "../components/SharedStyledComponents"
 
 const StyledPage = styled(Page)`
   margin-top: 4rem;
 `
 
-// TODO is there a way to translate this page?
 const NotFoundPage = () => (
   <StyledPage>
     <Content>
-      <h1>Resource not found.</h1>
+      <h1>
+        <Translation id="we-couldnt-find-that-page" />
+      </h1>
       <p>
-        Try using search to find what you're looking for or{" "}
-        <Link to="/en/">return home</Link>.
+        <Translation id="try-using-search" />{" "}
+        <Link to="/">
+          <Translation id="return-home" />
+        </Link>
+        .
       </p>
     </Content>
   </StyledPage>

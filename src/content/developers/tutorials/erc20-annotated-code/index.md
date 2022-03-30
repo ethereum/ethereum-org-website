@@ -294,7 +294,7 @@ This comment explains the purpose of the contract.
 contract ERC20 is Context, IERC20 {
 ```
 
-This line specifies the inheritence, in this case from `IERC20` from above and `Context`, for OpenGSN.
+This line specifies the inheritance, in this case from `IERC20` from above and `Context`, for OpenGSN.
 
 &nbsp;
 
@@ -602,7 +602,7 @@ in the transaction pool he sends a transaction that spends Alice's five tokens a
 higher gas price so it will be mined faster. That way Bill can spend first five tokens and then,
 once Alice's new allowance is mined, spend ten more for a total price of fifteen tokens, more than
 Alice meant to authorize. This technique is called
-[front-running](https://consensys.github.io/smart-contract-best-practices/known_attacks/#front-running)
+[front-running](https://consensys.github.io/smart-contract-best-practices/attacks/#front-running)
 
 | Alice Transaction | Alice Nonce | Bill Transaction              | Bill Nonce | Bill's Allowance | Bill Total Income from Alice |
 | ----------------- | ----------- | ----------------------------- | ---------- | ---------------- | ---------------------------- |

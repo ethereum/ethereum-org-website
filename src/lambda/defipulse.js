@@ -1,18 +1,30 @@
 const axios = require("axios")
+const takeRightWhile = require("lodash/takeRightWhile")
 
-const lambda = async (apiKey) => {
+const lambda = async () => {
   try {
-    const response = await axios.get(
-      `https://data-api.defipulse.com/api/v1/defipulse/api/GetHistory?api-key=${apiKey}&period=3m&length=1`
-    )
+    const response = await axios.get(`https://api.llama.fi/charts/Ethereum`)
     if (response.status < 200 || response.status >= 300) {
       return {
         statusCode: response.status,
         body: response.statusText,
       }
     }
+
     const { data } = response
-    return { statusCode: 200, body: JSON.stringify(data) }
+
+    // get only the last 90 days
+    const daysToFetch = 90
+    const now = new Date()
+    const startDate = new Date(now.setDate(now.getDate() - daysToFetch))
+    const startTimestamp = Math.round(startDate.getTime() / 1000)
+
+    const trimmedData = takeRightWhile(
+      data,
+      ({ date }) => Number(date) > startTimestamp
+    )
+
+    return { statusCode: 200, body: JSON.stringify(trimmedData) }
   } catch (error) {
     console.error(error)
     return { statusCode: 500, body: JSON.stringify({ msg: error.message }) }
@@ -20,7 +32,7 @@ const lambda = async (apiKey) => {
 }
 
 const handler = () => {
-  return lambda(process.env.DEFI_PULSE_API_KEY)
+  return lambda()
 }
 
 module.exports = { handler, lambda }

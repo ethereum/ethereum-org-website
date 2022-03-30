@@ -68,7 +68,7 @@ If you are unsure which language code to use, you can check the translation memo
 Some examples of language codes for the most widely spoken languages:
 
 - Arabic - ar
-- Chinese Simplified - zn
+- Chinese Simplified - zh
 - French - fr
 - Hindi - hi
 - Spanish - es

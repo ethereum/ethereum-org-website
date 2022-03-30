@@ -97,7 +97,7 @@ In your root directory, make a new file called nft-metadata.json and add the fol
     }
   ],
   "description": "The world's most adorable and sensitive pup.",
-  "image": "https://gateway.pinata.cloud/ipfs/QmWmvTJmJU3pozR9ZHFmQC2DNDwi2XJtf3QGyYiiagFSWb",
+  "image": "ipfs://QmWmvTJmJU3pozR9ZHFmQC2DNDwi2XJtf3QGyYiiagFSWb",
   "name": "Ramses"
 }
 ```
@@ -308,9 +308,7 @@ async function mintNFT(tokenURI) {
     })
 }
 
-mintNFT(
-  "https://gateway.pinata.cloud/ipfs/QmYueiuRNmL4MiA2GwtVMm6ZagknXnSpQnB3z2gWbz36hP"
-)
+mintNFT("ipfs://QmYueiuRNmL4MiA2GwtVMm6ZagknXnSpQnB3z2gWbz36hP")
 ```
 
 Now, run `node scripts/mint-nft.js` to deploy your NFT. After a couple of seconds, you should see a response like this in your terminal:

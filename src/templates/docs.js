@@ -168,7 +168,6 @@ const Contributors = styled(FileContributors)`
 const DocsPage = ({ data, pageContext }) => {
   const { isZenMode } = useContext(ZenModeContext)
   const mdx = data.pageData
-  const { locale } = useIntl()
   const isRightToLeft = isLangRightToLeft(mdx.frontmatter.lang)
 
   const tocItems = mdx.tableOfContents.items
@@ -211,7 +210,7 @@ const DocsPage = ({ data, pageContext }) => {
               <Translation id="back-to-top" /> ↑
             </a>
           </BackToTop>
-          {locale === "en" && <FeedbackCard />}
+          <FeedbackCard />
           <DocsNav relativePath={relativePath}></DocsNav>
         </Content>
         {mdx.frontmatter.sidebar && tocItems && (

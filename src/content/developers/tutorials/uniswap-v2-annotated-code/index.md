@@ -213,6 +213,10 @@ and therefore each token0 is worth reserve1/reserve0 token1's.
 
 The timestamp for the last block in which an exchange occurred, used to track exchange rates across time.
 
+One of the biggest gas expenses of Ethereum contracts is storage, which persists from one call of the contract
+to the next. Each storage cell is 256 bits long. So three variables, reserve0, reserve1, and blockTimestampLast, are allocated in such
+a way a single storage value can include all three of them (112+112+32=256).
+
 ```solidity
     uint public price0CumulativeLast;
     uint public price1CumulativeLast;
@@ -220,10 +224,6 @@ The timestamp for the last block in which an exchange occurred, used to track ex
 
 These variables hold the cumulative costs for each token (each in term of the other). They can be used to calculate
 the average exchange rate over a period of time.
-
-One of the biggest gas expenses of Ethereum contracts is storage, which persists from one call of the contract
-to the next. Each storage cell is 256 bits long. So there variable, and `kLast` below, are allocated in such
-a way a single storage value can include all three of them (112+112+32=256).
 
 ```solidity
     uint public kLast; // reserve0 * reserve1, as of immediately after the most recent liquidity event
@@ -395,9 +395,9 @@ This function is called every time tokens are deposited or withdrawn.
         require(balance0 <= uint112(-1) && balance1 <= uint112(-1), 'UniswapV2: OVERFLOW');
 ```
 
-If the update makes either balance higher than 2^111 (so it would be interpreted as a negative number) refuse
-to do it to prevent overflows. With a normal token that can be subdivided into 10^18 units, this means each
-exchange is limited to about 2.5\*10^15 of each tokens. So far that has not been a problem.
+If either balance0 or balance1 (uint256) is higher than uint112(-1) (=2^112-1) (so it overflows & wraps back to 0 when converted to uint112) refuse
+to continue the \_update to prevent overflows. With a normal token that can be subdivided into 10^18 units, this means each
+exchange is limited to about 5.1\*10^15 of each tokens. So far that has not been a problem.
 
 ```solidity
         uint32 blockTimestamp = uint32(block.timestamp % 2**32);
@@ -1973,7 +1973,7 @@ library UQ112x112 {
     }
 ```
 
-Because y is `uint112`, the most if can be is 2^112-1. That number can still be encoded as a `UQ112x112`.
+Because y is `uint112`, the most it can be is 2^112-1. That number can still be encoded as a `UQ112x112`.
 
 ```solidity
     // divide a UQ112x112 by a uint112, returning a UQ112x112
