@@ -212,6 +212,7 @@ const EthExchanges = () => {
           mtpelerin
           rain
           simplex
+          wazirx
           wyre
         }
       }
@@ -281,6 +282,9 @@ const EthExchanges = () => {
         ...cardListImage
       }
       trust: file(relativePath: { eq: "wallets/trust.png" }) {
+        ...cardListImage
+      }
+      wazirx: file(relativePath: { eq: "wallets/wazirx.png" }) {
         ...cardListImage
       }
     }
@@ -377,6 +381,12 @@ const EthExchanges = () => {
       name: "Rain",
       url: "https://rain.bh",
       image: data.rain,
+      usaExceptions: [],
+    },
+    wazirx: {
+      name: "WazirX",
+      url: "https://wazirx.com/",
+      image: data.wazirx,
       usaExceptions: [],
     },
   }
