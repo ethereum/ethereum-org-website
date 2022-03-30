@@ -24,13 +24,14 @@ Layer 2 is a relatively new and exciting paradigm for Ethereum. We've tried to c
 
 ### Criteria for inclusion: the must-haves {#criteria-for-inclusion-the-must-haves}
 
-**[Listing on L2BEAT](https://l2beat.com)**
+**Listing on L2BEAT**
 
-- In order to be considered, this project must be listed on L2BEAT. L2BEAT provides a robust risk assessment of layer 2 projects that we lean on for evaluating L2 projects. **If the project is not featured on L2BEAT, we will not list them as an L2 on ethereum.org.**
-
-[Learn how to add your L2 project to L2BEAT](https://github.com/l2beat/l2beat/blob/master/CONTRIBUTING.md).
+- In order to be considered, this project must be listed on [L2BEAT](https://l2beat.com). L2BEAT provides a robust risk assessment of layer 2 projects that we lean on for evaluating L2 projects. **If the project is not featured on L2BEAT, we will not list them as an L2 on ethereum.org.**
+- [Learn how to add your L2 project to L2BEAT](https://github.com/l2beat/l2beat/blob/master/CONTRIBUTING.md).
 
 **Open source**
+
+- Your code must be accessible and you should accept PRs from the wider community.
 
 **Layer 2 category**
 
@@ -39,7 +40,8 @@ We currently consider the following to be layer 2 solutions:
 - Optimistic rollup
 - Zero-knowledge rollup
 - State channel
-  _We do not consider other scaling solutions to be layer 2._
+
+_We do not consider other scaling solutions to be layer 2._
 
 **Bridges**
 
@@ -49,7 +51,7 @@ We currently consider the following to be layer 2 solutions:
 
 - Newer projects that have not been battle-tested by users are less likely to be listed.
 
-**Wallet support**
+**Wallet and tooling support**
 
 - What is the public RPC information for the network? (RPC URL, Chain ID, Currency Symbol, Block Explorer URL)
 
@@ -57,7 +59,7 @@ We currently consider the following to be layer 2 solutions:
 
 - Whether through audit, an internal security team or some other method, your product's security must be reliably tested. This reduces the risk to our users and shows us that you take security seriously.
 
-**Maintaining users**
+**Sustained user base**
 
 - We will consider metrics such as TVL history, transaction statistics, and whether it is used by known companies or projects
 
@@ -77,7 +79,7 @@ We currently consider the following to be layer 2 solutions:
 
 **Links to dapps in the layer 2 ecosystem**
 
-- We want to be able to provide information on what users can expect to be able to do on this layer 2. (ex: https://portal.arbitrum.one/, https://www.optimism.io/apps/all)
+- We want to be able to provide information on what users can expect to be able to do on this layer 2. (e.g. https://portal.arbitrum.one/, https://www.optimism.io/apps/all)
 
 **Token contract lists**
 

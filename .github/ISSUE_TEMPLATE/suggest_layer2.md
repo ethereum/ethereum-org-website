@@ -76,7 +76,7 @@ If it does, complete the following information which we need to accurately list 
 
 <!-- Please provide a link to a report or repo for any audits or bug bounties. If you haven't been audited but think your layer 2 should be listed anyway, explain here. -->
 
-**Has the project maintained its users over time?**
+**Has the project sustained its users over time?**
 
 <!-- Please provide supporting information such as TVL history, transaction statistics, and whether it is used by known companies or projects. -->
 
