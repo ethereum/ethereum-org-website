@@ -274,7 +274,7 @@ const EthExchanges = () => {
       kraken: file(relativePath: { eq: "exchanges/kraken.png" }) {
         ...cardListImage
       }
-      mtpelerin: file(relativePath: { eq: "wallets/mtpelerin.png" }) {
+      mtpelerin: file(relativePath: { eq: "exchanges/mtpelerin.png" }) {
         ...cardListImage
       }
       myetherwallet: file(relativePath: { eq: "wallets/myetherwallet.png" }) {
@@ -292,7 +292,7 @@ const EthExchanges = () => {
       trust: file(relativePath: { eq: "wallets/trust.png" }) {
         ...cardListImage
       }
-      wazirx: file(relativePath: { eq: "wallets/wazirx.png" }) {
+      wazirx: file(relativePath: { eq: "exchanges/wazirx.png" }) {
         ...cardListImage
       }
     }
