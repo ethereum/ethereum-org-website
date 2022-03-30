@@ -11,7 +11,7 @@ import { getLocaleTimestamp } from "../utils/time"
 import { trackCustomEvent } from "../utils/matomo"
 import Emoji from "./Emoji"
 import Translation from "./Translation"
-import { translateMessageId } from "../utils/translations"
+import { translateMessageId, getDefaultMessage } from "../utils/translations"
 
 const Container = styled.div`
   width: 100%;
@@ -549,6 +549,7 @@ const EthExchanges = () => {
         <Translation id="page-get-eth-exchanges-intro" />
       </Intro>
       <StyledSelect
+        aria-label={getDefaultMessage("page-get-eth-exchanges-search")}
         className="react-select-container"
         classNamePrefix="react-select"
         options={exchangesByCountry}
