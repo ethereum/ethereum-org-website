@@ -28,17 +28,17 @@ A solo staker receives rewards directly from the protocol for keeping their vali
 
 Solo staking comes with more responsibility, but provides you with maximum control over your funds and staking setup.
 
-<Card title="Earn fresh ETH">
+<CardGrid>
+<Card title="Earn fresh ETH" emoji="💸">
   Earn ETH denominated rewards directly from the protocol when your validator is online, without any middlemen taking a cut.
 </Card>
-<Card title="Full control">
-  Keep your own keys, and choose the combination of clients and hardware that allows you to minimize your risk, and best contribute to the health and security of the network. Third-party staking services make this decision for you.
-  <br/><br/>
-  <a href="https://pools.invis.cloud/">This is not always the safest.</a>
+<Card title="Full control" emoji="🎛️">
+  Keep your own keys, and choose the combination of clients and hardware that allows you to minimize your risk, and best contribute to the health and security of the network. Third-party staking services make these decisions for you, and they don't always make the safest choices.
 </Card>
-<Card title="Network security">
+<Card title="Network security" emoji="🔐">
   Solo staking is the most impactful way to stake. By running a validator on your own hardware at home, you strengthen the robustness, decentralization, and security of the Ethereum protocol.
 </Card>
+</CardGrid>
 
 ## Considerations before staking solo {#considerations-before-staking-solo}
 
@@ -46,33 +46,35 @@ Solo staking comes with more responsibility, but provides you with maximum contr
 
 As much as we wish that solo staking was accessible and risk free to everyone, this is not reality. There are some practical and serious considerations to keep in mind before choosing to solo stake your ETH.
 
-<Card title="Required reading">
+<ExpandableCardGrid>
+<ExpandableCard title="Required reading">
   When operating your own node you should spend some time learning how to use the software you've chosen. This should involve reading relevant documentation and being attune to communication channels of those dev teams.
   The more you understand about the software you're running and how proof-of-stake works, the less risky it will be as a staker, and the easier it will be to fix any issues that may arise along the way as a node operator. 
-</Card>
-<Card title="Comfortable with computers">
+</ExpandableCard>
+<ExpandableCard title="Comfortable with computers">
   Node setup requires a reasonable comfort level when working with computers, although new tools are making this easier over time. Understanding of the command-line interface is helpful, but no longer strictly required 
   It also requires very basic hardware setup, and some understanding of minimum recommended specs.
-</Card>
-<Card title="Secure key management">
+</ExpandableCard>
+<ExpandableCard title="Secure key management">
   Just like how private keys secure your Ethereum address, you will need to generate keys specifically for your validator. You must understand how to keep any seed phrases or private keys safe and secure.
   <ButtonLink to="/security">Ethereum security and scam prevention</ButtonLink>
-</Card>
-<Card title="No withdrawing (for now)">
+</ExpandableCard>
+<ExpandableCard title="No withdrawing (for now)">
   Withdrawing staked ETH or rewards from a validator balance is not yet supported. Support for withdrawals are planned for the Shanghai upgrade following The Merge. You should anticipate your ETH being locked for at least one-to-two years. After Shanghai, this will no longer be the case, at which point you will be able to freely withdraw portions or all of your stake if you wish.
-</Card>
-<Card title="Maintenance">
+</ExpandableCard>
+<ExpandableCard title="Maintenance">
   Hardware occasionally fails, connections error out, and client software occasionally needs upgrading. Node maintenance is inevitable and will occasionally require your attention. You'll want to be sure you stay aware of any anticipated network upgrades, or other critical client upgrades.
-</Card>
-<Card title="Reliable uptime">
+</ExpandableCard>
+<ExpandableCard title="Reliable uptime">
   Your rewards are proportional to the time your validator is online and properly attesting. Downtime incurs penalties roughly equal to what you would have earned in that same amount of time. Being offline while the network is finalizing does not result in slashing.
   Epoch rewards are inversely proportional to how long it takes your attestations to be included, meaning internet bandwidth also matter. This can vary, but a minimum of 10 Mb/s up and down is recommended.
-</Card>
-<Card title="Slashing risk">
+</ExpandableCard>
+<ExpandableCard title="Slashing risk">
   Different from inactivity penalties for being offline, <em>slashing</em> is a much more serious penalty reserved for malicious offenses. By running a minority client with your keys loaded on only one machine at time, your risk of being slashed is minimized. That being said, all stakers must be aware of the risks of slashing.
   
   <a href="">More on slashing</a>
-</Card>
+</ExpandableCard>
+</ExpandableCardGrid>
 
 ## How does it compare? {#how-does-it-compare}
 

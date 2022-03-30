@@ -104,6 +104,7 @@ const Pills = styled.div`
   gap: 0.25rem;
   p {
     padding: 0.125rem 0.375rem;
+    border-radius: 0.125rem;
   }
 `
 

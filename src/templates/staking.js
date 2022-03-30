@@ -34,6 +34,7 @@ import {
   Paragraph,
   Header1,
   Header4,
+  CardGrid,
 } from "../components/SharedStyledComponents"
 import Emoji from "../components/Emoji"
 import YouTube from "../components/YouTube"
@@ -198,6 +199,12 @@ const H3 = styled.h3`
   }
 `
 
+const ExpandableCardGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 330px), 1fr));
+  gap: 1rem 2rem;
+`
+
 // Note: you must pass components to MDXProvider in order to render them in markdown files
 // https://www.gatsbyjs.com/plugins/gatsby-plugin-mdx/#mdxprovider
 const components = {
@@ -217,6 +224,8 @@ const components = {
   Contributors,
   InfoBanner,
   Card,
+  CardGrid,
+  ExpandableCardGrid,
   Divider,
   SectionNav,
   Pill,
