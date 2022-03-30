@@ -13,17 +13,17 @@ const ListItem = styled.div`
 `
 
 const NumberCircle = styled.div`
-  width: ${(props) => props.size};
-  height: ${(props) => props.size};
+  width: ${({ size }) => size};
+  height: ${({ size }) => size};
   border-radius: 50%;
-  line-height: ${(props) => props.size};
+  line-height: ${({ size }) => size};
   text-align: center;
-  background: ${(props) => props.theme.colors.grayBackground};
+  background: ${({ theme ) => theme.colors.grayBackground};
 `
 
 const Data = styled.div`
-  height: ${(props) => props.size};
-  line-height: ${(props) => props.size};
+  height: ${({ size }) => size};
+  line-height: ${({ size }) => size};
   margin-left: 0.5rem;
 `
 
