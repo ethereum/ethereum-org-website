@@ -267,6 +267,10 @@ const Layer2Onboard = ({ layer2DataCombined, ethIcon }) => {
             to layer 2s. Check which exchanges support layer 2 withdrawals and
             which layer 2s they support.
           </p>
+          <p>
+            You'll also need a wallet to withdraw your funds to.{" "}
+            <Link to="/wallets/find-wallet/">Find an Ethereum wallet</Link>.
+          </p>
         </RightDescription>
         <RightSelect>
           <StyledSelect
