@@ -12,6 +12,7 @@ Anyone is free to suggest new wallets and dapps to the content on ethereum.org, 
 Wallets and dapps are currently listed on:
 
 - ethereum.org/wallets
+- ethereum.org/wallets/find-wallet
 - ethereum.org/dapps
 - ethereum.org/get-eth
 
