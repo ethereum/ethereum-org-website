@@ -5,7 +5,6 @@ import Emoji from "./Emoji"
 const StyledCard = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   background: ${(props) => props.theme.colors.ednBackground};
   border-radius: 2px;
   border: 1px solid ${(props) => props.theme.colors.lightBorder};
@@ -16,7 +15,11 @@ const Description = styled.p`
   opacity: 0.8;
 `
 
-const TopContent = styled.div``
+const TopContent = styled.div`
+  h3 {
+    margin: 1rem 0;
+  }
+`
 
 const Card = ({ emoji, title, description, children, className }) => (
   <StyledCard className={className}>
