@@ -462,7 +462,7 @@ const Layer2Page = ({ data }) => {
           <FlexContainer flexPercent="50">
             <h2>Why do we need layer 2?</h2>
             <p>
-              The three desirable properties of a blockchain are that it is
+              The three desirable properties of a blockchain are that it is{" "}
               <b>decentralized, secure, and scalable</b>. The{" "}
               <Link to="https://www.ledger.com/academy/what-is-the-blockchain-trilemma">
                 blockchain trilemma
