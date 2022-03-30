@@ -282,7 +282,6 @@ const StakingPage = ({ data, location }) => {
         </InfoColumn>
         <ContentContainer id="content">
           <Content>
-            <Breadcrumbs slug={location.pathname} />
             <h2 id={tocItems.whatIsStaking.id}>
               {tocItems.whatIsStaking.title}
             </h2>
