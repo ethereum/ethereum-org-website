@@ -16,6 +16,7 @@ import FeedbackCard from "../components/FeedbackCard"
 import InfoBanner from "../components/InfoBanner"
 import Layer2Onboard from "../components/Layer2/Layer2Onboard"
 import Link from "../components/Link"
+import OrderedList from "../components/OrderedList"
 import PageHero from "../components/PageHero"
 import PageMetadata from "../components/PageMetadata"
 import Pill from "../components/Pill"
@@ -416,21 +417,24 @@ const Layer2Page = ({ data }) => {
             <p>
               <b>Ethereum as the layer 1 includes:</b>
             </p>
-            <ol>
-              <li>
-                <b>A network of node operators</b> to secure and validate the
-                network
-              </li>
-              <li>
-                <b>A network of block producers</b>
-              </li>
-              <li>
-                <b>The blockchain</b> itself and the history of transaction data
-              </li>
-              <li>
-                <b>The consensus mechanism</b> for the network
-              </li>
-            </ol>
+            <OrderedList
+              listData={[
+                <p>
+                  <b>A network of node operators</b> to secure and validate the
+                  network
+                </p>,
+                <p>
+                  <b>A network of block producers</b>
+                </p>,
+                <p>
+                  <b>The blockchain</b> itself and the history of transaction
+                  data
+                </p>,
+                <p>
+                  <b>The consensus mechanism</b> for the network
+                </p>,
+              ]}
+            />
             <p>
               Still confused on Ethereum?{" "}
               <Link to="/what-is-ethereum/">Learn what Ethereum is</Link>.
