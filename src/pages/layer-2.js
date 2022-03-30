@@ -68,7 +68,7 @@ const Flex50 = styled.div`
 const TwoColumnContent = styled.div`
   display: flex;
   justify-content: space-between;
-  gap: 2rem;
+  gap: 4rem;
   @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
     flex-direction: column;
     align-items: flex-start;
@@ -699,6 +699,7 @@ const Layer2Page = ({ data }) => {
       <PaddedContent>
         <h2>A note on alt L1s, sidechains, and validiums</h2>
         <TwoColumnContent>
+          <Flex50>
             <p>
               <b>Alternative layer 1s</b> have higher throughput and lower
               transaction fees than Ethereum. These alt L1s have had to{" "}
@@ -706,8 +707,14 @@ const Layer2Page = ({ data }) => {
               achieve higher transactions per second and lower fees.
             </p>
             <p>
-            The Ethereum ecosystem is firmly aligned that{" "}<b>layer 2 scaling is the only way to solve the scalability trilemma</b>{" "}while remaining decentralized and secure.
+              The Ethereum ecosystem is firmly aligned that{" "}
+              <b>
+                layer 2 scaling is the only way to solve the scalability
+                trilemma
+              </b>{" "}
+              while remaining decentralized and secure.
             </p>
+          </Flex50>
           <Flex50>
             <p>
               <b>Sidechains and validiums</b> are blockchains that allow assets
@@ -718,7 +725,7 @@ const Layer2Page = ({ data }) => {
               chain.
             </p>
             <p>
-             Both scale similarly to layer 2s, but have different trust
+              Both scale similarly to layer 2s, but have different trust
               assumptions. They offer lower transaction fees, and higher
               transaction throughput. More on{" "}
               <Link to="/developers/docs/scaling/sidechains/">sidechains</Link>{" "}
