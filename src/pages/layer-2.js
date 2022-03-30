@@ -715,12 +715,14 @@ const Layer2Page = ({ data }) => {
               blockchain. Sidechains and validiums run in parallel with the main
               chain, and interact with the main chain through bridges, but they
               do not derive their security or data availability from the main
-              chain. They scale similarly to layer 2s, but have different trust
+              chain.
+            </p>
+            <p>
+             Both scale similarly to layer 2s, but have different trust
               assumptions. They offer lower transaction fees, and higher
               transaction throughput. More on{" "}
               <Link to="/developers/docs/scaling/sidechains/">sidechains</Link>{" "}
               and <Link to="/developers/docs/scaling/validium/">validiums</Link>
-              .
             </p>
           </Flex50>
         </TwoColumnContent>
