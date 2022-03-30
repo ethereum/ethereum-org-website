@@ -49,10 +49,15 @@ const Section = styled.div`
     "decorator content content";
   @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
     gap: 1rem;
-    grid-template-columns: 10vw 1fr;
+    grid-template-columns: 1fr;
     grid-template-areas:
-      "ether header"
-      "content content";
+      "ether"
+      "header"
+      "content";
+    svg {
+      height: 5rem;
+      aspect-ratio: 1;
+    }
   }
   h2 {
     color: var(--color);
@@ -63,9 +68,11 @@ const Section = styled.div`
   }
 
   .subtext {
-    color: var(--color);
-    background: ${({ color }) => color}20;
-    margin: 0;
+    p {
+      color: var(--color);
+      background: ${({ color }) => color}20;
+      margin: 0;
+    }
   }
 
   aside::after {
@@ -85,6 +92,18 @@ const Header = styled.div`
   gap: 0.5rem;
   h2 {
     margin: 0;
+  }
+  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
+    align-items: center;
+  }
+`
+
+const Pills = styled.div`
+  display: flex;
+  flex-wrap: flex;
+  gap: 0.25rem;
+  p {
+    padding: 0.125rem 0.375rem;
   }
 `
 
@@ -109,7 +128,7 @@ const Glyph = styled(FlexCentered)`
     svg {
       width: 50%;
       height: 50%;
-      opacity: 0.05;
+      opacity: 0.1;
     }
   }
 `
@@ -117,6 +136,8 @@ const Glyph = styled(FlexCentered)`
 const Ether = styled(FlexCentered)`
   grid-area: ether;
   z-index: 2;
+  max-width: 5rem;
+  margin: 0 auto;
 `
 
 const StyledEtherSvg = styled(EtherSvg)`
@@ -156,10 +177,14 @@ const StakingHierarchy = () => {
         <Line />
         <Header>
           <h2>Solo home staking</h2>
-          <p className="subtext">
-            <em>Most impactful</em>, full control, keep all the rewards,
-            trustless
-          </p>
+          <Pills className="subtext">
+            <p>
+              <em>Most impactful</em>
+            </p>
+            <p>Full control</p>
+            <p>Full rewards</p>
+            <p>Trustless</p>
+          </Pills>
         </Header>
         <Glyph>
           <SoloGlyph />
@@ -193,14 +218,16 @@ const StakingHierarchy = () => {
       </Section>
       <Section color="#49DE96" nextColor="#A9D3F2" number="2">
         <Ether>
-          <StyledEtherSvg size="80%" />
+          <StyledEtherSvg size="90%" />
         </Ether>
         <Line />
         <Header>
           <h2>Staking as a service</h2>
-          <p className="subtext">
-            Your 32 ETH, your validator keys, entrusted node operation
-          </p>
+          <Pills className="subtext">
+            <p>Your 32 ETH</p>
+            <p>Your validator keys</p>
+            <p>Entrusted node operation</p>
+          </Pills>
         </Header>
         <Glyph>
           <SaasGlyph />
@@ -234,14 +261,17 @@ const StakingHierarchy = () => {
       </Section>
       <Section color="#A9D3F2" nextColor="#D6BBB9" number="3">
         <Ether>
-          <StyledEtherSvg size="60%" />
+          <StyledEtherSvg size="80%" />
         </Ether>
         <Line />
         <Header>
           <h2>Pooled staking</h2>
-          <p className="subtext">
-            Stake what you can, earn rewards, keep it simple (Popular)
-          </p>
+          <Pills className="subtext">
+            <p>Stake what you can</p>
+            <p>Earn rewards</p>
+            <p>Keep it simple</p>
+            <p>(Popular)</p>
+          </Pills>
         </Header>
         <Glyph>
           <PoolGlyph />
@@ -270,14 +300,17 @@ const StakingHierarchy = () => {
       </Section>
       <Section color="#D6BBB9" nextColor="#00000000" number="4">
         <Ether>
-          <StyledEtherSvg size="40%" />
+          <StyledEtherSvg size="70%" />
         </Ether>
         <Line />
         <Header>
           <h2>Centralized exchanges & staking providers</h2>
-          <p className="subtext">
-            <em>Least impactful</em>, highest trust assumptions
-          </p>
+          <Pills className="subtext">
+            <p>
+              <em>Least impactful</em>
+            </p>
+            <p>Highest trust assumptions</p>
+          </Pills>
         </Header>
         <Glyph>
           <CexGlyph />
