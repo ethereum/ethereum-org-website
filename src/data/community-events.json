@@ -50,8 +50,8 @@
     "sponsor": null,
     "location": "NYC, USA",
     "description": "DeFiCon is a nonprofit conference with a mission to elevate the ethos of peer-to-peer crypto.",
-    "startDate": "2022-03-25",
-    "endDate": "2022-03-26"
+    "startDate": "2022-05-07",
+    "endDate": "2022-05-08"
   },
   {
     "title": "ETHDubai",
@@ -178,6 +178,15 @@
     "description": "Consensus, the most influential crypto & blockchain experience of the year since 2015, will return to an in-person format and be held in Austin, Texas, for the first time ever.",
     "startDate": "2022-06-09",
     "endDate": "2022-06-12"
+  },
+  {
+    "title": "HODLerCon",
+    "to": "https://hodlercon.com",
+    "sponsor": null,
+    "location": "Hawaii, USA",
+    "description": "Luau DAO invites you to hang loose with your internet friends, celebrating the growth of Ethereum and its aligned blockchains.",
+    "startDate": "2022-06-17",
+    "endDate": "2022-06-26"
   },
   {
     "title": "ETHPrague",

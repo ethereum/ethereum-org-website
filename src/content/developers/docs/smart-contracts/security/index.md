@@ -217,7 +217,7 @@ The attack types above cover smart-contract coding issues (re-entrancy) and Ethe
 
 Further reading:
 
-- [Consensys Smart Contract Known Attacks](https://consensys.github.io/smart-contract-best-practices/known_attacks/) - A very readable explanation of the most significant vulnerabilities, with sample code for most.
+- [Consensys Smart Contract Known Attacks](https://consensys.github.io/smart-contract-best-practices/attacks/) - A very readable explanation of the most significant vulnerabilities, with sample code for most.
 - [SWC Registry](https://swcregistry.io/docs/SWC-128) - Curated list of CWE's that apply to Ethereum and smart contracts
 
 ## Security tools {#security-tools}
