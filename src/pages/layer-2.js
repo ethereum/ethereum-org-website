@@ -634,7 +634,7 @@ const Layer2Page = ({ data }) => {
           Now that you understand why layer 2 exists and how it works, let's get
           you up and running!
         </p>
-        <h2>Generalized layer 2s</h2>
+        <h3>Generalized layer 2s</h3>
         <p>
           Generalized layer 2s behave just like Ethereum — but cheaper. Anything
           that you can do on Ethereum layer 1, you can also do on layer 2. Many
