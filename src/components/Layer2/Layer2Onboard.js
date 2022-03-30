@@ -11,6 +11,9 @@ import Link from "../../components/Link"
 // Data
 import cexSupport from "../../data/layer-2/cex-layer-2-support.json"
 
+//Utils
+import { trackCustomEvent } from "../../utils/matomo"
+
 // Styles
 const Content = styled.div`
   background: ${(props) => props.theme.colors.layer2Gradient};
@@ -224,7 +227,15 @@ const Layer2Onboard = ({ layer2DataCombined, ethIcon }) => {
               l2.value = l2.name
               return l2
             })}
-            onChange={(selectedOption) => setSelectedL2(selectedOption)}
+            onChange={(selectedOption) => {
+              trackCustomEvent({
+                eventCategory: `Selected layer 2 to bridge to`,
+                eventAction: `Clicked`,
+                eventName: `${selectedOption.name} bridge selected`,
+                eventValue: `${selectedOption.name}`,
+              })
+              setSelectedL2(selectedOption)
+            }}
             placeholder={"Select L2 you want to bridge to"}
           />
         </LeftSelect>
@@ -258,7 +269,15 @@ const Layer2Onboard = ({ layer2DataCombined, ethIcon }) => {
               cex.value = cex.name
               return cex
             })}
-            onChange={(selectedOption) => setSelectedExchange(selectedOption)}
+            onChange={(selectedOption) => {
+              trackCustomEvent({
+                eventCategory: `Selected cex to onboard`,
+                eventAction: `Clicked`,
+                eventName: `${selectedOption.name} selected`,
+                eventValue: `${selectedOption.name}`,
+              })
+              setSelectedExchange(selectedOption)
+            }}
             placeholder={"Check exchanges that support L2"}
           />
         </RightSelect>
