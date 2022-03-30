@@ -549,7 +549,7 @@ const EthExchanges = () => {
         <Translation id="page-get-eth-exchanges-intro" />
       </Intro>
       <StyledSelect
-        aria-label={getDefaultMessage("page-get-eth-exchanges-search")}
+        aria-label={translateMessageId("page-get-eth-exchanges-search",intl)}
         className="react-select-container"
         classNamePrefix="react-select"
         options={exchangesByCountry}
