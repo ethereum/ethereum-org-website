@@ -3,6 +3,8 @@ import styled from "styled-components"
 import Emoji from "../components/Emoji"
 
 import Checkbox from "./Checkbox"
+import { translateMessageId } from "../utils/translations"
+import { useIntl } from "gatsby-plugin-intl"
 
 const StyledCard = styled.div`
   display: flex;
@@ -38,6 +40,7 @@ const Card = ({
   value,
   isSelected,
 }) => {
+  const intl = useIntl()
   const handleSelect = () => {
     onSelect(value)
   }
@@ -50,7 +53,10 @@ const Card = ({
     >
       <TopContent>
         <Emoji text={emoji} size={3} mb={`1em`} />
-        <StyledCheckbox checked={isSelected} />
+        <StyledCheckbox
+          checked={isSelected}
+          ariaContent={translateMessageId(title.props.id, intl)}
+        />
         <h3>{title}</h3>
         <Description>{description}</Description>
       </TopContent>
