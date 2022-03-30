@@ -489,9 +489,7 @@ const Layer2Page = ({ data }) => {
             <p>
               The main goal of scalability is to increase transaction speed
               (faster finality), and transaction throughput (high transactions
-              per second), without sacrificing decentralization or security
-              (more on the <Link to="/upgrades/vision/  ">Ethereum vision</Link>
-              ).
+              per second), without sacrificing decentralization or security.
             </p>
             <p>
               The Ethereum community has taken a strong stance that it would not
@@ -500,11 +498,12 @@ const Layer2Page = ({ data }) => {
               <Link to="https://ethtps.info/Network/Ethereum">
                 roughly 15 transactions per second
               </Link>
-              . When demand to use Ethereum is high this causes network
+              . When the demand to use Ethereum is high, it causes network
               congestion, increasing transaction fees, and pricing out those who
               cannot afford it from using Ethereum until the fees reduce. That
               is where layer 2 comes in to scale Ethereum today.
             </p>
+            <Link to="/upgrades/vision/">More on Ethereum's vision</Link>
           </FlexContainer>
         </TwoColumnContent>
         <h3>Benefits</h3>
