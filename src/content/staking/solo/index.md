@@ -64,7 +64,7 @@ As much as we wish that solo staking was accessible and risk free to everyone, t
 <Card title="Maintenance">
   Hardware occasionally fails, connections error out, and client software occasionally needs upgrading. Node maintenance is inevitable and will occasionally require your attention. You'll want to be sure you stay aware of any anticipated network upgrades, or other critical client upgrades.
 </Card>
-<Card title="Reliable Uptime">
+<Card title="Reliable uptime">
   Your rewards are proportional to the time your validator is online and properly attesting. Downtime incurs penalties roughly equal to what you would have earned in that same amount of time. Being offline while the network is finalizing does not result in slashing.
   Epoch rewards are inversely proportional to how long it takes your attestations to be included, meaning internet bandwidth also matter. This can vary, but a minimum of 10 Mb/s up and down is recommended.
 </Card>

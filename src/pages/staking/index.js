@@ -73,8 +73,8 @@ const InfoColumn = styled.aside`
   position: sticky;
   top: 6.25rem; /* account for navbar */
   height: calc(100vh - 80px);
-  flex: 0 1 340px;
-  margin: 0 3rem 0 2rem;
+  flex: 0 1 330px;
+  margin: 0 2rem;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     display: none;
   }
@@ -122,7 +122,6 @@ const ContentContainer = styled.article`
 const ComparisonGrid = styled.div`
   display: grid;
   grid-column-gap: 3rem;
-  grid-row-gap: 1rem;
   grid-auto-rows: minmax(64px, auto);
   grid-template-columns: repeat(3, 1fr);
   grid-template-areas:
@@ -132,22 +131,7 @@ const ComparisonGrid = styled.div`
     "solo-reqs saas-reqs pool-reqs"
     "solo-cta saas-cta pool-cta";
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas:
-      "solo-title saas-title"
-      "solo-rewards saas-rewards"
-      "solo-risks saas-risks"
-      "solo-reqs saas-reqs"
-      "solo-cta saas-cta"
-      "pool-title pool-title"
-      "pool-rewards pool-rewards"
-      "pool-risks pool-risks"
-      "pool-reqs pool-reqs"
-      "pool-cta pool-cta";
-  }
-
-  @media (max-width: 600px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
     grid-template-columns: 1fr;
     grid-template-areas:
       "solo-title"

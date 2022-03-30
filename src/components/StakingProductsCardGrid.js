@@ -192,6 +192,7 @@ const StakingProductCard = ({
             </Pill>
           ))}
       </Pills>
+      <Spacer />
       <Content>
         <ul>
           <Item>
@@ -221,7 +222,7 @@ const StakingProductCard = ({
           <Item>Min ETH: {minEth} ETH</Item>
         </ul>
       </Content>
-      <Spacer />
+
       <Cta>
         <ButtonLink to={url}>Get started</ButtonLink>
       </Cta>
