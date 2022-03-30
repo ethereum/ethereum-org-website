@@ -397,7 +397,6 @@ const StakingPage = ({ data, pageContext, location }) => {
       </StyledBannerNotification> */}
       <HeroContainer>
         <TitleCard>
-          <Breadcrumbs slug={location.pathname} />
           <Title>{mdx.frontmatter.title}</Title>
           <SummaryBox>
             <ul>
@@ -438,6 +437,7 @@ const StakingPage = ({ data, pageContext, location }) => {
           )}
         </InfoColumn>
         <ContentContainer id="content">
+          <Breadcrumbs slug={location.pathname} />
           <MDXProvider components={components}>
             <MDXRenderer>{mdx.body}</MDXRenderer>
           </MDXProvider>
