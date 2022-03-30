@@ -21,6 +21,12 @@ const Content = styled.div`
   border-radius: 2px;
 `
 
+const Description = styled.div`
+  text-align: center;
+  max-width: 75ch;
+  margin: auto;
+`
+
 const H3 = styled.h3`
   margin-top: 0;
 `
@@ -203,12 +209,14 @@ const Layer2Onboard = ({ layer2DataCombined, ethIcon }) => {
 
   return (
     <Content>
-      <h2>How to get onto a layer 2</h2>
-      <p>
-        There are two primary ways to get your assets onto a layer 2: bridge
-        funds from Ethereum via a smart contract or withdraw your funds on an
-        exchange directly onto the layer 2 network.
-      </p>
+      <Description>
+        <h2>How to get onto a layer 2</h2>
+        <p>
+          There are two primary ways to get your assets onto a layer 2: bridge
+          funds from Ethereum via a smart contract or withdraw your funds on an
+          exchange directly onto the layer 2 network.
+        </p>
+      </Description>
       <Grid>
         <LeftDescription>
           <h4>Funds in your wallet?</h4>
