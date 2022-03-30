@@ -699,20 +699,15 @@ const Layer2Page = ({ data }) => {
       <PaddedContent>
         <h2>A note on alt L1s, sidechains, and validiums</h2>
         <TwoColumnContent>
-          <Flex50>
             <p>
               <b>Alternative layer 1s</b> have higher throughput and lower
               transaction fees than Ethereum. These alt L1s have had to{" "}
               <b>sacrifice on security or decentralization</b> in order to
-              achieve higher transactions per second and lower fees. The
-              Ethereum ecosystem is firmly aligned that{" "}
-              <b>
-                layer 2 scaling is the only way to solve the scalability
-                trilemma
-              </b>{" "}
-              while remaining decentralized and secure.
+              achieve higher transactions per second and lower fees.
             </p>
-          </Flex50>
+            <p>
+            The Ethereum ecosystem is firmly aligned that{" "}<b>layer 2 scaling is the only way to solve the scalability trilemma</b>{" "}while remaining decentralized and secure.
+            </p>
           <Flex50>
             <p>
               <b>Sidechains and validiums</b> are blockchains that allow assets
