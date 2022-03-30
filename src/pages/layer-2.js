@@ -406,15 +406,20 @@ const Layer2Page = ({ data }) => {
               the layer 1 blockchain.
             </p>
             <p>
-              Ethereum also functions as a data availability layer for Layer 2s, and if there are any disputes on previous transactions data is provided from Ethereum for these disputes.
+              Ethereum also functions as a data availability layer for Layer 2s,
+              and if there are any disputes on previous transactions data is
+              provided from Ethereum for these disputes.
             </p>
           </Flex50>
           {/* TODO: Convert these inline styles into styled components */}
           <Flex50>
-           <p><b>Ethereum as the layer 1 includes:</b></p>
-           <ol>
+            <p>
+              <b>Ethereum as the layer 1 includes:</b>
+            </p>
+            <ol>
               <li>
-                <b>A network of node operators</b> to secure and validate the network
+                <b>A network of node operators</b> to secure and validate the
+                network
               </li>
               <li>
                 <b>A network of block producers</b>
@@ -549,12 +554,12 @@ const Layer2Page = ({ data }) => {
             <p>
               Rollups bundle (or ’roll up’) hundreds of transactions into a
               single transaction on layer 1. This allows the transaction fees to
-              be shared across everyone in the rollup. These bundled
-              transactions are posted to the layer 1 as validity, fraud, or
-              fault proofs. Rollup transactions get executed outside of layer 1
-              but the transaction data gets posted to layer 1. By posting
-              transaction data onto layer 1, rollups are able to inherit the
-              security of Ethereum.
+              be shared across everyone in the rollup. Rollup transactions get
+              executed outside of layer 1 but the transaction data gets posted
+              to layer 1. This data is either proof of transaction validity in
+              ZK rollups or can be used to create a fraud or fault proof in case
+              of optimistic rollup. Therefore by posting transaction data onto
+              layer 1, rollups are able to inherit the security of Ethereum.
             </p>
           </FlexContainer>
           {/* TODO: Convert these inline styles into styled components */}
