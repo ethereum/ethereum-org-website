@@ -8,6 +8,8 @@ import Translation from "./Translation"
 import { dropdownIconContainerVariant } from "./SharedStyledComponents"
 
 import docLinks from "../data/developer-docs-links.yaml"
+import { translateMessageId } from "../utils/translations"
+import { useIntl } from "gatsby-plugin-intl"
 
 const IconContainer = styled(motion.div)`
   cursor: pointer;
@@ -141,7 +143,7 @@ const NavLink = ({ item, path }) => {
 // and they only collapse when clicked on.
 // e.g. solution: https://github.com/hasura/gatsby-gitbook-starter/blob/5c165af40e48fc55eb06b45b95c84eb64b17ed32/src/components/sidebar/tree.js
 const SideNav = ({ path }) => (
-  <Nav aria-label={"Developer docs side nav"}>
+  <Nav aria-label={translateMessageId("nav-developers-docs", useIntl())}>
     {docLinks.map((item, idx) => (
       <NavLink item={item} path={path} key={idx} />
     ))}
