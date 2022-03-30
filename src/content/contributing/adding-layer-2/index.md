@@ -52,7 +52,6 @@ We currently consider the following to be layer 2 solutions:
 **Wallet support**
 
 - What is the public RPC information for the network? (RPC URL, Chain ID, Currency Symbol, Block Explorer URL)
-- What wallets natively support this layer 2?
 
 **External security audit**
 
@@ -83,6 +82,10 @@ We currently consider the following to be layer 2 solutions:
 **Token contract lists**
 
 - Since assets will have a new address on layer 2, if there is a token list resource available please share.
+
+**Native wallet support**
+
+- Do any wallets support the L2 natively?
 
 ## Add your layer 2 {#add-exchange}
 
