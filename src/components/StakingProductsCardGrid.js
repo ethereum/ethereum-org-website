@@ -24,7 +24,7 @@ const Card = styled.div`
 `
 
 const PaddedDiv = styled.div`
-  padding: 2rem;
+  padding: 1.75rem 2rem;
 `
 
 const Spacer = styled.div`
@@ -64,9 +64,11 @@ const Banner = styled(PaddedDiv)`
   background: ${({ color }) => color}
     linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
   border-radius: 0.25rem;
+  max-height: 6rem;
   h2 {
     margin: 0;
     color: white;
+    font-size: 1.5rem;
   }
   svg {
     height: 2rem;
@@ -146,7 +148,8 @@ const Status = ({ status }) => {
       return <StyledGreenCheck />
     case "caution":
       return <StyledCaution />
-    case ("warning", "false"):
+    case "warning":
+    case "false":
       return <StyledWarning />
     default:
       return <StyledUnknown disabled={true} />
