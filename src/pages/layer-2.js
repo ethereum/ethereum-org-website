@@ -243,7 +243,7 @@ const Layer2Page = ({ data }) => {
       className: "security-card",
       title: "Maintain Security",
       description:
-        "Layer 2 blockchains settle their transactions on the Ethereum Mainnet, allowing users who use them to benefit from the security of the Ethereum network.",
+        "Layer 2 blockchains settle their transactions on Ethereum Mainnet, allowing users who use them to benefit from the security of the Ethereum network.",
     },
     {
       emoji: ":hammer_and_wrench:",
