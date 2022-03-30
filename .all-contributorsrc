@@ -6995,6 +6995,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "php4fan",
+      "name": "php4fan",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13969584?v=4",
+      "profile": "https://github.com/php4fan",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
