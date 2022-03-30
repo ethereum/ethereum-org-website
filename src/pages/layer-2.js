@@ -629,7 +629,7 @@ const Layer2Page = ({ data }) => {
       </PaddedContent>
 
       <PaddedContent id="use-layer-2">
-        <h1>Use layer 2</h1>
+        <h2>Use layer 2</h2>
         <p>
           Now that you understand why layer 2 exists and how it works, let's get
           you up and running!
