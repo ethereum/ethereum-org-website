@@ -2,6 +2,9 @@ import React, { useContext } from "react"
 import styled, { ThemeContext } from "styled-components"
 // SVG imports
 import GreenCheck from "../assets/staking/green-check-product-glyph.svg"
+import Caution from "../assets/staking/caution-product-glyph.svg"
+import Warning from "../assets/staking/warning-product-glyph.svg"
+import Unknown from "../assets/staking/unknown-product-glyph.svg"
 // Data imports
 import stakingProducts from "../data/staking-products.json"
 // Component imports
@@ -9,7 +12,7 @@ import ButtonLink from "./ButtonLink"
 
 const CardGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
   gap: 2rem;
 `
 
@@ -28,6 +31,25 @@ const Spacer = styled.div`
   flex: 1;
 `
 
+const Pill = styled.div`
+  text-align: center;
+  padding: 0.25rem 0.75rem;
+  color: rgba(0, 0, 0, 0.6);
+  background: ${({ theme, type }) => {
+    switch (type.toLowerCase()) {
+      case "ui":
+        return theme.colors.stakingPillUI
+      case "platform":
+        return theme.colors.stakingPillPlatform
+      default:
+        return theme.colors.tagGray
+    }
+  }};
+  font-size: ${(props) => props.theme.fontSizes.xs};
+  border: 1px solid ${(props) => props.theme.colors.lightBorder};
+  border-radius: 0.25rem;
+`
+
 const Svg = styled.div`
   --size: ${({ size }) => (size ? size : `3rem`)};
   /* background-image: url("${({ svgPath }) => svgPath}"); */
@@ -39,7 +61,8 @@ const Banner = styled(PaddedDiv)`
   display: flex;
   align-items: center;
   gap: 1.5rem;
-  background: ${({ color }) => color} linear-gradient(to right, #0004, #0000);
+  background: ${({ color }) => color}
+    linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
   border-radius: 0.25rem;
   h2 {
     margin: 0;
@@ -49,7 +72,12 @@ const Banner = styled(PaddedDiv)`
     height: 2rem;
   }
 `
-const Pills = styled(PaddedDiv)``
+const Pills = styled(PaddedDiv)`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+`
+
 const Content = styled(PaddedDiv)`
   padding-top: 0;
   padding-bottom: 0;
@@ -59,27 +87,71 @@ const Content = styled(PaddedDiv)`
     margin-left: 0;
     padding-left: 0;
   }
-
-  li {
-    padding-left: 1em;
-    text-indent: -1em;
-  }
-
-  li:before {
-    content: "";
-    padding-right: 5px;
-    /* background-image: url(""); */
-  }
 `
+
+const Item = styled.li`
+  display: flex;
+  align-items: center;
+  text-indent: 1em;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 0.75rem;
+  line-height: 0.875rem;
+  letter-spacing: 0.04em;
+`
+
 const Cta = styled(PaddedDiv)`
   a {
     width: 100%;
   }
 `
+const glyphSize = "1.5rem"
+const StyledGreenCheck = styled(GreenCheck)`
+  --size: ${({ size }) => (size ? size : glyphSize)};
+  height: var(--size);
+  width: var(--size);
+  .circle {
+    ${({ disabled }) => (disabled ? "fill: #808080;" : null)}
+  }
+`
+const StyledCaution = styled(Caution)`
+  --size: ${({ size }) => (size ? size : glyphSize)};
+  height: var(--size);
+  width: var(--size);
+  .circle {
+    ${({ disabled }) => (disabled ? "fill: #808080;" : null)}
+  }
+`
+const StyledWarning = styled(Warning)`
+  --size: ${({ size }) => (size ? size : glyphSize)};
+  height: var(--size);
+  width: var(--size);
+  .circle {
+    ${({ disabled }) => (disabled ? "fill: #808080;" : null)}
+  }
+`
+const StyledUnknown = styled(Unknown)`
+  --size: ${({ size }) => (size ? size : glyphSize)};
+  height: var(--size);
+  width: var(--size);
+  .circle {
+    ${({ disabled }) => (disabled ? "fill: #808080;" : null)}
+  }
+`
 
-// const StyledGreenCheck = styled(GreenCheck)`
-//   --size: ${({ size }) => size};
-// `
+const Status = ({ status }) => {
+  if (!status) return null
+  switch (status) {
+    case "green-check":
+      return <StyledGreenCheck />
+    case "caution":
+      return <StyledCaution />
+    case ("warning", "false"):
+      return <StyledWarning />
+    default:
+      return <StyledUnknown disabled={true} />
+  }
+}
 
 const StakingProductCard = ({
   product: {
@@ -107,22 +179,51 @@ const StakingProductCard = ({
         <h2>{name}</h2>
       </Banner>
       <Pills>
-        {platforms && platforms.map((platform) => <span> {platform}</span>)}
+        {platforms &&
+          platforms.map((platform, idx) => (
+            <Pill type="platform" key={idx}>
+              {platform}
+            </Pill>
+          ))}
+        {ui &&
+          ui.map((_ui, idx) => (
+            <Pill type="ui" key={idx}>
+              {_ui}
+            </Pill>
+          ))}
       </Pills>
-      <Content bg={GreenCheck}>
+      <Content>
         <ul>
-          <li>Open source: {openSource}</li>
-          <li>Audited: {audited}</li>
-          <li>Bug Bounty: {bugBounty}</li>
-          <li>Battle tested: {battleTested}</li>
-          <li>Trustless: {trustless}</li>
-          <li>Permissionless: {permissionless}</li>
-          <li>Min ETH: {minEth} ETH</li>
+          <Item>
+            <Status status={openSource} />
+            Open source
+          </Item>
+          <Item>
+            <Status status={audited} />
+            Audited
+          </Item>
+          <Item>
+            <Status status={bugBounty} />
+            Bug Bounty
+          </Item>
+          <Item>
+            <Status status={battleTested} />
+            Battle tested
+          </Item>
+          <Item>
+            <Status status={trustless} />
+            Trustless
+          </Item>
+          <Item>
+            <Status status={permissionless} />
+            Permissionless
+          </Item>
+          <Item>Min ETH: {minEth} ETH</Item>
         </ul>
       </Content>
       <Spacer />
       <Cta>
-        <ButtonLink to={url}>LFG</ButtonLink>
+        <ButtonLink to={url}>Get started</ButtonLink>
       </Cta>
     </Card>
   )
