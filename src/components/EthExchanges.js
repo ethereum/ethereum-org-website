@@ -206,6 +206,7 @@ const EthExchanges = () => {
           coinspot
           country
           cryptocom
+          easycrypto
           gemini
           itezcom
           kraken
@@ -256,6 +257,9 @@ const EthExchanges = () => {
         ...cardListImage
       }
       cryptocom: file(relativePath: { eq: "exchanges/crypto.com.png" }) {
+        ...cardListImage
+      }
+      easycrypto: file(relativePath: { eq: "exchanges/easycrypto.png" }) {
         ...cardListImage
       }
       gemini: file(relativePath: { eq: "exchanges/gemini.png" }) {
@@ -362,6 +366,12 @@ const EthExchanges = () => {
       url: "https://crypto.com/exchange/",
       image: data.cryptocom,
       usaExceptions: ["NY"],
+    },
+    easycrypto: {
+      name: "Easy Crypto",
+      url: "https://easycrypto.com/",
+      image: data.easycrypto,
+      usaExceptions: [],
     },
     itezcom: {
       name: "Itez",
