@@ -371,9 +371,9 @@ const StatsBoxGrid = () => {
             : "http://localhost:9000/defipulse"
         )
         const data = response
-          .map(({ timestamp, tvlUSD }) => ({
-            timestamp: parseInt(timestamp) * 1000,
-            value: tvlUSD,
+          .map(({ date, totalLiquidityUSD }) => ({
+            timestamp: parseInt(date) * 1000,
+            value: totalLiquidityUSD,
           }))
           .sort((a, b) => a.timestamp - b.timestamp)
         const value = formatTVL(data[data.length - 1].value)
@@ -458,8 +458,8 @@ const StatsBoxGrid = () => {
       range: selectedRangeTxs,
     },
     {
-      apiProvider: "DeFi Pulse",
-      apiUrl: "https://defipulse.com",
+      apiProvider: "DeFi Llama",
+      apiUrl: "https://defillama.com/",
       title: (
         <Translation id="page-index-network-stats-value-defi-description" />
       ),

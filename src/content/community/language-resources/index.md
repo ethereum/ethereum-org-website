@@ -109,3 +109,8 @@ If you are bilingual and want to help us reach more people, you can also get inv
 - [Tino Group](https://wiki.tino.org/ethereum-la-gi/) - overview of Ethereum, dApps, wallets and FAQs
 - [Tap Chi Bitcoin](https://tapchibitcoin.io/tap-chi/tin-tuc-ethereum-eth) - web platform with subpages for Ethereum news and education
 - [Coin68](https://coin68.com/ethereum-tieu-diem/) - cryptocurrency portal with Ethereum news and educational content
+
+### Japanese {#ja}
+
+- [Japan Virtual and Crypto assets Exchange Association](https://jvcea.or.jp/)
+- [Japan Cryptoasset Business Association](https://cryptocurrency-association.org/)

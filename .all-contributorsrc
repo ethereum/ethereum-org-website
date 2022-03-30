@@ -5888,7 +5888,8 @@
       "profile": "https://linktr.ee/kumarkalyan",
       "contributions": [
         "bug",
-        "doc"
+        "doc",
+        "code"
       ]
     },
     {
@@ -6965,6 +6966,33 @@
       "profile": "https://github.com/krsakshi",
       "contributions": [
         "doc"
+      ]
+    },
+    {
+      "login": "theanshi",
+      "name": "Anshi",
+      "avatar_url": "https://avatars.githubusercontent.com/u/85395224?v=4",
+      "profile": "https://github.com/theanshi",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "mikoto-studio",
+      "name": "mikoto-studio",
+      "avatar_url": "https://avatars.githubusercontent.com/u/83389134?v=4",
+      "profile": "https://github.com/mikoto-studio",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "sacshin",
+      "name": "Arhat",
+      "avatar_url": "https://avatars.githubusercontent.com/u/55705611?v=4",
+      "profile": "https://github.com/sacshin",
+      "contributions": [
+        "content"
       ]
     }
   ],
