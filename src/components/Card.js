@@ -15,16 +15,12 @@ const Description = styled.p`
   opacity: 0.8;
 `
 
-const TopContent = styled.div`
-  h3 {
-    margin: 1rem 0;
-  }
-`
+const TopContent = styled.div``
 
 const Card = ({ emoji, title, description, children, className }) => (
   <StyledCard className={className}>
     <TopContent>
-      {emoji && <Emoji size={3} text={emoji} />}
+      {emoji && <Emoji size={3} text={emoji} mb="1rem" />}
       <h3>{title}</h3>
       <Description>{description}</Description>
     </TopContent>
