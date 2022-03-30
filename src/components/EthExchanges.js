@@ -11,7 +11,7 @@ import { getLocaleTimestamp } from "../utils/time"
 import { trackCustomEvent } from "../utils/matomo"
 import Emoji from "./Emoji"
 import Translation from "./Translation"
-import { translateMessageId, getDefaultMessage } from "../utils/translations"
+import { translateMessageId } from "../utils/translations"
 
 const Container = styled.div`
   width: 100%;
