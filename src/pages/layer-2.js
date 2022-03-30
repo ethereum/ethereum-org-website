@@ -24,6 +24,7 @@ import ProductList from "../components/ProductList"
 import { CardGrid, Content, Page } from "../components/SharedStyledComponents"
 
 // Utils
+import { getData } from "../utils/cache"
 import { translateMessageId } from "../utils/translations"
 
 // Styles
@@ -163,8 +164,7 @@ const Layer2Page = ({ data }) => {
   useEffect(() => {
     const fetchL2Beat = async () => {
       try {
-        const l2beatResponse = await fetch("https://l2beat.com/api/tvl.json")
-        const l2BeatData = await l2beatResponse.json()
+        const l2BeatData = await getData("https://l2beat.com/api/tvl.json")
         // formatted TVL from L2beat API formatted
         setTVL(
           new Intl.NumberFormat(intl.locale, {
@@ -194,10 +194,9 @@ const Layer2Page = ({ data }) => {
     const fetchCryptoStats = async () => {
       try {
         // Average eth transfer fee from L2's supported by cryptostats API
-        const feeResponse = await fetch(
+        const feeData = await getData(
           "https://api.cryptostats.community/api/v1/l2-fees/feeTransferEth?metadata=false"
         )
-        const feeData = await feeResponse.json()
         const feeAverage =
           feeData.data.reduce(
             (acc, curr) => (acc += curr.results.feeTransferEth),
