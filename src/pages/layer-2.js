@@ -522,7 +522,7 @@ const Layer2Page = ({ data }) => {
       <PaddedContent>
         <TwoColumnContent>
           <FlexContainer flexPercent="50">
-            <h2>How layer 2 works</h2>
+            <h2>How does layer 2 work?</h2>
             <p>
               As we mentioned above, Layer 2 is a collective term for Ethereum
               scaling solutions that handle transactions off Ethereum layer 1
