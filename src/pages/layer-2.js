@@ -494,7 +494,7 @@ const Layer2Page = ({ data }) => {
             <p>
               The Ethereum community has taken a strong stance that it would not
               throw out decentralization or security in order to scale. Until
-              sharding, Ethereum Mainnet (layer 1) will only be able to process{" "}
+              sharding, Ethereum Mainnet will only be able to process{" "}
               <Link to="https://ethtps.info/Network/Ethereum">
                 roughly 15 transactions per second
               </Link>
