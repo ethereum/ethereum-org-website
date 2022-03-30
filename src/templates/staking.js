@@ -397,7 +397,7 @@ const StakingPage = ({ data, pageContext, location }) => {
       </StyledBannerNotification> */}
       <HeroContainer>
         <TitleCard>
-          <Breadcrumbs slug={location.pathname} startDepth={2} />
+          <Breadcrumbs slug={location.pathname} />
           <Title>{mdx.frontmatter.title}</Title>
           <SummaryBox>
             <ul>
