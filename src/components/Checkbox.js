@@ -56,6 +56,7 @@ const Checkbox = ({
   ariaContent,
   className,
   size = 2,
+  ...rest
 }) => {
   const handleClick = () => {
     if (callback) {
@@ -64,7 +65,7 @@ const Checkbox = ({
   }
   return (
     <CheckboxContainer className={className} onClick={handleClick}>
-      <HiddenCheckbox checked={checked} readOnly aria-label={ariaContent} />
+      <HiddenCheckbox checked={checked} readOnly {...rest} />
       <StyledCheckbox checked={checked} className="styled-checkbox" size={size}>
         <Icon checked={checked} viewBox="0 0 24 24">
           <polyline points="20 6 9 17 4 12" />
