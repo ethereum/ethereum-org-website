@@ -29,9 +29,9 @@ const Data = styled.div`
 
 // listData should be a list of strings, or HTML components
 // ex: [<p>string<p>] or ['string']
-const OrderedList = ({ listData, size = "35px" }) => {
+const OrderedList = ({ listData, size = "35px", className }) => {
   return (
-    <Content>
+    <Content className={className}>
       {listData.map((data, idx) => {
         return (
           <ListItem>
