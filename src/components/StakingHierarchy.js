@@ -133,6 +133,7 @@ const Header = styled.div`
   gap: 0.5rem;
   h2 {
     margin: 0;
+    text-align: center;
   }
   @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
     align-items: center;
@@ -141,6 +142,7 @@ const Header = styled.div`
 
 const Pills = styled.div`
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 0.25rem;
   p {
