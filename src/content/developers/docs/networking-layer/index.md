@@ -139,8 +139,8 @@ A summary of the control flow is shown beloiw, with the relevant networking stac
 
 Once the block has been attested by sufficient validators it is added to the head of the chain, justified and eventually finalised.
 
-![](./cons_client_net_layer.png)
-![](./exe_client_net_layer.png)
+![](cons_client_net_layer.png)
+![](exe_client_net_layer.png)
 
 Network layer schematic for post-merge consensus and execution clients, from [ethresear.ch](https://ethresear.ch/t/eth1-eth2-client-relationship/7248)
 
