@@ -80,11 +80,7 @@ As much as we wish that solo staking was accessible and risk free to everyone, t
 
 ## How it works {#how-it-works}
 
-1. Get some hardware: You need to run a node to stake. [Learn more](/run-a-node)
-2. Sync an execution layer (EL) client
-3. Sync a consensus layer (CL) client
-4. Generate your keys: Load them into your validator client
-5. Monitor and maintain your node
+<HowSoloStakingWorks />
 
 If ever desired, you can exit as a validator which eliminates the requirement to be online, and stops any further rewards. Be aware that until the planned Shanghai upgrade _withdrawing_ those funds will not be possible.
 

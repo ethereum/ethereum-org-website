@@ -41,6 +41,7 @@ import LaunchpadWidget from "../components/LaunchpadWidget"
 import Breadcrumbs from "../components/Breadcrumbs"
 import StakingProductsCardGrid from "../components/StakingProductsCardGrid"
 import StakingComparison from "../components/StakingComparison"
+import HowSoloStakingWorks from "../components/HowSoloStakingWorks"
 
 import { isLangRightToLeft } from "../utils/translations"
 
@@ -214,41 +215,6 @@ const ExpandableCardGrid = styled.div`
   gap: 1rem 2rem;
 `
 
-// Note: you must pass components to MDXProvider in order to render them in markdown files
-// https://www.gatsbyjs.com/plugins/gatsby-plugin-mdx/#mdxprovider
-const components = {
-  a: Link,
-  h1: Header1,
-  h2: H2,
-  h3: H3,
-  h4: Header4,
-  p: Paragraph,
-  pre: Pre,
-  table: MarkdownTable,
-  MeetupList,
-  RandomAppList,
-  Roadmap,
-  Logo,
-  ButtonLink,
-  Contributors,
-  InfoBanner,
-  Card,
-  CardGrid,
-  ExpandableCardGrid,
-  Divider,
-  SectionNav,
-  Pill,
-  TranslationsInProgress,
-  Emoji,
-  UpgradeStatus,
-  DocLink,
-  ExpandableCard,
-  YouTube,
-  LaunchpadWidget,
-  StakingProductsCardGrid,
-  StakingComparison,
-}
-
 const Title = styled.h1`
   font-size: 2.5rem;
   font-weight: 700;
@@ -278,11 +244,6 @@ const StyledButtonDropdown = styled(ButtonDropdown)`
     align-self: flex-end;
   }
 `
-
-// const StyledEmoji = styled(Emoji)`
-//   margin-right: 1rem;
-//   flex-shrink: 0;
-// `
 
 const MobileButtonDropdown = styled(StyledButtonDropdown)`
   margin-bottom: 0rem;
@@ -377,6 +338,42 @@ const TitleCard = styled.div`
     /* margin-top: 0; */
   }
 `
+
+// Note: you must pass components to MDXProvider in order to render them in markdown files
+// https://www.gatsbyjs.com/plugins/gatsby-plugin-mdx/#mdxprovider
+const components = {
+  a: Link,
+  h1: Header1,
+  h2: H2,
+  h3: H3,
+  h4: Header4,
+  p: Paragraph,
+  pre: Pre,
+  table: MarkdownTable,
+  MeetupList,
+  RandomAppList,
+  Roadmap,
+  Logo,
+  ButtonLink,
+  Contributors,
+  InfoBanner,
+  Card,
+  CardGrid,
+  ExpandableCardGrid,
+  Divider,
+  SectionNav,
+  Pill,
+  TranslationsInProgress,
+  Emoji,
+  UpgradeStatus,
+  DocLink,
+  ExpandableCard,
+  YouTube,
+  LaunchpadWidget,
+  StakingProductsCardGrid,
+  StakingComparison,
+  HowSoloStakingWorks,
+}
 
 const StakingPage = ({ data, pageContext, location }) => {
   const mdx = data.pageData
