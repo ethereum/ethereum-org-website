@@ -260,7 +260,7 @@ const Layer2Page = ({ data }) => {
     },
     {
       emoji: ":hammer_and_wrench:",
-      title: "Expand Use Cases",
+      title: "Expand use cases",
       description:
         "With higher transactions per second, lower fees, and new technology, projects will expand into new applications with improved user experience.",
     },
