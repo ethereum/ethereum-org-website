@@ -377,7 +377,7 @@ const Layer2Page = ({ data }) => {
               {/* TODO: remove hardcoded StatPrimary once lambda functions are working*/}
               <StatPrimary>33.01%</StatPrimary>
               {/* <StatPrimary>{percentChangeL2}</StatPrimary> */}
-              <StatDescription>Layer 2 TVL Last 30 days</StatDescription>
+              <StatDescription>Layer 2 TVL change (30 days)</StatDescription>
             </StatBox>
           </StatsContainer>
         </PaddedContent>
