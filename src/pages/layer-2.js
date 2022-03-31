@@ -254,7 +254,7 @@ const Layer2Page = ({ data }) => {
     {
       emoji: ":closed_lock_with_key:",
       className: "security-card",
-      title: "Maintain Security",
+      title: "Maintain security",
       description:
         "Layer 2 blockchains settle their transactions on Ethereum Mainnet, allowing users to benefit from the security of the Ethereum network.",
     },
