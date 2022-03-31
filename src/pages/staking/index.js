@@ -1,15 +1,13 @@
-import React, { useState } from "react"
+import React from "react"
 import { graphql } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
 import { getImage } from "gatsby-plugin-image"
 import styled from "styled-components"
 
-import Breadcrumbs from "../../components/Breadcrumbs"
 import ButtonDropdown from "../../components/ButtonDropdown"
 import ButtonLink from "../../components/ButtonLink"
 import CalloutBanner from "../../components/CalloutBanner"
 import Card from "../../components/Card"
-import Emoji from "../../components/Emoji"
 import Link from "../../components/Link"
 import PageHero from "../../components/PageHero"
 import PageMetadata from "../../components/PageMetadata"
@@ -220,7 +218,7 @@ const benefits = [
   },
 ]
 
-const StakingPage = ({ data, location }) => {
+const StakingPage = ({ data }) => {
   const intl = useIntl()
 
   const heroContent = {
