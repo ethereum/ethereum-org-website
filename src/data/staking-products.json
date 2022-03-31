@@ -215,7 +215,7 @@
   "saas": [
     {
       "name": "Allnodes",
-      "svgPath": "allnodes.svg",
+      "svgPath": "allnodes-glyph.svg",
       "hue": 248,
       "launchDate": "2020-12-01",
       "url": "https://www.allnodes.com/eth2/staking",

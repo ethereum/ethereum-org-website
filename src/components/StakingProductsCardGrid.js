@@ -1,19 +1,35 @@
 import React, { useContext } from "react"
 import styled, { ThemeContext } from "styled-components"
+// Data imports
+import stakingProducts from "../data/staking-products.json"
+// Component imports
+import ButtonLink from "./ButtonLink"
 // SVG imports
 import GreenCheck from "../assets/staking/green-check-product-glyph.svg"
 import Caution from "../assets/staking/caution-product-glyph.svg"
 import Warning from "../assets/staking/warning-product-glyph.svg"
 import Unknown from "../assets/staking/unknown-product-glyph.svg"
-// Data imports
-import stakingProducts from "../data/staking-products.json"
-// Component imports
-import ButtonLink from "./ButtonLink"
+// Product SVGs
+import Abyss from "../assets/staking/abyss-glyph.svg"
+import Allnodes from "../assets/staking/allnodes-glyph.svg"
+import Ankr from "../assets/staking/ankr-glyph.svg"
+import Bloxstaking from "../assets/staking/bloxstaking-glyph.svg"
+import Dappnode from "../assets/staking/dappnode-glyph.svg"
+import DefaultOpenSource from "../assets/staking/default-open-source-glyph.svg"
+import Lido from "../assets/staking/lido-glyph.svg"
+import RocketPool from "../assets/staking/rocket-pool-glyph.svg"
+import Stafi from "../assets/staking/stafi-glyph.svg"
+import Stakefish from "../assets/staking/stakefish-glyph.svg"
+import Stakewise from "../assets/staking/stakewise-glyph.svg"
+import Stereum from "../assets/staking/stereum-glyph.svg"
+import Wagyu from "../assets/staking/wagyu-glyph.svg"
+// When adding a product svg, be sure to add to mapping below as well.
 
 const CardGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
   gap: 2rem;
+  margin: 3rem 0;
 `
 
 const Card = styled.div`
@@ -29,32 +45,6 @@ const PaddedDiv = styled.div`
 
 const Spacer = styled.div`
   flex: 1;
-`
-
-const Pill = styled.div`
-  text-align: center;
-  padding: 0.25rem 0.75rem;
-  color: rgba(0, 0, 0, 0.6);
-  background: ${({ theme, type }) => {
-    switch (type.toLowerCase()) {
-      case "ui":
-        return theme.colors.stakingPillUI
-      case "platform":
-        return theme.colors.stakingPillPlatform
-      default:
-        return theme.colors.tagGray
-    }
-  }};
-  font-size: ${(props) => props.theme.fontSizes.xs};
-  border: 1px solid ${(props) => props.theme.colors.lightBorder};
-  border-radius: 0.25rem;
-`
-
-const Svg = styled.div`
-  --size: ${({ size }) => (size ? size : `3rem`)};
-  /* background-image: url("${({ svgPath }) => svgPath}"); */
-  height: var(--size);
-  width: var(--size);
 `
 
 const Banner = styled(PaddedDiv)`
@@ -78,6 +68,27 @@ const Pills = styled(PaddedDiv)`
   display: flex;
   flex-wrap: wrap;
   gap: 0.25rem;
+`
+
+const Pill = styled.div`
+  text-align: center;
+  padding: 0.25rem 0.75rem;
+  color: ${({ theme, type }) =>
+    type ? "rgba(0, 0, 0, 0.6)" : theme.colors.text200};
+  background: ${({ theme, type }) => {
+    if (!type) return "transparent"
+    switch (type.toLowerCase()) {
+      case "ui":
+        return theme.colors.stakingPillUI
+      case "platform":
+        return theme.colors.stakingPillPlatform
+      default:
+        return theme.colors.tagGray
+    }
+  }};
+  font-size: ${({ theme }) => theme.fontSizes.xs};
+  border: 1px solid ${({ theme }) => theme.colors.lightBorder};
+  border-radius: 0.25rem;
 `
 
 const Content = styled(PaddedDiv)`
@@ -156,6 +167,25 @@ const Status = ({ status }) => {
   }
 }
 
+const getSvgFromPath = (svgPath) => {
+  const mapping = {
+    "abyss-glyph.svg": Abyss,
+    "allnodes-glyph.svg": Allnodes,
+    "ankr-glyph.svg": Ankr,
+    "bloxstaking-glyph.svg": Bloxstaking,
+    "dappnode-glyph.svg": Dappnode,
+    "default-open-source-glyph.svg": DefaultOpenSource,
+    "lido-glyph.svg": Lido,
+    "rocket-pool-glyph.svg": RocketPool,
+    "stafi-glyph.svg": Stafi,
+    "stakewise-glyph.svg": Stakewise,
+    "stereum-glyph.svg": Stereum,
+    "wagyu-glyph.svg": Wagyu,
+    "stakefish-glyph.svg": Stakefish,
+  }
+  return mapping[svgPath]
+}
+
 const StakingProductCard = ({
   product: {
     name,
@@ -172,13 +202,56 @@ const StakingProductCard = ({
     battleTested,
     trustless,
     permissionless,
+    multiClient,
+    diverseClients,
+    economical,
   },
 }) => {
+  const Svg = getSvgFromPath(svgPath)
+
+  const data = [
+    {
+      label: "Open source",
+      status: openSource,
+    },
+    {
+      label: "Audited",
+      status: audited,
+    },
+    {
+      label: "Bug bounty",
+      status: bugBounty,
+    },
+    {
+      label: "Battle Tested",
+      status: battleTested,
+    },
+    {
+      label: "Trustless",
+      status: trustless,
+    },
+    {
+      label: "Permissionless",
+      status: permissionless,
+    },
+    {
+      label: "Multi-client",
+      status: multiClient,
+    },
+    {
+      label: "Diverse Clients",
+      status: diverseClients,
+    },
+    {
+      label: "Economical",
+      status: economical,
+    },
+  ].filter(({ status }) => !!status)
+
   return (
     <Card>
       <Banner color={color}>
-        {/* TODO: Dynamically load SVG based on filename provided in `svgPath` */}
-        <Svg svgPath={svgPath} />
+        {!!Svg && <Svg style={{ width: "32", height: "auto" }} />}
         <h2>{name}</h2>
       </Banner>
       <Pills>
@@ -194,38 +267,20 @@ const StakingProductCard = ({
               {_ui}
             </Pill>
           ))}
+        <Pill>{!!minEth ? `From ${minEth} ETH` : "Any amount"}</Pill>
       </Pills>
       <Spacer />
       <Content>
         <ul>
-          <Item>
-            <Status status={openSource} />
-            Open source
-          </Item>
-          <Item>
-            <Status status={audited} />
-            Audited
-          </Item>
-          <Item>
-            <Status status={bugBounty} />
-            Bug Bounty
-          </Item>
-          <Item>
-            <Status status={battleTested} />
-            Battle tested
-          </Item>
-          <Item>
-            <Status status={trustless} />
-            Trustless
-          </Item>
-          <Item>
-            <Status status={permissionless} />
-            Permissionless
-          </Item>
-          <Item>Min ETH: {minEth} ETH</Item>
+          {data &&
+            data.map(({ label, status }, idx) => (
+              <Item key={idx}>
+                <Status status={status} />
+                {label}
+              </Item>
+            ))}
         </ul>
       </Content>
-
       <Cta>
         <ButtonLink to={url}>Get started</ButtonLink>
       </Cta>
@@ -243,7 +298,7 @@ const StakingProductCardGrid = ({ category }) => {
     "false",
     "unknown",
   ]
-  const [SAT, LUM] = isDarkTheme ? ["60%", "35%"] : ["95%", "70%"]
+  const [SAT, LUM] = isDarkTheme ? ["50%", "35%"] : ["75%", "60%"]
 
   const getBattleTestedFlag = (_launchDate) => {
     let battleTested = WARNING_FLAG
@@ -272,7 +327,7 @@ const StakingProductCardGrid = ({ category }) => {
 
   const getBrandProperties = ({ name, svgPath, hue, url, socials }) => ({
     name,
-    svgPath: svgPath ? `../assets/staking/${svgPath}` : ``,
+    svgPath,
     color: `hsla(${hue}, ${SAT}, ${LUM}, 1)`,
     url,
     socials,
@@ -326,7 +381,6 @@ const StakingProductCardGrid = ({ category }) => {
         ...getSharedSecurityProperties(listing),
         diverseClients: getDiversityOfClients(listing.pctMajorityClient),
         selfCustody: getFlagFromBoolean(listing.isSelfCustody),
-        economical: getFlagFromBoolean(listing.minEth < 32),
       }))
     )
   }
@@ -339,7 +393,6 @@ const StakingProductCardGrid = ({ category }) => {
         ...getSharedSecurityProperties(listing),
         diverseClients: getDiversityOfClients(listing.pctMajorityClient),
         selfCustody: getFlagFromBoolean(listing.tokens?.length),
-        economical: getFlagFromBoolean(listing.minEth < 32),
       }))
     )
   }
