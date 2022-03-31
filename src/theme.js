@@ -236,9 +236,13 @@ const lightColors = {
   codeBackground: codeBoxLight,
   rollupDevDocList: primaryLight50,
   beta: "radial-gradient(25.56% 133.51% at 28.36% 45.54%, rgba(28, 28, 225, 0) 0%, rgba(28, 28, 225, 0.06) 100%)",
-  offBackground: "#fafafa",
+  offBackground: "#f7f7f7",
   stakingPillPlatform: "#cd9df3",
   stakingPillUI: "#ebd27a",
+  stakingGold: "#be8d10",
+  stakingGreen: "#129e5b",
+  stakingBlue: "#0b83dc",
+  stakingRed: "#a0524c",
 }
 
 // TODO replace random variables w/ baseColor variables
@@ -330,6 +334,10 @@ const darkColors = {
   offBackground: "#181818",
   stakingPillPlatform: "#cd9df3",
   stakingPillUI: "#ebd27a",
+  stakingGold: "#F2BB2F",
+  stakingGreen: "#49DE96",
+  stakingBlue: "#A9D3F2",
+  stakingRed: "#D6BBB9",
 }
 
 const lightThemeColors = Object.assign({}, baseColors, lightColors)
