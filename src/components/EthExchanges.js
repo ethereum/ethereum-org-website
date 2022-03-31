@@ -210,6 +210,7 @@ const EthExchanges = () => {
           gemini
           itezcom
           kraken
+          kucoin
           moonpay
           mtpelerin
           okx
@@ -273,6 +274,9 @@ const EthExchanges = () => {
         ...cardListImage
       }
       kraken: file(relativePath: { eq: "exchanges/kraken.png" }) {
+        ...cardListImage
+      }
+      kucoin: file(relativePath: { eq: "exchanges/kucoin.png" }) {
         ...cardListImage
       }
       mtpelerin: file(relativePath: { eq: "exchanges/mtpelerin.png" }) {
@@ -388,6 +392,12 @@ const EthExchanges = () => {
       url: "https://www.kraken.com/",
       image: data.kraken,
       usaExceptions: ["NY, WA"],
+    },
+    kucoin: {
+      name: "KuCoin",
+      url: "https://www.kucoin.com/",
+      image: data.kucoin,
+      usaExceptions: [],
     },
     mtpelerin: {
       name: "Mt Pelerin",
