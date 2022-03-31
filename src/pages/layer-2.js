@@ -510,9 +510,7 @@ const Layer2Page = ({ data }) => {
             <p>
               The main goal of scalability is to increase transaction speed
               (faster finality) and transaction throughput (higher transactions
-              per second) without sacrificing decentralization or security (more
-              on the <Link to="/upgrades/vision/">Ethereum vision</Link>
-              ).
+              per second) without sacrificing decentralization or security.
             </p>
             <p>
               The Ethereum community has taken a strong stance that it would not
