@@ -37,6 +37,10 @@ const Card = styled.div`
   flex-direction: column;
   background: ${({ theme }) => theme.colors.offBackground};
   border-radius: 0.25rem;
+  &:hover {
+    transition: 0.1s;
+    transform: scale(1);
+  }
 `
 
 const PaddedDiv = styled.div`
