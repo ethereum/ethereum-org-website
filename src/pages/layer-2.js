@@ -424,7 +424,7 @@ const Layer2Page = ({ data }) => {
               the layer 1 blockchain.
             </p>
             <p>
-              Ethereum also functions as a data availability layer for Layer 2s,
+              Ethereum also functions as a data availability layer for layer 2s,
               and if there are any disputes on previous transactions data is
               provided from Ethereum for these disputes.
             </p>
