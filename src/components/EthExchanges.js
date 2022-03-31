@@ -209,6 +209,7 @@ const EthExchanges = () => {
           easycrypto
           ftx
           gemini
+          huobiglobal
           itezcom
           kraken
           kucoin
@@ -269,6 +270,9 @@ const EthExchanges = () => {
         ...cardListImage
       }
       gemini: file(relativePath: { eq: "exchanges/gemini.png" }) {
+        ...cardListImage
+      }
+      huobiglobal: file(relativePath: { eq: "exchanges/huobiglobal.png" }) {
         ...cardListImage
       }
       imtoken: file(relativePath: { eq: "wallets/imtoken.png" }) {
@@ -389,6 +393,12 @@ const EthExchanges = () => {
       name: "FTX",
       url: "https://ftx.com/",
       image: data.ftx,
+      usaExceptions: [],
+    },
+    huobiglobal: {
+      name: "Huobi Global",
+      url: "https://huobi.com/",
+      image: data.huobiglobal,
       usaExceptions: [],
     },
     itezcom: {
