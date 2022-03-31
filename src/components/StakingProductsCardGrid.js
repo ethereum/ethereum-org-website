@@ -209,6 +209,7 @@ const StakingProductCard = ({
 }) => {
   const Svg = getSvgFromPath(svgPath)
 
+  console.log({ minEth })
   const data = [
     {
       label: "Open source",
@@ -267,7 +268,9 @@ const StakingProductCard = ({
               {_ui}
             </Pill>
           ))}
-        <Pill>{!!minEth ? `From ${minEth} ETH` : "Any amount"}</Pill>
+        {typeof minEth !== "undefined" && (
+          <Pill>{minEth > 0 ? `From ${minEth} ETH` : "Any amount"}</Pill>
+        )}
       </Pills>
       <Spacer />
       <Content>
@@ -333,10 +336,9 @@ const StakingProductCardGrid = ({ category }) => {
     socials,
   })
 
-  const getTagProperties = ({ platforms, ui, minEth }) => ({
+  const getTagProperties = ({ platforms, ui }) => ({
     platforms,
     ui,
-    minEth,
   })
 
   const getSharedSecurityProperties = ({
@@ -369,6 +371,7 @@ const StakingProductCardGrid = ({ category }) => {
         multiClient: getFlagFromBoolean(listing.multiClient),
         selfCustody: getFlagFromBoolean(true),
         economical: getFlagFromBoolean(listing.minEth < 32),
+        minEth: listing.minEth,
       }))
     )
   }
@@ -381,6 +384,7 @@ const StakingProductCardGrid = ({ category }) => {
         ...getSharedSecurityProperties(listing),
         diverseClients: getDiversityOfClients(listing.pctMajorityClient),
         selfCustody: getFlagFromBoolean(listing.isSelfCustody),
+        minEth: listing.minEth,
       }))
     )
   }
@@ -393,6 +397,7 @@ const StakingProductCardGrid = ({ category }) => {
         ...getSharedSecurityProperties(listing),
         diverseClients: getDiversityOfClients(listing.pctMajorityClient),
         selfCustody: getFlagFromBoolean(listing.tokens?.length),
+        minEth: listing.minEth,
       }))
     )
   }
