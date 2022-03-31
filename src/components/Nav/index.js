@@ -165,6 +165,18 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
           to: "/get-eth/",
         },
         {
+          text: "defi-page",
+          to: "/defi/",
+        },
+        {
+          text: "dao-page",
+          to: "/dao/",
+        },
+        {
+          text: "nft-page",
+          to: "/nft/",
+        },
+        {
           text: "decentralized-applications-dapps",
           to: "/dapps/",
         },
@@ -193,18 +205,6 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
         {
           text: "what-is-ether",
           to: "/eth/",
-        },
-        {
-          text: "defi-page",
-          to: "/defi/",
-        },
-        {
-          text: "dao-page",
-          to: "/dao/",
-        },
-        {
-          text: "nft-page",
-          to: "/nft/",
         },
         {
           text: "smart-contracts",
