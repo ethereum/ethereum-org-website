@@ -339,10 +339,12 @@ const StakingPage = ({ data }) => {
           <StakingHierarchy />
           <Content>
             <p style={{ marginTop: "1rem" }}>
-              Given the number of these unique solutions, they vary in terms of
-              risks, rewards, and trust assumptions. Some of them are more
-              decentralized, battle-tested and/or risky than others. We'll
-              provide some information on popular projects in the space, but{" "}
+              As you may have noticed, there is no one single way to participate
+              in Ethereum staking. These paths target a wide range of users, and
+              ultimately are each unique, and vary in terms of risks, rewards,
+              and trust assumptions. Some of them are more decentralized,
+              battle-tested and/or risky than others. We'll provide some
+              information on popular projects in the space, but{" "}
               <em>always do your own research</em> before sending ETH anywhere.
             </p>
           </Content>

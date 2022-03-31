@@ -338,9 +338,9 @@ const StakingHierarchy = () => {
             ETH.
           </p>
           <p>
-            This can enable easy and any-time exiting, and makes staking as
-            simple as a token swap. These options also allow/require users to
-            hold custody of their assets in their own Ethereum wallet.
+            This enables easy and any-time exiting, and makes staking as simple
+            as a token swap. These options also allow/require users to hold
+            custody of their assets in their own Ethereum wallet.
           </p>
           <p>
             Pooled staking is not native to the Ethereum network, and thus have
@@ -381,9 +381,9 @@ const StakingHierarchy = () => {
           <p>
             The trade-off here is that centralized providers consolidate large
             pools of ETH to run large numbers of validators. This can be
-            dangerous for the network as it creates a large centralized target
-            and point of failure, making the network more vulnerable to attack
-            or bugs.
+            dangerous for the network and its users as it creates a large
+            centralized target and point of failure, making the network more
+            vulnerable to attack or bugs.
           </p>
           <p>
             Users should stake by the best means possible,{" "}

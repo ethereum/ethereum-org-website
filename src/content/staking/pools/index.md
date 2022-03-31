@@ -50,7 +50,7 @@ Attribute indicators are used below to signal notable strengths or weaknesses a 
 
 There are a variety of options available to help you with your setup. Use the above indicators to help guide you through the tools below.
 
-<Emoji text="⚠️" mr="1rem" /> Please note the importance of choosing a services that take <a href="/client-diversity">client diversity</a> seriously, as it improves the security of the network, and limits your risk. Services that have evidence of limiting majority client use are marked as "diverse clients."
+<Emoji text="⚠️" mr="1rem" /> Please note the importance of choosing a service that take <a href="/client-diversity">client diversity</a> seriously, as it improves the security of the network, and limits your risk. Services that have evidence of limiting majority client use are marked as "diverse clients."
 
 <StakingProductsCardGrid category="pools" />
 
