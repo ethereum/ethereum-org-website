@@ -159,43 +159,45 @@ const StatDivider = styled.div`
 const Layer2Page = ({ data }) => {
   const intl = useIntl()
 
-  const [tvl, setTVL] = useState("loading...")
-  const [percentChangeL2, setL2PercentChange] = useState("loading...")
+  // TODO: Use this state once lambda functions are working
+  // const [tvl, setTVL] = useState("loading...")
+  // const [percentChangeL2, setL2PercentChange] = useState("loading...")
   const [averageFee, setAverageFee] = useState("loading...")
 
   useEffect(() => {
-    const fetchL2Beat = async () => {
-      try {
-        const l2BeatData = await getData(
-          process.env.NODE_ENV === "production"
-            ? `${process.env.GATSBY_FUNCTIONS_PATH}/l2beat`
-            : "http://localhost:9000/l2beat"
-        )
-        // formatted TVL from L2beat API formatted
-        const TVL = new Intl.NumberFormat(intl.locale, {
-          style: "currency",
-          currency: "USD",
-          notation: "compact",
-          minimumSignificantDigits: 2,
-          maximumSignificantDigits: 3,
-        }).format(l2BeatData.data[l2BeatData.data.length - 1][1])
-        setTVL(`${TVL}(USD)`)
-        // Calculate percent change ((new value - old value) / old value) *100)
-        const percentage = (
-          ((l2BeatData.data[l2BeatData.data.length - 1][1] -
-            l2BeatData.data[l2BeatData.data.length - 31][1]) /
-            l2BeatData.data[l2BeatData.data.length - 31][1]) *
-          100
-        ).toFixed(2)
-        setL2PercentChange(`${percentage}%`)
-      } catch (error) {
-        console.error(error)
-        setTVL("Error, please refresh.")
-        setL2PercentChange("Error, please refresh.")
-      }
-    }
+    // TODO: use this fetch function once lambda functions are working
+    // const fetchL2Beat = async () => {
+    //   try {
+    //     const l2BeatData = await getData(
+    //       process.env.NODE_ENV === "production"
+    //         ? `${process.env.GATSBY_FUNCTIONS_PATH}/l2beat`
+    //         : "http://localhost:9000/l2beat"
+    //     )
+    //     // formatted TVL from L2beat API formatted
+    //     const TVL = new Intl.NumberFormat(intl.locale, {
+    //       style: "currency",
+    //       currency: "USD",
+    //       notation: "compact",
+    //       minimumSignificantDigits: 2,
+    //       maximumSignificantDigits: 3,
+    //     }).format(l2BeatData.data[l2BeatData.data.length - 1][1])
+    //     setTVL(`${TVL}(USD)`)
+    //     // Calculate percent change ((new value - old value) / old value) *100)
+    //     const percentage = (
+    //       ((l2BeatData.data[l2BeatData.data.length - 1][1] -
+    //         l2BeatData.data[l2BeatData.data.length - 31][1]) /
+    //         l2BeatData.data[l2BeatData.data.length - 31][1]) *
+    //       100
+    //     ).toFixed(2)
+    //     setL2PercentChange(`${percentage}%`)
+    //   } catch (error) {
+    //     console.error(error)
+    //     setTVL("Error, please refresh.")
+    //     setL2PercentChange("Error, please refresh.")
+    //   }
+    // }
 
-    fetchL2Beat()
+    // fetchL2Beat()
 
     const fetchCryptoStats = async () => {
       try {
@@ -227,10 +229,10 @@ const Layer2Page = ({ data }) => {
 
   const heroContent = {
     title: "Layer 2",
-    header: "Scaling Ethereum with layer 2",
+    header: "Ethereum for everyone",
     subtitle:
       "Scaling Ethereum without compromising on security or decentralization.",
-    image: getImage(data.rollup),
+    image: getImage(data.heroImage),
     alt: "test",
     buttons: [
       {
@@ -358,7 +360,9 @@ const Layer2Page = ({ data }) => {
         <PaddedContent>
           <StatsContainer>
             <StatBox>
-              <StatPrimary>{tvl}</StatPrimary>
+              {/* TODO: remove hardcoded StatPrimary once lambda functions are working*/}
+              <StatPrimary>$7.27B(USD)</StatPrimary>
+              {/* <StatPrimary>{tvl}</StatPrimary>  */}
               <StatDescription>TVL locked in layer 2</StatDescription>
             </StatBox>
             <StatDivider />
@@ -370,7 +374,9 @@ const Layer2Page = ({ data }) => {
             </StatBox>
             <StatDivider />
             <StatBox>
-              <StatPrimary>{percentChangeL2}</StatPrimary>
+              {/* TODO: remove hardcoded StatPrimary once lambda functions are working*/}
+              <StatPrimary>33.01%</StatPrimary>
+              {/* <StatPrimary>{percentChangeL2}</StatPrimary> */}
               <StatDescription>Layer 2 TVL Last 30 days</StatDescription>
             </StatBox>
           </StatsContainer>
@@ -978,6 +984,11 @@ export const query = graphql`
           placeholder: BLURRED
           quality: 100
         )
+      }
+    }
+    heroImage: file(relativePath: { eq: "layer-2/hero.png" }) {
+      childImageSharp {
+        gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED, quality: 100)
       }
     }
     impact: file(relativePath: { eq: "impact_transparent.png" }) {
