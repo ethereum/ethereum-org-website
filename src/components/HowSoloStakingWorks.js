@@ -18,6 +18,7 @@ const Flex = styled.div`
     list-style: none;
     counter-reset: li-counter;
     padding-left: 2rem;
+    margin-bottom: 0;
   }
 
   ol li {
