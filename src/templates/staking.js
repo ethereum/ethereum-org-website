@@ -41,6 +41,7 @@ import YouTube from "../components/YouTube"
 import LaunchpadWidget from "../components/LaunchpadWidget"
 import Breadcrumbs from "../components/Breadcrumbs"
 import StakingProductsCardGrid from "../components/StakingProductsCardGrid"
+import StakingComparison from "../components/StakingComparison"
 
 import { isLangRightToLeft } from "../utils/translations"
 
@@ -237,6 +238,7 @@ const components = {
   YouTube,
   LaunchpadWidget,
   StakingProductsCardGrid,
+  StakingComparison,
 }
 
 const Title = styled.h1`

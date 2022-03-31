@@ -76,12 +76,7 @@ As much as we wish that solo staking was accessible and risk free to everyone, t
 </ExpandableCard>
 </ExpandableCardGrid>
 
-## How does it compare? {#how-does-it-compare}
-
-**Staking as a service (SaaS)** - With SaaS providers you're still required to deposit 32 ETH, but don't have to run hardware. You typically maintain access to your validator keys, but also need to share your signing keys so the operator can act on behalf of your validator. This introduces a layer of trust not present when running your own hardware, and unlike solo staking at home, SaaS does not help as much with geographic distribution of nodes. If you're uncomfortable operating hardware but still looking to stake 32 ETH, [learn more about staking as a service](/staking/as-a-service).
-
-**Pooled staking** -
-Solo staking is significantly more involved than staking with a pooling service, but offer full access to ETH rewards, and full control over the setup and security of your validator. Pooled staking has a significantly lower barrier to entry. Users can stake small amounts of ETH, are not required to generate validator keys, and have no hardware requirements beyond a standard internet connection. Liquidity tokens enable the ability to exit from staking before this is enabled at the protocol level. If you're interested, [learn more about pooled staking](/staking/pools).
+<StakingComparison page="solo" />
 
 ## How it works {#how-it-works}
 

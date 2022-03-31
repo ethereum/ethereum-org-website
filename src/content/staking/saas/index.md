@@ -32,11 +32,7 @@ The Ethereum protocol does not natively support delegation of stake, so these se
   In many cases users do not have to give up access to the keys that enable withdrawing or transferring staked funds. These are different than the signing keys, and can be stored separately to limit (but not eliminate) your risk as a staker.
 </Card>
 
-## How does it compare? {#how-does-it-compare}
-
-**Solo staking** - Similarities include having your own validator keys without having to pool funds, but with SaaS you must trust a third-party, who may potentially act maliciously or become a target of attack or regulation themselves. If these trust assumptions or centralization risks concern you, we recommend learning [more about solo staking](/staking/solo), the gold standard of self-sovereign staking.
-
-**Pooled staking** - These are similar in that you're generally relying on someone else to run the validator, but unlike SaaS, pooled staking allows you to participate with smaller amounts of ETH. If you're looking to stake with less than 32 ETH, consider learning [more about pooled staking](/staking/pools) services.
+<StakingComparison page="saas" />
 
 ## What to consider {#what-to-consider}
 

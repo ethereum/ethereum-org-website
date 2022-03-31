@@ -32,11 +32,7 @@ In addition to the benefits we outlined in our [intro to staking](/staking), sta
   Many staking pools provide a token that represents a claim on your staked ETH and the rewards it generates. This allows you to make use of your staked ETH, e.g. as collateral in DeFi applications.
 </Card>
 
-## How does it compare? {#how-does-it-compare}
-
-**Solo staking** - Pooled staking has a significantly lower barrier to entry when compared to solo staking, but comes with additional risk by delegating all node operations to a third-party, and with a fee. Solo staking gives full sovereignty and control over the choices that go into choosing a staking setup. Stakers never have to hand over their keys, and they earn full rewards without any middlemen taking a cut. If this sounds like what you're looking for, learn more about [solo staking](/staking/solo).
-
-**Staking as a service (SaaS)** - These are similar in that stakers do not run the validator software themselves, but unlike pooling options, SaaS requires a full 32 ETH deposit to activate a validator. Rewards accumulate to the staker, and usually involve a monthly fee or other stake to use the service. If you'd prefer your own validator keys and are looking to stake at least 32 ETH, check out [staking as a service](/staking/staking-as-a-service).
+<StakingComparison page="pools" />
 
 ## What to consider {#what-to-consider}
 
