@@ -408,7 +408,7 @@ const Layer2Page = ({ data }) => {
         </TwoColumnContent>
       </PaddedContent>
       <LightGrayContent>
-        <h2>Layer 1 function</h2>
+        <h2>What is Layer 1?</h2>
         <TwoColumnContent>
           <Flex50>
             <p>
