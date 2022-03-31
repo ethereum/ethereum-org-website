@@ -98,23 +98,7 @@ There are a growing number of tools and services to help you solo stake your ETH
 
 Attribute indicators are used below to signal notable strengths or weaknesses a listed staking tool may have. Use this section as a reference for how we define these attributes while you’re choosing what tools to help with your staking journey.
 
-<!-- TODO: Create card grid component for these items -->
-
-- **Open source**: Essential code is 100% open source and available to the public to fork and use
-- **Audited**: Essential code has undergone formal auditing with results published and available publicly
-- **Bug bounty**: A public bug bounty has been performed on any essential code to rewards users for safely reporting and/or fixing vulnerabilities
-  - ✅ Currently active
-- **Battle tested**: Software has been available and used by the public for the indicated period of time
-  - ✅ Live for over one year
-  - 🟡 Live for over six months
-  - 🛑 Live for less than six months
-- **Trustless**: Validator keys are not entrusted to any other human at any time in the validator lifecycle. Any smart contracts involved are free of back doors, without reliance on privileged permissions for execution.
-- **Permissionless**: User does not require any special permission to operate a validator using the software or service
-- **Multi-client**: Software enables users to pick from and switch between at least two or more CL clients
-  - ✅ Easy client switching
-  - 🛑 Limits users to a supermajority client
-- **Self custody**: User maintains custody of any validator credentials, including signing and withdrawal keys
-- **Economical**: Users can operate a validator by staking less than 32 ETH, utilizing pooled funds from others
+<StakingConsiderations page="solo" />
 
 ## 🛠 Explore node and client setup tools {#node-and-client-tools}
 

@@ -42,21 +42,7 @@ There are a growing number of staking-as-a-service providers to help you stake y
 
 Attribute indicators are used below to signal notable strengths or weaknesses a listed SaaS provider may have. Use this section as a reference for how we define these attributes while you're choosing a service to help with your staking journey.
 
-- **Open source**: Essential code is 100% open source and available to the public to fork and use
-- **Audited**: Essential code has undergone formal auditing with results published and available publicly
-- **Bug bounty**: A public bug bounty has been performed on any essential code to rewards users for safely reporting and/or fixing vulnerabilities
-  - ✅ Currently active
-- **Battle tested**: Service has been available and used by the public for the indicated period of time
-  - ✅ Live for over one year
-  - 🟡 Live for over six months
-  - ⛔️ Live for less than six months
-- **Permissionless**: User does not require any special permission, account sign up or KYC to participate with the service
-- **Diverse clients**: Service should not run more than 50% of their aggregate validators with a supermajority validator client
-  - ⭐️ Less than 25%
-  - ✅ Less than 50%
-  - ⛔️ More than 50%
-  - 🟡 Currently unknown
-- **Self custody**: User maintains custody of any validator credentials, including signing and withdrawal keys
+<StakingConsiderations page="saas" />
 
 ## Explore staking service providers {#saas-providers}
 

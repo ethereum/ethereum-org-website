@@ -44,22 +44,7 @@ Each pool and the tools or smart contracts they use have been built out by diffe
 
 Attribute indicators are used below to signal notable strengths or weaknesses a listed staking pool may have. Use this section as a reference for how we define these attributes while you're choosing a pool to join.
 
-- **Open source**: Essential code is 100% open source and available to the public to fork and use
-- **Audited**: Essential code has undergone formal auditing with results published and available publicly
-- **Bug bounty**: A public bug bounty has been performed on any essential code to rewards users for safely reporting and/or fixing vulnerabilities
-  - ✅ Currently active
-- **Battle tested**: Service has been available and used by the public for the indicated period of time
-  - ✅ Live for over one year
-  - 🟡 Live for over six months
-  - ⛔️ Live for less than six months
-- **Trustless**: Service does not require trusting any humans to custody your keys or distribute rewards
-- **Permissionless nodes**: Service allows anyone to join as a node operator for the pool, without permission
-- **Diverse clients**: Service should not run more than 50% of their aggregate validators with a supermajority validator client
-  - ⭐️ Less than 25%
-  - ✅ Less than 50%
-  - ⛔️ More than 50%
-  - 🟡 Currently unknown
-- **Liquidity token**: Offers tradable liquidity token representing your staked ETH, held in your own wallet
+<StakingConsiderations page="pools" />
 
 ## Explore staking pools {#explore-staking-pools}
 

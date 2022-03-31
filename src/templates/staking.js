@@ -42,6 +42,7 @@ import Breadcrumbs from "../components/Breadcrumbs"
 import StakingProductsCardGrid from "../components/StakingProductsCardGrid"
 import StakingComparison from "../components/StakingComparison"
 import HowSoloStakingWorks from "../components/HowSoloStakingWorks"
+import StakingConsiderations from "../components/StakingConsiderations"
 
 import { isLangRightToLeft } from "../utils/translations"
 
@@ -373,6 +374,7 @@ const components = {
   StakingProductsCardGrid,
   StakingComparison,
   HowSoloStakingWorks,
+  StakingConsiderations,
 }
 
 const StakingPage = ({ data, pageContext, location }) => {
