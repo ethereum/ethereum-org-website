@@ -196,6 +196,7 @@ const lightColors = {
   textTableOfContents: "#7f7f7f",
   background: white,
   ednBackground: white600,
+  layer2ContentSecondary: white700,
   border: white700,
   tableBoxShadow:
     "0 14px 66px rgba(0,0,0,.07), 0 10px 17px rgba(0,0,0,.03), 0 4px 7px rgba(0,0,0,.05)",
@@ -243,6 +244,8 @@ const lightColors = {
   stakingGreen: "#129e5b",
   stakingBlue: "#0b83dc",
   stakingRed: "#a0524c",
+  layer2Gradient:
+    "linear-gradient(85.12deg, rgba(185, 185, 241, 0.2) 0%, rgba(84, 132, 234, 0.2) 56.29%, rgba(58, 142, 137, 0.2) 99.99%)",
 }
 
 // TODO replace random variables w/ baseColor variables
@@ -293,6 +296,7 @@ const darkColors = {
   textTableOfContents: "hsla(0,0%,69.8%,.8)",
   background: "#222222",
   ednBackground: black400,
+  layer2ContentSecondary: black300,
   border: black300,
   tableBoxShadow:
     "0 14px 66px hsla(0,0%,96.1%,.07), 0 10px 17px hsla(0,0%,96.1%,.03), 0 4px 7px hsla(0,0%,96.1%,.05)",
@@ -338,6 +342,8 @@ const darkColors = {
   stakingGreen: "#49DE96",
   stakingBlue: "#A9D3F2",
   stakingRed: "#D6BBB9",
+  layer2Gradient:
+    "linear-gradient(83.46deg, rgba(127, 127, 213, 0.2) 7.03%, rgba(138, 168, 231, 0.2) 52.42%, rgba(145, 234, 228, 0.2) 98.77%), #1E1E1E",
 }
 
 const lightThemeColors = Object.assign({}, baseColors, lightColors)
