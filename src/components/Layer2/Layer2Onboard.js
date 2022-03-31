@@ -17,7 +17,7 @@ import { trackCustomEvent } from "../../utils/matomo"
 // Styles
 const Content = styled.div`
   background: ${(props) => props.theme.colors.layer2Gradient};
-  padding: 1.5rem;
+  padding: 2.5rem;
   border-radius: 2px;
 `
 
@@ -103,6 +103,12 @@ const StyledSelect = styled(Select)`
       background-color: ${(props) => props.theme.colors.primary};
     }
   }
+
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    .react-select__control {
+      padding: 14px 0;
+    }
+  }
 `
 
 const SelectedContainer = styled.div`
@@ -122,6 +128,7 @@ const Grid = styled.div`
 
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     grid-template-columns: repeat(11, 1fr);
+    margin: auto;
   }
 `
 
@@ -130,7 +137,7 @@ const LeftDescription = styled.div`
   grid-row: 1;
 
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    grid-column: 1/11;
+    grid-column: 1/12;
     grid-row: 1;
   }
 `
@@ -140,7 +147,7 @@ const LeftSelect = styled.div`
   grid-row: 2;
 
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    grid-column: 1/11;
+    grid-column: 1/12;
     grid-row: 2;
   }
 `
@@ -150,7 +157,7 @@ const RightDescription = styled.div`
   grid-row: 1;
 
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    grid-column: 1/11;
+    grid-column: 1/12;
     grid-row: 5;
   }
 `
@@ -160,7 +167,7 @@ const RightSelect = styled.div`
   grid-row: 2;
 
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    grid-column: 1/11;
+    grid-column: 1/12;
     grid-row: 6;
   }
 `
@@ -170,7 +177,7 @@ const LeftSelected = styled.div`
   grid-row: 3/6;
 
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    grid-column: 1/11;
+    grid-column: 1/12;
     grid-row: 3;
   }
 `
@@ -180,7 +187,7 @@ const EthLogo = styled.div`
   grid-row: 4;
 
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    grid-column: 1/11;
+    grid-column: 1/12;
     grid-row: 4;
   }
 `
@@ -198,7 +205,7 @@ const RightSelected = styled.div`
   grid-row: 3/6;
 
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    grid-column: 1/11;
+    grid-column: 1/12;
     grid-row: 7;
   }
 `

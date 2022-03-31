@@ -31,6 +31,7 @@ import { translateMessageId } from "../utils/translations"
 // Styles
 
 const HeroBackground = styled.div`
+  width: 100%;
   background: ${(props) => props.theme.colors.layer2Gradient};
 `
 
@@ -158,35 +159,39 @@ const StatDivider = styled.div`
 const Layer2Page = ({ data }) => {
   const intl = useIntl()
 
-  const [tvl, setTVL] = useState("-")
-  const [percentChangeL2, setL2PercentChange] = useState("-")
-  const [averageFee, setAverageFee] = useState("-")
+  const [tvl, setTVL] = useState("loading...")
+  const [percentChangeL2, setL2PercentChange] = useState("loading...")
+  const [averageFee, setAverageFee] = useState("loading...")
 
   useEffect(() => {
     const fetchL2Beat = async () => {
       try {
-        const l2BeatData = await getData("https://l2beat.com/api/tvl.json")
+        const l2BeatData = await getData(
+          process.env.NODE_ENV === "production"
+            ? `${process.env.GATSBY_FUNCTIONS_PATH}/l2beat`
+            : "http://localhost:9000/l2beat"
+        )
         // formatted TVL from L2beat API formatted
-        setTVL(
-          new Intl.NumberFormat(intl.locale, {
-            style: "currency",
-            currency: "USD",
-            notation: "compact",
-            minimumSignificantDigits: 2,
-            maximumSignificantDigits: 3,
-          }).format(l2BeatData.data[l2BeatData.data.length - 1][1])
-        )
+        const TVL = new Intl.NumberFormat(intl.locale, {
+          style: "currency",
+          currency: "USD",
+          notation: "compact",
+          minimumSignificantDigits: 2,
+          maximumSignificantDigits: 3,
+        }).format(l2BeatData.data[l2BeatData.data.length - 1][1])
+        setTVL(`${TVL}(USD)`)
         // Calculate percent change ((new value - old value) / old value) *100)
-        setL2PercentChange(
-          (
-            ((l2BeatData.data[l2BeatData.data.length - 1][1] -
-              l2BeatData.data[l2BeatData.data.length - 31][1]) /
-              l2BeatData.data[l2BeatData.data.length - 31][1]) *
-            100
-          ).toFixed(2)
-        )
+        const percentage = (
+          ((l2BeatData.data[l2BeatData.data.length - 1][1] -
+            l2BeatData.data[l2BeatData.data.length - 31][1]) /
+            l2BeatData.data[l2BeatData.data.length - 31][1]) *
+          100
+        ).toFixed(2)
+        setL2PercentChange(`${percentage}%`)
       } catch (error) {
         console.error(error)
+        setTVL("Error, please refresh.")
+        setL2PercentChange("Error, please refresh.")
       }
     }
 
@@ -203,8 +208,17 @@ const Layer2Page = ({ data }) => {
             (acc, curr) => (acc += curr.results.feeTransferEth),
             0
           ) / feeData.data.length
-        setAverageFee(feeAverage.toFixed(2))
+
+        const intlFeeAverage = new Intl.NumberFormat(intl.locale, {
+          style: "currency",
+          currency: "USD",
+          notation: "compact",
+          minimumSignificantDigits: 2,
+          maximumSignificantDigits: 3,
+        }).format(feeAverage)
+        setAverageFee(`${intlFeeAverage}(USD)`)
       } catch (error) {
+        setAverageFee("Error, please refresh.")
         console.error(error)
       }
     }
@@ -213,10 +227,10 @@ const Layer2Page = ({ data }) => {
 
   const heroContent = {
     title: "Layer 2",
-    header: "Layer 2",
+    header: "Scaling Ethereum with layer 2",
     subtitle:
       "Scaling Ethereum without compromising on security and decentralization.",
-    image: getImage(data.ethBlocks),
+    image: getImage(data.rollup),
     alt: "test",
     buttons: [
       {
@@ -344,19 +358,19 @@ const Layer2Page = ({ data }) => {
         <PaddedContent>
           <StatsContainer>
             <StatBox>
-              <StatPrimary>{tvl} (USD)</StatPrimary>
+              <StatPrimary>{tvl}</StatPrimary>
               <StatDescription>TVL locked in layer 2</StatDescription>
             </StatBox>
             <StatDivider />
             <StatBox>
-              <StatPrimary>${averageFee} (USD)</StatPrimary>
+              <StatPrimary>{averageFee}</StatPrimary>
               <StatDescription>
                 Average layer 2 ETH transfer fee
               </StatDescription>
             </StatBox>
             <StatDivider />
             <StatBox>
-              <StatPrimary>{percentChangeL2}%</StatPrimary>
+              <StatPrimary>{percentChangeL2}</StatPrimary>
               <StatDescription>Layer 2 TVL Last 30 days</StatDescription>
             </StatBox>
           </StatsContainer>
