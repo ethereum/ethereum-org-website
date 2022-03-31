@@ -198,6 +198,7 @@ const EthExchanges = () => {
         nodes {
           binance
           bitbuy
+          bitfinex
           bitflyer
           bittrex
           bitvavo
@@ -241,6 +242,9 @@ const EthExchanges = () => {
         ...cardListImage
       }
       bitbuy: file(relativePath: { eq: "exchanges/bitbuy.png" }) {
+        ...cardListImage
+      }
+      bitfinex: file(relativePath: { eq: "exchanges/bitfinex.png" }) {
         ...cardListImage
       }
       bitflyer: file(relativePath: { eq: "exchanges/bitflyer.png" }) {
@@ -350,6 +354,12 @@ const EthExchanges = () => {
       url: "https://bitflyer.com/",
       image: data.bitflyer,
       usaExceptions: ["NV", "WV"],
+    },
+    bitfinex: {
+      name: "Bitfinex",
+      url: "https://www.bitfinex.com/",
+      image: data.bitfinex,
+      usaExceptions: [],
     },
     bittrex: {
       name: "Bittrex",
