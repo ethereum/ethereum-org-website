@@ -627,7 +627,7 @@ const Layer2Page = ({ data }) => {
             world, they are as safe as L1 Ethereum. However, many of the{" "}
             <b>projects are still young and somewhat experimental</b>. After
             years of research and development, many of the L2 technologies that will scale Ethereum
-            went live in 2021. Many projects still have additional trust
+            launched in 2021. Many projects still have additional trust
             assumptions as they work to decentralize their networks. Always do
             your own research to decide if you're comfortable with any risks
             involved.
