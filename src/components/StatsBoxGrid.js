@@ -443,7 +443,7 @@ const StatsBoxGrid = () => {
     },
     {
       apiProvider: "Etherscan",
-      apiUrl: "https://etherscan.io/",
+      apiUrl: "https://etherscan.io/chart/tx",
       title: <Translation id="page-index-network-stats-tx-day-description" />,
       description: (
         <Translation id="page-index-network-stats-tx-day-explainer" />
@@ -459,7 +459,7 @@ const StatsBoxGrid = () => {
     },
     {
       apiProvider: "DeFi Llama",
-      apiUrl: "https://defillama.com/",
+      apiUrl: "https://defillama.com/chain/Ethereum",
       title: (
         <Translation id="page-index-network-stats-value-defi-description" />
       ),
