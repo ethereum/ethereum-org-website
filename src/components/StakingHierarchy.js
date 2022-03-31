@@ -141,10 +141,11 @@ const Header = styled.div`
 
 const Pills = styled.div`
   display: flex;
-  flex-wrap: flex;
+  flex-wrap: wrap;
   gap: 0.25rem;
   p {
     padding: 0.125rem 0.375rem;
+    white-space: nowrap;
   }
 `
 
@@ -316,7 +317,9 @@ const StakingHierarchy = () => {
             <p>Stake what you can</p>
             <p>Earn rewards</p>
             <p>Keep it simple</p>
-            <p>(Popular)</p>
+            <p>
+              <em>Popular</em>
+            </p>
           </Pills>
         </Header>
         <Glyph>
