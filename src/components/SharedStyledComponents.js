@@ -164,6 +164,23 @@ export const CardGrid = styled.div`
   gap: 2rem;
 `
 
+export const InfoGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr));
+  gap: 2rem;
+  & > div {
+    height: fit-content;
+    &:hover {
+      transition: 0.1s;
+      transform: scale(1.01);
+      svg {
+        transition: 0.1s;
+        transform: scale(1.1);
+      }
+    }
+  }
+`
+
 export const StyledCard = styled(Card)`
   margin: 1rem;
   padding: 1.5rem;

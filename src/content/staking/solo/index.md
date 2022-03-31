@@ -46,7 +46,7 @@ Solo staking comes with more responsibility, but provides you with maximum contr
 
 As much as we wish that solo staking was accessible and risk free to everyone, this is not reality. There are some practical and serious considerations to keep in mind before choosing to solo stake your ETH.
 
-<ExpandableCardGrid>
+<InfoGrid>
   <ExpandableCard title="Required reading">
     When operating your own node you should spend some time learning how to use the software you've chosen. This should involve reading relevant documentation and being attune to communication channels of those dev teams.
     The more you understand about the software you're running and how proof-of-stake works, the less risky it will be as a staker, and the easier it will be to fix any issues that may arise along the way as a node operator. 
@@ -74,7 +74,7 @@ As much as we wish that solo staking was accessible and risk free to everyone, t
     
     <a href="">More on slashing</a>
   </ExpandableCard>
-</ExpandableCardGrid>
+</InfoGrid>
 
 <StakingComparison page="solo" />
 

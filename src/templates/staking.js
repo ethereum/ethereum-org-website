@@ -34,6 +34,7 @@ import {
   Paragraph,
   Header1,
   Header4,
+  InfoGrid,
 } from "../components/SharedStyledComponents"
 import Emoji from "../components/Emoji"
 import YouTube from "../components/YouTube"
@@ -210,12 +211,6 @@ const CardGrid = styled.div`
   }
 `
 
-const ExpandableCardGrid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 330px), 1fr));
-  gap: 1rem 2rem;
-`
-
 const Title = styled.h1`
   font-size: 2.5rem;
   font-weight: 700;
@@ -360,7 +355,7 @@ const components = {
   InfoBanner,
   Card,
   CardGrid,
-  ExpandableCardGrid,
+  InfoGrid,
   Divider,
   SectionNav,
   Pill,
