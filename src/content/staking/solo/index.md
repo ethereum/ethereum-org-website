@@ -104,11 +104,13 @@ Attribute indicators are used below to signal notable strengths or weaknesses a 
 
 There are a variety of options available to help you with your setup. Use the above indicators to help guide you through the tools below.
 
-> Please note the importance of choosing a [minority client](/developers/docs/nodes-and-clients/client-diversity) as it improves the security of the network, and limits your risk. Tools that allow you to setup minority client are denoted as "multi-client."
+<Emoji text="⚠️" mr="1rem" /> Please note the importance of choosing a <a href="/client-diversity">minority client</a> as it improves the security of the network, and limits your risk. Tools that allow you to setup minority client are denoted as "multi-client."
 
 <StakingProductsCardGrid category="nodeTools" />
 
 **Key Generators**
+
+These tools can be used as an alternative to the [Staking Deposit CLI](https://github.com/ethereum/staking-deposit-cli) to help with key generation.
 
 <StakingProductsCardGrid category="keyGen" />
 
