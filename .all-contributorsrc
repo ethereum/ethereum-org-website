@@ -7004,6 +7004,25 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "kpister",
+      "name": "Kaiser Pister",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4607361?v=4",
+      "profile": "https://github.com/kpister",
+      "contributions": [
+        "doc",
+        "code"
+      ]
+    },
+    {
+      "login": "MATsxm",
+      "name": "Marc-Antoine Thevenet",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1972717?v=4",
+      "profile": "http://idimweb.com",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,

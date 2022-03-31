@@ -1465,6 +1465,8 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/mikoto-studio"><img src="https://avatars.githubusercontent.com/u/83389134?v=4?s=100" width="100px;" alt=""/><br /><sub><b>mikoto-studio</b></sub></a><br /><a href="#content-mikoto-studio" title="Content">🖋</a></td>
     <td align="center"><a href="https://github.com/sacshin"><img src="https://avatars.githubusercontent.com/u/55705611?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Arhat</b></sub></a><br /><a href="#content-sacshin" title="Content">🖋</a></td>
     <td align="center"><a href="https://github.com/php4fan"><img src="https://avatars.githubusercontent.com/u/13969584?v=4?s=100" width="100px;" alt=""/><br /><sub><b>php4fan</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Aphp4fan" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="https://github.com/kpister"><img src="https://avatars.githubusercontent.com/u/4607361?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Kaiser Pister</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=kpister" title="Documentation">📖</a> <a href="https://github.com/ethereum/ethereum-org-website/commits?author=kpister" title="Code">💻</a></td>
+    <td align="center"><a href="http://idimweb.com"><img src="https://avatars.githubusercontent.com/u/1972717?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Marc-Antoine Thevenet</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=MATsxm" title="Documentation">📖</a></td>
   </tr>
 </table>
 
