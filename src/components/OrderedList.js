@@ -2,6 +2,7 @@
 import React from "react"
 import styled from "styled-components"
 
+//Styles
 const Content = styled.div`
   margin-bottom: 1.45rem;
 `
@@ -12,28 +13,30 @@ const ListItem = styled.div`
 `
 
 const NumberCircle = styled.div`
-  width: 35px;
-  height: 35px;
+  width: ${({ size }) => size};
+  height: ${({ size }) => size};
   border-radius: 50%;
-  line-height: 35px;
+  line-height: ${({ size }) => size};
   text-align: center;
-  background: ${(props) => props.theme.colors.grayBackground};
+  background: ${({ theme }) => theme.colors.grayBackground};
 `
 
 const Data = styled.div`
-  height: 35px;
-  line-height: 35px;
+  height: ${({ size }) => size};
+  line-height: ${({ size }) => size};
   margin-left: 0.5rem;
 `
 
-const OrderedList = ({ listData }) => {
+// listData should be a list of strings, or HTML components
+// ex: [<p>string<p>] or ['string']
+const OrderedList = ({ listData, size = "35px", className }) => {
   return (
-    <Content>
+    <Content className={className}>
       {listData.map((data, idx) => {
         return (
           <ListItem>
-            <NumberCircle>{idx + 1}</NumberCircle>
-            <Data>{data}</Data>
+            <NumberCircle size={size}>{idx + 1}</NumberCircle>
+            <Data size={size}>{data}</Data>
           </ListItem>
         )
       })}
