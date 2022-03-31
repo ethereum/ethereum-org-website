@@ -95,10 +95,10 @@ const Layer2ProductCard = ({
       <Content className="hover">
         <div>
           <Title>{name}</Title>
+          {children && <Children>{children}</Children>}
           <Description>{description}</Description>
           {note.length > 0 && <Description>Note: {note}</Description>}
         </div>
-        {children && <Children>{children}</Children>}
         {bridge && <Link to={bridge}>{name} Bridge</Link>}
         {ecosystemPortal && (
           <Link to={ecosystemPortal}>{name} Ecosystem Portal</Link>

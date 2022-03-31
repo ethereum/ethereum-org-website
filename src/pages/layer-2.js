@@ -424,9 +424,11 @@ const Layer2Page = ({ data }) => {
               the layer 1 blockchain.
             </p>
             <p>
-              Ethereum also functions as a data availability layer for layer 2s,
-              and if there are any disputes on previous transactions data is
-              provided from Ethereum for these disputes.
+              Ethereum also functions as a data availability layer for layer 2s.
+              Layer 2 projects will post their transaction data onto Ethereum,
+              relying on Ethereum for data availability. This data can be used
+              to get the state of the layer 2, or to dispute transactions on
+              layer 2.
             </p>
           </Flex50>
           {/* TODO: Convert these inline styles into styled components */}
@@ -556,11 +558,11 @@ const Layer2Page = ({ data }) => {
               similar security and decentralization guarantees. All this
               requires no changes to the layer 1 protocol (Ethereum). This lets
               layer 1 handle security, data availability, and decentralization,
-              while layer 2s handles scaling. Layer 2s take the
-              transactional burden away from the layer 1 and post finalized
-              proofs back to the layer 1. By removing this transaction load from
-              layer 1, the base layer becomes less congested, and everything
-              becomes more scalable.
+              while layer 2s handles scaling. Layer 2s take the transactional
+              burden away from the layer 1 and post finalized proofs back to the
+              layer 1. By removing this transaction load from layer 1, the base
+              layer becomes less congested, and everything becomes more
+              scalable.
             </p>
             <h3>Rollups</h3>
             <p>
@@ -626,11 +628,11 @@ const Layer2Page = ({ data }) => {
             Since layer 2 chains inherit security from Ethereum, in an ideal
             world, they are as safe as L1 Ethereum. However, many of the{" "}
             <b>projects are still young and somewhat experimental</b>. After
-            years of research and development, many of the L2 technologies that will scale Ethereum
-            launched in 2021. Many projects still have additional trust
-            assumptions as they work to decentralize their networks. Always do
-            your own research to decide if you're comfortable with any risks
-            involved.
+            years of research and development, many of the L2 technologies that
+            will scale Ethereum launched in 2021. Many projects still have
+            additional trust assumptions as they work to decentralize their
+            networks. Always do your own research to decide if you're
+            comfortable with any risks involved.
           </p>
           <p>
             For more information on the technology, risks, and trust assumptions
