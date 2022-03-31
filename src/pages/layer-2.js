@@ -556,7 +556,7 @@ const Layer2Page = ({ data }) => {
               similar security and decentralization guarantees. All this
               requires no changes to the layer 1 protocol (Ethereum). This lets
               layer 1 handle security, data availability, and decentralization,
-              while the layer above (layer 2) handles scaling. Layer 2s take the
+              while layer 2s handles scaling. Layer 2s take the
               transactional burden away from the layer 1 and post finalized
               proofs back to the layer 1. By removing this transaction load from
               layer 1, the base layer becomes less congested, and everything
