@@ -181,7 +181,7 @@ const Layer2Page = ({ data }) => {
     //       minimumSignificantDigits: 2,
     //       maximumSignificantDigits: 3,
     //     }).format(l2BeatData.data[l2BeatData.data.length - 1][1])
-    //     setTVL(`${TVL}(USD)`)
+    //     setTVL(`${TVL}`)
     //     // Calculate percent change ((new value - old value) / old value) *100)
     //     const percentage = (
     //       ((l2BeatData.data[l2BeatData.data.length - 1][1] -
@@ -218,7 +218,7 @@ const Layer2Page = ({ data }) => {
           minimumSignificantDigits: 2,
           maximumSignificantDigits: 3,
         }).format(feeAverage)
-        setAverageFee(`${intlFeeAverage}(USD)`)
+        setAverageFee(`${intlFeeAverage}`)
       } catch (error) {
         setAverageFee("Error, please refresh.")
         console.error(error)
@@ -361,15 +361,15 @@ const Layer2Page = ({ data }) => {
           <StatsContainer>
             <StatBox>
               {/* TODO: remove hardcoded StatPrimary once lambda functions are working*/}
-              <StatPrimary>$7.27B(USD)</StatPrimary>
+              <StatPrimary>$7.27B</StatPrimary>
               {/* <StatPrimary>{tvl}</StatPrimary>  */}
-              <StatDescription>TVL locked in layer 2</StatDescription>
+              <StatDescription>TVL locked in layer 2 (USD)</StatDescription>
             </StatBox>
             <StatDivider />
             <StatBox>
               <StatPrimary>{averageFee}</StatPrimary>
               <StatDescription>
-                Average layer 2 ETH transfer fee
+                Average layer 2 ETH transfer fee (USD)
               </StatDescription>
             </StatBox>
             <StatDivider />
