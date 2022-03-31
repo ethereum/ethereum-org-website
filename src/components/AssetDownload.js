@@ -67,7 +67,7 @@ const AssetDownload = ({
   src,
   shouldHide = false,
   title,
-  isSvg = false,
+  Svg,
 }) => {
   const baseUrl = `https://ethereum.org`
   const downloadUri = src ? src : getSrc(image)
@@ -80,8 +80,8 @@ const AssetDownload = ({
         {children && <ImageContainer>{children}</ImageContainer>}
         {!children && (
           <ImageContainer>
-            {isSvg ? (
-              <img src={image} alt={alt} />
+            {!!Svg ? (
+              <Svg alt={alt} />
             ) : (
               <Image image={getImage(image)} alt={alt} />
             )}
@@ -99,7 +99,7 @@ const AssetDownload = ({
         )}
       </div>
       <ButtonContainer>
-        {!isSvg && (
+        {!Svg && (
           <ButtonLink to={downloadUrl}>
             <Translation id="page-assets-download-download" />
           </ButtonLink>

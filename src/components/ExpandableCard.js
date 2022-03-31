@@ -64,7 +64,7 @@ const Header = styled.div`
   width: 100%;
   margin: 1rem 0;
   align-items: center;
-  img {
+  svg {
     margin-right: 1.5rem;
   }
 `
@@ -81,7 +81,7 @@ const StyledFakeLink = styled(FakeLink)`
   white-space: nowrap;
 `
 
-const ExpandableCard = ({ children, contentPreview, title, svg, alt }) => {
+const ExpandableCard = ({ children, contentPreview, title, Svg, alt }) => {
   const [isVisible, setIsVisible] = useState(false)
   const expandCollapse = {
     collapsed: {
@@ -124,7 +124,7 @@ const ExpandableCard = ({ children, contentPreview, title, svg, alt }) => {
       <Content>
         <Question>
           <Header>
-            {svg && <img src={svg} alt={alt} />}
+            {!!Svg && <Svg alt={alt} />}
             <Title>{title}</Title>
           </Header>
           <TextPreview>{contentPreview}</TextPreview>

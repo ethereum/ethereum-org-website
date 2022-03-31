@@ -38,7 +38,7 @@ Now that we included the library in the project we need to initialize it. If you
 const web3 = new Web3("http://localhost:8545")
 ```
 
-If you’d like to directly access a hosted node you can use Infura or the free ones provided by [Cloudfare](https://cloudflare-eth.com/):
+If you’d like to directly access a hosted node you can use Infura or the free ones provided by [Cloudflare](https://cloudflare-eth.com/):
 
 ```js
 const web3 = new Web3("https://cloudflare-eth.com")
