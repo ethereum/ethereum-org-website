@@ -20,12 +20,16 @@ const Container = styled.div`
   @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
     display: flex;
     flex-direction: column;
+    --gold: ${({ theme }) => theme.colors.stakingGold};
+    --green: ${({ theme }) => theme.colors.stakingGreen};
+    --blue: ${({ theme }) => theme.colors.stakingBlue};
+    --red: ${({ theme }) => theme.colors.stakingRed};
     border-image: linear-gradient(
         to bottom,
-        #f2bb2f 5%,
-        #49de96 30%,
-        #a9d3f2 55%,
-        #d6bbb9 80%
+        var(--gold) 5%,
+        var(--green) 30%,
+        var(--blue) 55%,
+        var(--red) 80%
       )
       1 100%;
     border-left: solid 4px;
@@ -38,8 +42,34 @@ const Container = styled.div`
 `
 
 const Section = styled.div`
-  --color: ${({ color }) => color};
-  --next-color: ${({ nextColor }) => nextColor};
+  --color: ${({ number, theme }) => {
+    switch (number) {
+      case "1":
+        return theme.colors.stakingGold
+      case "2":
+        return theme.colors.stakingGreen
+      case "3":
+        return theme.colors.stakingBlue
+      case "4":
+        return theme.colors.stakingRed
+      default:
+        return "#000000"
+    }
+  }};
+  --next-color: ${({ number, theme }) => {
+    switch (number) {
+      case "1":
+        return theme.colors.stakingGreen
+      case "2":
+        return theme.colors.stakingBlue
+      case "3":
+        return theme.colors.stakingRed
+      case "4":
+        return "#00000000"
+      default:
+        return "#000000"
+    }
+  }};
   display: grid;
   position: relative;
   gap: 0 2rem;
@@ -70,8 +100,19 @@ const Section = styled.div`
   .subtext {
     p {
       color: var(--color);
-      background: ${({ color }) => color}20;
       margin: 0;
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--color);
+        opacity: 0.125;
+        border-radius: 0.125rem;
+      }
     }
   }
 
@@ -104,7 +145,6 @@ const Pills = styled.div`
   gap: 0.25rem;
   p {
     padding: 0.125rem 0.375rem;
-    border-radius: 0.125rem;
   }
 `
 
@@ -168,10 +208,15 @@ const Line = styled.aside`
   }
 `
 
+const Gold = styled.span`
+  color: ${({ theme }) => theme.colors.stakingGold};
+  font-weight: 600;
+`
+
 const StakingHierarchy = () => {
   return (
     <Container>
-      <Section color="#F2BB2F" nextColor="#49DE96" number="1">
+      <Section number="1">
         <Ether>
           <StyledEtherSvg size="100%" />
         </Ether>
@@ -193,9 +238,9 @@ const StakingHierarchy = () => {
         <Content>
           <p>
             Solo staking on the Ethereum Beacon Chain is the{" "}
-            <span style={{ color: "#F2BB2F" }}>gold standard</span> for staking.
-            It is trustless, provides full participation rewards, and improves
-            the decentralization of the network.
+            <Gold>gold standard</Gold> for staking. It is trustless, provides
+            full participation rewards, and improves the decentralization of the
+            network.
           </p>
           <p>
             Those considering solo staking should have at least 32 ETH, hardware
@@ -217,7 +262,7 @@ const StakingHierarchy = () => {
           <ButtonLink to="/staking/solo">More on solo staking</ButtonLink>
         </Content>
       </Section>
-      <Section color="#49DE96" nextColor="#A9D3F2" number="2">
+      <Section number="2">
         <Ether>
           <StyledEtherSvg size="90%" />
         </Ether>
@@ -260,7 +305,7 @@ const StakingHierarchy = () => {
           </ButtonLink>
         </Content>
       </Section>
-      <Section color="#A9D3F2" nextColor="#D6BBB9" number="3">
+      <Section number="3">
         <Ether>
           <StyledEtherSvg size="80%" />
         </Ether>
@@ -299,7 +344,7 @@ const StakingHierarchy = () => {
           <ButtonLink to="/staking/pools">More on pooled staking</ButtonLink>
         </Content>
       </Section>
-      <Section color="#D6BBB9" nextColor="#00000000" number="4">
+      <Section number="4">
         <Ether>
           <StyledEtherSvg size="70%" />
         </Ether>
