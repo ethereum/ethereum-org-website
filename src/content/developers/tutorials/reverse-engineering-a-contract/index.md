@@ -738,6 +738,6 @@ The main difference is that the first parameter, the window to withdraw, isn't t
 
 So it looks like a `claim` variant that claims all the windows.
 
-## Conclusion
+## Conclusion {#conclusion}
 
 By now you should know how to understand contracts whose source code is not available, using either the opcodes or (when it works) the decompiler. As is evident from the length of this article, reverse engineering a contract is not trivial, but in a system where security is essential it is an important skill to be able to verify contracts work as promised.
