@@ -24,7 +24,7 @@ const GradientContainer = styled.div`
   padding: 2rem;
   margin-top: 4rem;
   @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
-    padding: 1rem;
+    padding: 2rem 1.5rem;
   }
 
   h3 {
