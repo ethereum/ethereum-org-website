@@ -7004,6 +7004,16 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "kpister",
+      "name": "Kaiser Pister",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4607361?v=4",
+      "profile": "https://github.com/kpister",
+      "contributions": [
+        "doc",
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
