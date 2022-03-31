@@ -122,52 +122,20 @@ const Cta = styled(PaddedDiv)`
     width: 100%;
   }
 `
-const glyphSize = "1.5rem"
-const StyledGreenCheck = styled(GreenCheck)`
-  --size: ${({ size }) => (size ? size : glyphSize)};
-  height: var(--size);
-  width: var(--size);
-  .circle {
-    ${({ disabled }) => (disabled ? "fill: #808080;" : null)}
-  }
-`
-const StyledCaution = styled(Caution)`
-  --size: ${({ size }) => (size ? size : glyphSize)};
-  height: var(--size);
-  width: var(--size);
-  .circle {
-    ${({ disabled }) => (disabled ? "fill: #808080;" : null)}
-  }
-`
-const StyledWarning = styled(Warning)`
-  --size: ${({ size }) => (size ? size : glyphSize)};
-  height: var(--size);
-  width: var(--size);
-  .circle {
-    ${({ disabled }) => (disabled ? "fill: #808080;" : null)}
-  }
-`
-const StyledUnknown = styled(Unknown)`
-  --size: ${({ size }) => (size ? size : glyphSize)};
-  height: var(--size);
-  width: var(--size);
-  .circle {
-    ${({ disabled }) => (disabled ? "fill: #808080;" : null)}
-  }
-`
 
 const Status = ({ status }) => {
   if (!status) return null
+  const styles = { width: "24", height: "auto" }
   switch (status) {
     case "green-check":
-      return <StyledGreenCheck />
+      return <GreenCheck style={styles} />
     case "caution":
-      return <StyledCaution />
+      return <Caution style={styles} />
     case "warning":
     case "false":
-      return <StyledWarning />
+      return <Warning style={styles} />
     default:
-      return <StyledUnknown disabled={true} />
+      return <Unknown style={styles} />
   }
 }
 
