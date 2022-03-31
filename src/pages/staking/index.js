@@ -161,6 +161,22 @@ const ComparisonGrid = styled.div`
   }
 `
 
+const ColorH3 = styled.h3`
+  grid-area: ${({ color }) => {
+    switch (color) {
+      case "stakingGold":
+        return "solo-title"
+      case "stakingGreen":
+        return "saas-title"
+      case "stakingBlue":
+        return "pool-title"
+      default:
+        return ""
+    }
+  }};
+  color: ${({ theme, color }) => theme.colors[color]};
+`
+
 const ButtonContaier = styled.div`
   display: flex;
   gap: 1rem;
@@ -343,9 +359,7 @@ const StakingPage = ({ data, location }) => {
               requirements of the different ways you can stake.
             </p>
             <ComparisonGrid>
-              <h3 style={{ gridArea: "solo-title", color: "#F2BB2F" }}>
-                Solo staking
-              </h3>
+              <ColorH3 color="stakingGold">Solo staking</ColorH3>
               <div
                 style={{
                   gridArea: "solo-rewards",
@@ -405,10 +419,7 @@ const StakingPage = ({ data, location }) => {
                   More on solo staking
                 </StyledButtonLink>
               </div>
-
-              <h3 style={{ gridArea: "saas-title", color: "#49DE96" }}>
-                Staking as a service
-              </h3>
+              <ColorH3 color="stakingGreen">Staking as a service</ColorH3>
               <div
                 style={{
                   gridArea: "saas-rewards",
@@ -464,9 +475,7 @@ const StakingPage = ({ data, location }) => {
                 </StyledButtonLink>
               </div>
 
-              <h3 style={{ gridArea: "pool-title", color: "#A9D3F2" }}>
-                Pooled staking
-              </h3>
+              <ColorH3 color="stakingBlue">Pooled staking</ColorH3>
               <div
                 style={{
                   gridArea: "pool-rewards",

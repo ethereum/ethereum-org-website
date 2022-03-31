@@ -1,5 +1,5 @@
-import React from "react"
-import styled from "styled-components"
+import React, { useContext } from "react"
+import styled, { ThemeContext } from "styled-components"
 import { useIntl } from "gatsby-plugin-intl"
 
 import Link from "./Link"
@@ -51,41 +51,44 @@ const Glyph = styled.div`
 
 const StyledSoloGlyph = styled(SoloGlyph)`
   path {
-    fill: #f2bb2f;
+    fill: ${({ theme }) => theme.colors.stakingGold};
   }
 `
 const StyledSaasGlyph = styled(SaasGlyph)`
   path {
-    fill: #49de96;
+    fill: ${({ theme }) => theme.colors.stakingGreen};
   }
 `
 const StyledPoolGlyph = styled(PoolGlyph)`
   path {
-    fill: #a9d3f2;
+    fill: ${({ theme }) => theme.colors.stakingBlue};
   }
 `
 
 const StakingComparison = ({ page, className }) => {
   const intl = useIntl()
+  const themeContext = useContext(ThemeContext)
+  const { stakingGold, stakingGreen, stakingBlue } = themeContext.colors
+
   const solo = {
     title: "Solo staking",
     linkText: "Learn more about solo staking",
     to: "/staking/solo",
-    color: "#F2BB2F",
+    color: stakingGold,
     glyph: <StyledSoloGlyph />,
   }
   const saas = {
     title: "Staking as a service (SaaS)",
     linkText: "Learn more about staking as a service",
     to: "/staking/saas",
-    color: "#49DE96",
+    color: stakingGreen,
     glyph: <StyledSaasGlyph />,
   }
   const pools = {
     title: "Pooled staking",
     linkText: "Learn more about pooled staking",
     to: "/staking/pools",
-    color: "#A9D3F2",
+    color: stakingBlue,
     glyph: <StyledPoolGlyph />,
   }
   const data = {
