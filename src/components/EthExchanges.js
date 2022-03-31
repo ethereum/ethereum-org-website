@@ -207,6 +207,7 @@ const EthExchanges = () => {
           country
           cryptocom
           easycrypto
+          ftx
           gemini
           itezcom
           kraken
@@ -262,6 +263,9 @@ const EthExchanges = () => {
         ...cardListImage
       }
       easycrypto: file(relativePath: { eq: "exchanges/easycrypto.png" }) {
+        ...cardListImage
+      }
+      ftx: file(relativePath: { eq: "exchanges/ftx.png" }) {
         ...cardListImage
       }
       gemini: file(relativePath: { eq: "exchanges/gemini.png" }) {
@@ -379,6 +383,12 @@ const EthExchanges = () => {
       name: "Easy Crypto",
       url: "https://easycrypto.com/",
       image: data.easycrypto,
+      usaExceptions: [],
+    },
+    ftx: {
+      name: "FTX",
+      url: "https://ftx.com/",
+      image: data.ftx,
       usaExceptions: [],
     },
     itezcom: {
