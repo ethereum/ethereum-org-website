@@ -171,7 +171,6 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
         {
           text: "layer-2",
           to: "/layer-2/",
-          
         },
         {
           text: "nft-page",
@@ -184,7 +183,6 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
         {
           text: "dao-page",
           to: "/dao/",
-        },
         },
         {
           text: "page-stablecoins-title",
