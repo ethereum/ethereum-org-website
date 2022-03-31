@@ -229,7 +229,7 @@ const Layer2Page = ({ data }) => {
     title: "Layer 2",
     header: "Scaling Ethereum with layer 2",
     subtitle:
-      "Scaling Ethereum without compromising on security and decentralization.",
+      "Scaling Ethereum without compromising on security or decentralization.",
     image: getImage(data.rollup),
     alt: "test",
     buttons: [
