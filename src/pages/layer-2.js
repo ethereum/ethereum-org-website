@@ -159,45 +159,42 @@ const StatDivider = styled.div`
 const Layer2Page = ({ data }) => {
   const intl = useIntl()
 
-  // TODO: Use this state once lambda functions are working
-  // const [tvl, setTVL] = useState("loading...")
-  // const [percentChangeL2, setL2PercentChange] = useState("loading...")
+  const [tvl, setTVL] = useState("loading...")
+  const [percentChangeL2, setL2PercentChange] = useState("loading...")
   const [averageFee, setAverageFee] = useState("loading...")
 
   useEffect(() => {
-    // TODO: use this fetch function once lambda functions are working
-    // const fetchL2Beat = async () => {
-    //   try {
-    //     const l2BeatData = await getData(
-    //       process.env.NODE_ENV === "production"
-    //         ? `${process.env.GATSBY_FUNCTIONS_PATH}/l2beat`
-    //         : "http://localhost:9000/l2beat"
-    //     )
-    //     // formatted TVL from L2beat API formatted
-    //     const TVL = new Intl.NumberFormat(intl.locale, {
-    //       style: "currency",
-    //       currency: "USD",
-    //       notation: "compact",
-    //       minimumSignificantDigits: 2,
-    //       maximumSignificantDigits: 3,
-    //     }).format(l2BeatData.data[l2BeatData.data.length - 1][1])
-    //     setTVL(`${TVL}`)
-    //     // Calculate percent change ((new value - old value) / old value) *100)
-    //     const percentage = (
-    //       ((l2BeatData.data[l2BeatData.data.length - 1][1] -
-    //         l2BeatData.data[l2BeatData.data.length - 31][1]) /
-    //         l2BeatData.data[l2BeatData.data.length - 31][1]) *
-    //       100
-    //     ).toFixed(2)
-    //     setL2PercentChange(`${percentage}%`)
-    //   } catch (error) {
-    //     console.error(error)
-    //     setTVL("Error, please refresh.")
-    //     setL2PercentChange("Error, please refresh.")
-    //   }
-    // }
-
-    // fetchL2Beat()
+    const fetchL2Beat = async () => {
+      try {
+        const l2BeatData = await getData(
+          process.env.NODE_ENV === "production"
+            ? `${process.env.GATSBY_FUNCTIONS_PATH}/l2beat`
+            : "http://localhost:9000/l2beat"
+        )
+        // formatted TVL from L2beat API formatted
+        const TVL = new Intl.NumberFormat(intl.locale, {
+          style: "currency",
+          currency: "USD",
+          notation: "compact",
+          minimumSignificantDigits: 2,
+          maximumSignificantDigits: 3,
+        }).format(l2BeatData.data[l2BeatData.data.length - 1][1])
+        setTVL(`${TVL}`)
+        // Calculate percent change ((new value - old value) / old value) *100)
+        const percentage = (
+          ((l2BeatData.data[l2BeatData.data.length - 1][1] -
+            l2BeatData.data[l2BeatData.data.length - 31][1]) /
+            l2BeatData.data[l2BeatData.data.length - 31][1]) *
+          100
+        ).toFixed(2)
+        setL2PercentChange(percentage > 0 ? `+${percentage}%` : `{percentage}%`)
+      } catch (error) {
+        console.error(error)
+        setTVL("Error, please refresh.")
+        setL2PercentChange("Error, please refresh.")
+      }
+    }
+    fetchL2Beat()
 
     const fetchCryptoStats = async () => {
       try {
@@ -375,7 +372,7 @@ const Layer2Page = ({ data }) => {
             <StatDivider />
             <StatBox>
               {/* TODO: remove hardcoded StatPrimary once lambda functions are working*/}
-              <StatPrimary>33.01%</StatPrimary>
+              <StatPrimary>+33.01%</StatPrimary>
               {/* <StatPrimary>{percentChangeL2}</StatPrimary> */}
               <StatDescription>Layer 2 TVL change (30 days)</StatDescription>
             </StatBox>
