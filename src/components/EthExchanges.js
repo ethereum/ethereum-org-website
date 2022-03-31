@@ -212,6 +212,7 @@ const EthExchanges = () => {
           kraken
           moonpay
           mtpelerin
+          okx
           rain
           simplex
           wazirx
@@ -281,6 +282,9 @@ const EthExchanges = () => {
         ...cardListImage
       }
       mycrypto: file(relativePath: { eq: "wallets/mycrypto.png" }) {
+        ...cardListImage
+      }
+      okx: file(relativePath: { eq: "exchanges/okx.png" }) {
         ...cardListImage
       }
       rain: file(relativePath: { eq: "exchanges/rain.png" }) {
@@ -389,6 +393,12 @@ const EthExchanges = () => {
       name: "Mt Pelerin",
       url: "https://www.mtpelerin.com/",
       image: data.mtpelerin,
+      usaExceptions: [],
+    },
+    okx: {
+      name: "OKX",
+      url: "https://www.okx.com/",
+      image: data.okx,
       usaExceptions: [],
     },
     gemini: {
