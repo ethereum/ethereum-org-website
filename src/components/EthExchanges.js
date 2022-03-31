@@ -201,6 +201,7 @@ const EthExchanges = () => {
           bitfinex
           bitflyer
           bitkub
+          bitso
           bittrex
           bitvavo
           coinbase
@@ -252,6 +253,9 @@ const EthExchanges = () => {
         ...cardListImage
       }
       bitkub: file(relativePath: { eq: "exchanges/bitkub.png" }) {
+        ...cardListImage
+      }
+      bitso: file(relativePath: { eq: "exchanges/bitso.png" }) {
         ...cardListImage
       }
       bittrex: file(relativePath: { eq: "exchanges/bittrex.png" }) {
@@ -369,6 +373,12 @@ const EthExchanges = () => {
       name: "Bitkub",
       url: "https://www.bitkub.com/",
       image: data.bitkub,
+      usaExceptions: [],
+    },
+    bitso: {
+      name: "Bitso",
+      url: "https://bitso.com/",
+      image: data.bitso,
       usaExceptions: [],
     },
     bittrex: {
