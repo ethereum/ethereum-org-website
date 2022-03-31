@@ -5,41 +5,44 @@ import styled from "styled-components"
 //Styles
 const Content = styled.div`
   margin-bottom: 1.45rem;
-`
 
-const ListItem = styled.div`
-  padding: 0.25rem 0;
-  display: flex;
-`
-
-const NumberCircle = styled.div`
-  width: ${({ size }) => size};
-  height: ${({ size }) => size};
-  border-radius: 50%;
-  line-height: ${({ size }) => size};
-  text-align: center;
-  background: ${({ theme }) => theme.colors.grayBackground};
-`
-
-const Data = styled.div`
-  height: ${({ size }) => size};
-  line-height: ${({ size }) => size};
-  margin-left: 0.5rem;
+  ol {
+    list-style: none;
+    counter-reset: li-counter;
+    padding-left: 2rem;
+    margin-bottom: 0;
+  }
+  ol li {
+    margin: 0 0 1rem 0;
+    counter-increment: li-counter;
+    position: relative;
+  }
+  ol li::before {
+    content: counter(li-counter);
+    position: absolute;
+    top: -2px; /* adjusts circle + number up and down */
+    left: -3rem;
+    width: ${({ size }) => (size ? size : "35px")};
+    aspect-ratio: 1;
+    height: 2rem;
+    padding-top: 7px; /* adjusts number up and down */
+    line-height: 100%;
+    border-radius: 50%;
+    background: ${({ theme }) => theme.colors.grayBackground};
+    text-align: center;
+  }
 `
 
 // listData should be a list of strings, or HTML components
 // ex: [<p>string<p>] or ['string']
-const OrderedList = ({ listData, size = "35px", className }) => {
+const OrderedList = ({ listData, className }) => {
   return (
     <Content className={className}>
-      {listData.map((data, idx) => {
-        return (
-          <ListItem>
-            <NumberCircle size={size}>{idx + 1}</NumberCircle>
-            <Data size={size}>{data}</Data>
-          </ListItem>
-        )
-      })}
+      <ol>
+        {listData.map((data, idx) => {
+          return <li key={idx}>{data}</li>
+        })}
+      </ol>
     </Content>
   )
 }
