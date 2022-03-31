@@ -212,8 +212,6 @@ const StakingProductCard = ({
   },
 }) => {
   const Svg = getSvgFromPath(svgPath)
-
-  console.log({ minEth })
   const data = [
     {
       label: "Open source",
