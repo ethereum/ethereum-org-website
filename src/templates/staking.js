@@ -34,7 +34,6 @@ import {
   Paragraph,
   Header1,
   Header4,
-  CardGrid,
 } from "../components/SharedStyledComponents"
 import Emoji from "../components/Emoji"
 import YouTube from "../components/YouTube"
@@ -197,6 +196,15 @@ const H3 = styled.h3`
       fill: ${(props) => props.theme.colors.primary};
       opacity: 1;
     }
+  }
+`
+
+const CardGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
+  gap: 2rem;
+  h3 {
+    margin-top: 0;
   }
 `
 

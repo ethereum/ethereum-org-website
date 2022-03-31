@@ -21,16 +21,18 @@ Staking as a service (“SaaS") represents a category of staking services where 
 
 The Ethereum protocol does not natively support delegation of stake, so these services have been built out to fill this demand. If you have 32 ETH to stake, but don't feel comfortable dealing with hardware, SaaS services allow you to delegate the hard part, while you earn native block rewards.
 
-<Card title="Your own validator">
-  Deposit your own 32 ETH to activate your own set of signing keys that will participate in Ethereum consensus. Monitor your progress with dashboards to watch those ETH rewards accumulate.
-</Card>
-<Card title="Easy to start">
-  Forget about hardware specs, setup, node maintenance and upgrades.
-  SaaS providers let you to outsource the hard part by uploading your own signing credentials, allowing them to run a validator on your behalf, for a small cost.
-</Card>
-<Card title="Limit your risk">
-  In many cases users do not have to give up access to the keys that enable withdrawing or transferring staked funds. These are different than the signing keys, and can be stored separately to limit (but not eliminate) your risk as a staker.
-</Card>
+<CardGrid>
+  <Card title="Your own validator" emoji=":desktop_computer:">
+    Deposit your own 32 ETH to activate your own set of signing keys that will participate in Ethereum consensus. Monitor your progress with dashboards to watch those ETH rewards accumulate.
+  </Card>
+  <Card title="Easy to start" emoji="🏁">
+    Forget about hardware specs, setup, node maintenance and upgrades.
+    SaaS providers let you to outsource the hard part by uploading your own signing credentials, allowing them to run a validator on your behalf, for a small cost.
+  </Card>
+  <Card title="Limit your risk" emoji=":shield:">
+    In many cases users do not have to give up access to the keys that enable withdrawing or transferring staked funds. These are different than the signing keys, and can be stored separately to limit (but not eliminate) your risk as a staker.
+  </Card>
+</CardGrid>
 
 <StakingComparison page="saas" />
 
