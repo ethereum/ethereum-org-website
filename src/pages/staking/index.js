@@ -115,8 +115,8 @@ const ContentContainer = styled.article`
       color: ${(props) => props.theme.colors.text200};
     }
   }
-  h2:first-of-type,
-  div:first-of-type {
+  & > h2:first-of-type,
+  & > div:first-child {
     margin-top: 0;
     padding-top: 0;
   }
