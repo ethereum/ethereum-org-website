@@ -228,7 +228,7 @@ const StakingPage = ({ data }) => {
 
   const heroContent = {
     title: "How to stake your ETH",
-    header: "Stake your ETH to earn rewards while securing Ethereum",
+    header: "Earn rewards while securing Ethereum",
     subtitle:
       "Staking is a public good for the Ethereum ecosystem. Any user with any amount of ETH can help secure the network and earn rewards in the process.",
     image: getImage(data.rhino),
