@@ -23,13 +23,9 @@ import {
 import StakingHomeTableOfContents from "../../components/StakingHomeTableOfContents"
 import FeedbackCard from "../../components/FeedbackCard"
 import ExpandableCard from "../../components/ExpandableCard"
+import StakingCommunityCallout from "../../components/StakingCommunityCallout"
 
 import { translateMessageId } from "../../utils/translations"
-
-const StyledCallout = styled(CalloutBanner)`
-  margin-left: 0rem;
-  margin-right: 0rem;
-`
 
 const Page = styled.div`
   display: flex;
@@ -548,25 +544,7 @@ const StakingPage = ({ data }) => {
             </ComparisonGrid>
           </Content>
           <Divider />
-          <StyledCallout
-            image={getImage(data.community)}
-            alt={translateMessageId("page-staking-image-alt", intl)}
-            titleKey={"page-staking-join-community"}
-            descriptionKey={"page-staking-join-community-desc"}
-            id={tocItems.joinTheCommunity.id}
-          >
-            <ButtonContaier>
-              <StyledButtonLink to="https://discord.io/ethstaker">
-                Join Discord
-              </StyledButtonLink>
-              <StyledButtonLink to="https://reddit.com/r/ethstaker">
-                Join Reddit
-              </StyledButtonLink>
-              <StyledButtonLink to="https://ethstaker.cc">
-                Visit Website
-              </StyledButtonLink>
-            </ButtonContaier>
-          </StyledCallout>
+          <StakingCommunityCallout id={tocItems.joinTheCommunity.id} />
           <Content>
             {/* TODO: FAQ completion */}
             <h2 id={tocItems.faq.id}>{tocItems.faq.title}</h2>
@@ -627,16 +605,6 @@ export default StakingPage
 
 export const query = graphql`
   {
-    community: file(relativePath: { eq: "enterprise-eth.png" }) {
-      childImageSharp {
-        gatsbyImageData(
-          width: 500
-          layout: CONSTRAINED
-          placeholder: BLURRED
-          quality: 100
-        )
-      }
-    }
     rhino: file(relativePath: { eq: "upgrades/upgrade_rhino.png" }) {
       childImageSharp {
         gatsbyImageData(

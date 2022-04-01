@@ -44,6 +44,7 @@ import StakingProductsCardGrid from "../components/StakingProductsCardGrid"
 import StakingComparison from "../components/StakingComparison"
 import HowSoloStakingWorks from "../components/HowSoloStakingWorks"
 import StakingConsiderations from "../components/StakingConsiderations"
+import StakingCommunityCallout from "../components/StakingCommunityCallout"
 
 import { isLangRightToLeft } from "../utils/translations"
 
@@ -409,6 +410,7 @@ const StakingPage = ({ data, pageContext, location }) => {
           <MDXProvider components={components}>
             <MDXRenderer>{mdx.body}</MDXRenderer>
           </MDXProvider>
+          <StakingCommunityCallout />
           <FeedbackCard prompt="Was this page helpful?" />
         </ContentContainer>
         <MobileButton>
