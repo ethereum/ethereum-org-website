@@ -65,3 +65,8 @@ Have a suggestion for a staking tool we missed? Check out our [product listing p
 <ExpandableCard title="When can I withdraw?">
 Lorem ipsum...
 </ExpandableCard>
+
+## Further reading {#further-reading}
+
+- [Staking with Rocket Pool - Staking Overview](https://docs.rocketpool.net/guides/staking/overview.html) - _RocketPool docs_
+- [Staking Ethereum With Lido](https://help.lido.fi/en/collections/2947324-staking-ethereum-with-lido) - _Lido help docs_

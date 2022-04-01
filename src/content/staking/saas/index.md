@@ -70,3 +70,7 @@ Have a suggestion for a staking-as-a-service provider we missed? Check out our [
 <ExpandableCard title="When can I withdraw?">
   Lorem ipsum...
 </ExpandableCard>
+
+## Further reading {#further-reading}
+
+- [Evaluating Staking Services](https://www.attestant.io/posts/evaluating-staking-services/) - _Vitalik_

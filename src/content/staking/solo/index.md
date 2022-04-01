@@ -160,3 +160,10 @@ TODO: Answer about cloud servers being detrimental to centralization of the netw
 <ExpandableCard title="Do I need to do anything before The Merge?">
 Lorem ipsum...
 </ExpandableCard>
+
+## Further reading {#further-reading}
+
+- [Step by Step: How to join the Ethereum 2.0 Testnet](https://kb.beaconcha.in/guides/tutorial-eth2-multiclient)
+- [Helping Client Diversity](https://www.attestant.io/posts/helping-client-diversity/) - _Jim McDonald_
+- [Client diversity on Ethereum's consensus layer](https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA) - _jmcook.eth_
+- [How To: Shop For Ethereum Validator Hardware](https://www.youtube.com/watch?v=C2wwu1IlhDc) - _EthStaker_
