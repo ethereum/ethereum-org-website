@@ -16,7 +16,7 @@ summaryPoints:
 
 ## What is solo staking? {#what-is-solo-staking}
 
-Solo staking is the act of running an Ethereum node connected to the internet and depositing 32 ETH to activate a [validator](#what-is-a-validator), giving you the ability to participate directly in network consensus.
+Solo staking is the act of running an Ethereum node connected to the internet and depositing 32 ETH to activate a [validator](#faq), giving you the ability to participate directly in network consensus.
 
 An Ethereum node consists of both an execution layer (EL) client, as well as a consensus layer (CL) client. These clients are software that work together, along with a valid set of signing keys, to verify transactions and blocks, attest to the correct head of the chain, aggregate attestations, and propose blocks.
 
@@ -41,8 +41,6 @@ Solo staking comes with more responsibility, but provides you with maximum contr
 </CardGrid>
 
 ## Considerations before staking solo {#considerations-before-staking-solo}
-
-<!-- TODO: Add slashing link in card below -->
 
 As much as we wish that solo staking was accessible and risk free to everyone, this is not reality. There are some practical and serious considerations to keep in mind before choosing to solo stake your ETH.
 
@@ -72,7 +70,7 @@ As much as we wish that solo staking was accessible and risk free to everyone, t
   <ExpandableCard title="Slashing risk">
     Different from inactivity penalties for being offline, <em>slashing</em> is a much more serious penalty reserved for malicious offenses. By running a minority client with your keys loaded on only one machine at time, your risk of being slashed is minimized. That being said, all stakers must be aware of the risks of slashing.
     
-    <a href="">More on slashing</a>
+    <a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/">More on slashing and validator lifecycle</a>
   </ExpandableCard>
 </InfoGrid>
 
@@ -167,3 +165,4 @@ Lorem ipsum...
 - [Helping Client Diversity](https://www.attestant.io/posts/helping-client-diversity/) - _Jim McDonald_
 - [Client diversity on Ethereum's consensus layer](https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA) - _jmcook.eth_
 - [How To: Shop For Ethereum Validator Hardware](https://www.youtube.com/watch?v=C2wwu1IlhDc) - _EthStaker_
+- [Eth2 Slashing Prevention Tips](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50) - _Raul Jordan_
