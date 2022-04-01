@@ -109,9 +109,9 @@ const data = {
       title: "Audited",
       description:
         "Essential code has undergone formal auditing with results published and available publicly",
-      valid: "",
+      valid: "Audited",
       caution: "",
-      warning: "",
+      warning: "None",
       Svg: Audited,
     },
     {
@@ -136,18 +136,18 @@ const data = {
       title: "Trustless",
       description:
         "Validator keys are not entrusted to any other human at any time in the validator lifecycle.<br/>Any smart contracts involved are free of back doors, without reliance on privileged permissions for execution.",
-      valid: "",
+      valid: "Trustless",
       caution: "",
-      warning: "",
+      warning: "Trusted",
       Svg: Trustless,
     },
     {
       title: "Permissionless",
       description:
         "User does not require any special permission to operate a validator using the software or service",
-      valid: "",
+      valid: "No permission",
       caution: "",
-      warning: "",
+      warning: "Permission required",
       Svg: Permissionless,
     },
     {
@@ -163,18 +163,18 @@ const data = {
       title: "Self custody",
       description:
         "User maintains custody of any validator credentials, including signing and withdrawal keys",
-      valid: "",
+      valid: "Self custody",
       caution: "",
-      warning: "",
+      warning: "Third-party custodian",
       Svg: SelfCustody,
     },
     {
       title: "Economical",
       description:
         "Users can operate a validator by staking less than 32 ETH, utilizing pooled funds from others",
-      valid: "",
+      valid: "< 32 ETH",
       caution: "",
-      warning: "",
+      warning: "32 ETH",
       Svg: Economical,
     },
   ],
@@ -192,9 +192,9 @@ const data = {
       title: "Audited",
       description:
         "Essential code has undergone formal auditing with results published and available publicly",
-      valid: "",
+      valid: "Audited",
       caution: "",
-      warning: "",
+      warning: "None",
       Svg: Audited,
     },
     {
@@ -219,9 +219,9 @@ const data = {
       title: "Permissionless",
       description:
         "User does not require any special permission, account sign up or KYC to participate with the service",
-      valid: "",
+      valid: "Anyone can join",
       caution: "",
-      warning: "",
+      warning: "Permission required",
       Svg: Permissionless,
     },
     {
@@ -237,9 +237,9 @@ const data = {
       title: "Self custody",
       description:
         "User maintains custody of any validator credentials, including signing and withdrawal keys",
-      valid: "",
+      valid: "Self custody",
       caution: "",
-      warning: "",
+      warning: "Third-party custodian",
       Svg: SelfCustody,
     },
   ],
@@ -257,9 +257,9 @@ const data = {
       title: "Audited",
       description:
         "Essential code has undergone formal auditing with results published and available publicly",
-      valid: "",
+      valid: "Audited",
       caution: "",
-      warning: "",
+      warning: "None",
       Svg: Audited,
     },
     {
@@ -284,18 +284,18 @@ const data = {
       title: "Trustless",
       description:
         "Service does not require trusting any humans to custody your keys or distribute rewards",
-      valid: "",
+      valid: "Trustless",
       caution: "",
-      warning: "",
+      warning: "Trusted",
       Svg: Trustless,
     },
     {
       title: "Permissionless nodes",
       description:
         "Service allows anyone to join as a node operator for the pool, without permission",
-      valid: "",
+      valid: "Anyone can join",
       caution: "",
-      warning: "",
+      warning: "Permission required",
       Svg: Permissionless,
     },
     {
@@ -311,9 +311,9 @@ const data = {
       title: "Liquidity token",
       description:
         "Offers tradable liquidity token representing your staked ETH, held in your own wallet",
-      valid: "",
+      valid: "Liquidity token(s)",
       caution: "",
-      warning: "",
+      warning: "No liquidity token",
       Svg: LiquidityToken,
     },
   ],
