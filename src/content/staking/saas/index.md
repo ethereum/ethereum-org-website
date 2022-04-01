@@ -9,7 +9,7 @@ image: ../../../assets/staking/leslie-saas.png
 alt: Leslie the rhino floating in the clouds.
 sidebarDepth: 2
 summaryPoints:
-  - Staking-as-a-service involves third-party node operators that will handle the operation of your validator client.
+  - Third-party node operators handle the operation of your validator client.
   - SaaS services are a great option for anyone with 32 ETH who doesn't feel comfortable dealing with the technical complexity of running a node.
 ---
 
