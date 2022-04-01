@@ -10,7 +10,8 @@ alt: Leslie the rhino floating in the clouds.
 sidebarDepth: 2
 summaryPoints:
   - Third-party node operators handle the operation of your validator client.
-  - SaaS services are a great option for anyone with 32 ETH who doesn't feel comfortable dealing with the technical complexity of running a node.
+  - Great option for anyone with 32 ETH who doesn't feel comfortable dealing with the technical complexity of running a node.
+  - Reduce trust, and maintain custody of your withdrawal keys.
 ---
 
 ## What is staking as a service? {#what-is-staking-as-a-service}

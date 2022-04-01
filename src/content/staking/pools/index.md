@@ -9,7 +9,9 @@ image: ../../../assets/staking/leslie-pool.png
 alt: Leslie the rhino swimming in the pool.
 sidebarDepth: 2
 summaryPoints:
-  - Staking pools allow users to participate in the validating process of Ethereum and earn rewards with less than the required 32 ETH by joining forces with others.
+  - Stake and earn rewards with any amount of ETH by joining forces with others.
+  - Skip the hard part and entrust validator operation to a third-party.
+  - Hold liquidity tokens in your own wallet.
 ---
 
 ## What are staking pools? {#what-are-staking-pools}
@@ -50,7 +52,7 @@ Attribute indicators are used below to signal notable strengths or weaknesses a 
 
 There are a variety of options available to help you with your setup. Use the above indicators to help guide you through the tools below.
 
-<Emoji text="⚠️" mr="1rem" /> Please note the importance of choosing a service that take <a href="/client-diversity">client diversity</a> seriously, as it improves the security of the network, and limits your risk. Services that have evidence of limiting majority client use are marked as "diverse clients."
+<Emoji text="⚠️" mr="1rem" /> Please note the importance of choosing a service that takes <a href="/client-diversity">client diversity</a> seriously, as it improves the security of the network, and limits your risk. Services that have evidence of limiting majority client use are marked as "diverse clients."
 
 <StakingProductsCardGrid category="pools" />
 

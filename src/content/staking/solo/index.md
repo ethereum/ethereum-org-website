@@ -9,9 +9,9 @@ image: ../../../assets/staking/leslie-solo.png
 alt: Leslie the rhino on her own computer chip.
 sidebarDepth: 2
 summaryPoints:
-  - Solo stakers running home hardware provide the most possible benefit to the health and decentralization of the Ethereum network.
-  - Staking at home gives you complete control over the security of your funds.
-  - Stakers receive rewards directly from the protocol for keeping their validator properly functioning and online.
+  - Receive maximum rewards directly from the protocol for keeping your validator properly functioning and online.
+  - Run home hardware and personally add to the security and decentralization of the Ethereum network.
+  - Remove trust, and never give up control of the keys to your funds.
 ---
 
 ## What is solo staking? {#what-is-solo-staking}
