@@ -58,6 +58,10 @@ There are a variety of options available to help you with your setup. Use the ab
 
 Have a suggestion for a staking tool we missed? Check out our [product listing policy](/contributing/adding-staking-product) to see if it would be a good fit, and to submit it for review.
 
-## FAQs of pooled staking {#faqs-of-pooled-staking}
+## FAQ {#faq}
 
 <!-- TODO: Add pool FAQs -->
+
+<ExpandableCard title="When can I withdraw?">
+Lorem ipsum...
+</ExpandableCard>

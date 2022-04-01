@@ -59,8 +59,14 @@ Below are some available SaaS provider. Use the above indicators to help guide y
 
 Have a suggestion for a staking-as-a-service provider we missed? Check out our [product listing policy](/contributing/adding-staking-product) to see if it would be a good fit, and to submit it for review.
 
-## FAQs of staking services {#faqs}
+## FAQ {#faq}
 
-- Who holds the keys?
-- When can I withdraw?
-<!-- TODO: Fill out FAQ -->
+<!-- TODO: Complete FAQ -->
+
+<ExpandableCard title="Who holds my keys?">
+  Lorem ipsum...
+</ExpandableCard>
+
+<ExpandableCard title="When can I withdraw?">
+  Lorem ipsum...
+</ExpandableCard>
