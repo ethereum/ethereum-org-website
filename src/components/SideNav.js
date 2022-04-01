@@ -142,12 +142,16 @@ const NavLink = ({ item, path }) => {
 // of the given parent. Currently all `path` items default to open
 // and they only collapse when clicked on.
 // e.g. solution: https://github.com/hasura/gatsby-gitbook-starter/blob/5c165af40e48fc55eb06b45b95c84eb64b17ed32/src/components/sidebar/tree.js
-const SideNav = ({ path }) => (
-  <Nav aria-label={translateMessageId("nav-developers-docs", useIntl())}>
-    {docLinks.map((item, idx) => (
-      <NavLink item={item} path={path} key={idx} />
-    ))}
-  </Nav>
-)
+const SideNav = ({ path }) => {
+  const intl = useIntl()
+
+  return (
+    <Nav aria-label={translateMessageId("nav-developers-docs", intl)}>
+      {docLinks.map((item, idx) => (
+        <NavLink item={item} path={path} key={idx} />
+      ))}
+    </Nav>
+  )
+}
 
 export default SideNav
