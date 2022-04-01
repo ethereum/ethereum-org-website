@@ -356,7 +356,7 @@ const StakingHierarchy = () => {
         </Ether>
         <Line />
         <Header>
-          <h2>Centralized exchanges & staking providers</h2>
+          <h2>Centralized exchanges</h2>
           <Pills className="subtext">
             <p>
               <em>Least impactful</em>
@@ -374,10 +374,10 @@ const StakingHierarchy = () => {
             involve individuals taking control instead of centralized agencies.
           </p>
           <p>
-            If you are not yet comfortable holding ETH in your own wallet,
-            options such as centralized exchanges and other custodial providers
-            provide staking services and can be a fallback to allow you to earn
-            some yield on your ETH holdings, with minimal oversight or effort.
+            If you are not yet comfortable holding ETH in your own wallet, many
+            centralized exchanges provide staking services and can be a fallback
+            to allow you to earn some yield on your ETH holdings, with minimal
+            oversight or effort.
           </p>
           <p>
             The trade-off here is that centralized providers consolidate large
