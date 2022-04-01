@@ -49,7 +49,15 @@ const Label = styled.span`
   margin-left: 0.5rem;
 `
 
-const Checkbox = ({ callback, checked, children, className, size = 2 }) => {
+const Checkbox = ({
+  callback,
+  checked,
+  children,
+  ariaContent,
+  className,
+  size = 2,
+  ...rest
+}) => {
   const handleClick = () => {
     if (callback) {
       callback()
@@ -57,7 +65,7 @@ const Checkbox = ({ callback, checked, children, className, size = 2 }) => {
   }
   return (
     <CheckboxContainer className={className} onClick={handleClick}>
-      <HiddenCheckbox checked={checked} readOnly />
+      <HiddenCheckbox checked={checked} readOnly {...rest} />
       <StyledCheckbox checked={checked} className="styled-checkbox" size={size}>
         <Icon checked={checked} viewBox="0 0 24 24">
           <polyline points="20 6 9 17 4 12" />

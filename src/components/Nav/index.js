@@ -169,8 +169,20 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
           to: "/dapps/",
         },
         {
-          text: "run-a-node",
-          to: "/run-a-node/",
+          text: "layer-2",
+          to: "/layer-2/",
+        },
+        {
+          text: "nft-page",
+          to: "/nft/",
+        },
+        {
+          text: "defi-page",
+          to: "/defi/",
+        },
+        {
+          text: "dao-page",
+          to: "/dao/",
         },
         {
           text: "page-stablecoins-title",
@@ -179,6 +191,10 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
         {
           text: "page-stake-eth",
           to: "/staking/",
+        },
+        {
+          text: "run-a-node",
+          to: "/run-a-node/",
         },
       ],
     },
@@ -193,18 +209,6 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
         {
           text: "what-is-ether",
           to: "/eth/",
-        },
-        {
-          text: "defi-page",
-          to: "/defi/",
-        },
-        {
-          text: "dao-page",
-          to: "/dao/",
-        },
-        {
-          text: "nft-page",
-          to: "/nft/",
         },
         {
           text: "smart-contracts",

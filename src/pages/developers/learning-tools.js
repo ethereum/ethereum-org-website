@@ -135,15 +135,6 @@ const LearningToolsPage = ({ data }) => {
       subjects: ["Solidity"],
     },
     {
-      name: "Vyper.fun",
-      description: "page-learning-tools-vyperfun-description",
-      url: "https://vyper.fun",
-      image: getImage(data.vyperfun),
-      alt: "page-learning-tools-vyperfun-logo-alt",
-      background: "#ffffff",
-      subjects: ["Vyper"],
-    },
-    {
       name: "Capture The Ether",
       description: "page-learning-tools-capture-the-ether-description",
       url: "https://capturetheether.com/",
@@ -365,9 +356,6 @@ export const query = graphql`
       ...learningToolImage
     }
     oz: file(relativePath: { eq: "dev-tools/oz.png" }) {
-      ...learningToolImage
-    }
-    vyperfun: file(relativePath: { eq: "dev-tools/vyperfun.png" }) {
       ...learningToolImage
     }
     questbook: file(relativePath: { eq: "dev-tools/questbook.png" }) {
