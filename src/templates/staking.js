@@ -204,7 +204,16 @@ const H3 = styled.h3`
 
 const CardGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
+  grid-template-columns: repeat(3, minmax(min(100%, 280px), 1fr));
+  @media (max-width: ${(props) => props.theme.breakpoints.xl}) {
+    grid-template-columns: minmax(min(100%, 280px), 1fr);
+  }
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    grid-template-columns: repeat(3, minmax(min(100%, 280px), 1fr));
+  }
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    grid-template-columns: minmax(min(100%, 280px), 1fr);
+  }
   gap: 2rem;
   h3 {
     margin-top: 0;
@@ -262,6 +271,8 @@ const HeroContainer = styled.div`
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     flex-direction: column;
     max-height: 100%;
+    padding-left: 0;
+    padding-right: 0;
   }
 `
 
@@ -333,6 +344,7 @@ const TitleCard = styled.div`
     /* box-shadow: none; */
     /* margin-top: 0; */
   }
+  width: 100%;
 `
 
 // Note: you must pass components to MDXProvider in order to render them in markdown files
