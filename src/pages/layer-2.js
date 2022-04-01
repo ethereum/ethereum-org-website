@@ -357,9 +357,7 @@ const Layer2Page = ({ data }) => {
         <PaddedContent>
           <StatsContainer>
             <StatBox>
-              {/* TODO: remove hardcoded StatPrimary once lambda functions are working*/}
-              <StatPrimary>$7.27B</StatPrimary>
-              {/* <StatPrimary>{tvl}</StatPrimary>  */}
+              <StatPrimary>{tvl}</StatPrimary>
               <StatDescription>TVL locked in layer 2 (USD)</StatDescription>
             </StatBox>
             <StatDivider />
@@ -371,9 +369,7 @@ const Layer2Page = ({ data }) => {
             </StatBox>
             <StatDivider />
             <StatBox>
-              {/* TODO: remove hardcoded StatPrimary once lambda functions are working*/}
-              <StatPrimary>+33.01%</StatPrimary>
-              {/* <StatPrimary>{percentChangeL2}</StatPrimary> */}
+              <StatPrimary>{percentChangeL2}</StatPrimary>
               <StatDescription>Layer 2 TVL change (30 days)</StatDescription>
             </StatBox>
           </StatsContainer>
