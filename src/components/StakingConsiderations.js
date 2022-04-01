@@ -76,9 +76,11 @@ const Content = styled.div`
 
 const IndicatorRow = styled.div`
   display: flex;
-  width: 100%;
-  gap: 1.5rem;
-  justify-content: space-around;
+  gap: 2rem;
+  justify-content: center;
+  @media (max-width: ${({ theme }) => theme.breakpoints.s}) {
+    gap: 1rem;
+  }
 `
 
 const Indicator = styled.div`
@@ -86,6 +88,10 @@ const Indicator = styled.div`
   flex: 1;
   flex-direction: column;
   align-items: center;
+  width: 10ch;
+  @media (max-width: ${({ theme }) => theme.breakpoints.s}) {
+    width: 7ch;
+  }
   gap: 0.5rem;
   p {
     font-size: 0.75rem;
