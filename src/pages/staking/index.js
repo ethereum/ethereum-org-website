@@ -22,6 +22,7 @@ import {
 } from "../../components/SharedStyledComponents"
 import StakingHomeTableOfContents from "../../components/StakingHomeTableOfContents"
 import FeedbackCard from "../../components/FeedbackCard"
+import ExpandableCard from "../../components/ExpandableCard"
 
 import { translateMessageId } from "../../utils/translations"
 
@@ -198,10 +199,6 @@ const StyledCard = styled(Card)`
   }
 `
 
-const StyledFeedbackCard = styled(FeedbackCard)`
-  width: 100%;
-`
-
 const benefits = [
   {
     title: "More sustainable",
@@ -283,7 +280,11 @@ const StakingPage = ({ data }) => {
     },
     faq: {
       id: "faq",
-      title: "FAQs of staking",
+      title: "FAQ",
+    },
+    further: {
+      id: "further",
+      title: "Further reading",
     },
   }
 
@@ -567,15 +568,55 @@ const StakingPage = ({ data }) => {
             </ButtonContaier>
           </StyledCallout>
           <Content>
-            {/* TODO: Select FAQs, and answer them */}
+            {/* TODO: FAQ completion */}
             <h2 id={tocItems.faq.id}>{tocItems.faq.title}</h2>
+            <ExpandableCard title="How do I withdraw my stake?">
+              <p>Lorem ipsum...</p>
+            </ExpandableCard>
+            <ExpandableCard title="How are the staking rewards calculated?">
+              <p>Lorem ipsum...</p>
+            </ExpandableCard>
+          </Content>
+          <Content>
+            <h2 id={tocItems.further.id}>{tocItems.further.title}</h2>
             <ul>
-              <li>How do I withdraw my stake?</li>
-              <li>How are the staking rewards calculated?</li>
-              <li>More on staking economics</li>
+              <li>
+                <Link to="https://vitalik.ca/general/2020/11/06/pos2020.html">
+                  Why Proof of Stake (Nov 2020)
+                </Link>{" "}
+                <i>- Vitalik Buterin </i>
+              </li>
+              <li>
+                <Link to="https://vitalik.ca/general/2017/12/31/pos_faq.html">
+                  Proof of Stake FAQ (Dec 2017)
+                </Link>{" "}
+                <i>- Vitalik Buterin</i>
+              </li>
+              <li>
+                <Link to="https://hackmd.io/@benjaminion/eth2_news/https%3A%2F%2Fhackmd.io%2F%40benjaminion%2Fwnie2_220225">
+                  What’s New in Eth2 (Feb 2022)
+                </Link>{" "}
+                <i>- Ben Edgington</i>
+              </li>
+              <li>
+                <Link to="https://blog.ethereum.org/2022/01/31/finalized-no-33/">
+                  Finalized no. 33, the Ethereum consensus-layer (Jan 2022)
+                </Link>{" "}
+                <i>- Danny Ryan</i>
+              </li>
+              <li>
+                <Link to="https://www.attestant.io/posts/page/4/">
+                  Attestant posts on proof-of-stake
+                </Link>
+              </li>
+              <li>
+                <Link to="/upgrades/merge/">More on The Merge</Link>
+              </li>
             </ul>
           </Content>
-          <StyledFeedbackCard prompt="Was this page helpful?" />
+          <Content>
+            <FeedbackCard />
+          </Content>
         </ContentContainer>
       </Page>
     </PageContainer>
