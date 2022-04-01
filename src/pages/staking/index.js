@@ -314,6 +314,9 @@ const StakingPage = ({ data }) => {
               participate in block proposals on the network. Anyone who holds
               even a small amount of ETH can consider staking.
             </p>
+            <p>
+              <Link to="/get-eth/">Learn how to get ETH</Link>
+            </p>
           </Content>
           <Content>
             <h2 id={tocItems.whyStakeYourEth.id}>
