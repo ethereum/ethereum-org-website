@@ -127,7 +127,7 @@ Have a suggestion for a staking tool we missed? Check out our [product listing p
 These are a few of the most common questions about staking that are worth knowing about.
 
 <ExpandableCard title="What is a validator?">
-A _validator_ is a virtual entity that lives on the Beacon Chain, represented by a balance, public key, and other properties. A _validator client_ is the software that acts on behalf of the validator by holding and using its private key. A single validator client can hold many key pairs, controlling many validators.
+A <em>validator</em> is a virtual entity that lives on the Beacon Chain, represented by a balance, public key, and other properties. A <em>validator client</em> is the software that acts on behalf of the validator by holding and using its private key. A single validator client can hold many key pairs, controlling many validators.
 
 Each key-pair associated with a validator requires 32 ETH to be activated. More ETH deposited to a single set of keys does not increase rewards potential, as each validator is limited to an <a href="https://www.attestant.io/posts/understanding-validator-effective-balance/">effective balance</a> of 32 ETH. This means that staking is done in 32 ETH increments, each with it's own set of keys and balance.
 
@@ -137,13 +137,12 @@ If solo staking seems too demanding you you, consider using a <a href="/staking/
 </ExpandableCard>
 
 <ExpandableCard title="Is staking already live?">
-<!-- TODO: Answer to try and clarify a synopsis of the Beacon Chain and The Merge. -->
-Lorem ipsum...
+TODO: Answer to try and clarify a synopsis of the Beacon Chain and The Merge.
+
 </ExpandableCard>
 
 <ExpandableCard title="I'm running the Beacon Chain, is that enough?">
-<!-- TODO: Answer about how you need to run both clients as of The Merge... content on Figma? -->
-Lorem ipsum...
+TODO: Answer about how you need to run both clients as of The Merge... content on Figma?
 </ExpandableCard>
 
 <ExpandableCard title="Which client is best?">
@@ -155,11 +154,9 @@ Since all production clients provide the same basic functionality, it is actuall
 </ExpandableCard>
 
 <ExpandableCard title="Can I just use a VPS (virtual private service)?">
-<!-- TODO: Answer about cloud servers being detrimental to centralization of the network. If AWS or DigitalOcean go down, you're penalties will be much larger, and you'll be at an increased risk of slashing. ie: >1/3 the network uses AWS and it goes down or is targetted by regulation... The network would no longer finalize, and you, by using AWS, could be part of the validators set that would be subject to quadratic leaking.-->
-Lorem ipsum...
+TODO: Answer about cloud servers being detrimental to centralization of the network. If AWS or DigitalOcean go down, you're penalties will be much larger, and you'll be at an increased risk of slashing. ie: >1/3 the network uses AWS and it goes down or is targetted by regulation... The network would no longer finalize, and you, by using AWS, could be part of the validators set that would be subject to quadratic leaking.
 </ExpandableCard>
 
 <ExpandableCard title="Do I need to do anything before The Merge?">
-<!-- TODO: Answer -->
 Lorem ipsum...
 </ExpandableCard>
