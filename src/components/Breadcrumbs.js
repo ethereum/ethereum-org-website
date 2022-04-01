@@ -5,7 +5,7 @@ import { useIntl } from "gatsby-plugin-intl"
 import Link from "./Link"
 import { translateMessageId, supportedLanguages } from "../utils/translations"
 
-const Crumb = styled.h4`
+const Crumb = styled.a`
   margin: 0;
   font-size: 14px;
   line-height: 140%;
@@ -79,21 +79,25 @@ const Breadcrumbs = ({ slug, startDepth = 0, className }) => {
   })
 
   return (
-    <List className={className} dir={"auto"}>
-      {crumbs.map((crumb, idx) => (
-        <ListItem key={idx}>
-          <Crumb>
-            <CrumbLink
-              to={crumb.fullPath}
-              isPartiallyActive={slug === crumb.fullPath}
-            >
-              {crumb.text}
-            </CrumbLink>
-            {idx < crumbs.length - 1 && <Slash>/</Slash>}
-          </Crumb>
-        </ListItem>
-      ))}
-    </List>
+    <nav aria-label="Breadcrumb">
+      <List className={className} dir={"auto"}>
+        {crumbs.map((crumb, idx) => (
+          <ol>
+            <ListItem key={idx}>
+              <Crumb>
+                <CrumbLink
+                  to={crumb.fullPath}
+                  isPartiallyActive={slug === crumb.fullPath}
+                >
+                  {crumb.text}
+                </CrumbLink>
+                {idx < crumbs.length - 1 && <Slash>/</Slash>}
+              </Crumb>
+            </ListItem>
+          </ol>
+        ))}
+      </List>
+    </nav>
   )
 }
 
