@@ -114,3 +114,6 @@ If you are bilingual and want to help us reach more people, you can also get inv
 
 - [Japan Virtual and Crypto assets Exchange Association](https://jvcea.or.jp/)
 - [Japan Cryptoasset Business Association](https://cryptocurrency-association.org/)
+- [ブロックチェーン開発の概要 - Learn | Microsoft Docs](https://docs.microsoft.com/ja-jp/learn/paths/ethereum-blockchain-development/) - This learning path introduces you to blockchain and development on the Ethereum platform
+- [マスタリング・イーサリアム――スマートコントラクトと DApp の構築](https://www.oreilly.co.jp/books/9784873118963/) - Mastering Ethereum in Japanese
+- [Solidity と Ethereum による実践スマートコントラクト開発――Truffle Suite を用いた開発の基礎からデプロイまで](https://www.oreilly.co.jp/books/9784873119342/) - Hands-On Smart Contract Development with Solidity and Ethereum in Japanese
