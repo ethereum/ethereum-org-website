@@ -21,6 +21,7 @@ import {
   Divider,
 } from "../../components/SharedStyledComponents"
 import StakingHomeTableOfContents from "../../components/StakingHomeTableOfContents"
+import FeedbackCard from "../../components/FeedbackCard"
 
 import { translateMessageId } from "../../utils/translations"
 
@@ -195,6 +196,10 @@ const StyledCard = styled(Card)`
     font-weight: 700;
     margin: 0 0 1rem;
   }
+`
+
+const StyledFeedbackCard = styled(FeedbackCard)`
+  width: 100%;
 `
 
 const benefits = [
@@ -567,6 +572,7 @@ const StakingPage = ({ data }) => {
               <li>More on staking economics</li>
             </ul>
           </Content>
+          <StyledFeedbackCard prompt="Was this page helpful?" />
         </ContentContainer>
       </Page>
     </PageContainer>
