@@ -5890,7 +5890,8 @@
       "contributions": [
         "bug",
         "doc",
-        "code"
+        "code",
+        "a11y"
       ]
     },
     {
@@ -6375,7 +6376,8 @@
       "profile": "https://github.com/HursitTarcan",
       "contributions": [
         "bug",
-        "code"
+        "code",
+        "a11y"
       ]
     },
     {
@@ -7022,6 +7024,15 @@
       "profile": "http://idimweb.com",
       "contributions": [
         "doc"
+      ]
+    },
+    {
+      "login": "alantoa",
+      "name": "Alan Toa",
+      "avatar_url": "https://avatars.githubusercontent.com/u/37520667?v=4",
+      "profile": "http://alantoa.com",
+      "contributions": [
+        "tool"
       ]
     }
   ],

@@ -241,7 +241,7 @@ const Layer2Page = ({ data }) => {
           currency: "USD",
           notation: "compact",
           minimumSignificantDigits: 2,
-          maximumSignificantDigits: 2,
+          maximumSignificantDigits: 3,
         }).format(feeAverage)
         setAverageFee(`${intlFeeAverage}`)
       } catch (error) {
@@ -392,9 +392,7 @@ const Layer2Page = ({ data }) => {
         <PaddedContent>
           <StatsContainer>
             <StatBox>
-              {/* TODO: remove hardcoded StatPrimary once lambda functions are working*/}
-              <StatPrimary>$7.27B</StatPrimary>
-              {/* <StatPrimary>{tvl}</StatPrimary>  */}
+              <StatPrimary>{tvl}</StatPrimary>
               <StatSpan>
                 <StatDescription>TVL locked in layer 2 (USD)</StatDescription>
                 <Tooltip
@@ -427,9 +425,7 @@ const Layer2Page = ({ data }) => {
             </StatBox>
             <StatDivider />
             <StatBox>
-              {/* TODO: remove hardcoded StatPrimary once lambda functions are working*/}
-              <StatPrimary>+33.01%</StatPrimary>
-              {/* <StatPrimary>{percentChangeL2}</StatPrimary> */}
+              <StatPrimary>{percentChangeL2}</StatPrimary>
               <StatSpan>
                 <StatDescription>Layer 2 TVL change (30 days)</StatDescription>
                 <Tooltip
