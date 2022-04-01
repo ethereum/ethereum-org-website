@@ -9,9 +9,9 @@ image: ../../../assets/staking/leslie-saas.png
 alt: Leslie the rhino floating in the clouds.
 sidebarDepth: 2
 summaryPoints:
-  - Third-party node operators handle the operation of your validator client.
-  - Great option for anyone with 32 ETH who doesn't feel comfortable dealing with the technical complexity of running a node.
-  - Reduce trust, and maintain custody of your withdrawal keys.
+  - Third-party node operators handle the operation of your validator client
+  - Great option for anyone with 32 ETH who doesn't feel comfortable dealing with the technical complexity of running a node
+  - Reduce trust, and maintain custody of your withdrawal keys
 ---
 
 ## What is staking as a service? {#what-is-staking-as-a-service}

@@ -9,9 +9,9 @@ image: ../../../assets/staking/leslie-pool.png
 alt: Leslie the rhino swimming in the pool.
 sidebarDepth: 2
 summaryPoints:
-  - Stake and earn rewards with any amount of ETH by joining forces with others.
-  - Skip the hard part and entrust validator operation to a third-party.
-  - Hold liquidity tokens in your own wallet.
+  - Stake and earn rewards with any amount of ETH by joining forces with others
+  - Skip the hard part and entrust validator operation to a third-party
+  - Hold liquidity tokens in your own wallet
 ---
 
 ## What are staking pools? {#what-are-staking-pools}

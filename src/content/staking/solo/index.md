@@ -9,9 +9,9 @@ image: ../../../assets/staking/leslie-solo.png
 alt: Leslie the rhino on her own computer chip.
 sidebarDepth: 2
 summaryPoints:
-  - Receive maximum rewards directly from the protocol for keeping your validator properly functioning and online.
-  - Run home hardware and personally add to the security and decentralization of the Ethereum network.
-  - Remove trust, and never give up control of the keys to your funds.
+  - Receive maximum rewards directly from the protocol (including unburnt fees after The Merge) for keeping your validator properly functioning and online
+  - Run home hardware and personally add to the security and decentralization of the Ethereum network
+  - Remove trust, and never give up control of the keys to your funds
 ---
 
 ## What is solo staking? {#what-is-solo-staking}
