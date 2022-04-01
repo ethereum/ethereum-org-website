@@ -227,17 +227,7 @@ const Title = styled.h1`
 `
 
 const SummaryPoint = styled.li`
-  /* font-size: 1rem; */
   color: ${(props) => props.theme.colors.text300};
-  /* margin-bottom: 0rem; */
-  /* line-height: auto; */
-`
-
-const SummaryBox = styled.div`
-  /* ul {
-    list-style: none;
-    padding-left: 0;
-  } */
 `
 
 const StyledButtonDropdown = styled(ButtonDropdown)`
@@ -293,57 +283,16 @@ const Image = styled(GatsbyImage)`
   }
 `
 
-// const MoreContent = styled(Link)`
-//   width: 100%;
-//   background: ${(props) => props.theme.colors.ednBackground};
-//   padding: 1rem;
-//   display: flex;
-//   justify-content: center;
-//   &:hover {
-//     background: ${(props) => props.theme.colors.background};
-//   }
-//   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-//     display: none;
-//   }
-// `
-
 const MobileTableOfContents = styled(TableOfContents)`
   position: relative;
   z-index: 2;
 `
 
-// const StyledBannerNotification = styled(BannerNotification)`
-//   display: flex;
-//   justify-content: center;
-//   @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
-//     display: none;
-//   }
-// `
-
 const TitleCard = styled.div`
-  /* background: ${(props) => props.theme.colors.background};
-  border: 1px solid ${(props) => props.theme.colors.border};
-  box-shadow: ${(props) => props.theme.colors.cardBoxShadow}; */
   padding: 2rem;
   display: flex;
-  /* position: absolute;
-  left: 6rem;
-  top: 6rem; */
   flex-direction: column;
   justify-content: flex-start;
-  /* border-radius: 2px; */
-  /* z-index: 10; */
-  /* max-width: 640px; */
-  /* margin-top: 3rem; */
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    max-width: 100%;
-    /* position: relative; */
-    /* left: 0rem; */
-    /* top: 0rem; */
-    /* background: ${(props) => props.theme.colors.ednBackground}; */
-    /* box-shadow: none; */
-    /* margin-top: 0; */
-  }
   width: 100%;
 `
 
@@ -419,25 +368,15 @@ const StakingPage = ({ data, pageContext, location }) => {
 
   return (
     <Container>
-      {/* <StyledBannerNotification shouldShow>
-        <StyledEmoji text=":pencil:" />
-        <div>
-          Uses of Ethereum are always developing and evolving. Add any info you
-          think will make things clearer or more up to date.
-          <Link to={absoluteEditPath}>Edit page</Link>
-        </div>
-      </StyledBannerNotification> */}
       <HeroContainer>
         <TitleCard>
           <Breadcrumbs slug={location.pathname} />
           <Title>{mdx.frontmatter.title}</Title>
-          <SummaryBox>
-            <ul>
-              {summaryPoints.map((point, idx) => (
-                <SummaryPoint key={idx}>{point}</SummaryPoint>
-              ))}
-            </ul>
-          </SummaryBox>
+          <ul>
+            {summaryPoints.map((point, idx) => (
+              <SummaryPoint key={idx}>{point}</SummaryPoint>
+            ))}
+          </ul>
           <MobileTableOfContents
             items={tocItems}
             maxDepth={mdx.frontmatter.sidebarDepth}
@@ -450,9 +389,6 @@ const StakingPage = ({ data, pageContext, location }) => {
           objectFit="contain"
         />
       </HeroContainer>
-      {/* <MoreContent to="#content">
-        <Icon name="chevronDown" />
-      </MoreContent> */}
       <Page dir={isRightToLeft ? "rtl" : "ltr"}>
         <PageMetadata
           title={mdx.frontmatter.title}
