@@ -397,7 +397,7 @@ const Layer2Page = ({ data }) => {
                 <StatDescription>TVL locked in layer 2 (USD)</StatDescription>
                 <Tooltip
                   content={tooltipContent({
-                    apiUrl: "https://l2beat.com/api/tvl.json",
+                    apiUrl: "https://l2beat.com/",
                     apiProvider: "L2BEAT",
                   })}
                 >
@@ -414,8 +414,7 @@ const Layer2Page = ({ data }) => {
                 </StatDescription>
                 <Tooltip
                   content={tooltipContent({
-                    apiUrl:
-                      "https://api.cryptostats.community/api/v1/l2-fees/feeTransferEth?metadata=false",
+                    apiUrl: "https://api.cryptostats.community/",
                     apiProvider: "CryptoStats",
                   })}
                 >
@@ -430,7 +429,7 @@ const Layer2Page = ({ data }) => {
                 <StatDescription>Layer 2 TVL change (30 days)</StatDescription>
                 <Tooltip
                   content={tooltipContent({
-                    apiUrl: "https://l2beat.com/api/tvl.json",
+                    apiUrl: "https://l2beat.com/",
                     apiProvider: "L2BEAT",
                   })}
                 >
