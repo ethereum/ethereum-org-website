@@ -97,6 +97,17 @@ const NavLink = styled(Link)`
   }
 `
 
+const NakedNavLink = styled.div`
+  text-decoration: none;
+  display: block;
+  padding: 0.5rem;
+  color: ${(props) => props.theme.colors.text};
+  cursor: pointer;
+  &:hover {
+    color: ${(props) => props.theme.colors.primary};
+  }
+`
+
 const ButtonDropdown = ({ list, className }) => {
   const [isOpen, setIsOpen] = useState(false)
   const intl = useIntl()
@@ -130,11 +141,16 @@ const ButtonDropdown = ({ list, className }) => {
         variants={listVariants}
         initial="closed"
       >
-        {list.items.map((item, idx) => (
+        {list.items.map(({ text, to, callback }, idx) => (
           <DropdownItem key={idx} onClick={() => setIsOpen(false)}>
-            <NavLink to={item.to} tabIndex="-1">
-              <Translation id={item.text} />
-            </NavLink>
+            {!!to && (
+              <NavLink to={to} tabIndex="-1">
+                <Translation id={text} />
+              </NavLink>
+            )}
+            {!!callback && (
+              <NakedNavLink onClick={() => callback(idx)}>{text}</NakedNavLink>
+            )}
           </DropdownItem>
         ))}
       </DropdownList>
