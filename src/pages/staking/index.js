@@ -197,10 +197,10 @@ const StyledCard = styled(Card)`
 
 const benefits = [
   {
-    title: "More sustainable",
-    emoji: "🍃",
+    title: "Earn rewards",
+    emoji: "💰",
     description:
-      "Stakers don't need energy-intensive computers in order to participate in a proof-of-stake system–just a laptop or smartphone. This will make Ethereum better for the environment.",
+      "Rewards are given for actions that help the network reach consensus. You'll get rewards for batching transactions into a new block or checking the work of other validators because that's what keeps the chain running securely.",
   },
   {
     title: "Better security",
@@ -209,10 +209,10 @@ const benefits = [
       "The network gets stronger against attacks as more ETH is staked, as it then requires more ETH to control a majority of the network. To become a threat, you would need to hold the majority of validators, which means you'd need to control the majority of ETH in the system–that's a lot!",
   },
   {
-    title: "Earn rewards",
-    emoji: "💰",
+    title: "More sustainable",
+    emoji: "🍃",
     description:
-      "Rewards are given for actions that help the network reach consensus. You'll get rewards for batching transactions into a new block or checking the work of other validators because that's what keeps the chain running securely.",
+      "Stakers don't need energy-intensive computers in order to participate in a proof-of-stake system–just a laptop or smartphone. This will make Ethereum better for the environment.",
   },
 ]
 
@@ -375,12 +375,12 @@ const StakingPage = ({ data }) => {
                 <ul>
                   <li>
                     Receive rewards directly from the protocol for actions that
-                    help the network reach consensus.
+                    help the network reach consensus
                   </li>
                   <li>
                     You'll get rewards for batching transactions into a new
                     block or checking the work of other validators to keep the
-                    chain running securely.
+                    chain running securely
                   </li>
                 </ul>
               </div>
@@ -394,28 +394,28 @@ const StakingPage = ({ data }) => {
                 <ul>
                   <li>Your ETH is at stake.</li>
                   <li>
-                    There are penalties, which cost ETH, for going offline.
+                    There are penalties, which cost ETH, for going offline
                   </li>
                   <li>
                     Malicious behavior can result in “slashing” of larger
-                    amounts of ETH and forced ejection from the network.
+                    amounts of ETH and forced ejection from the network
                   </li>
                 </ul>
               </div>
               <div style={{ gridArea: "solo-reqs" }}>
                 <h4>Requirements</h4>
                 <ul>
-                  <li>You must deposit 32 ETH.</li>
+                  <li>You must deposit 32 ETH</li>
                   <li>
                     Maintain hardware that runs both an Ethereum execution
-                    client and consensus client while connected to the internet.
+                    client and consensus client while connected to the internet
                   </li>
                   <li>
                     The{" "}
                     <Link to="https://prater.launchpad.ethereum.org">
                       Staking Launchpad
                     </Link>{" "}
-                    will walk you through the process and hardware requirements.
+                    will walk you through the process and hardware requirements
                   </li>
                 </ul>
               </div>
@@ -435,11 +435,11 @@ const StakingPage = ({ data }) => {
                 <ul>
                   <li>
                     Usually involved full protocol rewards minus monthly fee for
-                    node operations.
+                    node operations
                   </li>
                   <li>
                     Dashboards often available to easily track your validator
-                    client.
+                    client
                   </li>
                 </ul>
               </div>
@@ -453,24 +453,22 @@ const StakingPage = ({ data }) => {
                 <ul>
                   <li>
                     Subject to same risks as solo staking plus counter-party
-                    risk of service provider.
+                    risk of service provider
                   </li>
                   <li>
                     Your ETH is at stake, and safe use of your signing keys is
-                    entrusted to someone else who could behave maliciously.
+                    entrusted to someone else who could behave maliciously
                   </li>
                 </ul>
               </div>
               <div style={{ gridArea: "saas-reqs" }}>
                 <h4>Requirements</h4>
                 <ul>
-                  <li>
-                    Deposit 32 ETH and generate your keys with assistance.
-                  </li>
-                  <li>Store your keys securely.</li>
+                  <li>Deposit 32 ETH and generate your keys with assistance</li>
+                  <li>Store your keys securely</li>
                   <li>
                     The rest is taken care of, though specific services will
-                    vary.
+                    vary
                   </li>
                 </ul>
               </div>
@@ -491,16 +489,16 @@ const StakingPage = ({ data }) => {
                 <ul>
                   <li>
                     Pooled stakers accrue rewards differently, depending on
-                    which method of pooled staking chosen.
+                    which method of pooled staking chosen
                   </li>
                   <li>
                     Many pooled staking services offer one or more liquidity
                     tokens that represents your staked ETH plus your share of
-                    the validator rewards.
+                    the validator rewards
                   </li>
                   <li>
                     Liquidity tokens can be held in your own wallet, used in
-                    defi and sold if you decide to exit.
+                    defi and sold if you decide to exit
                   </li>
                 </ul>
               </div>
@@ -514,11 +512,11 @@ const StakingPage = ({ data }) => {
                 <ul>
                   <li>
                     The risks to pooled staking vary depending on the method
-                    used.
+                    used
                   </li>
                   <li>
                     In general risks consist of a combination of counter-party,
-                    smart contract and execution risk.
+                    smart contract and execution risk
                   </li>
                 </ul>
               </div>
@@ -527,12 +525,12 @@ const StakingPage = ({ data }) => {
                 <ul>
                   <li>
                     To join a pool, you will need to have some ETH in your own
-                    wallet.
+                    wallet
                   </li>
                   <li>
                     From there you can deposit directly to different pooled
                     staking platforms, or you can simply trade for one of the
-                    staking liquidity tokens.
+                    staking liquidity tokens
                   </li>
                 </ul>
               </div>
