@@ -414,7 +414,7 @@ const Layer2Page = ({ data }) => {
                 </StatDescription>
                 <Tooltip
                   content={tooltipContent({
-                    apiUrl: "https://api.cryptostats.community/",
+                    apiUrl: "https://cryptostats.community/",
                     apiProvider: "CryptoStats",
                   })}
                 >
