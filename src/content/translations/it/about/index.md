@@ -70,4 +70,4 @@ Pubblicheremo qui tutte le posizioni aperte. Se non vedi un ruolo per te qui, va
 
 - [Product Designer](/about/product-designer/)
 
-Vuoi esplorare anche oltre il team di ethereum.org? [Dai un'occhiata ai lavori correlati a Ethereum](/community/#ethereum-jobs).
+Vuoi esplorare anche oltre il team di ethereum.org? [Dai un'occhiata ai lavori correlati a Ethereum](/community/get-involved/#ethereum-jobs/).

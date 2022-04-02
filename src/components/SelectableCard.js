@@ -50,7 +50,7 @@ const Card = ({
     >
       <TopContent>
         <Emoji text={emoji} size={3} mb={`1em`} />
-        <StyledCheckbox checked={isSelected} />
+        <StyledCheckbox checked={isSelected} aria-label={title} />
         <h3>{title}</h3>
         <Description>{description}</Description>
       </TopContent>
