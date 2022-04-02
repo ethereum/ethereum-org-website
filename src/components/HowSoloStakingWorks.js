@@ -5,6 +5,7 @@ import { graphql, useStaticQuery } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 import Link from "./Link"
+import OrderedList from "./OrderedList"
 
 const Flex = styled.div`
   display: flex;
@@ -12,33 +13,6 @@ const Flex = styled.div`
   justify-content: space-between;
   @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
     flex-direction: column;
-  }
-
-  ol {
-    list-style: none;
-    counter-reset: li-counter;
-    padding-left: 2rem;
-    margin-bottom: 0;
-  }
-
-  ol li {
-    margin: 0 0 1rem 0;
-    counter-increment: li-counter;
-    position: relative;
-  }
-  ol li::before {
-    content: counter(li-counter);
-    position: absolute;
-    top: -2px; /* adjusts circle + number up and down */
-    left: -3rem;
-    width: ${({ size }) => (size ? size : "35px")};
-    aspect-ratio: 1;
-    height: 2rem;
-    padding-top: 7px; /* adjusts number up and down */
-    line-height: 100%;
-    border-radius: 50%;
-    background: ${({ theme }) => theme.colors.grayBackground};
-    text-align: center;
   }
 `
 
@@ -74,11 +48,7 @@ const HowSoloStakingWorks = () => {
 
   return (
     <Flex>
-      <ol>
-        {items.map((item, index) => (
-          <li key={index}>{item}</li>
-        ))}
-      </ol>
+      <OrderedList listData={items} />
       <Image image={getImage(image)} />
     </Flex>
   )
