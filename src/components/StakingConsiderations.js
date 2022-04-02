@@ -15,6 +15,8 @@ import MultiClient from "../assets/staking/multi-client.svg"
 import SelfCustody from "../assets/staking/self-custody.svg"
 import Economical from "../assets/staking/economical.svg"
 import LiquidityToken from "../assets/staking/liquidity-token.svg"
+// Component imports
+import ButtonDropdown from "./ButtonDropdown"
 
 const Container = styled.div`
   display: flex;
@@ -30,6 +32,9 @@ const List = styled.div`
     list-style-type: none;
     padding: 0;
     margin: 0;
+  }
+  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
+    display: none;
   }
 `
 
@@ -59,6 +64,13 @@ const ListItem = styled.li`
       : `
     color: ${theme.colors.primary};
     `};
+`
+
+const StyledButtonDropdown = styled(ButtonDropdown)`
+  display: none;
+  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
+    display: inline-block;
+  }
 `
 
 const Content = styled.div`
@@ -333,6 +345,15 @@ const StakingConsiderations = ({ page }) => {
   const { title, description, valid, caution, warning, Svg } =
     pageData[activeIndex]
 
+  const dropdownLinks = {
+    text: "Staking Considerations",
+    ariaLabel: "Dropdown menu for staking considerations",
+    items: pageData.map(({ title }) => ({
+      text: title,
+      callback: setActiveIndex,
+    })),
+  }
+
   const handleSelection = (idx) => {
     setActiveIndex(idx)
   }
@@ -351,6 +372,7 @@ const StakingConsiderations = ({ page }) => {
 
   return (
     <Container>
+      <StyledButtonDropdown list={dropdownLinks} />
       <List>
         {!!pageData && (
           <ul>
