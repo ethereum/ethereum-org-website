@@ -119,7 +119,7 @@ const Section = styled.div`
   aside::after {
     border-image: linear-gradient(to bottom, var(--color), var(--next-color)) 1
       100%;
-    --scale: ${({ number }) => 1.05 + number / 90};
+    --scale: ${({ number }) => 1.05 + number / 70};
     --translate: ${({ number }) => number}px;
     transform: scale(var(--scale)) translateY(var(--translate));
   }

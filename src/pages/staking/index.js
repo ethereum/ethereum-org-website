@@ -382,6 +382,10 @@ const StakingPage = ({ data }) => {
                     block or checking the work of other validators to keep the
                     chain running securely
                   </li>
+                  <li>
+                    After the Merge you'll receive unburnt transaction fees for
+                    blocks you propose
+                  </li>
                 </ul>
               </div>
               <div
@@ -392,7 +396,7 @@ const StakingPage = ({ data }) => {
               >
                 <h4>Risks</h4>
                 <ul>
-                  <li>Your ETH is at stake.</li>
+                  <li>Your ETH is at stake</li>
                   <li>
                     There are penalties, which cost ETH, for going offline
                   </li>
