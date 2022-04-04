@@ -81,8 +81,10 @@ const StyledFakeLink = styled(FakeLink)`
   white-space: nowrap;
 `
 
-const ExpandableCard = ({ children, contentPreview, title, Svg, alt }) => {
+const ExpandableCard = ({ children, contentPreview, title, svg, alt }) => {
   const [isVisible, setIsVisible] = useState(false)
+  const Svg = svg
+
   const expandCollapse = {
     collapsed: {
       height: 0,
@@ -97,6 +99,7 @@ const ExpandableCard = ({ children, contentPreview, title, Svg, alt }) => {
       },
     },
   }
+
   const showHide = {
     collapsed: {
       display: "none",
@@ -105,6 +108,7 @@ const ExpandableCard = ({ children, contentPreview, title, Svg, alt }) => {
       display: "inline-block",
     },
   }
+
   const fadeInOut = {
     collapsed: {
       opacity: 0,
@@ -119,6 +123,7 @@ const ExpandableCard = ({ children, contentPreview, title, Svg, alt }) => {
       },
     },
   }
+
   return (
     <Card>
       <Content>

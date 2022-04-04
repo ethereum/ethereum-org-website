@@ -1,10 +1,10 @@
 import React from "react"
 import styled from "styled-components"
 import { GatsbyImage, getImage, getSrc } from "gatsby-plugin-image"
-import Emoji from "./Emoji"
 
 import Translation from "../components/Translation"
 import ButtonLink from "./ButtonLink"
+import Emoji from "./Emoji"
 import Link from "./Link"
 
 const Container = styled.div`
@@ -67,11 +67,12 @@ const AssetDownload = ({
   src,
   shouldHide = false,
   title,
-  Svg,
+  svg,
 }) => {
   const baseUrl = `https://ethereum.org`
   const downloadUri = src ? src : getSrc(image)
   const downloadUrl = `${baseUrl}${downloadUri}`
+  const Svg = svg
 
   return (
     <Container shouldHide={shouldHide}>
