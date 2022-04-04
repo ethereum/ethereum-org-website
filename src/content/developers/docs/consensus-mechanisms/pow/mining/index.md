@@ -3,7 +3,7 @@ title: Mining
 description: An explanation of how mining works in Ethereum and how it helps keep Ethereum secure and decentralized.
 lang: en
 sidebar: true
-incomplete: true
+incomplete: false
 ---
 
 ## Prerequisites {#prerequisites}
@@ -14,7 +14,11 @@ To better understand this page, we recommend you first read up on [transactions]
 
 Mining is the process of creating a block of transactions to be added to the Ethereum blockchain.
 
-Ethereum, like Bitcoin, currently uses a [proof-of-work (PoW)](/developers/docs/consensus-mechanisms/pow/) consensus mechanism. Mining is the lifeblood of proof-of-work. Ethereum miners - computers running software - using their time and computation power to process transactions and produce blocks.
+The word mining originates in the context of the gold analogy for crypto currencies. Gold or precious metals are scarce, so are digital tokens, and the only way to increase the total volume is through mining. This is appropriate to the extent that in Ethereum too, the only mode of issuance post launch is via mining. Unlike these examples however, mining is also the way to secure the network by creating, verifying, publishing and propagating blocks in the blockchain.
+
+Mining ether = Securing the Network = Verifying Computation
+
+Ethereum, like Bitcoin, currently uses a [proof-of-work (PoW)](/developers/docs/consensus-mechanisms/pow/) consensus mechanism. Mining is the lifeblood of proof-of-work. Ethereum miners - computers running software - using their time and computation power to process transactions and produce blocks. The Ethereum blockchain is in many ways similar to the Bitcoin blockchain, although it does have some differences. The main difference between Ethereum and Bitcoin with regard to the blockchain architecture is that, unlike Bitcoin, Ethereum blocks contain a copy of both the transaction list and the most recent state (the root hash of the merkle patricia trie encoding the state to be more precise). Aside from that, two other values, the block number and the difficulty, are also stored in the block.
 
 <InfoBanner emoji=":wave:">
    Proof-of-stake will replace mining and proof-of-work over the next year. You can start staking your ETH today. <a href="/staking/">More on staking</a>    
@@ -59,6 +63,12 @@ Every transaction is mined (included in a new block and propagated for the first
 Watch Austin walk you through mining and the proof-of-work blockchain.
 
 <YouTube id="zcX7OJ-L8XQ" />
+
+## The mining algorithm
+
+The Ethereum mining algorithm has undergone several upgrades since its inception. The original algorithm, "Dagger Hashamoto" was based around the provision of a large, transient, randomly generated dataset which forms a [Directed Acyclic Graph](https://en.wikipedia.org/wiki/Directed_acyclic_graph) (the Dagger-part), with miners attempting to solve a particular constraint on it, partly determined through a block’s header-hash. This algorithm was novel because it had high memory-access bandwidth requirements but could be run using a modest processor, making it GPU-friendly but resistant to the type of ASIC-driven hardware arms race that could pose a centralization risk. After substantial upgrades to the algorithm, it was renamed to "Ethash". Ethash is the mining algorithm Ethereum miners use today.
+
+More information on these mining algorithms is available at our [mining algorithms page](/developers/docs/consensus-mechanisms/pow/mining-algorithms/).
 
 ## Further reading {#further-reading}
 
