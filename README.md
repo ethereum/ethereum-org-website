@@ -1469,6 +1469,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="http://idimweb.com"><img src="https://avatars.githubusercontent.com/u/1972717?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Marc-Antoine Thevenet</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=MATsxm" title="Documentation">📖</a></td>
     <td align="center"><a href="http://alantoa.com"><img src="https://avatars.githubusercontent.com/u/37520667?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Alan Toa</b></sub></a><br /><a href="#tool-alantoa" title="Tools">🔧</a></td>
   </tr>
+  <tr>
+    <td align="center"><a href="http://christopherpearce.nz"><img src="https://avatars.githubusercontent.com/u/9981297?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Christopher Pearce</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=christopear" title="Documentation">📖</a></td>
+  </tr>
 </table>
 
 <!-- markdownlint-restore -->
