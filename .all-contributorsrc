@@ -5890,7 +5890,8 @@
       "contributions": [
         "bug",
         "doc",
-        "code"
+        "code",
+        "a11y"
       ]
     },
     {
@@ -6375,7 +6376,8 @@
       "profile": "https://github.com/HursitTarcan",
       "contributions": [
         "bug",
-        "code"
+        "code",
+        "a11y"
       ]
     },
     {
@@ -7003,6 +7005,71 @@
       "profile": "https://github.com/php4fan",
       "contributions": [
         "bug"
+      ]
+    },
+    {
+      "login": "kpister",
+      "name": "Kaiser Pister",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4607361?v=4",
+      "profile": "https://github.com/kpister",
+      "contributions": [
+        "doc",
+        "code"
+      ]
+    },
+    {
+      "login": "MATsxm",
+      "name": "Marc-Antoine Thevenet",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1972717?v=4",
+      "profile": "http://idimweb.com",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "alantoa",
+      "name": "Alan Toa",
+      "avatar_url": "https://avatars.githubusercontent.com/u/37520667?v=4",
+      "profile": "http://alantoa.com",
+      "contributions": [
+        "tool"
+      ]
+    },
+    {
+      "login": "christopear",
+      "name": "Christopher Pearce",
+      "avatar_url": "https://avatars.githubusercontent.com/u/9981297?v=4",
+      "profile": "http://christopherpearce.nz",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "kurotaky",
+      "name": "Yuta Kurotaki",
+      "avatar_url": "https://avatars.githubusercontent.com/u/866589?v=4",
+      "profile": "https://mo-fu.org",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "Claudio2000",
+      "name": "Claudio2000",
+      "avatar_url": "https://avatars.githubusercontent.com/u/32911415?v=4",
+      "profile": "https://github.com/Claudio2000",
+      "contributions": [
+        "doc",
+        "code"
+      ]
+    },
+    {
+      "login": "tomaspasie",
+      "name": "Tomas Pasiecznik",
+      "avatar_url": "https://avatars.githubusercontent.com/u/42984839?v=4",
+      "profile": "http://hoo.be/tomaspasie",
+      "contributions": [
+        "code"
       ]
     }
   ],

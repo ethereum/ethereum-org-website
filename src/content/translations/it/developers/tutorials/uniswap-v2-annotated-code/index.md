@@ -1955,7 +1955,7 @@ Questa funzione implementa la [funzionalità di transferFrom dell'ERC-20](https:
 
 Questa funzione trasferisce ether a un conto. Ogni chiamata a un contratto diverso può tentare di inviare ether. Poiché non abbiamo bisogno di chiamare concretamente alcuna funzione, non inviamo alcun dato con la chiamata.
 
-## Conclusione {#Conclusion}
+## Conclusione {#conclusion}
 
 Questo è un articolo lungo di circa 50 pagine. Se sei arrivato fin qui, congratulazioni! Ci auguriamo che tu abbia compreso le considerazioni connesse alla scrittura di un'applicazione reale (a differenza dei brevi programmi campione) e sia ora in grado di scrivere più efficacemente i contratti per i tuoi casi d'uso.
 
