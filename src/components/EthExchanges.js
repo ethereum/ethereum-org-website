@@ -213,6 +213,7 @@ const EthExchanges = () => {
           cryptocom
           easycrypto
           ftx
+          ftxus
           gateio
           gemini
           huobiglobal
@@ -290,6 +291,9 @@ const EthExchanges = () => {
       ftx: file(relativePath: { eq: "exchanges/ftx.png" }) {
         ...cardListImage
       }
+      ftxus: file(relativePath: { eq: "exchanges/ftx.png" }) {
+        ...cardListImage
+      }
       gateio: file(relativePath: { eq: "exchanges/gateio.png" }) {
         ...cardListImage
       }
@@ -343,27 +347,13 @@ const EthExchanges = () => {
       name: "Binance",
       url: "https://www.binance.com/en",
       image: data.binance,
-      usaExceptions: [
-        "AL",
-        "AK",
-        "CT",
-        "FL",
-        "GA",
-        "HI",
-        "ID",
-        "LA",
-        "NY",
-        "NC",
-        "TX",
-        "VT",
-        "WA",
-      ],
+      usaExceptions: [],
     },
     binanceus: {
       name: "Binance US",
       url: "https://www.binance.us/en/home",
       image: data.binance,
-      usaExceptions: [],
+      usaExceptions: ["HI", "ID", "NY", "TX", "VT"],
     },
     bitbuy: {
       name: "Bitbuy",
@@ -448,6 +438,12 @@ const EthExchanges = () => {
       url: "https://ftx.com/",
       image: data.ftx,
       usaExceptions: [],
+    },
+    ftxus: {
+      name: "FTX US",
+      url: "https://ftx.us/",
+      image: data.ftx,
+      usaExceptions: ["NY"],
     },
     gateio: {
       name: "Gate.io",
