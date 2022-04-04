@@ -197,6 +197,7 @@ const EthExchanges = () => {
       exchangesByCountry: allExchangesByCountryCsv {
         nodes {
           binance
+          binanceus
           bitbuy
           bitfinex
           bitflyer
@@ -242,6 +243,9 @@ const EthExchanges = () => {
         ...cardListImage
       }
       binance: file(relativePath: { eq: "exchanges/binance.png" }) {
+        ...cardListImage
+      }
+      binanceus: file(relativePath: { eq: "exchanges/binance.png" }) {
         ...cardListImage
       }
       bitbuy: file(relativePath: { eq: "exchanges/bitbuy.png" }) {
@@ -354,6 +358,12 @@ const EthExchanges = () => {
         "VT",
         "WA",
       ],
+    },
+    binanceus: {
+      name: "Binance US",
+      url: "https://www.binance.com/en",
+      image: data.binance,
+      usaExceptions: [],
     },
     bitbuy: {
       name: "Bitbuy",
