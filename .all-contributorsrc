@@ -7062,6 +7062,15 @@
         "doc",
         "code"
       ]
+    },
+    {
+      "login": "tomaspasie",
+      "name": "Tomas Pasiecznik",
+      "avatar_url": "https://avatars.githubusercontent.com/u/42984839?v=4",
+      "profile": "http://hoo.be/tomaspasie",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
