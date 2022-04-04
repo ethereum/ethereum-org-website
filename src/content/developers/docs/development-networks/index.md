@@ -41,7 +41,7 @@ Ganache provides both a desktop application (Ganache UI), as well as a command-l
 
 ### Hardhat Network {#hardhat-network}
 
-A local Ethereum network designed for development. It allows you to deploy your contracts, run your tests and debug your code
+A local Ethereum network designed for development. It allows you to deploy your contracts, run your tests and debug your code.
 
 Hardhat Network comes built-in with Hardhat, an Ethereum development environment for professionals.
 
