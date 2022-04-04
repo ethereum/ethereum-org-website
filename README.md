@@ -1471,6 +1471,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   </tr>
   <tr>
     <td align="center"><a href="http://christopherpearce.nz"><img src="https://avatars.githubusercontent.com/u/9981297?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Christopher Pearce</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=christopear" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://mo-fu.org"><img src="https://avatars.githubusercontent.com/u/866589?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Yuta Kurotaki</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=kurotaky" title="Documentation">📖</a></td>
   </tr>
 </table>
 
