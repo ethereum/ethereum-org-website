@@ -361,7 +361,7 @@ const EthExchanges = () => {
     },
     binanceus: {
       name: "Binance US",
-      url: "https://www.binance.com/en",
+      url: "https://www.binance.us/en/home",
       image: data.binance,
       usaExceptions: [],
     },
