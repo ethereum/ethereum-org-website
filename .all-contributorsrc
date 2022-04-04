@@ -7034,6 +7034,15 @@
       "contributions": [
         "tool"
       ]
+    },
+    {
+      "login": "christopear",
+      "name": "Christopher Pearce",
+      "avatar_url": "https://avatars.githubusercontent.com/u/9981297?v=4",
+      "profile": "http://christopherpearce.nz",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
