@@ -37,7 +37,6 @@ const HeroImg = styled(GatsbyImage)`
   margin-left: 3rem;
   width: 100%;
   max-width: 624px;
-  transform: scale(1.1);
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     margin-top: 0;
     margin-left: 0;
