@@ -77,8 +77,11 @@ const ButtonContainer = styled.div`
   }
 `
 
-const StyledFakeLink = styled(FakeLink)`
-  white-space: nowrap;
+const ButtonLink = styled.button`
+  border: 0;
+  cursor: pointer;
+  background-color: transparent;
+  color: ${(props) => props.theme.colors.primary};
 `
 
 const ExpandableCard = ({ children, contentPreview, title, svg, alt }) => {
@@ -134,16 +137,16 @@ const ExpandableCard = ({ children, contentPreview, title, svg, alt }) => {
           </Header>
           <TextPreview>{contentPreview}</TextPreview>
         </Question>
-        <ButtonContainer onClick={() => setIsVisible(!isVisible)}>
+        <ButtonContainer>
           {!isVisible && (
-            <StyledFakeLink>
+            <ButtonLink onClick={() => setIsVisible(true)}>
               <Translation id="more" />
-            </StyledFakeLink>
+            </ButtonLink>
           )}
           {isVisible && (
-            <StyledFakeLink>
+            <ButtonLink onClick={() => setIsVisible(false)}>
               <Translation id="less" />
-            </StyledFakeLink>
+            </ButtonLink>
           )}
         </ButtonContainer>
       </Content>
