@@ -351,18 +351,38 @@ const StakingPage = ({ data, pageContext, location }) => {
       {
         text: "Staking Home",
         to: "/staking",
+        matomo: {
+          eventCategory: `Staking dropdown`,
+          eventAction: `Clicked`,
+          eventName: "clicked staking home",
+        },
       },
       {
         text: "Solo staking",
         to: "/staking/solo",
+        matomo: {
+          eventCategory: `Staking dropdown`,
+          eventAction: `Clicked`,
+          eventName: "clicked solo staking",
+        },
       },
       {
         text: "Staking as a service",
         to: "/staking/saas",
+        matomo: {
+          eventCategory: `Staking dropdown`,
+          eventAction: `Clicked`,
+          eventName: "clicked staking as a service",
+        },
       },
       {
         text: "Pooled staking",
         to: "/staking/pools",
+        matomo: {
+          eventCategory: `Staking dropdown`,
+          eventAction: `Clicked`,
+          eventName: "clicked pooled staking",
+        },
       },
     ],
   }

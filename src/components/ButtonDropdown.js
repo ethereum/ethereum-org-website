@@ -1,14 +1,19 @@
+// Libraries
 import React, { useState, createRef } from "react"
 import styled from "styled-components"
 import { useIntl } from "gatsby-plugin-intl"
 import { motion } from "framer-motion"
 
+// Components
 import Icon from "./Icon"
 import Link from "./Link"
 import Translation from "./Translation"
 import { ButtonSecondary } from "./SharedStyledComponents"
+
+// Utils
 import { useOnClickOutside } from "../hooks/useOnClickOutside"
 import { translateMessageId } from "../utils/translations"
+import { trackCustomEvent } from "../utils/matomo"
 
 const Container = styled.div`
   position: relative;
@@ -141,9 +146,20 @@ const ButtonDropdown = ({ list, className }) => {
         variants={listVariants}
         initial="closed"
       >
-        {list.items.map(({ text, to, callback }, idx) => (
+        {list.items.map(({ text, to, matomo, callback }, idx) => (
           <DropdownItem key={idx} onClick={() => setIsOpen(false)}>
-            {!!to && (
+            {!!to && !!matomo && (
+              <NavLink
+                onClick={() => {
+                  trackCustomEvent(matomo)
+                }}
+                to={to}
+                tabIndex="-1"
+              >
+                <Translation id={text} />
+              </NavLink>
+            )}
+            {!!to && !matomo && (
               <NavLink to={to} tabIndex="-1">
                 <Translation id={text} />
               </NavLink>

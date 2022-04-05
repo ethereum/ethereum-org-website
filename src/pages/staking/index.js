@@ -26,6 +26,7 @@ import ExpandableCard from "../../components/ExpandableCard"
 import StakingCommunityCallout from "../../components/StakingCommunityCallout"
 
 import { translateMessageId } from "../../utils/translations"
+import { trackCustomEvent } from "../../utils/matomo"
 
 const Page = styled.div`
   display: flex;
@@ -236,18 +237,38 @@ const StakingPage = ({ data }) => {
       {
         text: "Staking Home",
         to: "/staking",
+        matomo: {
+          eventCategory: `Staking dropdown`,
+          eventAction: `Clicked`,
+          eventName: "clicked staking home",
+        },
       },
       {
         text: "Solo staking",
         to: "/staking/solo",
+        matomo: {
+          eventCategory: `Staking dropdown`,
+          eventAction: `Clicked`,
+          eventName: "clicked solo staking",
+        },
       },
       {
         text: "Staking as a service",
         to: "/staking/saas",
+        matomo: {
+          eventCategory: `Staking dropdown`,
+          eventAction: `Clicked`,
+          eventName: "clicked staking as a service",
+        },
       },
       {
         text: "Pooled staking",
         to: "/staking/pools",
+        matomo: {
+          eventCategory: `Staking dropdown`,
+          eventAction: `Clicked`,
+          eventName: "clicked pooled staking",
+        },
       },
     ],
   }
@@ -424,7 +445,16 @@ const StakingPage = ({ data }) => {
                 </ul>
               </div>
               <div style={{ gridArea: "solo-cta" }}>
-                <StyledButtonLink to="/staking/solo">
+                <StyledButtonLink
+                  onClick={() => {
+                    trackCustomEvent({
+                      eventCategory: `Staking Comparison`,
+                      eventAction: `Clicked`,
+                      eventName: "clicked solo staking",
+                    })
+                  }}
+                  to="/staking/solo"
+                >
                   More on solo staking
                 </StyledButtonLink>
               </div>
@@ -477,7 +507,16 @@ const StakingPage = ({ data }) => {
                 </ul>
               </div>
               <div style={{ gridArea: "saas-cta" }}>
-                <StyledButtonLink to="/staking/saas">
+                <StyledButtonLink
+                  onClick={() => {
+                    trackCustomEvent({
+                      eventCategory: `Staking Comparison`,
+                      eventAction: `Clicked`,
+                      eventName: "clicked staking as a service",
+                    })
+                  }}
+                  to="/staking/saas"
+                >
                   More on staking as a service
                 </StyledButtonLink>
               </div>
@@ -539,7 +578,16 @@ const StakingPage = ({ data }) => {
                 </ul>
               </div>
               <div style={{ gridArea: "pool-cta" }}>
-                <StyledButtonLink to="/staking/pools/">
+                <StyledButtonLink
+                  onClick={() => {
+                    trackCustomEvent({
+                      eventCategory: `Staking Comparison`,
+                      eventAction: `Clicked`,
+                      eventName: "clicked pooled staking",
+                    })
+                  }}
+                  to="/staking/pools/"
+                >
                   More on pooled staking
                 </StyledButtonLink>
               </div>

@@ -1,12 +1,20 @@
+// Libraries
 import React from "react"
 import styled from "styled-components"
+
+// Components
 import ButtonLink from "./ButtonLink"
 import Link from "./Link"
+
+// Assets
 import EtherSvg from "../assets/staking/staking-glyph-ether-circle.svg"
 import SoloGlyph from "../assets/staking/staking-glyph-cpu.svg"
 import SaasGlyph from "../assets/staking/staking-glyph-cloud.svg"
 import PoolGlyph from "../assets/staking/staking-glyph-token-wallet.svg"
 import CexGlyph from "../assets/staking/staking-glyph-centralized.svg"
+
+// Utils
+import { trackCustomEvent } from "../utils/matomo"
 
 const Container = styled.div`
   border-radius: 0.5rem;
@@ -263,7 +271,18 @@ const StakingHierarchy = () => {
             </Link>
             .
           </p>
-          <ButtonLink to="/staking/solo">More on solo staking</ButtonLink>
+          <ButtonLink
+            to="/staking/solo"
+            onClick={() => {
+              trackCustomEvent({
+                eventCategory: `StakingHierarchy`,
+                eventAction: `Clicked`,
+                eventName: "clicked solo staking",
+              })
+            }}
+          >
+            More on solo staking
+          </ButtonLink>
         </Content>
       </Section>
       <Section number="2">
@@ -304,7 +323,16 @@ const StakingHierarchy = () => {
             provider. To limit counter-party risk, the keys to withdrawal your
             ETH are usually kept in your possession.
           </p>
-          <ButtonLink to="/staking/saas">
+          <ButtonLink
+            onClick={() => {
+              trackCustomEvent({
+                eventCategory: `StakingHierarchy`,
+                eventAction: `Clicked`,
+                eventName: "clicked staking as a service",
+              })
+            }}
+            to="/staking/saas"
+          >
             More on staking as a service
           </ButtonLink>
         </Content>
@@ -347,7 +375,18 @@ const StakingHierarchy = () => {
             Pooled staking is not native to the Ethereum network, and thus have
             been built out by third parties, and carry their own risk.
           </p>
-          <ButtonLink to="/staking/pools">More on pooled staking</ButtonLink>
+          <ButtonLink
+            onClick={() => {
+              trackCustomEvent({
+                eventCategory: `StakingHierarchy`,
+                eventAction: `Clicked`,
+                eventName: "clicked pooled staking",
+              })
+            }}
+            to="/staking/pools"
+          >
+            More on pooled staking
+          </ButtonLink>
         </Content>
       </Section>
       <Section number="4">

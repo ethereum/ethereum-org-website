@@ -6,6 +6,7 @@ import Link from "./Link"
 import Translation from "./Translation"
 
 import { translateMessageId } from "../utils/translations"
+import { trackCustomEvent } from "../utils/matomo"
 
 import SoloGlyph from "../assets/staking/staking-glyph-cpu.svg"
 import SaasGlyph from "../assets/staking/staking-glyph-cloud.svg"
@@ -74,6 +75,11 @@ const StakingComparison = ({ page, className }) => {
     title: "Solo staking",
     linkText: "Learn more about solo staking",
     to: "/staking/solo",
+    matomo: {
+      eventCategory: `StakingComparison`,
+      eventAction: `Clicked`,
+      eventName: "clicked solo staking",
+    },
     color: stakingGold,
     glyph: <StyledSoloGlyph />,
   }
@@ -81,6 +87,11 @@ const StakingComparison = ({ page, className }) => {
     title: "Staking as a service (SaaS)",
     linkText: "Learn more about staking as a service",
     to: "/staking/saas",
+    matomo: {
+      eventCategory: `StakingComparison`,
+      eventAction: `Clicked`,
+      eventName: "clicked staking as a service",
+    },
     color: stakingGreen,
     glyph: <StyledSaasGlyph />,
   }
@@ -88,6 +99,11 @@ const StakingComparison = ({ page, className }) => {
     title: "Pooled staking",
     linkText: "Learn more about pooled staking",
     to: "/staking/pools",
+    matomo: {
+      eventCategory: `StakingComparison`,
+      eventAction: `Clicked`,
+      eventName: "clicked pooled staking",
+    },
     color: stakingBlue,
     glyph: <StyledPoolGlyph />,
   }
@@ -135,13 +151,20 @@ const StakingComparison = ({ page, className }) => {
     <GradientContainer className={className}>
       <h2>Comparison with other options</h2>
       {selectedData.map(
-        ({ title, linkText, to, color, content, glyph }, idx) => (
+        ({ title, linkText, to, color, content, glyph, matomo }, idx) => (
           <Flex key={idx}>
             {!!glyph && <Glyph>{glyph}</Glyph>}
             <div>
               <h3 style={{ color }}>{title}</h3>
               <p>{content}</p>
-              <Link to={to}>{linkText}</Link>
+              <Link
+                onClick={() => {
+                  trackCustomEvent(matomo)
+                }}
+                to={to}
+              >
+                {linkText}
+              </Link>
             </div>
           </Flex>
         )

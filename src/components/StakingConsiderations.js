@@ -17,6 +17,7 @@ import Economical from "../assets/staking/economical.svg"
 import LiquidityToken from "../assets/staking/liquidity-token.svg"
 // Component imports
 import ButtonDropdown from "./ButtonDropdown"
+import { trackCustomEvent } from "../utils/matomo"
 
 const Container = styled.div`
   display: flex;
@@ -122,6 +123,11 @@ const data = {
       caution: "",
       warning: "Closed source",
       Svg: OpenSource,
+      matomo: {
+        eventCategory: `StakingConsiderations`,
+        eventAction: `Clicked`,
+        eventName: "clicked solo open source",
+      },
     },
     {
       title: "Audited",
@@ -131,6 +137,11 @@ const data = {
       caution: "",
       warning: "None",
       Svg: Audited,
+      matomo: {
+        eventCategory: `StakingConsiderations`,
+        eventAction: `Clicked`,
+        eventName: "clicked solo audited",
+      },
     },
     {
       title: "Bug bounty",
@@ -140,6 +151,11 @@ const data = {
       caution: "Completed",
       warning: "None",
       Svg: BugBounty,
+      matomo: {
+        eventCategory: `StakingConsiderations`,
+        eventAction: `Clicked`,
+        eventName: "clicked solo bug bounty",
+      },
     },
     {
       title: "Battle tested",
@@ -149,6 +165,11 @@ const data = {
       caution: "Live > 6 months",
       warning: "Newly released",
       Svg: BattleTested,
+      matomo: {
+        eventCategory: `StakingConsiderations`,
+        eventAction: `Clicked`,
+        eventName: "clicked solo battle tested",
+      },
     },
     {
       title: "Trustless",
@@ -158,6 +179,11 @@ const data = {
       caution: "",
       warning: "Trusted",
       Svg: Trustless,
+      matomo: {
+        eventCategory: `StakingConsiderations`,
+        eventAction: `Clicked`,
+        eventName: "clicked solo trustless",
+      },
     },
     {
       title: "Permissionless",
@@ -167,6 +193,11 @@ const data = {
       caution: "",
       warning: "Permission required",
       Svg: Permissionless,
+      matomo: {
+        eventCategory: `StakingConsiderations`,
+        eventAction: `Clicked`,
+        eventName: "clicked solo permissionless",
+      },
     },
     {
       title: "Multi-client",
@@ -176,6 +207,11 @@ const data = {
       caution: "",
       warning: "Limited to majority client",
       Svg: MultiClient,
+      matomo: {
+        eventCategory: `StakingConsiderations`,
+        eventAction: `Clicked`,
+        eventName: "clicked solo multi-client",
+      },
     },
     {
       title: "Self custody",
@@ -185,6 +221,11 @@ const data = {
       caution: "",
       warning: "Third-party custodian",
       Svg: SelfCustody,
+      matomo: {
+        eventCategory: `StakingConsiderations`,
+        eventAction: `Clicked`,
+        eventName: "clicked solo self custody",
+      },
     },
     {
       title: "Economical",
@@ -194,6 +235,11 @@ const data = {
       caution: "",
       warning: "32 ETH",
       Svg: Economical,
+      matomo: {
+        eventCategory: `StakingConsiderations`,
+        eventAction: `Clicked`,
+        eventName: "clicked solo economical",
+      },
     },
   ],
   saas: [
@@ -205,6 +251,11 @@ const data = {
       caution: "",
       warning: "Closed source",
       Svg: OpenSource,
+      matomo: {
+        eventCategory: `StakingConsiderations`,
+        eventAction: `Clicked`,
+        eventName: "clicked saas open source",
+      },
     },
     {
       title: "Audited",
@@ -214,6 +265,11 @@ const data = {
       caution: "",
       warning: "None",
       Svg: Audited,
+      matomo: {
+        eventCategory: `StakingConsiderations`,
+        eventAction: `Clicked`,
+        eventName: "clicked saas audited",
+      },
     },
     {
       title: "Bug bounty",
@@ -223,6 +279,11 @@ const data = {
       caution: "Completed",
       warning: "None",
       Svg: BugBounty,
+      matomo: {
+        eventCategory: `StakingConsiderations`,
+        eventAction: `Clicked`,
+        eventName: "clicked saas bug-bounty",
+      },
     },
     {
       title: "Battle tested",
@@ -232,6 +293,11 @@ const data = {
       caution: "Live > 6 months",
       warning: "Newly released",
       Svg: BattleTested,
+      matomo: {
+        eventCategory: `StakingConsiderations`,
+        eventAction: `Clicked`,
+        eventName: "clicked saas battle tested",
+      },
     },
     {
       title: "Permissionless",
@@ -241,6 +307,11 @@ const data = {
       caution: "",
       warning: "Permission required",
       Svg: Permissionless,
+      matomo: {
+        eventCategory: `StakingConsiderations`,
+        eventAction: `Clicked`,
+        eventName: "clicked saas permissionless",
+      },
     },
     {
       title: "Diverse clients",
@@ -250,6 +321,11 @@ const data = {
       caution: "Currently unknown",
       warning: "More than 50%",
       Svg: MultiClient,
+      matomo: {
+        eventCategory: `StakingConsiderations`,
+        eventAction: `Clicked`,
+        eventName: "clicked saas diverse clients",
+      },
     },
     {
       title: "Self custody",
@@ -259,6 +335,11 @@ const data = {
       caution: "",
       warning: "Third-party custodian",
       Svg: SelfCustody,
+      matomo: {
+        eventCategory: `StakingConsiderations`,
+        eventAction: `Clicked`,
+        eventName: "clicked saas self custody",
+      },
     },
   ],
   pools: [
@@ -270,6 +351,11 @@ const data = {
       caution: "",
       warning: "Closed source",
       Svg: OpenSource,
+      matomo: {
+        eventCategory: `StakingConsiderations`,
+        eventAction: `Clicked`,
+        eventName: "clicked pooled open source",
+      },
     },
     {
       title: "Audited",
@@ -279,6 +365,11 @@ const data = {
       caution: "",
       warning: "None",
       Svg: Audited,
+      matomo: {
+        eventCategory: `StakingConsiderations`,
+        eventAction: `Clicked`,
+        eventName: "clicked pooled audited",
+      },
     },
     {
       title: "Bug bounty",
@@ -288,6 +379,11 @@ const data = {
       caution: "Completed",
       warning: "None",
       Svg: BugBounty,
+      matomo: {
+        eventCategory: `StakingConsiderations`,
+        eventAction: `Clicked`,
+        eventName: "clicked pooled bug bounty",
+      },
     },
     {
       title: "Battle tested",
@@ -297,6 +393,11 @@ const data = {
       caution: "Live > 6 months",
       warning: "Newly released",
       Svg: BattleTested,
+      matomo: {
+        eventCategory: `StakingConsiderations`,
+        eventAction: `Clicked`,
+        eventName: "clicked pooled battle tested",
+      },
     },
     {
       title: "Trustless",
@@ -306,6 +407,11 @@ const data = {
       caution: "",
       warning: "Trusted",
       Svg: Trustless,
+      matomo: {
+        eventCategory: `StakingConsiderations`,
+        eventAction: `Clicked`,
+        eventName: "clicked pooled trustless",
+      },
     },
     {
       title: "Permissionless nodes",
@@ -315,6 +421,11 @@ const data = {
       caution: "",
       warning: "Permission required",
       Svg: Permissionless,
+      matomo: {
+        eventCategory: `StakingConsiderations`,
+        eventAction: `Clicked`,
+        eventName: "clicked pooled permissionless nodes",
+      },
     },
     {
       title: "Diverse clients",
@@ -324,6 +435,11 @@ const data = {
       caution: "Currently unknown",
       warning: "More than 50%",
       Svg: MultiClient,
+      matomo: {
+        eventCategory: `StakingConsiderations`,
+        eventAction: `Clicked`,
+        eventName: "clicked pooled diverse clients",
+      },
     },
     {
       title: "Liquidity token",
@@ -333,6 +449,11 @@ const data = {
       caution: "",
       warning: "No liquidity token",
       Svg: LiquidityToken,
+      matomo: {
+        eventCategory: `StakingConsiderations`,
+        eventAction: `Clicked`,
+        eventName: "clicked pooled liquidity token",
+      },
     },
   ],
 }
@@ -376,10 +497,13 @@ const StakingConsiderations = ({ page }) => {
       <List>
         {!!pageData && (
           <ul>
-            {pageData.map(({ title }, idx) => (
+            {pageData.map(({ title, matomo }, idx) => (
               <ListItem
                 key={idx}
-                onClick={(e) => handleSelection(idx)}
+                onClick={(e) => {
+                  handleSelection(idx)
+                  trackCustomEvent(matomo)
+                }}
                 active={idx === activeIndex}
               >
                 {title}

@@ -8,6 +8,7 @@ import ButtonLink from "./ButtonLink"
 import CalloutBanner from "./CalloutBanner"
 
 import { translateMessageId } from "../utils/translations"
+import { trackCustomEvent } from "../utils/matomo"
 
 const StyledCallout = styled(CalloutBanner)`
   margin: 4rem 0;
@@ -54,13 +55,40 @@ const StakingCommunityCallout = ({ className, id }) => {
       className={className}
     >
       <ButtonContaier>
-        <StyledButtonLink to="https://discord.io/ethstaker">
+        <StyledButtonLink
+          onClick={() => {
+            trackCustomEvent({
+              eventCategory: `StakingCommunityCallout`,
+              eventAction: `Clicked`,
+              eventName: "clicked discord",
+            })
+          }}
+          to="https://discord.io/ethstaker"
+        >
           Join Discord
         </StyledButtonLink>
-        <StyledButtonLink to="https://reddit.com/r/ethstaker">
+        <StyledButtonLink
+          onClick={() => {
+            trackCustomEvent({
+              eventCategory: `StakingCommunityCallout`,
+              eventAction: `Clicked`,
+              eventName: "clicked reddit",
+            })
+          }}
+          to="https://reddit.com/r/ethstaker"
+        >
           Join Reddit
         </StyledButtonLink>
-        <StyledButtonLink to="https://ethstaker.cc">
+        <StyledButtonLink
+          onClick={() => {
+            trackCustomEvent({
+              eventCategory: `StakingCommunityCallout`,
+              eventAction: `Clicked`,
+              eventName: "clicked website",
+            })
+          }}
+          to="https://ethstaker.cc"
+        >
           Visit Website
         </StyledButtonLink>
       </ButtonContaier>
