@@ -19,7 +19,7 @@ The first cryptocurrency was Bitcoin, created by Satoshi Nakamoto. Since Bitcoin
 
 ## What is ether? {#what-is-ether}
 
-**Ether (ETH)** is the cryptocurrency used for many things on the Ethereum network. Fundamentally, it is the only acceptable form of payment for transaction fees, and after [The Merge](/upgrades/merge) is also required in order to validate and propose blocks on Mainnet. Ether is also used as a primary form of collateral in the [DeFi](/defi) lending markets, as a unit of account in NFT marketplaces, as payment earned for performing services or selling real-world goods, and more.
+**Ether (ETH)** is the cryptocurrency used for many things on the Ethereum network. Fundamentally, it is the only acceptable form of payment for transaction fees, and after [The Merge](/upgrades/merge), it is also required in order to validate and propose blocks on Mainnet. Ether is also used as a primary form of collateral in the [DeFi](/defi) lending markets, as a unit of account in NFT marketplaces, as payment earned for performing services or selling real-world goods, and more.
 
 Ethereum allows developers to create [**decentralized applications (dapps)**](/developers/docs/dapps), which all share a pool of computing power. This shared pool is finite, so Ethereum needs a mechanism to determine who gets to use it. Otherwise, a dapp could accidentally or maliciously consume all network resources, which would block others from accessing it.
 
