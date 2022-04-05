@@ -158,6 +158,22 @@
       "description": "The ZKSpace platform consists of three main parts: a Layer 2 AMM DEX utilizing ZK-Rollups technology called ZKSwap, a payment service called ZKSquare, and an NFT marketplace called ZKSea.",
       "imageKey": "zkspace",
       "background": "black"
+    },
+    {
+      "name": "polygon Hermez",
+      "website": "https://hermez.io/",
+      "developerDocs": "https://docs.hermez.io/",
+      "l2beat": "https://l2beat.com/projects/hermez/",
+      "bridge": "https://wallet.hermez.io/login",
+      "bridgeWallets": ["MetaMask", "WalletConnect"],
+      "blockExplorer": "explorer.hermez.io",
+      "ecosystemPortal": "",
+      "tokenLists": "",
+      "noteKey": "",
+      "purpose": ["payments"],
+      "description": "Polygon Hermez is an open-source ZK-Rollup optimised for secure, low-cost and usable token transfers on the wings of Ethereum",
+      "imageKey": "hermez",
+      "background": "#7b40e5"
     }
   ]
 }
