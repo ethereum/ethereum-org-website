@@ -18,7 +18,7 @@ The original network address format was the 'multiaddr'. Multiaddr is a universa
 
 `/ip6/192.168.22.27/tcp/33000`
 
-For an Ethereum node, the multiaddr has the node-ID (hash of their public key), for example:
+For an Ethereum node, the multiaddr contains the node-ID (a hash of their public key):
 
 `/ip6/192.168.22.27/tcp/33000/p2p/5t7Nv7dG2d6ffbvAiewVsEwWweU3LdebSqX2y1bPrW8br`
 
