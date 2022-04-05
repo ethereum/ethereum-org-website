@@ -5,5 +5,5 @@ export const formatLocaleNumbers = (locale) => {
     return "en"
   }
 
-  return intl.locale
+  return locale
 }
