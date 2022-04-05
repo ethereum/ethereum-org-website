@@ -376,6 +376,10 @@ contract CryptoPizza is IERC721, ERC165 {
 
         // Checks that Pizza owner is the same as current user
         // Learn more: https://solidity.readthedocs.io/en/v0.5.10/control-structures.html#error-handling-assert-require-revert-and-exceptions
+
+        // note that address(0) is the zero address,
+        // indicating that pizza[id] is not yet allocated to a particular user.
+
         assert(pizzaToOwner[id] == address(0));
 
         // Maps the Pizza to the owner
