@@ -24,7 +24,7 @@ For an Ethereum node, the multiaddr contains the node-ID (a hash of their public
 
 ## Enode {#enode}
 
-An ethereum node can also be described using the enode URL scheme. The hexadecimal node-ID is encoded in the username portion of the URLseparated from the host using an @ sign. The hostname can only be given as an IP address, DNS nammes are not allowed. The port in the host name section is the TCP listening port. If the TCP and UDP (discovery) ports differ the UDP port is specified as a query parameter "discport".
+An Ethereum node can also be described using the enode URL scheme. The hexadecimal node-ID is encoded in the username portion of the URL separated from the host using an @ sign. The hostname can only be given as an IP address; DNS names are not allowed. The port in the hostname section is the TCP listening port. If the TCP and UDP (discovery) ports differ, the UDP port is specified as a query parameter "discport"
 
 In the following example, the node URL describes a node with IP address `10.3.58`, TCP port `30303` and UDP discovery port `30301`.
 
