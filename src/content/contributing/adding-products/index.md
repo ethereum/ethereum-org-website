@@ -5,7 +5,7 @@ lang: en
 sidebar: true
 ---
 
-_A note on adding wallets: as part of [our Q1 product roadmap](https://github.com/ethereum/ethereum-org-website/issues/5105), we are refining our wallets page. This will include refining the listing criteria for our wallets page. Until we have researched, established, and published refined listing criteria, we will not be actively adding new wallets to the website._ 
+_A note on adding wallets: as part of [our Q1 product roadmap](https://github.com/ethereum/ethereum-org-website/issues/5105), we are refining our wallets page. This will include refining the listing criteria for our wallets page. Until we have researched, established, and published refined listing criteria, we will not be actively adding new wallets to the website._
 
 # Adding Ethereum products {#adding-products}
 
