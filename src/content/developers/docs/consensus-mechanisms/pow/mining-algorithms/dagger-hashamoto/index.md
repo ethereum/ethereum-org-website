@@ -6,11 +6,9 @@ sidebar: true
 incomplete: false
 ---
 
-This page includes detailed information about the Dagger Hashamoto mining algorithm. Through a series of substanbtial upgrades, this algorithm was superceded by [Ethash](/ethash). However, this original version has historical significance and is included here because it was an important innovation in Ethereum's development. Proof-of-work mining itself will be deprecated in favour of proof-of-stake during the merge which is expected to happen in summer 2022. To understand the information in this page it is recommended to first read our introductory pages on [proof-of-work consensus](/pow) and [mining](/mining).
+This page includes detailed information about the Dagger Hashamoto mining algorithm. Through a series of substanbtial upgrades, this algorithm was superceded by [Ethash](/ethash). However, this original version has historical significance and is included here because it was an important innovation in Ethereum's development. Proof-of-work mining itself will be deprecated in favour of proof-of-stake during the merge which is expected to happen in summer 2022. To understand the information in this page it is recommended to first read our introductory pages on [proof-of-work consensus](/developers/docs/consensus-mechanisms/pow) and [mining](/developers/docs/consensus-mechanisms/pow/mining).
 
-Dagger Hashimoto was a precursor research implementation and specification for the mining algorithm for Ethereum 1.0, while it has been superceded by [Ethash](#ethash).
-
-The information in this article shall be kept for historical purposes.
+Dagger Hashimoto was a precursor research implementation and specification for the mining algorithm for Ethereum, while it has been superceded by [Ethash](#ethash). The information on this page is for historical interest - it is not up to date with current Ethereum mining.
 
 Dagger Hashimoto aims to simultaneously satisfy two goals:
 
@@ -20,18 +18,6 @@ Dagger Hashimoto aims to simultaneously satisfy two goals:
 With an additional modification, we also specify how to fulfill a third goal if desired, but at the cost of additional complexity:
 
 **Full chain storage**: mining should require storage of the complete blockchain state (due to the irregular structure of the Ethereum state trie, we anticipate that some pruning will be possible, particularly of some often-used contracts, but we want to minimize this).
-
-Dagger Hashimoto builds on two key pieces of previous work:
-
-- [Hashimoto](http://diyhpl.us/%7Ebryan/papers2/bitcoin/meh/hashimoto.pdf), an algorithm by Thaddeus Dryja which intends to achieve ASIC resistance by being IO-bound, ie. making memory reads the limiting factor in the mining process. The theory is that RAM is in principle inherently a much more generic ingredient than computation, and billions of dollars of research already go into optimizing it for different use cases which often involve near-random access patterns (hence "random access memory"); hence, existing RAM is likely to be moderately close to optimal for evaluating the algorithm. Hashimoto uses the blockchain as a source of data, simultaneously satisfying (1) and (3) above.
-- [Dagger](http://www.hashcash.org/papers/dagger.html), an algorithm by Vitalik Buterin which uses directed acyclic graphs to simultaneously achieve memory-hard computation but memory-easy validation. The core principle is that each individual nonce only requires a small portion of a large total data tree, and recomputing the subtree for each nonce is prohibitive for mining - hence the need to store the tree - but okay for a single nonce's worth of verification. Dagger was meant to be an alternative to existing memory-hard algorithms like [Scrypt](http://en.wikipedia.org/wiki/Scrypt), which are memory-hard but are also very hard to verify when their memory-hardness is increased to genuinely secure levels. However, Dagger was proven to be vulnerable to shared memory hardware acceleration [by Sergio Lerner](https://bitslog.wordpress.com/2014/01/17/ethereum-dagger-pow-is-flawed/) and was then dropped in favor of other avenues of research.
-
-Approaches that were tried between Dagger and Dagger Hashimoto but are currently not our primary focus include:
-
-- "Blockchain-based proof of work" - a proof of work function that involves running contracts taken from the blockchain. The approach was abandoned because it was long-range attack vulnerabilities, since attackers can create forks and populate them with contracts that they have a secret fast "trapdoor" execution mechanism for.
-- "Random circuit" - a proof of work function developed largely by Vlad Zamfir that involves generating a new program every 1000 nonces - essentially, choosing a new hash function each time, faster than even FPGAs can reconfigure. The approach was temporarily put aside because it was difficult to see what mechanism one can use to generate random programs that would be general enough so that specialization gains would be low; however, we see no fundamental reasons why the concept cannot be made to work.
-
-The difference between Dagger Hashimoto and Hashimoto is that, instead of using the blockchain as a data source, Dagger Hashimoto uses a custom-generated 1 GB data set, which updates based on block data every N blocks. The data set is generated using the Dagger algorithm, allowing for the efficient calculation of a subset specific to every nonce for the light client verification algorithm. The difference between Dagger Hashimoto and Dagger is that, unlike in the original Dagger, the dataset used to query the block is semi-permanent, only being updated at occasional intervals (eg. once per week). This means that the portion of the effort that goes toward generating the dataset is close to zero, so Sergio Lerner's arguments regarding shared memory speedups become negligible.
 
 ## DAG Generation
 
