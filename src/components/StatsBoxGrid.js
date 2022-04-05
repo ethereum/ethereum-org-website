@@ -11,6 +11,7 @@ import Link from "./Link"
 import Icon from "./Icon"
 
 import { isLangRightToLeft, translateMessageId } from "../utils/translations"
+import { formatLocaleNumbers } from "../utils/formatLocaleNumbers"
 import { getData } from "../utils/cache"
 
 const Value = styled.span`
@@ -259,8 +260,7 @@ const RangeSelector = ({ state, setState }) => (
 
 const StatsBoxGrid = () => {
   const intl = useIntl()
-  // Overwrites the default Persian numbering of the Farsi language to use Hindu-Arabic numerals (0-9)
-  const localeForStatsBoxNumbers = intl.locale === "fa" ? "en" : intl.locale
+  const localeForStatsBoxNumbers = formatLocaleNumbers(intl.locale)
 
   const [ethPrices, setEthPrices] = useState({
     data: [],

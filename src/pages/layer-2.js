@@ -30,6 +30,7 @@ import { CardGrid, Content, Page } from "../components/SharedStyledComponents"
 // Utils
 import { getData } from "../utils/cache"
 import { translateMessageId } from "../utils/translations"
+import { formatLocaleNumbers } from "../utils/formatLocaleNumbers"
 
 // Styles
 
