@@ -14,7 +14,7 @@ Some understanding of Ethereum's [networking layer](/src/content/developers/docs
 
 ## Multiaddr {#multiaddr}
 
-The original network address format was the "multiaddr". This is a universal format not only designed for Ethereum nodes but other peer-to-peer networks too. Addresses are represented as key-value pairs with keys and values separated with a forward slash, e.g. the multiaddr for a node with IPv4 address `192.168.22.27` listening to TCP port `33000` looks like:
+The original network address format was the 'multiaddr'. Multiaddr is a universal format designed for peer-to-peer networks. Addresses are represented as key-value pairs with keys and values separated with a forward slash. For example, the multiaddr for a node with IPv4 address `192.168.22.27` listening to TCP port `33000` looks like:
 
 `/ip6/192.168.22.27/tcp/33000`
 
