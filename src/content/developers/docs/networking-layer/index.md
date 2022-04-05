@@ -14,7 +14,13 @@ Some knowledge of Ethereum [nodes and clients](/src/content/developers/docs/node
 
 ## The Execution Layer {#execution-layer}
 
-The execution layer's networking protocols can be divided into two stacks: the first is the discovery stack which is built on top of UDP and allows a new node to find peers to connect to. The second is the [DevP2P](https://github.com/ethereum/devp2p) stack that sits on top of TCP and allows nodes to exchange information. These stacks act in parallel, with the discovery stack feeding new network participants into the network, and the DevP2P stack enabling their interactions. DevP2P is itself a whole stack of protocols that are implemented by Ethereum to establish and maintain the peer-to-peer network.
+The execution layer's networking protocols is divided into two stacks:
+
+- the discovery stack: built on top of UDP and allows a new node to find peers to connect to
+
+- the DevP2P stack: sits on top of TCP and enables nodes to exchange information
+
+Both stacks work in parallel. The discovery stack feeds new network participants into the network, and the DevP2P stack enables their interactions.
 
 ### Discovery {#discovery}
 
@@ -42,7 +48,7 @@ UDP does not support any error checking, resending of failed packets, or dynamic
 
 ## DevP2P {#devp2p}
 
-After new nodes enter the network, their interactions are governed by protocols in the DevP2P stack. These all sit on top of TCP and include the RLPx transport protocol, wire protocol and several sub-protocols. [RLPx](https://github.com/ethereum/devp2p/blob/master/rlpx.md) is the protocol governing initiating, authenticating and maintaining sessions between nodes. RLPx encodes messages using RLP (Recursive Length Prefix) which is a very space-efficient method of encoding data into a minimal structure for sending between nodes.
+DevP2P is itself a whole stack of protocols that Ethereum implements to establish and maintain the peer-to-peer network. After new nodes enter the network, their interactions are governed by protocols in the [DevP2P](https://github.com/ethereum/devp2p) stack. These all sit on top of TCP and include the RLPx transport protocol, wire protocol and several sub-protocols. [RLPx](https://github.com/ethereum/devp2p/blob/master/rlpx.md) is the protocol governing initiating, authenticating and maintaining sessions between nodes. RLPx encodes messages using RLP (Recursive Length Prefix) which is a very space-efficient method of encoding data into a minimal structure for sending between nodes.
 
 A RLPx session between two nodes begins with an initial cryptographic handshake. This involves the node sending an auth message which is then verified by the peer. On successful verification, the peer generates an auth-acknowledgement message to return to the initiator node. This is a key-exchange process that enables the nodes to communicate privately and securely. A successful cryptographic handshake then triggers both nodes to to send a "hello" message to one another "on the wire". The wire protocol is initiated by a successful exchange of hello messages.
 
