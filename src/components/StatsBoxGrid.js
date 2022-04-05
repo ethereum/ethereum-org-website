@@ -259,6 +259,9 @@ const RangeSelector = ({ state, setState }) => (
 
 const StatsBoxGrid = () => {
   const intl = useIntl()
+  // Overwrites the default Persian numbering of the Farsi language to use Hindu-Arabic numerals (0-9)
+  const localeForStatsBoxNumbers = intl.locale === "fa" ? "en" : intl.locale
+
   const [ethPrices, setEthPrices] = useState({
     data: [],
     value: 0,
@@ -286,7 +289,7 @@ const StatsBoxGrid = () => {
 
   useEffect(() => {
     const formatPrice = (price) => {
-      return new Intl.NumberFormat(intl.locale, {
+      return new Intl.NumberFormat(localeForStatsBoxNumbers, {
         style: "currency",
         currency: "USD",
         minimumSignificantDigits: 3,
@@ -295,7 +298,7 @@ const StatsBoxGrid = () => {
     }
 
     const formatTVL = (tvl) => {
-      return new Intl.NumberFormat(intl.locale, {
+      return new Intl.NumberFormat(localeForStatsBoxNumbers, {
         style: "currency",
         currency: "USD",
         notation: "compact",
@@ -305,7 +308,7 @@ const StatsBoxGrid = () => {
     }
 
     const formatTxs = (txs) => {
-      return new Intl.NumberFormat(intl.locale, {
+      return new Intl.NumberFormat(localeForStatsBoxNumbers, {
         notation: "compact",
         minimumSignificantDigits: 3,
         maximumSignificantDigits: 4,
@@ -313,7 +316,7 @@ const StatsBoxGrid = () => {
     }
 
     const formatNodes = (nodes) => {
-      return new Intl.NumberFormat(intl.locale, {
+      return new Intl.NumberFormat(localeForStatsBoxNumbers, {
         minimumSignificantDigits: 3,
         maximumSignificantDigits: 4,
       }).format(nodes)
