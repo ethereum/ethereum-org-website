@@ -90,6 +90,13 @@ const MobileButton = styled.div`
   }
 `
 
+const MobileButtonDropdown = styled(StyledButtonDropdown)`
+  margin-bottom: 0rem;
+  @media (min-width: ${(props) => props.theme.breakpoints.l}) {
+    display: none;
+  }
+`
+
 // Apply styles for classes within markdown here
 const ContentContainer = styled.article`
   flex: 1 1 ${(props) => props.theme.breakpoints.l};
@@ -646,6 +653,9 @@ const StakingPage = ({ data }) => {
             <FeedbackCard />
           </Content>
         </ContentContainer>
+        <MobileButton>
+          <MobileButtonDropdown list={dropdownLinks} />
+        </MobileButton>
       </Page>
     </PageContainer>
   )
