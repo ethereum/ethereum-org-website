@@ -1161,6 +1161,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="http://hoo.be/tomaspasie"><img src="https://avatars.githubusercontent.com/u/42984839?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Tomas Pasiecznik</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=tomaspasie" title="Code">💻</a></td>
     <td align="center"><a href="https://strongerxi.github.io/ryanguo99.github.io/"><img src="https://avatars.githubusercontent.com/u/26714592?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Xiangxi Guo (Ryan)</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3AStrongerXi" title="Bug reports">🐛</a></td>
     <td align="center"><a href="http://ibistech.site"><img src="https://avatars.githubusercontent.com/u/47420082?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Andile Mchunu</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=SkywalkingZulu" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://noahliechti.ch"><img src="https://avatars.githubusercontent.com/u/38284563?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Noah</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=noahliechti" title="Documentation">📖</a></td>
   </tr>
 </table>
 
