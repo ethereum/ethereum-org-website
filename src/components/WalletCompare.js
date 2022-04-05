@@ -482,16 +482,16 @@ const WalletCompare = ({ location }) => {
             <TagContainer>
               {selectedFeatures.map((feature) => (
                 <Tag
-                  name={feature.title}
                   key={feature.id}
+                  name={translateMessageId(feature.title, intl)}
                   onSelect={handleSelect}
                   value={feature.id}
                 />
               ))}
               {remainingFeatures.map((feature) => (
                 <Tag
-                  name={feature.title}
                   key={feature.id}
+                  name={translateMessageId(feature.title, intl)}
                   onSelect={handleSelect}
                   value={feature.id}
                   isActive={false}
