@@ -29,8 +29,10 @@ import { CardGrid, Content, Page } from "../components/SharedStyledComponents"
 
 // Utils
 import { getData } from "../utils/cache"
-import { translateMessageId } from "../utils/translations"
-import { formatLocaleNumbers } from "../utils/formatLocaleNumbers"
+import {
+  translateMessageId,
+  getLocaleForNumberFormat,
+} from "../utils/translations"
 
 // Styles
 
@@ -181,7 +183,7 @@ const StatDivider = styled.div`
 
 const Layer2Page = ({ data }) => {
   const intl = useIntl()
-  const localeForStatsBoxNumbers = formatLocaleNumbers(intl.locale)
+  const localeForStatsBoxNumbers = getLocaleForNumberFormat(intl.locale)
   const [tvl, setTVL] = useState("loading...")
   const [percentChangeL2, setL2PercentChange] = useState("loading...")
   const [averageFee, setAverageFee] = useState("loading...")

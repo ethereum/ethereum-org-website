@@ -10,9 +10,12 @@ import Tooltip from "./Tooltip"
 import Link from "./Link"
 import Icon from "./Icon"
 
-import { isLangRightToLeft, translateMessageId } from "../utils/translations"
+import {
+  isLangRightToLeft,
+  translateMessageId,
+  getLocaleForNumberFormat,
+} from "../utils/translations"
 import { getData } from "../utils/cache"
-import { formatLocaleNumbers } from "../utils/formatLocaleNumbers"
 
 const Value = styled.span`
   position: absolute;
@@ -260,7 +263,7 @@ const RangeSelector = ({ state, setState }) => (
 
 const StatsBoxGrid = () => {
   const intl = useIntl()
-  const localeForStatsBoxNumbers = formatLocaleNumbers(intl.locale)
+  const localeForStatsBoxNumbers = getLocaleForNumberFormat(intl.locale)
 
   const [ethPrices, setEthPrices] = useState({
     data: [],
