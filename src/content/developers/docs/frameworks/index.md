@@ -36,7 +36,7 @@ Before diving into frameworks, we recommend you first read through our introduct
 - [trufflesuite.com](https://www.trufflesuite.com/)
 - [GitHub](https://github.com/trufflesuite/truffle)
 
-**Hardhat -** **_Ethereum development environment for professionals_**
+**Hardhat -** **_Ethereum development environment for professionals._**
 
 - [hardhat.org](https://hardhat.org)
 - [GitHub](https://github.com/nomiclabs/hardhat)
@@ -56,7 +56,7 @@ Before diving into frameworks, we recommend you first read through our introduct
 - [Documentation](https://embark.status.im/docs/)
 - [GitHub](https://github.com/embark-framework/embark)
 
-**Web3j -** **_A platform for developing blockchain applications on the JVM_**
+**Web3j -** **_A platform for developing blockchain applications on the JVM._**
 
 - [Homepage](https://www.web3labs.com/web3j-sdk)
 - [Documentation](https://docs.web3j.io)
@@ -77,7 +77,7 @@ Before diving into frameworks, we recommend you first read through our introduct
 
 - [GitHub](https://github.com/austintgriffith/scaffold-eth)
 
-**The Graph -** **_The Graph for querying blockchain data efficiently_**
+**The Graph -** **_The Graph for querying blockchain data efficiently._**
 
 - [Website](https://thegraph.com/)
 - [Tutorial](/developers/tutorials/the-graph-fixing-web3-data-querying/)
