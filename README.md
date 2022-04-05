@@ -1159,6 +1159,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://mo-fu.org"><img src="https://avatars.githubusercontent.com/u/866589?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Yuta Kurotaki</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=kurotaky" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/Claudio2000"><img src="https://avatars.githubusercontent.com/u/32911415?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Claudio2000</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=Claudio2000" title="Documentation">📖</a> <a href="https://github.com/ethereum/ethereum-org-website/commits?author=Claudio2000" title="Code">💻</a></td>
     <td align="center"><a href="http://hoo.be/tomaspasie"><img src="https://avatars.githubusercontent.com/u/42984839?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Tomas Pasiecznik</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=tomaspasie" title="Code">💻</a></td>
+    <td align="center"><a href="https://strongerxi.github.io/ryanguo99.github.io/"><img src="https://avatars.githubusercontent.com/u/26714592?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Xiangxi Guo (Ryan)</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3AStrongerXi" title="Bug reports">🐛</a></td>
   </tr>
 </table>
 
