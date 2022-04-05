@@ -14,7 +14,7 @@ Some understanding of Ethereum's [networking layer](/src/content/developers/docs
 
 ## Multiaddr {#multiaddr}
 
-The original network address format was the 'multiaddr'. Multiaddr is a universal format designed for peer-to-peer networks. Addresses are represented as key-value pairs with keys and values separated with a forward slash. For example, the multiaddr for a node with IPv4 address `192.168.22.27` listening to TCP port `33000` looks like:
+The original Ethereum node address format was the 'multiaddr'. Multiaddr is a universal format designed for peer-to-peer networks. Addresses are represented as key-value pairs with keys and values separated with a forward slash. For example, the multiaddr for a node with IPv4 address `192.168.22.27` listening to TCP port `33000` looks like:
 
 `/ip6/192.168.22.27/tcp/33000`
 
@@ -24,7 +24,7 @@ For an Ethereum node, the multiaddr contains the node-ID (a hash of their public
 
 ## Enode {#enode}
 
-An Ethereum node can also be described using the enode URL scheme. The hexadecimal node-ID is encoded in the username portion of the URL separated from the host using an @ sign. The hostname can only be given as an IP address; DNS names are not allowed. The port in the hostname section is the TCP listening port. If the TCP and UDP (discovery) ports differ, the UDP port is specified as a query parameter "discport"
+An enode is a way to identify an Ethereum node using a URL address format. The hexadecimal node-ID is encoded in the username portion of the URL separated from the host using an @ sign. The hostname can only be given as an IP address; DNS names are not allowed. The port in the hostname section is the TCP listening port. If the TCP and UDP (discovery) ports differ, the UDP port is specified as a query parameter "discport"
 
 In the following example, the node URL describes a node with IP address `10.3.58`, TCP port `30303` and UDP discovery port `30301`.
 

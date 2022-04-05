@@ -14,22 +14,22 @@ Some knowledge of Ethereum [nodes and clients](/src/content/developers/docs/node
 
 ## The Execution Layer {#execution-layer}
 
-The execution layer's networking protocols can be divided into two stacks: the first is the discovery stack which is built on top of UDP and allows a new node to find peers to connect to. The second is the [DevP2P](https://github.com/ethereum/devp2p) stack that sits on top of TCP and allows nodes to exchange information. These layers act in parallel, with the discovery layer feeding new network participants into the network, and the DevP2P layer enabling their interactions. DevP2P is itself a whole stack of protocols that are implemented by Ethereum to establish and maintain the peer-to-peer network.
+The execution layer's networking protocols can be divided into two stacks: the first is the discovery stack which is built on top of UDP and allows a new node to find peers to connect to. The second is the [DevP2P](https://github.com/ethereum/devp2p) stack that sits on top of TCP and allows nodes to exchange information. These stacks act in parallel, with the discovery stack feeding new network participants into the network, and the DevP2P stack enabling their interactions. DevP2P is itself a whole stack of protocols that are implemented by Ethereum to establish and maintain the peer-to-peer network.
 
 ### Discovery {#discovery}
 
-Discovery is the process of finding other nodes in network. This is bootstrapped using a small set of bootnodes that are [hardcoded](https://github.com/ethereum/go-ethereum/blob/master/params/bootnodes.go) into the client. These bootnodes exist to introduce a new node to a set of peers - this is their sole purpose, they do not participate in normal client tasks like syncing the chain, and they are only used the very first time a client is spun up.
+Discovery is the process of finding other nodes in network. This is bootstrapped using a small set of bootnodes (nodes whose addresses are [hardcoded](https://github.com/ethereum/go-ethereum/blob/master/params/bootnodes.go) into the client so they can be found immediately and connect the client to peers). These bootnodes only exist to introduce a new node to a set of peers - this is their sole purpose, they do not participate in normal client tasks like syncing the chain, and they are only used the very first time a client is spun up.
 
 The protocol used for the node-bootnode interactions is a modified form of [Kademlia](https://medium.com/coinmonks/a-brief-overview-of-kademlia-and-its-use-in-various-decentralized-platforms-da08a7f72b8f) which uses a distributed hash table to share lists of nodes. Each node has a version of this table containing the information required to connect to its closest peers. This 'closeness' is not geographical - distance is defined by the similarity of the node's ID. Each node's table is regularly refreshed as a security feature. For example, in the [Discv5](https://github.com/ethereum/devp2p/tree/master/discv5), discovery protocol nodes are also able to send 'ads' that display the subprotocols that the client supports, allowing peers to negotiate about the protocols they can both use to communicate over.
 
-Discovery starts wih a game of PING-PONG. A successful PING-PONG "bonds" the new node to a boot node. The initial message that alerts a boot node to the existence of a new node entering the network is a `PING`. This `PING` includes hashed information about the new node, the boot node and an expiry time-stamp. The boot node receives the PING and returns a `PONG` containing the `PING` hash. If the `PING` and `PONG` hashes match then the connection between the new node and boot node is verified and they are said to have "bonded".
+Discovery starts wih a game of PING-PONG. A successful PING-PONG "bonds" the new node to a bootnode. The initial message that alerts a bootnode to the existence of a new node entering the network is a `PING`. This `PING` includes hashed information about the new node, the bootnode and an expiry time-stamp. The bootnode receives the PING and returns a `PONG` containing the `PING` hash. If the `PING` and `PONG` hashes match then the connection between the new node and bootnode is verified and they are said to have "bonded".
 
-Once bonded, the new node can send a `FIND-NEIGHBOURS` request to the boot node. The data returned by the boot node includes a list of peers that the new node can connect to. If the nodes are not bonded, the `FIND-NEIGHBOURS` request will fail, so the new node will not be able to enter the network.
+Once bonded, the new node can send a `FIND-NEIGHBOURS` request to the bootnode. The data returned by the bootnode includes a list of peers that the new node can connect to. If the nodes are not bonded, the `FIND-NEIGHBOURS` request will fail, so the new node will not be able to enter the network.
 
-Once the new node receives a list of neighbours from the boot node, it begins a PING-PONG exchange with each of them. Successful PING-PONGs bond the new node with its neighbours, enabling message exchange.
+Once the new node receives a list of neighbours from the bootnode, it begins a PING-PONG exchange with each of them. Successful PING-PONGs bond the new node with its neighbours, enabling message exchange.
 
 ```
-start client --> connect to boot node --> bond to boot node --> find neighbours --> bond to neighbours
+start client --> connect to bootnode --> bond to bootnode --> find neighbours --> bond to neighbours
 ```
 
 #### ENR: Ethereum Node Records {#enr}
