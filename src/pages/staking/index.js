@@ -22,6 +22,9 @@ import {
   Content,
   Page,
   Divider,
+  OptionContainer,
+  Option,
+  OptionText,
 } from "../../components/SharedStyledComponents"
 
 const StyledCallout = styled(CalloutBanner)`
@@ -86,40 +89,6 @@ const Box = styled.div`
 
 const Vision = styled.div`
   margin-top: 4rem;
-`
-
-const OptionContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  margin-bottom: 4rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    flex-direction: column;
-  }
-`
-
-const Option = styled.div`
-  border-radius: 32px;
-  border: 1px solid
-    ${(props) =>
-      props.isActive ? props.theme.colors.primary : props.theme.colors.text};
-  color: ${(props) =>
-    props.isActive ? props.theme.colors.primary : props.theme.colors.text};
-  box-shadow: ${(props) =>
-    props.isActive ? props.theme.colors.tableBoxShadow : `none`};
-  display: flex;
-  align-items: center;
-  padding: 1rem 1.5rem;
-  margin: 0.5rem;
-  cursor: pointer;
-`
-
-const OptionText = styled.div`
-  font-size: 1.5rem;
-  line-height: 100%;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    font-size: 1rem;
-    font-weight: 600;
-  }
 `
 
 const StakeContainer = styled.div`
