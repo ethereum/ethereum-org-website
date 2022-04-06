@@ -148,6 +148,8 @@ Have a suggestion for a staking tool we missed? Check out our [product listing p
 - [Somer Esat](https://github.com/SomerEsat/ethereum-staking-guide) - Linux (CLI)
 - [Rocket Pool Node Operators](https://rocketpool.net/node-operators) - Linux, macOS (CLI)
 
+<!-- TODO: beaconcha.in/education page -->
+
 ## FAQ {#faq}
 
 These are a few of the most common questions about staking that are worth knowing about.
@@ -163,28 +165,33 @@ If solo staking seems too demanding you you, consider using a <a href="/staking/
 </ExpandableCard>
 
 <ExpandableCard title="Is staking already live?">
-TODO: Answer to try and clarify a synopsis of the Beacon Chain and The Merge.
+Yes and no. Staking has been live since December 1, 2020, but until the Merge happens, the proof-of-stake consensus remains isolated on its own chain, while the existing Ethereum network as we know it continues to operate using proof-of-work. These two chains start separate, but with the Merge, proof-of-work will be fully deprecated, and proof-of-stake will become the sole means of consensus from here-on-out.
 
-</ExpandableCard>
-
-<ExpandableCard title="I'm running the Beacon Chain, is that enough?">
-TODO: Answer about how you need to run both clients as of The Merge... content on Figma?
+This means that staking is currently live for users to deposit their ETH, run a validator client, and start earning rewards. After the Merge, stakers will earn higher rewards as validators begin to process transactions and earn fee tips on top of protocol rewards. After the Shanghai update (planned to follow the Merge by a few months), stakers will then be able to withdraw rewards and funds from their validator balance.
 </ExpandableCard>
 
 <ExpandableCard title="Which client is best?">
-Individual clients may vary slightly in terms of performance of user interface, as each are developed by different teams, using a variety of programming languages. That being said, none of them are "the best." All production clients are excellent pieces of software, that all perform the same basic functions to sync and interact with the blockchain.
+Individual clients may vary slightly in terms of performance and user interface, as each are developed by different teams using a variety of programming languages. That being said, none of them are "best." All production clients are excellent pieces of software, that all perform the same core functions to sync and interact with the blockchain.
 
-Since all production clients provide the same basic functionality, it is actually very important that you choose a <strong>minority client</strong>, meaning a client that is NOT currently being used by a majority of validators on the network. This may sound counterintuitive, but running a majority or supermajority client puts you at an increased risk of slashing in the event of a bug in that client. Running a minority client drastically limits these risks.
+Since all production clients provide the same basic functionality, it is actually very important that you choose a <strong>minority client</strong>, meaning any client that is NOT currently being used by a majority of validators on the network. This may sound counterintuitive, but running a majority or supermajority client puts you at an increased risk of slashing in the event of a bug in that client. Running a minority client drastically limits these risks.
 
 <a href="https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA">Learn more about why client diversity is critical</a>
 </ExpandableCard>
 
-<ExpandableCard title="Can I just use a VPS (virtual private service)?">
-TODO: Answer about cloud servers being detrimental to centralization of the network. If AWS or DigitalOcean go down, you're penalties will be much larger, and you'll be at an increased risk of slashing. ie: >1/3 the network uses AWS and it goes down or is targetted by regulation... The network would no longer finalize, and you, by using AWS, could be part of the validators set that would be subject to quadratic leaking.
+<ExpandableCard title="Can I just use a VPS (virtual private server)?">
+Although a virtual private server (VPS) can be used as a replacement to home hardware, the physical access and location of your validator client _does matter._ Centralized cloud solutions such as Amazon Web Services or Digital Ocean allow the convenience of not having to obtain and operate hardware, at the expense of centralizing the network.
+
+The more validator clients running on a single centralized cloud storage solution, the more dangerous it becomes for these users. Any event that takes these providers offline, whether by an attack, regulatory demands, or just power/internet outages, will result in every validator client that relies on this server to go offline at the same time.
+
+Offline penalties are proportional to how many others are offline at the same time. Using a VPS greatly increases the risk that offline penalties will be more severe, and increases your risk of quadratic leaking or slashing in the event the outage is large enough. To minimize your own risk, and the risk to the network, users are strongly encouraged to obtain and operate their own hardware.
+
+<a href="https://kb.beaconcha.in/rewards-and-penalties">More on rewards and penalties</a>
 </ExpandableCard>
 
 <ExpandableCard title="Do I need to do anything before The Merge?">
-Lorem ipsum...
+Anyone currently running a CL (Beacon Chain) client will be required to also run an EL client after the merge. This is a result of the new Engine API that will be used to interface between the two layers. Anyone currently running a Beacon Chain without an execution layer client will need to sync the execution layer before the merge to continue being in sync with the network.
+
+The Merge will also bring unburnt transaction fees to validators. These fees to not accumulate to the balance associated with the validator keys, but instead can be directly to a regular Ethereum address of your choice. In order to properly receive the priority fees/tips from proposed blocks, stakers must update their client settings with the address they would like to receive tips at. See individual client documentation for details.
 </ExpandableCard>
 
 ## Further reading {#further-reading}
