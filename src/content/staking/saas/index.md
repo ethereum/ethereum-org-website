@@ -68,7 +68,7 @@ Have a suggestion for a staking-as-a-service provider we missed? Check out our [
 <ExpandableCard title="So there are two sets of keys?">
 Yes. Each account is comprised of both <em>signing</em> keys, and <em>withdrawal</em> keys. In order for a validator to attest to the state of the chain, participate in sync committees and propose blocks, the signing keys much be readily accessible by a validator client. These must be connected to the internet in some form, and are thus inherently considered to be "hot" keys. This is a requirement for your validator to be able to attest, and thus the keys used to transfer or withdraw funds are separated for security reasons.
 
-All of these keys can always be regenerated in a reproducible manner using your 24-word mnemonic seed phrase. <em>Make certain you back this seed phrase up safely or you will be unable to generate your withdraw keys when the time comes.
+All of these keys can always be regenerated in a reproducible manner using your 24-word mnemonic seed phrase. <em>Make certain you back this seed phrase up safely or you will be unable to generate your withdraw keys when the time comes</em>.
 </ExpandableCard>
 
 <ExpandableCard title="When can I withdraw?">
