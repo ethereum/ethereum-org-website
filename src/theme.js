@@ -241,9 +241,13 @@ const lightColors = {
   stakingPillPlatform: "#cd9df3",
   stakingPillUI: "#ebd27a",
   stakingGold: "#be8d10",
+  stakingGoldFill: "#fef9ef",
   stakingGreen: "#129e5b",
+  stakingGreenFill: "#f7faf1",
   stakingBlue: "#0b83dc",
+  stakingBlueFill: "#f1fcf5",
   stakingRed: "#a0524c",
+  stakingRedFill: "#f8fbf9",
   layer2Gradient:
     "linear-gradient(85.12deg, rgba(185, 185, 241, 0.2) 0%, rgba(84, 132, 234, 0.2) 56.29%, rgba(58, 142, 137, 0.2) 99.99%)",
 }
@@ -339,9 +343,13 @@ const darkColors = {
   stakingPillPlatform: "#cd9df3",
   stakingPillUI: "#ebd27a",
   stakingGold: "#F2BB2F",
+  stakingGoldFill: "#373228",
   stakingGreen: "#49DE96",
+  stakingGreenFill: "#30342b",
   stakingBlue: "#A9D3F2",
+  stakingBlueFill: "#2b352f",
   stakingRed: "#D6BBB9",
+  stakingRedFill: "#313432",
   layer2Gradient:
     "linear-gradient(83.46deg, rgba(127, 127, 213, 0.2) 7.03%, rgba(138, 168, 231, 0.2) 52.42%, rgba(145, 234, 228, 0.2) 98.77%), #1E1E1E",
 }

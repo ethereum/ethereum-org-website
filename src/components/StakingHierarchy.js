@@ -78,6 +78,20 @@ const Section = styled.div`
         return "#000000"
     }
   }};
+  --fill-color: ${({ number, theme }) => {
+    switch (number) {
+      case "1":
+        return theme.colors.stakingGoldFill
+      case "2":
+        return theme.colors.stakingGreenFill
+      case "3":
+        return theme.colors.stakingBlueFill
+      case "4":
+        return theme.colors.stakingRedFill
+      default:
+        return "#000000"
+    }
+  }};
   display: grid;
   position: relative;
   gap: 0 2rem;
@@ -103,6 +117,10 @@ const Section = styled.div`
 
   path {
     fill: var(--color);
+  }
+
+  #transparentBackground {
+    fill: var(--fill-color);
   }
 
   .subtext {
@@ -200,7 +218,8 @@ const StyledEtherSvg = styled(EtherSvg)`
 `
 
 const Line = styled.aside`
-  grid-area: decorator;
+  grid-column: 1;
+  grid-row: 1/3;
   width: 100%;
   height: 100%;
   text-align: center;
@@ -208,11 +227,11 @@ const Line = styled.aside`
   position: relative;
   &::after {
     content: "";
-    height: 100%;
+    height: calc(100% - 50px);
     border-left: solid 4px orange;
     position: absolute;
     left: calc(50% - 2px);
-    top: 0;
+    top: 50px;
     z-index: 1;
   }
   @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
