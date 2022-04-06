@@ -68,4 +68,4 @@ Meskipun situs web ini adalah sumber terbuka dan siapa pun dapat mengerjakannya,
 
 Kami akan memposting lowongan pekerjaan apa pun di sini. Jika Anda tidak melihat posisi pekerjaan yang sesuai untuk Anda, kunjungi [Discord](https://discord.gg/CetY6Y4) dan beri tahu kami bagaimana Anda ingin bekerja dengan kami!
 
-Ingin pekerjaan di luar tim ethereum.org? [Lihat pekerjaan terkait Ethereum lainnya](/community/#ethereum-jobs).
+Ingin pekerjaan di luar tim ethereum.org? [Lihat pekerjaan terkait Ethereum lainnya](/community/get-involved/#ethereum-jobs/).

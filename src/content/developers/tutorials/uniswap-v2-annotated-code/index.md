@@ -2209,7 +2209,7 @@ which allows an account to spend out the allowance provided by a different accou
 This function transfers ether to an account. Any call to a different contract can attempt to send ether. Because we
 don't need to actually call any function, we don't send any data with the call.
 
-## Conclusion {#Conclusion}
+## Conclusion {#conclusion}
 
 This is a long article of about 50 pages. If you made it here, congratulations! Hopefully by now you've understood the considerations
 in writing a real-life application (as opposed to short sample programs) and are better to be able to write contracts for your own
