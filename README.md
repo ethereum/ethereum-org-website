@@ -1163,6 +1163,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="http://ibistech.site"><img src="https://avatars.githubusercontent.com/u/47420082?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Andile Mchunu</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=SkywalkingZulu" title="Documentation">📖</a></td>
     <td align="center"><a href="http://noahliechti.ch"><img src="https://avatars.githubusercontent.com/u/38284563?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Noah</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=noahliechti" title="Documentation">📖</a></td>
   </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/adrianmcli"><img src="https://avatars.githubusercontent.com/u/943555?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Adrian Li</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=adrianmcli" title="Documentation">📖</a></td>
+  </tr>
 </table>
 
 <!-- markdownlint-restore -->
