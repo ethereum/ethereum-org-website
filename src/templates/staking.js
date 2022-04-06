@@ -205,19 +205,16 @@ const H3 = styled.h3`
 
 const CardGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, minmax(min(100%, 280px), 1fr));
-  @media (max-width: ${(props) => props.theme.breakpoints.xl}) {
-    grid-template-columns: minmax(min(100%, 280px), 1fr);
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    grid-template-columns: repeat(3, minmax(min(100%, 280px), 1fr));
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    grid-template-columns: minmax(min(100%, 280px), 1fr);
-  }
+  grid-template-columns: repeat(3, 1fr);
+
   gap: 2rem;
   h3 {
     margin-top: 0;
+  }
+
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    grid-template-columns: repeat(1, 1fr);
+    margin: auto;
   }
 `
 
