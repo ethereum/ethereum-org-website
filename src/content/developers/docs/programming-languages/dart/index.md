@@ -16,8 +16,8 @@ incomplete: true
   3.  Writing a user interface in Dart
 - [Building a Mobile dApp with Flutter](https://medium.com/dash-community/building-a-mobile-dapp-with-flutter-be945c80315a) is a lot shorter, which might be better
   if you already know the basics.
-- If you prefer the learn by watching a video, you can watch [Build Your First Blockchain Flutter App](https://www.youtube.com/watch?v=3Eeh3pJ6PeA), which is about an hour long
-- If you are impatient, you might prefer [Building a Blockchain Decentralized-app with Flutter and Dart on Ethereum](https://www.youtube.com/watch?v=jaMFEOCq_1s), which is only about twenty minutes
+- If you prefer the learn by watching a video, you can watch [Build Your First Blockchain Flutter App](https://www.youtube.com/watch?v=3Eeh3pJ6PeA), which is about an hour long.
+- If you are impatient, you might prefer [Building a Blockchain Decentralized-app with Flutter and Dart on Ethereum](https://www.youtube.com/watch?v=jaMFEOCq_1s), which is only about twenty minutes.
 - [Integrating MetaMask in Flutter application](https://youtu.be/8qzVDje3IWk) - this short video takes you through the steps of integrating MetaMask into your Flutter applications.
 
 ## Working with Ethereum clients {#working-with-ethereum-clients}
