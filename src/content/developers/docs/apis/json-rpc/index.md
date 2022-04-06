@@ -11,11 +11,6 @@ For this purpose, every [Ethereum client](/developers/docs/nodes-and-clients/#ex
 
 JSON-RPC is a stateless, light-weight remote procedure call (RPC) protocol. It defines several data structures and the rules around their processing. It is transport agnostic in that the concepts can be used within the same process, over sockets, over HTTP, or in many various message passing environments. It uses JSON (RFC 4627) as data format.
 
-## JSON-RPC resources {#json-rpc-resources}
-
-- [Ethereum JSON-RPC Specification](https://playground.open-rpc.org/?schemaUrl=https://raw.githubusercontent.com/ethereum/eth1.0-apis/assembled-spec/openrpc.json&uiSchema[appBar][ui:splitView]=true&uiSchema[appBar][ui:input]=false&uiSchema[appBar][ui:examplesDropdown]=false)
-- [Ethereum JSON-RPC Specification GitHub repo](https://github.com/ethereum/eth1.0-apis)
-
 ## Client implementations {#client-implementations}
 
 Ethereum clients each may utilize different programming languages when implementing the JSON-RPC specification. See individual [client documentation](/developers/docs/nodes-and-clients/#execution-clients) for further details related to specific programming languages. We recommend checking the documentation of each client for the latest API support information.
@@ -67,29 +62,31 @@ The following options are possible for the defaultBlock parameter:
 - `String "latest"` - for the latest mined block
 - `String "pending"` - for the pending state/transactions
 
-## Deploying a contract using json-rpc
+## Deploying a contract using JSON_RPC
 
 This section includes a demonstration of how to deploy a contract using only the RPC interface. There are alternative routes to deploying contracts where this complexity is abstracted away, for example using libraries built on top of the RPC interface such as [web3.js](https://web3js.readthedocs.io/) and [web3.py](https://github.com/ethereum/web3.py). Those methods are generally easier to understand and less error prone, but it is still useful to understand what is happening under the hood.
 
-The following is a very simple smart contract called `Multiply7` that will be deployed using the json-RPC interface to an Ethereum node. This tutorial assumes the reader is alreadys running a geth node. More information on nodes and clients is available [here](/developers/docs/nodes-and-clients/run-a-node). Please refer to individual [client](/developers/docs/nodes-and-clients/) documentation to see how to start the HTTP JSON-RPC for non-geth clients. Most clients default to serving on `localhost:8545`.
+The following is a very simple smart contract called `Multiply7` that will be deployed using the JSON-RPC interface to an Ethereum node. This tutorial assumes the reader is alreadys running a geth node. More information on nodes and clients is available [here](/developers/docs/nodes-and-clients/run-a-node). Please refer to individual [client](/developers/docs/nodes-and-clients/) documentation to see how to start the HTTP JSON-RPC for non-geth clients. Most clients default to serving on `localhost:8545`.
 
 ```javascript
 
-   contract Multiply7 {
-      event Print(uint);
-      function multiply(uint input) returns (uint) {
-         Print(input * 7);
-         return input * 7;
-      }
-   }
+contract Multiply7 {
+    event Print(uint);
+    function multiply(uint input) returns (uint) {
+        Print(input * 7);
+        return input * 7;
+    }
+}
 
 ```
 
 The first thing to do is make sure the HTTP RPC interface is enabled. This means for geth we supply the `--http` flag on startup. In this example we use the geth node on a private development chain. Using this approach we don't need ether on the real network.
 
-.. code:: bash
+```bash
 
-    > geth --http --dev --mine --miner.threads 1 --unlock 0 console 2>>geth.log
+geth --http --dev --mine --miner.threads 1 --unlock 0 console 2>>geth.log
+
+```
 
 This will start the HTTP RPC interface on `http://localhost:8545`.
 
@@ -97,19 +94,18 @@ We can verify that the interface is running by retrieving the coinbase address a
 
 ```bash
 
-    > curl --data '{"jsonrpc":"2.0","method":"eth_coinbase", "id":1}' -H "Content-Type: application/json" localhost:8545
-    {"id":1,"jsonrpc":"2.0","result":["0x9b1d35635cc34752ca54713bb99d38614f63c955"]}
+curl --data '{"jsonrpc":"2.0","method":"eth_coinbase", "id":1}' -H "Content-Type: application/json" localhost:8545
+{"id":1,"jsonrpc":"2.0","result":["0x9b1d35635cc34752ca54713bb99d38614f63c955"]}
 
-    > curl --data '{"jsonrpc":"2.0","method":"eth_getBalance", "params": ["0x9b1d35635cc34752ca54713bb99d38614f63c955", "latest"], "id":2}' -H "Content-Type: application/json" localhost:8545
-    {"id":2,"jsonrpc":"2.0","result":"0x1639e49bba16280000"}
+curl --data '{"jsonrpc":"2.0","method":"eth_getBalance", "params": ["0x9b1d35635cc34752ca54713bb99d38614f63c955", "latest"], "id":2}' -H "Content-Type: application/json" localhost:8545
+{"id":2,"jsonrpc":"2.0","result":"0x1639e49bba16280000"}
 ```
 
 Because numbers are hex encoded, the balance is returned in wei as a hex string. If we want to have the balance in ether as a number we can use web3 from the geth console.
 
 ```javascript
-
-    > web3.fromWei("0x1639e49bba16280000", "ether")
-    "410"
+web3.fromWei("0x1639e49bba16280000", "ether")
+;("410")
 ```
 
 Now that there is some ether on our private development chain we can deploy the contract. The first step is to compile the Multiply7 contract to byte code that can be sent to the EVM. Follow these [these](http://solidity.readthedocs.org/en/latest/installing-solidity.html>) instructions to install solc, the solidity compiler.
@@ -118,26 +114,27 @@ The next step is to compile the Multiply7 contract to byte code that can be send
 
 ```bash
 
-   > echo 'pragma solidity ^0.4.16; contract Multiply7 { event Print(uint); function multiply(uint input) public returns (uint) { Print(input * 7); return input * 7; } }' | solc --bin
-   ======= <stdin>:Multiply7 =======
-   Binary:
-   6060604052341561000f57600080fd5b60eb8061001d6000396000f300606060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063c6888fa1146044575b600080fd5b3415604e57600080fd5b606260048080359060200190919050506078565b6040518082815260200191505060405180910390f35b60007f24abdb5865df5079dcc5ac590ff6f01d5c16edbc5fab4e195d9febd1114503da600783026040518082815260200191505060405180910390a16007820290509190505600a165627a7a7230582040383f19d9f65246752244189b02f56e8d0980ed44e7a56c0b200458caad20bb0029
+echo 'pragma solidity ^0.4.16; contract Multiply7 { event Print(uint); function multiply(uint input) public returns (uint) { Print(input * 7); return input * 7; } }' | solc --bin
+
+======= <stdin>:Multiply7 =======
+Binary:
+6060604052341561000f57600080fd5b60eb8061001d6000396000f300606060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063c6888fa1146044575b600080fd5b3415604e57600080fd5b606260048080359060200190919050506078565b6040518082815260200191505060405180910390f35b60007f24abdb5865df5079dcc5ac590ff6f01d5c16edbc5fab4e195d9febd1114503da600783026040518082815260200191505060405180910390a16007820290509190505600a165627a7a7230582040383f19d9f65246752244189b02f56e8d0980ed44e7a56c0b200458caad20bb0029
 ```
 
 Now that we have the compiled code we need to determine how much gas it costs to deploy it. The RPC interface has an `eth_estimateGas` method that will give us an estimate.
 
 ```bash
 
-   > curl --data '{"jsonrpc":"2.0","method": "eth_estimateGas", "params": [{"from": "0x9b1d35635cc34752ca54713bb99d38614f63c955", "data": "0x6060604052341561000f57600080fd5b60eb8061001d6000396000f300606060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063c6888fa1146044575b600080fd5b3415604e57600080fd5b606260048080359060200190919050506078565b6040518082815260200191505060405180910390f35b60007f24abdb5865df5079dcc5ac590ff6f01d5c16edbc5fab4e195d9febd1114503da600783026040518082815260200191505060405180910390a16007820290509190505600a165627a7a7230582040383f19d9f65246752244189b02f56e8d0980ed44e7a56c0b200458caad20bb0029"}], "id": 5}' -H "Content-Type: application/json" localhost:8545
-   {"jsonrpc":"2.0","id":5,"result":"0x1c31e"}
+curl --data '{"jsonrpc":"2.0","method": "eth_estimateGas", "params": [{"from": "0x9b1d35635cc34752ca54713bb99d38614f63c955", "data": "0x6060604052341561000f57600080fd5b60eb8061001d6000396000f300606060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063c6888fa1146044575b600080fd5b3415604e57600080fd5b606260048080359060200190919050506078565b6040518082815260200191505060405180910390f35b60007f24abdb5865df5079dcc5ac590ff6f01d5c16edbc5fab4e195d9febd1114503da600783026040518082815260200191505060405180910390a16007820290509190505600a165627a7a7230582040383f19d9f65246752244189b02f56e8d0980ed44e7a56c0b200458caad20bb0029"}], "id": 5}' -H "Content-Type: application/json" localhost:8545
+{"jsonrpc":"2.0","id":5,"result":"0x1c31e"}
 ```
 
 And finally deploy the contract.
 
 ```bash
 
-   > curl --data '{"jsonrpc":"2.0","method": "eth_sendTransaction", "params": [{"from": "0x9b1d35635cc34752ca54713bb99d38614f63c955", "gas": "0x1c31e", "data": "0x6060604052341561000f57600080fd5b60eb8061001d6000396000f300606060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063c6888fa1146044575b600080fd5b3415604e57600080fd5b606260048080359060200190919050506078565b6040518082815260200191505060405180910390f35b60007f24abdb5865df5079dcc5ac590ff6f01d5c16edbc5fab4e195d9febd1114503da600783026040518082815260200191505060405180910390a16007820290509190505600a165627a7a7230582040383f19d9f65246752244189b02f56e8d0980ed44e7a56c0b200458caad20bb0029"}], "id": 6}' -H "Content-Type: application/json" localhost:8545
-   {"id":6,"jsonrpc":"2.0","result":"0xe1f3095770633ab2b18081658bad475439f6a08c902d0915903bafff06e6febf"}
+curl --data '{"jsonrpc":"2.0","method": "eth_sendTransaction", "params": [{"from": "0x9b1d35635cc34752ca54713bb99d38614f63c955", "gas": "0x1c31e", "data": "0x6060604052341561000f57600080fd5b60eb8061001d6000396000f300606060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063c6888fa1146044575b600080fd5b3415604e57600080fd5b606260048080359060200190919050506078565b6040518082815260200191505060405180910390f35b60007f24abdb5865df5079dcc5ac590ff6f01d5c16edbc5fab4e195d9febd1114503da600783026040518082815260200191505060405180910390a16007820290509190505600a165627a7a7230582040383f19d9f65246752244189b02f56e8d0980ed44e7a56c0b200458caad20bb0029"}], "id": 6}' -H "Content-Type: application/json" localhost:8545
+{"id":6,"jsonrpc":"2.0","result":"0xe1f3095770633ab2b18081658bad475439f6a08c902d0915903bafff06e6febf"}
 
 ```
 
@@ -146,8 +143,8 @@ creates a contract it will also contain the contract address. We can retrieve th
 
 ```bash
 
-   > curl --data '{"jsonrpc":"2.0","method": "eth_getTransactionReceipt", "params": ["0xe1f3095770633ab2b18081658bad475439f6a08c902d0915903bafff06e6febf"], "id": 7}' -H "Content-Type: application/json" localhost:8545
-   {"jsonrpc":"2.0","id":7,"result":{"blockHash":"0x77b1a4f6872b9066312de3744f60020cbd8102af68b1f6512a05b7619d527a4f","blockNumber":"0x1","contractAddress":"0x4d03d617d700cf81935d7f797f4e2ae719648262","cumulativeGasUsed":"0x1c31e","from":"0x9b1d35635cc34752ca54713bb99d38614f63c955","gasUsed":"0x1c31e","logs":[],"logsBloom":"0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000","status":"0x1","to":null,"transactionHash":"0xe1f3095770633ab2b18081658bad475439f6a08c902d0915903bafff06e6febf","transactionIndex":"0x0"}}
+curl --data '{"jsonrpc":"2.0","method": "eth_getTransactionReceipt", "params": ["0xe1f3095770633ab2b18081658bad475439f6a08c902d0915903bafff06e6febf"], "id": 7}' -H "Content-Type: application/json" localhost:8545
+{"jsonrpc":"2.0","id":7,"result":{"blockHash":"0x77b1a4f6872b9066312de3744f60020cbd8102af68b1f6512a05b7619d527a4f","blockNumber":"0x1","contractAddress":"0x4d03d617d700cf81935d7f797f4e2ae719648262","cumulativeGasUsed":"0x1c31e","from":"0x9b1d35635cc34752ca54713bb99d38614f63c955","gasUsed":"0x1c31e","logs":[],"logsBloom":"0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000","status":"0x1","to":null,"transactionHash":"0xe1f3095770633ab2b18081658bad475439f6a08c902d0915903bafff06e6febf","transactionIndex":"0x0"}}
 ```
 
 Our contract was created on `0x4d03d617d700cf81935d7f797f4e2ae719648262`. A null result instead of a receipt means the transaction has
@@ -157,19 +154,18 @@ not been included in a block yet. Wait for a moment and check if your miner is r
 
 In this example we will be sending a transaction using `eth_sendTransaction` to the multiply method of the contract.
 
-`eth_sendTransaction` requires several arguments, specifically `from`, `to` and `data`. `From` is the public address of our account and `to` is the contract address. The `data` argument contains a payload that defines which method must be called and with which arguments. This is where the ABI comes into play. The ABI defines how to define and encode data for the EVM.
+`eth_sendTransaction` requires several arguments, specifically `from`, `to` and `data`. `From` is the public address of our account and `to` is the contract address. The `data` argument contains a payload that defines which method must be called and with which arguments. This is where the [ABI (application binary interface)](https://docs.soliditylang.org/en/v0.7.0/abi-spec.html) comes into play. The ABI is a json file that defines how to define and encode data for the EVM.
 
 The bytes of the payload defines which method in the contract is called. This is the first 4 bytes from the Keccak hash over the function name and its argument types, hex encoded. The multiply function accepts an uint which is an alias for uint256. This leaves us with:
 
 ```javascript
-> web3.sha3("multiply(uint256)").substring(0, 8)
-"c6888fa1"
-
+web3.sha3("multiply(uint256)").substring(0, 8)
+;("c6888fa1")
 ```
 
 The next step is to encode the arguments. There is only one uint256, say, the value 6. The ABI has a section which specifies how to encode uint256 types.
 
-> int<M>: enc(X) is the big-endian two’s complement encoding of X, padded on the higher-oder (left) side with 0xff for negative X and with zero > bytes for positive X such that the length is a multiple of 32 bytes.
+`int<M>: enc(X)` is the big-endian two’s complement encoding of X, padded on the higher-order (left) side with 0xff for negative X and with zero > bytes for positive X such that the length is a multiple of 32 bytes.
 
 This encodes to `0000000000000000000000000000000000000000000000000000000000000006`.
 
@@ -209,11 +205,11 @@ Since a transaction was sent, a transaction hash was returned. Retrieving the re
 The receipt contains a log. This log was generated by the EVM on transaction execution and included in the receipt. The `multipy` function shows that the `Print` event was raised with the input times 7. Since the argument for the `Print` event was a uint256 we can decode it according to the ABI rules which will leave us with the expected decimal 42. Apart from the data it is worth noting that topics can be used to determine which event created the log:
 
 ```bash
-> web3.sha3("Print(uint256)")
+web3.sha3("Print(uint256)")
 "24abdb5865df5079dcc5ac590ff6f01d5c16edbc5fab4e195d9febd1114503da"
 ```
 
-This was just a brief introduction into some of the most common tasks, demonstrating direct usage of the json-RPC.
+This was just a brief introduction into some of the most common tasks, demonstrating direct usage of the JSON-RPC.
 
 ## Related topics {#related-topics}
 
