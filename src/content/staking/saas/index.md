@@ -61,28 +61,28 @@ Have a suggestion for a staking-as-a-service provider we missed? Check out our [
 
 ## FAQ {#faq}
 
-<ExpandableCard title="Who holds my keys?">
+<ExpandableCard title="Who holds my keys?" eventCategory="SaasStaking" eventName="clicked who holds my keys">
   Arrangements will differ from provider-to-provider, but commonly you will be guided through setting up any signing keys you need (one per 32 ETH), and uploading these to your provider to allow them to validate on your behalf. The signing keys alone do not give any ability to withdraw, transfer or spend your funds. However, they do provide the ability to cast votes towards consensus, which if not done properly can result in offline penalties or slashing.
 </ExpandableCard>
 
-<ExpandableCard title="So there are two sets of keys?">
+<ExpandableCard title="So there are two sets of keys?" eventCategory="SaasStaking" eventName="clicked so there are two sets of keys">
 Yes. Each account is comprised of both <em>signing</em> keys, and <em>withdrawal</em> keys. In order for a validator to attest to the state of the chain, participate in sync committees and propose blocks, the signing keys much be readily accessible by a validator client. These must be connected to the internet in some form, and are thus inherently considered to be "hot" keys. This is a requirement for your validator to be able to attest, and thus the keys used to transfer or withdraw funds are separated for security reasons.
 
 All of these keys can always be regenerated in a reproducible manner using your 24-word mnemonic seed phrase. <em>Make certain you back this seed phrase up safely or you will be unable to generate your withdraw keys when the time comes</em>.
 </ExpandableCard>
 
-<ExpandableCard title="When can I withdraw?">
+<ExpandableCard title="When can I withdraw?" eventCategory="SaasStaking" eventName="clicked when can I withdraw">
   When you stake 32 ETH with a SaaS provider, that ETH is still deposited to the official staking deposit contract. As such, SaaS stakers are currently limited by the same withdrawal restrictions as solo stakers. This means that staking your ETH is currently a one-way deposit. This will be the case until the Shanghai upgrade planned to follow the Merge.
 </ExpandableCard>
 
-<ExpandableCard title="What will change with the Merge?">
+<ExpandableCard title="What will change with the Merge?" eventCategory="SaasStaking" eventName="clicked what will change with the Merge">
   After the Merge, SaaS stakers will begin to receive unburnt transaction fees/tips. Check with your provider to determine how to update your settings to include an Ethereum address you control where these funds will be sent when the time comes.
 
 The Merge will <em>not</em> enable the ability to withdraw your stake or protocol rewards; this feature is planned for the Shanghai upgrade, which will follow the Merge by an estimated six months to a year.
 </ExpandableCard>
 
-<ExpandableCard title="What happens if I get slashed?">
-  By using an SaaS provider, you are entrusting the operation of your node to someone else. This comes with the risk of poor node performance, which is not in your control. In the event your validator is slashed, your validator balance will be penalized and forcibly removed from the validator pool. These funds will be locked until withdrawals are enabled at the protocol level.
+<ExpandableCard title="What happens if I get slashed?" eventCategory="SaasStaking" eventName="clicked what happens if I get slashed">
+By using an SaaS provider, you are entrusting the operation of your node to someone else. This comes with the risk of poor node performance, which is not in your control. In the event your validator is slashed, your validator balance will be penalized and forcibly removed from the validator pool. These funds will be locked until withdrawals are enabled at the protocol level.
 
 Contact individual SaaS provider for more details on any guarantees or insurance options. If you'd prefer to be in full control of your validator setup, <a href="/staking/solo">learn more about how to solo stake your ETH</a>.
 </ExpandableCard>

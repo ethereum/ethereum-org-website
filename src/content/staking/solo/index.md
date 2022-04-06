@@ -45,57 +45,29 @@ Solo staking comes with more responsibility, but provides you with maximum contr
 As much as we wish that solo staking was accessible and risk free to everyone, this is not reality. There are some practical and serious considerations to keep in mind before choosing to solo stake your ETH.
 
 <InfoGrid>
-  <ExpandableCard title="Required reading" matomo={
-    {eventCategory: `ExpandableCardSoloStaking`,
-      eventAction: `Clicked`,
-      eventName: "clicked required reading",
-    }}>
+  <ExpandableCard title="Required reading" eventCategory="SoloStaking" eventName="clicked required reading">
     When operating your own node you should spend some time learning how to use the software you've chosen. This should involve reading relevant documentation and being attune to communication channels of those dev teams.
     The more you understand about the software you're running and how proof-of-stake works, the less risky it will be as a staker, and the easier it will be to fix any issues that may arise along the way as a node operator. 
   </ExpandableCard>
-  <ExpandableCard title="Comfortable with computers" matomo={
-    {eventCategory: `ExpandableCardSoloStaking`,
-      eventAction: `Clicked`,
-      eventName: "clicked comfortable with computers",
-    }}>
+  <ExpandableCard title="Comfortable with computers" eventCategory="SoloStaking" eventName="clicked comfortable with computers">
     Node setup requires a reasonable comfort level when working with computers, although new tools are making this easier over time. Understanding of the command-line interface is helpful, but no longer strictly required 
     It also requires very basic hardware setup, and some understanding of minimum recommended specs.
   </ExpandableCard>
-  <ExpandableCard title="Secure key management" matomo={
-    {eventCategory: `ExpandableCardSoloStaking`,
-      eventAction: `Clicked`,
-      eventName: "clicked secure key management",
-    }}>
+  <ExpandableCard title="Secure key management" eventCategory="SoloStaking" eventName="clicked secure key management">
     Just like how private keys secure your Ethereum address, you will need to generate keys specifically for your validator. You must understand how to keep any seed phrases or private keys safe and secure.
     <ButtonLink to="/security">Ethereum security and scam prevention</ButtonLink>
   </ExpandableCard>
-  <ExpandableCard title="No withdrawing (for now)" matomo={
-    {eventCategory: `ExpandableCardSoloStaking`,
-      eventAction: `Clicked`,
-      eventName: "clicked no withdrawing",
-    }}>
+  <ExpandableCard title="No withdrawing (for now)" eventCategory="SoloStaking" eventName="clicked no withdrawing">
     Withdrawing staked ETH or rewards from a validator balance is not yet supported. Support for withdrawals are planned for the Shanghai upgrade following The Merge. You should anticipate your ETH being locked for at least one-to-two years. After Shanghai, this will no longer be the case, at which point you will be able to freely withdraw portions or all of your stake if you wish.
   </ExpandableCard>
-  <ExpandableCard title="Maintenance" matomo={
-    {eventCategory: `ExpandableCardSoloStaking`,
-      eventAction: `Clicked`,
-      eventName: "clicked maintenance",
-    }}>
+  <ExpandableCard title="Maintenance" eventCategory="SoloStaking" eventName="clicked maintenance">
     Hardware occasionally fails, connections error out, and client software occasionally needs upgrading. Node maintenance is inevitable and will occasionally require your attention. You'll want to be sure you stay aware of any anticipated network upgrades, or other critical client upgrades.
   </ExpandableCard>
-  <ExpandableCard title="Reliable uptime" matomo={
-    {eventCategory: `ExpandableCardSoloStaking`,
-      eventAction: `Clicked`,
-      eventName: "clicked reliable uptime",
-    }}>
+  <ExpandableCard title="Reliable uptime" eventCategory="SoloStaking" eventName="clicked reliable uptime">
     Your rewards are proportional to the time your validator is online and properly attesting. Downtime incurs penalties roughly equal to what you would have earned in that same amount of time. Being offline while the network is finalizing does not result in slashing.
     Epoch rewards are inversely proportional to how long it takes your attestations to be included, meaning internet bandwidth also matter. This can vary, but a minimum of 10 Mb/s up and down is recommended.
   </ExpandableCard>
-  <ExpandableCard title="Slashing risk" matomo={
-    {eventCategory: `ExpandableCardSoloStaking`,
-      eventAction: `Clicked`,
-      eventName: "clicked slashing risk",
-    }}>
+  <ExpandableCard title="Slashing risk" eventCategory="SoloStaking" eventName="clicked slashing risk">
     Different from inactivity penalties for being offline, <em>slashing</em> is a much more serious penalty reserved for malicious offenses. By running a minority client with your keys loaded on only one machine at time, your risk of being slashed is minimized. That being said, all stakers must be aware of the risks of slashing.
     
     <a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/">More on slashing and validator lifecycle</a>

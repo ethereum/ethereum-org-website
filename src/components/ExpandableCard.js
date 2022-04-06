@@ -92,7 +92,8 @@ const ExpandableCard = ({
   title,
   Svg,
   alt,
-  matomo,
+  eventCategory,
+  eventName,
 }) => {
   const [isVisible, setIsVisible] = useState(false)
   const expandCollapse = {
@@ -130,6 +131,11 @@ const ExpandableCard = ({
         duration: 0.4,
       },
     },
+  }
+  const matomo = {
+    eventAction: `Clicked`,
+    eventCategory: `ExpandableCard${eventCategory}`,
+    eventName,
   }
   return (
     <Card>
