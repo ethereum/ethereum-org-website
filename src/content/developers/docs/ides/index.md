@@ -20,7 +20,7 @@ If you're looking to fiddle with code before you [set up a local development env
 - [ethfiddle.com](https://ethfiddle.com/)
 - [Gitter](https://gitter.im/loomnetwork/ethfiddle)
 
-**ChainIDE -** **_A Cloud-Based Multi-Chain IDE_**
+**ChainIDE -** **_A Cloud-Based Multi-Chain IDE._**
 
 - [chainide.com](https://chainide.com/)
 
@@ -40,19 +40,19 @@ Most established IDEs have built plugins to enhance the Ethereum development exp
 - [Code samples](https://github.com/Azure-Samples/blockchain/blob/master/blockchain-workbench/application-and-smart-contract-samples/readme.md)
 - [GitHub](https://github.com/microsoft/vscode)
 
-**Atom -** **_A hackable text editor for the 21st Century_**
+**Atom -** **_A hackable text editor for the 21st Century._**
 
 - [Atom](https://atom.io/)
 - [GitHub](https://github.com/atom)
 - [Ethereum packages](https://atom.io/packages/search?utf8=%E2%9C%93&q=keyword%3Aethereum&commit=Search)
 
-**JetBrains IDEs (IntelliJ IDEA, etc.) -** **_Essential tools for software developers and teams_**
+**JetBrains IDEs (IntelliJ IDEA, etc.) -** **_Essential tools for software developers and teams._**
 
 - [JetBrains](https://www.jetbrains.com/)
 - [GitHub](https://github.com/JetBrains)
 - [IntelliJ Solidity](https://github.com/intellij-solidity/intellij-solidity/)
 
-**Remix Desktop -** **_Experience Remix IDE on your local machine_**
+**Remix Desktop -** **_Experience Remix IDE on your local machine._**
 
 - [Download](https://github.com/ethereum/remix-desktop/releases)
 - [GitHub](https://github.com/ethereum/remix-desktop)
