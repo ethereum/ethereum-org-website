@@ -9,7 +9,7 @@ sidebar: true
 
 We want to make sure we list the best resources possible while keeping users safe and confident.
 
-Anyone is free to suggest adding a staking products or service on ethereum.org. If there's one that we have missed, **please suggest it!**
+Anyone is free to suggest adding a staking products or service on ethereum.org. If there's one that we have missed, **[please suggest it](https://github.com/ethereum/ethereum-org-website/issues/new?&template=suggest_staking_product.md)!**
 
 We currently list staking products and services on the following pages:
 
@@ -17,7 +17,7 @@ We currently list staking products and services on the following pages:
 - [Staking-as-a-service](/staking/saas/)
 - [Staking pools](/staking/pools/)
 
-Proof-of-stake on the Beacon Chain has been live since December 1, 2020. While it's relatively new, we've tried to create a fair framework for consideration on ethereum.org but the listing criteria will change and evolve over time.
+Proof-of-stake on the Beacon Chain has been live since December 1, 2020. While staking is still relatively new, we've tried to create a fair framework for consideration on ethereum.org but the listing criteria will change and evolve over time.
 
 ## Information we require {#information-we-require}
 
@@ -37,8 +37,7 @@ Staking products or services submissions will be assessed by the following crite
 
 **Is the project or service being actively maintained?**
 
-- Is there an active team developing the project?
-- Who is involved?
+- Is there an active team developing the project? Who is involved?
 
 **Is the product or service free of trusted/human intermediaries?**
 
@@ -46,17 +45,17 @@ Staking products or services submissions will be assessed by the following crite
 
 **What platforms are supported?**
 
-- ie. Linux, macOS, Windows, iOS, Android
+- i.e. Linux, macOS, Windows, iOS, Android
 
 **What user interfaces are supported?**
 
-- ie. Browser app, desktop app, mobile app, CLI app
+- i.e. Browser app, desktop app, mobile app, CLI
 
 **What wallets support the product or service?**
 
 - What wallets directly support the product or service?
 
-**Social media links**
+**Social media and support links**
 
 - List available social media links. ie. Discord, Twitter, Telegram, Reddit
 
@@ -76,29 +75,29 @@ For any custom software or smart contracts involved:
 
 - If not, are there plans to conduct an external audit?
 
-**Has the software undergone any security bug bounties?**
+**Does the project have a bug bounty program?**
 
-- If not, are there plans to conduct a security bug bounty?
+- If not, are there plans to create a security bug bounty?
 
 ### Node or client tooling {#node-or-client-tooling}
 
 For software products related to node or client setup, management or migration:
 
-**Which CL clients (ie. Lighthouse, Teku, Nimbus, Prysm) are supported?**
+**Which consensus layer clients (ie. Lighthouse, Teku, Nimbus, Prysm) are supported?**
 
-- Which clients are supported?
+- Which clients are supported? Can the user choose?
 
 **Does the software provide an easy way to switch between clients?**
 
-- Can the user easily and safely change clients without too much difficulty using the tool?
+- Can the user easily and safely change clients using the tool?
 
 ### Staking as a service {#staking-as-a-service}
 
-For staking-as-a-service listings (ie. delegated node operation):
+For [staking-as-a-service listings](/staking/saas/) (ie. delegated node operation):
 
 **What are the fees associated with using the service?**
 
-- Is there a monthly fee for the service?
+- What is the fee structure, e.g. is there a monthly fee for the service?
 - Any additional staking requirements?
 
 **Are users required to sign-up for an account?**
@@ -111,9 +110,11 @@ For staking-as-a-service listings (ie. delegated node operation):
 
 ### Staking pool {#staking-pool}
 
-For pooled staking services:
+For [pooled staking services](/staking/pools/):
 
 **What is the minimum ETH required to stake?**
+
+- e.g. 0.01 ETH
 
 **What are the fees or staking requirements involved?**
 
@@ -122,17 +123,17 @@ For pooled staking services:
 
 **Is there a liquidity token?**
 
-- What are the tokens involved?
-- How do they work?
+- What are the tokens involved? How do they work? What are the contract addresses?
 
-**Can users participate as a node operator without permission?**
+**Can users participate as a node operator?**
 
 - What is required to run validator clients using the pooled funds?
 - Does this require permission from an individual, company or DAO?
 
-**What percent of node operators are running a supermajority CL client?**
+**What is the client diversity of the pool node operators?**
 
-- As of last edit, Prysm is the CL client being run by a supermajority of node operators, which is dangerous for the network. If the network currently has a supermajority CL client, we request data related to its usage.
+- What percent of node operators are running a supermajority consensus layer client?
+- As of last edit, Prysm is the consensus layer client being run by a supermajority of node operators, which is dangerous for the network. If the network currently has a supermajority consensus layer client, we request data related to its usage.
 
 ## Add your product or service {#add-product}
 
