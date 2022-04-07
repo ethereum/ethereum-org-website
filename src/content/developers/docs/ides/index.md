@@ -11,20 +11,20 @@ When it comes to setting up an [integrated development environment (IDE)](https:
 
 If you're looking to fiddle with code before you [set up a local development environment](/developers/local-environment/), these web apps are custom-built for Ethereum smart contract development.
 
-**Remix -** **_Web-based IDE with built in static analysis, and a test blockchain virtual machine._**
+**Remix -** **_Web-based IDE with built in static analysis, and a test blockchain virtual machine_**
 
 - [remix.ethereum.org](https://remix.ethereum.org/)
 
-**EthFiddle -** **_Web-based IDE that lets you write, compile, and debug your smart contract._**
+**EthFiddle -** **_Web-based IDE that lets you write, compile, and debug your smart contract_**
 
 - [ethfiddle.com](https://ethfiddle.com/)
 - [Gitter](https://gitter.im/loomnetwork/ethfiddle)
 
-**ChainIDE -** **_A Cloud-Based Multi-Chain IDE._**
+**ChainIDE -** **_A Cloud-Based Multi-Chain IDE_**
 
 - [chainide.com](https://chainide.com/)
 
-**Replit -** **_A customizable development environment for Ethereum with hot reloading, error checking, and first-class testnet support._**
+**Replit -** **_A customizable development environment for Ethereum with hot reloading, error checking, and first-class testnet support_**
 
 - [Solidity starter](https://replit.com/@replit/Solidity-starter-beta)
 
@@ -32,7 +32,7 @@ If you're looking to fiddle with code before you [set up a local development env
 
 Most established IDEs have built plugins to enhance the Ethereum development experience. At a minimum, they provide syntax highlighting for [smart contract languages](/developers/docs/smart-contracts/languages/).
 
-**Visual Studio Code -** **_Professional cross-platform IDE with official Ethereum support._**
+**Visual Studio Code -** **_Professional cross-platform IDE with official Ethereum support_**
 
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [Blockchain Development Kit for Ethereum](https://marketplace.visualstudio.com/items?itemName=AzBlockchain.azure-blockchain)
@@ -40,19 +40,19 @@ Most established IDEs have built plugins to enhance the Ethereum development exp
 - [Code samples](https://github.com/Azure-Samples/blockchain/blob/master/blockchain-workbench/application-and-smart-contract-samples/readme.md)
 - [GitHub](https://github.com/microsoft/vscode)
 
-**Atom -** **_A hackable text editor for the 21st Century._**
+**Atom -** **_A hackable text editor for the 21st Century_**
 
 - [Atom](https://atom.io/)
 - [GitHub](https://github.com/atom)
 - [Ethereum packages](https://atom.io/packages/search?utf8=%E2%9C%93&q=keyword%3Aethereum&commit=Search)
 
-**JetBrains IDEs (IntelliJ IDEA, etc.) -** **_Essential tools for software developers and teams._**
+**JetBrains IDEs (IntelliJ IDEA, etc.) -** **_Essential tools for software developers and teams_**
 
 - [JetBrains](https://www.jetbrains.com/)
 - [GitHub](https://github.com/JetBrains)
 - [IntelliJ Solidity](https://github.com/intellij-solidity/intellij-solidity/)
 
-**Remix Desktop -** **_Experience Remix IDE on your local machine._**
+**Remix Desktop -** **_Experience Remix IDE on your local machine_**
 
 - [Download](https://github.com/ethereum/remix-desktop/releases)
 - [GitHub](https://github.com/ethereum/remix-desktop)
