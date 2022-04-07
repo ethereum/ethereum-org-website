@@ -70,7 +70,7 @@ The following options are possible for the defaultBlock parameter:
 
 This section includes a demonstration of how to deploy a contract using only the RPC interface. There are alternative routes to deploying contracts where this complexity is abstracted away, for example using libraries built on top of the RPC interface such as [web3.js](https://web3js.readthedocs.io/) and [web3.py](https://github.com/ethereum/web3.py). Those methods are generally easier to understand and less error prone, but it is still useful to understand what is happening under the hood.
 
-The following is a very simple smart contract called `Multiply7` that will be deployed using the JSON-RPC interface to an Ethereum node. This tutorial assumes the reader is alreadys running a geth node. More information on nodes and clients is available [here](/developers/docs/nodes-and-clients/run-a-node). Please refer to individual [client](/developers/docs/nodes-and-clients/) documentation to see how to start the HTTP JSON-RPC for non-geth clients. Most clients default to serving on `localhost:8545`.
+The following is a very simple smart contract called `Multiply7` that will be deployed using the JSON-RPC interface to an Ethereum node. This tutorial assumes the reader is already running a Geth node. More information on nodes and clients is available [here](/developers/docs/nodes-and-clients/run-a-node). Please refer to individual [client](/developers/docs/nodes-and-clients/) documentation to see how to start the HTTP JSON-RPC for non-Geth clients. Most clients default to serving on `localhost:8545`.
 
 ```javascript
 
@@ -84,7 +84,7 @@ contract Multiply7 {
 
 ```
 
-The first thing to do is make sure the HTTP RPC interface is enabled. This means for geth we supply the `--http` flag on startup. In this example we use the geth node on a private development chain. Using this approach we don't need ether on the real network.
+The first thing to do is make sure the HTTP RPC interface is enabled. This means we supply Geth with the `--http` flag on startup. In this example we use the Geth node on a private development chain. Using this approach we don't need ether on the real network.
 
 ```bash
 
@@ -94,7 +94,7 @@ geth --http --dev --mine --miner.threads 1 --unlock 0 console 2>>geth.log
 
 This will start the HTTP RPC interface on `http://localhost:8545`.
 
-We can verify that the interface is running by retrieving the coinbase address and balance using [curl](https://curl.haxx.se/download.html). Please note that data in these examples will differ on your local node. If you want to try these commands replace the request params accordingly.
+We can verify that the interface is running by retrieving the coinbase address and balance using [curl](https://curl.haxx.se/download.html). Please note that data in these examples will differ on your local node. If you want to try these commands replace the request params in the second curl request with the result returned from the first.
 
 ```bash
 
@@ -105,7 +105,7 @@ curl --data '{"jsonrpc":"2.0","method":"eth_getBalance", "params": ["0x9b1d35635
 {"id":2,"jsonrpc":"2.0","result":"0x1639e49bba16280000"}
 ```
 
-Because numbers are hex encoded, the balance is returned in wei as a hex string. If we want to have the balance in ether as a number we can use web3 from the geth console.
+Because numbers are hex encoded, the balance is returned in wei as a hex string. If we want to have the balance in ether as a number we can use web3 from the Geth console.
 
 ```javascript
 web3.fromWei("0x1639e49bba16280000", "ether")
@@ -156,7 +156,7 @@ not been included in a block yet. Wait for a moment and check if your miner is r
 
 #### Interacting with smart contracts
 
-In this example we will be sending a transaction using `eth_sendTransaction` to the multiply method of the contract.
+In this example we will be sending a transaction using `eth_sendTransaction` to the `multiply` method of the contract.
 
 `eth_sendTransaction` requires several arguments, specifically `from`, `to` and `data`. `From` is the public address of our account and `to` is the contract address. The `data` argument contains a payload that defines which method must be called and with which arguments. This is where the [ABI (application binary interface)](https://docs.soliditylang.org/en/v0.7.0/abi-spec.html) comes into play. The ABI is a json file that defines how to define and encode data for the EVM.
 
