@@ -1,4 +1,7 @@
 {
+  "page-get-eth-article-keeping-crypto-safe": "あなたの暗号資産を安全に保持するための鍵",
+  "page-get-eth-article-protecting-yourself": "自分自身と資金を守るために",
+  "page-get-eth-article-store-digital-assets": "デジタル資産をイーサリアムに保存する方法",
   "page-get-eth-cex": "中央集権型取引所",
   "page-get-eth-cex-desc": "取引所は、伝統的な通貨を使用して暗号資産を購入できる企業です。 彼らはあなたが管理するウォレットへそれを送るまで、あなたが購入したETHを保管しています。",
   "page-get-eth-checkout-dapps-btn": "dappsをチェックする",
@@ -21,6 +24,7 @@
   "page-get-eth-exchanges-no-exchanges": "申し訳ありませんが、この国からETHを購入できる取引所はありません。もしご存知でしたら、こちらから教えてください",
   "page-get-eth-exchanges-no-exchanges-or-wallets": "申し訳ありませんが、この国からETHを購入できる取引所またはウォレットはありません。もしご存知でしたら、こちらから教えてください",
   "page-get-eth-exchanges-no-wallets": "申し訳ありませんが、この国からETHを購入できるウォレットはありません。もしご存知でしたら、こちらから教えてください",
+  "page-get-eth-exchanges-search": "お住まいの地域を入力してください...",
   "page-get-eth-exchanges-success-exchange": "法的チェックのため、取引所に登録するには数日かかることがあります。",
   "page-get-eth-exchanges-success-wallet-link": "ウォレット",
   "page-get-eth-exchanges-success-wallet-paragraph": "あなたが住んでいる場所では、これらのウォレットから直接ETHを購入することができます。詳細はこちら",
