@@ -19,13 +19,13 @@ Ethereum clients each may utilize different programming languages when implement
 
 While you may choose to interact directly with Ethereum clients via the JSON-RPC API, there are often easier options for dapp developers. Many [JavaScript](/developers/docs/apis/javascript/#available-libraries) and [backend API](/developers/docs/apis/backend/#available-libraries) libraries exist to provide wrappers on top of the JSON-RPC API. With these libraries, developers can write intuitive, one-line methods in the programming language of their choice to initialize JSON-RPC requests (under the hood) that interact with Ethereum.
 
-## Spec
+## Spec {#spec}
 
 The full JSON-RPC API spec is available [here](https://github.com/ethereum/execution-apis).
 
-## Conventions
+## Conventions {#conventions}
 
-#### Hex value encoding
+#### Hex value encoding {#hex-encoding}
 
 At present there are two key datatypes that are passed over JSON: unformatted byte arrays and quantities. Both are passed with a hex encoding, however with different requirements to formatting:
 
@@ -45,7 +45,7 @@ When encoding **UNFORMATTED DATA** (byte arrays, account addresses, hashes, byte
 - WRONG: 0xf0f0f (must be even number of digits)
 - WRONG: 004200 (must be prefixed 0x)
 
-#### The default block parameter
+#### The default block parameter {#default-block}
 
 The following methods have an extra default block parameter:
 
@@ -64,9 +64,9 @@ The following options are possible for the defaultBlock parameter:
 - `String "latest"` - for the latest mined block
 - `String "pending"` - for the pending state/transactions
 
-## Usage Example
+## Usage Example {#usage-example}
 
-#### Deploying a contract using JSON_RPC
+#### Deploying a contract using JSON_RPC {#deploying-contract}
 
 This section includes a demonstration of how to deploy a contract using only the RPC interface. There are alternative routes to deploying contracts where this complexity is abstracted away, for example using libraries built on top of the RPC interface such as [web3.js](https://web3js.readthedocs.io/) and [web3.py](https://github.com/ethereum/web3.py). Those methods are generally easier to understand and less error prone, but it is still useful to understand what is happening under the hood.
 
@@ -154,7 +154,7 @@ curl --data '{"jsonrpc":"2.0","method": "eth_getTransactionReceipt", "params": [
 Our contract was created on `0x4d03d617d700cf81935d7f797f4e2ae719648262`. A null result instead of a receipt means the transaction has
 not been included in a block yet. Wait for a moment and check if your miner is running and retry it.
 
-#### Interacting with smart contracts
+#### Interacting with smart contracts {#interacting-with-smart-contract}
 
 In this example we will be sending a transaction using `eth_sendTransaction` to the `multiply` method of the contract.
 
