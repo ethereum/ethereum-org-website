@@ -15,7 +15,7 @@ To use RLP to encode a dictionary, the two suggested canonical forms are:
 - use `[[k1,v1],[k2,v2]...]` with keys in lexicographic order
 - use the higher-level Patricia Tree encoding as Ethereum does
 
-## Definition
+## Definition {#definition}
 
 The RLP encoding function takes in an item. An item is defined as follows：
 
