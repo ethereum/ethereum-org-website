@@ -18,7 +18,10 @@ It would be helpful to have basic knowledge of Merkle trees and serialization to
 
 In a basic radix trie, every node looks as follows:
 
+```
     [i0, i1 ... in, value]
+
+```
 
 Where `i0 ... in` represent the symbols of the alphabet (often binary or hex), `value` is the terminal value at the node, and the values in the `i0 ... in` slots are either `NULL` or pointers to (in our case, hashes of) other nodes. This forms a basic `(key, value)` store. For example, if you are interested in the value that is currently mapped to `dog` in the trie, you would first convert `dog` into letters of the alphabet (giving `64 6f 67`), and then descend the trie following that path until you find the value. That is, you would first look up the root hash in a flat key/value DB to find the root node of the trie (which is an array of keys to other nodes), use the value at index `6` as a key (and look it up in the flat key/value DB) to get the node one level down, then pick index `4` of that to look up the next value, then pick index `6` of that, and so on, until, once you followed the path: `root -> 6 -> 4 -> 6 -> 15 -> 6 -> 7`, you look up the value of the node that you have and return the result.
 
@@ -97,6 +100,7 @@ The flagging of both _odd vs. even remaining partial path length_ and _leaf vs. 
 
 For even remaining path length (`0` or `2`), another `0` "padding" nibble will always follow.
 
+```
     def compact_encode(hexarray):
         term = 1 if hexarray[-1] == 16 else 0
         if term: hexarray = hexarray[:-1]
@@ -111,9 +115,11 @@ For even remaining path length (`0` or `2`), another `0` "padding" nibble will a
         for i in range(0,len(hexarray),2):
             o += chr(16 * hexarray[i] + hexarray[i+1])
         return o
+```
 
 Examples:
 
+```
     > [ 1, 2, 3, 4, 5, ...]
     '11 23 45'
     > [ 0, 1, 2, 3, 4, 5, ...]
@@ -122,9 +128,11 @@ Examples:
     '20 0f 1c b8'
     > [ f, 1, c, b, 8, 10]
     '3f 1c b8'
+```
 
 Here is the extended code for getting a node in the Merkle Patricia trie:
 
+```
     def get_helper(node,path):
         if path == []: return node
         if node = '': return ''
@@ -146,6 +154,7 @@ Here is the extended code for getting a node in the Merkle Patricia trie:
             path2.push(ord(path[i]) % 16)
         path2.push(16)
         return get_helper(node,path2)
+```
 
 ### Example Trie {#example-trie}
 
@@ -153,18 +162,22 @@ Suppose we want a trie containing four path/value pairs `('do', 'verb')`, `('dog
 
 First, we convert both paths and values to `bytes`. Below, actual byte representations for _paths_ are denoted by `<>`, although _values_ are still shown as strings, denoted by `''`, for easier comprehension (they, too, would actually be `bytes`):
 
+```
     <64 6f> : 'verb'
     <64 6f 67> : 'puppy'
     <64 6f 67 65> : 'coin'
     <68 6f 72 73 65> : 'stallion'
+```
 
 Now, we build such a trie with the following key/value pairs in the underlying DB:
 
+```
     rootHash: [ <16>, hashA ]
     hashA:    [ <>, <>, <>, <>, hashB, <>, <>, <>, [ <20 6f 72 73 65>, 'stallion' ], <>, <>, <>, <>, <>, <>, <>, <> ]
     hashB:    [ <00 6f>, hashD ]
     hashD:    [ <>, <>, <>, <>, <>, <>, hashE, <>, <>, <>, <>, <>, <>, <>, <>, <>, 'verb' ]
     hashE:    [ <17>, [ <>, <>, <>, <>, <>, <>, [ <35>, 'coin' ], <>, <>, <>, <>, <>, <>, <>, <>, <>, 'puppy' ] ]
+```
 
 When one node is referenced inside another node, what is included is `H(rlp.encode(x))`, where `H(x) = sha3(x) if len(x) >= 32 else x` and `rlp.encode` is the [RLP](/fundamentals/rlp) encoding function.
 
