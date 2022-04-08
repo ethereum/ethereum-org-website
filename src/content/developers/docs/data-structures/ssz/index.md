@@ -6,7 +6,7 @@ sidebar: true
 sidebarDepth: 2
 ---
 
-Simple serialize (SSZ) is the serialization method used on the Beacon Chain. It replaces the RLP serialization used on the execution layer everywhere across the consensus layer except the peer discovery protocol. SSZ is specifically designed to be deterministic and compatible with Merkleization.
+**Simple serialize (SSZ)** is the serialization method used on the Beacon Chain. It replaces the RLP serialization used on the execution layer everywhere across the consensus layer except the peer discovery protocol. SSZ is designed to be deterministic and compatible with merkleization.
 
 ## How does SSZ work? {#how-does-ssz-work}
 
@@ -146,8 +146,8 @@ The hash of (8,9) should equal hash (4), which hashes with 5 to produce 2, which
 
 ## Further Reading {#further-reading}
 
-[Upgrading Ethereum: SSZ](https://eth2book.info/altair/part2/building_blocks/ssz)
-[Upgrading Ethereum: Merkleization](https://eth2book.info/altair/part2/building_blocks/merkleization)
-[SSZ Impolementations](https://github.com/ethereum/consensus-specs/issues/2138)
-[SSZ Calculator](https://simpleserialize.com/)
-[SSZ.DEV](https://www.ssz.dev/)
+- [Upgrading Ethereum: SSZ](https://eth2book.info/altair/part2/building_blocks/ssz)
+- [Upgrading Ethereum: Merkleization](https://eth2book.info/altair/part2/building_blocks/merkleization)
+- [SSZ implementations](https://github.com/ethereum/consensus-specs/issues/2138)
+- [SSZ calcuator](https://simpleserialize.com/)
+- [SSZ.dev](https://www.ssz.dev/)

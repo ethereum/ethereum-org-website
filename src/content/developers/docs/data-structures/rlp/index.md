@@ -67,41 +67,32 @@ def to_binary(x):
         return to_binary(int(x / 256)) + chr(x % 256)
 ```
 
-## Examples
+## Examples {#examples}
 
-The string "dog" = [ 0x83, 'd', 'o', 'g' ]
+- the string "dog" = [ 0x83, 'd', 'o', 'g' ]
+- the list [ "cat", "dog" ] = `[ 0xc8, 0x83, 'c', 'a', 't', 0x83, 'd', 'o', 'g' ]`
+- the empty string ('null') = `[ 0x80 ]`
+- the empty list = `[ 0xc0 ]`
+- the integer 0 = `[ 0x80 ]`
+- the encoded integer 0 ('\\x00') = `[ 0x00 ]`
+- the encoded integer 15 ('\\x0f') = `[ 0x0f ]`
+- the encoded integer 1024 ('\\x04\\x00') = `[ 0x82, 0x04, 0x00 ]`
+- the [set theoretical representation](http://en.wikipedia.org/wiki/Set-theoretic_definition_of_natural_numbers) of three, `[ [], [[]], [ [], [[]] ] ] = [ 0xc7, 0xc0, 0xc1, 0xc0, 0xc3, 0xc0, 0xc1, 0xc0 ]`
+- the string "Lorem ipsum dolor sit amet, consectetur adipisicing elit" = `[ 0xb8, 0x38, 'L', 'o', 'r', 'e', 'm', ' ', ... , 'e', 'l', 'i', 't' ]`
 
-The list [ "cat", "dog" ] = `[ 0xc8, 0x83, 'c', 'a', 't', 0x83, 'd', 'o', 'g' ]`
+## RLP decoding {#rlp-decoding}
 
-The empty string ('null') = `[ 0x80 ]`
+According to the rules and process of RLP encoding, the input of RLP decode is regarded as an array of binary data. The RLP decoding process is as follows:
 
-The empty list = `[ 0xc0 ]`
+1.  according to the first byte (i.e. prefix) of input data and decoding the data type, the length of the actual data and offset;
 
-The integer 0 = `[ 0x80 ]`
+2.  according to the type and offset of data, decode the data correspondingly;
 
-The encoded integer 0 ('\\x00') = `[ 0x00 ]`
-
-The encoded integer 15 ('\\x0f') = `[ 0x0f ]`
-
-The encoded integer 1024 ('\\x04\\x00') = `[ 0x82, 0x04, 0x00 ]`
-
-The [set theoretical representation](http://en.wikipedia.org/wiki/Set-theoretic_definition_of_natural_numbers) of three, `[ [], [[]], [ [], [[]] ] ] = [ 0xc7, 0xc0, 0xc1, 0xc0, 0xc3, 0xc0, 0xc1, 0xc0 ]`
-
-The string "Lorem ipsum dolor sit amet, consectetur adipisicing elit" = `[ 0xb8, 0x38, 'L', 'o', 'r', 'e', 'm', ' ', ... , 'e', 'l', 'i', 't' ]`
-
-## RLP decoding
-
-According to rules and process of RLP encoding, the input of RLP decode shall be regarded as array of binary data, the process is as follows:
-
-1.  According to the first byte(i.e. prefix) of input data, and decoding the data type, the length of the actual data and offset;
-
-2.  According to type and offset of data, decode data correspondingly;
-
-3.  Continue to decode the rest of the input;
+3.  continue to decode the rest of the input;
 
 Among them, the rules of decoding data types and offset is as follows:
 
-1.  the data is a string if the range of the first byte(i.e. prefix) is [0x00, 0x7f], and the string is the first byte itself exactly;
+1.  the data is a string if the range of the first byte (i.e. prefix) is [0x00, 0x7f], and the string is the first byte itself exactly;
 
 2.  the data is a string if the range of the first byte is [0x80, 0xb7], and the string whose length is equal to the first byte minus 0x80 follows the first byte;
 
