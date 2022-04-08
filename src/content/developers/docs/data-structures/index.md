@@ -26,6 +26,6 @@ Recursive Length Prefix (RLP) is a serialization method used extensively across 
 
 [More on RLP](developers/docs/data-structures/rlp).
 
-### Simple Serialize
+### Simple Serialize {#simple-serialize}
 
 Simple serialize is the dominant serialization format on Ethereum's consensus layer because it is very compatible with Merklelization. A deeper explanation of SSZ serialization, merklelization and proofs can be found [here](developers/docs/data-structures/ssz).
