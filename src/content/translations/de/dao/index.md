@@ -5,7 +5,7 @@ lang: de
 template: use-cases
 emoji: ":handshake:"
 sidebar: true
-sidebarDepth: zwei
+sidebarDepth: 2
 image: ../../../../assets/use-cases/dao-2.png
 alt: Darstellung, wie eine DAO über einen Vorschlag abstimmt
 summaryPoint1: Communitys im Besitz ihrer Mitglieder ohne zentrale Führung
