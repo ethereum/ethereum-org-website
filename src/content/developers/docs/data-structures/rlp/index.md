@@ -22,7 +22,14 @@ The RLP encoding function takes in an item. An item is defined as follows：
 - a string (i.e. byte array) is an item
 - a list of items is an item
 
-For example, an empty string is an item, as is the string containing the word "cat", a list containing any number of strings, as well as more complex data structures like `["cat",["puppy","cow"],"horse",[[]],"pig",[""],"sheep"]`. Note that in the context of the rest of this article, "string" will be used as a synonym for "a certain number of bytes of binary data"; no special encodings are used and no knowledge about the content of the strings is implied.
+For example, all of the following are items:
+
+- an empty string;
+- the string containing the word "cat";
+- a list containing any number of strings;
+- and a more complex data structures like `["cat", ["puppy", "cow"], "horse", [[]], "pig", [""], "sheep"]`. 
+
+Note that in the context of the rest of this page, 'string' means "a certain number of bytes of binary data"; no special encodings are used, and no knowledge about the content of the strings is implied.
 
 RLP encoding is defined as follows:
 
