@@ -347,7 +347,7 @@ const StakingPage = ({ data, pageContext, location }) => {
     items: [
       {
         text: "Staking Home",
-        to: "/staking",
+        to: "/staking/",
         matomo: {
           eventCategory: `Staking dropdown`,
           eventAction: `Clicked`,
@@ -356,7 +356,7 @@ const StakingPage = ({ data, pageContext, location }) => {
       },
       {
         text: "Solo staking",
-        to: "/staking/solo",
+        to: "/staking/solo/",
         matomo: {
           eventCategory: `Staking dropdown`,
           eventAction: `Clicked`,
@@ -365,7 +365,7 @@ const StakingPage = ({ data, pageContext, location }) => {
       },
       {
         text: "Staking as a service",
-        to: "/staking/saas",
+        to: "/staking/saas/",
         matomo: {
           eventCategory: `Staking dropdown`,
           eventAction: `Clicked`,
@@ -374,7 +374,7 @@ const StakingPage = ({ data, pageContext, location }) => {
       },
       {
         text: "Pooled staking",
-        to: "/staking/pools",
+        to: "/staking/pools/",
         matomo: {
           eventCategory: `Staking dropdown`,
           eventAction: `Clicked`,

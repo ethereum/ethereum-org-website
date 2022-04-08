@@ -243,7 +243,7 @@ const StakingPage = ({ data }) => {
     items: [
       {
         text: "Staking Home",
-        to: "/staking",
+        to: "/staking/",
         matomo: {
           eventCategory: `Staking dropdown`,
           eventAction: `Clicked`,
@@ -252,7 +252,7 @@ const StakingPage = ({ data }) => {
       },
       {
         text: "Solo staking",
-        to: "/staking/solo",
+        to: "/staking/solo/",
         matomo: {
           eventCategory: `Staking dropdown`,
           eventAction: `Clicked`,
@@ -261,7 +261,7 @@ const StakingPage = ({ data }) => {
       },
       {
         text: "Staking as a service",
-        to: "/staking/saas",
+        to: "/staking/saas/",
         matomo: {
           eventCategory: `Staking dropdown`,
           eventAction: `Clicked`,
@@ -270,7 +270,7 @@ const StakingPage = ({ data }) => {
       },
       {
         text: "Pooled staking",
-        to: "/staking/pools",
+        to: "/staking/pools/",
         matomo: {
           eventCategory: `Staking dropdown`,
           eventAction: `Clicked`,
@@ -460,7 +460,7 @@ const StakingPage = ({ data }) => {
                       eventName: "clicked solo staking",
                     })
                   }}
-                  to="/staking/solo"
+                  to="/staking/solo/"
                 >
                   More on solo staking
                 </StyledButtonLink>

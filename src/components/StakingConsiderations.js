@@ -174,7 +174,7 @@ const data = {
     {
       title: "Trustless",
       description:
-        "Validator keys are not entrusted to any other human at any time in the validator lifecycle.<br/>Any smart contracts involved are free of back doors, without reliance on privileged permissions for execution.",
+        "Validator keys are not entrusted to any other human at any time in the validator lifecycle. Any smart contracts involved are free of back doors, without reliance on privileged permissions for execution.",
       valid: "Trustless",
       caution: "",
       warning: "Trusted",
