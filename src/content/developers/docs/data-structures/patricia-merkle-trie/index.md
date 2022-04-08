@@ -14,7 +14,7 @@ Patricia Merkle Tries are fully deterministic, meaning that a trie with the same
 
 It would be helpful to have basic knowledge of Merkle trees and serialization to understand this page.
 
-## Basic Radix Tries {#basic-radix-tries}
+## Basic radix tries {#basic-radix-tries}
 
 In a basic radix trie, every node looks as follows:
 
