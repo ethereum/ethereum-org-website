@@ -10,7 +10,7 @@ Simple serialize (SSZ) is the serialization method used on the Beacon Chain. It 
 
 ## How does SSZ work? {#how-does-ssz-work}
 
-### Serialization
+### Serialization {#serialization}
 
 Ultimately the goal of SSZ serialization is to represent objects of arbitrary complexity as strings of bytes. Each bytestring has a fixed length (32 bytes) called a chunk. These chunks directly become leaves in the Merkle tree representing the object.
 
