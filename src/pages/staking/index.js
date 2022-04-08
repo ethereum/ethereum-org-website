@@ -372,11 +372,11 @@ const StakingPage = ({ data }) => {
           <StakingHierarchy />
           <Content>
             <p style={{ marginTop: "1rem" }}>
-              As you may have noticed, there is no one single way to participate
-              in Ethereum staking. These paths target a wide range of users, and
-              ultimately are each unique, and vary in terms of risks, rewards,
+              As you may have noticed, there are many ways to participate in
+              Ethereum staking. These paths target a wide range of users, and
+              ultimately are each unique and vary in terms of risks, rewards,
               and trust assumptions. Some of them are more decentralized,
-              battle-tested and/or risky than others. We'll provide some
+              battle-tested and/or risky than others. We provide some
               information on popular projects in the space, but{" "}
               <em>always do your own research</em> before sending ETH anywhere.
             </p>
@@ -402,8 +402,8 @@ const StakingPage = ({ data }) => {
                 <h4>Rewards</h4>
                 <ul>
                   <li>
-                    Receive rewards directly from the protocol for actions that
-                    help the network reach consensus
+                    Maximum rewards - receive full rewards directly from the
+                    protocol
                   </li>
                   <li>
                     You'll get rewards for batching transactions into a new
@@ -411,7 +411,7 @@ const StakingPage = ({ data }) => {
                     chain running securely
                   </li>
                   <li>
-                    After the Merge you'll receive unburnt transaction fees for
+                    After The Merge you'll receive unburnt transaction fees for
                     blocks you propose
                   </li>
                 </ul>
@@ -429,7 +429,7 @@ const StakingPage = ({ data }) => {
                     There are penalties, which cost ETH, for going offline
                   </li>
                   <li>
-                    Malicious behavior can result in “slashing” of larger
+                    Malicious behavior can result in "slashing" of larger
                     amounts of ETH and forced ejection from the network
                   </li>
                 </ul>
@@ -475,7 +475,7 @@ const StakingPage = ({ data }) => {
                 <h4>Rewards</h4>
                 <ul>
                   <li>
-                    Usually involved full protocol rewards minus monthly fee for
+                    Usually involves full protocol rewards minus monthly fee for
                     node operations
                   </li>
                   <li>
@@ -493,12 +493,12 @@ const StakingPage = ({ data }) => {
                 <h4>Risks</h4>
                 <ul>
                   <li>
-                    Subject to same risks as solo staking plus counter-party
-                    risk of service provider
+                    Same risks as solo staking plus counter-party risk of
+                    service provider
                   </li>
                   <li>
-                    Your ETH is at stake, and safe use of your signing keys is
-                    entrusted to someone else who could behave maliciously
+                    Use of your signing keys is entrusted to someone else who
+                    could behave maliciously
                   </li>
                 </ul>
               </div>
@@ -548,7 +548,7 @@ const StakingPage = ({ data }) => {
                   </li>
                   <li>
                     Liquidity tokens can be held in your own wallet, used in
-                    defi and sold if you decide to exit
+                    DeFi and sold if you decide to exit
                   </li>
                 </ul>
               </div>
@@ -560,12 +560,9 @@ const StakingPage = ({ data }) => {
               >
                 <h4>Risks</h4>
                 <ul>
+                  <li>Risks vary depending on the method used</li>
                   <li>
-                    The risks to pooled staking vary depending on the method
-                    used
-                  </li>
-                  <li>
-                    In general risks consist of a combination of counter-party,
+                    In general, risks consist of a combination of counter-party,
                     smart contract and execution risk
                   </li>
                 </ul>
@@ -574,13 +571,13 @@ const StakingPage = ({ data }) => {
                 <h4>Requirements</h4>
                 <ul>
                   <li>
-                    To join a pool, you will need to have some ETH in your own
-                    wallet
+                    Lowest ETH requirements, some projects require as little as
+                    0.01 ETH
                   </li>
                   <li>
-                    From there you can deposit directly to different pooled
-                    staking platforms, or you can simply trade for one of the
-                    staking liquidity tokens
+                    Deposit directly from your wallet to different pooled
+                    staking platforms or simply trade for one of the staking
+                    liquidity tokens
                   </li>
                 </ul>
               </div>
