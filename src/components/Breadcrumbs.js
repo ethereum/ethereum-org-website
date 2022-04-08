@@ -13,7 +13,7 @@ const Crumb = styled.a`
   font-weight: normal;
 `
 
-const List = styled.ul`
+const List = styled.nav`
   margin: 0;
   margin-bottom: 2rem;
   list-style-type: none;
@@ -79,25 +79,23 @@ const Breadcrumbs = ({ slug, startDepth = 0, className }) => {
   })
 
   return (
-    <nav aria-label="Breadcrumb">
-      <List className={className} dir={"auto"}>
-        {crumbs.map((crumb, idx) => (
-          <ol>
-            <ListItem key={idx}>
-              <Crumb>
-                <CrumbLink
-                  to={crumb.fullPath}
-                  isPartiallyActive={slug === crumb.fullPath}
-                >
-                  {crumb.text}
-                </CrumbLink>
-                {idx < crumbs.length - 1 && <Slash>/</Slash>}
-              </Crumb>
-            </ListItem>
-          </ol>
-        ))}
-      </List>
-    </nav>
+    <List className={className} aria-label="Breadcrumb" dir={"auto"}>
+      {crumbs.map((crumb, idx) => (
+        <ol>
+          <ListItem key={idx}>
+            <Crumb>
+              <CrumbLink
+                to={crumb.fullPath}
+                isPartiallyActive={slug === crumb.fullPath}
+              >
+                {crumb.text}
+              </CrumbLink>
+              {idx < crumbs.length - 1 && <Slash>/</Slash>}
+            </Crumb>
+          </ListItem>
+        </ol>
+      ))}
+    </List>
   )
 }
 
