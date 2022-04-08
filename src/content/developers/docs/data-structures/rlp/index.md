@@ -10,7 +10,10 @@ Recursive Length Prefix (RLP) serialization is used extensively in Ethereum's ex
 
 More information in [the Ethereum yellow paper (Appendix B)](https://ethereum.github.io/yellowpaper/paper.pdf#page=19).
 
-If one wishes to use RLP to encode a dictionary, the two suggested canonical forms are to either use `[[k1,v1],[k2,v2]...]` with keys in lexicographic order or to use the higher-level Patricia Tree encoding as Ethereum does.
+To use RLP to encode a dictionary, the two suggested canonical forms are:
+
+- use `[[k1,v1],[k2,v2]...]` with keys in lexicographic order
+- use the higher-level Patricia Tree encoding as Ethereum does
 
 ## Definition
 
