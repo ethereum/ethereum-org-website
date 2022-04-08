@@ -6,7 +6,7 @@ sidebar: true
 sidebarDepth: 2
 ---
 
-The Ethereum platform creates, stores and transfers large volumes of data. This data must get formatted in standardised and memory-efficient ways to allow anyone to [run a node](/run-a-node/) on relatively modest consumer-grade hardware. To achieve this, several specific data structures are used on the Ethereum stack.
+Ethereum creates, stores and transfers large volumes of data. This data must get formatted in standardized and memory-efficient ways to allow anyone to [run a node](/run-a-node/) on relatively modest consumer-grade hardware. To achieve this, several specific data structures are used on the Ethereum stack.
 
 ## Prerequisites {#prerequisites}
 
