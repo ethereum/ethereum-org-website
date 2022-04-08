@@ -1,5 +1,5 @@
 ---
-title: Data Structures
+title: Data structures
 description: A definition of the rlp encoding in Ethereum's execution layer.
 lang: en
 sidebar: true
