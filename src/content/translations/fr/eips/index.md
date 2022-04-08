@@ -11,11 +11,11 @@ sidebar: true
 
 [Les EIP](https://eips.ethereum.org/) sont des normes spécifiant de nouvelles fonctionnalités ou processus potentiels pour Ethereum. Les EIP contiennent les spécifications techniques des modifications proposées et servent de "source de vérité" pour la communauté. Les mises à niveau du réseau et les normes des applications Ethereum sont discutées et développées via le processus des EIP.
 
-N'importe qui dans la communauté Ethereum peut créer une EIP. Les directives pour rédiger des EIP sont incluses dans [EIP 1](https://eips.ethereum.org/EIPS/eip-1). L'EIP doit fournir une spécification technique concise de la fonctionnalité et sa justification. L'auteur de l'EIP est chargé d'obtenir un consensus au sein de la communauté et de documenter les opinions divergentes. Le niveau technique étant élevé pour soumettre une EIP bien formulée, la plupart des auteurs d'EIP sont des développeurs d'application ou de protocole.
+N'importe qui dans la communauté Ethereum peut créer une EIP. Les directives pour rédiger des EIP sont incluses dans l'[EIP 1](https://eips.ethereum.org/EIPS/eip-1). L'EIP doit fournir une spécification technique concise de la fonctionnalité et sa justification. L'auteur de l'EIP est chargé d'obtenir un consensus au sein de la communauté et de documenter les opinions divergentes. Le niveau technique étant élevé pour soumettre une EIP bien formulée, la plupart des auteurs d'EIP sont des développeurs d'application ou de protocole.
 
 ## Pourquoi les EIP sont-elles importantes ? {#why-do-eips-matter}
 
-Les EIPs jouent un rôle central dans la façon dont les modifications sont effectuées et documentées sur Ethereum. Elles permettent aux utilisateurs de proposer, de discuter et d'adopter des modifications. Il existe [différents types d'EIP](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1.md#eip-types), y compris les EIP fondamentales pour les changements de protocole de bas niveau qui affectent le consensus et nécessitent une mise à niveau du réseau, et des ERC pour les normes d'applications. Par exemple, les normes pour créer des jetons, comme [ERC-20](https://eips.ethereum.org/EIPS/eip-20) ou [ERC-721](https://eips.ethereum.org/EIPS/eip-721) permettent aux applications d'interagir avec ces jetons pour traiter tous ceux utilisant les mêmes règles, ce qui facilite la création d'applications interopérables.
+Les EIP jouent un rôle central dans la façon dont les modifications sont effectuées et documentées sur Ethereum. Elles permettent aux utilisateurs de proposer, de discuter et d'adopter des modifications. Il existe [différents types d'EIP](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1.md#eip-types), y compris les EIP fondamentales pour les changements de protocole de bas niveau qui affectent le consensus et nécessitent une mise à niveau du réseau, et des ERC pour les normes d'applications. Par exemple, les normes pour créer des jetons, comme [ERC-20](https://eips.ethereum.org/EIPS/eip-20) ou [ERC-721](https://eips.ethereum.org/EIPS/eip-721) permettent aux applications d'interagir avec ces jetons pour traiter tous ceux utilisant les mêmes règles, ce qui facilite la création d'applications interopérables.
 
 Chaque mise à niveau du réseau consiste en un ensemble d'EIP qui doivent être implémentées par chaque [client Ethereum](/learn/#clients-and-nodes) du réseau. Cela implique que pour conserver un consensus avec les autres clients du réseau principal Ethereum, les développeurs de clients doivent s'assurer qu'ils ont tous implémenté les EIP requises.
 
@@ -30,9 +30,15 @@ Des éditeurs sont chargés de vérifier la solidité technique, l'orthographe/l
 - Alex Beregszaszi (EWASM/Ethereum Foundation)
 - Greg Colvin (Communauté)
 - Casey Detrio (EWASM/Ethereum Foundation)
+- Matt Garnett (Quilt)
 - James Hudson (Ethereum Foundation)
 - Nick Johnson (ENS)
 - Nick Savers (Communauté)
+- Micah Zoltu (Communauté)
+
+Les éditeurs d'EIP, avec les membres de la communauté des [Ethereum Cat Herders](https://ethereumcatherders.com/) et des [Ethereum Magicians](https://ethereum-magicians.org/), décident des EIP qui seront implémentées et sont responsables de la facilitation des EIP ainsi que du passage des EIP au stade "Final" ou "Retiré".
+
+Le processus complet de normalisation ainsi que la charte sont détaillés dans le document [EIP-1](https://eips.ethereum.org/EIPS/eip-1)
 
 ## En savoir plus {#learn-more}
 
@@ -44,11 +50,13 @@ Si vous souhaitez en savoir plus, consultez le [site dédié aux EIP](https://ei
 
 ## Participer {#participate}
 
-Si vous souhaitez suivre l'évolution des EIP ou faire part de vos commentaires, consultez le [forum Ethereum Magicians](https://ethereum-magicians.org/), où la communauté discute des EIP.
+Tout le monde peut créer une EIP ou une ERC, mais il est conseillé de lire [EIP-1](https://eips.ethereum.org/EIPS/eip-1), qui décrit le processus d'EIP, ce qu'est une EIP, les différents types d'EIP, ce que le document EIP doit contenir, le format et le modèle EIP, la liste des éditeurs d'EIP et tout ce que vous devez savoir sur les EIP avant d'en créer une. Votre nouvelle EIP doit définir une nouvelle fonctionnalité qui n'est pas vraiment complexe mais pas super niche et peut être utilisée par des projets dans l'écosystème Ethereum. L'élément le plus difficile est la facilitation : en tant qu'auteur, vous devez rassembler la communauté autour de votre EIP, collecter des commentaires, écrire des articles décrivant les problèmes que votre EIP résout, et collaborer avec des projets pour implémenter votre EIP.
+
+Si vous souhaitez suivre la discussion sur les EIP ou faire part de vos commentaires, consultez le [forum Ethereum Magicians](https://ethereum-magicians.org/), où la communauté discute des EIP.
 
 Voir également :
 
-- [Comment crée une EIP](https://eips.ethereum.org/EIPS/eip-1)
+- [Comment créer une EIP](https://eips.ethereum.org/EIPS/eip-1)
 
 ## Références {#references}
 
