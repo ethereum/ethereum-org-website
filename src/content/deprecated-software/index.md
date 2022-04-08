@@ -172,13 +172,13 @@ Mix was of the earliest Ethereum-related applications. See this [presentation by
 
 [Remix](https://remix.ethereum.org/) is a browser-hosted IDE for Solidity / smart contract development, testing, and deployment. It also has a desktop option.
 
-### Aleth {#aleth}
+### Aleth (cpp-ethereum) {#aleth}
 
 Deprecated on October 6, 2021
 
 **Summary**
 
-Aleth was an Ethereum client written in C++.
+Aleth was an Ethereum client written in C++,originally known as cpp-ethereum.
 
 **Archives**
 
@@ -191,6 +191,34 @@ Aleth was the third most popular client for Ethereum before being deprecated on 
 **Alternatives**
 
 [Geth](https://geth.ethereum.org/) is a well-known alternative Ethereum client.
+
+### Ethereum-H
+
+**Archives**
+
+The Ethereum-H archives have been removed from Github.
+
+**History**
+
+Ethereum-H was an Ethereum client written in Haskell. It was deprecated around 2015.
+
+**Alternatives**
+
+[Geth](https://geth.ethereum.org/), [Nethermind](http://nethermind.io/), [Besu](https://pegasys.tech/solutions/hyperledger-besu/) and [Erigon](https://github.com/ledgerwatch/erigon) are viable alternative Ethereum clients - there is no current Haskell client.
+
+### ruby-ethereum
+
+**Archives**
+
+[ruby-ethereum Github page](https://github.com/cryptape/ruby-ethereum)
+
+**History**
+
+ruby-ethereum was an Ethereum client written in Ruby. It was deprecated around 2018.
+
+**Alternatives**
+
+[Geth](https://geth.ethereum.org/), [Nethermind](http://nethermind.io/), [Besu](https://pegasys.tech/solutions/hyperledger-besu/) and [Erigon](https://github.com/ledgerwatch/erigon) are viable alternative Ethereum clients - there is no current Ruby client.
 
 ### Parity {#parity}
 
