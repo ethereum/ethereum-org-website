@@ -172,6 +172,36 @@ Mix was of the earliest Ethereum-related applications. See this [presentation by
 
 [Remix](https://remix.ethereum.org/) is a browser-hosted IDE for Solidity / smart contract development, testing, and deployment. It also has a desktop option.
 
+## Minimal
+
+Deprecated in 2020.
+
+**Summary**
+
+Minimal was a modular implementation of the Ethereum blockchain written in Go.
+
+**Archives**
+
+[Archived Github repo](https://github.com/umbracle/minimal)
+
+**History**
+
+Minimal was replaced by [polgon-sdk](https://github.com/0xPolygon/polygon-edge)
+
+### Mana-Ethereum
+
+**Summary**
+
+Mana was an Ethereum client built using Elixir.
+
+**Archives**
+
+[Archived Github repo](https://github.com/mana-ethereum/mana)
+
+**History**
+
+Mana's Github repository has not been explicitly archived but the last commit was in 2019.
+
 ### Aleth (cpp-ethereum) {#aleth}
 
 Deprecated on October 6, 2021
