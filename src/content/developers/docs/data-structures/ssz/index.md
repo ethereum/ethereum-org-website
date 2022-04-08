@@ -21,9 +21,9 @@ This is a very simple process for "basic types". The element is simply converted
 
 For complex "composite" types, serialization is more complicated because the composite type contains multiple elements that might have different types or different sizes, or both. For example, vectors contain elements of uniform type but varying size. Where these objects all have fixed lengths (i.e. the size of the elements is always going to be constant irrespective of their actual values) the serialization is simply a conversion of each element in the composite type ordered into little-endian bytestrings. These bytestrings are joined together and padded to the nearest multiple of 32-bytes. The serialized object has the bytelist representation of the fixed-length elements in the same order as they appear in the deserialized object.
 
-For types with variable lengths, the actual data is replecaed by an "offset" value in that element's position in the serialized object. The actual data is then added to a heap at the end of the serialized object. The offset value is the index for the start of the actual data in the heap, acting like a pointer to the relevant bytes.
+For types with variable lengths, the actual data gets replaced by an "offset" value in that element's position in the serialized object. The actual data gets added to a heap at the end of the serialized object. The offset value is the index for the start of the actual data in the heap, acting as a pointer to the relevant bytes.
 
-The example below illustrates how the offsetting works for an container with both fixed and variable length elements:
+The example below illustrates how the offsetting works for a container with both fixed and variable-length elements:
 
 ```Rust
 
