@@ -96,7 +96,7 @@
   "docs-nav-data-structures": "Data structures",
   "docs-nav-data-structures-description": "Explanation of the data structures used across the Ethereum stack",
   "docs-nav-data-structures-rlp": "Recursive-length prefix (RLP)",
-  "docs-nav-data-structures-patricia-merkle-trie": "Patricia merkle trie",
+  "docs-nav-data-structures-patricia-merkle-tries": "Patricia Merkle Tries",
   "docs-nav-data-structures-ssz": "Simple serialize (SSZ)",
   "page-calltocontribute-desc-1": "If you're an expert on the topic and want to contribute, edit this page and sprinkle it with your wisdom.",
   "page-calltocontribute-desc-2": "You'll be credited and you'll be helping the Ethereum community!",
