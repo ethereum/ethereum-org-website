@@ -135,7 +135,7 @@ The first of two [hard forks](#hard-fork) for the [Metropolis](#metropolis) deve
 
 ## C {#section-c}
 
-### Casper-FFG
+### Casper-FFG {casper-ffg}
 
 Casper-FFG is a proof-of-stake consensus protocol used in conjunction with the [LMD-GHOST](#lmd-ghost) fork choice algorithm to allow [consensus clients](#consensus-client) to agree on the head of the Beacon Chain.
 
@@ -287,6 +287,14 @@ A deliberate blockchain fork, where a user with a sufficiently large amount of m
 
 A cryptographic algorithm used by Ethereum to ensure that funds can only be spent by their owners. It's the preferred method for creating public and private keys. Relevant for account [address](#address) generation and [transaction](#transaction) verification.
 
+### encryption {#encryption}
+
+Encryption is the conversion of electronic data into a form unreadable by anyone except the owner of the correct decryption key.
+
+### entropy {#entropy}
+
+In the context of cryptography, lack of predictability or level of randomness. When generating secret information, such as [private keys](#private-key), algorithms usually rely on a source of high entropy to ensure the output is unpredictable.
+
 ### epoch {#epoch}
 
 A period of 32 [slots](#slot) (6.4 minutes) in the [Beacon Chain](#beacon-chain)-coordinated system. [Validator](#validator) [committees](#committee) are shuffled every epoch for security reasons. There's an opportunity at each epoch for the chain to be [finalized](#finality). The term is also used on the [execution layer](#execution-layer) to mean the interval between each regeneration of the database used as a seed by the PoW algorithm [Ethash](#Ethash). The epoch in specified as 30000 blocks.
@@ -336,14 +344,6 @@ A design document providing information to the Ethereum community, describing a 
 The ENS registry is a single central [contract](#smart-contract) that provides a mapping from domain names to owners and resolvers, as described in [EIP](#eip) 137.
 
 [Read more at ens.domains](https://ens.domains)
-
-### encryption
-
-Encryption is the conversion of electronic data into a form unreadable by anyone except the owner of the correct decryption key.
-
-### entropy {#entropy}
-
-In the context of cryptography, lack of predictability or level of randomness. When generating secret information, such as [private keys](#private-key), algorithms usually rely on a source of high entropy to ensure the output is unpredictable.
 
 ### execution client {#execution-client}
 
@@ -622,7 +622,7 @@ The [fork-choice algorithm](#fork-choice-algorithm) used by Ethereum's consensus
 
 Short for "main network," this is the main public Ethereum [blockchain](#blockchain). Real ETH, real value, and real consequences. Also known as layer 1 when discussing [layer 2](#layer-2) scaling solutions. (Also, see [testnet](#testnet))
 
-### memory-hard
+### memory-hard {#memory-hard}
 
 Memory hard functions are processes that experience a drastic decrease in speed or feasibility when the amount of available memory even slightly decreases. An example id the Ethereum mining algorithm [Ethash](#ethash).
 
@@ -761,7 +761,7 @@ Sale of cryptocurrency before the actual launch of the network.
 
 A secret number that allows Ethereum users to prove ownership of an account or contracts, by producing a digital signature (see [public key](#public-key), [address](#address), [ECDSA](#ecdsa)).
 
-### private chain
+### private chain {#private-chain}
 
 A fully private blockchain is one with write permissions limited to one organization.
 
