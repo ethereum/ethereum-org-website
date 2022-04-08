@@ -1,6 +1,6 @@
 ---
 title: Data structures
-description: A definition of the rlp encoding in Ethereum's execution layer.
+description: An overview of the fundamental Ethereum data structures.
 lang: en
 sidebar: true
 sidebarDepth: 2
