@@ -87,8 +87,10 @@ const LaunchpadWidget = () => {
           Solo validators are expected to <strong>test their setup</strong> and
           operational skills on the {data.testnet.label} before risking funds.
           Remember it is important to choose a{" "}
-          <Link to="/client-diversity">minority client</Link> as it improves the
-          security of the network, and limits your risk.
+          <Link to="/developers/docs/nodes-and-clients/client-diversity/">
+            minority client
+          </Link>{" "}
+          as it improves the security of the network, and limits your risk.
         </p>
         <p>
           If you're comfortable with it, you can set up everything needed from
