@@ -29,6 +29,7 @@ Multiple projects provide implementations of Validium that you can integrate int
 - [Starkware](https://starkware.co/)
 - [Matter Labs zkPorter](https://matter-labs.io/)
 - [Loopring](https://loopring.org/#/)
+- [Arbitrum AnyTrust](https://medium.com/offchainlabs/introducing-anytrust-chains-cheaper-faster-l2-chains-with-minimal-trust-assumptions-31def59eb8d7)
 
 ## Further reading {#further-reading}
 
