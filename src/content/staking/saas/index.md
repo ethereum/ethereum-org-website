@@ -51,13 +51,15 @@ Below are some available SaaS provider. Use the above indicators to help guide y
 
 <Emoji text="⚠️" mr="1rem" /> Please note the importance of supporting <a href="/developers/docs/nodes-and-clients/client-diversity/">client diversity</a> as it improves the security of the network, and limits your risk. Services that have evidence of limiting majority client use are marked as "diverse clients."
 
+#### SaaS providers
+
 <StakingProductsCardGrid category="saas" />
 
-**Key Generators**
+#### Key Generators
 
 <StakingProductsCardGrid category="keyGen" />
 
-Have a suggestion for a staking-as-a-service provider we missed? Check out our [product listing policy](/contributing/adding-staking-product) to see if it would be a good fit, and to submit it for review.
+Have a suggestion for a staking-as-a-service provider we missed? Check out our [product listing policy](/contributing/adding-staking-product/) to see if it would be a good fit, and to submit it for review.
 
 ## FAQ {#faq}
 
