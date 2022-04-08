@@ -3,7 +3,7 @@
     {
       "name": "Rocket Pool CLI",
       "svgPath": "rocket-pool-glyph.svg",
-      "hue": 14,
+      "hue": 379,
       "launchDate": "2021-11-08",
       "url": "https://rocketpool.net/node-operators",
       "audits": [
@@ -47,7 +47,7 @@
     {
       "name": "Stereum",
       "svgPath": "stereum-glyph.svg",
-      "hue": 133,
+      "hue": 164,
       "launchDate": "2021-02-06",
       "url": "https://stereum.net/ethereum-node-setup/",
       "audits": [
@@ -74,7 +74,7 @@
     {
       "name": "DAppNode",
       "svgPath": "dappnode-glyph.svg",
-      "hue": 174,
+      "hue": 175,
       "launchDate": "2020-12-01",
       "url": "https://dappnode.io",
       "audits": [],
@@ -115,8 +115,8 @@
     },
     {
       "name": "eth-docker",
-      "svgPath": "default-open-source-glyph.svg",
-      "hue": 200,
+      "svgPath": "docker-icon.svg",
+      "hue": 221,
       "launchDate": "2021-06-05",
       "url": "https://eth-docker.net",
       "audits": [],
@@ -136,7 +136,7 @@
     {
       "name": "Vouch + Dirk",
       "svgPath": "default-open-source-glyph.svg",
-      "hue": 209,
+      "hue": 239,
       "launchDate": "2020-12-01",
       "url": "https://www.attestant.io/posts/introducing-vouch/",
       "audits": [

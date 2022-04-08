@@ -45,57 +45,29 @@ Solo staking comes with more responsibility, but provides you with maximum contr
 As much as we wish that solo staking was accessible and risk free to everyone, this is not reality. There are some practical and serious considerations to keep in mind before choosing to solo stake your ETH.
 
 <InfoGrid>
-  <ExpandableCard title="Required reading" matomo={
-    {eventCategory: `ExpandableCardSoloStaking`,
-      eventAction: `Clicked`,
-      eventName: "clicked required reading",
-    }}>
+  <ExpandableCard title="Required reading" eventCategory="SoloStaking" eventName="clicked required reading">
     When operating your own node you should spend some time learning how to use the software you've chosen. This should involve reading relevant documentation and being attune to communication channels of those dev teams.
     The more you understand about the software you're running and how proof-of-stake works, the less risky it will be as a staker, and the easier it will be to fix any issues that may arise along the way as a node operator. 
   </ExpandableCard>
-  <ExpandableCard title="Comfortable with computers" matomo={
-    {eventCategory: `ExpandableCardSoloStaking`,
-      eventAction: `Clicked`,
-      eventName: "clicked comfortable with computers",
-    }}>
+  <ExpandableCard title="Comfortable with computers" eventCategory="SoloStaking" eventName="clicked comfortable with computers">
     Node setup requires a reasonable comfort level when working with computers, although new tools are making this easier over time. Understanding of the command-line interface is helpful, but no longer strictly required 
     It also requires very basic hardware setup, and some understanding of minimum recommended specs.
   </ExpandableCard>
-  <ExpandableCard title="Secure key management" matomo={
-    {eventCategory: `ExpandableCardSoloStaking`,
-      eventAction: `Clicked`,
-      eventName: "clicked secure key management",
-    }}>
+  <ExpandableCard title="Secure key management" eventCategory="SoloStaking" eventName="clicked secure key management">
     Just like how private keys secure your Ethereum address, you will need to generate keys specifically for your validator. You must understand how to keep any seed phrases or private keys safe and secure.
     <ButtonLink to="/security">Ethereum security and scam prevention</ButtonLink>
   </ExpandableCard>
-  <ExpandableCard title="No withdrawing (for now)" matomo={
-    {eventCategory: `ExpandableCardSoloStaking`,
-      eventAction: `Clicked`,
-      eventName: "clicked no withdrawing",
-    }}>
+  <ExpandableCard title="No withdrawing (for now)" eventCategory="SoloStaking" eventName="clicked no withdrawing">
     Withdrawing staked ETH or rewards from a validator balance is not yet supported. Support for withdrawals are planned for the Shanghai upgrade following The Merge. You should anticipate your ETH being locked for at least one-to-two years. After Shanghai, this will no longer be the case, at which point you will be able to freely withdraw portions or all of your stake if you wish.
   </ExpandableCard>
-  <ExpandableCard title="Maintenance" matomo={
-    {eventCategory: `ExpandableCardSoloStaking`,
-      eventAction: `Clicked`,
-      eventName: "clicked maintenance",
-    }}>
+  <ExpandableCard title="Maintenance" eventCategory="SoloStaking" eventName="clicked maintenance">
     Hardware occasionally fails, connections error out, and client software occasionally needs upgrading. Node maintenance is inevitable and will occasionally require your attention. You'll want to be sure you stay aware of any anticipated network upgrades, or other critical client upgrades.
   </ExpandableCard>
-  <ExpandableCard title="Reliable uptime" matomo={
-    {eventCategory: `ExpandableCardSoloStaking`,
-      eventAction: `Clicked`,
-      eventName: "clicked reliable uptime",
-    }}>
+  <ExpandableCard title="Reliable uptime" eventCategory="SoloStaking" eventName="clicked reliable uptime">
     Your rewards are proportional to the time your validator is online and properly attesting. Downtime incurs penalties roughly equal to what you would have earned in that same amount of time. Being offline while the network is finalizing does not result in slashing.
     Epoch rewards are inversely proportional to how long it takes your attestations to be included, meaning internet bandwidth also matter. This can vary, but a minimum of 10 Mb/s up and down is recommended.
   </ExpandableCard>
-  <ExpandableCard title="Slashing risk" matomo={
-    {eventCategory: `ExpandableCardSoloStaking`,
-      eventAction: `Clicked`,
-      eventName: "clicked slashing risk",
-    }}>
+  <ExpandableCard title="Slashing risk" eventCategory="SoloStaking" eventName="clicked slashing risk">
     Different from inactivity penalties for being offline, <em>slashing</em> is a much more serious penalty reserved for malicious offenses. By running a minority client with your keys loaded on only one machine at time, your risk of being slashed is minimized. That being said, all stakers must be aware of the risks of slashing.
     
     <a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/">More on slashing and validator lifecycle</a>
@@ -148,6 +120,8 @@ Have a suggestion for a staking tool we missed? Check out our [product listing p
 - [Somer Esat](https://github.com/SomerEsat/ethereum-staking-guide) - Linux (CLI)
 - [Rocket Pool Node Operators](https://rocketpool.net/node-operators) - Linux, macOS (CLI)
 
+<!-- TODO: beaconcha.in/education page -->
+
 ## FAQ {#faq}
 
 These are a few of the most common questions about staking that are worth knowing about.
@@ -159,32 +133,37 @@ Each key-pair associated with a validator requires 32 ETH to be activated. More
 
 Do not deposit more than 32 ETH for a single validator. It will be locked until the planned Shanghai update.
 
-If solo staking seems too demanding you you, consider using a <a href="/staking/saas">staking-as-a-service</a> provider, or if you're working with less than 32 ETH, check out the <a href="/staking/pools">staking pools</a>.
+If solo staking seems too demanding you you, consider using a <a href="/staking/saas/">staking-as-a-service</a> provider, or if you're working with less than 32 ETH, check out the <a href="/staking/pools/">staking pools</a>.
 </ExpandableCard>
 
 <ExpandableCard title="Is staking already live?">
-TODO: Answer to try and clarify a synopsis of the Beacon Chain and The Merge.
+Yes and no. Staking has been live since December 1, 2020, but until the Merge happens, the proof-of-stake consensus remains isolated on its own chain, while the existing Ethereum network as we know it continues to operate using proof-of-work. These two chains start separate, but with the Merge, proof-of-work will be fully deprecated, and proof-of-stake will become the sole means of consensus from here-on-out.
 
-</ExpandableCard>
-
-<ExpandableCard title="I'm running the Beacon Chain, is that enough?">
-TODO: Answer about how you need to run both clients as of The Merge... content on Figma?
+This means that staking is currently live for users to deposit their ETH, run a validator client, and start earning rewards. After the Merge, stakers will earn higher rewards as validators begin to process transactions and earn fee tips on top of protocol rewards. After the Shanghai update (planned to follow the Merge by a few months), stakers will then be able to withdraw rewards and funds from their validator balance.
 </ExpandableCard>
 
 <ExpandableCard title="Which client is best?">
-Individual clients may vary slightly in terms of performance of user interface, as each are developed by different teams, using a variety of programming languages. That being said, none of them are "the best." All production clients are excellent pieces of software, that all perform the same basic functions to sync and interact with the blockchain.
+Individual clients may vary slightly in terms of performance and user interface, as each are developed by different teams using a variety of programming languages. That being said, none of them are "best." All production clients are excellent pieces of software, that all perform the same core functions to sync and interact with the blockchain.
 
-Since all production clients provide the same basic functionality, it is actually very important that you choose a <strong>minority client</strong>, meaning a client that is NOT currently being used by a majority of validators on the network. This may sound counterintuitive, but running a majority or supermajority client puts you at an increased risk of slashing in the event of a bug in that client. Running a minority client drastically limits these risks.
+Since all production clients provide the same basic functionality, it is actually very important that you choose a <strong>minority client</strong>, meaning any client that is NOT currently being used by a majority of validators on the network. This may sound counterintuitive, but running a majority or supermajority client puts you at an increased risk of slashing in the event of a bug in that client. Running a minority client drastically limits these risks.
 
 <a href="https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA">Learn more about why client diversity is critical</a>
 </ExpandableCard>
 
-<ExpandableCard title="Can I just use a VPS (virtual private service)?">
-TODO: Answer about cloud servers being detrimental to centralization of the network. If AWS or DigitalOcean go down, you're penalties will be much larger, and you'll be at an increased risk of slashing. ie: >1/3 the network uses AWS and it goes down or is targetted by regulation... The network would no longer finalize, and you, by using AWS, could be part of the validators set that would be subject to quadratic leaking.
+<ExpandableCard title="Can I just use a VPS (virtual private server)?">
+Although a virtual private server (VPS) can be used as a replacement to home hardware, the physical access and location of your validator client _does matter._ Centralized cloud solutions such as Amazon Web Services or Digital Ocean allow the convenience of not having to obtain and operate hardware, at the expense of centralizing the network.
+
+The more validator clients running on a single centralized cloud storage solution, the more dangerous it becomes for these users. Any event that takes these providers offline, whether by an attack, regulatory demands, or just power/internet outages, will result in every validator client that relies on this server to go offline at the same time.
+
+Offline penalties are proportional to how many others are offline at the same time. Using a VPS greatly increases the risk that offline penalties will be more severe, and increases your risk of quadratic leaking or slashing in the event the outage is large enough. To minimize your own risk, and the risk to the network, users are strongly encouraged to obtain and operate their own hardware.
+
+<a href="https://kb.beaconcha.in/rewards-and-penalties">More on rewards and penalties</a>
 </ExpandableCard>
 
 <ExpandableCard title="Do I need to do anything before The Merge?">
-Lorem ipsum...
+Anyone currently running a CL (Beacon Chain) client will be required to also run an EL client after the merge. This is a result of the new Engine API that will be used to interface between the two layers. Anyone currently running a Beacon Chain without an execution layer client will need to sync the execution layer before the merge to continue being in sync with the network.
+
+The Merge will also bring unburnt transaction fees to validators. These fees to not accumulate to the balance associated with the validator keys, but instead can be directly to a regular Ethereum address of your choice. In order to properly receive the priority fees/tips from proposed blocks, stakers must update their client settings with the address they would like to receive tips at. See individual client documentation for details.
 </ExpandableCard>
 
 ## Further reading {#further-reading}

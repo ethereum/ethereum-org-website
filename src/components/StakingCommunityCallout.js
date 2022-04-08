@@ -65,7 +65,7 @@ const StakingCommunityCallout = ({ className, id }) => {
           }}
           to="https://discord.io/ethstaker"
         >
-          Join Discord
+          Discord
         </StyledButtonLink>
         <StyledButtonLink
           onClick={() => {
@@ -77,7 +77,7 @@ const StakingCommunityCallout = ({ className, id }) => {
           }}
           to="https://reddit.com/r/ethstaker"
         >
-          Join Reddit
+          Reddit
         </StyledButtonLink>
         <StyledButtonLink
           onClick={() => {
@@ -89,7 +89,7 @@ const StakingCommunityCallout = ({ className, id }) => {
           }}
           to="https://ethstaker.cc"
         >
-          Visit Website
+          Website
         </StyledButtonLink>
       </ButtonContaier>
     </StyledCallout>

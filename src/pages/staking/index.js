@@ -220,7 +220,7 @@ const benefits = [
     title: "More sustainable",
     emoji: "🍃",
     description:
-      "Stakers don't need energy-intensive computers in order to participate in a proof-of-stake system–just a laptop or smartphone. This will make Ethereum better for the environment.",
+      "Stakers don't need energy-intensive computers in order to participate in a proof-of-stake system–just a home computer or smartphone. This will make Ethereum better for the environment.",
   },
 ]
 

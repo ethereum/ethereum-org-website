@@ -150,6 +150,7 @@ const ButtonDropdown = ({ list, className }) => {
           <DropdownItem key={idx} onClick={() => setIsOpen(false)}>
             {!!to && !!matomo && (
               <NavLink
+                isPartiallyActive={false}
                 onClick={() => {
                   trackCustomEvent(matomo)
                 }}
@@ -160,7 +161,7 @@ const ButtonDropdown = ({ list, className }) => {
               </NavLink>
             )}
             {!!to && !matomo && (
-              <NavLink to={to} tabIndex="-1">
+              <NavLink isPartiallyActive={false} to={to} tabIndex="-1">
                 <Translation id={text} />
               </NavLink>
             )}
