@@ -10,7 +10,7 @@ Ethereum creates, stores and transfers large volumes of data. This data must get
 
 ## Prerequisites {#prerequisites}
 
-It is useful to have a good understanding of the ethereum blockchain and client software. Familiarity with the networking layer would also be useful. This is quite low level information about how the Ethereum protocol is designed. A reasonable understanding of the Ethereum whitepaper is recommended.
+You should understand the fundamentals of Ethereum and [client software]. Familiarity with the networking layer and [the Ethereum whitepaper](/whitepaper/) is recommended.
 
 ## Data Structures {#data-structures}
 
