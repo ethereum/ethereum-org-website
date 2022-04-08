@@ -16,7 +16,7 @@ summaryPoints:
 
 ## What is solo staking? {#what-is-solo-staking}
 
-Solo staking is the act of running an Ethereum node connected to the internet and depositing 32 ETH to activate a [validator](#faq), giving you the ability to participate directly in network consensus.
+Solo staking is the act of [running an Ethereum node](/run-a-node/) connected to the internet and depositing 32 ETH to activate a [validator](#faq), giving you the ability to participate directly in network consensus.
 
 An Ethereum node consists of both an execution layer (EL) client, as well as a consensus layer (CL) client. These clients are software that work together, along with a valid set of signing keys, to verify transactions and blocks, attest to the correct head of the chain, aggregate attestations, and propose blocks.
 
@@ -104,15 +104,17 @@ There are a variety of options available to help you with your setup. Use the ab
 
 <Emoji text="⚠️" mr="1rem" /> Please note the importance of choosing a <a href="/developers/docs/nodes-and-clients/client-diversity/">minority client</a> as it improves the security of the network, and limits your risk. Tools that allow you to setup minority client are denoted as "multi-client."
 
+#### Node tools
+
 <StakingProductsCardGrid category="nodeTools" />
 
-**Key Generators**
+#### Key Generators
 
 These tools can be used as an alternative to the [Staking Deposit CLI](https://github.com/ethereum/staking-deposit-cli) to help with key generation.
 
 <StakingProductsCardGrid category="keyGen" />
 
-Have a suggestion for a staking tool we missed? Check out our [product listing policy](/contributing/adding-staking-product) to see if it would be a good fit, and to submit it for review.
+Have a suggestion for a staking tool we missed? Check out our [product listing policy](/contributing/adding-staking-product/) to see if it would be a good fit, and to submit it for review.
 
 ## 📖 Explore solo staking guides {#staking-guides}
 
