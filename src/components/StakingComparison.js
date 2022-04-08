@@ -74,7 +74,7 @@ const StakingComparison = ({ page, className }) => {
   const solo = {
     title: "Solo staking",
     linkText: "Learn more about solo staking",
-    to: "/staking/solo",
+    to: "/staking/solo/",
     matomo: {
       eventCategory: `StakingComparison`,
       eventAction: `Clicked`,
@@ -86,7 +86,7 @@ const StakingComparison = ({ page, className }) => {
   const saas = {
     title: "Staking as a service (SaaS)",
     linkText: "Learn more about staking as a service",
-    to: "/staking/saas",
+    to: "/staking/saas/",
     matomo: {
       eventCategory: `StakingComparison`,
       eventAction: `Clicked`,
@@ -98,7 +98,7 @@ const StakingComparison = ({ page, className }) => {
   const pools = {
     title: "Pooled staking",
     linkText: "Learn more about pooled staking",
-    to: "/staking/pools",
+    to: "/staking/pools/",
     matomo: {
       eventCategory: `StakingComparison`,
       eventAction: `Clicked`,

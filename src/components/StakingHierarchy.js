@@ -272,7 +272,7 @@ const StakingHierarchy = () => {
             .
           </p>
           <ButtonLink
-            to="/staking/solo"
+            to="/staking/solo/"
             onClick={() => {
               trackCustomEvent({
                 eventCategory: `StakingHierarchy`,
@@ -331,7 +331,7 @@ const StakingHierarchy = () => {
                 eventName: "clicked staking as a service",
               })
             }}
-            to="/staking/saas"
+            to="/staking/saas/"
           >
             More on staking as a service
           </ButtonLink>
@@ -383,7 +383,7 @@ const StakingHierarchy = () => {
                 eventName: "clicked pooled staking",
               })
             }}
-            to="/staking/pools"
+            to="/staking/pools/"
           >
             More on pooled staking
           </ButtonLink>

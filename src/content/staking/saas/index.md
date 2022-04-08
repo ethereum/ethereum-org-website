@@ -84,7 +84,7 @@ The Merge will <em>not</em> enable the ability to withdraw your stake or protoco
 <ExpandableCard title="What happens if I get slashed?" eventCategory="SaasStaking" eventName="clicked what happens if I get slashed">
 By using an SaaS provider, you are entrusting the operation of your node to someone else. This comes with the risk of poor node performance, which is not in your control. In the event your validator is slashed, your validator balance will be penalized and forcibly removed from the validator pool. These funds will be locked until withdrawals are enabled at the protocol level.
 
-Contact individual SaaS provider for more details on any guarantees or insurance options. If you'd prefer to be in full control of your validator setup, <a href="/staking/solo">learn more about how to solo stake your ETH</a>.
+Contact individual SaaS provider for more details on any guarantees or insurance options. If you'd prefer to be in full control of your validator setup, <a href="/staking/solo/">learn more about how to solo stake your ETH</a>.
 </ExpandableCard>
 
 ## Further reading {#further-reading}

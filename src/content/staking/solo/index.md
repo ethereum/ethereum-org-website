@@ -133,7 +133,7 @@ Each key-pair associated with a validator requires 32 ETH to be activated. More
 
 Do not deposit more than 32 ETH for a single validator. It will be locked until the planned Shanghai update.
 
-If solo staking seems too demanding you you, consider using a <a href="/staking/saas">staking-as-a-service</a> provider, or if you're working with less than 32 ETH, check out the <a href="/staking/pools">staking pools</a>.
+If solo staking seems too demanding you you, consider using a <a href="/staking/saas/">staking-as-a-service</a> provider, or if you're working with less than 32 ETH, check out the <a href="/staking/pools/">staking pools</a>.
 </ExpandableCard>
 
 <ExpandableCard title="Is staking already live?">
