@@ -24,7 +24,7 @@ lang: zh
 您是否有数学、加密或经济学方面的背景？ 您可能会对以太坊生态系统中正在进行的一些前沿工作感兴趣
 
 - [Challenges.ethereum.org](https://challenges.ethereum.org/) - 一系列高额研究奖金，您可以从中赚取 >100,000 美元
-- <a href=”https://ethresear.ch“>ethrear.ch</a> - 以太坊的主要研究论坛，也是世界上最具影响力的加密经济学论坛
+- [ethrear.ch](https://ethresear.ch) - 以太坊的主要研究论坛，也是世界上最具影响力的加密经济学论坛
 - [生态系统支持计划的愿望清单](https://esp.ethereum.foundation/wishlist/) - 适用于多个研究领域，以太坊生态系统支持计划正在积极寻求这些研究领域的资助申请
 
 ## 非技术技能组合 <Emoji text=":briefcase:" size={1} />‍ {#non-technical}
