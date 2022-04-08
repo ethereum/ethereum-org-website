@@ -20,7 +20,7 @@ Patricia Merkle Tries are structures that encode key-value pairs into a determin
 
 [More on Patricia Merkle Tries](developers/docs/data-structures/patricia-merkle-trie)
 
-### Recursive Length Prefix
+### Recursive Length Prefix {#recursive-length-prefix}
 
 Recursive-length prefix is a serialization method used extensively across Ethereum's execution layer. Detailed information about RLP can be found [here](developers/docs/data-structures/rlp).
 
