@@ -22,11 +22,11 @@ Some pools operate using smart contracts, where funds can be deposited to a cont
 
 ## Why stake with a pool? {#why-stake-with-a-pool}
 
-In addition to the benefits we outlined in our [intro to staking](/staking), staking with a pool comes with a number of distinct benefits.
+In addition to the benefits we outlined in our [intro to staking](/staking/), staking with a pool comes with a number of distinct benefits.
 
 <CardGrid>
   <Card title="Low barrier to entry" emoji="🐟">
-    Not a whale? No problem. Most staking pool lets you stake virtually any amount of ETH by joining forces with other stakers, unlike staking solo which requires 32 ETH.
+    Not a whale? No problem. Most staking pools let you stake virtually any amount of ETH by joining forces with other stakers, unlike staking solo which requires 32 ETH.
   </Card>
   <Card title="Stake today" emoji=":stopwatch:">
     Staking with a pool is as easy as a token swap. No need to worry about hardware setup and node maintenance. Pools allow you to deposit your ETH which enables node operators to run validators. Rewards are then distributed to contributors minus a fee for node operations.
@@ -56,7 +56,7 @@ There are a variety of options available to help you with your setup. Use the ab
 
 <StakingProductsCardGrid category="pools" />
 
-Have a suggestion for a staking tool we missed? Check out our [product listing policy](/contributing/adding-staking-product) to see if it would be a good fit, and to submit it for review.
+Have a suggestion for a staking tool we missed? Check out our [product listing policy](/contributing/adding-staking-product/) to see if it would be a good fit, and to submit it for review.
 
 ## FAQ {#faq}
 
