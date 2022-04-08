@@ -271,7 +271,7 @@ _Примітка. Існують похідні токени / тікери, я
 
 ### Веббезпека {#reading-web-security}
 
-- <a href="https://www.theverge.com/2017/9/18/1632_/sms-two-factor-authentication-hack-password-bitcoin">Ось чому вам не слід використовувати повідомлення для двофакторної автентифікації</a> — _The Verge_</li>
+- [Ось чому вам не слід використовувати повідомлення для двофакторної автентифікації](https://www.theverge.com/2017/9/18/16328172/sms-two-factor-authentication-hack-password-bitcoin) — _The Verge_
 - [До 3 мільйонів пристроїв заражено вірусами від розширень Chrome і Edge](https://arstechnica.com/information-technology/2020/12/up-to-3-million-devices-infected-by-malware-laced-chrome-and-edge-add-ons/) — _Ден Ґудін_
 - [Як створити надійний пароль, який ви не забудете](https://www.avg.com/en/signal/how-to-create-a-strong-password-that-you-wont-forget) — _AVG_
 - [Що таке ключ безпеки?](https://help.coinbase.com/en/coinbase/getting-started/verify-my-account/security-keys-faq) — _Coinbase_</ul>
