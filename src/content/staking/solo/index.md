@@ -55,7 +55,7 @@ As much as we wish that solo staking was accessible and risk free to everyone, t
   </ExpandableCard>
   <ExpandableCard title="Secure key management" eventCategory="SoloStaking" eventName="clicked secure key management">
     Just like how private keys secure your Ethereum address, you will need to generate keys specifically for your validator. You must understand how to keep any seed phrases or private keys safe and secure.
-    <ButtonLink to="/security">Ethereum security and scam prevention</ButtonLink>
+    <div style={{marginTop: "1rem"}}><ButtonLink to="/security">Ethereum security and scam prevention</ButtonLink></div>
   </ExpandableCard>
   <ExpandableCard title="No withdrawing (for now)" eventCategory="SoloStaking" eventName="clicked no withdrawing">
     Withdrawing staked ETH or rewards from a validator balance is not yet supported. Support for withdrawals are planned for the Shanghai upgrade following The Merge. You should anticipate your ETH being locked for at least one-to-two years. After Shanghai, this will no longer be the case, at which point you will be able to freely withdraw portions or all of your stake if you wish.
