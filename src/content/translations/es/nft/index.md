@@ -3,7 +3,7 @@ title: Tókenes no fungibles (NFT)
 description: Una visión general de los NFT en Ethereum
 lang: es
 template: use-cases
-emoji: ":marco_con_imagen:"
+emoji: ":frame_with_picture:"
 sidebar: true
 sidebarDepth: 2
 image: ../../../../assets/infrastructure_transparent.png
