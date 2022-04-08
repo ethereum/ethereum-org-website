@@ -12,7 +12,7 @@ sidebarDepth: 2
 
 ### Serialization {#serialization}
 
-Ultimately the goal of SSZ serialization is to represent objects of arbitrary complexity as strings of bytes. Each bytestring has a fixed length (32 bytes) called a chunk. These chunks directly become leaves in the Merkle tree representing the object.
+The goal of SSZ serialization is to represent objects of arbitrary complexity as strings of bytes. Each bytestring has a fixed length (32 bytes) called a chunk. These chunks directly become leaves in the Merkle tree representing the object.
 
 This is a very simple process for "basic types". The element is simply converted to hexadecimal bytes and then right-padded until its length is equal to 32 bytes (little-endian representation). Basic types include:
 
@@ -29,9 +29,9 @@ The example below illustrates how the offsetting works for a container with both
 
     struct Dummy {
 
-        number: u64,
+        number1: u64,
         number2: u64,
-        vector: Vec<u8>
+        vector: Vec<u8>,
         number3: u64
     }
 
