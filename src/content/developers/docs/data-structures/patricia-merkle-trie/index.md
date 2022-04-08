@@ -6,7 +6,9 @@ sidebar: true
 sidebarDepth: 2
 ---
 
-A Patricia Merkle Trie provides a cryptographically authenticated data structure that can be used to store all (key, value) bindings. They are fully deterministic, meaning that a Patricia trie with the same (key,value) bindings is guaranteed to be exactly the same down to the last byte and therefore have the same root hash, provide the holy grail of O(log(n)) efficiency for inserts, lookups and deletes, and are much easier to understand and code than more complex comparison-based alternatives like red-black tries. These are used extensively across Ethereum's execution layer.
+A Patricia Merkle Trie provides a cryptographically authenticated data structure that can be used to store all `(key, value)` bindings. 
+
+Patricia Merkle Tries are fully deterministic, meaning that a trie with the same `(key, value)` bindings is guaranteed to be identical—down to the last byte. This means they have the same root hash, providing the holy grail of `O(log(n))` efficiency for inserts, lookups and deletes. Also, they are simpler to understand and code than more complex comparison-based alternatives, like red-black trees.
 
 ## Prerequisites {#prerequisites}
 
