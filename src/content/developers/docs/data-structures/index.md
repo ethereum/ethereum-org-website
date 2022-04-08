@@ -22,7 +22,9 @@ Patricia Merkle Tries are structures that encode key-value pairs into a determin
 
 ### Recursive Length Prefix {#recursive-length-prefix}
 
-Recursive-length prefix is a serialization method used extensively across Ethereum's execution layer. Detailed information about RLP can be found [here](developers/docs/data-structures/rlp).
+Recursive Length Prefix (RLP) is a serialization method used extensively across Ethereum's execution layer.
+
+[More on RLP](developers/docs/data-structures/rlp).
 
 ### Simple Serialize
 
