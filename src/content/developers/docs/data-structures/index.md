@@ -12,7 +12,7 @@ Ethereum creates, stores and transfers large volumes of data. This data must get
 
 You should understand the fundamentals of Ethereum and [client software]. Familiarity with the networking layer and [the Ethereum whitepaper](/whitepaper/) is recommended.
 
-## Data Structures {#data-structures}
+## Data structures {#data-structures}
 
 ### Patricia merkle trees {#patricia-merkle-tries}
 
