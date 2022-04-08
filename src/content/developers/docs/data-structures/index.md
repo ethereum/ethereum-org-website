@@ -14,7 +14,7 @@ You should understand the fundamentals of Ethereum and [client software]. Famili
 
 ## Data structures {#data-structures}
 
-### Patricia merkle trees {#patricia-merkle-tries}
+### Patricia merkle tries {#patricia-merkle-tries}
 
 Patricia Merkle Tries are structures that encode key-value pairs into a deterministic trie. These are used extensively across Ethereum's execution layer. More information can be found [here](developers/docs/data-structures/patricia-merkle-trie)
 
