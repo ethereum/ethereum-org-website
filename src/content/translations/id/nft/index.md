@@ -2,7 +2,7 @@
 title: Token yang tidak dapat dipertukarkan (NFT)
 description: Gambaran umum tentang NFT di Ethereum
 lang: id
-template: kasus penggunaan
+template: use-cases
 emoji: ":frame_with_picture:"
 sidebar: true
 sidebarDepth: 2

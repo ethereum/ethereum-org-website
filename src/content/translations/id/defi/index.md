@@ -2,7 +2,7 @@
 title: Keuangan terdesentralisasi (DeFi)
 description: Gambaran umum tentang DeFi di Ethereum
 lang: id
-template: kasus penggunaan
+template: use-cases
 emoji: ":money_with_wings:"
 sidebar: true
 image: ../../../../assets/use-cases/defi.png

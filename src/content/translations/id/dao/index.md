@@ -2,7 +2,7 @@
 title: Organisasi otonom terdesentralisasi (DAO)
 description: Gambaran umum tentang DAO di Ethereum
 lang: id
-template: kasus penggunaan
+template: use-cases
 emoji: ":handshake:"
 sidebar: true
 sidebarDepth: 2
