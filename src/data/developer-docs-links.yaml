@@ -184,7 +184,7 @@
       items:
         - id: docs-nav-data-structures-rlp
           to: /developers/docs/data-structures/rlp/
-        - id: docs-nav-data-structures-patricia-merkle-trie
-          to: /developers/docs/data-structures/patricia-merkle-trie/
+        - id: docs-nav-data-structures-patricia-merkle-tries
+          to: /developers/docs/data-structures/patricia-merkle-tries/
         - id: docs-nav-data-structures-ssz
           to: /developers/docs/data-structures/ssz/
