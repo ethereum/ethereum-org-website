@@ -252,7 +252,7 @@ const StakingProductCard = ({
             data.map(({ label, status }, idx) => (
               <Item key={idx}>
                 <Status status={status} />
-                {label}
+                <p>{label}</p>
               </Item>
             ))}
         </ul>
