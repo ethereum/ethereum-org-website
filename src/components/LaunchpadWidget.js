@@ -96,16 +96,17 @@ const LaunchpadWidget = () => {
           If you're comfortable with it, you can set up everything needed from
           the <code>command line</code> using the Staking Launchpad alone.
         </p>
+        <ButtonContainer style={{ marginBottom: "1rem" }}>
+          <ButtonLink to={data[selection].url}>
+            Start staking on {data[selection].label}
+          </ButtonLink>
+        </ButtonContainer>
         <p>
           To make things easier, check out some of the tools and guides below
           that can help you alongside the Staking Launchpad to get your clients
           set up with ease.
         </p>
         <ButtonContainer>
-          <ButtonLink to={data[selection].url}>
-            Start staking on {data[selection].label}
-          </ButtonLink>
-
           <ButtonLink to="#node-and-client-tools" isSecondary>
             <Emoji text="🛠" mr="1rem" /> Software tools and guide
           </ButtonLink>
