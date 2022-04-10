@@ -106,7 +106,7 @@ const LaunchpadWidget = () => {
             Start staking on {data[selection].label}
           </ButtonLink>
 
-          <ButtonLink to="#tools" isSecondary>
+          <ButtonLink to="#node-and-client-tools" isSecondary>
             <Emoji text="🛠" mr="1rem" /> Software tools and guide
           </ButtonLink>
         </ButtonContainer>
