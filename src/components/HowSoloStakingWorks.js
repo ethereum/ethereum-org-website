@@ -37,12 +37,12 @@ const HowSoloStakingWorks = () => {
 
   const items = [
     <p>
-      Get some hardware: You need to <Link to="run-a-node">run a node</Link> to
-      stake.
+      Get some hardware: You need to <Link to="/run-a-node/">run a node</Link>{" "}
+      to stake.
     </p>,
     <p>Sync an execution layer (EL) client</p>,
     <p>Sync a consensus layer (CL) client</p>,
-    <p>Generate your keys: Load them into your validator client</p>,
+    <p>Generate your keys and load them into your validator client</p>,
     <p>Monitor and maintain your node</p>,
   ]
 
