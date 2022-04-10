@@ -41,6 +41,7 @@ const Container = styled.div`
       )
       1 100%;
     border-left: solid 4px;
+    border-right: 0;
     border-radius: 0;
     gap: 4rem;
     a {
