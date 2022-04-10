@@ -278,6 +278,64 @@ const StakingProductCardGrid = ({ category }) => {
   ]
   const [SAT, LUM] = isDarkTheme ? ["50%", "35%"] : ["75%", "60%"]
 
+  const scoreOpenSource = (product) => {
+    return product.openSource === VALID_FLAG ? 1 : 0
+  }
+
+  const scoreAudited = (product) => {
+    return product.audited === VALID_FLAG ? 1 : 0
+  }
+
+  const scoreBugBounty = (product) => {
+    return product.bugBounty === VALID_FLAG ? 1 : 0
+  }
+
+  const scoreBattleTested = (product) => {
+    return product.battleTested === VALID_FLAG
+      ? 2
+      : product.battleTested === CAUTION_FLAG
+      ? 1
+      : 0
+  }
+
+  const scoreTrustless = (product) => {
+    return product.trustless === VALID_FLAG ? 1 : 0
+  }
+
+  const scorePermissionless = (product) => {
+    return product.permissionless === VALID_FLAG ? 1 : 0
+  }
+
+  const scoreMultiClient = (product) => {
+    return product.multiClient === VALID_FLAG ? 1 : 0
+  }
+
+  const scoreDiverseClients = (product) => {
+    return product.diverseClients === VALID_FLAG
+      ? 2
+      : product.diverseClients === WARNING_FLAG
+      ? 1
+      : 0
+  }
+
+  const scoreEconomical = (product) => {
+    return product.economical === VALID_FLAG ? 1 : 0
+  }
+
+  const getRankingScore = (product) => {
+    let score = 0
+    score += scoreOpenSource(product)
+    score += scoreAudited(product)
+    score += scoreBugBounty(product)
+    score += scoreBattleTested(product)
+    score += scoreTrustless(product)
+    score += scorePermissionless(product)
+    score += scoreMultiClient(product)
+    score += scoreDiverseClients(product)
+    score += scoreEconomical(product)
+    return score
+  }
+
   const getBattleTestedFlag = (_launchDate) => {
     let battleTested = WARNING_FLAG
     const launchDate = new Date(_launchDate)
@@ -395,10 +453,21 @@ const StakingProductCardGrid = ({ category }) => {
       }))
     )
   }
+
   if (!products) return null
+
+  const rankedProducts = products.map((product) => {
+    return {
+      ...product,
+      rankingScore: getRankingScore(product),
+    }
+  })
+
+  rankedProducts.sort((a, b) => b.rankingScore - a.rankingScore)
+
   return (
     <CardGrid>
-      {products.map((product) => (
+      {rankedProducts.map((product) => (
         <StakingProductCard product={product} />
       ))}
     </CardGrid>
