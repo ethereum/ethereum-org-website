@@ -70,7 +70,7 @@ As much as we wish that solo staking was accessible and risk free to everyone, t
   <ExpandableCard title="Slashing risk" eventCategory="SoloStaking" eventName="clicked slashing risk">
     Different from inactivity penalties for being offline, <em>slashing</em> is a much more serious penalty reserved for malicious offenses. By running a minority client with your keys loaded on only one machine at time, your risk of being slashed is minimized. That being said, all stakers must be aware of the risks of slashing.
     
-    <a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/">More on slashing and validator lifecycle</a>
+    <div><a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/">More on slashing and validator lifecycle</a></div>
   </ExpandableCard>
 </InfoGrid>
 
