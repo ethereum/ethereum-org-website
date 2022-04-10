@@ -42,6 +42,11 @@
         "discord": "https://discord.gg/rocketpool",
         "twitter": "https://twitter.com/Rocket_Pool",
         "github": "https://github.com/rocket-pool"
+      },
+      "matomo": {
+        "eventCategory": "StakingProductCard",
+        "eventAction": "Clicked",
+        "eventName": "Clicked Rocket Pool go to link"
       }
     },
     {
@@ -69,6 +74,11 @@
         "discord": "https://discord.com/invite/4vxZnyEDty",
         "twitter": "https://twitter.com/stereumdev",
         "github": "https://github.com/stereum-dev"
+      },
+      "matomo": {
+        "eventCategory": "StakingProductCard",
+        "eventAction": "Clicked",
+        "eventName": "Clicked Stereum go to link"
       }
     },
     {
@@ -91,6 +101,11 @@
         "discord": "https://discord.gg/c28an8dA5k",
         "twitter": "https://twitter.com/dappnode",
         "github": "https://github.com/dappnode"
+      },
+      "matomo": {
+        "eventCategory": "StakingProductCard",
+        "eventAction": "Clicked",
+        "eventName": "Clicked DAppNode go to link"
       }
     },
     {
@@ -111,6 +126,11 @@
       "ui": ["CLI"],
       "socials": {
         "github": "https://github.com/diglos/ethereumonarm"
+      },
+      "matomo": {
+        "eventCategory": "StakingProductCard",
+        "eventAction": "Clicked",
+        "eventName": "Clicked Ethereum on Arm go to link"
       }
     },
     {
@@ -131,6 +151,11 @@
       "ui": ["CLI"],
       "socials": {
         "github": "https://github.com/eth-educators/eth-docker"
+      },
+      "matomo": {
+        "eventCategory": "StakingProductCard",
+        "eventAction": "Clicked",
+        "eventName": "Clicked eth-docker go to link"
       }
     },
     {
@@ -159,6 +184,11 @@
         "twitter": "https://twitter.com/attestantio",
         "telegram": "https://t.me/attestant",
         "github": "https://github.com/attestantio"
+      },
+      "matomo": {
+        "eventCategory": "StakingProductCard",
+        "eventAction": "Clicked",
+        "eventName": "Clicked Vouch + Dirk go to link"
       }
     }
   ],
@@ -186,6 +216,11 @@
         "discord": "https://discord.io/ethstaker",
         "twitter": "https://twitter.com/wagyutools",
         "github": "https://github.com/stake-house/wagyu-key-gen"
+      },
+      "matomo": {
+        "eventCategory": "StakingProductCard",
+        "eventAction": "Clicked",
+        "eventName": "Clicked Wagyu Key Gen go to link"
       }
     },
     {
@@ -209,6 +244,11 @@
       "ui": ["CLI"],
       "socials": {
         "github": "https://github.com/wealdtech/ethdo"
+      },
+      "matomo": {
+        "eventCategory": "StakingProductCard",
+        "eventAction": "Clicked",
+        "eventName": "Clicked ethdo go to link"
       }
     }
   ],
@@ -237,6 +277,11 @@
         "discord": "https://discord.allnodes.com/",
         "twitter": "https://twitter.com/allnodes",
         "github": null
+      },
+      "matomo": {
+        "eventCategory": "StakingProductCard",
+        "eventAction": "Clicked",
+        "eventName": "Clicked Allnodes go to link"
       }
     },
     {
@@ -268,6 +313,11 @@
         "discord": "https://discord.gg/AbYHBfjkDY",
         "twitter": "https://twitter.com/ssv_network",
         "github": "https://github.com/bloxapp/blox-live"
+      },
+      "matomo": {
+        "eventCategory": "StakingProductCard",
+        "eventAction": "Clicked",
+        "eventName": "Clicked BloxStaking go to link"
       }
     },
     {
@@ -294,6 +344,11 @@
         "twitter": "https://twitter.com/AbyssFinance",
         "telegram": "https://t.me/abyssfinance",
         "github": "https://github.com/abyssfinance"
+      },
+      "matomo": {
+        "eventCategory": "StakingProductCard",
+        "eventAction": "Clicked",
+        "eventName": "Clicked Abyss Finance go to link"
       }
     },
     {
@@ -321,6 +376,11 @@
         "twitter": "https://twitter.com/stakewise_io",
         "telegram": "https://t.me/stakewise_io",
         "github": "https://github.com/stakewise"
+      },
+      "matomo": {
+        "eventCategory": "StakingProductCard",
+        "eventAction": "Clicked",
+        "eventName": "Clicked Stakewise Solo go to link"
       }
     }
   ],
@@ -365,6 +425,11 @@
         "discord": "https://discord.gg/rocketpool",
         "twitter": "https://twitter.com/Rocket_Pool",
         "github": "https://github.com/rocket-pool"
+      },
+      "matomo": {
+        "eventCategory": "StakingProductCard",
+        "eventAction": "Clicked",
+        "eventName": "Clicked Rocket Pool go to link"
       }
     },
     {
@@ -409,6 +474,11 @@
         "telegram": "https://t.me/lidofinance",
         "reddit": "https://www.reddit.com/r/lidofinance/",
         "github": "https://github.com/lidofinance/lido-dao"
+      },
+      "matomo": {
+        "eventCategory": "StakingProductCard",
+        "eventAction": "Clicked",
+        "eventName": "Clicked Lido go to link"
       }
     },
     {
@@ -443,6 +513,11 @@
         "discord": "https://discord.com/invite/2BSdr2g",
         "twitter": "https://twitter.com/stakewise_io",
         "github": "https://github.com/stakewise"
+      },
+      "matomo": {
+        "eventCategory": "StakingProductCard",
+        "eventAction": "Clicked",
+        "eventName": "Clicked StakeWise Pool go to link"
       }
     },
     {
@@ -471,6 +546,11 @@
       "telegram": "https://t.me/stakefish",
       "socials": {
         "github": null
+      },
+      "matomo": {
+        "eventCategory": "StakingProductCard",
+        "eventAction": "Clicked",
+        "eventName": "Clicked stakefish go to link"
       }
     },
     {
@@ -505,6 +585,11 @@
         "telegram": "https://t.me/stkrsupport",
         "twitter": "https://twitter.com/ankr",
         "github": "https://github.com/Ankr-network/stkr-smart-contract"
+      },
+      "matomo": {
+        "eventCategory": "StakingProductCard",
+        "eventAction": "Clicked",
+        "eventName": "Clicked Ankr Staking go to link"
       }
     },
     {
@@ -540,6 +625,11 @@
         "telegram": "https://t.co/9MsQSkT34Q",
         "twitter": "https://twitter.com/Stafi_Protocol",
         "github": "https://github.com/stafiprotocol/stafi-node"
+      },
+      "matomo": {
+        "eventCategory": "StakingProductCard",
+        "eventAction": "Clicked",
+        "eventName": "Clicked StaFi go to link"
       }
     }
   ]

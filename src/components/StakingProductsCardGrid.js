@@ -57,7 +57,7 @@ const Banner = styled(PaddedDiv)`
   align-items: center;
   gap: 1.5rem;
   background: ${({ color }) => color}
-    linear-gradient( 0deg, rgba(0, 0, 0, 30%), rgba(0, 0, 0, 0));
+    linear-gradient(0deg, rgba(0, 0, 0, 30%), rgba(0, 0, 0, 0));
   border-radius: 0.25rem;
   max-height: 6rem;
   h2 {
@@ -179,6 +179,7 @@ const StakingProductCard = ({
     multiClient,
     diverseClients,
     economical,
+    matomo,
   },
 }) => {
   const Svg = getSvgFromPath(svgPath)
@@ -257,7 +258,9 @@ const StakingProductCard = ({
         </ul>
       </Content>
       <Cta>
-        <ButtonLink to={url}>Get started</ButtonLink>
+        <ButtonLink to={url} matomo={matomo}>
+          Get started
+        </ButtonLink>
       </Cta>
     </Card>
   )
@@ -300,12 +303,20 @@ const StakingProductCardGrid = ({ category }) => {
 
   const getFlagFromBoolean = (bool) => (!!bool ? VALID_FLAG : FALSE_FLAG)
 
-  const getBrandProperties = ({ name, svgPath, hue, url, socials }) => ({
+  const getBrandProperties = ({
+    name,
+    svgPath,
+    hue,
+    url,
+    socials,
+    matomo,
+  }) => ({
     name,
     svgPath,
     color: `hsla(${hue}, ${SAT}, ${LUM}, 1)`,
     url,
     socials,
+    matomo,
   })
 
   const getTagProperties = ({ platforms, ui }) => ({
