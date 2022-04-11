@@ -207,7 +207,6 @@ by this pool.
 The reserves the pool has for each token type. We assume that the two represent the same amount of value,
 and therefore each token0 is worth reserve1/reserve0 token1's.
 
-
 ```solidity
     uint32  private blockTimestampLast; // uses single storage slot, accessible via getReserves
 ```
@@ -225,8 +224,6 @@ a way a single storage value can include all three of them (112+112+32=256).
 
 These variables hold the cumulative costs for each token (each in term of the other). They can be used to calculate
 the average exchange rate over a period of time.
-
-
 
 ```solidity
     uint public kLast; // reserve0 * reserve1, as of immediately after the most recent liquidity event
@@ -309,7 +306,7 @@ values](https://docs.soliditylang.org/en/v0.8.3/contracts.html#returning-multipl
 ```
 
 This internal function transfers an amount of ERC20 tokens from the exchange to somebody else. `SELECTOR` specifies
-that the function we are calling is `transfer(address,uint)` (see defintion above).
+that the function we are calling is `transfer(address,uint)` (see definition above).
 
 To avoid having to import an interface for the token function, we "manually" create the call using one of the
 [ABI functions](https://docs.soliditylang.org/en/v0.8.3/units-and-global-variables.html#abi-encoding-and-decoding-functions).
@@ -755,7 +752,7 @@ This is a sanity check to make sure we don't lose from the swap. There is no cir
 
 Update `reserve0` and `reserve1`, and if necessary the price accumulators and the timestamp and emit an event.
 
-##### Sync or Skip
+##### Sync or Skim {#sync-or-skim}
 
 It is possible for the real balances to get out of sync with the reserves that the pair exchange thinks it has.
 There is no way to withdraw tokens without the contract's consent, but deposits are a different matter. An account
@@ -2212,7 +2209,7 @@ which allows an account to spend out the allowance provided by a different accou
 This function transfers ether to an account. Any call to a different contract can attempt to send ether. Because we
 don't need to actually call any function, we don't send any data with the call.
 
-## Conclusion {#Conclusion}
+## Conclusion {#conclusion}
 
 This is a long article of about 50 pages. If you made it here, congratulations! Hopefully by now you've understood the considerations
 in writing a real-life application (as opposed to short sample programs) and are better to be able to write contracts for your own

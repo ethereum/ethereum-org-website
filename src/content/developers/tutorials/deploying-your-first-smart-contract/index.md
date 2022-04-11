@@ -69,7 +69,7 @@ Then click on the compile button:
 
 ![The compile button in the Remix solidity compiler](./remix-compile.png)
 
-You can chose to select the “Auto compile” option so the contract will always be compiled when you save the content on the text editor.
+You can choose to select the “Auto compile” option so the contract will always be compiled when you save the content on the text editor.
 
 Then navigate to the deploy and run transactions screen:
 

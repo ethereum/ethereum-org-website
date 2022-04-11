@@ -2,7 +2,7 @@ export const dannyArticles = [
   {
     title: "Finalized no. 33",
     description: "31 January 2022",
-    link: "https://blog.ethereum.org/2021/09/28/finalized-no-33/",
+    link: "https://blog.ethereum.org/2022/01/31/finalized-no-33/",
   },
   {
     title: "Finalized no. 32",

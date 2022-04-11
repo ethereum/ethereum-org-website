@@ -176,7 +176,7 @@ When a chain reorganization occurs, logs which are part of blocks on the old cha
 Parameters
 
 1. An object with the following fields:
-   - `adddress` (optional): either a string representing an address or an array of such strings.
+   - `address` (optional): either a string representing an address or an array of such strings.
      - Only logs created from one of these addresses will be emitted.
    - `topics`: an array of topic specifiers.
      - Each topic specifier is either `null`, a string representing a topic, or an array of strings.

@@ -197,20 +197,35 @@ const EthExchanges = () => {
       exchangesByCountry: allExchangesByCountryCsv {
         nodes {
           binance
+          binanceus
           bitbuy
+          bitfinex
+          bitflyer
+          bitkub
+          bitso
           bittrex
           bitvavo
+          bybit
           coinbase
           coinmama
           coinspot
           country
           cryptocom
+          easycrypto
+          ftx
+          ftxus
+          gateio
           gemini
+          huobiglobal
           itezcom
           kraken
+          kucoin
           moonpay
+          mtpelerin
+          okx
           rain
           simplex
+          wazirx
           wyre
         }
       }
@@ -231,13 +246,31 @@ const EthExchanges = () => {
       binance: file(relativePath: { eq: "exchanges/binance.png" }) {
         ...cardListImage
       }
+      binanceus: file(relativePath: { eq: "exchanges/binance.png" }) {
+        ...cardListImage
+      }
       bitbuy: file(relativePath: { eq: "exchanges/bitbuy.png" }) {
+        ...cardListImage
+      }
+      bitfinex: file(relativePath: { eq: "exchanges/bitfinex.png" }) {
+        ...cardListImage
+      }
+      bitflyer: file(relativePath: { eq: "exchanges/bitflyer.png" }) {
+        ...cardListImage
+      }
+      bitkub: file(relativePath: { eq: "exchanges/bitkub.png" }) {
+        ...cardListImage
+      }
+      bitso: file(relativePath: { eq: "exchanges/bitso.png" }) {
         ...cardListImage
       }
       bittrex: file(relativePath: { eq: "exchanges/bittrex.png" }) {
         ...cardListImage
       }
       bitvavo: file(relativePath: { eq: "exchanges/bitvavo.png" }) {
+        ...cardListImage
+      }
+      bybit: file(relativePath: { eq: "exchanges/bybit.png" }) {
         ...cardListImage
       }
       coinbase: file(relativePath: { eq: "exchanges/coinbase.png" }) {
@@ -252,7 +285,22 @@ const EthExchanges = () => {
       cryptocom: file(relativePath: { eq: "exchanges/crypto.com.png" }) {
         ...cardListImage
       }
+      easycrypto: file(relativePath: { eq: "exchanges/easycrypto.png" }) {
+        ...cardListImage
+      }
+      ftx: file(relativePath: { eq: "exchanges/ftx.png" }) {
+        ...cardListImage
+      }
+      ftxus: file(relativePath: { eq: "exchanges/ftx.png" }) {
+        ...cardListImage
+      }
+      gateio: file(relativePath: { eq: "exchanges/gateio.png" }) {
+        ...cardListImage
+      }
       gemini: file(relativePath: { eq: "exchanges/gemini.png" }) {
+        ...cardListImage
+      }
+      huobiglobal: file(relativePath: { eq: "exchanges/huobiglobal.png" }) {
         ...cardListImage
       }
       imtoken: file(relativePath: { eq: "wallets/imtoken.png" }) {
@@ -264,10 +312,19 @@ const EthExchanges = () => {
       kraken: file(relativePath: { eq: "exchanges/kraken.png" }) {
         ...cardListImage
       }
+      kucoin: file(relativePath: { eq: "exchanges/kucoin.png" }) {
+        ...cardListImage
+      }
+      mtpelerin: file(relativePath: { eq: "exchanges/mtpelerin.png" }) {
+        ...cardListImage
+      }
       myetherwallet: file(relativePath: { eq: "wallets/myetherwallet.png" }) {
         ...cardListImage
       }
       mycrypto: file(relativePath: { eq: "wallets/mycrypto.png" }) {
+        ...cardListImage
+      }
+      okx: file(relativePath: { eq: "exchanges/okx.png" }) {
         ...cardListImage
       }
       rain: file(relativePath: { eq: "exchanges/rain.png" }) {
@@ -279,6 +336,9 @@ const EthExchanges = () => {
       trust: file(relativePath: { eq: "wallets/trust.png" }) {
         ...cardListImage
       }
+      wazirx: file(relativePath: { eq: "exchanges/wazirx.png" }) {
+        ...cardListImage
+      }
     }
   `)
 
@@ -287,26 +347,42 @@ const EthExchanges = () => {
       name: "Binance",
       url: "https://www.binance.com/en",
       image: data.binance,
-      usaExceptions: [
-        "AL",
-        "AK",
-        "CT",
-        "FL",
-        "GA",
-        "HI",
-        "ID",
-        "LA",
-        "NY",
-        "NC",
-        "TX",
-        "VT",
-        "WA",
-      ],
+      usaExceptions: [],
+    },
+    binanceus: {
+      name: "Binance US",
+      url: "https://www.binance.us/en/home",
+      image: data.binance,
+      usaExceptions: ["HI", "ID", "NY", "TX", "VT"],
     },
     bitbuy: {
       name: "Bitbuy",
       url: "https://bitbuy.ca/",
       image: data.bitbuy,
+      usaExceptions: [],
+    },
+    bitfinex: {
+      name: "Bitfinex",
+      url: "https://www.bitfinex.com/",
+      image: data.bitfinex,
+      usaExceptions: [],
+    },
+    bitflyer: {
+      name: "bitFlyer",
+      url: "https://bitflyer.com/",
+      image: data.bitflyer,
+      usaExceptions: ["NV", "WV"],
+    },
+    bitkub: {
+      name: "Bitkub",
+      url: "https://www.bitkub.com/",
+      image: data.bitkub,
+      usaExceptions: [],
+    },
+    bitso: {
+      name: "Bitso",
+      url: "https://bitso.com/",
+      image: data.bitso,
       usaExceptions: [],
     },
     bittrex: {
@@ -319,6 +395,12 @@ const EthExchanges = () => {
       name: "Bitvavo",
       url: "https://bitvavo.com/en/ethereum",
       image: data.bitvavo,
+      usaExceptions: [],
+    },
+    bybit: {
+      name: "Bybit",
+      url: "https://www.bybit.com/",
+      image: data.bybit,
       usaExceptions: [],
     },
     coinbase: {
@@ -345,6 +427,36 @@ const EthExchanges = () => {
       image: data.cryptocom,
       usaExceptions: ["NY"],
     },
+    easycrypto: {
+      name: "Easy Crypto",
+      url: "https://easycrypto.com/",
+      image: data.easycrypto,
+      usaExceptions: [],
+    },
+    ftx: {
+      name: "FTX",
+      url: "https://ftx.com/",
+      image: data.ftx,
+      usaExceptions: [],
+    },
+    ftxus: {
+      name: "FTX US",
+      url: "https://ftx.us/",
+      image: data.ftx,
+      usaExceptions: ["NY"],
+    },
+    gateio: {
+      name: "Gate.io",
+      url: "https://www.gate.io/",
+      image: data.gateio,
+      usaExceptions: [],
+    },
+    huobiglobal: {
+      name: "Huobi Global",
+      url: "https://huobi.com/",
+      image: data.huobiglobal,
+      usaExceptions: [],
+    },
     itezcom: {
       name: "Itez",
       url: "https://itez.com/",
@@ -357,6 +469,24 @@ const EthExchanges = () => {
       image: data.kraken,
       usaExceptions: ["NY, WA"],
     },
+    kucoin: {
+      name: "KuCoin",
+      url: "https://www.kucoin.com/",
+      image: data.kucoin,
+      usaExceptions: [],
+    },
+    mtpelerin: {
+      name: "Mt Pelerin",
+      url: "https://www.mtpelerin.com/",
+      image: data.mtpelerin,
+      usaExceptions: [],
+    },
+    okx: {
+      name: "OKX",
+      url: "https://www.okx.com/",
+      image: data.okx,
+      usaExceptions: [],
+    },
     gemini: {
       name: "Gemini",
       url: "https://gemini.com/",
@@ -367,6 +497,12 @@ const EthExchanges = () => {
       name: "Rain",
       url: "https://rain.bh",
       image: data.rain,
+      usaExceptions: [],
+    },
+    wazirx: {
+      name: "WazirX",
+      url: "https://wazirx.com/",
+      image: data.wazirx,
       usaExceptions: [],
     },
   }
@@ -549,6 +685,7 @@ const EthExchanges = () => {
         <Translation id="page-get-eth-exchanges-intro" />
       </Intro>
       <StyledSelect
+        aria-label={translateMessageId("page-get-eth-exchanges-header", intl)}
         className="react-select-container"
         classNamePrefix="react-select"
         options={exchangesByCountry}

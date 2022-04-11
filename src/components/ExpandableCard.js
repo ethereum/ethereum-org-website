@@ -64,7 +64,7 @@ const Header = styled.div`
   width: 100%;
   margin: 1rem 0;
   align-items: center;
-  img {
+  svg {
     margin-right: 1.5rem;
   }
 `
@@ -83,6 +83,8 @@ const StyledFakeLink = styled(FakeLink)`
 
 const ExpandableCard = ({ children, contentPreview, title, svg, alt }) => {
   const [isVisible, setIsVisible] = useState(false)
+  const Svg = svg
+
   const expandCollapse = {
     collapsed: {
       height: 0,
@@ -97,6 +99,7 @@ const ExpandableCard = ({ children, contentPreview, title, svg, alt }) => {
       },
     },
   }
+
   const showHide = {
     collapsed: {
       display: "none",
@@ -105,6 +108,7 @@ const ExpandableCard = ({ children, contentPreview, title, svg, alt }) => {
       display: "inline-block",
     },
   }
+
   const fadeInOut = {
     collapsed: {
       opacity: 0,
@@ -119,12 +123,13 @@ const ExpandableCard = ({ children, contentPreview, title, svg, alt }) => {
       },
     },
   }
+
   return (
     <Card>
       <Content>
         <Question>
           <Header>
-            {svg && <img src={svg} alt={alt} />}
+            {!!Svg && <Svg alt={alt} />}
             <Title>{title}</Title>
           </Header>
           <TextPreview>{contentPreview}</TextPreview>

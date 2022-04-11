@@ -136,71 +136,11 @@ const H2 = styled.h2`
   font-size: 2rem;
   font-weight: 700;
   margin-top: 4rem;
-
-  a {
-    display: none;
-  }
-
-  /* Anchor tag styles */
-
-  a {
-    position: relative;
-    display: initial;
-    opacity: 0;
-    margin-left: -1.5em;
-    padding-right: 0.5rem;
-    font-size: 1rem;
-    vertical-align: middle;
-
-    &:hover {
-      display: initial;
-      fill: ${(props) => props.theme.colors.primary};
-      opacity: 1;
-    }
-  }
-
-  &:hover {
-    a {
-      display: initial;
-      fill: ${(props) => props.theme.colors.primary};
-      opacity: 1;
-    }
-  }
 `
 
 const H3 = styled.h3`
   font-size: 1.5rem;
   font-weight: 700;
-
-  a {
-    display: none;
-  }
-
-  /* Anchor tag styles */
-
-  a {
-    position: relative;
-    display: initial;
-    opacity: 0;
-    margin-left: -1.5em;
-    padding-right: 0.5rem;
-    font-size: 1rem;
-    vertical-align: middle;
-
-    &:hover {
-      display: initial;
-      fill: ${(props) => props.theme.colors.primary};
-      opacity: 1;
-    }
-  }
-
-  &:hover {
-    a {
-      display: initial;
-      fill: ${(props) => props.theme.colors.primary};
-      opacity: 1;
-    }
-  }
 `
 
 // Note: you must pass components to MDXProvider in order to render them in markdown files

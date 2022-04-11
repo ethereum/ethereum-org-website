@@ -2,15 +2,18 @@ import React, { useState, useEffect } from "react"
 import styled from "styled-components"
 import { useIntl } from "gatsby-plugin-intl"
 import axios from "axios"
-
+import { kebabCase } from "lodash"
 import { AreaChart, ResponsiveContainer, Area, XAxis } from "recharts"
+
 import Translation from "./Translation"
 import Tooltip from "./Tooltip"
 import Link from "./Link"
 import Icon from "./Icon"
 
-import { isLangRightToLeft } from "../utils/translations"
+import { isLangRightToLeft, translateMessageId } from "../utils/translations"
 import { getData } from "../utils/cache"
+
+import { GATSBY_FUNCTIONS_PATH } from "../constants"
 
 const Value = styled.span`
   position: absolute;
@@ -182,11 +185,23 @@ const GridItem = ({ metric, dir }) => {
         margin={{ left: -5, right: -5 }}
       >
         <defs>
-          <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
+          <linearGradient
+            id={`colorUv-${kebabCase(title)}`}
+            x1="0"
+            y1="0"
+            x2="0"
+            y2="1"
+          >
             <stop offset="5%" stopColor="#8884d8" stopOpacity={1} />
             <stop offset="95%" stopColor="#8884d8" stopOpacity={0} />
           </linearGradient>
-          <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
+          <linearGradient
+            id={`colorPv-${kebabCase(title)}`}
+            x1="0"
+            y1="0"
+            x2="0"
+            y2="1"
+          >
             <stop offset="5%" stopColor="#82ca9d" stopOpacity={0.8} />
             <stop offset="95%" stopColor="#82ca9d" stopOpacity={0} />
           </linearGradient>
@@ -196,7 +211,7 @@ const GridItem = ({ metric, dir }) => {
           dataKey="value"
           stroke="#8884d8"
           fillOpacity={0.3}
-          fill="url(#colorUv)"
+          fill={`url(#colorUv-${kebabCase(title)})`}
           connectNulls={true}
         />
         <XAxis dataKey="timestamp" axisLine={false} tick={false} />
@@ -336,11 +351,7 @@ const StatsBoxGrid = () => {
 
     const fetchNodes = async () => {
       try {
-        const { result } = await getData(
-          process.env.NODE_ENV === "production"
-            ? `${process.env.GATSBY_FUNCTIONS_PATH}/etherscan`
-            : "http://localhost:9000/etherscan"
-        )
+        const { result } = await getData(`${GATSBY_FUNCTIONS_PATH}/etherscan`)
         const data = result
           .map(({ UTCDate, TotalNodeCount }) => ({
             timestamp: new Date(UTCDate).getTime(),
@@ -365,15 +376,11 @@ const StatsBoxGrid = () => {
 
     const fetchTotalValueLocked = async () => {
       try {
-        const response = await getData(
-          process.env.NODE_ENV === "production"
-            ? `${process.env.GATSBY_FUNCTIONS_PATH}/defipulse`
-            : "http://localhost:9000/defipulse"
-        )
+        const response = await getData(`${GATSBY_FUNCTIONS_PATH}/defipulse`)
         const data = response
-          .map(({ timestamp, tvlUSD }) => ({
-            timestamp: parseInt(timestamp) * 1000,
-            value: tvlUSD,
+          .map(({ date, totalLiquidityUSD }) => ({
+            timestamp: parseInt(date) * 1000,
+            value: totalLiquidityUSD,
           }))
           .sort((a, b) => a.timestamp - b.timestamp)
         const value = formatTVL(data[data.length - 1].value)
@@ -395,9 +402,7 @@ const StatsBoxGrid = () => {
     const fetchTxCount = async () => {
       try {
         const response = await getData(
-          process.env.NODE_ENV === "production"
-            ? `${process.env.GATSBY_FUNCTIONS_PATH}/txs`
-            : "http://localhost:9000/txs"
+          `${process.env.GATSBY_FUNCTIONS_PATH}/txs`
         )
         const data = response.result
           .map(({ unixTimeStamp, transactionCount }) => ({
@@ -426,11 +431,13 @@ const StatsBoxGrid = () => {
     {
       apiProvider: "CoinGecko",
       apiUrl: "https://www.coingecko.com/en/coins/ethereum",
-      title: (
-        <Translation id="page-index-network-stats-eth-price-description" />
+      title: translateMessageId(
+        "page-index-network-stats-eth-price-description",
+        intl
       ),
-      description: (
-        <Translation id="page-index-network-stats-eth-price-explainer" />
+      description: translateMessageId(
+        "page-index-network-stats-eth-price-explainer",
+        intl
       ),
       buttonContainer: (
         <RangeSelector
@@ -444,9 +451,13 @@ const StatsBoxGrid = () => {
     {
       apiProvider: "Etherscan",
       apiUrl: "https://etherscan.io/",
-      title: <Translation id="page-index-network-stats-tx-day-description" />,
-      description: (
-        <Translation id="page-index-network-stats-tx-day-explainer" />
+      title: translateMessageId(
+        "page-index-network-stats-tx-day-description",
+        intl
+      ),
+      description: translateMessageId(
+        "page-index-network-stats-tx-day-explainer",
+        intl
       ),
       buttonContainer: (
         <RangeSelector
@@ -458,13 +469,15 @@ const StatsBoxGrid = () => {
       range: selectedRangeTxs,
     },
     {
-      apiProvider: "DeFi Pulse",
-      apiUrl: "https://defipulse.com",
-      title: (
-        <Translation id="page-index-network-stats-value-defi-description" />
+      apiProvider: "DeFi Llama",
+      apiUrl: "https://defillama.com/",
+      title: translateMessageId(
+        "page-index-network-stats-value-defi-description",
+        intl
       ),
-      description: (
-        <Translation id="page-index-network-stats-value-defi-explainer" />
+      description: translateMessageId(
+        "page-index-network-stats-value-defi-explainer",
+        intl
       ),
       buttonContainer: (
         <RangeSelector
@@ -478,9 +491,13 @@ const StatsBoxGrid = () => {
     {
       apiProvider: "Etherscan",
       apiUrl: "https://etherscan.io/nodetracker",
-      title: <Translation id="page-index-network-stats-nodes-description" />,
-      description: (
-        <Translation id="page-index-network-stats-nodes-explainer" />
+      title: translateMessageId(
+        "page-index-network-stats-nodes-description",
+        intl
+      ),
+      description: translateMessageId(
+        "page-index-network-stats-nodes-explainer",
+        intl
       ),
       buttonContainer: (
         <RangeSelector
