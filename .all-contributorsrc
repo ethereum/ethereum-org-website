@@ -6775,7 +6775,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/46125192?v=4",
       "profile": "https://github.com/KaranKaira",
       "contributions": [
-        "doc"
+        "doc",
+        "code"
       ]
     },
     {
@@ -7070,6 +7071,60 @@
       "profile": "http://hoo.be/tomaspasie",
       "contributions": [
         "code"
+      ]
+    },
+    {
+      "login": "StrongerXi",
+      "name": "Xiangxi Guo (Ryan)",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26714592?v=4",
+      "profile": "https://strongerxi.github.io/ryanguo99.github.io/",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "SkywalkingZulu",
+      "name": "Andile Mchunu",
+      "avatar_url": "https://avatars.githubusercontent.com/u/47420082?v=4",
+      "profile": "http://ibistech.site",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "noahliechti",
+      "name": "Noah",
+      "avatar_url": "https://avatars.githubusercontent.com/u/38284563?v=4",
+      "profile": "http://noahliechti.ch",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "adrianmcli",
+      "name": "Adrian Li",
+      "avatar_url": "https://avatars.githubusercontent.com/u/943555?v=4",
+      "profile": "https://github.com/adrianmcli",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "penlix",
+      "name": "Konstantinos Penlidis",
+      "avatar_url": "https://avatars.githubusercontent.com/u/8178384?v=4",
+      "profile": "http://www.niceandneat.digital",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "HunterSandlin",
+      "name": "Hunter Sandlin",
+      "avatar_url": "https://avatars.githubusercontent.com/u/62820211?v=4",
+      "profile": "https://github.com/HunterSandlin",
+      "contributions": [
+        "doc"
       ]
     }
   ],

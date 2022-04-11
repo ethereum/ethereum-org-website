@@ -31,6 +31,9 @@ import { CardGrid, Content, Page } from "../components/SharedStyledComponents"
 import { getData } from "../utils/cache"
 import { translateMessageId } from "../utils/translations"
 
+// Constants
+import { GATSBY_FUNCTIONS_PATH } from "../constants"
+
 // Styles
 
 const HeroBackground = styled.div`
@@ -188,11 +191,7 @@ const Layer2Page = ({ data }) => {
   useEffect(() => {
     const fetchL2Beat = async () => {
       try {
-        const l2BeatData = await getData(
-          process.env.NODE_ENV === "production"
-            ? `${process.env.GATSBY_FUNCTIONS_PATH}/l2beat`
-            : "http://localhost:9000/l2beat"
-        )
+        const l2BeatData = await getData(`${GATSBY_FUNCTIONS_PATH}/l2beat`)
         // formatted TVL from L2beat API formatted
         const TVL = new Intl.NumberFormat(intl.locale, {
           style: "currency",

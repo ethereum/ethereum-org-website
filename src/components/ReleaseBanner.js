@@ -13,6 +13,9 @@ import Translation from "./Translation"
 // Utils
 import { getFreshData } from "../utils/cache"
 
+// Constants
+import { GATSBY_FUNCTIONS_PATH } from "../constants"
+
 const CloseIconContainer = styled.span`
   position: absolute;
   cursor: pointer;
@@ -55,9 +58,7 @@ const ReleaseBanner = ({ storageKey }) => {
     const fetchBlockInfo = async () => {
       try {
         const data = await getFreshData(
-          process.env.NODE_ENV === "production"
-            ? `${process.env.GATSBY_FUNCTIONS_PATH}/etherscanBlock`
-            : "http://localhost:9000/etherscanBlock"
+          `${GATSBY_FUNCTIONS_PATH}/etherscanBlock`
         )
         setTimeLeft(data)
         setLoading(false)

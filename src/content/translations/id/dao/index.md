@@ -1,5 +1,5 @@
 ---
-title: Decentralized autonomous organizations (DAO)
+title: Organisasi otonom terdesentralisasi (DAO)
 description: Gambaran umum tentang DAO di Ethereum
 lang: id
 template: use-cases
@@ -9,8 +9,8 @@ sidebarDepth: 2
 image: ../../../../assets/use-cases/dao-2.png
 alt: Sebuah representasi DAO yang mengambil suara untuk sebuah usulan.
 summaryPoint1: Komunitas yang dimiliki anggota tanpa kepemimpinan terpusat.
-summaryPoint2: Cara yang aman untuk berkolaborasi dengan para pendatang baru di internet.
-summaryPoint3: Tempat yang aman untuk menyalurkan dana untuk gerakan tertentu.
+summaryPoint2: Cara yang aman untuk berkolaborasi dengan orang asing di internet.
+summaryPoint3: Tempat yang aman untuk menyuntikkan dana untuk tujuan tertentu.
 ---
 
 ## Apa itu DAO? {#what-are-daos}
@@ -75,7 +75,7 @@ Tulang punggung dari sebuah DAO adalah kontrak pintarnya. Kontrak menentukan atu
 
 Ini mungkin terjadi karena kontrak pintar bersifat tahan perubahan setelah dijalankan di Ethereum. Anda tidak bisa hanya mengedit kode (aturan DAO) tanpa diketahui orang-orang karena semua hal terbuka untuk publik.
 
-<DocLink to="/developers/docs/smart-contracts/">
+<DocLink to="/smart-contracts/">
   Lebih lanjut tentang kontrak pintar
 </DocLink>
 
@@ -92,7 +92,7 @@ Ethereum adalah fondasi sempurna untuk DAO dikarenakan beberapa alasan:
 
 ### Bergabung dengan DAO {#join-a-dao}
 
-- [DAO komunitas Ethereum](/community/#decentralized-autonomous-organizations-daos/community/#decentralized-autonomous-organizations-daos)
+- [DAO komunitas Ethereum](/community/get-involved/#decentralized-autonomous-organizations-daos)
 - [Daftar DAO DAOHaus](https://app.daohaus.club/explore)
 
 ### Memulai DAO {#start-a-dao}

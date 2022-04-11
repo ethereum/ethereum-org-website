@@ -75,7 +75,7 @@ La colonne vertébrale d'une DAO est son contrat intelligent. Le contrat défini
 
 Ceci est possible parce que les contrats intelligents sont étanches à toute intrusion dès qu'ils sont mis en service sur Ethereum. Vous ne pouvez pas simplement modifier le code (les règles DAO) sans que les gens le remarquent puisque tout est public.
 
-<DocLink to="/developers/docs/smart-contracts/">
+<DocLink to="/smart-contracts/">
   En savoir plus sur les contrats intelligents
 </DocLink>
 

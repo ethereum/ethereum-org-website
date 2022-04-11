@@ -333,6 +333,15 @@
     "endDate": "2022-09-30"
   },
   {
+    "title": "Devcon",
+    "to": "https://devcon.org/",
+    "sponsor": null,
+    "location": "Bogota, Co",
+    "description": "Devcon is the Ethereum conference for developers, researchers, thinkers, and makers.",
+    "startDate": "2022-10-11",
+    "endDate": "2022-10-14"
+  },
+  {
     "title": "ETHSanFrancisco",
     "to": "https://airtable.com/shrZ89OEwQJRtXHPv/",
     "sponsor": null,

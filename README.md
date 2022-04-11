@@ -112,18 +112,14 @@ $ git push
 
 ### 5. Local development with lambda functions
 
-There may be times where you develop features that make external API requests to other services. For these we write lambda functions to obfuscate API keys. In order to test these locally, you will need to do the following:
+There may be times where you develop features that make external API requests to other services. For these we write lambda functions to obfuscate API keys.
 
-1. Download a CORS enabling browser extension (ex: https://chrome.google.com/webstore/search/cors).
-2. Enable CORS in the downloaded browser extension.
-3. Add the relevant API key to the `.env` file. [Check how to get your own API keys](docs/api-keys.md).
-4. After you have started your development server for ethereum.org (above), start up a netlify lambda server using:
+To use an existing function locally you don't need to do anything. Just check that you have set the necessary ENV variables in the `.env` file.
 
-```sh
-yarn start:lambda
-```
+To create a new function, you will need to create two files:
 
-5. Where you reference /.netlify functions for server calls, add a conditional to call localhost:9000 endpoints when not in the production environment.
+- One in `src/lambdas` where the logic will live. These are the ones that will be deployed to Netlify. These functions follow [this format](https://docs.netlify.com/functions/build-with-javascript/#synchronous-function-format).
+- One in `src/api` that will be just a wrapper around the previous one in order to be compatible with Gatsby functions. More on the [Gatbsy docs](https://www.gatsbyjs.com/docs/reference/functions/getting-started/) for the format they follow.
 
 ### 6. Submit your PR
 
@@ -1116,7 +1112,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/Sahilsen"><img src="https://avatars.githubusercontent.com/u/41318044?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Sahil sen</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=Sahilsen" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/collincusce"><img src="https://avatars.githubusercontent.com/u/6778681?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Collin K Cusce</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=collincusce" title="Documentation">📖</a> <a href="#ideas-collincusce" title="Ideas, Planning, & Feedback">🤔</a></td>
     <td align="center"><a href="https://github.com/hma23"><img src="https://avatars.githubusercontent.com/u/33968559?v=4?s=100" width="100px;" alt=""/><br /><sub><b>hma23</b></sub></a><br /><a href="#ideas-hma23" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/ethereum/ethereum-org-website/commits?author=hma23" title="Documentation">📖</a></td>
-    <td align="center"><a href="https://github.com/KaranKaira"><img src="https://avatars.githubusercontent.com/u/46125192?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Karan Kaira</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=KaranKaira" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/KaranKaira"><img src="https://avatars.githubusercontent.com/u/46125192?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Karan Kaira</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=KaranKaira" title="Documentation">📖</a> <a href="https://github.com/ethereum/ethereum-org-website/commits?author=KaranKaira" title="Code">💻</a></td>
   </tr>
   <tr>
     <td align="center"><a href="https://github.com/Re-Drawn"><img src="https://avatars.githubusercontent.com/u/54480926?v=4?s=100" width="100px;" alt=""/><br /><sub><b>ReDrawn</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=Re-Drawn" title="Documentation">📖</a></td>
@@ -1159,6 +1155,14 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://mo-fu.org"><img src="https://avatars.githubusercontent.com/u/866589?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Yuta Kurotaki</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=kurotaky" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/Claudio2000"><img src="https://avatars.githubusercontent.com/u/32911415?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Claudio2000</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=Claudio2000" title="Documentation">📖</a> <a href="https://github.com/ethereum/ethereum-org-website/commits?author=Claudio2000" title="Code">💻</a></td>
     <td align="center"><a href="http://hoo.be/tomaspasie"><img src="https://avatars.githubusercontent.com/u/42984839?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Tomas Pasiecznik</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=tomaspasie" title="Code">💻</a></td>
+    <td align="center"><a href="https://strongerxi.github.io/ryanguo99.github.io/"><img src="https://avatars.githubusercontent.com/u/26714592?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Xiangxi Guo (Ryan)</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3AStrongerXi" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="http://ibistech.site"><img src="https://avatars.githubusercontent.com/u/47420082?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Andile Mchunu</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=SkywalkingZulu" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://noahliechti.ch"><img src="https://avatars.githubusercontent.com/u/38284563?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Noah</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=noahliechti" title="Documentation">📖</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/adrianmcli"><img src="https://avatars.githubusercontent.com/u/943555?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Adrian Li</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=adrianmcli" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://www.niceandneat.digital"><img src="https://avatars.githubusercontent.com/u/8178384?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Konstantinos Penlidis</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=penlix" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/HunterSandlin"><img src="https://avatars.githubusercontent.com/u/62820211?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Hunter Sandlin</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=HunterSandlin" title="Documentation">📖</a></td>
   </tr>
 </table>
 
