@@ -61,7 +61,7 @@ const CrumbLink = styled(Link)`
 //   { fullPath: "/en/eth2/", text: "ETH2" },
 //   { fullPath: "/en/eth2/proof-of-stake/", text: "PROOF OF STAKE" },
 // ]
-const Breadcrumbs = ({ slug, startDepth = 0, className }) => {
+const Breadcrumbs = ({ slug, startDepth = 0, ...restProps }) => {
   const intl = useIntl()
 
   const split = slug.split("/")
@@ -80,7 +80,7 @@ const Breadcrumbs = ({ slug, startDepth = 0, className }) => {
   })
 
   return (
-    <ListContainer className={className} aria-label="Breadcrumb" dir={"auto"}>
+    <ListContainer aria-label="Breadcrumb" dir="auto" {...restProps}>
       <List>
         {crumbs.map((crumb, idx) => (
           <ListItem key={idx}>
