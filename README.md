@@ -112,18 +112,14 @@ $ git push
 
 ### 5. Local development with lambda functions
 
-There may be times where you develop features that make external API requests to other services. For these we write lambda functions to obfuscate API keys. In order to test these locally, you will need to do the following:
+There may be times where you develop features that make external API requests to other services. For these we write lambda functions to obfuscate API keys.
 
-1. Download a CORS enabling browser extension (ex: https://chrome.google.com/webstore/search/cors).
-2. Enable CORS in the downloaded browser extension.
-3. Add the relevant API key to the `.env` file. [Check how to get your own API keys](docs/api-keys.md).
-4. After you have started your development server for ethereum.org (above), start up a netlify lambda server using:
+To use an existing function locally you don't need to do anything. Just check that you have set the necessary ENV variables in the `.env` file.
 
-```sh
-yarn start:lambda
-```
+To create a new function, you will need to create two files:
 
-5. Where you reference /.netlify functions for server calls, add a conditional to call localhost:9000 endpoints when not in the production environment.
+- One in `src/lambdas` where the logic will live. These are the ones that will be deployed to Netlify. These functions follow [this format](https://docs.netlify.com/functions/build-with-javascript/#synchronous-function-format).
+- One in `src/api` that will be just a wrapper around the previous one in order to be compatible with Gatsby functions. More on the [Gatbsy docs](https://www.gatsbyjs.com/docs/reference/functions/getting-started/) for the format they follow.
 
 ### 6. Submit your PR
 
@@ -1165,6 +1161,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   </tr>
   <tr>
     <td align="center"><a href="https://github.com/adrianmcli"><img src="https://avatars.githubusercontent.com/u/943555?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Adrian Li</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=adrianmcli" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://www.niceandneat.digital"><img src="https://avatars.githubusercontent.com/u/8178384?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Konstantinos Penlidis</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=penlix" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/HunterSandlin"><img src="https://avatars.githubusercontent.com/u/62820211?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Hunter Sandlin</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=HunterSandlin" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/chrboesch"><img src="https://avatars.githubusercontent.com/u/48591413?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Chris Boesch</b></sub></a><br /><a href="#ideas-chrboesch" title="Ideas, Planning, & Feedback">🤔</a></td>
   </tr>
 </table>
 

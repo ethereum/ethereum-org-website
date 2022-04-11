@@ -7108,6 +7108,33 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "penlix",
+      "name": "Konstantinos Penlidis",
+      "avatar_url": "https://avatars.githubusercontent.com/u/8178384?v=4",
+      "profile": "http://www.niceandneat.digital",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "HunterSandlin",
+      "name": "Hunter Sandlin",
+      "avatar_url": "https://avatars.githubusercontent.com/u/62820211?v=4",
+      "profile": "https://github.com/HunterSandlin",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "chrboesch",
+      "name": "Chris Boesch",
+      "avatar_url": "https://avatars.githubusercontent.com/u/48591413?v=4",
+      "profile": "https://github.com/chrboesch",
+      "contributions": [
+        "ideas"
+      ]
     }
   ],
   "contributorsPerLine": 7,

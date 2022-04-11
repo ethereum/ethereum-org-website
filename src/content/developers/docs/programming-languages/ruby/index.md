@@ -41,19 +41,19 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 - [eth.rb](https://github.com/q9f/eth.rb) - _Ruby library and RPC-client to handle Ethereum accounts, messages, and transactions_
 - [keccak.rb](https://github.com/q9f/keccak.rb) - _The Keccak (SHA3) hash used by Ethereum_
 - [siwe-ruby](https://github.com/spruceid/siwe-ruby) - _Ruby implementation of Sign-In with Ethereum_
-- [siwe_rails](https://github.com/spruceid/siwe_rails) - _Rails gem that adds SIWE local sign in routes._
-- [siwe-rails-examples](https://github.com/spruceid/siwe-rails-examples) - _SIWE example using Ruby on Rails with custom controller._
-- [omniauth-siwe](https://github.com/spruceid/omniauth-siwe) - _OmniAuth strategy for Sign In With Ethereum (SIWE)._
-- [omniauth-nft](https://github.com/valthon/omniauth-nft) - _OmniAuth strategy for authenticating via NFT ownership._
+- [siwe_rails](https://github.com/spruceid/siwe_rails) - _Rails gem that adds SIWE local sign in routes_
+- [siwe-rails-examples](https://github.com/spruceid/siwe-rails-examples) - _SIWE example using Ruby on Rails with custom controller_
+- [omniauth-siwe](https://github.com/spruceid/omniauth-siwe) - _OmniAuth strategy for Sign In With Ethereum (SIWE)_
+- [omniauth-nft](https://github.com/valthon/omniauth-nft) - _OmniAuth strategy for authenticating via NFT ownership_
 - [ethereum-on-rails](https://github.com/q9f/ethereum-on-rails) - _Ethereum on Rails template which allows to connect MetaMask to Ruby on Rails_
 
 ### Archived / No longer maintained {#archived--no-longer-maintained}
 
 - [web3-eth](https://github.com/spikewilliams/vtada-ethereum) - _Calling RPC methods of Ethereum node with Ruby_
 - [ethereum_tree](https://github.com/longhoangwkm/ethereum_tree) - _Ruby library to generate ETH addresses from a Hierarchical Deterministic wallet according to the BIP32 standard_
-- [etherlite](https://github.com/budacom/etherlite) - _Ethereum integration for Ruby on Rails._
-- [ethereum.rb](https://github.com/EthWorks/ethereum.rb) - _Ruby Ethereum client using the JSON-RPC interface for sending transactions, creating and interacting with contracts as well as usefull toolkit to work with Ethereum node._
-- [omniauth-ethereum.rb](https://github.com/q9f/omniauth-ethereum.rb) - _Implements the Ethereum provider strategy for OmniAuth._
+- [etherlite](https://github.com/budacom/etherlite) - _Ethereum integration for Ruby on Rails_
+- [ethereum.rb](https://github.com/EthWorks/ethereum.rb) - _Ruby Ethereum client using the JSON-RPC interface for sending transactions, creating and interacting with contracts as well as usefull toolkit to work with Ethereum node_
+- [omniauth-ethereum.rb](https://github.com/q9f/omniauth-ethereum.rb) - _Implements the Ethereum provider strategy for OmniAuth_
 
 Looking for more resources? Check out [our Developer's home](/developers/).
 

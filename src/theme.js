@@ -514,7 +514,33 @@ export const GlobalStyle = createGlobalStyle`
     scroll-margin-top: ${theme.variables.navHeight};
     scroll-snap-margin: ${theme.variables.navHeight};
   }
-  
+
+  /* Anchor tag styles */
+  /* Selected specifically for mdx rendered side icon link */
+  .header-anchor {
+    position: relative;
+    display: initial;
+    margin-left: -1.5em;
+    padding-right: 0.5rem;
+    font-size: 1rem;
+    vertical-align: middle;
+
+    svg {
+      fill: ${(props) => props.theme.colors.primary};
+      visibility: hidden;
+    }
+  }
+
+  h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover {
+    .header-anchor svg {
+      visibility: visible;
+    }
+  }
+
+  .header-anchor:focus svg {
+    visibility: visible;
+  }
+
 `
 // H6 basically only uses as labels as per design system
 
