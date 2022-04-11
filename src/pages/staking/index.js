@@ -195,6 +195,16 @@ const StyledButtonLink = styled(ButtonLink)`
   }
 `
 
+const StyledCardGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+`
+
 const StyledCard = styled(Card)`
   justify-content: flex-start;
   h3 {
@@ -347,13 +357,13 @@ const StakingPage = ({ data }) => {
             <h2 id={tocItems.whyStakeYourEth.id}>
               {tocItems.whyStakeYourEth.title}
             </h2>
-            <CardGrid>
+            <StyledCardGrid>
               {benefits.map(({ title, description, emoji }, idx) => (
                 <StyledCard title={title} emoji={emoji} key={idx}>
                   {description}
                 </StyledCard>
               ))}
-            </CardGrid>
+            </StyledCardGrid>
           </Content>
           <Content>
             <h2 id={tocItems.howToStakeYourEth.id}>
