@@ -44,7 +44,7 @@ If you’d like to directly access a hosted node you can use Infura or the free 
 const web3 = new Web3("https://cloudflare-eth.com")
 ```
 
-To test that we correctly configured our Web3 instance, we’ll try to retrieve the latest block number by using the `getBlockNumber` function. This function accepts a callback as parameter and return the block number as an integer.
+To test that we correctly configured our Web3 instance, we’ll try to retrieve the latest block number using the `getBlockNumber` function. This function accepts a callback as a parameter and returns the block number as an integer.
 
 ```js
 var Web3 = require("web3")
@@ -67,7 +67,7 @@ async function getBlockNumber() {
 getBlockNumber()
 ```
 
-You can see all the functions that are available on the Web3 instance in the [official Web3 documentation](https://web3js.readthedocs.io/en/v1.2.6/web3-eth.html#).
+You can see all the functions available on the Web3 instance in [the official web3.js documentation](https://web3js.readthedocs.io/en/v1.2.6/web3-eth.html#).
 
 Most of Web3 libraries are asynchronous because in the background the library makes JSON RPC calls to the node which send backs the result.
 
