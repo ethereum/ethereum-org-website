@@ -75,7 +75,7 @@ De basis van een DAO is het bijbehorende slimme contract. Het contract definieer
 
 Dit is mogelijk omdat slimme contracten fraudebestendig zijn zodra ze live op Ethereum gaan. U kunt de code (de regels van de DAO's) niet gewoon bewerken zonder dat mensen dat merken. Dit komt omdat alles openbaar is voor het publiek.
 
-<DocLink to="/developers/docs/smart-contracts/">
+<DocLink to="/smart-contracts/">
   Meer over slimme contracten
 </DocLink>
 
