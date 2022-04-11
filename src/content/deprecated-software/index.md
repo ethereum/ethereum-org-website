@@ -200,7 +200,7 @@ Mana-Ethereum was an Ethereum client built using Elixir.
 
 **History**
 
-Mana-Ethereum's Github repository has not been explicitly archived, but the last commit was in 2019.
+Mana-Ethereum's GitHub repository has not been explicitly archived, but the last commit was in 2019.
 
 ### Aleth (cpp-ethereum) {#aleth}
 
