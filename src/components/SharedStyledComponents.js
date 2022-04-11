@@ -271,31 +271,6 @@ export const Header2 = styled.h2`
     margin-top: -120px;
     visibility: hidden;
   }
-
-  /* Anchor tag styles */
-  /* Selected specifically for mdx rendered side icon link */
-  a.header-anchor {
-    position: relative;
-    display: initial;
-    opacity: 0;
-    margin-left: -1.5em;
-    padding-right: 0.5rem;
-    font-size: 1rem;
-    vertical-align: middle;
-    &:hover {
-      display: initial;
-      fill: ${(props) => props.theme.colors.primary};
-      opacity: 1;
-    }
-  }
-
-  &:hover {
-    a.header-anchor {
-      display: initial;
-      fill: ${(props) => props.theme.colors.primary};
-      opacity: 1;
-    }
-  }
 `
 
 export const Header3 = styled.h3`
@@ -310,31 +285,6 @@ export const Header3 = styled.h3`
     height: 120px;
     margin-top: -120px;
     visibility: hidden;
-  }
-
-  /* Anchor tag styles */
-  /* Selected specifically for mdx rendered side icon link */
-  a.header-anchor {
-    position: relative;
-    display: initial;
-    opacity: 0;
-    margin-left: -1.5em;
-    padding-right: 0.5rem;
-    font-size: 1rem;
-    vertical-align: middle;
-    &:hover {
-      display: initial;
-      fill: ${(props) => props.theme.colors.primary};
-      opacity: 1;
-    }
-  }
-
-  &:hover {
-    a.header-anchor {
-      display: initial;
-      fill: ${(props) => props.theme.colors.primary};
-      opacity: 1;
-    }
   }
 `
 
@@ -352,27 +302,6 @@ export const Header4 = styled.h4`
     height: 120px;
     margin-top: -120px;
     visibility: hidden;
-  }
-
-  /* Anchor tag styles */
-  a {
-    position: relative;
-    display: none;
-    margin-left: -1.5em;
-    padding-right: 0.5rem;
-    font-size: 1rem;
-    vertical-align: middle;
-    &:hover {
-      display: initial;
-      fill: ${(props) => props.theme.colors.primary};
-    }
-  }
-
-  &:hover {
-    a {
-      display: initial;
-      fill: ${(props) => props.theme.colors.primary};
-    }
   }
 `
 
