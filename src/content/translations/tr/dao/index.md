@@ -75,7 +75,7 @@ Bir DAO'nun belkemiği onun akıllı sözleşmesidir. Sözleşme, organizasyonun
 
 Bu, akıllı sözleşmelerin Ethereum'da yayınlandıktan sonra kurcalanamaz olmaları sayesinde mümkündür. İnsanlar fark etmeden kodu (yani DAO'ların kurallarını) değiştiremezsiniz çünkü her şey halka açıktır.
 
-<DocLink to="/developers/docs/smart-contracts/">
+<DocLink to="/smart-contracts/">
   Akıllı kontratlar hakkında daha fazla bilgi
 </DocLink>
 

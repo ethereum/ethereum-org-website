@@ -75,7 +75,7 @@ Das Rückgrat einer DAO ist ihr Smart Contract. Über den Smart Contract werden 
 
 Das ist möglich, da Smart Contracts manipulationssicher sind, sobald sie auf Ethereum veröffentlicht wurden. Es ist nicht möglich, unbemerkt einfach Änderungen am Code (also den Regeln der DAOs) vorzunehmen, da alle Vorgänge öffentlich sind.
 
-<DocLink to="/developers/docs/smart-contracts/">
+<DocLink to="/smart-contracts/">
   Mehr zu Smart Contracts
 </DocLink>
 
