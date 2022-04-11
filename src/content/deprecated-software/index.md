@@ -196,7 +196,7 @@ Mana-Ethereum was an Ethereum client built using Elixir.
 
 **Archives**
 
-[Archived Github repo](https://github.com/mana-ethereum/mana)
+[Archived GitHub repo](https://github.com/mana-ethereum/mana)
 
 **History**
 
