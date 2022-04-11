@@ -49,7 +49,7 @@ contract Game {
 }
 ```
 
-Now let's say in our Dapp, we want to display total the total games lost/won and also update it whenever someone plays again. The approach would be:
+Now let's say in our Dapp, we want to display total bets, the total games lost/won and also update it whenever someone plays again. The approach would be:
 
 1. Fetch `totalGamesPlayerWon`.
 2. Fetch `totalGamesPlayerLost`.
@@ -110,22 +110,22 @@ Examples are always the best to understand something, so let's use The Graph for
 
 The definition for how to index data is called subgraph. It requires three components:
 
-1. Manifest (subgraph.yaml)
-2. Schema (schema.graphql)
-3. Mapping (mapping.ts)
+1. Manifest (`subgraph.yaml`)
+2. Schema (`schema.graphql`)
+3. Mapping (`mapping.ts`)
 
-### Manifest (subgraph.yaml) {#manifest}
+### Manifest (`subgraph.yaml`) {#manifest}
 
 The manifest is our configuration file and defines:
 
 - which smart contracts to index (address, network, ABI...)
 - which events to listen to
 - other things to listen to like function calls or blocks
-- the mapping functions being called (see mapping.ts below)
+- the mapping functions being called (see `mapping.ts` below)
 
 You can define multiple contracts and handlers here. A typical setup would have a subgraph folder inside the Truffle/Hardhat project with its own repository. Then you can easily reference the ABI.
 
-For convenience reasons you also might want to use a template tool like mustache. Then you create a subgraph.template.yaml and insert the addresses based on the latest deployments. For a more advanced example setup, see for example the [Aave subgraph repo](https://github.com/aave/aave-protocol/tree/master/thegraph).
+For convenience reasons you also might want to use a template tool like mustache. Then you create a `subgraph.template.yaml` and insert the addresses based on the latest deployments. For a more advanced example setup, see for example the [Aave subgraph repo](https://github.com/aave/aave-protocol/tree/master/thegraph).
 
 And the full documentation can be seen here: https://thegraph.com/docs/define-a-subgraph#the-subgraph-manifest.
 
@@ -158,7 +158,7 @@ dataSources:
       file: ./src/mapping.ts
 ```
 
-### Schema (schema.graphql) {#schema}
+### Schema (`schema.graphql`) {#schema}
 
 The schema is the GraphQL data definition. It will allow you to define which entities exist and their types. Supported types from The Graph are
 
@@ -189,15 +189,15 @@ type Player @entity {
 }
 ```
 
-### Mapping (mapping.ts) {#mapping}
+### Mapping (`mapping.ts`) {#mapping}
 
 The mapping file in The Graph defines our functions that transform incoming events into entities. It is written in AssemblyScript, a subset of Typescript. This means it can be compiled into WASM (WebAssembly) for more efficient and portable execution of the mapping.
 
-You will need to define each function named in the subgraph.yaml file, so in our case we need only one: handleNewBet. We first try to load the Player entity from the sender address as id. If it doesn't exist, we create a new entity and fill it with starting values.
+You will need to define each function named in the `subgraph.yaml` file, so in our case we need only one: `handleNewBet`. We first try to load the Player entity from the sender address as id. If it doesn't exist, we create a new entity and fill it with starting values.
 
-Then we create a new Bet entity. The id for this will be event.transaction.hash.toHex() + "-" + event.logIndex.toString() ensuring always a unique value. Using only the hash isn't enough as someone might be calling the placeBet function several times in one transaction via a smart contract.
+Then we create a new Bet entity. The id for this will be `event.transaction.hash.toHex() + "-" + event.logIndex.toString()` ensuring always a unique value. Using only the hash isn't enough as someone might be calling the placeBet function several times in one transaction via a smart contract.
 
-Lastly we can update the Player entity will all the data. Arrays cannot be pushed to directly, but need to be updated as shown here. We use the id to reference the bet. And .save() is required at the end to store an entity.
+Lastly we can update the Player entity with all the data. Arrays cannot be pushed to directly, but need to be updated as shown here. We use the id to reference the bet. And `.save()` is required at the end to store an entity.
 
 The full documentation can be seen here: https://thegraph.com/docs/define-a-subgraph#writing-mappings. You can also add logging output to the mapping file, see [here](https://thegraph.com/docs/assemblyscript-api#api-reference).
 
