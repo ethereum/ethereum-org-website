@@ -5,23 +5,19 @@ import { useIntl } from "gatsby-plugin-intl"
 import Link from "./Link"
 import { translateMessageId, supportedLanguages } from "../utils/translations"
 
-const Crumb = styled.a`
-  margin: 0;
-  font-size: 14px;
-  line-height: 140%;
-  letter-spacing: 0.04em;
-  font-weight: normal;
-`
-
-const List = styled.nav`
-  margin: 0;
+const ListContainer = styled.nav`
   margin-bottom: 2rem;
   list-style-type: none;
-  display: flex;
-  flex-wrap: wrap;
   /* Avoid header overlap: */
   position: relative;
   z-index: 1;
+`
+
+const List = styled.ol`
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
 `
 
 const ListItem = styled.li`
@@ -35,6 +31,11 @@ const Slash = styled.span`
 `
 
 const CrumbLink = styled(Link)`
+  margin: 0;
+  font-size: 14px;
+  line-height: 140%;
+  letter-spacing: 0.04em;
+  font-weight: normal;
   text-decoration: none;
   color: ${(props) => props.theme.colors.textTableOfContents};
 
@@ -79,23 +80,21 @@ const Breadcrumbs = ({ slug, startDepth = 0, className }) => {
   })
 
   return (
-    <List className={className} aria-label="Breadcrumb" dir={"auto"}>
-      {crumbs.map((crumb, idx) => (
-        <ol>
+    <ListContainer className={className} aria-label="Breadcrumb" dir={"auto"}>
+      <List>
+        {crumbs.map((crumb, idx) => (
           <ListItem key={idx}>
-            <Crumb>
-              <CrumbLink
-                to={crumb.fullPath}
-                isPartiallyActive={slug === crumb.fullPath}
-              >
-                {crumb.text}
-              </CrumbLink>
-              {idx < crumbs.length - 1 && <Slash>/</Slash>}
-            </Crumb>
+            <CrumbLink
+              to={crumb.fullPath}
+              isPartiallyActive={slug === crumb.fullPath}
+            >
+              {crumb.text}
+            </CrumbLink>
+            {idx < crumbs.length - 1 && <Slash>/</Slash>}
           </ListItem>
-        </ol>
-      ))}
-    </List>
+        ))}
+      </List>
+    </ListContainer>
   )
 }
 
