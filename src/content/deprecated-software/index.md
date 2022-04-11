@@ -172,7 +172,7 @@ Mix was of the earliest Ethereum-related applications. See this [presentation by
 
 [Remix](https://remix.ethereum.org/) is a browser-hosted IDE for Solidity / smart contract development, testing, and deployment. It also has a desktop option.
 
-## Minimal
+### Minimal {#minimal}
 
 Deprecated in 2020.
 
@@ -188,11 +188,11 @@ Minimal was a modular implementation of the Ethereum blockchain written in Go.
 
 Minimal was replaced by [polgon-sdk](https://github.com/0xPolygon/polygon-edge)
 
-### Mana-Ethereum
+### Mana-Ethereum {#mana-ethereum}
 
 **Summary**
 
-Mana was an Ethereum client built using Elixir.
+Mana-Ethereum was an Ethereum client built using Elixir.
 
 **Archives**
 
@@ -200,7 +200,7 @@ Mana was an Ethereum client built using Elixir.
 
 **History**
 
-Mana's Github repository has not been explicitly archived but the last commit was in 2019.
+Mana-Ethereum's Github repository has not been explicitly archived, but the last commit was in 2019.
 
 ### Aleth (cpp-ethereum) {#aleth}
 
@@ -208,7 +208,7 @@ Deprecated on October 6, 2021
 
 **Summary**
 
-Aleth was an Ethereum client written in C++,originally known as cpp-ethereum.
+Aleth (formerly known as cpp-ethereum) was an Ethereum client written in C++.
 
 **Archives**
 
@@ -222,11 +222,11 @@ Aleth was the third most popular client for Ethereum before being deprecated on 
 
 [Geth](https://geth.ethereum.org/) is a well-known alternative Ethereum client.
 
-### Ethereum-H
+### Ethereum-H {#ethereum-h}
 
 **Archives**
 
-The Ethereum-H archives have been removed from Github.
+The Ethereum-H archives have been removed from GitHub.
 
 **History**
 
@@ -236,11 +236,11 @@ Ethereum-H was an Ethereum client written in Haskell. It was deprecated around 2
 
 [Geth](https://geth.ethereum.org/), [Nethermind](http://nethermind.io/), [Besu](https://pegasys.tech/solutions/hyperledger-besu/) and [Erigon](https://github.com/ledgerwatch/erigon) are viable alternative Ethereum clients - there is no current Haskell client.
 
-### ruby-ethereum
+### ruby-ethereum {#ruby-ethereum}
 
 **Archives**
 
-[ruby-ethereum Github page](https://github.com/cryptape/ruby-ethereum)
+[ruby-ethereum GitHub repo](https://github.com/cryptape/ruby-ethereum)
 
 **History**
 
@@ -248,7 +248,7 @@ ruby-ethereum was an Ethereum client written in Ruby. It was deprecated around 2
 
 **Alternatives**
 
-[Geth](https://geth.ethereum.org/), [Nethermind](http://nethermind.io/), [Besu](https://pegasys.tech/solutions/hyperledger-besu/) and [Erigon](https://github.com/ledgerwatch/erigon) are viable alternative Ethereum clients - there is no current Ruby client.
+[Geth](https://geth.ethereum.org/), [Nethermind](http://nethermind.io/), [Besu](https://pegasys.tech/solutions/hyperledger-besu/) and [Erigon](https://github.com/ledgerwatch/erigon) are viable alternative Ethereum clients. There is no current Ruby client.
 
 ### Parity {#parity}
 
