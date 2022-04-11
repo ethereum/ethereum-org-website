@@ -1,5 +1,5 @@
 {
-  "page-stablecoins-accordion-borrow-crypto-collateral": "Kripto yardımcı",
+  "page-stablecoins-accordion-borrow-crypto-collateral": "Kripto Teminatı",
   "page-stablecoins-accordion-borrow-crypto-collateral-copy": "Ethereum ile, ETH'nizi takas etmeden doğrudan diğer kullanıcılardan ödünç alabilirsiniz. Bu size olanak sağlayabilir – kullanıcılar bunu daha fazla ETH biriktirmeye çalışmak için yapar.",
   "page-stablecoins-accordion-borrow-crypto-collateral-copy-p2": "Ancak ETH'nin fiyatı değişken olduğu için fazla teminat vermeniz gerekecektir. Dolayısıyla 100 sabit para ödünç almak istiyorsanız, muhtemelen en az 150 dolar değerinde ETH'ye ihtiyacınız olacaktır. Bu, sistemi ve borç verenleri korur.",
   "page-stablecoins-accordion-borrow-crypto-collateral-link": "Kripto destekli sabit coinler hakkında daha fazlası",
@@ -27,7 +27,7 @@
   "page-stablecoins-accordion-earn-project-2-description": "MakerDao topluluğu (size Dai'yi getiren ekip) için teknoloji, içerik ve diğer çalışmalar.",
   "page-stablecoins-accordion-earn-project-3-description": "Konunuza gerçekten hakim olduğunuzda Dai kazanmak için hataları bulun.",
   "page-stablecoins-accordion-earn-project-bounties": "Gitcoin ödülleri",
-  "page-stablecoins-accordion-earn-project-bug-bounties": "Eth2 hata ödülleri",
+  "page-stablecoins-accordion-earn-project-bug-bounties": "Mutabakat katmanı hata ödülleri",
   "page-stablecoins-accordion-earn-project-community": "MakerDao topluluğu",
   "page-stablecoins-accordion-earn-projects-copy": "Bunlar, çalışmanız karşılığında size sabit para olarak ödeme yapacak platformlardır.",
   "page-stablecoins-accordion-earn-projects-title": "Sabit paralar nereden kazanılır",
@@ -141,5 +141,6 @@
   "page-stablecoins-usdc-logo": "USDC logosu",
   "page-stablecoins-why-stablecoins": "Neden sabit paralar?",
   "page-stablecoins-how-they-work-button": "Nasıl çalışırlar",
-  "page-stablecoins-why-stablecoins-body": "ETH, Bitcoin gibi, yeni bir teknoloji olduğu için değişken bir fiyata sahiptir. Bu yüzden düzenli olarak harcamak istemeyebilirsiniz. Sabit paralar, Ethereum'da kullanabileceğiniz istikrarlı paraya erişmenizi sağlamak için geleneksel para birimlerinin değerini yansıtır."
+  "page-stablecoins-why-stablecoins-body": "ETH, Bitcoin gibi, yeni bir teknoloji olduğu için değişken bir fiyata sahiptir. Bu yüzden düzenli olarak harcamak istemeyebilirsiniz. Sabit paralar, Ethereum'da kullanabileceğiniz istikrarlı paraya erişmenizi sağlamak için geleneksel para birimlerinin değerini yansıtır.",
+  "page-stablecoins-more-defi-button": "Merkeziyetsiz Finans (DeFi) hakkında daha fazla bilgi"
 }

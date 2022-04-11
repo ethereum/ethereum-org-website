@@ -81,5 +81,17 @@
   "page-eth-where-to-buy": "ETH nereden alınır",
   "page-eth-where-to-buy-desc": "ETH'yi bir borsadan veya cüzdandan alabilirsiniz, ancak farklı ülkelerin farklı politikaları vardır. ETH satın almanıza izin verecek hizmetleri görmek için kontrol edin.",
   "page-eth-yours": "Gerçekten senin",
-  "page-eth-yours-desc": "ETH, kendi bankanız olmanıza izin verir. Sahiplik kanıtı olarak cüzdanınızla kendi paranızı kontrol edebilirsiniz - üçüncü şahıslara gerek yoktur."
+  "page-eth-yours-desc": "ETH, kendi bankanız olmanıza izin verir. Sahiplik kanıtı olarak cüzdanınızla kendi paranızı kontrol edebilirsiniz - üçüncü şahıslara gerek yoktur.",
+  "page-eth-more-on-tokens": "Tokenlar ve kullanımları hakkında daha fazla bilgi",
+  "page-eth-button-buy-eth": "ETH edin",
+  "page-eth-tokens-stablecoins": "Sabit coinler",
+  "page-eth-tokens-defi": "Merkeziyetsiz finans (DeFi)",
+  "page-eth-tokens-nft": "Değiştirilemez tokenler (NFT'ler)",
+  "page-eth-tokens-dao": "Merkeziyetsiz özerk organizasyonlar (DAO'lar)",
+  "page-eth-tokens-stablecoins-description": "En az oynaklıktaki Ethereum tokenları hakkında dahası.",
+  "page-eth-tokens-defi-description": "Ethereum tokenlerı için finansal sistem.",
+  "page-eth-tokens-nft-description": "Ethereum öğeleri üzerinde sahipliği temsil eden tokenlar.",
+  "page-eth-tokens-dao-description": "İnternet toplulukları, sıklıkla token sahipleri tarafından yönetilir.",
+  "page-eth-whats-defi": "DeFi hakkında daha fazlası",
+  "page-eth-whats-defi-description": "DeFi, Ethereum üzerine kurulu merkeziyetsiz finansal sistemdir. Bu genel bakış, neler yapabileceğinizi açıklamaktadır."
 }

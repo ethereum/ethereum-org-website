@@ -27,7 +27,7 @@
   "page-stablecoins-accordion-earn-project-2-description": "MakerDaoコミュニティ(あなたにダイをもたらしたチーム) のためのテクノロジー、コンテンツ、その他の仕事。",
   "page-stablecoins-accordion-earn-project-3-description": "あなたの専門分野において本当に何でも知っているときは、Daiを稼ぐためにバグを見つけてください。",
   "page-stablecoins-accordion-earn-project-bounties": "Gitcoin報奨金",
-  "page-stablecoins-accordion-earn-project-bug-bounties": "Eth2 バグ報奨金",
+  "page-stablecoins-accordion-earn-project-bug-bounties": "合意レイヤーのバグ報奨金",
   "page-stablecoins-accordion-earn-project-community": "MakerDao コミュニティ",
   "page-stablecoins-accordion-earn-projects-copy": "これらはあなたの仕事のためにステーブルコインであなたへ支払うプラットフォームです。",
   "page-stablecoins-accordion-earn-projects-title": "どこでステーブルコインを獲得するか",
@@ -141,5 +141,6 @@
   "page-stablecoins-usdc-logo": "USDC ロゴ",
   "page-stablecoins-why-stablecoins": "なぜステーブルコインなのか？",
   "page-stablecoins-how-they-work-button": "動作の仕組み",
-  "page-stablecoins-why-stablecoins-body": "ETHはビットコインと同じく、新しい技術なので価格が変動します。そのため、頻繁に使うのは控えた方がいいかもしれません。ステーブルコインは、従来の通貨の価値を反映して、イーサリウムで使える安定したお金へのアクセスを提供します。"
+  "page-stablecoins-why-stablecoins-body": "ETHはビットコインと同じく、新しい技術なので価格が変動します。そのため、頻繁に使うのは控えた方がいいかもしれません。ステーブルコインは、従来の通貨の価値を反映して、イーサリウムで使える安定したお金へのアクセスを提供します。",
+  "page-stablecoins-more-defi-button": "分散型金融(DeFi)の詳細"
 }

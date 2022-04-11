@@ -97,7 +97,7 @@ PoW based:
 
 PoS based:
 
-- [The Beacon Chain](/eth2/beacon-chain/)
+- [The Beacon Chain](/upgrades/beacon-chain/)
 - Filecoin
 - 0Chain
 
@@ -161,6 +161,12 @@ PoS based:
 - [Ceramic.network](https://ceramic.network/)
 - [Documentation](https://developers.ceramic.network/learn/welcome/)
 - [GitHub](https://github.com/ceramicnetwork/js-ceramic/)
+
+**Filebase - _The first S3-compatible object storage platform that allows you to store data across multiple decentralized storage networks including IPFS, Sia, Skynet, and Storj._**
+
+- [Filebase.com](https://filebase.com/)
+- [Documentation](https://docs.filebase.com/)
+- [GitHub](https://github.com/filebase)
 
 ## Further reading {#further-reading}
 

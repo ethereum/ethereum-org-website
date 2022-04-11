@@ -14,7 +14,7 @@ published: 2020-06-14
 
 您可能会对运行[以太坊节点](/developers/docs/nodes-and-clients/)感兴趣。 最简单的实现方式就是下载、安装和运行 Geth。 通过 Geth，我们只需数分钟便能设置并运行一个轻节点。
 
-首先，您将需要[安装 Geth](https://geth.ethereum.org/docs/install-and-build/installing-geth)。
+首先，您需要[安装 Geth](https://geth.ethereum.org/docs/install-and-build/installing-geth)。
 
 安装 Geth 之后，只需在命令行中键入
 
@@ -32,7 +32,7 @@ $ geth
 
 ## 主网和测试网 {#mainnet-and-testnet}
 
-默认情况下，Geth 会运行一个主网节点。 您可以运行`geth --testnet`，来运行一个 Ropsten 测试网完整节点。 您可以通过将`testnet`替换为`rinkeby`来在 Rinkeby 上运行节点。
+默认情况下，Geth 会运行一个主网节点。 您可以通过运行 `geth --testnet`，来运行一个 Ropsten 测试网全节点。 您可以通过将 `ropsten` 替换为 `rinkeby` 来运行 Rinkeby 上的节点。
 
 [详细了解不同的网络](/developers/docs/networks/)。
 
@@ -64,13 +64,13 @@ $ geth --syncmode "light"
 我们将运行一个轻测试网节点来熟悉如何管理节点并与之交互。 为此，只需运行
 
 ```bash
-$ geth --testnet --syncmode "light"
+$ geth --ropsten --syncmode "light"
 ```
 
 请稍等几秒钟，希望您能得到类似于以下内容的输出：
 
 ```bash
-$ geth --testnet --syncmode "light"
+$ geth --ropsten --syncmode "light"
 INFO [11-18|14:04:47] Maximum peer count                       ETH=0 LES=100 total=25
 INFO [11-18|14:04:47] Starting peer-to-peer node               instance=Geth/v1.8.11-stable/darwin-amd64/go1.10.3
 INFO [11-18|14:04:47] Allocated cache and file handles         database=/Users/bgu/Library/Ethereum/testnet/geth/lightchaindata cache=768 handles=128
@@ -125,11 +125,11 @@ INFO [11-18|14:04:47] Allocated cache and file handles         database=/Users/b
 
 这里值得强调的是，这是区块链能够维持活跃度的最低限度。 区块链的完整内容和 EVM 状态存储在以太网络中的每个完整节点上，存储在与您计算机上的目录非常相似的目录中。
 
-## 附加到 Javascript 控制台 {#attaching-to-the-javascript-console}
+## 附加到 JavaScript 控制台 {#attaching-to-the-javascript-console}
 
-除非我们能够与节点真正交互，否则运行节点没有用处。 例如，我们可能想要广播交易请求或查看 EVM/区块链数据（例如帐户余额）。 Geth 有一个内置的 Javascript 控制台和一个名为[web3js](https://github.com/ethereum/web3.js/)的 Javascript API，您可以使用它与您的节点进行交互。
+除非我们能够与节点真正交互，否则运行节点没有用处。 例如，我们可能想要广播交易请求或查看 EVM/区块链数据（例如帐户余额）。 Geth 有一个内置的 JavaScript 控制台和一个名为[web3js](https://github.com/ethereum/web3.js/)的 JavaScript API，您可以使用它与您的节点进行交互。
 
-使用 Javascript 控制台：
+使用 JavaScript 控制台：
 
 1. 在终端窗口开始运行一个节点，不管是完整节点还是轻节点都可以。
 2. 查找类似于如下的消息：
@@ -140,14 +140,14 @@ INFO [11-18|14:04:49] IPC endpoint opened                      url=/Users/bgu/Li
 
 应在数据块同步开始之前记录此消息。
 
-3. 此消息指明 IPC（进程间通信）端点的路径。 复制这个路径（在上面的示例中，它是 `/Userss/bgu/Library/Etherum/testnet/geth.ipc`）。
+3. 此消息指明 IPC（进程间通信）端点的路径。 复制这个路径（在上面的示例中，它是 `/Userss/bgu/Library/Ethereum/testnet/geth.ipc`）。
 4. 打开一个新的终端窗口或标签，然后运行以下命令： `$ geth attach [您的IPC端点路径]`
 
-这应会打开 Javascript 控制台。 我们现在可以使用 web3js 与节点进行交互。
+这应会打开 JavaScript 控制台。 我们现在可以使用 web3js 与节点进行交互。
 
 [完整 web3js 文档](http://web3js.readthedocs.io/)
 
-以下是此 API 公开的一些有用的对象。 您可以通过在 Javascript 控制台中输入这些对象来访问它们。
+以下是此 API 公开的一些有用的对象。 您可以通过在 JavaScript 控制台中输入这些对象来访问它们。
 
 - 如果您的节点已经开始但尚未完成区块同步，`eth.syncing` 返回一个对象；或者，如果它已完成同步或尚未启动，则返回`false`值。 如果节点仍在同步，`eth.syncing`会告诉您收到数据的最新区块编号，以及当前区块链中的区块总数。
 - `net.peerCount`返回您连接到的对等点的数量。 如果此数量为 0，您可能需要等待几分钟，或者开始搜索解决方案（可能是防火墙或网络问题，或者其他问题）。
@@ -164,6 +164,12 @@ eth.getBalance('0x85d918c2B7F172d033D190152AEc58709Fb6D048')
 
 ## 停止和重启节点 {#stopping-and-restarting-your-node}
 
-您可以随时停止您的节点。 如果要重启节点，Geth 将需要几秒钟或几分钟来重新同步（从上次节点停止运行时停止的位置下载区块和/或区块头）。 如果上述任何指引均不起作用，您应首先尝试重启您的节点。
+您可以随时通过按 `CTRL+C` 停止节点。 如果要重启节点，Geth 将需要几秒钟或几分钟来重新同步（从上次节点停止运行时停止的位置下载区块和/或区块头）。 如果上述任何指引均不起作用，您应首先尝试重启您的节点。
 
-如果您对运行以太坊完整节点感兴趣，通常最好是从具有良好网络连接的专用计算机上运行，而不是从个人计算机上运行。 这是一个用 AWS 运行节点的指南（这有点过时，引用的 AMIS 不再是最新的或不再可用，因此您可能必须进行一些搜索）： [如何在 AWS 上运行一个节点](https://medium.com/mercuryprotocol/how-to-run-an-ethereum-node-on-aws-a8774ed3acf6)
+```bash
+$ geth --ropsten --syncmode "light"
+```
+
+根据需要将“ropsten”替换为其他测试网的名称，或使用“主网”。
+
+如果您对运行以太坊完整节点感兴趣，通常最好是从具有良好网络连接的专用计算机上运行，而不是从个人计算机上运行。 以下是使用 AWS 运行节点的指南（这有点过时了，所引用的 AMI 不再是最新或可用的，因此您可能需要做一些搜索）：[如何在 AWS 上运行节点](https://medium.com/mercuryprotocol/how-to-run-an-ethereum-node-on-aws-a8774ed3acf6)

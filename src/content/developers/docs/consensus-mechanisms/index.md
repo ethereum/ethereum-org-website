@@ -16,9 +16,9 @@ To better understand this page, we recommend you first read our [introduction to
 
 ## What is consensus? {#what-is-consensus}
 
-By consensus, we mean that a general agreement has been reached. Consider a group of five people going to the cinema. If three out of five agree on a film, a consensus is achieved — majority rules.
+By consensus, we mean that a general agreement has been reached. Consider a group of people going to the cinema. If there is not a disagreement on a proposed choice of film, then a consensus is achieved. In the extreme case the group will eventually split.
 
-In regards to blockchain, reaching consensus means that at least 51% of the nodes on the network agree on the next global state of the network.
+In regards to blockchain, the process is formalized, and reaching consensus means that at least 51% of the nodes on the network agree on the next global state of the network.
 
 ## What is a consensus mechanism? {#what-is-a-consensus-mechanism}
 
@@ -28,25 +28,9 @@ For decades, these mechanisms have been used to establish consensus among databa
 
 A consensus mechanism in a cryptoeconomic system also helps prevent certain kinds of economic attacks. In theory, an attacker can compromise consensus by controlling 51% of the network. Consensus mechanisms are designed to make this "51% attack" unfeasible. Different mechanisms are engineered to solve this security problem in different ways.
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/dylgwcPH4EA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-<!-- ### Consensus -->
-
-<!-- Formal requirements for a consensus protocol may include: -->
-
-<!-- - Agreement: All correct processes must agree on the same value. -->
-<!-- - Weak validity: For each correct process, its output must be the input of some correct process. -->
-<!-- - Strong validity: If all correct processes receive the same input value, then they must all output that value. -->
-<!-- - Termination: All processes must eventually decide on an output value -->
-
-<!-- ### Fault tolerance -->
-<!-- TODO explain how protocols must be fault tolerant -->
+<YouTube id="dylgwcPH4EA" />
 
 ## Types of consensus mechanisms {#types-of-consensus-mechanisms}
-
-<!-- TODO -->
-<!-- Why do different consensus protocols exist? -->
-<!-- What are the tradeoffs of each? -->
 
 ### Proof-of-work {#proof-of-work}
 
@@ -80,19 +64,19 @@ More on [proof-of-stake](/developers/docs/consensus-mechanisms/pos/)
 
 Watch more on the different types of consensus mechanisms used on Ethereum:
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/ojxfbN78WFQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<YouTube id="ojxfbN78WFQ" />
 
 ### Sybil resistance & chain selection {#sybil-chain}
 
 Now technically, proof-of-work and proof-of-stake are not consensus protocols by themselves, but they are often referred to as such for simplicity. They are actually Sybil resistance mechanisms and block author selectors; they are a way to decide who is the author of the latest block. It's this Sybil resistance mechanism combined with a chain selection rule that makes up a true consensus mechanism.
 
-**Sybil resistance** measures how a protocol fares against a [Sybil attack](https://en.wikipedia.org/wiki/Sybil_attack). Sybil attacks are when one user or group pretends to be many users. Resistance to this type of attack is essential for a decentralized blockchain and enables miners and validators to be rewarded equally based on resources put in. Proof-of-work and proof-of-stake protect against this by making users expend a lot of energy or put up a lot of collateral. These protections are an economic deterrent to Sybil attacks.
+**Sybil resistance** measures how a protocol fares against a [Sybil attack](https://wikipedia.org/wiki/Sybil_attack). Sybil attacks are when one user or group pretends to be many users. Resistance to this type of attack is essential for a decentralized blockchain and enables miners and validators to be rewarded equally based on resources put in. Proof-of-work and proof-of-stake protect against this by making users expend a lot of energy or put up a lot of collateral. These protections are an economic deterrent to Sybil attacks.
 
 A **chain selection rule** is used to decide which chain is the "correct" chain. Ethereum and Bitcoin currently use the "longest chain" rule, which means that whichever blockchain is the longest will be the one the rest of the nodes accept as valid and work with. For proof-of-work chains, the longest chain is determined by the chain's total cumulative proof-of-work difficulty.
 
 The combination of proof-of-work and longest chain rule is known as "Nakamoto Consensus."
 
-Eth2 (the [beacon chain](/eth2/beacon-chain/)) uses a consensus mechanism called [Casper the Friendly Finality Gadget](https://arxiv.org/abs/1710.09437), which is proof-of-stake based.
+The [Beacon Chain](/upgrades/beacon-chain/) uses a consensus mechanism called [Casper the Friendly Finality Gadget](https://arxiv.org/abs/1710.09437), which is proof-of-stake based.
 
 ## Further reading {#further-reading}
 

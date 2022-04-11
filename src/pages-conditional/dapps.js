@@ -66,12 +66,12 @@ const StyledGhostCard = styled(GhostCard)`
 `
 
 const Subtitle = styled.div`
-  font-size: 24px;
+  font-size: 1.5rem;
   line-height: 140%;
   color: ${(props) => props.theme.colors.text200};
   margin-top: 1rem;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    font-size: 20px;
+    font-size: 1.25rem;
   }
 `
 
@@ -110,7 +110,7 @@ const TwoColumnContent = styled.div`
 `
 
 const H2 = styled.h2`
-  font-size: 24px;
+  font-size: 1.5rem;
   font-style: normal;
   margin-top: 0.5rem;
   font-weight: 700;
@@ -206,10 +206,11 @@ const StepBox = styled(Link)`
 `
 
 const H3 = styled.h3`
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
   margin-top: 1.5rem;
+
   a {
     display: none;
   }
@@ -291,8 +292,6 @@ const AddDappButton = styled(ButtonLink)`
     margin-left: 0rem;
   }
 `
-
-const StyledDocLink = styled(DocLink)``
 
 const StyledCallout = styled(Callout)`
   flex: 1 1 416px;
@@ -1058,7 +1057,7 @@ const DappsPage = ({ data, location }) => {
       url: "https://uniswap.exchange/swap",
       image: getImage(data.uniswapec),
       alt: translateMessageId("page-dapps-uniswap-logo-alt", intl),
-      background: "#212F46",
+      background: "#212f46",
       type: FINANCE,
       pillColor: "tagMint",
     },
@@ -1097,7 +1096,7 @@ const DappsPage = ({ data, location }) => {
       url: "https://pooltogether.com",
       image: getImage(data.pooltogetherec),
       alt: translateMessageId("page-dapps-pooltogether-logo-alt", intl),
-      background: "#7E4CF2",
+      background: "#7e4cf2",
       type: FINANCE,
       pillColor: "tagMint",
     },
@@ -1333,14 +1332,8 @@ const DappsPage = ({ data, location }) => {
               </RightColumn>
             </TwoColumnContent>
             <StyledCalloutBanner
-              title={translateMessageId(
-                "page-dapps-wallet-callout-title",
-                intl
-              )}
-              description={translateMessageId(
-                "page-dapps-wallet-callout-description",
-                intl
-              )}
+              titleKey={"page-dapps-wallet-callout-title"}
+              descriptionKey={"page-dapps-wallet-callout-description"}
               image={getImage(data.wallet)}
               maxImageWidth={300}
               alt={translateMessageId(
@@ -1627,22 +1620,17 @@ const DappsPage = ({ data, location }) => {
             <p>
               <Translation id="page-dapps-how-dapps-work-p3" />
             </p>
-            <StyledDocLink
-              to="/developers/docs/dapps/"
-              title="Intro to dapps"
-            />
-            <StyledDocLink
-              to="/developers/docs/smart-contracts/"
-              title="Smart contracts"
-            />
+            <DocLink to="/developers/docs/dapps/">
+              <Translation id="page-dapps-docklink-dapps" />
+            </DocLink>
+            <DocLink to="/developers/docs/smart-contracts/">
+              <Translation id="page-dapps-docklink-smart-contracts" />
+            </DocLink>
           </LeftColumn>
           <RightColumn>
             <StyledCallout
-              title={translateMessageId("page-dapps-learn-callout-title", intl)}
-              description={translateMessageId(
-                "page-dapps-learn-callout-description",
-                intl
-              )}
+              titleKey="page-dapps-learn-callout-title"
+              descriptionKey="page-dapps-learn-callout-description"
               image={getImage(data.developers)}
               alt={translateMessageId(
                 "page-dapps-learn-callout-image-alt",

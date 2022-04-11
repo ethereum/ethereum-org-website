@@ -1,6 +1,6 @@
 ---
 title: Mecanismos de consenso
-description: Una explicación de los protocolos de consenso en los sistemas distribuidos y de su función en Etherum.
+description: Una explicación de los protocolos de consenso en los sistemas distribuidos y de su función en Ethereum.
 lang: es
 sidebar: true
 incomplete: true
@@ -22,23 +22,7 @@ Durante décadas, estos mecanismos se han utilizado para establecer un consenso 
 
 Un mecanismo de consenso en un sistema criptoeconómico también ayuda a prevenir ciertos tipos de ataques económicos. En teoría, un atacante puede comprometer el consenso mediante el control del 51% de la red. Los mecanismos de consenso están diseñados para hacer inviable este "ataque del 51%". Se han diseñado diferentes mecanismos para resolver este problema de seguridad de distintas formas.
 
-<!-- ### Consensus -->
-
-<!-- Formal requirements for a consensus protocol may include: -->
-
-<!-- - Agreement: All correct processes must agree on the same value. -->
-<!-- - Weak validity: For each correct process, its output must be the input of some correct process. -->
-<!-- - Strong validity: If all correct processes receive the same input value, then they must all output that value. -->
-<!-- - Termination: All processes must eventually decide on an output value -->
-
-<!-- ### Fault tolerance -->
-<!-- TODO explain how protocols must be fault tolerant -->
-
 ## Tipos de mecanismos de consenso {#types-of-consensus-mechanisms}
-
-<!-- TODO -->
-<!-- Why do different consensus protocols exist? -->
-<!-- What are the tradeoffs of each? -->
 
 ### Prueba de trabajo {#proof-of-work}
 
@@ -69,8 +53,6 @@ El sistema de Prueba de participación se mantiene seguro, ya que sería necesar
 Más información sobre la [Prueba de participación (PoS)](/developers/docs/consensus-mechanisms/pos/)
 
 ## Más información {#further-reading}
-
-<!-- TODO -->
 
 ## Temas relacionados {#related-topics}
 

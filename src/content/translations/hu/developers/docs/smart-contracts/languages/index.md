@@ -202,13 +202,13 @@ Ha neked még új az Ethereum és nem programoztál okosszerződés nyelveken, a
 **Yul**
 
 - Haladó nyelv Ethereumra.
-- Támogatja az [EVM-et](en/developers/docs/evm) és az [eWASM-t](https://github.com/ewasm), ami egy Ethereummal fűszerezett WebAssembly, amit a két platform közös nevezőjének terveztek.
+- Támogatja az [EVM-et](/developers/docs/evm) és az [eWASM-t](https://github.com/ewasm), ami egy Ethereummal fűszerezett WebAssembly, amit a két platform közös nevezőjének terveztek.
 - Jó cél a magas szintű optimizációs szinteknek, melyek az EVM-ből és az eWASM-ból is tudnak profitálni.
 
 **Yul+**
 
 - A Yul egy alacsony szintű, nagy hatékonyságú kiterjesztése.
-- Eredetileg az [optimista összegző](en/developers/docs/layer-2-scaling/#rollups-and-sidechains) szerződésre lett kifejlesztve.
+- Eredetileg az [optimista összegző](/developers/docs/layer-2-scaling/#rollups-and-sidechains) szerződésre lett kifejlesztve.
 - A Yul+-ra úgy is tekinthetünk, mint a Yul-nak egy kísérleti fejlesztési javaslatára, melyhez új funkciók tartoznak.
 
 ### Fontos linkek {#important-links-2}

@@ -22,7 +22,7 @@ const Item = styled(Link)`
   margin-bottom: 1px;
   padding: 1rem;
   width: 100%;
-  color: #000;
+  color: #000000;
   &:hover {
     border-radius: 4px;
     box-shadow: 0 0 1px ${(props) => props.theme.colors.primary};
@@ -84,7 +84,7 @@ const Leaderboard = ({ content, limit = 100 }) => (
               <ItemTitle>{name}</ItemTitle>
               <ItemDesc>
                 {score}{" "}
-                <Translation id="page-eth2-bug-bounty-leaderboard-points" />
+                <Translation id="page-upgrades-bug-bounty-leaderboard-points" />
               </ItemDesc>
             </TextContainer>
             {emoji && <Emoji mr={`2rem`} text={emoji} />}

@@ -42,7 +42,7 @@ sidebar: true
 
 ## 高級使用模式 {#advanced-use-patterns}
 
-- [使用 Eventeum 構建 Java 智能合約數據緩存](使用 Eventeum 構建 Java 智能合約數據緩存)
+- [使用 Eventeum 構建 Java 智能合約數據緩存](https://kauri.io/article/fe81ee9612eb4e5a9ab72790ef24283d/using-eventeum-to-build-a-java-smart-contract-data-cache)
 
 ## Java 項目和工具 {#java-projects-and-tools}
 

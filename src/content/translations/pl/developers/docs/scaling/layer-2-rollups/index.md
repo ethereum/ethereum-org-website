@@ -77,13 +77,13 @@ Optymistyczne pakiety zbiorcze są umieszczone równolegle do głównego łańcu
 
 W przypadku optymistycznych pakietów zbiorczych transakcje są zapisywane w łańcuchu Ethereum jako `calldata`, co optymalizuje je jeszcze bardziej dzięki ograniczeniu kosztów gazu.
 
-Ponieważ obliczanie to powolna, droga część korzystania z Ethereum, optymistyczne pakiety zbiorcze mogą przynieść nawet 10-100-krotną poprawę skalowalności zależną od transakcji. Ta liczba zwiększy się jeszcze bardziej wraz z wprowadzeniem [łańcuchów odłamkowych](/eth2/shard-chains). Wynika to z faktu, że w przypadku zakwestionowania transakcji dostępnych będzie więcej danych.
+Ponieważ obliczanie to powolna, droga część korzystania z Ethereum, optymistyczne pakiety zbiorcze mogą przynieść nawet 10-100-krotną poprawę skalowalności zależną od transakcji. Ta liczba zwiększy się jeszcze bardziej wraz z wprowadzeniem [łańcuchów odłamkowych](/upgrades/shard-chains). Wynika to z faktu, że w przypadku zakwestionowania transakcji dostępnych będzie więcej danych.
 
 #### Transakcje sporne {#disputing-transactions}
 
 Optymistyczne pakiety zbiorcze nie obliczają transakcji, więc potrzebny jest mechanizm zapewniający, że transakcje są legalne, a nie oszukańcze. W tym miejscu pojawiają się dowody oszustwa. Jeśli ktoś powiadomi o oszukańczej transakcji, pakiet zbiorczy wykryje oszustwo i uruchomi obliczenie transakcji przy użyciu dostępnych danych o stanie. Oznacza to, że możesz mieć dłuższy czas oczekiwania na potwierdzenie transakcji niż w przypadku pakietu zbiorczego ZK, ponieważ może być zakwestionowana.
 
-![Schemat pokazujący, co się dzieje, gdy dochodzi do oszukańczej transakcji w optymistycznym pakiecie zbiorczym w Ethereum](../../../../../../developers/docs/scaling/layer-2-rollups/optimistic-rollups.png)
+![Schemat pokazujący, co się dzieje, gdy dochodzi do oszukańczej transakcji w optymistycznym pakiecie zbiorczym w Ethereum](../../../../../../developers/docs/scaling/optimistic-rollups/optimistic-rollups.png)
 
 Gaz potrzebny do obliczenia dowodu oszustwa jest nawet refundowany. Ben Jones z Optimism opisuje istniejący system zabezpieczeń:
 
@@ -114,7 +114,6 @@ Istnieją rozwiązania hybrydowe, które łączą w sobie najlepsze elementy wie
 
 ### Używanie rozwiązań hybrydowych {#use-hybrid-solutions}
 
-- [Offchain Labs Arbitrum SCSC](https://offchainlabs.com/arbitrum.pdf)
 - [Celer](https://www.celer.network/)
 
 ## Dalsza lektura {#further-reading}

@@ -275,7 +275,7 @@ W praktyce jednak emitenci nie zawsze są wiarygodni, a w niektórych przypadkac
 
 ### Systemy identyfikacji i reputacji {#identity-and-reputation-systems}
 
-Najwcześniejsza alternatywna kryptowaluta, [Namecoin](http://namecoin.org/), próbowała użyć blockchain podobny do Bitcoina, aby zapewnić system rejestracji nazwy, gdzie użytkownicy mogą rejestrować swoje nazwy w publicznej bazie danych wraz z innymi danymi. Główny cytowany przypadek użycia dotyczy a System [DNS](https://en.wikipedia.org/wiki/Domain_Name_System), mapowanie nazwy domen, takie jak „bitcoin.org” (lub, w przypadku Namecoin, „bitcoin.bit”) na adres IP. Inne przypadki użycia obejmują uwierzytelnianie poczty elektronicznej i potencjalnie bardziej zaawansowane systemy reputacji. Oto podstawowa umowa, aby dostarczyć system rejestracji nazw podobnych do Namecoin na Ethereum:
+Najwcześniejsza alternatywna kryptowaluta, [Namecoin](http://namecoin.org/), próbowała użyć blockchain podobny do Bitcoina, aby zapewnić system rejestracji nazwy, gdzie użytkownicy mogą rejestrować swoje nazwy w publicznej bazie danych wraz z innymi danymi. Główny cytowany przypadek użycia dotyczy a System [DNS](https://wikipedia.org/wiki/Domain_Name_System), mapowanie nazwy domen, takie jak „bitcoin.org” (lub, w przypadku Namecoin, „bitcoin.bit”) na adres IP. Inne przypadki użycia obejmują uwierzytelnianie poczty elektronicznej i potencjalnie bardziej zaawansowane systemy reputacji. Oto podstawowa umowa, aby dostarczyć system rejestracji nazw podobnych do Namecoin na Ethereum:
 
     def register(nazwa, wartość):
         if !self.storage[name]:
@@ -301,7 +301,7 @@ Ogólny zarys kodowania DAO przedstawia się następująco. Najprostszy projekt 
 - `[1,i]` aby zarejestrować głos za wnioskiem `i`
 - `[2,i]` aby sfinalizować propozycję `i` jeśli została złożona wystarczająca ilość głosów
 
-Umowa zawierałaby wówczas klauzule dla każdego z nich. Przechowuje zapis wszystkich otwartych zmian pamięci, wraz z listą osób, na które zagłosowały. Miałaby również listę wszystkich członków. Gdy jakakolwiek zmiana pamięci dostanie się do dwóch trzecich głosujących na nią członków, finalizacja transakcji może wykonać zmianę. Bardziej zaawansowany szkielet miałby również wbudowaną możliwość głosowania na funkcje takie jak wysyłanie transakcji, dodawanie członków i usuwanie członków, a nawet może przewidywać dla [Płynnej Demokracji](https://en.wikipedia.org/wiki/Delegative_democracy)- delegacji (np. każdy może przypisać kogoś do głosowania, i przypisanie jest translityczne, więc jeśli A przypisuje B i B przypisuje C wtedy C określa głos A). Ten projekt pozwoliłby DAO na rozwój organiczny jako społeczności zdecentralizowanej, umożliwienie ludziom w końcu delegowania zadania filtrowania, kto jest członkiem specjalistów, chociaż w odróżnieniu od „obecnego systemu” specjaliści mogą z łatwością wyskakać i z czasem przebywać w sytuacji, gdy indywidualni członkowie społeczności zmieniają swoje dostosowania.
+Umowa zawierałaby wówczas klauzule dla każdego z nich. Przechowuje zapis wszystkich otwartych zmian pamięci, wraz z listą osób, na które zagłosowały. Miałaby również listę wszystkich członków. Gdy jakakolwiek zmiana pamięci dostanie się do dwóch trzecich głosujących na nią członków, finalizacja transakcji może wykonać zmianę. Bardziej zaawansowany szkielet miałby również wbudowaną możliwość głosowania na funkcje takie jak wysyłanie transakcji, dodawanie członków i usuwanie członków, a nawet może przewidywać dla [Płynnej Demokracji](https://wikipedia.org/wiki/Delegative_democracy)- delegacji (np. każdy może przypisać kogoś do głosowania, i przypisanie jest translityczne, więc jeśli A przypisuje B i B przypisuje C wtedy C określa głos A). Ten projekt pozwoliłby DAO na rozwój organiczny jako społeczności zdecentralizowanej, umożliwienie ludziom w końcu delegowania zadania filtrowania, kto jest członkiem specjalistów, chociaż w odróżnieniu od „obecnego systemu” specjaliści mogą z łatwością wyskakać i z czasem przebywać w sytuacji, gdy indywidualni członkowie społeczności zmieniają swoje dostosowania.
 
 Alternatywnym modelem jest zdecentralizowana korporacja, gdzie każdy rachunek może mieć zero lub więcej akcji, a dwie trzecie akcji jest zobowiązane do podjęcia decyzji. Kompletny szkielet obejmowałby funkcje zarządzania aktywami, możliwość złożenia oferty kupna lub sprzedaży akcji, oraz zdolność przyjmowania ofert (najlepiej z mechanizmem dopasowania zleceń w ramach umowy). Delegacja istniałaby również w stylu płynnej demokracji, generalizując koncepcję rady dyrektorów.
 
@@ -369,7 +369,7 @@ Istnieje jednak kilka istotnych odstępstw od tych założeń w rzeczywistości:
 3.  Dystrybucja energii wydobywczeh może w praktyce stać się radykalnie nieegalitarna.
 4.  Spekulanci, wrogowie polityczni i maszyny, których funkcja użyteczności obejmuje wyrządzanie szkód w sieci, już istnieją, i mogą sprytnie tworzyć kontrakty, w których ich koszt jest znacznie niższy niż koszt zapłacony przez inne weryfikujące węzły.
 
-(1) daje górnikowi tendencję do uwzględniania mniejszej liczby transakcji, a (2) wzrasta `NC`; w związku z tym te dwa efekty co najmniej częściowo znoszą się nawzajem <sup>[Jak?](https://github. om/ethereum/wiki/issues/447#issuecomment-316972260)</sup> (3) i (4) są głównymi problemami; aby je rozwiązać, tworzymy zmienną pokrywę: żaden blok nie może mieć więcej operacji niż `BLK_LIMIT_FACTOR` razy długoterminowa wykładnicza średnia ruchoma. Konkretnie:
+(1) daje górnikowi tendencję do uwzględniania mniejszej liczby transakcji, a (2) wzrasta `NC`; w związku z tym te dwa efekty co najmniej częściowo znoszą się nawzajem <sup>[Jak?](https://github.com/ethereum/wiki/issues/447#issuecomment-316972260)</sup> (3) i (4) są głównymi problemami; aby je rozwiązać, tworzymy zmienną pokrywę: żaden blok nie może mieć więcej operacji niż `BLK_LIMIT_FACTOR` razy długoterminowa wykładnicza średnia ruchoma. Konkretnie:
 
     blk.oplimit = floor((blk.parent.oplimit \* (EMAFACTOR - 1) +
     floor(parent.opcount \* BLK\_LIMIT\_FACTOR)) / EMA\_FACTOR)
@@ -464,8 +464,6 @@ Koncepcja arbitralnej funkcji przejściowej państwa wdrożonej przez protokołu
 
 ## Uwagi i dalsze lektury {#notes-and-further-reading}
 
-<!--Invisible HTML comment used for navigation with CTRL+F footnote or fn.-->
-
 ### Uwagi {#notes}
 
 1.  Czytelnik może zauważyć, że w rzeczywistości adres Bitcoin jest skrótem klucza publicznego krzywej eliptycznej, a nie klucz publiczny. Jednak w rzeczywistości całkowicie uzasadniona jest terminologia kryptograficzna określająca hash pubkey jako sam klucz publiczny. , ponieważ kryptografię Bitcoina można uznać za niestandardową algorytm podpisu cyfrowego, w przypadku gdy klucz publiczny składa się z skrótu pubke'a ECC, podpis składa się z pubkey ECC połączony z podpisem ECC, i algorytm weryfikacji obejmuje sprawdzanie pubkey ECC w podpisze za pomocą skrótu pubkey ECC dostarczonego jako klucz publiczny, a następnie weryfikację podpisu ECC za pomocą pubkey ECC.
@@ -485,13 +483,13 @@ Koncepcja arbitralnej funkcji przejściowej państwa wdrożonej przez protokołu
 6.  [Zabezpieczenie tytułów własności na podstawie uprawnień właściciela](https://nakamotoinstitute.org/secure-property-titles/)
 7.  [Biała księga Bitcoin](http://bitcoin.org/bitcoin.pdf)
 8.  [Namecoin](https://namecoin.org/)
-9.  [Trójkąt Zooko's](https://en.wikipedia.org/wiki/Zooko's_triangle)
+9.  [Trójkąt Zooko's](https://wikipedia.org/wiki/Zooko's_triangle)
 10. [Biała księga kolorowych monet](https://docs.google.com/a/buterin.com/document/d/1AnkP_cVZTCMLIzw4DvsW6M8Q2JC0lIzrTLuoWu2z1BE/edit)
 11. [Biała księga Mastercoina](https://github.com/mastercoin-MSC/spec)
 12. [Zdecentralizowane autonomiczne korporacje, Bitcoin Magazine](http://bitcoinmagazine.com/7050/bootstrapping-a-decentralized-autonomous-corporation-part-i/)
 13. [Uproszczona weryfikacja płatności](https://en.bitcoin.it/wiki/Scalability#Simplifiedpaymentverification)
-14. [Drzewa Merkle](https://en.wikipedia.org/wiki/Merkle_tree)
-15. [Drzewa Patricia](https://en.wikipedia.org/wiki/Patricia_tree)
+14. [Drzewa Merkle](https://wikipedia.org/wiki/Merkle_tree)
+15. [Drzewa Patricia](https://wikipedia.org/wiki/Patricia_tree)
 16. [GHOST](https://eprint.iacr.org/2013/881.pdf)
 17. [StorJ i agenci autonomiczni, Jeff Garzik](http://garzikrants.blogspot.ca/2013/01/storj-and-bitcoin-autonomous-agents.html)
 18. [Mike Hearn na temat Inteligentnej Własności podczas Festiwalu Turinga](http://www.youtube.com/watch?v=Pu4PAMFPo5Y)
@@ -499,6 +497,6 @@ Koncepcja arbitralnej funkcji przejściowej państwa wdrożonej przez protokołu
 20. [Drzewa Patricia Merkle w Ethereum](https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-Patricia-Tree)
 21. [Peter Todd na temat sumy drzew Merkle](http://sourceforge.net/p/bitcoin/mailman/message/31709140/)
 
-_Historia białej księgi znajduje się na stronie https://github.com/ethereum/wiki/blob/old-before-deleting-all-files-go-to-wiki-wiki-wiki-zamiast/old-whitepaper-for-historical-reference.md_
+_Historia białej księgi znajduje się na stronie https://github.com/ethereum/wiki/blob/old-before-deleting-all-files-go-to-wiki-wiki-instead/old-whitepaper-for-historical-reference.md_
 
 _Warto zauważyć, że Ethereum, podobnie jak wiele projektów oprogramowania opartych na społecznościach, rozwija się od czasu jego początkowego powstania. Aby dowiedzieć się o najnowszych zmianach w Ethereum i jak wprowadzone są zmiany w protokole, zalecamy [ten przewodnik](/learn/)._

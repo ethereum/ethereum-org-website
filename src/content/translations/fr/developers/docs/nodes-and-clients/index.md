@@ -19,7 +19,7 @@ Vous devez comprendre le concept de réseau décentralisé avant d'approfondir l
 
 Vous pouvez voir une vue du réseau Ethereum en temps réel en consultant cette [carte des nœuds](https://etherscan.io/nodetracker).
 
-De nombreuses [implémentations de clients Ethereum](/developers/docs/nodes-and-clients/#clients) existent dans différentes langues. Ce qu'elles ont en commun, c'est qu'elles suivent toutes une spécification formelle. Cette spécification dicte le fonctionnement du réseau Ethereum et de la blockchain.
+De nombreuses [implémentations de clients Ethereum](/developers/docs/nodes-and-clients/#execution-clients) existent dans différentes langues. Ce qu'elles ont en commun, c'est qu'elles suivent toutes une spécification formelle. Cette spécification dicte le fonctionnement du réseau Ethereum et de la blockchain.
 
 ![Client Eth1x](../../../../../developers/docs/nodes-and-clients/client-diagram.png) Diagramme simplifié des fonctionnalités Ethereum Client
 
@@ -57,7 +57,7 @@ L'exécution de votre propre nœud vous permet d'utiliser Ethereum de façon vra
 
 - Votre nœud vérifie lui-même toutes les transactions et tous les blocs par rapport aux règles de consensus. Cela signifie que vous n’avez ni à vous fier à d’autres nœuds du réseau ni à leur faire entièrement confiance.
 - Vous n'aurez pas à divulguer vos adresses et vos soldes à des nœuds aléatoires. Tout peut être contrôlé avec votre propre client.
-- Votre DApp peut être privée et plus sécurisée si vous utilisez votre propre nœud. [Metamask](https://metamask.io), [MyEtherWallet](https://myetherwallet.com) et d'autres portefeuilles peuvent être facilement pointés vers votre propre nœud local.
+- Votre DApp peut être privée et plus sécurisée si vous utilisez votre propre nœud. [MetaMask](https://metamask.io), [MyEtherWallet](https://myetherwallet.com) et d'autres portefeuilles peuvent être facilement pointés vers votre propre nœud local.
 
 ![Comment accéder à Ethereum via votre application et vos nœuds](../../../../../developers/docs/nodes-and-clients/nodes.png)
 
@@ -99,7 +99,7 @@ Si quelqu'un exécute un nœud Ethereum avec une API publique dans votre communa
 
 D'autre part, si vous exécutez un client, vous pouvez le partager avec vos amis qui pourraient en avoir besoin.
 
-## Clients {#clients}
+## Clients {#execution-clients}
 
 Ethereum est conçu pour offrir des clients différents, développés par différentes équipes utilisant différents langages de programmation. Cela rend le réseau plus solide et plus diversifié. L'objectif idéal est de parvenir à une diversité sans qu'aucun client ne domine afin de réduire les points de défaillance uniques.
 
@@ -210,11 +210,11 @@ La façon la plus pratique et la moins chère d'exécuter un nœud Ethereum est 
 
 Les petits appareils abordables et efficaces de ce type sont parfaits pour exécuter un nœud chez soi.
 
-## Clients Eth2 {#eth2-clients}
+## Clients Eth2 {#consensus-clients}
 
-Il existe de nouveaux clients pour prendre en charge les [mises à niveau Eth2](/eth2/beacon-chain/). Ils exécuteront la chaîne phare et prendront en charge le nouveau mécanisme de consensus de [preuve d'enjeu](/developers/docs/consensus-mechanisms/pos/).
+Il existe de nouveaux clients pour prendre en charge les [mises à niveau Eth2](/upgrades/beacon-chain/). Ils exécuteront la chaîne phare et prendront en charge le nouveau mécanisme de consensus de [preuve d'enjeu](/developers/docs/consensus-mechanisms/pos/).
 
-[Voir les clients Eth2](/eth2/get-involved/#clients)
+[Voir les clients Eth2](/upgrades/get-involved/#clients)
 
 ## Complément d'information {#further-reading}
 

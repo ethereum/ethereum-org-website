@@ -3,7 +3,6 @@ title: Distribuzione di Smart Contract
 description:
 lang: it
 sidebar: true
-incomplete: true
 ---
 
 Uno Smart Contract deve essere distribuito per essere a disposizione degli utenti di una rete Ethereum.
@@ -18,35 +17,45 @@ Distribuire un contratto costa inoltre ETH, quindi è necessario avere familiari
 
 Infine, è necessario compilare il contratto prima di distribuirlo, quindi assicurati di aver letto le informazioni sulla [compilazione degli Smart Contract](/developers/docs/smart-contracts/compiling/).
 
-## Come distribuire uno Smart Contract
-
-Dovrai pagare una commissione sulla transazione, quindi assicurati di avere ETH.
+## Come distribuire uno Smart Contract {#how-to-deploy-a-smart-contract}
 
 ### Cosa ti serve {#what-youll-need}
 
 - bytecode del tuo contratto - viene generato attraverso la [compilazione](/developers/docs/smart-contracts/compiling/).
 - Ether per il carburante – imposterai il limite di carburante come altre transazioni, quindi sappi che la distribuzione del contratto richiede molto più carburante di un semplice trasferimento di ETH.
 - uno script o un plugin di distribuzione.
-- accesso a un [nodo Ethereum](/developers/docs/nodes-and-clients/) tramite esecuzione di un nodo personalizzato, connessione a un nodo pubblico o utilizzando una chiave API con un servizio come Infura o Alchemy
+- Accedi a un [nodo di Ethereum](/developers/docs/nodes-and-clients/), eseguendone tuo autonomamente, connettendoti a un nodo pubblico oppure tramite una chiave API usando un [nodo di servizio](/developers/docs/nodes-and-clients/nodes-as-a-service/) come Infura o Alchemy.
 
-<!-- TODO Elaborate on options: e.g. run a node, use a node as a service etc. -->
+### Passaggi per distribuire uno smart contract {#steps-to-deploy}
 
-<!-- TODO! -->
-<!-- ### Steps to deploy a smart contract -->
+I passaggi specifici dipenderanno dagli strumenti utilizzati. Per esempio, dai un'occhiata alla [documentazione di Hardhat sulla distribuzione dei tuoi contratti](https://hardhat.org/guides/deploying.html) o alla [documentazione di Truffle su reti e distribuzione delle app](https://www.trufflesuite.com/docs/truffle/advanced/networks-and-app-deployment). Sono i due strumenti più popolari per la distribuzione di smart contract, che coinvolgono la scrittura di uno script per gestire le fasi di distribuzione.
 
 Una volta distribuito, il contratto avrà un indirizzo Ethereum come gli altri [account](/developers/docs/accounts/).
 
 ## Strumenti correlati {#related-tools}
 
-**Remix -** **_L'IDE Remix permette di sviluppare, distribuire e amministrare Smart Contract per la blockchain Ethereum._**
+**Remix - _Remix IDE consente di sviluppare, distribuire e amministrare gli smart contract per Ethereum come le blockchain_**
 
 - [Remix](https://remix.ethereum.org)
 
-** Tenderly -** **_Piattaforma per monitorare gli Smart Contract con rilevamento degli errori, avvisi, metriche delle prestazioni e dettagliate analisi dei contratti_**
+**Tenderly - _Una piattaforma per monitorare facilmente i tuoi smart contract con monitoraggio degli errori, avvisi, parametri di misurazione delle prestazioni e analisi dettagliate dei contratti_**
 
 - [tenderly.co](https://tenderly.co/)
 - [GitHub](https://github.com/Tenderly)
 - [Discord](https://discord.gg/eCWjuvt)
+
+**Hardhat - _Un ambiente di sviluppo per compilare, distribuire, testare ed effettuare il debug del tuo software di Ethereum_**
+
+- [hardhat.org](https://hardhat.org/getting-started/)
+- [Documentazione sulla distribuzione dei tuoi contratti](https://hardhat.org/guides/deploying.html)
+- [GitHub](https://github.com/nomiclabs/hardhat)
+- [Discord](https://discord.com/invite/TETZs2KK4k)
+
+**Truffle:** **_ ambiente di sviluppo, framework di test, pipeline di sviluppo e altri strumenti_**
+
+- [trufflesuite.com](https://www.trufflesuite.com/)
+- [Documentazione sulle reti e la distribuzione delle app](https://www.trufflesuite.com/docs/truffle/advanced/networks-and-app-deployment)
+- [GitHub](https://github.com/trufflesuite/truffle)
 
 ## Tutorial correlati {#related-tutorials}
 
@@ -56,8 +65,12 @@ Una volta distribuito, il contratto avrà un indirizzo Ethereum come gli altri [
 
 ## Letture consigliate {#further-reading}
 
-_Conosci una risorsa pubblica che ti è stata utile? Modifica questa pagina e aggiungila!_
+- [https://docs.openzeppelin.com/learn/deploying-and-interacting](https://docs.openzeppelin.com/learn/deploying-and-interacting) - _OpenZeppelin_
+- [Distribuire i tuoi contratti Hardhat](https://hardhat.org/guides/deploying.html) - _Nomic Labs_
 
-## Argomenti correlati
+_Conosci una risorsa della community che ti è stata utile? Modifica questa pagina e aggiungila!_
+
+## Argomenti correlati {#related-topics}
 
 - [Framework di sviluppo](/developers/docs/frameworks/)
+- [Eseguire un nodo di Ethereum](/developers/docs/nodes-and-clients/run-a-node/)

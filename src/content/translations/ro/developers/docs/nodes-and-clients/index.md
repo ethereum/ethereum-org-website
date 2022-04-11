@@ -19,7 +19,7 @@ Ar trebui să înțelegi conceptul unei rețele descentralizate înainte de a co
 
 Poți vizualiza în timp real rețeaua Ethereum uitându-te la această [hartă a nodurilor](https://etherscan.io/nodetracker).
 
-Multe [implementări ale clienților Ethereum](/developers/docs/nodes-and-clients/#clients) există într-o varietate de limbaje. Ceea ce au în comun aceste implementări ale clienților este că toate respectă o specificație formală. Această specificație dictează modul în care funcționează rețeaua Ethereum și blockchain-ul.
+Multe [implementări ale clienților Ethereum](/developers/docs/nodes-and-clients/#execution-clients) există într-o varietate de limbaje. Ceea ce au în comun aceste implementări ale clienților este că toate respectă o specificație formală. Această specificație dictează modul în care funcționează rețeaua Ethereum și blockchain-ul.
 
 ![Client Eth1x](../../../../../developers/docs/nodes-and-clients/client-diagram.png) Diagramă simplificată a caracteristicilor clientului Ethereum.
 
@@ -57,7 +57,7 @@ Rularea propriul nod îți permite să utilizezi Ethereum într-un mod cu adevă
 
 - Nodul tău verifică autonom toate tranzacțiile și blocurile în raport cu regulile de consens. Aceasta înseamnă că nu trebuie să te bazezi pe alte noduri din rețea sau să ai încredere deplină în ele.
 - Nu va trebui să-ți dezvălui adresele și soldurile către noduri aleatorii. Totul poate fi verificat cu propriul client.
-- Aplicația ta dapp poate fi mai sigură și mai privată dacă folosești propriul nod. [Metamask](https://metamask.io), [MyEtherWallet](https://myetherwallet.com) și alte portofele pot fi ușor direcționate către propriul nod local.
+- Aplicația ta dapp poate fi mai sigură și mai privată dacă folosești propriul nod. [MetaMask](https://metamask.io), [MyEtherWallet](https://myetherwallet.com) și alte portofele pot fi ușor direcționate către propriul nod local.
 
 ![Cum să accesezi Ethereum prin intermediul aplicației și nodurilor](../../../../../developers/docs/nodes-and-clients/nodes.png)
 
@@ -99,7 +99,7 @@ Dacă cineva rulează un nod Ethereum cu un API public în comunitatea sa, îți
 
 Pe de altă parte, dacă rulezi un client, îl poți partaja cu prietenii tăi care ar putea avea nevoie de el.
 
-## Clienți {#clients}
+## Clienți {#execution-clients}
 
 Ethereum este conceput pentru a oferi clienți diferiți, dezvoltați de diferite echipe care utilizează diferite limbaje de programare. Acest lucru face ca rețeaua să fie mai puternică și mai diversă. Scopul ideal este de a realiza diversitatea fără ca niciun client să domine pentru a reduce punctele de eșec.
 
@@ -210,11 +210,11 @@ Cel mai convenabil și mai ieftin mod de a rula nodul Ethereum este de a utiliza
 
 Dispozitive mici, accesibile și eficiente ca acestea sunt ideale pentru rularea unui nod acasă.
 
-## Clienții Eth2 {#eth2-clients}
+## Clienții Eth2 {#consensus-clients}
 
-Există clienți noi pentru a sprijini [upgrade-urile Eth2](/eth2/beacon-chain/). Aceștia vor executa lanțul Beacon și vor sprijini noul mecanism de consens al [dovezii mizei (PoS)](/developers/docs/consensus-mechanisms/pos/).
+Există clienți noi pentru a sprijini [upgrade-urile Eth2](/upgrades/beacon-chain/). Aceștia vor executa lanțul Beacon și vor sprijini noul mecanism de consens al [dovezii mizei (PoS)](/developers/docs/consensus-mechanisms/pos/).
 
-[Vezi clienții Eth2](/eth2/get-involved/#clients).
+[Vezi clienții Eth2](/upgrades/get-involved/#clients).
 
 ## Referințe suplimentare {#further-reading}
 

@@ -1,5 +1,5 @@
 ---
-title: 面向 Go 开发者的以太坊资源
+title: 面向 Go 开发者的以太坊
 description: 学习如何使用基于 Go 的项目和工具参与以太坊的开发
 lang: zh
 sidebar: true
@@ -31,21 +31,21 @@ incomplete: true
 - [一步步教您测试和部署以太坊 Go 语言智能合约](https://hackernoon.com/a-step-by-step-guide-to-testing-and-deploying-ethereum-smart-contracts-in-go-9fc34b178d78)
 - [电子书：使用 Go 开发以太坊](https://goethereumbook.org/) - _使用 Go 开发以太坊应用程序_
 
-## 中级文章和文档 {#intermediate-articles-and-docs}
+## 面向中等程度用户的文章和文档 {#intermediate-articles-and-docs}
 
 - [Go 以太坊相关文档](https://geth.ethereum.org/docs/) - _官方以太坊 Golang 相关文档_
 - [Turbo-Geth 编程者指南](https://github.com/ledgerwatch/turbo-geth/blob/master/docs/programmers_guide/guide.md) - _图文指南，内容涵盖状态树、多重认证和交易处理_
 - [Turbo-Geth 和无状态以太坊](https://youtu.be/3-Mn7OckSus?t=394) - _2020 Ethereum Community Conference (EthCC 3)_
 - [Turbo-Geth：优化以太坊客户端](https://www.youtube.com/watch?v=CSpc1vZQW2Q) - _2018 Devcon 4_
 - [Go 以太坊 GoDoc](https://godoc.org/github.com/ethereum/go-ethereum)
-- [在 Go 上使用 Geth 创建一个去中心化应用](https://kauri.io/article/60a36c1b17d645939f63415218dc24f9/creating-a-dapp-in-go-with-geth)
+- [在 Go 上使用 Geth 创建一个去中心化应用](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/creating-a-dapp-in-go-with-geth/)
 - [用 Golang 和 Geth 使用以太坊专用网络](https://myhsts.org/tutorial-learn-how-to-work-with-ethereum-private-network-with-golang-with-geth.php)
 - [使用 Go 对以太坊上的 Solidity 合约进行单元测试](https://medium.com/coinmonks/unit-testing-solidity-contracts-on-ethereum-with-go-3cc924091281)
 - [使用 Geth 作为库的快速参考](https://medium.com/coinmonks/web3-go-part-1-31c68c68e20e)
 
-## 面向高等程度者的使用模式 {#advanced-use-patterns}
+## 面向高等程度用户的使用模式 {#advanced-use-patterns}
 
-- [使用 GETH 模拟后端搭建](https://kauri.io/article/6285c9692883411aa041b6b970405a17/v1/the-geth-simulated-backend)
+- [使用 GETH 模拟后端搭建](https://kauri.io/#collections/An%20ethereum%20test%20toolkit%20in%20Go/the-geth-simulated-backend/#_top)
 - [基于以太坊和 Quorum 的区块链即服务应用程序](https://blockchain.dcwebmakers.com/blockchain-as-a-service-apps-using-ethereum-and-quorum.html)
 - [以太坊区块链应用程序中的分布式存储 IPFS 和 Swarm](https://blockchain.dcwebmakers.com/work-with-distributed-storage-ipfs-and-swarm-in-ethereum.html)
 - [移动客户端：各种库和 Inproc 以太坊节点](https://github.com/ethereum/go-ethereum/wiki/Mobile-Clients:-Libraries-and-Inproc-Ethereum-Nodes)

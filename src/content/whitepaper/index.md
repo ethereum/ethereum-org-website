@@ -8,13 +8,15 @@ sidebarDepth: 2
 
 # Ethereum Whitepaper {#ethereum-whitepaper}
 
-_This introductory paper was originally published in 2013 by Vitalik Buterin, the founder of [Ethereum](/what-is-ethereum/), before the project's launch in 2015. It's worth noting that Ethereum, like many community-driven, open-source software projects, has evolved since its initial inception._
+_This introductory paper was originally published in 2014 by Vitalik Buterin, the founder of [Ethereum](/what-is-ethereum/), before the project's launch in 2015. It's worth noting that Ethereum, like many community-driven, open-source software projects, has evolved since its initial inception._
 
 _While several years old, we maintain this paper because it continues to serve as a useful reference and an accurate representation of Ethereum and its vision. To learn about the latest developments of Ethereum, and how changes to the protocol are made, we recommend [this guide](/learn/)._
 
+[Open the Ethereum Whitepaper as a PDF](./whitepaper-pdf/Ethereum_White_Paper_-_Buterin_2014.pdf)
+
 ## A Next-Generation Smart Contract and Decentralized Application Platform {#a-next-generation-smart-contract-and-decentralized-application-platform}
 
-Satoshi Nakamoto's development of Bitcoin in 2009 has often been hailed as a radical development in money and currency, being the first example of a digital asset which simultaneously has no backing or "[intrinsic value](http://bitcoinmagazine.com/8640/an-exploration-of-intrinsic-value-what-it-is-why-bitcoin-doesnt-have-it-and-why-bitcoin-does-have-it/)" and no centralized issuer or controller. However, another, arguably more important, part of the Bitcoin experiment is the underlying blockchain technology as a tool of distributed consensus, and attention is rapidly starting to shift to this other aspect of Bitcoin. Commonly cited alternative applications of blockchain technology include using on-blockchain digital assets to represent custom currencies and financial instruments (["colored coins"](https://docs.google.com/a/buterin.com/document/d/1AnkP_cVZTCMLIzw4DvsW6M8Q2JC0lIzrTLuoWu2z1BE/edit)), the ownership of an underlying physical device (["smart property"](https://en.bitcoin.it/wiki/Smart_Property)), non-fungible assets such as domain names (["Namecoin"](http://namecoin.org)), as well as more complex applications involving having digital assets being directly controlled by a piece of code implementing arbitrary rules (["smart contracts"](http://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/idea.html)) or even blockchain-based "[decentralized autonomous organizations](http://bitcoinmagazine.com/7050/bootstrapping-a-decentralized-autonomous-corporation-part-i/)" (DAOs). What Ethereum intends to provide is a blockchain with a built-in fully fledged Turing-complete programming language that can be used to create "contracts" that can be used to encode arbitrary state transition functions, allowing users to create any of the systems described above, as well as many others that we have not yet imagined, simply by writing up the logic in a few lines of code.
+Satoshi Nakamoto's development of Bitcoin in 2009 has often been hailed as a radical development in money and currency, being the first example of a digital asset which simultaneously has no backing or "[intrinsic value](http://bitcoinmagazine.com/8640/an-exploration-of-intrinsic-value-what-it-is-why-bitcoin-doesnt-have-it-and-why-bitcoin-does-have-it/)" and no centralized issuer or controller. However, another, arguably more important, part of the Bitcoin experiment is the underlying blockchain technology as a tool of distributed consensus, and attention is rapidly starting to shift to this other aspect of Bitcoin. Commonly cited alternative applications of blockchain technology include using on-blockchain digital assets to represent custom currencies and financial instruments ("[colored coins](https://docs.google.com/a/buterin.com/document/d/1AnkP_cVZTCMLIzw4DvsW6M8Q2JC0lIzrTLuoWu2z1BE/edit)"), the ownership of an underlying physical device ("[smart property](https://en.bitcoin.it/wiki/Smart_Property)"), non-fungible assets such as domain names ("[Namecoin](http://namecoin.org)"), as well as more complex applications involving having digital assets being directly controlled by a piece of code implementing arbitrary rules ("[smart contracts](http://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/idea.html)") or even blockchain-based "[decentralized autonomous organizations](http://bitcoinmagazine.com/7050/bootstrapping-a-decentralized-autonomous-corporation-part-i/)" (DAOs). What Ethereum intends to provide is a blockchain with a built-in fully fledged Turing-complete programming language that can be used to create "contracts" that can be used to encode arbitrary state transition functions, allowing users to create any of the systems described above, as well as many others that we have not yet imagined, simply by writing up the logic in a few lines of code.
 
 ## Introduction to Bitcoin and Existing Concepts {#introduction-to-bitcoin-and-existing-concepts}
 
@@ -261,7 +263,7 @@ In practice, however, issuers are not always trustworthy, and in some cases the 
 
 ### Identity and Reputation Systems {#identity-and-reputation-systems}
 
-The earliest alternative cryptocurrency of all, [Namecoin](http://namecoin.org/), attempted to use a Bitcoin-like blockchain to provide a name registration system, where users can register their names in a public database alongside other data. The major cited use case is for a [DNS](http://en.wikipedia.org/wiki/Domain_Name_System) system, mapping domain names like "bitcoin.org" (or, in Namecoin's case, "bitcoin.bit") to an IP address. Other use cases include email authentication and potentially more advanced reputation systems. Here is the basic contract to provide a Namecoin-like name registration system on Ethereum:
+The earliest alternative cryptocurrency of all, [Namecoin](http://namecoin.org/), attempted to use a Bitcoin-like blockchain to provide a name registration system, where users can register their names in a public database alongside other data. The major cited use case is for a [DNS](https://wikipedia.org/wiki/Domain_Name_System) system, mapping domain names like "bitcoin.org" (or, in Namecoin's case, "bitcoin.bit") to an IP address. Other use cases include email authentication and potentially more advanced reputation systems. Here is the basic contract to provide a Namecoin-like name registration system on Ethereum:
 
     def register(name, value):
         if !self.storage[name]:
@@ -287,7 +289,7 @@ A general outline for how to code a DAO is as follows. The simplest design is si
 - `[1,i]` to register a vote in favor of proposal `i`
 - `[2,i]` to finalize proposal `i` if enough votes have been made
 
-The contract would then have clauses for each of these. It would maintain a record of all open storage changes, along with a list of who voted for them. It would also have a list of all members. When any storage change gets to two thirds of members voting for it, a finalizing transaction could execute the change. A more sophisticated skeleton would also have built-in voting ability for features like sending a transaction, adding members and removing members, and may even provide for [Liquid Democracy](http://en.wikipedia.org/wiki/Delegative_democracy)-style vote delegation (ie. anyone can assign someone to vote for them, and assignment is transitive so if A assigns B and B assigns C then C determines A's vote). This design would allow the DAO to grow organically as a decentralized community, allowing people to eventually delegate the task of filtering out who is a member to specialists, although unlike in the "current system" specialists can easily pop in and out of existence over time as individual community members change their alignments.
+The contract would then have clauses for each of these. It would maintain a record of all open storage changes, along with a list of who voted for them. It would also have a list of all members. When any storage change gets to two thirds of members voting for it, a finalizing transaction could execute the change. A more sophisticated skeleton would also have built-in voting ability for features like sending a transaction, adding members and removing members, and may even provide for [Liquid Democracy](https://wikipedia.org/wiki/Delegative_democracy)-style vote delegation (ie. anyone can assign someone to vote for them, and assignment is transitive so if A assigns B and B assigns C then C determines A's vote). This design would allow the DAO to grow organically as a decentralized community, allowing people to eventually delegate the task of filtering out who is a member to specialists, although unlike in the "current system" specialists can easily pop in and out of existence over time as individual community members change their alignments.
 
 An alternative model is for a decentralized corporation, where any account can have zero or more shares, and two thirds of the shares are required to make a decision. A complete skeleton would involve asset management functionality, the ability to make an offer to buy or sell shares, and the ability to accept offers (preferably with an order-matching mechanism inside the contract). Delegation would also exist Liquid Democracy-style, generalizing the concept of a "board of directors".
 
@@ -419,11 +421,11 @@ The issuance model will be as follows:
 | Reserve used post-sale | 8.26%     | 6.79%        | 3.96%         |
 | Miners                 | 0%        | 17.8%        | 52.0%         |
 
-**Long-Term Supply Growth Rate (percent)**
+#### Long-Term Supply Growth Rate (percent)
 
 ![Ethereum inflation](./ethereum-inflation.png)
 
-_Despite the linear currency issuance, just like with Bitcoin over time the supply growth rate nevertheless tends to zero_
+_Despite the linear currency issuance, just like with Bitcoin over time the supply growth rate nevertheless tends to zero._
 
 The two main choices in the above model are (1) the existence and size of an endowment pool, and (2) the existence of a permanently growing linear supply, as opposed to a capped supply as in Bitcoin. The justification of the endowment pool is as follows. If the endowment pool did not exist, and the linear issuance reduced to 0.217x to provide the same inflation rate, then the total quantity of ether would be 16.5% less and so each unit would be 19.8% more valuable. Hence, in the equilibrium 19.8% more ether would be purchased in the sale, so each unit would once again be exactly as valuable as before. The organization would also then have 1.198x as much BTC, which can be considered to be split into two slices: the original BTC, and the additional 0.198x. Hence, this situation is _exactly equivalent_ to the endowment, but with one important difference: the organization holds purely BTC, and so is not incentivized to support the value of the ether unit.
 
@@ -457,8 +459,6 @@ The concept of an arbitrary state transition function as implemented by the Ethe
 
 ## Notes and Further Reading {#notes-and-further-reading}
 
-<!--Invisible HTML comment used for navigation with CTRL+F footnote or fn.-->
-
 ### Notes {#notes}
 
 1.  A sophisticated reader may notice that in fact a Bitcoin address is
@@ -487,13 +487,13 @@ The concept of an arbitrary state transition function as implemented by the Ethe
 6.  [Secure property titles with owner authority](https://nakamotoinstitute.org/secure-property-titles/)
 7.  [Bitcoin whitepaper](http://bitcoin.org/bitcoin.pdf)
 8.  [Namecoin](https://namecoin.org/)
-9.  [Zooko's triangle](https://en.wikipedia.org/wiki/Zooko's_triangle)
+9.  [Zooko's triangle](https://wikipedia.org/wiki/Zooko's_triangle)
 10. [Colored coins whitepaper](https://docs.google.com/a/buterin.com/document/d/1AnkP_cVZTCMLIzw4DvsW6M8Q2JC0lIzrTLuoWu2z1BE/edit)
 11. [Mastercoin whitepaper](https://github.com/mastercoin-MSC/spec)
 12. [Decentralized autonomous corporations, Bitcoin Magazine](http://bitcoinmagazine.com/7050/bootstrapping-a-decentralized-autonomous-corporation-part-i/)
 13. [Simplified payment verification](https://en.bitcoin.it/wiki/Scalability#Simplifiedpaymentverification)
-14. [Merkle trees](https://en.wikipedia.org/wiki/Merkle_tree)
-15. [Patricia trees](https://en.wikipedia.org/wiki/Patricia_tree)
+14. [Merkle trees](https://wikipedia.org/wiki/Merkle_tree)
+15. [Patricia trees](https://wikipedia.org/wiki/Patricia_tree)
 16. [GHOST](https://eprint.iacr.org/2013/881.pdf)
 17. [StorJ and Autonomous Agents, Jeff Garzik](http://garzikrants.blogspot.ca/2013/01/storj-and-bitcoin-autonomous-agents.html)
 18. [Mike Hearn on Smart Property at Turing Festival](http://www.youtube.com/watch?v=Pu4PAMFPo5Y)
@@ -501,6 +501,6 @@ The concept of an arbitrary state transition function as implemented by the Ethe
 20. [Ethereum Merkle Patricia trees](https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-Patricia-Tree)
 21. [Peter Todd on Merkle sum trees](http://sourceforge.net/p/bitcoin/mailman/message/31709140/)
 
-_For history of the white paper, see https://github.com/ethereum/wiki/blob/old-before-deleting-all-files-go-to-wiki-wiki-instead/old-whitepaper-for-historical-reference.md_
+_For history of the white paper, see [this wiki](https://github.com/ethereum/wiki/blob/old-before-deleting-all-files-go-to-wiki-wiki-instead/old-whitepaper-for-historical-reference.md)._
 
 _Ethereum, like many community-driven, open-source software projects, has evolved since its initial inception. To learn about the latest developments of Ethereum, and how changes to the protocol are made, we recommend [this guide](/learn/)._

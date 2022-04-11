@@ -16,7 +16,7 @@ Utiliza Ethereum para crear aplicaciones descentralizadas (o "dapps"), que aprov
 
 ¡Construye aplicaciones descentralizadas sobre Ethereum e interactúa con contratos inteligentes usando el lenguaje de programación Delphi!
 
-## Comenzar con los contratos inteligentes y el lenguage de Solidity {#getting-started-with-smart-contracts-and-the-solidity-language}
+## Comenzar con los contratos inteligentes y el lenguaje de Solidity {#getting-started-with-smart-contracts-and-the-solidity-language}
 
 **De los primeros pasos para integrar Delphi con Ethereum**
 

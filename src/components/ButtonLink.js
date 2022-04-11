@@ -2,20 +2,30 @@ import React from "react"
 import styled from "styled-components"
 import { margin } from "styled-system"
 
+import { scrollIntoView } from "../utils/scrollIntoView"
+
 import Link from "./Link"
 
-const StyledButton = styled(Link)`
+const buttonStyling = `
   text-decoration: none;
   display: inline-block;
-  white-space: nowrap;
   padding: 0.5rem 0.75rem;
   font-size: 1rem;
   border-radius: 0.25em;
   text-align: center;
+  cursor: pointer;
   ${margin}
 `
 
-const Primary = styled(StyledButton)`
+const StyledLinkButton = styled(Link)`
+  ${buttonStyling}
+`
+
+const StyledScrollButton = styled.button`
+  ${buttonStyling}
+`
+
+const PrimaryLink = styled(StyledLinkButton)`
   background-color: ${(props) => props.theme.colors.primary};
   color: ${(props) => props.theme.colors.buttonColor} !important;
   border: 1px solid transparent;
@@ -29,7 +39,7 @@ const Primary = styled(StyledButton)`
   }
 `
 
-const Secondary = styled(StyledButton)`
+const SecondaryLink = styled(StyledLinkButton)`
   color: ${(props) => props.theme.colors.text};
   border: 1px solid ${(props) => props.theme.colors.text};
   background-color: transparent;
@@ -45,15 +55,74 @@ const Secondary = styled(StyledButton)`
   }
 `
 
-const ButtonLink = ({ to, isSecondary, children, className, ...props }) =>
-  isSecondary ? (
-    <Secondary to={to} hideArrow={true} className={className} {...props}>
+const PrimaryScrollLink = styled(StyledScrollButton)`
+  color: ${(props) => props.theme.colors.buttonColor} !important;
+  background-color: ${(props) => props.theme.colors.primary};
+  border: 1px solid transparent;
+
+  &:hover {
+    background-color: ${(props) => props.theme.colors.primaryHover};
+    box-shadow: ${(props) => props.theme.colors.cardBoxShadow};
+  }
+  &:active {
+    background-color: ${(props) => props.theme.colors.primaryActive};
+  }
+`
+
+const SecondaryScrollLink = styled(StyledScrollButton)`
+  color: ${(props) => props.theme.colors.text};
+  border: 1px solid ${(props) => props.theme.colors.text};
+  background-color: transparent;
+
+  &:hover {
+    color: ${(props) => props.theme.colors.primary};
+    border: 1px solid ${(props) => props.theme.colors.primary};
+    box-shadow: ${(props) => props.theme.colors.cardBoxShadow};
+  }
+  &:active {
+    background-color: ${(props) =>
+      props.theme.colors.secondaryButtonBackgroundActive};
+  }
+`
+
+const ButtonLink = ({
+  to,
+  toId,
+  isSecondary,
+  children,
+  className,
+  ...props
+}) => {
+  if (isSecondary) {
+    return to ? (
+      <SecondaryLink to={to} hideArrow={true} className={className} {...props}>
+        {children}
+      </SecondaryLink>
+    ) : (
+      <SecondaryScrollLink
+        onClick={() => scrollIntoView(toId)}
+        hideArrow={true}
+        className={className}
+        {...props}
+      >
+        {children}
+      </SecondaryScrollLink>
+    )
+  }
+  return to ? (
+    <PrimaryLink to={to} hideArrow={true} className={className} {...props}>
       {children}
-    </Secondary>
+    </PrimaryLink>
   ) : (
-    <Primary to={to} hideArrow={true} className={className} {...props}>
+    <PrimaryScrollLink
+      onClick={() => scrollIntoView(toId)}
+      hideArrow={true}
+      className={className}
+      {...props}
+    >
       {children}
-    </Primary>
+    </PrimaryScrollLink>
   )
+}
 
 export default ButtonLink

@@ -21,8 +21,6 @@ Aceste biblioteci elimină o mare parte din complexitatea interacțiunii directe
 
 ## Biblioteci disponibile {#available-libraries}
 
-<!-- TODO separate APIs-as-a-service vs. connect your own -->
-
 **Alchemy -** **_Platforma de dezvoltare Ethereum._**
 
 - [alchemyapi.io](https://alchemyapi.io)

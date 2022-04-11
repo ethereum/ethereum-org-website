@@ -19,13 +19,13 @@ Un "nodo" se refiere a una pieza de software conocida como cliente. Un cliente e
 
 Puedes observar la red de Ethereum en tiempo real accediendo este [mapa de nodos](https://etherscan.io/nodetracker).
 
-Varias [implementaciones de clientes de Ethereum](/developers/docs/nodes-and-clients/#clients) existen en una variedad lenguajes de programación. Lo que estas implementaciones de clientes tienen en común es que todas siguen una especificación formal. Esta especificación determina cómo funcionan la red de Ethereum y las funciones de la blockchain.
+Varias [implementaciones de clientes de Ethereum](/developers/docs/nodes-and-clients/#execution-clients) existen en una variedad lenguajes de programación. Lo que estas implementaciones de clientes tienen en común es que todas siguen una especificación formal. Esta especificación determina cómo funcionan la red de Ethereum y las funciones de la blockchain.
 
 ![Cliente de Eth1x](../../../../../developers/docs/nodes-and-clients/client-diagram.png) Diagrama simplificado de las características del cliente de Ethereum.
 
 ## Tipos de nodos {#node-types}
 
-Si deseas ejecutar tu propio nodo, primero debes saber que hay diferentes tipos de nodos que consumen datos de forma diferente. De hecho, los clientes pueden ejecutar 3 diferentes tipos de nodos: ligero, completo y de almacenamiento. Además, hay opciones de diferentes estrategias de sincronización que permiten un tiempo de sincronización más rápido. La sincronización se refiere a la rapidez con que puede obtener la información más actualizada sobre el estado de Ethereum.
+    Si deseas ejecutar tu propio nodo, primero debes saber que hay diferentes tipos de nodos que consumen datos de forma diferente. De hecho, los clientes pueden ejecutar 3 diferentes tipos de nodos: ligero, completo y de almacenamiento. Además, hay opciones de diferentes estrategias de sincronización que permiten un tiempo de sincronización más rápido. La sincronización se refiere a la rapidez con que puede obtener la información más actualizada sobre el estado de Ethereum.
 
 ### Nodo completo {#full-node}
 
@@ -57,7 +57,7 @@ Ejecutar tu propio nodo te permite utilizar Ethereum de una manera realmente pri
 
 - Tu nodo verifica todas las transacciones y bloquea aquellas que vayan en contra de las reglas del consenso por sí mismo. Esto significa que no tienes que depender de ningún otro nodo de la red o confiar plenamente en ellos.
 - No tendrás que filtrar tus direcciones y saldos a nodos aleatorios. Todo puede ser verificado con tu propio cliente.
-- Tu dapp puede ser más segura y privada si utilizas tu propio nodo. [Metamask](https://metamask.io), [MyEtherWallet](https://myetherwallet.com) y algunas otras carteras pueden ser configuradas fácilmente para apuntar a tu propio nodo local.
+- Tu dapp puede ser más segura y privada si utilizas tu propio nodo. [MetaMask](https://metamask.io), [MyEtherWallet](https://myetherwallet.com) y algunas otras carteras pueden ser configuradas fácilmente para apuntar a tu propio nodo local.
 
 ![Cómo accedes a Ethereum a través de tu aplicación y nodos](../../../../../developers/docs/nodes-and-clients/nodes.png)
 
@@ -65,7 +65,7 @@ Ejecutar tu propio nodo te permite utilizar Ethereum de una manera realmente pri
 
 Un conjunto diverso de nodos es importante para la salud, seguridad y resiliencia operativa de Ethereum.
 
-- Proporcionan acceso a los datos de blockchain para clientes ligeros que dependen de ello. En picos de alto uso, es necesario que hayan suficientes nodos completos para ayudar a los nodos lgeros a sincronizarse. Los nodos ligeros no almacenan la blockchain completa, sino que verifican los datos usando [ los estados raíz en las cabeceras de los bloques](/developers/docs/blocks/#block-anatomy). Ellos pueden solicitar más información de los bloques si lo necesitan.
+- Proporcionan acceso a los datos de blockchain para clientes ligeros que dependen de ello. En picos de alto uso, es necesario que hayan suficientes nodos completos para ayudar a los nodos ligeros a sincronizarse. Los nodos ligeros no almacenan la blockchain completa, sino que verifican los datos usando [ los estados raíz en las cabeceras de los bloques](/developers/docs/blocks/#block-anatomy). Ellos pueden solicitar más información de los bloques si lo necesitan.
 - Los nodos completos hacen cumplir las reglas de consenso de prueba de trabajo, de modo que no se les puede engañar para que acepten bloques que no siguen dichas reglas. Esto proporciona seguridad extra a la red porque, si todos los nodos fueran nodos ligeros y no realizaran la verificación completa, los mineros podrían atacar la red, y por ejemplo, crear bloques con mayores recompensas.
 
 Si ejecuta un nodo completo, toda la red Ethereum se beneficia de él.
@@ -99,7 +99,7 @@ Si alguien ejecuta un nodo de Ethereum con una API pública en tu comunidad, pod
 
 Por otra parte, si administras un cliente, puedes compartirlo con tus amigos que lo necesiten.
 
-## Clientes {#clients}
+## Clientes {#execution-clients}
 
 Ethereum esta diseñado para ofrecer diferentes clientes, desarrollados por diferentes equipos que utilizan diferentes lenguajes de programación. Esto hace que la red sea mas fuerte y más diversa. El objetivo ideal es lograr la diversidad sin que ningún cliente tenga una posición dominante para reducir así los puntos de fracaso.
 
@@ -184,7 +184,7 @@ Antes de instalar un cliente, asegúrate de que tu equipo tiene suficientes recu
 
 #### Especificaciones recomendadas {#recommended-specifications}
 
-- CPU rapido con 4 o más núcleos
+- CPU rápido con 4 o más núcleos
 - 16 GB o más de RAM
 - SSD rápido con al menos 500 GB de espacio libre
 - 25 o más MBit/s de banda ancha
@@ -210,11 +210,11 @@ La manera más conveniente y barata de ejecutar un nodo de Ethereum es usar una 
 
 Los dispositivos pequeños, económicos y eficientes como estos son ideales para ejecutar un nodo en casa.
 
-## Clientes eth2 {#eth2-clients}
+## Clientes eth2 {#consensus-clients}
 
-Hay nuevos clientes que soportan las [actualizaciones de Eth2](/eth2/beacon-chain/). Ellos ejecutarán la cadena de baliza y apoyarán el nuevo mecanismo de consenso [a prueba de estaturas](/developers/docs/consensus-mechanisms/pos/).
+Hay nuevos clientes que soportan las [actualizaciones de Eth2](/upgrades/beacon-chain/). Ellos ejecutarán la cadena de baliza y apoyarán el nuevo mecanismo de consenso [a prueba de estaturas](/developers/docs/consensus-mechanisms/pos/).
 
-[Ver clientes de Eth2](/eth2/get-involved/#clients).
+[Ver clientes de Eth2](/upgrades/get-involved/#clients).
 
 ## Más lectura {#further-reading}
 

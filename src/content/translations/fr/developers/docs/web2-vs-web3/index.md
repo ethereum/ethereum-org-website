@@ -11,7 +11,7 @@ Web2 fait référence à la version d'Internet que la plupart d'entre nous conna
 
 De nombreux développeurs Web3 ont choisi de construire des DApps en raison de la décentralisation inhérente à Ethereum :
 
-- Quiconque est sur le réseau a l'autorisation d'utiliser le service. En d'autres termes, aucune autorisation n'est requise.
+- Quiconque sur le réseau a l'autorisation d'utiliser le service. En d'autres termes, aucune autorisation n'est requise.
 - Personne ne peut vous bloquer ni vous refuser l'accès au service.
 - Les paiements sont intégrés via le jeton natif, l'ether (ETH).
 - Ethereum est "Turing-complet", ce qui signifie que vous pouvez programmer à peu près tout ce que vous voulez.
@@ -30,13 +30,11 @@ Cela ne veut pas dire que tous les services doivent être transformés en DApps.
 
 Le Web3 a actuellement quelques limitations :
 
-- Évolutivité : Les transactions sont plus lentes sur le Web3 carelles sont décentralisées. Les changements d'état, comme un paiement, doivent être traités par un mineur et propagés sur le réseau.
+- Évolutivité : Les transactions sont plus lentes sur le Web3 car elles sont décentralisées. Les changements d'état, comme un paiement, doivent être traités par un mineur et propagés sur le réseau.
 - UX : Interagir avec les applications Web3 peut nécessiter des étapes, des logiciels et des connaissances supplémentaires. Cela peut constituer un obstacle à son adoption.
 - Coût : La plupart des DApps réussies publient de très petites portions de leur code sur la blockchain car c'est coûteux.
 
 ## Centralisation et décentralisation {#centralization-vs-decentralization}
-
-<!--Content below provided by Brian Gu-->
 
 Dans le tableau ci-dessous, nous répertorions certains des avantages et inconvénients des réseaux numériques centralisés et décentralisés.
 

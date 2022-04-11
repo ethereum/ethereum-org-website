@@ -32,12 +32,12 @@ import {
 const Slogan = styled.p`
   font-style: normal;
   font-weight: normal;
-  font-size: 32px;
+  font-size: 2rem;
   line-height: 140%;
 `
 
 const Title = styled.h1`
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 140%;
   letter-spacing: 0.04em;
   font-weight: 500;
@@ -52,12 +52,12 @@ const StyledTwoColumnContent = styled(TwoColumnContent)`
 `
 
 const Subtitle = styled.div`
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 140%;
   color: ${(props) => props.theme.colors.text200};
 `
 const SubtitleTwo = styled.div`
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 140%;
   margin-bottom: 2rem;
   color: ${(props) => props.theme.colors.text300};
@@ -267,7 +267,7 @@ const cardListContent = [
   },
 ]
 
-const WhatIsEthereumPage = (props) => {
+const EthPage = (props) => {
   const intl = useIntl()
   const data = props.data
   return (
@@ -364,7 +364,7 @@ const WhatIsEthereumPage = (props) => {
             </p>
             <p>
               <Translation id="page-eth-fuels-staking" />{" "}
-              <Link to="/eth2/staking/">
+              <Link to="/staking/">
                 <Translation id="page-eth-fuels-more-staking" />
               </Link>
             </p>
@@ -440,8 +440,8 @@ const WhatIsEthereumPage = (props) => {
           <Divider />
         </CentralColumn>
         <StyledCalloutBanner
-          title={translateMessageId("page-eth-where-to-buy", intl)}
-          description={translateMessageId("page-eth-where-to-buy-desc", intl)}
+          titleKey={"page-eth-where-to-buy"}
+          descriptionKey={"page-eth-where-to-buy-desc"}
           image={getImage(data.ethCat)}
           alt={translateMessageId("page-eth-cat-img-alt", intl)}
           maxImageWidth={300}
@@ -514,7 +514,7 @@ const WhatIsEthereumPage = (props) => {
   )
 }
 
-export default WhatIsEthereumPage
+export default EthPage
 
 export const query = graphql`
   {

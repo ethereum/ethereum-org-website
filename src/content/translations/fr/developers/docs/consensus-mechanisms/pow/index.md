@@ -6,7 +6,7 @@ sidebar: true
 incomplete: true
 ---
 
-Ethereum, comme Bitcoin, utilise actuellement un protocole de consensus appelé [Preuve de travail (PoW)](https://en.wikipedia.org/wiki/Proof_of_work). Celui-ci permet à l'ensemble du réseau Ethereum de s'accorder sur l'état de toutes les informations enregistrées sur la blockchain Ethereum, empêchant ainsi certains types d'attaques économiques.
+Ethereum, comme Bitcoin, utilise actuellement un protocole de consensus appelé [Preuve de travail (PoW)](https://wikipedia.org/wiki/Proof_of_work). Celui-ci permet à l'ensemble du réseau Ethereum de s'accorder sur l'état de toutes les informations enregistrées sur la blockchain Ethereum, empêchant ainsi certains types d'attaques économiques.
 
 ## Prérequis {#prerequisites}
 

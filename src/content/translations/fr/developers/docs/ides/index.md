@@ -5,7 +5,7 @@ lang: fr
 sidebar: true
 ---
 
-Quand il s'agit de mettre en place un [environnement de développement intégré (IDE)](https://en.wikipedia.org/wiki/Integrated_development_environment), travailler avec Ethereum est similaire à tout autre projet logiciel. De nombreuses options étant disponibles, vous pouvez donc choisir celle qui correspond le mieux à vos préférences.
+Quand il s'agit de mettre en place un [environnement de développement intégré (IDE)](https://wikipedia.org/wiki/Integrated_development_environment), travailler avec Ethereum est similaire à tout autre projet logiciel. De nombreuses options étant disponibles, vous pouvez donc choisir celle qui correspond le mieux à vos préférences.
 
 ## IDE basés sur le Web {#web-based-ides}
 

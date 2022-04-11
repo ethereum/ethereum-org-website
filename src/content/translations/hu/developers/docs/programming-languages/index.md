@@ -9,8 +9,6 @@ sidebar: true
 
 Az Ethereum és a közössége befogadja az nyílt forráskódot. Közösségi projekteket - kliens implementációkat, API-okat, fejlesztési keretrendszereket, tesztelő eszközöket - sokféle különböző nyelven is megtalálhatsz.
 
-<!-- Often certain languages have an certain advantage depending on the use case -->
-
 ## Válaszd ki a nyelvedet {#data}
 
 Válaszd ki a nyelvedet, hogy megtaláld a projekteket, anyagokat és a virtuális közösségeket:

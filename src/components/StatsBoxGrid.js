@@ -2,15 +2,18 @@ import React, { useState, useEffect } from "react"
 import styled from "styled-components"
 import { useIntl } from "gatsby-plugin-intl"
 import axios from "axios"
-
+import { kebabCase } from "lodash"
 import { AreaChart, ResponsiveContainer, Area, XAxis } from "recharts"
+
 import Translation from "./Translation"
 import Tooltip from "./Tooltip"
 import Link from "./Link"
 import Icon from "./Icon"
 
-import { isLangRightToLeft } from "../utils/translations"
+import { isLangRightToLeft, translateMessageId } from "../utils/translations"
 import { getData } from "../utils/cache"
+
+import { GATSBY_FUNCTIONS_PATH } from "../constants"
 
 const Value = styled.span`
   position: absolute;
@@ -28,7 +31,7 @@ const Value = styled.span`
 `
 
 const Title = styled.p`
-  font-size: 20px;
+  font-size: 1.25rem;
   margin-bottom: 0.5rem;
   color: ${({ theme }) => theme.colors.text};
   text-transform: uppercase;
@@ -122,13 +125,13 @@ const ButtonContainer = styled.div`
 const Button = styled.button`
   background: ${(props) => props.theme.colors.background};
   font-family: ${(props) => props.theme.fonts.monospace};
-  font-size: 20px;
+  font-size: 1.25rem;
   color: ${({ theme }) => theme.colors.text};
   padding: 2px 15px;
   border-radius: 1px;
   border: 1px solid ${({ theme, color }) => theme.colors[color]};
-  outline: none;
   cursor: pointer;
+
   &:disabled {
     cursor: default;
     opacity: 0.7;
@@ -182,11 +185,23 @@ const GridItem = ({ metric, dir }) => {
         margin={{ left: -5, right: -5 }}
       >
         <defs>
-          <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
+          <linearGradient
+            id={`colorUv-${kebabCase(title)}`}
+            x1="0"
+            y1="0"
+            x2="0"
+            y2="1"
+          >
             <stop offset="5%" stopColor="#8884d8" stopOpacity={1} />
             <stop offset="95%" stopColor="#8884d8" stopOpacity={0} />
           </linearGradient>
-          <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
+          <linearGradient
+            id={`colorPv-${kebabCase(title)}`}
+            x1="0"
+            y1="0"
+            x2="0"
+            y2="1"
+          >
             <stop offset="5%" stopColor="#82ca9d" stopOpacity={0.8} />
             <stop offset="95%" stopColor="#82ca9d" stopOpacity={0} />
           </linearGradient>
@@ -196,8 +211,7 @@ const GridItem = ({ metric, dir }) => {
           dataKey="value"
           stroke="#8884d8"
           fillOpacity={0.3}
-          fill="url(#colorUv)"
-          fillOpacity="0.2"
+          fill={`url(#colorUv-${kebabCase(title)})`}
           connectNulls={true}
         />
         <XAxis dataKey="timestamp" axisLine={false} tick={false} />
@@ -272,51 +286,47 @@ const StatsBoxGrid = () => {
   const [selectedRangeNodes, setSelectedRangeNodes] = useState(ranges[0])
   const [selectedRangeTxs, setSelectedRangeTxs] = useState(ranges[0])
 
-  const formatPrice = (price) => {
-    return new Intl.NumberFormat(intl.locale, {
-      style: "currency",
-      currency: "USD",
-      minimumSignificantDigits: 3,
-      maximumSignificantDigits: 4,
-    }).format(price)
-  }
-
-  const formatTVL = (tvl) => {
-    return new Intl.NumberFormat(intl.locale, {
-      style: "currency",
-      currency: "USD",
-      notation: "compact",
-      minimumSignificantDigits: 3,
-      maximumSignificantDigits: 4,
-    }).format(tvl)
-  }
-
-  const formatTxs = (txs) => {
-    return new Intl.NumberFormat(intl.locale, {
-      notation: "compact",
-      minimumSignificantDigits: 3,
-      maximumSignificantDigits: 4,
-    }).format(txs)
-  }
-
-  const formatNodes = (nodes) => {
-    return new Intl.NumberFormat(intl.locale, {
-      minimumSignificantDigits: 3,
-      maximumSignificantDigits: 4,
-    }).format(nodes)
-  }
-
   useEffect(() => {
+    const formatPrice = (price) => {
+      return new Intl.NumberFormat(intl.locale, {
+        style: "currency",
+        currency: "USD",
+        minimumSignificantDigits: 3,
+        maximumSignificantDigits: 4,
+      }).format(price)
+    }
+
+    const formatTVL = (tvl) => {
+      return new Intl.NumberFormat(intl.locale, {
+        style: "currency",
+        currency: "USD",
+        notation: "compact",
+        minimumSignificantDigits: 3,
+        maximumSignificantDigits: 4,
+      }).format(tvl)
+    }
+
+    const formatTxs = (txs) => {
+      return new Intl.NumberFormat(intl.locale, {
+        notation: "compact",
+        minimumSignificantDigits: 3,
+        maximumSignificantDigits: 4,
+      }).format(txs)
+    }
+
+    const formatNodes = (nodes) => {
+      return new Intl.NumberFormat(intl.locale, {
+        minimumSignificantDigits: 3,
+        maximumSignificantDigits: 4,
+      }).format(nodes)
+    }
+
     const fetchPrices = async () => {
       try {
-        const daysToFetch = 90
-        const toUnixTimestamp = Math.floor(new Date().getTime() / 1000) // "Now" as unix timestamp (seconds)
-        const fromUnixTimestamp = toUnixTimestamp - 60 * 60 * 24 * daysToFetch // {daysToFetch} days ago (in seconds)
-        // TODO: Switch back to `getData()` to use cache before prod
         const {
           data: { prices },
         } = await axios.get(
-          `https://api.coingecko.com/api/v3/coins/ethereum/market_chart/range?vs_currency=usd&from=${fromUnixTimestamp}&to=${toUnixTimestamp}`
+          `https://api.coingecko.com/api/v3/coins/ethereum/market_chart?vs_currency=usd&days=90&interval=daily`
         )
         const data = prices
           .map(([timestamp, value]) => ({
@@ -331,21 +341,17 @@ const StatsBoxGrid = () => {
           hasError: false,
         })
       } catch (error) {
-        setEthPrices({
+        setEthPrices((ethPrices) => ({
           ...ethPrices,
           hasError: true,
-        })
+        }))
       }
     }
     fetchPrices()
 
     const fetchNodes = async () => {
       try {
-        const { result } = await getData(
-          process.env.NODE_ENV === "production"
-            ? "/.netlify/functions/etherscan"
-            : "http://localhost:9000/etherscan"
-        )
+        const { result } = await getData(`${GATSBY_FUNCTIONS_PATH}/etherscan`)
         const data = result
           .map(({ UTCDate, TotalNodeCount }) => ({
             timestamp: new Date(UTCDate).getTime(),
@@ -360,25 +366,21 @@ const StatsBoxGrid = () => {
         })
       } catch (error) {
         console.error(error)
-        setNodes({
+        setNodes((nodes) => ({
           ...nodes,
           hasError: true,
-        })
+        }))
       }
     }
     fetchNodes()
 
     const fetchTotalValueLocked = async () => {
       try {
-        const response = await getData(
-          process.env.NODE_ENV === "production"
-            ? "/.netlify/functions/defipulse"
-            : "http://localhost:9000/defipulse"
-        )
+        const response = await getData(`${GATSBY_FUNCTIONS_PATH}/defipulse`)
         const data = response
-          .map(({ timestamp, tvlUSD }) => ({
-            timestamp: parseInt(timestamp) * 1000,
-            value: tvlUSD,
+          .map(({ date, totalLiquidityUSD }) => ({
+            timestamp: parseInt(date) * 1000,
+            value: totalLiquidityUSD,
           }))
           .sort((a, b) => a.timestamp - b.timestamp)
         const value = formatTVL(data[data.length - 1].value)
@@ -389,10 +391,10 @@ const StatsBoxGrid = () => {
         })
       } catch (error) {
         console.error(error)
-        setValueLocked({
+        setValueLocked((valueLocked) => ({
           ...valueLocked,
           hasError: true,
-        })
+        }))
       }
     }
     fetchTotalValueLocked()
@@ -400,9 +402,7 @@ const StatsBoxGrid = () => {
     const fetchTxCount = async () => {
       try {
         const response = await getData(
-          process.env.NODE_ENV === "production"
-            ? "/.netlify/functions/txs"
-            : "http://localhost:9000/txs"
+          `${process.env.GATSBY_FUNCTIONS_PATH}/txs`
         )
         const data = response.result
           .map(({ unixTimeStamp, transactionCount }) => ({
@@ -418,24 +418,26 @@ const StatsBoxGrid = () => {
         })
       } catch (error) {
         console.error(error)
-        setTxs({
+        setTxs((txs) => ({
           ...txs,
           hasError: true,
-        })
+        }))
       }
     }
     fetchTxCount()
-  }, [])
+  }, [intl.locale])
 
   const metrics = [
     {
       apiProvider: "CoinGecko",
       apiUrl: "https://www.coingecko.com/en/coins/ethereum",
-      title: (
-        <Translation id="page-index-network-stats-eth-price-description" />
+      title: translateMessageId(
+        "page-index-network-stats-eth-price-description",
+        intl
       ),
-      description: (
-        <Translation id="page-index-network-stats-eth-price-explainer" />
+      description: translateMessageId(
+        "page-index-network-stats-eth-price-explainer",
+        intl
       ),
       buttonContainer: (
         <RangeSelector
@@ -449,9 +451,13 @@ const StatsBoxGrid = () => {
     {
       apiProvider: "Etherscan",
       apiUrl: "https://etherscan.io/",
-      title: <Translation id="page-index-network-stats-tx-day-description" />,
-      description: (
-        <Translation id="page-index-network-stats-tx-day-explainer" />
+      title: translateMessageId(
+        "page-index-network-stats-tx-day-description",
+        intl
+      ),
+      description: translateMessageId(
+        "page-index-network-stats-tx-day-explainer",
+        intl
       ),
       buttonContainer: (
         <RangeSelector
@@ -463,13 +469,15 @@ const StatsBoxGrid = () => {
       range: selectedRangeTxs,
     },
     {
-      apiProvider: "DeFi Pulse",
-      apiUrl: "https://defipulse.com",
-      title: (
-        <Translation id="page-index-network-stats-value-defi-description" />
+      apiProvider: "DeFi Llama",
+      apiUrl: "https://defillama.com/",
+      title: translateMessageId(
+        "page-index-network-stats-value-defi-description",
+        intl
       ),
-      description: (
-        <Translation id="page-index-network-stats-value-defi-explainer" />
+      description: translateMessageId(
+        "page-index-network-stats-value-defi-explainer",
+        intl
       ),
       buttonContainer: (
         <RangeSelector
@@ -483,9 +491,13 @@ const StatsBoxGrid = () => {
     {
       apiProvider: "Etherscan",
       apiUrl: "https://etherscan.io/nodetracker",
-      title: <Translation id="page-index-network-stats-nodes-description" />,
-      description: (
-        <Translation id="page-index-network-stats-nodes-explainer" />
+      title: translateMessageId(
+        "page-index-network-stats-nodes-description",
+        intl
+      ),
+      description: translateMessageId(
+        "page-index-network-stats-nodes-explainer",
+        intl
       ),
       buttonContainer: (
         <RangeSelector

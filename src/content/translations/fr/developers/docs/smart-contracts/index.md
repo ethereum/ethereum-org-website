@@ -15,9 +15,6 @@ Le contrat intelligent est un type de [compte Ethereum](/developers/docs/account
 
 Assurez-vous d'avoir lu les pages [Contrats](/developers/docs/accounts/), [Transactions](/developers/docs/transactions/) et [Machine virtuelle Ethereum](/developers/docs/evm/) avant de vous intéresser aux contrats intelligents.
 
-<!-- TODO simpler example... scheduling payments in Ethereum is actually difficult -->
-<!-- TODO show an example smart contract, e.g. an implementation of a vending machine -->
-
 ## Distributeur automatique numérique {#a-digital-vending-machine}
 
 La meilleure métaphore pour décrire un contrat intelligent, comme le dit Nick Szabo, est peut être le distributeur automatique. Avec les bonnes entrées, une certaine sortie est garantie.
@@ -102,7 +99,7 @@ Il existe des moyens de contourner ce problème en utilisant les [oracles](/deve
 
 **DappSys -** **_Blocs de construction sûrs, simples et flexibles pour les contrats intelligents_**
 
-- [dapp.tools/dappsys](https://dapp.tools/dappsys/)
+- [Dappsys](https://dappsys.readthedocs.io/)
 - [GitHub](https://github.com/dapphub/dappsys)
 
 ## Complément d'information {#further-reading}

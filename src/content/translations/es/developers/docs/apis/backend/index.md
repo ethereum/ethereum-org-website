@@ -21,8 +21,6 @@ Estas bibliotecas eliminan en gran parte la complejidad de interactuar directame
 
 ## Bibliotecas disponibles {#available-libraries}
 
-<!-- TODO separate APIs-as-a-service vs. connect your own -->
-
 **Alchemy:** **_Plataforma de desarrollo de Ethereum._**
 
 - [alchemyapi.io](https://alchemyapi.io)
@@ -98,5 +96,5 @@ _¿Conoces algún recurso en la comunidad que te haya servido de ayuda? Edita es
 
 ## Tutoriales relacionados {#related-tutorials}
 
-- [Configurar Web3js para utilizar la blockchain de Ethereum en Javascript:](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _ Instrucciones para configurar web3.js en tu proyecto._
-- [Solicitar un contrato inteligente desde JavaScript:](/developers/tutorials/calling-a-smart-contract-from-javascript/) _ con ayuda del token Dai, ver como invocar funciones de contratos usando Javascript._
+- [Configurar Web3js para utilizar la blockchain de Ethereum en JavaScript:](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _ Instrucciones para configurar web3.js en tu proyecto._
+- [Solicitar un contrato inteligente desde JavaScript:](/developers/tutorials/calling-a-smart-contract-from-javascript/) _ con ayuda del token Dai, ver como invocar funciones de contratos usando JavaScript._

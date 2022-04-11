@@ -59,13 +59,6 @@ Wartości przechowywane tylko przez cały okres wykonywania funkcji kontraktowej
 
 Dowiedz się więcej o tym, jak EVM przechowuje dane (magazyn, pamięć i stos) w [Dokumenty Solidity ](https://solidity.readthedocs.io/en/latest/introduction-to-smart-contracts.html?highlight=memory#storage-memory-and-the-stack).
 
-<!-- TODO provide examples of when to use storage vs. memory -->
-
-<!--- ### Try it
-
-Using this Remix tutorial, [define a variable in a Solidity smart contract](https://remix.ethereum.org/#optimize=false&evmVersion=null&version=soljson-v0.6.6+commit.6c089d02.js)
---->
-
 ### Zmienne środowiskowe {#environment-variables}
 
 Oprócz zmiennych, które definiujesz w kontrakcie, istnieją pewne specjalne zmienne globalne. Są one wykorzystywane głównie do dostarczania informacji na temat łańcucha bloków lub bieżącej transakcji.
@@ -139,11 +132,6 @@ Co jest uważane za modyfikację stanu:
 7. Używanie wywołań niskiego poziomu.
 8. Korzystanie z asemblera wbudowanego, który zawiera określone kody operacji.
 
-<!---#### Try it
-
-Using this Remix tutorial, [use a Solidity getter function to `view` data](https://remix.ethereum.org/#optimize=false&evmVersion=null&version=soljson-v0.6.6+commit.6c089d02.js)
---->
-
 ### Funkcje constructor {#constructor-functions}
 
 `konstruktor` funkcje są wykonywane tylko raz w momencie pierwszego wdrożenia kontraktu. Podobnie jak `konstruktor` w wielu językach programowania opartych na klasie, funkcje te często inicjują zmienne stanu do ich określonych wartości.
@@ -170,26 +158,6 @@ def __init__(_beneficiary: address, _bidding_time: uint256):
     self.auctionStart = block.timestamp
     self.auctionEnd = self.auctionStart + _bidding_time
 ```
-
-<!---#### Try it
-
-Using this Remix tutorial, [create a `constructor` function](https://remix.ethereum.org/#optimize=false&evmVersion=null&version=soljson-v0.6.6+commit.6c089d02.js)
---->
-
-<!-- TODO add additional funciton types
-
-### Pure functions {#pure-functions}
-
-@Sam Richards are these solidity-specific?
-
-### Return variables {#return-variables}
-
-https://solidity.readthedocs.io/en/v0.7.0/contracts.html?highlight=return variables#return-variables](https://solidity.readthedocs.io/en/v0.7.0/contracts.html?highlight=return%20variables#return-variables
-
-### Payable/non-payable {#payablenon-payable}
-
-- non-payable rejects ether sent to it
-- payable can accept 0 ETH -->
 
 ### Wbudowane funkcje {#built-in-functions}
 
@@ -236,59 +204,9 @@ Pełny kontrakt może wyglądać w ten sposób. Tutaj funkcja `constructor` zape
 
 ## Zdarzenia i dzienniki {#events-and-logs}
 
-Zdarzenia pozwalają Ci komunikować się z inteligentnym kontraktem z Twojego frontendu lub innych aplikacji subskrybujących. Gdy transakcja zostanie wykopana, inteligentne kontrakty mogą emitować zdarzenia i zapisywać do blockchainu dzienniki, które frontend może następnie przetworzyć.<!-- TODO add event examples
+Zdarzenia pozwalają Ci komunikować się z inteligentnym kontraktem z Twojego frontendu lub innych aplikacji subskrybujących. Gdy transakcja zostanie wykopana, inteligentne kontrakty mogą emitować zdarzenia i zapisywać do blockchainu dzienniki, które frontend może następnie przetworzyć.
 
-They are used in a few different ways:
-
-1. smart contract return values for the user interface
-
-```solidity
-contract ExampleContract {
-  event ReturnValue(address indexed _from, int256 _value);
-```
-
-```js
-var exampleEvent = exampleContract.ReturnValue({ _from: web3.eth.coinbase })
-exampleEvent.watch(function (err, result) {
-  if (err) {
-    console.log(err)
-    return
-  }
-  console.log(result.args._value)
-  // check that result.args._from is web3.eth.coinbase then
-  // display result.args._value in the UI and call
-  // exampleEvent.stopWatching()
-})
-exampleContract.foo.sendTransaction(2, { from: web3.eth.coinbase })
-```
-
-2. asynchronous triggers with data
-
-```solidity
-contract CryptoExchange {
-  event Deposit(uint256 indexed _market, address indexed _sender, uint256 _amount, uint256 _time);
-  function deposit(uint256 _amount, uint256 _market) returns (int256) {
-      // perform deposit, update user’s balance, etc
-      Deposit(_market, msg.sender, _amount, now);
-  }
-```
-
-```js
-var depositEvent = cryptoExContract.Deposit({ _sender: userAddress })
-depositEvent.watch(function (err, result) {
-  if (err) {
-    console.log(err)
-    return
-  }
-  // append details of result.args to UI
-})
-```
-
-3. a cheaper form of storage
-
-Need your help explaining events/showing examples
-
-_Examples provided by Joseph Chow and ConsenSys_ -->## Przykłady z komentarzami {#annotated-examples}
+## Przykłady z komentarzami {#annotated-examples}
 
 Są to niektóre przykłady napisane w Solidity. Jeśli chcesz pobawić się kodem, możesz wchodzić z nimi w interakcję w [Remix](http://remix.ethereum.org).
 

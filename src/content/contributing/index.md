@@ -18,7 +18,7 @@ The ethereum.org website, like Ethereum more broadly, is an open-source project.
 
 - [Work on an open issue](https://github.com/ethereum/ethereum-org-website/issues)
   _– Work we've identified that needs doing_
-- [Join the translations program](/contributing/translation-program/)
+- [Join the translation program](/contributing/translation-program/)
   _– Help us bring ethereum.org to new languages_
 - [Add community articles](/contributing/content-resources/)
   _– Add a helpful article to a relevant page_
@@ -36,6 +36,7 @@ The ethereum.org website, like Ethereum more broadly, is an open-source project.
   _– Help us continue to expand the Ethereum [glossary](/glossary/)_
 - [Create/edit content](/contributing/#how-to-update-content)
   _– Suggest new pages or makes tweaks to what's here already_
+- [Add a layer 2](/contributing/adding-layer-2) _- Add a layer 2 to a relevant page_
 
 _Any questions?_ 🤔 Reach out on our [Discord server](https://discord.gg/CetY6Y4)
 
@@ -50,7 +51,7 @@ You don't need permission to work on anything, but it's always best to let us kn
 - Commenting on an issue or PR in [GitHub](https://github.com/ethereum/ethereum-org-website)
 - Messaging on our [Discord server](https://discord.gg/CetY6Y4)
 
-Before contributing , make sure you're familiar with:
+Before contributing, make sure you're familiar with:
 
 - the evolving [vision of ethereum.org](/about/)
 - our [design principles](/contributing/design-principles/)
@@ -63,6 +64,10 @@ Decisions about individual PRs, design evolution and major upgrades are made by 
 - [website@ethereum.org](mailto:website@ethereum.org)
 - [@ethdotorg](https://twitter.com/ethdotorg)
 - [Discord server](https://discord.gg/CetY6Y4)
+
+### A note on plagiarism {#plagiarism}
+
+Only use your original work or content that you have permission to use when contributing any content or artifact to ethereum.org. Many projects within the Ethereum ecosystem use open-source licensing that allows for the free sharing of information. However, if you cannot find this information, do not attempt to add it to ethereum.org. Any pull requests deemed as plagiarism will get rejected.
 
 ## New to open-source? {#new-to-open-source}
 
@@ -84,7 +89,5 @@ If your contribution gets merged into ethereum.org, we'll mint you a unique cont
 You should only use self-custody wallets to claim POAPs. Do not use exchange accounts or other accounts you do not hold the private keys to, as these will not allow you to access and manage your POAPs.
 
 ## Contributors {#contributors}
-
-Thanks to everyone who has contributed so far!
 
 <Contributors />

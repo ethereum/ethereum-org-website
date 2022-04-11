@@ -25,7 +25,7 @@ Niektóre usługi oferują własny dedykowany węzeł, którym zarządzają za C
 
 Prawie wszystkie usługi węzłów są niezwykle łatwe do zintegrowania, obejmują zmiany w jednym wierszu w kodzie, aby zamienić węzeł hostowany na własnym serwerze, a nawet przełączać się między samymi usługami.
 
-Często usługi węzłów uruchamiają różnych [klientów](/developers/docs/nodes-and-clients/#clients) i [typy węzłów](/developers/docs/nodes-and- client/#node-types), co pozwala na dostęp do pełnych i archiwalnych węzłów oprócz metod specyficznych dla klienta w jednym interfejsie API.
+Często usługi węzłów uruchamiają różnych [klientów](/developers/docs/nodes-and-clients/#execution-clients) i [typy węzłów](/developers/docs/nodes-and-clients/#node-types), co pozwala na dostęp do pełnych i archiwalnych węzłów oprócz metod specyficznych dla klienta w jednym interfejsie API.
 
 Należy pamiętać, że usługi węzłów nie przechowują i nie powinny przechowywać kluczy prywatnych ani informacji.
 

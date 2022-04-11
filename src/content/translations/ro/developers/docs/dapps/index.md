@@ -28,8 +28,6 @@ Pentru a introduce aplicațiile dapp, avem nevoie să introducem contractele int
 
 Un contract inteligent este un cod care trăiește pe blockchain-ul Ethereum și funcționează exact așa cum a fost programat. Odată ce sunt implementate în rețea, nu le poți schimba. Aplicațiile dapp pot fi descentralizate, pentru că sunt controlate de logica scrisă în contract, nu de un individ sau o companie. Acest lucru înseamnă, de asemenea, că trebuie să concepi cu foarte mare atenție contractele și să le testezi în detaliu.
 
-<!--Benefits and implications provided by Brian Gu)-->
-
 ## Avantajele dezvoltării de aplicații dapp {#benefits-of-dapp-development}
 
 - **Zero inactivitate** – odată ce contractul inteligent din centrul unei aplicații este implementat și se află pe blockchain, rețeaua ca un întreg va fi întotdeauna în măsură să servească clienții care doresc să interacționeze cu contractul. Prin urmare, actorii răuvoitori nu pot lansa atacuri de refuzare a serviciului care vizează aplicațiile dapp individuale.
@@ -40,36 +38,18 @@ Un contract inteligent este un cod care trăiește pe blockchain-ul Ethereum și
 
 ## Implicațiile dezvoltării aplicației dapp {#implications-of-dapp-development}
 
-<!-- - Transparency – transactions that trigger dapp functionality are public
-- Open source
-- Cost of storage – contracts are often only small percentages of the dapp. They are stored on-chain and this storage needs to be paid for, so it can be expensive.
- -->
-
 - **Întreținere** – aplicațiile dapp pot fi mai greu de întreținut, deoarece codul și datele publicate în blockchain sunt mai greu de modificat. Este greu pentru programatori să-și actualizeze aplicațiile dapp (sau datele de bază stocate de un dapp) odată ce acestea sunt implementate - chiar dacă într-o versiune veche sunt identificate erori sau riscuri de securitate.
 - **Performanță excesivă** – au un exces de funcții pentru le mări performanțele, încât scalabilitatea este foarte dificilă. Pentru a atinge nivelul de securitate, integritate, transparență și fiabilitate la care aspiră Ethereum, fiecare nod rulează și stochează fiecare tranzacție. În plus, dovada muncii necesită timp, de asemenea. Un calcul grosier pune excesul de calcule la ceva de genul de 1.000.000 de ori mai multe decât calculul standard în prezent.
 - **Congestia rețelei** – cel puțin în modelul actual, dacă o aplicație dapp utilizează prea multe resurse de calcul, întreaga rețeaua încearcă să o susțină. În prezent, rețeaua este capabilă să proceseze doar aproximativ 10 tranzacții pe secundă; în cazul în care tranzacțiile sunt trimise mai repede decât aceasta, lista temporară de tranzacții neconfirmate poate crește foarte repede.
 - **Experiența utilizatorului** – poate fi mai greu să proiectezi aplicații ușor de utilizat: utilizatorul final mediu ar putea găsi prea dificil să configureze o stivă de instrumente necesară interacțiunii cu blockchain-ul de o manieră cu adevărat securizată.
+- **Centralizare** – Soluțiile ușor de utilizat și ușor de dezvoltat construite pe stratul de bază al Ethereum, ar putea ajunge să arate ca serviciile centralizate: de exemplu, astfel de servicii pot să stocheze chei sau alte informații sensibile din partea serverului, pot servi un front-end folosind un server centralizat sau pot rula o logică de afaceri importantă pe un server centralizat înainte de a le scrie în blockchain. Acest lucru elimină multe (dacă nu toate) avantajele blockchain-ului față de modelul tradițional.
 
-  - **Centralizare** – Soluțiile ușor de utilizat și ușor de dezvoltat construite pe stratul de bază al Ethereum, ar putea ajunge să arate ca serviciile centralizate: de exemplu, astfel de servicii pot să stocheze chei sau alte informații sensibile din partea serverului, pot servi un front-end folosind un server centralizat sau pot rula o logică de afaceri importantă pe un server centralizat înainte de a le scrie în blockchain. Acest lucru elimină multe (dacă nu toate) avantajele blockchain-ului față de modelul tradițional.<!-- ## Types of dapp
-
-- Involving money
-- Involving money and something else
-- Other, including decentralized autonomous organizations
-
----==crwdHRulesLBB_2_BBsuleRHdwrc==
-
-The application has to be open-source, operate autonomously, and can not be controlled by any one entity.
-All data and record must be cryptographically stored in a public, decentralized blockchain.
-The app must use a cryptographic token, also referred to as an App Coin, to access the application.
-Tokens must be generated in order to prove the value nodes that contribute to the application.
-
----==crwdHRulesLBB_2_BBsuleRHdwrc==
--->## Instrumente Dapp {#dapp-tools}
+## Instrumente Dapp {#dapp-tools}
 
 **One Click Dapp** **_- Instrument FOSS pentru a genera front-end-uri aplicației dapp dintr-un ABI._**
 
 - [oneclickdapp.com](https://oneclickdapp.com)
-- [GitHub](https://github.com/One-Click-Dapp/one-click-dApp)
+- [GitHub](https://github.com/oneclickdapp/oneclickdapp-v1)
 
 **Etherflow** **_ - Instrument FOSS pentru programatorii Ethereum pentru a-și testa nodurile și a compune și depana apeluri RPC din browser._**
 

@@ -14,11 +14,12 @@ Normalmente, gli standard vengono introdotti come [proposte di miglioramento di 
 
 - [Introduzione alle EIP](/eips/)
 - [Elenco delle EIP](https://eips.ethereum.org/)
-- [Repository GitHub delle EIP](https://github.com/ethereum/EIPs)
+- [Repository Github delle EIP](https://github.com/ethereum/EIPs)
 - [Forum di discussione per le EIP](https://ethereum-magicians.org/c/eips)
-- [Ethereum Governance Overview](https://blog.bmannconsulting.com/ethereum-governance/) _31 marzo 2019 - Boris Mann_
-- [Ethereum Protocol Development Governance and Network Upgrade Coordination](https://hudsonjameson.com/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/)_ 23 Marzo 2020 - Hudson Jameson_
-- [Playlist di tutte le riunioni degli sviluppatori del protocollo di base di Ethereum](https://www.youtube.com/playlist?list=PLaM7G4Llrb7zfMXCZVEXEABT8OSnd4-7w) _(Playlist YouTube)_
+- [Introduzione alla Governance di Ethereum](/governance/)
+- [Ethereum Governance Overview](https://web.archive.org/web/20201107234050/https://blog.bmannconsulting.com/ethereum-governance/) _March 31, 2019 - Boris Mann_
+- [Ethereum Protocol Development Governance and Network Upgrade Coordination](https://hudsonjameson.com/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) _March 23, 2020 - Hudson Jameson_
+- [Playlist of all Ethereum Core Dev Meetings](https://www.youtube.com/playlist?list=PLaM7G4Llrb7zfMXCZVEXEABT8OSnd4-7w) _(YouTube Playlist)_
 
 ## Tipi di standard {#types-of-standards}
 
@@ -28,8 +29,10 @@ Alcune EIP riguardano standard a livello di applicazione (ad esempio un formato 
 
 ### Standard token {#token-standards}
 
-- [ERC-20 - Un'interfaccia standard per i token](/developers/docs/standards/tokens/erc-20/)
-- [ERC-721 - Un'interfaccia standard per token non fungibili](/developers/docs/standards/tokens/erc-721/)
+- [ERC-20](/developers/docs/standards/tokens/erc-20/) - Un'interfaccia standard per token fungibili (intercambiabili), come i token di voto, i token di staking o le valute virtuali.
+- [ERC-721](/developers/docs/standards/tokens/erc-721/) - Un'interfaccia standard per token non fungibili, come un atto relativo a opere d'arte o canzoni.
+- [ERC-777](/developers/docs/standards/tokens/erc-777/) - Uno standard di token migliore rispetto a ERC-20.
+- [ERC-1155](/developers/docs/standards/tokens/erc-1155/) - Uno standard del token che può contenere risorse sia fungibili che non fungibili.
 
 Maggiori informazioni sugli [standard token](/developers/docs/standards/tokens/).
 

@@ -7,13 +7,13 @@ sidebar: true
 
 为了使软件应用程序能够与以太坊区块链进行交互（例如：读取区块链数据或发送交易信息到网络），软件必须连接到以太坊节点。
 
-为此，每个以太坊客户端都将履行 JSON-RPC 规范，因此我们有一个统一的端点组可供应用程序们依赖。
+为此目的，每个以太坊客户端都执行 [JSON-RPC](/developers/docs/apis/json-rpc/) 规范，所以应用程序可以依赖统一的[端点](/developers/docs/apis/json-rpc/#json-rpc-methods)集。
 
 如果您想使用特定的编程语言去连接以太坊的节点，您可自行选择，但是在社区中已有几个方便的库，可以更方便地实现应用程序与以太坊的连接。 通过这些库，开发者可以方便地写下直观的一行函数来初始化（后端的）JSON RPC 请求并用于与以太坊进行交互。
 
 ## 前置要求 {#prerequisites}
 
-了解[以太坊堆栈](/developers/docs/ethereum-stack/)和[以太坊客户端](/docs/nodes-and-clients/)可能会对您有所帮助。
+了解[以太坊堆栈](/developers/docs/ethereum-stack/)和[以太坊客户端](/developers/docs/nodes-and-clients/)可能会对您有所帮助。
 
 ## 为什么要使用库？ {#why-use-a-library}
 
@@ -21,14 +21,12 @@ sidebar: true
 
 ## 可用的库 {#available-libraries}
 
-<!-- TODO separate APIs-as-a-service vs. connect your own -->
-
 **Alchemy -** **_以太坊开发平台_**
 
-- [alchemyapi.io](https://alchemyapi.io)
+- [alchemy.com](https://www.alchemy.com/)
 - [相关文档](https://docs.alchemyapi.io/)
 - [GitHub](https://github.com/alchemyplatform)
-- [Discord](https://discord.gg/kwqVnrA)
+- [Discord](https://discord.com/invite/A39JVCM)
 
 **BlockCypher -** **_以太坊网络应用程序接口 (Web API)_**
 
@@ -87,9 +85,16 @@ sidebar: true
 - [相关文档](http://docs.nethereum.com/en/latest/)
 - [Discord](https://discord.com/invite/jQPrR58FxX)
 
+**QuikNode -** **_终极区块链开发平台。_**
+
+- [Tatum](https://tatum.io/)
+- [GitHub](https://github.com/tatumio/)
+- [相关文档](https://docs.tatum.io/)
+- [Discord](https://discord.gg/EDmW3kjTC9)
+
 ## 延伸阅读 {#further-reading}
 
-_你知道有什么社区资源帮助过你吗？ 编辑并添加本页面！_
+_还有哪些社区资源对您有所帮助？ 请编辑本页面并添加！_
 
 ## 相关主题 {#related-topics}
 
@@ -98,5 +103,5 @@ _你知道有什么社区资源帮助过你吗？ 编辑并添加本页面！_
 
 ## 相关教程 {#related-tutorials}
 
-- [设置 Web3js 并在 Javascript 中使用以太坊区块链](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _关于在您的项目中设置 web3.js 的说明。_
+- [设置 Web3js 并在 JavaScript 中使用以太坊区块链](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _关于在您的项目中设置 web3.js 的说明。_
 - [在 JavaScript 中调用智能合约](/developers/tutorials/calling-a-smart-contract-from-javascript/) _使用 DAI token，从而使用 JavaScript 调用合约函数。_

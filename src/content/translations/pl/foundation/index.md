@@ -31,4 +31,4 @@ Dowiedz się więcej na [devcon.org](https://devcon.org/), sprawdź [Devcon Blog
 
 <br/>
 
-Aby uzyskać więcej informacji na temat Fundacji i ich pracy, odwiedź [ethereum. obwieszczenie](http://ethereum.foundation/)lub sprawdź [Ethereum Foundation Blog](https://blog.ethereum.org/) w celu uzyskania najnowszych informacji i ogłoszeń EF.
+Aby uzyskać więcej informacji na temat Fundacji i ich pracy, odwiedź [ethereum.foundation](http://ethereum.foundation/)lub sprawdź [Ethereum Foundation Blog](https://blog.ethereum.org/) w celu uzyskania najnowszych informacji i ogłoszeń EF.

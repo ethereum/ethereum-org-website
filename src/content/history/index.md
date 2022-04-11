@@ -20,6 +20,8 @@ These rule changes may create a temporary split in the network. New blocks could
 
 </ExpandableCard>
 
+Looking for future protocol upgrades? [Learn about upcoming upgrades to Ethereum](/upgrades/).
+
 <Divider />
 
 ## 2021 {#2021}
@@ -59,9 +61,9 @@ Be sure to upgrade your client software to the latest version before December 5,
 
 #### Summary {#altair-summary}
 
-The Altair upgrade was the first scheduled upgrade for the [Beacon Chain](/eth2/beacon-chain). It added support for "sync committees"—enabling light clients, and bringing validator inactivity and slashing penalties up to their full values.
+The Altair upgrade was the first scheduled upgrade for the [Beacon Chain](/upgrades/beacon-chain). It added support for "sync committees"—enabling light clients, and bringing validator inactivity and slashing penalties up to their full values.
 
-- [Read the Altair upgrade specification](https://github.com/ethereum/eth2.0-specs/tree/dev/specs/altair)
+- [Read the Altair upgrade specification](https://github.com/ethereum/consensus-specs/tree/dev/specs/altair)
 
 #### <Emoji text=":tada:" size={1} mr="0.5rem" />Fun fact! {#altair-fun-fact}
 
@@ -134,11 +136,13 @@ The Berlin upgrade optimized gas cost for certain EVM actions, and increases sup
 
 #### Summary {#beacon-chain-genesis-summary}
 
-The [Beacon Chain](/eth2/beacon-chain/) needed 16384 deposits of 32 staked ETH to ship securely. This happened on November 27, meaning the Beacon Chain started producing blocks on December 1, 2020. This is an important first step in achieving the [Eth2 vision](/eth2/vision/).
+The [Beacon Chain](/upgrades/beacon-chain/) needed 16384 deposits of 32 staked ETH to ship securely. This happened on November 27, meaning the Beacon Chain started producing blocks on December 1, 2020. This is an important first step in achieving the [Ethereum vision](/upgrades/vision/).
 
 [Read the Ethereum Foundation announcement](https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21/)
 
-<DocLink to="/eth2/beacon-chain/" title="The Beacon Chain" />
+<DocLink to="/upgrades/beacon-chain/">
+  The Beacon Chain
+</DocLink>
 
 ---
 
@@ -151,11 +155,13 @@ The [Beacon Chain](/eth2/beacon-chain/) needed 16384 deposits of 32 staked ETH t
 
 #### Summary {#deposit-contract-summary}
 
-The staking deposit contract introduced [staking](/glossary/#staking) to the Ethereum ecosystem. Although a [Mainnet](/glossary/#mainnet) contract, it had a direct impact on the timeline for launching the [Beacon Chain](/eth2/beacon-chain/), an important [Eth2 upgrade](/eth2/).
+The staking deposit contract introduced [staking](/glossary/#staking) to the Ethereum ecosystem. Although a [Mainnet](/glossary/#mainnet) contract, it had a direct impact on the timeline for launching the [Beacon Chain](/upgrades/beacon-chain/), an important [Ethereum upgrade](/upgrades/).
 
 [Read the Ethereum Foundation announcement](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/)
 
-<DocLink to="/eth2/staking/" title="Staking" />
+<DocLink to="/staking/">
+  Staking
+</DocLink>
 
 ---
 
@@ -196,7 +202,7 @@ The Istanbul fork:
 
 - Optimised the [gas](/glossary/#gas) cost of certain actions in the [EVM](/developers/docs/ethereum-stack/#ethereum-virtual-machine).
 - Improved denial-of-service attack resilience.
-- Made [Layer 2 scaling](/developers/docs/scaling/layer-2-rollups/) solutions based on SNARKs and STARKs more performant.
+- Made [Layer 2 scaling](/developers/docs/scaling/#layer-2-scaling) solutions based on SNARKs and STARKs more performant.
 - Enabled Ethereum and Zcash to interoperate.
 - Allowed contracts to introduce more creative functions.
 
@@ -208,7 +214,7 @@ The Istanbul fork:
 - [EIP-1108](https://eips.ethereum.org/EIPS/eip-1108) – _cheaper cryptography to improve [gas](/glossary/#gas) costs._
 - [EIP-1344](https://eips.ethereum.org/EIPS/eip-1344) – _protects Ethereum against replay attacks by adding `CHAINID` [opcode](/developers/docs/ethereum-stack/#ethereum-virtual-machine)._
 - [EIP-1884](https://eips.ethereum.org/EIPS/eip-1884) – _optimising opcode gas prices based on consumption._
-- [EIP-2028](https://eips.ethereum.org/EIPS/eip-2028) – _reduces the cost of CallData to allow more data in blocks – good for [Layer 2 scaling](/developers/docs/scaling/layer-2-rollups/)._
+- [EIP-2028](https://eips.ethereum.org/EIPS/eip-2028) – _reduces the cost of CallData to allow more data in blocks – good for [Layer 2 scaling](/developers/docs/scaling/#layer-2-scaling)._
 - [EIP-2200](https://eips.ethereum.org/EIPS/eip-2200) – _other opcode gas price alterations._
 
 </ExpandableCard>
@@ -259,7 +265,7 @@ The Byzantium fork:
 - Reduced block [mining](/developers/docs/consensus-mechanisms/pow/mining/) rewards from 5 to 3 ETH.
 - Delayed the [difficulty bomb](/glossary/#difficulty-bomb) by a year.
 - Added ability to make non-state-changing calls to other contracts.
-- Added certain cryptography methods to allow for [layer 2 scaling](/developers/docs/scaling/layer-2-rollups/).
+- Added certain cryptography methods to allow for [layer 2 scaling](/developers/docs/scaling/#layer-2-scaling).
 
 [Read the Ethereum Foundation announcement](https://blog.ethereum.org/2017/10/12/byzantium-hf-announcement/)
 
@@ -267,8 +273,8 @@ The Byzantium fork:
 
 - [EIP-140](https://eips.ethereum.org/EIPS/eip-140) – _adds `REVERT` opcode._
 - [EIP-658](https://eips.ethereum.org/EIPS/eip-658) – _status field added to transaction receipts to indicate success or failure._
-- [EIP-196](https://eips.ethereum.org/EIPS/eip-196) – _adds elliptic curve and scalar multiplication to allow for [ZK-Snarks](/developers/docs/scaling/layer-2-rollups/#zk-rollups)._
-- [EIP-197](https://eips.ethereum.org/EIPS/eip-197) – _adds elliptic curve and scalar multiplication to allow for [ZK-Snarks](/developers/docs/scaling/layer-2-rollups/#zk-rollups)._
+- [EIP-196](https://eips.ethereum.org/EIPS/eip-196) – _adds elliptic curve and scalar multiplication to allow for [ZK-Snarks](/developers/docs/scaling/zk-rollups/)._
+- [EIP-197](https://eips.ethereum.org/EIPS/eip-197) – _adds elliptic curve and scalar multiplication to allow for [ZK-Snarks](/developers/docs/scaling/zk-rollups/)._
 - [EIP-198](https://eips.ethereum.org/EIPS/eip-198) – _enables RSA signature verification._
 - [EIP-211](https://eips.ethereum.org/EIPS/eip-211) – _adds support for variable length return values._
 - [EIP-214](https://eips.ethereum.org/EIPS/eip-214) – _adds `STATICCALL` opcode, allowing non-state-changing calls to other contracts._
@@ -440,4 +446,6 @@ The Yellow Paper, authored by Dr. Gavin Wood, is a technical definition of the E
 
 The introductory paper, published in 2013 by Vitalik Buterin, the founder of Ethereum, before the project's launch in 2015.
 
-<DocLink to="/whitepaper/" title="Whitepaper" />
+<DocLink to="/whitepaper/">
+  Whitepaper
+</DocLink>

@@ -275,7 +275,7 @@ Cu toate acestea, în practică, emitenții nu sunt întotdeauna de încredere, 
 
 ### Sisteme de identitate și de reputație {#identity-and-reputation-systems}
 
-Cea mai veche criptomonedă alternativă dintre toate, [Namecoin](http://namecoin.org/), a încercat să utilizeze un blockchain ca Bitcoin pentru a oferi un sistem de înregistrare a numelui, unde utilizatorii își pot înregistra numele într-o bază de date publică alături de alte date. Cazul de utilizare citat major este pentru un sistem [DNS](https://en.wikipedia.org/wiki/Domain_Name_System), de mapare de nume de domenii, cum ar fi „bitcoin.org” (sau, în cazul Namecoin, „bitcoin.bit”) la o adresă IP. Alte cazuri de utilizare includ autentificarea prin e-mail și potențial, sisteme mai avansate de reputație. Iată contractul de bază de furnizare a unui sistem de înregistrare de nume asemănător cu Namecoin pe Ethereum:
+Cea mai veche criptomonedă alternativă dintre toate, [Namecoin](http://namecoin.org/), a încercat să utilizeze un blockchain ca Bitcoin pentru a oferi un sistem de înregistrare a numelui, unde utilizatorii își pot înregistra numele într-o bază de date publică alături de alte date. Cazul de utilizare citat major este pentru un sistem [DNS](https://wikipedia.org/wiki/Domain_Name_System), de mapare de nume de domenii, cum ar fi „bitcoin.org” (sau, în cazul Namecoin, „bitcoin.bit”) la o adresă IP. Alte cazuri de utilizare includ autentificarea prin e-mail și potențial, sisteme mai avansate de reputație. Iată contractul de bază de furnizare a unui sistem de înregistrare de nume asemănător cu Namecoin pe Ethereum:
 
     def register(name, value):
         if !self.storage[name]:
@@ -301,7 +301,7 @@ O schemă generală pentru cum să codezi un DAO este următoarea. Cel mai simpl
 - `[1, i]` pentru a înregistra un vot în favoarea propunerii `i`
 - `[2, i]` pentru a finaliza propunerea `i` dacă s-au obținut suficiente voturi
 
-Contractul va avea apoi clauze pentru fiecare dintre acestea. Acesta va menține o evidență a tuturor modificărilor de stocare deschise, împreună cu o listă a celor care le-au votat. De asemenea, ar avea o listă cu toți membrii. Atunci când orice modificare de stocare ajunge la două treimi din membrii care votează pentru aceasta, o tranzacție finală ar putea executa modificarea. Un schelet mai sofisticat ar avea, de asemenea, capacitatea de vot încorporată pentru funcții precum trimiterea unei tranzacții, adăugarea de membri și eliminarea membrilor și poate prevedea chiar delegarea de vot în stilul [Democrației lichide](https://en.wikipedia.org/wiki/Delegative_democracy) (adică oricine poate desemna pe cineva să voteze pentru ei și atribuirea este tranzitivă, deci dacă A atribuie lui B și B atribuie lui C atunci C determină votul lui A). Această concepție ar permite DAO să crească organic ca o comunitate descentralizată, permițând oamenilor să delege în cele din urmă sarcina de a filtra cine este membru al specialiștilor, deși, spre deosebire de „sistemul actual”, specialiștii pot să apară și să iasă din existență de-a lungul timpului, deoarece membrii individuali ai comunității își modifică poziția.
+Contractul va avea apoi clauze pentru fiecare dintre acestea. Acesta va menține o evidență a tuturor modificărilor de stocare deschise, împreună cu o listă a celor care le-au votat. De asemenea, ar avea o listă cu toți membrii. Atunci când orice modificare de stocare ajunge la două treimi din membrii care votează pentru aceasta, o tranzacție finală ar putea executa modificarea. Un schelet mai sofisticat ar avea, de asemenea, capacitatea de vot încorporată pentru funcții precum trimiterea unei tranzacții, adăugarea de membri și eliminarea membrilor și poate prevedea chiar delegarea de vot în stilul [Democrației lichide](https://wikipedia.org/wiki/Delegative_democracy) (adică oricine poate desemna pe cineva să voteze pentru ei și atribuirea este tranzitivă, deci dacă A atribuie lui B și B atribuie lui C atunci C determină votul lui A). Această concepție ar permite DAO să crească organic ca o comunitate descentralizată, permițând oamenilor să delege în cele din urmă sarcina de a filtra cine este membru al specialiștilor, deși, spre deosebire de „sistemul actual”, specialiștii pot să apară și să iasă din existență de-a lungul timpului, deoarece membrii individuali ai comunității își modifică poziția.
 
 Un model alternativ este pentru o corporație descentralizată, în care orice cont poate avea zero sau mai multe acțiuni, iar două treimi din acțiuni sunt necesare pentru a lua o decizie. Un schelet complet ar implica funcționalitatea de gestionare a activelor, capacitatea de a face o ofertă de cumpărare sau vânzare de acțiuni și capacitatea de a accepta oferte (de preferință cu un mecanism de ordonare a comenzilor în cadrul contractului). Delegația ar exista, de asemenea, în stilul Democrației Lichide, generalizând conceptul de „consiliu de administrație”.
 
@@ -464,8 +464,6 @@ Conceptul unei funcții de tranziție de stare arbitrară așa cum este implemen
 
 ## Note și referințe suplimentare {#notes-and-further-reading}
 
-<!--Invisible HTML comment used for navigation with CTRL+F footnote or fn.-->
-
 ### Note {#notes}
 
 1.  Un cititor sofisticat poate observa că, de fapt, o adresă Bitcoin este hash-ul cheii publice a curbei eliptice și nu cheia publică în sine. Cu toate acestea, este de fapt o terminologie criptografică perfect legitimă să se refere la hash-ul cheii publice ca la cheia publică în sine. Acest lucru se întâmplă deoarece criptografia Bitcoin poate fi considerată a fi un algoritm personalizat de semnătură digitală, în care cheia publică se compune din hash-ul cheii publice ECC, semnătura constă din cheia publică ECC concatenată cu semnătura ECC, iar algoritmul de verificare implică verificarea cheii publice ECC în semnătură împotriva hash-ului cheii publice ECC furnizat ca o cheie publică și apoi verificarea semnăturii ECC împotriva cheii publice ECC.
@@ -485,13 +483,13 @@ Conceptul unei funcții de tranziție de stare arbitrară așa cum este implemen
 6.  [Titluri de proprietate securizate cu autoritatea proprietarului](http://szabo.best.vwh.net/securetitle.html)
 7.  [Whitepaper Bitcoin](http://bitcoin.org/bitcoin.pdf)
 8.  [Namecoin](https://namecoin.org/)
-9.  [Triunghiul lui Zooko](https://en.wikipedia.org/wiki/Zooko's_triangle)
+9.  [Triunghiul lui Zooko](https://wikipedia.org/wiki/Zooko's_triangle)
 10. [Whitepaper Monede colorate](https://docs.google.com/a/buterin.com/document/d/1AnkP_cVZTCMLIzw4DvsW6M8Q2JC0lIzrTLuoWu2z1BE/edit)
 11. [Whitepaper Mastercoin](https://github.com/mastercoin-MSC/spec)
 12. [Corporații autonome descentralizate, Bitcoin Magazine](http://bitcoinmagazine.com/7050/bootstrapping-a-decentralized-autonomous-corporation-part-i/)
 13. [Verificare simplificată a plății](https://en.bitcoin.it/wiki/Scalability#Simplifiedpaymentverification)
-14. [Arbori Merkle](https://en.wikipedia.org/wiki/Merkle_tree)
-15. [Arbori Patricia](https://en.wikipedia.org/wiki/Patricia_tree)
+14. [Arbori Merkle](https://wikipedia.org/wiki/Merkle_tree)
+15. [Arbori Patricia](https://wikipedia.org/wiki/Patricia_tree)
 16. [GHOST](https://eprint.iacr.org/2013/881.pdf)
 17. [StorJ și agenți autonomi, Jeff Garzik](http://garzikrants.blogspot.ca/2013/01/storj-and-bitcoin-autonomous-agents.html)
 18. [Mike Hearn despre Proprietăți Inteligente la Festivalul Turing](http://www.youtube.com/watch?v=Pu4PAMFPo5Y)

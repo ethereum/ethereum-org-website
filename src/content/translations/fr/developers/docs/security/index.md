@@ -77,7 +77,7 @@ Pour permettre à un utilisateur de retirer l'ETH qu'il a précédemment stocké
 2. lui envoie le solde en ETH ;
 3. réinitialise le solde à 0, de sorte que l'utilisateur ne puisse pas retirer le solde de nouveau.
 
-Si elle est appelée à partir d'un compte régulier (comme votre propre compte Metamask), cette fonction est comme attendue : msg.sender.call.value() envoie simplement l'ETH vers votre compte. Toutefois, les contrats intelligents peuvent également effectuer des appels. Si un contrat personnalisé et malveillant appelle la fonction `withdraw()`, msg.sender.call.value() n'enverra pas le montant d'ETH (via `amount`), mais appellera aussi implicitement le contrat pour commencer à exécuter du code. Imaginez le contrat malveillant suivant :
+Si elle est appelée à partir d'un compte régulier (comme votre propre compte MetaMask), cette fonction est comme attendue : msg.sender.call.value() envoie simplement l'ETH vers votre compte. Toutefois, les contrats intelligents peuvent également effectuer des appels. Si un contrat personnalisé et malveillant appelle la fonction `withdraw()`, msg.sender.call.value() n'enverra pas le montant d'ETH (via `amount`), mais appellera aussi implicitement le contrat pour commencer à exécuter du code. Imaginez le contrat malveillant suivant :
 
 ```solidity
 contract Attacker {
@@ -116,8 +116,6 @@ Appeler Attacker.beginAttack() démarrera un cycle qui ressemble à quelque chos
 ```
 
 Appeller Attacker.beginAttack avec 1 ETH génère une nouvelle attaque par réentrance contre la victime, retirant plus d'ETH qu'il n'en a été fourni (prélevé sur les soldes des autres utilisateurs, entraînant une sous-garantie du contrat de la victime)
-
-<!-- TODO create a subpage related to re-entrancy & move this content there -->
 
 ### Comment gérer la réentrance (de la mauvaise façon) {#how-to-deal-with-re-entrancy-the-wrong-way}
 
@@ -219,7 +217,7 @@ Les types d'attaque ci-dessus couvrent les problèmes de codage de contrats inte
 
 Complément d'information:
 
-- [Consensys Smart Contract Known Attacks](https://consensys.github.io/smart-contract-best-practices/known_attacks/) - Une explication très lisible des vulnérabilités les plus importantes, avec un exemple de code pour la plupart.
+- [Consensys Smart Contract Known Attacks](https://consensys.github.io/smart-contract-best-practices/attacks/) - Une explication très lisible des vulnérabilités les plus importantes, avec un exemple de code pour la plupart.
 - [Registre SWC](https://swcregistry.io/docs/SWC-128) - Liste conservée des CWE qui s'appliquent à Ethereum et aux contrats intelligents
 
 ## Outils de sécurité {#security-tools}

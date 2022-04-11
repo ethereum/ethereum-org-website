@@ -9,7 +9,7 @@ Para que una aplicación web interactúe con el blockchain de Ethereum (es decir
 
 Con esta finalidad, cada cliente de Ethereum implementa la especificación de JSON-RPC (protocolo Remote Procedure Call codificado en JSON) para que haya un conjunto uniforme de puntos finales "endpoints" en los que las aplicaciones pueden confiar.
 
-Si quieres usar JavaScript para conectar con un nodo de Ethereum, puedes usar VanillaJS (Vanilla JavaScript). Sin embargo, hay varias bibliotecas de conveniencia que existen dentro del ecosistema que lo simplifican. Con estas bibliotecas, los desarrolladores pueden escribir intuitivamente métodos de una línea para iniciar requerimientos de JSON RPC (de manera oculta) que interactuán con Ethereum.
+Si quieres usar JavaScript para conectar con un nodo de Ethereum, puedes usar VanillaJS (Vanilla JavaScript). Sin embargo, hay varias bibliotecas de conveniencia que existen dentro del ecosistema que lo simplifican. Con estas bibliotecas, los desarrolladores pueden escribir intuitivamente métodos de una línea para iniciar requerimientos de JSON RPC (de manera oculta) que interactúan con Ethereum.
 
 ## Requisitos previos {#prerequisites}
 
@@ -29,10 +29,10 @@ Mediante proveedores, estas bibliotecas te permiten conectarte a Ethereum y leer
 
 ```js
 // Un Web3Provider enlaza un proveedor estándar Web3, en el
-// que Metamask se inyecta como window.ethereum en cada página
+// que MetaMask se inyecta como window.ethereum en cada página
 const provider = new ethers.providers.Web3Provider(window.ethereum)
 
-// El plugin Metamask también permite firmar transacciones para
+// El plugin MetaMask también permite firmar transacciones para
 // enviar Ether y pagar el cambio de estado dentro de la blockchain.
 // Para esto, necesitamos al titular de la cuenta...
 const signer = provider.getSigner()
@@ -69,11 +69,6 @@ Una vez configurado, estarás habilitado para consultar en la blockchain:
 - eventos de contrato inteligente
 - id de la red
 - y más...
-
-<!--- #### Try it
-
-This remix tutorial will show you [how to query the blockchain using web3js](https://remix.ethereum.org/#optimize=false&evmVersion=null&version=soljson-v0.6.6+commit.6c089d02.js)
---->
 
 ### Funcionalidad de la cartera {#wallet-functionality}
 
@@ -153,12 +148,12 @@ Una vez configurado, podrás:
 
 - crear cuentas
 - enviar transacciones
-- firmar transaciones
+- firmar transacciones
 - y más...
 
 ### Interactuar con las funciones del contrato inteligente {#interact-with-smart-contract-functions}
 
-Las bibliotecas de cliente de Javascript permiten que tu aplicación solicite funciones de contrato inteligente mediante la lectura de la Interfaz Binaria de Aplicación (ABI) de un contrato compilado.
+Las bibliotecas de cliente de JavaScript permiten que tu aplicación solicite funciones de contrato inteligente mediante la lectura de la Interfaz Binaria de Aplicación (ABI) de un contrato compilado.
 
 El ABI esencialmente explica las funciones del contrato en un formato JSON y te permite usarlo como un objeto JavaScript normal.
 
@@ -218,11 +213,6 @@ Esto significa que puedes:
 - Desplegar un contrato
 - Y mucho más...
 
-<!--- #### Try it
-
-This remix tutorial will show you [how to query a contract using web3js](https://remix.ethereum.org/#optimize=false&evmVersion=null&version=soljson-v0.6.6+commit.6c089d02.js)
---->
-
 ### Funciones de utilidad {#utility-functions}
 
 Las funciones de utilidad te dan atajos prácticos que hacen que la construcción sea más fácil con Ethereum.
@@ -247,7 +237,7 @@ ethers.utils.formatEther(balance)
 
 ## Bibliotecas disponibles {#available-libraries}
 
-**Web3.js:** **_API de Javascript de Ethereum._**
+**Web3.js:** **_API de JavaScript de Ethereum._**
 
 - [Documentación](https://web3js.readthedocs.io/en/1.0/)
 - [GitHub](https://github.com/ethereum/web3.js/)
@@ -290,6 +280,6 @@ _¿Conoces algún recurso comunitario que te haya servido de ayuda? Edita esta p
 
 ## Tutoriales relacionados {#related-tutorials}
 
-- [Configurar Web3js para utilizar el blockchain de Ethereum en Javascript](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– Instrucciones de configuración de web3.js para tu proyecto._
-- [Llamar un contrato inteligente desde JavaScript](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– Utilizando un token Dai, ver como llamar a la función de contratos usando Javascript._
+- [Configurar Web3js para utilizar el blockchain de Ethereum en JavaScript](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– Instrucciones de configuración de web3.js para tu proyecto._
+- [Llamar un contrato inteligente desde JavaScript](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– Utilizando un token Dai, ver como llamar a la función de contratos usando JavaScript._
 - [Enviar transacciones usando web 3.0 y Alchemy:](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) _Tutorial de paso a paso para enviar transacciones desde el backend._

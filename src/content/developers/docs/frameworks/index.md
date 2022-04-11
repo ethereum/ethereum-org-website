@@ -36,10 +36,15 @@ Before diving into frameworks, we recommend you first read through our introduct
 - [trufflesuite.com](https://www.trufflesuite.com/)
 - [GitHub](https://github.com/trufflesuite/truffle)
 
-**Hardhat -** **_Ethereum development environment for professionals_**
+**Hardhat -** **_Ethereum development environment for professionals._**
 
 - [hardhat.org](https://hardhat.org)
 - [GitHub](https://github.com/nomiclabs/hardhat)
+
+**Ape -** **_The smart contract development tool for Pythonistas, Data Scientists, and Security Professionals._**
+
+- [Documentation](https://docs.apeworx.io/ape/stable/)
+- [GitHub](https://github.com/ApeWorX/ape)
 
 **Brownie -** **_Python-based development environment and testing framework._**
 
@@ -51,7 +56,7 @@ Before diving into frameworks, we recommend you first read through our introduct
 - [Documentation](https://embark.status.im/docs/)
 - [GitHub](https://github.com/embark-framework/embark)
 
-**Web3j -** **_A platform for developing blockchain applications on the JVM_**
+**Web3j -** **_A platform for developing blockchain applications on the JVM._**
 
 - [Homepage](https://www.web3labs.com/web3j-sdk)
 - [Documentation](https://docs.web3j.io)
@@ -72,7 +77,7 @@ Before diving into frameworks, we recommend you first read through our introduct
 
 - [GitHub](https://github.com/austintgriffith/scaffold-eth)
 
-**The Graph -** **_The Graph for querying blockchain data efficiently_**
+**The Graph -** **_The Graph for querying blockchain data efficiently._**
 
 - [Website](https://thegraph.com/)
 - [Tutorial](/developers/tutorials/the-graph-fixing-web3-data-querying/)
@@ -87,6 +92,12 @@ Before diving into frameworks, we recommend you first read through our introduct
 
 - [Homepage](https://dapp.tools/)
 - [GitHub](https://github.com/dapphub/dapptools/)
+
+**Foundry -** **_A blazing fast, portable and modular toolkit for Ethereum application development written in Rust._**
+
+- [Documentation](https://onbjerg.github.io/foundry-book/)
+- [GitHub](https://github.com/gakonst/foundry/)
+- [Tools for Foundry](https://github.com/crisgarner/awesome-foundry)
 
 ## Further reading {#further-reading}
 

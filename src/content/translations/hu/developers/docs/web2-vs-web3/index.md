@@ -36,8 +36,6 @@ A web3-nak jelenleg van egy pár korlátja:
 
 ## Centralizáció vs decentralizáció {#centralization-vs-decentralization}
 
-<!--Content below provided by Brian Gu-->
-
 Az alábbi táblázatban felsoroljuk a centralizált és decentralizált digitális hálózatok néhány széleskörű előnyét és hátrányát.
 
 | Centralizált hálózatok                                                                                                                                                                                                                               | Decentralizált hálózatok                                                                                                                                                                                                                                         |

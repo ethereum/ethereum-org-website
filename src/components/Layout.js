@@ -14,13 +14,16 @@ import Nav from "./Nav"
 import SideNav from "./SideNav"
 import SideNavMobile from "./SideNavMobile"
 import TranslationBanner from "./TranslationBanner"
+import TranslationBannerLegal from "./TranslationBannerLegal"
 
 import { ZenModeContext } from "../contexts/ZenModeContext"
 
 import { useKeyPress } from "../hooks/useKeyPress"
 
 import { isLangRightToLeft } from "../utils/translations"
+import { scrollIntoView } from "../utils/scrollIntoView"
 import { isMobile } from "../utils/isMobile"
+import { SkipLink, SkipLinkAnchor } from "./SkipLink"
 
 const ContentContainer = styled.div`
   position: relative;
@@ -85,7 +88,12 @@ const Layout = (props) => {
       setIsZenMode(false)
       setShouldShowSideNav(false)
     }
-  }, [props.path])
+
+    if (props.location.hash && !props.location.hash.includes("gatsby")) {
+      const idTag = props.location.hash.split("#")
+      scrollIntoView(idTag[1])
+    }
+  }, [props.path, props.location])
 
   const handleThemeChange = () => {
     setIsDarkTheme(!isDarkTheme)
@@ -112,7 +120,8 @@ const Layout = (props) => {
 
   const isPageLanguageEnglish = intl.language === intl.defaultLanguage
   const isPageContentEnglish = !!props.pageContext.isContentEnglish
-  const isTranslationBannerIgnored = !props.pageContext.ignoreTranslationBanner
+  const isLegal = !!props.pageContext.isLegal
+  const isTranslationBannerIgnored = !!props.pageContext.ignoreTranslationBanner
   const isPageTranslationOutdated =
     !!props.pageContext.isOutdated ||
     !!props.data?.pageData?.frontmatter?.isOutdated
@@ -121,7 +130,7 @@ const Layout = (props) => {
   const shouldShowTranslationBanner =
     (isPageTranslationOutdated ||
       (isPageContentEnglish && !isPageLanguageEnglish)) &&
-    isTranslationBannerIgnored
+    !isTranslationBannerIgnored
 
   const path = props.path
 
@@ -135,9 +144,15 @@ const Layout = (props) => {
         <IntlContextProvider value={intl}>
           <ThemeProvider theme={theme}>
             <GlobalStyle isDarkTheme={isDarkTheme} />
+            <SkipLink hrefId="#main-content" />
             <TranslationBanner
               shouldShow={shouldShowTranslationBanner}
               isPageContentEnglish={isPageContentEnglish}
+              isPageRightToLeft={isPageRightToLeft}
+              originalPagePath={intl.originalPath}
+            />
+            <TranslationBannerLegal
+              shouldShow={isLegal}
               isPageRightToLeft={isPageRightToLeft}
               originalPagePath={intl.originalPath}
             />
@@ -150,6 +165,7 @@ const Layout = (props) => {
                 />
                 {shouldShowSideNav && <SideNavMobile path={path} />}
               </VisuallyHidden>
+              <SkipLinkAnchor id="main-content" />
               <MainContainer>
                 {shouldShowSideNav && (
                   <VisuallyHidden isHidden={isZenMode}>

@@ -8,7 +8,7 @@ incomplete: true
 
 ## 简介 {#a-brief-introduction}
 
-智能合约在以太坊上是公开的，可以被认为是开放式 API。 你不需要写自己的智能合约才能成为一个 dapp 开发者，你只需要知道如何与它们交互。 例如，你可以使用现有的智能合约 [Uniswap](https://uniswap.exchange/swap)，一个去中心化的交易所，在你的应用中处理代币交易逻辑 – 你并不需要一切从零开始。 [查看 Uniswap 合约](https://github.com/Uniswap/uniswap-v2-core/tree/master/contracts).
+智能合约在以太坊上是公开的，可以被认为是开放式 API。 您不需要写自己的智能合约才能成为一个 dapp 开发者，您只需要知道如何与它们交互。 例如，您可以使用现有的智能合约 [Uniswap](https://uniswap.exchange/swap)，一个去中心化的交易所，在您的应用中处理代币交易逻辑 – 您并不需要一切从零开始。 看看他们的一些 [v2](https://github.com/Uniswap/uniswap-v2-core/tree/master/contracts) 和 [v3](https://github.com/Uniswap/uniswap-v3-core/tree/main/contracts) 合约。
 
 ## 相关教程 {#related-tutorials}
 
@@ -17,4 +17,6 @@ incomplete: true
 
 ## 延伸阅读 {#further-reading}
 
-_你知道有什么社区资源帮助过你吗？ 编辑并添加本页面！_
+_还有哪些社区资源对您有所帮助？ 编辑并添加本页面！_
+
+- [可组合性是创新](https://future.a16z.com/how-composability-unlocks-crypto-and-everything-else/)

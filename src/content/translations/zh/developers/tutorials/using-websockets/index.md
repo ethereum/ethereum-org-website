@@ -6,7 +6,7 @@ lang: zh
 sidebar: true
 tags:
   - "alchemy"
-  - "websocket"
+  - "websockets"
   - "查询"
   - "入门指南"
   - "订阅"
@@ -14,6 +14,7 @@ tags:
 skill: 初学者
 source: Alchemy文档
 sourceUrl: https://docs.alchemyapi.io/guides/using-websockets
+published: 2020-12-01
 ---
 
 这是有关使用 WebSocket 和 Alchemy 向以太坊区块链发出请求的入门级指南。
@@ -65,7 +66,7 @@ web3.eth.getBlockNumber().then(console.log) // -> 7946893
 
 ### `eth_subscribe` {#eth-subscribe}
 
-为指定事件创建新的订阅。 [详细了解`eth_subscribe`](https://docs.alchemyapi.io/documentation/alchemy-api-reference/json-rpc#eth_subscribe)。
+为指定的事件创建新的订阅。 [详细了解`eth_subscribe`](https://docs.alchemyapi.io/documentation/alchemy-api-reference/json-rpc#eth_subscribe)。
 
 #### 参数 {#parameters}
 
@@ -92,7 +93,7 @@ web3.eth.getBlockNumber().then(console.log) // -> 7946893
 
 1. `alchemy_newFullPendingTransactions`
 
-返回添加到待处理状态的所有交易的交易信息。 此订阅类型订阅待处理交易，类似于标准 Web3 调用`web3.eth.subscribe("pendingTransactions")`，但不同之处是它发出*完整的交易信息*，而不只是交易哈希。
+返回被添加到待定状态的所有交易的交易信息。 此订阅类型订阅待处理交易，类似于标准 Web3 调用<`web3.eth.subscribe("pendingTransactions")`，但不同之处是它发出*完整的交易信息*，而不只是交易哈希。
 
 示例：
 
@@ -215,7 +216,7 @@ web3.eth.getBlockNumber().then(console.log) // -> 7946893
 
 ### `eth_unsubscribe` {#eth-unsubscribe}
 
-取消现有的订阅以便不再发送更多事件。
+取消一个现有的订阅，以便不再发送任何事件。
 
 参数
 

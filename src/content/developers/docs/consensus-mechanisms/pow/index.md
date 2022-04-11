@@ -6,9 +6,9 @@ sidebar: true
 incomplete: true
 ---
 
-Ethereum, like Bitcoin, currently uses a consensus protocol called **[Proof-of-work (PoW)](https://en.wikipedia.org/wiki/Proof_of_work)**. This allows the nodes of the Ethereum network to agree on the state of all information recorded on the Ethereum blockchain and prevents certain kinds of economic attacks.
+Ethereum, like Bitcoin, currently uses a consensus protocol called **[Proof-of-work (PoW)](https://wikipedia.org/wiki/Proof_of_work)**. This allows the nodes of the Ethereum network to agree on the state of all information recorded on the Ethereum blockchain and prevents certain kinds of economic attacks.
 
-Over the next year, proof-of-work will be phased out in favour of **[Proof-of-stake (PoS)](/developers/docs/consensus-mechanisms/pos)**. The transition to proof-of-stake will also phase out mining from Ethereum. For more details on timing, check the progress of the [Eth2 merge upgrade](/eth2/merge/).
+Over the next year, proof-of-work will be phased out in favour of **[Proof-of-stake (PoS)](/developers/docs/consensus-mechanisms/pos)**. The transition to proof-of-stake will also phase out mining from Ethereum. [More on The Merge.](/upgrades/merge/)
 
 ## Prerequisites {#prerequisites}
 
@@ -56,7 +56,7 @@ To consistently create malicious yet valid blocks, you'd need over 51% of the ne
 
 Proof-of-work is also responsible for issuing new currency into the system and incentivizing miners to do the work.
 
-Miners who successfully create a block get rewarded with two freshly minted ETH and all the transaction fees within the block. A miner may also get 1.75 ETH for an uncle block. Uncle blocks are valid blocks created by a miner practically at the same time as another miner mined the successful block. Uncle blocks usually happen due to network latency.
+Miners who successfully create a block get rewarded with two freshly minted ETH but no longer receive all the transaction fees, as the base fee gets burned, while the tip and block reward goes to the miner. A miner may also get 1.75 ETH for an uncle block. Uncle blocks are valid blocks created by a miner practically at the same time as another miner mined the successful block. Uncle blocks usually happen due to network latency.
 
 ## Finality {#finality}
 
@@ -95,7 +95,7 @@ At a high level, proof-of-stake has the same end goal as proof-of-work: to help 
 
 ## More of a visual learner? {#visual-learner}
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/3EUAcxhuoU4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<YouTube id="3EUAcxhuoU4" />
 
 ## Further Reading {#further-reading}
 

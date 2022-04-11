@@ -1,6 +1,8 @@
 {
   "page-local-environment-brownie-desc": "Ethereum Sanal Makinesi'ni hedefleyen akıllı sözleşmeler için Python bazlı bir geliştirme ve yazılım iskeleti.",
   "page-local-environment-brownie-logo-alt": "Brownie logosu",
+  "page-local-environment-dapptools-desc": "Unix tasarım felsefesini izleyen, birleştirilebilirlik, yapılandırılabilirlik ve genişletilebilirliği destekleyen bir Ethereum odaklı CLI araçları paketi.",
+  "page-local-environment-dapptools-logo-alt": "Dapptools logosu",
   "page-local-environment-embark-desc": "Merkezi olmayan uygulamalar oluşturmak ve dağıtmak için hepsi bir arada geliştirici platformu.",
   "page-local-environment-embark-logo-alt": "Embark logosu",
   "page-local-environment-epirus-desc": "Java sanal makinesinde blockchain uygulamalarını geliştirmek, dağıtmak ve izlemek için bir platform",
@@ -19,7 +21,7 @@
   "page-local-environment-hardhat-logo-alt": "Hardhat logosu",
   "page-local-environment-openZeppelin-desc": "CLI ile akıllı sözleşmeleri derleyerek, yükselterek, dağıtarak ve etkileşime girerek geliştirme süresinden saatlerce tasarruf edin.",
   "page-local-environment-openZeppelin-logo-alt": "OpenZeppelin logosu",
-  "page-local-environment-scaffold-eth-desc": "Hardhat + Create Eth App: Akıllı sözleşmelerle desteklenen merkezi olmayan uygulamalar oluşturmaya başlamak için ihtiyacınız olan her şey",
+  "page-local-environment-scaffold-eth-desc": "Ethers + Hardhat + React: Akıllı sözleşmelerle desteklenen merkezi olmayan uygulamalar oluşturmaya başlamak için ihtiyacınız olan her şey",
   "page-local-environment-scaffold-eth-logo-alt": "scaffold-eth logosu",
   "page-local-environment-setup-meta-desc": "Ethereum geliştirmek için yazılım yığınınızı nasıl seçeceğinize dair bir rehber.",
   "page-local-environment-setup-meta-title": "Ethereum yerel geliştirme kurulumu",

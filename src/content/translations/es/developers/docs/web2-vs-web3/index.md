@@ -36,8 +36,6 @@ Web3 tiene algunas limitaciones ahora mismo:
 
 ## Centralización vs descentralización {#centralization-vs-decentralization}
 
-<!--Content below provided by Brian Gu-->
-
 En siguiente la tabla, enumeramos algunas de las ventajas y desventajas de las redes digitales centralizadas y descentralizadas.
 
 | Sistemas centralizados                                                                                                                                                                                                                                                | Sistemas descentralizados                                                                                                                                                                                                                                                |

@@ -133,7 +133,7 @@ function cancelTrade(uint256 _trade)
 }
 ```
 
-That’s it. You made it to the end of the implementation. It is quite surprising how compact some business concepts are when expressed in code, and this is one of those cases. Check the complete contract [in our repo](https://github.com/HQ20/contracts/blob/dev/contracts/classifieds/Classifieds.sol?ref=hackernoon.com).
+That’s it. You made it to the end of the implementation. It is quite surprising how compact some business concepts are when expressed in code, and this is one of those cases. Check the complete contract [in our repo](https://github.com/HQ20/contracts/blob/master/contracts/classifieds/Classifieds.sol).
 
 ## Conclusion {#conclusion}
 

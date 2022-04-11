@@ -47,7 +47,7 @@ Tarvitsetko perusteellisempaa aloitusta? Katso [ethereum.org/fi/learn](/learn/) 
 ## Python-projektit ja -työkalut {#python-projects-and-tools}
 
 - [Brownie](https://github.com/eth-brownie/brownie) - _Python-ohjelmistokehys Ethereum-älysopimusten julkaisemiseen, testaukseen ja käyttämiseen_
-- [eth-utils](https://github.com/ethereum/eth-utils/) - _hyötyfunktioita Etherumiin liittyvien koodipohjien kanssa työskentelyyn_
+- [eth-utils](https://github.com/ethereum/eth-utils/) - _hyötyfunktioita Ethereumiin liittyvien koodipohjien kanssa työskentelyyn_
 - [py-evm](https://github.com/ethereum/py-evm) - _Ethereum Virtual Machine -toteutus_
 - [py-solc-x](https://pypi.org/project/py-solc-x/) - _Python wrapper, solc solidity -kääntäjällä ja 0.5x tuella_
 - [py-wasm](https://github.com/ethereum/py-wasm) - _Python-toteutus WebAssembly-tulkista_

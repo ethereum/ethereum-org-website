@@ -27,34 +27,81 @@ When people and exchanges discuss ETH prices, they're talking about Mainnet ETH.
 
 In addition to Mainnet, there are public testnets. These are networks used by protocol developers or smart contract developers to test both protocol upgrades as well as potential smart contracts in a production-like environment before deployment to Mainnet. Think of this as an analog to production versus staging servers.
 
-It’s generally important to test any contract code you write on a testnet before deploying to the Mainnet. If you're building a dapp that integrates with existing smart contracts, most projects have copies deployed to testnests that you can interact with.
+It’s generally important to test any contract code you write on a testnet before deploying to the Mainnet. If you're building a dapp that integrates with existing smart contracts, most projects have copies deployed to testnets that you can interact with.
 
 Most testnets use a proof-of-authority consensus mechanism. This means a small number of nodes are chosen to validate transactions and create new blocks – staking their identity in the process. It's hard to incentivise mining on a proof-of-work testnet which can leave it vulnerable.
+
+ETH on testnets has no real value; therefore, there are no markets for testnet ETH. Since you need ETH to actually interact with Ethereum, most people get testnet ETH from faucets. Most faucets are webapps where you can input an address which you request ETH to be sent to.
+
+#### Arbitrum Rinkeby {#arbitrum-rinkeby}
+
+A testnet for [Arbitrum](https://arbitrum.io/).
+
+##### Arbitrum Rinkeby faucets
+
+- [FaucETH](https://fauceth.komputing.org)(Multi-Chain faucet without the need for social account)
+- [Chainlink faucet](https://faucets.chain.link/)
+- [Paradigm faucet](https://faucet.paradigm.xyz/)
 
 #### Görli {#goerli}
 
 A proof-of-authority testnet that works across clients.
 
+##### Görli faucets
+
+- [Görli faucet](https://faucet.goerli.mudit.blog/)
+- [Chainlink faucet](https://faucets.chain.link/)
+- [Alchemy Goerli Faucet](https://goerlifaucet.com/)
+
+#### Kintsugi {#kintsugi}
+
+A merge testnet for Ethereum.
+
+##### Kintsugi faucets
+
+- [FaucETH](https://fauceth.komputing.org)(Multi-Chain faucet without the need for social account)
+- [Kintsugi faucet](https://faucet.kintsugi.themerge.dev/)
+
 #### Kovan {#kovan}
 
 A proof-of-authority testnet for those running OpenEthereum clients.
+
+##### Kovan faucets
+
+- [FaucETH](https://fauceth.komputing.org)(Multi-Chain faucet without the need for social account)
+- [Kovan faucet](https://faucet.kovan.network/)
+- [Chainlink faucet](https://faucets.chain.link/)
+- [Paradigm faucet](https://faucet.paradigm.xyz/)
+
+#### Optimisic Kovan {#optimistic-kovan}
+
+A testnet for [Optimism](https://www.optimism.io/).
+
+##### Optimistic Kovan faucets
+
+- [FaucETH](https://fauceth.komputing.org)(Multi-Chain faucet without the need for social account)
+- [Paradigm faucet](https://faucet.paradigm.xyz/)
 
 #### Rinkeby {#rinkeby}
 
 A proof-of-authority testnet for those running Geth client.
 
+##### Rinkeby faucets
+
+- [FaucETH](https://fauceth.komputing.org)(Multi-Chain faucet without the need for social account)
+- [Alchemy faucet](https://RinkebyFaucet.com)
+- [Chainlink faucet](https://faucets.chain.link/)
+- [Paradigm faucet](https://faucet.paradigm.xyz/)
+- [Rinkeby faucet](https://faucet.rinkeby.io/)
+
 #### Ropsten {#ropsten}
 
 A proof-of-work testnet. This means it's the best like-for-like representation of Ethereum.
 
-### Testnet faucets {#testnet-faucets}
+##### Ropsten faucets
 
-ETH on testnets has no real value; therefore, there are no markets for testnet ETH. Since you need ETH to actually interact with Ethereum, most people get testnet ETH from faucets. Most faucets are webapps where you can input an address which you request ETH to be sent to.
-
-- [Görli faucet](https://faucet.goerli.mudit.blog/)
-- [Kovan faucet](https://faucet.kovan.network/)
-- [Rinkeby faucet](https://faucet.rinkeby.io/)
-- [Ropsten faucet](https://faucet.ropsten.be/)
+- [FaucETH](https://fauceth.komputing.org)(Multi-Chain faucet without the need for social account)
+- [Paradigm faucet](https://faucet.paradigm.xyz/)
 
 ## Private networks {#private-networks}
 
@@ -72,19 +119,10 @@ The consensus process is controlled by a pre-defined set of nodes that are trust
 
 If a public Ethereum network is like the public internet, you can think of a consortium network as a private intranet.
 
-<!-- TODO
+## Related tools {#related-tools}
 
-## Interacting with testnets {#interactihg-with-tesetnets}
-
-### Your own local network {#your-own-local-network}
-
-`geth -—networkid="12345" console`
-
-### Testnets {#testnets-1}
-
-Wallets like MetaMask or MyEtherWallet will allow you to switch networks so you can test your apps using your test ETH.
-
--->
+- [Chainlist](https://chainlist.org/) _list of EVM networks to connect wallets and providers to the appropriate Chain ID and Network ID_
+- [EVM-based Chains](https://github.com/ethereum-lists/chains) _GitHub repo of chain metadata that powers Chainlist_
 
 ## Further reading {#further-reading}
 

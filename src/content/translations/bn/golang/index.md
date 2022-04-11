@@ -38,13 +38,13 @@ sidebar: true
 
 - [গো ইথেরিয়াম ডকুমেন্টেশন](https://geth.ethereum.org/docs/) - _আধিকারিক ইথেরিয়াম Golang এর জন্য ডকুমেন্টেশন_
 - [গো ইথেরিয়াম গোডক (GoDoc)](https://godoc.org/github.com/ethereum/go-ethereum)
-- [Geth এর সাথে গো-তে একটি ড্যাপ (DApp) তৈরি করা](https://kauri.io/article/60a36c1b17d645939f63415218dc24f9/creating-a-dapp-in-go-with-geth)
+- [Geth এর সাথে গো-তে একটি ড্যাপ (DApp) তৈরি করা](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/creating-a-dapp-in-go-with-geth/)
 - [Golang ও Geth এর সাথে ইথেরিয়াম প্রাইভেট নেটওয়ার্কের সঙ্গে কাজ করা](https://myhsts.org/tutorial-learn-how-to-work-with-ethereum-private-network-with-golang-with-geth.php)
 - [গো-এর সাথে ইথেরিয়ামে সলিডিটি কন্ট্র্যাক্টগুলোর ইউনিট টেস্টিং](https://medium.com/coinmonks/unit-testing-solidity-contracts-on-ethereum-with-go-3cc924091281)
 
 ## উন্নত ইউজ প্যাটার্ন {#advanced-use-patterns}
 
-- [GETH ্সিমুলেটেড ব্যাকএন্ড](https://kauri.io/article/6285c9692883411aa041b6b970405a17/v1/the-geth-simulated-backend)
+- [GETH ্সিমুলেটেড ব্যাকএন্ড](https://kauri.io/#collections/An%20ethereum%20test%20toolkit%20in%20Go/the-geth-simulated-backend/#_top)
 - [ইথেরিয়াম ও কোরাম (Quorum) ব্যবহারকারী পরিষেবা-হিসেবে-ব্লকচেইন অ্যাপগুলো](https://blockchain.dcwebmakers.com/blockchain-as-a-service-apps-using-ethereum-and-quorum.html)
 - [ইথেরিয়াম ব্লকচেইন অ্যাপ্লিকেশনগুলোতে ডিস্ট্রিবিউটেড স্টোরেজ IPFS ও সোয়ার্ম ইন](https://blockchain.dcwebmakers.com/work-with-distributed-storage-ipfs-and-swarm-in-ethereum.html)
 - [মোবাইল ক্লায়েন্ট: লাইব্রেরি ও Inproc ইথেরিয়াম নোড](https://github.com/ethereum/go-ethereum/wiki/Mobile-Clients:-Libraries-and-Inproc-Ethereum-Nodes)

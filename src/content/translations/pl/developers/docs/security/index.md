@@ -77,7 +77,7 @@ Aby zezwolić użytkownikowi na wycofanie ETH, który wcześniej przechowywał w
 2. Wysyła mu kwotę tego salda w ETH
 3. Resetuje saldo do do 0, więc nie może ponownie wypłacić swojego salda.
 
-W przypadku wywołania ze zwykłego konta (takiego jak własne konto Metamask), działa to zgodnie z oczekiwaniami: msg.sender.call.value() po prostu wysyła ETH z twojego konta. Inteligentne kontrakty mogą jednak również wywoływać połączenia. Jeśli niestandardowy, złośliwy kontrakt jest tym, który wywołuje `withdraw()`, msg.sender.call.value() nie tylko wyśle `amount` w ETH, ale będzie także niejawnie wywoływać kontrakt, aby rozpocząć wykonywanie kodu. Wyobraź sobie, że ten złośliwy kontrakt:
+W przypadku wywołania ze zwykłego konta (takiego jak własne konto MetaMask), działa to zgodnie z oczekiwaniami: msg.sender.call.value() po prostu wysyła ETH z twojego konta. Inteligentne kontrakty mogą jednak również wywoływać połączenia. Jeśli niestandardowy, złośliwy kontrakt jest tym, który wywołuje `withdraw()`, msg.sender.call.value() nie tylko wyśle `amount` w ETH, ale będzie także niejawnie wywoływać kontrakt, aby rozpocząć wykonywanie kodu. Wyobraź sobie, że ten złośliwy kontrakt:
 
 ```solidity
 contract Attacker {
@@ -116,8 +116,6 @@ Wywołanie Attacker.beginAttack() rozpocznie cykl, który wygląda następująco
 ```
 
 Wywołanie Attacker.beginAttack z 1 ETH spowoduje atak ponownego wejścia na ofiarę, wycofanie więcej ETH niż zostało dostarczone (pobrane z sald innych użytkowników, powodując, że kontrakt ofiary stanie się niewystarczająco zabezpieczony)
-
-<!-- TODO create a subpage related to re-entrancy & move this content there -->
 
 ### Jak radzić sobie z wielobieżnością (niewłaściwy sposób) {#how-to-deal-with-re-entrancy-the-wrong-way}
 
@@ -219,7 +217,7 @@ Powyższe rodzaje ataków obejmują problemy z kodowaniem inteligentnych kontrak
 
 Dalsza lektura:
 
-- [Consensys Smart Contract — znane ataki](https://consensys.github.io/smart-contract-best-practices/known_attacks/) — bardzo czytelne wyjaśnienie najważniejszych luk, z przykładowym kodem dla większości.
+- [Consensys Smart Contract — znane ataki](https://consensys.github.io/smart-contract-best-practices/attacks/) — bardzo czytelne wyjaśnienie najważniejszych luk, z przykładowym kodem dla większości.
 - [Rejestr SWC](https://swcregistry.io/docs/SWC-128) — wyselekcjonowana lista CWE, które mają zastosowanie do Ethereum i inteligentnych kontraktów
 
 ## Narzędzia bezpieczeństwa {#security-tools}

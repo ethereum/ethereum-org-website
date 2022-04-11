@@ -11,8 +11,6 @@ Blocurile sunt loturi de tranzacții cu un hash din blocul anterior din lanț. A
 
 Blocurile sunt un subiect foarte prietenos pentru începători. Dar pentru a te ajuta să înțelegi mai bine această pagină, îți recomandăm să citești mai întâi despre [Conturi](/developers/docs/accounts/), [Tranzacții](/developers/docs/transactions/) și [introducere în Ethereum](/developers/docs/intro-to-ethereum/).
 
-<!--The content below was provided by Brian Gu with exception of "what's in a block"-->
-
 ## De ce blocuri? {#why-blocks}
 
 Pentru a ne asigura că toți participanții din rețeaua Ethereum mențin o stare sincronizată și convin asupra istoricului precis al tranzacțiilor pe care le grupăm în blocuri. Aceasta înseamnă că zeci (sau sute) de tranzacții sunt comise, convenite și sincronizate simultan.
@@ -29,7 +27,7 @@ Odată ce un bloc este asamblat (minat) de către un miner din rețea, acesta es
 
 ### O demonstrație vizuală {#a-visual-demo}
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/_160oMzblY8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+<YouTube id="_160oMzblY8" />
 
 ## Protocolul „Dovada muncii” {#proof-of-work-protocol}
 

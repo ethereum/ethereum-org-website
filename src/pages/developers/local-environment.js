@@ -41,21 +41,21 @@ const Slogan = styled.h1`
   font-family: ${(props) => props.theme.fonts.monospace};
   text-transform: uppercase;
   font-weight: 600;
-  font-size: 32px;
+  font-size: 2rem;
   line-height: 140%;
   text-align: center;
   margin: 0 0 1.625rem;
 `
 
 // const Subtitle = styled.div`
-//   font-size: 20px;
+//   font-size: 1.25rem;
 //   line-height: 140%;
 //   color: ${(props) => props.theme.colors.text200};
 //   margin-bottom: 0.5rem;
 // `
 
 const SubSlogan = styled.p`
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 140%;
   color: ${(props) => props.theme.colors.text200};
   margin-bottom: 0.5rem;
@@ -193,7 +193,7 @@ const H2 = styled.h2`
 //       background: "#fff",
 //       name: "Solidity",
 //       description:
-//         "Solidity, the Contract-Oriented Programming Language. Inspired by C++ and Javascript.",
+//         "Solidity, the Contract-Oriented Programming Language. Inspired by C++ and JavaScript.",
 //     },
 //     {
 //       id: "vyper",
@@ -275,7 +275,7 @@ const frameworksList = [
     id: "dapptools",
     url: "https://dapp.tools/",
     githubUrl: "https://github.com/dapphub/dapptools",
-    background: "#fff",
+    background: "#ffffff",
     name: "Dapptools",
     description: "page-local-environment-dapptools-desc",
     alt: "page-local-environment-dapptools-logo-alt",
@@ -284,7 +284,7 @@ const frameworksList = [
     id: "waffle",
     url: "https://getwaffle.io/",
     githubUrl: "https://github.com/EthWorks/waffle",
-    background: "#fff",
+    background: "#ffffff",
     name: "Waffle",
     description: "page-local-environment-waffle-desc",
     alt: "page-local-environment-waffle-logo-alt",
@@ -295,7 +295,6 @@ const frameworksList = [
     githubUrl: "https://github.com/nomiclabs/hardhat",
     background: "#faf8fb",
     name: "Hardhat",
-    image: "https://hardhat.org/assets/img/Hardhat-logo.652a7049.svg",
     description: "page-local-environment-hardhat-desc",
     alt: "page-local-environment-hardhat-logo-alt",
   },
@@ -303,7 +302,7 @@ const frameworksList = [
     id: "truffle",
     url: "https://www.trufflesuite.com/",
     githubUrl: "https://github.com/trufflesuite/truffle",
-    background: "#31272A",
+    background: "#31272a",
     name: "Truffle",
     description: "page-local-environment-truffle-desc",
     alt: "page-local-environment-truffle-logo-alt",
@@ -312,7 +311,7 @@ const frameworksList = [
     id: "embark",
     url: "https://framework.embarklabs.io/",
     githubUrl: "https://github.com/embarklabs/embark",
-    background: "#1B3E5F",
+    background: "#1b3e5f",
     name: "Embark",
     description: "page-local-environment-embark-desc",
     alt: "page-local-environment-embark-logo-alt",
@@ -321,7 +320,7 @@ const frameworksList = [
     id: "brownie",
     url: "https://github.com/eth-brownie/brownie",
     githubUrl: "https://github.com/eth-brownie/brownie",
-    background: "#fff",
+    background: "#ffffff",
     name: "Brownie",
     description: "page-local-environment-brownie-desc",
     alt: "page-local-environment-brownie-logo-alt",
@@ -330,7 +329,7 @@ const frameworksList = [
     id: "epirus",
     url: "https://www.web3labs.com/epirus",
     githubUrl: "https://github.com/web3labs/epirus-free",
-    background: "#fff",
+    background: "#ffffff",
     name: "Epirus",
     description: "page-local-environment-epirus-desc",
     alt: "page-local-environment-epirus-logo-alt",
@@ -339,7 +338,7 @@ const frameworksList = [
     id: "createethapp",
     url: "https://github.com/PaulRBerg/create-eth-app",
     githubUrl: "https://github.com/PaulRBerg/create-eth-app",
-    background: "#fff",
+    background: "#ffffff",
     name: "Create Eth App",
     description: "page-local-environment-eth-app-desc",
     alt: "page-local-environment-eth-app-logo-alt",
@@ -348,7 +347,7 @@ const frameworksList = [
     id: "scaffoldeth",
     url: "https://github.com/austintgriffith/scaffold-eth",
     githubUrl: "https://github.com/austintgriffith/scaffold-eth",
-    background: "#fff",
+    background: "#ffffff",
     name: "scaffold-eth",
     description: "page-local-environment-scaffold-eth-desc",
     alt: "page-local-environment-scaffold-eth-logo-alt",
@@ -357,7 +356,7 @@ const frameworksList = [
     id: "soliditytemplate",
     url: "https://github.com/paulrberg/solidity-template",
     githubUrl: "https://github.com/paulrberg/solidity-template",
-    background: "#fff",
+    background: "#ffffff",
     name: "Solidity template",
     description: "page-local-environment-solidity-template-desc",
     alt: "page-local-environment-solidity-template-logo-alt",
@@ -564,7 +563,7 @@ const ChooseStackPage = ({ data }) => {
         <Subtitle>Frontend JavaScript libraries</Subtitle>
         <p>Description</p>
         <Link to="/developers/docs/apis/javascript/">
-          More on Javascript libraries
+          More on JavaScript libraries
         </Link>
         <CardGrid>
           {jslibraries.map((jslibrary, idx) => {
@@ -620,6 +619,9 @@ export const query = graphql`
           quality: 100
         )
       }
+    }
+    hardhat: file(relativePath: { eq: "dev-tools/hardhat.png" }) {
+      ...devtoolImage
     }
     dapptools: file(relativePath: { eq: "dev-tools/dapptools.png" }) {
       ...devtoolImage

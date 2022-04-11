@@ -19,7 +19,7 @@ Powinieneś zrozumieć koncepcję zdecentralizowanej sieci, zanim zagłębisz si
 
 Możesz zobaczyć widok sieci Ethereum w czasie rzeczywistym, patrząc na [mapę węzłów](https://etherscan.io/nodetracker).
 
-Wiele [implementacji klientów Ethereum](/developers/docs/nodes-and-clients/#clients) istnieje w wielu językach. Cechą wspólną tych implementacji klienckich jest to, że wszystkie są zgodne z formalną specyfikacją. Ta specyfikacja określa, jak działa sieć Ethereum i blockchain.
+Wiele [implementacji klientów Ethereum](/developers/docs/nodes-and-clients/#execution-clients) istnieje w wielu językach. Cechą wspólną tych implementacji klienckich jest to, że wszystkie są zgodne z formalną specyfikacją. Ta specyfikacja określa, jak działa sieć Ethereum i blockchain.
 
 ![Klient Eth1x](../../../../../developers/docs/nodes-and-clients/client-diagram.png) Uproszczony schemat funkcji klienta Ethereum.
 
@@ -57,7 +57,7 @@ Prowadzenie własnego węzła umożliwia korzystanie z Ethereum w sposób napraw
 
 - Twój węzeł samodzielnie weryfikuje wszystkie transakcje i bloki pod kątem zasad konsensusu. Oznacza to, że nie musisz polegać na żadnych innych węzłach w sieci ani w pełni im zaufać.
 - Nie będziesz musiał ujawniać swoich adresów i sald do przypadkowych węzłów. Wszystko można sprawdzić z własnym klientem.
-- Twoja zdecentralizowana aplikacja może być bezpieczniejsza i bardziej prywatna, jeśli używasz własnego węzła. [Metamask](https://metamask.io), [MyEtherWallet](https://myetherwallet.com) i kilka innych portfeli można łatwo skierować na swój własny lokalny węzeł.
+- Twoja zdecentralizowana aplikacja może być bezpieczniejsza i bardziej prywatna, jeśli używasz własnego węzła. [MetaMask](https://metamask.io), [MyEtherWallet](https://myetherwallet.com) i kilka innych portfeli można łatwo skierować na swój własny lokalny węzeł.
 
 ![Jak uzyskać dostęp do Ethereum za pośrednictwem aplikacji i węzłów](../../../../../developers/docs/nodes-and-clients/nodes.png)
 
@@ -99,7 +99,7 @@ Jeśli ktoś uruchamia węzeł Ethereum z publicznym API w Twojej społeczności
 
 Z drugiej strony, jeśli uruchamiasz klienta, możesz podzielić się nim ze znajomymi, którzy mogą tego potrzebować.
 
-## Klienci {#clients}
+## Klienci {#execution-clients}
 
 Ethereum jest zaprojektowany do oferowania różnych klientów, stworzonych przez różne zespoły przy użyciu różnych języków programowania. Dzięki temu sieć jest silniejsza i bardziej zróżnicowana. Idealnym celem jest osiągnięcie różnorodności bez zdominowania przez żadnego klienta w celu zmniejszenia pojedynczych punktów niepowodzenia.
 
@@ -191,12 +191,12 @@ Przed zainstalowaniem klienta upewnij się, że komputer ma wystarczającą ilo�
 
 W zależności od tego, które oprogramowanie i tryb synchronizacji mają być używane, potrzebne są setki GB przestrzeni dyskowej. Przybliżone wartości i wzrost można znaleźć poniżej.
 
-| Klient         | Rozmiar dysku (szybka synchronizacja) | Rozmiar dysku (pełne archiwum) |
-| -------------- | ------------------------------------- | ------------------------------ |
-| Klient Etherum | 400 GB+                               | 4,7 TB+                        |
-| OpenEthereum   | 280 GB+                               | 4,6 TB+                        |
-| Nethermind     | 200 GB+                               | 3 TB+                          |
-| Besu           | 750 GB+                               | 4 TB+                          |
+| Klient          | Rozmiar dysku (szybka synchronizacja) | Rozmiar dysku (pełne archiwum) |
+| --------------- | ------------------------------------- | ------------------------------ |
+| Klient Ethereum | 400 GB+                               | 4,7 TB+                        |
+| OpenEthereum    | 280 GB+                               | 4,6 TB+                        |
+| Nethermind      | 200 GB+                               | 3 TB+                          |
+| Besu            | 750 GB+                               | 4 TB+                          |
 
 ![Wykres pokazujący, że ilość GB potrzebna do pełnej synchronizacji ma tendencję wzrostową](../../../../../developers/docs/nodes-and-clients/full-sync.png)
 
@@ -206,15 +206,15 @@ Te wykresy pokazują, jak zawsze zmieniają się wymagania dotyczące przechowyw
 
 ### Ethereum na komputerze jednopłytowym {#ethereum-on-a-single-board-computer}
 
-Najbardziej wygodnym i tanim sposobem uruchomienia węzła Ethereum jest korzystanie z jednego komputera z architekturą ARM jak Raspberry Pi. [Ethereum na ARM](https://twitter.com/EthereumOnARM) dostarcza obrazy klientów Geth, Parity, Netherumd i Besu. Oto prosty samouczek [jak zbudować i skonfigurować klienta ARM](/developers/tutorials/run-node-raspberry-pi/).
+Najbardziej wygodnym i tanim sposobem uruchomienia węzła Ethereum jest korzystanie z jednego komputera z architekturą ARM jak Raspberry Pi. [Ethereum na ARM](https://twitter.com/EthereumOnARM) dostarcza obrazy klientów Geth, Parity, Nethereumd i Besu. Oto prosty samouczek [jak zbudować i skonfigurować klienta ARM](/developers/tutorials/run-node-raspberry-pi/).
 
 Małe, niedrogie i wydajne urządzenia, takie jak te, są idealne do uruchomienia węzła w domu.
 
-## Klienci Eth2 {#eth2-clients}
+## Klienci Eth2 {#consensus-clients}
 
-Pojawili się nowi klienci obsługujący [aktualizacje Eth2](/eth2/beacon-chain/). Będą obsługiwać łańcuch śledzący i wspierać nowy mechanizm konsensusu [proof-of-stake](/developers/docs/consensus-mechanisms/pos/).
+Pojawili się nowi klienci obsługujący [aktualizacje Eth2](/upgrades/beacon-chain/). Będą obsługiwać łańcuch śledzący i wspierać nowy mechanizm konsensusu [proof-of-stake](/developers/docs/consensus-mechanisms/pos/).
 
-[Wyświetl klientów Eth2](/eth2/get-involved/#clients).
+[Wyświetl klientów Eth2](/upgrades/get-involved/#clients).
 
 ## Dalsza lektura {#further-reading}
 
@@ -233,5 +233,5 @@ W Internecie jest wiele instrukcji i informacji o klientach Ethereum, tutaj jest
 
 ## Powiązane samouczki {#related-tutorials}
 
-- [Uruchamianie węzła za pomocą Geth](/developers/tutorials/run-light-node-geth/) _– Jak pobrać, zainstalować i uruchomić Geth. Omówienie trybów synchronizacji, konsoli Javascript i więcej._
+- [Uruchamianie węzła za pomocą Geth](/developers/tutorials/run-light-node-geth/) _– Jak pobrać, zainstalować i uruchomić Geth. Omówienie trybów synchronizacji, konsoli JavaScript i więcej._
 - [Turn your Raspberry Pi 4 into an Eth 1.0 or Eth 2.0 node just by flashing the MicroSD card – Installation guide](/developers/tutorials/run-node-raspberry-pi/) _– Flash your Raspberry Pi 4, plug in an ethernet cable, connect the SSD disk and power up the device to turn the Raspberry Pi 4 into a full Ethereum 1.0 node or an Ethereum 2.0 node (beacon chain / validator)._

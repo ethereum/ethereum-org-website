@@ -19,7 +19,7 @@ A "csomópont" egy szoftverre utal, melyet kliensnek hívunk. Egy kliens egy Eth
 
 Valós idejű látványt kaphatsz az Ethereum hálózatról, ha megnézed a [csomópontok térképét](https://etherscan.io/nodetracker).
 
-Valamennyi [Ethereum kliens implementáció](/developers/docs/nodes-and-clients/#clients) létezik különböző nyelveken. Ami közös van ezekben az implementációkban, hogy mindegyikük egy formális specifikációt követ. Ez a specifikáció mondja ki, hogyan működik az Ethereum hálózat és a blokklánc.
+Valamennyi [Ethereum kliens implementáció](/developers/docs/nodes-and-clients/#execution-clients) létezik különböző nyelveken. Ami közös van ezekben az implementációkban, hogy mindegyikük egy formális specifikációt követ. Ez a specifikáció mondja ki, hogyan működik az Ethereum hálózat és a blokklánc.
 
 ![Eth1x kliens](../../../../../developers/docs/nodes-and-clients/client-diagram.png) Az Ethereum kliens funkciók egyszerűsített diagramja.
 
@@ -57,7 +57,7 @@ A saját csomópont futtatása lehetővé teszi az Ethereum valóban privát, ö
 
 - A csomópontod önállóan ellenőrzi az összes tranzakciót és blokkot, mely ellentmond a konszenzus szabályoknak. Ez azt jelenti, hogy nem kell semmilyen más csomópontra támaszkodnod a hálózatban vagy teljesen megbíznod bennük.
 - Nem kell a címeidet és az egyenlegeidet véletlenszerű csomópontokra szivárogtatnod. Minden ellenőrizhető a saját klienseddel.
-- A dappod biztonságosabb és privátabb lehet, ha saját csomópontot használsz. A [Metamask](https://metamask.io), a [MyEtherWallet](https://myetherwallet.com) és néhány másik tárcát egyszerűen átirányíthatsz a helyi csomópontodra.
+- A dappod biztonságosabb és privátabb lehet, ha saját csomópontot használsz. A [MetaMask](https://metamask.io), a [MyEtherWallet](https://myetherwallet.com) és néhány másik tárcát egyszerűen átirányíthatsz a helyi csomópontodra.
 
 ![Hogyan férhetsz hozzá az Ethereumhoz az alkalmazásoddal és a csomópontoddal](../../../../../developers/docs/nodes-and-clients/nodes.png)
 
@@ -95,11 +95,11 @@ Ha teljes csomópontot futtatsz, az egész Ethereum hálózat profitál belőle.
 
 A saját csomópont futtatása nehéz lehet, és nem mindig kell saját példányt futtatnod. Ebben az esetben használhatod egy harmadik fél API szolgáltatását, mint az [Infura](https://infura.io), [Alchemy](https://alchemyapi.io), vagy a [QuikNode](https://www.quiknode.io). Alternatívaként használhatod az [ArchiveNode-ot](https://archivenode.io/), ami egy közösség által finanszírozott archív csomópont, mely archív adatot fog szolgáltatni az Ethereum blokkláncról független fejlesztőknek, akik egyébként nem engedhetnék meg ezt maguknak.
 
-Ha valaki egy Ethereum csomópontot futtat egy nyilvános API-jal a közösségedben, akkor át tudod irányítani a könnyű tárcákat (mint a Metamask) erre a közösségi csomópontra [egy egyedi RPC-n keresztül](https://metamask.zendesk.com/hc/en-us/articles/360015290012-Using-a-Local-Node) és nagyobb fokú adatvédelemben részesülhetsz.
+Ha valaki egy Ethereum csomópontot futtat egy nyilvános API-jal a közösségedben, akkor át tudod irányítani a könnyű tárcákat (mint a MetaMask) erre a közösségi csomópontra [egy egyedi RPC-n keresztül](https://metamask.zendesk.com/hc/en-us/articles/360015290012-Using-a-Local-Node) és nagyobb fokú adatvédelemben részesülhetsz.
 
 Másrészt, ha klienst futtatsz, megoszthatod azokat barátaiddal, akiknek szüksége lehet rá.
 
-## Kliensek {#clients}
+## Kliensek {#execution-clients}
 
 Az Ethereumot úgy tervezték, hogy különböző kliensekkel rendelkezzen, amelyeket különféle csapatok fejlesztettek ki különböző programozási nyelvek felhasználásával. Ez erősebbé és sokszínűbbé teszi a hálózatot. Az ideális cél a sokszínűség elérése anélkül, hogy egy kliens dominálna és a hiba lehetőséget a lehető legkisebbre szűkítsük.
 
@@ -210,11 +210,11 @@ A lehető legkényelmesebb és legegyszerűbb módja egy Ethereum csomópont fut
 
 A kicsi, olcsó, és hatékony eszközök mint ezek ideálisak egy otthoni csomópont futtatására.
 
-## Eth2 kliensek {#eth2-clients}
+## Eth2 kliensek {#consensus-clients}
 
-Az [Eth2 fejlesztéseket](/eth2/beacon-chain/) új kliensek támogatják. A Beacon Chain-nen fognak futni és az új [proof-of-stake](/developers/docs/consensus-mechanisms/pos/) konszenzus mechanizmust fogják támogatni.
+Az [Eth2 fejlesztéseket](/upgrades/beacon-chain/) új kliensek támogatják. A Beacon Chain-nen fognak futni és az új [proof-of-stake](/developers/docs/consensus-mechanisms/pos/) konszenzus mechanizmust fogják támogatni.
 
-[Eth2 kliens megtekintése](/eth2/get-involved/#clients).
+[Eth2 kliens megtekintése](/upgrades/get-involved/#clients).
 
 ## További olvasnivaló {#further-reading}
 
@@ -233,5 +233,5 @@ Az interneten rengeteg utasítás és információ található az Ethereum klien
 
 ## Kapcsolódó útmutatók {#related-tutorials}
 
-- [Csomópont futtatása Geth-tel](/developers/tutorials/run-light-node-geth/) _– Hogyan lehet letölteni, telepíteni és futtatni a Geth-et. Lefedi a szinkronizációs módokat, a Javascript konzolt és még sok mást._
+- [Csomópont futtatása Geth-tel](/developers/tutorials/run-light-node-geth/) _– Hogyan lehet letölteni, telepíteni és futtatni a Geth-et. Lefedi a szinkronizációs módokat, a JavaScript konzolt és még sok mást._
 - [Alakítsd át a Raspberry Pi 4-edet egy Eth 1.0 vagy egy Eth 2.0 csomóponttá csak a MicroSD kártya flashelésével - Telepítési útmutató](/developers/tutorials/run-node-raspberry-pi/) _– Flasheld a Raspberry Pi 4-et, csatlakoztass egy ethernet kábelt, csatlakoztasd az SSD-t, és kapcsold be az eszközt, hogy a Raspberry Pi 4 teljes Ethereum 1.0 vagy Ethereum 2.0 csomópontokká (beacon chain / validátor) váljon._

@@ -140,12 +140,20 @@ const Footer = () => {
           text: "decentralized-applications-dapps",
         },
         {
+          to: "/layer-2/",
+          text: "layer-2",
+        },
+        {
+          to: "/run-a-node/",
+          text: "run-a-node",
+        },
+        {
           to: `/stablecoins/`,
           text: "page-stablecoins-title",
         },
         {
-          to: `/eth2/staking/`,
-          text: "page-eth2-get-involved-stake-eth",
+          to: `/staking/`,
+          text: "page-upgrades-get-involved-stake-eth",
         },
       ],
     },
@@ -173,8 +181,8 @@ const Footer = () => {
           text: "ethereum-whitepaper",
         },
         {
-          text: "ethereum-2-0",
-          to: "/eth2/",
+          text: "ethereum-upgrades",
+          to: "/upgrades/",
         },
         {
           text: "ethereum-security",
@@ -189,8 +197,16 @@ const Footer = () => {
           to: "/governance/",
         },
         {
+          text: "bridges",
+          to: "/bridges/",
+        },
+        {
           text: "energy-consumption",
           to: "/energy-consumption/",
+        },
+        {
+          text: "web3",
+          to: "/web3/",
         },
         {
           to: "/eips/",

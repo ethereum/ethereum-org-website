@@ -143,9 +143,3 @@ print("Addr Balance:", addr_balance)
 - [OpenZepelin - 代币](https://docs.openzeppelin.com/contracts/3.x/tokens#ERC20)
 - [OpenZepelin - ERC-20 实施](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)
 - [ConsenSys - ERC-20 实施](https://github.com/ConsenSys/Tokens/blob/master/contracts/eip20/EIP20.sol)
-
-## 相关主题 {#related-topics}
-
-- [ERC-721](/developers/docs/standards/tokens/erc-721/)
-- [ERC-777](/developers/docs/standards/tokens/erc-777/)
-- [ERC-1155](/developers/docs/standards/tokens/erc-1155/)

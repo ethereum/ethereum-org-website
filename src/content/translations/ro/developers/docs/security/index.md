@@ -77,7 +77,7 @@ Pentru a permite unui utilizator să retragă ETH-ul stocat anterior în contrac
 2. Le trimite valoarea soldului în ETH
 3. Resetează soldul la 0, deci nu își mai pot retrage din nou soldul.
 
-Dacă este apelată dintr-un cont obișnuit (cum ar fi propriul tău cont Metamask), acest lucru funcționează așa cum te aștepți: msg.sender.call.value() pur și simplu trimite contul ETH. Cu toate acestea, contractele inteligente pot efectua și ele apeluri. Dacă un contract personalizat, rău intenționat este cel care apelează `withdraw()`, msg.sender.call.value() nu numai că va trimite `amount` din ETH, va apela implicit și contractul pentru a începe executarea codului. Imaginează-ți acest contract răuvoitor:
+Dacă este apelată dintr-un cont obișnuit (cum ar fi propriul tău cont MetaMask), acest lucru funcționează așa cum te aștepți: msg.sender.call.value() pur și simplu trimite contul ETH. Cu toate acestea, contractele inteligente pot efectua și ele apeluri. Dacă un contract personalizat, rău intenționat este cel care apelează `withdraw()`, msg.sender.call.value() nu numai că va trimite `amount` din ETH, va apela implicit și contractul pentru a începe executarea codului. Imaginează-ți acest contract răuvoitor:
 
 ```solidity
 contract Attacker {
@@ -116,8 +116,6 @@ Apelarea Attacker.beginAttack() va începe un ciclu care arată ceva de genul:
 ```
 
 Apelul Attacker.beginAttack cu 1 ETH va ataca prin re-intrare Victima, retrăgând mai mult ETH decât a furnizat (luat din soldurile altor utilizatori, cauzând contractul Victimă să devină sub-garantat)
-
-<!-- TODO create a subpage related to re-entrancy & move this content there -->
 
 ### Cum să te descurci cu re-intrarea (modul greșit) {#how-to-deal-with-re-entrancy-the-wrong-way}
 
@@ -219,7 +217,7 @@ Tipurile de atac de mai sus acoperă probleme de codificare a contractelor intel
 
 Referințe suplimentare:
 
-- [Atacuri cunoscute a contractelor inteligente Consensys](https://consensys.github.io/smart-contract-best-practices/known_attacks/) - O explicație foarte lizibilă a celor mai semnificative vulnerabilități, majoritatea cu un exemplu de cod.
+- [Atacuri cunoscute a contractelor inteligente Consensys](https://consensys.github.io/smart-contract-best-practices/attacks/) - O explicație foarte lizibilă a celor mai semnificative vulnerabilități, majoritatea cu un exemplu de cod.
 - [Registru SWC](https://swcregistry.io/docs/SWC-128) - Lista selectată de CWE-uri care se aplică la Ethereum și la contractele inteligente
 
 ## Instrumente de securitate {#security-tools}

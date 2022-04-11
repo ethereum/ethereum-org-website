@@ -21,8 +21,6 @@ These libraries abstract away much of the complexity of interacting directly wit
 
 ## Available libraries {#available-libraries}
 
-<!-- TODO separate APIs-as-a-service vs. connect your own -->
-
 **Alchemy -** **_Ethereum Development Platform._**
 
 - [alchemy.com](https://www.alchemy.com/)
@@ -30,7 +28,7 @@ These libraries abstract away much of the complexity of interacting directly wit
 - [GitHub](https://github.com/alchemyplatform)
 - [Discord](https://discord.com/invite/A39JVCM)
 
-**BlockCypher -** **_Ethereum Web APIs_**
+**BlockCypher -** **_Ethereum Web APIs._**
 
 - [blockcypher.com](https://www.blockcypher.com/)
 - [Documentation](https://www.blockcypher.com/dev/ethereum/)
@@ -64,9 +62,11 @@ These libraries abstract away much of the complexity of interacting directly wit
 - [chainstack.com](https://chainstack.com)
 - [Documentation](https://docs.chainstack.com)
 
-**QuikNode -** **_Blockchain developer platform._**
+**QuickNode -** **_Blockchain Infrastructure as a Service._**
 
-- [quiknode.io](https://quiknode.io)
+- [quicknode.com](https://quicknode.com)
+- [Documentation](https://www.quicknode.com/docs)
+- [Discord](https://discord.gg/NaR7TtpvJq)
 
 **Python Tooling -** **_Variety of libraries for Ethereum interaction via Python._**
 
@@ -99,6 +99,19 @@ These libraries abstract away much of the complexity of interacting directly wit
 - [Documentation](https://docs.tatum.io/)
 - [Discord](https://discord.gg/EDmW3kjTC9)
 
+**Watchdata -** **_Provide simple and reliable API access to Ethereum blockchain._**
+
+- [Watchdata](https://watchdata.io/)
+- [Documentation](https://docs.watchdata.io/)
+- [Discord](https://discord.com/invite/TZRJbZ6bdn)
+
+**Zmok -** **_Speed-oriented Ethereum nodes as JSON-RPC/WebSockets API._**
+
+- [zmok.io](https://zmok.io/)
+- [GitHub](https://github.com/zmok-io)
+- [Documentation](https://docs.zmok.io/)
+- [Discord](https://discord.gg/fAHeh3ka6s)
+
 ## Further reading {#further-reading}
 
 _Know of a community resource that helped you? Edit this page and add it!_
@@ -110,5 +123,5 @@ _Know of a community resource that helped you? Edit this page and add it!_
 
 ## Related tutorials {#related-tutorials}
 
-- [Set up Web3js to use the Ethereum blockchain in Javascript](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– Instructions for getting web3.js set up in your project._
+- [Set up Web3js to use the Ethereum blockchain in JavaScript](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– Instructions for getting web3.js set up in your project._
 - [Calling a smart contract from JavaScript](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– Using the DAI token, see how to call contracts function using JavaScript._

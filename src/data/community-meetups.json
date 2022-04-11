@@ -18,6 +18,12 @@
     "link": "https://www.meetup.com/web3sydney/"
   },
   {
+    "title": "Web3 London",
+    "emoji": ":uk:",
+    "location": "London",
+    "link": "https://www.meetup.com/web3london/"
+  },
+  {
     "title": "Ethereum Vienna",
     "emoji": ":austria:",
     "location": "Vienna",
@@ -54,10 +60,10 @@
     "link": "https://www.meetup.com/Ethereum-Developers/"
   },
   {
-    "title": "Vancouver Ethereum & Blockchain 2.0 Meetup",
+    "title": "Ethereum Vancouver",
     "emoji": ":canada:",
     "location": "Vancouver",
-    "link": "https://www.meetup.com/Vancouver-Ethereum-Meetup/"
+    "link": "https://www.meetup.com/ethvancouver-meetup-group/"
   },
   {
     "title": "Ethereum Paris",
@@ -84,10 +90,10 @@
     "link": "https://www.meetup.com/Ethereum-Hong-Kong/"
   },
   {
-    "title": "Ethereum Indonesia",
+    "title": "Ethereum Jakarta",
     "emoji": ":indonesia:",
     "location": "Jakarta",
-    "link": "https://www.meetup.com/Ethereum-indonesia/"
+    "link": "https://ethereum-jkt.github.io/"
   },
   {
     "title": "Italian Ethereum Meetup",
@@ -136,12 +142,6 @@
     "emoji": ":south_africa:",
     "location": "Cape Town",
     "link": "https://www.meetup.com/Cape-Town-Ethereum-Meetup/"
-  },
-  {
-    "title": "Johannesburg Ethereum Meetup",
-    "emoji": ":south_africa:",
-    "location": "Johannesburg",
-    "link": "https://www.meetup.com/Johannesburg-Ethereum-Meetup/"
   },
   {
     "title": "Jeju Blockchain Meetup",

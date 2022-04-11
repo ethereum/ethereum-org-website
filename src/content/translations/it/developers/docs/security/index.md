@@ -77,7 +77,7 @@ Per consentire a un utente di prelevare gli ETH precedentemente archiviati nel c
 2. Gli invia l'importo del saldo in ETH
 3. Imposta il saldo a 0, in modo che non sia possibile prelevarlo nuovamente.
 
-Se chiamato da un account standard (ad esempio un account Metamask), questo codice funziona come previsto: msg.sender.call.value() invia semplicemente il saldo ETH. Però anche gli Smart Contract possono effettuare chiamate. Se quindi è un contratto maligno modificato a chiamare `withdraw()`, msg.sender.call.value() non invierà solo `amount` (l'importo) di ETH, ma chiamerà anche implicitamente il contratto per iniziare l'esecuzione del codice. Immagina che a chiamare sia questo contratto maligno:
+Se chiamato da un account standard (ad esempio un account MetaMask), questo codice funziona come previsto: msg.sender.call.value() invia semplicemente il saldo ETH. Però anche gli Smart Contract possono effettuare chiamate. Se quindi è un contratto maligno modificato a chiamare `withdraw()`, msg.sender.call.value() non invierà solo `amount` (l'importo) di ETH, ma chiamerà anche implicitamente il contratto per iniziare l'esecuzione del codice. Immagina che a chiamare sia questo contratto maligno:
 
 ```solidity
 contract Attacker {
@@ -116,8 +116,6 @@ Chiamando Attacker.beginAttack() si avvierà un ciclo del tipo:
 ```
 
 Chiamando Attacker.beginAttack con 1 ETH si attacca Victim con codice rientrante, prelevando più ETH rispetto alla disponibilità (prendendoli dai saldi di altri utenti e rendendo il contratto Victim non collateralizzato)
-
-<!-- TODO create a subpage related to re-entrancy & move this content there -->
 
 ### Come gestire il codice rientrante (in modo sbagliato) {#how-to-deal-with-re-entrancy-the-wrong-way}
 
@@ -219,7 +217,7 @@ I tipi di attacco illustrati sopra coprono i problemi del codice di Smart Contra
 
 Letture consigliate:
 
-- [Consensys Smart Contract Known Attacks](https://consensys.github.io/smart-contract-best-practices/known_attacks/) - Una spiegazione molto leggibile delle vulnerabilità più significative, molte con codice di esempio.
+- [Consensys Smart Contract Known Attacks](https://consensys.github.io/smart-contract-best-practices/attacks/) - Una spiegazione molto leggibile delle vulnerabilità più significative, molte con codice di esempio.
 - [SWC Registry](https://swcregistry.io/docs/SWC-128) - Elenco curato di CWE che si applicano a Ethereum e Smart Contract
 
 ## Strumenti per la sicurezza {#security-tools}

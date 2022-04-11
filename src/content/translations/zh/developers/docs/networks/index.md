@@ -11,7 +11,7 @@ sidebar: true
 
 ## 前置要求 {#prerequisites}
 
-你需要在浏览不同的网络之前了解以太坊的基础知识，因为测试网络将会提供一个便捷且安全的以太坊版本供你使用。 尝试访问[以太坊介绍](/developers/docs/intro-to-ethereum/)。
+你需要在浏览不同的网络之前了解以太坊的基础知识，因为测试网络将会提供一个便捷且安全的以太坊版本供你使用。 尝试访问[以太坊简介](/developers/docs/intro-to-ethereum/)。
 
 ## 公共网络 {#public-networks}
 
@@ -58,13 +58,13 @@ sidebar: true
 
 ## 私有网络 {#private-networks}
 
-如果以太坊网络的节点未连接到公共网络（即主网或测试网），则以太坊网络是专用网络。 在这种情况下，私有仅指保留或隔离，而不是保护或安全。
+如果以太坊网络的节点未连接到公共网络（即 主网或测试网），则以太坊网络是专用网络。 在这种情况下，专用仅指保留或隔离，而不是保护或安全。
 
 ### 开发网络 {#development-networks}
 
 要开发以太坊应用程序，你需要在专用网络上运行它，以便在部署它之前了解它的工作方式。 与在计算机上创建用于 web 开发的本地服务器类似，你可以创建本地区块链实例来测试你的 dapp。 这允许比公共测试网更快的迭代。
 
-有一些项目和工具专门协助这方面的工作。 进一步了解[开发网络](/developers/docs/development-networks/)。
+有一些项目和工具专门协助这方面的工作。 进一步了解[开发网络](/developers/docs/development/networks/)。
 
 ### 联盟网络 {#consortium-networks}
 
@@ -72,20 +72,11 @@ sidebar: true
 
 如果公共以太坊网络类似于公共互联网，那么你可以将联合体网络视为专用内部网。
 
-<!-- TODO
+## 相关工具 {#related-tools}
 
-## Interacting with testnets
-
-### Your own local network {#your-own-local-network}
-
-`geth -—networkid="12345" console`
-
-### Testnets {#testnets-1}
-
-Wallets like MetaMask or MyEtherWallet will allow you to switch networks so you can test your apps using your test ETH.
-
--->
+- [Chainlist](https://chainlist.org/) _EVM 网络列表，可以帮钱包和供应商连接到需要的链 ID 和网络 ID_
+- [基于 EVM 的链](https://github.com/ethereum-lists/chains) _给 Chainlist 提供链元数据的 GitHub 库_
 
 ## 延伸阅读 {#further-reading}
 
-_你知道有什么社区资源帮助过你吗？ 编辑并添加本页面！_
+_还有哪些社区资源对您有所帮助？ 编辑并添加本页面！_

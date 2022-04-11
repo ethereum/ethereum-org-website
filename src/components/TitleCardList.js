@@ -3,6 +3,7 @@ import styled from "styled-components"
 import { GatsbyImage } from "gatsby-plugin-image"
 import Icon from "./Icon"
 import Link from "./Link"
+import Translation from "./Translation"
 
 const Table = styled.div`
   background-color: ${(props) => props.theme.colors.background};
@@ -39,7 +40,7 @@ const Item = styled.div`
   margin-bottom: 1px;
   padding: 1rem;
   width: 100%;
-  color: #000;
+  color: #000000;
   &:hover {
     box-shadow: 0 0 1px ${(props) => props.theme.colors.primary};
     background: ${(props) => props.theme.colors.primary100};
@@ -56,7 +57,7 @@ const ItemLink = styled(Link)`
   margin-bottom: 1px;
   padding: 1rem;
   width: 100%;
-  color: #000;
+  color: #000000;
   &:hover {
     box-shadow: 0 0 1px ${(props) => props.theme.colors.primary};
     background: ${(props) => props.theme.colors.primary100};
@@ -126,14 +127,14 @@ const TitleCardList = ({
   content,
   className,
   clickHandler,
-  header,
+  headerKey,
   icon,
   isCode,
 }) => (
   <Table isCode={isCode} className={className}>
     <TableHeader>
       {icon && <StyledIcon name={icon} />}
-      {header}
+      <Translation id={headerKey} />
       {isCode && (
         <CodeBoxHeader>
           <Red />

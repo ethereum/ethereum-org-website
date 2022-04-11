@@ -32,7 +32,7 @@ const Slash = styled.span`
 
 const CrumbLink = styled(Link)`
   margin: 0;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 140%;
   letter-spacing: 0.04em;
   font-weight: normal;

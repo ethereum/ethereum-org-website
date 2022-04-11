@@ -5,7 +5,7 @@ lang: en
 sidebar: true
 ---
 
-Ethereum smart contracts are extremely flexible, capable of both holding large quantities of tokens (often in excess of $1B) and running immutable logic based on previously deployed smart contract code. While this has created a vibrant and creative ecosystem of trustless, interconnected smart contracts, it is also the perfect ecosystem to attract attackers looking to profit by exploiting vulnerabilities in smart contracts and unexpected behavior in Ethereum. Smart contract code _usually_ cannot be changed to patch security flaws, assets that have been stolen from smart contracts are irrecoverable, and stolen assets are extremely difficult to track. The total of amount of value stolen or lost due to smart contract issues is easily in the $1B. Some of the larger due to smart contract coding errors include:
+Ethereum smart contracts are extremely flexible, capable of both holding large quantities of tokens (often in excess of $1B) and running immutable logic based on previously deployed smart contract code. While this has created a vibrant and creative ecosystem of trustless, interconnected smart contracts, it is also the perfect ecosystem to attract attackers looking to profit by exploiting vulnerabilities in smart contracts and unexpected behavior in Ethereum. Smart contract code _usually_ cannot be changed to patch security flaws, assets that have been stolen from smart contracts are irrecoverable, and stolen assets are extremely difficult to track. The total of amount of value stolen or lost due to smart contract issues is easily over $1B. Some of the larger due to smart contract coding errors include:
 
 - [Parity multi-sig issue #1 - $30M lost](https://www.coindesk.com/30-million-ether-reported-stolen-parity-wallet-breach)
 - [Parity multi-sig issue #2 - $300M locked](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether)
@@ -77,7 +77,7 @@ To allow a user to withdraw ETH they have previously stored on the contract, thi
 2. Sends them that balance amount in ETH
 3. Resets their balance to 0, so they cannot withdraw their balance again.
 
-If called from a regular account (such as your own Metamask account), this functions as expected: msg.sender.call.value() simply sends your account ETH. However, smart contracts can make calls as well. If a custom, malicious contract is the one calling `withdraw()`, msg.sender.call.value() will not only send `amount` of ETH, it will also implicitly call the contract to begin executing code. Imagine this malicious contract:
+If called from a regular account (such as your own MetaMask account), this functions as expected: msg.sender.call.value() simply sends your account ETH. However, smart contracts can make calls as well. If a custom, malicious contract is the one calling `withdraw()`, msg.sender.call.value() will not only send `amount` of ETH, it will also implicitly call the contract to begin executing code. Imagine this malicious contract:
 
 ```solidity
 contract Attacker {
@@ -116,8 +116,6 @@ Calling Attacker.beginAttack() will start a cycle that looks something like:
 ```
 
 Calling Attacker.beginAttack with 1 ETH will re-entrancy attack Victim, withdrawing more ETH than it provided (taken from other users' balances, causing the Victim contract to become under-collateralized)
-
-<!-- TODO create a subpage related to re-entrancy & move this content there -->
 
 ### How to deal with re-entrancy (the wrong way) {#how-to-deal-with-re-entrancy-the-wrong-way}
 
@@ -219,7 +217,7 @@ The attack types above cover smart-contract coding issues (re-entrancy) and Ethe
 
 Further reading:
 
-- [Consensys Smart Contract Known Attacks](https://consensys.github.io/smart-contract-best-practices/known_attacks/) - A very readable explanation of the most significant vulnerabilities, with sample code for most.
+- [Consensys Smart Contract Known Attacks](https://consensys.github.io/smart-contract-best-practices/attacks/) - A very readable explanation of the most significant vulnerabilities, with sample code for most.
 - [SWC Registry](https://swcregistry.io/docs/SWC-128) - Curated list of CWE's that apply to Ethereum and smart contracts
 
 ## Security tools {#security-tools}

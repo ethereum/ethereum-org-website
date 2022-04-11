@@ -55,7 +55,7 @@ sidebar: true
 
 - [How does Ethereum work, anyway?](https://medium.com/@preethikasireddy/how-does-ethereum-work-anyway-22d1df506369) _Sept 27, 2017 - Preethi Kasireddy_
 - [A Gentle Introduction to Ethereum](https://bitsonblocks.net/2016/10/02/gentle-introduction-ethereum/) _Oct 2, 2016 - Antony Lewis_
-- [Introduction to Blockchain through Cryptoeconomics - Part 1](https://blockchainatberkeley.blog/introduction-to-blockchain-through-cryptoeconomics-part-1-bitcoin-369f245067f9) _Jan 26, 2018 - Zubin Koticha_
+- [Introduction to Blockchain through Cryptoeconomics - Part 1](https://medium.com/blockchain-at-berkeley/introduction-to-blockchain-through-cryptoeconomics-part-1-bitcoin-369f245067f9) _Jan 26, 2018 - Zubin Koticha_
 - [Introduction to Blockchain through Cryptoeconomics - Part 2](https://medium.com/mechanism-labs/introduction-to-bitcoin-through-cryptoeconomics-part-2-proof-of-work-and-nakamoto-consensus-1252f6a6c012) _July 19, 2018 - Zubin Koticha_
 - [حساب ها، تراکنش ها، سوخت و موارد دیگر در اتریوم (قسمت اول)](https://coiniran.com/about-ethereum-network-pt1/) _Feb, 2018 - کوین ایران_
 - [حساب ها، تراکنش ها، سوخت و موارد دیگر در اتریوم (قسمت دوم)](https://coiniran.com/about-ethereum-network-pt2/) _Feb, 2018 - کوین ایران_
@@ -76,7 +76,7 @@ sidebar: true
 - [What does it mean to mine Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) _Updated often - Ethhub_
 
 در ETH 2.0 اتریوم روی سیستم دیگری به نام "گواه اثبات سهام" منتقل می‌شود.
-[Read more about ETH 2.0 below](#eth-2-0)
+[Read more about ETH 2.0 below](#consensus-layer-upgrades)
 
 ## کلاینت‌ها و نود‌ها {#clients-and-nodes}
 
@@ -98,7 +98,7 @@ sidebar: true
 تلاش‌های بسیاری در حال انجام است تا با افزایش سرعت تراکنش‌ها، اتریوم را مقیاس‌پذیر‌تر کنند. برای این کار عموما از راه‌حل‌های "لایه 1" و "لایه 2" استفاده می‌شود.
 
 “لایه 1" مربوط به بهبود پروتکل اتریوم هسته است. پروژه اصلی برای بهبود پروتکل هسته اتریوم این مورد است
-[ETH 2.0](#eth-2-0).
+[ETH 2.0](#consensus-layer-upgrades).
 
 “لایه 2" به فناوری‌هایی برمی‌گردد که بالاتر از پروتکل اتریوم مبنا قرار می‌گیرند و بدون کاهش امنیت، مقیاس‌پذیری را افزایش می‌دهند. فناوری‌های خارج از زنجیره‌ای مانند زنجیره‌های جانبی هم وجود دارند که با برقراری یک تعادل امنیتی متفاوت، قادر به ارتقای مقیاس‌پذیری می‌شوند.
 
@@ -122,7 +122,7 @@ sidebar: true
 - [Understanding Plasma](https://education.district0x.io/general-topics/understanding-ethereum/understanding-plasma/) _District0x_
 - [Learn Plasma - A learning resource for the Plasma framework](https://www.learnplasma.org/en/)
 
-## ETH 2.0 {#eth-2-0}
+## ETH 2.0 {#consensus-layer-upgrades}
 
 سرنیتی "Serenity" یا ETH 2.0 به ارتقای بزرگ بعدی پروتکل اتریوم هسته اتلاق می‌شود که از ترکیب چندین مرحله بهسازی پروتکل هسته اتریوم یا "لایه 1" تشکیل می‌شود.
 
@@ -135,7 +135,7 @@ sidebar: true
 - [ETH 2.0 Researchers AMA Part 2](https://docs.ethhub.io/other/ethereum-2.0-ama/#part-2) _Jul 15, 2019 - EthHub_
 - [9 Things You Didn't Know About Ethereum 2.0](https://our.status.im/9-things-you-didnt-know-about-ethereum-2-0/) _July 18, 2019 - Bruno Škvorc_
 
-## ETH 1.x {#eth-1x}
+## ETH 1.x {#execution-layer-upgrades}
 
 نام مجموعه‌ای از ارتقاهایی که شامل حال پروتکل فعلی اتریوم شده‌اند ETH 1.x می‌باشد.هدف از آن، ادامه بهبود و پشتیبانی از اتریوم، در حین توسعه و اجرای ETH 2.0 است.
 

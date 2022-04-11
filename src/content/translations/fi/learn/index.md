@@ -64,7 +64,7 @@ Ethereum käyttää menetelmää nimeltä "proof-of-work". Tämä mahdollistaa E
 
 - [What does it mean to mine Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) _Päivitetään usein - Ethhub_
 
-ETH 2.0 -versiossa Ethereum tulee siirtymään toiseen menetelmään nimeltä "proof-of-stake". [Lue lisää ETH 2.0 -versiosta jäljempänä](#eth-2-0).
+ETH 2.0 -versiossa Ethereum tulee siirtymään toiseen menetelmään nimeltä "proof-of-stake". [Lue lisää ETH 2.0 -versiosta jäljempänä](#consensus-layer-upgrades).
 
 ## Asiakasohjelmat ja solmut {#clients-and-nodes}
 
@@ -83,7 +83,7 @@ Lue lisää aiheesta [Ethereum yrityksille](/fi/enterprise/).
 
 Työn alla on monia pyrkimyksiä lisätä Ethereumin skaalautuvuutta parantamalla sen nopeutta ja liiketapahtumien kokonaissuoritustehoa. Yleisesti nämä on lajiteltu Taso 1- ja Taso 2 -ratkaisuihin.
 
-Taso 1 viittaa Ethereumin ydinprotokollan parannukseen. Pääprojekti parantaa Ethereumin ydinprotokollaa on [ETH 2.0](#eth-2-0).
+Taso 1 viittaa Ethereumin ydinprotokollan parannukseen. Pääprojekti parantaa Ethereumin ydinprotokollaa on [ETH 2.0](#consensus-layer-upgrades).
 
 Taso 2 viittaa teknologioihin, jotka on rakennettu Ethereumin pääprotokollan päälle mahdollistaen paremman skaalattavuuden vaarantamatta turvallisuutta. On myös olemassa "off-chain"-teknologioita kuten sivuketjut, jotka mahdollistavat paremman skaalaavuuden tekemällä erinäisiä kompromisseja turvallisuudesta.
 
@@ -107,7 +107,7 @@ Taso 2 viittaa teknologioihin, jotka on rakennettu Ethereumin pääprotokollan p
 - [Understanding Plasma](https://education.district0x.io/general-topics/understanding-ethereum/understanding-plasma/) _District0x_
 - [Learn Plasma - Oppimisresurssi Plasma-ohjelmistokehykseen](https://www.learnplasma.org/en/)
 
-## ETH 2.0 {#eth-2-0}
+## ETH 2.0 {#consensus-layer-upgrades}
 
 ETH 2.0 (tunnetaan myös nimellä Serenity) viittaa seuraavaan merkittävään päivitykseen Ethereumin ydinprotokollassa. Se yhdistää useita parannuksia Ethereumin ydinprotokollaan eli Taso 1:een.
 
@@ -120,7 +120,7 @@ ETH 2.0 (tunnetaan myös nimellä Serenity) viittaa seuraavaan merkittävään p
 - [ETH 2.0 Researchers AMA Part 2](https://docs.ethhub.io/other/ethereum-2.0-ama/#part-2) _Jul 15, 2019 - EthHub_
 - [9 Things You Didn't Know About Ethereum 2.0](https://our.status.im/9-things-you-didnt-know-about-ethereum-2-0/) _July 18, 2019 - Bruno Škvorc_
 
-## ETH 1.x {#eth-1x}
+## ETH 1.x {#execution-layer-upgrades}
 
 ETH 1.x on nimi kokoelmalle päivityksiä nykyiseen Ethereum-protokollaan. Tavoite on jatkaa Ethereumin kehitystä ja ylläpitoa sillä aikaa, kun ETH 2.0:aa kehitetään ja toteutetaan.
 

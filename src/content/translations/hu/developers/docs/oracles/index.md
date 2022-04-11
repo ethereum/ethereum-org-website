@@ -23,17 +23,6 @@ Az Ethereumhoz hasonló blokkláncoknál fontos, hogy a hálózat összes csomó
 
 Az orákulumok megoldják ezt a problémát úgy, hogy az adatot a blokkláncra juttatják. Tehát minden, a tranzakciót visszajátszó csomópont ugyanazokat a megváltoztathatatlan adatokat fogja használni, amelyeket mindenki láthat. Ehhez az orákulum általában egy okosszerződésből és néhány olyan off-chain komponensből áll, amelyek lekérdezhetik az API-okat, majd időszakonként tranzakciókat küldenek az okosszerződés adatainak frissítésére.
 
-<!-- ## Oracle architecture {#oracle-architecture}
-
-To understand how an oracle works, let's play through a scenario where your smart contract needs to know who won the superbowl. This is an example of how it could work:
-
-1. Your smart contract requests information from an oracle smart contract.
-2. The oracle smart contract emits an [event](/developers/docs/smart-contracts/anatomy/#events-and-logs).
-3. Off-chain oracle nodes listen for events and upon hearing one, they query an API.
-4. The API returns a JSON response to the nodes.
-5. The nodes call on the oracle smart contract.
-6. The oracle smart contract returns the data to your smart contract. -->
-
 ### Biztonság {#security}
 
 Egy orákulum annyira biztonságos, mint az adatforrása(i). Ha egy dapp a Uniswap-et használja orákulumként az ETH/DAI árfolyam adathoz, egy támadónak lehetősége van az árfolyamot manipulálni a Uniswap-en, hogy módosítsa a dapp értelmezését a jelenlegi árfolyamról. Egy példa ennek megakadályozására [egy feed rendszer](https://developer.makerdao.com/feeds/), mint amit a MakerDAO is használ, amely számos külső árfolyam feed adatait gyűjti össze ahelyett, hogy csak egyetlen forrásra támaszkodna.

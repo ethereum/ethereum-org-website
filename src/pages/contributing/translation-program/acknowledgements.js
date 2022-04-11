@@ -1,9 +1,9 @@
 // Libraries
-import React from "react"
+import React, { useContext } from "react"
 import { graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { useIntl } from "gatsby-plugin-intl"
-import styled from "styled-components"
+import styled, { ThemeContext } from "styled-components"
 
 // Components
 import ActionCard from "../../../components/ActionCard"
@@ -63,11 +63,18 @@ const RightColumn = styled.div`
   }
 `
 
+const CertificateImageWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+`
+
 const Image = styled(GatsbyImage)`
-  width: 100%;
-  max-height: 500px;
-  background-size: cover;
-  background: no-repeat 50px;
+  background-size: contain;
+
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    max-height: 300px;
+    max-width: 300px;
+  }
 `
 
 const CentralActionCard = styled(ActionCard)`
@@ -97,6 +104,11 @@ const CentralActionCard = styled(ActionCard)`
 
 const TranslatorAcknowledgements = ({ data, location }) => {
   const intl = useIntl()
+  const themeContext = useContext(ThemeContext)
+  const isDarkTheme = themeContext.isDark
+  const themedCertificateImage = isDarkTheme
+    ? data.darkThemeCertificate
+    : data.lightThemeCertificate
 
   return (
     <Page>
@@ -146,6 +158,7 @@ const TranslatorAcknowledgements = ({ data, location }) => {
                 "page-contributing-translation-program-acknowledgements-hero-image-alt",
                 intl
               )}
+              objectFit="contain"
             />
           </RightColumn>
         </TwoColumnContent>
@@ -180,6 +193,28 @@ const TranslatorAcknowledgements = ({ data, location }) => {
           )}
           image={getImage(data.ethereum)}
         />
+      </Content>
+
+      <Content id="certificate">
+        <H2>
+          <Translation id="page-contributing-translation-program-acknowledgements-cert-title" />
+        </H2>
+        <p>
+          <Translation id="page-contributing-translation-program-acknowledgements-cert-1" />
+        </p>
+        <p>
+          <Translation id="page-contributing-translation-program-acknowledgements-cert-2" />
+        </p>
+        <p>
+          <Translation id="page-contributing-translation-program-acknowledgements-cert-3" />
+        </p>
+        <CertificateImageWrapper>
+          <Image
+            image={getImage(themedCertificateImage)}
+            alt="translator certificate"
+            objectFit="contain"
+          />
+        </CertificateImageWrapper>
       </Content>
 
       <Content id="poap">
@@ -231,6 +266,30 @@ export const query = graphql`
       childImageSharp {
         gatsbyImageData(
           width: 500
+          layout: FIXED
+          placeholder: BLURRED
+          quality: 100
+        )
+      }
+    }
+    lightThemeCertificate: file(
+      relativePath: { eq: "certificates/light-certificate.png" }
+    ) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 800
+          layout: FIXED
+          placeholder: BLURRED
+          quality: 100
+        )
+      }
+    }
+    darkThemeCertificate: file(
+      relativePath: { eq: "certificates/dark-certificate.png" }
+    ) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 800
           layout: FIXED
           placeholder: BLURRED
           quality: 100

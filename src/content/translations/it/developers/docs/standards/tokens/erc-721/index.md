@@ -15,7 +15,7 @@ Un token non fungibile (NFT) è usato per identificare inequivocabilmente qualco
 
 ERC-721 introduce uno standard per NFT, in altre parole questo tipo di token è unico e può avere un diverso valore rispetto a un altro token dello stesso Smart Contract, magari dovuto all'età, alla rarità o ad altro, come il suo aspetto. Cosa? Aspetto?
 
-Sì! Tutti gli NFT hanno una variabile `uint256` chiamata `tokenId`, quindi per i contratti ERC-721 la coppia `contract address, uint256 tokenId` deve essere unica a livello globale. Detto ciò, una dapp può avere un "convertitore" che utilizza `tokenId` come input e restituisce l'immagine di qualcosa come zombie, armi, abilità o teneri gattini.
+Sì! Tutti gli NFT hanno una variabile `uint256` chiamata `tokenId`, quindi per i contratti ERC-721 la coppia `contract address, uint256 tokenId` deve essere unica a livello globale. Detto ciò, una dApp può avere un "convertitore" che usa il `tokenId` come input e produce in output un'immagine come zombie, armi, skill o fantastici gattini!
 
 ## Prerequisiti {#prerequisites}
 
@@ -69,7 +69,7 @@ $ pip install web3
 
 ```python
 from web3 import Web3
-from web3.utils.events import get_event_data
+from web3._utils.events import get_event_data
 
 
 w3 = Web3(Web3.HTTPProvider("https://cloudflare-eth.com"))
@@ -78,7 +78,7 @@ ck_token_addr = "0x06012c8cf97BEaD5deAe237070F9587f8E7A266d"    # CryptoKitties 
 
 acc_address = "0xb1690C08E213a35Ed9bAb7B318DE14420FB57d8C"      # CryptoKitties Sales Auction
 
-# Questa è una Contract Application Binary Interface (ABI) semplificata per un contratto NFT ERC-721.
+# This is a simplified Contract Application Binary Interface (ABI) of an ERC-721 NFT Contract.
 # Espone solo i metodi balanceOf(address), name(), ownerOf(tokenId), symbol(), totalSupply()
 simplified_abi = [
     {
@@ -148,24 +148,24 @@ tx_event_abi = {
     'type': 'event'
 }
 
-# Abbiamo bisogno della firma dell'evento per filtrare i registri
-event_signature = w3. ha3(text="Transfer(address,address,uint256)").hex()
+# We need the event's signature to filter the logs
+event_signature = w3.sha3(text="Transfer(address,address,uint256)").hex()
 
 logs = w3.eth.getLogs({
     "fromBlock": w3.eth.blockNumber - 120,
-    "address": w3. oChecksumAddress(ck_token_addr),
+    "address": w3.toChecksumAddress(ck_token_addr),
     "topics": [event_signature]
 })
 
-# Note:
-# - 120 blocchi è l'intervallo massimo per il provider CloudFlare
-# - Se non hai trovato un evento Transfer puoi provare a ottenere un tokenId all'indirizzo:
-# https://etherscan.io/address/0x06012c8cf97BEaD5deAe237070F9587f8E7A266d#events
-# Fai clic per espandere i registri dell'evento e copiare l'argomento "tokenId"
+# Notes:
+#   - 120 blocks is the max range for CloudFlare Provider
+#   - If you didn't find any Transfer event you can also try to get a tokenId at:
+#       https://etherscan.io/address/0x06012c8cf97BEaD5deAe237070F9587f8E7A266d#events
+#       Click to expand the event's logs and copy its "tokenId" argument
 
-recent_tx = [get_event_data(tx_event_abi, log)["args"] for log in logs]
+recent_tx = [get_event_data(w3.codec, tx_event_abi, log)["args"] for log in logs]
 
-kitty_id = recent_tx[0]['tokenId'] # Incolla "tokenId" qui dal link precedente
+kitty_id = recent_tx[0]['tokenId'] # Paste the "tokenId" here from the link above
 is_pregnant = ck_contract.functions.isPregnant(kitty_id).call()
 print(f"{name} [{symbol}] NFTs {kitty_id} is pregnant: {is_pregnant}")
 ```
@@ -199,31 +199,31 @@ ck_extra_events_abi = [
         'type': 'event'
     }]
 
-# Abbiamo bisogno della firma dell'evento per filtrare i registri
+# We need the event's signature to filter the logs
 ck_event_signatures = [
-    w3. ha3(text="Pregnant(address,uint256,uint256,uint256)").hex(),
-    w3.sha3(text="Birth(address,uint256,uint256,uint256,uint256)"). ex(),
+    w3.sha3(text="Pregnant(address,uint256,uint256,uint256)").hex(),
+    w3.sha3(text="Birth(address,uint256,uint256,uint256,uint256)").hex(),
 ]
 
-# Ecco un evento Pregnant:
+# Here is a Pregnant Event:
 # - https://etherscan.io/tx/0xc97eb514a41004acc447ac9d0d6a27ea6da305ac8b877dff37e49db42e1f8cef#eventlog
-pregnant_logs = w3. th.getLogs({
+pregnant_logs = w3.eth.getLogs({
     "fromBlock": w3.eth.blockNumber - 120,
-    "address": w3. oChecksumAddress(ck_token_addr),
-    "topics": [ck_extra_events_abi[0]]
+    "address": w3.toChecksumAddress(ck_token_addr),
+    "topics": [ck_event_signatures[0]]
 })
 
-recent_pregnants = [get_event_data(ck_extra_events_abi[0], log)["args"] for log in pregnant_logs]
+recent_pregnants = [get_event_data(w3.codec, ck_extra_events_abi[0], log)["args"] for log in pregnant_logs]
 
-# Ecco un evento Birth:
+# Here is a Birth Event:
 # - https://etherscan.io/tx/0x3978028e08a25bb4c44f7877eb3573b9644309c044bf087e335397f16356340a
 birth_logs = w3.eth.getLogs({
     "fromBlock": w3.eth.blockNumber - 120,
     "address": w3.toChecksumAddress(ck_token_addr),
-    "topics": [ck_extra_events_abi[1]]
+    "topics": [ck_event_signatures[1]]
 })
 
-recent_births = [get_event_data(ck_extra_events_abi[1], log)["args"] for log in birth_logs]
+recent_births = [get_event_data(w3.codec, ck_extra_events_abi[1], log)["args"] for log in birth_logs]
 ```
 
 ## NFT più popolari {#popular-nfts}
@@ -234,15 +234,10 @@ recent_births = [get_event_data(ck_extra_events_abi[1], log)["args"] for log in 
 - [The Ethereum Name Service (ENS)](https://ens.domains/) offre un modo sicuro e decentralizzato per indirizzare risorse sia all'interno che all'esterno della blockchain utilizzando nomi semplici e leggibili.
 - [Unstoppable Domains](https://unstoppabledomains.com/) è un'azienda di San Francisco che crea domini sulle blockchain. I domini delle blockchain sostituiscono gli indirizzi della criptovaluta con nomi facilmente leggibili, che possono essere usati per creare siti web resistenti alla censura.
 - [Gods Unchained Cards](https://godsunchained.com/) è un gioco di carte collezionabili sulla blockchain Ethereum che usa gli NFT per dare una proprietà reale alle risorse del gioco.
+- [Bored Ape Yacht Club](https://boredapeyachtclub.com) è una raccolta di 10.000 NFT uniche, che, oltre a essere opere d'arte la cui rarità è dimostrata, agiscono da token di appartenenza al club, fornendo ai membri vantaggi e benefici che possono aumentare nel tempo come risultato degli sforzi della community.
 
 ## Letture consigliate {#further-reading}
 
 - [EIP-721: ERC-721 Non-Fungible Token Standard](https://eips.ethereum.org/EIPS/eip-721)
 - [OpenZeppelin - ERC-721 Docs](https://docs.openzeppelin.com/contracts/3.x/erc721)
 - [OpenZeppelin - ERC-721 Implementation](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/ERC721.sol)
-
-## Argomenti correlati {#related-topics}
-
-- [ERC-20](/developers/docs/standards/tokens/erc-20/)
-- [ERC-777](/developers/docs/standards/tokens/erc-777/)
-- [ERC-1155](/developers/docs/standards/tokens/erc-1155/)

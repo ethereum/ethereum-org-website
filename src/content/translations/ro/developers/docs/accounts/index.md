@@ -45,7 +45,6 @@ Conturile Ethereum au patru câmpuri:
 - `nonce` – un contor care indică numărul de tranzacții trimise din cont. Acest lucru asigură că tranzacțiile sunt procesate o singură dată. În cazul în care contul este un cont contractual, nonce este numărul de contracte create de cont
 - `sold` – numărul de Wei deținut de această adresă. Wei este cea mai mică unitate de ETH și există 1e+18 Wei per ETH.
 - `codeHash` – Toate aceste fragmente de cod sunt conținute în baza de date de stare sub hash-urile corespunzătoare pentru recuperarea ulterioară. Pentru conturile contractuale, acesta este codul care este hash-at și stocat precum codeHash. Pentru conturile deținute extern, câmpul codeHash este hash-ul șirului gol.
-<!--this hash refers to the code of this account on the Ethereum virtual machine (EVM). This EVM code gets executed if the account gets a message call. It cannot be changed unlike the other account fields.  -->
 - `storageRoot` – Uneori cunoscut sub numele de hash de stocare. Un hash de 256 biți al nodului rădăcină al unui arbore Merkle Patricia, care codează conținutul stocării contului (o mapare între valori întregi de 256 biți). Acesta schimbă formatul hash al cheilor de codificare din trie de la Keccat la RLP (Recursive Length Prefix), ambele 256 biți valori întregi. Acest arbore codifică hash-ul conținutului stocării acestui cont și este gol în mod implicit.
 
 ![O diagramă care arată structura unui cont](../../../../../developers/docs/accounts/accounts.png) _Diagramă adaptată din [Ethereum EVM ilustrat](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
@@ -88,19 +87,6 @@ Poți obține chei publice noi dintr-o cheie privată, dar nu poți obține o ch
 
 Ai nevoie de o cheie privată pentru a semna mesaje și tranzacții care emit o semnătură. Alții pot lua apoi semnătura pentru a obține cheia ta publică, dovedind că ești autorul mesajului. În aplicația tale, poți utiliza o bibliotecă JavaScript pentru a trimite tranzacții către rețea.
 
-<!-- **WEB3JS example**
-
-```jsx
-web3.eth.accounts.recoverTransaction('0xf86180808401ef364594f0109fc8df283027b6285cc889f5aa624eac1f5580801ca031573280d608f75137e33fc14655f097867d691d5c4c44ebe5ae186070ac3d5ea0524410802cdc025034daefcdfa08e7d2ee3f0b9d9ae184b2001fe0aff07603d9');
-> "0xF0109fC8DF283027b6285cc889F5aA624EaC1F55"
-```
-
-[Web3js documentation](https://web3js.readthedocs.io/)
-
-[code for creating an account in JS?] + links to how to do it in other languages maybe?
-
-`$ geth account new` -->
-
 ## Conturi contractuale {#contract-accounts}
 
 Conturile contractuale au, de asemenea, o adresă hexadecimală de 42 de caractere:
@@ -110,20 +96,6 @@ Exemplu:
 `0x06012c8cf97bead5deae237070f9587f8e7a266d`
 
 Adresa contractului este de obicei dată când un contract este implementat în Blockchain-ul Ethereum. Adresa provine de la adresa creatorului și de la numărul de tranzacții trimise de la acea adresă or contracte create de cont („nonce”).
-
-<!-- @Sam Richards is there a line of code you can use to return your contract's address – in the same way that we have personal.newAccount() above? – Don't know if what I found below is helpful?
-
-```jsx
-ethers.utils.getContractAddress( transaction ) ⇒ string< Address >
-```
-
-TODO: add a contract address example-->
-
-<!-- ## Managing an account
-
-Most users will want to interact with their account via a wallet. Note that an account is not a wallet. A wallet is the keypair associated with a user-owned account, which allow a user to make transactions from or manage the account
-
-For dapp development, you'll want access to dummy accounts with test ETH so you can experiment. When you create a local chain, you'll get test accounts wth fake ETH which you can then import using MetaMask and use on your dapp's frontend. -->
 
 ## O notă despre portofele {#a-note-on-wallets}
 

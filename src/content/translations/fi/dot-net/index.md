@@ -34,9 +34,9 @@ Tarvitsetko perusteellisempaa aloitusta? Katso [ethereum.org/fi/learn](/learn/) 
 - [Nethereum, alkuun pääseminen](https://docs.nethereum.com/en/latest/getting-started/)
 - [VS Code Solidityn asentaminen](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity)
 - [.NET-kehittäjien työnkulku Ethereumin älysopimusten luontiin ja kutsumiseen](https://medium.com/coinmonks/a-net-developers-workflow-for-creating-and-calling-ethereum-smart-contracts-44714f191db2)
-- [Älysopimusten integrointi Nethereumilla](https://kauri.io/article/b54334b0695342c1bbe161c4c4467b50/smart-contracts-integration-with-nethereum)
+- [Älysopimusten integrointi Nethereumilla](https://kauri.io/#collections/getting%20started/smart-contracts-integration-with-nethereum/#smart-contracts-integration-with-nethereum)
 - [Liitä .NET ja Ethereum-lohkoketjun älysopimukset Nethereumilla](https://medium.com/my-blockchain-development-daily-journey/interfacing-net-and-ethereum-blockchain-smart-contracts-with-nethereum-2fa3729ac933), myös kielellä [中文版](https://medium.com/my-blockchain-development-daily-journey/%E4%BD%BF%E7%94%A8nethereum%E9%80%A3%E6%8E%A5-net%E5%92%8C%E4%BB%A5%E5%A4%AA%E7%B6%B2%E5%8D%80%E5%A1%8A%E9%8F%88%E6%99%BA%E8%83%BD%E5%90%88%E7%B4%84-4a96d35ad1e1)
-- [Nethereum - avoimen lähdekoodin .NET-integraatiokirjasto lohkoketjulle](https://kauri.io/article/d15dfd4903f149cdb84b3ce666103b52/v1/nethereum-an-open-source-.net-integration-library-for-blockchain)
+- [Nethereum - avoimen lähdekoodin .NET-integraatiokirjasto lohkoketjulle](https://kauri.io/#collections/a%20hackathon%20survival%20guide/nethereum-an-open-source-.net-integration-library/)
 - [Ethereum-liiketapahtuman kirjaaminen SQL-tietokantaan käyttäen Nethereumia](https://medium.com/coinmonks/writing-ethereum-transactions-to-sql-database-using-nethereum-fd94e0e4fa36)
 - [Ethereum-älysopimuksen julkaiseminen käyttämällä C#:ia ja VisualStudiota](https://koukia.ca/deploy-ethereum-smart-contracts-using-c-and-visualstudio-5be188ae928c)
 
@@ -74,7 +74,7 @@ Tarvitsetko perusteellisempaa aloitusta? Katso [ethereum.org/fi/learn](/learn/) 
 - [Nethereum Blazor](https://github.com/Nethereum/NethereumBlazor) - _.NET Wasm SPA kevyt lohkoketjuselain ja yksinkertainen lompakko_
 - [Wonka Business Rules Engine](https://docs.nethereum.com/en/latest/wonka/) - _järjestelmä liiketoimintasäännöille (sekä .NET-alustalle että Ethereum-alustalle), joka on luonnostaan metadatakäyttöinen_
 - [Nethermind](https://github.com/NethermindEth/nethermind) - _A .NET Core Ethereum -asiakasohjelma Linuxille, Windowsille ja MacOs:lle_
-- [eth-utils](https://github.com/ethereum/eth-utils/) - _hyötyfunktioita Etherumiin liittyvien koodipohjien kanssa työskentelyyn_
+- [eth-utils](https://github.com/ethereum/eth-utils/) - _hyötyfunktioita Ethereumiin liittyvien koodipohjien kanssa työskentelyyn_
 - [TestChains](https://github.com/Nethereum/TestChains) - _Valmiiksi määritellyt .NET-kehitysketjut nopeisiin vasteisiin (PoA)_
 
 Etsitkö lisää resursseja? Katso [ethereum.org/fi/developers](/developers/).

@@ -37,7 +37,7 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 
 ## Advanced use patterns {#advanced-use-patterns}
 
-- [pwasm_ethereum externs library to interact with Ethereum-like network](https://paritytech.github.io/pwasm-ethereum/pwasm_ethereum/)
+- [pwasm_ethereum externs library to interact with Ethereum-like network](https://github.com/openethereum/pwasm-ethereum)
 - [Build A Decentralized Chat Using JavaScript and Rust](https://medium.com/perlin-network/build-a-decentralized-chat-using-javascript-rust-webassembly-c775f8484b52)
 - [Build a Decentralized Todo App Using Vue.js & Rust ](https://medium.com/@jjmace01/build-a-decentralized-todo-app-using-vue-js-rust-webassembly-5381a1895beb)
 - [Getting Started with Enigma - In Rust Programming Language](https://blog.enigma.co/getting-started-with-discovery-the-rust-programming-language-4d1e0b06de15)
@@ -47,13 +47,17 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 ## Rust projects and tools {#rust-projects-and-tools}
 
 - [pwasm-ethereum](https://github.com/paritytech/pwasm-ethereum) - _Collection of externs to interact with ethereum-like network._
+- [Lighthouse](https://github.com/sigp/lighthouse) - _Fast Ethereum consensus layer client_
 - [Ethereum WebAssembly](https://ewasm.readthedocs.io/en/mkdocs/)
 - [oasis_std](https://docs.rs/oasis-std/0.2.7/oasis_std/) - _OASIS API reference_
 - [Solaris](https://github.com/paritytech/sol-rs)
 - [SputnikVM](https://github.com/sorpaas/rust-evm) - _Rust Ethereum Virtual Machine Implementation_
-- [Parity](https://github.com/paritytech/parity-ethereum) - _Ethereum Rust client_
 - [rust-web3](https://github.com/tomusdrw/rust-web3) - _Rust implementation of Web3.js library_
 - [Wavelet](https://wavelet.perlin.net/docs/smart-contracts) - _Wavelet smart contract in Rust_
+- [Foundry](https://github.com/gakonst/foundry)- _Toolkit for Ethereum application development_
+- [Ethers_rs](https://github.com/gakonst/ethers-rs)- _Ethereum library and wallet implementation_
+- [evm_rs](https://github.com/rust-blockchain/evm)- _Ethereum virtual machine implementation in rust_
+- [SewUp](https://github.com/second-state/SewUp) - _A library to help you build your Ethereum webassembly contract with Rust and just like develop in a common backend_
 
 Looking for more resources? Check out [ethereum.org/developers.](/developers/)
 

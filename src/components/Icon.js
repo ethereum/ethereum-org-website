@@ -29,9 +29,9 @@ import { BsQuestionSquareFill, BsToggleOff, BsToggleOn } from "react-icons/bs"
 import { IoCodeOutline, IoCodeDownload } from "react-icons/io5"
 
 const socialColors = {
-  reddit: "#FF4301",
-  twitter: "#1DA1F2",
-  youtube: "#FF0000",
+  reddit: "#ff4301",
+  twitter: "#1da1f2",
+  youtube: "#ff0000",
   discord: "#7289da",
   stackExchange: "#48a2da",
 }

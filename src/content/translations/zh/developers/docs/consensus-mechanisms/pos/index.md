@@ -6,7 +6,7 @@ sidebar: true
 incomplete: true
 ---
 
-以太坊正在将其共识机制从[工作量证明(PoW)](/developers/docs/consensus-mechanisms/pow/)转变为权益证明(PoS)。 这一直在计划之中，因为这是社区策略中通过 [Eth2 升级](/eth2/)扩展以太坊的关键部分。 然而正确实现 PoS 是一项巨大的技术挑战,，并不像使用 PoW 在整个网络中达成共识那样简单。
+以太坊正在将其共识机制从[工作量证明(PoW)](/developers/docs/consensus-mechanisms/pow/)转变为权益证明(PoS)。 这一直在计划之中，因为这是社区策略中通过[升级](/upgrades/)来实现以太坊扩展的关键部分。 然而正确实现 PoS 是一项巨大的技术挑战,，并不像使用 PoW 在整个网络中达成共识那样简单。
 
 ## 前置要求 {#prerequisites}
 
@@ -23,7 +23,7 @@ incomplete: true
 - 提高能效——您不需要大量能源去挖掘区块
 - 门槛降低，硬件要求减少——您不需要优秀的硬件从而获得建立新区块的机会
 - 更强的去中心化——权益证明可以在网络中提供更多的节点。
-- 更有力的支持分片链——一个得以扩展以太坊网络的关键升级
+- 更有力地支持[分片链](/upgrades/shard-chains/)，这是以太坊网络扩展的关键升级
 
 ## 权益证明、权益质押和验证者 {#pos-staking-validators}
 
@@ -31,13 +31,13 @@ incomplete: true
 
 ## 以太坊权益证明是如何运作的？ {#how-does-pos-work}
 
-与工作量证明不同的是，验证者不需要使用大量的计算能力，因为它们是随机选择的，相互间没有竞争。 他们不需要开采区块，他们只需要在被选中的时候创建区块并且在没有被选中的时候验证他人提交的区块。 此验证被称为证明。 你可以认为证明是说“这个块在我看来没问题”。 验证者因提出新区块和证明他们已经看到的区块而获得奖励。
+与工作量证明不同的是，验证者不需要使用大量的算力，因为它们是随机选择的，相互间没有竞争。 他们不需要开采区块，他们只需要在被选中的时候创建区块并且在没有被选中的时候验证他人提交的区块。 此验证被称为证明。 你可以认为证明是说“这个块在我看来没问题”。 验证者因提出新区块和证明他们已经看到的区块而获得奖励。
 
 如果你为恶意区块提供证明，你就会失去你的股权。
 
 ### 信标链 {#the-beacon-chain}
 
-当以太坊用权益证明取代工作量证明时， [分片链](/eth2/shard-chains/) 的复杂性会增加。 这是需要验证者来处理交易和创建新区块的独立区块链。 计划中将有 64 个分片链，并且它们都需要对网络的当下状态有一个共同的理解。 所以这需要额外的协调工作，这将由[信标链](/eth2/beacon-chain/)来完成。
+以太坊用权益证明取代工作量证明时，[分片链](/upgrades/shard-chains/)的复杂性会增加。 这是需要验证者来处理交易和创建新区块的独立区块链。 计划中将有 64 个分片链，并且它们都需要对网络的当下状态有一个共同的理解。 所以这需要额外的协调工作，这将由[信标链](/upgrades/beacon-chain/)来完成。
 
 信标链从碎片接收状态信息，并可供其他碎片使用，以便网络能够一直保持同步。 信标链也会管理验证者，从注册其股份存储到发布奖励和惩罚。
 
@@ -45,7 +45,7 @@ incomplete: true
 
 ### 验证是如何工作的？ {#how-does-validation-work}
 
-当您在分片上提交交易时，验证者将负责将您的交易添加到分片块中。 信标链通过算法选择验证器以提出新的块。
+当您在分片上提交交易时，验证者将负责将您的交易添加到分片区块中。 信标链通过算法选择验证器以提出新的块。
 
 #### 区块认证 {#attestation}
 
@@ -53,7 +53,7 @@ incomplete: true
 
 至少需要 128 个被称为“委员会”的验证者来证明每个分片块。
 
-委员会有一个提出和验证分片区块的时限， 这被称为“slot”。 每个 slot 上只创建一个有效的块。 在一个“epoch”中有 32 个 slot。 每个 epoch 后，委员会都由不同的、随机的参与者解散与改革。 这有助于避免委员会中的不良成员伤害到分片。
+委员会有一个提出和验证分片区块的时限， 这被称为“slot”。 每个插槽只能创建一个有效区块，一个“周期”有 32 个插槽。 每个周期过后，委员会都由不同的、随机的参与者解散与改革。 这有助于避免委员会中的不良参与者伤害到分片。
 
 #### 交叉链接 {#rewards-and-penalties}
 
@@ -79,14 +79,19 @@ incomplete: true
 
 | 优点                                                                                                                                             | 缺点                                                                 |
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------- |
-| 权益质押让您更容易运行一个节点。 这不需要在硬件或能源方面进行巨额投资。 如果你没有足够的 ETH 来进行质押，你可以加入质押池。                      | 与工作量证明相比，权益证明仍处于起步阶段，并且没有经过实际应用的测试 |
+| 权益质押让您更容易运行一个节点。 无需大量硬件或能源投资，如果您没有足够的 ETH 抵押，您也可以加入权益质押池。                                     | 与工作量证明相比，权益证明仍处于起步阶段，并且没有经过实际应用的测试 |
 | 权益质押更加去中心化。 它允许更多人参与，并且更多的节点不意味着像挖矿一样增加百分比的回报。                                                      |                                                                      |
 | 权益质押可以保证安全的防护。 分片链允许以太坊同时创建多个区块，增加交易输送量。 将以太坊网络置于工作量证明系统内，这会降低网络被攻击所需的算力。 |                                                                      |
 
 ## 延伸阅读 {#further-reading}
 
-- [什么是权益证明（PoS）](https://consensys.net/blog/blockchain-explained/what-is-proof-of-stake/) _ConsenSys_
-- [你需要先读一读的以太坊 2.0 信标链全解](https://ethos.dev/beacon-chain/) _Ethos.dev_
+- [Proof of Stake FAQ](https://vitalik.ca/general/2017/12/31/pos_faq.html) _Vitalik Buterin_
+- [What is Proof of Stake](https://consensys.net/blog/blockchain-explained/what-is-proof-of-stake/) _ConsenSys_
+- [What Proof of Stake Is And Why It Matters](https://bitcoinmagazine.com/culture/what-proof-of-stake-is-and-why-it-matters-1377531463) _Vitalik Buterin_
+- [The Beacon Chain Ethereum 2.0 explainer you need to read first](https://ethos.dev/beacon-chain/) _Ethos.dev_
+- [Why Proof of Stake (Nov 2020)](https://vitalik.ca/general/2020/11/06/pos2020.html) _Vitalik Buterin_
+- [Proof of Stake: How I Learned to Love Weak Subjectivity](https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity/) _Vitalik Buterin_
+- [A Proof of Stake Design Philosophy](https://medium.com/@VitalikButerin/a-proof-of-stake-design-philosophy-506585978d51) _Vitalik Buterin_
 
 ## 相关主题 {#related-topics}
 

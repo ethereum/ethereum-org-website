@@ -81,5 +81,17 @@
   "page-eth-where-to-buy": "Dove ottenere ETH",
   "page-eth-where-to-buy-desc": "È possibile ottenere ETH da uno scambio o un portafoglio, ma ogni paese ha le sue politiche. Fai alcune ricerche per verificare quali servizi ti permettono di acquistare ETH.",
   "page-eth-yours": "È davvero tuo",
-  "page-eth-yours-desc": "Con ETH, la tua banca sei tu. Puoi controllare i tuoi fondi con il portafoglio come prova di proprietà. Non sono necessarie terze parti."
+  "page-eth-yours-desc": "Con ETH, la tua banca sei tu. Puoi controllare i tuoi fondi con il portafoglio come prova di proprietà. Non sono necessarie terze parti.",
+  "page-eth-more-on-tokens": "Ulteriori informazioni sui token ed i loro utilizzi",
+  "page-eth-button-buy-eth": "Ottieni ETH",
+  "page-eth-tokens-stablecoins": "Stablecoin",
+  "page-eth-tokens-defi": "Finanza Decentralizzata (DeFi)",
+  "page-eth-tokens-nft": "Token non fungibili (NFT)",
+  "page-eth-tokens-dao": "Organizzazioni autonome decentralizzate (DAO)",
+  "page-eth-tokens-stablecoins-description": "Maggiori informazioni sugli Ethereum token meno volatili.",
+  "page-eth-tokens-defi-description": "Il sistema finanziario degli Ethereum token.",
+  "page-eth-tokens-nft-description": "Token che rappresentano il possesso di elementi su Ethereum.",
+  "page-eth-tokens-dao-description": "Community virtuali spesso governate da possessori di token.",
+  "page-eth-whats-defi": "Maggiori informazioni sulla DeFi",
+  "page-eth-whats-defi-description": "DeFi è il sistema finanziario decentralizzato basato su Ethereum. Questa panoramica spiega cosa puoi fare."
 }

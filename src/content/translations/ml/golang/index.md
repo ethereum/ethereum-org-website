@@ -38,13 +38,13 @@ sidebar: true
 
 - [ ഗോ Ethereum ഡോക്യുമെന്റേഷന്‍ ](https://geth.ethereum.org/docs/) - _ ഔദ്യോഗിക Ethereum ഗോളാങിനായുള്ള ഡോക്യുമെന്റേഷൻ_
 - [ഗോ Ethereum ഗോഡോക്](https://godoc.org/github.com/ethereum/go-ethereum)
-- [ഗെത് ഉപയോഗിച്ച് ഗോ-യിൽ ഒരു DApp സൃഷ്ടിക്കുന്നു](https://kauri.io/article/60a36c1b17d645939f63415218dc24f9/creating-a-dapp-in-go-with-geth)
+- [ഗെത് ഉപയോഗിച്ച് ഗോ-യിൽ ഒരു DApp സൃഷ്ടിക്കുന്നു](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/creating-a-dapp-in-go-with-geth/)
 - [ഗോലാങും ഗെത്തും ഉപയോഗിച്ച് Ethereum പ്രൈവറ്റ് നെറ്റ്‌വർക്കിൽ പ്രവർത്തിക്കുക](https://myhsts.org/tutorial-learn-how-to-work-with-ethereum-private-network-with-golang-with-geth.php)
 - [ഗോ ഉപയോഗിച്ച് Ethereum-ലെ സോളിഡിറ്റി കരാറുകളുടെ യൂണിറ്റ് പരിശോധന](https://medium.com/coinmonks/unit-testing-solidity-contracts-on-ethereum-with-go-3cc924091281)
 
 ## നൂതന ഉപയോഗ പാറ്റേണുകൾ {#advanced-use-patterns}
 
-- [ഗെത് സിമുലേറ്റഡ് ബാക്കെൻഡ്](https://kauri.io/article/6285c9692883411aa041b6b970405a17/v1/the-geth-simulated-backend)
+- [ഗെത് സിമുലേറ്റഡ് ബാക്കെൻഡ്](https://kauri.io/#collections/An%20ethereum%20test%20toolkit%20in%20Go/the-geth-simulated-backend/#_top)
 - [Ethereum, കോറം എന്നിവ ഉപയോഗിച്ച് ഒരു സേവന അപ്ലിക്കേഷനുകളായി ബ്ലോക്ക്‌ചെയിൻ](https://blockchain.dcwebmakers.com/blockchain-as-a-service-apps-using-ethereum-and-quorum.html)
 - [Ethereum ബ്ലോക്ക്‌ചെയിൻ അപ്ലിക്കേഷനുകളിൽ വിതരണം ചെയ്ത സംഭരണം IPFS, സ്വാം എന്നിവ](https://blockchain.dcwebmakers.com/work-with-distributed-storage-ipfs-and-swarm-in-ethereum.html)
 - [മൊബൈൽ ക്ലയന്റുകൾ: ലൈബ്രറികളും ഇൻ‌പ്രോക്ക് Ethereum നോഡുകളും](https://github.com/ethereum/go-ethereum/wiki/Mobile-Clients:-Libraries-and-Inproc-Ethereum-Nodes)

@@ -255,7 +255,7 @@ We can also juxtapose these two charts together to see how **demand and supply**
 
 Therefore we can understand gas prices as a function of demand for Ethereum block space, given available supply.
 
-Finally, we may want to query average daily gas prices for the Ethereum chain, however, doing so result in an especially long query time, so we’ll filter our query to the average amount of gas paid per transaction by the Ethereum Foundation.
+Finally, we may want to query average daily gas prices for the Ethereum chain, however, doing so will result in an especially long query time, so we’ll filter our query to the average amount of gas paid per transaction by the Ethereum Foundation.
 
 ![ef_daily_gas](./ef_daily_gas.png)
 

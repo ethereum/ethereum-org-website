@@ -64,14 +64,14 @@ const StyledGrayContainer = styled(GrayContainer)`
 `
 
 const SubtitleTwo = styled.div`
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 140%;
   margin-bottom: 1.5rem;
   color: ${(props) => props.theme.colors.text300};
 `
 
 const SubtitleThree = styled.div`
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 140%;
   color: ${(props) => props.theme.colors.text};
   margin-bottom: 1.5rem;
@@ -501,9 +501,9 @@ const WalletsPage = ({ data }) => {
         <CalloutCardContainer>
           <StyledCallout
             image={getImage(data.eth)}
-            title={translateMessageId("page-wallets-get-some", intl)}
+            titleKey="page-wallets-get-some"
             alt={translateMessageId("page-wallets-get-some-alt", intl)}
-            description={translateMessageId("page-wallets-get-some-desc", intl)}
+            descriptionKey="page-wallets-get-some-desc"
           >
             <div>
               <ButtonLink to="/get-eth/">
@@ -513,12 +513,9 @@ const WalletsPage = ({ data }) => {
           </StyledCallout>
           <StyledCallout
             image={getImage(data.dapps)}
-            title={translateMessageId("page-wallets-try-dapps", intl)}
+            titleKey="page-wallets-try-dapps"
             alt={translateMessageId("page-wallets-try-dapps-alt", intl)}
-            description={translateMessageId(
-              "page-wallets-try-dapps-desc",
-              intl
-            )}
+            descriptionKey="page-wallets-try-dapps-desc"
           >
             <div>
               <ButtonLink to="/dapps/">
@@ -651,9 +648,6 @@ export const query = graphql`
     dcent: file(relativePath: { eq: "wallets/dcent.png" }) {
       ...listImage
     }
-    dharma: file(relativePath: { eq: "wallets/dharma.png" }) {
-      ...listImage
-    }
     eidoo: file(relativePath: { eq: "wallets/eidoo.png" }) {
       ...listImage
     }
@@ -754,6 +748,18 @@ export const query = graphql`
       ...listImage
     }
     bitkeep: file(relativePath: { eq: "wallets/bitkeep.png" }) {
+      ...listImage
+    }
+    keystone: file(relativePath: { eq: "wallets/keystone.png" }) {
+      ...listImage
+    }
+    loopring: file(relativePath: { eq: "wallets/loopring.png" }) {
+      ...listImage
+    }
+    numio: file(relativePath: { eq: "wallets/numio.png" }) {
+      ...listImage
+    }
+    airgap: file(relativePath: { eq: "wallets/airgap.png" }) {
       ...listImage
     }
   }

@@ -19,17 +19,17 @@ source: Mediu
 sourceUrl: https://medium.com/alchemy-api/getting-started-with-ethereum-development-using-alchemy-c3d6a45c567f
 ---
 
-![Logouri Ethereum și Alchemy](../../../../../developers/tutorials/getting-started-with-ethereum-development-using-alchemy/ethereum-alchemy.png)
+![Logouri Ethereum și Alchemy](./ethereum-alchemy.png)
 
 Acesta este un ghid pentru începători pentru a demara cu dezvoltarea Ethereum folosind [Alchemy](https://alchemyapi.io/), cea mai importantă platformă de programator blockchain alimentând milioane de utilizatori din 70% din aplicațiile blockchain de top, inclusiv Maker, 0x, MyEtherWallet, Dharma și Kyber.
 
 Începem de la înregistrarea la Alchemy și te îndrumăm până la scrierea primul script web3! Nu este necesară o experiență de programator blockchain!
 
-## 1\. Înregistrează-te pentru un cont Alchemy gratuit {#sign-up-for-a-free-alchemy-account}
+## 1. Înregistrează-te pentru un cont Alchemy gratuit {#sign-up-for-a-free-alchemy-account}
 
 Crearea unui cont cu Alchemy este ușoară, [înregistrează-te gratuit aici](https://dashboard.alchemyapi.io/signup/).
 
-## 2\. Crearea unei aplicații Alchemy {#create-an-alchemy-app}
+## 2. Crearea unei aplicații Alchemy {#create-an-alchemy-app}
 
 Pentru a utiliza produsele Alchemy, ai nevoie de o cheie API pentru a-ți autentifica solicitările.
 
@@ -47,7 +47,7 @@ Poți trage, de asemenea, cheile API existente prin trecerea peste „Apps” ș
 
 ![Gif care arată unui utilizator să tragă cheile API](../../../../../developers/tutorials/getting-started-with-ethereum-development-using-alchemy/pull-api-keys.gif)
 
-## 3\. Efectuarea unei solicitări din linia de comandă {#make-a-request-from-the-command-line}
+## 3. Efectuarea unei solicitări din linia de comandă {#make-a-request-from-the-command-line}
 
 Interacționează cu blockchain-ul Ethereum prin Alchemy folosind JSON-RPC și curl.
 
@@ -75,7 +75,7 @@ curl [https://eth-mainnet.alchemyapi.io/v2/demo](https://eth-mainnet.alchemyapi.
 { "id": 73,"jsonrpc": "2.0","result": "0x09184e72a000" // 10000000000000 }
 ```
 
-## 4\. Configurează clientul Web3 {#set-up-your-web3-client}
+## 4. Configurează clientul Web3 {#set-up-your-web3-client}
 
 **Dacă ai un client existent,** modifică adresa URL a furnizorului curent de nod la un URL Alchemy cu cheia ta API: `"https://eth-mainnet.alchemyapi.io/v2/your-api-key"`
 
@@ -106,24 +106,24 @@ const web3 = createAlchemyWeb3(
 )
 ```
 
-## 5\. Scrie primul Web3 Script! {#write-your-first-web3-script}
+## 5. Scrie primul Web3 Script! {#write-your-first-web3-script}
 
 Acum, pentru a ne murdări pe mâini cu puțină programare web3, vom scrie un script simplu, care imprimă cel mai recent număr de bloc de pe rețeaua principală Ethereum.
 
-1.  **Dacă nu ai făcut-o deja, în terminal creează un nou director (mkdir) de proiect și intră (cd) în el:**
+**1. Dacă nu ai făcut-o deja, în terminal creează un nou director (mkdir) de proiect și intră (cd) în el:**
 
 ```
 mkdir web3-example
 cd web3-example
 ```
 
-**2\. Instalează dependența Alchemy web3 (sau orice web3) în proiect dacă nu ai făcut-o deja:**
+**2. Instalează dependența Alchemy web3 (sau orice web3) în proiect dacă nu ai făcut-o deja:**
 
 ```
 npm install @alch/alchemy-web3
 ```
 
-**‌3. Creează un fișier denumit** `index.js` **și adaugă următorul conținut:**
+**3. Creează un fișier denumit** `index.js` **și adaugă următorul conținut:**
 
 > În cele din urmă, ar trebui să înlocuiești `demo` cu cheia API Alchemy HTTP.
 
@@ -139,13 +139,13 @@ main()
 
 Nu ești familiarizat cu lucrurile asincrone? Verifică acest [post Medium](https://medium.com/better-programming/understanding-async-await-in-javascript-1d81bb079b2c).
 
-**4\. Rulează în terminal folosind „node”**
+**4. Rulează în terminal folosind „node”**
 
 ```
 node index.js
 ```
 
-**‌5. Ar trebui să vezi acum ca ieșire în consolă, cel mai recent număr de bloc.**
+**5. Ar trebui să vezi acum ca ieșire în consolă, cel mai recent număr de bloc.**
 
 ```
 Cel mai recent număr de bloc este 11.043.912

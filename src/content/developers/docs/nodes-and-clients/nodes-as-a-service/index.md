@@ -24,7 +24,7 @@ Some services offer you your own dedicated node that they manage for you, while 
 
 Almost all node services are extremely easy to integrate with, involving one line changes in your code to swap out your self hosted node, or even switch between the services themselves.
 
-Often times node services will run a variety of [node clients](/developers/docs/nodes-and-clients/#clients) and [types](/developers/docs/nodes-and-clients/#node-types), allowing you to access full and archive nodes in addition to client specific methods in one API.
+Often times node services will run a variety of [node clients](/developers/docs/nodes-and-clients/#execution-clients) and [types](/developers/docs/nodes-and-clients/#node-types), allowing you to access full and archive nodes in addition to client specific methods in one API.
 
 It's important to note that node services do not and should not store your private keys or information.
 
@@ -32,7 +32,7 @@ It's important to note that node services do not and should not store your priva
 
 The main benefit for using a node service is not having to spend engineering time maintaining and managing nodes yourself. This allows you to focus on building your product rather than having to worry about infrastructure maintenance.
 
-Running your own nodes can be very expensive from storage to bandwidth to valuable engineering time. Things like spinning up more nodes when scaling, upgrading nodes to the latest versions, and ensuring state consistency, can detract from building and spending resources on your desired web3 product.
+Running your own nodes can be very expensive from storage to bandwidth to valuable engineering time. Things like spinning up more nodes when scaling, upgrading nodes to the latest versions, and ensuring state consistency, can distract from building and spending resources on your desired web3 product.
 
 ## What are the cons of using a Node Service? {#cons-of-using-a-node-service}
 
@@ -115,6 +115,26 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Paid archival data
     - Direct Support
     - Dashboard
+- [**Kaleido**](https://kaleido.io/)
+  - [Docs](https://docs.kaleido.io/)
+  - Features
+    - Free startier tier
+    - One-click Ethereum node deployment
+    - Customizable clients and algorithms (Geth, Quorum & Besu || PoA, IBFT & Raft)
+    - 500+ administrative and service APIs
+    - RESTful interface for Ethereum transaction submission (Apache Kafka backed)
+    - Outbound streams for event delivery (Apache Kafka backed)
+    - Deep collection of "off-chain" and ancillary services (e.g. bilateral encrypted messaging transport)
+    - Straightforward network onboarding with governance and role-based access control
+    - Sophisticated user management for both administrators and end users
+    - Highly scalable, resilient, enterprise-grade infrastructure
+    - Cloud HSM private key management
+    - Ethereum Mainnet Tethering
+    - ISO 27k and SOC 2, Type 2 certifications
+    - Dynamic runtime configuration (e.g. adding cloud integrations, altering node ingresses, etc.)
+    - Support for multi-cloud, multi-region and hybrid deployment orchestrations
+    - Simple hourly SaaS-based pricing
+    - SLAs and 24x7 support
 - [**Moralis**](https://moralis.io/)
   - [Docs](https://docs.moralis.io/)
   - Features
@@ -159,6 +179,30 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
   - Features
     - Free tier option
     - Scale as you go
+- [**SettleMint**](https://console.settlemint.com/)
+  - [Docs](https://docs.settlemint.com/)
+  - Features
+    - Free trial
+    - Scale as you go
+    - GraphQL support
+    - RPC and WSS endpoints
+    - Dedicated full nodes
+    - Bring your cloud
+    - Analytics tools
+    - Dashboard
+    - Pay-per-hour pricing
+    - Direct support
+- [**Watchdata**](https://watchdata.io/)
+  - [Docs](https://docs.watchdata.io/)
+  - Features
+    - Data reliability
+    - Uninterrupted connection with no downtime
+    - Process automation
+    - Free tariffs
+    - High limits that suit any user
+    - Support for various nodes
+    - Resource scaling
+    - High processing speeds
 
 ## Further reading {#further-reading}
 

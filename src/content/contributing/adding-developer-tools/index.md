@@ -49,7 +49,7 @@ Many projects in the Ethereum space are open source. We are more likely to list 
 
 ## Product Ordering {#product-ordering}
 
-Unless products are specifically ordered otherwise, such as alphabetically, products will be displayed from most to least recently added to the page. In other words, the newest products get added to the bottom of the list.
+Unless products are specifically ordered otherwise, such as alphabetically, products will be displayed from least to most recently added to the page. In other words, the newest products get added to the bottom of the list.
 
 ---
 
@@ -57,4 +57,6 @@ Unless products are specifically ordered otherwise, such as alphabetically, prod
 
 If you want to add a developer tool to ethereum.org and it meets the criteria, create an issue on GitHub.
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=suggest_dev_tool.md&title=">Create issue</ButtonLink>
+<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=suggest_dev_tool.md&title=">
+  Create issue
+</ButtonLink>

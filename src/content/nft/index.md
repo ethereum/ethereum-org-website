@@ -7,13 +7,10 @@ emoji: ":frame_with_picture:"
 sidebar: true
 sidebarDepth: 2
 image: ../../assets/infrastructure_transparent.png
-alt: "An Eth logo being displayed via hologram."
-summaryPoints:
-  [
-    "A way to represent anything unique as an Ethereum-based asset.",
-    "NFTs are giving more power to content creators than ever before.",
-    "Powered by smart contracts on the Ethereum blockchain.",
-  ]
+alt: An Eth logo being displayed via hologram.
+summaryPoint1: A way to represent anything unique as an Ethereum-based asset.
+summaryPoint2: NFTs are giving more power to content creators than ever before.
+summaryPoint3: Powered by smart contracts on the Ethereum blockchain.
 ---
 
 NFTs are currently taking the digital art and collectibles world by storm. Digital artists are seeing their lives change thanks to huge sales to a new crypto-audience. And celebrities are joining in as they spot a new opportunity to connect with fans. But digital art is only one way to use NFTs. Really they can be used to represent ownership of any unique asset, like a deed for an item in the digital or physical realm.
@@ -28,7 +25,7 @@ NFT stands for non-fungible token. Non-fungible is an economic term that you cou
 
 Fungible items, on the other hand, can be exchanged because their value defines them rather than their unique properties. For example, ETH or dollars are fungible because 1 ETH / $1 USD is exchangeable for another 1 ETH / $1 USD.
 
-<iframe title="YouTube video titled What Are NFTs and How Can They Be Used in Decentralized Finance? DEFI Explained" width="100%" height="315" src="https://www.youtube.com/embed/Xdkkux6OxfM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<YouTube id="Xdkkux6OxfM" />
 
 ## The internet of assets {#internet-of-assets}
 
@@ -67,7 +64,7 @@ We use NFTs to give back to our contributors and we've even got our own NFT doma
 
 If you contribute to ethereum.org, you can claim a POAP NFT. These are collectibles that prove you participated in an event. Some crypto meetups have used POAPs as a form of ticket to their events. [More on contributing](/contributing/#poap).
 
-![ethereum.org POAP](../../assets/use-cases/poap.png)
+![ethereum.org POAP](./poap.png)
 
 #### ethereum.eth {#ethereum-dot-eth}
 
@@ -166,7 +163,9 @@ When they sell their content, funds go directly to them. If the new owner then s
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Explore, buy or create your own NFT art/collectibles...</div>
-  <ButtonLink to="/dapps/?category=collectibles">Explore NFT art</ButtonLink>
+  <ButtonLink to="/dapps/?category=collectibles">
+    Explore NFT art
+  </ButtonLink>
 </InfoBanner>
 
 #### The copy/paste problem {#nfts-copy-paste}
@@ -197,7 +196,9 @@ Decentraland, a virtual reality game, even lets you buy NFTs representing virtua
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Check out Ethereum games, powered by NFTs...</div>
-  <ButtonLink to="/dapps/?category=gaming">Explore NFT games</ButtonLink>
+  <ButtonLink to="/dapps/?category=gaming">
+    Explore NFT games
+  </ButtonLink>
 </InfoBanner>
 
 <Divider />
@@ -326,70 +327,33 @@ We're not here to defend the environmental footprint of mining, instead we want 
 
 ### A greener future... {#a-greener-future}
 
-For as long as Ethereum has been around, the energy-consumption of mining has been a huge focus area for developers and researchers. And the vision has always been to replace it as soon as possible. [More on Ethereum's vision](/eth2/vision/)
+For as long as Ethereum has been around, the energy-consumption of mining has been a huge focus area for developers and researchers. And the vision has always been to replace it as soon as possible. [More on Ethereum's vision](/upgrades/vision/)
 
 This vision is being delivered right now.
 
-#### A greener Ethereum: Eth2 {#eth2}
+#### A greener Ethereum {#greener-ethereum}
 
-Ethereum is currently going through a series of upgrades, known as Eth2, that will replace mining with [staking](/eth2/staking/). This will remove computing power as a security mechanism, and reduce Ethereum's carbon footprint by ~99.95%<sup>[^1]</sup>. In this world, stakers commit funds instead of computing power to secure the network.
+Ethereum is currently going through a series of upgrades that will replace mining with [staking](/staking/). This will remove computing power as a security mechanism, and reduce Ethereum's carbon footprint by ~99.95%<sup>[^1]</sup>. In this world, stakers commit funds instead of computing power to secure the network.
 
 The energy-cost of Ethereum will become the cost of running a home computer multiplied by the number of nodes in the network. If there are 10,000 nodes in the network and the cost of running a home computer is roughly 525kWh per year. That's 5,250,000kWh<sup>[^1]</sup> per year for the entire network.
 
-We can use this to compare Eth2 to a global service like Visa. 100,000 Visa transactions uses 149kWh of energy<sup>[^2]</sup>. In Eth2, that same number of transactions would cost 17.4kWh of energy or ~11% of the total energy<sup>[^3]</sup>. That's without considering the many optimisations being worked on in parallel to Eth2, like [rollups](/glossary/#rollups). It could be as little as 0.1666666667kWh of energy for 100,000 transactions.
+We can use this to compare the future of Ethereum to a global service like Visa. 100,000 Visa transactions uses 149kWh of energy<sup>[^2]</sup>. In proof-of-stake Ethereum, that same number of transactions would cost 17.4kWh of energy or ~11% of the total energy<sup>[^3]</sup>. That's without considering the many optimizations being worked on in parallel to the consensus layer and shard chains, like [rollups](/glossary/#rollups). It could be as little as 0.1666666667kWh of energy for 100,000 transactions.
 
 Importantly this improves the energy efficiency while preserving Ethereum's decentralization and security. Many other blockchains out there might already use some form of staking, but they're secured by a select few stakers, not the thousands that Ethereum will have. The more decentralization, the more secure the system.
 
 [More on energy estimates](#footnotes-and-sources)
 
-_We’ve provided the basic comparison to Visa to baseline your understanding of Eth2 energy consumption against a familiar name. However, in practice, it’s not really correct to compare based on number of transactions. Ethereum’s energy output is time-based. If Ethereum did more or less transactions from one minute to the next, the energy output would stay the same._
+_We’ve provided the basic comparison to Visa to baseline your understanding of proof-of-stake Ethereum energy consumption against a familiar name. However, in practice, it’s not really correct to compare based on number of transactions. Ethereum’s energy output is time-based. If Ethereum did more or less transactions from one minute to the next, the energy output would stay the same._
 
 _It’s also important to remember that Ethereum does more than just financial transactions, it’s a platform for applications, so a fairer comparison might be to many companies/industries including Visa, AWS and more!_
 
 #### Timelines {#timelines}
 
-The process has already started. [The Beacon Chain](/eth2/beacon-chain/), the first upgrade, shipped in December 2020. This provides the foundation for staking by allowing stakers to join the system. The next step relevant to energy efficiency is to merge the current chain, the one secured by miners, into the Beacon Chain where mining isn't needed. Timelines can't be exact at this stage, but it's estimated that this will happen sometime in 2022. This process is known as the merge (formerly referred to as the docking). [More on the merge](/eth2/merge/).
+The process has already started. [The Beacon Chain](/upgrades/beacon-chain/), the first upgrade, shipped in December 2020. This provides the foundation for staking by allowing stakers to join the system. The next step relevant to energy efficiency is to merge the current chain, the one secured by miners, into the Beacon Chain where mining isn't needed. Timelines can't be exact at this stage, but it's estimated that this will happen sometime in 2022. This process is known as The Merge (formerly referred to as the docking). [More on The Merge](/upgrades/merge/).
 
-<ButtonLink to="/eth2/">More on Eth2</ButtonLink>
-
-<!-- #### Rollups in the meantime...
-
-While we wait for Eth2, products are moving to a "layer 2" technology known as rollups. Working on top of Ethereum, this technology lets you "roll up" or batch many transactions into a single one that is submitted to the chain. By moving as many things off the chain and only submitting the truly important bits (the cryptographic proofs), demand for block space will decrease. This will in turn lower the amount of computing power needed to create new blocks.
-
-[More on rollups and layer 2 technology](/developers/docs/scaling/layer-2-rollups/)
-
-#### A more efficient NFT standard... {#a-more-efficient-nft-standard}
-
-Ethereum is open source software and new standards are being figured out and agreed on all the time. The Consecutive Transfer Extension Standard (EIP-2309) plans to make the creation of NFTs more efficient. Like rollups this reduces the amount of heavy lifting done on chain, allowing you to mint one billion NFTs in a single transaction.
-
-[More on EIP-2309](https://eips.ethereum.org/EIPS/eip-2309)
-
-[to me this doesn't solve the problem if block space remains the same due to mining etc... should we include?] -->
-
-<!-- Ethereum currently used proof-of-work to achieve consensus. It is a top priority of the community to transition to a proof-of-stake system, to increase decentralization, security and scalability, while reducing energy consumption requirements imposed from proof-of-work. Several layer 2 scaling solutions, such as rollups, are being developed and implemented which also aim to improve scalability while decreasing energy usage. EIP-2309 is a proposal also aiming to improve the efficiency of layer 1 NFT transactions.
-
-Before these scaling solutions are fully implemented, it is worth noting that NFT's specifically are not necessarily _directly_ causing any increased carbon emission. The proof-of-work consensus mechanism that currently underlies the entire Ethereum blockchain is being used whether NFTs are being minted or not. If NFTs were to disappear today, there is a strong chance that block space would remain in demand for other reasons, though even if demand for block space decreased it wouldn't drastically impact energy consumption. For sake of example, imagine the demand for transacting on Ethereum falls to where the blocks are now empty. Miners would still be incentivized to produce blocks for the reward, and the hashing power required to do so would persist despite an empty block. More realistically, other transactions would take the place of NFT transactions. So again, there remains a strong and an active push to advance layer 2 solutions, and finalize Ethereum's transition to a proof-of-stake system.
-
-All this being said, let's talk more about proof-of-work. Objectively there is a significant amount of energy that must be consumed in order to achieve the security that Ethereum offers.
-Based on this, many people are quick to subjectively argue that the carbon footprint from proof-of-work blockchains is a "waste of energy."
-
-Energy consumption is not fundamentally a "good" or "bad" thing, and very much depends on where the energy is coming from, and what it is being used for.
-It is not up to any given individual to decide what is a "good" or "bad" use of energy for someone else. This same principle is used throughout Ethereum, where nobody can tell you that your transaction is not important.
-For someone not using this technology, is it fair for them to dictate that this form of energy consumption is wasteful? What about those who's lives have been changed for the better as a result?
-
-Externalities, such as carbon emissions based on choice of energy source, have not necessarily been priced in to the current system, but doing so would further encourage the use of renewable energy sources.
-In this case, miners would migrate to lower cost alternatives. Since you can't transport energy effectively over great distances (energy lost in high voltage lines), this depreciates the capital cost of building renewable energy sources in more remote places. Someone looking to utilize renewable energy sources, such as solar farms, to run a mining rig could invest in a remote location where renewable energy sources are more accessible (ie: large open plots of land or at a waterfall). This energy would have otherwise been untapped, and "wasted" by not harnessing it. These investments in infrastructure open up the ability to serve a local community, and can be paid off much faster from the economic payoff received from mining.
-
-The other side of the coin: Keep in mind that alternatives are not necessarily carbon-neutral either, such as the footprint of printing, handling, shipping and guarding fiat currencies. Annual spectacles of Christmas lights consume large amounts of energy, not to mention commercial products filling landfills, and governments engaging in war, leading to substantial levels of pollution.
-
-Oh, and the same thing was said about the internet itself. Early measures of Google's search traffic led to incorrectly extrapolating that data to the future, forming incorrect conclusions about the unmanageable "waste of energy" that would follow.
-
-### Mint NFTs {#mint-nfts}
-
-Want to turn your content into a NFT?
-
-- Foundation
-- Other platforms... -->
+<ButtonLink to="/upgrades/">
+  More on Ethereum upgrades
+</ButtonLink>
 
 ## Build with NFTs {#build-with-nfts}
 
@@ -407,8 +371,6 @@ Most NFTs are built using a consistent standard known as [ERC-721](/developers/d
 <Divider />
 
 ### Footnotes and sources {#footnotes-and-sources}
-
-<!-- TODO: after shipping this can form the basis of an energy efficiency page. I suspect this could also live under learn and just do some general myth-busting and supply stats about eth2 energy usage-->
 
 This explains how we arrived at our energy estimates above. These estimates apply to the network as a whole and are not just reserved for the process of creating, buying, or selling NFTs.
 
@@ -440,13 +402,13 @@ The cost of 100,000 Visa transactions is 149 kwH - [Bitcoin network average ener
 
 Year-ending September 2020 they processed 140,839,000,000 transactions – [Visa financials report Q4 2020](https://s1.q4cdn.com/050606653/files/doc_financials/2020/q4/Visa-Inc.-Q4-2020-Operational-Performance-Data.pdf)
 
-#### 3. Eth2 energy usage for 100,000 transactions {#fn-3}
+#### 3. Energy usage for 100,000 transactions on a sharded proof-of-stake network {#fn-3}
 
-It's estimated that Eth2 will allow the network to process between 25,000 and 100,000 transactions per second, with [100,000 as the theoretical maximum right now](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698).
+It's estimated that scalability upgrades will allow the network to process between 25,000 and 100,000 transactions per second, with [100,000 as the theoretical maximum right now](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698).
 
-[Vitalik Buterin on transactions per second potential on Eth2](https://twitter.com/VitalikButerin/status/1312905884549300224?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1312905886327664640%7Ctwgr%5E%7Ctwcon%5Es2_&ref_url=https%3A%2F%2Fwww.coinspeaker.com%2Fvitalik-buterin-ethereum-layer-2%2F)
+[Vitalik Buterin on transactions per second potential with sharding](https://twitter.com/VitalikButerin/status/1312905884549300224)
 
-At the bare minimum, Eth2 will allow 64 times the amount of transactions as today which sits at around 15 transactions. That's the amount of shard chains (extra data and capacity) being introduced. [More on shard chains](/eth2/shard-chains/)
+At the bare minimum, sharding will allow 64 times the amount of transactions as today which sits at around 15 transactions. That's the amount of shard chains (extra data and capacity) being introduced. [More on shard chains](/upgrades/shard-chains/)
 
 That means we can estimate how long it will take to process 100,000 transactions so we can compare it to the Visa example above.
 
@@ -463,12 +425,12 @@ If we multiply that by the amount of time it takes to process 100,000 transactio
 
 That is **11.6554809866%** of the energy consumed by the same amount of transactions on Visa.
 
-And remember, this is based on the minimum amount of transactions that Eth2 will be able to handle per second. If Eth2 reaches its potential of 100,000 transactions per second, 100,000 transactions would consume 0.1666666667kWh.
+And remember, this is based on the minimum amount of transactions that Ethereum will be able to handle per second. If Ethereum reaches its potential of 100,000 transactions per second, 100,000 transactions would consume 0.1666666667kWh.
 
 To put it another way, if Visa handled 140,839,000,000 transactions at a cost of 149 kWh per 100,000 transactions that's 209,850,110 kWh energy consumed for the year.
 
-Eth2 in a single year stands to consume 5,256,000 kWh. With a potential of 788,940,000,000 - 3,153,600,000,000 transactions processed in that time.
+Ethereum in a single year stands to consume 5,256,000 kWh. With a potential of 788,940,000,000 - 3,153,600,000,000 transactions processed in that time.
 
 <InfoBanner emoji=":evergreen_tree:">
-  If you think these stats are incorrect or can be made more accurate, please raise an issue or PR. These are estimates by the ethereum.org team made using publicly accessible information and the current Eth2 design. This doesn't represent an official promise from the Ethereum Foundation. 
+  If you think these stats are incorrect or can be made more accurate, please raise an issue or PR. These are estimates by the ethereum.org team made using publicly accessible information and the planned Ethereum design. This doesn't represent an official promise from the Ethereum Foundation.
 </InfoBanner>

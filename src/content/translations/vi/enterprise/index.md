@@ -70,8 +70,8 @@ Mạng Ethereum công cộng và riêng tư có thể cần các tính năng c�
 
 ### Bảo mật {#security}
 
-- [Clef](https://geth.ethereum.org/clef/Overview) _được sử dụng để ký các giao dịch và dữ liệu và có nghĩa là một sự thay thế cho quản lý tài khoản geth_
-- [EthSigne -](https://gitter.im/PegaSysEng/EthSigner) _Ứng dụng ký giao dịch được sử dụng với nhà cung cấp web3_
+- [Clef](https://geth.ethereum.org/docs/clef/tutorial) _được sử dụng để ký các giao dịch và dữ liệu và có nghĩa là một sự thay thế cho quản lý tài khoản geth_
+- [EthSigne -](https://github.com/ConsenSys/ethsigner) _Ứng dụng ký giao dịch được sử dụng với nhà cung cấp web3_
 
 ### Bộ công cụ {#tooling}
 

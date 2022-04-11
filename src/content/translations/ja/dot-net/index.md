@@ -29,14 +29,14 @@ sidebarDepth: 1
 
 ## 初級者向けリファレンスとリンク {#beginner-references-and-links}
 
-**Netherum ライブラリと VS Code Solidity の紹介**
+**Nethereum ライブラリと VS Code Solidity の紹介**
 
 - [Nethereum 入門](https://docs.nethereum.com/en/latest/getting-started/)
 - [VS Code に Solidity をインストール](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity)
 - [イーサリアムスマートコントラクトを作成して呼び出すための.NET 開発者のワークフロー](https://medium.com/coinmonks/a-net-developers-workflow-for-creating-and-calling-ethereum-smart-contracts-44714f191db2)
-- [Nethereum とのスマートコントラクトの統合](https://kauri.io/article/b54334b0695342c1bbe161c4c4467b50/smart-contracts-integration-with-nethereum)
+- [Nethereum とのスマートコントラクトの統合](https://kauri.io/#collections/getting%20started/smart-contracts-integration-with-nethereum/#smart-contracts-integration-with-nethereum)
 - [.NET とイーサリアムブロックチェーンのスマートコントラクトを Nethereum と連動させる](https://medium.com/my-blockchain-development-daily-journey/interfacing-net-and-ethereum-blockchain-smart-contracts-with-nethereum-2fa3729ac933) ([中文版](https://medium.com/my-blockchain-development-daily-journey/%E4%BD%BF%E7%94%A8nethereum%E9%80%A3%E6%8E%A5-net%E5%92%8C%E4%BB%A5%E5%A4%AA%E7%B6%B2%E5%8D%80%E5%A1%8A%E9%8F%88%E6%99%BA%E8%83%BD%E5%90%88%E7%B4%84-4a96d35ad1e1))
-- [Nethereum - ブロックチェーン用のオープンソース.NET 統合ライブラリ](https://kauri.io/article/d15dfd4903f149cdb84b3ce666103b52/v1/nethereum-an-open-source-.net-integration-library-for-blockchain)
+- [Nethereum - ブロックチェーン用のオープンソース.NET 統合ライブラリ](https://kauri.io/#collections/a%20hackathon%20survival%20guide/nethereum-an-open-source-.net-integration-library/)
 - [Nethereum を使った SQL データベースへのイーサリアムトランザクションの書き込み](https://medium.com/coinmonks/writing-ethereum-transactions-to-sql-database-using-nethereum-fd94e0e4fa36)
 - [C#と VisualStudio を使ってイーサリアムスマートコントラクトを簡単にデプロイする方法をご覧ください](https://koukia.ca/deploy-ethereum-smart-contracts-using-c-and-visualstudio-5be188ae928c)
 
@@ -65,7 +65,7 @@ sidebarDepth: 1
 
 - [Azure Key Vault と Nethereum](https://github.com/Azure-Samples/bc-community-samples/tree/master/akv-nethereum)
 - [Nethereum.DappHybrid](https://github.com/Nethereum/Nethereum.DappHybrid)
-- [Ujo Netherum のバックエンドリファレンスアーキテクチャ](https://docs.nethereum.com/en/latest/nethereum-ujo-backend-sample/)
+- [Ujo Nethereum のバックエンドリファレンスアーキテクチャ](https://docs.nethereum.com/en/latest/nethereum-ujo-backend-sample/)
 
 ## .NET のプロジェクト、ツール、その他の楽しいもの{#dot-net-projects-tools-and-other-fun stiff}
 
@@ -81,7 +81,7 @@ sidebarDepth: 1
 
 ## .NET コミュニティコントリビューター {#dot-net-community-contributors}
 
-Netherum では、主に[Gitter](https://gitter.im/Nethereum/Nethereum)で議論しており、質問や回答を歓迎する他、助けを求めたり、ゆっくりしたりしてください。 [Nethereum の GitHub リポジトリ](https://github.com/Nethereum)で PR をしたり、issue を立てたりすることもできますし、私たちが持つ多くのサイドプロジェクトやサンプルプロジェクトを閲覧することもできます。
+Nethereum では、主に[Gitter](https://gitter.im/Nethereum/Nethereum)で議論しており、質問や回答を歓迎する他、助けを求めたり、ゆっくりしたりしてください。 [Nethereum の GitHub リポジトリ](https://github.com/Nethereum)で PR をしたり、issue を立てたりすることもできますし、私たちが持つ多くのサイドプロジェクトやサンプルプロジェクトを閲覧することもできます。
 
 Nethermind では、[Gitter](https://gitter.im/nethermindeth/nethermind)を通じて連絡を取り合いましょう。 PR や issue については、[Nethermind の GitHub リポジトリ](https://github.com/NethermindEth/nethermind)をチェックしてください。
 

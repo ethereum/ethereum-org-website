@@ -148,11 +148,11 @@ Oczywiście są pewne dane, które mówią o stanie sieci. Są one dość specyf
 - Całkowita podaż ETH – liczba ETH w obiegu – pamiętaj, że nowy ETH powstaje dzięki utworzeniu każdego bloku w formie nagród za bloki.
 - Pułap rynkowy – obliczenie ceny\*podaży.
 
-## Dane Eth2 {#eth2-data}
+## Dane Eth2 {#consensus-layer-data}
 
 Ulepszenia Eth2 są nadal w fazie rozwoju, ale warto wspomnieć o niektórych punktach danych, które eksplorery będą mogły Ci dostarczyć. W rzeczywistości wszystkie te dane są obecnie dostępne dla sieci testowych.
 
-Jeśli brak Ci wiedzy o Eth2, sprawdź [nasz przegląd ulepszeń Eth2](/eth2/).
+Jeśli brak Ci wiedzy o Eth2, sprawdź [nasz przegląd ulepszeń Eth2](/upgrades/).
 
 ### Epoka {#epoch}
 
@@ -257,7 +257,7 @@ Dane najwyższego poziomu Eth2 obejmują:
 - [Ethplorer](https://ethplorer.io/) – eksplorator bloków z naciskiem na tokeny dla sieci głównej Ethereum i testnetu Kovan.
 - [Blockchair](https://blockchair.com/ethereum) – najbardziej prywatny eksplorator Ethereum. Także dla sortowania i filtrowania danych (mempool).
 
-## Eksploratory bloków Eth2 {#eth2-block-explorers}
+## Eksploratory bloków Eth2 {#beacon-chain-block-explorers}
 
 - [https://beaconcha.in/](https://beaconcha.in/)
 - [https://beaconscan.com/](https://beaconscan.com/)

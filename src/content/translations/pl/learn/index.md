@@ -42,7 +42,7 @@ Szczegółowe artykuły na temat tego jak działa Ethereum i technologia blockch
 
 - [How does Ethereum work, anyway?](https://medium.com/@preethikasireddy/how-does-ethereum-work-anyway-22d1df506369) _27.09.2017 - Preethi Kasireddy_
 - [A Gentle Introduction to Ethereum](https://bitsonblocks.net/2016/10/02/gentle-introduction-ethereum/) _02.10.2016 - Antony Lewis_
-- [Introduction to Blockchain through Cryptoeconomics - Part 1](https://blockchainatberkeley.blog/introduction-to-blockchain-through-cryptoeconomics-part-1-bitcoin-369f245067f9) _26.01.2018 - Zubin Koticha_
+- [Introduction to Blockchain through Cryptoeconomics - Part 1](https://medium.com/blockchain-at-berkeley/introduction-to-blockchain-through-cryptoeconomics-part-1-bitcoin-369f245067f9) _26.01.2018 - Zubin Koticha_
 - [Introduction to Blockchain through Cryptoeconomics - Part 2](https://medium.com/mechanism-labs/introduction-to-bitcoin-through-cryptoeconomics-part-2-proof-of-work-and-nakamoto-consensus-1252f6a6c012) _19.07.2018 - Zubin Koticha_
 
 ## Inteligentne kontrakty {#smart-contracts}
@@ -57,7 +57,7 @@ Ethereum używa obecnie systemu o nazwie „proof-of-work. Umożliwia to sieci E
 
 - [What does it mean to mine Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) _Często aktualizowane - Ethhub_
 
-W ETH 2.0 Ethereum zostanie przeniesione do innego systemu o nazwie „proof-of-stake”. [Czytaj więcej o ETH 2.0 poniżej](#eth-2-0).
+W ETH 2.0 Ethereum zostanie przeniesione do innego systemu o nazwie „proof-of-stake”. [Czytaj więcej o ETH 2.0 poniżej](#consensus-layer-upgrades).
 
 ## Klienci i węzły {#clients-and-nodes}
 
@@ -70,7 +70,7 @@ Sieć Ethereum składa się z wielu węzłów, z których każdy obsługuje komp
 
 Podejmowanych jest wiele starań, aby Ethereum było bardziej „skalowalne” poprzez poprawę jego szybkości i ogólnej przepustowości transakcji. Zasadniczo są one podzielone na rozwiązania typu „Warstwa 1” oraz „Warstwa 2”.
 
-„Warstwa 1” odnosi się do poprawy podstawowego protokołu Ethereum. Najważniejszym projektem w pracy nad udoskonalaniem podstawowego protokołu Ethereum jest [ETH 2.0](#eth-2-0).
+„Warstwa 1” odnosi się do poprawy podstawowego protokołu Ethereum. Najważniejszym projektem w pracy nad udoskonalaniem podstawowego protokołu Ethereum jest [ETH 2.0](#consensus-layer-upgrades).
 
 „Warstwa 2” odnosi się do technologii „nadbudowanych" na podstawowym protokole Ethereum, umożliwiając większą skalowalność bez utraty bezpieczeństwa. Istnieją również technologie „spoza łańcucha”, takie jak łańcuchy boczne, które umożliwiają większą skalowalność poprzez zastosowanie innego zestawu kompromisów w domenie bezpieczeństwa.
 
@@ -93,7 +93,7 @@ Podejmowanych jest wiele starań, aby Ethereum było bardziej „skalowalne” p
 - [Understanding Plasma](https://education.district0x.io/general-topics/understanding-ethereum/understanding-plasma/) _District0x_
 - [Learn Plasma - A learning resource for the Plasma framework](https://www.learnplasma.org/en/)
 
-## ETH 2.0 {#eth-2-0}
+## ETH 2.0 {#consensus-layer-upgrades}
 
 ETH 2.0 (znany również jako „Serenity”) odnosi się do kolejnej ważnej aktualizacji podstawowego protokołu Ethereum. Łączy kilka ulepszeń podstawowego protokołu Ethereum lub tzw. „Warstwy 1”.
 
@@ -103,7 +103,7 @@ ETH 2.0 (znany również jako „Serenity”) odnosi się do kolejnej ważnej ak
 - [Sharding](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/sharding/) _Często aktualizowane - EthHub_
 - [ETH 2.0 - The Road to Scaling Ethereum - Vitalik Buterin](https://youtu.be/kCVpDrlVesA) _(Wideo) Listopad 2018 - YouTube_
 
-## ETH 1.x {#eth-1x}
+## ETH 1.x {#execution-layer-upgrades}
 
 ETH 1.x to nazwa zbioru aktualizacji do istniejącego protokołu Ethereum. Celem jest dalsza poprawa i utrzymanie Ethereum, w czasie gdy nadal rozwijana i wdrażana jest ETH 2.0.
 

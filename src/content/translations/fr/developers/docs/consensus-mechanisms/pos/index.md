@@ -6,7 +6,7 @@ sidebar: true
 incomplete: true
 ---
 
-Ethereum passe de [la preuve de travail (PoW)](/developers/docs/consensus-mechanisms/pow/) à un mécanisme de consensus appelé "preuve d'enjeu" (PoS) . Cela a toujours été prévu, car il s'agit d'un élément clé de la stratégie de la communauté pour faire évoluer Ethereum via [les mises à niveau Eth2](/eth2/). Toutefois, instituer la preuve d'enjeu constitue un grand défi technique et ce procédé n'est pas aussi simple que l'utilisation de la preuve de travail pour parvenir à un consensus sur l'ensemble du réseau.
+Ethereum passe de [la preuve de travail (PoW)](/developers/docs/consensus-mechanisms/pow/) à un mécanisme de consensus appelé "preuve d'enjeu" (PoS) . Cela a toujours été prévu, car il s'agit d'un élément clé de la stratégie de la communauté pour faire évoluer Ethereum via [les mises à niveau Eth2](/upgrades/). Toutefois, instituer la preuve d'enjeu constitue un grand défi technique et ce procédé n'est pas aussi simple que l'utilisation de la preuve de travail pour parvenir à un consensus sur l'ensemble du réseau.
 
 ## Prérequis {#prerequisites}
 
@@ -37,7 +37,7 @@ Si vous attestez la conformité de blocs malveillants, vous perdez votre mise.
 
 ### La chaîne phare {#the-beacon-chain}
 
-Lorsque Ethereum remplace la preuve de travail par une preuve d'enjeu, cela entraîne une complexité supplémentaire : les [chaînes de fragments](/eth2/shard-chains/). Ce sont des blockchains séparées qui nécessitent des validateurs pour traiter les transactions et créer de nouveaux blocs. Le projet est de disposer de 64 chaînes de fragments, qui exigent toutes une compréhension partagée de l'état du réseau. Une coordination supplémentaire est donc nécessaire, qui est prise en charge par [la chaîne phare](/eth2/beacon-chain/).
+Lorsque Ethereum remplace la preuve de travail par une preuve d'enjeu, cela entraîne une complexité supplémentaire : les [chaînes de fragments](/upgrades/shard-chains/). Ce sont des blockchains séparées qui nécessitent des validateurs pour traiter les transactions et créer de nouveaux blocs. Le projet est de disposer de 64 chaînes de fragments, qui exigent toutes une compréhension partagée de l'état du réseau. Une coordination supplémentaire est donc nécessaire, qui est prise en charge par [la chaîne phare](/upgrades/beacon-chain/).
 
 La chaîne phare reçoit des informations d'état provenant de fragments et les met à la disposition d'autres fragments afin que le réseau puisse rester synchronisé. La chaîne phare gère également les validateurs, de l'enregistrement de leur mise jusqu'à l'émission de leurs récompenses et pénalités.
 

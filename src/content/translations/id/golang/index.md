@@ -38,13 +38,13 @@ Perlu penjelasan yang lebih mendasar? Kunjungi [ethereum.org/learn](/id/learn/) 
 
 - [Go Ethereum Documentation](https://geth.ethereum.org/docs/) - _Dokumentasi resmi Golang untuk Ethereum_
 - [Go Ethereum GoDoc](https://godoc.org/github.com/ethereum/go-ethereum)
-- [Membuat Dapp di Go dengan Geth](https://kauri.io/article/60a36c1b17d645939f63415218dc24f9/creating-a-dapp-in-go-with-geth)
+- [Membuat Dapp di Go dengan Geth](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/creating-a-dapp-in-go-with-geth/)
 - [Bekerja dengan Jaringan Ethereum Privat dengan Golang dan Geth](https://myhsts.org/tutorial-learn-how-to-work-with-ethereum-private-network-with-golang-with-geth.php)
 - [Pengujian unit smart contract Solidity di Ethereum dengan Go](https://medium.com/coinmonks/unit-testing-solidity-contracts-on-ethereum-with-go-3cc924091281)
 
 ## Artikel Tingkat Lanjut {#advanced-use-patterns}
 
-- [Simulasi Backend Geth](https://kauri.io/article/6285c9692883411aa041b6b970405a17/v1/the-geth-simulated-backend)
+- [Simulasi Backend Geth](https://kauri.io/#collections/An%20ethereum%20test%20toolkit%20in%20Go/the-geth-simulated-backend/#_top)
 - [Blockchain-as-a-Service Apps Menggunakan Ethereum dan Quorum](https://blockchain.dcwebmakers.com/blockchain-as-a-service-apps-using-ethereum-and-quorum.html)
 - [Penyimpanan Terdistribusi IPFS dan Swarm di Aplikasi Blockchain Ethereum](https://blockchain.dcwebmakers.com/work-with-distributed-storage-ipfs-and-swarm-in-ethereum.html)
 - [Mobile Clients: Library and Node Inproc Ethereum](https://github.com/ethereum/go-ethereum/wiki/Mobile-Clients:-Libraries-and-Inproc-Ethereum-Nodes)

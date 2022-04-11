@@ -54,7 +54,6 @@ ETH-ul pe rețelele de testate nu are o valoare reală; de aceea, nu există pie
 - [Faucet-ul Görli](https://faucet.goerli.mudit.blog/)
 - [Faucet-ul Kovan](https://faucet.kovan.network/)
 - [Faucet-ul Rinkeby](https://faucet.rinkeby.io/)
-- [Faucet-ul Ropsten](https://faucet.ropsten.be/)
 
 ## Rețele private {#private-networks}
 
@@ -71,20 +70,6 @@ Există proiecte și instrumente dedicate pentru a ajuta la acest lucru. Obține
 Procesul de consens este controlat de un set predefinit de noduri care sunt de încredere. De exemplu, o rețea privată de instituții academice cunoscute, care guvernează fiecare un singur nod și blocurile sunt validate de un număr limitat de semnatari din rețea.
 
 Dacă o rețea publică Ethereum este ca internetul public, te poți gândi la o rețea de consorțiu ca la un intranet privat.
-
-<!-- TODO
-
-## Interacting with testnets
-
-### Your own local network {#your-own-local-network}
-
-`geth -—networkid="12345" console`
-
-### Testnets {#testnets-1}
-
-Wallets like MetaMask or MyEtherWallet will allow you to switch networks so you can test your apps using your test ETH.
-
--->
 
 ## Referințe suplimentare {#further-reading}
 

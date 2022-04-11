@@ -4,7 +4,7 @@ lang: ig
 sidebar: false
 ---
 
-# Nnoo! {#-welcome}
+# Nnoo! {#what-is-ethereum}
 
 Ọhụrụ na Ethereum? I no n'ebe ziri ezi. Ka anyi bido site na nnukwu foto.
 
@@ -19,7 +19,7 @@ sidebar: false
 
 **Dị ka blockchains ndị ọzọ, Ethereum nwere ego nwaafo cryptocurrency ana akpọ ether (ETH).** ETH bụ ego dijitalụ. Ọ bụrụ na ị nụrụ maka [Bitcoin](http://bitcoin.org/) ETH nwere otutu otu njiri mara ya. Ọ bụ dijitalụ kpamkpam, enwere ike iziga onye ọ bụla nọ n'ụwa n'otu ntabi anya. Mbunye ihe nke ETH enweghi ndi goomenti maọbụ ụlọ ọrụ ọ bụla na achịkwa ya, ahazighariri ya, ma o di ụkọ. Ndị mmadụ n’ụwa niile na eji ETH akwu ugwo, dị ka ụlọ ahịa bara uru, ma ọ bụ dịka ihe eji ebiri ego.
 
-mana dika blockchain ndi ozo, Ethereum na emenwu karia. Ethereum bu ihe aga ahaziwu n'ihu, nka a putara na ndị meputara ya ga eji nwu ya [ruo ngwaoru komputa ọhụru di iche](//#1-were ngwaoru komputa aruru na ethereum).
+mana dika blockchain ndi ozo, Ethereum na emenwu karia. Ethereum bu ihe aga ahaziwu n'ihu, nka a putara na ndị meputara ya ga eji nwu ya [ruo ngwaoru komputa ọhụru di iche](/dapps/) were ngwaoru komputa aruru na ethereum.
 
 Ngwa komputa a ahazighariri (maobu "dapps") na enweta uru nke crypotcurrency na teknụzụ blockchain. Enwere ike itukwasi ha obi, nke a putara na ozigbo "enyefere" ha na Ethereum, ha ga na aru oru dika ihe ahaziri n'ihu oge niile. Ha na achikotawu akụ dijitalụ iji meputa ngwa ego komputa ohuru di iche. Enwere ike ihazighari ha, nke a putara na 'onweghi otu ihe maobu mmadu na achikota ya.
 
@@ -47,12 +47,8 @@ Ngwa komputa a ahazighariri (maobu "dapps") na enweta uru nke crypotcurrency na 
 
 [Ahazighariri Ihe nile na Vitalik Buterin](https://youtu.be/WSN5BaCzsbo)
 
-<div class="iframe-container">
-  <iframe width="100%" height="315" src="https://www.youtube.com/embed/WSN5BaCzsbo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+<YouTube id="WSN5BaCzsbo" />
 
 [Ethereum's Blockchain site na TechCrunch](https://www.youtube.com/watch?v=WfULutvxvzY)
 
-<div class="iframe-container">
-  <iframe width="100%" height="315" src="https://www.youtube.com/embed/WfULutvxvzY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+<YouTube id="WfULutvxvzY" />

@@ -85,13 +85,13 @@ Rollup-urile Optimistic utilizează un sidechain care se află în paralel cu la
 
 Cu rollup-urile Optimistic, tranzacțiile sunt scrise în lanțul principal Ethereum ca date de apel, optimizându-le în continuare prin reducerea costului gazului.
 
-Deoarece calculul este partea lentă și costisitoare a utilizării Ethereum, rollup-urilor Optimistic pot oferi până la 10-100 de ori îmbunătățiri ale scalabilității în funcție de tranzacție. Acest număr va crește și mai mult odată cu introducerea upgrade-ului Eth2: [lanțurile de fragmente](/eth2/shard-chains). Aceasta se datorează faptului că vor exista mai multe date disponibile în cazul în care o tranzacție este contestată.
+Deoarece calculul este partea lentă și costisitoare a utilizării Ethereum, rollup-urilor Optimistic pot oferi până la 10-100 de ori îmbunătățiri ale scalabilității în funcție de tranzacție. Acest număr va crește și mai mult odată cu introducerea upgrade-ului Eth2: [lanțurile de fragmente](/upgrades/shard-chains). Aceasta se datorează faptului că vor exista mai multe date disponibile în cazul în care o tranzacție este contestată.
 
 #### Contestarea tranzacțiilor {#disputing-transactions}
 
 Rollup-urile Optimistic nu calculează de fapt tranzacția, deci trebuie să existe un mecanism care să asigure că tranzacțiile sunt legitime și nu frauduloase. Aici intervin dovezile de fraudă. Dacă cineva observă o tranzacție frauduloasă, rollup-ul va executa o dovadă de fraudă și va rula calculul tranzacției, utilizând datele de stare disponibile. Aceasta înseamnă că este posibil să ai timpi de așteptare mai lungi pentru confirmarea tranzacției decât un rollup-ZK, deoarece ar putea fi contestat.
 
-![Diagramă care arată ce se întâmplă atunci când are loc o tranzacție frauduloasă într-un rollup Optimist pe Ethereum](../../../../../developers/docs/scaling/layer-2-rollups/optimistic-rollups.png)
+![Diagramă care arată ce se întâmplă atunci când are loc o tranzacție frauduloasă într-un rollup Optimist pe Ethereum](../../../../../developers/docs/scaling/optimistic-rollups/optimistic-rollups.png)
 
 Gazul de care ai nevoie pentru a calcula dovada fraudelor este chiar rambursat. Ben Jones, de la Optimism, descrie sistemul de legături în loc:
 
@@ -111,14 +111,6 @@ Deci, vei fi rambursat pentru dovedirea fraudei.
 - [Optimism](https://optimism.io/)
 - [Offchain Labs Arbitrum Rollup](https://offchainlabs.com/)
 - [Fuel Network](https://fuel.sh/)
-
-<!-- #### The Optimism virtual machine (OVM)
-
-What makes Optimistic rollups particularly exciting is that the chain works the same as the main Ethereum chain because it's based on [the EVM](/developers/docs/evm/). It doesn't use Ethereum, it is Ethereum. This means if you want to use Optimistic rollups, it's just a matter of deploying it to the OVM. It looks, feels, and acts just like the Ethereum main chain–you write contracts in Solidity, and interact with the chain via the Web3 API.
-
-The OVM also has a bunch of features that allow for a really seamless experience moving code from the EVM. In fact you can move Solidity contracts onto a cheaper and faster solution with just a few lines of code.
-
-[Check out the OVM documentation](http://docs.optimism.io/) -->
 
 ## Canale {#channels}
 
@@ -181,7 +173,6 @@ Un lanț „plasma” este un blockchain separat care este ancorat pe lanțul pr
 - [OMG Network](https://omg.network/)
 - [Matic Network](https://matic.network/)
 - [Gluon](https://gluon.network/)
-- [Gazelle](https://gzle.io/)
 - [LeapDAO](https://ipfs.leapdao.org/)
 
 ## Validium {#validium}
@@ -202,7 +193,7 @@ Folosește dovezi de validitate, cum ar fi [rollup-ZK,](#zk-rollups) dar datele 
 
 ## Sidechain-uri {#sidechains}
 
-Un sidechain este un blockchain separat care rulează în paralel cu rețeaua principală și funcționează independent. Are propriul algoritm de consens ([Proba autorității](https://en.wikipedia.org/wiki/Proof_of_authority), [Dovada mizei delegată](https://en.bitcoinwiki.org/wiki/DPoS), [Toleranță la erori Byzantine](https://decrypt.co/resources/byzantine-fault-tolerance-what-is-it-explained) și așa mai departe). Este conectat la lanțul principal printr-un pod bidirecțional.
+Un sidechain este un blockchain separat care rulează în paralel cu rețeaua principală și funcționează independent. Are propriul algoritm de consens ([Proba autorității](https://wikipedia.org/wiki/Proof_of_authority), [Dovada mizei delegată](https://en.bitcoinwiki.org/wiki/DPoS), [Toleranță la erori Byzantine](https://decrypt.co/resources/byzantine-fault-tolerance-what-is-it-explained) și așa mai departe). Este conectat la lanțul principal printr-un pod bidirecțional.
 
 | Avantaje                                        | Dezavantaje                                                                                                              |
 | ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
@@ -221,13 +212,12 @@ Combină cele mai bune părți ale mai multor tehnologii de nivel 2 și pot ofer
 
 ### Folosește soluții Hybrid {#use-hybrid-solutions}
 
-- [Offchain Labs Arbitrum SCSC](https://offchainlabs.com/arbitrum.pdf)
 - [Celer](https://www.celer.network/)
 
 ## Referințe suplimentare {#further-reading}
 
 - [Validium And The Layer 2 Two-By-Two — Issue No. 99](https://www.buildblockchain.tech/newsletter/issues/no-99-validium-and-the-layer-2-two-by-two)
-- \[Evaluating Ethereum layer 2 Scaling Solutions: A Comparison Framework\](https://medium.com/matter-labs/evaluating-ethereum-layer 2-scaling-solutions-a-comparison-framework-b6b2f410f955)
+- \[Evaluating Ethereum layer 2 Scaling Solutions: A Comparison Framework\](https://blog.matter-labs.io/evaluating-ethereum-l2-scaling-solutions-a-comparison-framework-b6b2f410f955)
 - [Adding Hybrid PoS-Rollup Sidechain to Celer’s Coherent Layer-2 Platform on Ethereum](https://medium.com/celer-network/adding-hybrid-pos-rollup-sidechain-to-celers-coherent-layer-2-platform-d1d3067fe593)
 - [Zero-Knowledge Blockchain Scalability](https://ethworks.io/assets/download/zero-knowledge-blockchain-scaling-ethworks.pdf)
 

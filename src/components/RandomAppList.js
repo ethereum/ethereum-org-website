@@ -31,11 +31,6 @@ const appList = [
     description: "page-dapps-dapp-description-decentraland",
   },
   {
-    name: "Dharma",
-    url: "https://www.dharma.io/",
-    description: "page-find-wallet-description-dharma",
-  },
-  {
     name: "Augur",
     url: "https://www.augur.net/",
     description: "page-dapps-dapp-description-augur",

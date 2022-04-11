@@ -122,7 +122,7 @@ bytes4(keccak256("onERC1155BatchReceived(address,address,uint256[],uint256[],byt
 
 When the receiving contract returns this value, it is assumed the contract accepts the transfer and knows how to handle the ERC-1155 tokens. Great, no more stuck tokens in a contract!
 
-### NFT Support {#safe-transfer-rule}
+### NFT Support {#nft-support}
 
 When the supply is just one, the token is essentially a non-fungible token (NFT). And as is standard for ERC-721, you can define a metadata URL. The URL can be read and modified by clients, see [here](https://eips.ethereum.org/EIPS/eip-1155#metadata).
 
@@ -144,3 +144,4 @@ _Note_: All batch functions including the hook also exist as versions without ba
 - [EIP-1155: Multi Token Standard](https://eips.ethereum.org/EIPS/eip-1155)
 - [ERC-1155: Openzeppelin Docs](https://docs.openzeppelin.com/contracts/3.x/erc1155)
 - [ERC-1155: Github Repo](https://github.com/enjin/erc-1155)
+- [Alchemy NFT API](https://docs.alchemy.com/alchemy/enhanced-apis/nft-api)

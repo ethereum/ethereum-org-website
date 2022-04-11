@@ -5,6 +5,8 @@ lang: en
 sidebar: true
 ---
 
+_A note on adding wallets: as part of [our Q1 product roadmap](https://github.com/ethereum/ethereum-org-website/issues/5105), we are refining our wallets page. This will include refining the listing criteria for our wallets page. Until we have researched, established, and published refined listing criteria, we will not be actively adding new wallets to the website._
+
 # Adding Ethereum products {#adding-products}
 
 Anyone is free to suggest new wallets and dapps to the content on ethereum.org, where it's appropriate to do so. **No, we won't list your dapp on our homepage** 😜
@@ -12,6 +14,7 @@ Anyone is free to suggest new wallets and dapps to the content on ethereum.org, 
 Wallets and dapps are currently listed on:
 
 - ethereum.org/wallets
+- ethereum.org/wallets/find-wallet
 - ethereum.org/dapps
 - ethereum.org/get-eth
 
@@ -57,7 +60,7 @@ Your dapp or wallet may not be listed on ethereum.org as prominently as others b
 
 **Both**
 
-- **Onboarding** – you product should have a well-designed onboarding experience to help and educate users. Or evidence of how-to content like articles or videos.
+- **Onboarding** – your product should have a well-designed onboarding experience to help and educate users. Or evidence of how-to content like articles or videos.
 - **Non-custodial** – users control their funds. If your product disappears, users can still access and move their funds.
 - **Globally accessible** – your product doesn't have geographic limitations or KYC requirements that exclude certain people from accessing your service.
 - **Open source** – your code should be accessible and you should accept PRs from the wider community.
@@ -105,4 +108,6 @@ _We're also investigating options for voting so the community can indicate their
 
 If you want to add a wallet or dapp to ethereum.org and it meets the criteria, create an issue on GitHub.
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.md&title=">Create an issue</ButtonLink>
+<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.md&title=">
+  Create an issue
+</ButtonLink>

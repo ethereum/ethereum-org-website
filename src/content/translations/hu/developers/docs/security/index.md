@@ -77,7 +77,7 @@ Ahhoz, hogy egy felhasználó ETH-et utalhasson ki, amit korábban a szerződés
 2. Elküldi neki az egyenleg összegét ETH-ben
 3. Visszaállítja 0-ra az egyenleget, így nem tudja még egyszer kiutalni az összeget.
 
-Ha meghívja egy normál számla (mint a saját Metamask számlád), akkor az elvártnak megfelelően működik: msg.sender.call.value() egyszerűen ETH-et küld a számládra. Azonban az okosszerződések is tudnak hívásokat intézni. Ha egy egyedi, rosszindulatú szerződés a `withdraw()` függvény meghívója, akkor a msg.sender.call.value() nem csak `amount` összegű ETH-et fog küldeni, hanem implicit módon meghívja a szerződést, hogy elindítsa a kód végrehajtást. Képzeld el ezt a következő rosszindulatú szerződést:
+Ha meghívja egy normál számla (mint a saját MetaMask számlád), akkor az elvártnak megfelelően működik: msg.sender.call.value() egyszerűen ETH-et küld a számládra. Azonban az okosszerződések is tudnak hívásokat intézni. Ha egy egyedi, rosszindulatú szerződés a `withdraw()` függvény meghívója, akkor a msg.sender.call.value() nem csak `amount` összegű ETH-et fog küldeni, hanem implicit módon meghívja a szerződést, hogy elindítsa a kód végrehajtást. Képzeld el ezt a következő rosszindulatú szerződést:
 
 ```solidity
 contract Attacker {
@@ -116,8 +116,6 @@ Az Attacker.beginAttack() meghívása egy ciklust fog beindítani, mely valahogy
 ```
 
 Az Attacker.beginAttack meghívása 1 ETH-tel egy újbóli belépés támadást fog indítani Victim ellen, ezzel több ETH-et kiutalva, mint amennyit beletesz (melyet más felhasználók egyenlegéből vont le, így a Victim szerződés alulfedezetté válik)
-
-<!-- TODO create a subpage related to re-entrancy & move this content there -->
 
 ### Hogyan kezeljük az újbóli belépést (a rosszabb mód) {#how-to-deal-with-re-entrancy-the-wrong-way}
 
@@ -219,7 +217,7 @@ A fenti támadástípusok az okosszerződések kódjához (újbóli belépés) �
 
 További olvasnivaló:
 
-- [Consensys Okosszerződés Ismet Támadások](https://consensys.github.io/smart-contract-best-practices/known_attacks/) - Egy nagyon olvasmányos magyarázat a legkomolyabb sérülékenységekről, a legtöbbhöz minta kóddal is.
+- [Consensys Okosszerződés Ismet Támadások](https://consensys.github.io/smart-contract-best-practices/attacks/) - Egy nagyon olvasmányos magyarázat a legkomolyabb sérülékenységekről, a legtöbbhöz minta kóddal is.
 - [SWC Registry](https://swcregistry.io/docs/SWC-128) - A CWE válogatott listája, mely az Ethereumra és az okosszerződésekre is érvényes
 
 ## Biztonsági eszközök {#security-tools}

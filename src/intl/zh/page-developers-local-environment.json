@@ -1,6 +1,8 @@
 {
   "page-local-environment-brownie-desc": "基于Python的智能合约开发和测试框架，针对以太坊虚拟机为目标。",
   "page-local-environment-brownie-logo-alt": "Brownie徽标",
+  "page-local-environment-dapptools-desc": "一套专注于以太坊的 CLI 工具，遵循 Unix 设计理念，侧重于于可组合性、可配置性和可扩容性。",
+  "page-local-environment-dapptools-logo-alt": "Dapptools 徽标",
   "page-local-environment-embark-desc": "用于构建和部署去中心化应用的所有内部开发者平台。",
   "page-local-environment-embark-logo-alt": "Embark徽标",
   "page-local-environment-epirus-desc": "用于在Java虚拟机上开发、部署和监测区块链应用的平台",
@@ -19,7 +21,7 @@
   "page-local-environment-hardhat-logo-alt": "安全帽徽标",
   "page-local-environment-openZeppelin-desc": "通过编译、升级、部署和与我们的CLI智能合同互动来节省开发时间。",
   "page-local-environment-openZeppelin-logo-alt": "OpenZepelin徽标",
-  "page-local-environment-scaffold-eth-desc": "安全帽+开发以太坊应用程序：开始构建由智能合约支持的去中心化应用所需的一切",
+  "page-local-environment-scaffold-eth-desc": "ETH + Hardhat + React：这些是开始构建由智能合约驱动的去中心化应用程序所需的一切",
   "page-local-environment-scaffold-eth-logo-alt": "scaffold-eth徽标",
   "page-local-environment-setup-meta-desc": "关于如何选择您的软件堆栈用于以太坊开发的指南。",
   "page-local-environment-setup-meta-title": "以太坊本地开发设置",

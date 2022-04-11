@@ -34,7 +34,7 @@ const Header = styled.div`
   margin-bottom: 1px;
   padding: 1rem;
   width: 100%;
-  color: #000;
+  color: #000000;
 `
 
 const Item = styled.div`
@@ -47,7 +47,7 @@ const Item = styled.div`
   margin-bottom: 1px;
   padding: 0.5rem 1rem;
   width: 100%;
-  color: #000;
+  color: #000000;
   &:hover {
     border-radius: 4px;
     box-shadow: 0 0 1px ${(props) => props.theme.colors.primary};
@@ -178,13 +178,20 @@ const TranslationLeaderboard = () => {
             <Translation id="page-contributing-translation-program-acknowledgements-total-words" />
           </WordsContainer>
         </Header>
+        {/* // TODO: Remove specific user checks once Acolad has updated their usernames */}
         {leaderboardData[dateRangeType]
           .filter(
             (item) =>
               item.user.username !== "ethdotorg" &&
               !item.user.username.includes("LQS_") &&
               !item.user.username.includes("REMOVED_USER") &&
-              !item.user.username.includes("Aco_")
+              !item.user.username.includes("Aco_") &&
+              !item.user.fullName.includes("Aco_") &&
+              !item.user.username.includes("Acc_") &&
+              !item.user.fullName.includes("Acc_") &&
+              item.user.username !== "Finnish_Sandberg" &&
+              item.user.username !== "Norwegian_Sandberg" &&
+              item.user.username !== "Swedish_Sandberg"
           )
           .filter((item, idx) => idx < filterAmount)
           .map((item, idx) => {

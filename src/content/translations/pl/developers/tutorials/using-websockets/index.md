@@ -63,7 +63,7 @@ Po połączeniu przez WebSocket, możesz użyć dwóch dodatkowych metod: `eth_s
 
 ### `eth_subscribe` {#eth-subscribe}
 
-Tworzy nową subskrypcję dla określonych zdarzeń. [Dowiedz się więcej o `eth_subscribe`](https://docs. alchemyapi. io/documentation/alchemy-api-reference/json-rpc#eth_subscribe).
+Tworzy nową subskrypcję dla określonych zdarzeń. [Dowiedz się więcej o `eth_subscribe`](https://docs.alchemyapi.io/documentation/alchemy-api-reference/json-rpc#eth_subscribe).
 
 #### Parametry {#parameters}
 

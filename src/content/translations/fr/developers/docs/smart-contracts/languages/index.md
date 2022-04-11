@@ -202,13 +202,13 @@ Si vous débutez avec Ethereum et que vous n'avez pas encore jamais codé avec d
 **Yul**
 
 - Langage intermédiaire pour Ethereum
-- Prends en charge l'[EVM](en/developers/docs/evm) et l'[eWASM](https://github.com/ewasm), un assemblage Web au petit goût d'Ethereum, conçu pour être un dénominateur commun utilisable sur les deux plateformes.
+- Prends en charge l'[EVM](/developers/docs/evm) et l'[eWASM](https://github.com/ewasm), un assemblage Web au petit goût d'Ethereum, conçu pour être un dénominateur commun utilisable sur les deux plateformes.
 - Excellente cible pour les phases d'optimisation de haut niveau qui peuvent bénéficier à la fois aux plateformes EVM et eWASM.
 
 **Yul+**
 
 - Extension de Yul de bas niveau très efficace
-- Initialement conçue pour un contrat de [rollup optimisé](en/developers/docs/layer-2-scaling/#rollups-and-sidechains)
+- Initialement conçue pour un contrat de [rollup optimisé](/developers/docs/layer-2-scaling/#rollups-and-sidechains)
 - Yul+ peut être considéré comme une proposition de mise à niveau expérimentale de Yul, qui y ajoute de nouvelles fonctionnalités
 
 ### Liens importants {#important-links-2}

@@ -9,7 +9,7 @@ sidebar: true
 
 Wraz ze wzrostem liczby osób korzystających z Ethereum, blockchain osiągnął pewne ograniczenia pojemności. To spowodowało wzrost kosztów korzystania z sieci, tworząc potrzebę „rozwiązań skalujących”. Istnieje wiele badanych, testowanych i wdrażanych rozwiązań z zastosowanymi różnymi podejściami w celu osiągnięcia podobnych celów.
 
-Głównym celem skalowalności jest zwiększenie szybkości (szybsza nieodwołalność) i przepustowości transakcji (wysoka liczba transakcji na sekundę), bez poświęcania decentralizacji lub bezpieczeństwa (więcej w artykule poświęconym [wizji Eth2](/eth2/vision/)). W warstwie 1 blockchainu Ethereum wysoki popyt prowadzi do spowolnienia transakcji i nieopłacalnych cen gazu. Zwiększenie pojemności sieci pod względem szybkości i przepustowości ma fundamentalne znaczenie dla znaczącego i masowego przyjęcia Ethereum.
+Głównym celem skalowalności jest zwiększenie szybkości (szybsza nieodwołalność) i przepustowości transakcji (wysoka liczba transakcji na sekundę), bez poświęcania decentralizacji lub bezpieczeństwa (więcej w artykule poświęconym [wizji Eth2](/upgrades/vision/)). W warstwie 1 blockchainu Ethereum wysoki popyt prowadzi do spowolnienia transakcji i nieopłacalnych cen gazu. Zwiększenie pojemności sieci pod względem szybkości i przepustowości ma fundamentalne znaczenie dla znaczącego i masowego przyjęcia Ethereum.
 
 Choć szybkość i przepustowość są ważne, kluczowe znaczenie ma to, aby rozwiązania skalujące umożliwiające osiągnięcie tych celów pozostały zdecentralizowane i bezpieczne. Utrzymanie niskiej bariery wejścia dla operatorów węzłów ma kluczowe znaczenie w zapobieganiu postępowi w kierunku scentralizowanej i niezabezpieczonej mocy obliczeniowej.
 
@@ -27,11 +27,11 @@ Ta metoda skalowania wymaga zmian w protokole Ethereum ([sieć główna](/glossa
 
 Sharding jest procesem poziomego dzielenia bazy danych w celu rozłożenia obciążenia. W kontekście Ethereum sharding zmniejszy zatłoczenie sieci i zwiększy liczbę transakcji na sekundę dzięki tworzeniu nowych łańcuchów — „odłamków”. Odciąży to również każdego walidatora, który nie będzie już musiał przetwarzać wszystkich transakcji w całej sieci.
 
-Dowiedz się więcej o <a href="/eth2/shard-chains/">shardingu</a>.
+Dowiedz się więcej o <a href="/upgrades/shard-chains/">shardingu</a>.
 
 ## Skalowanie off-chain {#off-chain-scaling}
 
-Rozwiązania off-chain są implementowane oddzielnie od sieci głównej warstwy 1 — nie wymagają żadnych zmian w istniejącym protokole Ethereum. Niektóre rozwiązania, określane jako rozwiązania „warstwy 2” czerpią swoje zabezpieczenia bezpośrednio z warstwy 1 konsensusu Ethereum. Są to np. [pakiety zbiorcze](/developers/docs/scaling/layer-2-rollups/) lub [kanały stanu](/developers/docs/scaling/state-channels/). Inne rozwiązania obejmują tworzenie nowych łańcuchów w różnych formach czerpiących zabezpieczenia oddzielnie z sieci głównej. Są to np. [łańcuchy boczne](#sidechains) lub łańcuchy [plazmy](#plasma). Te rozwiązania komunikują się z siecią główną, ale inaczej uzyskują zabezpieczenia, aby osiągnąć zróżnicowane cele.
+Rozwiązania off-chain są implementowane oddzielnie od sieci głównej warstwy 1 — nie wymagają żadnych zmian w istniejącym protokole Ethereum. Niektóre rozwiązania, określane jako rozwiązania „warstwy 2” czerpią swoje zabezpieczenia bezpośrednio z warstwy 1 konsensusu Ethereum. Są to np. [pakiety zbiorcze](/developers/docs/scaling/#rollups) lub [kanały stanu](/developers/docs/scaling/state-channels/). Inne rozwiązania obejmują tworzenie nowych łańcuchów w różnych formach czerpiących zabezpieczenia oddzielnie z sieci głównej. Są to np. [łańcuchy boczne](#sidechains) lub łańcuchy [plazmy](#plasma). Te rozwiązania komunikują się z siecią główną, ale inaczej uzyskują zabezpieczenia, aby osiągnąć zróżnicowane cele.
 
 ### Skalowanie warstwy 2 {#layer-2-scaling}
 
@@ -45,10 +45,10 @@ Określona instancja warstwy 2 może być otwarta i współdzielona przez wiele 
 
 Pakiety zbiorcze wykonują transakcje poza warstwą 1, a następnie dane są przesyłane do warstwy 1, gdzie osiągany jest konsensus. Ponieważ dane transakcji są zawarte w blokach warstwy 1, pozwala to na zabezpieczenie pakietów zbiorczych przez natywne zabezpieczenia Ethereum.
 
-- [Pakiety zbiorcze ZK](/developers/docs/scaling/layer-2-rollups/#zk-rollups)
-- [Optymistyczne pakiety zbiorcze](/developers/docs/scaling/layer-2-rollups/#optimistic-rollups)
+- [Pakiety zbiorcze ZK](/developers/docs/scaling/zk-rollups/)
+- [Optymistyczne pakiety zbiorcze](/developers/docs/scaling/optimistic-rollups/)
 
-Dowiedz się więcej o [pakietach zbiorczych](/developers/docs/scaling/layer-2-rollups/).
+Dowiedz się więcej o [pakietach zbiorczych](/developers/docs/scaling/#rollups).
 
 #### Kanały uzyskiwania informacji {#channels}
 
@@ -64,7 +64,7 @@ Dowiedz się więcej o [łańcuchach bocznych](/developers/docs/scaling/sidechai
 
 ### Plasma {#plasma}
 
-Łańcuch plazmowy to oddzielny blockchain, który jest zakotwiczony w głównym łańcuchu Ethereum, i używa dowodów oszustw (takich jak [optymistyczne pakiety zbiorcze](/developers/docs/scaling/layer-2-rollups/#optimistic-rollups)) do arbitrażu sporów.
+Łańcuch plazmowy to oddzielny blockchain, który jest zakotwiczony w głównym łańcuchu Ethereum, i używa dowodów oszustw (takich jak [optymistyczne pakiety zbiorcze](/developers/docs/scaling/optimistic-rollups/)) do arbitrażu sporów.
 
 Dowiedz się więcej o [Plasmie](/developers/docs/scaling/plasma/).
 
@@ -73,9 +73,11 @@ Dowiedz się więcej o [Plasmie](/developers/docs/scaling/plasma/).
 - Wiele rozwiązań może pomóc w zmniejszeniu całkowitego przeciążenia w dowolnej części sieci, a także zapobiega występowaniu pojedynczych punktów awarii.
 - Całość jest większa niż suma jej części. Różne rozwiązania mogą istnieć i działać w harmonii, pozwalając na uzyskanie wykładniczego efektu w zakresie szybkości i przepustowości transakcji w przyszłości.
 - Nie wszystkie rozwiązania wymagają bezpośredniego wykorzystania algorytmu konsensusu Ethereum, a alternatywne rozwiązania mogą oferować korzyści, które w przeciwnym razie byłyby trudne do uzyskania.
-- Żadne pojedyncze rozwiązanie skalujące nie wystarczy do realizacji [wizji eth2](/eth2/vision/).
+- Żadne pojedyncze rozwiązanie skalujące nie wystarczy do realizacji [wizji eth2](/upgrades/vision/).
 
-## Jesteś raczej wzrokowcem? {#visual-learner} <iframe width="100%" height="315" src="https://www.youtube.com/embed/BgCgauWVTs0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+## Jesteś raczej wzrokowcem? {#a-visual-demo}
+
+<YouTube id="BgCgauWVTs0" />
 
 _Zauważ, że w wyjaśnieniu w filmie termin „Warstwa 2” jest używany w odniesieniu do wszystkich rozwiązań skalowania off-chain, podczas gdy my określamy „warstwę 2” jako rozwiązanie off-chain, które uzyskuje bezpieczeństwo za pośrednictwem konsensusu sieci głównej warstwy 1._
 

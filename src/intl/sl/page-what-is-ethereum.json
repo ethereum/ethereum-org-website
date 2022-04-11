@@ -53,5 +53,17 @@
   "page-what-is-ethereum-wallets": "Denarnice",
   "page-what-is-ethereum-wallets-desc": "Kako upravljate svoj ETH in račun Ethereum: za začetek boste potrebovali denarnico. Pomagali vam jo bomo izbrati.",
   "page-what-is-ethereum-welcome": "Pozdravljeni v Ethereumu",
-  "page-what-is-ethereum-welcome-2": "Upamo, da boste tukaj tudi ostali."
+  "page-what-is-ethereum-welcome-2": "Upamo, da boste tukaj tudi ostali.",
+  "page-what-is-ethereum-defi-title": "Decentralizirane finance (DeFi)",
+  "page-what-is-ethereum-defi-description": "Bolj odprt finančni sistem, ki vam ponuja več kontrole nad vašim denarjem in odklepa nove priložnosti.",
+  "page-what-is-ethereum-defi-alt": "Logotip Eth narejen iz lego kock.",
+  "page-what-is-ethereum-nft-title": "Nezamenljivi žetoni (NFTs)",
+  "page-what-is-ethereum-nft-description": "Način predstavitve unikatnih predmetov kot sredstev na Ethereumu, ki omogočajo trgovanje, dokaz o lastništvu in ustvarjajo nove priložnosti za ustvarjalce.",
+  "page-what-is-ethereum-nft-alt": "Logotip Eth prikazan prek holograma.",
+  "page-what-is-ethereum-dao-title": "Decentralizirane avtonomne organizacije (DAOs)",
+  "page-what-is-ethereum-dao-description": "Nov način sodelovanja in vzpostavitve spletnih skupnosti s skupnimi cilji in združenimi sredstvi.",
+  "page-what-is-ethereum-dao-alt": "Predstavitev decentralizirane avtonomne organizacije, ki glasuje o predlogu.",
+  "page-what-is-ethereum-use-cases-title": "Odkrijte primere uporabe Ethereuma v praksi",
+  "page-what-is-ethereum-use-cases-subtitle": "Ethereum je privedel do stvaritve novih produktov in storitev, ki lahko izboljšajo različna področja našega življenja.",
+  "page-what-is-ethereum-use-cases-subtitle-two": "Še vedno smo v zgodnjih fazah, vendar se veliko obeta."
 }

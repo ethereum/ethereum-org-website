@@ -137,7 +137,7 @@ function cancelTrade(uint256 _trade)
 }
 ```
 
-To już wszystko. Dotrwałeś do końca implementacji. To zaskakujące, jak kompaktowe są niektóre pojęcia biznesowe wyrażane w kodzie i jest to jeden z tych przypadków. Sprawdź pełną umowę [w naszym repozytorium](https://github.com/HQ20/contracts/blob/dev/contracts/classifieds/Classifieds.sol?ref=hackernoon.com).
+To już wszystko. Dotrwałeś do końca implementacji. To zaskakujące, jak kompaktowe są niektóre pojęcia biznesowe wyrażane w kodzie i jest to jeden z tych przypadków. Sprawdź pełną umowę [w naszym repozytorium](https://github.com/HQ20/contracts/blob/master/contracts/classifieds/Classifieds.sol).
 
 ## Podsumowanie {#conclusion}
 

@@ -69,8 +69,8 @@ Verejné a súkromné ​​siete Etherea môžu potrebovať špecifické vlastn
 
 ### Zabezpečenie {#security}
 
-- [Clef](https://geth.ethereum.org/clef/Overview) _slúži na podpisovanie transakcií a údajov a tiež ako náhrada za správu účtu geth_
-- [EthSigner](https://gitter.im/PegaSysEng/EthSigner) _aplikácia na podpisovanie transakcií, ktorá je určená na použitie s poskytovateľom web3_
+- [Clef](https://geth.ethereum.org/docs/clef/tutorial) _slúži na podpisovanie transakcií a údajov a tiež ako náhrada za správu účtu geth_
+- [EthSigner](https://github.com/ConsenSys/ethsigner) _aplikácia na podpisovanie transakcií, ktorá je určená na použitie s poskytovateľom web3_
 
 ### Nástroje {#tooling}
 

@@ -75,10 +75,10 @@ $ pip install web3
 ```
 
 ```python
-desde web3 importa Web3
+from web3 import Web3
 
 
-w3 = Web3(Web3.HTTPProvider("https://cloudflare-eth. om"))
+w3 = Web3(Web3.HTTPProvider("https://cloudflare-eth.com"))
 
 dai_token_addr = "0x6B175474E89094C44Da98b954EedeAC495271d0F" # DAI
 weth_token_addr = "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2" # Ether envuelto (WETH)

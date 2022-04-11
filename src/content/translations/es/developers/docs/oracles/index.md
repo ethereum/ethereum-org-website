@@ -1,5 +1,5 @@
 ---
-title: Oracles
+title: Oráculos
 description: Los oráculos ayudan a proporcionar datos del mundo real a tu aplicación de Ethereum, ya que los contratos inteligentes, por sí solos, no pueden consultar información del mundo real.
 lang: es
 sidebar: true
@@ -19,20 +19,9 @@ Un oráculo es un puente entre la blockchain y el mundo real. Los oráculos act�
 
 ## ¿Por qué son necesarios? {#why-are-they-needed}
 
-En una blockchain como Ethereum, es necesario que cada nodo de la red sea capaz de replicar cada transacción y obtener el mismo resultado de manera garantizada. Las API introducen información potencialmente variable. Si le mandaras una cierta cantidad de ETH a alguien según un valor de $USD acordado y para ello utilizaras una API, la consulta (query) arrojaría un resultado diferente de un día para otro. Esto sin mecionar que la API podría ser hackeada o tornarse obsoleta. Si esto ocurriera, los nodos de la red no serían capaces de lograr un acuerdo sobre el estado actual de Ethereum, lo que llevaría a una ruptura del [consenso](/developers/docs/consensus-mechanisms/).
+En una blockchain como Ethereum, es necesario que cada nodo de la red sea capaz de replicar cada transacción y obtener el mismo resultado de manera garantizada. Las API introducen información potencialmente variable. Si le mandaras una cierta cantidad de ETH a alguien según un valor de $USD acordado y para ello utilizaras una API, la consulta (query) arrojaría un resultado diferente de un día para otro. Esto sin mencionar que la API podría ser hackeada o tornarse obsoleta. Si esto ocurriera, los nodos de la red no serían capaces de lograr un acuerdo sobre el estado actual de Ethereum, lo que llevaría a una ruptura del [consenso](/developers/docs/consensus-mechanisms/).
 
 Los oráculos resuelven este problema por medio de la publicación de información en la blockchain. De modo que cualquier nodo que replique la transacción usará los mismos datos inmutables que se publicaron en la red. Para ello, un oráculo típicamente constará de un contrato inteligente y algunos componentes externos a la cadena de bloques (off-chain) que consultan diversas API y posteriormente envían transacciones para actualizar los datos de los contratos inteligentes.
-
-<!-- ## Oracle architecture {#oracle-architecture}
-
-To understand how an oracle works, let's play through a scenario where your smart contract needs to know who won the superbowl. This is an example of how it could work:
-
-1. Your smart contract requests information from an oracle smart contract.
-2. The oracle smart contract emits an [event](/developers/docs/smart-contracts/anatomy/#events-and-logs).
-3. Off-chain oracle nodes listen for events and upon hearing one, they query an API.
-4. The API returns a JSON response to the nodes.
-5. The nodes call on the oracle smart contract.
-6. The oracle smart contract returns the data to your smart contract. -->
 
 ### Seguridad {#security}
 

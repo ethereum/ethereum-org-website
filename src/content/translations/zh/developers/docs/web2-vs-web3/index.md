@@ -5,7 +5,7 @@ lang: zh
 sidebar: true
 ---
 
-Web2 是指我们大家今天都知道的互联网版本， 一个在互联网公司掌控下提供服务来交换个人数据的互联网。 就以太坊而言，Web3 指的是在区块链上运行的去中心化应用。 这些应用允许任何人参与而不会出卖用户个人数据。
+Web2 指的是我们如今众所周知的互联网版本。 一个在互联网公司掌控下提供服务来交换个人数据的互联网。 就以太坊而言，Web3 指的是在区块链上运行的去中心化应用。 任何用户都可以参与以太坊上的这些应用，个人数据却不会被出卖。
 
 ## Web3 的优势 {#web3-benefits}
 
@@ -32,11 +32,10 @@ Web3 现在有一些局限：
 
 - 可扩展性——交易在 web3 上进度较慢，因为它们是去中心化的。 更改状态像付款一样，需要由矿工处理并在整个网络中传播。
 - UX — 与 web3 应用程序互动可能需要额外的步骤、软件和学习。 这可能是应用的一个障碍。
-- 成本 — 多数成功的 dapp 将其代码的很小一部分放入区块链，因为它很昂贵。
+- 可访问性 - 大多数用户因为缺少现代化的网页浏览器而无法访问 web3。
+- 成本 — 因为太过昂贵，大多数成功的去中心化应用程序仅将其代码的很小一部分放入区块链。
 
 ## 中心化与去中心化 {#centralization-vs-decentralization}
-
-<!--Content below provided by Brian Gu-->
 
 在下表中，我们粗略列举了中心化和去中心化数字网络的优缺点。
 
@@ -54,5 +53,7 @@ Web3 现在有一些局限：
 
 ## 延伸阅读 {#further-reading}
 
+- [The Architecture of a Web 3.0 application](https://www.preethikasireddy.com/post/the-architecture-of-a-web-3-0-application) - _Preethi Kasireddy_
 - [The Meaning of Decentralization](https://medium.com/@VitalikButerin/the-meaning-of-decentralization-a0c92b76a274) _Feb 6, 2017 - Vitalik Buterin_
-- [去中心化缘何如此重要](https://medium.com/s/story/why-decentralization-matters-5e3f79f7638e) _Feb 18, 2018 - Chris Dixon_
+- [Why Decentralization Matters](https://medium.com/s/story/why-decentralization-matters-5e3f79f7638e) _Feb 18, 2018 - Chris Dixon_
+- [What Is Web 3.0 & Why It Matters](https://medium.com/fabric-ventures/what-is-web-3-0-why-it-matters-934eb07f3d2b) _Dec 31, 2019 - Max Mersch and Richard Muirhead_

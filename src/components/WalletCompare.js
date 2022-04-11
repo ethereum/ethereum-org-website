@@ -29,7 +29,7 @@ const ButtonContainer = styled.div`
 `
 
 const Subtitle = styled.div`
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 140%;
   margin-bottom: 2rem;
   color: ${(props) => props.theme.colors.text200};
@@ -114,50 +114,50 @@ const walletFeatures = [
   {
     id: "has_card_deposits",
     emoji: ":credit_card:",
-    title: <Translation id="page-find-wallet-buy-card" />,
-    description: <Translation id="page-find-wallet-buy-card-desc" />,
+    title: "page-find-wallet-buy-card",
+    description: "page-find-wallet-buy-card-desc",
   },
   {
     id: "has_explore_dapps",
     emoji: ":world_map:",
-    title: <Translation id="page-find-wallet-explore-dapps" />,
-    description: <Translation id="page-find-wallet-explore-dapps-desc" />,
+    title: "page-find-wallet-explore-dapps",
+    description: "page-find-wallet-explore-dapps-desc",
   },
   {
     id: "has_defi_integrations",
     emoji: ":money_with_wings:",
-    title: <Translation id="page-find-wallet-fi-tools" />,
-    description: <Translation id="page-find-wallet-fi-tools-desc" />,
+    title: "page-find-wallet-fi-tools",
+    description: "page-find-wallet-fi-tools-desc",
   },
   {
     id: "has_bank_withdrawals",
     emoji: ":bank:",
-    title: <Translation id="page-find-wallet-withdraw" />,
-    description: <Translation id="page-find-wallet-withdraw-desc" />,
+    title: "page-find-wallet-withdraw",
+    description: "page-find-wallet-withdraw-desc",
   },
   {
     id: "has_limits_protection",
     emoji: ":shield:",
-    title: <Translation id="page-find-wallet-limits" />,
-    description: <Translation id="page-find-wallet-limits-desc" />,
+    title: "page-find-wallet-limits",
+    description: "page-find-wallet-limits-desc",
   },
   {
     id: "has_high_volume_purchases",
     emoji: ":whale:",
-    title: <Translation id="page-find-wallet-volume" />,
-    description: <Translation id="page-find-wallet-voluem-desc" />,
+    title: "page-find-wallet-volume",
+    description: "page-find-wallet-voluem-desc",
   },
   {
     id: "has_dex_integrations",
     emoji: ":repeat:",
-    title: <Translation id="page-find-wallet-swaps" />,
-    description: <Translation id="page-find-wallet-swaps-desc" />,
+    title: "page-find-wallet-swaps",
+    description: "page-find-wallet-swaps-desc",
   },
   {
     id: "has_multisig",
     emoji: ":busts_in_silhouette:",
-    title: <Translation id="page-find-wallet-multisig" />,
-    description: <Translation id="page-find-wallet-multisig-desc" />,
+    title: "page-find-wallet-multisig",
+    description: "page-find-wallet-multisig-desc",
   },
 ]
 
@@ -219,9 +219,6 @@ const WalletCompare = ({ location }) => {
         ...walletCardImage
       }
       dcent: file(relativePath: { eq: "wallets/dcent.png" }) {
-        ...walletCardImage
-      }
-      dharma: file(relativePath: { eq: "wallets/dharma.png" }) {
         ...walletCardImage
       }
       enjin: file(relativePath: { eq: "wallets/enjin.png" }) {
@@ -315,6 +312,18 @@ const WalletCompare = ({ location }) => {
         ...walletCardImage
       }
       bitkeep: file(relativePath: { eq: "wallets/bitkeep.png" }) {
+        ...walletCardImage
+      }
+      keystone: file(relativePath: { eq: "wallets/keystone.png" }) {
+        ...walletCardImage
+      }
+      loopring: file(relativePath: { eq: "wallets/loopring.png" }) {
+        ...walletCardImage
+      }
+      numio: file(relativePath: { eq: "wallets/numio.png" }) {
+        ...walletCardImage
+      }
+      airgap: file(relativePath: { eq: "wallets/airgap.png" }) {
         ...walletCardImage
       }
     }
@@ -432,8 +441,8 @@ const WalletCompare = ({ location }) => {
               <SelectableCard
                 key={idx}
                 emoji={card.emoji}
-                title={card.title}
-                description={card.description}
+                title={translateMessageId(card.title, intl)}
+                description={translateMessageId(card.description, intl)}
                 isSelected={isSelected}
                 onSelect={handleSelect}
                 value={card.id}
@@ -473,7 +482,7 @@ const WalletCompare = ({ location }) => {
             <TagContainer>
               {selectedFeatures.map((feature) => (
                 <Tag
-                  name={feature.title}
+                  name={translateMessageId(feature.title, intl)}
                   key={feature.id}
                   onSelect={handleSelect}
                   value={feature.id}
@@ -481,7 +490,7 @@ const WalletCompare = ({ location }) => {
               ))}
               {remainingFeatures.map((feature) => (
                 <Tag
-                  name={feature.title}
+                  name={translateMessageId(feature.title, intl)}
                   key={feature.id}
                   onSelect={handleSelect}
                   value={feature.id}
@@ -518,7 +527,7 @@ const WalletCompare = ({ location }) => {
           <p>
             <em>
               <Translation id="page-find-wallet-not-endorsements" />{" "}
-              <Link to="/en/contributing/adding-products/">
+              <Link to="/contributing/adding-products/">
                 <Translation id="page-find-wallet-listing-policy" />
               </Link>
               <Translation id="page-find-wallet-add-wallet" />{" "}

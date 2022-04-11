@@ -42,7 +42,7 @@ Na mgbakwunye na ozi dị na peeji a, enwere ọtụtụ ihe enyere obodo aka kw
 
   - [Kedu ka Ethereum si arụ ọrụ, na agbanyeghị?](https://medium.com/@preethikasireddy/how-does-ethereum-work-anyway-22d1df506369) _Sept 27, 2017 - Preethi Kasireddy_
   - [Okwu mwebata di nwayo na Ethereum](https://bitsonblocks.net/2016/10/02/gentle-introduction-ethereum/) _Oct 2, 2016 - Antony Lewis_
-  - [Mwebata na Blockchain site na Cryptoeconomics -Nkebi nke mbụ](https://blockchainatberkeley.blog/introduction-to-blockchain-through-cryptoeconomics-part-1-bitcoin-369f245067f9) _Jan 26, 2018 - Zubin Koticha_
+  - [Mwebata na Blockchain site na Cryptoeconomics -Nkebi nke mbụ](https://medium.com/blockchain-at-berkeley/introduction-to-blockchain-through-cryptoeconomics-part-1-bitcoin-369f245067f9) _Jan 26, 2018 - Zubin Koticha_
   - [Okwu mmeghe na Blockchain site na Cryptoeconomics - Nkebi nke abụọ](https://medium.com/mechanism-labs/introduction-to-bitcoin-through-cryptoeconomics-part-2-proof-of-work-and-nakamoto-consensus-1252f6a6c012) _July 19, 2018 - Zubin Koticha_
 
   ## Nkwekọrịta amamihe {#smart-contracts}
@@ -57,7 +57,7 @@ Na mgbakwunye na ozi dị na peeji a, enwere ọtụtụ ihe enyere obodo aka kw
 
   - [Kedu ihe ọ pụtara ekwuputa Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) _Emelitere ohuru ọtụtụ mgbe - Ethhub_
 
-  Na ETH 2.0, Ethereum ga aga na sistemụ dị iche akpọrọ “Ihe akaebe nke Ntinye ego”. [Gụkwuo banyere ETH 2.0 n'okpuru](#eth-2-0).
+  Na ETH 2.0, Ethereum ga aga na sistemụ dị iche akpọrọ “Ihe akaebe nke Ntinye ego”. [Gụkwuo banyere ETH 2.0 n'okpuru](#consensus-layer-upgrades).
 
   ## Ndị ahịa na Ebe nzuko {#clients-and-nodes}
 
@@ -69,7 +69,7 @@ Na mgbakwunye na ozi dị na peeji a, enwere ọtụtụ ihe enyere obodo aka kw
   ## Imeziwanye Ibelata Ethereum {#improving-ethereums-scalability}
 
   E nwere ọtụtụ mbọ a na agba iji mee Ethereum ka ọ bụrụ “ihe egwu” site na ịbawanye ọsọ na ihe mmeputa azụmahịa ya n'ozuzu. Na-ahazịzie, ana-edozi ha n'ngwọta “etu otu” na “etu abuo”.
-  “Etu otu” na-ezo aka na isi imeziwanye Ethereum protocol. Ọrụ bụ isi iji meziwanye usoro isi Ethereum bụ [ ETH 2.0](#eth-2-0).
+  “Etu otu” na-ezo aka na isi imeziwanye Ethereum protocol. Ọrụ bụ isi iji meziwanye usoro isi Ethereum bụ [ ETH 2.0](#consensus-layer-upgrades).
   “Etu“ abuo ”na-ezo aka na teknụzụ nke etinyere“ n’elu ”nke usoro Ethereum dị ala, na-enye aka nnukwu scalability n’emebighị ihe na nchekwa. Enwekwara teknụzụ “nke na-abụghị nke ọma” dị ka eriri n'akuku, nke na-eme ka ọ dịkwuo ukwuu ma ọ bụrụ na -eme usoro azụmahịa nche dị iche.
 
   - [na-eme ka uche nke etu abuo](https://medium.com/l4-media/making-sense-of-ethereums-layer-2-scaling-solutions-state-channels-plasma-and-truebit-22cb40dcc2f4) _Feb 12, 2018 - Josh Stark_
@@ -91,7 +91,7 @@ Na mgbakwunye na ozi dị na peeji a, enwere ọtụtụ ihe enyere obodo aka kw
   - [ Ghota Plasma](https://education.district0x.io/general-topics/understanding-ethereum/understanding-plasma/) _Mpaghara0x_
   - [Muta Plasma - Ihe mmụta maka usoro nke Plasma](https://www.learnplasma.org/en/)
 
-  ## ETH 2.0 {#eth-2-0}
+  ## ETH 2.0 {#consensus-layer-upgrades}
 
   ETH 2.0 (nke a makwaara dị ka “Serenity”) na-ezo aka na nkwalite isi ọzọ nke usoro isi protocol Ethereum. Ọ jikọtara ọtụtụ ndozi na usoro isi Ethereum, ma ọ bụ “Etu otu”.
 
@@ -101,7 +101,7 @@ Na mgbakwunye na ozi dị na peeji a, enwere ọtụtụ ihe enyere obodo aka kw
   - [Sharding](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/sharding/) _Emelitere otutu mgbe - EthHub_
   - [ Okporo uzo eji e scalu Ethereum - Vitalik Buterin](https://youtu.be/kCVpDrlVesA) _(Video) November, 2018 - YouTube_
 
-  ## ETH 1.x {#eth-1x}
+  ## ETH 1.x {#execution-layer-upgrades}
 
   ETH 1.x bụ aha maka nchịkọta nke nkwalite ndị ọzọ na usoro Ethereum dị adị. Ebumnuche bụ ịga n'ihu na-emeziwanye ma na-elekọta Ethereum ebe a na-azụlite ma na-eme ETH 2.0.
   Maka ozi ndi ozo, lee [Nkọwa onye EthHub banyere ETH 1.x](https://docs.ethhub.io/ethereum-roadmap/ethereum-1.x/)

@@ -1,6 +1,8 @@
 {
   "page-local-environment-brownie-desc": "Фреймворк для розробки й тестування на основі Python для розумних контрактів, націлених на Віртуальну машину Ethereum.",
   "page-local-environment-brownie-logo-alt": "Brownie logo",
+  "page-local-environment-dapptools-desc": "Пакет інструментів інтерфейсу командного рядка, орієнтованих на Ethereum, що відповідають філософії дизайну Unix, а це сприяє можливостям компонування, конфігурування та розширення.",
+  "page-local-environment-dapptools-logo-alt": "Логотип Dapptools",
   "page-local-environment-embark-desc": "Універсальна платформа для розробників для створення та впровадження децентралізованих програм.",
   "page-local-environment-embark-logo-alt": "Embark logo",
   "page-local-environment-epirus-desc": "Платформа для розробки, впровадження та відстеження блокчейн-програм у Віртуальній машині Java",
@@ -19,7 +21,7 @@
   "page-local-environment-hardhat-logo-alt": "Hardhat logo",
   "page-local-environment-openZeppelin-desc": "Заощаджуйте час, який витрачається на розробку, шляхом компіляції, оновлення та впровадження розумних контрактів, а також взаємодії з ними за допомогою CLI.",
   "page-local-environment-openZeppelin-logo-alt": "OpenZeppelin logo",
-  "page-local-environment-scaffold-eth-desc": "Hardhat + Create Eth App – це все, що вам потрібно, щоб почати створювати децентралізовані програми, які працюють на основі розумних контрактів",
+  "page-local-environment-scaffold-eth-desc": "Ethers + Hardhat + React — це все, що вам потрібно, щоб почати створювати децентралізовані програми, які працюють на основі смартконтрактів",
   "page-local-environment-scaffold-eth-logo-alt": "scaffold-eth logo",
   "page-local-environment-setup-meta-desc": "Дізнайтесь, як обрати програмний стек для розробки Ethereum.",
   "page-local-environment-setup-meta-title": "Налаштування локальної розробки Ethereum",

@@ -169,12 +169,32 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
           to: "/dapps/",
         },
         {
+          text: "layer-2",
+          to: "/layer-2/",
+        },
+        {
+          text: "nft-page",
+          to: "/nft/",
+        },
+        {
+          text: "defi-page",
+          to: "/defi/",
+        },
+        {
+          text: "dao-page",
+          to: "/dao/",
+        },
+        {
           text: "page-stablecoins-title",
           to: "/stablecoins/",
         },
         {
           text: "page-stake-eth",
-          to: "/eth2/staking/",
+          to: "/staking/",
+        },
+        {
+          text: "run-a-node",
+          to: "/run-a-node/",
         },
       ],
     },
@@ -189,18 +209,6 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
         {
           text: "what-is-ether",
           to: "/eth/",
-        },
-        {
-          text: "defi-page",
-          to: "/defi/",
-        },
-        {
-          text: "dao-page",
-          to: "/dao/",
-        },
-        {
-          text: "nft-page",
-          to: "/nft/",
         },
         {
           text: "smart-contracts",
@@ -219,8 +227,8 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
           to: "/whitepaper/",
         },
         {
-          text: "ethereum-2-0",
-          to: "/eth2/",
+          text: "ethereum-upgrades",
+          to: "/upgrades/",
         },
         {
           text: "ethereum-glossary",
@@ -231,12 +239,20 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
           to: "/governance/",
         },
         {
+          text: "bridges",
+          to: "/bridges/",
+        },
+        {
           text: "energy-consumption",
           to: "/energy-consumption/",
         },
         {
           text: "eips",
           to: "/eips/",
+        },
+        {
+          text: "web3",
+          to: "/web3/",
         },
         {
           text: "guides-and-resources",
@@ -313,6 +329,10 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
           text: "ethereum-support",
           to: "/community/support/",
         },
+        {
+          text: "language-resources",
+          to: "/community/language-resources/",
+        },
       ],
     },
   ]
@@ -362,7 +382,7 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
 
   return (
     <NavContainer>
-      <StyledNav>
+      <StyledNav aria-label={translateMessageId("nav-primary", intl)}>
         <NavContent>
           <HomeLogoNavLink to="/">
             <HomeLogo
@@ -393,7 +413,7 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
               )}
             </LeftItems>
             <RightItems>
-              <Search />
+              <Search useKeyboardShortcuts />
               <ThemeToggle
                 onClick={handleThemeChange}
                 aria-label={
@@ -422,7 +442,7 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
         </NavContent>
       </StyledNav>
       {shouldShowSubNav && (
-        <SubNav>
+        <SubNav aria-label={translateMessageId("nav-developers", intl)}>
           {ednLinks.map((link, idx) => (
             <NavLink
               key={idx}

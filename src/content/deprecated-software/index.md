@@ -40,7 +40,7 @@ OpenEthereum was built for miners, service providers, and exchanges which need f
 
 **Alternatives**
 
-[Erigon](https://github.com/ledgerwatch/erigon) Erigon (previously called Turbo-Geth) is a next generation Ethereum client on the efficiency frontier, written in Go.
+[Compare all Ethereum execution client options](/developers/docs/nodes-and-clients/#execution-clients).
 
 ### Grid {#grid}
 
@@ -54,7 +54,7 @@ Deprecated on December 10, 2020
 
 **Summary**
 
-Grid was a Javascript-based desktop application that allowed you to securely access Ethereum, IPFS, and other decentralized networks. It provided a user-friendly interface to assist a less technical audience in safely interacting with dapps, which increased accessibility for everyone.
+Grid was a JavaScript-based desktop application that allowed you to securely access Ethereum, IPFS, and other decentralized networks. It provided a user-friendly interface to assist a less technical audience in safely interacting with dapps, which increased accessibility for everyone.
 
 **Archives**
 
@@ -62,7 +62,7 @@ Grid was a Javascript-based desktop application that allowed you to securely acc
 
 **History**
 
-Grid could be seen as a successor to Mist, also a standalone, Javascript-based desktop app which included a Geth node. Grid removed the wallet aspect, and added a plugin-style approach for running different kinds of nodes.
+Grid could be seen as a successor to Mist, also a standalone, JavaScript-based desktop app which included a Geth node. Grid removed the wallet aspect, and added a plugin-style approach for running different kinds of nodes.
 
 **Alternatives**
 
@@ -112,7 +112,7 @@ The Mist Multisig Contract (solidity code) was also included, and Meteor Dapp Wa
 
 **Not deprecated: deployed Mist Multisigs**
 
-The Mist Multisig -- deployed as bytecode to Ethereum mainnet by thousands of users -- continues to be used to store and manage value without incident. [How to Interact with a Mist Multisig Contract](https://support.mycrypto.com/how-to/sending/how-to-interact-with-a-multisig-contract) provides a good overview for how to use these smart contracts.
+The Mist Multisig -- deployed as bytecode to Ethereum Mainnet by thousands of users -- continues to be used to store and manage value without incident. [How to Interact with a Mist Multisig Contract](https://support.mycrypto.com/how-to/sending/how-to-interact-with-a-multisig-contract) provides a good overview for how to use these smart contracts.
 
 **Archives**
 
@@ -150,7 +150,7 @@ Mist was an important early experiment because it explored how to manage Ethereu
 
 **Alternatives**
 
-[Metamask](https://metamask.io/) is an in-browser wallet enabling you to manage Ethereum keys and interact with dapps. It is available as an extension for Google Chrome and Firefox, and is included in [Brave Browser](https://brave.com/).
+[MetaMask](https://metamask.io/) is an in-browser wallet enabling you to manage Ethereum keys and interact with dapps. It is available as an extension for Google Chrome and Firefox, and is included in [Brave Browser](https://brave.com/).
 
 ### Mix {#mix}
 
@@ -172,13 +172,43 @@ Mix was of the earliest Ethereum-related applications. See this [presentation by
 
 [Remix](https://remix.ethereum.org/) is a browser-hosted IDE for Solidity / smart contract development, testing, and deployment. It also has a desktop option.
 
-### Aleth {#aleth}
+### Minimal {#minimal}
+
+Deprecated in 2020.
+
+**Summary**
+
+Minimal was a modular implementation of the Ethereum blockchain written in Go.
+
+**Archives**
+
+[Archived GitHub repo](https://github.com/umbracle/minimal)
+
+**History**
+
+Minimal was replaced by [polgon-sdk](https://github.com/0xPolygon/polygon-edge)
+
+### Mana-Ethereum {#mana-ethereum}
+
+**Summary**
+
+Mana-Ethereum was an Ethereum client built using Elixir.
+
+**Archives**
+
+[Archived GitHub repo](https://github.com/mana-ethereum/mana)
+
+**History**
+
+Mana-Ethereum's GitHub repository has not been explicitly archived, but the last commit was in 2019.
+
+### Aleth (cpp-ethereum) {#aleth}
 
 Deprecated on October 6, 2021
 
 **Summary**
 
-Aleth was an Ethereum client written in C++.
+Aleth (formerly known as cpp-ethereum) was an Ethereum client written in C++.
 
 **Archives**
 
@@ -191,6 +221,34 @@ Aleth was the third most popular client for Ethereum before being deprecated on 
 **Alternatives**
 
 [Geth](https://geth.ethereum.org/) is a well-known alternative Ethereum client.
+
+### Ethereum-H {#ethereum-h}
+
+**Archives**
+
+The Ethereum-H archives have been removed from GitHub.
+
+**History**
+
+Ethereum-H was an Ethereum client written in Haskell. It was deprecated around 2015.
+
+**Alternatives**
+
+[Geth](https://geth.ethereum.org/), [Nethermind](http://nethermind.io/), [Besu](https://pegasys.tech/solutions/hyperledger-besu/) and [Erigon](https://github.com/ledgerwatch/erigon) are viable alternative Ethereum clients - there is no current Haskell client.
+
+### ruby-ethereum {#ruby-ethereum}
+
+**Archives**
+
+[ruby-ethereum GitHub repo](https://github.com/cryptape/ruby-ethereum)
+
+**History**
+
+ruby-ethereum was an Ethereum client written in Ruby. It was deprecated around 2018.
+
+**Alternatives**
+
+[Geth](https://geth.ethereum.org/), [Nethermind](http://nethermind.io/), [Besu](https://pegasys.tech/solutions/hyperledger-besu/) and [Erigon](https://github.com/ledgerwatch/erigon) are viable alternative Ethereum clients. There is no current Ruby client.
 
 ### Parity {#parity}
 
@@ -252,7 +310,7 @@ The [EthereumJS](https://github.com/ethereumjs) project has a similar research a
 
 ## Dapps and Services {#dapps-and-services}
 
-This section is for services deployed to Ethereum mainnet and other EVM-based networks. Be aware that the dapps and services here may include DeFi applications which have been hacked or may suffer security vulnerabilities due to lack of maintenance, changes in the protocol, etc.
+This section is for services deployed to Ethereum Mainnet and other EVM-based networks. Be aware that the dapps and services here may include DeFi applications which have been hacked or may suffer security vulnerabilities due to lack of maintenance, changes in the protocol, etc.
 
 ### Cover Protocol {#cover-protocol}
 
@@ -296,7 +354,7 @@ While The DAO failed, the concept endured. The basic technical, social, and gove
 
 ["DAO Fork" on ethereum.org](/history/#dao-fork)
 
-[Wikipedia entry for "The DAO"](<https://en.wikipedia.org/wiki/The_DAO_(organization)>)
+[Wikipedia entry for "The DAO"](<https://wikipedia.org/wiki/The_DAO_(organization)>)
 
 **Alternatives**
 

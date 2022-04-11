@@ -38,13 +38,13 @@ sidebar: true
 
 - [مستندات إيثريوم على Go](https://geth.ethereum.org/docs/) - _مستندات Golang الخاصة بإيثريوم الرسمي_
 - [Go Ethereum GoDoc](https://godoc.org/github.com/ethereum/go-ethereum)
-- [إنشاء تطبيق لامركزي في Go باستخدام Geth](https://kauri.io/article/60a36c1b17d645939f63415218dc24f9/creating-a-dapp-in-go-with-geth)
+- [إنشاء تطبيق لامركزي في Go باستخدام Geth](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/creating-a-dapp-in-go-with-geth/)
 - [العمل باستخدام شبكة إيثريوم الخاصة مع Golang وGeth](https://myhsts.org/tutorial-learn-how-to-work-with-ethereum-private-network-with-golang-with-geth.php)
 - [عقود Solidity لاختبار الوحدة على إيثريوم باستخدام Go](https://medium.com/coinmonks/unit-testing-solidity-contracts-on-ethereum-with-go-3cc924091281)
 
 ## أنماط الاستخدام المتقدم {#advanced-use-patterns}
 
-- [خلفية GETH المحاكاة](https://kauri.io/article/6285c9692883411aa041b6b970405a17/v1/the-geth-simulated-backend)
+- [خلفية GETH المحاكاة](https://kauri.io/#collections/An%20ethereum%20test%20toolkit%20in%20Go/the-geth-simulated-backend/#_top)
 - [تطبيقات سلسلة الكتل كخدمة باستخدام إيثريوم وكوارم](https://blockchain.dcwebmakers.com/blockchain-as-a-service-apps-using-ethereum-and-quorum.html)
 - [IPFS التخزين الموزع وسوارم في تطبيقات سلسلة كتل إيثريوم](https://blockchain.dcwebmakers.com/work-with-distributed-storage-ipfs-and-swarm-in-ethereum.html)
 - [العملاء المتحركين: المكتبات ونقاط اتصال إيثريوم في Inproc](https://github.com/ethereum/go-ethereum/wiki/Mobile-Clients:-Libraries-and-Inproc-Ethereum-Nodes)

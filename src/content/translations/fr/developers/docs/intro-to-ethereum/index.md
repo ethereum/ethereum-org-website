@@ -21,7 +21,9 @@ Les nouveaux blocs sont diffusés aux nœuds du réseau, vérifiés et validés,
 
 Pour résumer, lorsque vous envoyez de l'ETH à quelqu'un, la transaction doit être minée et incluse dans un nouveau bloc. L'état mis à jour est ensuite partagé avec l'ensemble du réseau. Pour plus de détails, voir ci-dessous.
 
-Regardez Austin vous guider à travers les blockchains : <iframe width="100%" height="315" src="https://www.youtube.com/embed/zcX7OJ-L8XQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+Regardez Austin vous guider à travers les blockchains :
+
+<YouTube id="zcX7OJ-L8XQ" />
 
 ## Qu'est-ce qu'Ethereum ? {#what-is-ethereum}
 

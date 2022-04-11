@@ -70,8 +70,8 @@ sidebar: true
 
 ### 安全性 {#security}
 
-- [Clef](https://geth.ethereum.org/clef/Overview) _用於簽署交易和數據，旨在代替 Geth 的帳戶管理_
-- [EthSigner](https://gitter.im/PegaSysEng/EthSigner) _與 Web3 應用提供商一起使用的交易簽名應用程序_
+- [Clef](https://geth.ethereum.org/docs/clef/tutorial) _用於簽署交易和數據，旨在代替 Geth 的帳戶管理_
+- [EthSigner](https://github.com/ConsenSys/ethsigner) _與 Web3 應用提供商一起使用的交易簽名應用程序_
 
 ### 模組化 {#tooling}
 

@@ -6,7 +6,7 @@ sidebar: true
 incomplete: true
 ---
 
-Ethereum, la fel ca Bitcoin, folosește în prezent un protocol de consens numit [Dovada muncii (PoW)](https://en.wikipedia.org/wiki/Proof_of_work). Acesta permite nodurilor rețelei Ethereum să cadă de acord asupra stării tuturor informațiilor înregistrate pe blockchain-ul Ethereum și previne anumite tipuri de atacuri economice.
+Ethereum, la fel ca Bitcoin, folosește în prezent un protocol de consens numit [Dovada muncii (PoW)](https://wikipedia.org/wiki/Proof_of_work). Acesta permite nodurilor rețelei Ethereum să cadă de acord asupra stării tuturor informațiilor înregistrate pe blockchain-ul Ethereum și previne anumite tipuri de atacuri economice.
 
 ## Condiții prealabile {#prerequisites}
 

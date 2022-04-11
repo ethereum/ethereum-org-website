@@ -47,7 +47,8 @@ incomplete: true
 - [如何使用 Slither 来查找智能合约漏洞](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
 - [如何模拟测试 Solidity 合约](/developers/tutorials/how-to-mock-solidity-contracts-for-testing/)
 - [如何将 Truffle 测试迁移至 OpenZeppelin 测试环境](https://docs.openzeppelin.com/test-environment/0.1/migrating-from-truffle)
+- [如何在部署到网络后测试智能合约](https://fulldecent.blogspot.com/2019/04/testing-deployed-ethereum-contracts.html)
 
 ## 延伸阅读 {#further-reading}
 
-_你知道有什么社区资源帮助过你吗？ 编辑并添加本页面！_
+_还有哪些社区资源对您有所帮助？ 编辑并添加本页面！_

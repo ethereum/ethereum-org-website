@@ -10,7 +10,7 @@
   "page-get-eth-dexs-desc": "Les échanges décentralisés sont des places de marché ouvertes pour ETH et autres jetons. Elles connectent directement les acheteurs et les vendeurs.",
   "page-get-eth-dexs-desc-2": "Au lieu d'utiliser un tiers de confiance pour protéger les fonds dans la transaction, elles utilisent du code. L'ETH du vendeur ne sera transféré que lorsque le paiement sera garanti. Ce type de code est connu sous le nom de contrat intelligent.",
   "page-get-eth-dexs-desc-3": "Cela signifie qu'il y a moins de restrictions géographiques qu'avec les alternatives centralisées. Si quelqu'un vend ce que vous voulez et accepte une méthode de paiement que vous pouvez fournir, la transaction est conclue. Les DEX peut vous permettre d'acheter de l'ETH avec d'autres jetons, PayPal ou même avec des mandats en espèces.",
-  "page-get-eth-do-not-copy": "EXEMPLE : NE COPIEZ PAS",
+  "page-get-eth-do-not-copy": "Exemple: Ne pas copier",
   "page-get-eth-exchanges-disclaimer": "Nous avons recueilli ces informations manuellement. Si vous constatez quelque chose de faux, faites-le nous savoir à",
   "page-get-eth-exchanges-empty-state-text": "Entrez votre lieu de résidence pour voir la liste des portefeuilles et des échanges que vous pouvez utiliser pour acheter des ETH",
   "page-get-eth-exchanges-except": "Excepté",

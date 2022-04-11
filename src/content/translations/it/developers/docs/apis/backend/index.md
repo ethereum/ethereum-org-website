@@ -7,13 +7,13 @@ sidebar: true
 
 Per interagire con la blockchain Ethereum (ad esempio leggere i dati della blockchain e/o inviare transazioni alla rete), un'applicazione software deve connettersi a un nodo Ethereum.
 
-A questo scopo, ogni client Ethereum implementa la specifica JSON-RPC, così che ci sia un set uniforme di endpoint a cui le applicazioni possono fare riferimento.
+Per questo scopo, ogni client di Ethereum implementa la specifica [JSON-RPC](/developers/docs/apis/json-rpc/), quindi esiste una serie uniforme di [endpoint](/developers/docs/apis/json-rpc/#json-rpc-methods) su cui possono basarsi le applicazioni.
 
 Se desideri utilizzare un linguaggio di programmazione specifico per connetterti a un nodo Ethereum, sviluppa una soluzione personalizzata, ma tieni presente che ci sono già molte librerie all'interno dell'ecosistema che possono facilitarti la vita. Con queste librerie, gli sviluppatori possono scrivere metodi a una riga intuitivi per inizializzare le richieste RPC JSON (under the hood) che interagiscono con Ethereum.
 
 ## Prerequisiti {#prerequisites}
 
-Potrebbe essere utile conoscere meglio lo [stack di Ethereum](/developers/docs/ethereum-stack/) e[i client di Ethereum](/docs/nodes-and-clients/).
+Potrebbe essere utile comprendere meglio lo [stack di Ethereum](/developers/docs/ethereum-stack/) e[i client di Ethereum](/developers/docs/nodes-and-clients/).
 
 ## Perché usare una libreria? {#why-use-a-library}
 
@@ -21,14 +21,12 @@ Queste librerie eliminano buona parte della complessità legata al dover interag
 
 ## Librerie disponibili {#available-libraries}
 
-<!-- TODO separate APIs-as-a-service vs. connect your own -->
-
 **Alchemy -** **_Piattaforma di sviluppo Ethereum_**
 
-- [alchemyapi.io](https://alchemyapi.io)
+- [alchemy.com](https://www.alchemy.com/)
 - [Documentazione](https://docs.alchemyapi.io/)
 - [GitHub](https://github.com/alchemyplatform)
-- [Discord](https://discord.gg/kwqVnrA)
+- [Discord](https://discord.com/invite/A39JVCM)
 
 **BlockCypher -** **_API Web Ethereum_**
 
@@ -45,12 +43,17 @@ Queste librerie eliminano buona parte della complessità legata al dover interag
 
 - [cloudflare-eth.com](https://cloudflare-eth.com)
 
-**Nodesmith -** **_Accesso API JSON-RPC alla rete principale e alle reti di prova Ethereum_**
+**DataHub di Figment -** **_Servizi API Web3 con Rete principale e rete di prova di Ethereum._**
+
+- [DataHub](https://www.figment.io/datahub)
+- [Documentazione](https://docs.figment.io/introduction/what-is-datahub)
+
+**Nodesmith -** **_Accesso dell’API JSON-RPC alla Rete principale e rete di prova Ethereum._**
 
 - [nodesmith.io](https://nodesmith.io/network/ethereum/)
 - [Documentazione](https://nodesmith.io/docs/#/ethereum/apiRef)
 
-**Ethercluster -** **_Esegui un servizio API Ethereum personalizzato supportando sia ETH che ETC_**
+**Ethercluster -** **_Esegui un servizio API Ethereum personalizzato che supporta sia ETH che ETC_**
 
 - [ethercluster.com](https://www.ethercluster.com/)
 
@@ -72,10 +75,10 @@ Queste librerie eliminano buona parte della complessità legata al dover interag
 **web3j -** **_Libreria di integrazione Java/Android/Kotlin/Scala per Ethereum_**
 
 - [GitHub](https://github.com/web3j/web3j)
-- [Documenti](https://docs.web3j.io/)
+- [Documentazione](https://docs.web3j.io/)
 - [Gitter](https://gitter.im/web3j/web3j)
 
-**Rivet -** **_API Ethereum ed Ethereum Classic cine servizio, supportate da software open source_**
+**Rivet -** **_API Ethereum ed Ethereum Classic come servizio, supportate da software open source_**
 
 - [rivet.cloud](https://rivet.cloud)
 - [Documentazione](https://rivet.cloud/docs/)
@@ -86,6 +89,13 @@ Queste librerie eliminano buona parte della complessità legata al dover interag
 - [GitHub](https://github.com/Nethereum/Nethereum)
 - [Documentazione](http://docs.nethereum.com/en/latest/)
 - [Discord](https://discord.com/invite/jQPrR58FxX)
+
+**QuikNode -** **_La piattaforma definitiva per sviluppatori di blockchain_**
+
+- [Tatum](https://tatum.io/)
+- [GitHub](https://github.com/tatumio/)
+- [Documentazione](https://docs.tatum.io/)
+- [Discord](https://discord.gg/EDmW3kjTC9)
 
 ## Letture consigliate {#further-reading}
 
@@ -98,5 +108,5 @@ _Conosci una risorsa pubblica che ti è stata utile? Modifica questa pagina e ag
 
 ## Tutorial correlati {#related-tutorials}
 
-- [Set up Web3js to use the Ethereum blockchain in Javascript](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– Istruzioni per utilizzare e configurare web3.js in un progetto_
+- [Set up Web3js to use the Ethereum blockchain in JavaScript](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– Istruzioni per utilizzare e configurare web3.js in un progetto_
 - [Calling a Smart Contract from JavaScript](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– Usando il token Dai, impara a chiamare le funzioni dei contratti con JavaScript_

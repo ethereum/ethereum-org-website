@@ -7,7 +7,7 @@ sidebar: true
 
 为了使软件应用程序能够与以太坊区块链进行交互（例如：读取区块链数据或发送交易信息到网络），软件必须连接到以太坊节点。
 
-因此，每个以太坊客户端都遵循 JSON-RPC 规范，以此有一个统一的端口可供应用程序们执行。
+为此目的，每个以太坊客户端都执行 [JSON-RPC](/developers/docs/apis/json-rpc/) 规范，所以应用程序可以依赖统一的[端点](/developers/docs/apis/json-rpc/endpoints/)集。
 
 如果您想要用 JavaScript 连接到一个以太坊节点， 可以使用原生 JavaScript，不过生态系统中存在一些方便的库，使得这个事情变得更加容易。 通过这些库，开发者可以写下直观易懂甚至单行的代码就能初始化与以太坊的互动（背后使用 JSON RPC 请求）。
 
@@ -23,16 +23,16 @@ sidebar: true
 
 ### 连接到以太坊节点 {#connect-to-ethereum-nodes}
 
-使用提供器，这些库允许您连接到以太坊并读取它的数据，不管是通过 JSON-RPC、INFURA、Etherscan、Alchemy 还是 Metamask。
+使用提供器，这些库允许您连接到以太坊并读取它的数据，不管是通过 JSON-RPC、INFURA、Etherscan、Alchemy 还是 MetaMask。
 
 **Ether 示例**
 
 ```js
 // 一个 Web3Provider 包含了标准的 Web3 提供者(provider)，这个提供者
-//相当于将 Metamask 作为一个以太坊窗口注入到每个页面中。
+//相当于将 MetaMask 作为一个以太坊窗口注入到每个页面中。
 const provider = new ethers.providers.eb3Provider(window.eferum)
 
-// Metamask 插件同时可以签署每一笔交易
+// MetaMask 插件同时可以签署每一笔交易
 // 从而更改区块链中的状态。
 // 为此，我们需要帐户签名者...
 const signer = provider.getSigner()
@@ -52,10 +52,10 @@ web3.setProvider(new Web3.providers.WebsocketProvider("ws://localhost:8546"))
 
 // 在 node.js 中使用 IPC 提供者
 var net = require("net")
-var web3 = new Web3("/Users/myuser/Library/Etherum/geth). pc", net// mac os path
+var web3 = new Web3("/Users/myuser/Library/Ethereum/geth). pc", net// mac os path
 // 或
 var web3 = new Web3(
-  new Web3.providers. pcProvider("/Users/myuser/Library/Etherum/geth.ipc", net"
+  new Web3.providers. pcProvider("/Users/myuser/Library/Ethereum/geth.ipc", net"
 ) // mac os path
 // 在 windows 操作系统上的路径是 "\\\\pipe\\geth.ipc"
 // 在 linux 上的路径是 "/users/myuser/.efer/geth.ipc"
@@ -68,11 +68,6 @@ var web3 = new Web3(
 - 智能合约事件
 - 网络 ID
 - 以及更多...
-
-<!--- #### Try it
-
-This remix tutorial will show you [how to query the blockchain using web3js](https://remix.ethereum.org/#optimize=false&evmVersion=null&version=soljson-v0.6.6+commit.6c089d02.js)
---->
 
 ### 钱包功能 {#wallet-functionality}
 
@@ -154,9 +149,9 @@ wallet.sendTransaction(tx)
 - 签署交易
 - 以及更多...
 
-### 与智能合同交互的方法 {#interact-with-smart-contract-functions}
+### 与智能合约交互的方法 {#interact-with-smart-contract-functions}
 
-Javascript 客户端库可以让开发者的应用通过读取汇编合同的应用二进制接口 (ABI) 来调用智能合约函数。
+JavaScript 客户端库可以让开发者的应用通过读取汇编合约的应用二进制接口 (ABI) 来调用智能合约函数。
 
 ABI 本质上是基于 JSON 格式解释了合约的函数，并且允许您像普通 JavaScript 对象一样使用它。
 
@@ -209,17 +204,12 @@ contract Test {
 }]
 ```
 
-这意味着你可以：
+这意味着您可以：
 
 - 发送一笔交易到指定的智能合约上，并执行智能合约上的方法
 - 调用方法去评估对 gas 的需求量。这个方法的执行是在以太坊虚拟机中执行的。
 - 部署一个合约
 - 以及更多...
-
-<!--- #### Try it
-
-This remix tutorial will show you [how to query a contract using web3js](https://remix.ethereum.org/#optimize=false&evmVersion=null&version=soljson-v0.6.6+commit.6c089d02.js)
---->
 
 ### 实用功能 {#utility-functions}
 
@@ -252,7 +242,7 @@ ethers.utils.formatEther(balance)
 
 **Ethers.js -** **_JavaScript 和 TypeScript 中完整的以太坊钱包实现和实用工具。_**
 
-- [相关文档](https://docs.ethers.io/ethers.js/html/)
+- [相关文档](https://docs.ethers.io/)
 - [GitHub](https://github.com/ethers-io/ethers.js/)
 
 **Graph -** **_用于为以太坊和 IPFS 数据建立索引并使用 GraphQL 对其进行查询的协议。_**
@@ -279,7 +269,7 @@ ethers.utils.formatEther(balance)
 
 ## 延伸阅读 {#further-reading}
 
-_你知道有什么社区资源帮助过你吗？ 编辑并添加本页面！_
+_还有哪些社区资源对您有所帮助？ 编辑并添加本页面！_
 
 ## 相关主题 {#related-topics}
 
@@ -288,6 +278,6 @@ _你知道有什么社区资源帮助过你吗？ 编辑并添加本页面！_
 
 ## 相关教程 {#related-tutorials}
 
-- [设置 Web3js 并在 Javascript 中使用以太坊区块链](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _关于在您的项目中设置 web3.js 的说明。_
+- [设置 Web3js 并在 JavaScript 中使用以太坊区块链](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _关于在您的项目中设置 web3.js 的说明。_
 - [在 JavaScript 中调用智能合约](/developers/tutorials/calling-a-smart-contract-from-javascript/) _使用 DAI token，从而使用 JavaScript 调用合约函数。_
-- [使用 web3 和 Alchemy](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) 发送交易。 _- 一步步带你了解如何从后端发送一笔交易。_
+- [使用 web3 和 Alchemy](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) 发送交易。 _- 一步步带您了解如何从后端发送一笔交易。_

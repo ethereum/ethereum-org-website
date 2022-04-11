@@ -70,8 +70,8 @@ sidebarDepth: 1
 
 ### セキュリティ {#security}
 
-- [Clef](https://geth.ethereum.org/clef/Overview) _トランザクションとデータに署名するために使用され、geth のアカウント管理の代わりになります。_
-- [EthSigner](https://gitter.im/PegaSysEng/EthSigner) _Web3 プロバイダで使用するトランザクション署名のアプリケーション_
+- [Clef](https://geth.ethereum.org/docs/clef/tutorial) _トランザクションとデータに署名するために使用され、geth のアカウント管理の代わりになります。_
+- [EthSigner](https://github.com/ConsenSys/ethsigner) _Web3 プロバイダで使用するトランザクション署名のアプリケーション_
 
 ### ツール {#tooling}
 

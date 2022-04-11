@@ -22,23 +22,7 @@ A konszenzus mechanizmusok (más néven konszenzus protokollok vagy konszenzus a
 
 Emellett egy konszenzus mechanizmus egy kriptoökonómiai rendszerben segít kivédeni bizonyos gazdasági támadásokat. Elméletben egy támadó képes megdönteni a konszenzust, ha a hálózat 51%-át irányítja. A konszenzus mechanizmusokat arra tervezték, hogy ellehetetlenítsék ezeket az "51%-os támadásokat". Különböző mechanizmusok különböző módon próbálják megoldani ezt a biztonsági problémát.
 
-<!-- ### Consensus -->
-
-<!-- Formal requirements for a consensus protocol may include: -->
-
-<!-- - Agreement: All correct processes must agree on the same value. -->
-<!-- - Weak validity: For each correct process, its output must be the input of some correct process. -->
-<!-- - Strong validity: If all correct processes receive the same input value, then they must all output that value. -->
-<!-- - Termination: All processes must eventually decide on an output value -->
-
-<!-- ### Fault tolerance -->
-<!-- TODO explain how protocols must be fault tolerant -->
-
 ## A konszenzus mechanizmusok fajtái {#types-of-consensus-mechanisms}
-
-<!-- TODO -->
-<!-- Why do different consensus protocols exist? -->
-<!-- What are the tradeoffs of each? -->
 
 ### Proof-of-work {#proof-of-work}
 
@@ -69,8 +53,6 @@ A proof-of-stake rendszert az tartja biztonságban, hogy az összes letétbe hel
 Többet a [proof-of-stake-ről (PoS)](/developers/docs/consensus-mechanisms/pos/)
 
 ## További olvasnivaló {#further-reading}
-
-<!-- TODO -->
 
 ## Kapcsolódó témák {#related-topics}
 

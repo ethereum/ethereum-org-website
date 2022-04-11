@@ -294,7 +294,7 @@ This comment explains the purpose of the contract.
 contract ERC20 is Context, IERC20 {
 ```
 
-This line specifies the inheritence, in this case from `IERC20` from above and `Context`, for OpenGSN.
+This line specifies the inheritance, in this case from `IERC20` from above and `Context`, for OpenGSN.
 
 &nbsp;
 
@@ -315,7 +315,7 @@ secrets on the blockchain_, the software on every node has the state of every co
 at every block. By convention, state variables are named `_<something>`.
 
 The first two variables are [mappings](https://www.tutorialspoint.com/solidity/solidity_mappings.htm),
-meaning they behave roughly the same as [associative arrays](https://en.wikipedia.org/wiki/Associative_array),
+meaning they behave roughly the same as [associative arrays](https://wikipedia.org/wiki/Associative_array),
 except that the keys are numeric values. Storage is only allocated for entries that have values different
 from the default (zero).
 
@@ -602,7 +602,7 @@ in the transaction pool he sends a transaction that spends Alice's five tokens a
 higher gas price so it will be mined faster. That way Bill can spend first five tokens and then,
 once Alice's new allowance is mined, spend ten more for a total price of fifteen tokens, more than
 Alice meant to authorize. This technique is called
-[front-running](https://consensys.github.io/smart-contract-best-practices/known_attacks/#front-running)
+[front-running](https://consensys.github.io/smart-contract-best-practices/attacks/#front-running)
 
 | Alice Transaction | Alice Nonce | Bill Transaction              | Bill Nonce | Bill's Allowance | Bill Total Income from Alice |
 | ----------------- | ----------- | ----------------------------- | ---------- | ---------------- | ---------------------------- |
@@ -613,7 +613,7 @@ Alice meant to authorize. This technique is called
 
 To avoid this problem, these two functions (`increaseAllowance` and `decreaseAllowance`) allow you
 to modify the allowance by a specific amount. So if Bill had already spent five tokens, he'll just
-be able to spend five more. Depending on the timing, there are two ways ways this can work, both of
+be able to spend five more. Depending on the timing, there are two ways this can work, both of
 which end with Bill only getting ten tokens:
 
 A:
@@ -734,7 +734,7 @@ it is clear what are the functions you modify, and to trust your contract people
 
 It is often useful to perform a function each time tokens change hands. However,`_transfer` is a very important function and it is
 possible to write it insecurely (see below), so it is best not to override it. The solution is `_beforeTokenTransfer`, a
-[hook function](https://en.wikipedia.org/wiki/Hooking). You can override this function, and it will be called on each transfer.
+[hook function](https://wikipedia.org/wiki/Hooking). You can override this function, and it will be called on each transfer.
 
 &nbsp;
 
@@ -902,7 +902,7 @@ are not designed to handle it.
 }
 ```
 
-This is the hook function to be called during transfers. It is empty here, buf if you need
+This is the hook function to be called during transfers. It is empty here, but if you need
 it to do something you just override it.
 
 # Conclusion {#conclusion}

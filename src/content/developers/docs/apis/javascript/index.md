@@ -29,10 +29,10 @@ Using providers, these libraries allow you to connect to Ethereum and read its d
 
 ```js
 // A Web3Provider wraps a standard Web3 provider, which is
-// what Metamask injects as window.ethereum into each page
+// what MetaMask injects as window.ethereum into each page
 const provider = new ethers.providers.Web3Provider(window.ethereum)
 
-// The Metamask plugin also allows signing transactions to
+// The MetaMask plugin also allows signing transactions to
 // send ether and pay to change state within the blockchain.
 // For this, we need the account signer...
 const signer = provider.getSigner()
@@ -68,11 +68,6 @@ Once set up you'll be able to query the blockchain for:
 - smart contract events
 - network id
 - and more...
-
-<!--- #### Try it
-
-This remix tutorial will show you [how to query the blockchain using web3js](https://remix.ethereum.org/#optimize=false&evmVersion=null&version=soljson-v0.6.6+commit.6c089d02.js)
---->
 
 ### Wallet functionality {#wallet-functionality}
 
@@ -157,7 +152,7 @@ Once set up you'll be able to:
 
 ### Interact with smart contract functions {#interact-with-smart-contract-functions}
 
-Javascript client libraries allow your application to call smart contract functions by reading the Application Binary Interface (ABI) of a compiled contract.
+JavaScript client libraries allow your application to call smart contract functions by reading the Application Binary Interface (ABI) of a compiled contract.
 
 The ABI essentially explains the contract's functions in a JSON format and allows you to use it like a normal JavaScript object.
 
@@ -217,11 +212,6 @@ This means you can:
 - Deploy a contract
 - And more...
 
-<!--- #### Try it
-
-This remix tutorial will show you [how to query a contract using web3js](https://remix.ethereum.org/#optimize=false&evmVersion=null&version=soljson-v0.6.6+commit.6c089d02.js)
---->
-
 ### Utility functions {#utility-functions}
 
 Utility functions give you handy shortcuts that make building with Ethereum a little easier.
@@ -278,6 +268,11 @@ ethers.utils.formatEther(balance)
 - [Documentation](https://docs.alchemyapi.io/documentation/alchemy-web3)
 - [GitHub](https://github.com/alchemyplatform/alchemy-web3)
 
+**Alchemy NFT API -** **_API for fetching NFT data, including ownership, metadata attributes and more._**
+
+- [Documentation](https://docs.alchemy.com/alchemy/enhanced-apis/nft-api)
+- [GitHub](https://github.com/alchemyplatform/alchemy-web3)
+
 ## Further reading {#further-reading}
 
 _Know of a community resource that helped you? Edit this page and add it!_
@@ -289,6 +284,6 @@ _Know of a community resource that helped you? Edit this page and add it!_
 
 ## Related tutorials {#related-tutorials}
 
-- [Set up Web3js to use the Ethereum blockchain in Javascript](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– Instructions for getting web3.js set up in your project._
+- [Set up Web3js to use the Ethereum blockchain in JavaScript](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– Instructions for getting web3.js set up in your project._
 - [Calling a smart contract from JavaScript](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– Using the DAI token, see how to call contracts function using JavaScript._
 - [Sending transactions using web3 and Alchemy](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) _– Step by step walkthrough for sending transactions from the backend._

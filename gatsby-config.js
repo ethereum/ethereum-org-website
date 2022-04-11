@@ -1,9 +1,17 @@
-const translations = require("./src/utils/translations")
 require("dotenv").config()
 
-const supportedLanguages = translations.supportedLanguages
+const { supportedLanguages, allLanguages } = require("./src/utils/translations")
+
 const defaultLanguage = `en`
 const siteUrl = `https://ethereum.org`
+
+const ignoreContent = (process.env.IGNORE_CONTENT || "")
+  .split(",")
+  .filter(Boolean)
+
+const ignoreTranslations = Object.keys(allLanguages)
+  .filter((lang) => !supportedLanguages.includes(lang))
+  .map((lang) => `**/translations\/${lang}`)
 
 module.exports = {
   siteMetadata: {
@@ -40,7 +48,7 @@ module.exports = {
         name: `ethereum.org`,
         short_name: `ethereum.org`,
         start_url: `/en/`,
-        background_color: `#fff`,
+        background_color: `#ffffff`,
         theme_color: `#1c1ce1`,
         display: `standalone`,
         icon: `src/assets/favicon.png`,
@@ -127,6 +135,10 @@ module.exports = {
         // See: https://www.gatsbyjs.org/docs/mdx/plugins/
         gatsbyRemarkPlugins: [
           {
+            // Local plugin to adjust the images urls of the translated md files
+            resolve: require.resolve(`./plugins/gatsby-remark-image-urls`),
+          },
+          {
             resolve: `gatsby-remark-autolink-headers`,
             options: {
               enableCustomId: true,
@@ -164,6 +176,15 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
+    // SVG support
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /assets/,
+        },
+      },
+    },
     // CSS in JS
     `gatsby-plugin-styled-components`,
     // Source assets
@@ -180,6 +201,7 @@ module.exports = {
       options: {
         name: `content`,
         path: `${__dirname}/src/content`,
+        ignore: [...ignoreContent, ...ignoreTranslations],
       },
     },
     // Source data

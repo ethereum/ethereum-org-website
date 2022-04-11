@@ -4,7 +4,7 @@ html {
     Segoe UI Symbol;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  font-size: 16px;
+  font-size: 1rem;
 }
 body {
   margin: 0;
@@ -70,8 +70,8 @@ h1 {
   margin: 0.67em 0;
 }
 mark {
-  background-color: #ff0;
-  color: #000;
+  background-color: #ffff00;
+  color: #000000;
 }
 small {
   font-size: 80%;
@@ -539,8 +539,10 @@ code {
   line-height: 1.45em;
 }
 kbd {
-  font-size: 0.85rem;
-  line-height: 1.45rem;
+  font-family: "SFMono-Regular", Consolas, "Roboto Mono", "Droid Sans Mono",
+    "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 0.625rem;
+  line-height: 1.56rem;
 }
 samp {
   font-size: 0.85rem;

@@ -21,8 +21,6 @@ Ezek a könyvtárak elveszik a komplexitás nagy részét, mely Ethereum csomóp
 
 ## Elérhető könyvtárak {#available-libraries}
 
-<!-- TODO separate APIs-as-a-service vs. connect your own -->
-
 **Alchemy -** **_Ethereum Fejlesztési Platform._**
 
 - [alchemyapi.io](https://alchemyapi.io)
@@ -45,7 +43,7 @@ Ezek a könyvtárak elveszik a komplexitás nagy részét, mely Ethereum csomóp
 
 - [cloudflare-eth.com](https://cloudflare-eth.com)
 
-**Nodesmith -** **_JSON-RPC API hozzáférés az Etherum mainnet-hez és testnet-ekhez._**
+**Nodesmith -** **_JSON-RPC API hozzáférés az Ethereum mainnet-hez és testnet-ekhez._**
 
 - [nodesmith.io](https://nodesmith.io/network/ethereum/)
 - [Dokumentáció](https://nodesmith.io/docs/#/ethereum/apiRef)
@@ -98,5 +96,5 @@ _Ismersz olyan közösségi anyagot, mely segített neked? Módosítsd az oldalt
 
 ## Kapcsolódó útmutatók {#related-tutorials}
 
-- [Állítsd be a Web3js, hogy Javascriptben használd az Ethereum blokkláncot](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– Intrukciók arról, hogyan állítsd be a web3.js-t a projektedben._
+- [Állítsd be a Web3js, hogy JavaScriptben használd az Ethereum blokkláncot](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– Intrukciók arról, hogyan állítsd be a web3.js-t a projektedben._
 - [Okosszerződés hívása JavaScriptből](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– A DAI token használata, hogy lásd hogyan lehet szerződés függvényeket meghívni JavaScript használatával._

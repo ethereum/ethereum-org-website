@@ -21,7 +21,7 @@ incomplete: true
 - [编写您的第一个智能合约](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
 - [学习如何编写和部署 Solidity](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 
-## 使用以太坊客户端
+## 使用以太坊客户端 {#working-with-ethereum-clients}
 
 了解如何使用[ Web3J ](https://github.com/web3j/web3j)和 Hyperledger Besu 这两个领先的 Java 以太坊客户端。
 
@@ -34,13 +34,13 @@ incomplete: true
 - [在 Java 集成测试中运行一个 Hyperledger Besu (Pantheon) 节点](https://kauri.io/article/7dc3ecc391e54f7b8cbf4e5fa0caf780/running-a-pantheon-node-in-java-integration-tests)
 - [Web3j 备忘单](<https://kauri.io/web3j-cheat-sheet-(java-ethereum)/5dfa1ea941ac3d0001ce1d90/c>)
 
-## 面向中等程度者的文章 {#intermediate-articles}
+## 面向中等程度用户的文章 {#intermediate-articles}
 
 - [使用 IPFS 在 Java 应用程序中管理存储](https://kauri.io/article/3e8494f4f56f48c4bb77f1f925c6d926/managing-storage-in-a-java-application-with-ipfs)
 - [使用 Web3j 在 Java 中管理 ERC20 代币](https://kauri.io/article/d13e911bbf624108b1d5718175a5e0a0/manage-erc20-tokens-in-java-with-web3j)
 - [Web3j 交易管理器](https://kauri.io/article/4cb780bb4d0846438d11885a25b6d7e7/web3j-transaction-managers)
 
-## 面向高等程度者的使用模式 {#advanced-use-patterns}
+## 面向高等程度用户的使用模式 {#advanced-use-patterns}
 
 - [使用 Eventeum 构建 Java 智能合约数据缓存](https://kauri.io/article/fe81ee9612eb4e5a9ab72790ef24283d/using-eventeum-to-build-a-java-smart-contract-data-cache)
 

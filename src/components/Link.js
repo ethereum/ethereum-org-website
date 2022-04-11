@@ -78,6 +78,7 @@ const Link = ({
   const isHash = isHashLink(to)
   const isGlossary = to.includes("glossary")
   const isStatic = to.includes("static")
+  const isPdf = to.includes(".pdf")
 
   // Must use <a> tags for anchor links
   // Otherwise <Link> functionality will navigate to homepage
@@ -150,6 +151,20 @@ const Link = ({
       >
         {children}
       </ExplicitLangInternalLink>
+    )
+  }
+
+  // Download link for internally hosted PDF's (ex: whitepaper)
+  if (isPdf && !isExternal) {
+    return (
+      <a
+        href={to}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={ariaLabel}
+      >
+        {children}
+      </a>
     )
   }
 

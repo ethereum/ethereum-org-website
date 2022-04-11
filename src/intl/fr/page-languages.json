@@ -6,7 +6,10 @@
   "page-languages-meta-title": "Traductions d'ethereum.org",
   "page-languages-p1": "Ethereum est un projet mondial, et il est essentiel qu'ethereum.org soit accessible à tous, quelle que soit leur nationalité ou leur langue. Notre communauté a travaillé dur pour faire de cette vision une réalité.",
   "page-languages-translations-available": "ethereum.org est disponible dans les langues suivantes",
+  "page-languages-resources-paragraph": "En plus de la traduction du contenu du site ethereum.org, nous maintenant également un",
+  "page-languages-resources-link": "liste organisée des ressources Ethereum dans de nombreuses langues",
   "page-languages-want-more-header": "Voulez-vous voir ethereum.org dans une autre langue ?",
   "page-languages-want-more-link": "Programme de traduction",
-  "page-languages-want-more-paragraph": "Les traducteurs d’ethereum.org traduisent constamment les pages dans le plus de langues possible. Pour voir ce sur quoi ils sont en train de travailler actuellement ou pour les rejoindre, lisez notre"
+  "page-languages-want-more-paragraph": "Les traducteurs d’ethereum.org traduisent constamment les pages dans le plus de langues possible. Pour voir ce sur quoi ils sont en train de travailler actuellement ou pour les rejoindre, lisez notre",
+  "page-languages-filter-placeholder": "Filtre"
 }

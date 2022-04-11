@@ -1,6 +1,8 @@
 {
   "page-local-environment-brownie-desc": "Une structure de développement et de test basée sur Python pour les contrats intelligents ciblant la machine virtuelle Ethereum.",
   "page-local-environment-brownie-logo-alt": "Logo Brownie",
+  "page-local-environment-dapptools-desc": "Une suite d'outils CLI orientés vers Ethereum suivant la philosophie de conception Unix, favorisant la composabilité, la configurabilité et l'extensibilité.",
+  "page-local-environment-dapptools-logo-alt": "Logo Dapptools",
   "page-local-environment-embark-desc": "La plateforme de développement tout-en-un pour la construction et le déploiement d'applications décentralisées.",
   "page-local-environment-embark-logo-alt": "Logo Embark",
   "page-local-environment-epirus-desc": "Une plateforme pour développer, déployer et surveiller des applications pour la blockchain sur la machine virtuelle Java",
@@ -19,7 +21,7 @@
   "page-local-environment-hardhat-logo-alt": "Logo Hardhat",
   "page-local-environment-openZeppelin-desc": "Épargnez-vous de longues heures de développement en compilant, en mettant à niveau, en déployant et en interagissant avec des contrats intelligents par le biais de notre Interface de ligne de commande.",
   "page-local-environment-openZeppelin-logo-alt": "Logo OpenZeppelin",
-  "page-local-environment-scaffold-eth-desc": "Hardhat + Create Eth App: tout ce dont vous avez besoin pour commencer à créer des applications décentralisées alimentées par des contrats intelligents",
+  "page-local-environment-scaffold-eth-desc": "Ethers + Hardhat + React : tout ce dont vous avez besoin pour commencer à créer des applications décentralisées, alimentées par des contrats intelligents",
   "page-local-environment-scaffold-eth-logo-alt": "logo scaffold-eth",
   "page-local-environment-setup-meta-desc": "Guide sur comment choisir votre pile logicielle pour le développement Ethereum.",
   "page-local-environment-setup-meta-title": "Configuration du développement local Ethereum",

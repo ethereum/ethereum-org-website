@@ -5,25 +5,24 @@ lang: en
 sidebar: true
 ---
 
-A common misconception is that developers must write smart contracts in order to build on Ethereum. This is false.
+A common misconception is that developers must write [smart contracts](/developers/docs/smart-contracts/) in order to build on Ethereum. This is false.
 One of the beauties of the Ethereum network and community is that you're able to [participate](/community/) in just about any programming language.
 
 Ethereum and its community embrace open source. You can find community projects - client implementations, APIs, development frameworks, testing tools - in a wide variety of languages.
 
-<!-- Often certain languages have an certain advantage depending on the use case -->
-
 ## Choose your language {#data}
 
-Select your language of choice to find projects, resources, and virtual communities:
+Select your programming language of choice to find projects, resources, and virtual communities:
 
-- [Ethereum for Java developers](/developers/docs/programming-languages/java/)
-- [Ethereum for Python developers](/developers/docs/programming-languages/python/)
-- [Ethereum for JavaScript developers](/developers/docs/programming-languages/javascript/)
-- [Ethereum for Go developers](/developers/docs/programming-languages/golang/)
-- [Ethereum for Rust developers](/developers/docs/programming-languages/rust/)
-- [Ethereum for .NET developers](/developers/docs/programming-languages/dot-net/)
-- [Ethereum for Delphi developers](/developers/docs/programming-languages/delphi/)
 - [Ethereum for Dart developers](/developers/docs/programming-languages/dart/)
+- [Ethereum for Delphi developers](/developers/docs/programming-languages/delphi/)
+- [Ethereum for .NET developers](/developers/docs/programming-languages/dot-net/)
+- [Ethereum for Go developers](/developers/docs/programming-languages/golang/)
+- [Ethereum for Java developers](/developers/docs/programming-languages/java/)
+- [Ethereum for JavaScript developers](/developers/docs/programming-languages/javascript/)
+- [Ethereum for Python developers](/developers/docs/programming-languages/python/)
+- [Ethereum for Ruby developers](/developers/docs/programming-languages/ruby/)
+- [Ethereum for Rust developers](/developers/docs/programming-languages/rust/)
 
 ### What if my language is not supported {#other-lang}
 

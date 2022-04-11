@@ -213,6 +213,10 @@ and therefore each token0 is worth reserve1/reserve0 token1's.
 
 The timestamp for the last block in which an exchange occurred, used to track exchange rates across time.
 
+One of the biggest gas expenses of Ethereum contracts is storage, which persists from one call of the contract
+to the next. Each storage cell is 256 bits long. So three variables, reserve0, reserve1, and blockTimestampLast, are allocated in such
+a way a single storage value can include all three of them (112+112+32=256).
+
 ```solidity
     uint public price0CumulativeLast;
     uint public price1CumulativeLast;
@@ -220,10 +224,6 @@ The timestamp for the last block in which an exchange occurred, used to track ex
 
 These variables hold the cumulative costs for each token (each in term of the other). They can be used to calculate
 the average exchange rate over a period of time.
-
-One of the biggest gas expenses of Ethereum contracts is storage, which persists from one call of the contract
-to the next. Each storage cell is 256 bits long. So there variable, and `kLast` below, are allocated in such
-a way a single storage value can include all three of them (112+112+32=256).
 
 ```solidity
     uint public kLast; // reserve0 * reserve1, as of immediately after the most recent liquidity event
@@ -306,7 +306,7 @@ values](https://docs.soliditylang.org/en/v0.8.3/contracts.html#returning-multipl
 ```
 
 This internal function transfers an amount of ERC20 tokens from the exchange to somebody else. `SELECTOR` specifies
-that the function we are calling is `transfer(address,uint)` (see defintion above).
+that the function we are calling is `transfer(address,uint)` (see definition above).
 
 To avoid having to import an interface for the token function, we "manually" create the call using one of the
 [ABI functions](https://docs.soliditylang.org/en/v0.8.3/units-and-global-variables.html#abi-encoding-and-decoding-functions).
@@ -318,7 +318,7 @@ To avoid having to import an interface for the token function, we "manually" cre
 
 There are two ways in which an ERC-20 transfer call can report failure:
 
-1. Revert. If a call to an external contract reverts than the boolean return value is `false`
+1. Revert. If a call to an external contract reverts, then the boolean return value is `false`
 2. End normally but report a failure. In that case the return value buffer has a non-zero length, and when decoded as a boolean value it is `false`
 
 If either of these conditions happen, revert.
@@ -395,9 +395,9 @@ This function is called every time tokens are deposited or withdrawn.
         require(balance0 <= uint112(-1) && balance1 <= uint112(-1), 'UniswapV2: OVERFLOW');
 ```
 
-If the update makes either balance higher than 2^111 (so it would be interpreted as a negative number) refuse
-to do it to prevent overflows. With a normal token that can be subdivided into 10^18 units, this means each
-exchange is limited to about 2.5\*10^15 of each tokens. So far that has not been a problem.
+If either balance0 or balance1 (uint256) is higher than uint112(-1) (=2^112-1) (so it overflows & wraps back to 0 when converted to uint112) refuse
+to continue the \_update to prevent overflows. With a normal token that can be subdivided into 10^18 units, this means each
+exchange is limited to about 5.1\*10^15 of each tokens. So far that has not been a problem.
 
 ```solidity
         uint32 blockTimestamp = uint32(block.timestamp % 2**32);
@@ -740,7 +740,7 @@ called by other entities than our periphery contract).
 ```
 
 This is a sanity check to make sure we don't lose from the swap. There is no circumstance in which a swap should reduce
-`reserve0*reserve1`.
+`reserve0*reserve1`. This is also where we ensure a fee of 0.3% is being sent on the swap; before sanity checking the value of K, we multiply both balances by 1000 subtracted by the amounts multiplied by 3, this means 0.3% (3/1000 = 0.003 = 0.3%) is being deducted from the balance before comparing its K value with the current reserves K value.
 
 ```solidity
         }
@@ -752,7 +752,7 @@ This is a sanity check to make sure we don't lose from the swap. There is no cir
 
 Update `reserve0` and `reserve1`, and if necessary the price accumulators and the timestamp and emit an event.
 
-##### Sync or Skip
+##### Sync or Skim {#sync-or-skim}
 
 It is possible for the real balances to get out of sync with the reserves that the pair exchange thinks it has.
 There is no way to withdraw tokens without the contract's consent, but deposits are a different matter. An account
@@ -939,7 +939,7 @@ I will only explain the part that is different, the `permit` functionality.
 
 Transactions on Ethereum cost ether (ETH), which is equivalent to real money. If you have ERC-20 tokens but not ETH, you can't send
 transactions, so you can't do anything with them. One solution to avoid this problem is
-[meta-transactions](https://uniswap.org/docs/v2/smart-contract-integration/supporting-meta-transactions/).
+[meta-transactions](https://docs.uniswap.org/protocol/V2/guides/smart-contract-integration/supporting-meta-transactions/).
 The owner of the tokens signs a transaction that allows somebody else to withdraw tokens off chain and sends it using the Internet to
 the recipient. The recipient, which does have ETH, then submits the permit on behalf of the owner.
 
@@ -957,8 +957,8 @@ one we support here is `Permit` with these parameters.
 ```
 
 It is not feasible for a recipient to fake a digital signature. However, it is trivial to send the same transaction twice
-(this is a form of [replay attack](https://en.wikipedia.org/wiki/Replay_attack)). To prevent this, we use
-a [nonce](https://en.wikipedia.org/wiki/Cryptographic_nonce). If the nonce of a new `Permit` is not one more than the last one
+(this is a form of [replay attack](https://wikipedia.org/wiki/Replay_attack)). To prevent this, we use
+a [nonce](https://wikipedia.org/wiki/Cryptographic_nonce). If the nonce of a new `Permit` is not one more than the last one
 used, we assume it is invalid.
 
 ```solidity
@@ -1232,7 +1232,7 @@ thousand B tokens (red line). The x axis is the exchange rate, A/B. If x=1, they
 a thousand of each. If x=2, A is twice the value of B (you get two B tokens for each A token) so you deposit a thousand
 B tokens, but only 500 A tokens. If x=0.5, the situation is reversed, a thousand A tokens and five hundred B tokens.
 
-![Graph](liquidityProviderDeposit.png "Tokens to deposit at different exchange rates")
+![Graph](liquidityProviderDeposit.png)
 
 ```solidity
             }
@@ -1913,7 +1913,7 @@ library Math {
         z = x < y ? x : y;
     }
 
-    // babylonian method (https://en.wikipedia.org/wiki/Methods_of_computing_square_roots#Babylonian_method)
+    // babylonian method (https://wikipedia.org/wiki/Methods_of_computing_square_roots#Babylonian_method)
     function sqrt(uint y) internal pure returns (uint z) {
         if (y > 3) {
             z = y;
@@ -1930,7 +1930,7 @@ Start with x as an estimate that is higher than the square root (that is the rea
 
 Get a closer estimate, the average of the previous estimate and the number whose square root we're trying to find divided by
 the previous estimate. Repeat until the new estimate isn't lower than the existing one. For more details,
-[see here](https://en.wikipedia.org/wiki/Methods_of_computing_square_roots#Babylonian_method).
+[see here](https://wikipedia.org/wiki/Methods_of_computing_square_roots#Babylonian_method).
 
 ```solidity
             }
@@ -1955,7 +1955,7 @@ as _x\*2^112_. This lets us use the original addition and subtraction opcodes wi
 ```solidity
 pragma solidity =0.5.16;
 
-// a library for handling binary fixed point numbers (https://en.wikipedia.org/wiki/Q_(number_format))
+// a library for handling binary fixed point numbers (https://wikipedia.org/wiki/Q_(number_format))
 
 // range: [0, 2**112 - 1]
 // resolution: 1 / 2**112
@@ -1973,7 +1973,7 @@ library UQ112x112 {
     }
 ```
 
-Because y is `uint112`, the most if can be is 2^113-1. That number can still be encoded as a `UQ112x112`.
+Because y is `uint112`, the most it can be is 2^112-1. That number can still be encoded as a `UQ112x112`.
 
 ```solidity
     // divide a UQ112x112 by a uint112, returning a UQ112x112
@@ -2209,7 +2209,7 @@ which allows an account to spend out the allowance provided by a different accou
 This function transfers ether to an account. Any call to a different contract can attempt to send ether. Because we
 don't need to actually call any function, we don't send any data with the call.
 
-## Conclusion {#Conclusion}
+## Conclusion {#conclusion}
 
 This is a long article of about 50 pages. If you made it here, congratulations! Hopefully by now you've understood the considerations
 in writing a real-life application (as opposed to short sample programs) and are better to be able to write contracts for your own

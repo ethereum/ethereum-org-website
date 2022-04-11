@@ -27,7 +27,7 @@ Potřebujete nejdříve úplně základní informace? Podívejte se na [ethereum
 
 - [Výběr klienta pro Ethereum](https://www.trufflesuite.com/docs/truffle/reference/choosing-an-ethereum-client)
 - [Ethereum klient v Rustu](https://wiki.parity.io/Setup)
-- [Odesílání transakce do sítě Ethereum s použitím Rustu](https://kauri.io/article/97c85229c66445759bb0ce642224d364/sending-ethereum-transactions-with-rust)
+- [Odesílání transakce do sítě Ethereum s použitím Rustu](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/sending-ethereum-transactions-with-rust/)
 - [Úvod do chytrých kontraktů s klientem Parity Ethereum](https://wiki.parity.io/Smart-Contracts)
 - [Nastavení vývojového prostředí Oasis SDK](https://docs.oasis.dev/oasis-sdk/guide/getting-started)
 - [Postupný návod, jak psát kontrakty v Rustu a Wasm pro Kovan](https://github.com/paritytech/pwasm-tutorial)
@@ -39,7 +39,7 @@ Potřebujete nejdříve úplně základní informace? Podívejte se na [ethereum
 
 ## Pokročilé používání {#advanced-use-patterns}
 
-- [Knihovna externs pwasm_ethereum pro interakci se sítěmi založenými na Ethereu](https://paritytech.github.io/pwasm-ethereum/pwasm_ethereum/)
+- [Knihovna externs pwasm_ethereum pro interakci se sítěmi založenými na Ethereu](https://github.com/openethereum/pwasm-ethereum)
 - [Vytvoření decentralizovaného chatu pomocí JavaScriptu a Rustu](https://medium.com/perlin-network/build-a-decentralized-chat-using-javascript-rust-webassembly-c775f8484b52)
 - [Vytvořte decentralizovanou aplikaci TODO pomocí Vue.js a Rustu ](https://medium.com/@jjmace01/build-a-decentralized-todo-app-using-vue-js-rust-webassembly-5381a1895beb)
 - [Začínáme s Enigmou - v programovacím jazyku Rust](https://blog.enigma.co/getting-started-with-discovery-the-rust-programming-language-4d1e0b06de15)

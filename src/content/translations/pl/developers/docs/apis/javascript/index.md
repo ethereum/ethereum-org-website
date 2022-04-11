@@ -28,7 +28,7 @@ Korzystając z dostawców, biblioteki te pozwalają Ci połączyć się z Ethere
 **Przykładowy Ether**
 
 ```js
-// Web3Provider otacza standardowego dostawcę Web3, którym jest // Metamask co wstrzykuje jako window.ethereum do każdej strony const provider = nowy ethers.providers.Web3Provider(window.ethereum) // Wtyczka Metamask umożliwia również podpisywanie transakcji do // wyślij ether i zapłać, aby zmienić stan w łańcuchu bloków.
+// Web3Provider otacza standardowego dostawcę Web3, którym jest // MetaMask co wstrzykuje jako window.ethereum do każdej strony const provider = nowy ethers.providers.Web3Provider(window.ethereum) // Wtyczka MetaMask umożliwia również podpisywanie transakcji do // wyślij ether i zapłać, aby zmienić stan w łańcuchu bloków.
 // W tym celu potrzebujemy podpisującego konto...
 const signer = provider.getSigner()
 ```
@@ -46,11 +46,6 @@ Po skonfigurowaniu łańcucha bloków będziesz mógł zapytać o:
 - wydarzenia inteligentnych kontraktów
 - id sieci
 - i więcej...
-
-<!--- #### Try it
-
-This remix tutorial will show you [how to query the blockchain using web3js](https://remix.ethereum.org/#optimize=false&evmVersion=null&version=soljson-v0.6.6+commit.6c089d02.js)
---->
 
 ### Funkcjonalność portfela {#wallet-functionality}
 
@@ -135,7 +130,7 @@ Po skonfigurowaniu będziesz w stanie:
 
 ### Interakcja z funkcjami inteligentnego kontraktu {#interact-with-smart-contract-functions}
 
-Biblioteki klienta Javascript pozwalają aplikacji na wywołanie funkcji inteligentnych kontraktów poprzez odczyt interfejsu binarnego aplikacji (ABI) skompilowanego kontraktu.
+Biblioteki klienta JavaScript pozwalają aplikacji na wywołanie funkcji inteligentnych kontraktów poprzez odczyt interfejsu binarnego aplikacji (ABI) skompilowanego kontraktu.
 
 ABI zasadniczo wyjaśnia funkcje kontraktu w formacie JSON i pozwala na używanie go jak zwykłego obiektu JavaScript.
 
@@ -194,11 +189,6 @@ Oznacza to, że możesz:
 - Wezwać do oszacowania gazu, którego wykonanie zostanie przeprowadzone w EVM
 - Wdrożyć kontrakt
 - I więcej...
-
-<!--- #### Try it
-
-This remix tutorial will show you [how to query a contract using web3js](https://remix.ethereum.org/#optimize=false&evmVersion=null&version=soljson-v0.6.6+commit.6c089d02.js)
---->
 
 ### Funkcje użytkowe {#utility-functions}
 
@@ -267,6 +257,6 @@ _Wiesz o zasobach społecznościowych, które Ci pomogły? Wyedytuj tę stronę 
 
 ## Powiązane samouczki {#related-tutorials}
 
-- [Skonfiguruj Web3js, aby używać blockchain Ethereum w Javascript](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– Instrukcje dotyczące konfiguracji web3.js w Twoim projekcie._
+- [Skonfiguruj Web3js, aby używać blockchain Ethereum w JavaScript](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– Instrukcje dotyczące konfiguracji web3.js w Twoim projekcie._
 - [Wywołanie inteligentnego kontraktu z JavaScript](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– za pomocą tokena DAI zobacz jak wywołać funkcję kontraktów przy użyciu JavaScript._
 - [Wysyłanie transakcji przy użyciu web3 i Alchemy](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) _– krok po kroku do wysyłania transakcji z backendu._

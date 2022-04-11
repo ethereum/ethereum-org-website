@@ -11,8 +11,6 @@ A blokkok tranzakciókból álló csoportosítások a láncban lévő előző bl
 
 A blokkok könnyen feldolgozhatók még a legkezdőbb felhasználóknak is. De ennek az oldalnak a jobb megértése érdekében javasoljuk, hogy először olvasd el a [Számlák](/developers/docs/accounts/), [Tranzakciók](/developers/docs/transactions/), és a [Bevezetés az Ethereumba](/developers/docs/intro-to-ethereum/) cikkeinket.
 
-<!--The content below was provided by Brian Gu with exception of "what's in a block"-->
-
 ## Miért kellenek a blokkok? {#why-blocks}
 
 Hogy biztosítsuk azt, hogy az Ethereum hálózat minden résztvevője egy szinkronizált állapotot tart fenn és megegyezik a pontos tranzakciós történetben, a tranzakciókat blokkokba rendezzük. Ez azt jelenti, hogy tucatnyi (vagy több száz) tranzakció felett van elköteleződés, egyetértés és szinkronizáció egyszerre.
@@ -27,7 +25,9 @@ Hogy megőrizzük a tranzakciós történetet, a blokkoknak szigorú sorrendet k
 
 Amint egy blokk össze van állítva (ki van bányászva) egy bányász által a hálózaton, tovább terjed a hálózat többi része számára; az összes csomópont hozzáfűzi ezt a blokkot a blokkláncukra és folytatódik a bányászat. A pontos blokk összeállítási (bányászati) folyamatot és az elköteleződés/konszenzus folyamatot jelenleg az Ethereum “proof-of-work” protokollja specifikálja.
 
-### Egy vizuális bemutató {#a-visual-demo} <iframe width="100%" height="315" src="https://www.youtube.com/embed/_160oMzblY8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+### Egy vizuális bemutató {#a-visual-demo}
+
+<YouTube id="_160oMzblY8" />
 
 ## A proof-of-work protokoll {#proof-of-work-protocol}
 

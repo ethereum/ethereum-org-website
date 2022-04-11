@@ -81,5 +81,17 @@
   "page-eth-where-to-buy": "Où obtenir des ETH",
   "page-eth-where-to-buy-desc": "Vous pouvez obtenir de l'ETH à partir d'un échange ou d'un portefeuille, mais différents pays ont des politiques différentes. Vérifiez quels services vous permettront d'acheter ETH.",
   "page-eth-yours": "C'est vraiment à vous",
-  "page-eth-yours-desc": "ETH vous permet d'être votre propre banque. Vous pouvez contrôler vos propres fonds avec votre portefeuille comme preuve de propriété, aucun tiers de confiance n'est nécessaire."
+  "page-eth-yours-desc": "ETH vous permet d'être votre propre banque. Vous pouvez contrôler vos propres fonds avec votre portefeuille comme preuve de propriété, aucun tiers de confiance n'est nécessaire.",
+  "page-eth-more-on-tokens": "En savoir plus sur les jetons et leurs utilisations",
+  "page-eth-button-buy-eth": "Obtenir de l'ETH",
+  "page-eth-tokens-stablecoins": "Stablecoins",
+  "page-eth-tokens-defi": "Finance décentralisée (DeFi)",
+  "page-eth-tokens-nft": "Jetons non fongibles (NFTs)",
+  "page-eth-tokens-dao": "Organisations autonomes décentralisées (DAOs)",
+  "page-eth-tokens-stablecoins-description": "Plus d'infos sur la moindre volatilité des jetons Ethereum.",
+  "page-eth-tokens-defi-description": "Le système financier pour les jetons Ethereum.",
+  "page-eth-tokens-nft-description": "Jetons qui représentent la propriété des éléments sur Ethereum.",
+  "page-eth-tokens-dao-description": "Les communautés Internet sont souvent dirigées par des détenteurs de jetons.",
+  "page-eth-whats-defi": "En savoir plus sur DeFi",
+  "page-eth-whats-defi-description": "DeFi est le système financier décentralisé basé sur Ethereum. Cet aperçu vous démontre ce que vous pouvez en faire."
 }

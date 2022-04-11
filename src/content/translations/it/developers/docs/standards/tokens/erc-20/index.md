@@ -35,7 +35,12 @@ ERC-20 introduce uno standard per i token fungibili. In altre parole questi toke
 
 ERC-20 (Ethereum Request for Comments 20), proposto da Fabian Vogelsteller nel novembre 2015, è uno standard token che implementa un'API per token all'interno di Smart Contract.
 
-Fornisce funzionalità ad esempio per il trasferimento di token da un account a un altro, la richiesta del saldo corrente di token di un account e anche la quantità totale di token disponibili sulla rete. Oltre a questo ha anche altre funzionalità, come la possibilità di approvare che una quantità di token di un account possa essere spesa da un account di terze parti.
+Esempio di funzionalità fornite da ERC-20:
+
+- trasferire token da un account a un altro
+- richiedere il saldo corrente di token di un account
+- richiedere la quantità totale di token disponibile sulla rete
+- approvare che una quantità di token di un account possa essere spesa da un account di terze parti
 
 Se uno Smart Contract implementa i seguenti metodi ed eventi può essere chiamato contratto token ERC-20 e, una volta distribuito, sarà responsabile di tenere traccia dei token creati su Ethereum.
 
@@ -139,13 +144,6 @@ print("Addr Balance:", addr_balance)
 
 ## Letture consigliate {#further-reading}
 
-- [EIP-20: ERC-20 Token Standard](https://eips.ethereum.org/EIPS/eip-20)
-- [OpenZeppelin - Tokens](https://docs.openzeppelin.com/contracts/3.x/tokens#ERC20)
-- [OpenZeppelin - ERC-20 Implementation](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)
-- [ConsenSys - ERC-20 Implementation](https://github.com/ConsenSys/Tokens/blob/master/contracts/eip20/EIP20.sol)
-
-## Argomenti correlati {#related-topics}
-
-- [ERC-721](/developers/docs/standards/tokens/erc-721/)
-- [ERC-777](/developers/docs/standards/tokens/erc-777/)
-- [ERC-1155](/developers/docs/standards/tokens/erc-1155/)
+- [EIP-20: Standard dei token ERC-20](https://eips.ethereum.org/EIPS/eip-20)
+- [OpenZeppelin - Token](https://docs.openzeppelin.com/contracts/3.x/tokens#ERC20)
+- [OpenZeppelin - Implementazione ERC-20](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)

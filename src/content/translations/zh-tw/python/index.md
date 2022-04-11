@@ -26,7 +26,7 @@ sidebar: true
 
 ## 初學者文章 {#beginner-articles}
 
-- [基於 Vyper 的智能合約簡介](基於 Vyper 的智能合約簡介)
+- [基於 Vyper 的智能合約簡介](https://kauri.io/#collections/Getting%20Started/an-introduction-to-smart-contracts-with-vyper/)
 - [如何使用 Python Flask 開發 Ethereum 合約？](https://medium.com/coinmonks/how-to-develop-ethereum-contract-using-python-flask-9758fe65976e)
 - [Web3.py 簡介 · 面向 Python 開發者的以太坊資源](https://www.dappuniversity.com/articles/web3-py-intro)
 - [如何通過 Python 和 web3.py 調用智能合約函數？](https://stackoverflow.com/questions/57580702/how-to-call-a-smart-contract-function-using-python-and-web3-py)
@@ -41,7 +41,7 @@ sidebar: true
 ## 高級使用模式 {#advanced-use-patterns}
 
 - [使用 Python 編譯、部署和調用 Ethereum 智能合約](https://yohanes.gultom.id/2018/11/28/compiling-deploying-and-calling-ethereum-smartcontract-using-python/)
-- [使用 Slither 分析 Solidity 智能合約](使用 Python 編譯、部署和調用 Ethereum 智能合約)
+- [使用 Slither 分析 Solidity 智能合約](https://kauri.io/#collections/DevOps/analyze-solidity-smart-contracts-with-slither/#analyze-solidity-smart-contracts-with-slither)
 
 ## Python 項目和工具 {#python-projects-and-tools}
 

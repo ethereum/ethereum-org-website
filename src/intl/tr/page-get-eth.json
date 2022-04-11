@@ -10,7 +10,7 @@
   "page-get-eth-dexs-desc": "Merkezi olmayan borsalar, ETH ve diğer tokenler için açık pazar yerleridir. Alıcıları ve satıcıları doğrudan birbirine bağlarlar.",
   "page-get-eth-dexs-desc-2": "İşlemdeki fonları korumak için güvenilir bir üçüncü taraf kullanmak yerine kod kullanırlar. Satıcının ETH'si yalnızca ödeme garanti edildiğinde aktarılacaktır. Bu kod türü akıllı sözleşme olarak bilinir.",
   "page-get-eth-dexs-desc-3": "Merkezi alternatiflere göre daha az coğrafi kısıtlama vardır. Bir kişi istediğinizi satıyorsa ve sağlayabileceğiniz bir ödeme yöntemini kabul ediyorsa, başlamaya hazırsınız. DEX'ler, diğer tokenler, PayPal ve hatta şahsen nakit ödemelerle ETH satın almanıza izin verebilir.",
-  "page-get-eth-do-not-copy": "ÖRNEK: KOPYALAMAYIN",
+  "page-get-eth-do-not-copy": "Örnektir: Kopyalamayın",
   "page-get-eth-exchanges-disclaimer": "Bu bilgileri manuel olarak topladık. Yanlış bir şey tespit ederseniz, bize buradan bildirin",
   "page-get-eth-exchanges-empty-state-text": "ETH satın almak için kullanabileceğiniz cüzdan ve borsaların listesini görmek için ikamet ettiğiniz ülkeyi girin",
   "page-get-eth-exchanges-except": "Dışında",

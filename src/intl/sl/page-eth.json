@@ -27,7 +27,7 @@
   "page-eth-has-value-desc": "ETH je za različne ljudi dragocen na različne načine.",
   "page-eth-has-value-desc-2": "Za uporabnike Ethereuma je ETH dragocen, ker je mogoče z njim plačati provizije na transakcije.",
   "page-eth-has-value-desc-3": "Drugi ga vidijo kot digitalno shrambo vrednosti, saj se ustvarjanje novih žetonov ETH sčasoma upočasnjuje.",
-  "page-eth-has-value-desc-4": "ETH ke pred nedavnim postal dragocen za uporabnike finančnih aplikacij na Ethereumu. Razlog je ta, da ga je mogoče uporabiti kot jamstvo za kriptoposojila ali kot plačilni sistem.",
+  "page-eth-has-value-desc-4": "Nedavno je ETH postal dragocen za uporabnike finančnih aplikacij na Ethereumu. Razlog je ta, da je mogoče ETH uporabiti kot jamstvo za kripto posojila, ali kot plačilni sistem.",
   "page-eth-has-value-desc-5": "Seveda ga mnogi vidijo tudi kot naložbo podobno Bitcoinu ali drugim kriptovalutam.",
   "page-eth-how-to-buy": "Kako kupiti Ether",
   "page-eth-how-to-buy-caption": "Pogosto posodobljeno",
@@ -81,5 +81,17 @@
   "page-eth-where-to-buy": "Kje dobiti ETH",
   "page-eth-where-to-buy-desc": "ETH lahko dobite na borzi ali denarnici, vendar imajo različne države različne pravilnike. Oglejte si storitve, ki omogočajo nakup ETH.",
   "page-eth-yours": "Zares je vaš",
-  "page-eth-yours-desc": "Z ETH-jem lahko postanete svoja banka. Sami nadzirate svoja sredstva, lastništvo pa dokažete z denarnico brez zunanjih posrednikov."
+  "page-eth-yours-desc": "Z ETH-jem lahko postanete svoja banka. Sami nadzirate svoja sredstva, lastništvo pa dokažete z denarnico brez zunanjih posrednikov.",
+  "page-eth-more-on-tokens": "Več o žetonih in njihovi uporabnosti",
+  "page-eth-button-buy-eth": "Pridobite ETH",
+  "page-eth-tokens-stablecoins": "Stablecoins",
+  "page-eth-tokens-defi": "Decentralizirane finance (DeFi)",
+  "page-eth-tokens-nft": "Nezamenljivi žetoni (NFTs)",
+  "page-eth-tokens-dao": "Decentralizirane avtonomne organizacije (DAOs)",
+  "page-eth-tokens-stablecoins-description": "Več o najmanj volatilnih Ethereum žetonih.",
+  "page-eth-tokens-defi-description": "Finančni sistem za Ethereum žetone.",
+  "page-eth-tokens-nft-description": "Žetoni, ki predstavljajo lastništvo predmetov na Ethereumu.",
+  "page-eth-tokens-dao-description": "Spletne skupnosti, ki jih pogosto upravljajo imetniki žetonov.",
+  "page-eth-whats-defi": "Več o DeFi",
+  "page-eth-whats-defi-description": "DeFi je decentraliziran finančni sistem zgrajen na Ethereumu. Ta pregled pojasnjuje kaj vse lahko počnete."
 }

@@ -33,9 +33,9 @@ Başlamadan önce daha fazla bilgiye mi ihtiyacın var? Bu adrese giderek [ether
 - [Nethereum'a Başlangıç](https://docs.nethereum.com/en/latest/getting-started/)
 - [VS Code Solidity'i Yüklemek](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity)
 - [Ethereum Akıllı Sözleşmelerini yaratmak ve çağırmak için Bir .NET geliştiricisinin İş akışı](https://medium.com/coinmonks/a-net-developers-workflow-for-creating-and-calling-ethereum-smart-contracts-44714f191db2)
-- [Akıllı Kontratların Nethereum ile entegrasyonu](https://kauri.io/article/b54334b0695342c1bbe161c4c4467b50/smart-contracts-integration-with-nethereum)
+- [Akıllı Kontratların Nethereum ile entegrasyonu](https://kauri.io/#collections/getting%20started/smart-contracts-integration-with-nethereum/#smart-contracts-integration-with-nethereum)
 - [.NET ve Ethereum Zinciri Akıllı Sözleşmelerine Ara Yüz oluşturmak](https://medium.com/my-blockchain-development-daily-journey/interfacing-net-and-ethereum-blockchain-smart-contracts-with-nethereum-2fa3729ac933), ayrıca [中文版](https://medium.com/my-blockchain-development-daily-journey/%E4%BD%BF%E7%94%A8nethereum%E9%80%A3%E6%8E%A5-net%E5%92%8C%E4%BB%A5%E5%A4%AA%E7%B6%B2%E5%8D%80%E5%A1%8A%E9%8F%88%E6%99%BA%E8%83%BD%E5%90%88%E7%B4%84-4a96d35ad1e1)
-- [Nethereum - Blok Zinciri için bir Açık kaynak .NET entegrasyon kütüphanesi](https://kauri.io/article/d15dfd4903f149cdb84b3ce666103b52/v1/nethereum-an-open-source-.net-integration-library-for-blockchain)
+- [Nethereum - Blok Zinciri için bir Açık kaynak .NET entegrasyon kütüphanesi](https://kauri.io/#collections/a%20hackathon%20survival%20guide/nethereum-an-open-source-.net-integration-library/)
 - [Ethereum Alış-Verişlerini SQL Database'ine yazmak](https://medium.com/coinmonks/writing-ethereum-transactions-to-sql-database-using-nethereum-fd94e0e4fa36)
 - [C# ve VisualStudio kullanarak Nasıl Kolayca Ethereum Akıllı Sözleşmeler Yayınlayabileceğinize Bakın](https://koukia.ca/deploy-ethereum-smart-contracts-using-c-and-visualstudio-5be188ae928c) <br/>
 

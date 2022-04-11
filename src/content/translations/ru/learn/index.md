@@ -42,7 +42,7 @@ sidebar: true
 
 - [How does Ethereum work, anyway?](https://medium.com/@preethikasireddy/how-does-ethereum-work-anyway-22d1df506369) _Sept 27, 2017 - Preethi Kasireddy_
 - [A Gentle Introduction to Ethereum](https://bitsonblocks.net/2016/10/02/gentle-introduction-ethereum/) _Oct 2, 2016 - Antony Lewis_
-- [Introduction to Blockchain through Cryptoeconomics - Part 1](https://blockchainatberkeley.blog/introduction-to-blockchain-through-cryptoeconomics-part-1-bitcoin-369f245067f9) _Jan 26, 2018 - Zubin Koticha_
+- [Introduction to Blockchain through Cryptoeconomics - Part 1](https://medium.com/blockchain-at-berkeley/introduction-to-blockchain-through-cryptoeconomics-part-1-bitcoin-369f245067f9) _Jan 26, 2018 - Zubin Koticha_
 - [Introduction to Blockchain through Cryptoeconomics - Part 2](https://medium.com/mechanism-labs/introduction-to-bitcoin-through-cryptoeconomics-part-2-proof-of-work-and-nakamoto-consensus-1252f6a6c012) _July 19, 2018 - Zubin Koticha_
 
 ## Умные контракты {#smart-contracts}
@@ -57,7 +57,7 @@ sidebar: true
 
 - [What does it mean to mine Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) _Updated often - Ethhub_
 
-В ETH 2.0 Ethereum перейдет на другую систему под названием «Доказательство доли владения». [Вы можете больше узнать о ETH 2.0 ниже](#eth-2-0).
+В ETH 2.0 Ethereum перейдет на другую систему под названием «Доказательство доли владения». [Вы можете больше узнать о ETH 2.0 ниже](#consensus-layer-upgrades).
 
 ## Клиенты и узлы {#clients-and-nodes}
 
@@ -70,7 +70,7 @@ sidebar: true
 
 Предпринимается много усилий для повышения пропускной способности сети Ethereum путем повышения ее скорости и общего объема транзакций. Как правило, их можно разделить на решения уровня 1 и уровня 2.
 
-Уровень 1 означает улучшение основного протокола Ethereum. Основной проект – [ETH 2.0](#eth-2-0).
+Уровень 1 означает улучшение основного протокола Ethereum. Основной проект – [ETH 2.0](#consensus-layer-upgrades).
 
 Уровень 2 относится к технологиям, которые построены поверх базового протокола Ethereum. Они позволяют увеличить пропускную способность без ущерба для безопасности. Существуют также технологии off-chain, такие как side-chains, которые увеличивают масштабируемость за счет некоторого снижения безопасности.
 
@@ -93,7 +93,7 @@ sidebar: true
 - [Understanding Plasma](https://education.district0x.io/general-topics/understanding-ethereum/understanding-plasma/) _District0x_
 - [Learn Plasma – образовательный ресурс о технологии Plasma](https://www.learnplasma.org/en/)
 
-## ETH 2.0 {#eth-2-0}
+## ETH 2.0 {#consensus-layer-upgrades}
 
 ETH 2.0 (также известный как Serenity) относится к следующему крупному обновлению базового протокола Ethereum. Он объединяет некоторые улучшения базового протокола Ethereum (уровень 1).
 
@@ -103,7 +103,7 @@ ETH 2.0 (также известный как Serenity) относится к с
 - [Sharding](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/sharding/) _Updated often - EthHub_
 - [ETH 2.0 - The Road to Scaling Ethereum - Vitalik Buterin](https://youtu.be/kCVpDrlVesA) _(Video) November, 2018 - YouTube_
 
-## ETH 1.x {#eth-1x}
+## ETH 1.x {#execution-layer-upgrades}
 
 ETH 1.x – это название для набора более мелких обновлений к существующему базовому протоколу Ethereum. Цель заключается в непрерывном улучшении и поддержке существующего Ethereum, пока ETH 2.0 разрабатывается и внедряется.
 

@@ -24,30 +24,32 @@ const Container = styled.div`
 
 const Label = styled.h2`
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 0.875rem;
   margin-bottom: 1.5rem;
   font-weight: 400;
   margin-top: 0;
 `
 
 const Date = styled.p`
-  font-size: 40px;
+  font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
   line-height: 100%;
 `
 
 const Content = styled.p`
-  font-size: 20px;
+  font-size: 1.25rem;
   margin-bottom: 0rem;
 `
 
-const UpgradeStatus = ({ date, children, isShipped = false }) => (
+const UpgradeStatus = ({ dateKey, children, isShipped = false }) => (
   <Container isShipped={isShipped}>
     <Label>
-      <Translation id="eth2-what-shipping" />
+      <Translation id="consensus-when-shipping" />
     </Label>
-    <Date>{date}</Date>
+    <Date>
+      <Translation id={dateKey} />
+    </Date>
     <Content>{children}</Content>
   </Container>
 )

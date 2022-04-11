@@ -23,7 +23,9 @@ Deoarece fiecare tranzacție Ethereum necesită resurse de calcul pentru executa
 
 În esență, taxele pe gaz sunt plătite în moneda nativă a Ethereum, eterul (ETH). Prețurile gazului sunt indicate în Gwei, care este o denominație a ETH - fiecare Gwei este egal cu 0,000000001 ETH (10<sup>-9</sup> ETH). De exemplu, în loc să spui că gazul tău costă 0,000000001 eter, poți spune că el costă 1 Gwei.
 
-Acest videoclip oferă o prezentare succintă a gazului și de ce există: <iframe width="100%" height="315" src="https://www.youtube.com/embed/AJvzNICwcwc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+Acest videoclip oferă o prezentare succintă a gazului și de ce există:
+
+<YouTube id="AJvzNICwcwc" />
 
 ## De ce există taxe pe gaz? {#why-do-gas-fees-exist}
 

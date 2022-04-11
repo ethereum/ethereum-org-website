@@ -20,7 +20,7 @@ Since each Ethereum transaction requires computational resources to execute, eac
 ![A diagram showing where gas is needed in EVM operations](./gas.png)
 _Diagram adapted from [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
-Gas fees are paid in Ethereum's native currency, ether (ETH). Gas prices are denoted in gwei, which itself is a denomination of ETH - each gwei is equal to 0.000000001 ETH (10<sup>-9</sup> ETH). For example, instead of saying that your gas costs 0.000000001 ether, you can say your gas costs 1 gwei. The word 'gwei' itself means 'giga-wei', and it is equal to 1,000,000,000 wei. Wei itself (named after [Wei Dai](https://en.wikipedia.org/wiki/Wei_Dai), creator of [b-money](https://www.investopedia.com/terms/b/bmoney.asp)) is the smallest unit of ETH.
+Gas fees are paid in Ethereum's native currency, ether (ETH). Gas prices are denoted in gwei, which itself is a denomination of ETH - each gwei is equal to 0.000000001 ETH (10<sup>-9</sup> ETH). For example, instead of saying that your gas costs 0.000000001 ether, you can say your gas costs 1 gwei. The word 'gwei' itself means 'giga-wei', and it is equal to 1,000,000,000 wei. Wei itself (named after [Wei Dai](https://wikipedia.org/wiki/Wei_Dai), creator of [b-money](https://www.investopedia.com/terms/b/bmoney.asp)) is the smallest unit of ETH.
 
 ## Prior to the London upgrade {#pre-london}
 
@@ -38,7 +38,7 @@ Miner would receive 0.0042 ETH.
 
 This video offers a concise overview of gas and why it exists:
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/AJvzNICwcwc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<YouTube id="AJvzNICwcwc" />
 
 ## After the London upgrade {#post-london}
 
@@ -114,7 +114,7 @@ The implementation of [EIP-1559](https://github.com/ethereum/EIPs/blob/master/EI
 
 This video explains EIP-1559 and the benefits it brings:
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/MGemhK9t44Q" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<YouTube id="MGemhK9t44Q" />
 
 If you are interested, you can read the exact
 [EIP-1559 specifications](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md).
@@ -144,9 +144,9 @@ Gas price alone does not actually determine how much we have to pay for a partic
 
 ## Initiatives to reduce gas costs {#initiatives-to-reduce-gas-costs}
 
-The new network upgrades of Ethereum 2.0 (also known as Eth2 or Serenity) should ultimately address some of the gas fee issues, which will, in turn, enable the platform to process thousands of transactions per second and scale globally.
+The Ethereum [scalability upgrades](/upgrades/) should ultimately address some of the gas fee issues, which will, in turn, enable the platform to process thousands of transactions per second and scale globally.
 
-Layer 2 scaling is a primary initiative to greatly improve gas costs, user experience and scalability. [More on layer 2 scaling](/developers/docs/scaling/layer-2-rollups/).
+Layer 2 scaling is a primary initiative to greatly improve gas costs, user experience and scalability. [More on layer 2 scaling](/developers/docs/scaling/#layer-2-scaling).
 
 The new proof-of-stake model, introduced on the Beacon Chain, should reduce high power consumption and reliance on specialized hardware. This chain will allow the decentralized Ethereum network to agree and keep the network secure, while limiting energy consumption by instead requiring a financial commitment.
 
@@ -162,6 +162,7 @@ If you want to monitor gas prices, so you can send your ETH for less, you can us
 - [Blocknative ETH Gas Estimator](https://chrome.google.com/webstore/detail/blocknative-eth-gas-estim/ablbagjepecncofimgjmdpnhnfjiecfm) _Gas estimating Chrome extension supporting both Type 0 legacy transactions and Type 2 EIP-1559 transactions._
 
 - [ETH Gas Station](https://ethgasstation.info/) _Consumer oriented metrics for the Ethereum gas market_
+- [Cryptoneur Gas Fees Calculator](https://www.cryptoneur.xyz/gas-fees-calculator) _Calculate gas fees in your local currency for different transaction types on Mainnet, Arbitrum, and Polygon._
 
 ## Related tools {#related-tools}
 

@@ -10,7 +10,7 @@ incomplete: true
 
 Usa Ethereum per creare applicazioni decentralizzate (dette "dapp") che sfruttano i vantaggi delle criptovalute e della tecnologia blockchain. Queste dapp sono attendibili perché, una volta "caricate" su Ethereum, vengono eseguite sempre come sono state programmate. Possono controllare risorse digitali per creare nuove tipologie di applicazioni finanziarie. Possono essere decentralizzate, il che significa che nessuna singola entità o persona le controlla e sono quasi impossibile da censurare.
 
-Crea applicazioni decentralizzate su Ethereum e interagisci con gli Smart Contract utilizzando strumenti e linguaggi Microsoft. Sono supportati: C#, # Visual Basic .NET, F#, con strumenti come VSCode e Visual Studio, con .NET Framework/.NET Core/.NET Standard. Distribuisci una blockchain Ethereum su Azure usando Microsoft Azure Blockchain in pochi minuti. Porta .NET su Ethereum!
+Crea applicazioni decentralizzate su Ethereum e interagisci con Smart Contract utilizzando strumenti e linguaggi Microsoft. Supporta C#, Visual Basic .NET, F#, con strumenti come VSCode e Visual Studio, in .NET Framework/.NET Core/.NET Standard. Distribuisci una blockchain Ethereum su Azure usando Microsoft Azure Blockchain in pochi minuti. Porta .NET su Ethereum!
 
 ## Primi passi con gli Smart Contract e il linguaggio Solidity {#getting-started-with-smart-contracts-and-the-solidity-language}
 
@@ -23,16 +23,16 @@ Hai prima bisogno di nozioni di base? Dai un'occhiata a [ethereum.org/learn](/le
 - [Write your First Smart Contract](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
 - [Learn How to Compile and Deploy Solidity](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 
-## Riferimenti e link per chi inizia ora {#beginner-references-and-links}
+## Riferimenti e link per principianti {#beginner-references-and-links}
 
 **Introduzione alla libreria Nethereum e VS Code Solidity**
 
 - [Nethereum, Getting Started](https://docs.nethereum.com/en/latest/getting-started/)
 - [Installing VS Code Solidity](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity)
 - [A .NET Developer’s Workflow for Creating and Calling Ethereum Smart Contracts](https://medium.com/coinmonks/a-net-developers-workflow-for-creating-and-calling-ethereum-smart-contracts-44714f191db2)
-- [Smart contracts integration with Nethereum](https://kauri.io/article/b54334b0695342c1bbe161c4c4467b50/smart-contracts-integration-with-nethereum)
+- [Smart contracts integration with Nethereum](https://kauri.io/#collections/Getting%20Started/smart-contracts-integration-with-nethereum/#smart-contracts-integration-with-nethereumm)
 - [Interfacing .NET and Ethereum Blockchain Smart Contracts with Nethereum](https://medium.com/my-blockchain-development-daily-journey/interfacing-net-and-ethereum-blockchain-smart-contracts-with-nethereum-2fa3729ac933), also in [中文版](https://medium.com/my-blockchain-development-daily-journey/%E4%BD%BF%E7%94%A8nethereum%E9%80%A3%E6%8E%A5-net%E5%92%8C%E4%BB%A5%E5%A4%AA%E7%B6%B2%E5%8D%80%E5%A1%8A%E9%8F%88%E6%99%BA%E8%83%BD%E5%90%88%E7%B4%84-4a96d35ad1e1)
-- [Nethereum - An open source .NET integration library for blockchain](https://kauri.io/article/d15dfd4903f149cdb84b3ce666103b52/v1/nethereum-an-open-source-.net-integration-library-for-blockchain)
+- [Nethereum - An open source .NET integration library for blockchain](https://kauri.io/#collections/a%20hackathon%20survival%20guide/nethereum-an-open-source-.net-integration-library/)
 - [Writing Ethereum Transactions to SQL Database Using Nethereum](https://medium.com/coinmonks/writing-ethereum-transactions-to-sql-database-using-nethereum-fd94e0e4fa36)
 - [See how to easily deploy Ethereum smart contracts using C# and VisualStudio](https://koukia.ca/deploy-ethereum-smart-contracts-using-c-and-visualstudio-5be188ae928c)
 
@@ -63,7 +63,7 @@ Hai prima bisogno di nozioni di base? Dai un'occhiata a [ethereum.org/learn](/le
 - [Nethereum.DappHybrid](https://github.com/Nethereum/Nethereum.DappHybrid)
 - [Ujo Nethereum backend reference architecture](https://docs.nethereum.com/en/latest/nethereum-ujo-backend-sample/)
 
-## Progetti .NET, strumenti e altro {#dot-net-projects-tools-and-other-fun-stuff}
+## Progetti .NET, strumenti e altre risorse interessanti {#dot-net-projects-tools-and-other-fun-stuff}
 
 - [Playground Nethereum](http://playground.nethereum.com/) - _Compila, crea ed esegui frammenti di codice Nethereum nel browser_
 - [Nethereum Codegen Blazor](https://github.com/Nethereum/Nethereum.CodeGen.Blazor) - _Codegen Nethereum con interfaccia utente in Blazor_
@@ -77,11 +77,11 @@ Cerchi altre risorse? Dai un'occhiata a [ethereum.org/developers](/developers/).
 
 ## Collaboratori della community .NET {#dot-net-community-contributors}
 
-Per Nethereum, scambiamo opinioni per lo più su [Gitter](https://gitter.im/Nethereum/Nethereum), dove tutti possono chiedere o rispondere a domande, cercare aiuto o semplicemente consultare informazioni. Inserisci Fai pure una PR o apri una segnalazione sul [repository GitHub di Nethereum](https://github.com/Nethereum), oppure semplicemente sfoglia i molti progetti disponibili. Ci trovi anche su [Discord](https://discord.gg/jQPrR58FxX)!
+Per Nethereum, scambiamo opinioni per lo più su [Gitter](https://gitter.im/Nethereum/Nethereum), dove tutti possono chiedere o rispondere a domande, cercare aiuto o semplicemente consultare informazioni. Inserisci Fai pure una PR o apri una segnalazione sul [repository Github di Nethereum](https://github.com/Nethereum), oppure semplicemente sfoglia i molti progetti disponibili. Ci trovi anche su [Discord](https://discord.gg/jQPrR58FxX)!
 
 Per Nethermind, ci mettiamo in contatto tramite [Gitter](https://gitter.im/nethermindeth/nethermind). Per PR o segnalazioni, dai un'occhiata al [repository GitHub di Nethermind](https://github.com/NethermindEth/nethermind).
 
-## Altri riferimenti {#other-aggregated-lists}
+## Altri elenchi aggregati {#other-aggregated-lists}
 
 [Official Nethereum Site](https://nethereum.com/)  
 [Official Nethermind Site](https://nethermind.io/)

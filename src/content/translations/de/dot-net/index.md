@@ -33,9 +33,9 @@ Brauchst du zuerst einen grundsätzlichen Einstieg? Schaue dir [ethereum.org/lea
 - [Nethereum, Erste Schritte](https://docs.nethereum.com/en/latest/getting-started/)
 - [VS Code Solidity installieren](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity)
 - [Ein .NET Entwickler-Workflow zum Erstellen und Aufrufen von Ethereum Smart Contracts](https://medium.com/coinmonks/a-net-developers-workflow-for-creating-and-calling-ethereum-smart-contracts-44714f191db2)
-- [Smart Contract-Integration mit Nethereum](https://kauri.io/article/b54334b0695342c1bbe161c4c4467b50/smart-contracts-integration-with-nethereum)
+- [Smart Contract-Integration mit Nethereum](https://kauri.io/#collections/getting%20started/smart-contracts-integration-with-nethereum/#smart-contracts-integration-with-nethereum)
 - [Schnittstellen von .NET und Ethereum-Blockchain Smart Contracts mit Nethereum](https://medium.com/my-blockchain-development-daily-journey/interfacing-net-and-ethereum-blockchain-smart-contracts-with-nethereum-2fa3729ac933)
-- [Nethereum - Eine Open Source .NET-Integrationsbibliothek für Blockchain](https://kauri.io/article/d15dfd4903f149cdb84b3ce666103b52/v1/nethereum-an-open-source-.net-integration-library-for-blockchain)
+- [Nethereum - Eine Open Source .NET-Integrationsbibliothek für Blockchain](https://kauri.io/#collections/a%20hackathon%20survival%20guide/nethereum-an-open-source-.net-integration-library/)
 - [Schreiben von Ethereum-Transaktionen in eine SQL-Datenbank mit Nethereum](https://medium.com/coinmonks/writing-ethereum-transactions-to-sql-database-using-nethereum-fd94e0e4fa36)
 - [Lerne, wie du Smart Contracts mit C# und VisualStudio einfach implementieren kannst](https://koukia.ca/deploy-ethereum-smart-contracts-using-c-and-visualstudio-5be188ae928c) <br/>
 

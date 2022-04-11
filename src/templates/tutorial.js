@@ -1,6 +1,5 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { useIntl } from "gatsby-plugin-intl"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import styled from "styled-components"
@@ -27,8 +26,10 @@ import {
   Header3,
   Header4,
   ListItem,
+  KBD,
 } from "../components/SharedStyledComponents"
 import Emoji from "../components/Emoji"
+import YouTube from "../components/YouTube"
 
 const Page = styled.div`
   display: flex;
@@ -89,20 +90,11 @@ const H1 = styled(Header1)`
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     font-size: 1.75rem;
   }
-
-  &:before {
-    margin-top: -160px;
-  }
 `
 
 const H2 = styled(Header2)`
   font-family: ${(props) => props.theme.fonts.monospace};
   text-transform: uppercase;
-
-  &:before {
-    height: 160px;
-    margin-top: -160px;
-  }
 `
 
 const H3 = styled(Header3)`
@@ -110,19 +102,11 @@ const H3 = styled(Header3)`
     font-size: 1rem;
     font-weight: 600;
   }
-  &:before {
-    height: 160px;
-    margin-top: -160px;
-  }
 `
 const H4 = styled(Header4)`
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     font-size: 1rem;
     font-weight: 600;
-  }
-  &:before {
-    height: 160px;
-    margin-top: -160px;
   }
 `
 
@@ -135,6 +119,7 @@ const components = {
   h3: H3,
   h4: H4,
   p: Paragraph,
+  kbd: KBD,
   li: ListItem,
   pre: Codeblock,
   table: MarkdownTable,
@@ -146,6 +131,7 @@ const components = {
   Pill,
   CallToContribute,
   Emoji,
+  YouTube,
 }
 
 const Contributors = styled(FileContributors)`

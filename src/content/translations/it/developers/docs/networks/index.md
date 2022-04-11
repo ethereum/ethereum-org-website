@@ -29,23 +29,23 @@ Oltre alla rete principale, sono disponibili reti di test pubbliche. Si tratta d
 
 In genere è importante testare il codice di un contratto su una rete di prova prima di distribuirlo sulla rete principale. Se crei dapp che si integrano con gli Smart Contract esistenti, la maggior parte dei progetti ha copie distribuite sulle reti di prova con le quali è possibile interagire.
 
-La maggior parte delle reti di prova utilizza un meccanismo di consenso proof-of-authority. Significa che viene scelto un ristretto numero di nodi per convalidare le transazioni e creare nuovi blocchi, e questi fanno staking con la propria identità in questo processo. È difficile incentivare il mining su una rete di prova con meccanismo proof-of-work, e questo potrebbe renderla vulnerabile.
+La maggior parte delle reti di prova utilizza un meccanismo di consenso Proof of Authority. Significa che viene scelto un ristretto numero di nodi per convalidare le transazioni e creare nuovi blocchi, e questi fanno staking con la propria identità in questo processo. È difficile incentivare il mining su una rete di prova con meccanismo Proof of work, e questo potrebbe renderla vulnerabile.
 
 #### Görli {#goerli}
 
-Rete di prova di tipo proof-of-authority che funziona su client.
+Rete di prova di tipo Proof of Authority che funziona su client.
 
 #### Kovan {#kovan}
 
-Rete di prova proof-of-authority per client che eseguono OpenEthereum.
+Rete di prova Proof of Authority per client che eseguono OpenEthereum.
 
 #### Rinkeby {#rinkeby}
 
-Rete di prova proof-of-authority per chi esegue client Geth.
+Rete di prova Proof of Authority per chi esegue client Geth.
 
 #### Ropsten {#ropsten}
 
-Rete di prova proof-of-work. Significa che è la rappresentazione più simile a Ethereum.
+Rete di prova Proof of Work. Significa che è la rappresentazione più simile a Ethereum.
 
 ### Faucet della rete di prova {#testnet-faucets}
 
@@ -58,7 +58,7 @@ Gli ETH sulle reti di prova non hanno valore reale, quindi non c'è un mercato p
 
 ## Reti private {#private-networks}
 
-Una rete Ethereum è una rete privata se i relativi nodi non sono collegati a una rete pubblica (ad esempio la rete principale o una rete di prova). In questo contesto, privato significa solo riservato o isolato, e non protetto o sicuro.
+Una rete di Ethereum è una rete privata se i relativi noti non sono connessi a una rete pubblica (es. Mainnet o una testnet). In questo contesto, privato significa solo riservato o isolato, e non protetto o sicuro.
 
 ### Reti di sviluppo {#development-networks}
 
@@ -72,20 +72,11 @@ Il processo di consenso è controllato da un set di nodi predefinito considerati
 
 Se una rete Ethereum pubblica è come la rete Internet pubblica, un consorzio può essere paragonato a una Intranet privata.
 
-<!-- TODO
+## Strumenti correlati {#related-tools}
 
-## Interacting with testnets
+- [Chainlist](https://chainlist.org/) _Elenco di reti EVM per connettere portafogli e fornitori all'ID della Catena e ID di Rete appropriati._
+- [Catene basate su EVM](https://github.com/ethereum-lists/chains) _Repository di GitHub di metadati della catena che alimentano Chainlist._
 
-### Your own local network {#your-own-local-network}
+## Lettura consigliate {#further-reading}
 
-`geth -—networkid="12345" console`
-
-### Testnets {#testnets-1}
-
-Wallets like MetaMask or MyEtherWallet will allow you to switch networks so you can test your apps using your test ETH.
-
--->
-
-## Letture consigliate {#further-reading}
-
-_Conosci una risorsa della community che ti è stata utile? Modifica questa pagina e aggiungila!_
+_Conosci una risorsa pubblica che ti è stata utile? Modifica questa pagina e aggiungila!_

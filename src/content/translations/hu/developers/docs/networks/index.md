@@ -54,7 +54,6 @@ Az ETH-nek a tesztneteken nincs valós értéke; így nincsen piaca sem a tesztn
 - [Görli csap](https://faucet.goerli.mudit.blog/)
 - [Kovan csap](https://faucet.kovan.network/)
 - [Rinkeby csap](https://faucet.rinkeby.io/)
-- [Ropsten csap](https://faucet.ropsten.be/)
 
 ## Privát hálózatok {#private-networks}
 
@@ -71,20 +70,6 @@ Vannak olyan projektek és eszközök, melyek ebben segítenek. Tudj meg többet
 Egy konszenzus folyamatot néhány előre meghatározott megbízható csomópont végzi. Például egy ismert tudományos intézmények magánhálózata, amelyek mindegyike egyetlen csomópontot irányít, és a blokkokat az aláírók küszöbértéke érvényesíti a hálózaton belül.
 
 Ha egy nyilvános Ethereum hálózat olyan, mint a nyilvános internet, akkor úgy gondolhatsz a konzorcium hálózatra, mint egy privát intranetre.
-
-<!-- TODO
-
-## Interacting with testnets
-
-### Your own local network {#your-own-local-network}
-
-`geth -—networkid="12345" console`
-
-### Testnets {#testnets-1}
-
-Wallets like MetaMask or MyEtherWallet will allow you to switch networks so you can test your apps using your test ETH.
-
--->
 
 ## További olvasnivaló {#further-reading}
 

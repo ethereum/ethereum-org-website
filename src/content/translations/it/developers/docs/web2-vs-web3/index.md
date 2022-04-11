@@ -32,11 +32,10 @@ Al momento, il Web3 ha alcune limitazioni:
 
 - Scalabilità - Le transazioni sono più lente sul web3 perché sono decentralizzate. Cambiamenti dello stato, come i pagamenti, devono essere elaborati da un miner e propagati a tutta la rete.
 - UX - L'interazione con applicazioni web3 può richiedere passaggi, software e formazione aggiuntivi. Questo può essere un ostacolo all'adozione.
+- Accessibilità: la mancanza di integrazione nei browser web moderni rende web3 meno accessibile a gran parte degli utenti.
 - Costo - Per via del costo elevato, le dapp di maggior successo mettono porzioni piccole del loro codice sulla blockchain.
 
 ## Centralizzazione e decentralizzazione {#centralization-vs-decentralization}
-
-<!--Content below provided by Brian Gu-->
 
 Nella tabella seguente elenchiamo alcuni dei vantaggi e degli svantaggi delle reti centralizzate e decentralizzate.
 
@@ -54,5 +53,7 @@ Tieni presente che questi sono schemi generali, che potrebbero non essere validi
 
 ## Letture consigliate {#further-reading}
 
+- [L'Architettura di un'applicazione Web 3.0](https://www.preethikasireddy.com/post/the-architecture-of-a-web-3-0-application) - _Preethi Kasireddy_
 - [The Meaning of Decentralization](https://medium.com/@VitalikButerin/the-meaning-of-decentralization-a0c92b76a274) _6 febbraio 2017 - Vitalik Buterin_
 - [Why Decentralization Matters](https://medium.com/s/story/why-decentralization-matters-5e3f79f7638e) _18 febbraio 2018 - Chris Dixon_
+- [What Is Web 3.0 & Why It Matters](https://medium.com/fabric-ventures/what-is-web-3-0-why-it-matters-934eb07f3d2b) _Dec 31, 2019 - Max Mersch e Richard Muirhead_

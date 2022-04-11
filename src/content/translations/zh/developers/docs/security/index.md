@@ -77,7 +77,7 @@ contract Victim {
 2. 发送用户的余额
 3. 将余额重置为 0，因此它们不能再次提取余额。
 
-如果收到来自一个普通帐户的调用（例如你自己的 Metamask 帐户），这个函数 msg.sender.call.value() 能够发送你的帐户里的 ETH。 但是，智能合约也能调用其他合约。 如果一个自制的恶意合约调用 `withdraw()`，msg.sender.call.value() 会不仅发送 `amount` 个 ETH，还会暗中调用合约来开始执行代码。 想象这个恶意合约：
+如果收到来自一个普通帐户的调用（例如你自己的 MetaMask 帐户），这个函数 msg.sender.call.value() 能够发送你的帐户里的 ETH。 但是，智能合约也能调用其他合约。 如果一个自制的恶意合约调用 `withdraw()`，msg.sender.call.value() 会不仅发送 `amount` 个 ETH，还会暗中调用合约来开始执行代码。 想象这个恶意合约：
 
 ```solidity
 contract Attacker {
@@ -115,8 +115,6 @@ contract Attacker {
 ```
 
 攻击者帐户使用 1 个 ETH 调用 Attacker.beginAttack 函数将会重复攻击受害者帐户，并将赚取远超其提供 ETH 的数量（这些额外的 ETH 会从其他用户帐户的余额中赚取，这样会造成受害者账户余额减少）
-
-<!-- TODO create a subpage related to re-entrancy & move this content there -->
 
 ### 如何解决重入攻击（一种错误的方式） {#how-to-deal-with-re-entrancy-the-wrong-way}
 
@@ -218,7 +216,7 @@ contract NoLongerAVictim {
 
 延伸阅读:
 
-- [共识智能合约已知攻击](https://consensys.github.io/smart-contract-best-practices/known_attacks/) - 对最重要弱点的可读解释，有很多样本代码。
+- [共识智能合约已知攻击](https://consensys.github.io/smart-contract-best-practices/attacks/) - 对最重要弱点的可读解释，有很多样本代码。
 - [SWC 注册](https://swcregistry.io/docs/SWC-128) - 适用于以太坊和智能合约的 CWE 的管理列表
 
 ## 安全工具 {#security-tools}

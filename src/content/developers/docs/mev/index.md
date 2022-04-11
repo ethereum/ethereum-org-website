@@ -1,13 +1,15 @@
 ---
-title: Miner extractable value (MEV)
-description: An introduction to miner extractable value (MEV)
+title: Maximal extractable value (MEV)
+description: An introduction to maximal extractable value (MEV)
 lang: en
 sidebar: true
 ---
 
-Maximal (formerly "miner") extractable value (MEV) refers to the maximum value that can be extracted from block production in excess of the standard block reward and gas fees by including, excluding, and changing the order of transactions in a block.
+Maximal extractable value (MEV) refers to the maximum value that can be extracted from block production in excess of the standard block reward and gas fees by including, excluding, and changing the order of transactions in a block.
 
-In a [proof-of-work](/developers/docs/consensus-mechanisms/pow/) context, maximal extractable value is also called "miner extractable value." This is because in proof-of-work, miners control transaction inclusion, exclusion, and ordering.
+### Miner extractable value
+
+This concept was first applied under the context of [proof-of-work](/developers/docs/consensus-mechanisms/pow/), and was initially referred to as "miner extractable value." This is because in proof-of-work, miners control transaction inclusion, exclusion, and ordering. However, after the transition to proof-of-stake via [The Merge](/updates/merge) validators will be responsible for these roles, and mining will no longer be applicable. The value extraction methods here will still persist after this transition, and thus a name change was needed. To keep the same acronym for continuity while maintaining the same fundamental meaning, "maximal extractable value" is now used as a more inclusive replacement.
 
 ## Prerequisites {#prerequisites}
 
@@ -15,7 +17,7 @@ Make sure you're familiar with [transactions](/developers/docs/transactions/), [
 
 ## MEV extraction {#mev-extraction}
 
-In theory MEV accrues entirely to miners because miners are the only party that can guarantee the execution of a profitable MEV opportunity (at least in Eth1 — this will change in Eth2). In practice, however, a large portion of MEV is extracted by independent network participants referred to as "searchers." Searchers run complex algorithms on blockchain data to detect profitable MEV opportunities and have bots to automatically submit those profitable transactions to the network.
+In theory MEV accrues entirely to miners because miners are the only party that can guarantee the execution of a profitable MEV opportunity (at least on the current proof-of-work chain — this will change after [The Merge](/upgrades/merge/)). In practice, however, a large portion of MEV is extracted by independent network participants referred to as "searchers." Searchers run complex algorithms on blockchain data to detect profitable MEV opportunities and have bots to automatically submit those profitable transactions to the network.
 
 Miners do get a portion of the full MEV amount anyway because searchers are willing to pay high gas fees (which go to the miner) in exchange for higher likelihood of inclusion of their profitable transactions in a block. Assuming searchers are economically rational, the gas fee that a searcher is willing to pay will be an amount up to 100% of the searcher's MEV (because if the gas fee was higher, the searcher would lose money).
 
@@ -33,7 +35,7 @@ Rather than programming complex algorithms to detect profitable MEV opportunitie
 
 ### Flashbots {#mev-extraction-flashbots}
 
-Flashbots is a independent project which extends the go-ethereum client with a service that allows searchers to submit MEV transactions to miners without revealing them to the public mempool. This prevents transactions from being frontrun by generalized frontrunners.
+Flashbots is an independent project which extends the go-ethereum client with a service that allows searchers to submit MEV transactions to miners without revealing them to the public mempool. This prevents transactions from being frontrun by generalized frontrunners.
 
 As of this writing, a significant portion of MEV transactions is routed through Flashbots, meaning generalized frontrunners aren't as effective as they used to be.
 
@@ -63,9 +65,9 @@ Searchers compete to parse blockchain data as fast as possible to determine whic
 
 Sandwich trading is another common method of MEV extraction.
 
-To sandwich, a searcher will watch the mempool for large DEX trades. For instance, suppose someone wants to buy 10,000 UNI with DAI on Uniswap. A trade of this magnitude will have a meaningful impact the UNI/DAI pair, potentially significantly raising the price of UNI relative to DAI.
+To sandwich, a searcher will watch the mempool for large DEX trades. For instance, suppose someone wants to buy 10,000 UNI with DAI on Uniswap. A trade of this magnitude will have a meaningful effect on the UNI/DAI pair, potentially significantly raising the price of UNI relative to DAI.
 
-A searcher can calculate the approximate price impact of this large trade on the UNI/DAI pair and execute an optimal buy order immediately _before_ the large trade, buying UNI cheaply, then execute a sell order immediately _after_ the large trade, selling it for the higher price caused by the large order.
+A searcher can calculate the approximate price effect of this large trade on the UNI/DAI pair and execute an optimal buy order immediately _before_ the large trade, buying UNI cheaply, then execute a sell order immediately _after_ the large trade, selling it for the higher price caused by the large order.
 
 Sandwiching, however, is riskier as it isn't atomic (unlike DEX arbitrage, as described above) and is prone to a [salmonella attack](https://github.com/Defi-Cartel/salmonella).
 

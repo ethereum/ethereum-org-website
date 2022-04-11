@@ -5,7 +5,7 @@ lang: ro
 sidebar: true
 ---
 
-Când vine vorba de configurarea unui [mediu de dezvoltare integrat (IDE)](https://en.wikipedia.org/wiki/Integrated_development_environment), construirea cu Ethereum este similară cu orice alt proiect software. Există multe opțiuni din care poți alege, așa că, în final, alege-o pe cea care se potrivește cel mai bine preferințelor tale.
+Când vine vorba de configurarea unui [mediu de dezvoltare integrat (IDE)](https://wikipedia.org/wiki/Integrated_development_environment), construirea cu Ethereum este similară cu orice alt proiect software. Există multe opțiuni din care poți alege, așa că, în final, alege-o pe cea care se potrivește cel mai bine preferințelor tale.
 
 ## IDE bazate pe web {#web-based-ides}
 

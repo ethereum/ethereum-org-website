@@ -1,10 +1,10 @@
 import React from "react"
 import styled from "styled-components"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import Emoji from "./Emoji"
+import { GatsbyImage, getImage, getSrc } from "gatsby-plugin-image"
 
 import Translation from "../components/Translation"
 import ButtonLink from "./ButtonLink"
+import Emoji from "./Emoji"
 import Link from "./Link"
 
 const Container = styled.div`
@@ -67,10 +67,12 @@ const AssetDownload = ({
   src,
   shouldHide = false,
   title,
+  svg,
 }) => {
   const baseUrl = `https://ethereum.org`
-  const downloadUri = src ? src : getImage(image)?.images.fallback.src
+  const downloadUri = src ? src : getSrc(image)
   const downloadUrl = `${baseUrl}${downloadUri}`
+  const Svg = svg
 
   return (
     <Container shouldHide={shouldHide}>
@@ -79,7 +81,11 @@ const AssetDownload = ({
         {children && <ImageContainer>{children}</ImageContainer>}
         {!children && (
           <ImageContainer>
-            <Image image={getImage(image)} alt={alt} />
+            {!!Svg ? (
+              <Svg alt={alt} />
+            ) : (
+              <Image image={getImage(image)} alt={alt} />
+            )}
           </ImageContainer>
         )}
         {artistName && (
@@ -94,9 +100,11 @@ const AssetDownload = ({
         )}
       </div>
       <ButtonContainer>
-        <ButtonLink to={downloadUrl}>
-          <Translation id="page-assets-download-download" />
-        </ButtonLink>
+        {!Svg && (
+          <ButtonLink to={downloadUrl}>
+            <Translation id="page-assets-download-download" />
+          </ButtonLink>
+        )}
       </ButtonContainer>
     </Container>
   )
