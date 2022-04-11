@@ -182,7 +182,7 @@ Minimal was a modular implementation of the Ethereum blockchain written in Go.
 
 **Archives**
 
-[Archived Github repo](https://github.com/umbracle/minimal)
+[Archived GitHub repo](https://github.com/umbracle/minimal)
 
 **History**
 
