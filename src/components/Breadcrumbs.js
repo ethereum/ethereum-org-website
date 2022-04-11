@@ -23,6 +23,9 @@ const List = styled.ol`
 const ListItem = styled.li`
   margin: 0;
   margin-right: 0.5rem;
+  font-size: 0.875rem;
+  line-height: 140%;
+  letter-spacing: 0.04em;
 `
 
 const Slash = styled.span`
@@ -31,11 +34,6 @@ const Slash = styled.span`
 `
 
 const CrumbLink = styled(Link)`
-  margin: 0;
-  font-size: 0.875rem;
-  line-height: 140%;
-  letter-spacing: 0.04em;
-  font-weight: normal;
   text-decoration: none;
   color: ${(props) => props.theme.colors.textTableOfContents};
 
