@@ -171,7 +171,7 @@
       "tokenLists": "",
       "noteKey": "",
       "purpose": ["payments"],
-      "description": "Polygon Hermez is an open-source ZK-Rollup optimised for secure, low-cost and usable token transfers on the wings of Ethereum",
+      "description": "Polygon Hermez is an open-source ZK-Rollup optimized for secure, low-cost and usable token transfers on the wings of Ethereum",
       "imageKey": "hermez",
       "background": "#7b40e5"
     }
