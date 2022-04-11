@@ -79,6 +79,7 @@ const Content = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-height: 410px;
   background: ${({ theme }) => theme.colors.offBackground};
   padding: 1.5rem;
   h3 {
@@ -91,9 +92,6 @@ const IndicatorRow = styled.div`
   display: flex;
   gap: 2rem;
   justify-content: center;
-  @media (max-width: ${({ theme }) => theme.breakpoints.s}) {
-    gap: 1rem;
-  }
 `
 
 const Indicator = styled.div`
