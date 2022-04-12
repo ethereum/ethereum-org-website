@@ -646,14 +646,20 @@ const StakingPage = ({ data }) => {
                 <i>- Vitalik Buterin </i>
               </li>
               <li>
+                <Link to="https://notes.ethereum.org/9l707paQQEeI-GPzVK02lA?view#">
+                  Serenity Design Rationale
+                </Link>{" "}
+                <i>- Vitalik Buterin </i>
+              </li>
+              <li>
                 <Link to="https://vitalik.ca/general/2017/12/31/pos_faq.html">
                   Proof of Stake FAQ (Dec 2017)
                 </Link>{" "}
                 <i>- Vitalik Buterin</i>
               </li>
               <li>
-                <Link to="https://hackmd.io/@benjaminion/eth2_news/https%3A%2F%2Fhackmd.io%2F%40benjaminion%2Fwnie2_220225">
-                  What’s New in Eth2 (Feb 2022)
+                <Link to="https://hackmd.io/@benjaminion/eth2_news">
+                  Eth2 News
                 </Link>{" "}
                 <i>- Ben Edgington</i>
               </li>
@@ -664,12 +670,19 @@ const StakingPage = ({ data }) => {
                 <i>- Danny Ryan</i>
               </li>
               <li>
-                <Link to="https://www.attestant.io/posts/page/4/">
-                  Attestant posts on proof-of-stake
+                <Link to="https://www.attestant.io/posts/">
+                  Attestant Posts
                 </Link>
               </li>
               <li>
-                <Link to="/upgrades/merge/">More on The Merge</Link>
+                <Link to="https://kb.beaconcha.in/">
+                  Beaconcha.in Knowledge Base
+                </Link>
+              </li>
+              <li>
+                <Link to="https://beaconcha.in/education">
+                  Beaconcha.in Community-Contributed Educational Materials
+                </Link>
               </li>
             </ul>
           </Content>

@@ -121,8 +121,6 @@ Have a suggestion for a staking tool we missed? Check out our [product listing p
 
 <StakingGuides />
 
-<!-- TODO: beaconcha.in/education page -->
-
 ## FAQ {#faq}
 
 These are a few of the most common questions about staking that are worth knowing about.
@@ -178,7 +176,7 @@ The more validator clients running on a single centralized cloud storage solutio
 
 Offline penalties are proportional to how many others are offline at the same time. Using a VPS greatly increases the risk that offline penalties will be more severe, and increases your risk of quadratic leaking or slashing in the event the outage is large enough. To minimize your own risk, and the risk to the network, users are strongly encouraged to obtain and operate their own hardware.
 
-<a href="https://kb.beaconcha.in/rewards-and-penalties">More on rewards and penalties</a>
+<a href="https://consensys.net/blog/codefi/rewards-and-penalties-on-ethereum-20-phase-0/">More on rewards and penalties</a>
 </ExpandableCard>
 
 <ExpandableCard title="Do I need to do anything before The Merge?">
@@ -189,9 +187,10 @@ The Merge will also bring unburnt transaction fees to validators. These fees to 
 
 ## Further reading {#further-reading}
 
-- [Step by Step: How to join the Ethereum 2.0 Testnet](https://kb.beaconcha.in/guides/tutorial-eth2-multiclient)
-- [Helping Client Diversity](https://www.attestant.io/posts/helping-client-diversity/) - _Jim McDonald_
-- [Client diversity on Ethereum's consensus layer](https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA) - _jmcook.eth_
-- [How To: Shop For Ethereum Validator Hardware](https://www.youtube.com/watch?v=C2wwu1IlhDc) - _EthStaker_
-- [Eth2 Slashing Prevention Tips](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50) - _Raul Jordan_
-- [Ethereum's Client Diversity Problem](https://hackernoon.com/ethereums-client-diversity-problem) - _@emmanuelawosika_
+- [Ethereum's Client Diversity Problem](https://hackernoon.com/ethereums-client-diversity-problem) - _@emmanuelawosika 2022_
+- [Helping Client Diversity](https://www.attestant.io/posts/helping-client-diversity/) - _Jim McDonald 2022_
+- [Client diversity on Ethereum's consensus layer](https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA) - _jmcook.eth 2022_
+- [How To: Shop For Ethereum Validator Hardware](https://www.youtube.com/watch?v=C2wwu1IlhDc) - _EthStaker 2022_
+- [Step by Step: How to join the Ethereum 2.0 Testnet](https://kb.beaconcha.in/guides/tutorial-eth2-multiclient) - _Butta_
+- [Eth2 Slashing Prevention Tips](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50) - _Raul Jordan 2020_
+- [Rewards and Penalties on Ethereum 2.0](https://consensys.net/blog/codefi/rewards-and-penalties-on-ethereum-20-phase-0/) - _James BeckMarch 2020_
