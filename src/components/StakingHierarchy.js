@@ -269,10 +269,10 @@ const StakingHierarchy = () => {
         </Glyph>
         <Content>
           <p>
-            Solo staking on Ethereum is the{" "}
-            <Gold>gold standard</Gold> for staking. It is trustless, provides
-            full participation rewards, and improves the decentralization of the
-            network.
+            Solo staking on Ethereum is the <Gold>gold standard</Gold> for
+            staking. It provides full participation rewards, improves the
+            decentralization of the network, and never requires trusting anyone
+            else with your funds.
           </p>
           <p>
             Those considering solo staking should have at least 32 ETH and
