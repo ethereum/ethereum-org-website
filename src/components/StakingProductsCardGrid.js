@@ -463,6 +463,7 @@ const StakingProductCardGrid = ({ category }) => {
     }
   })
 
+  // TODO: Shuffle first to account for ties
   rankedProducts.sort((a, b) => b.rankingScore - a.rankingScore)
 
   return (
