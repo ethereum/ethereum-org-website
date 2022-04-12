@@ -118,9 +118,7 @@ Have a suggestion for a staking tool we missed? Check out our [product listing p
 
 ## 📖 Explore solo staking guides {#staking-guides}
 
-- [CoinCashew's Ethereum 2.0 Guide](https://www.coincashew.com/coins/overview-eth/guide-or-how-to-setup-a-validator-on-eth2-mainnet) - Linux (CLI)
-- [Somer Esat](https://github.com/SomerEsat/ethereum-staking-guide) - Linux (CLI)
-- [Rocket Pool Node Operators](https://rocketpool.net/node-operators) - Linux, macOS (CLI)
+<StakingGuides />
 
 <!-- TODO: beaconcha.in/education page -->
 

@@ -45,6 +45,7 @@ import StakingComparison from "../components/StakingComparison"
 import HowSoloStakingWorks from "../components/HowSoloStakingWorks"
 import StakingConsiderations from "../components/StakingConsiderations"
 import StakingCommunityCallout from "../components/StakingCommunityCallout"
+import StakingGuides from "../components/StakingGuides"
 
 import { isLangRightToLeft } from "../utils/translations"
 
@@ -329,6 +330,7 @@ const components = {
   StakingComparison,
   HowSoloStakingWorks,
   StakingConsiderations,
+  StakingGuides,
 }
 
 const StakingPage = ({ data, pageContext, location }) => {
