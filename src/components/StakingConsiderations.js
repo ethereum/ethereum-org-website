@@ -100,15 +100,19 @@ const Indicator = styled.div`
   flex: 1;
   flex-direction: column;
   align-items: center;
-  width: 14ch;
-  @media (max-width: ${({ theme }) => theme.breakpoints.s}) {
-    width: 7ch;
-  }
   gap: 0.5rem;
+  width: max-content;
+  @media (max-width: ${({ theme }) => theme.breakpoints.s}) {
+    width: fit-content;
+  }
   p {
     font-size: 0.75rem;
     padding: 0;
     text-align: center;
+    width: max-content;
+    @media (max-width: ${({ theme }) => theme.breakpoints.s}) {
+      width: fit-content;
+    }
   }
 `
 
