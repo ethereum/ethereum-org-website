@@ -225,7 +225,7 @@ const benefits = [
     title: "Earn rewards",
     emoji: "💰",
     description:
-      "Rewards are given for actions that help the network reach consensus. You'll get rewards for running software that batches transactions into new blocks and checks the work of other validators because that's what keeps the chain running securely.",
+      "Rewards are given for actions that help the network reach consensus. You'll get rewards for running software that properly batches transactions into new blocks and checks the work of other validators, because that's what keeps the chain running securely.",
   },
   {
     title: "Better security",
