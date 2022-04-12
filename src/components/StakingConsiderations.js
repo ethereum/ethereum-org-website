@@ -99,7 +99,7 @@ const Indicator = styled.div`
   flex: 1;
   flex-direction: column;
   align-items: center;
-  width: 10ch;
+  width: 14ch;
   @media (max-width: ${({ theme }) => theme.breakpoints.s}) {
     width: 7ch;
   }
