@@ -91,4 +91,4 @@ Contact individual SaaS provider for more details on any guarantees or insurance
 
 ## Further reading {#further-reading}
 
-- [Evaluating Staking Services](https://www.attestant.io/posts/evaluating-staking-services/) - _Vitalik_
+- [Evaluating Staking Services](https://www.attestant.io/posts/evaluating-staking-services/) - _Vitalik Buterin_
