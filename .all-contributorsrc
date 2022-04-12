@@ -7135,6 +7135,16 @@
       "contributions": [
         "ideas"
       ]
+    },
+    {
+      "login": "xcaro",
+      "name": "Nhan Vo",
+      "avatar_url": "https://avatars.githubusercontent.com/u/32713050?v=4",
+      "profile": "http://nguoithua.net",
+      "contributions": [
+        "doc",
+        "translation"
+      ]
     }
   ],
   "contributorsPerLine": 7,
