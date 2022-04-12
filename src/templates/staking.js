@@ -13,7 +13,7 @@ import ExpandableCard from "../components/ExpandableCard"
 import DocLink from "../components/DocLink"
 // import Icon from "../components/Icon"
 import Contributors from "../components/Contributors"
-import InfoBanner from "../components/InfoBanner"
+import SharedInfoBanner from "../components/InfoBanner"
 import UpgradeStatus from "../components/UpgradeStatus"
 import Link from "../components/Link"
 import MarkdownTable from "../components/MarkdownTable"
@@ -297,6 +297,10 @@ const TitleCard = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   width: 100%;
+`
+
+const InfoBanner = styled(SharedInfoBanner)`
+  margin: 2rem 0;
 `
 
 // Note: you must pass components to MDXProvider in order to render them in markdown files
