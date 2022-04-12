@@ -1,5 +1,6 @@
 import React, { useContext } from "react"
 import styled, { ThemeContext } from "styled-components"
+import { shuffle } from "lodash"
 // Data imports
 import stakingProducts from "../data/staking-products.json"
 // Component imports
@@ -456,14 +457,15 @@ const StakingProductCardGrid = ({ category }) => {
 
   if (!products) return null
 
-  const rankedProducts = products.map((product) => {
+  const shuffledProducts = shuffle(products)
+
+  const rankedProducts = shuffledProducts.map((product) => {
     return {
       ...product,
       rankingScore: getRankingScore(product),
     }
   })
 
-  // TODO: Shuffle first to account for ties
   rankedProducts.sort((a, b) => b.rankingScore - a.rankingScore)
 
   return (
