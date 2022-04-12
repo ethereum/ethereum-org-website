@@ -1,10 +1,12 @@
 import React, { useState } from "react"
 import styled from "styled-components"
 
+import { StyledSelect as Select } from "./SharedStyledComponents"
 import Link from "./Link"
 import ButtonLink from "./ButtonLink"
 import Emoji from "./Emoji"
-import Icon from "./Icon"
+
+import { trackCustomEvent } from "../utils/matomo"
 
 const Container = styled.div`
   display: flex;
@@ -24,23 +26,11 @@ const SelectContainer = styled.div`
   margin: 1rem 0;
 `
 
-const Select = styled.select`
-  border: 1px solid ${({ theme }) => theme.colors.lightBorder};
-  border-radius: 0.25rem;
-  background: none;
-  padding: 0.75rem 3rem 0.75rem 1rem;
-  color: ${({ theme }) => theme.colors.text};
-  font-weight: 700;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -o-appearance: none;
-`
-
-const StyledIcon = styled(Icon)`
-  position: relative;
-  left: -2.25rem;
-  top: 0.5rem;
-  pointer-events: none;
+const StyledSelect = styled(Select)`
+  max-width: 50%;
+  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
+    max-width: 100%;
+  }
 `
 
 const ButtonContainer = styled.div`
@@ -58,7 +48,13 @@ const LaunchpadWidget = () => {
   const [selection, setSelection] = useState("testnet")
 
   const handleChange = (e) => {
-    setSelection(e.target.value)
+    trackCustomEvent({
+      eventCategory: `Selected testnet vs mainnet for Launchpad link`,
+      eventAction: `Clicked`,
+      eventName: `${e.label} bridge selected`,
+      eventValue: `${e.value}`,
+    })
+    setSelection(e.value)
   }
 
   const data = {
@@ -72,16 +68,23 @@ const LaunchpadWidget = () => {
     },
   }
 
+  const selectOptions = Object.keys(data).map((key) => ({
+    label: data[key].label,
+    value: key,
+  }))
+
   return (
     <Container>
       <div>
         <span>Choose network</span>
         <SelectContainer>
-          <Select onChange={handleChange}>
-            <option value="testnet">{data.testnet.label}</option>
-            <option value="mainnet">{data.mainnet.label}</option>
-          </Select>
-          <StyledIcon name="chevronDown" />
+          <StyledSelect
+            className="react-select-container"
+            classNamePrefix="react-select"
+            options={selectOptions}
+            onChange={handleChange}
+            defaultValue={selectOptions[0]}
+          />
         </SelectContainer>
         <p>
           Solo validators are expected to <strong>test their setup</strong> and
