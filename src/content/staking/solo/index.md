@@ -98,7 +98,7 @@ Attribute indicators are used below to signal notable strengths or weaknesses a 
 
 <StakingConsiderations page="solo" />
 
-## 🛠 Explore node and client setup tools {#node-and-client-tools}
+## Explore node and client setup tools {#node-and-client-tools}
 
 There are a variety of options available to help you with your setup. Use the above indicators to help guide you through the tools below.
 
@@ -116,7 +116,7 @@ These tools can be used as an alternative to the [Staking Deposit CLI](https://g
 
 Have a suggestion for a staking tool we missed? Check out our [product listing policy](/contributing/adding-staking-product/) to see if it would be a good fit, and to submit it for review.
 
-## 📖 Explore solo staking guides {#staking-guides}
+## Explore solo staking guides {#staking-guides}
 
 <StakingGuides />
 
@@ -145,7 +145,7 @@ In extreme cases if the network stops finalizing as a result of more than a thir
 </ExpandableCard>
 
 <ExpandableCard title="How do I ensure I don't get slashed?">
-In short, if you act in good faith, run a minority client and only keep your signing keys on one machine at a time, the risk of getting slashed is nearly zero.
+In short, this can never be fully guaranteed, but if you act in good faith, run a minority client and only keep your signing keys on one machine at a time, the risk of getting slashed is nearly zero.
 
 There are only a few specific ways that can result in a validator getting slashed and ejected from the network. At time of writing, the slashings that have occurred have been exclusively a product of redundant hardware setups where signing keys are stored on two separate machines at once. This can inadvertently result in a <em>double vote</em> from your keys, which is a slashable offense.
 
