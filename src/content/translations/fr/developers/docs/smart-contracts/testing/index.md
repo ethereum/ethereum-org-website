@@ -17,11 +17,6 @@ incomplete: true
 
 - [GitHub](https://github.com/sc-forks/solidity-coverage)
 
-**hevm -** **_Implémentation de l'EVM spécialement conçue pour le test d'unités et le débogage de contrats intelligents_**
-
-- [GitHub](https://github.com/dapphub/dapptools/tree/master/src/hevm)
-- [Chat DappHub](https://dapphub.chat/)
-
 **Whiteblock Genesis -** **_Plateforme de test et sandbox de développement de bout en bout pour la blockchain_**
 
 - [Whiteblock.io](https://whiteblock.io)

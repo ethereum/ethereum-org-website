@@ -1,8 +1,6 @@
 {
   "page-local-environment-brownie-desc": "Фреймворк для розробки й тестування на основі Python для розумних контрактів, націлених на Віртуальну машину Ethereum.",
   "page-local-environment-brownie-logo-alt": "Brownie logo",
-  "page-local-environment-dapptools-desc": "Пакет інструментів інтерфейсу командного рядка, орієнтованих на Ethereum, що відповідають філософії дизайну Unix, а це сприяє можливостям компонування, конфігурування та розширення.",
-  "page-local-environment-dapptools-logo-alt": "Логотип Dapptools",
   "page-local-environment-embark-desc": "Універсальна платформа для розробників для створення та впровадження децентралізованих програм.",
   "page-local-environment-embark-logo-alt": "Embark logo",
   "page-local-environment-epirus-desc": "Платформа для розробки, впровадження та відстеження блокчейн-програм у Віртуальній машині Java",
