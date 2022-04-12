@@ -177,6 +177,7 @@ const StakingProductCard = ({
     battleTested,
     trustless,
     permissionless,
+    permissionlessNodes,
     multiClient,
     diverseClients,
     economical,
@@ -208,6 +209,10 @@ const StakingProductCard = ({
     {
       label: "Permissionless",
       status: permissionless,
+    },
+    {
+      label: "Permissionless Nodes",
+      status: permissionlessNodes,
     },
     {
       label: "Multi-client",
@@ -307,6 +312,10 @@ const StakingProductCardGrid = ({ category }) => {
     return product.permissionless === VALID_FLAG ? 1 : 0
   }
 
+  const scorePermissionlessNodes = (product) => {
+    return product.permissionlessNodes === VALID_FLAG ? 1 : 0
+  }
+
   const scoreMultiClient = (product) => {
     return product.multiClient === VALID_FLAG ? 1 : 0
   }
@@ -331,6 +340,7 @@ const StakingProductCardGrid = ({ category }) => {
     score += scoreBattleTested(product)
     score += scoreTrustless(product)
     score += scorePermissionless(product)
+    score += scorePermissionlessNodes(product)
     score += scoreMultiClient(product)
     score += scoreDiverseClients(product)
     score += scoreEconomical(product)
@@ -389,14 +399,12 @@ const StakingProductCardGrid = ({ category }) => {
     hasBugBounty,
     launchDate,
     isTrustless,
-    isPermissionless,
   }) => ({
     openSource: getFlagFromBoolean(isFoss),
     audited: getFlagFromBoolean(audits?.length),
     bugBounty: getFlagFromBoolean(hasBugBounty),
     battleTested: getBattleTestedFlag(launchDate),
     trustless: getFlagFromBoolean(isTrustless),
-    permissionless: getFlagFromBoolean(isPermissionless),
   })
 
   const categoryProducts = stakingProducts[category]
@@ -410,6 +418,7 @@ const StakingProductCardGrid = ({ category }) => {
         ...getBrandProperties(listing),
         ...getTagProperties(listing),
         ...getSharedSecurityProperties(listing),
+        permissionless: getFlagFromBoolean(listing.isPermissionless),
         multiClient: getFlagFromBoolean(listing.multiClient),
         selfCustody: getFlagFromBoolean(true),
         economical: getFlagFromBoolean(listing.minEth < 32),
@@ -424,6 +433,7 @@ const StakingProductCardGrid = ({ category }) => {
         ...getBrandProperties(listing),
         ...getTagProperties(listing),
         ...getSharedSecurityProperties(listing),
+        permissionless: getFlagFromBoolean(listing.isPermissionless),
         diverseClients: getDiversityOfClients(listing.pctMajorityClient),
         selfCustody: getFlagFromBoolean(listing.isSelfCustody),
         minEth: listing.minEth,
@@ -437,6 +447,7 @@ const StakingProductCardGrid = ({ category }) => {
         ...getBrandProperties(listing),
         ...getTagProperties(listing),
         ...getSharedSecurityProperties(listing),
+        permissionlessNodes: getFlagFromBoolean(listing.hasPermissionlessNodes),
         diverseClients: getDiversityOfClients(listing.pctMajorityClient),
         selfCustody: getFlagFromBoolean(listing.tokens?.length),
         minEth: listing.minEth,
@@ -450,6 +461,7 @@ const StakingProductCardGrid = ({ category }) => {
         ...getBrandProperties(listing),
         ...getTagProperties(listing),
         ...getSharedSecurityProperties(listing),
+        permissionless: getFlagFromBoolean(listing.isPermissionless),
         selfCustody: getFlagFromBoolean(listing.isSelfCustody),
       }))
     )
@@ -457,16 +469,12 @@ const StakingProductCardGrid = ({ category }) => {
 
   if (!products) return null
 
-  const shuffledProducts = shuffle(products)
-
-  const rankedProducts = shuffledProducts.map((product) => {
-    return {
+  const rankedProducts = shuffle(products)
+    .map((product) => ({
       ...product,
       rankingScore: getRankingScore(product),
-    }
-  })
-
-  rankedProducts.sort((a, b) => b.rankingScore - a.rankingScore)
+    }))
+    .sort((a, b) => b.rankingScore - a.rankingScore)
 
   return (
     <CardGrid>
