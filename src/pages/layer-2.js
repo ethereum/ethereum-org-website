@@ -782,9 +782,9 @@ const Layer2Page = ({ data }) => {
             <p>
               <b>Sidechains and validiums</b> are blockchains that allow assets
               from Ethereum to be bridged over and used on another blockchain.
-              Sidechains and validiums run in parallel with the Ethereum, and
-              interact with the Ethereum through bridges, but they do not derive
-              their security or data availability from the Ethereum.
+              Sidechains and validiums run in parallel with Ethereum, and
+              interact with Ethereum through bridges, but they do not derive
+              their security or data availability from Ethereum.
             </p>
             <p>
               Both scale similarly to layer 2s - they offer lower transaction
