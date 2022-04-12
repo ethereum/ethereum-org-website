@@ -269,7 +269,7 @@ const StakingHierarchy = () => {
         </Glyph>
         <Content>
           <p>
-            Solo staking on the Ethereum Beacon Chain is the{" "}
+            Solo staking on Ethereum is the{" "}
             <Gold>gold standard</Gold> for staking. It is trustless, provides
             full participation rewards, and improves the decentralization of the
             network.
