@@ -13,6 +13,8 @@ import Icon from "./Icon"
 import { isLangRightToLeft, translateMessageId } from "../utils/translations"
 import { getData } from "../utils/cache"
 
+import { GATSBY_FUNCTIONS_PATH } from "../constants"
+
 const Value = styled.span`
   position: absolute;
   bottom: 8%;
@@ -349,11 +351,7 @@ const StatsBoxGrid = () => {
 
     const fetchNodes = async () => {
       try {
-        const { result } = await getData(
-          process.env.NODE_ENV === "production"
-            ? `${process.env.GATSBY_FUNCTIONS_PATH}/etherscan`
-            : "http://localhost:9000/etherscan"
-        )
+        const { result } = await getData(`${GATSBY_FUNCTIONS_PATH}/etherscan`)
         const data = result
           .map(({ UTCDate, TotalNodeCount }) => ({
             timestamp: new Date(UTCDate).getTime(),
@@ -378,11 +376,7 @@ const StatsBoxGrid = () => {
 
     const fetchTotalValueLocked = async () => {
       try {
-        const response = await getData(
-          process.env.NODE_ENV === "production"
-            ? `${process.env.GATSBY_FUNCTIONS_PATH}/defipulse`
-            : "http://localhost:9000/defipulse"
-        )
+        const response = await getData(`${GATSBY_FUNCTIONS_PATH}/defipulse`)
         const data = response
           .map(({ date, totalLiquidityUSD }) => ({
             timestamp: parseInt(date) * 1000,
@@ -408,9 +402,7 @@ const StatsBoxGrid = () => {
     const fetchTxCount = async () => {
       try {
         const response = await getData(
-          process.env.NODE_ENV === "production"
-            ? `${process.env.GATSBY_FUNCTIONS_PATH}/txs`
-            : "http://localhost:9000/txs"
+          `${process.env.GATSBY_FUNCTIONS_PATH}/txs`
         )
         const data = response.result
           .map(({ unixTimeStamp, transactionCount }) => ({

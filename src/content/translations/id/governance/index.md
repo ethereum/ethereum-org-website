@@ -15,13 +15,13 @@ _Jika tidak ada seorang pun yang memiliki Ethereum, bagaimana keputusan tentang 
 
 Tata kelola adalah sistem yang terbentuk yang memungkinkan keputusan untuk dibuat. Dalam struktur organisasi pada umumnya, tim eksekutif atau dewan direksi merupakan penentu terakhir dalam pengambilan keputusan. Atau mungkin para pemegang saham mengambil suara terhadap proposal untuk menetapkan perubahan. Dalam sistem politik, para pejabat terpilih dapat menetapkan legislasi yang berupaya untuk mewakili keinginan konstituen mereka.
 
-## Tata kelola terdesentralisasi {#decentalized-governance}
+## Tata kelola terdesentralisasi {#decentralized-governance}
 
 Tidak seorang pun yang memiliki atau mengontrol protokol Ethereum, tetapi keputusan yang berkaitan dengan pengimplementasian perubahan guna memastikan keberlangsungan dan kesejahteraan jaringan masih harus dibuat. Kurangnya aspek kepemilikan ini membuat tata kelola organisasi tradisional menjadi solusi yang tidak kompatibel dengan sistem ini.
 
 ## Tata Kelola Ethereum {#ethereum-governance}
 
-Tata kelola Ethereum adalah proses di mana perubahan protokol dibuat. Ini penting untuk disebutkan karena proses ini tidak terkait dengan bagaimana orang-orang dan aplikasi menggunakan protokol - Ethereum tidak memerlukan izin. Siapa pun dari mana saja di dunia ini dapat berpartisipasi dalam aktivitas on-chain. Tidak ada aturan yang dibuat tentang siapa yang bisa atau tidak bisa membuat aplikasi atau mengirim transaksi. Namun, ada proses untuk mengajukan perubahan terhadap protokol inti, tempat aplikasi-aplikasi ini beroperasi. Karena sangat banyak orang yang bergantung pada kestabilan Ethereum, ada ambang batas koordinasi yang sangat tinggi untuk melakukan perubahan inti, yang mencakup proses teknis dan sosial, guna memastikan perubahan apa pun terhadap Ethereum aman dan didukung oleh komunitas secara luas
+Tata kelola Ethereum adalah proses di mana perubahan protokol dibuat. Ini penting untuk disebutkan karena proses ini tidak terkait dengan bagaimana orang-orang dan aplikasi menggunakan protokol - Ethereum tidak memerlukan izin. Siapa pun dari mana saja di dunia ini dapat berpartisipasi dalam aktivitas on-chain. Tidak ada aturan yang dibuat tentang siapa yang bisa atau tidak bisa membuat aplikasi atau mengirim transaksi. Namun, ada proses untuk mengajukan perubahan terhadap protokol inti, tempat aplikasi-aplikasi ini beroperasi. Karena sangat banyak orang bergantung pada kestabilan Ethereum, ada ambang batas koordinasi yang sangat tinggi untuk melakukan perubahan inti, yang mencakup proses teknis dan sosial, guna memastikan perubahan apa pun terhadap Ethereum aman dan didukung oleh komunitas secara luas.
 
 ### Tata kelola on-chain vs off-chain {#on-chain-vs-off-chain}
 
@@ -33,7 +33,9 @@ Pendekatan yang berlawanan dengan itu, tata kelola off-chain, adalah jika keputu
 
 _Sekalipun pada tingkat protokol tata kelola Ethereum bersifat off-chain, banyak kasus penggunaan yang dibangun di atas Ethereum, seperti DAO, menggunakan tata kelola on-chain._
 
-<ButtonLink to="/dao/">Lebih lanjut tentang DAO</ButtonLink>
+<ButtonLink to="/dao/">
+  Selengkapnya tentang DAOs
+</ButtonLink>
 
 <Divider />
 
@@ -45,7 +47,7 @@ Ada berbagai pemangku kepentingan dalam [komunitas Ethereum](/community/), yang 
 - **Pengguna Aplikasi**: orang-orang ini berinteraksi dengan aplikasi di blockchain Ethereum.
 - **Pengembang Aplikasi/Peralatan**: orang-orang ini yng menulis aplikasi yang beroperasi di blockchain Ethereum (misalnya DeFi, NFT, dll.) atau menyusun peralatan untuk berinteraksi dengan Ethereum (misalnya dompet, rangkaian uji, dll.). [Lebih lanjut tentang dapp](/dapps/).
 - **Para Operator Node**: orang-orang ini yang menjalankan node yang menyebarkan blok dan transaksi, yang menolak transaksi atau blok tidak validapa pun yang mereka temui. [Lebih lanjut tentang node](/developers/docs/nodes-and-clients/).
-- **Penulis EIP**: orang-orang ini mengusulkan perubahan pada protokol Ethereum, dalam bentuk Ethereum Improvement Proposals (EIP). [Lebih lanjut tentang EIP](/eips/).
+- **Penulis EIP**: orang-orang ini mengusulkan perubahan pada protokol Ethereum, dalam bentuk Proposal Peningkatan Ethereum (EIP). [Selengkapnya tentang EIP](/eips/).
 - **Penambang/Validator**: orang-orang ini yang menjalankan node yang dapat menambahkan blok baru ke blockchain Ethereum.
 - **Pengembang Protokol** (alias "Pengembang Inti"): orang-orang ini menjaga berbagai implementasi Ethereum (misalnya go-ethereum, Nethermind, Besu, Erigon pada lapisan eksekusi atau Prysm, Lighthouse, Nimbus, Teku, Lodestar pada lapisan konsensus). [Lebih lanjut tentang klien Ethereum](/developers/docs/nodes-and-clients/).
 
@@ -55,9 +57,11 @@ _Catatan: setiap individu bisa memiliki beberapa peran pada grup ini (misalnya s
 
 ## Apa itu EIP? {#what-is-an-eip}
 
-Salah satu proses penting yang digunakan dalam tata kelola Ethereum adalah proposal **Ethereum Improvement Proposals (EIP)**. EIP adalah standar yang menentukan fitur atau proses baru yang berpotensi untuk Ethereum. Siapa pun yang terlibat dalam komunitas Ethereum dapat membuat EIP. Misalnya, tak satu pun dari penulis EIP-721, EIP yang menjadi standar untuk NFT, yang telah bekerja secara langsung dalam pengembangan protokol Ethereum.
+Salah satu proses penting yang digunakan dalam tata kelola Ethereum adalah proposal **Proposal Peningkatan Ethereum (EIP)**. EIP adalah standar yang menentukan fitur atau proses baru yang berpotensi untuk Ethereum. Siapa pun yang terlibat dalam komunitas Ethereum dapat membuat EIP. Misalnya, tak satu pun dari penulis EIP-721, EIP yang menjadi standar untuk NFT, yang telah bekerja secara langsung dalam pengembangan protokol Ethereum.
 
-<ButtonLink to="/eips/">Lebih lanjut tentang EIP</ButtonLink>
+<ButtonLink to="/eips/">
+  Selengkapnya tentang EIP
+</ButtonLink>
 
 <Divider />
 
@@ -87,7 +91,7 @@ Alur ini, sekalipun sangat sederhana, memberi gambaran umum tentang tahap-tahap 
 
 ### Memahami hasil pekerjaan sebelumnya {#prior-work}
 
-Pejuang EIP harus membiasakan diri dengan hasil pekerjaan dan proposal di masa lalu sebelum membuat EIP yang dapat dianggap penting untuk digunakan di Jaringan Utama Ethereum. Dengan cara ini, EIP diharapkan membawa sesuatu yang baru yang belum ditolak sebelumnya. Tiga tempat utama untuk melakukan riset tentang hal ini adalah [repositori EIP](https://github.com/ethereum/eips), [Ethereum Magicians](https://www.ethereum-magicians.org/) dan [ethresear.ch](https://www.ethresear.ch/).
+Pejuang EIP harus membiasakan diri dengan hasil pekerjaan dan proposal di masa lalu sebelum membuat EIP yang dapat dianggap penting untuk digunakan di Jaringan Utama Ethereum. Dengan cara ini, EIP diharapkan membawa sesuatu yang baru yang belum ditolak sebelumnya. Tiga tempat utama untuk melakukan riset tentang hal ini adalah [repositori EIP](https://github.com/ethereum/eips), [Ethereum Magicians](https://ethereum-magicians.org/) dan [ethresear.ch](https://ethresear.ch/).
 
 ### Grup kerja {#working-groups}
 
@@ -117,7 +121,7 @@ Fork adalah ketika peningkatan atau perubahan teknis utama harus dibuat dalam ja
 
 Fork DAO merupakan respons terhadap [serangan DAO 2016](https://www.coindesk.com/understanding-dao-hack-journalists) di mana kontrak [DAO](/glossary/#dao) yang tidak aman dikuras dananya sebanyak lebih dari 3,6 juta ETH dalam peretasan saat itu. Fork ini memindahkan dana dari kontrak yang bermasalah ke kontrak yang baru yang memungkinkan siapa pun yang kehilangan dananya dalam peretasan dapat memperolehnya kembali.
 
-Tindakan ini dipilih oleh komunitas Ethereum. Setiap pemilik ETH dapat memberikan suara melalui transaksi di [platform pengambilan suara](http://v1.carbonvote.com/). Keputusan untuk melakukan fork mencapai lebih dari 85% suara.
+Tindakan ini dipilih oleh komunitas Ethereum. Setiap pemegang ETH dapat memilih melalui transaksi di [platform pengambilan suara](http://v1.carbonvote.com/). Keputusan untuk melakukan fork mencapai lebih dari 85% suara.
 
 Penting untuk dicatat bahwa meskipun protokol melakukan fork untuk membalikkan peretasan, bobot pengambilan suara dalam memutuskan fork dapat diperdebatkan karena beberapa alasan:
 
@@ -139,7 +143,7 @@ Tonton lebih banyak tentang peretasan DAO:
 
 Fork Ethereum/Ethereum Classic merupakan contoh yang sangat baik untuk fork yang sehat. Kami memiliki dua grup yang berselisih pendapat cukup kuat satu sama lain tentang beberapa nilai inti yang rasanya sepadan dengan risiko yang dilibatkan untuk mengikuti tindakan mereka masing-masing.
 
-Kemampuan untuk melakukan fork dalam menghadapi perbedaan politik, filosofi, atau ekonomi yang signifikan memainkan peran yang besar dalam keberhasilan tata kelola Ethereum. Tanpa kemampuan untuk melakuan fork, alternatifnya adalah perselisihan internal yang berkepanjangan, yang merupakan partisipasi yang dipaksakan bagi mereka yang pada akhirnya membentuk Ethereum Classic dan visi yang semakin berbeda tentang ukuran keberhasilan Ethereum.
+Kemampuan untuk melakukan fork dalam menghadapi perbedaan politik, filosofi, atau ekonomi yang signifikan memainkan peran yang besar dalam keberhasilan tata kelola Ethereum. Tanpa kemampuan untuk melakukan fork, alternatifnya adalah perselisihan internal yang berkepanjangan, yang merupakan partisipasi yang dipaksakan bagi mereka yang pada akhirnya membentuk Ethereum Classic dan visi yang semakin berbeda tentang ukuran keberhasilan Ethereum.
 
 <Divider />
 
@@ -151,7 +155,9 @@ Sekalipun pengembangan spesifikasi dan implementasinya selalu sepenuhnya merupak
 
 Ketika Rantai Suar bergabung dengan lapisan eksekusi Ethereum, proses tata kelola untuk mengusulkan perubahan akan diselaraskan. Proses untuk mengimplementasikan penggabungan ini [sudah dimulai](https://github.com/ethereum/EIPs/pull/3675).
 
-<ButtonLink to="/upgrades/merge/">Selengkapnya tentang penggabungan</ButtonLink>
+<ButtonLink to="/upgrades/merge/">
+  Selengkapnya tentang penggabungan
+</ButtonLink>
 
 <Divider />
 
@@ -161,7 +167,7 @@ Ketika Rantai Suar bergabung dengan lapisan eksekusi Ethereum, proses tata kelol
 - [Diskusikan proposal saat ini](https://ethereum-magicians.org/)
 - [Libatkan diri dalam diskusi R&D](https://ethresear.ch/)
 - [Bergabunglah dengan discord Ethereum R&D](https://discord.gg/mncqtgVSVw)
-- [Jalankan node](/developers/docs/nodes-and-clients/run-a-node/)
+- [Menjalankan sebuah simpul](/developers/docs/nodes-and-clients/run-a-node/)
 - [Berkontribusilah terhadap pengembangan klien](/developers/docs/nodes-and-clients/#execution-clients)
 - [Program Magang Pengembang Inti](https://blog.ethereum.org/2021/09/06/core-dev-apprenticeship-second-cohort/)
 
@@ -169,7 +175,10 @@ Ketika Rantai Suar bergabung dengan lapisan eksekusi Ethereum, proses tata kelol
 
 Tata kelola di Ethereum tidaklah didefinisikan dengan kaku. Berbagai peserta komunitas memiliki sudut pandang berbeda mengenai ini. Berikut adalah beberapa di antaranya:
 
-- [Governance on Ethereum](https://docs.ethhub.io/ethereum-basics/governance/) – _ETHHub_
-- [How does Ethereum Governance work?](https://cryptotesters.com/blog/ethereum-governance) – _Cryptotesters_
-- [How Ethereum governance works](https://medium.com/coinmonks/how-ethereum-governance-works-71856426b63a) – _Micah Zoltu_
-- [What is an Ethereum core developer?](https://hudsonjameson.com/2020-06-22-what-is-an-ethereum-core-developer/) - _Hudson Jameson_
+- [Catatan tentang Tata Kelola Blockchain](https://vitalik.ca/general/2017/12/17/voting.html) - _Vitalik Buterin_
+- [Tata Kelola di Ethereum](https://docs.ethhub.io/ethereum-basics/governance/) – _ETHHub_
+- [Bagaimana cara kerja Tata Kelola Ethereum?](https://cryptotesters.com/blog/ethereum-governance) – _Cryptotesters_
+- [Bagaimana cara kerja tata kelola Ethereum](https://medium.com/coinmonks/how-ethereum-governance-works-71856426b63a) – _Micah Zoltu_
+- [Apa yang dimaksud dengan pengembang inti Ethereum?](https://hudsonjameson.com/2020-06-22-what-is-an-ethereum-core-developer/) - _Hudson Jameson_
+- [Tata Kelola, Bagian 2: Plutokrasi Masih Buruk](https://vitalik.ca/general/2018/03/28/plutocracy.html) - _Vitalik Buterin_
+- [Bergerak melampaui tata kelola pengambilan suara koin](https://vitalik.ca/general/2021/08/16/voting3.html) - _Vitalik Buterin_

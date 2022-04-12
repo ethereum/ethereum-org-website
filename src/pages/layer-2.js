@@ -13,6 +13,7 @@ import ButtonLink from "../components/ButtonLink"
 import Card from "../components/Card"
 import ExpandableCard from "../components/ExpandableCard"
 import FeedbackCard from "../components/FeedbackCard"
+import Icon from "../components/Icon"
 import InfoBanner from "../components/InfoBanner"
 import Layer2Onboard from "../components/Layer2/Layer2Onboard"
 import Link from "../components/Link"
@@ -22,11 +23,16 @@ import PageMetadata from "../components/PageMetadata"
 import Pill from "../components/Pill"
 import Layer2ProductCard from "../components/Layer2ProductCard"
 import ProductList from "../components/ProductList"
+import Tooltip from "../components/Tooltip"
+import Translation from "../components/Translation"
 import { CardGrid, Content, Page } from "../components/SharedStyledComponents"
 
 // Utils
 import { getData } from "../utils/cache"
 import { translateMessageId } from "../utils/translations"
+
+// Constants
+import { GATSBY_FUNCTIONS_PATH } from "../constants"
 
 // Styles
 
@@ -63,6 +69,19 @@ const Flex50 = styled.div`
   flex: 50%;
   @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
     flex: 100%;
+  }
+`
+
+const StyledIcon = styled(Icon)`
+  fill: ${(props) => props.theme.colors.text};
+  margin-right: 0.5rem;
+  opacity: 0.8;
+  @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
+  }
+  &:hover,
+  &:active,
+  &:focus {
+    fill: ${({ theme }) => theme.colors.primary};
   }
 `
 
@@ -139,6 +158,12 @@ const StatPrimary = styled.p`
   font-family: monospace;
 `
 
+const StatSpan = styled.div`
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+`
+
 const StatDescription = styled.p`
   opacity: 0.8;
   margin: 0;
@@ -166,11 +191,7 @@ const Layer2Page = ({ data }) => {
   useEffect(() => {
     const fetchL2Beat = async () => {
       try {
-        const l2BeatData = await getData(
-          process.env.NODE_ENV === "production"
-            ? `${process.env.GATSBY_FUNCTIONS_PATH}/l2beat`
-            : "http://localhost:9000/l2beat"
-        )
+        const l2BeatData = await getData(`${GATSBY_FUNCTIONS_PATH}/l2beat`)
         // formatted TVL from L2beat API formatted
         const TVL = new Intl.NumberFormat(intl.locale, {
           style: "currency",
@@ -199,14 +220,20 @@ const Layer2Page = ({ data }) => {
     const fetchCryptoStats = async () => {
       try {
         // Average eth transfer fee from L2's supported by cryptostats API
-        const feeData = await getData(
+        let feeData = await getData(
           "https://api.cryptostats.community/api/v1/l2-fees/feeTransferEth?metadata=false"
         )
+
+        // Temporary, but filtering out L2's we arent listing
+        feeData = feeData.data.filter(
+          (l2) => l2.id !== "aztec-network" && l2.id !== "hermez"
+        )
+
         const feeAverage =
-          feeData.data.reduce(
+          feeData.reduce(
             (acc, curr) => (acc += curr.results.feeTransferEth),
             0
-          ) / feeData.data.length
+          ) / feeData.length
 
         const intlFeeAverage = new Intl.NumberFormat(intl.locale, {
           style: "currency",
@@ -342,6 +369,13 @@ const Layer2Page = ({ data }) => {
 
   const layer2DataCombined = [...layer2Data.optimistic, ...layer2Data.zk]
 
+  const tooltipContent = (metric) => (
+    <div>
+      <Translation id="data-provided-by" />{" "}
+      <Link to={metric.apiUrl}>{metric.apiProvider}</Link>
+    </div>
+  )
+
   return (
     <Page>
       <PageMetadata
@@ -357,24 +391,50 @@ const Layer2Page = ({ data }) => {
         <PaddedContent>
           <StatsContainer>
             <StatBox>
-              {/* TODO: remove hardcoded StatPrimary once lambda functions are working*/}
-              <StatPrimary>$7.27B</StatPrimary>
-              {/* <StatPrimary>{tvl}</StatPrimary>  */}
-              <StatDescription>TVL locked in layer 2 (USD)</StatDescription>
+              <StatPrimary>{tvl}</StatPrimary>
+              <StatSpan>
+                <StatDescription>TVL locked in layer 2 (USD)</StatDescription>
+                <Tooltip
+                  content={tooltipContent({
+                    apiUrl: "https://l2beat.com/",
+                    apiProvider: "L2BEAT",
+                  })}
+                >
+                  <StyledIcon name="info" />
+                </Tooltip>
+              </StatSpan>
             </StatBox>
             <StatDivider />
             <StatBox>
               <StatPrimary>{averageFee}</StatPrimary>
-              <StatDescription>
-                Average layer 2 ETH transfer fee (USD)
-              </StatDescription>
+              <StatSpan>
+                <StatDescription>
+                  Average layer 2 ETH transfer fee (USD)
+                </StatDescription>
+                <Tooltip
+                  content={tooltipContent({
+                    apiUrl: "https://cryptostats.community/",
+                    apiProvider: "CryptoStats",
+                  })}
+                >
+                  <StyledIcon name="info" />
+                </Tooltip>
+              </StatSpan>
             </StatBox>
             <StatDivider />
             <StatBox>
-              {/* TODO: remove hardcoded StatPrimary once lambda functions are working*/}
-              <StatPrimary>+33.01%</StatPrimary>
-              {/* <StatPrimary>{percentChangeL2}</StatPrimary> */}
-              <StatDescription>Layer 2 TVL change (30 days)</StatDescription>
+              <StatPrimary>{percentChangeL2}</StatPrimary>
+              <StatSpan>
+                <StatDescription>Layer 2 TVL change (30 days)</StatDescription>
+                <Tooltip
+                  content={tooltipContent({
+                    apiUrl: "https://l2beat.com/",
+                    apiProvider: "L2BEAT",
+                  })}
+                >
+                  <StyledIcon name="info" />
+                </Tooltip>
+              </StatSpan>
             </StatBox>
           </StatsContainer>
         </PaddedContent>
@@ -722,9 +782,9 @@ const Layer2Page = ({ data }) => {
             <p>
               <b>Sidechains and validiums</b> are blockchains that allow assets
               from Ethereum to be bridged over and used on another blockchain.
-              Sidechains and validiums run in parallel with the Ethereum, and
-              interact with the Ethereum through bridges, but they do not derive
-              their security or data availability from the Ethereum.
+              Sidechains and validiums run in parallel with Ethereum, and
+              interact with Ethereum through bridges, but they do not derive
+              their security or data availability from Ethereum.
             </p>
             <p>
               Both scale similarly to layer 2s - they offer lower transaction

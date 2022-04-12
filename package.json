@@ -1,6 +1,6 @@
 {
   "name": "ethereum-org-website",
-  "version": "3.20.0",
+  "version": "3.20.1",
   "description": "Website of ethereum.org",
   "main": "index.js",
   "repository": "git@github.com:ethereum/ethereum-org-website.git",
@@ -95,5 +95,10 @@
     "hooks": {
       "pre-commit": "pretty-quick --staged"
     }
+  },
+  "volta": {
+    "node": "16.14.2",
+    "npm": "8.5.5",
+    "yarn": "1.22.18"
   }
 }

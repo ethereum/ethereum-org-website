@@ -451,7 +451,7 @@ const RunANodePage = ({ data }) => {
 
   const whyRunANodeCards = [
     {
-      Image: PrivacyGlyph,
+      image: PrivacyGlyph,
       title: "page-run-a-node-privacy-title",
       preview: "page-run-a-node-privacy-preview",
       body: [
@@ -462,7 +462,7 @@ const RunANodePage = ({ data }) => {
       alt: "page-run-a-node-glyph-alt-privacy",
     },
     {
-      Image: MegaphoneGlyph,
+      image: MegaphoneGlyph,
       title: "page-run-a-node-censorship-resistance-title",
       preview: "page-run-a-node-censorship-resistance-preview",
       body: [
@@ -472,14 +472,14 @@ const RunANodePage = ({ data }) => {
       alt: "page-run-a-node-glyph-alt-censorship-resistance",
     },
     {
-      Image: EarthGlyph,
+      image: EarthGlyph,
       title: "page-run-a-node-participate-title",
       preview: "page-run-a-node-participate-preview",
       body: ["page-run-a-node-participate-1", "page-run-a-node-participate-2"],
       alt: "page-run-a-node-glyph-alt-earth",
     },
     {
-      Image: DecentralizationGlyph,
+      image: DecentralizationGlyph,
       title: "page-run-a-node-decentralized-title",
       preview: "page-run-a-node-decentralized-preview",
       body: [
@@ -489,7 +489,7 @@ const RunANodePage = ({ data }) => {
       alt: "page-run-a-node-glyph-alt-decentralization",
     },
     {
-      Image: VoteGlyph,
+      image: VoteGlyph,
       title: "page-run-a-node-voice-your-choice-title",
       preview: "page-run-a-node-voice-your-choice-preview",
       body: [
@@ -499,7 +499,7 @@ const RunANodePage = ({ data }) => {
       alt: "page-run-a-node-glyph-alt-vote",
     },
     {
-      Image: SovereigntyGlyph,
+      image: SovereigntyGlyph,
       title: "page-run-a-node-sovereignty-title",
       preview: "page-run-a-node-sovereignty-preview",
       body: ["page-run-a-node-sovereignty-1", "page-run-a-node-sovereignty-2"],
@@ -579,14 +579,13 @@ const RunANodePage = ({ data }) => {
           <Translation id="page-run-a-node-why-title" />
         </h2>
         <InfoGrid>
-          {whyRunANodeCards.map(({ Image, title, preview, body, alt }, idx) => {
-            console.log({ Image })
+          {whyRunANodeCards.map(({ image, title, preview, body, alt }, idx) => {
             return (
               <ExpandableCard
                 contentPreview={<Translation id={preview} />}
-                title={<Translation id={title} />}
-                Svg={Image}
-                alt={<Translation id={alt} />}
+                title={translateMessageId(title, intl)}
+                alt={translateMessageId(alt, intl)}
+                svg={image}
                 key={idx}
               >
                 {body.map((item, idx) => (

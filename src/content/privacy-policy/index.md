@@ -66,6 +66,7 @@ Before the data is stored, the IP address will be abbreviated by activating IP a
 
 In addition to the data listed in section 3.1, we may receive the following information because of Matomo Analytics:
 
+- Usage data;
 - Navigation path;
 - Length of stay on the Website;
 - Returning or new user; and/or

@@ -322,7 +322,7 @@ const AssetsPage = ({ data }) => {
               "page-assets-eth-diamond-colored-svg",
               intl
             )}
-            Svg={EthGlyphColoredSvg}
+            svg={EthGlyphColoredSvg}
           />
         </Row>
         <Row>

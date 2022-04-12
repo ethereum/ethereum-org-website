@@ -1,4 +1,7 @@
 {
+  "page-get-eth-article-keeping-crypto-safe": "مفاتيح الحفاظ على سلامة العملات المشفرة الخاصة بك",
+  "page-get-eth-article-protecting-yourself": "حماية نفسك والأموال الخاصة بك",
+  "page-get-eth-article-store-digital-assets": "كيفية تخزين الأصول الرقمية على إثيريوم",
   "page-get-eth-cex": "المبادلات المركزية",
   "page-get-eth-cex-desc": "المبادلات عبارة عن أعمال تتيح لك شراء العملات المشفرة باستخدام العملات التقليدية. لديها الوصاية على أي عملة إثير تشتريها حتى ترسلها إلى محفظة تتحكم فيها.",
   "page-get-eth-checkout-dapps-btn": "تحقق من التطبيقات اللامركزية.",
@@ -21,6 +24,7 @@
   "page-get-eth-exchanges-no-exchanges": "عذرًا، نحن لا نعرف أي مبادلات تسمح لك بشراء عملات إثير من هذا البلد. إذا كنت تفعل ذلك، أخبرنا في",
   "page-get-eth-exchanges-no-exchanges-or-wallets": "عذراً، نحن لا نعرف أي مبادلات أو محافظ تسمح لك بشراء عملات إثير من هذا البلد. إذا كنت تفعل ذلك، فأخبرنا في",
   "page-get-eth-exchanges-no-wallets": "عذرًا، لا نعرف أي محافظ تتيح لك شراء عملات إثير من هذا البلد. إذا قمت بذلك، فأخبرنا على",
+  "page-get-eth-exchanges-search": "اكتب المكان الذي تعيش فيه...",
   "page-get-eth-exchanges-success-exchange": "قد يستغرق التسجيل في المبادلات عدة أيام بسبب الشيكات القانونية الخاصة.",
   "page-get-eth-exchanges-success-wallet-link": "المحافظ الإلكترونية",
   "page-get-eth-exchanges-success-wallet-paragraph": "في أي مكان تعيش فيه، يمكنك شراء عملات إثير مباشرة من هذه المحافظ. تعلّم المزيد عن",

@@ -82,8 +82,11 @@ const ButtonContainer = styled.div`
   }
 `
 
-const StyledFakeLink = styled(FakeLink)`
-  white-space: nowrap;
+const ButtonLink = styled.button`
+  border: 0;
+  cursor: pointer;
+  background-color: transparent;
+  color: ${(props) => props.theme.colors.primary};
 `
 
 const ExpandableCard = ({
@@ -96,6 +99,7 @@ const ExpandableCard = ({
   eventName,
 }) => {
   const [isVisible, setIsVisible] = useState(false)
+
   const expandCollapse = {
     collapsed: {
       height: 0,
@@ -110,6 +114,7 @@ const ExpandableCard = ({
       },
     },
   }
+
   const showHide = {
     collapsed: {
       display: "none",
@@ -118,6 +123,7 @@ const ExpandableCard = ({
       display: "inline-block",
     },
   }
+
   const fadeInOut = {
     collapsed: {
       opacity: 0,
@@ -154,14 +160,14 @@ const ExpandableCard = ({
           }}
         >
           {!isVisible && (
-            <StyledFakeLink>
+            <ButtonLink onClick={() => setIsVisible(true)}>
               <Translation id="more" />
-            </StyledFakeLink>
+            </ButtonLink>
           )}
           {isVisible && (
-            <StyledFakeLink>
+            <ButtonLink onClick={() => setIsVisible(false)}>
               <Translation id="less" />
-            </StyledFakeLink>
+            </ButtonLink>
           )}
         </ButtonContainer>
       </Content>

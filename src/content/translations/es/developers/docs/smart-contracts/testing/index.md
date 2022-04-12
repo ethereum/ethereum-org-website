@@ -17,11 +17,6 @@ incomplete: true
 
 - [GitHub](https://github.com/sc-forks/solidity-coverage)
 
-**hevm: \*\***_Implementación de la EVM creada específicamente para pruebas unitarias y depuración de contratos inteligentes._\*\*
-
-- [GitHub](https://github.com/dapphub/dapptools/tree/master/src/hevm)
-- [Chat de DappHub](https://dapphub.chat/)
-
 **Whiteblock Genesis: ** **_Una plataforma de desarrollo de punto a punto y pruebas para la blockchain._**
 
 - [Whiteblock.io](https://whiteblock.io)
