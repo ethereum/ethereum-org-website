@@ -170,6 +170,7 @@ export const InfoGrid = styled.div`
   gap: 2rem;
   & > div {
     height: fit-content;
+    margin: 0;
     &:hover {
       transition: 0.1s;
       transform: scale(1.01);
