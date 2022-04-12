@@ -28,15 +28,21 @@ import StakingCommunityCallout from "../../components/StakingCommunityCallout"
 import { translateMessageId } from "../../utils/translations"
 import { trackCustomEvent } from "../../utils/matomo"
 
+const HeroStatsWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: ${({ theme }) => theme.colors.layer2Gradient};
+  padding-bottom: 2rem;
+`
+
 const Page = styled.div`
   display: flex;
   justify-content: space-between;
   width: 100%;
   margin: 0 auto 4rem;
 
-  @media (min-width: ${(props) => props.theme.breakpoints.l}) {
-    padding-top: 4rem;
-  }
+  padding-top: 4rem;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     flex-direction: column;
   }
@@ -92,8 +98,9 @@ const MobileButton = styled.div`
 
 const MobileButtonDropdown = styled(StyledButtonDropdown)`
   margin-bottom: 0rem;
-  @media (min-width: ${(props) => props.theme.breakpoints.l}) {
-    display: none;
+  display: none;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    display: block;
   }
 `
 
@@ -330,9 +337,10 @@ const StakingPage = ({ data }) => {
         title={translateMessageId("page-staking-meta-title", intl)}
         description={translateMessageId("page-staking-meta-description", intl)}
       />
-      <PageHero content={heroContent} />
-      <StakingStatsBox />
-      <Divider />
+      <HeroStatsWrapper>
+        <PageHero content={heroContent} />
+        <StakingStatsBox />
+      </HeroStatsWrapper>
       <Page>
         <InfoColumn>
           <StyledButtonDropdown list={dropdownLinks} />

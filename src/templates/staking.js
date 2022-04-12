@@ -96,8 +96,10 @@ const ContentContainer = styled.article`
   padding: 2rem;
   padding-top: 0rem;
 
-  h2:first-of-type {
-    margin-top: 0;
+  @media (min-width: ${({ theme }) => theme.breakpoints.l}) {
+    h2:first-of-type {
+      margin-top: 0;
+    }
   }
 
   .featured {
@@ -241,8 +243,9 @@ const StyledButtonDropdown = styled(ButtonDropdown)`
 
 const MobileButtonDropdown = styled(StyledButtonDropdown)`
   margin-bottom: 0rem;
-  @media (min-width: ${(props) => props.theme.breakpoints.l}) {
-    display: none;
+  display: none;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    display: block;
   }
 `
 
@@ -257,6 +260,7 @@ const HeroContainer = styled.div`
   --height: 500px;
   max-height: var(--height);
   min-height: var(--height);
+  background: ${({ theme }) => theme.colors.layer2Gradient};
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     flex-direction: column;
     max-height: 100%;
