@@ -29,7 +29,7 @@ const GradientContainer = styled.div`
   }
 
   h3 {
-    margin-top: 0;
+    margin: 0 0 0.5rem;
   }
 `
 
