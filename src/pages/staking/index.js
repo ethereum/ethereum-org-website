@@ -238,6 +238,8 @@ const benefits = [
     emoji: "🍃",
     description:
       "Stakers don't need energy-intensive computers in order to participate in a proof-of-stake system–just a home computer or smartphone. This will make Ethereum better for the environment.",
+    linkText: "More on Ethereum's energy consumption",
+    to: "/energy-consumption",
   },
 ]
 
@@ -366,11 +368,18 @@ const StakingPage = ({ data }) => {
               {tocItems.whyStakeYourEth.title}
             </h2>
             <StyledCardGrid>
-              {benefits.map(({ title, description, emoji }, idx) => (
-                <StyledCard title={title} emoji={emoji} key={idx}>
-                  {description}
-                </StyledCard>
-              ))}
+              {benefits.map(
+                ({ title, description, emoji, linkText, to }, idx) => (
+                  <StyledCard
+                    title={title}
+                    emoji={emoji}
+                    key={idx}
+                    description={description}
+                  >
+                    {to && <Link to={to}>{linkText}</Link>}
+                  </StyledCard>
+                )
+              )}
             </StyledCardGrid>
           </Content>
           <Content>
