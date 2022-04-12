@@ -2,7 +2,6 @@ import React, { useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { getImage } from "gatsby-plugin-image"
 import { useIntl } from "gatsby-plugin-intl"
-import Select from "react-select"
 import styled from "styled-components"
 
 import CardList from "./CardList"
@@ -11,6 +10,7 @@ import { getLocaleTimestamp } from "../utils/time"
 import { trackCustomEvent } from "../utils/matomo"
 import Emoji from "./Emoji"
 import Translation from "./Translation"
+import { StyledSelect as Select } from "./SharedStyledComponents"
 import { translateMessageId } from "../utils/translations"
 
 const Container = styled.div`
@@ -18,62 +18,6 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-`
-
-// https://react-select.com/styles#using-classnames
-// Pass menuIsOpen={true} to component to debug
-const StyledSelect = styled(Select)`
-  width: 100%;
-  max-width: 640px;
-  color: black;
-  /* Component */
-  .react-select__control {
-    border: 1px solid ${(props) => props.theme.colors.searchBorder};
-    background: ${(props) => props.theme.colors.searchBackground};
-    /* Dropdown arrow */
-    .react-select__indicator {
-      color: ${(props) => props.theme.colors.searchBorder};
-    }
-    &.react-select__control--is-focused {
-      border-color: ${(props) => props.theme.colors.primary} !important;
-      box-shadow: 0 0 0 1px ${(props) => props.theme.colors.primary} !important;
-      .react-select__value-container {
-        border-color: ${(props) => props.theme.colors.primary} !important;
-      }
-    }
-  }
-  .react-select__placeholder {
-    color: ${(props) => props.theme.colors.text200};
-  }
-  .react-select__single-value {
-    color: ${(props) => props.theme.colors.text};
-  }
-  .react-select__menu {
-    background: ${(props) => props.theme.colors.searchBackground};
-    color: ${(props) => props.theme.colors.text};
-  }
-  .react-select__input {
-    color: ${(props) => props.theme.colors.text};
-  }
-  .react-select__option {
-    &:hover {
-      background-color: ${(props) => props.theme.colors.selectHover};
-    }
-    &:active {
-      background-color: ${(props) => props.theme.colors.selectActive};
-      color: ${(props) => props.theme.colors.buttonColor} !important;
-    }
-  }
-  .react-select__option--is-focused {
-    background-color: ${(props) => props.theme.colors.selectHover};
-  }
-  .react-select__option--is-selected {
-    background-color: ${(props) => props.theme.colors.primary};
-    color: ${(props) => props.theme.colors.buttonColor};
-    &:hover {
-      background-color: ${(props) => props.theme.colors.primary};
-    }
-  }
 `
 
 const ListContainer = styled.div`
@@ -150,6 +94,10 @@ const Disclaimer = styled.p`
   max-width: 876px;
   margin-top: 4rem;
   margin-bottom: 0;
+`
+
+const StyledSelect = styled(Select)`
+  max-width: 640px;
 `
 
 const NoResults = ({ children }) => (
