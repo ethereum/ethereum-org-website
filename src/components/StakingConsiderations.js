@@ -92,6 +92,7 @@ const IndicatorRow = styled.div`
   display: flex;
   gap: 2rem;
   justify-content: center;
+  margin-top: auto;
 `
 
 const Indicator = styled.div`
