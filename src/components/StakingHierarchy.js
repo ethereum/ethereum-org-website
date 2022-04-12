@@ -349,7 +349,7 @@ const StakingHierarchy = () => {
         <Header>
           <h2>Pooled staking</h2>
           <Pills className="subtext">
-            <p>Stake what you can</p>
+            <p>Stake any amount</p>
             <p>Earn rewards</p>
             <p>Keep it simple</p>
             <p>
