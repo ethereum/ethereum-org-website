@@ -62,8 +62,22 @@ Have a suggestion for a staking tool we missed? Check out our [product listing p
 
 <!-- TODO: Add pool FAQs -->
 
-<ExpandableCard title="When can I withdraw?">
-Lorem ipsum...
+<ExpandableCard title="How do I earn rewards?">
+Typically ERC-20 liquidity tokens are issued to stakers that represents the value of their staked ETH plus rewards. Keep in mine that different pools will distribute staking rewards to their users via slightly different methods, but this is the common theme.
+</ExpandableCard>
+
+<ExpandableCard title="When can I withdraw my stake?">
+Currently, withdrawing funds from a validator on the Beacon Chain is not possible, which currently limits the ability to actually <em>redeem</em> your liquidity token for the ETH rewards locked in the consensus layer.
+
+Alternatively, pools that utilize an ERC-20 liquidity token allow users to trade this token in the open market, effectively allowing you to "withdraw" without actually removing ETH from the Beacon Chain.
+</ExpandableCard>
+
+<ExpandableCard title="Is this different from staking with my exchange?">
+There are many similarities between these pooled staking options and centralized exchanges, such as the ability to stake small amounts of ETH and have them bundled together to activate validators.
+
+Unlike centralized exchanges, many other pooled staking options utilize smart contracts and/or liquidity tokens, which are usually ERC-20 tokens that can be held in your own wallet, and bought or sold just like any other token. This offers a layer of sovereignty and security by giving you control over your tokens, but still does not give you direct control over the validator client attesting on your behalf in the background.
+
+Some pooling options are more decentralized than others when it comes to the nodes that back them. To promote the health and decentralization of the network, stakers are always encourage to select a pooling service that enables a permissionless decentralized set of node operators.
 </ExpandableCard>
 
 ## Further reading {#further-reading}
