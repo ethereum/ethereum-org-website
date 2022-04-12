@@ -275,21 +275,10 @@ const StakingHierarchy = () => {
             network.
           </p>
           <p>
-            Those considering solo staking should have at least 32 ETH, hardware
-            connected to the internet ~24/7, and some technical know-how.
-          </p>
-          <p>
-            Over time, tooling has improved to help users get past some of the
-            technical hurdles, including options to bypass the command-line
-            altogether, if that's not your thing.
-          </p>
-          <p>
-            Check out some solo staking tools, then get started staking on the
-            Prater Testnet over on the{" "}
-            <Link to="https://prater.launchpad.ethereum.org">
-              Staking Launchpad
-            </Link>
-            .
+            Those considering solo staking should have at least 32 ETH and
+            hardware connected to the internet ~24/7. Some technical know-how is
+            helpful, but easy-to-use tools now exist to help simplify this
+            process.
           </p>
           <ButtonLink
             to="/staking/solo/"
@@ -322,11 +311,6 @@ const StakingHierarchy = () => {
           <SaasGlyph />
         </Glyph>
         <Content>
-          <p>
-            Running your own hardware is always recommended if possible for the
-            strength and health of the network, but we recognize this isn't
-            always reasonable for all users.
-          </p>
           <p>
             If you don't want or don't feel comfortable dealing with hardware,
             but still want to stake your 32 ETH, staking-as-a-service options
@@ -428,11 +412,6 @@ const StakingHierarchy = () => {
         </Glyph>
         <Content>
           <p>
-            Ethereum users are encouraged to stake by the best means possible
-            for the health and decentralization of the network, which tends to
-            involve individuals taking control instead of centralized agencies.
-          </p>
-          <p>
             If you are not yet comfortable holding ETH in your own wallet, many
             centralized exchanges provide staking services and can be a fallback
             to allow you to earn some yield on your ETH holdings, with minimal
@@ -446,16 +425,12 @@ const StakingHierarchy = () => {
             vulnerable to attack or bugs.
           </p>
           <p>
-            Users should stake by the best means possible,{" "}
-            <em>within their means</em>. If you don't feel comfortable holding
-            your own keys, that's okay. These options are here for you.
-          </p>
-          <p>
-            In the meantime, consider checking out our{" "}
-            <Link to="/wallets">wallets page</Link>, where you can get started
-            learning how to take true ownership over your funds. When you're
-            ready, come back and level up your staking game by trying one of the
-            self-custody pooled staking services offered.
+            If you don't feel comfortable holding your own keys, that's okay.
+            These options are here for you. In the meantime, consider checking
+            out our <Link to="/wallets">wallets page</Link>, where you can get
+            started learning how to take true ownership over your funds. When
+            you're ready, come back and level up your staking game by trying one
+            of the self-custody pooled staking services offered.
           </p>
         </Content>
       </Section>
