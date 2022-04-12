@@ -20,7 +20,7 @@ Staking as a service (“SaaS") represents a category of staking services where 
 
 ## Why stake with a service? {#why-stake-with-a-service}
 
-The Ethereum protocol does not natively support delegation of stake, so these services have been built out to fill this demand. If you have 32 ETH to stake, but don't feel comfortable dealing with hardware, SaaS services allow you to delegate the hard part, while you earn native block rewards.
+The Ethereum protocol does not natively support delegation of stake, so these services have been built out to fill this demand. If you have 32 ETH to stake, but don't feel comfortable dealing with hardware, SaaS services allow you to delegate the hard part while you earn native block rewards.
 
 <CardGrid>
   <Card title="Your own validator" emoji=":desktop_computer:">

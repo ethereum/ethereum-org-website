@@ -275,10 +275,10 @@ const StakingHierarchy = () => {
             else with your funds.
           </p>
           <p>
-            Those considering solo staking should have at least 32 ETH and
-            hardware connected to the internet ~24/7. Some technical know-how is
-            helpful, but easy-to-use tools now exist to help simplify this
-            process.
+            Those considering solo staking should have at least 32 ETH and a
+            dedicated computer connected to the internet ~24/7. Some technical
+            know-how is helpful, but easy-to-use tools now exist to help
+            simplify this process.
           </p>
           <ButtonLink
             to="/staking/solo/"
@@ -312,9 +312,9 @@ const StakingHierarchy = () => {
         </Glyph>
         <Content>
           <p>
-            If you don't want or don't feel comfortable dealing with hardware,
+            If you don't want or don't feel comfortable dealing with hardware
             but still want to stake your 32 ETH, staking-as-a-service options
-            allow you to delegate the hard part, while you earn native block
+            allow you to delegate the hard part while you earn native block
             rewards.
           </p>
           <p>
@@ -414,7 +414,7 @@ const StakingHierarchy = () => {
           <p>
             If you are not yet comfortable holding ETH in your own wallet, many
             centralized exchanges provide staking services and can be a fallback
-            to allow you to earn some yield on your ETH holdings, with minimal
+            to allow you to earn some yield on your ETH holdings with minimal
             oversight or effort.
           </p>
           <p>
@@ -427,7 +427,7 @@ const StakingHierarchy = () => {
           <p>
             If you don't feel comfortable holding your own keys, that's okay.
             These options are here for you. In the meantime, consider checking
-            out our <Link to="/wallets">wallets page</Link>, where you can get
+            out our <Link to="/wallets/">wallets page</Link>, where you can get
             started learning how to take true ownership over your funds. When
             you're ready, come back and level up your staking game by trying one
             of the self-custody pooled staking services offered.

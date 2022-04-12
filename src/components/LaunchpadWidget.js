@@ -93,11 +93,11 @@ const LaunchpadWidget = () => {
           <Link to="/developers/docs/nodes-and-clients/client-diversity/">
             minority client
           </Link>{" "}
-          as it improves the security of the network, and limits your risk.
+          as it improves the security of the network and limits your risk.
         </p>
         <p>
           If you're comfortable with it, you can set up everything needed from
-          the <code>command line</code> using the Staking Launchpad alone.
+          the command line using the Staking Launchpad alone.
         </p>
         <ButtonContainer style={{ marginBottom: "1rem" }}>
           <ButtonLink to={data[selection].url}>

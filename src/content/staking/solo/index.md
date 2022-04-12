@@ -30,7 +30,7 @@ Solo staking comes with more responsibility, but provides you with maximum contr
 
 <CardGrid>
   <Card title="Earn fresh ETH" emoji="💸">
-    Earn ETH denominated rewards directly from the protocol when your validator is online, without any middlemen taking a cut.
+    Earn ETH-denominated rewards directly from the protocol when your validator is online, without any middlemen taking a cut.
   </Card>
   <Card title="Full control" emoji="🎛️">
     Keep your own keys, and choose the combination of clients and hardware that allows you to minimize your risk, and best contribute to the health and security of the network. Third-party staking services make these decisions for you, and they don't always make the safest choices.
@@ -46,11 +46,11 @@ As much as we wish that solo staking was accessible and risk free to everyone, t
 
 <InfoGrid>
   <ExpandableCard title="Required reading" eventCategory="SoloStaking" eventName="clicked required reading">
-    When operating your own node you should spend some time learning how to use the software you've chosen. This should involve reading relevant documentation and being attune to communication channels of those dev teams.
+    When operating your own node you should spend some time learning how to use the software you've chosen. This involves reading relevant documentation and being attune to communication channels of those dev teams.
     The more you understand about the software you're running and how proof-of-stake works, the less risky it will be as a staker, and the easier it will be to fix any issues that may arise along the way as a node operator. 
   </ExpandableCard>
   <ExpandableCard title="Comfortable with computers" eventCategory="SoloStaking" eventName="clicked comfortable with computers">
-    Node setup requires a reasonable comfort level when working with computers, although new tools are making this easier over time. Understanding of the command-line interface is helpful, but no longer strictly required 
+    Node setup requires a reasonable comfort level when working with computers, although new tools are making this easier over time. Understanding of the command-line interface is helpful, but no longer strictly required.
     It also requires very basic hardware setup, and some understanding of minimum recommended specs.
   </ExpandableCard>
   <ExpandableCard title="Secure key management" eventCategory="SoloStaking" eventName="clicked secure key management">
@@ -58,10 +58,10 @@ As much as we wish that solo staking was accessible and risk free to everyone, t
     <p style={{marginTop: "1rem"}}><ButtonLink to="/security">Ethereum security and scam prevention</ButtonLink></p>
   </ExpandableCard>
   <ExpandableCard title="No withdrawing (for now)" eventCategory="SoloStaking" eventName="clicked no withdrawing">
-    Withdrawing staked ETH or rewards from a validator balance is not yet supported. Support for withdrawals are planned for the Shanghai upgrade following The Merge. You should anticipate your ETH being locked for at least one-to-two years. After Shanghai, this will no longer be the case, at which point you will be able to freely withdraw portions or all of your stake if you wish.
+    Withdrawing staked ETH or rewards from a validator balance is not yet supported. Support for withdrawals are planned for the Shanghai upgrade following The Merge. You should anticipate your ETH being locked for at least one-to-two years. After the Shanghai upgrade you will be able to freely withdraw portions or all of your stake if you wish.
   </ExpandableCard>
   <ExpandableCard title="Maintenance" eventCategory="SoloStaking" eventName="clicked maintenance">
-    Hardware occasionally fails, connections error out, and client software occasionally needs upgrading. Node maintenance is inevitable and will occasionally require your attention. You'll want to be sure you stay aware of any anticipated network upgrades, or other critical client upgrades.
+    Hardware occasionally fails, network connections error out, and client software occasionally needs upgrading. Node maintenance is inevitable and will occasionally require your attention. You'll want to be sure you stay aware of any anticipated network upgrades, or other critical client upgrades.
   </ExpandableCard>
   <ExpandableCard title="Reliable uptime" eventCategory="SoloStaking" eventName="clicked reliable uptime">
     Your rewards are proportional to the time your validator is online and properly attesting. Downtime incurs penalties roughly equal to what you would have earned in that same amount of time. Being offline while the network is finalizing does not result in slashing.
@@ -112,7 +112,7 @@ Please note the importance of choosing a <a href="/developers/docs/nodes-and-cli
 
 #### Key Generators
 
-These tools can be used as an alternative to the [Staking Deposit CLI](https://github.com/ethereum/staking-deposit-cli) to help with key generation.
+These tools can be used as an alternative to the [Staking Deposit CLI](https://github.com/ethereum/staking-deposit-cli/) to help with key generation.
 
 <StakingProductsCardGrid category="keyGen" />
 

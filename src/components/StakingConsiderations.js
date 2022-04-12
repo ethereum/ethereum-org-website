@@ -191,7 +191,7 @@ const data = {
     {
       title: "Permissionless",
       description:
-        "User does not require any special permission to operate a validator using the software or service",
+        "Users do not require any special permission to operate a validator using the software or service",
       valid: "No permission",
       caution: "",
       warning: "Permission required",
@@ -205,7 +205,7 @@ const data = {
     {
       title: "Multi-client",
       description:
-        "Software enables users to pick from and switch between at least two or more CL clients",
+        "Software enables users to pick from and switch between at least two or more consensus layer clients",
       valid: "Easy client switching",
       caution: "",
       warning: "Limited to majority client",
@@ -305,7 +305,7 @@ const data = {
     {
       title: "Permissionless",
       description:
-        "User does not require any special permission, account sign up or KYC to participate with the service",
+        "Users do not require any special permission, account sign up or KYC to participate with the service",
       valid: "Anyone can join",
       caution: "",
       warning: "Permission required",
