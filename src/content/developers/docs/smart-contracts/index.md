@@ -13,6 +13,8 @@ Smart contracts are a type of [Ethereum account](/developers/docs/accounts/). Th
 
 ## Prerequisites {#prerequisites}
 
+If you're just getting started or looking for a less technical introduction, we recommend our [introduction to smart contracts](/smart-contracts/).
+
 Make sure you've read up on [accounts](/developers/docs/accounts/), [transactions](/developers/docs/transactions/) and the [Ethereum virtual machine](/developers/docs/evm/) before jumping into the world of smart contracts.
 
 ## A digital vending machine {#a-digital-vending-machine}
