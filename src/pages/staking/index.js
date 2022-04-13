@@ -479,16 +479,7 @@ const StakingPage = ({ data }) => {
                 </ul>
               </div>
               <div style={{ gridArea: "solo-cta" }}>
-                <StyledButtonLink
-                  onClick={() => {
-                    trackCustomEvent({
-                      eventCategory: `Staking Comparison`,
-                      eventAction: `Clicked`,
-                      eventName: "clicked solo staking",
-                    })
-                  }}
-                  to="/staking/solo/"
-                >
+                <StyledButtonLink to="/staking/solo/">
                   More on solo staking
                 </StyledButtonLink>
               </div>
@@ -541,16 +532,7 @@ const StakingPage = ({ data }) => {
                 </ul>
               </div>
               <div style={{ gridArea: "saas-cta" }}>
-                <StyledButtonLink
-                  onClick={() => {
-                    trackCustomEvent({
-                      eventCategory: `Staking Comparison`,
-                      eventAction: `Clicked`,
-                      eventName: "clicked staking as a service",
-                    })
-                  }}
-                  to="/staking/saas"
-                >
+                <StyledButtonLink to="/staking/saas">
                   More on staking as a service
                 </StyledButtonLink>
               </div>
@@ -609,16 +591,7 @@ const StakingPage = ({ data }) => {
                 </ul>
               </div>
               <div style={{ gridArea: "pool-cta" }}>
-                <StyledButtonLink
-                  onClick={() => {
-                    trackCustomEvent({
-                      eventCategory: `Staking Comparison`,
-                      eventAction: `Clicked`,
-                      eventName: "clicked pooled staking",
-                    })
-                  }}
-                  to="/staking/pools/"
-                >
+                <StyledButtonLink to="/staking/pools/">
                   More on pooled staking
                 </StyledButtonLink>
               </div>
@@ -644,7 +617,7 @@ const StakingPage = ({ data }) => {
               of 32 ETH. This means that staking is done in 32 ETH increments,
               each with it's own set of keys and balance. Do not deposit more
               than 32 ETH for a single validator. It will be locked until the
-              planned Shanghai update. If solo staking seems too demanding you
+              planned Shanghai update. If solo staking seems too demanding for
               you, consider using a{" "}
               <Link to="/staking/saas/">staking-as-a-service</Link> provider, or
               if you're working with less than 32 ETH, check out the{" "}
@@ -659,28 +632,15 @@ const StakingPage = ({ data }) => {
             </ExpandableCard>
             <ExpandableCard title="Can I buy 'Eth2'?">
               <p>
-                No. There is no 'Eth2' token native to the protocol, as the
-                native token ether (ETH) will not change with the transition to
+                There is no 'Eth2' token native to the protocol, as the native
+                token ether (ETH) will not change with the transition to
                 proof-of-stake.
               </p>
               <p>
-                The term 'Eth2' has been deprecated, partially in attempt to
-                reduce confusion regarding the transition to proof-of-stake for
-                ETH holders. If you would like to participate in staking, you
-                must deposit ETH into the official staking contract where you
-                will be credited with an equal amount of ETH in your validator
-                account. Alternatively, you may participate in pooled staking
-                which may involve a liquidity token, but these are not native to
-                the protocol.
-              </p>
-              <p>
-                If you do not plan on staking, you do not need to do anything
-                with your ETH during the transition to proof-of-stake.
-              </p>
-              <p>
-                <Link to="/security/#eth2-token-scam">
-                  Learn more about 'Eth2' token scam
-                </Link>
+                There are derivative tokens/tickers that may represent staked
+                ETH (ie. rETH from Rocket Pool, stETH from Lido, ETH2 from
+                Coinbase). Learn more about{" "}
+                <Link to="/staking/pools/">staking pools</Link>
               </p>
             </ExpandableCard>
           </Content>
