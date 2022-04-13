@@ -252,7 +252,6 @@ const StakingProductCard = ({
           {minEth > 0 ? `From ${minEth} ETH` : "Any amount"}
         </MinEthBar>
       )}
-
       <Pills>
         {platforms &&
           platforms.map((platform, idx) => (
@@ -266,10 +265,6 @@ const StakingProductCard = ({
               {_ui}
             </Pill>
           ))}
-        {/*         {typeof minEth !== "undefined" && (
-          <Pill>{minEth > 0 ? `From ${minEth} ETH` : "Any amount"}</Pill>
-        )}
- */}{" "}
       </Pills>
       <Spacer />
       <Content>
