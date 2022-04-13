@@ -700,10 +700,7 @@ const StakingPage = ({ data }) => {
             </ul>
           </Content>
           <Content>
-            <FeedbackCard
-              prompt="Did this page help answer your question?"
-              isStaking
-            />
+            <FeedbackCard prompt="Did this page help answer your question?" />
           </Content>
         </ContentContainer>
         <MobileButton>

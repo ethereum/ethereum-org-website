@@ -39,9 +39,12 @@ const ButtonContainer = styled.div`
   }
 `
 
-const FeedbackCard = ({ prompt, isStaking, className }) => {
+const FeedbackCard = ({ prompt, className }) => {
   const [feedbackSubmitted, setFeedbackSubmitted] = useState(false)
   const [isHelpful, setIsHelpful] = useState(false)
+
+  const location = window ? window.location.href : ""
+  const isStaking = location.includes("staking")
 
   const getTitle = (feedbackSubmitted, isStaking, isHelpful) => {
     if (!feedbackSubmitted)
@@ -50,14 +53,14 @@ const FeedbackCard = ({ prompt, isStaking, className }) => {
       return isHelpful ? (
         <>
           <p>Thanks for the feedback! Want to add more input?</p>
-          <Link to="https://gzmn3wgk.paperform.co/">
+          <Link to={`https://gzmn3wgk.paperform.co/?url=${location}`}>
             Check out our current staking survey!
           </Link>
         </>
       ) : (
         <>
           <p>How can we do better?</p>
-          <Link to="https://zlj83p6l.paperform.co/">
+          <Link to={`https://zlj83p6l.paperform.co/?url=${location}`}>
             Check out our current staking survey!
           </Link>
         </>
