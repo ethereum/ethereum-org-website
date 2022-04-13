@@ -153,6 +153,7 @@ Running a supermajority client (any client used by over 2/3 the network) also ho
 Equivalent bugs in a <em>minority client would never finalize</em> and thus would never result in a surround vote, and would simply result in inactivity penalties, <em>not slashing</em>.
 
 <p><a href="https://hackernoon.com/ethereums-client-diversity-problem">Learn more about the important of running a minority client.</a></p>
+<p><a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50">Learn more about slashing prevention</a></p>
 </ExpandableCard>
 
 <ExpandableCard title="Is staking already live?">

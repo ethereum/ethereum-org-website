@@ -627,13 +627,61 @@ const StakingPage = ({ data }) => {
           <Divider />
           <StakingCommunityCallout id={tocItems.joinTheCommunity.id} />
           <Content>
-            {/* TODO: FAQ completion */}
             <h2 id={tocItems.faq.id}>{tocItems.faq.title}</h2>
-            <ExpandableCard title="How do I withdraw my stake?">
-              <p>Lorem ipsum...</p>
+            <ExpandableCard title="What is a validator?">
+              A <em>validator</em> is a virtual entity that lives on the Beacon
+              Chain, represented by a balance, public key, and other properties.
+              A <em>validator client</em> is the software that acts on behalf of
+              the validator by holding and using its private key. A single
+              validator client can hold many key pairs, controlling many
+              validators. Each key-pair associated with a validator requires
+              32 ETH to be activated. More ETH deposited to a single set of keys
+              does not increase rewards potential, as each validator is limited
+              to an{" "}
+              <a href="https://www.attestant.io/posts/understanding-validator-effective-balance/">
+                effective balance
+              </a>{" "}
+              of 32 ETH. This means that staking is done in 32 ETH increments,
+              each with it's own set of keys and balance. Do not deposit more
+              than 32 ETH for a single validator. It will be locked until the
+              planned Shanghai update. If solo staking seems too demanding you
+              you, consider using a{" "}
+              <a href="/staking/saas/">staking-as-a-service</a> provider, or if
+              you're working with less than 32 ETH, check out the{" "}
+              <a href="/staking/pools/">staking pools</a>.
             </ExpandableCard>
-            <ExpandableCard title="How are the staking rewards calculated?">
-              <p>Lorem ipsum...</p>
+            <ExpandableCard title="Why do I need to have funds at stake?">
+              As a validator you have the ability to propose and attest to
+              blocks for the network. To prevent dishonest behavior users must
+              have their funds at stake. This allows the protocol to penalize
+              malicious actors. Staking is a means to keep you honest, as your
+              actions will have financial consequences.
+            </ExpandableCard>
+            <ExpandableCard title="Can I buy 'Eth2'?">
+              <p>
+                No. There is no 'Eth2' token native to the protocol, as the
+                native token ether (ETH) will not change with the transition to
+                proof-of-stake.
+              </p>
+              <p>
+                The term 'Eth2' has been deprecated, partially in attempt to
+                reduce confusion regarding the transition to proof-of-stake for
+                ETH holders. If you would like to participate in staking, you
+                must deposit ETH into the official staking contract where you
+                will be credited with an equal amount of ETH in your validator
+                account. Alternatively, you may participate in pooled staking
+                which may involve a liquidity token, but these are not native to
+                the protocol.
+              </p>
+              <p>
+                If you do not plan on staking, you do not need to do anything
+                with your ETH during the transition to proof-of-stake.
+              </p>
+              <p>
+                <a href="/security/#eth2-token-scam">
+                  Learn more about 'Eth2' token scam
+                </a>
+              </p>
             </ExpandableCard>
           </Content>
           <Content>
@@ -682,6 +730,11 @@ const StakingPage = ({ data }) => {
               <li>
                 <Link to="https://beaconcha.in/education">
                   Beaconcha.in Community-Contributed Educational Materials
+                </Link>
+              </li>
+              <li>
+                <Link to="https://launchpad.ethereum.org/en/faq">
+                  Ethereum Staking Launchpad FAQ
                 </Link>
               </li>
             </ul>
