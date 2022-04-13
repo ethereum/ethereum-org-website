@@ -6,7 +6,7 @@ sidebar: true
 sidebarDepth: 2
 ---
 
-Ethereum's networking layer is the stack of protocols that allows nodes to find each other and exchange information. After the merge there will be two pieces of client software (execution clients and consensus clients) each with their own separate networking stack. As well as communicating with other nodes on the Ethereum network, the execution and consensus clients also have to communicate with each other. This page gives an introductory explanation of the protocols that enable this communication to take place.
+Ethereum's networking layer is the stack of protocols that allows nodes to find each other and exchange information. After [The Merge](/upgrades/merge/), there will be two parts of client software (execution clients and consensus clients), each with its own distinct networking stack. As well as communicating with other Ethereum nodes, the execution and consensus clients have to communicate with each other. This page gives an introductory explanation of the protocols that enable this communication.
 
 ## Prerequisites {#prerequisites}
 
