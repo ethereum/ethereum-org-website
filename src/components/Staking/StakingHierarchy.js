@@ -3,18 +3,18 @@ import React from "react"
 import styled from "styled-components"
 
 // Components
-import ButtonLink from "./ButtonLink"
-import Link from "./Link"
+import ButtonLink from "../ButtonLink"
+import Link from "../Link"
 
 // Assets
-import EtherSvg from "../assets/staking/staking-glyph-ether-circle.svg"
-import SoloGlyph from "../assets/staking/staking-glyph-cpu.svg"
-import SaasGlyph from "../assets/staking/staking-glyph-cloud.svg"
-import PoolGlyph from "../assets/staking/staking-glyph-token-wallet.svg"
-import CexGlyph from "../assets/staking/staking-glyph-centralized.svg"
+import EtherSvg from "../../assets/staking/staking-glyph-ether-circle.svg"
+import SoloGlyph from "../../assets/staking/staking-glyph-cpu.svg"
+import SaasGlyph from "../../assets/staking/staking-glyph-cloud.svg"
+import PoolGlyph from "../../assets/staking/staking-glyph-token-wallet.svg"
+import CexGlyph from "../../assets/staking/staking-glyph-centralized.svg"
 
 // Utils
-import { trackCustomEvent } from "../utils/matomo"
+import { trackCustomEvent } from "../../utils/matomo"
 
 const Container = styled.div`
   border-radius: 0.5rem;

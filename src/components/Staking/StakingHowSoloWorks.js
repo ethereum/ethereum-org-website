@@ -4,8 +4,8 @@ import styled from "styled-components"
 import { graphql, useStaticQuery } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
-import Link from "./Link"
-import OrderedList from "./OrderedList"
+import Link from "../Link"
+import OrderedList from "../OrderedList"
 
 const Flex = styled.div`
   display: flex;
@@ -18,7 +18,7 @@ const Flex = styled.div`
 
 const Image = styled(GatsbyImage)``
 
-const HowSoloStakingWorks = () => {
+const StakingHowSoloWorks = () => {
   const intl = useIntl()
   const { image } = useStaticQuery(graphql`
     {
@@ -54,4 +54,4 @@ const HowSoloStakingWorks = () => {
   )
 }
 
-export default HowSoloStakingWorks
+export default StakingHowSoloWorks

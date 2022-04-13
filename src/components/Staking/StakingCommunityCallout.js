@@ -4,11 +4,11 @@ import styled from "styled-components"
 import { graphql, useStaticQuery } from "gatsby"
 import { getImage } from "gatsby-plugin-image"
 
-import ButtonLink from "./ButtonLink"
-import CalloutBanner from "./CalloutBanner"
+import ButtonLink from "../ButtonLink"
+import CalloutBanner from "../CalloutBanner"
 
-import { translateMessageId } from "../utils/translations"
-import { trackCustomEvent } from "../utils/matomo"
+import { translateMessageId } from "../../utils/translations"
+import { trackCustomEvent } from "../../utils/matomo"
 
 const StyledCallout = styled(CalloutBanner)`
   margin: 4rem 0;
@@ -28,7 +28,7 @@ const StyledButtonLink = styled(ButtonLink)`
   }
 `
 
-const StakingCommunityCallout = ({ className, id }) => {
+const StakingCommunityCallout = (props) => {
   const intl = useIntl()
   const { image } = useStaticQuery(graphql`
     {
@@ -47,12 +47,11 @@ const StakingCommunityCallout = ({ className, id }) => {
 
   return (
     <StyledCallout
+      {...props}
       image={getImage(image)}
       alt={translateMessageId("page-staking-image-alt", intl)}
       titleKey={"page-staking-join-community"}
       descriptionKey={"page-staking-join-community-desc"}
-      id={id}
-      className={className}
     >
       <ButtonContaier>
         <StyledButtonLink

@@ -2,7 +2,7 @@
 import React from "react"
 
 // Components
-import CardList from "./CardList"
+import CardList from "../CardList"
 
 const StakingGuides = () => {
   const guides = [

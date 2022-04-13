@@ -2,15 +2,15 @@ import React, { useContext } from "react"
 import styled, { ThemeContext } from "styled-components"
 import { useIntl } from "gatsby-plugin-intl"
 
-import Link from "./Link"
-import Translation from "./Translation"
+import Link from "../Link"
+import Translation from "../Translation"
 
-import { translateMessageId } from "../utils/translations"
-import { trackCustomEvent } from "../utils/matomo"
+import { translateMessageId } from "../../utils/translations"
+import { trackCustomEvent } from "../../utils/matomo"
 
-import SoloGlyph from "../assets/staking/staking-glyph-cpu.svg"
-import SaasGlyph from "../assets/staking/staking-glyph-cloud.svg"
-import PoolGlyph from "../assets/staking/staking-glyph-token-wallet.svg"
+import SoloGlyph from "../../assets/staking/staking-glyph-cpu.svg"
+import SaasGlyph from "../../assets/staking/staking-glyph-cloud.svg"
+import PoolGlyph from "../../assets/staking/staking-glyph-token-wallet.svg"
 
 const GradientContainer = styled.div`
   display: flex;

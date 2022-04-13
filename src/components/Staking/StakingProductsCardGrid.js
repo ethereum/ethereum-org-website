@@ -2,29 +2,29 @@ import React, { useContext } from "react"
 import styled, { ThemeContext } from "styled-components"
 import { shuffle } from "lodash"
 // Data imports
-import stakingProducts from "../data/staking-products.json"
+import stakingProducts from "../../data/staking-products.json"
 // Component imports
-import ButtonLink from "./ButtonLink"
+import ButtonLink from "../ButtonLink"
 // SVG imports
-import GreenCheck from "../assets/staking/green-check-product-glyph.svg"
-import Caution from "../assets/staking/caution-product-glyph.svg"
-import Warning from "../assets/staking/warning-product-glyph.svg"
-import Unknown from "../assets/staking/unknown-product-glyph.svg"
+import GreenCheck from "../../assets/staking/green-check-product-glyph.svg"
+import Caution from "../../assets/staking/caution-product-glyph.svg"
+import Warning from "../../assets/staking/warning-product-glyph.svg"
+import Unknown from "../../assets/staking/unknown-product-glyph.svg"
 // Product SVGs
-import Abyss from "../assets/staking/abyss-glyph.svg"
-import Allnodes from "../assets/staking/allnodes-glyph.svg"
-import Ankr from "../assets/staking/ankr-glyph.svg"
-import Bloxstaking from "../assets/staking/bloxstaking-glyph.svg"
-import Dappnode from "../assets/staking/dappnode-glyph.svg"
-import DefaultOpenSource from "../assets/staking/default-open-source-glyph.svg"
-import Docker from "../assets/staking/docker-icon.svg"
-import Lido from "../assets/staking/lido-glyph.svg"
-import RocketPool from "../assets/staking/rocket-pool-glyph.svg"
-import Stafi from "../assets/staking/stafi-glyph.svg"
-import Stakefish from "../assets/staking/stakefish-glyph.svg"
-import Stakewise from "../assets/staking/stakewise-glyph.svg"
-import Stereum from "../assets/staking/stereum-glyph.svg"
-import Wagyu from "../assets/staking/wagyu-glyph.svg"
+import Abyss from "../../assets/staking/abyss-glyph.svg"
+import Allnodes from "../../assets/staking/allnodes-glyph.svg"
+import Ankr from "../../assets/staking/ankr-glyph.svg"
+import Bloxstaking from "../../assets/staking/bloxstaking-glyph.svg"
+import Dappnode from "../../assets/staking/dappnode-glyph.svg"
+import DefaultOpenSource from "../../assets/staking/default-open-source-glyph.svg"
+import Docker from "../../assets/staking/docker-icon.svg"
+import Lido from "../../assets/staking/lido-glyph.svg"
+import RocketPool from "../../assets/staking/rocket-pool-glyph.svg"
+import Stafi from "../../assets/staking/stafi-glyph.svg"
+import Stakefish from "../../assets/staking/stakefish-glyph.svg"
+import Stakewise from "../../assets/staking/stakewise-glyph.svg"
+import Stereum from "../../assets/staking/stereum-glyph.svg"
+import Wagyu from "../../assets/staking/wagyu-glyph.svg"
 // When adding a product svg, be sure to add to mapping below as well.
 
 const CardGrid = styled.div`
@@ -46,7 +46,7 @@ const Card = styled.div`
 `
 
 const PaddedDiv = styled.div`
-  padding: 1.75rem 2rem;
+  padding: 1.5rem 2rem;
 `
 
 const Spacer = styled.div`
@@ -70,10 +70,23 @@ const Banner = styled(PaddedDiv)`
     height: 2rem;
   }
 `
+
+const MinEthBar = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 1rem;
+  color: ${({ theme }) => theme.colors.textTableOfContents};
+  text-transform: uppercase;
+  padding-top: 1.5rem;
+`
+
 const Pills = styled(PaddedDiv)`
   display: flex;
   flex-wrap: wrap;
   gap: 0.25rem;
+  /* padding-top: 1rem; */
 `
 
 const Pill = styled.div`
@@ -234,6 +247,12 @@ const StakingProductCard = ({
         {!!Svg && <Svg style={{ width: "32", height: "auto" }} />}
         <h2>{name}</h2>
       </Banner>
+      {typeof minEth !== "undefined" && (
+        <MinEthBar>
+          {minEth > 0 ? `From ${minEth} ETH` : "Any amount"}
+        </MinEthBar>
+      )}
+
       <Pills>
         {platforms &&
           platforms.map((platform, idx) => (
@@ -247,9 +266,10 @@ const StakingProductCard = ({
               {_ui}
             </Pill>
           ))}
-        {typeof minEth !== "undefined" && (
+        {/*         {typeof minEth !== "undefined" && (
           <Pill>{minEth > 0 ? `From ${minEth} ETH` : "Any amount"}</Pill>
         )}
+ */}{" "}
       </Pills>
       <Spacer />
       <Content>

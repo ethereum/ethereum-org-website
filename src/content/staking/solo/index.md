@@ -33,7 +33,7 @@ Solo staking comes with more responsibility, but provides you with maximum contr
     Earn ETH-denominated rewards directly from the protocol when your validator is online, without any middlemen taking a cut.
   </Card>
   <Card title="Full control" emoji="🎛️">
-    Keep your own keys, and choose the combination of clients and hardware that allows you to minimize your risk, and best contribute to the health and security of the network. Third-party staking services make these decisions for you, and they don't always make the safest choices.
+    Keep your own keys. Choose the combination of clients and hardware that allows you to minimize your risk and best contribute to the health and security of the network. Third-party staking services make these decisions for you, and they don't always make the safest choices.
   </Card>
   <Card title="Network security" emoji="🔐">
     Solo staking is the most impactful way to stake. By running a validator on your own hardware at home, you strengthen the robustness, decentralization, and security of the Ethereum protocol.
@@ -64,7 +64,7 @@ As much as we wish that solo staking was accessible and risk free to everyone, t
     Hardware occasionally fails, network connections error out, and client software occasionally needs upgrading. Node maintenance is inevitable and will occasionally require your attention. You'll want to be sure you stay aware of any anticipated network upgrades, or other critical client upgrades.
   </ExpandableCard>
   <ExpandableCard title="Reliable uptime" eventCategory="SoloStaking" eventName="clicked reliable uptime">
-    Your rewards are proportional to the time your validator is online and properly attesting. Downtime incurs penalties proportional to how many other validators are offline at the same time, but <a href="#faq">does not result in slashing</a>.Bandwidth also matters, as rewards are decreased for attestations that are not received in time. Requirements will vary, but a minimum of 10 Mb/s up and down is recommended.
+    Your rewards are proportional to the time your validator is online and properly attesting. Downtime incurs penalties proportional to how many other validators are offline at the same time, but <a href="#faq">does not result in slashing</a>. Bandwidth also matters, as rewards are decreased for attestations that are not received in time. Requirements will vary, but a minimum of 10 Mb/s up and down is recommended.
   </ExpandableCard>
   <ExpandableCard title="Slashing risk" eventCategory="SoloStaking" eventName="clicked slashing risk">
     Different from inactivity penalties for being offline, <em>slashing</em> is a much more serious penalty reserved for malicious offenses. By running a minority client with your keys loaded on only one machine at time, your risk of being slashed is minimized. That being said, all stakers must be aware of the risks of slashing.
@@ -77,7 +77,7 @@ As much as we wish that solo staking was accessible and risk free to everyone, t
 
 ## How it works {#how-it-works}
 
-<HowSoloStakingWorks />
+<StakingHowSoloWorks />
 
 If ever desired, you can exit as a validator which eliminates the requirement to be online, and stops any further rewards. Be aware that until the planned Shanghai upgrade _withdrawing_ those funds will not be possible.
 
@@ -171,7 +171,7 @@ Since all production clients provide the same basic functionality, it is actuall
 </ExpandableCard>
 
 <ExpandableCard title="Can I just use a VPS (virtual private server)?">
-Although a virtual private server (VPS) can be used as a replacement to home hardware, the physical access and location of your validator client _does matter._ Centralized cloud solutions such as Amazon Web Services or Digital Ocean allow the convenience of not having to obtain and operate hardware, at the expense of centralizing the network.
+Although a virtual private server (VPS) can be used as a replacement to home hardware, the physical access and location of your validator client <em>does matter</em>. Centralized cloud solutions such as Amazon Web Services or Digital Ocean allow the convenience of not having to obtain and operate hardware, at the expense of centralizing the network.
 
 The more validator clients running on a single centralized cloud storage solution, the more dangerous it becomes for these users. Any event that takes these providers offline, whether by an attack, regulatory demands, or just power/internet outages, will result in every validator client that relies on this server to go offline at the same time.
 

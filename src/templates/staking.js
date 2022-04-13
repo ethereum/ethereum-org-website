@@ -7,11 +7,9 @@ import styled from "styled-components"
 
 import ButtonLink from "../components/ButtonLink"
 import ButtonDropdown from "../components/ButtonDropdown"
-// import BannerNotification from "../components/BannerNotification"
 import Card from "../components/Card"
 import ExpandableCard from "../components/ExpandableCard"
 import DocLink from "../components/DocLink"
-// import Icon from "../components/Icon"
 import Contributors from "../components/Contributors"
 import SharedInfoBanner from "../components/InfoBanner"
 import UpgradeStatus from "../components/UpgradeStatus"
@@ -38,14 +36,14 @@ import {
 } from "../components/SharedStyledComponents"
 import Emoji from "../components/Emoji"
 import YouTube from "../components/YouTube"
-import LaunchpadWidget from "../components/LaunchpadWidget"
 import Breadcrumbs from "../components/Breadcrumbs"
-import StakingProductsCardGrid from "../components/StakingProductsCardGrid"
-import StakingComparison from "../components/StakingComparison"
-import HowSoloStakingWorks from "../components/HowSoloStakingWorks"
-import StakingConsiderations from "../components/StakingConsiderations"
-import StakingCommunityCallout from "../components/StakingCommunityCallout"
-import StakingGuides from "../components/StakingGuides"
+import StakingLaunchpadWidget from "../components/Staking/StakingLaunchpadWidget"
+import StakingProductsCardGrid from "../components/Staking/StakingProductsCardGrid"
+import StakingComparison from "../components/Staking/StakingComparison"
+import StakingHowSoloWorks from "../components/Staking/StakingHowSoloWorks"
+import StakingConsiderations from "../components/Staking/StakingConsiderations"
+import StakingCommunityCallout from "../components/Staking/StakingCommunityCallout"
+import StakingGuides from "../components/Staking/StakingGuides"
 
 import { isLangRightToLeft } from "../utils/translations"
 
@@ -333,10 +331,10 @@ const components = {
   DocLink,
   ExpandableCard,
   YouTube,
-  LaunchpadWidget,
+  StakingLaunchpadWidget,
   StakingProductsCardGrid,
   StakingComparison,
-  HowSoloStakingWorks,
+  StakingHowSoloWorks,
   StakingConsiderations,
   StakingGuides,
 }

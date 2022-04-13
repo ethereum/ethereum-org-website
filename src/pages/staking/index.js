@@ -11,8 +11,6 @@ import Card from "../../components/Card"
 import Link from "../../components/Link"
 import PageHero from "../../components/PageHero"
 import PageMetadata from "../../components/PageMetadata"
-import StakingStatsBox from "../../components/StakingStatsBox"
-import StakingHierarchy from "../../components/StakingHierarchy"
 import Translation from "../../components/Translation"
 import {
   CardGrid,
@@ -20,10 +18,12 @@ import {
   Page as PageContainer,
   Divider,
 } from "../../components/SharedStyledComponents"
-import StakingHomeTableOfContents from "../../components/StakingHomeTableOfContents"
 import FeedbackCard from "../../components/FeedbackCard"
 import ExpandableCard from "../../components/ExpandableCard"
-import StakingCommunityCallout from "../../components/StakingCommunityCallout"
+import StakingStatsBox from "../../components/Staking/StakingStatsBox"
+import StakingHierarchy from "../../components/Staking/StakingHierarchy"
+import StakingHomeTableOfContents from "../../components/Staking/StakingHomeTableOfContents"
+import StakingCommunityCallout from "../../components/Staking/StakingCommunityCallout"
 
 import { translateMessageId } from "../../utils/translations"
 import { trackCustomEvent } from "../../utils/matomo"

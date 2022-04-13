@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react"
 import styled from "styled-components"
 import { useIntl } from "gatsby-plugin-intl"
 
-import Translation from "./Translation"
-import { getData } from "../utils/cache"
-import calculateStakingRewards from "../utils/calculateStakingRewards"
+import Translation from "../Translation"
+import { getData } from "../../utils/cache"
+import calculateStakingRewards from "../../utils/calculateStakingRewards"
 
 const Container = styled.div`
   display: flex;

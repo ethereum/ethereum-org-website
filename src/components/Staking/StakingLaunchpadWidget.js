@@ -1,12 +1,12 @@
 import React, { useState } from "react"
 import styled from "styled-components"
 
-import { StyledSelect as Select } from "./SharedStyledComponents"
-import Link from "./Link"
-import ButtonLink from "./ButtonLink"
-import Emoji from "./Emoji"
+import { StyledSelect as Select } from "../SharedStyledComponents"
+import Link from "../Link"
+import ButtonLink from "../ButtonLink"
+import Emoji from "../Emoji"
 
-import { trackCustomEvent } from "../utils/matomo"
+import { trackCustomEvent } from "../../utils/matomo"
 
 const Container = styled.div`
   display: flex;
@@ -44,7 +44,7 @@ const ButtonContainer = styled.div`
   }
 `
 
-const LaunchpadWidget = () => {
+const StakingLaunchpadWidget = () => {
   const [selection, setSelection] = useState("testnet")
 
   const handleChange = (e) => {
@@ -119,4 +119,4 @@ const LaunchpadWidget = () => {
   )
 }
 
-export default LaunchpadWidget
+export default StakingLaunchpadWidget
