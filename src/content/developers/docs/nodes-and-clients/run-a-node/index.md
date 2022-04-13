@@ -151,7 +151,9 @@ Consider creating a service to run your client automatically on startup. For exa
 
 #### Updating client {#updating-client}
 
-You need to keep your client software up-to-date with the latest security patches, features, and [EIPs](/eips/). Especially before [hard forks](/history/), make sure you are running the correct client version. Each client implementation has a human readable version string which is used in the peer-to-peer protocol but is also accessible from the command line, allowing the user to check they are running the correct version (this string is also useful for block explorers and other analytical tools interested in quantifying the distribution of specific clients over the network). Please refer to the individual client documentation for more information about version strings.
+You need to keep your client software up-to-date with the latest security patches, features, and [EIPs](/eips/). Especially before [hard forks](/history/), make sure you are running the correct client version.
+
+Each client implementation has a human-readable version string used in the peer-to-peer protocol but is also accessible from the command line. This version string lets users check they are running the correct version and allows block explorers and other analytical tools interested in quantifying the distribution of specific clients over the network. Please refer to the individual client documentation for more information about version strings.
 
 #### Running additional services {#running-additional-services}
 
