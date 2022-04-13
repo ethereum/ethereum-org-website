@@ -41,7 +41,7 @@ const Card = styled.div`
   border-radius: 0.25rem;
   &:hover {
     transition: 0.1s;
-    transform: scale(1);
+    transform: scale(1.01);
   }
 `
 
