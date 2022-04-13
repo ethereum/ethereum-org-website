@@ -93,7 +93,7 @@ A collection of required information (a block header) about the comprised [trans
 
 ### block explorer {#block-explorer}
 
-A website that allows easy searching and extraction of data from the blockchain.
+A website that allows a user to search for information from, and about, a blockchain. This includes retrieving individual transactions, activity associated with specific addresses and information about the network.
 
 ### block header {#block-header}
 
@@ -105,7 +105,7 @@ The process of transmitting a confirmed block to all other nodes in the network.
 
 ### block time {#block-time}
 
-The average time interval between the mining of two blocks. After the merge the block time will be the time between two Beacon blocks (under optimal conditions there will be one block per slot, which occurs every 6 seconds).
+The average time interval between blocks being added to the blockchain.
 
 ### block validation {#block-validation}
 
@@ -510,9 +510,6 @@ A [wallet](#wallet) using the hierarchical deterministic (HD) key creation and t
 
 A value used to generate the master [private key](#private-key) and master chain code for an HD [wallet](#wallet). The wallet seed can be represented by mnemonic words, making it easier for humans to copy, back up, and restore private keys.
 
-### hexadecimal {#hexadecimal}
-
-Common representation format for byte sequencing. Its advantage is that values are represented in a compact format using two characters per byte (the characters [0-9][a-f]).
 
 ### homestead {#homestead}
 
@@ -662,7 +659,7 @@ A network [node](#node) that finds valid [proof-of-work](#pow) for new blocks, b
   Mining
 </DocLink>
 
-### Mint {#mint}
+### mint {#mint}
 
 Minting is the process of creating new tokens and bringing them into circulation so that they can be used. It's a decentralized mechanism to create a new token without the involvement of the central authority.
 
@@ -713,7 +710,7 @@ In cryptography, a value that can only be used once. There are two types of nonc
 
 When a [miner](#miner) finds a valid [block](#block), another miner may have published a competing block which is added to the tip of the blockchain first. This valid, but stale, block can be included by newer blocks as _ommers_ and receive a partial block reward. The term "ommer" is the preferred gender-neutral term for the sibling of a parent block, but this is also sometimes referred to as an "uncle".
 
-### Optimistic rollup {#optimistic-rollup}
+### optimistic rollup {#optimistic-rollup}
 
 A [rollup](#rollups) of transactions that use [fraud proofs](#fraud-proof) to offer increased [layer 2](#layer-2) transaction throughput while using the security provided by [Mainnet](#mainnet) (layer 1). Unlike [Plasma](#plasma), a similar layer 2 solution, Optimistic rollups can handle more complex transaction types – anything possible in the [EVM](#evm). They do have latency issues compared to [Zero-knowledge rollups](#zk-rollups) because a transaction can be challenged via the fraud proof.
 
@@ -765,7 +762,7 @@ A secret number that allows Ethereum users to prove ownership of an account or c
 
 A fully private blockchain is one with write permissions limited to one organization.
 
-### Proof-of-stake (PoS) {#pos}
+### proof-of-stake (PoS) {#pos}
 
 A method by which a cryptocurrency blockchain protocol aims to achieve distributed [consensus](#consensus). PoS asks users to prove ownership of a certain amount of cryptocurrency (their "stake" in the network) in order to be able to participate in the validation of transactions.
 
@@ -773,7 +770,7 @@ A method by which a cryptocurrency blockchain protocol aims to achieve distribut
   Proof-of-stake
 </DocLink>
 
-### Proof-of-work (PoW) {#pow}
+### proof-of-work (PoW) {#pow}
 
 A piece of data (the proof) that requires significant computation to find. In Ethereum, [miners](#miner) must find a numeric solution to the [Ethash](#ethash) algorithm that meets a network-wide [difficulty](#difficulty) target.
 
@@ -979,7 +976,7 @@ Short for "test network," a network used to simulate the behavior of the main Et
 
 ### token {#token}
 
-A fungible virtual good that can be traded. More formally, a token is a database mapping addresses to numbers with the property that the primary allowed operation is a transfer of N tokens from A to B, with the conditions that N is non-negative, N is not greater than A’s current balance, and a document authorizing the transfer is digitally signed by A.
+A fungible virtual good that can be traded.
 
 ### token standard {#token-standard}
 
