@@ -207,8 +207,14 @@ const StyledCardGrid = styled.div`
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 
+  @media (max-width: ${({ theme }) => theme.breakpoints.xl}) {
+    grid-template-columns: 1fr;
+  }
+  @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
+    grid-template-columns: repeat(3, 1fr);
+  }
   @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: 1fr;
   }
 `
 
