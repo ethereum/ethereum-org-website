@@ -210,11 +210,25 @@ const BugBountiesPage = ({ data, location }) => {
     (a, b) => b.score - a.score
   )
 
+  const executionBountyHunters = data.executionBountyHunters.nodes.sort(
+    (a, b) => b.score - a.score
+  )
+
   const clients = [
     {
-      title: "Prysm",
-      link: "https://prylabs.net/",
-      image: getImage(data.prysmSmall),
+      title: "Besu",
+      link: "https://besu.hyperledger.org/en/stable/",
+      image: getImage(data.besuSmall),
+    },
+    {
+      title: "Erigon",
+      link: "https://github.com/ledgerwatch/erigon",
+      image: getImage(data.erigonSmall),
+    },
+    {
+      title: "Geth",
+      link: "https://geth.ethereum.org/",
+      image: getImage(data.gethSmall),
     },
     {
       title: "Lighthouse",
@@ -224,11 +238,9 @@ const BugBountiesPage = ({ data, location }) => {
         : getImage(data.lighthouseSmallLight),
     },
     {
-      title: "Teku",
-      link: "https://pegasys.tech/teku",
-      image: isDarkTheme
-        ? getImage(data.tekuSmallLight)
-        : getImage(data.tekuSmallDark),
+      title: "Lodestar",
+      link: "https://chainsafe.github.io/lodestar/",
+      image: getImage(data.lodestarSmall),
     },
     {
       title: "Nimbus",
@@ -236,9 +248,21 @@ const BugBountiesPage = ({ data, location }) => {
       image: getImage(data.nimbusSmall),
     },
     {
-      title: "Lodestar",
-      link: "https://chainsafe.github.io/lodestar/",
-      image: getImage(data.lodestarSmall),
+      title: "Nethermind",
+      link: "https://docs.nethermind.io/nethermind/",
+      image: getImage(data.nethermindSmall),
+    },
+    {
+      title: "Prysm",
+      link: "https://prylabs.net/",
+      image: getImage(data.prysmSmall),
+    },
+    {
+      title: "Teku",
+      link: "https://pegasys.tech/teku",
+      image: isDarkTheme
+        ? getImage(data.tekuSmallLight)
+        : getImage(data.tekuSmallDark),
     },
   ]
 
@@ -315,11 +339,17 @@ const BugBountiesPage = ({ data, location }) => {
         <Translation id="page-upgrades-bug-bounty-clients" />
       </ClientIntro>
       <ClientRow>
-        <Client image={getImage(data.prysm)} />
+        <Client image={getImage(data.besu)} />
+        <Client image={getImage(data.erigon)} />
+        <Client image={getImage(data.geth)} />
+        <Client image={getImage(data.nethermind)} />
+      </ClientRow>
+      <ClientRow>
         <Client image={lighthouseImage} />
-        <Client image={tekuImage} />
-        <Client image={getImage(data.nimbus)} />
         <Client image={getImage(data.lodestar)} />
+        <Client image={getImage(data.nimbus)} />
+        <Client image={getImage(data.prysm)} />
+        <Client image={tekuImage} />
       </ClientRow>
       <StyledGrayContainer id="rules">
         <Content>
@@ -343,6 +373,10 @@ const BugBountiesPage = ({ data, location }) => {
             >
               <Link to="https://github.com/ethereum/consensus-specs">
                 <Translation id="page-upgrades-bug-bounty-specs" />
+              </Link>
+              <br />
+              <Link to="https://github.com/ethereum/execution-specs">
+                <Translation id="page-upgrades-bug-bounty-execution-specs" />
               </Link>
               <br />
               <div>
@@ -428,6 +462,31 @@ const BugBountiesPage = ({ data, location }) => {
                 <CardList content={clients} />
               </div>
             </StyledCard>
+            <StyledCard
+              emoji=":book:"
+              title={translateMessageId(
+                "page-upgrades-bug-bounty-misc-bugs",
+                intl
+              )}
+              description={translateMessageId(
+                "page-upgrades-bug-bounty-misc-bugs-desc",
+                intl
+              )}
+            >
+              <div>
+                <p>
+                  <Translation id="page-upgrades-bug-bounty-misc-bugs-desc-2" />
+                </p>
+              </div>
+              <div>
+                <h4>
+                  <Translation id="page-upgrades-bug-bounty-help-links" />
+                </h4>
+                <Link to="https://github.com/ethereum/solidity/blob/develop/SECURITY.md">
+                  SECURITY.md
+                </Link>
+              </div>
+            </StyledCard>
           </StyledCardContainer>
           <H2>
             <Translation id="page-upgrades-bug-bounty-not-included" />
@@ -501,6 +560,16 @@ const BugBountiesPage = ({ data, location }) => {
       <GradientContainer>
         <FullLeaderboardContainer>
           <H2>
+            <Translation id="page-upgrades-bug-bounty-hunting-execution-leaderboard" />
+          </H2>
+          <p>
+            <Translation id="page-upgrades-bug-bounty-hunting-execution-leaderboard-subtitle" />
+          </p>
+          <Leaderboard content={executionBountyHunters} />
+        </FullLeaderboardContainer>
+
+        <FullLeaderboardContainer>
+          <H2>
             <Translation id="page-upgrades-bug-bounty-hunting-leaderboard" />
           </H2>
           <p>
@@ -517,6 +586,10 @@ const BugBountiesPage = ({ data, location }) => {
           <TextNoMargin>
             <Translation id="page-upgrades-bug-bounty-email-us" />{" "}
             <Link to="mailto:bounty@ethereum.org">bounty@ethereum.org</Link>
+            <br />
+            <Link to="https://ethereum.org/security_at_ethereum.org.asc">
+              PGP Key
+            </Link>
           </TextNoMargin>
         </div>
         <Emoji size={3} text=":email:" />
@@ -564,10 +637,31 @@ export const query = graphql`
         score
       }
     }
+    executionBountyHunters: allExecutionBountyHuntersCsv(
+      sort: { order: DESC, fields: score }
+    ) {
+      nodes {
+        username
+        name
+        score
+      }
+    }
     prysm: file(relativePath: { eq: "upgrades/prysm.png" }) {
       ...ClientLogos
     }
     lodestar: file(relativePath: { eq: "upgrades/lodestar.png" }) {
+      ...ClientLogos
+    }
+    besu: file(relativePath: { eq: "upgrades/besu.png" }) {
+      ...ClientLogos
+    }
+    erigon: file(relativePath: { eq: "upgrades/erigon.png" }) {
+      ...ClientLogos
+    }
+    geth: file(relativePath: { eq: "upgrades/geth.png" }) {
+      ...ClientLogos
+    }
+    nethermind: file(relativePath: { eq: "upgrades/nethermind.png" }) {
       ...ClientLogos
     }
     lighthouse: file(relativePath: { eq: "upgrades/lighthouse.png" }) {
@@ -591,6 +685,18 @@ export const query = graphql`
       ...ClientLogosSmall
     }
     lodestarSmall: file(relativePath: { eq: "upgrades/lodestar.png" }) {
+      ...ClientLogosSmall
+    }
+    besuSmall: file(relativePath: { eq: "upgrades/besu.png" }) {
+      ...ClientLogosSmall
+    }
+    erigonSmall: file(relativePath: { eq: "upgrades/erigon.png" }) {
+      ...ClientLogosSmall
+    }
+    gethSmall: file(relativePath: { eq: "upgrades/geth.png" }) {
+      ...ClientLogosSmall
+    }
+    nethermindSmall: file(relativePath: { eq: "upgrades/nethermind.png" }) {
       ...ClientLogosSmall
     }
     lighthouseSmallLight: file(
