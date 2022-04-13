@@ -1,8 +1,6 @@
 {
   "page-local-environment-brownie-desc": "إطار عمل للتطوير والاختبار قائم على Python للعقود الذكية التي تستهدف جهاز إثيريوم الظاهري.",
   "page-local-environment-brownie-logo-alt": "شعار Brownie",
-  "page-local-environment-dapptools-desc": "مجموعة من أدوات CLI التي تركز على إثيريوم والتي تتبع فلسفة تصميم Unix، والتي تفضل القابلية للتركيب وقابلية التكوين وقابلية التوسع.",
-  "page-local-environment-dapptools-logo-alt": "شعار Dapptools",
   "page-local-environment-embark-desc": "النظام الأساسي للمطورين الكل في واحد لبناء ونشر التطبيقات اللامركزية.",
   "page-local-environment-embark-logo-alt": "شعار Embrak",
   "page-local-environment-epirus-desc": "منصة لتطوير ونشر ومراقبة تطبيقات سلسلة الكتل على جهاز Java الظاهري",

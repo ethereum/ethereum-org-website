@@ -61,7 +61,7 @@ _Typically used to govern broad decentralized protocols and/or tokens themselves
 
 ### Share-based membership {#share-based-membership}
 
-Share-based DAOs are more permissioned, but still quite open. Any prospective members can submit a proposal to join the DAO, usually offering tribute of some value in the form of tokens or work. Shares represent direct voting power and ownership. Members can exit at anytime with their proportionate share of the treasury.
+Share-based DAOs are more permissioned, but still quite open. Any prospective members can submit a proposal to join the DAO, usually offering a tribute of some value in the form of tokens or work. Shares represent direct voting power and ownership. Members can exit at any time with their proportionate share of the treasury.
 
 _Typically used for more closer-knit, human-centric organizations like charities, worker collectives, and investment clubs. Can also govern protocols and tokens as well._
 
@@ -71,11 +71,11 @@ _Typically used for more closer-knit, human-centric organizations like charities
 
 ## How do DAOs work? {#how-daos-work}
 
-The backbone of a DAO is its smart contract. The contract defines the rules of the organization and holds the group's treasury. Once the contract is live on Ethereum, no one can change the rules except by a vote. If anyone tries to do something that's not covered by the rules and logic in the code, it will fail. And because the treasury is defined by the smart contract too that means no one can spend the money without the group's approval either. This means that DAOs don't need a central authority. Instead the group makes decisions collectively and payments are authorized automatically when votes pass.
+The backbone of a DAO is its smart contract. The contract defines the rules of the organization and holds the group's treasury. Once the contract is live on Ethereum, no one can change the rules except by a vote. If anyone tries to do something that's not covered by the rules and logic in the code, it will fail. And because the treasury is defined by the smart contract too that means no one can spend the money without the group's approval either. This means that DAOs don't need a central authority. Instead, the group makes decisions collectively, and payments are automatically authorized when votes pass.
 
 This is possible because smart contracts are tamper-proof once they go live on Ethereum. You can't just edit the code (the DAOs rules) without people noticing because everything is public.
 
-<DocLink to="/developers/docs/smart-contracts/">
+<DocLink to="/smart-contracts/">
   More on smart contracts
 </DocLink>
 

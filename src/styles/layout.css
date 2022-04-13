@@ -197,6 +197,7 @@ html {
 }
 * {
   box-sizing: inherit;
+  scroll-margin-top: 6rem;
 }
 *:before {
   box-sizing: inherit;

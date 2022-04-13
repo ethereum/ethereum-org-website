@@ -28,7 +28,7 @@ These libraries abstract away much of the complexity of interacting directly wit
 - [GitHub](https://github.com/alchemyplatform)
 - [Discord](https://discord.com/invite/A39JVCM)
 
-**BlockCypher -** **_Ethereum Web APIs_**
+**BlockCypher -** **_Ethereum Web APIs._**
 
 - [blockcypher.com](https://www.blockcypher.com/)
 - [Documentation](https://www.blockcypher.com/dev/ethereum/)
@@ -105,7 +105,7 @@ These libraries abstract away much of the complexity of interacting directly wit
 - [Documentation](https://docs.watchdata.io/)
 - [Discord](https://discord.com/invite/TZRJbZ6bdn)
 
-**Zmok -** **_Speed-oriented Ethereum nodes as JSON-RPC/WebSockets API_**
+**Zmok -** **_Speed-oriented Ethereum nodes as JSON-RPC/WebSockets API._**
 
 - [zmok.io](https://zmok.io/)
 - [GitHub](https://github.com/zmok-io)
