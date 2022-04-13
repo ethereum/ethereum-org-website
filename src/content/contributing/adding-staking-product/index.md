@@ -157,6 +157,12 @@ For [pooled staking services](/staking/pools/):
 
 - This gives us an idea of the reach of your service so far.
 
+## How we display results {#product-ordering}
+
+The [criteria for inclusion](#criteria-for-inclusion) above are used to calculate a cumulative score for each product or service. This is used as a means of sorting and showcasing products that meet certain objective criteria. The more criteria that evidence is provided for, the higher a product will be sorted, with ties being randomized on load.
+
+The code logic and weights for these criteria is currently contained in [this javascript component](https://github.com/ethereum/ethereum-org-website/blob/dev/src/components/StakingProductsCardGrid.js) in our repo.
+
 ## Add your product or service {#add-product}
 
 If you want to add a staking product or service to ethereum.org, create an issue on GitHub.
