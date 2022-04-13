@@ -438,7 +438,10 @@ const StakingPage = ({ data, pageContext, location }) => {
             <MDXRenderer>{mdx.body}</MDXRenderer>
           </MDXProvider>
           <StakingCommunityCallout />
-          <FeedbackCard prompt="Was this page helpful?" />
+          <FeedbackCard
+            prompt="Did this page help answer your question?"
+            isStaking
+          />
         </ContentContainer>
         <MobileButton>
           <MobileButtonDropdown list={dropdownLinks} />
