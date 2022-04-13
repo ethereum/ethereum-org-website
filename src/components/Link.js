@@ -70,7 +70,7 @@ const Link = ({
   className,
   isPartiallyActive = true,
   ariaLabel,
-  matomo,
+  customEventOptions,
   onClick = () => {},
 }) => {
   // markdown pages pass `href`, not `to`
@@ -122,7 +122,11 @@ const Link = ({
         href={to}
         target="_blank"
         rel="noopener noreferrer"
-        onClick={() => trackCustomEvent(matomo ? matomo : eventOptions)}
+        onClick={() =>
+          trackCustomEvent(
+            customEventOptions ? customEventOptions : eventOptions
+          )
+        }
         aria-label={ariaLabel}
       >
         {children}
@@ -133,7 +137,11 @@ const Link = ({
         href={to}
         target="_blank"
         rel="noopener noreferrer"
-        onClick={() => trackCustomEvent(matomo ? matomo : eventOptions)}
+        onClick={() =>
+          trackCustomEvent(
+            customEventOptions ? customEventOptions : eventOptions
+          )
+        }
         aria-label={ariaLabel}
       >
         {children}

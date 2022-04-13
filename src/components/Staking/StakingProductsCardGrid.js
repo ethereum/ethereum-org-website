@@ -284,7 +284,7 @@ const StakingProductCard = ({
         </ul>
       </Content>
       <Cta>
-        <ButtonLink to={url} matomo={matomo}>
+        <ButtonLink to={url} customEventOptions={matomo}>
           Get started
         </ButtonLink>
       </Cta>
