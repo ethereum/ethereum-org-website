@@ -354,7 +354,7 @@ const StakingPage = ({ data, pageContext, location }) => {
     ariaLabel: "Staking options dropdown menu",
     items: [
       {
-        text: "Staking Home",
+        text: "Staking home",
         to: "/staking/",
         matomo: {
           eventCategory: `Staking dropdown`,

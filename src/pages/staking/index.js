@@ -225,7 +225,7 @@ const benefits = [
     title: "Earn rewards",
     emoji: "💰",
     description:
-      "Rewards are given for actions that help the network reach consensus. You'll get rewards for running software that properly batches transactions into new blocks and checks the work of other validators, because that's what keeps the chain running securely.",
+      "Rewards are given for actions that help the network reach consensus. You'll get rewards for running software that properly batches transactions into new blocks and checks the work of other validators because that's what keeps the chain running securely.",
   },
   {
     title: "Better security",
@@ -237,7 +237,7 @@ const benefits = [
     title: "More sustainable",
     emoji: "🍃",
     description:
-      "Stakers don't need energy-intensive computers in order to participate in a proof-of-stake system–just a home computer or smartphone. This will make Ethereum better for the environment.",
+      "Stakers don't need energy-intensive computers to participate in a proof-of-stake system–just a home computer or smartphone. This will make Ethereum better for the environment.",
     linkText: "More on Ethereum's energy consumption",
     to: "/energy-consumption",
   },
@@ -261,7 +261,7 @@ const StakingPage = ({ data }) => {
     ariaLabel: "Staking options dropdown menu",
     items: [
       {
-        text: "Staking Home",
+        text: "Staking home",
         to: "/staking/",
         matomo: {
           eventCategory: `Staking dropdown`,
@@ -400,12 +400,12 @@ const StakingPage = ({ data }) => {
           <Content>
             <p style={{ marginTop: "1rem" }}>
               As you may have noticed, there are many ways to participate in
-              Ethereum staking. These paths target a wide range of users, and
+              Ethereum staking. These paths target a wide range of users and
               ultimately are each unique and vary in terms of risks, rewards,
-              and trust assumptions. Some of them are more decentralized,
-              battle-tested and/or risky than others. We provide some
-              information on popular projects in the space, but{" "}
-              <em>always do your own research</em> before sending ETH anywhere.
+              and trust assumptions. Some are more decentralized, battle-tested
+              and/or risky than others. We provide some information on popular
+              projects in the space, but <em>always do your own research</em>{" "}
+              before sending ETH anywhere.
             </p>
           </Content>
           <Divider />

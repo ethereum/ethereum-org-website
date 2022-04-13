@@ -371,13 +371,13 @@ const StakingHierarchy = () => {
             ETH.
           </p>
           <p>
-            This enables easy and any-time exiting, and makes staking as simple
-            as a token swap. These options also allow/require users to hold
+            Liquid staking enables easy and anytime exiting and makes staking as
+            simple as a token swap. This option also allows users to hold
             custody of their assets in their own Ethereum wallet.
           </p>
           <p>
-            Pooled staking is not native to the Ethereum network, and thus have
-            been built out by third parties, and carry their own risk.
+            Pooled staking is not native to the Ethereum network. Third parties
+            are building these solutions, and they carry their own risks.
           </p>
           <ButtonLink
             onClick={() => {
@@ -412,10 +412,10 @@ const StakingHierarchy = () => {
         </Glyph>
         <Content>
           <p>
-            If you are not yet comfortable holding ETH in your own wallet, many
-            centralized exchanges provide staking services and can be a fallback
-            to allow you to earn some yield on your ETH holdings with minimal
-            oversight or effort.
+            Many centralized exchanges provide staking services if you are not
+            yet comfortable holding ETH in your own wallet. They can be a
+            fallback to allow you to earn some yield on your ETH holdings with
+            minimal oversight or effort.
           </p>
           <p>
             The trade-off here is that centralized providers consolidate large
