@@ -45,7 +45,7 @@ An Application Programming Interface (API) is a set of definitions for how to us
 
 ### ASIC {#asic}
 
-Application-specific integrated circuit, in this case referring to an integrated circuit custom built for cryptocurrency mining.
+Application-specific integrated circuit. This usually refers to an integrated circuit, custom-built for cryptocurrency mining.
 
 ### assert {#assert}
 
@@ -91,7 +91,7 @@ A collection of required information (a block header) about the comprised [trans
   Blocks
 </DocLink>
 
-### block(chain) explorer
+### block explorer {#block-explorer}
 
 A website that allows easy searching and extraction of data from the blockchain.
 
@@ -103,7 +103,7 @@ The data in a block which is unique to its content and the circumstances in whic
 
 The process of transmitting a confirmed block to all other nodes in the network.
 
-### block time
+### block time {#block-time}
 
 The average time interval between the mining of two blocks. After the merge the block time will be the time between two Beacon blocks (under optimal conditions there will be one block per slot, which occurs every 6 seconds).
 
@@ -119,7 +119,7 @@ In Ethereum, a sequence of [blocks](#block) validated by the [proof-of-work](#po
   What is a Blockchain?
 </DocLink>
 
-### bootnode
+### bootnode {#bootnode}
 
 The nodes which can be used to initiate the discovery process when running a node. The endpoints of these nodes are recorded in the Ethereum source code.
 
@@ -271,7 +271,7 @@ A short string of data a user produces for a document using a [private key](#pri
 
 ### discovery {#discovery}
 
-The process by which an Ethereum node finds other nodes (computers running client software) to connect to.
+The process by which an Ethereum node finds other nodes to connect to.
 
 ### distributed hash table {#distributed-hash-table}
 
@@ -468,7 +468,7 @@ The maximum amount of [gas](#gas) a [transaction](#transaction) or [block](#bloc
 
 ### gas price {#gas-price}
 
-Price in ether of one unit of gas specified in a transaction. With the launch of Homestead, the default gas price reduces from 50 shannon to 20 shannon (~60% reduction).
+Price in ether of one unit of gas specified in a transaction.
 
 ### genesis block {#genesis-block}
 
@@ -825,7 +825,7 @@ A type of [layer 2](#layer-2) scaling solution that batches multiple transaction
 
 ### RPC {#rpc}
 
-Remote Procedure Call, a protocol that a program uses to request a service from a program located in another computer in a network without having to understand the network details.
+**Remote procedure call (RPC)** is a protocol that a program uses to request a service from a program located on another computer in a network without having to understand the network details.
 
 ## S {#section-s}
 
@@ -863,7 +863,7 @@ A scaling solution that uses a separate chain with different, often faster, [con
 
 ### signing {#signing}
 
-Demonstrating that some data originated from a certain person by encoding it using a private key.
+Demonstrating that a transaction originated from a specific person by encoding it using a private key.
 
 ### singleton {#singleton}
 
@@ -951,7 +951,7 @@ Supermajority is the term given for an amount exceeding 2/3 (66%) of the total s
 
 ### syncing {#syncing}
 
-The process of downloading the entire blockchain.
+The process of downloading the entire latest version of a blockchain to a node.
 
 ### sync committee {#sync-committee}
 
@@ -1007,7 +1007,7 @@ Reducing transaction fees is a subject of intense interest right now. See [Layer
 
 ### trustlessness {#trustlessness}
 
-Refers to the ability of a network to trustworthily mediate transactions without any of the involved parties needing to trust anyone else.
+The ability of a network to mediate transactions without any of the involved parties needing to trust a third party
 
 ### Turing complete {#turing-complete}
 
