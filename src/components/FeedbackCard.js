@@ -42,8 +42,7 @@ const ButtonContainer = styled.div`
 const FeedbackCard = ({ prompt, className }) => {
   const [feedbackSubmitted, setFeedbackSubmitted] = useState(false)
   const [isHelpful, setIsHelpful] = useState(false)
-
-  const location = window ? window.location.href : ""
+  const location = typeof window !== "undefined" ? window.location.href : ""
   const isStaking = location.includes("staking")
 
   const getTitle = (feedbackSubmitted, isStaking, isHelpful) => {
