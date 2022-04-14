@@ -6,7 +6,7 @@ sidebar: true
 incomplete: true
 ---
 
-Ethereum is moving to a consensus mechanism called proof-of-stake (PoS) from [proof-of-work (PoW)](/developers/docs/consensus-mechanisms/pow/). This was always the plan as it's a key part in the community's strategy to scale Ethereum via [upgrades](/upgrades/). However getting PoS right is a big technical challenge and not as straightforward as using PoW to reach consensus across the network.
+Ethereum is moving to a consensus mechanism called proof-of-stake (PoS) from [proof-of-work (PoW)](/developers/docs/consensus-mechanisms/pow/). This was always the plan because PoS is demonstrably more secure than PoW, uses drastically less energy and enables new scaling solutions to be implemented. However PoS is also more complex than PoW. Refining the PoS mechanism has taken years of research and development, and the challenge now is implementing it on the live Ethereum network - a process known as ["the merge"](/upgrades/merge/).
 
 ## Prerequisites {#prerequisites}
 
@@ -14,73 +14,45 @@ To better understand this page, we recommend you first read up on [consensus mec
 
 ## What is proof-of-stake (PoS)? {#what-is-pos}
 
-Proof-of-stake is a type of [consensus mechanism](/developers/docs/consensus-mechanisms/) used by blockchain networks to achieve distributed consensus.
-
-It requires users to stake their ETH to become a validator in the network. Validators are responsible for the same thing as miners in [proof-of-work](/developers/docs/consensus-mechanisms/pow/): ordering transactions and creating new blocks so that all nodes can agree on the state of the network.
+Proof-of-stake is a type of [consensus mechanism](/developers/docs/consensus-mechanisms/) used by blockchains to achieve distributed consensus. Whereas in PoW miners prove they have capital at risk by expending energy, in PoS validators explicitly stake capital in the form of ether into a smart contract on Ethereum. This staked ether then acts as collateral that can be destroyed if the validator behaves dishonestly or lazily. The validator is then responsible for checking that new blocks propagated over the network are valid and occasionally creating and propagating new blocks themselves.
 
 Proof-of-stake comes with a number of improvements to the proof-of-work system:
 
-- better energy efficiency – you don't need to use lots of energy mining blocks
+- better energy efficiency – you don't need to use lots of energy on PoW computations
 - lower barriers to entry, reduced hardware requirements – you don't need elite hardware to stand a chance of creating new blocks
-- stronger immunity to centralization – proof-of-stake should lead to more nodes in the network
-- stronger support for [shard chains](/upgrades/shard-chains/) – a key upgrade in scaling the Ethereum network
+- reduced centralization risk – proof-of-stake should lead to more nodes in the network
+- because of the low energy requirement less ETH issuance is required to incentivize participation
+- economic penalties for misbehaviour make 51% style attacks much more costly for an attacker compared to PoW
+- the community can resort to social recovery of an honest chain if a 51% attack were to overcome the crypto-economic defenses.
 
-## Proof-of-stake, staking, and validators {#pos-staking-validators}
+## Proof-of-stake, staking, and validators {#staking-validators}
 
-Proof-of-stake is the underlying mechanism that activates validators upon receipt of enough stake. For Ethereum, users will need to stake 32 ETH to become a validator. Validators are chosen at random to create blocks and are responsible for checking and confirming blocks they don't create. A user's stake is also used as a way to incentivise good validator behavior. For example, a user can lose a portion of their stake for things like going offline (failing to validate) or their entire stake for deliberate collusion.
+To participate as a validator, a user must deposit 32 ETH into the deposit contract and run three separate pieces of software: an execution client, a consensus client and a validator. On depositing their ether, the user joins an activation queue that limits the rate at which new validators join the network. Once activated, validators receive new blocks from peers on the Ethereum network. The transactions delivered in the block are re-executed and the block signature is checked to ensure the block is valid. The validator then sends a vote (called an attestation) in favour of that block across the network.
 
-## How does Ethereum's proof-of-stake work? {#how-does-pos-work}
+Whereas under PoW the timing of blocks is determined byt he mining difficulty, in PoS the tempo is fixed. Time in PoS Ethereum is divided into slots (12 seconds) and epochs (32 slots). In every slot a committee of validators is randomly chosen whose votes are used to determine the validity of the block proposed in that slot. Also in every slot one validator is randomly selected to be a block proposer. That validator is responsible for creating a new block and sending it out to other nodes on the network.
 
-Unlike proof-of-work, validators don't need to use significant amounts of computational power because they're selected at random and aren't competing. They don't need to mine blocks; they just need to create blocks when chosen and validate proposed blocks when they're not. This validation is known as attesting. You can think of attesting as saying "this block looks good to me." Validators get rewards for proposing new blocks and for attesting to ones they've seen.
+## Crypto-economic security {#crypto-economic-security}
 
-If you attest to malicious blocks, you lose your stake.
+Running a validator is a commitment. The validator is expected to maintain sufficient hardware and connectivity to participate in block validation and proposal. In return, the validator is paid in ether (their staked balance increases). On the other hand, participating as a validator also opens new avenues for a user to maliciously attack the network for personal gain or sabotage. To prevent this, validators miss out on ether rewards if they fail to participate when called upon, and their existing stake can be destroyed if they behave dishonestly. There are two primary behaviours that can be considered dishonest: proposing multiple blocks in a single slot (equivocating) and submitting contradictory attestations. The amount of ether slashed depends on various network conditions, as we will explain later.
 
-### The beacon chain {#the-beacon-chain}
+## Finality {#finality}
 
-When Ethereum replaces proof-of-work with proof-of-stake, there will be the added complexity of [shard chains](/upgrades/shard-chains/). These are separate blockchains that will need validators to process transactions and create new blocks. The plan is to have 64 shard chains, with each having a shared understanding of the state of the network. As a result, extra coordination is necessary and will be done by [the beacon chain](/upgrades/beacon-chain/).
-
-The beacon chain receives state information from shards and makes it available for other shards, allowing the network to stay in sync. The beacon chain will also manage the validators from registering their stake deposits to issuing their rewards and penalties.
-
-Here's how that process works.
-
-### How validation works {#how-does-validation-work}
-
-When you submit a transaction on a shard, a validator will be responsible for adding your transaction to a shard block. Validators are algorithmically chosen by the beacon chain to propose new blocks.
-
-#### Attestation {#attestation}
-
-If a validator isn't chosen to propose a new shard block, they'll have to attest to another validator's proposal and confirm that everything looks as it should. It's the attestation that is recorded in the beacon chain rather than the transaction itself.
-
-At least 128 validators are required to attest to each shard block – this is known as a "committee."
-
-The committee has a time-frame in which to propose and validate a shard block. This is known as a "slot." Only one valid block is created per slot, and there are 32 slots in an "epoch." After each epoch, the committee is disbanded and reformed with different, random participants. This helps keep shards safe from committees of bad actors.
-
-#### Crosslinks {#rewards-and-penalties}
-
-Once a new shard block proposal has enough attestations, a "crosslink" is created which confirms the inclusion of the block and your transaction in the beacon chain.
-
-Once there's a crosslink, the validator who proposed the block gets their reward.
-
-#### Finality {#finality}
-
-In distributed networks, a transaction has "finality" when it's part of a block that can't change.
-
-To do this in proof-of-stake, Casper, a finality protocol, gets validators to agree on the state of a block at certain checkpoints. So long as 2/3 of the validators agree, the block is finalised. Validators will lose their entire stake if they try and revert this later on via a 51% attack.
-
-As Vlad Zamfir put it, this is like a miner participating in a 51% attack, causing their mining hardware to immediately burn down.
+In distributed networks, a transaction has "finality" when it's part of a block that can't change without a large amounf to ether being burned. On PoS Ethereum this is managed using "checkpoint" blocks. The first block in each epoch is a checkpoint. Validators vote for pairs of checkpoints that it considers to be valid. If a pair of checkpoints attracts votes representing at least 2/3 of the total staked ether the checkpoints are upgraded. The more recent of the two (target) becomes "justified". The earlier of the two is already justified because it was the "target" in the previous epoch. Now it is upgraded to "finalized". To revert a finalized block, an attacker would commit to losing at least 1/3 of the total supply of staked ether (currently around $10,000,000,000 USD). The exact reason for this is explained [in this Ethereum Foundation blog post](https://blog.ethereum.org/2016/05/09/on-settlement-finality/).
 
 ## Proof-of-stake and security {#pos-and-security}
 
-The threat of a [51% attack](https://www.investopedia.com/terms/1/51-attack.asp) still exists in proof-of-stake, but it's even more risky for the attackers. To do so, you'd need to control 51% of the staked ETH. Not only is this a lot of money, but it would probably cause ETH's value to drop. There's very little incentive to destroy the value of a currency you have a majority stake in. There are stronger incentives to keep the network secure and healthy.
+The threat of a [51% attack](https://www.investopedia.com/terms/1/51-attack.asp) still exists in PoS as it does in PoW, but it's even more risky for the attackers. To do so, a attacker would need 51% of the staked ETH (about $15,000,000,000 USD). They could then use their own attestations to enmsure their preferred fork was the one with the most accumulated attestations. The 'weight' of accumulated attestations is what consensus clients use to determine the correct chain, so this attacker would be able to make their fork the canonical one. However, a strength of PoS over PoW is that the community has flexibility in mounting a counter-attack. For example, the honest validators could decide to keep building on the minority chain and ignore the attacker's fork. They could also decide to forcibly remove the attacker from the network and destroy their staked ether. These are strong economic defenses against a 51% attack.
 
-Stake slashings, ejections, and other penalties, coordinated by the beacon chain, will exist to prevent other acts of bad behavior. Validators will also be responsible for flagging these incidents.
+51% attacks are just one flavour of malicious activity. Bad actors could attempt long-range attacks (although the finality gadget neutralizes this attack vector), short range 'reorgs' (although proposer boosting and attestation deadlines mitigate this), bouncing and balancing attacks (also mitigated by proposer boosting, and these attacks have anyway only been demonstrated under idealized network conditions) or avalanche attacks (neutralized by the fork choice algorithms rule of only considering the latest message).
+
+Overall, PoS as it is implemented on Ethereum has been demonstrated to be more economically secure than PoW.
 
 ## Pros and cons {#pros-and-cons}
 
 | Pros                                                                                                                                                                                                                                                                      | Cons                                                                                      |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
 | Staking makes it easier for you to run a node. It doesn't require huge investments in hardware or energy, and if you don't have enough ETH to stake, you can join staking pools.                                                                                          | Proof-of-stake is still in its infancy, and less battle-tested, compared to proof-of-work |
-| Staking is more decentralized. It allows for increased participation, and more nodes doesn't mean increased % returns, like with mining.                                                                                                                                  |                                                                                           |
+| Staking is more decentralized. It allows for increased participation, and more nodes doesn't mean increased % returns, like with mining.                                                                                                                                  | test test                                                                                 |
 | Staking allows for secure sharding. Shard chains allow Ethereum to create multiple blocks at the same time, increasing transaction throughput. Sharding the network in a proof-of-work system would simply lower the power needed to compromise a portion of the network. |                                                                                           |
 
 ## Further reading {#further-reading}
