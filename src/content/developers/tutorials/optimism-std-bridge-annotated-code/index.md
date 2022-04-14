@@ -346,7 +346,7 @@ contract CrossDomainEnabled {
      * Variables *
      *************/
 
-    // Messenger contract used to send and recieve messages from the other domain.
+    // Messenger contract used to send and receive messages from the other domain.
     address public messenger;
 
     /***************
