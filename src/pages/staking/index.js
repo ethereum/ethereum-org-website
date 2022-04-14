@@ -6,14 +6,12 @@ import styled from "styled-components"
 
 import ButtonDropdown from "../../components/ButtonDropdown"
 import ButtonLink from "../../components/ButtonLink"
-import CalloutBanner from "../../components/CalloutBanner"
 import Card from "../../components/Card"
 import Link from "../../components/Link"
 import PageHero from "../../components/PageHero"
 import PageMetadata from "../../components/PageMetadata"
 import Translation from "../../components/Translation"
 import {
-  CardGrid,
   Content,
   Page as PageContainer,
   Divider,
@@ -26,7 +24,6 @@ import StakingHomeTableOfContents from "../../components/Staking/StakingHomeTabl
 import StakingCommunityCallout from "../../components/Staking/StakingCommunityCallout"
 
 import { translateMessageId } from "../../utils/translations"
-import { trackCustomEvent } from "../../utils/matomo"
 
 const HeroStatsWrapper = styled.div`
   display: flex;
@@ -188,21 +185,13 @@ const ColorH3 = styled.h3`
   color: ${({ theme, color }) => theme.colors[color]};
 `
 
-const ButtonContaier = styled.div`
-  display: flex;
-  gap: 1rem;
-  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
-    flex-direction: column;
-  }
-`
-
 const StyledButtonLink = styled(ButtonLink)`
   @media (max-width: ${({ theme }) => theme.breakpoints.s}) {
     width: 100%;
   }
 `
 
-const StyledCardGrid = styled.div`
+const CardGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
@@ -373,7 +362,7 @@ const StakingPage = ({ data }) => {
             <h2 id={tocItems.whyStakeYourEth.id}>
               {tocItems.whyStakeYourEth.title}
             </h2>
-            <StyledCardGrid>
+            <CardGrid>
               {benefits.map(
                 ({ title, description, emoji, linkText, to }, idx) => (
                   <StyledCard
@@ -386,7 +375,7 @@ const StakingPage = ({ data }) => {
                   </StyledCard>
                 )
               )}
-            </StyledCardGrid>
+            </CardGrid>
           </Content>
           <Content>
             <h2 id={tocItems.howToStakeYourEth.id}>
