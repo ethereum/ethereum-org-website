@@ -1,9 +1,14 @@
+// Libraries
+import React, { useState } from "react"
 import styled from "styled-components"
 import { motion } from "framer-motion"
+
+// Components
 import { FakeLink } from "./SharedStyledComponents"
 import Translation from "../components/Translation"
 
-import React, { useState } from "react"
+// Utils
+import { trackCustomEvent } from "../utils/matomo"
 
 const Card = styled.div`
   border: 1px solid ${(props) => props.theme.colors.border};
@@ -84,9 +89,16 @@ const ButtonLink = styled.button`
   color: ${(props) => props.theme.colors.primary};
 `
 
-const ExpandableCard = ({ children, contentPreview, title, svg, alt }) => {
+const ExpandableCard = ({
+  children,
+  contentPreview,
+  title,
+  Svg,
+  alt,
+  eventCategory,
+  eventName,
+}) => {
   const [isVisible, setIsVisible] = useState(false)
-  const Svg = svg
 
   const expandCollapse = {
     collapsed: {
@@ -126,7 +138,11 @@ const ExpandableCard = ({ children, contentPreview, title, svg, alt }) => {
       },
     },
   }
-
+  const matomo = {
+    eventAction: `Clicked`,
+    eventCategory: `ExpandableCard${eventCategory}`,
+    eventName,
+  }
   return (
     <Card>
       <Content>
@@ -137,7 +153,12 @@ const ExpandableCard = ({ children, contentPreview, title, svg, alt }) => {
           </Header>
           <TextPreview>{contentPreview}</TextPreview>
         </Question>
-        <ButtonContainer>
+        <ButtonContainer
+          onClick={() => {
+            trackCustomEvent(matomo)
+            setIsVisible(!isVisible)
+          }}
+        >
           {!isVisible && (
             <ButtonLink onClick={() => setIsVisible(true)}>
               <Translation id="more" />

@@ -71,3 +71,13 @@ export const translateMessageId = (id: string, intl: IntlShape): string => {
   }
   return translation
 }
+
+// Overwrites the default Persian numbering of the Farsi language to use Hindu-Arabic numerals (0-9)
+// Context: https://github.com/ethereum/ethereum-org-website/pull/5490#pullrequestreview-892596553
+export const getLocaleForNumberFormat = (locale: Lang) => {
+  if (locale === "fa") {
+    return "en"
+  }
+
+  return locale
+}

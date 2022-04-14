@@ -29,7 +29,7 @@ Similarly to proof-of-work, a malicious entity would require at least 51% of the
 
 ## The Merge {#the-merge}
 
-There is a functional proof-of-stake chain called the [Beacon Chain](/upgrades/beacon-chain/) that has been running since December 2020 that is demonstrating the viability of the proof-of-stake protocol. The Merge refers to the point in time when Ethereum leaves proof-of-work behind and fully adopts proof-of-stake. The Merge is expected to happen ~Q2 2022. [More on The Merge](/upgrades/merge/).
+There is a functional proof-of-stake chain called the [Beacon Chain](/upgrades/beacon-chain/) that has been running since December 2020 that is demonstrating the viability of the proof-of-stake protocol. The Merge refers to the point in time when Ethereum leaves proof-of-work behind and fully adopts proof-of-stake. The Merge is expected to happen ~Q3/Q4 2022. [More on The Merge](/upgrades/merge/).
 
 ## Proof-of-stake energy expenditure {#proof-of-stake-energy}
 

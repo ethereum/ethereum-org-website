@@ -29,7 +29,10 @@ import { CardGrid, Content, Page } from "../components/SharedStyledComponents"
 
 // Utils
 import { getData } from "../utils/cache"
-import { translateMessageId } from "../utils/translations"
+import {
+  translateMessageId,
+  getLocaleForNumberFormat,
+} from "../utils/translations"
 
 // Constants
 import { GATSBY_FUNCTIONS_PATH } from "../constants"
@@ -183,7 +186,7 @@ const StatDivider = styled.div`
 
 const Layer2Page = ({ data }) => {
   const intl = useIntl()
-
+  const localeForStatsBoxNumbers = getLocaleForNumberFormat(intl.locale)
   const [tvl, setTVL] = useState("loading...")
   const [percentChangeL2, setL2PercentChange] = useState("loading...")
   const [averageFee, setAverageFee] = useState("loading...")
@@ -193,7 +196,7 @@ const Layer2Page = ({ data }) => {
       try {
         const l2BeatData = await getData(`${GATSBY_FUNCTIONS_PATH}/l2beat`)
         // formatted TVL from L2beat API formatted
-        const TVL = new Intl.NumberFormat(intl.locale, {
+        const TVL = new Intl.NumberFormat(localeForStatsBoxNumbers, {
           style: "currency",
           currency: "USD",
           notation: "compact",
@@ -235,7 +238,7 @@ const Layer2Page = ({ data }) => {
             0
           ) / feeData.length
 
-        const intlFeeAverage = new Intl.NumberFormat(intl.locale, {
+        const intlFeeAverage = new Intl.NumberFormat(localeForStatsBoxNumbers, {
           style: "currency",
           currency: "USD",
           notation: "compact",
