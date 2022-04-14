@@ -2,7 +2,6 @@
 import React from "react"
 import styled from "styled-components"
 import { useIntl } from "gatsby-plugin-intl"
-import { graphql } from "gatsby"
 
 // Components
 import Breadcrumbs from "../../../components/Breadcrumbs"
@@ -14,6 +13,9 @@ import {
   ListItem,
   Page,
 } from "../../../components/SharedStyledComponents"
+
+// Data
+import allTimeData from "../../../data/translation-reports/alltime-data.json"
 
 // Utils
 import { translateMessageId } from "../../../utils/translations"
@@ -40,10 +42,10 @@ const HorizontalUl = styled.ul`
   }
 `
 
-const Contributors = ({ data, location }) => {
+const Contributors = ({ location }) => {
   const intl = useIntl()
   // TODO: Remove specific user checks once Acolad has updated their usernames
-  const translatorData = data.allTimeData.data.filter(
+  const translatorData = allTimeData.data.filter(
     (item) =>
       item.user.username !== "ethdotorg" &&
       !item.user.username.includes("LQS_") &&
@@ -121,18 +123,4 @@ const Contributors = ({ data, location }) => {
     </Page>
   )
 }
-
 export default Contributors
-
-export const query = graphql`
-  query {
-    allTimeData: alltimeJson {
-      data {
-        user {
-          username
-          fullName
-        }
-      }
-    }
-  }
-`

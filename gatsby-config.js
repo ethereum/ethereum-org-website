@@ -212,16 +212,8 @@ module.exports = {
         path: `${__dirname}/src/data`,
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/src/data/translation-reports`,
-      },
-    },
     // Process files within /src/data/
     `gatsby-transformer-csv`,
-    // Process JSON files
-    `gatsby-transformer-json`,
     // Add git information on File fields from latest commit: date, author and email
     // Used for `Last updated` fields
     {

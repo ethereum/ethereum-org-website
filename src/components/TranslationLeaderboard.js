@@ -8,6 +8,11 @@ import Emoji from "./Emoji"
 import { Option, OptionContainer, OptionText } from "./SharedStyledComponents"
 import Translation from "./Translation"
 
+// Data
+import monthData from "../data/translation-reports/month-data.json"
+import quarterData from "../data/translation-reports/quarter-data.json"
+import allTimeData from "../data/translation-reports/alltime-data.json"
+
 const Content = styled.div`
   margin-bottom: 2rem;
 `
@@ -112,7 +117,7 @@ const Flex = styled.div`
   display: flex;
 `
 
-const TranslationLeaderboard = ({ monthData, quarterData, allTimeData }) => {
+const TranslationLeaderboard = () => {
   const leaderboardData = {
     monthData: reverse(sortBy(monthData.data, ({ user }) => user.totalCosts)),
     quarterData: reverse(

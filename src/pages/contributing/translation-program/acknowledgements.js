@@ -168,11 +168,7 @@ const TranslatorAcknowledgements = ({ data, location }) => {
         <H2>
           <Translation id="page-contributing-translation-program-acknowledgements-translation-leaderboard-title" />
         </H2>
-        <TranslationLeaderboard
-          monthData={data.monthData}
-          quarterData={data.quarterData}
-          allTimeData={data.allTimeData}
-        />
+        <TranslationLeaderboard />
         <p>
           <Translation id="page-contributing-translation-program-acknowledgements-translation-leaderboard-1" />
         </p>
@@ -308,54 +304,6 @@ export const query = graphql`
           placeholder: BLURRED
           quality: 100
         )
-      }
-    }
-    allTimeData: alltimeJson {
-      data {
-        user {
-          totalCosts
-          username
-          fullName
-          avatarUrl
-        }
-        languages {
-          language {
-            totalCosts
-            name
-          }
-        }
-      }
-    }
-    quarterData: quarterJson {
-      data {
-        user {
-          totalCosts
-          username
-          fullName
-          avatarUrl
-        }
-        languages {
-          language {
-            totalCosts
-            name
-          }
-        }
-      }
-    }
-    monthData: monthJson {
-      data {
-        user {
-          totalCosts
-          username
-          fullName
-          avatarUrl
-        }
-        languages {
-          language {
-            totalCosts
-            name
-          }
-        }
       }
     }
   }
