@@ -6,6 +6,10 @@ import child_process from "child_process"
 import { createFilePath } from "gatsby-source-filesystem"
 import type { GatsbyNode } from "gatsby"
 
+import type { GetAllMdxQuery } from "./gatsby-graphql"
+import type { Lang } from "./src/data/translations"
+import type { TContext } from "./types"
+
 import mergeTranslations from "./src/scripts/mergeTranslations"
 import copyContributors from "./src/scripts/copyContributors"
 
@@ -177,7 +181,7 @@ export const onCreateNode: GatsbyNode["onCreateNode"] = async ({
   }
 }
 
-export const createPages: GatsbyNode["createPages"] = async ({
+export const createPages: GatsbyNode<any, TContext>["createPages"] = async ({
   graphql,
   actions,
   reporter,
@@ -193,8 +197,8 @@ export const createPages: GatsbyNode["createPages"] = async ({
     })
   })
 
-  const result = await graphql(`
-    query {
+  const result = await graphql<GetAllMdxQuery>(`
+    query getAllMdx {
       allMdx {
         edges {
           node {
@@ -236,7 +240,7 @@ export const createPages: GatsbyNode["createPages"] = async ({
       slug.includes(`/terms-of-use/`) ||
       slug.includes(`/contributing/`) ||
       slug.includes(`/style-guide/`)
-    const language = node.frontmatter.lang
+    const language = node.frontmatter.lang as Lang
     if (!language) {
       throw `Missing 'lang' frontmatter property. All markdown pages must have a lang property. Page slug: ${slug}`
     }
@@ -282,7 +286,7 @@ export const createPages: GatsbyNode["createPages"] = async ({
       }
     }
 
-    createPage({
+    createPage<TContext>({
       path: slug,
       component: path.resolve(`src/templates/${template}.js`),
       context: {
@@ -351,7 +355,7 @@ export const createPages: GatsbyNode["createPages"] = async ({
 // Add additional context to translated pages
 // Only ran when creating component pages
 // https://www.gatsbyjs.com/docs/creating-and-modifying-pages/#pass-context-to-pages
-export const onCreatePage: GatsbyNode["onCreatePage"] = async ({
+export const onCreatePage: GatsbyNode<any, TContext>["onCreatePage"] = async ({
   page,
   actions,
 }) => {
@@ -366,7 +370,7 @@ export const onCreatePage: GatsbyNode["onCreatePage"] = async ({
       page.context.language
     )
     deletePage(page)
-    createPage({
+    createPage<TContext>({
       ...page,
       context: {
         ...page.context,
