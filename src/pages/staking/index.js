@@ -607,7 +607,7 @@ const StakingPage = ({ data }) => {
             </ExpandableCard>
             <ExpandableCard title="Why do I need to have funds at stake?">
               A validator has the ability to propose and attest to blocks for
-              the network. To prevent dishonest behavior users must have their
+              the network. To prevent dishonest behavior, users must have their
               funds at stake. This allows the protocol to penalize malicious
               actors. Staking is a means to keep you honest, as your actions
               will have financial consequences.
