@@ -3,6 +3,7 @@ import styled from "styled-components"
 import { useIntl } from "gatsby-plugin-intl"
 
 import Translation from "../Translation"
+import { getLocaleForNumberFormat } from "../../utils/translations"
 import { getData } from "../../utils/cache"
 import calculateStakingRewards from "../../utils/calculateStakingRewards"
 
@@ -64,6 +65,7 @@ const LoadingMessage = () => (
 
 const StatsBoxGrid = () => {
   const intl = useIntl()
+  const localeForStatsBoxNumbers = getLocaleForNumberFormat(intl.locale)
   const [totalEth, setTotalEth] = useState(0)
   const [totalValidators, setTotalValidators] = useState(0)
   const [currentApr, setCurrentApr] = useState(0)
@@ -71,10 +73,10 @@ const StatsBoxGrid = () => {
 
   useEffect(() => {
     const formatInteger = (amount) =>
-      new Intl.NumberFormat(intl.locale).format(amount)
+      new Intl.NumberFormat(localeForStatsBoxNumbers).format(amount)
 
     const formatPercentage = (amount) =>
-      new Intl.NumberFormat(intl.locale, {
+      new Intl.NumberFormat(localeForStatsBoxNumbers, {
         style: "percent",
         minimumSignificantDigits: 2,
         maximumSignificantDigits: 2,
