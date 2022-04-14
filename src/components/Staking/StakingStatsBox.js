@@ -77,7 +77,7 @@ const StatsBoxGrid = () => {
       new Intl.NumberFormat(intl.locale, {
         style: "percent",
         minimumSignificantDigits: 2,
-        maximumSignificantDigits: 3,
+        maximumSignificantDigits: 2,
       }).format(amount)
 
     ;(async () => {
@@ -96,7 +96,7 @@ const StatsBoxGrid = () => {
         const valueCurrentApr = formatPercentage(currentAprDecimal)
         setTotalEth(valueTotalEth)
         setTotalValidators(valueTotalValidators)
-        setCurrentApr(valueCurrentApr)
+        setCurrentApr(`~${valueCurrentApr}`)
         setError(false)
       } catch (error) {
         setTotalEth("n/a")

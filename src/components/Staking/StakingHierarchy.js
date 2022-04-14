@@ -177,6 +177,9 @@ const Pills = styled.div`
     padding: 0.125rem 0.375rem;
     white-space: nowrap;
   }
+  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
+    justify-content: center;
+  }
 `
 
 const Content = styled.div`
