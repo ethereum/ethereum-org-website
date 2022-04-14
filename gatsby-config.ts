@@ -1,19 +1,25 @@
-require("dotenv").config()
+import "dotenv/config"
+import path from "path"
 
-const { supportedLanguages, allLanguages } = require("./src/utils/translations")
+import type { GatsbyConfig } from "gatsby"
 
-const defaultLanguage = `en`
+import {
+  supportedLanguages,
+  defaultLanguage,
+  ignoreLanguages,
+} from "./src/utils/translations"
+
 const siteUrl = `https://ethereum.org`
 
 const ignoreContent = (process.env.IGNORE_CONTENT || "")
   .split(",")
   .filter(Boolean)
 
-const ignoreTranslations = Object.keys(allLanguages)
-  .filter((lang) => !supportedLanguages.includes(lang))
-  .map((lang) => `**/translations\/${lang}`)
+const ignoreTranslations = ignoreLanguages.map(
+  (lang) => `**/translations\/${lang}`
+)
 
-module.exports = {
+const config: GatsbyConfig = {
   siteMetadata: {
     // `title` & `description` pulls from respective ${lang}.json files in PageMetadata.js
     title: `ethereum.org`,
@@ -31,7 +37,7 @@ module.exports = {
       resolve: `gatsby-plugin-intl`,
       options: {
         // language JSON resource path
-        path: `${__dirname}/src/intl`,
+        path: path.resolve(`src/intl`),
         // supported language
         languages: supportedLanguages,
         // language file path
@@ -136,7 +142,7 @@ module.exports = {
         gatsbyRemarkPlugins: [
           {
             // Local plugin to adjust the images urls of the translated md files
-            resolve: require.resolve(`./plugins/gatsby-remark-image-urls`),
+            resolve: path.resolve(`./plugins/gatsby-remark-image-urls`),
           },
           {
             resolve: `gatsby-remark-autolink-headers`,
@@ -192,7 +198,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `assets`,
-        path: `${__dirname}/src/assets`,
+        path: path.resolve(`src/assets`),
       },
     },
     // Process files from /src/content/ (used in gatsby-node.js)
@@ -200,7 +206,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `content`,
-        path: `${__dirname}/src/content`,
+        path: path.resolve(`src/content`),
         ignore: [...ignoreContent, ...ignoreTranslations],
       },
     },
@@ -209,7 +215,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `data`,
-        path: `${__dirname}/src/data`,
+        path: path.resolve(`src/data`),
       },
     },
     // Process files within /src/data/
@@ -232,3 +238,5 @@ module.exports = {
     FAST_DEV: true, // DEV_SSR, QUERY_ON_DEMAND & LAZY_IMAGES
   },
 }
+
+export default config

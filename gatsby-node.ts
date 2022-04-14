@@ -1,71 +1,41 @@
 // https://www.gatsbyjs.org/docs/node-apis/
-const fs = require("fs")
-const path = require(`path`)
-const util = require("util")
-const child_process = require("child_process")
-const { createFilePath } = require(`gatsby-source-filesystem`)
-const gatsbyConfig = require(`./gatsby-config.js`)
-const redirects = require(`./redirects.json`)
+import fs from "fs"
+import path from "path"
+import util from "util"
+import child_process from "child_process"
+import { createFilePath } from "gatsby-source-filesystem"
+import type { GatsbyNode } from "gatsby"
+
+import mergeTranslations from "./src/scripts/mergeTranslations"
+import copyContributors from "./src/scripts/copyContributors"
+
+import { supportedLanguages, defaultLanguage } from "./src/utils/translations"
+import getMessages from "./src/utils/getMessages"
+import redirects from "./redirects.json"
 
 const exec = util.promisify(child_process.exec)
-
-const supportedLanguages = gatsbyConfig.siteMetadata.supportedLanguages
-const defaultLanguage = gatsbyConfig.siteMetadata.defaultLanguage
-
-// same function from 'gatsby-plugin-intl'
-const flattenMessages = (nestedMessages, prefix = "") => {
-  return Object.keys(nestedMessages).reduce((messages, key) => {
-    let value = nestedMessages[key]
-    let prefixedKey = prefix ? `${prefix}.${key}` : key
-
-    if (typeof value === "string") {
-      messages[prefixedKey] = value
-    } else {
-      Object.assign(messages, flattenMessages(value, prefixedKey))
-    }
-
-    return messages
-  }, {})
-}
-
-// same function from 'gatsby-plugin-intl'
-const getMessages = (path, language) => {
-  try {
-    const messages = require(`${path}/${language}.json`)
-
-    return flattenMessages(messages)
-  } catch (error) {
-    if (error.code === "MODULE_NOT_FOUND") {
-      process.env.NODE_ENV !== "test" &&
-        console.error(
-          `[gatsby-plugin-intl] couldn't find file "${path}/${language}.json"`
-        )
-    }
-
-    throw error
-  }
-}
 
 /**
  * Markdown isOutdated check
  * Parse header ids in markdown file (both translated and english) and compare their info structure.
  * If this structure is not the same, then the file isOutdated.
  * If there is not english file, return true
- * @param {string} path filepath for translated mdx file
+ * @param {string} filePath filepath for translated mdx file
  * @returns boolean for if file is outdated or not
  */
-const checkIsMdxOutdated = (path) => {
-  const splitPath = path.split(__dirname)
+const checkIsMdxOutdated = (filePath) => {
+  const dirname = path.resolve("./")
+  const splitPath = filePath.split(dirname)
   const tempSplitPath = splitPath[1]
   const tempSplit = tempSplitPath.split("/")
   tempSplit.splice(3, 2)
-  const englishPath = `${__dirname}${tempSplit.join("/")}`
+  const englishPath = path.resolve(`${tempSplit.join("/")}`)
 
   const re = /([#]+) [^\{]+\{#([^\}]+)\}/gim
   let translatedData, englishData
 
   try {
-    translatedData = fs.readFileSync(path, "utf-8")
+    translatedData = fs.readFileSync(filePath, "utf-8")
     englishData = fs.readFileSync(englishPath, "utf-8")
   } catch {
     return true
@@ -93,14 +63,14 @@ const checkIsMdxOutdated = (path) => {
  * Checks if translation JSON file exists.
  * If translation file exists, checks that all translations are present (checks keys), and that all the keys are the same.
  * If translation file exists, isContentEnglish will be false
- * @param {*} path url path used to derive file path from
+ * @param {*} urlPath url path used to derive file path from
  * @param {*} lang language abbreviation for language path
  * @returns {{isOutdated: boolean, isContentEnglish: boolean}}
  */
-const checkIsPageOutdated = async (path, lang) => {
+const checkIsPageOutdated = async (urlPath, lang) => {
   // Files that need index appended on the end. Ex page-index.json, page-developers-index.json, page-upgrades-index.json
   const indexFilePaths = ["", "developers", "upgrades"]
-  const filePath = path.split("/").filter((text) => text !== "")
+  const filePath = urlPath.split("/").filter((text) => text !== "")
 
   if (
     indexFilePaths.includes(filePath[filePath.length - 1]) ||
@@ -110,8 +80,8 @@ const checkIsPageOutdated = async (path, lang) => {
   }
 
   const joinedFilepath = filePath.join("-")
-  const srcPath = `${__dirname}/src/intl/${lang}/page-${joinedFilepath}.json`
-  const englishPath = `${__dirname}/src/intl/en/page-${joinedFilepath}.json`
+  const srcPath = path.resolve(`src/intl/${lang}/page-${joinedFilepath}.json`)
+  const englishPath = path.resolve(`src/intl/en/page-${joinedFilepath}.json`)
 
   // If no file exists, default to english
   if (!fs.existsSync(srcPath)) {
@@ -122,8 +92,8 @@ const checkIsPageOutdated = async (path, lang) => {
   } else {
     let translatedData, englishData, translatedKeys, englishKeys
     try {
-      translatedData = JSON.parse(fs.readFileSync(srcPath))
-      englishData = JSON.parse(fs.readFileSync(englishPath))
+      translatedData = JSON.parse(fs.readFileSync(srcPath).toString())
+      englishData = JSON.parse(fs.readFileSync(englishPath).toString())
       translatedKeys = Object.keys(translatedData)
       englishKeys = Object.keys(englishData)
     } catch (err) {
@@ -160,7 +130,11 @@ const checkIsPageOutdated = async (path, lang) => {
 
 // Loops through all the files dictated by Gatsby (building pages folder), as well as
 // folders flagged through the gatsby-source-filesystem plugin in gatsby-config
-exports.onCreateNode = async ({ node, getNode, actions }) => {
+export const onCreateNode: GatsbyNode["onCreateNode"] = async ({
+  node,
+  getNode,
+  actions,
+}) => {
   const { createNodeField } = actions
 
   // Edit markdown nodes
@@ -178,7 +152,7 @@ exports.onCreateNode = async ({ node, getNode, actions }) => {
       slug = `/${defaultLanguage}${slug}`
     }
 
-    const absolutePath = node.fileAbsolutePath
+    const absolutePath = node.fileAbsolutePath as string
     const relativePathStart = absolutePath.lastIndexOf("src/")
     const relativePath = absolutePath.substring(relativePathStart)
 
@@ -203,7 +177,11 @@ exports.onCreateNode = async ({ node, getNode, actions }) => {
   }
 }
 
-exports.createPages = async ({ graphql, actions, reporter }) => {
+export const createPages: GatsbyNode["createPages"] = async ({
+  graphql,
+  actions,
+  reporter,
+}) => {
   const { createPage, createRedirect } = actions
 
   redirects.forEach((redirect) => {
@@ -279,7 +257,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           const langSlug = splitSlug.join("/")
           createPage({
             path: langSlug,
-            component: path.resolve(`./src/templates/${template}.js`),
+            component: path.resolve(`src/templates/${template}.js`),
             context: {
               slug: langSlug,
               ignoreTranslationBanner: isLegal,
@@ -306,7 +284,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
     createPage({
       path: slug,
-      component: path.resolve(`./src/templates/${template}.js`),
+      component: path.resolve(`src/templates/${template}.js`),
       context: {
         slug,
         isOutdated: node.fields.isOutdated,
@@ -333,7 +311,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const outdatedMarkdown = [`eth`, `dapps`, `wallets`, `what-is-ethereum`]
   outdatedMarkdown.forEach((page) => {
     supportedLanguages.forEach(async (lang) => {
-      const markdownPath = `${__dirname}/src/content/translations/${lang}/${page}/index.md`
+      const markdownPath = path.resolve(
+        `src/content/translations/${lang}/${page}/index.md`
+      )
       const langHasOutdatedMarkdown = fs.existsSync(markdownPath)
       if (!langHasOutdatedMarkdown) {
         // Check if json strings exists for language, if not mark `isContentEnglish` as true
@@ -345,8 +325,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           path: `/${lang}/${page}/`,
           component: path.resolve(
             page === "wallets"
-              ? `./src/pages-conditional/${page}/index.js`
-              : `./src/pages-conditional/${page}.js`
+              ? `src/pages-conditional/${page}/index.js`
+              : `src/pages-conditional/${page}.js`
           ),
           context: {
             slug: `/${lang}/${page}/`,
@@ -371,7 +351,10 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 // Add additional context to translated pages
 // Only ran when creating component pages
 // https://www.gatsbyjs.com/docs/creating-and-modifying-pages/#pass-context-to-pages
-exports.onCreatePage = async ({ page, actions }) => {
+export const onCreatePage: GatsbyNode["onCreatePage"] = async ({
+  page,
+  actions,
+}) => {
   const { createPage, deletePage } = actions
 
   const isTranslated = page.context.language !== defaultLanguage
@@ -395,9 +378,10 @@ exports.onCreatePage = async ({ page, actions }) => {
   }
 }
 
-exports.createSchemaCustomization = ({ actions }) => {
-  const { createTypes } = actions
-  const typeDefs = `
+export const createSchemaCustomization: GatsbyNode["createSchemaCustomization"] =
+  ({ actions }) => {
+    const { createTypes } = actions
+    const typeDefs = `
     type Mdx implements Node {
       frontmatter: Frontmatter
     }
@@ -430,18 +414,27 @@ exports.createSchemaCustomization = ({ actions }) => {
       score: Int
     }
   `
-  createTypes(typeDefs)
+    createTypes(typeDefs)
 
-  // Optimization. Ref: https://www.gatsbyjs.com/docs/scaling-issues/#switch-off-type-inference-for-sitepagecontext
-  createTypes(`
+    // Optimization. Ref: https://www.gatsbyjs.com/docs/scaling-issues/#switch-off-type-inference-for-sitepagecontext
+    createTypes(`
     type SitePage implements Node @dontInfer {
       path: String!
     }
   `)
+  }
+
+export const onPreBootstrap: GatsbyNode["onPreBootstrap"] = ({ reporter }) => {
+  mergeTranslations()
+  reporter.info(`Merged translations saved`)
+  copyContributors()
+  reporter.info(`Contributors copied`)
 }
 
 // Build lambda functions when the build is complete and the `/public` folder exists
-exports.onPostBuild = async (gatsbyNodeHelpers) => {
+export const onPostBuild: GatsbyNode["onPostBuild"] = async (
+  gatsbyNodeHelpers
+) => {
   const { reporter } = gatsbyNodeHelpers
 
   const reportOut = (report) => {

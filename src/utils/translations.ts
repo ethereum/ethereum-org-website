@@ -1,12 +1,23 @@
-const allLanguages = require("../data/translations.json")
+import { IntlShape } from "gatsby-plugin-intl"
+
+import allLanguages, { Lang } from "../data/translations"
+
+export const defaultLanguage = `en`
 
 const buildLangs = (process.env.GATSBY_BUILD_LANGS || "")
   .split(",")
   .filter(Boolean)
 
+const consoleError = (message: string): void => {
+  const { NODE_ENV } = process.env
+  if (NODE_ENV === "development") {
+    console.error(message)
+  }
+}
+
 // will take the same shape as `allLanguages`. Only thing we are doing
 // here is filtering the desired langs to be built
-const languageMetadata = Object.fromEntries(
+export const languageMetadata = Object.fromEntries(
   Object.entries(allLanguages).filter(([lang]) => {
     // BUILD_LANGS === empty means to build all the langs
     if (!buildLangs.length) {
@@ -17,20 +28,14 @@ const languageMetadata = Object.fromEntries(
   })
 )
 
-const supportedLanguages = Object.keys(languageMetadata)
-const legacyHomepageLanguages = supportedLanguages.filter(
-  (lang) => languageMetadata[lang].useLegacyHomepage
-)
+export const supportedLanguages = Object.keys(languageMetadata) as Array<Lang>
 
-const consoleError = (message) => {
-  const { NODE_ENV } = process.env
-  if (NODE_ENV === "development") {
-    console.error(message)
-  }
-}
+export const ignoreLanguages = (
+  Object.keys(allLanguages) as Array<Lang>
+).filter((lang) => !supportedLanguages.includes(lang))
 
 // Returns the en.json value
-const getDefaultMessage = (key) => {
+export const getDefaultMessage = (key: string): string => {
   const defaultStrings = require("../intl/en.json")
   const defaultMessage = defaultStrings[key]
   if (defaultMessage === undefined) {
@@ -41,11 +46,11 @@ const getDefaultMessage = (key) => {
   return defaultMessage || ""
 }
 
-const isLangRightToLeft = (lang) => {
+export const isLangRightToLeft = (lang: Lang): boolean => {
   return lang === "ar" || lang === "fa"
 }
 
-const translateMessageId = (id, intl) => {
+export const translateMessageId = (id: string, intl: IntlShape): string => {
   if (!id) {
     consoleError(`No id provided for translation.`)
     return ""
@@ -66,12 +71,3 @@ const translateMessageId = (id, intl) => {
   }
   return translation
 }
-
-// Must export using ES5 to import in gatsby-node.js
-module.exports.allLanguages = allLanguages
-module.exports.languageMetadata = languageMetadata
-module.exports.supportedLanguages = supportedLanguages
-module.exports.getDefaultMessage = getDefaultMessage
-module.exports.isLangRightToLeft = isLangRightToLeft
-module.exports.translateMessageId = translateMessageId
-module.exports.legacyHomepageLanguages = legacyHomepageLanguages
