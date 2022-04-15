@@ -80,6 +80,21 @@ On Web3, your data lives on the blockchain. When you decide to leave a platform,
 
 Web 2.0 requires content creators to trust platforms not to change the rules, but censorship resistance is a native feature of a Web3 platform.
 
+#### Decentralized autonomous organizations (DAOs) {#daos}
+
+As well as owning your data in Web3, you can own the platform as a collective, using tokens that act like shares in a company. DAOs let you coordinate decentralized ownership of a platform and make decisions about its future.
+
+DAOs are defined technically as agreed-upon smart contracts that automate decentralized decision-making over a pool of resources (tokens). Users with tokens vote on how resources get spent, and the code automatically performs the voting outcome.
+
+However, people define many Web3 communities as DAOs. These communities all have different levels of decentralization and automation by code. Currently, we are exploring what DAOs are and how they might evolve in the future.
+
+<InfoBanner shouldSpaceBetween emoji=":eyes:">
+  <div>Learn more about DAOs</div>
+  <ButtonLink to="/dao/">
+    More on DAOs
+  </ButtonLink>
+</InfoBanner>
+
 ### Identity {#identity}
 
 Traditionally, you would create an account for every platform you use. For example, you might have a Twitter account, a YouTube account, and a Reddit account. Want to change your display name or profile picture? You have to do it across every account. You can use social sign-ins in some cases, but this presents a familiar problem—censorship. In a single click, these platforms can lock you out of your entire online life. Even worse, many platforms require you to trust them with personally identifiable information to create an account.
