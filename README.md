@@ -1169,6 +1169,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/Nottommy11"><img src="https://avatars.githubusercontent.com/u/91304333?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Thomas</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=Nottommy11" title="Documentation">📖</a></td>
   </tr>
   <tr>
+    <td align="center"><a href="https://github.com/plamarque"><img src="https://avatars.githubusercontent.com/u/227828?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Patrice Lamarque</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=plamarque" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/sell50"><img src="https://avatars.githubusercontent.com/u/34224830?v=4?s=100" width="100px;" alt=""/><br /><sub><b>sell50</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=sell50" title="Documentation">📖</a></td>
   </tr>
 </table>
