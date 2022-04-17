@@ -1,12 +1,12 @@
 // Libraries
 import { GatsbyImage } from "gatsby-plugin-image"
 import React, { useState } from "react"
-import Select from "react-select"
 import styled from "styled-components"
 
 // Components
 import ButtonLink from "../../components/ButtonLink"
 import Link from "../../components/Link"
+import { StyledSelect as Select } from "../SharedStyledComponents"
 
 // Data
 import cexSupport from "../../data/layer-2/cex-layer-2-support.json"
@@ -53,56 +53,7 @@ const TwoColumnContent = styled.div`
 // https://react-select.com/styles#using-classnames
 // Pass menuIsOpen={true} to component to debug
 const StyledSelect = styled(Select)`
-  width: 100%;
-  color: black;
-  /* Component */
-  .react-select__control {
-    border: 1px solid ${(props) => props.theme.colors.searchBorder};
-    background: ${(props) => props.theme.colors.searchBackground};
-    /* Dropdown arrow */
-    .react-select__indicator {
-      color: ${(props) => props.theme.colors.searchBorder};
-    }
-    &.react-select__control--is-focused {
-      border-color: ${(props) => props.theme.colors.primary} !important;
-      box-shadow: 0 0 0 1px ${(props) => props.theme.colors.primary} !important;
-      .react-select__value-container {
-        border-color: ${(props) => props.theme.colors.primary} !important;
-      }
-    }
-  }
-  .react-select__placeholder {
-    color: ${(props) => props.theme.colors.text200};
-  }
-  .react-select__single-value {
-    color: ${(props) => props.theme.colors.text};
-  }
-  .react-select__menu {
-    background: ${(props) => props.theme.colors.searchBackground};
-    color: ${(props) => props.theme.colors.text};
-  }
-  .react-select__input {
-    color: ${(props) => props.theme.colors.text};
-  }
-  .react-select__option {
-    &:hover {
-      background-color: ${(props) => props.theme.colors.selectHover};
-    }
-    &:active {
-      background-color: ${(props) => props.theme.colors.selectActive};
-      color: ${(props) => props.theme.colors.buttonColor} !important;
-    }
-  }
-  .react-select__option--is-focused {
-    background-color: ${(props) => props.theme.colors.selectHover};
-  }
-  .react-select__option--is-selected {
-    background-color: ${(props) => props.theme.colors.primary};
-    color: ${(props) => props.theme.colors.buttonColor};
-    &:hover {
-      background-color: ${(props) => props.theme.colors.primary};
-    }
-  }
+  max-width: none;
 
   @media (max-width: ${(props) => props.theme.breakpoints.s}) {
     .react-select__control {

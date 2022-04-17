@@ -48,7 +48,7 @@ A smart contract is code that lives on the Ethereum blockchain and runs exactly 
 
 <YouTube id="F50OrwV6Uk8" />
 
-## Dapp tools {#dapp-tools}
+## Tools for creating dapps {#dapp-tools}
 
 **Scaffold-ETH _- Quickly experiment with Solidity using a frontend that adapts to your smart contract._**
 
