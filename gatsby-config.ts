@@ -221,7 +221,7 @@ const config: GatsbyConfig = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/data/translation-reports`,
+        path: path.resolve(`src/data/translation-reports`),
       },
     },
     // Process files within /src/data/
