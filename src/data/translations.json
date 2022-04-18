@@ -5,6 +5,9 @@
   "ar": {
     "language": "العربية"
   },
+  "az": {
+    "language": "Azərbaycan"
+  },
   "bg": {
     "language": "български"
   },
@@ -35,6 +38,9 @@
   "fr": {
     "language": "Français"
   },
+  "gl": {
+    "language": "Galego"
+  },
   "hi": {
     "language": "हिन्दी"
   },
@@ -63,8 +69,7 @@
     "language": "한국어"
   },
   "lt": {
-    "language": "Lietuvis",
-    "useLegacyHomepage": true
+    "language": "Lietuvis"
   },
   "ml": {
     "language": "മലയാളം"

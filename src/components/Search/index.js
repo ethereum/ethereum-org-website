@@ -1,4 +1,4 @@
-import React, { useState, createRef } from "react"
+import React, { useState, useRef } from "react"
 import { Link as GatsbyLink } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
 import {
@@ -17,6 +17,7 @@ import Input from "./Input"
 import Link from "../Link"
 import Translation from "../Translation"
 import { useOnClickOutside } from "../../hooks/useOnClickOutside"
+import { useKeyPress } from "../../hooks/useKeyPress"
 
 const Root = styled.div`
   position: relative;
@@ -112,43 +113,45 @@ const StyledHighlight = styled(Highlight)`
   }
 `
 
-const PageHit = (clickHandler) => ({ hit }) => {
-  // Make url relative, so `handleSelect` is triggered
-  const url = hit.url.replace("https://ethereum.org", "")
-  return (
-    <div>
-      <GatsbyLink to={url} onClick={clickHandler}>
-        <PageHeader>
-          <Highlight attribute="hierarchy.lvl1" hit={hit} tagName="mark" />
-        </PageHeader>
-        {hit.hierarchy.lvl2 && (
-          <StyledHighlight
-            attribute="hierarchy.lvl2"
-            hit={hit}
-            tagName="mark"
-          />
-        )}
-        {hit.hierarchy.lvl3 && (
-          <StyledHighlight
-            attribute="hierarchy.lvl3"
-            hit={hit}
-            tagName="mark"
-          />
-        )}
-        {hit.hierarchy.lvl4 && (
-          <StyledHighlight
-            attribute="hierarchy.lvl4"
-            hit={hit}
-            tagName="mark"
-          />
-        )}
-        {hit.content && (
-          <StyledSnippet attribute="content" hit={hit} tagName="mark" />
-        )}
-      </GatsbyLink>
-    </div>
-  )
-}
+const PageHit =
+  (clickHandler) =>
+  ({ hit }) => {
+    // Make url relative, so `handleSelect` is triggered
+    const url = hit.url.replace("https://ethereum.org", "")
+    return (
+      <div>
+        <GatsbyLink to={url} onClick={clickHandler}>
+          <PageHeader>
+            <Highlight attribute="hierarchy.lvl1" hit={hit} tagName="mark" />
+          </PageHeader>
+          {hit.hierarchy.lvl2 && (
+            <StyledHighlight
+              attribute="hierarchy.lvl2"
+              hit={hit}
+              tagName="mark"
+            />
+          )}
+          {hit.hierarchy.lvl3 && (
+            <StyledHighlight
+              attribute="hierarchy.lvl3"
+              hit={hit}
+              tagName="mark"
+            />
+          )}
+          {hit.hierarchy.lvl4 && (
+            <StyledHighlight
+              attribute="hierarchy.lvl4"
+              hit={hit}
+              tagName="mark"
+            />
+          )}
+          {hit.content && (
+            <StyledSnippet attribute="content" hit={hit} tagName="mark" />
+          )}
+        </GatsbyLink>
+      </div>
+    )
+  }
 
 const indices = [
   { name: `prod-ethereum-org`, title: `Pages`, hitComp: `PageHit` },
@@ -194,9 +197,10 @@ const Results = connectStateResults(
   }
 )
 
-const Search = ({ handleSearchSelect }) => {
+const Search = ({ handleSearchSelect, useKeyboardShortcuts }) => {
   const intl = useIntl()
-  const ref = createRef()
+  const containerRef = useRef()
+  const inputRef = useRef()
   const [query, setQuery] = useState(``)
   const [focus, setFocus] = useState(false)
   const algoliaClient = algoliasearch(
@@ -221,7 +225,7 @@ const Search = ({ handleSearchSelect }) => {
       return algoliaClient.search(requests)
     },
   }
-  useOnClickOutside(ref, () => setFocus(false))
+  useOnClickOutside(containerRef, () => setFocus(false))
 
   const handleSelect = () => {
     setQuery(``)
@@ -231,8 +235,22 @@ const Search = ({ handleSearchSelect }) => {
     }
   }
 
+  const focusSearch = (event) => {
+    if (!useKeyboardShortcuts) {
+      return
+    }
+
+    const searchInput = inputRef.current
+    if (document.activeElement !== searchInput) {
+      event.preventDefault()
+      searchInput.focus()
+    }
+  }
+
+  useKeyPress("/", focusSearch)
+
   return (
-    <Root ref={ref}>
+    <Root ref={containerRef}>
       <InstantSearch
         searchClient={searchClient}
         indexName={indices[0].name}
@@ -240,6 +258,7 @@ const Search = ({ handleSearchSelect }) => {
       >
         <Configure filters={`lang:${intl.locale}`} hitsPerPage={8} />
         <Input
+          inputRef={inputRef}
           query={query}
           setQuery={setQuery}
           onFocus={() => setFocus(true)}

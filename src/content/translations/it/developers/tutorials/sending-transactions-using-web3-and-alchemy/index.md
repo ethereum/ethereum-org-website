@@ -59,10 +59,10 @@ Questo è ciò che useremo nel nostro tutorial.
 
 Okay, ora che ci siamo tolti alcune di queste domande, passiamo al tutorial. Sentiti libero di fare domande quando vuoi, nel nostro [Discord](https://discord.gg/sqYmQ7fB)!
 
-**NOTA:** Questa guida presume che tu abbia un profilo di Alchemy, un indirizzo di Ethereum o portafoglio di Metamask, NodeJS e npm installato. Altrimenti, segui questi passaggi:
+**NOTA:** Questa guida presume che tu abbia un profilo di Alchemy, un indirizzo di Ethereum o portafoglio di MetaMask, NodeJS e npm installato. Altrimenti, segui questi passaggi:
 
 1.  [Crea un profilo di Alchemy](https://dashboard.alchemyapi.io/signup/)
-2.  [Crea un conto di Metamask ](https://metamask.io/) (od ottieni un indirizzo di Ethereum)
+2.  [Crea un conto di MetaMask ](https://metamask.io/) (od ottieni un indirizzo di Ethereum)
 3.  [Segui questi passaggi per installare NodeJs e NPM](https://medium.com/guides/alchemy-for-macs)
 
 ## Fasi per inviare la tua transazione {#steps-to-sending-your-transaction}
@@ -73,7 +73,7 @@ Naviga al tuo [Pannello di controllo di Alchemy](https://dashboard.alchemyapi.io
 
 ### 2\. Richiedi ETH dal faucet di Rinkeby {#request-eth-from-rinkeby-faucet}
 
-Segui le istruzioni sul [faucet di Rinkeby](https://faucet.rinkeby.io/) per ricevere Eth. Dovrai condividere sui social media per questo faucet specifico. Assicurati di includere il tuo indirizzo di Ethereum di **Rinkeby** (da Metamask) e non di un'altra rete. Dopo aver seguito le istruzioni, ricontrolla di aver ricevuto gli ETH nel tuo portafoglio.
+Segui le istruzioni sul [faucet di Rinkeby](https://faucet.rinkeby.io/) per ricevere Eth. Dovrai condividere sui social media per questo faucet specifico. Assicurati di includere il tuo indirizzo di Ethereum di **Rinkeby** (da MetaMask) e non di un'altra rete. Dopo aver seguito le istruzioni, ricontrolla di aver ricevuto gli ETH nel tuo portafoglio.
 
 ### 3\. Crea la cartella di un nuovo progetto e `cd` al suo interno {#create-a-new-project-direction}
 
@@ -105,7 +105,7 @@ npm install dotenv --save
 Crea un file .env nella cartella del tuo progetto e aggiungi quanto segue (sostituendo "`your-api-url`" e "`your-private-key`")
 
 - Per trovare l'URL della tua API di Alchemy, naviga alla pagina dei dettagli dell'app che hai appena creato sul tuo pannello di controllo, clicca "Visualizza Chiave" nell'angolo in alto a destra e prendi l'URL HTTP.
-- Per trovare la tua chiave privata usando Metamask, dai un'occhiata a questa [guida](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key).
+- Per trovare la tua chiave privata usando MetaMask, dai un'occhiata a questa [guida](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key).
 
 ```
 API_URL = "your-api-url"

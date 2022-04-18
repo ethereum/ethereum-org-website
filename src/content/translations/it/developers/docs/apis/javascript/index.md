@@ -9,11 +9,11 @@ Per interagire con la blockchain Ethereum (ad esempio leggere i dati della block
 
 Per questo scopo, ogni client di Ethereum implementa la specifica [JSON-RPC](/developers/docs/apis/json-rpc/), quindi esiste una serie uniforme di [endpoint](/developers/docs/apis/json-rpc/endpoints/) su cui possono basarsi le applicazioni.
 
-Se desideri utilizzare JavaScript per connetterti a un nodo Ethereum, puoi usare Javascript vanilla, ma tieni presente che ci sono già molte librerie all'interno dell'ecosistema che possono facilitarti la vita. Con queste librerie, gli sviluppatori possono scrivere metodi a una riga intuitivi per inizializzare le richieste RPC JSON (under the hood) che interagiscono con Ethereum.
+Se desideri utilizzare JavaScript per connetterti a un nodo Ethereum, puoi usare JavaScript vanilla, ma tieni presente che ci sono già molte librerie all'interno dell'ecosistema che possono facilitarti la vita. Con queste librerie, gli sviluppatori possono scrivere metodi a una riga intuitivi per inizializzare le richieste RPC JSON (under the hood) che interagiscono con Ethereum.
 
 ## Prerequisiti {#prerequisites}
 
-Potrebbe essere conoscere non solo Javascript ma anche lo [stack di Ethereum](/developers/docs/ethereum-stack/) e[i client di Ethereum](/developers/docs/nodes-and-clients/).
+Potrebbe essere conoscere non solo JavaScript ma anche lo [stack di Ethereum](/developers/docs/ethereum-stack/) e[i client di Ethereum](/developers/docs/nodes-and-clients/).
 
 ## Perché usare una libreria? {#why-use-a-library}
 
@@ -29,10 +29,10 @@ Utilizzando i provider, queste librerie consentono di connettersi a Ethereum e l
 
 ```js
 // Un Web3Provider esegue il wrapping di un provider Web3 standard, che è
-// ciò che Metamask inserisce come window.ethereum in ogni pagina
+// ciò che MetaMask inserisce come window.ethereum in ogni pagina
 const provider = new ethers.providers.Web3Provider(window.ethereum)
 
-// Il plugin Metamask permette anche di firmare le transazioni per
+// Il plugin MetaMask permette anche di firmare le transazioni per
 // inviare ether e pagare per cambiare stato all'interno della blockchain.
 // Per questo, abbiamo bisogno del firmatario dell'account...
 const signer = provider.getSigner()
@@ -153,7 +153,7 @@ Una volta eseguita la configurazione, sarà possibile:
 
 ### Interagire con le funzioni degli Smart Contract {#interact-with-smart-contract-functions}
 
-Le librerie client Javascript consentono a un'applicazione di chiamare le funzioni degli Smart Contract leggendo l'ABI (Application Binary Interface) di un contratto compilato.
+Le librerie client JavaScript consentono a un'applicazione di chiamare le funzioni degli Smart Contract leggendo l'ABI (Application Binary Interface) di un contratto compilato.
 
 L'ABI spiega essenzialmente le funzioni del contratto in un formato JSON e consente di utilizzarlo come un normale oggetto JavaScript.
 
@@ -280,6 +280,6 @@ _Conosci una risorsa pubblica che ti è stata utile? Modifica questa pagina e ag
 
 ## Tutorial correlati {#related-tutorials}
 
-- [Set up Web3js to use the Ethereum blockchain in Javascript](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– Istruzioni per impostare web3.js in un progetto._
+- [Set up Web3js to use the Ethereum blockchain in JavaScript](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– Istruzioni per impostare web3.js in un progetto._
 - [Calling a Smart Contract from JavaScript](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– Usando il token Dai, impara a chiamare le funzioni dei contratti con JavaScript_
 - [Sending transactions using web3 and Alchemy](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) _– Istruzioni passo passo per l'invio di transazioni dal backend._

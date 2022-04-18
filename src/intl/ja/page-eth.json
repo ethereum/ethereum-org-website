@@ -85,13 +85,13 @@
   "page-eth-more-on-tokens": "トークンとその使用方法の詳細",
   "page-eth-button-buy-eth": "ETHを入手",
   "page-eth-tokens-stablecoins": "ステーブルコイン",
-  "page-eth-tokens-defi": "分散型金融（DeFi）",
-  "page-eth-tokens-nft": "非代替性トークン（NFT）",
-  "page-eth-tokens-dao": "自律分散型組織（DAO）",
+  "page-eth-tokens-defi": "分散型金融(DeFi)",
+  "page-eth-tokens-nft": "非代替性トークン(NFT)",
+  "page-eth-tokens-dao": "分散型自律組織(DAO)",
   "page-eth-tokens-stablecoins-description": "イーサリアムトークンの中で最も安定したものの詳細。",
   "page-eth-tokens-defi-description": "イーサリアムトークンの金融システム。",
   "page-eth-tokens-nft-description": "イーサリアム上のアイテムの所有権を表すトークン。",
   "page-eth-tokens-dao-description": "多くの場合トークン保有者によって管理されるインターネットコミュニティ。",
-  "page-eth-whats-defi": "DeFiの詳細",
-  "page-eth-whats-defi-description": "DeFiはイーサリアム上に構築された分散型金融システムです。 この概要で何ができるかを説明します。"
+  "page-eth-whats-defi": "分散型金融(DeFi)の詳細",
+  "page-eth-whats-defi-description": "分散型金融(DeFi)とはイーサリアム上に構築された分散型金融システムのことです。 この概要で何ができるかを説明します。"
 }

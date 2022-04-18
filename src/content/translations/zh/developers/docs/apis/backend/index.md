@@ -103,5 +103,5 @@ _还有哪些社区资源对您有所帮助？ 请编辑本页面并添加！_
 
 ## 相关教程 {#related-tutorials}
 
-- [设置 Web3js 并在 Javascript 中使用以太坊区块链](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _关于在您的项目中设置 web3.js 的说明。_
+- [设置 Web3js 并在 JavaScript 中使用以太坊区块链](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _关于在您的项目中设置 web3.js 的说明。_
 - [在 JavaScript 中调用智能合约](/developers/tutorials/calling-a-smart-contract-from-javascript/) _使用 DAI token，从而使用 JavaScript 调用合约函数。_

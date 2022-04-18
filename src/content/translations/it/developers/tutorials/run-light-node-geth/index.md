@@ -1,6 +1,6 @@
 ---
 title: Come eseguire un nodo leggero con Geth
-description: Come scaricare, installare ed eseguire Geth. Verranno trattate le syncmode, la console di Javascript e altro
+description: Come scaricare, installare ed eseguire Geth. Verranno trattate le syncmode, la console di JavaScript e altro
 author: "Brian Gu"
 tags:
   - "client"
@@ -125,11 +125,11 @@ Il percorso dopo `"database="` dovrebbe indicare dove sono memorizzati i dati de
 
 Vale la pena ribadire che, al livello più basso, questo percorso è la posizione in cui si trova la blockchain. I contenuti completi della blockchain e dello stato dell'EVM sono memorizzati in ogni nodo completo nella rete di Ethereum, in directory che somigliano molto a quella presente sul tuo computer.
 
-## Collegare la console Javascript {#attaching-to-the-javascript-console}
+## Collegare la console JavaScript {#attaching-to-the-javascript-console}
 
-Eseguire un nodo è inutile se non possiamo interagirci. Per esempio, potremmo voler trasmettere richieste di transazione o cercare dati dell'EVM/blockchain (come il saldo di un account). Geth ha una console Javascript integrata e un'API Javascript denominata [web3js](https://github.com/ethereum/web3.js/) che si può usare per interagire con il nodo.
+Eseguire un nodo è inutile se non possiamo interagirci. Per esempio, potremmo voler trasmettere richieste di transazione o cercare dati dell'EVM/blockchain (come il saldo di un account). Geth ha una console JavaScript integrata e un'API JavaScript denominata [web3js](https://github.com/ethereum/web3.js/) che si può usare per interagire con il nodo.
 
-Per usare la console Javascript:
+Per usare la console JavaScript:
 
 1. Inizia a eseguire un nodo in una finestra di terminale (il nodo leggero o il nodo completo, è indifferente).
 2. Cerca un messaggio simile a:
@@ -143,11 +143,11 @@ Questo messaggio dovrebbe essere registrato prima dell'avvio della sincronizzazi
 3. Il messaggio indica il percorso dell'endpoint IPC (comunicazione interprocessuale). Copia il percorso (nell'esempio sopra, `/Users/bgu/Library/Ethereum/testnet/geth.ipc`).
 4. Apri una nuova finestra o scheda del terminale ed esegui il comando: `$ geth attach [percorso dell'endpoint IPC]`
 
-Si dovrebbe aprire la console Javascript. Possiamo ora usare web3js per interagire con il nodo.
+Si dovrebbe aprire la console JavaScript. Possiamo ora usare web3js per interagire con il nodo.
 
 [Documentazione completa di web3js](http://web3js.readthedocs.io/)
 
-Ecco alcuni utili oggetti esposti da quest'API. Vi puoi accedere digitandoli nella console di Javascript.
+Ecco alcuni utili oggetti esposti da quest'API. Vi puoi accedere digitandoli nella console di JavaScript.
 
 - `eth.syncing` restituisce un oggetto se il nodo ha avviato ma non completato la sincronizzazione dei blocchi o il valore `false` se ha completato o non ancora avviato la sincronizzazione. Se il nodo si sta ancora sincronizzando, `eth.syncing` indica il numero dell'ultimo blocco di cui sono stati ricevuti i dati, nonché il numero totale di blocchi nella blockchain corrente.
 - `net.peerCount` restituisce il numero di peer a cui sei connesso. Se è 0, probabilmente dovrai attendere qualche minuto o iniziare a cercare su Google le soluzioni (potrebbe essere un problema di rete o del firewall o altro).

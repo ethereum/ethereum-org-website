@@ -68,4 +68,4 @@ ethereum.org 是一个为以太坊社区打造的公共且开源的网站，任�
 
 我们会在这里发布空缺的职位。 如果你在这里看不到适合你的角色，请加入[Discord](https://discord.gg/CetY6Y4)，并让我们知道你想如何与我们合作！
 
-您想找除了 ethereum.org 以外的工作？ [查看其他与以太坊相关的工作](/community/#ethereum-jobs)。
+您想找除了 ethereum.org 以外的工作？ [查看其他与以太坊相关的工作](/community/get-involved/#ethereum-jobs/)。

@@ -169,18 +169,18 @@ Many Ethereum wallets offer limits protection to safeguard against accounts bein
 Scammers are always looking for ways to take your funds off you. It is impossible to stop scammers completely, but we can make them less effective by being aware of the most techniques used. There are many variations of these scams, but they generally follow the same high-level patterns. If nothing else, remember:
 
 - always be skeptical
-- no one is going to give you free or discounted ETH!
+- no one is going to give you free or discounted ETH
 - no one needs access to your private keys or personal information
 
 ### Giveaway scam {#giveaway}
 
 One of the most common scams in cryptocurrency is the giveaway scam. The giveaway scam can take many forms, but the general premise is that if you send ETH to the provided wallet address, you will receive your ETH back but doubled. *For this reason, it is also known as the 2-for-1 scam.*
 
-These scams usually stipulate a limited time of opportunity to claim the giveaway to encourage poor decision-making and create a sense of false urgency.
+These scams usually stipulate a limited time of opportunity to claim the giveaway to encourage poor decision-making and create a false sense of urgency.
 
 #### Social media hacks {#social-media-hacks}
 
-A high-profile version of this occurred in July 2020, when the Twitter accounts of prominent celebrities and organizations got hacked. The hacker simultaneously posted a Bitcoin giveaway on the hacked accounts. Although the deceptive tweets were quickly noticed and deleted, the hackers still managed to get away with 11 bitcoin (or $500,000 as of September 2021)
+A high-profile version of this occurred in July 2020, when the Twitter accounts of prominent celebrities and organizations got hacked. The hacker simultaneously posted a Bitcoin giveaway on the hacked accounts. Although the deceptive tweets were quickly noticed and deleted, the hackers still managed to get away with 11 bitcoin (or $500,000 as of September 2021).
 
 ![A scam on Twitter](./appleTwitterScam.png)
 

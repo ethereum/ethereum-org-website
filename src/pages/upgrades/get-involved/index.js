@@ -177,7 +177,7 @@ const GetInvolvedPage = ({ data, location }) => {
     const consensusClients = [
       {
         name: "Prysm",
-        background: "#23292E",
+        background: "#23292e",
         description: <Translation id="page-upgrades-get-involved-written-go" />,
         alt: "consensus-client-prysm-logo-alt",
         url: "https://docs.prylabs.network/docs/getting-started/",
@@ -198,7 +198,7 @@ const GetInvolvedPage = ({ data, location }) => {
       },
       {
         name: "Teku",
-        background: "#3359D5",
+        background: "#3359d5",
         description: (
           <Translation id="page-upgrades-get-involved-written-java" />
         ),
@@ -209,7 +209,7 @@ const GetInvolvedPage = ({ data, location }) => {
       },
       {
         name: "Lodestar",
-        background: "#14140B",
+        background: "#14140b",
         description: (
           <Translation id="page-upgrades-get-involved-written-javascript" />
         ),
@@ -222,7 +222,7 @@ const GetInvolvedPage = ({ data, location }) => {
       },
       {
         name: "Nimbus",
-        background: "#DC8600",
+        background: "#dc8600",
         description: (
           <Translation id="page-upgrades-get-involved-written-nim" />
         ),

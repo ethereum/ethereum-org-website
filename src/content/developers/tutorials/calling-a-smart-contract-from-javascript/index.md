@@ -2,7 +2,7 @@
 title: Calling a smart contract from JavaScript
 description: How to call a smart contract function from JavaScript using a Dai token example
 author: jdourlens
-tags: ["transactions", "frontend", "javascript", "web3.js"]
+tags: ["transactions", "frontend", "JavaScript", "web3.js"]
 skill: beginner
 lang: en
 sidebar: true
@@ -109,7 +109,7 @@ daiToken.methods.balanceOf(senderAddress).call(function (err, res) {
 })
 ```
 
-Remember that DAI ERC20 has 18 decimals which means you need to remove 18 zeros to get the correct amount. uint256 are returned as strings as Javascript does not handle big numeric values. If you’re not sure [how to deal with big numbers in JS check our tutorial about bignumber.js](https://ethereumdev.io/how-to-deal-with-big-numbers-in-javascript/).
+Remember that DAI ERC20 has 18 decimals which means you need to remove 18 zeros to get the correct amount. uint256 are returned as strings as JavaScript does not handle big numeric values. If you’re not sure [how to deal with big numbers in JS check our tutorial about bignumber.js](https://ethereumdev.io/how-to-deal-with-big-numbers-in-javascript/).
 
 ## Send: Sending a transaction to a smart contract function {#send-sending-a-transaction-to-a-smart-contract-function}
 

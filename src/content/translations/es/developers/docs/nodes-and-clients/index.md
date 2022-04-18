@@ -57,7 +57,7 @@ Ejecutar tu propio nodo te permite utilizar Ethereum de una manera realmente pri
 
 - Tu nodo verifica todas las transacciones y bloquea aquellas que vayan en contra de las reglas del consenso por sí mismo. Esto significa que no tienes que depender de ningún otro nodo de la red o confiar plenamente en ellos.
 - No tendrás que filtrar tus direcciones y saldos a nodos aleatorios. Todo puede ser verificado con tu propio cliente.
-- Tu dapp puede ser más segura y privada si utilizas tu propio nodo. [Metamask](https://metamask.io), [MyEtherWallet](https://myetherwallet.com) y algunas otras carteras pueden ser configuradas fácilmente para apuntar a tu propio nodo local.
+- Tu dapp puede ser más segura y privada si utilizas tu propio nodo. [MetaMask](https://metamask.io), [MyEtherWallet](https://myetherwallet.com) y algunas otras carteras pueden ser configuradas fácilmente para apuntar a tu propio nodo local.
 
 ![Cómo accedes a Ethereum a través de tu aplicación y nodos](../../../../../developers/docs/nodes-and-clients/nodes.png)
 

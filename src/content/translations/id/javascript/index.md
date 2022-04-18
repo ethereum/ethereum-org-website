@@ -26,7 +26,7 @@ Perlu penjelasan yang lebih mendasar? Kunjungi [ethereum.org/learn](/id/learn/) 
 
 ## Proyek dan Perangkat untuk JavaScript {#javascript-project-and-tools}
 
-**Solidity -** **_Bahasa paling populer di Ethereum, terinspirasi oleh C ++, Python, dan Javascript._**
+**Solidity -** **_Bahasa paling populer di Ethereum, terinspirasi oleh C ++, Python, dan JavaScript._**
 
 - [Dokumentasi](https://solidity.readthedocs.io)
 - [GitHub](https://github.com/ethereum/solidity/)

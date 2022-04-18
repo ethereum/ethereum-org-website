@@ -451,7 +451,7 @@ You can use constraints globally or for a specific state.
 
 #### Global constraint {#state-constraint}
 
-Use `m.constrain(constraint)` to add a global cosntraint.
+Use `m.constrain(constraint)` to add a global constraint.
 For example, you can call a contract from a symbolic address, and restraint this address to be specific values:
 
 ```python

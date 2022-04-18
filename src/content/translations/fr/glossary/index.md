@@ -206,7 +206,7 @@ Document de conception qui fournit des informations à la communauté Ethereum, 
 
 Le registre ENS est un [contrat](#smart-contract) unique qui fournit un mappage des noms de domaine aux propriétaires et aux résolveurs, comme décrit dans l'[EIP](#eip) 137.
 
-[Plus d'infos sur github.com](https://github.com/ethereum/ens)
+[Plus d'infos sur ens.domains](https://ens.domains)
 
 ### entropie {#entropy}
 

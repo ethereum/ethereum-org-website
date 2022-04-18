@@ -9,6 +9,8 @@ sidebar: true
 
 You should have a good understanding of all the foundational topics and a high-level understanding of [Ethereum scaling](/developers/docs/scaling/). Implementing scaling solutions such as rollups is an advanced topic as the technology is less battle-tested and continues to be researched and developed.
 
+Looking for a more beginner-friendly resource? See our [introduction to layer 2](/layer-2/).
+
 ## Zero-knowledge rollups {#zk-rollups}
 
 **Zero-knowledge rollups (ZK-rollups)** bundle (or "roll-up") hundreds of transfers off-chain and generate a cryptographic proof. These proofs can come in the form of SNARKs (succinct non-interactive argument of knowledge) or STARKs (scalable transparent argument of knowledge). SNARKs and STARKs are known as validity proofs and get posted to layer 1.
@@ -37,12 +39,7 @@ Watch Finematics explain ZK-rollups:
 
 Multiple implementations of ZK-rollups exist that you can integrate into your dapps:
 
-- [Loopring](https://loopring.org/#/)
-- [Starkware](https://starkware.co/)
-- [Matter Labs zkSync](https://zksync.io/)
-- [Aztec 2.0](https://aztec.network/)
-- [Polygon Hermez](https://hermez.io/)
-- [zkTube](https://zktube.io/)
+<RollupProductDevDoc rollupType="zk" />
 
 **ZK-rollups reading**
 

@@ -29,8 +29,8 @@ Hundreds of thousands of Ethereum enthusiasts gather in these online forums to s
 <SocialListItem socialIcon="discord"><Link to="https://discord.io/ethstaker">EthStaker Discord</Link> <i>- community oriented around offering project management support to Ethereum development</i></SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://discord.gg/CetY6Y4">Ethereum.org website team</Link> <i>- stop by and chat ethereum.org web development and design with the team and folks from the community</i></SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://discord.gg/ZH5aXDgWEU">Web3 University</Link> <i>- community focused on learning web3 development </i></SocialListItem>
-<SocialListItem socialIcon="webpage"><Link to="gitter.im/ethereum/solidity">Solidity Gitter</Link> <i>- chat for solidity development (Gitter)</i></SocialListItem>
-<SocialListItem socialIcon="webpage"><Link to="matrix.to/#/#ethereum_solidity:gitter.im">Solidity Matrix</Link> <i>- chat for solidity development (Matrix)</i></SocialListItem>
+<SocialListItem socialIcon="webpage"><Link to="https://gitter.im/ethereum/solidity/">Solidity Gitter</Link> <i>- chat for solidity development (Gitter)</i></SocialListItem>
+<SocialListItem socialIcon="webpage"><Link to="https://matrix.to/#/#ethereum_solidity:gitter.im">Solidity Matrix</Link> <i>- chat for solidity development (Matrix)</i></SocialListItem>
 
 ## YouTube and Twitter {#youtube-and-twitter}
 

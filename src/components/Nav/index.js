@@ -169,8 +169,20 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
           to: "/dapps/",
         },
         {
-          text: "run-a-node",
-          to: "/run-a-node/",
+          text: "layer-2",
+          to: "/layer-2/",
+        },
+        {
+          text: "nft-page",
+          to: "/nft/",
+        },
+        {
+          text: "defi-page",
+          to: "/defi/",
+        },
+        {
+          text: "dao-page",
+          to: "/dao/",
         },
         {
           text: "page-stablecoins-title",
@@ -179,6 +191,10 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
         {
           text: "page-stake-eth",
           to: "/staking/",
+        },
+        {
+          text: "run-a-node",
+          to: "/run-a-node/",
         },
       ],
     },
@@ -193,18 +209,6 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
         {
           text: "what-is-ether",
           to: "/eth/",
-        },
-        {
-          text: "defi-page",
-          to: "/defi/",
-        },
-        {
-          text: "dao-page",
-          to: "/dao/",
-        },
-        {
-          text: "nft-page",
-          to: "/nft/",
         },
         {
           text: "smart-contracts",
@@ -245,6 +249,10 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
         {
           text: "eips",
           to: "/eips/",
+        },
+        {
+          text: "web3",
+          to: "/web3/",
         },
         {
           text: "guides-and-resources",
@@ -374,7 +382,7 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
 
   return (
     <NavContainer>
-      <StyledNav>
+      <StyledNav aria-label={translateMessageId("nav-primary", intl)}>
         <NavContent>
           <HomeLogoNavLink to="/">
             <HomeLogo
@@ -405,7 +413,7 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
               )}
             </LeftItems>
             <RightItems>
-              <Search />
+              <Search useKeyboardShortcuts />
               <ThemeToggle
                 onClick={handleThemeChange}
                 aria-label={
@@ -434,7 +442,7 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
         </NavContent>
       </StyledNav>
       {shouldShowSubNav && (
-        <SubNav>
+        <SubNav aria-label={translateMessageId("nav-developers", intl)}>
           {ednLinks.map((link, idx) => (
             <NavLink
               key={idx}

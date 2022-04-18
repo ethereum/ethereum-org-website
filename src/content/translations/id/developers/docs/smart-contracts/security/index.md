@@ -77,7 +77,7 @@ Untuk memungkinkan seorang pengguna menarik ETH yang telah disimpan sebelumnya p
 2. Mengirimkan kepada pengguna jumlah saldo dalam ETH
 3. Mengatur ulang saldo pengguna ke 0, sehingga mereka tidak bisa menarik saldo mereka lagi.
 
-Jika dipanggil dari akun reguler (seperti akun Metamask milik Anda), ini berfungsi sebagaimana mestinya: msg.sender.call.value(), mengirimkan ETH ke akun Anda. Akan tetapi, kontrak pintar juga bisa membuat pemanggilan. Jika kontrak kustom yang jahat adalah kontrak yang memanggil `withdraw()`, msg.sender.call.value() tidak hanya akan mengirim `amount` ETH, tetapi secara implisit juga akan memanggil kontrak untuk memulai eksekusi kode. Bayangkan kontrak jahat ini:
+Jika dipanggil dari akun reguler (seperti akun MetaMask milik Anda), ini berfungsi sebagaimana mestinya: msg.sender.call.value(), mengirimkan ETH ke akun Anda. Akan tetapi, kontrak pintar juga bisa membuat pemanggilan. Jika kontrak kustom yang jahat adalah kontrak yang memanggil `withdraw()`, msg.sender.call.value() tidak hanya akan mengirim `amount` ETH, tetapi secara implisit juga akan memanggil kontrak untuk memulai eksekusi kode. Bayangkan kontrak jahat ini:
 
 ```solidity
 contract Attacker {
@@ -217,7 +217,7 @@ Jenis serangan di atas mencakup masalah pengodean kontrak pintar (re-entrancy) d
 
 Bacaan lebih lanjut:
 
-- [Serangan yang Diketahui pada Kontrak Pintar Consensys](https://consensys.github.io/smart-contract-best-practices/known_attacks/) - Penjelasan yang sangat mudah dibaca tentang kerentanan paling signifikan, disertai contoh kode untuk sebagian besar kerentanan.
+- [Serangan yang Diketahui pada Kontrak Pintar Consensys](https://consensys.github.io/smart-contract-best-practices/attacks/) - Penjelasan yang sangat mudah dibaca tentang kerentanan paling signifikan, disertai contoh kode untuk sebagian besar kerentanan.
 - [Daftar SWC](https://swcregistry.io/docs/SWC-128) - Daftar terkurasi CWE yang berlaku untuk Ethereum dan kontrak pintar
 
 ## Perangkat keamanan {#security-tools}

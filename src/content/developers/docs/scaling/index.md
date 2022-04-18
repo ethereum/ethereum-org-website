@@ -78,6 +78,12 @@ A plasma chain is a separate blockchain that is anchored to the main Ethereum ch
 
 Learn more about [Plasma](/developers/docs/scaling/plasma/).
 
+### Validium {#validium}
+
+A Validium chain uses validity proofs like zero-knowledge rollups but data is not stored on the main layer 1 Ethereum chain. This can lead to 10k transactions per second per Validium chain and multiple chains can be run in parallel.
+
+Learn more about [Validium](/developers/docs/scaling/validium/).
+
 ## Why are so many scaling solutions needed? {#why-do-we-need-these}
 
 - Multiple solutions can help reduce the overall congestion on any one part of the network, and also prevents single points of failure.

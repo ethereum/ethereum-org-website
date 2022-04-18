@@ -42,7 +42,7 @@ Na mgbakwunye na ozi dị na peeji a, enwere ọtụtụ ihe enyere obodo aka kw
 
   - [Kedu ka Ethereum si arụ ọrụ, na agbanyeghị?](https://medium.com/@preethikasireddy/how-does-ethereum-work-anyway-22d1df506369) _Sept 27, 2017 - Preethi Kasireddy_
   - [Okwu mwebata di nwayo na Ethereum](https://bitsonblocks.net/2016/10/02/gentle-introduction-ethereum/) _Oct 2, 2016 - Antony Lewis_
-  - [Mwebata na Blockchain site na Cryptoeconomics -Nkebi nke mbụ](https://blockchainatberkeley.blog/introduction-to-blockchain-through-cryptoeconomics-part-1-bitcoin-369f245067f9) _Jan 26, 2018 - Zubin Koticha_
+  - [Mwebata na Blockchain site na Cryptoeconomics -Nkebi nke mbụ](https://medium.com/blockchain-at-berkeley/introduction-to-blockchain-through-cryptoeconomics-part-1-bitcoin-369f245067f9) _Jan 26, 2018 - Zubin Koticha_
   - [Okwu mmeghe na Blockchain site na Cryptoeconomics - Nkebi nke abụọ](https://medium.com/mechanism-labs/introduction-to-bitcoin-through-cryptoeconomics-part-2-proof-of-work-and-nakamoto-consensus-1252f6a6c012) _July 19, 2018 - Zubin Koticha_
 
   ## Nkwekọrịta amamihe {#smart-contracts}

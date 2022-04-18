@@ -67,7 +67,7 @@ ES3(UMD) in the Browser
 Connect to Ropsten testnet
 
 ```javascript
-window.provider = new InfuraProvider("ropsten")
+window.ethersProvider = new ethers.providers.InfuraProvider("ropsten")
 ```
 
 ### 2. Create wallet {#create-wallet}

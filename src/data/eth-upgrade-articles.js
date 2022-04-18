@@ -1,5 +1,10 @@
 export const dannyArticles = [
   {
+    title: "Finalized no. 33",
+    description: "31 January 2022",
+    link: "https://blog.ethereum.org/2022/01/31/finalized-no-33/",
+  },
+  {
     title: "Finalized no. 32",
     description: "22 November 2021",
     link: "https://blog.ethereum.org/2021/11/22/finalized-no-32/",
@@ -14,32 +19,27 @@ export const dannyArticles = [
     description: "19 October 2021",
     link: "https://blog.ethereum.org/2021/10/19/finalized-no-30/",
   },
-  {
-    title: "Finalized no. 29",
-    description: "28 September 2021",
-    link: "https://blog.ethereum.org/2021/09/28/finalized-no-29/",
-  },
 ]
 
 export const benArticles = [
   {
-    title: "What’s New in Eth2 – #83",
-    description: "3 December 2021",
-    link: "https://hackmd.io/@benjaminion/eth2_news/https%3A%2F%2Fhackmd.io%2F%40benjaminion%2Fwnie2_211203",
+    title: "What’s New in Eth2 – #88",
+    description: "25 February 2022",
+    link: "https://hackmd.io/@benjaminion/eth2_news/https%3A%2F%2Fhackmd.io%2F%40benjaminion%2Fwnie2_220225",
   },
   {
-    title: "What’s New in Eth2 – #82",
-    description: "19 November 2021",
-    link: "https://hackmd.io/@benjaminion/eth2_news/https%3A%2F%2Fhackmd.io%2F%40benjaminion%2Fwnie2_211119",
+    title: "What’s New in Eth2 – #87",
+    description: "11 February 2022",
+    link: "https://hackmd.io/@benjaminion/eth2_news/https%3A%2F%2Fhackmd.io%2F%40benjaminion%2Fwnie2_220211",
   },
   {
-    title: "What’s New in Eth2 – #81",
-    description: "5 November 2021",
-    link: "https://hackmd.io/@benjaminion/eth2_news/https%3A%2F%2Fhackmd.io%2F%40benjaminion%2Fwnie2_211105",
+    title: "What’s New in Eth2 – #86",
+    description: "28 January 2022",
+    link: "https://hackmd.io/@benjaminion/eth2_news/https%3A%2F%2Fhackmd.io%2F%40benjaminion%2Fwnie2_220128",
   },
   {
-    title: "What’s New in Eth2 – #80",
-    description: "22 October 2021",
-    link: "https://hackmd.io/@benjaminion/eth2_news/https%3A%2F%2Fhackmd.io%2F%40benjaminion%2Fwnie2_211022",
+    title: "What’s New in Eth2 – #85",
+    description: "14 January 2022",
+    link: "https://hackmd.io/@benjaminion/eth2_news/https%3A%2F%2Fhackmd.io%2F%40benjaminion%2Fwnie2_220114",
   },
 ]

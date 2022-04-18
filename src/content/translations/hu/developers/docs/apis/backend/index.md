@@ -96,5 +96,5 @@ _Ismersz olyan közösségi anyagot, mely segített neked? Módosítsd az oldalt
 
 ## Kapcsolódó útmutatók {#related-tutorials}
 
-- [Állítsd be a Web3js, hogy Javascriptben használd az Ethereum blokkláncot](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– Intrukciók arról, hogyan állítsd be a web3.js-t a projektedben._
+- [Állítsd be a Web3js, hogy JavaScriptben használd az Ethereum blokkláncot](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– Intrukciók arról, hogyan állítsd be a web3.js-t a projektedben._
 - [Okosszerződés hívása JavaScriptből](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– A DAI token használata, hogy lásd hogyan lehet szerződés függvényeket meghívni JavaScript használatával._

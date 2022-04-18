@@ -38,7 +38,7 @@ Potřebujete nejdříve úplně základní informace? Podívejte se na [ethereum
 - [trufflesuite.com](https://www.trufflesuite.com/)
 - [GitHub](https://github.com/trufflesuite/truffle)
 
-**Web3.js -** **_javascriptové API pro Ethereum._**
+**Web3.js -** **_JavaScriptové API pro Ethereum._**
 
 - [Dokumentace](https://web3js.readthedocs.io/en/1.0/)
 - [GitHub](https://github.com/ethereum/web3.js/)
@@ -48,7 +48,7 @@ Potřebujete nejdříve úplně základní informace? Podívejte se na [ethereum
 - [Dokumentace](https://docs.ethers.io/)
 - [GitHub](https://github.com/ethers-io/ethers.js/)
 
-**ethereumjs-vm -** **_Ethereum virtuální stroj (VM) implementovaný v JavaScriptu_**
+**ethereumjs-vm -** **\_Ethereum virtuální stroj (VM) implementovaný v JavaScriptu**
 
 - [GitHub](https://github.com/ethereumjs/ethereumjs-vm)
 

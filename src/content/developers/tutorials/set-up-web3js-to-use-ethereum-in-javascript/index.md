@@ -26,25 +26,25 @@ If you prefer installing the library to use in your backend or a frontend projec
 npm install web3 --save
 ```
 
-Then to import Web3.js into a Node.js script or Browserify front-end project, you can use the following line of JavaScript:
+Then to import Web3.js into a Node.js script or Browserify frontend project, you can use the following line of JavaScript:
 
 ```js
 const Web3 = require("web3")
 ```
 
-Now that we included the library in the project we need to initialize it. If your project needs to be able to communicate with the blockchain. Most Ethereum librairies communicate with a [node](/developers/docs/nodes-and-clients/) through RPC calls. To initiate our web3 provider, we’ll instantiate a Web3 instance passing as the constructor the URL of the provider. If you have a node or [ganache instance running on your computer](https://ethereumdev.io/testing-your-smart-contract-with-existing-protocols-ganache-fork/) it will look like this:
+Now that we included the library in the project we need to initialize it. Your project needs to be able to communicate with the blockchain. Most Ethereum librairies communicate with a [node](/developers/docs/nodes-and-clients/) through RPC calls. To initiate our Web3 provider, we’ll instantiate a Web3 instance passing as the constructor the URL of the provider. If you have a node or [ganache instance running on your computer](https://ethereumdev.io/testing-your-smart-contract-with-existing-protocols-ganache-fork/) it will look like this:
 
 ```js
 const web3 = new Web3("http://localhost:8545")
 ```
 
-If you’d like to directly access a hosted node you can use Infura or the free ones provided by [Cloudfare](https://cloudflare-eth.com/):
+If you’d like to directly access a hosted node you can use Infura or the free ones provided by [Cloudflare](https://cloudflare-eth.com/):
 
 ```js
 const web3 = new Web3("https://cloudflare-eth.com")
 ```
 
-To test that we correctly configured our web3 instance, we’ll try to retrieve the latest block number by using the `getBlockNumber` function. This function accepts a callback as parameter and return the block number as an integer.
+To test that we correctly configured our Web3 instance, we’ll try to retrieve the latest block number using the `getBlockNumber` function. This function accepts a callback as a parameter and returns the block number as an integer.
 
 ```js
 var Web3 = require("web3")
@@ -55,7 +55,7 @@ web3.eth.getBlockNumber(function (error, result) {
 })
 ```
 
-If you execute this program, it will simply print the latest block number: the top of the blockchain. You can also use await/async function calls to avoid nesting callbacks in your code:
+If you execute this program, it will simply print the latest block number: the top of the blockchain. You can also use `await/async` function calls to avoid nesting callbacks in your code:
 
 ```js
 async function getBlockNumber() {
@@ -67,15 +67,15 @@ async function getBlockNumber() {
 getBlockNumber()
 ```
 
-You can see all the functions that are available on the web3 instance in the [official web3 documentation](https://web3js.readthedocs.io/en/v1.2.6/web3-eth.html#).
+You can see all the functions available on the Web3 instance in [the official web3.js documentation](https://web3js.readthedocs.io/en/v1.2.6/web3-eth.html#).
 
 Most of Web3 libraries are asynchronous because in the background the library makes JSON RPC calls to the node which send backs the result.
 
 <Divider />
 
-If you are working in the browser, some wallets directly inject a web3 instance and you should try to use it whenever possible especially if you plan to interact with the user’s Ethereum address to make transactions.
+If you are working in the browser, some wallets directly inject a Web3 instance and you should try to use it whenever possible especially if you plan to interact with the user’s Ethereum address to make transactions.
 
-Here is the snippet to detect if a Metamask wallet is available and try to enable it if it is. It will later allow you to read the user’s balance and enable them to validate transactions you’d like to make them do on the Ethereum blockchain:
+Here is the snippet to detect if a MetaMask wallet is available and try to enable it if it is. It will later allow you to read the user’s balance and enable them to validate transactions you’d like to make them do on the Ethereum blockchain:
 
 ```js
 if (window.ethereum != null) {

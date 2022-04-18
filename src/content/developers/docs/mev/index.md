@@ -1,13 +1,15 @@
 ---
-title: Miner extractable value (MEV)
-description: An introduction to miner extractable value (MEV)
+title: Maximal extractable value (MEV)
+description: An introduction to maximal extractable value (MEV)
 lang: en
 sidebar: true
 ---
 
-Maximal (formerly "miner") extractable value (MEV) refers to the maximum value that can be extracted from block production in excess of the standard block reward and gas fees by including, excluding, and changing the order of transactions in a block.
+Maximal extractable value (MEV) refers to the maximum value that can be extracted from block production in excess of the standard block reward and gas fees by including, excluding, and changing the order of transactions in a block.
 
-In a [proof-of-work](/developers/docs/consensus-mechanisms/pow/) context, maximal extractable value is also called "miner extractable value." This is because in proof-of-work, miners control transaction inclusion, exclusion, and ordering.
+### Miner extractable value
+
+This concept was first applied under the context of [proof-of-work](/developers/docs/consensus-mechanisms/pow/), and was initially referred to as "miner extractable value". This is because in proof-of-work, miners control transaction inclusion, exclusion, and ordering. However, after the transition to proof-of-stake via [The Merge](/updates/merge) validators will be responsible for these roles, and mining will no longer be applicable. The value extraction methods here will still persist after this transition, and thus a name change was needed. To keep the same acronym for continuity while maintaining the same fundamental meaning, "maximal extractable value" is now used as a more inclusive replacement.
 
 ## Prerequisites {#prerequisites}
 
@@ -63,9 +65,9 @@ Searchers compete to parse blockchain data as fast as possible to determine whic
 
 Sandwich trading is another common method of MEV extraction.
 
-To sandwich, a searcher will watch the mempool for large DEX trades. For instance, suppose someone wants to buy 10,000 UNI with DAI on Uniswap. A trade of this magnitude will have a meaningful impact the UNI/DAI pair, potentially significantly raising the price of UNI relative to DAI.
+To sandwich, a searcher will watch the mempool for large DEX trades. For instance, suppose someone wants to buy 10,000 UNI with DAI on Uniswap. A trade of this magnitude will have a meaningful effect on the UNI/DAI pair, potentially significantly raising the price of UNI relative to DAI.
 
-A searcher can calculate the approximate price impact of this large trade on the UNI/DAI pair and execute an optimal buy order immediately _before_ the large trade, buying UNI cheaply, then execute a sell order immediately _after_ the large trade, selling it for the higher price caused by the large order.
+A searcher can calculate the approximate price effect of this large trade on the UNI/DAI pair and execute an optimal buy order immediately _before_ the large trade, buying UNI cheaply, then execute a sell order immediately _after_ the large trade, selling it for the higher price caused by the large order.
 
 Sandwiching, however, is riskier as it isn't atomic (unlike DEX arbitrage, as described above) and is prone to a [salmonella attack](https://github.com/Defi-Cartel/salmonella).
 

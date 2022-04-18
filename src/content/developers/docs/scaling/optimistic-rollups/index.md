@@ -9,6 +9,8 @@ sidebar: true
 
 You should have a good understanding of all the foundational topics and a high-level understanding of [Ethereum scaling](/developers/docs/scaling/). Implementing scaling solutions such as rollups is an advanced topic as the technology is less battle-tested and continues to be researched and developed.
 
+Looking for a more beginner-friendly resource? See our [introduction to layer 2](/layer-2/).
+
 ## Optimistic rollups {#optimistic-rollups}
 
 Optimistic rollups sit in parallel to the main Ethereum chain on layer 2. They can offer improvements in scalability because they don't do any computation by default. Instead, after a transaction, they propose the new state to Mainnet or "notarise" the transaction.
@@ -46,12 +48,7 @@ Watch Finematics explain optimistic rollups:
 
 Multiple implementations of Optimistic rollups exist that you can integrate into your dapps:
 
-- [Arbitrum](https://arbitrum.io/)
-- [Optimism](https://optimism.io/) \* While Optimism hasn't fully reached L2 status, they have [fault proofs on their roadmap](https://www.optimism.io/about)
-- [Metis](https://www.metis.io/) \* While Metis hasn't fully reached L2 status, they have [fraud proofs on their roadmap](https://twitter.com/MetisDAO/status/1491516382844006401?s=20&t=H6YhDnCPJ8k3R1EFOqSK2g)
-- [Boba](https://boba.network/)
-- [Fuel Network](https://fuel.sh/)
-- [Cartesi](https://cartesi.io/)
+<RollupProductDevDoc rollupType="optimistic" />
 
 **Optimistic rollups reading**
 

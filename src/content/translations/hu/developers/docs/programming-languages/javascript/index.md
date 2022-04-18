@@ -5,7 +5,7 @@ lang: hu
 sidebar: true
 ---
 
-A Javascript a legnépszerűbb nyelvek között van az Ethereum ökoszisztémában. Valójában van egy [csapat](https://github.com/ethereumjs), mely célul tűzte ki, hogy a lehető legtöbb Ethereumot vigye be a JavaScriptbe.
+A JavaScript a legnépszerűbb nyelvek között van az Ethereum ökoszisztémában. Valójában van egy [csapat](https://github.com/ethereumjs), mely célul tűzte ki, hogy a lehető legtöbb Ethereumot vigye be a JavaScriptbe.
 
 Lehetőség van JavaScriptet írni (vagy valami hasonlót) a [stack összes szintjén](/developers/docs/ethereum-stack/).
 
@@ -24,7 +24,7 @@ Ezekkel a könyvtárakkal okosszerződésekkel léphetsz kapcsolatba az Ethereum
 
 ### Okosszerződések {#smart-contracts}
 
-Ha egy Javascript fejlesztő vagy és szeretnéd megírni a saját okosszerződéseidet, akkor érdemes megismerkedned a [Solidity-vel](https://solidity.readthedocs.io). Ez a legnépszerűbb okosszerződés nyelv és nagyrészt a JavaScript inspirálta.
+Ha egy JavaScript fejlesztő vagy és szeretnéd megírni a saját okosszerződéseidet, akkor érdemes megismerkedned a [Solidity-vel](https://solidity.readthedocs.io). Ez a legnépszerűbb okosszerződés nyelv és nagyrészt a JavaScript inspirálta.
 
 Többet az [okosszerződésekről](/developers/docs/smart-contracts/).
 

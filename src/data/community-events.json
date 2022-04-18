@@ -50,8 +50,8 @@
     "sponsor": null,
     "location": "NYC, USA",
     "description": "DeFiCon is a nonprofit conference with a mission to elevate the ethos of peer-to-peer crypto.",
-    "startDate": "2022-03-25",
-    "endDate": "2022-03-26"
+    "startDate": "2022-05-07",
+    "endDate": "2022-05-08"
   },
   {
     "title": "ETHDubai",
@@ -94,7 +94,7 @@
     "to": "https://ethmiami.net/",
     "sponsor": null,
     "location": "Miami, FL",
-    "description": "The goal of the event is to grow the business side of the Ethereum ecosystem. It's all about knowledge sharing, networking, and having fun.",
+    "description": "Join and support the first ever ETHMiami event, a community event for developers, researchers, and BUIDLers in the Ethereum ecosystem on April 9th. It’s all about knowledge sharing, networking and having fun.",
     "startDate": "2022-04-09",
     "endDate": "2022-04-09"
   },
@@ -178,6 +178,15 @@
     "description": "Consensus, the most influential crypto & blockchain experience of the year since 2015, will return to an in-person format and be held in Austin, Texas, for the first time ever.",
     "startDate": "2022-06-09",
     "endDate": "2022-06-12"
+  },
+  {
+    "title": "HODLerCon",
+    "to": "https://hodlercon.com",
+    "sponsor": null,
+    "location": "Hawaii, USA",
+    "description": "Luau DAO invites you to hang loose with your internet friends, celebrating the growth of Ethereum and its aligned blockchains.",
+    "startDate": "2022-06-17",
+    "endDate": "2022-06-26"
   },
   {
     "title": "ETHPrague",
@@ -322,6 +331,15 @@
     "description": "ETHKenya is a hackathon in Kenya.",
     "startDate": "2022-09-01",
     "endDate": "2022-09-30"
+  },
+  {
+    "title": "Devcon",
+    "to": "https://devcon.org/",
+    "sponsor": null,
+    "location": "Bogota, Co",
+    "description": "Devcon is the Ethereum conference for developers, researchers, thinkers, and makers.",
+    "startDate": "2022-10-11",
+    "endDate": "2022-10-14"
   },
   {
     "title": "ETHSanFrancisco",

@@ -26,6 +26,7 @@ import {
   Header3,
   Header4,
   ListItem,
+  KBD,
 } from "../components/SharedStyledComponents"
 import Emoji from "../components/Emoji"
 import YouTube from "../components/YouTube"
@@ -118,6 +119,7 @@ const components = {
   h3: H3,
   h4: H4,
   p: Paragraph,
+  kbd: KBD,
   li: ListItem,
   pre: Codeblock,
   table: MarkdownTable,

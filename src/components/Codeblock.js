@@ -60,7 +60,7 @@ const TopBar = styled.div`
 const TopBarItem = styled.div`
   border: 1px solid ${(props) => props.theme.colors.searchBorder};
   border-radius: 4px;
-  background: ${({ theme }) => (theme.isDark ? "#363641" : "#F7F7F7")};
+  background: ${({ theme }) => (theme.isDark ? "#363641" : "#f7f7f7")};
   margin-left: 0.5rem;
   padding: 0.25rem 0.5rem;
 
@@ -76,7 +76,7 @@ const codeTheme = {
   light: {
     plain: {
       backgroundColor: "#fafafa",
-      color: "#333",
+      color: "#333333",
     },
     styles: [
       {
@@ -96,7 +96,7 @@ const codeTheme = {
         types: ["property", "function"],
       },
       {
-        style: { color: "#888" },
+        style: { color: "#888888" },
         types: ["tag-id", "selector", "atrule-id"],
       },
       {

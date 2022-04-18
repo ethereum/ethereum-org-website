@@ -125,11 +125,11 @@ INFO [11-18|14:04:47] Allocated cache and file handles         database=/Users/b
 
 这里值得强调的是，这是区块链能够维持活跃度的最低限度。 区块链的完整内容和 EVM 状态存储在以太网络中的每个完整节点上，存储在与您计算机上的目录非常相似的目录中。
 
-## 附加到 Javascript 控制台 {#attaching-to-the-javascript-console}
+## 附加到 JavaScript 控制台 {#attaching-to-the-javascript-console}
 
-除非我们能够与节点真正交互，否则运行节点没有用处。 例如，我们可能想要广播交易请求或查看 EVM/区块链数据（例如帐户余额）。 Geth 有一个内置的 Javascript 控制台和一个名为[web3js](https://github.com/ethereum/web3.js/)的 Javascript API，您可以使用它与您的节点进行交互。
+除非我们能够与节点真正交互，否则运行节点没有用处。 例如，我们可能想要广播交易请求或查看 EVM/区块链数据（例如帐户余额）。 Geth 有一个内置的 JavaScript 控制台和一个名为[web3js](https://github.com/ethereum/web3.js/)的 JavaScript API，您可以使用它与您的节点进行交互。
 
-使用 Javascript 控制台：
+使用 JavaScript 控制台：
 
 1. 在终端窗口开始运行一个节点，不管是完整节点还是轻节点都可以。
 2. 查找类似于如下的消息：
@@ -143,11 +143,11 @@ INFO [11-18|14:04:49] IPC endpoint opened                      url=/Users/bgu/Li
 3. 此消息指明 IPC（进程间通信）端点的路径。 复制这个路径（在上面的示例中，它是 `/Userss/bgu/Library/Ethereum/testnet/geth.ipc`）。
 4. 打开一个新的终端窗口或标签，然后运行以下命令： `$ geth attach [您的IPC端点路径]`
 
-这应会打开 Javascript 控制台。 我们现在可以使用 web3js 与节点进行交互。
+这应会打开 JavaScript 控制台。 我们现在可以使用 web3js 与节点进行交互。
 
 [完整 web3js 文档](http://web3js.readthedocs.io/)
 
-以下是此 API 公开的一些有用的对象。 您可以通过在 Javascript 控制台中输入这些对象来访问它们。
+以下是此 API 公开的一些有用的对象。 您可以通过在 JavaScript 控制台中输入这些对象来访问它们。
 
 - 如果您的节点已经开始但尚未完成区块同步，`eth.syncing` 返回一个对象；或者，如果它已完成同步或尚未启动，则返回`false`值。 如果节点仍在同步，`eth.syncing`会告诉您收到数据的最新区块编号，以及当前区块链中的区块总数。
 - `net.peerCount`返回您连接到的对等点的数量。 如果此数量为 0，您可能需要等待几分钟，或者开始搜索解决方案（可能是防火墙或网络问题，或者其他问题）。

@@ -86,7 +86,8 @@ The Ethereum ecosystem is on a mission to fund public goods and impactful projec
 **Want to find a job working in Ethereum?**
 
 - [ethereum.org jobs](/about/#open-jobs)
-- [Ethereum Foundation jobs](https://ethereum.bamboohr.com/jobs/)
+- [Ethereum Foundation job board (Lever)](https://jobs.lever.co/ethereumfoundation)
+- [Ethereum Foundation job board (BambooHR)](https://ethereum.bamboohr.com/jobs/)
 - [Cryptocurrency Jobs](https://cryptocurrencyjobs.co/ethereum/)
 - [Crypto.jobs](https://crypto.jobs/)
 - [Careers at ConsenSys](https://consensys.net/careers/)
@@ -113,3 +114,4 @@ The Ethereum ecosystem is on a mission to fund public goods and impactful projec
 - [dOrg](https://dOrg.tech) [@dOrg_tech](https://twitter.com/dOrg_tech) - _Freelancer Web3 development collective working as a DAO_
 - [HausDAO](https://daohaus.club) [@nowdaoit](https://twitter.com/nowdaoit) - _Community governance of DAOhaus_
 - [Developer DAO](https://www.developerdao.com/) [@developer_dao](https://twitter.com/developer_dao) - _Community of builders who believe in collective ownership of the internet_
+- [DXdao](https://DXdao.eth.link/) [@DXdao](https://twitter.com/DXdao_) - _Decentralized development & governance of dApps & protocols_

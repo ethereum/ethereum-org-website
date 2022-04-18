@@ -49,6 +49,7 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 ### Active: {#active}
 
 - [Web3.py](https://github.com/ethereum/web3.py) - _Python library for interacting with Ethereum_
+- [Ape](https://github.com/ApeWorX/ape) - _The smart contract development tool for Pythonistas, Data Scientists, and Security Professionals_
 - [Brownie](https://github.com/eth-brownie/brownie) - _Python framework for deploying, testing and interacting with Ethereum smart contracts_
 - [Vyper](https://github.com/ethereum/vyper/) - _Pythonic Smart Contract Language for the EVM_
 - [py-evm](https://github.com/ethereum/py-evm) - _implementation of the Ethereum Virtual Machine_

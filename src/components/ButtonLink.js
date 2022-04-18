@@ -2,6 +2,8 @@ import React from "react"
 import styled from "styled-components"
 import { margin } from "styled-system"
 
+import { scrollIntoView } from "../utils/scrollIntoView"
+
 import Link from "./Link"
 
 const buttonStyling = `
@@ -83,12 +85,6 @@ const SecondaryScrollLink = styled(StyledScrollButton)`
   }
 `
 
-const scrollToId = (id) => {
-  const element = document.getElementById(id)
-  if (!element) return
-  element.scrollIntoView({ behavior: "smooth", block: "start" })
-}
-
 const ButtonLink = ({
   to,
   toId,
@@ -104,7 +100,7 @@ const ButtonLink = ({
       </SecondaryLink>
     ) : (
       <SecondaryScrollLink
-        onClick={() => scrollToId(toId)}
+        onClick={() => scrollIntoView(toId)}
         hideArrow={true}
         className={className}
         {...props}
@@ -119,7 +115,7 @@ const ButtonLink = ({
     </PrimaryLink>
   ) : (
     <PrimaryScrollLink
-      onClick={() => scrollToId(toId)}
+      onClick={() => scrollIntoView(toId)}
       hideArrow={true}
       className={className}
       {...props}

@@ -48,8 +48,8 @@ Utiliza Ethereum para crear aplicaciones descentralizadas (o "dapps"), que aprov
 
 ### Activos: {#active}
 
-- [Web3.py](https://github.com/ethereum/web3.py) - _Biblioteca de Python para interactuar con Ethereum_ 
-- [Brownie](https://github.com/eth-brownie/brownie) - Framework de Python para implementar, probar e interactuar con Smart Contracts de Ethereum_
+- [Web3.py](https://github.com/ethereum/web3.py) - _Biblioteca de Python para interactuar con Ethereum_
+- [Brownie](https://github.com/eth-brownie/brownie) - Framework de Python para implementar, probar e interactuar con Smart Contracts de Ethereum\_
 - [Vyper](https://github.com/ethereum/vyper/) - _Lenguaje tipo Python de Smart Contract para EVM_
 - [py-evm](https://github.com/ethereum/py-evm) - _implementación de la Ethereum Virtual Machine_
 - [eth-tester](https://github.com/ethereum/eth-tester) - _herramientas para probar aplicaciones basadas en Ethereum_
@@ -59,13 +59,12 @@ Utiliza Ethereum para crear aplicaciones descentralizadas (o "dapps"), que aprov
 - [pydevp2p](https://github.com/ethereum/pydevp2p) - _implementación de la pila Ethereum P2P_
 - [pymaker](https://github.com/makerdao/pymaker) - _API de Python para contratos Maker_
 - [siwe](https://github.com/spruceid/siwe-py) - _Inicie sesión con Ethereum (siwe) para Python_
-- [Smart contracts para pruebas](https://github.com/tradingstrategy-ai/smart-contracts-for-testing) - _Un paquete de Python que viene con contratos comunes como ERC-20, Uniswap y  para escribir pruebas con Web3.py_
+- [Smart contracts para pruebas](https://github.com/tradingstrategy-ai/smart-contracts-for-testing) - _Un paquete de Python que viene con contratos comunes como ERC-20, Uniswap y para escribir pruebas con Web3.py_
 
 ### Archivados / Sin soporte: {#archived--no-longer-maintained}
 
 - [Trinity](https://github.com/ethereum/trinity) - _Cliente Python para Ethereum_
 - [Mamba](https://mamba.black) - _framework para escribir, compilar y desplegar smart contracts escrito en el lenguaje Vyper_
-
 
 ¿Buscas más recursos? Echa un vistazo a [ethereum.org/developers.](/developers/)
 
@@ -82,7 +81,7 @@ Los siguientes proyectos basados en Ethereum utilizan las herramientas mencionad
 ## Colaboradores de la comunidad de Python {#python-community-contributors}
 
 [Ethereum Python Community Discord](https://discord.gg/9zk7snTfWe) alberga una comunidad en rápido crecimiento y es la comunidad dedicada
-a debates sobre cualquiera de los proyectos anteriores y temas relacionados. 
+a debates sobre cualquiera de los proyectos anteriores y temas relacionados.
 
 ## Otras listas adicionales {#other-aggregated-lists}
 

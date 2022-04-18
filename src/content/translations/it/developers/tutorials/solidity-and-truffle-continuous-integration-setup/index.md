@@ -192,7 +192,7 @@ Solidity coverage avvia la propria ganache-cli, quindi non dobbiamo preoccuparce
 ## Ulteriori idee {#further-ideas}
 
 - [MythX](https://mythx.io/): Con MythX puoi analizzare automaticamente la sicurezza del tuo smart contract. Ha quindi molto senso [aggiungerlo alla tua CI](https://blog.mythx.io/howto/mythx-and-continuous-integration-part-1-circleci/).
-- [Linting](https://en.wikipedia.org/wiki/Lint_%28software%29): Un buon codice è applicabile in una certa misura con gli strumenti di linting. [Eslint](https://eslint.org/) è ottimo per Javascript e [facile da configurare](https://eslint.org/docs/user-guide/getting-started), mentre [Solhint](https://protofire.github.io/solhint/) è utilizzabile per Solidity.
+- [Linting](https://en.wikipedia.org/wiki/Lint_%28software%29): Un buon codice è applicabile in una certa misura con gli strumenti di linting. [Eslint](https://eslint.org/) è ottimo per JavaScript e [facile da configurare](https://eslint.org/docs/user-guide/getting-started), mentre [Solhint](https://protofire.github.io/solhint/) è utilizzabile per Solidity.
 - Test lunghi: A volte potresti voler aggiungere dei test estremi, ad es. testando un contratto con centinaia di utenti. Ciò richiede molto tempo. Invece di eseguirli a ogni esecuzione del test, aggiungili alla CI.
 
 Ecco tutto. L'integrazione continua è una strategia molto utile per i tuoi sviluppi. Puoi dare un'occhiata all'esempio completo su [Truffle-CI-Example](https://github.com/gorgos/Truffle-CI-Example). Basta assicurarti di rimuovere Circle-CI o Travis, ne basta uno!
