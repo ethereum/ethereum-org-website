@@ -101,6 +101,7 @@ Ethereum is the perfect foundation for DAOs for a number of reasons:
 - [Create an Aragon-powered DAO](https://aragon.org/product)
 - [Start a colony](https://colony.io/)
 - [Build a DAO with DAOstack](https://daostack.io/)
+- [Create a DAO for non-blockchain expert](https://hotpot.network)
 
 ## Further reading {#further-reading}
 
