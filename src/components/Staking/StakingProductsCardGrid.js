@@ -493,8 +493,8 @@ const StakingProductCardGrid = ({ category }) => {
 
   return (
     <CardGrid>
-      {rankedProducts.map((product) => (
-        <StakingProductCard product={product} />
+      {rankedProducts.map((product, idx) => (
+        <StakingProductCard product={product} key={idx} />
       ))}
     </CardGrid>
   )
