@@ -40,5 +40,26 @@ Essentially, it is a simplified version of a computer, which is proved to have t
 This model makes it easier to prove various theorems about what is and what isn't comnputable.
 
 The term [*Turing-complete*](https://en.wikipedia.org/wiki/Turing_completeness) means a computer that can run the same calculations as a Turing machine. 
+Turing machines can get into infinite loops, and the EVM cannot because it would run out of gas, so it's only quasi-Turing-complete.
+
+## 9.1 (Basics)
+
+A [stack machine](https://en.wikipedia.org/wiki/Stack_machine) is a computer that stores intermediate data not in registers, but in a [stack](https://en.wikipedia.org/wiki/Stack_(abstract_data_type)).
+Stack machine is the preferred architecture for virtual machines because it is easy to implement.
+This ease of implementation is especially important in the case of the EVM because it means that bugs, and security vulnerabilities, are a lot less likely. 
+
+The memory is a *byte array*, which means every memory location is a single byte.
+This means that when you write a word (which is 256 bits) to memory it covers 32 (256/8) different memory locations.
+For example, if you execute this [Yul](https://docs.soliditylang.org/en/latest/yul.html) code:
+
+```yul
+mstore(0, 0x60A7)
+```
+
+It writes zeros to locations 0-29, 0x60 to 30, and 0xA7 to 31.
+
+The [*Von Neumann architecture*](https://en.wikipedia.org/wiki/Von_Neumann_architecture) specifies that the program to be executed and the data which it processes are stored in the same memory.
+This is a bad idea from the security perspective because it allows for self-modifying code.
+
 
 ## Conclusion
