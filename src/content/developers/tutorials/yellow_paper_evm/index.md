@@ -59,7 +59,9 @@ mstore(0, 0x60A7)
 It writes zeros to locations 0-29, 0x60 to 30, and 0xA7 to 31.
 
 The [*Von Neumann architecture*](https://en.wikipedia.org/wiki/Von_Neumann_architecture) specifies that the program to be executed and the data which it processes are stored in the same memory.
-This is a bad idea from the security perspective because it allows for self-modifying code.
+This is a bad idea from the security perspective because it allows program code to be modified, so the EVM does not do that except when necessary (in the case of contract creation).
+
+
 
 
 ## Conclusion
