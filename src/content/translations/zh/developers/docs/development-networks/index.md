@@ -19,7 +19,7 @@ sidebar: true
 
 **为什么不在本地运行一个标准的以太坊节点？**
 
-您*可以* [运行一个节点](/developers/docs/nodes-and-clients/#running-your-own-node)（例如 Geth、OpenEtherum 或 Nethermind），但由于开发网络是为开发目的而建立的，他们往往会打包一些快捷方便的功能，例如：
+您*可以* [运行一个节点](/developers/docs/nodes-and-clients/#running-your-own-node)（例如 Geth、OpenEthereum 或 Nethermind），但由于开发网络是为开发目的而建立的，他们往往会打包一些快捷方便的功能，例如：
 
 - 为本地区块链提供数据，这个功能很重要（例如使用 ETH 余额的帐户）
 - 在接受到每个交易时就立即按顺序和没有延迟地挖掘区块。

@@ -110,82 +110,26 @@ const Pre = styled.pre`
 `
 
 const InfoTitle = styled.h2`
-  font-size: 48px;
+  font-size: 3rem;
   font-weight: 700;
   text-align: right;
   margin-top: 0rem;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     text-align: left;
-    font-size: 40px;
+    font-size: 2.5rem
     display: none;
   }
 `
 
 const H2 = styled.h2`
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: 700;
   margin-top: 4rem;
-
-  a {
-    display: none;
-  }
-
-  /* Anchor tag styles */
-  a {
-    position: relative;
-    display: initial;
-    opacity: 0;
-    margin-left: -1.5em;
-    padding-right: 0.5rem;
-    font-size: 1rem;
-    vertical-align: middle;
-    &:hover {
-      display: initial;
-      fill: ${(props) => props.theme.colors.primary};
-      opacity: 1;
-    }
-  }
-
-  &:hover {
-    a {
-      display: initial;
-      fill: ${(props) => props.theme.colors.primary};
-      opacity: 1;
-    }
-  }
 `
 
 const H3 = styled.h3`
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 700;
-
-  a {
-    display: none;
-  }
-
-  /* Anchor tag styles */
-  a {
-    position: relative;
-    display: initial;
-    opacity: 0;
-    margin-left: -1.5em;
-    padding-right: 0.5rem;
-    font-size: 1rem;
-    vertical-align: middle;
-    &:hover {
-      display: initial;
-      fill: ${(props) => props.theme.colors.primary};
-      opacity: 1;
-    }
-  }
-
-  &:hover {
-    a {
-      display: initial;
-      fill: ${(props) => props.theme.colors.primary};
-      opacity: 1;
-    }
-  }
 `
 
 // Note: you must pass components to MDXProvider in order to render them in markdown files
@@ -219,13 +163,13 @@ const components = {
 }
 
 const Title = styled.h1`
-  font-size: 40px;
+  font-size: 2.5rem;
   font-weight: 700;
   margin-top: 1rem;
 `
 
 const SummaryPoint = styled.li`
-  font-size: 16px;
+  font-size: 1rem;
   color: ${(props) => props.theme.colors.text300};
   margin-bottom: 0rem;
   line-height: auto;

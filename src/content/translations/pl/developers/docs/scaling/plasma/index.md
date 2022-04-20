@@ -7,7 +7,7 @@ incomplete: true
 sidebarDepth: 3
 ---
 
-Łańcuch plazmowy to oddzielny blockchain, który jest zakotwiczony w głównym łańcuchu Ethereum, i używa dowodów oszustw (takich jak [optymistyczne pakiety zbiorcze](/developers/docs/scaling/layer-2-rollups/#optimistic-rollups)) do arbitrażu sporów. Te łańcuchy są niekiedy określane jako „potomne”, ponieważ zasadniczo są mniejszymi kopiami sieci głównej Ethereum. Drzewa Merkle umożliwiają tworzenie nieograniczonych stosów takich łańcuchów, które mogą pracować nad odciążeniem sieci macierzystych (w tym sieci głównej). Uzyskują zabezpieczenia za pośrednictwem [dowodów oszustwa](/glossary/#fraud-proof), a każdy kanał potomny ma własny mechanizm walidacji bloków.
+Łańcuch plazmowy to oddzielny blockchain, który jest zakotwiczony w głównym łańcuchu Ethereum, i używa dowodów oszustw (takich jak [optymistyczne pakiety zbiorcze](/developers/docs/scaling/optimistic-rollups/)) do arbitrażu sporów. Te łańcuchy są niekiedy określane jako „potomne”, ponieważ zasadniczo są mniejszymi kopiami sieci głównej Ethereum. Drzewa Merkle umożliwiają tworzenie nieograniczonych stosów takich łańcuchów, które mogą pracować nad odciążeniem sieci macierzystych (w tym sieci głównej). Uzyskują zabezpieczenia za pośrednictwem [dowodów oszustwa](/glossary/#fraud-proof), a każdy kanał potomny ma własny mechanizm walidacji bloków.
 
 ## Warunki wstępne {#prerequisites}
 

@@ -7,7 +7,7 @@ sidebar: true
 
 # 以太坊治理简介 {#introduction}
 
-_如果没有人拥有以太坊，那是谁决定了太坊的过去和将来的变化？ 以太坊治理是指允许做出这些决定的过程。_
+_如果没有人拥有以太坊，那么关于以太坊过去和未来变化的决定是如何做出的？ 以太坊治理是指允许做出这些决定的过程。_
 
 <Divider />
 
@@ -15,7 +15,7 @@ _如果没有人拥有以太坊，那是谁决定了太坊的过去和将来的�
 
 治理是指允许做出决定的制度系统。 在典型的组织架构中，执行小组或董事会拥有最终决策的发言权。 或者股东们投票决定改革提案。 在政治制度中，当选的官员可以颁布立法，代表其选民的期望。
 
-## 去中心化治理 {#decentalized-governance}
+## 去中心化治理 {#decentralized-governance}
 
 没有任何人拥有或者控制以太坊协议，但是为了确保网络的长久繁荣，仍然需要对变革做出决定。 由于缺少所有权，这使得传统组织治理不再适合。
 
@@ -33,7 +33,9 @@ _如果没有人拥有以太坊，那是谁决定了太坊的过去和将来的�
 
 _虽然在协议层上，以太坊的治理在链下进行，但许多基于以太坊构建的使用案例（例如 DAO）采用链上治理。_
 
-<ButtonLink to="/dao/">关于 DAO 的更多信息</ButtonLink>
+<ButtonLink to="/dao/">
+  关于 DAO 的更多信息
+</ButtonLink>
 
 <Divider />
 
@@ -47,7 +49,7 @@ _虽然在协议层上，以太坊的治理在链下进行，但许多基于以�
 - **节点运营商**：这些人运行区块和交易广播节点，拒绝遇到的任何无效交易或区块。 [关于节点的更多信息](/developers/docs/nodes-and-clients/)。
 - **EIP 作者**：这些人提议修改以太坊协议，具体形式为以太坊改进提议 (EIP)。 [关于 EIP 的更多信息](/eips/)。
 - **矿工/验证者**：这些人运行可以向以太坊区块链添加新区块的节点。
-- **协议开发者**（又名 “核心开发者”）：这些人需要维护各种以太坊实现（例如执行层的 go-ethereum、Nethermind、Besu、Erigon，或共识层的 Prysm、Lighthouse、Nimbus、Teku、Lodestar）。 [关于以太坊客户端的更多信息](/developers/docs/nodes-and-clients/)。
+- **协议开发者**（又名 “核心开发者”）：这些人需要维护各种以太坊实现（例如执行层的 go-ethereum、Nethermind、Besu、Erigon，或共识层的 Prysm、Lighthouse、Nimbus、Teku、Lodestar)。 [关于以太坊客户端的更多信息](/developers/docs/nodes-and-clients/)。
 
 _注：任何个人都可以属于多个组（如：协议开发者可以支持 EIP，运行信标链验证器，并使用 DeFi 应用程序）。 不过为了明确概念，这样最容易区分。_
 
@@ -57,7 +59,9 @@ _注：任何个人都可以属于多个组（如：协议开发者可以支持 
 
 以太坊治理中使用的一个重要流程是**以太坊改进提议 (EIP)**。 EIP 是指明以太坊潜在新功能或流程的一套标准。 以太坊社区内的任何人都可以创建 EIP。 例如，EIP-721（标准化 NFT 的 EIP）的作者都没有直接参与以太坊的协议开发。
 
-<ButtonLink to="/eips/">关于 EIP 的更多信息</ButtonLink>
+<ButtonLink to="/eips/">
+  关于 EIP 的更多信息
+</ButtonLink>
 
 <Divider />
 
@@ -87,7 +91,7 @@ _注：任何个人都可以属于多个组（如：协议开发者可以支持 
 
 ### 了解先前的工作 {#prior-work}
 
-EIP 倡导者应首先熟悉先前的工作和建议，然后认真考虑创建一个可部署到以太坊主网上的 EIP。 这样，该 EIP 很有可能带入一些以前没有被拒绝过的新事物。 研究这个问题的三个主要地方是 [EIP 存储库](https://github.com/ethereum/eips)、[Ethereum Magicans](https://www.ethereum-magicians.org/) 和 [ethresear.ch](https://www.ethresear.ch/)。
+EIP 倡导者应首先熟悉先前的工作和建议，然后认真考虑创建一个可部署到以太坊主网上的 EIP。 这样，该 EIP 很有可能带入一些以前没有被拒绝过的新事物。 研究此问题的三个主要地方是 [EIP 存储库](https://github.com/ethereum/eips)、[Ethereum Magicans](https://ethereum-magicians.org/) 和 [ethresear.ch](https://ethresear.ch/)。
 
 ### 工作组 {#working-groups}
 
@@ -137,21 +141,23 @@ DAO 分叉是为了解决 [2016 DAO 攻击](https://www.coindesk.com/understandi
 
 ### 分叉的用途 {#forking-utility}
 
-以太坊/以太坊经典分叉是一个良好分叉的优秀案例。 我们有两组人，他们在一些核心价值观上的分歧足够大，并认为值得冒险去追求他们的具体行动方案。
+以太坊/Ethereum Classic 分叉是一个良好分叉的优秀案例。 我们有两组人，他们在一些核心价值观上的分歧很大，因而认为值得冒险去坚持他们的具体行动方案。
 
-面对重大的政治、哲学或经济分歧时能够分叉，这一点对于以太坊治理的成功意义重大。 如果无法分叉，替代方案就是持续内斗，让最终形成以太坊经典的人群被迫不情愿地参与，并且对于未来如何成功的看法也越来越不一致。
+面对重大的政治、哲学或经济分歧时能够分叉，这一点对于以太坊的成功治理意义重大。 如果无法分叉，替代方案就是持续内斗，让最终组成 Ethereum Classic 的人们被迫不情愿地参与，并且对于未来如何成功的看法也越来越不一致。
 
 <Divider />
 
 ## 信标链开发 {#beacon-chain}
 
-以太坊的治理过程往往以速度和效率换取开放性和包容性。 为了加速信标链的开发，它与工作量证明的以太坊网络分开推出，并遵循自己的治理惯例。
+以太坊的治理过程往往以速度和效率换取开放性和包容性。 为了加快信标链的发展，它与以太坊网络的工作量证明分开启动，并遵循自己的治理惯例。
 
-虽然规范和实现的开发一直是完全开源的，但并没有使用上述用于提出更新的正式程序。 这使研究人员和执行人员能够更快地确定和商定各种变化。
+虽然规范和实施开发一直是完全开源的，但并没有使用正式的程序提出上述更新。 这使研究人员和执行人员能够更快地确定和商定各种变化。
 
 当信标链与以太坊执行层合并时，提议修改的治理程序将得到协调。 实施合并的过程[已经在进行中](https://github.com/ethereum/EIPs/pull/3675)。
 
-<ButtonLink to="/upgrades/merge/">关于合并的更多信息</ButtonLink>
+<ButtonLink to="/upgrades/merge/">
+  关于合并的更多信息
+</ButtonLink>
 
 <Divider />
 
@@ -167,9 +173,12 @@ DAO 分叉是为了解决 [2016 DAO 攻击](https://www.coindesk.com/understandi
 
 ## 延伸阅读 {#further-reading}
 
-以太坊的治理并没有严格定义。 各社区参与者对此有着不同的看法。 以下是其中一些：
+以太坊的治理并没有严格定义。 各社区参与者对此有着不同的看法。 以下是其中一部分：
 
-- [以太坊治理](https://docs.ethhub.io/ethereum-basics/governance/) - _ETHHub_
-- [以太坊治理如何进行？](https://cryptotesters.com/blog/ethereum-governance) - _Cryptotestters_
-- [如何治理以太坊？](https://medium.com/coinmonks/how-ethereum-governance-works-71856426b63a) - _Micah Zoltu_
-- [什么是以太坊核心开发者？](https://hudsonjameson.com/2020-06-22-what-is-an-ethereum-core-developer/) - _Hudson Jameson_
+- [Notes on Blockchain Governance](https://vitalik.ca/general/2017/12/17/voting.html) - _Vitalik Buterin_
+- [Governance on Ethereum](https://docs.ethhub.io/ethereum-basics/governance/) – _ETHHub_
+- [How does Ethereum Governance work?](https://cryptotesters.com/blog/ethereum-governance) – _Cryptotesters_
+- [How Ethereum governance works](https://medium.com/coinmonks/how-ethereum-governance-works-71856426b63a) – _Micah Zoltu_
+- [What is an Ethereum core developer?](https://hudsonjameson.com/2020-06-22-what-is-an-ethereum-core-developer/) - _Hudson Jameson_
+- [Governance, Part 2: Plutocracy Is Still Bad](https://vitalik.ca/general/2018/03/28/plutocracy.html) - _Vitalik Buterin_
+- [Moving beyond coin voting governance](https://vitalik.ca/general/2021/08/16/voting3.html) - _Vitalik Buterin_

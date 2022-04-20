@@ -29,10 +29,10 @@ Menggunakan penyedia, pustaka ini memungkinkan Anda terhubung ke Ethereum dan me
 
 ```js
 // Web3Provider membungkus provider Web3 standar, yaitu
-// apa yang disuntikkan Metamask sebagai window.ethereum ke setiap halaman
+// apa yang disuntikkan MetaMask sebagai window.ethereum ke setiap halaman
 const provider = new ethers.providers.Web3Provider(window.ethereum)
 
-// Plugin Metamask juga memungkinkan penandatanganan transaksi ke
+// Plugin MetaMask juga memungkinkan penandatanganan transaksi ke
 // kirim ether dan bayar untuk mengubah state di dalam blockchain.
 // Untuk ini, kita membutuhkan penandatangan akun...
 const signer = provider.getSigner()
@@ -152,7 +152,7 @@ Setelah disiapkan, Anda dapat:
 
 ### Berinteraksi dengan fungsi kontrak pintar {#interact-with-smart-contract-functions}
 
-Pustaka klien Javascript memungkinkan aplikasi Anda memanggil fungsi kontrak pintar dengan membaca Antarmuka Biner Aplikasi (ABI) dari kontrak yang dikompilasi.
+Pustaka klien JavaScript memungkinkan aplikasi Anda memanggil fungsi kontrak pintar dengan membaca Antarmuka Biner Aplikasi (ABI) dari kontrak yang dikompilasi.
 
 ABI pada dasarnya menjelaskan fungsi kontrak dalam format JSON dan memungkinkan Anda untuk menggunakannya seperti objek JavaScript biasa.
 
@@ -241,7 +241,7 @@ ethers.utils.formatEther(balance)
 - [Dokumentasi](https://web3js.readthedocs.io/en/1.0/)
 - [GitHub](https://github.com/ethereum/web3.js/)
 
-**Ethers.js -** **_Implementasi dan utilitas dompet Ethereum secara lengkap dalam JavaScript dan TypeScript._**
+**Ethers.js -** **_Implementasi dompet Ethereum secara lengkap dengan JavaScript and TypeScript._**
 
 - [Dokumentasi](https://docs.ethers.io/)
 - [GitHub](https://github.com/ethers-io/ethers.js/)
@@ -254,7 +254,7 @@ ethers.utils.formatEther(balance)
 - [GitHub](https://github.com/graphprotocol/)
 - [Discord](https://thegraph.com/discord)
 
-**light.js -** **_Library JS reaktif tingkat tinggi yang dioptimalkan untuk klien ringan._**
+**light.js -** **_Pustaka JS reaktif tingkat tinggi yang dioptimalkan untuk klien ringan._**
 
 - [GitHub](https://github.com/openethereum/js-libs/tree/master/packages/light.js)
 
@@ -270,7 +270,7 @@ ethers.utils.formatEther(balance)
 
 ## Bacaan lebih lanjut {#further-reading}
 
-_Tahu tentang bahan rujukan komunitas yang membantu Anda? Edit halaman ini dan tambahkan!_
+_Tahu tentang sumber daya komunitas yang membantu Anda? Edit halaman ini dan tambahkan!_
 
 ## Topik terkait {#related-topics}
 
@@ -279,6 +279,6 @@ _Tahu tentang bahan rujukan komunitas yang membantu Anda? Edit halaman ini dan t
 
 ## Tutorial terkait {#related-tutorials}
 
-- [Menyiapkan Web3js untuk menggunakan blockchain Ethereum dalam Javascript](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– Instruksi untuk menyiapkan web3.js dalam proyek Anda._
+- [Menyiapkan Web3js untuk menggunakan blockchain Ethereum dalam JavaScript](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– Instruksi untuk menyiapkan web3.js dalam proyek Anda._
 - [Memanggil kontrak pintar dari JavaScript](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– Menggunakan token DAI, lihat cara memanggil fungsi kontrak menggunakan JavaScript._
 - [Mengirim transaksi menggunakan web3 dan Alchemy](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) _– Panduan langkah demi langkah untuk mengirim transaksi dari backend._

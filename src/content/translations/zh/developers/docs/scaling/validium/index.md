@@ -7,7 +7,7 @@ incomplete: true
 sidebarDepth: 3
 ---
 
-使用 [ZK-rollup ](/developers/docs/scaling/layer-2-rollups#zk-rollups)等有效性证明，但数据不存储在一层以太坊主链上。 这可能导致每个 validium 链每秒有 1 万次易，并且多个链可并行运行。
+使用 [ZK-rollup ](/developers/docs/scaling/zk-rollups/)等有效性证明，但数据不存储在一层以太坊主链上。 这可能导致每个 validium 链每秒有 1 万次易，并且多个链可并行运行。
 
 ## 前提条件 {#prerequisites}
 

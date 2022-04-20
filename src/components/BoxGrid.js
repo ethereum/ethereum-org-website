@@ -4,13 +4,13 @@ import styled from "styled-components"
 import Emoji from "./Emoji"
 
 const Title = styled.h3`
-  font-size: 40px;
+  font-size: 2.5rem;
   font-weight: 400;
   margin-top: 0rem;
 `
 
 const Body = styled.p`
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 140%;
   color: ${(props) => props.theme.colors.black300};
 `

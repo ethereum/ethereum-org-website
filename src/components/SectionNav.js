@@ -18,7 +18,7 @@ const Card = styled.div`
 `
 
 const Title = styled.h2`
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 140%;
   letter-spacing: 0.04em;
   margin-left: 1.5rem;

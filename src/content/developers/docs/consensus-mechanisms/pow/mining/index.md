@@ -68,7 +68,7 @@ Watch Austin walk you through mining and the proof-of-work blockchain.
 
 - [Top Ethereum miners](https://etherscan.io/stat/miner?range=7&blocktype=blocks)
 - [Etherscan mining calculator](https://etherscan.io/ether-mining-calculator)
-- [Minerstar mining calculator](https://minerstat.com/coin/ETH)
+- [Minerstat mining calculator](https://minerstat.com/coin/ETH)
 
 ## Related topics {#related-topics}
 

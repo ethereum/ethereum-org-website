@@ -9,7 +9,7 @@ JavaScript 是以太坊生态中最受欢迎的语言之一。 事实上，有�
 
 有机会在[堆栈的所有级别](/developers/docs/ethereum-stack/)使用 JavaScript（或接近）。
 
-## Javascript 和以太坊的交互 {#interact-with-ethereum}
+## JavaScript 和以太坊的交互 {#interact-with-ethereum}
 
 ### JavaScript API 库 {#javascript-api-libraries}
 
@@ -51,7 +51,7 @@ JavaScript 是以太坊生态中最受欢迎的语言之一。 事实上，有�
 
 ### 节点和客户端 {#nodes-and-clients}
 
-Etherumjs 客户端正在开发中。 这将让您深入了解以太坊客户端如何使用您理解的语言运行。
+Ethereumjs 客户端正在开发中。 这将让您深入了解以太坊客户端如何使用您理解的语言运行。
 
 **参阅客户端**  
 [`ethereumjs-client`](https://github.com/ethereumjs/ethereumjs-client)

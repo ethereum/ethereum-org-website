@@ -2,15 +2,12 @@ import React from "react"
 import styled from "styled-components"
 import { GatsbyImage } from "gatsby-plugin-image"
 
+import Translation from "./Translation"
+
 const StyledCard = styled.div`
   display: flex;
   flex-direction: row-reverse;
-  background: linear-gradient(
-    49.21deg,
-    rgba(127, 127, 213, 0.2) 19.87%,
-    rgba(134, 168, 231, 0.2) 58.46%,
-    rgba(145, 234, 228, 0.2) 97.05%
-  );
+  background: ${({ theme }) => theme.colors.layer2Gradient};
   padding: 3rem;
   margin: 1rem;
   margin-top: 6rem;
@@ -28,7 +25,7 @@ const StyledCard = styled.div`
 `
 
 const Content = styled.div`
-  padding-left: 5rem;
+  padding-left: 2rem;
   flex: 1 0 50%;
   display: flex;
   flex-direction: column;
@@ -45,7 +42,7 @@ const Content = styled.div`
 `
 
 const Description = styled.p`
-  font-size: 20px;
+  font-size: 1.25rem;
   width: 90%;
   line-height: 140%;
   margin-bottom: 2rem;
@@ -71,17 +68,22 @@ const H2 = styled.h2`
 const CalloutBanner = ({
   image,
   maxImageWidth,
-  title,
-  description,
+  titleKey,
+  descriptionKey,
   alt,
   children,
   className,
+  id,
 }) => (
-  <StyledCard className={className}>
+  <StyledCard className={className} id={id}>
     <Image image={image} alt={alt} maxImageWidth={maxImageWidth} />
     <Content>
-      <H2>{title}</H2>
-      <Description>{description}</Description>
+      <H2>
+        <Translation id={titleKey} />
+      </H2>
+      <Description>
+        <Translation id={descriptionKey} />
+      </Description>
       {children}
     </Content>
   </StyledCard>

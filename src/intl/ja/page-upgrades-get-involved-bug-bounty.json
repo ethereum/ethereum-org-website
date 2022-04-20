@@ -49,7 +49,7 @@
   "page-upgrades-bug-bounty-specs-docs": "仕様ドキュメント",
   "page-upgrades-bug-bounty-submit": "バグを投稿する",
   "page-upgrades-bug-bounty-submit-desc": "バグを見つけるたびにポイントがもらえます。獲得できるポイントは、バグの重大度によって異なります。イーサリアム財団(EF) は OWASP メソッドを使用して重大度を決定します。",
-  "page-upgrades-bug-bounty-subtitle": "Eth2プロトコルとクライアントのバグを見つけ、最大50,000米ドルとリーダーボードへの入賞を獲得しましょう。 Altairアップグレードの変更に注目を集めるため、Altairに関連する脆弱性に対するすべてのバウンティは、アップグレードが行われるまで2倍になります。",
+  "page-upgrades-bug-bounty-subtitle": "Eth2プロトコルとクライアントのバグを見つけ、最大50,000米ドルとリーダーボードへの入賞を獲得しましょう。",
   "page-upgrades-bug-bounty-title": "提案を受け付けています",
   "page-upgrades-bug-bounty-title-1": "ビーコンチェーン",
   "page-upgrades-bug-bounty-title-2": "フォークの選択",

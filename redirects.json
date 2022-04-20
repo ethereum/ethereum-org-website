@@ -1,5 +1,13 @@
 [
   {
+    "fromPath": "/discord",
+    "toPath": "https://discord.gg/rZz26QWfCg"
+  },
+  {
+    "fromPath": "/*/discord",
+    "toPath": "https://discord.gg/rZz26QWfCg"
+  },
+  {
     "fromPath": "/pdfs/*",
     "toPath": "/en/"
   },
@@ -180,6 +188,14 @@
     "toPath": "/en/defi/"
   },
   {
+    "fromPath": "/layer2/",
+    "toPath": "/en/layer-2/"
+  },
+  {
+    "fromPath": "/*/layer2/",
+    "toPath": "/:splat/layer-2/"
+  },
+  {
     "fromPath": "/no/*",
     "toPath": "/nb/:splat"
   },
@@ -308,11 +324,19 @@
     "toPath": "/:splat/developers/docs/scaling"
   },
   {
+    "fromPath": "/*/developers/docs/scaling/layer-2-rollups",
+    "toPath": "/:splat/developers/docs/scaling"
+  },
+  {
     "fromPath": "/*/about/web-developer",
     "toPath": "/:splat/about/#open-jobs"
   },
   {
     "fromPath": "/*/about/community-lead",
+    "toPath": "/:splat/about/#open-jobs"
+  },
+  {
+    "fromPath": "/*/about/product-designer",
     "toPath": "/:splat/about/#open-jobs"
   },
   {
@@ -322,5 +346,9 @@
   {
     "fromPath": "/*/contributing/translation-program/translation-guide/",
     "toPath": "/:splat/contributing/translation-program/faq/"
+  },
+  {
+    "fromPath": "/*/contributing/translation-program/content-versions/",
+    "toPath": "/:splat/contributing/translation-program/content-buckets/"
   }
 ]

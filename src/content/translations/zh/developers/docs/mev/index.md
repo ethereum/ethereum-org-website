@@ -33,7 +33,7 @@ sidebar: true
 
 ### Flashbots {#mev-extraction-flashbots}
 
-Flashbots 是一个独立的项目，它将 go-etherum 客户端扩展，提供的服务使搜索人能够向矿工提交 MEV 交易，而不向公共内存池披露。 这就防止了交易被通用领跑者领跑。
+Flashbots 是一个独立的项目，它将 go-ethereum 客户端扩展，提供的服务使搜索人能够向矿工提交 MEV 交易，而不向公共内存池披露。 这就防止了交易被通用领跑者领跑。
 
 截至本文撰写时，MEV 交易的很大一部分是通过 Flashbots 来进行的，这意味着通用的领跑人不如过去那样有效。
 

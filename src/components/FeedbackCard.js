@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import styled from "styled-components"
 import { ButtonSecondary } from "./SharedStyledComponents"
 import { trackCustomEvent } from "../utils/matomo"
+import Translation from "./Translation"
 import Link from "./Link"
 
 const Card = styled.div`
@@ -27,7 +28,7 @@ const Content = styled.div`
 
 const Title = styled.h3`
   margin-top: 0rem;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 400;
   margin-bottom: 0.5rem;
 `
@@ -38,18 +39,38 @@ const ButtonContainer = styled.div`
   }
 `
 
-const FeedbackCard = () => {
+const FeedbackCard = ({ prompt, className }) => {
   const [feedbackSubmitted, setFeedbackSubmitted] = useState(false)
   const [isHelpful, setIsHelpful] = useState(false)
+  const location = typeof window !== "undefined" ? window.location.href : ""
+  const isStaking = location.includes("staking")
 
-  const title = isHelpful ? (
-    <>Thanks for your feedback!</>
-  ) : (
-    <>
-      Join our public <Link to="https://discord.gg/rZz26QWfCg">Discord</Link>{" "}
-      and get the answer you're looking for.
-    </>
-  )
+  const getTitle = (feedbackSubmitted, isStaking, isHelpful) => {
+    if (!feedbackSubmitted)
+      return prompt || <Translation id="feedback-prompt" />
+    if (isStaking)
+      return isHelpful ? (
+        <>
+          <p>Thanks for the feedback! Want to add more input?</p>
+          <Link to={`https://gzmn3wgk.paperform.co/?url=${location}`}>
+            Check out our current staking survey!
+          </Link>
+        </>
+      ) : (
+        <>
+          <p>How can we do better?</p>
+          <Link to={`https://zlj83p6l.paperform.co/?url=${location}`}>
+            Check out our current staking survey!
+          </Link>
+        </>
+      )
+
+    return isHelpful ? (
+      <Translation id="feedback-title-helpful" />
+    ) : (
+      <Translation id="feedback-title-not-helpful" />
+    )
+  }
 
   const handleClick = (isHelpful) => {
     trackCustomEvent({
@@ -61,20 +82,16 @@ const FeedbackCard = () => {
     setFeedbackSubmitted(true)
   }
   return (
-    <Card>
+    <Card className={className}>
       <Content>
-        <Title>
-          {feedbackSubmitted
-            ? title
-            : "Did this page help answer your question?"}
-        </Title>
+        <Title>{getTitle(feedbackSubmitted, isStaking, isHelpful)}</Title>
         {!feedbackSubmitted && (
           <ButtonContainer>
             <ButtonSecondary onClick={() => handleClick(true)}>
-              Yes
+              <Translation id="yes" />
             </ButtonSecondary>
             <ButtonSecondary onClick={() => handleClick(false)} ml={`0.5rem`}>
-              No
+              <Translation id="no" />
             </ButtonSecondary>
           </ButtonContainer>
         )}

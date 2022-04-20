@@ -3,7 +3,7 @@ import styled from "styled-components"
 
 import Icon from "./Icon"
 
-const StyledTag = styled.div`
+const StyledTag = styled.button`
   display: flex;
   align-items: center;
   padding: 4px 8px;
@@ -17,7 +17,7 @@ const StyledTag = styled.div`
   );
   border-radius: 4px;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 0.875rem;
   box-shadow: ${(props) =>
     props.isActive ? 0 : props.theme.colors.tableBoxShadow};
   border: 1px solid

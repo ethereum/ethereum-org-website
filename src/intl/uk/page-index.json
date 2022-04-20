@@ -37,6 +37,7 @@
   "page-index-developers": "Нова межа для розвитку",
   "page-index-developers-description": "Технологія Ethereum і її програми прості для розуміння та мають відкритий вихідний код. Ви можете розділити код і повторно використовувати функції, розроблені іншими. Якщо ви не хочете вивчати нову мову, можна просто взаємодіяти з відкритим вихідним кодом за допомогою JavaScript та інших наявних мов.",
   "page-index-developers-button": "Портал для розробників",
+  "page-index-developers-code-examples": "Code examples",
   "page-index-developers-code-example-title-0": "Ваш власний банк",
   "page-index-developers-code-example-description-0": "Ви можете створити банк, керування яким здійснюється за логікою, яку ви створили.",
   "page-index-developers-code-example-title-1": "Ваша власна валюта",

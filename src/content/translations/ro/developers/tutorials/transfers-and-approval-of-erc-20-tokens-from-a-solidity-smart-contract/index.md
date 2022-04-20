@@ -1,9 +1,13 @@
 ---
-title: Transferuri și aprobarea de tokenuri ERC-20 dintr-un contract inteligent Solidity
+title: Transferurile și aprobarea de tokenuuri ERC-20 dintr-un contract inteligent Solidity
 description: Cum se utilizează un contract inteligent pentru a interacționa cu un token folosind limbajul Solidity
 author: "jdourlens"
 tags:
-  ["contracte inteligente", "tokenuri", "solidity", "noțiuni de bază", "erc-20"]
+  - "contracte inteligente"
+  - "tokenuri"
+  - "solidity"
+  - "noțiuni de bază"
+  - "erc-20"
 skill: intermediar
 lang: ro
 sidebar: true
@@ -13,14 +17,14 @@ sourceUrl: https://ethereumdev.io/transfers-and-approval-or-erc20-tokens-from-a-
 address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 ---
 
-În tutorialul anterior am studiat [anatomia unui token ERC-20 în Solidity](/developers/tutorials/understand-the-erc-20-token-smart-contract/) pe Ethereum blockchain. În acest articol vom vedea cum putem folosi un contract inteligent pentru a interacționa cu un token folosind limbajul Solidity.
+În tutorialul anterior am studiat [anatomia unui token ERC-20 în Solidity](/developers/tutorials/understand-the-erc-20-token-smart-contract/) pe blochain-ul Ethereum. În acest articol vom vedea cum putem folosi un contract inteligent pentru a interacționa cu un token folosind limbajul Solidity.
 
 Pentru acest contract inteligent, vom crea un schimb descentralizat fictiv unde un utilizator poate tranzacționa Ethereum cu tokenul nostru [ERC-20](/developers/docs/standards/tokens/erc-20/) recent implementat.
 
-Pentru acest tutorial vom folosi codul pe care l-am scris în tutorialul anterior ca bază. DEX-ul nostru va crea o instanță a contractului în constructorul său și va efectua operațiunile:
+Pentru acest tutorial vom folosi codul pe care l-am scris în tutorialul anterior ca bază. DEX-ul nostru va crea o instanță a contractului în constructorul său și va efectua operațiunile de:
 
-- schimbarea tokenurilor în eter
-- schimbarea eterului în tokenuri
+- schimbare a tokenurilor în ether
+- schimbul de ether pe tokenuri
 
 Vom începe codul nostru de schimb descentralizat prin adăugarea codului nostru de bază simplu ERC20:
 
@@ -143,60 +147,60 @@ contract DEX {
 }
 ```
 
-Deci acum avem contractul nostru DEX și el are disponibile toate rezervele de tokenuri. Contractul are două funcții:
+Deci, acum avem DEX-ul nostru, care are toate rezervele de tokenuri disponibile. Contractul are două funcții:
 
-- `buy`: Utilizatorul poate trimite eter și obține tokenuri în schimb
-- `sell`: Utilizatorul poate decide să trimită tokenuri pentru a obține eter înapoi
+- `buy`: Utilizatorul poate trimite ether și obține tokenuri în schimb
+- `sell`: Utilizatorul poate decide să trimită tokenuri pentru a obține ether în schimb
 
 ## Funcția de cumpărare {#the-buy-function}
 
-Să programăm funcția de cumpărare. Mai întâi va trebui să verificăm cantitatea de eter pe care o conține mesajul și să verificăm dacă contractele dețin suficiente tokenuri și dacă mesajul are eter. În cazul în care contractul deține suficiente tokenuri, acesta va trimite numărul de tokenuri utilizatorului și va emite evenimentul `"Bought"`.
+Hai să codificăm funcția de cumpărare. Mai întâi va trebui să verificăm cantitatea de ether pe care o conține mesajul și să verificăm dacă contractele dețin suficiente tokenuri și dacă mesajul are ether. În cazul în care contractul deține suficiente tokenuri, acesta va trimite numărul de tokenuri utilizatorului și va emite evenimentul `"Bought"`(cumpărat).
 
-Reține că, dacă apelăm funcția „require” în cazul unei erori, eterul trimis va fi reîntors direct și retrimis utilizatorului.
+Rețineţi că, dacă apelăm funcția „require” în cazul unei erori, etherul trimis se va întoarce imediat și va fi retrimis utilizatorului.
 
-Pentru a păstra lucrurile simple, schimbăm doar 1 token pentru 1 eter.
+Pentru simplificare, schimbăm doar 1 token pe 1 ether.
 
 ```solidity
 function buy() payable public {
     uint256 amountTobuy = msg.value;
     uint256 dexBalance = token.balanceOf(address(this));
-    require(amountTobuy > 0, "Trebuie să trimiți niște eter");
-    require(amountTobuy <= dexBalance, "Nu există suficiente tokenuri în rezervă");
+    require(amountTobuy > 0, "You need to send some ether");
+    require(amountTobuy <= dexBalance, "Not enough tokens in the reserve");
     token.transfer(msg.sender, amountTobuy);
     emit Bought(amountTobuy);
 }
 ```
 
-În cazul în care cumpărarea are succes, ar trebui să vedem două evenimente în tranzacție: `Transfer`-ul de token și evenimentul `Bought`.
+În cazul în care cumpărarea are succes, ar trebui să vedem două evenimente în tranzacție: `Transfer`-ul tokenului și evenimentul `Bought`.
 
-![Două evenimente în tranzacție: „Transfer” și „Bought”](../../../../../developers/tutorials/transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract/transfer-and-bought-events.png)
+![Două evenimente în tranzacție: „Transfer” și „Bought”](./transfer-and-bought-events.png)
 
 ## Funcția de vânzare {#the-sell-function}
 
-Funcția responsabilă pentru vânzare, „sell”, va solicita mai întâi utilizatorului să aprobe suma apelând în prealabil funcția „approve”. Atunci când funcția „sell” este apelată, vom verifica dacă „transferFrom" de la adresa apelantului la adresa contractului a avut succes și vom trimite eteri înapoi la adresa apelantului.
+Funcția responsabilă pentru vânzare, „sell” va solicita mai întâi utilizatorului să aprobe suma apelând în prealabil funcția „approve”. Atunci când funcția „sell” este apelată, vom verifica dacă transferul de la adresa apelantului la adresa contractului a avut succes și vom trimite ether-ul înapoi la adresa apelantului.
 
 ```solidity
 function sell(uint256 amount) public {
-    require(amount > 0, "Trebuie să vinzi cel puțin câteva tokenuri");
+    require(amount > 0, "You need to sell at least some tokens");
     uint256 allowance = token.allowance(msg.sender, address(this));
-    require(allowance >= amount, "Verifică alocația de tokenuri");
+    require(allowance >= amount, "Check the token allowance");
     token.transferFrom(msg.sender, address(this), amount);
     msg.sender.transfer(amount);
     emit Sold(amount);
 }
 ```
 
-Dacă totul merge bine ar trebui să ai 2 evenimente (un `„Transfer”` și un `„Sold”`) în tranzacție și soldul tokenului și al Ethereum actualizate.
+Dacă totul merge bine, ar trebui să vedeţi 2 evenimente (un `„Transfer”` și un `„Sold”`) în tranzacție și soldul tokenului dvs. și soldul Ethereum actualizate.
 
-![Două evenimente în tranzacție: „Transfer” și „Sold”](../../../../../developers/tutorials/transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract/transfer-and-bought-events.png)
+![Două evenimente în tranzacție: „Transfer” și „Sold”](./transfer-and-sold-events.png)
 
 <Divider />
 
-În acest tutorial am văzut cum să verificăm soldul și alocația permisă de tokenuri ERC-20 și, de asemenea, cum să apelăm `„Transfer”` și `„TransferFrom”` ale unui contract inteligent ERC20 folosind interfața.
+În acest tutorial am văzut cum să verificăm soldul și alocația permisă de tokenurile ERC-20 și de asemenea cum să apelăm `„Transfer”` și `„TransferFrom”` ale unui contract inteligent ERC20 folosind interfața.
 
-Odată ce ai făcut o tranzacție avem un tutorial JavaScript pentru a [aștepta și a obține detalii despre tranzacțiile](https://ethereumdev.io/waiting-for-a-transaction-to-be-mined-on-ethereum-with-js/) care au fost făcute contractului tău și un [tutorial pentru a decoda evenimente generate de transferurile de token sau orice alte evenimente](https://ethereumdev.io/how-to-decode-event-logs-in-javascript-using-abi-decoder/), atâta timp cât ai ABI-ul.
+Odată ce aţi efectuat o tranzacție, avem un tutorial JavaScript pentru a [aștepta și a obține detalii despre tranzacțiile](https://ethereumdev.io/waiting-for-a-transaction-to-be-mined-on-ethereum-with-js/) care au fost efectuate cu contractul dvs. și un [tutorial pentru a decoda evenimentele generate de transferurile de token sau orice alte evenimente](https://ethereumdev.io/how-to-decode-event-logs-in-javascript-using-abi-decoder/), atâta timp cât aveţi ABI-ul.
 
-Aici este codul complet pentru acest tutorial:
+Iată codul complet pentru acest tutorial:
 
 ```solidity
 pragma solidity ^0.6.0;
@@ -306,16 +310,16 @@ contract DEX {
     function buy() payable public {
         uint256 amountTobuy = msg.value;
         uint256 dexBalance = token.balanceOf(address(this));
-        require(amountTobuy > 0, "Trebuie să trimiți niște eter");
-        require(amountTobuy <= dexBalance, "Nu există suficiente tokenuri în rezervă");
+        require(amountTobuy > 0, "Trebuie să trimiteți ceva ether");
+        require(amountTobuy <= dexBalance, "Nu sunt suficiente token-uri în rezervă");
         token.transfer(msg.sender, amountTobuy);
         emit Bought(amountTobuy);
     }
 
     function sell(uint256 amount) public {
-        require(amount > 0, "Trebuie să vinzi cel puțin câteva tokenuri");
+        require(amount > 0, "Trebuie să vindeți cel puțin câteva token-uri"");
         uint256 allowance = token.allowance(msg.sender, address(this));
-        require(allowance >= amount, "Verifică alocația de tokenuri");
+        require(allowance >= amount, "Verificați alocația de token-uri");
         token.transferFrom(msg.sender, address(this), amount);
         msg.sender.transfer(amount);
         emit Sold(amount);

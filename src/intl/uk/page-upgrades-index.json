@@ -1,5 +1,4 @@
 {
-  "consensus-client-cortex-logo-alt": "Cortex logo",
   "consensus-client-lighthouse-logo-alt": "Lighthouse logo",
   "consensus-client-lodestar-logo-alt": "Lodestar logo",
   "consensus-client-nimbus-logo-alt": "Nimbus logo",
@@ -97,8 +96,6 @@
   "page-upgrades-question-6-answer-5": "Ви також можете приєднатися до обговорень щодо розробки Eth2 на сторінці ethresear.ch.",
   "page-upgrades-question-6-desc": "Майбутні оновлення не вплинуть на вашу децентралізовану програму, однак імовірно, що для їх упровадження потрібно буде внести деякі зміни.",
   "page-upgrades-question-6-title": "Що мені робити з моєю децентралізованою програмою?",
-  "page-upgrades-question-7-cortex": "Cortex",
-  "page-upgrades-question-7-cortex-lang": "(.NET)",
   "page-upgrades-question-7-desc": "Багато різних команд з усієї спільноти працюють над різними оновленнями Eth2.",
   "page-upgrades-question-7-lighthouse": "Lighthouse",
   "page-upgrades-question-7-lighthouse-lang": "(Rust)",

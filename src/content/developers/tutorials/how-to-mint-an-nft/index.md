@@ -31,7 +31,7 @@ npm install @alch/alchemy-web3
 
 ## Step 2: Create a mint-nft.js file {#create-mintnftjs}
 
-Inside your scripts directory, create an mint-nft.js file and add the following lines of code:
+Inside your scripts directory, create a mint-nft.js file and add the following lines of code:
 
 ```js
 require("dotenv").config()
@@ -97,7 +97,7 @@ In your root directory, make a new file called nft-metadata.json and add the fol
     }
   ],
   "description": "The world's most adorable and sensitive pup.",
-  "image": "https://gateway.pinata.cloud/ipfs/QmWmvTJmJU3pozR9ZHFmQC2DNDwi2XJtf3QGyYiiagFSWb",
+  "image": "ipfs://QmWmvTJmJU3pozR9ZHFmQC2DNDwi2XJtf3QGyYiiagFSWb",
   "name": "Ramses"
 }
 ```
@@ -243,7 +243,7 @@ async function mintNFT(tokenURI) {
 }
 ```
 
-## Step 9: Call mintNFT and run node contract-interact.js {#call-mintnft-fn}
+## Step 9: Call mintNFT and run node mint-nft.js {#call-mintnft-fn}
 
 Remember the metadata.json you uploaded to Pinata? Get its hashcode from Pinata and pass the following as parameter to the function mintNFT `https://gateway.pinata.cloud/ipfs/<metadata-hash-code>`
 
@@ -308,9 +308,7 @@ async function mintNFT(tokenURI) {
     })
 }
 
-mintNFT(
-  "https://gateway.pinata.cloud/ipfs/QmYueiuRNmL4MiA2GwtVMm6ZagknXnSpQnB3z2gWbz36hP"
-)
+mintNFT("ipfs://QmYueiuRNmL4MiA2GwtVMm6ZagknXnSpQnB3z2gWbz36hP")
 ```
 
 Now, run `node scripts/mint-nft.js` to deploy your NFT. After a couple of seconds, you should see a response like this in your terminal:

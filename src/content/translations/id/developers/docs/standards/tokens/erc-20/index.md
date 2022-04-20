@@ -35,7 +35,12 @@ ERC-20 memperkenalkan sebuah standar untuk Token Fungible, dengan kata lain, mer
 
 ERC-20 (Ethereum Request for Comments 20), yang diusulkan oleh Fabian Vogelsteller pada November 2015, adalah Standar Token yang menerapkan API untuk token dalam Kontrak Pintar.
 
-ERC-20 menyediakan fungsionalitas seperti mentransfer token dari satu akun ke akun lainnya, mendapatkan informasi saldo token saat ini dari sebuah akun, dan juga persediaan total dari token yang tersedia di jaringan. Selain ini, ERC-20 juga memiliki beberapa fungsionalitas lainnya seperti memberi persetujuan bahwa sejumlah token dari satu akun bisa dipakai oleh akun pihak ketiga.
+ERC-20 fungsionalitas percontohan menyediakan:
+
+- transfer token dati satu akun ke akun lainnya
+- mendapatkan saldo token saat ini dari suatu akun
+- mendapatkan total persediaan token yang tersedia di jaringan
+- menyetujui apakah jumlah token dari suatu akun dapat dipakai oleh akun pihak ketiga
 
 Jika Kontrak Pintar menerapkan metode dan aksi berikut ini, kontrak tersebut dapat disebut sebagai Kontrak Token ERC-20 dan, setelah digunakan, kontrak ini akan bertanggungjawab untuk melacak token yang dibuat di Ethereum.
 
@@ -142,4 +147,3 @@ print("Addr Balance:", addr_balance)
 - [EIP-20: Standar Token ERC-20](https://eips.ethereum.org/EIPS/eip-20)
 - [OpenZeppelin - Token](https://docs.openzeppelin.com/contracts/3.x/tokens#ERC20)
 - [OpenZeppelin - Implementasi ERC-20](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)
-- [ConsenSys - Implementasi ERC-20](https://github.com/ConsenSys/Tokens/blob/master/contracts/eip20/EIP20.sol)

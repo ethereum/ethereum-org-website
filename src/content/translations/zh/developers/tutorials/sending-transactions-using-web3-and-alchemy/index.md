@@ -59,11 +59,11 @@ sourceUrl: https://docs.alchemyapi.io/tutorials/sending-transactions-using-web3-
 
 好了，现在我们把这些问题都解决了，让我们继续学习教程。 请随时在我们的 [discord](https://discord.gg/sqYmQ7fB) 中提问！
 
-**注：**本指南假设您已有一个 Alchemy 帐户、一个以太坊地址或 Metamask 钱包，并已安装 NodeJs 和 npm。 如果没有，按以下步骤操作：
+**注：**本指南假设您已有一个 Alchemy 帐户、一个以太坊地址或 MetaMask 钱包，并已安装 NodeJs 和 npm。 如果没有，按以下步骤操作：
 
 1.  [创建一个免费的 Alchemy 帐户](https://dashboard.alchemyapi.io/signup/)
-2.  [创建 Metamask 帐户](https://metamask.io/)（或获取一个 Etherum 地址）
-3.  [按照这些步骤安装 NodeJs 和 NPM](https://docs.alchemy.com/alchemy/guides/alchemy-for-macs)
+2.  [创建 MetaMask 帐户](https://metamask.io/)（或获取一个 Ethereum 地址）
+3.  [按照这些步骤安装 NodeJs 和 NPM](https://medium.com/guides/alchemy-for-macs)
 
 ## 发送交易的步骤 {#steps-to-sending-your-transaction}
 
@@ -73,7 +73,7 @@ sourceUrl: https://docs.alchemyapi.io/tutorials/sending-transactions-using-web3-
 
 ### 2. 从 Rinkeby faucet 请求 ETH {#request-eth-from-rinkeby-faucet}
 
-按照 [Rinkeby faucet](https://faucet.rinkeby.io/) 上的指示来接收 ETH。 您必须要在社交媒体上分享这个特定的 faucet。 确保包括您的 **Rinkeby** 以太坊地址（来自 Metamask）而不是其他网络。 按照说明操作后，仔细检查您的钱包是否已经收到了 ETH。
+按照 [Rinkeby faucet](https://faucet.rinkeby.io/) 上的指示来接收 ETH。 您必须要在社交媒体上分享这个特定的 faucet。 确保包括您的 **Rinkeby** 以太坊地址（来自 MetaMask）而不是其他网络。 按照说明操作后，仔细检查您的钱包是否已经收到了 ETH。
 
 ### 3. 创建一个新的项目目录，并使用 `cd` 命令进入该目录。 {#create-a-new-project-direction}
 
@@ -105,7 +105,7 @@ npm install dotenv --save
 在您的项目目录中创建一个 .env 文件，并添加如下内容（替换“`您的 api-url`" 和 "`您的私人密钥`"）
 
 - 要找到您的 Alchemy API URL，请导航到您刚刚在仪表板上创建的应用程序详细信息页面。 点击右上角的“查看密钥”，然后获取 HTTP URL。
-- 要使用 Metamask 找到您的私钥，请参阅这个[指南](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key)。
+- 要使用 MetaMask 找到您的私钥，请参阅这个[指南](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key)。
 
 ```
 API_URL = "your-api-url"

@@ -54,7 +54,6 @@ ETH dalam testnet tidak punya nilai sebenarnya; oleh karena itu, tidak ada pasar
 - [Keran Görli](https://faucet.goerli.mudit.blog/)
 - [Keran Kovan](https://faucet.kovan.network/)
 - [Keran Rinkeby](https://faucet.rinkeby.io/)
-- [Keran Ropsten](https://faucet.ropsten.be/)
 
 ## Jaringan privat {#private-networks}
 

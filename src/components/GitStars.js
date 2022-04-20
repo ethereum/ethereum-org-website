@@ -43,7 +43,7 @@ const GlyphPill = styled(Pill)`
 
 const Text = styled.div`
   padding: 0 0.325rem;
-  font-size: 13px;
+  font-size: 0.8125rem;
   background: ${(props) => props.theme.colors.searchBackgroundEmpty};
 `
 

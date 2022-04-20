@@ -54,7 +54,6 @@ ETH-ul pe rețelele de testate nu are o valoare reală; de aceea, nu există pie
 - [Faucet-ul Görli](https://faucet.goerli.mudit.blog/)
 - [Faucet-ul Kovan](https://faucet.kovan.network/)
 - [Faucet-ul Rinkeby](https://faucet.rinkeby.io/)
-- [Faucet-ul Ropsten](https://faucet.ropsten.be/)
 
 ## Rețele private {#private-networks}
 

@@ -45,7 +45,7 @@ const StyledModal = styled.div`
   box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 4px 0px;
   width: 100%;
   border-radius: 8px;
-  border: 1px solid rgb(189, 189, 189);
+  border: 1px solid #bdbdbd;
   margin: 0px auto;
 `
 

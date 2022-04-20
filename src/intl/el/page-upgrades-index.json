@@ -1,5 +1,4 @@
 {
-  "consensus-client-cortex-logo-alt": "Λογότυπο Cortex",
   "consensus-client-lighthouse-logo-alt": "Λογότυπο Lighthouse",
   "consensus-client-lodestar-logo-alt": "Λογότυπο Lodestar",
   "consensus-client-nimbus-logo-alt": "Λογότυπο Nimbus",
@@ -97,8 +96,6 @@
   "page-upgrades-question-6-answer-5": "Μπορείτε να συμμετάσχετε στη συζήτηση για την έρευνα και ανάπτυξη του Eth2 στο ethresear.ch.",
   "page-upgrades-question-6-desc": "Οι εφαρμογές σας dapp δεν θα επηρεαστούν από τις επικείμενες αναβαθμίσεις. Ωστόσο, οι μελλοντικές αναβαθμίσεις μπορεί να απαιτούν κάποιες αλλαγές.",
   "page-upgrades-question-6-title": "Τι χρειάζεται να κάνω με την εφαρμογή μου dapp;",
-  "page-upgrades-question-7-cortex": "Cortex",
-  "page-upgrades-question-7-cortex-lang": "(υλοποίηση με .NET)",
   "page-upgrades-question-7-desc": "Αρκετές διαφορετικές ομάδες από όλη την κοινότητα εργάζονται σε διάφορες αναβαθμίσεις του Eth2.",
   "page-upgrades-question-7-lighthouse": "Lighthouse",
   "page-upgrades-question-7-lighthouse-lang": "(υλοποίηση με Rust)",

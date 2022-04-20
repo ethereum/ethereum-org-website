@@ -553,7 +553,7 @@ This time, it found that the property is violated immediately.
 
 ## Finding transactions with high gas consumption {#finding-transactions-with-high-gas-consumption}
 
-We will see how to find the transactions with has gas consumption with Echidna. The target is the following smart contract:
+We will see how to find the transactions with high gas consumption with Echidna. The target is the following smart contract:
 
 ```solidity
 contract C {
@@ -593,7 +593,7 @@ Seed: 2320549945714142710
 
 ### Measuring Gas Consumption {#measuring-gas-consumption}
 
-To enable the gas consumption with Echidna, create an configuration file `config.yaml`:
+To enable the gas consumption with Echidna, create a configuration file `config.yaml`:
 
 ```yaml
 estimateGas: true

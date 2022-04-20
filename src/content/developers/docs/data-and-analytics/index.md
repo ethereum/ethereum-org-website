@@ -31,6 +31,6 @@ Developers can then process and transform this data to give their users unique i
 
 ## Further Reading {#further-reading}
 
-- [Graph Network Overview](https://thegraph.com/docs/network#overview)
+- [Graph Network Overview](https://thegraph.com/docs/en/about/network/)
 - [Graph Query Playground](https://thegraph.com/explorer/subgraph/graphprotocol/graph-network-mainnet?version=current)
 - [API code examples on EtherScan](https://etherscan.io/apis#contracts)

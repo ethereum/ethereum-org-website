@@ -64,14 +64,14 @@ const StyledGrayContainer = styled(GrayContainer)`
 `
 
 const SubtitleTwo = styled.div`
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 140%;
   margin-bottom: 1.5rem;
   color: ${(props) => props.theme.colors.text300};
 `
 
 const SubtitleThree = styled.div`
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 140%;
   color: ${(props) => props.theme.colors.text};
   margin-bottom: 1.5rem;

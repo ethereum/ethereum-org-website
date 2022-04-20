@@ -48,13 +48,13 @@ Rollup optimistic duduk sejajar dengan rantai Ethereum utama pada lapisan 2. Rol
 
 Dengan rollup Optimistic, transaksi ditulis ke rantai utama Ethereum sebagai `calldata`, mengoptimalkannya lebih jauh dengan mengurangi biaya gas.
 
-Karena komputasi adalah bagian yang lambat, mahal dari penggunaan Ethereum, rollup Optimistic dapat menawarkan peningkatan perluasan hingga 10-100x tergantung pada transaksi. Jumlah ini bahkan akan semakin bertambah dengan pengenalan [rantai shard](/eth2/shard-chains) karena akan semakin banyak data yang tersedia jika sebuah transaksi dipertentangkan.
+Karena komputasi adalah bagian yang lambat, mahal dari penggunaan Ethereum, rollup Optimistic dapat menawarkan peningkatan perluasan hingga 10-100x tergantung pada transaksi. Bahkan, jumlah ini akan semakin bertambah dengan pengenalan [rantai shard](/upgrades/shard-chains), karena akan semakin banyak data yang tersedia jika sebuah transaksi dipertentangkan.
 
 #### Mempersengketakan transaksi {#disputing-transactions}
 
 Rollup optimistic tidak menghitung transaksi, jadi perlu ada mekanisme untuk memastikan transaksi itu sah dan tidak curang. Di sinilah bukti penipuan digunakan. Jika seseorang melihat transaksi penipuan, rollup akan mengeksekusi bukti penipuan dan menjalankan perhitungan transaksi, menggunakan data state yang tersedia. Ini berarti Anda mungkin memiliki waktu tunggu yang lebih lama untuk konfirmasi transaksi dari yang diperlukan dalam rollup ZK, karena prosesnya dapat ditentang.
 
-![Diagram yang menunjukkan apa yang terjadi ketika transaksi penipuan terjadi dalam rollup Optimistic di Ethereum](../../../../../../developers/docs/scaling/layer-2-rollups/optimistic-rollups.png)
+![Diagram yang menunjukkan apa yang terjadi ketika transaksi penipuan terjadi dalam rollup Optimistic di Ethereum](./optimistic-rollups.png)
 
 Gas yang Anda butuhkan untuk menjalankan perhitungan bukti penipuan bahkan dibayarkan kembali. Ben Jones dari Optimism menjelaskan sistem ikatan yang ada:
 
@@ -71,11 +71,13 @@ Jadi Anda bisa melihat insentifnya: peserta dihukum karena melakukan penipuan da
 
 #### Penjelasan visual tentang rollup optimistic {#optimistic-video}
 
-Tonton Finematics menjelaskan rollup optimistic: <iframe width="100%" height="315px" src="https://www.youtube.com/embed/7pWxCklcNsU?start=263&end=406" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+Tonton Finematics menjelaskan rollup optimistic:
+
+<YouTube id="7pWxCklcNsU" start="263" />
 
 #### Gunakan rollup Optimistic {#use-optimistic-rollups}
 
-Ada beberapa implementasi rollup Optimistic yang dapat Anda integrasikan ke dalam dapp Anda:
+Ada beberapa implementasi rollup Optimistic yang dapat Anda integrasikan ke dalam dapps Anda:
 
 - [Arbitrum](https://arbitrum.io/)
 - [Optimism](https://optimism.io/)
@@ -85,13 +87,13 @@ Ada beberapa implementasi rollup Optimistic yang dapat Anda integrasikan ke dala
 
 ### Rollup zero-knowledge {#zk-rollups}
 
-**Rollup zero knowledge (rollup ZK)** menggabungkan (atau me-"roll up") ratusan transfer off-chain dan menghasilkan bukti kriptografi, yang dikenal sebagai SNARK (succinct non-interactive argument of knowledge). Ini dikenal sebagai bukti validitas dan diumumkan di lapisan 1.
+**Rollup zero knowledge (rollup ZK)** menggabungkan (atau me-"roll up") ratusan transfer off-chain dan menghasilkan bukti kriptografi, yang dikenal sebagai SNARK (succinct non-interactive argument of knowledge). Bukti ini dikenal sebagai bukti validitas dan diumumkan di lapisan 1.
 
-Kontrak pintar rollup ZK mempertahankan state dari semua transfer pada lapisan 2, dan state ini hanya dapat diperbarui dengan bukti validitas. Artinya, rollup ZK hanya membutuhkan bukti validitas, alih-alih semua data transaksi. Dengan rollup ZK, memvalidasi blok lebih cepat dan lebih murah karena lebih sedikit data yang disertakan.
+Kontrak pintar rollup ZK mempertahankan state dari semua transfer pada lapisan 2, dan state ini hanya dapat diperbarui dengan bukti validitas. Artinya, rollup ZK hanya membutuhkan bukti validitas, alih-alih semua data transaksi. Dengan rollup ZK, memvalidasi blok menjadi lebih cepat dan lebih murah karena lebih sedikit data yang disertakan.
 
 Dengan rollup ZK, tidak ada penundaan saat memindahkan dana dari lapisan 2 ke lapisan 1 karena bukti validitas yang diterima oleh kontrak rollup ZK telah memverifikasi dana.
 
-Berada di lapisan 2, rollup ZK dapat dioptimalkan untuk mengurangi ukuran transaksi lebih jauh. Misalnya, sebuah akun diwakili oleh indeks ketimbang alamat, yang mengurangi transaksi dari 32 bita menjadi hanya 4 bita. Transaksi juga ditulis ke Ethereum sebagai `calldata`, mengurangi gas.
+Saat berada di lapisan 2, rollup ZK dapat dioptimalkan guna mengurangi ukuran transaksi lebih jauh. Misalnya, sebuah akun diwakili oleh indeks ketimbang alamat, yang mengurangi transaksi dari 32 bita menjadi hanya 4 bita. Transaksi juga ditulis ke Ethereum sebagai `calldata`, mengurangi gas.
 
 #### Pro dan kontra {#zk-pros-and-cons}
 
@@ -99,15 +101,17 @@ Berada di lapisan 2, rollup ZK dapat dioptimalkan untuk mengurangi ukuran transa
 | ------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------- |
 | Waktu penyelesaian yang lebih cepat karena state dengan segera diverifikasi setelah bukti dikirim ke rantai utama. | Beberapa tidak memiliki dukungan EVM.                                                                          |
 | Tidak rentan terhadap serangan ekonomi yang menjadi kerentanan [rollup Optimistic](#optimistic-pros-and-cons).     | Bukti validitas sangat intens untuk dihitung – tidak sepadan untuk aplikasi dengan sedikit aktivitas on-chain. |
-| Aman dan terdesentralisasi, karena data yang diperlukan untuk memulihkan state disimpan di rantai lapisan 1.       | Seorang operator dapat memengaruhi transaksi. pemesanan                                                        |
+| Aman dan terdesentralisasi, karena data yang diperlukan untuk memulihkan state disimpan di rantai lapisan 1.       | Seorang operator dapat memengaruhi pemesanan transaksi                                                         |
 
 #### Penjelasan visual tentang rollup ZK {#zk-video}
 
-Tonton Finematics menjelaskan rollup ZK: <iframe width="100%" height="315px" src="https://www.youtube.com/embed/7pWxCklcNsU?start=406&end=568" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+Tonton Finematics yang menjelaskan rollup ZK:
+
+<YouTube id="7pWxCklcNsU" start="406" />
 
 #### Gunakan rollup ZK {#use-zk-rollups}
 
-Ada beberapa implementasi rollup ZK yang dapat Anda integrasikan ke dalam dapp Anda:
+Ada berbagai implementasi rollup ZK yang dapat Anda integrasikan ke dalam dapps Anda:
 
 - [Loopring](https://loopring.org/#/)
 - [Starkware](https://starkware.co/)
@@ -122,7 +126,6 @@ Solusi hibrida ada dengan menggabungkan bagian terbaik dari berbagai teknologi l
 
 ### Gunakan solusi hibrida {#use-hybrid-solutions}
 
-- [Offchain Labs Arbitrum SCSC](https://offchainlabs.com/arbitrum.pdf)
 - [Celer](https://www.celer.network/)
 
 ## Bacaan lebih lanjut {#further-reading}
@@ -130,13 +133,15 @@ Solusi hibrida ada dengan menggabungkan bagian terbaik dari berbagai teknologi l
 - [Panduan Tidak Lengkap tentang Rollup](https://vitalik.ca/general/2021/01/05/rollup.html)
 - [Rollup Optimistic vs Rollup ZK](https://limechain.tech/blog/optimistic-rollups-vs-zk-rollups/)
 - [Skalabilitas Blockchain Zero-Knowledge](https://ethworks.io/assets/download/zero-knowledge-blockchain-scaling-ethworks.pdf)
+- [Alasan rollup + shard data merupakan satu-satunya solusi berkelanjutan untuk penskalaan tinggi](https://polynya.medium.com/why-rollups-data-shards-are-the-only-sustainable-solution-for-high-scalability-c9aabd6fbb48)
+- [Rollup ZK yang digerakkan Ethereum: Yang Terbaik di Kelasnya](https://hackmd.io/@canti/rkUT0BD8K)
 
 **Rollup ZK**
 
 - [Apa itu Rollup Zero-Knowledge?](https://coinmarketcap.com/alexandria/glossary/zero-knowledge-rollups)
 - [EthHub tentang rollup zk](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/zk-rollups/)
 
-**Rollup optimistic**
+**Rollup Optimistic**
 
 - [Semua yang perlu Anda ketahui tentang Rollup Optimistic](https://research.paradigm.xyz/rollups)
 - [EthHub tentang rollup optimistic](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/optimistic_rollups/)
@@ -147,6 +152,7 @@ Solusi hibrida ada dengan menggabungkan bagian terbaik dari berbagai teknologi l
 **Solusi Hibrida**
 
 - [Menambahkan Sidechain Rollup PoS Hibrida ke Platform Lapisan 2 Koheren Celer di Ethereum](https://medium.com/celer-network/adding-hybrid-pos-rollup-sidechain-to-celers-coherent-layer-2-platform-d1d3067fe593)
+- [Volition: yang terbaik dari seluruh dunia](https://polynya.medium.com/volitions-best-of-all-worlds-cfd313aec9a8)
 
 **Video**
 

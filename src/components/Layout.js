@@ -14,14 +14,16 @@ import Nav from "./Nav"
 import SideNav from "./SideNav"
 import SideNavMobile from "./SideNavMobile"
 import TranslationBanner from "./TranslationBanner"
+import TranslationBannerLegal from "./TranslationBannerLegal"
 
 import { ZenModeContext } from "../contexts/ZenModeContext"
 
 import { useKeyPress } from "../hooks/useKeyPress"
 
 import { isLangRightToLeft } from "../utils/translations"
+import { scrollIntoView } from "../utils/scrollIntoView"
 import { isMobile } from "../utils/isMobile"
-import SkipLink from "./SkipLink"
+import { SkipLink, SkipLinkAnchor } from "./SkipLink"
 
 const ContentContainer = styled.div`
   position: relative;
@@ -89,11 +91,9 @@ const Layout = (props) => {
 
     if (props.location.hash && !props.location.hash.includes("gatsby")) {
       const idTag = props.location.hash.split("#")
-      if (document.getElementById(idTag[1]) !== null) {
-        document.getElementById(idTag[1]).scrollIntoView(false)
-      }
+      scrollIntoView(idTag[1])
     }
-  }, [props.path])
+  }, [props.path, props.location])
 
   const handleThemeChange = () => {
     setIsDarkTheme(!isDarkTheme)
@@ -120,6 +120,7 @@ const Layout = (props) => {
 
   const isPageLanguageEnglish = intl.language === intl.defaultLanguage
   const isPageContentEnglish = !!props.pageContext.isContentEnglish
+  const isLegal = !!props.pageContext.isLegal
   const isTranslationBannerIgnored = !!props.pageContext.ignoreTranslationBanner
   const isPageTranslationOutdated =
     !!props.pageContext.isOutdated ||
@@ -150,6 +151,11 @@ const Layout = (props) => {
               isPageRightToLeft={isPageRightToLeft}
               originalPagePath={intl.originalPath}
             />
+            <TranslationBannerLegal
+              shouldShow={isLegal}
+              isPageRightToLeft={isPageRightToLeft}
+              originalPagePath={intl.originalPath}
+            />
             <ContentContainer isZenMode={isZenMode}>
               <VisuallyHidden isHidden={isZenMode}>
                 <Nav
@@ -159,7 +165,8 @@ const Layout = (props) => {
                 />
                 {shouldShowSideNav && <SideNavMobile path={path} />}
               </VisuallyHidden>
-              <MainContainer id="main-content">
+              <SkipLinkAnchor id="main-content" />
+              <MainContainer>
                 {shouldShowSideNav && (
                   <VisuallyHidden isHidden={isZenMode}>
                     <SideNav path={path} />

@@ -9,6 +9,7 @@ import Breadcrumbs from "../components/Breadcrumbs"
 import Card from "../components/Card"
 import Callout from "../components/Callout"
 import Contributors from "../components/Contributors"
+import FeedbackCard from "../components/FeedbackCard"
 import InfoBanner from "../components/InfoBanner"
 import Link from "../components/Link"
 import MarkdownTable from "../components/MarkdownTable"
@@ -123,6 +124,7 @@ const components = {
   ButtonLink,
   Contributors,
   InfoBanner,
+  FeedbackCard,
   Card,
   Divider,
   SectionNav,
@@ -152,9 +154,11 @@ const StaticPage = ({ data: { siteData, pageData: mdx }, pageContext }) => {
   const tocItems = mdx.tableOfContents.items
   const { editContentUrl } = siteData.siteMetadata
   const { relativePath } = pageContext
-  const absoluteEditPath = relativePath.split("/").includes("whitepaper")
-    ? ""
-    : `${editContentUrl}${relativePath}`
+  const absoluteEditPath =
+    relativePath.split("/").includes("whitepaper") ||
+    relativePath.split("/").includes("events")
+      ? ""
+      : `${editContentUrl}${relativePath}`
 
   return (
     <Page dir={isRightToLeft ? "rtl" : "ltr"}>
@@ -177,6 +181,7 @@ const StaticPage = ({ data: { siteData, pageData: mdx }, pageContext }) => {
         <MDXProvider components={components}>
           <MDXRenderer>{mdx.body}</MDXRenderer>
         </MDXProvider>
+        <FeedbackCard />
       </ContentContainer>
       {mdx.frontmatter.sidebar && tocItems && (
         <TableOfContents

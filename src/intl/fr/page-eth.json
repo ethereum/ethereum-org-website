@@ -86,12 +86,12 @@
   "page-eth-button-buy-eth": "Obtenir de l'ETH",
   "page-eth-tokens-stablecoins": "Stablecoins",
   "page-eth-tokens-defi": "Finance décentralisée (DeFi)",
-  "page-eth-tokens-nft": "Jetons non-fongibles (NFTs)",
-  "page-eth-tokens-dao": "Les Organisations Autonomes Décentralisées (DAOs)",
+  "page-eth-tokens-nft": "Jetons non fongibles (NFTs)",
+  "page-eth-tokens-dao": "Organisations autonomes décentralisées (DAOs)",
   "page-eth-tokens-stablecoins-description": "Plus d'infos sur la moindre volatilité des jetons Ethereum.",
   "page-eth-tokens-defi-description": "Le système financier pour les jetons Ethereum.",
-  "page-eth-tokens-nft-description": "Tokens qui représentent la propriété des éléments sur Ethereum.",
-  "page-eth-tokens-dao-description": "Les communautés Internet sont souvent dirigées par les détenteurs de jetons.",
+  "page-eth-tokens-nft-description": "Jetons qui représentent la propriété des éléments sur Ethereum.",
+  "page-eth-tokens-dao-description": "Les communautés Internet sont souvent dirigées par des détenteurs de jetons.",
   "page-eth-whats-defi": "En savoir plus sur DeFi",
   "page-eth-whats-defi-description": "DeFi est le système financier décentralisé basé sur Ethereum. Cet aperçu vous démontre ce que vous pouvez en faire."
 }

@@ -6,11 +6,11 @@ sidebar: true
 incomplete: true
 ---
 
-<div class="featured">Pelari cara menjadi pengembang untuk Ethereum menggunakan proyek dan peralatan berbasis rust</div>
+<div class="featured">Pelari cara menjadi pengembang untuk Ethereum menggunakan proyek dan peralatan berbasis Rust</div>
 
 Gunakan Ethereum untuk membuat aplikasi terdesentralisasi (atau "dapp") yang menggunakan keuntungan teknologi mata uang kripto dan blockchain. Dapp ini dapat dipercaya, yang berarti setelah diterapkan ke Ethereum, dapp akan selalu berjalan seperti yang telah diprogramkan. Dapp dapat mengontrol aset digital untuk membuat aplikasi keuangan jenis baru. Dapp juga terdesentralisasi, yang berarti tidak ada entitas atau orang yang mengontrolnya dan hampir mustahil untuk disensor.
 
-## Memulai dengan kontrak pintar dan bahasa pemrograman Solidity {#getting-started-with-smart-contracts-and-solidity}
+## Mulai menggunakan kontrak pintar dan bahasa Solidity {#getting-started-with-smart-contracts-and-solidity}
 
 **Ambillah langkah awal untuk mengintegrasikan Rust dengan Ethereum**
 
@@ -34,8 +34,6 @@ Perlu penjelasan yang lebih mendasar? Kunjungi [ethereum.org/learn](/learn/) ata
 
 - [Dokumentasi Rust-Web3](https://tomusdrw.github.io/rust-web3/web3/index.html)
 - [Contoh Rust-Web3 yang Sudah Berjalan](https://github.com/tomusdrw/rust-web3/blob/master/examples)
-- [Membuat Undian Rahasia menggunakan OASIS SDK](https://docs.oasis.dev/tutorials/ballot.html#prerequisites)
-- [Membuat Server Obrolan Privat dengan OASIS SDK](https://docs.oasis.dev/tutorials/messaging.html#prerequisites)
 
 ## Pola penggunaan tingkat lanjut {#advanced-use-patterns}
 

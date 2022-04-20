@@ -1,25 +1,25 @@
 ---
-title: 以太机虚拟机 (EVM)
+title: 以太坊虚拟机 (EVM)
 description: 介绍以太坊虚拟机及其与状态、交易和智能合约的关系。
 lang: zh
 sidebar: true
 ---
 
-EVM 的物理实例无法像指着一朵云彩或者海浪那样，轻易具体的描述出来，但它确实作为一个单一的实体 _存在_ ，由数以千计运行以太坊客户端的电脑连接在一起构成。
+EVM 的物理实例不能像人们指向云或海浪那样描述，它是真实*存在*并由数以千计运行以太坊客户端的计算机共同维护的一个实体。
 
 以太坊协议本身的存在仅仅是为了保持这种特殊状态机的连续、不间断和永久的运行。 这是所有以太坊帐户和智能合约赖以存在的环境。 在链中任何给定的区块上，以太坊只有一个“规范”状态，而 EVM 定义了从一个区块计算产生下一个区块新的有效状态的规则。
 
 ## 前置要求 {#prerequisites}
 
-对计算机科学中常见术语的基本了解，如[字节](https://wikipedia.org/wiki/Byte)、[内存](https://wikipedia.org/wiki/Computer_memory)和[堆栈](<https://wikipedia.org/wiki/Stack_(abstract_data_type)>)是理解 EVM 所必需的。 熟悉诸如 [哈希函数](https://wikipedia.org/wiki/Cryptographic_hash_function)、[工作量证明](https://wikipedia.org/wiki/Proof_of_work)和 [Merkle 树](https://wikipedia.org/wiki/Merkle_tree)等密码学/区块链概念对理解也很有帮助。
+对计算机科学中常见术语的基本了解，如[字节](https://wikipedia.org/wiki/Byte)、[内存](https://wikipedia.org/wiki/Computer_memory)和[堆栈](<https://wikipedia.org/wiki/Stack_(abstract_data_type)>)是理解 EVM 的前提。 熟悉诸如 [哈希函数](https://wikipedia.org/wiki/Cryptographic_hash_function)、[工作量证明](https://wikipedia.org/wiki/Proof_of_work)和 [Merkle 树](https://wikipedia.org/wiki/Merkle_tree)等密码学/区块链概念对理解也很有帮助。
 
 ## 从账本到状态机 {#from-ledger-to-state-machine}
 
 通常使用“分布式账簿”的类比来描述像比特币这样的区块链，它使用密码学的基本工具来实现去中心化的货币。 加密货币的行为类似于“正常”货币，这是因为有规则支配着人们可以做什么和不可以做什么来修改账簿。 例如，比特币地址不能花费比之前收到的更多的比特币。 这些规则是比特币和许多其他区块链上所有交易的基础。
 
-虽然以太坊有自己的本机加密货币 (ETH)，遵循几乎完全相同的直观规则，但它也支持更强大的功能：[智能合约](/developers/docs/smart-contracts/)。 对于此更复杂的功能，需要一个更复杂的类比。 以太坊不是分布式账本，而是分布式[状态机](https://wikipedia.org/wiki/Finite-state_machine)。 以太坊的状态是一个大型数据结构，它不仅保存所有帐户和余额，而且还保存一个*机器状态*，它可以根据预定义的一组规则在不同的区块之间进行更改，并且可以执行任意的机器代码。 在区块中更改状态的具体规则由 EVM 定义。
+虽然以太坊有自己的本机加密货币 (ETH)，遵循几乎完全相同的直观规则，但它也支持更强大的功能：[智能合约](/developers/docs/smart-contracts/)。 对于此更复杂的功能，需要一个更复杂的类比。 以太坊不是分布式账本，而是分布式[状态机器](https://wikipedia.org/wiki/Finite-state_machine)。 以太坊的状态是一个大型数据结构，它不仅保存所有帐户和余额，而且还保存一个*机器状态*，它可以根据预定义的一组规则在不同的区块之间进行更改，并且可以执行任意的机器代码。 在区块中更改状态的具体规则由 EVM 定义。
 
-![EVM 组成结构图](../../../../../developers/docs/evm/evm.png) _图表来自 [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![EVM 组成结构图](./evm.png) _图表来自 [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 ## 以太坊状态转换函数 {#the-ethereum-state-transition-function}
 
@@ -66,7 +66,6 @@ EVM 的所有实现都必须遵守以太坊黄皮书中描述的规范。
 - [ethereumjs-vm](https://github.com/ethereumjs/ethereumjs-vm) - _JavaScript_
 - [eEVM](https://github.com/microsoft/eevm) - _C++_
 - [Hyperledger Burrow](https://github.com/hyperledger/burrow) - _Go_
-- [hevm](https://github.com/dapphub/dapptools/tree/master/src/hevm) - _Haskell_
 
 ## 延伸阅读 {#further-reading}
 

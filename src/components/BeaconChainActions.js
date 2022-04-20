@@ -43,9 +43,10 @@ const StyledCardRight = styled(Card)`
 `
 
 const H3 = styled.h3`
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 2rem;
+
   a {
     display: none;
   }

@@ -29,10 +29,10 @@ Folosind furnizorii, aceste biblioteci îți permit să te conectezi la Ethereum
 
 ```js
 // Un Web3Provider ce integrează un furnizor Web3 standard, care este
-// ceea ce Metamask injectează ca window.ethereum în fiecare pagină
+// ceea ce MetaMask injectează ca window.ethereum în fiecare pagină
 const provider = new ethers.providers.Web3Provider(window.ethereum)
 
-// Plug-in-ul Metamask permite, în plus, semnarea de tranzacții pentru a
+// Plug-in-ul MetaMask permite, în plus, semnarea de tranzacții pentru a
 // trimite eter și a plătii pentru a schimba starea în cadrul blockchain-ului.
 // Pentru aceasta, avem nevoie de semnatarul contului...
 const signer = provider.getSigner()

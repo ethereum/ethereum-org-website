@@ -26,13 +26,13 @@ Per farlo ci basiamo su alcuni principi chiave.
 
 ## Principi fondamentali {#core-principles}
 
-### 1. ethereum.org è un portale per Ethereum 🌏 {#core-principles-1}
+### 1. ethereum.org è un portale per Ethereum {#core-principles-1}
 
 Vogliamo catturare l'interesse dei nostri utenti e rispondere alle loro domande Dunque il nostro portale deve combinare informazione, "momenti magici" e collegamenti alle preziose risorse della community. Il nostro contenuto è meramente introduttivo e non vuole sostituire risorse esaustive già esistenti. Il nostro desiderio è fornisce sostegno e integrare le informazioni con le risorse offerte dalla community, dando loro più visibilità e rendendole quindi più reperibili.
 
-Al centro di tutto ciò c'è la [community di Ethereum](/community/): non dobbiamo solo servirla, ma collaborarvi ed incorporarne il feedback. Il sito web non è solo per la community di oggi, ma anche per quella che speriamo di veder crescere. Ricordiamoci che la nostra community è globale, e include quindi persone di svariate lingue, regioni e culture.
+[La community di Ethereum](/community/) è al centro di questo: non dobbiamo limitarci a servire la community, bensì lavorarci assieme ed incorporarne il feedback. Il sito web non è solo per la community di oggi, ma anche per quella che speriamo di veder crescere. Ricordiamoci che la nostra community è globale, e include quindi persone di svariate lingue, regioni e culture.
 
-### 2. ehtereum.org è in continua evoluzione 🛠 {#core-principles-2}
+### 2. ethereum.org è in continua evoluzione {#core-principles-2}
 
 Ethereum e la sua community sono in continua evoluzione. ethereum.org lo sarà di conseguenza. Ecco perché il sito ha una progettazione semplice e una struttura modulare. Apportiamo continui cambiamenti man mano che capiamo come viene utilizzato il sito e cosa cerca la community.
 
@@ -40,7 +40,7 @@ Siamo open source, con una community di collaboratori, quindi anche tu puoi prop
 
 [Come contribuire](/contributing/)
 
-### 3. ethereum.org non è uno dei soliti siti che propongono prodotti 🦄 {#core-principles-3}
+### 3. ethereum.org non è uno dei soliti siti che propongono prodotti {#core-principles-3}
 
 Ethereum è tanta roba: include una community, una tecnologia, una serie di idee, ideologie e non solo. Significa che il sito deve gestire numerosi percorsi degli utenti, ognuno diverso dall'altro, dallo "sviluppatore che cerca uno strumento specifico" al "novellino che ha appena acquistato degli ETH e non sa cosa sia un portafoglio"
 
@@ -48,12 +48,26 @@ Ethereum è tanta roba: include una community, una tecnologia, una serie di idee
 
 ## Principi di progettazione {#design-principles}
 
-Usiamo principi di progettazione per guidare il nostro contenuto e le nostre decisioni che riguardano la progettazione sul sito: [principi di progettazione](/contributing/design-principles/).
+Usiamo una serie di [principi di progettazione](/contributing/design-principles/) per orientare le nostre decisioni sui contenuti e sulla progettazione sul sito.
 
-Ogni tipo di feedback è benvenuto. Ricorda, ethereum.org è per la community, dalla community.
+## Guida di stile {#style-guide}
 
-Leggi prima i principi se desideri [contribuire al sito](/contributing/).
+Abbiamo una [guida di stile](/contributing/style-guide/) per standardizzare certi aspetti della scrittura dei contenuti, così da rendere più fluido il processo di contribuzione.
+
+Apprezziamo feedback sia sui principi di design che sulla guida di stile. Ricorda, ethereum.org è per la community, dalla community.
+
+Assicurati di leggere [i nostri principi](/contributing/design-principles/) e [la nostra guida di stile](/contributing/style-guide/) se desideri [contribuire al sito](/contributing/).
 
 ## Roadmap {#roadmap}
 
 <Roadmap />
+
+## Posizioni aperte {#open-jobs}
+
+Sebbene questo sito web sia open source e tutti possano lavorarci, abbiamo un team dedicato a ethereum.org e un altro ai progetti web della Ethereum Foundation.
+
+Pubblicheremo qui tutte le posizioni aperte. Se non vedi un ruolo per te qui, vai su [Discord](https://discord.gg/CetY6Y4) e facci sapere in che modo vorresti lavorare con noi!
+
+- [Product Designer](/about/product-designer/)
+
+Vuoi esplorare anche oltre il team di ethereum.org? [Dai un'occhiata ai lavori correlati a Ethereum](/community/get-involved/#ethereum-jobs/).

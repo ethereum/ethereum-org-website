@@ -54,7 +54,6 @@ Los ETH no tienen un valor real en las redes de prueba; por lo tanto, no hay mer
 - [Faucet Görli](https://faucet.goerli.mudit.blog/)
 - [Faucet Kovan](https://faucet.kovan.network/)
 - [Faucet Rinkeby](https://faucet.rinkeby.io/)
-- [Faucet Ropsten](https://faucet.ropsten.be/)
 
 ## Redes privadas {#private-networks}
 

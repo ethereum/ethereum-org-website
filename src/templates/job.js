@@ -133,7 +133,7 @@ const KeyItem = styled.div`
 `
 
 const KeyItemTitle = styled.h2`
-  font-size: 20px;
+  font-size: 1.25rem;
   margin-bottom: 1rem;
   margin-top: 0;
 `
@@ -170,13 +170,16 @@ const Pre = styled.pre`
 `
 
 const H2 = styled.h2`
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: 700;
   margin-top: 4rem;
+
   a {
     display: none;
   }
+
   /* Anchor tag styles */
+
   a {
     position: relative;
     display: initial;
@@ -201,12 +204,15 @@ const H2 = styled.h2`
 `
 
 const H3 = styled.h3`
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 700;
+
   a {
     display: none;
   }
+
   /* Anchor tag styles */
+
   a {
     position: relative;
     display: initial;
@@ -282,7 +288,7 @@ const Image = styled(GatsbyImage)`
 const StyledLink = styled(Link)`
   margin: 0;
   margin-bottom: 1rem;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 140%;
   letter-spacing: 0.04em;
   font-weight: normal;

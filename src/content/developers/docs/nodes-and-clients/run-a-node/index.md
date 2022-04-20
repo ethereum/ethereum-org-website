@@ -12,6 +12,8 @@ Running your own node provides you various benefits, opens new possibilities, an
 
 You should understand what an Ethereum node is and why you might want to run a client. This is covered in [Nodes and clients](/developers/docs/nodes-and-clients/).
 
+If you're new to the topic of running a node, or looking for a less technical path, we recommend first checking out our user-friendly introduction on [running an Ethereum node](/run-a-node).
+
 ## Choosing an approach {#choosing-approach}
 
 The first step in spinning up your node is choosing your approach. You have to choose the client (the software), the environment, and the parameters you want to start with.
@@ -44,20 +46,21 @@ To simplify, let's think about running a node on both a local physical machine a
 
 Both options have different advantages summed up above. If you are looking for a cloud solution, in addition to many traditional cloud computing providers, there are also services focused on deploying nodes. For example:
 
-- [QuikNode](https://www.quiknode.io/),
-- [Blockdaemon](https://blockdaemon.com),
-- [LunaNode](https://www.lunanode.com/).
+- [QuikNode](https://www.quiknode.io/)
+- [Blockdaemon](https://blockdaemon.com)
+- [LunaNode](https://www.lunanode.com/)
+- [Alchemy](https://www.alchemy.com/)
 
 #### Hardware {#hardware}
 
 However, a censorship-resistant, decentralized network should not rely on cloud providers. It's healthier for the ecosystem if you run your own node on hardware. The easiest options are preconfigured machines like:
 
 - [DappNode](https://dappnode.io/)
-- [Avado](https://ava.do/).
+- [Avado](https://ava.do/)
 
 Check the minimum and recommended [disk space requirements for each client and sync mod](/developers/docs/nodes-and-clients/#requirements).
 Generally, modest computing power should be enough. The problem is usually drive speed. During initial sync, Ethereum clients perform a lot of read/write operations. Therefore SSD is strongly recommended. A client might not even [be able to sync current state on HDD](https://github.com/ethereum/go-ethereum/issues/16796#issuecomment-391649278) and get stuck a few blocks behind Mainnet.
-You can run most of the clients on a [single board computer with ARM](/developers/docs/nodes-and-clients/#ethereum-on-a-single-board-computer/). You can also use the [Ethbian](https://ethbian.org/index.html) operating system for Raspberry Pi 4. This lets you [[run a client by flashing the SD card](/developers/tutorials/run-node-raspberry-pi/).
+You can run most of the clients on a [single board computer with ARM](/developers/docs/nodes-and-clients/#ethereum-on-a-single-board-computer/). You can also use the [Ethbian](https://ethbian.org/index.html) operating system for Raspberry Pi 4. This lets you [run a client by flashing the SD card](/developers/tutorials/run-node-raspberry-pi/).
 Based on your software and the hardware choices, the initial synchronization time and storage requirements may vary. Be sure to [check sync times and storage requirements](/developers/docs/nodes-and-clients/#recommended-specifications).
 Also make sure your internet connection is not limited by a [bandwidth cap](https://wikipedia.org/wiki/Data_cap). It's recommended to use an unmetered connection since initial sync and data broadcasted to the network could exceed your limit.
 
@@ -76,11 +79,11 @@ If you prefer, you can build from source. All of the clients are open source so 
 
 Executable binaries for stable Mainnet client implementations can be downloaded from their release pages:
 
-- [Geth](https://geth.ethereum.org/downloads/),
-- [OpenEthereum,](https://github.com/openethereum/openethereum/releases),
-- [Nethermind](https://downloads.nethermind.io/),
-- [Besu](https://pegasys.tech/solutions/hyperledger-besu/),
-- [Erigon](https://github.com/ledgerwatch/erigon).
+- [Geth](https://geth.ethereum.org/downloads/)
+- [OpenEthereum,](https://github.com/openethereum/openethereum/releases)
+- [Nethermind](https://downloads.nethermind.io/)
+- [Besu](https://pegasys.tech/solutions/hyperledger-besu/)
+- [Erigon](https://github.com/ledgerwatch/erigon)
 
 **Note that OpenEthereum [has been deprecated](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd) and is no longer being maintained.** Use it with caution and preferably switch to another client implementation.
 
@@ -150,9 +153,11 @@ Consider creating a service to run your client automatically on startup. For exa
 
 You need to keep your client software up-to-date with the latest security patches, features, and [EIPs](/eips/). Especially before [hard forks](/history/), make sure you are running the correct client version.
 
+Each client implementation has a human-readable version string used in the peer-to-peer protocol but is also accessible from the command line. This version string lets users check they are running the correct version and allows block explorers and other analytical tools interested in quantifying the distribution of specific clients over the network. Please refer to the individual client documentation for more information about version strings.
+
 #### Running additional services {#running-additional-services}
 
-Running your own node lets you use services that require direct access to Ethereum client RPC. These are services built on top of Ethereum like [layer 2 solutions](/developers/docs/scaling/layer-2-rollups), [consensus clients](/upgrades/get-involved/#clients), and other Ethereum infrastructure.
+Running your own node lets you use services that require direct access to Ethereum client RPC. These are services built on top of Ethereum like [layer 2 solutions](/developers/docs/scaling/#layer-2-scaling), [consensus clients](/upgrades/get-involved/#clients), and other Ethereum infrastructure.
 
 #### Monitoring the node {#monitoring-the-node}
 

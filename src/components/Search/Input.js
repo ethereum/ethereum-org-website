@@ -3,8 +3,6 @@ import { useIntl } from "gatsby-plugin-intl"
 import styled from "styled-components"
 import { connectSearchBox } from "react-instantsearch-dom"
 
-import { useKeyPress } from "../../hooks/useKeyPress"
-
 import Icon from "../Icon"
 import { translateMessageId } from "../../utils/translations"
 
@@ -59,7 +57,7 @@ const SearchSlash = styled.p`
   }
 `
 
-const Input = ({ query, setQuery, refine, ...rest }) => {
+const Input = ({ query, setQuery, refine, inputRef, ...rest }) => {
   const intl = useIntl()
   const searchString = translateMessageId("search", intl)
 
@@ -73,20 +71,10 @@ const Input = ({ query, setQuery, refine, ...rest }) => {
     event.preventDefault()
   }
 
-  const focusSearch = (event) => {
-    const searchInput = document.getElementById("header-search")
-    if (document.activeElement !== searchInput) {
-      event.preventDefault()
-      searchInput.focus()
-    }
-  }
-
-  useKeyPress("/", focusSearch)
-
   return (
     <Form onSubmit={handleSubmit}>
       <StyledInput
-        id="header-search"
+        ref={inputRef}
         type="text"
         placeholder={searchString}
         value={query}

@@ -19,7 +19,7 @@ source: Mediu
 sourceUrl: https://medium.com/alchemy-api/getting-started-with-ethereum-development-using-alchemy-c3d6a45c567f
 ---
 
-![Logouri Ethereum și Alchemy](../../../../../developers/tutorials/getting-started-with-ethereum-development-using-alchemy/ethereum-alchemy.png)
+![Logouri Ethereum și Alchemy](./ethereum-alchemy.png)
 
 Acesta este un ghid pentru începători pentru a demara cu dezvoltarea Ethereum folosind [Alchemy](https://alchemyapi.io/), cea mai importantă platformă de programator blockchain alimentând milioane de utilizatori din 70% din aplicațiile blockchain de top, inclusiv Maker, 0x, MyEtherWallet, Dharma și Kyber.
 

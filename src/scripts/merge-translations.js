@@ -1,6 +1,8 @@
 const fs = require("fs")
 const path = require("path")
-const languageMetadata = require("../data/translations.json")
+require("dotenv").config()
+
+const { supportedLanguages } = require("../utils/translations")
 
 // Wrapper on `Object.assign` to throw error if keys clash
 const mergeObjects = (target, newObject) => {
@@ -12,8 +14,6 @@ const mergeObjects = (target, newObject) => {
   }
   return Object.assign(target, newObject)
 }
-
-const supportedLanguages = Object.keys(languageMetadata)
 
 // Iterate over each supported language and generate /intl/${lang}.json
 // by merging all /intl/${lang}/${page}.json files

@@ -62,7 +62,7 @@ Kontrak pintar adalah kode yang ada di blockchain Ethereum dan berjalan persis s
 **Dapp Sekali Klik _- Peralatan FOSS untuk menghasilkan frontend dapp dari [ABI](/glossary/#abi)._**
 
 - [oneclickdapp.com](https://oneclickdapp.com)
-- [GitHub](https://github.com/One-Click-Dapp/one-click-dApp)
+- [GitHub](https://github.com/oneclickdapp/oneclickdapp-v1)
 
 **Etherflow _- Peralatan FOSS bagi pengembang Ethereum untuk menguji node mereka, dan menyusun & melakukan debug pemanggilan RPC dari browser._**
 

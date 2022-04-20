@@ -14,12 +14,12 @@ Kerangka kerja tersedia dengan banyak fungsionalitas non-konvensional, seperti:
 - Fitur untuk memutar instance blockchain lokal.
 - Utilitas untuk mengompilasi dan menguji kontrak pintar Anda.
 - Add-on pengembangan klien untuk membangun aplikasi sisi pengguna dalam proyek/repositori yang sama.
-- Konfigurasi untuk menghubungkan ke jaringan Ethereum dan menggunakan kontrak, baik ke instance yang beroperasi secara lokal, atau salah satu dari jaringan publik Ethereum.
+- Konfigurasi untuk menghubungkan ke jaringan Ethereum dan menggunakan kontrak, baik ke instance yang berjalansecara lokal, atau salah satu dari jaringan publik Ethereum.
 - Pendistribusian aplikasi terdesentralisasi - integrasi dengan opsi penyimpanan seperti IPFS.
 
 ## Prasyarat {#prerequisites}
 
-Sebelum menyelami kerangka kerja, kami menyarankan Anda terlebih dahulu membaca pengantar kami tentang [dapp](/developers/docs/dapps/) dan [tumpukan Ethereum](/developers/docs/ethereum-stack/).
+Sebelum menyelami kerangka kerja, kami menyarankan Anda terlebih dahulu membaca pengantar kami tentang [dapps](/developers/docs/dapps/) dan [tumpukan Ethereum](/developers/docs/ethereum-stack/).
 
 ## Kerangka kerja yang tersedia {#available-frameworks}
 
@@ -74,11 +74,6 @@ Sebelum menyelami kerangka kerja, kami menyarankan Anda terlebih dahulu membaca 
 - [alchemy.com](https://www.alchemy.com/)
 - [GitHub](https://github.com/alchemyplatform)
 - [Discord](https://discord.com/invite/A39JVCM)
-
-**Dapptools -** **_Serangkaian alat CLI yang berfokus pada Ethereum mengikuti filosofi desain Unix, mendukung komposabilitas, dapat dikonfigurasi, dan ekstensibilitas._**
-
-- [Halaman beranda](https://dapp.tools/)
-- [GitHub](https://github.com/dapphub/dapptools/)
 
 ## Bacaan lebih lanjut {#further-reading}
 

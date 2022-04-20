@@ -70,6 +70,8 @@ const Link = ({
   className,
   isPartiallyActive = true,
   ariaLabel,
+  customEventOptions,
+  onClick = () => {},
 }) => {
   // markdown pages pass `href`, not `to`
   to = to || href
@@ -78,6 +80,7 @@ const Link = ({
   const isHash = isHashLink(to)
   const isGlossary = to.includes("glossary")
   const isStatic = to.includes("static")
+  const isPdf = to.includes(".pdf")
 
   // Must use <a> tags for anchor links
   // Otherwise <Link> functionality will navigate to homepage
@@ -119,7 +122,11 @@ const Link = ({
         href={to}
         target="_blank"
         rel="noopener noreferrer"
-        onClick={() => trackCustomEvent(eventOptions)}
+        onClick={() =>
+          trackCustomEvent(
+            customEventOptions ? customEventOptions : eventOptions
+          )
+        }
         aria-label={ariaLabel}
       >
         {children}
@@ -130,7 +137,11 @@ const Link = ({
         href={to}
         target="_blank"
         rel="noopener noreferrer"
-        onClick={() => trackCustomEvent(eventOptions)}
+        onClick={() =>
+          trackCustomEvent(
+            customEventOptions ? customEventOptions : eventOptions
+          )
+        }
         aria-label={ariaLabel}
       >
         {children}
@@ -147,9 +158,24 @@ const Link = ({
         to={to}
         activeClassName="active"
         partiallyActive={isPartiallyActive}
+        onClick={onClick}
       >
         {children}
       </ExplicitLangInternalLink>
+    )
+  }
+
+  // Download link for internally hosted PDF's (ex: whitepaper)
+  if (isPdf && !isExternal) {
+    return (
+      <a
+        href={to}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={ariaLabel}
+      >
+        {children}
+      </a>
     )
   }
 
@@ -160,6 +186,7 @@ const Link = ({
       to={to}
       activeClassName="active"
       partiallyActive={isPartiallyActive}
+      onClick={onClick}
     >
       {children}
       {isGlossary && (

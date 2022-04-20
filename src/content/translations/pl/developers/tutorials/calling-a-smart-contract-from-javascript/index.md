@@ -106,7 +106,7 @@ Możesz uzyskać dostęp do metod utworzonej instancji kontraktu inteligentnego,
 daiToken.methods.balanceOf(senderAddress).call(function (err, res) {  if (err) {    console.log("An error occured", err)    return  }  console.log("The balance is: ", res)})
 ```
 
-Pamiętaj, że DAI ERC20 ma 18 miejsc po przecinku, co oznacza, że ​​musisz usunąć 18 zer, aby uzyskać prawidłową kwotę. uint256 są zwracane jako ciągi, ponieważ Javascript nie obsługuje dużych wartości numerycznych. Jeśli nie masz pewności, [jak radzić sobie z dużymi liczbami w JS, sprawdź nasz samouczek na temat bignumber.js](https://ethereumdev.io/how-to-deal-with-big-numbers-in-javascript/).
+Pamiętaj, że DAI ERC20 ma 18 miejsc po przecinku, co oznacza, że ​​musisz usunąć 18 zer, aby uzyskać prawidłową kwotę. uint256 są zwracane jako ciągi, ponieważ JavaScript nie obsługuje dużych wartości numerycznych. Jeśli nie masz pewności, [jak radzić sobie z dużymi liczbami w JS, sprawdź nasz samouczek na temat bignumber.js](https://ethereumdev.io/how-to-deal-with-big-numbers-in-javascript/).
 
 ## Send: Wysyłanie transakcji do funkcji inteligentnych kontraktów {#send-sending-a-transaction-to-a-smart-contract-function}
 

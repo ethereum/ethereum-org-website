@@ -26,7 +26,7 @@ const StyledCard = styled.div`
 `
 
 const Description = styled.p`
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 140%;
   color: ${(props) => props.theme.colors.text200};
 `

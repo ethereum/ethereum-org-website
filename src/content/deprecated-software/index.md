@@ -40,7 +40,7 @@ OpenEthereum was built for miners, service providers, and exchanges which need f
 
 **Alternatives**
 
-[Erigon](https://github.com/ledgerwatch/erigon) Erigon (previously called Turbo-Geth) is a next generation Ethereum client on the efficiency frontier, written in Go.
+[Compare all Ethereum execution client options](/developers/docs/nodes-and-clients/#execution-clients).
 
 ### Grid {#grid}
 
@@ -54,7 +54,7 @@ Deprecated on December 10, 2020
 
 **Summary**
 
-Grid was a Javascript-based desktop application that allowed you to securely access Ethereum, IPFS, and other decentralized networks. It provided a user-friendly interface to assist a less technical audience in safely interacting with dapps, which increased accessibility for everyone.
+Grid was a JavaScript-based desktop application that allowed you to securely access Ethereum, IPFS, and other decentralized networks. It provided a user-friendly interface to assist a less technical audience in safely interacting with dapps, which increased accessibility for everyone.
 
 **Archives**
 
@@ -62,7 +62,7 @@ Grid was a Javascript-based desktop application that allowed you to securely acc
 
 **History**
 
-Grid could be seen as a successor to Mist, also a standalone, Javascript-based desktop app which included a Geth node. Grid removed the wallet aspect, and added a plugin-style approach for running different kinds of nodes.
+Grid could be seen as a successor to Mist, also a standalone, JavaScript-based desktop app which included a Geth node. Grid removed the wallet aspect, and added a plugin-style approach for running different kinds of nodes.
 
 **Alternatives**
 
@@ -150,7 +150,7 @@ Mist was an important early experiment because it explored how to manage Ethereu
 
 **Alternatives**
 
-[Metamask](https://metamask.io/) is an in-browser wallet enabling you to manage Ethereum keys and interact with dapps. It is available as an extension for Google Chrome and Firefox, and is included in [Brave Browser](https://brave.com/).
+[MetaMask](https://metamask.io/) is an in-browser wallet enabling you to manage Ethereum keys and interact with dapps. It is available as an extension for Google Chrome and Firefox, and is included in [Brave Browser](https://brave.com/).
 
 ### Mix {#mix}
 
@@ -172,13 +172,43 @@ Mix was of the earliest Ethereum-related applications. See this [presentation by
 
 [Remix](https://remix.ethereum.org/) is a browser-hosted IDE for Solidity / smart contract development, testing, and deployment. It also has a desktop option.
 
-### Aleth {#aleth}
+### Minimal {#minimal}
+
+Deprecated in 2020.
+
+**Summary**
+
+Minimal was a modular implementation of the Ethereum blockchain written in Go.
+
+**Archives**
+
+[Archived GitHub repo](https://github.com/umbracle/minimal)
+
+**History**
+
+Minimal was replaced by [polgon-sdk](https://github.com/0xPolygon/polygon-edge)
+
+### Mana-Ethereum {#mana-ethereum}
+
+**Summary**
+
+Mana-Ethereum was an Ethereum client built using Elixir.
+
+**Archives**
+
+[Archived GitHub repo](https://github.com/mana-ethereum/mana)
+
+**History**
+
+Mana-Ethereum's GitHub repository has not been explicitly archived, but the last commit was in 2019.
+
+### Aleth (cpp-ethereum) {#aleth}
 
 Deprecated on October 6, 2021
 
 **Summary**
 
-Aleth was an Ethereum client written in C++.
+Aleth (formerly known as cpp-ethereum) was an Ethereum client written in C++.
 
 **Archives**
 
@@ -191,6 +221,34 @@ Aleth was the third most popular client for Ethereum before being deprecated on 
 **Alternatives**
 
 [Geth](https://geth.ethereum.org/) is a well-known alternative Ethereum client.
+
+### Ethereum-H {#ethereum-h}
+
+**Archives**
+
+The Ethereum-H archives have been removed from GitHub.
+
+**History**
+
+Ethereum-H was an Ethereum client written in Haskell. It was deprecated around 2015.
+
+**Alternatives**
+
+[Geth](https://geth.ethereum.org/), [Nethermind](http://nethermind.io/), [Besu](https://pegasys.tech/solutions/hyperledger-besu/) and [Erigon](https://github.com/ledgerwatch/erigon) are viable alternative Ethereum clients - there is no current Haskell client.
+
+### ruby-ethereum {#ruby-ethereum}
+
+**Archives**
+
+[ruby-ethereum GitHub repo](https://github.com/cryptape/ruby-ethereum)
+
+**History**
+
+ruby-ethereum was an Ethereum client written in Ruby. It was deprecated around 2018.
+
+**Alternatives**
+
+[Geth](https://geth.ethereum.org/), [Nethermind](http://nethermind.io/), [Besu](https://pegasys.tech/solutions/hyperledger-besu/) and [Erigon](https://github.com/ledgerwatch/erigon) are viable alternative Ethereum clients. There is no current Ruby client.
 
 ### Parity {#parity}
 
@@ -348,7 +406,7 @@ Legacy Wiki and eth.wiki were wikis maintained by the Ethereum Foundation for th
 
 **History**
 
-Legacy Wiki was a GitHub wiki and a very early locus of technical content (including the original Ethereum White Paper). Over time, Ethereum developers migrated their documentation, specifications, and technical description work to other platforms like [Read the Docs](https://readthedocs.org/) and GitHub-hosted content.
+Legacy Wiki was a GitHub wiki and a very early locus of technical content (including the original Ethereum Whitepaper). Over time, Ethereum developers migrated their documentation, specifications, and technical description work to other platforms like [Read the Docs](https://readthedocs.org/) and GitHub-hosted content.
 
 In 2019 and 2020, eth.wiki became the successor to Legacy Wiki, but an enduring community of contributors did not materialize.
 

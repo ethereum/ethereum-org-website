@@ -135,7 +135,7 @@ const USDCBanner = styled(DaiBanner)`
 `
 
 const DaiSubtitle = styled.p`
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 140%;
   color: ${(props) => props.theme.colors.text200};
 `
@@ -145,7 +145,7 @@ const H2 = styled.h2`
 `
 
 const H3 = styled.h3`
-  font-size: 20px;
+  font-size: 1.25rem;
   font-style: normal;
   font-weight: 700;
   text-align: left;
@@ -180,10 +180,11 @@ const FullWidthContainer = styled(Page)`
 `
 
 const DaiH2 = styled.h2`
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: 700;
   margin-top: 0;
   margin-bottom: 0.5rem;
+
   a {
     display: none;
   }
@@ -308,6 +309,11 @@ const StablecoinsPage = ({ data }) => {
       DUSD: { type: CRYPTO, url: "https://dusd.finance/" },
       PAXG: { type: ASSET, url: "https://www.paxos.com/paxgold/" },
       AMPL: { type: ALGORITHMIC, url: "https://www.ampleforth.org/" },
+      UST: { type: ALGORITHMIC, url: "https://www.terra.money/" },
+      FRAX: { type: ALGORITHMIC, url: "https://frax.finance/" },
+      MIM: { type: ALGORITHMIC, url: "https://abracadabra.money/" },
+      USDP: { type: FIAT, url: "https://paxos.com/usdp/" },
+      FEI: { type: ALGORITHMIC, url: "https://fei.money/" },
     }),
     [ALGORITHMIC, ASSET, CRYPTO, FIAT]
   )
@@ -405,7 +411,7 @@ const StablecoinsPage = ({ data }) => {
         translateMessageId("page-stablecoins-precious-metals-con-1", intl),
         translateMessageId("page-stablecoins-precious-metals-con-2", intl),
       ],
-      links: [{ text: "Digix", url: "https://digix.global/" }],
+      links: [{ text: "Pax Gold", url: "https://paxos.com/paxgold/" }],
     },
     {
       title: translateMessageId("page-stablecoins-algorithmic", intl),
@@ -459,7 +465,7 @@ const StablecoinsPage = ({ data }) => {
 
   const dapps = [
     {
-      background: "linear-gradient(225deg, #AA589B 0%, #5CB8C4 100%)",
+      background: "linear-gradient(225deg, #aa589b 0%, #5cb8c4 100%)",
       url: "https://aave.com",
       alt: translateMessageId("aave-logo", intl),
       image: getImage(data.aave),
@@ -470,7 +476,7 @@ const StablecoinsPage = ({ data }) => {
       ),
     },
     {
-      background: "#F9FAFB",
+      background: "#f9fafb",
       url: "https://compound.finance",
       alt: translateMessageId("compound-logo", intl),
       image: getImage(data.compound),
@@ -492,7 +498,7 @@ const StablecoinsPage = ({ data }) => {
       ),
     },
     {
-      background: "linear-gradient(135deg, #C7EFE6 0%, #EEEAC7 100%)",
+      background: "linear-gradient(135deg, #c7efe6 0%, #eeeac7 100%)",
       url: "https://oasis.app",
       alt: translateMessageId("oasis-logo", intl),
       image: getImage(data.oasis),
@@ -731,14 +737,10 @@ const StablecoinsPage = ({ data }) => {
       <Divider />
       <Content>
         <StyledCalloutBanner
-          title={translateMessageId(
-            "page-stablecoins-stablecoins-dapp-callout-title",
-            intl
-          )}
-          description={translateMessageId(
-            "page-stablecoins-stablecoins-dapp-callout-description",
-            intl
-          )}
+          titleKey={"page-stablecoins-stablecoins-dapp-callout-title"}
+          descriptionKey={
+            "page-stablecoins-stablecoins-dapp-callout-description"
+          }
           image={getImage(data.doge)}
           maxImageWidth={600}
           alt={translateMessageId(

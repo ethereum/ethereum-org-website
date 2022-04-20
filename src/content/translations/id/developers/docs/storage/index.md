@@ -22,11 +22,11 @@ Ketika mempertimbangkan opsi penyimpanan terdesentralisasi (dStorage), ada beber
 
 ### Berbasis blockchain {#blockchain-based}
 
-Agar sepotong data bertahan selamanya, kita perlu menggunakan mekanisme persistensi. Misalnya, di Ethereum, mekanisme persistensi adalah keseluruhan rantai yang perlu diperhitungkan ketika menjalankan node. Potongan data baru digabungkan ke ujung rantai, dan terus berkembang.
+Agar sepotong data bertahan selamanya, kita perlu menggunakan mekanisme persistensi. Misalnya, di Ethereum, mekanisme persistensi adalah keseluruhan rantai yang perlu diperhitungkan ketika menjalankan node. Bagian data terbaru dilekatkan pada ujung rantai, dan terus berkembang - yang mengharuskan setiap node mereplikasi semua data yang tersemat.
 
-Ini dikenal sebagai persistensi ** berbasis blockchain**.
+Ini dikenal sebagai persistensi **berbasis blockhain**.
 
-Masalah pada persistensi berbasis blockchain adalah rantai bisa menjadi terlalu besar untuk dipelihara dan untuk menyimpan data dengan cara yang layak.
+Masalah dengan persistensi berbasis blockchain adalah bahwa rantainya dapat menjadi terlalu besar untuk dipertahankan dan untuk secara memungkinkan menyimpan semua data (misalnya [banyak sumber](https://healthit.com.au/how-big-is-the-internet-and-how-do-we-measure-it/) memperkirakan Internet akan mengharuskan kapasitas penyimpanan lebih dari 40 Zetabita).
 
 Blockchain juga harus memiliki beberapa tipe struktur insentif. Dalam persistensi berbasis blockchain, ada pembayaran yang diberikan kepada penambang. Ketika data ditambahkan ke rantai, node dibayar untuk menambahkan data.
 
@@ -37,7 +37,7 @@ Platform dengan persistensi berbasis blockchain:
 
 ### Berbasis kontrak {#contract-based}
 
-Persistensi **berbasis kontrak** memiliki intuisi bahwa data tidak dapat disimpan selamanya dan sebagai gantinya harus dipelihara dengan kesepakatan kontrak. Ini adalah kesepakatan yang dibuat dengan berbagai node yang telah berjanji untuk menampung sepotong data dalam satu periode waktu. Dananya harus dikembalikan atau diperbarui setiap kali node tidak dapat lagi mempertahankan keberadaan data.
+Persistensi **berbasis kontrak** memiliki intuisi bahwa data tidak dapat direplikasi oleh setiap node dan disimpan selamanya, dan sebagai gantinya harus dipelihara dengan kesepakatan kontrak. Ini adalah kesepakatan yang dibuat dengan berbagai node yang telah berjanji untuk menampung sepotong data dalam satu periode waktu. Dananya harus dikembalikan atau diperbarui setiap kali node tidak dapat lagi mempertahankan keberadaan data.
 
 Dalam kebanyakan kasus, alih-alih menyimpan semua data secara on-chain, hash tempat data berada di rantailah yang disimpan. Dengan cara ini, seluruh rantai tidak perlu melakukan penskalaan untuk menyimpan semua data.
 
@@ -48,11 +48,14 @@ Platform dengan persistensi berbasis kontrak:
 - [Storj](https://storj.io/)
 - [0Chain](https://0chain.net/)
 
-### Pertimbangan tambahan {#additional-considertion}
+### Pertimbangan tambahan {#additional-consideration}
 
-Sebagai bonus, IPFS tidak benar-benar memiliki struktur insentif untuk menampung data, tapi merupakan peralatan yang bagus sekali di komunitas. Jika Anda ingin data bertahan di IPFS, Anda harus menghubungi layanan penyematan, yang akan melakukan "penyematan" terhadap data Anda untuk Anda. Anda bahkan dapat menjalankan node Anda dan berkontribusi ke jaringan!
+IPFS adalah sistem terdistribusi untuk menyimpan dan mengakses berkas, situs web, aplikasi, dan data. Ia tidak memiliki skema insentif bawaan, tetapi dapat sebagai gantinya digunakan dengan apa pun dari solusi insentif berbasis kontrak di atas untuk persistensi yang berjangka waktu lebih lama. Cara lain untuk mempertahankan data pada IPFS adalah bekerja dengan layanan penyematan, yang akan "menyematkan" data Anda untuk Anda. Anda bahkan dapat menjalankan node IPFS Anda sendiri dan berkontribusi terhadap jaringan untuk mempertahankan data Anda dan/atau orang lain tanpa biaya!
 
-- [IPFS](https://ipfs.io/)
+- [IPFS](https://docs.ipfs.io/concepts/what-is-ipfs/)
+- [Pinata](https://www.pinata.cloud/) _(layanan penyematan IPFS)_
+- [web3.storage](https://web3.storage/) _(layanan penyematan IPFS/Filecoin)_
+- [Infura](https://infura.io/product/ipfs) _(layanan pinning IPFS)_
 
 ## Retensi data {#data-retention}
 

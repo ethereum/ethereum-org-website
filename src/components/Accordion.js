@@ -38,20 +38,20 @@ const ChildrenContent = styled.div`
 
 const Title = styled.h3`
   margin-top: 0rem;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
 `
 
 const TextPreview = styled.p`
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 400;
   color: ${(props) => props.theme.colors.text200};
   margin-bottom: 0rem;
 `
 
 const Text = styled.p`
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 400;
   color: ${(props) => props.theme.colors.text};
   margin-top: 2rem;

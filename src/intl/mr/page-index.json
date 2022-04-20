@@ -37,6 +37,7 @@
   "page-index-developers": "विकासाची नवी सीमा",
   "page-index-developers-description": "Ethereum आणि त्याचे अनुप्रयोग पारदर्शक आणि मुक्त स्रोत आहेत. तुम्ही सांकेतिक लेखनाला फाटा देऊ शकता आणि इतरांनी आधीपासूनच निर्माण केलेल्या फंक्शनॅलिटीचा पुनर्वापर करू शकता. तुम्हाला नवीन भाषा शिकायची नसेल तर तुम्ही JavaScript आणि इतर विद्यमान भाषा वापरून मुक्त स्रोत सांकेतिक लेखनानी संवाद साधू शकता.",
   "page-index-developers-button": "विकासकाचे पोर्टल",
+  "page-index-developers-code-examples": "Code examples",
   "page-index-developers-code-example-title-0": "तुमची स्वतःची बँक",
   "page-index-developers-code-example-description-0": "तुम्ही प्रोगॅमिंग केलेल्या तर्कावर चालणारी बँक तयार करू शकता.",
   "page-index-developers-code-example-title-1": "तुमचे स्व:तचे चलन",

@@ -17,7 +17,7 @@ const OuterList = styled(motion.ul)`
   list-style-image: none;
   padding: 0;
   margin: 0;
-  font-size: 20px;
+  font-size: 1.25rem;
   text-align: right;
   line-height: 1.6;
   font-weight: 400;

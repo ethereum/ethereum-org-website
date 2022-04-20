@@ -80,7 +80,7 @@ contract Counter {
 
 ![Remix工具栏的部署图标](../../../../../developers/tutorials/deploying-your-first-smart-contract/remix-deploy.png)
 
-在“部署和运行交易”屏幕上，仔细检查显示的合约名称并点击“部署”。 在页面顶部可以看到，当前环境为“Javascript VM”，这意味着当前我们在本地测试区块链上部署智能合约并交互，这样测试可以更快，也不需要任何费用。
+在“部署和运行交易”屏幕上，仔细检查显示的合约名称并点击“部署”。 在页面顶部可以看到，当前环境为“JavaScript VM”，这意味着当前我们在本地测试区块链上部署智能合约并交互，这样测试可以更快，也不需要任何费用。
 
 ![Remix solidity编译器的部署按钮](../../../../../developers/tutorials/deploying-your-first-smart-contract/remix-deploy-button.png)
 

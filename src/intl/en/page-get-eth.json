@@ -1,4 +1,7 @@
 {
+  "page-get-eth-article-keeping-crypto-safe": "The keys to keeping your crypto safe",
+  "page-get-eth-article-protecting-yourself": "Protecting yourself and your funds",
+  "page-get-eth-article-store-digital-assets": "How to store digital assets on Ethereum",
   "page-get-eth-cex": "Centralized exchanges",
   "page-get-eth-cex-desc": "Exchanges are businesses that let you buy crypto using traditional currencies. They have custody over any ETH you buy until you send it to a wallet you control.",
   "page-get-eth-checkout-dapps-btn": "Check out dapps",
@@ -21,6 +24,7 @@
   "page-get-eth-exchanges-no-exchanges": "Sorry, we don’t know any exchanges that let you buy ETH from this country. If you do, tell us at",
   "page-get-eth-exchanges-no-exchanges-or-wallets": "Sorry, we don’t know any exchanges or wallets that let you buy ETH from this country. If you do, tell us at",
   "page-get-eth-exchanges-no-wallets": "Sorry, we don’t know any wallets that let you buy ETH from this country. If you do, tell us at",
+  "page-get-eth-exchanges-search": "Type where you live...",
   "page-get-eth-exchanges-success-exchange": "It can take a number of days to register with an exchange because of their legal checks.",
   "page-get-eth-exchanges-success-wallet-link": "wallets",
   "page-get-eth-exchanges-success-wallet-paragraph": "Where you live, you can buy ETH directly from these wallets. Learn more about",

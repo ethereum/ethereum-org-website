@@ -19,7 +19,7 @@ Si tratta essenzialmente di client Ethereum (implementazioni di Ethereum) proget
 
 **Perché allora non eseguire semplicemente un nodo Ethereum locale?**
 
-È _possibile_ [eseguire un nodo](/developers/docs/nodes-and-clients/#running-your-own-node) (come Geth, OpenEthereum o Nethermind) ma poiché le reti di sviluppo sono create appositamente per lo sviluppo, spesso comprendono caratteristiche comode come:
+_Potresti_ [eseguire un nodo](/developers/docs/nodes-and-clients/#running-your-own-node) (come Geth, Erigon o Nethermind), ma poiché le reti di sviluppo sono create per lo sviluppo, spesso includono comode caratteristiche come:
 
 - Inserire in modo deterministico dati nella blockchain locale (ad esempio account con saldi ETH)
 - Eseguire il mining istantaneo di blocchi a ogni transazione ricevuta, in ordine e senza ritardi

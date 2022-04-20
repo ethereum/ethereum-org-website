@@ -36,7 +36,7 @@ EIP editors are tasked with process of reviewing EIPs for technical soundness, c
 - Nick Savers (Community)
 - Micah Zoltu (Community)
 
-EIP editors alongside with community members of [Ethereum Cat Herders](https://ethereumcatherders.com/) and [Ethererum Magicians](https://ethereum-magicians.org/) are deciding which EIP gets implemented, are responsible for facilitation of EIPs as well as moving the EIPs to "Final" or "Withdrawn" stage.
+EIP editors alongside with community members of [Ethereum Cat Herders](https://ethereumcatherders.com/) and [Ethereum Magicians](https://ethereum-magicians.org/) are deciding which EIP gets implemented, are responsible for facilitation of EIPs as well as moving the EIPs to "Final" or "Withdrawn" stage.
 
 Full standardization process alongside with chart is described in [EIP-1](https://eips.ethereum.org/EIPS/eip-1)
 

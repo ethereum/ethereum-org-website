@@ -31,6 +31,18 @@
     "publishDate": "09/09/2021"
   },
   {
+    "url": "https://www.youtube.com/watch?v=e1N4aWIJMN0",
+    "title": "How to become a blockchain engineer",
+    "description": "We explore the steps one needs to take to enter the world as a blockchain developer and engineer. We talk about how to get there.",
+    "author": "Patrick Collins",
+    "authorGithub": "https://github.com/PatrickAlphaC",
+    "tags": ["career", "solidity"],
+    "skillLevel": "beginner",
+    "timeToRead": "12",
+    "lang": "en",
+    "publishDate": "11/08/2021"
+  },
+  {
     "url": "https://blog.chain.link/events-and-logging-in-solidity/",
     "title": "Events and Logging in Solidity",
     "description": "Learn all about solidity events and logging, with hardhat and brownie examples! With video example: https://www.youtube.com/watch?v=KDYJC85eS5M",

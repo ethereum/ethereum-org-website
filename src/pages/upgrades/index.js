@@ -67,7 +67,7 @@ const StyledCard = styled(Card)`
 
   &:hover {
     border-radius: 4px;
-    box-shadow: 0px 8px 17px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 8px 17px rgba(#000000, 0.15);
     background: ${(props) => props.theme.colors.tableBackgroundHover};
     transition: transform 0.1s;
     transform: scale(1.02);
@@ -317,8 +317,8 @@ const Eth2IndexPage = ({ data }) => {
       <StyledCallout
         image={getImage(data.oldship)}
         alt={translateMessageId("page-eth-whats-eth-hero-alt", intl)}
-        titleKey="page-upgrades-dive"
-        descriptionKey="page-upgrades-dive-desc"
+        titleKey={"page-upgrades-dive"}
+        descriptionKey={"page-upgrades-dive-desc"}
       >
         <div>
           <ButtonLink to="/upgrades/vision/">
@@ -381,6 +381,33 @@ const Eth2IndexPage = ({ data }) => {
               <Link to="https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/">
                 <Translation id="page-upgrades-what-happened-to-eth2-5" />
               </Link>
+            </p>
+            <h3>
+              <Translation id="page-upgrades-why-cant-we-just-use-eth2-title" />
+            </h3>
+            <h4>
+              <Translation id="page-upgrades-why-cant-we-just-use-eth2-mental-models-title" />
+            </h4>
+            <p>
+              <Translation id="page-upgrades-why-cant-we-just-use-eth2-mental-models-description" />
+            </p>
+            <h4>
+              <Translation id="page-upgrades-why-cant-we-just-use-eth2-inclusivity-title" />
+            </h4>
+            <p>
+              <Translation id="page-upgrades-why-cant-we-just-use-eth2-inclusivity-description" />
+            </p>
+            <h4>
+              <Translation id="page-upgrades-why-cant-we-just-use-eth2-scam-prevention-title" />
+            </h4>
+            <p>
+              <Translation id="page-upgrades-why-cant-we-just-use-eth2-scam-prevention-description" />
+            </p>
+            <h4>
+              <Translation id="page-upgrades-why-cant-we-just-use-eth2-staking-clarity-title" />
+            </h4>
+            <p>
+              <Translation id="page-upgrades-why-cant-we-just-use-eth2-staking-clarity-description" />
             </p>
           </div>
         </ContributeCard>
@@ -598,6 +625,23 @@ const Eth2IndexPage = ({ data }) => {
                 </Link>
               </p>
             </ExpandableCard>
+            <ExpandableCard
+              contentPreview={translateMessageId(
+                "page-upgrades-question-11-desc",
+                intl
+              )}
+              title={translateMessageId(
+                "page-upgrades-question-11-title",
+                intl
+              )}
+            >
+              <p>
+                <Translation id="page-upgrades-question-11-answer-1" />
+                <Link to="/security/#eth2-token-scam/">
+                  <Translation id="page-upgrades-question-11-answer-2" />
+                </Link>
+              </p>
+            </ExpandableCard>
           </LeftColumn>
           <RightColumn>
             <ExpandableCard
@@ -669,12 +713,6 @@ const Eth2IndexPage = ({ data }) => {
                     <Translation id="page-upgrades-question-7-prysm" />
                   </Link>{" "}
                   <Translation id="page-upgrades-question-7-prysm-lang" />
-                </li>
-                <li>
-                  <Link to="https://nethermind.io/">
-                    <Translation id="page-upgrades-question-7-cortex" />
-                  </Link>{" "}
-                  <Translation id="page-upgrades-question-7-cortex-lang" />
                 </li>
                 <li>
                   <Link to="https://pegasys.tech/teku-ethereum-2-for-enterprise/">

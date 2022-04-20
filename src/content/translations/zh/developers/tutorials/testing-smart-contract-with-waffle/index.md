@@ -643,7 +643,7 @@ published: 2020-10-16
 
 ## 第 1 步：在项目中安装 waffle [文档链接](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#installation) {#step-1-install-waffle-in-your-project}
 
-准备开始，请安装 `ethereum-waffle`。 在本教程中，我会使用 `yarn`，因此，要安装 `etherum-waffle`，请运行：
+准备开始，请安装 `ethereum-waffle`。 在本教程中，我会使用 `yarn`，因此，要安装 `ethereum-waffle`，请运行：
 
 ```bash
  yarn add --dev ethereum-waffle

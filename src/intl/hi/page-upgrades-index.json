@@ -1,5 +1,4 @@
 {
-  "consensus-client-cortex-logo-alt": "कोर्टेक्स लोगो",
   "consensus-client-lighthouse-logo-alt": "लाइटहाउस लोगो",
   "consensus-client-lodestar-logo-alt": "लोडेस्टार लोगो",
   "consensus-client-nimbus-logo-alt": "निम्बस लोगो",
@@ -97,8 +96,6 @@
   "page-upgrades-question-6-answer-5": "आप ethresear.ch पर Eth2 अनुसंधान और विकास पर चर्चा में भी शामिल हो सकते हैं।",
   "page-upgrades-question-6-desc": "आपका डैप किसी भी नजदीकी अपग्रेड से प्रभावित नहीं होगा। हालाँकि भविष्य के अपग्रेड में कुछ बदलावों की आवश्यकता हो सकती है।",
   "page-upgrades-question-6-title": "मुझे अपने डेप के साथ क्या करने की आवश्यकता है?",
-  "page-upgrades-question-7-cortex": "कॉर्टेक्स",
-  "page-upgrades-question-7-cortex-lang": "(.NET कार्यान्वयन)",
   "page-upgrades-question-7-desc": "सभी समुदाय की कई अलग-अलग टीमें विभिन्न Eth2 अपग्रेड पर काम कर रही हैं।",
   "page-upgrades-question-7-lighthouse": "लाइटहाउस",
   "page-upgrades-question-7-lighthouse-lang": "(रस्ट कार्यान्वयन)",

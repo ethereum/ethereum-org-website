@@ -1,6 +1,6 @@
 ---
-title: Block explorer
-description: Introduzione ai block explorer, il tuo portale nel mondo dei dati della blockchain, dove puoi eseguire query su informazioni su transazioni, account, contratti e altro ancora.
+title: Esploratori dei blocchi
+description: Introduzione agli esploratori di blocchi, il tuo portale nel mondo dei dati della blockchain, dove puoi eseguire ricerche su informazioni su transazioni, account, contratti e altro ancora.
 lang: it
 sidebar: true
 sidebarDepth: 3
@@ -16,7 +16,7 @@ I block explorer sono il tuo portale sui dati di Ethereum. Puoi usarli per veder
 
 - [Etherscan](https://etherscan.io/): _disponibile anche in cinese, coreano, russo e giapponese_
 - [Etherchain](https://www.etherchain.org/)
-- [Ethplorer](https://ethplorer.io/)
+- [Ethplorer](https://ethplorer.io/) –_Disponibile anche in cinese, spagnolo, francese, turco, coreano e vietnamita_
 - [Blockchair](https://blockchair.com/ethereum): _disponibile anche in spagnolo, francese, italiano, olandese, portoghese, russo, cinese e farsi_
 - [Blockscout](https://blockscout.com/)
 - [OKLink](https://www.oklink.com/eth)
@@ -49,8 +49,8 @@ A Ethereum vengono aggiunti nuovi blocchi ogni ~12 secondi (il dato può fluttua
 - Hash: hash crittografico che rappresenta l'intestazione del blocco (identificatore univoco del blocco).
 - Hash padre: hash del blocco precedente a quello attuale.
 - Sha3Uncles: hash combinato di tutti i blocchi zio per un determinato blocco padre.
-- StateRoot: hash root dell'albero di Merkel che conserva l'intero stato del sistema.
-- Nonce: valore usato per dimostrare la proof-of-work per un blocco da parte del miner.
+- StateRoot: l'hash root del Merkle trie che conserva l'intero stato del sistema.
+- Nonce: valore usato per dimostrare la Proof of Work per un blocco da parte del miner.
 
 **Blocchi zio**
 
@@ -138,7 +138,7 @@ I token sono un tipo di contratto, quindi hanno dati simili a quelli di uno Smar
 
 ### Rete {#network}
 
-Naturalmente ci sono alcuni dati che indicano la salute della rete. Sono abbastanza specifici del meccanismo di consenso proof-of-work di Ethereum. Quando Ethereum passerà a Eth2 alcuni di questi dati saranno ridondanti
+Naturalmente ci sono alcuni dati che indicano la salute della rete. Sono abbastanza specifici del meccanismo di consenso Proof of Work di Ethereum. Quando Ethereum passerà al proof of stake, alcuni di questi dati saranno ridondanti
 
 - Difficoltà: l'attuale difficoltà di mining.
 - Tasso di hash: stima di quanti hash sono stati generati dai miner di Ethereum tentando di risolvere il blocco corrente o un blocco specifico.
@@ -148,18 +148,18 @@ Naturalmente ci sono alcuni dati che indicano la salute della rete. Sono abbasta
 - Quantità totale di ETH: numero di ETH in circolazione. Rricorda che nuovi ETH vengono creati con la creazione di ogni blocco, sotto forma di ricompensa.
 - Capitalizzazione di mercato: capitalizzazione calcolata come prezzo\*quantità totale in circolazione.
 
-## Dati di Eth2 {#consensus-layer-data}
+## Dati del livello di consenso {#consensus-layer-data}
 
-Gli upgrade a Eth2 sono ancora in fase di sviluppo ma vale la pena parlare di alcuni dati che gli explorer saranno in grado di fornire. Di fatto, tutti questi dati sono già disponibili per le reti di prova.
+Gli aggiornamenti di scalabilità sono ancora in fase di sviluppo ma vale la pena parlare di alcuni dati che gli esploratori potranno fornirti. Di fatto, tutti questi dati sono già disponibili per le reti di prova.
 
-Se non hai familiarità con Eth2, consulta la [nostra panoramica sugli aggiornamenti a Eth2](/upgrades/).
+Se non conosci la tabella di marcia, dai un'occhiata alla [nostra panoramica degli aggiornamenti di Ethereum](/upgrades/).
 
 ### Epoch {#epoch}
 
-Il primo upgrade a Eth2, la Beacon Chain, creerà commissioni di validatori che vengono randomizzate alla fine di ogni epoca (ogni 6,4 minuti) per motivi di sicurezza. I dati dell'epoca includono:
+La Beacon Chain creerà commissioni di validatori casuali alla fine di ogni epoca (ogni 6,4 minuti) per motivi di sicurezza. I dati dell'epoca includono:
 
 - Numero dell'epoca.
-- Stato finalizzato: se l'epoca è stata finalizzata (sì/no).
+- Stato finalizzato - Se l'epoca è stata finalizzata (Sì/No).
 - Ora: ora in cui l'epoca è terminata.
 - Attestazioni: numero di attestazioni nell'epoca (voti per i blocchi all'interno di slot).
 - Depositi: numero dei depositi ETH inclusi nell'epoca (per diventare tali, i validatori devono mettere in staking ETH).
@@ -184,7 +184,7 @@ Gli slot sono opportunità per la creazione di un blocco e i dati disponibili pe
 - Firma.
 - Randao reveal.
 - Graffiti: un proponente di un blocco può includere un messaggio di 32 byte alla sua proposta di blocco.
-- Dati ETH1.
+- Dati d'esecuzione.
   - Hash del blocco.
   - Numero di depositi.
   - Radice deposito.
@@ -196,12 +196,12 @@ Gli slot sono opportunità per la creazione di un blocco e i dati disponibili pe
 
 ### Blocchi {#blocks-1}
 
-In Eth2 i blocchi funzionano diversamente perché i miner sono sostituiti da validatori e la Beacon Chain introduce slot ed epoche in Ethereum. Questo significa nuovi dati!
+I blocchi del livello di consenso funzionano diversamente perché i miner sono sostituiti da validatori e la Beacon Chain introduce slot ed epoche su Ethereum. Questo significa nuovi dati!
 
 - Propositore: validatore che è stato scelto algoritmicamente per proporre il nuovo blocco.
 - Epoca: epoca nella quale il blocco è stato proposto.
 - Slot: slot nel quale il blocco è stato proposto.
-- Attestazioni: numero di attestazioni incluse nello slot. Le attestazioni sono come voti che indicano che il blocco è pronto ad andare nella Beacon Chain.
+- Attestazioni: numero di attestazioni incluse nello slot. Le attestazioni sono come voti che indicano che il blocco è pronto ad andare alla Beacon Chain.
 
 ### Validatori {#validators}
 
@@ -234,7 +234,7 @@ Le attestazioni sono voti positivi per includere blocchi nella catena. I loro da
 
 ### Rete {#network-1}
 
-I dati di primo livello di Eth2 comprendono quanto segue:
+I dati di livello superiore del livello di consenso includono quanto segue:
 
 - Epoca attuale.
 - Slot attuale.
@@ -257,11 +257,11 @@ I dati di primo livello di Eth2 comprendono quanto segue:
 - [Ethplorer](https://ethplorer.io/): block explorer che si concentra sui token per la rete principale Ethereum e la rete di prova Kovan.
 - [Blockchair](https://blockchair.com/ethereum): l'explorer Ethereum più privato. Anche per ordinare e filtrare dati (mempool).
 
-## Block explorer Eth2 {#beacon-chain-block-explorers}
+## Esploratori di blocchi della Beacon Chain (livello di consenso) {#beacon-chain-block-explorers}
 
 - [https://beaconcha.in/](https://beaconcha.in/)
 - [https://beaconscan.com/](https://beaconscan.com/)
-- [https://eth2stats.io/](https://eth2stats.io/medalla-testnet)
+- [https://ethscan.org/](https://ethscan.org/) (fork di beaconcha.in)
 
 ## Letture consigliate {#further-reading}
 

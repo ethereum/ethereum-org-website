@@ -16,7 +16,9 @@ Pastikan Anda sudah familiar dengan [node](/developers/docs/nodes-and-clients/),
 
 Oracle merupakan sebuah jembatan yang menghubungkan antara blockchain dan dunia nyata. Oracle bertindak sebagai API on-chain yang dapat Anda tanya untuk mendapatkan informasi tentang kontrak pintar Anda. Ini bisa berupa apa saja mulai dari informasi harga hingga laporan cuaca. Oracle dapat juga bersifat dua arah, yang digunakan untuk "mengirim" data ke dunia nyata.
 
-Tonton Patrick menjelaskan Oracle: <iframe width="100%" height="315px" src="https://www.youtube.com/embed/ZJfkNzyO7-U?start=10" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+Tonton Patrick menjelaskan Oracle:
+
+<YouTube id="ZJfkNzyO7-U" start="10" />
 
 ## Mengapa oracle dibutuhkan? {#why-are-they-needed}
 
@@ -159,11 +161,69 @@ contract RandomNumberConsumer is VRFConsumerBase {
 }
 ```
 
+### Penjaga Chainlink {#chainlink-keepers}
+
+Kontrak pintar tidak dapat memicu atau memulai fungsinya sendiri pada waktu arbitrari atau dalam kondisi arbitrari. Perubahan state hanya akan terjadi ketika akun lainnya memulai transaksi (seperti pengguna, oracle, atau kontrak). [Jaringan Penjaga Chainlink](https://docs.chain.link/docs/chainlink-keepers/introduction/) menyediakan opsi bagi kontrak pintar untuk men-outsource tugas pemeliharaan reguler dalam cara yang terpercaya, sederhana, dan terdesentralisasi.
+
+Untuk menggunakan Penjaga Chainlink, suatu kontrak pintar harus mengimplementasikan [KeeperCompatibleInterface](https://docs.chain.link/docs/chainlink-keepers/compatible-contracts/), yang terdiri dari dua fungsi:
+
+- `checkUpkeep` - Memeriksa apakah kontrak membutuhkan pemeliharaan yang perlu dilakukan.
+- `performUpkeep` - Melakukan pemeliharaan pada kontrak, jika diinstruksikan oleh checkUpkeep.
+
+Contoh di bawah adalah suatu kontrak penghitung sederhana. Variabel `counter` ditambahkan sebanyak satu oleh setiap pemanggilan ke `performUpkeep`. Anda dapat [melihat kode berikut ini dengan menggunakan Remix](https://remix.ethereum.org/#url=https://docs.chain.link/samples/Keepers/KeepersCounter.sol)
+
+```javascript
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.7.0;
+
+// KeeperCompatible.sol imports the functions from both ./KeeperBase.sol and
+// ./interfaces/KeeperCompatibleInterface.sol
+import "@chainlink/contracts/src/v0.7/KeeperCompatible.sol";
+
+contract Counter is KeeperCompatibleInterface {
+    /**
+    * Public counter variable
+    */
+    uint public counter;
+
+    /**
+    * Use an interval in seconds and a timestamp to slow execution of Upkeep
+    */
+    uint public immutable interval;
+    uint public lastTimeStamp;
+
+    constructor(uint updateInterval) {
+      interval = updateInterval;
+      lastTimeStamp = block.timestamp;
+
+      counter = 0;
+    }
+
+    function checkUpkeep(bytes calldata /* checkData */) external override returns (bool upkeepNeeded, bytes memory /* performData */) {
+        upkeepNeeded = (block.timestamp - lastTimeStamp) > interval;
+        // We don't use the checkData in this example. checkData ditentukan ketika Upkeep didaftarkan.
+    }
+
+    function performUpkeep(bytes calldata /* performData */) external override {
+        lastTimeStamp = block.timestamp;
+        counter = counter + 1;
+        // We don't use the performData in this example. performData dibuat oleh pemanggilan Penjaga ke fungsi checkUpkeep Anda
+    }
+}
+```
+
+Setelah menyebarkan kontrak yang kompatibel dengan Penjaga, Anda harus mendaftarkan kontrak untuk [Upkeep](https://docs.chain.link/docs/chainlink-keepers/register-upkeep/) dan membiayainya dengan LINK, untuk memberitahu Jaringan Penjaga tentang kontrak Anda, sehingga pemeliharaan Anda dilakukan secara berkelanjutan.
+
+### Proyek Penjaga {#keepers}
+
+- [Penjaga Chainlink](https://keepers.chain.link/)
+- [Jaringan Keep3r](https://docs.keep3r.network/)
+
 ### Pemanggilan API Chainlink {#chainlink-api-call}
 
 [Pemanggilan API Chainlink](https://docs.chain.link/docs/make-a-http-get-request) merupakan cara termudah untuk mendapatkan data dari dunia off-chain dengan cara tradisional yang memfungsikan web: pemanggilan API. Melakukan satu instance ini dan hanya memiliki satu oracle akan membuatnya terpusat secara alami. Agar benar-benar terdesentralisasi, platform kontrak pintar perlu menggunakan banyak node yang ditemukan di [pasar data eksternal](https://market.link/).
 
-[Gunakan kode berikut ini di remix pada jaringan kovan untuk mengujinya](https://remix.ethereum.org/#version=soljson-v0.6.7+commit.b8d736ae.js&optimize=false&evmVersion=null&gist=8a173a65099261582a652ba18b7d96c1)
+[Sebarkan kode berikut ini di remix pada jaringan kovan untuk mengujinya](https://remix.ethereum.org/#version=soljson-v0.6.7+commit.b8d736ae.js&optimize=false&evmVersion=null&gist=8a173a65099261582a652ba18b7d96c1)
 
 Ini juga mengikuti siklus minta dan terima oracle dan mengharuskan kontrak untuk didanai dengan LINK Kovan (gas oracle) agar berfungsi.
 
@@ -234,7 +294,7 @@ contract APIConsumer is ChainlinkClient {
 }
 ```
 
-Anda dapat mempelajari lebih lanjut tentang penerapan Chainlink dengan membaca [Chainlink developers blog](https://blog.chain.link/tag/developers/).
+Anda dapat mempelajari lebih lanjut tentang penerapan Chainlink dengan membaca [Blog pengembang Chainlink](https://blog.chain.link/tag/developers/).
 
 ## Layanan Oracle {#other-services}
 

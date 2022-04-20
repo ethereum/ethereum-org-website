@@ -1,6 +1,6 @@
 const axios = require("axios")
 
-const handler = async () => {
+const lambda = async () => {
   try {
     const response = await axios.get(
       "https://community-api.coinmetrics.io/v2/assets/eth/metricdata/?metrics=TxCnt"
@@ -16,4 +16,8 @@ const handler = async () => {
   }
 }
 
-module.exports = { handler }
+const handler = () => {
+  return lambda()
+}
+
+module.exports = { handler, lambda }

@@ -31,30 +31,77 @@ It’s generally important to test any contract code you write on a testnet befo
 
 Most testnets use a proof-of-authority consensus mechanism. This means a small number of nodes are chosen to validate transactions and create new blocks – staking their identity in the process. It's hard to incentivise mining on a proof-of-work testnet which can leave it vulnerable.
 
+ETH on testnets has no real value; therefore, there are no markets for testnet ETH. Since you need ETH to actually interact with Ethereum, most people get testnet ETH from faucets. Most faucets are webapps where you can input an address which you request ETH to be sent to.
+
+#### Arbitrum Rinkeby {#arbitrum-rinkeby}
+
+A testnet for [Arbitrum](https://arbitrum.io/).
+
+##### Arbitrum Rinkeby faucets
+
+- [FaucETH](https://fauceth.komputing.org)(Multi-Chain faucet without the need for social account)
+- [Chainlink faucet](https://faucets.chain.link/)
+- [Paradigm faucet](https://faucet.paradigm.xyz/)
+
 #### Görli {#goerli}
 
 A proof-of-authority testnet that works across clients.
+
+##### Görli faucets
+
+- [Görli faucet](https://faucet.goerli.mudit.blog/)
+- [Chainlink faucet](https://faucets.chain.link/)
+- [Alchemy Goerli Faucet](https://goerlifaucet.com/)
+
+#### Kintsugi {#kintsugi}
+
+A merge testnet for Ethereum.
+
+##### Kintsugi faucets
+
+- [FaucETH](https://fauceth.komputing.org)(Multi-Chain faucet without the need for social account)
+- [Kintsugi faucet](https://faucet.kintsugi.themerge.dev/)
 
 #### Kovan {#kovan}
 
 A proof-of-authority testnet for those running OpenEthereum clients.
 
+##### Kovan faucets
+
+- [FaucETH](https://fauceth.komputing.org)(Multi-Chain faucet without the need for social account)
+- [Kovan faucet](https://faucet.kovan.network/)
+- [Chainlink faucet](https://faucets.chain.link/)
+- [Paradigm faucet](https://faucet.paradigm.xyz/)
+
+#### Optimisic Kovan {#optimistic-kovan}
+
+A testnet for [Optimism](https://www.optimism.io/).
+
+##### Optimistic Kovan faucets
+
+- [FaucETH](https://fauceth.komputing.org)(Multi-Chain faucet without the need for social account)
+- [Paradigm faucet](https://faucet.paradigm.xyz/)
+
 #### Rinkeby {#rinkeby}
 
 A proof-of-authority testnet for those running Geth client.
+
+##### Rinkeby faucets
+
+- [FaucETH](https://fauceth.komputing.org)(Multi-Chain faucet without the need for social account)
+- [Alchemy faucet](https://RinkebyFaucet.com)
+- [Chainlink faucet](https://faucets.chain.link/)
+- [Paradigm faucet](https://faucet.paradigm.xyz/)
+- [Rinkeby faucet](https://faucet.rinkeby.io/)
 
 #### Ropsten {#ropsten}
 
 A proof-of-work testnet. This means it's the best like-for-like representation of Ethereum.
 
-### Testnet faucets {#testnet-faucets}
+##### Ropsten faucets
 
-ETH on testnets has no real value; therefore, there are no markets for testnet ETH. Since you need ETH to actually interact with Ethereum, most people get testnet ETH from faucets. Most faucets are webapps where you can input an address which you request ETH to be sent to.
-
-- [Görli faucet](https://faucet.goerli.mudit.blog/)
-- [Kovan faucet](https://faucet.kovan.network/)
-- [Rinkeby faucet](https://faucet.rinkeby.io/)
-- [Ropsten faucet](https://faucet.ropsten.be/)
+- [FaucETH](https://fauceth.komputing.org)(Multi-Chain faucet without the need for social account)
+- [Paradigm faucet](https://faucet.paradigm.xyz/)
 
 ## Private networks {#private-networks}
 

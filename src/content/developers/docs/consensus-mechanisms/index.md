@@ -76,7 +76,7 @@ A **chain selection rule** is used to decide which chain is the "correct" chain.
 
 The combination of proof-of-work and longest chain rule is known as "Nakamoto Consensus."
 
-The [Beacon Chain](/upgrades/beacon-chain/)) uses a consensus mechanism called [Casper the Friendly Finality Gadget](https://arxiv.org/abs/1710.09437), which is proof-of-stake based.
+The [Beacon Chain](/upgrades/beacon-chain/) uses a consensus mechanism called [Casper the Friendly Finality Gadget](https://arxiv.org/abs/1710.09437), which is proof-of-stake based.
 
 ## Further reading {#further-reading}
 

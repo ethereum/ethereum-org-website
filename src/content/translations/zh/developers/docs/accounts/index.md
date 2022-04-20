@@ -46,7 +46,7 @@ sidebar: true
 - `codeHash` - 该哈希表示以太坊虚拟机 (EVM) 上的帐户*代码*。 合约帐户具有编程的代码片段，可以执行不同的操作。 如果帐户收到消息调用，则执行此 EVM 代码。 与其他帐户字段不同，不能更改。 所有代码片段都被保存在状态数据库的相应哈希下，供后续检索。 此哈希值称为 codeHash。 对于外部所有的帐户，codeHash 字段是空字符串的哈希。
 - `storageRoot` – 有时被称为存储哈希。 Merkle Patricia trie 根节点的 256 位哈希已编码了帐户的存储内容（256 位整数值映射），并编码为 Trie，作为来自 256 的 Keccak 256 位哈希的映射位整数键，用于 RLP 编码的 256 位整数值。 此 Trie 对此帐户存储内容的哈希进行编码，默认情况下为空。
 
-![显示帐户组成部分的图表](../../../../../developers/docs/accounts/accounts.png) _图表来自 [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![显示帐户组成部分的图表](./accounts.png) _图表来自 [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 ## 外部持有的帐户和密钥对 {#externally-owned-accounts-and-key-pairs}
 
@@ -94,21 +94,23 @@ Repeat passphrase:
 
 `0x06012c8cf97bead5deae237070f9587f8e7a266d`
 
-合约地址是在将合约部署到 Ethereum 区块链时给出的。 地址产生自创建者的地址和从创建者地址发送的交易数量（“nonce”字段）。
+合约地址通常在将合约部署到以太坊区块链时给出。 地址产生自创建人的地址和从创建人地址发送的交易数量（“nonce”）。
 
 ## 关于钱包的说明 {#a-note-on-wallets}
 
-帐户不是一个钱包。 钱包是与用户所有的帐户关联的密钥对，允许用户对帐户进行交易或管理。
+帐户和钱包不同。 账户是用户拥有的以太坊账户的密钥和地址对。 钱包是一个界面或者说应用程序，可以让您与以太坊账户交互。
 
 ## 直观演示 {#a-visual-demo}
 
-跟随 Austin 了解哈希函数和密钥对。 <YouTube id="QJ010l-pBpE" />
+跟随 Austin 了解哈希函数和密钥对。
+
+<YouTube id="QJ010l-pBpE" />
 
 <YouTube id="9LtBDy67Tho" />
 
 ## 延伸阅读 {#further-reading}
 
-_还有哪些社区资源对您有所帮助？ 请编辑本页面并添加！_
+_还有哪些社区资源对您有所帮助？ 编辑并添加本页面！_
 
 ## 相关主题 {#related-topics}
 

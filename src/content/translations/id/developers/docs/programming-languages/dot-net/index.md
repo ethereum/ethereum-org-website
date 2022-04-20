@@ -12,7 +12,7 @@ Gunakan Ethereum untuk membuat aplikasi terdesentralisasi (atau "dapp") yang men
 
 Buatlah aplikasi terdesentralisasi di atas Ethereum dan berinteraksilah dengan kontrak pintar menggunakan peralatan dan bahasa dari teknologi tumpukan Microsoft - Mendukung C#, # Visual Basic .NET, F#, dengan peralatan seperti VSCode dan Visual Studio, di .NET Framework/.NET Core/.NET Standard. Gunakan blockchain Ethereum di Azure menggunakan Blockchain Microsoft Azure dalam hitungan menit. Bawa kecintaan Anda terhadap .NET ke Ethereum!
 
-## Memulai dengan kontrak pintar dan bahasa pemrograman Solidity {#getting-started-with-smart-contracts-and-the-solidity-language}
+## Mulai menggunakan kontrak pintar dan bahasa Solidity {#getting-started-with-smart-contracts-and-the-solidity-language}
 
 **Ambil langkah awal untuk mengintegrasikan .NET dengan Ethereum**
 
@@ -30,9 +30,9 @@ Perlu penjelasan yang lebih mendasar? Kunjungi [ethereum.org/learn](/learn/) ata
 - [Nethereum, Pendahuluan](https://docs.nethereum.com/en/latest/getting-started/)
 - [Menginstal VS Code Solidity](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity)
 - [Alur Kerja bagi Pengembang .NET untuk Membuat dan Memanggil Kontrak Pintar Ethereum](https://medium.com/coinmonks/a-net-developers-workflow-for-creating-and-calling-ethereum-smart-contracts-44714f191db2)
-- [Integrasi kontrak pintar dengan Nethereum](https://kauri.io/article/b54334b0695342c1bbe161c4c4467b50/smart-contracts-integration-with-nethereum)
+- [Integrasi kontrak pintar dengan Nethereum](https://kauri.io/#collections/Getting%20Started/smart-contracts-integration-with-nethereum/#smart-contracts-integration-with-nethereumm)
 - [Menghubungkan .NET dan Kontrak Pintar Blockchain Ethereum dengan Nethereum](https://medium.com/my-blockchain-development-daily-journey/interfacing-net-and-ethereum-blockchain-smart-contracts-with-nethereum-2fa3729ac933), juga di [中文版](https://medium.com/my-blockchain-development-daily-journey/%E4%BD%BF%E7%94%A8nethereum%E9%80%A3%E6%8E%A5-net%E5%92%8C%E4%BB%A5%E5%A4%AA%E7%B6%B2%E5%8D%80%E5%A1%8A%E9%8F%88%E6%99%BA%E8%83%BD%E5%90%88%E7%B4%84-4a96d35ad1e1)
-- [Nethereum - Pustaka integrasi .NET sumber terbuka untuk blockchain](https://kauri.io/article/d15dfd4903f149cdb84b3ce666103b52/v1/nethereum-an-open-source-.net-integration-library-for-blockchain)
+- [Nethereum - Pustaka integrasi .NET sumber terbuka untuk blockchain](https://kauri.io/#collections/a%20hackathon%20survival%20guide/nethereum-an-open-source-.net-integration-library/)
 - [Menulis Transaksi Ethereum pada Basis Data SQL Menggunakan Nethereum](https://medium.com/coinmonks/writing-ethereum-transactions-to-sql-database-using-nethereum-fd94e0e4fa36)
 - [Lihat cara menyebarkan kontrak pintar Ethereum dengan mudah menggunakan C# dan VisualStudio](https://koukia.ca/deploy-ethereum-smart-contracts-using-c-and-visualstudio-5be188ae928c)
 
@@ -70,7 +70,7 @@ Perlu penjelasan yang lebih mendasar? Kunjungi [ethereum.org/learn](/learn/) ata
 - [Nethereum Blazor](https://github.com/Nethereum/NethereumBlazor) - _Penjelajah blockchain ringan .NET Wasm SPA dan dompet sederhana_
 - [Wonka Business Rules Engine](https://docs.nethereum.com/en/latest/wonka/) - _Mesin aturan bisnis (baik untuk platform.NET dan juga platform Ethereum) yang pada dasarnya digerakkan oleh metadata_
 - [Nethermind](https://github.com/NethermindEth/nethermind) - _Sebuah klien Ethereum Inti .NET untuk Linux, Windows, MacOs_
-- [eth-utils](https://github.com/ethereum/eth-utils/) - _fungsi utilitas untuk berkerja dengan codebase terkait Ethereum_
+- [eth-utils](https://github.com/ethereum/eth-utils/) - _fungsi utilitas untuk bekerja dengan basis kode yang terkait dengan Ethereum_
 - [TestChains](https://github.com/Nethereum/TestChains) - _Devchain .NET yang telah dikonfigurasi untuk respon cepat (PoA)_
 
 Ingin mencari informasi tambahan? Kunjungi [ethereum.org/developers](/developers/).

@@ -24,13 +24,13 @@ const PointsExchange = styled.div`
 
 const PointsExchangeLabel = styled.div`
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 0.875rem;
   margin-bottom: 1rem;
 `
 
 const PointsExchangeTitle = styled.h2`
   font-family: ${(props) => props.theme.fonts.monospace};
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 700;
   text-transform: uppercase;
   margin-top: 0rem;
@@ -50,7 +50,7 @@ const Token = styled(GatsbyImage)`
 `
 
 const TokenValue = styled.p`
-  font-size: 20px;
+  font-size: 1.25rem;
   margin: 0rem;
   margin-right: 1rem;
 `

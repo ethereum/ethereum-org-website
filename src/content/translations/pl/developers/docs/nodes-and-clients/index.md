@@ -57,7 +57,7 @@ Prowadzenie własnego węzła umożliwia korzystanie z Ethereum w sposób napraw
 
 - Twój węzeł samodzielnie weryfikuje wszystkie transakcje i bloki pod kątem zasad konsensusu. Oznacza to, że nie musisz polegać na żadnych innych węzłach w sieci ani w pełni im zaufać.
 - Nie będziesz musiał ujawniać swoich adresów i sald do przypadkowych węzłów. Wszystko można sprawdzić z własnym klientem.
-- Twoja zdecentralizowana aplikacja może być bezpieczniejsza i bardziej prywatna, jeśli używasz własnego węzła. [Metamask](https://metamask.io), [MyEtherWallet](https://myetherwallet.com) i kilka innych portfeli można łatwo skierować na swój własny lokalny węzeł.
+- Twoja zdecentralizowana aplikacja może być bezpieczniejsza i bardziej prywatna, jeśli używasz własnego węzła. [MetaMask](https://metamask.io), [MyEtherWallet](https://myetherwallet.com) i kilka innych portfeli można łatwo skierować na swój własny lokalny węzeł.
 
 ![Jak uzyskać dostęp do Ethereum za pośrednictwem aplikacji i węzłów](../../../../../developers/docs/nodes-and-clients/nodes.png)
 
@@ -191,12 +191,12 @@ Przed zainstalowaniem klienta upewnij się, że komputer ma wystarczającą ilo�
 
 W zależności od tego, które oprogramowanie i tryb synchronizacji mają być używane, potrzebne są setki GB przestrzeni dyskowej. Przybliżone wartości i wzrost można znaleźć poniżej.
 
-| Klient         | Rozmiar dysku (szybka synchronizacja) | Rozmiar dysku (pełne archiwum) |
-| -------------- | ------------------------------------- | ------------------------------ |
-| Klient Etherum | 400 GB+                               | 4,7 TB+                        |
-| OpenEthereum   | 280 GB+                               | 4,6 TB+                        |
-| Nethermind     | 200 GB+                               | 3 TB+                          |
-| Besu           | 750 GB+                               | 4 TB+                          |
+| Klient          | Rozmiar dysku (szybka synchronizacja) | Rozmiar dysku (pełne archiwum) |
+| --------------- | ------------------------------------- | ------------------------------ |
+| Klient Ethereum | 400 GB+                               | 4,7 TB+                        |
+| OpenEthereum    | 280 GB+                               | 4,6 TB+                        |
+| Nethermind      | 200 GB+                               | 3 TB+                          |
+| Besu            | 750 GB+                               | 4 TB+                          |
 
 ![Wykres pokazujący, że ilość GB potrzebna do pełnej synchronizacji ma tendencję wzrostową](../../../../../developers/docs/nodes-and-clients/full-sync.png)
 
@@ -206,7 +206,7 @@ Te wykresy pokazują, jak zawsze zmieniają się wymagania dotyczące przechowyw
 
 ### Ethereum na komputerze jednopłytowym {#ethereum-on-a-single-board-computer}
 
-Najbardziej wygodnym i tanim sposobem uruchomienia węzła Ethereum jest korzystanie z jednego komputera z architekturą ARM jak Raspberry Pi. [Ethereum na ARM](https://twitter.com/EthereumOnARM) dostarcza obrazy klientów Geth, Parity, Netherumd i Besu. Oto prosty samouczek [jak zbudować i skonfigurować klienta ARM](/developers/tutorials/run-node-raspberry-pi/).
+Najbardziej wygodnym i tanim sposobem uruchomienia węzła Ethereum jest korzystanie z jednego komputera z architekturą ARM jak Raspberry Pi. [Ethereum na ARM](https://twitter.com/EthereumOnARM) dostarcza obrazy klientów Geth, Parity, Nethereumd i Besu. Oto prosty samouczek [jak zbudować i skonfigurować klienta ARM](/developers/tutorials/run-node-raspberry-pi/).
 
 Małe, niedrogie i wydajne urządzenia, takie jak te, są idealne do uruchomienia węzła w domu.
 
@@ -233,5 +233,5 @@ W Internecie jest wiele instrukcji i informacji o klientach Ethereum, tutaj jest
 
 ## Powiązane samouczki {#related-tutorials}
 
-- [Uruchamianie węzła za pomocą Geth](/developers/tutorials/run-light-node-geth/) _– Jak pobrać, zainstalować i uruchomić Geth. Omówienie trybów synchronizacji, konsoli Javascript i więcej._
+- [Uruchamianie węzła za pomocą Geth](/developers/tutorials/run-light-node-geth/) _– Jak pobrać, zainstalować i uruchomić Geth. Omówienie trybów synchronizacji, konsoli JavaScript i więcej._
 - [Turn your Raspberry Pi 4 into an Eth 1.0 or Eth 2.0 node just by flashing the MicroSD card – Installation guide](/developers/tutorials/run-node-raspberry-pi/) _– Flash your Raspberry Pi 4, plug in an ethernet cable, connect the SSD disk and power up the device to turn the Raspberry Pi 4 into a full Ethereum 1.0 node or an Ethereum 2.0 node (beacon chain / validator)._

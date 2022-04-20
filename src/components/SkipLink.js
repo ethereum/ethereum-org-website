@@ -19,7 +19,12 @@ const Anchor = styled.a`
   }
 `
 
-const SkipLink = ({ hrefId }) => {
+const DivAnchor = styled.div`
+  height: 80px;
+  margin-top: -80px;
+`
+
+export const SkipLink = ({ hrefId }) => {
   return (
     <Div>
       <Anchor href={hrefId}>
@@ -29,4 +34,6 @@ const SkipLink = ({ hrefId }) => {
   )
 }
 
-export default SkipLink
+export const SkipLinkAnchor = ({ id }) => {
+  return <DivAnchor id={id}></DivAnchor>
+}

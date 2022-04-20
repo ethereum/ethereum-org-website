@@ -1,5 +1,4 @@
 {
-  "consensus-client-cortex-logo-alt": "Logo Cortex",
   "consensus-client-lighthouse-logo-alt": "Logo Lighthouse",
   "consensus-client-lodestar-logo-alt": "Logo Lodestar",
   "consensus-client-nimbus-logo-alt": "Logo Nimbus",
@@ -97,8 +96,6 @@
   "page-upgrades-question-6-answer-5": "Możesz także dołączyć do dyskusji na temat badań i rozwoju Eth2 na ethresear.ch.",
   "page-upgrades-question-6-desc": "Na Twoją zdecentralizowaną aplikację nie będą miały wpływu żadne nadchodzące aktualizacje. Jednak przyszłe aktualizacje mogą wymagać pewnych zmian.",
   "page-upgrades-question-6-title": "Co muszę zrobić z moją zdecentralizowaną aplikacją?",
-  "page-upgrades-question-7-cortex": "Cortex",
-  "page-upgrades-question-7-cortex-lang": "(implementacja.NET)",
   "page-upgrades-question-7-desc": "Wiele różnych zespołów z całej społeczności pracuje nad różnymi ulepszeniami Eth2.",
   "page-upgrades-question-7-lighthouse": "Lighthouse",
   "page-upgrades-question-7-lighthouse-lang": "(Implementacja języka Rust)",

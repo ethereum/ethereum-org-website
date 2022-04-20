@@ -1,5 +1,21 @@
-const defaultStrings = require("../intl/en.json")
-const languageMetadata = require("../data/translations.json")
+const allLanguages = require("../data/translations.json")
+
+const buildLangs = (process.env.GATSBY_BUILD_LANGS || "")
+  .split(",")
+  .filter(Boolean)
+
+// will take the same shape as `allLanguages`. Only thing we are doing
+// here is filtering the desired langs to be built
+const languageMetadata = Object.fromEntries(
+  Object.entries(allLanguages).filter(([lang]) => {
+    // BUILD_LANGS === empty means to build all the langs
+    if (!buildLangs.length) {
+      return true
+    }
+
+    return buildLangs.includes(lang)
+  })
+)
 
 const supportedLanguages = Object.keys(languageMetadata)
 const legacyHomepageLanguages = supportedLanguages.filter(
@@ -15,6 +31,7 @@ const consoleError = (message) => {
 
 // Returns the en.json value
 const getDefaultMessage = (key) => {
+  const defaultStrings = require("../intl/en.json")
   const defaultMessage = defaultStrings[key]
   if (defaultMessage === undefined) {
     consoleError(
@@ -50,10 +67,22 @@ const translateMessageId = (id, intl) => {
   return translation
 }
 
+// Overwrites the default Persian numbering of the Farsi language to use Hindu-Arabic numerals (0-9)
+// Context: https://github.com/ethereum/ethereum-org-website/pull/5490#pullrequestreview-892596553
+const getLocaleForNumberFormat = (locale) => {
+  if (locale === "fa") {
+    return "en"
+  }
+
+  return locale
+}
+
 // Must export using ES5 to import in gatsby-node.js
+module.exports.allLanguages = allLanguages
 module.exports.languageMetadata = languageMetadata
 module.exports.supportedLanguages = supportedLanguages
 module.exports.getDefaultMessage = getDefaultMessage
 module.exports.isLangRightToLeft = isLangRightToLeft
 module.exports.translateMessageId = translateMessageId
 module.exports.legacyHomepageLanguages = legacyHomepageLanguages
+module.exports.getLocaleForNumberFormat = getLocaleForNumberFormat

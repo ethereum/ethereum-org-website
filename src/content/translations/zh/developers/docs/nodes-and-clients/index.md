@@ -18,9 +18,9 @@ sidebarDepth: 2
 
 通过查看此[节点图](https://etherscan.io/nodetracker)，您可以查看以太坊网络的实时视图。
 
-存在许多用不同编程语言（如 Go、Rust、JavaScrip、Python、C# .NET 和 Java）编写的[以太坊客户端](/developers/docs/nodes-and-clients/#execution-clients)。 这些实现的共同之处是它们都遵循了正式规范（原为[以太坊黄皮书](https://ethereum.github.io/yellowpaper/paper.pdf)）。 此规范决定了以太坊网络和区块链的功能。
+[以太坊客户端](/developers/docs/nodes-and-clients/#execution-clients)存在多种编程语言（如 Go、Rust、JavaScrip、Python、C# .NET 和 Java）的版本。 这些实现的共同之处是它们都遵循了正式规范（原为[以太坊黄皮书](https://ethereum.github.io/yellowpaper/paper.pdf)）。 此规范决定了以太坊网络和区块链的功能。
 
-![以太坊1x 客户端](../../../../../developers/docs/nodes-and-clients/client-diagram.png) 以太坊客户端功能的简化图表。
+![执行客户端](./client-diagram.png) 以太坊客户端功能的简化图表。
 
 ## 节点类型 {#node-types}
 
@@ -56,17 +56,18 @@ sidebarDepth: 2
 
 - 您的节点根据一致性规则自己验证所有交易和区块。 这意味着您不必依赖网络中的任何其他节点或完全信任它们。
 - 您不必将地址和余额泄露到随机节点。 一切都可以由您自己的客户检查。
-- 如果您使用自己的节点，则去中心化应用可以更安全和私有。[Metamask](https://metamask.io)、[MyEtherWallet](https://myetherwallet.com) 和其他钱包可以轻松指向您自己的本地节点。
+- 如果您使用自己的节点，则去中心化应用可以更安全和私有。 [MetaMask](https://metamask.io)、[MyEtherWallet](https://myetherwallet.com) 和其他钱包可以轻松指向您自己的本地节点。
 - 您可以编程自己的自定义 RPC 端点。
 - 您可以使用**进程间通信 (IPC)**连接到节点，或者重写节点，将您的程序作为插件加载。 这会降低延迟，您需要尽快替换您的交易（例如抢跑交易）。
 
-![如何通过您的应用程序和节点访问以太坊](../../../../../developers/docs/nodes-and-clients/nodes.png)
+![如何通过您的应用程序和节点访问以太坊](./nodes.png)
 
 ### 网络优势 {#network-benefits}
 
 多种节点对以太坊的健康、安全和运行弹性非常重要。
 
-- 他们为依赖它的轻量级客户端提供对区块链数据的访问。 在使用高峰期，需要有足够的完整节点来帮助轻量节点同步。 轻量节点不会存储整个区块链，而是通过[区块头中的状态根](/developers/docs/blocks/#block-anatomy)来验证数据。 如果有需要，他们可以要求区块提供更多信息
+- 他们为依赖它的轻量级客户端提供对区块链数据的访问。 在使用高峰期，需要有足够的完整节点来帮助轻量节点同步。 轻量节点不会存储整个区块链，而是通过[区块头中的状态根](/developers/docs/blocks/#block-anatomy)来验证数据。 如果有需要，他们可以要求区块提供更多信息。
+
 - 完整的节点会强制执行工作量证明的共识规则，因此它们不会被欺骗来接受不遵循规则的代码块。 这为网络中提供了额外的安全性，因为如果所有节点都是轻型节点（不进行完全验证），则矿工可能会攻击网络，例如，创建具有更高奖励的区块。
 
 如果您运行一个完整的节点，整个以太坊网络将从中受益。
@@ -83,7 +84,7 @@ sidebarDepth: 2
 
 - [GitHub](https://github.com/vrde/ethnode)
 
-**DAppNode - _用于在专用机器上运行 Web3 节点（包括以太坊和信标链）的操作系统 GUI。_**
+** DAppNode - \*\***_用于在专用机器上运行 Web3 节点（包括以太坊和信标链）的操作系统 GUI。_\*\*
 
 - [dappnode.io](https://dappnode.io)
 
@@ -92,29 +93,29 @@ sidebarDepth: 2
 - [运行以太坊完整节点：完整指南](https://medium.com/coinmonks/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _Nov 7, 2019 - Justin Leroux_
 - [节点配置备忘单](https://dev.to/5chdn/ethereum-node-configuration-modes-cheat-sheet-25l8) _Jan 5, 2019 - Afri Schoeden_
 - [如何安装和运行一个 Geth 节点](https://www.quiknode.io/guides/infrastructure/how-to-install-and-run-a-geth-node) _October 4, 2020 - Sahil Sen_
-- [如何安装和运行一个 OpenEtherum(fka. Parity) 节点](https://www.quiknode.io/guides/infrastructure/how-to-run-a-openethereum-ex-parity-client-node) _2020 - Sahil Sen_
+- [如何安装和运行一个 OpenEthereum(fka. Parity) 节点](https://www.quiknode.io/guides/infrastructure/how-to-run-a-openethereum-ex-parity-client-node) _2020 - Sahil Sen_
 
 ## 替代方法 {#alternatives}
 
 运行您自己的节点可能很难，您不必总是运行您自己的实例。 在这种情况下，您可以使用第三方 API 提供商，如 [Infura](https://infura.io)、[Alchemy](https://alchemyapi.io) 或 [QuikNode](https://www.quiknode.io)。 另外，[ArchiveNode](https://archivenode.io/) 是一个社区资助的归档节点，希望将以太坊上的数据带给无法运行自己节点的独立开发者。 如果想了解使用这些服务的概况，请查看[节点即服务](/developers/docs/nodes-and-clients/nodes-as-a-service/)。
 
-如果有人在您的社区里运行一个包含公共 API 的以太坊节点，您可以[通过自定义 RPC](https://metamask.zendesk.com/hc/en-us/articles/360015290012-Using-a-Local-Node) 将您的轻量级钱包（如 Metamask）指向社区节点，并比随机受托的第三方隐私性更强。
+如果有人在您的社区里运行一个包含公共 API 的以太坊节点，您可以[通过自定义 RPC](https://metamask.zendesk.com/hc/en-us/articles/360015290012-Using-a-Local-Node) 将您的轻量级钱包（如 MetaMask）指向社区节点，并比随机受托的第三方隐私性更强。
 
 另一方面，如果您运行一个客户端，则可以与可能需要它的朋友分享。
 
-## 客户端 {#execution-clients}
+## 执行客户端（原“Eth1 客户端”） {#execution-clients}
 
-以太坊社区维护着多个开源客户端，这些客户端由不同团队使用不同的编程语言开发。 这使得该网络更强大、更多样化。 理想的目标是在没有任何客户端支配的情况下实现多样性，以减少任何单点故障。
+以太坊社区维持多个开放源代码执行客户端（以前称为“Eth1 客户端”，或只称为“以太坊客户端”），由不同的团队使用不同的编程语言开发。 这使得该网络更强大、更多样化。 理想的目标是在没有任何客户端支配的情况下实现多样性，以减少任何单点故障。
 
 本表概括了不同的客户端。 它们均已通过[客户端测试](https://github.com/ethereum/tests)，并积极维护以保持与网络升级同步。
 
-| 客户端                                                      | 语言     | 操作系统：            | 网络                                          | 同步策略   | 状态缓冲        |
-| ----------------------------------------------------------- | -------- | --------------------- | --------------------------------------------- | ---------- | --------------- |
-| [Geth](https://geth.ethereum.org/)                          | Go       | Linux, Windows, macOS | Mainnet、Görli、Rinkeby、Ropsten              | 快速，完整 | Archive，Pruned |
-| [OpenEtherum](https://github.com/openethereum/openethereum) | Rust     | Linux，Windows，macOS | Mainnet、Kovan、Ropsten 及更多                | Warp，完整 | Archive, Pruned |
-| [Nethermind](http://nethermind.io/)                         | C#, .NET | Linux，Windows，macOS | Mainnet、Gounderster、Ropsten、Rinkeby 及更多 | 快速，完整 | Archive, Pruned |
-| [Besu](https://pegasys.tech/solutions/hyperledger-besu/)    | Java     | Linux，Windows，macOS | Mainnet、Rinkeby、Ropsten 和 Görli            | 快速，完整 | Archive, Pruned |
-| [Erigon](https://github.com/ledgerwatch/erigon)             | 出发     | Linux、Windows、macOS | Mainnet、Görli、Rinkeby、Ropsten              | 快速、完整 | Archive、Pruned |
+| 客户端                                                       | 语言     | 操作系统：            | 网络                                          | 同步策略   | 状态缓冲        |
+| ------------------------------------------------------------ | -------- | --------------------- | --------------------------------------------- | ---------- | --------------- |
+| [Geth](https://geth.ethereum.org/)                           | Go       | Linux, Windows, macOS | Mainnet、Görli、Rinkeby、Ropsten              | 快速，完整 | Archive，Pruned |
+| [OpenEthereum](https://github.com/openethereum/openethereum) | Rust     | Linux，Windows，macOS | Mainnet、Kovan、Ropsten 及更多                | Warp，完整 | Archive, Pruned |
+| [Nethermind](http://nethermind.io/)                          | C#, .NET | Linux，Windows，macOS | Mainnet、Gounderster、Ropsten、Rinkeby 及更多 | 快速，完整 | Archive, Pruned |
+| [Besu](https://pegasys.tech/solutions/hyperledger-besu/)     | Java     | Linux，Windows，macOS | Mainnet、Rinkeby、Ropsten 和 Görli            | 快速，完整 | Archive, Pruned |
+| [Erigon](https://github.com/ledgerwatch/erigon)              | 出发     | Linux、Windows、macOS | Mainnet、Görli、Rinkeby、Ropsten              | 快速、完整 | Archive、Pruned |
 
 更多关于支持网络的信息，请在[以太坊网络中查阅](/developers/docs/networks/)。
 
@@ -126,9 +127,9 @@ sidebarDepth: 2
 
 Go Ethereum（简称 Geth）是实现以太坊原始协议之一。 目前，它是使用最为广泛的客户端，拥有最大的用户群，为用户和开发者提供各种工具。 它用 Go 语言编写，完全开源，并由 GNU LGPL v3 授权许可。
 
-#### OpenEtherum {#openethereum}
+#### OpenEthereum {#openethereum}
 
-OpenEtherum 是一个快速、功能丰富、基于 CLI 的高级以太坊客户端。 它的诞生是为了给那些需要快速同步和最大运行时间的快速和可靠的服务提供必要的基础设施。 OpenEtherum 的目标是成为最快、最轻、最安全的以太坊客户端。 它提供了以下简洁的模块化代码：
+OpenEthereum 是一个快速、功能丰富、基于 CLI 的高级以太坊客户端。 它的诞生是为了给那些需要快速同步和最大运行时间的快速和可靠的服务提供必要的基础设施。 OpenEthereum 的目标是成为最快、最轻、最安全的以太坊客户端。 它提供了以下简洁的模块化代码：
 
 - 易于自定义。
 - 轻度融入服务或产品。
@@ -200,7 +201,7 @@ Erigon（前称 TurbohyGeth）是 Go Ethereum 的一个分叉，注重速度和�
 
 ##### 压缩同步
 
-由 OpenEtherum 执行。 节点定期生成一个对共识至关重要的状态快照，任何节点都可以通过网络获取这些快照，从而能够从这个节点快速同步。
+由 OpenEthereum 执行。 节点定期生成一个对共识至关重要的状态快照，任何节点都可以通过网络获取这些快照，从而能够从这个节点快速同步。
 
 - OpenEthereum 的最快和默认同步模式依赖于节点提供的静态快照。
 - 它和快照同步的策略类似，但没有确定的安全效益。
@@ -234,15 +235,29 @@ Erigon（前称 TurbohyGeth）是 Go Ethereum 的一个分叉，注重速度和�
 
 像任何其他配置一样，它可以通过启动标志或配置文件来定义。 另一个例子是 [Nethermind](https://docs.nethermind.io/nethermind/) ，它促使您在初始化过程中选择一个配置并创建一个配置文件。
 
+## 共识客户端（原“Eth2”客户端） {#consensus-clients}
+
+有多个共识客户端（以前称为“Eth2”客户端）支持 [共识升级](/upgrades/beacon-chain/)。 这些客户端正在运行信标链，并将在 [合并](/upgrades/merge/)后为执行客户端提供权益证明共识机制。
+
+[查看共识客户端](/upgrades/get-involved/#clients)。
+
+| 客户端                                                      | 语言       | 操作系统：            | 网络                            |
+| ----------------------------------------------------------- | ---------- | --------------------- | ------------------------------- |
+| [Teku](https://pegasys.tech/teku)                           | Java       | Linux, Windows, macOS | 信标链，Prater                  |
+| [Nimbus](https://nimbus.team/)                              | Nim        | Linux，Windows，macOS | 信标链，Prater                  |
+| [Lighthouse](https://lighthouse-book.sigmaprime.io/)        | Rust 语言  | Linux，Windows，macOS | 信标链，Prater，Pyrmont         |
+| [Lodestar](https://lodestar.chainsafe.io/)                  | TypeScript | Linux，Windows，macOS | 信标链，Prater                  |
+| [Prysm](https://docs.prylabs.network/docs/getting-started/) | 出发       | Linux，Windows，macOS | 信标链，Gnosis，Prater，Pyrmont |
+
 ## 硬件 {#hardware}
 
-硬件要求因客户端不同而已，但通常要求不是那么高，因为节点只需要保持同步。 不要把它与需要更多算力的挖矿混为一谈。 然而，更强大的硬件的确可以提升同步时间和性能。 根据您的需求和目的，以太坊可以在您的计算机、家庭服务器、单板计算机或云端虚拟私人服务器上运行。
+硬件要求因客户端不同而已，但通常要求不会特别高，因为节点只需要保持同步。 不要把它与需要更多算力的挖矿混为一谈。 然而，更强大的硬件的确可以提升同步时间和性能。 根据您的需求和目的，以太坊可以在您的计算机、家庭服务器、单板计算机或云端虚拟私人服务器上运行。
 
-运行你自己的节点的一个简单方法是使用即插即用的盒子，如 [DAppNode](https://dappnode.io/)。 一个简单的用户接口，为运行客户端和依赖客户端的应用程序提供了硬件。
+有一个简单的方法可以运行您自己的节点，即使用即插即用的盒子，如 [DAppNode](https://dappnode.io/)。 一个简单的用户接口，为运行客户端和依赖客户端的应用程序提供硬件。
 
 ### 要求 {#requirements}
 
-在安装任何客户端之前，请确保您的计算机有足够的资源运行它。 最低和建议的要求见下文，然而核心部分在于磁盘空间。 同步以太坊区块链即是进行高强度的输入/输出。 最好有一个固态硬盘 (SSD)。 要在机械硬盘上运行以太坊客户端，你将需要至少 8GB 的内存作为缓存使用。
+在安装任何客户端之前，请确保您的计算机有足够的资源运行它。 最低要求和建议请见下文，然而核心部分在于磁盘空间。 同步以太坊区块链需要进行高强度的输入/输出。 最好有一个固态硬盘 (SSD)。 要在机械硬盘上运行以太坊客户端，您将需要至少 8GB 的内存作为缓存。
 
 #### 最低要求 {#recommended-specifications}
 
@@ -259,33 +274,27 @@ Erigon（前称 TurbohyGeth）是 Go Ethereum 的一个分叉，注重速度和�
 
 您选择的同步模式将影响空间要求，但我们估计了下面每个客户端需要的磁盘空间。
 
-| 客户端      | 磁盘大小（快速同步） | 磁盘大小（完整存档） |
-| ----------- | -------------------- | -------------------- |
-| Geth        | 400GB 以上           | 6TB+                 |
-| OpenEtherum | 280GB 以上           | 6TB+                 |
-| Nethermind  | 200GB 以上           | 5TB+                 |
-| Besu        | 750GB 以上           | 5TB+                 |
-| Erigon      | N/A                  | 1TB+                 |
+| 客户端       | 磁盘大小（快速同步） | 磁盘大小（完整存档） |
+| ------------ | -------------------- | -------------------- |
+| Geth         | 400GB 以上           | 6TB 以上             |
+| OpenEthereum | 280GB 以上           | 6TB 以上             |
+| Nethermind   | 200GB 以上           | 5TB 以上             |
+| Besu         | 750GB 以上           | 5TB 以上             |
+| Erigon       | 不适用               | 1TB 以上             |
 
 - 注意：Erigon 无法快速同步，但可以完全修剪 (~500 GB)。
 
-![图表表明，完全同步所需的 GB 数正呈上升趋势](../../../../../developers/docs/nodes-and-clients/full-sync.png)
+![图表表明，完全同步所需的 GB 数正呈上升趋势](./full-sync.png)
 
-![图表表明，归档同步所需的 GB 数正呈上升趋势。](../../../../../developers/docs/nodes-and-clients/archive-sync.png)
+![图表表明，存档同步所需的 GB 数正呈上升趋势](./archive-sync.png)
 
-这些图表显示储存要求总是如何改变的。 关于 Geth 和 OpenEthereum 的最新数据，请参阅[完整同步数据](https://etherscan.io/chartsync/chaindefault)和[归档同步数据](https://etherscan.io/chartsync/chainarchive)。
+这些图表显示了存储要求的变化趋势。 关于 Geth 和 OpenEthereum 的最新数据，请参阅[完整同步数据](https://etherscan. io/chartsync/chaindefault)和[归档同步数据](https://etherscan. io/chartsync/chainarchive)。
 
 ### 单板计算机上的以太坊 {#ethereum-on-a-single-board-computer}
 
-运行以太坊节点的最方便和最便宜的方法是使用 Raspberry Pi 这样的 ARM 架构的单板计算机。 [Ethereum on ARM](https://twitter.com/EthereumOnARM)提供 Geth、OpenEthereum、Nethermind 和 Besu 客户端的图像。 这是一个关于[如何构建和设置 ARM 客户端](/developers/tutorials/run-node-raspberry-pi/)的简单教程。
+运行以太坊节点的最方便和最便宜的方法是使用 Raspberry Pi 这样的 ARM 架构的单板计算机。 [Ethereum on ARM](https://twitter. com/EthereumOnARM)提供 Geth、OpenEthereum、Nethermind 和 Besu 客户端的图像。 这是一个关于[如何构建和设置 ARM 客户端](/developers/tutorials/run-node-raspberry-pi/)的简单教程。
 
-像这样的小型、实惠和高效的设备是在家里运行节点的理想选择。
-
-## 以太坊 2.0 客户端 {#consensus-clients}
-
-有新客户端支持[以太坊 2.0 升级](/upgrades/beacon-chain/)。 他们将运行信标链，并支持新的[权益证明](/developers/docs/consensus-mechanisms/pos/)共识机制。
-
-[查看以太坊 2.0 客户端](/upgrades/get-involved/#clients)。
+像这样小型、实惠和高效的设备是在家里运行节点的理想选择。
 
 ## 延伸阅读 {#further-reading}
 
@@ -304,5 +313,5 @@ Erigon（前称 TurbohyGeth）是 Go Ethereum 的一个分叉，注重速度和�
 
 ## 相关教程 {#related-tutorials}
 
-- [用 Geth 运行一个节点](/developers/tutorials/run-light-node-geth/) _- 如何下载、安装和运行 Geth。 涵盖了同步模式、Javascript 控制台等内容。_
-- [将您的 Raspberry Pi 4 变成一个以太坊 1.0 或以太坊 2.0 节点 - 安装指南](/developers/tutorials/run-node-raspberry-pi/) - _闪存您的 Raspberry Pi 4，插入以太网电缆，连接固态磁盘并给设备供电，将 Raspberry Pi 4 变成一个完整的以太坊 1.0 或以太坊 2.0 节点（信标链/验证者）。_
+- [用 Geth 运行一个节点](/developers/tutorials/run-light-node-geth/) _- 如何下载、安装和运行 Geth。 涵盖了同步模式、JavaScript 控制台等内容。_
+- [将您的 Raspberry Pi 4 通过写入 MicroSD 卡变成验证节点 - 安装指南](/developers/tutorials/run-node-raspberry-pi/) _- 写入你的 Raspberry Pi 4，插入网线，连接固态磁盘并给设备供电，将 Raspberry Pi 4 变成一个运行执行层（主网）和/或共识层（信标链/验证者）的完整以太坊节点。_

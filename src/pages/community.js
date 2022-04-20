@@ -153,7 +153,7 @@ const CentralColumn = styled.div`
 `
 
 const ImageContainer = styled.div`
-  background: "#F1FFFD";
+  background: "#f1fffd";
   display: flex;
   height: 100%;
   width: 100%;
@@ -174,10 +174,10 @@ const FeatureImage = styled(GatsbyImage)`
 
 const Subtitle = styled.div`
   margin-bottom: 2rem;
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 140%;
   @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    font-size: 16px;
+    font-size: 1rem;
   }
 `
 

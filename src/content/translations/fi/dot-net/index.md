@@ -74,7 +74,7 @@ Tarvitsetko perusteellisempaa aloitusta? Katso [ethereum.org/fi/learn](/learn/) 
 - [Nethereum Blazor](https://github.com/Nethereum/NethereumBlazor) - _.NET Wasm SPA kevyt lohkoketjuselain ja yksinkertainen lompakko_
 - [Wonka Business Rules Engine](https://docs.nethereum.com/en/latest/wonka/) - _järjestelmä liiketoimintasäännöille (sekä .NET-alustalle että Ethereum-alustalle), joka on luonnostaan metadatakäyttöinen_
 - [Nethermind](https://github.com/NethermindEth/nethermind) - _A .NET Core Ethereum -asiakasohjelma Linuxille, Windowsille ja MacOs:lle_
-- [eth-utils](https://github.com/ethereum/eth-utils/) - _hyötyfunktioita Etherumiin liittyvien koodipohjien kanssa työskentelyyn_
+- [eth-utils](https://github.com/ethereum/eth-utils/) - _hyötyfunktioita Ethereumiin liittyvien koodipohjien kanssa työskentelyyn_
 - [TestChains](https://github.com/Nethereum/TestChains) - _Valmiiksi määritellyt .NET-kehitysketjut nopeisiin vasteisiin (PoA)_
 
 Etsitkö lisää resursseja? Katso [ethereum.org/fi/developers](/developers/).

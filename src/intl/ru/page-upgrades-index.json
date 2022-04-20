@@ -1,5 +1,4 @@
 {
-  "consensus-client-cortex-logo-alt": "Логотип Cortex",
   "consensus-client-lighthouse-logo-alt": "Логотип Lighthouse",
   "consensus-client-lodestar-logo-alt": "Логотип Lodestar",
   "consensus-client-nimbus-logo-alt": "Логотип Nimbus",
@@ -97,8 +96,6 @@
   "page-upgrades-question-6-answer-5": "Вы также можете присоединиться к обсуждению исследований и разработок Eth2 на ethresear.ch.",
   "page-upgrades-question-6-desc": "Предстоящие обновления не повлияют на ваше приложение dapp. Однако будущие обновления могут потребовать некоторых изменений.",
   "page-upgrades-question-6-title": "Что мне нужно делать с моим децентрализованным приложением?",
-  "page-upgrades-question-7-cortex": "Cortex",
-  "page-upgrades-question-7-cortex-lang": "(реализация на .NET)",
   "page-upgrades-question-7-desc": "Много разных команд со всего сообщества работают над различными обновлениями Eth2.",
   "page-upgrades-question-7-lighthouse": "Lighthouse",
   "page-upgrades-question-7-lighthouse-lang": "(реализация на Rust)",

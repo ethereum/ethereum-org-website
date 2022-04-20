@@ -8,11 +8,6 @@ import Emoji from "./Emoji"
 import { Option, OptionContainer, OptionText } from "./SharedStyledComponents"
 import Translation from "./Translation"
 
-// Data
-import monthData from "../data/translation-reports/month-data.json"
-import quarterData from "../data/translation-reports/quarter-data.json"
-import allTimeData from "../data/translation-reports/alltime-data.json"
-
 const Content = styled.div`
   margin-bottom: 2rem;
 `
@@ -34,7 +29,7 @@ const Header = styled.div`
   margin-bottom: 1px;
   padding: 1rem;
   width: 100%;
-  color: #000;
+  color: #000000;
 `
 
 const Item = styled.div`
@@ -47,7 +42,7 @@ const Item = styled.div`
   margin-bottom: 1px;
   padding: 0.5rem 1rem;
   width: 100%;
-  color: #000;
+  color: #000000;
   &:hover {
     border-radius: 4px;
     box-shadow: 0 0 1px ${(props) => props.theme.colors.primary};
@@ -117,7 +112,7 @@ const Flex = styled.div`
   display: flex;
 `
 
-const TranslationLeaderboard = () => {
+const TranslationLeaderboard = ({ monthData, quarterData, allTimeData }) => {
   const leaderboardData = {
     monthData: reverse(sortBy(monthData.data, ({ user }) => user.totalCosts)),
     quarterData: reverse(

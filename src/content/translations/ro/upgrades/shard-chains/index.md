@@ -48,7 +48,7 @@ Rollup-urile sunt o tehnologie de „nivel 2” care există astăzi. Acestea pe
 <InfoBanner isWarning={false}>
   Având în vedere progresul recent în cercetarea și dezvoltarea soluțiilor de scalare de nivelul 2, acest lucru a determinat prioritizarea unirii înaintea actualizării cu lanțurile de fragmente. Acestea vor fi punctul central după tranziția rețelei principală în Dovada Mizei (proof-of-stake).
 
-[Mai multe despre rollup-uri](/developers/docs/scaling/layer-2-rollups/)
+[Mai multe despre rollup-uri](/developers/docs/scaling/#rollups)
 </InfoBanner>
 
 ## Lanțuri de fragmente versiunea 2: executarea codului {#code-execution}

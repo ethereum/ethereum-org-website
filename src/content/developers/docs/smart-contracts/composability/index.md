@@ -12,7 +12,7 @@ Smart contracts are public on Ethereum and can be thought of as open APIs. You d
 
 ## Related tutorials {#related-tutorials}
 
-- [Contract Composability: The Building Blocks of Ethereum Smart Contract Development](https://blog.decentlabs.io/contract-composability-the-building-blocks-of-ethereum-smart-contract-development/)
+- [Contract Composability: The Building Blocks of Ethereum Smart Contract Development](https://www.decentlabs.io/blog/contract-composability-the-building-blocks-of-ethereum-smart-contract-development)
 - [Kickstart your Dapp frontend development with create-eth-app](/developers/tutorials/kickstart-your-dapp-frontend-development-wth-create-eth-app/) _– An overview of how to use create-eth-app to create apps with popular smart contracts out the box._
 
 ## Further reading {#further-reading}

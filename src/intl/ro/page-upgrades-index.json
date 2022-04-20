@@ -1,5 +1,4 @@
 {
-  "consensus-client-cortex-logo-alt": "Logo Cortex",
   "consensus-client-lighthouse-logo-alt": "Logo Lighthouse",
   "consensus-client-lodestar-logo-alt": "Logo Lodestar",
   "consensus-client-nimbus-logo-alt": "Logo Nimbus",
@@ -97,8 +96,6 @@
   "page-upgrades-question-6-answer-5": "De asemenea, te poți alătura discuției despre cercetarea și dezvoltarea Eth2 la ethresear.ch.",
   "page-upgrades-question-6-desc": "Aplicația ta dapp nu va fi afectată de niciun upgrade iminent. Totuși, viitoarele upgrade-uri pot necesita unele modificări.",
   "page-upgrades-question-6-title": "Ce trebuie să fac cu aplicația mea dapp?",
-  "page-upgrades-question-7-cortex": "Cortex",
-  "page-upgrades-question-7-cortex-lang": "(implementare .NET)",
   "page-upgrades-question-7-desc": "Multe echipe diferite din întreaga comunitate lucrează la diferite upgrade-uri Eth2.",
   "page-upgrades-question-7-lighthouse": "Lighthouse",
   "page-upgrades-question-7-lighthouse-lang": "(implementare Rust)",

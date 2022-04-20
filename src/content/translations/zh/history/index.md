@@ -161,7 +161,7 @@ Altair 升级是[信标链](/upgrades/beacon-chain)的第一次预定升级。 �
 
 - 优化 [EVM](/developers/docs/ethereum-stack/#ethereum-virtual-machine) 数据存储操作的 [gas](/glossary/#gas) 耗用量计量方式。
 - 提高拒绝服务（DoS）攻击的弹性。
-- 使基于 SNARK 和 STARK 的[第二层方案性能更佳](/developers/docs/scaling/layer-2-rollups/)。
+- 使基于 SNARK 和 STARK 的[第二层方案性能更佳](/developers/docs/scaling/#rollups)。
 - 使以太坊和 Zcash 能够互操作。
 - 让合约能够引入更有创造性的功能。
 
@@ -173,7 +173,7 @@ Altair 升级是[信标链](/upgrades/beacon-chain)的第一次预定升级。 �
 - [EIP-1108](https://eips.ethereum.org/EIPS/eip-1108) – _cheaper cryptography to improve [gas](/glossary/#gas) costs._
 - [EIP-1344](https://eips.ethereum.org/EIPS/eip-1344) – _protects Ethereum against replay attacks by adding `CHAINID` [opcode](/developers/docs/ethereum-stack/#ethereum-virtual-machine)._
 - [EIP-1884](https://eips.ethereum.org/EIPS/eip-1884) – _optimising opcode gas prices based on consumption._
-- [EIP-2028](https://eips.ethereum.org/EIPS/eip-2028) – _reduces the cost of CallData to allow more data in blocks – good for [Layer 2 scaling](/developers/docs/scaling/layer-2-rollups/)._
+- [EIP-2028](https://eips.ethereum.org/EIPS/eip-2028) – _reduces the cost of CallData to allow more data in blocks – good for [Layer 2 scaling](/developers/docs/scaling/#rollups)._
 - [EIP-2200](https://eips.ethereum.org/EIPS/eip-2200) – _other opcode gas price alterations._
 
 </ExpandableCard>
@@ -224,7 +224,7 @@ Altair 升级是[信标链](/upgrades/beacon-chain)的第一次预定升级。 �
 - 将区块[挖矿](/developers/docs/consensus-mechanisms/pow/mining/)奖励从 5 ETH 减少到 3 ETH。
 - 将[难度炸弹](/glossary/#difficulty-bomb) 升级延迟一年。
 - 增加了调用其他合约的能力。
-- 增加了某些密码学方法，允许[2 层缩放](/developers/docs/scaling/layer-2-rollups/)。
+- 增加了某些密码学方法，允许[2 层缩放](/developers/docs/scaling/#rollups)。
 
 [请阅读以太坊基金会公告](https://blog.ethereum.org/2017/10/12/byzantium-hf-announcement/)
 
@@ -232,8 +232,8 @@ Altair 升级是[信标链](/upgrades/beacon-chain)的第一次预定升级。 �
 
 - [EIP-140](https://eips.ethereum.org/EIPS/eip-140) – _adds `REVERT` opcode._
 - [EIP-658](https://eips.ethereum.org/EIPS/eip-658) – _status field added to transaction receipts to indicate success or failure._
-- [EIP-196](https://eips.ethereum.org/EIPS/eip-196) – _adds elliptic curve and scalar multiplication to allow for [ZK-Snarks](/developers/docs/scaling/layer-2-rollups/#zk-rollups)._
-- [EIP-197](https://eips.ethereum.org/EIPS/eip-197) – _adds elliptic curve and scalar multiplication to allow for [ZK-Snarks](/developers/docs/scaling/layer-2-rollups/#zk-rollups)._
+- [EIP-196](https://eips.ethereum.org/EIPS/eip-196) – _adds elliptic curve and scalar multiplication to allow for [ZK-Snarks](/developers/docs/scaling/zk-rollups/)._
+- [EIP-197](https://eips.ethereum.org/EIPS/eip-197) – _adds elliptic curve and scalar multiplication to allow for [ZK-Snarks](/developers/docs/scaling/zk-rollups/)._
 - [EIP-198](https://eips.ethereum.org/EIPS/eip-198) – _enables RSA signature verification._
 - [EIP-211](https://eips.ethereum.org/EIPS/eip-211) – _adds support for variable length return values._
 - [EIP-214](https://eips.ethereum.org/EIPS/eip-214) – _adds `STATICCALL` opcode, allowing non-state-changing calls to other contracts._

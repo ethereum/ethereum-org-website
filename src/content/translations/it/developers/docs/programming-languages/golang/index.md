@@ -8,7 +8,7 @@ incomplete: true
 
 <div class="featured">Scopri come sviluppare per Ethereum usando progetti e strumenti basati su Go</div>
 
-Usa Etherum per creare applicazioni decentralizzate (o "dapp"). Queste dapp sono attendibili perché, una volta "caricate" su Ethereum, vengono eseguite sempre come sono state programmate. Sono decentralizzate, significa che sono eseguite su una rete peer-to-peer e non esiste un punto di errore singolo. Nessun ente o persona le controlla e sono quasi impossibili da censurare. Possono controllare risorse digitali in modo da creare nuovi tipi di applicazioni.
+Usa Ethereum per creare applicazioni decentralizzate (o "dapp"). Queste dapp sono attendibili perché, una volta "caricate" su Ethereum, vengono eseguite sempre come sono state programmate. Sono decentralizzate, significa che sono eseguite su una rete peer-to-peer e non esiste un punto di errore singolo. Nessun ente o persona le controlla e sono quasi impossibili da censurare. Possono controllare risorse digitali in modo da creare nuovi tipi di applicazioni.
 
 ## Primi passi con gli Smart Contract e il linguaggio Solidity {#getting-started-with-smart-contracts-and-solidity}
 
@@ -22,7 +22,7 @@ Hai prima bisogno di nozioni di base? Dai un'occhiata a [ethereum.org/learn](/le
 - [Learn How to Compile and Deploy Solidity](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 - [Contract Tutorial](https://github.com/ethereum/go-ethereum/wiki/Contract-Tutorial)
 
-## Articoli e libri per chi inizia ora {#beginner-articles-and-books}
+## Articoli e libri per principianti {#beginner-articles-and-books}
 
 - [Choosing an Ethereum Client](https://www.trufflesuite.com/docs/truffle/reference/choosing-an-ethereum-client)
 - [Getting Started with Geth](https://medium.com/@tzhenghao/getting-started-with-geth-c1a30b8d6458)
@@ -68,7 +68,7 @@ Hai prima bisogno di nozioni di base? Dai un'occhiata a [ethereum.org/learn](/le
 
 Cerchi altre risorse? Dai un'occhiata a [ethereum.org/developers](/developers/)
 
-## Collaboratori della community Go {#go-community-contributors}
+## Collaboratori della community di Go {#go-community-contributors}
 
 - [Geth Discord](https://discordapp.com/invite/nthXNEv)
 - [Geth Sgist](https://gitter.im/ethereum/go-ethereum)
@@ -78,7 +78,7 @@ Cerchi altre risorse? Dai un'occhiata a [ethereum.org/developers](/developers/)
 - [Ethereum Gitter](https://gitter.im/ethereum/home)
 - [Geth light Client Gitter](https://gitter.im/ethereum/light-client)
 
-## Altri riferimenti {#other-aggregated-lists}
+## Altri elenchi aggregati {#other-aggregated-lists}
 
 - [Awesome Ethereum](https://github.com/btomashvili/awesome-ethereum)
 - [Consensys: A Definitive List of Ethereum Developer Tools](https://media.consensys.net/an-definitive-list-of-ethereum-developer-tools-2159ce865974) | [Fonte GitHub](https://github.com/ConsenSys/ethereum-developer-tools-list)

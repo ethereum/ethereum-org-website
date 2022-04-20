@@ -54,7 +54,6 @@ ETH w sieciach testowych nie ma rzeczywistej wartości, dlatego nie ma rynków d
 - [Kran Görli](https://faucet.goerli.mudit.blog/)
 - [Kran Kovan](https://faucet.kovan.network/)
 - [Kran Rinkeby](https://faucet.rinkeby.io/)
-- [Kran Ropsten](https://faucet.ropsten.be/)
 
 ## Sieci prywatne {#private-networks}
 

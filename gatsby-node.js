@@ -256,7 +256,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       slug.includes(`/cookie-policy/`) ||
       slug.includes(`/privacy-policy/`) ||
       slug.includes(`/terms-of-use/`) ||
-      slug.includes(`/contributing/`)
+      slug.includes(`/contributing/`) ||
+      slug.includes(`/style-guide/`)
     const language = node.frontmatter.lang
     if (!language) {
       throw `Missing 'lang' frontmatter property. All markdown pages must have a lang property. Page slug: ${slug}`
@@ -282,6 +283,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             context: {
               slug: langSlug,
               ignoreTranslationBanner: isLegal,
+              isLegal: isLegal,
               isOutdated: false,
               isContentEnglish: true,
               relativePath: relativePath, // Use English path for template MDX query
@@ -413,6 +415,14 @@ exports.createSchemaCustomization = ({ actions }) => {
       location: String
       type: String
       link: String
+      address: String
+      skill: String
+      published: String
+      sourceUrl: String
+      source: String
+      author: String
+      tags: [String]
+      isOutdated: Boolean
     }
     type ConsensusBountyHuntersCsv implements Node {
       username: String,
@@ -421,6 +431,13 @@ exports.createSchemaCustomization = ({ actions }) => {
     }
   `
   createTypes(typeDefs)
+
+  // Optimization. Ref: https://www.gatsbyjs.com/docs/scaling-issues/#switch-off-type-inference-for-sitepagecontext
+  createTypes(`
+    type SitePage implements Node @dontInfer {
+      path: String!
+    }
+  `)
 }
 
 // Build lambda functions when the build is complete and the `/public` folder exists

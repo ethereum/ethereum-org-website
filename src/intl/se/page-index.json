@@ -37,6 +37,7 @@
   "page-index-developers": "En ny bortre gräns för utveckling",
   "page-index-developers-description": "Ethereum och dess appar är transparent med öppen källkod. Du kan kopiera kod, bygga vidare på, och återanvända funktioner som andra redan skrivit. Om du inte vill lära dig ett nytt språk kan du använda JavaScript eller andra existerande språk för att interagera med den öppna källkoden.",
   "page-index-developers-button": "Portal för utvecklare",
+  "page-index-developers-code-examples": "Code examples",
   "page-index-developers-code-example-title-0": "Din egen bank",
   "page-index-developers-code-example-description-0": "Du kan skapa en bank som styrs av logik som du har programmerat.",
   "page-index-developers-code-example-title-1": "Din egen valuta",

@@ -16,7 +16,7 @@ Gunakan Ethereum untuk membuat aplikasi terdesentralisasi (atau "dapp") yang men
 
 Bangun aplikasi terdesentralisasi di atas Ethereum dan berinteraksi dengan kontrak pintar menggunakan bahasa pemrograman Delphi!
 
-## Memulai dengan kontrak pintar dan bahasa pemrograman Solidity {#getting-started-with-smart-contracts-and-the-solidity-language}
+## Mulai menggunakan kontrak pintar dan bahasa Solidity {#getting-started-with-smart-contracts-and-the-solidity-language}
 
 **Ambil langkah pertama Anda untuk mengintegrasikan Delphi dengan Ethereum**
 

@@ -8,7 +8,7 @@ incomplete: true
 
 类似于比特币，以太坊目前使用的共识协议被称为**[工作量证明 (PoW)](https://wikipedia.org/wiki/Proof_of_work)**。 这种机制允许以太坊网络的节点就以太坊区块链上记录的所有信息的状态达成共识，并防止某些产生经济影响的攻击。
 
-在接下来一年，工作量证明将被逐步淘汰，这有利于**[权益证明 (PoS)](/developers/docs/consensus-mechanisms/pos)** 的发展。 向权益证明 (PoS) 的过渡也将从以太坊逐步淘汰挖矿机制。 如果想了解更多时间表详情，请查看 [Eth2 合并升级](/upgrades/merge/) 的进度。
+在接下来一年，工作量证明将被逐步淘汰，这有利于**[权益证明 (PoS)](/developers/docs/consensus-mechanisms/pos)** 的发展。 向权益证明 (PoS) 的过渡也将从以太坊逐步淘汰挖矿机制。 [关于合并的更多信息](/upgrades/merge/)。
 
 ## 前置要求 {#prerequisites}
 
@@ -46,7 +46,7 @@ incomplete: true
 
 ### 工作量证明和安全性 {#security}
 
-在以太坊主链上工作的矿工会因挖矿获得回报。 对于一部分旷工而言，他们几乎没有理由去开辟一条自己的新链 - 因为这破坏了系统。 区块链依赖于将单一状态来作为真实性来源。 同时，使用者要始终选择最长的或者“最重”的链。
+在以太坊主链上工作的矿工会因挖矿获得回报。 对于一部分矿工而言，他们几乎没有理由去开辟一条自己的新链 - 因为这破坏了系统。 区块链依赖于将单一状态来作为真实性来源。 同时，使用者要始终选择最长的或者“最重”的链。
 
 工作量证明机制是为了扩展链。 最长的链最可信，因为它完成的计算工作最多。 在以太坊的 PoW 系统中，几乎无法创建一个新区块以擦除交易信息、创建假区块或者维持第二个链。 这是因为恶意矿工需要比其他所有人更快地计算出区块随机数。
 
@@ -99,7 +99,7 @@ incomplete: true
 
 ## 延伸阅读 {#further-reading}
 
-- [多数攻击](https://en.bitcoin.it/wiki/Majority_attack/)
+- [多数攻击](https://en.bitcoin.it/wiki/Majority_attack)
 - [关于结算终局性](https://blog.ethereum.org/2016/05/09/on-settlement-finality/)
 
 ### 视频 {#videos}

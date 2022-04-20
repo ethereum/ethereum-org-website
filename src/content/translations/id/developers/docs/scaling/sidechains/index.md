@@ -7,7 +7,7 @@ incomplete: true
 sidebarDepth: 3
 ---
 
-Sidechain adalah blockchain terpisah yang berjalan secara paralel dengan Jaringan Utama Ethereum dan beroperasi secara independen. Sidechain memliki [algoritma konsensus](/developers/docs/consensus-mechanisms/) (seperti [Bukti Otoritas](https://en.wikipedia.org/wiki/Proof_of_authority), [Bukti penaruhan yang Didelegasikan](https://en.bitcoinwiki.org/wiki/DPoS), [Toleransi kesalahan Byzantine](https://decrypt.co/resources/byzantine-fault-tolerance-what-is-it-explained)). Sidechain terhubung ke Jaringan Utama lewat jembatan dua arah.
+Sidechain adalah blockchain terpisah yang berjalan secara paralel dengan Jaringan Utama Ethereum dan beroperasi secara independen. Sidechain memliki [algoritma konsensus](/developers/docs/consensus-mechanisms/) (seperti [bukti otoritas](https://wikipedia.org/wiki/Proof_of_authority), [Bukti penaruhan yang Didelegasikan](https://en.bitcoinwiki.org/wiki/DPoS), [Toleransi kesalahan Byzantine](https://decrypt.co/resources/byzantine-fault-tolerance-what-is-it-explained)). Sidechain terhubung ke Jaringan Utama lewat jembatan dua arah.
 
 Apa yang membuat sidechain sangat menarik adalah bahwa rantai tersebut bekerja sama seperti rantai Ethereum utama karena didasarkan pada [EVM](/developers/docs/evm/). Sidechain tidak menggunakan Ethereum, sidechain adalah Ethereum. Ini berarti jika Anda ingin menggunakan [dapp](/developers/docs/dapps/) di sidechain, ini hanyalah masalah penggunaan kode Anda ke sidechain ini. Sidechain terlihat, terasa, dan bertindak seperti Jaringan Utama – Anda menulis kontrak di Solidity, dan berinteraksi dengan rantai melalui API Web3.
 
@@ -29,7 +29,7 @@ Beberapa proyek menyediakan implementasi sidechain yang dapat Anda integrasikan 
 
 - [Skale](https://skale.network/)
 - [POA Network](https://www.poa.network/)
-- [xDai](https://www.xdaichain.com/)
+- [Gnosis Chain (sebelumnya xDai)](https://www.xdaichain.com/)
 
 ## Bacaan lebih lanjut {#further-reading}
 

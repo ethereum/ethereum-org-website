@@ -15,7 +15,7 @@
   "page-staking-desc-2": "Although you can earn rewards for doing work that benefits the network, you can lose ETH for malicious actions, going offline, and failing to validate.",
   "page-staking-desc-3": "You'll need 32 ETH to become a full validator or some ETH to join a staking pool. You'll also need to run an execution client (formerly 'Eth1 client'). The launchpad will walk you through the process and hardware requirements. Alternatively, you can use a backend API.",
   "page-staking-description": "Staking is the act of depositing 32 ETH to activate validator software. As a validator you’ll be responsible for storing data, processing transactions, and adding new blocks to the blockchain. This will keep Ethereum secure for everyone and earn you new ETH in the process. This process, known as proof-of-stake, is being introduced by the Beacon Chain.",
-  "page-staking-docked": "More on the merge",
+  "page-staking-docked": "More on The Merge",
   "page-staking-dyor": "Do your own research",
   "page-staking-dyor-desc": "None of the listed staking services are official endorsements. Be sure to do some research to figure out which service might be best for you.",
   "page-staking-header-1": "Stake your ETH to become an Ethereum validator",
@@ -24,7 +24,7 @@
   "page-staking-how-to-stake-desc": "It all depends on how much you are willing to stake. You'll need 32 to become a full validator, but it is possible to stake less.",
   "page-staking-join": "Join",
   "page-staking-join-community": "Join the staker community",
-  "page-staking-join-community-desc": "r/ethstaker is a community for everyone to discuss staking on Ethereum – join for advice, support, and to talk all thing staking.",
+  "page-staking-join-community-desc": "EthStaker is a community for everyone to discuss and learn about staking on Ethereum. Join tens of thousands of members from around the globe for advice, support, and to talk all thing staking.",
   "page-staking-less-than": "Less than",
   "page-staking-link-1": "View backend APIs",
   "page-staking-meta-description": "An overview of Ethereum staking: the risks, rewards, requirements, and where to do it.",
@@ -32,10 +32,11 @@
   "page-staking-more-sharding": "More on sharding",
   "page-staking-pool": "Stake in a pool",
   "page-staking-pool-desc": "If you have less than 32 ETH, you will be able to add a smaller stake to staking pools. Some companies can do it all on your behalf so you won't have to worry about staying online. Here are some companies to check out.",
+  "page-staking-rocket-pool": "You can stake on Rocket Pool by swapping ETH for Rocket Pool's liquid token rETH with as little as 0.01 ETH. Want to run a node? You can also run a staking node on Rocket Pool starting from 16 ETH. The remaining ETH gets assigned from the Rocket Pool protocol, using ETH users have deposited to the pool.",
   "page-staking-pos-explained": "Proof-of-stake explained",
   "page-staking-pos-explained-desc": "Staking is what you need to do to become a validator in a proof-of-stake system. This is a consensus mechanism that is going to replace the proof-of-work system currently in place. Consensus mechanisms are what keep blockchains like Ethereum secure and decentralized.",
   "page-staking-pos-explained-desc-1": "Proof-of-stake helps secure the network in a number of ways:",
-  "page-staking-services": "See staking services",
+  "page-staking-services": "See all staking services",
   "page-staking-sharding": "Unlocks sharding",
   "page-staking-sharding-desc": "Sharding is only possible with a proof-of-stake system. Sharding a proof-of-work system would dilute the amount of computing power needed to corrupt the network, making it easier for malicious miners to control shards. This isn’t the case with randomly-assigned stakers in proof-of-stake.",
   "page-staking-solo": "Stake solo and run a validator",
@@ -58,5 +59,5 @@
   "page-staking-validators": "More validators, more security",
   "page-staking-validators-desc": "In a blockchain like Ethereum it is possible to censor and reorder transactions to suit you if you control a majority of the network. But, to control a majority of the network, you need a majority of validators, and for this you’d need to control a majority of the ETH in the system – that’s a lot! This amount of ETH grows every time a new validator enters the system, bolstering the security of the network. Proof-of-work, the security model proof-of-stake will replace, requires the validators (miners) to have specialist hardware and lots of physical space – entering the system as a miner is difficult so security against majority attacks doesn't increase as much. Proof-of-stake doesn't have these requirements, which should grow the network (and its resistance to majority attacks) to sizes that aren't possible with proof-of-work.",
   "page-staking-withdrawals": "Withdrawals won't be live right away",
-  "page-staking-withdrawals-desc": "You won't be able to withdraw your stake until future upgrades are deployed. Withdrawals will be available in a minor upgrade following the merge of Mainnet with the Beacon Chain."
+  "page-staking-withdrawals-desc": "You won't be able to withdraw your stake until future upgrades are deployed. Withdrawals will be available in a minor upgrade following The Merge of Mainnet with the Beacon Chain."
 }

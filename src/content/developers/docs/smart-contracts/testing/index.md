@@ -17,11 +17,6 @@ incomplete: true
 
 - [GitHub](https://github.com/sc-forks/solidity-coverage)
 
-**hevm -** **_Implementation of the EVM made specifically for unit testing and debugging smart contracts._**
-
-- [GitHub](https://github.com/dapphub/dapptools/tree/master/src/hevm)
-- [DappHub Chat](https://dapphub.chat/)
-
 **Whiteblock Genesis -** **_An end-to-end development sandbox and testing platform for blockchain._**
 
 - [Whiteblock.io](https://whiteblock.io)

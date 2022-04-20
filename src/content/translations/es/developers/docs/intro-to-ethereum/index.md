@@ -97,7 +97,7 @@ El volumen de transacciones es muy alto, así las transacciones se "consensúan"
 
 ### Contratos inteligentes {#smart-contracts}
 
-Un fragmento de código reutilizable (un programa), que publica un desarrollador en la memoria de la EVM. Cualquiera que pueda solicitar que el código del contrato inteligente se ejecute al hacer una solicitud de transacción. Como los desarrolladores pueden escribir arbitrariamente aplicaciones ejecutables en la EVM (juegos, mercados, instrumentos financieros, etc.) mediante la publicación de contratos inteligentes, estos suelen denominarse [dapps o aplicaciones descentralizadas](/developers/docs/dapps/).
+Un fragmento de código reutilizable (un programa), que publica un desarrollador en la memoria de la EVM. Cualquiera puede solicitar que el código del contrato inteligente se ejecute al hacer una solicitud de transacción. Como los desarrolladores pueden escribir arbitrariamente aplicaciones ejecutables en la EVM (juegos, mercados, instrumentos financieros, etc.) mediante la publicación de contratos inteligentes, estos suelen denominarse [dapps o aplicaciones descentralizadas](/developers/docs/dapps/).
 
 [Más sobre Contratos Inteligentes](/developers/docs/smart-contracts/)
 

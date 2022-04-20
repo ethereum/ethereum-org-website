@@ -30,7 +30,7 @@ A smart contract is code that lives on the Ethereum blockchain and runs exactly 
 
 ## Benefits of dapp development {#benefits-of-dapp-development}
 
-- **Zero downtime** – Once the smart contract is deployed and on the blockchain, the network as a whole will always be able to serve clients looking to interact with the contract. Malicious actors, therefore, cannot launch denial-of-service attacks targeted towards individual dapps.
+- **Zero downtime** – Once the smart contract is deployed on the blockchain, the network as a whole will always be able to serve clients looking to interact with the contract. Malicious actors, therefore, cannot launch denial-of-service attacks targeted towards individual dapps.
 - **Privacy** – You don’t need to provide real-world identity to deploy or interact with a dapp.
 - **Resistance to censorship** – No single entity on the network can block users from submitting transactions, deploying dapps, or reading data from the blockchain.
 - **Complete data integrity** – Data stored on the blockchain is immutable and indisputable, thanks to cryptographic primitives. Malicious actors cannot forge transactions or other data that has already been made public.
@@ -48,7 +48,7 @@ A smart contract is code that lives on the Ethereum blockchain and runs exactly 
 
 <YouTube id="F50OrwV6Uk8" />
 
-## Dapp tools {#dapp-tools}
+## Tools for creating dapps {#dapp-tools}
 
 **Scaffold-ETH _- Quickly experiment with Solidity using a frontend that adapts to your smart contract._**
 

@@ -35,7 +35,7 @@ Como mínimo:
 - Solidity no emite ninguna advertencia del compilador
 - Tu código está bien documentado
 
-Hay mucho más que decir sobre el proceso de desarrollo, pero estos puntos conforman un buen punto de partida. Para obtener más artículos y explicaciones detalladas, consulta la [lista de verificación de calidad de proceso proporcionada por DeFiSafety](https://docs.defisafety.com/audit-process-documentation/process-quality-audit-process). [DefiSafety](https://defisafety.com/) es un servicio público no oficial que publica reseñas de varias dapps de Etherum grandes y públicas. Parte del sistema de calificación de DeFiSafety incluye cómo se adhiere el proyecto a esta lista de verificación de calidad de proceso. Siguiendo estos procesos:
+Hay mucho más que decir sobre el proceso de desarrollo, pero estos puntos conforman un buen punto de partida. Para obtener más artículos y explicaciones detalladas, consulta la [lista de verificación de calidad de proceso proporcionada por DeFiSafety](https://docs.defisafety.com/audit-process-documentation/process-quality-audit-process). [DefiSafety](https://defisafety.com/) es un servicio público no oficial que publica reseñas de varias dapps de Ethereum grandes y públicas. Parte del sistema de calificación de DeFiSafety incluye cómo se adhiere el proyecto a esta lista de verificación de calidad de proceso. Siguiendo estos procesos:
 
 - Producirás un código más seguro, mediante pruebas automatizadas reproducibles
 - Los clientes podrán revisar tu proyecto de forma más eficaz
@@ -77,7 +77,7 @@ Para permitir a un usuario retirar ETH que ha almacenado previamente en el contr
 2. Envía la cantidad del saldo en ETH
 3. Reinicia su saldo a 0, para que no puedan retirar su saldo de nuevo.
 
-Si se llama desde una cuenta normal (como tu propia cuenta Metamask), esta función, como se esperaba, msg.sender.call.value() simplemente envía su cuenta ETH. Sin embargo, los contratos inteligentes también pueden realizar llamadas. Si un contrato malicioso es el que llama a `retiro ()`, msg.sender.call. alue() no sólo enviará una `cantidad` de ETH, sino que también llamará implícitamente al contrato para comenzar a ejecutar el código. Imaginemos este contrato malicioso:
+Si se llama desde una cuenta normal (como tu propia cuenta MetaMask), esta función, como se esperaba, msg.sender.call.value() simplemente envía su cuenta ETH. Sin embargo, los contratos inteligentes también pueden realizar llamadas. Si un contrato malicioso es el que llama a `retiro ()`, msg.sender.call. alue() no sólo enviará una `cantidad` de ETH, sino que también llamará implícitamente al contrato para comenzar a ejecutar el código. Imaginemos este contrato malicioso:
 
 ```solidity
 contract Attacker {
@@ -217,7 +217,7 @@ Los tipos de ataques anteriores cubren problemas de codificación de contrato in
 
 Más información:
 
-- [Ataques conocidos del contrato inteligente Consensys](https://consensys.github.io/smart-contract-best-practices/known_attacks/): Una explicación bastante legible de las más significativas vulnerabilidades, con código de ejemplo para muchos.
+- [Ataques conocidos del contrato inteligente Consensys](https://consensys.github.io/smart-contract-best-practices/attacks/): Una explicación bastante legible de las más significativas vulnerabilidades, con código de ejemplo para muchos.
 - [Registro SWC](https://swcregistry.io/docs/SWC-128): Lista curada de los CWE que aplican para Ethereum y los contratos inteligentes
 
 ## Herramientas de seguridad {#security-tools}

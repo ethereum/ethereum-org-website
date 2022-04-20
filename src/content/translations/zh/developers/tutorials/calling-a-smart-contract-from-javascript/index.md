@@ -5,13 +5,13 @@ author: jdourlens
 tags:
   - "交易"
   - "前端"
-  - "javascript"
+  - "JavaScript"
   - "web3.js"
 skill: 初学者
 lang: zh
 sidebar: true
 published: 2020-04-19
-source: EtherumDev
+source: EthereumDev
 sourceUrl: https://ethereumdev.io/calling-a-smart-contract-from-javascript/
 address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 ---
@@ -113,7 +113,7 @@ daiToken.methods.balanceOf(senderAddress).call(function (err, res) {
 })
 ```
 
-请记住，DAI ERC20 有 18 位小数，这意味着您需要移除 18 个零才能获得正确的数额。 uint256 将以字符串形式返回，因为 Javascript 不处理大数值。 如果不确定，请了解我们关于 bignumber.js 的教程[如何在 JS 中处理大数](https://ethereumdev.io/how-to-deal-with-big-numbers-in-javascript/)。
+请记住，DAI ERC20 有 18 位小数，这意味着您需要移除 18 个零才能获得正确的数额。 uint256 将以字符串形式返回，因为 JavaScript 不处理大数值。 如果不确定，请了解我们关于 bignumber.js 的教程[如何在 JS 中处理大数](https://ethereumdev.io/how-to-deal-with-big-numbers-in-javascript/)。
 
 ## 发送：将交易发送给智能合约函数 {#send-sending-a-transaction-to-a-smart-contract-function}
 

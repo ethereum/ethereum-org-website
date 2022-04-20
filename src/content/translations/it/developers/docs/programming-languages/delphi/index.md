@@ -1,5 +1,5 @@
 ---
-title: Ethereum per gli sviluppatori Delphi
+title: Ethereum per sviluppatori Delphi
 description: Impara a sviluppare per Ethereum utilizzando il linguaggio di programmazione Delphi
 lang: it
 sidebar: true
@@ -27,13 +27,13 @@ Hai prima bisogno di nozioni di base? Dai un'occhiata a [ethereum.org/learn](/le
 - [Write your First Smart Contract](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
 - [Learn How to Compile and Deploy Solidity](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 
-## Riferimenti e link per chi inizia ora {#beginner-references-and-links}
+## Riferimenti e link per principianti {#beginner-references-and-links}
 
 **Introduzione alla libreria Delphereum**
 
 - [What is Delphereum?](https://github.com/svanas/delphereum/blob/master/README.md)
 - [Connecting Delphi to a local (in-memory) blockchain](https://medium.com/@svanas/connecting-delphi-to-a-local-in-memory-blockchain-9a1512d6c5b0)
-- [Connecting Delphi to the Ethereum Mainnet](https://medium.com/@svanas/connecting-delphi-to-the-ethereum-main-net-5faf1feffd83)
+- [Connettere Delphi alla rete principale di Ethereum](https://medium.com/@svanas/connecting-delphi-to-the-ethereum-main-net-5faf1feffd83)
 - [Connecting Delphi to Smart Contracts](https://medium.com/@svanas/connecting-delphi-to-smart-contracts-3146b12803a1)
 
 **Vuoi lasciare stare la configurazione per ora e passare direttamente agli esempi?**
@@ -51,5 +51,6 @@ Hai prima bisogno di nozioni di base? Dai un'occhiata a [ethereum.org/learn](/le
 
 - [Delphi and Ethereum Name Service (ENS)](https://medium.com/@svanas/delphi-and-ethereum-name-service-ens-4443cd278af7)
 - [QuikNode, Ethereum and Delphi](https://medium.com/@svanas/quiknode-ethereum-and-delphi-f7bfc9671c23)
+- [Delphi e la Dark Forest di Ethereum](https://svanas.medium.com/delphi-and-the-ethereum-dark-forest-5b430da3ad93)
 
-Cerchi altre risorse? Dai un'occhiata su [ethereum.org/developers](/developers/).
+Cerchi altre risorse? Dai un'occhiata a [ethereum.org/developers](/developers/).

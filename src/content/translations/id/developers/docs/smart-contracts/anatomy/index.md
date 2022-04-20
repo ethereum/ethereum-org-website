@@ -138,7 +138,7 @@ Fungsi `constructor` hanya dijalankan sekali saat kontrak digunakan untuk pertam
 
 ```solidity
 // Contoh Solidity
-// Jalankan data kontrak, siapkan `owner` (pemilik)
+// Jalankan data kontrak, siapkan `owner`
 // sesuai dengan alamat dari pembuat kontrak.
 constructor() public {
     // Semua kontrak pintar bergantung pada transaksi eksternal untuk memicu fungsinya.
@@ -204,7 +204,7 @@ Sebuah kontrak lengkap mungkin tampak seperti ini. Di sini, fungsi `constructor`
 
 ## Aksi dan log {#events-and-logs}
 
-Aksi memungkinkan Anda berkomunikasi dengan kontrak pintar dari frontend Anda atau aplikasi berbayar lainnya. Ketika sebuah transaksi ditambang, kontrak pintar bisa menerbitkan aski dan menulis log pada blockchain yang kemudian dapat diproses frontend.
+Aksi memungkinkan Anda berkomunikasi dengan kontrak pintar dari frontend Anda atau aplikasi berbayar lainnya. Ketika sebuah transaksi ditambang, kontrak pintar bisa menerbitkan aksi dan menulis log pada blockchain yang kemudian dapat diproses frontend.
 
 ## Contoh dengan anotasi {#annotated-examples}
 
@@ -217,7 +217,7 @@ Ini adalah beberapa contoh yang ditulis dalam Solidity. Jika Anda ingin bermain 
 // Pelajari lebih banyak: https://solidity.readthedocs.io/en/v0.5.10/layout-of-source-files.html#pragma
 pragma solidity ^0.5.10;
 
-// Tentukan sebuah kontak bernama `HelloWorld`.
+// Tentukan sebuah kontak bernama `HaloDunia`.
 // Satu kontrak adalah koleksi dari fungsi dan data (statenya).
 // Setelah disebarkan, sebuah kontrak tinggal di alamat spesifik pada blockchain Ethereum.
 // Pelajari lebih banyak: https://solidity.readthedocs.io/en/v0.5.10/structure-of-a-contract.html
@@ -253,7 +253,7 @@ contract HelloWorld {
 pragma solidity ^0.5.10;
 
 contract Token {
-    // Sebuah `address` dapat disamakan dengan sebuah alamat email - ia digunakan untuk mengidentifikasi sebuah akun di Ethereum.
+    //Sebuah `address` dapat disamakan dengan sebuah alamat email - ia digunakan untuk mengidentifikasi sebuah akun di Ethereum.
     // Alamat bisa mewakilkan sebuah kontrak pintar atau satu akun (pengguna) eksternal.
     // Pelajari lebih banyak: https://solidity.readthedocs.io/en/v0.5.10/types.html#address
     address public owner;
@@ -268,7 +268,7 @@ contract Token {
     // Pelajari lebih banyak: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#events
     event Transfer(address from, address to, uint amount);
 
-    // Jalankan data kontrak, siapkan `owner` (pemilik)
+    // Jalankan data kontrak, siapkan `owner`
     // di alamat dari pembuat kontrak.
     constructor() public {
         // Semua kontrak pintar bergantung pada transaksi eksternal untuk memicu fungsinya.
@@ -281,7 +281,7 @@ contract Token {
     // Membuat sejumlah token baru dan mengirimkan mereka ke satu alamat.
     function mint(address receiver, uint amount) public {
         // `require` is struktur kontrol yang digunakan untuk melaksanakan kondisi tertentu.
-        // Jika sebuah pernyataan `require` mengevaluasi ke `false` (palsu), satu pengecualian terpicu,
+        // Jika sebuah pernyataan `require` mengevaluasi ke `false`, satu pengecualian terpicu,
         // yang membalikkan semua perubahan yang dibuat pada state selama pemanggilan saat ini.
         //Pelajari lebih banyak: https://solidity.readthedocs.io/en/v0.5.10/control-structures.html#error-handling-assert-require-revert-and-exceptions
 
@@ -652,4 +652,4 @@ Lihat dokumentasi Solidity dan Vyper untuk gambaran umum yang lebih lengkap tent
 
 - [Memperkecil kontrak untuk mengatasi batas ukuran kontrak](/developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/) _– Beberapa tips praktis untuk mengurangi ukuran kontrak pintar Anda._
 - [Pembuatan log data dari kontrak pintar dengan aksi](/developers/tutorials/logging-events-smart-contracts/) _– Pengantar aksi kontrak pintar dan cara menggunakannya untuk log data._
-- [Berinteraksi dengan kontrak lain dari Solidity](/developers/tutorials/interact-with-other-contracts-from-solidity/) _– Bagaimana menyebarkan kontrak pintar dari kontrak yang sudah ada dan berinteraksi dengan kontrak tersebut._
+- [Berinteraksi dengan kontrak lain dari Solidity](/developers/tutorials/interact-with-other-contracts-from-solidity/) _– Cara menggunakan kontrak pintar dari kontrak yang sudah ada dan berinteraksi dengan kontrak pintar tersebut._

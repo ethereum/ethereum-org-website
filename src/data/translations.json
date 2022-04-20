@@ -5,6 +5,9 @@
   "ar": {
     "language": "العربية"
   },
+  "az": {
+    "language": "Azərbaycan"
+  },
   "bg": {
     "language": "български"
   },
@@ -35,6 +38,9 @@
   "fr": {
     "language": "Français"
   },
+  "gl": {
+    "language": "Galego"
+  },
   "hi": {
     "language": "हिन्दी"
   },
@@ -56,12 +62,14 @@
   "ja": {
     "language": "日本語"
   },
+  "ka": {
+    "language": "ქართული"
+  },
   "ko": {
     "language": "한국어"
   },
   "lt": {
-    "language": "Lietuvis",
-    "useLegacyHomepage": true
+    "language": "Lietuvis"
   },
   "ml": {
     "language": "മലയാളം"
@@ -118,8 +126,7 @@
     "language": "Українська"
   },
   "vi": {
-    "language": "Tiếng Việt",
-    "useLegacyHomepage": true
+    "language": "Tiếng Việt"
   },
   "zh": {
     "language": "简体中文"

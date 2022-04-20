@@ -1,5 +1,5 @@
 ---
-title: Keamanan
+title: Keamanan kontrak pintar
 description: Pertimbangan keamanan untuk pengembang Ethereum
 lang: id
 sidebar: true
@@ -8,7 +8,7 @@ sidebar: true
 Kontrak pintar Ethereum sangat fleksibel, mampu menampung sejumlah besar token (sering kali lebih dari $1 Miliar) dan menjalankan logika yang tak bisa diubah berdasarkan kode kontrak pintar yang digunakan sebelumnya. Sekalipun hal ini telah menciptakan ekosistem kontrak pintar yang saling berhubungan dan tidak memerlukan kepercayaan yang penuh energi dan kreatif, juga merupakan ekosistem yang sempurna untuk menarik penyerang yang mencari keuntungan dengan mengeksploitasi kerentanan dalam kontrak pintar dan perilaku tak terduga di Ethereum. Kode kontrak pintar _biasanya_ tidak bisa diubah untuk menambal kelemahan keamanan, aset yang telah dicuri dari kontrak pintar tidak bisa didapatkan kembali, dan aset yang dicuri sangat sulit untuk dilacak. Jumlah total nilai yang dicuri atau hilang karena masalah kontrak pintardengan mudah bernilai $1 Miliar. Beberapa nilai yang lebih besar karena kesalahan pengodean kontrak pintar meliputi:
 
 - [Masalah partity multi-sig #1 - kehilangan $30 Juta](https://www.coindesk.com/30-million-ether-reported-stolen-parity-wallet-breach)
-- [Masalah parity multi-sig #2 - $300 juta terkunci](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether)
+- [Masalah parity multi-sig #2 - $300 Juta terkunci](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether)
 - [Peretasan TheDAO, 3,6 Juta ETH! Lebih dari $1 Miliar dalam harga ETH saat ini](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/)
 
 ## Prasyarat {#prerequisites}
@@ -31,7 +31,7 @@ Paling sedikit:
 - Semua modifikasi kode dibuat lewat Tarik Permintaan
 - Semua Tarik Permintaan harus memiliki setidaknya satu pengulas. _Jika proyek Anda bersifat tunggal, pertimbangkanlah untuk mencari penulis tunggal lainnya dan saling bertukar ulasan!_
 - Satu perintah mengompilasikan, menggunakan, dan menjalankan serangkaian pengujian terhadap kode Anda menggunakan lingkungan Ethereum pengembangan (Lihat: Truffle)
-- Anda harus harus menjalankan kode Anda melalui peralatan analisis kode dasar seperti Mythril dan Slither, secara ideal sebelum tiap tarik permintaan digabungkan, yang membandingkan perbedaan output
+- Anda harus menjalankan kode Anda melalui peralatan analisis kode dasar seperti Mythril dan Slither, secara ideal sebelum tiap tarik permintaan digabungkan, yang membandingkan perbedaan output
 - Solidity tidak menampilkan peringatan pengompilasi APA PUN
 - Kode Anda terdokumentasi dengan baik
 
@@ -77,7 +77,7 @@ Untuk memungkinkan seorang pengguna menarik ETH yang telah disimpan sebelumnya p
 2. Mengirimkan kepada pengguna jumlah saldo dalam ETH
 3. Mengatur ulang saldo pengguna ke 0, sehingga mereka tidak bisa menarik saldo mereka lagi.
 
-Jika dipanggil dari akun reguler (seperti akun Metamask milik Anda), ini berfungsi sebagaimana mestinya: msg.sender.call.value(), mengirimkan ETH ke akun Anda. Akan tetapi, kontrak pintar juga bisa membuat pemanggilan. Jika kontrak kustom yang jahat adalah kontrak yang memanggil `withdraw()`, msg.sender.call.value() tidak hanya akan mengirim `amount` ETH, tetapi secara implisit juga akan memanggil kontrak untuk memulai eksekusi kode. Bayangkan kontrak jahat ini:
+Jika dipanggil dari akun reguler (seperti akun MetaMask milik Anda), ini berfungsi sebagaimana mestinya: msg.sender.call.value(), mengirimkan ETH ke akun Anda. Akan tetapi, kontrak pintar juga bisa membuat pemanggilan. Jika kontrak kustom yang jahat adalah kontrak yang memanggil `withdraw()`, msg.sender.call.value() tidak hanya akan mengirim `amount` ETH, tetapi secara implisit juga akan memanggil kontrak untuk memulai eksekusi kode. Bayangkan kontrak jahat ini:
 
 ```solidity
 contract Attacker {
@@ -217,7 +217,7 @@ Jenis serangan di atas mencakup masalah pengodean kontrak pintar (re-entrancy) d
 
 Bacaan lebih lanjut:
 
-- [Serangan yang Diketahui pada Kontrak Pintar Consensys](https://consensys.github.io/smart-contract-best-practices/known_attacks/) - Penjelasan yang sangat mudah dibaca tentang kerentanan paling signifikan, disertai contoh kode untuk sebagian besar kerentanan.
+- [Serangan yang Diketahui pada Kontrak Pintar Consensys](https://consensys.github.io/smart-contract-best-practices/attacks/) - Penjelasan yang sangat mudah dibaca tentang kerentanan paling signifikan, disertai contoh kode untuk sebagian besar kerentanan.
 - [Daftar SWC](https://swcregistry.io/docs/SWC-128) - Daftar terkurasi CWE yang berlaku untuk Ethereum dan kontrak pintar
 
 ## Perangkat keamanan {#security-tools}
@@ -322,7 +322,7 @@ _Tahu tentang sumber daya komunitas yang membantu Anda? Edit halaman ini dan tam
 ## Tutorial terkait {#related-tutorials}
 
 - [Alur kerja pengembangan yang aman](/developers/tutorials/secure-development-workflow/)
-- [Bagaimana menggunakan Slither untuk menemukan bug kontrak pintar](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
-- [Bagaimana menggunakan Manticore untuk menemukan bug kontrak pintar](/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/)
+- [Cara menggunakan Slither untuk menemukan bug kontrak pintar](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
+- [Cara menggunakan Manticore untuk menemukan bug kontrak pintar](/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/)
 - [Pedoman kemananan](/developers/tutorials/smart-contract-security-guidelines/)
 - [Kemananan token](/developers/tutorials/token-integration-checklist/)

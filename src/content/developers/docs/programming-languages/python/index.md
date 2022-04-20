@@ -49,6 +49,7 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 ### Active: {#active}
 
 - [Web3.py](https://github.com/ethereum/web3.py) - _Python library for interacting with Ethereum_
+- [Ape](https://github.com/ApeWorX/ape) - _The smart contract development tool for Pythonistas, Data Scientists, and Security Professionals_
 - [Brownie](https://github.com/eth-brownie/brownie) - _Python framework for deploying, testing and interacting with Ethereum smart contracts_
 - [Vyper](https://github.com/ethereum/vyper/) - _Pythonic Smart Contract Language for the EVM_
 - [py-evm](https://github.com/ethereum/py-evm) - _implementation of the Ethereum Virtual Machine_
@@ -58,6 +59,8 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 - [py-wasm](https://github.com/ethereum/py-wasm) - _Python implementation of the web assembly interpreter_
 - [pydevp2p](https://github.com/ethereum/pydevp2p) - _implementation of the Ethereum P2P stack_
 - [pymaker](https://github.com/makerdao/pymaker) - _Python API for Maker contracts_
+- [siwe](https://github.com/spruceid/siwe-py) - _Sign in with Ethereum (siwe) for Python_
+- [Smart contracts for testing](https://github.com/tradingstrategy-ai/smart-contracts-for-testing) - _A Python package that comes with ERC-20, Uniswap and other common contracts for writing tests with Web3.py_
 
 ### Archived / No longer maintained: {#archived--no-longer-maintained}
 
