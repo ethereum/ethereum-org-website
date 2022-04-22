@@ -6,17 +6,22 @@ sidebar: true
 incomplete: false
 ---
 
-# What is “weak subjectivity”?
+## Prerequisites
 
-It is important to note that the mechanism of using deposits to ensure there is “something at stake” does lead to one change in the security model. Suppose that deposits are locked for four months, and can later be withdrawn. Suppose that an attempted 51% attack happens that reverts 10 days worth of transactions. The blocks created by the attackers can simply be imported into the main chain as proof-of-malfeasance (or “dunkles”) and the validators can be punished. However, suppose that such an attack happens after six months. Then, even though the blocks can certainly be re-imported, by that time the malfeasant validators will be able to withdraw their deposits on the main chain, and so they cannot be punished.
+To understand this page it is necessary to first understand the fundamentals of [proof-of-stake](/developers/docs/consensus-mechanisms/pos/).
 
-To solve this problem, we introduce a “revert limit” - a rule that nodes must simply refuse to revert further back in time than the deposit length (ie. in our example, four months), and we additionally require nodes to log on at least once every deposit length to have a secure view of the chain. Note that this rule is different from every other consensus rule in the protocol, in that it means that nodes may come to different conclusions depending on when they saw certain messages. The time that a node saw a given message may be different between different nodes; hence we consider this rule “subjective” (alternatively, one well-versed in Byzantine fault tolerance theory may view it as a kind of synchrony assumption).
+## Weak Subjectivity
 
-However, the “subjectivity” here is very weak: in order for a node to get on the “wrong” chain, they must receive the original message four months later than they otherwise would have. This is only possible in two cases:
+At the very beginning of a blockchain, every node on the network agrees on a specific first block - a "genesis block". Any nodes that enter the network later on are required to download that genesis block and every block that came after it and re-execute the transactions inside them. The entire blockchain is built on top of the genesis block - it is the universal "ground truth". This means that the genesis block has to be irreversible and always present in the canonical chain.
 
-When a node connects to the blockchain for the first time.
-If a node has been offline for more than four months.
+In proof-of-work blockchains there is a single canonical chain that all honest nodes agree upon (e.g. the one that has taken the most energy, measured in proof-of-work difficulty, to mine). This is "objective". Alternatively, in "subjective" blockchains there are multiple valid states and nodes choose between them based on social information from their peers. Ethereum PoS is "weakly subjective" because there is one correct chain that all honest nodes agree upon. Nodes that are continuously connected are effectively objective because they simply follow the consensus mechanism to the head of the chain. However, nodes entering the network for the first time or after some long delay rely upon information about the state of the blockchain gathered from some trusted source such as a friend's node or a block explorer. Given an honest recent state and the full set of blocks, any new node entering the network will independently arrive at the correct head.
 
-We can solve (1) by making it the user’s responsibility to authenticate the latest state out of band. They can do this by asking their friends, block explorers, businesses that they interact with, etc. for a recent block hash in the chain that they see as the canonical one. In practice, such a block hash may well simply come as part of the software they use to verify the blockchain; an attacker that can corrupt the checkpoint in the software can arguably just as easily corrupt the software itself, and no amount of pure cryptoeconomic verification can solve that problem. (2) does genuinely add an additional security requirement for nodes, though note once again that the possibility of hard forks and security vulnerabilities, and the requirement to stay up to date to know about them and install any needed software updates, exists in proof of work too.
+## Weak subjectivity checkpoints
 
-Note that all of this is a problem only in the very limited case where a majority of previous stakeholders from some point in time collude to attack the network and create an alternate chain; most of the time we expect there will only be one canonical chain to choose from.
+The way weak subjectivity is implemented in proof-of-stake Ethereum is by using "weak subjectivity checkpoints". These are blocks that all nodes on the network agree belong in the canonical chain. They serve a similar purpose to genesis blocks except that they do not sit at the genesis position in the blockchain. The fork choice algorithm executed by each node treats the weak subjectivity checkpoints as a genesis block, trusting that the blockchain state defined in that checkpoint to be correct, and then independently verifying the chain from that point onwards. The fork choice algorithm automatically rejects any block that does not build upon the most recent weak subjectivity checkpoint.
+
+## How weak is weak?
+
+"
+However, arguably this is a very weak requirement; in fact, users need to trust client developers and/or "the community" to about this extent already. At the very least, users need to trust someone (usually client developers) to tell them what the protocol is and what any updates to the protocol have been. This is unavoidable in any software application. Hence, the marginal additional trust requirement that PoS imposes is still quite low.
+"
