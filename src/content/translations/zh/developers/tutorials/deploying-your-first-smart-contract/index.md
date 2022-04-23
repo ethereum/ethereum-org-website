@@ -1,6 +1,6 @@
 ---
 title: 部署第一个智能合约
-description: 如何在以太坊测试网络中部署第一个智能合约
+description: 介绍如何在以太坊测试网络上部署您第一个智能合约
 author: "jdourlens"
 tags:
   - "智能合约"
@@ -25,7 +25,7 @@ address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 
 第一步[访问 Remix](https://remix.ethereum.org/)并创建一个新文件。 在 Remix 界面的左上角添加一个新文件，并输入所需的文件名。
 
-![在Remix界面中添加一个新文件](../../../../../developers/tutorials/deploying-your-first-smart-contract/remix.png)
+![在Remix界面中添加一个新文件](./remix.png)
 
 在这个新文件中，我们将粘贴如下代码：
 
@@ -68,34 +68,34 @@ contract Counter {
 
 我们首先点击左侧的编译图标来[编译合约](/developers/docs/smart-contracts/compiling/)：
 
-![Remix工具栏中的编译图标](../../../../../developers/tutorials/deploying-your-first-smart-contract/remix-compile-button.png)
+![Remix工具栏中的编译图标](./remix-compile-button.png)
 
 然后点击编译按钮：
 
-![Remix solidity编译器的编译按钮](../../../../../developers/tutorials/deploying-your-first-smart-contract/remix-compile.png)
+![Remix solidity编译器的编译按钮](./remix-compile.png)
 
-您可以选择“自动编译”选项，这样当您在文本编辑器中保存内容时，合约始终会自动编译。
+您可以选择“自动编译”选项，以便在您将内容保存到文本编辑器时始终编译合约。
 
 然后切换到部署和运行交易屏幕：
 
-![Remix工具栏的部署图标](../../../../../developers/tutorials/deploying-your-first-smart-contract/remix-deploy.png)
+![Remix工具栏的部署图标](./remix-deploy.png)
 
-在“部署和运行交易”屏幕上，仔细检查显示的合约名称并点击“部署”。 在页面顶部可以看到，当前环境为“JavaScript VM”，这意味着当前我们在本地测试区块链上部署智能合约并交互，这样测试可以更快，也不需要任何费用。
+在“部署和运行交易”屏幕上，仔细检查显示的合约名称并点击“部署”。 正如您在页面顶部看到的那样，当前环境是“JavaScript VM”，这意味着我们将在本地测试区块链上部署我们的智能合约并与之交互，以便能够更快地进行测试并且无需任何费用。
 
-![Remix solidity编译器的部署按钮](../../../../../developers/tutorials/deploying-your-first-smart-contract/remix-deploy-button.png)
+![Remix solidity编译器的部署按钮](./remix-deploy-button.png)
 
 点击“部署”按钮后，您可以看到合约在底部显示出来。 点击左侧的箭头展开，可以看到合约的内容。 这里有我们的变量`counter`、函数`increment()`和 getter `getCounter()`。
 
 如果您点击`count`或`getCount`按钮，它将实际检索合约的`count`变量的内容，并显示出来。 因为我们尚未调用`increment`函数，它应该显示 0。
 
-![Remix solidity编译器的函数按钮](../../../../../developers/tutorials/deploying-your-first-smart-contract/remix-function-button.png)
+![Remix solidity编译器的函数按钮](./remix-function-button.png)
 
 现在点击按钮来调用`increment`函数。 您可以在窗口底部看到交易产生的日志。 当按下检索数据按钮而非`increment`按钮时，您看到的日志有所不同。 这是因为读取区块链的数据不需要任何交易（写入）或费用。 因为只有修改区块链的状态需要进行交易。
 
-![交易日志](../../../../../developers/tutorials/deploying-your-first-smart-contract/transaction-log.png)
+![交易日志](./transaction-log.png)
 
 在按下 increment 按钮后，将产生一个交易来调用我们的`increment()`函数，如果我们点击 count 或 getCount 按钮，将读取我们的智能合约的最新状态，count 变量大于 0。
 
-![智能合约状态的最新更新](../../../../../developers/tutorials/deploying-your-first-smart-contract/updated-state.png)
+![智能合约状态的最新更新](./updated-state.png)
 
 在下一个教程中，我们将论述[如何在智能合约中添加事件](/developers/tutorials/logging-events-smart-contracts/)。 记录事件是调试智能合约了解调用函数时所发生情况的方便方式。
