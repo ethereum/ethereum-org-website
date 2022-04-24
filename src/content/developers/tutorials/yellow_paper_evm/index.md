@@ -129,7 +129,7 @@ The execution environment is a tuple, I, that includes information that isn't pa
 | I<sub>e</sub> |  Not available  | -
 | I<sub>w</sub> |  Not available  | -
 
-A few other parameters are necessary to understand the rest of this section.
+A few other parameters are necessary to understand the rest of section 9:
 
 | Parameter | Defined in section | Value |
 | - | - | - |
@@ -137,5 +137,12 @@ A few other parameters are necessary to understand the rest of this section.
 | g | 9.3 (p. 13) | Remaining gas
 | A | 6.1 (p. 8) | Accrued substate (changes scheduled for when the transaction ends)
 
+Equation 134 (σ′, g′ ,A′, o) ≡ Ξ(σ, g, A, I) tells us that:
+
+- The inputs to the virtual machine are the global state (σ), the remaining gas (g), the accrued substate (A), and the just defined execution environment (I)
+- The outputs are a new global state (σ'), remaining gas (g'), and accrued substate (A'), as well as an output field (o). 
+- Every set of global state, remaining gas, accrued substate, and execution environment will always produce the same results.
+
+The output field is the returned result in the case of internal transaction (when one contract calls another) and calls to view functions (when you are just asking for information, so there is no need to wait for a transaction).
 
 ## Conclusion
