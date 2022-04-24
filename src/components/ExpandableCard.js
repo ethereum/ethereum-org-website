@@ -4,7 +4,6 @@ import styled from "styled-components"
 import { motion } from "framer-motion"
 
 // Components
-import { FakeLink } from "./SharedStyledComponents"
 import Translation from "../components/Translation"
 
 // Utils
@@ -145,7 +144,15 @@ const ExpandableCard = ({
   }
   return (
     <Card>
-      <Content>
+      <Content
+        onClick={() => {
+          // Allow users to select text without expanding the card
+          if (window.getSelection().toString().length === 0) {
+            isVisible && trackCustomEvent(matomo)
+            setIsVisible(!isVisible)
+          }
+        }}
+      >
         <Question>
           <Header>
             {!!Svg && <Svg alt={alt} />}
