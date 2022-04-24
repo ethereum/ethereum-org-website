@@ -83,8 +83,6 @@ The website is the product of many contributors, just like the ecosystem as a wh
 - **Collaborative:** This project brings together all of us.
 - **Sustainable:** Setting up for long-term maintenance by the community
 
-Information Architecture • Visual Direction • Code
-
 You can see our design principles in action [across our site](/).
 
 ## Give feedback {#give-feedback}
