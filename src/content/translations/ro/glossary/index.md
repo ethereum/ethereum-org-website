@@ -455,7 +455,7 @@ Odată ce codul unui [contract](#smart-contract) (sau [bibliotecă](#library)) e
 
 ### tranzacție internă {#internal-transaction}
 
-O [tranzacție](#transaction) trimisă dintr-un cont contractual către un alt [cont contractual](#contract-account) sau un <a href="#eoa”>EOA</a> (vezi [mesajul](#message)).
+O [tranzacție](#transaction) trimisă dintr-un cont contractual către un alt [cont contractual](#contract-account) sau un [EOA](#eoa) (vezi [mesajul](#message)).
 
 <Divider />
 
@@ -471,7 +471,7 @@ Cunoscută și sub denumirea de „algoritm de întindere a parolei”, este uti
 
 ### keccak-256 {#keccak-256}
 
-Funcția criptografică [hash](#hash) folosită în Ethereum. Keccak-256 a fost standardizat ca <a href="#sha”>SHA</a>-3.
+Funcția criptografică [hash](#hash) folosită în Ethereum. Keccak-256 a fost standardizat ca [SHA](#sha)
 
 ### fișier keystore {#keystore-file}
 
