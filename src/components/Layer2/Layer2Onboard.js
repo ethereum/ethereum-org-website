@@ -212,7 +212,7 @@ const Layer2Onboard = ({ layer2DataCombined, ethIcon }) => {
                 <b>You can connect to {selectedL2.name} using these wallets:</b>
               </p>
               <p>{selectedL2.bridgeWallets.join(", ")}</p>
-              <ButtonLinkMargin to={selectedL2.bridge}>
+              <ButtonLinkMargin to={selectedL2.bridge} hideArrow={false}>
                 {selectedL2.name} Bridge
               </ButtonLinkMargin>
             </SelectedContainer>
