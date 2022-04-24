@@ -76,7 +76,7 @@ This section explains how the gas fees are calculated.
 There are three costs:
 
 1. The inherent cost of the specific opcode.
-   To get this value, find the cost group opcode in Appendix H (p. 28, under expression (327)), and find the cost group in expression (324).
+   To get this value, find the cost group opcode in Appendix H (p. 28, under equation (327)), and find the cost group in equation (324).
    This gives you a cost function, which in most cases uses parameters from Appendix G (p. 27).
    
    For example, the opcode `CALLDATACOPY` is a member of group W<sub>copy</sub>.
@@ -85,7 +85,8 @@ There are three costs:
    
    We still need to decipher the expression ⌈**μ<sub>s</sub>[2]**⌉. 
    The outmost part, ⌈ \<value\> ⌉ is the ceiling function, a function that given a value returns the smallest integer that is still not smaller than the value. 
-   For example, ⌈ 2.5 ⌉ = ⌈ 3 ⌉ = 3. The next part is **μ<sub>s</sub>[2]**. 
+   For example, ⌈2.5⌉ = ⌈3⌉ = 3. 
+   The inner part is **μ<sub>s</sub>[2]**. 
    Looking at section 3 (Conventions) on p. 3, **μ** is the machine state.
    The machine state is defined in section 9.4.1 on p. 13.
    According to that section, one of the machine state parameters is **s** for the stack.
@@ -95,5 +96,23 @@ There are three costs:
    So ⌈**μ<sub>s</sub>[2]**⌉ is the number of 32 byte words required to store the data being copied.
    Putting everything together, the inherent cost of `CALLDATACOPY` is 3 gas plus 3 per word of data being copied.
 
+1. The cost of running either the constructor for the new contract (in the case of `CREATE` and `CREATE2`) or the contract we call (in the case of `CALL`, `CALLCODE`, `STATICCALL`, or `DELEGATECALL`).
+
+1. The cost of expanding memory if necessary. 
+   In equation 324, this value is written as C<sub>mem</sub>(**μ<sub>i</sub>**')-C<sub>mem</sub>(**μ<sub>i</sub>**).
+   Looking at section 9.4.1 again, we see that **μ<sub>i</sub>** is the number of words in memory. 
+   **μ<sub>i</sub>** is the number of words in memory before the opcode.
+   **μ<sub>i</sub>**' is the number of words in memory after the opcode.   
+   The function C<sub>mem</sub> is defined in equation 326.
+   
+   C<sub>mem</sub>(a) = G<sub>memory</sub> × a + ⌊a<sup>2</sup> / 512⌋. 
+   ⌊x⌋ is the floor function, a function that given a value returns the largest integer that is still not larger than the value. 
+   For example, ⌊2.5⌋ = ⌊2⌋ = 2.
+   When a < √512, a<sup>2</sup> < 512, and the result of the floor function is zero.
+   So for the first 22 words (704 bytes), the cost rises linearly with the number of memory words required.
+   Beyond that point ⌊a<sup>2</sup> / 512⌋ is positive, and when the memory is high enough it the gas cost is proportional to the square of the amount of memory.
+   
+   
+## 9.3 (Execution Environment)   
 
 ## Conclusion
