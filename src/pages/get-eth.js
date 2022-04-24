@@ -188,7 +188,7 @@ const GetETHPage = ({ data }) => {
     },
     {
       title: "Kyber",
-      link: "https://kyberswap.com/swap/",
+      link: "https://kyberswap.com/#/swap/",
       image: getImage(data.kyber),
     },
     {
