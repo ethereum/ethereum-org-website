@@ -101,10 +101,9 @@ There are three costs:
 1. The cost of expanding memory (if necessary). 
    In equation 324, this value is written as C<sub>mem</sub>(**μ<sub>i</sub>**')-C<sub>mem</sub>(**μ<sub>i</sub>**).
    Looking at section 9.4.1 again, we see that **μ<sub>i</sub>** is the number of words in memory. 
-   So **μ<sub>i</sub>** is the number of words in memory before the opcode and **μ<sub>i</sub>**' is the number of words in memory after the opcode.   
-   The function C<sub>mem</sub> is defined in equation 326.
+   So **μ<sub>i</sub>** is the number of words in memory before the opcode and **μ<sub>i</sub>**' is the number of words in memory after the opcode. 
    
-   C<sub>mem</sub>(a) = G<sub>memory</sub> × a + ⌊a<sup>2</sup> / 512⌋. 
+   The function C<sub>mem</sub> is defined in equation 326: C<sub>mem</sub>(a) = G<sub>memory</sub> × a + ⌊a<sup>2</sup> / 512⌋. 
    ⌊x⌋ is the floor function, a function that given a value returns the largest integer that is still not larger than the value. 
    For example, ⌊2.5⌋ = ⌊2⌋ = 2.
    When a < √512, a<sup>2</sup> < 512, and the result of the floor function is zero.
