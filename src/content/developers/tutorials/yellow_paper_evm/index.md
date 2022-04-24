@@ -28,9 +28,9 @@ I am writing this a few months before [the merge](/upgrades/merge).
 That event will significantly change the way blocks are handled, making that part of the current yellow paper of mostly historical instance.
 On the other hand, the EVM is mostly unaffected by the merge.
 
-The EVM is explained primarily in section 9 (p. 12-14). 
-
 ## 9 (Execution Model)
+
+This section (p. 12-14) includes most of the definition of the EVM.
 
 The term *system state* includes everything you need to know about the system to run it.
 In a normal computer this means the memory, content of registers, etc.
@@ -43,6 +43,8 @@ The term [*Turing-complete*](https://en.wikipedia.org/wiki/Turing_completeness) 
 Turing machines can get into infinite loops, and the EVM cannot because it would run out of gas, so it's only quasi-Turing-complete.
 
 ## 9.1 (Basics)
+
+This section gives the basics of the EVM, and how it compares with other computational models.
 
 A [stack machine](https://en.wikipedia.org/wiki/Stack_machine) is a computer that stores intermediate data not in registers, but in a [stack](https://en.wikipedia.org/wiki/Stack_(abstract_data_type)).
 Stack machine is the preferred architecture for virtual machines because it is easy to implement.
@@ -59,9 +61,25 @@ mstore(0, 0x60A7)
 It writes zeros to locations 0-29, 0x60 to 30, and 0xA7 to 31.
 
 The [*Von Neumann architecture*](https://en.wikipedia.org/wiki/Von_Neumann_architecture) specifies that the program to be executed and the data which it processes are stored in the same memory.
-This is a bad idea from the security perspective because it allows program code to be modified, so the EVM does not do that except when necessary (in the case of contract creation).
+This is a bad idea from the security perspective because it allows program code to be modified, so the EVM never stores the currently running code in memory, it is always in a different memory that is ROM (read only memory).
+There are only two cases code that will be executed in the future comes from memory, in both cases because the code needs to come from a different piece of code, so it *has* to come from memory (or [storage](https://coinyuppie.com/in-depth-understanding-of-evm-storage-mechanism-and-security-issues/), but that would be too expensive).
+
+- When a contract creates another contract (using [CREATE](https://www.evm.codes/#f0) or [CREATE2](https://www.evm.codes/#f5)), the code for the contract constructor comes from memory.
+- During the creation of *any* contract, the constructor code runs and then returns with the code of the actual contract, also from memory.
+
+The term *exceptional execution* means an exception that causes the execution of the current contract to halt. 
 
 
+## 9.2 (Fees Overview)
+
+This section explains how the gas fees are calculated.
+There are three costs:
+
+1. The inherent cost of the specific opcode.
+   To get this value, find the cost group opcode in Appendix H (p. 28, under expression (327)), and find the cost group in expression (324).
+   This gives you a cost function, which in most cases uses parameters from Appendix G (p. 27).
+   
+   For example, the opcode `CALLDATACOPY` is a member of group W<sub>copy</sub>. 
 
 
 ## Conclusion
