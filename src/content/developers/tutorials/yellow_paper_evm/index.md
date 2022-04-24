@@ -79,7 +79,11 @@ There are three costs:
    To get this value, find the cost group opcode in Appendix H (p. 28, under expression (327)), and find the cost group in expression (324).
    This gives you a cost function, which in most cases uses parameters from Appendix G (p. 27).
    
-   For example, the opcode `CALLDATACOPY` is a member of group W<sub>copy</sub>. 
+   For example, the opcode `CALLDATACOPY` is a member of group *W<sub>copy</sub>*.
+   The opcode cost for that group is *G<sub>verylow</sub>+G<sub>copy</sub>\*\<an expression to be explained below\>*.  
+   Looking at Appendix G, we see that this is *3+3\*\<that expression\>*.
+   
+   We still need to decipher the expression ![](eq9-2-001.svg).
 
 
 ## Conclusion
