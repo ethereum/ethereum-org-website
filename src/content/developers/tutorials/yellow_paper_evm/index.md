@@ -114,4 +114,22 @@ There are three costs:
    
 ## 9.3 (Execution Environment)   
 
+The execution environment is a tuple, I, that includes information that isn't part of the blockchain state or the EVM.
+
+| Parameter | Opcode to access the data | Solidity code to access the data |
+| - | - | - |
+| I<sub>a</sub> |  [ADDRESS](https://www.evm.codes/#30)  | 
+| I<sub>o</sub> |  [ORIGIN](https://www.evm.codes/#32) | 
+| I<sub>p</sub> |  [GASPRICE](https://www.evm.codes/#3a)  | 
+| I<sub>d</sub> |  [CALLDATALOAD](https://www.evm.codes/#35), etc.  | 
+| I<sub>s</sub> |  [CALLER](https://www.evm.codes/#33)  | 
+| I<sub>v</sub> |  [CALLVALUE](https://www.evm.codes/#34)  | 
+| I<sub>b</sub> |  [CODECOPY](https://www.evm.codes/#39)  | 
+| I<sub>H</sub> |  Block header fields, such as [NUMBER](https://www.evm.codes/#43) and [DIFFICULTY](https://www.evm.codes/#44)  | 
+| I<sub>e</sub> |  Not available  | -
+| I<sub>w</sub> |  Not available  | -
+
+
+
+
 ## Conclusion
