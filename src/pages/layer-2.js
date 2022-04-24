@@ -577,8 +577,8 @@ const Layer2Page = ({ data }) => {
             <p>
               The Ethereum community has taken a strong stance that it would not
               throw out decentralization or security in order to scale. Until{" "}
-              <Link to="/upgrades/shard-chains/">sharding</Link>, Ethereum Mainnet
-              (layer 1) is only able to process{" "}
+              <Link to="/upgrades/shard-chains/">sharding</Link>, Ethereum
+              Mainnet (layer 1) is only able to process{" "}
               <Link to="https://ethtps.info/Network/Ethereum">
                 roughly 15 transactions per second
               </Link>
@@ -703,7 +703,7 @@ const Layer2Page = ({ data }) => {
             comprehensive risk assessment framework of each project.
           </p>
           <p>
-            <ButtonLink to="https://l2beat.com/?view=risk">
+            <ButtonLink hideArrow={false} to="https://l2beat.com/?view=risk">
               Go to L2BEAT
             </ButtonLink>
           </p>

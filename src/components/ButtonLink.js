@@ -91,17 +91,23 @@ const ButtonLink = ({
   isSecondary,
   children,
   className,
+  hideArrow = true,
   ...props
 }) => {
   if (isSecondary) {
     return to ? (
-      <SecondaryLink to={to} hideArrow={true} className={className} {...props}>
+      <SecondaryLink
+        to={to}
+        hideArrow={hideArrow}
+        className={className}
+        {...props}
+      >
         {children}
       </SecondaryLink>
     ) : (
       <SecondaryScrollLink
         onClick={() => scrollIntoView(toId)}
-        hideArrow={true}
+        hideArrow={hideArrow}
         className={className}
         {...props}
       >
@@ -110,13 +116,13 @@ const ButtonLink = ({
     )
   }
   return to ? (
-    <PrimaryLink to={to} hideArrow={true} className={className} {...props}>
+    <PrimaryLink to={to} hideArrow={hideArrow} className={className} {...props}>
       {children}
     </PrimaryLink>
   ) : (
     <PrimaryScrollLink
       onClick={() => scrollIntoView(toId)}
-      hideArrow={true}
+      hideArrow={hideArrow}
       className={className}
       {...props}
     >
