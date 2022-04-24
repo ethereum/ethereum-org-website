@@ -98,7 +98,7 @@ There are three costs:
 
 1. The cost of running either the constructor for the new contract (in the case of `CREATE` and `CREATE2`) or the contract we call (in the case of `CALL`, `CALLCODE`, `STATICCALL`, or `DELEGATECALL`).
 
-1. The cost of expanding memory if necessary. 
+1. The cost of expanding memory (if necessary). 
    In equation 324, this value is written as C<sub>mem</sub>(**μ<sub>i</sub>**')-C<sub>mem</sub>(**μ<sub>i</sub>**).
    Looking at section 9.4.1 again, we see that **μ<sub>i</sub>** is the number of words in memory. 
    **μ<sub>i</sub>** is the number of words in memory before the opcode.
