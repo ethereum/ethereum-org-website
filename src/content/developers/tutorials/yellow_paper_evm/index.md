@@ -79,11 +79,11 @@ There are three costs:
    To get this value, find the cost group opcode in Appendix H (p. 28, under expression (327)), and find the cost group in expression (324).
    This gives you a cost function, which in most cases uses parameters from Appendix G (p. 27).
    
-   For example, the opcode `CALLDATACOPY` is a member of group *W<sub>copy</sub>*.
-   The opcode cost for that group is *G<sub>verylow</sub>+G<sub>copy</sub>\*![](eq9-2-001.svg)*.  
-   Looking at Appendix G, we see that this is *3+3\*![](eq9-2-001.svg)*.
+   For example, the opcode `CALLDATACOPY` is a member of group W<sub>copy</sub>.
+   The opcode cost for that group is G<sub>verylow</sub>+G<sub>copy</sub>×⌈**μ<sub>s</sub>[2]**⌉.
+   Looking at Appendix G, we see that both constants are 3, which gives us 3+3×⌈**μ<sub>s</sub>[2]**⌉.
    
-   We still need to decipher the expression ![](eq9-2-001.svg). 
+   We still need to decipher the expression ⌈**μ<sub>s</sub>[2]**⌉. 
    The outmost part, ⌈ \<value\> ⌉ is the ceiling function, a function that given a value returns the smallest integer that is still not smaller than the value. 
    For example, ⌈ 2.5 ⌉ = ⌈ 3 ⌉ = 3. The next part is **μ<sub>s</sub>[2]**. 
    Looking at section 3 (Conventions) on p. 3, **μ** is the machine state.
@@ -91,8 +91,9 @@ There are three costs:
    According to that section, one of the machine state parameters is **s** for the stack.
    Putting it all together, it seems that **μ<sub>s</sub>[2]** is location #2 in the stack.
    Looking at [the opcode](https://www.evm.codes/#37), location #2 in the stack is the size of the data in bytes.
-   Looking at the other opcodes in group *W<sub>copy</sub>*, [CODECOPY](https://www.evm.codes/#39) and [RETURNDATACOPY](https://www.evm.codes/#3e), they also have a size of data in the same location.
-   
+   Looking at the other opcodes in group W<sub>copy</sub>, [`CODECOPY`](https://www.evm.codes/#39) and [`RETURNDATACOPY`](https://www.evm.codes/#3e), they also have a size of data in the same location.
+   So ⌈**μ<sub>s</sub>[2]**⌉ is the number of 32 byte words required to store the data being copied.
+   Putting everything together, the inherent cost of `CALLDATACOPY` is 3 gas plus 3 per word of data being copied.
 
 
 ## Conclusion
