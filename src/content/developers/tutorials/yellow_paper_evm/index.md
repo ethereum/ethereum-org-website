@@ -129,7 +129,13 @@ The execution environment is a tuple, I, that includes information that isn't pa
 | I<sub>e</sub> |  Not available  | -
 | I<sub>w</sub> |  Not available  | -
 
+A few other parameters are necessary to understand the rest of this section.
 
+| Parameter | Defined in section | Value |
+| - | - | - |
+| σ |  2 (p. 2, equation 1) | The state of the blockchain 
+| g | 9.3 (p. 13) | Remaining gas
+| A | 6.1 (p. 8) | Accrued substate (changes scheduled for when the transaction ends)
 
 
 ## Conclusion
