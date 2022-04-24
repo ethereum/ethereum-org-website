@@ -108,7 +108,8 @@ There are three costs:
    For example, ⌊2.5⌋ = ⌊2⌋ = 2.
    When a < √512, a<sup>2</sup> < 512, and the result of the floor function is zero.
    So for the first 22 words (704 bytes), the cost rises linearly with the number of memory words required.
-   Beyond that point ⌊a<sup>2</sup> / 512⌋ is positive, and when the memory is high enough it the gas cost is proportional to the square of the amount of memory.
+   Beyond that point ⌊a<sup>2</sup> / 512⌋ is positive.
+   When the memory required is high enough the gas cost is proportional to the square of the amount of memory.
    
    
 ## 9.3 (Execution Environment)   
