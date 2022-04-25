@@ -1173,6 +1173,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/sell50"><img src="https://avatars.githubusercontent.com/u/34224830?v=4?s=100" width="100px;" alt=""/><br /><sub><b>sell50</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=sell50" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/manuperalta"><img src="https://avatars.githubusercontent.com/u/90803647?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Manuel Peralta</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=manuperalta" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/Riely007"><img src="https://avatars.githubusercontent.com/u/80497350?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Riely</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=Riely007" title="Documentation">📖</a> <a href="#translation-Riely007" title="Translation">🌍</a></td>
+    <td align="center"><a href="https://github.com/Ghospel"><img src="https://avatars.githubusercontent.com/u/5272374?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Jasper</b></sub></a><br /><a href="#content-Ghospel" title="Content">🖋</a></td>
   </tr>
 </table>
 
