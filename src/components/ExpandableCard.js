@@ -16,6 +16,7 @@ const Card = styled.div`
   display: flex;
   flex-direction: column;
   margin-bottom: 1rem;
+  cursor: pointer;
   &:hover {
     background-color: ${(props) => props.theme.colors.ednBackground};
   }
@@ -143,16 +144,19 @@ const ExpandableCard = ({
     eventName,
   }
   return (
-    <Card>
-      <Content
-        onClick={() => {
-          // Allow users to select text without expanding the card
-          if (window.getSelection().toString().length === 0) {
-            !isVisible && trackCustomEvent(matomo)
-            setIsVisible(!isVisible)
-          }
-        }}
-      >
+    <Card
+      onClick={() => {
+        // Card will not collapse if clicking on a link or selecting text
+        if (
+          window.getSelection().toString().length === 0 &&
+          !window.event.target.className.includes("ExternalLink")
+        ) {
+          !isVisible && trackCustomEvent(matomo)
+          setIsVisible(!isVisible)
+        }
+      }}
+    >
+      <Content>
         <Question>
           <Header>
             {!!Svg && <Svg alt={alt} />}
