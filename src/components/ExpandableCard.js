@@ -148,7 +148,7 @@ const ExpandableCard = ({
         onClick={() => {
           // Allow users to select text without expanding the card
           if (window.getSelection().toString().length === 0) {
-            isVisible && trackCustomEvent(matomo)
+            !isVisible && trackCustomEvent(matomo)
             setIsVisible(!isVisible)
           }
         }}
