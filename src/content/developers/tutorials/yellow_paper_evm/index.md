@@ -131,18 +131,72 @@ The execution environment is a tuple, I, that includes information that isn't pa
 
 A few other parameters are necessary to understand the rest of section 9:
 
-| Parameter | Defined in section | Value |
+| Parameter | Defined in section | Meaning |
 | - | - | - |
 | σ |  2 (p. 2, equation 1) | The state of the blockchain 
-| g | 9.3 (p. 13) | Remaining gas
-| A | 6.1 (p. 8) | Accrued substate (changes scheduled for when the transaction ends)
+| g | 9.3 (p. 13)           | Remaining gas
+| A | 6.1 (p. 8)            | Accrued substate (changes scheduled for when the transaction ends)
+| o | 9.3 (p. 13)           | Output - the returned result in the case of internal transaction (when one contract calls another) and calls to view functions (when you are just asking for information, so there is no need to wait for a transaction)
 
-Equation 134 (σ′, g′ ,A′, o) ≡ Ξ(σ, g, A, I) tells us that:
 
-- The inputs to the virtual machine are the global state (σ), the remaining gas (g), the accrued substate (A), and the just defined execution environment (I)
-- The outputs are a new global state (σ'), remaining gas (g'), and accrued substate (A'), as well as an output field (o). 
-- Every set of global state, remaining gas, accrued substate, and execution environment will always produce the same results.
 
-The output field is the returned result in the case of internal transaction (when one contract calls another) and calls to view functions (when you are just asking for information, so there is no need to wait for a transaction).
+
+## 9.4 (Execution Overview) 
+
+Now that have all the preliminaries, we can finally start working on how the EVM works.
+
+Equations 137-142 give us the initial conditions for running the EVM:
+
+| Symbol | Initial value | Meaning |
+| - | - | - |
+| μ<sub>g</sub>  | g | Gas remaining
+| μ<sub>pc</sub> | 0 | Program counter, the address of the next instruction to execute
+| μ<sub>m</sub>  | (0, 0, ...) | Memory, initialized to all zeros 
+| μ<sub>i</sub>  | 0 | Highest memory location used 
+| μ<sub>s</sub>  | () | The stack, initially empty
+| μ<sub>o</sub>  | () | The output, empty until and unless we get either [`RETURN`](https://www.evm.codes/#f3) or [`REVERT`](https://www.evm.codes/#fd)
+ 
+ 
+Equation 143 tells us there are four possible conditions at each point in time during execution, and what to do with them:
+
+1. If Z(σ,μ,A,I), it means that we have encountered an abnormal condition.
+   In that case the new state is identical to the old one (except gas gets burned)
+1. If the opcode is [`REVERT`](https://www.evm.codes/#fd), the new state is the same as the old state, some gas is lost, and we have output to return.
+1. If there is any output, (meaning we are at a [`RETURN`](https://www.evm.codes/#f3)), the state is the new state and return the output.
+1. If we aren't at one of the end conditions, continue running.
+
+
+## 9.4.1 (Machine State)
+
+This section explains the machine state in greater detail.
+It specifies the w is the current opcode. 
+If μ<sub>pc</sub> is less than ||I<sub>b</sub>||, the length of the code, then that byte (I<sub>b</sub>[μ<sub>pc</sub>]) is the opcode.
+Otherwise, the opcode is defined as [`STOP`](https://www.evm.codes/#00).
+
+As this is a [stack machine](https://en.wikipedia.org/wiki/Stack_machine), we need to keep track of the number of items popped out (δ) and pushed in (α) by each opcode.
+
+
+## 9.4.2 (Exceptional Halting)
+
+This section defines the Z function, which specifies when we have an abnormal termination. 
+This is a [Boolean](https://en.wikipedia.org/wiki/Boolean_data_type) function, so it uses ∨ for a logical or and ∧ for a logical and. 
+
+We have an exceptional halt if any of these conditions is true:
+
+- **μ<sub>g</sub> < C(σ,μ,A,I)** 
+  As we saw in section 9.2, C is the function that specifies the gas cost.
+  There isn't enough gas left to cover the next opcode.
+- **δ<sub>w</sub>=∅** 
+  If the opcode is not defined, then the items popped out for it are undefined.
+- **|| μ<sub>s</sub> || < δ<sub>w</sub>**
+  Stack underflow, not enough items in the stack for the current opcode.
+- **w = JUMP ∧ μ<sub>s</sub>[0]∉D(I<sub>b</sub>)** 
+  The opcode is JUMP and the address 
+- **w = JUMPI ∧ μ<sub>s</sub>[1]≠0 ∧ μ<sub>s</sub>[0] ∉ D(I<sub>b</sub>)**
+- **w = RETURNDATACOPY ∧ μ<sub>s</sub>[1]+μ<sub>s</sub>[2]>|| μ<sub>o</sub> ||**
+- **|| μ<sub>s</sub> || - δ<sub>w</sub> + α<sub>w</sub> > 1024**
+- **¬I<sub>w</sub> ∧ W(w,μ)**
+- **w = SSTORE ∧ μ<sub>g</sub> ≤ G<sub>callstipend</sub>**
+
 
 ## Conclusion
