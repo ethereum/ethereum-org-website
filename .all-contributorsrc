@@ -7166,6 +7166,43 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "plamarque",
+      "name": "Patrice Lamarque",
+      "avatar_url": "https://avatars.githubusercontent.com/u/227828?v=4",
+      "profile": "https://github.com/plamarque",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "sell50",
+      "name": "sell50",
+      "avatar_url": "https://avatars.githubusercontent.com/u/34224830?v=4",
+      "profile": "https://github.com/sell50",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "manuperalta",
+      "name": "Manuel Peralta",
+      "avatar_url": "https://avatars.githubusercontent.com/u/90803647?v=4",
+      "profile": "https://github.com/manuperalta",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "Riely007",
+      "name": "Riely",
+      "avatar_url": "https://avatars.githubusercontent.com/u/80497350?v=4",
+      "profile": "https://github.com/Riely007",
+      "contributions": [
+        "doc",
+        "translation"
+      ]
     }
   ],
   "contributorsPerLine": 7,
