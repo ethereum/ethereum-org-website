@@ -18,9 +18,9 @@ Proof-of-stake is a type of [consensus mechanism](/developers/docs/consensus-mec
 
 Proof-of-stake comes with a number of improvements to the proof-of-work system:
 
-- better energy efficiency – you don't need to use lots of energy on PoW computations
-- lower barriers to entry, reduced hardware requirements – you don't need elite hardware to stand a chance of creating new blocks
-- reduced centralization risk – proof-of-stake should lead to more nodes in the network
+- better energy efficiency – there is no need to use lots of energy on PoW computations
+- lower barriers to entry, reduced hardware requirements – there is no need for elite hardware to stand a chance of creating new blocks
+- reduced centralization risk – proof-of-stake should lead to more nodes securing the network
 - because of the low energy requirement less ETH issuance is required to incentivize participation
 - economic penalties for misbehaviour make 51% style attacks much more costly for an attacker compared to PoW
 - the community can resort to social recovery of an honest chain if a 51% attack were to overcome the crypto-economic defenses.
@@ -29,7 +29,7 @@ Proof-of-stake comes with a number of improvements to the proof-of-work system:
 
 To participate as a validator, a user must deposit 32 ETH into the deposit contract and run three separate pieces of software: an execution client, a consensus client and a validator. On depositing their ether, the user joins an activation queue that limits the rate at which new validators join the network. Once activated, validators receive new blocks from peers on the Ethereum network. The transactions delivered in the block are re-executed and the block signature is checked to ensure the block is valid. The validator then sends a vote (called an attestation) in favour of that block across the network.
 
-Whereas under PoW the timing of blocks is determined byt he mining difficulty, in PoS the tempo is fixed. Time in PoS Ethereum is divided into slots (12 seconds) and epochs (32 slots). In every slot a committee of validators is randomly chosen whose votes are used to determine the validity of the block proposed in that slot. Also in every slot one validator is randomly selected to be a block proposer. That validator is responsible for creating a new block and sending it out to other nodes on the network.
+Whereas under PoW the timing of blocks is determined by the mining difficulty, in PoS the tempo is fixed. Time in PoS Ethereum is divided into slots (12 seconds) and epochs (32 slots). In every slot a committee of validators is randomly chosen whose votes are used to determine the validity of the block proposed in that slot. Also in every slot one validator is randomly selected to be a block proposer. That validator is responsible for creating a new block and sending it out to other nodes on the network.
 
 ## Finality {#finality}
 
