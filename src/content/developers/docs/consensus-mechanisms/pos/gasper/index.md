@@ -38,5 +38,5 @@ LMD-GHOST stands for "latest message driven greedy heaviest observed sub-tree". 
 
 ## Further Reading
 
-[Gasper: Combining GHOST and Casper](https://arxiv.org/pdf/2003.03052.pdf)
-[Capser the Friendly Finality Gadget](https://arxiv.org/pdf/1710.09437.pdf)
+- [Gasper: Combining GHOST and Casper](https://arxiv.org/pdf/2003.03052.pdf)
+- [Capser the Friendly Finality Gadget](https://arxiv.org/pdf/1710.09437.pdf)
