@@ -28,7 +28,7 @@ Validators are rewarded for honestly proposing and validating blocks. The reward
 
 ### Inactivity Leak
 
-As well as security, Gasper also provides "plausible liveness". This is the condition that as logn as 2/3 of the total staked ether is voting honestly and following the protocol, the chain will be able to finalize irrespective of any other activity (such as attacks, latency issues or slashings). Put another way, 1/3 of the total staked ether must be somehow compromised to prevent the chain from finalizing. In Gasper there is an additional line of defense against a liveness failure, known as the "inactivity leak". This mechanism activates when the chain has failed to finalize for more than 4 epochs. The validators that are not actively attesting to the majority chain have their stake gradually drained away until the majority regains 2/3 of the total stake, ensuring that liveness failures are only temporary.
+As well as security, Gasper also provides "plausible liveness". This is the condition that as long as 2/3 of the total staked ether is voting honestly and following the protocol, the chain will be able to finalize irrespective of any other activity (such as attacks, latency issues or slashings). Put another way, 1/3 of the total staked ether must be somehow compromised to prevent the chain from finalizing. In Gasper there is an additional line of defense against a liveness failure, known as the "inactivity leak". This mechanism activates when the chain has failed to finalize for more than 4 epochs. The validators that are not actively attesting to the majority chain have their stake gradually drained away until the majority regains 2/3 of the total stake, ensuring that liveness failures are only temporary.
 
 ### Fork choice
 
@@ -38,5 +38,5 @@ LMD-GHOST stands for "latest message driven greedy heaviest observed sub-tree". 
 
 ## Further Reading
 
-[Gasper: Combinign GHOST and Casper](https://arxiv.org/pdf/2003.03052.pdf)
+[Gasper: Combining GHOST and Casper](https://arxiv.org/pdf/2003.03052.pdf)
 [Capser the Friendly Finality Gadget](https://arxiv.org/pdf/1710.09437.pdf)
