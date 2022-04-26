@@ -1,10 +1,12 @@
 ---
-title: Casper-FFG
-description: An explanation of the Casper-FFG mechanism.
+title: Gasper
+description: An explanation of the Gasper PoS mechanism.
 lang: en
 sidebar: true
 incomplete: true
 ---
+
+Gasper is a combination of Casper the Friendly Finality Gadget and the LMD-GHOST fork choice algorithm. Together these components form the consensus mechanism securing proof-of-stake Ethereum. Casper is the mechanism that uprgades certain blocks to "finalized" so that new entrants into the network can be confident that they are syncing the canonical chain. The fork chocie algorithm uses accumulated votes to ensure that when forks arise in the blockchain nodes can easily select the correct one.
 
 ## What is a finality gadget?
 
