@@ -7212,6 +7212,16 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "rhigdon",
+      "name": "Ryan Higdn",
+      "avatar_url": "https://avatars.githubusercontent.com/u/133530?v=4",
+      "profile": "http://ryanhigdon.com",
+      "contributions": [
+        "bug",
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
