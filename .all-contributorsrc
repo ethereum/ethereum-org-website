@@ -7222,6 +7222,15 @@
         "bug",
         "doc"
       ]
+    },
+    {
+      "login": "Eni-G",
+      "name": "Eni-G",
+      "avatar_url": "https://avatars.githubusercontent.com/u/100782096?v=4",
+      "profile": "https://github.com/Eni-G",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
