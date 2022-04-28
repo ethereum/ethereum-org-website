@@ -191,7 +191,7 @@ We have an exceptional halt if any of these conditions is true:
 
 - **δ<sub>w</sub>=∅** 
 
-  If the opcode is not defined, then the items popped out for it are undefined.
+  If the number of items popped for an opcode is undefined, then the opcode itself is undefined.
 
 
 - **|| μ<sub>s</sub> || < δ<sub>w</sub>**
@@ -202,26 +202,28 @@ We have an exceptional halt if any of these conditions is true:
 - **w = JUMP ∧ μ<sub>s</sub>[0]∉D(I<sub>b</sub>)** 
 
   The opcode is [`JUMP`](https://www.evm.codes/#56) and the address is not a [`JUMPDEST`](https://www.evm.codes/#5b).
-  Jumps are *only* valid when the destination is a `JUMPDEST`.
+  Jumps are *only* valid when the destination is a [`JUMPDEST`](https://www.evm.codes/#5b).
 
 
 - **w = JUMPI ∧ μ<sub>s</sub>[1]≠0 ∧ μ<sub>s</sub>[0] ∉ D(I<sub>b</sub>)**
 
   The opcode is [`JUMPI`](https://www.evm.codes/#57), the condition is true (non zero) so the jump should happen, and the address is not a [`JUMPDEST`](https://www.evm.codes/#5b).
-  Jumps are *only* valid when the destination is a `JUMPDEST`.
+  Jumps are *only* valid when the destination is a [`JUMPDEST`](https://www.evm.codes/#5b).
 
 
 - **w = RETURNDATACOPY ∧ μ<sub>s</sub>[1]+μ<sub>s</sub>[2]>|| μ<sub>o</sub> ||**
 
   The opcode is [`RETURNDATACOPY`](https://www.evm.codes/#3e).
   In this opcode stack element μ<sub>s</sub>[1] is the offset to read from in the return data buffer, and stack element μ<sub>s</sub>[2] is the length of data.
-  This condition occurs when you try to read beyond the end of the buffer.
+  This condition occurs when you try to read beyond the end of the return data buffer.
+  Note that there isn't a similar condition for the calldata or for the code itself.
+  When you try to read beyond the end of those buffers you just get zeros.
   
 
 - **|| μ<sub>s</sub> || - δ<sub>w</sub> + α<sub>w</sub> > 1024**
 
-  This condition specifies the maximum stack size.
-  If the existing stack size plus the new number of items added is over 1024, it is a stack overflow.
+  Stack overflow. 
+  If running the opcode will result in a stack of over 1024 items, abort.
  
 
 - **¬I<sub>w</sub> ∧ W(w,μ)**
