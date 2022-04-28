@@ -126,8 +126,8 @@ The execution environment is a tuple, I, that includes information that isn't pa
 | I<sub>v</sub> |  [`CALLVALUE`](https://www.evm.codes/#34)  | `msg.value`
 | I<sub>b</sub> |  [`CODECOPY`](https://www.evm.codes/#39)  | `address(this).code`
 | I<sub>H</sub> |  Block header fields, such as [`NUMBER`](https://www.evm.codes/#43) and [`DIFFICULTY`](https://www.evm.codes/#44)  | `block.number`, `block.difficulty`, etc.
-| I<sub>e</sub> |  Not available  | -
-| I<sub>w</sub> |  Not available  | -
+| I<sub>e</sub> |  Depth of the call stack for calls between contracts (including contract creation)
+| I<sub>w</sub> |  Is the EVM allowed to change state, or is it running statically
 
 A few other parameters are necessary to understand the rest of section 9:
 
@@ -228,9 +228,29 @@ We have an exceptional halt if any of these conditions is true:
 
 - **¬I<sub>w</sub> ∧ W(w,μ)**
 
+  Are we running statically (¬ is negation and I<sub>w</sub> is true when we are allowed to change the blockchain state)?
+  If so, and we're trying a state changing operation, it can't happen.
+  
+  The function W(w,μ) is defined later in equation 150, W(w,μ) is true if one of these conditions is true: 
+  - **w ∈ {CREATE, CREATE2, SSTORE, SELFDESTRUCT}**
+  
+    These opcodes change the state, either by creating a new contract, storing a value, or destroying the current contract.
+  
+  
+  - **LOG0≤w ∧ w≤LOG4**
 
+    If we are called statically we cannot emit log entries.
+    The log opcodes are all in the range between [`LOG0` (A0)](https://www.evm.codes/#a0) and [`LOG4` (A4)](https://www.evm.codes/#a4).
+    The number after the log opcode specifies how many topics the log entry contains.
+    
+  - **w=CALL ∧ μ<sub>s</sub>[2]≠0**
+
+    You can call another contract when you're static, but if you do you cannot transfer ETH to it. 
+    
 
 - **w = SSTORE ∧ μ<sub>g</sub> ≤ G<sub>callstipend</sub>**
+
+  You cannot run [`SSTORE`](https://www.evm.codes/#55) unless you have more than G<sub>callstipend</sub> (defined as 2300 in Appendix G) gas.
 
 
 ## Conclusion
