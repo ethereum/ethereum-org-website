@@ -181,7 +181,7 @@ As this is a [stack machine](https://en.wikipedia.org/wiki/Stack_machine), we ne
 This section defines the Z function, which specifies when we have an abnormal termination. 
 This is a [Boolean](https://en.wikipedia.org/wiki/Boolean_data_type) function, so it uses ∨ for a logical or and ∧ for a logical and. 
 
-We have an exceptional halt if any of these conditions is true:
+We have an exceptional halt if any of these conditions is true ([∨ is used in math for a logical or](https://en.wikipedia.org/wiki/Logical_disjunction)):
 
 - **μ<sub>g</sub> < C(σ,μ,A,I)** 
 
@@ -203,6 +203,7 @@ We have an exceptional halt if any of these conditions is true:
 
   The opcode is [`JUMP`](https://www.evm.codes/#56) and the address is not a [`JUMPDEST`](https://www.evm.codes/#5b).
   Jumps are *only* valid when the destination is a [`JUMPDEST`](https://www.evm.codes/#5b).
+  Note that [∧ is used in math for a logical and](https://en.wikipedia.org/wiki/Logical_conjunction).
 
 
 - **w = JUMPI ∧ μ<sub>s</sub>[1]≠0 ∧ μ<sub>s</sub>[0] ∉ D(I<sub>b</sub>)**
@@ -228,10 +229,11 @@ We have an exceptional halt if any of these conditions is true:
 
 - **¬I<sub>w</sub> ∧ W(w,μ)**
 
-  Are we running statically (¬ is negation and I<sub>w</sub> is true when we are allowed to change the blockchain state)?
+  Are we running statically ([¬ is negation](https://en.wikipedia.org/wiki/Negation) and I<sub>w</sub> is true when we are allowed to change the blockchain state)?
   If so, and we're trying a state changing operation, it can't happen.
   
-  The function W(w,μ) is defined later in equation 150, W(w,μ) is true if one of these conditions is true: 
+  The function W(w,μ) is defined later in equation 150.
+  W(w,μ) is true if one of these conditions is true: 
   - **w ∈ {CREATE, CREATE2, SSTORE, SELFDESTRUCT}**
   
     These opcodes change the state, either by creating a new contract, storing a value, or destroying the current contract.
@@ -251,6 +253,32 @@ We have an exceptional halt if any of these conditions is true:
 - **w = SSTORE ∧ μ<sub>g</sub> ≤ G<sub>callstipend</sub>**
 
   You cannot run [`SSTORE`](https://www.evm.codes/#55) unless you have more than G<sub>callstipend</sub> (defined as 2300 in Appendix G) gas.
+
+
+
+## 9.4.3 (Jump Destination Validity)
+
+Here we formally define what are the [`JUMPDEST`](https://www.evm.codes/#5b) opcodes.
+We cannot just look for byte value 0x5B, because it might be inside a PUSH (and therefore data and not an opcode).
+
+In equation (153) we define a function, N(i,w).
+The first parameter, i, is the opcode's location.
+The second, w, is the opcode itself.
+If w∈[PUSH1, PUSH32] that means the opcode is a PUSH (square brackets define a range that includes the endpoints).
+If that case the next opcode is at i+2+(w−PUSH1).
+For [`PUSH1`](https://www.evm.codes/#60) we need to advance by two bytes (the PUSH itself and the one byte value), for [`PUSH2`](https://www.evm.codes/#61) we need to advance by three bytes because it's a two byte value, etc.
+All other EVM opcodes are just one byte long, so in all other cases N(i,w)=i+1.
+
+This function is used in equation (152) to define D<sub>J</sub>(c,i), which is the [set](https://en.wikipedia.org/wiki/Set_(mathematics)) of all valid jump destinations in code c, starting with opcode location i. 
+This function is defined recursively. 
+If i≥||c||, that means that we're at or after the end of the code. 
+We are not going to find any more jump destinations, just return the empty set.
+
+In all other cases we look at the rest of the code by going to the next opcode and getting the set starting from it.
+c[i] is the current opcode, so N(i,c[i]) is the location of the next opcode.
+D<sub>J</sub>(c,N(i,c[i])) is therefore the set of valid jump destinations that starts at the next opcode.
+If the current opcode isn't a `JUMPDEST`, just return that set.
+If it is `JUMPDEST`, include it in the result set and return that.
 
 
 ## Conclusion
