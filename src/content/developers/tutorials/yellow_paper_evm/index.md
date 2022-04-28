@@ -292,8 +292,19 @@ The halting function H, can return three types of values.
   Note that this is very different from the empty set.
   This value means that the EVM really did halt, just there's no return data to read.
   
-- If we have a halt opcode that does produce output (either [`RETURN`](https://www.evm.codes/#f3) or [`REVERT`](https://www.evm.codes/#fd), return the sequence of bytes specified by that opcode.
+- If we have a halt opcode that does produce output (either [`RETURN`](https://www.evm.codes/#f3) or [`REVERT`](https://www.evm.codes/#fd)), return the sequence of bytes specified by that opcode.
   This sequence is taken from memory, the value at the top of the stack (μ<sub>s</sub>[0]) is the first byte, and the value after it (μ<sub>s</sub>[1]) is the length.
+  
 
+## H.2 (Instruction Set)
+
+Before we go to the final subsection of the EVM, 9.5, let's look at the instructions themselves.
+They are defined in Appendix H.2 which starts on p. 29. 
+Anything that is not specified as changing with that specific opcode is expected to stay the same.
+
+
+## 9.5 (The Execution Cycle)
 
 ## Conclusion
+
+Compare to the Python specs of the consensus layer
