@@ -184,18 +184,50 @@ This is a [Boolean](https://en.wikipedia.org/wiki/Boolean_data_type) function, s
 We have an exceptional halt if any of these conditions is true:
 
 - **μ<sub>g</sub> < C(σ,μ,A,I)** 
+
   As we saw in section 9.2, C is the function that specifies the gas cost.
   There isn't enough gas left to cover the next opcode.
+
+
 - **δ<sub>w</sub>=∅** 
+
   If the opcode is not defined, then the items popped out for it are undefined.
+
+
 - **|| μ<sub>s</sub> || < δ<sub>w</sub>**
+
   Stack underflow, not enough items in the stack for the current opcode.
+
+
 - **w = JUMP ∧ μ<sub>s</sub>[0]∉D(I<sub>b</sub>)** 
-  The opcode is JUMP and the address 
+
+  The opcode is [`JUMP`](https://www.evm.codes/#56) and the address is not a [`JUMPDEST`](https://www.evm.codes/#5b).
+  Jumps are *only* valid when the destination is a `JUMPDEST`.
+
+
 - **w = JUMPI ∧ μ<sub>s</sub>[1]≠0 ∧ μ<sub>s</sub>[0] ∉ D(I<sub>b</sub>)**
+
+  The opcode is [`JUMPI`](https://www.evm.codes/#57), the condition is true (non zero) so the jump should happen, and the address is not a [`JUMPDEST`](https://www.evm.codes/#5b).
+  Jumps are *only* valid when the destination is a `JUMPDEST`.
+
+
 - **w = RETURNDATACOPY ∧ μ<sub>s</sub>[1]+μ<sub>s</sub>[2]>|| μ<sub>o</sub> ||**
+
+  The opcode is [`RETURNDATACOPY`](https://www.evm.codes/#3e).
+  In this opcode stack element μ<sub>s</sub>[1] is the offset to read from in the return data buffer, and stack element μ<sub>s</sub>[2] is the length of data.
+  This condition occurs when you try to read beyond the end of the buffer.
+  
+
 - **|| μ<sub>s</sub> || - δ<sub>w</sub> + α<sub>w</sub> > 1024**
+
+  This condition specifies the maximum stack size.
+  If the existing stack size plus the new number of items added is over 1024, it is a stack overflow.
+ 
+
 - **¬I<sub>w</sub> ∧ W(w,μ)**
+
+
+
 - **w = SSTORE ∧ μ<sub>g</sub> ≤ G<sub>callstipend</sub>**
 
 
