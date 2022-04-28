@@ -281,4 +281,19 @@ If the current opcode isn't a `JUMPDEST`, just return that set.
 If it is `JUMPDEST`, include it in the result set and return that.
 
 
+## 9.4.4 (Normal Halting)
+
+The halting function H, can return three types of values.
+
+- If we aren't in a halt opcode, return ∅, the empty set. 
+  By convention, this value is interpreted as Boolean false.
+  
+- If we have a halt opcode that doesn't produce output (either [`STOP`](https://www.evm.codes/#00) or [`SELFDESTRUCT`](https://www.evm.codes/#ff)), return a sequence of size zero bytes as the return value.
+  Note that this is very different from the empty set.
+  This value means that the EVM really did halt, just there's no return data to read.
+  
+- If we have a halt opcode that does produce output (either [`RETURN`](https://www.evm.codes/#f3) or [`REVERT`](https://www.evm.codes/#fd), return the sequence of bytes specified by that opcode.
+  This sequence is taken from memory, the value at the top of the stack (μ<sub>s</sub>[0]) is the first byte, and the value after it (μ<sub>s</sub>[1]) is the length.
+
+
 ## Conclusion
