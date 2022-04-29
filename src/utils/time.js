@@ -15,7 +15,7 @@ export const getLocaleTimestamp = (locale, timestamp, slug = null) => {
   }
 
   if (slug && localeTimestamp === INVALID_DATETIME) {
-    console.error("Invalid datetime at:", slug)
+    console.warn("Invalid datetime at:", slug)
   }
 
   return localeTimestamp
