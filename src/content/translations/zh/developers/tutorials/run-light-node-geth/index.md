@@ -1,7 +1,7 @@
 ---
 title: 如何通过Geth运行轻节点
 description: 如何使用 Geth 下载、安装和运行轻客户端。
-authors: "Brian Gu"
+author: "Brian Gu"
 tags:
   - "客户端"
   - "geth"
