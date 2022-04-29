@@ -86,7 +86,7 @@ const TutorialMetadata = ({ tutorial, data }) => {
   const published = frontmatter.published
   const author = frontmatter.author
   const address = frontmatter.address
-  const slug = frontmatter.fields.slug
+  const slug = tutorial.frontmatter.fields.slug ? tutorial.frontmatter.fields.slug : "No slug"
 
   return (
     <Container>
