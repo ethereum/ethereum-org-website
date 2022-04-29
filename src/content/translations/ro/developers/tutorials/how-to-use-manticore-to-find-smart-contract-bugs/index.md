@@ -5,13 +5,11 @@ author: Trailofbits
 lang: ro
 sidebar: true
 tags:
-  [
-    "solidity",
-    "contracte inteligente",
-    "securitate",
-    "testare",
-    "verificare formală",
-  ]
+  - "solidity"
+  - "contracte inteligente"
+  - "securitate"
+  - "testare"
+  - "verificare formală"
 skill: avansat
 published: 2020-01-13
 source: Construirea de contracte sigure
@@ -86,7 +84,7 @@ Deoarece `f()` conține două căi, un DSE va construi doi operatori de cale dif
 - Calea 1: `a == 65`
 - Calea 2: `Not (a == 65)`
 
-Fiecare operator de cale este o formulă matematică ce poate fi dată unui așa-numit [rezolvator SMT](https://wikipedia.org/wiki/Satisfiability_modulo_theories), care va încerca să rezolve ecuația. Pentru `Path 1`, rezolvatorul va spune că această cale poate fi explorată cu `a = 65`. Pentru `Path 2`, rezolvatorul îi poate da lui `a` orice altă valoare diferită de 65, de exemplu `a = 0`.
+Each path predicate is a mathematical formula that can be given to a so-called [SMT solver](https://wikipedia.org/wiki/Satisfiability_modulo_theories), which will try to solve the equation. Pentru `Path 1`, rezolvatorul va spune că această cale poate fi explorată cu `a = 65`. Pentru `Path 2`, rezolvatorul îi poate da lui `a` orice altă valoare diferită de 65, de exemplu `a = 0`.
 
 ### Verificarea proprietăților {#verifying-properties}
 
@@ -158,14 +156,14 @@ Vei obține ieșirea unor cazuri de testare, cum ar fi acestea (ordinea se poate
 
 ```
 ...
-... m.c.manticore:INFO: Caz de test generat No. 0 - STOP
-... m.c.manticore:INFO: Caz de test generat No. 1 - REVERT
-... m.c.manticore:INFO: Caz de test generat No. 2 - RETURN
-... m.c.manticore:INFO: Caz de test generat No. 3 - REVERT
-... m.c.manticore:INFO: Caz de test generat No. 4 - STOP
-... m.c.manticore:INFO: Caz de test generat No. 5 - REVERT
-... m.c.manticore:INFO: Caz de test generat No. 6 - REVERT
-... m.c.manticore:INFO: Rezultat in /home/ethsec/workshops/Automated Smart Contracts Audit - TruffleCon 2018/manticore/examples/mcore_t6vi6ij3
+... m.c.manticore:INFO: Generated testcase No. 0 - STOP
+... m.c.manticore:INFO: Generated testcase No. 1 - REVERT
+... m.c.manticore:INFO: Generated testcase No. 2 - RETURN
+... m.c.manticore:INFO: Generated testcase No. 3 - REVERT
+... m.c.manticore:INFO: Generated testcase No. 4 - STOP
+... m.c.manticore:INFO: Generated testcase No. 5 - REVERT
+... m.c.manticore:INFO: Generated testcase No. 6 - REVERT
+... m.c.manticore:INFO: Results in /home/ethsec/workshops/Automated Smart Contracts Audit - TruffleCon 2018/manticore/examples/mcore_t6vi6ij3
 ...
 ```
 
@@ -193,7 +191,7 @@ _Rezumatul explorării f (! = 65) reprezintă f apelat cu orice valoare diferit�
 
 După cum poți observa, Manticore generează un caz de test unic pentru fiecare tranzacție reușită sau revenită.
 
-Utilizează indicatorul `--quick-mode` dacă dorești o explorare rapidă a codului (dezactivează detectoarele de erori, calculul gazului, ...)
+Utilizați flagul `--quick-mode` dacă doriți o explorare rapidă a codului (dezactivează detectoarele de bug-uri, calculul gazului, ...)
 
 ### Manipulează un contract inteligent prin API {#manipulate-a-smart-contract-through-the-api}
 
@@ -209,13 +207,13 @@ from manticore.ethereum import ManticoreEVM
 m = ManticoreEVM()
 ```
 
-Un cont non-contract este creat utilizând [m.create_account](https://manticore.readthedocs.io/en/latest/evm.html?highlight=create_account#manticore.ethereum.ManticoreEVM.create_account):
+A non-contract account is created using [m.create_account](https://manticore.readthedocs.io/en/latest/evm.html?highlight=create_account#manticore.ethereum.ManticoreEVM.create_account):
 
 ```python
 user_account = m.create_account(balance=1000)
 ```
 
-Un contract Solidity poate fi implementat utilizând [m.solidity_create_contract](https://manticore.readthedocs.io/en/latest/evm.html?highlight=solidity_create#manticore.ethereum.ManticoreEVM.create_contract):
+A Solidity contract can be deployed using [m.solidity_create_contract](https://manticore.readthedocs.io/en/latest/evm.html?highlight=solidity_create#manticore.ethereum.ManticoreEVM.create_contract):
 
 ```solidity
 source_code = '''
@@ -234,7 +232,7 @@ contract_account = m.solidity_create_contract(source_code, owner=user_account)
 
 #### Rezumat {#summary}
 
-- Poți crea conturi de utilizator și contracte cu [m.create_account](https://manticore.readthedocs.io/en/latest/evm.html?highlight=create_account#manticore.ethereum.ManticoreEVM.create_account) și [m.solidity_create_contract](https://manticore.readthedocs.io/en/latest/evm.html?highlight=solidity_create#manticore.ethereum.ManticoreEVM.create_contract).
+- You can create user and contract accounts with [m.create_account](https://manticore.readthedocs.io/en/latest/evm.html?highlight=create_account#manticore.ethereum.ManticoreEVM.create_account) and [m.solidity_create_contract](https://manticore.readthedocs.io/en/latest/evm.html?highlight=solidity_create#manticore.ethereum.ManticoreEVM.create_contract).
 
 ### Executarea tranzacțiilor {#executing-transactions}
 
@@ -245,7 +243,7 @@ Manticore acceptă două tipuri de tranzacții:
 
 #### Tranzacția brută {#raw-transaction}
 
-O tranzacție brută este executată utilizând [m.transaction](https://manticore.readthedocs.io/en/latest/evm.html?highlight=transaction#manticore.ethereum.ManticoreEVM.transaction):
+A raw transaction is executed using [m.transaction](https://manticore.readthedocs.io/en/latest/evm.html?highlight=transaction#manticore.ethereum.ManticoreEVM.transaction):
 
 ```python
 m.transaction(caller=user_account,
@@ -256,8 +254,8 @@ m.transaction(caller=user_account,
 
 Apelantul, adresa, datele sau valoarea tranzacției pot să fie concrete sau simbolice:
 
-- [m.make_symbolic_value](https://manticore.readthedocs.io/en/latest/evm.html?highlight=make_symbolic_value#manticore.ethereum.ManticoreEVM.make_symbolic_value) creează o valoare simbolică.
-- [m.make_symbolic_buffer(size)](https://manticore.readthedocs.io/en/latest/evm.html?highlight=make_symbolic_buffer#manticore.ethereum.ManticoreEVM.make_symbolic_buffer) creează o matrice simbolică de byți.
+- [m.make_symbolic_value](https://manticore.readthedocs.io/en/latest/evm.html?highlight=make_symbolic_value#manticore.ethereum.ManticoreEVM.make_symbolic_value) creates a symbolic value.
+- [m.make_symbolic_buffer(size)](https://manticore.readthedocs.io/en/latest/evm.html?highlight=make_symbolic_buffer#manticore.ethereum.ManticoreEVM.make_symbolic_buffer) creates a symbolic byte array.
 
 De exemplu:
 
@@ -294,12 +292,12 @@ Dacă argumentul `valoare` al tranzacției nu este specificată, este 0 în mod 
 `m.workspace` este directorul folosit ca director de ieșire pentru toate fișierele generate:
 
 ```python
-print("Rezultatele sunt în {}".format(m.workspace))
+print("Results are in {}".format(m.workspace))
 ```
 
 ### Terminarea explorării {#terminate-the-exploration}
 
-Pentru a opri utilizarea explorării folosește [m.finalize()](https://manticore.readthedocs.io/en/latest/evm.html?highlight=finalize#manticore.ethereum.ManticoreEVM.finalize). Nu trebuie trimise alte tranzacții odată ce această metodă este apelată și Manticore generează cazuri de testare pentru fiecare cale explorată.
+To stop the exploration use [m.finalize()](https://manticore.readthedocs.io/en/latest/evm.html?highlight=finalize#manticore.ethereum.ManticoreEVM.finalize). Nu trebuie trimise alte tranzacții odată ce această metodă este apelată și Manticore generează cazuri de testare pentru fiecare cale explorată.
 
 ### Rezumat: Rularea sub Manticore {#summary-running-under-manticore}
 
@@ -345,7 +343,7 @@ contract Simple {
 Fiecare cale executată are starea sa de blockchain. O stare este fie pregătită, fie ucisă, ceea ce înseamnă că ajunge la instrucțiunea THROW sau REVERT:
 
 - [m.ready_states](https://manticore.readthedocs.io/en/latest/states.html#accessing): Lista stărilor care sunt pregătite (acestea nu au executat REVERT/INVALID)
-- [m.killed_states](https://manticore.readthedocs.io/en/latest/states.html#accessings): Lista stărilor care sunt pregătite (acestea nu au executat REVERT/INVALID)
+- [m.killed_states](https://manticore.readthedocs.io/en/latest/states.html#accessings): lista stărilor care sunt ucise
 - [m.all_states](https://manticore.readthedocs.io/en/latest/states.html#accessings): toate stările
 
 ```python
@@ -368,7 +366,7 @@ data = ABI.deserialize("uint", data)
 
 ### Cum să generezi un caz de test {#how-to-generate-testcase}
 
-Utilizează [m.generate_testcase(state, name)](https://manticore.readthedocs.io/en/latest/evm.html?highlight=generate_testcase#manticore.ethereum.ManticoreEVM.generate_testcase) pentru a genera un caz de test:
+Use [m.generate_testcase(state, name)](https://manticore.readthedocs.io/en/latest/evm.html?highlight=generate_testcase#manticore.ethereum.ManticoreEVM.generate_testcase) to generate testcase:
 
 ```python
 m.generate_testcase(state, 'BugFound')
@@ -398,11 +396,11 @@ contract_account = m.solidity_create_contract(source_code, owner=user_account)
 symbolic_var = m.make_symbolic_value()
 contract_account.f(symbolic_var)
 
-## Verifică dacă o execuție se încheie cu un a REVERT sau INVALID
+## Check if an execution ends with a REVERT or INVALID
 for state in m.terminated_states:
     last_tx = state.platform.transactions[-1]
     if last_tx.result in ['REVERT', 'INVALID']:
-        print('Aruncare găsită {}'.format(m.workspace))
+        print('Throw found {}'.format(m.workspace))
         m.generate_testcase(state, 'ThrowFound')
 ```
 
@@ -454,7 +452,7 @@ Poți utiliza constrângeri la nivel global sau pentru o anumită stare.
 
 #### Restricție globală {#state-constraint}
 
-Folosește `m.constrain(constraint)` pentru a adăuga o restricție globală. De exemplu, poți apela un contract de la o adresă simbolică și împiedica această adresă să aibă o valoare specifică:
+Use `m.constrain(constraint)` to add a global constraint. De exemplu, poți apela un contract de la o adresă simbolică și împiedica această adresă să aibă o valoare specifică:
 
 ```python
 symbolic_address = m.make_symbolic_value()
@@ -467,7 +465,7 @@ m.transaction(caller=user_account,
 
 #### Restricție de stare {#state-constraint}
 
-Utilizează [state.constrain(constraint)](https://manticore.readthedocs.io/en/latest/states.html?highlight=StateBase#manticore.core.state.StateBase.constrain) pentru a adăuga o restricție unei anumită stări Aceasta poate fi folosită pentru a restrânge starea ca după explorare să verifice unele proprietăți pe ea.
+Use [state.constrain(constraint)](https://manticore.readthedocs.io/en/latest/states.html?highlight=StateBase#manticore.core.state.StateBase.constrain) to add a constraint to a specific state It can be used to constrain the state after its exploration to check some property on it.
 
 ### Verificarea restricțiilor {#checking-constraint}
 
@@ -491,7 +489,7 @@ solver = Z3Solver.instance()
 
 m = ManticoreEVM()
 
-with open(„example.sol") as f:
+with open("example.sol") as f:
     source_code = f.read()
 
 user_account = m.create_account(balance=1000)
@@ -502,18 +500,18 @@ contract_account.f(symbolic_var)
 
 no_bug_found = True
 
-## Verifică dacă o execuție se încheie cu un REVERT sau INVALID
+## Check if an execution ends with a REVERT or INVALID
 for state in m.terminated_states:
     last_tx = state.platform.transactions[-1]
     if last_tx.result in ['REVERT', 'INVALID']:
-        # nu considerăm calea unde a == 65
+        # we do not consider the path were a == 65
         condition = symbolic_var != 65
         if m.generate_testcase(state, name="BugFound", only_if=condition):
-            print(f'Eroare găsită, rezultatele sunt în {m.workspace}')
+            print(f'Bug found, results are in {m.workspace}')
             no_bug_found = False
 
 if no_bug_found:
-    print(f'Nicio eroare')
+    print(f'No bug found')
 ```
 
 Tot codul de mai sus îl poți găsi în [`example_run.py`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/manticore/examples/example_run.py)
