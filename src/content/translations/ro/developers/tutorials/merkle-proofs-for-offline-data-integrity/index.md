@@ -9,7 +9,7 @@ tags:
 skill: avansat
 lang: ro
 sidebar: true
-published: 30-12-2021
+published: 2021-12-30
 ---
 
 ## Introducere {#introduction}

@@ -9,7 +9,7 @@ tags:
 skill: începător
 lang: ro
 sidebar: true
-published: 06-04-2021
+published: 2021-04-06
 ---
 
 ## Trimiterea tokenului folosind ethers.js(5.0) {#send-token}

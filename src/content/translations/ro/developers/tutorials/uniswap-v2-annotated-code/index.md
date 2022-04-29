@@ -7,7 +7,7 @@ tags:
   - "solidity"
   - "uniswap"
 skill: intermediar
-published: 01-05-2021
+published: 2021-05-01
 lang: ro
 ---
 

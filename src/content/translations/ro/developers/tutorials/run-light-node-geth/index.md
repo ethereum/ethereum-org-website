@@ -9,7 +9,7 @@ tags:
 skill: beginner
 lang: ro
 sidebar: true
-published: 04-03-2022
+published: 2022-03-04
 ---
 
 Poate sunteţi interesat să rulaţi un [nod Ethereum](/developers/docs/noses-and-clients/). Unul dintre cele mai simple moduri de a face acest lucru este să descărcați, să instalați și să rulați Geth. Utilizând Geth, putem pune în funcţiune un nod ușor în câteva minute.
