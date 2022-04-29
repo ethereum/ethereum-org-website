@@ -9,7 +9,7 @@ tags:
 skill: pemula
 lang: id
 sidebar: true
-published: 06-04-2021
+published: 2021-04-06
 ---
 
 ## Kirimkan Token Menggunakan ethers.js(5.0) {#send-token}

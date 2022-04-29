@@ -12,7 +12,7 @@ tags:
 skill: tingkat lanjut
 lang: id
 sidebar: true
-published: 05-04-2020
+published: 2020-04-05
 source: EthereumDev
 sourceUrl: https://ethereumdev.io/interact-with-other-contracts-from-solidity/
 address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"

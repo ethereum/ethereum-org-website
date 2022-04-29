@@ -9,7 +9,7 @@ tags:
 skill: pemula
 lang: id
 sidebar: true
-published: 04-11-2020
+published: 2020-11-04
 source: Dokumen Alchemy
 sourceUrl: https://docs.alchemy.com/alchemy/tutorials/sending-txs
 ---

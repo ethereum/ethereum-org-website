@@ -8,7 +8,7 @@ tags:
   - "solidity"
   - "erc-20"
 skill: pemula
-published: 09-03-2021
+published: 2021-03-09
 ---
 
 ## Pendahuluan {#introduction}

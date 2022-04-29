@@ -7,7 +7,7 @@ tags:
   - "solidity"
   - "uniswap"
 skill: tingkat menengah
-published: 01-05-2021
+published: 2021-05-01
 lang: id
 ---
 

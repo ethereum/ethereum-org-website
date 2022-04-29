@@ -15,7 +15,7 @@ tags:
 skill: pemula
 lang: id
 sidebar: true
-published: 27-04-2020
+published: 2020-04-27
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/create-eth-app
 ---

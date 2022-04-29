@@ -10,7 +10,7 @@ tags:
 skill: tingkat menengah
 lang: id
 sidebar: true
-published: 19-03-2020
+published: 2020-03-19
 source: Hackernoon
 sourceUrl: https://hackernoon.com/how-to-implement-an-erc721-market-1e1a32j9
 ---

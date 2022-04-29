@@ -9,7 +9,7 @@ tags:
 skill: pemula
 lang: id
 sidebar: true
-published: 04-03-2022
+published: 2022-03-04
 ---
 
 Anda mungkin tertarik menjalankan [node Ethereum](/developers/docs/nodes-and-clients/). Salah satu cara termudah untuk melakukannya adalah dengan mengunduh, menginstal, dan menjalankan Geth. Dengan Geth, kita bisa mengaktifkan node ringan dan menjalankannya dalam hitungan menit.

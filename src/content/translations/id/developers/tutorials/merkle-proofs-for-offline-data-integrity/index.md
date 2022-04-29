@@ -9,7 +9,7 @@ tags:
 skill: tingkat lanjut
 lang: id
 sidebar: true
-published: 30-12-2021
+published: 2021-12-30
 ---
 
 ## Pendahuluan {#introduction}
