@@ -11,7 +11,7 @@ tags:
   - "pengujian"
   - "analisis statis"
 skill: tingkat lanjut
-published: 09-06-2020
+published: 2020-06-09
 source: Membuat kontrak yang aman
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/slither
 ---

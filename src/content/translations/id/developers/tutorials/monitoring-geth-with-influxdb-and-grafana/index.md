@@ -9,7 +9,7 @@ tags:
 skill: tingkat menengah
 lang: id
 sidebar: true
-published: 13-01-2021
+published: 2021-01-13
 ---
 
 Tutorial ini akan menolong Anda menyiapkan node Geth Anda sehingga Anda dapat lebih baik memahami kinerjanya dan mengenali masalah yang mungkin muncul.

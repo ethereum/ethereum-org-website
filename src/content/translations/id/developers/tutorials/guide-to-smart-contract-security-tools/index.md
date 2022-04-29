@@ -9,7 +9,7 @@ tags:
   - "kontrak pintar"
   - "keamanan"
 skill: tingkat menengah
-published: 07-09-2020
+published: 2020-09-07
 source: Membuat kontrak yang aman
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis
 ---

@@ -14,7 +14,7 @@ tags:
 skill: pemula
 lang: id
 sidebar: true
-published: 11-05-2021
+published: 2021-05-11
 source: paulapivat.com
 sourceUrl: https://paulapivat.com/post/query_ethereum/
 ---

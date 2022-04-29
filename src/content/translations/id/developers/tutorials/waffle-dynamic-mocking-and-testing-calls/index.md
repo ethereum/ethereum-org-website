@@ -11,7 +11,7 @@ tags:
 skill: tingkat menengah
 lang: id
 sidebar: true
-published: 14-11-2020
+published: 2020-11-14
 ---
 
 ## Apa yang akan di pelajari pada tutorial ini? {#what-is-this-tutorial-about}

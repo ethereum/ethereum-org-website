@@ -12,7 +12,7 @@ tags:
   - "integrasi berkelanjutan"
   - "ganache"
 skill: tingkat menengah
-published: 05-06-2020
+published: 2020-06-05
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/continuous-integration
 ---

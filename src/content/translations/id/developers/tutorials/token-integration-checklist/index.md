@@ -10,7 +10,7 @@ tags:
   - "keamanan"
   - "token"
 skill: tingkat menengah
-published: 13-08-2020
+published: 2020-08-13
 source: Membuat kontrak yang aman
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/token_integration.md
 ---

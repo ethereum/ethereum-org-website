@@ -15,7 +15,7 @@ tags:
 skill: tingkat menengah
 lang: id
 sidebar: true
-published: 06-10-2021
+published: 2021-10-06
 ---
 
 One of the greatest challenges for developers coming from a Web2 background is figuring out how to connect your smart contact to a frontend project and interact with it.

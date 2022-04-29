@@ -12,7 +12,7 @@ tags:
 skill: dasar
 lang: id
 sidebar: true
-published: 16-10-2020
+published: 2020-10-16
 ---
 
 Dalam tutorial [Waffle](https://ethereum-waffle.readthedocs.io) ini, kita akan belajar cara menyiapkan proyek kontrak pintar "Hello world" yang sederhana, menggunakan [hardhat](https://hardhat.org/) dan [ethers.js](https://docs.ethers.io/v5/). Kemudian kita akan belajar cara menambahkan fungsionalitas baru ke kontrak pintar kita dan cara mengujinya dengan Waffle.

@@ -9,7 +9,7 @@ tags:
 skill: tingkat menengah
 lang: id
 sidebar: true
-published: 07-09-2020
+published: 2020-09-07
 source: Membuat kontrak yang aman
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/workflow.md
 ---

@@ -10,7 +10,7 @@ tags:
   - "feed harga"
   - "oracle"
 skill: pemula
-published: 29-06-2021
+published: 2021-06-29
 source: Dokumen Tellor
 sourceUrl: https://docs.tellor.io/tellor/
 ---

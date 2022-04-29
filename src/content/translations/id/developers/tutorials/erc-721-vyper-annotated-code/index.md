@@ -9,7 +9,7 @@ tags:
   - "erc-721"
   - "python"
 skill: pemula
-published: 01-04-2021
+published: 2021-04-01
 ---
 
 ## Pendahuluan {#introduction}

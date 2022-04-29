@@ -14,7 +14,7 @@ tags:
 skill: pemula
 source: Dokumen Alchemy
 sourceUrl: https://docs.alchemyapi.io/guides/using-websockets
-published: 01-12-2020
+published: 2020-12-01
 ---
 
 Ini adalah panduan level pemula tentang menggunakan WebSocket dan Alchemy untuk membuat permintaan di blockchain Ethereum.

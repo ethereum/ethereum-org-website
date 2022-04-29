@@ -9,7 +9,7 @@ tags:
   - "bridge"
   - "lapisan 2"
 skill: tingkat menengah
-published: 30-03-2022
+published: 2022-03-30
 lang: id
 ---
 

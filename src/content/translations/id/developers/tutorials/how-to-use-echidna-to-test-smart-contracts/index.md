@@ -11,7 +11,7 @@ tags:
   - "pengujian"
   - "fuzzing"
 skill: tingkat lanjut
-published: 10-04-2020
+published: 2020-04-10
 source: Membuat kontrak yang aman
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/echidna
 ---

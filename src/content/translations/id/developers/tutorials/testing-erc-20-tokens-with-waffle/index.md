@@ -11,7 +11,7 @@ tags:
 skill: tingkat menengah
 lang: id
 sidebar: true
-published: 16-10-2020
+published: 2020-10-16
 ---
 
 Pada tutorial ini, Anda akan belajar cara:

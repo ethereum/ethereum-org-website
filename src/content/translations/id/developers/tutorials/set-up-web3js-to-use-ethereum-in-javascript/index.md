@@ -8,7 +8,7 @@ tags:
 skill: pemula
 lang: id
 sidebar: true
-published: 11-04-2020
+published: 2020-04-11
 source: EthereumDev
 sourceUrl: https://ethereumdev.io/setup-web3js-to-use-the-ethereum-blockchain-in-javascript/
 address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
