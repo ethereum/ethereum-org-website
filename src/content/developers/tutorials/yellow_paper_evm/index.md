@@ -301,6 +301,44 @@ The halting function H, can return three types of values.
 Before we go to the final subsection of the EVM, 9.5, let's look at the instructions themselves.
 They are defined in Appendix H.2 which starts on p. 29. 
 Anything that is not specified as changing with that specific opcode is expected to stay the same.
+Variables that do change are specified with as \<something\>′.
+   
+For example, let's look at the [`ADD`](https://www.evm.codes/#01) opcode.    
+
+  
+| Value | Mnemonic | δ | α | Description |
+| ----: | -------- | - | - | ----------- |
+| 0x01  | ADD      | 2 | 1 | Addition operation. 
+||||| μ′<sub>s</sub>[0] ≡ μ<sub>s</sub>[0] + μ<sub>s</sub>[1]
+
+δ is the number of values we pop from the stack.
+In this case two, because we are adding the top two values.
+
+α is the number of values we push back.
+In this case one, the sum.
+
+So the new stack top (μ′<sub>s</sub>[0]) is the sum of the old stack top (μ<sub>s</sub>[0]) and the old value below it (μ<sub>s</sub>[1]).
+
+Instead of going over all the opcodes with an "eyes glaze over list", This article explains only those opcodes that introduce something new.
+
+
+| Value | Mnemonic  | δ | α | Description |
+| ----: | --------- | - | - | ----------- |
+| 0x20  | KECCAK256 | 2 | 1 | Compute Keccak-256 hash.
+||||| μ′<sub>s</sub>[0] ≡ KEC(μ<sub>m</sub>[μ<sub>s</sub>[0] . . . (μ<sub>s</sub>[0] + μ<sub>s</sub>[1] − 1)])
+||||| μ′<sub>i</sub> ≡ M(μ<sub>i</sub>,μ<sub>s</sub>[0],μ<sub>s</sub>[1])
+
+This is the first opcode that accesses memory (in this case, read only).
+However, it might expand beyond the current limits of the memory, so we need to update μ<sub>i</sub>.
+We do this using the M function defined in equation 328 on p. 29.
+
+
+
+| Value | Mnemonic  | δ | α | Description |
+| ----: | --------- | - | - | ----------- |
+| 0x31  | BALANCE   | 1 | 1 | Get balance of the given account.
+
+
 
 
 ## 9.5 (The Execution Cycle)
