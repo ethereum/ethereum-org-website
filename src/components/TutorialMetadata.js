@@ -86,6 +86,7 @@ const TutorialMetadata = ({ tutorial, data }) => {
   const published = frontmatter.published
   const author = frontmatter.author
   const address = frontmatter.address
+  const slug = frontmatter.fields.slug
 
   return (
     <Container>
@@ -111,7 +112,7 @@ const TutorialMetadata = ({ tutorial, data }) => {
         {published && (
           <DataContainer>
             <Emoji size={1} mr={`0.5em`} text=":calendar:" />
-            {getLocaleTimestamp(intl.locale, published)}
+            {getLocaleTimestamp(intl.locale, published, slug)}
           </DataContainer>
         )}
         <DataContainer>

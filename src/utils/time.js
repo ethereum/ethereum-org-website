@@ -2,7 +2,7 @@ import { DateTime } from "luxon"
 
 export const INVALID_DATETIME = "Invalid DateTime"
 
-export const getLocaleTimestamp = (locale, timestamp) => {
+export const getLocaleTimestamp = (locale, timestamp, slug = null) => {
   let localeTimestamp = DateTime.fromSQL(timestamp)
     .setLocale(locale)
     .toLocaleString(DateTime.DATE_FULL)
@@ -13,5 +13,10 @@ export const getLocaleTimestamp = (locale, timestamp) => {
       .setLocale(locale)
       .toLocaleString(DateTime.DATE_FULL)
   }
+
+  if (slug && localeTimestamp === INVALID_DATETIME) {
+    console.error("Invalid datetime at:", slug)
+  }
+
   return localeTimestamp
 }
