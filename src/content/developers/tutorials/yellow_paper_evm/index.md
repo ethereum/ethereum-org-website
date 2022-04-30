@@ -349,7 +349,7 @@ If *σ[μ<sub>s</sub>[0] mod 2<sup>160</sup>] = ∅*, it means that this address
 You can see the list of account information fields in section 4.1 on p. 4. 
 
 The second equation, *A'<sub>a</sub> ≡ A<sub>a</sub> ∪ {μ<sub>s</sub>[0] mod 2<sup>160</sup>}*, is related to the difference in cost between access to warm storage (storage that has recently been accessed and is likely to be cached) and cold storage (storage that hasn't been accessed and is likely to be in slower storage that is more expensive to retrieve). 
-*A<sub>a</sub>* is the list of addresses previously accessed by the transaction, which should therefore be cheaper to access, as defined in section 6.1 on p. 8.   
+*A<sub>a</sub>* is the list of addresses previously accessed by the transaction, which should therefore be cheaper to access, as defined in section 6.1 on p. 8.
 You can read more about this subject in [EIP-2929](https://eips.ethereum.org/EIPS/eip-2929).
 
    
