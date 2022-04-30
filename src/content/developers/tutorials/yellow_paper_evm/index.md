@@ -338,6 +338,14 @@ We do this using the *M* function defined in equation 328 on p. 29.
 | Value | Mnemonic  | δ | α | Description |
 | ----: | --------- | - | - | ----------- |
 | 0x31  | BALANCE   | 1 | 1 | Get balance of the given account.
+||||| ...
+
+The address whose balance we need to find is *μ<sub>s</sub>[0] mod 2<sup>160</sup>*.
+The top of the stack is the address, but because addresses are only 160 bits, we calculate the value [modulo](https://en.wikipedia.org/wiki/Modulo_operation) 2<sup>160</sup>.
+
+If *σ[μ<sub>s</sub>[0] mod 2<sup>160</sup>] ≠ ∅*, it means that there is information about this address.
+In that case, *σ[μ<sub>s</sub>[0] mod 2<sup>160</sup>]<sub>b</sub>* is the balance for that address.
+If *σ[μ<sub>s</sub>[0] mod 2<sup>160</sup>] = ∅*, it means that this address is uninitialized and the balance is zero.
 
 
 
