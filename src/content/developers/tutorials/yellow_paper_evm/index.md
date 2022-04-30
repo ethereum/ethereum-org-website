@@ -80,63 +80,65 @@ There are three costs:
    This gives you a cost function, which in most cases uses parameters from Appendix G (p. 27).
    
    For example, the opcode [`CALLDATACOPY`](https://www.evm.codes/#37) is a member of group *W<sub>copy</sub>*.
-   The opcode cost for that group is *G<sub>verylow</sub>+G<sub>copy</sub>×⌈μ<sub>s</sub>[2]⌉*.
-   Looking at Appendix G, we see that both constants are 3, which gives us *3+3×⌈μ<sub>s</sub>[2]⌉*.
+   The opcode cost for that group is *G<sub>verylow</sub>+G<sub>copy</sub>×⌈μ<sub>s</sub>[2]÷32⌉*.
+   Looking at Appendix G, we see that both constants are 3, which gives us *3+3×⌈μ<sub>s</sub>[2]÷32⌉*.
    
-   We still need to decipher the expression *⌈μ<sub>s</sub>[2]⌉*. 
+   We still need to decipher the expression *⌈μ<sub>s</sub>[2]÷32⌉*. 
    The outmost part, *⌈ \<value\> ⌉* is the ceiling function, a function that given a value returns the smallest integer that is still not smaller than the value. 
    For example, *⌈2.5⌉ = ⌈3⌉ = 3*. 
-   The inner part is *μ<sub>s</sub>[2]*. 
-   Looking at section 3 (Conventions) on p. 3, μ is the machine state.
+   The inner part is *μ<sub>s</sub>[2]÷32*. 
+   Looking at section 3 (Conventions) on p. 3, *μ* is the machine state.
    The machine state is defined in section 9.4.1 on p. 13.
-   According to that section, one of the machine state parameters is **s** for the stack.
-   Putting it all together, it seems that **μ<sub>s</sub>[2]** is location #2 in the stack.
+   According to that section, one of the machine state parameters is *s* for the stack.
+   Putting it all together, it seems that *μ<sub>s</sub>[2]* is location #2 in the stack.
    Looking at [the opcode](https://www.evm.codes/#37), location #2 in the stack is the size of the data in bytes.
    Looking at the other opcodes in group W<sub>copy</sub>, [`CODECOPY`](https://www.evm.codes/#39) and [`RETURNDATACOPY`](https://www.evm.codes/#3e), they also have a size of data in the same location.
-   So ⌈**μ<sub>s</sub>[2]**⌉ is the number of 32 byte words required to store the data being copied.
-   Putting everything together, the inherent cost of `CALLDATACOPY` is 3 gas plus 3 per word of data being copied.
+   So *⌈μ<sub>s</sub>[2]÷32⌉* is the number of 32 byte words required to store the data being copied.
+   Putting everything together, the inherent cost of [`CALLDATACOPY`](https://www.evm.codes/#37) is 3 gas plus 3 per word of data being copied.
 
-1. The cost of running either the constructor for the new contract (in the case of `CREATE` and `CREATE2`) or the contract we call (in the case of `CALL`, `CALLCODE`, `STATICCALL`, or `DELEGATECALL`).
+1. The cost of running the code we're calling.
+   - In the case of [`CREATE`](https://www.evm.codes/#f0) and [`CREATE2`](https://www.evm.codes/#f5), the constructor for the new contract.
+   - In the case of [`CALL`](https://www.evm.codes/#f1), [`CALLCODE`](https://www.evm.codes/#f2), [`STATICCALL`](https://www.evm.codes/#fa), or [`DELEGATECALL`](https://www.evm.codes/#f4), the contract we call.
 
 1. The cost of expanding memory (if necessary). 
-   In equation 324, this value is written as C<sub>mem</sub>(**μ<sub>i</sub>**')-C<sub>mem</sub>(**μ<sub>i</sub>**).
-   Looking at section 9.4.1 again, we see that **μ<sub>i</sub>** is the number of words in memory. 
-   So **μ<sub>i</sub>** is the number of words in memory before the opcode and **μ<sub>i</sub>**' is the number of words in memory after the opcode. 
+   In equation 324, this value is written as *C<sub>mem</sub>(μ<sub>i</sub>')-C<sub>mem</sub>(μ<sub>i</sub>)*.
+   Looking at section 9.4.1 again, we see that *μ<sub>i</sub>* is the number of words in memory. 
+   So *μ<sub>i</sub>* is the number of words in memory before the opcode and *μ<sub>i</sub>'* is the number of words in memory after the opcode. 
    
-   The function C<sub>mem</sub> is defined in equation 326: C<sub>mem</sub>(a) = G<sub>memory</sub> × a + ⌊a<sup>2</sup> / 512⌋. 
-   ⌊x⌋ is the floor function, a function that given a value returns the largest integer that is still not larger than the value. 
-   For example, ⌊2.5⌋ = ⌊2⌋ = 2.
-   When a < √512, a<sup>2</sup> < 512, and the result of the floor function is zero.
+   The function *C<sub>mem</sub>* is defined in equation 326: *C<sub>mem</sub>(a) = G<sub>memory</sub> × a + ⌊a<sup>2</sup> ÷ 512⌋*. 
+   *⌊x⌋* is the floor function, a function that given a value returns the largest integer that is still not larger than the value. 
+   For example, *⌊2.5⌋ = ⌊2⌋ = 2.*
+   When *a < √512*, *a<sup>2</sup> < 512*, and the result of the floor function is zero.
    So for the first 22 words (704 bytes), the cost rises linearly with the number of memory words required.
-   Beyond that point ⌊a<sup>2</sup> / 512⌋ is positive.
+   Beyond that point *⌊a<sup>2</sup> ÷ 512⌋* is positive.
    When the memory required is high enough the gas cost is proportional to the square of the amount of memory.
    
    
 ## 9.3 (Execution Environment)   
 
-The execution environment is a tuple, I, that includes information that isn't part of the blockchain state or the EVM.
+The execution environment is a tuple, *I*, that includes information that isn't part of the blockchain state or the EVM.
 
 | Parameter | Opcode to access the data | Solidity code to access the data |
 | - | - | - |
-| I<sub>a</sub> |  [`ADDRESS`](https://www.evm.codes/#30)  | `address(this)`
-| I<sub>o</sub> |  [`ORIGIN`](https://www.evm.codes/#32) | `tx.origin`
-| I<sub>p</sub> |  [`GASPRICE`](https://www.evm.codes/#3a)  | `tx.gasprice`
-| I<sub>d</sub> |  [`CALLDATALOAD`](https://www.evm.codes/#35), etc.  | `msg.data`
-| I<sub>s</sub> |  [`CALLER`](https://www.evm.codes/#33)  | `msg.sender`
-| I<sub>v</sub> |  [`CALLVALUE`](https://www.evm.codes/#34)  | `msg.value`
-| I<sub>b</sub> |  [`CODECOPY`](https://www.evm.codes/#39)  | `address(this).code`
-| I<sub>H</sub> |  Block header fields, such as [`NUMBER`](https://www.evm.codes/#43) and [`DIFFICULTY`](https://www.evm.codes/#44)  | `block.number`, `block.difficulty`, etc.
-| I<sub>e</sub> |  Depth of the call stack for calls between contracts (including contract creation)
-| I<sub>w</sub> |  Is the EVM allowed to change state, or is it running statically
+| *I<sub>a</sub>* |  [`ADDRESS`](https://www.evm.codes/#30)  | `address(this)`
+| *I<sub>o</sub>* |  [`ORIGIN`](https://www.evm.codes/#32) | `tx.origin`
+| *I<sub>p</sub>* |  [`GASPRICE`](https://www.evm.codes/#3a)  | `tx.gasprice`
+| *I<sub>d</sub>* |  [`CALLDATALOAD`](https://www.evm.codes/#35), etc.  | `msg.data`
+| *I<sub>s</sub>* |  [`CALLER`](https://www.evm.codes/#33)  | `msg.sender`
+| *I<sub>v</sub>* |  [`CALLVALUE`](https://www.evm.codes/#34)  | `msg.value`
+| *I<sub>b</sub>* |  [`CODECOPY`](https://www.evm.codes/#39)  | `address(this).code`
+| *I<sub>H</sub>* |  Block header fields, such as [`NUMBER`](https://www.evm.codes/#43) and [`DIFFICULTY`](https://www.evm.codes/#44)  | `block.number`, `block.difficulty`, etc.
+| *I<sub>e</sub>* |  Depth of the call stack for calls between contracts (including contract creation)
+| *I<sub>w</sub>* |  Is the EVM allowed to change state, or is it running statically
 
 A few other parameters are necessary to understand the rest of section 9:
 
 | Parameter | Defined in section | Meaning |
-| - | - | - |
-| σ |  2 (p. 2, equation 1) | The state of the blockchain 
-| g | 9.3 (p. 13)           | Remaining gas
-| A | 6.1 (p. 8)            | Accrued substate (changes scheduled for when the transaction ends)
-| o | 9.3 (p. 13)           | Output - the returned result in the case of internal transaction (when one contract calls another) and calls to view functions (when you are just asking for information, so there is no need to wait for a transaction)
+| --- | - | - |
+| *σ* |  2 (p. 2, equation 1) | The state of the blockchain 
+| *g* | 9.3 (p. 13)           | Remaining gas
+| *A* | 6.1 (p. 8)            | Accrued substate (changes scheduled for when the transaction ends)
+| *o* | 9.3 (p. 13)           | Output - the returned result in the case of internal transaction (when one contract calls another) and calls to view functions (when you are just asking for information, so there is no need to wait for a transaction)
 
 
 
