@@ -39,7 +39,7 @@ A [Turing machine](https://en.wikipedia.org/wiki/Turing_machine) is a computatio
 Essentially, it is a simplified version of a computer, which is proved to have the same ability to run computations that a normal computer can (everything that a computer can calculate a Turing machine can calculate and vice versa).
 This model makes it easier to prove various theorems about what is and what isn't comnputable.
 
-The term [*Turing-complete*](https://en.wikipedia.org/wiki/Turing_completeness) means a computer that can run the same calculations as a Turing machine. 
+The term [Turing-complete](https://en.wikipedia.org/wiki/Turing_completeness) means a computer that can run the same calculations as a Turing machine. 
 Turing machines can get into infinite loops, and the EVM cannot because it would run out of gas, so it's only quasi-Turing-complete.
 
 ## 9.1 (Basics)
@@ -50,7 +50,7 @@ A [stack machine](https://en.wikipedia.org/wiki/Stack_machine) is a computer tha
 Stack machine is the preferred architecture for virtual machines because it is easy to implement.
 This ease of implementation is especially important in the case of the EVM because it means that bugs, and security vulnerabilities, are a lot less likely. 
 
-The memory is a *byte array*, which means every memory location is a single byte.
+The memory is a byte array, which means every memory location is a single byte.
 This means that when you write a word (which is 256 bits) to memory it covers 32 (256/8) different memory locations.
 For example, if you execute this [Yul](https://docs.soliditylang.org/en/latest/yul.html) code:
 
@@ -60,14 +60,14 @@ mstore(0, 0x60A7)
 
 It writes zeros to locations 0-29, 0x60 to 30, and 0xA7 to 31.
 
-The [*Von Neumann architecture*](https://en.wikipedia.org/wiki/Von_Neumann_architecture) specifies that the program to be executed and the data which it processes are stored in the same memory.
+The [Von Neumann architecture](https://en.wikipedia.org/wiki/Von_Neumann_architecture) specifies that the program to be executed and the data which it processes are stored in the same memory.
 This is a bad idea from the security perspective because it allows program code to be modified, so the EVM never stores the currently running code in memory, it is always in a different memory that is ROM (read only memory).
 There are only two cases code that will be executed in the future comes from memory, in both cases because the code needs to come from a different piece of code, so it *has* to come from memory (or [storage](https://coinyuppie.com/in-depth-understanding-of-evm-storage-mechanism-and-security-issues/), but that would be too expensive).
 
-- When a contract creates another contract (using [CREATE](https://www.evm.codes/#f0) or [CREATE2](https://www.evm.codes/#f5)), the code for the contract constructor comes from memory.
+- When a contract creates another contract (using [`CREATE`](https://www.evm.codes/#f0) or [`CREATE2`](https://www.evm.codes/#f5)), the code for the contract constructor comes from memory.
 - During the creation of *any* contract, the constructor code runs and then returns with the code of the actual contract, also from memory.
 
-The term *exceptional execution* means an exception that causes the execution of the current contract to halt. 
+The term exceptional execution means an exception that causes the execution of the current contract to halt. 
 
 
 ## 9.2 (Fees Overview)
@@ -76,18 +76,18 @@ This section explains how the gas fees are calculated.
 There are three costs:
 
 1. The inherent cost of the specific opcode.
-   To get this value, find the cost group opcode in Appendix H (p. 28, under equation (327)), and find the cost group in equation (324).
+   To get this value, find the cost group of the opcode in Appendix H (p. 28, under equation (327)), and find the cost group in equation (324).
    This gives you a cost function, which in most cases uses parameters from Appendix G (p. 27).
    
-   For example, the opcode `CALLDATACOPY` is a member of group W<sub>copy</sub>.
-   The opcode cost for that group is G<sub>verylow</sub>+G<sub>copy</sub>×⌈**μ<sub>s</sub>[2]**⌉.
-   Looking at Appendix G, we see that both constants are 3, which gives us 3+3×⌈**μ<sub>s</sub>[2]**⌉.
+   For example, the opcode [`CALLDATACOPY`](https://www.evm.codes/#37) is a member of group *W<sub>copy</sub>*.
+   The opcode cost for that group is *G<sub>verylow</sub>+G<sub>copy</sub>×⌈μ<sub>s</sub>[2]⌉*.
+   Looking at Appendix G, we see that both constants are 3, which gives us *3+3×⌈μ<sub>s</sub>[2]⌉*.
    
-   We still need to decipher the expression ⌈**μ<sub>s</sub>[2]**⌉. 
-   The outmost part, ⌈ \<value\> ⌉ is the ceiling function, a function that given a value returns the smallest integer that is still not smaller than the value. 
-   For example, ⌈2.5⌉ = ⌈3⌉ = 3. 
-   The inner part is **μ<sub>s</sub>[2]**. 
-   Looking at section 3 (Conventions) on p. 3, **μ** is the machine state.
+   We still need to decipher the expression *⌈μ<sub>s</sub>[2]⌉*. 
+   The outmost part, *⌈ \<value\> ⌉* is the ceiling function, a function that given a value returns the smallest integer that is still not smaller than the value. 
+   For example, *⌈2.5⌉ = ⌈3⌉ = 3*. 
+   The inner part is *μ<sub>s</sub>[2]*. 
+   Looking at section 3 (Conventions) on p. 3, μ is the machine state.
    The machine state is defined in section 9.4.1 on p. 13.
    According to that section, one of the machine state parameters is **s** for the stack.
    Putting it all together, it seems that **μ<sub>s</sub>[2]** is location #2 in the stack.
