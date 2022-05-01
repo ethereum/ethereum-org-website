@@ -1,5 +1,5 @@
 ---
-title: Understanding the Yellow Paper (EVM)
+title: Understanding the Yellow Paper's EVM Specifications
 description: Understanding the part of the Yellow Paper, the formal specifications for Ethereum, that explains the ethereum virtual machine (EVM).
 author: "qbzzt"
 tags: ["evm", "yellow paper", "specifications"]
