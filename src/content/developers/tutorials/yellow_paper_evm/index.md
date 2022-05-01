@@ -352,10 +352,45 @@ The second equation, *A'<sub>a</sub> ≡ A<sub>a</sub> ∪ {μ<sub>s</sub>[0] mo
 *A<sub>a</sub>* is the list of addresses previously accessed by the transaction, which should therefore be cheaper to access, as defined in section 6.1 on p. 8.
 You can read more about this subject in [EIP-2929](https://eips.ethereum.org/EIPS/eip-2929).
 
-   
+
+| Value | Mnemonic  | δ  | α  | Description |
+| ----: | --------- | -- | -- | ----------- |
+| 0x8F  | DUP16     | 16 | 17 | Duplicate 16th stack item.
+||||| *μ′<sub>s</sub>[0] ≡ μ<sub>s</sub>[15]*
+
+Note that to use any stack item, we need to pop it, which means we also need to pop all the stack items on top of it.
+In the case of [`DUP<n>`](https://www.evm.codes/#8f) and [`SWAP<n>`](https://www.evm.codes/#9f), this means having to pop and then push up to sixteen values.
+
 
 ## 9.5 (The Execution Cycle)
 
+Now that we have all the parts, we can finally undertand how the execution cycle of the EVM is documented.
+
+Equation (155) says that given the state:
+
+- *σ* (global blockchain state) 
+- *μ* (EVM state)
+- *A* (substate, changes to happen when the transaction ends)
+- *I* (execution environment)
+
+The new state is *(σ', μ', A', I')*.
+
+Equations (156)-(158) define the stack and the change in it due to an opcode (*μ<sub>s</sub>*). 
+Equation (159) is the change in gas (*μ<sub>g</sub>*). 
+Equation (160) is the change in the program counter (*μ<sub>pc</sub>*).
+Finally, equations (161)-(164) specify that the other parameters stay the same, unless explicitly changed by the opcode.
+
+With this the EVM is fully defined.
+
+
 ## Conclusion
 
-Compare to the Python specs of the consensus layer
+Mathematical notation is precise, and has allowed the Yellow Paper to specify every detail of Ethereum.
+However, it does have some drawbacks:
+
+- It can only be understood by humans, which means that [compliance tests](https://github.com/ethereum/tests) have to be written manually.
+- Programmers understand computer code.
+  They may or may not understand mathematical notation.
+  
+Maybe for these reasons, the newer [consensus layer specs](https://github.com/ethereum/consensus-specs/blob/dev/tests/core/pyspec/README.md) are written in Python.
+However, until and unless the Yellow Paper is also translated to Python or a similar language, the Yellow Paper will continue in service and it is useful to be able to read it.
