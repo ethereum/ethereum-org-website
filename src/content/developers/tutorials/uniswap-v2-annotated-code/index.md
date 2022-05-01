@@ -1042,14 +1042,14 @@ for anybody else. Those are in the periphery so they can be updated as needed.
 ### UniswapV2Router01.sol {#UniswapV2Router01}
 
 [This contract](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router01.sol)
-has problems, and [should no longer be used](https://uniswap.org/docs/v2/smart-contracts/router01/). Luckily,
+has problems, and [should no longer be used](https://docs.uniswap.org/protocol/V2/reference/smart-contracts/router-01/). Luckily,
 the periphery contracts are stateless and don't hold any assets, so it is easy to deprecate it and suggest
 people use the replacement, `UniswapV2Router02`, instead.
 
 ### UniswapV2Router02.sol {#UniswapV2Router02}
 
 In most cases you would use Uniswap through [this contract](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router02.sol).
-You can see how to use it [here](https://uniswap.org/docs/v2/smart-contracts/router02/).
+You can see how to use it [here](https://docs.uniswap.org/protocol/V2/reference/smart-contracts/router-02/).
 
 ```solidity
 pragma solidity =0.6.6;
