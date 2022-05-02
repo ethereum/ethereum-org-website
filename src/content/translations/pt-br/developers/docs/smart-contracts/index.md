@@ -107,4 +107,4 @@ Outra limitação de contratos inteligentes é o tamanho máximo do contrato. Um
 
 - [Contratos Inteligentes: A Tecnologia Blockchain que substituirá Advogados](https://blockgeeks.com/guides/smart-contracts/) _– Blockgeeks_
 - [Melhores Práticas para Desenvolvimento de Contrato Inteligente](https://yos.io/2019/11/10/smart-contract-development-best-practices/) _– 10 de Novembro de 2019 - Yos Riady_
-- [Contratos claros - um guia sobre padrões de contrato inteligente & práticas](https://www. wslyvh. com/clean-contracts/) _– Jul 30 2020 - wslyvh_
+- [Contratos claros - um guia sobre padrões de contrato inteligente & práticas](https://www.wslyvh.com/clean-contracts/) _– Jul 30 2020 - wslyvh_
