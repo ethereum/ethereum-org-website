@@ -13,7 +13,7 @@ A alavancagem dos prestadores de dados existentes pode acelerar o desenvolviment
 
 ## Pré-requisitos {#prerequisites}
 
-Você deve entender o conceito básico de [Exploradores de Bloco](/developers/docs/data-and-analytics/block-explorers/) para entender melhor usá-los no contexto da análise de dados. Além disso, familiarize-se com o conceito de um índice [](/glossary/#index) para entender os benefícios que eles adicionam a um design do sistema.
+Você deve entender o conceito básico de [Exploradores de Bloco](/developers/docs/data-and-analytics/block-explorers/) para entender melhor usá-los no contexto da análise de dados. Além disso, familiarize-se com o conceito de um [índice](/glossary/#index) para entender os benefícios que eles adicionam a um design do sistema.
 
 Em termos de fundamentos arquitetônicos, entendendo o que uma [API](https://www.wikipedia.org/wiki/API) e [REST](https://www.wikipedia.org/wiki/Representational_state_transfer) são, mesmo em teoria.
 
