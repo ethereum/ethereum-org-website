@@ -261,7 +261,7 @@ contract Token {
     // Um `mapping` é essencialmente uma estrutura de dados de tabela de hash.
     // Este `mapeamento` atribui um inteiro não assinado (o saldo do token) a um endereço (o titular do token).
     // Saiba mais: https://solidity.readthedocs.io/en/v0.5.10/types.html#mapping-types
-    mapeamento (address => uint) saldos públicos;
+    mapping (address => uint) public balances;
 
     // Eventos permitem registro de atividade no blockchain.
     // Clientes Ethereum podem ouvir eventos para reagir às alterações do estado do contrato.
