@@ -892,11 +892,11 @@ Contractele periferice sunt API-uri (interfață de program de aplicație) pentr
 
 ### UniswapV2Router01.sol {#UniswapV2Router01}
 
-[Acest contract](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router01.sol) are probleme și [ar trebui să nu mai fie utilizat](https://uniswap.org/docs/v2/smart-contracts/router01/). Din fericire, contractele periferice sunt fără stare și nu dețin niciun activ, de aceea este ușor să fie eliminate; se recomandă în schimb utilizarea înlocuitorului lor, `UniswapV2Router02`.
+[Acest contract](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router01.sol) are probleme și [ar trebui să nu mai fie utilizat](https://docs.uniswap.org/protocol/V2/reference/smart-contracts/router-01/). Din fericire, contractele periferice sunt fără stare și nu dețin niciun activ, de aceea este ușor să fie eliminate; se recomandă în schimb utilizarea înlocuitorului lor, `UniswapV2Router02`.
 
 ### UniswapV2Router02.sol {#UniswapV2Router02}
 
-În cele mai multe cazuri, veți utiliza Uniswap prin intermediul [acestui contract](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router02.sol). Puteți vedea cum să îl utilizați [aici](https://uniswap.org/docs/v2/smart-contracts/router02/).
+În cele mai multe cazuri, veți utiliza Uniswap prin intermediul [acestui contract](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router02.sol). Puteți vedea cum să îl utilizați [aici](https://docs.uniswap.org/protocol/V2/reference/smart-contracts/router-02/).
 
 ```solidity
 pragma solidity =0.6.6;
