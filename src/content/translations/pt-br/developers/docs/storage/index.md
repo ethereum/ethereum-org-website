@@ -170,7 +170,7 @@ Baseado no PoS:
 
 ## Leitura adicional {#further-reading}
 
-- [O que é armazenamento descentralizado?](https://coinmarketcap. com/alexandria/article/what-is-decentralized-storage-a-deep-dive-by-filecoin) - _CoinMarketCap_
+- [O que é armazenamento descentralizado?](https://coinmarketcap.com/alexandria/article/what-is-decentralized-storage-a-deep-dive-by-filecoin) - _CoinMarketCap_
 - [Cinco Mitos Comuns sobre o Armazenamento Descentrado](https://www.storj.io/blog/busting-five-common-myths-about-decentralized-storage) - _Storj_
 
 _Conhece algum recurso da comunidade que o ajudou? Edite essa página e adicione!_
