@@ -206,13 +206,18 @@ const BugBountiesPage = ({ data, location }) => {
   const isDarkTheme = themeContext.isDark
 
   // TODO sort query isn't working :(
-  const bountyHunters = data.bountyHunters.nodes.sort(
+  const consensusBountyHunters = data.consensusBountyHunters.nodes.sort(
     (a, b) => b.score - a.score
   )
 
   const executionBountyHunters = data.executionBountyHunters.nodes.sort(
     (a, b) => b.score - a.score
   )
+
+  const allBounterHunters = [
+    ...consensusBountyHunters,
+    ...executionBountyHunters,
+  ].sort((a, b) => b.score - a.score)
 
   const clients = [
     {
@@ -328,7 +333,7 @@ const BugBountiesPage = ({ data, location }) => {
             </ButtonRow>
           </HeroContainer>
           <LeaderboardContainer>
-            <Leaderboard content={bountyHunters} limit={5} />
+            <Leaderboard content={allBounterHunters} limit={5} />
             <ButtonLink isSecondary to="#leaderboard">
               <Translation id="page-upgrades-bug-bounty-leaderboard" />
             </ButtonLink>
@@ -575,7 +580,7 @@ const BugBountiesPage = ({ data, location }) => {
           <p>
             <Translation id="page-upgrades-bug-bounty-hunting-leaderboard-subtitle" />
           </p>
-          <Leaderboard content={bountyHunters} />
+          <Leaderboard content={consensusBountyHunters} />
         </FullLeaderboardContainer>
       </GradientContainer>
       <Contact>
@@ -628,7 +633,7 @@ export const ClientLogosSmall = graphql`
 
 export const query = graphql`
   query {
-    bountyHunters: allConsensusBountyHuntersCsv(
+    consensusBountyHunters: allConsensusBountyHuntersCsv(
       sort: { order: DESC, fields: score }
     ) {
       nodes {
