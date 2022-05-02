@@ -266,7 +266,7 @@ contract Token {
     // Eventos permitem registro de atividade no blockchain.
     // Clientes Ethereum podem ouvir eventos para reagir às alterações do estado do contrato.
     // Saiba mais: https://solidity.readthedocs.io/en/v0.5.10/contracts. tml#eventos
-    transferência (endereço, endereço, quantidade de transferência);
+    event Transfer(address from, address to, uint amount);
 
     // Inicializa os dados do contrato definindo o `owner`
     // para o endereço do criador do contrato.
