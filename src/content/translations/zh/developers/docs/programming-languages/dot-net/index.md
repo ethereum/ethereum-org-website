@@ -8,7 +8,7 @@ incomplete: true
 
 <div class="featured">学习如何使用并通过基于 .NET 的项目及工具参与以太坊的开发</div>
 
-使用以太坊来创建去中心化应用程序 (或称“dapp”)，发挥加密货币和区块链技术的优势。 这些 dapp 可以是值得信赖的，也即一旦被部署到以太坊上，它们将总是按程序运行。 这些应用程序可以控制数字资产，以便创造新的金融应用； 它们可以是去中心化的，也即没有任何单一实体或个人能够控制它们，而且它们几乎是不可能被审查的。
+使用以太坊来创建去中心化应用程序（或称“dapp”），发挥加密货币和区块链技术的优势。 这些去中心化应用程序可以是值得信赖的，也即一旦被部署到以太坊上，它们将总是按程序运行。 这些应用程序可以控制数字资产，以便创造新的金融应用； 它们可以是去中心化的，也即没有任何单一实体或个人能够控制它们，而且它们几乎是不可能被审查的。
 
 使用 Microsoft 技术堆栈中的工具和语言在以太坊上搭建去中心化应用程序和与智能合约交互 —— .NET Framework/.NET Core/.NET Standard 支持 VSCode 和 Visual Studio 等工具上的 C#、# Visual Basic .NET、F#。 使用 Microsoft Azure 区块链在 Azure 上部署一条以太坊区块链，几分钟即可完成。 将人们对 .NET 的喜爱带到以太坊上！
 
@@ -30,9 +30,9 @@ incomplete: true
 - [开始了解 Nethereum](https://docs.nethereum.com/en/latest/getting-started/)
 - [安装 VS Code Solidity](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity)
 - [.NET 开发者创建和调用以太坊智能合约的工作流](https://medium.com/coinmonks/a-net-developers-workflow-for-creating-and-calling-ethereum-smart-contracts-44714f191db2)
-- [智能合约与 Nethereum 的集成](https://kauri.io/article/b54334b0695342c1bbe161c4c4467b50/smart-contracts-integration-with-nethereum)
+- [智能合约与 Nethereum 的集成](https://kauri.io/#collections/Getting%20Started/smart-contracts-integration-with-nethereum/#smart-contracts-integration-with-nethereumm)
 - [使用 Nethereum 连接 .NET 和以太坊区块链智能合约](https://medium.com/my-blockchain-development-daily-journey/interfacing-net-and-ethereum-blockchain-smart-contracts-with-nethereum-2fa3729ac933)，也可参考此[中文版](https://medium.com/my-blockchain-development-daily-journey/%E4%BD%BF%E7%94%A8nethereum%E9%80%A3%E6%8E%A5-net%E5%92%8C%E4%BB%A5%E5%A4%AA%E7%B6%B2%E5%8D%80%E5%A1%8A%E9%8F%88%E6%99%BA%E8%83%BD%E5%90%88%E7%B4%84-4a96d35ad1e1)
-- [Nethereum——开源的区块链 .NET 集成库](https://kauri.io/article/d15dfd4903f149cdb84b3ce666103b52/v1/nethereum-an-open-source-.net-integration-library-for-blockchain)
+- [Nethereum——开源的区块链 .NET 集成库](https://kauri.io/#collections/a%20hackathon%20survival%20guide/nethereum-an-open-source-.net-integration-library/)
 - [使用 Nethereum 将以太坊交易写入 SQL 数据库](https://medium.com/coinmonks/writing-ethereum-transactions-to-sql-database-using-nethereum-fd94e0e4fa36)
 - [查看如何使用 C# 和 VisualStudio 轻松地部署以太坊智能合约](https://koukia.ca/deploy-ethereum-smart-contracts-using-c-and-visualstudio-5be188ae928c)
 
@@ -41,7 +41,7 @@ incomplete: true
 - [训练场](http://playground.nethereum.com/) - 与以太坊进行交互，学习如何通过浏览器使用 Nethereum。
   - 查询帐户余额[C#](http://playground.nethereum.com/csharp/id/1001)[VB.NET](http://playground.nethereum.com/vb/id/2001)
   - 查询 ERC20 智能合约余额[C#](http://playground.nethereum.com/csharp/id/1005)[VB.NET](http://playground.nethereum.com/vb/id/2004)
-  - 转账 ETH 至一个帐户中[C#](http://playground.nethereum.com/csharp/id/1003) [VB.NET](http://playground.nethereum.com/vb/id/2003)
+  - 转账以太币至帐户 [C#](http://playground.nethereum.com/csharp/id/1003) [VB.NET](http://playground.nethereum.com/vb/id/2003)
   - ... 以及更多！
 
 ## 面向中等程度用户的文章 {#intermediate-articles}
@@ -77,11 +77,11 @@ incomplete: true
 
 ## .NET 社区贡献者 {#dot-net-community-contributors}
 
-在 Nethereum，我们主要活跃于 [Gitter](https://gitter.im/Nethereum/Nethereum) 上，任何人都可以前来提问/回答问题，获得帮助或者前来逛逛。 您可以自由地在 [Nethereum GitHub 库](https://github.com/Nethereum)上提交 PR 或者开启问题，或者只是前来浏览我们已有的许多小项目/样本项目。 您可以在[ Discord ](https://discord.gg/jQPrR58FxX)上找到我们！
+在 Nethereum，我们主要活跃于 [Gitter](https://gitter.im/Nethereum/Nethereum) 上，任何人都可以前来提问/回答问题，获得帮助或者前来逛逛。 您可以自由地在 [Nethereum GitHub 库](https://github.com/Nethereum)上提交拉取请求或者开启问题，或者只是前来浏览我们已有的许多小项目/样本项目。 您可以在[ Discord ](https://discord.gg/jQPrR58FxX)上找到我们！
 
-在 Nethermind，让我们通过 [Gitter](https://gitter.im/nethermindeth/nethermind) 取得联系。 关于 PR 或者问题，请查看 [Nethermind GitHub 库](https://github.com/NethermindEth/nethermind)。
+在 Nethermind，让我们通过 [Gitter](https://gitter.im/nethermindeth/nethermind) 取得联系。 关于拉取请求或者问题，请查看 [Nethermind GitHub 库](https://github.com/NethermindEth/nethermind)。
 
 ## 其他汇总列表 {#other-aggregated-lists}
 
 [Nethereum 官方网站](https://nethereum.com/)  
-。 [Nethermind 官方网站](https://nethermind.io/)
+[Nethermind 官方网站](https://nethermind.io/)

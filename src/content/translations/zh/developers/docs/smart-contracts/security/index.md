@@ -1,15 +1,15 @@
 ---
-title: 安全性
+title: 智能合约安全性
 description: 以太坊开发者的安全考虑
 lang: zh
 sidebar: true
 ---
 
-以太坊智能合约是极为灵活的。它能够存储超过非常大量的虚拟货币（超过十亿美元），并且根据先前部署的智能合约运行不可修改的代码。 虽然这创造了一个充满活力和创造性的生态系统，但其中包含的无信任、相互关联的智能合约，也吸引了攻击者利用智能合约中的漏洞和以太坊中的未知错误来赚取利润。 智能合约代码*通常*无法修改来修复安全漏洞，因此从智能合约中被盗窃的资产是无法收回的，且被盗资产极难追踪。 由于智能合约问题而被盗或丢失的价值总额已经达到了 10 亿美元。 一些因为智能合约代码编写错误导致较大经济损失的例子：
+以太坊智能合约是极为灵活的。它能够存储超过非常大量的虚拟货币（超过十亿美元），并且根据先前部署的智能合约运行不可修改的代码。 虽然这创造了一个充满活力和创造性的生态系统，但其中包含的无信任、相互关联的智能合约，也吸引了攻击者利用智能合约中的漏洞和以太坊中的未知错误来赚取利润。 智能合约代码*通常*无法修改来修复安全漏洞，因此从智能合约中被盗窃的资产是无法收回的，且被盗资产极难追踪。 由于智能合约问题而被盗或丢失的价值总额很容易超过 $1B。 一些因为智能合约代码编写错误导致较大经济损失的例子：
 
 - [钱包问题 #1 - 3000 万美金损失](https://www.coindesk.com/30-million-ether-reported-stolen-parity-wallet-breach)
 - [钱包问题 #2 - 3 亿美金锁定](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether)
-- [TheDAO 被黑，360 万 ETH 被盗！ 目前价值超过 10 亿美元](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/)
+- [去中心化自治组织被黑，360 万以太币被盗！ 目前价值超过 10 亿美元](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/)
 
 ## 前置要求 {#prerequisites}
 
@@ -35,7 +35,7 @@ sidebar: true
 - Solidity 代码编辑器不会发出任何警告
 - 您的代码有据可查
 
-上面的这些条目是编写智能合约的一个良好的开始，但是在编写代码过程中还有很多要值得注意。 关于更多条目及其详细解释，请参阅[DeFiSafety 提供的过程质量检查清单](https://docs.defisafety.com/review-process-documentation/process-quality-audit-process)。 [DefiSafety](https://defisafety.com/) 是一个对各种大型的公开以太坊 dApps 进行评论的非官方公共服务提供者。 DeFiSafete 对项目的安全评级等级的一部分包括该项目是否遵守了质量检查表。 遵循这些审核过程：
+上面的这些条目是编写智能合约的一个良好的开始，但是在编写代码过程中还有很多要值得注意。 关于更多条目及其详细解释，请参阅[DeFiSafety 提供的过程质量检查清单](https://docs.defisafety.com/review-process-documentation/process-quality-audit-process)。 [DefiSafety](https://defisafety.com/) 是一个对各种大型的公开以太坊去中心化应用程序进行评论的非官方公共服务提供者。 DeFiSafete 对项目的安全评级等级的一部分包括该项目是否遵守了质量检查表。 遵循这些审核过程：
 
 - 通过可复现的自动化测试，产生更安全的代码
 - 审查员将能够更有效地审查您的项目
@@ -71,13 +71,13 @@ contract Victim {
 }
 ```
 
-为了让用户可以退回先前存储在智能合约里的 ETH，这个功能会
+为了让用户可以退回先前存储在智能合约里的以太币，这个功能会
 
 1. 读取用户的余额
 2. 发送用户的余额
 3. 将余额重置为 0，因此它们不能再次提取余额。
 
-如果收到来自一个普通帐户的调用（例如您自己的 MetaMask 帐户），这个函数 msg.sender.call.value() 能够发送您的帐户里的 ETH。 但是，智能合约也能调用其他合约。 如果一个自制的恶意合约调用 `withdraw()`，msg.sender.call.value() 会不仅发送 `amount` 个 ETH，还会暗中调用合约来开始执行代码。 想象这个恶意合约：
+如果从普通账户（例如您自己的 MetaMask 账户）调用，这将按预期运行：msg.sender.call.value() 只是向您的账户发送 ETH。 但是，智能合约也能调用其他合约。 如果一个自制的恶意合约调用 `withdraw()`，msg.sender.call.value() 会不仅发送 `amount` 个以太币，还会暗中调用合约来开始执行代码。 想象这个恶意合约：
 
 ```solidity
 contract Attacker {
@@ -97,24 +97,25 @@ contract Attacker {
 调用 Attacker.beginAttack() 会开始循环寻找一些像：
 
 ```
-0.) 攻击者帐户首先使用 1 个 ETH 并借助 EOA 协议调用 Attacker.beginAttack()
-0.) Attacker.beginAttack() 会将 1 个 ETH 存入到受害者帐户中
- 1.) 攻击者帐户 ->（调用）Victim.withdraw()
- 1.) 受害者读取余额 [msg.sender]
-  1.) 受害者帐户将自己帐户中的 ETH 发送到攻击者帐户中（该操作将使用默认函数进行）
-    2.) 攻击者帐户 ->（调用）Victim.withdraw()
-    2.) 受害者读取余额 [msg.sender]
-    2.) 受害者帐户将自己帐户中的 ETH 发送到攻击者帐户中（该操作将使用默认函数进行）
-      3.) 攻击者帐户 ->（调用）Victim.withdraw()
-      3.) 受害者读取余额 [msg.sender]
-      3.) 受害者帐户将自己帐户中的 ETH 发送到攻击者帐户中（该操作将使用默认函数进行）
-        4.) 攻击者帐户最终会因受害者帐户中无足够的 ETH 而停止调用函数
+0.) Attacker's EOA calls Attacker.beginAttack() with 1 ETH
+0.) Attacker.beginAttack() deposits 1 ETH into Victim
+
+  1.) Attacker -> Victim.withdraw()
+  1.) Victim reads balances[msg.sender]
+  1.) Victim sends ETH to Attacker (which executes default function)
+    2.) Attacker -> Victim.withdraw()
+    2.) Victim reads balances[msg.sender]
+    2.) Victim sends ETH to Attacker (which executes default function)
+      3.) Attacker -> Victim.withdraw()
+      3.) Victim reads balances[msg.sender]
+      3.) Victim sends ETH to Attacker (which executes default function)
+        4.) Attacker no longer has enough gas, returns without calling again
       3.) balances[msg.sender] = 0;
-    2.) balances[msg.sender] = 0; (受害者帐户中 ETH 已经为 0)
-  1.) balances[msg.sender] = 0; (受害者帐户中 ETH 已经为 0)
+    2.) balances[msg.sender] = 0; (it was already 0)
+  1.) balances[msg.sender] = 0; (it was already 0)
 ```
 
-攻击者帐户使用 1 个 ETH 调用 Attacker.beginAttack 函数将会重复攻击受害者帐户，并将赚取远超其提供 ETH 的数量（这些额外的 ETH 会从其他用户帐户的余额中赚取，这样会造成受害者帐户余额减少）
+攻击者帐户使用 1 个以太币调用 Attacker.beginAttack 函数将会重复攻击受害者帐户，并将赚取远超其提供以太币的数量（这些额外的以太币会从其他用户帐户的余额中赚取，这样会造成受害者帐户余额减少）
 
 ### 如何解决重入攻击（一种错误的方式） {#how-to-deal-with-re-entrancy-the-wrong-way}
 
@@ -155,12 +156,12 @@ contract ContractCheckVictim {
 }
 ```
 
-现在为了要存入 ETH，您的地址里不能有智能合约的代码。 然而，通过如下的攻击者合约可以很轻松地击败它：
+现在为了要存入以太币，您的地址里不能有智能合约的代码。 然而，通过如下的攻击者合约可以很轻松地击败它：
 
 ```solidity
 contract ContractCheckAttacker {
     constructor() public payable {
-        ContractCheckVictim(VICTIM_ADDRESS).deposit(1 ether); // <- 新增行
+        ContractCheckVictim(VICTIM_ADDRESS).deposit(1 ether); // <- New line
     }
 
     function beginAttack() external payable {
@@ -175,7 +176,7 @@ contract ContractCheckAttacker {
 }
 ```
 
-先前的攻击是对合约逻辑的攻击，而这一次则是对以太坊合约部署行为的攻击。 在部署过程中，合约尚未返回要在其地址部署完毕的代码，但在此过程中保留了完整的 EVM 控制阶段。
+先前的攻击是对合约逻辑的攻击，而这一次则是对以太坊合约部署行为的攻击。 在部署过程中，合约尚未返回要在其地址部署完毕的代码，但在此过程中保留了完整的以太坊虚拟机控制阶段。
 
 从技术上讲，可以使用以下代码来防止智能合约调用您的代码：
 
@@ -204,14 +205,14 @@ contract NoLongerAVictim {
 
 ### 如何解决重入攻击（核心选择） {#how-to-deal-with-re-entrancy-the-nuclear-option}
 
-任何时候您都会将 ETH 发送到一个不信任的地址或与一个未知合约进行交互（例如调用 `transfer()` 到用户提供的代币地址），您可以自行开启重入。 **通过设计既不发送 ETH 也不调用不信任合约的智能合约，您将防止重入攻击的可能性！**
+任何时候您都会将 ETH 发送到一个不信任的地址或与一个未知合约进行交互（例如调用 `transfer()` 到用户提供的代币地址），您可以自行开启重入。 **通过设计既不发送以太币也不调用不信任合约的智能合约，您将防止重入攻击的可能性！**
 
 ## 更多攻击类型 {#more-attack-types}
 
 上述攻击类型包括智能合约编码问题（重入）和以太坊奇数（在合约构造器内运行代码，合约地址才有编码）。 还有更多攻击类型需要注意，例如：
 
 - 前台运行
-- ETH 发送拒绝
+- 以太币发送拒绝
 - 整数上溢/下溢
 
 延伸阅读:
@@ -229,12 +230,12 @@ contract NoLongerAVictim {
 
 - [GitHub](https://github.com/crytic/slither)
 
-**MythX -** **_以太坊智能合约的安全分析 API。_**
+**MythX -** **_以太坊智能合约的安全分析应用程序接口。_**
 
 - [mythx.io](https://mythx.io/)
 - [相关文档](https://docs.mythx.io/)
 
-**Mythril -** **_EVM 字节码安全分析工具。_**
+**Mythril -** **_以太坊虚拟机字节码安全分析工具。_**
 
 - [mythril](https://github.com/ConsenSys/mythril)
 - [相关文档](https://mythril-classic.readthedocs.io/en/master/about.html)

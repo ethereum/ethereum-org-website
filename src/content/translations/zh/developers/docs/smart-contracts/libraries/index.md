@@ -55,11 +55,11 @@ contract MyContract is Ownable {
 
 ### 标准 {#standards}
 
-为了促进[可组合性和互操作性](/developers/docs/smart-contracts/composability/)，以太坊社区已经以 **ERC** 的形式定义了几个标准。 您可以在[标准](/developers/docs/standards/)部分阅读更多关于他们的信息。
+为了促进[可组合性和互操作性](/developers/docs/smart-contracts/composability/)，以太坊社区已经以**以太坊意见征求**的形式定义了几个标准。 您可以在[标准](/developers/docs/standards/)部分阅读更多关于他们的信息。
 
-当将 ERC 作为您的合约的一部分时，更好的做法是寻找已有的标准去实现而不是试图推出您自己的方式。 许多智能合约库包含了最流行的 ERC 标准的实现。 例如，[ERC20 可互换代币标准](/developers/tutorials/understand-the-erc-20-token-smart-contract/)可在 [HQ20](https://github.com/HQ20/contracts/blob/master/contracts/token/README.md) [DappSys](https://github.com/dapphub/ds-token/) 和 [OpenZepelin](https://docs.openzeppelin.com/contracts/3.x/erc20)中找到。 此外，一些 ERC 还提供规范实现作为 ERC 本身的一部分。
+当将以太坊意见征求作为您的合约的一部分时，更好的做法是寻找已有的标准去实现而不是试图推出您自己的方式。 许多智能合约库包含了最流行的以太坊意见征求标准的实现。 例如，普遍存在的 [ERC20 同质化通证标准](/developers/tutorials/understand-the-erc-20-token-smart-contract/)可在 [HQ20](https://github.com/HQ20/contracts/blob/master/contracts/token/README.md) [DappSys](https://github.com/dapphub/ds-token/) 和 [OpenZepelin](https://docs.openzeppelin.com/contracts/3.x/erc20) 中找到。 此外，一些以太坊意见征求还提供规范实现作为以太坊意见征求本身的一部分。
 
-值得一提的是，一些 ERC 不是独立的，而是对其他 ERC 的补充。 例如， [ERC2612](https://eips.ethereum.org/EIPS/eip-2612) 为 ERC20 添加了一个扩展，以提高其可用性。
+值得一提的是，一些以太坊意见征求不是独立的，而是对其他以太坊意见征求的补充。 例如， [ERC2612](https://eips.ethereum.org/EIPS/eip-2612) 为 ERC20 添加了一个扩展，以提高其可用性。
 
 ## 如何添加库 {#how-to}
 
@@ -105,8 +105,8 @@ contract MyNFT is ERC721 {
 
 ## 相关教程 {#related-tutorials}
 
-- [以太坊开发者的安全考虑](/developers/docs/smart-contracts/security/) _- 构建智能合约时的安全考虑教程，包括库的使用。_
-- [了解 ERC-20 代币智能合约](/developers/tutorials/understand-the-erc-20-token-smart-contract/) _- 关于 ERC20 标准的教程，由多个库提供。_
+- [以太坊开发者的安全考虑](/developers/docs/smart-contracts/security/) _- 构建智能合约时的安全考虑教程，包括库的使用_。
+- [了解 ERC-20 代币智能合约](/developers/tutorials/understand-the-erc-20-token-smart-contract/) \_-关于 ERC20 标准的教程，由多个库提供。
 
 ## 延伸阅读 {#further-reading}
 

@@ -5,7 +5,7 @@ lang: zh
 sidebar: true
 ---
 
-关于以太坊的一个重要方面是，智能合约可以使用相对友好的开发者语言编程。 如果您使用 Python 或任何[大括号语言](https://wikipedia.org/wiki/List_of_programming_languages_by_type#Curly-bracket_languages)，就会找到语法熟悉的语言。
+关于以太坊的一个重要方面是，智能合约可以使用相对友好的开发者语言编程。 如果您熟悉 Python 或任何[大括号语言](https://wikipedia.org/wiki/List_of_programming_languages_by_type#Curly-bracket_languages)，可以找到一种语法熟悉的语言。
 
 最受欢迎和维护得最好的两种语言是：
 
@@ -206,7 +206,7 @@ def endAuction():
 **Yul+**
 
 - Yul 的低级、高效扩展。
-- 最初设计用于 [ optimistic rollup ](/developers/docs/scaling/optimistic-rollups/) 合约。
+- 最初设计用于[乐观卷叠](/developers/docs/scaling/optimistic-rollups/)合约。
 - Yul+ 可以被视为对 Yul 的实验性升级建议，为其添加新功能。
 
 ### 重要的链接 {#important-links-2}
