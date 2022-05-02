@@ -8246,6 +8246,14 @@ gatsby-transformer-gitinfo@^1.1.0:
     "@babel/runtime" "^7.6.3"
     simple-git "^1.126.0"
 
+gatsby-transformer-json@^4.11.0:
+  version "4.11.0"
+  resolved "https://registry.yarnpkg.com/gatsby-transformer-json/-/gatsby-transformer-json-4.11.0.tgz#8c761b09c76ca236b96a615be380594b59e3058a"
+  integrity sha512-/JYHP6lCsU1Bm9c0xZVm0KBsQCk11CqU5mnrx5rd1CJdaNlYWa2+1JapIUeeoZbEDktK4ws58vKunyhq5Njp8w==
+  dependencies:
+    "@babel/runtime" "^7.15.4"
+    bluebird "^3.7.2"
+
 gatsby-transformer-remark@^3.0.0:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/gatsby-transformer-remark/-/gatsby-transformer-remark-3.2.0.tgz#51a608dfc12a1c4c3b266c5076043d068050d049"

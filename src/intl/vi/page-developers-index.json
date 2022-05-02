@@ -37,9 +37,9 @@
   "page-developers-intro-dapps-link": "Giới thiệu về ứng dụng phi tập trung",
   "page-developers-intro-eth-link": "Giới thiệu về Ethereum",
   "page-developers-intro-stack": "Giới thiệu về ngăn xếp",
-  "page-developers-intro-stack-desc": "Giới thiệu về ngăn xếp Ethereum",
+  "page-developers-intro-stack-desc": "Giới thiệu về Ethereum-Stack",
   "page-developers-js-libraries-desc": "Sử dụng javascript để tương tác với các hợp đồng thông minh",
-  "page-developers-js-libraries-link": "Thư viện javascript",
+  "page-developers-js-libraries-link": "Thư viện JavaScript",
   "page-developers-language-desc": "Sử dụng Ethereum với các ngôn ngữ quen thuộc",
   "page-developers-languages": "Ngôn ngữ lập trình",
   "page-developers-learn": "Học cách phát triển Ethereum",
@@ -80,5 +80,5 @@
   "page-developers-transactions-desc": "Cách Ethereum tuyên bố thay đổi",
   "page-developers-transactions-link": "Giao dịch",
   "page-developers-web3-desc": "Sự khác biệt của thế giới phát triển web3",
-  "page-developers-web3-link": "Web2 vs Web3"
+  "page-developers-web3-link": "Web2 và Web3"
 }

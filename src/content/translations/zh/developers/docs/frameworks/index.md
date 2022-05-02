@@ -75,11 +75,6 @@ sidebar: true
 - [GitHub](https://github.com/alchemyplatform)
 - [Discord](https://discord.com/invite/A39JVCM)
 
-**Dapptools -** **_一套专注于以太坊的 CLI 工具，遵循 Unix 设计理念，倾向于可组合、可配置和可扩展性。_**
-
-- [主页](https://dapp.tools/)
-- [GitHub](https://github.com/dapphub/dapptools/)
-
 ## 延伸阅读 {#further-reading}
 
 _还有哪些社区资源对您有所帮助？ 编辑并添加本页面！_
