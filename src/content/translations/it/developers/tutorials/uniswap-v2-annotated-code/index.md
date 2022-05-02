@@ -892,11 +892,11 @@ I contratti periferici sono l'API (interfaccia del programma applicativo) per Un
 
 ### UniswapV2Router01.sol {#UniswapV2Router01}
 
-[Questo contratto](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router01.sol) è problematico e [non dovrebbe essere più usato](https://uniswap.org/docs/v2/smart-contracts/router01/). Fortunatamente, i contratti periferici sono privi di stato e non detengono alcuna risorsa, quindi è facile deprecarli e suggerire alle persone di usare una soluzione alternativa, ad esempio `UniswapV2Router02`.
+[Questo contratto](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router01.sol) è problematico e [non dovrebbe essere più usato](https://docs.uniswap.org/protocol/V2/reference/smart-contracts/router-01/). Fortunatamente, i contratti periferici sono privi di stato e non detengono alcuna risorsa, quindi è facile deprecarli e suggerire alle persone di usare una soluzione alternativa, ad esempio `UniswapV2Router02`.
 
 ### UniswapV2Router02.sol {#UniswapV2Router02}
 
-In gran parte dei casi puoi usare Uniswap tramite [questo contratto](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router02.sol). Puoi vedere come usarlo [qui](https://uniswap.org/docs/v2/smart-contracts/router02/).
+In gran parte dei casi puoi usare Uniswap tramite [questo contratto](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router02.sol). Puoi vedere come usarlo [qui](https://docs.uniswap.org/protocol/V2/reference/smart-contracts/router-02/).
 
 ```solidity
 pragma solidity =0.6.6;

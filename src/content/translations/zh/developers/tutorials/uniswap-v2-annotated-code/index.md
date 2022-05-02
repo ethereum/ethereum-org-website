@@ -892,11 +892,11 @@ contract UniswapV2Factory is IUniswapV2Factory {
 
 ### UniswapV2Router01.sol {#UniswapV2Router01}
 
-[该合约](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router01.sol) 存有问题，[不应该再使用](https://uniswap.org/docs/v2/smart-contracts/router01/)。 幸运的是， 外围合约无状态记录，也不拥有任何资产，所以很容易废弃。建议 使用 `UniswapV2Router02` 来替代。
+[该合约](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router01.sol) 存有问题，[不应该再使用](https://docs.uniswap.org/protocol/V2/reference/smart-contracts/router-01/)。 幸运的是， 外围合约无状态记录，也不拥有任何资产，所以很容易废弃。建议 使用 `UniswapV2Router02` 来替代。
 
 ### UniswapV2Router02.sol {#UniswapV2Router02}
 
-在大多数情况下，您会通过[该合约](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router02.sol)使用 Uniswap。 有关使用说明，您可以在[这里](https://uniswap.org/docs/v2/smart-contracts/router02/)找到。
+在大多数情况下，您会通过[该合约](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router02.sol)使用 Uniswap。 有关使用说明，您可以在[这里](https://docs.uniswap.org/protocol/V2/reference/smart-contracts/router-02/)找到。
 
 ```solidity
 pragma solidity =0.6.6;
