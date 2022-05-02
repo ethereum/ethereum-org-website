@@ -17,7 +17,7 @@ Verifique se você leu as [contas](/developers/docs/accounts/), [transações](/
 
 ## Uma máquina de vendas digitais {#a-digital-vending-machine}
 
-Talvez a melhor metáfora para um contrato inteligente seja uma máquina de venda automática, descrita por [Nick Szabo](https://unenumerated. blogspot. com/). Com as entradas certas, uma certa saída é garantida.
+Talvez a melhor metáfora para um contrato inteligente seja uma máquina de venda automática, descrita por [Nick Szabo](https://unenumerated.blogspot.com/). Com as entradas certas, uma certa saída é garantida.
 
 Para obter um snack de uma máquina de venda automática:
 
