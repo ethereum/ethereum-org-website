@@ -1180,6 +1180,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="https://github.com/B01AND"><img src="https://avatars.githubusercontent.com/u/88404615?v=4?s=100" width="100px;" alt=""/><br /><sub><b>B01AND</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=B01AND" title="Documentation">📖</a></td>
     <td align="center"><a href="https://ashwin.run/"><img src="https://avatars.githubusercontent.com/u/1689183?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ashwin Ramaswami</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=epicfaace" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/LieAlbertTriAdrian"><img src="https://avatars.githubusercontent.com/u/12984659?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Albert Lie Adrian</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=LieAlbertTriAdrian" title="Documentation">📖</a></td>
   </tr>
 </table>
 
