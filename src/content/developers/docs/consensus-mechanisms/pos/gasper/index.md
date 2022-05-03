@@ -10,6 +10,11 @@ Gasper is a combination of Casper the Friendly Finality Gadget (Casper-FGG) and 
 
 **note** that the original definition of Casper-FFG was updated slightly for inclusion in Gasper. On this page we consider the updated version.
 
+## Prerequisites
+
+To understand this material it is necessary to read the introductory page on [proof-of-stake](/developers/docs/consensus-mechanisms/pos/).
+
+
 ## The role of Gasper {#role-of-gasper}
 
 Gasper sits on top of a proof-of-stake blockchain where nodes provide ether as a security deposit that can be destroyed if they are lazy or dishonest in proposing or validating blocks. Gasper is the mechanism defining how validators get rewarded and punished, decide which blocks to accept and reject, and which fork of the blockchain to build on.
