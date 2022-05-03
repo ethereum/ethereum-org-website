@@ -7203,6 +7203,72 @@
         "doc",
         "translation"
       ]
+    },
+    {
+      "login": "Ghospel",
+      "name": "Jasper",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5272374?v=4",
+      "profile": "https://github.com/Ghospel",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "rhigdon",
+      "name": "Ryan Higdn",
+      "avatar_url": "https://avatars.githubusercontent.com/u/133530?v=4",
+      "profile": "http://ryanhigdon.com",
+      "contributions": [
+        "bug",
+        "doc"
+      ]
+    },
+    {
+      "login": "Eni-G",
+      "name": "Eni-G",
+      "avatar_url": "https://avatars.githubusercontent.com/u/100782096?v=4",
+      "profile": "https://github.com/Eni-G",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "B01AND",
+      "name": "B01AND",
+      "avatar_url": "https://avatars.githubusercontent.com/u/88404615?v=4",
+      "profile": "https://github.com/B01AND",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "epicfaace",
+      "name": "Ashwin Ramaswami",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1689183?v=4",
+      "profile": "https://ashwin.run/",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "LieAlbertTriAdrian",
+      "name": "Albert Lie Adrian",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12984659?v=4",
+      "profile": "https://github.com/LieAlbertTriAdrian",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "1337-ishaan",
+      "name": "Ishaan Parmar",
+      "avatar_url": "https://avatars.githubusercontent.com/u/64636222?v=4",
+      "profile": "https://github.com/1337-ishaan",
+      "contributions": [
+        "code",
+        "design",
+        "ideas"
+      ]
     }
   ],
   "contributorsPerLine": 7,

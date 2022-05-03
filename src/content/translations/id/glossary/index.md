@@ -634,7 +634,7 @@ Jenis solusi penskalaan [lapisan 2](#layer-2) yang mengelompokkan beberapa trans
 
 ### Serenity {#serenity}
 
-Tahapan pengembangan Ethereum yang memulai serangkaian penskalaan dan peningkatan berkelanjutan, yang sebelumnya dikenal sebagai 'Ehtereum 2.0', atau 'Eth2'.
+Tahapan pengembangan Ethereum yang memulai serangkaian penskalaan dan peningkatan berkelanjutan, yang sebelumnya dikenal sebagai 'Ethereum 2.0', atau 'Eth2'.
 
 <DocLink to="/upgrades/">
   Peningkatan Ethereum

@@ -92,7 +92,7 @@ event Transfer(address indexed from, address indexed to, uint256 value);
 
 将通证（值）的数量从`from`地址发送到`to`地址时会发出此事件。
 
-交易地址`from`是 0x00... 通常是生成新通证，交易的地址`to`为 0x00..0000 是销毁通证。
+在铸造新代币的情况下，转账通常是`from` 0x00..0000 地址，而在销毁代币的情况下，转账是`to` 0x00..0000。
 
 ```solidity
 event Approval(address indexed owner, address indexed spender, uint256 value);
@@ -105,7 +105,7 @@ event Approval(address indexed owner, address indexed spender, uint256 value);
 下面是 ERC-20 通证的最简单代码：
 
 ```solidity
-pragma solidity ^0.6.0;
+pragma solidity ^0.8.0;
 
 interface IERC20 {
 
@@ -130,21 +130,14 @@ contract ERC20Basic is IERC20 {
     uint8 public constant decimals = 18;
 
 
-    event Approval(address indexed tokenOwner, address indexed spender, uint tokens);
-    event Transfer(address indexed from, address indexed to, uint tokens);
-
-
     mapping(address => uint256) balances;
 
     mapping(address => mapping (address => uint256)) allowed;
 
-    uint256 totalSupply_;
-
-    using SafeMath for uint256;
+    uint256 totalSupply_ = 10 ether;
 
 
-   constructor(uint256 total) public {
-    totalSupply_ = total;
+   constructor() {
     balances[msg.sender] = totalSupply_;
     }
 
@@ -158,8 +151,8 @@ contract ERC20Basic is IERC20 {
 
     function transfer(address receiver, uint256 numTokens) public override returns (bool) {
         require(numTokens <= balances[msg.sender]);
-        balances[msg.sender] = balances[msg.sender].sub(numTokens);
-        balances[receiver] = balances[receiver].add(numTokens);
+        balances[msg.sender] = balances[msg.sender]-numTokens;
+        balances[receiver] = balances[receiver]+numTokens;
         emit Transfer(msg.sender, receiver, numTokens);
         return true;
     }
@@ -178,28 +171,13 @@ contract ERC20Basic is IERC20 {
         require(numTokens <= balances[owner]);
         require(numTokens <= allowed[owner][msg.sender]);
 
-        balances[owner] = balances[owner].sub(numTokens);
-        allowed[owner][msg.sender] = allowed[owner][msg.sender].sub(numTokens);
-        balances[buyer] = balances[buyer].add(numTokens);
+        balances[owner] = balances[owner]-numTokens;
+        allowed[owner][msg.sender] = allowed[owner][msg.sender]-numTokens;
+        balances[buyer] = balances[buyer]+numTokens;
         emit Transfer(owner, buyer, numTokens);
         return true;
     }
 }
-
-library SafeMath {
-    function sub(uint256 a, uint256 b) internal pure returns (uint256) {
-      assert(b <= a);
-      return a - b;
-    }
-
-    function add(uint256 a, uint256 b) internal pure returns (uint256) {
-      uint256 c = a + b;
-      assert(c >= a);
-      return c;
-    }
-}
 ```
-
-此实现使用 SafeMath 库。 如果您想了解[该库如何帮助您处理智能合约中的溢出和下溢](https://ethereumdev.io/using-safe-math-library-to-prevent-from-overflows/)，请阅读我们的教程。
 
 ERC-20 通证标准的另一个优秀实现是[OpenZepelin ERC-20 实现](https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master/contracts/token/ERC20)。
