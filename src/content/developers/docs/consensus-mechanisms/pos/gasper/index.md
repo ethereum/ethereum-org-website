@@ -21,7 +21,7 @@ Gasper sits on top of a proof-of-stake blockchain where nodes provide ether as a
 
 ## What is finality? {#what-is-finality}
 
-[Casper the Friendly Finality Gadget (Casper-FFG)](https://arxiv.org/pdf/1710.09437.pdf) is an algorithm that finalizes blocks. Finalizing a block means upgrading a block so that it cannot be reverted (unless there has been a critical consensus failure). Finalized blocks can be thought of as information the blockchain is certain about. A block must pass through a two-step upgrade procedure for a block to be finalized:
+Finality is a property of certain blocks that means they cannot be reverted unless there has been a critical consensus failure and an attacker has destroyed at least 1/3 of the total staked ether. Finalized blocks can be thought of as information the blockchain is certain about. A block must pass through a two-step upgrade procedure for a block to be finalized:
 
 1. Two-thirds of the total staked ether must have voted in favor of that block's inclusion in the canonical chain. This condition upgrades the block to "justified". Justified blocks are unlikely to be reverted, but they can be under certain conditions. 
 2. When another block is justified on top of a justified block, it is upgraded to "finalized". Finalizing a block is a commitment to include the block in the canonical chain. It cannot be reverted unless an attacker destroys millions of ether (billions of $USD).
@@ -33,7 +33,7 @@ Because finality requires a two-thirds agreement that a block is canonical, an a
 1. Owning or manipulating two-thirds of the total staked ether.
 2. Destroying at least one-third of the total staked ether. 
 
-The first condition arises because two-thirds of the staked ether is required to finalize a chain. The second condition arises because if two-thirds of the total stake has voted in favor of both forks, then one-third must have voted on both. Double-voting is a slashing condition that would be maximally punished, and one-third of the total stake would be destroyed. As of May 2022, this requires an attacker to burn around $10 billion worth of ether.
+The first condition arises because two-thirds of the staked ether is required to finalize a chain. The second condition arises because if two-thirds of the total stake has voted in favor of both forks, then one-third must have voted on both. Double-voting is a slashing condition that would be maximally punished, and one-third of the total stake would be destroyed. As of May 2022, this requires an attacker to burn around $10 billion worth of ether. The algorithm that justifies and finalizes blocks in Gasper is a slightly modified form of [Casper the Friendly Finality Gadget (Casper-FFG)](https://arxiv.org/pdf/1710.09437.pdf). 
 
 ### Incentives and Slashing {#incentives-and-slashing}
 
