@@ -196,6 +196,14 @@
     "toPath": "/:splat/layer-2/"
   },
   {
+    "fromPath": "/grants/",
+    "toPath": "/en/community/grants/"
+  },
+  {
+    "fromPath": "/*/grants/",
+    "toPath": "/:splat/community/grants"
+  },
+  {
     "fromPath": "/no/*",
     "toPath": "/nb/:splat"
   },
