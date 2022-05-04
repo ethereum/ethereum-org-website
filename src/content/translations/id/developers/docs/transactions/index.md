@@ -23,9 +23,9 @@ Transaksi membutuhkan biaya dan harus ditambang untuk menjadi valid. Untuk membu
 
 Sebuah transaksi yang dikirim meliputi informasi berikut:
 
-- `penerima` – alamat yang menerima (jika akun dengan kepemilikan eksternal, transaksi akan mentransfer nilai. Jika akun kontrak, transaksi akan mengeksekusi kode kontrak)
-- `tanda tangan` – tanda pengenal dari sang pengirim. Ini dihasilkan ketika kunci privat pengirim menandatangani transaksi dan mengonfirmasi bahwa pengirim telah mengizinkan transaksi ini
-- `nilai` – jumlah ETH yang ditransfer dari pengirim ke peneriman (dalam WEI, denominasi dari ETH)
+- `recipient` – alamat yang menerima (jika akun dengan kepemilikan eksternal, transaksi akan mentransfer nilai. Jika akun kontrak, transaksi akan mengeksekusi kode kontrak)
+- `signature` – tanda pengenal dari sang pengirim. Ini dihasilkan ketika kunci privat pengirim menandatangani transaksi dan mengonfirmasi bahwa pengirim telah mengizinkan transaksi ini
+- `value` – jumlah ETH yang ditransfer dari pengirim ke peneriman (dalam WEI, denominasi dari ETH)
 - `data` – field tambahan untuk memasukkan data arbitrari
 - `gasLimit` – jumlah maksimum unit gas yang bisa dipakai dalam transaksi. Unit gas menunjukkan langkah komputasional
 - `maxPriorityFeePerGas` - jumlah gas maksimum yang akan dimasukkan sebagai tips bagi penambang
@@ -180,7 +180,7 @@ Tonton Austin memandu Anda dalam transaksi, gas, dan penambangan.
 
 Ethereum pada awalnya memiliki satu format transaksi. Setiap transaksi berisi nonce, harga gas, batas gas, alamat kepada, nilai, data, v, r, dan s. Bidang ini dikodekan RLP, agar terlihat seperti ini:
 
-`RLP([nonce, gasPrice, gasLimit, kepada, nilai, data, v, r, s])`
+`RLP([nonce, gasPrice, gasLimit, to, value, data, v, r, s])`
 
 Ethereum telah berkembang untuk mendukung beberapa jenis transaksi agar memungkinkan fitur baru seperti daftar akses dan [EIP-1559](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md) diimplementasikan tanpa memengaruhi format transaksi warisan.
 
