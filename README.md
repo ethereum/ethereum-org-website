@@ -1186,6 +1186,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/max-donger"><img src="https://avatars.githubusercontent.com/u/56192627?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Max</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=max-donger" title="Documentation">📖</a> <a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Amax-donger" title="Bug reports">🐛</a></td>
     <td align="center"><a href="https://github.com/LuozhuZhang"><img src="https://avatars.githubusercontent.com/u/70309026?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Luozhu</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=LuozhuZhang" title="Documentation">📖</a></td>
   </tr>
+  <tr>
+    <td align="center"><a href="http://www.linkedin.com/in/sharma-yash"><img src="https://avatars.githubusercontent.com/u/44340561?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Yash Sharma </b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=yash-sharma1" title="Documentation">📖</a></td>
+  </tr>
 </table>
 
 <!-- markdownlint-restore -->
