@@ -28,6 +28,7 @@ The [Ethereum Improvement Proposals (EIPs) GitHub repository](https://github.com
 EIP editors are tasked with process of reviewing EIPs for technical soundness, correct spelling/grammar, and code style. Martin Becze, Vitalik Buterin, Gavin Wood, and a few others were the original EIP editors from 2015 to late 2016. 
 
 The current EIP editors are:
+
 - Alex Beregszaszi (@axic)
 - Matt Garnett (@lightclient)
 - Micah Zoltu (@MicahZoltu)
