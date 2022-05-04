@@ -7289,6 +7289,15 @@
         "doc",
         "bug"
       ]
+    },
+    {
+      "login": "LuozhuZhang",
+      "name": "Luozhu",
+      "avatar_url": "https://avatars.githubusercontent.com/u/70309026?v=4",
+      "profile": "https://github.com/LuozhuZhang",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
