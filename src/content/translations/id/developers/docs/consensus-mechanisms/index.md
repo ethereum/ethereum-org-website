@@ -16,7 +16,7 @@ Untuk lebih memahami halaman ini, kami sarankan Anda membaca [pengantar Ethereum
 
 ## Apa itu konsensus? {#what-is-consensus}
 
-Yang kami maksud dengan konsensus adalah kesepakatan umum yang telah dicapai. Anggaplah ada sebuah grup yang terdiri dari lima orang pergi ke bioskop. Jika tiga dari lima orang tersebut setuju dengan satu judul film, konsensus dicapai — aturan mayoritas.
+Yang kami maksud dengan konsensus adalah kesepakatan umum yang telah dicapai. Anggaplah ada sebuah grup orang yang pergi ke bioskop. Jika tidak ada kesepakatan terhadap pilihan film yang diusulkan, maka konsensus dicapai. Dalam kasus ekstrem, grup akan pada akhirnya terpecah.
 
 Terkait dengan blockchain, mencapai konsensus berarti setidaknya 51% node di jaringan sepakat tentang state jaringan global berikutnya.
 
@@ -52,7 +52,7 @@ Ethereum memiliki rencana untuk melakukan peningkatan ke protokol konsensus **bu
 
 #### Pembuatan blok {#pos-block-creation}
 
-Bukti taruhan dijalankan oleh validator yang telah mempertaruhkan ETH untuk berpartisipasi dalam sistem. Validator dipilih secara acak untuk membuat blok baru, membagikannya dengan jaringan, dan mendapatkan imbalan. Alih-alih perlu melakukan pekerjaan komputasi yang intens, Anda hanya perlu mempertaruhkan ETH Anda di jaringan. Inilah yang mendorong perilaku jaringan yang sehat.
+Bukti taruhan dijalankan oleh validator yang telah mempertaruhkan ETH untuk berpartisipasi dalam sistem. Validator dipilih secara acak untuk membuat blok baru, membagikannya dengan jaringan, dan mendapatkan imbalan. Alih-alih perlu melakukan pekerjaan komputasi yang intens, Anda hanya perlu menstaking ETH Anda di jaringan. Inilah yang mendorong perilaku jaringan yang sehat.
 
 #### Keamanan {#pos-security}
 
@@ -70,13 +70,13 @@ Tonton selengkapnya tentang berbagai jenis mekanisme konsensus yang digunakan di
 
 Saat ini secara teknis, bukti kerja dan bukti taruhan pada dasarnya bukan protokol konsensus, tapi sering dianggap demikian agar mudah dipahami. Protokol ini sebenarnya merupakan mekanisme ketahanan Sybil dan pemilih penulis blok; merupakan cara untuk menentukan siapa penulis dari blok terakhir. Mekanisme ketahanan Sybil inilah yang dikombinasikan dengan aturan pemilihan rantai yang membentuk mekanisme konsensus sebenarnya.
 
-**Ketahanan Sybil** mengukur seberapa kuat sebuah protokol menghadapi [serangan Sybil](https://en.wikipedia.org/wiki/Sybil_attack). Serangan Sybil terjadi saat satu pengguna atau grup berpura-pura menjadi banyak pengguna. Ketahanan terhadap jenis serangan ini penting untuk blockchain terdesentralisasi dan memungkinkan para penambang dan validator diberikan imbalan dengan adil sesuai dengan sumber daya yang terpakai. Bukti kerja dan bukti taruhan melawan serangan ini dengan membuat para pengguna menghabiskan banyak energi atau menyediakan banyak jaminan. Perlindungan ini adalah tindakan pencegahan ekonomis terhadap serangan Sybil.
+**Ketahanan Sybil** mengukur seberapa kuat sebuah protokol menghadapi [serangan Sybil](https://wikipedia.org/wiki/Sybil_attack). Serangan Sybil terjadi saat satu pengguna atau grup berpura-pura menjadi banyak pengguna. Ketahanan terhadap jenis serangan ini penting untuk rantai blok terdesentralisasi dan memungkinkan para penambang dan validator diberi imbalan dengan adil sesuai dengan sumber daya yang terpakai. Bukti kerja dan bukti taruhan melawan serangan ini dengan membuat para pengguna menghabiskan banyak energi atau menyediakan banyak jaminan. Perlindungan ini adalah tindakan pencegahan ekonomis terhadap serangan Sybil.
 
-**Aturan pemilihan rantai** digunakan untuk menentukan rantai mana yang merupakan rantai yang "benar". Ethereum dan Bitcoin saat ini menggunakan aturan "rantai terpanjang", yang berarti bahwa blockchain mana pun yang merupakan rantai terpanjang akan menjadi acuan yang dianggap valid oleh keseluruhan node dan dengannya mereka akan bekerja. Untuk rantai bukti kerja, rantai terpanjangnya ditentukan oleh total tingkat kesulitan bukti kerja kumulatif dari rantai.
+**Aturan pemilihan rantai** digunakan untuk menentukan rantai mana yang merupakan rantai yang "benar". Ethereum dan Bitcoin saat ini menggunakan aturan "rantai terpanjang", yang berarti bahwa rantai blok mana pun yang merupakan rantai terpanjang akan menjadi acuan yang dianggap valid oleh keseluruhan node dan dengannya mereka akan bekerja. Untuk rantai bukti kerja, rantai terpanjangnya ditentukan oleh total tingkat kesulitan bukti kerja kumulatif dari rantai.
 
 Kombinasi bukti kerja dan aturan rantai terpanjang dikenal sebagai "Konsensus Nakamoto."
 
-Eth2 ([rantai suar](/eth2/beacon-chain/)) menggunakan mekanisme konsensus yang disebut [Casper, Gadget Finality yang Ramah](https://arxiv.org/abs/1710.09437), yang berbasis bukti kerja.
+[Rantai Suar](/upgrades/beacon-chain/) menggunakan mekanisme konsensus yang disebut [Casper the Friendly Finality Gadget](https://arxiv.org/abs/1710.09437), yang berbasis bukti taruhan.
 
 ## Bacaan lebih lanjut {#further-reading}
 

@@ -45,7 +45,7 @@ Baca lebih lanjut tentang [keuntungan menjalankan node Anda sendiri](/developers
 Berikut ini adalah daftar beberapa penyedia node Ethereum paling populer, jangan ragu-ragu menambahkan penyedia mana saja yang terlewat! Setiap layanan node menawarkan keuntungan dan fitur berbeda di samping layanan gratis atau berbayar, Anda harus menginvestigasi mana yang paling sesuai dengan kebutuhan Anda sebelum membuat keputusan.
 
 - [**Alchemy**](https://www.alchemy.com/)
-  - [Dokumentasi](https://docs.alchemyapi.io/)
+  - [Dokumen](https://docs.alchemyapi.io/)
   - Fitur
     - Opsi layanan gratis
     - Skalakan saat Anda jalankan
@@ -55,14 +55,26 @@ Berikut ini adalah daftar beberapa penyedia node Ethereum paling populer, jangan
     - Endpoint API yang unik
     - Webhook
     - Dukungan langsung
+- [**Ankr**](https://www.ankr.com/)
+  - [Dokumen](https://docs.ankr.com/)
+  - Fitur
+    - Protokol Ankr - akses terbuka ke endpoint API RPC Publik untuk 8+ rantai
+    - Memuat saldo dan pengawasan kesehatan node untuk gerbang masuk yang cepat dan tepercaya ke node terdekat yang tersedia
+    - Tingkatan premium yang mengaktifkan endpoint WSS dan batas laju yang tak terbatas
+    - Node penuh satu klik dan penyebaran node validator untuk 40+ rantai
+    - Skalakan saat Anda jalankan
+    - Alat analitik
+    - Dasbor
+    - Endpoint RPC, HTTPS, dan WSS
+    - Dukungan langsung
 - [**BlockDaemon**](https://blockdaemon.com/)
-  - [Dokumentasi](https://ubiquity.docs.blockdaemon.com/)
+  - [Dokumen](https://ubiquity.docs.blockdaemon.com/)
   - Keuntungan
     - Dasbor
     - Basis node satuan
     - Analitik
 - [**Chainstack**](https://chainstack.com/)
-  - [Dokumentasi](https://docs.chainstack.com/)
+  - [Dokumen](https://docs.chainstack.com/)
   - Fitur
     - Node umum gratis
     - Node arsip umum
@@ -74,10 +86,10 @@ Berikut ini adalah daftar beberapa penyedia node Ethereum paling populer, jangan
     - Bayar harga per jam
     - Dukungan langsung 24/7
 - [**GetBlock**](https://getblock.io/)
-  - [Dokumentasi](https://getblock.io/docs/get-started/authentication-with-api-key/)
+  - [Dokumen](https://getblock.io/docs/get-started/authentication-with-api-key/)
   - Fitur
-    - Akses ke 40+ node blockchain
-    - 40rb permintaan harian gratis
+    - Akses ke 40+ simpul rantai blok
+    - 40 Ribu permintaan harian gratis
     - Jumlah kunci API yang tidak terbatas
     - Kecepatan koneksi tinggi 1GB/detik
     - Lacak+Arsipkan
@@ -94,17 +106,37 @@ Berikut ini adalah daftar beberapa penyedia node Ethereum paling populer, jangan
     - Node penuh khusus
     - Waktu sinkronisasi yang cepat untuk penerapan khusus
     - Dukungan langsung 24/7
-    - Akses ke 50+ node blockchain
+    - Akses ke 50+ simpul rantai blok
 - [**Infura**](https://infura.io/)
-  - [Dokumentasi](https://infura.io/docs)
+  - [Dokumen](https://infura.io/docs)
   - Fitur
     - Opsi layanan gratis
     - Skalakan saat Anda jalankan
     - Data arsip berbayar
     - Dukungan langsung
     - Dasbor
+- [**Kaleido**](https://kaleido.io/)
+  - [Dokumen](https://docs.kaleido.io/)
+  - Fitur
+    - Free startier tier
+    - One-click Ethereum node deployment
+    - Customizable clients and algorithms (Geth, Quorum & Besu || PoA, IBFT & Raft)
+    - 500+ administrative and service APIs
+    - RESTful interface for Ethereum transaction submission (Apache Kafka backed)
+    - Outbound streams for event delivery (Apache Kafka backed)
+    - Deep collection of "off-chain" and ancillary services (e.g. bilateral encrypted messaging transport)
+    - Straightforward network onboarding with governance and role-based access control
+    - Sophisticated user management for both administrators and end users
+    - Highly scalable, resilient, enterprise-grade infrastructure
+    - Cloud HSM private key management
+    - Ethereum Mainnet Tethering
+    - ISO 27k and SOC 2, Type 2 certifications
+    - Dynamic runtime configuration (e.g. adding cloud integrations, altering node ingresses, etc.)
+    - Support for multi-cloud, multi-region and hybrid deployment orchestrations
+    - Simple hourly SaaS-based pricing
+    - SLAs and 24x7 support
 - [**Moralis**](https://moralis.io/)
-  - [Dokumentasi](https://docs.moralis.io/)
+  - [Dokumen](https://docs.moralis.io/)
   - Fitur
     - Node umum gratis
     - Node arsip umum gratis
@@ -116,12 +148,12 @@ Berikut ini adalah daftar beberapa penyedia node Ethereum paling populer, jangan
     - Endpoint API yang unik
     - Dukungan teknis langsung
 - [**Pocket Network**](https://www.pokt.network/)
-  - [Dokumentasi](https://docs.pokt.network/home/)
+  - [Dokumen](https://docs.pokt.network/home/)
   - Fitur
     - Protokol dan Pasar RPC terdesentralisasi
-    - 1 JT Permintaan Per Hari untuk Layanan Gratis (per titik akhir, maks. 2)
+    - 1 Juta Permintaan Per Hari untuk Layanan Gratis (per titik akhir, maks. 2)
     - [Endpoint Publik](https://docs.pokt.network/home/resources/public-rpc-endpoints)
-    - Pra-Penaruhan+ Program (jika Anda memerlukan lebih dari 1JT permintaan per hari)
+    - Pra-Penaruhan+ Program (jika Anda memerlukan lebih dari 1 Juta permintaan per hari)
     - Didukung 15+ Blockchain
     - 6400+ Node yang menghasilkan POKT untuk aplikasi layanan
     - Node Arsip, Node Arsip dengan Pelacakan dan Dukungan Node Testnet
@@ -143,10 +175,34 @@ Berikut ini adalah daftar beberapa penyedia node Ethereum paling populer, jangan
     - Dasbor
     - Analitik
 - [**Rivet**](https://rivet.cloud/)
-  - [Dokumentasi](https://rivet.readthedocs.io/en/latest/)
+  - [Dokumen](https://rivet.readthedocs.io/en/latest/)
   - Fitur
     - Opsi layanan gratis
     - Skalakan saat Anda jalankan
+- [**SettleMint**](https://console.settlemint.com/)
+  - [Dokumen](https://docs.settlemint.com/)
+  - Fitur
+    - Uji coba gratis
+    - Skalakan saat Anda jalankan
+    - Dukungan GraphQL
+    - Endpoint RPC dan WSS
+    - Node penuh khusus
+    - Bawa cloud Anda
+    - Peralatan analitik
+    - Dasbor
+    - Bayar harga per jam
+    - Dukungan langsung
+- [**Watchdata**](https://watchdata.io/)
+  - [Dokumen](https://docs.watchdata.io/)
+  - Fitur
+    - Data reliability
+    - Uninterrupted connection with no downtime
+    - Process automation
+    - Free tariffs
+    - High limits that suit any user
+    - Support for various nodes
+    - Resource scaling
+    - High processing speeds
 
 ## Bacaan lebih lanjut {#further-reading}
 
