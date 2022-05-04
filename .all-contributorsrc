@@ -7269,6 +7269,16 @@
         "design",
         "ideas"
       ]
+    },
+    {
+      "login": "tarunbatra",
+      "name": "Tarun Batra",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5329230?v=4",
+      "profile": "http://tarunbatra.com",
+      "contributions": [
+        "doc",
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
