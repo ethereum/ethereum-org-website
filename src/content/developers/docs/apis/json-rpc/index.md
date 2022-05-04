@@ -21,11 +21,11 @@ While you may choose to interact directly with Ethereum clients via the JSON-RPC
 
 ## Spec {#spec}
 
-The full JSON-RPC API spec is available [here](https://github.com/ethereum/execution-apis).
+[Read the full JSON-RPC API spec on GitHub](https://github.com/ethereum/execution-apis).
 
 ## Conventions {#conventions}
 
-#### Hex value encoding {#hex-encoding}
+### Hex value encoding {#hex-encoding}
 
 Two key data types get passed over JSON: unformatted byte arrays and quantities. Both are passed with a hex encoding but with different requirements for formatting.
 
