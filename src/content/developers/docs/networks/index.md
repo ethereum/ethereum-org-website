@@ -48,7 +48,7 @@ A proof-of-authority testnet that works across clients; an ideal testnet for app
 - [Github](https://github.com/goerli/testnet)
 - [Etherscan](https://goerli.etherscan.io)
 
-Görli faucets:
+##### Görli faucets
 
 - [Görli faucet](https://faucet.goerli.mudit.blog/)
 - [Chainlink faucet](https://faucets.chain.link/)
