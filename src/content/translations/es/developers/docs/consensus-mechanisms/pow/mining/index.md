@@ -1,6 +1,6 @@
 ---
 title: Minería
-description: Una explicación sobre el funcionamiento de la minería en Etherum y sobre cómo mantiene a Ethereum seguro y descentralizado.
+description: Una explicación sobre el funcionamiento de la minería en Ethereum y sobre cómo mantiene a Ethereum seguro y descentralizado.
 lang: es
 sidebar: true
 incomplete: true
