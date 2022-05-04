@@ -44,10 +44,10 @@ Bukti kerja berarti sebagai berikut:
 - `timestamp` – waktu ketika blok ditambang.
 - `blockNumber` – panjang blockchain dalam blok.
 - `baseFeePerGas` - biaya minimum per gas yang diperlukan untuk memasukkan sebuah transaksi ke dalam blok.
-- `tingkat kesulitan` – upaya yang diperlukan untuk menambang blok.
+- `difficulty` – upaya yang diperlukan untuk menambang blok.
 - `mixHash` – pengenal unik untuk blok itu.
 - `parentHash` – nama pengenal unik untuk blok yang dibuat sebelumnya (ini tentang cara menautkan blok dalam sebuah rantai).
-- `transaksi` – transaksi yang termasuk dalam blok.
+- `transactions` – transaksi yang termasuk dalam blok.
 - `stateRoot` – seluruh state sistem: saldo akun, penyimpanan kontrak, kode kontrak, dan nonce akun ada di dalamnya.
 - `nonce` – hash yang, ketika digabungkan dengan mixHash, membuktikan bahwa blok telah melalui [bukti kerja](/developers/docs/consensus-mechanisms/pow/).
 

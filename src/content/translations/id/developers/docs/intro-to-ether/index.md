@@ -19,7 +19,7 @@ Mata uang kripto pertama adalah Bitcoin, yang dibuat oleh Satoshi Nakamoto. Seja
 
 ## Apa itu ether? {#what-is-ether}
 
-**Ether (ETH)** adalah mata uang kripto yang digunakan untuk berbagai keperluan di jaringan Ethereum. Fundamentally, it is the only acceptable form of payment for transaction fees, and after [The Merge](/upgrades/merge), ether will be required to validate and propose blocks on Mainnet. Ether juga digunakan sebagai bentuk jaminan utama di pasar pinjaman [DeFi](/defi), sebagai unit akun di pasar NFT, sebagai pembayaran yang diperoleh karena menjalanan layanan atau menjual barang dunia nyata, dan banyak lagi.
+**Ether (ETH)** adalah mata uang kripto yang digunakan untuk berbagai keperluan di jaringan Ethereum. Pada dasarnya, ini adalah satu-satunya bentuk pembayaran yang dapat diterima untuk biaya transaksi, dan setelah [penggabungan](/upgrades/merge) juga diperlukan untuk memvalidasi dan mengusulkan pemblokiran di Jaringan Utama. Ether juga digunakan sebagai bentuk jaminan utama di pasar pinjaman [DeFi](/defi), sebagai unit akun di pasar NFT, sebagai pembayaran yang diperoleh karena menjalanan layanan atau menjual barang dunia nyata, dan banyak lagi.
 
 Ethereum memungkinkan pengembang untuk membuat [**aplikasi terdesentralisasi (dapp)**](/developers/docs/dapps), yang semuanya berbagi pool daya komputasi. Pool bersama ini terbatas, sehingga Ethereum memerlukan sebuah mekanisme untuk menentukan siapa yang dapat menggunakannya. Jika tidak, sebuah dapp dapat secara tidak sengaja atau dengan maksud jahat menghabiskan semua sumber daya jaringan, yang akan menghalangi pengguna lainnya untuk mengaksesnya.
 
@@ -58,7 +58,7 @@ Gwei, kependekan dari giga-wei, sering digunakan untuk menggambarkan biaya gas d
 
 ## Mentransfer ether {#transferring-ether}
 
-Setiap transaksi di Ethereum berisi bidang `nilai`, yang menentukan jumlah ether yang akan ditransfer, dalam denominasi wei, untuk dikirim dari alamat pengirim ke alamat penerima.
+Setiap transaksi di Ethereum berisi bidang `value`, yang menentukan jumlah ether yang akan ditransfer, dalam denominasi wei, untuk dikirim dari alamat pengirim ke alamat penerima.
 
 Ketika alamat penerima merupakan [kontrak pintar](/developers/docs/smart-contracts/), ether yang ditransfer ini dapat digunakan untuk membayar gas ketika kontrak pintar menjalankan kodenya.
 
@@ -66,7 +66,7 @@ Ketika alamat penerima merupakan [kontrak pintar](/developers/docs/smart-contrac
 
 ## Membuat kueri ether {#querying-ether}
 
-Pengguna dapat membuat kueri saldo eter dari [akun](/developers/docs/accounts/) dengan memeriksa bidang `saldo` akun, yang menunjukkan kepemilikan ether dalam mata uang wei.
+Pengguna dapat membuat kueri saldo eter dari [akun](/developers/docs/accounts/) dengan memeriksa bidang `balance` akun, yang menunjukkan kepemilikan ether dalam mata uang wei.
 
 [Etherscan](https://etherscan.io) adalah sebuah peralatan populer untuk memeriksa saldo alamat melalui aplikasi berbasis web. Sebagai contoh, [halaman Etherscan ini](https://etherscan.io/address/0xde0b295669a9fd93d5f28d9ec85e40f4cb697bae) menampilkan saldo untuk Yayasan Ethereum.
 
