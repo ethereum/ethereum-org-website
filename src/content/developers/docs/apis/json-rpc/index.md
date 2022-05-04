@@ -27,9 +27,13 @@ The full JSON-RPC API spec is available [here](https://github.com/ethereum/execu
 
 #### Hex value encoding {#hex-encoding}
 
-At present there are two key datatypes that are passed over JSON: unformatted byte arrays and quantities. Both are passed with a hex encoding, however with different requirements to formatting:
+Two key data types get passed over JSON: unformatted byte arrays and quantities. Both are passed with a hex encoding but with different requirements for formatting.
 
-When encoding **QUANTITIES** (integers, numbers): encode as hex, prefix with "0x", the most compact representation (slight exception: zero should be represented as "0x0"). Examples:
+#### Quantities {#quantities-encoding}
+
+When encoding quantities (integers, numbers): encode as hex, prefix with "0x", the most compact representation (slight exception: zero should be represented as "0x0"). 
+
+Here are some examples:
 
 - 0x41 (65 in decimal)
 - 0x400 (1024 in decimal)
@@ -37,7 +41,11 @@ When encoding **QUANTITIES** (integers, numbers): encode as hex, prefix with "0x
 - WRONG: 0x0400 (no leading zeroes allowed)
 - WRONG: ff (must be prefixed 0x)
 
-When encoding **UNFORMATTED DATA** (byte arrays, account addresses, hashes, bytecode arrays): encode as hex, prefix with "0x", two hex digits per byte. Examples:
+### Unformatted data {#unformatted-data-encoding}
+
+When encoding unformatted data (byte arrays, account addresses, hashes, bytecode arrays): encode as hex, prefix with "0x", two hex digits per byte. 
+
+Here are some examples:
 
 - 0x41 (size 1, "A")
 - 0x004200 (size 3, "\0B\0")
@@ -45,7 +53,7 @@ When encoding **UNFORMATTED DATA** (byte arrays, account addresses, hashes, byte
 - WRONG: 0xf0f0f (must be even number of digits)
 - WRONG: 004200 (must be prefixed 0x)
 
-#### The default block parameter {#default-block}
+### The default block parameter {#default-block}
 
 The following methods have an extra default block parameter:
 
@@ -66,11 +74,11 @@ The following options are possible for the defaultBlock parameter:
 
 ## Usage Example {#usage-example}
 
-#### Deploying a contract using JSON_RPC {#deploying-contract}
+### Deploying a contract using JSON_RPC {#deploying-contract}
 
-This section includes a demonstration of how to deploy a contract using only the RPC interface. There are alternative routes to deploying contracts where this complexity is abstracted away, for example using libraries built on top of the RPC interface such as [web3.js](https://web3js.readthedocs.io/) and [web3.py](https://github.com/ethereum/web3.py). Those methods are generally easier to understand and less error prone, but it is still useful to understand what is happening under the hood.
+This section includes a demonstration of how to deploy a contract using only the RPC interface. There are alternative routes to deploying contracts where this complexity is abstracted away—for example, using libraries built on top of the RPC interface such as [web3.js](https://web3js.readthedocs.io/) and [web3.py](https://github.com/ethereum/web3.py). These abstractions are generally easier to understand and less error-prone, but it is still helpful to understand what is happening under the hood.
 
-The following is a very simple smart contract called `Multiply7` that will be deployed using the JSON-RPC interface to an Ethereum node. This tutorial assumes the reader is already running a Geth node. More information on nodes and clients is available [here](/developers/docs/nodes-and-clients/run-a-node). Please refer to individual [client](/developers/docs/nodes-and-clients/) documentation to see how to start the HTTP JSON-RPC for non-Geth clients. Most clients default to serving on `localhost:8545`.
+The following is a straightforward smart contract called `Multiply7` that will be deployed using the JSON-RPC interface to an Ethereum node. This tutorial assumes the reader is already running a Geth node. More information on nodes and clients is available [here](/developers/docs/nodes-and-clients/run-a-node). Please refer to individual [client](/developers/docs/nodes-and-clients/) documentation to see how to start the HTTP JSON-RPC for non-Geth clients. Most clients default to serving on `localhost:8545`.
 
 ```javascript
 
@@ -94,7 +102,7 @@ geth --http --dev --mine --miner.threads 1 --unlock 0 console 2>>geth.log
 
 This will start the HTTP RPC interface on `http://localhost:8545`.
 
-We can verify that the interface is running by retrieving the coinbase address and balance using [curl](https://curl.haxx.se/download.html). Please note that data in these examples will differ on your local node. If you want to try these commands replace the request params in the second curl request with the result returned from the first.
+We can verify that the interface is running by retrieving the Coinbase address and balance using [curl](https://curl.haxx.se/download.html). Please note that data in these examples will differ on your local node. If you want to try these commands, replace the request params in the second curl request with the result returned from the first.
 
 ```bash
 
@@ -112,7 +120,7 @@ web3.fromWei("0x1639e49bba16280000", "ether")
 ;("410")
 ```
 
-Now that there is some ether on our private development chain we can deploy the contract. The first step is to compile the Multiply7 contract to byte code that can be sent to the EVM. Follow these [these](http://solidity.readthedocs.org/en/latest/installing-solidity.html>) instructions to install solc, the solidity compiler.
+Now that there is some ether on our private development chain, we can deploy the contract. The first step is to compile the Multiply7 contract to byte code that can be sent to the EVM. To install solc, the Solidity compiler, follow the [Solidity documentation].
 
 The next step is to compile the Multiply7 contract to byte code that can be send to the EVM.
 
@@ -158,7 +166,7 @@ not been included in a block yet. Wait for a moment and check if your miner is r
 
 In this example we will be sending a transaction using `eth_sendTransaction` to the `multiply` method of the contract.
 
-`eth_sendTransaction` requires several arguments, specifically `from`, `to` and `data`. `From` is the public address of our account and `to` is the contract address. The `data` argument contains a payload that defines which method must be called and with which arguments. This is where the [ABI (application binary interface)](https://docs.soliditylang.org/en/v0.7.0/abi-spec.html) comes into play. The ABI is a json file that defines how to define and encode data for the EVM.
+`eth_sendTransaction` requires several arguments, specifically `from`, `to` and `data`. `From` is the public address of our account, and `to` is the contract address. The `data` argument contains a payload that defines which method must be called and with which arguments. This is where the [ABI (application binary interface)](https://docs.soliditylang.org/en/latest/abi-spec.html) comes into play. The ABI is a JSON file that defines how to define and encode data for the EVM.
 
 The bytes of the payload defines which method in the contract is called. This is the first 4 bytes from the Keccak hash over the function name and its argument types, hex encoded. The multiply function accepts an uint which is an alias for uint256. This leaves us with:
 
