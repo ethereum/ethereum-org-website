@@ -56,22 +56,23 @@ Görli faucets:
 
 #### Ropsten _(deprecated)_ {#ropsten}
 
-_Note, the Ropsten testnet is [deprecated](https://github.com/ethereum/pm/issues/460) and will no longer recieve protocol upgrades. Please consider migrating your applications to Sepolia or Goerli._
+_Note, [the Ropsten testnet is deprecated](https://github.com/ethereum/pm/issues/460) and will no longer receive protocol upgrades. Please consider migrating your applications to Sepolia or Görli._
 
-A very old proof-of-work testnet. It only serves historical relevance and is mainly used by core developers for testing protocol upgrades.
+A proof-of-work testnet. It only serves historical relevance and is mainly used by core developers for testing protocol upgrades.
 
-Ropsten faucets:
+##### Ropsten faucets
 
 - [FaucETH](https://fauceth.komputing.org) (multi-Chain faucet without the need for social account)
 - [Paradigm faucet](https://faucet.paradigm.xyz/)
 
 #### Rinkeby _(deprecated)_ {#rinkeby}
 
-_Note, the Rinkey testnet is [deprecated](https://github.com/ethereum/pm/issues/460) and will no longer recieve protocol upgrades. Please consider migrating your applications to Sepolia or Goerli._
+_Note: [the Rinkeby testnet is deprecated](https://github.com/ethereum/pm/issues/460) and will no longer receive protocol upgrades. Please consider migrating your applications to Sepolia or Görli._
 
-A very old proof-of-authority testnet for those running old versions of the Geth client.
+A proof-of-authority testnet for those running old versions of the Geth client.
 
-Rinkeby faucets:
+##### Rinkeby faucets
+
 - [FaucETH](https://fauceth.komputing.org) (multi-Chain faucet without the need for social account)
 - [Alchemy faucet](https://RinkebyFaucet.com)
 - [Chainlink faucet](https://faucets.chain.link/)
@@ -80,18 +81,18 @@ Rinkeby faucets:
 
 #### Kovan _(deprecated)_ {#kovan}
 
-_Note, the Kovan testnet is [deprecated](https://github.com/ethereum/pm/issues/460) and will no longer recieve protocol upgrades. Please consider migrating your applications to Sepolia or Goerli._
+_Note: [the Kovan testnet is deprecated](https://github.com/ethereum/pm/issues/460) and will no longer receive protocol upgrades. Please consider migrating your applications to Sepolia or Görli._
 
 A very old proof-of-authority testnet for those still running OpenEthereum clients.
 
-Kovan faucets:
+##### Kovan faucets
 - [FaucETH](https://fauceth.komputing.org) (multi-Chain faucet without the need for social account)
 - [Chainlink faucet](https://faucets.chain.link/)
 - [Paradigm faucet](https://faucet.paradigm.xyz/)
 
-### Layer-2 Testnets {#layer-2-testnets}
+### Layer 2 testnets {#layer-2-testnets}
 
-[Layer 2 (L2)](/layer-2/) is a collective term to describe a specific set of Ethereum scaling solutions. A layer 2 is separate blockchain that extends Ethereum and inherits the security guarantees of Ethereum. Layer-2 testnets are usually tightly coupled to public Ethereum testnets.
+[Layer 2 (L2)](/layer-2/) is a collective term to describe a specific set of Ethereum scaling solutions. A layer 2 is a separate blockchain that extends Ethereum and inherits the security guarantees of Ethereum. Layer 2 testnets are usually tightly coupled to public Ethereum testnets.
 
 #### Arbitrum Rinkeby {#arbitrum-rinkeby}
 
