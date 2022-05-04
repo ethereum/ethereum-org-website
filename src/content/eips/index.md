@@ -34,7 +34,8 @@ The current EIP editors are:
 - Greg Colvin (@gcolvin)
 - Sam Wilson (@SamWilsn)
 
-Emeritus EIP editors are:
+Retired EIP editors are:
+
 - Casey Detrio (@cdetrio)
 - Nick Johnson (@arachnid)
 - Vitalik Buterin (@vbuterin)
