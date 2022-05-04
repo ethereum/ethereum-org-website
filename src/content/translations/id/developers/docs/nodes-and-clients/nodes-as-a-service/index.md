@@ -32,7 +32,7 @@ Penting untuk dicatat bahwa layanan node tidak dan seharusnya tidak menyimpan ku
 
 Keuntungan utama menggunakan layanan node adalah Anda tidak perlu menyediakan waktu merawat dan mengelola node sendiri. Ini memungkinkan Anda fokus pada penyusunan produk Anda alih-alih harus khawatir dengan pemeliharaan infrastruktur.
 
-Menjalankan node Anda sendiri bisa sangat mahal dari segi penyimpanan bandwidth hingga segi waktu yang seharusnya lebih banyak untuk melakukan pembuatan. Things like spinning up more nodes when scaling, upgrading nodes to the latest versions, and ensuring state consistency, can distract from building and spending resources on your desired web3 product.
+Menjalankan node Anda sendiri bisa sangat mahal dari segi penyimpanan bandwidth hingga segi waktu yang seharusnya lebih banyak untuk melakukan pembuatan. Hal-hal seperti menjalankan lebih banyak node ketika melakukan penskalaan, memperbarui node ke versi terbaru, dan memastikan konsistensi state, bisa mengurangi pembangunan dan pemakaian sumber daya pada produk web3 yang Anda inginkan.
 
 ## Apa kelebihan penggunaan Layanan Node? {#cons-of-using-a-node-service}
 
