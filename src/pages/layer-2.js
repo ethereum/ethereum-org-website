@@ -484,7 +484,7 @@ const Layer2Page = ({ data }) => {
                 of
               </b>
               . Examples of layer 2 projects include "rollups" on Ethereum and
-              the Lighting Network on top of Bitcoin. All user transaction
+              the Lightning Network on top of Bitcoin. All user transaction
               activity on these layer 2 projects can ultimately settle back to
               the layer 1 blockchain.
             </p>
