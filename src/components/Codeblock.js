@@ -21,6 +21,7 @@ const HightlightContainer = styled.div`
       ? `calc((1.2rem * ${LINES_BEFORE_COLLAPSABLE}) + 4.185rem)`
       : "fit-content"};
   overflow: scroll;
+  direction: ltr;
   margin-bottom: ${(props) => (props.fromHomepage ? `0rem` : `1rem`)};
 `
 
