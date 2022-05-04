@@ -31,7 +31,7 @@ Two key data types get passed over JSON: unformatted byte arrays and quantities.
 
 #### Quantities {#quantities-encoding}
 
-When encoding quantities (integers, numbers): encode as hex, prefix with "0x", the most compact representation (slight exception: zero should be represented as "0x0"). 
+When encoding quantities (integers, numbers): encode as hex, prefix with "0x", the most compact representation (slight exception: zero should be represented as "0x0").
 
 Here are some examples:
 
@@ -43,7 +43,7 @@ Here are some examples:
 
 ### Unformatted data {#unformatted-data-encoding}
 
-When encoding unformatted data (byte arrays, account addresses, hashes, bytecode arrays): encode as hex, prefix with "0x", two hex digits per byte. 
+When encoding unformatted data (byte arrays, account addresses, hashes, bytecode arrays): encode as hex, prefix with "0x", two hex digits per byte.
 
 Here are some examples:
 
@@ -225,6 +225,8 @@ This was just a brief introduction into some of the most common tasks, demonstra
 
 ## Related topics {#related-topics}
 
+- [JSON-RPC specification](http://www.jsonrpc.org/specification)
 - [Nodes and clients](/developers/docs/nodes-and-clients/)
 - [JavaScript APIs](/developers/docs/apis/javascript/)
 - [Backend APIs](/developers/docs/apis/backend/)
+- [Execution clients](/developers/docs/nodes-and-clients/#execution-clients)
