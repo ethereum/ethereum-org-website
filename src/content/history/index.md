@@ -6,6 +6,8 @@ sidebar: true
 sidebarDepth: 1
 ---
 
+This page explains the history of Ethereum from its inception to its first production release.
+
 ## Inception {#inception}
 
 Ethereum was initially described by Vitalik Buterin in late 2013 as a result of his research and work in the Bitcoin community. Shortly thereafter, Vitalik published the [Ethereum white paper](/whitepaper/whitepaper-pdf), where he described in detail the technical design and rationale for the Ethereum protocol and smart contracts architecture. In January 2014, Ethereum was formally announced by Vitalik at the The North American Bitcoin Conference in Miami, Florida, USA.
