@@ -12,8 +12,6 @@ Ethereum adalah jaringan komputer terdistribusi yang menjalankan perangkat lunak
 
 Anda harus memahami konsep jaringan peer-to-peer dan [dasar-dasar EVM](/developers/docs/evm/) sebelum menggali lebih dalam dan menjalankan instance klien Ethereum Anda sendiri. Coba lihat [pengantar Ethereum](/developers/docs/intro-to-ethereum/) kami.
 
-If you're new to the topic of nodes, we recommend first checking out our user-friendly introduction on [running an Ethereum node](/run-a-node).
-
 ## Apa itu node dan klien? {#what-are-nodes-and-clients}
 
 "Node" merujuk pada satu bagian perangkat lunak yang dikenal sebagai satu klien. Klien adalah implementasi Ethereum yang memverifikasi semua transaksi di setiap blok, menjaga jaringan tetap aman dan data tetap akurat.
