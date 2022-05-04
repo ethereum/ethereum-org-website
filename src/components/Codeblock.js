@@ -9,6 +9,7 @@ const LINES_BEFORE_COLLAPSABLE = 8
 
 const Container = styled.div`
   position: relative;
+  direction: ltr;
 `
 
 const HightlightContainer = styled.div`
