@@ -86,6 +86,7 @@ _Note: [the Kovan testnet is deprecated](https://github.com/ethereum/pm/issues/4
 A very old proof-of-authority testnet for those still running OpenEthereum clients.
 
 ##### Kovan faucets
+
 - [FaucETH](https://fauceth.komputing.org) (multi-Chain faucet without the need for social account)
 - [Chainlink faucet](https://faucets.chain.link/)
 - [Paradigm faucet](https://faucet.paradigm.xyz/)
