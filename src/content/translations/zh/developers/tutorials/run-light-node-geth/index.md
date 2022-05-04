@@ -78,7 +78,7 @@ geth attach
 
 ## 主网和测试网 {#mainnet-and-testnets}
 
-Geth 默认在 [以太坊主网](/glossary/#mainnet/) 上运行你的节点。
+Geth 默认在 [以太坊主网](/glossary/#mainnet) 上运行你的节点。
 
 通过在终端中运行以下命令之一，也可以使用 Geth 在 [公共测试网络](/networks/#testnets/) 之一上运行节点：
 
