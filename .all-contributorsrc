@@ -7307,6 +7307,16 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "cryptochrome",
+      "name": "cryptochrome",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4440762?v=4",
+      "profile": "https://github.com/cryptochrome",
+      "contributions": [
+        "ideas",
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
