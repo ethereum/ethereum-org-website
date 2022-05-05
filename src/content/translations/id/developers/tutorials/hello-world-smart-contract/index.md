@@ -12,7 +12,7 @@ tags:
 skill: pemula
 lang: id
 sidebar: true
-published: 31-03-2021
+published: 2021-03-31
 ---
 
 Jika Anda baru dalam pengembangan rantai blok dan tidak tahu harus mulai dari mana, atau jika Anda hanya ingin memahami cara menyebarkan dan berinteraksi dengan kontrak pintar, panduan ini cocok untuk Anda. Kami akan memandu pembuatan dan menyebarkan kontrak pintar sederhana di jaringan uji Ropsten menggunakan dompet virtual ([Metamask](https://metamask.io/)), [Solidity](https://docs.soliditylang.org/en/v0.8.0/), [Hardhat](https://hardhat.org/), dan [Alchemy](https://alchemyapi.io/eth) (jangan khawatir jika Anda belum mengerti beberapa hal ini, kami akan menjelaskannya).

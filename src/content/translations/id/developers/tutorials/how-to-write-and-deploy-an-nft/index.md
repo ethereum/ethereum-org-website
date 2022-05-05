@@ -11,7 +11,7 @@ tags:
 skill: pemula
 lang: id
 sidebar: true
-published: 22-04-2021
+published: 2021-04-22
 ---
 
 Dengan NFT yang membawa rantai blok ke perhatian publik, sekarang adalah peluang yang sangat baik untuk memahami sensasinya sendiri dengan menerbitkan NFT Anda sendiri (Token ERC-721) di rantai blok Ethereum!
