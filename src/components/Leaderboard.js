@@ -68,8 +68,7 @@ const Leaderboard = ({ content, limit = 100 }) => (
       .filter((_, idx) => idx < limit)
       .map((item, idx) => {
         const { name, username, score } = item
-        /* Temporary fix to keep users on page if no GitHub profile */
-        const hasGitHub = username !== "none"
+        const hasGitHub = username !== ""
         let emoji = null
         if (idx === 0) {
           emoji = ":trophy:"
