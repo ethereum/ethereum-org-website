@@ -273,6 +273,11 @@ const Layer2Page = ({ data }) => {
         pathId: "use-layer-2",
         isSecondary: "isSecondary",
       },
+      {
+        content: "Move to layer 2",
+        pathId: "how-to-get-onto-layer-2",
+        isSecondary: "isSecondary",
+      },
     ],
   }
 
@@ -822,7 +827,7 @@ const Layer2Page = ({ data }) => {
         </TwoColumnContent>
       </PaddedContent>
 
-      <PaddedContent>
+      <PaddedContent id="how-to-get-onto-layer-2">
         <Layer2Onboard
           layer2DataCombined={layer2DataCombined}
           ethIcon={getImage(data.ethHome)}
