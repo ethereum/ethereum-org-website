@@ -5,18 +5,18 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { graphql } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
 
-import { translateMessageId } from "../../../utils/translations"
-import Translation from "../../../components/Translation"
-import Card from "../../../components/Card"
-import Leaderboard from "../../../components/Leaderboard"
-import BugBountyCards from "../../../components/BugBountyCards"
-import BugBountyPoints from "../../../components/BugBountyPoints"
-import Link from "../../../components/Link"
-import Emoji from "../../../components/Emoji"
-import CardList from "../../../components/CardList"
-import Breadcrumbs from "../../../components/Breadcrumbs"
-import ButtonLink from "../../../components/ButtonLink"
-import PageMetadata from "../../../components/PageMetadata"
+import { translateMessageId } from "../utils/translations"
+import Translation from "../components/Translation"
+import Card from "../components/Card"
+import Leaderboard from "../components/Leaderboard"
+import BugBountyCards from "../components/BugBountyCards"
+import BugBountyPoints from "../components/BugBountyPoints"
+import Link from "../components/Link"
+import Emoji from "../components/Emoji"
+import CardList from "../components/CardList"
+import Breadcrumbs from "../components/Breadcrumbs"
+import ButtonLink from "../components/ButtonLink"
+import PageMetadata from "../components/PageMetadata"
 import {
   CardContainer,
   Content,
@@ -24,7 +24,7 @@ import {
   GrayContainer,
   GradientContainer,
   SloganGradient,
-} from "../../../components/SharedStyledComponents"
+} from "../components/SharedStyledComponents"
 
 const HeroCard = styled.div`
   display: flex;

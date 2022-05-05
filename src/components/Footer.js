@@ -260,7 +260,7 @@ const Footer = () => {
           text: "esp",
         },
         {
-          to: "/upgrades/get-involved/bug-bounty/",
+          to: "/bug-bounty/",
           text: "ethereum-bug-bounty",
         },
         {
