@@ -11,7 +11,7 @@ tags:
 skill: iniciante
 lang: pt-br
 sidebar: true
-published: 22-04-2021
+published: 2021-04-22
 ---
 
 [Beeple](https://www.nytimes.com/2021/03/11/arts/design/nft-auction-christies-beeple.html): 69 milhões de doláres [3LAU](https://www.forbes.com/sites/abrambrown/2021/03/03/3lau-nft-nonfungible-tokens-justin-blau/?sh=5f72ef64643b): 11 milhões de doláres [Grimes](https://www.theguardian.com/music/2021/mar/02/grimes-sells-digital-art-collection-non-fungible-tokens): 6 milhões de doláres

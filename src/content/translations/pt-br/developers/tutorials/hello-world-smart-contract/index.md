@@ -12,7 +12,7 @@ tags:
 skill: iniciante
 lang: pt-br
 sidebar: true
-published: 31-03-2021
+published: 2021-03-31
 ---
 
 Se você é novo no desenvolvimento de blockchain e não sabe por onde começar, ou se apenas deseja entender como implementar ou interagir com contratos inteligentes, este guia é para você. Mostraremos a você como criar e implementar um simples contrato inteligente na rede de testes Ropsten usando uma carteira virtual ([MetaMask](https://metamask.io/)), [Solidity](https://docs.soliditylang.org/en/v0.8.0/), [Hardhat](https://hardhat.org/) e [Alchemy](https://alchemyapi.io/eth). Não se preocupe caso não entenda ainda o que tudo isso significa. Vamos explicar).

@@ -12,7 +12,7 @@ tags:
 skill: iniciante
 lang: pt-br
 sidebar: true
-published: 22-04-2021
+published: 2021-04-22
 ---
 
 Este tutorial é a Parte 3/3 das séries de Tutorial de NFT, onde vemos nosso NFT recentemente cunhado. No entanto, você pode usar o tutorial geral para qualquer token ERC-721 usando MetaMask, inclusive na rede principal ou em qualquer rede de teste. Se você quiser aprender como cunhar seu próprio NFT no Ethereum, confira a [Parte 1 sobre Como Escrever implantar um contrato inteligente de NFT](/developers/tutorials/how-to-write-and-deploy-an-nft)!
