@@ -90,7 +90,7 @@ If you see a warning like this, please go back and double-check the suggested tr
 **Never ignore these warnings, as they usually mean that something is wrong, or that the translation is missing a key part of the source text.**
 
 An example of a Crowdin warning when you forget to add a tag to your translation:
-![Example of a Crowdin warning.png](./crowdin-warning-example.png)
+![Example of a Crowdin warning](./crowdin-warning-example.png)
 
 ### Dealing with tags and code snippets {#dealing-with-tags}
 
