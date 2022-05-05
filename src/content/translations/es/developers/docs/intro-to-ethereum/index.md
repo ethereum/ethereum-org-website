@@ -33,7 +33,7 @@ Vea la explicación de Anders sobre los hashes en las cadenas de bloques:
 
 ## ¿Qué es Ethereum? {#what-is-ethereum}
 
-En el universo Ethereum, hay un ordenador único y canónico (llamado máquina virtual de Etherum o EVM), cuyo estado han acordado todos los participantes de la red. Cualquier persona que participe en la red de Ethereum (cada nodo de Ethereum) guarda una copia del estado de este ordenador. Asimismo, cualquier participante puede emitir una petición para que este ordenador realice un cálculo arbitrario. Cuando se emite una solicitud de este tipo, otros participantes de la red verifican, validan y ejecutan el cálculo. La ejecución causa un cambio en el estado de la EVM, el cual se realiza y propaga a toda la red.
+En el universo Ethereum, hay un ordenador único y canónico (llamado máquina virtual de Ethereum o EVM), cuyo estado han acordado todos los participantes de la red. Cualquier persona que participe en la red de Ethereum (cada nodo de Ethereum) guarda una copia del estado de este ordenador. Asimismo, cualquier participante puede emitir una petición para que este ordenador realice un cálculo arbitrario. Cuando se emite una solicitud de este tipo, otros participantes de la red verifican, validan y ejecutan el cálculo. La ejecución causa un cambio en el estado de la EVM, el cual se realiza y propaga a toda la red.
 
 Las solicitudes de cálculos se denominan solicitudes de transacción; el registro de todas las transacciones y el estado de la EVM se almacena en la cadena de bloques, la cual se almacena y confirma en todos los nodos.
 
