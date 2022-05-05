@@ -72,6 +72,7 @@ const Leaderboard = ({ content, limit = 100 }) => (
         const avatarImg = hasGitHub
           ? `${githubUrl}${username}.png?size=40`
           : "https://github.com/random.png?size=40"
+        const avatarAlt = hasGitHub ? `${username} GitHub avatar` : ""
         let emoji = null
         if (idx === 0) {
           emoji = ":trophy:"
@@ -83,7 +84,7 @@ const Leaderboard = ({ content, limit = 100 }) => (
         return (
           <Item key={idx} to={hasGitHub ? `${githubUrl}${username}` : "#"}>
             <ItemNumber>{idx + 1}</ItemNumber>
-            <Avatar src={avatarImg} alt={`${username} GitHub avatar image`} />
+            <Avatar src={avatarImg} alt={avatarAlt} />
             <TextContainer>
               <ItemTitle>{name}</ItemTitle>
               <ItemDesc>
