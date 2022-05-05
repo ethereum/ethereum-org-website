@@ -31,16 +31,20 @@ If you want to [run your own node](/developers/docs/nodes-and-clients/run-a-node
 
 ### Full node {#full-node}
 
-- Stores full blockchain data.
+- Stores full blockchain data (although this is periodically pruned so a full node does not store all state data back to genesis)
 - Participates in block validation, verifies all blocks and states.
-- All states can be derived from a full node.
+- All states can be derived from a full node (although very old states arew reconstructed from requests made to archive nodes).
 - Serves the network and provides data on request.
 
 ### Light node {#light-node}
 
-- Stores the header chain and requests everything else.
-- Can verify the validity of the data against the state roots in the block headers.
-- Useful for low capacity devices, such as embedded devices or mobile phones, which can't afford to store gigabytes of blockchain data.
+Instead of downloading every block, light nodes download block headers. These headers only contain summary information about the contents of the blocks. Any other specific information required by the light node is obtained by requesting it from a full node. The light node can then independently verify the data they receive against the state roots in the block headers. This enables users to participate in the Ethereum network without deploying substantial hardware and bandwidth to running full nodes. Evenutally light nodes could run on mobile phones or embedded devices. The light nodes do not participate in consensus (i.e. they cannot be miners/validators) but they can access the Etheruem blockchain with the same functionality as a full node.
+
+The execution client Geth includes a [light sync](https://github.com/ethereum/devp2p/blob/master/caps/les.md) option. However, a light Geth node relies upon full nodes serving light node data. There are few full nodes opting to do this, meaning light nodes often fail to find peers. There are currently no production-ready light clients on the consensus layer; however, there are several in development.
+
+There are also potential routes to providing light client data over the [gossip network](https://www.ethportal.net/) rather than directly from full nodes. This would be advantageous because a network of light nodes could be supported without requiring full nodes to serve requests.
+
+Ethereum does not support a large population of light nodes yet, but this is an area that is expected to develop rapidly in the near future.
 
 ### Archive node {#archive-node}
 
