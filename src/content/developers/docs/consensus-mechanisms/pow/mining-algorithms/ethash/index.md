@@ -6,7 +6,7 @@ sidebar: true
 incomplete: false
 ---
 
-[Ethash](https://github.com/ethereum/wiki/wiki/Ethash) is a modified version of the [Dagger-Hashimoto](/developers/docs/consensus-mechanisms/pow/mining-algorithms/dagger-hashamoto) algorithm.Ethash PoW is memory hard, making it ASIC resistant. Memory hardness is achieved with a proof of work algorithm that requires choosing subsets of a fixed resource dependent on the nonce and block header. This resource (a few gigabytes in size) is called a DAG. The DAG is totally different every 30000 blocks, a 125-hour window called an epoch (roughly 5.2 days) and takes a while to generate. Since the DAG only depends on block height, it can be pregenerated but if its not, the client needs to wait until the end of this process to produce a block. If clients do not pregenerate and cache DAGs ahead of time the network may experience massive block delay on each epoch transition. Note that the DAG does not need to be generated for verifying the PoW essentially allowing for verification with both low CPU and small memory.
+[Ethash](https://github.com/ethereum/wiki/wiki/Ethash) is a modified version of the [Dagger-Hashimoto](/developers/docs/consensus-mechanisms/pow/mining-algorithms/dagger-hashamoto) algorithm. Ethash PoW is memory hard, making it ASIC resistant. Memory hardness is achieved with a proof of work algorithm that requires choosing subsets of a fixed resource dependent on the nonce and block header. This resource (a few gigabytes in size) is called a DAG. The DAG is totally different every 30000 blocks, a 125-hour window called an epoch (roughly 5.2 days) and takes a while to generate. Since the DAG only depends on block height, it can be pre-generated but if it's not, the client needs to wait until the end of this process to produce a block. If clients do not pre-generate and cache DAGs ahead of time the network may experience massive block delay on each epoch transition. Note that the DAG does not need to be generated for verifying the PoW essentially allowing for verification with both low CPU and small memory.
 
 The general route that the algorithm takes is as follows:
 
@@ -17,7 +17,7 @@ The general route that the algorithm takes is as follows:
 
 The large dataset is updated once every 30000 blocks, so the vast majority of a miner's effort will be reading the dataset, not making changes to it.
 
-## Definitions
+## Definitions {#definitions}
 
 We employ the following definitions:
 
@@ -36,7 +36,7 @@ CACHE_ROUNDS = 3                  # number of rounds in cache production
 ACCESSES = 64                     # number of accesses in hashimoto loop
 ```
 
-### A note regarding "SHA3" hashes described in this specification
+### The use of 'SHA3' {#sha3}
 
 Ethereum's development coincided with the development of the SHA3 standard, and the
 standards process made a late change in the padding of the finalized hash algorithm, so that Ethereum's
@@ -45,7 +45,7 @@ to as "Keccak-256" and "Keccak-512" in other contexts. See discussion, e.g. [her
 
 Please keep that in mind as "sha3" hashes are referred to in the description of the algorithm below.
 
-## Parameters
+## Parameters {#parameters}
 
 The parameters for Ethash's cache and dataset depend on the block number. The cache size and dataset size both grow linearly; however, we always take the highest prime below the linearly growing threshold in order to reduce the risk of accidental regularities leading to cyclic behavior.
 
@@ -67,7 +67,7 @@ def get_full_size(block_number):
 
 Tables of dataset and cache size values are provided in the appendix.
 
-## Cache Generation
+## Cache generation {#cache-generation}
 
 Now, we specify the function for producing a cache:
 
@@ -89,11 +89,9 @@ def mkcache(cache_size, seed):
     return o
 ```
 
-[sergio2014]: http://www.hashcash.org/papers/memohash.pdf
-
 The cache production process involves first sequentially filling up 32 MB of memory, then performing two passes of Sergio Demian Lerner's _RandMemoHash_ algorithm from [_Strict Memory Hard Hashing Functions_ (2014)](http://www.hashcash.org/papers/memohash.pdf). The output is a set of 524288 64-byte values.
 
-## Data aggregation function
+## Data aggregation function {#date-aggregation-function}
 
 We use an algorithm inspired by the [FNV hash](https://en.wikipedia.org/wiki/Fowler%E2%80%93Noll%E2%80%93Vo_hash_function) in some cases as a non-associative substitute for XOR. Note that we multiply the prime with the full 32-bit input, in contrast with the FNV-1 spec which multiplies the prime with one byte (octet) in turn.
 
@@ -106,7 +104,7 @@ def fnv(v1, v2):
 
 Please note, even the yellow paper specifies fnv as v1\*(FNV_PRIME ^ v2), all current implementations consistently use the above definition.
 
-## Full dataset calculation
+## Full dataset calculation {#full-dataset-calculation}
 
 Each 64-byte item in the full 1 GB dataset is computed as follows:
 
@@ -132,7 +130,7 @@ def calc_dataset(full_size, cache):
     return [calc_dataset_item(cache, i) for i in range(full_size // HASH_BYTES)]
 ```
 
-## Main Loop
+## Main loop {#main-loop}
 
 Now, we specify the main "hashimoto"-like loop, where we aggregate data from the full dataset in order to produce our final value for a particular header and nonce. In the code below, `header` represents the SHA3-256 _hash_ of the RLP representation of a _truncated_ block header, that is, of a header excluding the fields **mixHash** and **nonce**. `nonce` is the eight bytes of a 64 bit unsigned integer in big-endian order. So `nonce[::-1]` is the eight-byte little-endian representation of that value:
 
@@ -172,9 +170,9 @@ def hashimoto_full(full_size, dataset, header, nonce):
 
 Essentially, we maintain a "mix" 128 bytes wide, and repeatedly sequentially fetch 128 bytes from the full dataset and use the `fnv` function to combine it with the mix. 128 bytes of sequential access are used so that each round of the algorithm always fetches a full page from RAM, minimizing translation lookaside buffer misses which ASICs would theoretically be able to avoid.
 
-If the output of this algorithm is below the desired target, then the nonce is valid. Note that the extra application of `sha3_256` at the end ensures that there exists an intermediate nonce which can be provided to prove that at least a small amount of work was done; this quick outer PoW verification can be used for anti-DDoS purposes. It also serves to provide statistical assurance that the result is an unbiased, 256 bit number.
+If the output of this algorithm is below the desired target, then the nonce is valid. Note that the extra application of `sha3_256` at the end ensures that there exists an intermediate nonce which can be provided to prove that at least a small amount of work was done; this quick outer PoW verification can be used for anti-DDoS purposes. It also serves to provide statistical assurance that the result is an unbiased, 256-bit number.
 
-## Mining
+## Mining {#mining}
 
 The mining algorithm is defined as follows:
 
@@ -189,7 +187,7 @@ def mine(full_size, dataset, header, difficulty):
     return nonce
 ```
 
-## Defining the Seed Hash
+## Defining the seed hash {#seed-hash}
 
 In order to compute the seed hash that would be used to mine on top of a given block, we use the following algorithm:
 
@@ -203,7 +201,7 @@ In order to compute the seed hash that would be used to mine on top of a given b
 
 Note that for smooth mining and verifying, we recommend pre-computing future seedhashes and datasets in a separate thread.
 
-## Appendix
+## Appendix {#appendix}
 
 The following code should be prepended if you are interested in running the above python spec as code.
 
@@ -255,7 +253,7 @@ def isprime(x):
     return True
 ```
 
-### Data Sizes
+### Data Sizes {#data-sizes}
 
 The following lookup tables provide approximately 2048 tabulated epochs of data sizes and cache sizes. They were generated with the _Mathematica_ function provided here:
 
