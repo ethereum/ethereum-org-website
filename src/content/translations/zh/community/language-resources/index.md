@@ -15,9 +15,9 @@ lang: zh
 
 知道一个您语言的教育资源？ [创建问题](https://github.com/ethereum/ethereum-org-website/issues/new/choose)，以将其添加到列表！
 
-## Etherum.org 资源 {#ethereum-org}
+## Ethereum.org 资源 {#ethereum-org}
 
-Etherum.org 被翻译为 40 多种语言，您可以在我们的[语言页面](/languages)上找到这些语言。
+Ethereum.org 被翻译为 40 多种语言，您可以在我们的[语言页面](/languages)上找到这些语言。
 
 如果您会使用两种语言，而且想帮助我们宣传到更多的人，您也可以参与 [ethereum.org 翻译计划](/contributing/translation-program/#translation-program)，帮助我们翻译该网站。
 
@@ -45,7 +45,7 @@ Etherum.org 被翻译为 40 多种语言，您可以在我们的[语言页面](/
 
 **通用资源**
 
-- [Etherum.cn](https://www.ethereum.cn/) - 由社区维护网站内容，内容包括共识层升级、所有核心开发者会议记录、以太坊第二层等
+- [Ethereum.cn](https://www.ethereum.cn/) - 由社区维护网站内容，内容包括共识层升级、所有核心开发者会议记录、以太坊第二层等
 - [EthFans](https://ethfans.org/) - 学习从基础到高级以太坊主题的所有知识
 - [Untimes](https://mp.weixin.qq.com/s/tvloZSDBSOQN9zDQj_91kA) - 由社区维护内容，内容涵盖以太坊、去中心化金融、非同质化代币和 Web3 相关知识
 - [123ETH](https://123eth.org/) - 以太坊生态系统的一个门户网站
@@ -56,7 +56,7 @@ Etherum.org 被翻译为 40 多种语言，您可以在我们的[语言页面](/
 
 - [ETHPlanet](https://www.ethplanet.org/) - 可在线或现场参加黑客马拉松，为大学生提供培训
 - [PrimitivesLane](https://www.primitiveslane.org/) - 一个以区块链技术为重点的非营利研究小组
-- [Etherum Translation Community CN](https://www.notion.so/Ethereum-Translation-Community-CN-05375fe0a94c4214acaf90f42ba40171) - 一个致力于翻译以太坊教育类内容的社区
+- [Ethereum Translation Community CN](https://www.notion.so/Ethereum-Translation-Community-CN-05375fe0a94c4214acaf90f42ba40171) - 一个致力于翻译以太坊教育类内容的社区
 
 **适用于开发人员**
 
@@ -71,7 +71,7 @@ Etherum.org 被翻译为 40 多种语言，您可以在我们的[语言页面](/
 ### 法语 {#fr}
 
 - [Ethereum France](https://www.ethereum-france.com/) - Ethereum France 组织各种活动、创建内容并鼓励围绕以太坊展开讨论
-- [Etherum.fr](https://ethereum.fr/) - 提供有关以太坊的新闻和教育
+- [Ethereum.fr](https://ethereum.fr/) - 提供有关以太坊的新闻和教育
 - [BanklessFR](https://banklessfr.substack.com/) - Bankless 法语版新闻通讯
 - [CryptoFR](https://cryptofr.com/category/44/ethereum-general) - 以太坊子页面上的加密货币论坛
 
@@ -92,7 +92,7 @@ Etherum.org 被翻译为 40 多种语言，您可以在我们的[语言页面](/
 
 ### 西班牙语 {#es}
 
-- [Etherum Madrid](https://ethereummadrid.com/) - 区块链、去中心化金融、治理课程、活动和博客
+- [Ethereum Madrid](https://ethereummadrid.com/) - 区块链、去中心化金融、治理课程、活动和博客
 - [Cointegraph](https://es.cointelegraph.com/ethereum-for-beginners) - 西班牙语版以太坊初学者指南
 - [在线教程](https://tutoriales.online/curso/solidity) - 在以太坊上学习 Solidity 和编程
 - [Curso Introducción a Ethereum Development](https://youtube.com/playlist?list=PLTqiwJDd_R8y9pfUBjhkVa1IDMwyQz-fU) - Solidity 基础知识以及测试和部署您的首个智能合约
