@@ -255,7 +255,7 @@ def isprime(x):
 
 ### Data Sizes {#data-sizes}
 
-The following lookup tables provide approximately 2048 tabulated epochs of data sizes and cache sizes. They were generated with the _Mathematica_ function provided here:
+The following lookup tables provide approximately 2048 tabulated epochs of data sizes and cache sizes.
 
 ```python
 def get_datasize(block_number):
