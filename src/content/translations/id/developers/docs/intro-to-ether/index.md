@@ -19,7 +19,7 @@ Mata uang kripto pertama adalah Bitcoin, yang dibuat oleh Satoshi Nakamoto. Seja
 
 ## Apa itu ether? {#what-is-ether}
 
-**Ether (ETH)** adalah mata uang kripto yang digunakan untuk berbagai keperluan di jaringan Ethereum. Pada dasarnya, ini adalah satu-satunya bentuk pembayaran yang dapat diterima untuk biaya transaksi, dan setelah [penggabungan](/eth2/merge) juga diperlukan untuk memvalidasi dan mengusulkan pemblokiran di Jaringan Utama. Ether juga digunakan sebagai bentuk jaminan utama di pasar pinjaman [DeFi](/defi), sebagai unit akun di pasar NFT, sebagai pembayaran yang diperoleh karena menjalanan layanan atau menjual barang dunia nyata, dan banyak lagi.
+**Ether (ETH)** adalah mata uang kripto yang digunakan untuk berbagai keperluan di jaringan Ethereum. Pada dasarnya, ini adalah satu-satunya bentuk pembayaran yang dapat diterima untuk biaya transaksi, dan setelah [penggabungan](/upgrades/merge) juga diperlukan untuk memvalidasi dan mengusulkan pemblokiran di Jaringan Utama. Ether juga digunakan sebagai bentuk jaminan utama di pasar pinjaman [DeFi](/defi), sebagai unit akun di pasar NFT, sebagai pembayaran yang diperoleh karena menjalanan layanan atau menjual barang dunia nyata, dan banyak lagi.
 
 Ethereum memungkinkan pengembang untuk membuat [**aplikasi terdesentralisasi (dapp)**](/developers/docs/dapps), yang semuanya berbagi pool daya komputasi. Pool bersama ini terbatas, sehingga Ethereum memerlukan sebuah mekanisme untuk menentukan siapa yang dapat menggunakannya. Jika tidak, sebuah dapp dapat secara tidak sengaja atau dengan maksud jahat menghabiskan semua sumber daya jaringan, yang akan menghalangi pengguna lainnya untuk mengaksesnya.
 
@@ -39,13 +39,15 @@ Ether dicetak saat seorang penambang membuat sebuah blok di blockchain Ethereum.
 
 Sama halnya dengan pembuatan ether melalui imbalan blok, ether dapat dihancurkan oleh proses yang disebut 'pembakaran'. Ketika ether dibakar, ether dihilangkan dari perederan secara permananen.
 
-Pembakaran ether terjadi dalam setiap transaksi di Ethereum. Ketika para pengguna membayar transaksi mereka, biaya gas dasarnya dihancurkan oleh protokol. Tergantung pada permintaan jaringan, [beberapa blok](https://etherscan.io/block/12965263) membakar lebih banyak ether ketimbang mencetaknya.
+Pembakaran ether terjadi dalam setiap transaksi di Ethereum. When users pay for their transactions, a base gas fee, set by the network according to transactional demand, gets destroyed. This, coupled with variable block sizes and a maximum gas fee, simplifies transaction fee estimation on Ethereum. When network demand is high, [blocks](https://etherscan.io/block/12965263) can burn more ether than they mint, effectively offsetting ether issuance.
+
+Burning the base fee prevents various ways the miners could manipulate it otherwise. For example, if miners got the base fee, they could include their own transactions for free and raise the base fee for everyone else. Alternatively, they could refund the base fee to some users off-chain, leading to a more opaque and complex transaction fee market.
 
 ## Denominasi ether {#denominations}
 
 Karena banyak transaksi di Ethereum bernilai kecil, ether memiliki beberapa denominasi yang mungkin dirujuk untuk jumlah nilai yang lebih kecil. Dari denominasi ini, Wei dan gwei sangat penting.
 
-Wei adalah jumlah ether terkecil, dan sebagai hasilnya, banyak implementasi teknis, seperti [Ethereum Yellowpaper](https://ethereum.github.io/yellowpaper/paper.pdf), akan mendasarkan semua penghitungan dalam Wei.
+Wei adalah jumlah ether terkecil, dan sebagai hasilnya, banyak implementasi teknis, seperti [Yellowpaper Ethereum](https://ethereum.github.io/yellowpaper/paper.pdf), akan mendasarkan semua penghitungan dalam Wei.
 
 Gwei, kependekan dari giga-wei, sering digunakan untuk menggambarkan biaya gas di Ethereum.
 

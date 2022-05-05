@@ -1,30 +1,35 @@
 ---
 title: "Waffle: Simularea dinamică și testarea apelurilor de contracte"
-description: Tutorial Waffle avansat de folosire a simulării dinamice și testarea apelurilor de contract
+description: Tutorial Waffle avansat de folosire a simulării dinamice și testarea apelurilor de contracte
 author: "Daniel Izdebski"
-tags: ["waffle", "contracte inteligente", "solidity", "testare", "simulare"]
+tags:
+  - "waffle"
+  - "contracte inteligente"
+  - "solidity"
+  - "testare"
+  - "simulare"
 skill: intermediar
 lang: ro
 sidebar: true
 published: 2020-11-14
 ---
 
-## Despre ce este acest tutorial? {#what-is-this-tutorial-about}
+## Care este obiectul acestui tutorial? {#what-is-this-tutorial-about}
 
-În acest tutorial vei învăța cum:
+În acest tutorial veți învăța:
 
-- să utilizezi simularea dinamică
-- să testezi interacțiunile dintre contractele inteligente
+- cum să utilizați simularea dinamică
+- cum să testați interacțiunile dintre contractele inteligente
 
 Ipoteze:
 
-- știi deja cum să scrii un simplu contract inteligent în `Solidity`
-- te descurci în `JavaScript` și `TypeScript`
-- ai terminat alte tutoriale `Waffle` sau știi un lucru sau două despre ele
+- știți deja cum să scrieți un contract inteligent simplu în `Solidity`
+- știți cum să utilizați `JavaScript` și `TypeScript`
+- ați parcurs alte tutoriale `Waffle` sau știți câte ceva despre acesta
 
 ## Simulare dinamică {#dynamic-mocking}
 
-De ce este utilă simularea dinamică? Ei bine, ne permite să scriem teste unitare în loc de teste de integrare. Ce înseamnă aceasta? Înseamnă că nu trebuie să ne facem griji cu privire la dependențele contractelor inteligente, astfel că le putem testa pe toate în mod izolat. Permite-mi să-ți arăt exact cum o poți face.
+De ce este utilă simularea dinamică? Ei bine, ne permite să scriem teste unitare în loc de teste de integrare. Ce înseamnă aceasta? Înseamnă că nu trebuie să ne preocupăm de dependențele dintre contractele inteligente, astfel că le putem testa pe fiecare separat de celelalte. Permiteți-mi să vă arăt cum anume puteți face acest lucru.
 
 ### **1. Proiect** {#1-project}
 
@@ -40,7 +45,7 @@ $ yarn init
 $ npm init
 ```
 
-Să începem cu adăugarea de typescript și dependențe de testare - mocha & chai:
+Să începem adăugând typescript și testând dependențele - mocha & chai:
 
 ```bash
 $ yarn add --dev @types/chai @types/mocha chai mocha ts-node typescript
@@ -48,7 +53,7 @@ $ yarn add --dev @types/chai @types/mocha chai mocha ts-node typescript
 $ npm install @types/chai @types/mocha chai mocha ts-node typescript --save-dev
 ```
 
-Acum să adăugăm `Waffle` și `eter`:
+Acum să adăugăm `Waffle` și `ether`-ul:
 
 ```bash
 $ yarn add --dev ethereum-waffle ethers
@@ -56,7 +61,7 @@ $ yarn add --dev ethereum-waffle ethers
 $ npm install ethereum-waffle ethers --save-dev
 ```
 
-Structura proiectului tău ar trebui să arate astfel:
+Acum structura proiectului dvs. ar trebui să fie:
 
 ```
 .
@@ -67,7 +72,7 @@ Structura proiectului tău ar trebui să arate astfel:
 
 ### **2. Contracte inteligente** {#2-smart-contract}
 
-Pentru a începe simularea dinamică, avem nevoie de un contract inteligent cu dependențe. Nu-ți face griji, ne-am ocupat noi!
+Pentru a începe simularea dinamică, avem nevoie de un contract inteligent cu dependențe. Nu vă faceți griji, vă ajutăm noi!
 
 Iată un contract inteligent simplu scris în `Solidity` al cărui unic scop este să verificăm dacă suntem bogați. Acesta folosește tokenul ERC20 pentru a verifica dacă avem suficiente tokenuri. Să spunem că avem `./contracts/AmIRichAlready.sol`.
 
@@ -95,7 +100,7 @@ contract AmIRichAlready {
 
 Deoarece vrem să folosim simularea dinamică, nu avem nevoie de întregul ERC20, de aceea folosim interfața IERC20 cu o singură funcție.
 
-Este timpul să construim acest contract! Pentru aceasta vom folosi `Waffle`. În primul rând, vom crea un fișier simplu de configurare `Waffle.json` care specifică opțiunile de compilare.
+A venit momentul să construim acest contract! Pentru aceasta vom folosi `Waffle`. În primul rând, vom crea un fișier simplu de configurare `Waffle.json` care specifică opțiunile de compilare.
 
 ```json
 {
@@ -112,11 +117,11 @@ Acum suntem gata să construim contractul cu Waffle:
 $ npx waffle
 ```
 
-Simplu, nu? În directorul `build/` au apărut două fișiere corespunzătoare contractului și interfeței. Le vom folosi mai târziu pentru testare.
+E simplu, nu? În directorul `build/` au apărut două fișiere corespunzătoare contractului și interfeței. Le vom folosi mai târziu pentru testare.
 
 ### **3. Testare** {#3-testing}
 
-Să creăm un fișier numit `AmIRichAlready.test.ts` pentru actualul test. În primul rând, trebuie să ne ocupăm de importuri. Vom avea nevoie de ele pentru mai târziu:
+Să creăm un fișier numit `AmIRichAlready.test.ts` pentru a testa ca atare. În primul rând, trebuie să ne ocupăm de importuri. Vom avea nevoie de ele pentru mai târziu:
 
 ```typescript
 import { expect, use } from "chai"
@@ -129,7 +134,7 @@ import {
 } from "ethereum-waffle"
 ```
 
-Cu excepția dependențelor JS, trebuie să importăm contractul și interfața construită:
+Cu excepția dependențelor JS, trebuie să importăm contractul și interfața pe are le-am construit:
 
 ```typescript
 import IERC20 from "../build/IERC20.json"
@@ -142,7 +147,7 @@ Waffle folosește `chai` pentru testare. Cu toate acestea, înainte de a-l putea
 use(solidity)
 ```
 
-Trebuie să implementăm funcția `beforeEach()` care va reseta starea contractului înainte de fiecare test. Să ne gândim mai întâi la ce avem nevoie acolo. Pentru a implementa un contract avem nevoie de două lucruri: (1) un portofel și (2) un contract ERC20 implementat pentru a-l transmite ca argument pentru contractul `AmIRichAlready`.
+Trebuie să implementăm funcția `beforeEach()`, care va reseta starea contractului înainte de fiecare test. Să ne gândim mai întâi la ce ne trebuie acolo. Pentru a implementa un contract avem nevoie de două lucruri: (1) un portofel și (2) un contract ERC20 implementat pe care să îl transmitem ca argument pentru contractul `AmIRichAlready`.
 
 În primul rând creăm un portofel:
 
@@ -150,13 +155,13 @@ Trebuie să implementăm funcția `beforeEach()` care va reseta starea contractu
 const [wallet] = new MockProvider().getWallets()
 ```
 
-Apoi, trebuie să implementăm un contract ERC20. Iată partea dificilă - avem doar o interfață. Aceasta este partea în care Waffle ne salvează. Waffle are o funcție magică `deployMockContract ()` care creează un contract folosind doar _abi_-ul interfeței:
+Apoi trebuie să implementăm un contract ERC20. Partea dificilă este că avem doar o interfață. Aici apare Waffle să ne salveze. Waffle are o funcție magică `deployMockContract ()` care creează un contract folosind doar _abi_-ul interfeței:
 
 ```typescript
 const mockERC20 = await deployMockContract(wallet, IERC20.abi)
 ```
 
-Acum, având portofelul și ERC20 implementate, putem continua cu implementarea contractului` AmIRichAlready`:
+Acum, având portofelul și ERC20 implementate, putem continua implementând contractul ` AmIRichAlready`:
 
 ```typescript
 const contract = await deployContract(wallet, AmIRichAlready, [
@@ -164,7 +169,7 @@ const contract = await deployContract(wallet, AmIRichAlready, [
 ])
 ```
 
-Cu toate acestea, funcția noastră `beforeEach()` este terminată. Până acum fișierul tău `AmIRichAlready.test.ts` ar trebui să arate astfel:
+După toate acestea, am terminat cu funcția noastră `beforeEach()`. La acest moment fișierul dvs. `AmIRichAlready.test.ts` se prezintă astfel:
 
 ```typescript
 import { expect, use } from "chai"
@@ -194,16 +199,16 @@ describe("Am I Rich Already", () => {
 })
 ```
 
-Să scriem primul test la contractul `AmIRichAlready`. Despre ce crezi că ar trebui să fie testul nostru? Da, ai dreptate! Ar trebui să verificăm dacă suntem deja bogați :)
+Să scriem primul test al contractului `AmIRichAlready`. Ce credeți că trebuie să testăm? Da, așa este! Trebuie să verificăm dacă ne-am îmbogățit :)
 
-Dar așteaptă o secundă. Cum va ști contractul nostru simulat ce valori să returneze? Nu am implementat nicio logică pentru funcția `balanceOf()`. Din nou, Waffle poate fi de ajutor aici. Contractul nostru simulat are câteva lucruri noi sofisticate acum:
+Dar stați puțin. Cum va ști contractul nostru simulat prin ce valori să răspundă? Nu am implementat nicio logică pentru funcția `balanceOf()`. Dar Waffle ne ajută din nou. Contractul nostru simulat comportă acum niște șmecherii:
 
 ```typescript
 await mockERC20.mock.<nameOfMethod>.returns(<value>)
 await mockERC20.mock.<nameOfMethod>.withArgs(<arguments>).returns(<value>)
 ```
 
-Cu aceste cunoștințe putem, în sfârșit, scrie primul nostru test:
+Cunoscând acestea, ne putem scrie în sfârșit primul test:
 
 ```typescript
 it("returnează fals dacă portofelul are mai puțin de 1000000 tokenuri", async () => {
@@ -212,16 +217,16 @@ it("returnează fals dacă portofelul are mai puțin de 1000000 tokenuri", async
 })
 ```
 
-Să descompunem acest test în părți:
+Să descompunem acest test în mai multe părți:
 
-1. Am stabilit contractul nostru fals ERC20 pentru a returna întotdeauna soldul de 999999 de tokenuri.
-2. Am verificat dacă metoda `contract.check()` returnează `false`.
+1. Ne-am configurat contractul simulat ERC20 ca să răspundă întotdeauna prin soldul de 999999 de tokenuri.
+2. Verificați dacă prin metoda `contract.check()` obțineți răspunsul `false`.
 
 Suntem gata să dăm drumul fiarei:
 
-![Un test care trece](../../../../../developers/tutorials/waffle-dynamic-mocking-and-testing-calls/test-one.png)
+![A trecut un test](test-one.png)
 
-Deci, testul funcționează, dar... mai este loc pentru îmbunătățiri. Funcția `balanceOf()` va returna întotdeauna 99999. Putem îmbunătăți acest lucru prin specificarea unui portofel pentru care funcția ar trebui să returneze ceva - la del ca un contract real:
+Deci a trecut cu bine testul, dar... mai sunt necesare ameliorări. Funcția `balanceOf()` va răspunde întotdeauna prin 99999. Se poate evita acest lucru dacă indicăm un portofel pentru care funcția trebuie să dea un răspuns - la fel ca un contract real:
 
 ```typescript
 it("returnează fals dacă portofelul are mai puțin de 1000001 tokenuri", async () => {
@@ -232,7 +237,7 @@ it("returnează fals dacă portofelul are mai puțin de 1000001 tokenuri", async
 })
 ```
 
-Până acum, am testat doar cazul în care nu suntem suficient de bogați. Să testăm opusul în schimb:
+Până acum am testat doar cazul în care nu suntem suficient de bogați. Să testăm și contrariul:
 
 ```typescript
 it("returnează true dacă portofelul are cel puțin 1000001 tokenuri", async () => {
@@ -243,15 +248,15 @@ it("returnează true dacă portofelul are cel puțin 1000001 tokenuri", async ()
 })
 ```
 
-Rulează testele...
+Rulați testele...
 
-![Două teste care trec](../../../../../developers/tutorials/waffle-dynamic-mocking-and-testing-calls/test-two.png)
+![A trecut două teste](test-two.png)
 
-...și iată! Contractul nostru pare să funcționeze conform scopului :)
+...și iată! Contractul nostru pare să funcționeze cum trebuie :)
 
 ## Testarea apelurilor de contracte {#testing-contract-calls}
 
-Să rezumăm ce am făcut până acum. Am testat funcționalitatea contractului `AmIRichAlready` și se pare că funcționează corect. Asta înseamnă că am terminat, nu? Nu chiar! Waffle ne permite să testăm și mai mult contractul. Dar cum anume? Ei bine, în arsenalul Waffle există doi validatori-matcher `calledOnContract()` și `calledOnContractWith()`. Ei ne vor permite să verificăm dacă nu cumva contractul nostru a apelat contractul simulat ERC20. Iată un test de bază cu unul dintre acești validatori-matcher:
+Să rezumăm ce am făcut până acum. Am testat funcționalitatea contractului nostru `AmIRichAlready` și se pare că funcționează corect. Asta înseamnă că am terminat, nu? Nu chiar! Waffle ne permite să mai testăm contractul. Dar cum anume? Ei bine, în arsenalul Waffle există doi validatori-matcher, `calledOnContract()` și `calledOnContractWith()`. Ei ne vor permite să verificăm dacă nu cumva contractul nostru a apelat contractul simulat ERC20. Iată un test simplu cu unul dintre acești validatori-matcher:
 
 ```typescript
 it("contractul nostru este verificat dacă a apelat balanceOf pe tokenul ERC20", async () => {
@@ -261,7 +266,7 @@ it("contractul nostru este verificat dacă a apelat balanceOf pe tokenul ERC20",
 })
 ```
 
-Putem merge chiar mai departe și putem îmbunătăți acest test cu celălalt validator-matcher de care am povestit:
+Putem merge chiar mai departe pentru a ameliora acest test cu celălalt validator-matcher despre care v-am vorbit:
 
 ```typescript
 it("contractul nostru este verificat dacă a apelat balanceOf cu un anumit portofel pe tokenul ERC20", async () => {
@@ -275,20 +280,20 @@ it("contractul nostru este verificat dacă a apelat balanceOf cu un anumit porto
 
 Să verificăm dacă testele sunt corecte:
 
-![Trei teste care trec](../../../../../developers/tutorials/waffle-dynamic-mocking-and-testing-calls/test-three.png)
+![A trecut trei teste](test-three.png)
 
-Super, toate testele sunt verzi.
+Super, a trecut cu verde toate testele.
 
-Testarea apelurilor de contracte cu Waffle este foarte ușoară. Și aici e partea cea mai bună. Acești validatori-matcher funcționează cu contracte normale sau simulate! Aceasta deoarece Waffle înregistrează și filtrează apelurile EVM în loc să injecteze cod, ca în cazul bibliotecilor populare de testare pentru alte tehnologii.
+Testarea apelurilor de contracte cu Waffle este foarte ușoară. Și iată ce este grozav în această privință. Acești validatori-matcher funcționează și cu contracte normale, și cu cele simulate! Aceasta deoarece Waffle înregistrează și filtrează apelurile EVM în loc să injecteze cod, ca în cazul bibliotecilor populare de testare pentru alte tehnologii.
 
 ## Linia de sosire {#the-finish-line}
 
-Felicitări! Acum știi cum să folosești Waffle pentru a testa în mod dinamic apelurile de contracte și contractele simulate. Există mult mai multe caracteristici interesante de descoperit. Îți recomandăm să studiezi în detaliu documentația Waffle.
+Felicitări! Acum știți cum să folosiți Waffle pentru a testa în mod dinamic apelurile de contracte și contractele simulate. Există mult mai multe funcționalități interesante de descoperit. Vă recomandăm să studiați în profunzime documentația Waffle.
 
 Documentația Waffle este disponibilă [aici](https://ethereum-waffle.readthedocs.io/).
 
-Codul sursă pentru acest tutorial poate fi găsit [aici](https://github.com/EthWorks/Waffle/tree/master/examples/dynamic-mocking-and-testing-calls).
+Codul sursă pentru acest tutorial se află [aici](https://github.com/EthWorks/Waffle/tree/master/examples/dynamic-mocking-and-testing-calls).
 
-Tutoriale care te pot interesa, de asemenea:
+Alte tutoriale care vă pot interesa:
 
 - [Testarea contractelor inteligente cu Waffle](/developers/tutorials/testing-smart-contract-with-waffle/)

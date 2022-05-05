@@ -50,8 +50,8 @@
     "sponsor": null,
     "location": "NYC, USA",
     "description": "DeFiCon is a nonprofit conference with a mission to elevate the ethos of peer-to-peer crypto.",
-    "startDate": "2022-05-07",
-    "endDate": "2022-05-08"
+    "startDate": "2022-08-11",
+    "endDate": "2022-08-12"
   },
   {
     "title": "ETHDubai",
@@ -122,8 +122,8 @@
     "sponsor": null,
     "location": "Remote",
     "description": "Our DeFi focused online hackathon will continue for the 3rd year.",
-    "startDate": "2022-05-01",
-    "endDate": "2022-05-31"
+    "startDate": "2022-05-06",
+    "endDate": "2022-05-27"
   },
   {
     "title": "Spaghett.ETH",
@@ -132,7 +132,7 @@
     "location": "Milan, Italy",
     "description": "We are welcoming developers, entrepreneurs, creatives, PAs, regulators and newbies into the first Italian Ethereum event.",
     "startDate": "2022-05-03",
-    "endDate": "2022-05-08"
+    "endDate": "2022-05-05"
   },
   {
     "title": "BlockSplit",
@@ -140,8 +140,8 @@
     "sponsor": null,
     "location": "Split, Croatia",
     "description": "We bring together blockchain startups, developers, researchers, investors, marketeers, designers...",
-    "startDate": "2022-05-17",
-    "endDate": "2022-05-18"
+    "startDate": "2022-05-23",
+    "endDate": "2022-05-25"
   },
   {
     "title": "Permissionless",

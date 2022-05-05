@@ -7231,6 +7231,82 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "B01AND",
+      "name": "B01AND",
+      "avatar_url": "https://avatars.githubusercontent.com/u/88404615?v=4",
+      "profile": "https://github.com/B01AND",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "epicfaace",
+      "name": "Ashwin Ramaswami",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1689183?v=4",
+      "profile": "https://ashwin.run/",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "LieAlbertTriAdrian",
+      "name": "Albert Lie Adrian",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12984659?v=4",
+      "profile": "https://github.com/LieAlbertTriAdrian",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "1337-ishaan",
+      "name": "Ishaan Parmar",
+      "avatar_url": "https://avatars.githubusercontent.com/u/64636222?v=4",
+      "profile": "https://github.com/1337-ishaan",
+      "contributions": [
+        "code",
+        "design",
+        "ideas"
+      ]
+    },
+    {
+      "login": "tarunbatra",
+      "name": "Tarun Batra",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5329230?v=4",
+      "profile": "http://tarunbatra.com",
+      "contributions": [
+        "doc",
+        "bug"
+      ]
+    },
+    {
+      "login": "max-donger",
+      "name": "Max",
+      "avatar_url": "https://avatars.githubusercontent.com/u/56192627?v=4",
+      "profile": "https://github.com/max-donger",
+      "contributions": [
+        "doc",
+        "bug"
+      ]
+    },
+    {
+      "login": "LuozhuZhang",
+      "name": "Luozhu",
+      "avatar_url": "https://avatars.githubusercontent.com/u/70309026?v=4",
+      "profile": "https://github.com/LuozhuZhang",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "yash-sharma1",
+      "name": "Yash Sharma ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/44340561?v=4",
+      "profile": "http://www.linkedin.com/in/sharma-yash",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,

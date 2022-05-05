@@ -211,7 +211,9 @@ const Layer2Page = ({ data }) => {
             l2BeatData.data[l2BeatData.data.length - 31][1]) *
           100
         ).toFixed(2)
-        setL2PercentChange(percentage > 0 ? `+${percentage}%` : `{percentage}%`)
+        setL2PercentChange(
+          percentage > 0 ? `+${percentage}%` : `${percentage}%`
+        )
       } catch (error) {
         console.error(error)
         setTVL("Error, please refresh.")
@@ -482,7 +484,7 @@ const Layer2Page = ({ data }) => {
                 of
               </b>
               . Examples of layer 2 projects include "rollups" on Ethereum and
-              the Lighting Network on top of Bitcoin. All user transaction
+              the Lightning Network on top of Bitcoin. All user transaction
               activity on these layer 2 projects can ultimately settle back to
               the layer 1 blockchain.
             </p>
@@ -577,8 +579,8 @@ const Layer2Page = ({ data }) => {
             <p>
               The Ethereum community has taken a strong stance that it would not
               throw out decentralization or security in order to scale. Until{" "}
-              <Link to="/upgrades/shard-chains/">sharding</Link>, Ethereum Mainnet
-              (layer 1) is only able to process{" "}
+              <Link to="/upgrades/shard-chains/">sharding</Link>, Ethereum
+              Mainnet (layer 1) is only able to process{" "}
               <Link to="https://ethtps.info/Network/Ethereum">
                 roughly 15 transactions per second
               </Link>

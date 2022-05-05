@@ -1,28 +1,27 @@
 ---
 title: Utilizarea WebSockets
-description: Ghid pentru utilizarea WebSockets și Alchemy pentru a face cereri JSON-RPC și a te abona la evenimente.
+description: Ghid de utilizare a WebSockets și Alchemy pentru a face cereri JSON-RPC și a vă abona la evenimente.
 author: "Elan Halpern"
 lang: ro
 sidebar: true
 tags:
-  [
-    "alchemy",
-    "websockets",
-    "interogarea",
-    "noțiuni de bază",
-    "abonament",
-    "javascript",
-  ]
+  - "alchemy"
+  - "websockets"
+  - "interogarea"
+  - "noțiuni de bază"
+  - "abonament"
+  - "javascript"
 skill: începător
 source: Documentație Alchemy
 sourceUrl: https://docs.alchemyapi.io/guides/using-websockets
+published: 2020-12-01
 ---
 
 Acesta este un ghid de bază pentru a folosi WebSockets și Alchemy pentru a face cereri către blockchain-ul Ethereum.
 
 ## WebSockets vs. HTTP {#websockets-vs-http}
 
-Spre deosebire de HTTP, cu WebSockets nu trebuie să faci în mod continuu solicitări atunci când dorești informații specifice. WebSockets menține o conexiune de rețea pentru tine (dacă este făcută corect) și ascultă dacă apar modificări.
+Spre deosebire de HTTP, cu WebSockets nu este nevoie să faceți încontinuu cereri când doriți informații precise. WebSockets menține o conexiune de rețea pentru tine (dacă este făcută corect) și ascultă dacă apar modificări.
 
 Ca și în cazul oricărei conexiuni la rețea, nu ar trebui să presupunem că un WebSocket va rămâne deschis pentru totdeauna fără întrerupere, dar manipularea corectă a conexiunilor pierdute și reconectarea manuală de o manieră corectă poate fi o provocare. Un alt dezavantaj al WebSocket-urilor este că nu obții codurile de stare HTTP ca răspuns, ci numai mesajul de eroare.
 
@@ -30,24 +29,24 @@ Ca și în cazul oricărei conexiuni la rețea, nu ar trebui să presupunem că 
 
 ## Încearcă-l {#try-it-out}
 
-Cel mai simplu mod de a testa WebSockets este de a instala un instrument de linie de comandă pentru a face cereri WebSocket, cum ar fi [wscat](https://github.com/websockets/wscat). Folosind „wscat”, poți trimite cereri după cum urmează:
+Cel mai simplu mod de a testa WebSockets este de a instala un instrument de linie de comandă pentru a face cereri WebSocket, cum ar fi [wscat](https://github.com/websockets/wscat). Folosind wscat, puteți trimite cereri după cum urmează:
 
-_Notă: Dacă ai un cont Alchemy poți înlocui `demo` cu propria cheie API. [Înscrie-te pentru un cont Alchemy gratuit aici!](https://dashboard.alchemyapi.io/signup/)_
+_Observație: dacă aveți un cont Alchemy, puteți înlocui `demo` cu propria dvs. cheie API. [Înscrieți-vă pentru un cont gratuit Alchemy aici!](https://dashboard.alchemyapi.io/signup/)_
 
 ```
 $ wscat -c wss://eth-mainnet.ws.alchemyapi.io/ws/demo
 
 >  {"jsonrpc":  "2.0", "id": 0, "method":  "eth_gasPrice"}
 
-<  {"jsonrpc":  "2.0", "resultat":  "0xb2d05e00", "id": 0}
+<  {"jsonrpc":  "2.0", "result":  "0xb2d05e00", "id": 0}
 
 ```
 
 ## Cum se utilizează WebSockets {#how-to-use-websockets}
 
-Pentru început, deschide un WebSocket folosind adresa URL WebSocket a aplicației tale. Poți găsi adresa URL a aplicației tale WebSocket deschizând pagina aplicației în [tabloul de bord](https://dashboard.alchemyapi.io/) și făcând clic pe „View Key” (Vizualizare cheie). Reține că URL-ul aplicației pentru WebSockets este diferit de URL-ul său pentru cererile HTTP, dar ambele pot fi găsite dacă facem clic pe „View Key”(Vizualizare cheie).
+Pentru a începe, deschideți un WebSocket utilizând URL-ul WebSocket pentru aplicația dvs. Puteți găsi URL-ul WebSocket al aplicației dvs. deschizând pagina aplicației în [tabloul dvs. de bord](https://dashboard.alchemyapi.io/) și făcând clic pe „View Key” („Vizualizare cheie”). Rețineți că URL-ul aplicației dvs. pentru WebSockets este diferit de URL-ul pentru cererile HTTP, dar ambele pot fi găsite făcând clic pe „View Key” („Vizualizare cheie”).
 
-![Unde să găsești URL-ul WebSocket în panoul tău Alchimy](../../../../../developers/tutorials/using-websockets/use-websockets.gif)
+![Unde găsiți URL-ul WebSocket în tabloul de bord Alchemy](./use-websockets.gif)
 
 Oricare dintre API-urile enumerate în [Alchemy API de referință](https://docs.alchemyapi.io/documentation/alchemy-api-reference/) poate fi folosit prin intermediul WebSocket. Pentru aceasta, folosește aceleași elemente care ar fi trimise prin metoda de cereri POST suportată de HTTP, dar trimite-le prin WebSocket.
 
@@ -63,11 +62,11 @@ web3.eth.getBlockNumber().then(console.log) // -> 7946893
 
 ## Abonament API {#subscription-api}
 
-Când ești conectat printr-un WebSocket, poți utiliza două metode suplimentare: `eth_subscribe` și `eth_unsubscribe`. Aceste metode îți vor permite să asculți anumite evenimente și să fii notificat imediat.
+Când vă conectați printr-un WebSocket, puteți utiliza două metode suplimentare: `eth_subscribe` și `eth_unsubscribe`. Aceste metode îți vor permite să asculți anumite evenimente și să fii notificat imediat.
 
 ### `eth_subscribe` {#eth-subscribe}
 
-Creează un nou abonament pentru evenimente specificate. [Află mai multe despre `eth_subscribe`](https://docs.alchemyapi.io/documentation/alchemy-api-reference/json-rpc#eth_subscribe).
+Creează un nou abonament pentru evenimente specificate. [Aflați mai multe despre `eth_subscribe`](https://docs.alchemyapi.io/documentation/alchemy-api-reference/json-rpc#eth_subscribe).
 
 #### Parametri {#parameters}
 
@@ -82,7 +81,7 @@ ID-ul abonamentului: acest ID va fi atașat la orice evenimente primite și poat
 
 #### Evenimente de abonament {#subscription-events}
 
-Cât timp abonamentul este activ, vei primi evenimente care sunt obiecte cu următoarele câmpuri:
+Cât timp abonamentul este activ, veți primi evenimente care sunt obiecte cu următoarele câmpuri:
 
 - `jsonrpc`: Totdeauna „2.0”
 - `method`: Totdeauna „eth_subscription”
@@ -131,7 +130,7 @@ Exemplu:
 
 Emite un eveniment de fiecare dată când un nou antet se adăugă lanțului, inclusiv în timpul reorganizării lanțului.
 
-Când are loc o reorganizare a lanțului, acest abonament va emite un eveniment care conține toate anteturile noi pentru lanțul nou. În special, aceasta înseamnă că poți vedea mai multe anteturi emise cu aceeași înălțime, iar când se întâmplă acest lucru, ultimul antet trebuie considerat cel corect după o reorganizare.
+Când are loc o reorganizare a lanțului, acest abonament va emite un eveniment care conține toate anteturile noi pentru lanțul nou. Și anume, aceasta înseamnă că veți putea vedea mai multe anteturi emise cu aceeași înălțime, iar când se întâmplă acest lucru, ultimul antet trebuie să fie considerat cel corect după o reorganizare.
 
 Exemplu:
 
@@ -175,7 +174,7 @@ Atunci când are loc o reorganizare a lanțului, jurnalele care fac parte din bl
 Parametri
 
 1. Un obiect cu următoarele câmpuri:
-   - `adddress` (opțional): un string reprezentând o adresă sau o matrice de astfel de stringuri.
+   - `address` (optional): either a string representing an address or an array of such strings.
      - Vor fi emise doar jurnale create de la una dintre aceste adrese.
    - `topics`: o matrice de specificatori de subiect.
      - Fiecare specificator de subiect este `null`, un string reprezentând un subiect sau o matrice de stringuri.
