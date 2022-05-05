@@ -326,6 +326,9 @@ const WalletCompare = ({ location }) => {
       airgap: file(relativePath: { eq: "wallets/airgap.png" }) {
         ...walletCardImage
       }
+      rabby: file(relativePath: { eq: "wallets/rabby.png" }) {
+        ...walletCardImage
+      }
     }
   `)
 
