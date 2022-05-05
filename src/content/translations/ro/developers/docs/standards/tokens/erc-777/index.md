@@ -31,7 +31,7 @@ Hook-urile sunt înregistrate și descoperite folosind standardul [ERC-1820](htt
 
 ### Zecimale {#decimals}
 
-Standardul rezolvă şi confuzia legată de `zecimale` ce are loc în ERC-20. Această claritate creşte satisfacţia dezvoltatorului.
+Standardul rezolvă şi confuzia legată de `decimals` ce are loc în ERC-20. Această claritate creşte satisfacţia dezvoltatorului.
 
 ### Compatibilitate retroactivă cu ERC-20 {#backwards-compatibility-with-erc-20}
 
