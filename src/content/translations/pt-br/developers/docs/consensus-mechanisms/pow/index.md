@@ -1,22 +1,22 @@
 ---
-title: Prova de trabalho (PdT)
+title: Prova de trabalho (PoW)
 description: Uma explicação do protocolo de consenso de prova de trabalho e seu papel no Ethereum.
 lang: pt-br
 sidebar: true
 incomplete: true
 ---
 
-Ethereum, assim como o Bitcoin, usa atualmente um protocolo de consenso chamado **[ prova de trabalho (PdT)](https://wikipedia.org/wiki/Proof_of_work)**. Isto permite que a rede Ethereum verifique o estado de todas as informações gravadas no blockchain Ethereum, e previne certos tipos de ataques econômicos.
+Ethereum, assim como o Bitcoin, usa atualmente um protocolo de consenso chamado **[ prova de trabalho (PoW)](https://wikipedia.org/wiki/Proof_of_work)**. Isto permite que a rede Ethereum verifique o estado de todas as informações gravadas no blockchain Ethereum, e previne certos tipos de ataques econômicos.
 
-Ao longo do próximo ano, a prova de trabalho será gradualmente eliminada em favor da **[prova de participação (PdP)](/developers/docs/consensus-mechanisms/pos)**. A transição para a prova de participação também irá eliminar gradualmente a mineração do Ethereum. [Mais sobre a fusão.](/upgrades/merge/)
+Ao longo do próximo ano, a prova de trabalho será gradualmente eliminada em favor da **[prova de participação (PoS)](/developers/docs/consensus-mechanisms/pos)**. A transição para a prova de participação também irá eliminar gradualmente a mineração do Ethereum. [Mais sobre a fusão.](/upgrades/merge/)
 
 ## Pré-requisitos {#prerequisites}
 
 Para entender melhor esta página, recomendamos ler primeiro sobre [ transações ](/developers/docs/transactions/), [blocos](/developers/docs/blocks/) e [mecanismos de consenso](/developers/docs/consensus-mechanisms/).
 
-## O que é prova de trabalho (PdT)? {#what-is-pow}
+## O que é prova de trabalho (PoW)? {#what-is-pow}
 
-Prova de trabalho (PdT) é o mecanismo que permite que a rede descentralizada Ethereum chegue ao consenso, ou aceite registros, como saldos de conta e a ordem das transações. Isso impede os usuários de "gastar duas vezes" suas moedas e garante que a cadeia Ethereum seja incrivelmente difícil de atacar ou manipular.
+Prova de trabalho (PoW) é o mecanismo que permite que a rede descentralizada Ethereum chegue ao consenso, ou aceite registros, como saldos de conta e a ordem das transações. Isso impede os usuários de "gastar duas vezes" suas moedas e garante que a cadeia Ethereum seja incrivelmente difícil de atacar ou manipular.
 
 ## Prova de trabalho e mineração {#pow-and-mining}
 

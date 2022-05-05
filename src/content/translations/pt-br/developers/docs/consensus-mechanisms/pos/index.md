@@ -1,18 +1,18 @@
 ---
-title: Prova de participação (PdP)
+title: Prova de participação (PoS)
 description: Explicação do protocolo de consenso "Prova de participação" e seu papel no Ethereum.
 lang: pt-br
 sidebar: true
 incomplete: true
 ---
 
-Ethereum está mudando do mecanismo de consenso de prova de trabalho (PdT) [prova de participação (PoP)](/developers/docs/consensus-mechanisms/pow/). Este sempre foi o plano, pois tal mudança forma parte da estratégia essencial da comunidade para expandir o Ethereum via [implementações](/upgrades/). No entanto, acertar na implementação da PdP é um grande desafio técnico e não é tão simples quanto usar PdT para atingir consenso na rede.
+Ethereum está mudando do mecanismo de consenso de prova de trabalho (PoW) [prova de participação (PoP)](/developers/docs/consensus-mechanisms/pow/). Este sempre foi o plano, pois tal mudança forma parte da estratégia essencial da comunidade para expandir o Ethereum via [implementações](/upgrades/). No entanto, acertar na implementação da prova de participação é um grande desafio técnico e não é tão simples quanto usar PdT para atingir consenso na rede.
 
 ## Pré-requisitos {#prerequisites}
 
 Para entender melhor esta página, recomendamos que você primeiro leia [mecanismos de consenso](/developers/docs/consensus-mechanisms/).
 
-## O que é prova de participação (PdP)? {#what-is-pos}
+## O que é prova de participação (PoS)? {#what-is-pos}
 
 Prova de participação é um tipo de [mecanismo de consenso](/developers/docs/consensus-mechanisms/) usado pelas redes de blockchain para alcançar o consenso distribuído.
 
@@ -31,7 +31,7 @@ A prova de participação é o mecanismo fundamental que ativa os validadores ap
 
 ## Como funciona a prova de participação do Ethereum? {#how-does-pos-work}
 
-Ao contrário da prova de trabalho (PdT), os validadores não precisam usar grandes quantidades de poder computacional, porque eles são selecionados aleatoriamente e não competem entre si. Eles não precisam minerar blocos, só precisam criar blocos quando escolhidos e validar blocos propostos quando não são. Esta validação é conhecida como atestante ou certificadora. Você pode pensar no atestante como aquele que diz "este bloco parece estar bem". Os validadores recebem recompensas por propor novos blocos e por atestar os que viram.
+Ao contrário da prova de trabalho (PoW), os validadores não precisam usar grandes quantidades de poder computacional, porque eles são selecionados aleatoriamente e não competem entre si. Eles não precisam minerar blocos, só precisam criar blocos quando escolhidos e validar blocos propostos quando não são. Esta validação é conhecida como atestante ou certificadora. Você pode pensar no atestante como aquele que diz "este bloco parece estar bem". Os validadores recebem recompensas por propor novos blocos e por atestar os que viram.
 
 Se você atesta/certifica blocos maliciosos, perde sua participação (stake).
 

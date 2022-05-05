@@ -34,7 +34,7 @@ Um mecanismo de consenso em um sistema de criptomoedas também ajuda a prevenir 
 
 ### Prova de trabalho {#proof-of-work}
 
-Ethereum, como Bitcoin, atualmente usa um protocolo de consenso denominado ** prova de trabalho (PdT) **.
+Ethereum, como Bitcoin, atualmente usa um protocolo de consenso denominado ** prova de trabalho (PoW) **.
 
 #### Criação de blocos {#pow-block-creation}
 
@@ -44,21 +44,21 @@ Prova de trabalho é feita por [mineradores](/developers/docs/consensus-mechanis
 
 A rede é mantida segura pelo fato de que você precisaria de 51% da capacidade dos computadores da rede para defraudar a corrente. Isso exigiria investimentos tão grandes em equipamentos e energia que bastante provável que você teria mais prejuízos do que lucros.
 
-Mais sobre [ prova de trabalho (PdT)](/developers/docs/consensus-mechanisms/pow/)
+Mais sobre [ prova de trabalho (PoW)](/developers/docs/consensus-mechanisms/pow/)
 
 ### Prova de participação {#proof-of-stake}
 
-Ethereum, como Bitcoin, atualmente usa um protocolo de consenso denominado ** prova de trabalho (PdT) **.
+Ethereum, como Bitcoin, atualmente usa um protocolo de consenso denominado ** prova de trabalho (PoW) **.
 
 #### Criação de blocos {#pos-block-creation}
 
-A prova de participação (PdP) é feita por validadores que tiverem comprometido ETH para participar do sistema. Um validador é escolhido aleatoriamente para criar novos blocos, compartilhá-los com a rede e ganhar recompensas. Em vez de precisar fazer um intenso trabalho computacional, você simplesmente precisa ter apostado seus ETH na rede. É isto que incentiva o comportamento saudável da rede.
+A prova de participação (PoS) é feita por validadores que tiverem comprometido ETH para participar do sistema. Um validador é escolhido aleatoriamente para criar novos blocos, compartilhá-los com a rede e ganhar recompensas. Em vez de precisar fazer um intenso trabalho computacional, você simplesmente precisa ter apostado seus ETH na rede. É isto que incentiva o comportamento saudável da rede.
 
 #### Segurança {#pos-security}
 
 O sistema de prova de participação é mantido seguro pelo falo de que seriam necessários 51% do total de ETH acumulados (staked) para defraudar a corrente. Além disso, seus ETH apostados poderiam se ver comprometidos por comportamentos maliciosos.
 
-Mais sobre [ prova de participação (PdP)](/developers/docs/consensus-mechanisms/pos/)
+Mais sobre [ prova de participação (PoS)](/developers/docs/consensus-mechanisms/pos/)
 
 ### Um guia visual {#types-of-consensus-video}
 
