@@ -17,9 +17,11 @@ import CardList from "../components/CardList"
 import Breadcrumbs from "../components/Breadcrumbs"
 import ButtonLink from "../components/ButtonLink"
 import PageMetadata from "../components/PageMetadata"
+import ExpandableCard from "../components/ExpandableCard"
 import {
   CardContainer,
   Content,
+  Divider,
   Page,
   GrayContainer,
   GradientContainer,
@@ -126,6 +128,10 @@ const H2 = styled.h2`
   text-align: left;
 `
 
+const CenterH2 = styled(H2)`
+  text-align: center;
+`
+
 const StyledCard = styled(Card)`
   flex: 1 1 464px;
   margin: 1rem;
@@ -198,6 +204,29 @@ const Contact = styled.div`
   align-items: center;
   margin: 3rem 8rem;
   width: 80%;
+`
+
+const LeftColumn = styled.div`
+  width: 100%;
+`
+
+const RightColumn = styled.div`
+  width: 100%;
+  margin-left: 2rem;
+  flex-direction: column;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    margin-left: 0rem;
+    flex-direction: column;
+  }
+`
+
+const Faq = styled.div`
+  display: flex;
+  margin-top: 4rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 `
 
 const BugBountiesPage = ({ data, location }) => {
@@ -607,6 +636,140 @@ const BugBountiesPage = ({ data, location }) => {
           <Leaderboard content={consensusBountyHunters} />
         </FullLeaderboardContainer>
       </GradientContainer>
+      <Divider />
+      <Content>
+        <CenterH2>
+          <Translation id="page-upgrades-question-title" />
+        </CenterH2>
+        <Faq>
+          <LeftColumn>
+            <ExpandableCard
+              title="What should a good vulnerability submission look like?"
+              contentPreview="See a real example of a quality vulnerability submission."
+            >
+              <p>
+                <b>Description:</b> Remote Denial-of-service using non-validated
+                blocks
+              </p>
+              <p>
+                <b>Attack scenario:</b> An attacker can send blocks that may
+                require a high amount of computation (the maximum gasLimit) but
+                has no proof-of-work. If the attacker sends blocks continuously,
+                the attacker may force the victim node to 100% CPU utilization.
+              </p>
+              <p>
+                <b>Impact:</b> An attacker can abuse CPU utilization on remote
+                nodes, possibly causing full DoS.
+              </p>
+              <p>
+                <b>Components:</b> Go client version v0.6.8
+              </p>
+              <p>
+                <b>Reproduction:</b> Send a block to a Go node that contains
+                many txs but no valid PoW.
+              </p>
+              <p>
+                <b>Details:</b> Blocks are validated in the method{" "}
+                <code>Process(Block, dontReact)</code>. This method performs
+                expensive CPU-intensive tasks, such as executing transactions (
+                <code>sm.ApplyDiff</code>) and afterward it verifies the
+                proof-of-work (<code>sm.ValidateBlock()</code>). This allows an
+                attacker to send blocks that may require a high amount of
+                computation (the maximum <code>gasLimit</code>) but has no
+                proof-of-work. If the attacker sends blocks continuously, the
+                attacker may force the victim node to 100% CPU utilization.
+              </p>
+              <p>
+                <b>Fix:</b> Invert the order of the checks.
+              </p>
+            </ExpandableCard>
+            <ExpandableCard
+              title="Is the bug bounty program is time limited?"
+              contentPreview="No."
+            >
+              <p>
+                No end date is currently set. See{" "}
+                <a href="https://blog.ethereum.org/" target="_blank">
+                  the Ethereum Foundation blog
+                </a>{" "}
+                for the latest news.
+              </p>
+            </ExpandableCard>
+            <ExpandableCard
+              title="How are bounties paid out?"
+              contentPreview="Rewards are paid out in ETH or BTC."
+            >
+              <p>
+                Rewards are paid out in ETH or BTC after the submission has been
+                validated, usually a few days later. Local laws require us to
+                ask for <b>proof of your identity</b>. In addition, we will need
+                your ETH/BTC address.
+              </p>
+            </ExpandableCard>
+            <ExpandableCard
+              title="Can I donate my reward to charity?"
+              contentPreview="Yes!"
+            >
+              <p>
+                We can donate your reward to an established charitable
+                organization of your choice.
+              </p>
+            </ExpandableCard>
+          </LeftColumn>
+          <RightColumn>
+            <ExpandableCard
+              title="I reported an issue / vulnerability but have not received a response!"
+              contentPreview="Please allow a few days for someone to respond to your submission."
+            >
+              <p>
+                We aim to respond to submissions as fast as possible. Feel free
+                to email us at{" "}
+                <a href="mailto:bounty@ethereum.org" target="_blank">
+                  bounty@ethereum.org
+                </a>{" "}
+                if you have not received a response within a day or two.
+              </p>
+            </ExpandableCard>
+            <ExpandableCard
+              title="I want to be anonymous / I do not want my name on the leader board."
+              contentPreview="You can do this, but it might make you ineligble for rewards."
+            >
+              <p>
+                Submitting anonymously or with a pseudonym is OK, but will make
+                you ineligible for BTC rewards. To be eligible for BTC rewards,
+                we require your real name and a proof of your identity. Donating
+                your bounty to a charity doesn’t require your identity.
+              </p>
+              <p>
+                Please let us know if you do not want your name/nick displayed
+                on the leader board.
+              </p>
+            </ExpandableCard>
+            <ExpandableCard
+              title="What are the points in the leaderboard?"
+              contentPreview="Every found vulnerability / issue is assigned a score"
+            >
+              <p>
+                Every found vulnerability / issue is assigned a score. Bounty
+                hunters are ranked on our leaderboard by total points.
+              </p>
+            </ExpandableCard>
+            <ExpandableCard
+              title="Do you have a PGP key?"
+              contentPreview="Yes. Expand for details."
+            >
+              <p>
+                Please use{" "}
+                <code>AE96 ED96 9E47 9B00 84F3 E17F E88D 3334 FA5F 6A0A</code>
+              </p>
+              <Link to="https://ethereum.org/security_at_ethereum.org.asc">
+                PGP Key
+              </Link>
+            </ExpandableCard>
+          </RightColumn>
+        </Faq>
+      </Content>
+      <Divider />
       <Contact>
         <div>
           <H2>
@@ -615,10 +778,6 @@ const BugBountiesPage = ({ data, location }) => {
           <TextNoMargin>
             <Translation id="page-upgrades-bug-bounty-email-us" />{" "}
             <Link to="mailto:bounty@ethereum.org">bounty@ethereum.org</Link>
-            <br />
-            <Link to="https://ethereum.org/security_at_ethereum.org.asc">
-              PGP Key
-            </Link>
           </TextNoMargin>
         </div>
         <Emoji size={3} text=":email:" />
