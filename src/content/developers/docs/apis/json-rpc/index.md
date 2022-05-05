@@ -63,7 +63,7 @@ The following methods have an extra default block parameter:
 - [eth_getStorageAt](#eth_getstorageat)
 - [eth_call](#eth_call)
 
-When requests are made that act on the state of ethereum, the last default block parameter determines the height of the block.
+When requests are made that act on the state of Ethereum, the last default block parameter determines the height of the block.
 
 The following options are possible for the defaultBlock parameter:
 
@@ -81,7 +81,6 @@ This section includes a demonstration of how to deploy a contract using only the
 The following is a straightforward smart contract called `Multiply7` that will be deployed using the JSON-RPC interface to an Ethereum node. This tutorial assumes the reader is already running a Geth node. More information on nodes and clients is available [here](/developers/docs/nodes-and-clients/run-a-node). Please refer to individual [client](/developers/docs/nodes-and-clients/) documentation to see how to start the HTTP JSON-RPC for non-Geth clients. Most clients default to serving on `localhost:8545`.
 
 ```javascript
-
 contract Multiply7 {
     event Print(uint);
     function multiply(uint input) returns (uint) {
@@ -89,7 +88,6 @@ contract Multiply7 {
         return input * 7;
     }
 }
-
 ```
 
 The first thing to do is make sure the HTTP RPC interface is enabled. This means we supply Geth with the `--http` flag on startup. In this example we use the Geth node on a private development chain. Using this approach we don't need ether on the real network.
@@ -105,7 +103,6 @@ This will start the HTTP RPC interface on `http://localhost:8545`.
 We can verify that the interface is running by retrieving the Coinbase address and balance using [curl](https://curl.haxx.se/download.html). Please note that data in these examples will differ on your local node. If you want to try these commands, replace the request params in the second curl request with the result returned from the first.
 
 ```bash
-
 curl --data '{"jsonrpc":"2.0","method":"eth_coinbase", "id":1}' -H "Content-Type: application/json" localhost:8545
 {"id":1,"jsonrpc":"2.0","result":["0x9b1d35635cc34752ca54713bb99d38614f63c955"]}
 
@@ -117,7 +114,7 @@ Because numbers are hex encoded, the balance is returned in wei as a hex string.
 
 ```javascript
 web3.fromWei("0x1639e49bba16280000", "ether")
-;("410")
+// "410"
 ```
 
 Now that there is some ether on our private development chain, we can deploy the contract. The first step is to compile the Multiply7 contract to byte code that can be sent to the EVM. To install solc, the Solidity compiler, follow the [Solidity documentation].
@@ -125,7 +122,6 @@ Now that there is some ether on our private development chain, we can deploy the
 The next step is to compile the Multiply7 contract to byte code that can be send to the EVM.
 
 ```bash
-
 echo 'pragma solidity ^0.4.16; contract Multiply7 { event Print(uint); function multiply(uint input) public returns (uint) { Print(input * 7); return input * 7; } }' | solc --bin
 
 ======= <stdin>:Multiply7 =======
@@ -136,7 +132,6 @@ Binary:
 Now that we have the compiled code we need to determine how much gas it costs to deploy it. The RPC interface has an `eth_estimateGas` method that will give us an estimate.
 
 ```bash
-
 curl --data '{"jsonrpc":"2.0","method": "eth_estimateGas", "params": [{"from": "0x9b1d35635cc34752ca54713bb99d38614f63c955", "data": "0x6060604052341561000f57600080fd5b60eb8061001d6000396000f300606060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063c6888fa1146044575b600080fd5b3415604e57600080fd5b606260048080359060200190919050506078565b6040518082815260200191505060405180910390f35b60007f24abdb5865df5079dcc5ac590ff6f01d5c16edbc5fab4e195d9febd1114503da600783026040518082815260200191505060405180910390a16007820290509190505600a165627a7a7230582040383f19d9f65246752244189b02f56e8d0980ed44e7a56c0b200458caad20bb0029"}], "id": 5}' -H "Content-Type: application/json" localhost:8545
 {"jsonrpc":"2.0","id":5,"result":"0x1c31e"}
 ```
@@ -144,17 +139,14 @@ curl --data '{"jsonrpc":"2.0","method": "eth_estimateGas", "params": [{"from": "
 And finally deploy the contract.
 
 ```bash
-
 curl --data '{"jsonrpc":"2.0","method": "eth_sendTransaction", "params": [{"from": "0x9b1d35635cc34752ca54713bb99d38614f63c955", "gas": "0x1c31e", "data": "0x6060604052341561000f57600080fd5b60eb8061001d6000396000f300606060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063c6888fa1146044575b600080fd5b3415604e57600080fd5b606260048080359060200190919050506078565b6040518082815260200191505060405180910390f35b60007f24abdb5865df5079dcc5ac590ff6f01d5c16edbc5fab4e195d9febd1114503da600783026040518082815260200191505060405180910390a16007820290509190505600a165627a7a7230582040383f19d9f65246752244189b02f56e8d0980ed44e7a56c0b200458caad20bb0029"}], "id": 6}' -H "Content-Type: application/json" localhost:8545
 {"id":6,"jsonrpc":"2.0","result":"0xe1f3095770633ab2b18081658bad475439f6a08c902d0915903bafff06e6febf"}
-
 ```
 
 The transaction is accepted by the node and a transaction hash is returned. This hash can be used to track the transaction. The next step is to determine the address where our contract is deployed. Each executed transaction will create a receipt. This receipt contains various information about the transaction such as in which block the transaction was included and how much gas was used by the EVM. If a transaction
 creates a contract it will also contain the contract address. We can retrieve the receipt with the `eth_getTransactionReceipt` RPC method.
 
 ```bash
-
 curl --data '{"jsonrpc":"2.0","method": "eth_getTransactionReceipt", "params": ["0xe1f3095770633ab2b18081658bad475439f6a08c902d0915903bafff06e6febf"], "id": 7}' -H "Content-Type: application/json" localhost:8545
 {"jsonrpc":"2.0","id":7,"result":{"blockHash":"0x77b1a4f6872b9066312de3744f60020cbd8102af68b1f6512a05b7619d527a4f","blockNumber":"0x1","contractAddress":"0x4d03d617d700cf81935d7f797f4e2ae719648262","cumulativeGasUsed":"0x1c31e","from":"0x9b1d35635cc34752ca54713bb99d38614f63c955","gasUsed":"0x1c31e","logs":[],"logsBloom":"0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000","status":"0x1","to":null,"transactionHash":"0xe1f3095770633ab2b18081658bad475439f6a08c902d0915903bafff06e6febf","transactionIndex":"0x0"}}
 ```
@@ -172,7 +164,7 @@ The bytes of the payload defines which method in the contract is called. This is
 
 ```javascript
 web3.sha3("multiply(uint256)").substring(0, 8)
-;("c6888fa1")
+// "c6888fa1"
 ```
 
 The next step is to encode the arguments. There is only one uint256, say, the value 6. The ABI has a section which specifies how to encode uint256 types.
@@ -192,7 +184,7 @@ curl --data '{"jsonrpc":"2.0","method": "eth_sendTransaction", "params": [{"from
 
 Since a transaction was sent, a transaction hash was returned. Retrieving the receipt gives:
 
-```bash
+```json
 {
    blockHash: "0xbf0a347307b8c63dd8c1d3d7cbdc0b463e6e7c9bf0a35be40393588242f01d55",
    blockNumber: 268,
@@ -214,11 +206,11 @@ Since a transaction was sent, a transaction hash was returned. Retrieving the re
 }
 ```
 
-The receipt contains a log. This log was generated by the EVM on transaction execution and included in the receipt. The `multipy` function shows that the `Print` event was raised with the input times 7. Since the argument for the `Print` event was a uint256 we can decode it according to the ABI rules which will leave us with the expected decimal 42. Apart from the data it is worth noting that topics can be used to determine which event created the log:
+The receipt contains a log. This log was generated by the EVM on transaction execution and included in the receipt. The `multiply` function shows that the `Print` event was raised with the input times 7. Since the argument for the `Print` event was a uint256 we can decode it according to the ABI rules which will leave us with the expected decimal 42. Apart from the data it is worth noting that topics can be used to determine which event created the log:
 
-```bash
+```javascript
 web3.sha3("Print(uint256)")
-"24abdb5865df5079dcc5ac590ff6f01d5c16edbc5fab4e195d9febd1114503da"
+// "24abdb5865df5079dcc5ac590ff6f01d5c16edbc5fab4e195d9febd1114503da"
 ```
 
 This was just a brief introduction into some of the most common tasks, demonstrating direct usage of the JSON-RPC.
