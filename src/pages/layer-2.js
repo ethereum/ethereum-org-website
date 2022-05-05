@@ -272,7 +272,7 @@ const Layer2Page = ({ data }) => {
         isSecondary: "isSecondary",
       },
       {
-        content: "How to get onto layer 2",
+        content: "Move to layer 2",
         pathId: "how-to-get-onto-layer-2",
         isSecondary: "isSecondary",
       },
