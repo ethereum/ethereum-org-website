@@ -202,7 +202,7 @@ def hashimoto(dag, dagsize, params, header, nonce):
     return dbl_sha3(mix)
 ```
 
-The use of double sha3 allows for a form of zero-data, near-instant pre-verification, verifying only that a correct intermediate value was provided. This outer layer of PoW is highly ASIC-friendly and fairly weak, but exists to make DDoS even more difficult since that small amount of work must be done in order to produce a block that will not be rejected immediately. Here is the light-client version:
+The use of double SHA3 allows for a form of zero-data, near-instant pre-verification, verifying only that a correct intermediate value was provided. This outer layer of proof-of-work is highly ASIC-friendly and fairly weak, but exists to make DDoS even more difficult since that small amount of work must be done in order to produce a block that will not be rejected immediately. Here is the light-client version:
 
 ```python
 def quick_hashimoto(seed, dagsize, params, header, nonce):
