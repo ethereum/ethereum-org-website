@@ -46,7 +46,7 @@ Si vous êtes bilingue et que vous souhaitez nous aider à toucher davantage de 
 **Ressources générales**
 
 - [Ethereum.cn](https://www.ethereum.cn/) - contenu maintenu par la communauté, couvrant la mise à jour de la couche de consensus, l'intégralité des notes de réunion de l'équipe de développement, la couche 2, etc.
-- [EthFans](https://ethfans.org/) - tout pour apprendre Ethereum, de la base jusqu'aux concepts avancés
+- [EthFans](https://github.com/editor-Ajian/EthFans.org-annual-collected-works/) - tout pour apprendre Ethereum, de la base jusqu'aux concepts avancés
 - [Unitimes](https://mp.weixin.qq.com/s/tvloZSDBSOQN9zDQj_91kA) - contenu maintenu par la communauté, couvrant Ethereum, la DeFi, les NFT, ainsi que des ressources liées au Web3
 - [123ETH](https://123eth.org/) - un portail vers l'écosystème Ethereum
 - [Zhen Xiao](http://zhenxiao.com/blockchain/) - cours en ligne gratuits sur la cryptomonnaie et ses applications

@@ -46,7 +46,7 @@ Si sou bilingües i voleu ajudar-nos a arribar a més gent, també us podeu invo
 **Recursos genèrics**
 
 - [Ethereum.cn](https://www.ethereum.cn/) - contingut mantingut per la comunitat, sobre la millora de la capa de consens, totes les notes de les reunions de desenvolupadors bàsics, la capa 2, etc.
-- [EthFans](https://ethfans.org/) - apreneu tot el que cal, des dels tòpics més bàsics fins als més avançats d'Ethereum
+- [EthFans](https://github.com/editor-Ajian/EthFans.org-annual-collected-works/) - apreneu tot el que cal, des dels tòpics més bàsics fins als més avançats d'Ethereum
 - [Unitimes](https://mp.weixin.qq.com/s/tvloZSDBSOQN9zDQj_91kA) - contingut mantingut per la comunitat, sobre Ethereum, DeFi, NFT i coneixements relacionats amb Web3
 - [123ETH](https://123eth.org/) - un portal a l'ecosistema Ethereum
 - [Zhen Xiao](http://zhenxiao.com/blockchain/) - cursos gratuïts en línia sobre criptomonedes i les seves aplicacions

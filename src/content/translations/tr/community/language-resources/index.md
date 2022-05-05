@@ -46,7 +46,7 @@ Ethereum.org, [diller sayfasında](/languages) bulabileceğiniz 40'tan fazla dil
 **Genel kaynaklar**
 
 - [Ethereum.cn](https://www.ethereum.cn/) - konsensüs katmanı yükseltmesini, tüm çekirdek geliştirme toplantı notlarını, katman 2'yi vb. kapsayan topluluk tarafından sağlanan içerik.
-- [EthFans](https://ethfans.org/) - temel konulardan gelişmiş Ethereum konularına kadar her şeyi öğrenin
+- [EthFans](https://github.com/editor-Ajian/EthFans.org-annual-collected-works/) - temel konulardan gelişmiş Ethereum konularına kadar her şeyi öğrenin
 - [Unitimes](https://mp.weixin.qq.com/s/tvloZSDBSOQN9zDQj_91kA) - Ethereum, DeFi, NFT, Web3 ile ilgili bilgileri kapsayan topluluk tarafından sürdürülen içerikler
 - [123ETH](https://123eth.org/) - Ethereum ekosistemine bir geçit
 - [Zhen Xiao](http://zhenxiao.com/blockchain/) - kripto para ve kullanımları hakkında ücretsiz çevrimiçi kurslar

@@ -46,7 +46,7 @@ Ethereum.org 被翻译为 40 多种语言，您可以在我们的[语言页面](
 **通用资源**
 
 - [Ethereum.cn](https://www.ethereum.cn/) - 由社区维护网站内容，内容包括共识层升级、所有核心开发者会议记录、以太坊第二层等
-- [EthFans](https://ethfans.org/) - 学习从基础到高级以太坊主题的所有知识
+- [EthFans](https://github.com/editor-Ajian/EthFans.org-annual-collected-works/) - 学习从基础到高级以太坊主题的所有知识
 - [Untimes](https://mp.weixin.qq.com/s/tvloZSDBSOQN9zDQj_91kA) - 由社区维护内容，内容涵盖以太坊、去中心化金融、非同质化代币和 Web3 相关知识
 - [123ETH](https://123eth.org/) - 以太坊生态系统的一个门户网站
 - [Zhen Xiao（肖臻）](http://zhenxiao.com/blockchain/) - 关于加密货币及其应用的免费在线课程

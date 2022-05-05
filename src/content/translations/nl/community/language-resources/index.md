@@ -46,7 +46,7 @@ Als u tweetalig bent en ons wilt helpen meer mensen te bereiken, kunt u ook betr
 **Algemene bronnen**
 
 - [Ethereum.cn](https://www.ethereum.cn/) - door de gemeenschap onderhouden content die de upgrade van de consensuslaagupgrade, alle opmerkingen van de vergaderingen van kernontwikkelaars, laag 2, enz. behandelt.
-- [EthFans](https://ethfans.org/) - leer alles van de basisbeginselen tot geavanceerde Ethereum-onderwerpen
+- [EthFans](https://github.com/editor-Ajian/EthFans.org-annual-collected-works/) - leer alles van de basisbeginselen tot geavanceerde Ethereum-onderwerpen
 - [Unitimes](https://mp.weixin.qq.com/s/tvloZSDBSOQN9zDQj_91kA) - door de gemeenschap onderhouden content die kennis in verband met deFi, NFT, Web3 behandelt
 - [123ETH](https://123eth.org/) - een portaal naar het Ethereum-ecosysteem
 - [Zhen Xiao](http://zhenxiao.com/blockchain/) - gratis online cursussen over cryptocurrency en de bijbehorende toepassingen

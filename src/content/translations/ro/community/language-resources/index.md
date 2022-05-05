@@ -46,7 +46,7 @@ Dacă sunteți bilingv și doriți să ne ajutați să ajungem la mai mulți oam
 **Resurse generale**
 
 - [Ethereum.cn](https://www.ethereum.cn/) - conținut menținut de comunitate, care cuprinde actualizarea nivelului de consens, toate notițele de la reuniunile de dezvoltare de bază, nivelul 2 etc.
-- [EthFans](https://ethfans.org/) - învățați totul, de la noțiuni de bază la subiecte avansate despre Ethereum
+- [EthFans](https://github.com/editor-Ajian/EthFans.org-annual-collected-works/) - învățați totul, de la noțiuni de bază la subiecte avansate despre Ethereum
 - [Unitimes](https://mp.weixin.qq.com/s/tvloZSDBSOQN9zDQj_91kA) - conținut întreținut de comunitate, cuprinzând Ethereum, DeFi, NFT, cunoștințe legate de Web3
 - [123ETH](https://123eth.org/) - un Portal către ecosistemul Ethereum
 - [Zhen Xiao](http://zhenxiao.com/blockchain/) - cursuri gratuite online despre criptomonede și utilizările acestora

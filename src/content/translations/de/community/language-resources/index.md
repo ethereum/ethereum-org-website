@@ -46,7 +46,7 @@ Wenn Sie zweisprachig sind und uns helfen möchten, mehr Menschen zu erreichen, 
 **Allgemeine Ressourcen**
 
 - [Ethereum.cn](https://www.ethereum.cn/) – von der Community gepflegte Inhalte, die das Upgrade der Konsensschicht, alle Notizen zu den Kernentwicklungssitzungen, Layer 2 usw. umfassen
-- [EthFans](https://ethfans.org/) – Lernen Sie alles von den Grundlagen bis zu Ethereum-Themen für Fortgeschrittene
+- [EthFans](https://github.com/editor-Ajian/EthFans.org-annual-collected-works/) – Lernen Sie alles von den Grundlagen bis zu Ethereum-Themen für Fortgeschrittene
 - [Unitimes](https://mp.weixin.qq.com/s/tvloZSDBSOQN9zDQj_91kA) – von der Community gepflegte Inhalte, die Ethereum, DeFi, NFT, Web3-bezogenes Wissen abdecken
 - [123ETH](https://123eth.org/) – ein Portal für das Ethereum-Ökosystem
 - [Zhen Xiao](http://zhenxiao.com/blockchain/) – kostenlose Online-Kurse über Kryptowährungen und ihre Anwendungen
