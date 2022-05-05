@@ -34,7 +34,7 @@ Un mécanisme de consensus dans un système crypto-économique aide également �
 
 ### Preuve de travail {#proof-of-work}
 
-Ethereum, comme Bitcoin, utilise actuellement un mécanisme de consensus appelé **preuve de travail (PdT)**.
+Ethereum, comme Bitcoin, utilise actuellement un mécanisme de consensus appelé **preuve de travail (PoW)**.
 
 #### Création de blocs {#pow-block-creation}
 
