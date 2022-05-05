@@ -492,6 +492,30 @@ const BugBountiesPage = ({ data, location }) => {
                 </Link>
               </div>
             </StyledCard>
+            <StyledCard
+              emoji=":scroll:"
+              title={translateMessageId(
+                "page-upgrades-bug-bounty-deposit-bugs",
+                intl
+              )}
+              description={translateMessageId(
+                "page-upgrades-bug-bounty-deposit-bugs-desc",
+                intl
+              )}
+            >
+              <div>
+                <h4>
+                  <Translation id="page-upgrades-bug-bounty-help-links" />
+                </h4>
+                <Link to="https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/deposit-contract.md">
+                  Deposit Contract Specifications
+                </Link>
+                <br />
+                <Link to="https://github.com/ethereum/consensus-specs/blob/dev/solidity_deposit_contract/deposit_contract.sol">
+                  Deposit Contract Source Code
+                </Link>
+              </div>
+            </StyledCard>
           </StyledCardContainer>
           <H2>
             <Translation id="page-upgrades-bug-bounty-not-included" />
