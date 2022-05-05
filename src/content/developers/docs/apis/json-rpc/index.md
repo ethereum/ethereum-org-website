@@ -184,7 +184,7 @@ curl --data '{"jsonrpc":"2.0","method": "eth_sendTransaction", "params": [{"from
 
 Since a transaction was sent, a transaction hash was returned. Retrieving the receipt gives:
 
-```json
+```javascript
 {
    blockHash: "0xbf0a347307b8c63dd8c1d3d7cbdc0b463e6e7c9bf0a35be40393588242f01d55",
    blockNumber: 268,
