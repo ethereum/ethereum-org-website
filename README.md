@@ -1188,6 +1188,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   </tr>
   <tr>
     <td align="center"><a href="http://www.linkedin.com/in/sharma-yash"><img src="https://avatars.githubusercontent.com/u/44340561?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Yash Sharma </b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=yash-sharma1" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/cryptochrome"><img src="https://avatars.githubusercontent.com/u/4440762?v=4?s=100" width="100px;" alt=""/><br /><sub><b>cryptochrome</b></sub></a><br /><a href="#ideas-cryptochrome" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Acryptochrome" title="Bug reports">🐛</a></td>
   </tr>
 </table>
 
