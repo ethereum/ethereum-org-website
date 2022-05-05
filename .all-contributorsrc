@@ -7327,6 +7327,15 @@
         "doc",
         "translation"
       ]
+    },
+    {
+      "login": "14MR",
+      "name": "Tim Mustafin",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5824170?v=4",
+      "profile": "http://mustafin.dev",
+      "contributions": [
+        "ideas"
+      ]
     }
   ],
   "contributorsPerLine": 7,
