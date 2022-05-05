@@ -75,7 +75,7 @@ Altair adalah peningkatan besar dan pertama untuk jaringan yang memiliki waktu r
 
 Peningkatan London memperkenalkan [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), yang memperbarui pasar biaya transaksi, bersamaan dengan perubahan bagaimana pembayaran kembali gas ditangani dan jadwal untuk [Zaman Es](/glossary/#ice-age).
 
-- [Apakah Anda pengembang dApp? Pastikan meningkatkan pustaka dan perangkat Anda.](https://github.com/ethereum/eth1.0-specs/blob/master/network-upgrades/ecosystem-readiness.md)
+- [Apakah Anda pengembang dApp? Pastikan untuk meningkatkan pustaka dan peralatan Anda.](https://github.com/ethereum/eth1.0-specs/blob/master/network-upgrades/ecosystem-readiness.md)
 - [Baca pengumuman Yayasan Ethereum](https://blog.ethereum.org/2021/07/15/london-mainnet-announcement/)
 - [Baca penjelasan Ethereum Cat Herder](https://medium.com/ethereum-cat-herders/london-upgrade-overview-8eccb0041b41)
 
@@ -178,7 +178,7 @@ Istanbul fork:
 
 - Mengoptimalkan biaya [gas](/glossary/#gas) dari tindakan tertentu di [EVM](/developers/docs/ethereum-stack/#ethereum-virtual-machine).
 - Meningkatkan ketahanan terhadap serangan penolakan layanan.
-- Membuat solusi [penskalaan Lapisan 2](/developers/docs/scaling/layer-2-rollups/) berdasarkan SNARK dan STARK berkinerja lebih baik.
+- Membuat solusi [penskalaan Lapisan 2](/developers/docs/scaling/#layer-2-scaling) berdasarkan SNARK dan STARK berkinerja lebih baik.
 - Mengaktifkan Ethereum dan Zcash untuk saling beroperasi.
 - Kontrak yang diizinkan untuk memperkenalkan lebih banyak fungsi kreatif.
 
@@ -186,12 +186,12 @@ Istanbul fork:
 
 <ExpandableCard title="Istanbul EIPs" contentPreview="Official improvements included in this fork.">
 
-- [EIP-152](https://eips.ethereum.org/EIPS/eip-152) – _memungkinkan Ethereum bekerja dengan mata uang yang mempertahankan privasi seperti Zcash._
+- [EIP-152](https://eips.ethereum.org/EIPS/eip-152) – _izinkan Ethereum bekerja dengan mata uang yang menjaga privasi seperti Zcash._
 - [EIP-1108](https://eips.ethereum.org/EIPS/eip-1108) – _kriptografi lebih murah untuk meningkatkan biaya [gas](/glossary/#gas)._
-- [EIP-1344](https://eips.ethereum.org/EIPS/eip-1344) – _melidungi Ethereum terhadap serangan perulangan dengan menambahkan [opcode] `CHAINID` (/developers/docs/ethereum-stack/#ethereum-virtual-machine)._
-- [EIP-1884](https://eips.ethereum.org/EIPS/eip-1884) – _mengoptimalkan harga gas opcode berdasarkan jumlah pemakaian._
-- [EIP-2028](https://eips.ethereum.org/EIPS/eip-2028) – _mengurangi biaya CallData agar lebih banyak data di blok – baik untuk [penskalaan Lapisan 2](/developers/docs/scaling/layer-2-rollups/)._
-- [EIP-2200](https://eips.ethereum.org/EIPS/eip-2200) – _perubahan harga gas opcode lainnya._
+- [EIP-1344](https://eips.ethereum.org/EIPS/eip-1344) – _melindungi Ethereum dari serangan ulang dengan menambahkan `CHAINID` [opcode](/developers/docs/ethereum-stack/#ethereum-virtual-machine)._
+- [EIP-1884](https://eips.ethereum.org/EIPS/eip-1884) – _mengoptimalkan harga gas opcode berdasarkan konsumsi._
+- [EIP-2028](https://eips.ethereum.org/EIPS/eip-2028) – mengurangi biaya CallData untuk memungkinkan lebih banyak data dalam blok – bagus untuk [Penskalaan lapisan 2](/developers/docs/scaling/#layer-2-scaling).\_
+- [EIP-2200](https://eips.ethereum.org/EIPS/eip-2200) – _alterasi harga gas opcode lainnya._
 
 </ExpandableCard>
 
@@ -235,21 +235,21 @@ Fork Byzantium:
 - Pengurangan imbalan [penambangan](/developers/docs/consensus-mechanisms/pow/mining/) blok dari 5 menjadi 3 ETH.
 - Menunda [bom kesulitan](/glossary/#difficulty-bomb) selama satu tahun.
 - Menambahkan kemampuan untuk melakukan panggilan yang tidak mengubah status ke kontrak lain.
-- Menambahkan metode kriptografi tertentu untuk memungkinkan [penskalaan lapisan 2](/developers/docs/scaling/layer-2-rollups/).
+- Menambahkan metode kriptografi tertentu untuk memungkinkan [penskalaan lapisan ke-2](/developers/docs/scaling/#layer-2-scaling).
 
 [Baca pengumuman Yayasan Ethereum](https://blog.ethereum.org/2017/10/12/byzantium-hf-announcement/)
 
 <ExpandableCard title="Byzantium EIPs" contentPreview="Official improvements included in this fork.">
 
 - [EIP-140](https://eips.ethereum.org/EIPS/eip-140) – _menambahkan opcode `REVERT`._
-- [EIP-658](https://eips.ethereum.org/EIPS/eip-658) – _field status ditambahkan ke kwitansi untuk menunjukkan keberhasilan atau kegagalan._
-- [EIP-196](https://eips.ethereum.org/EIPS/eip-196) – _menambahkan kurva eliptik dan perkalian skalar untuk memungkinkan [ZK-Snarks](/developers/docs/scaling/layer-2-rollups/#zk-rollups)._
-- [EIP-197](https://eips.ethereum.org/EIPS/eip-197) – _menambahkan kurva eliptik dan perkalian skalar untuk memungkinkan [ZK-Snarks](/developers/docs/scaling/layer-2-rollups/#zk-rollups)._
-- [EIP-198](https://eips.ethereum.org/EIPS/eip-198) – _memungkinkan verfikasi tanda tangan RSA._
+- [EIP-658](https://eips.ethereum.org/EIPS/eip-658) – _kolom status ditambahkan ke resi transaksi untuk mengindikasikan keberhasilan atau kegagalan transaksi tersebut._
+- [EIP-196](https://eips.ethereum.org/EIPS/eip-196) – _menambahkan kurva eliptik dan perkalian skalar untuk memungkinkan [ZK-Snarks](/developers/docs/scaling/zk-rollups/)._
+- [EIP-197](https://eips.ethereum.org/EIPS/eip-197) – _menambahkan kurva eliptik dan perkalian skalar untuk memungkinkan [ZK-Snarks](/developers/docs/scaling/zk-rollups/)._
+- [EIP-198](https://eips.ethereum.org/EIPS/eip-198) – _mengaktifkan verifikasi tanda tangan RSA._
 - [EIP-211](https://eips.ethereum.org/EIPS/eip-211) – _menambahkan dukungan untuk nilai pengembalian panjang variabel._
-- [EIP-214](https://eips.ethereum.org/EIPS/eip-214) – _menambahkan opcode `STATICCALL` yang memungkinkan pemanggilan yang tidak mengubah state terhadap kontrak lainnya._
-- [EIP-100](https://eips.ethereum.org/EIPS/eip-100) – _mengubah rumus penyesuaian kesulitan._
-- [EIP-649](https://eips.ethereum.org/EIPS/eip-649) – _menunda [bom kesulitan](/glossary/#difficulty-bomb) selama 1 tahun dan mengurangi imbalan blok dari 5 ke 3 ETH._
+- [EIP-214](https://eips.ethereum.org/EIPS/eip-214) – _menambahkan opcode `STATICCALL`, memungkinkan panggilan yang tidak mengubah status ke kontrak lainnya._
+- [EIP-100](https://eips.ethereum.org/EIPS/eip-100) – _mengubah formula penyesuaian tingkat kesulitan._
+- [EIP-649](https://eips.ethereum.org/EIPS/eip-649) – _menunda [bom kesulitan](/glossary/#difficulty-bomb) hingga 1 tahun dan mengurangi imbalan blok dari 5 ETH menjadi 3 ETH._
 
 </ExpandableCard>
 
@@ -311,7 +311,7 @@ Tangerine Whistle fork adalah respons pertama terhadap serangan penolakan layana
 
 Fork DAO merupakan respons terhadap [serangan DAO 2016](https://www.coindesk.com/markets/2016/06/25/understanding-the-dao-attack/) di mana kontrak [DAO](/glossary/#dao) yang tidak aman dikuras dananya sebanyak lebih dari 3,6 juta ETH dalam peretasan saat itu. Fork tersebut memindahkan dana dari kontrak bermasalah ke [kontrak baru](https://etherscan.io/address/0xbf4ed7b27f1d666546e30d74d50d173d20bca754) dengan satu fungsi tunggal: tarik. Siapa pun yang kehilangan dana dapat menarik 1 ETH untuk setiap 100 token DAO di dompet mereka.
 
-Tindakan ini dipilih oleh komunitas Ethereum. Setiap pemilik ETH dapat memberikan suara melalui transaksi di [platform pengambilan suara](http://v1.carbonvote.com/). Keputusan untuk melakukan fork mencapai lebih dari 85% suara.
+Tindakan ini dipilih oleh komunitas Ethereum. Setiap pemegang ETH dapat memilih melalui transaksi di [platform pemilihan](http://v1.carbonvote.com/). Keputusan untuk melakukan fork mencapai lebih dari 85% suara.
 
 Beberapa penambang menolak untuk melakukan fork karena insiden DAO bukan merupakan kesalahan dalam protokol. Mereka kemudian membentuk [Ethereum Classic](https://ethereumclassic.org/).
 
