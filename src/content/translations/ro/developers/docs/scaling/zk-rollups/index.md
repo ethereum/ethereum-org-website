@@ -43,4 +43,4 @@ Există numeroase implementări ale ZK-rollup-urilor pe care le puteți integra 
 
 - [Ce sunt rollup-urile Zero-Knowledge?](https://coinmarketcap.com/alexandria/glossary/zero-knowledge-rollups)
 - [EthHub despre zk-rollup-uri](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/zk-rollups/)
-- \[STARKs vs SNARKs\] (https://consensys.net/blog/blockchain-explained/zero-knowledge-proofs-starks-vs-snarks/)
+- [STARKs vs SNARKs](https://consensys.net/blog/blockchain-explained/zero-knowledge-proofs-starks-vs-snarks/)
