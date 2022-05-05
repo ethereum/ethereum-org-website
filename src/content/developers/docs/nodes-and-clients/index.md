@@ -42,7 +42,7 @@ Instead of downloading every block, light nodes download block headers. These he
 
 The execution client Geth includes a [light sync](https://github.com/ethereum/devp2p/blob/master/caps/les.md) option. However, a light Geth node relies upon full nodes serving light node data. Few full nodes opt to serve light node data, meaning light nodes often fail to find peers. There are currently no production-ready light clients on the consensus layer; however, several are in development.
 
-There are also potential routes to providing light client data over the [gossip network](https://www.ethportal.net/. This is advantageous because the gossip network could support a network of light nodes without requiring full nodes to serve requests.
+There are also potential routes to providing light client data over the [gossip network](https://www.ethportal.net/). This is advantageous because the gossip network could support a network of light nodes without requiring full nodes to serve requests.
 
 Ethereum does not support a large population of light nodes yet, but light node support is an area expected to develop rapidly in the near future.
 
