@@ -154,7 +154,7 @@ Madenci bahşişi elinde tutuyor **+0.000210 ETH**
 
 Gaz, herhangi bir akıllı sözleşme etkileşimi için de gereklidir.
 
-![Kullanılmayan gazın nasıl iade edildiğini gösteren diyagram](./gas-tx.png) Diyagram, Ethereum EVM resmedici tarafından uyarlanmıştır
+![Kullanılmayan gazın nasıl iade edildiğini gösteren diyagram](./gas-tx.png) _Diyagram, Ethereum EVM resmedici tarafından uyarlanmıştır_
 
 İşlemde kullanılmayan gaz kullanıcı hesabına iade edilir.
 
