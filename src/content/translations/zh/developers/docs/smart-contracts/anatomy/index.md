@@ -20,15 +20,15 @@ sidebar: true
 持久性数据被称之为存储，由状态变量表示。 这些值被永久地存储在区块链上。 您需要声明一个类型，以便于合约在编译时可以跟踪它在区块链上需要多少存储。
 
 ```solidity
-// Solidity 示例
+// Solidity example
 contract SimpleStorage {
-    uint storedData; //状态变量
+    uint storedData; // State variable
     // ...
 }
 ```
 
 ```python
-# Vyper 示例
+# Vyper example
 storedData: int128
 ```
 
@@ -39,7 +39,7 @@ storedData: int128
 其它类型包括：
 
 - 布尔
-- 整形（integer）
+- 整数（integer）
 - 定点数（fixed point numbers）
 - 固定大小的字节数组（fixed-size byte arrays）
 - 动态大小的字节数组（dynamically-sized byte arrays）
@@ -57,18 +57,13 @@ storedData: int128
 
 仅在合约函数执行期间存储的值被称为内存变量。 由于这些变量不是永久地存储在区块链上，所以它们的使用成本要低得多。
 
-在 [Solidity 文档](https://solidity.readthedocs.io/en/latest/introduction-to-smart-contracts.html?highlight=memory#storage-memory-and-the-stack)中了解更多关于 EVM 如何存储数据（存储、内存和栈）。
-
-<!--- ### Try it
-
-Using this Remix tutorial, [define a variable in a Solidity smart contract](https://remix.ethereum.org/#optimize=false&evmVersion=null&version=soljson-v0.6.6+commit.6c089d02.js)
---->
+在 [Solidity 文档](https://solidity.readthedocs.io/en/latest/introduction-to-smart-contracts.html?highlight=memory#storage-memory-and-the-stack)中了解更多关于以太坊虚拟机如何存储数据（存储、内存和栈）。
 
 ### 环境变量 {#environment-variables}
 
-除了在自己合约上定义的变量之外，还有一些特殊的全局变量。 他们主要用于提供有关区块链或当前交易的信息。
+除了在自己合约上定义的变量之外，还有一些特殊的全局变量。 它们主要用于提供有关区块链或当前交易的信息。
 
-例如：
+示例：
 
 | **属性**          | **状态变量** | **描述**                 |
 | ----------------- | ------------ | ------------------------ |
@@ -77,13 +72,13 @@ Using this Remix tutorial, [define a variable in a Solidity smart contract](http
 
 ## 函数 {#functions}
 
-用最简单的术语来说，函数可以获得信息或者设置信息以响应传入的交易。
+用最简单的术语来说，函数可以获得信息或设置信息，以响应传入的交易。
 
 有两种函数调用方式：
 
-- `internal` – 不会创建 EVM 调用
+- `internal` – 不会创建以太坊虚拟机调用
   - Internal 函数和状态变量只能在内部访问（只能在合约内部或者从其继承的合约内部访问）。
-- `external` – 会创建 EVM 调用
+- `external` – 会创建以太坊虚拟机调用
   - External 函数是合约接口的一部分，这意味着他可以被其它合约和交易调用。 一个 external 函数 `f` 不可以被内部调用（即 `f()` 不行，但 `this.f()` 可以）。
 
 它们可以是 `public` 或 `private`
@@ -96,7 +91,7 @@ Using this Remix tutorial, [define a variable in a Solidity smart contract](http
 下面是更新合约上一个状态变量的函数：
 
 ```solidity
-// Solidity 示例
+// Solidity example
 function update_name(string value) public {
     dapp_name = value;
 }
@@ -108,7 +103,7 @@ function update_name(string value) public {
 
 ### View 函数 {#view-functions}
 
-这些函数保证不会修改合约数据的状态。 下面实例是“getter”函数 - 例如，它可以用于接收用户的余额。
+这些函数保证不会修改合约数据的状态。 常见的示例是 "getter" 函数 - 例如，它可以用于接收用户的余额。
 
 ```solidity
 // Solidity 示例
@@ -126,7 +121,7 @@ def readName() -> string:
   return dappName
 ```
 
-这些被视为修改状态：
+这些操作被视为修改状态：
 
 1. 写入状态变量。
 2. [正在导出事件](https://solidity.readthedocs.io/en/v0.7.0/contracts.html#events)。
@@ -137,14 +132,9 @@ def readName() -> string:
 7. 使用底层调用。
 8. 使用包含某些操作码的内联程序组。
 
-<!---#### Try it
-
-Using this Remix tutorial, [use a Solidity getter function to `view` data](https://remix.ethereum.org/#optimize=false&evmVersion=null&version=soljson-v0.6.6+commit.6c089d02.js)
---->
-
 ### 构造函数 {#constructor-functions}
 
-`constructor` 函数只在首次部署时执行一次。 与许多基于类的编程语言中的 `constructor` 函数类似，构造函数常将状态变量初始化到指定的值。
+`constructor` 函数只在首次部署合约时执行一次。 与许多基于类的编程语言中的 `constructor` 函数类似，这些函数常将状态变量初始化到指定的值。
 
 ```solidity
 // Solidity 示例
@@ -168,26 +158,6 @@ def __init__(_beneficiary: address, _bidding_time: uint256):
     self.auctionEnd = self.auctionStart + _bidding_time
 ```
 
-<!---#### Try it
-
-Using this Remix tutorial, [create a `constructor` function](https://remix.ethereum.org/#optimize=false&evmVersion=null&version=soljson-v0.6.6+commit.6c089d02.js)
---->
-
-<!-- TODO add additional funciton types
-
-### Pure functions {#pure-functions}
-
-@Sam Richards are these solidity-specific?
-
-### Return variables {#return-variables}
-
-https://solidity.readthedocs.io/en/v0.7.0/contracts.html?highlight=return variables#return-variables](https://solidity.readthedocs.io/en/v0.7.0/contracts.html?highlight=return%20variables#return-variables
-
-### Payable/non-payable {#payablenon-payable}
-
-- non-payable rejects ether sent to it
-- payable can accept 0 ETH -->
-
 ### 内置函数 {#built-in-functions}
 
 除了自己在合约中定义的变量和函数外，还有一些特殊的内置函数。 最明显的例子是：
@@ -195,7 +165,7 @@ https://solidity.readthedocs.io/en/v0.7.0/contracts.html?highlight=return variab
 - `address.send()` – Solidity
 - `send(address)` – Vyper
 
-这使合约可以发送 ETH 给其它帐户。
+这使合约可以发送以太币给其它帐户。
 
 ## 编写函数 {#writing-functions}
 
@@ -212,7 +182,7 @@ pragma solidity >=0.4.0 <=0.6.0;
 contract ExampleDapp {
     string dapp_name; // state variable
 
-    // 在合约部署时被调用，并初始化值
+    // Called when the contract is deployed and initializes the value
     constructor() public {
         dapp_name = "My Example dapp";
     }
@@ -229,70 +199,20 @@ contract ExampleDapp {
 }
 ```
 
-一个完整的合约可能看上去就是这样了。 在这里，`constructor` 函数为 `dapp_name` 变量提供了初始化数据。
+一个完整的合约可能就是这样。 在这里，`constructor` 函数为 `dapp_name` 变量提供了初始化值。
 
 ## 事件和日志 {#events-and-logs}
 
-事件可以让您通过前端或其它订阅程序与您的智能合约通信。 当交易被挖矿执行时，智能合约可以触发事件并且将日志写入区块链，然后前端可以处理。<!-- TODO add event examples
+事件可以让您通过前端或其它订阅应用与您的智能合约通信。 当交易被挖矿执行时，智能合约可以触发事件并且将日志写入区块链，然后前端可以进行处理。
 
-They are used in a few different ways:
-
-1. smart contract return values for the user interface
-
-```solidity
-contract ExampleContract {
-  event ReturnValue(address indexed _from, int256 _value);
-```
-
-```js
-var exampleEvent = exampleContract.ReturnValue({ _from: web3.eth.coinbase })
-exampleEvent.watch(function (err, result) {
-  if (err) {
-    console.log(err)
-    return
-  }
-  console.log(result.args._value)
-  // check that result.args._from is web3.eth.coinbase then
-  // display result.args._value in the UI and call
-  // exampleEvent.stopWatching()
-})
-exampleContract.foo.sendTransaction(2, { from: web3.eth.coinbase })
-```
-
-2. asynchronous triggers with data
-
-```solidity
-contract CryptoExchange {
-  event Deposit(uint256 indexed _market, address indexed _sender, uint256 _amount, uint256 _time);
-  function deposit(uint256 _amount, uint256 _market) returns (int256) {
-      // perform deposit, update user’s balance, etc
-      Deposit(_market, msg.sender, _amount, now);
-  }
-```
-
-```js
-var depositEvent = cryptoExContract.Deposit({ _sender: userAddress })
-depositEvent.watch(function (err, result) {
-  if (err) {
-    console.log(err)
-    return
-  }
-  // append details of result.args to UI
-})
-```
-
-3. a cheaper form of storage
-
-Need your help explaining events/showing examples
-
-_Examples provided by Joseph Chow and ConsenSys_ -->## 附带说明的例子 {#annotated-examples}
+## 附带说明的例子 {#annotated-examples}
 
 这是一些用 Solidity 写的例子。 如果希望运行这些代码，您可以在 [Remix](http://remix.ethereum.org) 中调试。
 
 ### Hello world {#hello-world}
 
 ```solidity
-// 确定 Solidity 版本，使用语义化版本。
+// Specifies the version of Solidity, using semantic versioning.
 // 了解更多：https://solidity.readthedocs.io/en/v0.5.10/layout-of-source-files.html#pragma
 pragma solidity ^0.5.10;
 
@@ -453,6 +373,10 @@ contract CryptoPizza is IERC721, ERC165 {
 
         // Checks that Pizza owner is the same as current user
         // Learn more: https://solidity.readthedocs.io/en/v0.5.10/control-structures.html#error-handling-assert-require-revert-and-exceptions
+
+        // note that address(0) is the zero address,
+        // indicating that pizza[id] is not yet allocated to a particular user.
+
         assert(pizzaToOwner[id] == address(0));
 
         // Maps the Pizza to the owner
@@ -550,12 +474,12 @@ contract CryptoPizza is IERC721, ERC165 {
         bytes memory _data
     ) public {
         this.transferFrom(from, to, pizzaId);
-        require(_checkOnERC721Received(from, to, pizzaId, _data), "Must implmement onERC721Received.");
+        require(_checkOnERC721Received(from, to, pizzaId, _data), "Must implement onERC721Received.");
     }
 
     /**
-     * Internal 函数，对目标地址调用 `onERC721Received`
-     * 如果目标地址不是一个合约，则改调用不执行。
+     * Internal function to invoke `onERC721Received` on a target address
+     * The call is not executed if the target address is not a contract
      */
     function _checkOnERC721Received(
         address from,
@@ -576,9 +500,9 @@ contract CryptoPizza is IERC721, ERC165 {
         return (retval == _ERC721_RECEIVED);
     }
 
-    // 燃烧 Pizza - 彻底销毁代币
-    //  `external` 函数修饰符表明该函数是合约接口的一部分，
-    // 允许被其它合约调用
+    // Burns a Pizza - destroys Token completely
+    // The `external` function modifier means this function is
+    // part of the contract interface and other contracts can call it
     function burn(uint256 _pizzaId) external {
         require(msg.sender != address(0), "Invalid address.");
         require(_exists(_pizzaId), "Pizza does not exist.");
@@ -591,26 +515,26 @@ contract CryptoPizza is IERC721, ERC165 {
         pizzaToOwner[_pizzaId] = address(0);
     }
 
-    // 返回某个地址的 Pizzas 的数量
+    // Returns count of Pizzas by address
     function balanceOf(address _owner) public view returns (uint256 _balance) {
         return ownerPizzaCount[_owner];
     }
 
-    // 通过 id 返回 Pizza 的 owner
+    // Returns owner of the Pizza found by id
     function ownerOf(uint256 _pizzaId) public view returns (address _owner) {
         address owner = pizzaToOwner[_pizzaId];
         require(owner != address(0), "Invalid Pizza ID.");
         return owner;
     }
 
-    // 批准其它地址转移 Pizza 的所有权
+    // Approves other address to transfer ownership of Pizza
     function approve(address _to, uint256 _pizzaId) public {
         require(msg.sender == pizzaToOwner[_pizzaId], "Must be the Pizza owner.");
         pizzaApprovals[_pizzaId] = _to;
         emit Approval(msg.sender, _to, _pizzaId);
     }
 
-    // 针对一个 Pizza 获取批准的地址。
+    // Returns approved address for specific Pizza
     function getApproved(uint256 _pizzaId)
         public
         view
@@ -621,8 +545,8 @@ contract CryptoPizza is IERC721, ERC165 {
     }
 
     /**
-     * Private 函数清理某个给定代币 ID 的批准状态
-     * 如果给定的地址不是对应代币的拥有者，则操作回退。
+     * Private function to clear current approval of a given token ID
+     * Reverts if the given address is not indeed the owner of the token
      */
     function _clearApproval(address owner, uint256 _pizzaId) private {
         require(pizzaToOwner[_pizzaId] == owner, "Must be pizza owner.");
@@ -633,8 +557,8 @@ contract CryptoPizza is IERC721, ERC165 {
     }
 
     /*
-     * 设置或取消对某一操作者的批准
-     * 允许操作者代表他们转移发送者的所有代币
+     * Sets or unsets the approval of a given operator
+     * An operator is allowed to transfer all tokens of the sender on their behalf
      */
     function setApprovalForAll(address to, bool approved) public {
         require(to != msg.sender, "Cannot approve own address");
@@ -642,7 +566,7 @@ contract CryptoPizza is IERC721, ERC165 {
         emit ApprovalForAll(msg.sender, to, approved);
     }
 
-    // 针对一个给定 owner，获取是否某一个操作者被批准
+    // Tells whether an operator is approved by a given owner
     function isApprovedForAll(address owner, address operator)
         public
         view
@@ -651,27 +575,27 @@ contract CryptoPizza is IERC721, ERC165 {
         return operatorApprovals[owner][operator];
     }
 
-    // 获取 Pizza 的所有权——仅对被批准的用户
+    // Takes ownership of Pizza - only for approved users
     function takeOwnership(uint256 _pizzaId) public {
         require(_isApprovedOrOwner(msg.sender, _pizzaId), "Address is not approved.");
         address owner = this.ownerOf(_pizzaId);
         this.transferFrom(owner, msg.sender, _pizzaId);
     }
 
-    // 检查 Pizza 是否存在
+    // Checks if Pizza exists
     function _exists(uint256 pizzaId) internal view returns (bool) {
         address owner = pizzaToOwner[pizzaId];
         return owner != address(0);
     }
 
-    // 检查地址是否是 owner 的或是否被批准转账 Pizza
+    // Checks if address is owner or is approved to transfer Pizza
     function _isApprovedOrOwner(address spender, uint256 pizzaId)
         internal
         view
         returns (bool)
     {
         address owner = pizzaToOwner[pizzaId];
-        // 禁用 solium 检查是因为：
+        // Disable solium check because of
         // https://github.com/duaraghav8/Solium/issues/175
         // solium-disable-next-line operator-whitespace
         return (spender == owner ||
@@ -679,7 +603,7 @@ contract CryptoPizza is IERC721, ERC165 {
             this.isApprovedForAll(owner, spender));
     }
 
-    // 检查 Pizza 是否唯一且尚不存在
+    // Check if Pizza is unique and doesn't exist yet
     modifier isUnique(string memory _name, uint256 _dna) {
         bool result = true;
         for (uint256 i = 0; i < pizzas.length; i++) {
@@ -695,11 +619,11 @@ contract CryptoPizza is IERC721, ERC165 {
         _;
     }
 
-    // 检查目标地址是否是一个合约
+    // Returns whether the target address is a contract
     function isContract(address account) internal view returns (bool) {
         uint256 size;
-        // 除了检查目标地址的代码的尺寸外，
-        // 目前尚无更好的办法判断目标地址是否是一个合约。
+        // Currently there is no better way to check if there is a contract in an address
+        // than to check the size of the code at that address.
         // 参阅 https://ethereum.stackexchange.com/a/14016/36603
         // 了解更多信息。
         // TODO：在 Serenity 发布前再次检查这里。
@@ -715,7 +639,7 @@ contract CryptoPizza is IERC721, ERC165 {
 
 ## 延伸阅读 {#further-reading}
 
-查阅 Solidity 和 Vyper 文档以获得关于智能合约的更完整概述：
+查阅 Solidity 和 Vyper 文档，以获得关于智能合约的更完整概述：
 
 - [Solidity](https://solidity.readthedocs.io/)
 - [Vyper](https://vyper.readthedocs.io/)
@@ -723,7 +647,7 @@ contract CryptoPizza is IERC721, ERC165 {
 ## 相关主题 {#related-topics}
 
 - [智能合约](/developers/docs/smart-contracts/)
-- [以太坊虚拟机（EVM）](/developers/docs/evm/)
+- [以太坊虚拟机](/developers/docs/evm/)
 
 ## 相关教程 {#related-tutorials}
 

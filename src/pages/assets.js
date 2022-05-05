@@ -12,7 +12,7 @@ import Translation from "../components/Translation"
 import { Page, Content } from "../components/SharedStyledComponents"
 
 import { translateMessageId } from "../utils/translations"
-import ethGlyphColoredSvg from "../assets/assets/eth-glyph-colored.svg"
+import EthGlyphColoredSvg from "../assets/assets/eth-glyph-colored.svg"
 
 const Image = styled(GatsbyImage)`
   align-self: center;
@@ -322,8 +322,7 @@ const AssetsPage = ({ data }) => {
               "page-assets-eth-diamond-colored-svg",
               intl
             )}
-            image={ethGlyphColoredSvg}
-            isSvg
+            svg={EthGlyphColoredSvg}
           />
         </Row>
         <Row>

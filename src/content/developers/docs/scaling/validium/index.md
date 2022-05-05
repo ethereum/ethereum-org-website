@@ -28,7 +28,6 @@ Multiple projects provide implementations of Validium that you can integrate int
 
 - [Starkware](https://starkware.co/)
 - [Matter Labs zkPorter](https://matter-labs.io/)
-- [Loopring](https://loopring.org/#/)
 
 ## Further reading {#further-reading}
 

@@ -1,4 +1,7 @@
 {
+  "page-get-eth-article-keeping-crypto-safe": "I segreti per tenere al sicuro le tue criptovalute",
+  "page-get-eth-article-protecting-yourself": "Proteggere te stesso/a e il tuo patrimonio",
+  "page-get-eth-article-store-digital-assets": "Come conservare attivi digitali su Ethereum",
   "page-get-eth-cex": "Borse centralizzate",
   "page-get-eth-cex-desc": "Gli scambi sono aziende che consentono di acquistare criptovalute usando valute tradizionali. Hanno la custodia su tutti gli ETH che acquisti fino a quando li invii a un portafoglio che controlli.",
   "page-get-eth-checkout-dapps-btn": "Scopri le dapp",
@@ -21,6 +24,7 @@
   "page-get-eth-exchanges-no-exchanges": "Siamo spiacenti, non conosciamo borse che ti permettano di acquistare ETH da questo paese. Se tu le conosci, faccelo sapere:",
   "page-get-eth-exchanges-no-exchanges-or-wallets": "Siamo spiacenti, non conosciamo borse o portafogli che ti permettano di acquistare ETH da questo paese. Se tu li conosci, faccelo sapere:",
   "page-get-eth-exchanges-no-wallets": "Siamo spiacenti, non conosciamo portafogli che ti permettano di acquistare ETH da questo paese. Se tu li conosci, faccelo sapere:",
+  "page-get-eth-exchanges-search": "Digita dove vivi...",
   "page-get-eth-exchanges-success-exchange": "La registrazione a una borsa può richiedere diversi giorni a causa dei controlli legali da eseguire.",
   "page-get-eth-exchanges-success-wallet-link": "portafogli",
   "page-get-eth-exchanges-success-wallet-paragraph": "Nel paese in cui vivi, puoi acquistare ETH direttamente da questi portafogli. Scopri di più su",

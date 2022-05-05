@@ -75,7 +75,7 @@ A parte fundamental de uma DAO é seu contrato inteligente. O contrato define as
 
 Isso é possível porque os contratos inteligentes são imunes à adulteração, uma vez que entram em funcionamento na Ethereum. Você não pode simplesmente editar o código (as regras das DAOs) sem que as pessoas percebam porque tudo é público.
 
-<DocLink to="/developers/docs/smart-contracts/">
+<DocLink to="/smart-contracts/">
   Mais sobre contratos inteligentes
 </DocLink>
 

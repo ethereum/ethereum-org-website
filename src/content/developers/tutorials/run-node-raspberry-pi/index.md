@@ -176,7 +176,7 @@ Password: ethereum
 
 All clients run as a systemd service. This is important because if a problem arises the system will respawn the process automatically.
 
-Geth and Prysm beacon chain run by default (depending on what you are synchronizing, execution later or consensus layer) so, if you want to switch to other clients (from Geth to Nethermind, for instance), you need to stop and disable Geth first, and enable and start the other client:
+Geth and Prysm beacon chain run by default (depending on what you are synchronizing, execution layer or consensus layer) so, if you want to switch to other clients (from Geth to Nethermind, for instance), you need to stop and disable Geth first, and enable and start the other client:
 
 ```bash
 sudo systemctl stop geth && sudo systemctl disable geth

@@ -49,7 +49,7 @@ module.exports = {
         short_name: `ethereum.org`,
         start_url: `/en/`,
         background_color: `#ffffff`,
-        theme_color: `#1c1ce1`,
+        theme_color: `#222222`,
         display: `standalone`,
         icon: `src/assets/favicon.png`,
       },
@@ -176,6 +176,15 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
+    // SVG support
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /assets/,
+        },
+      },
+    },
     // CSS in JS
     `gatsby-plugin-styled-components`,
     // Source assets
@@ -203,8 +212,16 @@ module.exports = {
         path: `${__dirname}/src/data`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/data/translation-reports`,
+      },
+    },
     // Process files within /src/data/
     `gatsby-transformer-csv`,
+    // Process JSON files
+    `gatsby-transformer-json`,
     // Add git information on File fields from latest commit: date, author and email
     // Used for `Last updated` fields
     {

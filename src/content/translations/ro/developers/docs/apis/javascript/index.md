@@ -1,39 +1,39 @@
 ---
 title: Biblioteci API JavaScript
-description: O introducere în bibliotecile client JavaScript care îți permit să interacționezi cu blockchain-ul din aplicația ta.
+description: O introducere în bibliotecile client JavaScript care vă permit să interacționaţi cu blockchain-ul din aplicația dvs.
 lang: ro
 sidebar: true
 ---
 
-Pentru ca o aplicație web să interacționeze cu blockchain-ul Ethereum (adică să citească date blockchain și/sau să trimită tranzacții către rețea), trebuie să se conecteze la un nod Ethereum.
+Pentru ca o aplicație web să interacționeze cu blockchain-ul Ethereum (adică să citească datele blockchain-ului și/sau să trimită tranzacții către rețea), trebuie să se conecteze la un nod Ethereum.
 
-În acest scop, fiecare client Ethereum implementează specificația JSON-RPC, deci există un set uniform de puncte finale pe care se pot baza aplicațiile.
+În acest scop, fiecare client Ethereum implementează specificația [JSON-RPC](/developers/docs/apis/json-rpc/), astfel încât să existe un set uniform de [endpoint-uri](/developers/docs/apis/json-rpc/endpoints/) pe care se pot baza aplicațiile.
 
-Dacă dorești să utilizezi JavaScript pentru a te conecta la un nod Ethereum, poți să utilizezi vanilla JavaScript, dar există mai multe biblioteci utile în ecosistem care fac acest lucru mult mai ușor. Cu aceste biblioteci, programatorii pot scrie metode intuitive, pe o singură linie, pentru a inițializa cereri JSON RPC (în culise) care interacționează cu Ethereum.
+Dacă doriţi să utilizaţi JavaScript pentru a vă conecta la un nod Ethereum, puteţi să utilizaţi vanilla JavaScript, dar există mai multe biblioteci utile în ecosistem care facilitează mult acest lucru. Cu aceste biblioteci, programatorii pot scrie metode intuitive şi scurte pentru a inițializa cereri JSON RPC (în culise) care interacționează cu Ethereum.
 
 ## Condiții prealabile {#prerequisites}
 
-Pe lângă înțelegerea JavaScript, ar putea fi util să înțelegi [stiva Ethereum](/developers/docs/ethereum-stack/) și [clienții Ethereum](/developers/docs/nodes-and-clients/).
+Pe lângă înțelegerea JavaScript, ar putea fi util să înțelegeţi [stiva Ethereum](/developers/docs/ethereum-stack/) și [clienții Ethereum](/developers/docs/nodes-and-clients/).
 
-## De ce să folosești o bibliotecă? {#why-use-a-library}
+## De ce să folosiţi o bibliotecă? {#why-use-a-library}
 
-Aceste biblioteci elimină o mare parte din complexitatea interacțiunii directe cu un nod Ethereum. Ele oferă, de asemenea, funcții utilitare (cum ar fi conversia din ETH în Gwei), astfel încât ca programator, să petreci mai mult timp cu funcționalitatea unică a aplicației tale decât cu complexitatea clienților Ethereum.
+Aceste biblioteci elimină o mare parte din complexitatea interacțiunii directe cu un nod Ethereum. Ele oferă şi funcții utilitare (cum ar fi conversia din ETH în Gwei), astfel încât, ca programator, să petreceţi mai mult timp axându-vă pe funcționalitatea unică a aplicației dvs. decât încercând să vă descurcaţi cu complexitatea clienților Ethereum.
 
-## Caracteristicile bibliotecii {#library-features}
+## Funcţionalităţile bibliotecilor {#library-features}
 
-### Conectează la nodurile Ethereum {#connect-to-ethereum-nodes}
+### Conectaţi-vă la nodurile Ethereum {#connect-to-ethereum-nodes}
 
-Folosind furnizorii, aceste biblioteci îți permit să te conectezi la Ethereum și să-i citești datele, indiferent dacă este vorba de JSON-RPC, INFURA, Etherscan, Alchemy sau MetaMask.
+Folosind furnizorii, aceste biblioteci vă permit să vă conectaţi la Ethereum și să-i citiţi datele, indiferent dacă este vorba de JSON-RPC, INFURA, Etherscan, Alchemy sau MetaMask.
 
-**Exemplu de Ethers**
+**Exemplu în Ethers**
 
 ```js
-// Un Web3Provider ce integrează un furnizor Web3 standard, care este
-// ceea ce MetaMask injectează ca window.ethereum în fiecare pagină
+// A Web3Provider wraps a standard Web3 provider, which is
+// what MetaMask injects as window.ethereum into each page
 const provider = new ethers.providers.Web3Provider(window.ethereum)
 
-// Plug-in-ul MetaMask permite, în plus, semnarea de tranzacții pentru a
-// trimite eter și a plătii pentru a schimba starea în cadrul blockchain-ului.
+// The MetaMask plugin also allows signing transactions to
+// send ether and pay to change state within the blockchain.
 // Pentru aceasta, avem nevoie de semnatarul contului...
 const signer = provider.getSigner()
 ```
@@ -61,17 +61,17 @@ var web3 = new Web3(
 // pe linux calea este: "/users/myuser/.ethereum/geth.ipc"
 ```
 
-După configurare, vei putea interoga blockchain-ul pentru:
+După configurare, veţi putea interoga blockchain-ul pentru:
 
 - numărul blocului
-- estimări de gaz
-- evenimente cu contractele inteligente
-- id rețea
+- estimările de gaz
+- evenimentele din contractele inteligente
+- id-ul rețelei
 - și altele...
 
-### Funcționalitate de portofel {#wallet-functionality}
+### Funcționalitatea de portofel {#wallet-functionality}
 
-Aceste biblioteci îți oferă funcționalități pentru crearea portofelelor, gestionarea cheilor și semnarea tranzacțiilor.
+Aceste biblioteci vă oferă funcționalități pentru crearea portofelelor, gestionarea cheilor și semnarea tranzacțiilor.
 
 Iată câteva exemple din Ethers
 
@@ -143,18 +143,18 @@ wallet.sendTransaction(tx)
 
 [Citește specificațiile complete](https://docs.ethers.io/v5/api/signer/#Wallet)
 
-Odată configurat vei putea să:
+Odată configurat veţi putea să:
 
-- creezi conturi
-- trimiți tranzacții
-- semnezi tranzacții
+- creaţi conturi
+- trimiteţi tranzacții
+- semnaţi tranzacții
 - și altele...
 
 ### Interacționează cu funcțiile contractelor inteligente {#interact-with-smart-contract-functions}
 
-Bibliotecile client JavaScript permit aplicației tale să apeleze funcții de contract inteligent citind interfața binară a aplicației (ABI) a unui contract compilat.
+JavaScript client libraries allow your application to call smart contract functions by reading the Application Binary Interface (ABI) of a compiled contract.
 
-Interfața ABI explică în esență funcțiile contractului într-un format JSON și îți permite să îl utilizezi ca un obiect JavaScript normal.
+Interfața ABI explică în esență funcțiile contractului într-un format JSON și vă permite să îl utilizaţi ca obiect JavaScript normal.
 
 Deci, următorul contract Solidity:
 
@@ -176,7 +176,7 @@ contract Test {
 }
 ```
 
-Ar rezulta în următorul JSON:
+Ar avea drept rezultat următorul JSON:
 
 ```json
 [{
@@ -205,20 +205,20 @@ Ar rezulta în următorul JSON:
 }]
 ```
 
-Aceasta înseamnă că poți:
+Aceasta înseamnă că puteţi:
 
-- Trimite o tranzacție către contractul inteligent și executa metoda acestuia
-- Apela pentru estimarea gazului necesar execuției metodei atunci când va fi executat în EVM
-- Implementa un contract
+- trimite o tranzacție către contractul inteligent și îi puteţi executa metoda
+- apela pentru estimarea gazului necesar execuției metodei atunci când va fi executată în EVM
+- implementa un contract
 - Și altele...
 
 ### Funcții utilitare {#utility-functions}
 
-Funcțiile utilitare îți oferă comenzi rapide la îndemână, care facilitează construirea cu Ethereum.
+Funcțiile utilitare vă oferă comenzi rapide pe care să le aveţi la îndemână, ce facilitează construirea cu Ethereum.
 
-Valorile ETH sunt în mod implicit în Wei. 1 ETH = 1.000.000.000.000.000.000 WEI – asta înseamnă că ai de-a face cu o mulțime de numere! `web3.utils.toWei` convertește eterul în Wei pentru tine.
+Valorile ETH sunt în mod implicit în Wei. 1 ETH = 1.000.000.000.000.000.000 WEI – aceasta înseamnă că aveţi de-a face cu o mulțime de cifre! `web3.utils.toWei` convertește ether-ul în Wei pentru dvs.
 
-Iar în eteri arată așa:
+Iar în ether-i arată așa:
 
 ```js
 // Obține soldul unui cont (după adresă sau numele ENS)
@@ -241,12 +241,12 @@ ethers.utils.formatEther(balance)
 - [Documentație](https://web3js.readthedocs.io/en/1.0/)
 - [GitHub](https://github.com/ethereum/web3.js/)
 
-**Ethers.js -** **_Implementare completă de portofel Ethereum și utilitare, în JavaScript și TypeScript._**
+**Ethers.js -** **_Implementare completă de portofel Ethereum și utilitare în JavaScript și TypeScript._**
 
 - [Documentație](https://docs.ethers.io/)
 - [GitHub](https://github.com/ethers-io/ethers.js/)
 
-**The Graph -** **_Un protocol de indexare a datelor Ethereum și IPFS și interogarea acestora folosind GraphQL._**
+**The Graph -** **_Un protocol de indexare a datelor Ethereum și IPFS și de interogare a acestora folosind GraphQL._**
 
 - [The Graph](https://thegraph.com/)
 - [Graph Explorer](https://thegraph.com/explorer/)
@@ -268,17 +268,22 @@ ethers.utils.formatEther(balance)
 - [Documentație](https://docs.alchemyapi.io/documentation/alchemy-web3)
 - [GitHub](https://github.com/alchemyplatform/alchemy-web3)
 
+**Alchemy NFT API -** **_API for fetching NFT data, including ownership, metadata attributes and more._**
+
+- [Documentație](https://docs.alchemy.com/alchemy/enhanced-apis/nft-api)
+- [GitHub](https://github.com/alchemyplatform/alchemy-web3)
+
 ## Referințe suplimentare {#further-reading}
 
-_Cunoști o resursă comunitară care te-a ajutat? Editează această pagină și adaug-o!_
+_Cunoaşteţi o resursă comunitară care v-a ajutat? Editaţi această pagină și adăugaţi-o!_
 
 ## Subiecte corelate {#related-topics}
 
 - [Noduri și clienți](/developers/docs/nodes-and-clients/)
-- [Cadre de dezvoltare](/developers/docs/frameworks/)
+- [Framework-uri de dezvoltare](/developers/docs/frameworks/)
 
 ## Tutoriale corelate {#related-tutorials}
 
-- [Configurează Web3js pentru a utiliza blockchain-ul Ethereum în JavaScript](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– Instrucțiuni pentru configurarea web3.js în proiectul tău._
-- [Apelarea unui contract inteligent din JavaScript](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– Folosind tokenuri DAI, vezi cum să apelezi funcții de contracte folosind JavaScript._
-- [Trimiterea de tranzacții folosind web3 și Alchemy](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) _– Tutorial pas cu pas pentru trimiterea de tranzacții din back-end._
+- [Set up Web3js to use the Ethereum blockchain in JavaScript](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– Instructions for getting web3.js set up in your project._
+- [Calling a smart contract from JavaScript](/developers/tutorials/calling-a-smart-contract-from-javascript/) _- Folosind token-ul DAI, vedeți cum să apelați funcția contractelor folosind JavaScript._
+- [Trimiterea de tranzacții folosind web3 și Alchemy](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) _– Tutorial pas cu pas pentru trimiterea de tranzacții din backend._
