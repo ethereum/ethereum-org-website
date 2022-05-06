@@ -458,7 +458,7 @@ const Layer2Page = ({ data }) => {
               Layer 2 (L2) is a collective term to describe a specific set of
               Ethereum scaling solutions.{" "}
               <b>
-                A layer 2 is separate blockchain that extends Ethereum and
+                A layer 2 is a separate blockchain that extends Ethereum and
                 inherits the security guarantees of Ethereum
               </b>
               .
