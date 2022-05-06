@@ -62,7 +62,7 @@ The update and delete operations for radix tries are simple, and can be defined 
                 return hash(newnode)
 ```
 
-The "Merkle" part of the radix trie arises in the fact that a deterministic cryptographic hash of a node is used as the pointer to the node (for every lookup in the key/value DB `key == sha3(rlp(value))`, rather than some 32-bit or 64-bit memory location as might happen in a more traditional trie implemented in C. This provides a form of cryptographic authentication to the data structure; if the root hash of a given trie is publicly known, then anyone can provide a proof that the trie has a given value at a specific path by providing the hashes of each node joining a specific value to the tree root. It is impossible for an attacker to provide a proof of a (path, value) pair that does not exist since the root hash is ultimately based on all hashes below it, so any modification would change the root hash.
+The "Merkle" part of the radix trie arises in the fact that a deterministic cryptographic hash of a node is used as the pointer to the node (for every lookup in the key/value DB `key == keccak256(rlp(value))`, rather than some 32-bit or 64-bit memory location as might happen in a more traditional trie implemented in C. This provides a form of cryptographic authentication to the data structure; if the root hash of a given trie is publicly known, then anyone can provide a proof that the trie has a given value at a specific path by providing the hashes of each node joining a specific value to the tree root. It is impossible for an attacker to provide a proof of a (path, value) pair that does not exist since the root hash is ultimately based on all hashes below it, so any modification would change the root hash.
 
 While traversing a path one nibble at a time, as described above, most nodes contain a 17-element array. One index for each possible value held by the next hex character (nibble) in the path, and one to hold the final target value if the path has been fully traversed. These 17-element array nodes are called `branch` nodes.
 
@@ -179,9 +179,9 @@ Now, we build such a trie with the following key/value pairs in the underlying D
     hashE:    [ <17>, [ <>, <>, <>, <>, <>, <>, [ <35>, 'coin' ], <>, <>, <>, <>, <>, <>, <>, <>, <>, 'puppy' ] ]
 ```
 
-When one node is referenced inside another node, what is included is `H(rlp.encode(x))`, where `H(x) = sha3(x) if len(x) >= 32 else x` and `rlp.encode` is the [RLP](/fundamentals/rlp) encoding function.
+When one node is referenced inside another node, what is included is `H(rlp.encode(x))`, where `H(x) = keccak256(x) if len(x) >= 32 else x` and `rlp.encode` is the [RLP](/fundamentals/rlp) encoding function.
 
-Note that when updating a trie, one needs to store the key/value pair `(sha3(x), x)` in a persistent lookup table _if_ the newly-created node has length >= 32. However, if the node is shorter than that, one does not need to store anything, since the function f(x) = x is reversible.
+Note that when updating a trie, one needs to store the key/value pair `(keccak256(x), x)` in a persistent lookup table _if_ the newly-created node has length >= 32. However, if the node is shorter than that, one does not need to store anything, since the function f(x) = x is reversible.
 
 ## Tries in Ethereum {#tries-in-ethereum}
 
@@ -195,12 +195,12 @@ From a block header there are 3 roots from 3 of these tries.
 
 ### State Trie {#state-trie}
 
-There is one global state trie, and it updates over time. In it, a `path` is always: `sha3(ethereumAddress)` and a `value` is always: `rlp(ethereumAccount)`. More specifically an ethereum `account` is a 4 item array of `[nonce,balance,storageRoot,codeHash]`. At this point it's worth noting that this `storageRoot` is the root of another patricia trie:
+There is one global state trie, and it updates over time. In it, a `path` is always: `keccak256(ethereumAddress)` and a `value` is always: `rlp(ethereumAccount)`. More specifically an ethereum `account` is a 4 item array of `[nonce,balance,storageRoot,codeHash]`. At this point it's worth noting that this `storageRoot` is the root of another patricia trie:
 
 ### Storage Trie {#storage-trie}
 
-Storage trie is where _all_ contract data lives. There is a separate storage trie for each account. To calculate a 'path' in this trie first understand how solidity organizes a [variable's position](/json-rpc/API#eth_getstorageat). To get the `path` there is one extra hashing (the link does not describe this). For instance the `path` for the zeroith variable is `sha3(<0000000000000000000000000000000000000000000000000000000000000000>)` which is always `290decd9548b62a8d60345a988386fc84ba6bc95484008f6362f93160ef3e563`. The value at the leaf is the rlp encoding of the storage value `1234` (`0x04d2`), which is `<82 04 d2>`.
-For the mapping example, the `path` is `sha3(<6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9>)`
+Storage trie is where _all_ contract data lives. There is a separate storage trie for each account. To calculate a 'path' in this trie first understand how solidity organizes a [variable's position](/json-rpc/API#eth_getstorageat). To get the `path` there is one extra hashing (the link does not describe this). For instance the `path` for the zeroith variable is `keccak256(<0000000000000000000000000000000000000000000000000000000000000000>)` which is always `290decd9548b62a8d60345a988386fc84ba6bc95484008f6362f93160ef3e563`. The value at the leaf is the rlp encoding of the storage value `1234` (`0x04d2`), which is `<82 04 d2>`.
+For the mapping example, the `path` is `keccak256(<6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9>)`
 
 ### Transactions Trie {#transaction-trie}
 
