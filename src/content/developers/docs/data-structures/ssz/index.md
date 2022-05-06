@@ -142,7 +142,7 @@ The hash of (8,9) should equal hash (4), which hashes with 5 to produce 2, which
 
 ```
 
-## Further Reading {#further-reading}
+## Further reading {#further-reading}
 
 - [Upgrading Ethereum: SSZ](https://eth2book.info/altair/part2/building_blocks/ssz)
 - [Upgrading Ethereum: Merkleization](https://eth2book.info/altair/part2/building_blocks/merkleization)
