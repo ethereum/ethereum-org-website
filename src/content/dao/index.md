@@ -44,7 +44,6 @@ To help this make more sense, here's a few examples of how you could use a DAO:
 - A charity – you can accept membership and donations from anyone in the world and the group can decide how they want to spend donations.
 - A freelancer network – you could create a network of contractors who pool their funds for office spaces and software subscriptions.
 - Ventures and grants – you could create a venture fund that pools investment capital and votes on ventures to back. Repaid money could later be redistributed amongst DAO-members.
-- Protocol/product development & governance - you can form a global decentralized community collaborating trustlessly in the development and governance of protocols and applications.
 
 ## DAO membership {#dao-membership}
 
