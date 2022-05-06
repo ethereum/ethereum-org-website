@@ -6,7 +6,7 @@ sidebar: true
 sidebarDepth: 1
 ---
 
-This page explains the history of Ethereum from its inception to its first production release.
+This page explains the history of Ethereum from its inception to its first production release. A timeline of network upgrades is also available on our [timeline page](/history/network-upgrades).
 
 ## Inception {#inception}
 
@@ -77,4 +77,4 @@ The presence of large companies like UBS, IBM and Microsoft clearly indicated en
 
 Homestead was the second major version of the Ethereum platform and the first production release of Ethereum. It includes several protocol changes and a networking change that provides the ability to do further network upgrades. The first version of Ethereum, called the Frontier release, was essentially a beta release that allowed developers to learn, experiment, and begin building Ethereum decentralized apps and tools.
 
-At this point Ethereum was a production network. Since the Homestead release Ethereum has undergone many significant changes. These are enumerated on our [timeline page](/history/network-upgrades). There will also be more changes to Ethereum in the future. The [Merge](/upgrades/merge), expected in Q3-Q4 2022, will arguably be the most substantial upgrade since inception. Further upgrades beyond the merge are sketched out in the Ethereum [roadmap](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698).
+At this point Ethereum was a production network. Since the Homestead release Ethereum has undergone many significant changes. These are enumerated on our [timeline page](/history/network-upgrades). There will also be more changes to Ethereum in the future. The [Merge](/upgrades/merge), expected in Q3-Q4 2022, will arguably be the most substantial upgrade since inception. Further upgrades beyond the merge are sketched out in the Ethereum [roadmap](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698). The design rationale at the time of the Homestead release can be read on our [design rationale page](/history/design-rationale/)
