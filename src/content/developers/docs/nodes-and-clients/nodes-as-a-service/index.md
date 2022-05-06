@@ -222,7 +222,7 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Global transactions mempool with search/filtering methods
     - Unlimited TX fee and infinite Gas for sending transactions
     - Fastest getting of the new block and reading of the blockchain
-    - The best price per API call garranty
+    - The best price per API call guarantee
  
 ## Further reading {#further-reading}
 
