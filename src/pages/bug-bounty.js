@@ -697,13 +697,13 @@ const BugBountiesPage = ({ data, location }) => {
             </ExpandableCard>
             <ExpandableCard
               title="How are bounties paid out?"
-              contentPreview="Rewards are paid out in ETH or BTC."
+              contentPreview="Rewards are paid out in ETH or DAI."
             >
               <p>
-                Rewards are paid out in ETH or BTC after the submission has been
+                Rewards are paid out in ETH or DAI after the submission has been
                 validated, usually a few days later. Local laws require us to
                 ask for <b>proof of your identity</b>. In addition, we will need
-                your ETH/BTC address.
+                your ETH address.
               </p>
             </ExpandableCard>
             <ExpandableCard
@@ -736,9 +736,9 @@ const BugBountiesPage = ({ data, location }) => {
             >
               <p>
                 Submitting anonymously or with a pseudonym is OK, but will make
-                you ineligible for BTC rewards. To be eligible for BTC rewards,
-                we require your real name and a proof of your identity. Donating
-                your bounty to a charity doesn’t require your identity.
+                you ineligible for ETH/DAI rewards. To be eligible for ETH/DAI
+                rewards, we require your real name and a proof of your identity.
+                Donating your bounty to a charity doesn’t require your identity.
               </p>
               <p>
                 Please let us know if you do not want your name/nick displayed
