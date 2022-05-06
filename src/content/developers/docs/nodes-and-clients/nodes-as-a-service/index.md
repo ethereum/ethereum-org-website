@@ -215,7 +215,15 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Support for various nodes
     - Resource scaling
     - High processing speeds
-
+- [**ZMOK**](https://zmok.io/)
+  - [Docs](https://docs.zmok.io/)
+  - Features
+    - Front-running as a service
+    - Global transactions mempool with search/filtering methods
+    - Unlimited TX fee and infinite Gas for sending transactions
+    - Fastest getting of the new block and reading of the blockchain
+    - The best price per API call guarantee
+ 
 ## Further reading {#further-reading}
 
 - [List of Ethereum node services](https://ethereumnodes.com/)
