@@ -7369,6 +7369,15 @@
         "doc",
         "translation"
       ]
+    },
+    {
+      "login": "mradkov",
+      "name": "mradkov",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13139371?v=4",
+      "profile": "https://hack.bg",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
