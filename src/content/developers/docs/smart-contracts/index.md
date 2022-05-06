@@ -93,9 +93,9 @@ There are ways to get around this using [oracles](/developers/docs/oracles/).
 
 Another limitation of smart contracts is the maximum contract size. A smart contract can be a maximum of 24KB or it will run out of gas. This can be circumnavigated by using [The Diamond Pattern](https://eips.ethereum.org/EIPS/eip-2535).
 
-## Multisig Contracts
+## Multisig contracts {#multisig}
 
-"Mulisigs" are contracts that require multiple valid signatures to execute. This is very useful for avoiding single points of failure for contracts holding susbtantial amounts of ether or other tokens. Multisigs also divide responsibility for contract execution and key management between multiple parties and prevent the loss of a single private key leading to irreversible loss of funds. For these reasons, multisig contracts are often used in DAO governance. Multisigs require a majority N of M possible signatures in order to execute. `N = 3, M = 5` and `N = 4, M = 7` are commonly used. A 4/7 multisig requires 4 out of 7 possible valid signatures. This means the funds are still retrievable even if 3 signatures are lost. It also means that a majority of key-holders must agree and sign in order for the contract to execute. Multisig contracts can be used as extra-secure wallets.
+Multisig (multiple-signature) contracts are smart contract accounts that require multiple valid signatures to execute a transaction. This is very useful for avoiding single points of failure for contracts holding substantial amounts of ether or other tokens. Multisigs also divide responsibility for contract execution and key management between multiple parties and prevent the loss of a single private key leading to irreversible loss of funds. For these reasons, multisig contracts can be used for simple DAO governance. Multisigs require N signatures out of M possible acceptable signatures (where N ≤ M, and M > 1) in order to execute. `N = 3, M = 5` and `N = 4, M = 7` are commonly used. A 4/7 multisig requires four out of seven possible valid signatures. This means the funds are still retrievable even if three signatures are lost. In this case it also means that a majority of key-holders must agree and sign in order for the contract to execute.
 
 ## Smart contract resources {#smart-contract-resources}
 
