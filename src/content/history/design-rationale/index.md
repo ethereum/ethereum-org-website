@@ -36,9 +36,6 @@ Bitcoin, along with many of its derivatives, stores data about users' balances i
 
 A user's "balance" in the system is thus the total value of the set of coins for which the user has a private key capable of producing a valid signature.
 
-![Triple-entry bookkepping example](https://bitcoin.org/img/dev/en-transaction-propagation.svg)  
-(Image from <https://bitcoin.org/en/developer-guide>)
-
 Ethereum jettisons this scheme in favor of a simpler approach: the state stores a list of accounts where each account has a balance, as well as Ethereum-specific data (code and internal storage), and a transaction is valid if the sending account has enough balance to pay for it, in which case the sending account is debited and the receiving account is credited with the value. If the receiving account has code, the code runs, and internal storage may also be changed, or the code may even create additional messages to other accounts which lead to further debits and credits.
 
 The benefits of UTXOs are:
@@ -64,7 +61,7 @@ The Merkle Patricia tree/trie, previously envisioned by Alan Reiner and implemen
 1.  Every unique set of key/value pairs maps uniquely to a root hash, and it is not possible to spoof membership of a key/value pair in a trie (unless an attacker has ~2^128 computing power)
 2.  It is possible to change, add or delete key/value pairs in logarithmic time
 
-This gives us a way of providing an efficient, easily updateable, "fingerprint" of our entire state tree. The Ethereum MPT is formally described [here](./patricia-tree.md).
+This gives us a way of providing an efficient, easily updatable, "fingerprint" of our entire state tree.
 
 Specific design decisions in the MPT include:
 
@@ -76,7 +73,7 @@ Specific design decisions in the MPT include:
 
 ## RLP
 
-RLP ("recursive length prefix") encoding is the main serialization format used in Ethereum, and is used everywhere - for blocks, transactions, account state data and wire protocol messages. RLP is formally described [here](./rlp.md).
+RLP ("recursive length prefix") encoding is the main serialization format used in Ethereum, and is used everywhere - for blocks, transactions, account state data and wire protocol messages.
 
 RLP is intended to be a highly minimalistic serialization format; its sole purpose is to store nested arrays of bytes. Unlike [protobuf](https://developers.google.com/protocol-buffers/docs/pythontutorial), [BSON](http://bsonspec.org/) and other existing solutions, RLP does not attempt to define any specific data types such as booleans, floats, doubles or even integers; instead, it simply exists to store structure, in the form of nested arrays, and leaves it up to the protocol to determine the meaning of the arrays. Key/value maps are also not explicitly supported; the semi-official suggestion for supporting key/value maps is to represent such maps as `[[k1, v1], [k2, v2], ...]` where `k1, k2...` are sorted using the standard ordering for strings.
 
@@ -112,7 +109,7 @@ Where:
 - `logs` is a list of items of the form `[address, [topic1, topic2...], data]` that are produced by the `LOG0` ... `LOG4` opcodes during the execution of the transaction (including by the main call and sub-calls). `address` is the address of the contract that produced the log, the topics are up to 4 32-byte values, and the data is an arbitrarily sized byte array.
 - `logbloom` is a bloom filter made up of the addresses and topics of all logs in the transaction.
 
-There is also a bloom in the block header, which is the OR of all of the blooms for the transactions in the block. The purpose of this construction is to make the Ethereum protocol light-client friendly in as many ways as possible. For more details on Ethereum light clients and their use cases, see the [light client page (principles section)](../concepts/light-client-protocol.md#principles).
+There is also a bloom in the block header, which is the OR of all of the blooms for the transactions in the block. The purpose of this construction is to make the Ethereum protocol light-client friendly in as many ways as possible.
 
 ## Uncle incentivization
 
@@ -129,7 +126,7 @@ In Ethereum, stale block can only be included as an uncle by up to the seventh-g
 
 Design decisions in our block time algorithm include:
 
-- **12 second block time**: 12 seconds was chosen as a time that is as fast as possible, but is at the same time substantially longer than network latency. A [2013 paper](http://www.tik.ee.ethz.ch/file/49318d3f56c1d525aabf7fda78b23fc0/P2P2013_041.pdf) by Decker and Wattenhofer in Zurich measures Bitcoin network latency, and determines that 12.6 seconds is the time it takes for a new block to propagate to 95% of nodes; however, the paper also points out that the bulk of the propagation time is proportional to block size, and thus in a faster currency we can expect the propagation time to be drastically reduced. The constant portion of the propagation interval is about 2 seconds; however, for safety we assume that blocks take 12 seconds to propagate in our analysis.
+- **12 second block time**: 12 seconds was chosen as a time that is as fast as possible, but is at the same time substantially longer than network latency. A 2013 paper by Decker and Wattenhofer in Zurich measures Bitcoin network latency, and determines that 12.6 seconds is the time it takes for a new block to propagate to 95% of nodes; however, the paper also points out that the bulk of the propagation time is proportional to block size, and thus in a faster currency we can expect the propagation time to be drastically reduced. The constant portion of the propagation interval is about 2 seconds; however, for safety we assume that blocks take 12 seconds to propagate in our analysis.
 - **7 block ancestor limit**: this is part of a design goal of wanting to make block history very quickly "forgettable" after a small number of blocks, and 7 blocks has been proven to provide most of the desired effect
 - **1 block descendant limit** (eg. `c(c(p(p(p(head)))))`, where c = child and p = parent, is invalid): this is part of a design goal of simplicity, and the simulator above shows that it does not pose large centralization risks.
 - **Uncle validity requirements**: uncles have to be valid headers, not valid blocks. This is done for simplicity, and to maintain the model of a blockchain as being a linear data structure (and not a block-DAG, as in Sompolinsky and Zohar's newer models). Requiring uncles to be valid blocks is also a valid approach.
