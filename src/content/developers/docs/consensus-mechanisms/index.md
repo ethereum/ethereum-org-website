@@ -20,36 +20,12 @@ By consensus, we mean that a general agreement has been reached. Consider a grou
 
 In regards to blockchain, the process is formalized, and reaching consensus means that at least 51% of the nodes on the network agree on the next global state of the network.
 
-### The Byzantine Generals Problem {#the-byzantine-generals-problem}
-
-In computer science, Byzantine fault is a condition of any distributed computing system where parts of that system can fail. In addition, there is imperfect, or incomplete information to determine if a part(s) of a system has failed.
-
-The Byzantine General's Problem is a game theory problem that describes the big problem not really present in centralized systems: In a network where no member trusts each other, how can exact members collectively agree on a certain truth?
-
-Consider two armies attacking a city. Both armies have surrounded the city. The only way the armies can win and take over the city is they have to attack at the same exact time. If they don't, they will lose. The armies also have no secure way of communication because any messages passed around could be compromised by the city's defenders. How can the armies organize to attack at the same time?
-
-In centralized systems, a third party authority is trusted to be able to publish correct information while simultaneously filtering fraudulent informatiion.
-
-Consider the following scenario: You and a couple of roomates (Alice, Bob, Jason, Becky) decide you want to have a "Roomie Ledger." This ledger is going to keep track of all things you and your roomates will do: buying groceries, paying rent, covering brunch, a beer fund, etc. Let's assume you created an application that keeps track of that information where any one of you can add line items to the month you're on where it will note who paid for what and who owes anyone anything. So, it might read something like this:
-
-**February Ledger**
-
-* 02/03 Alice pays for Bob's boozy brunch. Total cost: $50. Bob owes Alice $25.
-* 02/07 Bob pays for Jason's groceries. Total cost: $200. Jason owes Bob $47.
-
-...
-
-Then, at the end of the month, the app will calculate total expenses and who owes who what money to settle up.
-
-Since all of you are rooomates, you should be able to trust each other that no one put a sneaky line item in to get one over an another rooomates.
-
-The problem with this system is when you start to expand the application to include more and more people. Alice invites 4 of her friends since she hangs out with those people more. Bob adds some of his family members because he's helping them with school expenses. With more people (who may or may not trust each other) and more throughput of line items added to the ledger (so, it's hard to keep track of it), how can anyone trust that the ledger is in the correct state after every line item? How can anyone trust that the ledger has not been tampered with? How can they all agree on how to settle up at the end of the month? Howe can they achieve consensus?
 
 ## What is a consensus mechanism? {#what-is-a-consensus-mechanism}
 
-Consensus mechanisms (also known as consensus protocols or consensus algorithms<sup>1</sup>) allow distributed systems (networks of computers) to work together and stay secure.
+Consensus mechanisms (also known as consensus protocols or consensus algorithms) allow distributed systems (networks of computers) to work together and stay secure.
 
-*<sup>1</sup>Note: Consensus protocols and consensus algorithms are often used interchangeably. However, protocols and algorithms are different. A protocol is a set of rules defined in a standard that govern how a system and its many functioning parts operate and interact. Algorithms are like exact recipes on how to solve a problem or calculate a result. Think of a car and how its many different parts dictating how the car should work (protocol) and the actions of a driver to get from point A to point B (algorithm)*
+Consensus protocols and consensus algorithms are often used interchangeably. However, protocols and algorithms are different. A protocol is a set of rules defined in a standard that governs how a system and its many functioning parts operate and interact. Algorithms are like exact recipes on how to solve a problem or calculate a result.
 
 For decades, these mechanisms have been used to establish consensus among database nodes, application servers, and other enterprise infrastructure. In recent years, new consensus mechanisms have been invented to allow cryptoeconomic systems, such as Ethereum, to agree on the state of the network.
 
@@ -111,7 +87,7 @@ The [Beacon Chain](/upgrades/beacon-chain/) uses a consensus mechanism called [C
 - [What is Nakamoto Consensus? Complete Beginner’s Guide](https://blockonomi.com/nakamoto-consensus/)
 - [How Does Casper work?](https://medium.com/unitychain/intro-to-casper-ffg-9ed944d98b2d)
 - [On the Security and Performance of Proof of Work Blockchains](https://eprint.iacr.org/2016/555.pdf)
-- [Byzantine fault & Byzanatine Generalss Problem](https://en.wikipedia.org/wiki/Byzantine_fault)
+- [Byzantine fault](https://en.wikipedia.org/wiki/Byzantine_fault)
 
 _Know of a community resource that helped you? Edit this page and add it!_
 
