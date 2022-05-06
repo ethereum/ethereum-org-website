@@ -7,7 +7,7 @@ sidebar: true
 
 # Introduction to Ethereum governance {#introduction}
 
-_If no one owns Ethereum, how are decisions about past and future changes to Ethereum made? Ethereum governance refers to the process that allows such decisions to be made_
+_If no one owns Ethereum, how are decisions about past and future changes to Ethereum made? Ethereum governance refers to the process that allows such decisions to be made._
 
 <Divider />
 

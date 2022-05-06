@@ -11,7 +11,7 @@ Las redes son diferentes entornos de Ethereum a los que se puede acceder para de
 
 ## Requisitos previos {#prerequisites}
 
-Te recomendamos que comprendas los conceptos básicos de Ethereum antes de explorar las diferentes redes, ya que las redes de prueba te darán una versión económica y segura de Ethereum con la que comenzar a probar. Comienza con nuestra [introducción a Ethereum](/developers/docs/intro-to-ethereum/).
+Te recomendamos que comprendas los conceptos básicos de Ethereum antes de explorar las diferentes redes, ya que las redes de prueba te darán una versión económica y segura de Ethereum con la que comenzar a probar. Pruebe nuestra [introducción a Ethereum](/developers/docs/intro-to-ethereum/).
 
 ## Redes públicas {#public-networks}
 
@@ -31,46 +31,99 @@ En la mayoría de los casos es importante comprobar cualquier código de contrat
 
 La mayoría de las redes de prueba utilizan un mecanismo de consenso de prueba de autoridad. Es decir, se escoge un pequeño número de nodos para validar las transacciones y crear nuevos bloques apostando sus identidades en el proceso. Es difícil incentivar el minado en una red de pruebas con una Prueba de trabajo, ya que podría conllevar vulnerabilidades.
 
+Los ETH no tienen un valor real en las redes de prueba; por lo tanto, no existe ningún mercado para los ETH de redes de prueba. Dado que necesita ETH para interactuar con Ethereum, la mayor parte de las personas adquieren ETH de redes de prueba en webs de tipo faucet. La mayoría de las faucets son aplicaciones web en las que puede introducir una dirección a la que pide que le envíen ETH.
+
+#### Arbitrum Rinkeby {#arbitrum-rinkeby}
+
+Una red de pruebas para [Arbitrum](https://arbitrum.io/).
+
+##### Faucets Arbitrum Rinkeby
+
+- [FaucETH](https://fauceth.komputing.org)(Faucet multicadena sin la necesidad de una cuenta social)
+- [Faucet Chainlink](https://faucets.chain.link/)
+- [Faucet Paradigm](https://faucet.paradigm.xyz/)
+
 #### Görli {#goerli}
 
-Una red de prueba con Prueba de autoridad que funciona entre los clientes.
+Una red de prueba con prueba de autoridad que funciona entre los clientes.
+
+##### Faucet Görli
+
+- [Faucet Görli](https://faucet.goerli.mudit.blog/)
+- [Faucet Chainlink](https://faucets.chain.link/)
+- [Alchemy Goerli Faucet](https://goerlifaucet.com/)
+
+#### Kintsugi {#kintsugi}
+
+Una red de pruebas de fusión para Ethereum.
+
+##### Faucets Kintsugi
+
+- [FaucETH](https://fauceth.komputing.org)(Faucet multicadena sin la necesidad de una cuenta social)
+- [Faucet Kintsugi](https://faucet.kintsugi.themerge.dev/)
 
 #### Kovan {#kovan}
 
-Una red de prueba con Prueba de autoridad para los que ejecutan clientes de OpenEthereum.
+Una red de prueba con prueba de autoridad para aquellos clientes que emplean OpenEthereum.
+
+##### Faucets Kovan
+
+- [FaucETH](https://fauceth.komputing.org)(Faucet multicadena sin la necesidad de una cuenta social)
+- [Faucet Kovan](https://faucet.kovan.network/)
+- [Faucet Chainlink](https://faucets.chain.link/)
+- [Faucet Paradigm](https://faucet.paradigm.xyz/)
+
+#### Optimistic Kovan {#optimistic-kovan}
+
+Una red de pruebas para [Optimism](https://www.optimism.io/).
+
+##### Faucets Optimistic Kovan
+
+- [FaucETH](https://fauceth.komputing.org)(Faucet multicadena sin la necesidad de una cuenta social)
+- [Faucet Paradigm](https://faucet.paradigm.xyz/)
 
 #### Rinkeby {#rinkeby}
 
-Una red de prueba con Prueba de autoridad para los que ejecutan clientes de Geth.
+Una red de prueba con prueba de autoridad para los que ejecutan clientes de Geth.
+
+##### Faucets Rinkeby
+
+- [FaucETH](https://fauceth.komputing.org)(Faucet multicadena sin la necesidad de una cuenta social)
+- [Faucet Alchemy](https://RinkebyFaucet.com)
+- [Faucet Chainlink](https://faucets.chain.link/)
+- [Faucet Paradigm](https://faucet.paradigm.xyz/)
+- [Faucet Rinkeby](https://faucet.rinkeby.io/)
 
 #### Ropsten {#ropsten}
 
-Una red de prueba con Prueba de trabajo. Esto significa que es la mejor representación de igual a igual de Ethereum.
+Una red de prueba con prueba de trabajo. Esto significa que es la mejor representación comparable de Ethereum.
 
-### Faucets de redes de prueba {#testnet-faucets}
+##### Faucets Ropsten
 
-Los ETH no tienen un valor real en las redes de prueba; por lo tanto, no hay mercado para los ETH de redes de prueba. Como necesitas ETH para interactuar con Ethereum, la mayor parte de la gente adquiere ETH de redes de prueba en webs de tipo faucet. La mayoría de las faucets son aplicaciones web en las que puedes introducir una dirección a la que pides que te envíen ETH.
-
-- [Faucet Görli](https://faucet.goerli.mudit.blog/)
-- [Faucet Kovan](https://faucet.kovan.network/)
-- [Faucet Rinkeby](https://faucet.rinkeby.io/)
+- [FaucETH](https://fauceth.komputing.org)(Faucet multicadena sin la necesidad de una cuenta social)
+- [Faucet Paradigm](https://faucet.paradigm.xyz/)
 
 ## Redes privadas {#private-networks}
 
-Una red de Ethereum es una red privada si sus nodos no están conectados a una red pública (es decir, una red principal o una red de pruebas). En este contexto, el término privado solo significa reservado o aislado, más que protegido o seguro.
+Una red de Ethereum es una red privada si sus nodos no están conectados a una red pública (es decir, una red principal o una red de pruebas). En este contexto, el término privado solo significa reservado o aislado, en lugar de protegido o seguro.
 
-### Red de desarrollo {#development-networks}
+### Redes de desarrollo {#development-networks}
 
-Para desarrollar una aplicación Ethereum, querrás ejecutarla en una red privada para ver cómo funciona antes de implementarla. De igual modo en que creas un servidor local en tu computadora para el desarrollo web, puedes crear una instancia en una blockchain local para probar tu app descentralizada. Esto permite realizar una iteración mucho más rápida que en una red de pruebas pública.
+Para desarrollar una aplicación Ethereum, se recomienda ejecutarla en una red privada para ver cómo funciona antes de implementarla. De igual modo que crea un servidor local en su ordenador para el desarrollo web, puede crear una instancia en una cadena de bloques local para probar su dapp descentralizada. Esto permite realizar una iteración mucho más rápida que en una red de prueba pública.
 
-Hay proyectos y herramientas exclusivos para ayudarte con esto. Más información sobre [redes de desarrollo](/developers/docs/development-networks/).
+Existen proyectos y herramientas exclusivos para ayudarle con esto. Más información sobre [redes de desarrollo](/developers/docs/development-networks/).
 
 ### Redes de consorcio {#consortium-networks}
 
-El proceso de consenso se controla mediante un conjunto predefinido de nodos de confianza. Por ejemplo, una red privada de conocidas instituciones académicas en las que cada una gobierna un único nodo y los bloques se validan mediante un umbral de signatarios en la red.
+El proceso de consenso se controla mediante un conjunto predefinido de nodos de confianza. Por ejemplo, una red privada de instituciones académicas conocidas en las que cada una gestiona un único nodo y los bloques se validan mediante un umbral de signatarios en la red.
 
-Si una red pública de Ethereum es como la red pública de Internet, puedes entender una red de consorcio como una intranet privada.
+Si una red pública de Ethereum es como la red pública de Internet, puede entender una red de consorcio como una intranet privada.
 
-## Leer más {#further-reading}
+## Herramientas relacionadas {#related-tools}
 
-_¿Conoces algún recurso en la comunidad que te haya servido de ayuda? Edita esta página y añádelo._
+- [Lista de cadena](https://chainlist.org/) _lista de redes EVM para conectar carteras y proveedores a los ID de la cadena y la red apropiados_
+- [Cadenas basadas en EVM](https://github.com/ethereum-lists/chains) _Repositorio de GitHub con metadatos de cadena que alimenta la lista de cadena_
+
+## Más información {#further-reading}
+
+_¿Conoce algún recurso en la comunidad que le haya servido de ayuda? Edite esta página y añádalo._

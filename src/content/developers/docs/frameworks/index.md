@@ -88,11 +88,6 @@ Before diving into frameworks, we recommend you first read through our introduct
 - [GitHub](https://github.com/alchemyplatform)
 - [Discord](https://discord.com/invite/A39JVCM)
 
-**Dapptools -** **_A suite of Ethereum focused CLI tools following the Unix design philosophy, favoring composability, configurability and extensibility._**
-
-- [Homepage](https://dapp.tools/)
-- [GitHub](https://github.com/dapphub/dapptools/)
-
 **Foundry -** **_A blazing fast, portable and modular toolkit for Ethereum application development written in Rust._**
 
 - [Documentation](https://onbjerg.github.io/foundry-book/)

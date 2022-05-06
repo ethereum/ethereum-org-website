@@ -8246,6 +8246,14 @@ gatsby-transformer-gitinfo@^1.1.0:
     "@babel/runtime" "^7.6.3"
     simple-git "^1.126.0"
 
+gatsby-transformer-json@^4.11.0:
+  version "4.11.0"
+  resolved "https://registry.yarnpkg.com/gatsby-transformer-json/-/gatsby-transformer-json-4.11.0.tgz#8c761b09c76ca236b96a615be380594b59e3058a"
+  integrity sha512-/JYHP6lCsU1Bm9c0xZVm0KBsQCk11CqU5mnrx5rd1CJdaNlYWa2+1JapIUeeoZbEDktK4ws58vKunyhq5Njp8w==
+  dependencies:
+    "@babel/runtime" "^7.15.4"
+    bluebird "^3.7.2"
+
 gatsby-transformer-remark@^3.0.0:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/gatsby-transformer-remark/-/gatsby-transformer-remark-3.2.0.tgz#51a608dfc12a1c4c3b266c5076043d068050d049"
@@ -11505,9 +11513,9 @@ mkdirp@^0.5.1, mkdirp@^0.5.3, mkdirp@^0.5.4, mkdirp@~0.5.1:
     minimist "^1.2.5"
 
 moment@^2.29.1:
-  version "2.29.1"
-  resolved "https://registry.yarnpkg.com/moment/-/moment-2.29.1.tgz#b2be769fa31940be9eeea6469c075e35006fa3d3"
-  integrity sha512-kHmoybcPV8Sqy59DwNDY3Jefr64lK/by/da0ViFcuA4DH0vQg5Q6Ze5VimxkfQNSC+Mls/Kx53s7TjP1RhFEDQ==
+  version "2.29.2"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.29.2.tgz#00910c60b20843bcba52d37d58c628b47b1f20e4"
+  integrity sha512-UgzG4rvxYpN15jgCmVJwac49h9ly9NurikMWGPdVxm8GZD6XjkKPxDTjQQ43gtGgnV3X0cAyWDdP2Wexoquifg==
 
 move-concurrently@^1.0.1:
   version "1.0.1"

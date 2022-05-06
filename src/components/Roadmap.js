@@ -5,11 +5,11 @@ import axios from "axios"
 
 import Translation from "../components/Translation"
 import Link from "./Link"
-import { FakeLinkExternal } from "./SharedStyledComponents"
+import { FakeLinkExternal, CardItem as Item } from "./SharedStyledComponents"
 
 import { translateMessageId } from "../utils/translations"
 
-import { CardItem as Item } from "./SharedStyledComponents"
+import { GATSBY_FUNCTIONS_PATH } from "../constants"
 
 const Section = styled.div`
   display: flex;
@@ -67,11 +67,7 @@ const Roadmap = () => {
   // TODO update to pull PRs & issues separately
   useEffect(() => {
     axios
-      .get(
-        process.env.NODE_ENV === "production"
-          ? `${process.env.GATSBY_FUNCTIONS_PATH}/roadmap`
-          : "http://localhost:9000/roadmap"
-      )
+      .get(`${GATSBY_FUNCTIONS_PATH}/roadmap`)
       .then((response) => {
         let issues = []
         if (response.data && response.data.data) {

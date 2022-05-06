@@ -188,6 +188,22 @@
     "toPath": "/en/defi/"
   },
   {
+    "fromPath": "/layer2/",
+    "toPath": "/en/layer-2/"
+  },
+  {
+    "fromPath": "/*/layer2/",
+    "toPath": "/:splat/layer-2/"
+  },
+  {
+    "fromPath": "/grants/",
+    "toPath": "/en/community/grants/"
+  },
+  {
+    "fromPath": "/*/grants/",
+    "toPath": "/:splat/community/grants"
+  },
+  {
     "fromPath": "/no/*",
     "toPath": "/nb/:splat"
   },
