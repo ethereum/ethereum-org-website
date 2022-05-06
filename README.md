@@ -1197,6 +1197,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   </tr>
   <tr>
     <td align="center"><a href="https://hack.bg"><img src="https://avatars.githubusercontent.com/u/13139371?v=4?s=100" width="100px;" alt=""/><br /><sub><b>mradkov</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=mradkov" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/b17z"><img src="https://avatars.githubusercontent.com/u/3633484?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Bienvenido Rodriguez</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=b17z" title="Documentation">📖</a> <a href="#ideas-b17z" title="Ideas, Planning, & Feedback">🤔</a></td>
   </tr>
 </table>
 
