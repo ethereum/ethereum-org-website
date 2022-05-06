@@ -75,7 +75,7 @@ This console allows direct interaction with Ethereum. For example, running the `
 
 ## Mainnet and testnets {#mainnet-and-testnets}
 
-Geth runs your node on [Ethereum Mainnet](/glossary/#mainnet/) by default.
+Geth runs your node on [Ethereum Mainnet](/glossary/#mainnet) by default.
 
 It is also possible to use Geth to run a node on one of the [public test networks](/networks/#testnets/), by running one of the following commands in Terminal:
 
