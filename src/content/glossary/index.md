@@ -486,7 +486,7 @@ A JSON-encoded file that contains a single (randomly generated) [private key](#p
 
 An area of development focused on layering improvements on top of the Ethereum protocol. These improvements are related to [transaction](#transaction) speeds, cheaper [transaction fees](#transaction-fee), and transaction privacy.
 
-<DocLink to="/developers/docs/scaling/#layer-2-scaling">
+<DocLink to="/layer-2/">
   Layer 2
 </DocLink>
 

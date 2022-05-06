@@ -44,7 +44,7 @@ Jika Anda adalah dwibahasawan dan dapat menolong kami menjangkau lebih banyak or
 **Sumber umum**
 
 - [Ethereum.cn](https://www.ethereum.cn/) - konten yang dipelihara oleh komunitas, yang membahas tentang peningkatan lapisan konsensus, semua catatan pertemuan dev core, lapisan 2, dll.
-- [EthFans](https://ethfans.org/) - pelajari semua hal dari topik dasar hingga topik lanjutan tentang Ethereum
+- [EthFans](https://github.com/editor-Ajian/EthFans.org-annual-collected-works/) - pelajari semua hal dari topik dasar hingga topik lanjutan tentang Ethereum
 - [Unitimes](https://mp.weixin.qq.com/s/tvloZSDBSOQN9zDQj_91kA) - konten yang dipelihara oleh komunitas, yang membahas tentang Ethereum, DeFi, NFT, pengetahuan terkait Web3
 - [123ETH](https://123eth.org/) - sebuah Portal ke ekosistem Ethereum
 - [Zhen Xiao](http://zhenxiao.com/blockchain/) - pelatihan daring gratis tentang mata uang kripto dan penerapannya

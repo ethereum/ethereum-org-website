@@ -234,9 +234,11 @@ recent_births = [get_event_data(w3.codec, ck_extra_events_abi[1], log)["args"] f
 - [以太坊域名服务 (ENS)](https://ens.domains/) 提供了一种安全和去中心化的方式，用人类可读的名字来处理链上和链下的资源。
 - [Unstoppable Domains](https://unstoppabledomains.com/) 是一个坐落在旧金山，在区块链上创建域名的公司。 区块链域名用人类可读的名字替换加密货币地址，并且可用于支撑抗审查的网站。
 - [Gods Unchained Cards](https://godsunchained.com/) 是以太坊区块链上的 TCG（集换式卡牌游戏）, 它使用 NFT 来给游戏中的资产带来实际所有权。
+- [无聊猿游艇俱乐部](https://boredapeyachtclub.com)是一个由 10,000 个独特 NFT 组成的系列收藏品，这些收藏品不仅仅是非常罕见的艺术品，还是俱乐部入会的标志，可为成员提供多种特权和福利。在社区的努力下，这些特权和福利还会随着时间的推移不断增加。
 
 ## 延伸阅读 {#further-reading}
 
 - [EIP-721：ERC-721 非同质化代币标准](https://eips.ethereum.org/EIPS/eip-721)
 - [OpenZeppelin - ERC-721 文档](https://docs.openzeppelin.com/contracts/3.x/erc721)
 - [OpenZeppelin - ERC-721 实施](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/ERC721.sol)
+- [Alchemy NFT API](https://docs.alchemy.com/alchemy/enhanced-apis/nft-api)

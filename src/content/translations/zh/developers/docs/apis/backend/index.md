@@ -1,6 +1,6 @@
 ---
-title: 后端 API 库
-description: 以太坊客户端应用程序接口 (API) 的介绍，使您能够从您的应用程序中与区块链进行交互。
+title: 后端应用程序接口库
+description: 以太坊客户端应用程序接口的介绍，使您能够从您的应用程序中与区块链进行交互。
 lang: zh
 sidebar: true
 ---
@@ -28,12 +28,12 @@ sidebar: true
 - [GitHub](https://github.com/alchemyplatform)
 - [Discord](https://discord.com/invite/A39JVCM)
 
-**BlockCypher -** **_以太坊网络应用程序接口 (Web API)_**
+**BlockCypher -** **_以太坊网络 API。_**
 
 - [blockcypher.com](https://www.blockcypher.com/)
 - [相关文档](https://www.blockcypher.com/dev/ethereum/)
 
-**Infura -** **_以太坊 API 即服务。_**
+**Infura -** **_以太坊应用程序接口即服务。_**
 
 - [infura.io](https://infura.io)
 - [相关文档](https://infura.io/docs)
@@ -43,12 +43,17 @@ sidebar: true
 
 - [cloudflare-eth.com](https://cloudflare-eth.com)
 
-**Nodesmith -** **_JSON-RPC API 用于访问以太坊主网和测试网。_**
+**Figment 的数据中心 -** **_以太坊主网和测试网的 Web3 应用程序接口服务_**
+
+- [数据中心](https://www.figment.io/datahub)
+- [相关文档](https://docs.figment.io/introduction/what-is-datahub)
+
+**Nodesmith -** **_可对以太坊主网和测试网进行 JSON-RPC 应用程序接口访问。_**
 
 - [nodesmith.io](https://nodesmith.io/network/ethereum/)
 - [相关文档](https://nodesmith.io/docs/#/ethereum/apiRef)
 
-**Ethercluster -** **_运行您自己的以太坊 API 服务以同时支持 ETH 和 ETC。_**
+**Ethercluster -** **_运行您自己的支持以太坊和以太坊经典的以太坊应用程序接口服务。_**
 
 - [ethercluster.com](https://www.ethercluster.com/)
 
@@ -57,15 +62,17 @@ sidebar: true
 - [chainstack.com](https://chainstack.com)
 - [相关文档](https://docs.chainstack.com)
 
-**QuikNode -** **_区块链开发者平台。_**
+**QuickNode -** **_区块链基础设施即服务。_**
 
-- [quiknode.io](https://quiknode.io)
+- [quicknode.com](https://quicknode.com)
+- [相关文档](https://www.quicknode.com/docs)
+- [Discord](https://discord.gg/NaR7TtpvJq)
 
-**Python Tooling -** **_通过 Python 进行以太坊交互的各种库。_**
+**Python Tooling -** **_用于通过 Python 进行以太坊交互的各种库。_**
 
 - [py.ethereum.org](http://python.ethereum.org/)
 - [web3.py GitHub](https://github.com/ethereum/web3.py)
-- [web3.py 聊天室](https://gitter.im/ethereum/web3.py)
+- [web3.py 聊天](https://gitter.im/ethereum/web3.py)
 
 **web3j -** **_以太坊的 Java/Android/Kotlin/Scala 集成库。_**
 
@@ -73,7 +80,7 @@ sidebar: true
 - [相关文档](https://docs.web3j.io/)
 - [Gitter](https://gitter.im/web3j/web3j)
 
-**Rivet -** **_开源软件，提供以太坊和以太坊经典 API 的服务。_**
+**Rivet -** **_由开源软件提供支持的以太坊和以太坊经典应用程序接口服务。_**
 
 - [rivet.cloud](https://rivet.cloud)
 - [相关文档](https://rivet.cloud/docs/)
@@ -92,9 +99,22 @@ sidebar: true
 - [相关文档](https://docs.tatum.io/)
 - [Discord](https://discord.gg/EDmW3kjTC9)
 
+**Watchdata -** **_提供对以太坊区块链简单和可靠的应用程序接口访问。_**
+
+- [Watchdata](https://watchdata.io/)
+- [相关文档](https://docs.watchdata.io/)
+- [Discord](https://discord.com/invite/TZRJbZ6bdn)
+
+**Zmok -** **_以速度为导向的以太坊节点作为 JSON-RPC/WebSockets API 接口。_**
+
+- [zmok.io](https://zmok.io/)
+- [GitHub](https://github.com/zmok-io)
+- [相关文档](https://docs.zmok.io/)
+- [Discord](https://discord.gg/fAHeh3ka6s)
+
 ## 延伸阅读 {#further-reading}
 
-_还有哪些社区资源对您有所帮助？ 请编辑本页面并添加！_
+_还有哪些社区资源帮助过您？ 编辑并添加本页面！_
 
 ## 相关主题 {#related-topics}
 
@@ -103,5 +123,5 @@ _还有哪些社区资源对您有所帮助？ 请编辑本页面并添加！_
 
 ## 相关教程 {#related-tutorials}
 
-- [设置 Web3js 并在 JavaScript 中使用以太坊区块链](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _关于在您的项目中设置 web3.js 的说明。_
-- [在 JavaScript 中调用智能合约](/developers/tutorials/calling-a-smart-contract-from-javascript/) _使用 DAI token，从而使用 JavaScript 调用合约函数。_
+- [设置 Web3js 以在 JavaScript 中使用以太坊区块链](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– 在项目中设置 web3.js 的说明。_
+- [从 JavaScript 中调用智能合约](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– 使用 DAI 代币，从而使用 JavaScript 调用合约函数。_

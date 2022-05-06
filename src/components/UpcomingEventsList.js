@@ -13,6 +13,9 @@ import ButtonLink from "../components/ButtonLink"
 import events from "../data/community-events.json"
 
 const EventList = styled.div`
+  /* Adding direction ltr as a temporary fix to styling bug */
+  /* https://github.com/ethereum/ethereum-org-website/issues/6221 */
+  direction: ltr;
   width: 100%;
   margin: 30px auto;
   position: relative;
