@@ -103,6 +103,10 @@ The data in a block which is unique to its content and the circumstances in whic
 
 The process of transmitting a confirmed block to all other nodes in the network.
 
+### block reward {#block-reward}
+
+The amount of ether rewarded to the producer of a new valid block.
+
 ### block time {#block-time}
 
 The average time interval between blocks being added to the blockchain.
@@ -551,7 +555,7 @@ A [transaction](#transaction) sent from a [contract account](#contract-account) 
 
 ### issuance
 
-The minting and granting of new cryptocurrency to a miner who has found a new block.
+The minting of new ether to reward block proposal, attestation and whistle-blowing.
 
 ## K {#section-k}
 
@@ -563,7 +567,7 @@ Also known as a "password stretching algorithm," it is used by [keystore](#keyst
   Smart contract security
 </DocLink>
 
-### keyfile {#keyfile}
+### keystore {#keyfile}
 
 Every account’s private key/address pair exists as a single keyfile in an Ethereum client. These are JSON text files which contains the encrypted private key of the account, which can only be decrypted with the password entered during account creation.
 
@@ -571,9 +575,6 @@ Every account’s private key/address pair exists as a single keyfile in an Ethe
 
 Cryptographic [hash](#hash) function used in Ethereum. Keccak-256 was standardized as [SHA](#sha)-3.
 
-### keystore file {#keystore-file}
-
-A JSON-encoded file that contains a single (randomly generated) [private key](#private-key), encrypted by a passphrase for extra security.
 
 <Divider />
 
@@ -642,10 +643,6 @@ The process of verifying transactions and contract execution on the Ethereum blo
 ### mining pool {#mining-pool}
 
 The pooling of resources by miners who share their processing power and split [block rewards](#block-reward).
-
-### block reward {#block-reward}
-
-The amount of ether rewarded to the producer of a new valid block.
 
 ### miner {#miner}
 
@@ -852,7 +849,7 @@ A scaling solution that uses a separate chain with different, often faster, [con
 
 ### signing {#signing}
 
-Demonstrating that a transaction originated from a specific person by encoding it using a private key.
+Demonstrating cryptographically that a transaction was approved by the holder of a specific private key.
 
 ### singleton {#singleton}
 
@@ -968,7 +965,7 @@ Short for "test network," a network used to simulate the behavior of the main Et
 
 ### token {#token}
 
-A fungible virtual good that can be traded.
+A tradable virtual good defined in smart contracts on the Ethereum blockchain.
 
 ### token standard {#token-standard}
 
