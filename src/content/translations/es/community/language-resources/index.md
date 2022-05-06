@@ -46,7 +46,7 @@ Si es bilingüe y quiere ayudarnos a llegar a más personas, también puede invo
 **Recursos generales**
 
 - [Ethereum.cn](https://www.ethereum.cn/): contenido mantenido por la comunidad, que cubre las actualizaciones de la capa de consenso, todas la notas de la reunión de desarrollo central, capa2, etc.
-- [EthFans](https://ethfans.org/): para profundizar en Ethereum, desde los temas básicos hasta los más avanzados.
+- [EthFans](https://github.com/editor-Ajian/EthFans.org-annual-collected-works/): para profundizar en Ethereum, desde los temas básicos hasta los más avanzados.
 - [Unitimes](https://mp.weixin.qq.com/s/tvloZSDBSOQN9zDQj_91kA): contenido mantenido por la comunidad, que cubre Ethereum, DeFi, NFT, conocimientos relacionados con la Web3.
 - [123ETH](https://123eth.org/): un portal al ecosistema Ethereum.
 - [Zhen Xiao](http://zhenxiao.com/blockchain/): cursos en linea gratis acerca de criptomonedas y sus aplicaciones.

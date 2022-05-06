@@ -46,7 +46,7 @@ Ethereum.org به صورت بومی به بیش از 40 زبان ترجمه شد
 **منابع کلی**
 
 - [Ethereum.cn](https://www.ethereum.cn/) - محتوای نگهداری‌شده توسط انجمن، پوشش ارتقای لایه اجماع، تمام یادداشت‌های گردهمایی‌های برنامه‌نویسی هسته، لایه‌ی 2 و غیره.
-- [EthFans](https://ethfans.org/) - همه‌چیز را از اصول اولیه تا موضوعات پیشرفته‌ی اتریوم بیاموزید
+- [EthFans](https://github.com/editor-Ajian/EthFans.org-annual-collected-works/) - همه‌چیز را از اصول اولیه تا موضوعات پیشرفته‌ی اتریوم بیاموزید
 - [Unitimes](https://mp.weixin.qq.com/s/tvloZSDBSOQN9zDQj_91kA) - محتوای نگهداری شده توسط انجمن، پوشش دانش مرتبط با اتریوم، دیفای، NFT،‏ Web3
 - [123ETH](https://123eth.org/) - دروازه‌ای به اکوسیستم اتریوم
 - [Zhen Xiao](http://zhenxiao.com/blockchain/) - دوره‌های آنلاین رایگان درباره ارزهای دیجیتال و کاربردهای آن

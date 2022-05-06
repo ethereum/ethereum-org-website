@@ -46,7 +46,7 @@ Ethereum.org переведен на более чем 40 языков, кото
 **Основные ресурсы**
 
 - [Ethereum.cn](https://www.ethereum.cn/) — контент, поддерживаемый сообществом, охватывающий обновление уровня консенсуса, все заметки с собраний основных разработчиков, уровень 2 и т. д.
-- [EthFans](https://ethfans.org/) — изучите все, от основ до продвинутых тем Ethereum
+- [EthFans](https://github.com/editor-Ajian/EthFans.org-annual-collected-works/) — изучите все, от основ до продвинутых тем Ethereum
 - [Unitimes](https://mp.weixin.qq.com/s/tvloZSDBSOQN9zDQj_91kA) — контент, поддерживаемый сообществом, охватывающий знания, связанные с Ethereum, децентрализованными финансами (DeFi), невзаимозаменяемыми токенами (NFT) и Web3
 - [123ETH](https://123eth.org/) — портал в экосистему Ethereum
 - [Zhen Xiao](http://zhenxiao.com/blockchain/) — бесплатные онлайн-курсы по криптовалюте и ее применению
