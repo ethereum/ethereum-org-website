@@ -72,14 +72,13 @@ _Typically used for more closer-knit, human-centric organizations like charities
 
 ### Reputation-based membership {#reputation-based-membership}
 
-Reputation represents ‘proof-of-work’ and grants voting power, but unlike shares - no ownership, and members do not have a claim on the treasury. Unlike liquid tokens, reputation cannot be bought, sold, transferred or delegated - it is only earned, but it can also be slashed. Reputation-based DAOs do not require reputation or tokens for someone to submit a proposal for on-chain voting, it is permissionless. Prospective members can freely submit proposals to join the DAO, and in exchange for their contributions request to receive reputation and tokens as a reward.
-Due to their unique nature, wich doesn't share the constraints of token governance, reputation-based systems allow DAOs to expand to multiple networks and conduct cross-chain governance, without relying on bridges. That paired with holographic consensus also allows for DAOs to scale without compromising on resiliency.
+Reputation represents proof of participation and grants voting power in the DAO. Unlike token or share-based membership, reputation-based DAOs don't transfer ownership to contributors. Reputation cannot be bought, transferred or delegated; DAO members must earn reputation through participation. On-chain voting is permissionless and prospective members can freely submit proposals to join the DAO and request to receive reputation and tokens as a reward in exchange for their contributions.
 
-_Typical for decentralized development and governance of protocols and dApps, but also well suited to a diverse set of organizations like charities, worker collectives, investment clubs, etc._
+_Typically used for decentralized development and governance of protocols and dApps, but also well suited to a diverse set of organizations like charities, worker collectives, investment clubs, etc._
 
 #### A famous example {#reputation-example}
 
-[DXdao](https://DXdao.eth.link) – DXdao is a global sovereign collective that has been building and governing decentralized protocols and applications since 2019. It leverages reputation-based governance and holographic consensus to coordinate and mananage funds trustlessly. It's not possible for anyone to buy they way into influencing its future.
+[DXdao](https://DXdao.eth.link) – DXdao is a global sovereign collective building and governing decentralized protocols and applications since 2019. It leverages reputation-based governance and holographic consensus to coordinate and manage funds, meaning no one can buy their way into influencing its future.
 
 ## How do DAOs work? {#how-daos-work}
 
@@ -124,9 +123,7 @@ Ethereum is the perfect foundation for DAOs for a number of reasons:
 - [How to Start a DAO-Powered Digital Community](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) – [DAOhaus](https://daohaus.club/)
 - [What is a DAO?](https://coinmarketcap.com/alexandria/article/what-is-a-dao) – [Coinmarketcap](https://coinmarketcap.com)
 - [What is Holographic Consensus?](https://medium.com/daostack/holographic-consensus-part-1-116a73ba1e1c) - [DAOstack](https://daostack.io/)
-- [Tokens, reputation, or maybe both?](https://forum.bprotocol.org/t/tokenized-governance/19/26) [DXdao](https://dxdocs.eth.link/)
 
 ### Videos {#videos}
 
 - [What is a DAO in crypto?](https://youtu.be/KHm0uUPqmVE)
-- [DAOs ownining decentralized frontends](https://www.youtube.com/watch?v=2V6OHbYjCVg)
