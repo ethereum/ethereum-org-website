@@ -1195,6 +1195,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/seanlakers"><img src="https://avatars.githubusercontent.com/u/104017504?v=4?s=100" width="100px;" alt=""/><br /><sub><b>seanlakers</b></sub></a><br /><a href="#ideas-seanlakers" title="Ideas, Planning, & Feedback">🤔</a></td>
     <td align="center"><a href="https://github.com/JasonYan2015"><img src="https://avatars.githubusercontent.com/u/17684609?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Jason Yan</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=JasonYan2015" title="Documentation">📖</a> <a href="#translation-JasonYan2015" title="Translation">🌍</a></td>
   </tr>
+  <tr>
+    <td align="center"><a href="https://hack.bg"><img src="https://avatars.githubusercontent.com/u/13139371?v=4?s=100" width="100px;" alt=""/><br /><sub><b>mradkov</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=mradkov" title="Documentation">📖</a></td>
+  </tr>
 </table>
 
 <!-- markdownlint-restore -->
