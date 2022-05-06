@@ -6,15 +6,15 @@ sidebar: true
 incomplete: false
 ---
 
-Dagger Hashimoto was the original research implementation and specification for Ethereum's mining algorithm. Dagger Hashimoto was superseded by [Ethash](#ethash).
+Dagger-Hashimoto was the original research implementation and specification for Ethereum's mining algorithm. Dagger-Hashimoto was superseded by [Ethash](#ethash).
 
 ## Prerequisites {#prerequisites}
 
 To better understand this page, we recommend you first read up on [proof-of-work consensus](/developers/docs/consensus-mechanisms/pow), [mining](/developers/docs/consensus-mechanisms/pow/mining), and [mining algorithms](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms).
 
-## Dagger Hashimoto {#dagger-hashimoto}
+## Dagger-Hashimoto {#dagger-hashimoto}
 
-Dagger Hashimoto aims to satisfy two goals:
+Dagger-Hashimoto aims to satisfy two goals:
 
 1.  **ASIC-resistance**: the benefit from creating specialized hardware for the algorithm should be as small as possible
 2.  **Light client verifiability**: a block should be efficiently verifiable by a light client.
@@ -191,7 +191,7 @@ def orig_hashimoto(prev_hash, merkle_root, list_of_transactions, nonce):
     return txid_max ^ (nonce << 192)
 ```
 
-Unfortunately, while Hashimoto is considered RAM hard, it relies on 256-bit arithmetic, which has considerable computational overhead. However, Dagger Hashimoto only uses the least significant 64 bits when indexing its dataset to address this issue.
+Unfortunately, while Hashimoto is considered RAM hard, it relies on 256-bit arithmetic, which has considerable computational overhead. However, Dagger-Hashimoto only uses the least significant 64 bits when indexing its dataset to address this issue.
 
 ```python
 def hashimoto(dag, dagsize, params, header, nonce):
@@ -251,7 +251,7 @@ def light_verify(params, header, nonce):
     return result * params["diff"] < 2**256
 ```
 
-Also, note that Dagger Hashimoto imposes additional requirements on the block header:
+Also, note that Dagger-Hashimoto imposes additional requirements on the block header:
 
 - For two-layer verification to work, a block header must have both the nonce and the middle value pre-sha3
 - Somewhere, a block header must store the sha3 of the current seedset
