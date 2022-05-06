@@ -36,8 +36,8 @@ Below is a breakdown of the website pages each content bucket contains.
 
 - [Decentralized autonomous organizations (DAOs)](/dao/)
 - [Decentralized finance (DeFi)](/defi/)
-- [Energy consumption)](/energy-consumption/)
-- [Energy consumption)](/governance/)
+- [Energy consumption](/energy-consumption/)
+- [Governance](/governance/)
 - [Non-fungible tokens (NFT)](/nft/)
 - [Ethereum security and scam prevention](/security/)
 - [Introduction to smart contracts](/smart-contracts/)
