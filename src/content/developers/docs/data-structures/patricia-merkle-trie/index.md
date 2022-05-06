@@ -204,7 +204,7 @@ For the mapping example, the `path` is `keccak256(<6661e9d6d8b923d5bbaab1b96e1dd
 
 ### Transactions Trie {#transaction-trie}
 
-There is a separate transactions trie for every block. A `path` here is: `rlp(transactionIndex)`. `transactionIndex` is its index within the block it's mined. The ordering is mostly decided by a miner so this data is unknown until mined. After a block is mined, the transaction trie never updates.
+There is a separate transactions trie for every block. A `path` here is: `rlp(transactionIndex)`. `transactionIndex` is its index within the block it's mined in. The ordering is mostly decided by a miner so this data is unknown until mined. After a block is mined, the transaction trie never updates.
 
 ### Receipts Trie {#receipts-trie}
 
