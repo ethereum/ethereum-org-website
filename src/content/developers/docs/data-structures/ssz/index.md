@@ -1,5 +1,5 @@
 ---
-title: Simple Serialize
+title: Simple serialize
 description: Explanation of Ethereum's SSZ format.
 lang: en
 sidebar: true
