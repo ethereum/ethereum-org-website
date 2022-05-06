@@ -7358,6 +7358,16 @@
       "contributions": [
         "ideas"
       ]
+    },
+    {
+      "login": "JasonYan2015",
+      "name": "Jason Yan",
+      "avatar_url": "https://avatars.githubusercontent.com/u/17684609?v=4",
+      "profile": "https://github.com/JasonYan2015",
+      "contributions": [
+        "doc",
+        "translation"
+      ]
     }
   ],
   "contributorsPerLine": 7,
