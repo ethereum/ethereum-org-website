@@ -20,7 +20,6 @@ By consensus, we mean that a general agreement has been reached. Consider a grou
 
 In regards to blockchain, the process is formalized, and reaching consensus means that at least 51% of the nodes on the network agree on the next global state of the network.
 
-
 ## What is a consensus mechanism? {#what-is-a-consensus-mechanism}
 
 Consensus mechanisms (also known as consensus protocols or consensus algorithms) allow distributed systems (networks of computers) to work together and stay secure.
