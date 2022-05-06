@@ -93,7 +93,7 @@ A collection of required information (a block header) about the comprised [trans
 
 ### block explorer {#block-explorer}
 
-A website that allows a user to search for information from, and about, a blockchain. This includes retrieving individual transactions, activity associated with specific addresses and information about the network.
+An interface that allows a user to search for information from, and about, a blockchain. This includes retrieving individual transactions, activity associated with specific addresses and information about the network.
 
 ### block header {#block-header}
 
@@ -135,7 +135,7 @@ The first of two [hard forks](#hard-fork) for the [Metropolis](#metropolis) deve
 
 ## C {#section-c}
 
-### Casper-FFG {casper-ffg}
+### Casper-FFG {#casper-ffg}
 
 Casper-FFG is a proof-of-stake consensus protocol used in conjunction with the [LMD-GHOST](#lmd-ghost) fork choice algorithm to allow [consensus clients](#consensus-client) to agree on the head of the Beacon Chain.
 
@@ -157,7 +157,7 @@ A group of at least 128 [validators](#validator) assigned to beacon and shard bl
 
 ### computational infeasibility {#computational-infeasibility}
 
-a process is computationally infeasible if it would take an impracticably long time (eg. billions of years) to do it for anyone who might conceivably have an interest in carrying it out.
+A process is computationally infeasible if it would take an impracticably long time (eg. billions of years) to do it for anyone who might conceivably have an interest in carrying it out.
 
 ### consensus {#consensus}
 
@@ -219,20 +219,20 @@ Decentralized application. At a minimum, it is a [smart contract](#smart-contrac
   Introduction to Dapps
 </DocLink>
 
-### Data availability {#data-availability}
+### data availability {#data-availability}
 
-The property of a state that any node connected to the network could download any specific part of the state that they wish to
+The property of a state that any node connected to the network could download any specific part of the state that they wish to.
 
 ### decentralization {#decentralization}
 
 The concept of moving the control and execution of processes away from a central entity.
 
-### Decentralized Autonomous Organization (DAO) {#dao}
+### decentralized autonomous organization (DAO) {#dao}
 
 A company or other organization that operates without hierarchical management. DAO may also refer to a contract named "The DAO" launched on April 30, 2016, which was then hacked in June 2016; this ultimately motivated a [hard fork](#hard-fork) (codenamed DAO) at block 1,192,000, which reversed the hacked DAO contract and caused Ethereum and Ethereum Classic to split into two competing systems.
 
 <DocLink to="/dao/">
-  Decentralized Autonomous Organizations (DAOs)
+  Decentralized autonomous organizations (DAOs)
 </DocLink>
 
 ### decentralized exchange (DEX) {#dex}
@@ -273,9 +273,9 @@ A short string of data a user produces for a document using a [private key](#pri
 
 The process by which an Ethereum node finds other nodes to connect to.
 
-### distributed hash table {#distributed-hash-table}
+### distributed hash table (DHT) {#distributed-hash-table}
 
-A distributed hash table (DHT) is a data structure containing `(key, value)` pairs used by Ethereum nodes to identify peers to connect to and determine which protocols to use to communicate.
+A data structure containing `(key, value)` pairs used by Ethereum nodes to identify peers to connect to and determine which protocols to use to communicate.
 
 ### double spend {#double-spend}
 
@@ -297,7 +297,7 @@ In the context of cryptography, lack of predictability or level of randomness. W
 
 ### epoch {#epoch}
 
-A period of 32 [slots](#slot) (6.4 minutes) in the [Beacon Chain](#beacon-chain)-coordinated system. [Validator](#validator) [committees](#committee) are shuffled every epoch for security reasons. There's an opportunity at each epoch for the chain to be [finalized](#finality). The term is also used on the [execution layer](#execution-layer) to mean the interval between each regeneration of the database used as a seed by the PoW algorithm [Ethash](#Ethash). The epoch in specified as 30000 blocks.
+A period of 32 [slots](#slot) (6.4 minutes) in the [Beacon Chain](#beacon-chain)-coordinated system. [Validator](#validator) [committees](#committee) are shuffled every epoch for security reasons. There's an opportunity at each epoch for the chain to be [finalized](#finality). The term is also used on the [execution layer](#execution-layer) to mean the interval between each regeneration of the database used as a seed by the proof-of-work algorithm [Ethash](#Ethash). The epoch in specified as 30000 blocks.
 
 <DocLink to="/developers/docs/consensus-mechanisms/pos/#how-does-validation-work">
   Proof-of-stake
@@ -306,10 +306,6 @@ A period of 32 [slots](#slot) (6.4 minutes) in the [Beacon Chain](#beacon-chain)
 ### equivocation {#equivocation}
 
 A validator sending two messages that contradict each other. One simple example is a transaction sender sending two transactions with the same nonce. Another is a block proposer proposing two blocks at the same block height (or for the same slot).
-
-### escrow {#escrow}
-
-If two mutually-untrusting entities are engaged in commerce, they may wish to pass funds through a mutually trusted third party and instruct that party to send the funds to the payee only when evidence of product delivery has been shown. This reduces the risk of the payer or payee committing fraud. Both this construction and the third party is called escrow.
 
 ### Eth1 {#eth1}
 
@@ -643,13 +639,13 @@ The third development stage of Ethereum, launched in October 2017.
 
 The process of verifying transactions and contract execution on the Ethereum blockchain in exchange for a reward in ether with the mining of every block.
 
-### mining pool{#mining-pool}
+### mining pool {#mining-pool}
 
-The pooling of resources by miners who share their processing power and split [mining rewards](#mining-reward).
+The pooling of resources by miners who share their processing power and split [block rewards](#block-reward).
 
-### mining reward {#mining-reward}
+### block reward {#block-reward}
 
-The amount of ether given to a miner that mined a new block.
+The amount of ether rewarded to the producer of a new valid block.
 
 ### miner {#miner}
 
@@ -677,7 +673,7 @@ Referring to the Ethereum network, a peer-to-peer network that propagates transa
 
 ### network hashrate {#network-hashrate}
 
-The number of hash calculations miners on the Ethereum network can make per second collectively.
+The collective [hashrate](#hashrate) produced by the entire Ethereum mining network.
 
 ### non-fungible token (NFT) {#nft}
 
@@ -740,7 +736,7 @@ Connected computers running Ethereum client software that have identical copies 
 
 ### peer to peer network {#peer-to-peer-network}
 
-A network of computers ([peers](#peer)) that are collectively able to perform functionalities normally only possible with centralized, server-based services.
+A network of computers ([peers](#peer)) that are collectively able to perform functionalities without the need for centralized, server-based services.
 
 ### Plasma {#plasma}
 
@@ -760,7 +756,7 @@ A secret number that allows Ethereum users to prove ownership of an account or c
 
 ### private chain {#private-chain}
 
-A fully private blockchain is one with write permissions limited to one organization.
+A fully private blockchain is one with permissioned access, not publicly available for use. 
 
 ### proof-of-stake (PoS) {#pos}
 
@@ -797,10 +793,6 @@ An attack that consists of an attacker contract calling a victim contract functi
 <DocLink to="/developers/docs/smart-contracts/security/#re-entrancy">
   Re-entrancy
 </DocLink>
-
-### reputation {#reputation}
-
-The property of an identity that other entities believe that identity to be either (1) competent at some specific task, or (2) trustworthy in some context, i.e., not likely to betray others even if short-term profitable.
 
 ### reward {#reward}
 
