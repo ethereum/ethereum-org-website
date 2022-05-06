@@ -1,12 +1,12 @@
 ---
-title: Upgrade Timeline
+title: Ethereum's upgrade timeline
 description: An Ethereum network upgrade timeline
 lang: en
 sidebar: true
 sidebarDepth: 1
 ---
 
-# Upgrade Timeline
+# Ethereum's upgrade timeline {#upgrade-timeline}
 
 Below is a timeline of all the major milestones, forks, and updates to the Ethereum blockchain with the most recent first. To explore future protocol upgrades visit our [upgrades page](/upgrades/).
 
