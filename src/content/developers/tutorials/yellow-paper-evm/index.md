@@ -9,7 +9,7 @@ sidebar: true
 published: 2022-05-15
 ---
 
-[The Yellow Paper](https://ethereum.github.io/yellowpaper/paper.pdf) is the formal specifications for Ethereum. 
+[The Yellow Paper](https://ethereum.github.io/yellowpaper/paper.pdf) is the formal specification for Ethereum. 
 Except where amended by [the EIP process](/eips/), it contains the exact description of how everything works.
 It is written as a mathematical paper, which includes terminology programmers may not be familiar with. 
 In this paper you learn how to read it, and by extension other related mathematical papers.
@@ -17,7 +17,7 @@ In this paper you learn how to read it, and by extension other related mathemati
 ## Which Yellow Paper?
 
 Like almost everything else in Ethereum, the Yellow Paper evolves over time. 
-To be able to refer to a specific version, I uploaded [the current version at writing](yellow-paper-Berlin.pdf).
+To be able to refer to a specific version, I uploaded [the current version at writing](yellow-paper-berlin.pdf).
 The section, page, and equation numbers I use will refer to that version.
 It is a good idea to have it open in a different window while reading this document.
 
