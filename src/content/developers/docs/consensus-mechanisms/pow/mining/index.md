@@ -64,7 +64,7 @@ Watch Austin walk you through mining and the proof-of-work blockchain.
 
 <YouTube id="zcX7OJ-L8XQ" />
 
-## The mining algorithm
+## The mining algorithm {#mining-algorithm}
 
 The Ethereum mining algorithm has undergone several upgrades since its inception. The original algorithm, "Dagger Hashamoto" was based around the provision of a large, transient, randomly generated dataset which forms a [Directed Acyclic Graph](https://en.wikipedia.org/wiki/Directed_acyclic_graph) (the Dagger-part), with miners attempting to solve a particular constraint on it, partly determined through a block’s header-hash. This algorithm was novel because it had high memory-access bandwidth requirements but could be run using a modest processor, making it GPU-friendly but resistant to the type of ASIC-driven hardware arms race that could pose a centralization risk (more on [problems with ASICS](https://www.investopedia.com/investing/why-centralized-crypto-mining-growing-problem/)). After substantial upgrades to the algorithm, it was renamed to "Ethash". Ethash is the mining algorithm Ethereum miners use today.
 
