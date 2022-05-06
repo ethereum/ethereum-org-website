@@ -229,6 +229,7 @@ curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": [
 {"jsonrpc":"2.0","id":1,"result":"0x000000000000000000000000000000000000000000000000000000000000162e"}
 ```
 
+More information on this can be found in the [EIP 2718](https://eips.ethereum.org/EIPS/eip-2718) documentation.
 
 
 ### Transactions Trie {#transaction-trie}
