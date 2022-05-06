@@ -7378,6 +7378,16 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "b17z",
+      "name": "Bienvenido Rodriguez",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3633484?v=4",
+      "profile": "https://github.com/b17z",
+      "contributions": [
+        "doc",
+        "ideas"
+      ]
     }
   ],
   "contributorsPerLine": 7,
