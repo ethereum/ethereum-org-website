@@ -24,7 +24,6 @@ import Roadmap from "../components/Roadmap"
 import UpgradeTableOfContents from "../components/UpgradeTableOfContents"
 import TableOfContents from "../components/TableOfContents"
 import TranslationsInProgress from "../components/TranslationsInProgress"
-// import Translation from "../components/Translation"
 import FeedbackCard from "../components/FeedbackCard"
 import SectionNav from "../components/SectionNav"
 import {
@@ -45,7 +44,7 @@ import StakingConsiderations from "../components/Staking/StakingConsiderations"
 import StakingCommunityCallout from "../components/Staking/StakingCommunityCallout"
 import StakingGuides from "../components/Staking/StakingGuides"
 
-import { isLangRightToLeft } from "../utils/translations"
+import { isLangRightToLeft, translateMessageId } from "../utils/translations"
 
 const Page = styled.div`
   display: flex;
@@ -436,7 +435,7 @@ const StakingPage = ({ data, pageContext, location }) => {
             <MDXRenderer>{mdx.body}</MDXRenderer>
           </MDXProvider>
           <StakingCommunityCallout />
-          <FeedbackCard prompt="Did this page help answer your question?" />
+          <FeedbackCard />
         </ContentContainer>
         <MobileButton>
           <MobileButtonDropdown list={dropdownLinks} />
