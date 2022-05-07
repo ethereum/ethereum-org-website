@@ -10,7 +10,7 @@ sidebar: true
 A standard to optimize and unify the technical parameters of yield-bearing vaults. This standard provides a standard API for tokenized yield-bearing vaults that represent shares of a single underlying ERC-20 token.
 With an optional extension for tokenized vaults utilizing ERC-20, this standard offers basic functionality for depositing, withdrawing tokens and reading balances.
 
-**The role of ERC-4626 in yield-bearing vaults?**
+**The role of ERC-4626 in yield-bearing vaults**
 
 Lending markets, aggregators, and intrinsically interest bearing tokens help users find the best yield on their crypto tokens through the execution of different strategies.
 These strategies are done with slight variation which might be error prone or waste development resources.
@@ -41,7 +41,7 @@ To better understand this page, we recommend you first read about [token standar
   - [Withdraw Event](#withdraw_event)
 
 
----
+
 ### Methods {#methods}
 #### deposit {#deposit}
 ```solidity
@@ -111,7 +111,7 @@ function baseUnit() public view returns(uint256)
 The decimal scalar for vault shares and operations involving `exchangeRate()`.
 
 
----
+
 ### Events {#events}
 #### Deposit Event
 **MUST** be emitted when tokens are deposited into the vault
@@ -128,7 +128,8 @@ event Withdraw(address indexed _owner, address indexed _to, uint256 _value)
 ```
 Where `_from` is the user who triggered the withdrawal and held `_value` underlying tokens in the vault, and `_to` is the user who received the withdrawn tokens.
 
----
+
+
 _Note_: All batch functions, including the hook, are also available in non-batch versions. This is done to save gas, as transferring just one asset will likely remain to be the most common method. For clarity in the explanations, we've left them out, including the safe transfer rules. Remove the 'Batch' and the names are identical.
 
 ## Further reading {#further-reading}
