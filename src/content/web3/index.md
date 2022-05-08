@@ -20,7 +20,7 @@ Most people think of the internet as a continuous pillar of modern life—it was
 
 ### Web 1.0: Read-Only (1990-2004) {#web1}
 
-In 1989, in CERN, Geneva, Tim Berners-Lee was busy developing the protocols that would become the internet. His idea? To create open, decentralized protocols that allowed information-sharing from anywhere on Earth.
+In 1989, in CERN, Geneva, Tim Berners-Lee was busy developing the protocols that would become the internet. His idea To create open, decentralized protocols that allowed information-sharing from anywhere on Earth.
 
 The first inception of the internet, now known as 'Web 1.0', occurred roughly between 1990 to 2004. The internet on Web 1.0 mainly was static websites owned by companies, and there was close to zero interaction between users - individuals seldom produced content - leading to it being known as the read-only web.
 
