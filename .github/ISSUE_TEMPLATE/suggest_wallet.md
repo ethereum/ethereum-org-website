@@ -2,7 +2,7 @@
 name: Suggest a wallet
 about: Suggest a new wallet to list on ethereum.org
 title: ""
-labels: "wallet :purse:"
+labels: "wallet :purse:,"
 assignees: ""
 ---
 
