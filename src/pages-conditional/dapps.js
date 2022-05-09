@@ -1225,7 +1225,7 @@ const DappsPage = ({ data, location }) => {
                 onClick={() => handleCategorySelect(key, false)}
               >
                 <Emoji mr={`1rem`} text={category.emoji} />
-                <OptionText fontSize={"24px"}>{category.title}</OptionText>
+                <OptionText>{category.title}</OptionText>
               </Option>
             )
           })}

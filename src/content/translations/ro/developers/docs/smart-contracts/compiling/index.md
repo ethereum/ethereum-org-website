@@ -1,16 +1,16 @@
 ---
 title: Compilarea contractelor inteligente
-description: O explicație a motivului pentru care trebuie să compilezi contractele inteligente și ce face de fapt compilarea.
+description: O explicație a motivului pentru care trebuie să compilaţi contractele inteligente și ce face de fapt compilarea.
 lang: ro
 sidebar: true
 incomplete: true
 ---
 
-Trebuie să-ți compilezi contractul, astfel încât aplicația ta web și mașina virtuală Ethereum (EVM) să-l poată înțelege.
+Trebuie să vă compilaţi contractul pentru ca aplicația dvs. web și mașina virtuală Ethereum (EVM) să îl poată înțelege.
 
 ## Condiții prealabile {#prerequisites}
 
-S-ar putea să-ți fie de ajutor să citești introducerea noastră la [contracte inteligente](/developers/docs/smart-contracts/) și [mașina virtuală Ethereum](/developers/docs/evm/) înainte de a citi despre compilare.
+S-ar putea să vă fie util să citiţi introducerea noastră despre [contracte inteligente](/developers/docs/smart-contracts/) și [mașina virtuală Ethereum](/developers/docs/evm/) înainte de a citi despre compilare.
 
 ## EVM {#the-evm}
 
@@ -36,13 +36,13 @@ PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x4 CALLDATASIZE LT PUSH2 0x41 JUMPI PUSH1 0x
 
 ## Aplicații web {#web-applications}
 
-Compilatorul va produce, de asemenea, **Interfața Binară de Aplicație (ABI)** de care ai nevoie pentru ca aplicația ta să înțeleagă contractul și să apeleze la funcțiile contractului.
+Compilatorul va produce şi **Interfața Binară de Aplicație (ABI)** de care aveţi nevoie pentru ca aplicația dvs. să înțeleagă contractul și să apeleze funcțiile contractului.
 
 ABI este un fișier JSON care descrie contractul implementat și funcțiile sale de contract inteligent. Acest lucru ajută la reducerea decalajului dintre web2 și web3
 
-O [bibliotecă client JavaScript](/developers/docs/apis/javascript/) va citi **ABI**-ul pentru a putea apela pe contractul tău inteligent din interfața aplicației tale web.
+A [JavaScript client library](/developers/docs/apis/javascript/) will read the **ABI** in order for you to call on your smart contract in your web app's interface.
 
-Mai jos este ABI-ul pentru contractul de token ERC-20. Un ERC-20 este un token pe care îl poți tranzacționa pe Ethereum.
+Mai jos este ABI-ul pentru contractul de token ERC-20. Un ERC-20 este un token pe care îl puteţi tranzacționa pe Ethereum.
 
 ```json
 [
@@ -275,5 +275,5 @@ Mai jos este ABI-ul pentru contractul de token ERC-20. Un ERC-20 este un token p
 
 ## Subiecte corelate {#related-topics}
 
-- [Biblioteci client JavaScript](/developers/docs/apis/javascript/)
-- [Mașină virtuală Ethereum](/developers/docs/ethereum-virtual-machine/)
+- [JavaScript client libraries](/developers/docs/apis/javascript/)
+- [Mașina virtuală Ethereum](/developers/docs/ethereum-virtual-machine/)

@@ -384,7 +384,7 @@ export const OptionContainer = styled.div`
   }
 `
 
-export const Option = styled.div`
+export const Option = styled.button`
   border-radius: 2rem;
   border: 1px solid
     ${(props) =>
@@ -398,6 +398,7 @@ export const Option = styled.div`
   padding: 1rem 1.5rem;
   margin: 0.5rem;
   cursor: pointer;
+  background-color: transparent;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     width: 100%;
     justify-content: center;
@@ -411,8 +412,8 @@ export const Option = styled.div`
   }
 `
 
-export const OptionText = styled.div`
-  font-size: ${(props) => props.fontSize};
+export const OptionText = styled.span`
+  font-size: ${({ fontSize = "1.5rem" }) => fontSize};
   line-height: 100%;
   text-align: center;
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {

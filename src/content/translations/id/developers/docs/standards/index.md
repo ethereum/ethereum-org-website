@@ -8,7 +8,7 @@ incomplete: true
 
 ## Gambaran umum standar {#standards-overview}
 
-Komunitas Etereum telah mengadopsi banyak standar yang menolong menjaga proyek (seperti [klien Ethereum](/developers/docs/nodes-and-clients/) dan dompet) tetap dapat bertukar informasi di keseluruhan implementasi, dan memastikan kontrak pintar dan dapp tetap dapat disusun.
+Komunitas Ethereum telah mengadopsi banyak standar yang menolong menjaga proyek (seperti [klien Ethereum](/developers/docs/nodes-and-clients/) dan dompet) tetap dapat bertukar informasi di keseluruhan implementasi, dan memastikan kontrak pintar dan dapp tetap dapat disusun.
 
 Biasanya standar diperkenalkan sebagai [Proposal Peningkatan Ethereum](/eips/) (EIP), yang didiskusikan oleh anggota komunitas melalui [proses standar](https://eips.ethereum.org/EIPS/eip-1).
 

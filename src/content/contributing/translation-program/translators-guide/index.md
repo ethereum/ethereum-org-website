@@ -84,13 +84,13 @@ You can find some examples of what these strings look like for translators and h
 
 ### Crowdin warnings {#crowdin-warnings}
 
-Crowdin has a built-in feature that warns translators when they are about to make a mistake. If you suggest a translation and forget to include a tag from the source, translate elements that should not be translated, add several consecutive spaces, forget end punctuation, etc., Crowdin will automatically warn you of this before saving your translation.
+Crowdin has a built-in feature that warns translators when they are about to make a mistake. Crowdin will automatically warn you of this before saving your translation if you forget to include a tag from the source, translate elements that should not be translated, add several consecutive spaces, forget end punctuation, etc.
 If you see a warning like this, please go back and double-check the suggested translation.
 
 **Never ignore these warnings, as they usually mean that something is wrong, or that the translation is missing a key part of the source text.**
 
 An example of a Crowdin warning when you forget to add a tag to your translation:
-![Example of a Crowdin warning.png](./crowdin-warning-example.png)
+![Example of a Crowdin warning](./crowdin-warning-example.png)
 
 ### Dealing with tags and code snippets {#dealing-with-tags}
 

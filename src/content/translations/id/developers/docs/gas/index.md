@@ -17,9 +17,9 @@ Gas merujuk pada unit yang mengukur jumlah upaya komputasional yang diperlukan u
 
 Karena tiap transaksi Ethereum memerlukan sumber daya komputasional untuk dijalankan, tiap transaksi membutuhkan biaya. Gas merujuk pada biaya yang diperlukan agar berhasil menjalankan transaksi di Ethereum.
 
-![Diagram menunjukkan di mana gas diperlukan dalam operasi EVM](../../../../../developers/docs/gas/gas.png) _Diagram diadaptasi dari [Ethereum EVM yang diilustrasikan](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![Diagram menunjukkan di mana gas diperlukan dalam operasi EVM](./gas.png) _Diagram diadaptasi dari [Ethereum EVM yang diilustrasikan](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
-Biaya gas dibayarkan dalam mata uang asli Ethereum, ether (ETH). Harga gas dinyatakan dalam gwei, yang adalah denominasi ETH - setiap gwei setara dengan 0,000000001 ETH (10<sup>-9</sup> ETH). Misalnya, daripada mengatakan biaya gas Anda 0,000000001 ether, Anda bisa mengatakan biaya gas Anda 1 gwei. Kata 'gwei' sendiri berarti 'giga-wei', dan itu sama dengan 1.000.000.000 wei. Wei sendiri (dinamai dari [Wei Dai](https://en.wikipedia.org/wiki/Wei_Dai), kreator [b-money](https://www.investopedia.com/terms/b/bmoney.asp)) adalah unit terkecil dari ETH.
+Biaya gas dibayarkan dalam mata uang asli Ethereum, ether (ETH). Harga gas dinyatakan dalam gwei, yang adalah denominasi ETH - setiap gwei setara dengan 0,000000001 ETH (10<sup>-9</sup> ETH). Misalnya, daripada mengatakan biaya gas Anda 0,000000001 ether, Anda bisa mengatakan biaya gas Anda 1 gwei. Kata 'gwei' sendiri berarti 'giga-wei', dan itu sama dengan 1.000.000.000 wei. Wei sendiri (dinamai dari [Wei Dai](https://wikipedia.org/wiki/Wei_Dai), pembuat [b-money](https://www.investopedia.com/terms/b/bmoney.asp)) adalah unit terkecil dari ETH.
 
 ## Sebelum peningkatan London {#pre-london}
 
@@ -41,13 +41,13 @@ Video ini menawarkan gambaran umum yang ringkas tentang gas dan mengapa gas ada:
 
 Dimulai dengan peningkatan jaringan London, setiap blok memiliki biaya dasar, harga minimum per unit gas untuk dimasukkan ke dalam blok ini, yang dihitung oleh jaringan berdasarkan permintaan ruangan blok. Karena biaya dasar dari biaya transaksi dibakar, para pengguna juga diharapkan untuk menetapkan tips (biaya prioritas) dalam transaksi mereka. Tips memberi kompensasi bagi penambang untuk mengeksekusi dan menyebarkan transaksi pengguna dalam blok dan diharapkan diatur secara otomatis oleh sebagian besar dompet.
 
-Cara menghitung total biaya transaksi adalah sebagai berikut: `Unit gas (batas) * (Biaya dasar + Tips)`
+Cara menghitung total biaya transaksi adalah sebagai berikut: `Gas units (limit) * (Base fee + Tip)`
 
 Katakanlah Jordan harus membayar Taylor 1 ETH. Dalam transaksi tersebut, batas gas adalah 21.000 unit dan biaya dasar adalah 100 gwei. Jordan memasukkan tips 10 gwei.
 
 Dengan menggunakan rumus di atas, kita dapat menghitungnya sebagai `21.000 * (100 + 10) = 2.310.000 gwei` atau 0,00231 ETH.
 
-Ketika Jordan mengirimkan uang, 1,00231 ETH akan dipotong dari akun Jordan. Taylor akan dikreditkan 1,0000 ETH. Penambang menerima tips 0,00021 ETH. Biaya dasar 0,0021 ETH dibakar.
+Ketika Jordan mengirimkan uang, 1,00231 ETH akan dipotong dari akun Jordan. Taylor akan dikreditkan 1,0000 ETH. Penambang menerima tips 0,00021 ETH. Biaya dasar 0,0021 ETH dihilangkan.
 
 Selain itu, Jordan juga dapat menetapkan biaya maksimal (`maxFeePerGas`) untuk transaksi tersebut. Selisih antara biaya maksimum dan biaya sebenarnya dikembalikan dananya ke Jordan, yaitu `pengembalian dana = biaya maksimum - (biaya dasar + biaya prioritas)`. Jordan dapat menetapkan jumlah maksimum untuk membayar transaksi yang dilakukan dan tidak khawatir tentang membayar lebih "di luar dari" biaya dasar saat transaksi dijalankan.
 
@@ -55,7 +55,7 @@ Selain itu, Jordan juga dapat menetapkan biaya maksimal (`maxFeePerGas`) untuk t
 
 Sebelum Peningkatan London, Ethereum memiliki blok berukuran tetap. Pada waktu permintaan jaringan tinggi, blok-blok ini beroperasi pada kapasitas total. Akibatnya, para pengguna sering harus menunggu permintaan yang tinggi untuk mengurangi penyertaan dalam blok, yang menyebabkan pengalaman pengguna yang buruk.
 
-Peningkatan London memasukkan blok berukuran variabel ke Ethereum. Setiap blok memiliki ukuran target sebesar 15 juta gas, tetapi ukuran blok akan bertambah atau berkurang sesuai dengan permintaan jaringan, hingga mencapai batas blok yang berukuran 30 juta gas (2x ukuran blok target). Protokol mencapai keseimbangan untuk ukuran blok sebesar 15 juta pada umumnya melalui proses _tâtonnement_. Ini berarti jika ukuran blok lebih besar dari ukuran blok target, protokol akan meningkatkan harga dasar untuk blok berikutnya. Dalam cara yang sama, protokol akan mengurangi harga dasar jika ukuran blok kurang dari ukuran blok target. Jumlah biaya dasar yang disesuaikan proporsional dengan seberapa besar perbedaan ukuran blok saat ini dari blok target. [Selengkapnya tentang blok](/developers/docs/blocks/).
+Peningkatan London memasukkan blok berukuran variabel ke Ethereum. Setiap blok memiliki ukuran target sebesar 15 juta gas tetapi ukuran blok akan bertambah atau berkurang sesuai dengan permintaan jaringan, hingga mencapai batas blok yang berukuran 30 juta gas (2x ukuran blok target). Protokol mencapai keseimbangan untuk ukuran blok sebesar 15 juta pada umumnya melalui proses _tâtonnement_. Ini berarti jika ukuran blok lebih besar dari ukuran blok target, protokol akan meningkatkan harga dasar untuk blok berikutnya. Dalam cara yang sama, protokol akan mengurangi harga dasar jika ukuran blok kurang dari ukuran blok target. Jumlah biaya dasar yang disesuaikan proporsional dengan seberapa besar perbedaan ukuran blok saat ini dari blok target. [Selengkapnya tentang blok](/developers/docs/blocks/).
 
 ### Biaya dasar {#base-fee}
 
@@ -65,14 +65,14 @@ Biaya dasar dihitung berdasarkan sebuah formula yang membandingkan ukuran blok s
 
 | Nomor Blok | Gas yang Termasuk | Peningkatan Biaya | Biaya Dasar Saat Ini |
 | ---------- | ----------------: | ----------------: | -------------------: |
-| 1          |             15 Jt |                0% |             100 gwei |
-| 2          |             30 Jt |                0% |             100 gwei |
-| 3          |             30 Jt |             12,5% |           112,5 gwei |
-| 4          |             30 Jt |             12,5% |           126,6 gwei |
-| 5          |             30 Jt |             12,5% |           142,4 gwei |
-| 6          |             30 Jt |             12,5% |           160,2 gwei |
-| 7          |             30 Jt |             12,5% |           180,2 gwei |
-| 8          |             30 Jt |             12,5% |           202,7 gwei |
+| 1          |           15 Juta |                0% |             100 gwei |
+| 2          |           30 Juta |                0% |             100 gwei |
+| 3          |           30 Juta |             12,5% |           112,5 gwei |
+| 4          |           30 Juta |             12,5% |           126,6 gwei |
+| 5          |           30 Juta |             12,5% |           142,4 gwei |
+| 6          |           30 Juta |             12,5% |           160,2 gwei |
+| 7          |           30 Juta |             12,5% |           180,2 gwei |
+| 8          |           30 Juta |             12,5% |           202,7 gwei |
 
 Dibandingkan dengan pasar pelelangan gas pra-London, perubahan mekanisme biaya transaksi ini menyebabkan prediksi harga yang lebih terandalkan. Berdasarkan tabel di atas - untuk membuat transaksi di blok nomor 9, dompet akan memberi tahu pengguna dengan kepastian bahwa **biaya dasar maksimum** yang harus ditambahkan ke blok berikutnya adalah `biaya dasar saat ini * 112,5%` atau `202,8 gwei * 112,5% = 228,1 gwei`.
 
@@ -80,17 +80,17 @@ Juga penting untuk dicatat bahwa kecil kemungkinan kita akan melihat perluasan l
 
 | Nomor Blok | Gas yang Termasuk | Peningkatan Biaya | Biaya Dasar Saat Ini |
 | ---------- | ----------------: | ----------------: | -------------------: |
-| 30         |             30 Jt |             12,5% |          2705,6 gwei |
+| 30         |           30 Juta |             12,5% |          2705,6 gwei |
 | ...        |               ... |             12,5% |                  ... |
-| 50         |             30 Jt |             12,5% |         28531,3 gwei |
+| 50         |           30 Juta |             12,5% |         28531,3 gwei |
 | ...        |               ... |             12,5% |                  ... |
-| 100        |             30 Jt |             12,5% |      10302608,6 gwei |
+| 100        |           30 Juta |             12,5% |      10302608,6 gwei |
 
 ### Biaya prioritas (tips) {#priority-fee}
 
 Sebelum Peningkatan London, para penambang akan menerima biaya gas total dari transaksi mana pun yang dimasukkan ke dalam sebuah blok.
 
-Dengan biaya dasar baru yang dibakar, Peningkatan London memasukkan biaya prioritas (tips) untuk mendorong para penambang memasukkan sebuah transaksi dalam blok. Tanpa tips, para penambang akan menganggap menambang blok kosong menguntungkan secara ekonomis, karena mereka akan menerima imbalan blok yang sama. Dala kondisi normal, sejumlah kecil tips akan memberi insentif minimal bagi para penambang untuk memasukkan sebuah transaksi. Agar transaksi yang harusnya secara istimewa dieksekusi terlebih dahulu sebelum transaksi lainnya dalam blok yang sama, tip yang lebih tinggi akan menjadi penting untuk berupaya memenangkan penawaran transaksi yang saling berkompetisi.
+Dengan biaya dasar baru yang dibakar, Peningkatan London memasukkan biaya prioritas (tip) untuk mendorong para penambang memasukkan sebuah transaksi dalam blok. Tanpa tips, para penambang akan menganggap menambang blok kosong menguntungkan secara ekonomis, karena mereka akan menerima imbalan blok yang sama. Dala kondisi normal, sejumlah kecil tips akan memberi insentif minimal bagi para penambang untuk memasukkan sebuah transaksi. Agar transaksi yang harusnya secara istimewa dieksekusi terlebih dahulu sebelum transaksi lainnya dalam blok yang sama, tip yang lebih tinggi akan menjadi penting untuk berupaya memenangkan penawaran transaksi yang saling berkompetisi.
 
 ### Biaya maksimum {#maxfee}
 
@@ -108,17 +108,17 @@ Video ini menjelaskan EIP-1559 dan keuntungan yang diberikannya:
 
 <YouTube id="MGemhK9t44Q" />
 
-Jika Anda tertarik, Anda dapat membaca [EIP-1559 specifications](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md).
+Jika Anda tertarik, Anda dapat membaca [spesifikasi EIP-1559](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md) yang pasti.
 
 Lanjutkan perjalanan menakjubkan ini dengan [EIP-1559 Resources](https://hackmd.io/@timbeiko/1559-resources) ini.
 
 ## Mengapa ada biaya gas? {#why-do-gas-fees-exist}
 
-Singkatnya, biaya gas membantu menjaga keamanan jaringan Ethereum. Dengan mengharuskan pembayaran biaya untuk setiap komputasi yang dijalankan dalam jaringan, kami mencegah para aktor jahat membuat spam dalam jaringan. Untuk mencegah perulangan tak terbatas yang agresif atau tak disengaja, atau pemborosan dalam kode komputasional lainnya, setiap transaksi diharuskan untuk menentukan batasan seberapa banyak langkah eksekusi kode komputasional yang bisa digunakan. Unit dasar dari komputasi tersebut adalah "gas".
+Singkatnya, biaya gas membantu menjaga keamanan jaringan Ethereum. Dengan mengharuskan pembayaran biaya untuk setiap komputasi yang dijalankan dalam jaringan, kami mencegah para aktor jahat menyampah di dalam jaringan. Untuk mencegah perulangan tak terbatas yang agresif atau tak disengaja, atau pemborosan dalam kode komputasional lainnya, setiap transaksi diharuskan untuk menentukan batasan seberapa banyak langkah eksekusi kode komputasional yang bisa digunakan. Unit dasar dari komputasi tersebut adalah "gas".
 
 Sekalipun sebuah transaksi menyertakan batasan, gas yang tidak digunakan dalam transaksi dikembalikan ke pengguna (yakni `biaya maks - (biaya dasar + tips)` dikembalikan).
 
-![Diagram menunjukkan cara mengembalikan dana gas yang tidak terpakai](../../../../../developers/docs/transactions/gas-tx.png) _Diagram diadaptasi dari [Ethereum EVM yang diilustrasikan](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![Diagram menunjukkan cara mengembalikan dana gas yang tidak terpakai](../transactions/gas-tx.png) _Diagram diadaptasi dari [Ethereum EVM yang diilustrasikan](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 ## Apa itu batas gas? {#what-is-gas-limit}
 
@@ -134,9 +134,9 @@ Harga gas sendiri sebenarnya tidak menentukan jumlah yang harus kita bayarkan un
 
 ## Inisiatif untuk mengurangi biaya gas {#initiatives-to-reduce-gas-costs}
 
-Peningkatan jaringan baru Ethereum 2.0 (juga dikenal sebagai Eth2 atau Serenity) seharusnya akan menyelesaikan beberapa masalah biaya gas, hasilnya yang akan memungkinkan platform untuk memroses ribuan transaksi per detik dan melakukan penskalaan secara global.
+[Peningkatan skalabilitas](/upgrades/) Ethereum seharusnya akan menyelesaikan beberapa masalah biaya gas, hasilnya yang akan memungkinkan platform untuk memroses ribuan transaksi per detik dan melakukan penskalaan secara global.
 
-Penskalaan lapisan 2 adalah inisiatif utama untuk sangat meningkatkan biaya gas, pengalaman pengguna, dan skalabilitas. [Selengkapnya tentang penskalaan lapisan 2](/developers/docs/scaling/#rollups).
+Penskalaan lapisan 2 adalah inisiatif utama untuk sangat meningkatkan biaya gas, pengalaman pengguna, dan skalabilitas. [Selengkapnya tentang penskalaan lapisan 2](/developers/docs/scaling/#layer-2-scaling).
 
 Model bukti taruhan yang baru, yang diperkenalkan di Rantai Suar, seharusnya mengurangi pemakaian daya yang tinggi dan ketergantungan pada perangkat keras khusus. Rantai ini akan memungkinkan jaringan Ethereum terdesentralisasi untuk berkesesuaian dan menjaga jaringan tetap aman, sekaligus membatasi pemakaian daya dengan mengharuskan komitmen keuangan.
 
@@ -152,6 +152,7 @@ Jika ingin memantau harga gas, sehingga Anda dapat mengirim ETH lebih murah, And
 - [Penaksir Gas ETH Blocknative](https://chrome.google.com/webstore/detail/blocknative-eth-gas-estim/ablbagjepecncofimgjmdpnhnfjiecfm) _Ekstensi Chrome penaksir gas mendukung transaksi lama Tipe 0 dan transaksi Tipe 2 EIP-1559._
 
 - [Stasiun Gas ETH](https://ethgasstation.info/) _Metrik yang berorientasi pelanggan untuk pasar gas Ethereum_
+- [Cryptoneur Gas Fees Calculator](https://www.cryptoneur.xyz/gas-fees-calculator) _Calculate gas fees in your local currency for different transaction types on Mainnet, Arbitrum, and Polygon._
 
 ## Peralatan terkait {#related-tools}
 

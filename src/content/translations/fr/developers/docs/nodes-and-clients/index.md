@@ -4,28 +4,29 @@ description: Présentation des nœuds Ethereum et des logiciels clients, de la f
 lang: fr
 sidebar: true
 sidebarDepth: 2
-isOutdated: true
 ---
 
-Pour qu'Ethereum fonctionne de façon décentralisée, il faut un réseau distribué de nœuds qui peuvent vérifier les blocs et les données de transaction. Vous avez besoin d'une application ("un client") sur votre appareil pour "exécuter" un nœud.
+Ethereum est un réseau distribué d'ordinateurs exécutant des logiciels (appelés node) qui vérifient les blocs et les données de transaction. Vous avez besoin d'une application (« un client ») sur votre appareil pour « exécuter » un nœud.
 
 ## Prérequis {#prerequisites}
 
-Vous devez comprendre le concept de réseau décentralisé avant d'approfondir le sujet et d'exécuter votre propre instance d'un client Ethereum. Commencez par lire la page [Introduction à Ethereum](/developers/docs/intro-to-ethereum/).
+Vous devez comprendre le concept de réseau de pair-à-pair et [les bases de l'EVM](/developers/docs/evm/) avant d'approfondir et d'exécuter votre propre instance d'un client Ethereum. Commencez par lire la page [Introduction à Ethereum](/developers/docs/intro-to-ethereum/).
+
+Si vous êtes novice concernant le sujet des nœuds, nous vous recommandons de consulter en premier lieu notre introduction conviviale sur [l'exécution d'un nœud Ethereum](/run-a-node).
 
 ## En quoi consistent les nœuds et les clients? {#what-are-nodes-and-clients}
 
-"Nœud" désigne un logiciel connu sous le nom de "client". Un client est une implémentation d'Ethereum qui vérifie toutes les transactions de chaque bloc, ce qui assure la sécurité du réseau et l'exactitude des données.
+« Nœud » désigne un logiciel connu sous le nom de « client ». Un client est une implémentation d'Ethereum qui vérifie toutes les transactions de chaque bloc, ce qui assure la sécurité du réseau et l'exactitude des données.
 
 Vous pouvez voir une vue du réseau Ethereum en temps réel en consultant cette [carte des nœuds](https://etherscan.io/nodetracker).
 
-De nombreuses [implémentations de clients Ethereum](/developers/docs/nodes-and-clients/#execution-clients) existent dans différentes langues. Ce qu'elles ont en commun, c'est qu'elles suivent toutes une spécification formelle. Cette spécification dicte le fonctionnement du réseau Ethereum et de la blockchain.
+De nombreux [clients Ethereum](/developers/docs/nodes-and-clients/#execution-clients) existent dans une variété de langages de programmation tels que Go, Rust, JavaScript, Typescript, Python, C# .NET, Nim et Java. Ce que ces implémentations ont en commun, c'est qu'elles suivent toutes une spécification formelle (à l'origine le [papier jaune Ethereum](https://ethereum.github.io/yellowpaper/paper.pdf)). Cette spécification dicte le fonctionnement du réseau Ethereum et de la blockchain.
 
-![Client Eth1x](../../../../../developers/docs/nodes-and-clients/client-diagram.png) Diagramme simplifié des fonctionnalités Ethereum Client
+![Clients d'exécution](./client-diagram.png) Diagramme simplifié des fonctionnalités Ethereum Client
 
 ## Types de nœuds {#node-types}
 
-Si vous voulez exécuter votre propre nœud, vous devez comprendre qu'il en existe plusieurs types, qui consomment les données différemment. En fait, les clients peuvent exécuter 3 types de nœuds différents : léger, complet et archive. Il existe aussi différentes options de stratégies de synchronisation qui permettent une synchronisation plus rapide. La synchronisation fait référence à la vitesse à laquelle on peut obtenir les informations les plus récentes sur l'état d'Ethereum.
+Si vous voulez [exécuter votre propre noeud](/developers/docs/nodes-and-clients/run-a-node/), vous devez comprendre qu'il y a différents types de noeud qui consomment les données différemment. En fait, les clients peuvent exécuter 3 types de nœuds différents : léger, complet et archive. Il existe aussi différentes options de stratégies de synchronisation qui permettent une synchronisation plus rapide. La synchronisation fait référence à la vitesse à laquelle on peut obtenir les informations les plus récentes sur l'état d'Ethereum.
 
 ### Nœud complet {#full-node}
 
@@ -42,10 +43,10 @@ Si vous voulez exécuter votre propre nœud, vous devez comprendre qu'il en exis
 
 ### Nœud d'archive {#archive-node}
 
-- Stocke tout ce qui est conservé dans le nœud complet et construit une archive des états de l'historique. Nécessaire si vous voulez interroger quelque chose comme le solde d'un compte au niveau du bloc #4 000 000.
+- Stocke tout ce qui est conservé dans le nœud complet et construit une archive des états de l'historique. Nécessaire pour aller chercher des informations comme le solde d'un compte au bloc #4 000 000, ou [tester vos propres ensembles de transactions simplement et efficacement sans les miner avec OpenEthereum](https://openethereum.github.io/JSONRPC-trace-module#trace_callmany).
 - Ces données représentent des unités de téraoctets qui rendent les nœuds d'archives moins attrayants pour les utilisateurs moyens, mais peuvent être utiles pour des services comme les explorateurs de blocs, les fournisseurs de portefeuilles et les analyses de chaînes.
 
-La synchronisation des clients dans un autre mode que l'archive entraîne la suppression de données de la blockchain. Cela signifie qu'il n'y a pas d'archive de tous les états de l'historique, mais que le nœud complet est capable d'en construire sur demande.
+La synchronisation des clients dans un autre mode que l'archive entraîne la suppression de données de la blockchain. Cela signifie qu'il n'existe pas d'archive de tous les états de l'historique, mais que le nœud complet est capable d'en construire sur demande.
 
 ## Pourquoi exécuter un nœud Ethereum ? {#why-should-i-run-an-ethereum-node}
 
@@ -53,13 +54,15 @@ Exécuter un nœud vous permet d'utiliser le service Ethereum en toute confiance
 
 ### Avantages pour vous {#benefits-to-you}
 
-L'exécution de votre propre nœud vous permet d'utiliser Ethereum de façon vraiment privée, intelligent et fiable. Vous n'avez pas besoin de faire confiance au réseau car vous pouvez vous-même vérifier les données avec votre client. "Ne faites pas confiance, vérifiez" est une devise populaire de la blockchain.
+L'exécution de votre propre nœud vous permet d'utiliser Ethereum de façon vraiment privée, intelligent et fiable. Vous n'avez pas besoin de faire confiance au réseau car vous pouvez vous-même vérifier les données avec votre client. « Ne faites pas confiance, vérifiez » est une devise populaire de la blockchain.
 
 - Votre nœud vérifie lui-même toutes les transactions et tous les blocs par rapport aux règles de consensus. Cela signifie que vous n’avez ni à vous fier à d’autres nœuds du réseau ni à leur faire entièrement confiance.
 - Vous n'aurez pas à divulguer vos adresses et vos soldes à des nœuds aléatoires. Tout peut être contrôlé avec votre propre client.
-- Votre DApp peut être privée et plus sécurisée si vous utilisez votre propre nœud. [MetaMask](https://metamask.io), [MyEtherWallet](https://myetherwallet.com) et d'autres portefeuilles peuvent être facilement pointés vers votre propre nœud local.
+- Votre DApp peut être privée et plus sécurisée si vous utilisez votre propre nœud. [MetaMask](https://metamask.io), [MyEtherWallet](https://myetherwallet.com) et d'autres portefeuilles peuvent facilement pointer vers votre propre nœud local.
+- Vous pouvez programmer vos propres points de terminaison RPC personnalisés.
+- Vous pouvez vous connecter à votre nœud en utilisant **les communications interprocessus (IPC)** ou réécrire le nœud pour charger votre programme en tant que plugin. Cela garantit une faible latence, qui est nécessaire pour remplacer vos transactions aussi rapidement que possible (c'est-à-dire en avant-première).
 
-![Comment accéder à Ethereum via votre application et vos nœuds](../../../../../developers/docs/nodes-and-clients/nodes.png)
+![Comment accéder à Ethereum via votre application et vos nœuds](./nodes.png)
 
 ### Avantages du réseau {#network-benefits}
 
@@ -72,46 +75,54 @@ Quand vous exécutez un nœud complet, l'ensemble du réseau Ethereum en bénéf
 
 ## Exécuter son propre nœud {#running-your-own-node}
 
+Vous aimeriez faire fonctionner votre propre client Ethereum ?
+
+Pour une introduction conviviale pour les débutants, visitez notre page [pour en apprendre davantage](/run-a-node).
+
+Si vous êtes un utilisateur plus orienté vers la technique, apprenez à [faire tourner votre propre nœud](/developers/docs/nodes-and-clients/run-a-node/) avec l'invite de commande !
+
 ### Projets {#projects}
 
 [**Sélectionnez un client et suivez ses instructions.**](#clients)
 
-**ethnode -** **_Exécutez un nœud Ethereum (Geth ou Parity) pour du développement local._**
+**ethnode -** **_Exécutez un nœud Ethereum (Geth ou OpenEthereum) pour un développement en local._**
 
 - [GitHub](https://github.com/vrde/ethnode)
 
-**DAppNode -** **_Un système d'exploitation pour exécuter des nœuds Web3, y compris Ethereum, sur une machine dédiée._**
+**DAppNode -** **_Un système d'exploitation avec une interface graphique pour exécuter des nœuds Web3, y compris Ethereum et la « chaîne phare » sur une machine dédiée._**
 
 - [dappnode.io](https://dappnode.io)
 
 ### Ressources {#resources}
 
-- [Running Ethereum Full Nodes: A Complete Guide](https://medium.com/coinmonks/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _ - Justin Leroux, 7 novembre 2019_
-- [Node Configuration Cheat Sheet](https://dev.to/5chdn/ethereum-node-configuration-modes-cheat-sheet-25l8) _- Afri Schoeden, 5 janvier 2019_
-- [How To Install & Run a Geth Node](https://www.quiknode.io/guides/infrastructure/how-to-install-and-run-a-geth-node) _- Sahil Sen, 4 octobre 2020_
-- [How To Install & Run a OpenEthereum (fka. Parity) Node](https://www.quiknode.io/guides/infrastructure/how-to-run-a-openethereum-ex-parity-client-node) _- Sahil Sen, 22 septembre 2020_
+- [Exécuter des nœuds Ethereum complets : un guide complet](https://medium.com/coinmonks/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _ - Justin Leroux, 7 novembre 2019_
+- [Aide-mémoire pour la configuration des nœuds](https://dev.to/5chdn/ethereum-node-configuration-modes-cheat-sheet-25l8) _- Afri Schoeden, 5 janvier 2019_
+- [Comment installer et faire fonctionner un nœud Geth](https://www.quiknode.io/guides/infrastructure/how-to-install-and-run-a-geth-node) _- Sahil Sen, 4 octobre 2020_
+- [Comment installer et exécuter un nœud OpenEthereum (fka. Parity)](https://www.quiknode.io/guides/infrastructure/how-to-run-a-openethereum-ex-parity-client-node) _- Sahil Sen, 22 septembre 2020_
 
 ## Alternatives {#alternatives}
 
-L'exécution de votre propre nœud ou instance peut être difficile et n'est pas toujours nécessaire. Dans ce cas, vous pouvez utiliser un fournisseur d'API tiers comme [Infura](https://infura.io), [Alchemy](https://alchemyapi.io) ou [QuikNode](https://www.quiknode.io). Sinon, [ArchiveNode](https://archivenode.io/) est un nœud d'archive financé par la communauté, qui souhaite offrir des données d'archive sur la blockchain Ethereum aux développeurs indépendants.
+L'exécution de votre propre nœud ou instance peut être difficile et n'est pas toujours nécessaire. Dans ce cas, vous pouvez utiliser un fournisseur d'API tiers comme [Infura](https://infura.io), [Alchemy](https://alchemyapi.io) ou [QuikNode](https://www.quiknode.io). Sinon, [ArchiveNode](https://archivenode.io/) est un nœud d'archive financé par la communauté, qui souhaite offrir des données d'archive sur la blockchain Ethereum aux développeurs indépendants. Pour une vue d'ensemble sur l'utilisation de ces services, consultez [les nœuds en tant que service](/developers/docs/nodes-and-clients/nodes-as-a-service/).
 
-Si quelqu'un exécute un nœud Ethereum avec une API publique dans votre communauté, vous pouvez pointer vos portefeuilles légers (comme MetaMask) vers un nœud communautaire [via un RPC personnalisé](https://metamask.zendesk.com/hc/en-us/articles/360015290012-Using-a-Local-Node) et gagner plus de confidentialité qu'avec un tiers de confiance aléatoire.
+Si quelqu'un exécute un nœud Ethereum avec une API publique dans votre communauté, vous pouvez pointer vos portefeuilles allégés (comme MetaMask) vers un nœud communautaire [via un RPC personnalisé](https://metamask.zendesk.com/hc/en-us/articles/360015290012-Using-a-Local-Node) et gagner plus de confidentialité qu'avec un tiers de confiance aléatoire.
 
 D'autre part, si vous exécutez un client, vous pouvez le partager avec vos amis qui pourraient en avoir besoin.
 
-## Clients {#execution-clients}
+## Exécuter des clients (anciennement « Clients Eth1 ») {#execution-clients}
 
-Ethereum est conçu pour offrir des clients différents, développés par différentes équipes utilisant différents langages de programmation. Cela rend le réseau plus solide et plus diversifié. L'objectif idéal est de parvenir à une diversité sans qu'aucun client ne domine afin de réduire les points de défaillance uniques.
+La communauté Ethereum gère plusieurs clients d'exécution open-source (précédemment connus sous le nom de « clients Eth1 » ou simplement « clients Ethereum »), développés par différentes équipes en utilisant différents langages de programmation. Cela rend le réseau plus solide et plus diversifié. L'objectif idéal est de parvenir à une diversité sans qu'aucun client ne domine afin de réduire les points de défaillance uniques.
 
-Ce tableau présente les différents clients. Tous font l'objet d'une maintenance et d'un travail actifs, et passent des [tests client](https://github.com/ethereum/tests).
+Ce tableau récapitule les différents clients. Tous ont passé [les tests client](https://github.com/ethereum/tests) et sont activement maintenus pour rester à jour avec les mises à jour réseau.
 
-| Client                                                       | Langage  | Systèmes d'exploitation | Réseaux                                  | Stratégies de synchronisation | Élagage d'état  |
-| ------------------------------------------------------------ | -------- | ----------------------- | ---------------------------------------- | ----------------------------- | --------------- |
-| [Geth](https://geth.ethereum.org/)                           | Go       | Linux, Windows, macOS   | Mainnet, Görli, Rinkeby, Ropsten         | Rapide, complète              | Archive, élagué |
-| [OpenEthereum](https://github.com/openethereum/openethereum) | Rust     | Linux, Windows, macOS   | Mainnet, Kovan, Ropsten et plus          | Warp, complète                | Archive, élagué |
-| [Nethermind](http://nethermind.io/)                          | C#, .NET | Linux, Windows, macOS   | Mainnet, Görli, Ropsten, Rinkeby et plus | Rapide, complète              | Archive, élagué |
-| [Besu](https://pegasys.tech/solutions/hyperledger-besu/)     | Java     | Linux, Windows, macOS   | Mainnet, Rinkeby, Ropsten et Görli       | Rapide, complète              | Archive, élagué |
-| [Trinity](https://trinity.ethereum.org/)                     | Python   | Linux, macOS            | Mainnet, Görli, Ropsten et plus          | Complet, Beam, Rapide/En-tête | Archive         |
+| Client                                                                  | Langage  | Systèmes d'exploitation | Réseaux                                    | Stratégies de synchronisation | Élagage d'état  |
+| ----------------------------------------------------------------------- | -------- | ----------------------- | ------------------------------------------ | ----------------------------- | --------------- |
+| [Geth](https://geth.ethereum.org/)                                      | Go       | Linux, Windows, macOS   | Mainnet, Görli, Rinkeby, Ropsten           | Snap, Full                    | Archive, élagué |
+| [Nethermind](http://nethermind.io/)                                     | C#, .NET | Linux, Windows, macOS   | Mainnet, Görli, Ropsten, Rinkeby et plus   | Fast, Beam, Archive           | Archive, élagué |
+| [Besu](https://pegasys.tech/solutions/hyperledger-besu/)                | Java     | Linux, Windows, macOS   | Mainnet, Rinkeby, Ropsten, Görli, and more | Rapide, complète              | Archive, élagué |
+| [Erigon](https://github.com/ledgerwatch/erigon)                         | Aller    | Linux, Windows, macOS   | Mainnet, Görli, Rinkeby, Ropsten           | Totale                        | Archive, élagué |
+| [OpenEthereum (obsolète)](https://github.com/openethereum/openethereum) | Rust     | Linux, Windows, macOS   | Mainnet, Kovan, Ropsten et plus            | Warp, complète                | Archive, élagué |
+
+**Notez que OpenEthereum [a été déprécié](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd) et n'est plus maintenu.** Utilisez-le avec prudence et de préférence passez à une autre implémentation client.
 
 Pour plus d'information sur les services, lisez la page [Réseaux Ethereum](/developers/docs/networks/).
 
@@ -133,38 +144,117 @@ OpenEthereum est un client Ethereum avancé, rapide et riche en fonctionnalités
 
 OpenEthereum est développé avec le langage de programmation Rust et sous licence GPLv3.
 
+**Notez que OpenEthereum [a été déprécié](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd) et n'est plus maintenu.** Utilisez-le avec prudence et de préférence passez à une autre implémentation client.
+
 #### Nethermind {#nethermind}
 
 Nethermind est une implémentation d'Ethereum créée avec la pile technologique C# .NET, fonctionnant sur toutes les principales plateformes, y compris ARM. Elle offre de bonnes performances avec :
 
 - une machine virtuelle optimisée ;
 - un accès à l'état ;
-- la mise en réseau et des fonctionnalités riches comme les tableaux de bord Prometheus/Graphana, la prise en charge de la journalisation d'entreprise seq, le traçage RPC JSON et les plugins d'analyse.
+- la mise en réseau et des fonctionnalités riches comme les tableaux de bord Prometheus/Grafana, la prise en charge de la journalisation d'entreprise seq, le traçage RPC JSON et les plugins d'analyse.
 
 Nethermind dispose également d'[une documentation détaillée](https://docs.nethermind.io), d'un solide support de développement, d'une communauté en ligne et d'une assistance 24/7 disponible pour les utilisateurs premium.
 
 #### Besu {#besu}
 
-Hyperledger Besu est un client Ethereum de qualité entreprise pour les réseaux publics et privés. Il exécute toutes les fonctionnalités du réseau principal Ethereum, du traçage à GraphQL, dispose d"une surveillance étendue et est pris en charge par ConsenSys, à la fois dans les canaux communautaires ouverts et par le biais de SLA commerciaux pour les entreprises. Il est écrit en Java et est sous licence Apache 2.0.
+Hyperledger Besu est un client Ethereum de qualité entreprise pour les réseaux publics et privés. Il exécute toutes les fonctionnalités du réseau principal Ethereum, du traçage à GraphQL, il dispose d"une surveillance étendue et est pris en charge par ConsenSys, à la fois dans les canaux communautaires ouverts et par le biais de SLA commerciaux pour les entreprises. Il est écrit en Java et est sous licence Apache 2.0.
+
+#### Erigon {#erigon}
+
+Erigon, anciennement connu sous le nom de Turbo-Geth, est un fork de Go Ethereum orientée vers la vitesse et l'efficacité de l'espace disque. Erigon est une implémentation entièrement reconstruite d'Ethereum, actuellement écrite en Go mais également prévue avec des implémentations dans d'autres languages. L'objectif d'Erigon est de fournir une implémentation plus rapide, plus modulaire et plus optimisée d'Ethereum. Il peut effectuer une synchronisation complète des nœuds d'archive en utilisant moins de 2 To d'espace disque, en moins de 3 jours.
 
 ### Modes de synchronisation {#sync-modes}
 
-- Complet : Télécharge tous les blocs (y compris les en-têtes, les transactions et les reçus) et génère l'état de la blockchain de façon incrémentielle en exécutant chaque bloc.
-- Rapide (par défaut) : Télécharge tous les blocs (y compris les en-têtes, les transactions et les reçus), vérifie tous les en-têtes, puis télécharge l'état et le vérifie par rapport aux en-têtes.
-- Léger : Télécharge tous les en-têtes de bloc, les données de bloc et en vérifie certaines aléatoirement.
-- Synchronisation Warp : Tous les 5 000 blocs, les nœuds prendront un instantané de l'état de ce bloc, essentiel pour le consensus. N'importe quel nœud peut récupérer ces instantanés sur le réseau, ce qui permet une synchronisation rapide. [Plus d'infos sur la synchronisation Warp](https://openethereum.github.io/wiki/Warp-Sync-Snapshot-Format)
-- Synchronisation Beam : Mode de synchronisation qui vous permet d'aller plus vite. Il n'exige pas de longues attentes pour synchroniser, mais remplit les données au fil du temps. [Plus d'infos sur la synchronisation Beam](https://medium.com/@jason.carver/intro-to-beam-sync-a0fd168be14a)
-- Synchronisation des en-têtes : Vous pouvez utiliser un point de contrôle fiable pour commencer à synchroniser à partir d'un en-tête plus récent, puis laisser un processus en arrière-plan pour éventuellement combler les vides.
+Pour suivre et vérifier les données actuelles sur le réseau, le client Ethereum doit se synchroniser avec le dernier état du réseau. Cela se fait en téléchargeant des données depuis des pairs, en vérifiant cryptographiquement leur intégrité et en construisant une base de données blockchain en locale.
 
-Vous définissez le type de synchronisation lors de la configuration, comme suit :
+Les modes de synchronisation représentent des approches différentes de ce processus avec divers compromis. Les clients varient également dans leur implémentation des algorithmes de synchronisation. Reportez-vous toujours à la documentation officielle du client choisi pour les détails sur l'implémentation.
 
-**Configuration d'une synchronisation légère dans [GETH](https://geth.ethereum.org/)**
+#### Vue d'ensemble des stratégies {#overview-of-strategies}
+
+Aperçu général des approches de synchronisation utilisées dans les clients prêts au réseau principal :
+
+##### Synchronisation totale {#full-sync}
+
+La synchronisation complète permet de télécharger tous les blocs (y compris les en-têtes, les transactions et les reçus) et génère l'état de la blockchain de façon incrémentielle en exécutant chaque bloc depuis le début.
+
+- Minimise la confiance et offre la plus haute sécurité en vérifiant chaque transaction.
+- Avec un nombre croissant de transactions, le traitement de toutes les transactions peut prendre des jours, voire des semaines.
+
+##### Synchronisation rapide
+
+La synchronisation rapide télécharge tous les blocs (y compris les en-têtes, les transactions et les reçus), vérifie tous les en-têtes, télécharge l'état et le vérifie par rapport aux en-têtes.
+
+- Repose sur la sécurité du mécanisme de consensus.
+- La synchronisation ne prend que quelques heures.
+
+##### Synchronisation légère
+
+Le mode client léger permet de téléchérger tous les en-têtes de bloc, les données de bloc et en vérifie certaines aléatoirement. Synchronise uniquement le point de la chaîne à partir du point de contrôle de confiance.
+
+- Ne récupère que les derniers états en s'appuyant sur la confiance dans les développeurs et le mécanisme de consensus.
+- Le client prêt à être utilisé avec l'état actuel du réseau en quelques minutes.
+
+[En savoir plus sur les clients légers](https://www.parity.io/blog/what-is-a-light-client/)
+
+##### Synchronisation instantanée
+
+Implémenté par Geth. L'utilisation dynamique instantanée servie par les pairs récupère toutes les données du compte et stockées sans télécharger les nœuds intermédiaires et reconstruit ensuite la tentative Merkle localement.
+
+- Stratégie de synchronisation la plus rapide développée par Geth, utilisée actuellement par défaut.
+- Économise l'utilisation du disque et de bande passante du réseau sans pour autant sacrifier la sécurité.
+
+[En savoir plus sur Snap](https://github.com/ethereum/devp2p/blob/master/caps/snap.md)
+
+##### Synchronisation Warp
+
+Implémenté par OpenEthereum. Les nœuds génèrent régulièrement des instantanés d'état critique de consensus et tout pair peut récupérer ces instantanés sur le réseau, ce qui permet une synchronisation rapide à partir de ce point.
+
+- Le mode de synchronisation le plus rapide et par défaut d'OpenEthereum repose sur des instantanés statiques servis par des pairs.
+- Une stratégie similaire à la synchronisation instantanée mais sans certains avantages en matière de sécurité.
+
+[En savoir plus sur Warp](https://openethereum.github.io/Beginner-Introduction#warping---no-warp)
+
+##### Synchronisation Beam
+
+Implémenté par Nethermind et Trinity. Fonctionne comme une synchronisation rapide, mais télécharge également les données nécessaires pour exécuter les derniers blocs ce qui vous permet d'interroger la chaîne dans les premières minutes du démarrage.
+
+- Synchronise l'état d'abord et vous permet d'interroger RPC en quelques minutes.
+- Toujours en développement et pas entièrement fiable, la synchronisation en arrière-plan est ralentie et les réponses RPC peuvent échouer.
+
+[En savoir plus sur Beam](https://medium.com/@jason.carver/intro-to-beam-sync-a0fd168be14a)
+
+#### Configuration dans le client {#client-setup}
+
+Les clients offrent des options de configuration étendues pour répondre à vos besoins. Choisissez celle qui vous convient le mieux en fonction du niveau de sécurité, des données disponibles et des coûts. En dehors de l'algorithme de synchronisation, vous pouvez également configurer l'élagage de la taille de différents types de données anciennes. L'élagage permet de supprimer les données obsolètes, par exemple supprimer les nœuds de tentative d'état qui ne sont pas joignables depuis blocs récents.
+
+Faites attention à la documentation ou à la page d'aide du client pour savoir quel mode de synchronisation est le mode par défaut. Vous pouvez définir le type de synchronisation préféré lors de la configuration, comme suit :
+
+**Configurer la synchronisation légère dans [GETH](https://geth.ethereum.org/) ou [ERIGON](https://github.com/ledgerwatch/erigon)**
 
 `geth --syncmode "light"`
 
-**Configuration d"une synchronisation des en-têtes dans Trinity**
+Pour plus de détails, consultez le tutoriel sur [l'exécution de Geth light node](/developers/tutorials/run-light-node-geth/).
 
-`trinity --sync-from-checkpoint eth://block/byhash/0xa65877df954e1ff2012473efee8287252eee956c0d395a5791f1103a950a1e21?score=15,835,269,727,022,672,760,774`
+**Configurer une synchronisation complète avec archive dans [Besu](https://besu.hyperledger.org/)**
+
+`besu --sync-mode=FULL`
+
+Comme toute autre configuration, elle peut être définie avec le drapeau de démarrage ou dans le fichier de configuration. Un autre exemple est [Nethermind](https://docs.nethermind.io/nethermind/) qui vous invite à choisir une configuration lors de la première initialisation et crée un fichier de configuration.
+
+## Clients de consensus (anciennement clients 'Eth2') {#consensus-clients}
+
+Il existe de nombreux clients de consensus (précédemment connus sous le nom de clients 'Eth2') qui supportent les [mises à niveau du consensus](/upgrades/beacon-chain/). Ils exécutent la Chaîne Phare et fourniront un mécanisme de consensus de preuve d'enjeu pour exécuter les clients après [La Fusion](/upgrades/merge/).
+
+[Voir les clients de consensus](/upgrades/get-involved/#clients).
+
+| Client                                                      | Langage    | Systèmes d'exploitation | Réseaux                               |
+| ----------------------------------------------------------- | ---------- | ----------------------- | ------------------------------------- |
+| [Teku](https://pegasys.tech/teku)                           | Java       | Linux, Windows, macOS   | Chaîne phare, Prater                  |
+| [Nimbus](https://nimbus.team/)                              | Nim        | Linux, Windows, macOS   | Beacon Chain, Prater                  |
+| [Lighthouse](https://lighthouse-book.sigmaprime.io/)        | Rust       | Linux, Windows, macOS   | Chaîne phare, Prater, Pyrmont         |
+| [Lodestar](https://lodestar.chainsafe.io/)                  | TypeScript | Linux, Windows, macOS   | Chaîne phare, Prater                  |
+| [Prysm](https://docs.prylabs.network/docs/getting-started/) | Aller      | Linux, Windows, macOS   | Chaîne phare, Gnosis, Prater, Pyrmont |
 
 ## Matériel {#hardware}
 
@@ -189,49 +279,46 @@ Avant d'installer un client, assurez-vous que votre ordinateur dispose de suffis
 - Disque SSD rapide avec au moins 500 Go d'espace libre
 - Bande passante de 25 Mbps
 
-Selon le logiciel et le mode de synchronisation utilisés, des centaines de Go d'espace disque seront nécessaires. Voici quelques chiffres approximatifs :
+Le mode de synchronisation que vous choisissez affectera l'espace nécessaire mais nous avons estimé l'espace disque dont vous aurez besoin pour chaque client ci-dessous.
 
 | Client       | Taille du disque (synchro. rapide) | Taille du disque (archive complète) |
 | ------------ | ---------------------------------- | ----------------------------------- |
-| Geth         | 400 Go+                            | 4,7 To+                             |
-| OpenEthereum | 280 Go+                            | 4,6 To+                             |
-| Nethermind   | 200 Go+                            | 3 To+                               |
-| Besu         | 750 Go+                            | 4 To+                               |
+| Geth         | 400 Go+                            | 6 To+                               |
+| OpenEthereum | 280 Go+                            | 6 To+                               |
+| Nethermind   | 200 Go+                            | 5 To+                               |
+| Besu         | 750 Go+                            | 5 To+                               |
+| Erigon       | N/A                                | 1 To+                               |
 
-![Graphique montrant que le nombre de Go nécessaires pour une synchronisation complète a tendance à augmenter](../../../../../developers/docs/nodes-and-clients/full-sync.png)
+- Note : Erigon ne synchronise pas rapidement, mais le plein de Pruning est possible (~500 Go)
 
-![Graphique montrant que le nombre de Go nécessaires pour une synchronisation d'archives a tendance à augmenter](../../../../../developers/docs/nodes-and-clients/archive-sync.png)
+![Graphique montrant que le nombre de Go nécessaires pour une synchronisation complète a tendance à augmenter](./full-sync.png)
 
-Ces chiffres montrent l'évolution constante des exigences de stockage. Pour obtenir les informations Geth et Parity les plus récentes, lisez les page sur les [données de synchronisation complètes](https://etherscan.io/chartsync/chaindefault) et les [données de synchronisation d'archives](https://etherscan.io/chartsync/chainarchive).
+![Graphique montrant que le nombre de Go nécessaires pour une synchronisation d'archives a tendance à augmenter](./archive-sync.png)
+
+Ces chiffres montrent l'évolution constante des exigences de stockage. Pour obtenir les données les plus récentes concernant Geth et OpenEthereum, vous pouvez consulter : [données de synchronisation complètes](https://etherscan.io/chartsync/chaindefault) et [données de synchronisation d'archives](https://etherscan.io/chartsync/chainarchive).
 
 ### Ethereum sur un ordinateur monocarte {#ethereum-on-a-single-board-computer}
 
-La façon la plus pratique et la moins chère d'exécuter un nœud Ethereum est d'utiliser un ordinateur monocarte avec une architecture ARM, comme le Raspberry Pi. [Ethereum on ARM](https://twitter.com/EthereumOnARM) fournit des images de clients Geth, Parity, Nethermind et Besu. Voici un tutoriel simple sur la façon de [construire et configurer un client ARM](/developers/tutorials/run-node-raspberry-pi/).
+La façon la plus pratique et la moins chère d'exécuter un nœud Ethereum est d'utiliser un ordinateur monocarte avec une architecture ARM, comme le Raspberry Pi. [Ethereum sur ARM](https://twitter.com/EthereumOnARM) propose des images des clients Geth, OpenEthereum, Nethermind, et Besu. Voici un tutoriel simple sur la façon de [construire et configurer un client ARM](/developers/tutorials/run-node-raspberry-pi/).
 
 Les petits appareils abordables et efficaces de ce type sont parfaits pour exécuter un nœud chez soi.
 
-## Clients Eth2 {#consensus-clients}
-
-Il existe de nouveaux clients pour prendre en charge les [mises à niveau Eth2](/upgrades/beacon-chain/). Ils exécuteront la chaîne phare et prendront en charge le nouveau mécanisme de consensus de [preuve d'enjeu](/developers/docs/consensus-mechanisms/pos/).
-
-[Voir les clients Eth2](/upgrades/get-involved/#clients)
-
 ## Complément d'information {#further-reading}
 
-Il existe nombre d'instructions et d'informations sur Internet concernant les clients Ethereum. Voici quelques liens qui pourraient vous être utiles.
+Il existe de nombreuses informations sur les clients Ethereum sur Internet. Voici quelques ressources qui pourraient vous être utiles.
 
-- [Ethereum 101 - Part 2 - Understanding Nodes](https://kauri.io/ethereum-101-part-2-understanding-nodes/48d5098292fd4f11b251d1b1814f0bba/a) _- Wil Barnes, 13 février 2019_
-- [Running Ethereum Full Nodes: A Guide for the Barely Motivated](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _- Justin Leroux, 7 novembre 2019_
-- [Running an Ethereum Node](https://docs.ethhub.io/using-ethereum/running-an-ethereum-node/) _– ETHHub, mis à jour régulièrement_
-- [Analyzing the hardware requirements to be an Ethereum full validated node](https://medium.com/coinmonks/analyzing-the-hardware-requirements-to-be-an-ethereum-full-validated-node-dc064f167902) _- Albert Palau, 24 septembre 2018_
-- [Running a Hyperledger Besu Node on the Ethereum Mainnet: Benefits, Requirements, and Setup](https://pegasys.tech/running-a-hyperledger-besu-node-on-the-ethereum-mainnet-benefits-requirements-and-setup/) _- Felipe Faraggi, 7 mai 2020_
+- [Le B-A-BA de l'Ethereum, 2e partie - Comprendre les nœuds](https://kauri.io/ethereum-101-part-2-understanding-nodes/48d5098292fd4f11b251d1b1814f0bba/a) _- Wil Barnes, 13 février 2019_
+- [Exécuter des nœuds Ethereum complets : un guide pour les peu motivés](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _- Justin Leroux, 7 novembre 2019_
+- [Exécuter un nœud Ethereum](https://docs.ethhub.io/using-ethereum/running-an-ethereum-node/) _– ETHHub, mis à jour régulièrement_
+- [Analyser les exigences matérielles pour être un nœud Ethereum entièrement validé](https://medium.com/coinmonks/analyzing-the-hardware-requirements-to-be-an-ethereum-full-validated-node-dc064f167902) _- Albert Palau, 24 septembre 2018_
+- [Exécuter un nœud Hyperledger Besu sur le réseau principal d'Ethereum : avantages, exigences et configuration](https://pegasys.tech/running-a-hyperledger-besu-node-on-the-ethereum-mainnet-benefits-requirements-and-setup/) _- Felipe Faraggi, 7 mai 2020_
 
 ## Sujets connexes {#related-topics}
 
-- [Blocs](/developers/docs/blocks/)
+- [Les blocs](/developers/docs/blocks/)
 - [Réseaux](/developers/docs/networks/)
 
 ## Tutoriels connexes {#related-tutorials}
 
-- [Running a Node with Geth](/developers/tutorials/run-light-node-geth/) _- Comment télécharger, installer et exécuter Geth. Couvre les modes de synchronisation, la console JavaScript, et plus encore._
-- [Turn your Raspberry Pi 4 into an Eth 1.0 or Eth 2.0 node just by flashing the MicroSD card – Installation guide](/developers/tutorials/run-node-raspberry-pi/) _- Flashez votre Raspberry Pi 4, branchez un câble Ethernet, connectez le disque SSD et mettez l'appareil sous tension pour transformer le Raspberry Pi 4 en un nœud Ethereum 1.0 complet ou en un nœud Ethereum 2.0 (chaîne phare/validateur)._
+- [Exécuter un nœud sur Geth](/developers/tutorials/run-light-node-geth/) _– Comment télécharger, installer et exécuter Geth. Couvre les modes de synchronisation, la console JavaScript et plus encore._
+- [Transformez votre Raspberry Pi 4 en validateur de nœud en flashant une carte MicroSD – Le guide d'installation](/developers/tutorials/run-node-raspberry-pi/) _– Flashez votre Raspberry Pi 4, branchez un cable ethernet, connectez le disque SSD et alimentez l'appareil pour transformer votre Raspberry Pi 4 en un nœud Ethereum complet exécutant la couche d'exécution (réseau principal) et/ou la couche de consensus (Beacon Chain / Validator)._

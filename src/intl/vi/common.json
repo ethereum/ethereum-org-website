@@ -59,7 +59,7 @@
   "consensus-run-beacon-chain-desc": "Ethereum cần nhiều clients hoạt động nhất có thể. Sử dụng một dịch vụ chung của Ethereum này!",
   "consensus-when-shipping": "Khi nào đi vào hoạt động?",
   "eth-upgrade-what-happened": "What happened to 'Eth2?'",
-  "eth-upgrade-what-happened-description": "The term 'Eth2' has been deprecated as we approach the merge. The 'consensus layer' encapsulates what was formerly known as 'Eth2.'",
+  "eth-upgrade-what-happened-description": "The term 'Eth2' has been deprecated as we approach The Merge. The 'consensus layer' encapsulates what was formerly known as 'Eth2.'",
   "ethereum": "Ethereum",
   "ethereum-upgrades": "Ethereum upgrades",
   "ethereum-brand-assets": "Tài sản thương hiệu Ethereum",

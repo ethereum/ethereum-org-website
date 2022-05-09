@@ -44,7 +44,7 @@ Se você for bilíngue e deseja nos ajudar a alcançar mais pessoas, também pod
 **Recursos gerais**
 
 - [Ethereum.cn](https://www.ethereum.cn/): conteúdo mantido pela comunidade, cobrindo assuntos como as melhorias na camada de consenso, as conclusões dos encontros dos desenvolvedores, a segunda camada etc.
-- [EthFans](https://ethfans.org/): aprenda tudo — dos fundamentos aos tópicos avançados sobre Ethereum
+- [EthFans](https://github.com/editor-Ajian/EthFans.org-annual-collected-works/): aprenda tudo — dos fundamentos aos tópicos avançados sobre Ethereum
 - [Unitimes](https://mp.weixin.qq.com/s/tvloZSDBSOQN9zDQj_91kA): conteúdo mantido pela comunidade sobre Ethereum, DeFi, NFT ou conhecimento relacionado à Web3
 - [123ETH](https://123eth.org/): um portal para o ecossistema Ethereum
 - [Zhen Xiao](http://zhenxiao.com/blockchain/): cursos on-line gratuitos sobre criptomoedas e suas aplicações
