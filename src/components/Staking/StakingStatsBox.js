@@ -116,15 +116,21 @@ const StatsBoxGrid = () => {
     <Container>
       <Cell>
         <Value>{totalEth}</Value>
-        <Label>Total ETH staked</Label>
+        <Label>
+          <Translation id="page-staking-stats-box-metric-1" />
+        </Label>
       </Cell>
       <Cell>
         <Value>{totalValidators}</Value>
-        <Label>Total validators</Label>
+        <Label>
+          <Translation id="page-staking-stats-box-metric-2" />
+        </Label>
       </Cell>
       <Cell>
         <Value>{currentApr}</Value>
-        <Label>Current APR</Label>
+        <Label>
+          <Translation id="page-staking-stats-box-metric-3" />
+        </Label>
       </Cell>
     </Container>
   )
