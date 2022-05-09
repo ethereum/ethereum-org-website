@@ -1,12 +1,14 @@
 import React, { useState } from "react"
 import styled from "styled-components"
+import { useIntl } from "gatsby-plugin-intl"
 
 import { StyledSelect as Select } from "../SharedStyledComponents"
-import Link from "../Link"
 import ButtonLink from "../ButtonLink"
 import Emoji from "../Emoji"
+import Translation from "../Translation"
 
 import { trackCustomEvent } from "../../utils/matomo"
+import { translateMessageId } from "../../utils/translations"
 
 const Container = styled.div`
   display: flex;
@@ -45,6 +47,7 @@ const ButtonContainer = styled.div`
 `
 
 const StakingLaunchpadWidget = () => {
+  const intl = useIntl()
   const [selection, setSelection] = useState("testnet")
 
   const handleChange = (e) => {
@@ -76,7 +79,9 @@ const StakingLaunchpadWidget = () => {
   return (
     <Container>
       <div>
-        <span>Choose network</span>
+        <span>
+          <Translation id="page-staking-launchpad-widget-span" />
+        </span>
         <SelectContainer>
           <StyledSelect
             className="react-select-container"
@@ -87,31 +92,31 @@ const StakingLaunchpadWidget = () => {
           />
         </SelectContainer>
         <p>
-          Solo validators are expected to <strong>test their setup</strong> and
-          operational skills on the {data.testnet.label} before risking funds.
-          Remember it is important to choose a{" "}
-          <Link to="/developers/docs/nodes-and-clients/client-diversity/">
-            minority client
-          </Link>{" "}
-          as it improves the security of the network and limits your risk.
+          <Translation id="page-staking-launchpad-widget-p1" />
         </p>
         <p>
-          If you're comfortable with it, you can set up everything needed from
-          the command line using the Staking Launchpad alone.
+          <Translation id="page-staking-launchpad-widget-p2" />
         </p>
         <ButtonContainer style={{ marginBottom: "1rem" }}>
           <ButtonLink to={data[selection].url}>
-            Start staking on {data[selection].label}
+            {selection === "mainnet"
+              ? translateMessageId(
+                  "page-staking-launchpad-widget-mainnet-start",
+                  intl
+                )
+              : translateMessageId(
+                  "page-staking-launchpad-widget-testnet-start",
+                  intl
+                )}
           </ButtonLink>
         </ButtonContainer>
         <p>
-          To make things easier, check out some of the tools and guides below
-          that can help you alongside the Staking Launchpad to get your clients
-          set up with ease.
+          <Translation id="page-staking-launchpad-widget-p3" />
         </p>
         <ButtonContainer>
           <ButtonLink to="#node-and-client-tools" isSecondary>
-            <Emoji text="🛠" mr="1rem" /> Software tools and guide
+            <Emoji text="🛠" mr="1rem" />
+            <Translation id="page-staking-launchpad-widget-link" />
           </ButtonLink>
         </ButtonContainer>
       </div>
