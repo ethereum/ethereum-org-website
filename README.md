@@ -28,7 +28,7 @@ If you're looking for the Ethereum blockchain itself, there is no single repo. I
 
 ## How to contribute
 
-This project follows the [all-contributors](https://allcontributors.org/docs/en/overview) specification. Contributions of any kind welcome!
+This project follows the [all-contributors](https://allcontributors.org/docs/en/overview) specification. Contributions of any kind are welcome!
 
 ### 1. Submit an issue
 
