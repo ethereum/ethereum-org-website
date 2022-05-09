@@ -44,7 +44,7 @@ import StakingConsiderations from "../components/Staking/StakingConsiderations"
 import StakingCommunityCallout from "../components/Staking/StakingCommunityCallout"
 import StakingGuides from "../components/Staking/StakingGuides"
 
-import { isLangRightToLeft, translateMessageId } from "../utils/translations"
+import { isLangRightToLeft } from "../utils/translations"
 
 const Page = styled.div`
   display: flex;

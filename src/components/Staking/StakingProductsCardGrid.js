@@ -5,6 +5,7 @@ import { shuffle } from "lodash"
 import stakingProducts from "../../data/staking-products.json"
 // Component imports
 import ButtonLink from "../ButtonLink"
+import Translation from "../Translation"
 // SVG imports
 import GreenCheck from "../../assets/staking/green-check-product-glyph.svg"
 import Caution from "../../assets/staking/caution-product-glyph.svg"
@@ -200,43 +201,43 @@ const StakingProductCard = ({
   const Svg = getSvgFromPath(svgPath)
   const data = [
     {
-      label: "Open source",
+      label: <Translation id="page-staking-considerations-solo-1-title" />,
       status: openSource,
     },
     {
-      label: "Audited",
+      label: <Translation id="page-staking-considerations-solo-2-title" />,
       status: audited,
     },
     {
-      label: "Bug bounty",
+      label: <Translation id="page-staking-considerations-solo-3-title" />,
       status: bugBounty,
     },
     {
-      label: "Battle Tested",
+      label: <Translation id="page-staking-considerations-solo-4-title" />,
       status: battleTested,
     },
     {
-      label: "Trustless",
+      label: <Translation id="page-staking-considerations-solo-5-title" />,
       status: trustless,
     },
     {
-      label: "Permissionless",
+      label: <Translation id="page-staking-considerations-solo-6-title" />,
       status: permissionless,
     },
     {
-      label: "Permissionless Nodes",
+      label: <Translation id="page-staking-considerations-pools-6-title" />,
       status: permissionlessNodes,
     },
     {
-      label: "Multi-client",
+      label: <Translation id="page-staking-considerations-solo-7-title" />,
       status: multiClient,
     },
     {
-      label: "Diverse Clients",
+      label: <Translation id="page-staking-considerations-saas-7-title" />,
       status: diverseClients,
     },
     {
-      label: "Economical",
+      label: <Translation id="page-staking-considerations-solo-9-title" />,
       status: economical,
     },
   ].filter(({ status }) => !!status)
@@ -280,7 +281,7 @@ const StakingProductCard = ({
       </Content>
       <Cta>
         <ButtonLink to={url} customEventOptions={matomo}>
-          Get started
+          <Translation id="page-staking-products-get-started" />
         </ButtonLink>
       </Cta>
     </Card>
