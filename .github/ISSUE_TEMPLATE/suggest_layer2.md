@@ -44,7 +44,7 @@ If it does, complete the following information which we need to accurately list 
 
 <!-- Please provide some information on what kind of layer 2 this is -->
 
-**Does the layer 2 use Ethereum for data availability?**
+**Does the layer 2 use Ethereum Mainnet for data availability?**
 
 <!-- Please provide proof thats the layer 2 uses Ethereum for data availability -->
 
