@@ -60,6 +60,14 @@
           items:
             - id: docs-nav-mining
               to: /developers/docs/consensus-mechanisms/pow/mining/
+              items:
+                - id: docs-nav-mining-algorithms
+                  to: /developers/docs/consensus-mechanisms/pow/mining-algorithms/
+                  items:
+                    - id: docs-nav-dagger-hashamoto
+                      to: /developers/docs/consensus-mechanisms/pow/mining-algorithms/dagger-hashamoto
+                    - id: docs-nav-ethash
+                      to: /developers/docs/consensus-mechanisms/pow/mining-algorithms/ethash
         - id: docs-nav-proof-of-stake
           to: /developers/docs/consensus-mechanisms/pos/
 - id: docs-nav-ethereum-stack

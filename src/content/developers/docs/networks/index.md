@@ -38,13 +38,19 @@ ETH on testnets has no real value; therefore, there are no markets for testnet E
 
 A proof-of-work testnet; this means it's the best like-for-like representation of Ethereum.
 
+- [Website](https://sepolia.dev/)
 - [Github](https://github.com/goerli/sepolia)
 - [Otterscan](https://sepolia.otterscan.io/)
+
+##### Sepolia faucets
+
+- [Sepolia faucet](https://faucet.sepolia.dev/)
 
 #### Görli {#goerli}
 
 A proof-of-authority testnet that works across clients; an ideal testnet for application developers.
 
+- [Website](https://goerli.net/)
 - [Github](https://github.com/goerli/testnet)
 - [Etherscan](https://goerli.etherscan.io)
 

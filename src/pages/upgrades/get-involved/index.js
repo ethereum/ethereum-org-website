@@ -283,7 +283,7 @@ const GetInvolvedPage = ({ data, location }) => {
       emoji: ":bug:",
       title: <Translation id="page-upgrades-get-involved-title-3" />,
       description: <Translation id="page-upgrades-get-involved-desc-3" />,
-      url: "/upgrades/get-involved/bug-bounty/",
+      url: "/bug-bounty/",
       button: <Translation id="page-upgrades-get-involved-btn-3" />,
     },
   ]
@@ -408,7 +408,7 @@ const GetInvolvedPage = ({ data, location }) => {
                   <Translation id="page-upgrades-get-involved-bug-li-4" />
                 </li>
               </ul>
-              <ButtonLink to="/upgrades/get-involved/bug-bounty/">
+              <ButtonLink to="/bug-bounty/">
                 <Translation id="page-upgrades-get-involved-bug-hunting" />
               </ButtonLink>
             </LeftColumn>

@@ -5,26 +5,28 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { graphql } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
 
-import { translateMessageId } from "../../../utils/translations"
-import Translation from "../../../components/Translation"
-import Card from "../../../components/Card"
-import Leaderboard from "../../../components/Leaderboard"
-import BugBountyCards from "../../../components/BugBountyCards"
-import BugBountyPoints from "../../../components/BugBountyPoints"
-import Link from "../../../components/Link"
-import Emoji from "../../../components/Emoji"
-import CardList from "../../../components/CardList"
-import Breadcrumbs from "../../../components/Breadcrumbs"
-import ButtonLink from "../../../components/ButtonLink"
-import PageMetadata from "../../../components/PageMetadata"
+import { translateMessageId } from "../utils/translations"
+import Translation from "../components/Translation"
+import Card from "../components/Card"
+import Leaderboard from "../components/Leaderboard"
+import BugBountyCards from "../components/BugBountyCards"
+import BugBountyPoints from "../components/BugBountyPoints"
+import Link from "../components/Link"
+import Emoji from "../components/Emoji"
+import CardList from "../components/CardList"
+import Breadcrumbs from "../components/Breadcrumbs"
+import ButtonLink from "../components/ButtonLink"
+import PageMetadata from "../components/PageMetadata"
+import ExpandableCard from "../components/ExpandableCard"
 import {
   CardContainer,
   Content,
+  Divider,
   Page,
   GrayContainer,
   GradientContainer,
   SloganGradient,
-} from "../../../components/SharedStyledComponents"
+} from "../components/SharedStyledComponents"
 
 const HeroCard = styled.div`
   display: flex;
@@ -126,6 +128,10 @@ const H2 = styled.h2`
   text-align: left;
 `
 
+const CenterH2 = styled(H2)`
+  text-align: center;
+`
+
 const StyledCard = styled(Card)`
   flex: 1 1 464px;
   margin: 1rem;
@@ -181,6 +187,7 @@ const Rules = styled.div`
 const SubmitInstructions = styled.div`
   flex: 1 1 600px;
   margin-right: 2rem;
+  max-width: 100ch;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     margin-right: 0;
   }
@@ -200,21 +207,63 @@ const Contact = styled.div`
   width: 80%;
 `
 
+const LeftColumn = styled.div`
+  width: 100%;
+`
+
+const RightColumn = styled.div`
+  width: 100%;
+  margin-left: 2rem;
+  flex-direction: column;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    margin-left: 0rem;
+    flex-direction: column;
+  }
+`
+
+const Faq = styled.div`
+  display: flex;
+  margin-top: 4rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+`
+
 const BugBountiesPage = ({ data, location }) => {
   const intl = useIntl()
   const themeContext = useContext(ThemeContext)
   const isDarkTheme = themeContext.isDark
 
   // TODO sort query isn't working :(
-  const bountyHunters = data.bountyHunters.nodes.sort(
+  const consensusBountyHunters = data.consensusBountyHunters.nodes.sort(
     (a, b) => b.score - a.score
   )
 
+  const executionBountyHunters = data.executionBountyHunters.nodes.sort(
+    (a, b) => b.score - a.score
+  )
+
+  const allBounterHunters = [
+    ...consensusBountyHunters,
+    ...executionBountyHunters,
+  ].sort((a, b) => b.score - a.score)
+
   const clients = [
     {
-      title: "Prysm",
-      link: "https://prylabs.net/",
-      image: getImage(data.prysmSmall),
+      title: "Besu",
+      link: "https://besu.hyperledger.org/en/stable/",
+      image: getImage(data.besuSmall),
+    },
+    {
+      title: "Erigon",
+      link: "https://github.com/ledgerwatch/erigon",
+      image: getImage(data.erigonSmall),
+    },
+    {
+      title: "Geth",
+      link: "https://geth.ethereum.org/",
+      image: getImage(data.gethSmall),
     },
     {
       title: "Lighthouse",
@@ -224,11 +273,9 @@ const BugBountiesPage = ({ data, location }) => {
         : getImage(data.lighthouseSmallLight),
     },
     {
-      title: "Teku",
-      link: "https://pegasys.tech/teku",
-      image: isDarkTheme
-        ? getImage(data.tekuSmallLight)
-        : getImage(data.tekuSmallDark),
+      title: "Lodestar",
+      link: "https://chainsafe.github.io/lodestar/",
+      image: getImage(data.lodestarSmall),
     },
     {
       title: "Nimbus",
@@ -236,9 +283,21 @@ const BugBountiesPage = ({ data, location }) => {
       image: getImage(data.nimbusSmall),
     },
     {
-      title: "Lodestar",
-      link: "https://chainsafe.github.io/lodestar/",
-      image: getImage(data.lodestarSmall),
+      title: "Nethermind",
+      link: "https://docs.nethermind.io/nethermind/",
+      image: getImage(data.nethermindSmall),
+    },
+    {
+      title: "Prysm",
+      link: "https://prylabs.net/",
+      image: getImage(data.prysmSmall),
+    },
+    {
+      title: "Teku",
+      link: "https://pegasys.tech/teku",
+      image: isDarkTheme
+        ? getImage(data.tekuSmallLight)
+        : getImage(data.tekuSmallDark),
     },
   ]
 
@@ -280,7 +339,7 @@ const BugBountiesPage = ({ data, location }) => {
       <Content>
         <HeroCard>
           <HeroContainer>
-            <Breadcrumbs slug={location.pathname} startDepth={1} />
+            <Breadcrumbs slug={location.pathname} />
             <Row>
               <On />
               <Title>
@@ -304,7 +363,7 @@ const BugBountiesPage = ({ data, location }) => {
             </ButtonRow>
           </HeroContainer>
           <LeaderboardContainer>
-            <Leaderboard content={bountyHunters} limit={5} />
+            <Leaderboard content={allBounterHunters} limit={5} />
             <ButtonLink isSecondary to="#leaderboard">
               <Translation id="page-upgrades-bug-bounty-leaderboard" />
             </ButtonLink>
@@ -315,11 +374,17 @@ const BugBountiesPage = ({ data, location }) => {
         <Translation id="page-upgrades-bug-bounty-clients" />
       </ClientIntro>
       <ClientRow>
-        <Client image={getImage(data.prysm)} />
+        <Client image={getImage(data.besu)} />
+        <Client image={getImage(data.erigon)} />
+        <Client image={getImage(data.geth)} />
+        <Client image={getImage(data.nethermind)} />
+      </ClientRow>
+      <ClientRow>
         <Client image={lighthouseImage} />
-        <Client image={tekuImage} />
-        <Client image={getImage(data.nimbus)} />
         <Client image={getImage(data.lodestar)} />
+        <Client image={getImage(data.nimbus)} />
+        <Client image={getImage(data.prysm)} />
+        <Client image={tekuImage} />
       </ClientRow>
       <StyledGrayContainer id="rules">
         <Content>
@@ -343,6 +408,10 @@ const BugBountiesPage = ({ data, location }) => {
             >
               <Link to="https://github.com/ethereum/consensus-specs">
                 <Translation id="page-upgrades-bug-bounty-specs" />
+              </Link>
+              <br />
+              <Link to="https://github.com/ethereum/execution-specs">
+                <Translation id="page-upgrades-bug-bounty-execution-specs" />
               </Link>
               <br />
               <div>
@@ -428,6 +497,55 @@ const BugBountiesPage = ({ data, location }) => {
                 <CardList content={clients} />
               </div>
             </StyledCard>
+            <StyledCard
+              emoji=":book:"
+              title={translateMessageId(
+                "page-upgrades-bug-bounty-misc-bugs",
+                intl
+              )}
+              description={translateMessageId(
+                "page-upgrades-bug-bounty-misc-bugs-desc",
+                intl
+              )}
+            >
+              <div>
+                <p>
+                  <Translation id="page-upgrades-bug-bounty-misc-bugs-desc-2" />
+                </p>
+              </div>
+              <div>
+                <h4>
+                  <Translation id="page-upgrades-bug-bounty-help-links" />
+                </h4>
+                <Link to="https://github.com/ethereum/solidity/blob/develop/SECURITY.md">
+                  SECURITY.md
+                </Link>
+              </div>
+            </StyledCard>
+            <StyledCard
+              emoji=":scroll:"
+              title={translateMessageId(
+                "page-upgrades-bug-bounty-deposit-bugs",
+                intl
+              )}
+              description={translateMessageId(
+                "page-upgrades-bug-bounty-deposit-bugs-desc",
+                intl
+              )}
+            >
+              <div>
+                <h4>
+                  <Translation id="page-upgrades-bug-bounty-help-links" />
+                </h4>
+                <Link to="https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/deposit-contract.md">
+                  Deposit Contract Specifications
+                </Link>
+                <br />
+                <Link to="https://github.com/ethereum/consensus-specs/blob/dev/solidity_deposit_contract/deposit_contract.sol">
+                  Deposit Contract Source Code
+                </Link>
+              </div>
+            </StyledCard>
           </StyledCardContainer>
           <H2>
             <Translation id="page-upgrades-bug-bounty-not-included" />
@@ -468,7 +586,7 @@ const BugBountiesPage = ({ data, location }) => {
               <Translation id="page-upgrades-bug-bounty-quality-fix" />
             </p>
           </SubmitInstructions>
-          <BugBountyPoints />
+          {/* TODO: Re-add Points Exchange (BugBountyPoints Component) */}
         </Row>
       </Content>
       <BugBountyCards />
@@ -501,14 +619,166 @@ const BugBountiesPage = ({ data, location }) => {
       <GradientContainer>
         <FullLeaderboardContainer>
           <H2>
+            <Translation id="page-upgrades-bug-bounty-hunting-execution-leaderboard" />
+          </H2>
+          <p>
+            <Translation id="page-upgrades-bug-bounty-hunting-execution-leaderboard-subtitle" />
+          </p>
+          <Leaderboard content={executionBountyHunters} />
+        </FullLeaderboardContainer>
+
+        <FullLeaderboardContainer>
+          <H2>
             <Translation id="page-upgrades-bug-bounty-hunting-leaderboard" />
           </H2>
           <p>
             <Translation id="page-upgrades-bug-bounty-hunting-leaderboard-subtitle" />
           </p>
-          <Leaderboard content={bountyHunters} />
+          <Leaderboard content={consensusBountyHunters} />
         </FullLeaderboardContainer>
       </GradientContainer>
+      <Divider />
+      <Content>
+        <CenterH2>
+          <Translation id="page-upgrades-question-title" />
+        </CenterH2>
+        <Faq>
+          <LeftColumn>
+            <ExpandableCard
+              title="What should a good vulnerability submission look like?"
+              contentPreview="See a real example of a quality vulnerability submission."
+            >
+              <p>
+                <b>Description:</b> Remote Denial-of-service using non-validated
+                blocks
+              </p>
+              <p>
+                <b>Attack scenario:</b> An attacker can send blocks that may
+                require a high amount of computation (the maximum gasLimit) but
+                has no proof-of-work. If the attacker sends blocks continuously,
+                the attacker may force the victim node to 100% CPU utilization.
+              </p>
+              <p>
+                <b>Impact:</b> An attacker can abuse CPU utilization on remote
+                nodes, possibly causing full DoS.
+              </p>
+              <p>
+                <b>Components:</b> Go client version v0.6.8
+              </p>
+              <p>
+                <b>Reproduction:</b> Send a block to a Go node that contains
+                many txs but no valid PoW.
+              </p>
+              <p>
+                <b>Details:</b> Blocks are validated in the method{" "}
+                <code>Process(Block, dontReact)</code>. This method performs
+                expensive CPU-intensive tasks, such as executing transactions (
+                <code>sm.ApplyDiff</code>) and afterward it verifies the
+                proof-of-work (<code>sm.ValidateBlock()</code>). This allows an
+                attacker to send blocks that may require a high amount of
+                computation (the maximum <code>gasLimit</code>) but has no
+                proof-of-work. If the attacker sends blocks continuously, the
+                attacker may force the victim node to 100% CPU utilization.
+              </p>
+              <p>
+                <b>Fix:</b> Invert the order of the checks.
+              </p>
+            </ExpandableCard>
+            <ExpandableCard
+              title="Is the bug bounty program is time limited?"
+              contentPreview="No."
+            >
+              <p>
+                No end date is currently set. See{" "}
+                <a
+                  href="https://blog.ethereum.org/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  the Ethereum Foundation blog
+                </a>{" "}
+                for the latest news.
+              </p>
+            </ExpandableCard>
+            <ExpandableCard
+              title="How are bounties paid out?"
+              contentPreview="Rewards are paid out in ETH or DAI."
+            >
+              <p>
+                Rewards are paid out in ETH or DAI after the submission has been
+                validated, usually a few days later. Local laws require us to
+                ask for <b>proof of your identity</b>. In addition, we will need
+                your ETH address.
+              </p>
+            </ExpandableCard>
+            <ExpandableCard
+              title="Can I donate my reward to charity?"
+              contentPreview="Yes!"
+            >
+              <p>
+                We can donate your reward to an established charitable
+                organization of your choice.
+              </p>
+            </ExpandableCard>
+          </LeftColumn>
+          <RightColumn>
+            <ExpandableCard
+              title="I reported an issue / vulnerability but have not received a response!"
+              contentPreview="Please allow a few days for someone to respond to your submission."
+            >
+              <p>
+                We aim to respond to submissions as fast as possible. Feel free
+                to email us at{" "}
+                <a
+                  href="mailto:bounty@ethereum.org"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  bounty@ethereum.org
+                </a>{" "}
+                if you have not received a response within a day or two.
+              </p>
+            </ExpandableCard>
+            <ExpandableCard
+              title="I want to be anonymous / I do not want my name on the leader board."
+              contentPreview="You can do this, but it might make you ineligble for rewards."
+            >
+              <p>
+                Submitting anonymously or with a pseudonym is OK, but will make
+                you ineligible for ETH/DAI rewards. To be eligible for ETH/DAI
+                rewards, we require your real name and a proof of your identity.
+                Donating your bounty to a charity doesn’t require your identity.
+              </p>
+              <p>
+                Please let us know if you do not want your name/nick displayed
+                on the leader board.
+              </p>
+            </ExpandableCard>
+            <ExpandableCard
+              title="What are the points in the leaderboard?"
+              contentPreview="Every found vulnerability / issue is assigned a score"
+            >
+              <p>
+                Every found vulnerability / issue is assigned a score. Bounty
+                hunters are ranked on our leaderboard by total points.
+              </p>
+            </ExpandableCard>
+            <ExpandableCard
+              title="Do you have a PGP key?"
+              contentPreview="Yes. Expand for details."
+            >
+              <p>
+                Please use{" "}
+                <code>AE96 ED96 9E47 9B00 84F3 E17F E88D 3334 FA5F 6A0A</code>
+              </p>
+              <Link to="https://ethereum.org/security_at_ethereum.org.asc">
+                PGP Key
+              </Link>
+            </ExpandableCard>
+          </RightColumn>
+        </Faq>
+      </Content>
+      <Divider />
       <Contact>
         <div>
           <H2>
@@ -555,7 +825,16 @@ export const ClientLogosSmall = graphql`
 
 export const query = graphql`
   query {
-    bountyHunters: allConsensusBountyHuntersCsv(
+    consensusBountyHunters: allConsensusBountyHuntersCsv(
+      sort: { order: DESC, fields: score }
+    ) {
+      nodes {
+        username
+        name
+        score
+      }
+    }
+    executionBountyHunters: allExecutionBountyHuntersCsv(
       sort: { order: DESC, fields: score }
     ) {
       nodes {
@@ -568,6 +847,18 @@ export const query = graphql`
       ...ClientLogos
     }
     lodestar: file(relativePath: { eq: "upgrades/lodestar.png" }) {
+      ...ClientLogos
+    }
+    besu: file(relativePath: { eq: "upgrades/besu.png" }) {
+      ...ClientLogos
+    }
+    erigon: file(relativePath: { eq: "upgrades/erigon.png" }) {
+      ...ClientLogos
+    }
+    geth: file(relativePath: { eq: "upgrades/geth.png" }) {
+      ...ClientLogos
+    }
+    nethermind: file(relativePath: { eq: "upgrades/nethermind.png" }) {
       ...ClientLogos
     }
     lighthouse: file(relativePath: { eq: "upgrades/lighthouse.png" }) {
@@ -591,6 +882,18 @@ export const query = graphql`
       ...ClientLogosSmall
     }
     lodestarSmall: file(relativePath: { eq: "upgrades/lodestar.png" }) {
+      ...ClientLogosSmall
+    }
+    besuSmall: file(relativePath: { eq: "upgrades/besu.png" }) {
+      ...ClientLogosSmall
+    }
+    erigonSmall: file(relativePath: { eq: "upgrades/erigon.png" }) {
+      ...ClientLogosSmall
+    }
+    gethSmall: file(relativePath: { eq: "upgrades/geth.png" }) {
+      ...ClientLogosSmall
+    }
+    nethermindSmall: file(relativePath: { eq: "upgrades/nethermind.png" }) {
       ...ClientLogosSmall
     }
     lighthouseSmallLight: file(

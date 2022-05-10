@@ -33,22 +33,6 @@
       "background": "white"
     },
     {
-      "name": "Metis Andromeda",
-      "website": "https://metis.io",
-      "developerDocs": "https://docs.metis.io/",
-      "l2beat": "https://l2beat.com/projects/metis/",
-      "bridge": "https://bridge.metis.io/home",
-      "bridgeWallets": ["MetaMask", "Polis"],
-      "blockExplorer": "https://andromeda-explorer.metis.io/",
-      "ecosystemPortal": "",
-      "tokenLists": "",
-      "noteKey": "layer-2-metis-note",
-      "purpose": ["universal"],
-      "description": "Metis is an EVM-equivalent Optimistic Rollup chain originally forked from Optimism.",
-      "imageKey": "metis",
-      "background": "#0b2435"
-    },
-    {
       "name": "Boba Network",
       "website": "https://boba.network/",
       "developerDocs": "https://docs.boba.network/",
