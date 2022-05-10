@@ -1,6 +1,6 @@
 ---
 title: Bridges
-description: An overview of the different kind of bridging
+description: An overview of bridging for developers
 lang: en
 sidebar: true
 ---
