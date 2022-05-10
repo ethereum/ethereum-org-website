@@ -3,7 +3,7 @@ title: Mining
 description: An explanation of how mining works in Ethereum and how it helps keep Ethereum secure and decentralized.
 lang: en
 sidebar: true
-incomplete: true
+incomplete: false
 ---
 
 ## Prerequisites {#prerequisites}
@@ -13,6 +13,10 @@ To better understand this page, we recommend you first read up on [transactions]
 ## What is Ethereum mining? {#what-is-ethereum-mining}
 
 Mining is the process of creating a block of transactions to be added to the Ethereum blockchain.
+
+The word mining originates in the context of the gold analogy for crypto currencies. Gold or precious metals are scarce, so are digital tokens, and the only way to increase the total volume is through mining. This is appropriate to the extent that in Ethereum too, the only mode of issuance post launch is via mining. Unlike these examples however, mining is also the way to secure the network by creating, verifying, publishing and propagating blocks in the blockchain.
+
+Mining ether = Securing the Network
 
 Ethereum, like Bitcoin, currently uses a [proof-of-work (PoW)](/developers/docs/consensus-mechanisms/pow/) consensus mechanism. Mining is the lifeblood of proof-of-work. Ethereum miners - computers running software - using their time and computation power to process transactions and produce blocks.
 
@@ -59,6 +63,12 @@ Every transaction is mined (included in a new block and propagated for the first
 Watch Austin walk you through mining and the proof-of-work blockchain.
 
 <YouTube id="zcX7OJ-L8XQ" />
+
+## The mining algorithm {#mining-algorithm}
+
+The Ethereum mining algorithm has undergone several upgrades since its inception. The original algorithm, "Dagger Hashimoto" was based around the provision of a large, transient, randomly generated dataset which forms a [Directed Acyclic Graph](https://en.wikipedia.org/wiki/Directed_acyclic_graph) (the Dagger-part), with miners attempting to solve a particular constraint on it, partly determined through a block’s header-hash. This algorithm was novel because it had high memory-access bandwidth requirements but could be run using a modest processor, making it GPU-friendly but resistant to the type of ASIC-driven hardware arms race that could pose a centralization risk (more on [problems with ASICS](https://www.investopedia.com/investing/why-centralized-crypto-mining-growing-problem/)). After substantial upgrades to the algorithm, it was renamed to "Ethash". This renaming happened before mining began on Ethereum mainnet. Dagger-Hashimoto was a precursor, research algorithm that was not used on Ethereum mainnet.
+
+More information on these mining algorithms is available at our [mining algorithms page](/developers/docs/consensus-mechanisms/pow/mining-algorithms/).
 
 ## Further reading {#further-reading}
 
