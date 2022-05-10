@@ -1,4 +1,4 @@
-import React, { useContext } from "react"
+import React, { useContext, useEffect, useState } from "react"
 import styled, { ThemeContext } from "styled-components"
 import { shuffle } from "lodash"
 // Data imports
@@ -289,6 +289,7 @@ const StakingProductCard = ({
 
 const StakingProductCardGrid = ({ category }) => {
   const themeContext = useContext(ThemeContext)
+  const [rankedProducts, updateRankedProducts] = useState([])
   const isDarkTheme = themeContext.isDark
   const [VALID_FLAG, CAUTION_FLAG, WARNING_FLAG, FALSE_FLAG, UNKNOWN_FLAG] = [
     "green-check",
@@ -422,79 +423,87 @@ const StakingProductCardGrid = ({ category }) => {
     trustless: getFlagFromBoolean(isTrustless),
   })
 
-  const categoryProducts = stakingProducts[category]
+  useEffect(() => {
+    const categoryProducts = stakingProducts[category]
+    const products = []
 
-  const products = []
+    // Pooled staking services
+    if (category === "pools") {
+      products.push(
+        ...categoryProducts.map((listing) => ({
+          ...getBrandProperties(listing),
+          ...getTagProperties(listing),
+          ...getSharedSecurityProperties(listing),
+          permissionlessNodes: getFlagFromBoolean(
+            listing.hasPermissionlessNodes
+          ),
+          diverseClients: getDiversityOfClients(listing.pctMajorityClient),
+          selfCustody: getFlagFromBoolean(listing.tokens?.length),
+          minEth: listing.minEth,
+        }))
+      )
+    }
 
-  // Solo staking products
-  if (category === "nodeTools") {
-    products.push(
-      ...categoryProducts.map((listing) => ({
-        ...getBrandProperties(listing),
-        ...getTagProperties(listing),
-        ...getSharedSecurityProperties(listing),
-        permissionless: getFlagFromBoolean(listing.isPermissionless),
-        multiClient: getFlagFromBoolean(listing.multiClient),
-        selfCustody: getFlagFromBoolean(true),
-        economical: getFlagFromBoolean(listing.minEth < 32),
-        minEth: listing.minEth,
-      }))
-    )
-  }
-  // Staking as a service
-  if (category === "saas") {
-    products.push(
-      ...categoryProducts.map((listing) => ({
-        ...getBrandProperties(listing),
-        ...getTagProperties(listing),
-        ...getSharedSecurityProperties(listing),
-        permissionless: getFlagFromBoolean(listing.isPermissionless),
-        diverseClients: getDiversityOfClients(listing.pctMajorityClient),
-        selfCustody: getFlagFromBoolean(listing.isSelfCustody),
-        minEth: listing.minEth,
-      }))
-    )
-  }
-  // Pooled staking services
-  if (category === "pools") {
-    products.push(
-      ...categoryProducts.map((listing) => ({
-        ...getBrandProperties(listing),
-        ...getTagProperties(listing),
-        ...getSharedSecurityProperties(listing),
-        permissionlessNodes: getFlagFromBoolean(listing.hasPermissionlessNodes),
-        diverseClients: getDiversityOfClients(listing.pctMajorityClient),
-        selfCustody: getFlagFromBoolean(listing.tokens?.length),
-        minEth: listing.minEth,
-      }))
-    )
-  }
-  // Key generators
-  if (category === "keyGen") {
-    products.push(
-      ...categoryProducts.map((listing) => ({
-        ...getBrandProperties(listing),
-        ...getTagProperties(listing),
-        ...getSharedSecurityProperties(listing),
-        permissionless: getFlagFromBoolean(listing.isPermissionless),
-        selfCustody: getFlagFromBoolean(listing.isSelfCustody),
-      }))
-    )
-  }
+    // Solo staking products
+    if (category === "nodeTools") {
+      products.push(
+        ...categoryProducts.map((listing) => ({
+          ...getBrandProperties(listing),
+          ...getTagProperties(listing),
+          ...getSharedSecurityProperties(listing),
+          permissionless: getFlagFromBoolean(listing.isPermissionless),
+          multiClient: getFlagFromBoolean(listing.multiClient),
+          selfCustody: getFlagFromBoolean(true),
+          economical: getFlagFromBoolean(listing.minEth < 32),
+          minEth: listing.minEth,
+        }))
+      )
+    }
+    // Staking as a service
+    if (category === "saas") {
+      products.push(
+        ...categoryProducts.map((listing) => ({
+          ...getBrandProperties(listing),
+          ...getTagProperties(listing),
+          ...getSharedSecurityProperties(listing),
+          permissionless: getFlagFromBoolean(listing.isPermissionless),
+          diverseClients: getDiversityOfClients(listing.pctMajorityClient),
+          selfCustody: getFlagFromBoolean(listing.isSelfCustody),
+          minEth: listing.minEth,
+        }))
+      )
+    }
+    // Key generators
+    if (category === "keyGen") {
+      products.push(
+        ...categoryProducts.map((listing) => ({
+          ...getBrandProperties(listing),
+          ...getTagProperties(listing),
+          ...getSharedSecurityProperties(listing),
+          permissionless: getFlagFromBoolean(listing.isPermissionless),
+          selfCustody: getFlagFromBoolean(listing.isSelfCustody),
+        }))
+      )
+    }
 
-  if (!products) return null
+    if (products) {
+      updateRankedProducts(
+        shuffle(products)
+          .map((product) => ({
+            ...product,
+            rankingScore: getRankingScore(product),
+          }))
+          .sort((a, b) => b.rankingScore - a.rankingScore)
+      )
+    }
+  }, [])
 
-  const rankedProducts = shuffle(products)
-    .map((product) => ({
-      ...product,
-      rankingScore: getRankingScore(product),
-    }))
-    .sort((a, b) => b.rankingScore - a.rankingScore)
+  if (!rankedProducts) return null
 
   return (
     <CardGrid>
       {rankedProducts.map((product) => (
-        <StakingProductCard id={product.name} product={product} />
+        <StakingProductCard key={product.name} product={product} />
       ))}
     </CardGrid>
   )
