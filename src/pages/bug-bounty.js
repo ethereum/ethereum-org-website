@@ -690,7 +690,11 @@ const BugBountiesPage = ({ data, location }) => {
             >
               <p>
                 No end date is currently set. See{" "}
-                <a href="https://blog.ethereum.org/" target="_blank">
+                <a
+                  href="https://blog.ethereum.org/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   the Ethereum Foundation blog
                 </a>{" "}
                 for the latest news.
@@ -725,7 +729,11 @@ const BugBountiesPage = ({ data, location }) => {
               <p>
                 We aim to respond to submissions as fast as possible. Feel free
                 to email us at{" "}
-                <a href="mailto:bounty@ethereum.org" target="_blank">
+                <a
+                  href="mailto:bounty@ethereum.org"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   bounty@ethereum.org
                 </a>{" "}
                 if you have not received a response within a day or two.
