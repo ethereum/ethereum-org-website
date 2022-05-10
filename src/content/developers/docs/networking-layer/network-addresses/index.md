@@ -10,7 +10,7 @@ Ethereum nodes have to identify themselves with some basic information to connec
 
 ## Prerequisites {#prerequisites}
 
-Some understanding of Ethereum's [networking layer](/src/content/developers/docs/networking-layer/) is required to understand this page.
+Some understanding of Ethereum's [networking layer](/developers/docs/networking-layer/) is required to understand this page.
 
 ## Multiaddr {#multiaddr}
 
