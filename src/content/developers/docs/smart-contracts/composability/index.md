@@ -8,23 +8,17 @@ incomplete: true
 
 ## A brief introduction {#a-brief-introduction}
 
-Smart contracts are public on Ethereum and can be thought of as open APIs. You don't need to write your own smart contract to become a dapp developer, you just need to know how to interact with them. 
-
-For example, you can use the existing smart contracts of [Uniswap](https://uniswap.exchange/swap), a decentralized exchange, to handle all the token swap logic in your app – you don't need to start from scratch. Check out some of their [v2](https://github.com/Uniswap/uniswap-v2-core/tree/master/contracts) and [v3](https://github.com/Uniswap/uniswap-v3-core/tree/main/contracts) contracts.
+Smart contracts are public on Ethereum and can be thought of as open APIs. You don't need to write your own smart contract to become a dapp developer, you just need to know how to interact with them. For example, you can use the existing smart contracts of [Uniswap](https://uniswap.exchange/swap), a decentralized exchange, to handle all the token swap logic in your app – you don't need to start from scratch. Check out some of their [v2](https://github.com/Uniswap/uniswap-v2-core/tree/master/contracts) and [v3](https://github.com/Uniswap/uniswap-v3-core/tree/main/contracts) contracts.
 
 ## What is composability? {#what-is-composability}
 
-Composability is the idea that distinct components can be integrated or combined to create new systems or outputs. In the context of blockchain development, composability means existing pieces of software can be reused to build new applications.
-
-A good way to understand composability is to think of composable elements as Lego blocks. Each Lego is designed to fit into another, such that you can build complex structures by combining different Lego blocks. 
+Composability is combing distinct components to create new systems or outputs. In software development, composability means developers can reuse existing software components to build new applications. A good way to understand composability is to think of composable elements as Lego blocks. Each Lego can be combined with another, allowing you to build complex structures by combining different Legos. 
 
 In Ethereum, every smart contract is a Lego of sorts—you can use smart contracts from other projects as building blocks for your project. This means you don't have to spend time reinventing the wheel or building from scratch.
 
 ## How does composability work? {#how-does-composability-work}
 
-As we said in the beginning, Ethereum smart contracts are like public APIs. This means anyone can interact with them or integrate them into dapps for added functionality.
-
-Smart contract composability generally works off three principles: modularity, autonomy, and discoverability: 
+Ethereum smart contracts are like public APIs, so anyone can interact with the contract or integrate them into dapps for added functionality. Smart contract composability generally works off three principles: modularity, autonomy, and discoverability:  
 
 **1. Modularity**: This is the ability of individual components to perform a specific task. In Ethereum, every smart contract has specific use-case (as shown in the Uniswap example).
 
@@ -34,17 +28,16 @@ Smart contract composability generally works off three principles: modularity, a
 
 ## Benefits of composability {#benefits-of-composability}
 
-### Shorter development cycle
+### Shorter development cycle {#shorter-development-cycle}
 
-Composability reduces the work that developers have to do when creating [decentralized applications](https://ethereum.org/en/dapps/#what-are-dapps) (dapps). As Naval Ravikant [puts it](https://twitter.com/naval/status/1444366754650656770): "Open source means every problem has to be solved once."
+Composability reduces the work that developers have to do when creating [dapps](/dapps/#what-are-dapps). [As Naval Ravikant puts it:](https://twitter.com/naval/status/1444366754650656770) "Open source means every problem has to be solved once."
 
-Once a particular smart contract solves one problem, other developers can reuse it, so they don’t have to solve the same problem. In this way, developers can take existing software libraries and add extra functionality to create new dapps. 
+If there is a smart contract that solves one problem, other developers can reuse it, so they don’t have to solve the same problem. This way, developers can take existing software libraries and add extra functionality to create new dapps.
 
 ### Greater innovation
 
-Composability encourages innovation and experimentation. That’s because developers are free to reuse, modify, duplicate, or integrate open-source code to create desired results. 
+Composability encourages innovation and experimentation because developers are free to reuse, modify, duplicate, or integrate open-source code to create desired results. As a result, development teams spend less time on basic functionality and can allocate more time experimenting with new features.
 
-Also, development teams spend less time on basic functionality and can allocate more time to experimenting with new features. This explains why there are so many great projects in the Ethereum ecosystem today—developers can focus on improve on existing dapps and build better products. 
 
 ### Better user experience
 
@@ -54,11 +47,11 @@ Interoperability between components of the Ethereum ecosystem improves the user 
 
 ### Token swaps
 
-Say you have a dapp that requires to pay for transactions in ETH. You can add more payment options by integrating token swap logic from Uniswap contracts. This code will automatically convert the user’s token to ETH before the contract executes the called function.
+If you create a dapp that requires transactions to be paid in ETH, you can allow users to pay in other ERC-20 tokens by integrating token swap logic. The code will automatically convert the user’s token to ETH before the contract executes the called function.
 
 ### Governance
 
-Building bespoke governance systems for a [decentralized autonomous organization](https://ethereum.org/en/dao/) (DAO) can be expensive and time-consuming. However, you can use [Aragon Client](https://client.aragon.org/)—an open-source governance toolkit from Aragon—to bootstrap your DAO and quickly create a usable governance framework. 
+Building bespoke governance systems for a [DAO](/dao/) can be expensive and time-consuming. Instead, you could use an open-source governance toolkit, such as [Aragon Client](https://client.aragon.org/), to bootstrap your DAO to quickly create a governance framework. 
 
 ### Identity management
 
