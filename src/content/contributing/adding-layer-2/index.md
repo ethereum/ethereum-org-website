@@ -43,7 +43,7 @@ _We do not consider other scaling solutions that don't use Ethereum for data ava
 
 **Ethereum for data availability**
 
-- An important differentiating factor between other scaling solutions and layer 2 is data availability. A project **must** use Ethereum for data availability to be considered for listing.
+- Data availability is an important differentiating factor between other scaling solutions and layer 2. A project **must** use Ethereum Mainnet for data availability to be considered for listing.
 
 **Bridges**
 
