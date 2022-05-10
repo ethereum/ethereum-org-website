@@ -309,7 +309,11 @@
   },
   {
     "fromPath": "/*/eth2/get-involved/bug-bounty/",
-    "toPath": "/:splat/upgrades/get-involved/bug-bounty/"
+    "toPath": "/:splat/bug-bounty/"
+  },
+  {
+    "fromPath": "/*/upgrades/get-involved/bug-bounty/",
+    "toPath": "/:splat/bug-bounty/"
   },
   {
     "fromPath": "/*/eth2/deposit-contract/",

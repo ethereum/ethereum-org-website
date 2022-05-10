@@ -68,6 +68,11 @@ const Leaderboard = ({ content, limit = 100 }) => (
       .filter((_, idx) => idx < limit)
       .map((item, idx) => {
         const { name, username, score } = item
+        const hasGitHub = username !== ""
+        const avatarImg = hasGitHub
+          ? `${githubUrl}${username}.png?size=40`
+          : "https://github.com/random.png?size=40"
+        const avatarAlt = hasGitHub ? `${username} GitHub avatar` : ""
         let emoji = null
         if (idx === 0) {
           emoji = ":trophy:"
@@ -77,9 +82,9 @@ const Leaderboard = ({ content, limit = 100 }) => (
           emoji = ":3rd_place_medal:"
         }
         return (
-          <Item key={idx} to={`${githubUrl}${username}`}>
+          <Item key={idx} to={hasGitHub ? `${githubUrl}${username}` : "#"}>
             <ItemNumber>{idx + 1}</ItemNumber>
-            <Avatar src={`${githubUrl}${username}.png?size=40`} />
+            <Avatar src={avatarImg} alt={avatarAlt} />
             <TextContainer>
               <ItemTitle>{name}</ItemTitle>
               <ItemDesc>

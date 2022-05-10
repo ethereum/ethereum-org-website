@@ -429,6 +429,11 @@ exports.createSchemaCustomization = ({ actions }) => {
       name: String,
       score: Int
     }
+     type ExecutionBountyHuntersCsv implements Node {
+      username: String,
+      name: String,
+      score: Int
+    }
   `
   createTypes(typeDefs)
 
