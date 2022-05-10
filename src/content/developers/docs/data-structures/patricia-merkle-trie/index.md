@@ -229,7 +229,6 @@ curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": [
 {"jsonrpc":"2.0","id":1,"result":"0x000000000000000000000000000000000000000000000000000000000000162e"}
 ```
 
-More information on this can be found in the [EIP 2718](https://eips.ethereum.org/EIPS/eip-2718) documentation.
 
 
 ### Transactions Trie {#transaction-trie}
@@ -243,9 +242,13 @@ else:
   value = TxType | encode(tx)
 ```
 
+More information on this can be found in the [EIP 2718](https://eips.ethereum.org/EIPS/eip-2718) documentation.
+
 ### Receipts Trie {#receipts-trie}
 
-Every block has its own Receipts trie. A `path` here is: `rlp(transactionIndex)`. `transactionIndex` is its index within the block it's mined. The receipts trie never updates.
+Every block has its own Receipts trie. A `path` here is: `rlp(transactionIndex)`. `transactionIndex` is its index within the block it's mined. The receipts trie never updates. Similarly to the Transactions trie, there are current and legacy receipts. To query a specific receipt in the Receipts trie the index of the transaction in its block, the receipt payload and the transaction type are required. The Returned receipt can be of type `Receipt` which is defined as the concentenation of `transaction type` and `transaction payload` or it can be of type `LegacyReceipt` which is defined as `rlp([status, cumulativeGasUsed, logsBloom, logs])`.
+
+More information on this can be found in the [EIP 2718](https://eips.ethereum.org/EIPS/eip-2718) documentation.
 
 ## Further Reading {#further-reading}
 
