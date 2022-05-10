@@ -20,7 +20,7 @@ The original Ethereum node address format was the 'multiaddr' (short for 'multi-
 
 For an Ethereum node, the multiaddr contains the node-ID (a hash of their public key):
 
-`/ip6/192.168.22.27/tcp/33000/p2p/5t7Nv7dG2d6ffbvAiewVsEwWweU3LdebSqX2y1bPrW8br`
+`/ip4/192.168.22.27/tcp/33000/p2p/5t7Nv7dG2d6ffbvAiewVsEwWweU3LdebSqX2y1bPrW8br`
 
 ## Enode {#enode}
 
