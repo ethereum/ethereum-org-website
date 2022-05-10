@@ -201,6 +201,10 @@ In order to compute the seed hash that would be used to mine on top of a given b
 
 Note that for smooth mining and verifying, we recommend pre-computing future seedhashes and datasets in a separate thread.
 
+## Further reading {#further-reading}
+
+_Know of a community resource that helped you? Edit this page and add it!_
+
 ## Appendix {#appendix}
 
 The following code should be prepended if you are interested in running the above python spec as code.
