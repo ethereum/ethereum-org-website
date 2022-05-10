@@ -31,3 +31,8 @@ More on [Dagger-Hashimoto](/developers/docs/consensus-mechanisms/pow/mining-algo
 Ethash is Ethereum's current mining algorithm. Ethash was effectively a new name given to a specific version of Dagger-Hashimoto after the algorithm got significantly updated, whilst still inheriting the fundamental principles of its predecessor. Ethereum mainnet has only ever used Ethash - Dagger Hashimoto was an R&D version of the mining algorithm that was superseded before mining started on Ethereum mainnet.
 
 [More on Ethash](/developers/docs/consensus-mechanisms/pow/mining-algorithms/ethash).
+
+## Further reading {#further-reading}
+
+_Know of a community resource that helped you? Edit this page and add it!_
+
