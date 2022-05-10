@@ -96,7 +96,7 @@
   "docs-nav-data-structures-and-encoding": "Data structures and encoding",
   "docs-nav-data-structures-and-encoding-description": "Explanation of the data structures and encoding schema used across the Ethereum stack",
   "docs-nav-data-structures-and-encoding-rlp": "Recursive-length prefix (RLP)",
-  "docs-nav-data-structures-and-encoding-patricia-merkle-tries": "Patricia Merkle Tries",
+  "docs-nav-data-structures-and-encoding-patricia-merkle-trie": "Patricia Merkle Trie",
   "docs-nav-data-structures-and-encoding-ssz": "Simple serialize (SSZ)",
   "page-calltocontribute-desc-1": "If you're an expert on the topic and want to contribute, edit this page and sprinkle it with your wisdom.",
   "page-calltocontribute-desc-2": "You'll be credited and you'll be helping the Ethereum community!",
