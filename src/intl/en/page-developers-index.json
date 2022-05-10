@@ -85,7 +85,7 @@
   "page-developers-transactions-link": "Transactions",
   "page-developers-web3-desc": "How the web3 world of development is different",
   "page-developers-web3-link": "Web2 vs Web3",
-  "page-developers-data-structures": "Data Structures",
-  "page-developers-data-structures-link": "Data Structures",
-  "page-developers-data-structures-desc": "Introduction to the data structures used in the Ethereum stack"
+  "page-developers-data-structures-and-encoding": "Data structures and encoding",
+  "page-developers-data-structures-and-encoding-link": "Data structures and encoing",
+  "page-developers-data-structures-and-encoding-desc": "Introduction to the data structures and encoding schema used in the Ethereum stack"
 }

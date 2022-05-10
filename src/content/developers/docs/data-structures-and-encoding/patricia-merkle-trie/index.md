@@ -6,7 +6,7 @@ sidebar: true
 sidebarDepth: 2
 ---
 
-A Patricia Merkle Trie provides a cryptographically authenticated data structure that can be used to store all `(key, value)` bindings. 
+A Patricia Merkle Trie provides a cryptographically authenticated data structure that can be used to store all `(key, value)` bindings.
 
 Patricia Merkle Tries are fully deterministic, meaning that a trie with the same `(key, value)` bindings is guaranteed to be identical—down to the last byte. This means they have the same root hash, providing the holy grail of `O(log(n))` efficiency for inserts, lookups and deletes. Also, they are simpler to understand and code than more complex comparison-based alternatives, like red-black trees.
 
@@ -207,9 +207,11 @@ curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": [
 {"jsonrpc":"2.0","id":1,"result":"0x00000000000000000000000000000000000000000000000000000000000004d2"}
 
 ```
+
 Retrieving other elements in storage is slightly more involved because the position in the storage trie must first be calculated. The position is calculated as the `keccak256` hash of the address and the storage position, both left-padded with zeros to a length of 32 bytes. For example, the position for the data in storage slot 1 for address `0x391694e7e0b0cce554cb130d723a9d27458f9298` is:
 
-``` keccak256(decodeHex("000000000000000000000000391694e7e0b0cce554cb130d723a9d27458f9298" + "0000000000000000000000000000000000000000000000000000000000000001"))
+```keccak256(decodeHex("000000000000000000000000391694e7e0b0cce554cb130d723a9d27458f9298" + "0000000000000000000000000000000000000000000000000000000000000001"))
+
 ```
 
 In a Geth console, this can be calculated as follows:
@@ -228,8 +230,6 @@ curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": [
 
 {"jsonrpc":"2.0","id":1,"result":"0x000000000000000000000000000000000000000000000000000000000000162e"}
 ```
-
-
 
 ### Transactions Trie {#transaction-trie}
 

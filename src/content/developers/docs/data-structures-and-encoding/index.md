@@ -16,7 +16,7 @@ You should understand the fundamentals of Ethereum and [client software]. Famili
 
 ### Patricia merkle tries {#patricia-merkle-tries}
 
-Patricia Merkle Tries are structures that encode key-value pairs into a deterministic and cryptographically authenticated trie. These are used extensively across Ethereum's execution layer. 
+Patricia Merkle Tries are structures that encode key-value pairs into a deterministic and cryptographically authenticated trie. These are used extensively across Ethereum's execution layer.
 
 [More on Patricia Merkle Tries](/developers/docs/data-structures/patricia-merkle-trie)
 
@@ -28,6 +28,6 @@ Recursive Length Prefix (RLP) is a serialization method used extensively across 
 
 ### Simple Serialize {#simple-serialize}
 
-Simple Serialize (SSZ) is the dominant serialization format on Ethereum's consensus layer because of its compatibility with merklelization. 
+Simple Serialize (SSZ) is the dominant serialization format on Ethereum's consensus layer because of its compatibility with merklelization.
 
 [More on SSZ](/developers/docs/data-structures/ssz).
