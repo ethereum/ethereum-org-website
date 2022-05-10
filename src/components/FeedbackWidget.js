@@ -19,7 +19,7 @@ const FixedDot = styled.div`
   border-radius: 50%;
   background-color: ${({ theme }) => theme.colors.primary};
   position: fixed;
-  bottom: 1rem;
+  bottom: ${({ bottomOffset }) => 1 + bottomOffset}rem;
   right: 1rem;
   z-index: 1000;
   display: flex;
@@ -54,7 +54,7 @@ const Container = styled.div`
   border-radius: 0.25rem;
   position: fixed;
   right: 2rem;
-  bottom: 5rem;
+  bottom: ${({ bottomOffset }) => 5 + bottomOffset}rem;
   z-index: 1003;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.s}) {
@@ -184,13 +184,31 @@ const FeedbackWidget = ({ prompt, className }) => {
     return surveyUrls.default[isHelpful ? "yes" : "no"]
   }
 
+  const pathsWithBottomNav = ["/staking/", "/dao/", "/defi/", "/nft/"]
+
+  const bottomOffset = () => {
+    const CONDITIONAL_OFFSET = 6.75
+    let offset = 0
+    pathsWithBottomNav.forEach((path) => {
+      if (location.includes(path)) {
+        offset = CONDITIONAL_OFFSET
+      }
+    })
+    return offset
+  }
+
   return (
     <>
-      <FixedDot onClick={handleOpen}>
+      <FixedDot onClick={handleOpen} bottomOffset={bottomOffset()}>
         <StyledFeedbackGlyph isOpen={isOpen} />
       </FixedDot>
       <ModalBackground isOpen={isOpen}>
-        <Container isOpen={isOpen} ref={containerRef} className={className}>
+        <Container
+          isOpen={isOpen}
+          bottomOffset={bottomOffset()}
+          ref={containerRef}
+          className={className}
+        >
           <IconContainer onClick={handleClose}>
             <Icon name="close" />
           </IconContainer>
