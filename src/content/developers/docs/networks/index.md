@@ -46,7 +46,6 @@ A proof-of-work testnet; this means it's the best like-for-like representation o
 
 - [Sepolia faucet](https://faucet.sepolia.dev/)
 
-
 #### Görli {#goerli}
 
 A proof-of-authority testnet that works across clients; an ideal testnet for application developers.
