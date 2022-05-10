@@ -12,7 +12,7 @@ Smart contracts are public on Ethereum and can be thought of as open APIs. You d
 
 ## What is composability? {#what-is-composability}
 
-Composability is combing distinct components to create new systems or outputs. In software development, composability means developers can reuse existing software components to build new applications. A good way to understand composability is to think of composable elements as Lego blocks. Each Lego can be combined with another, allowing you to build complex structures by combining different Legos. 
+Composability is combining distinct components to create new systems or outputs. In software development, composability means developers can reuse existing software components to build new applications. A good way to understand composability is to think of composable elements as Lego blocks. Each Lego can be combined with another, allowing you to build complex structures by combining different Legos. 
 
 In Ethereum, every smart contract is a Lego of sorts—you can use smart contracts from other projects as building blocks for your project. This means you don't have to spend time reinventing the wheel or building from scratch.
 
@@ -34,26 +34,26 @@ Composability reduces the work that developers have to do when creating [dapps](
 
 If there is a smart contract that solves one problem, other developers can reuse it, so they don’t have to solve the same problem. This way, developers can take existing software libraries and add extra functionality to create new dapps.
 
-### Greater innovation
+### Greater innovation {#greater-innovation}
 
 Composability encourages innovation and experimentation because developers are free to reuse, modify, duplicate, or integrate open-source code to create desired results. As a result, development teams spend less time on basic functionality and can allocate more time experimenting with new features.
 
 
-### Better user experience
+### Better user experience {#better-user-experience}
 
 Interoperability between components of the Ethereum ecosystem improves the user experience. Users can access greater functionality when dapps integrate external smart contracts than in a fragmented ecosystem where applications cannot communicate.
 
 ## Examples of composability in Ethereum {#composability-in-ethereum}
 
-### Token swaps
+### Token swaps {#token-swaps}
 
 If you create a dapp that requires transactions to be paid in ETH, you can allow users to pay in other ERC-20 tokens by integrating token swap logic. The code will automatically convert the user’s token to ETH before the contract executes the called function.
 
-### Governance
+### Governance {#governance}
 
 Building bespoke governance systems for a [DAO](/dao/) can be expensive and time-consuming. Instead, you could use an open-source governance toolkit, such as [Aragon Client](https://client.aragon.org/), to bootstrap your DAO to quickly create a governance framework. 
 
-### Identity management
+### Identity management {#identity-management}
 
 Instead of building a custom authentication system or relying on centralized providers, you can integrate decentralized identity (DID) tools to manage authentication for users. An example is [SpruceID](https://www.spruceid.com/), an open-source toolkit which offers a "Sign in with Ethereum" functionality that lets users authenticate identities with an Ethereum wallet. 
 
