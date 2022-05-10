@@ -28,7 +28,7 @@ Both stacks work in parallel. The discovery stack feeds new network participants
 
 Discovery is the process of finding other nodes in network. This is bootstrapped using a small set of bootnodes (nodes whose addresses are [hardcoded](https://github.com/ethereum/go-ethereum/blob/master/params/bootnodes.go) into the client so they can be found immediately and connect the client to peers). These bootnodes only exist to introduce a new node to a set of peers - this is their sole purpose, they do not participate in normal client tasks like syncing the chain, and they are only used the very first time a client is spun up.
 
-The protocol used for the node-bootnode interactions is a modified form of [Kademlia](https://medium.com/coinmonks/a-brief-overview-of-kademlia-and-its-use-in-various-decentralized-platforms-da08a7f72b8f) which uses a distributed hash table to share lists of nodes. Each node has a version of this table containing the information required to connect to its closest peers. This 'closeness' is not geographical - distance is defined by the similarity of the node's ID. Each node's table is regularly refreshed as a security feature. For example, in the [Discv5](https://github.com/ethereum/devp2p/tree/master/discv5), discovery protocol nodes are also able to send 'ads' that display the subprotocols that the client supports, allowing peers to negotiate about the protocols they can both use to communicate over.
+The protocol used for the node-bootnode interactions is a modified form of [Kademlia](https://medium.com/coinmonks/a-brief-overview-of-kademlia-and-its-use-in-various-decentralized-platforms-da08a7f72b8f) which uses a [distributed hash table](https://en.wikipedia.org/wiki/Distributed_hash_table) to share lists of nodes. Each node has a version of this table containing the information required to connect to its closest peers. This 'closeness' is not geographical - distance is defined by the similarity of the node's ID. Each node's table is regularly refreshed as a security feature. For example, in the [Discv5](https://github.com/ethereum/devp2p/tree/master/discv5), discovery protocol nodes are also able to send 'ads' that display the subprotocols that the client supports, allowing peers to negotiate about the protocols they can both use to communicate over.
 
 Discovery starts wih a game of PING-PONG. A successful PING-PONG "bonds" the new node to a bootnode. The initial message that alerts a bootnode to the existence of a new node entering the network is a `PING`. This `PING` includes hashed information about the new node, the bootnode and an expiry time-stamp. The bootnode receives the PING and returns a `PONG` containing the `PING` hash. If the `PING` and `PONG` hashes match then the connection between the new node and bootnode is verified and they are said to have "bonded".
 
@@ -86,11 +86,11 @@ The [witness protocol](https://github.com/ethereum/devp2p/blob/master/caps/wit.m
 
 #### Whisper {#whisper}
 
-This was a protocol that aimed to deliver secure messaging between peers without writing any information to the blockchain. It was part of the DevP2p wire protocol but is now deprecated. Other [related projects](https://wakunetwork.com/) exist with similar aims.
+Whisper was a protocol that aimed to deliver secure messaging between peers without writing any information to the blockchain. It was part of the DevP2P wire protocol but is now deprecated. Other [related projects](https://wakunetwork.com/) exist with similar aims.
 
-## Execution layer networking after the merge {#execution-after-merge}
+## Execution layer networking after The Merge {#execution-after-merge}
 
-After the merge, an Ethereum node will run an execution client and a consensus client. The execution clients will operate similary to today, but with the proof-of-work consensus and block gossip functionality removed. The EVM, validator deposit contract and selecting/executing transactions from the mempool will still be the domain of the execution client. This means execution clients still need to participate in transaction gossip so that they can manage the transaction mempool. This requires encrypted communication between authenticated peers meaning the networking layer for consensus clients will still be a critical component, includng both the discovery protocol and DevP2P layer. Encoding will continue to be predominantly RLP on the execution layer.
+After the Merge, an Ethereum node will run an execution client and a consensus client. The execution clients will operate similarly to today, but with the proof-of-work consensus and block gossip functionality removed. The EVM, validator deposit contract and selecting/executing transactions from the mempool will still be the domain of the execution client. This means execution clients still need to participate in transaction gossip so that they can manage the transaction mempool. This requires encrypted communication between authenticated peers meaning the networking layer for consensus clients will still be a critical component, including both the discovery protocol and DevP2P layer. Encoding will continue to be predominantly RLP on the execution layer.
 
 ## The consensus layer {#consensus-layer}
 
@@ -98,11 +98,11 @@ The consensus clients participate in a separate peer-to-peer network with a diff
 
 ### Discovery {#consensus-discovery}
 
-Similarly to the execution clients, consensus clients use [discv5](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/p2p-interface.md#the-discovery-domain-discv5) over UDP for finding peers. The consensus layer implementation of discv5 differs from that of the execution clients only in that it includes an adaptor connecting discv5 into a [libP2P](https://libp2p.io/) stack, deprecating devP2P. The execution layer's RLPx sessions are deprecated in favour of libP2P's noise secure channel handshake.
+Similarly to the execution clients, consensus clients use [discv5](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/p2p-interface.md#the-discovery-domain-discv5) over UDP for finding peers. The consensus layer implementation of discv5 differs from that of the execution clients only in that it includes an adaptor connecting discv5 into a [libP2P](https://libp2p.io/) stack, deprecating DevP2P. The execution layer's RLPx sessions are deprecated in favour of libP2P's noise secure channel handshake.
 
 ### ENRs {#consensus-enr}
 
-The ENR for consensus nodes includes the node's public key, IP address, UDP and TCP ports and two consensus-specific fields: the attestation subnet bitfield and eth2 key. The former makes it easier for nodes to find peers participating in specific attestation gossip sub-networks. The eth2 key contans information about which Ethereum fork version the node is using, ensuring peers are connecting to the right Ethereum.
+The ENR for consensus nodes includes the node's public key, IP address, UDP and TCP ports and two consensus-specific fields: the attestation subnet bitfield and `eth2` key. The former makes it easier for nodes to find peers participating in specific attestation gossip sub-networks. The `eth2` key contains information about which Ethereum fork version the node is using, ensuring peers are connecting to the right Ethereum.
 
 ### libP2P {#libp2p}
 
@@ -112,9 +112,9 @@ The libP2P stack supports all communications after discovery. Clients can dial a
 
 The gossip domain includes all information that has to spread rapidly throughout the network. This includes beacon blocks, proofs, attestations, exits and slashings. This is transmitted using libP2P gossipsub v1 and relies on various metadata being stored locally at each node, including maximum size of gossip payloads to receive and transmit. Detailed information about the gossip domain is available [here](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/p2p-interface.md#the-gossip-domain-gossipsub).
 
-### Req/Resp {#req-resp}
+### Request-response {#request-response}
 
-The request/response domain contains protocols for clients requesting specific information from their peers. Examples include requesting specific Beacon blocks matching certain root hashes or within a range of slots. The responses are always returned as snappy-compressed SSZ encoded bytes.
+The request-response domain contains protocols for clients requesting specific information from their peers. Examples include requesting specific Beacon blocks matching certain root hashes or within a range of slots. The responses are always returned as snappy-compressed SSZ encoded bytes.
 
 ## Why does the consensus client prefer SSZ to RLP? {#ssz-vs-rlp}
 
@@ -122,30 +122,30 @@ SSZ stands for simple serialization. It uses fixed offsets that make it easy to 
 
 ## Connecting the execution and consensus clients {#connecting-clients}
 
-After the merge, both consensus and execution clients will run in parallel. They need to be connected together so that the consensus client can provide instructions to the execution client and the execution client can pass bundles of transactions to the consensus client to include in Beacon Blocks. This communication between the two clients can be achieved using a local RPC connection. Since both clients sit behind a single network identity, they share a ENR (Ethereum node record) which contains a separate key for each client (eth1 key and eth2 key).
+After the Merge, both consensus and execution clients will run in parallel. They need to be connected together so that the consensus client can provide instructions to the execution client and the execution client can pass bundles of transactions to the consensus client to include in Beacon blocks. This communication between the two clients can be achieved using a local RPC connection. Since both clients sit behind a single network identity, they share a ENR (Ethereum node record) which contains a separate key for each client (eth1 key and eth2 key).
 
 A summary of the control flow is shown beloiw, with the relevant networking stack in brackets.
 
 ##### When consensus client is not block producer:
 
-- consensus client receives a block via the block gossip protocol (consensus p2p)
-- consensus client prevalidates the block, i.e. ensures it arrived from a valid sender with correct metadata
+- Consensus client receives a block via the block gossip protocol (consensus p2p)
+- Consensus client pre-validates the block, i.e. ensures it arrived from a valid sender with correct metadata
 - The transactions in the block are sent to the execution layer as an execution payload (local RPC connection)
 - The execution layer executes the transactions and validates the state in the block header (i.e. checks hashes match)
-- execution layer passes validation data back to consensus layer, block now considered to be validated (local RPC connection)
-- consensus layer adds block to head of its own blockchain and attests to it, broadcasting the attestation over the network (consensus p2p)
+- Execution layer passes validation data back to consensus layer, block now considered to be validated (local RPC connection)
+- Consensus layer adds block to head of its own blockchain and attests to it, broadcasting the attestation over the network (consensus p2p)
 
 ##### When consensus client is block producer
 
-- consensus client receives notice that it is the next block producer (consensus p2p)
-- consensus layer calls `create block` method in execution client (local RPC)
-- execution layer accesses the transaction mempool which has been populated by the transaction gossip protocol (execution p2p)
-- execution client bundles transactions into a block, executes the transactions and generates a block hash
-- consensus client grabs the transactions and block hash from the consensus client and adds them to the beacon block (local RPC)
-- consensus client broadcasts the block over the block gossip protocol (consensus p2p)
-- other clients receive the proposed block via the block gossip protocol and validate as described above (consensus p2p)
+- Consensus client receives notice that it is the next block producer (consensus p2p)
+- Consensus layer calls `create block` method in execution client (local RPC)
+- Execution layer accesses the transaction mempool which has been populated by the transaction gossip protocol (execution p2p)
+- Execution client bundles transactions into a block, executes the transactions and generates a block hash
+- Consensus client grabs the transactions and block hash from the consensus client and adds them to the beacon block (local RPC)
+- Consensus client broadcasts the block over the block gossip protocol (consensus p2p)
+- Other clients receive the proposed block via the block gossip protocol and validate as described above (consensus p2p)
 
-Once the block has been attested by sufficient validators it is added to the head of the chain, justified and eventually finalised.
+Once the block has been attested by sufficient validators it is added to the head of the chain, justified and eventually finalized.
 
 ![](cons_client_net_layer.png)
 ![](exe_client_net_layer.png)
@@ -154,7 +154,7 @@ Network layer schematic for post-merge consensus and execution clients, from [et
 
 ## Further Reading {#further-reading}
 
-[DevP2p](https://github.com/ethereum/devp2p)
+[DevP2P](https://github.com/ethereum/devp2p)
 [LibP2p](https://github.com/libp2p/specs)
 [Consensus layer network specs](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/p2p-interface.md#enr-structure)
 [kademlia to discv5](https://vac.dev/kademlia-to-discv5)
