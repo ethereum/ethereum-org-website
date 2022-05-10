@@ -256,6 +256,10 @@ Also, note that Dagger-Hashimoto imposes additional requirements on the block he
 - For two-layer verification to work, a block header must have both the nonce and the middle value pre-sha3
 - Somewhere, a block header must store the sha3 of the current seedset
 
+## Further reading {#further-reading}
+
+_Know of a community resource that helped you? Edit this page and add it!_
+
 ## Appendix {#appendix}
 
 As noted above, the RNG used for DAG generation relies on some results from number theory. First, we provide assurance that the Lehmer RNG that is the basis for the `picker` variable has a wide period. Second, we show that `pow(x,3,P)` will not map `x` to `1` or `P-1` provided `x ∈ [2,P-2]` to start. Finally, we show that `pow(x,3,P)` has a low collision rate when treated as a hashing function.
