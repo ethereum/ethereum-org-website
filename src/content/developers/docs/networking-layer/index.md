@@ -122,7 +122,7 @@ SSZ stands for simple serialization. It uses fixed offsets that make it easy to 
 
 ## Connecting the execution and consensus clients {#connecting-clients}
 
-After the Merge, both consensus and execution clients will run in parallel. They need to be connected together so that the consensus client can provide instructions to the execution client and the execution client can pass bundles of transactions to the consensus client to include in Beacon blocks. This communication between the two clients can be achieved using a local RPC connection. Since both clients sit behind a single network identity, they share a ENR (Ethereum node record) which contains a separate key for each client (eth1 key and eth2 key).
+After the Merge, both consensus and execution clients will run in parallel. They need to be connected together so that the consensus client can provide instructions to the execution client and the execution client can pass bundles of transactions to the consensus client to include in Beacon blocks. This communication between the two clients can be achieved using a local RPC connection. An API known as the ['Engine-API'](https://github.com/ethereum/execution-apis/blob/main/src/engine/specification.md) defines the instructions sent between the two clients. Since both clients sit behind a single network identity, they share a ENR (Ethereum node record) which contains a separate key for each client (eth1 key and eth2 key).
 
 A summary of the control flow is shown beloiw, with the relevant networking stack in brackets.
 
