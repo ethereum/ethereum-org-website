@@ -187,6 +187,7 @@ const Rules = styled.div`
 const SubmitInstructions = styled.div`
   flex: 1 1 600px;
   margin-right: 2rem;
+  max-width: 100ch;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     margin-right: 0;
   }
@@ -585,7 +586,7 @@ const BugBountiesPage = ({ data, location }) => {
               <Translation id="page-upgrades-bug-bounty-quality-fix" />
             </p>
           </SubmitInstructions>
-          <BugBountyPoints />
+          {/* TODO: Re-add Points Exchange (BugBountyPoints Component) */}
         </Row>
       </Content>
       <BugBountyCards />
