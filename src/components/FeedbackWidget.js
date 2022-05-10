@@ -195,19 +195,27 @@ const FeedbackWidget = ({ prompt, className }) => {
             <Icon name="close" />
           </IconContainer>
           <p className="title">
-            {feedbackSubmitted
-              ? "Thank you for your feedback!"
-              : "Is this page helpful?"}
+            {feedbackSubmitted ? (
+              <Translation id="feedback-widget-thank-you-title" />
+            ) : (
+              <Translation id="feedback-widget-prompt" />
+            )}
           </p>
           {feedbackSubmitted && (
             <p className="subtitle">
-              Make this page even better by answering a few questions.
+              <Translation id="feedback-widget-thank-you-subtitle" />
             </p>
           )}
-          {feedbackSubmitted && <p className="timing">2 - 3 min</p>}
+          {feedbackSubmitted && (
+            <p className="timing">
+              <Translation id="feedback-widget-thank-you-timing" />
+            </p>
+          )}
           <ButtonContainer>
             {feedbackSubmitted ? (
-              <ButtonLink to={getSurveyUrl()}>Open short survey</ButtonLink>
+              <ButtonLink to={getSurveyUrl()}>
+                <Translation id="feedback-widget-thank-you-cta" />
+              </ButtonLink>
             ) : (
               <>
                 <ButtonPrimary onClick={() => handleSubmit(true)}>
