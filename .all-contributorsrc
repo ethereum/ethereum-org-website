@@ -7388,6 +7388,15 @@
         "doc",
         "ideas"
       ]
+    },
+    {
+      "login": "soranature",
+      "name": "Sora Nature",
+      "avatar_url": "https://avatars.githubusercontent.com/u/105337203?v=4",
+      "profile": "https://github.com/soranature",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
