@@ -269,6 +269,10 @@ Below is the ABI for the ERC-20 token contract. An ERC-20 is a token you can tra
 ]
 ```
 
+## how to compile it?
+
+tool and command?
+
 ## Further reading {#further-reading}
 
 - [ABI spec](https://solidity.readthedocs.io/en/v0.7.0/abi-spec.html) _– Solidity_
