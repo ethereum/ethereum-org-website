@@ -6,9 +6,9 @@ import child_process from "child_process"
 import { createFilePath } from "gatsby-source-filesystem"
 import type { GatsbyNode } from "gatsby"
 
-import type { GetAllMdxQuery } from "./gatsby-graphql"
 import type { Lang } from "./src/data/translations"
 import type { TContext } from "./types"
+import type { AllMdxQuery } from "./src/types/schema"
 
 import mergeTranslations from "./src/scripts/mergeTranslations"
 import copyContributors from "./src/scripts/copyContributors"
@@ -197,7 +197,7 @@ export const createPages: GatsbyNode<any, TContext>["createPages"] = async ({
     })
   })
 
-  const result = await graphql<GetAllMdxQuery>(`
+  const result = await graphql<{ allMdx: { edges: Array<AllMdxQuery> } }>(`
     query getAllMdx {
       allMdx {
         edges {

@@ -7,9 +7,9 @@
     "moduleResolution": "node",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    // "allowJs": true,
     "strict": true,
+    "noImplicitAny": false,
     "skipLibCheck": true
   },
-  "include": ["./src/**/*"]
+  "include": ["./src"]
 }
