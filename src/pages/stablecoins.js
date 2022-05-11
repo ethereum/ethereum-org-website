@@ -309,7 +309,6 @@ const StablecoinsPage = ({ data }) => {
       DUSD: { type: CRYPTO, url: "https://dusd.finance/" },
       PAXG: { type: ASSET, url: "https://www.paxos.com/paxgold/" },
       AMPL: { type: ALGORITHMIC, url: "https://www.ampleforth.org/" },
-      UST: { type: ALGORITHMIC, url: "https://www.terra.money/" },
       FRAX: { type: ALGORITHMIC, url: "https://frax.finance/" },
       MIM: { type: ALGORITHMIC, url: "https://abracadabra.money/" },
       USDP: { type: FIAT, url: "https://paxos.com/usdp/" },
@@ -322,14 +321,25 @@ const StablecoinsPage = ({ data }) => {
     ;(async () => {
       try {
         // No option to filter by stablecoins, so fetching the top tokens by market cap
-        const data = await getData(
-          "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=250&page=1&sparkline=false"
+
+        const ethereumData = await getData(
+          "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&category=ethereum-ecosystem&order=market_cap_desc&per_page=100&page=1&sparkline=false"
         )
-        const markets = data
-          .filter((token) =>
-            Object.keys(stablecoins).includes(token.symbol.toUpperCase())
-          )
-          .slice(0, 10)
+        const stablecoinData = await getData(
+          "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&category=stablecoins&order=market_cap_desc&per_page=100&page=1&sparkline=false"
+        )
+
+        const filteredData = stablecoinData.filter(
+          (stablecoin) =>
+            ethereumData.findIndex(
+              (etherToken) => stablecoin.id == etherToken.id
+            ) > -1
+        )
+
+        const markets = filteredData
+          .filter((token) => {
+            return stablecoins[token.symbol.toUpperCase()]
+          })
           .map((token) => {
             return {
               name: token.name,
