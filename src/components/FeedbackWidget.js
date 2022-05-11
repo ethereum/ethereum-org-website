@@ -18,10 +18,11 @@ const FixedDot = styled.div`
   aspect-ratio: 1;
   border-radius: 50%;
   background-color: ${({ theme }) => theme.colors.primary};
+  box-shadow: 0px 4px 4px ${({ theme }) => theme.colors.tableItemBoxShadow};
   position: fixed;
   bottom: ${({ bottomOffset }) => 1 + bottomOffset}rem;
   right: 1rem;
-  z-index: 1000;
+  z-index: 96;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -41,7 +42,7 @@ const ModalBackground = styled.div`
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
-  z-index: 1001;
+  z-index: 97;
 `
 
 const Container = styled.div`
@@ -55,7 +56,7 @@ const Container = styled.div`
   position: fixed;
   right: 2rem;
   bottom: ${({ bottomOffset }) => 5 + bottomOffset}rem;
-  z-index: 1003;
+  z-index: 98;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.s}) {
     width: auto;
@@ -107,15 +108,14 @@ const ButtonContainer = styled.div`
   width: 100%;
   * {
     flex: 1;
-    color: ${({ theme }) => theme.colors.text};
+    color: ${({ theme }) => theme.colors.white};
     font-weight: 700;
   }
 `
 
 const StyledFeedbackGlyph = styled(FeedbackGlyph)`
   path {
-    fill: ${({ theme, isOpen }) =>
-      isOpen ? theme.colors.text : theme.colors.background};
+    fill: ${({ theme }) => theme.colors.white};
   }
 `
 
@@ -133,7 +133,7 @@ const IconContainer = styled.div`
 
 const FeedbackWidget = ({ prompt, className }) => {
   const containerRef = useRef()
-  useOnClickOutside(containerRef, () => handleClose())
+  useOnClickOutside(containerRef, () => handleClose(), [`mousedown`])
   const [isOpen, setIsOpen] = useState(false)
   const [feedbackSubmitted, setFeedbackSubmitted] = useState(false)
   const [isHelpful, setIsHelpful] = useState(null)
@@ -184,7 +184,7 @@ const FeedbackWidget = ({ prompt, className }) => {
     return surveyUrls.default[isHelpful ? "yes" : "no"]
   }
 
-  const pathsWithBottomNav = ["/staking/", "/dao/", "/defi/", "/nft/"]
+  const pathsWithBottomNav = ["/staking", "/dao", "/defi", "/nft"]
 
   const bottomOffset = () => {
     const CONDITIONAL_OFFSET = 6.75
@@ -200,7 +200,7 @@ const FeedbackWidget = ({ prompt, className }) => {
   return (
     <>
       <FixedDot onClick={handleOpen} bottomOffset={bottomOffset()}>
-        <StyledFeedbackGlyph isOpen={isOpen} />
+        <StyledFeedbackGlyph />
       </FixedDot>
       <ModalBackground isOpen={isOpen}>
         <Container
