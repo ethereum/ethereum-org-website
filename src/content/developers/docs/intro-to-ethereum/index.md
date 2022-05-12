@@ -61,7 +61,7 @@ Thus, with smart contracts, developers can build and deploy arbitrarily complex 
 
 ### Blockchain {#blockchain}
 
-The sequence of all blocks that have been committed to the Ethereum network in the history of the network. So-named because each block contains a reference to the previous block, which helps us maintain an ordering over all blocks (and thus over the precise history).
+The sequence of all blocks that have been committed to the Ethereum network in the history of the network. So named because each block contains a reference to the previous block, which helps us maintain an ordering over all blocks (and thus over the precise history).
 
 ### ETH {#eth}
 

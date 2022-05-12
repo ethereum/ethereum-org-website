@@ -5,35 +5,35 @@ lang: ro
 sidebar: true
 ---
 
-Când creezi o aplicație Ethereum cu contracte inteligente, vei dori să o rulezi pe o rețea locală pentru a vedea cum funcționează înainte de a o implementa.
+Când creaţi o aplicație Ethereum cu contracte inteligente, trebuie să o rulaţi pe o rețea locală pentru a vedea cum funcționează, înainte de a o implementa.
 
-Similar cu modul în care ai putea rula un server local pe computerul tău pentru dezvoltarea web, poți utiliza o rețea de dezvoltare pentru a crea o instanță locală de blockchain pentru a testa aplicații dapp. Aceste rețele de dezvoltare Ethereum oferă caracteristici care permit o iterație mult mai rapidă decât o rețea de test publică (de exemplu, nu trebuie să te ocupi de achiziționarea ETH de la un faucet de testare).
+La fel cum aţi rula un server local pe computerul dvs. pentru dezvoltare pe web, puteţi utiliza o rețea de dezvoltare pentru a crea o instanță locală de blockchain ca să vă testaţi aplicațiile dapp. Aceste rețele de dezvoltare Ethereum oferă funcţionalităţi care permit o iterație mult mai rapidă decât un testnet public (de exemplu, nu trebuie să vă ocupaţi de achiziționarea de ETH de la un faucet de testnet).
 
 ## Condiții prealabile {#prerequisites}
 
-Trebuie să înțelegi [elementele de bază ale stivei Ethereum](/developers/docs/ethereum-stack/) și [rețelelor Ethereum](/developers/docs/networks/) înainte de a explora rețelele de dezvoltare.
+Trebuie să înțelegeţi [elementele de bază ale stivei Ethereum](/developers/docs/ethereum-stack/) și [rețelele Ethereum](/developers/docs/networks/) înainte de a explora rețelele de dezvoltare.
 
 ## Ce este o rețea de dezvoltare? {#what-is-a-development-network}
 
-Rețelele de dezvoltare sunt în esență clienți Ethereum (implementări ale Ethereum) concepute special pentru dezvoltarea locală.
+Rețelele de dezvoltare sunt în esență clienți Ethereum (implementări ale lui Ethereum) concepute special pentru dezvoltarea locală.
 
-**De ce să nu rulăm doar un nod standard Ethereum la nivel local?**
+**De ce să nu rulăm pur şi simplu un nod standard Ethereum la nivel local?**
 
-_Poți_ [rula un nod](/developers/docs/nodes-and-clients/#running-your-own-node) ( cum ar fi Geth, OpenEthereum sau Nethermind), dar din moment ce rețelele de dezvoltare sunt concepute special pentru dezvoltare, acestea conțin adesea caracteristici utile precum:
+Ați _putea_ [executa un nod](/developers/docs/nodes-and-clients/#running-your-own-node) (precum Geth, Erigon sau Nethermind), dar, pentru că rețelele de dezvoltare sunt construite special pentru dezvoltare, ele vin adesea echipate cu funcţionalităţi practice precum:
 
-- Alimentarea determinată a blockchain-ului local cu date (de exemplu, conturi cu solduri ETH)
-- Minare instantanee de blocuri cu fiecare tranzacție pe care o primește, în ordine și fără întârziere
-- Funcționalitate îmbunătățită de depanare și înregistrare
+- Alimentarea deterministică a blockchain-ului dvs. local cu date (de exemplu, conturi cu solduri în ETH)
+- Minarea instantanee a blocurilor cu fiecare tranzacție pe care o primesc, în ordine și fără întârziere
+- O funcţionalitate îmbunătățită de eliminare a bug-urilor și de înregistrare
 
 ## Instrumente disponibile {#available-projects}
 
-**Notă**: Majoritatea [cadrelor de dezvoltare](/developers/docs/frameworks/) includ o rețea de dezvoltare integrată. Îți recomandăm să începi cu un cadru pentru a [configura mediul de dezvoltare local](/developers/local-environment/).
+**Observaţie**: Majoritatea [framework-urilor de dezvoltare](/developers/docs/frameworks/) includ o rețea de dezvoltare integrată. Vă recomandăm să începeţi cu un framework pentru a vă [configura mediul de dezvoltare local](/developers/local-environment/).
 
 ### Ganache {#ganache}
 
-Lansează rapid un blockchain personal Ethereum pe care îl poți folosi pentru a rula teste, a executa comenzi și a inspecta starea în timp ce controlezi modul în care funcționează lanțul.
+Lansează rapid un blockchain personal Ethereum pe care îl puteţi folosi pentru a rula teste, a executa comenzi și a inspecta starea în timp ce controlaţi modul în care funcționează lanțul.
 
-Ganache oferă atât o aplicație desktop (Ganache UI), cât și un instrument de linie de comandă (`ganache-cli`). Face parte din setul de unelte Truffle.
+Ganache oferă atât o aplicație desktop (Ganache UI), cât și un instrument de linie de comandă (`ganache-cli`). Face parte din suita de unelte Truffle.
 
 - [Site web](https://www.trufflesuite.com/ganache)
 - [GitHub](https://github.com/trufflesuite/ganache)
@@ -41,18 +41,18 @@ Ganache oferă atât o aplicație desktop (Ganache UI), cât și un instrument d
 
 ### Rețeaua Hardhat {#hardhat-network}
 
-O rețea locală Ethereum concepută pentru dezvoltare. Îți permite să lansezi contractele, să execuți testele și să depanezi codul
+O rețea locală Ethereum concepută pentru dezvoltare. Vă permite să vă implementaţi contractele, să vă execuți testele și să eliminaţi bug-urile din cod.
 
-Rețeaua Hardhat vine încorporată cu Hardhat, un mediu de dezvoltare Ethereum pentru profesioniști.
+Rețeaua Hardhat este dotată cu Hardhat integrat, un mediu de dezvoltare în Ethereum pentru profesioniști.
 
 - [Site web](https://hardhat.org/)
 - [GitHub](https://github.com/nomiclabs/hardhat)
 
 ## Referințe suplimentare {#further-reading}
 
-_Cunoști o resursă comunitară care te-a ajutat? Editează această pagină și adaug-o!_
+_Cunoaşteţi o resursă comunitară care v-a ajutat? Editaţi această pagină și adăugaţi-o!_
 
 ## Subiecte corelate {#related-topics}
 
-- [Cadrele de dezvoltare](/developers/docs/frameworks/)
-- [Configurează unui mediu de dezvoltare locală](/developers/local-environment/)
+- [Framework-uri de dezvoltare](/developers/docs/frameworks/)
+- [Configurarea unui mediu de dezvoltare local](/developers/local-environment/)

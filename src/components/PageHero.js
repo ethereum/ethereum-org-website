@@ -114,7 +114,7 @@ const PageHero = ({ content, children, className, isReverse }) => {
           )}
           {children}
         </HeroContent>
-        <HeroImg image={image} alt={alt} loading="eager" />
+        <HeroImg image={image} objectFit="contain" alt={alt} loading="eager" />
       </HeroContainer>
     </Content>
   )

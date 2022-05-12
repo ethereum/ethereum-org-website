@@ -107,7 +107,7 @@ With the signature hash, the transaction can be cryptographically proven that it
 ### The data field {#the-data-field}
 
 The vast majority of transactions access a contract from an externally-owned account.
-Most contracts are written in Solidity and interpret their data field in accordance with the [application binary interface (ABI)](/glossary/#abi/).
+Most contracts are written in Solidity and interpret their data field in accordance with the [application binary interface (ABI)](/glossary/#abi).
 
 The first four bytes specify which function to call, using the hash of the function's name and arguments.
 You can sometimes identify the function from the selector using [this database](https://www.4byte.directory/signatures/).

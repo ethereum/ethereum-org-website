@@ -55,7 +55,7 @@ const config: GatsbyConfig = {
         short_name: `ethereum.org`,
         start_url: `/en/`,
         background_color: `#ffffff`,
-        theme_color: `#1c1ce1`,
+        theme_color: `#222222`,
         display: `standalone`,
         icon: `src/assets/favicon.png`,
       },

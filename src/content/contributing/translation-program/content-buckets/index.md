@@ -36,12 +36,12 @@ Below is a breakdown of the website pages each content bucket contains.
 
 - [Decentralized autonomous organizations (DAOs)](/dao/)
 - [Decentralized finance (DeFi)](/defi/)
+- [Energy consumption](/energy-consumption/)
+- [Governance](/governance/)
 - [Non-fungible tokens (NFT)](/nft/)
-- [Translation Program](/contributing/translation-program/)
-- [Translation guide](/contributing/translation-program/translation-guide/)
-- [Ethereum grants](/community/grants/)
-- [Translator acknowledgements](/contributing/translation-program/)
-- [Our translators](/contributing/translation-program/contributors/)
+- [Ethereum security and scam prevention](/security/)
+- [Introduction to smart contracts](/smart-contracts/)
+- [Web3](/web3/)
 
 ## 4) Upgrades {#upgrades}
 
@@ -145,14 +145,28 @@ Below is a breakdown of the website pages each content bucket contains.
 ## 10) Additional Learn and general pages {#general-pages}
 
 - [About ethereum.org](/about/)
-- [Ethereum Improvement Proposals (EIPs)](/eips/)
 - [Enterprise Ethereum](/enterprise/)
 - [Private Ethereum](/enterprise/private-ethereum/)
 - [History](/history/)
 - [Glossary](/glossary/)
 - [Brand assets](/assets/)
 
-## 11) Developer tutorials 1 {#tutorials-1}
+## 11) Contributing {#contributing}
+
+- [Contributing to ethereum.org](/contributing/)
+- [Adding developer tools](/contributing/adding-developer-tools/)
+- [Adding exchanges](/contributing/adding-exchanges/)
+- [Adding glossary terms](/contributing/adding-glossary-terms/)
+- [Adding layer 2s](/contributing/adding-layer-2/)
+- [Adding products](/contributing/adding-products/)
+- [Adding staking products](/contributing/adding-staking-product/)
+- [Adding content resources](/contributing/content-resources/)
+- [Translation Program](/contributing/translation-program/)
+- [Translation guide](/contributing/translation-program/translation-guide/)
+- [Translator acknowledgements](/contributing/translation-program/)
+- [Our translators](/contributing/translation-program/contributors/)
+
+## 12) Developer tutorials 1 {#tutorials-1}
 
 - [A Python developer's introduction to Ethereum](/developers/tutorials/a-developers-guide-to-ethereum-part-one/)
 - [Calling a smart contract from JavaScript](/developers/tutorials/calling-a-smart-contract-from-javascript/)
@@ -164,7 +178,7 @@ Below is a breakdown of the website pages each content bucket contains.
 - [Transfers and approval of ERC-20 tokens from a Solidity smart contract](/developers/tutorials/transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract/)
 - [Understand the ERC-20 token smart contract](/developers/tutorials/understand-the-erc-20-token-smart-contract/)
 
-## 12) Developer tutorials 2 {#tutorials-2}
+## 13) Developer tutorials 2 {#tutorials-2}
 
 - [Create and deploy a DeFi app](/developers/tutorials/create-and-deploy-a-defi-app/)
 - [Deploying your first smart contract](/developers/tutorials/deploying-your-first-smart-contract/)
@@ -178,7 +192,7 @@ Below is a breakdown of the website pages each content bucket contains.
 - [Sending transactions using Web3](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)
 - [Uniswap-v2 contract walkthrough](/developers/tutorials/uniswap-v2-annotated-code/)
 
-## 13) Developer tutorials 3 {#tutorials-3}
+## 14) Developer tutorials 3 {#tutorials-3}
 
 - [Downsizing contracts to fight the contract size limit](/developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/)
 - [Getting Started with Ethereum Development](/developers/tutorials/getting-started-with-ethereum-development-using-alchemy/)

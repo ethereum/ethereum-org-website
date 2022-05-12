@@ -46,7 +46,7 @@ If you are bilingual and want to help us reach more people, you can also get inv
 **General resources**
 
 - [Ethereum.cn](https://www.ethereum.cn/) - community maintained content, covering the consensus layer upgrade, all core dev meeting notes, layer 2, etc.
-- [EthFans](https://ethfans.org/) - learn everything from the basics to advanced Ethereum topics
+- [EthFans](https://github.com/editor-Ajian/EthFans.org-annual-collected-works/) - learn everything from the basics to advanced Ethereum topics
 - [Unitimes](https://mp.weixin.qq.com/s/tvloZSDBSOQN9zDQj_91kA) - community maintained content, covering Ethereum, DeFi, NFT, Web3-related knowledge
 - [123ETH](https://123eth.org/) - a Portal to the Ethereum ecosystem
 - [Zhen Xiao](http://zhenxiao.com/blockchain/) - free online courses about cryptocurrency and its applications

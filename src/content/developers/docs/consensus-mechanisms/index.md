@@ -24,6 +24,8 @@ In regards to blockchain, the process is formalized, and reaching consensus mean
 
 Consensus mechanisms (also known as consensus protocols or consensus algorithms) allow distributed systems (networks of computers) to work together and stay secure.
 
+Consensus protocols and consensus algorithms are often used interchangeably. However, protocols and algorithms are different. A protocol is a set of rules defined in a standard that governs how a system and its many functioning parts operate and interact. Algorithms are like exact recipes on how to solve a problem or calculate a result.
+
 For decades, these mechanisms have been used to establish consensus among database nodes, application servers, and other enterprise infrastructure. In recent years, new consensus mechanisms have been invented to allow cryptoeconomic systems, such as Ethereum, to agree on the state of the network.
 
 A consensus mechanism in a cryptoeconomic system also helps prevent certain kinds of economic attacks. In theory, an attacker can compromise consensus by controlling 51% of the network. Consensus mechanisms are designed to make this "51% attack" unfeasible. Different mechanisms are engineered to solve this security problem in different ways.
@@ -84,6 +86,7 @@ The [Beacon Chain](/upgrades/beacon-chain/) uses a consensus mechanism called [C
 - [What is Nakamoto Consensus? Complete Beginner’s Guide](https://blockonomi.com/nakamoto-consensus/)
 - [How Does Casper work?](https://medium.com/unitychain/intro-to-casper-ffg-9ed944d98b2d)
 - [On the Security and Performance of Proof of Work Blockchains](https://eprint.iacr.org/2016/555.pdf)
+- [Byzantine fault](https://en.wikipedia.org/wiki/Byzantine_fault)
 
 _Know of a community resource that helped you? Edit this page and add it!_
 
