@@ -1,8 +1,15 @@
 // Libraries
 import React from "react"
+import styled from "styled-components"
 
 // Components
 import CardList from "../CardList"
+
+const StyledCardList = styled(CardList)`
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+`
 
 const StakingGuides = () => {
   const guides = [
@@ -23,7 +30,7 @@ const StakingGuides = () => {
     },
   ]
 
-  return <CardList content={guides} />
+  return <StyledCardList content={guides} />
 }
 
 export default StakingGuides

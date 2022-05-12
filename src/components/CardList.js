@@ -36,7 +36,6 @@ const ItemLink = styled(Link)`
   padding: 1rem;
   width: 100%;
   color: #000000;
-  margin-bottom: 1rem;
   &:hover {
     border-radius: 4px;
     box-shadow: 0 0 1px ${(props) => props.theme.colors.primary};
