@@ -81,8 +81,7 @@
     "typescript": "^4.6.3"
   },
   "scripts": {
-    "build": "rm -rf cache && yarn build:app",
-    "build:app": "gatsby build",
+    "build": "gatsby build",
     "build:lambda": "netlify-lambda build src/lambda",
     "copy-contributors": "node src/scripts/copy-contributors.js",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
