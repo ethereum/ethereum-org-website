@@ -10,7 +10,7 @@ Ethereum creates, stores and transfers large volumes of data. This data must get
 
 ## Prerequisites {#prerequisites}
 
-You should understand the fundamentals of Ethereum and [client software]. Familiarity with the networking layer and [the Ethereum whitepaper](/whitepaper/) is recommended.
+You should understand the fundamentals of Ethereum and [client software](/developers/docs/nodes-and-clients/). Familiarity with the networking layer and [the Ethereum whitepaper](/whitepaper/) is recommended.
 
 ## Data structures {#data-structures}
 
