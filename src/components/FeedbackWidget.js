@@ -1,5 +1,5 @@
 // Library imports
-import React, { useState, useRef } from "react"
+import React, { useState, useRef, useMemo } from "react"
 import styled from "styled-components"
 // Component imports
 import ButtonLink from "./ButtonLink"
@@ -186,7 +186,7 @@ const FeedbackWidget = ({ prompt, className }) => {
 
   const pathsWithBottomNav = ["/staking", "/dao", "/defi", "/nft"]
 
-  const bottomOffset = () => {
+  const getBottomOffset = () => {
     const CONDITIONAL_OFFSET = 6.75
     let offset = 0
     pathsWithBottomNav.forEach((path) => {
@@ -197,15 +197,17 @@ const FeedbackWidget = ({ prompt, className }) => {
     return offset
   }
 
+  const bottomOffset = useMemo(getBottomOffset, [location])
+
   return (
     <>
-      <FixedDot onClick={handleOpen} bottomOffset={bottomOffset()}>
+      <FixedDot onClick={handleOpen} bottomOffset={bottomOffset}>
         <StyledFeedbackGlyph />
       </FixedDot>
       <ModalBackground isOpen={isOpen}>
         <Container
           isOpen={isOpen}
-          bottomOffset={bottomOffset()}
+          bottomOffset={bottomOffset}
           ref={containerRef}
           className={className}
         >
