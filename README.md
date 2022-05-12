@@ -1199,6 +1199,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://hack.bg"><img src="https://avatars.githubusercontent.com/u/13139371?v=4?s=100" width="100px;" alt=""/><br /><sub><b>mradkov</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=mradkov" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/b17z"><img src="https://avatars.githubusercontent.com/u/3633484?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Bienvenido Rodriguez</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=b17z" title="Documentation">📖</a> <a href="#ideas-b17z" title="Ideas, Planning, & Feedback">🤔</a></td>
     <td align="center"><a href="https://github.com/soranature"><img src="https://avatars.githubusercontent.com/u/105337203?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Sora Nature</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=soranature" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://josephschiarizzi.com"><img src="https://avatars.githubusercontent.com/u/9449596?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Joseph Schiarizzi</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=cupOJoseph" title="Documentation">📖</a></td>
   </tr>
 </table>
 
