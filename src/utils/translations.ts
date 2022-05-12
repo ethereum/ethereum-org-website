@@ -1,12 +1,8 @@
 import { IntlShape } from "gatsby-plugin-intl"
 
-import languages, { Lang } from "../data/languages"
+import type { Lang } from "./languages"
 
-export const defaultLanguage = `en`
-
-const buildLangs = (process.env.GATSBY_BUILD_LANGS || "")
-  .split(",")
-  .filter(Boolean)
+import defaultStrings from "../intl/en.json"
 
 const consoleError = (message: string): void => {
   const { NODE_ENV } = process.env
@@ -15,28 +11,8 @@ const consoleError = (message: string): void => {
   }
 }
 
-// will take the same shape as `languages`. Only thing we are doing
-// here is filtering the desired langs to be built
-export const languageMetadata = Object.fromEntries(
-  Object.entries(languages).filter(([lang]) => {
-    // BUILD_LANGS === empty means to build all the langs
-    if (!buildLangs.length) {
-      return true
-    }
-
-    return buildLangs.includes(lang)
-  })
-)
-
-export const supportedLanguages = Object.keys(languageMetadata) as Array<Lang>
-
-export const ignoreLanguages = (Object.keys(languages) as Array<Lang>).filter(
-  (lang) => !supportedLanguages.includes(lang)
-)
-
 // Returns the en.json value
 export const getDefaultMessage = (key: string): string => {
-  const defaultStrings = require("../intl/en.json")
   const defaultMessage = defaultStrings[key]
   if (defaultMessage === undefined) {
     consoleError(

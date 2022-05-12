@@ -7,7 +7,7 @@ import {
   supportedLanguages,
   defaultLanguage,
   ignoreLanguages,
-} from "./src/utils/translations"
+} from "./src/utils/languages"
 
 const siteUrl = `https://ethereum.org`
 

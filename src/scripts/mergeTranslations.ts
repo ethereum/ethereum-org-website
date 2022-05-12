@@ -1,7 +1,7 @@
 import fs from "fs"
 import path from "path"
 
-import { supportedLanguages } from "../utils/translations"
+import { supportedLanguages } from "../utils/languages"
 import mergeObjects from "../utils/mergeObjects"
 
 // Iterate over each supported language and generate /intl/${lang}.json

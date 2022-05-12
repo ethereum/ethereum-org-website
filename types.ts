@@ -1,4 +1,4 @@
-import { Lang } from "./src/data/languages"
+import { Lang } from "./src/utils/languages"
 import { IMessages } from "./src/utils/flattenMessages"
 
 export type TIntl = {

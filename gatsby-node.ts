@@ -6,14 +6,17 @@ import child_process from "child_process"
 import { createFilePath } from "gatsby-source-filesystem"
 import type { GatsbyNode } from "gatsby"
 
-import type { Lang } from "./src/data/languages"
 import type { TContext } from "./types"
 import type { AllMdxQuery } from "./src/types/schema"
 
 import mergeTranslations from "./src/scripts/mergeTranslations"
 import copyContributors from "./src/scripts/copyContributors"
 
-import { supportedLanguages, defaultLanguage } from "./src/utils/translations"
+import {
+  supportedLanguages,
+  defaultLanguage,
+  Lang,
+} from "./src/utils/languages"
 import getMessages from "./src/utils/getMessages"
 import redirects from "./redirects.json"
 

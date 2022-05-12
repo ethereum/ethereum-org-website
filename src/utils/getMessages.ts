@@ -2,7 +2,7 @@ import fs from "fs"
 
 import flattenMessages, { IMessages } from "./flattenMessages"
 
-import type { Lang } from "../data/languages"
+import type { Lang } from "./languages"
 
 // same function from 'gatsby-plugin-intl'
 const getMessages = (path: string, language: Lang): IMessages => {
