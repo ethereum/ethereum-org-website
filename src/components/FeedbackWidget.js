@@ -189,7 +189,7 @@ const FeedbackWidget = ({ prompt, className }) => {
 
   const pathsWithBottomNav = ["/staking", "/dao", "/defi", "/nft"]
 
-  const getBottomOffset = () => {
+  const bottomOffset = useMemo(() => {
     const CONDITIONAL_OFFSET = 6.75
     let offset = 0
     pathsWithBottomNav.forEach((path) => {
@@ -198,9 +198,7 @@ const FeedbackWidget = ({ prompt, className }) => {
       }
     })
     return offset
-  }
-
-  const bottomOffset = useMemo(getBottomOffset, [location])
+  }, [location, pathsWithBottomNav])
 
   return (
     <>
