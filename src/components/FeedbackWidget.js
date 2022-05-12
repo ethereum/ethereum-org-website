@@ -20,7 +20,10 @@ const FixedDot = styled.div`
   background-color: ${({ theme }) => theme.colors.primary};
   box-shadow: 0px 4px 4px ${({ theme }) => theme.colors.tableItemBoxShadow};
   position: fixed;
-  bottom: ${({ bottomOffset }) => 1 + bottomOffset}rem;
+  bottom: 1rem;
+  @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
+    bottom: ${({ bottomOffset }) => 1 + bottomOffset}rem;
+  }
   right: 1rem;
   z-index: 96;
   display: flex;
