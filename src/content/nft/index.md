@@ -13,9 +13,14 @@ summaryPoint2: NFTs are giving more power to content creators than ever before.
 summaryPoint3: Powered by smart contracts on the Ethereum blockchain.
 ---
 
-NFTs are currently taking the digital art and collectibles world by storm. Digital artists are seeing their lives change thanks to huge sales to a new crypto-audience. And celebrities are joining in as they spot a new opportunity to connect with fans. But digital art is only one way to use NFTs. Really they can be used to represent ownership of any unique asset, like a deed for an item in the digital or physical realm.
+NFTs are a hot topic in 2022, first came profile pictures and digital art, and celebrities are joining in as they spot a new opportunity to connect with fans.
 
-If Andy Warhol had been born in the late 90s, he probably would have minted Campbell's Soup as an NFT. It's only a matter of time before Kanye puts a run of Yeezys on Ethereum. And one day owning your car might be proved with an NFT.
+In 2021, NFT has become Collins Dictionary's word of the year for 2021 and nearly 80% of NFTs were on the Ethereum ecosystem. In May 2022, major social media platforms announced they are integrating NFTs.
+
+NFTs were first described in a project called Colored Coins, [the whitepaper ](https://docs.google.com/document/d/1AnkP_cVZTCMLIzw4DvsW6M8Q2JC0lIzrTLuoWu2z1BE/edit) describes methods for representing and managing real-world assets on the blockchain to prove ownership of those assets
+
+The Colored Coins concept was never realised, however, it did lay the foundation for the experiments that led to the invention of NFTs.
+
 
 ## What's an NFT? {#what-are-nfts}
 
