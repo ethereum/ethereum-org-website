@@ -45,11 +45,11 @@ export type Lang =
   | "zh"
   | "zh-tw"
 
-export type Translations = {
+export type Languages = {
   [lang in Lang]: { language: string }
 }
 
-const translations: Translations = {
+const languages: Languages = {
   en: {
     language: "English",
   },
@@ -187,4 +187,4 @@ const translations: Translations = {
   },
 }
 
-export default translations
+export default languages

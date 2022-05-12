@@ -6,7 +6,7 @@ import child_process from "child_process"
 import { createFilePath } from "gatsby-source-filesystem"
 import type { GatsbyNode } from "gatsby"
 
-import type { Lang } from "./src/data/translations"
+import type { Lang } from "./src/data/languages"
 import type { TContext } from "./types"
 import type { AllMdxQuery } from "./src/types/schema"
 

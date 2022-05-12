@@ -1,6 +1,6 @@
 import { IntlShape } from "gatsby-plugin-intl"
 
-import allLanguages, { Lang } from "../data/translations"
+import languages, { Lang } from "../data/languages"
 
 export const defaultLanguage = `en`
 
@@ -15,10 +15,10 @@ const consoleError = (message: string): void => {
   }
 }
 
-// will take the same shape as `allLanguages`. Only thing we are doing
+// will take the same shape as `languages`. Only thing we are doing
 // here is filtering the desired langs to be built
 export const languageMetadata = Object.fromEntries(
-  Object.entries(allLanguages).filter(([lang]) => {
+  Object.entries(languages).filter(([lang]) => {
     // BUILD_LANGS === empty means to build all the langs
     if (!buildLangs.length) {
       return true
@@ -30,9 +30,9 @@ export const languageMetadata = Object.fromEntries(
 
 export const supportedLanguages = Object.keys(languageMetadata) as Array<Lang>
 
-export const ignoreLanguages = (
-  Object.keys(allLanguages) as Array<Lang>
-).filter((lang) => !supportedLanguages.includes(lang))
+export const ignoreLanguages = (Object.keys(languages) as Array<Lang>).filter(
+  (lang) => !supportedLanguages.includes(lang)
+)
 
 // Returns the en.json value
 export const getDefaultMessage = (key: string): string => {
