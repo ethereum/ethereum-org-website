@@ -743,10 +743,6 @@ An off-chain scaling solution that uses [fraud proofs](#fraud-proof), like [Opti
   Plasma
 </DocLink>
 
-### presale {#presale}
-
-Sale of cryptocurrency before the actual launch of the network.
-
 ### private key (secret key) {#private-key}
 
 A secret number that allows Ethereum users to prove ownership of an account or contracts, by producing a digital signature (see [public key](#public-key), [address](#address), [ECDSA](#ecdsa)).
