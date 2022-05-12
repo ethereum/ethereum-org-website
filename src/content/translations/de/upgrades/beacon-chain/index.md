@@ -25,12 +25,12 @@ Mit der Zeit können sich Aufgabe und Rolle der Beacon Chain zwar verändern, si
 
 ### Einführung ins Staking {#introducing-staking}
 
-Die Beacon Chain wird [Proof-of-Stake](/developers/docs/consensus-mechanisms/pos/) für Ethereum einführen. Dies eröffnet neue Möglichkeiten für die Beteiligung an der Sicherheit des Ethereum-Netzwerks. Man kann es sich als frei verfügbares Gut vorstellen, das Ethereum vitaler macht und Ihnen dabei im Prozess einige ETH einbringt. In der Praxis bedeutet das, ETH einzusetzen, um die Validierungssoftware zu aktivieren. Als Validierer verarbeiten Sie Transaktionen auf der Blockchain und beteiligen sich an der Erstellung neuer Blöcke.
+Die Beacon Chain wird [Proof-of-Stake](/developers/docs/consensus-mechanisms/pos/) für Ethereum einführen. Dies eröffnet neue Möglichkeiten für die Beteiligung an der Sicherheit des Ethereum-Netzwerks. Man kann es sich als frei verfügbares Gut vorstellen, das Ethereum vitaler macht und Ihnen dabei im Prozess einige ETH einbringt. In der Praxis bedeutet das, ETH einzusetzen, um die Validierungssoftware zu aktivieren. Als Validator verarbeiten Sie Transaktionen auf der Blockchain und beteiligen sich an der Erstellung neuer Blöcke.
 
-Das Staking als Validierer ist einfacher, als das [Mining](/developers/docs/mining/) (wie das Netzwerk momentan gesichert wird). Langfristig besteht die Hoffnung darin, Ethereum durch Staking noch sicherer zu machen. Je mehr Leute sich aktiv am Netzwerk beteiligen, desto dezentraler und damit robuster und sicherer ist Ethereum gegen potentielle Angriffe.
+Das Staking als Validator ist einfacher, als das [Mining](/developers/docs/mining/) (wie das Netzwerk momentan gesichert wird). Langfristig besteht die Hoffnung darin, Ethereum durch Staking noch sicherer zu machen. Je mehr Leute sich aktiv am Netzwerk beteiligen, desto dezentraler und damit robuster und sicherer ist Ethereum gegen potentielle Angriffe.
 
 <InfoBanner emoji=":money_bag:">
-Wenn Sie Interesse haben, die Beacon Chain als Validierer sicherer zu machen, <a href="/staking/">können Sie hier mehr über das Staking</a> lernen.
+Wenn Sie Interesse haben, die Beacon Chain als Validator sicherer zu machen, <a href="/staking/">können Sie hier mehr über das Staking</a> lernen.
 </InfoBanner>
 
 Das ist auch eine wichtige Änderung für ein anderes Upgrade: [Shard Chains](/upgrades/shard-chains/).
