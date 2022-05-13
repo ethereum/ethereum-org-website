@@ -2,7 +2,6 @@
 import React, { useState, useEffect, useRef, useMemo } from "react"
 import styled from "styled-components"
 // Component imports
-import ButtonLink from "./ButtonLink"
 import { ButtonPrimary } from "./SharedStyledComponents"
 import Translation from "./Translation"
 import Icon from "./Icon"
@@ -154,16 +153,21 @@ const FeedbackWidget = ({ prompt, className }) => {
     setIsHelpful(null)
   }, [location])
 
-  const surveyUrls = {
-    default: {
-      yes: `https://czvgzauj.paperform.co/?url=${location}`,
-      no: `https://xlljh5l3.paperform.co/?url=${location}`,
-    },
-    staking: {
-      yes: `https://gzmn3wgk.paperform.co/?url=${location}`,
-      no: `https://zlj83p6l.paperform.co/?url=${location}`,
-    },
-  }
+  const surveyUrl = useMemo(() => {
+    const surveyUrls = {
+      default: {
+        yes: `https://czvgzauj.paperform.co/?url=${location}`,
+        no: `https://xlljh5l3.paperform.co/?url=${location}`,
+      },
+      staking: {
+        yes: `https://gzmn3wgk.paperform.co/?url=${location}`,
+        no: `https://zlj83p6l.paperform.co/?url=${location}`,
+      },
+    }
+    if (!feedbackSubmitted) return null
+    if (isStaking) return surveyUrls.staking[isHelpful ? "yes" : "no"]
+    return surveyUrls.default[isHelpful ? "yes" : "no"]
+  }, [feedbackSubmitted, isHelpful, isStaking, location])
 
   const bottomOffset = useMemo(() => {
     const pathsWithBottomNav = ["/staking", "/dao", "/defi", "/nft"]
@@ -202,11 +206,14 @@ const FeedbackWidget = ({ prompt, className }) => {
     setIsHelpful(choice)
     setFeedbackSubmitted(true)
   }
-
-  const getSurveyUrl = () => {
-    if (!feedbackSubmitted) return null
-    if (isStaking) return surveyUrls.staking[isHelpful ? "yes" : "no"]
-    return surveyUrls.default[isHelpful ? "yes" : "no"]
+  const handleSurveyOpen = () => {
+    trackCustomEvent({
+      eventCategory: `Feedback survey opened`,
+      eventAction: `Clicked`,
+      label: "Feedback survey opened",
+    })
+    window && surveyUrl && window.open(surveyUrl, "_blank")
+    setIsOpen(false) // Close widget without triggering redundant tracker event
   }
 
   return (
@@ -243,9 +250,9 @@ const FeedbackWidget = ({ prompt, className }) => {
           )}
           <ButtonContainer>
             {feedbackSubmitted ? (
-              <ButtonLink to={getSurveyUrl()}>
+              <ButtonPrimary onClick={handleSurveyOpen}>
                 <Translation id="feedback-widget-thank-you-cta" />
-              </ButtonLink>
+              </ButtonPrimary>
             ) : (
               <>
                 <ButtonPrimary onClick={() => handleSubmit(true)}>
