@@ -97,7 +97,7 @@ const Container = styled.div`
     font-size: 0.75rem;
     line-height: 1rem;
     letter-spacing: 0.025em;
-    color: ${({ theme }) => theme.colors.ghostCardGhost};
+    color: ${({ theme }) => theme.colors.searchBorder};
   }
 
   a {
