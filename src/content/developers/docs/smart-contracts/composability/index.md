@@ -38,10 +38,17 @@ If there is a smart contract that solves one problem, other developers can reuse
 
 Composability encourages innovation and experimentation because developers are free to reuse, modify, duplicate, or integrate open-source code to create desired results. As a result, development teams spend less time on basic functionality and can allocate more time experimenting with new features.
 
-
 ### Better user experience {#better-user-experience}
 
 Interoperability between components of the Ethereum ecosystem improves the user experience. Users can access greater functionality when dapps integrate external smart contracts than in a fragmented ecosystem where applications cannot communicate.
+
+We'll use an example from arbitrage trading to illustrate the benefits of interoperability:
+
+If a token is trading higher on `exchange A` than `exchange B`, you can take advantage of the price difference to make profit. However, you can only do that if you have enough capital to fund the transaction (i.e., buying the token from `exchange B` and selling it on `exchange A`). 
+
+In a scenario where you don't have enough funds to cover the trade, a flash loan might be ideal. [Flash loans](/defi/#flash-loans) are highly technical, but the basic idea is that you can borrow assets (without collateral) and return same within *one* transaction. 
+
+Going back to our initial example, an arbitrage trader can take out a large flash loan, buy tokens from `exchange B`, sell them on `exchange A`, pay back the capital + interest, and keep the profit, within the same transaction. This complex logic requires combining calls to multiple contracts, which wouldn't be possible if smart contracts lacked interoperability. 
 
 ## Examples of composability in Ethereum {#composability-in-ethereum}
 
