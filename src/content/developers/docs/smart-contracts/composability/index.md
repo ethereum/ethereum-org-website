@@ -20,7 +20,7 @@ In Ethereum, every smart contract is a Lego of sorts—you can use smart contrac
 
 Ethereum smart contracts are like public APIs, so anyone can interact with the contract or integrate them into dapps for added functionality. Smart contract composability generally works off three principles: modularity, autonomy, and discoverability:  
 
-**1. Modularity**: This is the ability of individual components to perform a specific task. In Ethereum, every smart contract has specific use-case (as shown in the Uniswap example).
+**1. Modularity**: This is the ability of individual components to perform a specific task. In Ethereum, every smart contract has a specific use case (as shown in the Uniswap example).
 
 **2. Autonomy**: Composable components must be able to operate independently. Each smart contract in Ethereum is self-executing and can function without relying on other parts of the system. 
 
