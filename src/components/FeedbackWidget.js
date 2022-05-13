@@ -144,7 +144,6 @@ const FeedbackWidget = ({ prompt, className }) => {
   const [isHelpful, setIsHelpful] = useState(null)
 
   const location = typeof window !== "undefined" ? window.location.href : ""
-  const isStaking = location.includes("staking")
 
   useEffect(() => {
     // Reset component state when path (location) changes
@@ -154,20 +153,26 @@ const FeedbackWidget = ({ prompt, className }) => {
   }, [location])
 
   const surveyUrl = useMemo(() => {
+    if (!feedbackSubmitted) return null
+    const [YES, NO] = ["yes", "no"]
     const surveyUrls = {
-      default: {
-        yes: `https://czvgzauj.paperform.co/?url=${location}`,
-        no: `https://xlljh5l3.paperform.co/?url=${location}`,
+      __default: {
+        [YES]: `https://czvgzauj.paperform.co/?url=${location}`,
+        [NO]: `https://xlljh5l3.paperform.co/?url=${location}`,
       },
       staking: {
-        yes: `https://gzmn3wgk.paperform.co/?url=${location}`,
-        no: `https://zlj83p6l.paperform.co/?url=${location}`,
+        [YES]: `https://gzmn3wgk.paperform.co/?url=${location}`,
+        [NO]: `https://zlj83p6l.paperform.co/?url=${location}`,
       },
     }
-    if (!feedbackSubmitted) return null
-    if (isStaking) return surveyUrls.staking[isHelpful ? "yes" : "no"]
-    return surveyUrls.default[isHelpful ? "yes" : "no"]
-  }, [feedbackSubmitted, isHelpful, isStaking, location])
+    let url = surveyUrls.__default[isHelpful ? YES : NO]
+    Object.keys(surveyUrls).forEach((key) => {
+      if (location.includes(key)) {
+        url = surveyUrls[key][isHelpful ? YES : NO]
+      }
+    })
+    return url
+  }, [feedbackSubmitted, isHelpful, location])
 
   const bottomOffset = useMemo(() => {
     const pathsWithBottomNav = ["/staking", "/dao", "/defi", "/nft"]
