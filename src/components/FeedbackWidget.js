@@ -1,5 +1,5 @@
 // Library imports
-import React, { useState, useRef, useMemo } from "react"
+import React, { useState, useEffect, useRef, useMemo } from "react"
 import styled from "styled-components"
 // Component imports
 import ButtonLink from "./ButtonLink"
@@ -25,7 +25,7 @@ const FixedDot = styled.div`
     bottom: ${({ bottomOffset }) => 1 + bottomOffset}rem;
   }
   right: 1rem;
-  z-index: 96;
+  z-index: 98; /* Below the mobile menu */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -45,7 +45,7 @@ const ModalBackground = styled.div`
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
-  z-index: 97;
+  z-index: 1001; /* Above the nav bar */
 `
 
 const Container = styled.div`
@@ -58,8 +58,11 @@ const Container = styled.div`
   border-radius: 0.25rem;
   position: fixed;
   right: 2rem;
-  bottom: ${({ bottomOffset }) => 5 + bottomOffset}rem;
-  z-index: 98;
+  bottom: 5rem;
+  @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
+    bottom: ${({ bottomOffset }) => 5 + bottomOffset}rem;
+  }
+  z-index: 1002; /* Above the ModalBackground */
 
   @media (max-width: ${({ theme }) => theme.breakpoints.s}) {
     width: auto;
@@ -141,6 +144,39 @@ const FeedbackWidget = ({ prompt, className }) => {
   const [feedbackSubmitted, setFeedbackSubmitted] = useState(false)
   const [isHelpful, setIsHelpful] = useState(null)
 
+  const location = typeof window !== "undefined" ? window.location.href : ""
+  const isStaking = location.includes("staking")
+
+  useEffect(() => {
+    // Reset component state when path (location) changes
+    setIsOpen(false)
+    setFeedbackSubmitted(false)
+    setIsHelpful(null)
+  }, [location])
+
+  const surveyUrls = {
+    default: {
+      yes: `https://czvgzauj.paperform.co/?url=${location}`,
+      no: `https://xlljh5l3.paperform.co/?url=${location}`,
+    },
+    staking: {
+      yes: `https://gzmn3wgk.paperform.co/?url=${location}`,
+      no: `https://zlj83p6l.paperform.co/?url=${location}`,
+    },
+  }
+
+  const bottomOffset = useMemo(() => {
+    const pathsWithBottomNav = ["/staking", "/dao", "/defi", "/nft"]
+    const CONDITIONAL_OFFSET = 6.75
+    let offset = 0
+    pathsWithBottomNav.forEach((path) => {
+      if (location.includes(path)) {
+        offset = CONDITIONAL_OFFSET
+      }
+    })
+    return offset
+  }, [location])
+
   const handleClose = () => {
     setIsOpen(false)
     trackCustomEvent({
@@ -167,38 +203,11 @@ const FeedbackWidget = ({ prompt, className }) => {
     setFeedbackSubmitted(true)
   }
 
-  const location = typeof window !== "undefined" ? window.location.href : ""
-  const isStaking = location.includes("staking")
-
-  const surveyUrls = {
-    default: {
-      yes: `https://czvgzauj.paperform.co/?url=${location}`,
-      no: `https://xlljh5l3.paperform.co/?url=${location}`,
-    },
-    staking: {
-      yes: `https://gzmn3wgk.paperform.co/?url=${location}`,
-      no: `https://zlj83p6l.paperform.co/?url=${location}`,
-    },
-  }
-
   const getSurveyUrl = () => {
     if (!feedbackSubmitted) return null
     if (isStaking) return surveyUrls.staking[isHelpful ? "yes" : "no"]
     return surveyUrls.default[isHelpful ? "yes" : "no"]
   }
-
-  const pathsWithBottomNav = ["/staking", "/dao", "/defi", "/nft"]
-
-  const bottomOffset = useMemo(() => {
-    const CONDITIONAL_OFFSET = 6.75
-    let offset = 0
-    pathsWithBottomNav.forEach((path) => {
-      if (location.includes(path)) {
-        offset = CONDITIONAL_OFFSET
-      }
-    })
-    return offset
-  }, [location, pathsWithBottomNav])
 
   return (
     <>
