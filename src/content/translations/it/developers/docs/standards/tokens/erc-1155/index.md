@@ -1,5 +1,5 @@
 ---
-title: ERC-1155 Standard Multi-Token
+title: Standard Multi-Token ERC-1155
 description:
 lang: it
 sidebar: true
@@ -144,3 +144,4 @@ _Nota_: tutte le funzioni batch compreso l'hook esistono anche come versioni sen
 - [EIP-1155 Standard Multi-Token](https://eips.ethereum.org/EIPS/eip-1155)
 - [ERC-1155: Openzeppelin Docs](https://docs.openzeppelin.com/contracts/3.x/erc1155)
 - [ERC-1155: Github Repo](https://github.com/enjin/erc-1155)
+- [API di Alchemy NFT](https://docs.alchemy.com/alchemy/enhanced-apis/nft-api)
