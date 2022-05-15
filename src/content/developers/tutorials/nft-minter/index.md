@@ -20,7 +20,7 @@ sidebar: true
 published: 2021-10-06
 ---
 
-One of the greatest challenges for developers coming from a Web2 background is figuring out how to connect your smart contact to a frontend project and interact with it.
+One of the greatest challenges for developers coming from a Web2 background is figuring out how to connect your smart contract to a frontend project and interact with it.
 
 By building an NFT minter — a simple UI where you can input a link to your digital asset, a title, and a description — you'll learn how to:
 
@@ -42,7 +42,7 @@ Before we even start looking at any code, it's important to understand how makin
 
 ### Publish an NFT smart contract on the Ethereum blockchain {#publish-nft}
 
-The biggest difference between the two NFT smart contact standards is that ERC-1155 is a multi-token standard and includes batch functionality, whereas with the ERC-721 is a single-token standard and therefore only supports transferring one token at a time.
+The biggest difference between the two NFT smart contract standards is that ERC-1155 is a multi-token standard and includes batch functionality, whereas with the ERC-721 is a single-token standard and therefore only supports transferring one token at a time.
 
 ### Call the minting function {#minting-function}
 

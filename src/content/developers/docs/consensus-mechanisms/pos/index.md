@@ -51,9 +51,9 @@ When you submit a transaction on a shard, a validator will be responsible for ad
 
 If a validator isn't chosen to propose a new shard block, they'll have to attest to another validator's proposal and confirm that everything looks as it should. It's the attestation that is recorded in the beacon chain rather than the transaction itself.
 
-At least 128 validators are required to attest to each shard block – this is known as a "committee."
+At least 128 validators are required to attest to each shard block – this is known as a "committee".
 
-The committee has a time-frame in which to propose and validate a shard block. This is known as a "slot." Only one valid block is created per slot, and there are 32 slots in an "epoch." After each epoch, the committee is disbanded and reformed with different, random participants. This helps keep shards safe from committees of bad actors.
+The committee has a time-frame in which to propose and validate a shard block. This is known as a "slot". Only one valid block is created per slot, and there are 32 slots in an "epoch". After each epoch, the committee is disbanded and reformed with different, random participants. This helps keep shards safe from committees of bad actors.
 
 #### Crosslinks {#rewards-and-penalties}
 

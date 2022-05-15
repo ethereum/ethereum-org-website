@@ -423,6 +423,13 @@ const DevelopersPage = ({ data }) => {
             <p>
               <Translation id="page-developers-mining-desc" />
             </p>
+
+            <Link to="/developers/docs/consensus-mechanisms/pow/mining-algorithms/">
+              <Translation id="page-developers-mining-algorithms-link" />
+            </Link>
+            <p>
+              <Translation id="page-developers-mining-algorithms-desc" />
+            </p>
           </Column>
           <RightColumn>
             <h3>

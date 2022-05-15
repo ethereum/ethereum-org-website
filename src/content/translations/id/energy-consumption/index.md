@@ -29,7 +29,7 @@ Sama dengan bukti kerja, entitas yang jahat akan mengharuskan setidaknya 51% tot
 
 ## Penggabungan {#the-merge}
 
-Ada rantai bukti taruhan fungsional yang disebut [Rantai Suar](/upgrades/beacon-chain/) yang telah beoperasi sejak Desember 2020 yang menunjukkan kemungkinan penerapan protokol bukti taruhan. Penggabungan merujuk pada titik waktu ketika Ethereum meninggalkan bukti kerja dan sepenuhnya mengadopsi bukti taruhan. Penggabungan diharapkan terjadi ~Q2 2022. [Selengkapnya tentang penggabungan](/upgrades/merge/).
+Ada rantai bukti taruhan fungsional yang disebut [Rantai Suar](/upgrades/beacon-chain/) yang telah beoperasi sejak Desember 2020 yang menunjukkan kemungkinan penerapan protokol bukti taruhan. Penggabungan merujuk pada titik waktu ketika Ethereum meninggalkan bukti kerja dan sepenuhnya mengadopsi bukti taruhan. Penggabungan diharapkan terjadi ~Q3/Q4 2022. [Selengkapnya tentang penggabungan](/upgrades/merge/).
 
 ## Pemakaian energi bukti taruhan {#proof-of-stake-energy}
 

@@ -21,7 +21,7 @@ Understanding the decentralized nature of Ethereum is vital because anyone claim
   Learn Ethereum fundamentals
 </DocLink>
 
-Despite the lack of official support, many groups, communities, and projects across the Ethereum ecosystem are happy to help.
+Despite the lack of official support, many groups, communities, and projects across the Ethereum ecosystem are happy to help, and you can find a lot of useful information and resources on this page. Still have questions? Join the [ethereum.org Discord](/discord/), and we'll try to help.
 
 ## Wallet support {#wallet-support}
 
@@ -107,4 +107,4 @@ Transactions on Ethereum can sometimes get stuck if you have submitted a lower t
 
 #### How do I mine Ethereum? {#mining-ethereum}
 
-We do not recommend buying mining equipment if you are not already mining Ethereum. In ~Q2 2022, [The Merge](/upgrades/merge/) will happen, switching Ethereum from proof-of-work to proof-of-stake. This change means mining Ethereum will no longer be possible. If you are still interested in mining Ethereum, you can seek help from mining communities, such as [/r/EtherMining](https://www.reddit.com/r/EtherMining/).
+We do not recommend buying mining equipment if you are not already mining Ethereum. In ~Q3/Q4 2022, [The Merge](/upgrades/merge/) will happen, switching Ethereum from proof-of-work to proof-of-stake. This change means mining Ethereum will no longer be possible. If you are still interested in mining Ethereum, you can seek help from mining communities, such as [/r/EtherMining](https://www.reddit.com/r/EtherMining/).

@@ -59,7 +59,7 @@ Sekwencja wszystkich bloków, które były zaangażowane w sieć Ethereum w hist
 
 ### ETH {#eth}
 
-Natywna kryptowaluta Ethereum. Użytkownicy płacą etherem innym użytkownikom za spełnienie ich żądań wykonania kodu.
+Natywna kryptowaluta Ethereum. Użytkownicy płacą Ethereum innym użytkownikom za spełnienie ich żądań wykonania kodu.
 
 ### Maszyna Wirtualna Ethereum (EVM) {#evm}
 

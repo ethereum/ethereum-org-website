@@ -7,12 +7,7 @@ import Translation from "./Translation"
 const StyledCard = styled.div`
   display: flex;
   flex-direction: row-reverse;
-  background: linear-gradient(
-    49.21deg,
-    rgba(127, 127, 213, 0.2) 19.87%,
-    rgba(134, 168, 231, 0.2) 58.46%,
-    rgba(145, 234, 228, 0.2) 97.05%
-  );
+  background: ${({ theme }) => theme.colors.layer2Gradient};
   padding: 3rem;
   margin: 1rem;
   margin-top: 6rem;
@@ -30,7 +25,7 @@ const StyledCard = styled.div`
 `
 
 const Content = styled.div`
-  padding-left: 5rem;
+  padding-left: 2rem;
   flex: 1 0 50%;
   display: flex;
   flex-direction: column;
@@ -78,9 +73,15 @@ const CalloutBanner = ({
   alt,
   children,
   className,
+  id,
 }) => (
-  <StyledCard className={className}>
-    <Image image={image} alt={alt} maxImageWidth={maxImageWidth} />
+  <StyledCard className={className} id={id}>
+    <Image
+      image={image}
+      alt={alt}
+      maxImageWidth={maxImageWidth}
+      objectFit="contain"
+    />
     <Content>
       <H2>
         <Translation id={titleKey} />
