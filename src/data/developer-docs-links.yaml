@@ -186,3 +186,13 @@
           to: /developers/docs/scaling/plasma/
         - id: docs-nav-scaling-validium
           to: /developers/docs/scaling/validium/
+    - id: docs-nav-data-structures-and-encoding
+      to: /developers/docs/data-structures-and-encoding/
+      description: docs-nav-data-structures-and-encoding-description
+      items:
+        - id: docs-nav-data-structures-and-encoding-rlp
+          to: /developers/docs/data-structures-and-encoding/rlp/
+        - id: docs-nav-data-structures-and-encoding-patricia-merkle-trie
+          to: /developers/docs/data-structures-and-encoding/patricia-merkle-trie/
+        - id: docs-nav-data-structures-and-encoding-ssz
+          to: /developers/docs/data-structures-and-encoding/ssz/
