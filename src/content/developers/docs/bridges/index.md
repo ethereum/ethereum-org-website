@@ -64,7 +64,7 @@ To evaluate trustless bridges based on other factors, we must break them down in
 
 ## Risk with bridges {#risk-with-bridges}
 
-Bridges account for the top 3 [biggest hacks in DeFi](https://rekt.news/leaderboard/) and are still in the early stages of development. Using any bridge carries the following risks:
+Bridges account for the top three [biggest hacks in DeFi](https://rekt.news/leaderboard/) and are still in the early stages of development. Using any bridge carries the following risks:
 
 - **Smart Contract Risk –** While many bridges have successfully passed audits, all it takes is one flaw in a smart contract for assets to be exposed to hacks (ex: [Solana’s Wormhole Bridge](https://rekt.news/wormhole-rekt/)).
 - **Technology Risk –** Given the complexity of bridge operations, there is a possibility of technology risks like software failure, buggy code, human error, spam, and malicious attacks.
