@@ -22,7 +22,7 @@ Most people think of the Web as a continuous pillar of modern life—it was inve
 
 In 1989, at CERN, Geneva, Tim Berners-Lee was busy developing the protocols that would become the World Wide Web. His idea? To create open, decentralized protocols that allowed information-sharing from anywhere on Earth.
 
-The first inception of the Web, now known as 'Web 1.0', occurred roughly between 1990 to 2004. Web 1.0 was mainly static websites owned by companies, and there was close to zero interaction between users - individuals seldom produced content - leading to it being known as the read-only web.
+The first inception of Berners-Lee's creation, now known as 'Web 1.0', occurred roughly between 1990 to 2004. Web 1.0 was mainly static websites owned by companies, and there was close to zero interaction between users - individuals seldom produced content - leading to it being known as the read-only web.
 
 ![Client-server architecture, representing Web 1.0](./web1.png)
 
