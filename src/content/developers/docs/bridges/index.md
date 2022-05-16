@@ -35,7 +35,7 @@ While there are many [types of bridge designs](https://blog.li.fi/what-are-block
 
 ## Bridge types {#bridge-types}
 
-Bridges come in different types and flavors. Broadly, bridges can usually be classified into one of the following buckets:
+Bridges can usually be classified into one of the following buckets:
 
 - **Native Bridges –** These bridges are typically built to bootstrap liquidity on a particular blockchain, making it easier for users to move funds to the ecosystem. For example, the Avalanche Bridge is built to make it convenient for users to bridge from [Ethereum](/developers/docs/intro-to-ethereum/) to Avalanche. Other such bridges include Polygon PoS Bridge, Arbitrum Bridge, etc.
 - **Validator or Oracle Based Bridges –** These bridges rely on an external validator set or oracles to validate cross-chain transfers. Examples: Multichain and Across.
