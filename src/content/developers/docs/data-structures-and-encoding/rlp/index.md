@@ -158,4 +158,4 @@ def to_integer(b):
 
 ## Related topics {#related-topics}
 
-- [Patricia merkle trie](/developers/docs/data-structures/patricia-merkle-tries)
+- [Patricia merkle trie](/developers/docs/data-structures-and-encoding/patricia-merkle-tries)
