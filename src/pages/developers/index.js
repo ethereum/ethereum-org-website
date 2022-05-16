@@ -526,6 +526,7 @@ const DevelopersPage = ({ data }) => {
             </Link>
             <p>
               <Translation id="page-developers-networking-layer-desc" />
+            </p>
             <Link to="/developers/docs/data-structures-and-encoding/">
               <Translation id="page-developers-data-structures-and-encoding-link" />
             </Link>
