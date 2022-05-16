@@ -3,10 +3,9 @@ title: Proof-of-stake (PoS)
 description: An explanation of the proof-of-stake consensus protocol and its role in Ethereum.
 lang: en
 sidebar: true
-incomplete: false
 ---
 
-Ethereum is moving to a consensus mechanism called proof-of-stake (PoS) from [proof-of-work (PoW)](/developers/docs/consensus-mechanisms/pow/). This was always the plan because PoS is thought to be more secure than PoW, uses drastically less energy, and enables new scaling solutions to be implemented. However, proof-of-stake is also more complex than proof-of-work. Refining the proof-of-stake mechanism has taken years of research and development, and the challenge now is to implement it on the live Ethereum network - a process known as ["The Merge"](/upgrades/merge/).
+A [consensus mechanism](/developers/docs/consensus-mechanisms/) is a set of rules that incentives that enable nodes to come to agreement about the state of the Ethereum network. There are several different classes of consensus mechanism that have been implemented on various blockchains, including [proof-of-work (PoW)](/developers/docs/consensus-mechanisms/pow/), proof-of-stake (PoS) and proof-of-authority (PoA).  Ethereum has used PoW since its genesis, but is moving to PoS. This was always the plan because PoS is thought to be more secure than PoW, uses drastically less energy, and enables new scaling solutions to be implemented. However, proof-of-stake is also more complex than proof-of-work and refining the mechanism has taken years of research and development. The challenge now is to implement PoS on the live Ethereum network - a process known as ["The Merge"](/upgrades/merge/).
 
 ## Prerequisites {#prerequisites}
 
