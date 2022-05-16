@@ -69,7 +69,7 @@ Bridges account for the top three [biggest hacks in DeFi](https://rekt.news/lead
 - **Smart Contract Risk –** While many bridges have successfully passed audits, all it takes is one flaw in a smart contract for assets to be exposed to hacks (ex: [Solana’s Wormhole Bridge](https://rekt.news/wormhole-rekt/)).
 - **Technology Risk –** Given the complexity of bridge operations, there is a possibility of technology risks like software failure, buggy code, human error, spam, and malicious attacks.
 - **Systematic Financial Risks** – Many bridges use wrapped assets to mint canonical versions of the original asset on a new chain. This exposes the ecosystem to systematic risk, as we have seen wrapped versions of tokens exploited.
-- **Trusted Third-Party Risk –** Some bridges utilize a trusted design that requires users to rely on the assumption that validators will not collude to steal user funds. The need for users to trust these third-party actors exposes them to risks such as rugs, censorship, and other malicious activities.
+- **Trusted Third-Party Risk –** Some bridges utilize a trusted design that requires users to rely on the assumption that validators will not collude to steal user funds. The need for users to trust these third-party actors exposes them to risks such as rug pulls, censorship, and other malicious activities.
 - **Open Issues –** Given that bridges are in the nascent stages of development, there are many unanswered questions related to how bridges will perform in different market conditions, like times of network congestion and during unforeseen events such as network-level attacks or state rollbacks. This uncertainty poses certain risks, the degree of which is still unknown.
 
 ## How can dapps use bridges? {#how-can-dapps-use-bridges}
