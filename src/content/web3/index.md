@@ -48,7 +48,7 @@ Web3 has become a catch-all term for the vision of a new, better Web. At its cor
 
 Although it's challenging to provide a rigid definition of what Web3 is, a few core principles guide its creation.
 
-- **Web3 is decentralized:** instead of large swathes of the Web controlled and owned by centralized entities, ownership gets distributed amongst its builders and users.
+- **Web3 is decentralized:** instead of large swathes of the internet controlled and owned by centralized entities, ownership gets distributed amongst its builders and users.
 - **Web3 is permissionless:** everyone has equal access to participate in Web3, and no one gets excluded.
 - **Web3 has native payments:** it uses cryptocurrency for spending and sending money online instead of relying on the outdated infrastructure of banks and payment processors.
 - **Web3 is trustless:** it operates using incentives and economic mechanisms instead of relying on trusted third-parties.
