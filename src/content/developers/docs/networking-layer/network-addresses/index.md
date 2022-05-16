@@ -26,7 +26,7 @@ For an Ethereum node, the multiaddr contains the node-ID (a hash of their public
 
 An enode is a way to identify an Ethereum node using a URL address format. The hexadecimal node-ID is encoded in the username portion of the URL separated from the host using an @ sign. The hostname can only be given as an IP address; DNS names are not allowed. The port in the hostname section is the TCP listening port. If the TCP and UDP (discovery) ports differ, the UDP port is specified as a query parameter "discport"
 
-In the following example, the node URL describes a node with IP address `10.3.58`, TCP port `30303` and UDP discovery port `30301`.
+In the following example, the node URL describes a node with IP address `10.3.58.6`, TCP port `30303` and UDP discovery port `30301`.
 
 `enode://6f8a80d14311c39f35f516fa664deaaaa13e85b2f7493f37f6144d86991ec012937307647bd3b9a82abe2974e1407241d54947bbb39763a4cac9f77166ad92a0@10.3.58.6:30303?discport=30301`
 
