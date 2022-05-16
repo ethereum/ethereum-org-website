@@ -77,7 +77,7 @@ This console allows direct interaction with Ethereum. For example, running the `
 
 Geth runs your node on [Ethereum Mainnet](/glossary/#mainnet) by default.
 
-It is also possible to use Geth to run a node on one of the [public test networks](/networks/#testnets), by running one of the following commands in Terminal:
+It is also possible to use Geth to run a node on one of the [public test networks](/developers/docs/networks/#ethereum-testnets), by running one of the following commands in Terminal:
 
 ```bash
 geth --syncmode light --ropsten
