@@ -7406,6 +7406,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "GustavoRSSilva",
+      "name": "Gustavo Silva",
+      "avatar_url": "https://avatars.githubusercontent.com/u/8384988?v=4",
+      "profile": "https://gustavorssilva.github.io/",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
