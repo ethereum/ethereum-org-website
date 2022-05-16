@@ -521,7 +521,11 @@ const DevelopersPage = ({ data }) => {
             <p>
               <Translation id="page-developers-scaling-desc" />
             </p>
-
+            <Link to="/developers/docs/networking-layer/">
+              <Translation id="page-developers-networking-layer-link" />
+            </Link>
+            <p>
+              <Translation id="page-developers-networking-layer-desc" />
             <Link to="/developers/docs/data-structures-and-encoding/">
               <Translation id="page-developers-data-structures-and-encoding-link" />
             </Link>
