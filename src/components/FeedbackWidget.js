@@ -18,10 +18,12 @@ const FixedDot = styled.div`
   border-radius: 50%;
   background-color: ${({ theme }) => theme.colors.primary};
   box-shadow: 0px 4px 4px ${({ theme }) => theme.colors.tableItemBoxShadow};
-  position: fixed;
+  position: sticky;
   bottom: 1rem;
+  margin-left: auto;
   @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
     bottom: ${({ bottomOffset }) => 1 + bottomOffset}rem;
+    margin-top: 150vh;
   }
   right: 1rem;
   z-index: 98; /* Below the mobile menu */
@@ -59,6 +61,7 @@ const Container = styled.div`
   right: 2rem;
   bottom: 5rem;
   @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
+    offset-position: bottom -300px;
     bottom: ${({ bottomOffset }) => 5 + bottomOffset}rem;
   }
   z-index: 1002; /* Above the ModalBackground */
