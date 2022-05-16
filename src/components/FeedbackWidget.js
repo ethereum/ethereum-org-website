@@ -139,7 +139,7 @@ const IconContainer = styled.div`
   transition: transform 0.2s ease-in-out;
 `
 
-const FeedbackWidget = ({ prompt, className }) => {
+const FeedbackWidget = ({ className }) => {
   const containerRef = useRef()
   useOnClickOutside(containerRef, () => handleClose(), [`mousedown`])
   const [isOpen, setIsOpen] = useState(false)
