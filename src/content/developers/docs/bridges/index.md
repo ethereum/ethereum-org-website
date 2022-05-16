@@ -21,7 +21,7 @@ Bridges offer a way for isolated blockchain environments to connect with each ot
 
 Put simply, bridges unlock developer potential by allowing blockchain networks to exchange data and move assets between them.
 
-Different blockchains and communities have unique strengths, weaknesses, and approaches to building applications (such as speed, throughput, costliness, etc.). Bridges help the development of the overall crypto ecosystem by enabling blockchains to leverage the innovations of each other.
+Blockchains have unique strengths, weaknesses, and approaches to building applications (such as speed, throughput, costliness, etc.). Bridges help the development of the overall crypto ecosystem by enabling blockchains to leverage the innovations of each other.
 
 Moreover, bridges unlock new use cases and possibilities for both users and developers. For example, users can now move assets across different ecosystems, making them more productive. For developers and protocols, bridges open up an almost limitless amount of possibilities by expanding the design space for [dApps](/developers/docs/dapps/) across multiple crypto ecosystems.
 
