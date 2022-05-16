@@ -1,4 +1,7 @@
 {
+  "page-get-eth-article-keeping-crypto-safe": "Las claves para mantener su cripto seguro",
+  "page-get-eth-article-protecting-yourself": "Protegerte a ti y a tus fondos",
+  "page-get-eth-article-store-digital-assets": "Cómo almacenar recursos digitales en Ethereum",
   "page-get-eth-cex": "Casas de intercambios centralizados",
   "page-get-eth-cex-desc": "Las casas de intercambios son negocios que le permiten comprar criptomonedas utilizando monedas tradicionales. Tienen la custodia de cualquier ETH que compre hasta que lo envíe a una cartera que controle.",
   "page-get-eth-checkout-dapps-btn": "Revisar dapps",
@@ -21,6 +24,7 @@
   "page-get-eth-exchanges-no-exchanges": "Lo sentimos, no sabemos de ningún intercambio que le permita comprar ETH desde este país. Si usted sí, díganoslo a través de",
   "page-get-eth-exchanges-no-exchanges-or-wallets": "Lo sentimos, no sabemos de ningún intercambio o cartera que le permita comprar ETH desde este país. Si usted sí, díganoslo a través de",
   "page-get-eth-exchanges-no-wallets": "Lo sentimos, no sabemos de ninguna cartera que le permita comprar ETH desde este país. Si usted sí, díganoslo a través de",
+  "page-get-eth-exchanges-search": "Escribe dónde vives...",
   "page-get-eth-exchanges-success-exchange": "Puede tardar varios días en registrarse en un intercambio debido a sus controles legales.",
   "page-get-eth-exchanges-success-wallet-link": "carteras",
   "page-get-eth-exchanges-success-wallet-paragraph": "Donde vive, puede comprar ETH directamente de estas carteras. Obtenga más información sobre",
