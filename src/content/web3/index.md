@@ -42,16 +42,16 @@ The premise of 'Web 3.0' was coined by [Ethereum](/what-is-ethereum/) co-founder
 
 ### What is Web3? {#what-is-web3}
 
-Web3 has become a catch-all term for the vision of a new, better internet. At its core, Web3 uses blockchains, cryptocurrencies, and NFTs to give power back to the users in the form of ownership. [A 2021 post on Twitter](https://twitter.com/j1mmyeth/status/1459003044067258370) said it best: Web1 was read-only, Web2 is read/write, Web3 will be read/write/own.
+Web3 has become a catch-all term for the vision of a new, better internet. At its core, Web3 uses blockchains, cryptocurrencies, and NFTs to give power back to the users in the form of ownership. [A 2020 post on Twitter](https://twitter.com/himgajria/status/1266415636789334016) said it best: Web1 was read-only, Web2 is read-write, Web3 will be read-write-own.
 
 #### Core ideas of Web3 {#core-ideas}
 
-Although it's challenging to provide a rigid definition what Web3 is, a few core principles guide its creation.
+Although it's challenging to provide a rigid definition of what Web3 is, a few core principles guide its creation.
 
 - **Web3 is decentralized:** instead of large swathes of the internet controlled and owned by centralized entities, ownership gets distributed amongst its builders and users.
 - **Web3 is permissionless:** everyone has equal access to participate in Web3, and no one gets excluded.
 - **Web3 has native payments:** it uses cryptocurrency for spending and sending money online instead of relying on the outdated infrastructure of banks and payment processors.
-- **Web3 is trustless:** it operates using incentives and economic mechanisms instead of relying on trusted third-parties
+- **Web3 is trustless:** it operates using incentives and economic mechanisms instead of relying on trusted third-parties.
 
 ### Why is Web3 important? {#why-is-web3-important}
 
@@ -139,7 +139,7 @@ We are only at the beginning of creating a better internet with Web3, but as we 
 
 Web3 isn’t rigidly defined. Various community participants have different perspectives on it. Here are a few of them:
 
-- [What is Web3? The Decentralized Interent of the Future Explained](https://www.freecodecamp.org/news/what-is-web3/) – _Nader Dabit_
+- [What is Web3? The Decentralized Internet of the Future Explained](https://www.freecodecamp.org/news/what-is-web3/) – _Nader Dabit_
 - [Making Sense of Web 3](https://medium.com/l4-media/making-sense-of-web-3-c1a9e74dcae) – _Josh Stark_
 - [Why Web3 Matters](https://future.a16z.com/why-web3-matters/) — _Chris Dixon_
 - [Why Decentralization Matters](https://onezero.medium.com/why-decentralization-matters-5e3f79f7638e) - _Chris Dixon_

@@ -13,6 +13,8 @@ Smart contracts are a type of [Ethereum account](/developers/docs/accounts/). Th
 
 ## Prerequisites {#prerequisites}
 
+If you're just getting started or looking for a less technical introduction, we recommend our [introduction to smart contracts](/smart-contracts/).
+
 Make sure you've read up on [accounts](/developers/docs/accounts/), [transactions](/developers/docs/transactions/) and the [Ethereum virtual machine](/developers/docs/evm/) before jumping into the world of smart contracts.
 
 ## A digital vending machine {#a-digital-vending-machine}
@@ -90,6 +92,10 @@ Smart contracts alone cannot get information about "real-world" events because t
 There are ways to get around this using [oracles](/developers/docs/oracles/).
 
 Another limitation of smart contracts is the maximum contract size. A smart contract can be a maximum of 24KB or it will run out of gas. This can be circumnavigated by using [The Diamond Pattern](https://eips.ethereum.org/EIPS/eip-2535).
+
+## Multisig contracts {#multisig}
+
+Multisig (multiple-signature) contracts are smart contract accounts that require multiple valid signatures to execute a transaction. This is very useful for avoiding single points of failure for contracts holding substantial amounts of ether or other tokens. Multisigs also divide responsibility for contract execution and key management between multiple parties and prevent the loss of a single private key leading to irreversible loss of funds. For these reasons, multisig contracts can be used for simple DAO governance. Multisigs require N signatures out of M possible acceptable signatures (where N ≤ M, and M > 1) in order to execute. `N = 3, M = 5` and `N = 4, M = 7` are commonly used. A 4/7 multisig requires four out of seven possible valid signatures. This means the funds are still retrievable even if three signatures are lost. In this case it also means that a majority of key-holders must agree and sign in order for the contract to execute.
 
 ## Smart contract resources {#smart-contract-resources}
 

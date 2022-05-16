@@ -54,6 +54,7 @@ const Contributors = () => {
             image={contributor.avatar_url}
             to={contributor.profile}
             title={contributor.name}
+            alt={contributor.name}
           />
         ))}
       </Container>

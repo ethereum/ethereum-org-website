@@ -15,7 +15,7 @@ Blok adalah topik yang sangat ramah untuk pemula. Tetapi untuk membantu Anda leb
 
 Untuk memastikan bahwa semua peserta di jaringan Ethereum mempertahankan state tersinkronisasi dan menyetujui riwayat transaksi yang tepat, kami mengelompokkan transaksi ke dalam blok. Ini berarti lusinan (atau ratusan) transaksi dilakukan, disetujui, dan disinkronkan sekaligus.
 
-![Sebuah diagram yang menunjukkan transaksi di blok yang menyebabkan perubahan state](../../../../../developers/docs/blocks/tx-block.png) _Diagram diadaptasi dari [Ethereum EVM yang diilustrasikan](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![Sebuah diagram yang menunjukkan transaksi di blok yang menyebabkan perubahan state](./tx-block.png) _Diagram diadaptasi dari [Ethereum EVM yang diilustrasikan](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 Dengan memisahkan komit, kami memberi semua peserta jaringan cukup waktu untuk mencapai konsensus: meskipun permintaan transaksi terjadi puluhan kali per detik, blok di Ethereum dijalankan kira-kira sekali setiap lima belas detik.
 

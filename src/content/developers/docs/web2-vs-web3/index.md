@@ -7,6 +7,8 @@ sidebar: true
 
 Web2 refers to the version of the internet most of us know today. An internet dominated by companies that provide services in exchange for your personal data. Web3, in the context of Ethereum, refers to decentralized apps that run on the blockchain. These are apps that allow anyone to participate without monetising their personal data.
 
+Looking for a more beginner-friendly resource? See our [introduction to web3](/web3/).
+
 ## Web3 benefits {#web3-benefits}
 
 Many Web3 developers have chosen to build dapps because of Ethereum's inherent decentralization:

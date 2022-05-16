@@ -46,7 +46,7 @@ If you are bilingual and want to help us reach more people, you can also get inv
 **General resources**
 
 - [Ethereum.cn](https://www.ethereum.cn/) - community maintained content, covering the consensus layer upgrade, all core dev meeting notes, layer 2, etc.
-- [EthFans](https://ethfans.org/) - learn everything from the basics to advanced Ethereum topics
+- [EthFans](https://github.com/editor-Ajian/EthFans.org-annual-collected-works/) - learn everything from the basics to advanced Ethereum topics
 - [Unitimes](https://mp.weixin.qq.com/s/tvloZSDBSOQN9zDQj_91kA) - community maintained content, covering Ethereum, DeFi, NFT, Web3-related knowledge
 - [123ETH](https://123eth.org/) - a Portal to the Ethereum ecosystem
 - [Zhen Xiao](http://zhenxiao.com/blockchain/) - free online courses about cryptocurrency and its applications
@@ -109,3 +109,11 @@ If you are bilingual and want to help us reach more people, you can also get inv
 - [Tino Group](https://wiki.tino.org/ethereum-la-gi/) - overview of Ethereum, dApps, wallets and FAQs
 - [Tap Chi Bitcoin](https://tapchibitcoin.io/tap-chi/tin-tuc-ethereum-eth) - web platform with subpages for Ethereum news and education
 - [Coin68](https://coin68.com/ethereum-tieu-diem/) - cryptocurrency portal with Ethereum news and educational content
+
+### Japanese {#ja}
+
+- [Japan Virtual and Crypto assets Exchange Association](https://jvcea.or.jp/)
+- [Japan Cryptoasset Business Association](https://cryptocurrency-association.org/)
+- [Get started with blockchain development - Learn | Microsoft Docs](https://docs.microsoft.com/ja-jp/learn/paths/ethereum-blockchain-development/) - This learning path introduces you to blockchain and development on the Ethereum platform
+- [Mastering Ethereum](https://www.oreilly.co.jp/books/9784873118963/) - Mastering Ethereum in Japanese
+- [Hands-On Smart Contract Development with Solidity and Ethereum](https://www.oreilly.co.jp/books/9784873119342/) - Hands-On Smart Contract Development with Solidity and Ethereum in Japanese

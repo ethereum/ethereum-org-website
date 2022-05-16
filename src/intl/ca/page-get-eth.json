@@ -1,4 +1,7 @@
 {
+  "page-get-eth-article-keeping-crypto-safe": "Les claus per mantenir segures les vostres criptomonedes",
+  "page-get-eth-article-protecting-yourself": "Protegiu-vos i protegiu els vostres fons",
+  "page-get-eth-article-store-digital-assets": "Com emmagatzemar actius digitals en Ethereum",
   "page-get-eth-cex": "Cases de canvi centralitzades",
   "page-get-eth-cex-desc": "Les cases de canvi són negocis que us permeten comprar criptomonedes utilitzant moneda tradicional. Tenen la custòdia sobre qualsevol ETH que compreu fins que ho envieu a la vostra cartera.",
   "page-get-eth-checkout-dapps-btn": "Descobriu dapps",
@@ -21,6 +24,7 @@
   "page-get-eth-exchanges-no-exchanges": "Disculpeu, no coneixem cap casa de canvi que us permeti comprar ETH en aquest país. Si en coneixeu cap, aviseu-nos a",
   "page-get-eth-exchanges-no-exchanges-or-wallets": "Disculpeu, no coneixem cap casa de canvi o cartera que us permeti comprar ETH en aquest país. Si en coneixeu cap, aviseu-nos a",
   "page-get-eth-exchanges-no-wallets": "Disculpeu no coneixem cap cartera que us permeti comprar ETH en aquest país. Si en coneixeu cap, aviseu-nos a",
+  "page-get-eth-exchanges-search": "Escriviu on viviu...",
   "page-get-eth-exchanges-success-exchange": "Registrar-vos a una casa de canvi pot trigar diversos dies degut a les comprovacions legals.",
   "page-get-eth-exchanges-success-wallet-link": "carteres",
   "page-get-eth-exchanges-success-wallet-paragraph": "On viviu podeu comprar ETH directament des d’aquestes carteres. Obteniu més informació sobre",

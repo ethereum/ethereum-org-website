@@ -11,9 +11,10 @@ The Translation Program is a collaborative effort to translate ethereum.org into
 
 Our progress so far:
 
-- [**3,200 +** translators](/contributing/translation-program/acknowledgements/)
-- [**43** languages live on site](/languages/)
+- [**3,500 +** translators](/contributing/translation-program/contributors/)
+- [**46** languages live on site](/languages/)
 - [**2.9 million** words translated in 2021](/contributing/translation-program/acknowledgements/)
+- [**1.3 million** words translated in 2022 so far](/contributing/translation-program/acknowledgements/)
 
 If you want to get involved and help us grow the global Ethereum community by translating the website into your language, follow the steps below!
 
@@ -49,6 +50,14 @@ The ethereum.org Translation Program aims to make Ethereum accessible to everyon
   We encourage you to check out the ethereum.org Translation Style Guide. It contains some of the most important guidelines, instructions, and tips for translators to help localize the website.
   {" "}<Link to="/contributing/translation-program/translators-guide/">View the Translation Style Guide</Link>
 </InfoBanner>
+
+### Visual guide {#visual-guide}
+
+For more visual learners, watch Luka walk through getting set up with Crowdin. Alternatively, you can find the same steps in a written format in the next section.
+
+<YouTube id="Ii7bYhanLs4" />
+
+### Written guide {#written-guide}
 
 1. **[Join our project on Crowdin](https://crowdin.com/project/ethereum-org/invite)**  
    You will need to log in to your Crowdin account or sign up if you don’t already have one. All that is required to sign up is an e-mail account and password.

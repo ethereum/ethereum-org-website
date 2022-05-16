@@ -31,16 +31,20 @@ If you want to [run your own node](/developers/docs/nodes-and-clients/run-a-node
 
 ### Full node {#full-node}
 
-- Stores full blockchain data.
+- Stores full blockchain data (although this is periodically pruned so a full node does not store all state data back to genesis)
 - Participates in block validation, verifies all blocks and states.
-- All states can be derived from a full node.
+- All states can be derived from a full node (although very old states are reconstructed from requests made to archive nodes).
 - Serves the network and provides data on request.
 
 ### Light node {#light-node}
 
-- Stores the header chain and requests everything else.
-- Can verify the validity of the data against the state roots in the block headers.
-- Useful for low capacity devices, such as embedded devices or mobile phones, which can't afford to store gigabytes of blockchain data.
+Instead of downloading every block, light nodes download block headers. These headers only contain summary information about the contents of the blocks. Any other information required by the light node gets requested from a full node. The light node can then independently verify the data they receive against the state roots in the block headers. Light nodes enable users to participate in the Ethereum network without the powerful hardware or high bandwidth required to run full nodes. Eventually, light nodes might run on mobile phones or embedded devices. The light nodes do not participate in consensus (i.e. they cannot be miners/validators), but they can access the Ethereum blockchain with the same functionality as a full node.
+
+The execution client Geth includes a [light sync](https://github.com/ethereum/devp2p/blob/master/caps/les.md) option. However, a light Geth node relies upon full nodes serving light node data. Few full nodes opt to serve light node data, meaning light nodes often fail to find peers. There are currently no production-ready light clients on the consensus layer; however, several are in development.
+
+There are also potential routes to providing light client data over the [gossip network](https://www.ethportal.net/). This is advantageous because the gossip network could support a network of light nodes without requiring full nodes to serve requests.
+
+Ethereum does not support a large population of light nodes yet, but light node support is an area expected to develop rapidly in the near future.
 
 ### Archive node {#archive-node}
 
@@ -103,7 +107,7 @@ If you're more of a technical user, learn how to [spin up your own node](/develo
 
 ## Alternatives {#alternatives}
 
-Running your own node can be difficult and you don’t always need to run your own instance. In this case, you can use a third party API provider like [Infura](https://infura.io), [Alchemy](https://alchemyapi.io), or [QuikNode](https://www.quiknode.io). Alternatively [ArchiveNode](https://archivenode.io/) is a community-funded Archive node that hopes to bring archive data on the Ethereum blockchain to independent developers who otherwise couldn't afford it. For an overview of using these services, check out [nodes as a services](/developers/docs/nodes-and-clients/nodes-as-a-service/).
+Running your own node can be difficult and you don’t always need to run your own instance. In this case, you can use a third party API provider like [Infura](https://infura.io), [Alchemy](https://alchemyapi.io), or [QuikNode](https://www.quiknode.io). Alternatively [ArchiveNode](https://archivenode.io/) is a community-funded Archive node that hopes to bring archive data on the Ethereum blockchain to independent developers who otherwise couldn't afford it. For an overview of using these services, check out [nodes as a service](/developers/docs/nodes-and-clients/nodes-as-a-service/).
 
 If somebody runs an Ethereum node with a public API in your community, you can point your light wallets (like MetaMask) to a community node [via Custom RPC](https://metamask.zendesk.com/hc/en-us/articles/360015290012-Using-a-Local-Node) and gain more privacy than with some random trusted third party.
 

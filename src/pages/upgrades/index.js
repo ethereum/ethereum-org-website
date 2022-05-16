@@ -782,7 +782,7 @@ const Eth2IndexPage = ({ data }) => {
               </p>
               <p>
                 <Translation id="page-upgrades-question-9-answer-3" />{" "}
-                <Link to="/upgrades/get-involved/bug-bounty/">
+                <Link to="/bug-bounty/">
                   <Translation id="page-upgrades-bug-bounty" />
                 </Link>
               </p>

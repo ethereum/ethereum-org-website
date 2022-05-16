@@ -75,11 +75,6 @@ Prima di iniziare a studiare i framework, raccomandiamo la lettura della nostra 
 - [GitHub](https://github.com/alchemyplatform)
 - [Discord](https://discord.com/invite/A39JVCM)
 
-**Dapptools:** **_una suite di strumenti CLI incentrati su Ethereum che segue la filosofia di progettazione di Unix, che favorisce la componibilità, la configurabilità e l'estensibilità._**
-
-- [Home page](https://dapp.tools/)
-- [GitHub](https://github.com/dapphub/dapptools/)
-
 ## Letture consigliate {#further-reading}
 
 _Conosci una risorsa della community che ti è stata utile? Modifica questa pagina e aggiungila!_

@@ -1,18 +1,18 @@
 ---
 title: Beacon Chain
-description: Узнайте о Beacon Chain - первом крупном обновлении Eth2 для Ethereum.
+description: Узнайте о Beacon Chain — обновлении, которое представило Ethereum с доказательством владения (Proof-of-Stake).
 lang: ru
 template: upgrade
 sidebar: true
 image: ../../../../../assets/upgrades/core.png
-summaryPoint1: Beacon Chain никак не изменит то, как мы сегодня используем Ethereum.
-summaryPoint2: Эта технология будет координировать сеть.
-summaryPoint3: Она внедрит в экосистему Ethereum доказательство владения.
+summaryPoint1: Сеть Beacon Chain ничего не меняет в том Ethereum, который мы используем сегодня.
+summaryPoint2: Она будет координировать работу сети, выступая в качестве уровня консенсуса.
+summaryPoint3: Она ввела в экосистему Ethereum доказательство владения.
 summaryPoint4: В технических дорожных картах вы могли видеть это под названием «Фаза 0».
 ---
 
 <UpgradeStatus isShipped dateKey="page-upgrades-beacon-date">
-    Beacon Chain запущена 1 декабря в полдень по UTC. Чтобы узнать больше, <a href="https://beaconscan. com/">ознакомьтесь с данными</a>. Если вы хотите помочь с проверкой цепочки, вы можете <a href="/staking/">вложить свои ETH</a>.
+    Запуск Beacon Chain выполнен 1 декабря 2020 года в полдень (UTC). Чтобы узнать больше, <a href="https://beaconscan. com/">ознакомьтесь с данными</a>. Если вы хотите помочь с проверкой цепочки, вы можете <a href="/staking/">вложить свои ETH</a>.
 </UpgradeStatus>
 
 ## Что делает Beacon Chain? {#what-does-the-beacon-chain-do}
@@ -33,7 +33,7 @@ Beacon Chain вводит [доказательство владения](/devel
 Если вы хотите стать валидатором и принять участие в защите Beacon Chain, <a href="/staking/">узнайте больше о стейкинге</a>.
 </InfoBanner>
 
-Это также важное изменение для другого обновления Eth2: [цепочек-осколков](/upgrades/shard-chains/).
+Это также важное изменение для другого обновления: [цепочек осколков](/upgrades/shard-chains/).
 
 ### Настройка цепей-осколков {#setting-up-for-shard-chains}
 
@@ -43,19 +43,23 @@ Beacon Chain вводит [доказательство владения](/devel
 
 ## Взаимосвязь между обновлениями {#relationship-between-upgrades}
 
-Все обновления Eth2 в некотором роде взаимосвязаны. Поэтому резюмируем, как Beacon Chain влияет на другие улучшения.
+Все обновления Ethereum в некоторой степени взаимосвязаны. Поэтому резюмируем, как Beacon Chain влияет на другие улучшения.
 
 ### Основная сеть и Beacon Chain {#mainnet-and-beacon-chain}
 
 Сначала Beacon Chain будет существовать отдельно от основной сети Ethereum, которую мы используем сегодня. Но в конечном счете они будут связаны. План состоит в том, чтобы «объединить» основную сеть с системой доказательства владения, которая контролируется и координируется с помощью Beacon Chain.
 
-<ButtonLink to="/upgrades/merge/">Слияние</ButtonLink>
+<ButtonLink to="/upgrades/merge/">
+    Слияние
+</ButtonLink>
 
 ### Осколки и Beacon Chain {#shards-and-beacon-chain}
 
 Цепочки-осколки способны только на безопасный вход в экосистему Ethereum с механизмом консенсуса на основе доказательства владения. Beacon Chain вводит ставки, прокладывая путь к последующему обновлению с цепочками-осколками.
 
-<ButtonLink to="/upgrades/shard-chains/">Цепочки-осколки</ButtonLink>
+<ButtonLink to="/upgrades/shard-chains/">
+    Цепочки-осколки
+</ButtonLink>
 
 <Divider />
 

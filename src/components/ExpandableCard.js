@@ -1,9 +1,13 @@
+// Libraries
+import React, { useState } from "react"
 import styled from "styled-components"
 import { motion } from "framer-motion"
-import { FakeLink } from "./SharedStyledComponents"
+
+// Components
 import Translation from "../components/Translation"
 
-import React, { useState } from "react"
+// Utils
+import { trackCustomEvent } from "../utils/matomo"
 
 const Card = styled.div`
   border: 1px solid ${(props) => props.theme.colors.border};
@@ -12,6 +16,7 @@ const Card = styled.div`
   display: flex;
   flex-direction: column;
   margin-bottom: 1rem;
+  cursor: pointer;
   &:hover {
     background-color: ${(props) => props.theme.colors.ednBackground};
   }
@@ -64,7 +69,7 @@ const Header = styled.div`
   width: 100%;
   margin: 1rem 0;
   align-items: center;
-  img {
+  svg {
     margin-right: 1.5rem;
   }
 `
@@ -77,12 +82,24 @@ const ButtonContainer = styled.div`
   }
 `
 
-const StyledFakeLink = styled(FakeLink)`
-  white-space: nowrap;
+const ButtonLink = styled.button`
+  border: 0;
+  cursor: pointer;
+  background-color: transparent;
+  color: ${(props) => props.theme.colors.primary};
 `
 
-const ExpandableCard = ({ children, contentPreview, title, svg, alt }) => {
+const ExpandableCard = ({
+  children,
+  contentPreview,
+  title,
+  Svg,
+  alt,
+  eventCategory,
+  eventName,
+}) => {
   const [isVisible, setIsVisible] = useState(false)
+
   const expandCollapse = {
     collapsed: {
       height: 0,
@@ -97,6 +114,7 @@ const ExpandableCard = ({ children, contentPreview, title, svg, alt }) => {
       },
     },
   }
+
   const showHide = {
     collapsed: {
       display: "none",
@@ -105,6 +123,7 @@ const ExpandableCard = ({ children, contentPreview, title, svg, alt }) => {
       display: "inline-block",
     },
   }
+
   const fadeInOut = {
     collapsed: {
       opacity: 0,
@@ -119,26 +138,47 @@ const ExpandableCard = ({ children, contentPreview, title, svg, alt }) => {
       },
     },
   }
+  const matomo = {
+    eventAction: `Clicked`,
+    eventCategory: `ExpandableCard${eventCategory}`,
+    eventName,
+  }
   return (
-    <Card>
+    <Card
+      onClick={() => {
+        // Card will not collapse if clicking on a link or selecting text
+        if (
+          window.getSelection().toString().length === 0 &&
+          !window.event.target.className.includes("ExternalLink")
+        ) {
+          !isVisible && trackCustomEvent(matomo)
+          setIsVisible(!isVisible)
+        }
+      }}
+    >
       <Content>
         <Question>
           <Header>
-            {svg && <img src={svg} alt={alt} />}
+            {!!Svg && <Svg alt={alt} />}
             <Title>{title}</Title>
           </Header>
           <TextPreview>{contentPreview}</TextPreview>
         </Question>
-        <ButtonContainer onClick={() => setIsVisible(!isVisible)}>
+        <ButtonContainer
+          onClick={() => {
+            trackCustomEvent(matomo)
+            setIsVisible(!isVisible)
+          }}
+        >
           {!isVisible && (
-            <StyledFakeLink>
+            <ButtonLink onClick={() => setIsVisible(true)}>
               <Translation id="more" />
-            </StyledFakeLink>
+            </ButtonLink>
           )}
           {isVisible && (
-            <StyledFakeLink>
+            <ButtonLink onClick={() => setIsVisible(false)}>
               <Translation id="less" />
-            </StyledFakeLink>
+            </ButtonLink>
           )}
         </ButtonContainer>
       </Content>

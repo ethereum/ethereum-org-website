@@ -60,7 +60,7 @@ However, a censorship-resistant, decentralized network should not rely on cloud 
 
 Check the minimum and recommended [disk space requirements for each client and sync mod](/developers/docs/nodes-and-clients/#requirements).
 Generally, modest computing power should be enough. The problem is usually drive speed. During initial sync, Ethereum clients perform a lot of read/write operations. Therefore SSD is strongly recommended. A client might not even [be able to sync current state on HDD](https://github.com/ethereum/go-ethereum/issues/16796#issuecomment-391649278) and get stuck a few blocks behind Mainnet.
-You can run most of the clients on a [single board computer with ARM](/developers/docs/nodes-and-clients/#ethereum-on-a-single-board-computer/). You can also use the [Ethbian](https://ethbian.org/index.html) operating system for Raspberry Pi 4. This lets you [[run a client by flashing the SD card](/developers/tutorials/run-node-raspberry-pi/).
+You can run most of the clients on a [single board computer with ARM](/developers/docs/nodes-and-clients/#ethereum-on-a-single-board-computer/). You can also use the [Ethbian](https://ethbian.org/index.html) operating system for Raspberry Pi 4. This lets you [run a client by flashing the SD card](/developers/tutorials/run-node-raspberry-pi/).
 Based on your software and the hardware choices, the initial synchronization time and storage requirements may vary. Be sure to [check sync times and storage requirements](/developers/docs/nodes-and-clients/#recommended-specifications).
 Also make sure your internet connection is not limited by a [bandwidth cap](https://wikipedia.org/wiki/Data_cap). It's recommended to use an unmetered connection since initial sync and data broadcasted to the network could exceed your limit.
 
@@ -152,6 +152,8 @@ Consider creating a service to run your client automatically on startup. For exa
 #### Updating client {#updating-client}
 
 You need to keep your client software up-to-date with the latest security patches, features, and [EIPs](/eips/). Especially before [hard forks](/history/), make sure you are running the correct client version.
+
+Each client implementation has a human-readable version string used in the peer-to-peer protocol but is also accessible from the command line. This version string lets users check they are running the correct version and allows block explorers and other analytical tools interested in quantifying the distribution of specific clients over the network. Please refer to the individual client documentation for more information about version strings.
 
 #### Running additional services {#running-additional-services}
 

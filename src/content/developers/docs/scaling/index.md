@@ -51,6 +51,8 @@ A specific layer 2 instance may be open and shared by many applications, or may 
 - Any updates to scalability should not be at the expense of decentralization or security – layer 2 builds on top of Ethereum.
 - There are application specific layer 2 networks that bring their own set of efficiencies when working with assets at scale.
 
+[More on layer 2](/layer-2/).
+
 #### Rollups {#rollups}
 
 Rollups perform transaction execution outside layer 1 and then the data is posted to layer 1 where consensus is reached. As transaction data is included in layer 1 blocks, this allows rollups to be secured by native Ethereum security.

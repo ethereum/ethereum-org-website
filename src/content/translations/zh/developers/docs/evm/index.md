@@ -66,7 +66,6 @@ EVM 的所有实现都必须遵守以太坊黄皮书中描述的规范。
 - [ethereumjs-vm](https://github.com/ethereumjs/ethereumjs-vm) - _JavaScript_
 - [eEVM](https://github.com/microsoft/eevm) - _C++_
 - [Hyperledger Burrow](https://github.com/hyperledger/burrow) - _Go_
-- [hevm](https://github.com/dapphub/dapptools/tree/master/src/hevm) - _Haskell_
 
 ## 延伸阅读 {#further-reading}
 

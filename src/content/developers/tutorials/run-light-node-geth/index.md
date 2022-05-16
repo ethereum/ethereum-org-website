@@ -13,7 +13,7 @@ You may be interested in running an [Ethereum node](/developers/docs/nodes-and-c
 
 A light client requires less than 400MB of storage whilst still allowing full interactivity with the Ethereum state. Light clients retrieve data from remote peers, so some queries may take longer to respond in comparison to other sync modes.
 
-For an explanation of the differences between the different sync modes, read our [nodes and clients developer docs](developers/docs/nodes-and-clients/#node-types).
+For an explanation of the differences between the different sync modes, read our [nodes and clients developer docs](/developers/docs/nodes-and-clients/#node-types).
 
 ## Install and run {#install-and-run}
 
@@ -75,9 +75,9 @@ This console allows direct interaction with Ethereum. For example, running the `
 
 ## Mainnet and testnets {#mainnet-and-testnets}
 
-Geth runs your node on [Ethereum Mainnet](/glossary/#mainnet/) by default.
+Geth runs your node on [Ethereum Mainnet](/glossary/#mainnet) by default.
 
-It is also possible to use Geth to run a node on one of the [public test networks](/networks/#testnets/), by running one of the following commands in Terminal:
+It is also possible to use Geth to run a node on one of the [public test networks](/developers/docs/networks/#ethereum-testnets), by running one of the following commands in Terminal:
 
 ```bash
 geth --syncmode light --ropsten

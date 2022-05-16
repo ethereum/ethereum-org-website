@@ -122,7 +122,7 @@ const baseColors = {
   tagOrange: primaryDark100,
   tagGreen: success100,
   tagRed: fail100,
-  tagTurqouise: turquoise,
+  tagTurquoise: turquoise,
   tagGray: white700,
   tagYellow: yellow,
   tagMint: mint,
@@ -196,6 +196,7 @@ const lightColors = {
   textTableOfContents: "#7f7f7f",
   background: white,
   ednBackground: white600,
+  layer2ContentSecondary: white700,
   border: white700,
   tableBoxShadow:
     "0 14px 66px rgba(0,0,0,.07), 0 10px 17px rgba(0,0,0,.03), 0 4px 7px rgba(0,0,0,.05)",
@@ -236,6 +237,19 @@ const lightColors = {
   codeBackground: codeBoxLight,
   rollupDevDocList: primaryLight50,
   beta: "radial-gradient(25.56% 133.51% at 28.36% 45.54%, rgba(28, 28, 225, 0) 0%, rgba(28, 28, 225, 0.06) 100%)",
+  offBackground: "#f7f7f7",
+  stakingPillPlatform: "#cd9df3",
+  stakingPillUI: "#ebd27a",
+  stakingGold: "#be8d10",
+  stakingGoldFill: "#fef9ef",
+  stakingGreen: "#129e5b",
+  stakingGreenFill: "#f7faf1",
+  stakingBlue: "#0b83dc",
+  stakingBlueFill: "#f1fcf5",
+  stakingRed: "#a0524c",
+  stakingRedFill: "#f8fbf9",
+  layer2Gradient:
+    "linear-gradient(85.12deg, rgba(185, 185, 241, 0.2) 0%, rgba(84, 132, 234, 0.2) 56.29%, rgba(58, 142, 137, 0.2) 99.99%)",
 }
 
 // TODO replace random variables w/ baseColor variables
@@ -286,6 +300,7 @@ const darkColors = {
   textTableOfContents: "hsla(0,0%,69.8%,.8)",
   background: "#222222",
   ednBackground: black400,
+  layer2ContentSecondary: black300,
   border: black300,
   tableBoxShadow:
     "0 14px 66px hsla(0,0%,96.1%,.07), 0 10px 17px hsla(0,0%,96.1%,.03), 0 4px 7px hsla(0,0%,96.1%,.05)",
@@ -324,6 +339,19 @@ const darkColors = {
   beta: "background: radial-gradient(25.56% 133.51% at 28.36% 45.54%, rgba(255, 143, 80, 0.72) 0%, rgba(255, 143, 80, 0.22) 100%)",
   cardGradient:
     "linear-gradient(49.21deg, rgba(127, 127, 213, 0.2) 19.87%, rgba(134, 168, 231, 0.2) 58.46%, rgba(145, 234, 228, 0.2) 97.05% )",
+  offBackground: "#181818",
+  stakingPillPlatform: "#cd9df3",
+  stakingPillUI: "#ebd27a",
+  stakingGold: "#F2BB2F",
+  stakingGoldFill: "#373228",
+  stakingGreen: "#49DE96",
+  stakingGreenFill: "#30342b",
+  stakingBlue: "#A9D3F2",
+  stakingBlueFill: "#2b352f",
+  stakingRed: "#D6BBB9",
+  stakingRedFill: "#313432",
+  layer2Gradient:
+    "linear-gradient(83.46deg, rgba(127, 127, 213, 0.2) 7.03%, rgba(138, 168, 231, 0.2) 52.42%, rgba(145, 234, 228, 0.2) 98.77%), #1E1E1E",
 }
 
 const lightThemeColors = Object.assign({}, baseColors, lightColors)
@@ -508,7 +536,33 @@ export const GlobalStyle = createGlobalStyle`
     scroll-margin-top: ${theme.variables.navHeight};
     scroll-snap-margin: ${theme.variables.navHeight};
   }
-  
+
+  /* Anchor tag styles */
+  /* Selected specifically for mdx rendered side icon link */
+  .header-anchor {
+    position: relative;
+    display: initial;
+    margin-left: -1.5em;
+    padding-right: 0.5rem;
+    font-size: 1rem;
+    vertical-align: middle;
+
+    svg {
+      fill: ${(props) => props.theme.colors.primary};
+      visibility: hidden;
+    }
+  }
+
+  h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover {
+    .header-anchor svg {
+      visibility: visible;
+    }
+  }
+
+  .header-anchor:focus svg {
+    visibility: visible;
+  }
+
 `
 // H6 basically only uses as labels as per design system
 

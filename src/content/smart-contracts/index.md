@@ -75,7 +75,7 @@ They can perform computations, create currency, store data, mint NFTs, send comm
 
 - [Stablecoins](/stablecoins/)
 - [Creating and distributing unique digital assets](/nft/)
-- [An automatic, open currency exchange](/get-eth/#dex/)
+- [An automatic, open currency exchange](/get-eth/#dex)
 - [Decentralized gaming](/dapps/?category=gaming)
 - [An insurance policy that pays out automatically](https://etherisc.com/)
 - [A standard that lets people create customized, interoperable currencies](/developers/docs/standards/tokens/)

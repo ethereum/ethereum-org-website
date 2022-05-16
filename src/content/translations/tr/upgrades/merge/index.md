@@ -1,60 +1,68 @@
 ---
 title: Birleştirme
-description: Birleştirme hakkında bilgi edinin - Ethereum Ana Ağı, Sinyal Zinciri tarafından düzenlenen hisse kanıtı sistemine dahil olduğunda.
+description: Mainnet Ethereum'un, İşaret Zinciri koordineli hisse ispatı sistemine katılacağı Birleştirme hakkında bilgi edinin.
 lang: tr
 template: upgrade
 sidebar: true
 image: ../../../../../assets/upgrades/merge.png
-summaryPoint1: Er geç mevcut Ethereum Ana Ağı işaret zincirinin hisse kanıtı sistemi ile birleşecektir.
-summaryPoint2: Bu birleşim Ethereum için iş kanıtına bir son verecek, hisse kanıtına tam geçişe yol açacaktır.
+summaryPoint1: Nihayetinde mevcut Ethereum Mainnet, işaret zincirinin hisse ispatı sistemi ile birleşecektir.
+summaryPoint2: Bu birleştirme, Ethereum için iş ispatına bir son verecek ve hisse ispatına tam geçişi sağlayacaktır.
 summaryPoint3: Bunun gerçekleşmesi parça zincirlerinin geçilmeden öncesine planlanmıştır.
-summaryPoint4: Önceden bundan "kenetlenme" olarak bahsettik
+summaryPoint4: Önceden bundan "kenetlenme" olarak bahsettik.
 ---
 
 <UpgradeStatus dateKey="page-upgrades-merge-date">
-  Bu yükseltme, hisse kanıtı konsensüsüne resmi geçişi temsil ediyor. Bu, madencilik için gereken yoğun enerji ihtiyacını ortadan kaldırır ve bunun yerine, sabit ether kullanarak ağı güvence altına alır. <a href="/upgrades/vision/">Eth2 vizyonunu</a> gerçekleştirmede oldukça heyecan verici bir adım – daha fazla ölçeklenebilirlik, güvenlik ve sürdürülebilirlik.
+  Bu yükseltme, hisse ispatı mutabakatına resmi geçişi temsil eder. Bu, madencilik için gereken yoğun enerji ihtiyacını ortadan kaldırır ve stake edilmiş ether kullanarak ağı güvence altına alır. <a href="/upgrades/vision/">Ethereum vizyonunu </a> gerçekleştirmede oldukça heyecan verici bir adım; daha fazla ölçeklenebilirlik, güvenlik ve sürdürülebilirlik.
 </UpgradeStatus>
 
-## Birleşme nedir? {#what-is-the-docking}
+## Birleştirme nedir? {#what-is-the-docking}
 
-Başlangıçta [Beacon Chain](/upgrades/beacon-chain/)'in bugün kullandığımız zincir olan [Mainnet](/glossary/#mainnet)'ten ayrı olarak gönderildiğini hatırlamak önemlidir. Ethereum Mainnet [iş kanıtı(proof-of-work) ](/developers/docs/consensus-mechanisms/pow/) Beacon Zinciri ile paralel olarak çalışırken bile [ hisse kanıtı(proof-of-stake)](/developers/docs/consensus-mechanisms/pos/) tarafından güvence altına alınmaya devam etmektedir. Bu iki sistem sonunda bir araya geldiği zaman birleştirme gerçekleşmiş olacak.
+Başlangıçta [İşaret Zinciri](/upgrades/beacon-chain/)nin bugün kullandığımız zincir olan [Mainnet](/glossary/#mainnet)'ten ayrı olarak başladığını unutmamak gerekir. Ethereum Mainnet [iş ispatı](/developers/docs/consensus-mechanisms/pow/) İşaret Zinciri ile paralel olarak çalışırken bile [hisse ispatı](/developers/docs/consensus-mechanisms/pos/) tarafından güvence altına alınmaya devam etmektedir. Bu iki sistem sonunda bir araya geldiği zaman Birleştirme gerçekleşmiş olacak.
 
-Ethereum'un yıldızlararası bir yolculuk için pek de hazır olmayan bir uzay aracı olduğunu hayal edin. Beacon Chain ile topluluk, yeni bir motor ve sertleştirilmiş bir gövde inşa etti. Zamanı geldiğinde, mevcut gemi bu yeni sistemle rıhtıma yanaşacak, tek bir gemide birleşecek ve ciddi ışık yılı geçirmeye ve evreni ele geçirmeye hazır olacak.
+Ethereum'un yıldızlararası bir yolculuk için pek de hazır olmayan bir uzay aracı olduğunu hayal edin. İşaret Zinciri ile topluluk, yeni bir motor ve sertleştirilmiş bir gövde inşa etti. Zamanı geldiğinde mevcut gemi, bu yeni sistemle rıhtıma yanaşıp tek bir gemide birleşerek uzun ışık yılları mesafe alacak ve evreni ele geçirmeye hazır olacak.
 
 ## Mainnet ile birleştirme {#docking-mainnet}
 
-Hazır olduğunda, Ethereum Mainnet, Beacon Chain ile "birleşecek" ve [iş kanıtı (proof-of-work) yerine hisse kanıtı(proof-of-stake) kullanan kendi parçası haline gelecek. ](/developers/docs/consensus-mechanisms/pow/).
+Hazır olduğunda Ethereum Mainnet, İşaret Zinciri ile "birleşecek" ve [iş ispatı yerine hisse ispatı kullanan kendi parçasına dönüşecek. ](/developers/docs/consensus-mechanisms/pow/).
 
-Mainnet, geçişin tüm ETH sahipleri ve kullanıcıları için sorunsuz olmasını sağlamak için akıllı sözleşmeleri pay ispatı sistemi ve ayrıca tam geçmiş ve Ethereum'un mevcut durumunda çalıştırma yeteneği geliştirecektir.
+Mainnet, tüm ETH sahipleri ve kullanıcıları için geçişin sorunsuz olmasını sağlamak için akıllı sözleşmeleri hisse kanıtı(proof-of-stake) sistemine ve ayrıca Ethereum'un tam geçmişine ve mevcut durumuna getirecek.
 
 ## Birleştirmeden sonra {#after-the-merge}
 
-Bu, Ethereum için çalışma ispatının sona erdiğini işaret edecek ve daha sürdürülebilir, çevre dostu bir Ethereum çağını başlatacaktır. Bu noktada Ethereum, [Eth2 vizyonunda](/upgrades/vision/) özetlenen tam ölçek, güvenlik ve sürdürülebilirliğe ulaşmaya bir adım daha yakın olacak.
+Bu, Ethereum için iş ispatının sona sinyalini vererek daha sürdürülebilir ve çevre dostu bir Ethereum çağını başlatacaktır. Bu noktada Ethereum, [Ethereum vizyonunda](/upgrades/vision/) özetlenen tam boyuta, güvenliğe ve sürdürülebilirliğe ulaşmaya bir adım daha yakın olacak.
 
-İş ispatından hisse ispatına geçişi hızlandırmak için birleştirmenin bir uygulama hedefinin basitlik olduğuna dikkat etmek önemlidir. Geliştiriciler çabalarını bu geçişe odaklıyor ve bu hedefi geciktirebilecek ek özellikleri en aza indiriyor.
+Birleştirmenin uygulama hedeflerinden birinin, iş ispatından hisse ispatına geçişi hızlandırmak için basitlik sağlamak olduğunu belirtmek gerekir. Geliştiriciler çabalarını bu geçişe odaklıyor ve bu hedefi geciktirebilecek ek özellikleri en aza indiriyor.
 
-**Bu, stake edilen ETH'yi geri çekme yeteneği gibi birkaç özelliğin birleştirme tamamlandıktan sonra biraz daha beklemesi gerekeceği anlamına gelir.** Planlar, birleştirme sonrası bir "temizleme" içerir. "Birleştirme tamamlandıktan çok kısa bir süre sonra gerçekleşmesi beklenen bu özellikleri ele almak için yükseltme yapın.
+**Bu, stake edilen ETH'yi çekebilme gibi birkaç özelliğin Birleştirme tamamlandıktan sonra biraz daha beklemesi gerekeceği anlamına gelir.** Bu özellikleri tamamlamak için Birleştirme tamamlandıktan hemen sonra yapılması beklenen bir birleştirme sonrası "temizlik" de planların içerisinde bulunuyor.
 
 ## Yükseltmeler arasındaki ilişki {#relationship-between-upgrades}
 
-Eth2 yükseltmelerinin tamamı bir şekilde ilişkilidir. Öyleyse, birleştirmenin diğer yükseltmelerle nasıl ilişkili olduğunu özetleyelim.
+Ethereum yükseltmelerinin tamamı bir şekilde ilişkilidir. Öyleyse Birleştirmenin diğer yükseltmelerle nasıl ilişkili olduğunu özetleyelim.
 
-### Birleşme ve İşaret (Beacon) Zinciri {#docking-and-beacon-chain}
+### Birleştirme ve İşaret Zinciri {#docking-and-beacon-chain}
 
-Birleştirme gerçekleştiğinde, Ethereum Mainnet'i doğrulamak için staker'lar atanacaktır. [Madencilik](/developers/docs/consensus-mechanisms/pow/mining/) artık gerekli olmayacak, bu nedenle madenciler muhtemelen kazançlarını yeni pay ispatı sistemindeki paydaşlığa yatıracaklardır.
+Birleştirme gerçekleştiğinde, Ethereum Mainnet'i doğrulamak için stake eden kişiler atanacaktır. [Madencilik](/developers/docs/consensus-mechanisms/pow/mining/) artık gerekli olmayacağı için madenciler büyük ihtimalle kazançlarını yeni hisse ispatı sisteminde stake etmeye yatıracaklardır.
 
-<ButtonLink to="/upgrades/beacon-chain/">İşaret (Beacon) Zinciri</ButtonLink>
+<ButtonLink to="/upgrades/beacon-chain/">
+  İşaret (Beacon) Zinciri
+</ButtonLink>
 
-### Birleştirme ve birleştirme sonrası temizleme {#merge-and-post-merge-cleanup}
+### Birleştirme ve birleştirme sonrası temizlik {#merge-and-post-merge-cleanup}
 
-Stake edilen ETH'yi geri çekme gibi bazı özellikler birleştirmeden hemen sonra henüz desteklenmeyecek. Bunun için birleştirmeden kısa bir süre sonra ayrı bir yükseltme yapılması planlanmaktadır.
+Stake edilen ETH'yi geri çekme gibi bazı özellikler Birleştirmeden hemen sonra henüz desteklenmeyecek. Bunun için birleştirmeden kısa bir süre sonra ayrı bir yükseltme yapılması planlanmaktadır.
 
-[EF Araştırma ve Geliştirme Blogu](https://blog.ethereum.org/category/research-and-development/) ile güncel kalın. Merak edenler için, Nisan 2021 ETHGlobal etkinliğinde Vitalik tarafından sunulan [Birleşmeden Sonra Ne Olur](https://youtu.be/7ggwLccuN5s?t=101) konusu hakkında daha fazla bilgi edinin.
+[EF Araştırma ve Geliştirme Blogu](https://blog.ethereum.org/category/research-and-development/) ile güncel kalın. Merak edenler için, 2021 yılının Nisan ayında ETHGlobal etkinliğinde Vitalik tarafından sunulan [Birleşmeden Sonra Ne Olacağı](https://youtu.be/7ggwLccuN5s?t=101) hakkında daha fazla bilgi edinin.
 
-### Birleştirme ve Shard (Parça) zincirleri {#docking-and-shard-chains}
+### Birleştirme ve parça zincirleri {#docking-and-shard-chains}
 
-Aslında plan, birleşmeden önce bölünmüş zincirleri üzerinde çalışmaktı – ölçeklenebilirliği ele almak için. Bununla birlikte, [2. katman ölçeklendirme çözümlerinin](/developers/docs/scaling/#layer-2-scaling) patlamasıyla, öncelik iş kanıtını kanıta dönüştürmeye geçti -birleştirme yoluyla hisse.
+Başlangıçta plan, ölçeklenebilirliği ele almak için Birleştirmeden önce parça zincirleri üzerinde çalışmaktı. Bununla birlikte, [katman 2 ölçeklendirme çözümleri](/developers/docs/scaling/#layer-2-scaling)nin ünlenmesiyle Birleştirme aracılığıyla iş ispatının hisse ispatıyla değiştirilmesine öncelik verildi.
 
-Bu, sonsuz ölçeklenebilirliğe izin vermek için potansiyel olarak birden fazla parça zinciri turuna duyulan ihtiyaç konusunda topluluk tarafından devam eden bir değerlendirme olacaktır.
+Bu, sonsuz ölçeklenebilirliğe izin vermek için potansiyel olarak birden fazla parça zinciri turuna duyulan ihtiyaç konusunda topluluk tarafından, devam eden bir değerlendirme olacaktır.
 
-<ButtonLink to="/upgrades/shard-chains/">Shard zincirleri</ButtonLink>
+<ButtonLink to="/upgrades/shard-chains/">
+  Shard zincirleri
+</ButtonLink>
+
+## Daha fazla okuyun {#read-more}
+
+<MergeArticleList />

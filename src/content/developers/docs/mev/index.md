@@ -1,13 +1,15 @@
 ---
-title: Miner extractable value (MEV)
-description: An introduction to miner extractable value (MEV)
+title: Maximal extractable value (MEV)
+description: An introduction to maximal extractable value (MEV)
 lang: en
 sidebar: true
 ---
 
-Maximal (formerly "miner") extractable value (MEV) refers to the maximum value that can be extracted from block production in excess of the standard block reward and gas fees by including, excluding, and changing the order of transactions in a block.
+Maximal extractable value (MEV) refers to the maximum value that can be extracted from block production in excess of the standard block reward and gas fees by including, excluding, and changing the order of transactions in a block.
 
-In a [proof-of-work](/developers/docs/consensus-mechanisms/pow/) context, maximal extractable value is also called "miner extractable value." This is because in proof-of-work, miners control transaction inclusion, exclusion, and ordering.
+### Miner extractable value
+
+This concept was first applied under the context of [proof-of-work](/developers/docs/consensus-mechanisms/pow/), and was initially referred to as "miner extractable value". This is because in proof-of-work, miners control transaction inclusion, exclusion, and ordering. However, after the transition to proof-of-stake via [The Merge](/upgrades/merge) validators will be responsible for these roles, and mining will no longer be applicable. The value extraction methods here will still persist after this transition, and thus a name change was needed. To keep the same acronym for continuity while maintaining the same fundamental meaning, "maximal extractable value" is now used as a more inclusive replacement.
 
 ## Prerequisites {#prerequisites}
 

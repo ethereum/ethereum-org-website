@@ -294,7 +294,7 @@ This comment explains the purpose of the contract.
 contract ERC20 is Context, IERC20 {
 ```
 
-This line specifies the inheritence, in this case from `IERC20` from above and `Context`, for OpenGSN.
+This line specifies the inheritance, in this case from `IERC20` from above and `Context`, for OpenGSN.
 
 &nbsp;
 
@@ -902,7 +902,7 @@ are not designed to handle it.
 }
 ```
 
-This is the hook function to be called during transfers. It is empty here, buf if you need
+This is the hook function to be called during transfers. It is empty here, but if you need
 it to do something you just override it.
 
 # Conclusion {#conclusion}

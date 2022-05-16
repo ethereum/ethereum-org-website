@@ -25,14 +25,14 @@ Banyak bisnis dan konsorsium telah menyebarkan blockchain pribadi yang diizinkan
 ### Perbedaan utama {#key-differences}
 
 - Keamanan/Kekekalan Blockchain - Ketahanan blockchain terhadap gangguan ditentukan oleh algoritma konsensusnya. Jaringan Utama Ethereum diamankan oleh interaksi ribuan node independen yang dijalankan oleh individu dan penambang di seluruh dunia. Rantai privat biasanya memiliki sejumlah kecil node yang dikendalikan oleh satu atau beberapa organisasi; node tersebut dapat dikontrol dengan ketat, tapi hanya sedikit yang harus dikompromikan untuk menulis ulang rantai atau melakukan transaksi penipuan.
-- Kinerja - Karena rantai Enterprise Ethereum privat dapat menggunakan node berkinerja tinggi dengan persyaratan perangkat keras khusus dan algoritma konsensus berbeda seperti Bukti Otoritas, rantai dapat mencapai throughput transaksi yang lebih tinggi pada lapisan dasar (Lapisan 1). Pada Jaringan Utama Ethereum, throughput tinggi dapat dicapai dengan penggunaan [solusi penskalaan Lapisan 2](/developers/docs/scaling/layer-2-rollups/).
+- Kinerja - Karena rantai Enterprise Ethereum privat dapat menggunakan node berkinerja tinggi dengan persyaratan perangkat keras khusus dan algoritma konsensus berbeda seperti Bukti Otoritas, rantai dapat mencapai throughput transaksi yang lebih tinggi pada lapisan dasar (Lapisan 1). Pada Jaringan Utama Ethereum, throughput tinggi dapat dicapai dengan penggunaan [solusi penskalaan Lapisan 2](/developers/docs/scaling/#layer-2-scaling).
 - Biaya - Biaya untuk mengoperasikan rantai privat terutama tercermin dalam usaha keras untuk menyiapkan dan mengelola rantai, dan server untuk menjalankannya. Meskipun tidak ada biaya untuk terhubung ke Jaringan Utama Ethereum, ada biaya gas untuk setiap transaksi yang harus dibayar dalam ether. Pemancar transaksi (alias Stasiun Gas) sedang dikembangkan untuk menghilangkan perlunya melibatkan pengguna akhir dan bahkan perusahaan, agar ether dapat digunakan secara langsung dalam transaksi. Beberapa [analisis](https://github.com/EYBlockchain/fundamental-cost-of-ownership/blob/master/EY%20Total%20Cost%20of%20Ownership%20for%20Blockchain%20Solutions.pdf) telah menunjukkan bahwa total biaya untuk mengoperasikan satu aplikasi bisa lebih rendah di Jaringan Utama ketimbang menjalankannya di rantai privat.
 - Pemberian Izin Node - Hanya node yang disahkan dapat bergabung dalam rantai privat. Siapa pun dapat menyiapkan node di Jaringan Utama Ethereum.
 - Privasi - Akses ke data yang ditulis di rantai privat bisa dikendalikan dengan membatasi akses ke jaringan, dan dengan lebih halus menggunakan kontrol akses dan transaksi privat. Semua data yang ditulis di Lapisan 1 Jaringan Utama dapat dilihat oleh siapa pun, sehingga informasi sensitif harus disimpan dan ditransmisikan secara off-chain, atau dienkripsi. Pola desain yang mendukung hal ini sedang populer (contohnya, Baseline, Aztec), serta solusi Lapisan 2 yang dapat menjaga data tetap terbagi dan berada di luar Lapisan 1.
 
 ### Mengapat membangun di Jaringan Utama Ethereum {#why-build-on-ethereum-mainnet}
 
-Perusahaan telah bereksperimen dengan teknologi blockchain sejak sekitar 2016, ketika proyek Hyperledger, Quorum, dan Corda diluncurkan. Fokusnya terutama pada blockchain perusahaan privat yang diizinkan, tapi sejak awal 2019 ada perubahan dalam pemikiran tentang blockchain publik vs privat untuk aplikasi bisnis. Sebuah [survei](https://assets.ey.com/content/dam/ey-sites/ey-com/en_gl/topics/blockchain/ey-public-blockchain-opportunity-snapshot.pdf) yang diadakan oleh Forrester menunjukkan bahwa "Responden survey ... melihat potensi ini, dengan 75% mengatakan bahwa mereka kemungkinan besar akan memanfaatkan blockchain publik di masa depan, dan hampir sepertiga mengatakan mereka sangat mungkin melakukan itu". Paul Brody dari EY telah [membahas](https://www.youtube.com/watch?v=-ycu5vGDdZw&feature=youtu.be&t=3668) tentang manfaat membangun pada blockchain publik, yang (bergantung pada aplikasi) bisa mencakup keamanan/kekebalan yang lebih kuat, transparansi, biaya total kepemilikan yang lebih rendah, dan kemampuan untuk bekerja sama dengan semua aplikasi lainnya yang juga ada di Jaringan Utama (efek jaringan). Berbagi kerangka acuan umum antar perusahaan menghindari munculnya sejumlah silo terisolasi yang tidak perlu yang tidak bisa saling berkomunikasi dan berbagi atau sinkron satu sama lain.
+Perusahaan telah bereksperimen dengan teknologi blockchain sejak sekitar 2016, ketika proyek Hyperledger, Quorum, dan Corda diluncurkan. Fokusnya terutama pada blockchain perusahaan privat yang diizinkan, tapi sejak awal 2019 ada perubahan dalam pemikiran tentang blockchain publik vs privat untuk aplikasi bisnis. Sebuah [survei](https://assets.ey.com/content/dam/ey-sites/ey-com/en_gl/topics/blockchain/ey-public-blockchain-opportunity-snapshot.pdf) yang diadakan oleh Forrester menunjukkan bahwa "Responden survey ... melihat potensi ini, dengan 75% mengatakan bahwa mereka kemungkinan besar akan memanfaatkan blockchain publik di masa depan, dan hampir sepertiga mengatakan mereka sangat mungkin melakukan itu". Paul Brody dari EY telah [membahas](https://www.youtube.com/watch?v=-ycu5vGDdZw&feature=youtu.be&t=3668) tentang keuntungan membangun pada blockchain publik, yang (bergantung pada aplikasi) bisa mencakup keamanan/kekebalan yang lebih kuat, transparansi, biaya total kepemilikan yang lebih rendah, dan kemampuan untuk bekerja sama dengan semua aplikasi lainnya yang juga ada di Jaringan Utama (efek jaringan). Berbagi kerangka acuan umum antar perusahaan menghindari munculnya sejumlah silo terisolasi yang tidak perlu yang tidak bisa saling berkomunikasi dan berbagi atau sinkron satu sama lain.
 
 Pengembangan lainnya yang menggeser fokus ke blockchain publik adalah [Lapisan 2](/developers/docs/scaling/layer-2). Lapisan 2 terutama untuk kategori teknologi skalabilitas yang membuat aplikasi throughput tinggi mungkin ada di rantai publik. Tetapi solusi Lapisan 2 juga bisa [mengatasi beberapa tantangan lainnya yang mendorong pengembang perusahaan memilih rantai privat di masa lalu](https://entethalliance.org/how-ethereum-layer-2-scaling-solutions-address-barriers-to-enterprises-building-on-mainnet/).
 
@@ -72,9 +72,9 @@ Beberapa usaha kolaboratif untuk membuat Ethereum ramah bagi perusahaan telah di
 
 ### Solusi skalabilitas {#scalability-solutions}
 
-[Lapisan 2](/developers/docs/scaling/layer-2-rollups/) adalah serangkaian teknologi atau sistem yang beroperasi di atas Ethereum (Lapisan 1), mewarisi properti keamanan dari Lapisan 1, dan menyediakan kapasitas pemrosesan transaksi (throughput) yang lebih banyak, biaya transaksi (biaya pengoperasian) yang lebih rendah, dan konfirmasi transaksi yang lebih cepat daripada Lapisan 1. Solusi penskalaan Lapisan 2 diamankan oleh Lapisan 1, tetapi memungkinkan aplikasi blockchain menangani lebih banyak pengguna atau aksi atau data daripada yang bisa diakomodasi Lapisan 1. Banyak dari mereka memanfaatkan kemajuan terkini dalam kriptografi dan bukti zero-knowledge (ZK) untuk memaksimalkan kinerja dan keamanan.
+[Lapisan 2](/developers/docs/scaling/#layer-2-scaling) adalah serangkaian teknologi atau sistem yang beroperasi di atas Ethereum (Lapisan 1), mewarisi ciri - ciri keamanan dari Lapisan 1, dan menyediakan kapasitas (keluaran) pemrosesan transaksi lebih banyak, biaya transaksi lebih rendah (biaya pengoperasian), dan konfirmasi transaksi yang lebih cepat daripada Lapisan 1. Solusi penskalaan Lapisan 2 diamankan oleh Lapisan 1, tetapi memungkinkan aplikasi blockchain menangani lebih banyak pengguna atau aksi atau data daripada yang bisa diakomodasi Lapisan 1. Banyak dari mereka memanfaatkan kemajuan terkini dalam kriptografi dan bukti zero-knowledge (ZK) untuk memaksimalkan kinerja dan keamanan.
 
-Membangun aplikasi Anda di atas solusi penskalaan Lapisan 2 bisa membantu [menyelesaikan banyak masalah yang sebelumnya membuat perusahaan membangun di blockchain privat](https://entethalliance.org/how-ethereum-layer-2-scaling-solutions-address-barriers-to-enterprises-building-on-mainnet/), namun tetap mempertahankan manfaat dari membangun di Jaringan Utama.
+Membangun aplikasi Anda di atas solusi penskalaan Lapisan 2 bisa membantu [menyelesaikan banyak masalah yang sebelumnya membuat perusahaan membangun di blockchain privat](https://entethalliance.org/how-ethereum-layer-2-scaling-solutions-address-barriers-to-enterprises-building-on-mainnet/), namun tetap mempertahankan keuntungan dari membangun di Jaringan Utama.
 
 Contoh solusi L2 yang siap dipakai atau yang akan segera dimasukkan:
 
@@ -115,6 +115,7 @@ Berikut adalah beberapa aplikasi perusahaan yang telah digunakan pada Jaringan U
 - [Brave Browser](https://basicattentiontoken.org/) _membayar pengguna untuk perhatian mereka terhadap iklan dan pengguna bisa membayar penerbit untuk mendukung mereka, lewat Token Perhatian Dasar._
 - [hCaptcha](https://www.hcaptcha.com/) _sistem CAPTCHA pencegahan Bot yang membayar operator situs web atas pekerjaan yang diselesaikan oleh pengguna untuk menamai data yang digunakan untuk pembelajaran mesin. Sekarang digunakan oleh Cloudflare._
 - [Audius](https://audius.co/) _sebuah layanan streaming yang menghubungkan penggemar musik langsung dengan para artis, dan memungkinkan artis dibayar secara penuh oleh penggemar mereka, secara langsung dan saat itu juga untuk setiap stream_
+- [EthereumAds](https://ethereumads.com/) _memungkinkan operator situs web menjual ruang iklan dan memperoleh bayaran melalui Ethereum_
 
 ### Keuangan {#finance}
 
@@ -125,6 +126,7 @@ Berikut adalah beberapa aplikasi perusahaan yang telah digunakan pada Jaringan U
 - [Tinlake](https://tinlake.centrifuge.io/) _pembiayaan piutang melalui aset dunia nyata yang ditokenisasi seperti faktur, hipotek, atau royalti streaming_
 - [Kratos](https://triterras.com/kratos) _platform perdagangan komoditas dan pembiayaan perdagangan yang menghubungkan dan memungkinkan penjual komoditas untuk berdagang dan mendapatkan modal dari pemberi pinjaman secara langsung dan daring_
 - [Fasset](https://www.fasset.com/) _sebuah platform untuk mendukung infrastruktur berkelanjutan_
+- [Taurus](https://www.taurushq.com/) _menerbitkan sekuritas yang diberi token_
 
 ### Notarisasi data {#notarization-of-data}
 
@@ -133,6 +135,7 @@ Berikut adalah beberapa aplikasi perusahaan yang telah digunakan pada Jaringan U
 - [ANSA](https://cointelegraph.com/news/italys-top-news-agency-uses-blockchain-to-fight-fake-coronavirus-news) _agensi berita terbesar di Italia yang melawan berita palsu dan memungkinkan pembaca memverifikasi sumber berita dengan mencatatnya di Jaringan Utama_
 - [Verizon](https://decrypt.co/46745/verizon-news-press-releases-ethereum-full-transparency) _mencatat rilis berita di Ethereum untuk memastikan akuntabilitas dan kepercayaan perusahaan_
 - [Breitling](https://www.coindesk.com/breitling-arianee-all-new-watches-ethereum) _mencatat sumber dan riwayat perbaikan pengawasan di Ethereum_
+- [EthSign](https://ethsign.xyz/) _mencatat dokumen elektronik yang telah ditandatangani pada blockchain Ethereum_
 
 ### Rantai pasokan {#supply-chain}
 
@@ -143,6 +146,8 @@ Berikut adalah beberapa aplikasi perusahaan yang telah digunakan pada Jaringan U
 - [Follow Our Fibre](https://www.followourfibre.com) _keterlacakan rantai pasokan viscose_
 - [Pengadaan Jaringan EY OpsChain](https://blockchain.ey.com/products/contract-manager) _memungkinkan perusahaan terlibat dalam sebuah alur kerja pengadaan dengan menerbitkan RFQ, kontrak, pemesanan pembelian, dan faktur di keseluruhan jaringan dari rekan bisnis terpercaya Anda_
 - [Treum](https://treum.io/) _menghadirkan transparansi, keterlacakan, dan kemampuan untuk diperdagangan pada rantai pasokan, menggunakan teknologi blockchain_
+- [TradeTrust](https://www.tradetrust.io/) _memverifikasi electronic Bills of Lading (eBLs) untuk pengiriman internasional_
+- [Birra Peroni](https://www.ey.com/en_gl/news/2021/05/birra-peroni-is-the-first-industrial-organization-to-mint-unique-non-fungible-tokens-using-ey-opschain-traceability) _mencetak NFT untuk setiap batch bir baru, memungkinkan visibilitas dan efisiensi yang lebih baik di seluruh rantai pasokan_
 
 ### Kredensial dan sertifikasi {#credentials}
 
