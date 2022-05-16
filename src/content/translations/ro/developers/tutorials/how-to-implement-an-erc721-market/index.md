@@ -2,7 +2,11 @@
 title: Cum să implementăm o piață ERC-721
 description: Cum să pui articole tokenizate de vânzare pe un panou publicitar descentralizat
 author: "Alberto Cuesta Cañada"
-tags: ["contracte inteligente", "erc-721", "solidity", "tokenuri"]
+tags:
+  - "contracte inteligente"
+  - "erc-721"
+  - "solidity"
+  - "tokenuri"
 skill: intermediar
 lang: ro
 sidebar: true
@@ -91,10 +95,10 @@ function openTrade(uint256 _item, uint256 _price)
     poster: msg.sender,
     item: _item,
     price: _price,
-    status: "Deschis"
+    status: "Open"
   });
   tradeCounter += 1;
-  emit TradeStatusChange(tradeCounter - 1, "Deschis");
+  emit TradeStatusChange(tradeCounter - 1, "Open");
 }
 ```
 
@@ -105,11 +109,11 @@ function executeTrade(uint256 _trade)
   public
 {
   Trade memory trade = trades[_trade];
-  require(trade.status == "Deschis", "Tranzacția nu este Deschisă.");
+  require(trade.status == "Open", "Trade is not Open.");
   currencyToken.transferFrom(msg.sender, trade.poster, trade.price);
   itemToken.transferFrom(address(this), msg.sender, trade.item);
-  trades[_trade].status = "Executat";
-  emit TradeStatusChange(_trade, "Executat");
+  trades[_trade].status = "Executed";
+  emit TradeStatusChange(_trade, "Executed");
 }
 ```
 
@@ -124,16 +128,16 @@ function cancelTrade(uint256 _trade)
   Trade memory trade = trades[_trade];
   require(
     msg.sender == trade.poster,
-    "Tranzacția poate fi cancelată numai de cel care a postat-o."
+    "Trade can be cancelled only by poster."
   );
-  require(trade.status == "Deschis", "Tranzacția nu este Deschisă.");
+  require(trade.status == "Open", "Trade is not Open.");
   itemToken.transferFrom(address(this), trade.poster, trade.item);
-  trades[_trade].status = "Anulat";
-  emit TradeStatusChange(_trade, "Anulat");
+  trades[_trade].status = "Cancelled";
+  emit TradeStatusChange(_trade, "Cancelled");
 }
 ```
 
-Asta-i tot. Ai ajuns la sfârșitul implementării. Este destul de surprinzător cât de compacte pot fi unele concepte de afaceri atunci când sunt exprimate în cod, iar acesta este unul dintre acele cazuri. Verifică contractul complet în [depozitul nostru](https://github.com/HQ20/contracts/blob/master/contracts/classifieds/Classifieds.sol).
+Asta-i tot. Ai ajuns la sfârșitul implementării. Este destul de surprinzător cât de compacte pot fi unele concepte de afaceri atunci când sunt exprimate în cod, iar acesta este unul dintre acele cazuri. Check the complete contract [in our repo](https://github.com/HQ20/contracts/blob/master/contracts/classifieds/Classifieds.sol).
 
 ## Concluzie {#conclusion}
 

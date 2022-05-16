@@ -7,7 +7,7 @@ sidebar: true
 
 # Our design principles {#contributing-to-ethereumorg-}
 
-<Emoji text=":wave:" size={1} /> Hello, and welcome to the **design principles** for ethereum.org. This is part of an ongoing process to evolve and improve ethereum.org.
+<Emoji text=":wave:" size={1} /> Hello, and welcome to the design principles for ethereum.org. This is part of an ongoing process to evolve and improve ethereum.org.
 
 Our principles inform the look and feel of the site and the content that's on it.
 
@@ -82,8 +82,6 @@ The website is the product of many contributors, just like the ecosystem as a wh
 - **Experimental:** We are constantly experimenting, testing and iterating.
 - **Collaborative:** This project brings together all of us.
 - **Sustainable:** Setting up for long-term maintenance by the community
-
-Information Architecture • Visual Direction • Code
 
 You can see our design principles in action [across our site](/).
 

@@ -23,7 +23,7 @@ sidebar: true
 
 **什么是 ERC-20？**
 
-ERC-20 提供了一个同质化代币的标准，换句话说，每个代币与另一个代币（在类型和价值上）完全相同。 例如，一个 ERC-20 代币就像 ETH 一样，意味着一个代币会并永远会与其他代币一样。
+ERC-20 提供了一个同质化代币的标准，换句话说，每个代币与另一个代币（在类型和价值上）完全相同。 例如，一个 ERC-20 代币就像以太币一样，意味着一个代币会并永远会与其他代币一样。
 
 ## 前置要求 {#prerequisites}
 
@@ -33,9 +33,14 @@ ERC-20 提供了一个同质化代币的标准，换句话说，每个代币与�
 
 ## 正文内容 {#body}
 
-ERC-20（以太坊意见征求 20）由 Fabian Vogelsteller 提出于 2015 年 11 月。这是一个能实现智能合约中代币的 API 标准。
+ERC-20（以太坊意见征求 20）由 Fabian Vogelsteller 提出于 2015 年 11 月。这是一个能实现智能合约中代币的应用程序接口标准。
 
-它提供了多个功能。例如转账代币从一个帐户到不同的帐户，来实现获取帐户的当前余额以及网络上的可用令牌总供应量。 除此之外，它还具有其他功能，如批准代币花费到第三方帐户中。
+ERC-20 的功能示例包括：
+
+- 将代币从一个帐户转到另一个帐户
+- 获取帐户的当前代币余额
+- 获取网络上可用代币的总供应量
+- 批准一个帐户中一定的代币金额由第三方帐户使用
 
 如果智能合约实施了下列方法和事件，它可以被称为 ERC-20 代币合约， 一旦部署，将负责跟踪以太坊上创建的代币。
 
@@ -64,7 +69,7 @@ event Approval(address indexed _owner, address indexed _spender, uint256 _value)
 
 ### 示例 {#web3py-example}
 
-让我们看看如此重要的一个标准是如何使我们能够简单地检查以太坊上的任何 ERC-20 代币合约。 我们只需要合约的应用二进制接口 (ABI) 来创造一个 ERC-20 代币界面。 下面我们将使用一个简化的 ABI，使其成为一个简单易用的例子。
+让我们看看如此重要的一个标准是如何使我们能够简单地检查以太坊上的任何 ERC-20 代币合约。 我们只需要合约的应用程序二进制接口 (ABI) 来创造一个 ERC-20 代币界面。 下面我们将使用一个简化的应用程序二进制接口，使其成为一个简单易用的例子。
 
 #### Web3.py 示例 {#web3py-example}
 
@@ -142,4 +147,3 @@ print("Addr Balance:", addr_balance)
 - [EIP-20：ERC-20 代币标准](https://eips.ethereum.org/EIPS/eip-20)
 - [OpenZepelin - 代币](https://docs.openzeppelin.com/contracts/3.x/tokens#ERC20)
 - [OpenZepelin - ERC-20 实施](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)
-- [ConsenSys - ERC-20 实施](https://github.com/ConsenSys/Tokens/blob/master/contracts/eip20/EIP20.sol)

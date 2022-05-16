@@ -2,9 +2,11 @@
 name: Suggest a wallet
 about: Suggest a new wallet to list on ethereum.org
 title: ""
-labels: "feature :sparkles:, content :fountain_pen:"
+labels: "wallet :purse:,"
 assignees: ""
 ---
+
+_Please note as part of [our Q2 product roadmap](https://github.com/ethereum/ethereum-org-website/issues/6161) we paused adding new wallets until we establish new, expanded criteria._
 
 Before suggesting a wallet, make sure you've read [our listing policy](https://www.ethereum.org/en/contributing/adding-products/).
 

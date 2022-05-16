@@ -346,7 +346,7 @@ contract CrossDomainEnabled {
      * Variables *
      *************/
 
-    // Messenger contract used to send and recieve messages from the other domain.
+    // Messenger contract used to send and receive messages from the other domain.
     address public messenger;
 
     /***************
@@ -459,7 +459,7 @@ In this case, the following line triggers two vulnerabilities:
 }
 ```
 
-In this case we are not worried about reentrancy we know `getCrossDomainMessenger()` returns a trustworthy address, even if slither has no way to know that.
+In this case we are not worried about reentrancy we know `getCrossDomainMessenger()` returns a trustworthy address, even if Slither has no way to know that.
 
 ### The L1 bridge contract {#the-l1-bridge-contract}
 
@@ -576,7 +576,7 @@ To want to be able to upgrade this contract without having to copy all the varia
 To do that we use a [`Proxy`](https://docs.openzeppelin.com/contracts/3.x/api/proxy), a contract that uses [`delegatecall`](https://solidity-by-example.org/delegatecall/) to transfer calls to a separate contact whose address is stored by the proxy contract (when you upgrade you tell the proxy to change that address).
 When you use `delegatecall` the storage remains the storage of the _calling_ contract, so the values of all the contract state variables are unaffected.
 
-One effect of this pattern is that the storage of the contract that is the _callee_ of `delegatecall` is not used and therefore the constructor values passed to it do not matter.
+One effect of this pattern is that the storage of the contract that is the _called_ of `delegatecall` is not used and therefore the constructor values passed to it do not matter.
 This is the reason we can provide a nonsensical value to the `CrossDomainEnabled` constructor.
 It is also the reason the initialization below is separate from the constructor.
 
@@ -795,7 +795,7 @@ These two functions are wrappers around `_initiateERC20Deposit`, the function th
 
 This function is similar to `_initiateETHDeposit` above, with a few important differences.
 The first difference is that this function receives the token addresses and the amount to transfer as parameters.
-In the case of ETH the call to the bridge already includes the transfer of asset to the bridge acount (`msg.value`).
+In the case of ETH the call to the bridge already includes the transfer of asset to the bridge account (`msg.value`).
 
 ```solidity
         // When a deposit is initiated on L1, the L1 Bridge transfers the funds to itself for future

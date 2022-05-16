@@ -75,11 +75,6 @@ Sebelum menyelami kerangka kerja, kami menyarankan Anda terlebih dahulu membaca 
 - [GitHub](https://github.com/alchemyplatform)
 - [Discord](https://discord.com/invite/A39JVCM)
 
-**Dapptools -** **_Serangkaian alat CLI yang berfokus pada Ethereum mengikuti filosofi desain Unix, mendukung komposabilitas, dapat dikonfigurasi, dan ekstensibilitas._**
-
-- [Halaman beranda](https://dapp.tools/)
-- [GitHub](https://github.com/dapphub/dapptools/)
-
 ## Bacaan lebih lanjut {#further-reading}
 
 _Tahu tentang sumber daya komunitas yang membantu Anda? Edit halaman ini dan tambahkan!_

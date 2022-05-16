@@ -420,7 +420,7 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
                   isDarkTheme ? "Switch to Light Theme" : "Switch to Dark Theme"
                 }
               >
-                <NavIcon name={isDarkTheme ? "darkTheme" : "lightTheme"} />
+                <NavIcon name={isDarkTheme ? "lightTheme" : "darkTheme"} />
               </ThemeToggle>
               <RightNavLink to="/languages/">
                 <NavIcon name="language" />
