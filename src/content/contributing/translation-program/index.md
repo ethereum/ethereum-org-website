@@ -20,7 +20,7 @@ If you want to get involved and help us grow the global Ethereum community by tr
 
 <InfoBanner emoji=":tada:">
   Check out our <Link to="/contributing/translation-program/acknowledgements/">Translator Acknowledgements</Link> page, and{" "}
-  claim your POAP token! If you translated ethereum.org in 2021, there's a unique POAP waiting for you.{" "}
+  claim your POAP token! If you translated ethereum.org in 2022, there's a unique POAP waiting for you.{" "}
   <Link to="/contributing/translation-program/acknowledgements/#poap">More on POAPs</Link>
 </InfoBanner>
 
