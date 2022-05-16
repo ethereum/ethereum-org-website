@@ -3,7 +3,7 @@ const calculateStakingRewards = (totalAtStake) => {
   const slotsInEpoch = 32
   const baseRewardFactor = 64
   const averageNetworkPctOnline = 0.95
-  const vaildatorUptime = 0.99
+  const validatorUptime = 0.99
   const validatorDeposit = 32 // ETH
   const effectiveBalanceIncrement = 1_000_000_000 // gwei
   const weightDenominator = 64
@@ -23,7 +23,7 @@ const calculateStakingRewards = (totalAtStake) => {
 
   // Calculate offline per-validator penalty per epoch (in gwei)
   // Note: Inactivity penalty is not included in this simple calculation
-  const offlineEpochGweiPentalty =
+  const offlineEpochGweiPenalty =
     baseGweiRewardFullValidator *
     ((weightDenominator - proposerWeight) / weightDenominator)
 
@@ -32,8 +32,8 @@ const calculateStakingRewards = (totalAtStake) => {
     baseGweiRewardFullValidator * averageNetworkPctOnline
 
   // Calculate net yearly staking reward (in gwei)
-  const reward = onlineEpochGweiReward * vaildatorUptime
-  const penalty = offlineEpochGweiPentalty * (1 - vaildatorUptime)
+  const reward = onlineEpochGweiReward * validatorUptime
+  const penalty = offlineEpochGweiPenalty * (1 - validatorUptime)
   const netRewardPerYear = epochPerYear * (reward - penalty)
 
   // Return net yearly staking reward percentage
