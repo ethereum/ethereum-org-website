@@ -7443,6 +7443,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "booklearner",
+      "name": "booklearner",
+      "avatar_url": "https://avatars.githubusercontent.com/u/103979114?v=4",
+      "profile": "http://booklearner.org",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
