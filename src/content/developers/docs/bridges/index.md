@@ -23,7 +23,7 @@ Put simply, bridges unlock developer potential by allowing blockchain networks t
 
 Blockchains have unique strengths, weaknesses, and approaches to building applications (such as speed, throughput, costliness, etc.). Bridges help the development of the overall crypto ecosystem by enabling blockchains to leverage the innovations of each other.
 
-Moreover, bridges unlock new use cases and possibilities for both users and developers. For example, users can now move assets across different ecosystems, making them more productive. For developers and protocols, bridges open up an almost limitless amount of possibilities by expanding the design space for [dApps](/developers/docs/dapps/) across multiple crypto ecosystems.
+Moreover, bridges unlock new use cases and possibilities for both users and developers. For example, users can now move assets across different ecosystems, making them more productive. For developers and protocols, bridges open up an almost limitless amount of possibilities by expanding the design space for [dapps](/developers/docs/dapps/) across multiple crypto ecosystems.
 
 ## How do bridges work? {#how-do-bridges-work}
 
@@ -55,12 +55,12 @@ With bridges, there are no perfect solutions. Rather, there are only trade-offs 
 At a high level, bridges can be categorized as trusted and trustless.
 
 - **Trusted –** Trusted bridges are externally verified. They use an external set of verifiers (Federations with multi-sig, multi-party computation systems, oracle network) to send data across chains. As a result, they can offer great connectivity and enable fully generalized message passing across chains. They also tend to perform well with speed and cost-effectiveness. This comes at the cost of security, as users have to rely on the security of the bridge.
-- **Trustless –** These bridges rely on the blockchains they are connecting and their validators to transfer messages and tokens. They are 'trustless' because they do not add new trust assumptions (in addition to the blockchains). As a result, trustless bridges are considered to be more secure than trusted bridges. 
+- **Trustless –** These bridges rely on the blockchains they are connecting and their validators to transfer messages and tokens. They are 'trustless' because they do not add new trust assumptions (in addition to the blockchains). As a result, trustless bridges are considered to be more secure than trusted bridges.
 
 To evaluate trustless bridges based on other factors, we must break them down into generalized message passing bridges and liquidity networks.
 
-  - **Generalized Message Passing Bridges –** These bridges excel with security and the ability to transfer more complex data across chains. Typically, they are also good with cost-effectiveness. However, these strengths generally come at the cost of connectivity for light client bridges (ex: IBC) and speed drawbacks for optimistic bridges (ex: Nomad) that use fraud proofs.
-  - **Liquidity Networks –** These bridges use atomic swaps for transferring assets and are locally verified systems (i.e., they use the underlying blockchains’ validators to verify transactions). As a result, they excel with security and speed. Moreover, they are considered comparatively cost-effective and offer good connectivity. However, the major tradeoff is their ability to pass more complex data – as they don’t support cross-chain message passing.
+- **Generalized Message Passing Bridges –** These bridges excel with security and the ability to transfer more complex data across chains. Typically, they are also good with cost-effectiveness. However, these strengths generally come at the cost of connectivity for light client bridges (ex: IBC) and speed drawbacks for optimistic bridges (ex: Nomad) that use fraud proofs.
+- **Liquidity Networks –** These bridges use atomic swaps for transferring assets and are locally verified systems (i.e., they use the underlying blockchains’ validators to verify transactions). As a result, they excel with security and speed. Moreover, they are considered comparatively cost-effective and offer good connectivity. However, the major tradeoff is their ability to pass more complex data – as they don’t support cross-chain message passing.
 
 ## Risk with bridges {#risk-with-bridges}
 
@@ -74,29 +74,29 @@ Bridges account for the top three [biggest hacks in DeFi](https://rekt.news/lead
 
 ## How can dapps use bridges? {#how-can-dapps-use-bridges}
 
-Here are some practical applications that developers can consider about bridges and taking their dApp cross-chain:
+Here are some practical applications that developers can consider about bridges and taking their dapp cross-chain:
 
 ### Integrating bridges {#integrating-bridges}
 
 For developers, there are many ways to add support for bridges:
 
 1. **Building your own bridge –** Building a secure and reliable bridge is not easy, especially if you take a more trust-minimized route. Moreover, it requires years of experience and technical expertise related to scalability and interoperability studies. Additionally, it would require a hands-on team to maintain a bridge and attract sufficient liquidity to make it feasible.
-2. **Showing users multiple bridge options –** Many dApps require users to have their native token to interact with them. To enable users to access their tokens, they offer different bridge options on their website. However, this method is a quick fix to the problem as it takes the user away from the dApp interface and still requires them to interact with other dApps and bridges. This is a cumbersome onboarding experience with the increased scope of making mistakes.
-3. **Integrating a bridge –** This solution doesn’t require the dApp to send users to the external bridge and DEX interfaces. It allows dApps to improve the user onboarding experience. However, this approach has its limitations:
+2. **Showing users multiple bridge options –** Many dapps require users to have their native token to interact with them. To enable users to access their tokens, they offer different bridge options on their website. However, this method is a quick fix to the problem as it takes the user away from the dapp interface and still requires them to interact with other dapps and bridges. This is a cumbersome onboarding experience with the increased scope of making mistakes.
+3. **Integrating a bridge –** This solution doesn’t require the dapp to send users to the external bridge and DEX interfaces. It allows dapps to improve the user onboarding experience. However, this approach has its limitations:
    - Assessment and maintenance of bridges are hard and time-consuming.
    - Selecting one bridge creates a single point of failure and dependency.
-   - The dApp is limited by the bridge’s capabilities.
-   - Bridges alone might not be enough. dApps might need DEXs to offer more functionality such as cross-chain swaps.
+   - The dapp is limited by the bridge’s capabilities.
+   - Bridges alone might not be enough. dapps might need DEXs to offer more functionality such as cross-chain swaps.
 4. **Integrating multiple bridges –** This solution solves many problems associated with integrating a single bridge. However, it also has limitations, as integrating multiple bridges is resource-consuming and creates technical and communication overheads for developers – the scarcest resource in crypto.
-5. **Integrating a bridge aggregator –** Another option for dApps is integrating a bridge aggregation solution that gives them access to multiple bridges. Bridge aggregators inherit the strengths of all the bridges and thus are not limited by any single bridge’s capabilities. Notably, the bridge aggregators typically maintain the bridge integrations, which saves the dApp from the hassle of staying on top of the technical and operational aspects of a bridge integration.
+5. **Integrating a bridge aggregator –** Another option for dapps is integrating a bridge aggregation solution that gives them access to multiple bridges. Bridge aggregators inherit the strengths of all the bridges and thus are not limited by any single bridge’s capabilities. Notably, the bridge aggregators typically maintain the bridge integrations, which saves the dapp from the hassle of staying on top of the technical and operational aspects of a bridge integration.
 
    That being said, bridge aggregators also have their limitations. For instance, while they can offer more bridge options, many more bridges are typically available in the market other than those offered on the aggregator's platform. Moreover, just like bridges, bridge aggregators are also exposed to smart contracts and technology risks (more smart contracts = more risks).
 
-If a dApp goes down the route of integrating a bridge or an aggregator, there are different options based on how deep the integration is meant to be. For instance, if it’s only a front-end integration to improve the user onboarding experience, a dApp would integrate the widget. However, if the integration is to explore deeper cross-chain strategies like staking, yield farming, etc., the dApp integrates the SDK or API.
+If a dapp goes down the route of integrating a bridge or an aggregator, there are different options based on how deep the integration is meant to be. For instance, if it’s only a front-end integration to improve the user onboarding experience, a dapp would integrate the widget. However, if the integration is to explore deeper cross-chain strategies like staking, yield farming, etc., the dapp integrates the SDK or API.
 
 ### Deploying a dapp on multiple chains {#deploying-a-dapp-on-multiple-chains}
 
-To deploy a dApp on multiple chains, developers can use development platforms like Alchemy, Hardhat, Truffle, etc. Typically, these platforms come with composable plugins that can enable dApps to go cross-chain. For instance, developers can use a deterministic deployment proxy offered by the hardhat-deploy plugin.
+To deploy a dapp on multiple chains, developers can use development platforms like Alchemy, Hardhat, Truffle, etc. Typically, these platforms come with composable plugins that can enable dapps to go cross-chain. For instance, developers can use a deterministic deployment proxy offered by the hardhat-deploy plugin.
 
 ### Monitoring contract activity across chains {#monitoring-contract-activity-across-chains}
 
