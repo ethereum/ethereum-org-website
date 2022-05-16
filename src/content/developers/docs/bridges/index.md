@@ -42,7 +42,7 @@ Bridges can usually be classified into one of the following buckets:
 - **Generalized Message Passing Bridges –** These bridges can transfer assets, along with messages and arbitrary data across chains. Examples: Nomad and LayerZero.
 - **Liquidity Networks –** These bridges primarily focus on transferring assets from one chain to another via atomic swaps. Generally, they don’t support cross-chain message passing. Examples: Connext and Hop.
 
-## Evolution of bridges {#evolution-of-bridges}
+## Trade-offs to consider {#trade-offs}
 
 With bridges, there are no perfect solutions. Rather, there are only trade-offs made to fulfill a purpose. Developers and users can evaluate bridges based on the following factors:
 
