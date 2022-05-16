@@ -1202,6 +1202,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="http://josephschiarizzi.com"><img src="https://avatars.githubusercontent.com/u/9449596?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Joseph Schiarizzi</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=cupOJoseph" title="Documentation">📖</a></td>
     <td align="center"><a href="https://gustavorssilva.github.io/"><img src="https://avatars.githubusercontent.com/u/8384988?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Gustavo Silva</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3AGustavoRSSilva" title="Bug reports">🐛</a></td>
     <td align="center"><a href="https://github.com/AweSamarth"><img src="https://avatars.githubusercontent.com/u/72488638?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Samarth Saxena</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=AweSamarth" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/byhow"><img src="https://avatars.githubusercontent.com/u/25713361?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Baihao</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=byhow" title="Documentation">📖</a> <a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Abyhow" title="Bug reports">🐛</a></td>
   </tr>
 </table>
 

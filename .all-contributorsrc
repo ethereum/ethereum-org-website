@@ -7424,6 +7424,16 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "byhow",
+      "name": "Baihao",
+      "avatar_url": "https://avatars.githubusercontent.com/u/25713361?v=4",
+      "profile": "https://github.com/byhow",
+      "contributions": [
+        "doc",
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
