@@ -36,15 +36,13 @@ Since sidechains use a separate consensus mechanism, and because these chains ar
 
 Conversely, plasma chains derive their security from Mainnet are somewhat safer than sidechains.  Both sidechains and plasma chains can have different consensus protocols, but the difference is that plasma chains publishes Merkle roots for each block on Ethereum Mainnet. Block roots are small pieces of information we can use to verify information about transactions that happen on a plasma chain. If an attack happens on a plasma chain, users can safely exit to Mainnet and withdraw their funds using the appropriate proofs. 
 
-
 ### Plasma vs sharding
 
-Both Plasma chains and [shard chains](https://ethereum.org/en/upgrades/shard-chains/) periodically publish cryptographic proofs on the main chain. However, both have different security properties. 
-Shard chains are tightly coupled to the main chain, but plasma chains are not. Even if one shard block is invalid, the entire chain will reorganize and discard the invalid block. Thus, shard chains can be as safe as the main chain. 
+Both plasma chains and [shard chains](/upgrades/shard-chains/) periodically publish cryptographic proofs on the main chain. However, both have different security properties. 
 
-While Plasma chains can benefit from Layer 1 security, they are not as tightly linked to the main chain as shard chains. It's possible to commit an invalid Plasma block header to the main chain since the larger network has little information about the state of the Plasma chain. 
+Shard chains commit "collation headers" to Mainnet, which contain detailed information about each data shard. As such, nodes on the main chain verify and enforce the validity of data shards. This reduces the possibility of invalid shard transitions and protects the network against malicious activity.  
 
-With sharding, the main chain knows how sharded sub-chains should operate and can reject an invalid shard transition. The upside to Plasma is the effects of a malicious activity can be restricted to the child chain, while the effect on malicious activity on shard chains would affect the entire network. 
+Plasma is different because Mainnet only receives minimal information about the state of child chains. This means Mainnet cannot effectively verify transactions conducted on child chains, making the latter less secure. 
 
 ### Use Plasma {#use-plasma}
 
