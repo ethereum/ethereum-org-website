@@ -84,7 +84,7 @@ Altair was the first major network upgrade that had an exact rollout time. Every
 
 The London upgrade introduced [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), which reformed the transaction fee market, along with changes to how gas refunds are handled and the [Ice Age](/glossary/#ice-age) schedule.
 
-- [Are you a dApp developer? Be sure to upgrade your libraries and tooling.](https://github.com/ethereum/eth1.0-specs/blob/master/network-upgrades/ecosystem-readiness.md)
+- [Are you a dApp developer? Be sure to upgrade your libraries and tooling.](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/london-ecosystem-readiness.md)
 - [Read the Ethereum Foundation announcement](https://blog.ethereum.org/2021/07/15/london-mainnet-announcement/)
 - [Read the Ethereum Cat Herder's explainer](https://medium.com/ethereum-cat-herders/london-upgrade-overview-8eccb0041b41)
 

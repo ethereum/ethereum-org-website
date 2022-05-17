@@ -6,17 +6,18 @@ import styled from "styled-components"
 
 import ButtonDropdown from "../../components/ButtonDropdown"
 import ButtonLink from "../../components/ButtonLink"
-import CalloutBanner from "../../components/CalloutBanner"
 import Card from "../../components/Card"
 import Link from "../../components/Link"
 import PageHero from "../../components/PageHero"
 import PageMetadata from "../../components/PageMetadata"
 import Translation from "../../components/Translation"
 import {
-  CardGrid,
   Content,
   Page as PageContainer,
   Divider,
+  OptionContainer,
+  Option,
+  OptionText,
 } from "../../components/SharedStyledComponents"
 import FeedbackCard from "../../components/FeedbackCard"
 import ExpandableCard from "../../components/ExpandableCard"
@@ -26,7 +27,6 @@ import StakingHomeTableOfContents from "../../components/Staking/StakingHomeTabl
 import StakingCommunityCallout from "../../components/Staking/StakingCommunityCallout"
 
 import { translateMessageId } from "../../utils/translations"
-import { trackCustomEvent } from "../../utils/matomo"
 
 const HeroStatsWrapper = styled.div`
   display: flex;
@@ -135,6 +135,14 @@ const ContentContainer = styled.article`
   }
 `
 
+const StakeContainer = styled.div`
+  margin: 0 auto;
+  max-width: ${(props) => props.theme.breakpoints.m};
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+`
+
 const ComparisonGrid = styled.div`
   display: grid;
   grid-column-gap: 3rem;
@@ -188,21 +196,13 @@ const ColorH3 = styled.h3`
   color: ${({ theme, color }) => theme.colors[color]};
 `
 
-const ButtonContaier = styled.div`
-  display: flex;
-  gap: 1rem;
-  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
-    flex-direction: column;
-  }
-`
-
 const StyledButtonLink = styled(ButtonLink)`
   @media (max-width: ${({ theme }) => theme.breakpoints.s}) {
     width: 100%;
   }
 `
 
-const StyledCardGrid = styled.div`
+const CardGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
@@ -373,7 +373,7 @@ const StakingPage = ({ data }) => {
             <h2 id={tocItems.whyStakeYourEth.id}>
               {tocItems.whyStakeYourEth.title}
             </h2>
-            <StyledCardGrid>
+            <CardGrid>
               {benefits.map(
                 ({ title, description, emoji, linkText, to }, idx) => (
                   <StyledCard
@@ -386,7 +386,7 @@ const StakingPage = ({ data }) => {
                   </StyledCard>
                 )
               )}
-            </StyledCardGrid>
+            </CardGrid>
           </Content>
           <Content>
             <h2 id={tocItems.howToStakeYourEth.id}>
@@ -609,32 +609,19 @@ const StakingPage = ({ data }) => {
             <h2 id={tocItems.faq.id}>{tocItems.faq.title}</h2>
             <ExpandableCard title="What is a validator?">
               A <em>validator</em> is a virtual entity that lives on the Beacon
-              Chain, represented by a balance, public key, and other properties.
-              A <em>validator client</em> is the software that acts on behalf of
-              the validator by holding and using its private key. A single
-              validator client can hold many key pairs, controlling many
-              validators. Each key-pair associated with a validator requires
-              32 ETH to be activated. More ETH deposited to a single set of keys
-              does not increase rewards potential, as each validator is limited
-              to an{" "}
-              <Link to="https://www.attestant.io/posts/understanding-validator-effective-balance/">
-                effective balance
-              </Link>{" "}
-              of 32 ETH. This means that staking is done in 32 ETH increments,
-              each with it's own set of keys and balance. Do not deposit more
-              than 32 ETH for a single validator. It will be locked until the
-              planned Shanghai update. If solo staking seems too demanding for
-              you, consider using a{" "}
-              <Link to="/staking/saas/">staking-as-a-service</Link> provider, or
-              if you're working with less than 32 ETH, check out the{" "}
-              <Link to="/staking/pools/">staking pools</Link>.
+              Chain and participates in the consensus of the Ethereum protocol.
+              Validators are represented by a balance, public key, and other
+              properties. A <em>validator client</em> is the software that acts
+              on behalf of the validator by holding and using its private key. A
+              single validator client can hold many key pairs, controlling many
+              validators.
             </ExpandableCard>
             <ExpandableCard title="Why do I need to have funds at stake?">
-              As a validator you have the ability to propose and attest to
-              blocks for the network. To prevent dishonest behavior users must
-              have their funds at stake. This allows the protocol to penalize
-              malicious actors. Staking is a means to keep you honest, as your
-              actions will have financial consequences.
+              A validator has the ability to propose and attest to blocks for
+              the network. To prevent dishonest behavior, users must have their
+              funds at stake. This allows the protocol to penalize malicious
+              actors. Staking is a means to keep you honest, as your actions
+              will have financial consequences.
             </ExpandableCard>
             <ExpandableCard title="Can I buy 'Eth2'?">
               <p>

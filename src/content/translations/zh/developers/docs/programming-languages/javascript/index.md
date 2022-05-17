@@ -9,7 +9,7 @@ JavaScript 是以太坊生态中最受欢迎的语言之一。 事实上，有�
 
 有机会在[堆栈的所有级别](/developers/docs/ethereum-stack/)使用 JavaScript（或接近）。
 
-## JavaScript 和以太坊的交互 {#interact-with-ethereum}
+## Javascript 和以太坊的交互 {#interact-with-ethereum}
 
 ### JavaScript API 库 {#javascript-api-libraries}
 
@@ -24,7 +24,7 @@ JavaScript 是以太坊生态中最受欢迎的语言之一。 事实上，有�
 
 ### 智能合约 {#smart-contracts}
 
-作为 JavaScript 开发者，如果希望开发自己的智能合约，请了解：[Solidity](https://solidity.readthedocs.io)。 这是最受欢迎的智能合约语言，它深受 JavaScript 的启发。
+作为 JavaScript 开发者，如果希望开发自己的智能合约，请了解：[Solidity](https://solidity.readthedocs.io)。 这是最受欢迎的智能合约语言，它在语法上类似于 JavaScript，可能会更容易学习。
 
 关于[智能合约](/developers/docs/smart-contracts/)的更多信息。
 
@@ -32,7 +32,7 @@ JavaScript 是以太坊生态中最受欢迎的语言之一。 事实上，有�
 
 ### 以太坊虚拟机 {#the-ethereum-virtual-machine}
 
-这是一个 JavaScript 的 [以太坊虚拟机](/developers/docs/evm/)实现。 它支持最新的分叉（fork）规则。 分叉规则是指因计划的升级而对 EVM 进行的改造。
+用 JavaScript 实现[以太坊的虚拟机](/developers/docs/evm/)。 它支持最新的分叉（fork）规则。 分叉规则是指因计划的升级而对 EVM 进行的改造。
 
 它被拆分成各种 JavaScript 软件包，以便您可以更好地了解：
 

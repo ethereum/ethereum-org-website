@@ -46,33 +46,38 @@ incomplete: true
 
 ## Python 项目和工具 {#python-projects-and-tools}
 
-### 活跃：
+### 活跃： {#active}
 
 - [Web3.py](https://github.com/ethereum/web3.py) - _用于与以太坊交互的 Python 库_
+- [Ape ](https://github.com/ApeWorX/ape) - _适用于 Pythonistas、数据科学家和安全专业人员的智能合约开发工具_
 - [Brownie](https://github.com/eth-brownie/brownie) - _一个用于部署、测试和与以太坊智能合约交互的 Python 框架_
 - [Vyper](https://github.com/ethereum/vyper/) - _一个具有 Python 风格的以太坊智能合约编程语言_
 - [py-evm](https://github.com/ethereum/py-evm) - _以太坊虚拟机的实现_
-- [Mamba](https://mamba.black) - _一个用 Vyper 语言编写、编译和部署智能合约的框架_
 - [eth-tester](https://github.com/ethereum/eth-tester) - _用于测试基于以太坊应用程序的工具_
 - [eth-utils](https://github.com/ethereum/eth-utils/) - _使用以太坊相关代码库的实用函数工具_
 - [py-solc-x](https://pypi.org/project/py-solc-x/) - _Python 封装的 solidity 0.5.x 编译器_
 - [py-wasm](https://github.com/ethereum/py-wasm) - _Web 汇编解释器的 Python 实现_
 - [pydevp2p](https://github.com/ethereum/pydevp2p) - _P2P 协议栈的 Python 实现_
 - [pymaker](https://github.com/makerdao/pymaker) - _Maker 合约的 Python API _
+- [siwe](https://github.com/spruceid/siwe-py) - _注册以太坊 (siwe) 以应用 Python_
+- [用于测试的智能合约](https://github.com/tradingstrategy-ai/smart-contracts-for-testing) - _ERC-20、Uniswap 和其他常见合约随附的一个 Python 包，用于使用 Web3.py 进行测试_
 
-### 已归档/不再维护：
+### 已归档/不再维护： {#archived--no-longer-maintained}
 
 - [Trinity](https://github.com/ethereum/trinity) - _以太坊的 Python 客户端_
+- [Mamba](https://mamba.black) - _一个用 Vyper 语言编写、编译和部署智能合约的框架_
 
 想要获取更多的资源？ 请查看 [ethereum.org/developers](/developers/)。
 
-## 使用 Python 工具的项目
+## 使用 Python 工具的项目 {#projects-using-python-tooling}
 
 以下基于以太坊的项目使用本页提到的工具。 相关的开源代码库可作为一个很好的参考，例如代码和最佳做法。
 
 - [Yearn Finance](https://yearn.finance/) 和 [Yearn Vault Contracts 库](https://github.com/yearn/yearn-vaults)
 - [Curve](https://curve.fi/) 和 [Curve 智能合约库](https://github.com/curvefi/curve-contract)
 - [BadgerDAO](https://badger.com/) 和 [使用 Brownie 工具链的智能合约](https://github.com/Badger-Finance/badger-system)
+- [Sushiswap](https://sushi.com/) 使用 [Python 来管理和部署他们的归属合约](https://github.com/sushiswap/sushi-vesting-protocols)
+- 因 Alpha Homora 而知名的 [Alpha Finance](https://alphafinance.io/) 使用 [Brownie 来测试和部署他们的智能合约](https://github.com/AlphaFinanceLab/alpha-staking-contract)
 
 ## Python 社区贡献者 {#python-community-contributors}
 

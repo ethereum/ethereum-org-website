@@ -17,17 +17,17 @@ sidebar: true
 
 ## 数字自动售货机 {#a-digital-vending-machine}
 
-对智能合约的最佳比喻，也许是一种售货机，就像 [Nick Szabo](https://unenumerated.blogspot.com/) 所描述的那样。 有了正确的投入，就保证了某些产出。
+正如 [Nick Szabo](https://unenumerated. blogspot. com/) 所述，对智能合约的最佳比喻也许就是一台售货机。 有了正确的投入，就能保证一定的产出。
 
 从售货机中获取快餐：
 
 ```
-钱 + 选择零食 = 零食分发
+money + snack selection = snack dispensed
 ```
 
-这种逻辑是以程序的形式写入自动售货机的。
+这种逻辑已在自动售货机中设定好。
 
-一个智能合约，就像自动售货机一样，是有逻辑被写入进去的。 下面是使得自动售货机看起来像智能合约的一个简单示例：
+一个智能合约，就像自动售货机一样，逻辑已设定好。 以下示例简单展示了智能合约会如何看起来像自动售货机：
 
 ```solidity
 pragma solidity 0.8.7;
@@ -66,42 +66,42 @@ contract VendingMachine {
 
 ## 无需准入性 {#permissionless}
 
-任何人都可以编写智能合约并将其部署到区块链网络上。 您只需要学习如何用[智能合约语言编码](/developers/docs/smart-contracts/languages/)，并有足够的 ETH 来部署您的合约。 在技术上，部署智能合约是一项交易，所以您需要支付您的[Gas](/developers/docs/gas/)，就像您需要为简单的以太坊转账支付 gas 一样。 然而，部署合约所需要消耗的 gas 费要高得多。
+任何人都可以编写智能合约，并将其部署到网络上。 您只需要学习如何用[智能合约语言](/developers/docs/smart-contracts/languages/)编码，并有足够的以太币来部署您的合约。 在技术上，部署智能合约是一项交易，所以您需要支付[气体](/developers/docs/gas/)，就像您需要为简单的以太币转账支付气体一样。 然而，部署合约需要支付的气体成本要高得多。
 
-以太坊编写智能合约的语言，对开发者比较友好：
+以太坊为编写智能合约提供的语言对开发者比较友好：
 
 - Solidity
 - Vyper
 
-[有关更多语言](/developers/docs/smart-contracts/languages/)
+[关于语言的更多信息](/developers/docs/smart-contracts/languages/)
 
 然而，它们必须要先编译才能部署，以便以太坊虚拟机可以解释并储存合约。 [关于编译的更多信息](/developers/docs/smart-contracts/compiling/)
 
 ## 可组合性 {#composability}
 
-智能合约在以太坊上公开，并被认为是开放应用程序接口。 这意味着您可以在您自己的智能合约中调用其他智能合约以极大地扩展可能性。 合约甚至可以部署其他合约。
+智能合约在以太坊上是公开的，可视为开放式应用程序接口。 这意味着您可以在自己的智能合约中调用其他智能合约，极大地扩展了可以执行的操作范围。 合约甚至可以部署其他合约。
 
-了解更多关于[智能合约可组合性](/developers/docs/smart-contracts/composability/)的内容。
+了解关于[智能合约可组合性](/developers/docs/smart-contracts/composability/)的更多信息。
 
 ## 局限性 {#limitations}
 
-智能合约本身无法获取关于”真实世界“的事件信息，因为它们无法发送 HTTP 请求。 这是由其自身设计决定的。 因为依赖于外部信息可能会危及共识，这对安全性和去中心化而言十分重要。
+智能合约本身无法获取关于”真实世界“的事件信息，因为它们无法发送超文本传输协议请求。 这是由设计决定的。 依赖外部信息可能会危及共识，这一点对安全性和去中心化而言十分重要。
 
-这可以通过 [预言机](/developers/docs/oracles/) 来规避。
+这可以使用[预言机](/developers/docs/oracles/)通过多种方法来规避。
 
-智能合约的另一个限制是最大合约大小。 智能合约最多可达 24 KB，否则会消耗完 gas。 可以使用 [The Diamond 模式](https://eips.ethereum.org/EIPS/eip-2535)来绕过它。
+智能合约的另一个限制是最大合约大小。 智能合约最大可为 24KB，否则会消气体耗完气体。 可以使用[钻石模式](https://eips.ethereum.org/EIPS/eip-2535)来规避这一问题。
 
 ## 智能合约资源 {#smart-contract-resources}
 
-**OpenZeppelin 合约 - _安全智能合约开发的库。_**
+**OpenZeppelin 合约——\*\***_安全智能合约开发的库。_\*\*
 
 - [openzeppelin.com/contracts/](https://openzeppelin.com/contracts/)
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-contracts)
 - [社区论坛](https://forum.openzeppelin.com/c/general/16)
 
-**DappSys - _安全、简单、灵活的智能合约构建模块。_**
+**DappSys - \*\***_安全、简单、灵活的智能合约构建块。_\*\*
 
-- [Dappsys](https://dappsys.readthedocs.io/)
+- [DappSys](https://dappsys.readthedocs.io/)
 - [GitHub](https://github.com/dapphub/dappsys)
 
 ## 延伸阅读 {#further-reading}

@@ -309,7 +309,6 @@ const StablecoinsPage = ({ data }) => {
       DUSD: { type: CRYPTO, url: "https://dusd.finance/" },
       PAXG: { type: ASSET, url: "https://www.paxos.com/paxgold/" },
       AMPL: { type: ALGORITHMIC, url: "https://www.ampleforth.org/" },
-      UST: { type: ALGORITHMIC, url: "https://www.terra.money/" },
       FRAX: { type: ALGORITHMIC, url: "https://frax.finance/" },
       MIM: { type: ALGORITHMIC, url: "https://abracadabra.money/" },
       USDP: { type: FIAT, url: "https://paxos.com/usdp/" },
@@ -321,15 +320,28 @@ const StablecoinsPage = ({ data }) => {
   useEffect(() => {
     ;(async () => {
       try {
-        // No option to filter by stablecoins, so fetching the top tokens by market cap
-        const data = await getData(
-          "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=250&page=1&sparkline=false"
+        // Fetch token data in the Ethereum ecosystem
+        const ethereumData = await getData(
+          "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&category=ethereum-ecosystem&order=market_cap_desc&per_page=100&page=1&sparkline=false"
         )
-        const markets = data
-          .filter((token) =>
-            Object.keys(stablecoins).includes(token.symbol.toUpperCase())
-          )
-          .slice(0, 10)
+        // Fetch token data for stablecoins
+        const stablecoinData = await getData(
+          "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&category=stablecoins&order=market_cap_desc&per_page=100&page=1&sparkline=false"
+        )
+
+        // Get the intersection of stablecoins and Ethereum tokens to only have a list of data for stablecoins in the Ethereum ecosystem
+        const ethereumStablecoinData = stablecoinData.filter(
+          (stablecoin) =>
+            ethereumData.findIndex(
+              (etherToken) => stablecoin.id == etherToken.id
+            ) > -1
+        )
+
+        // Filter stablecoins that aren't in stablecoins useMemo above, and then map the type of stablecoin and url for the filtered stablecoins
+        const markets = ethereumStablecoinData
+          .filter((token) => {
+            return stablecoins[token.symbol.toUpperCase()]
+          })
           .map((token) => {
             return {
               name: token.name,

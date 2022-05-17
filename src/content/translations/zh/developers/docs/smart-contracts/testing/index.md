@@ -17,6 +17,11 @@ incomplete: true
 
 - [GitHub](https://github.com/sc-forks/solidity-coverage)
 
+**hevm -** **_以太坊虚拟机实现，专门用于单元测试以及调试智能合约。_**
+
+- [GitHub](https://github.com/dapphub/dapptools/tree/master/src/hevm)
+- [DappHub 聊天室](https://dapphub.chat/)
+
 **Whiteblock Genesis -** **_端到端开发沙盒和区块链测试平台。_**
 
 - [Whiteblock.io](https://whiteblock.io)

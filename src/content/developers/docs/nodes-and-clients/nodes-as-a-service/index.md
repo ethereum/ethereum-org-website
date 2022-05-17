@@ -85,6 +85,18 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Bring your cloud
     - Pay-per-hour pricing
     - Direct 24/7 support
+- [**DataHub**](https://datahub.figment.io)
+  - [Docs](https://docs.figment.io/)
+  - Features
+    - Free tier option with 3,000,000 reqs/month
+    - RPC and WSS endpoints
+    - Dedicated full and archive nodes
+    - Auto-Scaling (Volume Discounts)
+    - Free archival data
+    - Service Analytics
+    - Dashboard
+    - Direct 24/7 Support
+    - Pay in Crypto (Enterprise)
 - [**GetBlock**](https://getblock.io/)
   - [Docs](https://getblock.io/docs/get-started/authentication-with-api-key/)
   - Features
@@ -203,7 +215,15 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Support for various nodes
     - Resource scaling
     - High processing speeds
-
+- [**ZMOK**](https://zmok.io/)
+  - [Docs](https://docs.zmok.io/)
+  - Features
+    - Front-running as a service
+    - Global transactions mempool with search/filtering methods
+    - Unlimited TX fee and infinite Gas for sending transactions
+    - Fastest getting of the new block and reading of the blockchain
+    - The best price per API call guarantee
+ 
 ## Further reading {#further-reading}
 
 - [List of Ethereum node services](https://ethereumnodes.com/)

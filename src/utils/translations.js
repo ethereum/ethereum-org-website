@@ -67,6 +67,16 @@ const translateMessageId = (id, intl) => {
   return translation
 }
 
+// Overwrites the default Persian numbering of the Farsi language to use Hindu-Arabic numerals (0-9)
+// Context: https://github.com/ethereum/ethereum-org-website/pull/5490#pullrequestreview-892596553
+const getLocaleForNumberFormat = (locale) => {
+  if (locale === "fa") {
+    return "en"
+  }
+
+  return locale
+}
+
 // Must export using ES5 to import in gatsby-node.js
 module.exports.allLanguages = allLanguages
 module.exports.languageMetadata = languageMetadata
@@ -75,3 +85,4 @@ module.exports.getDefaultMessage = getDefaultMessage
 module.exports.isLangRightToLeft = isLangRightToLeft
 module.exports.translateMessageId = translateMessageId
 module.exports.legacyHomepageLanguages = legacyHomepageLanguages
+module.exports.getLocaleForNumberFormat = getLocaleForNumberFormat

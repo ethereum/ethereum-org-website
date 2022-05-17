@@ -40,9 +40,13 @@ If it does, complete the following information which we need to accurately list 
 
 <!-- If yes, please provide a link to the repository -->
 
-**What category of layer 2 is it? (Optimistic, ZK, State channel)**
+**What category of layer 2 is it? (Optimistic, ZK)**
 
 <!-- Please provide some information on what kind of layer 2 this is -->
+
+**Does the layer 2 use Ethereum Mainnet for data availability?**
+
+<!-- Please provide proof thats the layer 2 uses Ethereum for data availability -->
 
 **Which bridges are used to onboard?**
 
