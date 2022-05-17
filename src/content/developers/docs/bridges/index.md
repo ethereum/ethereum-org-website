@@ -30,7 +30,7 @@ While there are many [types of bridge designs](https://blog.li.fi/what-are-block
 
 - **Lock and Mint –** Lock assets on the source chain and mint assets on the destination chain.
 - **Burn and Mint –** Burn assets on the source chain and mint assets on the destination chain.
-- **Atomic Swaps –** Swap assets on the source chain for assets on the destination chain.
+- **Atomic Swaps –** Swap assets on the source chain for assets on the destination chain with another party.
 
 ## Bridge types {#bridge-types}
 
