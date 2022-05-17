@@ -67,7 +67,7 @@ Posts published on Mirror are permanently stored on Arweave, a decentralized sto
 
 [MINDS](https://www.minds.com/) is one of the most used decentralized social media platforms. It works like Facebook and has racked up millions of users already.
 
-Users use the platform's native ERC-20 token $MIND to pay for items. You can also earn $MIND tokens by publishing popular content, contributing to the ecosystem, and accepting advertising offers.
+Users use the platform's native ERC-20 token $MIND to pay for items. Users can also earn $MIND tokens by publishing popular content, contributing to the ecosystem, and referring others to the platform.
 
 ## Ethereum and legacy social media platforms {#Ethereum-and-legacy-social-media-networks}
 
