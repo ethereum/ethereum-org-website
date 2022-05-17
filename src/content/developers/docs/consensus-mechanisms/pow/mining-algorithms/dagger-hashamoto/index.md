@@ -3,7 +3,6 @@ title: Dagger-Hashamoto
 description: A detailed look at the Dagger-Hashamoto algorithm.
 lang: en
 sidebar: true
-incomplete: false
 ---
 
 Dagger-Hashimoto was the original research implementation and specification for Ethereum's mining algorithm. Dagger-Hashimoto was superseded by [Ethash](#ethash).
