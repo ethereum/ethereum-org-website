@@ -27,18 +27,15 @@ You should have a good understanding of all the foundational topics and a high-l
 
 Plasma, sidechains, and sharding all follow a similar pattern where a collection of "child chains" rely on a "main chain" for consensus. At intervals, cryptographic proofs of transaction validity (hashes) are submitted to the main chain to prevent fraudulent activity on child chains. 
 
-However, the three scaling solutions have slight differences. Here is a quick comparison of Plasma chains, sidechains, and shard chains:
+However, the three scaling solutions have slight differences. Here is a quick comparison of plasma chains, sidechains, and shard chains:
 
 ### Plasma vs sidechains  
 
-A [sidechain](https://ethereum.org/en/developers/docs/scaling/sidechains/) is a blockchain operating independently but connects to the main blockchain (Ethereum Mainnet) via a two-way bridge. [Bridges](https://ethereum.org/en/bridges/) allow users to exchange tokens between both blockchains, so they can transact on the sidechain—reducing congestion on the base layer and improving scalability. 
-With sidechains, there's the risk of losing your funds. Sidechains use a separate consensus mechanism and, ergo, cannot rely on the security of Ethereum Mainnet (Layer 1).
+A [sidechain](/developers/docs/scaling/sidechains/) is an independently operated blockchain connected to the Ethereum Mainnet via a two-way bridge. [Bridges](/bridges/) allow users to exchange tokens between the two blockchains, so they can transact on the sidechain, reducing congestion on the base layer and improving scalability. 
+Since sidechains use a separate consensus mechanism, and because these chains are typically much smaller than Ethereum Mainnet, bridging assets to these chains involves increased risk to your funds. Given the lack of security guarantees inherited from Mainnet in the sidechain model, users risk total loss of funds in the event of an attack on the sidechain.```
 
-Conversely, Plasma chains are somewhat safer than sidechains because they derive their security from Ethereum's base layer. Like sidechains, Plasma chains can have a  different consensus protocol. 
+Conversely, plasma chains derive their security from Mainnet are somewhat safer than sidechains.  Both sidechains and plasma chains can have different consensus protocols, but the difference is that plasma chains publishes Merkle roots for each block on Ethereum Mainnet. Block roots are small pieces of information we can use to verify information about transactions that happen on a plasma chain. If an attack happens on a plasma chain, users can safely exit to Mainnet and withdraw their funds using the appropriate proofs. 
 
-The difference is that Plasma publishes Merkle roots for each block on the Ethereum main chain. Block roots are small pieces of information we can use to verify information about transactions that happen on a Plasma chain. If an attack happens on a Plasma chain, users can safely exit to the main chain and withdraw their funds using the appropriate proofs. 
-
-A simple way to differentiate between Plasma and sidechains is that Plasma chains are non-custodial, while sidechains are custodial. 
 
 ### Plasma vs sharding
 
@@ -62,6 +59,7 @@ Multiple projects provide implementations of Plasma that you can integrate into 
 
 - [EthHub on Plasma](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/plasma/)
 - [Learn Plasma](https://www.learnplasma.org/en/)
+- [A quick reminder of what "shared security" means and why it's so important](https://old.reddit.com/r/ethereum/comments/sgd3zt/a_quick_reminder_of_what_shared_security_means/)
 - [Sidechains vs Plasma vs Sharding](https://vitalik.ca/general/2019/06/12/plasma_vs_sharding.html)
 
 _Know of a community resource that helped you? Edit this page and add it!_
