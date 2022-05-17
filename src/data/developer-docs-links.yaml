@@ -186,3 +186,19 @@
           to: /developers/docs/scaling/plasma/
         - id: docs-nav-scaling-validium
           to: /developers/docs/scaling/validium/
+    - id: docs-nav-networking-layer
+      to: /developers/docs/networking-layer/
+      description: docs-nav-networking-layer-description
+      items:
+        - id: docs-nav-networking-layer-network-addresses
+          to: /developers/docs/networking-layer/network-addresses/
+    - id: docs-nav-data-structures-and-encoding
+      to: /developers/docs/data-structures-and-encoding/
+      description: docs-nav-data-structures-and-encoding-description
+      items:
+        - id: docs-nav-data-structures-and-encoding-rlp
+          to: /developers/docs/data-structures-and-encoding/rlp/
+        - id: docs-nav-data-structures-and-encoding-patricia-merkle-trie
+          to: /developers/docs/data-structures-and-encoding/patricia-merkle-trie/
+        - id: docs-nav-data-structures-and-encoding-ssz
+          to: /developers/docs/data-structures-and-encoding/ssz/
