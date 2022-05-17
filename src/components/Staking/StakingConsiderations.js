@@ -1,6 +1,5 @@
 import React, { useState } from "react"
 import styled from "styled-components"
-import { useIntl } from "gatsby-plugin-intl"
 // SVG imports
 import GreenCheck from "../../assets/staking/green-check-product-glyph.svg"
 import Caution from "../../assets/staking/caution-product-glyph.svg"
@@ -17,6 +16,7 @@ import Economical from "../../assets/staking/economical.svg"
 import LiquidityToken from "../../assets/staking/liquidity-token.svg"
 // Component imports
 import ButtonDropdown from "../ButtonDropdown"
+import Translation from "../Translation"
 import { trackCustomEvent } from "../../utils/matomo"
 
 const Container = styled.div`
@@ -119,12 +119,11 @@ const Indicator = styled.div`
 const data = {
   solo: [
     {
-      title: "Open source",
-      description:
-        "Essential code is 100% open source and available to the public to fork and use",
-      valid: "Open source",
+      title: "page-staking-considerations-solo-1-title",
+      description: "page-staking-considerations-solo-1-description",
+      valid: "page-staking-considerations-solo-1-title",
       caution: "",
-      warning: "Closed source",
+      warning: "page-staking-considerations-solo-1-warning",
       Svg: OpenSource,
       matomo: {
         eventCategory: `StakingConsiderations`,
@@ -133,12 +132,11 @@ const data = {
       },
     },
     {
-      title: "Audited",
-      description:
-        "Essential code has undergone formal auditing with results published and available publicly",
-      valid: "Audited",
+      title: "page-staking-considerations-solo-2-title",
+      description: "page-staking-considerations-solo-2-description",
+      valid: "page-staking-considerations-solo-2-title",
       caution: "",
-      warning: "None",
+      warning: "page-staking-considerations-solo-2-warning",
       Svg: Audited,
       matomo: {
         eventCategory: `StakingConsiderations`,
@@ -147,12 +145,11 @@ const data = {
       },
     },
     {
-      title: "Bug bounty",
-      description:
-        "A public bug bounty has been performed on any essential code to rewards users for safely reporting and/or fixing vulnerabilities",
-      valid: "Currently active",
-      caution: "Completed",
-      warning: "None",
+      title: "page-staking-considerations-solo-3-title",
+      description: "page-staking-considerations-solo-3-description",
+      valid: "page-staking-considerations-solo-3-valid",
+      caution: "page-staking-considerations-solo-3-caution",
+      warning: "page-staking-considerations-solo-2-warning",
       Svg: BugBounty,
       matomo: {
         eventCategory: `StakingConsiderations`,
@@ -161,12 +158,11 @@ const data = {
       },
     },
     {
-      title: "Battle tested",
-      description:
-        "Software has been available and used by the public for the indicated period of time",
-      valid: "Live > 1 year",
-      caution: "Live > 6 months",
-      warning: "Newly released",
+      title: "page-staking-considerations-solo-4-title",
+      description: "page-staking-considerations-solo-4-description",
+      valid: "page-staking-considerations-solo-4-valid",
+      caution: "page-staking-considerations-solo-4-caution",
+      warning: "page-staking-considerations-solo-4-warning",
       Svg: BattleTested,
       matomo: {
         eventCategory: `StakingConsiderations`,
@@ -175,12 +171,11 @@ const data = {
       },
     },
     {
-      title: "Trustless",
-      description:
-        "Validator keys are not entrusted to any other human at any time in the validator lifecycle. Any smart contracts involved are free of back doors, without reliance on privileged permissions for execution.",
-      valid: "Trustless",
+      title: "page-staking-considerations-solo-5-title",
+      description: "page-staking-considerations-solo-5-description",
+      valid: "page-staking-considerations-solo-5-title",
       caution: "",
-      warning: "Trusted",
+      warning: "page-staking-considerations-solo-5-warning",
       Svg: Trustless,
       matomo: {
         eventCategory: `StakingConsiderations`,
@@ -189,12 +184,11 @@ const data = {
       },
     },
     {
-      title: "Permissionless",
-      description:
-        "Users do not require any special permission to operate a validator using the software or service",
-      valid: "No permission",
+      title: "page-staking-considerations-solo-6-title",
+      description: "page-staking-considerations-solo-6-description",
+      valid: "page-staking-considerations-solo-6-valid",
       caution: "",
-      warning: "Permission required",
+      warning: "page-staking-considerations-solo-6-warning",
       Svg: Permissionless,
       matomo: {
         eventCategory: `StakingConsiderations`,
@@ -203,12 +197,11 @@ const data = {
       },
     },
     {
-      title: "Multi-client",
-      description:
-        "Software enables users to pick from and switch between at least two or more consensus layer clients",
-      valid: "Easy client switching",
+      title: "page-staking-considerations-solo-7-title",
+      description: "page-staking-considerations-solo-7-description",
+      valid: "page-staking-considerations-solo-7-valid",
       caution: "",
-      warning: "Limited to majority client",
+      warning: "page-staking-considerations-solo-7-warning",
       Svg: MultiClient,
       matomo: {
         eventCategory: `StakingConsiderations`,
@@ -217,12 +210,11 @@ const data = {
       },
     },
     {
-      title: "Self custody",
-      description:
-        "User maintains custody of any validator credentials, including signing and withdrawal keys",
-      valid: "Self custody",
+      title: "page-staking-considerations-solo-8-title",
+      description: "page-staking-considerations-solo-8-description",
+      valid: "page-staking-considerations-solo-8-title",
       caution: "",
-      warning: "Third-party custodian",
+      warning: "page-staking-considerations-solo-8-warning",
       Svg: SelfCustody,
       matomo: {
         eventCategory: `StakingConsiderations`,
@@ -231,12 +223,11 @@ const data = {
       },
     },
     {
-      title: "Economical",
-      description:
-        "Users can operate a validator by staking less than 32 ETH, utilizing pooled funds from others",
-      valid: "< 32 ETH",
+      title: "page-staking-considerations-solo-9-title",
+      description: "page-staking-considerations-solo-9-description",
+      valid: "page-staking-considerations-solo-9-valid",
       caution: "",
-      warning: "32 ETH",
+      warning: "page-staking-considerations-solo-9-warning",
       Svg: Economical,
       matomo: {
         eventCategory: `StakingConsiderations`,
@@ -247,12 +238,11 @@ const data = {
   ],
   saas: [
     {
-      title: "Open source",
-      description:
-        "Essential code is 100% open source and available to the public to fork and use",
-      valid: "Open source",
+      title: "page-staking-considerations-solo-1-title",
+      description: "page-staking-considerations-solo-1-description",
+      valid: "page-staking-considerations-solo-1-title",
       caution: "",
-      warning: "Closed source",
+      warning: "page-staking-considerations-solo-1-warning",
       Svg: OpenSource,
       matomo: {
         eventCategory: `StakingConsiderations`,
@@ -261,12 +251,11 @@ const data = {
       },
     },
     {
-      title: "Audited",
-      description:
-        "Essential code has undergone formal auditing with results published and available publicly",
-      valid: "Audited",
+      title: "page-staking-considerations-solo-2-title",
+      description: "page-staking-considerations-solo-2-description",
+      valid: "page-staking-considerations-solo-2-title",
       caution: "",
-      warning: "None",
+      warning: "page-staking-considerations-solo-2-warning",
       Svg: Audited,
       matomo: {
         eventCategory: `StakingConsiderations`,
@@ -275,12 +264,11 @@ const data = {
       },
     },
     {
-      title: "Bug bounty",
-      description:
-        "A public bug bounty has been performed on any essential code to rewards users for safely reporting and/or fixing vulnerabilities",
-      valid: "Currently active",
-      caution: "Completed",
-      warning: "None",
+      title: "page-staking-considerations-solo-3-title",
+      description: "page-staking-considerations-solo-3-description",
+      valid: "page-staking-considerations-solo-3-valid",
+      caution: "page-staking-considerations-solo-3-caution",
+      warning: "page-staking-considerations-solo-2-warning",
       Svg: BugBounty,
       matomo: {
         eventCategory: `StakingConsiderations`,
@@ -289,12 +277,11 @@ const data = {
       },
     },
     {
-      title: "Battle tested",
-      description:
-        "Service has been available and used by the public for the indicated period of time",
-      valid: "Live > 1 year",
-      caution: "Live > 6 months",
-      warning: "Newly released",
+      title: "page-staking-considerations-solo-4-title",
+      description: "page-staking-considerations-saas-4-description",
+      valid: "page-staking-considerations-solo-4-valid",
+      caution: "page-staking-considerations-solo-4-caution",
+      warning: "page-staking-considerations-solo-4-warning",
       Svg: BattleTested,
       matomo: {
         eventCategory: `StakingConsiderations`,
@@ -303,12 +290,11 @@ const data = {
       },
     },
     {
-      title: "Permissionless",
-      description:
-        "Users do not require any special permission, account sign up or KYC to participate with the service",
-      valid: "Anyone can join",
+      title: "page-staking-considerations-solo-6-title",
+      description: "page-staking-considerations-saas-6-description",
+      valid: "page-staking-considerations-saas-6-valid",
       caution: "",
-      warning: "Permission required",
+      warning: "page-staking-considerations-saas-6-warning",
       Svg: Permissionless,
       matomo: {
         eventCategory: `StakingConsiderations`,
@@ -317,12 +303,11 @@ const data = {
       },
     },
     {
-      title: "Diverse clients",
-      description:
-        "Service should not run more than 50% of their aggregate validators with a majority validator client",
-      valid: "Less than 50%",
-      caution: "Currently unknown",
-      warning: "More than 50%",
+      title: "page-staking-considerations-saas-7-title",
+      description: "page-staking-considerations-saas-7-description",
+      valid: "page-staking-considerations-saas-7-valid",
+      caution: "page-staking-considerations-saas-7-caution",
+      warning: "page-staking-considerations-saas-7-warning",
       Svg: MultiClient,
       matomo: {
         eventCategory: `StakingConsiderations`,
@@ -331,12 +316,11 @@ const data = {
       },
     },
     {
-      title: "Self custody",
-      description:
-        "User maintains custody of any validator credentials, including signing and withdrawal keys",
-      valid: "Self custody",
+      title: "page-staking-considerations-solo-8-title",
+      description: "page-staking-considerations-solo-8-description",
+      valid: "page-staking-considerations-solo-8-title",
       caution: "",
-      warning: "Third-party custodian",
+      warning: "page-staking-considerations-solo-8-warning",
       Svg: SelfCustody,
       matomo: {
         eventCategory: `StakingConsiderations`,
@@ -347,12 +331,11 @@ const data = {
   ],
   pools: [
     {
-      title: "Open source",
-      description:
-        "Essential code is 100% open source and available to the public to fork and use",
-      valid: "Open source",
+      title: "page-staking-considerations-solo-1-title",
+      description: "page-staking-considerations-solo-1-description",
+      valid: "page-staking-considerations-solo-1-title",
       caution: "",
-      warning: "Closed source",
+      warning: "page-staking-considerations-solo-1-warning",
       Svg: OpenSource,
       matomo: {
         eventCategory: `StakingConsiderations`,
@@ -361,12 +344,11 @@ const data = {
       },
     },
     {
-      title: "Audited",
-      description:
-        "Essential code has undergone formal auditing with results published and available publicly",
-      valid: "Audited",
+      title: "page-staking-considerations-solo-2-title",
+      description: "page-staking-considerations-solo-2-description",
+      valid: "page-staking-considerations-solo-2-title",
       caution: "",
-      warning: "None",
+      warning: "page-staking-considerations-solo-2-warning",
       Svg: Audited,
       matomo: {
         eventCategory: `StakingConsiderations`,
@@ -375,12 +357,11 @@ const data = {
       },
     },
     {
-      title: "Bug bounty",
-      description:
-        "A public bug bounty has been performed on any essential code to rewards users for safely reporting and/or fixing vulnerabilities",
-      valid: "Currently active",
-      caution: "Completed",
-      warning: "None",
+      title: "page-staking-considerations-solo-3-title",
+      description: "page-staking-considerations-solo-3-description",
+      valid: "page-staking-considerations-solo-3-valid",
+      caution: "page-staking-considerations-solo-3-caution",
+      warning: "page-staking-considerations-solo-2-warning",
       Svg: BugBounty,
       matomo: {
         eventCategory: `StakingConsiderations`,
@@ -389,12 +370,11 @@ const data = {
       },
     },
     {
-      title: "Battle tested",
-      description:
-        "Service has been available and used by the public for the indicated period of time",
-      valid: "Live > 1 year",
-      caution: "Live > 6 months",
-      warning: "Newly released",
+      title: "page-staking-considerations-solo-4-title",
+      description: "page-staking-considerations-saas-4-description",
+      valid: "page-staking-considerations-solo-4-valid",
+      caution: "page-staking-considerations-solo-4-caution",
+      warning: "page-staking-considerations-solo-4-warning",
       Svg: BattleTested,
       matomo: {
         eventCategory: `StakingConsiderations`,
@@ -403,12 +383,11 @@ const data = {
       },
     },
     {
-      title: "Trustless",
-      description:
-        "Service does not require trusting any humans to custody your keys or distribute rewards",
-      valid: "Trustless",
+      title: "page-staking-hierarchy-solo-pill-4",
+      description: "page-staking-considerations-pools-5-description",
+      valid: "page-staking-hierarchy-solo-pill-4",
       caution: "",
-      warning: "Trusted",
+      warning: "page-staking-considerations-solo-5-warning",
       Svg: Trustless,
       matomo: {
         eventCategory: `StakingConsiderations`,
@@ -417,12 +396,11 @@ const data = {
       },
     },
     {
-      title: "Permissionless nodes",
-      description:
-        "Service allows anyone to join as a node operator for the pool, without permission",
-      valid: "Anyone can join",
+      title: "page-staking-considerations-pools-6-title",
+      description: "page-staking-considerations-pools-6-description",
+      valid: "page-staking-considerations-saas-6-valid",
       caution: "",
-      warning: "Permission required",
+      warning: "page-staking-considerations-saas-6-warning",
       Svg: Permissionless,
       matomo: {
         eventCategory: `StakingConsiderations`,
@@ -431,12 +409,11 @@ const data = {
       },
     },
     {
-      title: "Diverse clients",
-      description:
-        "Service should not run more than 50% of their aggregate validators with a supermajority validator client",
-      valid: "Less than 50%",
-      caution: "Currently unknown",
-      warning: "More than 50%",
+      title: "page-staking-considerations-saas-7-title",
+      description: "page-staking-considerations-pools-7-description",
+      valid: "page-staking-considerations-saas-7-valid",
+      caution: "page-staking-considerations-saas-7-caution",
+      warning: "page-staking-considerations-saas-7-warning",
       Svg: MultiClient,
       matomo: {
         eventCategory: `StakingConsiderations`,
@@ -445,12 +422,11 @@ const data = {
       },
     },
     {
-      title: "Liquidity token",
-      description:
-        "Offers tradable liquidity token representing your staked ETH, held in your own wallet",
-      valid: "Liquidity token(s)",
+      title: "page-staking-considerations-pools-8-title",
+      description: "page-staking-considerations-pools-8-description",
+      valid: "page-staking-considerations-pools-8-valid",
       caution: "",
-      warning: "No liquidity token",
+      warning: "page-staking-considerations-pools-8-warning",
       Svg: LiquidityToken,
       matomo: {
         eventCategory: `StakingConsiderations`,
@@ -463,7 +439,6 @@ const data = {
 
 const StakingConsiderations = ({ page }) => {
   const [activeIndex, setActiveIndex] = useState(0)
-  const intl = useIntl()
 
   const pageData = data[page]
   const { title, description, valid, caution, warning, Svg } =
@@ -509,7 +484,7 @@ const StakingConsiderations = ({ page }) => {
                 }}
                 active={idx === activeIndex}
               >
-                {title}
+                <Translation id={title} />
               </ListItem>
             ))}
           </ul>
@@ -517,25 +492,35 @@ const StakingConsiderations = ({ page }) => {
       </List>
       <Content>
         <StyledSvg style={selectionSvgStyle} />
-        <h3>{title}</h3>
-        <p>{description}</p>
+        <h3>
+          <Translation id={title} />
+        </h3>
+        <p>
+          <Translation id={description} />
+        </p>
         <IndicatorRow>
           {!!valid && (
             <Indicator>
               <GreenCheck style={indicatorSvgStyle} />
-              <p>{valid}</p>
+              <p>
+                <Translation id={valid} />
+              </p>
             </Indicator>
           )}
           {!!caution && (
             <Indicator>
               <Caution style={indicatorSvgStyle} />
-              <p>{caution}</p>
+              <p>
+                <Translation id={caution} />
+              </p>
             </Indicator>
           )}
           {!!warning && (
             <Indicator>
               <Warning style={indicatorSvgStyle} />
-              <p>{warning}</p>
+              <p>
+                <Translation id={warning} />
+              </p>
             </Indicator>
           )}
         </IndicatorRow>
