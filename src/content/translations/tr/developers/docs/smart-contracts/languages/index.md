@@ -1,6 +1,6 @@
 ---
 title: Akıllı sözleşme dilleri
-description: "İki ana akıllı sözleşme diline genel bir bakış ve karşılaştırma: Solidity ve Vyper."
+description: 'İki ana akıllı sözleşme diline genel bir bakış ve karşılaştırma: Solidity ve Vyper.'
 lang: tr
 sidebar: true
 ---
@@ -90,7 +90,7 @@ Bu örnek size Solidity sözleşme söz dizimi hakkında bir fikir verecektir. F
 - Güçlü tipleme
 - Küçük ve anlaşılabilir derleyici kodu
 - Sözleşmeleri daha güvenli ve denetlenmesi daha kolay hâle getirmek amacıyla kasti olarak Solidity'den daha az özelliğe sahiptir. Vyper şunları desteklemez:
-  - Düzenleyiciler
+  - Niteleyiciler
   - Kalıtım
   - Satır içi derleme
   - Fonksiyon aşırı yükleme

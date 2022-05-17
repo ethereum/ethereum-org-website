@@ -62,7 +62,7 @@ Bu kütüphaneler, bir Ethereum düğümü ile doğrudan etkileşim kurmanın ka
 - [chainstack.com](https://chainstack.com)
 - [Belgeler](https://docs.chainstack.com)
 
-**QuickNode -** **_Hizmet Olarak Blockchain Altyapısı._**
+**QuickNode -** **_Bir Hizmet Olarak Blok Zinciri Altyapısı._**
 
 - [quicknode.com](https://quicknode.com)
 - [Belgeler](https://www.quicknode.com/docs)

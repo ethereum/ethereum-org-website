@@ -33,7 +33,7 @@ Tam teşekküllü bir dapp inşa etmek teknolojinin farklı parçalarını gerek
 - [hardhat.org](https://hardhat.org)
 - [GitHub](https://github.com/nomiclabs/hardhat)
 
-**Ape -** **_Pythonista'lar, Veri Bilimciler ve Güvenlik Uzmanları için akıllı sözleşme geliştirme aracı._**
+**Ape -** **_Pythoncular, Veri Bilimciler ve Güvenlik Uzmanları için akıllı sözleşme geliştirme aracı._**
 
 - [Belgeler](https://docs.apeworx.io/ape/stable/)
 - [GitHub](https://github.com/ApeWorX/ape)
@@ -60,16 +60,16 @@ Tam teşekküllü bir dapp inşa etmek teknolojinin farklı parçalarını gerek
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-sdk)
 - [Topluluk Forumları](https://forum.openzeppelin.com/c/support/17)
 
-**Create Eth App -** **_Tek bir komutla Ethereum destekli uygulamalar oluşturun. Seçebileceğiniz geniş bir kullanıcı arayüzü çerçevesi ve DeFi şablonu yelpazesiyle gelir._**
+**Create Eth App -** **_Tek bir komutla Ethereum destekli uygulamalar oluşturun. Seçebileceğiniz geniş bir kullanıcı arayüzü çerçevesi ve DeFi şablonu yelpazesi bulunur._**
 
 - [GitHub](https://github.com/paulrberg/create-eth-app)
 - [Şablonlar](https://github.com/PaulRBerg/create-eth-app/tree/develop/templates)
 
-**Scaffold-Eth -** **_Web3 için Ethers.js + Hardhat + React bileşenleri ve kancaları: akıllı sözleşmeler tarafından güçlendirilen merkeziyetsiz uygulamalar inşa etmeye başlamanız için ihtiyaç duyduğunuz her şey._**
+**Scaffold-Eth -** **_Web3 için Ethers.js + Hardhat + React bileşenleri ve kancaları: akıllı sözleşmeler tarafından desteklenen merkeziyetsiz uygulamalar inşa etmeye başlamanız için ihtiyaç duyduğunuz her şey._**
 
 - [GitHub](https://github.com/austintgriffith/scaffold-eth)
 
-**Grafik -** **_Blockchain verilerini verimli bir şekilde sorgulamaya yönelik Grafik._**
+**The Graph -** **_Blok zinciri verisini verimli şekilde sorgulamak için The Graph_**
 
 - [Web sitesi](https://thegraph.com/)
 - [Öğretici](/developers/tutorials/the-graph-fixing-web3-data-querying/)
@@ -79,11 +79,6 @@ Tam teşekküllü bir dapp inşa etmek teknolojinin farklı parçalarını gerek
 - [alchemy.com](https://www.alchemy.com/)
 - [GitHub](https://github.com/alchemyplatform)
 - [Discord](https://discord.com/invite/A39JVCM)
-
-**Dapptools -** **_Unix dizayn felsefesini takip eden; düzenlenebilirlik, yapılandırılabilirlik ve esnekliği destekleyen birtakım Ethereum odaklı CLI aracı._**
-
-- [Ana Sayfa](https://dapp.tools/)
-- [GitHub](https://github.com/dapphub/dapptools/)
 
 **Foundry -** **_Rust ile yazılmış Ethereum uygulama geliştirme için son derece hızlı, taşınabilir ve modüler bir araç takımı._**
 
