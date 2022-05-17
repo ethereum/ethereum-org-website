@@ -21,7 +21,7 @@ Es ist wichtig, die dezentrale Gestaltung von Ethereum zu verstehen, denn jeder,
   Mehr erfahren über die Grundlagen von Ethereum
 </DocLink>
 
-Obwohl es keinen offiziellen Support gibt, sind viele Gruppen, Communitys und Projekte im gesamten Ethereum-Ökosystem gerne bereit, zu helfen.
+Trotz des Mangels an offizieller Unterstützung sind viele Gruppen, Communitys und Projekte im gesamten Ethereum-Ökosystem gern bereit, zu helfen, und Sie können auf dieser Seite viele nützliche Informationen und Ressourcen finden. Haben Sie noch Fragen? Treten Sie dem [ethereum.org Discord](/discord/) bei und wir versuchen, Ihnen weiterzuhelfen.
 
 ## Wallet-Support {#wallet-support}
 
@@ -61,7 +61,7 @@ Hier sind einige beliebte Beispiele:
 
 ## Einen Knoten betreiben {#node-support}
 
-Wenn Sie einen Knoten oder Validierer betreiben, finden Sie hier einige Communitys, die Ihnen den Einstieg erleichtern.
+Wenn Sie einen Knoten oder Validator betreiben, finden Sie hier einige Communitys, die Ihnen den Einstieg erleichtern.
 
 - [EthStaker-Discord](https://discord.io/ethstaker)
 - [EthStaker-Reddit](https://www.reddit.com/r/ethstaker)
@@ -107,4 +107,4 @@ Transaktionen auf Ethereum können manchmal stecken bleiben, wenn Sie eine niedr
 
 #### Wie kann ich Ethereum minen? {#mining-ethereum}
 
-Wir raten davon ab, Mining-Ausrüstung zu kaufen, wenn Sie nicht bereits schon Ethereum minen. Im zweiten Quartal 2022 wird [die Zusammenführung](/upgrades/merge/) stattfinden, um Ethereum von Proof-of-Work auf Proof-of-Stake umzustellen. Diese Änderung bedeutet, dass das Mining von Ethereum nicht mehr möglich sein wird. Wenn Sie weiterhin daran interessiert sind, Ethereum zu schürfen, können Sie in Mining-Communitys wie [/r/EtherMining](https://www.reddit.com/r/EtherMining/) Hilfe suchen.
+Wir raten davon ab, Mining-Ausrüstung zu kaufen, wenn Sie nicht bereits schon Ethereum minen. Vorraussichtlich im 3./4. Quartal 2022 wird [Die Zusammenführung](/upgrades/merge/) vonstattengehen, wodurch Ethereum von Proof-of-Work zu Proof-of-Stake wechselt. Diese Änderung bedeutet, dass das Mining von Ethereum nicht mehr möglich sein wird. Wenn Sie weiterhin daran interessiert sind, Ethereum zu schürfen, können Sie in Mining-Communitys wie [/r/EtherMining](https://www.reddit.com/r/EtherMining/) Hilfe suchen.
