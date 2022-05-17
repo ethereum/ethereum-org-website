@@ -91,11 +91,17 @@ const ButtonLink = ({
   isSecondary,
   children,
   className,
+  hideArrow = false,
   ...props
 }) => {
   if (isSecondary) {
     return to ? (
-      <SecondaryLink to={to} hideArrow={true} className={className} {...props}>
+      <SecondaryLink
+        to={to}
+        hideArrow={hideArrow}
+        className={className}
+        {...props}
+      >
         {children}
       </SecondaryLink>
     ) : (
@@ -110,7 +116,7 @@ const ButtonLink = ({
     )
   }
   return to ? (
-    <PrimaryLink to={to} hideArrow={true} className={className} {...props}>
+    <PrimaryLink to={to} hideArrow={hideArrow} className={className} {...props}>
       {children}
     </PrimaryLink>
   ) : (
