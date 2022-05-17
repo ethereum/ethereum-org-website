@@ -7452,6 +7452,33 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "moretimeL",
+      "name": "moretimeL",
+      "avatar_url": "https://avatars.githubusercontent.com/u/43361848?v=4",
+      "profile": "https://github.com/moretimeL",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "SuperDelphi",
+      "name": "SuperDelphi",
+      "avatar_url": "https://avatars.githubusercontent.com/u/44942598?v=4",
+      "profile": "https://github.com/SuperDelphi",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "chadlohrli",
+      "name": "chadlohrli",
+      "avatar_url": "https://avatars.githubusercontent.com/u/9952172?v=4",
+      "profile": "https://github.com/chadlohrli",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,

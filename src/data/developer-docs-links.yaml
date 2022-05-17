@@ -70,6 +70,11 @@
                       to: /developers/docs/consensus-mechanisms/pow/mining-algorithms/ethash
         - id: docs-nav-proof-of-stake
           to: /developers/docs/consensus-mechanisms/pos/
+          items:
+            - id: docs-nav-gasper
+              to: /developers/docs/consensus-mechanisms/pos/gasper/
+            - id: docs-nav-weak-subjectivity
+              to: /developers/docs/consensus-mechanisms/pos/weak-subjectivity/
 - id: docs-nav-ethereum-stack
   path: /developers/docs/
   items:

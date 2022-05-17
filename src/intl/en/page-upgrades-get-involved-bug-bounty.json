@@ -3,7 +3,7 @@
   "page-upgrades-bug-bounty-annotations": "It might be helpful to check out the following annotations:",
   "page-upgrades-bug-bounty-client-bugs": "Client bugs",
   "page-upgrades-bug-bounty-client-bugs-desc": "Clients run the Ethereum Network, and they need to follow the logic set out in the specification and be secure against potential attacks. The bugs we want to find are related to the implementation of the protocol.",
-  "page-upgrades-bug-bounty-client-bugs-desc-2": "Currently Besu, Erigon, Geth, Lighthouse, Lodestar, Nethermind, Nimbus, Teku and Prysm are included in the Bug Bounty Program. More clients may be added as they complete audits and become production ready.",
+  "page-upgrades-bug-bounty-client-bugs-desc-2": "Currently execution layer clients (Besu, Erigon, Geth and Nethermind) and consensus layer clients (Lighthouse, Lodestar, Nimbus, Teku and Prysm) are included in the Bug Bounty Program. More clients may be added as they complete audits and become production ready.",
   "page-upgrades-bug-bounty-clients": "Clients featured in the bounties",
   "page-upgrades-bug-bounty-clients-type-1": "Spec non-compliance issues",
   "page-upgrades-bug-bounty-clients-type-2": "Unexpected crashes, RCE or denial of service (DOS) vulnerabilities",

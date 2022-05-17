@@ -10,6 +10,8 @@
   "docs-nav-composability": "Composability",
   "docs-nav-consensus-mechanisms": "Consensus mechanisms",
   "docs-nav-consensus-mechanisms-description": "How the individual nodes of a distributed network agree on the current state of the system",
+  "docs-nav-gasper": "Gasper",
+  "docs-nav-weak-subjectivity": "Weak subjectivity",
   "docs-nav-data-and-analytics": "Data and analytics",
   "docs-nav-data-and-analytics-description": "How blockchain data is aggregated, organized and implemented into dapps",
   "docs-nav-dart": "Dart",

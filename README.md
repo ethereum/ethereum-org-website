@@ -1207,6 +1207,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="https://github.com/stoobie"><img src="https://avatars.githubusercontent.com/u/39279277?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Steve Goodman</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=stoobie" title="Documentation">📖</a></td>
     <td align="center"><a href="http://booklearner.org"><img src="https://avatars.githubusercontent.com/u/103979114?v=4?s=100" width="100px;" alt=""/><br /><sub><b>booklearner</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=booklearner" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/moretimeL"><img src="https://avatars.githubusercontent.com/u/43361848?v=4?s=100" width="100px;" alt=""/><br /><sub><b>moretimeL</b></sub></a><br /><a href="#content-moretimeL" title="Content">🖋</a></td>
+    <td align="center"><a href="https://github.com/SuperDelphi"><img src="https://avatars.githubusercontent.com/u/44942598?v=4?s=100" width="100px;" alt=""/><br /><sub><b>SuperDelphi</b></sub></a><br /><a href="#content-SuperDelphi" title="Content">🖋</a></td>
+    <td align="center"><a href="https://github.com/chadlohrli"><img src="https://avatars.githubusercontent.com/u/9952172?v=4?s=100" width="100px;" alt=""/><br /><sub><b>chadlohrli</b></sub></a><br /><a href="#content-chadlohrli" title="Content">🖋</a></td>
   </tr>
 </table>
 

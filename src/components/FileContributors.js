@@ -311,7 +311,7 @@ const FileContributors = ({ relativePath, className, editPath }) => {
             <Translation id="see-contributors" />
           </ContributorsButton>
           {editPath && (
-            <GithubButton to={editPath} isSecondary={true}>
+            <GithubButton to={editPath} hideArrow isSecondary={true}>
               <ButtonContent>
                 <GithubIcon name="github" />
                 <span>

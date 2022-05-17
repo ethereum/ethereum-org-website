@@ -105,9 +105,7 @@ const Layer2ProductCard = ({
         )}
         {tokenLists && <Link to={tokenLists}>{name} Token Lists</Link>}
       </Content>
-      <StyledButtonLink to={url} hideArrow={true}>
-        Explore {name}
-      </StyledButtonLink>
+      <StyledButtonLink to={url}>Explore {name}</StyledButtonLink>
     </Card>
   )
 }
