@@ -284,8 +284,6 @@ _Size yardımcı olan bir topluluk kaynağı mı biliyorsunuz? Bu sayfayı düze
 
 ## İlgili öğreticiler {#related-tutorials}
 
--
-[JavaScript'te Ethereum blok zincirini kullanmak için Web3js'yi kurun](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– Projenizde web3.js kurulumu için talimatlar._</li> 
-  
-  - [JavaScript'ten akıllı sözleşme çağırma](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– DAI token'ını kullanarak, JavaScript ile sözleşme fonksiyonunu nasıl çağıracağınızı görün._
-- [Web3 ve Alchemy kullanarak işlem gönderme](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) _– Arka uçtan işlem göndermek için adım adım izlenecek yol._</ul>
+- [JavaScript'te Ethereum blok zincirini kullanmak için Web3js'yi kurun](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– Projenizde web3.js kurulumu için talimatlar._
+- [JavaScript'ten akıllı sözleşme çağırma](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– DAI token'ını kullanarak, JavaScript ile sözleşme fonksiyonunu nasıl çağıracağınızı görün._
+- [Web3 ve Alchemy kullanarak işlem gönderme](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) _– Arka uçtan işlem göndermek için adım adım izlenecek yol._
