@@ -7,7 +7,7 @@ sidebar: true
 
 # Introductie tot Ethereum governance {#introduction}
 
-_Als niemand de baas is van Ethereum, hoe worden dan besluiten over eerdere en toekomstige wijzigingen in het netwerk gemaakt? Ethereum governance verwijst naar het proces dat het mogelijk maakt om dergelijke beslissingen te nemen_
+_Als niemand de baas is van Ethereum, hoe worden dan besluiten over eerdere en toekomstige wijzigingen in het netwerk gemaakt? Ethereum governance verwijst naar het proces dat het mogelijk maakt om dergelijke beslissingen te nemen._
 
 <Divider />
 

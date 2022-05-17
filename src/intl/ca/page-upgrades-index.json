@@ -93,7 +93,7 @@
   "page-upgrades-question-4-answer-7": "Més informació sobre l'apilament",
   "page-upgrades-question-4-answer-8": "La cadena de balisa i les millores en la cadena de fragmentació no interrompran la capa d'execució (xarxa principal) mentre es creen de forma separada.",
   "page-upgrades-question-4-title": "Què és la capa d'execució?",
-  "page-upgrades-question-4-desc": "La xarxa principal d'Etherum en la qual feu transaccions actualment abans s'anomenava «Eth1». Aquest terme ha estat eliminat en favor de «capa d'execució».",
+  "page-upgrades-question-4-desc": "La xarxa principal d'Ethereum en la qual feu transaccions actualment abans s'anomenava «Eth1». Aquest terme ha estat eliminat en favor de «capa d'execució».",
   "page-upgrades-question-5-answer-1": "Per esdevenir un validador total de la xarxa, necessitareu apostar 32 ETH. Si no teniu aquesta quantitat, o no esteu disposats a apostar tant, podeu unir-vos a un grup d'apilament o participacions. Aquests grups us permetran apostar menys quantitat i guanyar fraccions de les recompenses totals.",
   "page-upgrades-question-5-desc": "Haureu d'utilitzar la plataforma d'apilament o unir-vos a un grup.",
   "page-upgrades-question-5-title": "Com puc participar-hi?",

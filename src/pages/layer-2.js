@@ -273,6 +273,11 @@ const Layer2Page = ({ data }) => {
         pathId: "use-layer-2",
         isSecondary: "isSecondary",
       },
+      {
+        content: "Move to layer 2",
+        pathId: "how-to-get-onto-layer-2",
+        isSecondary: "isSecondary",
+      },
     ],
   }
 
@@ -453,7 +458,7 @@ const Layer2Page = ({ data }) => {
               Layer 2 (L2) is a collective term to describe a specific set of
               Ethereum scaling solutions.{" "}
               <b>
-                A layer 2 is separate blockchain that extends Ethereum and
+                A layer 2 is a separate blockchain that extends Ethereum and
                 inherits the security guarantees of Ethereum
               </b>
               .
@@ -484,7 +489,7 @@ const Layer2Page = ({ data }) => {
                 of
               </b>
               . Examples of layer 2 projects include "rollups" on Ethereum and
-              the Lighting Network on top of Bitcoin. All user transaction
+              the Lightning Network on top of Bitcoin. All user transaction
               activity on these layer 2 projects can ultimately settle back to
               the layer 1 blockchain.
             </p>
@@ -822,7 +827,7 @@ const Layer2Page = ({ data }) => {
         </TwoColumnContent>
       </PaddedContent>
 
-      <PaddedContent>
+      <PaddedContent id="how-to-get-onto-layer-2">
         <Layer2Onboard
           layer2DataCombined={layer2DataCombined}
           ethIcon={getImage(data.ethHome)}

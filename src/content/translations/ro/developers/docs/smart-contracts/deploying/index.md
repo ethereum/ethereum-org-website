@@ -3,56 +3,75 @@ title: Implementarea contractelor inteligente
 description:
 lang: ro
 sidebar: true
-incomplete: true
 ---
 
 Contractul inteligent trebuie implementat pentru ca acesta să fie disponibil utilizatorilor unei rețele Ethereum.
 
-Pentru a implementa un contract inteligent, trebuie doar să trimiți o tranzacție Ethereum care conține codul contractului inteligent compilat fără a specifica niciun destinatar.
+Pentru a implementa un contract inteligent, trebuie doar să trimiteţi o tranzacție Ethereum care conține codul contractului inteligent compilat fără a specifica vreun destinatar.
 
 ## Condiții prealabile {#prerequisites}
 
-Ar trebui să înțelegi [rețelele Ethereum](/developers/docs/networks/), [tranzacțiile](/developers/docs/transactions/) și [anatomia contractelor inteligente](/developers/docs/smart-contract/anatomy/) înainte de implementarea contractelor inteligente.
+Ar trebui să înțelegeţi [rețelele Ethereum](/developers/docs/networks/), [tranzacțiile](/developers/docs/transactions/) și [anatomia contractelor inteligente](/developers/docs/smart-contract/anatomy/) înainte de a implementa contracte inteligente.
 
-Implementarea unui contract costă de asemenea ETH, deci ar trebui să te familiarizezi cu [gaz și taxe](/developers/docs/gas/) pe Ethereum.
+Implementarea unui contract costă de asemenea ether (ETH), deci ar trebui să vă familiarizaţi cu [gazul și taxele](/developers/docs/gas/) pe Ethereum.
 
-În cele din urmă, va trebui să compilezi contractul înainte de a-l implementa, deci asigură-te că ai citit despre [compilarea contractelor inteligente](/developers/docs/smart-contracts/compiling/).
+În cele din urmă, va trebui să compilaţi contractul înainte de a-l implementa, deci aveţi grijă să citiţi despre [compilarea contractelor inteligente](/developers/docs/smart-contracts/compiling/).
 
-## Cum să implementezi un contract inteligent {#how-to-deploy-a-smart-contract}
+## Cum se implementează un contract inteligent {#how-to-deploy-a-smart-contract}
 
-Acest lucru înseamnă înseamnă că va trebui să plătești o taxă de tranzacție, deci asigură-te că ai ceva ETH.
+### De ce veţi avea nevoie {#what-youll-need}
 
-### De ce vei avea nevoie {#what-youll-need}
+- bytecode-ul contractului dvs. – acesta este generat prin [compilare](/developers/docs/smart-contracts/compiling/)
+- ETH pentru gaz – veţi stabili limita de gaz ca la alte tranzacții, deci ţineţi minte că implementarea contractului are nevoie de mult mai mult gaz decât un simplu transfer de ETH
+- un script de implementare sau un plugin
+- accesul la un [nod Ethereum](/developers/docs/nodes-and-clients/), fie rulând propriul dvs. nod, fie conectându-vă la un nod public, fie printr-o cheie API folosind un [serviciu de noduri](/developers/docs/nodes-and-clients/nodes-as-a-service/) precum Infura sau Alchemy
 
-- codul secundar al contractului tău – acesta este generat prin [compilare](/developers/docs/smart-contracts/compiling/).
-- Eter pentru gaz – vei stabili limita de gaz ca la alte tranzacții, deci fii conștient de faptul că implementarea contractului are nevoie de mult mai mult gaz decât un simplu transfer ETH.
-- un script de implementare sau un plugin.
-- acces la un [nod Ethereum](/developers/docs/nodes-and-clients/), fie rulând propriul tău nod, conectându-te la un nod public sau printr-o cheie API folosind un serviciu precum Infura sau Alchemy
+### Etapele de implementare a un contract inteligent {#steps-to-deploy}
 
-Odată implementat, contractul tău va avea o adresă Ethereum ca și alte [conturi](/developers/docs/accounts/).
+Etapele specificie implicate vor depinde de instrumentele pe care le folosiţi. De exemplu, consultaţi [documentația Hardhat pentru implementarea contractelor dvs.](https://hardhat.org/guides/deploying.html) sau [documentația Truffle despre rețele și implementarea aplicațiilor](https://www.trufflesuite.com/docs/truffle/advanced/networks-and-app-deployment). Acestea sunt două dintre cele mai populare instrumente pentru implementarea contractelor inteligente, care implică redactarea unui script pentru a gestiona etapele de implementare.
+
+Odată implementat, contractul dvs. va avea o adresă Ethereum ca și alte [conturi](/developers/docs/accounts/).
 
 ## Instrumente corelate {#related-tools}
 
-**Remix -** **_Remix IDE permite dezvoltarea, implementarea și administrarea contractelor inteligente pentru Ethereum, cum ar fi blockchain-urile._**
+**Remix - _Remix IDE permite dezvoltarea, implementarea și administrarea contractelor inteligente pentru blockchain-urile precum Ethereum_**
 
 - [Remix](https://remix.ethereum.org)
 
-**Tenderly -** **_Platformă pentru monitorizarea ușoară a contractelor inteligente. Include urmărirea erorilor, alerte, indicatori de performanță și analize detaliate ale contractelor._**
+**Tenderly - _Simulate, debug and monitor anything on EVM-compatible chains, with real-time data_**
 
 - [tenderly.co](https://tenderly.co/)
+- [Documente](https://docs.tenderly.co/)
 - [GitHub](https://github.com/Tenderly)
 - [Discord](https://discord.gg/eCWjuvt)
 
+**Hardhat - _Un mediu de dezvoltare pentru a compila, implementa, testa și elimina bug-urile din software-ul Ethereum_**
+
+- [hardhat.org](https://hardhat.org/getting-started/)
+- [Documentație despre implementarea contractelor dvs.](https://hardhat.org/guides/deploying.html)
+- [GitHub](https://github.com/nomiclabs/hardhat)
+- [Discord](https://discord.com/invite/TETZs2KK4k)
+
+**Truffle - ** **_Un mediu de dezvoltare, un framework de testare, de construire de pipeline-uri și alte instrumente._**
+
+- [trufflesuite.com](https://www.trufflesuite.com/)
+- [Documentație despre rețele și implementarea aplicațiilor](https://www.trufflesuite.com/docs/truffle/advanced/networks-and-app-deployment)
+- [GitHub](https://github.com/trufflesuite/truffle)
+
 ## Tutoriale corelate {#related-tutorials}
 
-- [Implementarea primului tău contract inteligent](/developers/tutorials/deploying-your-first-smart-contract/) _– O introducere în implementarea primului tău contract inteligent într-o rețea de testare Ethereum._
-- [Interacționează cu alte contracte din Solidity](/developers/tutorials/interact-with-other-contracts-from-solidity/) _– Cum să implementezi un contract inteligent dintr-un contract existent și să interacționezi cu acesta._
-- [Cum să reduci dimensiunea contractului](/developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/) _- Cum să reduci dimensiunea contractului pentru a-l menține sub limită și a economisi pe gaz_
+- [Implementarea primului dvs. contract inteligent](/developers/tutorials/deploying-your-first-smart-contract/) _– O introducere despre implementarea primului dvs. contract inteligent într-o rețea de testare Ethereum._
+- [Interacționaţi cu alte contracte din Solidity](/developers/tutorials/interact-with-other-contracts-from-solidity/) _– Cum să implementaţi un contract inteligent dintr-un contract existent și să interacționaţi cu acesta._
+- [Cum să reduceţi dimensiunea contractului](/developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/) _- Cum să reduceţi dimensiunea contractului pentru a-l menține sub limita maximă și a economisi gaz_
 
 ## Referințe suplimentare {#further-reading}
 
-_Cunoști o resursă comunitară care te-a ajutat? Editează această pagină și adaug-o!_
+- [https://docs.openzeppelin.com/learn/deploying-and-interacting](https://docs.openzeppelin.com/learn/deploying-and-interacting) - _OpenZeppelin_
+- [Implementarea contractelor cu Hardhat](https://hardhat.org/guides/deploying.html) - _Nomic Labs_
+
+_Cunoașteți o resursă a comunității care v-a ajutat? Editaţi această pagină și adăugaţi-o!_
 
 ## Subiecte corelate {#related-topics}
 
-- [Cadrele de dezvoltare](/developers/docs/frameworks/)
+- [Framework-uri de dezvoltare](/developers/docs/frameworks/)
+- [Rulaţi un nod Ethereum](/developers/docs/nodes-and-clients/run-a-node/)

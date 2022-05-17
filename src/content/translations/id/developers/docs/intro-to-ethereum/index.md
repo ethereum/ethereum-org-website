@@ -41,21 +41,21 @@ Mekanisme kriptografi memastikan bahwa setelah transaksi diverifikasi sebagai tr
 
 ## Apa itu ether? {#what-is-ether}
 
-Tujuan dari ether, mata uang kripto, adalah memungkinkan keberadaan pasar untuk komputasi. Pasar seperti ini menyediakan insentif ekonomi bagi para peserta untuk memverifikasi dan menjalankan permintaan transaksi dan menyediakan sumber daya komputasional ke jaringan.
+**Ether (ETH)** adalah mata uang kripto asli Ethereum. Tujuan dari ether adalah memungkinkan keberadaan pasar untuk komputasi. Pasar seperti ini menyediakan insentif ekonomi bagi para peserta untuk memverifikasi dan menjalankan permintaan transaksi dan menyediakan sumber daya komputasional ke jaringan.
 
-Peserta mana pun yang menyiarkan permintaan transaksi juga harus menawarkan sejumlah ether ke jaringan sebagai hadiah bounty. Hadiah ini akan diberikan kepada siapa pun yang pada akhirnya melakukan pekerjaan memverifikasi transaksi, mengeksekusinya, memasukkannya ke blockchain, dan menyiarkannya ke jaringan.
+Peserta mana pun yang menyiarkan permintaan transaksi juga harus menawarkan sejumlah ether ke jaringan sebagai hadiah bounty. Hadiah bounty ini akan diberikan kepada siapa pun yang pada akhirnya melakukan pekerjaan memverifikasi transaksi, mengeksekusinya, memasukkannya ke blockchain, dan menyiarkannya ke jaringan.
 
-Jumlah ether yang dibayarkan sesuai dengan waktu yang diperlukan untuk melakukan komputasi. Bounty ini juga mencegah para peserta jahat secara sengaja menghambat jaringan dengan meminta eksekusi komputasi tak terbatas atau skrip lain yang memerlukan sumber daya besar, karena para peserta ini harus membayar untuk waktu komputasi.
+Jumlah ether yang dibayarkan sesuai dengan waktu yang diperlukan untuk melakukan komputasi. Bounty/hadiah ini juga mencegah para peserta jahat secara sengaja menghambat jaringan dengan meminta eksekusi komputasi tak terbatas atau skrip lain yang memerlukan sumber daya besar, karena para peserta ini harus membayar untuk waktu komputasi.
 
 ## Apa itu kontrak pintar? {#what-are-smart-contracts}
 
-Dalam praktiknya, peserta tidak menulis kode baru setiap kali mereka ingin meminta komputasi pada EVM. Sebaliknya, pengembang aplikasi mengunggah program (cuplikan kode yang dapat digunakan kembali) ke dalam penyimpanan EVM, dan ketika pengguna membuat permintaan untuk mengeksekusi potongan kode ini dengan parameter yang bervariasi. Kami menyebut program yang diunggah dan dijalankan oleh kontrak pintar jaringan.
+Dalam praktiknya, peserta tidak menulis kode baru setiap kali mereka ingin meminta komputasi pada EVM. Sebaliknya, developer aplikasi mengunggah program (cuplikan kode yang dapat digunakan kembali) ke state EVM, dan pengguna membuat permintaan untuk mengeksekusi cuplikan kode ini dengan berbagai parameter. Kami menyebut program yang diunggah dan dijalankan oleh kontrak pintar jaringan.
 
 Pada tingkat sangat dasar, Anda bisa menganggap sebuah kontrak pintar seperti mesin penjual otomatis: satu skrip yang, ketika dipanggil dengan parameter tertentu, menjalankan beberapa aksi atau komputasi jika kondisi tertentu terpenuhi. Contohnya, kontrak pintar vendor sederhana bisa membuat dan menentukan kepemilikan aset digital jika pemanggil mengirim ether ke penerima tertentu.
 
-Pengembang mana pun bisa membuat kontrak pintar dan membuatnya terbuka untuk publik di jaringan, menggunakan blockchain sebagai lapisan datanya, dengan biaya yang dibayarkan ke jaringan. Pengguna manapun bisa kemudian memanggil kontrak pintar untuk menjalankan kodenya, sekali lagi dengan biaya yang dibayarkan ke jaringan.
+Pengembang mana pun bisa membuat kontrak pintar dan membuatnya terbuka untuk publik di jaringan, menggunakan rantai blok sebagai lapisan datanya, dengan biaya yang dibayarkan ke jaringan. Pengguna manapun bisa kemudian memanggil kontrak pintar untuk menjalankan kodenya, sekali lagi dengan biaya yang dibayarkan ke jaringan.
 
-Oleh karena itu, dengan kontrak pintar, pengembang dapat menyusun dan menggunakan aplikasi dan layanan sisi pengguna kompleks secara arbitrari, seperti: pasar, instrumen keuangan, game, dll.
+Oleh karena itu, dengan kontrak pintar, pengembang dapat menyusun dan menyebarkan aplikasi dan layanan sisi pengguna kompleks secara arbitrari, seperti pasar, instrumen keuangan, game, dll.
 
 ## Terminologi {#terminology}
 
@@ -66,6 +66,8 @@ Urutan dari semua blok yang telah diselesaikan pada jaringan Ethereum dalam riwa
 ### ETH {#eth}
 
 Mata uang kripto asli Ethereum. Pengguna membayar ether ke pengguna lain untuk membuat permintaan eksekusi kode mereka dilaksanakan.
+
+[Selengkapnya tentang ETH](/developers/docs/intro-to-ether/)
 
 ### EVM {#evm}
 
@@ -90,7 +92,7 @@ Di mana ether disimpan. Pengguna bisa membuka akun, mendepositokan ether ke dala
 "Permintaan transaksi" adalah istilah formal untuk permintaan eksekusi kode pada EVM, dan "transaksi" adalah permintaan transaksi yang dipenuhi dan perubahan terkait dalam state EVM. Setiap pengguna dapat menyiarkan permintaan transaksi ke jaringan dari sebuah node. Agar permintaan transaksi benar-benar berdampak pada state EVM yang telah disetujui, transaksi harus divalidasi, dieksekusi, dan "dikomitmenkan pada jaringan" oleh node lain. Eksekusi kode apa pun menyebabkan perubahan state di EVM; atas komitmen, perubahan state ini disiarkan ke semua node dalam jaringan. Beberapa contoh transaksi:
 
 - Kirim X ether dari akun saya ke akun Alice.
-- Terbitkan beberapa kode kontrak pintar ke dalam memori EVM.
+- Terbitkan beberapa kode kontrak pintar ke state EVM.
 - Jalankan kode kontrak pintar pada alamat X dalam EVM, dengan argumen Y.
 
 [Lebih lanjut tentang transaksi](/developers/docs/transactions/)
@@ -103,7 +105,7 @@ Volume transaksi sangat tinggi, sehingga transaksi "dikomitkan" dalam batch, ata
 
 ### Kontrak pintar {#smart-contracts}
 
-Snippet kode yang dapat digunakan lagi (program) yang diterbitkan pengembang ke dalam memori EVM. Siapa pun bisa meminta kode kontrak pintar dijalankan dengan membuat permintaan transaksi. Karena pengembang bisa menulis aplikasi yang dapat dieksekusi secara arbitrari ke dalam EVM (game, pasar, instrumen keuangan, dll.) dengan menerbitkan kontrak pintar, ini sering juga disebut [dapp, atau Aplikasi Terdesentralisasi](/developers/docs/dapps/).
+Cuplikan kode yang dapat digunakan kembali (program) yang diterbitkan pengembang ke state EVM. Siapa pun bisa meminta kode kontrak pintar dijalankan dengan membuat permintaan transaksi. Karena pengembang bisa menulis aplikasi yang dapat dieksekusi secara arbitrari ke dalam EVM (game, pasar, instrumen keuangan, dll.) dengan menerbitkan kontrak pintar, ini sering juga disebut [dapps, atau Aplikasi Terdesentralisasi](/developers/docs/dapps/).
 
 [Lebih lanjut tentang kontrak pintar](/developers/docs/smart-contracts/)
 
