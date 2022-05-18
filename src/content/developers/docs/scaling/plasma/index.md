@@ -23,11 +23,11 @@ You should have a good understanding of all the foundational topics and a high-l
 |                                                                                                                        | Withdrawals are delayed by several days to allow for challenges. For fungible assets this can be mitigated by liquidity providers, but there is an associated capital cost. |
 |                                                                                                                        | If too many users try to exit their Plasma chain simultaneously (due to malicious activity or network failure), they could flood the root chain and congest the network. | 
 
-## How does Plasma differ from sidechains and sharding? 
+## How does Plasma differ from sidechains and sharding?
 
-Plasma, sidechains, and sharding all follow a similar pattern where a collection of "child chains" rely on a "main chain" for consensus. At intervals, cryptographic proofs of transaction validity (hashes) are submitted to the main chain to prevent fraudulent activity on child chains. 
+Plasma, sidechains, and sharding are fairly similar because they all connect to Ethereum Mainnet in some way. However, the level and strength of these connections vary, which affects the security properties of each scaling solution. 
 
-However, the three scaling solutions have slight differences. Here is a quick comparison of plasma chains, sidechains, and shard chains:
+Here's a quick comparison of plasma chains, sidechains, and shard chains: 
 
 ### Plasma vs sidechains  
 
