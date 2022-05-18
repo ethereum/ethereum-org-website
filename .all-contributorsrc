@@ -7488,6 +7488,16 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "nhsz",
+      "name": "Nicolás Quiroz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/948922?v=4",
+      "profile": "https://nicolasquiroz.com",
+      "contributions": [
+        "code",
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
