@@ -413,7 +413,7 @@ const HomePage = ({
   const [activeCode, setActiveCode] = useState(0)
   const dir = isLangRightToLeft(language) ? "rtl" : "ltr"
 
-  const toggleCodeExample = (id) => {
+  const toggleCodeExample = (id: number): void => {
     setActiveCode(id)
     setModalOpen(true)
   }
@@ -708,7 +708,7 @@ contract SimpleDomainRegistry {
         description={translateMessageId("page-index-meta-description", intl)}
       />
       <Hero
-        image={getImage(data.hero?.childImageSharp?.gatsbyImageData)}
+        image={getImage(data.hero?.childImageSharp?.gatsbyImageData)!}
         alt={translateMessageId("page-index-hero-image-alt", intl)}
         loading="eager"
       />
@@ -737,9 +737,9 @@ contract SimpleDomainRegistry {
             </IntroLeftColumn>
             <ImageContainer>
               <IntroImage
-                image={getImage(
-                  data.hackathon?.childImageSharp?.gatsbyImageData
-                )}
+                image={
+                  getImage(data.hackathon?.childImageSharp?.gatsbyImageData)!
+                }
                 alt={translateMessageId(
                   "page-index-get-started-image-alt",
                   intl
@@ -781,7 +781,7 @@ contract SimpleDomainRegistry {
           </FeatureContent>
           <ImageContainer>
             <FeatureImage
-              image={getImage(data.ethereum?.childImageSharp?.gatsbyImageData)}
+              image={getImage(data.ethereum?.childImageSharp?.gatsbyImageData)!}
               alt={translateMessageId(
                 "page-index-what-is-ethereum-image-alt",
                 intl
@@ -809,7 +809,7 @@ contract SimpleDomainRegistry {
           </FeatureContent>
           <ImageContainer>
             <FeatureImage
-              image={getImage(data.impact?.childImageSharp?.gatsbyImageData)}
+              image={getImage(data.impact?.childImageSharp?.gatsbyImageData)!}
               alt={translateMessageId("page-index-defi-image-alt", intl)}
             />
           </ImageContainer>
@@ -819,9 +819,9 @@ contract SimpleDomainRegistry {
         <Row>
           <ImageContainer>
             <FeatureImage
-              image={getImage(
-                data.infrastructure?.childImageSharp?.gatsbyImageData
-              )}
+              image={
+                getImage(data.infrastructure?.childImageSharp?.gatsbyImageData)!
+              }
               alt={translateMessageId("page-index-nft-alt", intl)}
             />
           </ImageContainer>
@@ -864,7 +864,7 @@ contract SimpleDomainRegistry {
           </FeatureContent>
           <ImageContainer>
             <FeatureImage
-              image={getImage(data.future?.childImageSharp?.gatsbyImageData)}
+              image={getImage(data.future?.childImageSharp?.gatsbyImageData)!}
               alt={translateMessageId("page-index-internet-image-alt", intl)}
             />
           </ImageContainer>
