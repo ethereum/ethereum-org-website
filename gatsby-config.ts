@@ -240,6 +240,18 @@ const config: GatsbyConfig = {
     `gatsby-plugin-gatsby-cloud`,
     // Creates `_redirects` & `_headers` build files for Netlify
     `gatsby-plugin-netlify`,
+    {
+      resolve: `gatsby-plugin-graphql-codegen`,
+      options: {
+        codegen: true,
+        fileName: `./gatsby-graphql.ts`,
+        documentPaths: [
+          "./src/**/*.{ts,tsx}",
+          "./node_modules/gatsby-*/**/*.js",
+          "./gatsby-node.ts",
+        ],
+      },
+    },
   ],
   // https://www.gatsbyjs.com/docs/reference/release-notes/v2.28/#feature-flags-in-gatsby-configjs
   flags: {

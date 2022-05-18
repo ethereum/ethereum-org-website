@@ -1,8 +1,11 @@
 import React, { useState } from "react"
 import { useIntl } from "gatsby-plugin-intl"
-import { graphql } from "gatsby"
+import { graphql, PageProps } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import styled from "styled-components"
+
+import type { IndexPageQuery } from "../../gatsby-graphql"
+import type { TContext } from "../../types"
 
 import ActionCard from "../components/ActionCard"
 import ButtonLink from "../components/ButtonLink"
@@ -401,7 +404,10 @@ const StyledCalloutBanner = styled(CalloutBanner)`
   }
 `
 
-const HomePage = ({ data, pageContext: { language } }) => {
+const HomePage = ({
+  data,
+  pageContext: { language = "en" },
+}: PageProps<IndexPageQuery, TContext>) => {
   const intl = useIntl()
   const [isModalOpen, setModalOpen] = useState(false)
   const [activeCode, setActiveCode] = useState(0)
@@ -413,7 +419,7 @@ const HomePage = ({ data, pageContext: { language } }) => {
   }
   const cards = [
     {
-      image: getImage(data.robotfixed),
+      image: getImage(data.robotfixed?.childImageSharp?.gatsbyImageData),
       title: translateMessageId("page-index-get-started-wallet-title", intl),
       description: translateMessageId(
         "page-index-get-started-wallet-description",
@@ -423,7 +429,7 @@ const HomePage = ({ data, pageContext: { language } }) => {
       to: "/wallets/find-wallet/",
     },
     {
-      image: getImage(data.ethfixed),
+      image: getImage(data.ethfixed?.childImageSharp?.gatsbyImageData),
       title: translateMessageId("page-index-get-started-eth-title", intl),
       description: translateMessageId(
         "page-index-get-started-eth-description",
@@ -433,7 +439,7 @@ const HomePage = ({ data, pageContext: { language } }) => {
       to: "/get-eth/",
     },
     {
-      image: getImage(data.dogefixed),
+      image: getImage(data.dogefixed?.childImageSharp?.gatsbyImageData),
       title: translateMessageId("page-index-get-started-dapps-title", intl),
       description: translateMessageId(
         "page-index-get-started-dapps-description",
@@ -443,7 +449,7 @@ const HomePage = ({ data, pageContext: { language } }) => {
       to: "/dapps/",
     },
     {
-      image: getImage(data.devfixed),
+      image: getImage(data.devfixed?.childImageSharp?.gatsbyImageData),
       title: translateMessageId("page-index-get-started-devs-title", intl),
       description: translateMessageId(
         "page-index-get-started-devs-description",
@@ -456,7 +462,7 @@ const HomePage = ({ data, pageContext: { language } }) => {
 
   const touts = [
     {
-      image: getImage(data.merge),
+      image: getImage(data.merge?.childImageSharp?.gatsbyImageData),
       alt: translateMessageId("page-index-tout-upgrades-image-alt", intl),
       title: translateMessageId("page-index-tout-upgrades-title", intl),
       description: translateMessageId(
@@ -466,7 +472,9 @@ const HomePage = ({ data, pageContext: { language } }) => {
       to: "/upgrades/",
     },
     {
-      image: getImage(data.infrastructurefixed),
+      image: getImage(
+        data.infrastructurefixed?.childImageSharp?.gatsbyImageData
+      ),
       alt: translateMessageId("page-index-tout-enterprise-image-alt", intl),
       title: translateMessageId("page-index-tout-enterprise-title", intl),
       description: translateMessageId(
@@ -476,7 +484,7 @@ const HomePage = ({ data, pageContext: { language } }) => {
       to: "/enterprise/",
     },
     {
-      image: getImage(data.enterprise),
+      image: getImage(data.enterprise?.childImageSharp?.gatsbyImageData),
       alt: translateMessageId("page-index-tout-community-image-alt", intl),
       title: translateMessageId("page-index-tout-community-title", intl),
       description: translateMessageId(
@@ -700,7 +708,7 @@ contract SimpleDomainRegistry {
         description={translateMessageId("page-index-meta-description", intl)}
       />
       <Hero
-        image={getImage(data.hero)}
+        image={getImage(data.hero?.childImageSharp?.gatsbyImageData)}
         alt={translateMessageId("page-index-hero-image-alt", intl)}
         loading="eager"
       />
@@ -729,7 +737,9 @@ contract SimpleDomainRegistry {
             </IntroLeftColumn>
             <ImageContainer>
               <IntroImage
-                image={getImage(data.hackathon)}
+                image={getImage(
+                  data.hackathon?.childImageSharp?.gatsbyImageData
+                )}
                 alt={translateMessageId(
                   "page-index-get-started-image-alt",
                   intl
@@ -771,7 +781,7 @@ contract SimpleDomainRegistry {
           </FeatureContent>
           <ImageContainer>
             <FeatureImage
-              image={getImage(data.ethereum)}
+              image={getImage(data.ethereum?.childImageSharp?.gatsbyImageData)}
               alt={translateMessageId(
                 "page-index-what-is-ethereum-image-alt",
                 intl
@@ -799,7 +809,7 @@ contract SimpleDomainRegistry {
           </FeatureContent>
           <ImageContainer>
             <FeatureImage
-              image={getImage(data.impact)}
+              image={getImage(data.impact?.childImageSharp?.gatsbyImageData)}
               alt={translateMessageId("page-index-defi-image-alt", intl)}
             />
           </ImageContainer>
@@ -809,7 +819,9 @@ contract SimpleDomainRegistry {
         <Row>
           <ImageContainer>
             <FeatureImage
-              image={getImage(data.infrastructure)}
+              image={getImage(
+                data.infrastructure?.childImageSharp?.gatsbyImageData
+              )}
               alt={translateMessageId("page-index-nft-alt", intl)}
             />
           </ImageContainer>
@@ -852,7 +864,7 @@ contract SimpleDomainRegistry {
           </FeatureContent>
           <ImageContainer>
             <FeatureImage
-              image={getImage(data.future)}
+              image={getImage(data.future?.childImageSharp?.gatsbyImageData)}
               alt={translateMessageId("page-index-internet-image-alt", intl)}
             />
           </ImageContainer>
@@ -932,7 +944,7 @@ contract SimpleDomainRegistry {
         <StyledCalloutBanner
           titleKey={"page-index-contribution-banner-title"}
           descriptionKey={"page-index-contribution-banner-description"}
-          image={getImage(data.finance)}
+          image={getImage(data.finance?.childImageSharp?.gatsbyImageData)}
           maxImageWidth={600}
           alt={translateMessageId(
             "page-index-contribution-banner-image-alt",
@@ -959,7 +971,7 @@ contract SimpleDomainRegistry {
 export default HomePage
 
 export const query = graphql`
-  {
+  query IndexPage {
     hero: file(relativePath: { eq: "home/hero.png" }) {
       childImageSharp {
         gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)

@@ -15,7 +15,7 @@ export type TContext = {
   slug: string
   relativePath: string
   intl: TIntl
-  language?: string
+  language?: Lang
   isOutdated: boolean
   isContentEnglish?: boolean
 }
