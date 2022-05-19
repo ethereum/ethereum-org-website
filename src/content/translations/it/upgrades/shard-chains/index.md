@@ -6,7 +6,7 @@ template: upgrade
 sidebar: true
 image: ../../../../../assets/upgrades/newrings.png
 summaryPoint1: Lo sharding è un aggiornamento multi-fase per migliorare la scalabilità e la capacità di Ethereum.
-summaryPoint2: Le shart chain forniscono livelli di archiviazione aggiuntivi e più economici per applicazioni e rollup, per memorizzare i dati.
+summaryPoint2: Le shard chain forniscono livelli di archiviazione aggiuntivi e più economici per applicazioni e rollup, per memorizzare i dati.
 summaryPoint3: Consentono alle soluzioni del livello 2 di offrire commissioni di transazione contenute, sfruttando la sicurezza di Ethereum.
 summaryPoint4: Questo aggiornamento è previsto per seguire la fusione della Mainnet con la Beacon Chain.
 ---
