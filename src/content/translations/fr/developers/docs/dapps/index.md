@@ -34,11 +34,11 @@ Un contrat intelligent est un code présent sur la blockchain Ethereum qui fonct
 - **Confidentialité** : vous n'avez pas à fournir une identité réelle pour déployer ou interagir avec une dApp.
 - **Résistance à la censure** : aucune entité du réseau ne peut empêcher les utilisateurs de soumettre des transactions, de déployer des dApps ou de lire des données de la blockchain.
 - **Intégrité complète des données** : grâce à des procédés cryptographiques appelés « primitives cryptographiques », les données stockées sur la blockchain sont immuables et indiscutables. Les acteurs malveillants ne peuvent pas falsifier des transactions ni d'autres données qui ont déjà été rendues publiques.
-- **Calcul trustless/comportement vérifiable** : les contrats intelligents peuvent être analysés et offrent la garantie d'une exécution prévisible sans qu'il soit nécessaire de faire confiance à une autorité centrale. Ce n'est pas le cas dans les modèles financiers traditionnels. Par exemple, lorsque nous utilisons des systèmes bancaires en ligne, nous devons avoir confiance dans le fait que les institutions financières n'utiliseront pas nos données financières à mauvais escient, ne falsifieront pas les documents et ne seront pas piratées.
+- **Calcul trustless/comportement vérifiable** : les contrats intelligents peuvent être analysés et offrent la garantie d'une exécution prévisible sans avoir besoin de faire confiance à une autorité centrale. Ce n'est pas le cas dans les modèles financiers traditionnels. Par exemple, lorsque nous utilisons des systèmes bancaires en ligne, nous devons avoir confiance dans le fait que les institutions financières n'utiliseront pas nos données financières à mauvais escient, ne falsifieront pas les documents et ne seront pas piratées.
 
 ## Inconvénients du développement de dApps {#drawbacks-of-dapp-development}
 
-- **Maintenance** : Les dApps peuvent être plus difficiles à maintenir car les données et le code publiés sur la blockchain sont plus difficiles à modifier. Il est difficile pour les développeurs de mettre à jour leurs dApps (ou les données sous-jacentes stockées par une dApp) une fois qu'elles sont déployées , même si des bogues ou des risques de sécurité sont identifiés dans une version antérieure.
+- **Maintenance** : Les dApps peuvent être plus difficiles à maintenir car les données et le code publiés sur la blockchain sont plus difficiles à modifier. Il est difficile pour les développeurs de mettre à jour leurs dApps (ou les données sous-jacentes stockées par une dApp) une fois celles-ci déployées , même si des bogues ou des risques de sécurité ont été identifiés dans une version antérieure.
 - **Impacts sur la performance** : Il y a d'énormes impacts sur la performance et passer à l'échelle est vraiment difficile. Pour atteindre le niveau de sécurité, d'intégrité, de transparence et de fiabilité auquel Ethereum aspire, chaque nœud exécute et stocke chaque transactions. En plus, la preuve de travail prend aussi du temps. Un rapide calcul permet d'estimer le surcoût à environ 1 000 000 fois celui du calcul standard actuel.
 - **Congestion du réseau** : dans le modèle actuel, si une dApp utilise trop de ressources de calcul, l'ensemble du réseau est sauvegardé. Actuellement, le réseau ne peut traiter qu'une dizaine de transactions par seconde. Si les transactions sont envoyées plus rapidement que cela, le groupe de transactions non confirmées peut rapidement augmenter.
 - **Expérience utilisateur** : il pourrait s'avérer plus difficile de concevoir des expériences conviviales. L'utilisateur moyen pourrait trouver trop difficile de mettre en place la pile d'outils nécessaire pour interagir avec la blockchain de façon réellement sécurisée.
@@ -48,7 +48,7 @@ Un contrat intelligent est un code présent sur la blockchain Ethereum qui fonct
 
 <YouTube id="F50OrwV6Uk8" />
 
-## Outils pour dApp {#dapp-tools}
+## Outils pour créer des dApps {#dapp-tools}
 
 **Scaffold-ETH _- Expérimentez rapidement avec Solidity en utilisant un frontend qui s'adapte à votre contrat intelligent._**
 

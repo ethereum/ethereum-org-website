@@ -22,19 +22,19 @@ Bu programlar geniş bir proje yelpazesine hibeler sağlayarak geniş Ethereum e
   Hibeler 1.000 dolardan 8.000 dolara kadar değişir.
 - [Moloch DAO](https://www.molochdao.com/) - _Gizlilik, katman 2 ölçekleme, istemci güvenliği ve dahası_
 - [Açık Hibeler](https://opengrants.com/explore)
-- [DAO Grants](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) - _Hibe vaat eden organizasyonların Google tablosu_
+- [DAO Hibeleri](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) - _Hibe sunan organizasyonların Google tablosu_
 
 ## Projeye özel {#project-specific}
 
 Bu projeler kendi teknolojilerini geliştirmeye ve deneyimlemeye yönelik olarak kendi hibelerini oluşturmuşlardır.
 
-- [Aave Hibeler Programı](https://aavegrants.org/) – _[Aave](https://aave.com/) hibeleri DAO_
+- [Aave Hibe Programı](https://aavegrants.org/) – _[Aave](https://aave.com/) hibeleri DAO_
 - [Balancer](https://forms.gle/c68e4fM7JHCQkPkN7) – _[Balancer](https://balancer.fi/) Ekosistem Fonu_
-- [Compound Hibeleri Programı](https://compoundgrants.org/) – _[Compound](https://compound.finance/) finans ekosistemi_
-- [Consensys Hibeler Programı](https://consensys.net/grants/) – _[Consensys](https://consensys.net/) blokzincir fonlama & Ethereum hibeleri_
-- [dYdX Hibeler Programı](https://dydxgrants.com/) – _[dYdX](https://dydx.exchange/) merkeziyetsiz borsa_
+- [Compound Hibe Programı](https://compoundgrants.org/) – _[Compound](https://compound.finance/) finans ekosistemi_
+- [Consensys Hibe Programı](https://consensys.net/grants/) – _[Consensys](https://consensys.net/) blok zinciri fonlama & Ethereum hibeleri_
+- [dYdX Hibe Programı](https://dydxgrants.com/) – _[dYdX](https://dydx.exchange/) merkeziyetsiz borsa_
 - [Lido Ekosistem Hibeleri Organizasyonu (LEGO)](https://lego.lido.fi/) – _[Lido](https://lido.fi/) finans ekosistemi_
-- [mStable Hibeler Programı](https://docs.mstable.org/advanced/grants-program) - _[mStable](https://mstable.org/) topluluğu_
+- [mStable Hibe Programı](https://docs.mstable.org/advanced/grants-program) - _[mStable](https://mstable.org/) topluluğu_
 - [The Graph](https://airtable.com/shrdfvnFvVch3IOVm) – _[The Graph](https://thegraph.com/) ekosistemi_
 - [Uniswap Hibe Programı](https://www.unigrants.org/) – _[Uniswap](https://uniswap.org/) topluluğu_
 

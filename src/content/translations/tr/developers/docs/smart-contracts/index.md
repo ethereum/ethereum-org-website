@@ -13,6 +13,8 @@ Akıllı sözleşmeler bir tür [Ethereum hesabıdır](/developers/docs/accounts
 
 ## Ön Koşullar {#prerequisites}
 
+Yeni başlıyorsanız veya daha az teknik bir giriş arıyorsanız, [akıllı sözleşmelere girişimizi](/smart-contracts/) öneririz.
+
 Akıllı sözleşmelerin dünyasına atlamadan önce [hesaplar](/developers/docs/accounts/), [işlemler](/developers/docs/transactions/) ve [Ethereum Sanal Makinesi](/developers/docs/evm/) hakkında yeterince bilgi sahibi olduğunuzdan emin olun.
 
 ## Dijital bir otomat {#a-digital-vending-machine}
@@ -27,7 +29,7 @@ money + snack selection = snack dispensed
 
 Bu mantık otomatın içine programlanmıştır.
 
-Bir akıllı sözleşme, tıpkı bir otomat gibi içine programlanmış bir mantığa sahiptir. Burada bu otomat bir akıllı sözleşme olsaydı nasıl gözükebileceğinin basit bir örneği var:
+Bir akıllı sözleşme, tıpkı bir otomat gibi içine programlanmış bir mantığa sahiptir. Burada bu otomat bir akıllı sözleşme olsaydı nasıl gözükebileceğinin basit bir örneği bulunuyor:
 
 ```solidity
 pragma solidity 0.8.7;
@@ -73,19 +75,19 @@ Ethereum, akıllı sözleşme yazmak için geliştirici dostu dillere sahiptir:
 - Solidity
 - Vyper
 
-[Diller hakkında daha fazla bilgi](/developers/docs/smart-contracts/languages/)
+[Diller hakkında daha fazlası](/developers/docs/smart-contracts/languages/)
 
 Ancak, Ethereum sanal makinesinin sözleşmeyi yorumlayabilmesi ve depolayabilmesi için dağıtılmadan önce derlenmeleri gerekir. [Derleme üzerine daha fazla bilgi](/developers/docs/smart-contracts/compiling/)
 
 ## Birleştirilebilirlik {#composability}
 
-Akıllı sözleşmeler Ethereum üzerinde herkese açıktır ve açık API'lar olarak düşünülebilirler. Bu, olanakları büyük ölçüde genişletmek için kendi akıllı sözleşmenizde başka akıllı sözleşmeleri çağırabileceğiniz anlamına gelir. Sözleşmeler, başka sözleşmeleri bile dağıtabilir.
+Akıllı sözleşmeler Ethereum üzerinde herkese açıktır ve açık API'ler olarak düşünülebilirler. Bu, olanakları büyük ölçüde genişletmek için kendi akıllı sözleşmenizde başka akıllı sözleşmeleri çağırabileceğiniz anlamına gelir. Sözleşmeler, başka sözleşmeleri bile dağıtabilir.
 
 [Akıllı sözleşme birleştirilebilirliği](/developers/docs/smart-contracts/composability/) hakkında fazlasını öğrenin.
 
 ## Kısıtlamalar {#limitations}
 
-Akıllı sözleşmeler "gerçek hayat" olayları hakkında tek başlarına bilgi edinemezler çünkü HTTP istekleri gönderemezler. Bu şekilde tasarlanmıştır. Dış bilgiye bağlı kalmak güvenlik ve merkeziyetsizlik için önemli olan mutabakatı riske atabilir.
+Akıllı sözleşmeler "gerçek hayat" olayları hakkında tek başlarına bilgi edinemezler çünkü HTTP istekleri gönderemezler. Bu şekilde tasarlanmıştır. Dış bilgiye bağlı kalmak, güvenlik ve merkeziyetsizlik için önemli olan mutabakatı riske atabilir.
 
 Bu, [kâhinler](/developers/docs/oracles/) ile çözülebilir.
 
@@ -99,7 +101,7 @@ Akıllı sözleşmelerin diğer bir kısıtlaması ise maksimum sözleşme boyut
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-contracts)
 - [Topluluk Forumu](https://forum.openzeppelin.com/c/general/16)
 
-**DappSys -** **_Akıllı sözleşmeler için güvenli, basit ve esnek yapılı yapı bloklarıdır._**
+**DappSys -** **_Akıllı sözleşmeler için güvenli, basit ve esnek yapılı yapı taşlarıdır._**
 
 - [Dappsys](https://dappsys.readthedocs.io/)
 - [GitHub](https://github.com/dapphub/dappsys)

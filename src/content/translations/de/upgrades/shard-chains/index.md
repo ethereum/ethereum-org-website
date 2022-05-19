@@ -23,9 +23,9 @@ Dies ist aus anderen Gründen als Skalierbarkeit wichtig.
 
 ## Funktionen von Sharding {#features-of-sharding}
 
-### Jeder kann eine Node betreiben {#everyone-can-run-a-node}
+### Jeder kann einen Node betreiben {#everyone-can-run-a-node}
 
-Sharding ermöglicht es, Skalierbarkeit auf dezentrale Art und Weise zu gewährleisten, statt Skalierbarkeit schlicht durch Vergrößerung der bestehenden Datenbank zu erlangen. Letzteres würde Ethereum weniger zugänglich für Netzwerk-Validierer machen, da diese leistungsstarke und teure Computer erfordern. Mit Shard Chains müssen Validatoren nur Daten für jenen Shard speichern/ausführen, welchen sie überprüfen, und nicht für das gesamte Netzwerk (wie es aktuell der Fall ist). Dies beschleunigt den Prozess drastisch und reduziert die Hardwareanforderungen.
+Sharding ermöglicht es, Skalierbarkeit auf dezentrale Art und Weise zu gewährleisten, statt Skalierbarkeit schlicht durch Vergrößerung der bestehenden Datenbank zu erlangen. Letzteres würde Ethereum weniger zugänglich für Netzwerk-Validatoren machen, da diese leistungsstarke und teure Computer erfordern. Mit Shard Chains müssen Validatoren nur Daten für jenen Shard speichern/ausführen, welchen sie überprüfen, und nicht für das gesamte Netzwerk (wie es aktuell der Fall ist). Dies beschleunigt den Prozess drastisch und reduziert die Hardwareanforderungen.
 
 ### Mehr Netzwerkbeteiligung {#more-network-participation}
 

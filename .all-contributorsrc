@@ -7479,6 +7479,25 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "JuliusDegesys",
+      "name": "Julius Degesys",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3232103?v=4",
+      "profile": "https://github.com/JuliusDegesys",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "nhsz",
+      "name": "Nicolás Quiroz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/948922?v=4",
+      "profile": "https://nicolasquiroz.com",
+      "contributions": [
+        "code",
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,

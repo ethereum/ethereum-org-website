@@ -9,7 +9,7 @@ const ignoreContent = (process.env.IGNORE_CONTENT || "")
   .split(",")
   .filter(Boolean)
 
-const isGatsbyCloud = process.env.GATSBY_CLOUD === "true"
+const isPreviewDeploy = process.env.IS_PREVIEW_DEPLOY === "true"
 
 const ignoreTranslations = Object.keys(allLanguages)
   .filter((lang) => !supportedLanguages.includes(lang))
@@ -230,9 +230,9 @@ const config = {
   },
 }
 
-// Avoid loading Matomo in Gatsby Cloud envs since NODE_ENV is `production` in
+// Avoid loading Matomo in preview deploys since NODE_ENV is `production` in
 // there and it will send testing data as production otherwise
-if (!isGatsbyCloud) {
+if (!isPreviewDeploy) {
   config.plugins = [
     ...config.plugins,
     // Matomo analtyics
