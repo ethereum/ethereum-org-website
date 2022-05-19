@@ -7,7 +7,7 @@ import { createFilePath } from "gatsby-source-filesystem"
 import type { GatsbyNode } from "gatsby"
 
 import type { Context } from "./src/types"
-import type { AllMdxQuery } from "./src/interfaces"
+import type { AllMdxQuery } from "./gatsby-graphql"
 
 import mergeTranslations from "./src/scripts/mergeTranslations"
 import copyContributors from "./src/scripts/copyContributors"
@@ -200,8 +200,8 @@ export const createPages: GatsbyNode<any, Context>["createPages"] = async ({
     })
   })
 
-  const result = await graphql<{ allMdx: { edges: Array<AllMdxQuery> } }>(`
-    query getAllMdx {
+  const result = await graphql<AllMdxQuery>(`
+    query AllMdx {
       allMdx {
         edges {
           node {

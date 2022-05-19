@@ -10396,7 +10396,7 @@ export type GatsbyImageSharpFluid_NoBase64Fragment = { aspectRatio: number, src:
 
 export type GatsbyImageSharpFluid_WithWebp_NoBase64Fragment = { aspectRatio: number, src: string, srcSet: string, srcWebp?: string | null, srcSetWebp?: string | null, sizes: string };
 
-export type GetAllMdxQueryVariables = Exact<{ [key: string]: never; }>;
+export type AllMdxQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type GetAllMdxQuery = { allMdx: { edges: Array<{ node: { fields?: { isOutdated?: boolean | null, slug?: string | null, relativePath?: string | null } | null, frontmatter?: { lang?: string | null, template?: string | null } | null } }> } };
+export type AllMdxQuery = { allMdx: { edges: Array<{ node: { fields?: { isOutdated?: boolean | null, slug?: string | null, relativePath?: string | null } | null, frontmatter?: { lang?: string | null, template?: string | null } | null } }> } };
