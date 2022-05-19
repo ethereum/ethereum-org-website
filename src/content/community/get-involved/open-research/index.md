@@ -11,7 +11,7 @@ One of the primary strengths of Ethereum is that it is constantly being improved
 
 ## General research resources
 
-Regardless of the specific topic, there is a wealth of information on Ethereum research to be found at [ethresear.ch](https://ethresear.ch) and the [Eth R&D discord channel](https://discord.gg/n7JxAeRu). These are the primary places where Ethereum researchers discuss the latest ideas and development opportunities.
+Regardless of the specific topic, there is a wealth of information on Ethereum research to be found at [ethresear.ch](https://ethresear.ch) and the [Eth R&D Discord channel](https://discord.gg/n7JxAeRu). These are the primary places where Ethereum researchers discuss the latest ideas and development opportunities.
 
 ## Scaling and Performance
 
@@ -25,7 +25,7 @@ One particular area of Layer-2 that requires more research and development is sa
 
 ### Sharding
 
-Sharding Ethereums blockchain has long been part of the development roadmap. However, new scaling solutions such as "Danksharding" are currently taking center stage.
+Sharding Ethereum's blockchain has long been part of the development roadmap. However, new scaling solutions such as "Danksharding" are currently taking center stage.
 
 ### Hardware
 
@@ -47,9 +47,9 @@ Running nodes on modest hardware is fundamental to keeping Ethereum decentralize
 
 Security is a broad topic that might include spam/scam prevention, wallet security, hardware security, crypto-economic security, bug hunting and testing of applications and client software and key-management. Contributing to knowledge in these areas will help stimulate mainstream adoption.
 
-### Cryptography & zkp
+### Cryptography & ZKP
 
-Zero-knowledge proofs and crytopgraphy are critical for building privacy and security into Ethereum and its applications. Zero-knowledge is a relatively young but fast-moving space with many open research and development opportunities.
+Zero-knowledge proofs (ZKP) and cryptography are critical for building privacy and security into Ethereum and its applications. Zero-knowledge is a relatively young but fast-moving space with many open research and development opportunities.
 
 ### Wallets
 
@@ -158,7 +158,7 @@ Apps on Ethereum are rarely fully decentralized because they rely on some centra
 
 ### Composability
 
-Composability is the ability for different apps to work in parallel or on top of one another so that users are not locked-in to specific protocols. This is something that requires best-practises in interoperability and data standards. This is an area that would benefit from more ongoing research and development.
+Composability is the ability for different apps to work in parallel or on top of one another so that users are not locked-in to specific protocols. This is something that requires best-practices in interoperability and data standards. This is an area that would benefit from more ongoing research and development.
 
 ### Links to current research
 
