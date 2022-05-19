@@ -29,7 +29,7 @@ Op dezelfde manier als bij proof-of-work, zou een kwaadaardige entiteit ten mins
 
 ## De merge {#the-merge}
 
-Er is een functionele proof-of-stake-keten genaamd de [Beacon Chain](/upgrades/beacon-chain/) die sinds december 2020 loopt en die de levensvatbaarheid van het proof-of-stake-protocol aantoont. De merge verwijst naar het moment waarop Ethereum proof-of-work achterlaat en proof-of-stake volledig accepteert. De merge zal naar verwachting plaatsvinden in het tweede kwartaal van 2022. [Meer over de merge](/upgrades/merge/).
+Er is een functionele proof-of-stake-keten genaamd de [Beacon Chain](/upgrades/beacon-chain/) die sinds december 2020 loopt en die de levensvatbaarheid van het proof-of-stake-protocol aantoont. De merge verwijst naar het moment waarop Ethereum proof-of-work achterlaat en proof-of-stake volledig accepteert. The Merge is expected to happen ~Q3/Q4 2022. [Meer over de merge](/upgrades/merge/).
 
 ## Energie-uitgaven van proof-of-stake {#proof-of-stake-energy}
 

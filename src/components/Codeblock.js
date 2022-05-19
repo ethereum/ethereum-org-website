@@ -9,6 +9,9 @@ const LINES_BEFORE_COLLAPSABLE = 8
 
 const Container = styled.div`
   position: relative;
+  /* Overwrites codeblocks inheriting RTL styling in Farsi/Arabic */
+  /* Context: https://github.com/ethereum/ethereum-org-website/issues/6202 */
+  direction: ltr;
 `
 
 const HightlightContainer = styled.div`

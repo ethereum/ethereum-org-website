@@ -15,6 +15,8 @@ const ignoreContent = (process.env.IGNORE_CONTENT || "")
   .split(",")
   .filter(Boolean)
 
+const isPreviewDeploy = process.env.IS_PREVIEW_DEPLOY === "true"
+
 const ignoreTranslations = ignoreLanguages.map(
   (lang) => `**/translations\/${lang}`
 )
@@ -58,19 +60,6 @@ const config: GatsbyConfig = {
         theme_color: `#222222`,
         display: `standalone`,
         icon: `src/assets/favicon.png`,
-      },
-    },
-    // Matomo analtyics
-    {
-      resolve: "gatsby-plugin-matomo",
-      options: {
-        siteId: "4",
-        matomoUrl: "https://matomo.ethereum.org",
-        siteUrl,
-        matomoPhpScript: "matomo.php",
-        matomoJsScript: "matomo.js",
-        trackLoad: false,
-        // dev: true,
       },
     },
     // Sitemap generator (ethereum.org/sitemap.xml)
@@ -245,6 +234,26 @@ const config: GatsbyConfig = {
   flags: {
     FAST_DEV: true, // DEV_SSR, QUERY_ON_DEMAND & LAZY_IMAGES
   },
+}
+
+// Avoid loading Matomo in preview deploys since NODE_ENV is `production` in
+// there and it will send testing data as production otherwise
+if (!isPreviewDeploy) {
+  config.plugins = [
+    ...config.plugins,
+    // Matomo analtyics
+    {
+      resolve: "gatsby-plugin-matomo",
+      options: {
+        siteId: "4",
+        matomoUrl: "https://matomo.ethereum.org",
+        siteUrl,
+        matomoPhpScript: "matomo.php",
+        matomoJsScript: "matomo.js",
+        trackLoad: false,
+      },
+    },
+  ]
 }
 
 export default config

@@ -1,28 +1,28 @@
 ---
 title: What is Web3 and why is it important?
-description: An introduction to Web3—the next evolution of the internet—and why it matters.
+description: An introduction to Web3—the next evolution of the World Wide Web—and why it matters.
 lang: en
 sidebar: true
 ---
 
 # Introduction to Web3 {#introduction}
 
-Centralization has helped onboard billions of people to the internet and created the stable, robust infrastructure on which it lives. At the same time, a handful of centralized entities have a stronghold on large swathes of the internet, unilaterally deciding what should and should not be allowed.
+Centralization has helped onboard billions of people to the World Wide Web and created the stable, robust infrastructure on which it lives. At the same time, a handful of centralized entities have a stronghold on large swathes of the World Wide Web, unilaterally deciding what should and should not be allowed.
 
-Web3 is the answer to this dilemma. Instead of an internet monopolized by large technology companies, Web3 embraces decentralization and is being built, operated, and owned by its users. Web3 puts power in the hands of individuals rather than corporations.
+Web3 is the answer to this dilemma. Instead of a Web monopolized by large technology companies, Web3 embraces decentralization and is being built, operated, and owned by its users. Web3 puts power in the hands of individuals rather than corporations.
 Before we talk about Web3, let's explore how we got here.
 
 <Divider />
 
-## The early internet {#early-internet}
+## The early Web {#early-internet}
 
-Most people think of the internet as a continuous pillar of modern life—it was invented and has just existed since. However, the internet most of us know today is quite different from originally imagined. To understand this better, it's helpful to break the internet's short history into loose periods—web 1.0 and web 2.0.
+Most people think of the Web as a continuous pillar of modern life—it was invented and has just existed since. However, the Web most of us know today is quite different from originally imagined. To understand this better, it's helpful to break the Web's short history into loose periods—Web 1.0 and Web 2.0.
 
 ### Web 1.0: Read-Only (1990-2004) {#web1}
 
-In 1989, in CERN, Geneva, Tim Berners-Lee was busy developing the protocols that would become the internet. His idea? To create open, decentralized protocols that allowed information-sharing from anywhere on Earth.
+In 1989, at CERN, Geneva, Tim Berners-Lee was busy developing the protocols that would become the World Wide Web. His idea? To create open, decentralized protocols that allowed information-sharing from anywhere on Earth.
 
-The first inception of the internet, now known as 'Web 1.0', occurred roughly between 1990 to 2004. The internet on Web 1.0 mainly was static websites owned by companies, and there was close to zero interaction between users - individuals seldom produced content - leading to it being known as the read-only web.
+The first inception of Berners-Lee's creation, now known as 'Web 1.0', occurred roughly between 1990 to 2004. Web 1.0 was mainly static websites owned by companies, and there was close to zero interaction between users - individuals seldom produced content - leading to it being known as the read-only web.
 
 ![Client-server architecture, representing Web 1.0](./web1.png)
 
@@ -36,7 +36,7 @@ The Web 2.0 period began in 2004 with the emergence of social media platforms. I
 
 ## Web 3.0: Read-Write-Own {#web3}
 
-The premise of 'Web 3.0' was coined by [Ethereum](/what-is-ethereum/) co-founder Gavin Wood shortly after Ethereum launched in 2014. Gavin put into words a solution for a problem that many early crypto adopters felt: the internet required too much trust. That is, most of the internet that people know and use today relies on trusting a handful of private companies to act in the public's best interests.
+The premise of 'Web 3.0' was coined by [Ethereum](/what-is-ethereum/) co-founder Gavin Wood shortly after Ethereum launched in 2014. Gavin put into words a solution for a problem that many early crypto adopters felt: the Web required too much trust. That is, most of the Web that people know and use today relies on trusting a handful of private companies to act in the public's best interests.
 
 ![Decentralized node architecture, representing Web3](./web3.png)
 
@@ -125,7 +125,7 @@ The Web3 ecosystem is young and quickly evolving. As a result, it currently depe
 
 Web3 is a young and evolving ecosystem. Gavin Wood coined the term in 2014, but many of these ideas have only recently become a reality. In the last year alone, there has been a considerable surge in the interest in cryptocurrency, improvements to layer 2 scaling solutions, massive experiments with new forms of governance, and revolutions in digital identity.
 
-We are only at the beginning of creating a better internet with Web3, but as we continue to improve the infrastructure that will support it, the future of the internet looks bright.
+We are only at the beginning of creating a better Web with Web3, but as we continue to improve the infrastructure that will support it, the future of the Web looks bright.
 
 ## How can I get involved {#get-involved}
 

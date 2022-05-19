@@ -21,7 +21,7 @@ Ethereum'un merkeziyetsiz yapısını anlamak çok önemlidir çünkü Ethereum 
   Ethereum'un temellerini öğrenin
 </DocLink>
 
-Resmi desteğin olmamasına rağmen, Ethereum ekosistemindeki birçok grup, topluluk ve proje yardımcı olmaktan mutluluk duyar.
+Resmi desteğin olmamasına rağmen, Ethereum ekosistemindeki birçok grup, topluluk ve proje yardımcı olmaktan mutluluk duyar ve bu sayfada birçok faydalı bilgi ve kaynak bulabilirsiniz. Başka sorularınız mı var? [ethereum.org Discord](/discord/)'una katılın, yardım etmeye çalışacağız.
 
 ## Cüzdan desteği {#wallet-support}
 
@@ -107,4 +107,4 @@ Ağ talebi nedeniyle gerekenden daha düşük bir işlem ücreti gönderdiyseniz
 
 #### Ethereum madenciliği nasıl yapılır? {#mining-ethereum}
 
-Halihazırda Ethereum madenciliği yapmıyorsanız madencilik ekipmanı satın almanızı önermiyoruz. 2022'nin 2. çeyreğinde [Birleştirme](/upgrades/merge/) gerçekleşecek ve Ethereum'u proof-of-work'den (iş ispatı) proof-of-stake'e (hisse ispatı) dönüştürecek. Bu değişiklik, Ethereum madenciliğinin artık mümkün olmayacağı anlamına geliyor. Hâlâ Ethereum madenciliği yapmakla ilgileniyorsanız, [/r/EtherMining](https://www.reddit.com/r/EtherMining/) gibi madencilik topluluklarından yardım isteyebilirsiniz.
+Halihazırda Ethereum madenciliği yapmıyorsanız madencilik ekipmanı satın almanızı önermiyoruz. 2022'nin 3./4. Çeyreğinde [Birleştirme](/upgrades/merge/) gerçekleşerek Ethereum'u iş ispatından hisse ispatına çevirecek. Bu değişiklik, Ethereum madenciliğinin artık mümkün olmayacağı anlamına geliyor. Hâlâ Ethereum madenciliği yapmakla ilgileniyorsanız, [/r/EtherMining](https://www.reddit.com/r/EtherMining/) gibi madencilik topluluklarından yardım isteyebilirsiniz.

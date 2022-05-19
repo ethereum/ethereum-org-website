@@ -205,9 +205,7 @@ const ProductCard = ({
             </SubjectPill>
           ))}
       </SubjectContainer>
-      <StyledButtonLink to={url} hideArrow={true}>
-        Open {name}
-      </StyledButtonLink>
+      <StyledButtonLink to={url}>Open {name}</StyledButtonLink>
     </Card>
   )
 }

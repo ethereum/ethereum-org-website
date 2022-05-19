@@ -228,23 +228,20 @@ const StyledCard = styled(Card)`
 
 const benefits = [
   {
-    title: "Earn rewards",
+    title: "page-staking-benefits-1-title",
     emoji: "💰",
-    description:
-      "Rewards are given for actions that help the network reach consensus. You'll get rewards for running software that properly batches transactions into new blocks and checks the work of other validators because that's what keeps the chain running securely.",
+    description: "page-staking-benefits-1-description",
   },
   {
-    title: "Better security",
+    title: "page-staking-benefits-2-title",
     emoji: ":shield:",
-    description:
-      "The network gets stronger against attacks as more ETH is staked, as it then requires more ETH to control a majority of the network. To become a threat, you would need to hold the majority of validators, which means you'd need to control the majority of ETH in the system–that's a lot!",
+    description: "page-staking-benefits-2-description",
   },
   {
-    title: "More sustainable",
+    title: "page-staking-benefits-3-title",
     emoji: "🍃",
-    description:
-      "Stakers don't need energy-intensive computers to participate in a proof-of-stake system–just a home computer or smartphone. This will make Ethereum better for the environment.",
-    linkText: "More on Ethereum's energy consumption",
+    description: "page-staking-benefits-3-description",
+    linkText: "page-staking-benefits-3-link",
     to: "/energy-consumption",
   },
 ]
@@ -253,10 +250,9 @@ const StakingPage = ({ data }) => {
   const intl = useIntl()
 
   const heroContent = {
-    title: "How to stake your ETH",
-    header: "Earn rewards while securing Ethereum",
-    subtitle:
-      "Staking is a public good for the Ethereum ecosystem. Any user with any amount of ETH can help secure the network and earn rewards in the process.",
+    title: translateMessageId("page-staking-hero-title", intl),
+    header: translateMessageId("page-staking-hero-header", intl),
+    subtitle: translateMessageId("page-staking-hero-subtitle", intl),
     image: getImage(data.rhino),
     alt: translateMessageId("page-staking-image-alt", intl),
     buttons: [],
@@ -267,7 +263,7 @@ const StakingPage = ({ data }) => {
     ariaLabel: "Staking options dropdown menu",
     items: [
       {
-        text: "Staking home",
+        text: translateMessageId("page-staking-dropdown-home", intl),
         to: "/staking/",
         matomo: {
           eventCategory: `Staking dropdown`,
@@ -276,7 +272,7 @@ const StakingPage = ({ data }) => {
         },
       },
       {
-        text: "Solo staking",
+        text: translateMessageId("page-staking-dropdown-solo", intl),
         to: "/staking/solo/",
         matomo: {
           eventCategory: `Staking dropdown`,
@@ -285,7 +281,7 @@ const StakingPage = ({ data }) => {
         },
       },
       {
-        text: "Staking as a service",
+        text: translateMessageId("page-staking-dropdown-saas", intl),
         to: "/staking/saas/",
         matomo: {
           eventCategory: `Staking dropdown`,
@@ -294,7 +290,7 @@ const StakingPage = ({ data }) => {
         },
       },
       {
-        text: "Pooled staking",
+        text: translateMessageId("page-staking-dropdown-pools", intl),
         to: "/staking/pools/",
         matomo: {
           eventCategory: `Staking dropdown`,
@@ -309,19 +305,19 @@ const StakingPage = ({ data }) => {
   const tocItems = {
     whatIsStaking: {
       id: "what-is-staking",
-      title: "What is staking?",
+      title: translateMessageId("page-staking-section-what-title", intl),
     },
     whyStakeYourEth: {
       id: "why-stake-your-eth",
-      title: "Why stake your ETH?",
+      title: translateMessageId("page-staking-section-why-title", intl),
     },
     howToStakeYourEth: {
       id: "how-to-stake-your-eth",
-      title: "How to stake your ETH",
+      title: translateMessageId("page-staking-toc-how-to-stake-your-eth", intl),
     },
     comparisonOfOptions: {
       id: "comparison-of-options",
-      title: "Comparison of staking options",
+      title: translateMessageId("page-staking-toc-comparison-of-options", intl),
     },
     joinTheCommunity: {
       id: "join-the-community",
@@ -329,11 +325,11 @@ const StakingPage = ({ data }) => {
     },
     faq: {
       id: "faq",
-      title: "FAQ",
+      title: translateMessageId("page-staking-toc-faq", intl),
     },
     further: {
       id: "further",
-      title: "Further reading",
+      title: translateMessageId("page-staking-toc-further", intl),
     },
   }
 
@@ -352,7 +348,9 @@ const StakingPage = ({ data }) => {
       <Page>
         <InfoColumn>
           <StyledButtonDropdown list={dropdownLinks} />
-          <InfoTitle>Staking with Ethereum</InfoTitle>
+          <InfoTitle>
+            <Translation id="page-staking-dom-info-title" />
+          </InfoTitle>
           <StakingHomeTableOfContents items={tocArray} />
         </InfoColumn>
         <ContentContainer id="content">
@@ -361,12 +359,12 @@ const StakingPage = ({ data }) => {
               {tocItems.whatIsStaking.title}
             </h2>
             <p>
-              Staking is the act of locking up ETH to give you the right to
-              participate in block proposals on the network. Anyone who holds
-              even a small amount of ETH can consider staking.
+              <Translation id="page-staking-description" />
             </p>
             <p>
-              <Link to="/get-eth/">Learn how to get ETH</Link>
+              <Link to="/get-eth/">
+                <Translation id="page-staking-section-what-link" />
+              </Link>
             </p>
           </Content>
           <Content>
@@ -377,12 +375,14 @@ const StakingPage = ({ data }) => {
               {benefits.map(
                 ({ title, description, emoji, linkText, to }, idx) => (
                   <StyledCard
-                    title={title}
+                    title={translateMessageId(title, intl)}
                     emoji={emoji}
                     key={idx}
-                    description={description}
+                    description={translateMessageId(description, intl)}
                   >
-                    {to && <Link to={to}>{linkText}</Link>}
+                    {to && (
+                      <Link to={to}>{translateMessageId(linkText, intl)}</Link>
+                    )}
                   </StyledCard>
                 )
               )}
@@ -393,25 +393,16 @@ const StakingPage = ({ data }) => {
               {tocItems.howToStakeYourEth.title}
             </h2>
             <p>
-              It all depends on how much you are willing to stake. You'll need
-              32 ETH to activate your own validator, but it is possible to stake
-              less.
+              <Translation id="page-staking-section-why-p1" />
             </p>
             <p>
-              Check out the options below and go for the one that is best for
-              you, and for the network.
+              <Translation id="page-staking-section-why-p2" />
             </p>
           </Content>
           <StakingHierarchy />
           <Content>
             <p style={{ marginTop: "1rem" }}>
-              As you may have noticed, there are many ways to participate in
-              Ethereum staking. These paths target a wide range of users and
-              ultimately are each unique and vary in terms of risks, rewards,
-              and trust assumptions. Some are more decentralized, battle-tested
-              and/or risky than others. We provide some information on popular
-              projects in the space, but <em>always do your own research</em>{" "}
-              before sending ETH anywhere.
+              <Translation id="page-staking-hierarchy-subtext" />
             </p>
           </Content>
           <Divider />
@@ -420,32 +411,30 @@ const StakingPage = ({ data }) => {
               {tocItems.comparisonOfOptions.title}
             </h2>
             <p>
-              There is no one-size-fits-all solution for staking, and each is
-              unique. Here we'll compare some of the risks, rewards and
-              requirements of the different ways you can stake.
+              <Translation id="page-staking-section-comparison-subtitle" />
             </p>
             <ComparisonGrid>
-              <ColorH3 color="stakingGold">Solo staking</ColorH3>
+              <ColorH3 color="stakingGold">
+                <Translation id="page-staking-dropdown-solo" />
+              </ColorH3>
               <div
                 style={{
                   gridArea: "solo-rewards",
                   borderBottom: "1px solid #3335",
                 }}
               >
-                <h4>Rewards</h4>
+                <h4>
+                  <Translation id="page-staking-section-comparison-rewards-title" />
+                </h4>
                 <ul>
                   <li>
-                    Maximum rewards - receive full rewards directly from the
-                    protocol
+                    <Translation id="page-staking-section-comparison-solo-rewards-li1" />
                   </li>
                   <li>
-                    You'll get rewards for batching transactions into a new
-                    block or checking the work of other validators to keep the
-                    chain running securely
+                    <Translation id="page-staking-section-comparison-solo-rewards-li2" />
                   </li>
                   <li>
-                    After The Merge you'll receive unburnt transaction fees for
-                    blocks you propose
+                    <Translation id="page-staking-section-comparison-solo-rewards-li3" />
                   </li>
                 </ul>
               </div>
@@ -455,56 +444,60 @@ const StakingPage = ({ data }) => {
                   borderBottom: "1px solid #3335",
                 }}
               >
-                <h4>Risks</h4>
+                <h4>
+                  <Translation id="page-staking-section-comparison-risks-title" />
+                </h4>
                 <ul>
-                  <li>Your ETH is at stake</li>
                   <li>
-                    There are penalties, which cost ETH, for going offline
+                    <Translation id="page-staking-section-comparison-solo-risks-li1" />
                   </li>
                   <li>
-                    Malicious behavior can result in "slashing" of larger
-                    amounts of ETH and forced ejection from the network
+                    <Translation id="page-staking-section-comparison-solo-risks-li2" />
+                  </li>
+                  <li>
+                    <Translation id="page-staking-section-comparison-solo-risks-li3" />
                   </li>
                 </ul>
               </div>
               <div style={{ gridArea: "solo-reqs" }}>
-                <h4>Requirements</h4>
+                <h4>
+                  <Translation id="page-staking-section-comparison-requirements-title" />
+                </h4>
                 <ul>
-                  <li>You must deposit 32 ETH</li>
                   <li>
-                    Maintain hardware that runs both an Ethereum execution
-                    client and consensus client while connected to the internet
+                    <Translation id="page-staking-section-comparison-solo-requirements-li1" />
                   </li>
                   <li>
-                    The{" "}
-                    <Link to="https://prater.launchpad.ethereum.org">
-                      Staking Launchpad
-                    </Link>{" "}
-                    will walk you through the process and hardware requirements
+                    <Translation id="page-staking-section-comparison-solo-requirements-li2" />
+                  </li>
+                  <li>
+                    <Translation id="page-staking-section-comparison-solo-requirements-li3" />
                   </li>
                 </ul>
               </div>
               <div style={{ gridArea: "solo-cta" }}>
                 <StyledButtonLink to="/staking/solo/">
-                  More on solo staking
+                  <Translation id="page-staking-more-on-solo" />
                 </StyledButtonLink>
               </div>
-              <ColorH3 color="stakingGreen">Staking as a service</ColorH3>
+              <ColorH3 color="stakingGreen">
+                <Translation id="page-staking-dropdown-saas" />
+              </ColorH3>
               <div
                 style={{
                   gridArea: "saas-rewards",
                   borderBottom: "1px solid #3335",
                 }}
               >
-                <h4>Rewards</h4>
+                <h4>
+                  <Translation id="page-staking-section-comparison-rewards-title" />
+                </h4>
                 <ul>
                   <li>
-                    Usually involves full protocol rewards minus monthly fee for
-                    node operations
+                    <Translation id="page-staking-section-comparison-saas-rewards-li1" />
                   </li>
                   <li>
-                    Dashboards often available to easily track your validator
-                    client
+                    <Translation id="page-staking-section-comparison-saas-rewards-li2" />
                   </li>
                 </ul>
               </div>
@@ -514,56 +507,61 @@ const StakingPage = ({ data }) => {
                   borderBottom: "1px solid #3335",
                 }}
               >
-                <h4>Risks</h4>
+                <h4>
+                  <Translation id="page-staking-section-comparison-risks-title" />
+                </h4>
                 <ul>
                   <li>
-                    Same risks as solo staking plus counter-party risk of
-                    service provider
+                    <Translation id="page-staking-section-comparison-saas-risks-li1" />
                   </li>
                   <li>
-                    Use of your signing keys is entrusted to someone else who
-                    could behave maliciously
+                    <Translation id="page-staking-section-comparison-saas-risks-li2" />
                   </li>
                 </ul>
               </div>
               <div style={{ gridArea: "saas-reqs" }}>
-                <h4>Requirements</h4>
+                <h4>
+                  <Translation id="page-staking-section-comparison-requirements-title" />
+                </h4>
                 <ul>
-                  <li>Deposit 32 ETH and generate your keys with assistance</li>
-                  <li>Store your keys securely</li>
                   <li>
-                    The rest is taken care of, though specific services will
-                    vary
+                    <Translation id="page-staking-section-comparison-saas-requirements-li1" />
+                  </li>
+                  <li>
+                    <Translation id="page-staking-section-comparison-saas-requirements-li2" />
+                  </li>
+                  <li>
+                    <Translation id="page-staking-section-comparison-saas-requirements-li3" />
                   </li>
                 </ul>
               </div>
               <div style={{ gridArea: "saas-cta" }}>
                 <StyledButtonLink to="/staking/saas">
-                  More on staking as a service
+                  <Translation id="page-staking-more-on-saas" />
                 </StyledButtonLink>
               </div>
 
-              <ColorH3 color="stakingBlue">Pooled staking</ColorH3>
+              <ColorH3 color="stakingBlue">
+                <Translation id="page-staking-dropdown-pools" />
+              </ColorH3>
               <div
                 style={{
                   gridArea: "pool-rewards",
                   borderBottom: "1px solid #3335",
                 }}
               >
-                <h4>Rewards</h4>
+                <h4>
+                  <Translation id="page-staking-section-comparison-rewards-title" />
+                </h4>
                 <ul>
                   <li>
-                    Pooled stakers accrue rewards differently, depending on
-                    which method of pooled staking chosen
+                    <Translation id="page-staking-section-comparison-pools-rewards-li1" />
                   </li>
                   <li>
-                    Many pooled staking services offer one or more liquidity
-                    tokens that represents your staked ETH plus your share of
-                    the validator rewards
+                    <Translation id="page-staking-section-comparison-pools-rewards-li2" />
                   </li>
                   <li>
-                    Liquidity tokens can be held in your own wallet, used in
-                    DeFi and sold if you decide to exit
+                    <Translation id="page-staking-section-comparison-pools-rewards-li3" />
                   </li>
                 </ul>
               </div>
@@ -573,32 +571,34 @@ const StakingPage = ({ data }) => {
                   borderBottom: "1px solid #3335",
                 }}
               >
-                <h4>Risks</h4>
+                <h4>
+                  <Translation id="page-staking-section-comparison-risks-title" />
+                </h4>
                 <ul>
-                  <li>Risks vary depending on the method used</li>
                   <li>
-                    In general, risks consist of a combination of counter-party,
-                    smart contract and execution risk
+                    <Translation id="page-staking-section-comparison-pools-risks-li1" />
+                  </li>
+                  <li>
+                    <Translation id="page-staking-section-comparison-pools-risks-li2" />
                   </li>
                 </ul>
               </div>
               <div style={{ gridArea: "pool-reqs" }}>
-                <h4>Requirements</h4>
+                <h4>
+                  <Translation id="page-staking-section-comparison-requirements-title" />
+                </h4>
                 <ul>
                   <li>
-                    Lowest ETH requirements, some projects require as little as
-                    0.01 ETH
+                    <Translation id="page-staking-section-comparison-pools-requirements-li1" />
                   </li>
                   <li>
-                    Deposit directly from your wallet to different pooled
-                    staking platforms or simply trade for one of the staking
-                    liquidity tokens
+                    <Translation id="page-staking-section-comparison-pools-requirements-li2" />
                   </li>
                 </ul>
               </div>
               <div style={{ gridArea: "pool-cta" }}>
                 <StyledButtonLink to="/staking/pools/">
-                  More on pooled staking
+                  <Translation id="page-staking-more-on-pools" />
                 </StyledButtonLink>
               </div>
             </ComparisonGrid>
@@ -607,33 +607,24 @@ const StakingPage = ({ data }) => {
           <StakingCommunityCallout id={tocItems.joinTheCommunity.id} />
           <Content>
             <h2 id={tocItems.faq.id}>{tocItems.faq.title}</h2>
-            <ExpandableCard title="What is a validator?">
-              A <em>validator</em> is a virtual entity that lives on the Beacon
-              Chain and participates in the consensus of the Ethereum protocol.
-              Validators are represented by a balance, public key, and other
-              properties. A <em>validator client</em> is the software that acts
-              on behalf of the validator by holding and using its private key. A
-              single validator client can hold many key pairs, controlling many
-              validators.
+            <ExpandableCard
+              title={translateMessageId("page-staking-faq-1-question", intl)}
+            >
+              <Translation id="page-staking-faq-1-answer" />
             </ExpandableCard>
-            <ExpandableCard title="Why do I need to have funds at stake?">
-              A validator has the ability to propose and attest to blocks for
-              the network. To prevent dishonest behavior, users must have their
-              funds at stake. This allows the protocol to penalize malicious
-              actors. Staking is a means to keep you honest, as your actions
-              will have financial consequences.
+            <ExpandableCard
+              title={translateMessageId("page-staking-faq-2-question", intl)}
+            >
+              <Translation id="page-staking-faq-2-answer" />
             </ExpandableCard>
-            <ExpandableCard title="Can I buy 'Eth2'?">
+            <ExpandableCard
+              title={translateMessageId("page-staking-faq-3-question", intl)}
+            >
               <p>
-                There is no 'Eth2' token native to the protocol, as the native
-                token ether (ETH) will not change with the transition to
-                proof-of-stake.
+                <Translation id="page-staking-faq-3-answer-p1" />
               </p>
               <p>
-                There are derivative tokens/tickers that may represent staked
-                ETH (ie. rETH from Rocket Pool, stETH from Lido, ETH2 from
-                Coinbase). Learn more about{" "}
-                <Link to="/staking/pools/">staking pools</Link>
+                <Translation id="page-staking-faq-3-answer-p2" />
               </p>
             </ExpandableCard>
           </Content>
@@ -693,7 +684,7 @@ const StakingPage = ({ data }) => {
             </ul>
           </Content>
           <Content>
-            <FeedbackCard prompt="Did this page help answer your question?" />
+            <FeedbackCard />
           </Content>
         </ContentContainer>
         <MobileButton>

@@ -7,7 +7,7 @@ sidebar: true
 
 # Governance bei Ethereum – eine Einführung {#introduction}
 
-_Wenn Ethereum keinen Eigentümer hat, wie werden dann Entscheidungen über frühere und zukünftige Änderungen an Ethereum getroffen? Ethereum-Governance bezeichnet den Prozess, der solche Entscheidungen ermöglicht._
+_Wenn Ethereum keinen Eigentümer hat, wie werden dann Entscheidungen über frühere und zukünftige Änderungen an Ethereum getroffen? Mit Ethereum-Governance wird der Prozess bezeichnet, der solche Entscheidungen ermöglicht._
 
 <Divider />
 
@@ -48,10 +48,10 @@ Es gibt verschiedene Interessensvertreter in der [Ethereum-Community](/community
 - **Anwendungs-/Tool-Entwickler**: Diese Personen schreiben Anwendungen, die auf der Ethereum-Blockchain laufen (z. B. DeFi, NFTs usw.), oder erstellen Tools, um mit Ethereum zu interagieren (z. B. Wallets, Test-Suiten usw.). [Mehr zu dApps](/dapps/).
 - **Knotenbetreiber**: Diese Personen betreiben Knoten (Knotenpunkte), die Blöcke und Transaktionen propagieren, indem sie ungültige Transaktionen, auf die sie stoßen, ablehnen oder blockieren. [Mehr zu Knoten](/developers/docs/nodes-and-clients/).
 - **EIP-Autoren**: Diese Personen schlagen Änderungen am Ethereum-Protokoll in Form von Ethereum-Verbesserungsvorschlägen (Ethereum Improvement Proposal, EIP) vor. [Mehr zu EIPs](/eips/).
-- **Miner/Validierer**: Diese Personen betreiben Knoten, die neue Blöcke zur Ethereum-Blockchain hinzufügen können.
+- **Miner/Validator**: Diese Personen betreiben Knoten, die neue Blöcke zur Ethereum-Blockchain hinzufügen können.
 - **Protokollentwickler** (sogenannte „Core Developer“): Diese Personen pflegen die verschiedenen Ethereum-Implementierungen (z. B. go-ethereum, Nethermind, Besu, Erigon auf dem Ausführungslayer oder Prysm, Lighthouse, Nimbus, Teku, Lodestar auf dem Konsensuslayer). [Mehr zu Ethereum-Clients](/developers/docs/nodes-and-clients/).
 
-_Hinweis: Jede Person kann Teil von mehreren dieser Gruppen sein (z. B. ein Protokollentwickler kann sich für einen EIP einsetzten und einen Validierer für die Beacon Chain ausführen und zudem auch DeFi-Anwendungen nutzen). Doch um das Konzept wirklich zu verstehen, sollte zwischen den einzelnen Gruppen unterschieden werden._
+_Hinweis: Jede Person kann Teil von mehreren dieser Gruppen sein (z. B. ein Protokollentwickler kann sich für einen EIP einsetzten und einen Validator für die Beacon Chain ausführen und zudem auch DeFi-Anwendungen nutzen). Doch um das Konzept wirklich zu verstehen, sollte zwischen den einzelnen Gruppen unterschieden werden._
 
 <Divider />
 

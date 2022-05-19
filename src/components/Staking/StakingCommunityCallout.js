@@ -6,6 +6,7 @@ import { getImage } from "gatsby-plugin-image"
 
 import ButtonLink from "../ButtonLink"
 import CalloutBanner from "../CalloutBanner"
+import Translation from "../Translation"
 
 import { translateMessageId } from "../../utils/translations"
 import { trackCustomEvent } from "../../utils/matomo"
@@ -14,7 +15,7 @@ const StyledCallout = styled(CalloutBanner)`
   margin: 4rem 0;
 `
 
-const ButtonContaier = styled.div`
+const ButtonContainer = styled.div`
   display: flex;
   gap: 1rem;
   @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
@@ -53,7 +54,7 @@ const StakingCommunityCallout = (props) => {
       titleKey={"page-staking-join-community"}
       descriptionKey={"page-staking-join-community-desc"}
     >
-      <ButtonContaier>
+      <ButtonContainer>
         <StyledButtonLink
           onClick={() => {
             trackCustomEvent({
@@ -88,9 +89,9 @@ const StakingCommunityCallout = (props) => {
           }}
           to="https://ethstaker.cc"
         >
-          Website
+          <Translation id="rollup-component-website" />
         </StyledButtonLink>
-      </ButtonContaier>
+      </ButtonContainer>
     </StyledCallout>
   )
 }

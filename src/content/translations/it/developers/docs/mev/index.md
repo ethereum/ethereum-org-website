@@ -1,13 +1,15 @@
 ---
-title: Valore estraibile dai miner (MEV)
-description: Un'introduzione al "miner extractable value" (MEV)
+title: Valore estraibile massimo (MEV)
+description: Un'introduzione al valore estraibile massimo (MEV)
 lang: it
 sidebar: true
 ---
 
-Il valore estraibile massimo (precedentemente "dai miner") (MEV) si riferisce al valore massimo estraibile dalla produzione del blocco in aggiunta alla ricompensa del blocco standard e alle commissioni del carburante, includendo, escludendo e cambiando l'ordine delle transazioni in un blocco.
+Il valore estraibile massimo (MEV) si riferisce al valore massimo che può essere estratto dalla produzione del blocco oltre alla ricompensa del blocco standard e alle commissioni del gas, includendo, escludendo e modificando l'ordine delle transazioni in un blocco.
 
-In un contesto di Proof of Work, il valore estraibile massimo è anche detto "valore estraibile dai miner". Questo perché nel Proof of Work i miner controllano l'inclusione, l'esclusione e l'ordinamento della transazione.
+### Valore estraibile del minatore
+
+Questo concetto è stato applicato per la prima volta nell'ambito del [proof-of-work](/developers/docs/consensus-mechanisms/pow/) ed è stato inizialmente denominato "valore estraibile del minatore". Questo perché nel Proof of Work i miner controllano l'inclusione, l'esclusione e l'ordinamento della transazione. Tuttavia, dopo la transizione al proof-of-stake tramite [La Fusione](/upgrades/merge), i validatori saranno responsabili di questi ruoli e il mining non sarà più applicabile. Questi metodi di estrazione del valore persisteranno dopo la transizione e proprio per questo è stato necessario modificare il nome. Per conservare lo stesso acronimo a scopo di continuità e mantenere al contempo lo stesso significato fondamentale, ora utilizziamo "valore estraibile massimo" come alternativa più inclusiva.
 
 ## Prerequisiti {#prerequisites}
 
@@ -15,7 +17,7 @@ Assicurati di avere familiarità con [transazioni](/developers/docs/transactions
 
 ## Estrazione del MEV {#mev-extraction}
 
-In teoria, il MEV proviene interamente dai miner poiché questi sono la sola parte che può garantire l'esecuzione di un'opportunità di MEV redditizia (almeno sulla catena di proof of work attuale; questo cambierà più avanti[The Merge](/upgrades/merge/)). Nella pratica, tuttavia, una grande porzione del MEV è estratta da partecipanti indipendenti della rete, chiamati "ricercatori" I ricercatori eseguono algoritmi complessi sui dati della blockchain per rilevare opportunità di MEV redditizie e si servono di bot per inviare automaticamente tali transazioni redditizie alla rete.
+In teoria, il MEV proviene interamente dai minatori, poiché questi sono la sola parte in grado di garantire l'esecuzione di un'opportunità di MEV redditizia (almeno sull'attuale catena di proof-of-work - questo cambierà dopo [La Fusione](/upgrades/merge/)). Nella pratica, tuttavia, una grande porzione del MEV è estratta da partecipanti indipendenti della rete, chiamati "ricercatori". I ricercatori eseguono algoritmi complessi sui dati della blockchain per rilevare opportunità di MEV redditizie e si servono di bot per inviare automaticamente tali transazioni redditizie alla rete.
 
 I miner ottengono comunque una parte dell'importo del MEV intero siccome i ricercatori sono disposti a pagare commissioni del carburante elevate (che vanno al miner), in cambio di una maggior probabilità d'inclusione delle loro transazioni redditizie in un blocco. Presumendo che i ricercatori siano economicamente razionali, la commissione del carburante che un ricercatore è disposto a pagare sarà pari fino al 100% del MEV del ricercatore (infatti, se la commissione del carburante fosse maggiore, il ricercatore perderebbe denaro).
 
@@ -63,9 +65,9 @@ I ricercatori competono per analizzare i dati della blockchain il più velocemen
 
 Il sandwich trading è un altro metodo comune di estrazione del MEV.
 
-Per eseguirlo, un ricercatore osserverà il mempool alla ricerca di scambi di DEX di notevole entità. Per esempio, supponiamo che qualcuno voglia comprare 10.000 UNI con DAI su Uniswap. Un'operazione di tale portata avrà un impatto significativo sulla coppia UNI/DAI, aumentando in modo potenzialmente significativo il prezzo di UNI rispetto al DAI.
+Per eseguirlo, un ricercatore osserverà il mempool alla ricerca di scambi di DEX di notevole entità. Per esempio, supponiamo che qualcuno voglia comprare 10.000 UNI con DAI su Uniswap. Uno scambio di tale portata avrà un effetto significativo sulla coppia UNI/DAI, aumentando in modo potenzialmente importante il prezzo di UNI rispetto al DAI.
 
-Un ricercatore può calcolare l'impatto approssimativo del prezzo di questa operazione di notevole entità sulla coppia UNI/DAI ed eseguire un ordine d'acquisto ottimale immediatamente _prima_ di esso, acquistando UNI a basso prezzo ed eseguendo quindi un ordine di vendita immediatamente _dopo_ l'operazione di notevole entità, vendendolo al prezzo superiore determinato dall'ordine cospicuo.
+Un ricercatore può calcolare l'effetto approssimativo del prezzo di questo scambio di ampia portata sulla coppia UNI/DAI ed eseguire un acquisto ottimale immediatamente _prima_ di esso, acquistando UNI a basso costo per poi eseguire l'ordine di vendita immediatamente _dopo_ lo scambio, vendendolo a un prezzo superiore, causato dallo stesso ordine.
 
 Il sandwiching, tuttavia, è più rischioso non essendo atomico (a differenza dell'arbitraggio di DEX, come descritto sopra) ed è soggetto a un [attacco di salmonella](https://github.com/Defi-Cartel/salmonella).
 
