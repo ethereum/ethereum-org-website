@@ -1,11 +1,11 @@
 ---
-title: Langages des contrats intelligents
-description: "Présentation et comparaison des deux principaux langages de contrat intelligent : Solidity et Vyper"
+title: Les langages des contrats intelligents
+description: 'Présentation et comparaison des deux principaux langages de contrat intelligent : Solidity et Vyper'
 lang: fr
 sidebar: true
 ---
 
-Un aspect important d'Ethereum est que les contrats intelligents peuvent être programmés en utilisant des langages relativement conviviaux pour les développeurs. Si vous avez de l'expérience avec Python ou JavaScript, vous pouvez utiliser un langage disposant d'une syntaxe similaire.
+Un aspect important d'Ethereum est que les contrats intelligents peuvent être programmés en utilisant des langages relativement conviviaux pour les développeurs. Si vous maitrisez Python ou n'importe quel [langage d'accolades](https://wikipedia.org/wiki/List_of_programming_languages_by_type#Curly-bracket_languages), vous pouvez trouver un langage avec une syntaxe qui vous sera familière.
 
 Les deux langages les plus actifs et les plus suivis sont :
 
@@ -14,13 +14,16 @@ Les deux langages les plus actifs et les plus suivis sont :
 
 Des développeurs plus expérimentés peuvent choisir d'utiliser Yul, un langage intermédiaire pour la [machine virtuelle Ethereum (EVM)](/developers/docs/evm/), ou Yul+, une extension de Yul.
 
+Si vous êtes curieux et que vous aimez aider à tester de nouveaux langages encore en cours de développement, vous pouvez essayer Fe, un nouveau langage pour contrat intelligent qui en est encore à ses balbutiements.
+
 ## Prérequis {#prerequisites}
 
 La connaissance de langages de programmation comme JavaScript ou Python peut vous aider à comprendre les différences entre les langages de contrats intelligents. Nous vous conseillons également d'avoir compris le concept des contrats intelligents avant de vous plonger dans les comparaisons entre les différents langages. Lire la page [Introduction aux contrats intelligents](/developers/docs/smart-contracts/)
 
 ## Solidity {#solidity}
 
-- Influencé par C++, Python et JavaScript
+- Un langage orienté objet et de haut niveau pour la mise en œuvre de contrats intelligents.
+- Un langage à accolades principalement influencé par C++.
 - Typé statistiquement (le type d'une variable est connu au moment de la compilation)
 - Prend en charge les éléments suivants :
   - Héritage : Vous pouvez prolonger d'autres contrats.
@@ -33,9 +36,10 @@ La connaissance de langages de programmation comme JavaScript ou Python peut vou
 - [Portail Solidity](https://soliditylang.org/)
 - [Solidity by Example](https://docs.soliditylang.org/en/latest/solidity-by-example.html)
 - [GitHub](https://github.com/ethereum/solidity/)
-- [Chatroom Gitter Solidity](https://gitter.im/ethereum/solidity/)
+- [Solidity Gitter Chatroom](https://gitter.im/ethereum/solidity/) en jonction avec [Solidity Matrix Chatroom](https://matrix.to/#/#ethereum_solidity:gitter.im)
 - [Cheat Sheet](https://reference.auditless.com/cheatsheet)
 - [Blog Solidity](https://blog.soliditylang.org/)
+- [Twitter Solidity](https://twitter.com/solidity_lang)
 
 ### Exemple de contrat {#example-contract}
 
@@ -168,7 +172,7 @@ def withdraw():
 @external
 def endAuction():
     # It is a good guideline to structure functions that interact
-    # with other contracts (i.e. they call functions or send Ether)
+    # with other contracts (i.e. they call functions or send ether)
     # into three phases:
     # 1. checking conditions
     # 2. performing actions (potentially changing conditions)
@@ -202,13 +206,13 @@ Si vous débutez avec Ethereum et que vous n'avez pas encore jamais codé avec d
 **Yul**
 
 - Langage intermédiaire pour Ethereum
-- Prends en charge l'[EVM](/developers/docs/evm) et l'[eWASM](https://github.com/ewasm), un assemblage Web au petit goût d'Ethereum, conçu pour être un dénominateur commun utilisable sur les deux plateformes.
+- Prends en charge l'[EVM](/developers/docs/evm) et l'[Ewasm](https://github.com/ewasm), un assemblage Web au petit goût d'Ethereum conçu pour être un dénominateur commun utilisable sur les deux plateformes.
 - Excellente cible pour les phases d'optimisation de haut niveau qui peuvent bénéficier à la fois aux plateformes EVM et eWASM.
 
 **Yul+**
 
 - Extension de Yul de bas niveau très efficace
-- Initialement conçue pour un contrat de [rollup optimisé](/developers/docs/layer-2-scaling/#rollups-and-sidechains)
+- Initialement conçue pour un contrat de [rollup optimiste](/developers/docs/scaling/optimistic-rollups/).
 - Yul+ peut être considéré comme une proposition de mise à niveau expérimentale de Yul, qui y ajoute de nouvelles fonctionnalités
 
 ### Liens importants {#important-links-2}
@@ -242,6 +246,44 @@ Cet exemple simple implémente une fonction puissance. Il peut être compilé en
 ```
 
 Si vous avez déjà une bonne expérience en développement de contrats intelligents, vous trouverez ici une [implémentation complète ERC20 dans Yul ](https://solidity.readthedocs.io/en/latest/yul.html#complete-erc20-example).
+
+## Fe {#fe}
+
+- Langage statique pour la Machine Virtuelle Ethereum (EVM).
+- Inspiré par Python et Rust.
+- Son objectif est d'être facile à apprendre, même pour les développeurs qui sont nouveaux dans l'écosystème Ethereum.
+- Le développement de Fe en est encore à ses débuts, le langage a connu sa version alpha en janvier 2021.
+
+### Liens importants {#important-links-3}
+
+- [GitHub](https://github.com/ethereum/fe)
+- [Annonce de Fe](https://snakecharmers.ethereum.org/fe-a-new-language-for-the-ethereum-ecosystem/)
+- [Feuille de route 2021 pour Fe](https://notes.ethereum.org/LVhaTF30SJOpkbG1iVw1jg)
+- [Chat de discussion Fe](https://discord.com/invite/ywpkAXFjZH)
+- [Twitter Fe](https://twitter.com/official_fe)
+
+### Exemple de contrat {#example-contract-3}
+
+Ceci est un simple contrat implémenté dans Fe.
+
+```
+type BookMsg = bytes[100]
+
+contract GuestBook:
+    pub guest_book: map<address, BookMsg>
+
+    event Signed:
+        book_msg: BookMsg
+
+    pub def sign(book_msg: BookMsg):
+        self.guest_book[msg.sender] = book_msg
+
+        emit Signed(book_msg=book_msg)
+
+    pub def get_msg(addr: address) -> BookMsg:
+        return self.guest_book[addr].to_mem()
+
+```
 
 ## Comment choisir {#how-to-choose}
 

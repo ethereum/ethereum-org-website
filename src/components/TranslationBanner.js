@@ -144,7 +144,7 @@ const TranslationBanner = ({
             </div>
             {!isPageContentEnglish && (
               <div>
-                <SecondaryButtonLink isSecondary to={`${originalPagePath}`}>
+                <SecondaryButtonLink isSecondary to={`/en${originalPagePath}`}>
                   <Translation id="translation-banner-button-see-english" />
                 </SecondaryButtonLink>
               </div>

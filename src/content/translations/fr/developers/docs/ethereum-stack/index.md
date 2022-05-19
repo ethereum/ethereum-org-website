@@ -5,7 +5,7 @@ lang: fr
 sidebar: true
 ---
 
-Comme toute pile logicielle, la pile complète Ethereum varie d'un projet à l'autre en fonction des objectifs métiers.
+Comme toute pile logicielle, la pile complète Ethereum varie d'un projet à l'autre en fonction de vos objectifs propres.
 
 Il existe cependant des technologies Ethereum de base qui contribuent à fournir un modèle mental de la façon dont les applications logicielles interagissent avec la blockchain Ethereum. Comprendre les couches de la pile vous permettra d'appréhender les différentes façons d'intégrer Ethereum dans les projets logiciels.
 
@@ -25,17 +25,17 @@ En tant que développeur de DApp, vous n'avez pas besoin d'en savoir beaucoup pl
 
 Les contrats intelligents sont rédigés avec des [langages de programmation](/developers/docs/smart-contracts/languages/) spécifiques qui se compilent en bytecode EVM (instructions machine de bas niveau appelées codes d'opérations).
 
-Non seulement les contrats intelligents servent de bibliothèques open source, mais ce sont aussi essentiellement des services API ouverts fonctionnant 24/7 qui ne peuvent être arrêtés. Les contrats intelligents fournissent des fonctions publiques avec lesquelles les applications ([DApps](/developers/docs/dapps/)) peuvent interagir sans nécessiter d'autorisation. N'importe quelle application peut intégrer des contrats intelligents déployés pour composer des fonctionnalités (comme des flux de données ou des échanges décentralisés). N'importe qui peut déployer de nouveaux contrats intelligents sur Ethereum pour ajouter des fonctionnalités personnalisées et répondre aux besoins de son application.
+Non seulement les contrats intelligents servent de bibliothèques open source, mais ce sont aussi essentiellement des services API ouverts fonctionnant 24/7 qui ne peuvent être arrêtés. Les contrats intelligents fournissent des fonctions publiques avec lesquelles les utilisateurs et les applications ([dApps](/developers/docs/dapps/)) peuvent interagir sans nécessiter d'autorisation. Toute application peut s'intégrer à des contrats intelligents déployés pour composer des fonctionnalités, telles que l'ajout de [flux de données](/developers/docs/oracles/) ou la prise en charge des échanges de jetons. N'importe qui peut déployer de nouveaux contrats intelligents sur Ethereum pour ajouter des fonctionnalités personnalisées et répondre aux besoins de son application.
 
-En tant que développeur de DApp, vous n'aurez besoin de rédiger des contrats intelligents que si vous voulez ajouter des fonctionnalités personnalisées sur la blockchain Ethereum. Vous constaterez que vous pouvez réaliser la plupart ou la totalité de vos projets seulement en intégrant des contrats intelligents existants, par exemple si vous voulez encourager les paiements en stablecoins ou faciliter l'échange décentralisé de jetons.
+En tant que développeur de dApp, vous n'aurez besoin de rédiger des contrats intelligents que si vous voulez ajouter des fonctionnalités personnalisées sur la blockchain Ethereum. Vous constaterez que vous pouvez réaliser la plupart ou la totalité de vos projets seulement en intégrant des contrats intelligents existants, par exemple si vous voulez encourager les paiements en stablecoins ou faciliter l'échange décentralisé de jetons.
 
 ## Niveau 3 : Nœuds Ethereum {#ethereum-nodes}
 
-Pour qu'une application interagisse avec la blockchain Ethereum (c'est-à-dire lire les données de la blockchain et/ou envoyer des transactions sur le réseau), elle doit se connecter à un [nœud Ethereum](/developers/docs/nodes-and-clients/).
+Afin qu'une application interagisse avec la blockchain Ethereum, elle doit se connecter à un [nœud Ethereum](/developers/docs/nodes-and-clients/). La connexion à un nœud vous permet de lire les données blockchain et/ou d'envoyer des transactions au réseau.
 
-Les nœuds Ethereum sont des ordinateurs exécutant un logiciel : un client Ethereum. Un client est une implémentation d'Ethereum qui vérifie toutes les transactions de chaque bloc, ce qui assure la sécurité du réseau et l'exactitude des données. Les nœuds Ethereum SONT la blockchain Ethereum. Ils stockent collectivement l'état de la blockchain Ethereum et parviennent à un consensus sur chaque transaction pour faire muter l'état de la blockchain.
+Les nœuds Ethereum sont des ordinateurs exécutant un logiciel : un client Ethereum. Un client est une implémentation d'Ethereum qui vérifie toutes les transactions de chaque bloc, ce qui assure la sécurité du réseau et l'exactitude des données. **Les noeuds Ethereum sont la blockchain Ethereum**. Ils stockent collectivement l'état de la blockchain Ethereum et parviennent à un consensus sur chaque transaction pour faire muter l'état de la blockchain.
 
-En connectant votre application à un nœud Ethereum (via une spécification RPC JSON), votre application peut lire les données de la blockchain (comme les soldes de compte utilisateur) et diffuser de nouvelles transactions sur le réseau (comme le transfert d'ETH entre comptes utilisateur ou l'exécution de fonctions de contrats intelligents).
+En connectant votre application à un nœud Ethereum (via une spécification [RPC JSON](/developers/docs/apis/json-rpc/)), votre application peut lire les données de la blockchain (comme les soldes de compte utilisateur) et diffuser de nouvelles transactions sur le réseau (comme le transfert d'ETH entre comptes utilisateur ou l'exécution de fonctions de contrats intelligents).
 
 ## Niveau 4 : API clientes Ethereum {#ethereum-client-apis}
 
@@ -56,5 +56,7 @@ Rien ne change dans la façon de développer ces interfaces utilisateur. Souvent
 Consultez notre guide [Configurer un environnement de développement local](/developers/local-environment/) pour développer votre application Ethereum.
 
 ## Complément d'information {#further-reading}
+
+- [L'Architecture d'une application Web 3.0](https://www.preethikasireddy.com/post/the-architecture-of-a-web-3-0-application) - _Preethi Kasireddy_
 
 _Une ressource communautaire vous a aidé ? Modifiez cette page et ajoutez-la !_

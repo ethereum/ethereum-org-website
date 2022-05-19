@@ -308,7 +308,7 @@ const WalletCard = ({ wallet }) => {
               <StyledIcon name="flip" ml="1rem" size="20px" />
             </FlipIcon>
           </StyledButtonSecondary>
-          <StyledButtonLink to={wallet.url} hideArrow={true}>
+          <StyledButtonLink to={wallet.url}>
             <Translation id="page-find-wallet-card-go" />
           </StyledButtonLink>
         </CardFront>

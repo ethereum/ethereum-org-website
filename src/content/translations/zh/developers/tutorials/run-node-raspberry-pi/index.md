@@ -1,10 +1,11 @@
 ---
 title: 如何通过刷写MicroSD卡将您的Raspberry Pi 4变为一个节点
-description: 刷写您的Raspberry PI 4，插入以太网电缆，连接SSD磁盘并打开设备电源，将Raspberry PI 4变为完整的以太坊1.0节点或以太坊2.0节点（信标链/验证器）
+description: 刷写您的树莓派 4，插入以太网电缆，连接固态硬盘并打开设备电源，将树莓派 4 转变为运行执行层或共识层的完整以太坊节点（信标链/验证者）
 author: "EthereumOnArm"
 tags:
   - "客户端"
-  - "eth2"
+  - "执行层"
+  - "共识层"
   - "节点"
 lang: zh
 sidebar: true
@@ -14,17 +15,17 @@ source: r/ethereum
 sourceUrl: https://www.reddit.com/r/ethereum/comments/gf3nhg/ethereum_on_arm_raspberry_pi_4_images_release/
 ---
 
-**TL;DR**：刷写您的 Raspberry PI 4，插入以太网电缆，连接 SSD 磁盘并打开设备电源，将 Raspberry PI 4 变为完整的以太坊 1.0 节点或以太坊 2.0 节点（信标链/验证器）
+**TL;DR**：刷写您的树莓派 4，插入以太网电缆，连接固态硬盘并打开设备电源，将树莓派 4 转变为运行执行层或共识层的完整以太坊节点（信标链/验证者）
 
-[了解以太坊 2.0 (Eth2)](/upgrades/)
+[了解有关以太坊升级的信息](/upgrades/)
 
 首先是一些背景。 如您所知，运行 Raspberry Pi 4 镜像时，我们已经遇到了一些内存问题[[1]](/developers/tutorials/run-node-raspberry-pi/#references)，因为 Raspbian 操作系统仍然是 32 位操作系统[[2]](/developers/tutorials/run-node-raspberry-pi/#references)（至少用户区是如此）。 虽然我们更愿意坚持使用官方操作系统，但我们得出的结论是，为了解决这些问题，我们需要迁移原生的 64 位操作系统。
 
-此外，[Eth 2.0 客户端](href)不支持 32 位二进制文件，因此使用 Raspbian 会将 Raspberry PI 4 排除在运行 Eth 2.0 节点（以及进行权益质押的可能性）之外。
+此外，[共识客户端](/upgrades/get-involved/#clients)不支持 32 位二进制文件，因此使用 Raspbian 会阻止树莓派 4 运行共识层节点（以及质押的可能性）。
 
-因此，几经测试，我们现在将发布基于 Ubuntu 20.04 64 位[[3]](/developers/tutorials/run-node-raspberry-pi/#references) 的两个不同映像：Eth 1.0 版和 Eth 2.0 版。
+因此，几经测试，我们现将发布基于 64 位 Ubuntu 20.04 [[3]](/developers/tutorials/run-node-raspberry-pi/#references) 的两个不同映像：执行层版和共识层版。
 
-基本上，两者都是相同的映像，并且包含基于 Raspbian 的映像的相同功能。 但它们被设置为默认运行 Eth 1.0 或 Eth 2.0 软件。
+基本上，两者都是相同的映像，并且包含基于 Raspbian 的映像的相同功能。 但它们被设置为默认运行执行层或共识层软件。
 
 **程序负责所有必要的步骤**，从设置环境和格式化 SSD 磁盘到安装和运行以太坊软件，以及启动区块链同步。
 
@@ -40,16 +41,16 @@ sourceUrl: https://www.reddit.com/r/ethereum/comments/gf3nhg/ethereum_on_arm_ras
 
 ## 包含的软件 {#software-included}
 
-两个映像都包括相同的软件包，它们之间唯一的区别是 Eth 1.0 默认运行 Geth，Eth 2.0 默认运行 Prysm 信标链。
+两个映像都包含相同的软件包，它们之间唯一的区别是执行版默认运行 Geth，而共识版则默认运行 Prysm 信标链。
 
-### 以太坊 1.0 客户端 {#execution-clients}
+### 执行客户端 {#execution-clients}
 
 - Geth[[8]](/developers/tutorials/run-node-raspberry-pi/#references)：1.9.13 (官方二进制文件)
 - Parity[[9]](/developers/tutorials/run-node-raspberry-pi/#references)：2.7.2（交叉编译）。
 - Nethermind [[10]](/developers/tutorials/run-node-raspberry-pi/#references)：1.8.28（交叉编译）。
 - Hyperledger Besu[[11]](/developers/tutorials/run-node-raspberry-pi/#references)：1.4.4（已编译）。
 
-### 以太坊 2.0 客户端 {#consensus-clients}
+### 共识客户端 {#consensus-clients}
 
 - Prysm[[12]](/developers/tutorials/run-node-raspberry-pi/#references)：1.0.0-alpha6（官方二进制文件）。
 - Lighthouse[[13]](/developers/tutorials/run-node-raspberry-pi/#references)：0.1.1（已编译）。
@@ -67,11 +68,11 @@ sourceUrl: https://www.reddit.com/r/ethereum/comments/gf3nhg/ethereum_on_arm_ras
 ### 推荐的硬件和设置 {#recommended-hardware-and-setup}
 
 - Raspberry 4（B 型）- 4GB
-- MicroSD 卡（最小 16GB，Class 10）
+- MicroSD 卡（最小 16 GB，10 级）
 - SSD USB 3.0 磁盘（见存储部分）
 - 电源
 - 以太网电缆
-- 30303 端口转发 (Eth 1.0) 和 13000 端口转发 (Eth 2.0) [[4]](/developers/tutorials/run-node-raspberry-pi/#references)
+- 30303 端口转发（执行层）和 13000 端口转发（共识层）[[4]](/developers/tutorials/run-node-raspberry-pi/#references)
 - 带散热片和风扇的机箱（可选，但强烈推荐）
 - USB 键盘、显示器和 HDMI 电缆（微型 HDMI）（可选）。
 
@@ -88,15 +89,23 @@ sourceUrl: https://www.reddit.com/r/ethereum/comments/gf3nhg/ethereum_on_arm_ras
 
 ## 映像下载和安装 {#image-download-and-installation}
 
-### 1. 下载 Eth 1.0 或 Eth 2.0 映像 {#1-download-execution-or-consensus-images}<ButtonLink to="https://ethraspbian.com/downloads/ubuntu-20.04-preinstalled-server-arm64+raspi-eth1.img.zip">下载 Eth 1.0 映像</ButtonLink>
+### 1. 下载执行层和共识层映像 {#1-download-execution-or-consensus-images}
 
-ssha256 7fa9370d13857dd6abcc8fde637c7a9a7e3a66b307d5c28b0c0d29a09c73c55c<ButtonLink to="https://ethraspbian.com/downloads/ubuntu-20.04-preinstalled-server-arm64+raspi-eth2.img.zip">下载 Eth2 映像</ButtonLink>
+<ButtonLink to="https://ethraspbian.com/downloads/ubuntu-20.04-preinstalled-server-arm64+raspi-eth1.img.zip">
+  下载执行层映像
+</ButtonLink>
+
+sha256 7fa9370d13857dd6abcc8fde637c7a9a7e3a66b307d5c28b0c0d29a09c73c55c
+
+<ButtonLink to="https://ethraspbian.com/downloads/ubuntu-20.04-preinstalled-server-arm64+raspi-eth2.img.zip">
+  下载共识层映像
+</ButtonLink>
 
 sha256 74c0c15b708720e5ae5cac324f1afded6316537fb17166109326755232cd316e
 
 ### 2. 刷写映像 {#2-flash-the-image}
 
-在您的台式机/笔记本电脑中插入 microSD，并下载文件（例如 Eth 1.0）。
+在您的台式机/笔记本电脑中插入 microSD，然后下载文件（例如执行层）。
 
 ```bash
 wget https://ethraspbian.com/downloads/ubuntu-20.04-preinstalled-server-arm64+raspi-eth1.img.zip
@@ -125,16 +134,16 @@ Ubuntu 操作系统将在一分钟内启动，但**您将需要等待大约 10 �
 
 根据镜像，您将运行：
 
-- Eth 1.0：Geth 作为同步区块链的默认客户端
-- Eth2：Prysm 作为同步信标链的默认客户端（Topaz 测试网）。
+- 执行客户端：Geth 作为同步区块链的默认客户端
+- 共识客户端：Prysm 作为同步信标链的默认客户端（Prater 测试网）。
 
 ### 5. 登录 {#5-log-in}
 
 您可以通过 SSH 或使用控制台登录（如果连接了显示器和键盘）。
 
 ```bash
-用户：ethereum
-密码：ethereum
+User: ethereum
+Password: ethereum
 ```
 
 第一次登录时会提示您更改密码，因此需要登录两次。
@@ -153,31 +162,31 @@ sudo tail -f /var/log/syslog
 
 ## 同步区块链 {#syncing-the-blockchain}
 
-现在您需要等待区块链同步。 在 Eth 1.0 的情况下，这将需要几天的时间，具体取决于若干因素，但可以预计最多需要 5-7 天。
+现在您需要等待区块链同步。 对于执行层，这将需要几天的时间，具体取决于若干因素，但预计最多需要约 5-7 天。
 
-如果运行的是 Eth2 Topaz 测试网，则可以预期约 1-2 天的信标链同步时间。 请记住，您需要稍后设置验证器才能启动权益质押过程。 [如何运行 Eth 2.0 验证器](/developers/tutorials/run-node-raspberry-pi/#validator)
+如果运行的是共识层 Prater 测试网，则可以预期约 1-2 天的信标链同步时间。 请记住，您需要稍后设置验证器才能启动权益质押过程。 [如何运行共识层验证器](/developers/tutorials/run-node-raspberry-pi/#validator)
 
 ## 监测仪表板 {#monitoring-dashboards}
 
 在这第一个版本中，包括了 3 个基于 Prometheus 的监测仪表板[[5]](/developers/tutorials/run-node-raspberry-pi/#references) / Grafana[[6]](/developers/tutorials/run-node-raspberry-pi/#references)，以便监测节点和客户端的数据（Geth 和 Besu）。 您可以通过您的 Web 浏览器访问：
 
 ```bash
-URL：http://your_raspberrypi_IP:3000
-用户：admin
-密码：ethereum
+URL: http://your_raspberrypi_IP:3000
+User: admin
+Password: ethereum
 ```
 
 ## 切换客户端 {#switching-clients}
 
 所有客户端都作为 systemd 服务运行。 这一点很重要，因为如果出现问题，系统将自动重启进程。
 
-Geth 和 Prysm 信标链默认运行（取决于您在同步什么，Eth 1.0 或 Eth2），因此，如果您想切换到其他客户端（例如从 Geth 切换到 Nethermind），您需要先停止并禁用 Geth，然后启用并运行其他客户端：
+Geth 和 Prysm 信标链默认运行 (取决于您正在同步的内容，执行层或共识层) ，因此，如果您想切换到其他客户端(例如从 Geth 到 Nethermind)，您需要先停止并禁用 Geth ，并启用并启动另一个客户端：
 
 ```bash
 sudo systemctl stop geth && sudo systemctl disable geth
 ```
 
-用于启用和运行每个 Eth1.0 客户端的命令：
+启用和运行执行客户端的命令：
 
 ```bash
 sudo systemctl enable besu && sudo systemctl start besu
@@ -185,7 +194,7 @@ sudo systemctl enable nethermind && sudo systemctl start nethermind
 sudo systemctl enable parity && sudo systemctl start parity
 ```
 
-Eth2：
+共识客户端：
 
 ```bash
 sudo systemctl stop prysm-beacon && sudo systemctl disable prysm-beacon
@@ -202,7 +211,7 @@ sudo systemctl start lighthouse && sudo systemctl enable lighthouse
 
 区块链客户端的数据存储在以太坊主帐户上，如下所示（注意目录名称前的点）。
 
-### Eth 1.0 {#execution-layer}
+### 执行层 {#execution-layer}
 
 ```bash
 /home/ethereum/.geth
@@ -211,7 +220,7 @@ sudo systemctl start lighthouse && sudo systemctl enable lighthouse
 /home/ethereum/.nethermind
 ```
 
-### Eth2 {#consensus-layer}
+### 共识层 {#consensus-layer}
 
 ```bash
 /home/ethereum/.eth2
@@ -221,13 +230,13 @@ sudo systemctl start lighthouse && sudo systemctl enable lighthouse
 
 ## Nethermind 和 Hyperledger Besu {#nethermind-and-hyperledger-besu}
 
-这两个出色的 Eth 1.0 客户端已经成为 Geth 和 Parity 的最佳替代方案。 网络的多样性越多越好，所以您可以试一试，为网络健康作出贡献。
+这两个出色的执行层客户端已经成为 Geth 和 Parity 的绝佳替代方案。 网络的多样性越多越好，所以您可以试一试，为网络健康作出贡献。
 
 两者都需要进一步的测试，所以请随时使用它们并报告您的反馈。
 
-## 如何运行 Eth 2.0 验证器（权益质押） {#validator}
+## 如何运行共识验证器（质押） {#validator}
 
-一旦 Topaz 测试网信标链同步，您就可以在同一设备中运行验证器。 您需要遵循[这些参与步骤](https://prylabs.net/participate)。
+Prater 测试网信标链同步后，您便可以在同一设备中运行验证器。 您需要遵循[这些参与步骤](https://prylabs.net/participate)。
 
 第一次，您需要通过运行 "验证器 "二进制文件手动创建一个帐户，并设置一个密码。 一旦您完成了这一步，就可以将密码添加到`/etc/ethereum/prysm-validator.conf`，并将验证器作为一个 systemd 服务启动。
 
@@ -235,19 +244,19 @@ sudo systemctl start lighthouse && sudo systemctl enable lighthouse
 
 我们投入了大量的工作，试图将 Raspberry Pi 4 设置为一个完整的以太坊节点，因为我们知道这个设备的庞大用户群可能对网络产生非常积极的影响。
 
-请考虑到这是基于 Ubuntu 20.04 的第一个映像，所以可能会有一些错误。 如果是这样，请在[Github](https://github.com/diglos/pi-gen)上开立问题，或在[Twitter](https://twitter.com/EthereumOnARM)上联系我们。
+请考虑到这是基于 Ubuntu 20.04 的第一个映像，所以可能会有一些错误。 如果确实出现了错误，请在 [GitHub](https://github.com/diglos/ethereumonarm) 上开一个 issue 或在 [Twitter](https://twitter.com/EthereumOnARM) 上联系我们。
 
 ## 参考： {#references}
 
 1. [Geth 反复出现 SIGSEGV 崩溃](https://github.com/ethereum/go-ethereum/issues/20190)
-2. [https://github.com/diglos/pi-gen](https://github.com/diglos/pi-gen)
+2. [https://github.com/diglos/ethereumonarm](https://github.com/diglos/ethereumonarm)
 3. https://ubuntu.com/download/raspberry-pi
 4. https://wikipedia.org/wiki/Port_forwarding
 5. https://prometheus.io
 6. https://grafana.com
 7. https://forum.armbian.com/topic/5565-zram-vs-swap/
 8. https://geth.ethereum.org
-9. https://github.com/openethereum/openethereum
+9. https://github.com/openethereum/openethereum \* **注意，OpenEthereum [已经废弃](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd)并停止维护。**请谨慎使用，最好切换至其他客户端实现。
 10. https://nethermind.io
 11. https://www.hyperledger.org/projects/besu
 12. https://github.com/prysmaticlabs/prysm

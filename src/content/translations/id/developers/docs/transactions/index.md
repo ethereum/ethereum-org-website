@@ -5,7 +5,7 @@ lang: id
 sidebar: true
 ---
 
-Transaksi adalah instruksi yang ditandatangani secara kriptografik dari akun. Akun akan menginisiasi transaksi untuk memperbarui state jaringan Ethereum. Bentuk transaksi paling sederhana adalah mentransfer ETH dari satu akun ke akun yang lain.
+Transaksi adalah instruksi yang ditandatangani secara kriptografis dari akun. Akun akan menginisiasi transaksi untuk memperbarui state jaringan Ethereum. Bentuk transaksi paling sederhana adalah mentransfer ETH dari satu akun ke akun yang lain.
 
 ## Prasyarat {#prerequisites}
 
@@ -15,13 +15,13 @@ Untukmembantu Anda memahami halaman ini dengan lebih baik, kami menyarankan Anda
 
 Transaksi Ethereum mengacu pada aksi yang dimulai oleh akun dengan kepemilikan eksternal, dengan kata lain, akun yang dikelola oleh manusia, bukan kontrak. Sebagai contoh, jika Bob mengirimkan 1 ETH ke Alice, akun Bob harus didebit dan akun Alice harus dikredit. Aksi yang mengubah state ini terjadi dalam sebuah transaksi.
 
-![Diagram yang menunjukkan sebuah transaksi menyebabkan perubahan state](../../../../../developers/docs/transactions/tx.png) _Diagram diadaptasi dari [Ethereum EVM yang diilustrasikan](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![Diagram yang menunjukkan sebuah transaksi menyebabkan perubahan state](./tx.png) _Diagram diadaptasi dari [Ethereum EVM yang diilustrasikan](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 Transaksi, yang mengubah state dari EVM, perlu disiarkan ke seluruh jaringan. Node apa saja bisa menyiarkan permintaan agar sebuah transaksi dieksekusi pada EVM; setelah ini terjadi, penambang akan mengeksekusi transaksi dan menyebarkan perubahan state yang menjadi hasilnya ke seluruh jaringan.
 
 Transaksi membutuhkan biaya dan harus ditambang untuk menjadi valid. Untuk membuat gambaran umum ini lebih sederhana, kami akan membahas biaya gas dan penambangan di tempat lain.
 
-Sebuah transaksi yang dikirimkan meliputi informasi berikut:
+Sebuah transaksi yang dikirim meliputi informasi berikut:
 
 - `recipient` – alamat yang menerima (jika akun dengan kepemilikan eksternal, transaksi akan mentransfer nilai. Jika akun kontrak, transaksi akan mengeksekusi kode kontrak)
 - `signature` – tanda pengenal dari sang pengirim. Ini dihasilkan ketika kunci privat pengirim menandatangani transaksi dan mengonfirmasi bahwa pengirim telah mengizinkan transaksi ini
@@ -98,10 +98,31 @@ Contoh tanggapan:
 }
 ```
 
-- `raw` adalah transaksi yang ditandatangani dalam bentuk Prefiks Panjang Rekursif (RLP) yang dikodekan
+- `mentah` adalah transaksi yang ditandatangani dalam bentuk Prefiks Panjang Rekursif (RLP) yang dikodekan
 - `tx` adalah transaksi yang ditandatangani dalam bentuk JSON
 
 Dengan hash tanda tangan, transaksi bisa dibuktikan secara kriptografi berasal dari pengirim dan dikirim ke jaringan.
+
+### The data field {#the-data-field}
+
+The vast majority of transactions access a contract from an externally-owned account. Most contracts are written in Solidity and interpret their data field in accordance with the [application binary interface (ABI)](/glossary/#abi).
+
+The first four bytes specify which function to call, using the hash of the function's name and arguments. You can sometimes identify the function from the selector using [this database](https://www.4byte.directory/signatures/).
+
+The rest of the calldata is the arguments, [encoded as specified in the ABI specs](https://docs.soliditylang.org/en/latest/abi-spec.html#formal-specification-of-the-encoding).
+
+For example, lets look at [this transaction](https://etherscan.io/tx/0xd0dcbe007569fcfa1902dae0ab8b4e078efe42e231786312289b1eee5590f6a1). Use **Click to see More** to see the calldata.
+
+The function selector is `0xa9059cbb`. There are several [known functions with this signature](https://www.4byte.directory/signatures/?bytes4_signature=0xa9059cbb). In this case [the contract source code](https://etherscan.io/address/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48#code) has been uploaded to Etherscan, so we know the function is `transfer(address,uint256)`.
+
+The rest of the data is:
+
+```
+0000000000000000000000004f6742badb049791cd9a37ea913f2bac38d01279
+000000000000000000000000000000000000000000000000000000003b0559f4
+```
+
+According to the ABI specifications, integer values (such as addresses, which are 20-byte integers) appear in the ABI as 32-byte words, padded with zeros in the front. So we know that the `to` address is [`4f6742badb049791cd9a37ea913f2bac38d01279`](https://etherscan.io/address/0x4f6742badb049791cd9a37ea913f2bac38d01279). The `value` is 0x3b0559f4 = 990206452.
 
 ## Jenis transaksi {#types-of-transactions}
 
@@ -109,6 +130,7 @@ Di Ethereum ada beberapa jenis transaksi yang berbeda:
 
 - Transaksi reguler: transaksi dari satu dompet ke dompet lainnya.
 - Transaksi penerapan kontrak: transaksi tanpa alamat 'kepada', di mana bidang data digunakan untuk kode kontrak.
+- Execution of a contract: a transaction that interacts with a deployed smart contract. In this case, 'to' address is the smart contract address.
 
 ### Tentang gas {#on-gas}
 
@@ -132,7 +154,7 @@ Penambang menerima tips **+0,000210 ETH**
 
 Gas juga dibutuhkan untuk interaksi kontrak pintar mana pun.
 
-![Diagram menunjukkan cara mengembalikan dana gas yang tidak terpakai](../../../../../developers/docs/transactions/gas-tx.png) _Diagram diadaptasi dari [Ethereum EVM yang diilustrasikan](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![Diagram menunjukkan cara mengembalikan dana gas yang tidak terpakai](./gas-tx.png) _Diagram diadaptasi dari [Ethereum EVM yang diilustrasikan](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 Gas yang tidak digunakan dalam transaksi dikembalikan dananya ke akun pengguna.
 

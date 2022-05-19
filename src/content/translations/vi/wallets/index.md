@@ -22,7 +22,7 @@ Ban muốn tạo ví?
 - [MyCrypto](https://mycrypto.com) _ví dựa trên web_
 - [TrustWallet](https://trustwallet.com/) _Ví di động cho iOS và Android_
 - [MyEtherWallet](https://www.myetherwallet.com/) _ví của phía máy khách_
-- [Opera](https://www.opera.com/crypto) _trình duyệt lớn với ví tích hợp_
+- [Opera](https://www.opera.com/crypto) _trình duyệt phổ biến với ví tích hợp_
 
 Bạn muốn tìm hiểu thêm về ví Ethereum?
 

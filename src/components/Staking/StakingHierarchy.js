@@ -5,6 +5,7 @@ import styled from "styled-components"
 // Components
 import ButtonLink from "../ButtonLink"
 import Link from "../Link"
+import Translation from "../Translation"
 
 // Assets
 import EtherSvg from "../../assets/staking/staking-glyph-ether-circle.svg"
@@ -188,6 +189,11 @@ const Content = styled.div`
   @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
     margin: 0;
   }
+
+  .gold {
+    color: ${({ theme }) => theme.colors.stakingGold};
+    font-weight: 600;
+  }
 `
 
 const FlexCentered = styled.div`
@@ -243,11 +249,6 @@ const Line = styled.aside`
   }
 `
 
-const Gold = styled.span`
-  color: ${({ theme }) => theme.colors.stakingGold};
-  font-weight: 600;
-`
-
 const StakingHierarchy = () => {
   return (
     <Container>
@@ -257,14 +258,25 @@ const StakingHierarchy = () => {
         </Ether>
         <Line />
         <Header>
-          <h2>Solo home staking</h2>
+          <h2>
+            <Translation id="page-staking-hierarchy-solo-h2" />
+          </h2>
+
           <Pills className="subtext">
             <p>
-              <em>Most impactful</em>
+              <em>
+                <Translation id="page-staking-hierarchy-solo-pill-1" />
+              </em>
             </p>
-            <p>Full control</p>
-            <p>Full rewards</p>
-            <p>Trustless</p>
+            <p>
+              <Translation id="page-staking-hierarchy-solo-pill-2" />
+            </p>
+            <p>
+              <Translation id="page-staking-hierarchy-solo-pill-3" />
+            </p>
+            <p>
+              <Translation id="page-staking-hierarchy-solo-pill-4" />
+            </p>
           </Pills>
         </Header>
         <Glyph>
@@ -272,16 +284,10 @@ const StakingHierarchy = () => {
         </Glyph>
         <Content>
           <p>
-            Solo staking on Ethereum is the <Gold>gold standard</Gold> for
-            staking. It provides full participation rewards, improves the
-            decentralization of the network, and never requires trusting anyone
-            else with your funds.
+            <Translation id="page-staking-hierarchy-solo-p1" />
           </p>
           <p>
-            Those considering solo staking should have at least 32 ETH and a
-            dedicated computer connected to the internet ~24/7. Some technical
-            know-how is helpful, but easy-to-use tools now exist to help
-            simplify this process.
+            <Translation id="page-staking-hierarchy-solo-p2" />
           </p>
           <ButtonLink
             to="/staking/solo/"
@@ -293,7 +299,7 @@ const StakingHierarchy = () => {
               })
             }}
           >
-            More on solo staking
+            <Translation id="page-staking-more-on-solo" />
           </ButtonLink>
         </Content>
       </Section>
@@ -303,11 +309,19 @@ const StakingHierarchy = () => {
         </Ether>
         <Line />
         <Header>
-          <h2>Staking as a service</h2>
+          <h2>
+            <Translation id="page-staking-dropdown-saas" />
+          </h2>
           <Pills className="subtext">
-            <p>Your 32 ETH</p>
-            <p>Your validator keys</p>
-            <p>Entrusted node operation</p>
+            <p>
+              <Translation id="page-staking-hierarchy-saas-pill-1"></Translation>
+            </p>
+            <p>
+              <Translation id="page-staking-hierarchy-saas-pill-2"></Translation>
+            </p>
+            <p>
+              <Translation id="page-staking-hierarchy-saas-pill-3"></Translation>
+            </p>
           </Pills>
         </Header>
         <Glyph>
@@ -315,20 +329,13 @@ const StakingHierarchy = () => {
         </Glyph>
         <Content>
           <p>
-            If you don't want or don't feel comfortable dealing with hardware
-            but still want to stake your 32 ETH, staking-as-a-service options
-            allow you to delegate the hard part while you earn native block
-            rewards.
+            <Translation id="page-staking-hierarchy-saas-p1" />
           </p>
           <p>
-            These options usually walk you through creating a set of validator
-            credentials, uploading your signing keys to them, and depositing
-            your 32 ETH. This allows the service to validate on your behalf.
+            <Translation id="page-staking-hierarchy-saas-p2" />
           </p>
           <p>
-            This method of staking requires a certain level of trust in the
-            provider. To limit counter-party risk, the keys to withdrawal your
-            ETH are usually kept in your possession.
+            <Translation id="page-staking-hierarchy-saas-p3" />
           </p>
           <ButtonLink
             onClick={() => {
@@ -340,7 +347,7 @@ const StakingHierarchy = () => {
             }}
             to="/staking/saas/"
           >
-            More on staking as a service
+            <Translation id="page-staking-more-on-saas" />
           </ButtonLink>
         </Content>
       </Section>
@@ -350,13 +357,23 @@ const StakingHierarchy = () => {
         </Ether>
         <Line />
         <Header>
-          <h2>Pooled staking</h2>
+          <h2>
+            <Translation id="page-staking-dropdown-pools" />
+          </h2>
           <Pills className="subtext">
-            <p>Stake any amount</p>
-            <p>Earn rewards</p>
-            <p>Keep it simple</p>
             <p>
-              <em>Popular</em>
+              <Translation id="page-staking-hierarchy-pools-pill-1" />
+            </p>
+            <p>
+              <Translation id="page-staking-hierarchy-pools-pill-2" />
+            </p>
+            <p>
+              <Translation id="page-staking-hierarchy-pools-pill-3" />
+            </p>
+            <p>
+              <em>
+                <Translation id="page-staking-hierarchy-pools-pill-4" />
+              </em>
             </p>
           </Pills>
         </Header>
@@ -365,22 +382,16 @@ const StakingHierarchy = () => {
         </Glyph>
         <Content>
           <p>
-            Several pooling solutions now exist to assist users who do not have
-            or feel comfortable staking 32 ETH.
+            <Translation id="page-staking-hierarchy-pools-p1" />
           </p>
           <p>
-            Many of these options include what is known as "liquid staking"
-            which involves an ERC-20 liquidity token that represents your staked
-            ETH.
+            <Translation id="page-staking-hierarchy-pools-p2" />
           </p>
           <p>
-            Liquid staking enables easy and anytime exiting and makes staking as
-            simple as a token swap. This option also allows users to hold
-            custody of their assets in their own Ethereum wallet.
+            <Translation id="page-staking-hierarchy-pools-p3" />
           </p>
           <p>
-            Pooled staking is not native to the Ethereum network. Third parties
-            are building these solutions, and they carry their own risks.
+            <Translation id="page-staking-hierarchy-pools-p4" />
           </p>
           <ButtonLink
             onClick={() => {
@@ -392,7 +403,7 @@ const StakingHierarchy = () => {
             }}
             to="/staking/pools/"
           >
-            More on pooled staking
+            <Translation id="page-staking-more-on-pools" />
           </ButtonLink>
         </Content>
       </Section>
@@ -402,12 +413,18 @@ const StakingHierarchy = () => {
         </Ether>
         <Line />
         <Header>
-          <h2>Centralized exchanges</h2>
+          <h2>
+            <Translation id="page-staking-hierarchy-cex-h2" />
+          </h2>
           <Pills className="subtext">
             <p>
-              <em>Least impactful</em>
+              <em>
+                <Translation id="page-staking-hierarchy-cex-pill-1" />
+              </em>
             </p>
-            <p>Highest trust assumptions</p>
+            <p>
+              <Translation id="page-staking-hierarchy-cex-pill-2" />
+            </p>
           </Pills>
         </Header>
         <Glyph>
@@ -415,25 +432,13 @@ const StakingHierarchy = () => {
         </Glyph>
         <Content>
           <p>
-            Many centralized exchanges provide staking services if you are not
-            yet comfortable holding ETH in your own wallet. They can be a
-            fallback to allow you to earn some yield on your ETH holdings with
-            minimal oversight or effort.
+            <Translation id="page-staking-hierarchy-cex-p1" />
           </p>
           <p>
-            The trade-off here is that centralized providers consolidate large
-            pools of ETH to run large numbers of validators. This can be
-            dangerous for the network and its users as it creates a large
-            centralized target and point of failure, making the network more
-            vulnerable to attack or bugs.
+            <Translation id="page-staking-hierarchy-cex-p2" />
           </p>
           <p>
-            If you don't feel comfortable holding your own keys, that's okay.
-            These options are here for you. In the meantime, consider checking
-            out our <Link to="/wallets/">wallets page</Link>, where you can get
-            started learning how to take true ownership over your funds. When
-            you're ready, come back and level up your staking game by trying one
-            of the self-custody pooled staking services offered.
+            <Translation id="page-staking-hierarchy-cex-p3" />
           </p>
         </Content>
       </Section>

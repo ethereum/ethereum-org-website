@@ -1,6 +1,8 @@
 {
   "page-local-environment-brownie-desc": "Kerangka kerja pengembangan dan pengujian berbasis Python untuk kontrak pintar yang menargetkan Mesin Virtual Ethereum.",
   "page-local-environment-brownie-logo-alt": "Logo Brownie",
+  "page-local-environment-dapptools-desc": "Serangkaian alat CLI yang berfokus pada Ethereum mengikuti filosofi desain Unix, mendukung komposabilitas, dapat dikonfigurasi, dan ekstensibilitas.",
+  "page-local-environment-dapptools-logo-alt": "Logo Dapptools",
   "page-local-environment-embark-desc": "Platform pengembang serba ada untuk membangun dan menggunakan aplikasi terdesentralisasi.",
   "page-local-environment-embark-logo-alt": "Logo Embark",
   "page-local-environment-epirus-desc": "Platform untuk mengembangkan, menggunakan, dan memantau aplikasi blockchain pada Java Virtual Machine",

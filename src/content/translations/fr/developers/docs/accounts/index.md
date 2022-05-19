@@ -3,7 +3,6 @@ title: Comptes Ethereum
 description: Explication des comptes Ethereum, de leurs structures de données et de leur relation avec la cryptographie par paire de clé.
 lang: fr
 sidebar: true
-isOutdated: true
 ---
 
 Un compte Ethereum est une entité avec un solde en ether (ETH) qui peut envoyer des transactions sur Ethereum. Les comptes peuvent être contrôlés par des utilisateurs ou déployés en tant que contrats intelligents.
@@ -28,26 +27,26 @@ Les deux types peuvent :
 
 **Propriété externe**
 
-- La création d'un compte d'un compte est gratuite.
-- Vous pouvez initier des transactions.
-- Les seules transactions possibles entre les comptes externes sont les transferts d'ETH.
+- La création d'un compte est gratuite
+- Vous pouvez initier des transactions
+- Les transactions entre des comptes externes ne peuvent être que des transferts en ETH/jeton
 
 **Contrats**
 
-- La création d'un compte a un coût parce que vous utilisez du stockage réseau.
-- Vous ne pouvez envoyer des transactions qu'en réponse à la réception d'une transaction.
-- Les transactions depuis un compte externe vers un compte de contrat peuvent déclencher du code qui peut exécuter de nombreuses actions différentes, comme le transfert de jetons ou la création d'un nouveau contrat.
+- La création d'un contrat a un coût dû l'utilisation de stockage réseau
+- Vous pouvez seulement envoyer des transactions en réponse à la réception d'une transaction
+- Les transactions depuis un compte externe vers un compte de contrat peuvent déclencher un code pouvant exécutant plein d'actions différentes, comme transférer des tokens ou même créer un nouveau contrat
 
 ## Description d'un compte {#an-account-examined}
 
 Les comptes Ethereum comportent quatre champs :
 
-- `nonce` – Compteur qui indique le nombre de transactions envoyées depuis le compte. Cela garantit que les transactions ne sont traitées qu'une seule fois. Pour un compte de contrat, ce nombre représente le nombre de contrats créés par le compte
-- `balance` – Nombre de wei appartenant à cette adresse. wei est une dénomination de l'ETH. Il y a 1e+18 wei par ETH.
-- `codeHash` – Tous ces fragments de code sont contenus dans la base de données d'état sous leurs hachages correspondants pour une récupération ultérieure. Pour les comptes de contrat, c'est le code qui est haché et stocké en tant que codeHash. Pour les comptes externes, le champ codeHash est le hachage de la chaîne vide.
-- `storageRoot` – Parfois connu sous le nom de hash de stockage. Un hash 256 bits du nœud racine d'un arbre de Merkle qui encode le contenu de stockage du compte (une correspondance entre 256 bits entiers), encodé dans un arbre préfixé comme correspondance d'un hach Keccak 256 bits des clés d'entier en 256 bits en des valeurs entières encodées en RLP. Cette arborescence encode le hachage des contenus de stockage de ce compte, et est vide par défaut.
+- `nonce` – Compteur qui indique le nombre de transactions envoyées depuis le compte. Cela garantit que les transactions ne sont traitées qu'une seule fois. Dans un compte de contrat, ce nombre représente le nombre de contrats créés par ce compte
+- `balance` – le nombre de wei possédés par cette adresse. Le wei est une unité divisionnaire de l'ETH. Il y a 1e+18 wei pour 1 ETH.
+- `codeHash` – ce hash est une référence au _code_ d'un compte dans la machine virtuelle Ethereum (EVM). Les comptes de contrat possèdent des fragments de code qui peuvent réaliser différentes opérations. Ce code EVM est exécuté si le compte reçoit un message. Contrairement aux autres champs, il ne peut pas être modifié. Tous ces fragments de code sont stockés dans une base de données à états, sous leur hash correspondant, pour une récupération future. Cette valeur de hash est connue en tant que codeHash. Pour les comptes externes, le champ du codeHash contient le hash d'une chaîne vide.
+- `storageRoot` – Parfois connu sous le nom de hash de stockage. Un hash 256 bits du nœud racine d'un arbre de Merkle qui encode le contenu de stockage du compte (une correspondance entre 256 bits entiers), encodé dans un arbre préfixé comme correspondance d'un hach Keccak 256 bits des clés d'entier en 256 bits en des valeurs entières encodées en RLP. Cet arbre encode le hash des contenus stockés de ce compte, et est vide pas défaut.
 
-![Schéma montrant la composition d'un compte](../../../../../developers/docs/accounts/accounts.png) _Schéma adapté à partir du document [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![Schéma montrant la composition d'un compte](./accounts.png) _Schéma adapté à partir du document [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 ## Comptes externes et paires de clés {#externally-owned-accounts-and-key-pairs}
 
@@ -67,7 +66,7 @@ Exemple :
 
 `fffffffffffffffffffffffffffffffebaaedce6af48a03bbfd25e8cd036415f`
 
-La clé publique est générée à partir de la clé privée en utilisant l'algorithme de signature numérique Elliptic Curve. Vous obtenez une adresse publique pour votre compte en prenant les 20 derniers octets de la clé publique et en ajoutant `0x` au début.
+La clé publique est générée à partir de la clé privée à l'aide d'un [algorithme de signature numérique basé sur les courbes elliptiques](https://wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm). On obtient l'adresse d'un compte en concatenant `0x` suivi des 20 derniers octets du code de hashage Keccak-256 de la clé pubique.
 
 Voici un exemple de création d'un compte dans la console en utilisant le `personal_newAccount` du GETH :
 
@@ -95,11 +94,19 @@ Exemple :
 
 `0x06012c8cf97bead5deae237070f9587f8e7a266d`
 
-Cette adresse est généralement donnée lorsqu'un contrat est déployé dans la blockchain Ethereum. Elle provient de l'adresse du créateur et du nombre de transactions envoyées à partir de cette adresse ("nonce").
+Cette adresse est généralement donnée lorsqu'un contrat est déployé dans la blockchain Ethereum. Elle provient de l'adresse du créateur et du nombre de transactions envoyées à partir de cette adresse (« nonce »).
 
 ## Remarque sur les portefeuilles {#a-note-on-wallets}
 
-Un compte n'est pas un portefeuille. Un portefeuille est la paire de clés associée à un compte utilisateur, qui permet à l'utilisateur d'effectuer des transactions ou de gérer le compte.
+Un compte n'est pas un portefeuille. Un compte est une paire de clés (publique et privée) d'un compte Ethereum appartenant à un utilisateur. Un portefeuille est une interface ou une application qui vous permet d'interagir avec votre compte Ethereum.
+
+## Démonstration visuelle {#a-visual-demo}
+
+Regardez Austin vous guider à travers les fonctions de hachage et les paires de clés.
+
+<YouTube id="QJ010l-pBpE" />
+
+<YouTube id="9LtBDy67Tho" />
 
 ## Complément d'information {#further-reading}
 

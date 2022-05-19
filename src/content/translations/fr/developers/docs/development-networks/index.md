@@ -1,6 +1,6 @@
 ---
 title: Réseaux de développement
-description: "Présentation des réseaux de développement et des outils disponibles pour construire des applications Ethereum."
+description: "Présentation des réseaux de développement et des outils disponibles pour \nconstruire des applications Ethereum."
 lang: fr
 sidebar: true
 ---
@@ -19,7 +19,7 @@ Les réseaux de développement sont essentiellement des clients Ethereum (implé
 
 **Pourquoi ne pas juste exécuter un nœud Ethereum standard localement ?**
 
-Vous _pourriez_ [exécuter un nœud ](/developers/docs/nodes-and-clients/#running-your-own-node) (comme Geth, OpenEthereum ou Nethermind), mais puisque les réseaux de développement sont conçus à cet effet, ils incluent souvent des fonctionnalités pratiques :
+Vous _pourriez_ [ exécuter un nœud](/developers/docs/nodes-and-clients/#running-your-own-node) (tels que Geth, Erigon, ou Nethermind) mais puisque les réseaux de développement sont conçus pour le développement, ils sont souvent fournis avec des fonctionnalités pratiques telles que:
 
 - Alimentation déterminée de votre blockchain locale avec des données (par exemple, des comptes avec des soldes d'ETH)
 - Minage instantané de blocs avec chaque transaction reçue, dans l'ordre et sans délai

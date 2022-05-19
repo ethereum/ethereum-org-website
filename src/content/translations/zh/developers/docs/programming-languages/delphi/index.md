@@ -12,7 +12,7 @@ incomplete: true
 
 </div>
 
-使用以太坊来创建去中心化应用程序（或称“dapp”），发挥加密货币和区块链技术的优势。 这些 dapp 可以是值得信赖的，也即一旦被部署到以太坊上，它们将总是按程序运行。 这些应用程序可以控制数字资产，以便创造新的金融应用； 它们可以是去中心化的，也即没有任何单一实体或个人能够控制它们，而且它们几乎是不可能被审查的。
+使用以太坊来创建去中心化应用程序，发挥加密货币和区块链技术的优势。 这些去中心化应用程序可以是值得信赖的，也即一旦被部署到以太坊上，它们将总是按程序运行。 这些应用程序可以控制数字资产，以便创造新的金融应用； 它们可以是去中心化的，也即没有任何单一实体或个人能够控制它们，而且它们几乎是不可能被审查的。
 
 在以太坊顶部构建去中心化应用，并使用 Delphi 编程语言与智能合约交互！
 
@@ -49,7 +49,7 @@ incomplete: true
 
 ## 面向高等程度用户的使用模式 {#advanced-use-patterns}
 
-- [Delphi 和以太坊域名服务 (ENS)](https://medium.com/@svanas/delphi-and-ethereum-name-service-ens-4443cd278af7)
+- [Delphi 和以太坊域名服务](https://medium.com/@svanas/delphi-and-ethereum-name-service-ens-4443cd278af7)
 - [QuikNode、以太坊和 Delphi](https://medium.com/@svanas/quiknode-ethereum-and-delphi-f7bfc9671c23)
 - [Delphi 和以太坊黑暗森林](https://svanas.medium.com/delphi-and-the-ethereum-dark-forest-5b430da3ad93)
 

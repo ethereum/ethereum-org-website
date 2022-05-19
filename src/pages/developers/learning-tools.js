@@ -119,7 +119,7 @@ const LearningToolsPage = ({ data }) => {
     {
       name: "CryptoZombies",
       description: "page-learning-tools-cryptozombies-description",
-      url: "https://cryptozombies.io/en/solidity",
+      url: "https://cryptozombies.io/",
       image: getImage(data.cryptoZombie),
       alt: "page-learning-tools-cryptozombies-logo-alt",
       background: "#2b2f48",
