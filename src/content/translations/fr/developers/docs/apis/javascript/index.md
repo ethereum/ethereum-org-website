@@ -5,7 +5,7 @@ lang: fr
 sidebar: true
 ---
 
-Pour qu'une application Web puisse interagir avec la blockchain Ethereum (c'est-à-dire lire les données de la blockchain et/ou envoyer des transactions sur le réseau), elle doit se connecter à un nœud Ethereum.
+Pour qu'une application Web puisse interagir avec la blockchain Ethereum (c'est-à-dire lire les données de la blockchain et/ou envoyer des transactions sur le réseau), elle doit se connecter à un nœud  Ethereum.
 
 Dans cet objectif, chaque client Ethereum implémente la spécification [JSON-RPC](/developers/docs/apis/json-rpc/) pour former un ensemble uniforme de [points de terminaison](/developers/docs/apis/json-rpc/endpoints/) sur lesquels les applications peuvent s'appuyer.
 
@@ -152,7 +152,7 @@ Une fois la configuration effectuée, vous pourrez :
 
 ### Interagir avec les fonctions d'un contrat intelligent {#interact-with-smart-contract-functions}
 
-Les bibliothèques clientes JavaScript autorisent votre application à appeler des fonctions de contrat intelligent en lisant l'interface binaire de programme (ABI) d'un contrat compilé.
+Les bibliothèques clientes JavaScript autorisent votre application à appeler des fonctions de contrat intelligent en lisant l'interface binaire-programme (ABI) d'un contrat compilé.
 
 L'ABI explique principalement les fonctions du contrat au format JSON et vous permet de l'utiliser comme un objet JavaScript standard.
 
@@ -268,7 +268,7 @@ ethers.utils.formatEther(balance)
 - [Documentation](https://docs.alchemyapi.io/documentation/alchemy-web3)
 - [GitHub](https://github.com/alchemyplatform/alchemy-web3)
 
-**L'API NFT de Alchemy -** **_API pour récupérer les données des NFTs, comme par exemple le propriétaire ou les métadonnées._**
+**Alchemy NFT API -** **_API pour récupérer les données NFT, y compris la propriété, les attributs de métadonnées et plus encore._**
 
 - [Documentation](https://docs.alchemy.com/alchemy/enhanced-apis/nft-api)
 - [GitHub](https://github.com/alchemyplatform/alchemy-web3)
