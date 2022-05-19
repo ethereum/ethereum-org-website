@@ -8,7 +8,7 @@ sidebar: true
 
 ## A brief introduction {#introduction-to-formal-verification}
 
-[Smart contracts]([/smart-contracts/](https://ethereum.org/en/developers/docs/smart-contracts/)) are making it possible to create decentralized, trustless, and robust applications that introduce new use-cases and unlock value for users. Because smart contracts handle large amounts of value, security is a critical consideration for developers.
+[Smart contracts]([/smart-contracts/](/developers/docs/smart-contracts/)) are making it possible to create decentralized, trustless, and robust applications that introduce new use-cases and unlock value for users. Because smart contracts handle large amounts of value, security is a critical consideration for developers.
 
 Formal verification is one of the recommended techniques for [testing smart contracts](/smart-contracts/testing/) and improving [smart contract security](/smart-contracts/security/). Formal verification involves testing a program (a smart contract in this case) to ensure it behaves as expected during execution.
 
