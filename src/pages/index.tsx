@@ -5,7 +5,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import styled from "styled-components"
 
 import type { IndexPageQuery } from "../../gatsby-graphql"
-import type { TContext } from "../../types"
+import type { Context } from "../types"
 
 import ActionCard from "../components/ActionCard"
 import ButtonLink from "../components/ButtonLink"
@@ -407,7 +407,7 @@ const StyledCalloutBanner = styled(CalloutBanner)`
 const HomePage = ({
   data,
   pageContext: { language = "en" },
-}: PageProps<IndexPageQuery, TContext>) => {
+}: PageProps<IndexPageQuery, Context>) => {
   const intl = useIntl()
   const [isModalOpen, setModalOpen] = useState(false)
   const [activeCode, setActiveCode] = useState(0)
