@@ -66,7 +66,7 @@ contract VendingMachine {
 
 ## 无需准入性 {#permissionless}
 
-任何人都可以编写智能合约，并将其部署到网络上。 您只需要学习如何用[智能合约语言](/developers/docs/smart-contracts/languages/)编码，并有足够的以太币来部署您的合约。 在技术上，部署智能合约是一项交易，所以您需要支付[气体](/developers/docs/gas/)，就像您需要为简单的以太币转账支付气体一样。 然而，部署合约需要支付的气体成本要高得多。
+任何人都可以编写智能合约，并将其部署到网络上。 您只需要学习如何用[智能合约语言](/developers/docs/smart-contracts/languages/)编码，并有足够的以太币来部署您的合约。 在技术上，部署智能合约是一项交易，所以您需要支付[gas](/developers/docs/gas/)，就像您需要为简单的以太币转账支付gas一样。 然而，部署合约需要支付的gas成本要高得多。
 
 以太坊为编写智能合约提供的语言对开发者比较友好：
 
@@ -89,7 +89,7 @@ contract VendingMachine {
 
 这可以使用[预言机](/developers/docs/oracles/)通过多种方法来规避。
 
-智能合约的另一个限制是最大合约大小。 智能合约最大可为 24KB，否则会消气体耗完气体。 可以使用[钻石模式](https://eips.ethereum.org/EIPS/eip-2535)来规避这一问题。
+智能合约的另一个限制是最大合约大小。 智能合约最大可为 24KB，否则会消耗完gas。 可以使用[钻石模式](https://eips.ethereum.org/EIPS/eip-2535)来规避这一问题。
 
 ## 智能合约资源 {#smart-contract-resources}
 
