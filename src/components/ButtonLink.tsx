@@ -86,10 +86,8 @@ const SecondaryScrollLink = styled(StyledScrollButton)`
 `
 
 interface IProps extends ILinkProps {
-  to: string
   toId?: string
   isSecondary?: boolean
-  className?: string
 }
 
 const ButtonLink: React.FC<IProps> = ({
@@ -122,7 +120,6 @@ const ButtonLink: React.FC<IProps> = ({
     ) : (
       <SecondaryScrollLink
         onClick={handleOnClick}
-        hideArrow={true}
         className={className}
         {...props}
       >
@@ -135,12 +132,7 @@ const ButtonLink: React.FC<IProps> = ({
       {children}
     </PrimaryLink>
   ) : (
-    <PrimaryScrollLink
-      onClick={handleOnClick}
-      hideArrow={true}
-      className={className}
-      {...props}
-    >
+    <PrimaryScrollLink onClick={handleOnClick} className={className} {...props}>
       {children}
     </PrimaryScrollLink>
   )
