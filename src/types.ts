@@ -1,20 +1,20 @@
-import { Lang } from "./src/utils/languages"
-import { IMessages } from "./src/utils/flattenMessages"
+import type { Messages } from "./interfaces"
+import type { Lang } from "./utils/languages"
 
-export type TIntl = {
+export type Intl = {
   language: Lang
   languages: Array<Lang>
   defaultLanguage: Lang
-  messages: IMessages
+  messages: Messages
   routed: boolean
   originalPath: string
   redirect: boolean
 }
 
-export type TContext = {
+export type Context = {
   slug: string
   relativePath: string
-  intl: TIntl
+  intl: Intl
   language?: string
   isOutdated: boolean
   isContentEnglish?: boolean

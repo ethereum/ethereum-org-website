@@ -1,3 +1,7 @@
+export interface Messages {
+  [key: string]: string
+}
+
 export interface AllMdxQuery {
   node: {
     fields: {
