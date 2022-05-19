@@ -1,6 +1,6 @@
 ---
 title: Anatomie des contrats intelligents
-description: "Examen approfondi des composantes d'un contrat intelligent : les fonctions, les données et les variables."
+description: 'Examen approfondi des composantes d''un contrat intelligent : les fonctions, les données et les variables.'
 lang: fr
 sidebar: true
 ---
@@ -627,10 +627,10 @@ contract CryptoPizza is IERC721, ERC165 {
         uint256 size;
         // Currently there is no better way to check if there is a contract in an address
         // than to check the size of the code at that address.
-        // See https://ethereum.stackexchange.com/a/14016/36603
-        // for more details about how this works.
-        // TODO Check this again before the Serenity release, because all addresses will be
-        // contracts then.
+        // Voir https://ethereum.stackexchange.com/a/14016/36603
+        // pour plus de détails sur le fonctionnement.
+        // TODO Vérifiez cela à nouveau avant la version Serenity, car toutes les adresses seront alors contractuelles
+        // .
         // solium-disable-next-line security/no-inline-assembly
         assembly {
             size := extcodesize(account)

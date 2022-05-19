@@ -7406,6 +7406,98 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "GustavoRSSilva",
+      "name": "Gustavo Silva",
+      "avatar_url": "https://avatars.githubusercontent.com/u/8384988?v=4",
+      "profile": "https://gustavorssilva.github.io/",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "AweSamarth",
+      "name": "Samarth Saxena",
+      "avatar_url": "https://avatars.githubusercontent.com/u/72488638?v=4",
+      "profile": "https://github.com/AweSamarth",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "byhow",
+      "name": "Baihao",
+      "avatar_url": "https://avatars.githubusercontent.com/u/25713361?v=4",
+      "profile": "https://github.com/byhow",
+      "contributions": [
+        "doc",
+        "bug"
+      ]
+    },
+    {
+      "login": "stoobie",
+      "name": "Steve Goodman",
+      "avatar_url": "https://avatars.githubusercontent.com/u/39279277?v=4",
+      "profile": "https://github.com/stoobie",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "booklearner",
+      "name": "booklearner",
+      "avatar_url": "https://avatars.githubusercontent.com/u/103979114?v=4",
+      "profile": "http://booklearner.org",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "moretimeL",
+      "name": "moretimeL",
+      "avatar_url": "https://avatars.githubusercontent.com/u/43361848?v=4",
+      "profile": "https://github.com/moretimeL",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "SuperDelphi",
+      "name": "SuperDelphi",
+      "avatar_url": "https://avatars.githubusercontent.com/u/44942598?v=4",
+      "profile": "https://github.com/SuperDelphi",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "chadlohrli",
+      "name": "chadlohrli",
+      "avatar_url": "https://avatars.githubusercontent.com/u/9952172?v=4",
+      "profile": "https://github.com/chadlohrli",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "JuliusDegesys",
+      "name": "Julius Degesys",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3232103?v=4",
+      "profile": "https://github.com/JuliusDegesys",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "nhsz",
+      "name": "Nicolás Quiroz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/948922?v=4",
+      "profile": "https://nicolasquiroz.com",
+      "contributions": [
+        "code",
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,

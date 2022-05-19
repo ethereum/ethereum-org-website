@@ -6,8 +6,8 @@ import child_process from "child_process"
 import { createFilePath } from "gatsby-source-filesystem"
 import type { GatsbyNode } from "gatsby"
 
-import type { TContext } from "./types"
-import type { AllMdxQuery } from "./src/types/schema"
+import type { Context } from "./src/types"
+import type { AllMdxQuery } from "./src/interfaces"
 
 import mergeTranslations from "./src/scripts/mergeTranslations"
 import copyContributors from "./src/scripts/copyContributors"
@@ -184,7 +184,7 @@ export const onCreateNode: GatsbyNode["onCreateNode"] = async ({
   }
 }
 
-export const createPages: GatsbyNode<any, TContext>["createPages"] = async ({
+export const createPages: GatsbyNode<any, Context>["createPages"] = async ({
   graphql,
   actions,
   reporter,
@@ -289,7 +289,7 @@ export const createPages: GatsbyNode<any, TContext>["createPages"] = async ({
       }
     }
 
-    createPage<TContext>({
+    createPage<Context>({
       path: slug,
       component: path.resolve(`src/templates/${template}.js`),
       context: {
@@ -358,7 +358,7 @@ export const createPages: GatsbyNode<any, TContext>["createPages"] = async ({
 // Add additional context to translated pages
 // Only ran when creating component pages
 // https://www.gatsbyjs.com/docs/creating-and-modifying-pages/#pass-context-to-pages
-export const onCreatePage: GatsbyNode<any, TContext>["onCreatePage"] = async ({
+export const onCreatePage: GatsbyNode<any, Context>["onCreatePage"] = async ({
   page,
   actions,
 }) => {
@@ -373,7 +373,7 @@ export const onCreatePage: GatsbyNode<any, TContext>["onCreatePage"] = async ({
       page.context.language
     )
     deletePage(page)
-    createPage<TContext>({
+    createPage<Context>({
       ...page,
       context: {
         ...page.context,

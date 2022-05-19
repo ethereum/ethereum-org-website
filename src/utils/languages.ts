@@ -6,6 +6,7 @@ export type Lang =
   | "bn"
   | "ca"
   | "cs"
+  | "da"
   | "de"
   | "el"
   | "es"
@@ -72,6 +73,9 @@ const languages: Languages = {
   },
   cs: {
     language: "Čeština",
+  },
+  da: {
+    language: "Dansk",
   },
   de: {
     language: "Deutsch",

@@ -1,11 +1,12 @@
 import fs from "fs"
 
-import flattenMessages, { IMessages } from "./flattenMessages"
+import flattenMessages from "./flattenMessages"
 
+import type { Messages } from "../interfaces"
 import type { Lang } from "./languages"
 
 // same function from 'gatsby-plugin-intl'
-const getMessages = (path: string, language: Lang): IMessages => {
+const getMessages = (path: string, language: Lang): Messages => {
   try {
     const messages = JSON.parse(
       fs.readFileSync(`${path}/${language}.json`, "utf8")

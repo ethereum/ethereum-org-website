@@ -13,7 +13,7 @@ Déployer un contrat intelligent consiste à envoyer sur la blockchain une trans
 
 Il est préférable d'avoir compris en quoi consiste les [réseaux Ethereum](/developers/docs/networks/), les [transactions](/developers/docs/transactions/) et l'[anatomie des contrats intelligents](/developers/docs/smart-contracts/anatomy/) avant de déployer des contrats intelligents.
 
-Le déploiement d'un contrat coûte également des ethers, nous vous recommandons donc de vous familiariser avec le [carburant et les frais](/developers/docs/gas/) sur Ethereum.
+Le déploiement d'un contrat coûte également des ethers, nous vous recommandons donc de vous familiariser avec le [gaz et les frais](/developers/docs/gas/) sur Ethereum.
 
 Enfin, comme vous devrez compiler votre contrat avant de le déployer, assurez-vous d'avoir lu la page sur la [compilation des contrats intelligents](/developers/docs/smart-contracts/compiling/).
 
@@ -22,7 +22,7 @@ Enfin, comme vous devrez compiler votre contrat avant de le déployer, assurez-v
 ### Ce dont vous aurez besoin {#what-youll-need}
 
 - Le bytecode du contrat, généré par la [compilation](/developers/docs/smart-contracts/compiling/).
-- Des ethers pour le carburant. Vous fixerez votre limite de carburant comme pour les autres transactions, mais sachez que les déploiements de contrats nécessitent beaucoup plus de carburant qu'un simple transfert d'ethers.
+- Des  ethers pour le carburant. Vous fixerez votre limite de carburant comme pour les autres transactions, mais sachez que les déploiements de contrats nécessitent beaucoup plus de carburant qu'un simple transfert d'ethers.
 - Un script de déploiement ou un plugin.
 - l'accès à un [nœud Ethereum](/developers/docs/nodes-and-clients/), soit en créant le vôtre, soit en vous connectant à un nœud public, soit via un [service de nœuds](/developers/docs/nodes-and-clients/nodes-as-a-service/) comme Infura ou Alchemy avec une clé d'API
 

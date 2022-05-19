@@ -15,7 +15,7 @@ Un NFT est utilisé pour identifier quelque chose ou quelqu'un d'une façon uniq
 
 L'ERC-721 introduit une norme pour les NFT. En d'autres termes, ce type de jeton est unique et peut avoir une valeur différente de celle d'un autre jeton du même contrat intelligent, peut-être en raison de son âge, de sa rareté ou du visuel qui lui est associé. Visuel ? Vous avez dit visuel ?
 
-Oui ! Tous les NFT ont une variable `uint256` appelée `tokenId`. Pour tout contrat ERC-721, la paire `address, uint256 tokenId` du contrat doit être globalement unique. Une DApp peut avoir un "convertisseur" qui utilise le `tokenId` comme entrée et affiche une image de quelque chose de cool, comme des zombies, des armes, des compétences ou de superbes chats !
+Oui ! Tous les NFT ont une variable `uint256` appelée `tokenId` ainsi, pour tout contrat ERC-721, la paire `contract address, uint256 tokenId` doit être globalement unique. Ceci étant dit, une dApp peut intégrer un « convertisseur » qui utilise le `tokenId` comme entrée et affiche une image de quelque chose de cool, comme des zombies, des armes, des compétences ou d'incroyables chatons !
 
 ## Prérequis {#prerequisites}
 
@@ -25,7 +25,7 @@ Oui ! Tous les NFT ont une variable `uint256` appelée `tokenId`. Pour tout cont
 
 ## Présentation {#body}
 
-La demande de commentaires ERC-721, proposée par William Entriken, Dieter Shirley, Jacob Evans, Nastassia Sachs en janvier 2018, est une norme de jeton non fongible qui implémente une API pour les jetons des contrats intelligents.
+L'ERC-721 (pour "Ethereum Request for Comments 721") proposé par William Entriken, Dieter Shirley, Jacob Evans, Nastassia Sachs en janvier 2018, est une norme de jeton non fongible qui implémente une API pour les jetons des contrats intelligents.
 
 Elle fournit des fonctionnalités permettant de transférer des jetons d'un compte à un autre, ou d'obtenir le solde actuel d'un compte en jetons, le nom du propriétaire d'un jeton spécifique et le nombre total de jetons disponibles sur le réseau. En plus de celles-ci, il en existe d'autres pour, par exemple, approuver que des jetons provenant d'un compte soient déplacés par un compte tiers.
 
@@ -69,7 +69,7 @@ $ pip install web3
 
 ```python
 from web3 import Web3
-from web3.utils.events import get_event_data
+from web3._utils.events import get_event_data
 
 
 w3 = Web3(Web3.HTTPProvider("https://cloudflare-eth.com"))
@@ -163,7 +163,7 @@ logs = w3.eth.getLogs({
 #       https://etherscan.io/address/0x06012c8cf97BEaD5deAe237070F9587f8E7A266d#events
 #       Click to expand the event's logs and copy its "tokenId" argument
 
-recent_tx = [get_event_data(tx_event_abi, log)["args"] for log in logs]
+recent_tx = [get_event_data(w3.codec, tx_event_abi, log)["args"] for log in logs]
 
 kitty_id = recent_tx[0]['tokenId'] # Paste the "tokenId" here from the link above
 is_pregnant = ck_contract.functions.isPregnant(kitty_id).call()
@@ -210,20 +210,20 @@ ck_event_signatures = [
 pregnant_logs = w3.eth.getLogs({
     "fromBlock": w3.eth.blockNumber - 120,
     "address": w3.toChecksumAddress(ck_token_addr),
-    "topics": [ck_extra_events_abi[0]]
+    "topics": [ck_event_signatures[0]]
 })
 
-recent_pregnants = [get_event_data(ck_extra_events_abi[0], log)["args"] for log in pregnant_logs]
+recent_pregnants = [get_event_data(w3.codec, ck_extra_events_abi[0], log)["args"] for log in pregnant_logs]
 
 # Here is a Birth Event:
 # - https://etherscan.io/tx/0x3978028e08a25bb4c44f7877eb3573b9644309c044bf087e335397f16356340a
 birth_logs = w3.eth.getLogs({
     "fromBlock": w3.eth.blockNumber - 120,
     "address": w3.toChecksumAddress(ck_token_addr),
-    "topics": [ck_extra_events_abi[1]]
+    "topics": [ck_event_signatures[1]]
 })
 
-recent_births = [get_event_data(ck_extra_events_abi[1], log)["args"] for log in birth_logs]
+recent_births = [get_event_data(w3.codec, ck_extra_events_abi[1], log)["args"] for log in birth_logs]
 ```
 
 ## NFT populaires {#popular-nfts}
@@ -234,15 +234,11 @@ recent_births = [get_event_data(ck_extra_events_abi[1], log)["args"] for log in 
 - [Ethereum Name Service (ENS)](https://ens.domains/) offre un moyen sécurisé et décentralisé d'adresser des ressources à la fois sur et hors de la blockchain en utilisant des noms simples et lisibles.
 - [Unstoppable Domains](https://unstoppabledomains.com/) est une société basée à San Francisco, qui construit des domaines sur des blockchains. Les domaines de blockchains remplacent les adresses des cryptomonnaies par des noms lisibles et peuvent être utilisés pour activer des sites Web résistants à la censure.
 - [Gods Unchained Cards](https://godsunchained.com/) est un jeu de cartes à collectionner (JCC) de la blockchain Ethereum, qui utilise des NFT pour apporter une vraie propriété aux actifs en jeu.
+- [Bored Ape Yacht Club](https://boredapeyachtclub.com) est une collection de 10 000 NFT uniques qui, en plus d'être une œuvre d'art remarquablement rare, agit en tant que jeton d’adhésion au club en fournissant aux membres des atouts et des avantages qui augmentent au fil du temps grâce aux efforts de la communauté.
 
 ## Complément d'information {#further-reading}
 
 - [EIP-721: ERC-721 Non-Fungible Token Standard](https://eips.ethereum.org/EIPS/eip-721)
 - [OpenZeppelin - ERC-721 Docs](https://docs.openzeppelin.com/contracts/3.x/erc721)
 - [OpenZeppelin - Implémentation ERC-721](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/ERC721.sol)
-
-## Sujets connexes {#related-topics}
-
-- [ERC-20](/developers/docs/standards/tokens/erc-20/)
-- [ERC-777](/developers/docs/standards/tokens/erc-777/)
-- [ERC-1155](/developers/docs/standards/tokens/erc-1155/)
+- [API NFT d'Alchemy](https://docs.alchemy.com/alchemy/enhanced-apis/nft-api)

@@ -185,7 +185,7 @@ Offline penalties are proportional to how many others are offline at the same ti
 <ExpandableCard title="Do I need to do anything before The Merge?">
 Anyone currently running a CL (Beacon Chain) client will be required to also run an EL client after The Merge. This is a result of the new Engine API that will be used to interface between the two layers. Anyone currently running a Beacon Chain without an execution layer client will need to sync the execution layer before The Merge to continue being in sync with the network.
 
-The Merge will also bring unburnt transaction fees to validators. These fees to not accumulate to the balance associated with the validator keys, but instead can be directly to a regular Ethereum address of your choice. In order to properly receive the priority fees/tips from proposed blocks, stakers must update their client settings with the address they would like to receive tips at. See individual client documentation for details.
+The Merge will also bring unburnt transaction fees to validators. These fees do not accumulate in the balance associated with the validator keys, but instead can be directed to a regular Ethereum address of your choice. In order to properly receive the priority fees/tips from proposed blocks, stakers must update their client settings with the address they would like to receive tips at. See individual client documentation for details.
 </ExpandableCard>
 
 ## Further reading {#further-reading}

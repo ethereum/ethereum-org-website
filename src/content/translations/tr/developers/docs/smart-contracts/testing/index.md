@@ -17,11 +17,6 @@ incomplete: true
 
 - [GitHub](https://github.com/sc-forks/solidity-coverage)
 
-**hevm -** **_Akıllı sözleşmelerin birim testi ve hata ayıklaması için özel olarak yapılmış EVM uygulaması._**
-
-- [GitHub](https://github.com/dapphub/dapptools/tree/master/src/hevm)
-- [DappHub Sohbeti](https://dapphub.chat/)
-
 **Whiteblock Genesis -** **_Blok zinciri için uçtan uca bir geliştirme sanal alanı ve test platformu._**
 
 - [Whiteblock.io](https://whiteblock.io)
@@ -45,7 +40,7 @@ incomplete: true
 - [Akıllı sözleşmeleri test etmek için Echidna nasıl kullanılır](/developers/tutorials/how-to-use-echidna-to-test-smart-contracts/)
 - [Akıllı sözleşme hataları bulmak için Manticore nasıl kullanılır](/developers/tutorials/how-to-use-manticor-to-find-smart-contract-bugs/)
 - [Akıllı sözleşme hataları bulmak için Slither nasıl kullanılır](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
-- [Solidity sözleşmeleri test etmek için nasıl taklit edilir](/developers/tutorials/how-to-mock-solidity-contracts-for-testing/)
+- [Test etmek için Solidity sözleşmeleri nasıl taklit edilir](/developers/tutorials/how-to-mock-solidity-contracts-for-testing/)
 - [Truffle Testlerinden OpenZeppelin Test Ortamı'na nasıl geçiş yapılır](https://docs.openzeppelin.com/test-environment/0.1/migrating-from-truffle)
 - [Sözleşmeler bir ağa dağıtıldıktan sonra nasıl test edilir](https://fulldecent.blogspot.com/2019/04/testing-deployed-ethereum-contracts.html)
 

@@ -30,7 +30,7 @@
   "page-learning-tools-questbook-logo-alt": "Logo de Questbook",
   "page-learning-tools-remix-description": "Desarrollar, implementar y administrar contratos inteligentes para Ethereum. Siga los tutoriales con el plugin de Learneth.",
   "page-learning-tools-remix-description-2": "Remix y Replit no solo son ambientes de pruebas, los desarrolladores pueden usarlos para escribir, compilar y desplegar sus contratos inteligentes.",
-  "page-learning-tools-replit-description": "Un entorno de desarrollo personalizable para Ethereum con hot reload, verificación de errores y soporte para testnet de primera clase.",
+  "page-learning-tools-replit-description": "Un entorno de desarrollo personalizable para Ethereum con recarga en caliente, verificación de errores y soporte para red de pruebas de primera clase.",
   "page-learning-tools-replit-logo-alt": "Logo de Replit",
   "page-learning-tools-remix-logo-alt": "Logo de Remix",
   "page-learning-tools-sandbox": "Procesos aislados de código",
@@ -39,5 +39,7 @@
   "page-learning-tools-vyperfun-description": "Conozca Vyper mediante la creación de su propio juego de Pokémon.",
   "page-learning-tools-vyperfun-logo-alt": "Logo de Vyper.fun",
   "page-learning-tools-nftschool-description": "Explore lo que está sucediendo con los tókenes no fungibles o NFT desde el punto de vista técnico.",
-  "page-learning-tools-nftschool-logo-alt": "Logo de NFT school"
+  "page-learning-tools-nftschool-logo-alt": "Logo de NFT school",
+  "page-learning-tools-pointer-description": "Aprenda habilidades de desarrollo Web 3.0 con divertidos tutoriales interactivos y gane recompensas criptográficas al mismo tiempo.",
+  "page-learning-tools-pointer-logo-alt": "Logo de puntero"
 }
