@@ -1,22 +1,21 @@
 ---
 title: Formal verification of smart contracts
-description: An overview of formal verification techniques for Ethereum smart contracts 
+description: An overview of formal verification techniques for Ethereum smart contracts
 lang: en
 sidebar: true
 ---
 
-
-## A brief introduction {#introduction-to-formal-verification}
-
 [Smart contracts](/developers/docs/smart-contracts/) are making it possible to create decentralized, trustless, and robust applications that introduce new use-cases and unlock value for users. Because smart contracts handle large amounts of value, security is a critical consideration for developers.
+
+Reliability is a highly desired quality of smart contracts, and both users and developers want assurances that a smart contract will work as intended. This is important because code in the [Ethereum Virtual Machine (EVM)](/developers/docs/evm/) is immutable, which rules out the possibility of fixing bugs or retrieving funds lost to malicious attacks.
 
 Formal verification is one of the recommended techniques for [testing smart contracts](/developers/docs/smart-contracts/testing/) and improving [smart contract security](/developers/docs/smart-contracts/security/). Formal verification involves testing a program (a smart contract in this case) to ensure it behaves as expected during execution.
 
 ## What is formal verification? {#what-is-formal-verification}
 
-Reliability is a highly desired quality of smart contracts, and both users and developers want assurances that a smart contract will work as intended. This is important because code in the [Ethereum Virtual Machine (EVM)](/developers/docs/evm/) is immutable, which rules out the possibility of fixing bugs or retrieving funds lost to malicious attacks.
+Formal verification is used to evaluate the _correctness_ of software programs and confirm compliance with predefined specifications using formal methods of mathematics. [More on formal verification](https://en.wikipedia.org/wiki/Formal_verification).
 
-Formal verification is used to evaluate the *correctness* of software programs and confirm compliance with predefined specifications. In the context of Ethereum, formal verification can prove that a smart contract will only implement the desired business logic.
+In the context of Ethereum, formal verification can prove that a smart contract will only implement the desired business logic.
 
 ### Why formal verification is necessary {#why-formal-verification-is-necessary}
 
@@ -32,7 +31,7 @@ Formal verification of Ethereum smart contracts can either be executed at the la
 
 ### High-level verification {#high-level-verification}
 
-Source code for Ethereum smart contracts is usually [written in high-level programming languages](/developers/docs/smart-contracts/languages/), such as Solidity, Vyper, or Yul. The source code defines the business logic, which determines how users can interact with the contract and how the contrant should behave in response to certain inputs. 
+Source code for Ethereum smart contracts is usually [written in high-level programming languages](/developers/docs/smart-contracts/languages/), such as Solidity, Vyper, or Yul. The source code defines the business logic, which determines how users can interact with the contract and how the contrant should behave in response to certain inputs.
 
 Formal verification can help verify the correctness of a contract's source code. This requires transforming the business logic into a set of formalized, high-level specifications. These specifications must adequately and comprehensively express the desired functionality of the smart contract.
 
@@ -78,43 +77,43 @@ Formal verification can only check if the execution of the smart contract matche
 
 ### Creating formal specifications {#creating-formal-specifications}
 
-**Act - *High-level specification language for defining properties for EVM smart contracts.***
+**Act - _High-level specification language for defining properties for EVM smart contracts._**
 
 - [GitHub](https://github.com/ethereum/act)
 - [Documentation](https://ethereum.github.io/act/)
 
-**Scribble -** ***A specification language tool for translating high-level specifications into Solidity code.***
+**Scribble -** **_A specification language tool for translating high-level specifications into Solidity code._**
 
 - [Website](https://consensys.net/diligence/scribble/)
 - [Documentation](https://docs.scribble.codes/language/introduction)
 
 ### Fuzzing smart contracts {#fuzzing-smart-contracts}
 
-**Echidna - *A fast contract fuzzer for detecting vulnerabilities in smart contracts through property-based testing.***
+**Echidna - _A fast contract fuzzer for detecting vulnerabilities in smart contracts through property-based testing._**
 
 - [GitHub](https://github.com/crytic/echidna/)
 
-**Harvey - *Automated fuzzing tool useful for detecting property violations in smart contract code.***
+**Harvey - _Automated fuzzing tool useful for detecting property violations in smart contract code._**
 
 - [Website](https://consensys.net/diligence/fuzzing/)
 
 ### Code analysis {#code-analysis}
 
-**Oyente - *Static analysis tool for analyzing vulnerabilities in EVM bytecode with symbolic execution.***
+**Oyente - _Static analysis tool for analyzing vulnerabilities in EVM bytecode with symbolic execution._**
 
 - [GitHub](https://github.com/melonproject/oyente)
 
-**Mythril - *EVM bytecode assessment tool for detecting contract vulnerabilities using taint analysis, concolic analysis, and control flow checking.***
+**Mythril - _EVM bytecode assessment tool for detecting contract vulnerabilities using taint analysis, concolic analysis, and control flow checking._**
 
 - [GitHub](https://github.com/ConsenSys/mythril-classic)
 - [Documentation](https://mythril-classic.readthedocs.io/en/master/about.html)
 
-**Manticore *- A tool for analyzing EVM bytecode analysis tool based on symbolic execution.***
+**Manticore _- A tool for analyzing EVM bytecode analysis tool based on symbolic execution._**
 
 - [GitHub](https://github.com/trailofbits/manticore)
 - [Documentation](https://github.com/trailofbits/manticore/wiki)
 
-**Securify** ***- A security analyzer for analyzing Solidity source code in Ethereum smart contracts and detecting property violations.***
+**Securify** **_- A security analyzer for analyzing Solidity source code in Ethereum smart contracts and detecting property violations._**
 
 ## Further reading {#further-reading}
 
