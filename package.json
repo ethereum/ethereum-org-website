@@ -67,6 +67,7 @@
     "unist-util-visit-parents": "^2.1.2"
   },
   "devDependencies": {
+    "@netlify/functions": "^1.0.0",
     "@types/node": "^17.0.23",
     "@types/react": "^17.0.39",
     "@types/react-dom": "^17.0.11",
