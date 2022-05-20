@@ -73,7 +73,7 @@ A proof-of-authority testnet for those running OpenEthereum clients.
 - [Chainlink faucet](https://faucets.chain.link/)
 - [Paradigm faucet](https://faucet.paradigm.xyz/)
 
-#### Optimisic Kovan {#optimistic-kovan}
+#### Optimistic Kovan {#optimistic-kovan}
 
 A testnet for [Optimism](https://www.optimism.io/).
 
