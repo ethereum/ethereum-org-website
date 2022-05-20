@@ -8,13 +8,13 @@ sidebar: true
 
 ## A brief introduction {#introduction-to-formal-verification}
 
-[Smart contracts]([/smart-contracts/](/developers/docs/smart-contracts/)) are making it possible to create decentralized, trustless, and robust applications that introduce new use-cases and unlock value for users. Because smart contracts handle large amounts of value, security is a critical consideration for developers.
+[Smart contracts](/developers/docs/smart-contracts/) are making it possible to create decentralized, trustless, and robust applications that introduce new use-cases and unlock value for users. Because smart contracts handle large amounts of value, security is a critical consideration for developers.
 
-Formal verification is one of the recommended techniques for [testing smart contracts](/smart-contracts/testing/) and improving [smart contract security](/smart-contracts/security/). Formal verification involves testing a program (a smart contract in this case) to ensure it behaves as expected during execution.
+Formal verification is one of the recommended techniques for [testing smart contracts](/developers/docs/smart-contracts/testing/) and improving [smart contract security](/developers/docs/smart-contracts/security/). Formal verification involves testing a program (a smart contract in this case) to ensure it behaves as expected during execution.
 
 ## What is formal verification? {#what-is-formal-verification}
 
-Reliability is a highly desired quality of smart contracts, and both users and developers want assurances that a smart contract will work as intended. This is important because code in the [Ethereum Virtual Machine (EVM)](/evm/) is immutable, which rules out the possibility of fixing bugs or retrieving funds lost to malicious attacks.
+Reliability is a highly desired quality of smart contracts, and both users and developers want assurances that a smart contract will work as intended. This is important because code in the [Ethereum Virtual Machine (EVM)](/developers/docs/evm/) is immutable, which rules out the possibility of fixing bugs or retrieving funds lost to malicious attacks.
 
 Formal verification is used to evaluate the *correctness* of software programs and confirm compliance with predefined specifications. In the context of Ethereum, formal verification can prove that a smart contract will only implement the desired business logic.
 
@@ -32,7 +32,7 @@ Formal verification of Ethereum smart contracts can either be executed at the la
 
 ### High-level verification {#high-level-verification}
 
-Source code for Ethereum smart contracts is usually [written in high-level programming languages]([/smart-contracts/languages/](https://ethereum.org/en/developers/docs/smart-contracts/languages/)), such as Solidity, Vyper, or Yul. The source code defines the business logic, which determines how users can interact with the contract and how the contrant should behave in response to certain inputs. 
+Source code for Ethereum smart contracts is usually [written in high-level programming languages](/developers/docs/smart-contracts/languages/), such as Solidity, Vyper, or Yul. The source code defines the business logic, which determines how users can interact with the contract and how the contrant should behave in response to certain inputs. 
 
 Formal verification can help verify the correctness of a contract's source code. This requires transforming the business logic into a set of formalized, high-level specifications. These specifications must adequately and comprehensively express the desired functionality of the smart contract.
 
