@@ -5,7 +5,7 @@ sidebar: true
 lang: en
 ---
 
-# Ethereum open areas of research
+# Open areas of Ethereum research
 
 One of the primary strengths of Ethereum is that it is constantly being improved by an active research and engineering community. There are many enthusiastic, skilled people worldwide that would like to apply themselves to outstanding issues in Ethereum, but it is not always easy to find out what those issues are. This page aims to outline some of the key areas of active research as a rough guide to Ethereum's cutting edge.
 
@@ -15,7 +15,7 @@ Regardless of the specific topic, there is a wealth of information on Ethereum r
 
 ## Scaling and Performance
 
-There are ongoing efforts to scale Ethereum using a variety of techniques including sharding the blockchain, danksharding and using rollups. Introductory information on scaling Ethereum is available on our [scaling page](https://ethereum.org/en/developers/docs/scaling).
+There are ongoing efforts to scale Ethereum using a variety of techniques including sharding the blockchain, danksharding and using rollups. Introductory information on scaling Ethereum is available on our [scaling page](/developers/docs/scaling).
 
 ### Layer 2
 
@@ -47,7 +47,7 @@ Sharding Ethereum's blockchain has long been part of the development roadmap. Ho
 
 #### Links
 
-[Our Sharding page](https://ethereum.org/en/develoeprs/docs/shard-chains)
+[Our Sharding page](/upgrades/shard-chains/)
 
 [Proto-Danksharding notes](https://notes.ethereum.org/@vbuterin/proto_danksharding_faq)
 
@@ -59,7 +59,7 @@ Sharding Ethereum's blockchain has long been part of the development roadmap. Ho
 
 ### Hardware
 
-Running nodes (see our [nodes page](https://ethereum.org/en/developers/docs/nodes-and-clients/run-a-node)) on modest hardware is fundamental to keeping Ethereum decentralized. Therefore, active research into minimizing the hardware requirements to run nodes is an important area of research.
+[Running nodes](/developers/docs/nodes-and-clients/run-a-node/) on modest hardware is fundamental to keeping Ethereum decentralized. Therefore, active research into minimizing the hardware requirements to run nodes is an important area of research.
 
 #### Links
 
