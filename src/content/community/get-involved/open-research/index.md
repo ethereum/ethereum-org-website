@@ -65,8 +65,6 @@ Sharding Ethereum's blockchain has long been part of the development roadmap. Ho
 
 [Ethereum on ARM](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/)
 
-[Ethresear.ch Scaling](https://ethresear.ch/c/sharding/6)
-
 
 ## Security
 
@@ -98,6 +96,8 @@ User-wallets can be browser extensions, desktop and mobile apps or smart contrac
 [ethresear.ch Security](https://ethresear.ch/tag/security)
 
 [EIP 2938 Account Abstraction](https://eips.ethereum.org/EIPS/eip-2938)
+
+[EIP 4337 Account Abstraction](https://eips.ethereum.org/EIPS/eip-4337)
 
 
 
@@ -144,6 +144,9 @@ Decentralized finance (DeFi) is one of the primary classes of application built 
 
 #### Links
 
+### Fee markets
+
+#### Links
 
 ### Taxation and accounting
 
