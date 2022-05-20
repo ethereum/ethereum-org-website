@@ -15,21 +15,23 @@ Regardless of the specific topic, there is a wealth of information on Ethereum r
 
 ## Scaling and Performance
 
+There are ongoing efforts to scale Ethereum using a variety of techniques including sharding the blockchain, danksharding and using rollups. Introductory information on scaling Ethereum is available on our [scaling page](https://ethereum.org/en/developers/docs/scaling).
+
 ### Layer 2
 
 There are now several Layer 2 protocols that scale Ethereum using different techniques for batching transactions and securing them on Ethereum layer 1. This is a very rapidly growing topic with a lot of research and development potential.
 
 ### Bridges
 
-One particular area of Layer-2 that requires more research and development is safe and performant bridges. This includes bridges between various Layer-2s and bridges between Layer 1 and Layer 2.
+One particular area of Layer-2 that requires more research and development is safe and performant bridges. This includes bridges between various Layer-2s and bridges between Layer 1 and Layer 2. Introductory information on bridges is available at our [bridges page](https://ethereum.org/en/developers/docs/bridges).
 
 ### Sharding
 
-Sharding Ethereum's blockchain has long been part of the development roadmap. However, new scaling solutions such as "Danksharding" are currently taking center stage.
+Sharding Ethereum's blockchain has long been part of the development roadmap. However, new scaling solutions such as "Danksharding" are currently taking center stage. Introductory information on sharding the Ethereum blockchain can be found on our [sharding page](https://ethereum.org/en/develoeprs/docs/shard-chains).
 
 ### Hardware
 
-Running nodes on modest hardware is fundamental to keeping Ethereum decentralized. Therefore, active research into minimizing the hardware requirements to run nodes is an important area of research.
+Running nodes (see our [nodes page](https://ethereum.org/en/developers/docs/nodes-and-clients/run-a-node)) on modest hardware is fundamental to keeping Ethereum decentralized. Therefore, active research into minimizing the hardware requirements to run nodes is an important area of research.
 
 ### Links to current research
 
@@ -50,6 +52,9 @@ Security is a broad topic that might include spam/scam prevention, wallet securi
 ### Cryptography & ZKP
 
 Zero-knowledge proofs (ZKP) and cryptography are critical for building privacy and security into Ethereum and its applications. Zero-knowledge is a relatively young but fast-moving space with many open research and development opportunities.
+
+#### Links
+[0xparc blog](https://0xparc.org/blog)
 
 ### Wallets
 
@@ -84,6 +89,9 @@ For Ethereum to onboard more people the UX/UI must be improved. This requires de
 
 There are complex crypto-economic factors relating to Ethereum's native asset (ether) and the tokens built on top of it (for example NFTs and ERC20 tokens).
 
+#### Links
+[Robust Incentives Group](https://ethereum.github.io/rig/)
+
 ### PoS incentives
 
 When Ethereum transitions to proof of stake, its native asset (ether) will be used as collateral by validators. The cryptoeconomics of this
@@ -109,8 +117,6 @@ Using Ethereum for everyday purchases is not common right now. This is because o
 [Ethresear.ch liquid staking](https://ethresear.ch/search?q=liquid%20staking)
 
 [Ethresear.ch Economics](https://ethresear.ch/c/economics/16)
-
-[Rotki crypto accounting](https://rotki.com/)
 
 ## Clients and Protocol Development
 
