@@ -53,6 +53,10 @@ Sharding Ethereum's blockchain has long been part of the development roadmap. Ho
 
 [Bankless Danksharding video](https://www.youtube.com/watch?v=N5p0TB77flM)
 
+[Ethereum Sharding Research Compendium](https://notes.ethereum.org/@serenity/H1PGqDhpm?type=view)
+
+[Danksharding (Polynya)](https://polynya.medium.com/danksharding-36dc0c8067fe)
+
 ### Hardware
 
 Running nodes (see our [nodes page](https://ethereum.org/en/developers/docs/nodes-and-clients/run-a-node)) on modest hardware is fundamental to keeping Ethereum decentralized. Therefore, active research into minimizing the hardware requirements to run nodes is an important area of research.
@@ -63,11 +67,6 @@ Running nodes (see our [nodes page](https://ethereum.org/en/developers/docs/node
 
 [Ethresear.ch Scaling](https://ethresear.ch/c/sharding/6)
 
-[Ethresear.ch Layer 2](https://ethresear.ch/c/layer-2/32)
-
-[Ethereum Sharding Research Compendium](https://notes.ethereum.org/@serenity/H1PGqDhpm?type=view)
-
-[Danksharding (Polynya)](https://polynya.medium.com/danksharding-36dc0c8067fe)
 
 ## Security
 
@@ -90,13 +89,15 @@ Zero-knowledge proofs (ZKP) and cryptography are critical for building privacy a
 
 ### Wallets
 
-User-wallets can be browser extensions, desktop and mobile apps or smart contracts on Ethereum. There is active research into social recovery wallets that reduce some of the risk associated with individual-user key management.
+User-wallets can be browser extensions, desktop and mobile apps or smart contracts on Ethereum. There is active research into social recovery wallets that reduce some of the risk associated with individual-user key management. Associated with dveelopment of wallets is research into alternative forms of account abstraction, which is an important area of nascent research.
 
 #### Links
 
 [Our Security page](https://ethereum.org/en/security/)
 
 [ethresear.ch Security](https://ethresear.ch/tag/security)
+
+[EIP 2938 Account Abstraction](https://eips.ethereum.org/EIPS/eip-2938)
 
 
 
@@ -111,6 +112,7 @@ For Ethereum to onboard more people the UX/UI must be improved. This requires de
 #### Links
 
 [Ethresear.ch UX/UI](https://ethresear.ch/c/ui-ux/24)
+
 [Ethereum.org community page](https://ethereum.org/en/learn/)
 
 ## Economics
