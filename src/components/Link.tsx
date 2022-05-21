@@ -77,6 +77,7 @@ export interface IProps {
 
 const Link: React.FC<IProps> = ({
   to,
+  dir = "ltr",
   href,
   children,
   hideArrow = false,
@@ -104,7 +105,7 @@ const Link: React.FC<IProps> = ({
   // See https://github.com/gatsbyjs/gatsby/issues/21909
   if (isHash) {
     return (
-      <a className={className} href={to} aria-label={ariaLabel}>
+      <a dir={dir} className={className} href={to} aria-label={ariaLabel}>
         {children}
       </a>
     )
@@ -135,6 +136,7 @@ const Link: React.FC<IProps> = ({
   if (isExternal) {
     return hideArrow ? (
       <a
+        dir={dir}
         className={className}
         href={to}
         target="_blank"
@@ -150,6 +152,7 @@ const Link: React.FC<IProps> = ({
       </a>
     ) : (
       <ExternalLink
+        dir={dir}
         className={className}
         href={to}
         target="_blank"
@@ -171,6 +174,7 @@ const Link: React.FC<IProps> = ({
   if (Object.keys(languageMetadata).includes(langPath)) {
     return (
       <ExplicitLangInternalLink
+        dir={dir}
         className={className}
         to={to}
         activeClassName="active"
@@ -186,6 +190,7 @@ const Link: React.FC<IProps> = ({
   if (isPdf && !isExternal) {
     return (
       <a
+        dir={dir}
         href={to}
         target="_blank"
         rel="noopener noreferrer"
@@ -199,6 +204,7 @@ const Link: React.FC<IProps> = ({
   // Use `gatsby-plugin-intl` Link (which prepends lang path)
   return (
     <InternalLink
+      dir={dir}
       className={isGlossary ? `is-glossary ${className}` : className}
       to={to}
       activeClassName="active"
