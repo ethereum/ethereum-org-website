@@ -64,6 +64,7 @@ const GlossaryIcon = styled(Icon)`
 
 const Link = ({
   to,
+  dir = "ltr",
   href,
   children,
   hideArrow = false,
@@ -87,7 +88,7 @@ const Link = ({
   // See https://github.com/gatsbyjs/gatsby/issues/21909
   if (isHash) {
     return (
-      <a className={className} href={to} aria-label={ariaLabel}>
+      <a dir={dir} className={className} href={to} aria-label={ariaLabel}>
         {children}
       </a>
     )
@@ -118,6 +119,7 @@ const Link = ({
   if (isExternal) {
     return hideArrow ? (
       <a
+        dir={dir}
         className={className}
         href={to}
         target="_blank"
@@ -133,6 +135,7 @@ const Link = ({
       </a>
     ) : (
       <ExternalLink
+        dir={dir}
         className={className}
         href={to}
         target="_blank"
@@ -154,6 +157,7 @@ const Link = ({
   if (Object.keys(languageMetadata).includes(langPath)) {
     return (
       <ExplicitLangInternalLink
+        dir={dir}
         className={className}
         to={to}
         activeClassName="active"
@@ -169,6 +173,7 @@ const Link = ({
   if (isPdf && !isExternal) {
     return (
       <a
+        dir={dir}
         href={to}
         target="_blank"
         rel="noopener noreferrer"
@@ -182,6 +187,7 @@ const Link = ({
   // Use `gatsby-plugin-intl` Link (which prepends lang path)
   return (
     <InternalLink
+      dir={dir}
       className={isGlossary ? `is-glossary ${className}` : className}
       to={to}
       activeClassName="active"
