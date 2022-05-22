@@ -31,7 +31,7 @@ Formal verification of Ethereum smart contracts can either be executed at the la
 
 ### High-level verification {#high-level-verification}
 
-Source code for Ethereum smart contracts is usually [written in high-level programming languages](/developers/docs/smart-contracts/languages/), such as Solidity, Vyper, or Yul. The source code defines the business logic, which determines how users can interact with the contract and how the contrant should behave in response to certain inputs.
+Source code for Ethereum smart contracts is usually [written in high-level programming languages](/developers/docs/smart-contracts/languages/), such as Solidity, Vyper, or Yul. The source code defines the business logic, which determines how users can interact with the contract and how the contract should behave in response to certain inputs.
 
 Formal verification can help verify the correctness of a contract's source code. This requires transforming the business logic into a set of formalized, high-level specifications. These specifications must adequately and comprehensively express the desired functionality of the smart contract.
 
