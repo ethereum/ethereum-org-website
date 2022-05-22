@@ -23,7 +23,9 @@ While manual code audits are great, human auditors cannot possibly cover every p
 
 Formal verification is grounded in [formal methods](https://en.wikipedia.org/wiki/Formal_methods), which use mathematically rigorous methods for specifying, developing, and verifying software. Formal verification allows developers to mathematically model software programs and create formalized specifications, making testing more precise and robust.
 
-Specifications are properties or used to describe the intended behavior of a smart contract. Formal verification can prove that a contract behaves exactly as described in the specification. Unlike testing based on informal assumptions, formal verification provides mathematical proof of a smart contract's correctness.
+Specifications are a collection of properties used to describe the intended behavior of a smart contract. Formal verification can prove that a contract behaves exactly as described in the specification. Unlike testing based on informal assumptions, formal verification provides mathematical proof of a smart contract's correctness.
+
+Formal verification is critical for smart contracts because minor vulnerabilities can lead to massive losses. For example, the [Parity Multisig wallet hack](https://www.freecodecamp.org/news/a-hacker-stole-31m-of-ether-how-it-happened-and-what-it-means-for-ethereum-9e5dc29e33ce/amp/) was the result of an unintended function that allowed the hacker to override owner settings and drain the contract of up to $31 million in ETH. 
 
 ## How does formal verification work? {#how-does-formal-verification-work}
 
@@ -114,6 +116,15 @@ Formal verification can only check if the execution of the smart contract matche
 - [Documentation](https://github.com/trailofbits/manticore/wiki)
 
 **Securify** **_- A security analyzer for analyzing Solidity source code in Ethereum smart contracts and detecting property violations._**
+- [GitHub](https://github.com/eth-sri/securify2)
+
+### Formal verification projects in Ethereum {#formal-verification-projects-in-ethereum}
+**hevm - _An implementation of the Ethereum virtual machine (EVM) made specifically for symbolic execution, unit testing and debugging of smart contracts._**
+- [GitHub](https://github.com/dapphub/dapptools/tree/master/src/hevm)
+
+**KEVM - _A correct-by-construction implementation of the Ethereum Virtual Machine (EVM) specified in the K Framework for implementing formal verification._**
+- [GitHub](https://github.com/runtimeverification/evm-semantics)
+- [Documentation](https://jellopaper.org/)
 
 ## Further reading {#further-reading}
 
