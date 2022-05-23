@@ -1,14 +1,19 @@
+// Libraries
 import React, { useState, createRef } from "react"
 import styled from "styled-components"
 import { useIntl } from "gatsby-plugin-intl"
 import { motion } from "framer-motion"
 
+// Components
 import Icon from "./Icon"
 import Link from "./Link"
 import Translation from "./Translation"
 import { ButtonSecondary } from "./SharedStyledComponents"
+
+// Utils
 import { useOnClickOutside } from "../hooks/useOnClickOutside"
 import { translateMessageId } from "../utils/translations"
+import { trackCustomEvent } from "../utils/matomo"
 
 const Container = styled.div`
   position: relative;
@@ -97,6 +102,17 @@ const NavLink = styled(Link)`
   }
 `
 
+const NakedNavLink = styled.div`
+  text-decoration: none;
+  display: block;
+  padding: 0.5rem;
+  color: ${(props) => props.theme.colors.text};
+  cursor: pointer;
+  &:hover {
+    color: ${(props) => props.theme.colors.primary};
+  }
+`
+
 const ButtonDropdown = ({ list, className }) => {
   const [isOpen, setIsOpen] = useState(false)
   const intl = useIntl()
@@ -130,11 +146,30 @@ const ButtonDropdown = ({ list, className }) => {
         variants={listVariants}
         initial="closed"
       >
-        {list.items.map((item, idx) => (
+        {list.items.map(({ text, to, matomo, callback }, idx) => (
           <DropdownItem key={idx} onClick={() => setIsOpen(false)}>
-            <NavLink to={item.to} tabIndex="-1">
-              <Translation id={item.text} />
-            </NavLink>
+            {!!to && !!matomo && (
+              <NavLink
+                isPartiallyActive={false}
+                onClick={() => {
+                  trackCustomEvent(matomo)
+                }}
+                to={to}
+                tabIndex="-1"
+              >
+                <Translation id={text} />
+              </NavLink>
+            )}
+            {!!to && !matomo && (
+              <NavLink isPartiallyActive={false} to={to} tabIndex="-1">
+                <Translation id={text} />
+              </NavLink>
+            )}
+            {!!callback && (
+              <NakedNavLink onClick={() => callback(idx)}>
+                <Translation id={text} />
+              </NakedNavLink>
+            )}
           </DropdownItem>
         ))}
       </DropdownList>

@@ -16,7 +16,7 @@ sidebarDepth: 3
 
 - [Etherscan](https://etherscan.io/) – _中文、韩文、俄文和日文_
 - [Etherchain](https://www.etherchain.org/)
-- [Ethplorer](https://ethplorer.io/) -_ 支持中文、西班牙语、法语、土耳其语和俄语_
+- [Ethplorer](https://ethplorer.io/) -_ 支持中文、西班牙语、法语、土耳其语、俄语、韩语和越南语_
 - [Blockchair](https://blockchair.com/ethereum) --_也有西班牙文、法文、意大利文、荷兰文、葡萄牙文、俄文、中文和波斯文_
 - [Blockscout--区块链浏览器](https://blockscout.com/)
 - [OKLink](https://www.oklink.com/eth)
@@ -128,7 +128,7 @@ sidebarDepth: 3
 
 - 类型 – 它们是 ERC-20、ERC-721 或其他代币标准。
 - 价格 – 如果是 ERC-20，它们将具有当前的市场价值。
-- 市值 – 如果它们是 ERC-20，则将具有市值（由价格\*总供应量计算）。
+- 市值 – 如果它们是 ERC-20，则将具有市值（由价格\ \*总供应量计算）。
 - 总供应量 – 流通的代币数量。
 - 持有人 – 持有代币的地址数。
 - 转账 – 代币在帐户之间转账的次数。
@@ -138,7 +138,7 @@ sidebarDepth: 3
 
 ### 网络 {#network}
 
-当然，有些数据说明了网络的健康状况。 这些是专门针对以太坊的工作量证明共识机制的。 当以太坊向 E2 过渡时，其中一些数据将是多余的
+当然，有些数据说明了网络的健康状况。 这些是专门针对以太坊的工作量证明共识机制的。 当以太坊过渡到权益证明阶段时，某些数据将冗余
 
 - 难度 – 当前的采矿难度。
 - 哈希率 – 对试图解决当前以太坊区块或任何给定区块的以太坊矿工正在生成多少哈希的估计。
@@ -146,20 +146,20 @@ sidebarDepth: 3
 - 每秒交易数 – 每秒钟内可处理的交易次数。
 - ETH 价格 – 1 ETH 的当前价值。
 - 以太坊总供应量 – 流通中的以太坊数量 – 请记住，以区块奖励的形式创建每个区块都会创建新的 ETH。
-- 市值 – 以价格\*供应量计算。
+- 市值 – 以价格\ \*供应量计算。
 
-## Eth2 数据 {#consensus-layer-data}
+## 共识层数据 {#consensus-layer-data}
 
-Eth2 升级仍在开发中，但值得探讨区块浏览器能够为您提供的一些数据点。 事实上，所有这些数据现在都可用于测试网。
+以太坊扩容升级仍在开发中，但区块浏览器为您提供的数据点值得一看。 事实上，所有这些数据现在都可用于测试网。
 
-如果您不熟悉 Eth2，请查看[我们 Eth2 升级概述](/upgrades/) 。
+如果您不熟悉以太坊共识层路线图，请查看[以太坊升级概述](/upgrades/) 。
 
 ### Epoch {#epoch}
 
-第一个 Eth2 升级，即信标链，将创建验证委员会，出于安全考虑，验证者将在每个 epoch 结束后挑选出（每 6.4 分钟）。 Epoch 数据包含：
+信标链将创建多个验证委员会。出于安全考虑，在每个周期（每 6.4 分钟）结束时会随机分配验证者到委员会中。 Epoch 数据包含：
 
 - Epoch 号：
-- 最终状态 - epoch 是否已完成（是/否）。
+- 最终状态 – 周期是否完成（是/否）。
 - 时间 - epoch 结束的时间。
 - 区块认证 - epoch 中的区块认证次数（slot 内区块的投票）。
 - 存款 - 特定 epoch 包含的 ETH 存款的数量（验证者必须质押 ETH 才能成为验证者）。
@@ -184,7 +184,7 @@ Slot 是区块创建的机会，每个 slot 可用的数据包括：
 - 签名。
 - Randao reveal。
 - Graffiti - 区块提议者可以在其区块提议中包含 32 个字节长的消息。
-- ETH1 数据。
+- 执行数据。
   - 区块哈希。
   - 存款余额。
   - 存款根。
@@ -196,7 +196,7 @@ Slot 是区块创建的机会，每个 slot 可用的数据包括：
 
 ### 区块 {#blocks-1}
 
-在 Eth2 中，区块的工作方式不同，因为矿工被验证者取代，而信标链将 Slot 和 Epoch 引入了以太坊。 这意味着新的数据！
+在共识层中，区块的工作方式不同，因为矿工被验证者取代，而信标链将时隙和周期引入了以太坊。 这意味着新的数据！
 
 - 提议者 - 在算法上选择提议新区块的验证者。
 - Epoch - 提出该区块的 Epoch。
@@ -234,7 +234,7 @@ Slot 是区块创建的机会，每个 slot 可用的数据包括：
 
 ### 网络 {#network-1}
 
-Eth2 顶级数据包括以下内容：
+共识层顶级数据包括以下内容：
 
 - 当前 epoch。
 - 当前 Slot。
@@ -257,11 +257,10 @@ Eth2 顶级数据包括以下内容：
 - [Ethplorer](https://ethplorer.io/) - 一个专注于以太坊主网和 Kovan 测试网上代币信息的区块浏览器。
 - [Blockchair](https://blockchair.com/ethereum) - 最具隐私保护的以太坊浏览器。 也用于排序和过滤（内存池）数据。
 
-## Eth2 区块浏览器 {#beacon-chain-block-explorers}
+## 信标链（共识层）区块浏览器 {#beacon-chain-block-explorers}
 
 - [https://beaconcha.in/](https://beaconcha.in/)
 - [https://beaconscan.com/](https://beaconscan.com/)
-- [https://eth2stats.io/](https://eth2stats.io/medalla-testnet)
 - [https://ethscan.org/](https://ethscan.org/)（beaconcha.in 的分叉）
 
 ## 延伸阅读 {#further-reading}
@@ -270,7 +269,7 @@ _还有哪些社区资源对您有所帮助？ 编辑并添加本页面！_
 
 ## 相关主题 {#related-topics}
 
-- [采矿](/developers/docs/consensus-mechanisms/pow/mining/)
+- [挖矿](/developers/docs/consensus-mechanisms/pow/mining/)
 - [交易](/developers/docs/transactions/)
 - [帐户](/developers/docs/accounts/)
 - [网络](/developers/docs/networks/)

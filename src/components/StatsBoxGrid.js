@@ -10,8 +10,14 @@ import Tooltip from "./Tooltip"
 import Link from "./Link"
 import Icon from "./Icon"
 
-import { isLangRightToLeft, translateMessageId } from "../utils/translations"
+import {
+  isLangRightToLeft,
+  translateMessageId,
+  getLocaleForNumberFormat,
+} from "../utils/translations"
 import { getData } from "../utils/cache"
+
+import { GATSBY_FUNCTIONS_PATH } from "../constants"
 
 const Value = styled.span`
   position: absolute;
@@ -259,6 +265,8 @@ const RangeSelector = ({ state, setState }) => (
 
 const StatsBoxGrid = () => {
   const intl = useIntl()
+  const localeForStatsBoxNumbers = getLocaleForNumberFormat(intl.locale)
+
   const [ethPrices, setEthPrices] = useState({
     data: [],
     value: 0,
@@ -286,7 +294,7 @@ const StatsBoxGrid = () => {
 
   useEffect(() => {
     const formatPrice = (price) => {
-      return new Intl.NumberFormat(intl.locale, {
+      return new Intl.NumberFormat(localeForStatsBoxNumbers, {
         style: "currency",
         currency: "USD",
         minimumSignificantDigits: 3,
@@ -295,7 +303,7 @@ const StatsBoxGrid = () => {
     }
 
     const formatTVL = (tvl) => {
-      return new Intl.NumberFormat(intl.locale, {
+      return new Intl.NumberFormat(localeForStatsBoxNumbers, {
         style: "currency",
         currency: "USD",
         notation: "compact",
@@ -305,7 +313,7 @@ const StatsBoxGrid = () => {
     }
 
     const formatTxs = (txs) => {
-      return new Intl.NumberFormat(intl.locale, {
+      return new Intl.NumberFormat(localeForStatsBoxNumbers, {
         notation: "compact",
         minimumSignificantDigits: 3,
         maximumSignificantDigits: 4,
@@ -313,7 +321,7 @@ const StatsBoxGrid = () => {
     }
 
     const formatNodes = (nodes) => {
-      return new Intl.NumberFormat(intl.locale, {
+      return new Intl.NumberFormat(localeForStatsBoxNumbers, {
         minimumSignificantDigits: 3,
         maximumSignificantDigits: 4,
       }).format(nodes)
@@ -349,11 +357,7 @@ const StatsBoxGrid = () => {
 
     const fetchNodes = async () => {
       try {
-        const { result } = await getData(
-          process.env.NODE_ENV === "production"
-            ? `${process.env.GATSBY_FUNCTIONS_PATH}/etherscan`
-            : "http://localhost:9000/etherscan"
-        )
+        const { result } = await getData(`${GATSBY_FUNCTIONS_PATH}/etherscan`)
         const data = result
           .map(({ UTCDate, TotalNodeCount }) => ({
             timestamp: new Date(UTCDate).getTime(),
@@ -378,11 +382,7 @@ const StatsBoxGrid = () => {
 
     const fetchTotalValueLocked = async () => {
       try {
-        const response = await getData(
-          process.env.NODE_ENV === "production"
-            ? `${process.env.GATSBY_FUNCTIONS_PATH}/defipulse`
-            : "http://localhost:9000/defipulse"
-        )
+        const response = await getData(`${GATSBY_FUNCTIONS_PATH}/defipulse`)
         const data = response
           .map(({ date, totalLiquidityUSD }) => ({
             timestamp: parseInt(date) * 1000,
@@ -408,9 +408,7 @@ const StatsBoxGrid = () => {
     const fetchTxCount = async () => {
       try {
         const response = await getData(
-          process.env.NODE_ENV === "production"
-            ? `${process.env.GATSBY_FUNCTIONS_PATH}/txs`
-            : "http://localhost:9000/txs"
+          `${process.env.GATSBY_FUNCTIONS_PATH}/txs`
         )
         const data = response.result
           .map(({ unixTimeStamp, transactionCount }) => ({

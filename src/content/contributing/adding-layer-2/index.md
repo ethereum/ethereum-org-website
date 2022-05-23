@@ -15,8 +15,7 @@ We currently list L2s on the following pages:
 
 - [Optimistic rollups](/developers/docs/scaling/optimistic-rollups/)
 - [Zero-knowledge rollups](/developers/docs/scaling/zk-rollups/)
-- [State channels](/developers/docs/scaling/state-channels/)
-<!-- TODO: Add layer-2 page -->
+- [Layer 2](/layer-2/)
 
 Layer 2 is a relatively new and exciting paradigm for Ethereum. We've tried to create a fair framework for consideration on ethereum.org but the listing criteria will change and evolve over time.
 
@@ -39,9 +38,12 @@ We currently consider the following to be layer 2 solutions:
 
 - Optimistic rollup
 - Zero-knowledge rollup
-- State channel
 
-_We do not consider other scaling solutions to be layer 2._
+_We do not consider other scaling solutions that don't use Ethereum for data availability or security to be layer 2._
+
+**Ethereum for data availability**
+
+- Data availability is an important differentiating factor between other scaling solutions and layer 2. A project **must** use Ethereum Mainnet for data availability to be considered for listing.
 
 **Bridges**
 

@@ -1,4 +1,7 @@
 {
+  "page-get-eth-article-keeping-crypto-safe": "Funguo za kuweka crypto salama yako",
+  "page-get-eth-article-protecting-yourself": "Jihadhari wewe mwenyewe na fedha zako",
+  "page-get-eth-article-store-digital-assets": "Jinsi ya kuhifadhi mali ya dijiti kwenye Ethereum",
   "page-get-eth-cex": "Sehemu za kufanya mabadilishano ambazo hazijagatuliwa",
   "page-get-eth-cex-desc": "SEhemu za kufanyia mabadilishano ni sehemu za biashara ambazo hukuruhusu kununua kripto kwa kutumia fedha za jadi. Zina ulinzi wa fedhazako zote mpaka pale utakapozituma kwenda kwenye pochi ya Ethereum amabayo utakua unaidhibiti.",
   "page-get-eth-checkout-dapps-btn": "Anagalia dapps",
@@ -21,6 +24,7 @@
   "page-get-eth-exchanges-no-exchanges": "Samahani, hatujui sehemu ya mabadilishano itakayokuruhusu kununua ETH kwenye nchi hii. Kama unajua, tujulishe kupitia",
   "page-get-eth-exchanges-no-exchanges-or-wallets": "Samahani, hatujui sehemu ya mabadilishano au pochi itakayokuruhusu kununua ETH kwenye nchi hii. Kama unajua, tujulishe kupitia",
   "page-get-eth-exchanges-no-wallets": "Samahani, hatujui sehemu ya mabadilishano au pochi itakayokuruhusu kununua ETH kwenye nchi hii. Kama unajua, tujulishe kupitia",
+  "page-get-eth-exchanges-search": "Andika unapoishi...",
   "page-get-eth-exchanges-success-exchange": "Inaweza kuchukua siku kadhaa kujisajili na sehemu za mabalishano kwasababu ya ukaguzi wa kisheria.",
   "page-get-eth-exchanges-success-wallet-link": "pochi",
   "page-get-eth-exchanges-success-wallet-paragraph": "Unapoishi, unaweza kununua ETH moja kwa moja kwa kutumia pochi hizi. Jifunze zaidi kuhusu",

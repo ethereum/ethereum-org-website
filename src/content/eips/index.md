@@ -25,16 +25,24 @@ Along with providing a technical specification for changes, EIPs are the unit ar
 
 The [Ethereum Improvement Proposals (EIPs) GitHub repository](https://github.com/ethereum/EIPs) was created in October 2015. The EIP process is based on the [Bitcoin Improvement Proposals (BIPs)](https://github.com/bitcoin/bips) process, which itself is based on the [Python Enhancement Proposals (PEPs)](https://www.python.org/dev/peps/) process.
 
-EIP editors are tasked with process of reviewing EIPs for technical soundness, correct spelling/grammar, and code style. Martin Becze, Vitalik Buterin, Gavin Wood, and a few others were the original EIP editors from 2015 to late 2016. The current EIP editors are:
+EIP editors are tasked with process of reviewing EIPs for technical soundness, correct spelling/grammar, and code style. Martin Becze, Vitalik Buterin, Gavin Wood, and a few others were the original EIP editors from 2015 to late 2016.
 
-- Alex Beregszaszi (EWASM/Ethereum Foundation)
-- Greg Colvin (Community)
-- Casey Detrio (EWASM/Ethereum Foundation)
-- Matt Garnett (Quilt)
-- Hudson James (Ethereum Foundation)
-- Nick Johnson (ENS)
-- Nick Savers (Community)
-- Micah Zoltu (Community)
+The current EIP editors are:
+
+- Alex Beregszaszi (@axic)
+- Matt Garnett (@lightclient)
+- Micah Zoltu (@MicahZoltu)
+- Greg Colvin (@gcolvin)
+- Sam Wilson (@SamWilsn)
+
+Retired EIP editors are:
+
+- Casey Detrio (@cdetrio)
+- Nick Johnson (@arachnid)
+- Vitalik Buterin (@vbuterin)
+- Hudson Jameson (@Souptacular)
+- Nick Savers (@nicksavers)
+- Martin Becze (@wanderer)
 
 EIP editors alongside with community members of [Ethereum Cat Herders](https://ethereumcatherders.com/) and [Ethereum Magicians](https://ethereum-magicians.org/) are deciding which EIP gets implemented, are responsible for facilitation of EIPs as well as moving the EIPs to "Final" or "Withdrawn" stage.
 

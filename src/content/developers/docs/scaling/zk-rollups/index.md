@@ -9,6 +9,8 @@ sidebar: true
 
 You should have a good understanding of all the foundational topics and a high-level understanding of [Ethereum scaling](/developers/docs/scaling/). Implementing scaling solutions such as rollups is an advanced topic as the technology is less battle-tested and continues to be researched and developed.
 
+Looking for a more beginner-friendly resource? See our [introduction to layer 2](/layer-2/).
+
 ## Zero-knowledge rollups {#zk-rollups}
 
 **Zero-knowledge rollups (ZK-rollups)** bundle (or "roll-up") hundreds of transfers off-chain and generate a cryptographic proof. These proofs can come in the form of SNARKs (succinct non-interactive argument of knowledge) or STARKs (scalable transparent argument of knowledge). SNARKs and STARKs are known as validity proofs and get posted to layer 1.
@@ -21,11 +23,11 @@ Being on layer 2, ZK-rollups can be optimised to reduce transaction size further
 
 ### Pros and cons {#zk-pros-and-cons}
 
-| Pros                                                                                                              | Cons                                                                                                  |
-| ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| Faster finality time since the state is instantly verified once the proofs are sent to the main chain.            | Some don't have EVM support.                                                                          |
-| Not vulnerable to the economic attacks that [Optimistic rollups](#optimistic-pros-and-cons) can be vulnerable to. | Validity proofs are intense to compute – not worth it for applications with little on-chain activity. |
-| Secure and decentralized, since the data that is needed to recover the state is stored on the layer 1 chain.      | An operator can influence transaction ordering                                                        |
+| Pros                                                                                                                                                          | Cons                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| Faster finality time since the state is instantly verified once the proofs are sent to the main chain.                                                        | Some don't have EVM support.                                                                          |
+| Not vulnerable to the economic attacks that [Optimistic rollups](/developers/docs/scaling/optimistic-rollups/#optimistic-pros-and-cons) can be vulnerable to. | Validity proofs are intense to compute – not worth it for applications with little on-chain activity. |
+| Secure and decentralized, since the data that is needed to recover the state is stored on the layer 1 chain.                                                  | An operator can influence transaction ordering.                                                       |
 
 ### A visual explanation of ZK-rollups {#zk-video}
 
@@ -43,4 +45,5 @@ Multiple implementations of ZK-rollups exist that you can integrate into your da
 
 - [What Are Zero-Knowledge Rollups?](https://coinmarketcap.com/alexandria/glossary/zero-knowledge-rollups)
 - [EthHub on zk-rollups](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/zk-rollups/)
-- [STARKs vs SNARKs] (https://consensys.net/blog/blockchain-explained/zero-knowledge-proofs-starks-vs-snarks/)
+- [STARKs vs SNARKs](https://consensys.net/blog/blockchain-explained/zero-knowledge-proofs-starks-vs-snarks/)
+- [More on layer 2](/layer-2/)

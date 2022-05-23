@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react"
 import styled from "styled-components"
 import axios from "axios"
-import { FakeLinkExternal } from "./SharedStyledComponents"
+
+import { FakeLinkExternal, CardItem } from "./SharedStyledComponents"
 import Translation from "./Translation"
-import { CardItem } from "./SharedStyledComponents"
+
+import { GATSBY_FUNCTIONS_PATH } from "../constants"
 
 const LangContainer = styled.div`
   margin-bottom: 2rem;
@@ -19,11 +21,7 @@ const TranslationsInProgress = () => {
 
   useEffect(() => {
     axios
-      .get(
-        process.env.NODE_ENV === "production"
-          ? `${process.env.GATSBY_FUNCTIONS_PATH}/translations`
-          : "http://localhost:9000/translations"
-      )
+      .get(`${GATSBY_FUNCTIONS_PATH}/translations`)
       .then((response) => {
         let languages = []
         if (response.data && response.data.data) {

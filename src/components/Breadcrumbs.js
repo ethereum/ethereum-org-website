@@ -3,30 +3,30 @@ import styled from "styled-components"
 import { useIntl } from "gatsby-plugin-intl"
 
 import Link from "./Link"
-import { translateMessageId, supportedLanguages } from "../utils/translations"
+import { supportedLanguages } from "../utils/languages"
+import { translateMessageId } from "../utils/translations"
 
-const Crumb = styled.h4`
-  margin: 0;
-  font-size: 0.875rem;
-  line-height: 140%;
-  letter-spacing: 0.04em;
-  font-weight: normal;
-`
-
-const List = styled.ul`
-  margin: 0;
+const ListContainer = styled.nav`
   margin-bottom: 2rem;
   list-style-type: none;
-  display: flex;
-  flex-wrap: wrap;
   /* Avoid header overlap: */
   position: relative;
   z-index: 1;
 `
 
+const List = styled.ol`
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+`
+
 const ListItem = styled.li`
   margin: 0;
   margin-right: 0.5rem;
+  font-size: 0.875rem;
+  line-height: 140%;
+  letter-spacing: 0.04em;
 `
 
 const Slash = styled.span`
@@ -60,7 +60,7 @@ const CrumbLink = styled(Link)`
 //   { fullPath: "/en/eth2/", text: "ETH2" },
 //   { fullPath: "/en/eth2/proof-of-stake/", text: "PROOF OF STAKE" },
 // ]
-const Breadcrumbs = ({ slug, startDepth = 0, className }) => {
+const Breadcrumbs = ({ slug, startDepth = 0, ...restProps }) => {
   const intl = useIntl()
 
   const split = slug.split("/")
@@ -79,10 +79,10 @@ const Breadcrumbs = ({ slug, startDepth = 0, className }) => {
   })
 
   return (
-    <List className={className} dir={"auto"}>
-      {crumbs.map((crumb, idx) => (
-        <ListItem key={idx}>
-          <Crumb>
+    <ListContainer aria-label="Breadcrumb" dir="auto" {...restProps}>
+      <List>
+        {crumbs.map((crumb, idx) => (
+          <ListItem key={idx}>
             <CrumbLink
               to={crumb.fullPath}
               isPartiallyActive={slug === crumb.fullPath}
@@ -90,10 +90,10 @@ const Breadcrumbs = ({ slug, startDepth = 0, className }) => {
               {crumb.text}
             </CrumbLink>
             {idx < crumbs.length - 1 && <Slash>/</Slash>}
-          </Crumb>
-        </ListItem>
-      ))}
-    </List>
+          </ListItem>
+        ))}
+      </List>
+    </ListContainer>
   )
 }
 

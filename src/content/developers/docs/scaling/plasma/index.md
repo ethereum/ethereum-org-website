@@ -15,12 +15,12 @@ You should have a good understanding of all the foundational topics and a high-l
 
 ## Pros and cons {#pros-and-cons}
 
-| Pros                                                                                                                  | Cons                                                                                                                                                                        |
-| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| High throughput, low cost per transaction.                                                                            | Does not support general computation. Only basic token transfers, swaps, and a few other transaction types are supported via predicate logic.                               |
-| Good for transactions between arbitrary users (no overhead per user pair if both are established on the plasma chain) | Need to periodically watch the network (liveness requirement) or delegate this responsibility to someone else to ensure the security of your funds.                         |
-|                                                                                                                       | Relies on one or more operators to store data and serve it upon request.                                                                                                    |
-|                                                                                                                       | Withdrawals are delayed by several days to allow for challenges. For fungible assets this can be mitigated by liquidity providers, but there is an associated capital cost. |
+| Pros                                                                                                                   | Cons                                                                                                                                                                        |
+| ---------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| High throughput, low cost per transaction.                                                                             | Does not support general computation. Only basic token transfers, swaps, and a few other transaction types are supported via predicate logic.                               |
+| Good for transactions between arbitrary users (no overhead per user pair if both are established on the plasma chain). | Need to periodically watch the network (liveness requirement) or delegate this responsibility to someone else to ensure the security of your funds.                         |
+|                                                                                                                        | Relies on one or more operators to store data and serve it upon request.                                                                                                    |
+|                                                                                                                        | Withdrawals are delayed by several days to allow for challenges. For fungible assets this can be mitigated by liquidity providers, but there is an associated capital cost. |
 
 ### Use Plasma {#use-plasma}
 

@@ -2,7 +2,10 @@
 title: Liniile directoare privind securitatea contractelor inteligente
 description: O listă de verificare a ghidurilor de securitate de luat în considerare la construirea aplicației dapp
 author: "Trailofbits"
-tags: ["solidity", "contracte inteligente", "securitate"]
+tags:
+  - "solidity"
+  - "contracte inteligente"
+  - "securitate"
 skill: intermediar
 lang: ro
 sidebar: true
@@ -74,7 +77,7 @@ Arhitectura bazei de coduri ar trebui să ușureze examinarea codului. Evită al
 
 - **Scrie folosind teste unitare de module.** O serie extinsă de teste este esențială pentru a construi software de înaltă calitate.
 - **Scrie controale și proprietăți personalizate cu [Slither](https://github.com/crytic/slither), [Echidna](https://github.com/crytic/echidna) și [Manticore](https://github.com/trailofbits/manticore).** Instrumentele automate vor contribui la garantarea securității contractului tău. Consultă restul acestui ghid pentru a afla cum să scrii eficient controale și proprietăți.
-- **Folosește [crytic.io](https://crytic.io/).** Critic se integrează cu GitHub, oferă acces la detectoarele Slither private și execută controale de proprietate personalizate din Echidna.
+- **Folosește [crytic.io](https://crytic.io/).** Critic se integrează cu Github, oferă acces la detectoarele Slither private și execută controale de proprietate personalizate din Echidna.
 
 ### Solidity {#solidity}
 

@@ -1,4 +1,7 @@
 {
+  "page-get-eth-article-keeping-crypto-safe": "Ключи для сохранения в безопасности вашей криптовалюты",
+  "page-get-eth-article-protecting-yourself": "Защита себя и своих средств",
+  "page-get-eth-article-store-digital-assets": "Способ хранения цифровых активов на Ethereum",
   "page-get-eth-cex": "Централизованные биржи",
   "page-get-eth-cex-desc": "Биржи - это компании, которые позволяют покупать криптовалюту за традиционную валюту. Они обладают контролем над любым купленным вами ETH, пока вы не отправите его на кошелек, контролируемый вами.",
   "page-get-eth-checkout-dapps-btn": "Просмотреть децентрализованные приложения",
@@ -21,6 +24,7 @@
   "page-get-eth-exchanges-no-exchanges": "К сожалению, нам неизвестны биржи, позволяющие купить ETH в этой стране. Если вы знаете, то сообщите нам на",
   "page-get-eth-exchanges-no-exchanges-or-wallets": "К сожалению, нам неизвестны биржи или кошельки, позволяющие купить ETH в этой стране. Если вы знаете, то сообщите нам на",
   "page-get-eth-exchanges-no-wallets": "К сожалению, нам неизвестны кошельки, позволяющие купить ETH в этой стране. Если вы знаете, то сообщите нам на",
+  "page-get-eth-exchanges-search": "Напишите, где вы живете...",
   "page-get-eth-exchanges-success-exchange": "Регистрация на бирже может занять несколько дней из-за их юридических проверок.",
   "page-get-eth-exchanges-success-wallet-link": "кошельки",
   "page-get-eth-exchanges-success-wallet-paragraph": "В вашей стране вы можете купить ETH напрямую из этих кошельков. Узнайте больше о",

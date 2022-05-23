@@ -1,5 +1,5 @@
 ---
-title: ERC-721 Token standard nefungibil
+title: Standardul de tokenuri nefungibile ERC-721
 description:
 lang: ro
 sidebar: true
@@ -9,27 +9,27 @@ sidebar: true
 
 **Ce este un token nefungibil?**
 
-Tokenurile nefungibile (NFT) sunt folosite pentru a identifica ceva sau pe cineva într-un mod unic. Acest tip de token este perfect pentru a fi utilizat pe platforme care oferă articole de colecții, chei de acces, bilete la loterie, locuri numerotate pentru concerte și meciuri sportive etc. Acest tip special de Token are posibilități uimitoare, așa că merită un standard adecvat, ERC-721 vine ca să rezolve aceasta!
+Tokenurile nefungibile (NFT) sunt folosite pentru a identifica ceva sau pe cineva într-un mod unic. Acest tip de token este perfect pentru a fi utilizat pe platforme care oferă articole de colecții, chei de acces, bilete la loterie, locuri numerotate pentru concerte și meciuri sportive etc. Acest tip special de Token are posibilități uimitoare, așa că merită un Standard adecvat, iar ERC-721 a apărut ca soluţie!
 
 **Ce este ERC-721?**
 
-ERC-721 introduce un standard pentru NFT, cu alte cuvinte, acest tip de token este unic și poate avea o valoare diferită decât un alt token din același contract inteligent, poate din cauza vârstei, rarității sau chiar altui motiv, cum ar fi reprezentarea sa vizuală. Stai, vizual?
+ERC-721 introduce un standard pentru NFT-uri, cu alte cuvinte, acest tip de Token este unic și poate avea o valoare diferită de un alt Token din același Contract inteligent, poate din cauza vârstei, a rarității sau chiar din alt motiv, cum ar fi reprezentarea sa vizuală. Ia staţi, vizuală?
 
-Da! Toate NFT-urile au o variabilă `uint256` numită `tokenId`, astfel încât pentru orice contract ERC-721, perechea `contract address, uint256 tokenId` trebuie să fie unică la nivel global. Să spunem că o aplicație dapp poate avea un „convertor” care folosește `tokenId` ca intrare, iar ca ieșire, afișarea unei imagini a ceva interesant, cum ar fi un zombi, arme, abilități sau pisici uimitoare!
+Da! Toate NFT-urile au o variabilă `uint256` numită `tokenId`, astfel încât pentru orice contract ERC-721, perechea `contract address, uint256 tokenId` trebuie să fie unică la nivel global. Acestea fiind spuse, o aplicaţie dApp poate avea un „convertor” care folosește `tokenId` ca date de intrare și produce la ieşire ceva grozav, cum ar fi o imagine cu zombi, arme, abilități sau pisicuțe uimitoare!
 
 ## Condiții prealabile {#prerequisites}
 
 - [Conturi](/developers/docs/accounts/)
 - [Contracte inteligente](/developers/docs/smart-contracts/)
-- [Standarde token](/developers/docs/standards/tokens/)
+- [Standarde de tokenuri](/developers/docs/standards/tokens/)
 
 ## Conținut {#body}
 
-ERC-721 (Cerere de comentarii Ethereum), propus de William Entriken, Dieter Shirley, Jacob Evans, Nastassia Sachs, în ianuarie 2018, este un standard de tokenuri nefungibile care implementează un API pentru tokenuri în cadrul contractelor inteligente.
+ERC-721 (Cerere de comentarii Ethereum), propus de William Entriken, Dieter Shirley, Jacob Evans, Nastassia Sachs în ianuarie 2018, este un Standard de tokenuri nefungibile care implementează un API pentru tokenuri în cadrul Contractelor inteligente.
 
-Acesta oferă funcționalități cum ar fi transferul de tokenuri dintr-un cont în altul, obținerea soldului actual al tokenurilor unui cont, obținerea proprietarul unui token specific și de asemenea, furnizarea totalului de tokenuri disponibile în rețea. Pe lângă acestea, are și alte funcționalități, cum ar fi aceea de a aproba ca o cantitate de tokenuri dintr-un cont să poată fi mutată de un cont terț.
+Acesta oferă funcționalități cum ar fi transferul de tokenuri dintr-un cont în altul, obținerea soldului actual al tokenurilor unui cont, obținerea proprietarului unui token specific și de asemenea a totalului de tokenuri disponibile în rețea. Pe lângă acestea, are și alte funcționalități, cum ar fi aceea de a aproba ca o cantitate de tokenuri dintr-un cont să poată fi mutată de către un cont terț.
 
-În cazul în care un contract inteligent implementează următoarele metode și evenimente, acesta poate fi numit contract token ERC-721 nefungibil și, odată implementat, va fi responsabil cu ținerea în evidență a tokenurilor create pe Ethereum.
+În cazul în care un Contract inteligent implementează următoarele metode și evenimente, acesta poate fi numit un contract de tokenuri nefungibile ERC-721 și, odată implementat, va avea responsabilitatea de a ține evidența tokenurilor create pe Ethereum.
 
 De la [EIP-721](https://eips.ethereum.org/EIPS/eip-721):
 
@@ -57,11 +57,11 @@ De la [EIP-721](https://eips.ethereum.org/EIPS/eip-721):
 
 ### Exemple {#web3py-example}
 
-Să vedem cum un standard este atât de important pentru noi, simplificând procedura de verificare a oricărui contract token ERC-721 pe Ethereum. Avem nevoie doar de interfața binară aplicație (ABI) a contractului pentru a crea o interfață pentru orice token ERC-721. După cum poți să vezi mai jos, vom folosi un ABI simplificat, pentru a face exemplul ușor de înțeles.
+Să vedem cât de important este un standard pentru a ne simplifica lucrurile când inspectăm orice contract de tokenuri ERC-721 pe Ethereum. Avem nevoie doar de interfața binară cu aplicația (ABI) a contractului pentru a crea o interfață pentru orice token ERC-721. După cum puteţi vedea mai jos, vom folosi un ABI simplificat, pentru a facilita înţelegerea exemplului.
 
 #### Exemplu Web3.py {#web3py-example}
 
-În primul rând, asigură-te că ai instalat librăria Python [Web3.py](https://web3py.readthedocs.io/en/stable/quickstart.html#installation):
+În primul rând aveţi grijă să instalaţi librăria Python [Web3.py](https://web3py.readthedocs.io/en/stable/quickstart.html#installation):
 
 ```
 $ pip install web3
@@ -69,16 +69,16 @@ $ pip install web3
 
 ```python
 from web3 import Web3
-from web3.utils.events import get_event_data
+from web3._utils.events import get_event_data
 
 
 w3 = Web3(Web3.HTTPProvider("https://cloudflare-eth.com"))
 
-ck_token_addr = "0x06012c8cf97BEaD5deAe237070F9587f8E7A266d"    # Contract CryptoKitties
+ck_token_addr = "0x06012c8cf97BEaD5deAe237070F9587f8E7A266d"    # CryptoKitties Contract
 
-acc_address = "0xb1690C08E213a35Ed9bAb7B318DE14420FB57d8C"      # Licitație de vânzări de CryptoKitties
+acc_address = "0xb1690C08E213a35Ed9bAb7B318DE14420FB57d8C"      # CryptoKitties Sales Auction
 
-# Acesta este un contract simplificat de interfață binară de aplicație (ABI) pentru un contract ERC-721 NFT.
+# This is a simplified Contract Application Binary Interface (ABI) of an ERC-721 NFT Contract.
 # Va expune numai metodele: balanceOf(address), name(), ownerOf(tokenId), symbol(), totalSupply()
 simplified_abi = [
     {
@@ -148,7 +148,7 @@ tx_event_abi = {
     'type': 'event'
 }
 
-# Avem nevoie de semnătura evenimentului pentru a filtra jurnalele
+# We need the event's signature to filter the logs
 event_signature = w3.sha3(text="Transfer(address,address,uint256)").hex()
 
 logs = w3.eth.getLogs({
@@ -157,19 +157,20 @@ logs = w3.eth.getLogs({
     "topics": [event_signature]
 })
 
-# Note:
-# - 120 de blocuri este intervalul maxim pentru furnizorul CloudFlare
-# - Dacă nu ai găsit niciun eveniment de transfer, poți încerca, de asemenea, să obții un tokenId la:
-# https://etherscan.io/address/0x06012c8cf97BEaD5deAe237070F9587f8E7A266d#events
-# Fă clic pentru a extinde jurnalele evenimentului și copiază argumentul „tokenId”
-recent_tx = [get_event_data(tx_event_abi, log)["args"] for log in logs]
+# Notes:
+#   - 120 blocks is the max range for CloudFlare Provider
+#   - If you didn't find any Transfer event you can also try to get a tokenId at:
+#       https://etherscan.io/address/0x06012c8cf97BEaD5deAe237070F9587f8E7A266d#events
+#       Click to expand the event's logs and copy its "tokenId" argument
 
-kitty_id = recent_tx[0]['tokenId'] # Inserează  "tokenId" aici din linkul de mai sus
+recent_tx = [get_event_data(w3.codec, tx_event_abi, log)["args"] for log in logs]
+
+kitty_id = recent_tx[0]['tokenId'] # Paste the "tokenId" here from the link above
 is_pregnant = ck_contract.functions.isPregnant(kitty_id).call()
-print(f"{name} [{symbol}] NFTs {kitty_id} este gestantă: {is_pregnant}")
+print(f"{name} [{symbol}] NFTs {kitty_id} is pregnant: {is_pregnant}")
 ```
 
-Contractul CryptoKitties are câteva evenimente interesante, altele decât cele standard.
+Contractul CryptoKitties are câteva Evenimente interesante, altele decât cele standard.
 
 Să verificăm două dintre ele, `Pregnant` și `Birth`.
 
@@ -198,50 +199,46 @@ ck_extra_events_abi = [
         'type': 'event'
     }]
 
-# Avem nevoie de semnătura evenimentului pentru a filtra jurnalele
+# We need the event's signature to filter the logs
 ck_event_signatures = [
     w3.sha3(text="Pregnant(address,uint256,uint256,uint256)").hex(),
     w3.sha3(text="Birth(address,uint256,uint256,uint256,uint256)").hex(),
 ]
 
-# Iată un eveniment Pregnant:
+# Here is a Pregnant Event:
 # - https://etherscan.io/tx/0xc97eb514a41004acc447ac9d0d6a27ea6da305ac8b877dff37e49db42e1f8cef#eventlog
 pregnant_logs = w3.eth.getLogs({
     "fromBlock": w3.eth.blockNumber - 120,
     "address": w3.toChecksumAddress(ck_token_addr),
-    "topics": [ck_extra_events_abi[0]]
+    "topics": [ck_event_signatures[0]]
 })
 
-recent_pregnants = [get_event_data(ck_extra_events_abi[0], log)["args"] for log in pregnant_logs]
+recent_pregnants = [get_event_data(w3.codec, ck_extra_events_abi[0], log)["args"] for log in pregnant_logs]
 
-# Iată un eveniment Birth:
+# Here is a Birth Event:
 # - https://etherscan.io/tx/0x3978028e08a25bb4c44f7877eb3573b9644309c044bf087e335397f16356340a
 birth_logs = w3.eth.getLogs({
     "fromBlock": w3.eth.blockNumber - 120,
     "address": w3.toChecksumAddress(ck_token_addr),
-    "topics": [ck_extra_events_abi[1]]
+    "topics": [ck_event_signatures[1]]
 })
 
-recent_births = [get_event_data(ck_extra_events_abi[1], log)["args"] for log in birth_logs]
+recent_births = [get_event_data(w3.codec, ck_extra_events_abi[1], log)["args"] for log in birth_logs]
 ```
 
 ## NFT-uri populare {#popular-nfts}
 
-- [Etherscan NFT Tracker](https://etherscan.io/tokens-nft) listează NFT de top pe Ethereum după volumul transferurilor.
-- [CryptoKitties](https://www.cryptokitties.co/) este un joc centrat în jurul creaturilor care pot fi crescute, colecționate și atât de adorabile pe care le numim CryptoKitties.
-- [Sorare](https://sorare.com/) este un joc global de fotbal fantezie unde poți colecta colecții de ediție limitată, îți poți gestiona echipele și poți concura pentru a câștiga premii.
-- [Serviciul de nume Ethereum (ENS)](https://ens.domains/) oferă o modalitate sigură și descentralizată de a aborda resursele, atât în ​​cadrul blockchain-ului, cât și în afara acestuia, folosind nume simple, care pot fi citite de o persoană.
-- [Unstoppable Domains](https://unstoppabledomains.com/) este o companie din San Francisco care construiește domenii pe blockchain-uri. Domeniile blockchain înlocuiesc adresele criptomonedei cu nume care pot fi citite de om și pot fi folosite pentru activarea de site-uri web rezistente la cenzură.
-- [Gods Unchained Cards](https://godsunchained.com/) este un TCG (joc de cărți de tranzacționare) pe blockchain-ul Ethereum care folosește NFT-uri pentru a aduce proprietate reală la activele din joc.
+- [Etherscan NFT Tracker](https://etherscan.io/tokens-nft) listează NFT-urile de top pe Ethereum după volumul transferurilor.
+- [CryptoKitties](https://www.cryptokitties.co/) este un joc centrat pe creaturile care pot fi crescute, colecționate și sunt atât de adorabile pe care le numim CryptoKitties.
+- [Sorare](https://sorare.com/) este un joc global de fotbal fantezie unde puteţi colecta obiecte de colecţie de ediție limitată, vă puteţi gestiona echipele și puteţi concura pentru a câștiga premii.
+- [Serviciul de nume Ethereum (ENS)](https://ens.domains/) oferă o modalitate securizată & și descentralizată de a aborda resursele, atât în ​​cadrul blockchain-ului, cât și în afara acestuia, folosind nume simple, care pot fi citite de oameni.
+- [Unstoppable Domains](https://unstoppabledomains.com/) este o companie din San Francisco care construiește domenii pe blockchain-uri. Domeniile blockchain înlocuiesc adresele criptomonedei cu nume care pot fi citite de oameni și pot fi folosite pentru activarea de site-uri web rezistente la cenzură.
+- [Gods Unchained Cards](https://godsunchained.com/) este un TCG (joc de cărți de tranzacționare) pe blockchain-ul Ethereum care folosește NFT-uri pentru a aduce proprietate reală activelor din joc.
+- [Bored Ape Yacht Club](https://boredapeyachtclub.com) este o colecție de 10.000 de NFT-uri unice, care, în afară de a fi o piesă artistică cu adevărat rară, funcționează ca token de membru al clubului, oferind membrilor avantaje și beneficii care cresc în timp, ca rezultat al eforturilor comunității.
 
 ## Referințe suplimentare {#further-reading}
 
-- [EIP-721: Token standard nefungibil ERC-721](https://eips.ethereum.org/EIPS/eip-721)
+- [EIP-721: Standardul de tokenuri nefungibile ERC-721](https://eips.ethereum.org/EIPS/eip-721)
 - [OpenZeppelin - Documentație ERC-721](https://docs.openzeppelin.com/contracts/3.x/erc721)
 - [OpenZeppelin - Implementare ERC-721](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/ERC721.sol)
-
-## Subiecte corelate {#related-topics}
-
-- [ERC-20](/developers/docs/standards/tokens/erc-20/)
-- [ERC-777](/developers/docs/standards/tokens/erc-777/)
-- [ERC-1155](/developers/docs/standards/tokens/erc-1155/)
+- [Alchemy NFT API](https://docs.alchemy.com/alchemy/enhanced-apis/nft-api)

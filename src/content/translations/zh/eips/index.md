@@ -1,6 +1,6 @@
 ---
-title: 以太坊改进提议（EIP）
-description: 了解以太坊改进提议（EIP）的基本信息。
+title: 以太坊改进提议 (EIP)
+description: 了解以太坊改进提议 (EIP) 的基本信息。
 lang: zh
 sidebar: true
 ---
@@ -9,7 +9,7 @@ sidebar: true
 
 ## 什么是 EIP？ {#what-are-eips}
 
-[以太坊改进提议（EIP）](https://eips.ethereum.org/)是为以太坊潜在新功能或流程提出建议的标准。 EIP 包含提议改进的技术规范，并作为社区的“真相来源”。 在 EIP 的过程中，将会讨论和制定以太坊的网络升级和应用标准。
+[以太坊改进提议 (EIP)](https://eips.ethereum.org/)是为以太坊潜在新功能或流程提出建议的标准。 EIP 包含提议改进的技术规范，并作为社区的“真相来源”。 在 EIP 的过程中，将会讨论和制定以太坊的网络升级和应用标准。
 
 以太坊社区中的任何人都可以创造一个 EIP。 关于如何编写 EIP 的指南将纳入 [EIP 1](https://eips.ethereum.org/EIPS/eip-1)。 EIP 应提供功能及其原理的简明技术细节和提出的理由。 EIP 作者负责在社区内建立共识并记录反对意见。 提交一个高水平的 EIP 需要很强的技术能力，历史上，大多数 EIP 作者已经成为应用程序或者协议开发者。
 
@@ -19,7 +19,7 @@ EIP 作为一个中心角色，记载以太坊的变化并且记载在以太坊�
 
 每个网络升级都包含一组 EIP，需要网络上每个 [以太坊客户端](/learn/#clients-and-nodes)来执行。 这意味着要在以太坊主网上与其他客户达成共识， 客户端开发者需要确保他们都实现了所需的 EIP。
 
-在提供变更技术规格的同时，EIP 是以太坊社区治理的基本单位。任何人都可以自由提议，然后由社区不同的参与者讨论，决定是否将其发展为通用标准或者加入到网络升级中。 因为非核心 EIP 不必被所有应用程序采纳（例如，您可以创建一个非 -[ERC20 token](https://eips.ethereum.org/EIPS/eip-20)），但核心 EIP 必须广泛采用（因为所有节点都必须升级才能保持同一网络的一部分），与非核心 EIP 相比，核心 EIP 需要在社区内达成更广泛的共识。
+在提供变更技术规格的同时，EIP 是以太坊社区治理的基本单位。任何人都可以自由提议，然后由社区不同的参与者讨论，决定是否将其发展为通用标准或者加入到网络升级中。 因为非核心 EIP 不必被所有应用程序采纳（例如，您可以创建一个非 [ERC20 代币](https://eips.ethereum.org/EIPS/eip-20))，但核心 EIP 必须被广泛采用（因为所有节点都必须升级，才能保证其属于同一网络的一部分），与非核心 EIP 相比，核心 EIP 需要在社区内达成更广泛的共识。
 
 ## EIP 历史 {#history-of-eips}
 
@@ -32,11 +32,11 @@ EIP 编辑人员的任务是审查 EIP 的技术可靠性、正确的拼写/语�
 - Casey Detrio（EWASM/以太坊基金会）
 - Matt Garnett（Quilt）
 - Hudson James（以太坊基金会）
-- Nick Johnson（ENS）
+- Nick Johnson (ENS)
 - Nick Savers（社区）
 - Micah Zoltu（社区）
 
-EIP 编辑们与 [Ethereum Cat Herders](https://ethereumcatherders.com/) 和 [Ethererum Magicians](https://ethereum-magicians.org/) 的社区成员一起决定哪些 EIP 得到实施，负责促进 EIP 以及将 EIP 推进到 "最终"或"已撤销"阶段。
+EIP 编辑们与 [Ethereum Cat Herders](https://ethereumcatherders.com/) 和 [Ethererum Magicians](https://ethereum-magicians.org/) 的社区成员共同决定实施哪个 EIP，共同负责促进 EIP 实施以及将 EIP 推入到“最终”或“已撤销”阶段。
 
 完整的标准化过程和图表在 [EIP-1](https://eips.ethereum.org/EIPS/eip-1) 中描述
 
@@ -62,6 +62,6 @@ EIP 编辑们与 [Ethereum Cat Herders](https://ethereumcatherders.com/) 和 [Et
 
 <cite class="citation">
 
-网页内容部分来自于 Hudson Jameson [Ethereum Protocol Development Governance and Network Upgrade Coordination](https://hudsonjameson.com/2020-03-23-thero-protocol-development-governance-and-network-upde-coordination/)
+网页内容部分来自 Hudson Jameson [以太坊协议开发治理和网络升级协调](https://hudsonjameson.com/2020-03-23-thero-protocol-development-governance-and-network-upde-coordination/)
 
 </cite>

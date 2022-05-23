@@ -27,8 +27,8 @@ Dovresti avere una buona comprensione di tutti gli argomenti fondamentali ed una
 
 Diversi progetti forniscono implementazioni di sidechain che puoi integrare nelle tue dApp:
 
+- [Polygon PoS](https://polygon.technology/solutions/polygon-pos)
 - [Skale](https://skale.network/)
-- [POA Network](https://www.poa.network/)
 - [Gnosis Chain (in precedenza xDai)](https://www.xdaichain.com/)
 
 ## Letture consigliate {#further-reading}

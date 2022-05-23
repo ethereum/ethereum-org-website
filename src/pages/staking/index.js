@@ -1,124 +1,137 @@
-import React, { useState } from "react"
-import styled from "styled-components"
+import React from "react"
 import { graphql } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
 import { getImage } from "gatsby-plugin-image"
+import styled from "styled-components"
 
-import { translateMessageId } from "../../utils/translations"
-import Translation from "../../components/Translation"
-import Breadcrumbs from "../../components/Breadcrumbs"
+import ButtonDropdown from "../../components/ButtonDropdown"
 import ButtonLink from "../../components/ButtonLink"
 import Card from "../../components/Card"
-import Emoji from "../../components/Emoji"
-import GhostCard from "../../components/GhostCard"
-import PageHero from "../../components/PageHero"
-import InfoBanner from "../../components/InfoBanner"
-import CalloutBanner from "../../components/CalloutBanner"
 import Link from "../../components/Link"
-
+import PageHero from "../../components/PageHero"
 import PageMetadata from "../../components/PageMetadata"
+import Translation from "../../components/Translation"
 import {
-  CardContainer,
   Content,
-  Page,
+  Page as PageContainer,
   Divider,
+  OptionContainer,
+  Option,
+  OptionText,
 } from "../../components/SharedStyledComponents"
+import FeedbackCard from "../../components/FeedbackCard"
+import ExpandableCard from "../../components/ExpandableCard"
+import StakingStatsBox from "../../components/Staking/StakingStatsBox"
+import StakingHierarchy from "../../components/Staking/StakingHierarchy"
+import StakingHomeTableOfContents from "../../components/Staking/StakingHomeTableOfContents"
+import StakingCommunityCallout from "../../components/Staking/StakingCommunityCallout"
 
-const StyledCallout = styled(CalloutBanner)`
-  margin-left: 0rem;
-  margin-right: 0rem;
-`
+import { translateMessageId } from "../../utils/translations"
 
-const Row = styled.div`
+const HeroStatsWrapper = styled.div`
   display: flex;
-  align-items: flex-start;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column;
-  }
-`
-
-const H2 = styled.h2`
-  font-size: 1.5rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 22px;
-  letter-spacing: 0px;
-  margin-top: 0.5rem;
-`
-
-const H3 = styled.h3`
-  margin-top: 0rem;
-`
-
-const Column = styled.div`
-  flex: 1 1 33%;
-  margin-bottom: 1.5rem;
-  margin-right: 2rem;
-  width: 100%;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-right: 0rem;
-    margin-left: 0rem;
-  }
-`
-
-const StyledCard = styled(Card)`
-  flex: 1 1 30%;
-  min-width: 240px;
-  margin: 1rem;
-  padding: 1.5rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex: 1 1 30%;
-  }
-`
-
-const BoxText = styled.div`
-  font-size: 1.25rem;
-`
-
-const Box = styled.div`
-  padding: 1.5rem;
-  border: 1px solid ${(props) => props.theme.colors.border};
-  margin: 2rem 4rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    margin: 2rem 0;
-  }
-`
-
-const Vision = styled.div`
-  margin-top: 4rem;
-`
-
-const OptionContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  margin-bottom: 4rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    flex-direction: column;
-  }
-`
-
-const Option = styled.div`
-  border-radius: 32px;
-  border: 1px solid
-    ${(props) =>
-      props.isActive ? props.theme.colors.primary : props.theme.colors.text};
-  color: ${(props) =>
-    props.isActive ? props.theme.colors.primary : props.theme.colors.text};
-  box-shadow: ${(props) =>
-    props.isActive ? props.theme.colors.tableBoxShadow : `none`};
-  display: flex;
+  flex-direction: column;
   align-items: center;
-  padding: 1rem 1.5rem;
-  margin: 0.5rem;
-  cursor: pointer;
+  background: ${({ theme }) => theme.colors.layer2Gradient};
+  padding-bottom: 2rem;
 `
 
-const OptionText = styled.div`
-  font-size: 1.5rem;
-  line-height: 100%;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    font-size: 1rem;
-    font-weight: 600;
+const Page = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0 auto 4rem;
+
+  padding-top: 4rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    flex-direction: column;
+  }
+`
+
+const InfoTitle = styled.h2`
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: right;
+  margin-top: 0rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    text-align: left;
+    font-size: 2.5rem
+    display: none;
+  }
+`
+
+const StyledButtonDropdown = styled(ButtonDropdown)`
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: flex-end;
+  text-align: center;
+  @media (min-width: ${(props) => props.theme.breakpoints.s}) {
+    align-self: flex-end;
+  }
+`
+
+const InfoColumn = styled.aside`
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 6.25rem; /* account for navbar */
+  height: calc(100vh - 80px);
+  flex: 0 1 330px;
+  margin: 0 2rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    display: none;
+  }
+`
+
+const MobileButton = styled.div`
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    background: ${(props) => props.theme.colors.background};
+    box-shadow: 0 -1px 0px ${(props) => props.theme.colors.border};
+    width: 100%;
+    bottom: 0;
+    position: sticky;
+    padding: 2rem;
+    z-index: 99;
+    margin-bottom: 0rem;
+  }
+`
+
+const MobileButtonDropdown = styled(StyledButtonDropdown)`
+  margin-bottom: 0rem;
+  display: none;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    display: block;
+  }
+`
+
+// Apply styles for classes within markdown here
+const ContentContainer = styled.article`
+  flex: 1 1 ${(props) => props.theme.breakpoints.l};
+  position: relative;
+  padding: 2rem;
+  padding-top: 0rem;
+  gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
+    padding: 0rem;
+  }
+  .featured {
+    padding-left: 1rem;
+    margin-left: -1rem;
+    border-left: 1px dotted ${(props) => props.theme.colors.primary};
+  }
+
+  .citation {
+    p {
+      color: ${(props) => props.theme.colors.text200};
+    }
+  }
+  h2:first-of-type,
+  & > div:first-child {
+    margin-top: 0;
+    padding-top: 0;
   }
 `
 
@@ -130,292 +143,559 @@ const StakeContainer = styled.div`
   text-align: center;
 `
 
-const paths = [
+const ComparisonGrid = styled.div`
+  display: grid;
+  grid-column-gap: 3rem;
+  grid-auto-rows: minmax(64px, auto);
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    "solo-title saas-title pool-title"
+    "solo-rewards saas-rewards pool-rewards"
+    "solo-risks saas-risks pool-risks"
+    "solo-reqs saas-reqs pool-reqs"
+    "solo-cta saas-cta pool-cta";
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "solo-title"
+      "solo-rewards"
+      "solo-risks"
+      "solo-reqs"
+      "solo-cta"
+      "saas-title"
+      "saas-rewards"
+      "saas-risks"
+      "saas-reqs"
+      "saas-cta"
+      "pool-title"
+      "pool-rewards"
+      "pool-risks"
+      "pool-reqs"
+      "pool-cta";
+  }
+
+  h4 {
+    color: #787878;
+  }
+`
+
+const ColorH3 = styled.h3`
+  grid-area: ${({ color }) => {
+    switch (color) {
+      case "stakingGold":
+        return "solo-title"
+      case "stakingGreen":
+        return "saas-title"
+      case "stakingBlue":
+        return "pool-title"
+      default:
+        return ""
+    }
+  }};
+  color: ${({ theme, color }) => theme.colors[color]};
+`
+
+const StyledButtonLink = styled(ButtonLink)`
+  @media (max-width: ${({ theme }) => theme.breakpoints.s}) {
+    width: 100%;
+  }
+`
+
+const CardGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.xl}) {
+    grid-template-columns: 1fr;
+  }
+  @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
+    grid-template-columns: 1fr;
+  }
+`
+
+const StyledCard = styled(Card)`
+  justify-content: flex-start;
+  h3 {
+    font-weight: 700;
+    margin: 0 0 1rem;
+  }
+`
+
+const benefits = [
   {
-    emoji: ":money_with_wings:",
-    title: <Translation id="page-staking-title-1" />,
-    description: <Translation id="page-staking-desc-1" />,
+    title: "page-staking-benefits-1-title",
+    emoji: "💰",
+    description: "page-staking-benefits-1-description",
   },
   {
-    emoji: ":warning:",
-    title: <Translation id="page-staking-title-2" />,
-    description: <Translation id="page-staking-desc-2" />,
+    title: "page-staking-benefits-2-title",
+    emoji: ":shield:",
+    description: "page-staking-benefits-2-description",
   },
   {
-    emoji: ":clipboard:",
-    title: <Translation id="page-staking-title-3" />,
-    description: <Translation id="page-staking-desc-3" />,
-    url: "/developers/docs/apis/backend/#available-libraries",
-    link: <Translation id="page-staking-link-1" />,
+    title: "page-staking-benefits-3-title",
+    emoji: "🍃",
+    description: "page-staking-benefits-3-description",
+    linkText: "page-staking-benefits-3-link",
+    to: "/energy-consumption",
   },
 ]
 
-const StakingPage = ({ data, location }) => {
+const StakingPage = ({ data }) => {
   const intl = useIntl()
-  const [isSoloStaking, setIsSoloStaking] = useState(true)
 
   const heroContent = {
-    title: translateMessageId("page-staking-title-4", intl),
-    header: translateMessageId("page-staking-header-1", intl),
-    subtitle: translateMessageId("page-staking-subtitle", intl),
+    title: translateMessageId("page-staking-hero-title", intl),
+    header: translateMessageId("page-staking-hero-header", intl),
+    subtitle: translateMessageId("page-staking-hero-subtitle", intl),
     image: getImage(data.rhino),
     alt: translateMessageId("page-staking-image-alt", intl),
-    buttons: [
+    buttons: [],
+  }
+
+  const dropdownLinks = {
+    text: "Staking Options",
+    ariaLabel: "Staking options dropdown menu",
+    items: [
       {
-        path: "#stake",
-        content: translateMessageId("page-staking-start", intl),
+        text: translateMessageId("page-staking-dropdown-home", intl),
+        to: "/staking/",
+        matomo: {
+          eventCategory: `Staking dropdown`,
+          eventAction: `Clicked`,
+          eventName: "clicked staking home",
+        },
+      },
+      {
+        text: translateMessageId("page-staking-dropdown-solo", intl),
+        to: "/staking/solo/",
+        matomo: {
+          eventCategory: `Staking dropdown`,
+          eventAction: `Clicked`,
+          eventName: "clicked solo staking",
+        },
+      },
+      {
+        text: translateMessageId("page-staking-dropdown-saas", intl),
+        to: "/staking/saas/",
+        matomo: {
+          eventCategory: `Staking dropdown`,
+          eventAction: `Clicked`,
+          eventName: "clicked staking as a service",
+        },
+      },
+      {
+        text: translateMessageId("page-staking-dropdown-pools", intl),
+        to: "/staking/pools/",
+        matomo: {
+          eventCategory: `Staking dropdown`,
+          eventAction: `Clicked`,
+          eventName: "clicked pooled staking",
+        },
       },
     ],
   }
 
+  // TODO: use translateMessageId() for these strings
+  const tocItems = {
+    whatIsStaking: {
+      id: "what-is-staking",
+      title: translateMessageId("page-staking-section-what-title", intl),
+    },
+    whyStakeYourEth: {
+      id: "why-stake-your-eth",
+      title: translateMessageId("page-staking-section-why-title", intl),
+    },
+    howToStakeYourEth: {
+      id: "how-to-stake-your-eth",
+      title: translateMessageId("page-staking-toc-how-to-stake-your-eth", intl),
+    },
+    comparisonOfOptions: {
+      id: "comparison-of-options",
+      title: translateMessageId("page-staking-toc-comparison-of-options", intl),
+    },
+    joinTheCommunity: {
+      id: "join-the-community",
+      title: translateMessageId("page-staking-join-community", intl),
+    },
+    faq: {
+      id: "faq",
+      title: translateMessageId("page-staking-toc-faq", intl),
+    },
+    further: {
+      id: "further",
+      title: translateMessageId("page-staking-toc-further", intl),
+    },
+  }
+
+  const tocArray = Object.keys(tocItems).map((item) => tocItems[item])
+
   return (
-    <Page>
+    <PageContainer>
       <PageMetadata
         title={translateMessageId("page-staking-meta-title", intl)}
         description={translateMessageId("page-staking-meta-description", intl)}
       />
-      <PageHero content={heroContent} />
-      <Divider />
-      <Content>
-        <Vision>
-          <Breadcrumbs slug={location.pathname} startDepth={1} />
-          <h2>
-            <Translation id="page-staking-just-staking" />
-          </h2>
-          <p>
-            <Translation id="page-staking-description" />{" "}
-            <Link to="/upgrades/beacon-chain/">
-              <Translation id="page-staking-the-beacon-chain" />
-            </Link>
-          </p>
-          <CardContainer>
-            {paths.map((path, idx) => (
-              <StyledCard
-                key={idx}
-                emoji={path.emoji}
-                title={path.title}
-                description={path.description}
-              >
-                {path.url && <Link to={path.url}>{path.link}</Link>}
-              </StyledCard>
-            ))}
-          </CardContainer>
-        </Vision>
-      </Content>
-      <Divider id="stake" />
-      <Content>
-        <StakeContainer>
-          <h2>
-            <Translation id="page-staking-how-to-stake" />
-          </h2>
-          <p>
-            <Translation id="page-staking-how-to-stake-desc" />{" "}
-          </p>
-          <h3>
-            <Translation id="page-staking-how-much" />
-          </h3>
-          <OptionContainer>
-            <Option
-              isActive={isSoloStaking}
-              onClick={() => setIsSoloStaking(true)}
-            >
-              <Emoji mr={`1rem`} text=":moneybag:" />
-              <OptionText>32 ETH</OptionText>
-            </Option>
-            <Option
-              isActive={!isSoloStaking}
-              onClick={() => setIsSoloStaking(false)}
-            >
-              <Emoji mr={`1rem`} text=":swimmer:" />
-              <OptionText>
-                <Translation id="page-staking-less-than" /> 32 ETH
-              </OptionText>
-            </Option>
-          </OptionContainer>
-          {isSoloStaking && (
-            <GhostCard>
-              <InfoBanner isWarning={true} mb={`2rem`}>
-                <H2>
-                  <Translation id="page-staking-withdrawals" />
-                </H2>
-                <div>
-                  <Translation id="page-staking-withdrawals-desc" />{" "}
-                  <Link to="/upgrades/merge/">
-                    <Translation id="page-staking-docked" />
-                  </Link>
-                </div>
-              </InfoBanner>
-              <h3>
-                <Translation id="page-staking-solo" />
-              </h3>
-              <p>
-                <Translation id="page-staking-solo-desc" />
-              </p>
-              <ButtonLink mb={`2rem`} to="https://launchpad.ethereum.org">
-                <Translation id="page-staking-start" />
-              </ButtonLink>
-              <h3>
-                <Translation id="page-staking-deposit-address" />
-              </h3>
-              <p>
-                <Translation id="page-staking-deposit-address-desc" />
-              </p>
-              <ButtonLink mb={`2rem`} to="/staking/deposit-contract/">
-                <Translation id="page-staking-check-address" />
-              </ButtonLink>
-            </GhostCard>
-          )}
-          {!isSoloStaking && (
-            <GhostCard>
-              <H3>
-                <Translation id="page-staking-pool" />
-              </H3>
-              <p>
-                <Translation id="page-staking-rocket-pool" />
-              </p>
-              <p>
-                <Link to="https://rocketpool.net">
-                  <Translation id="Learn more on their website" />
-                </Link>
-              </p>
-              <p>
-                <Translation id="page-staking-pool-desc" />
-              </p>
-              <p>
-                <Link to="https://beaconcha.in/stakingServices">
-                  <Translation id="page-staking-services" />
-                </Link>
-              </p>
-              <InfoBanner isWarning={true}>
-                <H2>
-                  <Translation id="page-staking-dyor" />
-                </H2>
-                <div>
-                  <Translation id="page-staking-dyor-desc" />{" "}
-                </div>
-              </InfoBanner>
-            </GhostCard>
-          )}
-        </StakeContainer>
-      </Content>
-      <Divider />
-      <StyledCallout
-        image={getImage(data.rhino)}
-        alt={translateMessageId("page-staking-image-alt", intl)}
-        titleKey={"page-staking-join-community"}
-        descriptionKey={"page-staking-join-community-desc"}
-      >
-        <div>
-          <ButtonLink to="https://www.reddit.com/r/ethstaker/">
-            <Translation id="page-staking-join" /> r/ethstaker
-          </ButtonLink>
-        </div>
-      </StyledCallout>
-      <Content>
-        <Row>
-          <Column>
-            <H2>
-              <Translation id="page-staking-pos-explained" />
-            </H2>
+      <HeroStatsWrapper>
+        <PageHero content={heroContent} />
+        <StakingStatsBox />
+      </HeroStatsWrapper>
+      <Page>
+        <InfoColumn>
+          <StyledButtonDropdown list={dropdownLinks} />
+          <InfoTitle>
+            <Translation id="page-staking-dom-info-title" />
+          </InfoTitle>
+          <StakingHomeTableOfContents items={tocArray} />
+        </InfoColumn>
+        <ContentContainer id="content">
+          <Content>
+            <h2 id={tocItems.whatIsStaking.id}>
+              {tocItems.whatIsStaking.title}
+            </h2>
             <p>
-              <Translation id="page-staking-pos-explained-desc" />{" "}
-              <Link to="/developers/docs/consensus-mechanisms/">
-                <Translation id="page-staking-consensus" />
+              <Translation id="page-staking-description" />
+            </p>
+            <p>
+              <Link to="/get-eth/">
+                <Translation id="page-staking-section-what-link" />
               </Link>
             </p>
-
+          </Content>
+          <Content>
+            <h2 id={tocItems.whyStakeYourEth.id}>
+              {tocItems.whyStakeYourEth.title}
+            </h2>
+            <CardGrid>
+              {benefits.map(
+                ({ title, description, emoji, linkText, to }, idx) => (
+                  <StyledCard
+                    title={translateMessageId(title, intl)}
+                    emoji={emoji}
+                    key={idx}
+                    description={translateMessageId(description, intl)}
+                  >
+                    {to && (
+                      <Link to={to}>{translateMessageId(linkText, intl)}</Link>
+                    )}
+                  </StyledCard>
+                )
+              )}
+            </CardGrid>
+          </Content>
+          <Content>
+            <h2 id={tocItems.howToStakeYourEth.id}>
+              {tocItems.howToStakeYourEth.title}
+            </h2>
             <p>
-              <Translation id="page-staking-pos-explained-desc-1" />
+              <Translation id="page-staking-section-why-p1" />
             </p>
-            <h3>
-              <Translation id="page-staking-at-stake" />
-            </h3>
             <p>
-              <Translation id="page-staking-at-stake-desc" />
+              <Translation id="page-staking-section-why-p2" />
             </p>
-            <h3>
-              <Translation id="page-staking-validators" />
-            </h3>
+          </Content>
+          <StakingHierarchy />
+          <Content>
+            <p style={{ marginTop: "1rem" }}>
+              <Translation id="page-staking-hierarchy-subtext" />
+            </p>
+          </Content>
+          <Divider />
+          <Content>
+            <h2 id={tocItems.comparisonOfOptions.id}>
+              {tocItems.comparisonOfOptions.title}
+            </h2>
             <p>
-              <Translation id="page-staking-validators-desc" />
+              <Translation id="page-staking-section-comparison-subtitle" />
             </p>
-          </Column>
-          <Column>
-            <Box>
-              <H2>
-                <Translation id="page-staking-upgrades-title" />
-              </H2>
-              <BoxText>
+            <ComparisonGrid>
+              <ColorH3 color="stakingGold">
+                <Translation id="page-staking-dropdown-solo" />
+              </ColorH3>
+              <div
+                style={{
+                  gridArea: "solo-rewards",
+                  borderBottom: "1px solid #3335",
+                }}
+              >
+                <h4>
+                  <Translation id="page-staking-section-comparison-rewards-title" />
+                </h4>
                 <ul>
                   <li>
-                    <Translation id="page-staking-upgrades-li" />
+                    <Translation id="page-staking-section-comparison-solo-rewards-li1" />
                   </li>
                   <li>
-                    <Translation id="page-staking-upgrades-li-2" />
+                    <Translation id="page-staking-section-comparison-solo-rewards-li2" />
                   </li>
                   <li>
-                    <Translation id="page-staking-upgrades-li-3" />
-                  </li>
-                  <li>
-                    <Translation id="page-staking-upgrades-li-4" />
-                  </li>
-                  <li>
-                    <Translation id="page-staking-upgrades-li-5" />
+                    <Translation id="page-staking-section-comparison-solo-rewards-li3" />
                   </li>
                 </ul>
-              </BoxText>
-            </Box>
-          </Column>
-        </Row>
-        <H2>
-          <Translation id="page-staking-benefits" />
-        </H2>
-        <CardContainer>
-          <StyledCard
-            emoji=":evergreen_tree:"
-            title={translateMessageId("page-staking-sustainability", intl)}
-            description={translateMessageId(
-              "page-staking-sustainability-desc",
-              intl
-            )}
-          />
-          <StyledCard
-            emoji=":globe_showing_americas:"
-            title={translateMessageId("page-staking-accessibility", intl)}
-            description={translateMessageId(
-              "page-staking-accessibility-desc",
-              intl
-            )}
-          />
-          <StyledCard
-            emoji=":old_key:"
-            title={translateMessageId("page-staking-sharding", intl)}
-            description={translateMessageId("page-staking-sharding-desc", intl)}
-          >
-            <Link to="/upgrades/shard-chains/">
-              <Translation id="page-staking-more-sharding" />
-            </Link>
-          </StyledCard>
-        </CardContainer>
-      </Content>
-    </Page>
+              </div>
+              <div
+                style={{
+                  gridArea: "solo-risks",
+                  borderBottom: "1px solid #3335",
+                }}
+              >
+                <h4>
+                  <Translation id="page-staking-section-comparison-risks-title" />
+                </h4>
+                <ul>
+                  <li>
+                    <Translation id="page-staking-section-comparison-solo-risks-li1" />
+                  </li>
+                  <li>
+                    <Translation id="page-staking-section-comparison-solo-risks-li2" />
+                  </li>
+                  <li>
+                    <Translation id="page-staking-section-comparison-solo-risks-li3" />
+                  </li>
+                </ul>
+              </div>
+              <div style={{ gridArea: "solo-reqs" }}>
+                <h4>
+                  <Translation id="page-staking-section-comparison-requirements-title" />
+                </h4>
+                <ul>
+                  <li>
+                    <Translation id="page-staking-section-comparison-solo-requirements-li1" />
+                  </li>
+                  <li>
+                    <Translation id="page-staking-section-comparison-solo-requirements-li2" />
+                  </li>
+                  <li>
+                    <Translation id="page-staking-section-comparison-solo-requirements-li3" />
+                  </li>
+                </ul>
+              </div>
+              <div style={{ gridArea: "solo-cta" }}>
+                <StyledButtonLink to="/staking/solo/">
+                  <Translation id="page-staking-more-on-solo" />
+                </StyledButtonLink>
+              </div>
+              <ColorH3 color="stakingGreen">
+                <Translation id="page-staking-dropdown-saas" />
+              </ColorH3>
+              <div
+                style={{
+                  gridArea: "saas-rewards",
+                  borderBottom: "1px solid #3335",
+                }}
+              >
+                <h4>
+                  <Translation id="page-staking-section-comparison-rewards-title" />
+                </h4>
+                <ul>
+                  <li>
+                    <Translation id="page-staking-section-comparison-saas-rewards-li1" />
+                  </li>
+                  <li>
+                    <Translation id="page-staking-section-comparison-saas-rewards-li2" />
+                  </li>
+                </ul>
+              </div>
+              <div
+                style={{
+                  gridArea: "saas-risks",
+                  borderBottom: "1px solid #3335",
+                }}
+              >
+                <h4>
+                  <Translation id="page-staking-section-comparison-risks-title" />
+                </h4>
+                <ul>
+                  <li>
+                    <Translation id="page-staking-section-comparison-saas-risks-li1" />
+                  </li>
+                  <li>
+                    <Translation id="page-staking-section-comparison-saas-risks-li2" />
+                  </li>
+                </ul>
+              </div>
+              <div style={{ gridArea: "saas-reqs" }}>
+                <h4>
+                  <Translation id="page-staking-section-comparison-requirements-title" />
+                </h4>
+                <ul>
+                  <li>
+                    <Translation id="page-staking-section-comparison-saas-requirements-li1" />
+                  </li>
+                  <li>
+                    <Translation id="page-staking-section-comparison-saas-requirements-li2" />
+                  </li>
+                  <li>
+                    <Translation id="page-staking-section-comparison-saas-requirements-li3" />
+                  </li>
+                </ul>
+              </div>
+              <div style={{ gridArea: "saas-cta" }}>
+                <StyledButtonLink to="/staking/saas">
+                  <Translation id="page-staking-more-on-saas" />
+                </StyledButtonLink>
+              </div>
+
+              <ColorH3 color="stakingBlue">
+                <Translation id="page-staking-dropdown-pools" />
+              </ColorH3>
+              <div
+                style={{
+                  gridArea: "pool-rewards",
+                  borderBottom: "1px solid #3335",
+                }}
+              >
+                <h4>
+                  <Translation id="page-staking-section-comparison-rewards-title" />
+                </h4>
+                <ul>
+                  <li>
+                    <Translation id="page-staking-section-comparison-pools-rewards-li1" />
+                  </li>
+                  <li>
+                    <Translation id="page-staking-section-comparison-pools-rewards-li2" />
+                  </li>
+                  <li>
+                    <Translation id="page-staking-section-comparison-pools-rewards-li3" />
+                  </li>
+                </ul>
+              </div>
+              <div
+                style={{
+                  gridArea: "pool-risks",
+                  borderBottom: "1px solid #3335",
+                }}
+              >
+                <h4>
+                  <Translation id="page-staking-section-comparison-risks-title" />
+                </h4>
+                <ul>
+                  <li>
+                    <Translation id="page-staking-section-comparison-pools-risks-li1" />
+                  </li>
+                  <li>
+                    <Translation id="page-staking-section-comparison-pools-risks-li2" />
+                  </li>
+                </ul>
+              </div>
+              <div style={{ gridArea: "pool-reqs" }}>
+                <h4>
+                  <Translation id="page-staking-section-comparison-requirements-title" />
+                </h4>
+                <ul>
+                  <li>
+                    <Translation id="page-staking-section-comparison-pools-requirements-li1" />
+                  </li>
+                  <li>
+                    <Translation id="page-staking-section-comparison-pools-requirements-li2" />
+                  </li>
+                </ul>
+              </div>
+              <div style={{ gridArea: "pool-cta" }}>
+                <StyledButtonLink to="/staking/pools/">
+                  <Translation id="page-staking-more-on-pools" />
+                </StyledButtonLink>
+              </div>
+            </ComparisonGrid>
+          </Content>
+          <Divider />
+          <StakingCommunityCallout id={tocItems.joinTheCommunity.id} />
+          <Content>
+            <h2 id={tocItems.faq.id}>{tocItems.faq.title}</h2>
+            <ExpandableCard
+              title={translateMessageId("page-staking-faq-1-question", intl)}
+            >
+              <Translation id="page-staking-faq-1-answer" />
+            </ExpandableCard>
+            <ExpandableCard
+              title={translateMessageId("page-staking-faq-2-question", intl)}
+            >
+              <Translation id="page-staking-faq-2-answer" />
+            </ExpandableCard>
+            <ExpandableCard
+              title={translateMessageId("page-staking-faq-3-question", intl)}
+            >
+              <p>
+                <Translation id="page-staking-faq-3-answer-p1" />
+              </p>
+              <p>
+                <Translation id="page-staking-faq-3-answer-p2" />
+              </p>
+            </ExpandableCard>
+          </Content>
+          <Content>
+            <h2 id={tocItems.further.id}>{tocItems.further.title}</h2>
+            <ul>
+              <li>
+                <Link to="https://vitalik.ca/general/2020/11/06/pos2020.html">
+                  Why Proof of Stake (Nov 2020)
+                </Link>{" "}
+                <i>- Vitalik Buterin </i>
+              </li>
+              <li>
+                <Link to="https://notes.ethereum.org/9l707paQQEeI-GPzVK02lA?view#">
+                  Serenity Design Rationale
+                </Link>{" "}
+                <i>- Vitalik Buterin </i>
+              </li>
+              <li>
+                <Link to="https://vitalik.ca/general/2017/12/31/pos_faq.html">
+                  Proof of Stake FAQ (Dec 2017)
+                </Link>{" "}
+                <i>- Vitalik Buterin</i>
+              </li>
+              <li>
+                <Link to="https://hackmd.io/@benjaminion/eth2_news">
+                  Eth2 News
+                </Link>{" "}
+                <i>- Ben Edgington</i>
+              </li>
+              <li>
+                <Link to="https://blog.ethereum.org/2022/01/31/finalized-no-33/">
+                  Finalized no. 33, the Ethereum consensus-layer (Jan 2022)
+                </Link>{" "}
+                <i>- Danny Ryan</i>
+              </li>
+              <li>
+                <Link to="https://www.attestant.io/posts/">
+                  Attestant Posts
+                </Link>
+              </li>
+              <li>
+                <Link to="https://kb.beaconcha.in/">
+                  Beaconcha.in Knowledge Base
+                </Link>
+              </li>
+              <li>
+                <Link to="https://beaconcha.in/education">
+                  Beaconcha.in Community-Contributed Educational Materials
+                </Link>
+              </li>
+              <li>
+                <Link to="https://launchpad.ethereum.org/en/faq">
+                  Ethereum Staking Launchpad FAQ
+                </Link>
+              </li>
+            </ul>
+          </Content>
+          <Content>
+            <FeedbackCard />
+          </Content>
+        </ContentContainer>
+        <MobileButton>
+          <MobileButtonDropdown list={dropdownLinks} />
+        </MobileButton>
+      </Page>
+    </PageContainer>
   )
 }
 
 export default StakingPage
-
-export const poolImage = graphql`
-  fragment poolImage on File {
-    childImageSharp {
-      gatsbyImageData(
-        height: 20
-        layout: FIXED
-        placeholder: BLURRED
-        quality: 100
-      )
-    }
-  }
-`
 
 export const query = graphql`
   {
@@ -428,17 +708,6 @@ export const query = graphql`
           quality: 100
         )
       }
-    }
-    consensys: file(relativePath: { eq: "projects/consensys.png" }) {
-      ...poolImage
-    }
-    ethhub: file(relativePath: { eq: "projects/ethhub.png" }) {
-      ...poolImage
-    }
-    etherscan: file(
-      relativePath: { eq: "projects/etherscan-logo-circle.png" }
-    ) {
-      ...poolImage
     }
   }
 `

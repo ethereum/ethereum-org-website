@@ -4,12 +4,11 @@ description: Présentation de base des services de nœuds, de leurs avantages et
 lang: fr
 sidebar: true
 sidebarDepth: 2
-isOutdated: true
 ---
 
 ## Introduction {#Introduction}
 
-Exécuter votre propre [nœud Ethereum](/developers/docs/nodes-and-clients/#what-are-nodes-and-clients) peut être difficile, en particulier lorsque vous démarrez ou lors d'une mise à l'échelle rapide. Il existe un certain [nombre de services](#popular-node-services) qui exécutent des infrastructures de nœuds optimisées pour vous, afin que vous puissiez vous concentrer sur le développement de votre application ou de votre produit. Nous vous expliquerons le fonctionnement des services de nœuds, les avantages et les inconvénients de leur utilisation et vous fournirons une liste de fournisseurs si vous souhaitez vous lancer.
+Exécuter votre propre [nœud Ethereum](/developers/docs/nodes-and-clients/#what-are-nodes-and-clients) peut être difficile, en particulier lorsque vous démarrez ou lors d'une croissance rapide. Il existe un certain [nombre de services](#popular-node-services) qui exécutent des infrastructures de nœuds optimisées pour vous, afin que vous puissiez vous concentrer sur le développement de votre application ou de votre produit. Nous vous expliquerons le fonctionnement des services de nœuds, les avantages et les inconvénients de leur utilisation et vous fournirons une liste de fournisseurs si vous souhaitez vous lancer.
 
 ## Prérequis {#prerequisites}
 
@@ -33,7 +32,7 @@ Il est important de noter que les services de nœud ne stockent pas et ne doiven
 
 Le principal avantage est de ne pas avoir à consacrer du temps à la maintenance et à la gestion des nœuds. Cela vous permet donc de vous concentrer sur la construction de votre produit plutôt que d'avoir à vous soucier de la maintenance des infrastructures.
 
-L'exécution de vos propres nœuds peut s'avérer très coûteuse, qu'il s'agisse de stockage, de bande passante ou de temps d'ingénierie. Faire tourner plus de nœuds lors d'une mise à l'échelle, mettre à niveau les nœuds vers les dernières versions et garantir la cohérence de l'état peut vous empêcher de construire et de consacrer des ressources au produit Web3.
+L'exécution de vos propres nœuds peut s'avérer très coûteuse, qu'il s'agisse de stockage, de bande passante ou de temps d'ingénierie. Des opérations telles que l'augmentation du nombre de nœuds lors de la montée en charge, de la mise à niveau des nœuds vers les dernières versions ou la garantie de la cohérence de l'état peuvent vous détourner de votre projet web3 et consommer de précieuses ressources.
 
 ## Quels inconvénients à utiliser un service de nœuds ? {#cons-of-using-a-node-service}
 
@@ -45,7 +44,7 @@ En savoir plus sur les [avantages à exécuter votre propre nœud ](/developers/
 
 Voici une liste des fournisseurs de nœuds Ethereum les plus populaires. N'hésitez pas à ajouter ceux qui sont manquants ! Chaque service de nœuds offre différents avantages et fonctionnalités en plus des niveaux gratuits ou payants, vous devez déterminer ceux qui correspondent le mieux à vos besoins avant de prendre une décision.
 
-- [**Alchemy**](https://alchemyapi.io/)
+- [**Alchemy**](https://www.alchemy.com/)
   - [Documentation](https://docs.alchemyapi.io/)
   - Fonctionnalités
     - Option de niveau gratuit
@@ -56,19 +55,123 @@ Voici une liste des fournisseurs de nœuds Ethereum les plus populaires. N'hési
     - Points de terminaison API uniques
     - Liens de rappel
     - Assistance directe
+- [**Ankr**](https://www.ankr.com/)
+  - [Documentation](https://docs.ankr.com/)
+  - Fonctionnalités
+    - Protocole Ankr : accès ouvert aux points de terminaison API RPC publique pour plus de 8 chaînes
+    - Équilibrage de charge et surveillance des nœuds pour une passerelle rapide et fiable vers le nœud disponible le plus proche
+    - Niveau Premium activant le point de terminaison WSS et la limite de débit non plafonnée
+    - Déploiement d'un nœud complet en un clic et d'un noeud de validateur pour plus de 40 chaînes
+    - Mise à l'échelle progressive
+    - Outils d'analyse
+    - Tableau de bord
+    - RPC, HTTPS et points de terminaison WSS
+    - Assistance directe
+- [**BlockDaemon**](https://blockdaemon.com/)
+  - [Documentation](https://ubiquity.docs.blockdaemon.com/)
+  - Avantages
+    - Tableau de bord
+    - Base par nœud
+    - Analyses
+- [**Chainstack**](https://chainstack.com/)
+  - [Documentation](https://docs.chainstack.com/)
+  - Fonctionnalités
+    - Nœuds partagés gratuits
+    - Nœuds d'archives partagés
+    - Prise en charge de GraphQL
+    - RPC et points de terminaison WSS
+    - Nœuds dédiés complets et archivés
+    - Temps de synchronisation rapide pour les déploiements dédiés
+    - Apportez votre cloud
+    - Tarification à l'heure
+    - Assistance directe 24/7
+- [**GetBlock**](https://getblock.io/)
+  - [Documentation](https://getblock.io/docs/get-started/authentication-with-api-key/)
+  - Fonctionnalités
+    - Accès à plus de 40 nœuds blockchain
+    - 40 000 requettes quotidiennes gratuites
+    - Nombre illimité de clés API
+    - Vitesse de connexion élevée à 1Go/sec
+    - Trace+Archive
+    - Analyses avancées
+    - Mises à jour automatisées
+    - Support technique
+- [**InfStones**](https://infstones.com/)
+  - Fonctionnalités
+    - Option de niveau gratuit
+    - Mise à l'échelle progressive
+    - Analyses
+    - Tableau de bord
+    - Points de terminaison API uniques
+    - Nœuds complets dédiés
+    - Temps de synchronisation rapide pour les déploiements dédiés
+    - Assistance directe 24/7
+    - Accès à plus de 50 nœuds blockchain
 - [**Infura**](https://infura.io/)
   - [Documentation](https://infura.io/docs)
   - Fonctionnalités
     - Option de niveau gratuit
     - Mise à l'échelle progressive
-    - Données d'archivage gratuites
+    - Données d'archivage payantes
     - Assistance directe
     - Tableau de bord
+- [**Kaleido**](https://kaleido.io/)
+  - [Documentation](https://docs.kaleido.io/)
+  - Fonctionnalités
+    - Offre de démarrage gratuite
+    - Déploiement d'un nœud Ethereum en un clic
+    - Clients et algorithmes personnalisables (Geth, Quorum & Besu || PoA, IBFT & Raft)
+    - Plus de 500 API d'administration et de service
+    - Interface REST destinée à soumettre des transactions Ethereum (avec Apache Kafka)
+    - Flux d'événements sortants (avec Apache Kafka)
+    - Vaste catalogue des services "hors chaîne" et auxiliaires (ex : transport bilatéral de messages chiffrés)
+    - Intégration simple au réseau avec gouvernance et contrôle d'accès basé sur les rôles
+    - Gestion des utilisateurs sophistiquée pour les administrateurs et les utilisateurs finaux
+    - Infrastructure hautement évolutive, résiliente et de qualité professionnelle
+    - Gestion de clé privée dans le Cloud HSM
+    - Partage du réseau principal d'Ethereum
+    - Certifications de type 2 pour ISO 27k et SOC 2
+    - Configuration dynamique en cours d'exécution (par exemple ajout d'intégrations dans le cloud, modification des entrées d'un nœud, etc.)
+    - Prise en charge des orchestrations de déploiement multi-cloud, multi-région et hybride
+    - Tarification à l'heure basée sur le modèle SaaS
+    - SLAs et support 24x7
+- [**Moralis**](https://moralis.io/)
+  - [Documentation](https://docs.moralis.io/)
+  - Fonctionnalités
+    - Nœuds partagés gratuits
+    - Nœuds d'archives partagés gratuits
+    - Focalisé sur la confidentialité (pas de journalisation)
+    - Support inter-chaînes
+    - Montée en charge progressive
+    - Tableau de bord
+    - SDK Ethereum unique
+    - Points de terminaison API uniques
+    - Assistance technique directe
+- [**Réseau Pocket**](https://www.pokt.network/)
+  - [Documentation](https://docs.pokt.network/home/)
+  - Fonctionnalités
+    - Protocole RPC décentralisé et place de marché
+    - 1 million de requêtes gratuites par jour (par point de terminaison, max 2)
+    - [Points de terminaison publics](https://docs.pokt.network/home/resources/public-rpc-endpoints)
+    - Programme Pre-Stake+ (si vous avez besoin de plus de 1 million de requêtes par jour)
+    - Plus de 15 blockchains prises en charge
+    - Plus de 6 400 nœuds récompensés en POKT pour mettre à disposition des applications
+    - Nœud d'archivage, nœud d'archivage avec tracage et assistance pour nœuds Testnet
+    - Diversité du client du noeud principal Ethereum
+    - Aucun point unique de défaillance
+    - Aucun temps d'arrêt
+    - Tokenomics quasi-nuls et rentables (mise POKT une fois pour la bande passante)
+    - Aucun coût mensuel irrécupérable, transformez votre infrastructure en un véritable actif
+    - Équilibrage de charge intégré dans le protocole
+    - Montez en charge à l'infini le nombre de demandes par jour et de nœuds par heure.
+    - Solution la plus confidentielle et la plus résistante à la censure
+    - Support pratique pour les développeurs
+    - Tableau de bord et outils d'analyse [Pocket Portal](https://bit.ly/ETHorg_POKTportal)
 - [**QuikNode**](https://www.quiknode.io/)
   - Fonctionnalités
     - 7 jours d’essai gratuit
-    - Assistance variée
-    - Liens de rappel
+    - Assistance diversifiée
+    - Liens de rappel (webhooks)
     - Tableau de bord
     - Analyses
 - [**Rivet**](https://rivet.cloud/)
@@ -76,12 +179,30 @@ Voici une liste des fournisseurs de nœuds Ethereum les plus populaires. N'hési
   - Fonctionnalités
     - Option de niveau gratuit
     - Mise à l'échelle progressive
-- [**BlockDaemon**](https://blockdaemon.com/)
-  - [Documentation](https://ubiquity.docs.blockdaemon.com/)
-  - Avantages
+- [**SettleMint**](https://console.settlemint.com/)
+  - [Documentation](https://docs.settlemint.com/)
+  - Fonctionnalités
+    - Essai gratuit
+    - Montée en charge progressive
+    - Prise en charge de GraphQL
+    - RPC et points de terminaison WSS
+    - Nœuds complets dédiés
+    - Apportez votre cloud
+    - Outils d'analyse
     - Tableau de bord
-    - Base par nœud
-    - Analyses
+    - Tarification à l'heure
+    - Assistance directe
+- [**Watchdata**](https://watchdata.io/)
+  - [Documentation](https://docs.watchdata.io/)
+  - Fonctionnalités
+    - Fiabilité des données
+    - Connexion continue sans temps d'arrêt
+    - Automatisation des processus
+    - Gratuité des tarifs
+    - Limites élevées convenant à tout utilisateur
+    - Prise en charge de différents nœuds
+    - Montée en charge des ressources
+    - Vitesse de traitement élevée
 
 ## Complément d'information {#further-reading}
 
@@ -93,5 +214,5 @@ Voici une liste des fournisseurs de nœuds Ethereum les plus populaires. N'hési
 
 ## Tutoriels connexes {#related-tutorials}
 
-- [Commencer le développement Ethereum avec Alchemy](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)
-- [Guide pour envoyer des transactions avec Web3 et Alchemy](/developers/tutorials/getting-started-with-ethereum-development-using-alchemy/)
+- [Commencer le développement Ethereum avec Alchemy](/developers/tutorials/getting-started-with-ethereum-development-using-alchemy/)
+- [Guide pour envoyer des transactions avec Web3 et Alchemy](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)

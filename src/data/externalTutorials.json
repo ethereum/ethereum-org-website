@@ -31,25 +31,6 @@
     "publishDate": "09/09/2021"
   },
   {
-    "url": "https://www.youtube.com/watch?v=ZurrDzuurQs",
-    "title": "Learn Dapptools | Code like MakerDAO & the DAI team",
-    "description": "We look at how to make all you wonderful web3, blockchain, and smart contract developers even BETTER by showing you how to use dapptools!",
-    "author": "Patrick Collins",
-    "authorGithub": "https://github.com/PatrickAlphaC",
-    "tags": [
-      "solidity",
-      "events",
-      "dapptools",
-      "smart contracts",
-      "bash",
-      "video"
-    ],
-    "skillLevel": "beginner",
-    "timeToRead": "25",
-    "lang": "en",
-    "publishDate": "01/17/2022"
-  },
-  {
     "url": "https://www.youtube.com/watch?v=e1N4aWIJMN0",
     "title": "How to become a blockchain engineer",
     "description": "We explore the steps one needs to take to enter the world as a blockchain developer and engineer. We talk about how to get there.",
