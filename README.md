@@ -1216,6 +1216,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="http://wolzcodelife.web.app"><img src="https://avatars.githubusercontent.com/u/55518764?v=4?s=100" width="100px;" alt=""/><br /><sub><b>wolz-CODElife</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=wolz-CODElife" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/minaessam2015"><img src="https://avatars.githubusercontent.com/u/13814552?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Mina Essam</b></sub></a><br /><a href="#ideas-minaessam2015" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="https://jinhongdev.tistory.com/"><img src="https://avatars.githubusercontent.com/u/65050483?v=4?s=100" width="100px;" alt=""/><br /><sub><b>GNONG</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=Choi-Jinhong" title="Documentation">📖</a></td>
   </tr>
 </table>
 
