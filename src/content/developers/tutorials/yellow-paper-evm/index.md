@@ -96,11 +96,16 @@ There are three costs:
    So *⌈μ<sub>s</sub>[2]÷32⌉* is the number of 32 byte words required to store the data being copied.
    Putting everything together, the inherent cost of [`CALLDATACOPY`](https://www.evm.codes/#37) is 3 gas plus 3 per word of data being copied.
 
-1. The cost of running the code we're calling.
+### Running cost {#running-cost}
+
+The cost of running the code we're calling.
+
    - In the case of [`CREATE`](https://www.evm.codes/#f0) and [`CREATE2`](https://www.evm.codes/#f5), the constructor for the new contract.
    - In the case of [`CALL`](https://www.evm.codes/#f1), [`CALLCODE`](https://www.evm.codes/#f2), [`STATICCALL`](https://www.evm.codes/#fa), or [`DELEGATECALL`](https://www.evm.codes/#f4), the contract we call.
 
-1. The cost of expanding memory (if necessary). 
+### Expanding memory cost {#expanding-memory-cost}
+
+The cost of expanding memory (if necessary). 
    In equation 324, this value is written as *C<sub>mem</sub>(μ<sub>i</sub>')-C<sub>mem</sub>(μ<sub>i</sub>)*.
    Looking at section 9.4.1 again, we see that *μ<sub>i</sub>* is the number of words in memory. 
    So *μ<sub>i</sub>* is the number of words in memory before the opcode and *μ<sub>i</sub>'* is the number of words in memory after the opcode. 
