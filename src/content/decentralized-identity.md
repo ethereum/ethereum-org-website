@@ -40,7 +40,7 @@ Decentralized identifiers are issued, held, and controlled by individuals. An [E
 
 DIDs are stored on distributed ledgers (blockchains) or peer-to-peer networks. This makes DIDs [globally unique, resolvable with high availability, and cryptographically verifiable](https://w3c-ccg.github.io/did-primer/). A DID can be associated with different entities, including people, organizations, or government institutions.  
 
-### What makes this possible? {what-makes-decentralized-identifiers-possible} 
+## What makes this possible? {what-makes-decentralized-identifiers-possible} 
 
 ### 1. Public Key Infrastructure (PKI) {#public-key-infrastructure} 
 
@@ -130,7 +130,7 @@ Online voting and social media are two novel applications for decentralized iden
 
 Decentralized identity can enable the creation of online communities that are free of fake accounts. Each user must authenticate their identity using an on-chain identity system, like the Ethereum Name Service, reducing the possibility of bots overrunning social platforms. 
 
-### Use decentralized identity applications on Ethereum
+## Use decentralized identity applications on Ethereum
 
 There are also many ambitious projects using Ethereum as a foundation for decentralized identity solutions:
 
