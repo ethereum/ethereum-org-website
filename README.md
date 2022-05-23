@@ -1213,6 +1213,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/JuliusDegesys"><img src="https://avatars.githubusercontent.com/u/3232103?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Julius Degesys</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=JuliusDegesys" title="Documentation">📖</a></td>
     <td align="center"><a href="https://nicolasquiroz.com"><img src="https://avatars.githubusercontent.com/u/948922?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Nicolás Quiroz</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=nhsz" title="Code">💻</a> <a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Anhsz" title="Bug reports">🐛</a></td>
   </tr>
+  <tr>
+    <td align="center"><a href="http://wolzcodelife.web.app"><img src="https://avatars.githubusercontent.com/u/55518764?v=4?s=100" width="100px;" alt=""/><br /><sub><b>wolz-CODElife</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=wolz-CODElife" title="Documentation">📖</a></td>
+  </tr>
 </table>
 
 <!-- markdownlint-restore -->
