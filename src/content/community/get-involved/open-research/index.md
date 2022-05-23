@@ -129,6 +129,7 @@ When Ethereum transitions to proof of stake, its native asset (ether) will be us
 
 #### Links
 
+[Robist Incentives Group: PoS incentives](https://ethereum.github.io/beaconrunner/)
 
 ### Liquid staking and derivatives
 
@@ -144,9 +145,18 @@ Decentralized finance (DeFi) is one of the primary classes of application built 
 
 #### Links
 
+[DeFi](https://ethereum.org/en/defi/)
+
+[Coinbase: What is DeFi?](https://www.coinbase.com/learn/crypto-basics/what-is-defi)
+
 ### Fee markets
 
+Ethereum transaction fees protect the network from spam, denial-of-service attacks and bad smart-contract code. However, it also affects the end-user by influencing the cost of interacting with Ethereum. Balancing network security with end-user user-experience is an ongoing challenge that requires further research and development. 
+
 #### Links
+
+[EIP 1559 (Robust Incentives Group)](https://ethereum.github.io/abm1559/notebooks/eip1559.html)
+
 
 ### Taxation and accounting
 
@@ -155,13 +165,8 @@ Crypto taxation is a complicated issue that likely requires a software solution.
 
 #### Links
 
+[Example of taxation and accounting research: Cumming et al. 2019](https://www.mdpi.com/1911-8074/12/3/126)
 
-### Payment systems
-
-Using Ethereum for everyday purchases is not common right now. This is because of accessibility and cost issues. These are probably resolvable with additional R&D especially on top of Layer 2 infrastructure.
-
-
-#### Links
 
 
 ## Clients and Protocol Development
@@ -216,11 +221,19 @@ DAOs are one of the key classes of application being built on top of Ethereum. T
 
 #### Links
 
+[Dao Collective](https://daocollective.xyz/)
+
+
 ### Developer tools
 
 Tools for Ethereum developers are rapidly improving. There is lots of active research and development to do in this general area.
 
 #### Links
+
+[Developer Frameworks](https://ethereum.org/en/developers/docs/frameworks/)
+
+[Consensus developer tools list](https://github.com/ConsenSys/ethereum-developer-tools-list)
+
 
 ### App security
 
@@ -237,9 +250,12 @@ Apps on Ethereum are rarely fully decentralized because they rely on some centra
 
 #### Links
 
+[Coinbase: Intro to Web3 Stack](https://blog.coinbase.com/a-simple-guide-to-the-web3-stack-785240e557f0)
+
 ### Composability
 
 Composability is the ability for different apps to work in parallel or on top of one another so that users are not locked-in to specific protocols. This is something that requires best-practices in interoperability and data standards. This is an area that would benefit from more ongoing research and development.
 
 #### Links
 
+[Smart contract composability](https://ethereum.org/en/developers/docs/smart-contracts/composability/)
