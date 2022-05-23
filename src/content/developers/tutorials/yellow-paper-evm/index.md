@@ -75,7 +75,9 @@ The term exceptional execution means an exception that causes the execution of t
 This section explains how the gas fees are calculated.
 There are three costs:
 
-1. The inherent cost of the specific opcode.
+### Opcode cost {#opcode-cost}
+
+The inherent cost of the specific opcode.
    To get this value, find the cost group of the opcode in Appendix H (p. 28, under equation (327)), and find the cost group in equation (324).
    This gives you a cost function, which in most cases uses parameters from Appendix G (p. 27).
    
