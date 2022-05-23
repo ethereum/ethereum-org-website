@@ -7543,6 +7543,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "nativeanish",
+      "name": "Anish Gupta",
+      "avatar_url": "https://avatars.githubusercontent.com/u/15274388?v=4",
+      "profile": "http://nativeanish.tech",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
