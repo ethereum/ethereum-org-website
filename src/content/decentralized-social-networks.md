@@ -10,11 +10,7 @@ summaryPoint1: Blockchain-based platforms for social interaction and content cre
 summaryPoint2: Decentralized social media networks protect user privacy and enhance data security. 
 summaryPoint3: Tokens and NFTs create new ways to monetize content. 
 ---
-Today, social media platforms play a huge role in how we communicate and interact with each other. Social networking services have gone beyond mere fads and now underpin the digital economy. 
-
-However, centralized control of these platforms has created many problems. Data breaches, server outages, deplatforming, censorship, privacy violations—these are some of the trade-offs social media users are forced to accept. 
-
-To combat these issues, developers are building novel social media applications on decentralized networks like Ethereum. Decentralized social networks are poised to fix the the ills of legacy social platforms and improve the overall user experience. 
+Social networks play a massive role in our daily communications and interactions. However, centralized control of these platforms has created many problems: data breaches, server outages, de-platforming, censorship, and privacy violations are some of the trade-offs social media often make. To combat these issues, developers are building social networks on Ethereum. Decentralized social networks can fix many of the problems of traditional social networking platforms and improve users' overall experience.
 
 ## What are decentralized social networks? {#what-are-decentralized-social-networks}
 Decentralized social media networks are blockchain-based platforms that allow users to exchange information as well as publish and distribute content to audiences. Because these applications run on the blockchain, they are decentralized and resistant to censorship and undue control. 
