@@ -185,7 +185,7 @@ const LearningToolsPage = ({ data }) => {
     {
       name: "Questbook",
       description: "page-learning-tools-questbook-description",
-      url: "https://questbook.app/",
+      url: "https://learn.questbook.xyz/",
       image: getImage(data.questbook),
       alt: "page-learning-tools-questbook-logo-alt",
       background: "#141236",
