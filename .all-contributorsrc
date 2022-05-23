@@ -7516,6 +7516,15 @@
       "contributions": [
         "ideas"
       ]
+    },
+    {
+      "login": "Choi-Jinhong",
+      "name": "GNONG",
+      "avatar_url": "https://avatars.githubusercontent.com/u/65050483?v=4",
+      "profile": "https://jinhongdev.tistory.com/",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
