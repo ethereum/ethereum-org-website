@@ -10,6 +10,7 @@ import Breadcrumbs from "../../components/Breadcrumbs"
 import ButtonLink from "../../components/ButtonLink"
 import CalloutBanner from "../../components/CalloutBanner"
 import InfoBanner from "../../components/InfoBanner"
+import Link from "../../components/Link"
 import PageMetadata from "../../components/PageMetadata"
 import WalletCompare from "../../components/WalletCompare"
 import { Divider, Page } from "../../components/SharedStyledComponents"
@@ -115,9 +116,9 @@ const FindWalletPage = ({ location, data }) => {
       <InfoBannerContainer>
         <InfoBanner emoji=":wave:">
           <Translation id="page-find-wallet-new-to-wallets" />{" "}
-          <a href="/wallets/">
+          <Link to="/wallets/">
             <Translation id="page-find-wallet-new-to-wallets-link" />
-          </a>
+          </Link>
         </InfoBanner>
       </InfoBannerContainer>
       <WalletCompare location={location} />
