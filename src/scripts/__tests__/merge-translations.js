@@ -1,4 +1,4 @@
-import { mergeObjects } from "../merge-translations"
+import mergeObjects from "../../utils/mergeObjects"
 
 const x = { a: 1, b: 2 }
 const y = { c: 3, d: 4 }

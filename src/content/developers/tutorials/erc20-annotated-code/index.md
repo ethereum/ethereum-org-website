@@ -902,7 +902,7 @@ are not designed to handle it.
 }
 ```
 
-This is the hook function to be called during transfers. It is empty here, buf if you need
+This is the hook function to be called during transfers. It is empty here, but if you need
 it to do something you just override it.
 
 # Conclusion {#conclusion}

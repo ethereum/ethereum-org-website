@@ -60,10 +60,10 @@
     "link": "https://www.meetup.com/Ethereum-Developers/"
   },
   {
-    "title": "Vancouver Ethereum & Blockchain 2.0 Meetup",
+    "title": "Ethereum Vancouver",
     "emoji": ":canada:",
     "location": "Vancouver",
-    "link": "https://www.meetup.com/Vancouver-Ethereum-Meetup/"
+    "link": "https://www.meetup.com/ethvancouver-meetup-group/"
   },
   {
     "title": "Ethereum Paris",
@@ -226,6 +226,12 @@
     "emoji": ":us:",
     "location": "San Diego",
     "link": "https://www.meetup.com/Blockchain-and-Brews/"
+  },
+  {
+    "title": "ETH SD",
+    "emoji": ":us:",
+    "location": "San Diego",
+    "link": "https://withkoji.com/@ethsd"
   },
   {
     "title": "SF Ethereum Developers",

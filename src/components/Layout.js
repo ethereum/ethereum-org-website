@@ -15,6 +15,7 @@ import SideNav from "./SideNav"
 import SideNavMobile from "./SideNavMobile"
 import TranslationBanner from "./TranslationBanner"
 import TranslationBannerLegal from "./TranslationBannerLegal"
+import FeedbackWidget from "./FeedbackWidget"
 
 import { ZenModeContext } from "../contexts/ZenModeContext"
 
@@ -183,6 +184,7 @@ const Layout = (props) => {
               <VisuallyHidden isHidden={isZenMode}>
                 <Footer />
               </VisuallyHidden>
+              <FeedbackWidget />
             </ContentContainer>
           </ThemeProvider>
         </IntlContextProvider>

@@ -7,7 +7,7 @@ incomplete: true
 sidebarDepth: 3
 ---
 
-侧链是一个独立的区块链，与以太坊主网并行且独立地运行。 它有自己的[共识算法](/developers/docs/consensus-mechanisms/)（例如[权力证明](https://wikipedia.org/wiki/Proof_of_authority)、[委托权益证明](https://en.bitcoinwiki.org/wiki/DPoS)、[拜占庭容错](https://decrypt.co/resources/byzantine-fault-tolerance-what-is-it-explained)）。 它通过双向主网来实现链接。
+侧链是一个独立的区块链，与以太坊主网并行且独立地运行。 它有自己的[共识算法](/developers/docs/consensus-mechanisms/)（例如[权威证明](https://wikipedia.org/wiki/Proof_of_authority)、[委托权益证明](https://en.bitcoinwiki.org/wiki/DPoS)、[拜占庭容错](https://decrypt.co/resources/byzantine-fault-tolerance-what-is-it-explained)）。 它通过双向主网来实现链接。
 
 让人们对侧链感兴趣的是，它的工作环境和主链相同，因为同样基于[ EVM（以太坊虚拟机）](/developers/docs/evm/)。 它不使用以太坊，它自己就是以太坊。 这意味着如果想要在侧链上使用 [dapp](/developers/docs/dapps/) ，只需将它部署在侧链上。 它的外观、给人的感受和行为与主链相似，仍然通过 Solidity 写合约，并提供 Web3 API 完成互动。
 
@@ -27,9 +27,9 @@ sidebarDepth: 3
 
 多个项目提供侧链的实施，以便您集成至 dApp：
 
+- [Polygon PoS](https://polygon.technology/solutions/polygon-pos)
 - [Skale](https://skale.network/)
-- [POA 网络](https://www.poa.network/)
-- [Gnosis Chain (formerly xDai)](https://www.xdaichain.com/)
+- [Gnosis Chain（原 xDai）](https://www.xdaichain.com/)
 
 ## 延伸阅读 {#further-reading}
 

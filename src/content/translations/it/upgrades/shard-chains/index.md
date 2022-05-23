@@ -6,13 +6,13 @@ template: upgrade
 sidebar: true
 image: ../../../../../assets/upgrades/newrings.png
 summaryPoint1: Lo sharding è un aggiornamento multi-fase per migliorare la scalabilità e la capacità di Ethereum.
-summaryPoint2: Le shard chain distribuiscono il carico della rete su 64 nuove chain.
-summaryPoint3: Rendono più facile l'esecuzione di un nodo mantenendo bassi i requisiti hardware.
+summaryPoint2: Le shard chain forniscono livelli di archiviazione aggiuntivi e più economici per applicazioni e rollup, per memorizzare i dati.
+summaryPoint3: Consentono alle soluzioni del livello 2 di offrire commissioni di transazione contenute, sfruttando la sicurezza di Ethereum.
 summaryPoint4: Questo aggiornamento è previsto per seguire la fusione della Mainnet con la Beacon Chain.
 ---
 
 <UpgradeStatus dateKey="page-upgrades-shards-date">
-    Le shard chain dovrebbero essere disponibili a un certo punto nel 2023, a seconda della velocità di avanzamento dei lavori dopo <a href="/upgrades/merge/">la fusione</a>. Queste shard garantiranno a Ethereum più capacità di archiviazione e acceso ai dati, ma non verranno usate per eseguire codice. I dettagli sono ancora da chiarire.
+    Le shard chain dovrebbero essere disponibili a un certo punto nel 2023, a seconda della velocità di avanzamento dei lavori dopo <a href="/upgrades/merge/">la fusione</a>. Queste shard garantiranno a Ethereum più capacità di archiviazione e acceso ai dati, ma non verranno usate per eseguire codice.
 </UpgradeStatus>
 
 ## Cos'è lo sharding? {#what-is-sharding}
@@ -48,30 +48,32 @@ I rollup sono una tecnologia di secondo livello che esiste già oggi. Permettono
 <InfoBanner isWarning={false}>
   Dati i recenti progressi nella ricerca e nello sviluppo di soluzioni di scalabilità di livello 2, si è reso necessario dare la precedenza all'aggiornamento della fusione rispetto alle shard chain. Questi saranno i punti focali dopo la transizione della rete principale al proof of stake.
 
-[Maggiori informazioni sui rollup](/developers/docs/scaling/layer-2-rollups/)
+[Maggiori informazioni sui rollup](/developers/docs/scaling/#rollups)
 </InfoBanner>
 
 ## Shard chain versione 2: esecuzione di codice {#code-execution}
 
-Il piano è sempre stato quello di aggiungere ulteriori funzionalità agli shard, per renderli più simili a quello che è oggi la [rete principale Ethereum](/glossary/#mainnet). Ciò consentirebbe loro di memorizzare ed eseguire smart contract e gestire gli account. Ma considerando il maggior numero di transazioni al secondo reso possibile dalle shard chain versione 1, ce n'è ancora bisogno? La questione è tuttora in fase di dibattito all'interno della community e sembra ci siano poche alternative.
+Il piano è sempre stato quello di aggiungere ulteriori funzionalità agli shard, per renderli più simili a quello che è oggi la [rete principale Ethereum](/glossary/#mainnet). Questo consentirebbe loro di memorizzare ed eseguire il codice e gestire le transazioni, poiché ogni frammento conterrebbe la propria serie univoca di smart contract e saldi di conti. La comunicazione incrociata tra frammenti consentirebbe l'esecuzione di transazioni tra i vari frammenti.
+
+Tuttavia, considerando l'aumento di transazioni al secondo che i frammenti di versione 1 forniscono, ce n'è ancora bisogno? La questione è tuttora oggetto di dibattito all'interno della community e sembrano esserci alcune opzioni.
 
 ### Gli shard devono eseguire codice? {#do-shards-need-code-execution}
 
-Durante il suo intervento nel podcast Bankless, Vitalik Buterin ha presentato 3 potenziali opzioni di cui vale la pena discutere.
+Vitalik Buterin, parlando al podcast Bankless, ha presentato 3 potenziali opzioni di cui vale la pena discutere.
 
 <YouTube id="-R0j5AMUSzA" start="5841" />
 
 #### 1. Esecuzione di stato non necessaria {#state-execution-not-needed}
 
-Significa che non diamo la possibilità agli shard di gestire gli Smart Contract e li utilizziamo solo come depositi di dati.
+Significa che non diamo agli shard la possibilità di gestire gli smart contract e li utilizziamo solo come depositi di dati.
 
 #### 2. Inserire alcuni shard di esecuzione {#some-execution-shards}
 
-Forse c'è un compromesso che permette di non implementare tutti gli shard (al momento ne sono previsti 64) per avere una soluzione più smart. Potremmo semplicemente aggiungere questa funzionalità ad alcuni shard e tralasciare gli altri. Potrebbe velocizzare la consegna.
+Forse esiste un compromesso che evita di dover implementare tutti gli shard (al momento ne sono previsti 64) per ottenere una soluzione più smart. Potremmo semplicemente aggiungere questa funzionalità ad alcuni shard e tralasciare gli altri, velocizzando potenzialmente la consegna.
 
 #### 3. Attendere finché non possiamo implementare il Zero Knowledge (ZK) snark {#wait-for-zk-snarks}
 
-Infine, forse dovremmo riformulare questo dibattito quando gli ZK snark sono consolidati. Questa è una tecnologia che potrebbe contribuire a garantire transazioni veramente private sulla rete. È probabile che saranno necessari shard più intelligenti, ma sono ancora in fase di ricerca e sviluppo.
+Infine, forse dovremmo riprendere questo dibattito una volta consolidati gli ZK snark. Si tratta di una tecnologia che potrebbe contribuire a garantire transazioni veramente private sulla rete. È probabile che saranno necessari shard più intelligenti, ma sono ancora in fase di ricerca e sviluppo.
 
 #### Altre risorse {#other-sources}
 
@@ -83,11 +85,11 @@ Questo è ancora argomento di discussione. Aggiorneremo le pagine quando ne sapr
 
 ## Relazioni tra aggiornamenti {#relationship-between-upgrades}
 
-Gli aggiornamenti di Ethereum sono tutti in qualche modo interconnessi. Quindi riassumiamo come le shard chain sono in relazione con gli altri aggiornamenti.
+Gli aggiornamenti di Ethereum sono tutti in qualche modo interconnessi. Quindi riassumiamo in che modo le shard chain si collegano agli altri aggiornamenti.
 
 ### Shard e beacon chain {#shards-and-beacon-chain}
 
-Le beacon chain contengono tutti i processi logici per garantire la protezione e la sincronizzazione degli shard. Esse coordinano gli staker nella rete, assegnandoli agli shard su cui dovranno operare. Faciliterà inoltre la comunicazione tra gli shard, ricevendo e salvando i dati delle transazioni degli shard che saranno accessibili da parte degli altri shard. Gli shard avranno così un'istantanea dello stato di Ethereum per mantenere tutto aggiornato.
+Le beacon chain contengono tutti i processi logici per garantire la protezione e la sincronizzazione degli shard. Esse coordinano gli staker nella rete, assegnandoli agli shard su cui dovranno operare. Facilitano inoltre la comunicazione tra gli shard, ricevendo e salvando i dati delle transazioni degli shard che saranno accessibili da parte degli altri shard. Gli shard avranno così un'istantanea dello stato di Ethereum per mantenere tutto aggiornato.
 
 <ButtonLink to="/upgrades/beacon-chain/">
   La beacon chain
@@ -95,9 +97,9 @@ Le beacon chain contengono tutti i processi logici per garantire la protezione e
 
 ### Gli shard e la fusione {#shards-and-docking}
 
-Per quando verranno aggiunti degli shard aggiuntivi, la Mainnet di Ethereum sarà già protetta dalla Beacon Chain utilizzando il proof-of-stake. In questo modo una rete principale fertile potrà costruire shard chain alimentate da soluzioni di livello 2 che potenziano la scalabilità.
+Per quando verranno aggiunti shard aggiuntivi, la Rete principale di Ethereum sarà già protetta dalla Beacon Chain attraverso il proof-of-stake. In questo modo una rete principale fertile potrà costruire shard chain alimentate da soluzioni di livello 2 che potenziano la scalabilità.
 
-Rimane da valutare se la rete principale sarà l'unico shard "smart" in grado di gestire l'esecuzione di codice. In ogni caso la decisione sull'espansione degli shard potrà essere rivista in base alle esigenze.
+Rimane da valutare se la rete principale sarà l'unico shard "smart" in grado di gestire l'esecuzione di codice. In ogni caso, la decisione sull'espansione degli shard potrà essere rivista in base alle esigenze.
 
 <ButtonLink to="/upgrades/merge/">
   La fusione

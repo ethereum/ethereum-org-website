@@ -6,9 +6,7 @@ import Link from "./Link"
 
 const Table = styled.div`
   background-color: ${(props) => props.theme.colors.background};
-  box-shadow: ${(props) => props.theme.colors.tableBoxShadow};
   width: 100%;
-  margin-bottom: 2rem;
 `
 
 const Item = styled.div`
@@ -17,11 +15,11 @@ const Item = styled.div`
   display: flex;
   justify-content: space-between;
   color: ${(props) => props.theme.colors.text} !important;
-  box-shadow: 0 1px 1px ${(props) => props.theme.colors.tableItemBoxShadow};
-  margin-bottom: 1px;
+  border: 1px solid ${(props) => props.theme.colors.border};
   padding: 1rem;
   width: 100%;
   color: #000000;
+  margin-bottom: 1rem;
   &:hover {
     border-radius: 4px;
     box-shadow: 0 0 1px ${(props) => props.theme.colors.primary};
@@ -34,8 +32,7 @@ const ItemLink = styled(Link)`
   display: flex;
   justify-content: space-between;
   color: ${(props) => props.theme.colors.text} !important;
-  box-shadow: 0 1px 1px ${(props) => props.theme.colors.tableItemBoxShadow};
-  margin-bottom: 1px;
+  border: 1px solid ${(props) => props.theme.colors.border};
   padding: 1rem;
   width: 100%;
   color: #000000;

@@ -6,17 +6,17 @@ import { useIntl } from "gatsby-plugin-intl"
 import styled from "styled-components"
 
 // Assets
-import dappnode from "../assets/run-a-node/dappnode.svg"
-import dapptap from "../assets/run-a-node/dapptap.svg"
-import terminal from "../assets/run-a-node/terminal.svg"
-import decentralizationGlyph from "../assets/run-a-node/decentralization-glyph.svg"
-import sovereigntyGlyph from "../assets/run-a-node/sovereignty-glyph.svg"
-import privacyGlyph from "../assets/run-a-node/privacy-glyph.svg"
-import megaphoneGlyph from "../assets/run-a-node/megaphone-glyph.svg"
-import voteGlyph from "../assets/run-a-node/vote-glyph.svg"
-import earthGlyph from "../assets/run-a-node/earth-glyph.svg"
-import downloadGlyph from "../assets/run-a-node/download-glyph.svg"
-import hardwareGlyph from "../assets/run-a-node/hardware-glyph.svg"
+import Dappnode from "../assets/run-a-node/dappnode.svg"
+import Dapptap from "../assets/run-a-node/dapptap.svg"
+import Terminal from "../assets/run-a-node/terminal.svg"
+import DecentralizationGlyph from "../assets/run-a-node/decentralization-glyph.svg"
+import SovereigntyGlyph from "../assets/run-a-node/sovereignty-glyph.svg"
+import PrivacyGlyph from "../assets/run-a-node/privacy-glyph.svg"
+import MegaphoneGlyph from "../assets/run-a-node/megaphone-glyph.svg"
+import VoteGlyph from "../assets/run-a-node/vote-glyph.svg"
+import EarthGlyph from "../assets/run-a-node/earth-glyph.svg"
+import DownloadGlyph from "../assets/run-a-node/download-glyph.svg"
+import HardwareGlyph from "../assets/run-a-node/hardware-glyph.svg"
 
 // Components
 import PageHero from "../components/PageHero"
@@ -27,6 +27,7 @@ import {
   Divider,
   Page,
   CardGrid,
+  InfoGrid,
 } from "../components/SharedStyledComponents"
 import ExpandableCard from "../components/ExpandableCard"
 import ExpandableInfo from "../components/ExpandableInfo"
@@ -137,12 +138,12 @@ const Highlight = styled(Content)`
   color: ${({ theme }) => theme.colors.text};
   position: relative;
   isolation: isolate;
-  img {
+  svg {
     margin: 0 0 0 2rem;
   }
   &:nth-of-type(even) {
     flex-direction: row-reverse;
-    img {
+    svg {
       margin: 0 2rem 0 0;
     }
   }
@@ -151,11 +152,11 @@ const Highlight = styled(Content)`
     flex-direction: column-reverse;
     &:nth-of-type(even) {
       flex-direction: column-reverse;
-      img {
+      svg {
         margin: 0 0 2rem;
       }
     }
-    img {
+    svg {
       margin: 0 0 2rem;
     }
   }
@@ -177,23 +178,6 @@ const StyledExpandableInfo = styled(ExpandableInfo)`
   @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
     margin: 0;
     width: 100%;
-  }
-`
-
-const InfoGrid = styled(CardGrid)`
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr));
-  gap: 1rem 2rem;
-  & > div {
-    height: fit-content;
-    &:hover {
-      transition: 0.1s;
-      transform: scale(1.01);
-      img {
-        transition: 0.1s;
-        transform: scale(1.1);
-      }
-    }
   }
 `
 
@@ -467,7 +451,7 @@ const RunANodePage = ({ data }) => {
 
   const whyRunANodeCards = [
     {
-      image: privacyGlyph,
+      image: PrivacyGlyph,
       title: "page-run-a-node-privacy-title",
       preview: "page-run-a-node-privacy-preview",
       body: [
@@ -478,7 +462,7 @@ const RunANodePage = ({ data }) => {
       alt: "page-run-a-node-glyph-alt-privacy",
     },
     {
-      image: megaphoneGlyph,
+      image: MegaphoneGlyph,
       title: "page-run-a-node-censorship-resistance-title",
       preview: "page-run-a-node-censorship-resistance-preview",
       body: [
@@ -488,14 +472,14 @@ const RunANodePage = ({ data }) => {
       alt: "page-run-a-node-glyph-alt-censorship-resistance",
     },
     {
-      image: earthGlyph,
+      image: EarthGlyph,
       title: "page-run-a-node-participate-title",
       preview: "page-run-a-node-participate-preview",
       body: ["page-run-a-node-participate-1", "page-run-a-node-participate-2"],
       alt: "page-run-a-node-glyph-alt-earth",
     },
     {
-      image: decentralizationGlyph,
+      image: DecentralizationGlyph,
       title: "page-run-a-node-decentralized-title",
       preview: "page-run-a-node-decentralized-preview",
       body: [
@@ -505,7 +489,7 @@ const RunANodePage = ({ data }) => {
       alt: "page-run-a-node-glyph-alt-decentralization",
     },
     {
-      image: voteGlyph,
+      image: VoteGlyph,
       title: "page-run-a-node-voice-your-choice-title",
       preview: "page-run-a-node-voice-your-choice-preview",
       body: [
@@ -515,7 +499,7 @@ const RunANodePage = ({ data }) => {
       alt: "page-run-a-node-glyph-alt-vote",
     },
     {
-      image: sovereigntyGlyph,
+      image: SovereigntyGlyph,
       title: "page-run-a-node-sovereignty-title",
       preview: "page-run-a-node-sovereignty-preview",
       body: ["page-run-a-node-sovereignty-1", "page-run-a-node-sovereignty-2"],
@@ -595,19 +579,21 @@ const RunANodePage = ({ data }) => {
           <Translation id="page-run-a-node-why-title" />
         </h2>
         <InfoGrid>
-          {whyRunANodeCards.map(({ image, title, preview, body, alt }, idx) => (
-            <ExpandableCard
-              contentPreview={<Translation id={preview} />}
-              title={<Translation id={title} />}
-              svg={image}
-              alt={<Translation id={alt} />}
-              key={idx}
-            >
-              {body.map((item, idx) => (
-                <p key={idx}>{<Translation id={item} />}</p>
-              ))}
-            </ExpandableCard>
-          ))}
+          {whyRunANodeCards.map(({ image, title, preview, body, alt }, idx) => {
+            return (
+              <ExpandableCard
+                contentPreview={<Translation id={preview} />}
+                title={translateMessageId(title, intl)}
+                alt={translateMessageId(alt, intl)}
+                svg={image}
+                key={idx}
+              >
+                {body.map((item, idx) => (
+                  <p key={idx}>{<Translation id={item} />}</p>
+                ))}
+              </ExpandableCard>
+            )
+          })}
         </InfoGrid>
       </Content>
 
@@ -634,8 +620,7 @@ const RunANodePage = ({ data }) => {
               </Link>
             </ColumnFill>
             <ColumnNarrow>
-              <img
-                src={terminal}
+              <Terminal
                 alt={translateMessageId(
                   "page-run-a-node-glyph-alt-terminal",
                   intl
@@ -651,8 +636,7 @@ const RunANodePage = ({ data }) => {
               </p>
             </ColumnFill>
             <ColumnNarrow>
-              <img
-                src={dappnode}
+              <Dappnode
                 alt={translateMessageId(
                   "page-run-a-node-glyph-alt-dappnode",
                   intl
@@ -671,8 +655,7 @@ const RunANodePage = ({ data }) => {
               </p>
             </ColumnFill>
             <ColumnNarrow>
-              <img
-                src={dapptap}
+              <Dapptap
                 alt={translateMessageId(
                   "page-run-a-node-glyph-alt-phone",
                   intl
@@ -765,8 +748,7 @@ const RunANodePage = ({ data }) => {
 
         <BuildContainer>
           <SvgTitle>
-            <img
-              src={hardwareGlyph}
+            <HardwareGlyph
               alt={translateMessageId(
                 "page-run-a-node-glyph-alt-hardware",
                 intl
@@ -851,8 +833,7 @@ const RunANodePage = ({ data }) => {
 
         <BuildContainer>
           <SvgTitle>
-            <img
-              src={downloadGlyph}
+            <DownloadGlyph
               alt={translateMessageId(
                 "page-run-a-node-glyph-alt-software",
                 intl

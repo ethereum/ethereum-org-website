@@ -6,9 +6,9 @@ sidebar: true
 incomplete: true
 ---
 
-Ethereum, seperti Bitcoin, saat ini menggunakan protokol konsensus yang disebut **[Bukti kerja (PoW)](https://en.wikipedia.org/wiki/Proof_of_work)**. Ini memungkinkan node jaringan Ethereum untuk berkesesuaian dengan state dari semua informasi yang terekam dalam blockchain Ethereum, dan mencegah beberapa jenis serangan ekonomi tertentu.
+Ethereum, seperti Bitcoin, saat ini menggunakan protokol konsensus yang disebut **[Bukti kerja (PoW)](https://wikipedia.org/wiki/Proof_of_work)**. Ini memungkinkan node jaringan Ethereum untuk berkesesuaian dengan state dari semua informasi yang terekam dalam blockchain Ethereum, dan mencegah beberapa jenis serangan ekonomi tertentu.
 
-Pada tahun depan, bukti kerja akan dihentikan untuk digantikan dengan **[Bukti taruhan (PoS)](/developers/docs/consensus-mechanisms/pos)**. Transisi ke bukti taruhan juga akan menghapuskan penambangan dari Ethereum. Untuk detail lebih lanjut tentang waktunya, ikuti perkembangan [peningkatan penggabungan Eth2](/eth2/merge/).
+Pada tahun depan, bukti kerja akan dihentikan untuk digantikan dengan **[Bukti taruhan (PoS)](/developers/docs/consensus-mechanisms/pos)**. Transisi ke bukti taruhan juga akan menghapuskan penambangan dari Ethereum. [Selengkapnya tentang penggabungan.](/upgrades/merge/)
 
 ## Prasyarat {#prerequisites}
 
@@ -56,7 +56,7 @@ Agar konsisten menghasilkan blok jahat tapi valid, Anda akan memerlukan lebih da
 
 Bukti kerja juga bertanggung jawab untuk menerbitkan mata uang baru ke dalam sistem dan memberi insentif kepada para penambang untuk bekerja.
 
-Penambang yang berhasil membuat satu blok diberi imbalan dua ETH yang baru dicetak dan semua biaya transaksi dalam blok. Seorang penambang mungkin juga mendapatkan 1,75 ETH untuk satu blok paman. Blok paman adalah blok valid yang dibuat oleh seorang penambang bersamaan dengan saat penambang lain berhasil menambang blok. Blok paman biasanya terjadi karena latensi jaringan.
+Miners who successfully create a block get rewarded with two freshly minted ETH but no longer receive all the transaction fees, as the base fee gets burned, while the tip and block reward goes to the miner. Seorang penambang mungkin juga mendapatkan 1,75 ETH untuk satu blok paman. Blok paman adalah blok valid yang dibuat oleh seorang penambang bersamaan dengan saat penambang lain berhasil menambang blok. Blok paman biasanya terjadi karena latensi jaringan.
 
 ## Finality {#finality}
 
@@ -74,9 +74,9 @@ Ingat, penentuan waktu ini tidak termasuk waktu tunggu untuk memerintahkan trans
 
 Satu kritik besar terhadap bukti kerja adalah jumlah output energinya yang diperlukan untuk menjaga jaringan tetap aman. Untuk mempertahankan keamanan dan desentralisasi, Ethereum dalam sistem bukti kerja mengonsumsi 73,2 TWh setiap tahunnya, jumlah energi yang setara dengan negara berukuran sedang seperti Austria.
 
-## Kelebihan dan kelemahan {#pros-and-cons}
+## Pro dan Kontra {#pros-and-cons}
 
-| Kelebihan                                                                                                                                                                                                                                            | Kekurangan                                                                                                                                                              |
+| Pro                                                                                                                                                                                                                                                  | Kontra                                                                                                                                                                  |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Bukti kerja bersifat netral. Anda tidak perlu ETH untuk memulai dan imbalan blok memungkinkan Anda beranjak dari 0ETH ke saldo yang positif. Dengan [bukti taruhan](/developers/docs/consensus-mechanisms/pos/), Anda membutuhkan ETH untuk memulai. | Bukti kerja menggunakan terlalu banyak energi yang berakibat buruk bagi lingkungan.                                                                                     |
 | Bukti kerja adalah mekanisme konsensus yang telah dicoba dan teruji yang telah mengamankan dan mendesentralisasi Bitcoin dan Ethereum selama bertahun-tahun.                                                                                         | Jika Anda ingin menambang, Anda perlu peralatan spesialis yang adalah investasi besar untuk memulai.                                                                    |
@@ -99,7 +99,7 @@ Pada tingkat tinggi, bukti taruhan punya tujuan akhir yang sama seperti bukti ke
 
 ## Bacaan Lebih Lanjut {#further-reading}
 
-- [Serangan mayoritas](https://en.bitcoin.it/wiki/Majority_attack/)
+- [Serangan mayoritas](https://en.bitcoin.it/wiki/Majority_attack)
 - [Tentang finalitas penyelesaian](https://blog.ethereum.org/2016/05/09/on-settlement-finality/)
 
 ### Video {#videos}

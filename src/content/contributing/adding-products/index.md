@@ -5,6 +5,8 @@ lang: en
 sidebar: true
 ---
 
+_A note on adding wallets: as part of [our Q1 product roadmap](https://github.com/ethereum/ethereum-org-website/issues/5105), we are refining our wallets page. This will include refining the listing criteria for our wallets page. Until we have researched, established, and published refined listing criteria, we will not be actively adding new wallets to the website._
+
 # Adding Ethereum products {#adding-products}
 
 Anyone is free to suggest new wallets and dapps to the content on ethereum.org, where it's appropriate to do so. **No, we won't list your dapp on our homepage** 😜
@@ -12,6 +14,7 @@ Anyone is free to suggest new wallets and dapps to the content on ethereum.org, 
 Wallets and dapps are currently listed on:
 
 - ethereum.org/wallets
+- ethereum.org/wallets/find-wallet
 - ethereum.org/dapps
 - ethereum.org/get-eth
 
@@ -105,6 +108,6 @@ _We're also investigating options for voting so the community can indicate their
 
 If you want to add a wallet or dapp to ethereum.org and it meets the criteria, create an issue on GitHub.
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.md&title=">
+<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new/choose">
   Create an issue
 </ButtonLink>

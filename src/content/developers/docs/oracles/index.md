@@ -444,3 +444,7 @@ _We'd love more documentation on creating an oracle smart contract. If you can h
 **Tutorials**
 
 - [How to Fetch the Current Price of Ethereum in Solidity](https://blog.chain.link/fetch-current-crypto-price-data-solidity/) - _Chainlink_
+
+**Example projects**
+
+- [Full Chainlink starter project for Ethereum in Solidity](https://github.com/hackbg/chainlink-fullstack) - _HackBG_

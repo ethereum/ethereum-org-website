@@ -17,13 +17,13 @@ You should understand the basics of Ethereum before reading up on the different 
 
 Public networks are accessible to anyone in the world with an internet connection. Anyone can read or create transactions on a public blockchain and validate the transactions being executed. Agreement on transactions and the state of the network is decided by a consensus of peers.
 
-### Mainnet {#mainnet}
+### Ethereum Mainnet {#ethereum-mainnet}
 
 Mainnet is the primary public Ethereum production blockchain, where actual-value transactions occur on the distributed ledger.
 
 When people and exchanges discuss ETH prices, they're talking about Mainnet ETH.
 
-### Testnets {#testnets}
+### Ethereum Testnets {#ethereum-testnets}
 
 In addition to Mainnet, there are public testnets. These are networks used by protocol developers or smart contract developers to test both protocol upgrades as well as potential smart contracts in a production-like environment before deployment to Mainnet. Think of this as an analog to production versus staging servers.
 
@@ -33,19 +33,26 @@ Most testnets use a proof-of-authority consensus mechanism. This means a small n
 
 ETH on testnets has no real value; therefore, there are no markets for testnet ETH. Since you need ETH to actually interact with Ethereum, most people get testnet ETH from faucets. Most faucets are webapps where you can input an address which you request ETH to be sent to.
 
-#### Arbitrum Rinkeby {#arbitrum-rinkeby}
 
-A testnet for [Arbitrum](https://arbitrum.io/).
+#### Sepolia {#sepolia}
 
-##### Arbitrum Rinkeby faucets
+A proof-of-work testnet; this means it's the best like-for-like representation of Ethereum.
 
-- [FaucETH](https://fauceth.komputing.org)(Multi-Chain faucet without the need for social account)
-- [Chainlink faucet](https://faucets.chain.link/)
-- [Paradigm faucet](https://faucet.paradigm.xyz/)
+- [Website](https://sepolia.dev/)
+- [Github](https://github.com/goerli/sepolia)
+- [Otterscan](https://sepolia.otterscan.io/)
+
+##### Sepolia faucets
+
+- [Sepolia faucet](https://faucet.sepolia.dev/)
 
 #### Görli {#goerli}
 
-A proof-of-authority testnet that works across clients.
+A proof-of-authority testnet that works across clients; an ideal testnet for application developers.
+
+- [Website](https://goerli.net/)
+- [Github](https://github.com/goerli/testnet)
+- [Etherscan](https://goerli.etherscan.io)
 
 ##### Görli faucets
 
@@ -53,23 +60,53 @@ A proof-of-authority testnet that works across clients.
 - [Chainlink faucet](https://faucets.chain.link/)
 - [Alchemy Goerli Faucet](https://goerlifaucet.com/)
 
-#### Kintsugi {#kintsugi}
+#### Ropsten _(deprecated)_ {#ropsten}
 
-A merge testnet for Ethereum.
+_Note, [the Ropsten testnet is deprecated](https://github.com/ethereum/pm/issues/460) and will no longer receive protocol upgrades. Please consider migrating your applications to Sepolia or Görli._
 
-##### Kintsugi faucets
+A proof-of-work testnet. It only serves historical relevance and is mainly used by core developers for testing protocol upgrades.
 
-- [FaucETH](https://fauceth.komputing.org)(Multi-Chain faucet without the need for social account)
-- [Kintsugi faucet](https://faucet.kintsugi.themerge.dev/)
+##### Ropsten faucets
 
-#### Kovan {#kovan}
+- [FaucETH](https://fauceth.komputing.org) (multi-Chain faucet without the need for social account)
+- [Paradigm faucet](https://faucet.paradigm.xyz/)
 
-A proof-of-authority testnet for those running OpenEthereum clients.
+#### Rinkeby _(deprecated)_ {#rinkeby}
+
+_Note: [the Rinkeby testnet is deprecated](https://github.com/ethereum/pm/issues/460) and will no longer receive protocol upgrades. Please consider migrating your applications to Sepolia or Görli._
+
+A proof-of-authority testnet for those running old versions of the Geth client.
+
+##### Rinkeby faucets
+
+- [FaucETH](https://fauceth.komputing.org) (multi-Chain faucet without the need for social account)
+- [Alchemy faucet](https://RinkebyFaucet.com)
+- [Chainlink faucet](https://faucets.chain.link/)
+- [Paradigm faucet](https://faucet.paradigm.xyz/)
+- [Rinkeby faucet](https://faucet.rinkeby.io/)
+
+#### Kovan _(deprecated)_ {#kovan}
+
+_Note: [the Kovan testnet is deprecated](https://github.com/ethereum/pm/issues/460) and will no longer receive protocol upgrades. Please consider migrating your applications to Sepolia or Görli._
+
+A very old proof-of-authority testnet for those still running OpenEthereum clients.
 
 ##### Kovan faucets
 
-- [FaucETH](https://fauceth.komputing.org)(Multi-Chain faucet without the need for social account)
-- [Kovan faucet](https://faucet.kovan.network/)
+- [FaucETH](https://fauceth.komputing.org) (multi-Chain faucet without the need for social account)
+- [Chainlink faucet](https://faucets.chain.link/)
+- [Paradigm faucet](https://faucet.paradigm.xyz/)
+
+### Layer 2 testnets {#layer-2-testnets}
+
+[Layer 2 (L2)](/layer-2/) is a collective term to describe a specific set of Ethereum scaling solutions. A layer 2 is a separate blockchain that extends Ethereum and inherits the security guarantees of Ethereum. Layer 2 testnets are usually tightly coupled to public Ethereum testnets.
+
+#### Arbitrum Rinkeby {#arbitrum-rinkeby}
+
+A testnet for [Arbitrum](https://arbitrum.io/).
+
+Arbitrum Rinkeby faucets:
+- [FaucETH](https://fauceth.komputing.org) (multi-Chain faucet without the need for social account)
 - [Chainlink faucet](https://faucets.chain.link/)
 - [Paradigm faucet](https://faucet.paradigm.xyz/)
 
@@ -77,30 +114,8 @@ A proof-of-authority testnet for those running OpenEthereum clients.
 
 A testnet for [Optimism](https://www.optimism.io/).
 
-##### Optimistic Kovan faucets
-
-- [FaucETH](https://fauceth.komputing.org)(Multi-Chain faucet without the need for social account)
-- [Paradigm faucet](https://faucet.paradigm.xyz/)
-
-#### Rinkeby {#rinkeby}
-
-A proof-of-authority testnet for those running Geth client.
-
-##### Rinkeby faucets
-
-- [FaucETH](https://fauceth.komputing.org)(Multi-Chain faucet without the need for social account)
-- [Alchemy faucet](https://RinkebyFaucet.com)
-- [Chainlink faucet](https://faucets.chain.link/)
-- [Paradigm faucet](https://faucet.paradigm.xyz/)
-- [Rinkeby faucet](https://faucet.rinkeby.io/)
-
-#### Ropsten {#ropsten}
-
-A proof-of-work testnet. This means it's the best like-for-like representation of Ethereum.
-
-##### Ropsten faucets
-
-- [FaucETH](https://fauceth.komputing.org)(Multi-Chain faucet without the need for social account)
+Optimistic Kovan faucets:
+- [FaucETH](https://fauceth.komputing.org) (multi-Chain faucet without the need for social account)
 - [Paradigm faucet](https://faucet.paradigm.xyz/)
 
 ## Private networks {#private-networks}

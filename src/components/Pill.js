@@ -12,6 +12,7 @@ const Primary = styled.div`
   text-align: center;
   display: inline-block;
   padding: 0.25rem 0.5rem;
+  margin-right: 0.5rem;
   font-size: 0.75rem;
   border-radius: 0.25rem;
 `

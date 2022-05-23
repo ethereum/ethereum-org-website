@@ -119,7 +119,7 @@ const LearningToolsPage = ({ data }) => {
     {
       name: "CryptoZombies",
       description: "page-learning-tools-cryptozombies-description",
-      url: "https://cryptozombies.io/en/solidity",
+      url: "https://cryptozombies.io/",
       image: getImage(data.cryptoZombie),
       alt: "page-learning-tools-cryptozombies-logo-alt",
       background: "#2b2f48",
@@ -133,15 +133,6 @@ const LearningToolsPage = ({ data }) => {
       alt: "page-learning-tools-ethernauts-logo-alt",
       background: "#4f62dc",
       subjects: ["Solidity"],
-    },
-    {
-      name: "Vyper.fun",
-      description: "page-learning-tools-vyperfun-description",
-      url: "https://vyper.fun",
-      image: getImage(data.vyperfun),
-      alt: "page-learning-tools-vyperfun-logo-alt",
-      background: "#ffffff",
-      subjects: ["Vyper"],
     },
     {
       name: "Capture The Ether",
@@ -194,7 +185,7 @@ const LearningToolsPage = ({ data }) => {
     {
       name: "Questbook",
       description: "page-learning-tools-questbook-description",
-      url: "https://questbook.app/",
+      url: "https://learn.questbook.xyz/",
       image: getImage(data.questbook),
       alt: "page-learning-tools-questbook-logo-alt",
       background: "#141236",
@@ -365,9 +356,6 @@ export const query = graphql`
       ...learningToolImage
     }
     oz: file(relativePath: { eq: "dev-tools/oz.png" }) {
-      ...learningToolImage
-    }
-    vyperfun: file(relativePath: { eq: "dev-tools/vyperfun.png" }) {
       ...learningToolImage
     }
     questbook: file(relativePath: { eq: "dev-tools/questbook.png" }) {

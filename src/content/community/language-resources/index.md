@@ -17,7 +17,7 @@ Know of an educational resource in your language? [Open an issue](https://github
 
 ## Ethereum.org resources {#ethereum-org}
 
-Ethereum.org is translated is natively translated into over 40 languages which you can find on our [languages page](/languages).
+Ethereum.org is natively translated into over 40 languages which you can find on our [languages page](/languages).
 
 If you are bilingual and want to help us reach more people, you can also get involved with the [ethereum.org Translation Program](/contributing/translation-program/#translation-program) and help us translate the website.
 
@@ -46,7 +46,7 @@ If you are bilingual and want to help us reach more people, you can also get inv
 **General resources**
 
 - [Ethereum.cn](https://www.ethereum.cn/) - community maintained content, covering the consensus layer upgrade, all core dev meeting notes, layer 2, etc.
-- [EthFans](https://ethfans.org/) - learn everything from the basics to advanced Ethereum topics
+- [EthFans](https://github.com/editor-Ajian/EthFans.org-annual-collected-works/) - learn everything from the basics to advanced Ethereum topics
 - [Unitimes](https://mp.weixin.qq.com/s/tvloZSDBSOQN9zDQj_91kA) - community maintained content, covering Ethereum, DeFi, NFT, Web3-related knowledge
 - [123ETH](https://123eth.org/) - a Portal to the Ethereum ecosystem
 - [Zhen Xiao](http://zhenxiao.com/blockchain/) - free online courses about cryptocurrency and its applications
@@ -114,3 +114,6 @@ If you are bilingual and want to help us reach more people, you can also get inv
 
 - [Japan Virtual and Crypto assets Exchange Association](https://jvcea.or.jp/)
 - [Japan Cryptoasset Business Association](https://cryptocurrency-association.org/)
+- [Get started with blockchain development - Learn | Microsoft Docs](https://docs.microsoft.com/ja-jp/learn/paths/ethereum-blockchain-development/) - This learning path introduces you to blockchain and development on the Ethereum platform
+- [Mastering Ethereum](https://www.oreilly.co.jp/books/9784873118963/) - Mastering Ethereum in Japanese
+- [Hands-On Smart Contract Development with Solidity and Ethereum](https://www.oreilly.co.jp/books/9784873119342/) - Hands-On Smart Contract Development with Solidity and Ethereum in Japanese

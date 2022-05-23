@@ -20,7 +20,7 @@ const colors = [
   "tagOrange",
   "tagGreen",
   "tagRed",
-  "tagTurqouise",
+  "tagTurquoise",
   "tagGray",
   "tagYellow",
   "tagMint",

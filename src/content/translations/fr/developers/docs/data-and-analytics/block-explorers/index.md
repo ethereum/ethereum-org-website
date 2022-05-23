@@ -14,10 +14,10 @@ Pour que les données fournies par un explorateur de blocs aient du sens, vous d
 
 ## Services {#services}
 
-- [Etherscan](https://etherscan.io/) - _Également disponible en Chinois, Coréen, Japonais et Russe_
+- [Etherscan](https://etherscan.io/) - _Également disponible en chinois, en coréen, en japonais et en russe_
 - [Etherchain](https://www.etherchain.org/)
-- [Ethplorer](https://ethplorer.io/)
-- [Blockchair](https://blockchair.com/ethereum) -_Également disponible en Chinoiss, Espagnol, Farsi, Français, Italien, Néerlandais, Portugais et Russe_
+- [Ethplorer](https://ethplorer.io/) - _Également disponible en chinois, en espagnol, en français, en turc, en russe, en coréen et en vietnamien_
+- [Blockchair](https://blockchair.com/ethereum) - _Également disponible en chinois, en espagnol, en farsi, en français, en italien, en néerlandais, en portugais et en russe_-
 - [Blockscout](https://blockscout.com/)
 - [OKLink](https://www.oklink.com/eth)
 
@@ -49,7 +49,7 @@ De nouveaux blocs sont ajoutés à Ethereum environ toutes les 12 secondes (cel
 - Hash : le hachage cryptographique qui représente l'en-tête du bloc (l'identifiant unique du bloc).
 - Hash parent : le hachage de bloc obtenu avant le bloc actuel.
 - Sha3Oncles : le hachage combiné de tous les oncles pour un parent donné.
-- StateRoot : la racine de l’arbre de Merkle qui stocke l’état complet du système.
+- StateRoot : la racine de l'arbre de Merkle qui contient l'état complet du système.
 - Nonce : une valeur utilisée pour démontrer la preuve de travail du mineur pour un bloc.
 
 **Blocs oncles**
@@ -138,7 +138,7 @@ Les jetons sont un type de contrat et comporteront donc des données similaires 
 
 ### Réseau {#network}
 
-Bien sûr, certaines données parlent de la santé du réseau. Elle sont très spécifiques au mécanisme Ethereum de consensus par preuve de travail . Quand Ethereum effectuera la transition vers Eth2, certaines de ces données seront redondantes.
+Bien sûr, certaines données parlent de la santé du réseau. Elle sont très spécifiques au mécanisme Ethereum de consensus par preuve de travail . Quand Ethereum effectuera la transition la Preuve d'enjeu certaines de ces données seront redondantes.
 
 - Difficulté - Difficulté actuelle du minage.
 - Taux de hachage - Estimation du nombre de hachages générés par les mineurs Ethereum qui essayent de résoudre le bloc Ethereum actuel ou n'importe quel bloc donné.
@@ -148,15 +148,15 @@ Bien sûr, certaines données parlent de la santé du réseau. Elle sont très s
 - Offre totale d'ETH - Nombre d'ETH en circulation. Rappelez-vous que des ETH sont créés avec chaque nouveau bloc sous la forme de récompenses.
 - Valorisation au prix du marché - Prix d'un ETH x l'offre totale.
 
-## Données Eth2 {#consensus-layer-data}
+## Données de couche de consensus {#consensus-layer-data}
 
-Les mises à niveau Eth2 sont toujours en cours de développement, mais il est intéressant de parler des points de données que les explorateurs seront capables de vous fournir. En fait, toutes ces données sont déjà disponibles pour les réseaux de test.
+Les mises à niveau d'évolutivité sont toujours en cours de développement, mais il est intéressant de parler des points de données que les explorateurs seront capables de vous fournir. En fait, toutes ces données sont déjà disponibles pour les réseaux de test.
 
-Si vous n'êtes pas familiarisé avec Eth2, lisez cette [présentation des mises à niveau Eth2](/upgrades/).
+Si vous n'êtes pas familiarisé avec la feuille de route, consultez [notre vue d'ensemble des mises à jour Ethereum](/upgrades/).
 
 ### Période {#epoch}
 
-La première mise à niveau Eth2, la chaîne phare, va créer des comités de validateurs qui seront choisis aléatoirement à la fin de chaque période (chaque 6.4 minutes) pour des raisons de sécurité. Les données de la période incluent les éléments suivants :
+La chaîne phare va créer aléatoirement des comités de validateurs à la fin de chaque période (toutes les 6,4 minutes) pour des raisons de sécurité. Les données de la période incluent les éléments suivants :
 
 - Numéro de la période.
 - Statut de finalisation - Si la période a été finalisée (Oui/Non).
@@ -184,7 +184,7 @@ Les créneaux sont des opportunités de création de blocs. Les données disponi
 - Signature.
 - Randao reveal.
 - Graffiti - Quiconque soumet un bloc peut intégrer un message de 32 octets à sa proposition de bloc.
-- Données ETH1.
+- Données d'exécution.
   - Hash du bloc.
   - Nombre de dépôts.
   - Dépôt racine.
@@ -196,12 +196,12 @@ Les créneaux sont des opportunités de création de blocs. Les données disponi
 
 ### Blocs {#blocks-1}
 
-Avec Eth2, les blocs fonctionnent différemment car les mineurs sont remplacés par les validateurs, et la chaîne phare introduit les créneaux et les périodes dans Ethereum. Cela engendre donc de nouvelles données !
+Les blocs de couches de consensus fonctionnent différemment car les mineurs sont remplacés par les validateurs, et la chaîne phare introduit les créneaux et les périodes dans Ethereum. Cela engendre donc de nouvelles données !
 
 - Proposant - Validateur que l'algorithme a choisi pour proposer le nouveau bloc.
 - Période - Période pendant laquelle le bloc a été proposé.
 - Créneau - Le créneau dans lequel le bloc a été proposé.
-- Attestations - Nombre d'attestation incluses dans le créneau. Les attestations sont comme des votes qui indiquent que le bloc est prêt à aller sur la chaîne phare.
+- Attestations - Nombre d'attestation incluses dans le créneau. Les attestations sont comme des votes qui indiquent que le bloc est prêt à être intégré à la chaîne phare.
 
 ### Validateurs {#validators}
 
@@ -234,7 +234,7 @@ Les attestations sont des votes positifs pour inclure les blocs dans la chaîne.
 
 ### Réseau {#network-1}
 
-Les données Eth2 de haut niveau comprennent les éléments suivants :
+Les données de couches de consensus de haut niveau comprennent les éléments suivants :
 
 - Période actuelle.
 - Créneau actuel.
@@ -251,17 +251,17 @@ Les données Eth2 de haut niveau comprennent les éléments suivants :
   - POA - Chaîne latérale et réseau autonome sécurisés par un groupe de validateurs de confiance. Tous les validateurs du réseau sont des notaires américains, et leurs informations sont publiquement disponibles.
   - Réseau de test POA Sokol.
   - ARTIS - Blockchain compatible avec Ethereum.
-  - [LUKSO L14](https://blockscout.com/lukso/l14) - L14 fonctionne comme premier réseau de test pour permettre à la communauté LUKSO de construire et de tester une infrastructure commune.
+  - [LUKSO L14](https://blockscout. com/lukso/l14) - L14 fonctionne comme premier réseau de test pour permettre à la communauté LUKSO de construire et de tester une infrastructure commune.
   - qDai.
 - [Etherchain](https://www.etherchain.org/) - Explorateur de blocs pour le réseau principal Ethereum.
 - [Ethplorer](https://ethplorer.io/) - Explorateur de blocs qui se focalise sur les jetons du réseau principal Ethereum ainsi que sur le réseau de test Kovan.
 - [Blockchair](https://blockchair.com/ethereum) - L'explorateur Ethereum le plus privé. Aussi pour le tri et le filtrage des données (mempool).
 
-## Explorateurs de blocs Eth2 {#beacon-chain-block-explorers}
+## Les explorateurs de blocs de la chaîne phare (couche de consensus) {#beacon-chain-block-explorers}
 
 - [https://beaconcha.in/](https://beaconcha.in/)
 - [https://beaconscan.com/](https://beaconscan.com/)
-- [https://eth2stats.io/](https://eth2stats.io/medalla-testnet)
+- [https://ethscan.org/](https://ethscan.org/) (fourche de beaconcha.in)
 
 ## Complément d'information {#further-reading}
 

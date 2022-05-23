@@ -44,7 +44,7 @@ Se sei bilingue e vuoi aiutarci a raggiungere più persone, puoi anche essere co
 **Risorse generali**
 
 - [Ethereum.cn](https://www.ethereum.cn/) - contenuti mantenuti dalla community, che coprono l'aggiornamento del livello del consenso, tutte le note principali dell'incontro degli sviluppatori, livello 2, ecc.
-- [EthFans](https://ethfans.org/) - impara tutto, dalle basi agli argomenti avanzati di Ethereum
+- [EthFans](https://github.com/editor-Ajian/EthFans.org-annual-collected-works/) - impara tutto, dalle basi agli argomenti avanzati di Ethereum
 - [Unitimes](https://mp.weixin.qq.com/s/tvloZSDBSOQN9zDQj_91kA) - contenuti mantenuti dalla community, su Ethereum, DeFi, NFT, conoscenza correlata a Web3
 - [123ETH](https://123eth.org/) - un Portale per l'ecosistema di Ethereum
 - [Zhen Xiao](http://zhenxiao.com/blockchain/) - corsi online gratuiti sulle criptovalute e loro applicazioni

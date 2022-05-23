@@ -60,8 +60,21 @@
           items:
             - id: docs-nav-mining
               to: /developers/docs/consensus-mechanisms/pow/mining/
+              items:
+                - id: docs-nav-mining-algorithms
+                  to: /developers/docs/consensus-mechanisms/pow/mining-algorithms/
+                  items:
+                    - id: docs-nav-dagger-hashamoto
+                      to: /developers/docs/consensus-mechanisms/pow/mining-algorithms/dagger-hashamoto
+                    - id: docs-nav-ethash
+                      to: /developers/docs/consensus-mechanisms/pow/mining-algorithms/ethash
         - id: docs-nav-proof-of-stake
           to: /developers/docs/consensus-mechanisms/pos/
+          items:
+            - id: docs-nav-gasper
+              to: /developers/docs/consensus-mechanisms/pos/gasper/
+            - id: docs-nav-weak-subjectivity
+              to: /developers/docs/consensus-mechanisms/pos/weak-subjectivity/
 - id: docs-nav-ethereum-stack
   path: /developers/docs/
   items:
@@ -156,6 +169,8 @@
               to: /developers/docs/standards/tokens/erc-777/
             - id: docs-nav-erc-1155
               to: /developers/docs/standards/tokens/erc-1155/
+            - id: docs-nav-erc-4626
+              to: /developers/docs/standards/tokens/erc-4626/
     - id: docs-nav-mev
       to: /developers/docs/mev/
       description: docs-nav-mev-description
@@ -178,3 +193,19 @@
           to: /developers/docs/scaling/plasma/
         - id: docs-nav-scaling-validium
           to: /developers/docs/scaling/validium/
+    - id: docs-nav-networking-layer
+      to: /developers/docs/networking-layer/
+      description: docs-nav-networking-layer-description
+      items:
+        - id: docs-nav-networking-layer-network-addresses
+          to: /developers/docs/networking-layer/network-addresses/
+    - id: docs-nav-data-structures-and-encoding
+      to: /developers/docs/data-structures-and-encoding/
+      description: docs-nav-data-structures-and-encoding-description
+      items:
+        - id: docs-nav-data-structures-and-encoding-rlp
+          to: /developers/docs/data-structures-and-encoding/rlp/
+        - id: docs-nav-data-structures-and-encoding-patricia-merkle-trie
+          to: /developers/docs/data-structures-and-encoding/patricia-merkle-trie/
+        - id: docs-nav-data-structures-and-encoding-ssz
+          to: /developers/docs/data-structures-and-encoding/ssz/

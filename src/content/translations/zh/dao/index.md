@@ -75,7 +75,7 @@ _通常用于联系更紧密、以人为中心的组织，例如慈善机构、�
 
 之所以能够做到这一点，是因为智能合约一旦在以太坊中生效，就无法被篡改。 一切都是公开的，只要修改代码（DAO 组织规则）就会被发现。
 
-<DocLink to="/developers/docs/smart-contracts/">
+<DocLink to="/smart-contracts/">
   了解更多关于智能合约的信息
 </DocLink>
 

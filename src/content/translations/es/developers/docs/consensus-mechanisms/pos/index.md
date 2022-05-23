@@ -6,7 +6,7 @@ sidebar: true
 incomplete: true
 ---
 
-Ethereum se está trasladando a un mecanismo de consenso llamado prueba de participación (PoS) desde la[prueba de trabajo (PoW)](/developers/docs/consensus-mechanisms/pow/). Este siempre ha sido el plan, ya que es clave para la estrategia de la comunidad: conseguir que Ethereum crezca mediante [las actualizaciones de Eth2](/upgrades/). Sin embargo, obtener una correcta PoS es un gran reto técnico y no es tan sencillo como usar PoW para alcanzar un consenso a través de la red.
+Ethereum se está trasladando a un mecanismo de consenso llamado prueba de participación (PoS) desde la [prueba de trabajo (PoW)](/developers/docs/consensus-mechanisms/pow/). Este siempre ha sido el plan, ya que es una parte clave de la estrategia de la comunidad para escalar Ethereum a través de las [actualizaciones](/upgrades/). Sin embargo, obtener una correcta PoS es un gran reto técnico y no es tan sencillo como usar PoW para alcanzar un consenso a través de la red.
 
 ## Requisitos previos {#prerequisites}
 
@@ -16,14 +16,14 @@ Para comprender mejor esta página, te recomendamos que primero leas los [mecani
 
 La prueba de participación es un tipo de [mecanismo de consenso](/developers/docs/consensus-mechanisms/) que usan las redes de blockchain para lograr consensos distribuidos.
 
-Esto requiere que los usuarios participen con sus ETH para convertirse en un validador de la red. Al igual que los mineros, los validadores son los responsables durante la [Prueba de trabajo](/developers/docs/consensus-mechanisms/pow/); deben ordenar las transacciones y crear nuevos bloques para que todos los nodos puedan coincidir en el estado de la red.
+Esto requiere que los usuarios participen con sus ETH para convertirse en un validador de la red. Al igual que los mineros, los validadores son los responsables durante la [prueba de trabajo](/developers/docs/consensus-mechanisms/pow/); deben ordenar las transacciones y crear nuevos bloques para que todos los nodos puedan coincidir en el estado de la red.
 
 La Prueba de participación incluye una serie de mejoras para el sistema de Prueba de trabajo:
 
 - Mejor eficiencia energética: no necesitas usar mucha energía para minar los bloques
 - Barreras de entrada más bajas, requisitos de hardware reducidos: no necesitas hardware de primer nivel para tener una oportunidad de crear nuevos bloques
 - Mayor inmunidad a la centralización: la Prueba de participación debería conducir a la existencia de más nodos en la red
-- Mayor compatibilidad con cadenas fragmentadas: una actualización clave en la escala de la red de Ethereum
+- mayor soporte para la [cadena de fragmentos](/upgrades/shard-chains/) – una mejora clave en la escala de la red Ethereum
 
 ## Prueba de participación, staking (apuestas) y validadores {#pos-staking-validators}
 
@@ -37,7 +37,7 @@ Si certificas bloques maliciosos, perderás tu apuesta.
 
 ### La cadena de baliza (blockchain) {#the-beacon-chain}
 
-Cuando en Ethereum se reemplaza la Prueba de trabajo por la Prueba de participación, se añade la complejidad de las [cadenas fragmentadas](/upgrades/shard-chains/). Se trata de cadenas de valores independientes que necesitarán validadores para procesar las transacciones y crear nuevos bloques. El plan es disponer de 64 cadenas fragmentadas y todos necesitan comprender cuál es el estado de la red. Por eso, una coordinación extra es necesaria y se realizará mediante [cadena de baliza](/upgrades/beacon-chain/).
+Cuando en Ethereum se reemplaza la prueba de trabajo por la prueba de participación, se añade la complejidad de las [cadenas de fragmentos](/upgrades/shard-chains/). Se trata de cadenas de valores independientes que necesitarán validadores para procesar las transacciones y crear nuevos bloques. El plan es disponer de 64 cadenas fragmentadas y todos necesitan comprender cuál es el estado de la red. Como consecuencia, se necesita una coordinación adicional, la cual se realizará mediante [la cadena de baliza](/upgrades/beacon-chain/).
 
 La cadena de baliza recibe la información del estado de los fragmentos y la hace disponible para otros fragmentos para que, de este modo, la red pueda permanecer sincronizada. La cadena de baliza también gestionará a los validadores, desde el registro de los depósitos de sus apuestas hasta la emisión de sus recompensas y penalizaciones.
 
@@ -45,15 +45,15 @@ A continuación se explica el funcionamiento de este proceso.
 
 ### ¿Cómo funciona la validación? {#how-does-validation-work}
 
-Cuando envías una transacción en un fragmento, un validador será responsable de agregar tu transacción a un bloque de fragmentos. La cadena de baliza elige a los validadores de manera algorítmica para que propongan nuevos bloques.
+Cuando envía una transacción en un fragmento, un validador será responsable de añadir su transacción a un bloque de fragmentos. La cadena de baliza elige a los validadores de manera algorítmica para que propongan nuevos bloques.
 
 #### Certificación {#attestation}
 
-Si no se elige a un validador para que proponga un nuevo bloque de fragmentos, tendrán que certificar la propuesta de otro validador y confirmar que todo parece funcionar correctamente. Se trata de la certificación que se registra en la cadena de baliza, en lugar de en la transacción en sí misma.
+Si no se elige a un validador para que proponga un nuevo bloque de fragmentos, tendrán que certificar la propuesta de otro validador y confirmar que todo parece funcionar correctamente. Es la atestación, en lugar de la transacción en sí, la que se registra en la cadena de baliza.
 
 Se requiere un mínimo de 128 validadores para certificar cada bloque de fragmentos; esto se denomina "comité".
 
-El comité dispone de un periodo de tiempo en el que proponer y validar un bloque de fragmentos. Esto se denomina "slot". Por cada slot se genera únicamente un bloque válido. Cada "epoch" contiene 32 slots. Cuando se completa un epoch, el comité se disuelve y se reforma con nuevos participantes seleccionados aleatoriamente. Esto sirve de ayuda para que los fragmentos se mantengan a salvo de comités que realicen acciones incorrectas.
+El comité dispone de un periodo de tiempo en el que proponer y validar un bloque de fragmentos. Esto se denomina "slot". Solo se crea un bloque válido por ranura, y hay 32 ranuras en una "época". Cuando se completa una época, el comité se disuelve y se reforma con nuevos participantes seleccionados aleatoriamente. Esto sirve de ayuda para que los fragmentos se mantengan a salvo de comités que realicen acciones incorrectas.
 
 #### Crosslinks {#rewards-and-penalties}
 
@@ -69,7 +69,7 @@ Para hacer esto en la Prueba de participación, Casper, un protocolo de finalida
 
 En palabras de Vlad Zamfir: "es como si un minero participa en un ataque del 51% y provoca el colapso inmediato de su equipo de minería".
 
-## Prueba de participación y seguridad
+## Prueba de participación y seguridad {#pos-and-security}
 
 La amenaza de un [ataque del 51%](https://www.investopedia.com/terms/1/51-attack.asp) sigue existiendo en la Prueba de participación, pero es incluso más arriesgado para los atacantes. Para conseguirlo, necesitarás controlar el 51% de los ETH que se hayan apostado. Esto no solo supondría una gran cantidad de dinero, sino que probablemente causaría que el valor de ETH disminuyera. No tiene mucho sentido destruir el valor de una moneda, si dispones de una participación mayoritaria. Tiene mucho más sentido mantener la red segura y saludable.
 
@@ -79,14 +79,19 @@ Existen los slashings de apuestas, expulsiones y otras penalizaciones (coordinad
 
 | Ventajas                                                                                                                                                                                                                                                                                                                                                    | Desventajas                                                                                                                     |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| La participación se hace más sencilla para ti al ejecutar un nodo. Esto no requiere grandes inversiones en hardware o energía. Además, si no dispones de suficientes ETH para participar, puedes unirte a comunidades de participación.                                                                                                                     | La Prueba de participación está todavía en fase inicial de desarrollo y se ha evaluado en menor medida que la Prueba de trabajo |
+| La participación se hace más sencilla para ti al ejecutar un nodo. No se requiere grandes inversiones en equipos o energía, y si no dispone de suficientes ETH para participar, puede unirse a un grupo de participación.                                                                                                                                   | La Prueba de participación está todavía en fase inicial de desarrollo y se ha evaluado en menor medida que la Prueba de trabajo |
 | La participación es más descentralizada. Esto permite incrementar la participación y una mayor cantidad de nodos no se traduce necesariamente en un incremento del porcentaje de rendimiento, como con la minería.                                                                                                                                          |                                                                                                                                 |
 | La participación permite realizar una fragmentación segura. Las cadenas de fragmentos permiten a Ethereum crear múltiples bloques al mismo tiempo, lo que incrementa el rendimiento de las transacciones. La fragmentación de la red en un sistema de Prueba de trabajo reduciría simplemente la potencia necesaria para comprometer una porción de la red. |                                                                                                                                 |
 
 ## Más información {#further-reading}
 
-- [¿Qué es la Prueba de participación?](https://consensys.net/blog/blockchain-explained/what-is-proof-of-stake/) _ConsenSys_
-- [Es necesario que leas primero la sección en la que se explica la cadena de baliza de Ethereum 2.0](https://ethos.dev/beacon-chain/) _Ethos.dev_
+- [Preguntas frecuentes sobre la prueba de participación](https://vitalik.ca/general/2017/12/31/pos_faq.html) _Vitalik Buterin_
+- [Qué es la prueba de participación](https://consensys.net/blog/blockchain-explained/what-is-proof-of-stake/) _ConsenSys_
+- [Qué es la prueba de participación y por qué es importante](https://bitcoinmagazine.com/culture/what-proof-of-stake-is-and-why-it-matters-1377531463) _Vitalik Buterin_
+- [Es necesario que lea primero la sección en la que se explica la cadena de baliza de Ethereum 2.0](https://ethos.dev/beacon-chain/) _Ethos.dev_
+- [Por qué se realiza la prueba de participación (nov. 2020)](https://vitalik.ca/general/2020/11/06/pos2020.html) _Vitalik Buterin_
+- [Prueba de participación: cómo aprendí a amar la subjetividad débil ](https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity/)_Vitalik Buterin_
+- [Filosofía de diseño de las pruebas de participación ](https://medium.com/@VitalikButerin/a-proof-of-stake-design-philosophy-506585978d51) _ Vitalik Buterin_
 
 ## Temas relacionados {#related-topics}
 

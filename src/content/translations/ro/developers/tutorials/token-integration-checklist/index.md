@@ -4,7 +4,11 @@ description: Listă cu lucruri de considerat când interacționăm cu tokenuri
 author: "Trailofbits"
 lang: ro
 sidebar: true
-tags: ["solidity", "contracte inteligente", "securitate", "tokenuri"]
+tags:
+  - "solidity"
+  - "contracte inteligente"
+  - "securitate"
+  - "tokenuri"
 skill: intermediar
 published: 2020-08-13
 source: Construirea de contracte sigure

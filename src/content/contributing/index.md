@@ -10,7 +10,7 @@ sidebar: true
 The ethereum.org website, like Ethereum more broadly, is an open-source project. So if you want to help improve [our portal to Ethereum](/about/), here's how you can help out.
 
 <InfoBanner shouldCenter emoji=":tada:">
-  Claim your POAP token! If you contributed to ethereum.org in 2021, there's a unique POAP waiting for you.{" "}
+  Claim your POAP token! If you contributed to ethereum.org in 2022, there's a unique POAP waiting for you.{" "}
   <a href="#poap">More on POAPs</a>
 </InfoBanner>
 
@@ -36,6 +36,9 @@ The ethereum.org website, like Ethereum more broadly, is an open-source project.
   _– Help us continue to expand the Ethereum [glossary](/glossary/)_
 - [Create/edit content](/contributing/#how-to-update-content)
   _– Suggest new pages or makes tweaks to what's here already_
+- [Add a layer 2](/contributing/adding-layer-2)
+  _- Add a layer 2 to a relevant page_
+- [Add a staking product or service](/contributing/adding-staking-product/) - _Add a project that helps facilitate solo staking, pooled staking, or staking as a service_
 
 _Any questions?_ 🤔 Reach out on our [Discord server](https://discord.gg/CetY6Y4)
 

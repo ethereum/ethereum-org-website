@@ -35,7 +35,12 @@ L'ERC-20 introduit une norme pour les jetons fongibles. En d'autres termes, ils 
 
 La demande de commentaires ERC-20, proposée par Fabian Vogelsteller en novembre 2015, est une norme de jeton qui implémente une API pour les jetons au sein des contrats intelligents.
 
-Elle fournit des fonctionnalités permettant de transférer des jetons d'un compte à un autre, ou d'obtenir le solde actuel d'un compte en jetons et le nombre total de jetons disponibles sur le réseau. En plus de celles-ci, il en existe d'autres pour, par exemple, approuver que des jetons provenant d'un compte soient dépensés par un compte tiers.
+Exemples de fonctionnalités fournies par ERC-20 :
+
+- transférer des jetons d'un compte à un autre
+- obtenir le solde actuel du jeton d'un compte
+- obtenir la quantité totale du jeton disponible sur le réseau
+- approuver si un montant de jeton d'un compte peut être dépensé par un compte tiers
 
 Si un contrat intelligent implémente les méthodes et les événements suivants, il peut être nommé Contrat de jeton ERC-20 et, une fois déployé, sera responsable d'effectuer un suivi des jetons créés sur Ethereum.
 
@@ -139,13 +144,6 @@ print("Addr Balance:", addr_balance)
 
 ## Complément d'information {#further-reading}
 
-- [EIP-20: ERC-20 Token Standard](https://eips.ethereum.org/EIPS/eip-20)
+- [EIP-20 : ERC-20 Token Standard](https://eips.ethereum.org/EIPS/eip-20)
 - [OpenZeppelin - Tokens](https://docs.openzeppelin.com/contracts/3.x/tokens#ERC20)
 - [OpenZeppelin - Implémentation ERC-20](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)
-- [ConsenSys - Implémentation ERC-20](https://github.com/ConsenSys/Tokens/blob/master/contracts/eip20/EIP20.sol)
-
-## Sujets connexes {#related-topics}
-
-- [ERC-721](/developers/docs/standards/tokens/erc-721/)
-- [ERC-777](/developers/docs/standards/tokens/erc-777/)
-- [ERC-1155](/developers/docs/standards/tokens/erc-1155/)

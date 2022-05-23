@@ -36,7 +36,7 @@ Gli editor di EIP devono revisionare le EIP verificando solidità tecnica, gramm
 - Nick Savers (comunità)
 - Micah Zoltu (comunità)
 
-I redattori delle EIP, insieme ai membri della comunità di [Ethereum Cat Herders](https://ethereumcatherders.com/) e [Ethereum Magicians](https://ethereum-magicians.org/), stanno decidendo quale EIP implementare, sono responsabili della promozione delle EIP nonché dello spostamento di esse alla fase "Finale" o "Ritirata".
+Gli editori EIP, insieme ai membri della community di [Ethereum Cat Herders](https://ethereumcatherders.com/) ed [Ethereum Magicians](https://ethereum-magicians.org/), stanno decidendo quale EIP sarà implementato, sono responsabili della facilitazione delle EIP, nonché dello spostamento delle EIP alla fase "Finale" o "Prelievo".
 
 Il processo di standardizzazione completa insieme al grafico sono descritti in [EIP-1](https://eips.ethereum.org/EIPS/eip-1)
 

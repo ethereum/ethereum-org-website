@@ -17,7 +17,7 @@ Penambangan adalah proses membuat blok transaksi untuk ditambahkan ke blockchain
 Ethereum, seperti Bitcoin, saat ini menggunakan mekanisme konsensus [proof-of-work (PoW)](/developers/docs/consensus-mechanisms/pow/). Penambangan adalah sumber kehidupan bukti kerja. Penambang Ethereum - komputer yang menjalankan perangkat lunak - menggunakan waktu dan kekuatan komputasi mereka untuk memproses transaksi dan menghasilkan blok.
 
 <InfoBanner emoji=":wave:">
-   Bukti taruhan akan menggantikan penambangan dan bukti kerja dalam satu tahun ke depan. Anda dapat mulai menaruhkan ETH Anda hari ini. <a href="/eth2/staking/">Selengkapnya tentang penaruhan</a>    
+   Bukti taruhan akan menggantikan penambangan dan bukti kerja dalam satu tahun ke depan. Anda dapat mulai menaruhkan ETH Anda hari ini. <a href="/staking/">Selengkapnya tentang penaruhan</a>    
 </InfoBanner>
 
 ## Mengapa penambang ada? {#why-do-miners-exist}
@@ -68,7 +68,7 @@ Amati Austin memandu Anda melalui penambangan dan blockchain bukti kerja.
 
 - [Penambang Ethereum terbaik](https://etherscan.io/stat/miner?range=7&blocktype=blocks)
 - [Kalkulator penambangan Etherscan](https://etherscan.io/ether-mining-calculator)
-- [Kalkulator penambangan Minerstar](https://minerstat.com/coin/ETH)
+- [Minerstat mining calculator](https://minerstat.com/coin/ETH)
 
 ## Topik terkait {#related-topics}
 

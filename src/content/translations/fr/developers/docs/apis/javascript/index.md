@@ -5,9 +5,9 @@ lang: fr
 sidebar: true
 ---
 
-Pour qu'une application Web puisse interagir avec la blockchain Ethereum (c'est-à-dire lire les données de la blockchain et/ou envoyer des transactions sur le réseau), elle doit se connecter à un nœud Ethereum.
+Pour qu'une application Web puisse interagir avec la blockchain Ethereum (c'est-à-dire lire les données de la blockchain et/ou envoyer des transactions sur le réseau), elle doit se connecter à un nœud  Ethereum.
 
-Dans ce but, chaque client Ethereum implémente la spécification JSON-RPC afin de former un ensemble uniforme de points de terminaison sur lesquels les applications peuvent s'appuyer.
+Dans cet objectif, chaque client Ethereum implémente la spécification [JSON-RPC](/developers/docs/apis/json-rpc/) pour former un ensemble uniforme de [points de terminaison](/developers/docs/apis/json-rpc/endpoints/) sur lesquels les applications peuvent s'appuyer.
 
 Si vous voulez utiliser JavaScript pour vous connecter à un nœud Ethereum, il est possible d'avoir recours à Vanilla JavaScript, mais plusieurs bibliothèques de commodité existent à l'intérieur même de l'écosystème, ce qui rend les choses beaucoup plus simples. Avec ces bibliothèques, les développeurs peuvent rédiger des méthodes intuitives d'une seule ligne pour initialiser les demandes JSON RPC (pas directement visibles) qui interagissent avec Ethereum.
 
@@ -23,17 +23,17 @@ Les bibliothèques suppriment une grande partie de la complexité de l'interacti
 
 ### Se connecter à des nœud Ethereum {#connect-to-ethereum-nodes}
 
-En utilisant des fournisseurs, les bibliothèques vous permettent de vous connecter à Ethereum et de lire ses données, que ce soit sur JSON-RPC, INFURA, Etherscan, Alchemy ou MetaMask.
+En utilisant des fournisseurs, les bibliothèques vous permettent de vous connecter à Ethereum et de lire ses données, que ce soit sur JSON-RPC, INFURA, Etherscan, Alchemy ou Metamask.
 
 **Exemple Ether**
 
 ```js
-// Un Web3Provider enveloppe un fournisseur Web3 standard, qui est
-// ce que MetaMask injecte comme window.ethereum dans chaque page.
+// A Web3Provider wraps a standard Web3 provider, which is
+// what MetaMask injects as window.ethereum into each page
 const provider = new ethers.providers.Web3Provider(window.ethereum)
 
-// Le plugin MetaMask permet également de signer des transactions pour
-// envoyer de l'ether et payer pour changer l'état de la blockchain.
+// The MetaMask plugin also allows signing transactions to
+// send ether and pay to change state within the blockchain.
 // Pour cela, nous avons besoin du signataire du compte...
 const signer = provider.getSigner()
 ```
@@ -42,34 +42,31 @@ const signer = provider.getSigner()
 
 ```js
 var web3 = new Web3("http://localhost:8545")
-// ou
+// or
 var web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"))
 
-// changer de fournisseur
+// change provider
 web3.setProvider("ws://localhost:8546")
-// ou
+// or
 web3.setProvider(new Web3.providers.WebsocketProvider("ws://localhost:8546"))
 
-// Utiliser le fournisseur IPC en node.js
+// Using the IPC provider in node.js
 var net = require("net")
-var web3 = new Web3("/Users/monutilisateur/Library/Ethereum/geth.ipc", net) // Chemin type mac os
-// ou
+var web3 = new Web3("/Users/myuser/Library/Ethereum/geth.ipc", net) // mac os path
+// or
 var web3 = new Web3(
-  new Web3.providers.IpcProvider(
-    "/Users/monutilisateur/Library/Ethereum/geth.ipc",
-    net
-  )
-) // Chemin type mac os
-// sous windows le chemin est : "\\\\.\\pipe\\geth.ipc"
-// sous linux le chemin est : "/users/monutilisateur/.ethereum/geth.ipc"
+  new Web3.providers.IpcProvider("/Users/myuser/Library/Ethereum/geth.ipc", net)
+) // mac os path
+// on windows the path is: "\\\\.\\pipe\\geth.ipc"
+// on linux the path is: "/users/myuser/.ethereum/geth.ipc"
 ```
 
 Une fois la configuration effectuée, vous pourrez interroger la blockchain pour :
 
-- les numéros de blocs
-- le carburant estimé
-- les événements du contract intelligent
-- l'ID du réseau
+- les numéros de blocs ;
+- le carburant estimé ;
+- les événements du contract intelligent ;
+- l'ID du réseau ;
 - et plus encore...
 
 ### Fonctionnalités d'un portefeuille {#wallet-functionality}
@@ -246,7 +243,7 @@ ethers.utils.formatEther(balance)
 
 **Ethers.js -** **_Implémentation complète d'un portefeuille Ethereum, et utilitaires en JavaScript et TypeScript_**
 
-- [Documentation](https://docs.ethers.io/ethers.js/html/)
+- [Documentation](https://docs.ethers.io/)
 - [GitHub](https://github.com/ethers-io/ethers.js/)
 
 **The Graph -** **_Protocole permettant d'indexer les données Ethereum et IPFS, et d'exécuter des requêtes sur celles-ci en utilisant GraphQL_**
@@ -271,6 +268,11 @@ ethers.utils.formatEther(balance)
 - [Documentation](https://docs.alchemyapi.io/documentation/alchemy-web3)
 - [GitHub](https://github.com/alchemyplatform/alchemy-web3)
 
+**Alchemy NFT API -** **_API pour récupérer les données NFT, y compris la propriété, les attributs de métadonnées et plus encore._**
+
+- [Documentation](https://docs.alchemy.com/alchemy/enhanced-apis/nft-api)
+- [GitHub](https://github.com/alchemyplatform/alchemy-web3)
+
 ## Complément d'information {#further-reading}
 
 _Une ressource communautaire vous a aidé ? Modifiez cette page et ajoutez-la !_
@@ -278,10 +280,10 @@ _Une ressource communautaire vous a aidé ? Modifiez cette page et ajoutez-la !_
 ## Sujets connexes {#related-topics}
 
 - [Nœuds et clients](/developers/docs/nodes-and-clients/)
-- [Frameworks de développement](/developers/docs/frameworks/)
+- [Infrastructures de développement](/developers/docs/frameworks/)
 
 ## Tutoriels connexes {#related-tutorials}
 
 - [Configurer Web3js pour utiliser la blockchain Ethereum avec JavaScript](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/)_ - Instructions pour installer et intégrer Web3js à votre projet_
-- [ Appeler un contrat intelligent à partir de JavaScript](/developers/tutorials/calling-a-smart-contract-from-javascript/) _ - À l'aide du jeton DAI, découvrez comment appeler une fonction de contrat en utilisant JavaScript._
+- [Appel d'un contrat intelligent à partir de JavaScript](/developers/tutorials/calling-a-smart-contract-from-javascript/) _ - À l'aide du jeton DAI, découvrez comment appeler une fonction de contrat en utilisant JavaScript._
 - [Envoi des transactions en utilisant Web3 et Alchemy](/developers/tutorials/sending-transactions-using-Web3-and-alchemy/) _ - Procédure étape par étape pour envoyer des transactions depuis le backend._

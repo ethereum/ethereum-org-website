@@ -140,6 +140,10 @@ const Footer = () => {
           text: "decentralized-applications-dapps",
         },
         {
+          to: "/layer-2/",
+          text: "layer-2",
+        },
+        {
           to: "/run-a-node/",
           text: "run-a-node",
         },
@@ -254,6 +258,10 @@ const Footer = () => {
         {
           to: "https://esp.ethereum.foundation",
           text: "esp",
+        },
+        {
+          to: "/bug-bounty/",
+          text: "ethereum-bug-bounty",
         },
         {
           to: "/community/grants",

@@ -117,7 +117,7 @@ Razcepi se zgodijo, ko pride do pomembnejših nadgradenj ali sprememb omrežja i
 
 DAO razcep se je zgodil kot odziv na [2016 DAO napad](https://www.coindesk.com/understanding-dao-hack-journalists), pri katerem je bilo z napadom iz nezavarovane [DAO](/glossary/#dao) pogodbe izpraznjenih več kot 3,6 milijona ETH. Razcep je prestavil sredstva iz pogodbe z napako v novo pogodbo, kar je vsem, ki so sredstva v napadu izgubili, omogočilo vračilo.
 
-O tem načinu odziva je glasovala Etheerum skupnost. Katerikoli lastnik ETH je lahko glasoval prek transakcije na [glasovalni platformi](http://v1.carbonvote.com/). Odločitev za razcep je prejela več kot 85 % glasov.
+O tem načinu odziva je glasovala Ethereum skupnost. Katerikoli lastnik ETH je lahko glasoval prek transakcije na [glasovalni platformi](http://v1.carbonvote.com/). Odločitev za razcep je prejela več kot 85 % glasov.
 
 Pomembno je opomniti, da čeprav se je protokol razcepil z namenom preklica napada, je teža glasov, ki so razcep podprli lahko predmet razprave iz več razlogov:
 

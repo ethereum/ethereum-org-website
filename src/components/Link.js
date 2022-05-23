@@ -4,7 +4,7 @@ import { Link as IntlLink } from "gatsby-plugin-intl"
 import styled from "styled-components"
 import Icon from "./Icon"
 
-import { languageMetadata } from "../utils/translations"
+import { languageMetadata } from "../utils/languages"
 import { trackCustomEvent } from "../utils/matomo"
 
 const HASH_PATTERN = /^#.*/
@@ -70,6 +70,8 @@ const Link = ({
   className,
   isPartiallyActive = true,
   ariaLabel,
+  customEventOptions,
+  onClick = () => {},
 }) => {
   // markdown pages pass `href`, not `to`
   to = to || href
@@ -120,7 +122,11 @@ const Link = ({
         href={to}
         target="_blank"
         rel="noopener noreferrer"
-        onClick={() => trackCustomEvent(eventOptions)}
+        onClick={() =>
+          trackCustomEvent(
+            customEventOptions ? customEventOptions : eventOptions
+          )
+        }
         aria-label={ariaLabel}
       >
         {children}
@@ -131,7 +137,11 @@ const Link = ({
         href={to}
         target="_blank"
         rel="noopener noreferrer"
-        onClick={() => trackCustomEvent(eventOptions)}
+        onClick={() =>
+          trackCustomEvent(
+            customEventOptions ? customEventOptions : eventOptions
+          )
+        }
         aria-label={ariaLabel}
       >
         {children}
@@ -148,6 +158,7 @@ const Link = ({
         to={to}
         activeClassName="active"
         partiallyActive={isPartiallyActive}
+        onClick={onClick}
       >
         {children}
       </ExplicitLangInternalLink>
@@ -175,6 +186,7 @@ const Link = ({
       to={to}
       activeClassName="active"
       partiallyActive={isPartiallyActive}
+      onClick={onClick}
     >
       {children}
       {isGlossary && (

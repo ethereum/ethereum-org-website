@@ -272,15 +272,6 @@ const H2 = styled.h2`
 
 const frameworksList = [
   {
-    id: "dapptools",
-    url: "https://dapp.tools/",
-    githubUrl: "https://github.com/dapphub/dapptools",
-    background: "#ffffff",
-    name: "Dapptools",
-    description: "page-local-environment-dapptools-desc",
-    alt: "page-local-environment-dapptools-logo-alt",
-  },
-  {
     id: "waffle",
     url: "https://getwaffle.io/",
     githubUrl: "https://github.com/EthWorks/waffle",
@@ -621,9 +612,6 @@ export const query = graphql`
       }
     }
     hardhat: file(relativePath: { eq: "dev-tools/hardhat.png" }) {
-      ...devtoolImage
-    }
-    dapptools: file(relativePath: { eq: "dev-tools/dapptools.png" }) {
       ...devtoolImage
     }
     waffle: file(relativePath: { eq: "dev-tools/waffle.png" }) {

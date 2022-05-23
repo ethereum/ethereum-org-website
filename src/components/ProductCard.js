@@ -80,13 +80,13 @@ const SubjectPill = styled.div`
       case "Vyper":
         return theme.colors.tagBlue
       case "web3":
-        return theme.colors.tagTurqouise
+        return theme.colors.tagTurquoise
       case "JavaScript":
         return theme.colors.tagRed
       case "TypeScript":
         return theme.colors.tagBlue
       case "Go":
-        return theme.colors.tagTurqouise
+        return theme.colors.tagTurquoise
       case "Python":
         return theme.colors.tagMint
       case "Rust":
@@ -139,6 +139,7 @@ const ProductCard = ({
   image,
   name,
   description,
+  note = "",
   alt = "",
   children,
   githubUrl = "",
@@ -176,7 +177,7 @@ const ProductCard = ({
         {isSvg ? (
           <img src={image} alt={alt} />
         ) : (
-          <Image image={image} alt={alt} />
+          <Image image={image} alt={alt} objectFit="contain" />
         )}
       </ImageWrapper>
       <Content className="hover">
@@ -186,6 +187,7 @@ const ProductCard = ({
           )}
           <Title gitHidden={!hasRepoData}>{name}</Title>
           <Description>{description}</Description>
+          {note.length > 0 && <Description>Note: {note}</Description>}
         </div>
         {children && <Children>{children}</Children>}
       </Content>
@@ -203,9 +205,7 @@ const ProductCard = ({
             </SubjectPill>
           ))}
       </SubjectContainer>
-      <StyledButtonLink to={url} hideArrow={true}>
-        Open {name}
-      </StyledButtonLink>
+      <StyledButtonLink to={url}>Open {name}</StyledButtonLink>
     </Card>
   )
 }

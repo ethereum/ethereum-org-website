@@ -51,7 +51,7 @@ const Header = styled.h2`
   margin-bottom: 0rem;
   color: ${(props) => props.theme.colors.text00};
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    font-size: 2.5rem
+    font-size: 2.5rem;
   }
 `
 
@@ -114,7 +114,7 @@ const PageHero = ({ content, children, className, isReverse }) => {
           )}
           {children}
         </HeroContent>
-        <HeroImg image={image} alt={alt} loading="eager" />
+        <HeroImg image={image} objectFit="contain" alt={alt} loading="eager" />
       </HeroContainer>
     </Content>
   )

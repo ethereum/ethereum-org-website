@@ -75,7 +75,7 @@ La spina dorsale di una DAO è il suo smart contract. Il contratto definisce le 
 
 Ciò è possibile perché gli smart contract sono a prova di manomissione una volta che sono attivi su Ethereum. Non puoi modificare il codice (le regole della DAO) senza che gli altri lo notino, perché tutto è pubblico.
 
-<DocLink to="/developers/docs/smart-contracts/">
+<DocLink to="/smart-contracts/">
   Maggiori informazioni sugli Smart Contract
 </DocLink>
 

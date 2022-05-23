@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import { margin } from "styled-system"
+import Select from "react-select"
 
 import Card from "./Card"
 import Link from "./Link"
@@ -164,6 +165,24 @@ export const CardGrid = styled.div`
   gap: 2rem;
 `
 
+export const InfoGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr));
+  gap: 2rem;
+  & > div {
+    height: fit-content;
+    margin: 0;
+    &:hover {
+      transition: 0.1s;
+      transform: scale(1.01);
+      svg {
+        transition: 0.1s;
+        transform: scale(1.1);
+      }
+    }
+  }
+`
+
 export const StyledCard = styled(Card)`
   margin: 1rem;
   padding: 1.5rem;
@@ -207,6 +226,7 @@ export const ButtonPrimary = styled(Button)`
 
   &:hover {
     background-color: ${(props) => props.theme.colors.primaryHover};
+    box-shadow: ${(props) => props.theme.colors.cardBoxShadow};
   }
   &:active {
     background-color: ${(props) => props.theme.colors.primaryActive};
@@ -270,31 +290,6 @@ export const Header2 = styled.h2`
     margin-top: -120px;
     visibility: hidden;
   }
-
-  /* Anchor tag styles */
-  /* Selected specifically for mdx rendered side icon link */
-  a.header-anchor {
-    position: relative;
-    display: initial;
-    opacity: 0;
-    margin-left: -1.5em;
-    padding-right: 0.5rem;
-    font-size: 1rem;
-    vertical-align: middle;
-    &:hover {
-      display: initial;
-      fill: ${(props) => props.theme.colors.primary};
-      opacity: 1;
-    }
-  }
-
-  &:hover {
-    a.header-anchor {
-      display: initial;
-      fill: ${(props) => props.theme.colors.primary};
-      opacity: 1;
-    }
-  }
 `
 
 export const Header3 = styled.h3`
@@ -309,31 +304,6 @@ export const Header3 = styled.h3`
     height: 120px;
     margin-top: -120px;
     visibility: hidden;
-  }
-
-  /* Anchor tag styles */
-  /* Selected specifically for mdx rendered side icon link */
-  a.header-anchor {
-    position: relative;
-    display: initial;
-    opacity: 0;
-    margin-left: -1.5em;
-    padding-right: 0.5rem;
-    font-size: 1rem;
-    vertical-align: middle;
-    &:hover {
-      display: initial;
-      fill: ${(props) => props.theme.colors.primary};
-      opacity: 1;
-    }
-  }
-
-  &:hover {
-    a.header-anchor {
-      display: initial;
-      fill: ${(props) => props.theme.colors.primary};
-      opacity: 1;
-    }
   }
 `
 
@@ -351,27 +321,6 @@ export const Header4 = styled.h4`
     height: 120px;
     margin-top: -120px;
     visibility: hidden;
-  }
-
-  /* Anchor tag styles */
-  a {
-    position: relative;
-    display: none;
-    margin-left: -1.5em;
-    padding-right: 0.5rem;
-    font-size: 1rem;
-    vertical-align: middle;
-    &:hover {
-      display: initial;
-      fill: ${(props) => props.theme.colors.primary};
-    }
-  }
-
-  &:hover {
-    a {
-      display: initial;
-      fill: ${(props) => props.theme.colors.primary};
-    }
   }
 `
 
@@ -435,7 +384,7 @@ export const OptionContainer = styled.div`
   }
 `
 
-export const Option = styled.div`
+export const Option = styled.button`
   border-radius: 2rem;
   border: 1px solid
     ${(props) =>
@@ -449,6 +398,7 @@ export const Option = styled.div`
   padding: 1rem 1.5rem;
   margin: 0.5rem;
   cursor: pointer;
+  background-color: transparent;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     width: 100%;
     justify-content: center;
@@ -462,12 +412,67 @@ export const Option = styled.div`
   }
 `
 
-export const OptionText = styled.div`
-  font-size: ${(props) => props.fontSize};
+export const OptionText = styled.span`
+  font-size: ${({ fontSize = "1.5rem" }) => fontSize};
   line-height: 100%;
   text-align: center;
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     font-size: 1rem;
     font-weight: 600;
+  }
+`
+
+// https://react-select.com/styles#using-classnames
+// Pass menuIsOpen={true} to component to debug
+export const StyledSelect = styled(Select)`
+  width: 100%;
+  color: black;
+  /* Component */
+  .react-select__control {
+    border: 1px solid ${({ theme }) => theme.colors.searchBorder};
+    background: ${({ theme }) => theme.colors.searchBackground};
+    /* Dropdown arrow */
+    .react-select__indicator {
+      color: ${({ theme }) => theme.colors.searchBorder};
+    }
+    &.react-select__control--is-focused {
+      border-color: ${({ theme }) => theme.colors.primary} !important;
+      box-shadow: 0 0 0 1px ${({ theme }) => theme.colors.primary} !important;
+      .react-select__value-container {
+        border-color: ${({ theme }) => theme.colors.primary} !important;
+      }
+    }
+  }
+  .react-select__placeholder {
+    color: ${({ theme }) => theme.colors.text200};
+  }
+  .react-select__single-value {
+    color: ${({ theme }) => theme.colors.text};
+  }
+  .react-select__menu {
+    background: ${({ theme }) => theme.colors.searchBackground};
+    color: ${({ theme }) => theme.colors.text};
+  }
+  .react-select__input {
+    color: ${({ theme }) => theme.colors.text};
+  }
+  .react-select__option {
+    &:hover {
+      background-color: ${({ theme }) => theme.colors.selectHover};
+    }
+    &:active {
+      background-color: ${({ theme }) => theme.colors.selectActive};
+      color: ${({ theme }) => theme.colors.buttonColor} !important;
+    }
+  }
+  .react-select__option--is-focused {
+    background-color: ${({ theme }) => theme.colors.selectHover};
+  }
+  .react-select__option--is-selected {
+    background-color: ${({ theme }) => theme.colors.primary};
+    color: ${({ theme }) => theme.colors.buttonColor};
+    &:hover {
+      background-color: ${({ theme }) => theme.colors.primary};
+    }
   }
 `
