@@ -1,6 +1,6 @@
 ---
 title: Understanding the Yellow Paper's EVM Specifications
-description: Understanding the part of the Yellow Paper, the formal specifications for Ethereum, that explains the ethereum virtual machine (EVM).
+description: Understanding the part of the Yellow Paper, the formal specifications for Ethereum, that explains the Ethereum virtual machine (EVM).
 author: "qbzzt"
 tags: ["evm", "yellow paper", "specifications"]
 skill: intermediate
@@ -11,7 +11,7 @@ published: 2022-05-15
 
 [The Yellow Paper](https://ethereum.github.io/yellowpaper/paper.pdf) is the formal specification for Ethereum. 
 Except where amended by [the EIP process](/eips/), it contains the exact description of how everything works.
-It is written as a mathematical paper, which includes terminology programmers may not be familiar with. 
+It is written as a mathematical paper, which includes terminology programmers may not find familiar. 
 In this paper you learn how to read it, and by extension other related mathematical papers.
 
 ## Which Yellow Paper?
@@ -24,16 +24,16 @@ It is a good idea to have it open in a different window while reading this docum
 
 ### Why the EVM?
 
-I am writing this a few months before [the merge](/upgrades/merge). 
-That event will significantly change the way blocks are handled, making that part of the current yellow paper of mostly historical instance.
-On the other hand, the EVM is mostly unaffected by the merge.
+I am writing this a few months before [The Merge](/upgrades/merge). 
+The Merge will significantly change the way blocks are handled, making that part of the current yellow paper of historical interest.
+On the other hand, the EVM is mostly unaffected by The Merge.
 
 ## 9 (Execution Model)
 
 This section (p. 12-14) includes most of the definition of the EVM.
 
 The term *system state* includes everything you need to know about the system to run it.
-In a normal computer this means the memory, content of registers, etc.
+In a typical computer, this means the memory, content of registers, etc.
 
 A [Turing machine](https://en.wikipedia.org/wiki/Turing_machine) is a computational model.
 Essentially, it is a simplified version of a computer, which is proved to have the same ability to run computations that a normal computer can (everything that a computer can calculate a Turing machine can calculate and vice versa).
@@ -44,7 +44,7 @@ Turing machines can get into infinite loops, and the EVM cannot because it would
 
 ## 9.1 (Basics)
 
-This section gives the basics of the EVM, and how it compares with other computational models.
+This section gives the basics of the EVM and how it compares with other computational models.
 
 A [stack machine](https://en.wikipedia.org/wiki/Stack_machine) is a computer that stores intermediate data not in registers, but in a [stack](https://en.wikipedia.org/wiki/Stack_(abstract_data_type)).
 Stack machine is the preferred architecture for virtual machines because it is easy to implement.
@@ -162,10 +162,10 @@ Equations 137-142 give us the initial conditions for running the EVM:
 Equation 143 tells us there are four possible conditions at each point in time during execution, and what to do with them:
 
 1. If *Z(σ,μ,A,I)*, it means that we have encountered an abnormal condition.
-   In that case the new state is identical to the old one (except gas gets burned)
-1. If the opcode is [`REVERT`](https://www.evm.codes/#fd), the new state is the same as the old state, some gas is lost, and we have output to return.
-1. If there is any output, (meaning we are at a [`RETURN`](https://www.evm.codes/#f3)), the state is the new state and return the output.
-1. If we aren't at one of the end conditions, continue running.
+   In that case, the new state is identical to the old one (except gas gets burned)
+2. If the opcode is [`REVERT`](https://www.evm.codes/#fd), the new state is the same as the old state, some gas is lost, and we have output to return.
+3. If there is any output, (meaning we are at a [`RETURN`](https://www.evm.codes/#f3)), the state is the new state and returns the output.
+4. If we aren't at one of the end conditions, continue running.
 
 
 ## 9.4.1 (Machine State)
@@ -364,7 +364,7 @@ In the case of [`DUP<n>`](https://www.evm.codes/#8f) and [`SWAP<n>`](https://www
 
 ## 9.5 (The Execution Cycle)
 
-Now that we have all the parts, we can finally undertand how the execution cycle of the EVM is documented.
+Now that we have all the parts, we can finally understand how the execution cycle of the EVM is documented.
 
 Equation (155) says that given the state:
 
@@ -382,15 +382,13 @@ Finally, equations (161)-(164) specify that the other parameters stay the same, 
 
 With this the EVM is fully defined.
 
-
 ## Conclusion
 
-Mathematical notation is precise, and has allowed the Yellow Paper to specify every detail of Ethereum.
-However, it does have some drawbacks:
+Mathematical notation is precise and has allowed the Yellow Paper to specify every detail of Ethereum. However, it does have some drawbacks:
 
-- It can only be understood by humans, which means that [compliance tests](https://github.com/ethereum/tests) have to be written manually.
+- It can only be understood by humans, which means that [compliance tests](https://github.com/ethereum/tests) must be written manually.
 - Programmers understand computer code.
   They may or may not understand mathematical notation.
   
 Maybe for these reasons, the newer [consensus layer specs](https://github.com/ethereum/consensus-specs/blob/dev/tests/core/pyspec/README.md) are written in Python.
-However, until and unless the Yellow Paper is also translated to Python or a similar language, the Yellow Paper will continue in service and it is useful to be able to read it.
+However, until and unless the Yellow Paper is also translated to Python or a similar language, the Yellow Paper will continue in service, and it is helpful to be able to read it.
