@@ -12,113 +12,186 @@ If the wallet does meet our list policy, please complete the following informati
 
 ### Project info
 
-- Wallet name
-  - Please provide the official name of the wallet
-- Wallet description
-  - Please provide a short 1-2 sentence description of the wallet without marketing claims. Avoid claims like “the best Ethereum wallet”. We will ask for revisions if this comes across as marketing-focused.
-- Wallet logo
-  - Please provide a hi-res SVG or transparent PNG
-- Background color for brand logo
-  - Please provide a hex code for the brand color. This will be added to the background of the wallet card.
-- URL to the project
-  - Please provide a URL (e.g. to the website of the wallet)
-- URL to the documentation
-  - Please provide a URL to the documentation
-- Is your wallet security tested? Please explain security measures i.e. security audit, internal security team, or some other method.
-  - Please explain any security measures you have taken to ensure your wallet is secure
-- When did your wallet go live to users?
-  - Please provide a date when your wallet was usable by the public. Please provide some user metrics for how many users are using this wallet.
-- Does your wallet have an active development team?
-  - Are developers actively working on the wallet? Provide proof that the wallet is actively being worked on (ex. GitHub repo link).
-- Is your wallet globally accessible?
-  - Please list any KYC requirements or geographic limitations of your wallet, if any exist.
-- Is there internationalization support for your wallet?
-  - Please list languages that the wallet actively supports
-- What is the repository for your codebase?
-  - If you’re project is open source, please provide a link to the codebase.
-- What social links are there for the project?
-  - Please provide social links for the wallet (Discord, Twitter, etc.)
-- What is your wallet's onboarding experience?
-  - Please provide an explanation of where to find the user onboarding experience (links, is it built into the app, etc.), and what the onboarding experience is.
+**Wallet name**
+
+  <!-- Please provide the official name of the wallet -->
+
+**Wallet description**
+
+<!-- Please provide a short 1-2 sentence description of the wallet without marketing claims. Avoid claims like “the best Ethereum wallet”. We will ask for revisions if this comes across as marketing-focused. -->
+
+**Wallet logo**
+
+<!-- Please provide a hi-res SVG or transparent PNG -->
+
+**Background color for brand logo**
+
+<!-- Please provide a hex code for the brand color. This will be added to the background of the wallet card. -->
+
+**URL to the project**
+
+<!-- Please provide a URL (e.g. to the website of the wallet) -->
+
+**URL to the documentation**
+
+<!-- Please provide a URL to the documentation -->
+
+**Is your wallet security tested? Please explain security measures i.e. security audit, internal security team, or some other method.**
+
+<!-- Please explain any security measures you have taken to ensure your wallet is secure -->
+
+**When did your wallet go live to users?**
+
+<!-- Please provide a date when your wallet was usable by the public. Please provide some user metrics for how many users are using this wallet. -->
+
+**Does your wallet have an active development team?**
+
+<!-- Are developers actively working on the wallet? Provide proof that the wallet is actively being worked on (ex. GitHub repo link). -->
+
+**Is your wallet globally accessible?**
+
+<!-- Please list any KYC requirements or geographic limitations of your wallet, if any exist. -->
+
+**Is there internationalization support for your wallet?**
+
+<!-- Please list languages that the wallet actively supports -->
+
+**What is the repository for your codebase?**
+
+<!-- If you’re project is open source, please provide a link to the codebase. -->
+
+**What social links are there for the project?**
+
+<!-- Please provide social links for the wallet (Discord, Twitter, etc.) -->
+
+**What is your wallet's onboarding experience?**
+
+<!-- Please provide an explanation of where to find the user onboarding experience (links, is it built into the app, etc.), and what the onboarding experience is. -->
 
 ### Device
 
-- Does the wallet have a mobile app? If yes, which operating systems are supported (iOS, Android)?
-  - If the wallet has a mobile interface, please provide information and links to the app store for the operating systems supported.
-- Does the wallet have a desktop app? If yes, which operating systems are supported (Windows, Mac, Linux)?
-  - If the wallet has a desktop interface, please provide links and information for the operating systems supported.
-- Does the wallet have a browser extension? If yes, which browsers are supported (Chromium, Firefox, Safari)?
-  - If the wallet has a browser extension, please provide links and information for the browsers that are supported.
-- Is it a hardware wallet?
-  - How is it used / how does it connect (e.g. USB)? What software wallets does it integrate with (e.g. MetaMask)?
+**Does the wallet have a mobile app? If yes, which operating systems are supported (iOS, Android)?**
+
+<!-- If the wallet has a mobile interface, please provide information and links to the app store for the operating systems supported. -->
+
+**Does the wallet have a desktop app? If yes, which operating systems are supported (Windows, Mac, Linux)?**
+
+<!-- If the wallet has a desktop interface, please provide links and information for the operating systems supported. -->
+
+**Does the wallet have a browser extension? If yes, which browsers are supported (Chromium, Firefox, Safari)?**
+
+<!-- If the wallet has a browser extension, please provide links and information for the browsers that are supported. -->
+
+**Is it a hardware wallet?**
+
+<!-- How is it used / how does it connect (e.g. USB)? What software wallets does it integrate with (e.g. MetaMask)? -->
 
 ### Security
 
-- Is the wallet code open-sourced?
-  - If yes, please provide a direct link to the repository.
-- What license was the wallet software released under?
-  - Please provide information on the software license used for the wallet.
-- Is your wallet custodial, or non-custodial?
-  - Do users have access to their public and/or private keys? If your company/project were to disappear, would users still be able to access their funds?
-    - Custodial - users don't own keys
-    - Non-custodial - users own keys
-- Please describe the measures taken to ensure the wallet's security and provide documentation wherever possible
-  - Please provide a link to any security audits or code reports. If you haven't been audited but think your wallet should be listed anyway, explain here.
-- Spam protection?
-  - Does the wallet employ any practices to warn users against potential spam (e.g. when interacting with suspicious accounts/contracts)?
+**Is the wallet code open-sourced?**
+
+<!-- If yes, please provide a direct link to the repository. -->
+
+**What license was the wallet software released under?**
+
+<!-- Please provide information on the software license used for the wallet. -->
+
+**Is your wallet custodial, or non-custodial?**
+
+<!-- Do users have access to their public and/or private keys? If your company/project were to disappear, would users still be able to access their funds? -->
+
+**Please describe the measures taken to ensure the wallet's security and provide documentation wherever possible**
+
+<!-- Please provide a link to any security audits or code reports. If you haven't been audited but think your wallet should be listed anyway, explain here. -->
+
+**Spam protection?**
+
+<!-- Does the wallet employ any practices to warn users against potential spam (e.g. when interacting with suspicious accounts/contracts)? -->
 
 ### Features
 
-- Does the wallet have hardware wallet support?
-  - Please provide information on how a user can connect a hardware wallet to this wallet.
-- Does the wallet support WalletConnect?
-  - Please provide information on if the wallet supports WalletConnect.
-- Does the wallet support importing Ethereum RPC endpoints?
-  - Please provide documentation on how a user can import an Ethereum RPC into the wallet.
-- Does the wallet support viewing and interacting with NFTs?
-  - Please provide information on the experience of NFTs in the wallet.
-- Does the wallet support connecting to Ethereum applications?
-  - Please provide documentation for how users connect to applications. List examples (ie. connect wallet to dapp, in wallet browser, etc.)
-- Does the wallet support staking directly?
-  - Please provide documentation on direct staking this wallet supports.
-- Does the wallet support swaps directly?
-  - Please provide documentation on swaps.
-- Does the wallet support multi-chain networks?
-  - Please provide documentation on multi-chain networks this wallet supports.
-- Does the wallet allow the user to customize gas fees?
-  - Please provide documentation on how users can customize gas fees for transactions.
-- Does the wallet support ENS?
-  - Please provide information on ENS support.
-- Does the wallet support importing or automatically querying and displaying ERC-20 tokens?
-  - Please provide documentation on how to import tokens into the wallet.
-- Does the wallet support EIP-1559 style transactions?
-  - Please provide information on how the type of transactions this wallet supports.
+**Does the wallet have hardware wallet support?**
+
+<!-- Please provide information on how a user can connect a hardware wallet to this wallet. -->
+
+**Does the wallet support WalletConnect?**
+
+<!-- Please provide information on if the wallet supports WalletConnect. -->
+
+**Does the wallet support importing Ethereum RPC endpoints?**
+
+<!-- Please provide documentation on how a user can import an Ethereum RPC into the wallet. -->
+
+**Does the wallet support viewing and interacting with NFTs?**
+
+<!-- Please provide information on the experience of NFTs in the wallet. -->
+
+**Does the wallet support connecting to Ethereum applications?**
+
+<!-- Please provide documentation for how users connect to applications. List examples (ie. connect wallet to dapp, in wallet browser, etc.) -->
+
+**Does the wallet support staking directly?**
+
+<!-- Please provide documentation on direct staking this wallet supports. -->
+
+**Does the wallet support swaps directly?**
+
+<!-- Please provide documentation on swaps. -->
+
+**Does the wallet support multi-chain networks?**
+
+<!-- Please provide documentation on multi-chain networks this wallet supports. -->
+
+**Does the wallet allow the user to customize gas fees?**
+
+<!-- Please provide documentation on how users can customize gas fees for transactions. -->
+
+**Does the wallet support ENS?**
+
+<!-- Please provide information on ENS support. -->
+
+**Does the wallet support importing or automatically querying and displaying ERC-20 tokens?**
+
+<!-- Please provide documentation on how to import tokens into the wallet. -->
+
+**Does the wallet support EIP-1559 style transactions?**
+
+<!-- Please provide information on how the type of transactions this wallet supports. -->
 
 ### Finance
 
-- Does the wallet have fiat on-ramps through credit/debit cards or wire transfers, or Bank transfers (ACH)?
-  - Please provide documentation on how a user is able to onboard and purchase crypto in the wallet.
-    - Credit/debit cards
-    - Wire transfer
-    - Bank Transfer (ACH)
-- Does the wallet support withdrawals to fiat?
-  - Can a user cash out their crypto assets directly to a card or bank account? Please provide documentation.
+**Does the wallet have fiat on-ramps through credit/debit cards or wire transfers, or Bank transfers (ACH)?**
+
+<!-- Please provide documentation on how a user is able to onboard and purchase crypto in the wallet. -->
+<!-- Credit/debit cards -->
+<!-- Wire transfer -->
+<!-- Bank Transfer (ACH) -->
+
+**Does the wallet support withdrawals to fiat?**
+
+<!-- Can a user cash out their crypto assets directly to a card or bank account? Please provide documentation. -->
 
 ### Smart Contract
 
-- Is the wallet a multi-signature wallet?
-  - Please provide documentation on how users set up and use the multisig functionality for the wallet.
-- Does the wallet support social recovery?
-  - Please provide documentation on how users set up guardians and use social recovery for the wallet.
+**Is the wallet a multi-signature wallet?**
+
+<!-- Please provide documentation on how users set up and use the multisig functionality for the wallet. -->
+
+**Does the wallet support social recovery?**
+
+<!-- Please provide documentation on how users set up guardians and use social recovery for the wallet. -->
 
 ### Support
 
-- Does your wallet have a dedicated support team?
-  - Where should we send users that are having issues?
-  - How fast is your support?
-- What educational resources/documentation do you provide to users?
+**Does your wallet have a dedicated support team?**
+
+<!-- Where should we send users that are having issues? -->
+<!-- How fast is your support? -->
+
+**What educational resources/documentation do you provide to users?**
 
 ### Extra
 
-- Does the wallet have any integrated tools not mentioned above?
-  - Please provide any information about extra features this wallet has that we may have missed in the above criteria. (e.g. privacy features, transaction batching, etc).
+**Does the wallet have any integrated tools not mentioned above?**
+
+<!-- Please provide any information about extra features this wallet has that we may have missed in the above criteria. (e.g. privacy features, transaction batching, etc). -->
