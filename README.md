@@ -1222,6 +1222,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="http://nativeanish.tech"><img src="https://avatars.githubusercontent.com/u/15274388?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Anish Gupta</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=nativeanish" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/dev-matthew"><img src="https://avatars.githubusercontent.com/u/80741503?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Matthew</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=dev-matthew" title="Documentation">📖</a></td>
   </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/JustynaBroniszewska"><img src="https://avatars.githubusercontent.com/u/33961199?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Justyna Broniszewska</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=JustynaBroniszewska" title="Documentation">📖</a></td>
+  </tr>
 </table>
 
 <!-- markdownlint-restore -->
