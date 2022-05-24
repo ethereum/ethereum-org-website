@@ -18,7 +18,7 @@ Se você ainda não sabe o que são os nós e os clientes e como eles funcinam, 
 
 Os provedores de nós disponibilizam sua infraestrutura para você não precisar de uma.
 
-Esses serviços são tipicamente disponibilizados via uma chave API que você pode usar para escrever e ler as informações dentro da cadeia de blocos. Muitas vezes, incluindo acesso a [redes de testes Ethereum](/developers/docs/networks/#testnets) além da rede principal.
+Esses serviços são tipicamente disponibilizados via uma chave API que você pode usar para escrever e ler as informações dentro da cadeia de blocos. Muitas vezes, incluindo acesso a [redes de testes Ethereum](/developers/docs/networks/#ethereum-testnets) além da rede principal.
 
 Alguns serviços oferecem a você o seu próprio nó dedicado que eles gerenciam para você, enquanto outros usam os balanceadores de carga para distribuir atividade entre nós.
 

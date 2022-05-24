@@ -808,7 +808,7 @@ Unité de l'[ether](#ether). 1 szabo = 10<sup>12</sup> [wei](#wei), 10<sup>6</su
 
 Aussi appelé « testnet » (de l'anglais « test network »), il s'agit d'un réseau utilisé pour simuler le comportement du réseau principal Ethereum (voir [réseau principal](#mainnet)).
 
-<DocLink to="/developers/docs/networks/#testnets">
+<DocLink to="/developers/docs/networks/#ethereum-testnets">
   Réseaux de test
 </DocLink>
 

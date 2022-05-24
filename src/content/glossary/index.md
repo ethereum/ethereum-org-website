@@ -510,7 +510,6 @@ A [wallet](#wallet) using the hierarchical deterministic (HD) key creation and t
 
 A value used to generate the master [private key](#private-key) and master chain code for an HD [wallet](#wallet). The wallet seed can be represented by mnemonic words, making it easier for humans to copy, back up, and restore private keys.
 
-
 ### homestead {#homestead}
 
 The second development stage of Ethereum, launched in March 2016 at block 1,150,000.
@@ -574,7 +573,6 @@ Every account’s private key/address pair exists as a single keyfile in an Ethe
 ### keccak-256 {#keccak-256}
 
 Cryptographic [hash](#hash) function used in Ethereum. Keccak-256 was standardized as [SHA](#sha)-3.
-
 
 <Divider />
 
@@ -749,7 +747,7 @@ A secret number that allows Ethereum users to prove ownership of an account or c
 
 ### private chain {#private-chain}
 
-A fully private blockchain is one with permissioned access, not publicly available for use. 
+A fully private blockchain is one with permissioned access, not publicly available for use.
 
 ### proof-of-stake (PoS) {#pos}
 
@@ -955,7 +953,7 @@ A [hard fork](#hard-fork) of the Ethereum blockchain, which occurred at block 2,
 
 Short for "test network," a network used to simulate the behavior of the main Ethereum network (see [Mainnet](#mainnet)).
 
-<DocLink to="/developers/docs/networks/#testnets">
+<DocLink to="/developers/docs/networks/#ethereum-testnets">
   Testnets
 </DocLink>
 
