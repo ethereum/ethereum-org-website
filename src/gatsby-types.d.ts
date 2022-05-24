@@ -4089,6 +4089,7 @@ declare namespace Queries {
     | "childMdx.frontmatter.address"
     | "childMdx.frontmatter.alt"
     | "childMdx.frontmatter.author"
+    | "childMdx.frontmatter.authors"
     | "childMdx.frontmatter.compensation"
     | "childMdx.frontmatter.description"
     | "childMdx.frontmatter.emoji"
@@ -5099,6 +5100,7 @@ declare namespace Queries {
     | "childrenMdx.frontmatter.address"
     | "childrenMdx.frontmatter.alt"
     | "childrenMdx.frontmatter.author"
+    | "childrenMdx.frontmatter.authors"
     | "childrenMdx.frontmatter.compensation"
     | "childrenMdx.frontmatter.description"
     | "childrenMdx.frontmatter.emoji"
@@ -5625,6 +5627,7 @@ declare namespace Queries {
     readonly address: Maybe<Scalars["String"]>
     readonly alt: Maybe<Scalars["String"]>
     readonly author: Maybe<Scalars["String"]>
+    readonly authors: Maybe<Scalars["String"]>
     readonly compensation: Maybe<Scalars["String"]>
     readonly description: Maybe<Scalars["String"]>
     readonly emoji: Maybe<Scalars["String"]>
@@ -5656,6 +5659,7 @@ declare namespace Queries {
     readonly address: InputMaybe<StringQueryOperatorInput>
     readonly alt: InputMaybe<StringQueryOperatorInput>
     readonly author: InputMaybe<StringQueryOperatorInput>
+    readonly authors: InputMaybe<StringQueryOperatorInput>
     readonly compensation: InputMaybe<StringQueryOperatorInput>
     readonly description: InputMaybe<StringQueryOperatorInput>
     readonly emoji: InputMaybe<StringQueryOperatorInput>
@@ -6594,6 +6598,7 @@ declare namespace Queries {
     | "frontmatter.address"
     | "frontmatter.alt"
     | "frontmatter.author"
+    | "frontmatter.authors"
     | "frontmatter.compensation"
     | "frontmatter.description"
     | "frontmatter.emoji"
@@ -10160,11 +10165,11 @@ declare namespace Queries {
     } | null
   }
 
-  type DocsPageQueryQueryVariables = Exact<{
+  type DocsPageQueryVariables = Exact<{
     relativePath: InputMaybe<Scalars["String"]>
   }>
 
-  type DocsPageQueryQuery = {
+  type DocsPageQuery = {
     readonly siteData: {
       readonly siteMetadata: { readonly editContentUrl: string | null } | null
     } | null
@@ -10184,11 +10189,11 @@ declare namespace Queries {
     } | null
   }
 
-  type JobQueryQueryVariables = Exact<{
+  type JobPageQueryVariables = Exact<{
     relativePath: InputMaybe<Scalars["String"]>
   }>
 
-  type JobQueryQuery = {
+  type JobPageQuery = {
     readonly mdx: {
       readonly body: string
       readonly tableOfContents: Record<string, unknown> | null
@@ -10219,11 +10224,11 @@ declare namespace Queries {
     } | null
   }
 
-  type StakingPageQueryQueryVariables = Exact<{
+  type StakingPageQueryVariables = Exact<{
     relativePath: InputMaybe<Scalars["String"]>
   }>
 
-  type StakingPageQueryQuery = {
+  type StakingPageQuery = {
     readonly siteData: {
       readonly siteMetadata: { readonly editContentUrl: string | null } | null
     } | null
@@ -10256,11 +10261,11 @@ declare namespace Queries {
     } | null
   }
 
-  type StaticPageQueryQueryVariables = Exact<{
+  type StaticPageQueryVariables = Exact<{
     relativePath: InputMaybe<Scalars["String"]>
   }>
 
-  type StaticPageQueryQuery = {
+  type StaticPageQuery = {
     readonly siteData: {
       readonly siteMetadata: { readonly editContentUrl: string | null } | null
     } | null
@@ -10286,11 +10291,11 @@ declare namespace Queries {
     } | null
   }
 
-  type TutorialPageQueryQueryVariables = Exact<{
+  type TutorialPageQueryVariables = Exact<{
     relativePath: InputMaybe<Scalars["String"]>
   }>
 
-  type TutorialPageQueryQuery = {
+  type TutorialPageQuery = {
     readonly siteData: {
       readonly siteMetadata: { readonly editContentUrl: string | null } | null
     } | null
@@ -10319,11 +10324,47 @@ declare namespace Queries {
     } | null
   }
 
-  type UseCasePageQueryQueryVariables = Exact<{
+  type UpgradePageQueryVariables = Exact<{
     relativePath: InputMaybe<Scalars["String"]>
   }>
 
-  type UseCasePageQueryQuery = {
+  type UpgradePageQuery = {
+    readonly mdx: {
+      readonly body: string
+      readonly tableOfContents: Record<string, unknown> | null
+      readonly fields: { readonly slug: string | null } | null
+      readonly frontmatter: {
+        readonly title: string | null
+        readonly description: string | null
+        readonly lang: string | null
+        readonly sidebar: boolean | null
+        readonly sidebarDepth: number | null
+        readonly summaryPoint1: string
+        readonly summaryPoint2: string
+        readonly summaryPoint3: string
+        readonly summaryPoint4: string
+        readonly isOutdated: boolean | null
+        readonly image: {
+          readonly childImageSharp: {
+            readonly gatsbyImageData: Record<string, unknown>
+          } | null
+        } | null
+      } | null
+      readonly parent:
+        | {
+            readonly mtime: string
+            readonly fields: { readonly gitLogLatestDate: string | null } | null
+          }
+        | {}
+        | null
+    } | null
+  }
+
+  type UseCasePageQueryVariables = Exact<{
+    relativePath: InputMaybe<Scalars["String"]>
+  }>
+
+  type UseCasePageQuery = {
     readonly siteData: {
       readonly siteMetadata: { readonly editContentUrl: string | null } | null
     } | null
@@ -10342,42 +10383,6 @@ declare namespace Queries {
         readonly summaryPoint2: string
         readonly summaryPoint3: string
         readonly alt: string | null
-        readonly isOutdated: boolean | null
-        readonly image: {
-          readonly childImageSharp: {
-            readonly gatsbyImageData: Record<string, unknown>
-          } | null
-        } | null
-      } | null
-      readonly parent:
-        | {
-            readonly mtime: string
-            readonly fields: { readonly gitLogLatestDate: string | null } | null
-          }
-        | {}
-        | null
-    } | null
-  }
-
-  type UpgradePageQueryQueryVariables = Exact<{
-    relativePath: InputMaybe<Scalars["String"]>
-  }>
-
-  type UpgradePageQueryQuery = {
-    readonly mdx: {
-      readonly body: string
-      readonly tableOfContents: Record<string, unknown> | null
-      readonly fields: { readonly slug: string | null } | null
-      readonly frontmatter: {
-        readonly title: string | null
-        readonly description: string | null
-        readonly lang: string | null
-        readonly sidebar: boolean | null
-        readonly sidebarDepth: number | null
-        readonly summaryPoint1: string
-        readonly summaryPoint2: string
-        readonly summaryPoint3: string
-        readonly summaryPoint4: string
         readonly isOutdated: boolean | null
         readonly image: {
           readonly childImageSharp: {
