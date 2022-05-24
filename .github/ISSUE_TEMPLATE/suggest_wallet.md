@@ -98,7 +98,7 @@ If the wallet does meet our list policy, please complete the following informati
 
 **Is your wallet custodial, or non-custodial?**
 
-<!-- Do users have access to their public and/or private keys? If your company/project were to disappear, would users still be able to access their funds? -->
+<!-- Do users have access to their public and private keys? Does anyone else? If your company/project were to disappear, would users still be able to access their funds? -->
 
 **Please describe the measures taken to ensure the wallet's security and provide documentation wherever possible**
 
