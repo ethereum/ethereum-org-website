@@ -1,5 +1,10 @@
 export const dannyArticles = [
   {
+    title: "Finalized no. 34",
+    description: "23 March 2022",
+    link: "https://blog.ethereum.org/2022/03/23/finalized-no-34/",
+  },
+  {
     title: "Finalized no. 33",
     description: "31 January 2022",
     link: "https://blog.ethereum.org/2022/01/31/finalized-no-33/",
@@ -24,22 +29,27 @@ export const dannyArticles = [
 export const benArticles = [
   {
     title: "What’s New in Eth2 – #88",
+    description: "6 May 2022",
+    link: "https://hackmd.io/@benjaminion/eth2_news/https%3A%2F%2Fhackmd.io%2F%40benjaminion%2Fwnie2_220506",
+  },
+  {
+    title: "What’s New in Eth2 – #88",
+    description: "8 April 2022",
+    link: "https://hackmd.io/@benjaminion/eth2_news/https%3A%2F%2Fhackmd.io%2F%40benjaminion%2Fwnie2_220408",
+  },
+  {
+    title: "What’s New in Eth2 – #88",
+    description: "25 March 2022",
+    link: "https://hackmd.io/@benjaminion/eth2_news/https%3A%2F%2Fhackmd.io%2F%40benjaminion%2Fwnie2_220325",
+  },
+  {
+    title: "What’s New in Eth2 – #88",
+    description: "11 March 2022",
+    link: "https://hackmd.io/@benjaminion/eth2_news/https%3A%2F%2Fhackmd.io%2F%40benjaminion%2Fwnie2_220311",
+  },
+  {
+    title: "What’s New in Eth2 – #88",
     description: "25 February 2022",
     link: "https://hackmd.io/@benjaminion/eth2_news/https%3A%2F%2Fhackmd.io%2F%40benjaminion%2Fwnie2_220225",
-  },
-  {
-    title: "What’s New in Eth2 – #87",
-    description: "11 February 2022",
-    link: "https://hackmd.io/@benjaminion/eth2_news/https%3A%2F%2Fhackmd.io%2F%40benjaminion%2Fwnie2_220211",
-  },
-  {
-    title: "What’s New in Eth2 – #86",
-    description: "28 January 2022",
-    link: "https://hackmd.io/@benjaminion/eth2_news/https%3A%2F%2Fhackmd.io%2F%40benjaminion%2Fwnie2_220128",
-  },
-  {
-    title: "What’s New in Eth2 – #85",
-    description: "14 January 2022",
-    link: "https://hackmd.io/@benjaminion/eth2_news/https%3A%2F%2Fhackmd.io%2F%40benjaminion%2Fwnie2_220114",
   },
 ]
