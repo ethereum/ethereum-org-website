@@ -631,7 +631,7 @@ export const query = graphql`
       ...listImage
     }
     bitcoindotcom: file(relativePath: { eq: "wallets/bitcoindotcom.png" }) {
-      ...walletCardImage
+      ...listImage
     }
     bitski: file(relativePath: { eq: "wallets/bitski.png" }) {
       ...listImage
