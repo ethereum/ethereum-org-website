@@ -18,5 +18,12 @@
     "./gatsby-node.ts",
     "./gatsby-config.ts",
     "./overrides.d.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "./src/content",
+    "./src/intl",
+    "./src/data",
+    "./src/assets"
   ]
 }
