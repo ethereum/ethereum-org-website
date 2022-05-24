@@ -229,6 +229,7 @@ const config: GatsbyConfig = {
     `gatsby-plugin-gatsby-cloud`,
     // Creates `_redirects` & `_headers` build files for Netlify
     `gatsby-plugin-netlify`,
+    // Enables codegen for graphql queries
     {
       resolve: `gatsby-plugin-graphql-codegen`,
       options: {
