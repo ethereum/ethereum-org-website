@@ -24,19 +24,21 @@ An identifier is a piece of information that can be used to distinguish a person
 - Social security number/tax ID number 
 - Mobile number 
 - Date and place of birth
-- Digital identification credentials, e.g., passwords, email address, usernames
+- Digital identification credentials, e.g., email addresses, usernames, avatars
+
+It is important to understand that in these traditional examples of identifiers that _issuance_ and _control_ over these identifiers are maintained by a central agency. For example, legal names require permission from a government for issuance or before being changed, and changes to your social media handle require permission from the platform. 
 
 ## What are attestations? {#what-are-attestations}
  
-An attestation refers to a claim made by an entity about another entity. An example attestation is a driver's license issued by the Department of Motor Vehicles (DMV). The driver's license, which proves a specific claim (that the holder has legal permission to drive a car) is made by one entity (the DMV) about another entity (Bob, the driver). 
+An attestation refers to a claim made by an entity about another entity. An example attestation is a driver's license issued by the Department of Motor Vehicles (DMV). A driver's license, which provides a specific claim (that the holder has legal permission and is competent enough to drive a car) is made by one entity (the DMV) about another entity (the driver). 
 
-Although attestations and identities are different, an attestation contains identifiers that point to an individual's identity. The driver's license mentioned earlier, for example, may have identifiers, like the holder’s name, date of birth, and nationality. 
+Attestations are different from identifiers. An attestation _contains_ identifiers to reference a particular identity, and makes a claim about an attribute related to this identity. The driver's license mentioned earlier, for example, has a mix of both identifiers (such as name, date of birth, and address), as well as an attestation about this individuals legal right to operate a vehicle.
 
 ## What are decentralized identifiers? {#what-are-decentralized-identifiers}
 
-Decentralized identifiers (DIDs) are identifiers that are not issued, managed, or controlled by a central authority. Traditional identifiers, like an email address or mobile number, are reliant on intermediaries—email providers, mobile network operators, and so on. 
+As mentioned, traditional identifiers like legal name, email address or Twitter handle are all reliant on intermediaries such as a governments, email providers or social media platforms. Decentralized identifiers (DIDs) are identifiers that are not issued, managed, or controlled by any central authority.
 
-Decentralized identifiers are issued, held, and controlled by individuals. An [Ethereum account](/developers/docs/accounts/), for example, is a decentralized identifier. Anyone can create an account, set up a wallet, and validate their identity on the Ethereum network. 
+Decentralized identifiers are issued, held, and controlled by individuals. An [Ethereum account](/developers/docs/accounts/) is an example of a decentralized identifier. Anyone is free to create as many accounts as they wish, without permission from anyone, and without need to store this identifier in a central registry.
 
 DIDs are stored on distributed ledgers (blockchains) or peer-to-peer networks. This makes DIDs [globally unique, resolvable with high availability, and cryptographically verifiable](https://w3c-ccg.github.io/did-primer/). A DID can be associated with different entities, including people, organizations, or government institutions.  
 
