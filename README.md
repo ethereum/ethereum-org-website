@@ -1224,6 +1224,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   </tr>
   <tr>
     <td align="center"><a href="https://github.com/JustynaBroniszewska"><img src="https://avatars.githubusercontent.com/u/33961199?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Justyna Broniszewska</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=JustynaBroniszewska" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/yanil3500"><img src="https://avatars.githubusercontent.com/u/11803254?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Elyanil Liranzo-Castro</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=yanil3500" title="Documentation">📖</a></td>
   </tr>
 </table>
 
