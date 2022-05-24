@@ -92,7 +92,7 @@ If the wallet does meet our list policy, please complete the following informati
 
 <!-- If yes, please provide a direct link to the repository. -->
 
-**What license was the wallet software released under?**
+**What license is the wallet software released under?**
 
 <!-- Please provide information on the software license used for the wallet. -->
 
