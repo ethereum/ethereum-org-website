@@ -8,9 +8,15 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
-    "noImplicitAny": false,
+    "noImplicitAny": true,
     "skipLibCheck": true,
     "resolveJsonModule": true
   },
-  "include": ["./src"]
+  "include": [
+    "./src/**/*",
+    "./plugins/**/*",
+    "./gatsby-node.ts",
+    "./gatsby-config.ts",
+    "./overrides.d.ts"
+  ]
 }

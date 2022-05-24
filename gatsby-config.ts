@@ -86,7 +86,7 @@ const config: GatsbyConfig = {
             })
             .map((page) => ({ ...page, siteUrl: site.siteMetadata.siteUrl }))
         },
-        serialize: ({ path, siteUrl }) => {
+        serialize: ({ path, siteUrl }: { path: string; siteUrl: string }) => {
           const url = `${siteUrl}${path}`
           const changefreq = path.includes(`/${defaultLanguage}/`)
             ? `weekly`
@@ -229,23 +229,11 @@ const config: GatsbyConfig = {
     `gatsby-plugin-gatsby-cloud`,
     // Creates `_redirects` & `_headers` build files for Netlify
     `gatsby-plugin-netlify`,
-    // Enables codegen for graphql queries
-    {
-      resolve: `gatsby-plugin-graphql-codegen`,
-      options: {
-        codegen: true,
-        fileName: `./gatsby-graphql.ts`,
-        documentPaths: [
-          "./src/**/*.{ts,tsx}",
-          "./node_modules/gatsby-*/**/*.js",
-          "./gatsby-node.ts",
-        ],
-      },
-    },
   ],
   // https://www.gatsbyjs.com/docs/reference/release-notes/v2.28/#feature-flags-in-gatsby-configjs
   flags: {
     FAST_DEV: true, // DEV_SSR, QUERY_ON_DEMAND & LAZY_IMAGES
+    GRAPHQL_TYPEGEN: true, // ref. https://www.gatsbyjs.com/docs/reference/release-notes/v4.14/
   },
 }
 
@@ -253,7 +241,7 @@ const config: GatsbyConfig = {
 // there and it will send testing data as production otherwise
 if (!isPreviewDeploy) {
   config.plugins = [
-    ...config.plugins,
+    ...(config.plugins || []),
     // Matomo analtyics
     {
       resolve: "gatsby-plugin-matomo",

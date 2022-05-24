@@ -7,7 +7,6 @@ import { createFilePath } from "gatsby-source-filesystem"
 import type { GatsbyNode } from "gatsby"
 
 import type { Context } from "./src/types"
-import type { AllMdxQuery } from "./gatsby-graphql"
 
 import mergeTranslations from "./src/scripts/mergeTranslations"
 import copyContributors from "./src/scripts/copyContributors"
@@ -30,7 +29,7 @@ const exec = util.promisify(child_process.exec)
  * @param {string} filePath filepath for translated mdx file
  * @returns boolean for if file is outdated or not
  */
-const checkIsMdxOutdated = (filePath) => {
+const checkIsMdxOutdated = (filePath: string): boolean => {
   const dirname = path.resolve("./")
   const splitPath = filePath.split(dirname)
   const tempSplitPath = splitPath[1]
@@ -51,9 +50,11 @@ const checkIsMdxOutdated = (filePath) => {
   let englishMatch = ""
   let intlMatch = ""
   try {
+    // @ts-expect-error
     englishData.match(re).forEach((match) => {
       englishMatch += match.replace(re, (_, p1, p2) => p1 + p2)
     })
+    // @ts-expect-error
     translatedData.match(re).forEach((match) => {
       intlMatch += match.replace(re, (_, p1, p2) => p1 + p2)
     })
@@ -74,7 +75,10 @@ const checkIsMdxOutdated = (filePath) => {
  * @param {*} lang language abbreviation for language path
  * @returns {{isOutdated: boolean, isContentEnglish: boolean}}
  */
-const checkIsPageOutdated = async (urlPath, lang) => {
+const checkIsPageOutdated = async (
+  urlPath: string,
+  lang: Lang
+): Promise<{ isOutdated: boolean; isContentEnglish: boolean }> => {
   // Files that need index appended on the end. Ex page-index.json, page-developers-index.json, page-upgrades-index.json
   const indexFilePaths = ["", "developers", "upgrades"]
   const filePath = urlPath.split("/").filter((text) => text !== "")
@@ -137,11 +141,9 @@ const checkIsPageOutdated = async (urlPath, lang) => {
 
 // Loops through all the files dictated by Gatsby (building pages folder), as well as
 // folders flagged through the gatsby-source-filesystem plugin in gatsby-config
-export const onCreateNode: GatsbyNode["onCreateNode"] = async ({
-  node,
-  getNode,
-  actions,
-}) => {
+export const onCreateNode: GatsbyNode<{
+  fileAbsolutePath: string
+}>["onCreateNode"] = async ({ node, getNode, actions }) => {
   const { createNodeField } = actions
 
   // Edit markdown nodes
@@ -200,7 +202,7 @@ export const createPages: GatsbyNode<any, Context>["createPages"] = async ({
     })
   })
 
-  const result = await graphql<AllMdxQuery>(`
+  const { data, errors } = await graphql<Queries.AllMdxQuery>(`
     query AllMdx {
       allMdx {
         edges {
@@ -220,16 +222,20 @@ export const createPages: GatsbyNode<any, Context>["createPages"] = async ({
     }
   `)
 
-  if (result.errors) {
+  if (errors) {
     reporter.panicOnBuild('🚨  ERROR: Loading "createPages" query')
   }
 
   // For all markdown nodes, create a page
-  result.data.allMdx.edges.filter(({ node }) => {
-    const slug = node.fields.slug
+  data?.allMdx.edges.filter(({ node }) => {
+    const slug = node.fields?.slug
+
+    if (!slug) {
+      throw new Error(`Missing 'slug' node property.`)
+    }
 
     // Set template of markdown files
-    const nodeTemplate = node.frontmatter.template
+    const nodeTemplate = node.frontmatter?.template
     let template = nodeTemplate ? nodeTemplate : `static`
     if (slug.includes(`/tutorials/`)) {
       template = `tutorial`
@@ -243,11 +249,14 @@ export const createPages: GatsbyNode<any, Context>["createPages"] = async ({
       slug.includes(`/terms-of-use/`) ||
       slug.includes(`/contributing/`) ||
       slug.includes(`/style-guide/`)
-    const language = node.frontmatter.lang as Lang
+    const language = node.frontmatter?.lang as Lang
     if (!language) {
       throw `Missing 'lang' frontmatter property. All markdown pages must have a lang property. Page slug: ${slug}`
     }
     const relativePath = node.fields.relativePath
+    if (!relativePath) {
+      throw new Error(`Missing 'relativePath' node property.`)
+    }
 
     // If markdown file is English, check for corresponding file in each language.
     // e.g. English file: "src/content/community/index.md"
@@ -294,7 +303,7 @@ export const createPages: GatsbyNode<any, Context>["createPages"] = async ({
       component: path.resolve(`src/templates/${template}.js`),
       context: {
         slug,
-        isOutdated: node.fields.isOutdated,
+        isOutdated: !!node.fields.isOutdated,
         relativePath: relativePath,
         // Create `intl` object so `gatsby-plugin-intl` will skip
         // generating language variations for this page
@@ -370,7 +379,7 @@ export const onCreatePage: GatsbyNode<any, Context>["onCreatePage"] = async ({
   if (isTranslated && hasNoContext) {
     const { isOutdated, isContentEnglish } = await checkIsPageOutdated(
       page.context.intl.originalPath,
-      page.context.language
+      page.context.language!
     )
     deletePage(page)
     createPage<Context>({
@@ -449,7 +458,7 @@ export const onPostBuild: GatsbyNode["onPostBuild"] = async (
 ) => {
   const { reporter } = gatsbyNodeHelpers
 
-  const reportOut = (report) => {
+  const reportOut = (report: { stderr: string; stdout: string }) => {
     const { stderr, stdout } = report
     if (stderr) reporter.error(stderr)
     if (stdout) reporter.info(stdout)
