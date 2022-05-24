@@ -50,11 +50,9 @@ const checkIsMdxOutdated = (filePath: string): boolean => {
   let englishMatch = ""
   let intlMatch = ""
   try {
-    // @ts-expect-error
     englishData.match(re).forEach((match) => {
       englishMatch += match.replace(re, (_, p1, p2) => p1 + p2)
     })
-    // @ts-expect-error
     translatedData.match(re).forEach((match) => {
       intlMatch += match.replace(re, (_, p1, p2) => p1 + p2)
     })
@@ -302,6 +300,7 @@ export const createPages: GatsbyNode<any, Context>["createPages"] = async ({
       path: slug,
       component: path.resolve(`src/templates/${template}.js`),
       context: {
+        language,
         slug,
         isOutdated: !!node.fields.isOutdated,
         relativePath: relativePath,
@@ -379,7 +378,7 @@ export const onCreatePage: GatsbyNode<any, Context>["onCreatePage"] = async ({
   if (isTranslated && hasNoContext) {
     const { isOutdated, isContentEnglish } = await checkIsPageOutdated(
       page.context.intl.originalPath,
-      page.context.language!
+      page.context.language
     )
     deletePage(page)
     createPage<Context>({
