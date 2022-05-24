@@ -36,7 +36,7 @@ If the wallet does meet our list policy, please complete the following informati
 
 <!-- Please provide a URL to the documentation -->
 
-**Is your wallet security tested? Please explain security measures i.e. security audit, internal security team, or some other method.**
+**Is the wallet security tested? Please explain security measures i.e. security audit, internal security team, or some other method.**
 
 <!-- Please explain any security measures you have taken to ensure your wallet is secure -->
 
