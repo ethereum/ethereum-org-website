@@ -18,7 +18,7 @@ If the wallet does meet our list policy, please complete the following informati
 
 **Wallet description**
 
-<!-- Please provide a short 1-2 sentence description of the wallet without marketing claims. Avoid claims like “the best Ethereum wallet”. We will ask for revisions if this comes across as marketing-focused. -->
+<!-- Please provide a short 1-2 sentence description of the wallet. Avoid unsubstantiated marketing claims like “the best Ethereum wallet”. -->
 
 **Wallet logo**
 
