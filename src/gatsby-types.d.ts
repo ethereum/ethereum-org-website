@@ -10319,42 +10319,6 @@ declare namespace Queries {
     } | null
   }
 
-  type UpgradePageQueryQueryVariables = Exact<{
-    relativePath: InputMaybe<Scalars["String"]>
-  }>
-
-  type UpgradePageQueryQuery = {
-    readonly mdx: {
-      readonly body: string
-      readonly tableOfContents: Record<string, unknown> | null
-      readonly fields: { readonly slug: string | null } | null
-      readonly frontmatter: {
-        readonly title: string | null
-        readonly description: string | null
-        readonly lang: string | null
-        readonly sidebar: boolean | null
-        readonly sidebarDepth: number | null
-        readonly summaryPoint1: string
-        readonly summaryPoint2: string
-        readonly summaryPoint3: string
-        readonly summaryPoint4: string
-        readonly isOutdated: boolean | null
-        readonly image: {
-          readonly childImageSharp: {
-            readonly gatsbyImageData: Record<string, unknown>
-          } | null
-        } | null
-      } | null
-      readonly parent:
-        | {
-            readonly mtime: string
-            readonly fields: { readonly gitLogLatestDate: string | null } | null
-          }
-        | {}
-        | null
-    } | null
-  }
-
   type UseCasePageQueryQueryVariables = Exact<{
     relativePath: InputMaybe<Scalars["String"]>
   }>
@@ -10378,6 +10342,42 @@ declare namespace Queries {
         readonly summaryPoint2: string
         readonly summaryPoint3: string
         readonly alt: string | null
+        readonly isOutdated: boolean | null
+        readonly image: {
+          readonly childImageSharp: {
+            readonly gatsbyImageData: Record<string, unknown>
+          } | null
+        } | null
+      } | null
+      readonly parent:
+        | {
+            readonly mtime: string
+            readonly fields: { readonly gitLogLatestDate: string | null } | null
+          }
+        | {}
+        | null
+    } | null
+  }
+
+  type UpgradePageQueryQueryVariables = Exact<{
+    relativePath: InputMaybe<Scalars["String"]>
+  }>
+
+  type UpgradePageQueryQuery = {
+    readonly mdx: {
+      readonly body: string
+      readonly tableOfContents: Record<string, unknown> | null
+      readonly fields: { readonly slug: string | null } | null
+      readonly frontmatter: {
+        readonly title: string | null
+        readonly description: string | null
+        readonly lang: string | null
+        readonly sidebar: boolean | null
+        readonly sidebarDepth: number | null
+        readonly summaryPoint1: string
+        readonly summaryPoint2: string
+        readonly summaryPoint3: string
+        readonly summaryPoint4: string
         readonly isOutdated: boolean | null
         readonly image: {
           readonly childImageSharp: {

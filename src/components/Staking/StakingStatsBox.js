@@ -57,12 +57,6 @@ const ErrorMessage = () => (
   </IndicatorSpan>
 )
 
-const LoadingMessage = () => (
-  <IndicatorSpan>
-    <Translation id="loading" />
-  </IndicatorSpan>
-)
-
 const StatsBoxGrid = () => {
   const intl = useIntl()
   const localeForStatsBoxNumbers = getLocaleForNumberFormat(intl.locale)
@@ -107,6 +101,7 @@ const StatsBoxGrid = () => {
         setError(true)
       }
     })()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   // TODO: Improve error handling
