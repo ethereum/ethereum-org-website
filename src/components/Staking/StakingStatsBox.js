@@ -59,13 +59,14 @@ const ErrorMessage = () => (
 
 const StatsBoxGrid = () => {
   const intl = useIntl()
-  const localeForStatsBoxNumbers = getLocaleForNumberFormat(intl.locale)
   const [totalEth, setTotalEth] = useState(0)
   const [totalValidators, setTotalValidators] = useState(0)
   const [currentApr, setCurrentApr] = useState(0)
   const [error, setError] = useState(false)
 
   useEffect(() => {
+    const localeForStatsBoxNumbers = getLocaleForNumberFormat(intl.locale)
+
     const formatInteger = (amount) =>
       new Intl.NumberFormat(localeForStatsBoxNumbers).format(amount)
 
@@ -101,8 +102,7 @@ const StatsBoxGrid = () => {
         setError(true)
       }
     })()
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+  }, [intl.locale])
 
   // TODO: Improve error handling
   if (error) return <ErrorMessage />
