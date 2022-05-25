@@ -58,8 +58,8 @@ const ethers = require("ethers")
 // are a user identifier, and the last two bytes the amount of tokens the
 // user owns at present.
 const dataArray = [
-  0x0bad0010, 0x60a70020, 0xbeef0030, 0xdead0040, 0xca110050, 0x0e660060,
-  0xface0070, 0xbad00080, 0x060d0091,
+  0x0bad0010, 0x60a70020, 0xbeef0030, 0xdead0040, 0xca110050, 0x0e660060,
+  0xface0070, 0xbad00080, 0x060d0091,
 ]
 ```
 
@@ -73,13 +73,27 @@ const hashArray = dataArray
 In this case our data is 256-bit values to begin with, so no processing is needed. If we use a more complicated data structure, such as strings, we need to make sure we hash the data first to get an array of hashes. Note that this is also because we don't care if users know other users' information. Otherwise we would have had to hash so user 1 won't know the value for user 0, user 2 won't know the value for user 3, etc.
 
 ```javascript
-const pairHash = (a, b) =>
-  BigInt(ethers.utils.keccak256("0x" + (a ^ b).toString(16).padStart(64, 0)))
+// Convert between the string the hash function expects and the
+// BigInt we use everywhere else.
+const hash = x => BigInt(
+  ethers.utils.keccak256(('0x' + x.toString(16).padStart(64,0))))
 ```
 
 The ethers hash function expects to get a JavaScript string with a hexadecimal number, such as `0x60A7`, and responds with another string with the same structure. However, for the rest of the code it's easier to use `BigInt`, so we convert to a hexadecimal string and back again.
 
+```javascript
+// Symetrical hash of a pair so we won't care if the order is reversed.
+const pairHash = (a,b) => hash(hash(a) ^ hash(b))
+```
+
 This function is symmetrical (hash of a [xor](https://en.wikipedia.org/wiki/Exclusive_or) b). This means that when we check the Merkle proof we don't need to worry about whether to put the value from the proof before or after the calculated value. Merkle proof checking is done on chain, so the less we need to do there the better.
+
+Warning: 
+Cryptography is harder than it looks.
+The initial version of this article had the hash function `hash(a^b)`.
+That was a **bad** idea because it meant that if you knew the legitimate values of `a` and `b` you could use `b' = a^b^a'` to prove any desired `a'` value.
+With this function you'd have to calculate `b'` such that `hash(a') ^ hash(b')` is equal to a known value (the next branch on the way to root), which is a lot harder.
+
 
 ```javascript
 // The value to denote that a certain branch is empty, doesn't
@@ -95,17 +109,17 @@ When the number of values is not an integer power of two we need to handle empty
 // Calculate one level up the tree of a hash array by taking the hash of
 // each pair in sequence
 const oneLevelUp = (inputArray) => {
-  var result = []
-  var inp = [...inputArray] // To avoid over writing the input
+  var result = []
+  var inp = [...inputArray] // To avoid over writing the input
 
-  // Add an empty value if necessary (we need all the leaves to be
-  // paired)
-  if (inp.length % 2 === 1) inp.push(empty)
+  // Add an empty value if necessary (we need all the leaves to be
+  // paired)
+  if (inp.length % 2 === 1) inp.push(empty)
 
-  for (var i = 0; i < inp.length; i += 2)
-    result.push(pairHash(inp[i], inp[i + 1]))
+  for (var i = 0; i < inp.length; i += 2)
+    result.push(pairHash(inp[i], inp[i + 1]))
 
-  return result
+  return result
 } // oneLevelUp
 ```
 
@@ -113,20 +127,20 @@ This function "climbs" one level in the Merkle tree by hashing the pairs of valu
 
 ```javascript
 const getMerkleRoot = (inputArray) => {
-  var result
+  var result
 
-  result = [...inputArray]
+  result = [...inputArray]
 
-  // Climb up the tree until there is only one value, that is the
-  // root.
-  //
-  // If a layer has an odd number of entries the
-  // code in oneLevelUp adds an empty value, so if we have, for example,
-  // 10 leaves we'll have 5 branches in the second layer, 3
-  // branches in the third, 2 in the fourth and the root is the fifth
-  while (result.length > 1) result = oneLevelUp(result)
+  // Climb up the tree until there is only one value, that is the
+  // root.
+  //
+  // If a layer has an odd number of entries the
+  // code in oneLevelUp adds an empty value, so if we have, for example,
+  // 10 leaves we'll have 5 branches in the second layer, 3
+  // branches in the third, 2 in the fourth and the root is the fifth
+  while (result.length > 1) result = oneLevelUp(result)
 
-  return result[0]
+  return result[0]
 }
 ```
 
@@ -141,35 +155,35 @@ A Merkle proof is the values to hash together with the value being proved to get
 // hash with. Because we use a symmetrical hash function, we don't
 // need the item's location to verify the proof, only to create it
 const getMerkleProof = (inputArray, n) => {
-    var result = [], currentLayer = [...inputArray], currentN = n
+    var result = [], currentLayer = [...inputArray], currentN = n
 
-    // Until we reach the top
-    while (currentLayer.length > 1) {
-        // No odd length layers
-        if (currentLayer.length % 2)
-            currentLayer.push(empty)
+    // Until we reach the top
+    while (currentLayer.length > 1) {
+        // No odd length layers
+        if (currentLayer.length % 2)
+            currentLayer.push(empty)
 
-        result.push(currentN % 2
-               // If currentN is odd, add with the value before it to the proof
-            ? currentLayer[currentN-1]
-               // If it is even, add the value after it
-            : currentLayer[currentN+1])
+        result.push(currentN % 2
+               // If currentN is odd, add with the value before it to the proof
+            ? currentLayer[currentN-1]
+               // If it is even, add the value after it
+            : currentLayer[currentN+1])
 
 ```
 
 We hash `(v[0],v[1])`, `(v[2],v[3])`, etc. So for even values we need the next one, for odd values the previous one.
 
 ```javascript
-        // Move to the next layer up
-        currentN = Math.floor(currentN/2)
-        currentLayer = oneLevelUp(currentLayer)
-    }   // while currentLayer.length > 1
+        // Move to the next layer up
+        currentN = Math.floor(currentN/2)
+        currentLayer = oneLevelUp(currentLayer)
+    }   // while currentLayer.length > 1
 
-    return result
-}   // getMerkleProof
+    return result
+}   // getMerkleProof
 ```
 
-### On-chain code {#off-chain-code}
+### On-chain code {#on-chain-code}
 
 Finally we have the code that checks the proof. The on-chain code is written in [Solidity](https://docs.soliditylang.org/en/v0.8.11/). Optimization is a lot more important here because gas is relatively expensive.
 
@@ -185,47 +199,51 @@ I wrote this using the [Hardhat development environment](https://hardhat.org/), 
 ```solidity
 
 contract MerkleProof {
-    uint merkleRoot;
+    uint merkleRoot;
 
-    function getRoot() public view returns (uint) {
-      return merkleRoot;
-    }
+    function getRoot() public view returns (uint) {
+      return merkleRoot;
+    }
 
-    // Extremely insecure, in production code access to
-    // this function MUST BE strictly limited, probably to an
-    // owner
-    function setRoot(uint _merkleRoot) external {
-      merkleRoot = _merkleRoot;
-    }   // setRoot
+    // Extremely insecure, in production code access to
+    // this function MUST BE strictly limited, probably to an
+    // owner
+    function setRoot(uint _merkleRoot) external {
+      merkleRoot = _merkleRoot;
+    }   // setRoot
 ```
 
 Set and get functions for the Merkle root. Letting everybody update the Merkle root is an _extremely bad idea_ in a production system. I do it here for the sake of simplicity for sample code. **Don't do it on a system where data integrity actually matters**.
 
 ```solidity
-    function pairHash(uint _a, uint _b) internal pure returns(uint) {
-      return uint(keccak256(abi.encode(_a ^ _b)));
-    }
+    function hash(uint _a) internal pure returns(uint) {
+      return uint(keccak256(abi.encode(_a)));
+    }
+
+    function pairHash(uint _a, uint _b) internal pure returns(uint) {
+      return hash(hash(_a) ^ hash(_b));
+    }
 ```
 
-This function generates a pair hash. It is just the Solidity transalation of the JavaScript code for `pairHash`.
+This function generates a pair hash. It is just the Solidity transalation of the JavaScript code for `hash` and `pairHash`.
 
 **Note:** This is another case of optimization for readability. Based on [the function definition](https://www.tutorialspoint.com/solidity/solidity_cryptographic_functions.htm), it might be possible to store the data as a [`bytes32`](https://docs.soliditylang.org/en/v0.5.3/types.html#fixed-size-byte-arrays) value and avoid the conversions.
 
 ```solidity
-    // Verify a Merkle proof
-    function verifyProof(uint _value, uint[] calldata _proof)
-        public view returns (bool) {
-      uint temp = _value;
-      uint i;
+    // Verify a Merkle proof
+    function verifyProof(uint _value, uint[] calldata _proof)
+        public view returns (bool) {
+      uint temp = _value;
+      uint i;
 
-      for(i=0; i<_proof.length; i++) {
-        temp = pairHash(temp, _proof[i]);
-      }
+      for(i=0; i<_proof.length; i++) {
+        temp = pairHash(temp, _proof[i]);
+      }
 
-      return temp == merkleRoot;
-    }
+      return temp == merkleRoot;
+    }
 
-}  // MarkleProof
+}  // MarkleProof
 ```
 
 In mathematical notation Merkle proof verification looks like this: `H(proof_n, H(proof_n-1, H(proof_n-2, ... H(proof_1, H(proof_0, value))...)))`. This code implements it.
