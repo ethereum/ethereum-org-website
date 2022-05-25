@@ -73,13 +73,27 @@ const hashArray = dataArray
 In this case our data is 256-bit values to begin with, so no processing is needed. If we use a more complicated data structure, such as strings, we need to make sure we hash the data first to get an array of hashes. Note that this is also because we don't care if users know other users' information. Otherwise we would have had to hash so user 1 won't know the value for user 0, user 2 won't know the value for user 3, etc.
 
 ```javascript
-const pairHash = (a, b) =>
-  BigInt(ethers.utils.keccak256("0x" + (a ^ b).toString(16).padStart(64, 0)))
+// Convert between the string the hash function expects and the
+// BigInt we use everywhere else.
+const hash = x => BigInt(
+  ethers.utils.keccak256(('0x' + x.toString(16).padStart(64,0))))
 ```
 
 The ethers hash function expects to get a JavaScript string with a hexadecimal number, such as `0x60A7`, and responds with another string with the same structure. However, for the rest of the code it's easier to use `BigInt`, so we convert to a hexadecimal string and back again.
 
+```javascript
+// Symetrical hash of a pair so we won't care if the order is reversed.
+const pairHash = (a,b) => hash(hash(a) ^ hash(b))
+```
+
 This function is symmetrical (hash of a [xor](https://en.wikipedia.org/wiki/Exclusive_or) b). This means that when we check the Merkle proof we don't need to worry about whether to put the value from the proof before or after the calculated value. Merkle proof checking is done on chain, so the less we need to do there the better.
+
+Warning: 
+Cryptography is harder than it looks.
+The initial version of this article had the hash function `hash(a^b)`.
+That was a **bad** idea because it meant that if you knew the legitimate values of `a` and `b` you could use `b' = a^b^a'` to prove any desired `a'` value.
+With this function you'd have to calculate `b'` such that `hash(a') ^ hash(b')` is equal to a known value (the next branch on the way to root), which is a lot harder.
+
 
 ```javascript
 // The value to denote that a certain branch is empty, doesn't
@@ -169,7 +183,7 @@ We hash `(v[0],v[1])`, `(v[2],v[3])`, etc. So for even values we need the next o
 }   // getMerkleProof
 ```
 
-### On-chain code {#off-chain-code}
+### On-chain code {#on-chain-code}
 
 Finally we have the code that checks the proof. The on-chain code is written in [Solidity](https://docs.soliditylang.org/en/v0.8.11/). Optimization is a lot more important here because gas is relatively expensive.
 
@@ -202,12 +216,16 @@ contract MerkleProof {
 Set and get functions for the Merkle root. Letting everybody update the Merkle root is an _extremely bad idea_ in a production system. I do it here for the sake of simplicity for sample code. **Don't do it on a system where data integrity actually matters**.
 
 ```solidity
+    function hash(uint _a) internal pure returns(uint) {
+      return uint(keccak256(abi.encode(_a)));
+    }
+
     function pairHash(uint _a, uint _b) internal pure returns(uint) {
-      return uint(keccak256(abi.encode(_a ^ _b)));
+      return hash(hash(_a) ^ hash(_b));
     }
 ```
 
-This function generates a pair hash. It is just the Solidity transalation of the JavaScript code for `pairHash`.
+This function generates a pair hash. It is just the Solidity transalation of the JavaScript code for `hash` and `pairHash`.
 
 **Note:** This is another case of optimization for readability. Based on [the function definition](https://www.tutorialspoint.com/solidity/solidity_cryptographic_functions.htm), it might be possible to store the data as a [`bytes32`](https://docs.soliditylang.org/en/v0.5.3/types.html#fixed-size-byte-arrays) value and avoid the conversions.
 
