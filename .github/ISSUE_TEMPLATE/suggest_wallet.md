@@ -59,10 +59,6 @@ Before suggesting a wallet, make sure you've read [our listing policy](https://w
 
 <!-- Please provide social links for the wallet (Discord, Twitter, etc.) -->
 
-**What is your wallet's onboarding experience?**
-
-<!-- Please provide an explanation of where to find the user onboarding experience (links, is it built into the app, etc.), and what the onboarding experience is. -->
-
 ### Device
 
 **Does the wallet have a mobile app? If yes, which operating systems are supported (iOS, Android)?**
