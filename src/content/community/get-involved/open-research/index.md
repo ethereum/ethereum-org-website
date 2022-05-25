@@ -32,11 +32,11 @@ There are now several Layer 2 protocols that scale Ethereum using different tech
 
 ### Bridges
 
-One particular area of Layer-2 that requires more research and development is safe and performant bridges. This includes bridges between various Layer-2s and bridges between Layer 1 and Layer 2. This is a particularly important area of researchg because bridges are commonly targeted by hackers.
+One particular area of layer 2 that requires more research and development is safe and performant bridges. This includes bridges between various Layer-2s and bridges between Layer 1 and Layer 2. This is a particularly important area of researchg because bridges are commonly targeted by hackers.
 
 #### Links
 
-[Our Bridges page](https://ethereum.org/en/developers/docs/bridges)
+[Introduction to blockchain bridges](/bridges/)
 
 [Vitalik on bridges](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/)
 
@@ -47,7 +47,7 @@ Sharding Ethereum's blockchain has long been part of the development roadmap. Ho
 
 #### Links
 
-[Our Sharding page](/upgrades/shard-chains/)
+[Introduction to Ethereum sharding](/upgrades/shard-chains/)
 
 [Proto-Danksharding notes](https://notes.ethereum.org/@vbuterin/proto_danksharding_faq)
 
