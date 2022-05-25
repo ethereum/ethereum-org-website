@@ -253,7 +253,7 @@ ethers.utils.formatEther(balance)
 - [GitHub](https://github.com/graphprotocol/)
 - [Discord](https://thegraph.com/discord)
 
-**Web3.js -** **_针对轻客户端优化的高级响应式 JS 库。_**
+**light.js -** **_针对轻客户端优化的高级响应式 JS 库。_**
 
 - [GitHub](https://github.com/openethereum/js-libs/tree/master/packages/light.js)
 
