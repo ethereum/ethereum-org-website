@@ -546,9 +546,9 @@
       ],
       "isFoss": true,
       "hasBugBounty": false,
-      "isTrustless": false,
+      "isTrustless": true,
       "hasPermissionlessNodes": false,
-      "pctMajorityClient": null,
+      "pctMajorityClient": 43.1,
       "platforms": ["Browser"],
       "ui": ["GUI"],
       "socials": {
