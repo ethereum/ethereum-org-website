@@ -109,7 +109,7 @@ Before suggesting a wallet, make sure you've read [our listing policy](https://w
 
 **Does the wallet support WalletConnect?**
 
-<!-- Please provide information on if the wallet supports WalletConnect. -->
+<!-- Yes/No -->
 
 **Does the wallet support importing Ethereum RPC endpoints?**
 
