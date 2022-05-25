@@ -75,7 +75,7 @@ Before suggesting a wallet, make sure you've read [our listing policy](https://w
 
 **Is it a hardware wallet?**
 
-<!-- How is it used / how does it connect (e.g. USB)? What software wallets does it integrate with? -->
+<!-- How does it broadcast signed transactions (e.g. USB, Bluetooth, QR code)?  -->
 
 ### Security
 
