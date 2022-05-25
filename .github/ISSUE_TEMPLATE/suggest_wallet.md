@@ -21,7 +21,7 @@ Before suggesting a wallet, make sure you've read [our listing policy](https://w
 
 **Wallet logo**
 
-<!-- Please provide a hi-res SVG or transparent PNG -->
+<!-- Please provide an SVG or hi-res transparent PNG -->
 
 **Background color for brand logo**
 
