@@ -87,7 +87,9 @@ Before suggesting a wallet, make sure you've read [our listing policy](https://w
 
 <!-- Please provide information on the software license used for the wallet. -->
 
-**Is your wallet custodial, or non-custodial?**
+**Who holds the private keys?**
+
+ <!-- Users must have access to private keys without reliance on a company remaining in business to be listed as a wallet -->
 
 <!-- Do users have access to their public and private keys? Does anyone else? If your company/project were to disappear, would users still be able to access their funds? -->
 
