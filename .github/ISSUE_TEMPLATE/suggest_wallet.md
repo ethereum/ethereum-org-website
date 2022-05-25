@@ -67,7 +67,7 @@ Before suggesting a wallet, make sure you've read [our listing policy](https://w
 
 **Does the wallet have a desktop app? If yes, which operating systems are supported (Windows, Mac, Linux)?**
 
-<!-- If the wallet has a desktop interface, please provide links and information for the operating systems supported. -->
+<!-- Please provide links and information for the desktop operating systems supported. -->
 
 **Does the wallet have a browser extension? If yes, which browsers are supported (Chromium, Firefox, Safari)?**
 
