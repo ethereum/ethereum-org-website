@@ -55,10 +55,6 @@ Before suggesting a wallet, make sure you've read [our listing policy](https://w
 
 <!-- Please list languages that the wallet actively supports -->
 
-**What is the repository for your codebase?**
-
-<!-- If you’re project is open source, please provide a link to the codebase. -->
-
 **What social links are there for the project?**
 
 <!-- Please provide social links for the wallet (Discord, Twitter, etc.) -->
