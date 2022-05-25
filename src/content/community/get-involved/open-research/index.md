@@ -23,7 +23,7 @@ There are now several Layer 2 protocols that scale Ethereum using different tech
 
 #### Links
 
-[Our Layer-2 page](https://ethereum.org/en/layer-2/)
+[Introduction to layer 2](/layer-2/)
 
 [EthHub Layer-2](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/zk-rollups/)
 
