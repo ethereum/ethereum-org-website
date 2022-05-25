@@ -189,7 +189,7 @@ Before suggesting a wallet, make sure you've read [our listing policy](https://w
 
 **What educational resources/documentation do you provide to users?**
 
-<!-- Please provide links to documentation and/or educational resources -->
+<!-- Please provide links to developer documentation, user documentation, and/or educational resources -->
 ### Extra
 
 **Does the wallet have any integrated tools not mentioned above?**
