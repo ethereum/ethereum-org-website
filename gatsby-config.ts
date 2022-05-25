@@ -22,6 +22,7 @@ const ignoreTranslations = ignoreLanguages.map(
 )
 
 const config: GatsbyConfig = {
+  graphqlTypegen: true,
   siteMetadata: {
     // `title` & `description` pulls from respective ${lang}.json files in PageMetadata.js
     title: `ethereum.org`,
@@ -86,7 +87,7 @@ const config: GatsbyConfig = {
             })
             .map((page) => ({ ...page, siteUrl: site.siteMetadata.siteUrl }))
         },
-        serialize: ({ path, siteUrl }) => {
+        serialize: ({ path, siteUrl }: { path: string; siteUrl: string }) => {
           const url = `${siteUrl}${path}`
           const changefreq = path.includes(`/${defaultLanguage}/`)
             ? `weekly`
@@ -240,7 +241,7 @@ const config: GatsbyConfig = {
 // there and it will send testing data as production otherwise
 if (!isPreviewDeploy) {
   config.plugins = [
-    ...config.plugins,
+    ...(config.plugins || []),
     // Matomo analtyics
     {
       resolve: "gatsby-plugin-matomo",

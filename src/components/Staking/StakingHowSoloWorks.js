@@ -1,10 +1,8 @@
 import React from "react"
-import { useIntl } from "gatsby-plugin-intl"
 import styled from "styled-components"
 import { graphql, useStaticQuery } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
-import Link from "../Link"
 import OrderedList from "../OrderedList"
 import Translation from "../Translation"
 
@@ -20,7 +18,6 @@ const Flex = styled.div`
 const Image = styled(GatsbyImage)``
 
 const StakingHowSoloWorks = () => {
-  const intl = useIntl()
   const { image } = useStaticQuery(graphql`
     {
       image: file(relativePath: { eq: "hackathon_transparent.png" }) {
