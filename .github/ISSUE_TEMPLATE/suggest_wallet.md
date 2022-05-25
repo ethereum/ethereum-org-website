@@ -71,7 +71,7 @@ Before suggesting a wallet, make sure you've read [our listing policy](https://w
 
 **Does the wallet have a browser extension? If yes, which browsers are supported (Chromium, Firefox, Safari)?**
 
-<!-- If the wallet has a browser extension, please provide links and information for the browsers that are supported. -->
+<!-- Please provide links and information for the browsers that are supported. -->
 
 **Is it a hardware wallet?**
 
