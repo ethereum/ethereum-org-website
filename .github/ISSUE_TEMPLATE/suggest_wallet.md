@@ -79,7 +79,7 @@ Before suggesting a wallet, make sure you've read [our listing policy](https://w
 
 ### Security
 
-**Is the wallet code open-sourced?**
+**Is the source code for the wallet fully open-source?**
 
 <!-- If yes, please provide a direct link to the repository. -->
 
