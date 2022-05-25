@@ -147,7 +147,7 @@ Before suggesting a wallet, make sure you've read [our listing policy](https://w
 
 <!-- Please provide documentation on how to import tokens into the wallet. -->
 
-**Does the wallet support EIP-1559 style transactions?**
+**Does the wallet support EIP-1559 (type 2) transactions?**
 
 <!-- Please provide information on how the type of transactions this wallet supports. -->
 
