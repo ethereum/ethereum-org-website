@@ -8,7 +8,6 @@ assignees: ""
 
 Before suggesting a wallet, make sure you've read [our listing policy](https://www.ethereum.org/en/contributing/adding-products/). Only continue with the issue if your wallet meets the criteria listed there.
 
-If the wallet does meet our list policy, please complete the following information which we need to accurately list the wallet.
 
 ### Project info
 
