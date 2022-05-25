@@ -582,7 +582,7 @@
       "isTrustless": true,
       "hasPermissionlessNodes": false,
       "pctMajorityClient": 0.0,
-      "platforms": ["Browser"],
+      "platforms": ["Browser", "Wallet"],
       "ui": ["GUI"],
       "twitter": "https://twitter.com/stakefish",
       "telegram": "https://t.me/stakefish",
