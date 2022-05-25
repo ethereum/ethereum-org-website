@@ -195,7 +195,7 @@ const StaticPage = ({ data: { siteData, pageData: mdx }, pageContext }) => {
 }
 
 export const staticPageQuery = graphql`
-  query StaticPageQuery($relativePath: String) {
+  query StaticPage($relativePath: String) {
     siteData: site {
       siteMetadata {
         editContentUrl

@@ -1,7 +1,9 @@
-const axios = require("axios")
-const takeRightWhile = require("lodash/takeRightWhile")
+import axios from "axios"
+import takeRightWhile from "lodash/takeRightWhile"
 
-const lambda = async () => {
+import type { HandlerResponse } from "@netlify/functions"
+
+const lambda = async (): Promise<HandlerResponse> => {
   try {
     const response = await axios.get(`https://api.llama.fi/charts/Ethereum`)
     if (response.status < 200 || response.status >= 300) {
@@ -27,12 +29,13 @@ const lambda = async () => {
     return { statusCode: 200, body: JSON.stringify(trimmedData) }
   } catch (error) {
     console.error(error)
+    // @ts-ignore
     return { statusCode: 500, body: JSON.stringify({ msg: error.message }) }
   }
 }
 
-const handler = () => {
+const handler = (): Promise<HandlerResponse> => {
   return lambda()
 }
 
-module.exports = { handler, lambda }
+export { handler, lambda }

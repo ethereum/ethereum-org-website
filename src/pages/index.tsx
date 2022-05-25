@@ -1,8 +1,10 @@
 import React, { useState } from "react"
 import { useIntl } from "gatsby-plugin-intl"
-import { graphql } from "gatsby"
+import { graphql, PageProps } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import styled from "styled-components"
+
+import type { Context } from "../types"
 
 import ActionCard from "../components/ActionCard"
 import ButtonLink from "../components/ButtonLink"
@@ -401,13 +403,16 @@ const StyledCalloutBanner = styled(CalloutBanner)`
   }
 `
 
-const HomePage = ({ data, pageContext: { language } }) => {
+const HomePage = ({
+  data,
+  pageContext: { language = "en" },
+}: PageProps<Queries.IndexPageQuery, Context>) => {
   const intl = useIntl()
   const [isModalOpen, setModalOpen] = useState(false)
   const [activeCode, setActiveCode] = useState(0)
   const dir = isLangRightToLeft(language) ? "rtl" : "ltr"
 
-  const toggleCodeExample = (id) => {
+  const toggleCodeExample = (id: number): void => {
     setActiveCode(id)
     setModalOpen(true)
   }
@@ -700,7 +705,7 @@ contract SimpleDomainRegistry {
         description={translateMessageId("page-index-meta-description", intl)}
       />
       <Hero
-        image={getImage(data.hero)}
+        image={getImage(data.hero)!}
         alt={translateMessageId("page-index-hero-image-alt", intl)}
         loading="eager"
       />
@@ -729,7 +734,7 @@ contract SimpleDomainRegistry {
             </IntroLeftColumn>
             <ImageContainer>
               <IntroImage
-                image={getImage(data.hackathon)}
+                image={getImage(data.hackathon)!}
                 alt={translateMessageId(
                   "page-index-get-started-image-alt",
                   intl
@@ -771,7 +776,7 @@ contract SimpleDomainRegistry {
           </FeatureContent>
           <ImageContainer>
             <FeatureImage
-              image={getImage(data.ethereum)}
+              image={getImage(data.ethereum)!}
               alt={translateMessageId(
                 "page-index-what-is-ethereum-image-alt",
                 intl
@@ -799,7 +804,7 @@ contract SimpleDomainRegistry {
           </FeatureContent>
           <ImageContainer>
             <FeatureImage
-              image={getImage(data.impact)}
+              image={getImage(data.impact)!}
               alt={translateMessageId("page-index-defi-image-alt", intl)}
             />
           </ImageContainer>
@@ -809,7 +814,7 @@ contract SimpleDomainRegistry {
         <Row>
           <ImageContainer>
             <FeatureImage
-              image={getImage(data.infrastructure)}
+              image={getImage(data.infrastructure)!}
               alt={translateMessageId("page-index-nft-alt", intl)}
             />
           </ImageContainer>
@@ -852,7 +857,7 @@ contract SimpleDomainRegistry {
           </FeatureContent>
           <ImageContainer>
             <FeatureImage
-              image={getImage(data.future)}
+              image={getImage(data.future)!}
               alt={translateMessageId("page-index-internet-image-alt", intl)}
             />
           </ImageContainer>
@@ -959,7 +964,7 @@ contract SimpleDomainRegistry {
 export default HomePage
 
 export const query = graphql`
-  {
+  query IndexPage {
     hero: file(relativePath: { eq: "home/hero.png" }) {
       childImageSharp {
         gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)

@@ -395,7 +395,7 @@ const UseCasePage = ({ data, pageContext }) => {
 }
 
 export const useCasePageQuery = graphql`
-  query UseCasePageQuery($relativePath: String) {
+  query UseCasePage($relativePath: String) {
     siteData: site {
       siteMetadata {
         editContentUrl

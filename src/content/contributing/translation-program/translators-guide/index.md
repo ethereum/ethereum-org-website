@@ -100,7 +100,7 @@ A lot of the source content contains tags and variables, which are highlighted i
 
 You may notice full links to pages on ethereum.org or other websites.
 
-These should be identical to the source and not changed or translated. If you translate a link or change it in any way, even just removing a part of it, like a backslash (/), this will lead to broken and unusable links.
+These should be identical to the source and not changed or translated. If you translate a link or change it in any way, even just removing a part of it, like a slash (/), this will lead to broken and unusable links.
 
 The best way to handle links is to copy them directly from the source, either by clicking on them or using the ‘Copy Source’ button (Alt+C).
 

@@ -446,7 +446,7 @@ const StakingPage = ({ data, pageContext, location }) => {
 }
 
 export const stakingPageQuery = graphql`
-  query StakingPageQuery($relativePath: String) {
+  query StakingPage($relativePath: String) {
     siteData: site {
       siteMetadata {
         editContentUrl

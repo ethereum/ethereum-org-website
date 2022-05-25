@@ -386,7 +386,7 @@ const JobPage = ({ data: { mdx } }) => {
 }
 
 export const JobQuery = graphql`
-  query JobQuery($relativePath: String) {
+  query JobPage($relativePath: String) {
     mdx(fields: { relativePath: { eq: $relativePath } }) {
       fields {
         slug

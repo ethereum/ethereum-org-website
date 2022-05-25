@@ -2,17 +2,18 @@ import React from "react"
 import { Link as GatsbyLink } from "gatsby"
 import { Link as IntlLink } from "gatsby-plugin-intl"
 import styled from "styled-components"
+
 import Icon from "./Icon"
 
 import { languageMetadata } from "../utils/languages"
-import { trackCustomEvent } from "../utils/matomo"
+import { trackCustomEvent, EventOptions } from "../utils/matomo"
 
 const HASH_PATTERN = /^#.*/
 // const DOMAIN_PATTERN = /^(?:https?:)?[/]{2,}([^/]+)/
 // const INTERNAL_PATTERN = /^\/(?!\/)/
 // const FILE_PATTERN = /.*[/](.+\.[^/]+?)([/].*?)?([#?].*)?$/
 
-const isHashLink = (to) => HASH_PATTERN.test(to)
+const isHashLink = (to: string): boolean => HASH_PATTERN.test(to)
 
 const ExternalLink = styled.a`
   &:after {
@@ -62,7 +63,18 @@ const GlossaryIcon = styled(Icon)`
   }
 `
 
-const Link = ({
+export interface IProps {
+  to?: string
+  href?: string
+  hideArrow?: boolean
+  className?: string
+  isPartiallyActive?: boolean
+  ariaLabel?: string
+  customEventOptions?: EventOptions
+  onClick?: () => void
+}
+
+const Link: React.FC<IProps> = ({
   to,
   dir = "ltr",
   href,
@@ -76,6 +88,10 @@ const Link = ({
 }) => {
   // markdown pages pass `href`, not `to`
   to = to || href
+
+  if (!to) {
+    throw new Error("Either 'to' or 'href' props must be provided")
+  }
 
   const isExternal = to.includes("http") || to.includes("mailto:")
   const isHash = isHashLink(to)
@@ -110,7 +126,7 @@ const Link = ({
     )
   }
 
-  const eventOptions = {
+  const eventOptions: EventOptions = {
     eventCategory: `External link`,
     eventAction: `Clicked`,
     eventName: to,
