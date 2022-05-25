@@ -63,7 +63,7 @@ Before suggesting a wallet, make sure you've read [our listing policy](https://w
 
 **Does the wallet have a mobile app? If yes, which operating systems are supported (iOS, Android)?**
 
-<!-- If the wallet has a mobile interface, please provide information and links to the app store for the operating systems supported. -->
+<!-- Please provide app store links for the operating systems supported. -->
 
 **Does the wallet have a desktop app? If yes, which operating systems are supported (Windows, Mac, Linux)?**
 
