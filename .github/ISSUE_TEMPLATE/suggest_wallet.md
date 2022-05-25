@@ -41,7 +41,7 @@ Before suggesting a wallet, make sure you've read [our listing policy](https://w
 
 **When did your wallet go live to users?**
 
-<!-- Please provide a date when your wallet was usable by the public. Please provide some user metrics for how many users are using this wallet. -->
+<!-- Please provide a date when your wallet was usable by the public. -->
 
 **Does your wallet have an active development team?**
 
