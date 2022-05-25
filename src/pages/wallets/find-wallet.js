@@ -1,5 +1,5 @@
 // Libraries
-import React from "react"
+import React, { useState } from "react"
 import { graphql } from "gatsby"
 import { getImage, GatsbyImage } from "gatsby-plugin-image"
 import { useIntl } from "gatsby-plugin-intl"
@@ -8,7 +8,7 @@ import styled from "styled-components"
 // Components
 import Breadcrumbs from "../../components/Breadcrumbs"
 import PageMetadata from "../../components/PageMetadata"
-import { Page } from "../../components/SharedStyledComponents"
+import { Content, Page } from "../../components/SharedStyledComponents"
 import Translation from "../../components/Translation"
 
 // Utils
@@ -52,8 +52,49 @@ const HeroImage = styled(GatsbyImage)`
   }
 `
 
+const TableContent = styled(Content)`
+  display: flex;
+  padding: 1rem 0;
+  gap: 24px;
+`
+
+const FilterSidebar = styled.div`
+  width: 25%;
+`
+
+const FilterTabs = styled.div`
+  height: 34px;
+  display: flex;
+  border-bottom: 1px solid #f4d0a7;
+  cursor: pointer;
+`
+
+const FilterTab = styled.div`
+  width: 50%;
+  text-align: center;
+  background: ${(props) =>
+    props.active === true ? props.theme.colors.primary : "none"};
+  border-radius: 4px 4px 0px 0px;
+  display: inline-block;
+  line-height: 200%;
+  vertical-align: middle;
+
+  :hover {
+    background: ${(props) =>
+      props.active === true
+        ? props.theme.colors.primary
+        : props.theme.colors.selectHover};
+  }
+`
+
+const WalletContent = styled.div`
+  width: 75%;
+`
+
 const FindWalletPage = ({ data, location }) => {
   const intl = useIntl()
+
+  const [showAdvancedFilters, setShowAdvancedFilters] = useState(false)
 
   return (
     <Page>
@@ -85,7 +126,26 @@ const FindWalletPage = ({ data, location }) => {
           objectFit="contain"
         />
       </HeroContainer>
-      <p>Hello World</p>
+
+      <TableContent>
+        <FilterSidebar>
+          <FilterTabs>
+            <FilterTab
+              active={!showAdvancedFilters}
+              onClick={() => setShowAdvancedFilters(false)}
+            >
+              PROFILE FILTERS
+            </FilterTab>
+            <FilterTab
+              active={showAdvancedFilters}
+              onClick={() => setShowAdvancedFilters(true)}
+            >
+              ADVANCED FILTERS
+            </FilterTab>
+          </FilterTabs>
+        </FilterSidebar>
+        <WalletContent>Wallet</WalletContent>
+      </TableContent>
     </Page>
   )
 }
