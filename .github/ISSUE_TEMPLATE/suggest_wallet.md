@@ -156,9 +156,6 @@ Before suggesting a wallet, make sure you've read [our listing policy](https://w
 **Does the wallet have fiat on-ramps through credit/debit cards, wire transfers, or bank transfers (ACH)?**
 
 <!-- Please provide documentation on how a user is able to onboard and purchase crypto in the wallet. -->
-<!-- Credit/debit cards -->
-<!-- Wire transfer -->
-<!-- Bank Transfer (ACH) -->
 
 **Does the wallet support withdrawals to fiat?**
 
