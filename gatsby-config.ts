@@ -22,6 +22,7 @@ const ignoreTranslations = ignoreLanguages.map(
 )
 
 const config: GatsbyConfig = {
+  graphqlTypegen: true,
   siteMetadata: {
     // `title` & `description` pulls from respective ${lang}.json files in PageMetadata.js
     title: `ethereum.org`,
@@ -233,7 +234,6 @@ const config: GatsbyConfig = {
   // https://www.gatsbyjs.com/docs/reference/release-notes/v2.28/#feature-flags-in-gatsby-configjs
   flags: {
     FAST_DEV: true, // DEV_SSR, QUERY_ON_DEMAND & LAZY_IMAGES
-    GRAPHQL_TYPEGEN: true, // ref. https://www.gatsbyjs.com/docs/reference/release-notes/v4.14/
   },
 }
 
