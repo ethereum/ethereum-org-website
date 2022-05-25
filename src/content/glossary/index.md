@@ -510,7 +510,6 @@ A [wallet](#wallet) using the hierarchical deterministic (HD) key creation and t
 
 A value used to generate the master [private key](#private-key) and master chain code for an HD [wallet](#wallet). The wallet seed can be represented by mnemonic words, making it easier for humans to copy, back up, and restore private keys.
 
-
 ### homestead {#homestead}
 
 The second development stage of Ethereum, launched in March 2016 at block 1,150,000.
@@ -574,7 +573,6 @@ Every account’s private key/address pair exists as a single keyfile in an Ethe
 ### keccak-256 {#keccak-256}
 
 Cryptographic [hash](#hash) function used in Ethereum. Keccak-256 was standardized as [SHA](#sha)-3.
-
 
 <Divider />
 
@@ -749,7 +747,7 @@ A secret number that allows Ethereum users to prove ownership of an account or c
 
 ### private chain {#private-chain}
 
-A fully private blockchain is one with permissioned access, not publicly available for use. 
+A fully private blockchain is one with permissioned access, not publicly available for use.
 
 ### proof-of-stake (PoS) {#pos}
 
@@ -950,6 +948,10 @@ A denomination of [ether](#ether). 1 szabo = 10<sup>12</sup> [wei](#wei), 10<sup
 ### Tangerine Whistle {#tangerine-whistle}
 
 A [hard fork](#hard-fork) of the Ethereum blockchain, which occurred at block 2,463,000 to change the [gas](#gas) calculation for certain I/O-intensive operations and to clear the accumulated state from a denial-of-service attack, which exploited the low gas cost of those operations.
+
+### terminal total difficulty (TTD) {#terminal-total-difficulty}
+
+The total difficulty is the sum of the Ethash mining difficulty for all blocks up to some specific point in the blockchain. The terminal total difficulty is a specific value for the total difficulty that will be used as the trigger for execution clients to switch off their mining and block gossip functions so the network can transition to proof-of-stake.
 
 ### testnet {#testnet}
 
