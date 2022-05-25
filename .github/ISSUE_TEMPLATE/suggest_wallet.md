@@ -139,7 +139,7 @@ Before suggesting a wallet, make sure you've read [our listing policy](https://w
 
 <!-- Please provide documentation on how users can customize gas fees for transactions. -->
 
-**Does the wallet support ENS?**
+**Does the wallet support sending transactions to ENS addresses?**
 
 <!-- Please provide information on ENS support. -->
 
