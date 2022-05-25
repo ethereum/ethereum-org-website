@@ -1,8 +1,14 @@
-require("dotenv").config()
+import "dotenv/config"
+import path from "path"
 
-const { supportedLanguages, allLanguages } = require("./src/utils/translations")
+import type { GatsbyConfig } from "gatsby"
 
-const defaultLanguage = `en`
+import {
+  supportedLanguages,
+  defaultLanguage,
+  ignoreLanguages,
+} from "./src/utils/languages"
+
 const siteUrl = `https://ethereum.org`
 
 const ignoreContent = (process.env.IGNORE_CONTENT || "")
@@ -11,11 +17,11 @@ const ignoreContent = (process.env.IGNORE_CONTENT || "")
 
 const isPreviewDeploy = process.env.IS_PREVIEW_DEPLOY === "true"
 
-const ignoreTranslations = Object.keys(allLanguages)
-  .filter((lang) => !supportedLanguages.includes(lang))
-  .map((lang) => `**/translations\/${lang}`)
+const ignoreTranslations = ignoreLanguages.map(
+  (lang) => `**/translations\/${lang}`
+)
 
-const config = {
+const config: GatsbyConfig = {
   siteMetadata: {
     // `title` & `description` pulls from respective ${lang}.json files in PageMetadata.js
     title: `ethereum.org`,
@@ -33,7 +39,7 @@ const config = {
       resolve: `gatsby-plugin-intl`,
       options: {
         // language JSON resource path
-        path: `${__dirname}/src/intl`,
+        path: path.resolve(`src/intl`),
         // supported language
         languages: supportedLanguages,
         // language file path
@@ -125,7 +131,7 @@ const config = {
         gatsbyRemarkPlugins: [
           {
             // Local plugin to adjust the images urls of the translated md files
-            resolve: require.resolve(`./plugins/gatsby-remark-image-urls`),
+            resolve: path.resolve(`./plugins/gatsby-remark-image-urls`),
           },
           {
             resolve: `gatsby-remark-autolink-headers`,
@@ -181,7 +187,7 @@ const config = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `assets`,
-        path: `${__dirname}/src/assets`,
+        path: path.resolve(`src/assets`),
       },
     },
     // Process files from /src/content/ (used in gatsby-node.js)
@@ -189,7 +195,7 @@ const config = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `content`,
-        path: `${__dirname}/src/content`,
+        path: path.resolve(`src/content`),
         ignore: [...ignoreContent, ...ignoreTranslations],
       },
     },
@@ -198,13 +204,13 @@ const config = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `data`,
-        path: `${__dirname}/src/data`,
+        path: path.resolve(`src/data`),
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/data/translation-reports`,
+        path: path.resolve(`src/data/translation-reports`),
       },
     },
     // Process files within /src/data/
@@ -250,4 +256,4 @@ if (!isPreviewDeploy) {
   ]
 }
 
-module.exports = config
+export default config

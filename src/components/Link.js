@@ -4,7 +4,7 @@ import { Link as IntlLink } from "gatsby-plugin-intl"
 import styled from "styled-components"
 import Icon from "./Icon"
 
-import { languageMetadata } from "../utils/translations"
+import { languageMetadata } from "../utils/languages"
 import { trackCustomEvent } from "../utils/matomo"
 
 const HASH_PATTERN = /^#.*/

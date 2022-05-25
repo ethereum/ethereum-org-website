@@ -169,6 +169,8 @@
               to: /developers/docs/standards/tokens/erc-777/
             - id: docs-nav-erc-1155
               to: /developers/docs/standards/tokens/erc-1155/
+            - id: docs-nav-erc-4626
+              to: /developers/docs/standards/tokens/erc-4626/
     - id: docs-nav-mev
       to: /developers/docs/mev/
       description: docs-nav-mev-description

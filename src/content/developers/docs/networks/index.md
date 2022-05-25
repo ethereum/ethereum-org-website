@@ -110,7 +110,7 @@ Arbitrum Rinkeby faucets:
 - [Chainlink faucet](https://faucets.chain.link/)
 - [Paradigm faucet](https://faucet.paradigm.xyz/)
 
-#### Optimisic Kovan {#optimistic-kovan}
+#### Optimistic Kovan {#optimistic-kovan}
 
 A testnet for [Optimism](https://www.optimism.io/).
 
