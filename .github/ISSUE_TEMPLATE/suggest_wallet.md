@@ -51,7 +51,7 @@ Before suggesting a wallet, make sure you've read [our listing policy](https://w
 
 <!-- Please list any KYC requirements or geographic limitations of your wallet, if any exist. -->
 
-**Is there internationalization support for your wallet?**
+**Is the wallet available in multiple languages?**
 
 <!-- Please list languages that the wallet actively supports -->
 
