@@ -103,7 +103,7 @@ Before suggesting a wallet, make sure you've read [our listing policy](https://w
 
 ### Features
 
-**Does the wallet have hardware wallet support?**
+**Does the wallet support connecting to a hardware wallet?**
 
 <!-- Please provide information on how a user can connect a hardware wallet to this wallet. -->
 
