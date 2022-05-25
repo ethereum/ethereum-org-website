@@ -36,8 +36,20 @@ const socialColors = {
   stackExchange: "#48a2da",
 }
 
-const Icon = ({ name, color = false, size, className }) => (
-  <IconContext.Provider value={{ size: size, className: className }}>
+interface IProps {
+  name?: string
+  color?: string
+  size?: string
+  className?: string
+}
+
+const Icon: React.FC<IProps> = ({
+  name = "",
+  color,
+  size = "24",
+  className,
+}) => (
+  <IconContext.Provider value={{ size: size, className }}>
     {name === "add" && <MdAdd />}
     {name === "chevronDown" && <MdExpandMore />}
     {name === "arrowRight" && <MdArrowForward />}
@@ -74,17 +86,6 @@ const Icon = ({ name, color = false, size, className }) => (
     {name === "webpage" && <FaGlobe />}
   </IconContext.Provider>
 )
-
-Icon.defaultProps = {
-  name: ``,
-  size: `24`,
-}
-
-Icon.propTypes = {
-  name: PropTypes.string,
-  size: PropTypes.string,
-  className: PropTypes.string,
-}
 
 const StyledIcon = styled(Icon)`
   fill: ${(props) =>

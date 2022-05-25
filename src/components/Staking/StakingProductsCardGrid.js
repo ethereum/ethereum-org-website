@@ -497,6 +497,7 @@ const StakingProductCardGrid = ({ category }) => {
           .sort((a, b) => b.rankingScore - a.rankingScore)
       )
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   if (!rankedProducts) return null

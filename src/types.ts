@@ -15,7 +15,7 @@ export type Context = {
   slug: string
   relativePath: string
   intl: Intl
-  language?: string
+  language: Lang
   isOutdated: boolean
   isContentEnglish?: boolean
 }

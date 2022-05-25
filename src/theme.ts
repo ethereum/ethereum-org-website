@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components"
+import { createGlobalStyle, DefaultTheme } from "styled-components"
 import { mix } from "polished"
 
 const white = "#ffffff"
@@ -357,7 +357,7 @@ const darkColors = {
 const lightThemeColors = Object.assign({}, baseColors, lightColors)
 const darkThemeColors = Object.assign({}, baseColors, darkColors)
 
-const theme = {
+const theme: DefaultTheme = {
   isDark: false, // Overwritten in Object.assign
   colors: {}, // Overwritten in Object.assign
   fonts: {

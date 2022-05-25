@@ -4,6 +4,8 @@ import type { Lang } from "./languages"
 
 import defaultStrings from "../intl/en.json"
 
+type TranslationKey = keyof typeof defaultStrings
+
 const consoleError = (message: string): void => {
   const { NODE_ENV } = process.env
   if (NODE_ENV === "development") {
@@ -12,7 +14,7 @@ const consoleError = (message: string): void => {
 }
 
 // Returns the en.json value
-export const getDefaultMessage = (key: string): string => {
+export const getDefaultMessage = (key: TranslationKey): string => {
   const defaultMessage = defaultStrings[key]
   if (defaultMessage === undefined) {
     consoleError(
@@ -26,7 +28,10 @@ export const isLangRightToLeft = (lang: Lang): boolean => {
   return lang === "ar" || lang === "fa"
 }
 
-export const translateMessageId = (id: string, intl: IntlShape): string => {
+export const translateMessageId = (
+  id: TranslationKey,
+  intl: IntlShape
+): string => {
   if (!id) {
     consoleError(`No id provided for translation.`)
     return ""
