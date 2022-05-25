@@ -161,7 +161,7 @@ Before suggesting a wallet, make sure you've read [our listing policy](https://w
 
 <!-- Can a user cash out their crypto assets directly to a card or bank account? Please provide documentation. -->
 
-### Smart Contract
+### Smart contract
 
 **Is the wallet a multi-signature wallet?**
 
