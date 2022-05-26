@@ -7,11 +7,14 @@ body:
     attributes:
       value: |
         Before suggesting a wallet, make sure you've read [our listing policy](https://www.ethereum.org/en/contributing/adding-products/). Only continue with the issue if the wallet meets the criteria listed there.
-  - type: input
+  - type: markdown
     id: contact
     attributes:
-      label: Contact Details
-      description: How can we get in touch with you if we need more info?
-      placeholder: ex. email@example.com
+      value: "## Project info"
+  - type: input
+    id: wallet_name
+    attributes:
+      label: Wallet name
+      placeholder: Please provide the official name of the wallet
     validations:
-      required: false
+      required: true
