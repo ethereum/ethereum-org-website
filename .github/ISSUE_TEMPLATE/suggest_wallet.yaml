@@ -8,7 +8,7 @@ body:
       value: |
         Before suggesting a wallet, make sure you've read [our listing policy](https://www.ethereum.org/en/contributing/adding-products/). Only continue with the issue if the wallet meets the criteria listed there.
   - type: markdown
-    id: contact
+    id: project_info
     attributes:
       value: "## Project info"
   - type: input
@@ -81,3 +81,27 @@ body:
       description: Please provide social links for the wallet (Discord, Twitter, etc.)
     validations:
       required: true
+  - type: markdown
+    id: device
+    attributes:
+      value: "## Device"
+  - type: textarea
+    id: wallet_mobile
+    attributes:
+      label: Does the wallet have a mobile app? If yes, which operating systems are supported (iOS, Android)?
+      description: Please provide app store links for the operating systems supported.
+  - type: textarea
+    id: wallets_desktop
+    attributes:
+      label: Does the wallet have a desktop app? If yes, which operating systems are supported (Windows, Mac, Linux)?
+      description: Please provide links and information for the desktop operating systems supported.
+  - type: textarea
+    id: wallets_browser
+    attributes:
+      label: Does the wallet have a browser extension? If yes, which browsers are supported (Chromium, Firefox, Safari)?
+      description: Please provide links and information for the browsers that are supported.
+  - type: textarea
+    id: wallets_hardware
+    attributes:
+      label: Is it a hardware wallet?
+      description: How does it broadcast signed transactions (e.g. USB, Bluetooth, QR code)?
