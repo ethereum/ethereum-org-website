@@ -91,7 +91,7 @@ Before suggesting a wallet, make sure you've read [our listing policy](https://w
 
  <!-- Users must have access to private keys without reliance on a company remaining in business to be listed as a wallet -->
 
-<!-- Do users have access to their public and private keys? Does anyone else? If your company/project were to disappear, would users still be able to access their funds? -->
+<!-- Do users have access to their public and private keys? Does anyone else? If the company/project were to disappear, would users still be able to access their funds? -->
 
 **Please describe the measures taken to ensure the wallet's security and provide documentation wherever possible**
 
