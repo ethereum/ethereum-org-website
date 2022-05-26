@@ -1,0 +1,9 @@
+name: Suggest a wallet
+about: Suggest a new wallet to list on ethereum.org
+title: ""
+labels: ["wallet :purse:,"]
+assignees: ""
+body:
+  - type: markdown
+    attributes:
+      value: Before suggesting a wallet, make sure you've read [our listing policy](https://www.ethereum.org/en/contributing/adding-products/). Only continue with the issue if the wallet meets the criteria listed there.
