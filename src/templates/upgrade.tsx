@@ -1,10 +1,11 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, PageProps } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import styled from "styled-components"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
+
 import ButtonLink from "../components/ButtonLink"
 import ButtonDropdown from "../components/ButtonDropdown"
 import Breadcrumbs from "../components/Breadcrumbs"
@@ -29,9 +30,6 @@ import UpgradeTableOfContents from "../components/UpgradeTableOfContents"
 import Translation from "../components/Translation"
 import TranslationsInProgress from "../components/TranslationsInProgress"
 import SectionNav from "../components/SectionNav"
-import { getLocaleTimestamp } from "../utils/time"
-import { isLangRightToLeft } from "../utils/translations"
-import { getSummaryPoints } from "../utils/getSummaryPoints"
 import {
   Divider,
   Paragraph,
@@ -40,6 +38,12 @@ import {
 } from "../components/SharedStyledComponents"
 import Emoji from "../components/Emoji"
 import YouTube from "../components/YouTube"
+
+import { getLocaleTimestamp } from "../utils/time"
+import { isLangRightToLeft } from "../utils/translations"
+import { getSummaryPoints } from "../utils/getSummaryPoints"
+import { Lang } from "../utils/languages"
+import { Context } from "../types"
 
 const Page = styled.div`
   display: flex;
@@ -318,15 +322,26 @@ const dropdownLinks = {
   ],
 }
 
-const UpgradePage = ({ data: { mdx } }) => {
+const UpgradePage = ({
+  data: { mdx },
+}: PageProps<Queries.UpgradePageQuery, Context>) => {
   const intl = useIntl()
-  const isRightToLeft = isLangRightToLeft(mdx.frontmatter.lang)
-  const tocItems = mdx.tableOfContents.items
 
+  if (!mdx?.frontmatter || !mdx.parent) {
+    throw new Error(
+      "Upgrade page template query does not return expected values"
+    )
+  }
+
+  const isRightToLeft = isLangRightToLeft(mdx.frontmatter.lang as Lang)
+  const tocItems = mdx.tableOfContents?.items
+
+  // FIXME: remove this any, currently not sure how to fix the ts error
+  const parent: any = mdx.parent
   // TODO some `gitLogLatestDate` are `null` - why?
-  const lastUpdatedDate = mdx.parent.fields
-    ? mdx.parent.fields.gitLogLatestDate
-    : mdx.parent.mtime
+  const lastUpdatedDate = parent.fields
+    ? parent.fields.gitLogLatestDate
+    : parent.mtime
 
   const summaryPoints = getSummaryPoints(mdx.frontmatter)
 
@@ -334,8 +349,8 @@ const UpgradePage = ({ data: { mdx } }) => {
     <Container>
       <HeroContainer>
         <TitleCard>
-          <DesktopBreadcrumbs slug={mdx.fields.slug} startDepth={1} />
-          <MobileBreadcrumbs slug={mdx.fields.slug} startDepth={1} />
+          <DesktopBreadcrumbs slug={mdx.fields?.slug} startDepth={1} />
+          <MobileBreadcrumbs slug={mdx.fields?.slug} startDepth={1} />
           <Title>{mdx.frontmatter.title}</Title>
           <SummaryBox>
             <ul>
@@ -346,7 +361,7 @@ const UpgradePage = ({ data: { mdx } }) => {
           </SummaryBox>
           <LastUpdated>
             <Translation id="page-last-updated" />:{" "}
-            {getLocaleTimestamp(intl.locale, lastUpdatedDate)}
+            {getLocaleTimestamp(intl.locale as Lang, lastUpdatedDate)}
           </LastUpdated>
         </TitleCard>
         <Image image={getImage(mdx.frontmatter.image)} />

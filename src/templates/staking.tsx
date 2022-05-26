@@ -1,18 +1,17 @@
 import React from "react"
-import { graphql } from "gatsby"
-import { MDXProvider } from "@mdx-js/react"
+import { graphql, PageProps } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
-import styled from "styled-components"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { MDXProvider } from "@mdx-js/react"
+import styled from "styled-components"
+
 import ButtonLink from "../components/ButtonLink"
 import ButtonDropdown from "../components/ButtonDropdown"
-import BannerNotification from "../components/BannerNotification"
 import Card from "../components/Card"
 import ExpandableCard from "../components/ExpandableCard"
 import DocLink from "../components/DocLink"
-import Icon from "../components/Icon"
 import Contributors from "../components/Contributors"
-import InfoBanner from "../components/InfoBanner"
+import SharedInfoBanner from "../components/InfoBanner"
 import UpgradeStatus from "../components/UpgradeStatus"
 import Link from "../components/Link"
 import MarkdownTable from "../components/MarkdownTable"
@@ -25,18 +24,29 @@ import Roadmap from "../components/Roadmap"
 import UpgradeTableOfContents from "../components/UpgradeTableOfContents"
 import TableOfContents from "../components/TableOfContents"
 import TranslationsInProgress from "../components/TranslationsInProgress"
-import Translation from "../components/Translation"
+import FeedbackCard from "../components/FeedbackCard"
 import SectionNav from "../components/SectionNav"
-import { isLangRightToLeft } from "../utils/translations"
-import { getSummaryPoints } from "../utils/getSummaryPoints"
 import {
   Divider,
   Paragraph,
   Header1,
   Header4,
+  InfoGrid,
 } from "../components/SharedStyledComponents"
 import Emoji from "../components/Emoji"
 import YouTube from "../components/YouTube"
+import Breadcrumbs from "../components/Breadcrumbs"
+import StakingLaunchpadWidget from "../components/Staking/StakingLaunchpadWidget"
+import StakingProductsCardGrid from "../components/Staking/StakingProductsCardGrid"
+import StakingComparison from "../components/Staking/StakingComparison"
+import StakingHowSoloWorks from "../components/Staking/StakingHowSoloWorks"
+import StakingConsiderations from "../components/Staking/StakingConsiderations"
+import StakingCommunityCallout from "../components/Staking/StakingCommunityCallout"
+import StakingGuides from "../components/Staking/StakingGuides"
+
+import { isLangRightToLeft } from "../utils/translations"
+import { Context } from "../types"
+import { Lang } from "../utils/languages"
 
 const Page = styled.div`
   display: flex;
@@ -58,9 +68,8 @@ const InfoColumn = styled.aside`
   position: sticky;
   top: 6.25rem; /* account for navbar */
   height: calc(100vh - 80px);
-  flex: 0 1 400px;
-  margin-right: 4rem;
-  margin-left: 2rem;
+  flex: 0 1 330px;
+  margin: 0 2rem;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     display: none;
   }
@@ -85,6 +94,12 @@ const ContentContainer = styled.article`
   position: relative;
   padding: 2rem;
   padding-top: 0rem;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.l}) {
+    h2:first-of-type {
+      margin-top: 0;
+    }
+  }
 
   .featured {
     padding-left: 1rem;
@@ -125,11 +140,166 @@ const H2 = styled.h2`
   font-size: 2rem;
   font-weight: 700;
   margin-top: 4rem;
+
+  a {
+    display: none;
+  }
+
+  /* Anchor tag styles */
+
+  a {
+    position: relative;
+    display: initial;
+    opacity: 0;
+    margin-left: -1.5em;
+    padding-right: 0.5rem;
+    font-size: 1rem;
+    vertical-align: middle;
+    &:hover {
+      display: initial;
+      fill: ${(props) => props.theme.colors.primary};
+      opacity: 1;
+    }
+  }
+
+  &:hover {
+    a {
+      display: initial;
+      fill: ${(props) => props.theme.colors.primary};
+      opacity: 1;
+    }
+  }
 `
 
 const H3 = styled.h3`
   font-size: 1.5rem;
   font-weight: 700;
+
+  a {
+    display: none;
+  }
+
+  /* Anchor tag styles */
+
+  a {
+    position: relative;
+    display: initial;
+    opacity: 0;
+    margin-left: -1.5em;
+    padding-right: 0.5rem;
+    font-size: 1rem;
+    vertical-align: middle;
+    &:hover {
+      display: initial;
+      fill: ${(props) => props.theme.colors.primary};
+      opacity: 1;
+    }
+  }
+
+  &:hover {
+    a {
+      display: initial;
+      fill: ${(props) => props.theme.colors.primary};
+      opacity: 1;
+    }
+  }
+`
+
+const CardGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 2rem;
+  h3 {
+    margin-top: 0;
+  }
+
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    grid-template-columns: repeat(1, 1fr);
+    margin: auto;
+  }
+`
+
+const Title = styled.h1`
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-top: 1rem;
+`
+
+const SummaryPoint = styled.li`
+  color: ${(props) => props.theme.colors.text300};
+`
+
+const StyledButtonDropdown = styled(ButtonDropdown)`
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: flex-end;
+  text-align: center;
+  @media (min-width: ${(props) => props.theme.breakpoints.s}) {
+    align-self: flex-end;
+  }
+`
+
+const MobileButtonDropdown = styled(StyledButtonDropdown)`
+  margin-bottom: 0rem;
+  display: none;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    display: block;
+  }
+`
+
+const Container = styled.div`
+  position: relative;
+`
+
+const HeroContainer = styled.div`
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  --height: 500px;
+  max-height: var(--height);
+  min-height: var(--height);
+  background: ${({ theme }) => theme.colors.layer2Gradient};
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    flex-direction: column;
+    max-height: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+`
+
+const Image = styled(GatsbyImage)`
+  flex: 1 1 100%;
+  background-repeat: no-repeat;
+  right: 0;
+  bottom: 0;
+  max-width: 400px;
+  @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
+    width: 100%;
+    height: 100%;
+    max-height: 340px;
+    max-width: min(400px, 98%);
+    overflow: initial;
+    align-self: center;
+    margin: 0;
+  }
+`
+
+const MobileTableOfContents = styled(TableOfContents)`
+  position: relative;
+  z-index: 2;
+`
+
+const TitleCard = styled.div`
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+`
+
+const InfoBanner = styled(SharedInfoBanner)`
+  margin: 2rem 0;
 `
 
 // Note: you must pass components to MDXProvider in order to render them in markdown files
@@ -151,6 +321,8 @@ const components = {
   Contributors,
   InfoBanner,
   Card,
+  CardGrid,
+  InfoGrid,
   Divider,
   SectionNav,
   Pill,
@@ -160,196 +332,82 @@ const components = {
   DocLink,
   ExpandableCard,
   YouTube,
+  StakingLaunchpadWidget,
+  StakingProductsCardGrid,
+  StakingComparison,
+  StakingHowSoloWorks,
+  StakingConsiderations,
+  StakingGuides,
 }
 
-const Title = styled.h1`
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-top: 1rem;
-`
-
-const SummaryPoint = styled.li`
-  font-size: 1rem;
-  color: ${(props) => props.theme.colors.text300};
-  margin-bottom: 0rem;
-  line-height: auto;
-`
-
-const SummaryBox = styled.div``
-
-const StyledButtonDropdown = styled(ButtonDropdown)`
-  margin-bottom: 2rem;
-  display: flex;
-  justify-content: flex-end;
-  text-align: center;
-  @media (min-width: ${(props) => props.theme.breakpoints.s}) {
-    align-self: flex-end;
+const StakingPage = ({
+  data: { pageData: mdx },
+  location,
+}: PageProps<Queries.StakingPageQuery, Context>) => {
+  if (!mdx?.frontmatter) {
+    throw new Error(
+      "Staking page template query does not return expected values"
+    )
   }
-`
 
-const StyledEmoji = styled(Emoji)`
-  margin-right: 1rem;
-  flex-shrink: 0;
-`
-
-const MobileButtonDropdown = styled(StyledButtonDropdown)`
-  margin-bottom: 0rem;
-  @media (min-width: ${(props) => props.theme.breakpoints.l}) {
-    display: none;
-  }
-`
-
-const Container = styled.div`
-  position: relative;
-`
-
-const HeroContainer = styled.div`
-  background: ${(props) => props.theme.colors.cardGradient};
-  box-shadow: inset 0px -1px 0px rgba(0, 0, 0, 0.1);
-  display: flex;
-  justify-content: flex-end;
-  max-height: 608px;
-  min-height: 608px;
-  width: 100%;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column-reverse;
-    max-height: 100%;
-  }
-`
-
-const Image = styled(GatsbyImage)`
-  flex: 1 1 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  right: 0;
-  bottom: 0;
-  background-size: cover;
-  max-width: ${({ useCase }) =>
-    useCase === `dao` ? `572px` : useCase === `defi` ? `80%` : `640px`};
-  @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
-    width: 100%;
-    height: 100%;
-    max-height: 340px;
-    max-width: ${({ useCase }) =>
-      useCase === "defi" ? "100%" : "min(405px, 98%)"};
-    overflow: initial;
-    align-self: center;
-    margin: 0;
-  }
-`
-
-const MoreContent = styled(Link)`
-  width: 100%;
-  background: ${(props) => props.theme.colors.ednBackground};
-  padding: 1rem;
-  display: flex;
-  justify-content: center;
-  &:hover {
-    background: ${(props) => props.theme.colors.background};
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    display: none;
-  }
-`
-
-const MobileTableOfContents = styled(TableOfContents)`
-  position: relative;
-  z-index: 2;
-`
-
-const StyledBannerNotification = styled(BannerNotification)`
-  display: flex;
-  justify-content: center;
-  @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
-    display: none;
-  }
-`
-
-const TitleCard = styled.div`
-  background: ${(props) => props.theme.colors.background};
-  border: 1px solid ${(props) => props.theme.colors.border};
-  box-shadow: ${(props) => props.theme.colors.cardBoxShadow};
-  padding: 2rem;
-  display: flex;
-  position: absolute;
-  left: 6rem;
-  top: 6rem;
-  flex-direction: column;
-  justify-content: flex-start;
-  border-radius: 2px;
-  z-index: 10;
-  max-width: 640px;
-  margin-top: 3rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    max-width: 100%;
-    position: relative;
-    left: 0rem;
-    top: 0rem;
-    background: ${(props) => props.theme.colors.ednBackground};
-    box-shadow: none;
-    margin-top: 0;
-  }
-`
-
-const UseCasePage = ({ data, pageContext }) => {
-  const mdx = data.pageData
-  const isRightToLeft = isLangRightToLeft(mdx.frontmatter.lang)
-  const tocItems = mdx.tableOfContents.items
-  const summaryPoints = getSummaryPoints(mdx.frontmatter)
-
-  const { editContentUrl } = data.siteData.siteMetadata
-  const { relativePath } = pageContext
-  const absoluteEditPath = `${editContentUrl}${relativePath}`
-
-  let useCase = "defi"
-  if (pageContext.slug.includes("dao")) {
-    useCase = "dao"
-  }
-  if (pageContext.slug.includes("nft")) {
-    useCase = "nft"
-  }
+  const isRightToLeft = isLangRightToLeft(mdx.frontmatter.lang as Lang)
+  const tocItems = mdx.tableOfContents?.items
+  const { summaryPoints } = mdx.frontmatter
 
   const dropdownLinks = {
-    text: "template-usecase-dropdown",
-    ariaLabel: "template-usecase-dropdown-aria",
+    text: "Staking Options",
+    ariaLabel: "Staking options dropdown menu",
     items: [
       {
-        text: "template-usecase-dropdown-defi",
-        to: "/defi/",
+        text: "Staking home",
+        to: "/staking/",
+        matomo: {
+          eventCategory: `Staking dropdown`,
+          eventAction: `Clicked`,
+          eventName: "clicked staking home",
+        },
       },
       {
-        text: "template-usecase-dropdown-nft",
-        to: "/nft/",
+        text: "Solo staking",
+        to: "/staking/solo/",
+        matomo: {
+          eventCategory: `Staking dropdown`,
+          eventAction: `Clicked`,
+          eventName: "clicked solo staking",
+        },
       },
       {
-        text: "template-usecase-dropdown-dao",
-        to: "/dao/",
+        text: "Staking as a service",
+        to: "/staking/saas/",
+        matomo: {
+          eventCategory: `Staking dropdown`,
+          eventAction: `Clicked`,
+          eventName: "clicked staking as a service",
+        },
+      },
+      {
+        text: "Pooled staking",
+        to: "/staking/pools/",
+        matomo: {
+          eventCategory: `Staking dropdown`,
+          eventAction: `Clicked`,
+          eventName: "clicked pooled staking",
+        },
       },
     ],
   }
 
   return (
     <Container>
-      <StyledBannerNotification shouldShow>
-        <StyledEmoji text=":pencil:" />
-        <div>
-          <Translation id="template-usecase-banner" />{" "}
-          <Link to={absoluteEditPath}>
-            <Translation id="template-usecase-edit-link" />
-          </Link>
-        </div>
-      </StyledBannerNotification>
       <HeroContainer>
         <TitleCard>
-          <Emoji size={4} text={mdx.frontmatter.emoji} />
+          <Breadcrumbs slug={location.pathname} />
           <Title>{mdx.frontmatter.title}</Title>
-          <SummaryBox>
-            <ul>
-              {summaryPoints.map((point, idx) => (
-                <SummaryPoint key={idx}>{point}</SummaryPoint>
-              ))}
-            </ul>
-          </SummaryBox>
+          <ul>
+            {(summaryPoints || []).map((point, idx) => (
+              <SummaryPoint key={idx}>{point}</SummaryPoint>
+            ))}
+          </ul>
           <MobileTableOfContents
             items={tocItems}
             maxDepth={mdx.frontmatter.sidebarDepth}
@@ -357,14 +415,11 @@ const UseCasePage = ({ data, pageContext }) => {
           />
         </TitleCard>
         <Image
-          useCase={useCase}
           image={getImage(mdx.frontmatter.image)}
           alt={mdx.frontmatter.alt}
+          objectFit="contain"
         />
       </HeroContainer>
-      <MoreContent to="#content">
-        <Icon name="chevronDown" />
-      </MoreContent>
       <Page dir={isRightToLeft ? "rtl" : "ltr"}>
         <PageMetadata
           title={mdx.frontmatter.title}
@@ -385,6 +440,8 @@ const UseCasePage = ({ data, pageContext }) => {
           <MDXProvider components={components}>
             <MDXRenderer>{mdx.body}</MDXRenderer>
           </MDXProvider>
+          <StakingCommunityCallout />
+          <FeedbackCard />
         </ContentContainer>
         <MobileButton>
           <MobileButtonDropdown list={dropdownLinks} />
@@ -394,13 +451,8 @@ const UseCasePage = ({ data, pageContext }) => {
   )
 }
 
-export const useCasePageQuery = graphql`
-  query UseCasePage($relativePath: String) {
-    siteData: site {
-      siteMetadata {
-        editContentUrl
-      }
-    }
+export const stakingPageQuery = graphql`
+  query StakingPage($relativePath: String) {
     pageData: mdx(fields: { relativePath: { eq: $relativePath } }) {
       fields {
         slug
@@ -412,33 +464,23 @@ export const useCasePageQuery = graphql`
         sidebar
         emoji
         sidebarDepth
-        summaryPoint1
-        summaryPoint2
-        summaryPoint3
+        summaryPoints
         alt
         image {
           childImageSharp {
             gatsbyImageData(
-              layout: FULL_WIDTH
+              width: 500
+              layout: CONSTRAINED
               placeholder: BLURRED
               quality: 100
             )
           }
         }
-        isOutdated
       }
       body
       tableOfContents
-      parent {
-        ... on File {
-          mtime
-          fields {
-            gitLogLatestDate
-          }
-        }
-      }
     }
   }
 `
 
-export default UseCasePage
+export default StakingPage

@@ -1,6 +1,5 @@
 import React, { useContext } from "react"
-import { graphql } from "gatsby"
-import { useIntl } from "gatsby-plugin-intl"
+import { graphql, PageProps } from "gatsby"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import styled from "styled-components"
@@ -25,10 +24,6 @@ import DocsNav from "../components/DocsNav"
 import DeveloperDocsLinks from "../components/DeveloperDocsLinks"
 import RollupProductDevDoc from "../components/RollupProductDevDoc"
 import YouTube from "../components/YouTube"
-
-import { ZenModeContext } from "../contexts/ZenModeContext.js"
-
-import { isLangRightToLeft } from "../utils/translations"
 import {
   Divider,
   Paragraph,
@@ -39,6 +34,11 @@ import {
   ListItem,
 } from "../components/SharedStyledComponents"
 
+import { ZenModeContext } from "../contexts/ZenModeContext.js"
+import { isLangRightToLeft } from "../utils/translations"
+import { Lang } from "../utils/languages"
+import { Context } from "../types"
+
 const Page = styled.div`
   display: flex;
   flex-direction: column;
@@ -46,7 +46,7 @@ const Page = styled.div`
   border-bottom: 1px solid ${(props) => props.theme.colors.border};
 `
 
-const ContentContainer = styled.div`
+const ContentContainer = styled.div<{ isZenMode: boolean }>`
   display: flex;
   justify-content: ${(props) => (props.isZenMode ? "center" : "space-between")};
   width: 100%;
@@ -165,15 +165,22 @@ const Contributors = styled(FileContributors)`
   }
 `
 
-const DocsPage = ({ data, pageContext }) => {
+const DocsPage = ({
+  data: { siteData, pageData: mdx },
+  pageContext,
+}: PageProps<Queries.DocsPageQuery, Context>) => {
   const { isZenMode } = useContext(ZenModeContext)
-  const mdx = data.pageData
-  const isRightToLeft = isLangRightToLeft(mdx.frontmatter.lang)
 
-  const tocItems = mdx.tableOfContents.items
+  if (!siteData || !mdx?.frontmatter) {
+    throw new Error("Docs page template query does not return expected values")
+  }
+
+  const isRightToLeft = isLangRightToLeft(mdx.frontmatter.lang as Lang)
+
+  const tocItems = mdx.tableOfContents?.items
   const isPageIncomplete = mdx.frontmatter.incomplete
 
-  const { editContentUrl } = data.siteData.siteMetadata
+  const { editContentUrl } = siteData.siteMetadata || {}
   const { relativePath, slug } = pageContext
   const absoluteEditPath = `${editContentUrl}${relativePath}`
 

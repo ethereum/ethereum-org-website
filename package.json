@@ -67,6 +67,8 @@
   },
   "devDependencies": {
     "@netlify/functions": "^1.0.0",
+    "@types/luxon": "^2.3.2",
+    "@types/mdx-js__react": "^1.5.5",
     "@types/node": "^17.0.23",
     "@types/react": "^17.0.39",
     "@types/react-dom": "^17.0.11",
