@@ -6,7 +6,7 @@ labels: "wallet :purse:,"
 assignees: ""
 ---
 
-Before suggesting a wallet, make sure you've read [our listing policy](https://www.ethereum.org/en/contributing/adding-products/). Only continue with the issue if your wallet meets the criteria listed there.
+Before suggesting a wallet, make sure you've read [our listing policy](https://www.ethereum.org/en/contributing/adding-products/). Only continue with the issue if the wallet meets the criteria listed there.
 
 
 ### Project info
