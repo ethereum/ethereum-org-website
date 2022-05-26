@@ -153,3 +153,79 @@ body:
     attributes:
       label: Spam protection?
       description: Does the wallet employ any practices to warn users against potential spam (e.g. when interacting with suspicious accounts/contracts)?
+  - type: markdown
+    id: features
+    attributes:
+      value: "## Features"
+  - type: dropdown
+    id: wallet_hardware_support
+    attributes:
+      label: Does the wallet support connecting to a hardware wallet?
+      options:
+        - Yes
+        - No
+    validations:
+      required: true
+  - type: dropdown
+    id: wallet_walletconnect
+    attributes:
+      label: Does the wallet support WalletConnect?
+      options:
+        - Yes
+        - No
+    validations:
+      required: true
+  - type: input
+    id: wallet_rpc_importing
+    attributes:
+      label: Does the wallet support importing Ethereum RPC endpoints?
+      description: Please provide documentation on how a user can import an Ethereum RPC into the wallet.
+  - type: dropdown
+    id: wallet_nft_viewing
+    attributes:
+      label: Does the wallet support viewing and interacting with NFTs?
+      options:
+        - Yes
+        - No
+    validations:
+      required: true
+  - type: input
+    id: wallet_dapp_support
+    attributes:
+      label: Does the wallet support connecting to Ethereum applications?
+      description: Please provide documentation for how users connect to applications. List examples (ie. connect wallet to dapp, in wallet browser, etc.)
+  - type: input
+    id: wallet_direct_staking
+    attributes:
+      label: Does the wallet support staking directly?
+      description: Please provide documentation on direct staking this wallet supports.
+  - type: input
+    id: wallet_swaps
+    attributes:
+      label: Does the wallet support swaps directly?
+      description: Please provide documentation on swaps.
+  - type: input
+    id: wallet_multi_chain_support
+    attributes:
+      label: Does the wallet support multi-chain networks?
+      description: Please provide documentation on multi-chain networks this wallet supports.
+  - type: input
+    id: wallet_customize_gas_fees
+    attributes:
+      label: Does the wallet allow the user to customize gas fees?
+      description: Please provide documentation on how users can customize gas fees for transactions.
+  - type: input
+    id: wallet_ens_support
+    attributes:
+      label: Does the wallet support sending transactions to ENS addresses?
+      description: Please provide information on ENS support.
+  - type: input
+    id: wallet_erc_20_support
+    attributes:
+      label: Does the wallet support importing or automatically querying and displaying ERC-20 tokens?
+      description: Please provide documentation on how to import tokens into the wallet.
+  - type: input
+    id: wallet_eip_1559_support
+    attributes:
+      label: Does the wallet support EIP-1559 (type 2) transactions?
+      description: Please provide information on how the type of transactions this wallet supports.
