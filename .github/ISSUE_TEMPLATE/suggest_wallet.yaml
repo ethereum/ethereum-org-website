@@ -243,3 +243,17 @@ body:
     attributes:
       label: Does the wallet support withdrawals to fiat?
       description: an a user cash out their crypto assets directly to a card or bank account? Please provide documentation.
+  - type: markdown
+    id: smart_contract
+    attributes:
+      value: "## Smart contract"
+  - type: input
+    id: wallet_multi_signature
+    attributes:
+      label: Is the wallet a multi-signature wallet?
+      description: Please provide documentation on how users set up and use the multisig functionality for the wallet.
+  - type: input
+    id: wallet_social_recovery
+    attributes:
+      label: Does the wallet support social recovery?
+      description: Please provide documentation on how users set up guardians and use social recovery for the wallet.
