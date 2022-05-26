@@ -162,8 +162,8 @@ body:
     attributes:
       label: Does the wallet support connecting to a hardware wallet?
       options:
-        - Yes
-        - No
+        - "Yes"
+        - "No"
     validations:
       required: true
   - type: dropdown
@@ -171,8 +171,8 @@ body:
     attributes:
       label: Does the wallet support WalletConnect?
       options:
-        - Yes
-        - No
+        - "Yes"
+        - "No"
     validations:
       required: true
   - type: input
@@ -185,8 +185,8 @@ body:
     attributes:
       label: Does the wallet support viewing and interacting with NFTs?
       options:
-        - Yes
-        - No
+        - "Yes"
+        - "No"
     validations:
       required: true
   - type: input
