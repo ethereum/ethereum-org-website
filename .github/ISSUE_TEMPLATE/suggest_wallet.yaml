@@ -1,7 +1,7 @@
 name: Suggest a wallet
 description: Suggest a new wallet to list on ethereum.org
 title: Suggest a wallet
-labels: ["wallet :purse:,"]
+labels: ["wallet :purse:"]
 body:
   - type: markdown
     attributes:
@@ -15,6 +15,69 @@ body:
     id: wallet_name
     attributes:
       label: Wallet name
-      placeholder: Please provide the official name of the wallet
+      description: Please provide the official name of the wallet.
+    validations:
+      required: true
+  - type: textarea
+    id: wallet_description
+    attributes:
+      label: Wallet description
+      description: Please provide a short 1-2 sentence description of the wallet. Avoid unsubstantiated marketing claims like “the best Ethereum wallet”.
+    validations:
+      required: true
+  - type: textarea
+    id: wallet_logo
+    attributes:
+      label: Wallet logo
+      description: |
+        Please provide an SVG or hi-res transparent PNG
+        Tip: You can attach images by clicking this area to highlight it and then dragging files in.
+    validations:
+      required: true
+  - type: input
+    id: wallet_background
+    attributes:
+      label: Background color for brand logo
+      description: Please provide a hex code for the brand color. This will be added to the background of the wallet card.
+    validations:
+      required: true
+  - type: input
+    id: wallet_url
+    attributes:
+      label: URL to the project
+      description: Please provide a URL (e.g. to the website of the wallet).
+    validations:
+      required: true
+  - type: input
+    id: wallet_live_date
+    attributes:
+      label: When did the wallet go live to users?
+      description: Please provide a date when the wallet was usable by the public
+    validations:
+      required: true
+  - type: input
+    id: wallet_active_development_team
+    attributes:
+      label: Does the wallet have an active development team?
+      description: Are developers actively working on the wallet? Provide proof that the wallet is actively being worked on (ex. GitHub repo link).
+    validations:
+      required: true
+  - type: input
+    id: wallet_globally_accessible
+    attributes:
+      label: Is the wallet globally accessible?
+      description: Please list any KYC requirements or geographic limitations of the wallet, if any exist.
+    validations:
+      required: true
+  - type: input
+    id: wallet_languages
+    attributes:
+      label: Is the wallet available in multiple languages?
+      description: Please list languages that the wallet actively supports.
+  - type: textarea
+    id: wallet_socials
+    attributes:
+      label: What social links are there for the project?
+      description: Please provide social links for the wallet (Discord, Twitter, etc.)
     validations:
       required: true
