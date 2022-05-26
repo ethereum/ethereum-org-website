@@ -95,7 +95,7 @@ Before suggesting a wallet, make sure you've read [our listing policy](https://w
 
 **Please describe the measures taken to ensure the wallet's security and provide documentation wherever possible**
 
-<!-- Please provide a link to any security audits, code reports, and bug bounties. If you haven't been audited but think your wallet should be listed anyway, explain here. -->
+<!-- Please provide a link to any security audits, code reports, and bug bounties. If you haven't been audited but think the wallet should be listed anyway, explain here. -->
 
 **Spam protection?**
 
