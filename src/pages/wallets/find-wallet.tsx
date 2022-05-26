@@ -10,6 +10,7 @@ import Breadcrumbs from "../../components/Breadcrumbs"
 import PageMetadata from "../../components/PageMetadata"
 import { Content, Page } from "../../components/SharedStyledComponents"
 import Translation from "../../components/Translation"
+import WalletPersonas from "../../components/FindWallet/WalletPersonas"
 
 // Utils
 import { translateMessageId } from "../../utils/translations"
@@ -21,6 +22,7 @@ const HeroContainer = styled.div`
   display: flex;
   padding: 3rem;
   background: ${(props) => props.theme.colors.layer2Gradient};
+  margin-bottom: 44px;
 
   @media (max-width: ${(props) => props.theme.breakpoints.s}) {
     flex-direction: column-reverse;
@@ -54,22 +56,30 @@ const HeroImage = styled(GatsbyImage)`
 
 const TableContent = styled(Content)`
   display: flex;
-  padding: 1rem 0;
   gap: 24px;
 `
 
 const FilterSidebar = styled.div`
   width: 25%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 `
 
 const FilterTabs = styled.div`
-  height: 34px;
   display: flex;
   border-bottom: 1px solid #f4d0a7;
   cursor: pointer;
+  position: sticky;
+  top: 76px;
+  padding-top: 8px;
+  background: ${(props) => props.theme.colors.background};
 `
 
-const FilterTab = styled.div`
+const FilterTab = styled.div<{
+  active: boolean
+}>`
+  height: 34px;
   width: 50%;
   text-align: center;
   background: ${(props) =>
@@ -78,6 +88,9 @@ const FilterTab = styled.div`
   display: inline-block;
   line-height: 200%;
   vertical-align: middle;
+
+  color: ${(props) =>
+    props.active === true ? "white" : props.theme.colors.text};
 
   :hover {
     background: ${(props) =>
@@ -91,10 +104,21 @@ const WalletContent = styled.div`
   width: 75%;
 `
 
+const WalletContentHeader = styled.div`
+  height: 42px;
+  display: flex;
+  border-bottom: 1px solid #f4d0a7;
+  cursor: pointer;
+  position: sticky;
+  top: 76px;
+  padding-top: 8px;
+  background: ${(props) => props.theme.colors.background};
+`
+
 const FindWalletPage = ({ data, location }) => {
   const intl = useIntl()
 
-  const [showAdvancedFilters, setShowAdvancedFilters] = useState(false)
+  const [showFeatureFilters, setShowFeatureFilters] = useState(false)
 
   return (
     <Page>
@@ -120,7 +144,7 @@ const FindWalletPage = ({ data, location }) => {
           </Subtitle>
         </HeroContent>
         <HeroImage
-          image={getImage(data.hero)}
+          image={getImage(data.hero)!}
           alt={translateMessageId("page-find-wallet-image-alt", intl)}
           loading="eager"
           objectFit="contain"
@@ -131,20 +155,25 @@ const FindWalletPage = ({ data, location }) => {
         <FilterSidebar>
           <FilterTabs>
             <FilterTab
-              active={!showAdvancedFilters}
-              onClick={() => setShowAdvancedFilters(false)}
+              active={!showFeatureFilters}
+              onClick={() => setShowFeatureFilters(false)}
             >
               PROFILE FILTERS
             </FilterTab>
             <FilterTab
-              active={showAdvancedFilters}
-              onClick={() => setShowAdvancedFilters(true)}
+              active={showFeatureFilters}
+              onClick={() => setShowFeatureFilters(true)}
             >
-              ADVANCED FILTERS
+              FEATURE FILTERS
             </FilterTab>
           </FilterTabs>
+          <div>
+            {showFeatureFilters ? <p>Feature Filters</p> : <WalletPersonas />}
+          </div>
         </FilterSidebar>
-        <WalletContent>Wallet</WalletContent>
+        <WalletContent>
+          <WalletContentHeader>Wallet</WalletContentHeader>
+        </WalletContent>
       </TableContent>
     </Page>
   )
