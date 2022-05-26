@@ -233,7 +233,7 @@ Crypto taxation is a complicated issue that likely requires a software solution.
 
 ### Consensus clients
 
-The consensus layer is concerned with the proof-of-stake mechanism securing Ethereum from the merge onwards. There is abundant ongoing research and development relating to PoS concepts and implementation, for example identifying and patching vulnerabilities, quantifying cryptoeconomic security, increasing the security or performance of client implementations, building light clients and developing staking apps. Some fundamental redesigns of the protocol to confer large improvements to Ethereum are also being researched, for example single slot finality.
+The consensus layer is concerned with the proof-of-stake mechanism securing Ethereum from the merge onwards. There is abundant ongoing research and development relating to PoS concepts and implementation, for example identifying and patching vulnerabilities, quantifying cryptoeconomic security, increasing the security or performance of client implementations, building light clients and developing staking apps. Some fundamental redesigns of the protocol to confer large improvements to Ethereum are also being researched, for example single slot finality. Furthermore, the efficiency and safety and monitoring of the peer-to-peer networking between consensus clients are also important research topics.
 
 #### Background reading
 
@@ -272,9 +272,11 @@ The consensus layer is concerned with the proof-of-stake mechanism securing Ethe
 
 ### Execution clients
 
-The execution layer is concerned with executing transactions, running the EVM and generating execution payloads to pass to the consensus layer. There are many active areas of research, especially as execution clients are updated ready for the merge. This includes building out light client support, research into gas limits and incorporating new data structures (e.g. Verkle Tries).
+The execution layer is concerned with executing transactions, running the EVM and generating execution payloads to pass to the consensus layer. There are many active areas of research, especially as execution clients are updated ready for the merge. This includes building out light client support, research into gas limits and incorporating new data structures (e.g. Verkle Tries). 
 
 #### Background reading
+
+[Nodes and Clients](https://ethereum.org/developers/docs/nodes-and-clients)
 
 #### Client implementations
 
@@ -300,6 +302,11 @@ The execution layer is concerned with executing transactions, running the EVM an
 Formal verification is writing code to verify that Ethereum's consensus specifications are correct and bug-free. There is an executable version of the specification written in Python that requires maintenance and development. Further research can help to improve the Python implementation of the specification and add tools that can more robustly verify correctness and identify issues.
 
 #### Background reading
+
+[Introduction to formal verification](https://ptolemy.berkeley.edu/projects/embedded/research/vis/doc/VisUser/vis_user/node4.html)
+
+[Formal Verification (Intel)](https://www.cl.cam.ac.uk/~jrh13/papers/mark10.pdf)
+
 
 #### Recent research
 
