@@ -105,3 +105,51 @@ body:
     attributes:
       label: Is it a hardware wallet?
       description: How does it broadcast signed transactions (e.g. USB, Bluetooth, QR code)?
+  - type: markdown
+    id: security
+    attributes:
+      value: "## Security"
+  - type: input
+    id: wallet_source_code
+    attributes:
+      label: Is the source code for the wallet fully open-source?
+      description: If yes, please provide a direct link to the repository.
+  - type: input
+    id: wallet_license
+    attributes:
+      label: What license is the wallet software released under?
+      description: Please provide information on the software license used for the wallet.
+  - type: textarea
+    id: wallet_custodial
+    attributes:
+      label: Who holds the private keys?
+      description: |
+        Users must have access to private keys without reliance on a company remaining in business to be listed as a wallet.
+        Do users have access to their public and private keys? Does anyone else? If the company/project were to disappear, would users still be able to access their funds?
+    validations:
+      required: true
+  - type: textarea
+    id: wallet_security_documentation
+    attributes:
+      label: Please describe the measures taken to ensure the wallet's security and provide documentation wherever possible
+      description: Please provide a link to any security audits, code reports, and bug bounties. If you haven't been audited but think the wallet should be listed anyway, explain here.
+  - type: input
+    id: wallet_smart_contract_audit
+    attributes:
+      label: Has the wallet's smart contract code been audited?
+      description: If yes, provide a link to any audits.
+  - type: input
+    id: wallet_security_team
+    attributes:
+      label: Does the wallet have an internal security team?
+      description: If yes, please provide details.
+  - type: textarea
+    id: wallet_security_testing
+    attributes:
+      label: Any other security testing that should be noted?
+      description: Please note any other security precautions taken.
+  - type: textarea
+    id: wallet_spam_protection
+    attributes:
+      label: Spam protection?
+      description: Does the wallet employ any practices to warn users against potential spam (e.g. when interacting with suspicious accounts/contracts)?
