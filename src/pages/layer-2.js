@@ -334,7 +334,7 @@ const Layer2Page = ({ data }) => {
   const toolsData = {
     information: [
       {
-        title: translateMessageId("layer-2-tools-l2beat-title", intl),
+        title: "L2BEAT",
         description: translateMessageId(
           "layer-2-tools-l2beat-description",
           intl
@@ -344,7 +344,7 @@ const Layer2Page = ({ data }) => {
         alt: "L2BEAT",
       },
       {
-        title: translateMessageId("layer-2-tools-l2fees-title", intl),
+        title: "L2 Fees",
         description: translateMessageId(
           "layer-2-tools-l2fees-description",
           intl
@@ -354,7 +354,7 @@ const Layer2Page = ({ data }) => {
         alt: "L2 Fees",
       },
       {
-        title: translateMessageId("layer-2-tools-chainlist-title", intl),
+        title: "Chainlist",
         description: translateMessageId(
           "layer-2-tools-chainlist-description",
           intl
@@ -366,7 +366,7 @@ const Layer2Page = ({ data }) => {
     ],
     walletManagers: [
       {
-        title: translateMessageId("layer-2-tools-zapper-title", intl),
+        title: "Zapper",
         description: translateMessageId(
           "layer-2-tools-zapper-description",
           intl
@@ -376,7 +376,7 @@ const Layer2Page = ({ data }) => {
         alt: "Zapper",
       },
       {
-        title: translateMessageId("layer-2-tools-zerion-title", intl),
+        title: "Zerion",
         description: translateMessageId(
           "layer-2-tools-zerion-description",
           intl
@@ -386,7 +386,7 @@ const Layer2Page = ({ data }) => {
         alt: "Zerion",
       },
       {
-        title: translateMessageId("layer-2-tools-debank-title", intl),
+        title: "DeBank",
         description: translateMessageId(
           "layer-2-tools-debank-description",
           intl
