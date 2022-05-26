@@ -43,7 +43,7 @@ Before suggesting a wallet, make sure you've read [our listing policy](https://w
 
 <!-- Please provide a date when your wallet was usable by the public. -->
 
-**Does your wallet have an active development team?**
+**Does the wallet have an active development team?**
 
 <!-- Are developers actively working on the wallet? Provide proof that the wallet is actively being worked on (ex. GitHub repo link). -->
 
