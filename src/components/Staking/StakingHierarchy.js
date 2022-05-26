@@ -4,7 +4,6 @@ import styled from "styled-components"
 
 // Components
 import ButtonLink from "../ButtonLink"
-import Link from "../Link"
 import Translation from "../Translation"
 
 // Assets

@@ -162,11 +162,11 @@
     "endDate": "2022-06-30"
   },
   {
-    "title": "ETH SF",
-    "to": "https://airtable.com/shrZ89OEwQJRtXHPv/",
+    "title": "Graph Day & Graph Hack",
+    "to": "https://thegraph.com/graph-day/2022/",
     "sponsor": null,
     "location": "San Francisco, USA",
-    "description": "The energy and excitement at the first ETHSanFrancisco will be hard to top, but we have our eyes set on delivering an even more impactful experience.",
+    "description": "Join the world’s brightest dreamers & doers for a full day focused on web3, dapps, protocols, and the future of the internet. A three-day hackathon will follow immediately afterwards.",
     "startDate": "2022-06-02",
     "endDate": "2022-06-05"
   },
@@ -270,6 +270,15 @@
     "endDate": "2022-07-21"
   },
   {
+    "title": "ETHLatam",
+    "to": "https://twitter.com/ethlatam",
+    "sponsor": null,
+    "location": "Buenos Aires, Argentina",
+    "description": "A 4-day conference that builds upon the work of the local pioneers that laid the foundations for a vibrant community that made crypto mainstream in Argentina.",
+    "startDate": "2022-08-11",
+    "endDate": "2022-08-14"
+  },
+  {
     "title": "ETHMexicoCity",
     "to": "https://airtable.com/shrZ89OEwQJRtXHPv/",
     "sponsor": null,
@@ -349,5 +358,14 @@
     "description": "Join ETHGlobal's first hackathon in Taiwan and return to Asia!",
     "startDate": "2022-12-02",
     "endDate": "2022-12-04"
+  },
+    {
+    "title": "ETHWarsaw",
+    "to": "https://www.ethwarsaw.dev/",
+    "sponsor": null,
+    "location": "Warsaw, Poland",
+    "description": "Join Warsaw Web3 community in the first in-person conference and hackathon!",
+    "startDate": "2022-09-01",
+    "endDate": "2022-09-04"
   }
 ]

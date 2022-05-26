@@ -181,7 +181,6 @@ const StakingProductCard = ({
     svgPath,
     color,
     url,
-    socials,
     platforms,
     ui,
     minEth,
@@ -190,6 +189,8 @@ const StakingProductCard = ({
     bugBounty,
     battleTested,
     trustless,
+    selfCustody,
+    liquidityToken,
     permissionless,
     permissionlessNodes,
     multiClient,
@@ -235,6 +236,14 @@ const StakingProductCard = ({
     {
       label: <Translation id="page-staking-considerations-saas-7-title" />,
       status: diverseClients,
+    },
+    {
+      label: <Translation id="page-staking-considerations-solo-8-title" />,
+      status: selfCustody,
+    },
+    {
+      label: <Translation id="page-staking-considerations-pools-8-title" />,
+      status: liquidityToken,
     },
     {
       label: <Translation id="page-staking-considerations-solo-9-title" />,
@@ -415,13 +424,11 @@ const StakingProductCardGrid = ({ category }) => {
     audits,
     hasBugBounty,
     launchDate,
-    isTrustless,
   }) => ({
     openSource: getFlagFromBoolean(isFoss),
     audited: getFlagFromBoolean(audits?.length),
     bugBounty: getFlagFromBoolean(hasBugBounty),
     battleTested: getBattleTestedFlag(launchDate),
-    trustless: getFlagFromBoolean(isTrustless),
   })
 
   useEffect(() => {
@@ -435,11 +442,12 @@ const StakingProductCardGrid = ({ category }) => {
           ...getBrandProperties(listing),
           ...getTagProperties(listing),
           ...getSharedSecurityProperties(listing),
+          trustless: getFlagFromBoolean(listing.isTrustless),
           permissionlessNodes: getFlagFromBoolean(
             listing.hasPermissionlessNodes
           ),
           diverseClients: getDiversityOfClients(listing.pctMajorityClient),
-          selfCustody: getFlagFromBoolean(listing.tokens?.length),
+          liquidityToken: getFlagFromBoolean(listing.tokens?.length),
           minEth: listing.minEth,
         }))
       )
@@ -452,6 +460,7 @@ const StakingProductCardGrid = ({ category }) => {
           ...getBrandProperties(listing),
           ...getTagProperties(listing),
           ...getSharedSecurityProperties(listing),
+          trustless: getFlagFromBoolean(listing.isTrustless),
           permissionless: getFlagFromBoolean(listing.isPermissionless),
           multiClient: getFlagFromBoolean(listing.multiClient),
           selfCustody: getFlagFromBoolean(true),
@@ -497,6 +506,7 @@ const StakingProductCardGrid = ({ category }) => {
           .sort((a, b) => b.rankingScore - a.rankingScore)
       )
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   if (!rankedProducts) return null

@@ -224,6 +224,8 @@ const FeedbackWidget = ({ className }) => {
     setIsOpen(false) // Close widget without triggering redundant tracker event
   }
 
+  if (!location.includes("/en/")) return null
+
   return (
     <>
       <FixedDot onClick={handleOpen} bottomOffset={bottomOffset}>
