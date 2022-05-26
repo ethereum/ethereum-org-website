@@ -114,12 +114,20 @@ User-wallets can be browser extensions, desktop and mobile apps or smart contrac
 
 [ethresear.ch Security](https://ethresear.ch/tag/security)
 
-[EIP 2938 Account Abstraction](https://eips.ethereum.org/EIPS/eip-2938)
+[EIP-2938 Account Abstraction](https://eips.ethereum.org/EIPS/eip-2938)
 
-[EIP 4337 Account Abstraction](https://eips.ethereum.org/EIPS/eip-4337)
+[EIP-4337 Account Abstraction](https://eips.ethereum.org/EIPS/eip-4337)
 
 
 #### Recent research
+
+[Validation focussed smart contract wallets](https://ethereum-magicians.org/t/validation-focused-smart-contract-wallets/6603)
+
+[The future of accounts](https://ethereum-magicians.org/t/validation-focused-smart-contract-wallets/6603)
+
+[EIP-3074](https://eips.ethereum.org/EIPS/eip-3074)
+
+[Publishing code code at EOA addresses](https://github.com/ethereum/EIPs/pull/5003)
 
 
 ## Community, education and outreach
@@ -204,7 +212,7 @@ Ethereum transaction fees protect the network from spam, denial-of-service attac
 
 #### Background reading
 
-[EIP 1559 (Robust Incentives Group)](https://ethereum.github.io/abm1559/notebooks/eip1559.html)
+[EIP-1559 (Robust Incentives Group)](https://ethereum.github.io/abm1559/notebooks/eip1559.html)
 
 #### Recent research
 
@@ -280,6 +288,13 @@ The execution layer is concerned with executing transactions, running the EVM an
 
 #### Recent research
 
+[Database optimizations](https://github.com/ledgerwatch/erigon/blob/devel/docs/programmers_guide/db_faq.md)
+
+[State expiry](https://notes.ethereum.org/@vbuterin/state_expiry_eip)
+
+[History management](https://eips.ethereum.org/EIPS/eip-4444)
+
+
 ### Formal verification
 
 Formal verification is writing code to verify that Ethereum's consensus specifications are correct and bug-free. There is an executable version of the specification written in Python that requires maintenance and development. Further research can help to improve the Python implementation of the specification and add tools that can more robustly verify correctness and identify issues.
@@ -318,6 +333,8 @@ DAOs are one of the key classes of application being built on top of Ethereum. T
 
 
 #### Recent research
+
+[Mapping the DAO ecosystem](https://www.researchgate.net/publication/358694594_Mapping_out_the_DAO_Ecosystem_and_Assessing_DAO_Autonomy)
 
 ### Developer tools
 
