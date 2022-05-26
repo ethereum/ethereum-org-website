@@ -49,7 +49,7 @@ Before suggesting a wallet, make sure you've read [our listing policy](https://w
 
 **Is the wallet globally accessible?**
 
-<!-- Please list any KYC requirements or geographic limitations of your wallet, if any exist. -->
+<!-- Please list any KYC requirements or geographic limitations of the wallet, if any exist. -->
 
 **Is the wallet available in multiple languages?**
 
