@@ -37,7 +37,7 @@ Before suggesting a wallet, make sure you've read [our listing policy](https://w
 
 **Is the wallet security tested? Please explain security measures i.e. security audit, internal security team, or some other method.**
 
-<!-- Please explain any security measures you have taken to ensure your wallet is secure -->
+<!-- Please explain any security measures you have taken to ensure the wallet is secure. -->
 
 **When did the wallet go live to users?**
 
