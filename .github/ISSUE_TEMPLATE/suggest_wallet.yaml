@@ -280,3 +280,12 @@ body:
     attributes:
       label: What educational resources/documentation do you provide to users?
       description: Please provide links to developer documentation, user documentation, and/or educational resources.
+  - type: markdown
+    id: extra
+    attributes:
+      value: "## Extra"
+  - type: textarea
+    id: wallet_extra
+    attributes:
+      label: Does the wallet have any integrated tools not mentioned above?
+      description: Please provide any information about extra features this wallet has that we may have missed in the above criteria. (e.g. privacy features, transaction batching, etc).
