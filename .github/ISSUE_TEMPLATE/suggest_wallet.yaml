@@ -228,4 +228,18 @@ body:
     id: wallet_eip_1559_support
     attributes:
       label: Does the wallet support EIP-1559 (type 2) transactions?
-      description: Please provide information on how the type of transactions this wallet supports.
+      description: Please provide information on the type of transactions this wallet supports.
+  - type: markdown
+    id: finance
+    attributes:
+      value: "## Finance"
+  - type: input
+    id: wallet_fiat_onramp
+    attributes:
+      label: Does the wallet have fiat on-ramps through credit/debit cards, wire transfers, or bank transfers (ACH)?
+      description: Please provide documentation on how a user is able to onboard and purchase crypto in the wallet.
+  - type: input
+    id: wallet_fiat_withdrawals
+    attributes:
+      label: Does the wallet support withdrawals to fiat?
+      description: an a user cash out their crypto assets directly to a card or bank account? Please provide documentation.
