@@ -162,11 +162,11 @@
     "endDate": "2022-06-30"
   },
   {
-    "title": "ETH SF",
-    "to": "https://airtable.com/shrZ89OEwQJRtXHPv/",
+    "title": "Graph Day & Graph Hack",
+    "to": "https://thegraph.com/graph-day/2022/",
     "sponsor": null,
     "location": "San Francisco, USA",
-    "description": "The energy and excitement at the first ETHSanFrancisco will be hard to top, but we have our eyes set on delivering an even more impactful experience.",
+    "description": "Join the world’s brightest dreamers & doers for a full day focused on web3, dapps, protocols, and the future of the internet. A three-day hackathon will follow immediately afterwards.",
     "startDate": "2022-06-02",
     "endDate": "2022-06-05"
   },
@@ -268,6 +268,15 @@
     "description": "The Ethereum Community Conference (EthCC) is the largest annual European Ethereum event focused on technology and community. Three intense days of conferences, networking and learning.",
     "startDate": "2022-07-19",
     "endDate": "2022-07-21"
+  },
+  {
+    "title": "ETHLatam",
+    "to": "https://twitter.com/ethlatam",
+    "sponsor": null,
+    "location": "Buenos Aires, Argentina",
+    "description": "A 4-day conference that builds upon the work of the local pioneers that laid the foundations for a vibrant community that made crypto mainstream in Argentina.",
+    "startDate": "2022-08-11",
+    "endDate": "2022-08-14"
   },
   {
     "title": "ETHMexicoCity",
