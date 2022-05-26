@@ -47,7 +47,7 @@ Before suggesting a wallet, make sure you've read [our listing policy](https://w
 
 <!-- Are developers actively working on the wallet? Provide proof that the wallet is actively being worked on (ex. GitHub repo link). -->
 
-**Is your wallet globally accessible?**
+**Is the wallet globally accessible?**
 
 <!-- Please list any KYC requirements or geographic limitations of your wallet, if any exist. -->
 
