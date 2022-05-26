@@ -90,3 +90,4 @@ With the release of Gatsby v4.15.0, [the config option `graphqlTypegen` has been
 - [Official Gatsby Typescript guide](https://www.gatsbyjs.com/docs/how-to/custom-configuration/typescript/)
 - [Official Typescript website](https://www.typescriptlang.org/)
 - [GraphQL Typegen](https://www.gatsbyjs.com/docs/how-to/local-development/graphql-typegen/)
+- [Typescript Challenges](https://github.com/type-challenges/type-challenges)
