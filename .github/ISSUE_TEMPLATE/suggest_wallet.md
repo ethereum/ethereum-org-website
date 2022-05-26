@@ -173,7 +173,7 @@ Before suggesting a wallet, make sure you've read [our listing policy](https://w
 
 ### Support
 
-**Does the wallet have a person the ethereum.org team can contact regarding the wallet in future?**
+**Who can the ethereum.org team can contact regarding the wallet in future?**
 
 <!-- If possible, provide a Telegram, Discord, or Twitter username. -->
 <!-- Please note that as a result of any future dispute the wallet may be temporarily removed from ethereum.org. Having a contact person allows lets us avoid this situation and resolve issues more quickly. --> 
