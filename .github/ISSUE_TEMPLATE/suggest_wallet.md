@@ -181,7 +181,7 @@ Before suggesting a wallet, make sure you've read [our listing policy](https://w
 **Does the wallet have a dedicated support team?**
 
 <!-- Where should we send users that are having issues? -->
-<!-- How fast is your support? -->
+<!-- How fast is the support? -->
 
 **What educational resources/documentation do you provide to users?**
 
