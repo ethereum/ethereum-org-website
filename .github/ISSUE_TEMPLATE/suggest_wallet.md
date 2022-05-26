@@ -39,7 +39,7 @@ Before suggesting a wallet, make sure you've read [our listing policy](https://w
 
 <!-- Please explain any security measures you have taken to ensure your wallet is secure -->
 
-**When did your wallet go live to users?**
+**When did the wallet go live to users?**
 
 <!-- Please provide a date when your wallet was usable by the public. -->
 
