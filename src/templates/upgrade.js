@@ -397,7 +397,7 @@ const UpgradePage = ({ data: { mdx } }) => {
 }
 
 export const upgradePageQuery = graphql`
-  query UpgradePageQuery($relativePath: String) {
+  query UpgradePage($relativePath: String) {
     mdx(fields: { relativePath: { eq: $relativePath } }) {
       fields {
         slug

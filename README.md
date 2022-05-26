@@ -121,6 +121,10 @@ To create a new function, you will need to create two files:
 - One in `src/lambdas` where the logic will live. These are the ones that will be deployed to Netlify. These functions follow [this format](https://docs.netlify.com/functions/build-with-javascript/#synchronous-function-format).
 - One in `src/api` that will be just a wrapper around the previous one in order to be compatible with Gatsby functions. More on the [Gatbsy docs](https://www.gatsbyjs.com/docs/reference/functions/getting-started/) for the format they follow.
 
+Typically, you will develop and test functions in the Gatsby context, by running `yarn start`.
+
+In case you want to test them as if you were in a Netlify env, you can install the [Netlify CLI](https://docs.netlify.com/cli/get-started/) and run `netlify dev --framework=gatsby`.
+
 ### 6. Submit your PR
 
 - After your changes are committed to your GitHub fork, submit a pull request (PR) to the `dev` branch of the `ethereum/ethereum-org-website` repo
@@ -903,7 +907,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/pwilczynskiclearcode"><img src="https://avatars.githubusercontent.com/u/3940860?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Paweł Wilczyński</b></sub></a><br /><a href="#translation-pwilczynskiclearcode" title="Translation">🌍</a></td>
     <td align="center"><a href="https://github.com/joaoMpf"><img src="https://avatars.githubusercontent.com/u/56357437?v=4?s=100" width="100px;" alt=""/><br /><sub><b>joaoMpf</b></sub></a><br /><a href="#translation-joaoMpf" title="Translation">🌍</a></td>
     <td align="center"><a href="https://github.com/bskrksyp9"><img src="https://avatars.githubusercontent.com/u/31563474?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Bhaskar Kashyap</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=bskrksyp9" title="Documentation">📖</a> <a href="#content-bskrksyp9" title="Content">🖋</a></td>
-    <td align="center"><a href="https://github.com/bleesherman"><img src="https://avatars.githubusercontent.com/u/82793845?v=4?s=100" width="100px;" alt=""/><br /><sub><b>bleesherman</b></sub></a><br /><a href="#content-bleesherman" title="Content">🖋</a></td>
+    <td align="center"><a href="https://github.com/bleesherman"><img src="https://avatars.githubusercontent.com/u/82793845?v=4?s=100" width="100px;" alt=""/><br /><sub><b>bleesherman</b></sub></a><br /><a href="#content-bleesherman" title="Content">🖋</a> <a href="https://github.com/ethereum/ethereum-org-website/commits?author=bleesherman" title="Documentation">📖</a></td>
     <td align="center"><a href="https://www.linkedin.com/in/bertcmiller/"><img src="https://avatars.githubusercontent.com/u/30010302?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Robert Miller</b></sub></a><br /><a href="#content-bertmiller" title="Content">🖋</a></td>
     <td align="center"><a href="https://florian.sesser.at/"><img src="https://avatars.githubusercontent.com/u/454605?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Florian Sesser</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=hacklschorsch" title="Documentation">📖</a></td>
   </tr>
@@ -1224,6 +1228,8 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   </tr>
   <tr>
     <td align="center"><a href="https://github.com/JustynaBroniszewska"><img src="https://avatars.githubusercontent.com/u/33961199?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Justyna Broniszewska</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=JustynaBroniszewska" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/yanil3500"><img src="https://avatars.githubusercontent.com/u/11803254?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Elyanil Liranzo-Castro</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=yanil3500" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://www.linkedin.com/in/lisandroea/?locale=en_US"><img src="https://avatars.githubusercontent.com/u/54295410?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Lichu Acuña</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=LichuAcu" title="Documentation">📖</a></td>
   </tr>
 </table>
 

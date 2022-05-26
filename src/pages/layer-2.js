@@ -186,12 +186,13 @@ const StatDivider = styled.div`
 
 const Layer2Page = ({ data }) => {
   const intl = useIntl()
-  const localeForStatsBoxNumbers = getLocaleForNumberFormat(intl.locale)
   const [tvl, setTVL] = useState("loading...")
   const [percentChangeL2, setL2PercentChange] = useState("loading...")
   const [averageFee, setAverageFee] = useState("loading...")
 
   useEffect(() => {
+    const localeForStatsBoxNumbers = getLocaleForNumberFormat(intl.locale)
+
     const fetchL2Beat = async () => {
       try {
         const l2BeatData = await getData(`${GATSBY_FUNCTIONS_PATH}/l2beat`)
@@ -254,7 +255,7 @@ const Layer2Page = ({ data }) => {
       }
     }
     fetchCryptoStats()
-  }, [])
+  }, [intl.locale])
 
   const heroContent = {
     title: translateMessageId("layer-2-hero-title", intl),

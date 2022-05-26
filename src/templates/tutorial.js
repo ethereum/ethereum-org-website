@@ -187,7 +187,7 @@ const TutorialPage = ({ data, pageContext }) => {
 export default TutorialPage
 
 export const query = graphql`
-  query TutorialPageQuery($relativePath: String) {
+  query TutorialPage($relativePath: String) {
     siteData: site {
       siteMetadata {
         editContentUrl

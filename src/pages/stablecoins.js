@@ -333,6 +333,7 @@ const StablecoinsPage = ({ data }) => {
         const ethereumStablecoinData = stablecoinData.filter(
           (stablecoin) =>
             ethereumData.findIndex(
+              // eslint-disable-next-line eqeqeq
               (etherToken) => stablecoin.id == etherToken.id
             ) > -1
         )

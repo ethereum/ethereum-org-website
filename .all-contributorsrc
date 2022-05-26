@@ -5254,7 +5254,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/82793845?v=4",
       "profile": "https://github.com/bleesherman",
       "contributions": [
-        "content"
+        "content",
+        "doc"
       ]
     },
     {
@@ -7567,6 +7568,24 @@
       "name": "Justyna Broniszewska",
       "avatar_url": "https://avatars.githubusercontent.com/u/33961199?v=4",
       "profile": "https://github.com/JustynaBroniszewska",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "yanil3500",
+      "name": "Elyanil Liranzo-Castro",
+      "avatar_url": "https://avatars.githubusercontent.com/u/11803254?v=4",
+      "profile": "https://github.com/yanil3500",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "LichuAcu",
+      "name": "Lichu Acuña",
+      "avatar_url": "https://avatars.githubusercontent.com/u/54295410?v=4",
+      "profile": "https://www.linkedin.com/in/lisandroea/?locale=en_US",
       "contributions": [
         "doc"
       ]

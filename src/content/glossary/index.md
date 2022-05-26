@@ -949,6 +949,10 @@ A denomination of [ether](#ether). 1 szabo = 10<sup>12</sup> [wei](#wei), 10<sup
 
 A [hard fork](#hard-fork) of the Ethereum blockchain, which occurred at block 2,463,000 to change the [gas](#gas) calculation for certain I/O-intensive operations and to clear the accumulated state from a denial-of-service attack, which exploited the low gas cost of those operations.
 
+### terminal total difficulty (TTD) {#terminal-total-difficulty}
+
+The total difficulty is the sum of the Ethash mining difficulty for all blocks up to some specific point in the blockchain. The terminal total difficulty is a specific value for the total difficulty that will be used as the trigger for execution clients to switch off their mining and block gossip functions so the network can transition to proof-of-stake.
+
 ### testnet {#testnet}
 
 Short for "test network," a network used to simulate the behavior of the main Ethereum network (see [Mainnet](#mainnet)).
