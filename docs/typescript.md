@@ -1,5 +1,7 @@
 # Typescript
 
+Our codebase is rapidly increasing in size and in contributors. This brings challenges to reliably keep the code organized, avoid code duplication, and review code. To help alleviate these challenges, we’re in the process of to TypeScript across our codebase. We believe having a strongly typed language will reduce bugs, improve code quality, increase productivity and allow us to scale (both our codebase and our developer community) better in the long term.
+
 ## General considerations
 
 As we are progressively migrating the entire codebase to TS, we will have a mix of `.js` and `.ts` files in the process. For this reason and to make the migration easier for beginners, we have disabled the [`noImplicitAny`](https://www.typescriptlang.org/tsconfig#noImplicitAny) option from our `tsconfig.json` which means that you can use the `any` type and you will not get an error from that.
@@ -9,9 +11,12 @@ This is just starting, any suggestion is always welcomed and appreciated.
 
 ## Migration guide & contribution opportunity 🎉
 
-1. Run `yarn start` to generate the `src/gatsby-types.d.ts` file. More on this in the "GraphQL Typegen" section.
-2. Convert the js file into a `.ts` or `.tsx` file in case the file includes some jsx in it.
-3. Try to follow one already migrated file similar to the one you are migrating.
+We'd love your help in migrating our codebase!
+
+1. Visit the [Typescript Migration Issue](https://github.com/ethereum/ethereum-org-website/issues/6392) and make a comment to get assigned to a file from the complete list of pending files to be migrated.
+2. Run `yarn start` to generate the `src/gatsby-types.d.ts` file. More on this in the "GraphQL Typegen" section.
+3. Convert the js file into a `.ts` or `.tsx` file in case the file includes some jsx in it.
+4. Try to follow one already migrated file similar to the one you are migrating.
 
    - For `pages`,
 
@@ -74,7 +79,7 @@ This is just starting, any suggestion is always welcomed and appreciated.
      }
      ```
 
-4. Try to avoid as much as possible the usage of `any` :)
+5. Try to avoid as much as possible the usage of `any` :)
 
 ## GraphQL Typegen
 
