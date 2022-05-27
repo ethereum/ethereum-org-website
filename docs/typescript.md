@@ -80,6 +80,7 @@ We'd love your help in migrating our codebase!
      ```
 
 5. Try to avoid as much as possible the usage of `any` :)
+6. Run `yarn type-check` to check if everything looks good and nothing else broke.
 
 ## GraphQL Typegen
 
