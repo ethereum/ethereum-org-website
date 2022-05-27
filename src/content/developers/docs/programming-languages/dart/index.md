@@ -10,6 +10,7 @@ incomplete: true
 
 ## Tutorials {#tutorials}
 
+- [Build Your First DApp Using Flutter | Blockchain | Web 3 | Solidity](https://youtu.be/2Jx95kYfYbM) is a 13 minute tutorial taking one through Solidity programming language, Truffle to create, compile and test Smart Contracts, Ganache to deploy them, web3dart to connect Flutter App to the Smart Contract and Provider for State Management.
 - [Flutter and Blockchain – Hello World Dapp](https://www.geeksforgeeks.org/flutter-and-blockchain-hello-world-dapp/) takes you through all the steps to get started:
   1.  Installing the [Truffle development suite](https://www.trufflesuite.com/)
   2.  Writing a smart contract in [Solidity](https://soliditylang.org/)
