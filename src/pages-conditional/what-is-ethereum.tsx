@@ -1,10 +1,9 @@
 import React from "react"
 import styled from "styled-components"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import { graphql } from "gatsby"
+import { graphql, PageProps } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
 
-import { translateMessageId } from "../utils/translations"
 import Translation from "../components/Translation"
 import ActionCard from "../components/ActionCard"
 import Callout from "../components/Callout"
@@ -20,6 +19,9 @@ import {
   GrayContainer,
   Page,
 } from "../components/SharedStyledComponents"
+
+import { translateMessageId } from "../utils/translations"
+import { Context } from "../types"
 
 const HeroContent = styled(Content)`
   @media (max-width: ${(props) => props.theme.breakpoints.xl}) {
@@ -252,7 +254,9 @@ const cards = [
   },
 ]
 
-const WhatIsEthereumPage = ({ data }) => {
+const WhatIsEthereumPage = ({
+  data,
+}: PageProps<Queries.WhatIsEthereumQuery, Context>) => {
   const intl = useIntl()
   const actions = [
     {
@@ -542,7 +546,7 @@ export const calloutImage = graphql`
 `
 
 export const query = graphql`
-  {
+  query WhatIsEthereum {
     hero: file(relativePath: { eq: "what-is-ethereum.png" }) {
       childImageSharp {
         gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
