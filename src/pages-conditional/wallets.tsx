@@ -229,7 +229,10 @@ const WalletsPage = ({
     // Add fields for CardList
     const cardWallets = nodes.map((node) => {
       return {
+        ...node,
         image: getImage(node.image),
+        // @ts-ignore
+        alt: translateMessageId(`page-find-wallet-${node.id}-logo-alt`, intl),
         title: node.name,
         description: translateMessageId(
           // @ts-ignore

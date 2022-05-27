@@ -1,5 +1,7 @@
 import path from "path"
 
+// Expand the WalletsCsv type to have a new `image` field with its corresponding
+// asset image
 export const WalletsCsv = {
   name: "WalletsCsv",
   interfaces: ["Node"],
@@ -9,7 +11,7 @@ export const WalletsCsv = {
   fields: {
     image: {
       type: "File",
-      resolve: async (source, args, context) => {
+      resolve: async (source, _args, context) => {
         const absolutePath = path.resolve(
           "src",
           "assets",
