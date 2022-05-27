@@ -2,9 +2,8 @@ import React from "react"
 import styled from "styled-components"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { useIntl } from "gatsby-plugin-intl"
-import { graphql } from "gatsby"
+import { graphql, PageProps } from "gatsby"
 
-import { translateMessageId } from "../utils/translations"
 import Translation from "../components/Translation"
 import ActionCard from "../components/ActionCard"
 import ButtonLink from "../components/ButtonLink"
@@ -28,6 +27,9 @@ import {
   Page,
   StyledCard,
 } from "../components/SharedStyledComponents"
+
+import { translateMessageId } from "../utils/translations"
+import { Context } from "../types"
 
 const Slogan = styled.p`
   font-style: normal;
@@ -267,7 +269,7 @@ const cardListContent = [
   },
 ]
 
-const EthPage = (props) => {
+const EthPage = (props: PageProps<Queries.EthPageQuery, Context>) => {
   const intl = useIntl()
   const data = props.data
   return (
@@ -517,7 +519,7 @@ const EthPage = (props) => {
 export default EthPage
 
 export const query = graphql`
-  {
+  query EthPage {
     eth: file(relativePath: { eq: "eth.png" }) {
       childImageSharp {
         gatsbyImageData(

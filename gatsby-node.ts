@@ -8,6 +8,8 @@ import type { GatsbyNode } from "gatsby"
 
 import type { Context } from "./src/types"
 
+import { WalletsCsv } from "./src/schema"
+
 import mergeTranslations from "./src/scripts/mergeTranslations"
 import copyContributors from "./src/scripts/copyContributors"
 
@@ -338,11 +340,7 @@ export const createPages: GatsbyNode<any, Context>["createPages"] = async ({
         )
         createPage({
           path: `/${lang}/${page}/`,
-          component: path.resolve(
-            page === "wallets"
-              ? `src/pages-conditional/${page}/index.js`
-              : `src/pages-conditional/${page}.js`
-          ),
+          component: path.resolve(`src/pages-conditional/${page}.tsx`),
           context: {
             slug: `/${lang}/${page}/`,
             intl: {
@@ -394,7 +392,7 @@ export const onCreatePage: GatsbyNode<any, Context>["onCreatePage"] = async ({
 }
 
 export const createSchemaCustomization: GatsbyNode["createSchemaCustomization"] =
-  ({ actions }) => {
+  ({ actions, schema }) => {
     const { createTypes } = actions
     const typeDefs = `
     type Mdx implements Node {
@@ -442,6 +440,8 @@ export const createSchemaCustomization: GatsbyNode["createSchemaCustomization"] 
       path: String!
     }
   `)
+
+    createTypes(schema.buildObjectType(WalletsCsv))
   }
 
 export const onPreBootstrap: GatsbyNode["onPreBootstrap"] = ({ reporter }) => {
