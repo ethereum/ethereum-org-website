@@ -85,7 +85,7 @@ With the release of Gatsby v4.15.0, [the config option `graphqlTypegen` has been
 - Once you have that file created, a global `Queries` variable will be available which will contain all the query types.
 - More information about how this works https://www.gatsbyjs.com/docs/how-to/local-development/graphql-typegen/
 
-## Other resources
+## Learning resources
 
 - [Official Gatsby Typescript guide](https://www.gatsbyjs.com/docs/how-to/custom-configuration/typescript/)
 - [Official Typescript website](https://www.typescriptlang.org/)
