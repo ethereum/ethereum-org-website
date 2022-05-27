@@ -17,7 +17,20 @@ const Description = styled.p`
 
 const TopContent = styled.div``
 
-const Card = ({ emoji, title, description, children, className }) => (
+interface IProps {
+  emoji?: string
+  title: string
+  description: string
+  className?: string
+}
+
+const Card: React.FC<IProps> = ({
+  emoji,
+  title,
+  description,
+  children,
+  className,
+}) => (
   <StyledCard className={className}>
     <TopContent>
       {emoji && <Emoji size={3} text={emoji} mb="1rem" />}
