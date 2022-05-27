@@ -27,7 +27,11 @@ There are now several Layer 2 protocols that scale Ethereum using different tech
 
 [EthHub Layer-2](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/zk-rollups/)
 
+[Polynya: Rollups, DA and modular chains](https://polynya.medium.com/rollups-data-availability-layers-modular-blockchains-introductory-meta-post-5a1e7a60119d)
+
 #### Recent research
+
+[Arbitrum's fair-ordering for sequencers](https://eprint.iacr.org/2020/269.pdf)
 
 [ethresear.ch Layer 2](https://ethresear.ch/c/layer-2/32)
 
@@ -43,6 +47,8 @@ One particular area of layer 2 that requires more research and development is sa
 [Vitalik on bridges](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/)
 
 [Blockchain Bridges article](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8)
+
+[L2Beat](https://l2beat.com/)
 
 #### Recent research
 
@@ -67,6 +73,10 @@ Sharding Ethereum's blockchain has long been part of the development roadmap. Ho
 
 #### Recent research
 
+[EIP-4844](https://github.com/ethereum/EIPs/pull/5088)
+
+[Vitalik on sharding and data availability sampling](https://hackmd.io/@vbuterin/sharding_proposal)
+
 
 ### Hardware
 
@@ -79,6 +89,7 @@ Sharding Ethereum's blockchain has long been part of the development roadmap. Ho
 
 #### Recent research
 
+[ecdsa on FGPAs](https://ethresear.ch/t/does-ecdsa-on-fpga-solve-the-scaling-problem/6738)
 
 ## Security
 
@@ -172,7 +183,7 @@ There are complex crypto-economic factors relating to Ethereum's native asset (e
 
 ### PoS incentives
 
-When Ethereum transitions to proof of stake, its native asset (ether) will be used as collateral by validators. The cryptoeconomics of this
+When Ethereum transitions to proof of stake, its native asset (ether) will be used as collateral by validators. The cryptoeconomics of this determines the security of the network. Sophisticated validators may be able to exploit the nuances of the incentive layer to theior own advantage by extracting MEV or launching explicit attacks. 
 
 #### Background reading
 
@@ -180,10 +191,16 @@ When Ethereum transitions to proof of stake, its native asset (ether) will be us
 
 #### Recent research
 
+[Vitalik on PBS](https://notes.ethereum.org/s3JToeApTx6CKLJt8AbhFQ#Hybrid-PBS-can-we-use-proposers-only-for-inclusion-of-last-resort)
+
+[Three Attacks on PoS Ethereum](https://arxiv.org/abs/2110.10086)
+
+[Low-cost attacks on Ethereum 2.0 by sub 1/3 stakeholders](https://arxiv.org/abs/2102.02247)
+
 
 ### Liquid staking and derivatives
 
-Liquid staking allows users with less than 32 ETH to receive staking yields by swapping ether for a token representing staked ether that can be used in DeFi. However, the incentives and market dynamics associated with liquid staking as well as its effect on Ethereum's security (e.g. centralization risks, )
+Liquid staking allows users with less than 32 ETH to receive staking yields by swapping ether for a token representing staked ether that can be used in DeFi. However, the incentives and market dynamics associated with liquid staking as well as its effect on Ethereum's security (e.g. centralization risks).
 
 #### Background reading
 
@@ -192,6 +209,9 @@ Liquid staking allows users with less than 32 ETH to receive staking yields by s
 
 #### Recent research
 
+[Handling withdrawals from Lido](https://ethresear.ch/t/handling-withdrawals-in-lidos-eth-liquid-staking-protocol/8873)
+
+[Withdrawal credentials](https://ethresear.ch/t/withdrawal-credential-rotation-from-bls-to-eth1/8722)
 
 ### DeFi
 
@@ -206,6 +226,10 @@ Decentralized finance (DeFi) is one of the primary classes of application built 
 
 #### Recent research
 
+[Decentralized finance, centralized ownership?](https://arxiv.org/pdf/2012.09306.pdf)
+
+[Optimism: The road to sub-dollar transactions](https://medium.com/ethereum-optimism/the-road-to-sub-dollar-transactions-part-2-compression-edition-6bb2890e3e92)
+
 ### Fee markets
 
 Ethereum transaction fees protect the network from spam, denial-of-service attacks and bad smart-contract code. However, it also affects the end-user by influencing the cost of interacting with Ethereum. Balancing network security with end-user user-experience is an ongoing challenge that requires further research and development. 
@@ -216,17 +240,11 @@ Ethereum transaction fees protect the network from spam, denial-of-service attac
 
 #### Recent research
 
+[EIP-4396](https://eips.ethereum.org/EIPS/eip-4396)
 
-### Taxation and accounting
+[Multidimensional EIP-1559](https://ethresear.ch/t/multidimensional-eip-1559/11651)
 
-Crypto taxation is a complicated issue that likely requires a software solution. There are some nascent crypto accounting project but this area requires much more attention.
-
-#### Background reading
-
-#### Recent research
-
-[Example of taxation and accounting research: Cumming et al. 2019](https://www.mdpi.com/1911-8074/12/3/126)
-
+[Making EIP-1559 more like an AMM curve](https://ethresear.ch/t/make-eip-1559-more-like-an-amm-curve/9082)
 
 
 ## Clients and protocol research
@@ -260,10 +278,6 @@ The consensus layer is concerned with the proof-of-stake mechanism securing Ethe
 #### Recent research
 
 [Ethresear.ch Consensus](https://ethresear.ch/c/consensus/29)
-
-[Three Attacks on PoS Ethereum](https://arxiv.org/abs/2110.10086)
-
-[Low-cost attacks on Ethereum 2.0 by sub 1/3 stakeholders](https://arxiv.org/abs/2102.02247)
 
 [Availability/Finality dilemma](https://arxiv.org/abs/2009.04987)
 
@@ -328,6 +342,8 @@ There is a need for more data analysis tools and dashboards that give detailed i
 
 #### Recent research
 
+
+
 ## Apps and tooling
 
 ### DAOs
@@ -355,6 +371,7 @@ Tools for Ethereum developers are rapidly improving. There is lots of active res
 
 #### Recent research
 
+[Eth R&D Discord Consensus Tooling channel](https://discordapp.com/channels/595666850260713488/746343380900118528)
 
 ### App security
 
@@ -377,13 +394,4 @@ Apps on Ethereum are rarely fully decentralized because they rely on some centra
 
 #### Recent research
 
-
-### Composability
-
-Composability is the ability for different apps to work in parallel or on top of one another so that users are not locked-in to specific protocols. This is something that requires best-practices in interoperability and data standards. This is an area that would benefit from more ongoing research and development.
-
-#### Background reading
-
 [Smart contract composability](https://ethereum.org/en/developers/docs/smart-contracts/composability/)
-
-#### Recent research
