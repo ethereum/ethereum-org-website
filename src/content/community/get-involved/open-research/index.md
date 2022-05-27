@@ -379,6 +379,12 @@ Hacks on Ethereum nearly always exploit vulnerabilities in individual applicatio
 
 #### Background reading
 
+[Wormhole exploit report](https://blog.chainalysis.com/reports/wormhole-hack-february-2022/)
+
+[List of Ethereum contract hack post-mortems](https://forum.openzeppelin.com/t/list-of-ethereum-smart-contracts-post-mortems/1191)
+
+[Rekt News](https://twitter.com/RektHQ?s=20&t=3otjYQdM9Bqk8k3n1a1Adg)
+
 #### Recent research
 
 [ethresear.ch Applications](https://ethresear.ch/c/applications/18)
