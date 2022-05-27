@@ -17,7 +17,7 @@ const Description = styled.p`
 
 const TopContent = styled.div``
 
-interface IProps {
+export interface IProps {
   emoji?: string
   title: string
   description: string
