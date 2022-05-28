@@ -873,6 +873,10 @@ Short for "succinct non-interactive argument of knowledge", a SNARK is a type of
   Zero-knowledge rollups
 </DocLink>
 
+### Soft Fork {#soft-fork}
+
+A temporary divergence in a [blockchain](#blockchain) that occurs when the [consensus rules](#consensus-rules) become stricter. Contrary to a [hard fork](#hard-fork), a soft fork is backward compatible; upgraded nodes can validate blocks created by nonupgraded nodes as long as they follow the new consensus rules. However, nonupgraded nodes are ultimately encouraged to download the latest version of the blockchain's software to avoid complications related to transactions.
+
 ### Solidity {#solidity}
 
 A procedural (imperative) programming language with syntax that is similar to JavaScript, C++, or Java. The most popular and most frequently used language for Ethereum [smart contracts](#smart-contract). Created by Dr. Gavin Wood.
