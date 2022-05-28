@@ -6,9 +6,22 @@ const Figure = styled.figure`
   margin: 1rem 0;
 `
 
+const getYouTubeUrl = (id: string, start: string, end: string): string => {
+  const baseUrl: string = "https://www.youtube.com/embed/"
+
+  if (start === "0" && end === "0") {
+    return `${baseUrl}${id}`
+  } else if (end === "0") {
+    return `${baseUrl}${id}?start=${start}}`
+  } else {
+    return `${baseUrl}${id}?start=${start}&end=${end}`
+  }
+}
+
 export interface IProps {
   id: string
   start?: string
+  end?: string
   title?: string
 }
 
@@ -21,11 +34,9 @@ export interface IProps {
  * e.g. For https://www.youtube.com/watch?v=H-O3r2YMWJ4&t=123 the `start` is 123 (which means 123 seconds)
  * @returns Embedded YouTube video component
  */
-const YouTube: React.FC<IProps> = ({ id, start = "0", title }) => {
-  const startTimeAsNumber: number = parseInt(start)
-  const startQuery: string = startTimeAsNumber > 0 ? `?start=${start}` : ""
-  const baseUrl: string = "https://www.youtube.com/embed/"
-  const src: string = baseUrl + id + startQuery
+const YouTube: React.FC<IProps> = ({ id, start = "0", end = "0", title }) => {
+  const src: string = getYouTubeUrl(id, start, end)
+
   return (
     <Figure>
       <iframe
