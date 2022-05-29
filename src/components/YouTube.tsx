@@ -25,7 +25,7 @@ const YouTube = ({ id, start, title }) => {
         width="100%"
         height="315"
         src={src}
-        frameborder="0"
+        frameBorder="0"
         title={title || "YouTube"}
         allow="
       accelerometer;
@@ -34,7 +34,7 @@ const YouTube = ({ id, start, title }) => {
       encrypted-media;
       gyroscope;
       picture-in-picture"
-        allowfullscreen
+        allowFullScreen
       ></iframe>
     </Figure>
   )
