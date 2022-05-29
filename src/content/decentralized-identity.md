@@ -1,14 +1,14 @@
 ---
-title: Decentralized Identity 
-description: An overview of decentralized identity on Ethereum
+title: Decentralized identity 
+description: What is decentralized identity, and why does it matter?
 lang: en
 template: use-cases
 emoji: ":id:"
 sidebar: true
 sidebarDepth: 2
-summaryPoint1: Centralized identity systems are fragmented, poorly secured, and offer minimal privacy protection
+summaryPoint1: Centralized identity systems are fragmented, poorly secured, and offer minimal privacy protection.
 summaryPoint2: Decentralized identity increases personal control of one's identity information.
-summaryPoint3: Decentralized ID projects built on Ethereum can revolutionize identity management. 
+summaryPoint3: Decentralized identity projects can revolutionize identity management. 
 ---
 
 
