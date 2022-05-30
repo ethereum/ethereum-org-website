@@ -107,5 +107,22 @@
   "layer-2-faq-question-5-title": "Why aren't some layer 2 projects listed here?",
   "layer-2-faq-question-5-description-1": "We want to make sure we list the best resources possible so users can navigate the layer 2 space in a safe and confident manner. We maintain a framework of criteria for how projects are evaluated for inclusion. <a href=\"/contributing/adding-layer-2/\">View our layer 2 listing policy here</a>.",
   "layer-2-faq-question-5-description-2": "Anyone is free to suggest adding a layer 2 on ethereum.org. If there's a layer 2 that we have missed, <a href=\"https://github.com/ethereum/ethereum-org-website/issues/new?&template=suggest_layer2.md\">please suggest it</a>.",
-  "layer-2-further-reading-title": "Further reading"
+  "layer-2-further-reading-title": "Further reading",
+  "a-rollup-centric-ethereum-roadmap": "A rollup-centric ethereum roadmap",
+  "an-incomplete-guide-to-rollups": "An Incomplete Guide to Rollups",
+  "polygon-sidechain-vs-ethereum-rollups": "Polygon sidechain vs Ethereum rollups: Layer 2 scaling approaches| Vitalik Buterin and Lex Fridman",
+  "rollups-the-ultimate-ethereum-scaling-strategy": "ROLLUPS - The Ultimate Ethereum Scaling Strategy? Arbitrum & Optimism Explained",
+  "scaling-layer-1-with-shard-chains": "Scaling layer 1 with shard chains",
+  "understanding-rollup-economics-from-first-principals": "Understanding rollup economics from first principals",
+  "arbitrum-description": "Arbitrum is an Optimistic Rollup that aims to feel exactly like interacting with Ethereum, but with transactions costing a fraction of what they do on L1.",
+  "optimism-description": "Optimistic Ethereum is an EVM-equivalent Optimistic Rollup chain. It aims to be fast, simple, and secure.",
+  "boba-description": "Boba is an Optimistic Rollup originally forked from Optimism which is a scaling solution that aims to reduce gas fees, improve transaction throughput, and extend the capabilities of smart contracts.",
+  "dydx-description": "dYdX aims to build a powerful and professional exchange for trading crypto assets where users can truly own their trades and, eventually, the exchange itself.",
+  "loopring-description": "Loopring's zkRollup L2 solution aims to offer the same security guarantees as Ethereum mainnet, with a big scalability boost: throughput increased by 1000x, and cost reduced to just 0.1% of L1.",
+  "zksync-description": "zkSync is a user-centric zk rollup platform from Matter Labs. It is a scaling solution for Ethereum, already live on Ethereum mainnet. It supports payments, token swaps and NFT minting.",
+  "zkspace-description": "The ZKSpace platform consists of three main parts: a Layer 2 AMM DEX utilizing ZK-Rollups technology called ZKSwap, a payment service called ZKSquare, and an NFT marketplace called ZKSea.",
+  "layer-2-note": "Note:",
+  "layer-2-ecosystem-portal": "Ecosystem Portal",
+  "layer-2-token-lists": "Token Lists",
+  "layer-2-explore": "Explore"
 }

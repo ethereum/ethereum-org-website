@@ -694,7 +694,7 @@ const Layer2Page = ({ data }) => {
                   key={idx}
                   background={l2.background}
                   image={getImage(data[l2.imageKey])}
-                  description={l2.description}
+                  description={translateMessageId(l2.descriptionKey, intl)}
                   url={l2.website}
                   note={translateMessageId(l2.noteKey, intl)}
                   name={l2.name}
@@ -723,7 +723,7 @@ const Layer2Page = ({ data }) => {
                   key={idx}
                   background={l2.background}
                   image={getImage(data[l2.imageKey])}
-                  description={l2.description}
+                  description={translateMessageId(l2.descriptionKey, intl)}
                   url={l2.website}
                   note={translateMessageId(l2.noteKey, intl)}
                   name={l2.name}
@@ -860,38 +860,36 @@ const Layer2Page = ({ data }) => {
         <ul>
           <li>
             <Link to="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">
-              A rollup-centric ethereum roadmap
+              <Translation id="a-rollup-centric-ethereum-roadmap" />
             </Link>{" "}
             <i>- Vitalik Buterin </i>
           </li>
           <li>
             <Link to="https://vitalik.ca/general/2021/01/05/rollup.html">
-              An Incomplete Guide to Rollups
+              <Translation id="an-incomplete-guide-to-rollups" />
             </Link>{" "}
             <i>- Vitalik Buterin</i>
           </li>
           <li>
             <Link to="https://www.youtube.com/watch?v=DyNbmgkyxJI">
-              Polygon sidechain vs Ethereum rollups: Layer 2 scaling approaches
-              | Vitalik Buterin and Lex Fridman
+              <Translation id="polygon-sidechain-vs-ethereum-rollups" />
             </Link>{" "}
             <i>- Lex Clips</i>
           </li>
           <li>
             <Link to="https://www.youtube.com/watch?v=7pWxCklcNsU">
-              ROLLUPS - The Ultimate Ethereum Scaling Strategy? Arbitrum &
-              Optimism Explained
+              <Translation id="rollups-the-ultimate-ethereum-scaling-strategy" />
             </Link>{" "}
             <i>- Finematics</i>
           </li>
           <li>
             <Link to="/upgrades/shard-chains/">
-              Scaling layer 1 with shard chains
+              <Translation id="scaling-layer-1-with-shard-chains" />
             </Link>
           </li>
           <li>
             <Link to="https://barnabe.substack.com/p/understanding-rollup-economics-from?s=r">
-              Understanding rollup economics from first principals
+              <Translation id="understanding-rollup-economics-from-first-principals" />
             </Link>{" "}
             <i>- Barnabé Monnot</i>
           </li>

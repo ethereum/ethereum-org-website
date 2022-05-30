@@ -12,7 +12,7 @@
       "tokenLists": "https://arbucks.io/tokens/",
       "noteKey": "",
       "purpose": ["universal"],
-      "description": "Arbitrum is an Optimistic Rollup that aims to feel exactly like interacting with Ethereum, but with transactions costing a fraction of what they do on L1.",
+      "descriptionKey": "arbitrum-description",
       "imageKey": "arbitrum",
       "background": "white"
     },
@@ -28,7 +28,7 @@
       "tokenLists": "https://tokenlists.org/token-list?url=https://static.optimism.io/optimism.tokenlist.json",
       "noteKey": "layer-2-optimism-note",
       "purpose": ["universal"],
-      "description": "Optimistic Ethereum is an EVM-equivalent Optimistic Rollup chain. It aims to be fast, simple, and secure.",
+      "descriptionKey": "optimism-description",
       "imageKey": "optimism",
       "background": "white"
     },
@@ -44,7 +44,7 @@
       "tokenLists": "",
       "noteKey": "layer-2-boba-note",
       "purpose": ["universal"],
-      "description": "Boba is an Optimistic Rollup originally forked from Optimism which is a scaling solution that aims to reduce gas fees, improve transaction throughput, and extend the capabilities of smart contracts.",
+      "descriptionKey": "boba-description",
       "imageKey": "boba",
       "background": "black"
     }
@@ -72,7 +72,7 @@
       "tokenLists": "",
       "noteKey": "",
       "purpose": ["exchange"],
-      "description": "dYdX aims to build a powerful and professional exchange for trading crypto assets where users can truly own their trades and, eventually, the exchange itself.",
+      "descriptionKey": "dydx-description",
       "imageKey": "dydx",
       "background": "#121223"
     },
@@ -88,7 +88,7 @@
       "tokenLists": "",
       "noteKey": "",
       "purpose": ["payments", "exchange"],
-      "description": "Loopring's zkRollup L2 solution aims to offer the same security guarantees as Ethereum mainnet, with a big scalability boost: throughput increased by 1000x, and cost reduced to just 0.1% of L1.",
+      "descriptionKey": "loopring-description",
       "imageKey": "loopring",
       "background": "white"
     },
@@ -116,7 +116,7 @@
       "tokenLists": "",
       "noteKey": "",
       "purpose": ["tokens", "nft"],
-      "description": "zkSync is a user-centric zk rollup platform from Matter Labs. It is a scaling solution for Ethereum, already live on Ethereum mainnet. It supports payments, token swaps and NFT minting.",
+      "descriptionKey": "zksync-description",
       "imageKey": "zksync",
       "background": "#11142b"
     },
@@ -139,7 +139,7 @@
       "tokenLists": "",
       "noteKey": "",
       "purpose": ["payments", "exchange"],
-      "description": "The ZKSpace platform consists of three main parts: a Layer 2 AMM DEX utilizing ZK-Rollups technology called ZKSwap, a payment service called ZKSquare, and an NFT marketplace called ZKSea.",
+      "descriptionKey": "zkspace-description",
       "imageKey": "zkspace",
       "background": "black"
     }
