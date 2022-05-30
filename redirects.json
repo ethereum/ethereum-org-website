@@ -364,6 +364,11 @@
     "toPath": "/:splat/contributing/translation-program/content-buckets/"
   },
   {
+    "fromPath": "/*",
+    "toPath": "/en/404/",
+    "statusCode": 404
+  },
+  {
     "fromPath": "/en/*",
     "toPath": "/en/404/",
     "statusCode": 404
