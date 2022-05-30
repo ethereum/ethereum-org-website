@@ -7589,6 +7589,61 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "avcdsld",
+      "name": "Takamasa Arakawa",
+      "avatar_url": "https://avatars.githubusercontent.com/u/10495516?v=4",
+      "profile": "https://github.com/avcdsld",
+      "contributions": [
+        "code",
+        "bug"
+      ]
+    },
+    {
+      "login": "skaunov",
+      "name": "skaunov",
+      "avatar_url": "https://avatars.githubusercontent.com/u/65976143?v=4",
+      "profile": "https://github.com/skaunov",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "pcowgill",
+      "name": "Paul Cowgill",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2731712?v=4",
+      "profile": "https://paulcowgill.com",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "zjiekai",
+      "name": "zjiekai",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1871071?v=4",
+      "profile": "https://github.com/zjiekai",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "WiiCoder",
+      "name": "wii u",
+      "avatar_url": "https://avatars.githubusercontent.com/u/65171537?v=4",
+      "profile": "https://github.com/WiiCoder",
+      "contributions": [
+        "ideas"
+      ]
+    },
+    {
+      "login": "MonsieurDMA",
+      "name": "MonsieurDMA",
+      "avatar_url": "https://avatars.githubusercontent.com/u/92155252?v=4",
+      "profile": "https://github.com/MonsieurDMA",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,

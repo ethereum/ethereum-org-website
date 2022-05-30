@@ -704,7 +704,7 @@ Una [bifurcación dura](#hard-fork) de la blockchain de Ethereum, que se produjo
 
 Una red que se utiliza para simular el comportamiento de la red principal de Ethereum (consulta [red principal](#mainnet)).
 
-<DocLink to="/developers/docs/networks/#testnets">
+<DocLink to="/developers/docs/networks/#ethereum-testnets">
   Redes de pruebas
 </DocLink>
 

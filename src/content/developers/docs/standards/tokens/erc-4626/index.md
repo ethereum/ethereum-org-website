@@ -120,7 +120,7 @@ The decimal scalar for vault shares and operations involving `exchangeRate()`.
 **MUST** be emitted when tokens are deposited into the vault
 
 ```solidity
-event Deposit(address indexed _from, addres indexed _to, uint256 _value)
+event Deposit(address indexed _from, address indexed _to, uint256 _value)
 ```
 
 Where `_from` is the user who triggered the deposit and approved `_value` underlying tokens to the vault, and `_to` is the user who can withdraw the deposited tokens.
@@ -140,4 +140,4 @@ _Note_: All batch functions, including the hook, are also available in non-batch
 ## Further reading {#further-reading}
 
 - [EIP-4626: Tokenized vault Standard](https://eips.ethereum.org/EIPS/eip-4626)
-- [ERC-4626: Github Repo](https://github.com/Rari-Capital/solmate/blob/main/src/mixins/ERC4626.sol)
+- [ERC-4626: GitHub Repo](https://github.com/Rari-Capital/solmate/blob/main/src/mixins/ERC4626.sol)

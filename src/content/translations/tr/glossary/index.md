@@ -808,7 +808,7 @@ Belirli G/Ç (Girdi/Çıktı) yoğun işlemler için [gaz](#gas) hesaplamasını
 
 "Test network"ün (Test ağı) kısaltması, ana Ethereum ağının (bkz. [Mainnet](#mainnet)). davranışını simüle etmek için kullanılan bir ağ.
 
-<DocLink to="/developers/docs/networks/#testnets">
+<DocLink to="/developers/docs/networks/#ethereum-testnets">
   Test Ağları
 </DocLink>
 

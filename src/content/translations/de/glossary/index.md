@@ -808,7 +808,7 @@ Eine [Hard-Fork](#hard-fork) der Ethereum-Blockchain, die in Block 2.463.000 auf
 
 Kurz für "Testnetzwerk", ein Netzwerk, das dazu dient, das Verhalten des Hauptnetzwerks von Ethereum zu simulieren (siehe [Hauptnetzwerk](#mainnet)).
 
-<DocLink to="/developers/docs/networks/#testnets">
+<DocLink to="/developers/docs/networks/#ethereum-testnets">
   Testnetze
 </DocLink>
 
