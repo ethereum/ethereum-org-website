@@ -239,8 +239,17 @@
     "sponsor": null,
     "location": "Remote",
     "description": "ETHGlobal returns with their 3rd iteration of HackFS, a global celebration of storage, data, and building data-full decentralized applications.",
-    "startDate": "2022-07-01",
-    "endDate": "2022-07-31"
+    "startDate": "2022-07-08",
+    "endDate": "2022-07-29"
+  },
+  {
+    "title": "ETHVenice",
+    "to": "https://ethvenice.com/",
+    "sponsor": null,
+    "location": "Venice, Italy",
+    "description": "ETHVenice is an Italian Ethereum Event and Hackathon, simultaneously with The Feast of the Redeemer in Venice.",
+    "startDate": "2022-07-11",
+    "endDate": "2022-07-17"
   },
   {
     "title": "Metaverse Summit",
