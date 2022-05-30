@@ -7599,6 +7599,15 @@
         "code",
         "bug"
       ]
+    },
+    {
+      "login": "skaunov",
+      "name": "skaunov",
+      "avatar_url": "https://avatars.githubusercontent.com/u/65976143?v=4",
+      "profile": "https://github.com/skaunov",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
