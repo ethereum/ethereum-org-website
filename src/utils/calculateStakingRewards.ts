@@ -1,4 +1,4 @@
-const calculateStakingRewards = (totalAtStake) => {
+const calculateStakingRewards = (totalAtStake: number) => {
   const slotTimeInSec = 12
   const slotsInEpoch = 32
   const baseRewardFactor = 64
