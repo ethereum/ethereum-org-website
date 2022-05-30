@@ -17,7 +17,8 @@
     "./plugins/**/*",
     "./gatsby-node.ts",
     "./gatsby-config.ts",
-    "./overrides.d.ts"
+    "./overrides.d.ts",
+    "./environment.d.ts"
   ],
   "exclude": [
     "node_modules",
