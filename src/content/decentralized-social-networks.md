@@ -50,7 +50,7 @@ The Ethereum network has become the preferred tool for developers creating decen
 
 Users can send short messages called "Peeps", which cannot be deleted or modified. You can collect tips or tip anyone on the platform in ether (ETH) without leaving the app.
 
-### Mirror {#mirror}
+.
 
 [Mirror](https://mirror.xyz/) is a decentralized and user-owned content distribution platform similar to Medium. Users can sign up by connecting their wallets or providing an Ethereum Name Service (ENS) username.
 
