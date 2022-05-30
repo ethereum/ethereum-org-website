@@ -1231,6 +1231,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/yanil3500"><img src="https://avatars.githubusercontent.com/u/11803254?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Elyanil Liranzo-Castro</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=yanil3500" title="Documentation">📖</a></td>
     <td align="center"><a href="https://www.linkedin.com/in/lisandroea/?locale=en_US"><img src="https://avatars.githubusercontent.com/u/54295410?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Lichu Acuña</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=LichuAcu" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/avcdsld"><img src="https://avatars.githubusercontent.com/u/10495516?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Takamasa Arakawa</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=avcdsld" title="Code">💻</a> <a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Aavcdsld" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="https://github.com/skaunov"><img src="https://avatars.githubusercontent.com/u/65976143?v=4?s=100" width="100px;" alt=""/><br /><sub><b>skaunov</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=skaunov" title="Documentation">📖</a></td>
   </tr>
 </table>
 
