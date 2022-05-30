@@ -957,7 +957,7 @@ The total difficulty is the sum of the Ethash mining difficulty for all blocks u
 
 Short for "test network," a network used to simulate the behavior of the main Ethereum network (see [Mainnet](#mainnet)).
 
-<DocLink to="/developers/docs/networks/#testnets">
+<DocLink to="/developers/docs/networks/#ethereum-testnets">
   Testnets
 </DocLink>
 

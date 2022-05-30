@@ -18,7 +18,7 @@ Düğümlerin ve istemcilerin ne olduğu konusunda henüz bir fikriniz yoksa, [D
 
 Düğüm hizmeti sağlayıcıları, siz uğraşmayın diye sahne arkasında sizin için dağıtılmış düğüm istemcileri çalıştırır.
 
-Bu hizmetler tipik olarak blok zincirine yazmak ve blok zincirinden okumak için kullanabileceğiniz bir API anahtarı sağlar. Bunlar genellikle Mainnet'e ek olarak [Ethereum test ağlarına](/developers/docs/networks/#testnets) erişim içerir.
+Bu hizmetler tipik olarak blok zincirine yazmak ve blok zincirinden okumak için kullanabileceğiniz bir API anahtarı sağlar. Bunlar genellikle Mainnet'e ek olarak [Ethereum test ağlarına](/developers/docs/networks/#ethereum-testnets) erişim içerir.
 
 Bazı hizmetler, sizin için yönettikleri kendi özel düğümünüzü sunarken, diğerleri etkinliği düğümler arasında dağıtmak için yük dengeleyicileri kullanır.
 
