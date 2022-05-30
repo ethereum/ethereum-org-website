@@ -80,8 +80,11 @@ In May 2022, [Instagram announced support for NFTs](https://about.instagram.com/
 
 ## Use Ethereum-based social networks {#Use-Ethereum-social-media}
 
-- [Status](https://status.im/)
-- [Mirror](https://mirror.xyz/)
+**Status** - _Status is a secure messaging app that uses an open-source, peer-to-peer protocol, and end-to-end encryption to protect your messages from third parties._ 
+- [Website](https://status.im/)
+
+**Mirror** - _Mirror is a decentralized, user-owned publishing platform built on Ethereum that allows users to crowdfund ideas, monetize content, and build high-value communities. 
+- [Website](https://mirror.xyz/)
 
 ## Further reading {#Further-reading}
 
