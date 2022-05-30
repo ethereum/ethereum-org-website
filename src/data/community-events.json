@@ -229,7 +229,7 @@
     "to": "https://2022.ethseattle.org/",
     "sponsor": null,
     "location": "Seattle, USA",
-    "description": "ETHSeattle is a hackathon in Seattle, USA.",
+    "description": "ETHSeattle is an Ethereum summit in Seattle, USA.",
     "startDate": "2022-07-08",
     "endDate": "2022-07-08"
   },
@@ -279,6 +279,15 @@
     "endDate": "2022-07-21"
   },
   {
+    "title": "ETHSeoul",
+    "to": "https://2022.ethseoul.org/",
+    "sponsor": null,
+    "location": "Seoul, South Korea",
+    "description": "Join Seoul's first Ethereum Hackathon & Summit hosted by KryptoSeoul & Dystopia Labs",
+    "startDate": "2022-08-05",
+    "endDate": "2022-08-13"
+  },
+  {
     "title": "ETHLatam",
     "to": "https://twitter.com/ethlatam",
     "sponsor": null,
@@ -302,6 +311,15 @@
     "sponsor": null,
     "location": "Stanford, USA",
     "description": "DeFi is an emerging suite of applications for decentralized asset management over blockchain technology. ",
+    "startDate": "2022-08-27",
+    "endDate": "2022-08-28"
+  },
+  {
+    "title": "Hack.Summit('SF')",
+    "to": "https://sf.hacksummit.org/",
+    "sponsor": null,
+    "location": "San Francisco, California",
+    "description": "Hack.Summit('SF') is a 2-day blockchain summit hosted by Hack.VC & Dystopia Labs",
     "startDate": "2022-08-27",
     "endDate": "2022-08-28"
   },
@@ -340,6 +358,15 @@
     "description": "Join for ETHGlobal's return to South America and kick off Devcon in the perfect way, by building.",
     "startDate": "2022-10-07",
     "endDate": "2022-10-09"
+  },
+  {
+    "title": "DeFi Bogotá",
+    "to": "https://2022.defibogota.org/",
+    "sponsor": null,
+    "location": "Bogotá, Colombia",
+    "description": "DeFi Bogotá is a DeFi-focused summit in Colombia.",
+    "startDate": "2022-10-10",
+    "endDate": "2022-10-10"
   },
   {
     "title": "Devcon",
