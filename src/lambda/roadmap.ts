@@ -2,9 +2,7 @@ import axios from "axios"
 
 import type { HandlerResponse } from "@netlify/functions"
 
-const lambda = async (
-  githubToken: string | undefined
-): Promise<HandlerResponse> => {
+const lambda = async (githubToken: string): Promise<HandlerResponse> => {
   try {
     const baseURL =
       "https://api.github.com/repos/ethereum/ethereum-org-website/issues?per_page=100&state=all"
@@ -34,7 +32,13 @@ const lambda = async (
 }
 
 const handler = () => {
-  return lambda(process.env.GITHUB_TOKEN)
+  let apiKey = process.env.GITHUB_TOKEN
+
+  if (!apiKey) {
+    throw new Error("required env GITHUB_TOKEN not set")
+  }
+
+  return lambda(apiKey)
 }
 
 export { handler, lambda }

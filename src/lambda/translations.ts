@@ -2,7 +2,7 @@ import axios from "axios"
 
 import type { HandlerResponse } from "@netlify/functions"
 
-const lambda = async (apiKey: string | undefined): Promise<HandlerResponse> => {
+const lambda = async (apiKey: string): Promise<HandlerResponse> => {
   try {
     const baseURL = "https://api.crowdin.com/api/project/ethereum-org/status"
 
@@ -27,7 +27,13 @@ const lambda = async (apiKey: string | undefined): Promise<HandlerResponse> => {
 }
 
 const handler = () => {
-  return lambda(process.env.CROWDIN_API_KEY)
+  let apiKey = process.env.CROWDIN_API_KEY
+
+  if (!apiKey) {
+    throw new Error("required env CROWDIN_API_KEY not set")
+  }
+
+  return lambda(apiKey)
 }
 
 export { handler, lambda }
