@@ -5,7 +5,7 @@ interface Article {
 }
 
 /** Articles by Danny Ryan (Ethereum Foundation) */
-export const dannyArticles: Article[] = [
+export const dannyArticles: Array<Article> = [
   {
     title: "Finalized no. 34",
     description: "23 March 2022",
@@ -34,7 +34,7 @@ export const dannyArticles: Article[] = [
 ]
 
 /** Articles by Ben Edgington (PegaSys, ConsenSys) */
-export const benArticles: Article[] = [
+export const benArticles: Array<Article> = [
   {
     title: "What’s New in Eth2 – #92",
     description: "6 May 2022",
