@@ -2,7 +2,7 @@ import axios from "axios"
 
 import type { HandlerResponse } from "@netlify/functions"
 
-const lambda = async (apiKey: string): Promise<HandlerResponse> => {
+export const lambda = async (apiKey: string): Promise<HandlerResponse> => {
   try {
     const response = await axios.get(
       `https://api.etherscan.io/api?module=block&action=getblockcountdown&blockno=12965000&apikey=${apiKey}`
@@ -25,7 +25,7 @@ const lambda = async (apiKey: string): Promise<HandlerResponse> => {
   }
 }
 
-const handler = () => {
+export const handler = () => {
   let apiKey = process.env.ETHERSCAN_API_KEY
 
   if (!apiKey) {
@@ -34,5 +34,3 @@ const handler = () => {
 
   return lambda(apiKey)
 }
-
-export { handler, lambda }

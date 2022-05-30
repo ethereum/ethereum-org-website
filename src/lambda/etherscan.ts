@@ -2,7 +2,7 @@ import axios from "axios"
 
 import type { HandlerResponse } from "@netlify/functions"
 
-const lambda = async (apiKey: string): Promise<HandlerResponse> => {
+export const lambda = async (apiKey: string): Promise<HandlerResponse> => {
   const daysToFetch = 90
   const now = new Date()
   const endDate = now.toISOString().split("T")[0] // YYYY-MM-DD
@@ -27,7 +27,7 @@ const lambda = async (apiKey: string): Promise<HandlerResponse> => {
   }
 }
 
-const handler = () => {
+export const handler = () => {
   let apiKey = process.env.ETHERSCAN_API_KEY
 
   if (!apiKey) {
@@ -36,5 +36,3 @@ const handler = () => {
 
   return lambda(apiKey)
 }
-
-export { handler, lambda }

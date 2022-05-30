@@ -30,7 +30,7 @@ const lambda = async (apiKey: string): Promise<HandlerResponse> => {
   }
 }
 
-const handler = () => {
+export const handler = () => {
   let apiKey = process.env.ETHERSCAN_API_KEY
 
   if (!apiKey) {
@@ -39,5 +39,3 @@ const handler = () => {
 
   return lambda(apiKey)
 }
-
-export { handler, lambda }
