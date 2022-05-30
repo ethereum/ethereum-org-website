@@ -23,7 +23,7 @@ _Traders_ send one type of token to the pool and receive the other (for example,
 
 When liquidity providers want their assets back they can burn the pool tokens and receive back their tokens, including their share of the rewards.
 
-[Click here for a fuller description](https://uniswap.org/docs/v2/core-concepts/swaps/).
+[Click here for a fuller description](https://docs.uniswap.org/protocol/V2/concepts/core-concepts/swaps).
 
 ### Why v2? Why not v3? {#why-v2}
 
