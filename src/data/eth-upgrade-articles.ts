@@ -4,6 +4,7 @@ interface Article {
   link: string
 }
 
+/** Articles by Danny Ryan (Ethereum Foundation) */
 export const dannyArticles: Article[] = [
   {
     title: "Finalized no. 34",
@@ -32,6 +33,7 @@ export const dannyArticles: Article[] = [
   },
 ]
 
+/** Articles by Ben Edgington (PegaSys, ConsenSys) */
 export const benArticles: Article[] = [
   {
     title: "What’s New in Eth2 – #92",

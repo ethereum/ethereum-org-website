@@ -29,4 +29,4 @@ const handler = () => {
   return lambda(process.env.ETHERSCAN_API_KEY)
 }
 
-module.exports = { handler, lambda }
+export { handler, lambda }
