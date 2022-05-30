@@ -25,7 +25,7 @@ _Ticaret yapanlar_, havuza bir tür token gönderir ve (örneğin, **Token0** g�
 
 Likidite sağlayıcıları varlıklarını geri istediklerinde havuz token'larını yakabilir ve ödül payları da dahil olmak üzere token'larını geri alabilirler.
 
-[Daha geniş çaplı bir açıklama için buraya tıklayın](https://uniswap.org/docs/v2/core-concepts/swaps/).
+[Daha geniş çaplı bir açıklama için buraya tıklayın](https://docs.uniswap.org/protocol/V2/concepts/core-concepts/swaps/).
 
 ### Neden v2? Neden v3 değil? {#why-v2}
 
@@ -204,13 +204,13 @@ Eş takasının token0 ve token1 arasındaki takas oranına karar verme yöntemi
 İşte basit bir örnek. Basitlik adına, tablonun ondalık kısmından sonra yalnızca üç haneye sahip olduğunu ve sayıların doğru olmaması için %0,3 işlem ücretini göz ardı ettiğimizi unutmayın.
 
 | Olay                                                            |  reserve0 |  reserve1 | reserve0 \* reserve1 | Ortalama takas oranı (token1 / token0) |
-| --------------------------------------------------------------- | ---------:| ---------:| ----------------------:| -------------------------------------- |
-| İlk kurulum                                                     | 1,000.000 | 1,000.000 |              1,000,000 |                                        |
-| Ticaret Yapan A, 50 tane token0'ı 47.619 token1 ile takas eder  | 1,050.000 |   952.381 |              1,000,000 | 0.952                                  |
-| Ticaret Yapan B, 10 tane token0'ı 8.984 token1 ile takas eder   | 1,060.000 |   943.396 |              1,000,000 | 0.898                                  |
-| Ticaret Yapan C, 40 tane token0'ı 34.305 token1 ile takas eder  | 1,100.000 |   909.090 |              1,000,000 | 0.858                                  |
-| Ticaret Yapan D, 109.01 tane token0'ı 100 token1 ile takas eder |   990.990 | 1,009.090 |              1,000,000 | 0.917                                  |
-| Ticaret Yapan E, 10 tane token0'ı 10.079 token1 ile takas eder  | 1,000.990 |   999.010 |              1,000,000 | 1.008                                  |
+| --------------------------------------------------------------- | --------: | --------: | -------------------: | -------------------------------------- |
+| İlk kurulum                                                     | 1,000.000 | 1,000.000 |            1,000,000 |                                        |
+| Ticaret Yapan A, 50 tane token0'ı 47.619 token1 ile takas eder  | 1,050.000 |   952.381 |            1,000,000 | 0.952                                  |
+| Ticaret Yapan B, 10 tane token0'ı 8.984 token1 ile takas eder   | 1,060.000 |   943.396 |            1,000,000 | 0.898                                  |
+| Ticaret Yapan C, 40 tane token0'ı 34.305 token1 ile takas eder  | 1,100.000 |   909.090 |            1,000,000 | 0.858                                  |
+| Ticaret Yapan D, 109.01 tane token0'ı 100 token1 ile takas eder |   990.990 | 1,009.090 |            1,000,000 | 0.917                                  |
+| Ticaret Yapan E, 10 tane token0'ı 10.079 token1 ile takas eder  | 1,000.990 |   999.010 |            1,000,000 | 1.008                                  |
 
 Ticaret yapanlar daha fazla token0 sağladıkça, arz ve talebe bağlı olarak token1'in göreceli değeri artar ve bunun tersi de aynı şekilde işler.
 
@@ -366,10 +366,10 @@ Geçen süre sıfır değilse, bu bloktaki ilk takas işlemi biziz demektir. Bu 
 
 Her maliyet biriktirici, son ücret ve (diğer token'ın rezervi/bu token'ın rezervi) saniye cinsinden geçen sürenin çarpımı ile güncellenir. Ortalama bir fiyat elde etmek için kümülatif fiyatın zaman içinde iki nokta olduğunu okursunuz ve aralarındaki zaman farkına bölersiniz. Örneğin, bu olay dizisini varsayalım:
 
-| Olay                                                           |  reserve0 |  reserve1 | zaman damgası | Marjinal takas oranı (reserve1 / reserve0) |         price0CumulativeLast |
-| -------------------------------------------------------------- | ---------:| ---------:| ------------- | ------------------------------------------:| ----------------------------:|
-| İlk kurulum                                                    | 1,000.000 | 1,000.000 | 5,000         |                                      1.000 |                            0 |
-| Ticaret Yapan A, 50 token0 yatırır ve 47.619 token1 geri alır  | 1,050.000 |   952.381 | 5,020         |                                      0.907 |                           20 |
+| Olay                                                           |  reserve0 |  reserve1 | zaman damgası | Marjinal takas oranı (reserve1 / reserve0) |       price0CumulativeLast |
+| -------------------------------------------------------------- | --------: | --------: | ------------- | -----------------------------------------: | -------------------------: |
+| İlk kurulum                                                    | 1,000.000 | 1,000.000 | 5,000         |                                      1.000 |                          0 |
+| Ticaret Yapan A, 50 token0 yatırır ve 47.619 token1 geri alır  | 1,050.000 |   952.381 | 5,020         |                                      0.907 |                         20 |
 | Ticaret Yapan B, 10 token0 yatırır ve 8.984 token1 geri alır   | 1,060.000 |   943.396 | 5,030         |                                      0.890 |       20+10\*0.907 = 29.07 |
 | Ticaret Yapan C 40 token0 yatırır ve 34.305 token1 geri alır   | 1,100.000 |   909.090 | 5,100         |                                      0.826 |    29.07+70\*0.890 = 91.37 |
 | Ticaret Yapan D, 100 token1 yatırır ve 109.01 token0 geri alır |   990.990 | 1,009.090 | 5,110         |                                      1.018 |    91.37+10\*0.826 = 99.63 |
@@ -501,9 +501,9 @@ Eğer bu ilk yatırma ise, `MINIMUM_LIQUIDITY` tane token yaratın ve onları ki
 Arbitrajda değer kaybetmemek için eşit değer sağlamak para yatıran kişinin çıkarına olduğu için buna güvenebiliriz. Diyelim ki iki token'ın değeri aynı, ancak yatıran kişimiz **Token0**'a göre dört kat daha fazla **Token1** yatırdı. Ticaret yapan bir kişi, eş takasının **Token0**'ın daha değerli olduğunu düşündüğü gerçeğini ondan değer yaratmak için kullanabilir.
 
 | Olay                                                               | reserve0 | reserve1 | reserve0 \* reserve1 | Havuzun değeri (reserve0 + reserve1) |
-| ------------------------------------------------------------------ | --------:| --------:| ----------------------:| ------------------------------------:|
-| İlk kurulum                                                        |        8 |       32 |                    256 |                                   40 |
-| Ticaret yapan kişi 8 **Token0** tokeni yatırır, 16 **Token1** alır |       16 |       16 |                    256 |                                   32 |
+| ------------------------------------------------------------------ | -------: | -------: | -------------------: | -----------------------------------: |
+| İlk kurulum                                                        |        8 |       32 |                  256 |                                   40 |
+| Ticaret yapan kişi 8 **Token0** tokeni yatırır, 16 **Token1** alır |       16 |       16 |                  256 |                                   32 |
 
 Gördüğünüz gibi, ticaret yapan kişi havuzun değerindeki bir düşüşten gelen 8 token kazanarak ona sahip olan yatırım yapan kişiye zarar verdi.
 
@@ -517,12 +517,12 @@ Sonraki her yatırmada, iki varlık arasındaki takas oranını zaten biliyoruz 
 İster ilk yatırma ister sonraki bir yatırma olsun, sağladığımız likidite token'larının sayısı `reserve0*reserve1`'deki değişikliğin kareköküne eşittir ve likidite token'ının değeri değişmez (her iki tür için de eşit değerlere sahip olmayan bir yatırım almadığı sürece böyledir, aksi hâlde "para cezası" dağıtılır). İşte aynı değere sahip iki token'lı, üç iyi yatırma ve bir kötü yatırma bulunan başka bir örnek (yalnızca bir token türünden para yatırma, bu nedenle herhangi bir likidite token'ı üretmez).
 
 | Olay                       | reserve0 | reserve1 | reserve0 \* reserve1 | Havuz değeri (reserve0 + reserve1) | Bu yatırma için basılmış likidite token'ları | Toplam likidite token'ları | her bir likidite token'ının değeri |
-| -------------------------- | --------:| --------:| ----------------------:| ----------------------------------:| --------------------------------------------:| --------------------------:| ----------------------------------:|
-| İlk kurulum                |    8.000 |    8.000 |                     64 |                             16.000 |                                            8 |                          8 |                              2.000 |
-| Her türden dördünü yatırma |   12.000 |   12.000 |                    144 |                             24.000 |                                            4 |                         12 |                              2.000 |
-| Her türden ikisini yatırma |   14.000 |   14.000 |                    196 |                             28.000 |                                            2 |                         14 |                              2.000 |
-| Eşit olmayan değer yatırma |   18.000 |   14.000 |                    252 |                             32.000 |                                            0 |                         14 |                             ~2.286 |
-| Arbitrajdan sonra          |  ~15.874 |  ~15.874 |                    252 |                            ~31.748 |                                            0 |                         14 |                             ~2.267 |
+| -------------------------- | -------: | -------: | -------------------: | ---------------------------------: | -------------------------------------------: | -------------------------: | ---------------------------------: |
+| İlk kurulum                |    8.000 |    8.000 |                   64 |                             16.000 |                                            8 |                          8 |                              2.000 |
+| Her türden dördünü yatırma |   12.000 |   12.000 |                  144 |                             24.000 |                                            4 |                         12 |                              2.000 |
+| Her türden ikisini yatırma |   14.000 |   14.000 |                  196 |                             28.000 |                                            2 |                         14 |                              2.000 |
+| Eşit olmayan değer yatırma |   18.000 |   14.000 |                  252 |                             32.000 |                                            0 |                         14 |                             ~2.286 |
+| Arbitrajdan sonra          |  ~15.874 |  ~15.874 |                  252 |                            ~31.748 |                                            0 |                         14 |                             ~2.267 |
 
 ```solidity
         }
@@ -987,7 +987,7 @@ Likidite sağlayıcıları, işlemi mevcut takas oranına yakın bir takas oran�
 Örneğin, takas oranının bire bir olduğu ve likidite sağlayıcısının şu değerleri belirlediği bir durumu hayal edin:
 
 | Parametre      | Değer |
-| -------------- | -----:|
+| -------------- | ----: |
 | amountADesired |  1000 |
 | amountBDesired |  1000 |
 | amountAMin     |   900 |
