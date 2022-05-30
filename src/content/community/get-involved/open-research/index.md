@@ -11,7 +11,7 @@ One of the primary strengths of Ethereum is that it is constantly being improved
 
 ## General research resources
 
-Regardless of the specific topic, there is a wealth of information on Ethereum research to be found at [ethresear.ch](https://ethresear.ch) and the [Eth R&D Discord channel](https://discord.gg/n7JxAeRu). These are the primary places where Ethereum researchers discuss the latest ideas and development opportunities.
+Regardless of the specific topic, there is a wealth of information on Ethereum research to be found at [ethresear.ch](https://ethresear.ch) and the [Eth R&D Discord channel](https://discord.gg/n7JxAeRu). This report from [DelphiDigital](https://members.delphidigital.io/reports/the-hitchhikers-guide-to-ethereum) also covers a lot of ground. These are the primary places where Ethereum researchers discuss the latest ideas and development opportunities.
 
 ## Scaling and performance
 
@@ -34,6 +34,8 @@ There are now several Layer 2 protocols that scale Ethereum using different tech
 [Arbitrum's fair-ordering for sequencers](https://eprint.iacr.org/2020/269.pdf)
 
 [ethresear.ch Layer 2](https://ethresear.ch/c/layer-2/32)
+
+[Rollup-centric roadmap](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698)
 
 
 ### Bridges
@@ -246,6 +248,8 @@ Ethereum transaction fees protect the network from spam, denial-of-service attac
 
 [Making EIP-1559 more like an AMM curve](https://ethresear.ch/t/make-eip-1559-more-like-an-amm-curve/9082)
 
+[Cross domain MEV](http://arxiv.org/abs/2112.01472)
+
 
 ## Clients and protocol research
 
@@ -283,6 +287,8 @@ The consensus layer is concerned with the proof-of-stake mechanism securing Ethe
 
 [Single slot finality](https://ethresear.ch/t/a-model-for-cumulative-committee-based-finality/10259)
 
+[Proposer-builder separation](https://notes.ethereum.org/@vbuterin/pbs_censorship_resistance)
+
 
 ### Execution clients
 
@@ -309,6 +315,10 @@ The execution layer is concerned with executing transactions, running the EVM an
 [State expiry](https://notes.ethereum.org/@vbuterin/state_expiry_eip)
 
 [History management](https://eips.ethereum.org/EIPS/eip-4444)
+
+[Verkle Trees](https://vitalik.ca/general/2021/06/18/verkle.html)
+
+[Data availability sampling](https://github.com/ethereum/research/wiki/A-note-on-data-availability-and-erasure-coding)
 
 
 ### Formal verification
