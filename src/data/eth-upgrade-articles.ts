@@ -1,4 +1,10 @@
-export const dannyArticles = [
+interface Article {
+  title: string
+  description: string
+  link: string
+}
+
+export const dannyArticles: Article[] = [
   {
     title: "Finalized no. 34",
     description: "23 March 2022",
@@ -26,24 +32,24 @@ export const dannyArticles = [
   },
 ]
 
-export const benArticles = [
+export const benArticles: Article[] = [
   {
-    title: "What’s New in Eth2 – #88",
+    title: "What’s New in Eth2 – #92",
     description: "6 May 2022",
     link: "https://hackmd.io/@benjaminion/eth2_news/https%3A%2F%2Fhackmd.io%2F%40benjaminion%2Fwnie2_220506",
   },
   {
-    title: "What’s New in Eth2 – #88",
+    title: "What’s New in Eth2 – #91",
     description: "8 April 2022",
     link: "https://hackmd.io/@benjaminion/eth2_news/https%3A%2F%2Fhackmd.io%2F%40benjaminion%2Fwnie2_220408",
   },
   {
-    title: "What’s New in Eth2 – #88",
+    title: "What’s New in Eth2 – #90",
     description: "25 March 2022",
     link: "https://hackmd.io/@benjaminion/eth2_news/https%3A%2F%2Fhackmd.io%2F%40benjaminion%2Fwnie2_220325",
   },
   {
-    title: "What’s New in Eth2 – #88",
+    title: "What’s New in Eth2 – #89",
     description: "11 March 2022",
     link: "https://hackmd.io/@benjaminion/eth2_news/https%3A%2F%2Fhackmd.io%2F%40benjaminion%2Fwnie2_220311",
   },

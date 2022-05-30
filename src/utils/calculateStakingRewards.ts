@@ -1,4 +1,5 @@
-const calculateStakingRewards = (totalAtStake: number) => {
+/** Calculates the current APR for the staking reward */
+const calculateStakingRewards = (totalAtStake: number): number => {
   const slotTimeInSec = 12
   const slotsInEpoch = 32
   const baseRewardFactor = 64
