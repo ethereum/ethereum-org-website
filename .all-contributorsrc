@@ -7608,6 +7608,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "pcowgill",
+      "name": "Paul Cowgill",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2731712?v=4",
+      "profile": "https://paulcowgill.com",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
