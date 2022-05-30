@@ -1,6 +1,8 @@
-const axios = require("axios")
+import axios from "axios"
 
-const lambda = async () => {
+import type { HandlerResponse } from "@netlify/functions"
+
+const lambda = async (): Promise<HandlerResponse> => {
   try {
     const response = await axios.get(`https://l2beat.com/api/tvl.json`)
     if (response.status < 200 || response.status >= 300) {
@@ -14,7 +16,10 @@ const lambda = async () => {
     }
   } catch (error) {
     console.error(error)
-    return { statusCode: 500, body: JSON.stringify({ msg: error.message }) }
+    return {
+      statusCode: 500,
+      body: JSON.stringify({ msg: (error as Error).message }),
+    }
   }
 }
 
@@ -22,4 +27,4 @@ const handler = () => {
   return lambda()
 }
 
-module.exports = { handler, lambda }
+export { handler, lambda }

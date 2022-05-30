@@ -1,6 +1,8 @@
-const axios = require("axios")
+import axios from "axios"
 
-const lambda = async (apiKey) => {
+import type { HandlerResponse } from "@netlify/functions"
+
+const lambda = async (apiKey: string | undefined): Promise<HandlerResponse> => {
   try {
     const daysToFetch = 90
     const now = new Date()
@@ -21,7 +23,10 @@ const lambda = async (apiKey) => {
     }
   } catch (error) {
     console.error(error)
-    return { statusCode: 500, body: JSON.stringify({ msg: error.message }) }
+    return {
+      statusCode: 500,
+      body: JSON.stringify({ msg: (error as Error).message }),
+    }
   }
 }
 
@@ -29,4 +34,4 @@ const handler = () => {
   return lambda(process.env.ETHERSCAN_API_KEY)
 }
 
-module.exports = { handler, lambda }
+export { handler, lambda }

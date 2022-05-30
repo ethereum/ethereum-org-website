@@ -1,6 +1,8 @@
-const axios = require("axios")
+import axios from "axios"
 
-const lambda = async (apiKey) => {
+import type { HandlerResponse } from "@netlify/functions"
+
+const lambda = async (apiKey: string | undefined): Promise<HandlerResponse> => {
   const daysToFetch = 90
   const now = new Date()
   const endDate = now.toISOString().split("T")[0] // YYYY-MM-DD
@@ -18,7 +20,10 @@ const lambda = async (apiKey) => {
     return { statusCode: 200, body: JSON.stringify(data) }
   } catch (error) {
     console.error(error)
-    return { statusCode: 500, body: JSON.stringify({ msg: error.message }) }
+    return {
+      statusCode: 500,
+      body: JSON.stringify({ msg: (error as Error).message }),
+    }
   }
 }
 

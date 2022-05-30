@@ -1,6 +1,8 @@
-const axios = require("axios")
+import axios from "axios"
 
-const lambda = async function (apiKey) {
+import type { HandlerResponse } from "@netlify/functions"
+
+const lambda = async (apiKey: string | undefined): Promise<HandlerResponse> => {
   try {
     const baseURL = "https://api.crowdin.com/api/project/ethereum-org/status"
 
@@ -15,11 +17,11 @@ const lambda = async function (apiKey) {
       statusCode: 200,
       body: JSON.stringify({ data }),
     }
-  } catch (err) {
-    console.log(err) // output to netlify function log
+  } catch (error) {
+    console.log(error) // output to netlify function log
     return {
       statusCode: 500,
-      body: JSON.stringify({ msg: err.message }),
+      body: JSON.stringify({ msg: (error as Error).message }),
     }
   }
 }
@@ -28,4 +30,4 @@ const handler = () => {
   return lambda(process.env.CROWDIN_API_KEY)
 }
 
-module.exports = { handler, lambda }
+export { handler, lambda }

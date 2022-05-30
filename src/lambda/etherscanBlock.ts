@@ -1,6 +1,8 @@
-const axios = require("axios")
+import axios from "axios"
 
-const lambda = async (apiKey) => {
+import type { HandlerResponse } from "@netlify/functions"
+
+const lambda = async (apiKey: string | undefined): Promise<HandlerResponse> => {
   try {
     const response = await axios.get(
       `https://api.etherscan.io/api?module=block&action=getblockcountdown&blockno=12965000&apikey=${apiKey}`
@@ -16,7 +18,10 @@ const lambda = async (apiKey) => {
     }
   } catch (error) {
     console.error(error)
-    return { statusCode: 500, body: JSON.stringify({ msg: error.message }) }
+    return {
+      statusCode: 500,
+      body: JSON.stringify({ msg: (error as Error).message }),
+    }
   }
 }
 
