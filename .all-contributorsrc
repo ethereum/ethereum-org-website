@@ -7626,6 +7626,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "WiiCoder",
+      "name": "wii u",
+      "avatar_url": "https://avatars.githubusercontent.com/u/65171537?v=4",
+      "profile": "https://github.com/WiiCoder",
+      "contributions": [
+        "ideas"
+      ]
     }
   ],
   "contributorsPerLine": 7,
