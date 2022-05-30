@@ -2,7 +2,7 @@
   {
     "url": "https://www.youtube.com/watch?v=gyMwXuJrbJQ",
     "title": "Learn Blockchain, Solidity, and Full Stack Web3 Development with JavaScript ",
-    "description": "This course will give you a full introduction into all of the core concepts related to blockchain, smart contracts, Solidity, ERC20s, full-stack Web3 dapps, decentralized finance (DeFi), JavaScript, TypeScript, Chainlink, Ethereum, upgradable smart contracts, DAOs, the graph, moralis, aave, IPFS, and more. Follow along with the videos and you'll be a blockchain wizard in no time! ",
+    "description": "This course will give you a full introduction to all of the core concepts related to blockchain, smart contracts, Solidity, ERC20s, full-stack Web3 dapps, DeFi, JavaScript, TypeScript, Chainlink, Ethereum, upgradable smart contracts, DAOs, the graph, Moralis, Aave, IPFS, and more. Follow along with the videos and you'll be a blockchain wizard in no time!",
     "author": "Patrick Collins",
     "authorGithub": "https://github.com/PatrickAlphaC",
     "tags": [
@@ -28,7 +28,6 @@
       "slither",
       "echidna",
       "filecoin",
-      "web3uikit",
       "moralis",
       "alchemy",
       "the graph",
@@ -75,10 +74,10 @@
   {
     "url": "https://www.youtube.com/watch?v=fNMfMxGxeag",
     "title": "Introduction to Foundry",
-    "description": "We build a minimal foundry project using a staking application. Showing you how to work with foundry.  ",
+    "description": "We build a minimal Foundry project using a staking application to show you how to work with Foundry.",
     "author": "Patrick Collins",
     "authorGithub": "https://github.com/PatrickAlphaC",
-    "tags": ["solidity", "foundry", "bash", "video"],
+    "tags": ["solidity", "foundry", "video"],
     "skillLevel": "beginner",
     "timeToRead": "19",
     "lang": "en",
@@ -86,8 +85,8 @@
   },
   {
     "url": "https://www.youtube.com/watch?v=pdsYCkUWrgQ",
-    "title": "How to Connect your Smart Contracts to Metamask | Full Stack Web3",
-    "description": "We learn exactly how web3 / blockchain / smart contract applications work in the front end using HTML and Javascript. We then go through 6 different ways you can connect your Metamask, Phantom, or other blockchain wallet address to your front end. We’ll look at popular Nextjs / React packages to make your development lifecycle 100 times easier. ",
+    "title": "How to Connect your Smart Contracts to Metamask",
+    "description": "We learn exactly how web3 / blockchain / smart contract applications work in the front end using HTML and Javascript. We then go through 6 different ways you can connect your Metamask, Phantom, or other blockchain wallet address to your front end. We’ll look at popular Nextjs / React packages to make your development lifecycle 100 times easier.",
     "author": "Patrick Collins",
     "authorGithub": "https://github.com/PatrickAlphaC",
     "tags": [
@@ -95,14 +94,11 @@
       "javascript",
       "hardhat",
       "metamask",
-      "html",
       "nextjs",
       "reactjs",
       "moralis",
-      "web3modal",
       "web3-react",
       "ethersjs",
-      "usedapp",
       "video"
     ],
     "skillLevel": "beginner",
@@ -113,7 +109,7 @@
   {
     "url": "https://www.youtube.com/watch?v=pdsYCkUWrgQ",
     "title": "How to build an on-chain DAO",
-    "description": "Using Compound and Openzeppelin as a basis, we build a 100% on-chain DAO using an ERC20 governance token for votes.  ",
+    "description": "Using Compound and Openzeppelin as a basis, we build a 100% on-chain DAO using an ERC20 governance token for votes.",
     "author": "Patrick Collins",
     "authorGithub": "https://github.com/PatrickAlphaC",
     "tags": [
@@ -133,7 +129,7 @@
   {
     "url": "https://betterprogramming.pub/how-to-code-an-on-chain-dao-e525e13a57be",
     "title": "How to build an on-chain DAO",
-    "description": "Using Compound and Openzeppelin as a basis, we build a 100% on-chain DAO using an ERC20 governance token for votes.  ",
+    "description": "Using Compound and Openzeppelin as a basis, we build a 100% on-chain DAO using an ERC20 governance token for votes.",
     "author": "Patrick Collins",
     "authorGithub": "https://github.com/PatrickAlphaC",
     "tags": [
@@ -160,14 +156,12 @@
       "javascript",
       "hardhat",
       "metamask",
-      "html",
       "nextjs",
       "reactjs",
       "moralis",
       "web3modal",
       "web3-react",
       "ethersjs",
-      "usedapp"
     ],
     "skillLevel": "beginner",
     "timeToRead": "14",
