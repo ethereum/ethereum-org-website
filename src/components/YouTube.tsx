@@ -15,7 +15,14 @@ const Figure = styled.figure`
  * e.g. For https://www.youtube.com/watch?v=H-O3r2YMWJ4&t=123 the `start` is 123 (which means 123 seconds)
  * @returns Embedded YouTube video component
  */
-const YouTube = ({ id, start, title }) => {
+
+export interface IProps {
+  id: string
+  start: string
+  title: string
+}
+
+const YouTube: React.FC<IProps> = ({ id, start, title }) => {
   const startQuery = parseInt(start) > 0 ? `?start=${start}` : ""
   const baseUrl = "https://www.youtube.com/embed/"
   const src = baseUrl + id + startQuery
