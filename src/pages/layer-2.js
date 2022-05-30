@@ -274,7 +274,7 @@ const Layer2Page = ({ data }) => {
         isSecondary: "isSecondary",
       },
       {
-        content: "Move to layer 2",
+        content: translateMessageId("layer-2-hero-button-3", intl),
         pathId: "how-to-get-onto-layer-2",
         isSecondary: "isSecondary",
       },
