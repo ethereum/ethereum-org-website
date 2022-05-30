@@ -7589,6 +7589,16 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "avcdsld",
+      "name": "Takamasa Arakawa",
+      "avatar_url": "https://avatars.githubusercontent.com/u/10495516?v=4",
+      "profile": "https://github.com/avcdsld",
+      "contributions": [
+        "code",
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
