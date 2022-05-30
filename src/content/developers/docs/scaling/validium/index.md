@@ -15,7 +15,7 @@ You should have a good understanding of all the foundational topics and a high-l
 
 ## How does validium work? {#how-does-validium work}
 
-Validiums are a type of “rollup”: a [Layer 2](/layer-2/) scaling protocol designed to improve throughput by processing transactions off the main Ethereum chain. Off-chain transactions executed on the validium chain are verified via a smart contract on the base Ethereum layer using zero-knowledge proofs. This can be either a SNARK (Succinct Non-Interactive Argument of Knowledge) or SNARK (Scalable Transparent Argument of Knowledge). 
+Validiums are a type of “rollup”: a [Layer 2](/layer-2/) scaling protocol designed to improve throughput by processing transactions off the main Ethereum chain. Off-chain transactions executed on the validium chain are verified via a smart contract on the base Ethereum layer using zero-knowledge proofs. This can be either a SNARK (Succinct Non-Interactive Argument of Knowledge) or STARK (Scalable Transparent ARgument of Knowledge). 
 
 As with ZK-rollups, validity proofs prevent invalid state transitions on validium chains and enhance security guarantees available to users. For instance, a malicious operator cannot steal funds since users can always withdraw funds directly from the on-chain contract [using Merkle proofs](/developers/tutorials/merkle-proofs-for-offline-data-integrity/). 
 
