@@ -2,8 +2,9 @@
 export const useFocusTrap = (
   _querySelector: string
 ): ((() => void) | null)[] => {
-  const focusedElement: Element | null | undefined =
-    document?.querySelector(_querySelector)
+  if (typeof document === "undefined" || typeof window === "undefined")
+    return [null, null]
+  const focusedElement: Element | null = document.querySelector(_querySelector)
   if (!focusedElement) return [null, null]
 
   const handleKey = (e: KeyboardEvent) => {
