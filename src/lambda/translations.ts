@@ -2,7 +2,7 @@ import axios from "axios"
 
 import type { HandlerResponse } from "@netlify/functions"
 
-const lambda = async (apiKey: string): Promise<HandlerResponse> => {
+export const lambda = async (apiKey: string): Promise<HandlerResponse> => {
   try {
     const baseURL = "https://api.crowdin.com/api/project/ethereum-org/status"
 
