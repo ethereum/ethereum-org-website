@@ -84,7 +84,7 @@ Sharding Ethereum's blockchain has long been part of the development roadmap. Ho
 
 #### Recent research
 
-[EIP-4844](https://github.com/ethereum/EIPs/pull/5088)
+[EIP-4844: Proto-Danksharding](https://github.com/ethereum/EIPs/pull/5088)
 
 [Vitalik on sharding and data availability sampling](https://hackmd.io/@vbuterin/sharding_proposal)
 
