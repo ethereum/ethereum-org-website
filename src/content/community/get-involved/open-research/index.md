@@ -11,7 +11,7 @@ One of the primary strengths of Ethereum is that it is constantly being improved
 
 ## How Ethereum research works
 
-TBC
+Ethereum research is open and transparent. The culture is to make research tools and outputs as open and interactive as possible, for example through executable notebooks. Ethereum research is generally rapid, with new findings posted and discussed in the open on fora such as ethresear.ch rather than reaching the community after rounds of peer review.
 
 ## General research resources
 
@@ -264,18 +264,6 @@ The consensus layer is concerned with the proof-of-stake mechanism securing Ethe
 [Gasper paper](https://arxiv.org/abs/2003.03052)
 
 
-##### Client implementations
-
-[Prysm client](https://docs.prylabs.network/docs/how-prysm-works/beacon-node/)
-
-[Lighthouse client](https://lighthouse-book.sigmaprime.io/)
-
-[Lodestar client](https://lodestar.chainsafe.io/)
-
-[Teku client](https://consensys.net/knowledge-base/ethereum-2/teku/)
-
-[Nimbus client](https://nimbus.team/)
-
 
 #### Recent research
 
@@ -294,17 +282,8 @@ The execution layer is concerned with executing transactions, running the EVM an
 
 #### Background reading
 
-[Nodes and Clients](/developers/docs/nodes-and-clients/)
+[Nodes and Clients (includes links to client implementations](/developers/docs/nodes-and-clients/)
 
-#### Client implementations
-
-[Geth client](geth.ethereum.org)
-
-[Nethermind client](nethermind.io)
-
-[Besu client](https://consensys.net/quorum/developers/)
-
-[Erigon client](https://github.com/ledgerwatch/erigon)
 
 #### Recent research
 
