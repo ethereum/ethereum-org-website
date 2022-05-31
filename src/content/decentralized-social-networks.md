@@ -35,10 +35,17 @@ Many blockchain-based social platforms have native tokens that power monetizatio
 ## Benefits of decentralized social media platforms {#benefits-of-decentralized-social-media}
 
 1. Decentralized social media platforms are censorship-resistant and open to everyone. This means users cannot be banned, deplatformed, or restricted arbitrarily. 
+
 2. Decentralized social networks are built on open-source ideals and make source code for applications available for public inspection. By eliminating the implementation of opaque algorithms common in traditional social media, blockchain-based social networks can align the interests of users and platform creators. 
+
+3. Decentralized social networks eliminate the "middle-man." Content creators have direct ownership over their content, and they engage directly with followers, fans, buyers, and other parties, with nothing but a smart contract in between.
+
 3. As dapps running on the Ethereum network, which is sustained by a global, peer-to-peer network of nodes, decentralized social networks are less susceptible to server downtime and outages.
-4. Decentralized social platforms offer an improved monetization framework for content creators via non-fungible tokens (NFTs) NFTs, in-app crypto payments, and more.
+
+4. Decentralized social platforms offer an improved monetization framework for content creators via non-fungible tokens (NFTs) NFTs, in-app crypto payments, and more. 
+
 5. Decentralized social networks afford users a high level of privacy and anyonymity. For instance, an individual can sign in to an Ethereum-based social network using an ENS profile or wallet—without having to share personally identifiable information (PII), such as names, email addresses, etc. 
+
 6. Decentralized social media projects rely on decentralized storage, not centralized databases, which are considerably better for safeguarding user data.
 
 ## Decentralized social networks on Ethereum {#Ethereum-social-media}
