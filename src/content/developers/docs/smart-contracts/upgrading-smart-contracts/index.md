@@ -26,13 +26,15 @@ This can be done via the following methods:
 
 1. Creating multiple versions of a smart contract and migrating state (i.e., data) from the old contract to a new instance of the contract. 
 
-2. Creating separate contracts to store business logic and contract state.
+2. Creating separate contracts to store business logic and state.
 
-3. Using proxy patterns to delegate function calls from an immutable proxy contract to modifiable logic contracts. 
+3. Using proxy patterns to delegate function calls from an immutable proxy contract to a modifiable logic contract.
 
 4. Creating an immutable main contract that interfaces with and relies on flexible satellite contracts to execute specific functions. 
 
-### Upgrade mechanism #1: Contract migration {#upgrade-mechanism-contract-migration}
+5. Using the diamond pattern to delegate function calls from a proxy contract to logic contracts. 
+
+### Upgrade mechanism #1: Contract migration {#contract-migration}
 
 Contract migration is based on versioning—the idea of creating and managing unique states of the same software. Contract migration involves deploying a new instance of an existing smart contract and transferring storage and balances to the new contract. 
 
@@ -44,7 +46,7 @@ Contract migration is a relatively straightforward and safe measure for upgradin
 
 [More on contract migration.](https://blog.trailofbits.com/2018/10/29/how-contract-migration-works/)
 
-### Upgrade mechanism #2: Data separation {#upgrade-mechanism-data-separation}
+### Upgrade mechanism #2: Data separation {#data-separation}
 
 Another method for upgrading smart contracts is to separate business logic and data storage into separate contracts. This means users interact with the logic contract, while data is stored in the storage contract. 
 
@@ -56,28 +58,30 @@ By default, the storage contract is immutable—but you can replace the logic co
 
 Using this upgrade method requires updating the logic contract's address in the storage contract. You must also configure the new logic contract with the storage contract's address for reasons explained earlier. 
 
-The data separation pattern is arguably easier to implement compared to contract migration. However, you nhave to manage multiple contracts and implement more complex authorization schemes to ensure security. 
+The data separation pattern is arguably easier to implement compared to contract migration. However, you'll have to manage multiple contracts and implement complex authorization schemes to protect smart contracts from malicious upgrades.
 
-### Upgrade mechanism #3: Proxy patterns {#upgrade-mechanism-proxy-patterns}
+### Upgrade mechanism #3: Proxy patterns {#proxy-patterns}
 
-The proxy pattern also uses data separation and keeps business logic and state in separate contracts. However, in a proxy pattern, the storage contract (called a proxy) calls the logic contract via a delegate call. This is a reverse of the data separation method, where the logic contract calls the storage contract. 
+The proxy pattern also uses data separation to keep business logic and data in separate contracts. However, in a proxy pattern, the storage contract (called a proxy) calls the logic contract during code execution. This is a reverse of the data separation method, where the logic contract calls the storage contract. 
 
-`DELEGATECALL` is an opcode that allows a contract to call another contract, while the actual code execution happens in the context of the caller.  From the [Solidity documentation](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html#delegatecall-callcode-and-libraries): 
-
-> *There exists a special variant of a message call, named delegatecall which is identical to a message call apart from the fact that the code at the target address is executed in the context (i.e. at the address) of the calling contract and msg.sender and msg.value do not change their values. 
-> This means that a contract can dynamically load code from a different address at runtime. Storage, current address and balance still refer to the calling contract, only the code is taken from the called address.*
-
-While `DELEGATECALL` is mostly used for implementing libraries, it can be adapted to smart contract upgrades. Understanding how the proxy pattern works is key to grasping the role of delegate calls in upgrades. 
-
-This is what happens in a proxy pattern:
+The is what happens in a proxy pattern: 
 
 1. Users interact with the proxy contract, which stores data, but doesn't hold the business logic.
- 
-2. The proxy contract, however, delegates all user requests to the logic contract (which holds the business logic) using `DELEGATECALL`. The proxy contract stores the logic contract's address to facilitate calls. 
 
-3. This means the proxy contract reads and writes to its storage and executes logic stored at the logic contract as if calling an internal function.
+2. The proxy contract stores the address of the logic contract and delegates all function calls to the logic contract (which holds the business logic) using the `delegatecall` function. 
 
-4. Users interacting with the proxy contract are unaware of the relationship between the proxy contract and the logic contract. 
+3. After the call is forwarded to the logic contract, the returned data from the logic contract is retrieved and returned to the user. 
+
+Using the proxy patterns requires an understanding of the **delegatecall** fucntion. Basically, `delegatecall` is an opcode that allows a contract to call another contract, while the actual code execution happens in the context of the calling contract. An implication of using `delegatecall` in proxy patterns is that the proxy contract reads and writes to its storage and executes logic stored at the logic contract as if calling an internal function. 
+
+From the [Solidity documentation](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html#delegatecall-callcode-and-libraries): 
+
+> *There exists a special variant of a message call, named **delegatecall** which is identical to a message call apart from the fact that the code at the target address is executed in the context (i.e. at the address) of the calling contract and `msg.sender` and `msg.value` do not change their values. 
+> This means that a contract can dynamically load code from a different address at runtime. Storage, current address and balance still refer to the calling contract, only the code is taken from the called address.*
+
+The proxy contract knows to invoke `delegatecall` whenever a user calls a function because it has a `fallback` function built into it. In Solidity programming the [fallback function](https://docs.soliditylang.org/en/v0.8.9/contracts.html#fallback-function) is executed when a function call does not match functions specified in a contract. 
+
+Making the proxy pattern work requires writing a custom fallback function that specifies how the proxy contract should handle function calls it does not support. In this case the proxy's fallback function is programmed to initiate a delegatecall and reroute the user's request to the current logic contract implementation. 
 
 The proxy contract is immutable by default, but new logic contracts with updated business logic can be created. Performing the upgrade is then a matter of changing the address of the logic contract referenced in the proxy contract. 
 
@@ -85,7 +89,9 @@ By pointing the proxy contract to a new logic contract, the code executed when u
 
 Proxy patterns are a popular method for upgrading smart contracts because they eliminate the difficulties associated with contract migration. However, proxy patterns are more complicated to use and can introduce critical flaws, such as [function selector clashes](https://medium.com/nomic-foundation-blog/malicious-backdoors-in-ethereum-proxies-62629adf3357), if used improperly. 
 
-### Upgrade mechanism #4: Strategy pattern {#upgrade-mechanism-strategy-pattern}
+[More on proxy patterns](blog.openzeppelin.com/proxy-patterns/). 
+
+### Upgrade mechanism #4: Strategy pattern {#strategy-pattern}
 
 This technique is influenced by the [strategy pattern](https://en.wikipedia.org/wiki/Strategy_pattern), which encourages creating software programs that interface with other programs to implement specific features. Applying the strategy pattern to Ethereum development would mean building a smart contract that calls functions from other contracts. 
 
@@ -97,6 +103,23 @@ Although similar to the proxy pattern discussed earlier, the strategy pattern is
 
 The main drawback is that this pattern is mostly useful for rolling out minor upgrades. Also, if the main contract is compromised (e.g., via a hack), you cannot use this upgrade method. 
 
+### Upgrade mechanism #5: Diamond pattern {#diamond-pattern}
+
+The diamond pattern can be considered an improvement on the proxy pattern. Diamond patterns differ from proxy patterns because the proxy contract delegates function calls to more than one logic contract. 
+
+The logic contracts in the diamond pattern are known as *facets*. To make the diamond pattern work, you need to create an array in the proxy contract that maps [function selectors](https://docs.soliditylang.org/en/v0.8.12/abi-spec.html#function-selector) to different facet addresses. 
+
+When a user makes a function call, the proxy contract checks the mapping to find the facet responsible for executing that function. Then it invokes `delegatecall` (using the fallback function) and redirects the call to the appropriate logic contract.  
+
+The diamond upgrade pattern has some advantages over traditional proxy upgrade patterns:
+
+1. It allows you to upgrade a small part of the contract without changing all of the code. Using the proxy pattern for upgrades requires creating an entirely new logic contract, even  for minor upgrades. 
+
+2. All smart contracts (including logic contracts used in proxy patterns) have a 24KB size limit, which can be a limitation—especially for complex contracts requiring more functions. The diamond pattern makes it easy to solve this problem by splitting functions across multiple logic contracts. 
+
+3. Proxy patterns adopt a catch-all approach to access controls. An entity with access to upgrade functions can change the _entire_ contract. But the diamond pattern enables a modular permissions approach, where you can restrict entities to upgrading certain functions within a smart contract. 
+
+[More on the diamond pattern](https://eip2535diamonds.substack.com/p/introduction-to-the-diamond-standard?s=w). 
 
 ## Pros and cons of upgrading smart contracts {#pros-and-cons-of-ugrading-smart-contracts}
 
@@ -115,7 +138,7 @@ The main drawback is that this pattern is mostly useful for rolling out minor up
 
 3. Reduce trust assumptions by decentralizing the process of implementing upgrades. Possible strategies include using a [multi-sig wallet contract](/developers/docs/smart-contracts/#multisig) to control upgrades, or requiring [members of a DAO](/dao/) to vote on approving the upgrade. 
 
-4. Be aware of the costs involved in upgrading or migrating contracts. For instance, migrating user balances in a contract migration may require more than one transaction, meaning more gas fees. 
+4. Be aware of the costs involved in upgrading contracts. For instance, copying state (e.g., user balances) from an old contract to a new contract during contract migration may require more than one transaction, meaning more gas fees. 
 
 ## Resources {#resources}
 **OpenZeppelin Upgrades OS - _A suite of tools for deploying and securing upgradeable smart contracts._**
@@ -133,3 +156,4 @@ The main drawback is that this pattern is mostly useful for rolling out minor up
 - [Multiple ways to upgrade a Solidity smart contract](https://cryptomarketpool.com/multiple-ways-to-upgrade-a-solidity-smart-contract/) - Crypto Market Pool blog 
 - [Learn: Upgrading Smart Contracts](https://docs.openzeppelin.com/learn/upgrading-smart-contracts) - OpenZeppelin Docs
 - [Proxy Patterns For Upgradeability Of Solidity Contracts: Transparent vs UUPS Proxies](https://mirror.xyz/0xB38709B8198d147cc9Ff9C133838a044d78B064B/M7oTptQkBGXxox-tk9VJjL66E1V8BUF0GF79MMK4YG0) by Naveen Sahu
+- [How Diamond Upgrades Work](https://dev.to/mudgen/how-diamond-upgrades-work-417j) by Nick Mudge
