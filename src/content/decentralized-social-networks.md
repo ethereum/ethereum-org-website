@@ -69,7 +69,11 @@ Decentralized social media platforms aren't the only ones trying to incorporate 
 
 ### Reddit {#reddit}
 
-Reddit has [touted Community Points](https://cointelegraph.com/news/reddit-to-reportedly-tokenize-karma-points-and-onboard-500m-new-users), which are ERC-20 token that users can earn by posting quality content and contributing to the online community. You can redeem these tokens to gain exclusive privileges and perks. For this project, Reddit is working with Arbitrum, a [layer 2](/layer-2/) rollup designed to scale Ethereum transactions.
+Reddit has [touted Community Points](https://cointelegraph.com/news/reddit-to-reportedly-tokenize-karma-points-and-onboard-500m-new-users), which are ERC-20 tokens that users can earn by posting quality content and contributing to online communites (subreddits). You can redeem these tokens to [gain exclusive privileges and perks](https://www.reddit.com/community-points/) within a subreddit. For this project, Reddit is working with Arbitrum, a [layer 2](/layer-2/) rollup designed to scale Ethereum transactions.
+
+The program is already in the beta phase, with the r/CryptoCurrency subreddit [running its version of Community Points called "Moons"](https://www.reddit.com/r/CryptoCurrency/wiki/moons_wiki). From the community's wiki: 
+
+> *Moons are an ERC-20 token on the Rinkeby network launched by Reddit admins in May 2020 as a part of the Community Points project. They are a means for users to be rewarded for their contributions in r/CryptoCurrency with a unit of ownership in the subreddit. Moons are independent of Reddit and once earned neither the admins nor the subreddit moderators can take them away from users. Moons are managed by a suite of smart contracts that handle balances, transfers, distribution/claiming, and purchasing Special Memberships. The smart contracts and mobile apps have been reviewed and audited by Trail of Bits, an independent security firm.*
 
 ### Twitter {#twitter}
 
@@ -83,11 +87,24 @@ In May 2022, [Instagram announced support for NFTs](https://about.instagram.com/
 
 **[Status.im](https://status.im/)** - _Status is a secure messaging app that uses an open-source, peer-to-peer protocol, and end-to-end encryption to protect your messages from third parties._ 
 
-**[Mirror.xyz](https://mirror.xyz/)** - _Mirror is a decentralized, user-owned publishing platform built on Ethereum that allows users to crowdfund ideas, monetize content, and build high-value communities. 
+**[Mirror.xyz](https://mirror.xyz/)** - _Mirror is a decentralized, user-owned publishing platform built on Ethereum that allows users to crowdfund ideas, monetize content, and build high-value communities._ 
 
 ## Further reading {#Further-reading}
 
-- [Social Networks Are the Next Big Decentralization Opportunity](https://www.coindesk.com/tech/2021/01/22/social-networks-are-the-next-big-decentralization-opportunity/) by Ben Goertzel
-- [Web3 holds the promise of decentralized, community-powered social networks](https://venturebeat.com/2022/02/26/web3-holds-the-promise-of-decentralized-community-powered-social-networks/) by Sumit Ghosh
-- [An Overview of the Blockchain Social Media Landscape](https://www.gemini.com/cryptopedia/blockchain-social-media-decentralized-social-media) by Gemini Cryptopedia
-- [How Blockchain Can Solve Social Media Privacy](https://www.investopedia.com/news/ethereum-blockchain-social-media-privacy-problem-linkedin-indorse/) by Prableen Bajpai
+### Articles {#articles}
+
+- [Social Networks Are the Next Big Decentralization Opportunity](https://www.coindesk.com/tech/2021/01/22/social-networks-are-the-next-big-decentralization-opportunity/) — _Ben Goertzel_
+- [Web3 holds the promise of decentralized, community-powered social networks](https://venturebeat.com/2022/02/26/web3-holds-the-promise-of-decentralized-community-powered-social-networks/) — _Sumit Ghosh_
+- [An Overview of the Blockchain Social Media Landscape](https://www.gemini.com/cryptopedia/blockchain-social-media-decentralized-social-media) — _Gemini Cryptopedia_
+- [How Blockchain Can Solve Social Media Privacy](https://www.investopedia.com/news/ethereum-blockchain-social-media-privacy-problem-linkedin-indorse/) — _Prableen Bajpai_
+- [Social Media Networks Are Coming To The Blockchain](https://businesstechguides.co/what-are-decentralized-social-networks) — _Emmanuel Awosika_
+
+### Videos {#videos}
+- [Decentralized Social Media Explained](https://www.youtube.com/watch?v=UdT2lpcGvcQ) — _Coinmarketcap_
+- [DeSo Blockchain Wants to Decentralize Social Media](https://www.youtube.com/watch?v=SG2HUiVp0rE) — _Bloomberg Technology_
+- [The Future of Decentralized Social Media w/ Balaji Srinivasan, Vitalik Buterin, Juan Benet](https://www.youtube.com/watch?v=DTxE9KV3YrE) — _ETHGlobal_
+
+### Communities {#communities}
+- [Status Discord Server](https://discord.com/invite/3Exux7Y)
+- [Mirror Discord Server](https://discord.com/invite/txuCHcE8wV)
+- [r/CryptoCurrency subbreddit](https://www.reddit.com/r/CryptoCurrency/)
