@@ -62,16 +62,27 @@ const Card = styled(Link)`
   }
 `
 
-const ActionCard = ({
-  to,
-  alt,
-  image,
-  title,
-  description,
-  children,
-  className,
-  isRight,
-  isBottom = true,
+export interface IProps {
+  to?: string
+  alt?: string
+  image?: string
+  title?: string
+  description?: string
+  className?: string
+  isRight?: boolean
+  isBottom?: boolean
+}
+
+const ActionCard: React.FC<IProps> = ({
+  to, 
+  alt, 
+  image, 
+  title, 
+  description, 
+  children, 
+  className, 
+  isRight, 
+  isBottom = true
 }) => {
   const isImageURL = typeof image === "string" && image.includes("http")
   return (
