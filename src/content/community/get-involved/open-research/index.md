@@ -300,7 +300,7 @@ The execution layer is concerned with executing transactions, running the EVM an
 [Data availability sampling](https://github.com/ethereum/research/wiki/A-note-on-data-availability-and-erasure-coding)
 
 
-### Client Development
+## Client Development
 
 Client development makes the outcomes from protocol research into reality by building them into Ethereum clients. This includes updating the client specifications as well as building specific implementations. An Ethereum node is required to run two pieces of software - a consensus client to keep track of the head of the blockchain, gossip blocks anmd handle consensus logic and an execution client to support the Ethereum Virtual Machine and execute transactions. The [nodes and clients page](/developers/docs/nodes-and-clients/) explains about nodes and clients and includes links to all current client implementations.
 
@@ -317,6 +317,7 @@ Client development makes the outcomes from protocol research into reality by bui
 [Beacon API specification](https://ethereum.github.io/beacon-APIs/#/Beacon/getStateRoot)
 
 
+## Testing
 
 ### Formal verification
 
@@ -337,7 +338,7 @@ Formal verification is writing code to verify that Ethereum's consensus specific
 
 
 
-### Data science and analytics
+## Data science and analytics
 
 There is a need for more data analysis tools and dashboards that give detailed information about activity on Ethereum and the health of the network.
 
@@ -353,6 +354,8 @@ There is a need for more data analysis tools and dashboards that give detailed i
 
 
 ## Apps and tooling
+
+The application layer supports a very diverse ecosystem of programs that settle transactions on Ethereum's base layer. App teams are constantly finding new ways to leverage Ethereum to create lower-friction, composable, permissionless and censorship resistant versions of important Web2 apps or creating completely new web3-native concepts. At the same time, new tooling is being developed that makes building increasingly complex Ethereum apps easier.
 
 ### DeFi
 
@@ -408,6 +411,21 @@ Tools for Ethereum developers are rapidly improving. There is lots of active res
 #### Recent research
 
 [Eth R&D Discord Consensus Tooling channel](https://discordapp.com/channels/595666850260713488/746343380900118528)
+
+
+### Oracles
+
+Oracles are used to import off-chain data on-chain in a permissionless and decentralized way. This enables dapps to be reactive to real world phenomena such as price fluctuations in real-world assets, events in off-chain apps or even changes in the weather.
+
+#### Background reading
+
+[Introduction to Oracles](/developers/docs/oracles/)
+
+#### Recent Research
+
+[Survey of blockchain oracles](https://arxiv.org/pdf/2004.07140.pdf)
+
+[Chainlink white paper](https://chain.link/whitepaper)
 
 
 ### App security
