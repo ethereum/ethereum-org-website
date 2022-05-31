@@ -11,7 +11,7 @@ One of the primary strengths of Ethereum is that it is constantly being improved
 
 ## How Ethereum research works
 
-Ethereum research is open and transparent. The culture is to make research tools and outputs as open and interactive as possible, for example through executable notebooks. Ethereum research is generally rapid, with new findings posted and discussed in the open on fora such as ethresear.ch rather than reaching the community after rounds of peer review.
+Ethereum research is open and transparent. The culture is to make research tools and outputs as open and interactive as possible, for example through executable notebooks. Ethereum research is generally rapid, with new findings posted and discussed in the open on fora such as [ethresear.ch](https://ethresear.ch/) rather than reaching the community after rounds of peer review.
 
 ## General research resources
 
@@ -459,3 +459,7 @@ Apps on Ethereum are rarely fully decentralized because they rely on some centra
 #### Recent research
 
 [Smart contract composability](/developers/docs/smart-contracts/composability/)
+
+## Sources of Funding
+
+You can get involved with Ethereum research and get paid for it! For example, the Ethereum Foundation recently ran an [Academic Grants](/community/grants/academic-grants-round/) funding round. Information on active and upcoming funding opportunities can be found on the [grants page](community/grants/).
