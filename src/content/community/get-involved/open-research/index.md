@@ -456,6 +456,10 @@ Apps on Ethereum are rarely fully decentralized because they rely on some centra
 
 [Ethereum stack](/developers/docs/ethereum-stack/)
 
+[Introduction to smart contracts](/developers/docs/smart-contracts/)
+
+[Introduction to storage](/developers/docs/storage/)
+
 #### Recent research
 
 [Smart contract composability](/developers/docs/smart-contracts/composability/)
