@@ -47,7 +47,7 @@ Formal verification can help determine the correctness of a contract's compiled 
 
 Low-level formal verification uses techniques like static analysis and fuzzing to ensure that contract bytecode satisfies all properties. This assures developers that the business logic specified in the source code is what will run in the context of the EVM.
 
-## Advantages and disadvantages of formal verification {#advantages-and-disadvantages-of-formal-verification}
+## Advantages of formal verification {#advantages-of-formal-verification}
 
 Formal verification is useful for the following reasons:
 
@@ -65,13 +65,15 @@ Formal verification transforms informal specifications into properties grounded 
 
 Automated formal verification can be more efficient than line-by-line analysis of smart contract code. Formal verification approaches cover a larger surface area in a short timeframe. This can speed up the testing and development cycle for developers.
 
+## Disadvantages of formal verification {#disadvantages-of-formal-verification}
+
 Although formal verification is great for testing smart contracts, it has some disadvantages:
 
 ### 1. Difficulty in creating formal specifications {#difficulty-in-creating-formal-specifications}
 
 A prerequisite for formal verification is creating formal specifications, which can take a lot of time and effort. This will likely be the most difficult part of using formal verification for smart contracts.
 
-### 2. False positives {#false-positives}
+### 2. False negatives {#false-negatives}
 
 Formal verification can only check if the execution of the smart contract matches formal specifications. If specifications are poorly written, certain vulnerabilities cannot be detected by the formal verification audit. In this case, a developer might erroneously assume that the contract is bug-free.
 
