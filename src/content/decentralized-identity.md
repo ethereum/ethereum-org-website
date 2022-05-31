@@ -18,7 +18,7 @@ Identity means an individual's sense of self, defined by unique characteristics.
 
 ## What are identifiers? {#what-are-identifiers}
 
-An identifier is a piece of information that helps build a person's identity. Common identifiers include: 
+An identifier is a piece of information that acts as a pointer to a particular identity or identities. Common identifiers include: 
 
 - Name
 - Social security number/tax ID number 
@@ -26,7 +26,7 @@ An identifier is a piece of information that helps build a person's identity. Co
 - Date and place of birth
 - Digital identification credentials, e.g., email addresses, usernames, avatars
 
-It is important to understand that in these traditional examples of identifiers that _issuance_ and _control_ over these identifiers are maintained by a central agency. For example, legal names require permission from a government for issuance or before being changed, and changes to your social media handle require permission from the platform. 
+These traditional examples of identifiers are issued, held and controlled by central entities. You need permission from your government to change your name or from a social media platform to change your handle.
 
 ## What are attestations? {#what-are-attestations}
  
@@ -48,7 +48,7 @@ Decentralized identifiers are stored on distributed ledgers (blockchains) or pee
 
 Public-key infrastructure (PKI) is an information security measure that generates a [public key](/glossary/#public-key) and [private key](/glossary/#private-key) for an entity. Public-key cryptography is used in blockchain networks to authenticate user identities and prove ownership of digital assets. 
 
-A DID, like an Ethereum account, will have a private key and a public key. While the private key is used for encrypting and signing messages, the public key authenticates the identity of the entity controlling a DID. PKI provides proofs needed to authenticate entities and prevent impersonation and use of fake identities.
+Some decentralized identifiers, such as an Ethereum account, have public and private keys. The public key identifies the account's controller, while the private keys can sign and decrypt messages for this account. Public-key infrastructure provides the proof needed to authenticate entities and prevent impersonation and the use of fake identities.
 
 ### 2. Decentralized datastores {#decentralized-datastores}
 
@@ -86,7 +86,7 @@ Here's an hypothetical scenario to explain off-chain attestations:
 
 ### Off-chain attestations with persistent access {#offchain-attestations-with-persistent-access}
 
-Under this arrangement attestations are transformed into JSON files and stored off-chain (ideally on a [decentralized cloud storage](/developers/docs/storage/) platform, such as IPFS or Swarm). However, a hash of the JSON file is stored on-chain and linked to a DID via an on-chain registry. The associated DID could either be that of the issuer of the attestation or the recipient. 
+Under this arrangement attestations are transformed into JSON files and stored off-chain (ideally on a [decentralized cloud storage](/developers/docs/storage/) platform, such as IPFS or Swarm). However, a [hash](/glossary/#hash) of the JSON file is stored on-chain and linked to a DID via an on-chain registry. The associated DID could either be that of the issuer of the attestation or the recipient. 
 
 This approach enables attestations to gain blockchain-based persistence, while keeping claims information encrypted and verifiable. It also allows for selective disclosure since the holder of the private key can decrypt the information. 
 
@@ -104,7 +104,7 @@ Here's an example to show how on-chain attestations might work in practice:
 
 ## Benefits of decentralized identity {#benefits-of-decentralized-identity} 
 
-1. Decentralized identity increases increases individual control of identifying information. Decentralized identifiers and attestations can be verified without relying on centralized authorities and third-party services. 
+1. Decentralized identity increases individual control of identifying information. Decentralized identifiers and attestations can be verified without relying on centralized authorities and third-party services. 
 
 2. Decentralized identity solutions facilitates a trustless, seamless, and privacy-protecting method for verifying and managing user identity. 
 
@@ -125,7 +125,7 @@ A [Sign-In with Ethereum](https://login.xyz/) function would then enable servers
 
 Using many online services requires individuals to provide attestations and credentials, such as a driving license or national passport. But this approach is problematic because private user information can be compromised and service providers cannot verify the authenticity of the attestation. 
 
-Decentralized identity allows companies to skip on conventional Know-Your-Customer (KYC) processes and authenticate user identities via Verifiable Credentials. This reduces the cost of identity management and prevents the use of fake documentation. 
+Decentralized identity allows companies to skip on conventional [Know-Your-Customer (KYC)](https://en.wikipedia.org/wiki/Know_your_customer) processes and authenticate user identities via Verifiable Credentials. This reduces the cost of identity management and prevents the use of fake documentation. 
 
 ### 3. Voting and online communities {#voting-and-online-communities}
 
