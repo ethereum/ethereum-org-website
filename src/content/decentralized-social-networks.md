@@ -90,11 +90,13 @@ In January 2021, Twitter Blue [rolled out support for NFTs](https://mashable.com
 
 In May 2022, [Instagram announced support for NFTs](https://about.instagram.com/blog/announcements/instagram-digital-collectibles) on Ethereum and Polygon. Users can post NFTs directly to Instagram by connecting their Ethereum wallet. 
 
-## Use Ethereum-based social networks {#Use-Ethereum-social-media}
+## Use decentralized social networks {#use-decentralized-social-media}
 
 **[Status.im](https://status.im/)** - _Status is a secure messaging app that uses an open-source, peer-to-peer protocol, and end-to-end encryption to protect your messages from third parties._ 
 
-**[Mirror.xyz](https://mirror.xyz/)** - _Mirror is a decentralized, user-owned publishing platform built on Ethereum that allows users to crowdfund ideas, monetize content, and build high-value communities._ 
+**[Mirror.xyz](https://mirror.xyz/)** - _Mirror is a decentralized, user-owned publishing platform built on Ethereum for users to crowdfund ideas, monetize content, and build high-value communities._ 
+
+**[Lens Protocol](https://lens.xyz/)** - _Lens Protocol is a composable and decentralized social graph helping creators take ownership of their content wherever they go in the digital garden of the decentralized internet._
 
 ## Further reading {#Further-reading}
 
