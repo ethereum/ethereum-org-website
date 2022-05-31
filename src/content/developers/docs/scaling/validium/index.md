@@ -7,7 +7,7 @@ incomplete: true
 sidebarDepth: 3
 ---
 
-Validium is a [scaling solution](/developers/docs/scaling/) that enforces integrity of transactions using validity proofs like [ZK-rollups](/developers/docs/scaling/zk-rollups/), but doesn’t store transaction data on the main Ethereum layer. While off-chain data availability introduces trade-offs, it can lead to massive improvements in scalability (validiums can process ~ 9,000 transactions, or more, per second). 
+Validium is a [scaling solution](/developers/docs/scaling/) that enforces integrity of transactions using validity proofs like [ZK-rollups](/developers/docs/scaling/zk-rollups/), but doesn’t store transaction data on the Ethereum Mainnet. While off-chain data availability introduces trade-offs, it can lead to massive improvements in scalability (validiums can process ~ 9,000 transactions, or more, per second). 
 
 ## Prerequisites {#prerequisites}
 
@@ -25,9 +25,9 @@ The major difference between validiums and ZK-rollups concerns their positions o
 
 ### Off-chain vs on-chain data availability {#off-chain-vs-on-chain-data-availability}
 
-ZK-rollups post information about off-transactions to Ethereum Mainnet as `calldata`. This information can be used to recreate the state of the rollup, if necessary, to prove the validity (or lack thereof) of a specific state transition. As the data is anchored on Ethereum (on-chain data availability), ZK-rollups can directly benefit from Ethereum’s security guarantees—funds are always secure if Mainnet is operational.
+**ZK-rollups** post information about off-transactions to Ethereum Mainnet as `calldata`. This information can be used to recreate the state of the rollup, if necessary, to prove the validity (or lack thereof) of a specific state transition. As the data is anchored on Ethereum (**on-chain data availability**), ZK-rollups can directly benefit from Ethereum’s security guarantees—funds are always secure if Mainnet is operational.
 
-Validiums keep all data relating to transactions off the Ethereum chain (off-chain data availability). This improves throughput on validium chains since less data needs to be posted to Mainnet. It also reduces rollup costs by eliminating the need to publish calldata and increases privacy for users (transaction information doesn't make it to Mainnet). 
+**Validiums** keep all data relating to transactions off the Ethereum chain (**off-chain data availability**). This improves throughput on validium chains since less data needs to be posted to Mainnet. It also reduces rollup costs by eliminating the need to publish calldata and increases privacy for users (transaction information doesn't make it to Mainnet). 
 
 Off-chain data availability does present a problem: data necessary for creating Merkle proofs may be unavailable. This means users may be unable to withdraw funds from the rollup contract if operators should act maliciously. 
 
