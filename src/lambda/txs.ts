@@ -2,7 +2,7 @@ import axios from "axios"
 
 import type { HandlerResponse } from "@netlify/functions"
 
-const lambda = async (apiKey: string): Promise<HandlerResponse> => {
+export const lambda = async (apiKey: string): Promise<HandlerResponse> => {
   try {
     const daysToFetch = 90
     const now = new Date()
