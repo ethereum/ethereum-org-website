@@ -6,17 +6,22 @@ template: use-cases
 emoji: ":id:"
 sidebar: true
 sidebarDepth: 2
-summaryPoint1: Centralized identity systems are fragmented, poorly secured, and offer minimal privacy protection.
-summaryPoint2: Decentralized identity increases personal control of one's identity information.
-summaryPoint3: Decentralized identity projects can revolutionize identity management. 
+summaryPoint1: Traditional identity systems have centralized the issuance, maintenance and control of your identifiers.
+summaryPoint2: Decentralized identity solutions give the power back to the individual, further decreasing reliance on centralized third-parties.
+summaryPoint3: Thanks to crypto, users now have the tools to issue, hold and control their own identifiers and attestations once again. 
 ---
 
+## What is decentralized identity? {#what-is-decentralized-identity}
 
-## What is identity {#what-is-identity}
+Decentralized identity is an approach to identity management that allows individuals to manage identity-related information without relying on central authorities. An important objective for decentralized identity is giving users the freedom to control access to their personal information. 
+
+In a decentralized identity framework, users manage identities by creating identifiers, and receiving attestations from issuers, such as governments, service providers, and employers, which they store in a digital wallet. While these three concepts (identities, identifiers, attestations) sound similar, they have differences which we explain in the next section. 
+
+### What is identity {#what-is-identity}
 
 Identity means an individual's sense of self, defined by unique characteristics. Identity refers to being an _individual_, i.e., a distinct human entity. Identity could also refer to other non-human entities, such as an organization or authority.
 
-## What are identifiers? {#what-are-identifiers}
+### What are identifiers? {#what-are-identifiers}
 
 An identifier is a piece of information that acts as a pointer to a particular identity or identities. Common identifiers include: 
 
@@ -28,13 +33,13 @@ An identifier is a piece of information that acts as a pointer to a particular i
 
 These traditional examples of identifiers are issued, held and controlled by central entities. You need permission from your government to change your name or from a social media platform to change your handle.
 
-## What are attestations? {#what-are-attestations}
+### What are attestations? {#what-are-attestations}
  
 An attestation is a claim made by one entity about another entity. If you live in the United States, the driver's license issued to you by the Department of Motor Vehicles (one entity) attests that you (another entity) are legally allowed to drive a car.
 
 Attestations are different from identifiers. An attestation _contains_ identifiers to reference a particular identity, and makes a claim about an attribute related to this identity. So, your driver's license has identifiers (name, date of birth, address) but is also the attestation about your legal right to drive.
 
-## What are decentralized identifiers? {#what-are-decentralized-identifiers}
+### What are decentralized identifiers? {#what-are-decentralized-identifiers}
 
 Traditional identifiers like your legal name or email address rely on third parties—governments and email providers. Decentralized identifiers (DIDs) are different—they aren't issued, managed, or controlled by any central entity.
 
@@ -42,13 +47,13 @@ Decentralized identifiers are issued, held, and controlled by individuals. An [E
 
 Decentralized identifiers are stored on distributed ledgers (blockchains) or peer-to-peer networks. This makes DIDs [globally unique, resolvable with high availability, and cryptographically verifiable](https://w3c-ccg.github.io/did-primer/). A decentralized identifier can be associated with different entities, including people, organizations, or government institutions.  
 
-## What makes this possible? {#what-makes-decentralized-identifiers-possible} 
+## What makes decentralized identifiers possible? {#what-makes-decentralized-identifiers-possible} 
 
 ### 1. Public Key Infrastructure (PKI) {#public-key-infrastructure} 
 
 Public-key infrastructure (PKI) is an information security measure that generates a [public key](/glossary/#public-key) and [private key](/glossary/#private-key) for an entity. Public-key cryptography is used in blockchain networks to authenticate user identities and prove ownership of digital assets. 
 
-Some decentralized identifiers, such as an Ethereum account, have public and private keys. The public key identifies the account's controller, while the private keys can sign and decrypt messages for this account. Public-key infrastructure provides the proof needed to authenticate entities and prevent impersonation and the use of fake identities.
+Some decentralized identifiers, such as an Ethereum account, have public and private keys. The public key identifies the account's controller, while the private keys can sign and decrypt messages for this account. PKI provides proofs needed to authenticate entities and prevent impersonation and use of fake identities, using [cryptographic signatures](https://andersbrownworth.com/blockchain/public-private-keys/) to verify all claims.
 
 ### 2. Decentralized datastores {#decentralized-datastores}
 
@@ -117,9 +122,9 @@ Here's an example to show how on-chain attestations might work in practice:
 Decentralized identity has many potential use-cases:
 
 ### 1. Universal logins {#universal-dapp-logins} 
-[Decentralized applications](/dapps/) can issue attestations to users, which can be stored in an Ethereum wallet. An attestation in this case could be an an [NFT](/nft/) granting the holder access to an online community. 
+Decentralized identity can help replace password-based logins with [decentralized authentication](https://www.ibm.com/blogs/blockchain/2018/10/decentralized-identity-an-alternative-to-password-based-authentication/). Service providers can can issue attestations to users, which can be stored in an Ethereum wallet. An example attestation would be an [NFT](/nft/) granting the holder access to an online community. 
 
-A [Sign-In with Ethereum](https://login.xyz/) function would then enable servers to confirm the user's Ethereum account and fetch the required attestation from their account address. This means users can access the dapp without inputting passwords or sharing personal information.  
+A [Sign-In with Ethereum](https://login.xyz/) function would then enable servers to confirm the user's Ethereum account and fetch the required attestation from their account address. This means users can access platforms and websites without having to memorize long passwords and improves the online experience for users.  
 
 ### 2. KYC authentication {#kyc-authentication}
 
@@ -138,15 +143,24 @@ Decentralized identity can help create online communities that are free of fake 
 There are many ambitious projects using Ethereum as a foundation for decentralized identity solutions:
 
 - **[Ethereum Name Service (ENS)](https://ens.domains/)** - _A decentralized naming system for on-chain, machine-readable identifiers, like, Ethereum wallet addresses, content hashes, and metadata._
-- **[SpruceID](https://www.spruceid.com/)** - _A decentralized identity project which allows users to control digital identity with Ethereum accounts and ENS profiles instead of relying on third-party services._*
+- **[SpruceID](https://www.spruceid.com/)** - _A decentralized identity project which allows users to control digital identity with Ethereum accounts and ENS profiles instead of relying on third-party services._
 - **[Proof of Humanity](https://www.proofofhumanity.id)** - _Proof of Humanity (or PoH) is a social identity verification system built on Ethereum._
 - **[BrightID](https://www.brightid.org/)** - _A decentralized, open-source social identity network seeking to reform identity verification through the creation and analysis of a social graph._
 
-
 ## Further reading {#further-reading}
 
-- [Blockchain Use Cases: Blockchain in Digital Identity](https://consensys.net/blockchain-use-cases/digital-identity/) by ConsenSys
-- [What is Ethereum ERC725? Self-Sovereign Identity Management on the Blockchain](https://cryptoslate.com/what-is-erc725-self-sovereign-identity-management-on-the-blockchain/) by Sam Town
-- [How Blockchain Could Solve the Problem of Digital Identity](https://time.com/6142810/proof-of-humanity/) by Andrew R. Chow
-- [What Is Decentralized Identity And Why Should You Care?](https://web3.hashnode.com/what-is-decentralized-identity) by Emmanuel Awosika
+### Articles {#articles}
 
+- [Blockchain Use Cases: Blockchain in Digital Identity](https://consensys.net/blockchain-use-cases/digital-identity/) — _ConsenSys_
+- [What is Ethereum ERC725? Self-Sovereign Identity Management on the Blockchain](https://cryptoslate.com/what-is-erc725-self-sovereign-identity-management-on-the-blockchain/) — _Sam Town_
+- [How Blockchain Could Solve the Problem of Digital Identity](https://time.com/6142810/proof-of-humanity/) — _Andrew R. Chow_
+- [What Is Decentralized Identity And Why Should You Care?](https://web3.hashnode.com/what-is-decentralized-identity) — _Emmanuel Awosika_
+
+### Videos {#videos}
+- [Decentralized Identity (Bonus Livestream Session)](https://www.youtube.com/watch?v=ySHNB1za_SE&t=539s) — _A great explainer video on decentralized identity by Andreas Antonopolous_
+- [Sign In with Ethereum and Decentralized Identity with Ceramic, IDX, React, and 3ID Connect](https://www.youtube.com/watch?v=t9gWZYJxk7c) — _YouTube utorial on building out an identity management system for creating, reading, and updating a user's profile using their Ethereum wallet by Nader Dabit_
+- [BrightID - Decentralized Identity on Ethereum](https://www.youtube.com/watch?v=D3DbMFYGRoM) — _Bankless podcast episode discussing BrightID, a decentralized identity solution for Ethereum_
+
+### Communities {#communities}
+ - [ERC-725 Alliance on GitHub](https://github.com/erc725alliance) — _Supporters of the ERC725 standard for managing identity on the Ethereum blockchain_
+ - [SpruceID Discord server](https://discord.com/invite/Sf9tSFzrnt) — _Community for enthusiasts and developers working on Sign-in with Ethereum_ 
