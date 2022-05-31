@@ -492,7 +492,7 @@
         }
       ],
       "isFoss": true,
-      "hasBugBounty": false,
+      "hasBugBounty": true,
       "isTrustless": true,
       "hasPermissionlessNodes": false,
       "pctMajorityClient": 43.1,
