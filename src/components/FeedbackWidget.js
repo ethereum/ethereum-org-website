@@ -193,8 +193,36 @@ const FeedbackWidget = ({ className }) => {
     return offset
   }, [location])
 
+  const handleKey = (e) => {
+    // Adds focus trap to modal for keyboard navigation
+    if (e.keyCode === 9) {
+      let focusable = document
+        .querySelector("#modal")
+        .querySelectorAll("button")
+      if (focusable.length) {
+        let first = focusable[0]
+        let last = focusable[focusable.length - 1]
+        let shift = e.shiftKey
+        if (shift) {
+          if (e.target === first) {
+            // shift-tab pressed on first input in dialog
+            last.focus()
+            e.preventDefault()
+          }
+        } else {
+          if (e.target === last) {
+            // tab pressed on last input in dialog
+            first.focus()
+            e.preventDefault()
+          }
+        }
+      }
+    }
+  }
+
   const handleClose = () => {
     setIsOpen(false)
+    window.removeEventListener("keydown", handleKey)
     trackCustomEvent({
       eventCategory: `FeedbackWidget toggled`,
       eventAction: `Clicked`,
@@ -203,6 +231,7 @@ const FeedbackWidget = ({ className }) => {
   }
   const handleOpen = () => {
     setIsOpen(true)
+    window.addEventListener("keydown", handleKey)
     trackCustomEvent({
       eventCategory: `FeedbackWidget toggled`,
       eventAction: `Clicked`,
@@ -241,6 +270,7 @@ const FeedbackWidget = ({ className }) => {
           bottomOffset={bottomOffset}
           ref={containerRef}
           className={className}
+          id="modal"
         >
           <p className="title">
             {feedbackSubmitted ? (
