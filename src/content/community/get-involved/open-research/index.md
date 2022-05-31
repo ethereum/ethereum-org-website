@@ -401,7 +401,7 @@ Tools for Ethereum developers are rapidly improving. There is lots of active res
 
 [Consensus developer tools list](https://github.com/ConsenSys/ethereum-developer-tools-list)
 
-[Token standards]/developers/docs/standards/tokens/)
+[Token standards](/developers/docs/standards/tokens/)
 
 [Biastek: Ethereum tools](https://biastek.com/ethereum-tools/)
 
