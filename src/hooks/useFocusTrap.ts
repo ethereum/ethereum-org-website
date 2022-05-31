@@ -1,8 +1,9 @@
 // Adds focus trap to modal for keyboard navigation
 export const useFocusTrap = (
   _querySelector: string
-): (() => void)[] | null[] => {
-  const focusedElement: Element | null = document.querySelector(_querySelector)
+): ((() => void) | null)[] => {
+  const focusedElement: Element | null | undefined =
+    document?.querySelector(_querySelector)
   if (!focusedElement) return [null, null]
 
   const handleKey = (e: KeyboardEvent) => {
