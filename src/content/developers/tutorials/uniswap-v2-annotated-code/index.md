@@ -23,7 +23,7 @@ _Traders_ send one type of token to the pool and receive the other (for example,
 
 When liquidity providers want their assets back they can burn the pool tokens and receive back their tokens, including their share of the rewards.
 
-[Click here for a fuller description](https://docs.uniswap.org/protocol/V2/concepts/core-concepts/swaps).
+[Click here for a fuller description](https://docs.uniswap.org/protocol/V2/concepts/core-concepts/swaps/).
 
 ### Why v2? Why not v3? {#why-v2}
 
@@ -50,7 +50,7 @@ This is most common flow, used by traders:
 
 1. Provide the periphery account with an allowance in the amount to be swapped.
 2. Call one of the periphery contract's many swap functions (which one depends on whether ETH is involved or not, whether the trader specifies the amount of tokens to deposit or the amount of tokens to get back, etc).
-Every swap function accepts a `path`, an array of exchanges to go through.
+   Every swap function accepts a `path`, an array of exchanges to go through.
 
 #### In the periphery contract (UniswapV2Router02.sol) {#in-the-periphery-contract-uniswapv2router02-sol}
 
