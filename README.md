@@ -1235,6 +1235,10 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://paulcowgill.com"><img src="https://avatars.githubusercontent.com/u/2731712?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Paul Cowgill</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=pcowgill" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/zjiekai"><img src="https://avatars.githubusercontent.com/u/1871071?v=4?s=100" width="100px;" alt=""/><br /><sub><b>zjiekai</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=zjiekai" title="Documentation">📖</a></td>
   </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/WiiCoder"><img src="https://avatars.githubusercontent.com/u/65171537?v=4?s=100" width="100px;" alt=""/><br /><sub><b>wii u</b></sub></a><br /><a href="#ideas-WiiCoder" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="https://github.com/MonsieurDMA"><img src="https://avatars.githubusercontent.com/u/92155252?v=4?s=100" width="100px;" alt=""/><br /><sub><b>MonsieurDMA</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=MonsieurDMA" title="Documentation">📖</a></td>
+  </tr>
 </table>
 
 <!-- markdownlint-restore -->
