@@ -13,7 +13,7 @@ Validium is a [scaling solution](/developers/docs/scaling/) that enforces integr
 
 You should have a good understanding of all the foundational topics and a high-level understanding of [Ethereum scaling](/developers/docs/scaling/). Implementing scaling solutions such as Validium is an advanced topic as the technology is less battle-tested, and continues to be researched and developed.
 
-## How does validium work? {#how-does-validium work}
+## How does validium work? {#how-does-validium-work}
 
 Validiums are a type of “rollup”: an off-chain scaling protocol designed to improve throughput by processing transactions off the Ethereum Mainnet. Off-chain transactions executed on the validium chain are verified via a smart contract on the base Ethereum layer using zero-knowledge proofs, which can be SNARKs (Succinct Non-Interactive Argument of Knowledge) or STARKs (Scalable Transparent ARgument of Knowledge). 
 
