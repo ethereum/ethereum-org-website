@@ -11,7 +11,9 @@ One of the primary strengths of Ethereum is that it is constantly being improved
 
 ## General research resources
 
-Regardless of the specific topic, there is a wealth of information on Ethereum research to be found at [ethresear.ch](https://ethresear.ch) and the [Eth R&D Discord channel](https://discord.gg/n7JxAeRu). This report from [DelphiDigital](https://members.delphidigital.io/reports/the-hitchhikers-guide-to-ethereum) also covers a lot of ground. These are the primary places where Ethereum researchers discuss the latest ideas and development opportunities.
+Regardless of the specific topic, there is a wealth of information on Ethereum research to be found at [ethresear.ch](https://ethresear.ch) and the [Eth R&D Discord channel](https://discord.gg/n7JxAeRu). These are the primary places where Ethereum researchers discuss the latest ideas and development opportunities. 
+
+This May 2022 report from [DelphiDigital](https://members.delphidigital.io/reports/the-hitchhikers-guide-to-ethereum) also covers a lot of ground. 
 
 ## Scaling and performance
 
@@ -40,7 +42,7 @@ There are now several Layer 2 protocols that scale Ethereum using different tech
 
 ### Bridges
 
-One particular area of layer 2 that requires more research and development is safe and performant bridges. This includes bridges between various Layer-2s and bridges between Layer 1 and Layer 2. This is a particularly important area of researchg because bridges are commonly targeted by hackers.
+One particular area of layer 2 that requires more research and development is safe and performant bridges. This includes bridges between various Layer-2s and bridges between Layer 1 and Layer 2. This is a particularly important area of research because bridges are commonly targeted by hackers.
 
 #### Background reading
 
@@ -119,7 +121,7 @@ Zero-knowledge proofs (ZKP) and cryptography are critical for building privacy a
 
 ### Wallets
 
-User-wallets can be browser extensions, desktop and mobile apps or smart contracts on Ethereum. There is active research into social recovery wallets that reduce some of the risk associated with individual-user key management. Associated with dveelopment of wallets is research into alternative forms of account abstraction, which is an important area of nascent research.
+User-wallets can be browser extensions, desktop and mobile apps or smart contracts on Ethereum. There is active research into social recovery wallets that reduce some of the risk associated with individual-user key management. Associated with development of wallets is research into alternative forms of account abstraction, which is an important area of nascent research.
 
 #### Background reading
 
@@ -134,7 +136,7 @@ User-wallets can be browser extensions, desktop and mobile apps or smart contrac
 
 #### Recent research
 
-[Validation focussed smart contract wallets](https://ethereum-magicians.org/t/validation-focused-smart-contract-wallets/6603)
+[Validation focused smart contract wallets](https://ethereum-magicians.org/t/validation-focused-smart-contract-wallets/6603)
 
 [The future of accounts](https://ethereum-magicians.org/t/validation-focused-smart-contract-wallets/6603)
 
