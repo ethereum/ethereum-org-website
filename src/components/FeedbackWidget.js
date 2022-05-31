@@ -1,18 +1,21 @@
 // Library imports
 import React, { useState, useEffect, useRef, useMemo } from "react"
+import { useIntl } from "gatsby-plugin-intl"
 import styled from "styled-components"
 // Component imports
 import { ButtonPrimary } from "./SharedStyledComponents"
 import Translation from "./Translation"
 import Icon from "./Icon"
+import NakedButton from "./NakedButton"
 // SVG imports
 import FeedbackGlyph from "../assets/feedback-glyph.svg"
 // Utility imports
 import { trackCustomEvent } from "../utils/matomo"
+import { translateMessageId } from "../utils/translations"
 // Hook imports
 import { useOnClickOutside } from "../hooks/useOnClickOutside"
 
-const FixedDot = styled.div`
+const FixedDot = styled(NakedButton)`
   width: 3rem;
   aspect-ratio: 1;
   border-radius: 50%;
@@ -127,7 +130,7 @@ const StyledFeedbackGlyph = styled(FeedbackGlyph)`
   }
 `
 
-const IconContainer = styled.div`
+const IconContainer = styled(NakedButton)`
   position: absolute;
   right: 0.5rem;
   top: 0.5rem;
@@ -140,6 +143,7 @@ const IconContainer = styled.div`
 `
 
 const FeedbackWidget = ({ className }) => {
+  const intl = useIntl()
   const containerRef = useRef()
   useOnClickOutside(containerRef, () => handleClose(), [`mousedown`])
   const [isOpen, setIsOpen] = useState(false)
@@ -238,9 +242,6 @@ const FeedbackWidget = ({ className }) => {
           ref={containerRef}
           className={className}
         >
-          <IconContainer onClick={handleClose}>
-            <Icon name="close" />
-          </IconContainer>
           <p className="title">
             {feedbackSubmitted ? (
               <Translation id="feedback-widget-thank-you-title" />
@@ -260,20 +261,38 @@ const FeedbackWidget = ({ className }) => {
           )}
           <ButtonContainer>
             {feedbackSubmitted ? (
-              <ButtonPrimary onClick={handleSurveyOpen}>
+              <ButtonPrimary
+                onClick={handleSurveyOpen}
+                aria-label={translateMessageId(
+                  "feedback-widget-thank-you-cta",
+                  intl
+                )}
+              >
                 <Translation id="feedback-widget-thank-you-cta" />
               </ButtonPrimary>
             ) : (
               <>
-                <ButtonPrimary onClick={() => handleSubmit(true)}>
+                <ButtonPrimary
+                  onClick={() => handleSubmit(true)}
+                  aria-label={translateMessageId("yes", intl)}
+                >
                   <Translation id="yes" />
                 </ButtonPrimary>
-                <ButtonPrimary onClick={() => handleSubmit(false)}>
+                <ButtonPrimary
+                  onClick={() => handleSubmit(false)}
+                  aria-label={translateMessageId("no", intl)}
+                >
                   <Translation id="no" />
                 </ButtonPrimary>
               </>
             )}
           </ButtonContainer>
+          <IconContainer
+            onClick={handleClose}
+            aria-label={translateMessageId("close", intl)}
+          >
+            <Icon name="close" />
+          </IconContainer>
         </Container>
       </ModalBackground>
     </>
