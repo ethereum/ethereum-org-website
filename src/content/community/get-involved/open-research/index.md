@@ -249,11 +249,13 @@ Ethereum transaction fees protect the network from spam, denial-of-service attac
 [Cross domain MEV](http://arxiv.org/abs/2112.01472)
 
 
-## Clients and protocol research
+## Protocol research
 
-### Consensus clients
+Protocol research is concerned with Ethereum's base layer - the set of rules defining how nodes connect, communicate, exchange and store Ethereum data and come to consensus about the state of the blockchain. The protocol can be divided into two top-level categories: consensus and execution. 
 
-The consensus layer is concerned with the proof-of-stake mechanism securing Ethereum from the merge onwards. There is abundant ongoing research and development relating to PoS concepts and implementation, for example identifying and patching vulnerabilities, quantifying cryptoeconomic security, increasing the security or performance of client implementations, building light clients and developing staking apps. Some fundamental redesigns of the protocol to confer large improvements to Ethereum are also being researched, for example single slot finality. Furthermore, the efficiency and safety and monitoring of the peer-to-peer networking between consensus clients are also important research topics.
+### Consensus
+
+Consensus research is concerned with Ethereum's proof-of-stake mechanism, for example identifying and patching vulnerabilities, quantifying cryptoeconomic security, increasing the security or performance of client implementations and developing light clients. Some fundamental redesigns of the protocol to confer large improvements to Ethereum are also being researched, for example single slot finality. Furthermore, the efficiency and safety and monitoring of the peer-to-peer networking between consensus clients are also important research topics.
 
 #### Background reading
 
@@ -262,7 +264,6 @@ The consensus layer is concerned with the proof-of-stake mechanism securing Ethe
 [Casper-FFG Explainer](https://arxiv.org/abs/1710.09437)
 
 [Gasper paper](https://arxiv.org/abs/2003.03052)
-
 
 
 #### Recent research
@@ -276,14 +277,15 @@ The consensus layer is concerned with the proof-of-stake mechanism securing Ethe
 [Proposer-builder separation](https://notes.ethereum.org/@vbuterin/pbs_censorship_resistance)
 
 
-### Execution clients
+### Execution
 
 The execution layer is concerned with executing transactions, running the EVM and generating execution payloads to pass to the consensus layer. There are many active areas of research, especially as execution clients are updated ready for the merge. This includes building out light client support, research into gas limits and incorporating new data structures (e.g. Verkle Tries). 
 
 #### Background reading
 
-[Nodes and Clients (includes links to client implementations](/developers/docs/nodes-and-clients/)
+[Ethresear.ch execution layer](https://ethresear.ch/c/execution-layer-research/37)
 
+[Ethereum Virtual Machine](/developers/docs/evm/#top)
 
 #### Recent research
 
@@ -296,6 +298,24 @@ The execution layer is concerned with executing transactions, running the EVM an
 [Verkle Trees](https://vitalik.ca/general/2021/06/18/verkle.html)
 
 [Data availability sampling](https://github.com/ethereum/research/wiki/A-note-on-data-availability-and-erasure-coding)
+
+
+### Client Development
+
+Client development makes the outcomes from protocol research into reality by building them into Ethereum clients. This includes updating the client specifications as well as building specific implementations. An Ethereum node is required to run two pieces of software - a consensus client to keep track of the head of the blockchain, gossip blocks anmd handle consensus logic and an execution client to support the Ethereum Virtual Machine and execute transactions. The [nodes and clients page](/developers/docs/nodes-and-clients/) explains about nodes and clients and includes links to all current client implementations.
+
+#### Execution Clients
+
+[Execution client specification](https://github.com/ethereum/execution-specs)
+
+[Execution API spec](https://github.com/ethereum/execution-apis)
+
+### Consensus Clients
+
+[Consensus client specification](https://github.com/ethereum/consensus-specs)
+
+[Beacon API specification](https://ethereum.github.io/beacon-APIs/#/Beacon/getStateRoot)
+
 
 
 ### Formal verification
@@ -328,6 +348,8 @@ There is a need for more data analysis tools and dashboards that give detailed i
 [Client diversity dashboard](https://clientdiversity.org/)
 
 #### Recent research
+
+[Robust Incentives Group Data Analysis](https://ethereum.github.io/rig/)
 
 
 ## Apps and tooling
@@ -363,19 +385,30 @@ DAOs are one of the key classes of application being built on top of Ethereum. T
 
 [Mapping the DAO ecosystem](https://www.researchgate.net/publication/358694594_Mapping_out_the_DAO_Ecosystem_and_Assessing_DAO_Autonomy)
 
+
 ### Developer tools
 
 Tools for Ethereum developers are rapidly improving. There is lots of active research and development to do in this general area.
 
 #### Background reading
 
+[Tooling by programming language](/developers/docs/programming-languages/)
+
 [Developer Frameworks](/developers/docs/frameworks/)
 
 [Consensus developer tools list](https://github.com/ConsenSys/ethereum-developer-tools-list)
 
+[Token standards]/developers/docs/standards/tokens/)
+
+[Biastek: Ethereum tools](https://biastek.com/ethereum-tools/)
+
+[CryptoDevHub: EVM Tools](https://cryptodevhub.io/wiki/ethereum-virtual-machine-tools)
+
+
 #### Recent research
 
 [Eth R&D Discord Consensus Tooling channel](https://discordapp.com/channels/595666850260713488/746343380900118528)
+
 
 ### App security
 
@@ -389,6 +422,7 @@ Hacks on Ethereum nearly always exploit vulnerabilities in individual applicatio
 
 [Rekt News](https://twitter.com/RektHQ?s=20&t=3otjYQdM9Bqk8k3n1a1Adg)
 
+
 #### Recent research
 
 [ethresear.ch Applications](https://ethresear.ch/c/applications/18)
@@ -401,6 +435,8 @@ Apps on Ethereum are rarely fully decentralized because they rely on some centra
 #### Background reading
 
 [Coinbase: Intro to Web3 Stack](https://blog.coinbase.com/a-simple-guide-to-the-web3-stack-785240e557f0)
+
+[Ethereum stack](/developers/docs/ethereum-stack/)
 
 #### Recent research
 
