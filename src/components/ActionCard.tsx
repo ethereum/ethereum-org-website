@@ -18,8 +18,8 @@ const ChildrenContainer = styled.div`
 `
 
 const ImageWrapper = styled.div<{
-    isRight: boolean | undefined
-    isBottom: boolean | undefined
+  isRight: boolean | undefined
+  isBottom: boolean | undefined
 }>`
   display: flex;
   flex-direction: row;
@@ -66,47 +66,47 @@ const Card = styled(Link)`
 `
 
 export interface IProps {
-    to: string
-    alt?: string
-    image: string
-    title: string
-    description: string
-    className?: string
-    isRight?: boolean
-    isBottom?: boolean
+  to: string
+  alt?: string
+  image: string
+  title: string
+  description: string
+  className?: string
+  isRight?: boolean
+  isBottom?: boolean
 }
 
 const ActionCard: React.FC<IProps> = ({
-                                          to,
-                                          alt,
-                                          image,
-                                          title,
-                                          description,
-                                          children,
-                                          className,
-                                          isRight,
-                                          isBottom = true
-                                      }) => {
-    const isImageURL = typeof image === "string" && image.includes("http")
-    return (
-        <Card to={to} className={className} hideArrow={true}>
-            <ImageWrapper
-                isRight={isRight}
-                isBottom={isBottom}
-                className="action-card-image-wrapper"
-            >
-                {!isImageURL && <Image image={image} alt={alt} />}
-                {isImageURL && (
-                    <img src={image} alt={alt} className="action-card-image" />
-                )}
-            </ImageWrapper>
-            <Content className="action-card-content">
-                <Title>{title}</Title>
-                <Description>{description}</Description>
-                {children && <ChildrenContainer>{children}</ChildrenContainer>}
-            </Content>
-        </Card>
-    )
+  to,
+  alt,
+  image,
+  title,
+  description,
+  children,
+  className,
+  isRight,
+  isBottom = true
+}) => {
+  const isImageURL = typeof image === "string" && image.includes("http")
+  return (
+    <Card to={to} className={className} hideArrow={true}>
+      <ImageWrapper
+        isRight={isRight}
+        isBottom={isBottom}
+        className="action-card-image-wrapper"
+      >
+        {!isImageURL && <Image image={image} alt={alt} />}
+        {isImageURL && (
+          <img src={image} alt={alt} className="action-card-image" />
+        )}
+      </ImageWrapper>
+      <Content className="action-card-content">
+        <Title>{title}</Title>
+        <Description>{description}</Description>
+        {children && <ChildrenContainer>{children}</ChildrenContainer>}
+      </Content>
+    </Card>
+  )
 }
 
 export default ActionCard
