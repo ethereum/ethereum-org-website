@@ -132,7 +132,7 @@ User-wallets can be browser extensions, desktop and mobile apps or smart contrac
 
 #### Background reading
 
-[Our Security page](https://ethereum.org/en/security/)
+[Introduction to wallet security]/security/)
 
 [ethresear.ch Security](https://ethresear.ch/tag/security)
 
@@ -147,7 +147,7 @@ User-wallets can be browser extensions, desktop and mobile apps or smart contrac
 
 [The future of accounts](https://ethereum-magicians.org/t/validation-focused-smart-contract-wallets/6603)
 
-[EIP-3074](https://eips.ethereum.org/EIPS/eip-3074)
+[EIP-3074 AUTH and AUTHCALL Opcodes](https://eips.ethereum.org/EIPS/eip-3074)
 
 [Publishing code code at EOA addresses](https://github.com/ethereum/EIPs/pull/5003)
 
@@ -164,9 +164,14 @@ For Ethereum to onboard more people the UX/UI must be improved. This requires de
 
 [Ethresear.ch UX/UI](https://ethresear.ch/c/ui-ux/24)
 
-[Ethereum.org community page](https://ethereum.org/en/learn/)
 
 #### Recent research
+
+[Web3 Design Discord](https://discord.gg/FsCFPMTSm9)
+
+[Web3 Design Principles](https://www.web3designprinciples.com/)
+
+[Ethereum Magicians UX discussion](https://ethereum-magicians.org/t/og-council-ux-follow-up/9032/3)
 
 
 ## Economics
