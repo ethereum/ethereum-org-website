@@ -9,6 +9,10 @@ lang: en
 
 One of the primary strengths of Ethereum is that it is constantly being improved by an active research and engineering community. There are many enthusiastic, skilled people worldwide that would like to apply themselves to outstanding issues in Ethereum, but it is not always easy to find out what those issues are. This page aims to outline some of the key areas of active research as a rough guide to Ethereum's cutting edge.
 
+## How Ethereum research works
+
+TBC
+
 ## General research resources
 
 Regardless of the specific topic, there is a wealth of information on Ethereum research to be found at [ethresear.ch](https://ethresear.ch) and the [Eth R&D Discord channel](https://discord.gg/n7JxAeRu). These are the primary places where Ethereum researchers discuss the latest ideas and development opportunities. 
@@ -27,7 +31,7 @@ There are now several Layer 2 protocols that scale Ethereum using different tech
 
 [Introduction to layer 2](/layer-2/)
 
-[EthHub Layer-2](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/zk-rollups/)
+[EthHub Layer 2](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/zk-rollups/)
 
 [Polynya: Rollups, DA and modular chains](https://polynya.medium.com/rollups-data-availability-layers-modular-blockchains-introductory-meta-post-5a1e7a60119d)
 
@@ -39,10 +43,12 @@ There are now several Layer 2 protocols that scale Ethereum using different tech
 
 [Rollup-centric roadmap](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698)
 
+[L2Beat](https://l2beat.com/)
+
 
 ### Bridges
 
-One particular area of layer 2 that requires more research and development is safe and performant bridges. This includes bridges between various Layer-2s and bridges between Layer 1 and Layer 2. This is a particularly important area of research because bridges are commonly targeted by hackers.
+One particular area of layer 2 that requires more research and development is safe and performant bridges. This includes bridges between various Layer 2s and bridges between Layer 1 and Layer 2. This is a particularly important area of research because bridges are commonly targeted by hackers.
 
 #### Background reading
 
@@ -52,7 +58,8 @@ One particular area of layer 2 that requires more research and development is sa
 
 [Blockchain Bridges article](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8)
 
-[L2Beat](https://l2beat.com/)
+[Valkue locked in bridges](https://dune.com/eliasimos/Bridge-Away-(from-Ethereum))
+
 
 #### Recent research
 
@@ -217,22 +224,6 @@ Liquid staking allows users with less than 32 ETH to receive staking yields by s
 
 [Withdrawal credentials](https://ethresear.ch/t/withdrawal-credential-rotation-from-bls-to-eth1/8722)
 
-### DeFi
-
-Decentralized finance (DeFi) is one of the primary classes of application built on top of Ethereum. DeFi aims to create composable "money legos" that allow users to store, transfer, lend, borrow and and invest crypto-assets using smart contracts. This is a fast-moving space that is constantly updating. Research into secure, efficient and accessible protocols is constantly needed.
-
-#### Background reading
-
-[DeFi](https://ethereum.org/en/defi/)
-
-[Coinbase: What is DeFi?](https://www.coinbase.com/learn/crypto-basics/what-is-defi)
-
-
-#### Recent research
-
-[Decentralized finance, centralized ownership?](https://arxiv.org/pdf/2012.09306.pdf)
-
-[Optimism: The road to sub-dollar transactions](https://medium.com/ethereum-optimism/the-road-to-sub-dollar-transactions-part-2-compression-edition-6bb2890e3e92)
 
 ### Fee markets
 
@@ -298,7 +289,7 @@ The execution layer is concerned with executing transactions, running the EVM an
 
 #### Background reading
 
-[Nodes and Clients](https://ethereum.org/developers/docs/nodes-and-clients)
+[Nodes and Clients](/developers/docs/nodes-and-clients/)
 
 #### Client implementations
 
@@ -355,8 +346,25 @@ There is a need for more data analysis tools and dashboards that give detailed i
 #### Recent research
 
 
-
 ## Apps and tooling
+
+### DeFi
+
+Decentralized finance (DeFi) is one of the primary classes of application built on top of Ethereum. DeFi aims to create composable "money legos" that allow users to store, transfer, lend, borrow and and invest crypto-assets using smart contracts. This is a fast-moving space that is constantly updating. Research into secure, efficient and accessible protocols is constantly needed.
+
+#### Background reading
+
+[DeFi](/defi/)
+
+[Coinbase: What is DeFi?](https://www.coinbase.com/learn/crypto-basics/what-is-defi)
+
+
+#### Recent research
+
+[Decentralized finance, centralized ownership?](https://arxiv.org/pdf/2012.09306.pdf)
+
+[Optimism: The road to sub-dollar transactions](https://medium.com/ethereum-optimism/the-road-to-sub-dollar-transactions-part-2-compression-edition-6bb2890e3e92)
+
 
 ### DAOs
 
@@ -377,7 +385,7 @@ Tools for Ethereum developers are rapidly improving. There is lots of active res
 
 #### Background reading
 
-[Developer Frameworks](https://ethereum.org/en/developers/docs/frameworks/)
+[Developer Frameworks](/developers/docs/frameworks/)
 
 [Consensus developer tools list](https://github.com/ConsenSys/ethereum-developer-tools-list)
 
@@ -412,4 +420,4 @@ Apps on Ethereum are rarely fully decentralized because they rely on some centra
 
 #### Recent research
 
-[Smart contract composability](https://ethereum.org/en/developers/docs/smart-contracts/composability/)
+[Smart contract composability](/developers/docs/smart-contracts/composability/)
