@@ -274,5 +274,11 @@
     "emoji": ":poland:",
     "location": "Warsaw",
     "link": "https://www.meetup.com/ethwarsaw-meetup/"
+  },
+  {
+    "title": "Chicago Ethereum Meetup",
+    "emoji": ":us:",
+    "location": "Chicago",
+    "link": "https://www.meetup.com/Chicago-Ethereum-Meetup/"
   }
 ]
