@@ -10,7 +10,8 @@ import Breadcrumbs from "../../components/Breadcrumbs"
 import PageMetadata from "../../components/PageMetadata"
 import { Content, Page } from "../../components/SharedStyledComponents"
 import Translation from "../../components/Translation"
-import WalletPersonas from "../../components/FindWallet/WalletPersonas"
+import WalletFilterSidebar from "../../components/FindWallet/WalletFilterSidebar"
+import WalletPersonasSidebar from "../../components/FindWallet/WalletPersonasSidebar"
 
 // Utils
 import { translateMessageId } from "../../utils/translations"
@@ -119,6 +120,31 @@ const FindWalletPage = ({ data, location }) => {
   const intl = useIntl()
 
   const [showFeatureFilters, setShowFeatureFilters] = useState(false)
+  const [filters, setFilters] = useState({
+    android: false,
+    ios: false,
+    linux: false,
+    windows: false,
+    macOS: false,
+    firefox: false,
+    chromium: false,
+    hardware: false,
+    open_source: false,
+    non_custodial: false,
+    hardware_support: false,
+    walletconnect: false,
+    rpc_importing: false,
+    nft_support: false,
+    staking: false,
+    layer_2: false,
+    gas_fee_customization: false,
+    ens_support: false,
+    erc_20_support: false,
+    buy_crypto: false,
+    withdraw_crypto: false,
+    multisig: false,
+    social_recovery: false,
+  })
 
   return (
     <Page>
@@ -168,7 +194,11 @@ const FindWalletPage = ({ data, location }) => {
             </FilterTab>
           </FilterTabs>
           <div>
-            {showFeatureFilters ? <p>Feature Filters</p> : <WalletPersonas />}
+            {showFeatureFilters ? (
+              <WalletFilterSidebar />
+            ) : (
+              <WalletPersonasSidebar />
+            )}
           </div>
         </FilterSidebar>
         <WalletContent>

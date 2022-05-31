@@ -34,7 +34,7 @@ interface Personas {
   featureHighlight: string[]
 }
 
-const WalletPersonas = () => {
+const WalletPersonasSidebar = () => {
   const [selectedPersona, setSelectedPersona] = useState(NaN)
 
   const personas: Personas[] = [
@@ -95,4 +95,4 @@ const WalletPersonas = () => {
   )
 }
 
-export default WalletPersonas
+export default WalletPersonasSidebar
