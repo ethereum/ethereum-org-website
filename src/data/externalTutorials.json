@@ -161,7 +161,7 @@
       "moralis",
       "web3modal",
       "web3-react",
-      "ethersjs",
+      "ethersjs"
     ],
     "skillLevel": "beginner",
     "timeToRead": "14",
