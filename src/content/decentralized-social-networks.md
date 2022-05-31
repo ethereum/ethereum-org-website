@@ -11,11 +11,12 @@ summaryPoint1: Blockchain-based platforms for social interaction and content cre
 summaryPoint2: Decentralized social media networks protect user privacy and enhance data security. 
 summaryPoint3: Tokens and NFTs create new ways to monetize content. 
 ---
+
 Social networks play a massive role in our daily communications and interactions. However, centralized control of these platforms has created many problems: data breaches, server outages, de-platforming, censorship, and privacy violations are some of the trade-offs social media often make. To combat these issues, developers are building social networks on Ethereum. Decentralized social networks can fix many of the problems of traditional social networking platforms and improve users' overall experience.
 
 ## What are decentralized social networks? {#what-are-decentralized-social-networks}
 
-Decentralized social media networks are blockchain-based platforms that allow users to exchange information as well as publish and distribute content to audiences. Because these applications run on the blockchain, they are decentralized and resistant to censorship and undue control. 
+Decentralized social media networks are blockchain-based platforms that allow users to exchange information as well as publish and distribute content to audiences. Because these applications run on the blockchain, they are capable of being decentralized and resistant to censorship and undue control. 
 
 Many decentralized social networks exist as alternatives to established social media services, such as Facebook, LinkedIn, Twitter, and Medium. But blockchain-powered social networks have a number of features that put them ahead of traditional social platforms. 
 
@@ -62,17 +63,17 @@ Posts published on Mirror are permanently stored on Arweave, a decentralized sto
 
 Users use the platform's native ERC-20 token $MIND to pay for items. Users can also earn $MIND tokens by publishing popular content, contributing to the ecosystem, and referring others to the platform.
 
-## Ethereum and legacy social media platforms {#Ethereum-and-legacy-social-media-networks}
+## Ethereum and legacy social media platforms {#ethereum-and-legacy-social-media-networks}
 
-Decentralized social media platforms aren't the only ones trying to incorporate blockchain technology. Many traditional sites are also planning to integrate Ethereum into their infrastructure:
+Decentralized social media platforms aren't the only ones trying to incorporate blockchain technology. Many centralized platforms are also planning to integrate Ethereum into their infrastructure:
 
 ### Reddit {#reddit}
 
-Reddit has [touted Community Points](https://cointelegraph.com/news/reddit-to-reportedly-tokenize-karma-points-and-onboard-500m-new-users), which are ERC-20 token that users can earn by posting quality content and contributing to the online community. You can redeem these tokens to gain exclusive privileges and perks. For this project, Reddit is working with Arbitrum, a Layer-2 rollup designed to scale Ethereum transactions.
+Reddit has [touted Community Points](https://cointelegraph.com/news/reddit-to-reportedly-tokenize-karma-points-and-onboard-500m-new-users), which are ERC-20 token that users can earn by posting quality content and contributing to the online community. You can redeem these tokens to gain exclusive privileges and perks. For this project, Reddit is working with Arbitrum, a [layer 2](/layer-2/) rollup designed to scale Ethereum transactions.
 
 ### Twitter {#twitter}
 
-In January 2021, Twitter Blue [rolled out support for NFTs](https://mashable.com/article/twitter-blue-nft-profile-picture), allowing users to connect their wallets and display NFTs as profile pictures. The social media company has also [announced plans](https://www.theverge.com/2021/8/16/22627435/twitter-bluesky-lead-jay-graber-decentralized-social-web) to create a decentralized social network in future.
+In January 2021, Twitter Blue [rolled out support for NFTs](https://mashable.com/article/twitter-blue-nft-profile-picture), allowing users to connect their wallets and display NFTs as profile pictures. At time of writing, the social media company has also [announced plans](https://www.theverge.com/2021/8/16/22627435/twitter-bluesky-lead-jay-graber-decentralized-social-web) to create a decentralized social network in the future.
 
 ### Instagram {#instagram}
 
@@ -80,11 +81,9 @@ In May 2022, [Instagram announced support for NFTs](https://about.instagram.com/
 
 ## Use Ethereum-based social networks {#Use-Ethereum-social-media}
 
-**Status** - _Status is a secure messaging app that uses an open-source, peer-to-peer protocol, and end-to-end encryption to protect your messages from third parties._ 
-- [Website](https://status.im/)
+**[Status.im](https://status.im/)** - _Status is a secure messaging app that uses an open-source, peer-to-peer protocol, and end-to-end encryption to protect your messages from third parties._ 
 
-**Mirror** - _Mirror is a decentralized, user-owned publishing platform built on Ethereum that allows users to crowdfund ideas, monetize content, and build high-value communities. 
-- [Website](https://mirror.xyz/)
+**[Mirror.xyz](https://mirror.xyz/)** - _Mirror is a decentralized, user-owned publishing platform built on Ethereum that allows users to crowdfund ideas, monetize content, and build high-value communities. 
 
 ## Further reading {#Further-reading}
 
