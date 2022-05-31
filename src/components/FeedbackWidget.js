@@ -14,6 +14,7 @@ import { trackCustomEvent } from "../utils/matomo"
 import { translateMessageId } from "../utils/translations"
 // Hook imports
 import { useOnClickOutside } from "../hooks/useOnClickOutside"
+import { useFocusTrap } from "../hooks/useFocusTrap"
 
 const FixedDot = styled(NakedButton)`
   width: 3rem;
@@ -149,6 +150,7 @@ const FeedbackWidget = ({ className }) => {
   const [isOpen, setIsOpen] = useState(false)
   const [feedbackSubmitted, setFeedbackSubmitted] = useState(false)
   const [isHelpful, setIsHelpful] = useState(null)
+  const [startTrap, stopTrap] = useFocusTrap("#modal")
 
   const location = typeof window !== "undefined" ? window.location.href : ""
 
@@ -193,36 +195,9 @@ const FeedbackWidget = ({ className }) => {
     return offset
   }, [location])
 
-  const handleKey = (e) => {
-    // Adds focus trap to modal for keyboard navigation
-    if (e.keyCode === 9) {
-      let focusable = document
-        .querySelector("#modal")
-        .querySelectorAll("button")
-      if (focusable.length) {
-        let first = focusable[0]
-        let last = focusable[focusable.length - 1]
-        let shift = e.shiftKey
-        if (shift) {
-          if (e.target === first) {
-            // shift-tab pressed on first input in dialog
-            last.focus()
-            e.preventDefault()
-          }
-        } else {
-          if (e.target === last) {
-            // tab pressed on last input in dialog
-            first.focus()
-            e.preventDefault()
-          }
-        }
-      }
-    }
-  }
-
   const handleClose = () => {
     setIsOpen(false)
-    window.removeEventListener("keydown", handleKey)
+    stopTrap()
     trackCustomEvent({
       eventCategory: `FeedbackWidget toggled`,
       eventAction: `Clicked`,
@@ -231,7 +206,7 @@ const FeedbackWidget = ({ className }) => {
   }
   const handleOpen = () => {
     setIsOpen(true)
-    window.addEventListener("keydown", handleKey)
+    startTrap()
     trackCustomEvent({
       eventCategory: `FeedbackWidget toggled`,
       eventAction: `Clicked`,
