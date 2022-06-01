@@ -180,6 +180,15 @@
     "endDate": "2022-06-12"
   },
   {
+    "title": "MetaFest 2",
+    "to": "https://metafest.metagame.wtf/",
+    "sponsor": null,
+    "location": "Online",
+    "description": "MetaFest is a 2+ weeks long virtual event full of talks & workshops about anything from DAOs, NFTs & ReFi to self-improvement as well as social events like metaverse sightseeing & concerts.
+    "startDate": "2022-06-09",
+    "endDate": "2022-06-23"
+  },
+  {
     "title": "HODLerCon",
     "to": "https://hodlercon.com",
     "sponsor": null,
