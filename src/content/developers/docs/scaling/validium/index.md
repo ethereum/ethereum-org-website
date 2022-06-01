@@ -15,7 +15,7 @@ You should have a good understanding of all the foundational topics and a high-l
 
 ## How does validium work? {#how-does-validium-work}
 
-Validiums are a type of “rollup”: an off-chain scaling protocol designed to improve throughput by processing transactions off the Ethereum Mainnet. Off-chain transactions executed on the validium chain are verified via a smart contract on the base Ethereum layer using zero-knowledge proofs, which can be SNARKs (Succinct Non-Interactive Argument of Knowledge) or STARKs (Scalable Transparent ARgument of Knowledge). 
+Validiums are a zero-knowledge proof scaling solution that uses off-chain data availability and computation designed to improve throughput by processing transactions off the Ethereum Mainnet. Off-chain transactions executed on the validium chain are verified via a smart contract on the base Ethereum layer using zero-knowledge proofs, which can be SNARKs (Succinct Non-Interactive Argument of Knowledge) or STARKs (Scalable Transparent ARgument of Knowledge). 
 
 More on [zero-knowledge proofs](https://consensys.net/blog/blockchain-explained/zero-knowledge-proofs-starks-vs-snarks/).
 
@@ -23,15 +23,15 @@ As with ZK-rollups, validity proofs prevent invalid state transitions on validiu
 
 The major difference between validiums and ZK-rollups concerns their positions on the data availability spectrum. Both solutions approach data storage differently, which has implications for security and trustlessness. 
 
-### Off-chain vs on-chain data availability {#off-chain-vs-on-chain-data-availability}
+### On-chain vs off-chain data availability {#on-chain-vs-off-chain-data-availability}
 
-**ZK-rollups** post information about off-transactions to Ethereum Mainnet as `calldata`. This information can be used to recreate the state of the rollup, if necessary, to prove the validity (or lack thereof) of a specific state transition. As the data is anchored on Ethereum (**on-chain data availability**), ZK-rollups can directly benefit from Ethereum’s security guarantees—funds are always secure if Mainnet is operational.
+**ZK-rollups** bundle (or "roll-up") off-chain transaction data to Ethereum Mainnet as `calldata`. This information can be used to recreate the state of the rollup, if necessary, to prove the validity (or lack thereof) of a specific state transition. As the data is anchored on Ethereum (**on-chain data availability**), ZK-rollups directly benefit from Ethereum’s security and data availability guarantees—funds are always secure if Mainnet is operational.
 
-**Validiums** keep all data relating to transactions off the Ethereum chain (**off-chain data availability**). This improves throughput on validium chains since less data needs to be posted to Mainnet. It also reduces rollup costs by eliminating the need to publish calldata and increases privacy for users (transaction information doesn't make it to Mainnet). 
+**Validiums** store all transaction data off Ethereum Mainnet (**off-chain data availability**). This improves throughput and reduces the costs on validium chains since calldata is not posted to Ethereum Mainnet. 
 
-Off-chain data availability does present a problem: data necessary for creating Merkle proofs may be unavailable. This means users may be unable to withdraw funds from the rollup contract if operators should act maliciously. 
+Off-chain data availability does present a problem: data necessary for creating or verifying Merkle proofs may be unavailable. This means users may be unable to withdraw funds from the rollup contract if operators should act maliciously. 
 
-To guarantee the availability of off-chain data, some validium solutions use a group of trusted entities to store copies of the state and provide proof of data availability. Of course, this presents another problem: users must trust these entities to make the data available when needed. There's also the possibility of members of data availability committees [getting compromised by a malicious actor](https://notes.ethereum.org/DD7GyItYQ02d0ax_X-UbWg?view) who can then withhold off-chain data. 
+To guarantee the availability of off-chain data, some validium solutions use a group of trusted entities know as a data availability committee (DAC) to store copies of the state and provide proof of data availability. Users must trust these entities to make the data available when needed. There's the possibility of members of data availability committees [getting compromised by a malicious actor](https://notes.ethereum.org/DD7GyItYQ02d0ax_X-UbWg?view) who can then withhold off-chain data. 
 
 Other validiums require participants charged with storing offline data to provide a “bond” to reduce trust assumptions. If these participants fail to prove data availability, the bond is slashed. This approach relies on cryptoeconomic incentives and is considerably more secure than appointing trusted parties to secure offline data in the validium. 
 
@@ -48,7 +48,7 @@ A decentralized exchange (DEX) may prefer using a validium’s scalable and priv
 | --------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
 | No withdrawal delay (no latency to on-chain/cross-chain tx); consequent greater capital efficiency.       | Limited support for general computation/smart contracts; specialized languages required.                                                 |
 | Not vulnerable to certain economic attacks faced by fraud-proof based systems in high-value applications. | High computational power required to generate ZK proofs; not cost effective for low throughput applications.                             |
-| Reduces rollup fees for users by shrinking costs of publishing data on Ethereum.                          | Slower subjective finality time (10-30 min to generate a ZK proof) (but faster to full finality because there is no dispute time delay). |
+| Reduces gas fees for users by not posting calldata to Ethereum Mainnet.                          | Slower subjective finality time (10-30 min to generate a ZK proof) but faster to full finality because there is no dispute time delay. |
 | Suitable for specific use-cases, like trading or blockchain gaming that prioritize transaction privacy and scalability. | Generating a proof requires off-chain data to be available at all times.                                                   |
 |                                                                               |                           Security relies on trust assumptions and cryptoeconomic incentives, unlike ZK-rollups which rely on cryptographic security mechanisms. 
 
