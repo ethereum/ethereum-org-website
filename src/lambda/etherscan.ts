@@ -1,6 +1,8 @@
-const axios = require("axios")
+import axios from "axios"
 
-const lambda = async (apiKey) => {
+import type { HandlerResponse } from "@netlify/functions"
+
+export const lambda = async (apiKey: string): Promise<HandlerResponse> => {
   const daysToFetch = 90
   const now = new Date()
   const endDate = now.toISOString().split("T")[0] // YYYY-MM-DD
@@ -18,12 +20,19 @@ const lambda = async (apiKey) => {
     return { statusCode: 200, body: JSON.stringify(data) }
   } catch (error) {
     console.error(error)
-    return { statusCode: 500, body: JSON.stringify({ msg: error.message }) }
+    return {
+      statusCode: 500,
+      body: JSON.stringify({ msg: (error as Error).message }),
+    }
   }
 }
 
-const handler = () => {
-  return lambda(process.env.ETHERSCAN_API_KEY)
-}
+export const handler = () => {
+  let apiKey = process.env.ETHERSCAN_API_KEY
 
-module.exports = { handler, lambda }
+  if (!apiKey) {
+    throw new Error("required env ETHERSCAN_API_KEY not set")
+  }
+
+  return lambda(apiKey)
+}
