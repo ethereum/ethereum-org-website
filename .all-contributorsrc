@@ -7642,6 +7642,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "fennar01",
+      "name": "fennar01",
+      "avatar_url": "https://avatars.githubusercontent.com/u/42185291?v=4",
+      "profile": "https://github.com/fennar01",
+      "contributions": [
+        "ideas"
+      ]
     }
   ],
   "contributorsPerLine": 7,
