@@ -162,11 +162,11 @@
     "endDate": "2022-06-30"
   },
   {
-    "title": "ETH SF",
-    "to": "https://airtable.com/shrZ89OEwQJRtXHPv/",
+    "title": "Graph Day & Graph Hack",
+    "to": "https://thegraph.com/graph-day/2022/",
     "sponsor": null,
     "location": "San Francisco, USA",
-    "description": "The energy and excitement at the first ETHSanFrancisco will be hard to top, but we have our eyes set on delivering an even more impactful experience.",
+    "description": "Join the world’s brightest dreamers & doers for a full day focused on web3, dapps, protocols, and the future of the internet. A three-day hackathon will follow immediately afterwards.",
     "startDate": "2022-06-02",
     "endDate": "2022-06-05"
   },
@@ -229,7 +229,7 @@
     "to": "https://2022.ethseattle.org/",
     "sponsor": null,
     "location": "Seattle, USA",
-    "description": "ETHSeattle is a hackathon in Seattle, USA.",
+    "description": "ETHSeattle is an Ethereum summit in Seattle, USA.",
     "startDate": "2022-07-08",
     "endDate": "2022-07-08"
   },
@@ -239,8 +239,17 @@
     "sponsor": null,
     "location": "Remote",
     "description": "ETHGlobal returns with their 3rd iteration of HackFS, a global celebration of storage, data, and building data-full decentralized applications.",
-    "startDate": "2022-07-01",
-    "endDate": "2022-07-31"
+    "startDate": "2022-07-08",
+    "endDate": "2022-07-29"
+  },
+  {
+    "title": "ETHVenice",
+    "to": "https://ethvenice.com/",
+    "sponsor": null,
+    "location": "Venice, Italy",
+    "description": "ETHVenice is an Italian Ethereum Event and Hackathon, simultaneously with The Feast of the Redeemer in Venice.",
+    "startDate": "2022-07-11",
+    "endDate": "2022-07-17"
   },
   {
     "title": "Metaverse Summit",
@@ -270,6 +279,24 @@
     "endDate": "2022-07-21"
   },
   {
+    "title": "ETHSeoul",
+    "to": "https://2022.ethseoul.org/",
+    "sponsor": null,
+    "location": "Seoul, South Korea",
+    "description": "Join Seoul's first Ethereum Hackathon & Summit hosted by KryptoSeoul & Dystopia Labs",
+    "startDate": "2022-08-05",
+    "endDate": "2022-08-13"
+  },
+  {
+    "title": "ETHLatam",
+    "to": "https://twitter.com/ethlatam",
+    "sponsor": null,
+    "location": "Buenos Aires, Argentina",
+    "description": "A 4-day conference that builds upon the work of the local pioneers that laid the foundations for a vibrant community that made crypto mainstream in Argentina.",
+    "startDate": "2022-08-11",
+    "endDate": "2022-08-14"
+  },
+  {
     "title": "ETHMexicoCity",
     "to": "https://airtable.com/shrZ89OEwQJRtXHPv/",
     "sponsor": null,
@@ -284,6 +311,15 @@
     "sponsor": null,
     "location": "Stanford, USA",
     "description": "DeFi is an emerging suite of applications for decentralized asset management over blockchain technology. ",
+    "startDate": "2022-08-27",
+    "endDate": "2022-08-28"
+  },
+  {
+    "title": "Hack.Summit('SF')",
+    "to": "https://sf.hacksummit.org/",
+    "sponsor": null,
+    "location": "San Francisco, California",
+    "description": "Hack.Summit('SF') is a 2-day blockchain summit hosted by Hack.VC & Dystopia Labs",
     "startDate": "2022-08-27",
     "endDate": "2022-08-28"
   },
@@ -322,6 +358,15 @@
     "description": "Join for ETHGlobal's return to South America and kick off Devcon in the perfect way, by building.",
     "startDate": "2022-10-07",
     "endDate": "2022-10-09"
+  },
+  {
+    "title": "DeFi Bogotá",
+    "to": "https://2022.defibogota.org/",
+    "sponsor": null,
+    "location": "Bogotá, Colombia",
+    "description": "DeFi Bogotá is a DeFi-focused summit in Colombia.",
+    "startDate": "2022-10-10",
+    "endDate": "2022-10-10"
   },
   {
     "title": "Devcon",

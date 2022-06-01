@@ -15,9 +15,6 @@ import {
   Content,
   Page as PageContainer,
   Divider,
-  OptionContainer,
-  Option,
-  OptionText,
 } from "../../components/SharedStyledComponents"
 import FeedbackCard from "../../components/FeedbackCard"
 import ExpandableCard from "../../components/ExpandableCard"
@@ -133,14 +130,6 @@ const ContentContainer = styled.article`
     margin-top: 0;
     padding-top: 0;
   }
-`
-
-const StakeContainer = styled.div`
-  margin: 0 auto;
-  max-width: ${(props) => props.theme.breakpoints.m};
-  display: flex;
-  flex-direction: column;
-  text-align: center;
 `
 
 const ComparisonGrid = styled.div`

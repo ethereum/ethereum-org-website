@@ -228,7 +228,7 @@ const DocsPage = ({ data, pageContext }) => {
 }
 
 export const query = graphql`
-  query DocsPageQuery($relativePath: String) {
+  query DocsPage($relativePath: String) {
     siteData: site {
       siteMetadata {
         editContentUrl

@@ -4,7 +4,7 @@ import { margin } from "styled-system"
 
 import { scrollIntoView } from "../utils/scrollIntoView"
 
-import Link from "./Link"
+import Link, { IProps as ILinkProps } from "./Link"
 
 const buttonStyling = `
   text-decoration: none;
@@ -85,7 +85,12 @@ const SecondaryScrollLink = styled(StyledScrollButton)`
   }
 `
 
-const ButtonLink = ({
+interface IProps extends ILinkProps {
+  toId?: string
+  isSecondary?: boolean
+}
+
+const ButtonLink: React.FC<IProps> = ({
   to,
   toId,
   isSecondary,
@@ -94,6 +99,14 @@ const ButtonLink = ({
   hideArrow = false,
   ...props
 }) => {
+  const handleOnClick = () => {
+    if (!toId) {
+      return
+    }
+
+    scrollIntoView(toId)
+  }
+
   if (isSecondary) {
     return to ? (
       <SecondaryLink
@@ -106,8 +119,7 @@ const ButtonLink = ({
       </SecondaryLink>
     ) : (
       <SecondaryScrollLink
-        onClick={() => scrollIntoView(toId)}
-        hideArrow={true}
+        onClick={handleOnClick}
         className={className}
         {...props}
       >
@@ -120,12 +132,7 @@ const ButtonLink = ({
       {children}
     </PrimaryLink>
   ) : (
-    <PrimaryScrollLink
-      onClick={() => scrollIntoView(toId)}
-      hideArrow={true}
-      className={className}
-      {...props}
-    >
+    <PrimaryScrollLink onClick={handleOnClick} className={className} {...props}>
       {children}
     </PrimaryScrollLink>
   )

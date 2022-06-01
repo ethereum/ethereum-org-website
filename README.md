@@ -121,6 +121,10 @@ To create a new function, you will need to create two files:
 - One in `src/lambdas` where the logic will live. These are the ones that will be deployed to Netlify. These functions follow [this format](https://docs.netlify.com/functions/build-with-javascript/#synchronous-function-format).
 - One in `src/api` that will be just a wrapper around the previous one in order to be compatible with Gatsby functions. More on the [Gatbsy docs](https://www.gatsbyjs.com/docs/reference/functions/getting-started/) for the format they follow.
 
+Typically, you will develop and test functions in the Gatsby context, by running `yarn start`.
+
+In case you want to test them as if you were in a Netlify env, you can install the [Netlify CLI](https://docs.netlify.com/cli/get-started/) and run `netlify dev --framework=gatsby`.
+
 ### 6. Submit your PR
 
 - After your changes are committed to your GitHub fork, submit a pull request (PR) to the `dev` branch of the `ethereum/ethereum-org-website` repo
@@ -903,7 +907,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/pwilczynskiclearcode"><img src="https://avatars.githubusercontent.com/u/3940860?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Paweł Wilczyński</b></sub></a><br /><a href="#translation-pwilczynskiclearcode" title="Translation">🌍</a></td>
     <td align="center"><a href="https://github.com/joaoMpf"><img src="https://avatars.githubusercontent.com/u/56357437?v=4?s=100" width="100px;" alt=""/><br /><sub><b>joaoMpf</b></sub></a><br /><a href="#translation-joaoMpf" title="Translation">🌍</a></td>
     <td align="center"><a href="https://github.com/bskrksyp9"><img src="https://avatars.githubusercontent.com/u/31563474?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Bhaskar Kashyap</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=bskrksyp9" title="Documentation">📖</a> <a href="#content-bskrksyp9" title="Content">🖋</a></td>
-    <td align="center"><a href="https://github.com/bleesherman"><img src="https://avatars.githubusercontent.com/u/82793845?v=4?s=100" width="100px;" alt=""/><br /><sub><b>bleesherman</b></sub></a><br /><a href="#content-bleesherman" title="Content">🖋</a></td>
+    <td align="center"><a href="https://github.com/bleesherman"><img src="https://avatars.githubusercontent.com/u/82793845?v=4?s=100" width="100px;" alt=""/><br /><sub><b>bleesherman</b></sub></a><br /><a href="#content-bleesherman" title="Content">🖋</a> <a href="https://github.com/ethereum/ethereum-org-website/commits?author=bleesherman" title="Documentation">📖</a></td>
     <td align="center"><a href="https://www.linkedin.com/in/bertcmiller/"><img src="https://avatars.githubusercontent.com/u/30010302?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Robert Miller</b></sub></a><br /><a href="#content-bertmiller" title="Content">🖋</a></td>
     <td align="center"><a href="https://florian.sesser.at/"><img src="https://avatars.githubusercontent.com/u/454605?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Florian Sesser</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=hacklschorsch" title="Documentation">📖</a></td>
   </tr>
@@ -1057,7 +1061,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/EtherWorldCo"><img src="https://avatars.githubusercontent.com/u/97191248?v=4?s=100" width="100px;" alt=""/><br /><sub><b>EtherWorld</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=EtherWorldCo" title="Documentation">📖</a></td>
     <td align="center"><a href="http://tenderly.co"><img src="https://avatars.githubusercontent.com/u/2846306?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Stefan Ignjatović</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=Ignjatovic" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/ihebu"><img src="https://avatars.githubusercontent.com/u/47149194?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Iheb Haboubi</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Aihebu" title="Bug reports">🐛</a></td>
-    <td align="center"><a href="https://github.com/HursitTarcan"><img src="https://avatars.githubusercontent.com/u/75273616?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Hursit Tarcan</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3AHursitTarcan" title="Bug reports">🐛</a> <a href="https://github.com/ethereum/ethereum-org-website/commits?author=HursitTarcan" title="Code">💻</a> <a href="#a11y-HursitTarcan" title="Accessibility">️️️️♿️</a></td>
+    <td align="center"><a href="https://github.com/HursitTarcan"><img src="https://avatars.githubusercontent.com/u/75273616?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Hursit Tarcan</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=HursitTarcan" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/pabloped"><img src="https://avatars.githubusercontent.com/u/65499117?v=4?s=100" width="100px;" alt=""/><br /><sub><b>pabloped</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=pabloped" title="Documentation">📖</a> <a href="#translation-pabloped" title="Translation">🌍</a></td>
   </tr>
   <tr>
@@ -1224,6 +1228,16 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   </tr>
   <tr>
     <td align="center"><a href="https://github.com/JustynaBroniszewska"><img src="https://avatars.githubusercontent.com/u/33961199?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Justyna Broniszewska</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=JustynaBroniszewska" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/yanil3500"><img src="https://avatars.githubusercontent.com/u/11803254?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Elyanil Liranzo-Castro</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=yanil3500" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://www.linkedin.com/in/lisandroea/?locale=en_US"><img src="https://avatars.githubusercontent.com/u/54295410?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Lichu Acuña</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=LichuAcu" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/avcdsld"><img src="https://avatars.githubusercontent.com/u/10495516?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Takamasa Arakawa</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=avcdsld" title="Code">💻</a> <a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Aavcdsld" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="https://github.com/skaunov"><img src="https://avatars.githubusercontent.com/u/65976143?v=4?s=100" width="100px;" alt=""/><br /><sub><b>skaunov</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=skaunov" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://paulcowgill.com"><img src="https://avatars.githubusercontent.com/u/2731712?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Paul Cowgill</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=pcowgill" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/zjiekai"><img src="https://avatars.githubusercontent.com/u/1871071?v=4?s=100" width="100px;" alt=""/><br /><sub><b>zjiekai</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=zjiekai" title="Documentation">📖</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/WiiCoder"><img src="https://avatars.githubusercontent.com/u/65171537?v=4?s=100" width="100px;" alt=""/><br /><sub><b>wii u</b></sub></a><br /><a href="#ideas-WiiCoder" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="https://github.com/MonsieurDMA"><img src="https://avatars.githubusercontent.com/u/92155252?v=4?s=100" width="100px;" alt=""/><br /><sub><b>MonsieurDMA</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=MonsieurDMA" title="Documentation">📖</a></td>
   </tr>
 </table>
 

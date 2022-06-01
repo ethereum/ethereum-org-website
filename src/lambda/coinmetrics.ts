@@ -1,6 +1,8 @@
-const axios = require("axios")
+import axios from "axios"
 
-const lambda = async () => {
+import type { HandlerResponse } from "@netlify/functions"
+
+const lambda = async (): Promise<HandlerResponse> => {
   try {
     const response = await axios.get(
       "https://community-api.coinmetrics.io/v2/assets/eth/metricdata/?metrics=TxCnt"
@@ -12,12 +14,13 @@ const lambda = async () => {
     return { statusCode: 200, body: JSON.stringify(response.data) }
   } catch (error) {
     console.error(error)
+    // @ts-ignore
     return { statusCode: 500, body: JSON.stringify({ msg: error.message }) }
   }
 }
 
-const handler = () => {
+const handler = (): Promise<HandlerResponse> => {
   return lambda()
 }
 
-module.exports = { handler, lambda }
+export { handler, lambda }

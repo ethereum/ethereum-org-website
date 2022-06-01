@@ -17,7 +17,10 @@ const ChildrenContainer = styled.div`
   margin-top: 2rem;
 `
 
-const ImageWrapper = styled.div`
+const ImageWrapper = styled.div<{
+  isRight: boolean | undefined
+  isBottom: boolean | undefined
+}>`
   display: flex;
   flex-direction: row;
   justify-content: ${(props) => (props.isRight ? `flex-end` : `center`)};
@@ -62,7 +65,18 @@ const Card = styled(Link)`
   }
 `
 
-const ActionCard = ({
+export interface IProps {
+  to: string
+  alt?: string
+  image: string
+  title: string
+  description: string
+  className?: string
+  isRight?: boolean
+  isBottom?: boolean
+}
+
+const ActionCard: React.FC<IProps> = ({
   to,
   alt,
   image,
@@ -71,7 +85,7 @@ const ActionCard = ({
   children,
   className,
   isRight,
-  isBottom = true,
+  isBottom = true
 }) => {
   const isImageURL = typeof image === "string" && image.includes("http")
   return (

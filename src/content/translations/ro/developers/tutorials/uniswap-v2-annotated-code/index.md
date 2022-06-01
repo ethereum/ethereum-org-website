@@ -25,7 +25,7 @@ _Comercianții_ trimit un tip de token la fondul comun și îl primesc pe celăl
 
 Când furnizorii de lichidităţi își vor înapoi activele, aceștia pot arde tokenurile fondului comun și îşi pot primi înapoi tokenurile, inclusiv partea lor de recompense.
 
-[Faceți clic aici pentru a vedea o descriere completă](https://uniswap.org/docs/v2/core-concepts/swaps/).
+[Faceți clic aici pentru a vedea o descriere completă](https://docs.uniswap.org/protocol/V2/concepts/core-concepts/swaps/).
 
 ### De ce v2? De ce nu v3? {#why-v2}
 
