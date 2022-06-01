@@ -1656,8 +1656,8 @@ export const dappImage = graphql`
   fragment dappImage on File {
     childImageSharp {
       gatsbyImageData(
-        width: 80
-        layout: CONSTRAINED
+        width: 70
+        layout: FIXED
         placeholder: BLURRED
         quality: 100
       )
