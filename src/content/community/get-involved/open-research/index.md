@@ -11,13 +11,77 @@ One of the primary strengths of Ethereum is that it is constantly being improved
 
 ## How Ethereum research works
 
-Ethereum research is open and transparent. The culture is to make research tools and outputs as open and interactive as possible, for example through executable notebooks. Ethereum research is generally rapid, with new findings posted and discussed in the open on fora such as [ethresear.ch](https://ethresear.ch/) rather than reaching the community after rounds of peer review.
+Ethereum research is open and transparent. The culture is to make research tools and outputs as open and interactive as possible, for example through executable notebooks. Ethereum research is generally rapid, with new findings posted and discussed in the open on forums such as [ethresear.ch](https://ethresear.ch/) rather than reaching the community in traditional publications after rounds of peer review.
 
 ## General research resources
 
-Regardless of the specific topic, there is a wealth of information on Ethereum research to be found at [ethresear.ch](https://ethresear.ch) and the [Eth R&D Discord channel](https://discord.gg/n7JxAeRu). These are the primary places where Ethereum researchers discuss the latest ideas and development opportunities. 
+Regardless of the specific topic, there is a wealth of information on Ethereum research to be found at [ethresear.ch](https://ethresear.ch) and the [Eth R&D Discord channel](https://discord.gg/n7JxAeRu). These are the primary places where Ethereum researchers discuss the latest ideas and development opportunities.
 
-This May 2022 report from [DelphiDigital](https://members.delphidigital.io/reports/the-hitchhikers-guide-to-ethereum) also covers a lot of ground. 
+This May 2022 report from [DelphiDigital](https://members.delphidigital.io/reports/the-hitchhikers-guide-to-ethereum) also covers a lot of ground.
+
+## Protocol research
+
+Protocol research is concerned with Ethereum's base layer - the set of rules defining how nodes connect, communicate, exchange and store Ethereum data and come to consensus about the state of the blockchain. The protocol can be divided into two top-level categories: consensus and execution.
+
+### Consensus
+
+Consensus research is concerned with Ethereum's proof-of-stake mechanism, for example identifying and patching vulnerabilities, quantifying cryptoeconomic security, increasing the security or performance of client implementations and developing light clients. Some fundamental redesigns of the protocol to confer large improvements to Ethereum are also being researched, for example single slot finality. Furthermore, the efficiency and safety and monitoring of the peer-to-peer networking between consensus clients are also important research topics.
+
+#### Background reading
+
+[Casper-FFG paper](https://arxiv.org/abs/1710.09437)
+
+[Casper-FFG Explainer](https://arxiv.org/abs/1710.09437)
+
+[Gasper paper](https://arxiv.org/abs/2003.03052)
+
+#### Recent research
+
+[Ethresear.ch Consensus](https://ethresear.ch/c/consensus/29)
+
+[Availability/Finality dilemma](https://arxiv.org/abs/2009.04987)
+
+[Single slot finality](https://ethresear.ch/t/a-model-for-cumulative-committee-based-finality/10259)
+
+[Proposer-builder separation](https://notes.ethereum.org/@vbuterin/pbs_censorship_resistance)
+
+### Execution
+
+The execution layer is concerned with executing transactions, running the EVM and generating execution payloads to pass to the consensus layer. There are many active areas of research, especially as execution clients are updated ready for the merge. This includes building out light client support, research into gas limits and incorporating new data structures (e.g. Verkle Tries).
+
+#### Background reading
+
+[Ethresear.ch execution layer](https://ethresear.ch/c/execution-layer-research/37)
+
+[Ethereum Virtual Machine](/developers/docs/evm/#top)
+
+#### Recent research
+
+[Database optimizations](https://github.com/ledgerwatch/erigon/blob/devel/docs/programmers_guide/db_faq.md)
+
+[State expiry](https://notes.ethereum.org/@vbuterin/state_expiry_eip)
+
+[History management](https://eips.ethereum.org/EIPS/eip-4444)
+
+[Verkle Trees](https://vitalik.ca/general/2021/06/18/verkle.html)
+
+[Data availability sampling](https://github.com/ethereum/research/wiki/A-note-on-data-availability-and-erasure-coding)
+
+## Client Development
+
+Client development makes the outcomes from protocol research into reality by building them into Ethereum clients. This includes updating the client specifications as well as building specific implementations. An Ethereum node is required to run two pieces of software - a consensus client to keep track of the head of the blockchain, gossip blocks anmd handle consensus logic and an execution client to support the Ethereum Virtual Machine and execute transactions. The [nodes and clients page](/developers/docs/nodes-and-clients/) explains about nodes and clients and includes links to all current client implementations.
+
+### Execution Clients
+
+[Execution client specification](https://github.com/ethereum/execution-specs)
+
+[Execution API spec](https://github.com/ethereum/execution-apis)
+
+### Consensus Clients
+
+[Consensus client specification](https://github.com/ethereum/consensus-specs)
+
+[Beacon API specification](https://ethereum.github.io/beacon-APIs/#/Beacon/getStateRoot)
 
 ## Scaling and performance
 
@@ -45,7 +109,6 @@ There are now several Layer 2 protocols that scale Ethereum using different tech
 
 [L2Beat](https://l2beat.com/)
 
-
 ### Bridges
 
 One particular area of layer 2 that requires more research and development is safe and performant bridges. This includes bridges between various Layer 2s and bridges between Layer 1 and Layer 2. This is a particularly important area of research because bridges are commonly targeted by hackers.
@@ -58,17 +121,15 @@ One particular area of layer 2 that requires more research and development is sa
 
 [Blockchain Bridges article](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8)
 
-[Valkue locked in bridges](https://dune.com/eliasimos/Bridge-Away-(from-Ethereum))
-
+[Valkue locked in bridges](<https://dune.com/eliasimos/Bridge-Away-(from-Ethereum)>)
 
 #### Recent research
 
 [Validating bridges](https://stonecoldpat.github.io/images/validatingbridges.pdf)
 
-
 ### Sharding
 
-Sharding Ethereum's blockchain has long been part of the development roadmap. However, new scaling solutions such as "Danksharding" are currently taking center stage. 
+Sharding Ethereum's blockchain has long been part of the development roadmap. However, new scaling solutions such as "Danksharding" are currently taking center stage.
 
 #### Background reading
 
@@ -88,7 +149,6 @@ Sharding Ethereum's blockchain has long been part of the development roadmap. Ho
 
 [Vitalik on sharding and data availability sampling](https://hackmd.io/@vbuterin/sharding_proposal)
 
-
 ### Hardware
 
 [Running nodes](/developers/docs/nodes-and-clients/run-a-node/) on modest hardware is fundamental to keeping Ethereum decentralized. Therefore, active research into minimizing the hardware requirements to run nodes is an important area of research.
@@ -96,7 +156,6 @@ Sharding Ethereum's blockchain has long been part of the development roadmap. Ho
 #### Background reading
 
 [Ethereum on ARM](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/)
-
 
 #### Recent research
 
@@ -118,13 +177,11 @@ Zero-knowledge proofs (ZKP) and cryptography are critical for building privacy a
 
 [Zero Knowledge podcast](https://zeroknowledge.fm/)
 
-
 #### Recent research
 
 [Recent advance in elliptic curve cryptography](https://ethresear.ch/t/the-ec-fft-algorithm-without-elliptic-curve-and-isogenies/11346)
 
 [Ethresear.ch ZK](https://ethresear.ch/c/zk-s-nt-arks/13)
-
 
 ### Wallets
 
@@ -140,7 +197,6 @@ User-wallets can be browser extensions, desktop and mobile apps or smart contrac
 
 [EIP-4337 Account Abstraction](https://eips.ethereum.org/EIPS/eip-4337)
 
-
 #### Recent research
 
 [Validation focused smart contract wallets](https://ethereum-magicians.org/t/validation-focused-smart-contract-wallets/6603)
@@ -150,7 +206,6 @@ User-wallets can be browser extensions, desktop and mobile apps or smart contrac
 [EIP-3074 AUTH and AUTHCALL Opcodes](https://eips.ethereum.org/EIPS/eip-3074)
 
 [Publishing code code at EOA addresses](https://github.com/ethereum/EIPs/pull/5003)
-
 
 ## Community, education and outreach
 
@@ -164,7 +219,6 @@ For Ethereum to onboard more people the UX/UI must be improved. This requires de
 
 [Ethresear.ch UX/UI](https://ethresear.ch/c/ui-ux/24)
 
-
 #### Recent research
 
 [Web3 Design Discord](https://discord.gg/FsCFPMTSm9)
@@ -172,7 +226,6 @@ For Ethereum to onboard more people the UX/UI must be improved. This requires de
 [Web3 Design Principles](https://www.web3designprinciples.com/)
 
 [Ethereum Magicians UX discussion](https://ethereum-magicians.org/t/og-council-ux-follow-up/9032/3)
-
 
 ## Economics
 
@@ -183,7 +236,6 @@ There are complex crypto-economic factors relating to Ethereum's native asset (e
 [Rollup economics from first principles](https://barnabe.substack.com/p/understanding-rollup-economics-from?utm_source=url)
 
 [Robust Incentives Group](https://ethereum.github.io/rig/)
-
 
 #### Recent research
 
@@ -199,7 +251,7 @@ There are complex crypto-economic factors relating to Ethereum's native asset (e
 
 ### PoS incentives
 
-When Ethereum transitions to proof of stake, its native asset (ether) will be used as collateral by validators. The cryptoeconomics of this determines the security of the network. Sophisticated validators may be able to exploit the nuances of the incentive layer to theior own advantage by extracting MEV or launching explicit attacks. 
+When Ethereum transitions to proof of stake, its native asset (ether) will be used as collateral by validators. The cryptoeconomics of this determines the security of the network. Sophisticated validators may be able to exploit the nuances of the incentive layer to theior own advantage by extracting MEV or launching explicit attacks.
 
 #### Background reading
 
@@ -213,7 +265,6 @@ When Ethereum transitions to proof of stake, its native asset (ether) will be us
 
 [Low-cost attacks on Ethereum 2.0 by sub 1/3 stakeholders](https://arxiv.org/abs/2102.02247)
 
-
 ### Liquid staking and derivatives
 
 Liquid staking allows users with less than 32 ETH to receive staking yields by swapping ether for a token representing staked ether that can be used in DeFi. However, the incentives and market dynamics associated with liquid staking as well as its effect on Ethereum's security (e.g. centralization risks).
@@ -222,17 +273,15 @@ Liquid staking allows users with less than 32 ETH to receive staking yields by s
 
 [Ethresear.ch liquid staking](https://ethresear.ch/search?q=liquid%20staking)
 
-
 #### Recent research
 
 [Handling withdrawals from Lido](https://ethresear.ch/t/handling-withdrawals-in-lidos-eth-liquid-staking-protocol/8873)
 
 [Withdrawal credentials](https://ethresear.ch/t/withdrawal-credential-rotation-from-bls-to-eth1/8722)
 
-
 ### Fee markets
 
-Ethereum transaction fees protect the network from spam, denial-of-service attacks and bad smart-contract code. However, it also affects the end-user by influencing the cost of interacting with Ethereum. Balancing network security with end-user user-experience is an ongoing challenge that requires further research and development. 
+Ethereum transaction fees protect the network from spam, denial-of-service attacks and bad smart-contract code. However, it also affects the end-user by influencing the cost of interacting with Ethereum. Balancing network security with end-user user-experience is an ongoing challenge that requires further research and development.
 
 #### Background reading
 
@@ -248,75 +297,6 @@ Ethereum transaction fees protect the network from spam, denial-of-service attac
 
 [Cross domain MEV](http://arxiv.org/abs/2112.01472)
 
-
-## Protocol research
-
-Protocol research is concerned with Ethereum's base layer - the set of rules defining how nodes connect, communicate, exchange and store Ethereum data and come to consensus about the state of the blockchain. The protocol can be divided into two top-level categories: consensus and execution. 
-
-### Consensus
-
-Consensus research is concerned with Ethereum's proof-of-stake mechanism, for example identifying and patching vulnerabilities, quantifying cryptoeconomic security, increasing the security or performance of client implementations and developing light clients. Some fundamental redesigns of the protocol to confer large improvements to Ethereum are also being researched, for example single slot finality. Furthermore, the efficiency and safety and monitoring of the peer-to-peer networking between consensus clients are also important research topics.
-
-#### Background reading
-
-[Casper-FFG paper](https://arxiv.org/abs/1710.09437)
-
-[Casper-FFG Explainer](https://arxiv.org/abs/1710.09437)
-
-[Gasper paper](https://arxiv.org/abs/2003.03052)
-
-
-#### Recent research
-
-[Ethresear.ch Consensus](https://ethresear.ch/c/consensus/29)
-
-[Availability/Finality dilemma](https://arxiv.org/abs/2009.04987)
-
-[Single slot finality](https://ethresear.ch/t/a-model-for-cumulative-committee-based-finality/10259)
-
-[Proposer-builder separation](https://notes.ethereum.org/@vbuterin/pbs_censorship_resistance)
-
-
-### Execution
-
-The execution layer is concerned with executing transactions, running the EVM and generating execution payloads to pass to the consensus layer. There are many active areas of research, especially as execution clients are updated ready for the merge. This includes building out light client support, research into gas limits and incorporating new data structures (e.g. Verkle Tries). 
-
-#### Background reading
-
-[Ethresear.ch execution layer](https://ethresear.ch/c/execution-layer-research/37)
-
-[Ethereum Virtual Machine](/developers/docs/evm/#top)
-
-#### Recent research
-
-[Database optimizations](https://github.com/ledgerwatch/erigon/blob/devel/docs/programmers_guide/db_faq.md)
-
-[State expiry](https://notes.ethereum.org/@vbuterin/state_expiry_eip)
-
-[History management](https://eips.ethereum.org/EIPS/eip-4444)
-
-[Verkle Trees](https://vitalik.ca/general/2021/06/18/verkle.html)
-
-[Data availability sampling](https://github.com/ethereum/research/wiki/A-note-on-data-availability-and-erasure-coding)
-
-
-## Client Development
-
-Client development makes the outcomes from protocol research into reality by building them into Ethereum clients. This includes updating the client specifications as well as building specific implementations. An Ethereum node is required to run two pieces of software - a consensus client to keep track of the head of the blockchain, gossip blocks anmd handle consensus logic and an execution client to support the Ethereum Virtual Machine and execute transactions. The [nodes and clients page](/developers/docs/nodes-and-clients/) explains about nodes and clients and includes links to all current client implementations.
-
-#### Execution Clients
-
-[Execution client specification](https://github.com/ethereum/execution-specs)
-
-[Execution API spec](https://github.com/ethereum/execution-apis)
-
-### Consensus Clients
-
-[Consensus client specification](https://github.com/ethereum/consensus-specs)
-
-[Beacon API specification](https://ethereum.github.io/beacon-APIs/#/Beacon/getStateRoot)
-
-
 ## Testing
 
 ### Formal verification
@@ -329,14 +309,11 @@ Formal verification is writing code to verify that Ethereum's consensus specific
 
 [Formal Verification (Intel)](https://www.cl.cam.ac.uk/~jrh13/papers/mark10.pdf)
 
-
 #### Recent research
 
 [Formal verification of the deposit contract](https://github.com/runtimeverification/deposit-contract-verification)
 
 [Formal verification of the Beacon Chain specification](https://github.com/runtimeverification/deposit-contract-verification)
-
-
 
 ## Data science and analytics
 
@@ -352,7 +329,6 @@ There is a need for more data analysis tools and dashboards that give detailed i
 
 [Robust Incentives Group Data Analysis](https://ethereum.github.io/rig/)
 
-
 ## Apps and tooling
 
 The application layer supports a very diverse ecosystem of programs that settle transactions on Ethereum's base layer. App teams are constantly finding new ways to leverage Ethereum to create lower-friction, composable, permissionless and censorship resistant versions of important Web2 apps or creating completely new web3-native concepts. At the same time, new tooling is being developed that makes building increasingly complex Ethereum apps easier.
@@ -367,13 +343,11 @@ Decentralized finance (DeFi) is one of the primary classes of application built 
 
 [Coinbase: What is DeFi?](https://www.coinbase.com/learn/crypto-basics/what-is-defi)
 
-
 #### Recent research
 
 [Decentralized finance, centralized ownership?](https://arxiv.org/pdf/2012.09306.pdf)
 
 [Optimism: The road to sub-dollar transactions](https://medium.com/ethereum-optimism/the-road-to-sub-dollar-transactions-part-2-compression-edition-6bb2890e3e92)
-
 
 ### DAOs
 
@@ -383,11 +357,9 @@ DAOs are one of the key classes of application being built on top of Ethereum. T
 
 [Dao Collective](https://daocollective.xyz/)
 
-
 #### Recent research
 
 [Mapping the DAO ecosystem](https://www.researchgate.net/publication/358694594_Mapping_out_the_DAO_Ecosystem_and_Assessing_DAO_Autonomy)
-
 
 ### Developer tools
 
@@ -407,11 +379,9 @@ Tools for Ethereum developers are rapidly improving. There is lots of active res
 
 [CryptoDevHub: EVM Tools](https://cryptodevhub.io/wiki/ethereum-virtual-machine-tools)
 
-
 #### Recent research
 
 [Eth R&D Discord Consensus Tooling channel](https://discordapp.com/channels/595666850260713488/746343380900118528)
-
 
 ### Oracles
 
@@ -427,7 +397,6 @@ Oracles are used to import off-chain data on-chain in a permissionless and decen
 
 [Chainlink white paper](https://chain.link/whitepaper)
 
-
 ### App security
 
 Hacks on Ethereum nearly always exploit vulnerabilities in individual applications rather than the base protocol. Hackers and app developers are locked in an arms race to develop new attacks and defenses. This means there is always important research and development required to keep apps safe from hacks.
@@ -440,11 +409,9 @@ Hacks on Ethereum nearly always exploit vulnerabilities in individual applicatio
 
 [Rekt News](https://twitter.com/RektHQ?s=20&t=3otjYQdM9Bqk8k3n1a1Adg)
 
-
 #### Recent research
 
 [ethresear.ch Applications](https://ethresear.ch/c/applications/18)
-
 
 ### Technology stack
 
