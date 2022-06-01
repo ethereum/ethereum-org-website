@@ -1017,18 +1017,8 @@ export const query = graphql`
     doge: file(relativePath: { eq: "doge-computer.png" }) {
       childImageSharp {
         gatsbyImageData(
-          width: 624
-          layout: CONSTRAINED
-          placeholder: BLURRED
-          quality: 100
-        )
-      }
-    }
-    ethBlocks: file(relativePath: { eq: "developers-eth-blocks.png" }) {
-      childImageSharp {
-        gatsbyImageData(
-          width: 624
-          layout: CONSTRAINED
+          width: 70
+          layout: FIXED
           placeholder: BLURRED
           quality: 100
         )
@@ -1044,25 +1034,10 @@ export const query = graphql`
         )
       }
     }
-    financeTransparent: file(relativePath: { eq: "finance_transparent.png" }) {
-      childImageSharp {
-        gatsbyImageData(
-          width: 300
-          layout: CONSTRAINED
-          placeholder: BLURRED
-          quality: 100
-        )
-      }
-    }
     heroImage: file(relativePath: { eq: "layer-2/hero.png" }) {
       childImageSharp {
-        gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED, quality: 100)
-      }
-    }
-    impact: file(relativePath: { eq: "impact_transparent.png" }) {
-      childImageSharp {
         gatsbyImageData(
-          width: 300
+          width: 560
           layout: CONSTRAINED
           placeholder: BLURRED
           quality: 100
@@ -1074,113 +1049,49 @@ export const query = graphql`
     ) {
       childImageSharp {
         gatsbyImageData(
-          layout: CONSTRAINED
+          width: 90
+          layout: FIXED
           placeholder: BLURRED
           quality: 100
-          width: 122
         )
       }
     }
     rollup: file(relativePath: { eq: "layer-2/rollup-2.png" }) {
       childImageSharp {
-        gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED, quality: 100)
+        gatsbyImageData(
+          width: 960
+          layout: CONSTRAINED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     zkRollup: file(relativePath: { eq: "layer-2/zk_rollup.png" }) {
       childImageSharp {
         gatsbyImageData(
-          layout: CONSTRAINED
+          width: 90
+          layout: FIXED
           placeholder: BLURRED
           quality: 100
-          width: 122
         )
       }
     }
     whatIsEthereum: file(relativePath: { eq: "what-is-ethereum.png" }) {
       childImageSharp {
         gatsbyImageData(
-          width: 624
+          width: 400
           layout: CONSTRAINED
           placeholder: BLURRED
           quality: 100
         )
       }
     }
+
     arbitrum: file(relativePath: { eq: "layer-2/arbitrum.png" }) {
       childImageSharp {
         gatsbyImageData(
-          width: 100
-          layout: CONSTRAINED
-          placeholder: BLURRED
-          quality: 100
-        )
-      }
-    }
-    boba: file(relativePath: { eq: "layer-2/boba.png" }) {
-      childImageSharp {
-        gatsbyImageData(
-          width: 100
-          layout: CONSTRAINED
-          placeholder: BLURRED
-          quality: 100
-        )
-      }
-    }
-    chainlist: file(relativePath: { eq: "layer-2/chainlist.png" }) {
-      childImageSharp {
-        gatsbyImageData(
-          width: 100
-          layout: CONSTRAINED
-          placeholder: BLURRED
-          quality: 100
-        )
-      }
-    }
-    debank: file(relativePath: { eq: "layer-2/debank.png" }) {
-      childImageSharp {
-        gatsbyImageData(
-          width: 100
-          layout: CONSTRAINED
-          placeholder: BLURRED
-          quality: 100
-        )
-      }
-    }
-    dydx: file(relativePath: { eq: "layer-2/dydx.png" }) {
-      childImageSharp {
-        gatsbyImageData(
-          width: 100
-          layout: CONSTRAINED
-          placeholder: BLURRED
-          quality: 100
-        )
-      }
-    }
-    l2beat: file(relativePath: { eq: "layer-2/l2beat.jpg" }) {
-      childImageSharp {
-        gatsbyImageData(
-          width: 100
-          layout: CONSTRAINED
-          placeholder: BLURRED
-          quality: 100
-        )
-      }
-    }
-    loopring: file(relativePath: { eq: "layer-2/loopring.png" }) {
-      childImageSharp {
-        gatsbyImageData(
-          width: 100
-          layout: CONSTRAINED
-          placeholder: BLURRED
-          quality: 100
-        )
-      }
-    }
-    metis: file(relativePath: { eq: "layer-2/metis-dark.png" }) {
-      childImageSharp {
-        gatsbyImageData(
-          width: 100
-          layout: CONSTRAINED
+          height: 80
+          layout: FIXED
           placeholder: BLURRED
           quality: 100
         )
@@ -1189,8 +1100,68 @@ export const query = graphql`
     optimism: file(relativePath: { eq: "layer-2/optimism.png" }) {
       childImageSharp {
         gatsbyImageData(
-          width: 100
-          layout: CONSTRAINED
+          height: 80
+          layout: FIXED
+          placeholder: BLURRED
+          quality: 100
+        )
+      }
+    }
+    boba: file(relativePath: { eq: "layer-2/boba.png" }) {
+      childImageSharp {
+        gatsbyImageData(
+          height: 80
+          layout: FIXED
+          placeholder: BLURRED
+          quality: 100
+        )
+      }
+    }
+    chainlist: file(relativePath: { eq: "layer-2/chainlist.png" }) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 70
+          layout: FIXED
+          placeholder: BLURRED
+          quality: 100
+        )
+      }
+    }
+    debank: file(relativePath: { eq: "layer-2/debank.png" }) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 70
+          layout: FIXED
+          placeholder: BLURRED
+          quality: 100
+        )
+      }
+    }
+    dydx: file(relativePath: { eq: "layer-2/dydx.png" }) {
+      childImageSharp {
+        gatsbyImageData(
+          height: 80
+          layout: FIXED
+          placeholder: BLURRED
+          quality: 100
+        )
+      }
+    }
+    l2beat: file(relativePath: { eq: "layer-2/l2beat.jpg" }) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 70
+          layout: FIXED
+          placeholder: BLURRED
+          quality: 100
+        )
+      }
+    }
+    loopring: file(relativePath: { eq: "layer-2/loopring.png" }) {
+      childImageSharp {
+        gatsbyImageData(
+          height: 80
+          layout: FIXED
           placeholder: BLURRED
           quality: 100
         )
@@ -1199,8 +1170,8 @@ export const query = graphql`
     zapper: file(relativePath: { eq: "layer-2/zapper.png" }) {
       childImageSharp {
         gatsbyImageData(
-          width: 100
-          layout: CONSTRAINED
+          width: 70
+          layout: FIXED
           placeholder: BLURRED
           quality: 100
         )
@@ -1209,8 +1180,8 @@ export const query = graphql`
     zerion: file(relativePath: { eq: "layer-2/zerion.png" }) {
       childImageSharp {
         gatsbyImageData(
-          width: 100
-          layout: CONSTRAINED
+          width: 70
+          layout: FIXED
           placeholder: BLURRED
           quality: 100
         )
@@ -1219,8 +1190,8 @@ export const query = graphql`
     zkspace: file(relativePath: { eq: "layer-2/zkspace.png" }) {
       childImageSharp {
         gatsbyImageData(
-          width: 100
-          layout: CONSTRAINED
+          height: 80
+          layout: FIXED
           placeholder: BLURRED
           quality: 100
         )
@@ -1229,8 +1200,8 @@ export const query = graphql`
     zksync: file(relativePath: { eq: "layer-2/zksync.png" }) {
       childImageSharp {
         gatsbyImageData(
-          width: 100
-          layout: CONSTRAINED
+          height: 80
+          layout: FIXED
           placeholder: BLURRED
           quality: 100
         )
