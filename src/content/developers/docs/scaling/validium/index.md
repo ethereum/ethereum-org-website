@@ -21,7 +21,7 @@ More on [zero-knowledge proofs](https://consensys.net/blog/blockchain-explained/
 
 As with ZK-rollups, validity proofs prevent invalid state transitions on validium chains and enhance security guarantees available to users. For instance, a malicious operator cannot steal funds since users can always withdraw funds directly from the on-chain contract [using Merkle proofs](/developers/tutorials/merkle-proofs-for-offline-data-integrity/). 
 
-The major difference between validiums and ZK-rollups concerns their positions on the data availability spectrum. Both solutions approach data storage differently, which has implications for security and trustlessness. 
+However, user funds can be frozen, particualarly if the data availability managers on the validium chain withold off-chain data from users. This is the major difference between validiums and ZK-rollups—their positions on the data availability spectrum. Both solutions approach data storage differently, which has implications for security and trustlessness. 
 
 ### On-chain vs off-chain data availability {#on-chain-vs-off-chain-data-availability}
 
@@ -29,17 +29,27 @@ The major difference between validiums and ZK-rollups concerns their positions o
 
 **Validiums** store all transaction data off Ethereum Mainnet (**off-chain data availability**). This improves throughput and reduces the costs on validium chains since calldata is not posted to Ethereum Mainnet. 
 
-Off-chain data availability does present a problem: data necessary for creating or verifying Merkle proofs may be unavailable. This means users may be unable to withdraw funds from the rollup contract if operators should act maliciously. 
+Off-chain data availability does present a problem: data necessary for creating or verifying Merkle proofs may be unavailable. This means users may be unable to withdraw funds from the rollup contract if operators should act maliciously. Various validium solutions attempt to solve this problem by holding off-chain data with trusted parties or randomly assigned validators, who are expected to provide proofs of data availability. 
 
-To guarantee the availability of off-chain data, some validium solutions use a group of trusted entities know as a data availability committee (DAC) to store copies of the state and provide proof of data availability. Users must trust these entities to make the data available when needed. There's the possibility of members of data availability committees [getting compromised by a malicious actor](https://notes.ethereum.org/DD7GyItYQ02d0ax_X-UbWg?view) who can then withhold off-chain data. 
+#### Data availability committee (DAC)
 
-Other validiums require participants charged with storing offline data to provide a “bond” to reduce trust assumptions. If these participants fail to prove data availability, the bond is slashed. This approach relies on cryptoeconomic incentives and is considerably more secure than appointing trusted parties to secure offline data in the validium. 
+To guarantee the availability of off-chain data, some validium solutions appoint a group of  trusted entities, collectively known as a data availability committee (DAC), to store copies of the state and provide proof of data availability. Users must trust these entities to make the data available when needed. There's the possibility of members of data availability committees [getting compromised by a malicious actor](https://notes.ethereum.org/DD7GyItYQ02d0ax_X-UbWg?view) who can then withhold off-chain data. 
+
+[More on data availability committees in validiums](https://medium.com/starkware/data-availability-e5564c416424). 
+
+#### Bonded data availability
+
+Other validiums require participants charged with storing offline data to stake (i.e., lock up) tokens in a smart contract before assuming their roles. This stake serves as a “bond” to guarantee honest behavior among data availability managers, and reduces trust assumptions. If these participants fail to prove data availability, the bond is slashed. 
+
+In a bonded data availability scheme, anyone can be assigned to hold off-chain data once they provide the required stake. This expands the pool of eligible data availability managers, reducing the centralization that affects data availability committees (DACs). More importantly, this approach relies on cryptoeconomic incentives to prevent malicious activity, which is considerably more secure than appointing trusted parties to secure offline data in the validium. 
+
+[More on bonded data availability in validiums](https://blog.matter-labs.io/zkporter-a-breakthrough-in-l2-scaling-ed5e48842fbf). 
 
 ## Volitions and validium
 
 Validiums offer many benefits, but come with trade-offs (most notably, data availability). But, as with many scaling solutions, validiums are suited to specific use-cases—which is why volitions were created. 
 
-Volitions combine a ZK-rollups and validium chain and allow users to switch between the two scaling solutions. With volitions, users can take advantage of validium's off-chain data availability for certain transactions, while retaining the freedom to switch to an on-chain data availability solution (ZK-rollup) if needed. This essentially gives users freedom to choose trade-offs as dictated by their unique circumstances. 
+Volitions combine a ZK-rollup and validium chain and allow users to switch between the two scaling solutions. With volitions, users can take advantage of validium's off-chain data availability for certain transactions, while retaining the freedom to switch to an on-chain data availability solution (ZK-rollup) if needed. This essentially gives users freedom to choose trade-offs as dictated by their unique circumstances. 
 
 A decentralized exchange (DEX) may prefer using a validium’s scalable and private infrastructure for high-value trades. It can also use a ZK-rollup for users who want a ZK-rollup's higher security guarantees and trustlessness. 
 
@@ -50,7 +60,7 @@ A decentralized exchange (DEX) may prefer using a validium’s scalable and priv
 | Not vulnerable to certain economic attacks faced by fraud-proof based systems in high-value applications. | High computational power required to generate ZK proofs; not cost effective for low throughput applications.                             |
 | Reduces gas fees for users by not posting calldata to Ethereum Mainnet.                          | Slower subjective finality time (10-30 min to generate a ZK proof) but faster to full finality because there is no dispute time delay. |
 | Suitable for specific use-cases, like trading or blockchain gaming that prioritize transaction privacy and scalability. | Generating a proof requires off-chain data to be available at all times.                                                   |
-|                                                                               |                           Security relies on trust assumptions and cryptoeconomic incentives, unlike ZK-rollups which rely on cryptographic security mechanisms. 
+|                                                                               |                           Security relies on trust assumptions and cryptoeconomic incentives, unlike ZK-rollups, which rely on cryptographic security mechanisms. 
 
 ### Use Validium/Volitions {#use-validium-and-volitions}
 
