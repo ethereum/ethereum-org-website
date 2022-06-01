@@ -15,6 +15,7 @@ import { trackCustomEvent } from "../utils/matomo"
 import { translateMessageId } from "../utils/translations"
 // Hook imports
 import { useOnClickOutside } from "../hooks/useOnClickOutside"
+import { useKeyPress } from "../hooks/useKeyPress"
 
 const FixedDot = styled(NakedButton)`
   width: 3rem;
@@ -225,6 +226,8 @@ const FeedbackWidget = ({ className }) => {
     window && surveyUrl && window.open(surveyUrl, "_blank")
     setIsOpen(false) // Close widget without triggering redundant tracker event
   }
+
+  useKeyPress(`Escape`, handleClose)
 
   if (!location.includes("/en/")) return null
 
