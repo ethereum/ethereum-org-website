@@ -19,7 +19,7 @@ As mentioned, sidechains use alternative consensus algorithms that are different
 - [Delegated proof-of-stake](https://en.bitcoinwiki.org/wiki/DPoS)
 - [Byzantine fault tolerance](https://decrypt.co/resources/byzantine-fault-tolerance-what-is-it-explained). 
 
-Sidechain nodes (called validators) are responsible for ordering and processing transactions, storing the blockchain state, and securing the network. In some cases, validators may be responsible for approving users' entries and exits between the sidechain and Ethereum Mainnet. 
+Validating nodes of sidechains are responsible for ordering and processing transactions, storing the blockchain state, and securing the network. In some cases, validators may be responsible for approving users' entries and exits between the sidechain and Ethereum Mainnet. 
 
 ### EVM compatibility {#evm-compatibility}
 
