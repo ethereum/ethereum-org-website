@@ -5,13 +5,13 @@ sidebar: true
 lang: en
 ---
 
-# Open areas of Ethereum research
+# Active areas of Ethereum research
 
-One of the primary strengths of Ethereum is that it is constantly being improved by an active research and engineering community. There are many enthusiastic, skilled people worldwide that would like to apply themselves to outstanding issues in Ethereum, but it is not always easy to find out what those issues are. This page aims to outline some of the key areas of active research as a rough guide to Ethereum's cutting edge.
+One of the primary strengths of Ethereum is that it is constantly being improved by an active research and engineering community. There are many enthusiastic, skilled people worldwide that would like to apply themselves to outstanding issues in Ethereum, but it is not always easy to find out what those issues are. This page aims to outline key areas of active research as a rough guide to Ethereum's cutting edge.
 
 ## How Ethereum research works
 
-Ethereum research is open and transparent. The culture is to make research tools and outputs as open and interactive as possible, for example through executable notebooks. Ethereum research is generally rapid, with new findings posted and discussed in the open on forums such as [ethresear.ch](https://ethresear.ch/) rather than reaching the community in traditional publications after rounds of peer review.
+Ethereum research is open and transparent. The culture is to make research tools and outputs as open and interactive as possible, for example through executable notebooks. Ethereum research is generally rapid, with new findings posted and discussed in the open on forums such as [ethresear.ch](https://ethresear.ch/) rather than reaching the community through traditional publications after rounds of peer review.
 
 ## General research resources
 
@@ -71,7 +71,9 @@ The execution layer is concerned with executing transactions, running the [Ether
 
 ## Client Development
 
-Client development makes the outcomes from protocol research into reality by building them into Ethereum clients - implementations of the Ethereum protocol. This includes updating the client specifications as well as building specific implementations. An Ethereum node is required to run two pieces of software: 1) a consensus client to keep track of the head of the blockchain, gossip blocks and handle consensus logic and 2) an execution client to support the Ethereum Virtual Machine and execute transactions. The [nodes and clients page](/developers/docs/nodes-and-clients/) explains about nodes and clients and includes links to all current client implementations.
+Client development makes the outcomes from protocol research into reality by building them into Ethereum clients - implementations of the Ethereum protocol. This includes updating the client specifications as well as building specific implementations. An Ethereum node is required to run two pieces of software: 1) a consensus client to keep track of the head of the blockchain, gossip blocks and handle consensus logic and 2) an execution client to support the Ethereum Virtual Machine and execute transactions.
+
+The [nodes and clients page](/developers/docs/nodes-and-clients/) explains about nodes and clients and includes links to all current client implementations. You can also find a history of all Ethereum upgrades on our [history page](/history/).
 
 ### Execution Clients
 
@@ -187,11 +189,13 @@ Zero-knowledge proofs (ZKP) and cryptography are critical for building privacy a
 
 ### Wallets
 
-User-wallets can be browser extensions, desktop and mobile apps or smart contracts on Ethereum. There is active research into social recovery wallets that reduce some of the risk associated with individual-user key management. Associated with development of wallets is research into alternative forms of account abstraction, which is an important area of nascent research.
+Ethereum wallets can be browser extensions, desktop and mobile apps or smart contracts on Ethereum. There is active research into social recovery wallets that reduce some of the risk associated with individual-user key management. Associated with development of wallets is research into alternative forms of account abstraction, which is an important area of nascent research.
 
 #### Background reading
 
-[Introduction to wallet security]/security/)
+[Introduction to wallets](/wallets/)
+
+[Introduction to wallet security](/security/)
 
 [ethresear.ch Security](https://ethresear.ch/tag/security)
 
@@ -427,7 +431,7 @@ Apps on Ethereum are rarely fully decentralized because they rely on some centra
 
 [Introduction to smart contracts](/developers/docs/smart-contracts/)
 
-[Introduction to storage](/developers/docs/storage/)
+[Introduction to decentralized storage](/developers/docs/storage/)
 
 #### Recent research
 
@@ -435,4 +439,4 @@ Apps on Ethereum are rarely fully decentralized because they rely on some centra
 
 ## Sources of Funding
 
-You can get involved with Ethereum research and get paid for it! For example, the Ethereum Foundation recently ran an [Academic Grants](/community/grants/academic-grants-round/) funding round. Information on active and upcoming funding opportunities can be found on the [grants page](community/grants/).
+You can get involved with Ethereum research and get paid for it! For example, the [Ethereum Foundation](/foundation/) recently ran an [Academic Grants](/community/grants/academic-grants-round/) funding round. Information on active and upcoming funding opportunities can be found on the [Ethereum grants page](/community/grants/).
