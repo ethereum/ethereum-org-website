@@ -25,9 +25,11 @@ Protocol research is concerned with Ethereum's base layer - the set of rules def
 
 ### Consensus
 
-Consensus research is concerned with Ethereum's proof-of-stake mechanism, for example identifying and patching vulnerabilities, quantifying cryptoeconomic security, increasing the security or performance of client implementations and developing light clients. Some fundamental redesigns of the protocol to confer large improvements to Ethereum are also being researched, for example single slot finality. Furthermore, the efficiency and safety and monitoring of the peer-to-peer networking between consensus clients are also important research topics.
+Consensus research is concerned with [Ethereum's proof-of-stake mechanism](/developers/docs/consensus-mechanisms/pos/), for example identifying and patching vulnerabilities, quantifying cryptoeconomic security, increasing the security or performance of client implementations and developing light clients. Some fundamental redesigns of the protocol to confer large improvements to Ethereum are also being researched, for example single slot finality. Furthermore, the efficiency and safety and monitoring of the peer-to-peer networking between consensus clients are also important research topics.
 
 #### Background reading
+
+[Introduction to proof-of-stake](/developers/docs/consensus-mechanisms/pos/)
 
 [Casper-FFG paper](https://arxiv.org/abs/1710.09437)
 
@@ -47,13 +49,13 @@ Consensus research is concerned with Ethereum's proof-of-stake mechanism, for ex
 
 ### Execution
 
-The execution layer is concerned with executing transactions, running the EVM and generating execution payloads to pass to the consensus layer. There are many active areas of research, especially as execution clients are updated ready for the merge. This includes building out light client support, research into gas limits and incorporating new data structures (e.g. Verkle Tries).
+The execution layer is concerned with executing transactions, running the [Ethereum virtual machine (EVM)](/developers/docs/evm/) and generating execution payloads to pass to the consensus layer. There are many active areas of research, especially as execution clients are updated ready for [the Merge](/upgrades/merge/). This includes building out light client support, research into gas limits and incorporating new data structures (e.g. Verkle Tries).
 
 #### Background reading
 
-[Ethresear.ch execution layer](https://ethresear.ch/c/execution-layer-research/37)
+[Introduction to the EVM](/developers/docs/evm)
 
-[Ethereum Virtual Machine](/developers/docs/evm/#top)
+[Ethresear.ch execution layer](https://ethresear.ch/c/execution-layer-research/37)
 
 #### Recent research
 
@@ -69,7 +71,7 @@ The execution layer is concerned with executing transactions, running the EVM an
 
 ## Client Development
 
-Client development makes the outcomes from protocol research into reality by building them into Ethereum clients. This includes updating the client specifications as well as building specific implementations. An Ethereum node is required to run two pieces of software - a consensus client to keep track of the head of the blockchain, gossip blocks anmd handle consensus logic and an execution client to support the Ethereum Virtual Machine and execute transactions. The [nodes and clients page](/developers/docs/nodes-and-clients/) explains about nodes and clients and includes links to all current client implementations.
+Client development makes the outcomes from protocol research into reality by building them into Ethereum clients - implementations of the Ethereum protocol. This includes updating the client specifications as well as building specific implementations. An Ethereum node is required to run two pieces of software: 1) a consensus client to keep track of the head of the blockchain, gossip blocks and handle consensus logic and 2) an execution client to support the Ethereum Virtual Machine and execute transactions. The [nodes and clients page](/developers/docs/nodes-and-clients/) explains about nodes and clients and includes links to all current client implementations.
 
 ### Execution Clients
 
