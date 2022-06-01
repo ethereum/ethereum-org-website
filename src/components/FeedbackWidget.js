@@ -2,6 +2,7 @@
 import React, { useState, useEffect, useRef, useMemo } from "react"
 import { useIntl } from "gatsby-plugin-intl"
 import styled from "styled-components"
+import FocusTrap from "focus-trap-react"
 // Component imports
 import { ButtonPrimary } from "./SharedStyledComponents"
 import Translation from "./Translation"
@@ -14,7 +15,6 @@ import { trackCustomEvent } from "../utils/matomo"
 import { translateMessageId } from "../utils/translations"
 // Hook imports
 import { useOnClickOutside } from "../hooks/useOnClickOutside"
-import { useFocusTrap } from "../hooks/useFocusTrap"
 
 const FixedDot = styled(NakedButton)`
   width: 3rem;
@@ -43,12 +43,9 @@ const FixedDot = styled(NakedButton)`
 `
 
 const ModalBackground = styled.div`
-  display: ${({ isOpen }) => (isOpen ? "block" : "none")};
+  display: block;
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   background-color: rgba(0, 0, 0, 0.2);
   z-index: 1001; /* Above the nav bar */
 `
@@ -150,7 +147,6 @@ const FeedbackWidget = ({ className }) => {
   const [isOpen, setIsOpen] = useState(false)
   const [feedbackSubmitted, setFeedbackSubmitted] = useState(false)
   const [isHelpful, setIsHelpful] = useState(null)
-  const [startTrap, stopTrap] = useFocusTrap("#modal")
 
   const location = typeof window !== "undefined" ? window.location.href : ""
 
@@ -197,7 +193,6 @@ const FeedbackWidget = ({ className }) => {
 
   const handleClose = () => {
     setIsOpen(false)
-    stopTrap()
     trackCustomEvent({
       eventCategory: `FeedbackWidget toggled`,
       eventAction: `Clicked`,
@@ -206,7 +201,6 @@ const FeedbackWidget = ({ className }) => {
   }
   const handleOpen = () => {
     setIsOpen(true)
-    startTrap()
     trackCustomEvent({
       eventCategory: `FeedbackWidget toggled`,
       eventAction: `Clicked`,
@@ -236,70 +230,77 @@ const FeedbackWidget = ({ className }) => {
 
   return (
     <>
-      <FixedDot onClick={handleOpen} bottomOffset={bottomOffset}>
+      <FixedDot onClick={handleOpen} bottomOffset={bottomOffset} id="dot">
         <StyledFeedbackGlyph />
       </FixedDot>
-      <ModalBackground isOpen={isOpen}>
-        <Container
-          isOpen={isOpen}
-          bottomOffset={bottomOffset}
-          ref={containerRef}
-          className={className}
-          id="modal"
-        >
-          <p className="title">
-            {feedbackSubmitted ? (
-              <Translation id="feedback-widget-thank-you-title" />
-            ) : (
-              <Translation id="feedback-widget-prompt" />
-            )}
-          </p>
-          {feedbackSubmitted && (
-            <p className="subtitle">
-              <Translation id="feedback-widget-thank-you-subtitle" />
-            </p>
-          )}
-          {feedbackSubmitted && (
-            <p className="timing">
-              <Translation id="feedback-widget-thank-you-timing" />
-            </p>
-          )}
-          <ButtonContainer>
-            {feedbackSubmitted ? (
-              <ButtonPrimary
-                onClick={handleSurveyOpen}
-                aria-label={translateMessageId(
-                  "feedback-widget-thank-you-cta",
-                  intl
-                )}
-              >
-                <Translation id="feedback-widget-thank-you-cta" />
-              </ButtonPrimary>
-            ) : (
-              <>
-                <ButtonPrimary
-                  onClick={() => handleSubmit(true)}
-                  aria-label={translateMessageId("yes", intl)}
-                >
-                  <Translation id="yes" />
-                </ButtonPrimary>
-                <ButtonPrimary
-                  onClick={() => handleSubmit(false)}
-                  aria-label={translateMessageId("no", intl)}
-                >
-                  <Translation id="no" />
-                </ButtonPrimary>
-              </>
-            )}
-          </ButtonContainer>
-          <IconContainer
-            onClick={handleClose}
-            aria-label={translateMessageId("close", intl)}
+      {isOpen && (
+        <ModalBackground>
+          <FocusTrap
+            focusTrapOptions={{
+              fallbackFocus: `#dot`,
+            }}
           >
-            <Icon name="close" />
-          </IconContainer>
-        </Container>
-      </ModalBackground>
+            <Container
+              bottomOffset={bottomOffset}
+              ref={containerRef}
+              className={className}
+              id="modal"
+            >
+              <p className="title">
+                {feedbackSubmitted ? (
+                  <Translation id="feedback-widget-thank-you-title" />
+                ) : (
+                  <Translation id="feedback-widget-prompt" />
+                )}
+              </p>
+              {feedbackSubmitted && (
+                <p className="subtitle">
+                  <Translation id="feedback-widget-thank-you-subtitle" />
+                </p>
+              )}
+              {feedbackSubmitted && (
+                <p className="timing">
+                  <Translation id="feedback-widget-thank-you-timing" />
+                </p>
+              )}
+              <ButtonContainer>
+                {feedbackSubmitted ? (
+                  <ButtonPrimary
+                    onClick={handleSurveyOpen}
+                    aria-label={translateMessageId(
+                      "feedback-widget-thank-you-cta",
+                      intl
+                    )}
+                  >
+                    <Translation id="feedback-widget-thank-you-cta" />
+                  </ButtonPrimary>
+                ) : (
+                  <>
+                    <ButtonPrimary
+                      onClick={() => handleSubmit(true)}
+                      aria-label={translateMessageId("yes", intl)}
+                    >
+                      <Translation id="yes" />
+                    </ButtonPrimary>
+                    <ButtonPrimary
+                      onClick={() => handleSubmit(false)}
+                      aria-label={translateMessageId("no", intl)}
+                    >
+                      <Translation id="no" />
+                    </ButtonPrimary>
+                  </>
+                )}
+              </ButtonContainer>
+              <IconContainer
+                onClick={handleClose}
+                aria-label={translateMessageId("close", intl)}
+              >
+                <Icon name="close" />
+              </IconContainer>
+            </Container>
+          </FocusTrap>
+        </ModalBackground>
+      )}
     </>
   )
 }
