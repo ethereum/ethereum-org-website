@@ -316,10 +316,13 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
           text: "ethereum-events",
           to: "/community/events/",
         },
-
         {
           text: "get-involved",
           to: "/community/get-involved/",
+        },
+        {
+          text: "open-research",
+          to: "/community/research/",
         },
         {
           text: "grants",
