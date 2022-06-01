@@ -18,7 +18,7 @@ const Figure = styled.figure`
 
 export interface IProps {
   id: string
-  start: string
+  start?: string
   title: string
 }
 
