@@ -7651,6 +7651,15 @@
       "contributions": [
         "ideas"
       ]
+    },
+    {
+      "login": "WilliamWelsh",
+      "name": "William",
+      "avatar_url": "https://avatars.githubusercontent.com/u/16886888?v=4",
+      "profile": "https://williamalanwelsh.com",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
