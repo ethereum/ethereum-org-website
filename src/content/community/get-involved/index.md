@@ -27,7 +27,7 @@ Do you have a background in mathematics, cryptography, or economics? You might b
 - [Ethresear.ch](https://ethresear.ch) - Ethereum’s primary forum for research, and the world’s most influential forum for cryptoeconomics
 - [Ecosystem Support Program's wishlist](https://esp.ethereum.foundation/wishlist/) - research areas where the Ethereum Ecosystem Support Program is actively seeking grant applications
 
-[Explore more active areas of research](/community/get-involved/open-research/).
+[Explore more active areas of research](/community/research/).
 
 ## Non-technical skillsets <Emoji text=":briefcase:" size={1} />‍ {#non-technical}
 
