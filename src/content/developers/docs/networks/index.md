@@ -41,10 +41,12 @@ A proof-of-work testnet; this means it's the best like-for-like representation o
 - [Website](https://sepolia.dev/)
 - [Github](https://github.com/goerli/sepolia)
 - [Otterscan](https://sepolia.otterscan.io/)
+- [Etherscan](https://sepolia.etherscan.io)
 
 ##### Sepolia faucets
 
 - [Sepolia faucet](https://faucet.sepolia.dev/)
+- [FaucETH](https://fauceth.komputing.org)
 
 #### Görli {#goerli}
 
