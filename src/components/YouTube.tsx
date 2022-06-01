@@ -19,10 +19,10 @@ const Figure = styled.figure`
 export interface IProps {
   id: string
   start?: string
-  title: string
+  title?: string
 }
 
-const YouTube: React.FC<IProps> = ({ id, start, title }) => {
+const YouTube: React.FC<IProps> = ({ id, start = "0", title = "YouTube" }) => {
   const startQuery = parseInt(start) > 0 ? `?start=${start}` : ""
   const baseUrl = "https://www.youtube.com/embed/"
   const src = baseUrl + id + startQuery
@@ -33,7 +33,7 @@ const YouTube: React.FC<IProps> = ({ id, start, title }) => {
         height="315"
         src={src}
         frameBorder="0"
-        title={title || "YouTube"}
+        title={title}
         allow="
       accelerometer;
       autoplay;
