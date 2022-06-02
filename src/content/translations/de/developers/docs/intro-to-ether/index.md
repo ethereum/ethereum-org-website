@@ -58,7 +58,7 @@ Gwei, kurz für Giga-Wei, wird oft verwendet, um die Gaskosten auf Ethereum zu b
 
 ## Überweisung von Ether {#transferring-ether}
 
-Jede Transaktion auf Ethereum enthält ein `Wert`-Feld, das den zu überweisenden Ether-Betrag in Wei angibt, der von der Adresse des Absenders an die Adresse des Empfängers gesendet wird.
+Jede Transaktion auf Ethereum enthält ein `value`-Feld, das den zu überweisenden Ether-Betrag in Wei angibt, der von der Adresse des Absenders an die Adresse des Empfängers gesendet wird.
 
 Wenn es sich bei der Empfängeradresse um einen [Smart Contract](/developers/docs/smart-contracts/) handelt, kann dieser übertragene Ether zum Bezahlen von Gas verwendet werden, wenn der Smart Contract seinen Code ausführt.
 
@@ -66,7 +66,7 @@ Wenn es sich bei der Empfängeradresse um einen [Smart Contract](/developers/doc
 
 ## Ether-Saldo abfragen {#querying-ether}
 
-Nutzer können den Ether-Saldo jedes [Kontos](/developers/docs/accounts/) abfragen, indem sie das `Saldo`-Feld des Kontos einsehen, das den Ether-Bestand in Wei anzeigt.
+Nutzer können den Ether-Saldo jedes [Kontos](/developers/docs/accounts/) abfragen, indem sie das `balance`-Feld des Kontos einsehen, das den Ether-Bestand in Wei anzeigt.
 
 [Etherscan](https://etherscan.io) ist ein beliebtes Tool zur Überprüfung von Adresssalden über eine webbasierte Anwendung. Zum Beispiel zeigt [diese Etherscan-Seite](https://etherscan.io/address/0xde0b295669a9fd93d5f28d9ec85e40f4cb697bae) den Kontostand der Ethereum Foundation.
 
