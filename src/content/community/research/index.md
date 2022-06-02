@@ -231,7 +231,7 @@ There are complex crypto-economic factors relating to Ethereum's native asset (e
 - [Quantifying MEV: How dark is the forest?](https://arxiv.org/abs/2101.05511)
 - [EIP 1559: One month later](https://arxiv.org/abs/2110.04753)
 
-### PoS incentives
+### Proof-of-stake incentives
 
 When Ethereum transitions to proof of stake, its native asset (ether) will be used as collateral by validators. The cryptoeconomics of this determines the security of the network. Sophisticated validators may be able to exploit the nuances of the incentive layer to theior own advantage by extracting MEV or launching explicit attacks.
 
