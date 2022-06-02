@@ -124,7 +124,7 @@ One particular area of layer 2 that requires more research and development is sa
 
 #### Recent research
 
-[Validating bridges](https://stonecoldpat.github.io/images/validatingbridges.pdf)
+- [Validating bridges](https://stonecoldpat.github.io/images/validatingbridges.pdf)
 
 ### Sharding
 
