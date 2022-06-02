@@ -379,7 +379,7 @@ Hacks on Ethereum generally exploit vulnerabilities in individual applications r
 
 ### Technology stack
 
-Apps on Ethereum are rarely fully decentralized because they rely on some centralized tooling or infrastructure. Decentralizing the full tech stack is an important research area.
+Decentralizing the entire Ethereum tech stack is an important research area. Currently, dapps on Ethereum commonly have some points of centralization because they rely on centralized tooling or infrastructure. 
 
 #### Background reading
 
