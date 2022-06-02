@@ -300,7 +300,7 @@ There is a need for more data analysis tools and dashboards that give detailed i
 
 #### Recent research
 
-[Robust Incentives Group Data Analysis](https://ethereum.github.io/rig/)
+- [Robust Incentives Group Data Analysis](https://ethereum.github.io/rig/)
 
 ## Apps and tooling
 
