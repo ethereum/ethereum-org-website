@@ -356,7 +356,7 @@ Oracles import off-chain data onto the blockchain in a permissionless and decent
 
 #### Background reading
 
-[Introduction to Oracles](/developers/docs/oracles/)
+- [Introduction to Oracles](/developers/docs/oracles/)
 
 #### Recent Research
 
