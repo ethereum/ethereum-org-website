@@ -202,7 +202,7 @@ Onboarding new users onto Ethereum requires new educational resources and approa
 
 ### UX/UI
 
-For Ethereum to onboard more people the UX/UI must be improved. This requires designers and UI and product experts to re-examine the design of wallets and apps.
+To onboard more people onto Ethereum, the ecosystem must improve the UX/UI. This will require designers and product experts to re-examine the design of wallets and apps.
 
 #### Background reading
 
