@@ -58,9 +58,8 @@ The execution layer is concerned with executing transactions, running the [Ether
 
 #### Background reading
 
-[Introduction to the EVM](/developers/docs/evm)
-
-[Ethresear.ch execution layer](https://ethresear.ch/c/execution-layer-research/37)
+- [Introduction to the EVM](/developers/docs/evm)
+- [Ethresear.ch execution layer](https://ethresear.ch/c/execution-layer-research/37)
 
 #### Recent research
 
