@@ -304,7 +304,7 @@ There is a need for more data analysis tools and dashboards that give detailed i
 
 ## Apps and tooling
 
-The application layer supports a very diverse ecosystem of programs that settle transactions on Ethereum's base layer. App teams are constantly finding new ways to leverage Ethereum to create lower-friction, composable, permissionless and censorship resistant versions of important Web2 apps or creating completely new web3-native concepts. At the same time, new tooling is being developed that makes building increasingly complex Ethereum apps easier.
+The application layer supports a diverse ecosystem of programs that settle transactions on Ethereum's base layer. Development teams are constantly finding new ways to leverage Ethereum to create composable, permissionless and censorship-resistant versions of important Web2 apps or create completely new Web3-native concepts. At the same time, new tooling is being developed that makes building dapps on Ethereum less complex.
 
 ### DeFi
 
