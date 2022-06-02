@@ -106,13 +106,10 @@ There are now several Layer 2 protocols that scale Ethereum using different tech
 
 #### Recent research
 
-[Arbitrum's fair-ordering for sequencers](https://eprint.iacr.org/2020/269.pdf)
-
-[ethresear.ch Layer 2](https://ethresear.ch/c/layer-2/32)
-
-[Rollup-centric roadmap](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698)
-
-[L2Beat](https://l2beat.com/)
+- [Arbitrum's fair-ordering for sequencers](https://eprint.iacr.org/2020/269.pdf)
+- [ethresear.ch Layer 2](https://ethresear.ch/c/layer-2/32)
+- [Rollup-centric roadmap](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698)
+- [L2Beat](https://l2beat.com/)
 
 ### Bridges
 
