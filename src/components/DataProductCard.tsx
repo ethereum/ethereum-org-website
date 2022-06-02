@@ -4,12 +4,16 @@ import { GatsbyImage } from "gatsby-plugin-image"
 
 import Link from "./Link"
 
+export interface ImageWrapperProps {
+  background: string
+}
+
 const ImageWrapper = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background: ${(props) => props.background};
+  background: ${(props: ImageWrapperProps) => props.background};
   box-shadow: inset 0px -1px 0px rgba(0, 0, 0, 0.1);
   min-height: 200px;
 `
@@ -93,7 +97,22 @@ const Logo = styled(GatsbyImage)`
   margin-right: 0.5rem;
 `
 
-const DataProductCard = ({
+export interface DataRow {
+  logo: string
+  coin: string
+  apy: string
+}
+
+export interface IProps {
+  url: string
+  background: string
+  image: string
+  name: string
+  description: string
+  data: DataRow[]
+}
+
+const DataProductCard: React.FC<IProps> = ({
   url,
   background,
   image,
