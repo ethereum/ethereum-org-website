@@ -233,7 +233,7 @@ There are complex crypto-economic factors relating to Ethereum's native asset (e
 
 ### Proof-of-stake incentives
 
-When Ethereum transitions to proof of stake, its native asset (ether) will be used as collateral by validators. The cryptoeconomics of this determines the security of the network. Sophisticated validators may be able to exploit the nuances of the incentive layer to theior own advantage by extracting MEV or launching explicit attacks.
+When Ethereum transitions to proof-of-stake, validators will use its native asset (ether) as collateral. The cryptoeconomics of this determines the security of the network. Sophisticated validators may be able to exploit the nuances of the incentive layer to their own advantage by extracting MEV or launching explicit attacks.
 
 #### Background reading
 
