@@ -317,9 +317,8 @@ Decentralized finance (DeFi) is one of the primary classes of application built 
 
 #### Recent research
 
-[Decentralized finance, centralized ownership?](https://arxiv.org/pdf/2012.09306.pdf)
-
-[Optimism: The road to sub-dollar transactions](https://medium.com/ethereum-optimism/the-road-to-sub-dollar-transactions-part-2-compression-edition-6bb2890e3e92)
+- [Decentralized finance, centralized ownership?](https://arxiv.org/pdf/2012.09306.pdf)
+- [Optimism: The road to sub-dollar transactions](https://medium.com/ethereum-optimism/the-road-to-sub-dollar-transactions-part-2-compression-edition-6bb2890e3e92)
 
 ### DAOs
 
