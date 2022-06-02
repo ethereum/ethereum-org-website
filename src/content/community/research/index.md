@@ -43,13 +43,10 @@ As well as forward-looking research, some fundamental redesigns of the protocol,
 
 #### Recent research
 
-[Ethresear.ch Consensus](https://ethresear.ch/c/consensus/29)
-
-[Availability/Finality dilemma](https://arxiv.org/abs/2009.04987)
-
-[Single slot finality](https://ethresear.ch/t/a-model-for-cumulative-committee-based-finality/10259)
-
-[Proposer-builder separation](https://notes.ethereum.org/@vbuterin/pbs_censorship_resistance)
+- [Ethresear.ch Consensus](https://ethresear.ch/c/consensus/29)
+- [Availability/Finality dilemma](https://arxiv.org/abs/2009.04987)
+- [Single slot finality](https://ethresear.ch/t/a-model-for-cumulative-committee-based-finality/10259)
+- [Proposer-builder separation](https://notes.ethereum.org/@vbuterin/pbs_censorship_resistance)
 
 ### Execution
 
