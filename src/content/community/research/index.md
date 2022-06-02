@@ -286,9 +286,8 @@ Formal verification is writing code to verify that Ethereum's consensus specific
 
 #### Recent research
 
-[Formal verification of the deposit contract](https://github.com/runtimeverification/deposit-contract-verification)
-
-[Formal verification of the Beacon Chain specification](https://github.com/runtimeverification/deposit-contract-verification)
+- [Formal verification of the deposit contract](https://github.com/runtimeverification/deposit-contract-verification)
+- [Formal verification of the Beacon Chain specification](https://github.com/runtimeverification/deposit-contract-verification)
 
 ## Data science and analytics
 
