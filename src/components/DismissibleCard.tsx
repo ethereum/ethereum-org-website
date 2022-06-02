@@ -3,8 +3,12 @@ import styled from "styled-components"
 
 import Icon from "./Icon"
 
+export interface CardProps {
+  shouldShow: boolean
+}
+
 const Card = styled.div`
-  display: ${(props) => (props.shouldShow ? `block` : `none`)};
+  display: ${(props: CardProps) => (props.shouldShow ? `block` : `none`)};
   position: relative;
   background: ${(props) => props.theme.colors.warning};
   padding: 1.5rem;
@@ -26,7 +30,12 @@ const CloseIconContainer = styled.span`
   }
 `
 
-const DismissibleCard = ({ children, storageKey }) => {
+export interface IProps {
+  children: string
+  storageKey: string
+}
+
+const DismissibleCard: React.FC<IProps> = ({ children, storageKey }) => {
   const [shouldShow, setshouldShow] = useState(false)
 
   useEffect(() => {
@@ -39,7 +48,7 @@ const DismissibleCard = ({ children, storageKey }) => {
 
   const handleClose = () => {
     if (localStorage) {
-      localStorage.setItem(storageKey, true)
+      localStorage.setItem(storageKey, "true")
     }
     setshouldShow(false)
   }
