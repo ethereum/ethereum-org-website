@@ -54,7 +54,7 @@ With bridges, there are no perfect solutions. Rather, there are only trade-offs 
 - **Convenience –** How long does it take to complete a transaction, and how many transactions did a user need to sign? For a developer, how long does it take to integrate a bridge, and how complex is the process?
 - **Connectivity –** What are the different destination chains a bridge can connect (i.e., rollups, sidechains, other layer 1 blockchains, etc.), and how hard is it to integrate a new blockchain?
 - **Ability to pass more complex data –** Can a bridge enable the transfer of messages and more complex arbitrary data across chains, or does it only support cross-chain asset transfers?
-- **Cost-Effectiveness –** How much does it cost to transfer assets across chains via a bridge? Typically, bridges charge a fixed or variable fee depending on gas costs and the liquidity of specific routes. It is also critical to evaluate the cost-effectiveness of a bridge based on the capital required to ensure its security.
+- **Cost-effectiveness –** How much does it cost to transfer assets across chains via a bridge? Typically, bridges charge a fixed or variable fee depending on gas costs and the liquidity of specific routes. It is also critical to evaluate the cost-effectiveness of a bridge based on the capital required to ensure its security.
 
 At a high level, bridges can be categorized as trusted and trustless.
 
