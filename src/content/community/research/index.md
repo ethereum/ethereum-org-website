@@ -183,15 +183,11 @@ Ethereum wallets can be browser extensions, desktop and mobile apps or smart con
 
 #### Background reading
 
-[Introduction to wallets](/wallets/)
-
-[Introduction to wallet security](/security/)
-
-[ethresear.ch Security](https://ethresear.ch/tag/security)
-
-[EIP-2938 Account Abstraction](https://eips.ethereum.org/EIPS/eip-2938)
-
-[EIP-4337 Account Abstraction](https://eips.ethereum.org/EIPS/eip-4337)
+- [Introduction to wallets](/wallets/)
+- [Introduction to wallet security](/security/)
+- [ethresear.ch Security](https://ethresear.ch/tag/security)
+- [EIP-2938 Account Abstraction](https://eips.ethereum.org/EIPS/eip-2938)
+- [EIP-4337 Account Abstraction](https://eips.ethereum.org/EIPS/eip-4337)
 
 #### Recent research
 
