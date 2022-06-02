@@ -210,11 +210,9 @@ To onboard more people onto Ethereum, the ecosystem must improve the UX/UI. This
 
 #### Recent research
 
-[Web3 Design Discord](https://discord.gg/FsCFPMTSm9)
-
-[Web3 Design Principles](https://www.web3designprinciples.com/)
-
-[Ethereum Magicians UX discussion](https://ethereum-magicians.org/t/og-council-ux-follow-up/9032/3)
+- [Web3 Design Discord](https://discord.gg/FsCFPMTSm9)
+- [Web3 Design Principles](https://www.web3designprinciples.com/)
+- [Ethereum Magicians UX discussion](https://ethereum-magicians.org/t/og-council-ux-follow-up/9032/3)
 
 ## Economics
 
