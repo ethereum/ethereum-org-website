@@ -25,7 +25,14 @@ Protocol research is concerned with Ethereum's base layer - the set of rules def
 
 ### Consensus
 
-Consensus research is concerned with [Ethereum's proof-of-stake mechanism](/developers/docs/consensus-mechanisms/pos/), for example identifying and patching vulnerabilities, quantifying cryptoeconomic security, increasing the security or performance of client implementations and developing light clients. Some fundamental redesigns of the protocol to confer large improvements to Ethereum are also being researched, for example single slot finality. Furthermore, the efficiency and safety and monitoring of the peer-to-peer networking between consensus clients are also important research topics.
+Consensus research is concerned with [Ethereum's proof-of-stake mechanism](/developers/docs/consensus-mechanisms/pos/). Some example consensus research topics are:
+
+- identifying and patching vulnerabilities;
+- quantifying cryptoeconomic security;
+- increasing the security or performance of client implementations;
+- and developing light clients.
+
+As well as forward-looking research, some fundamental redesigns of the protocol, such as single slot finality, are being researched to allow for significant improvements to Ethereum. Furthermore, the efficiency, safety, and monitoring of peer-to-peer networking between consensus clients are also important research topics.
 
 #### Background reading
 
