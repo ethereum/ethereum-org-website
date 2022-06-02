@@ -33,9 +33,9 @@ For developers, bridges enable the following:
 
 While there are many [types of bridge designs](https://blog.li.fi/what-are-blockchain-bridges-and-how-can-we-classify-them-560dc6ec05fa), three ways to facilitate the cross-chain transfer of assets stand out:
 
-- **Lock and Mint –** Lock assets on the source chain and mint assets on the destination chain.
-- **Burn and Mint –** Burn assets on the source chain and mint assets on the destination chain.
-- **Atomic Swaps –** Swap assets on the source chain for assets on the destination chain with another party.
+- **Lock and mint –** Lock assets on the source chain and mint assets on the destination chain.
+- **Burn and mint –** Burn assets on the source chain and mint assets on the destination chain.
+- **Atomic swaps –** Swap assets on the source chain for assets on the destination chain with another party.
 
 ## Bridge types {#bridge-types}
 
