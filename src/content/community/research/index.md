@@ -87,9 +87,8 @@ See the [nodes and clients page](/developers/docs/nodes-and-clients/) for more d
 
 ### Consensus Clients
 
-[Consensus client specification](https://github.com/ethereum/consensus-specs)
-
-[Beacon API specification](https://ethereum.github.io/beacon-APIs/#/Beacon/getStateRoot)
+- [Consensus client specification](https://github.com/ethereum/consensus-specs)
+- [Beacon API specification](https://ethereum.github.io/beacon-APIs/#/Beacon/getStateRoot)
 
 ## Scaling and performance
 
