@@ -78,7 +78,7 @@ An Ethereum node is required to run two pieces of software:
 1. a consensus client to keep track of the head of the blockchain, gossip blocks and handle consensus logic
 2. an execution client to support the Ethereum Virtual Machine and execute transactions.
 
-The [nodes and clients page](/developers/docs/nodes-and-clients/) explains about nodes and clients and includes links to all current client implementations. You can also find a history of all Ethereum upgrades on our [history page](/history/).
+See the [nodes and clients page](/developers/docs/nodes-and-clients/) for more detail on nodes and clients and for a list of all current client implementations. You can also find a history of all Ethereum upgrades on the [history page](/history/).
 
 ### Execution Clients
 
