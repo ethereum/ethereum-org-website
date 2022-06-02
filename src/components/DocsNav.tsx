@@ -78,9 +78,18 @@ const UppercaseSpan = styled.span`
   text-transform: uppercase;
 `
 
-const DocsNav = ({ relativePath }) => {
+export interface DocsArrayProps {
+  to: string
+  id: string
+}
+
+export interface IProps {
+  relativePath: string
+}
+
+const DocsNav: React.FC<IProps> = ({ relativePath }) => {
   // Construct array of all linkable documents in order recursively
-  const docsArray = []
+  const docsArray: DocsArrayProps[] = []
   const getDocs = (links) => {
     for (let item of links) {
       // If object has 'items' key
