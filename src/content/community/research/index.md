@@ -223,7 +223,7 @@ For Ethereum to onboard more people the UX/UI must be improved. This requires de
 
 #### Background reading
 
-[Ethresear.ch UX/UI](https://ethresear.ch/c/ui-ux/24)
+- [Ethresear.ch UX/UI](https://ethresear.ch/c/ui-ux/24)
 
 #### Recent research
 
