@@ -331,7 +331,7 @@ An impactful use case for Ethereum is the ability to organize in a decentralized
 
 #### Recent research
 
-[Mapping the DAO ecosystem](https://www.researchgate.net/publication/358694594_Mapping_out_the_DAO_Ecosystem_and_Assessing_DAO_Autonomy)
+- [Mapping the DAO ecosystem](https://www.researchgate.net/publication/358694594_Mapping_out_the_DAO_Ecosystem_and_Assessing_DAO_Autonomy)
 
 ### Developer tools
 
