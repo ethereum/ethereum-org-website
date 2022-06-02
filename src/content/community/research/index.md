@@ -312,9 +312,8 @@ Decentralized finance (DeFi) is one of the primary classes of application built 
 
 #### Background reading
 
-[DeFi](/defi/)
-
-[Coinbase: What is DeFi?](https://www.coinbase.com/learn/crypto-basics/what-is-defi)
+- [DeFi](/defi/)
+- [Coinbase: What is DeFi?](https://www.coinbase.com/learn/crypto-basics/what-is-defi)
 
 #### Recent research
 
