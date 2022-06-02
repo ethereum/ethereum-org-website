@@ -220,9 +220,8 @@ There are complex crypto-economic factors relating to Ethereum's native asset (e
 
 #### Background reading
 
-[Rollup economics from first principles](https://barnabe.substack.com/p/understanding-rollup-economics-from?utm_source=url)
-
-[Robust Incentives Group](https://ethereum.github.io/rig/)
+- [Rollup economics from first principles](https://barnabe.substack.com/p/understanding-rollup-economics-from?utm_source=url)
+- [Robust Incentives Group](https://ethereum.github.io/rig/)
 
 #### Recent research
 
