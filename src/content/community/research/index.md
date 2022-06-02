@@ -21,7 +21,7 @@ This report published in May 2022 by [DelphiDigital](https://members.delphidigit
 
 ## Protocol research
 
-Protocol research is concerned with Ethereum's base layer - the set of rules defining how nodes connect, communicate, exchange and store Ethereum data and come to consensus about the state of the blockchain. The protocol can be divided into two top-level categories: consensus and execution.
+Protocol research is concerned with Ethereum's base layer - the set of rules defining how nodes connect, communicate, exchange and store Ethereum data and come to consensus about the state of the blockchain. Protocol research gets divided into two top-level categories: consensus and execution.
 
 ### Consensus
 
