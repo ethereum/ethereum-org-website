@@ -339,17 +339,12 @@ Tools for Ethereum developers are rapidly improving. There is lots of active res
 
 #### Background reading
 
-[Tooling by programming language](/developers/docs/programming-languages/)
-
-[Developer Frameworks](/developers/docs/frameworks/)
-
-[Consensus developer tools list](https://github.com/ConsenSys/ethereum-developer-tools-list)
-
-[Token standards](/developers/docs/standards/tokens/)
-
-[Biastek: Ethereum tools](https://biastek.com/ethereum-tools/)
-
-[CryptoDevHub: EVM Tools](https://cryptodevhub.io/wiki/ethereum-virtual-machine-tools)
+- [Tooling by programming language](/developers/docs/programming-languages/)
+- [Developer Frameworks](/developers/docs/frameworks/)
+- [Consensus developer tools list](https://github.com/ConsenSys/ethereum-developer-tools-list)
+- [Token standards](/developers/docs/standards/tokens/)
+- [Biastek: Ethereum tools](https://biastek.com/ethereum-tools/)
+- [CryptoDevHub: EVM Tools](https://cryptodevhub.io/wiki/ethereum-virtual-machine-tools)
 
 #### Recent research
 
