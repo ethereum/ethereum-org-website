@@ -70,10 +70,10 @@ To evaluate trustless bridges based on other factors, we must break them down in
 
 Bridges account for the top three [biggest hacks in DeFi](https://rekt.news/leaderboard/) and are still in the early stages of development. Using any bridge carries the following risks:
 
-- **Smart Contract Risk –** While many bridges have successfully passed audits, all it takes is one flaw in a smart contract for assets to be exposed to hacks (ex: [Solana’s Wormhole Bridge](https://rekt.news/wormhole-rekt/)).
-- **Systematic Financial Risks** – Many bridges use wrapped assets to mint canonical versions of the original asset on a new chain. This exposes the ecosystem to systematic risk, as we have seen wrapped versions of tokens exploited.
-- **Trusted Third-Party Risk –** Some bridges utilize a trusted design that requires users to rely on the assumption that validators will not collude to steal user funds. The need for users to trust these third-party actors exposes them to risks such as rug pulls, censorship, and other malicious activities.
-- **Open Issues –** Given that bridges are in the nascent stages of development, there are many unanswered questions related to how bridges will perform in different market conditions, like times of network congestion and during unforeseen events such as network-level attacks or state rollbacks. This uncertainty poses certain risks, the degree of which is still unknown.
+- **Smart contract risk –** While many bridges have successfully passed audits, all it takes is one flaw in a smart contract for assets to be exposed to hacks (ex: [Solana’s Wormhole Bridge](https://rekt.news/wormhole-rekt/)).
+- **Systematic financial risks** – Many bridges use wrapped assets to mint canonical versions of the original asset on a new chain. This exposes the ecosystem to systematic risk, as we have seen wrapped versions of tokens exploited.
+- **Counterparty risk –** Some bridges utilize a trusted design that requires users to rely on the assumption that validators will not collude to steal user funds. The need for users to trust these third-party actors exposes them to risks such as rug pulls, censorship, and other malicious activities.
+- **Open issues –** Given that bridges are in the nascent stages of development, there are many unanswered questions related to how bridges will perform in different market conditions, like times of network congestion and during unforeseen events such as network-level attacks or state rollbacks. This uncertainty poses certain risks, the degree of which is still unknown.
 
 ## How can dapps use bridges? {#how-can-dapps-use-bridges}
 
