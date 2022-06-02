@@ -48,11 +48,45 @@ For the most part, upgrades should be considered a last resort and avoided unles
 
 ## Automated testing for smart contracts {#automated-testing-for-smart-contracts}
 
-### 1. Unit testing {#unit-testing}
+### 1. Functional testing {#functional-testing}
 
-Unit testing is an approach that involves testing individual components in a smart contract for correctness. A unit test is simple, quick to run, and provides a clear idea of what went wrong if the test fails. 
+Functional testing verifies the functionality of a smart contract and provides assurance that each function in the code works as expected. Functional testing requires understanding how your smart contract should behave in certain conditions. Then you can test each function by running computations with selected values and comparing the returned output with the expected output.   
 
-Unit tests are crucial for smart contract development, especially if you need to add new logic to the code. Unit testing verifies the behavior of specific parts of your code and confirms that they execute as intended. 
+Functional testing covers three methods: **unit testing**, **integration testing**, and **system testing**.
+
+- **Unit testing**
+
+Unit testing involves testing individual components in a smart contract for correctness. A unit test is simple, quick to run, and provides a clear idea of what went wrong if the test fails. 
+
+Unit tests are crucial for smart contract development, especially if you need to add new logic to the code. You can verify the behavior of each feature and confirm that it executes as intended.
+
+Running a unit test often requires creating *assertions*—simple, informal statements specifying requirements for a smart contract. Unit testing can then be used to test each assertion and see if it holds true under execution. 
+
+Examples of contract-related assertions include:
+
+i. "Only the admin can pause the contract" 
+
+ii. "Non-admins cannot mint new tokens" 
+
+iii. "The contract reverts on errors" 
+
+- **Integration testing**
+
+Integration testing is a level higher than unit testing on the testing hierarchy. In integration testing, individual components of the smart contract are tested together. 
+
+This approach detects errors arising from interactions between different components of a contract or across multiple contracts. You should use this method if you have a complex contract with multiple functions or one that interfaces with other contracts. 
+
+Integration testing can be useful for ensuring that things like [inheritance](https://docs.soliditylang.org/en/v0.8.12/contracts.html#inheritance) and dependency injection work properly. 
+
+- **System testing**
+
+System testing is the final phase of functional testing for smart contracts. A system evaluates the smart contract as one fully integrated product to see if it performs as specified in the technical requirements.
+
+You can think of this stage as checking the end-to-end flow of your smart contract from a user’s point of view. A good way to perform system testing on a smart contract is to deploy it on a production environment, such as a [testnet](/developers/docs/networks/#ethereum-testnets) or [development network](/developers/docs/development-networks/).  
+
+Here, end-users can perform trial runs and report any issues with the contract’s business logic and overall functionality. System testing is important because you cannot change code once the contract is deployed in the main EVM environment. 
+
+System testing can also cover separate testing measures, such as load testing and regression testing. A load test (also called a stress test) assesses the program's ability to perform optimally under real-time loads, while regression tests ensure changes made during development (after previous unit tests) didn't introduce new defects in the final contract. 
 
 ### 2. Static/dynamic analysis {#static-dynamic-analysis}
 
@@ -66,11 +100,17 @@ Static analysis examines the source code or bytecode of a smart contract before 
 
 Dynamic analysis techniques require executing the smart contract in a runtime environment to identify issues in your code. Dynamic code analyzers observe contract behaviors during execution and generate a detailed report of identified vulnerabilities and property violations. 
 
+Fuzzing is an example of a dynamic analysis technique for testing contracts. During fuzz testing, a fuzzer feeds your smart contract with malformed and invalid data and monitors how the contract responds to those inputs. 
+
+Like any program, smart contracts rely on inputs provided by users to execute functions. And, while we assume users will provide correct inputs, this may not always be the case. 
+
+In some cases, sending incorrect input values to a smart contract can cause resource leaks, crashes, or worse, lead to unintended code execution. Fuzzing campaigns identify such problems beforehand, allowing you to eliminate the vulnerability. 
+
 ### 3. Formal verification {#formal-verification}
 
-Formal verification is considered a robust technique for testing Ethereum smart contracts and asserting the correctness of code. Formal verification uses [formal methods](https://en.wikipedia.org/wiki/Formal_methods)—mathematically rigorous techniques for specifying and verifying software. 
+Formal verification is considered a robust technique for testing Ethereum smart contracts and asserting the correctness of code. Formal verification uses [formal methods](https://www.brookings.edu/techstream/formal-methods-as-a-path-toward-better-cybersecurity/)—mathematically rigorous techniques for specifying and verifying software. 
 
-Formal verification is considered important for smart contracts because it helps developers formally test assumptions relating to smart contracts. You can create specifications—properties describing expected results—and see if the contract's behavior matches the specifications. 
+Formal verification is considered important for smart contracts because it helps developers formally test assumptions relating to smart contracts. For instance, you can create specifications—fomalized properties describing expected results—and see if the contract's behavior matches the specifications. This approach increases confidence that a smart contract will only execute predefined functions and nothing else. 
 
 ## Manual testing for smart contracts {#manual-testing-for-smart-contracts}
 
@@ -130,7 +170,7 @@ Bug bounty programs often attract a broad class of ethical hackers and independe
 
 **Oyente** - _Static analysis tool for analyzing vulnerabilities in EVM bytecode with symbolic execution._
 - [GitHub](https://github.com/melonproject/oyente)
-- 
+ 
 **Mythril** - _EVM bytecode assessment tool for detecting contract vulnerabilities using taint analysis, concolic analysis, and control flow checking._
 
 - [GitHub](https://github.com/ConsenSys/mythril-classic) 
@@ -150,6 +190,9 @@ Bug bounty programs often attract a broad class of ethical hackers and independe
 
 **Echidna** - _A fast contract fuzzer for detecting vulnerabilities in smart contracts through property-based testing._
 - [GitHub](https://github.com/crytic/echidna/) 
+
+**Harvey** - _Automated fuzzing tool useful for detecting property violations in smart contract code._
+- [Website](https://consensys.net/diligence/fuzzing/)
 
 ### Smart contract auditing services {#smart-contract-auditing-services}
 
