@@ -326,7 +326,8 @@ An impactful use case for Ethereum is the ability to organize in a decentralized
 
 #### Background reading
 
-[Dao Collective](https://daocollective.xyz/)
+- [Introduction to DAOs](/dao/)
+- [Dao Collective](https://daocollective.xyz/)
 
 #### Recent research
 
