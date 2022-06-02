@@ -1,9 +1,10 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, PageProps } from "gatsby"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import styled from "styled-components"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
+
 import ButtonLink from "../components/ButtonLink"
 import Link from "../components/Link"
 import PageMetadata from "../components/PageMetadata"
@@ -14,6 +15,8 @@ import {
   Header4,
   ListItem,
 } from "../components/SharedStyledComponents"
+
+import { Context } from "../types"
 
 const Page = styled.div`
   display: flex;
@@ -307,7 +310,13 @@ const StyledLink = styled(Link)`
   }
 `
 
-const JobPage = ({ data: { mdx } }) => {
+const JobPage = ({
+  data: { mdx },
+}: PageProps<Queries.JobPageQuery, Context>) => {
+  if (!mdx?.frontmatter) {
+    throw new Error("Job page template query does not return expected values")
+  }
+
   return (
     <Container>
       <HeroContainer>
@@ -369,7 +378,7 @@ const JobPage = ({ data: { mdx } }) => {
             <StyledButtonLink isSecondary to="/about/#open-jobs">
               Back to jobs
             </StyledButtonLink>
-            <StyledButtonLink to={mdx.frontmatter.link}>
+            <StyledButtonLink to={mdx.frontmatter.link!}>
               Apply for job
             </StyledButtonLink>
           </ButtonRow>
@@ -378,7 +387,7 @@ const JobPage = ({ data: { mdx } }) => {
       <MobileButton>
         <ButtonRow>
           <StyledLink to="/about/#open-jobs"> Back to jobs</StyledLink>
-          <ButtonLink to={mdx.frontmatter.link}>Apply for job</ButtonLink>
+          <ButtonLink to={mdx.frontmatter.link!}>Apply for job</ButtonLink>
         </ButtonRow>
       </MobileButton>
     </Container>
@@ -388,9 +397,6 @@ const JobPage = ({ data: { mdx } }) => {
 export const JobQuery = graphql`
   query JobPage($relativePath: String) {
     mdx(fields: { relativePath: { eq: $relativePath } }) {
-      fields {
-        slug
-      }
       frontmatter {
         title
         description
@@ -408,15 +414,6 @@ export const JobQuery = graphql`
         }
       }
       body
-      tableOfContents
-      parent {
-        ... on File {
-          mtime
-          fields {
-            gitLogLatestDate
-          }
-        }
-      }
     }
   }
 `

@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, PageProps } from "gatsby"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import styled from "styled-components"
@@ -16,7 +16,6 @@ import PageMetadata from "../components/PageMetadata"
 import Pill from "../components/Pill"
 import TableOfContents from "../components/TableOfContents"
 import SectionNav from "../components/SectionNav"
-import { isLangRightToLeft } from "../utils/translations"
 import CallToContribute from "../components/CallToContribute"
 import {
   Divider,
@@ -30,6 +29,10 @@ import {
 } from "../components/SharedStyledComponents"
 import Emoji from "../components/Emoji"
 import YouTube from "../components/YouTube"
+
+import { isLangRightToLeft } from "../utils/translations"
+import { Lang } from "../utils/languages"
+import { Context } from "../types"
 
 const Page = styled.div`
   display: flex;
@@ -142,41 +145,49 @@ const Contributors = styled(FileContributors)`
   border-radius: 4px;
 `
 
-const TutorialPage = ({ data, pageContext }) => {
-  const pageData = data.pageData
-  const isRightToLeft = isLangRightToLeft(pageData.frontmatter.lang)
+const TutorialPage = ({
+  data: { siteData, pageData: mdx },
+  pageContext,
+}: PageProps<Queries.TutorialPageQuery, Context>) => {
+  if (!siteData || !mdx?.frontmatter) {
+    throw new Error(
+      "Tutorial page template query does not return expected values"
+    )
+  }
 
-  const tocItems = pageData.tableOfContents.items
+  const isRightToLeft = isLangRightToLeft(mdx.frontmatter.lang as Lang)
 
-  const { editContentUrl } = data.siteData.siteMetadata
+  const tocItems = mdx.tableOfContents?.items
+
+  const { editContentUrl } = siteData.siteMetadata || {}
   const { relativePath } = pageContext
   const absoluteEditPath = `${editContentUrl}${relativePath}`
 
   return (
     <Page dir={isRightToLeft ? "rtl" : "ltr"}>
       <PageMetadata
-        title={pageData.frontmatter.title}
-        description={pageData.frontmatter.description}
-        canonicalUrl={pageData.frontmatter.sourceUrl}
+        title={mdx.frontmatter.title}
+        description={mdx.frontmatter.description}
+        canonicalUrl={mdx.frontmatter.sourceUrl}
       />
       <ContentContainer>
-        <H1>{pageData.frontmatter.title}</H1>
-        <TutorialMetadata tutorial={pageData} />
+        <H1>{mdx.frontmatter.title}</H1>
+        <TutorialMetadata tutorial={mdx} />
         <MobileTableOfContents
           items={tocItems}
-          maxDepth={pageData.frontmatter.sidebarDepth}
+          maxDepth={mdx.frontmatter.sidebarDepth}
           editPath={absoluteEditPath}
           isMobile={true}
         />
         <MDXProvider components={components}>
-          <MDXRenderer>{pageData.body}</MDXRenderer>
+          <MDXRenderer>{mdx.body}</MDXRenderer>
         </MDXProvider>
         <Contributors relativePath={relativePath} editPath={absoluteEditPath} />
       </ContentContainer>
-      {pageData.frontmatter.sidebar && tocItems && (
+      {mdx.frontmatter.sidebar && tocItems && (
         <DesktopTableOfContents
           items={tocItems}
-          maxDepth={pageData.frontmatter.sidebarDepth}
+          maxDepth={mdx.frontmatter.sidebarDepth}
           editPath={absoluteEditPath}
         />
       )}
