@@ -117,13 +117,10 @@ One particular area of layer 2 that requires more research and development is sa
 
 #### Background reading
 
-[Introduction to blockchain bridges](/bridges/)
-
-[Vitalik on bridges](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/)
-
-[Blockchain Bridges article](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8)
-
-[Valkue locked in bridges](<https://dune.com/eliasimos/Bridge-Away-(from-Ethereum)>)
+- [Introduction to blockchain bridges](/bridges/)
+- [Vitalik on bridges](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/)
+- [Blockchain bridges article](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8)
+- [Value locked in bridges](https://dune.com/eliasimos/Bridge-Away-(from-Ethereum))
 
 #### Recent research
 
