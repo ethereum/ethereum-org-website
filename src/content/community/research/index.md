@@ -50,7 +50,11 @@ As well as forward-looking research, some fundamental redesigns of the protocol,
 
 ### Execution
 
-The execution layer is concerned with executing transactions, running the [Ethereum virtual machine (EVM)](/developers/docs/evm/) and generating execution payloads to pass to the consensus layer. There are many active areas of research, especially as execution clients are updated ready for [the Merge](/upgrades/merge/). This includes building out light client support, research into gas limits and incorporating new data structures (e.g. Verkle Tries).
+The execution layer is concerned with executing transactions, running the [Ethereum virtual machine (EVM)](/developers/docs/evm/) and generating execution payloads to pass to the consensus layer. There are many active areas of research, especially as execution clients are getting updated in anticipation of [The Merge](/upgrades/merge/). Active areas of research include: 
+
+- building out light client support;
+- researching gas limits; 
+- and incorporating new data structures (e.g. Verkle Tries).
 
 #### Background reading
 
