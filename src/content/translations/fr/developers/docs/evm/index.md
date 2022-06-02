@@ -11,7 +11,7 @@ Le protocole Ethereum existe par lui même uniquement dans le but de maintenir l
 
 ## Prérequis {#prerequisites}
 
-Une certaine familiarité avec la terminologie commune en informatique, comme [les octets](https://wikipedia.org/wiki/Byte), [la mémoire](https://wikipedia.org/wiki/Computer_memory), et une [pile](https://wikipedia.org/wiki/Stack_(abstract_data_type)) sont nécessaires pour comprendre l'EVM. Il est également utile d'être à l'aise avec les concepts de cryptographie/blockchain comme les [fonctions de hachage](https://wikipedia.org/wiki/Cryptographic_hash_function), la [Preuve de travail](https://wikipedia.org/wiki/Proof_of_work) et l'[arbre de Merkle](https://wikipedia.org/wiki/Merkle_tree).
+Une certaine familiarité avec la terminologie commune en informatique, comme [les octets](https://wikipedia.org/wiki/Byte), [la mémoire](https://wikipedia.org/wiki/Computer_memory), et une [pile](<https://wikipedia.org/wiki/Stack_(abstract_data_type)>) sont nécessaires pour comprendre l'EVM. Il est également utile d'être à l'aise avec les concepts de cryptographie/blockchain comme les [fonctions de hachage](https://wikipedia.org/wiki/Cryptographic_hash_function), la [Preuve de travail](https://wikipedia.org/wiki/Proof_of_work) et l'[arbre de Merkle](https://wikipedia.org/wiki/Merkle_tree).
 
 ## Du registre à la machine d'état {#from-ledger-to-state-machine}
 

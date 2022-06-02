@@ -105,7 +105,7 @@ Geth istemcisini çalıştıranlar için bir yetki ispatı test ağı.
 
 ## Özel ağlar {#private-networks}
 
-Bir Ethereum ağı, düğümleri genel bir ağa (yani Mainnet veya bir testnet) bağlı değilse  özel bir ağdır. Bu bağlamda özel, korumalı veya güvenli olmaktan ziyade yalnızca ayrılmış veya izole anlamına gelir.
+Bir Ethereum ağı, düğümleri genel bir ağa (yani Mainnet veya bir testnet) bağlı değilse özel bir ağdır. Bu bağlamda özel, korumalı veya güvenli olmaktan ziyade yalnızca ayrılmış veya izole anlamına gelir.
 
 ### Geliştirme ağları {#development-networks}
 

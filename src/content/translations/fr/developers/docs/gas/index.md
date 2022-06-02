@@ -64,7 +64,7 @@ Chaque bloc a des frais de base qui servent de prix de réserve. Pour être éli
 Les frais de base sont calculés par une formule qui compare la taille du bloc précédent (la quantité de gaz utilisée pour toutes les transactions) avec la taille cible. Les frais de base augmenteront d'un maximum de 12,5 % par bloc si la taille du bloc cible est dépassée. D'un point de vue économique, cette croissance exponentielle ne permet pas de garder des blocs de grande taille.
 
 | Numéro de bloc | Gaz inclus | Augmentation des frais | Frais de base actuels |
-| -------------- | ----------:| ----------------------:| ---------------------:|
+| -------------- | ---------: | ---------------------: | --------------------: |
 | 1              |       15 M |                    0 % |              100 gwei |
 | 2              |        30M |                    0 % |              100 gwei |
 | 3              |       30 M |                 12,5 % |            112,5 gwei |
@@ -79,7 +79,7 @@ En ce qui concerne le marché aux enchères de carburant pré-Londres, ce change
 Il est important de souligner également qu'il est peu probable que l'on voit des périodes de blocs pleins de manière prolongée, dû à la vitesse à laquelle les frais de base augmentent suivant un bloc plein.
 
 | Numéro de bloc | Gaz inclus | Augmentation des frais | Frais de base actuels |
-| -------------- | ----------:| ----------------------:| ---------------------:|
+| -------------- | ---------: | ---------------------: | --------------------: |
 | 30             |       30 M |                 12,5 % |          2 705,6 gwei |
 | ...            |        ... |                 12,5 % |                   ... |
 | 50             |       30 M |                 12,5 % |         28 531,3 gwei |
