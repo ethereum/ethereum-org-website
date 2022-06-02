@@ -260,7 +260,7 @@ Liquid staking allows users with less than 32 ETH to receive staking yields by s
 
 ### Fee markets
 
-Ethereum transaction fees protect the network from spam, denial-of-service attacks and bad smart-contract code. However, it also affects the end-user by influencing the cost of interacting with Ethereum. Balancing network security with end-user user-experience is an ongoing challenge that requires further research and development.
+Ethereum transaction fees protect the network from spam, denial-of-service attacks and bad smart-contract code. However, it also affects the end-user by influencing the cost of interacting with Ethereum. Balancing network security with end-user experience is an ongoing challenge that requires further research and development.
 
 #### Background reading
 
