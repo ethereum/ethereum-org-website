@@ -241,11 +241,9 @@ When Ethereum transitions to proof-of-stake, validators will use its native asse
 
 #### Recent research
 
-[Vitalik on PBS](https://notes.ethereum.org/s3JToeApTx6CKLJt8AbhFQ#Hybrid-PBS-can-we-use-proposers-only-for-inclusion-of-last-resort)
-
-[Three Attacks on PoS Ethereum](https://arxiv.org/abs/2110.10086)
-
-[Low-cost attacks on Ethereum 2.0 by sub 1/3 stakeholders](https://arxiv.org/abs/2102.02247)
+- [Vitalik on PBS](https://notes.ethereum.org/s3JToeApTx6CKLJt8AbhFQ#Hybrid-PBS-can-we-use-proposers-only-for-inclusion-of-last-resort)
+- [Three Attacks on PoS Ethereum](https://arxiv.org/abs/2110.10086)
+- [Low-cost attacks on Ethereum 2.0 by sub 1/3 stakeholders](https://arxiv.org/abs/2102.02247)
 
 ### Liquid staking and derivatives
 
