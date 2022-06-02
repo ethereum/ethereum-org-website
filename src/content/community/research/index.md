@@ -264,7 +264,7 @@ Ethereum transaction fees protect the network from spam, denial-of-service attac
 
 #### Background reading
 
-[EIP-1559 (Robust Incentives Group)](https://ethereum.github.io/abm1559/notebooks/eip1559.html)
+- [EIP-1559 (Robust Incentives Group)](https://ethereum.github.io/abm1559/notebooks/eip1559.html)
 
 #### Recent research
 
