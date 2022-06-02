@@ -440,3 +440,4 @@ Apps on Ethereum are rarely fully decentralized because they rely on some centra
 ## Sources of Funding {#sources-of-funding}
 
 You can get involved with Ethereum research and get paid for it! For example, the [Ethereum Foundation](/foundation/) recently ran an [Academic Grants](/community/grants/academic-grants-round/) funding round. Information on active and upcoming funding opportunities can be found on the [Ethereum grants page](/community/grants/).
+
