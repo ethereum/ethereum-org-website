@@ -225,15 +225,11 @@ There are complex crypto-economic factors relating to Ethereum's native asset (e
 
 #### Recent research
 
-[Empirical analysis of EIP1559]([https://arxiv.org/abs/2110.04753)
-
-[MEV auctions](https://ethresear.ch/t/mev-auction-auctioning-transaction-ordering-rights-as-a-solution-to-miner-extractable-value/6788)
-
-[Circulating supply equilibrium](https://ethresear.ch/t/circulating-supply-equilibrium-for-ethereum-and-minimum-viable-issuance-during-the-proof-of-stake-era/10954#6-enforcing-minimum-viable-issuance-with-a-variable-base-reward-factor-19)
-
-[Quantifying MEV: How dark is the forest?](https://arxiv.org/abs/2101.05511)
-
-[EIP 1559: One month later](https://arxiv.org/abs/2110.04753)
+- [Empirical analysis of EIP1559]([https://arxiv.org/abs/2110.04753)
+- [MEV auctions](https://ethresear.ch/t/mev-auction-auctioning-transaction-ordering-rights-as-a-solution-to-miner-extractable-value/6788)
+- [Circulating supply equilibrium](https://ethresear.ch/t/circulating-supply-equilibrium-for-ethereum-and-minimum-viable-issuance-during-the-proof-of-stake-era/10954#6-enforcing-minimum-viable-issuance-with-a-variable-base-reward-factor-19)
+- [Quantifying MEV: How dark is the forest?](https://arxiv.org/abs/2101.05511)
+- [EIP 1559: One month later](https://arxiv.org/abs/2110.04753)
 
 ### PoS incentives
 
