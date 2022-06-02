@@ -251,7 +251,7 @@ Liquid staking allows users with less than 32 ETH to receive staking yields by s
 
 #### Background reading
 
-[Ethresear.ch liquid staking](https://ethresear.ch/search?q=liquid%20staking)
+- [Ethresear.ch liquid staking](https://ethresear.ch/search?q=liquid%20staking)
 
 #### Recent research
 
