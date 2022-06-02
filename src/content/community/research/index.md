@@ -36,13 +36,10 @@ As well as forward-looking research, some fundamental redesigns of the protocol,
 
 #### Background reading
 
-[Introduction to proof-of-stake](/developers/docs/consensus-mechanisms/pos/)
-
-[Casper-FFG paper](https://arxiv.org/abs/1710.09437)
-
-[Casper-FFG Explainer](https://arxiv.org/abs/1710.09437)
-
-[Gasper paper](https://arxiv.org/abs/2003.03052)
+- [Introduction to proof-of-stake](/developers/docs/consensus-mechanisms/pos/)
+- [Casper-FFG paper](https://arxiv.org/abs/1710.09437)
+- [Casper-FFG explainer](https://arxiv.org/abs/1710.09437)
+- [Gasper paper](https://arxiv.org/abs/2003.03052)
 
 #### Recent research
 
