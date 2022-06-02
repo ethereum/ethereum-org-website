@@ -322,7 +322,7 @@ Decentralized finance (DeFi) is one of the primary classes of application built 
 
 ### DAOs
 
-DAOs are one of the key classes of application being built on top of Ethereum. There is a lot of very active research into how they may develop to replace corporations and other traditional organizations.
+An impactful use case for Ethereum is the ability to organize in a decentralized manner through the use of DAOs. There is a lot of active research into how DAOs on Ethereum can be developed and utilized to execute improved forms of governance, as a trust-minimized coordination tool, greatly expanding peoples options beyond traditional corporations and organizations.
 
 #### Background reading
 
