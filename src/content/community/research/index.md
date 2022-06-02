@@ -71,7 +71,12 @@ The execution layer is concerned with executing transactions, running the [Ether
 
 ## Client Development
 
-Client development makes the outcomes from protocol research into reality by building them into Ethereum clients - implementations of the Ethereum protocol. This includes updating the client specifications as well as building specific implementations. An Ethereum node is required to run two pieces of software: 1) a consensus client to keep track of the head of the blockchain, gossip blocks and handle consensus logic and 2) an execution client to support the Ethereum Virtual Machine and execute transactions.
+Ethereum clients are implementations of the Ethereum protocol. Client development makes the outcomes from protocol research into reality by building them into these clients. Client development includes updating the client specifications as well as building specific implementations. 
+
+An Ethereum node is required to run two pieces of software:
+
+1. a consensus client to keep track of the head of the blockchain, gossip blocks and handle consensus logic
+2. an execution client to support the Ethereum Virtual Machine and execute transactions.
 
 The [nodes and clients page](/developers/docs/nodes-and-clients/) explains about nodes and clients and includes links to all current client implementations. You can also find a history of all Ethereum upgrades on our [history page](/history/).
 
