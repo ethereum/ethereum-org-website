@@ -63,8 +63,8 @@ At a high level, bridges can be categorized as trusted and trustless.
 
 To evaluate trustless bridges based on other factors, we must break them down into generalized message passing bridges and liquidity networks.
 
-- **Generalized Message Passing Bridges –** These bridges excel with security and the ability to transfer more complex data across chains. Typically, they are also good with cost-effectiveness. However, these strengths generally come at the cost of connectivity for light client bridges (ex: IBC) and speed drawbacks for optimistic bridges (ex: Nomad) that use fraud proofs.
-- **Liquidity Networks –** These bridges use atomic swaps for transferring assets and are locally verified systems (i.e., they use the underlying blockchains’ validators to verify transactions). As a result, they excel with security and speed. Moreover, they are considered comparatively cost-effective and offer good connectivity. However, the major tradeoff is their ability to pass more complex data – as they don’t support cross-chain message passing.
+- **Generalized message passing bridges –** These bridges excel with security and the ability to transfer more complex data across chains. Typically, they are also good with cost-effectiveness. However, these strengths generally come at the cost of connectivity for light client bridges (ex: IBC) and speed drawbacks for optimistic bridges (ex: Nomad) that use fraud proofs.
+- **Liquidity networks –** These bridges use atomic swaps for transferring assets and are locally verified systems (i.e., they use the underlying blockchains’ validators to verify transactions). As a result, they excel with security and speed. Moreover, they are considered comparatively cost-effective and offer good connectivity. However, the major tradeoff is their inability to pass more complex data – as they don’t support cross-chain message passing.
 
 ## Risk with bridges {#risk-with-bridges}
 
