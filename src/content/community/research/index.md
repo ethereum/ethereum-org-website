@@ -50,10 +50,10 @@ As well as forward-looking research, some fundamental redesigns of the protocol,
 
 ### Execution
 
-The execution layer is concerned with executing transactions, running the [Ethereum virtual machine (EVM)](/developers/docs/evm/) and generating execution payloads to pass to the consensus layer. There are many active areas of research, especially as execution clients are getting updated in anticipation of [The Merge](/upgrades/merge/). Active areas of research include: 
+The execution layer is concerned with executing transactions, running the [Ethereum virtual machine (EVM)](/developers/docs/evm/) and generating execution payloads to pass to the consensus layer. There are many active areas of research, especially as execution clients are getting updated in anticipation of [The Merge](/upgrades/merge/). Active areas of research include:
 
 - building out light client support;
-- researching gas limits; 
+- researching gas limits;
 - and incorporating new data structures (e.g. Verkle Tries).
 
 #### Background reading
@@ -71,7 +71,7 @@ The execution layer is concerned with executing transactions, running the [Ether
 
 ## Client Development
 
-Ethereum clients are implementations of the Ethereum protocol. Client development makes the outcomes from protocol research into reality by building them into these clients. Client development includes updating the client specifications as well as building specific implementations. 
+Ethereum clients are implementations of the Ethereum protocol. Client development makes the outcomes from protocol research into reality by building them into these clients. Client development includes updating the client specifications as well as building specific implementations.
 
 An Ethereum node is required to run two pieces of software:
 
@@ -120,7 +120,7 @@ One particular area of layer 2 that requires more research and development is sa
 - [Introduction to blockchain bridges](/bridges/)
 - [Vitalik on bridges](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/)
 - [Blockchain bridges article](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8)
-- [Value locked in bridges](https://dune.com/eliasimos/Bridge-Away-(from-Ethereum))
+- [Value locked in bridges](<https://dune.com/eliasimos/Bridge-Away-(from-Ethereum)>)
 
 #### Recent research
 
@@ -149,11 +149,11 @@ Sharding Ethereum's blockchain has long been part of the development roadmap. Ho
 
 #### Background reading
 
-[Ethereum on ARM](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/)
+- [Ethereum on ARM](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/)
 
 #### Recent research
 
-[ecdsa on FGPAs](https://ethresear.ch/t/does-ecdsa-on-fpga-solve-the-scaling-problem/6738)
+- [ecdsa on FGPAs](https://ethresear.ch/t/does-ecdsa-on-fpga-solve-the-scaling-problem/6738)
 
 ## Security
 
@@ -165,17 +165,17 @@ Zero-knowledge proofs (ZKP) and cryptography are critical for building privacy a
 
 #### Background reading
 
-[0xparc blog](https://0xparc.org/blog)
+- [0xparc blog](https://0xparc.org/blog)
 
-[zkp.science](https://zkp.science/)
+- [zkp.science](https://zkp.science/)
 
-[Zero Knowledge podcast](https://zeroknowledge.fm/)
+- [Zero Knowledge podcast](https://zeroknowledge.fm/)
 
 #### Recent research
 
-[Recent advance in elliptic curve cryptography](https://ethresear.ch/t/the-ec-fft-algorithm-without-elliptic-curve-and-isogenies/11346)
+- [Recent advance in elliptic curve cryptography](https://ethresear.ch/t/the-ec-fft-algorithm-without-elliptic-curve-and-isogenies/11346)
 
-[Ethresear.ch ZK](https://ethresear.ch/c/zk-s-nt-arks/13)
+- [Ethresear.ch ZK](https://ethresear.ch/c/zk-s-nt-arks/13)
 
 ### Wallets
 
