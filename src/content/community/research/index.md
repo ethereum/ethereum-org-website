@@ -17,7 +17,7 @@ Ethereum research is open and transparent. The culture is to make research tools
 
 Regardless of the specific topic, there is a wealth of information on Ethereum research to be found at [ethresear.ch](https://ethresear.ch) and the [Eth R&D Discord channel](https://discord.gg/n7JxAeRu). These are the primary places where Ethereum researchers discuss the latest ideas and development opportunities.
 
-This May 2022 report from [DelphiDigital](https://members.delphidigital.io/reports/the-hitchhikers-guide-to-ethereum) also covers a lot of ground.
+This report published in May 2022 by [DelphiDigital](https://members.delphidigital.io/reports/the-hitchhikers-guide-to-ethereum) provides a good overview of the Ethereum roadmap.
 
 ## Protocol research
 
