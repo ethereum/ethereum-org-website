@@ -383,13 +383,10 @@ Decentralizing the entire Ethereum tech stack is an important research area. Cur
 
 #### Background reading
 
-[Coinbase: Intro to Web3 Stack](https://blog.coinbase.com/a-simple-guide-to-the-web3-stack-785240e557f0)
-
-[Ethereum stack](/developers/docs/ethereum-stack/)
-
-[Introduction to smart contracts](/developers/docs/smart-contracts/)
-
-[Introduction to decentralized storage](/developers/docs/storage/)
+- [Ethereum stack](/developers/docs/ethereum-stack/)
+-[Coinbase: Intro to Web3 Stack](https://blog.coinbase.com/a-simple-guide-to-the-web3-stack-785240e557f0)
+- [Introduction to smart contracts](/developers/docs/smart-contracts/)
+- [Introduction to decentralized storage](/developers/docs/storage/)
 
 #### Recent research
 
