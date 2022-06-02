@@ -92,7 +92,7 @@ See the [nodes and clients page](/developers/docs/nodes-and-clients/) for more d
 
 ## Scaling and performance
 
-There are ongoing efforts to scale Ethereum using a variety of techniques including sharding the blockchain, danksharding and using rollups. Introductory information on scaling Ethereum is available on our [scaling page](/developers/docs/scaling).
+Scaling Ethereum is a large area of focus for Ethereum researchers. Current approaches include sharding the blockchain, danksharding, and using rollups. Introductory information on scaling Ethereum is available on our [scaling page](/developers/docs/scaling).
 
 ### Layer 2
 
