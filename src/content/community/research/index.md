@@ -348,7 +348,7 @@ Tools for Ethereum developers are rapidly improving. There is lots of active res
 
 #### Recent research
 
-[Eth R&D Discord Consensus Tooling channel](https://discordapp.com/channels/595666850260713488/746343380900118528)
+- [Eth R&D Discord Consensus Tooling channel](https://discordapp.com/channels/595666850260713488/746343380900118528)
 
 ### Oracles
 
