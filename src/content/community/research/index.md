@@ -237,7 +237,7 @@ When Ethereum transitions to proof-of-stake, validators will use its native asse
 
 #### Background reading
 
-[Robist Incentives Group: PoS incentives](https://ethereum.github.io/beaconrunner/)
+- [Robist Incentives Group: PoS incentives](https://ethereum.github.io/beaconrunner/)
 
 #### Recent research
 
