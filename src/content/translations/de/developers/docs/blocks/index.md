@@ -23,7 +23,7 @@ Durch die Aufteilung der Übertragungen geben wir allen Netzwerkteilnehmern gen�
 
 Um die Transaktionsgeschichte zu erhalten, sind Blöcke streng sortiert (jeder neu erstellte Block enthält einen Verweis auf den übergeordneten Block), und Transaktionen innerhalb von Blöcken sind ebenfalls streng geordnet. Außer in seltenen Fällen, zu einem bestimmten Zeitpunkt, sind sich alle Teilnehmer des Netzwerks über die genaue Anzahl und Geschichte der Blöcke einig und arbeiten daran, die aktuellen Live-Transaktionsanfragen in den nächsten Block zu integrieren.
 
-Sobald ein Block von einem Miner im Netzwerk zusammengesetzt wird (geschürft, mined [engl.]), wird er an den Rest des Netzwerks weitergeleitet: Alle Nodes fügen diesen Block am Ende ihrer Blockchain hinzu und das Mining (Schürfen) geht weiter. Der genaue Prozess der Blockmontage (Schürfen/Mining [engl.]) und der Commitment/Konsensus-Prozess werden derzeit durch das „Proof-of-Work-Protokoll" von Ethereum spezifiziert.
+Sobald ein Block von einem Miner im Netzwerk zusammengesetzt wird (geschürft), wird er an den Rest des Netzwerks weitergeleitet: Alle Nodes fügen diesen Block am Ende ihrer Blockchain hinzu und das Mining (Schürfen) geht weiter. Der genaue Prozess der Blockmontage (Schürfen) und der Commitment/Konsensus-Prozess werden derzeit durch das „Proof-of-Work-Protokoll" von Ethereum spezifiziert.
 
 ### Eine visuelle Demo {#a-visual-demo}
 

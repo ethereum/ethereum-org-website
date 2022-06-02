@@ -16,7 +16,7 @@ Um diese Seite besser zu verstehen, empfehlen wir dir, zuerst einen Blick auf [K
 
 Proof-of-Stake ist eine Art von [Konsensmechanismus](/developers/docs/consensus-mechanisms/), die von Blockchain-Netzwerken benutzt wird, um einen verteilten Konsens zu erreichen.
 
-Es verlangt von Nutzern das Einsetzen ([engl.] Staking) ihrer ETH, um ein Validator im Netzwerk zu werden. Validatoren sind verantwortlich für die gleichen Dinge wie Miner in [Proof-of-Work](/developers/docs/consensus-mechanisms/pow/): Ordnen von Transaktionen und Erstellen von neuen Blöcken, so dass alle Nodes mit dem Status des Netzwerks übereinstimmen.
+Es verlangt von Nutzern das Einsetzen ihrer ETH, um ein Validator im Netzwerk zu werden. Validatoren sind verantwortlich für die gleichen Dinge wie Miner in [Proof-of-Work](/developers/docs/consensus-mechanisms/pow/): Ordnen von Transaktionen und Erstellen von neuen Blöcken, so dass alle Nodes mit dem Status des Netzwerks übereinstimmen.
 
 Proof-of-Stake kommt mit einer Anzahl an Verbesserungen zum Proof-of-Work-System hinzu:
 

@@ -105,7 +105,7 @@ Ein Proof-of-Work-Testnetz. Das bedeutet, es ist die beste gleichartige Testnetz
 
 ## Private Netzwerke {#private-networks}
 
-Ein Ethereum-Netzwerk ist ein privates Netzwerk, wenn seine Nodes nicht mit einem öffentlichen Netzwerk verbunden sind (d. h. Hauptnetz [engl. Mainnet] oder ein Testnetz [engl. Testnet). In diesem Zusammenhang bedeutet privat nur reserviert oder isoliert statt geschützt oder sicher.
+Ein Ethereum-Netzwerk ist ein privates Netzwerk, wenn seine Nodes nicht mit einem öffentlichen Netzwerk verbunden sind (d. h. Hauptnetz oder ein Testnetz). In diesem Zusammenhang bedeutet privat nur reserviert oder isoliert statt geschützt oder sicher.
 
 ### Entwicklungsnetzwerke {#development-networks}
 

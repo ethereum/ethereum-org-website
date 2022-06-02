@@ -5,7 +5,7 @@ lang: de
 sidebar: true
 ---
 
-Eine dezentralisierte Anwendung ([engl.] decentralized application, dapp) ist eine Anwendung, die auf einem dezentralisierten Netzwerk aufgebaut ist. Dies kombiniert einen [Smart Contract](/developers/docs/smart-contracts/) und eine Frontend-Benutzeroberfläche. Beachte, dass Smart Contracts in Ethereum zugänglich und transparent sind – wie offene APIs –, also kann deine Dapp sogar einen Smart Contract enthalten, den eine andere Person geschrieben hat.
+Eine dezentralisierte Anwendung ist eine Anwendung, die auf einem dezentralisierten Netzwerk aufgebaut ist. Dies kombiniert einen [Smart Contract](/developers/docs/smart-contracts/) und eine Frontend-Benutzeroberfläche. Beachte, dass Smart Contracts in Ethereum zugänglich und transparent sind – wie offene APIs –, also kann deine Dapp sogar einen Smart Contract enthalten, den eine andere Person geschrieben hat.
 
 ## Voraussetzungen {#prerequisites}
 
