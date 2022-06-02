@@ -375,7 +375,7 @@ Hacks on Ethereum generally exploit vulnerabilities in individual applications r
 
 #### Recent research
 
-[ethresear.ch Applications](https://ethresear.ch/c/applications/18)
+- [ethresear.ch Applications](https://ethresear.ch/c/applications/18)
 
 ### Technology stack
 
