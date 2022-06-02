@@ -82,9 +82,8 @@ See the [nodes and clients page](/developers/docs/nodes-and-clients/) for more d
 
 ### Execution Clients
 
-[Execution client specification](https://github.com/ethereum/execution-specs)
-
-[Execution API spec](https://github.com/ethereum/execution-apis)
+- [Execution client specification](https://github.com/ethereum/execution-specs)
+- [Execution API spec](https://github.com/ethereum/execution-apis)
 
 ### Consensus Clients
 
