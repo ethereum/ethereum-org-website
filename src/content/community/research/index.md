@@ -360,9 +360,8 @@ Oracles import off-chain data onto the blockchain in a permissionless and decent
 
 #### Recent Research
 
-[Survey of blockchain oracles](https://arxiv.org/pdf/2004.07140.pdf)
-
-[Chainlink white paper](https://chain.link/whitepaper)
+- [Survey of blockchain oracles](https://arxiv.org/pdf/2004.07140.pdf)
+- [Chainlink white paper](https://chain.link/whitepaper)
 
 ### App security
 
