@@ -191,13 +191,10 @@ Ethereum wallets can be browser extensions, desktop and mobile apps or smart con
 
 #### Recent research
 
-[Validation focused smart contract wallets](https://ethereum-magicians.org/t/validation-focused-smart-contract-wallets/6603)
-
-[The future of accounts](https://ethereum-magicians.org/t/validation-focused-smart-contract-wallets/6603)
-
-[EIP-3074 AUTH and AUTHCALL Opcodes](https://eips.ethereum.org/EIPS/eip-3074)
-
-[Publishing code code at EOA addresses](https://github.com/ethereum/EIPs/pull/5003)
+- [Validation focused smart contract wallets](https://ethereum-magicians.org/t/validation-focused-smart-contract-wallets/6603)
+- [The future of accounts](https://ethereum-magicians.org/t/validation-focused-smart-contract-wallets/6603)
+- [EIP-3074 AUTH and AUTHCALL Opcodes](https://eips.ethereum.org/EIPS/eip-3074)
+- [Publishing code at an EOA address](https://github.com/ethereum/EIPs/pull/5003)
 
 ## Community, education and outreach
 
