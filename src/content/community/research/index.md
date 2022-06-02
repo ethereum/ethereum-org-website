@@ -268,13 +268,10 @@ Ethereum transaction fees protect the network from spam, denial-of-service attac
 
 #### Recent research
 
-[EIP-4396](https://eips.ethereum.org/EIPS/eip-4396)
-
-[Multidimensional EIP-1559](https://ethresear.ch/t/multidimensional-eip-1559/11651)
-
-[Making EIP-1559 more like an AMM curve](https://ethresear.ch/t/make-eip-1559-more-like-an-amm-curve/9082)
-
-[Cross domain MEV](http://arxiv.org/abs/2112.01472)
+- [EIP-4396](https://eips.ethereum.org/EIPS/eip-4396)
+- [Multidimensional EIP-1559](https://ethresear.ch/t/multidimensional-eip-1559/11651)
+- [Making EIP-1559 more like an AMM curve](https://ethresear.ch/t/make-eip-1559-more-like-an-amm-curve/9082)
+- [Cross domain MEV](http://arxiv.org/abs/2112.01472)
 
 ## Testing
 
