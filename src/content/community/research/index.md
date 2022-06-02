@@ -308,7 +308,7 @@ The application layer supports a diverse ecosystem of programs that settle trans
 
 ### DeFi
 
-Decentralized finance (DeFi) is one of the primary classes of application built on top of Ethereum. DeFi aims to create composable "money legos" that allow users to store, transfer, lend, borrow and and invest crypto-assets using smart contracts. This is a fast-moving space that is constantly updating. Research into secure, efficient and accessible protocols is constantly needed.
+Decentralized finance (DeFi) is one of the primary classes of application built on top of Ethereum. DeFi aims to create composable "money legos" that allow users to store, transfer, lend, borrow and invest crypto-assets using smart contracts. DeFi is a fast-moving space that is constantly updating. Research into secure, efficient and accessible protocols is continuously needed.
 
 #### Background reading
 
