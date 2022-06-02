@@ -60,7 +60,7 @@ Pour vérifier notre solde, faisons une requête [eth_getBalance](https://docs.a
 ```
 
 > **REMARQUE :** Ce résultat est en wei et non pas en ETH. Le wei est utilisé comme la plus petite dénomination d'ether. La conversion de wei en ETH est : 1 eth = 10<sup>18</sup> wei. Donc si nous convertissons 0x2B5E3AF16B1880000 en décimales, nous obtenons 5\*10¹⁸, ce qui équivaut à 5 ETH.
-> 
+>
 > Ouf ! Notre fausse monnaie est bien là <Emoji text=":money_mouth_face:" size={1} />.
 
 ## Étape 6 : Initialisons notre projet {#step-6}
@@ -107,7 +107,7 @@ About to write to /Users/.../.../.../hello-world/package.json:
 
 Approuvez le package.json et nous sommes prêts à démarrer !
 
-## Étape 7 : Téléchargez [Hardhat](https://hardhat.org/getting-started/#overview ""){#step-7}
+## Étape 7 : Téléchargez [Hardhat](https://hardhat.org/getting-started/#overview){#step-7}
 
 Hardhat est un environnement de développement qui permet de compiler, déployer, tester et déboguer votre logiciel Ethereum. Il aide les développeurs à construire des contrats intelligents et des dApps localement avant de les déployer sur la chaîne en production.
 

@@ -188,7 +188,7 @@ Cependant, ce n'est toujours pas une bonne solution. L'un des aspects les plus p
 
 ### Comment gérer la réentrance (de la bonne façon) {#how-to-deal-with-re-entrancy-the-right-way}
 
-En changeant simplement l'ordre de la mise à jour de stockage et de l'appel externe, nous empêchons la condition de réentrance qui a permis l'attaque. Un rappel vers un retrait, bien que possible, ne profitera pas à l'attaquant puisque le stockage des ` soldes ` sera déjà défini à 0.
+En changeant simplement l'ordre de la mise à jour de stockage et de l'appel externe, nous empêchons la condition de réentrance qui a permis l'attaque. Un rappel vers un retrait, bien que possible, ne profitera pas à l'attaquant puisque le stockage des `soldes` sera déjà défini à 0.
 
 ```solidity
 contract NoLongerAVictim {

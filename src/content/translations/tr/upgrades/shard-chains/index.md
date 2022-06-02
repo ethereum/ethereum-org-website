@@ -57,7 +57,7 @@ Plan her zaman parçalara ekstra işlevsellik eklemek, onları bugünkü [Ethere
 
 Sürüm 1 parçalarının sağladığı saniye başına işlem artışı göz önüne alındığında, hâlâ buna gerek var mı? Bu hâlâ topluluk tarafından tartışılıyor ve birkaç seçenek var gibi görünüyor.
 
-### Parçaların kod çalıştırmaya ihtiyacı var mı?  {#do-shards-need-code-execution}
+### Parçaların kod çalıştırmaya ihtiyacı var mı? {#do-shards-need-code-execution}
 
 Vitalik Buterin, Bankless podcast ile konuşurken tartışmaya değer 3 potansiyel seçenek sundu.
 
@@ -73,7 +73,7 @@ Tüm parçaların (şu anda 64'ü planlanmıştır) daha akıllı olmasını ger
 
 #### 3. Zero Knowledge (ZK) kıvılcımlarını yapana kadar beklemeliyiz {#wait-for-zk-snarks}
 
-Son olarak, bu tartışmayı ZK SNARK'ları sağlamlaştırıldığında tekrar gözden geçirmek daha iyi olabilir. Bu, ağa gerçekten özel işlemler getirmeye yardımcı olabilecek bir teknolojidir.  Muhtemelen daha akıllı parçalara ihtiyaç duyacaklar ancak hâlâ araştırma ve geliştirme aşamasındalar.
+Son olarak, bu tartışmayı ZK SNARK'ları sağlamlaştırıldığında tekrar gözden geçirmek daha iyi olabilir. Bu, ağa gerçekten özel işlemler getirmeye yardımcı olabilecek bir teknolojidir. Muhtemelen daha akıllı parçalara ihtiyaç duyacaklar ancak hâlâ araştırma ve geliştirme aşamasındalar.
 
 #### Diğer kaynaklar {#other-sources}
 
