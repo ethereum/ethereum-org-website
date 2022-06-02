@@ -394,4 +394,4 @@ Decentralizing the entire Ethereum tech stack is an important research area. Cur
 
 ## Sources of Funding
 
-You can get involved with Ethereum research and get paid for it! For example, the [Ethereum Foundation](/foundation/) recently ran an [Academic Grants](/community/grants/academic-grants-round/) funding round. Information on active and upcoming funding opportunities can be found on the [Ethereum grants page](/community/grants/).
+You can get involved with Ethereum research and get paid for it! For example, [the Ethereum Foundation](/foundation/) recently ran an [Academic Grants funding round](/community/grants/academic-grants-round/). You can find information on active and upcoming funding opportunities on [the Ethereum grants page](/community/grants/).
