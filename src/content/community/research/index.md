@@ -295,9 +295,8 @@ There is a need for more data analysis tools and dashboards that give detailed i
 
 ### Background reading
 
-[Dune Analytics](https://dune.com/browse/dashboards)
-
-[Client diversity dashboard](https://clientdiversity.org/)
+- [Dune Analytics](https://dune.com/browse/dashboards)
+- [Client diversity dashboard](https://clientdiversity.org/)
 
 #### Recent research
 
