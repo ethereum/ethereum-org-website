@@ -4,7 +4,11 @@ import Translation from "./Translation"
 import Link from "./Link"
 import docLinks from "../data/developer-docs-links.yaml"
 
-const DeveloperDocsLinks = ({ headerId }) =>
+export interface IProps {
+  headerId: string
+}
+
+const DeveloperDocsLinks: React.FC<IProps> = ({ headerId }) =>
   docLinks
     .filter(({ id }) => id.includes(headerId))
     .map(({ items, id }) => (
