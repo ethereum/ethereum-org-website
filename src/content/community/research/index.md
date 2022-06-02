@@ -132,15 +132,11 @@ Sharding Ethereum's blockchain has long been part of the development roadmap. Ho
 
 #### Background reading
 
-[Introduction to Ethereum sharding](/upgrades/shard-chains/)
-
-[Proto-Danksharding notes](https://notes.ethereum.org/@vbuterin/proto_danksharding_faq)
-
-[Bankless Danksharding video](https://www.youtube.com/watch?v=N5p0TB77flM)
-
-[Ethereum Sharding Research Compendium](https://notes.ethereum.org/@serenity/H1PGqDhpm?type=view)
-
-[Danksharding (Polynya)](https://polynya.medium.com/danksharding-36dc0c8067fe)
+- [Introduction to Ethereum sharding](/upgrades/shard-chains/)
+- [Proto-Danksharding notes](https://notes.ethereum.org/@vbuterin/proto_danksharding_faq)
+- [Bankless Danksharding video](https://www.youtube.com/watch?v=N5p0TB77flM)
+- [Ethereum Sharding Research Compendium](https://notes.ethereum.org/@serenity/H1PGqDhpm?type=view)
+- [Danksharding (Polynya)](https://polynya.medium.com/danksharding-36dc0c8067fe)
 
 #### Recent research
 
