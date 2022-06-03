@@ -178,7 +178,7 @@ const DocsPage = ({
   const isRightToLeft = isLangRightToLeft(mdx.frontmatter.lang as Lang)
 
   const tocItems = mdx.tableOfContents?.items
-  const isPageIncomplete = mdx.frontmatter.incomplete
+  const isPageIncomplete = !!mdx.frontmatter.incomplete
 
   const { editContentUrl } = siteData.siteMetadata || {}
   const { relativePath, slug } = pageContext
