@@ -160,6 +160,7 @@ There are many ambitious projects using Ethereum as a foundation for decentraliz
 - [Decentralized Identity (Bonus Livestream Session)](https://www.youtube.com/watch?v=ySHNB1za_SE&t=539s) — _A great explainer video on decentralized identity by Andreas Antonopolous_
 - [Sign In with Ethereum and Decentralized Identity with Ceramic, IDX, React, and 3ID Connect](https://www.youtube.com/watch?v=t9gWZYJxk7c) — _YouTube utorial on building out an identity management system for creating, reading, and updating a user's profile using their Ethereum wallet by Nader Dabit_
 - [BrightID - Decentralized Identity on Ethereum](https://www.youtube.com/watch?v=D3DbMFYGRoM) — _Bankless podcast episode discussing BrightID, a decentralized identity solution for Ethereum_
+- [The Off Chain Internet: Decentralized Identity & Verifiable Credentials](https://www.youtube.com/watch?v=EZ_Bb6j87mg) — EthDenver 2022 presentation by Evin McMullen
 
 ### Communities {#communities}
  - [ERC-725 Alliance on GitHub](https://github.com/erc725alliance) — _Supporters of the ERC725 standard for managing identity on the Ethereum blockchain_
