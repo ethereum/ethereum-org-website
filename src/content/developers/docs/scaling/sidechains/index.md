@@ -25,7 +25,7 @@ One of the qualities that make sidechains unique (i.e., different from Ethereum)
 
 Like Ethereum, sidechains have validating nodes that verify and process transactions, produce blocks, and store the blockchain state. Validators are also responsible for maintaining consensus across the network and securing it against malicious attacks.
 
-#### Block parameters 
+#### Block parameters {#block-parameters}
 
 Ethereum places limits on [block times](/developers/docs/blocks/#block-time) (i.e., the time it takes to produce new blocks) and [block sizes](/developers/docs/blocks/#block-size) (i.e., the amount of data contained per block denominated in gas). Conversely, sidechains often adopt different parameters, such as faster block times and higher gas limits, to achieve high throughput, fast transactions, and low fees. 
 
@@ -37,7 +37,7 @@ For blockchains to scale without harming decentralization, running a node must b
 
 Some sidechains are EVM-compatible and are able to execute contracts developed for the [Ethereum Virtual Machine (EVM)](/developers/docs/evm/). EVM-compatible sidechains support smart contracts [written in Solidity](/developers/docs/smart-contracts/languages/), as well as other EVM smart contract languages, which means smart contracts written for Ethereum Mainnet will also work on EVM-compatible sidechains. 
 
-This means if you want to use your [dapp](/developers/docs/dapps/) on a sidechain, it's just a matter of deploying your [smart contract](/developers/docs/smart-contracts/) to this sidechain. It looks, feels, and acts just like Mainnet – you write contracts in Solidity, and interact with the chain via the sidechains RPC.
+This means if you want to use your [dapp](/developers/docs/dapps/) on a sidechain, it's just a matter of deploying your [smart contract](/developers/docs/smart-contracts/) to this sidechain. It looks, feels, and acts just like Mainnet—you write contracts in Solidity, and interact with the chain via the sidechains RPC.
 
 Because sidechains are EVM-compatible, they are considered a useful [scaling solution](/developers/docs/scaling/) for Ethereum-native dapps. With your dapp on a sidechain, users can enjoy lower gas fees and faster transactions, especially if Mainnet is congested. 
 
@@ -47,26 +47,7 @@ However, as explained previously, using a sidechain involves significant trade-o
 
 In order for a separate blockchain to become a sidechain to Ethereum Mainnet it needs the ability to facilitate the transfer of assets from and to Ethereum Mainnet. This interoperability with Ethereum is achieved using a blockchain bridge. [Bridges](/bridges/) use smart contracts deployed on Ethereum Mainnet and a sidechain to control the bridging of funds between them. 
 
-While bridges help users move funds between Ethereum and the sidechain, the assets are not physically moved across the two chains. Instead, a "lock-mint-burn" mechanism is used for transferring value across chains. Here is a description of the actual process:
-
-- **Moving funds from Ethereum to a sidechain**
-
-Bob (an Ethereum user) wishes to use a sidechain. This is what he does to move funds from Mainnet to the sidechain:
- 
-1. Bob sends ERC-20 tokens to a smart contract on the Ethereum chain (e.g. Ethereum) and pays the transaction fee. 
-2. Bob’s ERC-20 tokens are locked up in the smart contract, with the event being relayed to the smart contract on the sidechain.
-3. Once it receives proof of Bob’s deposit, the sidechain’s smart contract triggers the creation or “minting” of an amount of tokens equal to Bob’s initial deposit. 
-4. Bob receives the new tokens in his wallet address and can use it to execute transactions on the sidechain. 
-
-- **Moving funds from a sidechain to Ethereum Mainnet**
-
-Having concluded his business on the sidechain, Bob wants to withdraw his remaining funds to Ethereum Mainnet. This is what happens:
-
-1. Bob sends his remaining tokens to the sidechain’s smart contract for “burning”. Burning is a mechanism for destroying tokens by making them irrecoverable. 
-2. Information concerning Bob’s deposit transaction and the token burning is relayed to the smart contract on Ethereum. 
-3. The smart contract then triggers the release of Bob’s ERC-20 tokens on Ethereum, which are sent back to his wallet.
-
-Note: Bridging funds between Mainnet and sidechains carries its own set of problems (e.g., smart contracts can be hacked), which is another drawback associated with sidechains. More on the [risks of blockchain bridges](/bridges/#bridge-risk). 
+While bridges help users move funds between Ethereum and the sidechain, the assets are not physically moved across the two chains. Instead, mechanisms that typically involve minting and burning are used for transferring value across chains. More on [how bridges work](/developers/docs/bridges/#how-do-bridges-work).
 
 ## Pros and cons of sidechains {#pros-and-cons-of-sidechains}
 
