@@ -5,7 +5,7 @@ import Link from "./Link"
 import Emoji from "./Emoji"
 import Translation from "./Translation"
 
-import docLinks from "../data/developer-docs-links.yaml"
+import docLinks, { DeveloperDocsLink } from "../data/developer-docs-links.yaml"
 
 const Container = styled.div`
   display: flex;
@@ -90,7 +90,7 @@ export interface IProps {
 const DocsNav: React.FC<IProps> = ({ relativePath }) => {
   // Construct array of all linkable documents in order recursively
   const docsArray: DocsArrayProps[] = []
-  const getDocs = (links) => {
+  const getDocs = (links: Array<DeveloperDocsLink>): void => {
     for (let item of links) {
       // If object has 'items' key
       if (item.items) {

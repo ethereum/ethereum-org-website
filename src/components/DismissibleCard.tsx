@@ -3,12 +3,10 @@ import styled from "styled-components"
 
 import Icon from "./Icon"
 
-export interface CardProps {
+const Card = styled.div<{
   shouldShow: boolean
-}
-
-const Card = styled.div`
-  display: ${(props: CardProps) => (props.shouldShow ? `block` : `none`)};
+}>`
+  display: ${(props) => (props.shouldShow ? `block` : `none`)};
   position: relative;
   background: ${(props) => props.theme.colors.warning};
   padding: 1.5rem;
@@ -31,7 +29,6 @@ const CloseIconContainer = styled.span`
 `
 
 export interface IProps {
-  children: string
   storageKey: string
 }
 
