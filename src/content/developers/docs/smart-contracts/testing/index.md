@@ -148,16 +148,6 @@ Bug bounty programs often attract a broad class of ethical hackers and independe
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-test-helpers) 
 - [Documentation](https://docs.openzeppelin.com/test-helpers) 
 
-**OpenZeppelin test environment** - _Highly configurable environment for blazing-fast smart contract testing._
-- [GitHub](https://github.com/OpenZeppelin/openzeppelin-test-environment)
-- [Documentation](https://docs.openzeppelin.com/test-environment/) 
-
-**Whiteblock Genesis** - _An end-to-end development sandbox and testing platform for blockchain._
-
-- [Whiteblock.io](https://whiteblock.io)
-- [Documentation](https://docs.whiteblock.io)
-- [GitHub](https://github.com/whiteblock/genesis)
-
 **Truffle smart contract test framework** - _Automated testing framework to make testing your contracts a breeze._
 - [Documentation](https://trufflesuite.com/docs/truffle/testing/testing-your-contracts/) 
 - [Website](https://trufflesuite.com/) 
@@ -167,9 +157,6 @@ Bug bounty programs often attract a broad class of ethical hackers and independe
 - [GitHub](https://github.com/eth-brownie/brownie) 
 
 ### Static analysis tools {#static-analysis-tools}
-
-**Oyente** - _Static analysis tool for analyzing vulnerabilities in EVM bytecode with symbolic execution._
-- [GitHub](https://github.com/melonproject/oyente)
  
 **Mythril** - _EVM bytecode assessment tool for detecting contract vulnerabilities using taint analysis, concolic analysis, and control flow checking._
 
@@ -180,13 +167,7 @@ Bug bounty programs often attract a broad class of ethical hackers and independe
 - [GitHub](https://github.com/trailofbits/manticore)  
 - [Documentation](https://github.com/trailofbits/manticore/wiki) 
 
-**Securify** - _A security analyzer for analyzing Solidity code in Ethereum smart contracts and detecting property violations._
-- [GitHub](https://github.com/eth-sri/securify2) 
-
 ### Dynamic analysis tools {#dynamic-analysis-tools}
-
-**MAIAN** - _An automatic tool for finding trace vulnerabilities in Ethereum smart contracts._
-- [GitHub](https://github.com/ivicanikolicsg/MAIAN)
 
 **Echidna** - _A fast contract fuzzer for detecting vulnerabilities in smart contracts through property-based testing._
 - [GitHub](https://github.com/crytic/echidna/) 
