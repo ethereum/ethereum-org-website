@@ -6,7 +6,7 @@ export interface IStyledBanner {
 }
 
 export interface IProps {
-  shouldShow?: boolean
+  shouldShow?: boolean | null
   className?: string
 }
 
@@ -31,10 +31,13 @@ const BannerNotification: React.FC<IProps> = ({
   children,
   className,
   shouldShow = false,
-}) => (
-  <Banner shouldShow={shouldShow} className={className}>
-    {children}
-  </Banner>
-)
+}) => {
+  const shouldShowAssign: boolean = shouldShow || false
+  return (
+    <Banner shouldShow={shouldShowAssign} className={className}>
+      {children}
+    </Banner>
+  )
+}
 
 export default BannerNotification
