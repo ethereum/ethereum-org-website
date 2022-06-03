@@ -4,16 +4,14 @@ import { GatsbyImage } from "gatsby-plugin-image"
 
 import Link from "./Link"
 
-export interface ImageWrapperProps {
+const ImageWrapper = styled.div<{
   background: string
-}
-
-const ImageWrapper = styled.div`
+}>`
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background: ${(props: ImageWrapperProps) => props.background};
+  background: ${(props) => props.background};
   box-shadow: inset 0px -1px 0px rgba(0, 0, 0, 0.1);
   min-height: 200px;
 `
@@ -108,8 +106,8 @@ export interface IProps {
   background: string
   image: string
   name: string
-  description: string
-  data: DataRow[]
+  description?: string
+  data?: Array<DataRow>
 }
 
 const DataProductCard: React.FC<IProps> = ({
