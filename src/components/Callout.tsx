@@ -3,9 +3,9 @@ import React from "react"
 import styled from "styled-components"
 import { GatsbyImage } from "gatsby-plugin-image"
 import Translation from "./Translation"
-
+import { TranslationKey } from "../utils/translations"
 // Components
-import Emoji from "../components/Emoji"
+import Emoji from "./Emoji"
 
 const StyledCard = styled.div`
   display: flex;
@@ -46,7 +46,16 @@ const Content = styled.div`
   height: 100%;
 `
 
-const Callout = ({
+interface IProps {
+  image: string
+  emoji?: string
+  alt?: string
+  titleKey: TranslationKey
+  descriptionKey: TranslationKey
+  className?: string
+}
+
+const Callout: React.FC<IProps> = ({
   image,
   emoji,
   alt,
