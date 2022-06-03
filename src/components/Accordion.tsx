@@ -82,7 +82,18 @@ const StyledEmoji = styled(Emoji)`
   }
 `
 
-const StablecoinAccordion = ({ children, contentPreview, title, emoji }) => {
+export interface IProps {
+  contentPreview: string
+  title: string
+  emoji: string
+}
+
+const StablecoinAccordion: React.FC<IProps> = ({
+  children,
+  contentPreview,
+  title,
+  emoji,
+}) => {
   const [isVisible, setIsVisible] = useState(false)
   return (
     <Card>
