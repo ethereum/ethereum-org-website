@@ -91,7 +91,7 @@ contract ERC20Basic is IERC20 {
         require(numTokens <= allowed[owner][msg.sender]);
 
         balances[owner] = balances[owner]-numTokens;
-        allowed[owner][msg.sender] = allowed[owner][msg.sender]+numTokens;
+        allowed[owner][msg.sender] = allowed[owner][msg.sender]-numTokens;
         balances[buyer] = balances[buyer]+numTokens;
         emit Transfer(owner, buyer, numTokens);
         return true;
@@ -273,7 +273,7 @@ contract ERC20Basic is IERC20 {
         require(numTokens <= allowed[owner][msg.sender]);
 
         balances[owner] = balances[owner]-numTokens;
-        allowed[owner][msg.sender] = allowed[owner][msg.sender]+numTokens;
+        allowed[owner][msg.sender] = allowed[owner][msg.sender]-numTokens;
         balances[buyer] = balances[buyer]+numTokens;
         emit Transfer(owner, buyer, numTokens);
         return true;

@@ -246,7 +246,7 @@ Die Byzantium-Fork:
 - [EIP-140](https://eips.ethereum.org/EIPS/eip-140) - _Ergänzt `REVERT` Opcode._
 - [EIP-658](https://eips.ethereum.org/EIPS/eip-658) - _Statusfeld zu Transaktionsbestätigungen hinzugefügt, um Erfolg oder Misserfolg anzuzeigen._
 - [EIP-196](https://eips.ethereum.org/EIPS/eip-196) - _erweitert elliptische Kurve und skalare Multiplikation, um [ZK-Snarks](/developers/docs/scaling/zk-rollups/) zu ermöglichen._
-- [EIP-197](https://eips.ethereum.org/EIPS/eip-197) - _erweitert elliptische Kurve und Skalarmultiplikation, um [ZK-Snarks](/entwickler/docs/scaling/zk-rollups/) zu ermöglichen.
+- [EIP-197](https://eips.ethereum.org/EIPS/eip-197) - \_erweitert elliptische Kurve und Skalarmultiplikation, um [ZK-Snarks](/entwickler/docs/scaling/zk-rollups/) zu ermöglichen.
 - [EIP-198](https://eips.ethereum.org/EIPS/eip-198) - _ermöglicht RSA-Signaturprüfung._
 - [EIP-211](https://eips.ethereum.org/EIPS/eip-211) - _erweitert die Unterstützung für Rückgabewerte variabler Länge._
 - [EIP-214](https://eips.ethereum.org/EIPS/eip-214) - _erweitert den `STATICCALL`-Opcode, der nicht zustandsverändernde Aufrufe zu anderen Verträgen erlaubt._

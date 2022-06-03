@@ -89,7 +89,7 @@ La manière dont vous répondez à ces questions d'installation à peu d'importa
     author:
     license: (ISC)
     About to write to /Users/thesuperb1/Desktop/my-nft/package.json:
-    
+
     {
       "name": "my-nft",
       "version": "1.0.0",

@@ -271,7 +271,7 @@ export const createPages: GatsbyNode<any, Context>["createPages"] = async ({
           const langSlug = splitSlug.join("/")
           createPage({
             path: langSlug,
-            component: path.resolve(`src/templates/${template}.js`),
+            component: path.resolve(`src/templates/${template}.tsx`),
             context: {
               slug: langSlug,
               ignoreTranslationBanner: isLegal,
@@ -298,7 +298,7 @@ export const createPages: GatsbyNode<any, Context>["createPages"] = async ({
 
     createPage<Context>({
       path: slug,
-      component: path.resolve(`src/templates/${template}.js`),
+      component: path.resolve(`src/templates/${template}.tsx`),
       context: {
         language,
         slug,
