@@ -128,7 +128,7 @@ A bug bounty is a financial reward given to an individual who discovers a vulner
 
 Bug bounty programs often attract a broad class of ethical hackers and independent security professionals with unique skills and experience. This may be an advantage over smart contract audits that mainly rely on teams who may possess limited or narrow expertise.
 
-## Testing tools and libraries {#testing tools-and-libraries}
+## Testing tools and libraries {#testing-tools-and-libraries}
 
 ### Unit testing tools {#unit-testing-tools}
 
@@ -196,27 +196,27 @@ Bug bounty programs often attract a broad class of ethical hackers and independe
 
 ### Smart contract auditing services {#smart-contract-auditing-services}
 
-**ConsenSys Diligence** - _ConsenSys Diligence helps projects across the blockchain ecosystem to ensure their protocols are ready for launch and built to protect users._
+**ConsenSys Diligence** - _Helps projects across the blockchain ecosystem to ensure their protocols are ready for launch and built to protect users._
 - [Website](https://consensys.net/diligence/) 
 
-**CertiK** - _CertiK is a blockchain security firm pioneering the use of cutting-edge formal Verification technology on smart contracts and blockchain networks._
+**CertiK** - _A blockchain security firm pioneering the use of cutting-edge formal Verification technology on smart contracts and blockchain networks._
 - [Website](https://www.certik.com/) 
 
-**Trail of Bits** - _Trail of Bits combines security research with an attacker mentality to reduce risk and fortify code._
+**Trail of Bits** - _Combines security research with an attacker mentality to reduce risk and fortify code._
 - [Website](https://www.trailofbits.com/) 
 
-**PeckShield** - _PeckShield is a blockchain security company that offers products and services for security, privacy, and usability of the entire blockchain ecosystem._
+**PeckShield** - _A blockchain security company that offers products and services for security, privacy, and usability of the entire blockchain ecosystem._
 - [Website](https://peckshield.com/) 
 
-**QuantStamp** - _QuantStamp facilitates the mainstream adoption of blockchain technology through security and risk assessment services._
+**QuantStamp** - _Facilitates the mainstream adoption of blockchain technology through security and risk assessment services._
 - [Website](https://quantstamp.com/) 
 
 ### Bug bounty platforms {#bug-bounty-platforms}
 
-**Immunefi** - _Immunefi is a bug bounty platform for smart contracts and DeFi projects, where security researchers review code, disclose vulnerabilities, get paid, and make crypto safer._
+**Immunefi** - _A bug bounty platform for smart contracts and DeFi projects, where security researchers review code, disclose vulnerabilities, get paid, and make crypto safer._
 - [Website](https://immunefi.com/) 
 
-**HackerOne** - _HackerOne is a vulnerability coordination and bug bounty platform that connects businesses with penetration testers and cybersecurity researchers._
+**HackerOne** - _A vulnerability coordination and bug bounty platform that connects businesses with penetration testers and cybersecurity researchers._
 - [Website](https://www.hackerone.com/) 
 
 ## Related tutorials {#related-tutorials}
