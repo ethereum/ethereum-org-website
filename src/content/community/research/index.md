@@ -65,6 +65,7 @@ The execution layer is concerned with executing transactions, running the [Ether
 
 - [Database optimizations](https://github.com/ledgerwatch/erigon/blob/devel/docs/programmers_guide/db_faq.md)
 - [State expiry](https://notes.ethereum.org/@vbuterin/state_expiry_eip)
+- [Paths to state expiry](https://hackmd.io/@vbuterin/state_expiry_paths)
 - [History management](https://eips.ethereum.org/EIPS/eip-4444)
 - [Verkle Trees](https://vitalik.ca/general/2021/06/18/verkle.html)
 - [Data availability sampling](https://github.com/ethereum/research/wiki/A-note-on-data-availability-and-erasure-coding)
@@ -379,12 +380,11 @@ Hacks on Ethereum generally exploit vulnerabilities in individual applications r
 
 ### Technology stack
 
-Decentralizing the entire Ethereum tech stack is an important research area. Currently, dapps on Ethereum commonly have some points of centralization because they rely on centralized tooling or infrastructure. 
+Decentralizing the entire Ethereum tech stack is an important research area. Currently, dapps on Ethereum commonly have some points of centralization because they rely on centralized tooling or infrastructure.
 
 #### Background reading
 
-- [Ethereum stack](/developers/docs/ethereum-stack/)
--[Coinbase: Intro to Web3 Stack](https://blog.coinbase.com/a-simple-guide-to-the-web3-stack-785240e557f0)
+- [Ethereum stack](/developers/docs/ethereum-stack/) -[Coinbase: Intro to Web3 Stack](https://blog.coinbase.com/a-simple-guide-to-the-web3-stack-785240e557f0)
 - [Introduction to smart contracts](/developers/docs/smart-contracts/)
 - [Introduction to decentralized storage](/developers/docs/storage/)
 
