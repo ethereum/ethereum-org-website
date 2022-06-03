@@ -10,7 +10,7 @@ tags:
   - "layer 2 (nivel 2)"
 skill: intermediar
 published: 2022-03-30
-lang: en
+lang: ro
 ---
 
 [Optimism](https://www.optimism.io/) is an [Optimistic Rollup](/developers/docs/scaling/optimistic-rollups/). Optimistic rollups can process transactions for a much lower price than Ethereum Mainnet (also known as layer 1 or L1) because transactions are only processed by a few nodes, instead of every node on the network. At the same time, the data is all written to L1 so everything can be proved and reconstructed with all the integrity and availability guarantees of Mainnet.

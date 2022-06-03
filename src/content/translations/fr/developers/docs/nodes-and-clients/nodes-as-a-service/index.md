@@ -18,7 +18,7 @@ Si vous ne savez pas encore ce que sont les nœuds et les clients, consultez la 
 
 Les fournisseurs de services de nœuds exécutent les clients de nœuds distribués en arrière-plan pour vous, afin que vous n'ayez pas à le faire.
 
-Ces services fournissent généralement une clé API que vous pouvez utiliser pour écrire sur la blockchain et pour la lire. Ils incluent souvent un accès aux [réseaux de test Ethereum](/developers/docs/networks/#testnets) en plus du réseau principal.
+Ces services fournissent généralement une clé API que vous pouvez utiliser pour écrire sur la blockchain et pour la lire. Ils incluent souvent un accès aux [réseaux de test Ethereum](/developers/docs/networks/#ethereum-testnets) en plus du réseau principal.
 
 Certains services vous offrent votre propre nœud dédié qu'ils gèrent pour vous, tandis que d'autres utilisent des équilibreurs de charge pour répartir l'activité entre les nœuds.
 

@@ -419,6 +419,10 @@ table {
   border-collapse: collapse;
   width: 100%;
 }
+th,
+td {
+  hyphens: auto;
+}
 fieldset {
   margin-left: 0;
   margin-right: 0;

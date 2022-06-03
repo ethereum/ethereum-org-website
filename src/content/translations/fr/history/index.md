@@ -190,7 +190,7 @@ La fourche Istanbul a :
 - [EIP-1108](https://eips.ethereum.org/EIPS/eip-1108) – _Cryptographie moins onéreuse pour améliorer le coût du [gaz](/glossary/#gas)._
 - [EIP-1344](https://eips.ethereum.org/EIPS/eip-1344) – _Protège Ethereum contre les attaques par rejeu en ajoutant le code d'opération [opcode] « CHAINID » (/developers/docs/ethereum-stack/#ethereum-virtual-machine)._
 - [EIP-1884](https://eips.ethereum.org/EIPS/eip-1884) – _Optimisation du prix du gaz des codes d'opération basés sur la consommation._
-- [EIP-2028](https://eips.ethereum.org/EIPS/eip-2028) – Réduit le coût des données d'appel afin de pouvoir augmenter la taille des données dans les blocs. Utile pour [l'évolutivité de la couche 2](/developers/docs/scaling/layer-2-rollups/)._
+- [EIP-2028](https://eips.ethereum.org/EIPS/eip-2028) – Réduit le coût des données d'appel afin de pouvoir augmenter la taille des données dans les blocs. Utile pour [l'évolutivité de la couche 2](/developers/docs/scaling/layer-2-rollups/).\_
 - [EIP-2200](https://eips.ethereum.org/EIPS/eip-2200) – _Autres altérations du prix du gaz des codes d'opération._
 
 </ExpandableCard>
@@ -274,7 +274,7 @@ La fourche Spurious Dragon est la deuxième réponse aux attaques par déni de s
 <ExpandableCard title="Les EIP de Spurious Dragon" contentPreview="Official improvements included in this fork.">
 
 - [EIP-155](https://eips.ethereum.org/EIPS/eip-155) - _Empêche les transactions d'une chaîne Ethereum d'être rediffusées sur une chaîne alternative, par exemple une transaction du réseau de test rejouée sur la chaîne principale Ethereum._
-- [EIP-160](https://eips.ethereum.org/EIPS/eip-160) - _Règle les prix du code d'opération « EXP ». Rend plus difficile le ralentissement du réseau via des opérations de contrat coûteuses sur le plan du calcul.
+- [EIP-160](https://eips.ethereum.org/EIPS/eip-160) - \_Règle les prix du code d'opération « EXP ». Rend plus difficile le ralentissement du réseau via des opérations de contrat coûteuses sur le plan du calcul.
 - [EIP-161](https://eips.ethereum.org/EIPS/eip-161) - _Permet de supprimer les comptes vides ajoutés via les attaques par DoS._
 - [EIP-170](https://eips.ethereum.org/EIPS/eip-170) - _Définit la taille maximale du code d'un contrat sur la blockchain à 24 576 octets._
 
@@ -297,8 +297,8 @@ La fourche Tangerine Whistle est la première réponse aux attaques par déni de
 <ExpandableCard title="Les EIP de Tangerine Whistle" contentPreview="Official improvements included in this fork.">
 
 - [EIP-150](https://eips.ethereum.org/EIPS/eip-150) - _Augmente le coût en gaz des codes d'opération qui peuvent être utilisés dans les attaques par spam._
-- [EIP-158](https://eips.ethereum. rg/EIPS/eip-158) - _Réduit la taille de l'état en supprimant un grand nombre de comptes vides 
-mis dans l'état à très bas prix en raison de failles dans les versions précédentes du protocole Ethereum._
+- [EIP-158](https://eips.ethereum. rg/EIPS/eip-158) - _Réduit la taille de l'état en supprimant un grand nombre de comptes vides
+  mis dans l'état à très bas prix en raison de failles dans les versions précédentes du protocole Ethereum._
 
 </ExpandableCard>
 
