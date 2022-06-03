@@ -71,7 +71,27 @@ const Image = styled(GatsbyImage)`
   margin-top: 4px;
 `
 
-const CardList = ({ content, className, clickHandler }) => (
+export interface ICardListItem {
+  title: string
+  description: string
+  caption?: string
+  link: string
+  image?: string
+  alt?: string
+  id: string | number
+}
+
+export interface IProps {
+  content: Array<ICardListItem>
+  className?: string
+  clickHandler?: (idx: string | number) => void
+}
+
+const CardList: React.FC<IProps> = ({
+  content,
+  className,
+  clickHandler = () => null,
+}) => (
   <Table className={className}>
     {content.map((listItem, idx) => {
       const { title, description, caption, link, image, alt, id } = listItem
