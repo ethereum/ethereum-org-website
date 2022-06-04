@@ -355,7 +355,7 @@ const frameworksList = [
   {
     id: "foundry",
     url: "https://getfoundry.sh/",
-    githubUrl: "https://github.com/gakonst/foundry",
+    githubUrl: "https://github.com/foundry-rs/foundry",
     background: "#ffffff",
     name: "Foundry",
     description: "page-local-environment-foundry-desc",
