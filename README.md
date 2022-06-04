@@ -1242,6 +1242,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://williamalanwelsh.com"><img src="https://avatars.githubusercontent.com/u/16886888?v=4?s=100" width="100px;" alt=""/><br /><sub><b>William</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=WilliamWelsh" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/motemotech"><img src="https://avatars.githubusercontent.com/u/59491191?v=4?s=100" width="100px;" alt=""/><br /><sub><b>motemotech</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=motemotech" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/Mousticke"><img src="https://avatars.githubusercontent.com/u/16734238?v=4?s=100" width="100px;" alt=""/><br /><sub><b>mousticke.eth</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=Mousticke" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/brightiron"><img src="https://avatars.githubusercontent.com/u/95196612?v=4?s=100" width="100px;" alt=""/><br /><sub><b>brightiron</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=brightiron" title="Code">💻</a></td>
   </tr>
 </table>
 
