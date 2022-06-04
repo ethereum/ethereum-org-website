@@ -21,6 +21,19 @@ import redirects from "./redirects.json"
 
 const exec = util.promisify(child_process.exec)
 
+const isProd = (): boolean => {
+  return process.env.NODE_ENV === "production"
+}
+
+const isDev = (): boolean => {
+  return !isProd()
+}
+
+const deferPage = (language: string): boolean => {
+  // return isDev() && language !== defaultLanguage
+  return language !== defaultLanguage
+}
+
 /**
  * Markdown isOutdated check
  * Parse header ids in markdown file (both translated and english) and compare their info structure.
@@ -272,6 +285,7 @@ export const createPages: GatsbyNode<any, Context>["createPages"] = async ({
           createPage({
             path: langSlug,
             component: path.resolve(`src/templates/${template}.tsx`),
+            defer: deferPage(lang),
             context: {
               slug: langSlug,
               ignoreTranslationBanner: isLegal,
@@ -299,6 +313,7 @@ export const createPages: GatsbyNode<any, Context>["createPages"] = async ({
     createPage<Context>({
       path: slug,
       component: path.resolve(`src/templates/${template}.tsx`),
+      defer: deferPage(language),
       context: {
         language,
         slug,
@@ -343,6 +358,7 @@ export const createPages: GatsbyNode<any, Context>["createPages"] = async ({
               ? `src/pages-conditional/${page}/index.js`
               : `src/pages-conditional/${page}.js`
           ),
+          defer: deferPage(lang),
           context: {
             slug: `/${lang}/${page}/`,
             intl: {
@@ -383,6 +399,7 @@ export const onCreatePage: GatsbyNode<any, Context>["onCreatePage"] = async ({
     deletePage(page)
     createPage<Context>({
       ...page,
+      defer: true,
       context: {
         ...page.context,
         isOutdated,
