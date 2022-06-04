@@ -64,13 +64,10 @@ const addHeaderID = (line, slugger, write = false) => {
     headingLevel.length > curMaxLevel ? headingLevel.length : curMaxLevel
 
   const headingLevelArrayIndex = headingLevel.length - 1
-  if (
-    curLevel[headingLevelArrayIndex] == undefined ||
-    curLevel[headingLevelArrayIndex] == null
-  ) {
+  if (!curLevel[headingLevelArrayIndex]) {
     curLevel[headingLevelArrayIndex] = 0
   }
-  curLevel[headingLevel.length - 1]++
+  curLevel[headingLevelArrayIndex]++
   for (let l = headingLevel.length; l < curMaxLevel; l++) {
     curLevel[l] = 0
   }
