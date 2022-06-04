@@ -71,18 +71,27 @@ const Image = styled(GatsbyImage)`
   margin-top: 4px;
 `
 
-export interface ICardListItem {
-  title: string
-  description: string
-  caption?: string
-  link: string
-  image?: string
-  alt?: string
-  id: string | number
+type ForbidOptional<T = {}> = {
+  [P in keyof T]?: never
 }
 
+type OptionalCardImageProp = {
+  image: string
+  alt: string
+}
+
+type CardImage = ForbidOptional<OptionalCardImageProp>
+
+export type CardListItem = {
+  title: string
+  description?: string
+  caption?: string
+  link?: string
+  id?: string | number
+} & (OptionalCardImageProp | CardImage)
+
 export interface IProps {
-  content: Array<ICardListItem>
+  content: Array<CardListItem>
   className?: string
   clickHandler?: (idx: string | number) => void
 }
