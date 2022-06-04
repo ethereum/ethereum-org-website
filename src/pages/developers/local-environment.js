@@ -352,6 +352,15 @@ const frameworksList = [
     description: "page-local-environment-solidity-template-desc",
     alt: "page-local-environment-solidity-template-logo-alt",
   },
+  {
+    id: "foundry",
+    url: "https://getfoundry.sh/",
+    githubUrl: "https://github.com/gakonst/foundry",
+    background: "#ffffff",
+    name: "Foundry",
+    description: "page-local-environment-foundry-desc",
+    alt: "page-local-environment-foundry-logo-alt",
+  },
 ]
 
 const ChooseStackPage = ({ data }) => {
@@ -666,6 +675,9 @@ export const query = graphql`
       ...devtoolImage
     }
     ethers: file(relativePath: { eq: "dev-tools/ethers.png" }) {
+      ...devtoolImage
+    }
+    foundry: file(relativePath: { eq: "dev-tools/foundry.png" }) {
       ...devtoolImage
     }
   }
