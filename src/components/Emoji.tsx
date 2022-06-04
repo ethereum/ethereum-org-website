@@ -8,9 +8,7 @@ interface IProp extends MarginProps {
   text: string
 }
 
-// const StyledTweomoji: React.FC<Twemoji>
-
-const StyledEmoji = styled(Twemoji)`
+const StyledEmoji = styled(Twemoji)<{ size: number }>`
   & > img {
     width: ${(props) => props.size}em !important;
     height: ${(props) => props.size}em !important;

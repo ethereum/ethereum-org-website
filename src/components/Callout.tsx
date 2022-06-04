@@ -47,7 +47,7 @@ const Content = styled.div`
 `
 
 interface IProps {
-  image: string
+  image?: string
   emoji?: string
   alt?: string
   titleKey: TranslationKey
