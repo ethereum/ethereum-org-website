@@ -89,7 +89,7 @@ Kurulum sorularına nasıl cevap verdiğiniz çok önemli değil; referans olmas
     author:
     license: (ISC)
     About to write to /Users/thesuperb1/Desktop/my-nft/package.json:
-    
+
     {
       "name": "my-nft",
       "version": "1.0.0",

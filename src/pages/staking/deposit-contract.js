@@ -21,7 +21,7 @@ import {
   ButtonSecondary,
   FakeLink,
 } from "../../components/SharedStyledComponents"
-import { DEPOSIT_CONTRACT_ADDRESS } from "../../data/addresses.js"
+import { DEPOSIT_CONTRACT_ADDRESS } from "../../data/addresses"
 import { translateMessageId } from "../../utils/translations"
 
 const Page = styled.div`

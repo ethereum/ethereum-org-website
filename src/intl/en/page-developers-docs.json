@@ -6,6 +6,8 @@
   "docs-nav-block-explorers": "Block explorers",
   "docs-nav-blocks": "Blocks",
   "docs-nav-blocks-description": "The way transactions are batched to ensure state is synchronised across all actors",
+  "docs-nav-bridges": "Bridges",
+  "docs-nav-bridges-description": "An overview of bridging for developers",
   "docs-nav-compiling-smart-contracts": "Compiling smart contracts",
   "docs-nav-composability": "Composability",
   "docs-nav-consensus-mechanisms": "Consensus mechanisms",

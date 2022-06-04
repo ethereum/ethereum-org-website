@@ -32,7 +32,7 @@ Başlamadan önce temel bilgilere mi ihtiyacınız var? [ethereum.org/learn](/le
 - [Ethereum Akıllı Sözleşmesi Olaylarını Dinlemek](https://kauri.io/article/760f495423db42f988d17b8c145b0874/listening-for-ethereum-smart-contract-events-in-java)
 - [Java Ethereum İstemcisi olan Besu'yu (Pantheon) Linux'la kullanmak](https://kauri.io/article/276dd27f1458443295eea58403fd6965/using-pantheon-the-java-ethereum-client-with-linux)
 - [Java Entegrasyon Testlerinde Hyperledger Besu (Pantheon) Düğümü Çalıştırma](https://kauri.io/article/7dc3ecc391e54f7b8cbf4e5fa0caf780/running-a-pantheon-node-in-java-integration-tests)
-- [Web3j Kopya Kağıdı](https://kauri.io/web3j-cheat-sheet-(java-ethereum)/5dfa1ea941ac3d0001ce1d90/c)
+- [Web3j Kopya Kağıdı](<https://kauri.io/web3j-cheat-sheet-(java-ethereum)/5dfa1ea941ac3d0001ce1d90/c>)
 
 ## Orta seviye makaleler {#intermediate-articles}
 

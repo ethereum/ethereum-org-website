@@ -60,7 +60,7 @@ Bakiyemizin yerinde olduğundan emin olmak için [Alchemy düzenleyici arayıcı
 ```
 
 > **NOT:** Bu sonuç ETH değil, wei biçimindedir. Wei, ether'ın en küçük birimi olarak kullanılır. Wei'den ETH'ye dönüşüm: 1 eth = 10<sup>18</sup> wei'dir. Yani 0x2B5E3AF16B1880000'ı ondalık sayıya dönüştürürsek 5\*10¹⁸ elde ederiz ki bu da 5 ETH'ye eşittir.
-> 
+>
 > Vay be! Tüm sahte paramız yerinde <Emoji text=":money_mouth_face:" size={1} />.
 
 ## Adım 6: Projemizi başlatın {#step-6}
@@ -107,7 +107,7 @@ About to write to /Users/.../.../.../hello-world/package.json:
 
 package.json'ı onayladıktan sonra hazırız!
 
-## Adım 7: [Hardhat](https://hardhat.org/getting-started/#overview ""){#step-7}'i indirin
+## Adım 7: [Hardhat](https://hardhat.org/getting-started/#overview){#step-7}'i indirin
 
 Hardhat, Ethereum yazılımınızı derlemek, dağıtmak, test etmek ve hatalarını ayıklamak için bir geliştirme ortamıdır. Canlı zincire dağıtmadan önce yerel olarak akıllı sözleşmeler ve dApp'ler oluştururken geliştiricilere yardımcı olur.
 

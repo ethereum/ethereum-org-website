@@ -5931,7 +5931,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/25297591?v=4",
       "profile": "http://www.daita.tech",
       "contributions": [
-        "doc"
+        "doc",
+        "content"
       ]
     },
     {
@@ -7641,6 +7642,43 @@
       "profile": "https://github.com/MonsieurDMA",
       "contributions": [
         "doc"
+      ]
+    },
+    {
+      "login": "fennar01",
+      "name": "fennar01",
+      "avatar_url": "https://avatars.githubusercontent.com/u/42185291?v=4",
+      "profile": "https://github.com/fennar01",
+      "contributions": [
+        "ideas",
+        "doc"
+      ]
+    },
+    {
+      "login": "WilliamWelsh",
+      "name": "William",
+      "avatar_url": "https://avatars.githubusercontent.com/u/16886888?v=4",
+      "profile": "https://williamalanwelsh.com",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "motemotech",
+      "name": "motemotech",
+      "avatar_url": "https://avatars.githubusercontent.com/u/59491191?v=4",
+      "profile": "https://github.com/motemotech",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "Mousticke",
+      "name": "mousticke.eth",
+      "avatar_url": "https://avatars.githubusercontent.com/u/16734238?v=4",
+      "profile": "https://github.com/Mousticke",
+      "contributions": [
+        "code"
       ]
     }
   ],

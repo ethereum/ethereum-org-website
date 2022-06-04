@@ -93,7 +93,7 @@ const ExpandableCard = ({
   children,
   contentPreview,
   title,
-  Svg,
+  svg: Svg,
   alt,
   eventCategory,
   eventName,

@@ -11,7 +11,7 @@ sidebar: true
 
 ## 级别 1：以太坊虚拟机 {#ethereum-virtual-machine}
 
-[以太坊虚拟机 (EVM)](/developers/docs/evm/) 是以太坊智能合约的运行环境。 以太坊区块链上所有智能合约的状态都通过执行[交易](/developers/docs/transactions/)来改变。 
+[以太坊虚拟机 (EVM)](/developers/docs/evm/) 是以太坊智能合约的运行环境。 以太坊区块链上所有智能合约的状态都通过执行[交易](/developers/docs/transactions/)来改变。
 
 与任何虚拟机一样，以太坊虚拟机在执行代码和执行机器（以太坊节点）之间创建一个抽象级别。 目前，在世界各地散布着成千上万的正在执行的以太坊虚拟机节点。
 

@@ -64,7 +64,7 @@ Her bloğun bir rezerv fiyatı niteliğinde bir taban ücreti vardır. Bir bloğ
 Taban ücret, önceki bloğun boyutunu (tüm işlemler için kullanılan gaz miktarını) hedef boyutla karşılaştıran bir formülle hesaplanır. Hedef blok boyutu aşılırsa taban ücret blok başına maksimum %12,5 oranında artacaktır. Bu katlanarak büyüme, blok boyutunun süresiz olarak yüksek kalmasını ekonomik olarak imkansız hâle getiriyor.
 
 | Blok Numarası | Dahil Edilen Gaz | Ücret Artışı | Mevcut Taban Ücret |
-| ------------- | ----------------:| ------------:| ------------------:|
+| ------------- | ---------------: | -----------: | -----------------: |
 | 1             |        15 milyon |           0% |           100 gwei |
 | 2             |        30 milyon |           0% |           100 gwei |
 | 3             |        30 milyon |        %12,5 |         112,5 gwei |
@@ -79,7 +79,7 @@ Londra öncesi gaz ihale piyasasına kıyasla, bu işlem ücreti mekanizması de
 Ayrıca, tam blok başlatılırkenki taban ücret artış hızı nedeniyle, uzun tam blok artışları görmemizin olası olmadığını da not etmek önemlidir.
 
 | Blok Numarası | Dahil Edilen Gaz | Ücret Artışı | Mevcut Taban Ücret |
-| ------------- | ----------------:| ------------:| ------------------:|
+| ------------- | ---------------: | -----------: | -----------------: |
 | 30            |        30 milyon |        %12,5 |        2705,6 gwei |
 | ...           |              ... |        %12,5 |                ... |
 | 50            |        30 milyon |        %12,5 |       28531,3 gwei |
