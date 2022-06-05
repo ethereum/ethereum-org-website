@@ -42,7 +42,7 @@ start client --> connect to bootnode --> bond to bootnode --> find neighbours --
 
 #### ENR: Ethereum Node Records {#enr}
 
-The [Ethereum Node Record (ENR)](/developers/docs/networking-layer/network addresses/) is an object that contains three basic elements: a signature (hash of record contents made according to some agreed identity scheme), a sequence number that tracks changes to the record, and an arbitrary list of key:value pairs. This is a future-proof format that allows easier exchange of identifying information between new peers and is the preferred [network address](/developers/docs/networking-layer/network-addresses) format for Ethereum nodes.
+The [Ethereum Node Record (ENR)](/developers/docs/networking-layer/network-addresses/index.md) is an object that contains three basic elements: a signature (hash of record contents made according to some agreed identity scheme), a sequence number that tracks changes to the record, and an arbitrary list of key:value pairs. This is a future-proof format that allows easier exchange of identifying information between new peers and is the preferred [network address](/developers/docs/networking-layer/network-addresses) format for Ethereum nodes.
 
 #### Why is discovery built on UDP? {#why-udp}
 
