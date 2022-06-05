@@ -19,7 +19,7 @@ Ethereum currently uses a [proof-of-work](/developers/docs/consensus-mechanisms/
 
 New blocks are broadcast to the nodes in the network, checked and verified, thus updating the state of the blockchain for everyone.
 
-So to summarize, when you send ETH to someone, the transaction must be mined and included in a new block. The updated state is then shared with the entire network.
+So to summarize, when you send ETH to someone, the transaction must be added to the block which should be mined. The updated state is then shared with the entire network.
 
 Watch Austin walk you through blockchains:
 
