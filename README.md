@@ -1246,6 +1246,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   </tr>
   <tr>
     <td align="center"><a href="https://github.com/modernxpunk"><img src="https://avatars.githubusercontent.com/u/65621247?v=4?s=100" width="100px;" alt=""/><br /><sub><b>oleksandrkovalskiy</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=modernxpunk" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://yoshikouki.com"><img src="https://avatars.githubusercontent.com/u/53972292?v=4?s=100" width="100px;" alt=""/><br /><sub><b>yoshikouki</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=yoshikouki" title="Documentation">📖</a> <a href="#ideas-yoshikouki" title="Ideas, Planning, & Feedback">🤔</a></td>
   </tr>
 </table>
 
