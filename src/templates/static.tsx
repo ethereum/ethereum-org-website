@@ -1,9 +1,10 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, PageProps } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import styled from "styled-components"
+
 import ButtonLink from "../components/ButtonLink"
 import Breadcrumbs from "../components/Breadcrumbs"
 import Card from "../components/Card"
@@ -27,8 +28,6 @@ import SectionNav from "../components/SectionNav"
 import DocLink from "../components/DocLink"
 import GhostCard from "../components/GhostCard"
 import MatomoOptOut from "../components/MatomoOptOut"
-import { getLocaleTimestamp } from "../utils/time"
-import { isLangRightToLeft } from "../utils/translations"
 import {
   Divider,
   Paragraph,
@@ -44,6 +43,11 @@ import UpcomingEventsList from "../components/UpcomingEventsList"
 import Icon from "../components/Icon"
 import SocialListItem from "../components/SocialListItem"
 import YouTube from "../components/YouTube"
+
+import { getLocaleTimestamp } from "../utils/time"
+import { isLangRightToLeft } from "../utils/translations"
+import { Lang } from "../utils/languages"
+import { Context } from "../types"
 
 const Page = styled.div`
   display: flex;
@@ -143,16 +147,28 @@ const components = {
   YouTube,
 }
 
-const StaticPage = ({ data: { siteData, pageData: mdx }, pageContext }) => {
+const StaticPage = ({
+  data: { siteData, pageData: mdx },
+  pageContext,
+}: PageProps<Queries.StaticPageQuery, Context>) => {
   const intl = useIntl()
-  const isRightToLeft = isLangRightToLeft(mdx.frontmatter.lang)
 
-  const lastUpdatedDate = mdx.parent.fields
-    ? mdx.parent.fields.gitLogLatestDate
-    : mdx.parent.mtime
+  if (!siteData || !mdx?.frontmatter || !mdx.parent) {
+    throw new Error(
+      "Static page template query does not return expected values"
+    )
+  }
 
-  const tocItems = mdx.tableOfContents.items
-  const { editContentUrl } = siteData.siteMetadata
+  const isRightToLeft = isLangRightToLeft(mdx.frontmatter.lang as Lang)
+
+  // FIXME: remove this any, currently not sure how to fix the ts error
+  const parent: any = mdx.parent
+  const lastUpdatedDate = parent.fields
+    ? parent.fields.gitLogLatestDate
+    : parent.mtime
+
+  const tocItems = mdx.tableOfContents?.items
+  const { editContentUrl } = siteData.siteMetadata || {}
   const { relativePath } = pageContext
   const absoluteEditPath =
     relativePath.split("/").includes("whitepaper") ||
@@ -167,10 +183,12 @@ const StaticPage = ({ data: { siteData, pageData: mdx }, pageContext }) => {
         description={mdx.frontmatter.description}
       />
       <ContentContainer>
-        <Breadcrumbs slug={mdx.fields.slug} />
-        <LastUpdated dir={isLangRightToLeft(intl.locale) ? "rtl" : "ltr"}>
+        <Breadcrumbs slug={mdx.fields?.slug} />
+        <LastUpdated
+          dir={isLangRightToLeft(intl.locale as Lang) ? "rtl" : "ltr"}
+        >
           <Translation id="page-last-updated" />:{" "}
-          {getLocaleTimestamp(intl.locale, lastUpdatedDate)}
+          {getLocaleTimestamp(intl.locale as Lang, lastUpdatedDate)}
         </LastUpdated>
         <MobileTableOfContents
           editPath={absoluteEditPath}
