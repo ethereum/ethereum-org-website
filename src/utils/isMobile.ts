@@ -1,4 +1,4 @@
-export const isMobile = () => {
+export const isMobile = (): boolean => {
   let isMobile = false
   if (typeof window !== "undefined") {
     isMobile =
