@@ -59,7 +59,7 @@ export interface IProps {
   checked: boolean
   ariaContent: string
   className: string
-  size: number
+  size?: number
 }
 
 const Checkbox: React.FC<IProps> = ({
