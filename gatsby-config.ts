@@ -1,5 +1,6 @@
 import "dotenv/config"
 import path from "path"
+import _ from "lodash"
 
 import type { GatsbyConfig } from "gatsby"
 
@@ -214,10 +215,36 @@ const config: GatsbyConfig = {
         path: path.resolve(`src/data/translation-reports`),
       },
     },
+    // Source locales
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `locale`,
+        path: path.resolve(`src/intl`),
+        // Ignore src/intl/{defaultLanguage}.json file. We only want the ones
+        // that live inside the nested folders (e.g. src/intl/en/common.json)
+        ignore: ["*.json"],
+      },
+    },
     // Process files within /src/data/
     `gatsby-transformer-csv`,
     // Process JSON files
-    `gatsby-transformer-json`,
+    {
+      resolve: `gatsby-transformer-json`,
+      options: {
+        typeName: ({ node }) => {
+          // The JSON locale files (src/intl) are processed by
+          // `src/gatsby/onLocaleCreateNode`
+          // Since we can't ignore them from being processed by this plugin
+          // ¯\_(ツ)_/¯ we set a specific type `IgnoreLocale` to group them and
+          // give an explicit name for developers to ignore it
+          return node.sourceInstanceName === "locale"
+            ? `IgnoreLocale`
+            : // Default plugin naming
+              _.upperFirst(_.camelCase(`${path.basename(node.dir)} Json`))
+        },
+      },
+    },
     // Add git information on File fields from latest commit: date, author and email
     // Used for `Last updated` fields
     {
@@ -226,6 +253,8 @@ const config: GatsbyConfig = {
         include: /\.md$|\.csv/i, // Only .md & .csv files
       },
     },
+    // Avoid creating sourcemaps to improve build perfomance
+    `gatsby-plugin-no-sourcemaps`,
     // Needed for Gatsby Cloud redirect support
     `gatsby-plugin-gatsby-cloud`,
     // Creates `_redirects` & `_headers` build files for Netlify
@@ -234,7 +263,6 @@ const config: GatsbyConfig = {
   // https://www.gatsbyjs.com/docs/reference/release-notes/v2.28/#feature-flags-in-gatsby-configjs
   flags: {
     FAST_DEV: true, // DEV_SSR, QUERY_ON_DEMAND & LAZY_IMAGES
-    PARALLEL_QUERY_RUNNING: true,
   },
 }
 

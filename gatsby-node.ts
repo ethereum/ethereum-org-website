@@ -5,10 +5,11 @@ import util from "util"
 import child_process from "child_process"
 import { createFilePath } from "gatsby-source-filesystem"
 import type { GatsbyNode } from "gatsby"
+import _ from "lodash"
 
 import type { Context } from "./src/types"
 
-import mergeTranslations from "./src/scripts/mergeTranslations"
+import generateDefaultTranslations from "./src/scripts/generateDefaultTranslations"
 import copyContributors from "./src/scripts/copyContributors"
 
 import {
@@ -16,22 +17,14 @@ import {
   defaultLanguage,
   Lang,
 } from "./src/utils/languages"
-import getMessages from "./src/utils/getMessages"
+import { isDev } from "./src/utils/env"
 import redirects from "./redirects.json"
+import onLocaleCreateNode from "./src/gatsby/onLocaleCreateNode"
 
 const exec = util.promisify(child_process.exec)
 
-const isProd = (): boolean => {
-  return process.env.NODE_ENV === "production"
-}
-
-const isDev = (): boolean => {
-  return !isProd()
-}
-
 const deferPage = (language: string): boolean => {
-  // return isDev() && language !== defaultLanguage
-  return language !== defaultLanguage
+  return isDev() && language !== defaultLanguage
 }
 
 /**
@@ -154,8 +147,12 @@ const checkIsPageOutdated = async (
 // folders flagged through the gatsby-source-filesystem plugin in gatsby-config
 export const onCreateNode: GatsbyNode<{
   fileAbsolutePath: string
-}>["onCreateNode"] = async ({ node, getNode, actions }) => {
+}>["onCreateNode"] = async (args) => {
+  const { node, getNode, actions } = args
   const { createNodeField } = actions
+
+  // Create locale nodes to be later used by the the IntlProvider
+  onLocaleCreateNode(args)
 
   // Edit markdown nodes
   if (node.internal.type === `Mdx`) {
@@ -287,6 +284,7 @@ export const createPages: GatsbyNode<any, Context>["createPages"] = async ({
             component: path.resolve(`src/templates/${template}.tsx`),
             defer: deferPage(lang),
             context: {
+              language: lang,
               slug: langSlug,
               ignoreTranslationBanner: isLegal,
               isLegal: isLegal,
@@ -299,7 +297,6 @@ export const createPages: GatsbyNode<any, Context>["createPages"] = async ({
                 language: lang,
                 defaultLanguage,
                 languages: supportedLanguages,
-                messages: getMessages("./src/intl/", lang),
                 routed: true,
                 originalPath: slug.substr(3),
                 redirect: false,
@@ -325,7 +322,6 @@ export const createPages: GatsbyNode<any, Context>["createPages"] = async ({
           language,
           defaultLanguage,
           languages: supportedLanguages,
-          messages: getMessages("./src/intl/", language),
           routed: true,
           originalPath: slug.substr(3),
           redirect: false,
@@ -360,12 +356,12 @@ export const createPages: GatsbyNode<any, Context>["createPages"] = async ({
           ),
           defer: deferPage(lang),
           context: {
+            language: lang,
             slug: `/${lang}/${page}/`,
             intl: {
               language: lang,
               languages: supportedLanguages,
               defaultLanguage,
-              messages: getMessages("./src/intl/", lang),
               routed: true,
               originalPath: `/${page}/`,
               redirect: false,
@@ -450,6 +446,14 @@ export const createSchemaCustomization: GatsbyNode["createSchemaCustomization"] 
       name: String,
       score: Int
     }
+    type Locale implements Node {
+      parent: String
+      children: [String]
+      language: String
+      ns: String
+      data: String
+      fileAbsolutePath: String
+    }
   `
     createTypes(typeDefs)
 
@@ -462,8 +466,8 @@ export const createSchemaCustomization: GatsbyNode["createSchemaCustomization"] 
   }
 
 export const onPreBootstrap: GatsbyNode["onPreBootstrap"] = ({ reporter }) => {
-  mergeTranslations()
-  reporter.info(`Merged translations saved`)
+  generateDefaultTranslations()
+  reporter.info(`Default translations generated`)
   copyContributors()
   reporter.info(`Contributors copied`)
 }

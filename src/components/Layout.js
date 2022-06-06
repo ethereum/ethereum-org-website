@@ -16,6 +16,7 @@ import SideNavMobile from "./SideNavMobile"
 import TranslationBanner from "./TranslationBanner"
 import TranslationBannerLegal from "./TranslationBannerLegal"
 import FeedbackWidget from "./FeedbackWidget"
+import { SkipLink, SkipLinkAnchor } from "./SkipLink"
 
 import { ZenModeContext } from "../contexts/ZenModeContext"
 
@@ -24,7 +25,7 @@ import { useKeyPress } from "../hooks/useKeyPress"
 import { isLangRightToLeft } from "../utils/translations"
 import { scrollIntoView } from "../utils/scrollIntoView"
 import { isMobile } from "../utils/isMobile"
-import { SkipLink, SkipLinkAnchor } from "./SkipLink"
+import { isDev } from "../utils/env"
 
 const ContentContainer = styled.div`
   position: relative;
@@ -113,6 +114,22 @@ const Layout = (props) => {
     }
   }
 
+  const { data } = props
+  const localeNodes = data?.locales?.edges || []
+
+  if (localeNodes.length === 0 && isDev()) {
+    console.error(
+      `No translations were found in "locales" key for "${props.path}"`
+    )
+  }
+
+  // Get & merge translations for the given lang to inject them in the
+  // IntlProvider
+  const messages = localeNodes.reduce((res, { node }) => {
+    const parsedData = JSON.parse(node.data)
+    return { ...res, ...parsedData }
+  }, {})
+
   // IntlProvider & IntlContextProvider appear to be necessary in order to pass context
   // into components that live outside page components (e.g. Nav & Footer).
   // https://github.com/wiziple/gatsby-plugin-intl/issues/116
@@ -140,7 +157,7 @@ const Layout = (props) => {
       <IntlProvider
         locale={intl.language}
         defaultLocale={intl.defaultLanguage}
-        messages={intl.messages}
+        messages={messages}
       >
         <IntlContextProvider value={intl}>
           <ThemeProvider theme={theme}>

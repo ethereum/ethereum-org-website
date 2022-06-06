@@ -964,7 +964,19 @@ contract SimpleDomainRegistry {
 export default HomePage
 
 export const query = graphql`
-  query IndexPage {
+  query IndexPage($language: String!) {
+    locales: allLocale(
+      filter: {
+        ns: { in: ["common", "page-index"] }
+        language: { eq: $language }
+      }
+    ) {
+      edges {
+        node {
+          data
+        }
+      }
+    }
     hero: file(relativePath: { eq: "home/hero.png" }) {
       childImageSharp {
         gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
