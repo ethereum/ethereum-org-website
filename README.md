@@ -1244,6 +1244,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/Mousticke"><img src="https://avatars.githubusercontent.com/u/16734238?v=4?s=100" width="100px;" alt=""/><br /><sub><b>mousticke.eth</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=Mousticke" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/brightiron"><img src="https://avatars.githubusercontent.com/u/95196612?v=4?s=100" width="100px;" alt=""/><br /><sub><b>brightiron</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=brightiron" title="Code">💻</a></td>
   </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/modernxpunk"><img src="https://avatars.githubusercontent.com/u/65621247?v=4?s=100" width="100px;" alt=""/><br /><sub><b>oleksandrkovalskiy</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=modernxpunk" title="Documentation">📖</a></td>
+  </tr>
 </table>
 
 <!-- markdownlint-restore -->
