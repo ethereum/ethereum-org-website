@@ -1,7 +1,12 @@
 import React, { useState, useEffect, useRef } from "react"
 import ClipboardJS from "clipboard"
 
-const CopyToClipboard = (props) => {
+export interface IProps {
+  text: string
+  children: (boolean: boolean) => React.ReactNode
+}
+
+const CopyToClipboard: React.FC<IProps> = ({ children, text }) => {
   const [isCopied, setIsCopied] = useState(false)
   const targetEl = useRef(null)
   const timer = useRef(0)
@@ -10,11 +15,11 @@ const CopyToClipboard = (props) => {
     const afterCopy = () => {
       setIsCopied(true)
       clearTimeout(timer.current)
-      timer.current = setTimeout(() => setIsCopied(false), 1500)
+      timer.current = window.setTimeout(() => setIsCopied(false), 1500)
     }
 
-    const clipboard = new ClipboardJS(targetEl.current, {
-      text: () => props.text,
+    const clipboard = new ClipboardJS(targetEl.current!, {
+      text: () => text,
     })
 
     clipboard.on("success", (e) => {
@@ -29,9 +34,9 @@ const CopyToClipboard = (props) => {
       clipboard.destroy()
       clearTimeout(timer.current)
     }
-  }, [props.text])
+  }, [text])
 
-  return <div ref={targetEl}>{props.children(isCopied)}</div>
+  return <div ref={targetEl}>{children(isCopied)}</div>
 }
 
 export default CopyToClipboard
