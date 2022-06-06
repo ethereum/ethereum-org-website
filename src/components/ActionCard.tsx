@@ -70,7 +70,7 @@ export interface IProps {
   alt?: string
   image: string
   title: string
-  description: string
+  description?: string
   className?: string
   isRight?: boolean
   isBottom?: boolean
@@ -85,7 +85,7 @@ const ActionCard: React.FC<IProps> = ({
   children,
   className,
   isRight,
-  isBottom = true
+  isBottom = true,
 }) => {
   const isImageURL = typeof image === "string" && image.includes("http")
   return (

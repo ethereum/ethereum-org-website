@@ -32,8 +32,20 @@ const ContributorCard = styled(ActionCard)`
   }
 `
 
-const Contributors = () => {
-  const [contributorsList, setContributorsList] = useState([])
+export interface IProps {}
+
+export interface Contributor {
+  login: string
+  name: string
+  avatar_url: string
+  profile: string
+  contributions: Array<string>
+}
+
+const Contributors: React.FC<IProps> = () => {
+  const [contributorsList, setContributorsList] = useState<Array<Contributor>>(
+    []
+  )
 
   useEffect(() => {
     const list = shuffle(data.contributors)
