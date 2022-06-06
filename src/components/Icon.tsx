@@ -10,6 +10,7 @@ import {
   FaRedditAlien,
   FaStackExchange,
   FaGlobe,
+  FaCheck,
 } from "react-icons/fa"
 import {
   MdAdd,
@@ -62,6 +63,7 @@ const Icon: React.FC<IProps> = ({
     {name === "zenModeOff" && <BsToggleOff />}
     {name === "zenModeOn" && <BsToggleOn />}
     {name === "menu" && <MdMenu />}
+    {name === "check" && <FaCheck color={color} />}
     {name === "twitter" && (
       <FaTwitter color={color ? socialColors.twitter : undefined} />
     )}

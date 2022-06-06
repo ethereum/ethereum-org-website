@@ -135,7 +135,9 @@ const FindWalletPage = ({ data, location }) => {
     walletconnect: false,
     rpc_importing: false,
     nft_support: false,
+    connect_to_dapps: false,
     staking: false,
+    swaps: false,
     layer_2: false,
     gas_fee_customization: false,
     ens_support: false,
@@ -197,7 +199,7 @@ const FindWalletPage = ({ data, location }) => {
             {showFeatureFilters ? (
               <WalletFilterSidebar />
             ) : (
-              <WalletPersonasSidebar />
+              <WalletPersonasSidebar setFilters={setFilters} />
             )}
           </div>
         </FilterSidebar>
