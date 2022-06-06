@@ -7469,7 +7469,10 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/44942598?v=4",
       "profile": "https://github.com/SuperDelphi",
       "contributions": [
-        "content"
+        "content",
+        "translation",
+        "bug",
+        "doc"
       ]
     },
     {
