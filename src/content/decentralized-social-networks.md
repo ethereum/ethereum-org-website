@@ -96,7 +96,7 @@ In May 2022, [Instagram announced support for NFTs](https://about.instagram.com/
 - **[Mirror.xyz](https://mirror.xyz/)** - _Mirror is a decentralized, user-owned publishing platform built on Ethereum for users to crowdfund ideas, monetize content, and build high-value communities._ 
 - **[Lens Protocol](https://lens.xyz/)** - _Lens Protocol is a composable and decentralized social graph helping creators take ownership of their content wherever they go in the digital garden of the decentralized internet._
 
-## Further reading {#Further-reading}
+## Further reading {#further-reading}
 
 ### Articles {#articles}
 
@@ -107,11 +107,13 @@ In May 2022, [Instagram announced support for NFTs](https://about.instagram.com/
 - [Social Media Networks Are Coming To The Blockchain](https://businesstechguides.co/what-are-decentralized-social-networks) — _Emmanuel Awosika_
 
 ### Videos {#videos}
+
 - [Decentralized Social Media Explained](https://www.youtube.com/watch?v=UdT2lpcGvcQ) — _Coinmarketcap_
 - [DeSo Blockchain Wants to Decentralize Social Media](https://www.youtube.com/watch?v=SG2HUiVp0rE) — _Bloomberg Technology_
 - [The Future of Decentralized Social Media w/ Balaji Srinivasan, Vitalik Buterin, Juan Benet](https://www.youtube.com/watch?v=DTxE9KV3YrE) — _ETHGlobal_
 
 ### Communities {#communities}
+
 - [Status Discord Server](https://discord.com/invite/3Exux7Y)
 - [Mirror Discord Server](https://discord.com/invite/txuCHcE8wV)
-- [r/CryptoCurrency subbreddit](https://www.reddit.com/r/CryptoCurrency/)
+- [r/CryptoCurrency subreddit](https://www.reddit.com/r/CryptoCurrency/)
