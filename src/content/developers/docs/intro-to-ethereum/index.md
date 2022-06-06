@@ -65,7 +65,7 @@ The sequence of all blocks that have been committed to the Ethereum network in t
 
 ### ETH {#eth}
 
-Ether (ETH) is the native cryptocurrency of Ethereum. Users pay ETH to other users to have their code execution requests fulfilled.
+**Ether (ETH)** is the native cryptocurrency of Ethereum. Users pay ETH to other users to have their code execution requests fulfilled.
 
 [More on ETH](/developers/docs/intro-to-ether/)
 
