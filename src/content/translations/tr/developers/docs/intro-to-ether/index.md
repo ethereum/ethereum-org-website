@@ -19,7 +19,7 @@ Bir takas aracı, mallar ve hizmetler için ödeme olarak yaygın olarak kabul e
 
 ## Ether nedir? {#what-is-ether}
 
-**Ether (ETH)** Ethereum ağındaki birçok şey için kullanılan bir kripto paradır. Temel olarak, kabul edilebilen durumu sadece işlem ücreti ödemeleri ve [birleştirme](/upgrades/merge) sonrasında, ana ağdaki blokları doğrulamak ve önermek için ether gereklidir. Ether ayrıca, [DeFi](/defi) kredi piyasalarında birincil teminat biçimi olarak, NFT piyasalarında bir hesap birimi olarak, hizmetlerin gerçekleştirilmesi veya gerçek dünya mallarının satılması için kazanılan ödeme ve daha fazlası olarak kullanılır.
+**Ether (ETH)** Ethereum ağındaki birçok şey için kullanılan bir kripto paradır. Temelde, işlem ücretleri için kabul edilebilir tek ödeme şeklidir ve [Birleştirmeden](/upgrades/merge) sonra ether, Mainnet'te blokları doğrulamak ve tavsiye etmek için de gerekecektir. Ether ayrıca, [DeFi](/defi) kredi piyasalarında birincil teminat biçimi olarak, NFT piyasalarında bir hesap birimi olarak, hizmetlerin gerçekleştirilmesi veya gerçek dünya mallarının satılması için kazanılan ödeme ve daha fazlası olarak kullanılır.
 
 Ethereum, geliştiricilerin tümü bir bilgi işlem gücü havuzunu paylaşan [**merkeziyetsiz uygulamalar (dapp'ler)**](/developers/docs/dapps) oluşturmasına olanak tanır. Bu paylaşılan havuz sınırlı olduğu için Ethereum'un onu kimin kullanacağını belirlemek için bir mekanizmaya ihtiyacı vardır. Aksi takdirde, bir dapp yanlışlıkla veya kötü niyetli olarak tüm ağ kaynaklarını tüketebilir ve bu da başkalarının ona erişmesini engelleyebilir.
 
@@ -39,9 +39,9 @@ Bir madenci Ethereum blok zincirinde bir blok oluşturduğunda Ether basılır. 
 
 Blok ödülleri yoluyla yaratılmasının yanı sıra ether, "yakma" adı verilen bir işlemle yok edilebilir. Ether, yakıldığında dolaşımdan kalıcı olarak çıkarılır.
 
-Ethereum üzerindeki her işlemde ether yakılır. Kullanıcılar işlemler için ödeme yaptığında, ağ tarafından işlem talebine göre belirlenen bir temel gaz ücreti yok edilir. Bu, değişken blok büyüklüğü ve maksimum gas ücretinin birleştirildiğinde, Ethereum'da işlem ücreti tahminini basitleştirir. Ağ talebi yüksek olduğunda, [bloklar](https://etherscan.io/block/12965263) ürettiklerinden daha fazla ether yakabilir, ether ihtiyacını etkili bir şekilde dengeler.
+Ethereum üzerindeki her işlemde ether yakılır. Kullanıcılar işlemler için ödeme yaptığında, ağ tarafından işlem talebine göre belirlenen bir temel gaz ücreti yok edilir. Bu, değişken blok büyüklüğü ve maksimum gaz ücreti ile birleştirildiğinde, Ethereum'da işlem ücreti tahminini basitleştirir. [Bloklar](https://etherscan.io/block/12965263), ağ talebi yüksek olduğunda bastıklarından daha fazla ether yakarak ether ihtiyacını etkili bir şekilde dengeler.
 
-Temel ücreti yakmak, madencilerin bir şekilde manipüle etmelerinin yollarını engeller. Örneğin, madenciler taban ücreti aldıysa, kendi işlemlerini ücretsiz olarak dahil edebilir ve diğer herkes için taban ücreti yükseltebilirler. Alternatif olarak, bazı kullanıcılara zincir dışı temel ücreti iade edebilirler ve bu da daha opak ve karmaşık bir işlem ücreti piyasasına yol açar.
+Temel ücreti yakmak, madencilerin manipülasyon yapabileceği diğer yolları engeller. Örneğin, madenciler taban ücreti aldıysa, kendi işlemlerini ücretsiz olarak dahil edebilir ve diğer herkes için taban ücreti yükseltebilirler. Alternatif olarak, bazı kullanıcılara zincir dışı temel ücreti iade edebilirler ve bu da daha opak ve karmaşık bir işlem ücreti piyasasına yol açar.
 
 ## Ether'ın birimleri {#denominations}
 

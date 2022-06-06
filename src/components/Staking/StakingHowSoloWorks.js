@@ -1,11 +1,10 @@
 import React from "react"
-import { useIntl } from "gatsby-plugin-intl"
 import styled from "styled-components"
 import { graphql, useStaticQuery } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
-import Link from "../Link"
 import OrderedList from "../OrderedList"
+import Translation from "../Translation"
 
 const Flex = styled.div`
   display: flex;
@@ -19,7 +18,6 @@ const Flex = styled.div`
 const Image = styled(GatsbyImage)``
 
 const StakingHowSoloWorks = () => {
-  const intl = useIntl()
   const { image } = useStaticQuery(graphql`
     {
       image: file(relativePath: { eq: "hackathon_transparent.png" }) {
@@ -37,13 +35,20 @@ const StakingHowSoloWorks = () => {
 
   const items = [
     <p>
-      Get some hardware: You need to <Link to="/run-a-node/">run a node</Link>{" "}
-      to stake.
+      <Translation id="page-staking-how-solo-works-item-1" />
     </p>,
-    <p>Sync an execution layer client</p>,
-    <p>Sync a consensus layer client</p>,
-    <p>Generate your keys and load them into your validator client</p>,
-    <p>Monitor and maintain your node</p>,
+    <p>
+      <Translation id="page-staking-how-solo-works-item-2" />
+    </p>,
+    <p>
+      <Translation id="page-staking-how-solo-works-item-3" />
+    </p>,
+    <p>
+      <Translation id="page-staking-how-solo-works-item-4" />
+    </p>,
+    <p>
+      <Translation id="page-staking-how-solo-works-item-5" />
+    </p>,
   ]
 
   return (

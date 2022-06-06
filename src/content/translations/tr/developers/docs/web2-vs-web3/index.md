@@ -7,6 +7,8 @@ sidebar: true
 
 Web2, bugün bir çoğumuzun bildiği internet sürümünü ifade eder. Kişisel verilerinizin karşılığında, size hizmet sağlayan şirketlerin hakim olduğu bir internet. Web3 ise Ethereum bağlamında, blok zincirinde çalışan merkeziyetsiz uygulamaları ifade eder. Bu uygulamalar, kişisel verileri parasallaştırmadan, herkesin katılmasına izin veren uygulamalardır.
 
+Yeni başlayanlar için daha uygun bir kaynak mı arıyorsunuz? [web3'e girişimize](/web3/) bakın.
+
 ## Web3'ün faydaları {#web3-benefits}
 
 Birçok Web3 geliştiricisi, Ethereum'un yerleşik merkeziyetsizliği nedeniyle dapp'ler oluşturmaya karar verdi:
@@ -56,5 +58,5 @@ Bunların, her ağda geçerli olmayabilecek genel kalıplar olduğunu unutmayın
 - [Web3 nedir?](/web3/) - _ethereum.org_
 - [Bir Web 3.0 uygulamasının mimarisi](https://www.preethikasireddy.com/post/the-architecture-of-a-web-3-0-application) - _Preethi Kasireddy_
 - [Merkeziyetsizliğin Anlamı](https://medium.com/@VitalikButerin/the-meaning-of-decentralization-a0c92b76a274) _ 6 Şubat 2017 - Vitalik Buterin_
-- [Merkezsizlik Neden Önemlidir](https://medium.com/s/story/why-decentralization-matters-5e3f79f7638e) _18 Şubat 2018 - Chris Dixon_
+- [Merkeziyetsizlik Neden Önemlidir](https://medium.com/s/story/why-decentralization-matters-5e3f79f7638e) _18 Şubat 2018 - Chris Dixon_
 - [Web 3.0 Nedir ve Neden Önemlidir](https://medium.com/fabric-ventures/what-is-web-3-0-why-it-matters-934eb07f3d2b) _31 Aralık 2019 - Max Mersch ve Richard Muirhead_

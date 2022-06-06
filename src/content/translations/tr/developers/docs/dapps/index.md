@@ -48,7 +48,7 @@ Akıllı sözleşme, Ethereum blok zincirinde yaşayan ve tam olarak programland
 
 <YouTube id="F50OrwV6Uk8" />
 
-## Dapp araçları {#dapp-tools}
+## Dapp oluşturmak için araçlar {#dapp-tools}
 
 **Scaffold-ETH _- Akıllı sözleşmenize adapte olan bir ön uç kullanarak Solidity ile hızlıca deney yapın._**
 

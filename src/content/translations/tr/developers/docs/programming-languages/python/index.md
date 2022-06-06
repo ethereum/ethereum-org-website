@@ -55,7 +55,7 @@ Başlamadan önce temel bilgilere mi ihtiyacınız var? [ethereum.org/learn](/le
 - [py-evm](https://github.com/ethereum/py-evm) - _Ethereum Sanal Makinesinin uygulanması_
 - [eth-tester](https://github.com/ethereum/eth-tester) - _Ethereum tabanlı uygulamaları test etmek için araçlar_
 - [eth-utils](https://github.com/ethereum/eth-utils/) - _Ethereum ile ilgili kod tabanlarıyla çalışmak için yardımcı işlevler_
-- [ py-solc-x ](https://pypi.org/project/py-solc-x/) - _ 0.5.x desteği ile solc solidity derleyicisinin etrafındaki Python sarıcı _
+- [ py-solc-x ](https://pypi.org/project/py-solc-x/) - _ 0.5.x desteği ile solc solidity derleyicisine yönelik Python paketleyici _
 - [ py-wasm ](https://github.com/ethereum/py-wasm) - _ Web assembly yorumlayıcısının Python uygulaması_
 - [pydevp2p](https://github.com/ethereum/pydevp2p) - _Ethereum P2P yığınının uygulanması_
 - [ pymaker ](https://github.com/makerdao/pymaker) - _Maker sözleşmeleri için Python API_

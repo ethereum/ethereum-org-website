@@ -6,7 +6,7 @@ sidebar: true
 sidebarDepth: 2
 ---
 
-Ethereum is a peer-to-peer network with thousands of nodes that must be able to communicate with one another using standardized protocols. The "networking layer" is the stack of protocols that allow those nodes to find each other and exchange information. This includes "gossiping" information (one-to-many communication) over the network as well as swapping requests and responses between specific nodes (one-to-one communication). Each node must adhere to specific networking rules to ensure they are sending and receiving the correct information. 
+Ethereum is a peer-to-peer network with thousands of nodes that must be able to communicate with one another using standardized protocols. The "networking layer" is the stack of protocols that allow those nodes to find each other and exchange information. This includes "gossiping" information (one-to-many communication) over the network as well as swapping requests and responses between specific nodes (one-to-one communication). Each node must adhere to specific networking rules to ensure they are sending and receiving the correct information.
 
 After [The Merge](/upgrades/merge/), there will be two parts of client software (execution clients and consensus clients), each with its own distinct networking stack. As well as communicating with other Ethereum nodes, the execution and consensus clients have to communicate with each other. This page gives an introductory explanation of the protocols that enable this communication.
 
@@ -42,7 +42,7 @@ start client --> connect to bootnode --> bond to bootnode --> find neighbours --
 
 #### ENR: Ethereum Node Records {#enr}
 
-The [Ethereum Node Record (ENR)](/developers/docs/networking-layer/network addresses/) is an object that contains three basic elements: a signature (hash of record contents made according to some agreed identity scheme), a sequence number that tracks changes to the record, and an arbitrary list of key:value pairs. This is a future-proof format that allows easier exchange of identifying information between new peers and is the preferred [network address](/developers/docs/networking-layer/network-addresses) format for Ethereum nodes.
+The [Ethereum Node Record (ENR)](/developers/docs/networking-layer/network-addresses/) is an object that contains three basic elements: a signature (hash of record contents made according to some agreed identity scheme), a sequence number that tracks changes to the record, and an arbitrary list of key:value pairs. This is a future-proof format that allows easier exchange of identifying information between new peers and is the preferred [network address](/developers/docs/networking-layer/network-addresses) format for Ethereum nodes.
 
 #### Why is discovery built on UDP? {#why-udp}
 
@@ -70,7 +70,7 @@ Along with the hello messages, the wire protocol can also send a "disconnect" me
 
 #### Wire protocol {#wire-protocol}
 
-Once peers are connected and an RLPx session has been started, the wire protocol defines how peers communicate. There are three main tasks defined by the wire protocol: chain synchronization, block propagation and transaction exchange. Chain synchronization is the process of validating blocks near head of the chain, checking their proof-of-work data and re-executing their transactions to ensure their root hashes are correct, then cascading back in history via those blocks' parents, grandparents etc until the whole chain has been downloaed and validated. State sync is a faster alternative that only validates block headers. Block propagation is the process of sending and receiving newly mined blocks. Transaction exchnage refers to exchangign pending transactions between nodes so that miners can select some of them for inclusion in the next block. Detailed information about these tasks are available [here](https://github.com/ethereum/devp2p/blob/master/caps/eth.md). Clients that support these sub-protocols exose them via the [json-rpc](/developers/docs/apis/json-rpc).
+Once peers are connected and an RLPx session has been started, the wire protocol defines how peers communicate. There are three main tasks defined by the wire protocol: chain synchronization, block propagation and transaction exchange. Chain synchronization is the process of validating blocks near the head of the chain, checking their proof-of-work data and re-executing their transactions to ensure their root hashes are correct, then cascading back in history via those blocks' parents, grandparents etc until the whole chain has been downloaded and validated. State sync is a faster alternative that only validates block headers. Block propagation is the process of sending and receiving newly mined blocks. Transaction exchange refers to exchanging pending transactions between nodes so that miners can select some of them for inclusion in the next block. Detailed information about these tasks is available [here](https://github.com/ethereum/devp2p/blob/master/caps/eth.md). Clients that support these sub-protocols expose them via the [JSON-RPC](/developers/docs/apis/json-rpc).
 
 #### les (light ethereum subprotocol) {#les}
 

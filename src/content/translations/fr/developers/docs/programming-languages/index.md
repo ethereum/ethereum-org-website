@@ -5,7 +5,7 @@ lang: fr
 sidebar: true
 ---
 
-Une idée fausse répandue est que les développeurs doivent écrire des [contrats intelligents](/developers/docs/smart-contracts/) pour participer à Ethereum. C'est faux. L'une des choses formidables concernant le réseau et la communauté Ethereum, c'est que vous pouvez [participer](/community/) en utilisant presque n'importe quel langage de programmation.
+On croit souvent à tort que les développeurs doivent écrire des [contrats intelligents](/developers/docs/smart-contracts/) pour participer à Ethereum. C'est faux. L'une des choses formidables concernant le réseau et la communauté Ethereum, c'est que vous pouvez [participer](/community/) en utilisant presque n'importe quel langage de programmation.
 
 Ethereum et sa communauté ont adopté l'open source. Vous pouvez trouver des projets communautaires (implémentations de clients, API, frameworks de développement, outils de test) dans une grande variété de langages.
 

@@ -13,7 +13,7 @@ tags:
   - "wallet (portofel)"
   - "Pinata"
 skill: intermediar
-lang: en
+lang: ro
 sidebar: true
 published: 2021-10-06
 ---

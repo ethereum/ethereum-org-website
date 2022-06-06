@@ -3,7 +3,6 @@ title: Dagger-Hashamoto
 description: A detailed look at the Dagger-Hashamoto algorithm.
 lang: en
 sidebar: true
-incomplete: false
 ---
 
 Dagger-Hashimoto was the original research implementation and specification for Ethereum's mining algorithm. Dagger-Hashimoto was superseded by [Ethash](#ethash).
@@ -278,7 +277,8 @@ _Proof_. Since `P` is a safe prime, then by [Lagrange's Theorem][lagrange] we ha
 The order of `x` cannot be `1`, since by Fermat's Little Theorem we have:
 
 <pre>x<sup>P-1</sup> mod P ≡ 1</pre>
-Hence `x` must be a multiplicative identity of `ℤ/nℤ`, which is unique.  Since we assumed that `x ≠ 1` by assumption, this is not possible.
+
+Hence `x` must be a multiplicative identity of `ℤ/nℤ`, which is unique. Since we assumed that `x ≠ 1` by assumption, this is not possible.
 
 The order of `x` cannot be `2` unless `x = P-1`, since this would violate that `P` is prime.
 
@@ -287,7 +287,6 @@ From the above proposition, we can recognize that iterating `(picker * init) % P
 When we are assigning the first cell in the DAG (the variable labeled `init`), we compute `pow(sha3(seed) + 2, 3, P)`. At first glance, this does not guarantee that the result is neither `1` nor `P-1`. However, since `P-1` is a safe prime, we have the following additional assuance, which is a corollary of Observation 1:
 
 > Observation 2. Let `x` be a member of the multiplicative group `ℤ/Pℤ` for a safe prime `P`, and let `w` be a natural number. If `x mod P ≠ 1 mod P` and `x mod P ≠ P-1 mod P`, as well as `w mod P ≠ P-1 mod P` and `w mod P ≠ 0 mod P`, then `xʷ mod P ≠ 1 mod P` and `xʷ mod P ≠ P-1 mod P`
-
 
 ### Modular exponentiation as a hash function {#modular-exponentiation}
 

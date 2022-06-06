@@ -147,6 +147,19 @@ Proof-of-work should be capitalized at the beginning of a sentence. In any other
 
 The same rules we apply to proof-of-work are applicable to proof-of-stake, proof-of-authority, proof-of-humanity, proof-of-individuality, etc.
 
+### The Merge {#the-merge}
+
+When referring to The Merge, treat it as a proper noun. Always capitalize the first letter in each word.
+
+**Correct usage:**
+
+- The Merge
+
+**Incorrect usage:**
+
+- The merge
+- the Merge
+
 ### Use active voice {#use-active-voice}
 
 Sentences using active voice are more concise and efficient, making your writing more engaging and easier to comprehend.

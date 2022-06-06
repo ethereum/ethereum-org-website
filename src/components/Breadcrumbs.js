@@ -3,7 +3,8 @@ import styled from "styled-components"
 import { useIntl } from "gatsby-plugin-intl"
 
 import Link from "./Link"
-import { translateMessageId, supportedLanguages } from "../utils/translations"
+import { supportedLanguages } from "../utils/languages"
+import { translateMessageId } from "../utils/translations"
 
 const ListContainer = styled.nav`
   margin-bottom: 2rem;

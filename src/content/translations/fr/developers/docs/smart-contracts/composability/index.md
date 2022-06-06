@@ -12,7 +12,7 @@ Les contrats intelligents sont publics sur Ethereum et peuvent être considéré
 
 ## Tutoriels connexes {#related-tutorials}
 
-- [Contract Composability: The Building Blocks of Ethereum Smart Contract Development](https://blog.decentlabs.io/contract-composability-the-building-blocks-of-ethereum-smart-contract-development/)
+- [Contract Composability: The Building Blocks of Ethereum Smart Contract Development](https://www.decentlabs.io/blog/contract-composability-the-building-blocks-of-ethereum-smart-contract-development)
 - [Kickstart your Dapp frontend development with create-eth-app](/developers/tutorials/kickstart-your-DApp-frontend-development-wth-create-eth-app/) _- Comment utiliser create-eth-app pour créer facilement des applications avec les contrats intelligents_
 
 ## Complément d'information {#further-reading}

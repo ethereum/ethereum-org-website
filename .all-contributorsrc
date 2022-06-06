@@ -2157,7 +2157,8 @@
       "profile": "https://github.com/wackerow",
       "contributions": [
         "code",
-        "bug"
+        "bug",
+        "doc"
       ]
     },
     {
@@ -5254,7 +5255,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/82793845?v=4",
       "profile": "https://github.com/bleesherman",
       "contributions": [
-        "content"
+        "content",
+        "doc"
       ]
     },
     {
@@ -5930,7 +5932,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/25297591?v=4",
       "profile": "http://www.daita.tech",
       "contributions": [
-        "doc"
+        "doc",
+        "content"
       ]
     },
     {
@@ -6377,9 +6380,7 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/75273616?v=4",
       "profile": "https://github.com/HursitTarcan",
       "contributions": [
-        "bug",
-        "code",
-        "a11y"
+        "code"
       ]
     },
     {
@@ -7451,6 +7452,262 @@
       "profile": "http://booklearner.org",
       "contributions": [
         "doc"
+      ]
+    },
+    {
+      "login": "moretimeL",
+      "name": "moretimeL",
+      "avatar_url": "https://avatars.githubusercontent.com/u/43361848?v=4",
+      "profile": "https://github.com/moretimeL",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "SuperDelphi",
+      "name": "SuperDelphi",
+      "avatar_url": "https://avatars.githubusercontent.com/u/44942598?v=4",
+      "profile": "https://github.com/SuperDelphi",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "chadlohrli",
+      "name": "chadlohrli",
+      "avatar_url": "https://avatars.githubusercontent.com/u/9952172?v=4",
+      "profile": "https://github.com/chadlohrli",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "JuliusDegesys",
+      "name": "Julius Degesys",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3232103?v=4",
+      "profile": "https://github.com/JuliusDegesys",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "nhsz",
+      "name": "Nicolás Quiroz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/948922?v=4",
+      "profile": "https://nicolasquiroz.com",
+      "contributions": [
+        "code",
+        "bug"
+      ]
+    },
+    {
+      "login": "wolz-CODElife",
+      "name": "wolz-CODElife",
+      "avatar_url": "https://avatars.githubusercontent.com/u/55518764?v=4",
+      "profile": "http://wolzcodelife.web.app",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "minaessam2015",
+      "name": "Mina Essam",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13814552?v=4",
+      "profile": "https://github.com/minaessam2015",
+      "contributions": [
+        "ideas"
+      ]
+    },
+    {
+      "login": "Choi-Jinhong",
+      "name": "GNONG",
+      "avatar_url": "https://avatars.githubusercontent.com/u/65050483?v=4",
+      "profile": "https://jinhongdev.tistory.com/",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "spilehchiha",
+      "name": "Sina Pilehchiha",
+      "avatar_url": "https://avatars.githubusercontent.com/u/46059077?v=4",
+      "profile": "https://github.com/spilehchiha",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "theexoticman",
+      "name": "thefrenchbrazilianguy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/10594609?v=4",
+      "profile": "https://github.com/theexoticman",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "nativeanish",
+      "name": "Anish Gupta",
+      "avatar_url": "https://avatars.githubusercontent.com/u/15274388?v=4",
+      "profile": "http://nativeanish.tech",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "dev-matthew",
+      "name": "Matthew",
+      "avatar_url": "https://avatars.githubusercontent.com/u/80741503?v=4",
+      "profile": "https://github.com/dev-matthew",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "JustynaBroniszewska",
+      "name": "Justyna Broniszewska",
+      "avatar_url": "https://avatars.githubusercontent.com/u/33961199?v=4",
+      "profile": "https://github.com/JustynaBroniszewska",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "yanil3500",
+      "name": "Elyanil Liranzo-Castro",
+      "avatar_url": "https://avatars.githubusercontent.com/u/11803254?v=4",
+      "profile": "https://github.com/yanil3500",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "LichuAcu",
+      "name": "Lichu Acuña",
+      "avatar_url": "https://avatars.githubusercontent.com/u/54295410?v=4",
+      "profile": "https://www.linkedin.com/in/lisandroea/?locale=en_US",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "avcdsld",
+      "name": "Takamasa Arakawa",
+      "avatar_url": "https://avatars.githubusercontent.com/u/10495516?v=4",
+      "profile": "https://github.com/avcdsld",
+      "contributions": [
+        "code",
+        "bug"
+      ]
+    },
+    {
+      "login": "skaunov",
+      "name": "skaunov",
+      "avatar_url": "https://avatars.githubusercontent.com/u/65976143?v=4",
+      "profile": "https://github.com/skaunov",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "pcowgill",
+      "name": "Paul Cowgill",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2731712?v=4",
+      "profile": "https://paulcowgill.com",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "zjiekai",
+      "name": "zjiekai",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1871071?v=4",
+      "profile": "https://github.com/zjiekai",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "WiiCoder",
+      "name": "wii u",
+      "avatar_url": "https://avatars.githubusercontent.com/u/65171537?v=4",
+      "profile": "https://github.com/WiiCoder",
+      "contributions": [
+        "ideas"
+      ]
+    },
+    {
+      "login": "MonsieurDMA",
+      "name": "MonsieurDMA",
+      "avatar_url": "https://avatars.githubusercontent.com/u/92155252?v=4",
+      "profile": "https://github.com/MonsieurDMA",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "fennar01",
+      "name": "fennar01",
+      "avatar_url": "https://avatars.githubusercontent.com/u/42185291?v=4",
+      "profile": "https://github.com/fennar01",
+      "contributions": [
+        "ideas",
+        "doc"
+      ]
+    },
+    {
+      "login": "WilliamWelsh",
+      "name": "William",
+      "avatar_url": "https://avatars.githubusercontent.com/u/16886888?v=4",
+      "profile": "https://williamalanwelsh.com",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "motemotech",
+      "name": "motemotech",
+      "avatar_url": "https://avatars.githubusercontent.com/u/59491191?v=4",
+      "profile": "https://github.com/motemotech",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "Mousticke",
+      "name": "mousticke.eth",
+      "avatar_url": "https://avatars.githubusercontent.com/u/16734238?v=4",
+      "profile": "https://github.com/Mousticke",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "brightiron",
+      "name": "brightiron",
+      "avatar_url": "https://avatars.githubusercontent.com/u/95196612?v=4",
+      "profile": "https://github.com/brightiron",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "modernxpunk",
+      "name": "oleksandrkovalskiy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/65621247?v=4",
+      "profile": "https://github.com/modernxpunk",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "yoshikouki",
+      "name": "yoshikouki",
+      "avatar_url": "https://avatars.githubusercontent.com/u/53972292?v=4",
+      "profile": "http://yoshikouki.com",
+      "contributions": [
+        "doc",
+        "ideas"
       ]
     }
   ],

@@ -1,5 +1,5 @@
 ---
-title: Infrastructures de développement des dApp
+title: Infrastructures de développement des dApps
 description: Explorez les avantages des frameworks et comparez les options disponibles.
 lang: fr
 sidebar: true
@@ -28,7 +28,7 @@ Avant de plonger dans les infrastructures, nous vous recommandons de commencer p
 - [trufflesuite.com](https://www.trufflesuite.com/)
 - [GitHub](https://github.com/trufflesuite/truffle)
 
-**Hardhat -** **_Environnement de développement professionnel Ethereum._**
+**Hardhat -** **_Environnement de développement Ethereum pour les professionnels._**
 
 - [hardhat.org](https://hardhat.org)
 - [GitHub](https://github.com/nomiclabs/hardhat)
@@ -60,7 +60,7 @@ Avant de plonger dans les infrastructures, nous vous recommandons de commencer p
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-sdk)
 - [Forum communautaire](https://forum.openzeppelin.com/c/support/17)
 
-**Create Eth App -** **_Create Ethereum-powered apps with one command. Fournit un panel de frameworks d'interface utilisateur et des modèles DeFi parmi lesquels faire votre choix._**
+**Créer une application Eth -** **_Créer des applications alimentées par Ethereum avec une seule commande. Fournit un panel d'infrastructures d'interface utilisateur et des modèles DeFi parmi lesquels faire votre choix._**
 
 - [GitHub](https://github.com/paulrberg/create-eth-app)
 - [Modèles](https://github.com/PaulRBerg/create-eth-app/tree/develop/templates)
@@ -69,7 +69,7 @@ Avant de plonger dans les infrastructures, nous vous recommandons de commencer p
 
 - [GitHub](https://github.com/austintgriffith/scaffold-eth)
 
-**The Graph -** **_Utilisez The Graph pour interroger les données de la blockchain._**
+**Le graphique -** **_Le graphique pour interroger efficacement les données de la blockchain._**
 
 - [Site Web](https://thegraph.com/)
 - [Tutoriel](/developers/tutorials/the-graph-fixing-web3-data-querying/)
@@ -80,12 +80,7 @@ Avant de plonger dans les infrastructures, nous vous recommandons de commencer p
 - [GitHub](https://github.com/alchemyplatform)
 - [Discord](https://discord.com/invite/A39JVCM)
 
-**Dapptools -** **_Une suite d'outils CLI orientés Ethereum suivant l'architecture Unix, favorisant la composabilité, la configurabilité et l'extensibilité._**
-
-- [Page d'accueil](https://dapp.tools/)
-- [GitHub](https://github.com/dapphub/dapptools/)
-
-**Foundry -** **_Une boîte à outils rapide et modulaire pour le développement d'applications Ethereum écrite en Rust._**
+**Foundry -** **_Une boîte à outils rapide, portable et modulaire pour le développement d'applications Ethereum écrites en Rust._**
 
 - [Documentation](https://onbjerg.github.io/foundry-book/)
 - [GitHub](https://github.com/gakonst/foundry/)

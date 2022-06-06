@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion"
 import Icon from "./Icon"
 import Link from "./Link"
 import Translation from "./Translation"
-import { supportedLanguages } from "../utils/translations"
+import { supportedLanguages } from "../utils/languages"
 import { dropdownIconContainerVariant } from "./SharedStyledComponents"
 
 import docLinks from "../data/developer-docs-links.yaml"

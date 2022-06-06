@@ -2,10 +2,12 @@
 import { GatsbyImage } from "gatsby-plugin-image"
 import React, { useState } from "react"
 import styled from "styled-components"
+import { useIntl } from "gatsby-plugin-intl"
 
 // Components
 import ButtonLink from "../../components/ButtonLink"
 import Link from "../../components/Link"
+import Translation from "../../components/Translation"
 import { StyledSelect as Select } from "../SharedStyledComponents"
 
 // Data
@@ -13,6 +15,7 @@ import cexSupport from "../../data/layer-2/cex-layer-2-support.json"
 
 //Utils
 import { trackCustomEvent } from "../../utils/matomo"
+import { translateMessageId } from "../../utils/translations"
 
 // Styles
 const Content = styled.div`
@@ -162,26 +165,28 @@ const RightSelected = styled.div`
 `
 
 const Layer2Onboard = ({ layer2DataCombined, ethIcon }) => {
+  const intl = useIntl()
+
   const [selectedExchange, setSelectedExchange] = useState(undefined)
   const [selectedL2, setSelectedL2] = useState(undefined)
 
   return (
     <Content>
       <Description>
-        <h2>How to get onto a layer 2</h2>
+        <h2>
+          <Translation id="layer-2-onboard-title" />
+        </h2>
         <p>
-          There are two primary ways to get your assets onto a layer 2: bridge
-          funds from Ethereum via a smart contract or withdraw your funds on an
-          exchange directly onto the layer 2 network.
+          <Translation id="layer-2-onboard-1" />
         </p>
       </Description>
       <Grid>
         <LeftDescription>
-          <h4>Funds in your wallet?</h4>
+          <h4>
+            <Translation id="layer-2-onboard-wallet-title" />
+          </h4>
           <p>
-            If you've already got your ETH in your wallet, you'll need to use a
-            bridge to move it from Ethereum Mainnet to a layer 2.{" "}
-            <Link to="/bridges/">More on bridges</Link>.
+            <Translation id="layer-2-onboard-wallet-1" />
           </p>
         </LeftDescription>
         <LeftSelect>
@@ -202,32 +207,43 @@ const Layer2Onboard = ({ layer2DataCombined, ethIcon }) => {
               })
               setSelectedL2(selectedOption)
             }}
-            placeholder={"Select L2 you want to bridge to"}
+            placeholder={translateMessageId(
+              "layer-2-onboard-wallet-input-placeholder",
+              intl
+            )}
           />
         </LeftSelect>
         {selectedL2 && (
           <LeftSelected>
             <SelectedContainer>
               <p>
-                <b>You can connect to {selectedL2.name} using these wallets:</b>
+                <b>{`${translateMessageId(
+                  "layer-2-onboard-wallet-selected-1",
+                  intl
+                )} ${selectedL2.name} ${translateMessageId(
+                  "layer-2-onboard-wallet-selected-2",
+                  intl
+                )}`}</b>
               </p>
               <p>{selectedL2.bridgeWallets.join(", ")}</p>
               <ButtonLinkMargin to={selectedL2.bridge}>
-                {selectedL2.name} Bridge
+                {`${selectedL2.name} ${translateMessageId(
+                  "layer-2-bridge",
+                  intl
+                )}`}
               </ButtonLinkMargin>
             </SelectedContainer>
           </LeftSelected>
         )}
         <RightDescription>
-          <h4>Funds on an exchange?</h4>
+          <h4>
+            <Translation id="layer-2-onboard-exchange-title" />
+          </h4>
           <p>
-            Some centralized exchanges now offer direct withdrawals and deposits
-            to layer 2s. Check which exchanges support layer 2 withdrawals and
-            which layer 2s they support.
+            <Translation id="layer-2-onboard-exchange-1" />
           </p>
           <p>
-            You'll also need a wallet to withdraw your funds to.{" "}
-            <Link to="/wallets/find-wallet/">Find an Ethereum wallet</Link>.
+            <Translation id="layer-2-onboard-exchange-2" />
           </p>
         </RightDescription>
         <RightSelect>
@@ -248,7 +264,10 @@ const Layer2Onboard = ({ layer2DataCombined, ethIcon }) => {
               })
               setSelectedExchange(selectedOption)
             }}
-            placeholder={"Check exchanges that support L2"}
+            placeholder={translateMessageId(
+              "layer-2-onboard-exchange-input-placeholder",
+              intl
+            )}
           />
         </RightSelect>
         <EthLogo>
@@ -259,7 +278,9 @@ const Layer2Onboard = ({ layer2DataCombined, ethIcon }) => {
             <SelectedContainer>
               <TwoColumnContent>
                 <Flex50>
-                  <H3>Deposits</H3>
+                  <H3>
+                    <Translation id="layer-2-deposits" />
+                  </H3>
                   <ul>
                     {selectedExchange.supports_deposits.map((l2) => (
                       <li>{l2}</li>
@@ -267,7 +288,9 @@ const Layer2Onboard = ({ layer2DataCombined, ethIcon }) => {
                   </ul>
                 </Flex50>
                 <Flex50>
-                  <H3>Withdrawals</H3>
+                  <H3>
+                    <Translation id="layer-2-withdrawals" />
+                  </H3>
                   <ul>
                     {selectedExchange.supports_withdrawals.map((l2) => (
                       <li>{l2}</li>
@@ -276,7 +299,9 @@ const Layer2Onboard = ({ layer2DataCombined, ethIcon }) => {
                 </Flex50>
               </TwoColumnContent>
               <ButtonLink to={selectedExchange.url}>
-                Go to {selectedExchange.name}
+                {`${translateMessageId("layer-2-go-to", intl)} ${
+                  selectedExchange.name
+                }`}
               </ButtonLink>
             </SelectedContainer>
           </RightSelected>

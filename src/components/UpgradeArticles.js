@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { dannyArticles, benArticles } from "../data/eth-upgrade-articles"
+import { dannyArticles, benArticles } from "../data/ethUpgradeArticles"
 
 import CardList from "./CardList"
 
