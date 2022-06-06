@@ -7709,6 +7709,16 @@
         "doc",
         "ideas"
       ]
+    },
+    {
+      "login": "graz-network",
+      "name": "Graz Network",
+      "avatar_url": "https://avatars.githubusercontent.com/u/102697012?v=4",
+      "profile": "http://graz.network",
+      "contributions": [
+        "doc",
+        "translation"
+      ]
     }
   ],
   "contributorsPerLine": 7,
