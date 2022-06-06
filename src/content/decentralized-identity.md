@@ -7,7 +7,7 @@ emoji: ":id:"
 sidebar: true
 sidebarDepth: 2
 summaryPoint1: Traditional identity systems have centralized the issuance, maintenance and control of your identifiers.
-summaryPoint2: Decentralized identity solutions give the power back to the individual, further decreasing reliance on centralized third-parties.
+summaryPoint2: Decentralized identity removes reliance on centralized third parties.
 summaryPoint3: Thanks to crypto, users now have the tools to issue, hold and control their own identifiers and attestations once again. 
 ---
 
