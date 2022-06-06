@@ -1,5 +1,5 @@
 ---
-title: Decentralized social media networks
+title: Decentralized social networks
 description: An overview of decentralized social networks on Ethereum
 lang: en
 template: use-cases
@@ -16,7 +16,7 @@ Social networks play a massive role in our daily communications and interactions
 
 ## What are decentralized social networks? {#what-are-decentralized-social-networks}
 
-Decentralized social media networks are blockchain-based platforms that allow users to exchange information as well as publish and distribute content to audiences. Because these applications run on the blockchain, they are capable of being decentralized and resistant to censorship and undue control. 
+Decentralized social networks are blockchain-based platforms that allow users to exchange information as well as publish and distribute content to audiences. Because these applications run on the blockchain, they are capable of being decentralized and resistant to censorship and undue control. 
 
 Many decentralized social networks exist as alternatives to established social media services, such as Facebook, LinkedIn, Twitter, and Medium. But blockchain-powered social networks have a number of features that put them ahead of traditional social platforms. 
 
@@ -26,15 +26,15 @@ Decentralized social networks are a class of [decentralized applications (dApps)
 
 Traditional social media platforms rely on databases to store user information, program code, and other forms of data. But this creates single points-of-failure and introduces significant risk. For instance, Facebook's servers infamously [went offline for hours](https://www.npr.org/2021/10/05/1043211171/facebook-instagram-whatsapp-outage-business-impact) last year, cutting off users from the platform. 
 
-Decentralized social media website exist on a peer-to-peer network comprising thousands of nodes around the globe. Even if some nodes fail, the network will run uninterrupted, making applications resistant to failures and outages. 
+Decentralized social networks exist on a peer-to-peer network comprising thousands of nodes around the globe. Even if some nodes fail, the network will run uninterrupted, making applications resistant to failures and outages. 
 
 Using decentralized storage systems like [the InterPlanetary File System (IPFS)](https://ipfs.io/), social networks built on Ethereum can protect user information from exploitation and malicious use. No one will sell your personal information to advertisers, neither will hackers be able to steal your confidential details. 
 
 Many blockchain-based social platforms have native tokens that power monetization in absence of advertising revenue. Users can buy these tokens to access certain features, complete in-app purchases, or tip their favorite content creators. 
 
-## Benefits of decentralized social media platforms {#benefits-of-decentralized-social-media}
+## Benefits of decentralized social networks {#benefits}
 
-1. Decentralized social media platforms are censorship-resistant and open to everyone. This means users cannot be banned, deplatformed, or restricted arbitrarily. 
+1. Decentralized social networks are censorship-resistant and open to everyone. This means users cannot be banned, deplatformed, or restricted arbitrarily. 
 
 2. Decentralized social networks are built on open-source ideals and make source code for applications available for public inspection. By eliminating the implementation of opaque algorithms common in traditional social media, blockchain-based social networks can align the interests of users and platform creators. 
 
@@ -46,11 +46,11 @@ Many blockchain-based social platforms have native tokens that power monetizatio
 
 5. Decentralized social networks afford users a high level of privacy and anyonymity. For instance, an individual can sign in to an Ethereum-based social network using an ENS profile or wallet—without having to share personally identifiable information (PII), such as names, email addresses, etc. 
 
-6. Decentralized social media projects rely on decentralized storage, not centralized databases, which are considerably better for safeguarding user data.
+6. Decentralized social networks rely on decentralized storage, not centralized databases, which are considerably better for safeguarding user data.
 
-## Decentralized social networks on Ethereum {#Ethereum-social-media}
+## Decentralized social networks on Ethereum {#ethereum-social-networks}
 
-The Ethereum network has become the preferred tool for developers creating decentralized social media networks owing to the popularity of its tokens (ERC-20/ERC-721) and its massive user base. Here are some examples of Ethereum-based social networks:
+The Ethereum network has become the preferred tool for developers creating decentralized social media owing to the popularity of its tokens (ERC-20/ERC-721) and its massive user base. Here are some examples of Ethereum-based social networks:
 
 ### Peepeth {#peepeth}
 
@@ -66,13 +66,13 @@ Posts published on Mirror are permanently stored on Arweave, a decentralized sto
 
 ### MINDS {#minds}
 
-[MINDS](https://www.minds.com/) is one of the most used decentralized social media platforms. It works like Facebook and has racked up millions of users already.
+[MINDS](https://www.minds.com/) is one of the most used decentralized social networks. It works like Facebook and has racked up millions of users already.
 
 Users use the platform's native ERC-20 token $MIND to pay for items. Users can also earn $MIND tokens by publishing popular content, contributing to the ecosystem, and referring others to the platform.
 
-## Ethereum and legacy social media platforms {#ethereum-and-legacy-social-media-networks}
+## Web2 social networks on Ethereum {#web2-social-networks-and-ethereum}
 
-Decentralized social media platforms aren't the only ones trying to incorporate blockchain technology. Many centralized platforms are also planning to integrate Ethereum into their infrastructure:
+[Web3](/web3/) native social platforms aren't the only ones trying to incorporate blockchain technology into social media. Many centralized platforms are also planning to integrate Ethereum into their infrastructure:
 
 ### Reddit {#reddit}
 
@@ -90,7 +90,7 @@ In January 2021, Twitter Blue [rolled out support for NFTs](https://mashable.com
 
 In May 2022, [Instagram announced support for NFTs](https://about.instagram.com/blog/announcements/instagram-digital-collectibles) on Ethereum and Polygon. Users can post NFTs directly to Instagram by connecting their Ethereum wallet. 
 
-## Use decentralized social networks {#use-decentralized-social-media}
+## Use decentralized social networks {#use-decentralized-social-networks}
 
 - **[Status.im](https://status.im/)** - _Status is a secure messaging app that uses an open-source, peer-to-peer protocol, and end-to-end encryption to protect your messages from third parties._ 
 - **[Mirror.xyz](https://mirror.xyz/)** - _Mirror is a decentralized, user-owned publishing platform built on Ethereum for users to crowdfund ideas, monetize content, and build high-value communities._ 
