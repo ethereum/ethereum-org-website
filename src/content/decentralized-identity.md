@@ -11,17 +11,17 @@ summaryPoint2: Decentralized identity removes reliance on centralized third part
 summaryPoint3: Thanks to crypto, users now have the tools to issue, hold and control their own identifiers and attestations once again. 
 ---
 
-## What is decentralized identity? {#what-is-decentralized-identity}
+Identity underpins virtually every aspect of your life today. Using online services, opening a bank account, voting in elections, buying property, securing employment—all of these things require proving your identity. 
 
-Decentralized identity is an approach to identity management that allows individuals to manage identity-related information without relying on central authorities. An important objective for decentralized identity is giving users the freedom to control access to their personal information. 
+However, traditional identity management systems have long relied on centralized intermediaries who issue, hold, and control your identifiers and attestations. This means you cannot control your identity-related information, or decide who has access to personally identifiable information (PII) and how much access these parties have. 
 
-In a decentralized identity framework, users manage identities by creating identifiers, and receiving attestations from issuers, such as governments, service providers, and employers, which they store in a digital wallet. While these three concepts (identities, identifiers, attestations) sound similar, they have differences which we explain in the next section. 
+To solve these problems, we have decentralized identity systems built on public blockchains like Ethereum. Decentralized identity allows individuals to manage their identity-related information. With decentralized identity solutions, *you* can create identifiers and claim and hold your attestations without relying on central authorities, like service providers or governments.  
 
-### What is identity {#what-is-identity}
+## What is identity {#what-is-identity}
 
 Identity means an individual's sense of self, defined by unique characteristics. Identity refers to being an _individual_, i.e., a distinct human entity. Identity could also refer to other non-human entities, such as an organization or authority.
 
-### What are identifiers? {#what-are-identifiers}
+## What are identifiers? {#what-are-identifiers}
 
 An identifier is a piece of information that acts as a pointer to a particular identity or identities. Common identifiers include: 
 
@@ -33,7 +33,7 @@ An identifier is a piece of information that acts as a pointer to a particular i
 
 These traditional examples of identifiers are issued, held and controlled by central entities. You need permission from your government to change your name or from a social media platform to change your handle.
 
-### What are attestations? {#what-are-attestations}
+## What are attestations? {#what-are-attestations}
  
 An attestation is a claim made by one entity about another entity. If you live in the United States, the driver's license issued to you by the Department of Motor Vehicles (one entity) attests that you (another entity) are legally allowed to drive a car.
 
