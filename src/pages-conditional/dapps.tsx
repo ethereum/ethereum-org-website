@@ -337,7 +337,7 @@ interface Category {
 }
 
 interface Categories {
-  [key: string]: Catergory
+  [key: string]: Category
 }
 
 const DappsPage = ({
@@ -345,8 +345,8 @@ const DappsPage = ({
   location,
 }: PageProps<Queries.DappsPageQuery, Context>) => {
   const intl = useIntl()
-  const [selectedCategory, setCategory] = useState<CatergoryType>(
-    CatergoryType.FINANCE
+  const [selectedCategory, setCategory] = useState<CategoryType>(
+    CategoryType.FINANCE
   )
   const explore = useRef<HTMLElement>(null)
 
@@ -356,17 +356,17 @@ const DappsPage = ({
       "category"
     ) // Comma separated string
     const selectedCategory = queryParamCategories
-      ? (queryParamCategories.split(",")[0] as CatergoryType)
-      : CatergoryType.FINANCE // Default to finance category if empty
+      ? (queryParamCategories.split(",")[0] as CategoryType)
+      : CategoryType.FINANCE // Default to finance category if empty
     setCategory(
       [
-        CatergoryType.FINANCE,
-        CatergoryType.TECHNOLOGY,
-        CatergoryType.COLLECTIBLES,
-        CatergoryType.GAMING,
+        CategoryType.FINANCE,
+        CategoryType.TECHNOLOGY,
+        CategoryType.COLLECTIBLES,
+        CategoryType.GAMING,
       ].includes(selectedCategory)
         ? selectedCategory
-        : CatergoryType.FINANCE
+        : CategoryType.FINANCE
     )
     if (window && queryParamCategories && explore.current) {
       window.scrollTo({
@@ -377,13 +377,11 @@ const DappsPage = ({
   }, [location.search])
 
   const updatePath = (
-    selectedCategory: CatergoryType,
+    selectedCategory: CategoryType,
     isMobile: boolean
   ): void => {
     // Update URL path with new filter query params
-    let newPath = `/dapps/?category=${
-      selectedCategory || CatergoryType.FINANCE
-    }`
+    let newPath = `/dapps/?category=${selectedCategory || CategoryType.FINANCE}`
     // If "mobile" option at bottom of the page...
     if (isMobile) {
       // Add #explore and refresh
@@ -399,7 +397,7 @@ const DappsPage = ({
   }
 
   const handleCategorySelect = (
-    category: CatergoryType,
+    category: CategoryType,
     isMobile = false
   ): void => {
     setCategory(category)
@@ -465,8 +463,8 @@ const DappsPage = ({
     },
   ]
 
-  const categories: Catergories = {
-    [CatergoryType.FINANCE]: {
+  const categories: Categories = {
+    [CategoryType.FINANCE]: {
       title: translateMessageId("page-dapps-finance-button", intl),
       emoji: ":money_with_wings:",
       benefitsTitle: translateMessageId(
@@ -524,7 +522,7 @@ const DappsPage = ({
         },
       ],
     },
-    [CatergoryType.COLLECTIBLES]: {
+    [CategoryType.COLLECTIBLES]: {
       title: translateMessageId("page-dapps-collectibles-button", intl),
       emoji: ":frame_with_picture:",
       benefitsTitle: translateMessageId(
@@ -582,7 +580,7 @@ const DappsPage = ({
         },
       ],
     },
-    [CatergoryType.GAMING]: {
+    [CategoryType.GAMING]: {
       title: translateMessageId("page-dapps-gaming-button", intl),
       emoji: ":video_game:",
       benefitsTitle: translateMessageId(
@@ -620,7 +618,7 @@ const DappsPage = ({
         },
       ],
     },
-    [CatergoryType.TECHNOLOGY]: {
+    [CategoryType.TECHNOLOGY]: {
       title: translateMessageId("page-dapps-technology-button", intl),
       emoji: ":keyboard:",
     },
@@ -1097,7 +1095,7 @@ const DappsPage = ({
       image: getImage(data.uniswapec),
       alt: translateMessageId("page-dapps-uniswap-logo-alt", intl),
       background: "#212f46",
-      type: CatergoryType.FINANCE,
+      type: CategoryType.FINANCE,
       pillColor: "tagMint",
     },
     {
@@ -1110,7 +1108,7 @@ const DappsPage = ({
       image: getImage(data.darkforestec),
       alt: translateMessageId("page-dapps-dark-forest-logo-alt", intl),
       background: "#080808",
-      type: CatergoryType.GAMING,
+      type: CategoryType.GAMING,
       pillColor: "tagOrange",
     },
     {
@@ -1123,7 +1121,7 @@ const DappsPage = ({
       image: getImage(data.foundationec),
       alt: translateMessageId("page-dapps-foundation-logo-alt", intl),
       background: "#ffffff",
-      type: CatergoryType.COLLECTIBLES,
+      type: CategoryType.COLLECTIBLES,
       pillColor: "tagBlue",
     },
     {
@@ -1136,7 +1134,7 @@ const DappsPage = ({
       image: getImage(data.pooltogetherec),
       alt: translateMessageId("page-dapps-pooltogether-logo-alt", intl),
       background: "#7e4cf2",
-      type: CatergoryType.FINANCE,
+      type: CategoryType.FINANCE,
       pillColor: "tagMint",
     },
   ]
@@ -1256,7 +1254,7 @@ const DappsPage = ({
         </h3>
         <OptionContainer>
           {categoryKeys.map((key, idx) => {
-            const categoryType = key as CatergoryType
+            const categoryType = key as CategoryType
             const category = categories[categoryType]
             return (
               <Option
@@ -1271,7 +1269,7 @@ const DappsPage = ({
           })}
         </OptionContainer>
         {/* Category-specific content */}
-        {selectedCategory === CatergoryType.FINANCE && (
+        {selectedCategory === CategoryType.FINANCE && (
           <Content>
             <IntroRow>
               <Column>
@@ -1389,7 +1387,7 @@ const DappsPage = ({
             </StyledCalloutBanner>
           </Content>
         )}
-        {selectedCategory === CatergoryType.GAMING && (
+        {selectedCategory === CategoryType.GAMING && (
           <Content>
             <IntroRow>
               <Column>
@@ -1430,7 +1428,7 @@ const DappsPage = ({
             </TwoColumnContent>
           </Content>
         )}
-        {selectedCategory === CatergoryType.TECHNOLOGY && (
+        {selectedCategory === CategoryType.TECHNOLOGY && (
           <Content>
             <IntroRow>
               <Column>
@@ -1491,7 +1489,7 @@ const DappsPage = ({
             </TwoColumnContent>
           </Content>
         )}
-        {selectedCategory === CatergoryType.COLLECTIBLES && (
+        {selectedCategory === CategoryType.COLLECTIBLES && (
           <Content>
             <IntroRow>
               <Column>
@@ -1584,21 +1582,21 @@ const DappsPage = ({
                   )
                 )}
               </CardContainer>
-              {selectedCategory === CatergoryType.FINANCE && (
+              {selectedCategory === CategoryType.FINANCE && (
                 <MoreButtonContainer>
                   <ButtonLink isSecondary to="/defi/">
                     <Translation id="page-dapps-more-on-defi-button" />
                   </ButtonLink>
                 </MoreButtonContainer>
               )}
-              {selectedCategory === CatergoryType.COLLECTIBLES && (
+              {selectedCategory === CategoryType.COLLECTIBLES && (
                 <MoreButtonContainer>
                   <ButtonLink isSecondary to="/nft/">
                     <Translation id="page-dapps-more-on-nft-button" />
                   </ButtonLink>
                 </MoreButtonContainer>
               )}
-              {selectedCategory === CatergoryType.GAMING && (
+              {selectedCategory === CategoryType.GAMING && (
                 <MoreButtonContainer>
                   <ButtonLink isSecondary to="/nft/">
                     <Translation id="page-dapps-more-on-nft-gaming-button" />
@@ -1613,7 +1611,7 @@ const DappsPage = ({
             <Translation id="page-dapps-mobile-options-header" />
           </h3>
           {categoryKeys.map((key, idx) => {
-            const categoryType = key as CatergoryType
+            const categoryType = key as CategoryType
             const category = categories[categoryType]
             return (
               <Option
