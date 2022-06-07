@@ -7,6 +7,7 @@ import Icon from "./Icon"
 
 import { languageMetadata } from "../utils/languages"
 import { trackCustomEvent, EventOptions } from "../utils/matomo"
+import { StringValueNode } from "graphql"
 
 const HASH_PATTERN = /^#.*/
 // const DOMAIN_PATTERN = /^(?:https?:)?[/]{2,}([^/]+)/
