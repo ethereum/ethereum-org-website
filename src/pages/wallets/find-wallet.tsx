@@ -7,6 +7,7 @@ import styled from "styled-components"
 
 // Components
 import Breadcrumbs from "../../components/Breadcrumbs"
+import Link from "../../components/Link"
 import PageMetadata from "../../components/PageMetadata"
 import { Content, Page } from "../../components/SharedStyledComponents"
 import Translation from "../../components/Translation"
@@ -117,6 +118,17 @@ const WalletContentHeader = styled.div`
   background: ${(props) => props.theme.colors.background};
 `
 
+const Note = styled.div`
+  text-align: center;
+  padding: 20px;
+
+  p {
+    font-size: 14px;
+    line-height: 23px;
+    margin: 0;
+  }
+`
+
 const FindWalletPage = ({ data, location }) => {
   const intl = useIntl()
 
@@ -218,6 +230,31 @@ const FindWalletPage = ({ data, location }) => {
           <WalletContentHeader>Wallet</WalletContentHeader>
         </WalletContent>
       </TableContent>
+      <Note>
+        <p>
+          <i>
+            Wallets listed on this page are not official endorsements, and are
+            provided for informational purposes only.{" "}
+          </i>
+        </p>
+        <p>
+          <i>
+            Their descriptions have been provided by the wallet companies
+            themselves.{" "}
+          </i>
+        </p>
+        <p>
+          <i>
+            We add products to this page based on criteria in our{" "}
+            <Link to="/contributing/adding-products/">listing policy</Link>. If
+            you'd like us to add a wallet,{" "}
+            <Link to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml&title=Suggest+a+wallet">
+              raise an issue in GitHub
+            </Link>
+            .
+          </i>
+        </p>
+      </Note>
     </Page>
   )
 }
