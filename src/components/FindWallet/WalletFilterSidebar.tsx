@@ -57,12 +57,14 @@ const OptionGrid = styled.div`
 
   p {
     margin: 0;
+    line-height: 20px;
     padding: 0 12px;
   }
 `
 
 const OptionDescription = styled.p`
   font-size: 12px;
+  line-height: 14px;
   color: ${(props) => props.theme.colors.text200};
 `
 
