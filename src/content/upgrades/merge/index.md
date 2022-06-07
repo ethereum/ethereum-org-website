@@ -8,11 +8,11 @@ image: ../../../assets/upgrades/merge.png
 summaryPoint1: Soon the current Ethereum Mainnet will merge with the Beacon Chain proof-of-stake system.
 summaryPoint2: This will mark the end of proof-of-work for Ethereum, and the full transition to proof-of-stake.
 summaryPoint3: This sets the stage for future scaling upgrades including data sharding.
-summaryPoint4: With The Merge, Ethereum's eneregy consumption drops by 99.95%. Welcome a new greener Ethereum.
+summaryPoint4: With The Merge, Ethereum's eneregy consumption drops by 99.95%. Welcome to a new greener Ethereum.
 ---
 
 <UpgradeStatus dateKey="page-upgrades-merge-date">
-The Merge is one of the most significant and high-stakes upgrades in the history of Ethereum. Extensive testing and bug bounties have been underway for years to make sure it’s done right, maximizing chances of a successful transition.
+The Merge is one of the most significant and high-stakes upgrades in the history of Ethereum. Extensive testing and bug bounties have been underway for years to ensure a safe transition to proof-of-stake.
 
 This process is in its final stages, with plans to undergo The Merge on a few public testnets before finally moving forward with Mainnet. If you’re as excited about The Merge as we are, follow the <a href="https://blog.ethereum.org">EF Blog</a> or the client communication channels for the latest official word on <em>When Merge?</em>
 </UpgradeStatus>
