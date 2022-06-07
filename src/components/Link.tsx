@@ -7,6 +7,7 @@ import Icon from "./Icon"
 
 import { languageMetadata } from "../utils/languages"
 import { trackCustomEvent, EventOptions } from "../utils/matomo"
+import { StringValueNode } from "graphql"
 
 const HASH_PATTERN = /^#.*/
 // const DOMAIN_PATTERN = /^(?:https?:)?[/]{2,}([^/]+)/
@@ -66,7 +67,6 @@ const GlossaryIcon = styled(Icon)`
 export interface IProps {
   to?: string
   href?: string
-  title?: string
   hideArrow?: boolean
   className?: string
   isPartiallyActive?: boolean
@@ -78,7 +78,6 @@ export interface IProps {
 const Link: React.FC<IProps> = ({
   to,
   href,
-  title,
   children,
   hideArrow = false,
   className,
@@ -105,7 +104,7 @@ const Link: React.FC<IProps> = ({
   // See https://github.com/gatsbyjs/gatsby/issues/21909
   if (isHash) {
     return (
-      <a className={className} href={to} aria-label={ariaLabel} title={title}>
+      <a className={className} href={to} aria-label={ariaLabel}>
         {children}
       </a>
     )
@@ -121,7 +120,6 @@ const Link: React.FC<IProps> = ({
         target="_blank"
         rel="noopener noreferrer"
         aria-label={ariaLabel}
-        title={title}
       >
         {children}
       </a>
@@ -147,7 +145,6 @@ const Link: React.FC<IProps> = ({
           )
         }
         aria-label={ariaLabel}
-        title={title}
       >
         {children}
       </a>
@@ -163,7 +160,6 @@ const Link: React.FC<IProps> = ({
           )
         }
         aria-label={ariaLabel}
-        title={title}
       >
         {children}
       </ExternalLink>
@@ -180,7 +176,6 @@ const Link: React.FC<IProps> = ({
         activeClassName="active"
         partiallyActive={isPartiallyActive}
         onClick={onClick}
-        title={title}
       >
         {children}
       </ExplicitLangInternalLink>
@@ -195,7 +190,6 @@ const Link: React.FC<IProps> = ({
         target="_blank"
         rel="noopener noreferrer"
         aria-label={ariaLabel}
-        title={title}
       >
         {children}
       </a>
@@ -210,7 +204,6 @@ const Link: React.FC<IProps> = ({
       activeClassName="active"
       partiallyActive={isPartiallyActive}
       onClick={onClick}
-      title={title}
     >
       {children}
       {isGlossary && (
