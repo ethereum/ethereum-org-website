@@ -295,7 +295,7 @@ const EthPage = (props: PageProps<Queries.EthPageQuery, Context>) => {
               <Translation id="page-eth-currency-for-apps" />
             </SubtitleTwo>
             <StyledEthPriceCard />
-            <ButtonLink to="/get-eth/" title="where to buy eth">
+            <ButtonLink to="/get-eth/">
               <Translation id="page-eth-button-buy-eth" />
             </ButtonLink>
           </Header>
