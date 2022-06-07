@@ -324,7 +324,7 @@ enum CatergoryType {
   GAMING = "gaming",
 }
 
-interface Catergory {
+interface Category {
   title: string
   emoji: string
   benefitsTitle?: string
