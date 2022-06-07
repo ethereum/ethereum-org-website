@@ -216,93 +216,126 @@ const StyledCallout = styled(Callout)`
   min-height: 100%;
 `
 
-const cards = [
-  {
-    emoji: ":bank:",
-    title: <Translation id="page-what-is-ethereum-banking-card" />,
-    description: <Translation id="page-what-is-ethereum-banking-card-desc" />,
-  },
-
-  {
-    emoji: ":detective:",
-    title: <Translation id="page-what-is-ethereum-internet-card" />,
-    description: <Translation id="page-what-is-ethereum-internet-card-desc" />,
-  },
-  {
-    emoji: ":busts_in_silhouette:",
-    title: <Translation id="page-what-is-ethereum-p2p-card" />,
-    description: <Translation id="page-what-is-ethereum-p2p-card-desc" />,
-  },
-  {
-    emoji: ":shield:",
-    title: <Translation id="page-what-is-ethereum-censorless-card" />,
-    description: (
-      <Translation id="page-what-is-ethereum-censorless-card-desc" />
-    ),
-  },
-  {
-    emoji: ":shopping_bags:",
-    title: <Translation id="page-what-is-ethereum-commerce-card" />,
-    description: <Translation id="page-what-is-ethereum-commerce-card-desc" />,
-  },
-  {
-    emoji: ":handshake:",
-    title: <Translation id="page-what-is-ethereum-compatibility-card" />,
-    description: (
-      <Translation id="page-what-is-ethereum-compatibility-card-desc" />
-    ),
-  },
-]
-
 const WhatIsEthereumPage = ({
   data,
 }: PageProps<Queries.WhatIsEthereumQuery, Context>) => {
   const intl = useIntl()
+
+  const cards = [
+    {
+      emoji: ":bank:",
+      title: translateMessageId("page-what-is-ethereum-banking-card", intl),
+      description: translateMessageId(
+        "page-what-is-ethereum-banking-card-desc",
+        intl
+      ),
+    },
+
+    {
+      emoji: ":detective:",
+      title: translateMessageId("page-what-is-ethereum-internet-card", intl),
+      description: translateMessageId(
+        "page-what-is-ethereum-internet-card-desc",
+        intl
+      ),
+    },
+    {
+      emoji: ":busts_in_silhouette:",
+      title: translateMessageId("page-what-is-ethereum-p2p-card", intl),
+      description: translateMessageId(
+        "page-what-is-ethereum-p2p-card-desc",
+        intl
+      ),
+    },
+    {
+      emoji: ":shield:",
+      title: translateMessageId("page-what-is-ethereum-censorless-card", intl),
+      description: translateMessageId(
+        "page-what-is-ethereum-censorless-card-desc",
+        intl
+      ),
+    },
+    {
+      emoji: ":shopping_bags:",
+      title: translateMessageId("page-what-is-ethereum-commerce-card", intl),
+      description: translateMessageId(
+        "page-what-is-ethereum-commerce-card-desc",
+        intl
+      ),
+    },
+    {
+      emoji: ":handshake:",
+      title: translateMessageId(
+        "page-what-is-ethereum-compatibility-card",
+        intl
+      ),
+      description: translateMessageId(
+        "page-what-is-ethereum-compatibility-card-desc",
+        intl
+      ),
+    },
+  ]
+
   const actions = [
     {
-      title: <Translation id="page-what-is-ethereum-native-title" />,
+      title: translateMessageId("page-what-is-ethereum-native-title", intl),
       to: "/eth/",
       alt: translateMessageId("page-what-is-ethereum-native-alt", intl),
       image: getImage(data.eth),
-      description: <Translation id="page-what-is-ethereum-native-crypto" />,
+      description: translateMessageId(
+        "page-what-is-ethereum-native-crypto",
+        intl
+      ),
     },
     {
-      title: <Translation id="page-what-is-ethereum-wallets" />,
+      title: translateMessageId("page-what-is-ethereum-wallets", intl),
       to: "/wallets/",
       alt: translateMessageId("page-what-is-ethereum-native-img-alt", intl),
       image: getImage(data.wallets),
 
-      description: <Translation id="page-what-is-ethereum-wallets-desc" />,
+      description: translateMessageId(
+        "page-what-is-ethereum-wallets-desc",
+        intl
+      ),
     },
     {
-      title: <Translation id="page-what-is-ethereum-dapps-title" />,
+      title: translateMessageId("page-what-is-ethereum-dapps-title", intl),
       to: "/dapps/",
       alt: translateMessageId("page-what-is-ethereum-dapps-img-alt", intl),
       image: getImage(data.dapps),
-      description: <Translation id="page-what-is-ethereum-dapps-desc" />,
+      description: translateMessageId("page-what-is-ethereum-dapps-desc", intl),
     },
   ]
   const usecases = [
     {
-      title: <Translation id="page-what-is-ethereum-defi-title" />,
+      title: translateMessageId("page-what-is-ethereum-defi-title", intl),
       to: "/defi/",
       alt: translateMessageId("page-what-is-ethereum-defi-alt", intl),
       image: getImage(data.defi),
-      description: <Translation id="page-what-is-ethereum-defi-description" />,
+      description: translateMessageId(
+        "page-what-is-ethereum-defi-description",
+        intl
+      ),
     },
     {
-      title: <Translation id="page-what-is-ethereum-nft-title" />,
+      title: translateMessageId("page-what-is-ethereum-nft-title", intl),
       to: "/nft/",
       alt: translateMessageId("page-what-is-ethereum-nft-alt", intl),
       image: getImage(data.nft),
-      description: <Translation id="page-what-is-ethereum-nft-description" />,
+      description: translateMessageId(
+        "page-what-is-ethereum-nft-description",
+        intl
+      ),
     },
     {
-      title: <Translation id="page-what-is-ethereum-dao-title" />,
+      title: translateMessageId("page-what-is-ethereum-dao-title", intl),
       to: "/dao/",
       alt: translateMessageId("page-what-is-ethereum-dao-alt", intl),
       image: getImage(data.dao),
-      description: <Translation id="page-what-is-ethereum-dao-description" />,
+      description: translateMessageId(
+        "page-what-is-ethereum-dao-description",
+        intl
+      ),
     },
   ]
   return (
