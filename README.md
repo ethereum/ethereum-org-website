@@ -1248,6 +1248,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/modernxpunk"><img src="https://avatars.githubusercontent.com/u/65621247?v=4?s=100" width="100px;" alt=""/><br /><sub><b>oleksandrkovalskiy</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=modernxpunk" title="Documentation">📖</a></td>
     <td align="center"><a href="http://yoshikouki.com"><img src="https://avatars.githubusercontent.com/u/53972292?v=4?s=100" width="100px;" alt=""/><br /><sub><b>yoshikouki</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=yoshikouki" title="Documentation">📖</a> <a href="#ideas-yoshikouki" title="Ideas, Planning, & Feedback">🤔</a></td>
     <td align="center"><a href="http://graz.network"><img src="https://avatars.githubusercontent.com/u/102697012?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Graz Network</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=graz-network" title="Documentation">📖</a> <a href="#translation-graz-network" title="Translation">🌍</a></td>
+    <td align="center"><a href="https://www.youtube.com/c/Cryptoversidad"><img src="https://avatars.githubusercontent.com/u/107050863?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Cryptoversidad</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=cryptoversidad" title="Documentation">📖</a></td>
   </tr>
 </table>
 
