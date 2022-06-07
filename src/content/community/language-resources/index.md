@@ -98,6 +98,7 @@ If you are bilingual and want to help us reach more people, you can also get inv
 - [Curso Introducción a Ethereum Development](https://youtube.com/playlist?list=PLTqiwJDd_R8y9pfUBjhkVa1IDMwyQz-fU) - Solidity basics, testing and deployment of your first smart contract
 - [Curso Introducción a Seguridad y Hacking en Ethereum](https://youtube.com/playlist?list=PLTqiwJDd_R8yHOvteko_DmUxUTMHnlfci) - understand common vulnerabilities and security issues in real smart contracts
 - [Curso Introducción a DeFi Development](https://youtube.com/playlist?list=PLTqiwJDd_R8zZiP9_jNdaPqA3HqoW2lrS) - learn how DeFi smart contracts work in Solidity and create your own Automated Market Maker
+- [Cryptoversidad](https://www.youtube.com/c/Cryptoversidad) - Non-techninal blockchain education from begginer to advanced. Learn everything about crypto and Ethereum.
 
 ### Turkish {#tr}
 
