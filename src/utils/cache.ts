@@ -30,7 +30,7 @@ export const writeToCache = <T>(key: string, value: T): void => {
 /**
  * Retrieve the value stored in the local storage for a given key
  * If the value is not defined or the key does not exist, return a default CacheStorage
- * with a empty value and timestamp set to 0
+ * with an empty value and timestamp set to 0
  * @see CacheStorage
  * @param {string} key stored in the local storage
  * @returns
@@ -61,7 +61,7 @@ const getCachedData = <T>(url: string): CacheStorage<T> => readFromCache(url)
 
 /**
  * Get the data response from the local storage or the API
- * @param {string} url Url of the API
+ * @param {string} url of the API
  * @returns {T} data from the API or the local storage
  */
 export const getData = async <T>(url: string): Promise<T> => {
