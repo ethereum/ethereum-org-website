@@ -23,11 +23,6 @@ incomplete: true
 - [Documentation](https://docs.whiteblock.io)
 - [GitHub](https://github.com/whiteblock/genesis)
 
-**OpenZeppelin Test Environment -** **_Blazing fast smart contract testing. One-line setup for an awesome testing experience._**
-
-- [GitHub](https://github.com/OpenZeppelin/openzeppelin-test-environment)
-- [Documentation](https://docs.openzeppelin.com/test-environment/)
-
 **OpenZeppelin Test Helpers -** **_Assertion library for Ethereum smart contract testing. Make sure your contracts behave as expected!_**
 
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-test-helpers)
