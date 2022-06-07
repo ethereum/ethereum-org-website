@@ -63,8 +63,8 @@ const Icon: React.FC<IProps> = ({
     {name === "info" && <MdInfoOutline />}
     {name === "language" && <MdLanguage />}
     {name === "lightTheme" && <MdWbSunny />}
-    {name === "zenModeOff" && <BsToggleOff />}
-    {name === "zenModeOn" && <BsToggleOn />}
+    {name === "toggleOff" && <BsToggleOff />}
+    {name === "toggleOn" && <BsToggleOn />}
     {name === "menu" && <MdMenu />}
     {name === "check" && <MdDone />}
     {name === "twitter" && (

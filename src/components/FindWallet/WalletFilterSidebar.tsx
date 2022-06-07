@@ -4,6 +4,7 @@ import { getImage, GatsbyImage } from "gatsby-plugin-image"
 import styled from "styled-components"
 
 // Components
+import Checkbox from "../Checkbox"
 import Icon from "../Icon"
 
 // Styles
@@ -69,6 +70,27 @@ const Image = styled(GatsbyImage)`
   height: 24px;
 `
 
+const CheckboxGrid = styled.div`
+  display: grid;
+  width: 100%;
+  grid-template-columns: auto auto;
+  margin-top: 14px;
+  gap: 0.5rem;
+`
+
+const CheckboxGridOption = styled.div`
+  display: flex;
+  gap: 0.5rem;
+
+  p {
+    margin: 0;
+  }
+`
+
+const ToggleIcon = styled(Icon)`
+  fill: ${(props) => props.theme.colors.primary};
+`
+
 // Types
 
 const WalletFilterSidebar = ({ data, filters, updateFilterOption }) => {
@@ -80,15 +102,16 @@ const WalletFilterSidebar = ({ data, filters, updateFilterOption }) => {
         {
           title: "Mobile",
           description: "Phone or mobile based wallets.",
+          filterKey: undefined,
           options: [
             {
               name: "Android",
-              filterName: "android",
+              filterKey: "android",
               inputType: "checkbox",
             },
             {
               name: "iOS",
-              filterName: "ios",
+              filterKey: "ios",
               inputType: "checkbox",
             },
           ],
@@ -96,23 +119,47 @@ const WalletFilterSidebar = ({ data, filters, updateFilterOption }) => {
         {
           title: "Desktop",
           description: "Desktop based wallets.",
+          filterKey: undefined,
           options: [
             {
               name: "Linux",
-              filterName: "android",
+              filterKey: "linux",
               inputType: "checkbox",
             },
             {
               name: "Windows",
-              filterName: "windows",
+              filterKey: "windows",
               inputType: "checkbox",
             },
             {
               name: "macOS",
-              filterName: "macOS",
+              filterKey: "macOS",
               inputType: "checkbox",
             },
           ],
+        },
+        {
+          title: "Browser",
+          description: "Browser extension wallets.",
+          filterKey: undefined,
+          options: [
+            {
+              name: "Firefox",
+              filterKey: "firefox",
+              inputType: "checkbox",
+            },
+            {
+              name: "Chromium",
+              filterKey: "chromium",
+              inputType: "checkbox",
+            },
+          ],
+        },
+        {
+          title: "Hardware",
+          description: "Hardware baesd wallets.",
+          filterKey: "hardware",
+          options: [],
         },
       ],
     },
@@ -150,13 +197,49 @@ const WalletFilterSidebar = ({ data, filters, updateFilterOption }) => {
                         objectFit="contain"
                       />
                       <p>{item.title}</p>
-                      <div></div>
+                      <div>
+                        {item.filterKey && (
+                          // TODO: Make actual toggle component
+                          <div
+                            onClick={() => {
+                              updateFilterOption(item.filterKey)
+                            }}
+                          >
+                            <ToggleIcon
+                              name={
+                                filters[item.filterKey]
+                                  ? "toggleOn"
+                                  : "toggleOff"
+                              }
+                              size="30"
+                            />
+                          </div>
+                        )}
+                      </div>
                     </OptionGrid>
                     <OptionGrid>
                       <div></div>
                       <OptionDescription>{item.description}</OptionDescription>
                       <div></div>
                     </OptionGrid>
+                    {item.options.length > 0 && (
+                      <CheckboxGrid>
+                        {item.options.map((option) => {
+                          return (
+                            <CheckboxGridOption>
+                              <Checkbox
+                                callback={() => {
+                                  updateFilterOption(option.filterKey)
+                                }}
+                                checked={filters[option.filterKey]}
+                                size={1.5}
+                              />
+                              <p>{option.name}</p>
+                            </CheckboxGridOption>
+                          )
+                        })}
+                      </CheckboxGrid>
+                    )}
                   </FilterOption>
                 )
               })}
