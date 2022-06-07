@@ -1,7 +1,16 @@
 import React from "react"
 import styled from "styled-components"
 
-const Banner = styled.div`
+export interface IStyledBanner {
+  shouldShow: boolean
+}
+
+export interface IProps {
+  shouldShow?: boolean
+  className?: string
+}
+
+const Banner = styled.div<IStyledBanner>`
   display: ${(props) => (props.shouldShow ? `flex` : `none`)};
   width: 100%;
   background-color: ${(props) => props.theme.colors.primary};
@@ -18,7 +27,11 @@ const Banner = styled.div`
   }
 `
 
-const BannerNotification = ({ children, className, shouldShow }) => (
+const BannerNotification: React.FC<IProps> = ({
+  children,
+  className,
+  shouldShow = false,
+}) => (
   <Banner shouldShow={shouldShow} className={className}>
     {children}
   </Banner>
