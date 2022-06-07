@@ -317,7 +317,7 @@ const MoreButtonContainer = styled.div`
   margin-bottom: 1rem;
 `
 
-enum CatergoryType {
+enum CategoryType {
   FINANCE = "finance",
   TECHNOLOGY = "technology",
   COLLECTIBLES = "collectibles",
@@ -336,7 +336,7 @@ interface Category {
   }>
 }
 
-interface Catergories {
+interface Categories {
   [key: string]: Catergory
 }
 
