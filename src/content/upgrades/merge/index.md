@@ -5,14 +5,16 @@ lang: en
 template: upgrade
 sidebar: true
 image: ../../../assets/upgrades/merge.png
-summaryPoint1: Eventually the current Ethereum Mainnet will "merge" with the beacon chain proof-of-stake system.
+summaryPoint1: Soon the current Ethereum Mainnet will merge with the Beacon Chain proof-of-stake system.
 summaryPoint2: This will mark the end of proof-of-work for Ethereum, and the full transition to proof-of-stake.
-summaryPoint3: This is planned to precede the roll out of shard chains.
-summaryPoint4: We formerly referred to this as "the docking."
+summaryPoint3: This sets the stage for future scaling upgrades including data sharding.
+summaryPoint4: With The Merge, Ethereum's eneregy consumption drops by 99.95%. Welcome a new greener Ethereum.
 ---
 
 <UpgradeStatus dateKey="page-upgrades-merge-date">
-  This upgrade represents the official switch to proof-of-stake consensus. This eliminates the need for energy-intensive mining, and instead secures the network using staked ether. A truly exciting step in realizing the <a href="/upgrades/vision/">Ethereum vision</a> – more scalability, security, and sustainability.
+The Merge is one of the most significant and high-stakes upgrades in the history of Ethereum. Extensive testing and bug bounties have been underway for years to make sure it’s done right, maximizing chances of a successful transition.
+
+This process is in its final stages, with plans to undergo The Merge on a few public testnets before finally moving forward with Mainnet. If you’re as excited about The Merge as we are, follow the <a href="https://blog.ethereum.org">EF Blog</a> or the client communication channels for the latest official word on <em>When Merge?</em>
 </UpgradeStatus>
 
 ## What is The Merge? {#what-is-the-docking}
@@ -39,28 +41,30 @@ It is important to note that an implementation goal of The Merge is simplicity i
 
 The Ethereum upgrades are all somewhat interrelated. So let’s recap how The Merge relates to the other upgrades.
 
-### The Merge and the Beacon Chain {#docking-and-beacon-chain}
+### The Merge and the Beacon Chain {#merge-and-beacon-chain}
 
-Once The Merge happens, stakers will be assigned to validate the Ethereum Mainnet. [Mining](/developers/docs/consensus-mechanisms/pow/mining/) will no longer be required so miners will likely invest their earnings into staking in the new proof-of-stake system.
+The Merge represents the formal adoption of the Beacon Chain as the new consensus layer to the current Mainnet execution layer. Once The Merge happens, validators will be assigned to secure Ethereum Mainnet and mining [proof-of-work](/developers/docs/consensus-mechanisms/pow/) will no longer be a valid means of block production.
+
+Blocks will instead be proposed by validating nodes that have ether staked for the right to participate in consensus. These upgrades set the stage for future scalability upgrades including data sharding.
 
 <ButtonLink to="/upgrades/beacon-chain/">
   The Beacon Chain
 </ButtonLink>
 
-### The Merge and the post-merge cleanup {#merge-and-post-merge-cleanup}
+### The Merge and the Shanghai upgrade {#merge-and-post-merge-cleanup}
 
-Immediately after The Merge, some features such as withdrawing staked ETH, will not yet be supported. These are planned for a separate upgrade to follow shortly after The Merge.
+In order to simplify and maximize focus on a successful transition to proof-of-stake, The Merge upgrade will not include certain anticipated features such as the ability to withdraw staked ETH. The Shanghai upgrade is planned to follow The Merge, in which the ability to withdraw is slotted as a top priority.
 
-Stay up-to-date with the [EF Research and Development Blog](https://blog.ethereum.org/category/research-and-development/). For those curious, learn more about [What Happens After The Merge](https://youtu.be/7ggwLccuN5s?t=101), presented by Vitalik at the April 2021 ETHGlobal event.
+Stay up-to-date with the [Shanghai Planning issue on GitHub](https://github.com/ethereum/pm/issues/450), or the [EF Research and Development Blog](https://blog.ethereum.org/category/research-and-development/). For those curious, learn more about [What Happens After The Merge](https://youtu.be/7ggwLccuN5s?t=101), presented by Vitalik at the April 2021 ETHGlobal event.
 
-### The Merge and shard chains {#docking-and-shard-chains}
+### The Merge and data sharding {#merge-and-data-sharding}
 
-Originally, the plan was to work on shard chains before The Merge – to address scalability. However, with the boom of [layer 2 scaling solutions](/developers/docs/scaling/#layer-2-scaling), the priority has shifted to swapping proof-of-work to proof-of-stake via The Merge.
+Originally, the plan was to work on shard chains before The Merge—to address scalability. However, with the boom of [layer 2 scaling solutions](/layer-2/), the priority has shifted to swapping proof-of-work to proof-of-stake via The Merge.
 
-This will be an ongoing assessment from the community as to the need for potentially multiple rounds of shard chains to allow for endless scalability.
+Plans for sharding are rapidly evolving, but given the rise and success of layer 2 technologies to scale transaction execution, sharding plans have shifted to finding the most optimal way to distribute the burden of storing compressed calldata from rollup contracts, allowing for exponential growth in network capacity. This would not be possible without first transitioning to proof-of-stake.
 
 <ButtonLink to="/upgrades/shard-chains/">
-  Shard chains
+  Data sharding
 </ButtonLink>
 
 ## Read more {#read-more}
