@@ -33,15 +33,6 @@ const Title = styled.div`
   margin-bottom: 1rem;
 `
 
-const StyledIcon = styled(Icon)<{
-  selected: boolean
-}>`
-  fill: ${(props) =>
-    props.selected === true
-      ? props.theme.colors.primary
-      : props.theme.colors.secondary};
-`
-
 const H3 = styled.h3`
   color: ${(props) => props.theme.colors.primary};
   margin-left: 0.5rem;
@@ -53,6 +44,13 @@ const Grid = styled.div`
   display: grid;
   grid-template-columns: auto auto;
   grid-column-gap: 3rem;
+`
+
+const StyledIcon = styled(Icon)<{ selected: boolean }>`
+  fill: ${(props) =>
+    props.selected === true
+      ? props.theme.colors.primary
+      : props.theme.colors.secondary};
 `
 
 // Types
@@ -90,7 +88,6 @@ interface Personas {
 }
 
 const WalletPersonasSidebar = ({ setFilters }) => {
-  console.log(setFilters)
   const [selectedPersona, setSelectedPersona] = useState(NaN)
 
   const personas: Personas[] = [

@@ -69,12 +69,13 @@ const FilterSidebar = styled.div`
 
 const FilterTabs = styled.div`
   display: flex;
-  border-bottom: 1px solid #f4d0a7;
+  border-bottom: 1px solid ${(props) => props.theme.colors.primary};
   cursor: pointer;
   position: sticky;
   top: 76px;
   padding-top: 8px;
   background: ${(props) => props.theme.colors.background};
+  z-index: 1;
 `
 
 const FilterTab = styled.div<{
@@ -108,7 +109,7 @@ const WalletContent = styled.div`
 const WalletContentHeader = styled.div`
   height: 42px;
   display: flex;
-  border-bottom: 1px solid #f4d0a7;
+  border-bottom: 1px solid ${(props) => props.theme.colors.primary};
   cursor: pointer;
   position: sticky;
   top: 76px;
@@ -147,6 +148,12 @@ const FindWalletPage = ({ data, location }) => {
     multisig: false,
     social_recovery: false,
   })
+
+  const updateFilterOption = (key) => {
+    const updatedFilters = { ...filters }
+    updatedFilters[key] = !updatedFilters[key]
+    setFilters(updatedFilters)
+  }
 
   return (
     <Page>
@@ -197,7 +204,11 @@ const FindWalletPage = ({ data, location }) => {
           </FilterTabs>
           <div>
             {showFeatureFilters ? (
-              <WalletFilterSidebar />
+              <WalletFilterSidebar
+                data={data}
+                filters={filters}
+                updateFilterOption={updateFilterOption}
+              />
             ) : (
               <WalletPersonasSidebar setFilters={setFilters} />
             )}
@@ -216,6 +227,11 @@ export default FindWalletPage
 export const query = graphql`
   {
     hero: file(relativePath: { eq: "wallets/find-wallet-hero.png" }) {
+      childImageSharp {
+        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+      }
+    }
+    mobile: file(relativePath: { eq: "wallets/mobile.png" }) {
       childImageSharp {
         gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
       }

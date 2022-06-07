@@ -16,6 +16,8 @@ import {
   MdAdd,
   MdBrightness2,
   MdClose,
+  MdDone,
+  MdExpandLess,
   MdExpandMore,
   MdArrowForward,
   MdInfoOutline,
@@ -52,6 +54,7 @@ const Icon: React.FC<IProps> = ({
 }) => (
   <IconContext.Provider value={{ size: size, className }}>
     {name === "add" && <MdAdd />}
+    {name === "chevronUp" && <MdExpandLess />}
     {name === "chevronDown" && <MdExpandMore />}
     {name === "arrowRight" && <MdArrowForward />}
     {name === "close" && <MdClose />}
@@ -63,7 +66,7 @@ const Icon: React.FC<IProps> = ({
     {name === "zenModeOff" && <BsToggleOff />}
     {name === "zenModeOn" && <BsToggleOn />}
     {name === "menu" && <MdMenu />}
-    {name === "check" && <FaCheck color={color} />}
+    {name === "check" && <MdDone />}
     {name === "twitter" && (
       <FaTwitter color={color ? socialColors.twitter : undefined} />
     )}
