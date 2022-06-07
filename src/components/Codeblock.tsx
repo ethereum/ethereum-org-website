@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react"
 import styled, { ThemeContext } from "styled-components"
-import Highlight, { defaultProps } from "prism-react-renderer"
-import Translation from "../components/Translation"
+import Highlight, { defaultProps, PrismTheme } from "prism-react-renderer"
+import Translation from "./Translation"
 import CopyToClipboard from "./CopyToClipboard"
 import Emoji from "./Emoji"
 
@@ -14,7 +14,10 @@ const Container = styled.div`
   direction: ltr;
 `
 
-const HightlightContainer = styled.div`
+const HightlightContainer = styled.div<{
+  fromHomepage: boolean
+  isCollapsed: boolean
+}>`
   border-radius: 4px;
   border: ${({ fromHomepage, theme }) =>
     fromHomepage ? `none` : `1px solid ${theme.colors.border}`};
@@ -27,7 +30,9 @@ const HightlightContainer = styled.div`
   margin-bottom: ${(props) => (props.fromHomepage ? `0rem` : `1rem`)};
 `
 
-const StyledPre = styled.pre`
+const StyledPre = styled.pre<{
+  hasTopBar: boolean
+}>`
   padding-top: ${({ hasTopBar }) => (hasTopBar ? "2.75rem" : "1.5rem")};
   margin: 0;
   padding-left: 1rem;
@@ -240,7 +245,14 @@ const getValidChildrenForCodeblock = (child) => {
   }
 }
 
-const Codeblock = ({
+export interface IProps {
+  allowCollapse?: boolean
+  codeLanguage: string
+  fromHomepage?: boolean
+  children: React.ReactChild
+}
+
+const Codeblock: React.FC<IProps> = ({
   children,
   allowCollapse = true,
   codeLanguage,
@@ -251,7 +263,12 @@ const Codeblock = ({
   }).join("")
 
   const [isCollapsed, setIsCollapsed] = useState(allowCollapse)
-  const className = children?.props?.className || codeLanguage || ""
+  const className =
+    (typeof children !== "string" &&
+      typeof children !== "number" &&
+      children?.props?.className) ||
+    codeLanguage ||
+    ""
   const matches = className.match(/language-(?<lang>.*)/)
   const language = matches?.groups?.lang || ""
 
@@ -272,7 +289,7 @@ const Codeblock = ({
           {...defaultProps}
           code={codeText}
           language={language}
-          theme={theme}
+          theme={theme as PrismTheme}
         >
           {({ className, style, tokens, getLineProps, getTokenProps }) => (
             <StyledPre
