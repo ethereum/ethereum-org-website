@@ -163,6 +163,140 @@ const WalletFilterSidebar = ({ data, filters, updateFilterOption }) => {
         },
       ],
     },
+    {
+      title: "Security",
+      open: true,
+      items: [
+        {
+          title: "Open source",
+          description:
+            "Wallet code for the wallet is open sourced for users to inspect and edit.",
+          filterKey: "open_source",
+          options: [],
+        },
+        {
+          title: "Non-custodial",
+          description: "Who has control over the keys for your wallet.",
+          filterKey: "non_custodial",
+          options: [],
+        },
+      ],
+    },
+    {
+      title: "Features",
+      open: true,
+      items: [
+        {
+          title: "Hardware support",
+          description:
+            "You can connect a hardware wallet and sign transactions with it.",
+          filterKey: "hardware_support",
+          options: [],
+        },
+        {
+          title: "WalletConnect",
+          description:
+            "You can connect to applications that support WalletConnect.",
+          filterKey: "walletconnect",
+          options: [],
+        },
+        {
+          title: "RPC importing",
+          description:
+            "You can import RPC endpoint data to connect to different nodes/networks.",
+          filterKey: "rpc_importing",
+          options: [],
+        },
+        {
+          title: "NFT support",
+          description:
+            "You can view and interact with your NFTs in the wallet.",
+          filterKey: "nft_support",
+          options: [],
+        },
+        {
+          title: "Connect to decentralized apps",
+          description:
+            "You can connect to applications build on the Ethereum network.",
+          filterKey: "connect_to_dapps",
+          options: [],
+        },
+        {
+          title: "Staking",
+          description:
+            "You can use a simple interface to stake directly in the wallet.",
+          filterKey: "staking",
+          options: [],
+        },
+        {
+          title: "Layer 2",
+          description: "You can use layer 2 networks in the wallet.",
+          filterKey: "layer_2",
+          options: [],
+        },
+        {
+          title: "Gas fee customization",
+          description:
+            "The user is able to customize their gas inputs (base free, priority fee, max fee).",
+          filterKey: "gas_fee_customization",
+          options: [],
+        },
+        {
+          title: "ENS support",
+          description:
+            "The wallet supports sending transactions to ENS addresses.",
+          filterKey: "ens_support",
+          options: [],
+        },
+        {
+          title: "Token importing",
+          description:
+            "Can import ERC-20 token contract addresses into the wallet.",
+          filterKey: "erc_20_support",
+          options: [],
+        },
+      ],
+    },
+    {
+      title: "Onboard / offboard",
+      open: true,
+      items: [
+        {
+          title: "Buy crypto",
+          description:
+            "User is able to buy crypto with fiat directly in the wallet.",
+          filterKey: "buy_crypto",
+          options: [],
+        },
+        {
+          title: "Withdraw crypto",
+          description:
+            "User is able to withdraw to fiat directly in the wallet.",
+          filterKey: "withdraw_crypto",
+          options: [],
+        },
+      ],
+    },
+    {
+      title: "Smart contracts",
+      open: true,
+      items: [
+        {
+          title: "Multisig",
+          description:
+            "Wallets that require two or more signatures from private keys for a transaction.",
+          filterKey: "multisig",
+          options: [],
+        },
+        {
+          title: "Social recovery",
+          description:
+            "Wallets that allow guardians to change the signing key for smart contract wallets.",
+          filterKey: "social_recovery",
+          options: [],
+        },
+      ],
+    },
   ])
 
   const setOpen = (idx) => {
