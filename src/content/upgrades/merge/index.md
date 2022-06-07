@@ -37,6 +37,70 @@ It is important to note that an implementation goal of The Merge is simplicity i
 
 **This means a few features, such as the ability to withdraw staked ETH, will have to wait a little longer after The Merge is complete.** Plans include a post-merge "cleanup" upgrade to address these features, which is expected to happen very soon after The Merge is completed.
 
+## Who does this upgrade affect?
+
+The Merge is one of the most significant and anticipated upgrades in the history of Ethereum, and although in the long-term its impact will be felt by everyone, in the near-term there are a few things the following groups of people should be aware of that we'll discuss below:
+
+- Node-operating solo stakers
+- Non-validating none operators
+- Dapp and smart contract developers
+
+For everyday users and holders there is nothing you need to do, but a few things you should be on alert for. [More on this below](#users-holders).
+
+## What to I need to do to get ready?
+
+### Node-operating solo stakers
+
+If you are a solo staker running your own node setup, there are a few things you need to be aware to be prepared for The Merge. Key action items include:
+
+- [ ] Running _both_ a consensus client as well as an execution client. Third-party endpoints to obtain execution data will be unavailable after The Merge.
+- [ ] Authenticated your execution and consensus layer clients with a shared JWT secret so they can securely communicate with one another.
+
+Not completing the above items will result in your node being seen as "offline" after The Merge until both layers are synced and authenticated.
+
+- [ ] Setting a `fee recipient` address to direct your earned transaction fee tips/MEV to.
+
+Not setting a `fee recipient` will still allow your validator to behave as usual, but you will miss out on unburnt fee tips and any MEV you would have otherwise earned in blocks your validator proposes.
+
+For more detailed information and summary of links to client resources, stakers are encouraged to check out the [Merge Readiness Checklist](https://launchpad.ethereum.org/en/merge-readiness/) over on the Staking Launchpad to make sure you're fully prepared for The Merge.
+
+### Non-validating node operators
+
+If you're operating a non-validating Ethereum node, the most significant change that comes with The Merge is the requirement to run clients for _both_ the execution layer (EL) and the consensus layer (CL).
+
+You probably are already running an EL client, such as Geth, Erigon, Besu or Nethermind. Up until The Merge, an execution layer client was enough to receive, properly validate, and propagate blocks being gossiped by the network. _After The Merge_, the validity of transactions contained within an execution payload will also depend on the validity of the "consensus block" it is contained within.
+
+This means that a full Ethereum node after The Merge requires both an EL client as well as a CL client. These two clients work tightly together using a new Engine API to properly determine the latest state of the network. The Engine API requires authentication using a JWT secret, which is provided to both clients allowing secure communication.
+
+- [ ] I have installed a consensus layer client in addition to my execution layer client
+- [ ] I have authenticated me execution and consensus layer clients with a shared JWT secret so they can securely communicate with one another.
+
+Not completing the above items in time for The Merge will result in your node appearing to be "offline" until both layers are synced and authenticated.
+Node operators can also check out the [Merge Readiness Checklist](https://launchpad.ethereum.org/en/merge-readiness/) on the Staking Launchpad for more information, as much of the details apply to all node operators.
+
+### Dapp/smart contract developers
+
+The Merge has been designed to have minimal impact on smart contract and dapp developers, but there are a few small things devs may want to be aware of heading into The Merge. These changes relate to
+
+- block structure
+- slot/block timing
+- opcode changes
+- sources of on-chain randomness
+- concept of _safe head_ and _finalized blocks_
+
+For more information, check out this blog post by Tim Beiko on [How The Merge Impacts Ethereum’s Application Layer](https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer/).
+
+### Users & hodlers {#users-holders}
+
+You do not need to anything to protect your funds entering The Merge.
+
+_This bears repeating_: As a user or holder of ETH or any other digital asset on Ethereum, **you do not need to do anything with your funds or wallet before The Merge.**
+
+Despite swapping out proof-of-work, the entire history of Ethereum since genesis remains intact and unaltered after the transition to proof-of-stake. Any funds being protected by your own wallet before The Merge will still be accessible in the same manner after The Merge.
+
+As we approach The Merge of Ethereum Mainnet, **users should be on high alert for scams trying to take advantage of users during this transition.** Do not send your ETH anywhere in attempt to "upgrade to ETH2." There is no "ETH2" token, and there is nothing more you need to do for your funds to remain safe.
+
+[More on Ethereum security](/security/)
 ## Relationship between upgrades {#relationship-between-upgrades}
 
 The Ethereum upgrades are all somewhat interrelated. So let’s recap how The Merge relates to the other upgrades.
