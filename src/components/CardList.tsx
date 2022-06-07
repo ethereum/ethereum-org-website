@@ -3,6 +3,7 @@ import styled from "styled-components"
 import { GatsbyImage } from "gatsby-plugin-image"
 
 import Link from "./Link"
+import { ImageProp } from "../types"
 
 const Table = styled.div`
   background-color: ${(props) => props.theme.colors.background};
@@ -71,24 +72,13 @@ const Image = styled(GatsbyImage)`
   margin-top: 4px;
 `
 
-type ForbidOptional<T = {}> = {
-  [P in keyof T]?: never
-}
-
-type OptionalCardImageProp = {
-  image: string
-  alt: string
-}
-
-type CardImage = ForbidOptional<OptionalCardImageProp>
-
 export type CardListItem = {
   title: string
   description?: string
   caption?: string
   link?: string
   id?: string | number
-} & (OptionalCardImageProp | CardImage)
+} & ImageProp
 
 export interface IProps {
   content: Array<CardListItem>
