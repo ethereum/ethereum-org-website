@@ -6842,7 +6842,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/43795504?v=4",
       "profile": "https://github.com/vdusart",
       "contributions": [
-        "doc"
+        "doc",
+        "code"
       ]
     },
     {
@@ -7469,7 +7470,10 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/44942598?v=4",
       "profile": "https://github.com/SuperDelphi",
       "contributions": [
-        "content"
+        "content",
+        "translation",
+        "bug",
+        "doc"
       ]
     },
     {
@@ -7718,6 +7722,15 @@
       "contributions": [
         "doc",
         "translation"
+      ]
+    },
+    {
+      "login": "cryptoversidad",
+      "name": "Cryptoversidad",
+      "avatar_url": "https://avatars.githubusercontent.com/u/107050863?v=4",
+      "profile": "https://www.youtube.com/c/Cryptoversidad",
+      "contributions": [
+        "doc"
       ]
     }
   ],

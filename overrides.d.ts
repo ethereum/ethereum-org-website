@@ -3,7 +3,14 @@
 // TODO: create issue in Gatsby repo
 declare module "gatsby-plugin-image"
 
-declare module "*.yaml" {
-  const content: { [key: string]: any }
+declare module "*developer-docs-links.yaml" {
+  export interface DeveloperDocsLink {
+    id: string
+    to: string
+    path: string
+    description: string
+    items: Array<DeveloperDocsLink>
+  }
+  const content: Array<DeveloperDocsLink>
   export default content
 }
