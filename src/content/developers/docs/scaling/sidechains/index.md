@@ -3,7 +3,6 @@ title: Sidechains
 description: An introduction to sidechains as a scaling solution currently utilized by the Ethereum community.
 lang: en
 sidebar: true
-incomplete: true
 sidebarDepth: 3
 ---
 
