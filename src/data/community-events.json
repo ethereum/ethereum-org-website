@@ -351,6 +351,15 @@
     "endDate": "2022-09-30"
   },
   {
+    "title": "EthereumSP",
+    "to": "https://www.ethereumbrasil.com/",
+    "sponsor": null,
+    "location": "São Paulo, Brazil",
+    "description": "A event dedicated to support the construction of the brazilian web3 builder community.",
+    "startDate": "2022-09-27",
+    "endDate": "2022-09-29"
+  },
+  {
     "title": "ETHBogotá",
     "to": "https://bogota.ethglobal.com",
     "sponsor": null,
