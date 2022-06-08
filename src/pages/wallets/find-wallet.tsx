@@ -13,6 +13,10 @@ import { Content, Page } from "../../components/SharedStyledComponents"
 import Translation from "../../components/Translation"
 import WalletFilterSidebar from "../../components/FindWallet/WalletFilterSidebar"
 import WalletPersonasSidebar from "../../components/FindWallet/WalletPersonasSidebar"
+import WalletTable from "../../components/FindWallet/WalletTable"
+
+// Data
+import walletData from "../../data/find-wallet/wallet-data"
 
 // Utils
 import { translateMessageId } from "../../utils/translations"
@@ -105,17 +109,6 @@ const FilterTab = styled.div<{
 
 const WalletContent = styled.div`
   width: 75%;
-`
-
-const WalletContentHeader = styled.div`
-  height: 42px;
-  display: flex;
-  border-bottom: 1px solid ${(props) => props.theme.colors.primary};
-  cursor: pointer;
-  position: sticky;
-  top: 76px;
-  padding-top: 8px;
-  background: ${(props) => props.theme.colors.background};
 `
 
 const Note = styled.div`
@@ -227,7 +220,7 @@ const FindWalletPage = ({ data, location }) => {
           </div>
         </FilterSidebar>
         <WalletContent>
-          <WalletContentHeader>Wallet</WalletContentHeader>
+          <WalletTable data={data} walletData={walletData} />
         </WalletContent>
       </TableContent>
       <Note>

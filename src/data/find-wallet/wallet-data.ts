@@ -1,5 +1,5 @@
-const walletData = {
-  metamask: {
+const walletData = [
+  {
     name: "MetaMask",
     image_name: "metamask",
     url: "https://metamask.io",
@@ -40,7 +40,7 @@ const walletData = {
     multisig: false,
     social_recovery: false,
   },
-  argent: {
+  {
     name: "Argent",
     image_name: "argent",
     url: "https://www.argent.xyz",
@@ -81,7 +81,7 @@ const walletData = {
     multisig: false,
     social_recovery: true,
   },
-  rainbow: {
+  {
     name: "Rainbow",
     image_name: "rainbow",
     url: "https://rainbow.me",
@@ -122,7 +122,7 @@ const walletData = {
     multisig: false,
     social_recovery: false,
   },
-  ledger: {
+  {
     name: "Ledger",
     image_name: "ledger",
     url: "https://www.ledger.com",
@@ -163,7 +163,7 @@ const walletData = {
     multisig: false,
     social_recovery: false,
   },
-  trezor: {
+  {
     name: "Trezor",
     image_name: "trezor",
     url: "https://trezor.io",
@@ -204,6 +204,6 @@ const walletData = {
     multisig: false,
     social_recovery: false,
   },
-}
+]
 
 export default walletData
