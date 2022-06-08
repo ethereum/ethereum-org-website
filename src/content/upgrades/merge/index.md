@@ -33,7 +33,7 @@ During this growing history, developers have been hard at work preparing for an 
 
 The Beacon Chain has not been processing Mainnet transactions, and for all intents and purposed has simply been coming to consensus on the state of itself... which is great and all, but after extensive testing, the time for it to come to consensus on more than just itself is rapidly approaching.
 
-The Merge itself represents the official switch to using the Beacon Chain as the official means of block production. Mining will no longer be the means of producing valid blocks, and instead this role will land with the validators who will then be responsible for processing the validity of all transactions.
+The Merge itself represents the official switch to using the Beacon Chain as the official means of block production. Mining will no longer be the means of producing valid blocks, and instead this role will land with the proof-of-stake validators who will then be responsible for processing the validity of all transactions, and proposing blocks.
 
 No history is lost. As Mainnet is merged with the Beacon Chain, the entire transactional history of Ethereum comes with it. You don't need to do anything. Your funds are safe.
 
@@ -41,20 +41,22 @@ No history is lost. As Mainnet is merged with the Beacon Chain, the entire trans
 
 The Merge is one of the most significant and anticipated upgrades in the history of Ethereum, and although in the long-term its impact will be felt by everyone, in the near-term there are a few things the following groups of people should be aware of that we'll discuss below:
 
-- Node-operating solo stakers
-- Non-validating none operators
+- Node-operating stakers and staking providers
+- Non-validating node operators and infrastructure providers
 - Dapp and smart contract developers
 
-For everyday users and holders there is nothing you need to do, but a few things you should be on alert for. [More on this below](#users-holders).
+For everyday users, holders, or non-node-operating stakers there is nothing you need to do, but a few things you should be on alert for. [More on this below](#users-holders).
 
 ## What to I need to do to get ready?
 
 ### Node-operating stakers and staking providers
 
-If you are a solo staker running your own node setup, there are a few things you need to be aware to be prepared for The Merge. Key action items include:
+If you are a staker running your own node setup, or a node infrastructure provider, there are a few things you need to be aware of to be prepared for The Merge.
 
-- Running _both_ a consensus client as well as an execution client. Third-party endpoints to obtain execution data will be unavailable after The Merge.
-- Authenticated your execution and consensus layer clients with a shared JWT secret so they can securely communicate with one another.
+Key action items include:
+
+- Running _both_ a consensus layer (CL) client as well as an execution layer (EL) client. Third-party endpoints to obtain execution data will be unavailable after The Merge.
+- Authenticating both EL and CL clients with a shared JWT secret so they can securely communicate with one another.
 
 Not completing the above items will result in your node being seen as "offline" after The Merge until both layers are synced and authenticated.
 
@@ -64,16 +66,20 @@ Not setting a `fee recipient` will still allow your validator to behave as usual
 
 For more detailed information and summary of links to client resources, stakers are encouraged to check out the [Merge Readiness Checklist](https://launchpad.ethereum.org/en/merge-readiness/) over on the Staking Launchpad to make sure you're fully prepared for The Merge.
 
+Note for stakers using [SaaS](/staking/saas/) or [staking pools](/staking/pools/): There is nothing you need to do to prepare for The Merge. [More below on staying safe](#users-holders).
+
 ### Non-validating node operators and infrastructure providers
 
-If you're operating a non-validating Ethereum node, the most significant change that comes with The Merge is the requirement to run clients for _both_ the execution layer (EL) and the consensus layer (CL).
+If you're operating a non-validating Ethereum node, the most significant change that comes with The Merge is the requirement to run clients for _both_ the execution layer (EL) _and_ the consensus layer (CL).
 
-You probably are already running an EL client, such as Geth, Erigon, Besu or Nethermind. Up until The Merge, an execution layer client was enough to receive, properly validate, and propagate blocks being gossiped by the network. _After The Merge_, the validity of transactions contained within an execution payload will also depend on the validity of the "consensus block" it is contained within.
+You probably are already running an EL client, such as Geth, Erigon, Besu or Nethermind. Up until The Merge, an EL client was enough to receive, properly validate, and propagate blocks being gossiped by the network. _After The Merge_, the validity of transactions contained within an execution payload will also depend on the validity of the "consensus block" it is contained within.
 
 This means that a full Ethereum node after The Merge requires both an EL client as well as a CL client. These two clients work tightly together using a new Engine API to properly determine the latest state of the network. The Engine API requires authentication using a JWT secret, which is provided to both clients allowing secure communication.
 
-- I have installed a consensus layer client in addition to my execution layer client
-- I have authenticated my execution and consensus layer clients with a shared JWT secret so they can securely communicate with one another.
+Key action items include:
+
+- Installing a CL client in addition to an EL client
+- Authenticating both EL and CL clients with a shared JWT secret so they can securely communicate with one another.
 
 Not completing the above items in time for The Merge will result in your node appearing to be "offline" until both layers are synced and authenticated.
 
@@ -115,12 +121,14 @@ With a [rollup-centric roadmap](https://ethereum-magicians.org/t/a-rollup-centri
 
 <ExpandableCard
 title="'The Merge will make transactions faster.'"
-contentPreview="Mostly false... Though some slight changes exist, transaction speed will mostly remain the same on layer 1">
+contentPreview="Mostly false... Though some slight changes exist, transaction speed will mostly remain the same on layer 1.">
 The "speed" of a transaction can be measured a few ways, including time to be included in a block, and also time to "finalization."
+
+tl;dr: Both change slightly, but not in a way that will be felt significantly by the end user.
 
 Historically with proof-of-work (PoW) block times target ~13.3 seconds. On the Beacon Chain, slots occur every 12 seconds exactly, each of which is an opportunity for a validator to publish a block. Most slots have blocks, but not all (ie. a validator is offline). In most cases, blocks will be produced ~10% more frequently under PoS than under PoW, but this is a fairly insignificant change in the scaling game, and unlikely to be a noticeable difference for the end user.
 
-PoS does introduce the concept of transaction "finality." Under PoW, the ability to reverse a block gets exponentially more difficult with every passing block that is mined on top of your transaction, but it never quite reaches zero. Under PoS, blocks are bundled into epochs (6.4 minute spans of time containing 32 chances for blocks) which are voted on by validators. After an epoch ends, it can be voted on as "justified," and then one more epoch later results in a "finalized" state. To undo these transactions would require obtaining and burning over 1/3 the total ETH staked.
+PoS does introduce the concept of transaction "finality" which did not previously exist. Under PoW, the ability to reverse a block gets exponentially more difficult with every passing block that is mined on top of your transaction, but it never quite reaches zero. Under PoS, blocks are bundled into epochs (6.4 minute spans of time containing 32 chances for blocks) which are voted on by validators. After an epoch ends, it can be voted on as "justified," and then one more epoch later results in a "finalized" state. To undo these transactions would require obtaining and burning over 1/3 the total ETH staked.
 
 Many dapps require a number of PoW block confirmations that take a period of time on par with how long PoS finality takes. Finality can offer additional security guarantees, but will not significantly speed up transactions.
 </ExpandableCard>
@@ -139,7 +147,7 @@ contentPreview="❌ False. Validator exits are rate limited for security reasons
 
 After the Shanghai update enabled withdrawals, all validators will be incentivized to withdraw their staking balance above 32 ETH, as these funds to not add to yield, and are otherwise locked. Depending on the APR (determined by total ETH staked), they may be incentivized to exit their validator(s) to reclaim their entire balance, or potentially to stake even more using their rewards to earn more yield.
 
-An important caveat here, full validator exits are rate limited by the protocol, so only 6 validators may exit per epoch (every 6.4 minutes, so 1350/day, or only ~43,200 ETH/day, out of >10 million ETH staked). This rate limit adjusts depending on total ETH staked, and acts as a bottle neck to prevent a mass exodus of funds, or a potential attacker from committing a slashable offense and exiting all funds in the same epoch before the slashing penalty could be issued.
+An important caveat here, full validator exits are rate limited by the protocol, so only 6 validators may exit per epoch (every 6.4 minutes, so 1350/day, or only ~43,200 ETH/day, out of >10 million ETH staked). This rate limit adjusts depending on total ETH staked, and acts as a bottle neck to prevent a mass exodus of funds, and also prevents a potential attacker from using their stake to commit a slashable offense and then exiting their entire staking balance in the same epoch before the slashing penalty can be enforced.
 
 The APR is intentionally dynamic, allowing a market of stakers to find a balance of how much they're willing to be paid to help secure the network. When withdrawals are enabled, if the rate is too low, then validators will exit, at a rate limited by the protocol. Gradually this will raise the APR for everyone who remains, slowly attracting new or returning stakers yet again.
 </ExpandableCard>
@@ -149,15 +157,15 @@ title="'Validators will not receive any liquid ETH rewards until Shanghai when w
 contentPreview="❌ False. Fee tips/MEV will be credited to a Mainnet account controlled by the validator, available immediately.">
 This may seem counterintuitive to the above note that withdrawals are not enabled til Shanghai, but validators WILL have immediate access to the fee rewards/MEV earned during block proposals.
 
-ETH is issued by the protocol as a reward to validators for contributing to consensus. This ETH is accounted for on the Beacon Chain (consensus layer), where a validator has a unique address that holds its staked ETH and protocol rewards. This ETH is locked until Shanghai.
+ETH is issued by the protocol as a reward to validators for contributing to consensus. This _newly issued_ ETH is accounted for on the Beacon Chain (consensus layer), where a validator has a unique address that holds its staked ETH and protocol rewards. This ETH is locked until Shanghai.
 
-ETH on the execution layer, Mainnet as we know it, is accounted for separately from the consensus layer. When users execute transactions that involve Mainnet, ETH must be paid to cover the gas which includes a tip to the validator. This ETH is already on the execution layer, is NOT being issued by the protocol, and is available to the validator immediately (given a proper `eth1` address is provided to the client software).
+ETH on the _execution layer_ (Mainnet as we know it) is accounted for separately from the consensus layer. When users execute transactions that involve Mainnet, ETH must be paid to cover the gas which includes a tip to the validator. This ETH is already on the execution layer, is NOT being newly issued by the protocol, and is available to the validator immediately (given a proper `fee recipient` address is provided to the client software).
 </ExpandableCard>
 
 <ExpandableCard
 title="'Staking APR is expected to triple after The Merge. '"
 contentPreview="❌ False. More up-to-date estimations predict closer to a 50% increase in APR post-merge, not a 200% increase.">
-The APR for stakers is expected to increase post-merge. It is important to recognize where this increase in APR is coming from. This does not come from an increase in protocol ETH issuance (ETH issuance after The Merge is in fact decreasing by ~90%), but is instead a reallocation of transaction fees that will start going to validators instead of miners.
+The APR for stakers is expected to increase post-merge. To understand by how much, it is important to recognize where this increase in APR is coming from. This does not come from an increase in protocol ETH issuance (ETH issuance after The Merge is in fact decreasing by ~90%), but is instead a reallocation of transaction fees that will start going to validators instead of miners.
 
 This will be a new separate source of revenue for validators when they propose blocks. As you can imagine, the amount of fees a validator receives is proportional to network activity at the time of their proposed block. The more fees being paid by users, the more fees validators will receive.
 
@@ -171,9 +179,9 @@ There are two general types of Ethereum nodes: nodes that can propose blocks, an
 
 Nodes that can propose blocks are only a _subset_ of the total nodes on the network. This category includes mining nodes under proof-of-work (PoW), and validator nodes under proof-of-stake (PoS). This category requires committing economic resources (such as GPU hash power in PoW, or staked ETH in PoS), in exchange for the ability to occasionally propose the next block and earn protocol rewards.
 
-The _rest_ of the nodes on the network are not required to commit _any_ economic resources, beyond simply needing a consumer grade computer with 1-2 TB free storage and an internet connection. These nodes do not propose blocks, but still serve a _critical_ role in securing the network, by holding all block proposers accountable. These nodes listen for new blocks, and verify their validity on arrival according to the chosen rules of network consensus. If the block is valid, the node will continue propagating it through the network, but importantly, if the block is _invalid_ for whatever reason, the node software will simply disregard it as invalid.
+The _rest_ of the nodes on the network are not required to commit _any_ economic resources, beyond simply needing a consumer grade computer with 1-2 TB free storage and an internet connection. These nodes do not propose blocks, but still serve a _critical_ role in securing the network, by holding all block proposers accountable. These nodes listen for new blocks, and verify their validity on arrival according to the chosen rules of network consensus. If the block is valid, the node will continue propagating it through the network, but importantly, if the block is _invalid_ for whatever reason, the node software will simply disregard it as invalid, and stop its propagation.
 
-Running a non-block-producing node is not only _possible_ for anyone under either consensus mechanism (PoW _or_ PoS), it is _strongly encouraged_ for users to run their own node if possible. This is _immensely valuable_ for the network, and also gives added benefits to any individual running their own software, such as improved privacy and censorship resistance.
+Running a "non block-producing" node is not only _possible_ for anyone under either consensus mechanism (PoW _or_ PoS), it is _strongly encouraged_ for all users to run their own node if possible. This is _immensely valuable_ for the network, and also gives added benefits to any individual running their own software, such as improved security, privacy and censorship resistance.
 
 The ability for anyone to run their own node is _absolutely essential_ to maintaining the decentralization of the Ethereum network.
 
