@@ -5,7 +5,7 @@ import { getImage } from "gatsby-plugin-image"
 import { useIntl } from "gatsby-plugin-intl"
 import { shuffle } from "lodash"
 
-import { translateMessageId } from "../../utils/translations"
+import { translateMessageId, TranslationKey } from "../../utils/translations"
 import PageMetadata from "../../components/PageMetadata"
 import Translation from "../../components/Translation"
 import ButtonLink from "../../components/ButtonLink"
@@ -83,7 +83,7 @@ export interface ILearningTool {
   description: string
   url: string
   image: typeof getImage // Will default to any because no module type declaration exists on the scope of this project
-  alt: string
+  alt: TranslationKey
   background: string
   subjects: string[]
 }
@@ -334,10 +334,7 @@ const LearningToolsPage: React.FC<IProps> = ({ data }) => {
       <Content>
         <CalloutBanner
           image={getImage(data.learn)}
-          alt={translateMessageId(
-            "page-index-sections-enterprise-image-alt",
-            intl
-          )}
+          alt={translateMessageId("page-index-tout-enterprise-image-alt", intl)}
           titleKey={"page-learning-tools-documentation"}
           descriptionKey={"page-learning-tools-documentation-desc"}
         >
