@@ -263,12 +263,14 @@ const Codeblock: React.FC<IProps> = ({
   }).join("")
 
   const [isCollapsed, setIsCollapsed] = useState(allowCollapse)
-  const className =
-    (typeof children !== "string" &&
-      typeof children !== "number" &&
-      children?.props?.className) ||
-    codeLanguage ||
-    ""
+
+  let className
+  if (typeof children !== "string" && typeof children !== "number") {
+    className = children?.props?.className
+  } else {
+    className = codeLanguage || ""
+  }
+
   const matches = className.match(/language-(?<lang>.*)/)
   const language = matches?.groups?.lang || ""
 
