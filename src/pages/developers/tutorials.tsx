@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import styled from "styled-components"
 import { graphql } from "gatsby"
-import { useIntl } from "gatsby-plugin-intl"
+import { IntlShape, useIntl } from "gatsby-plugin-intl"
 
 import Translation from "../../components/Translation"
 import { translateMessageId } from "../../utils/translations"
@@ -212,39 +212,103 @@ const published = (locale, published) => {
   ) : null
 }
 
-const TutorialsPage = ({ data, pageContext }) => {
+export interface IProps {
+  pageContext: {
+    language: string
+    intl: IntlShape
+  }
+  data: {
+    allTutorials: {
+      nodes: {
+        fields: {
+          slug: string
+          readingTime: {
+            minutes: number
+          }
+        }
+        frontmatter: {
+          title: string
+          description: string
+          author: string
+          tags: string[]
+          skill: string
+          published: string
+          lang: string
+        }
+      }[]
+      lang: string
+    }
+  }
+}
+
+export interface IForeignTutorial {
+  url: string
+  title: string
+  description: string
+  author: string
+  authorGithub: string
+  tags: string[]
+  skillLevel: string
+  timeToRead?: string
+  lang: string
+  publishDate: string
+}
+
+export interface ITutorial {
+  to: string
+  title: string
+  description: string
+  author: string
+  tags: string[]
+  skill: string
+  timeToRead?: number
+  published: string
+  lang: string
+  isExternal: boolean
+}
+
+const TutorialsPage: React.FC<IProps> = ({ data, pageContext }) => {
+  console.log("data", data)
+  console.log("pageContext", pageContext)
+
   const intl = useIntl()
   // Filter tutorials by language and map to object
-  const internalTutorials = data.allTutorials.nodes.map((tutorial) => ({
-    to:
-      tutorial.fields.slug.substr(0, 3) === "/en"
-        ? tutorial.fields.slug.substr(3)
-        : tutorial.fields.slug,
-    title: tutorial.frontmatter.title,
-    description: tutorial.frontmatter.description,
-    author: tutorial.frontmatter.author,
-    tags: tutorial.frontmatter.tags.map((tag) => tag.toLowerCase().trim()),
-    skill: tutorial.frontmatter.skill,
-    timeToRead: Math.round(tutorial.fields.readingTime.minutes),
-    published: tutorial.frontmatter.published,
-    lang: tutorial.frontmatter.lang || "en",
-    isExternal: false,
-  }))
+  const internalTutorials = data.allTutorials.nodes.map<ITutorial>(
+    (tutorial) => ({
+      to:
+        tutorial.fields.slug.substr(0, 3) === "/en"
+          ? tutorial.fields.slug.substr(3)
+          : tutorial.fields.slug,
+      title: tutorial.frontmatter.title,
+      description: tutorial.frontmatter.description,
+      author: tutorial.frontmatter.author,
+      tags: tutorial.frontmatter.tags.map((tag) => tag.toLowerCase().trim()),
+      skill: tutorial.frontmatter.skill,
+      timeToRead: Math.round(tutorial.fields.readingTime.minutes),
+      published: tutorial.frontmatter.published,
+      lang: tutorial.frontmatter.lang || "en",
+      isExternal: false,
+    })
+  )
 
-  const externalTutorials = foreignTutorials.map((tutorial) => ({
-    to: tutorial.url,
-    title: tutorial.title,
-    description: tutorial.description,
-    author: tutorial.author,
-    tags: tutorial.tags.map((tag) => tag.toLowerCase().trim()),
-    skill: tutorial.skillLevel,
-    timeToRead: tutorial.timeToRead,
-    published: new Date(tutorial.publishDate).toISOString(),
-    lang: tutorial.lang || "en",
-    isExternal: true,
-  }))
+  const externalTutorials = foreignTutorials.map<ITutorial>(
+    (tutorial: IForeignTutorial) => ({
+      to: tutorial.url,
+      title: tutorial.title,
+      description: tutorial.description,
+      author: tutorial.author,
+      tags: tutorial.tags.map((tag) => tag.toLowerCase().trim()),
+      skill: tutorial.skillLevel,
+      timeToRead: Number(tutorial.timeToRead),
+      published: new Date(tutorial.publishDate).toISOString(),
+      lang: tutorial.lang || "en",
+      isExternal: true,
+    })
+  )
 
-  const allTutorials = [].concat(externalTutorials, internalTutorials)
+  const allTutorials: ITutorial[] = []
+
+  allTutorials.concat(externalTutorials, internalTutorials)
 
   const hasTutorialsCheck = allTutorials.some(
     (tutorial) => tutorial.lang === pageContext.language
