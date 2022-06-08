@@ -37,19 +37,19 @@ The Merge itself represents the official switch to using the Beacon Chain as the
 
 No history is lost. As Mainnet is merged with the Beacon Chain, the entire transactional history of Ethereum comes with it. You don't need to do anything. Your funds are safe.
 
-## Who does this upgrade affect?
+## Who does this upgrade affect? {#who-does-the-merge-affect}
 
 The Merge is one of the most significant and anticipated upgrades in the history of Ethereum, and although in the long-term its impact will be felt by everyone, in the near-term there are a few things the following groups of people should be aware of that we'll discuss below:
 
-- Node-operating stakers and staking providers
-- Non-validating node operators and infrastructure providers
-- Dapp and smart contract developers
+- [Node-operating stakers and staking providers](#node-operating-stakers)
+- [Non-validating node operators and infrastructure providers](#node-operators)
+- [Dapp and smart contract developers](#developers)
 
 For everyday users, holders, or non-node-operating stakers there is nothing you need to do, but a few things you should be on alert for. [More on this below](#users-holders).
 
-## What to I need to do to get ready?
+## What to I need to do to get ready? {#preparing-for-the-merge}
 
-### Node-operating stakers and staking providers
+### Node-operating stakers and staking providers {#node-operating-stakers}
 
 If you are a staker running your own node setup, or a node infrastructure provider, there are a few things you need to be aware of to be prepared for The Merge.
 
@@ -68,7 +68,7 @@ For more detailed information and summary of links to client resources, stakers 
 
 Note for stakers using [SaaS](/staking/saas/) or [staking pools](/staking/pools/): There is nothing you need to do to prepare for The Merge. [More below on staying safe](#users-holders).
 
-### Non-validating node operators and infrastructure providers
+### Non-validating node operators and infrastructure providers {#node-operators}
 
 If you're operating a non-validating Ethereum node, the most significant change that comes with The Merge is the requirement to run clients for _both_ the execution layer (EL) _and_ the consensus layer (CL).
 
@@ -85,7 +85,7 @@ Not completing the above items in time for The Merge will result in your node ap
 
 Node operators can also check out the [Merge Readiness Checklist](https://launchpad.ethereum.org/en/merge-readiness/) on the Staking Launchpad for more information, as much of the details apply to all node operators.
 
-### Dapp/smart contract developers
+### Dapp/smart contract developers {#developers}
 
 The Merge has been designed to have minimal impact on smart contract and dapp developers, but there are a few small things devs may want to be aware of heading into The Merge. These changes relate to
 
@@ -196,7 +196,7 @@ An immense amount of work has been put into making sure the transition to proof-
 
 The Merge is akin to changing an engine on a rocketship mid-flight, and is designed to be performed without any need to pause anything during the switch. The Merge will be triggered by what is known as a TTD, or [terminal total difficulty](/glossary/#terminal-total-difficult), which is a cumulative measure of the total mining power that has gone into building the chain. When the time comes, and this criteria is met, blocks will go from being produced using proof-of-work in one block, to being produced by proof-of-stake in the next.
 
-Ethereum does not go down.
+Ethereum does not have downtime.
 </ExpandableCard>
 
 ## After The Merge {#after-the-merge}
@@ -217,7 +217,7 @@ Blocks will instead be proposed by validating nodes that have ether staked for t
   The Beacon Chain
 </ButtonLink>
 
-### The Merge and the Shanghai upgrade {#merge-and-post-merge-cleanup}
+### The Merge and the Shanghai upgrade {#merge-and-shanghai}
 
 In order to simplify and maximize focus on a successful transition to proof-of-stake, The Merge upgrade will not include certain anticipated features such as the ability to withdraw staked ETH. The Shanghai upgrade is planned to follow The Merge, in which the ability to withdraw is slotted as a top priority.
 
