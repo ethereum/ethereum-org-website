@@ -11,16 +11,16 @@ published: 2022-05-15
 
 [The Yellow Paper](https://ethereum.github.io/yellowpaper/paper.pdf) is the formal specification for Ethereum. Except where amended by [the EIP process](/eips/), it contains the exact description of how everything works. It is written as a mathematical paper, which includes terminology programmers may not find familiar. In this paper you learn how to read it, and by extension other related mathematical papers.
 
-## Which Yellow Paper?
+## Which Yellow Paper? {#which-yellow-paper}
 
 Like almost everything else in Ethereum, the Yellow Paper evolves over time. To be able to refer to a specific version, I uploaded [the current version at writing](yellow-paper-berlin.pdf). The section, page, and equation numbers I use will refer to that version. It is a good idea to have it open in a different window while reading this document.
 
 
-### Why the EVM?
+### Why the EVM? {#why-the-evm}
 
 I am writing this a few months before [The Merge](/upgrades/merge). The Merge will significantly change the way blocks are handled, making that part of the current yellow paper of historical interest. On the other hand, the EVM is mostly unaffected by The Merge.
 
-## 9 (Execution Model)
+## 9 Execution Model  {#9-execution-model}
 
 This section (p. 12-14) includes most of the definition of the EVM.
 
@@ -30,7 +30,7 @@ A [Turing machine](https://en.wikipedia.org/wiki/Turing_machine) is a computatio
 
 The term [Turing-complete](https://en.wikipedia.org/wiki/Turing_completeness) means a computer that can run the same calculations as a Turing machine.  Turing machines can get into infinite loops, and the EVM cannot because it would run out of gas, so it's only quasi-Turing-complete.
 
-## 9.1 (Basics)
+## 9.1 Basics {#91-basics}
 
 This section gives the basics of the EVM and how it compares with other computational models.
 
@@ -52,7 +52,7 @@ The [Von Neumann architecture](https://en.wikipedia.org/wiki/Von_Neumann_archite
 The term exceptional execution means an exception that causes the execution of the current contract to halt. 
 
 
-## 9.2 (Fees Overview)
+## 9.2 Fees Overview  {#92-fees-overview}
 
 This section explains how the gas fees are calculated. There are three costs:
 
@@ -80,7 +80,7 @@ In equation 324, this value is written as *C<sub>mem</sub>(μ<sub>i</sub>')-C<su
 The function *C<sub>mem</sub>* is defined in equation 326: *C<sub>mem</sub>(a) = G<sub>memory</sub> × a + ⌊a<sup>2</sup> ÷ 512⌋*. *⌊x⌋* is the floor function, a function that given a value returns the largest integer that is still not larger than the value. For example, *⌊2.5⌋ = ⌊2⌋ = 2.* When *a < √512*, *a<sup>2</sup> < 512*, and the result of the floor function is zero. So for the first 22 words (704 bytes), the cost rises linearly with the number of memory words required. Beyond that point *⌊a<sup>2</sup> ÷ 512⌋* is positive. When the memory required is high enough the gas cost is proportional to the square of the amount of memory.
    
    
-## 9.3 (Execution Environment)   
+## 9.3 Execution Environment {#93-execution-env}  
 
 The execution environment is a tuple, *I*, that includes information that isn't part of the blockchain state or the EVM.
 
@@ -109,7 +109,7 @@ A few other parameters are necessary to understand the rest of section 9:
 
 
 
-## 9.4 (Execution Overview) 
+## 9.4 Execution Overview {#94-execution-overview}
 
 Now that have all the preliminaries, we can finally start working on how the EVM works.
 
@@ -133,14 +133,14 @@ Equation 143 tells us there are four possible conditions at each point in time d
 4. If we aren't at one of the end conditions, continue running.
 
 
-## 9.4.1 (Machine State)
+## 9.4.1 Machine State {#941-machine-state}
 
 This section explains the machine state in greater detail. It specifies that *w* is the current opcode.  If *μ<sub>pc</sub>* is less than *||I<sub>b</sub>||*, the length of the code, then that byte (*I<sub>b</sub>[μ<sub>pc</sub>]*) is the opcode. Otherwise, the opcode is defined as [`STOP`](https://www.evm.codes/#00).
 
 As this is a [stack machine](https://en.wikipedia.org/wiki/Stack_machine), we need to keep track of the number of items popped out (*δ*) and pushed in (*α*) by each opcode.
 
 
-## 9.4.2 (Exceptional Halting)
+## 9.4.2 Exceptional Halting {#942-exceptional-halt}
 
 This section defines the *Z* function, which specifies when we have an abnormal termination. This is a [Boolean](https://en.wikipedia.org/wiki/Boolean_data_type) function, so it uses [*∨* for a logical or](https://en.wikipedia.org/wiki/Logical_disjunction) and [*∧* for a logical and](https://en.wikipedia.org/wiki/Logical_conjunction). 
 
@@ -196,7 +196,7 @@ We have an exceptional halt if any of these conditions is true:
 
 
 
-## 9.4.3 (Jump Destination Validity)
+## 9.4.3 Jump Destination Validity  {#943-jump-dest-valid}
 
 Here we formally define what are the [`JUMPDEST`](https://www.evm.codes/#5b) opcodes. We cannot just look for byte value 0x5B, because it might be inside a PUSH (and therefore data and not an opcode).
 
@@ -207,7 +207,7 @@ This function is used in equation (152) to define *D<sub>J</sub>(c,i)*, which is
 In all other cases we look at the rest of the code by going to the next opcode and getting the set starting from it. *c[i]* is the current opcode, so *N(i,c[i])* is the location of the next opcode. *D<sub>J</sub>(c,N(i,c[i]))* is therefore the set of valid jump destinations that starts at the next opcode. If the current opcode isn't a `JUMPDEST`, just return that set. If it is `JUMPDEST`, include it in the result set and return that.
 
 
-## 9.4.4 (Normal Halting)
+## 9.4.4 Normal Halting  {#944-normal-halt}
 
 The halting function *H*, can return three types of values.
 
@@ -218,7 +218,7 @@ The halting function *H*, can return three types of values.
 - If we have a halt opcode that does produce output (either [`RETURN`](https://www.evm.codes/#f3) or [`REVERT`](https://www.evm.codes/#fd)), return the sequence of bytes specified by that opcode. This sequence is taken from memory, the value at the top of the stack (*μ<sub>s</sub>[0]*) is the first byte, and the value after it (*μ<sub>s</sub>[1]*) is the length.
   
 
-## H.2 (Instruction Set)
+## H.2 Instruction Set {#h2-instruction-set}
 
 Before we go to the final subsection of the EVM, 9.5, let's look at the instructions themselves. They are defined in Appendix H.2 which starts on p. 29. Anything that is not specified as changing with that specific opcode is expected to stay the same. Variables that do change are specified with as \<something\>′.
    
@@ -269,7 +269,7 @@ The second equation, *A'<sub>a</sub> ≡ A<sub>a</sub> ∪ {μ<sub>s</sub>[0] mo
 Note that to use any stack item, we need to pop it, which means we also need to pop all the stack items on top of it. In the case of [`DUP<n>`](https://www.evm.codes/#8f) and [`SWAP<n>`](https://www.evm.codes/#9f), this means having to pop and then push up to sixteen values.
 
 
-## 9.5 (The Execution Cycle)
+## 9.5 The Execution Cycle  {#95-exec-cycle}
 
 Now that we have all the parts, we can finally understand how the execution cycle of the EVM is documented.
 
@@ -286,7 +286,7 @@ Equations (156)-(158) define the stack and the change in it due to an opcode (*�
 
 With this the EVM is fully defined.
 
-## Conclusion
+## Conclusion  {#conclusion}
 
 Mathematical notation is precise and has allowed the Yellow Paper to specify every detail of Ethereum. However, it does have some drawbacks:
 
