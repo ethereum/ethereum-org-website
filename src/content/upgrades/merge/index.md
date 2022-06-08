@@ -19,23 +19,23 @@ This process is in its final stages, with plans to undergo The Merge on a few pu
 
 ## What is The Merge? {#what-is-the-docking}
 
-It's important to remember that initially, the [Beacon Chain](/upgrades/beacon-chain/) shipped separately from [Mainnet](/glossary/#mainnet) - the chain we use today. Ethereum Mainnet continues to be secured by [proof-of-work](/developers/docs/consensus-mechanisms/pow/), even while the Beacon Chain runs in parallel using [proof-of-stake](/developers/docs/consensus-mechanisms/pos/). The Merge is when these two systems finally come together.
+The Merge represents the merger of the existing execution layer of Ethereum (the Mainnet we use today) with its new proof-of-stake consensus layer, the Beacon Chain.
 
-Imagine Ethereum is a space ship that isn’t quite ready for an interstellar voyage. With the Beacon Chain the community has built a new engine and a hardened hull. When it’s time, the current ship will dock with this new system, merging into one ship, ready to put in some serious lightyears and take on the universe.
+It's important to remember that initially, the [Beacon Chain](/upgrades/beacon-chain/) (the new "consensus layer") shipped separately from [Mainnet](/glossary/#mainnet). Ethereum Mainnet (the "execution layer") continues to be secured by [proof-of-work](/developers/docs/consensus-mechanisms/pow/), even while the Beacon Chain runs in parallel using [proof-of-stake](/developers/docs/consensus-mechanisms/pos/). The approaching Merge is when these two systems finally come together, and proof-of-work is replaced permanently by proof-of-stake.
 
-## Merging with Mainnet {#docking-mainnet}
+Imagine Ethereum is a space ship that isn’t quite ready for an interstellar voyage. With the Beacon Chain the community has built a new engine and a hardened hull. After significant testing, it's almost time to hot-swap in the new engine for the old mid-flight. This will merge the new more efficient engine into the existing ship, ready to put in some serious lightyears and take on the universe.
 
-When ready, Ethereum Mainnet will "merge" with the Beacon Chain, becoming its own shard which uses proof-of-stake instead of [proof-of-work](/developers/docs/consensus-mechanisms/pow/).
+## Merging with Mainnet {#merging-with-mainnet}
 
-Mainnet will bring the ability to run smart contracts into the proof-of-stake system, plus the full history and current state of Ethereum, to ensure that the transition is smooth for all ETH holders and users.
+Since genesis, Mainnet has been secured by proof-of-work. This is the main Ethereum blockchain that we're all used to—it contains every transaction, every smart contract, and every balance since it began in July 2015.
 
-## After The Merge {#after-the-merge}
+During this growing history, developers have been hard at work preparing for an eventual transition away from proof-of-work, to proof-of-stake instead. On December 1, 2020 the Beacon Chain was born, which has since lived as a separate blockchain to Mainnet, running in parallel.
 
-This will signal the end of proof-of-work for Ethereum and start the era of a more sustainable, eco-friendly Ethereum. At this point Ethereum will be one step closer to achieving the full scale, security and sustainability outlined in its [Ethereum vision](/upgrades/vision/).
+The Beacon Chain has not been processing Mainnet transactions, and for all intents and purposed has simply been coming to consensus on the state of itself... which is great and all, but after extensive testing, the time for it to come to consensus on more than just itself is rapidly approaching.
 
-It is important to note that an implementation goal of The Merge is simplicity in order to expedite the transition from proof-of-work to proof-of-stake. Developers are focusing their efforts on this transition, and minimizing additional features that could delay this goal.
+The Merge itself represents the official switch to using the Beacon Chain as the official means of block production. Mining will no longer be the means of producing valid blocks, and instead this role will land with the validators who will then be responsible for processing the validity of all transactions.
 
-**This means a few features, such as the ability to withdraw staked ETH, will have to wait a little longer after The Merge is complete.** Plans include a post-merge "cleanup" upgrade to address these features, which is expected to happen very soon after The Merge is completed.
+No history is lost. As Mainnet is merged with the Beacon Chain, the entire transactional history of Ethereum comes with it. You don't need to do anything. Your funds are safe.
 
 ## Who does this upgrade affect?
 
@@ -180,6 +180,20 @@ The ability for anyone to run their own node is _absolutely essential_ to mainta
 [More on running your own node](/run-a-node/)
 
 </ExpandableCard>
+
+<ExpandableCard
+title="'The Merge will result in downtime of the chain.'"
+contentPreview="❌ False. The Merge upgrade is designed to transition to proof-of-stake with zero downtime.">
+An immense amount of work has been put into making sure the transition to proof-of-stake does not disrupt the network or its users.
+
+The Merge is akin to changing an engine on a rocketship mid-flight, and is designed to be performed without any need to pause anything during the switch. The Merge will be triggered by what is known as a TTD, or [terminal total difficulty](/glossary/#terminal-total-difficult), which is a cumulative measure of the total mining power that has gone into building the chain. When the time comes, and this criteria is met, blocks will go from being produced using proof-of-work in one block, to being produced by proof-of-stake in the next.
+
+Ethereum does not go down.
+</ExpandableCard>
+
+## After The Merge {#after-the-merge}
+
+This will signal the end of proof-of-work for Ethereum and start the era of a more sustainable, eco-friendly Ethereum. This will also set the stage for further scalability upgrades not possible under proof-of-work, bringing Ethereum one step closer to achieving the full scale, security and sustainability outlined in its [Ethereum vision](/upgrades/vision/).
 
 ## Relationship between upgrades {#relationship-between-upgrades}
 
