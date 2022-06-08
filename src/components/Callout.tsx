@@ -46,7 +46,7 @@ const Content = styled.div`
   height: 100%;
 `
 
-interface IProps {
+export interface IProps {
   image?: string
   emoji?: string
   alt?: string
