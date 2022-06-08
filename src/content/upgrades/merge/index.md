@@ -8,7 +8,7 @@ image: ../../../assets/upgrades/merge.png
 summaryPoint1: Soon the current Ethereum Mainnet will merge with the Beacon Chain proof-of-stake system.
 summaryPoint2: This will mark the end of proof-of-work for Ethereum, and the full transition to proof-of-stake.
 summaryPoint3: This sets the stage for future scaling upgrades including data sharding.
-summaryPoint4: With The Merge, Ethereum's eneregy consumption drops by 99.95%. Welcome to a new greener Ethereum.
+summaryPoint4: With The Merge, Ethereum's energy consumption drops by 99.95%. Welcome to a new greener Ethereum.
 ---
 
 <UpgradeStatus dateKey="page-upgrades-merge-date">
@@ -49,22 +49,22 @@ For everyday users and holders there is nothing you need to do, but a few things
 
 ## What to I need to do to get ready?
 
-### Node-operating solo stakers
+### Node-operating stakers and staking providers
 
 If you are a solo staker running your own node setup, there are a few things you need to be aware to be prepared for The Merge. Key action items include:
 
-- [ ] Running _both_ a consensus client as well as an execution client. Third-party endpoints to obtain execution data will be unavailable after The Merge.
-- [ ] Authenticated your execution and consensus layer clients with a shared JWT secret so they can securely communicate with one another.
+- Running _both_ a consensus client as well as an execution client. Third-party endpoints to obtain execution data will be unavailable after The Merge.
+- Authenticated your execution and consensus layer clients with a shared JWT secret so they can securely communicate with one another.
 
 Not completing the above items will result in your node being seen as "offline" after The Merge until both layers are synced and authenticated.
 
-- [ ] Setting a `fee recipient` address to direct your earned transaction fee tips/MEV to.
+- Setting a `fee recipient` address to direct your earned transaction fee tips/MEV to.
 
 Not setting a `fee recipient` will still allow your validator to behave as usual, but you will miss out on unburnt fee tips and any MEV you would have otherwise earned in blocks your validator proposes.
 
 For more detailed information and summary of links to client resources, stakers are encouraged to check out the [Merge Readiness Checklist](https://launchpad.ethereum.org/en/merge-readiness/) over on the Staking Launchpad to make sure you're fully prepared for The Merge.
 
-### Non-validating node operators
+### Non-validating node operators and infrastructure providers
 
 If you're operating a non-validating Ethereum node, the most significant change that comes with The Merge is the requirement to run clients for _both_ the execution layer (EL) and the consensus layer (CL).
 
@@ -72,10 +72,11 @@ You probably are already running an EL client, such as Geth, Erigon, Besu or Net
 
 This means that a full Ethereum node after The Merge requires both an EL client as well as a CL client. These two clients work tightly together using a new Engine API to properly determine the latest state of the network. The Engine API requires authentication using a JWT secret, which is provided to both clients allowing secure communication.
 
-- [ ] I have installed a consensus layer client in addition to my execution layer client
-- [ ] I have authenticated me execution and consensus layer clients with a shared JWT secret so they can securely communicate with one another.
+- I have installed a consensus layer client in addition to my execution layer client
+- I have authenticated my execution and consensus layer clients with a shared JWT secret so they can securely communicate with one another.
 
 Not completing the above items in time for The Merge will result in your node appearing to be "offline" until both layers are synced and authenticated.
+
 Node operators can also check out the [Merge Readiness Checklist](https://launchpad.ethereum.org/en/merge-readiness/) on the Staking Launchpad for more information, as much of the details apply to all node operators.
 
 ### Dapp/smart contract developers
@@ -130,11 +131,12 @@ Withdrawal functionality is planned for the Shanghai upgrade to follow The Merge
 <ExpandableCard
 title="'When withdrawals are enabled, stakers will all exit at once.'"
 contentPreview="❌ False. Validator exits are rate limited for security reasons.">
-After the _Shanghai_ update enabled withdrawals, all validators will be incentivized to withdraw their staking balance above 32 ETH, and depending on the APR and total ETH staked, they may also be incentivized to exit their validator(s) to reclaim their entire balance.
 
-An important caveat here, full validator exits are rate limited by the protocol, so only 6 validators may exit per epoch (every 6.4 minutes, so 1350/day, or only ~43,200 ETH/day, out of >10 million ETH staked). This rate limit adjusts depending on total ETH stake, and acts as a bottle neck to prevent a mass exodus of funds, or a potential attacker from committing a slashable offense and exiting all funds in the same epoch before the slashing penalty could be issued.
+After the Shanghai update enabled withdrawals, all validators will be incentivized to withdraw their staking balance above 32 ETH, as these funds to not add to yield, and are otherwise locked. Depending on the APR (determined by total ETH staked), they may be incentivized to exit their validator(s) to reclaim their entire balance, or potentially to stake even more using their rewards to earn more yield.
 
-The APR is intentionally dynamic, allowing a market of stakers to find a balance of how much they're willing to be paid to help secure the network. When withdrawals are enabled, if the rate is too low, then validators will exit, at a rate limited by the protocol. Gradually this will raise the rate of return for everyone who remains, slowly attracting new or returning stakers yet again.
+An important caveat here, full validator exits are rate limited by the protocol, so only 6 validators may exit per epoch (every 6.4 minutes, so 1350/day, or only ~43,200 ETH/day, out of >10 million ETH staked). This rate limit adjusts depending on total ETH staked, and acts as a bottle neck to prevent a mass exodus of funds, or a potential attacker from committing a slashable offense and exiting all funds in the same epoch before the slashing penalty could be issued.
+
+The APR is intentionally dynamic, allowing a market of stakers to find a balance of how much they're willing to be paid to help secure the network. When withdrawals are enabled, if the rate is too low, then validators will exit, at a rate limited by the protocol. Gradually this will raise the APR for everyone who remains, slowly attracting new or returning stakers yet again.
 </ExpandableCard>
 
 <ExpandableCard
