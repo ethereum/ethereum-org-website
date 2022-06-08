@@ -7742,6 +7742,15 @@
         "doc",
         "bug"
       ]
+    },
+    {
+      "login": "setgree",
+      "name": "Seth Ariel Green",
+      "avatar_url": "https://avatars.githubusercontent.com/u/9850322?v=4",
+      "profile": "http://setharielgreen.com",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
