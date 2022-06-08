@@ -115,9 +115,14 @@ With a [rollup-centric roadmap](https://ethereum-magicians.org/t/a-rollup-centri
 
 <ExpandableCard
 title="'The Merge will make transactions faster.'"
-contentPreview="❌ False. 
-Network capacity is not determined by proof-of-work vs proof-of-stake.">
-The "speed" of a transaction can be measured a few ways, including time to be included in a block, and also time to finalization.
+contentPreview="Mostly false... Though some slight changes exist, transaction speed will mostly remain the same on layer 1">
+The "speed" of a transaction can be measured a few ways, including time to be included in a block, and also time to "finalization."
+
+Historically with proof-of-work (PoW) block times target ~13.3 seconds. On the Beacon Chain, slots occur every 12 seconds exactly, each of which is an opportunity for a validator to publish a block. Most slots have blocks, but not all (ie. a validator is offline). In most cases, blocks will be produced ~10% more frequently under PoS than under PoW, but this is a fairly insignificant change in the scaling game, and unlikely to be a noticeable difference for the end user.
+
+PoS does introduce the concept of transaction "finality." Under PoW, the ability to reverse a block gets exponentially more difficult with every passing block that is mined on top of your transaction, but it never quite reaches zero. Under PoS, blocks are bundled into epochs (6.4 minute spans of time containing 32 chances for blocks) which are voted on by validators. After an epoch ends, it can be voted on as "justified," and then one more epoch later results in a "finalized" state. To undo these transactions would require obtaining and burning over 1/3 the total ETH staked.
+
+Many dapps require a number of PoW block confirmations that take a period of time on par with how long PoS finality takes. Finality can offer additional security guarantees, but will not significantly speed up transactions.
 </ExpandableCard>
 
 <ExpandableCard
@@ -140,7 +145,7 @@ The APR is intentionally dynamic, allowing a market of stakers to find a balance
 </ExpandableCard>
 
 <ExpandableCard
-title="'Validators will not be eligible to receive any rewards until Shanghai when withdrawals are enabled.'"
+title="'Validators will not receive any liquid ETH rewards until Shanghai when withdrawals are enabled.'"
 contentPreview="❌ False. Fee tips/MEV will be credited to a Mainnet account controlled by the validator, available immediately.">
 This may seem counterintuitive to the above note that withdrawals are not enabled til Shanghai, but validators WILL have immediate access to the fee rewards/MEV earned during block proposals.
 
@@ -150,7 +155,17 @@ ETH on the execution layer, Mainnet as we know it, is accounted for separately f
 </ExpandableCard>
 
 <ExpandableCard
-title="'You can't run a node without staking.'"
+title="'Staking APR is expected to triple after The Merge. '"
+contentPreview="❌ False. More up-to-date estimations predict closer to a 50% increase in APR post-merge, not a 200% increase.">
+The APR for stakers is expected to increase post-merge. It is important to recognize where this increase in APR is coming from. This does not come from an increase in protocol ETH issuance (ETH issuance after The Merge is in fact decreasing by ~90%), but is instead a reallocation of transaction fees that will start going to validators instead of miners.
+
+This will be a new separate source of revenue for validators when they propose blocks. As you can imagine, the amount of fees a validator receives is proportional to network activity at the time of their proposed block. The more fees being paid by users, the more fees validators will receive.
+
+Looking at recent blockchain activity, approximately 10% of all gas fees being paid are currently going to miners in the form of a tip, while the rest is burnt. Outdated predictions estimated this percentage to be much higher, and was calculated when network usage was at all time highs. Extrapolating the 10% number to average recent network activity, it is estimated that the APR for staking will increase to ~7%, approximately 50% higher than the base issuance APR at time of writing.
+</ExpandableCard>
+
+<ExpandableCard
+title="'Running a node requires staking 32 ETH.'"
 contentPreview="❌ False. Anyone is free to sync their own self-verified copy of Ethereum, aka run a node. No ETH required—not before The Merge, not after The Merge, not ever.">
 There are two general types of Ethereum nodes: nodes that can propose blocks, and nodes that don't.
 
