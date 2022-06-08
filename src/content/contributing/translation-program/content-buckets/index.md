@@ -132,7 +132,7 @@ Below is a breakdown of the website pages each content bucket contains.
 - [ERC-20](/developers/docs/standards/tokens/erc-20/)
 - [ERC-721](/developers/docs/standards/tokens/erc-721/)
 - [ERC-777](/developers/docs/mev/)
-- [Miner extractable value (MEV)](/developers/docs/mev/)
+- [Maximal extractable value (MEV)](/developers/docs/mev/)
 - [Orcles](/developers/docs/oracles/)
 - [Scaling](/developers/docs/scaling/)
 - [Optimistic rollups](/developers/docs/scaling/optimistic-rollups/)

@@ -2157,7 +2157,8 @@
       "profile": "https://github.com/wackerow",
       "contributions": [
         "code",
-        "bug"
+        "bug",
+        "doc"
       ]
     },
     {
@@ -6841,7 +6842,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/43795504?v=4",
       "profile": "https://github.com/vdusart",
       "contributions": [
-        "doc"
+        "doc",
+        "code"
       ]
     },
     {
@@ -7468,7 +7470,10 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/44942598?v=4",
       "profile": "https://github.com/SuperDelphi",
       "contributions": [
-        "content"
+        "content",
+        "translation",
+        "bug",
+        "doc"
       ]
     },
     {
@@ -7670,6 +7675,62 @@
       "profile": "https://github.com/motemotech",
       "contributions": [
         "code"
+      ]
+    },
+    {
+      "login": "Mousticke",
+      "name": "mousticke.eth",
+      "avatar_url": "https://avatars.githubusercontent.com/u/16734238?v=4",
+      "profile": "https://github.com/Mousticke",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "brightiron",
+      "name": "brightiron",
+      "avatar_url": "https://avatars.githubusercontent.com/u/95196612?v=4",
+      "profile": "https://github.com/brightiron",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "modernxpunk",
+      "name": "oleksandrkovalskiy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/65621247?v=4",
+      "profile": "https://github.com/modernxpunk",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "yoshikouki",
+      "name": "yoshikouki",
+      "avatar_url": "https://avatars.githubusercontent.com/u/53972292?v=4",
+      "profile": "http://yoshikouki.com",
+      "contributions": [
+        "doc",
+        "ideas"
+      ]
+    },
+    {
+      "login": "graz-network",
+      "name": "Graz Network",
+      "avatar_url": "https://avatars.githubusercontent.com/u/102697012?v=4",
+      "profile": "http://graz.network",
+      "contributions": [
+        "doc",
+        "translation"
+      ]
+    },
+    {
+      "login": "cryptoversidad",
+      "name": "Cryptoversidad",
+      "avatar_url": "https://avatars.githubusercontent.com/u/107050863?v=4",
+      "profile": "https://www.youtube.com/c/Cryptoversidad",
+      "contributions": [
+        "doc"
       ]
     }
   ],

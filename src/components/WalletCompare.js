@@ -187,6 +187,9 @@ const WalletCompare = ({ location }) => {
           has_high_volume_purchases
           has_dex_integrations
           has_multisig
+          image {
+            ...walletCardImage
+          }
         }
       }
       timestamp: walletsCsv {
@@ -199,132 +202,6 @@ const WalletCompare = ({ location }) => {
             }
           }
         }
-      }
-      alpha: file(relativePath: { eq: "wallets/alpha.png" }) {
-        ...walletCardImage
-      }
-      ambo: file(relativePath: { eq: "wallets/ambo.png" }) {
-        ...walletCardImage
-      }
-      argent: file(relativePath: { eq: "wallets/argent.png" }) {
-        ...walletCardImage
-      }
-      bitcoindotcom: file(relativePath: { eq: "wallets/bitcoindotcom.png" }) {
-        ...walletCardImage
-      }
-      coinbase: file(relativePath: { eq: "wallets/coinbase.png" }) {
-        ...walletCardImage
-      }
-      coinomi: file(relativePath: { eq: "wallets/coinomi.png" }) {
-        ...walletCardImage
-      }
-      dcent: file(relativePath: { eq: "wallets/dcent.png" }) {
-        ...walletCardImage
-      }
-      enjin: file(relativePath: { eq: "wallets/enjin.png" }) {
-        ...walletCardImage
-      }
-      fortmatic: file(relativePath: { eq: "wallets/fortmatic.png" }) {
-        ...walletCardImage
-      }
-      gnosis: file(relativePath: { eq: "wallets/gnosis.png" }) {
-        ...walletCardImage
-      }
-      guarda: file(relativePath: { eq: "wallets/guarda.png" }) {
-        ...walletCardImage
-      }
-      hyperpay: file(relativePath: { eq: "wallets/hyperpay.png" }) {
-        ...walletCardImage
-      }
-      imtoken: file(relativePath: { eq: "wallets/imtoken.png" }) {
-        ...walletCardImage
-      }
-      ledger: file(relativePath: { eq: "wallets/ledger.png" }) {
-        ...walletCardImage
-      }
-      linen: file(relativePath: { eq: "wallets/linen.png" }) {
-        ...walletCardImage
-      }
-      mathwallet: file(relativePath: { eq: "wallets/mathwallet.png" }) {
-        ...walletCardImage
-      }
-      metamask: file(relativePath: { eq: "wallets/metamask.png" }) {
-        ...walletCardImage
-      }
-      monolith: file(relativePath: { eq: "wallets/monolith.png" }) {
-        ...walletCardImage
-      }
-      multis: file(relativePath: { eq: "wallets/multis.png" }) {
-        ...walletCardImage
-      }
-      mycrypto: file(relativePath: { eq: "wallets/mycrypto.png" }) {
-        ...walletCardImage
-      }
-      myetherwallet: file(relativePath: { eq: "wallets/myetherwallet.png" }) {
-        ...walletCardImage
-      }
-      pillar: file(relativePath: { eq: "wallets/pillar.png" }) {
-        ...walletCardImage
-      }
-      portis: file(relativePath: { eq: "wallets/portis.png" }) {
-        ...walletCardImage
-      }
-      rainbow: file(relativePath: { eq: "wallets/rainbow.png" }) {
-        ...walletCardImage
-      }
-      samsung: file(relativePath: { eq: "wallets/samsung.png" }) {
-        ...walletCardImage
-      }
-      squarelink: file(relativePath: { eq: "wallets/squarelink.png" }) {
-        ...walletCardImage
-      }
-      status: file(relativePath: { eq: "wallets/status.png" }) {
-        ...walletCardImage
-      }
-      torus: file(relativePath: { eq: "wallets/torus.png" }) {
-        ...walletCardImage
-      }
-      trezor: file(relativePath: { eq: "wallets/trezor.png" }) {
-        ...walletCardImage
-      }
-      trust: file(relativePath: { eq: "wallets/trust.png" }) {
-        ...walletCardImage
-      }
-      unstoppable: file(relativePath: { eq: "wallets/unstoppable.png" }) {
-        ...walletCardImage
-      }
-      zengo: file(relativePath: { eq: "wallets/zengo.png" }) {
-        ...walletCardImage
-      }
-      walleth: file(relativePath: { eq: "wallets/walleth.png" }) {
-        ...walletCardImage
-      }
-      tokenpocket: file(relativePath: { eq: "wallets/tokenpocket.png" }) {
-        ...walletCardImage
-      }
-      safepal: file(relativePath: { eq: "wallets/safepal.png" }) {
-        ...walletCardImage
-      }
-      opera: file(relativePath: { eq: "wallets/opera.png" }) {
-        ...walletCardImage
-      }
-      coin98: file(relativePath: { eq: "wallets/coin98.png" }) {
-        ...walletCardImage
-      }
-      bitkeep: file(relativePath: { eq: "wallets/bitkeep.png" }) {
-        ...walletCardImage
-      }
-      keystone: file(relativePath: { eq: "wallets/keystone.png" }) {
-        ...walletCardImage
-      }
-      loopring: file(relativePath: { eq: "wallets/loopring.png" }) {
-        ...walletCardImage
-      }
-      numio: file(relativePath: { eq: "wallets/numio.png" }) {
-        ...walletCardImage
-      }
-      airgap: file(relativePath: { eq: "wallets/airgap.png" }) {
-        ...walletCardImage
       }
     }
   `)
@@ -343,7 +220,6 @@ const WalletCompare = ({ location }) => {
     const nodes = data.allWallets.nodes
     const wallets = shuffle(
       nodes.map((node) => {
-        node.image = data[node.id]
         node.alt = translateMessageId(
           `page-find-wallet-${node.id}-logo-alt`,
           intl

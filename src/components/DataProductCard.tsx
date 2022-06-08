@@ -4,7 +4,9 @@ import { GatsbyImage } from "gatsby-plugin-image"
 
 import Link from "./Link"
 
-const ImageWrapper = styled.div`
+const ImageWrapper = styled.div<{
+  background: string
+}>`
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -93,7 +95,22 @@ const Logo = styled(GatsbyImage)`
   margin-right: 0.5rem;
 `
 
-const DataProductCard = ({
+export interface DataRow {
+  logo: string
+  coin: string
+  apy: string
+}
+
+export interface IProps {
+  url: string
+  background: string
+  image: string
+  name: string
+  description?: string
+  data?: Array<DataRow>
+}
+
+const DataProductCard: React.FC<IProps> = ({
   url,
   background,
   image,
