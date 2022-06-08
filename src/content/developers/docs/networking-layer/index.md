@@ -78,7 +78,7 @@ This is a minimal protocol for syncing light clients. Traditionaly this protocol
 
 #### Snap {#snap}
 
-The [snap protocol](https://github.com/ethereum/devp2p/blob/master/caps/snap.md#ethereum-snapshot-protocol-snap) is an optional extension that allows peers to exchange snapshots of recent states, allowing peers to verify account and storage data without having to download intermediate Merkle trie nodes.
+The [snap protocol](https://github.com/ethereum/devp2p/blob/master/caps/snap.md#ethereum-snapshot-protocol-snap) is an optional extension that allows peers to exchange snapshots of recent states, allowing peers to verify account and storage data without having to download intermediate Merkle tree nodes.
 
 #### Wit (witness protocol) {#wit}
 
