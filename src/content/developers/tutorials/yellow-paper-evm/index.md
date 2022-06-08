@@ -20,7 +20,7 @@ Like almost everything else in Ethereum, the Yellow Paper evolves over time. To 
 
 I am writing this a few months before [The Merge](/upgrades/merge). The Merge will significantly change the way blocks are handled, making that part of the current yellow paper of historical interest. On the other hand, the EVM is mostly unaffected by The Merge.
 
-## 9 Execution Model  {#9-execution-model}
+## 9 Execution model {#9-execution-model}
 
 This section (p. 12-14) includes most of the definition of the EVM.
 
@@ -52,7 +52,7 @@ The [Von Neumann architecture](https://en.wikipedia.org/wiki/Von_Neumann_archite
 The term exceptional execution means an exception that causes the execution of the current contract to halt. 
 
 
-## 9.2 Fees Overview  {#92-fees-overview}
+## 9.2 Fees overview  {#92-fees-overview}
 
 This section explains how the gas fees are calculated. There are three costs:
 
@@ -80,7 +80,7 @@ In equation 324, this value is written as *C<sub>mem</sub>(μ<sub>i</sub>')-C<su
 The function *C<sub>mem</sub>* is defined in equation 326: *C<sub>mem</sub>(a) = G<sub>memory</sub> × a + ⌊a<sup>2</sup> ÷ 512⌋*. *⌊x⌋* is the floor function, a function that given a value returns the largest integer that is still not larger than the value. For example, *⌊2.5⌋ = ⌊2⌋ = 2.* When *a < √512*, *a<sup>2</sup> < 512*, and the result of the floor function is zero. So for the first 22 words (704 bytes), the cost rises linearly with the number of memory words required. Beyond that point *⌊a<sup>2</sup> ÷ 512⌋* is positive. When the memory required is high enough the gas cost is proportional to the square of the amount of memory.
    
    
-## 9.3 Execution Environment {#93-execution-env}  
+## 9.3 Execution environment {#93-execution-env}  
 
 The execution environment is a tuple, *I*, that includes information that isn't part of the blockchain state or the EVM.
 
@@ -109,7 +109,7 @@ A few other parameters are necessary to understand the rest of section 9:
 
 
 
-## 9.4 Execution Overview {#94-execution-overview}
+## 9.4 Execution overview {#94-execution-overview}
 
 Now that have all the preliminaries, we can finally start working on how the EVM works.
 
@@ -196,7 +196,7 @@ We have an exceptional halt if any of these conditions is true:
 
 
 
-## 9.4.3 Jump Destination Validity  {#943-jump-dest-valid}
+## 9.4.3 Jump Destination Validity {#943-jump-dest-valid}
 
 Here we formally define what are the [`JUMPDEST`](https://www.evm.codes/#5b) opcodes. We cannot just look for byte value 0x5B, because it might be inside a PUSH (and therefore data and not an opcode).
 
@@ -207,7 +207,7 @@ This function is used in equation (152) to define *D<sub>J</sub>(c,i)*, which is
 In all other cases we look at the rest of the code by going to the next opcode and getting the set starting from it. *c[i]* is the current opcode, so *N(i,c[i])* is the location of the next opcode. *D<sub>J</sub>(c,N(i,c[i]))* is therefore the set of valid jump destinations that starts at the next opcode. If the current opcode isn't a `JUMPDEST`, just return that set. If it is `JUMPDEST`, include it in the result set and return that.
 
 
-## 9.4.4 Normal Halting  {#944-normal-halt}
+## 9.4.4 Normal halting {#944-normal-halt}
 
 The halting function *H*, can return three types of values.
 
@@ -218,7 +218,7 @@ The halting function *H*, can return three types of values.
 - If we have a halt opcode that does produce output (either [`RETURN`](https://www.evm.codes/#f3) or [`REVERT`](https://www.evm.codes/#fd)), return the sequence of bytes specified by that opcode. This sequence is taken from memory, the value at the top of the stack (*μ<sub>s</sub>[0]*) is the first byte, and the value after it (*μ<sub>s</sub>[1]*) is the length.
   
 
-## H.2 Instruction Set {#h2-instruction-set}
+## H.2 Instruction set {#h2-instruction-set}
 
 Before we go to the final subsection of the EVM, 9.5, let's look at the instructions themselves. They are defined in Appendix H.2 which starts on p. 29. Anything that is not specified as changing with that specific opcode is expected to stay the same. Variables that do change are specified with as \<something\>′.
    
@@ -269,7 +269,7 @@ The second equation, *A'<sub>a</sub> ≡ A<sub>a</sub> ∪ {μ<sub>s</sub>[0] mo
 Note that to use any stack item, we need to pop it, which means we also need to pop all the stack items on top of it. In the case of [`DUP<n>`](https://www.evm.codes/#8f) and [`SWAP<n>`](https://www.evm.codes/#9f), this means having to pop and then push up to sixteen values.
 
 
-## 9.5 The Execution Cycle  {#95-exec-cycle}
+## 9.5 The execution cycle {#95-exec-cycle}
 
 Now that we have all the parts, we can finally understand how the execution cycle of the EVM is documented.
 
@@ -286,7 +286,7 @@ Equations (156)-(158) define the stack and the change in it due to an opcode (*�
 
 With this the EVM is fully defined.
 
-## Conclusion  {#conclusion}
+## Conclusion {#conclusion}
 
 Mathematical notation is precise and has allowed the Yellow Paper to specify every detail of Ethereum. However, it does have some drawbacks:
 
