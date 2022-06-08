@@ -1,8 +1,8 @@
 [
   {
     "name": "Binance",
-    "supports_withdrawals": ["Arbitrum"],
-    "supports_deposits": ["Arbitrum"],
+    "supports_withdrawals": ["Arbitrum", "Optimism"],
+    "supports_deposits": ["Arbitrum", "Optimism"],
     "url": "https://www.binance.com/"
   },
   {
