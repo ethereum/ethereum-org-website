@@ -11,7 +11,7 @@ The fundamental idea of both mining algorithms is that a miner tries to find a n
 
 ## Prerequisites {#prerequisites}
 
-To better understand this page, we recommend you first read up on [proof-of-work consensus](/pow) and [mining](/mining).
+To better understand this page, we recommend you first read up on [proof-of-work consensus](/developers/docs/consensus-mechanisms/pow) and [mining](/developers/docs/consensus-mechanisms/pow/mining).
 
 ## Dagger Hashimoto {#dagger-hashimoto}
 
