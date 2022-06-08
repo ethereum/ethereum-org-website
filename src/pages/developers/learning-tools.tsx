@@ -82,7 +82,7 @@ export interface ILearningTool {
   name: string
   description: string
   url: string
-  image: typeof getImage // Will default to any because no module type declaration exists on the scope of this project
+  image: string
   alt: TranslationKey
   background: string
   subjects: string[]
@@ -108,8 +108,6 @@ export interface IProps {
 }
 
 const LearningToolsPage: React.FC<IProps> = ({ data }) => {
-  console.log("data", data)
-
   const intl = useIntl()
   const [randomizedSandboxes, setRandomizedSandboxes] = useState<
     ILearningTool[]

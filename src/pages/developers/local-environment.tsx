@@ -11,7 +11,7 @@ import { shuffle } from "lodash"
 // import Link from "../../components/Link"
 // import ButtonLink from "../../components/ButtonLink"
 import Translation from "../../components/Translation"
-import { translateMessageId } from "../../utils/translations"
+import { translateMessageId, TranslationKey } from "../../utils/translations"
 import PageMetadata from "../../components/PageMetadata"
 import ProductCard from "../../components/ProductCard"
 import {
@@ -22,6 +22,7 @@ import {
   Page,
   // InfoBanner,
 } from "../../components/SharedStyledComponents"
+import { getImageData } from "gatsby-plugin-image"
 
 const StyledPage = styled(Page)`
   margin-top: 4rem;
@@ -270,7 +271,18 @@ const H2 = styled.h2`
 //     },
 //   ]
 
-const frameworksList = [
+export interface IFramework {
+  id: string
+  url: string
+  githubUrl: string
+  background: string
+  name: string
+  description: TranslationKey
+  alt: TranslationKey
+  image?: string
+}
+
+const frameworksList: IFramework[] = [
   {
     id: "waffle",
     url: "https://getwaffle.io/",
@@ -365,7 +377,7 @@ const frameworksList = [
 
 const ChooseStackPage = ({ data }) => {
   const intl = useIntl()
-  const [frameworks, setFrameworks] = useState([])
+  const [frameworks, setFrameworks] = useState<IFramework[]>([])
 
   useEffect(() => {
     const list = shuffle(
