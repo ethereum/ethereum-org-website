@@ -265,7 +265,7 @@ const Codeblock: React.FC<IProps> = ({
   const [isCollapsed, setIsCollapsed] = useState(allowCollapse)
 
   let className
-  if (typeof children !== "string" && typeof children !== "number") {
+  if (React.isValidElement(children)) {
     className = children?.props?.className
   } else {
     className = codeLanguage || ""
