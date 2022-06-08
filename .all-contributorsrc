@@ -7732,6 +7732,16 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "disconnect3d",
+      "name": "Disconnect3d",
+      "avatar_url": "https://avatars.githubusercontent.com/u/10009354?v=4",
+      "profile": "https://disconnect3d.pl/",
+      "contributions": [
+        "doc",
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
