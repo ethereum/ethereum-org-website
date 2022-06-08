@@ -17,6 +17,7 @@ import {
   CardGrid,
   Page,
 } from "../../components/SharedStyledComponents"
+import { IGatsbyChildImageSharp } from "."
 
 const StyledPage = styled(Page)`
   margin-top: 4rem;
@@ -77,12 +78,45 @@ const StyledCardGrid = styled(CardGrid)`
   margin-bottom: 2rem;
 `
 
-const LearningToolsPage = ({ data }) => {
+export interface ILearningTool {
+  name: string
+  description: string
+  url: string
+  image: typeof getImage // Will default to any because no module type declaration exists on the scope of this project
+  alt: string
+  background: string
+  subjects: string[]
+}
+
+export interface IProps {
+  data: {
+    bloomtech: IGatsbyChildImageSharp
+    buildspace: IGatsbyChildImageSharp
+    captureTheEther: IGatsbyChildImageSharp
+    chainshot: IGatsbyChildImageSharp
+    consensys: IGatsbyChildImageSharp
+    cryptoZombie: IGatsbyChildImageSharp
+    ethdotbuild: IGatsbyChildImageSharp
+    learn: IGatsbyChildImageSharp
+    nftschool: IGatsbyChildImageSharp
+    oz: IGatsbyChildImageSharp
+    pointer: IGatsbyChildImageSharp
+    questbook: IGatsbyChildImageSharp
+    remix: IGatsbyChildImageSharp
+    replit: IGatsbyChildImageSharp
+  }
+}
+
+const LearningToolsPage: React.FC<IProps> = ({ data }) => {
+  console.log("data", data)
+
   const intl = useIntl()
-  const [randomizedSandboxes, setRandomizedSandboxes] = useState([])
+  const [randomizedSandboxes, setRandomizedSandboxes] = useState<
+    ILearningTool[]
+  >([])
 
   useEffect(() => {
-    const sandboxes = [
+    const sandboxes: ILearningTool[] = [
       {
         name: "Remix",
         description: "page-learning-tools-remix-description",
@@ -115,7 +149,7 @@ const LearningToolsPage = ({ data }) => {
     setRandomizedSandboxes(randomizedSandboxes)
   }, [data])
 
-  const games = [
+  const games: ILearningTool[] = [
     {
       name: "CryptoZombies",
       description: "page-learning-tools-cryptozombies-description",
@@ -145,7 +179,7 @@ const LearningToolsPage = ({ data }) => {
     },
   ]
 
-  const bootcamps = [
+  const bootcamps: ILearningTool[] = [
     {
       name: "ChainShot",
       description: "page-learning-tools-chainshot-description",

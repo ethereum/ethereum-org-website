@@ -278,8 +278,6 @@ export interface IProps {
 const DevelopersPage: React.FC<IProps> = ({ data }) => {
   const intl = useIntl()
 
-  console.log("data", data)
-
   return (
     <Page>
       <PageMetadata
