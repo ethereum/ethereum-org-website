@@ -48,7 +48,7 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
   - [Docs](https://docs.alchemyapi.io/)
   - Features
     - Largest free tier with 300M compute units per month (~30M getLatestBlock requests)
-    - Multichain support for Solana, Polygon, Starknet, Optimism, Arbitrum, Flow, Crypto.org
+    - Multichain support for Polygon, Starknet, Optimism, Arbitrum
     - Powering ~70% of the largest Ethereum dApps and DeFi transaction volume
     - Real-time webhook alerts via Alchemy Notify
     - Best-in-class support and reliability / stability
