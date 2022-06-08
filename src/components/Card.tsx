@@ -19,8 +19,8 @@ const TopContent = styled.div``
 
 export interface IProps {
   emoji?: string
-  title: string
-  description: string
+  title: JSX.Element
+  description: JSX.Element
   className?: string
 }
 

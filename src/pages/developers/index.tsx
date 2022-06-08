@@ -196,7 +196,15 @@ const StyledCallout = styled(Callout)`
   }
 `
 
-const paths = [
+export interface IDevelopersPath {
+  emoji: string
+  title: JSX.Element
+  description: JSX.Element
+  url: string
+  button: JSX.Element
+}
+
+const paths: IDevelopersPath[] = [
   {
     emoji: ":woman_student:",
     title: <Translation id="page-developers-learn" />,
@@ -207,7 +215,6 @@ const paths = [
   {
     emoji: ":woman_teacher:",
     title: <Translation id="page-developers-learn-tutorials" />,
-
     description: <Translation id="page-developers-learn-tutorials-desc" />,
     url: "/developers/tutorials/",
     button: <Translation id="page-developers-learn-tutorials-cta" />,
@@ -228,8 +235,50 @@ const paths = [
   },
 ]
 
-const DevelopersPage = ({ data }) => {
+export interface IGatsbyChildImageSharp {
+  gatsbyImageData: {
+    height: number
+    width: number
+    images: {
+      fallback: {
+        src: string
+        srcSet: string
+        sizes: string
+      }
+      sources: {
+        srcSet: string
+        sizes: string
+        type: string
+      }[]
+    }
+    layout: string
+    placeholder: {
+      fallback: string
+    }
+  }
+}
+
+export interface IProps {
+  data: {
+    developers: {
+      childImageSharp: IGatsbyChildImageSharp
+    }
+    ednHero: {
+      childImageSharp: IGatsbyChildImageSharp
+    }
+    doge: {
+      childImageSharp: IGatsbyChildImageSharp
+    }
+    ogImage: {
+      childImageSharp: IGatsbyChildImageSharp
+    }
+  }
+}
+
+const DevelopersPage: React.FC<IProps> = ({ data }) => {
   const intl = useIntl()
+
+  console.log("data", data)
 
   return (
     <Page>
@@ -361,7 +410,10 @@ const DevelopersPage = ({ data }) => {
               <Translation id="page-developers-language-desc" />
             </p>
             <ImageContainer>
-              <Image image={getImage(data.doge)} />
+              <Image
+                image={getImage(data.doge)}
+                alt={translateMessageId("page-assets-doge", intl)}
+              />
             </ImageContainer>
           </Column>
           <Column>
