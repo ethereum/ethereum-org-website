@@ -1,6 +1,10 @@
 import React, { useState, useContext } from "react"
 import styled, { ThemeContext } from "styled-components"
-import Highlight, { defaultProps, PrismTheme } from "prism-react-renderer"
+import Highlight, {
+  defaultProps,
+  Language,
+  PrismTheme,
+} from "prism-react-renderer"
 import Translation from "./Translation"
 import CopyToClipboard from "./CopyToClipboard"
 import Emoji from "./Emoji"
@@ -271,7 +275,7 @@ const Codeblock: React.FC<IProps> = ({
     className = codeLanguage || ""
   }
 
-  const matches = className.match(/language-(?<lang>.*)/)
+  const matches = className?.match(/language-(?<lang>.*)/)
   const language = matches?.groups?.lang || ""
 
   const shouldShowCopyWidget = ["js", "json", "python", "solidity"].includes(
@@ -290,7 +294,7 @@ const Codeblock: React.FC<IProps> = ({
         <Highlight
           {...defaultProps}
           code={codeText}
-          language={language}
+          language={language as Language}
           theme={theme as PrismTheme}
         >
           {({ className, style, tokens, getLineProps, getTokenProps }) => (
