@@ -5,7 +5,7 @@ import flattenMessages from "./flattenMessages"
 import type { Messages } from "../interfaces"
 import type { Lang } from "./languages"
 
-// same function from 'gatsby-plugin-intl'
+/** same function from 'gatsby-plugin-intl' */
 const getMessages = (path: string, language: Lang): Messages => {
   try {
     const messages = JSON.parse(

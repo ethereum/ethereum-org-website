@@ -39,7 +39,7 @@ const socialColors = {
   stackExchange: "#48a2da",
 }
 
-interface IProps {
+export interface IProps {
   name?: string
   color?: string
   size?: string

@@ -56,7 +56,7 @@ Pour créer systématiquement des blocs malveillants mais valides, vous auriez b
 
 La preuve de travail est également responsable de l'émission de nouvelles devises dans le système et encourage les mineurs à faire le travail.
 
-Les mineurs qui ont réussi à créer un bloc sont récompensés par deux ETH fraîchement frappés mais ne reçoivent plus tous les frais de transaction puisque les frais de base sont brûlés, tandis que le pourboire et la récompense du bloc vont au mineur. Un mineur peut également obtenir 1,75 ETH pour un bloc « oncle ».  Les blocs « oncle » sont des blocs valides créés par un mineur pratiquement en même temps qu'un autre mineur a miné le bloc avec succès. Les blocs « oncle » apparaissent généralement en raison de la latence du réseau.
+Les mineurs qui ont réussi à créer un bloc sont récompensés par deux ETH fraîchement frappés mais ne reçoivent plus tous les frais de transaction puisque les frais de base sont brûlés, tandis que le pourboire et la récompense du bloc vont au mineur. Un mineur peut également obtenir 1,75 ETH pour un bloc « oncle ». Les blocs « oncle » sont des blocs valides créés par un mineur pratiquement en même temps qu'un autre mineur a miné le bloc avec succès. Les blocs « oncle » apparaissent généralement en raison de la latence du réseau.
 
 ## Finalisation {#finality}
 

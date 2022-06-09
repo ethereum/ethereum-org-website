@@ -32,7 +32,7 @@ Si vous voulez [exécuter votre propre nœud](/developers/docs/nodes-and-clients
 
 - Stocke toutes les données de la blockchain.
 - Participe à la validation de blocs, vérifie tous les blocs et états.
-- Tous les états peuvent être dérivés d'un nœud  complet.
+- Tous les états peuvent être dérivés d'un nœud complet.
 - Sert le réseau et fournit des données sur demande.
 
 ### Nœud léger {#light-node}

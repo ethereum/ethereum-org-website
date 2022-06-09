@@ -112,7 +112,7 @@
     "to": "https://amsterdam.ethglobal.com/",
     "sponsor": null,
     "location": "Amsterdam, Netherlands",
-    "description": "Strap in for three days of hacking, summits, and side events celebrating the energy in the ecosystem and setting an optimistic tone for the rest of the year.",
+    "description": "ETHGlobal's exciting return to in-person hacking! Join us to end Devconnect with a bang!",
     "startDate": "2022-04-22",
     "endDate": "2022-04-24"
   },
@@ -121,9 +121,9 @@
     "to": "https://defi.ethglobal.com/",
     "sponsor": null,
     "location": "Remote",
-    "description": "Our DeFi focused online hackathon will continue for the 3rd year.",
+    "description": "ETHGlobal's Global DeFi focused hackathon will continue for the 3rd year.",
     "startDate": "2022-05-06",
-    "endDate": "2022-05-27"
+    "endDate": "2022-05-25"
   },
   {
     "title": "Spaghett.ETH",
@@ -162,11 +162,11 @@
     "endDate": "2022-06-30"
   },
   {
-    "title": "ETH SF",
-    "to": "https://airtable.com/shrZ89OEwQJRtXHPv/",
+    "title": "Graph Day & Graph Hack",
+    "to": "https://thegraph.com/graph-day/2022/",
     "sponsor": null,
     "location": "San Francisco, USA",
-    "description": "The energy and excitement at the first ETHSanFrancisco will be hard to top, but we have our eyes set on delivering an even more impactful experience.",
+    "description": "Join the world’s brightest dreamers & doers for a full day focused on web3, dapps, protocols, and the future of the internet. A three-day hackathon will follow immediately afterwards.",
     "startDate": "2022-06-02",
     "endDate": "2022-06-05"
   },
@@ -220,7 +220,7 @@
     "to": "https://nyc.ethglobal.com/",
     "sponsor": null,
     "location": "New York City, USA",
-    "description": "New York City's premier Ethereum hackathon returns.",
+    "description": "ETHGlobal returns to New York City for the first time since 2019.",
     "startDate": "2022-06-24",
     "endDate": "2022-06-26"
   },
@@ -229,7 +229,7 @@
     "to": "https://2022.ethseattle.org/",
     "sponsor": null,
     "location": "Seattle, USA",
-    "description": "ETHSeattle is a hackathon in Seattle, USA.",
+    "description": "ETHSeattle is an Ethereum summit in Seattle, USA.",
     "startDate": "2022-07-08",
     "endDate": "2022-07-08"
   },
@@ -239,8 +239,17 @@
     "sponsor": null,
     "location": "Remote",
     "description": "ETHGlobal returns with their 3rd iteration of HackFS, a global celebration of storage, data, and building data-full decentralized applications.",
-    "startDate": "2022-07-01",
-    "endDate": "2022-07-31"
+    "startDate": "2022-07-08",
+    "endDate": "2022-07-27"
+  },
+  {
+    "title": "ETHVenice",
+    "to": "https://ethvenice.com/",
+    "sponsor": null,
+    "location": "Venice, Italy",
+    "description": "ETHVenice is an Italian Ethereum Event and Hackathon, simultaneously with The Feast of the Redeemer in Venice.",
+    "startDate": "2022-07-11",
+    "endDate": "2022-07-17"
   },
   {
     "title": "Metaverse Summit",
@@ -270,11 +279,38 @@
     "endDate": "2022-07-21"
   },
   {
-    "title": "ETHMexicoCity",
-    "to": "https://airtable.com/shrZ89OEwQJRtXHPv/",
+    "title": "ETHSeoul",
+    "to": "https://2022.ethseoul.org/",
+    "sponsor": null,
+    "location": "Seoul, South Korea",
+    "description": "Join Seoul's first Ethereum Hackathon & Summit hosted by KryptoSeoul & Dystopia Labs",
+    "startDate": "2022-08-05",
+    "endDate": "2022-08-13"
+  },
+  {
+    "title": "Zorathon",
+    "to": "https://zora.ethglobal.com/",
+    "sponsor": null,
+    "location": "Remote",
+    "description": "ETHGlobal is teaming up with Zora to create a virtual developer and creative focused hackathon! Join and create art, music, dApps, protocols and anything in between.",
+    "startDate": "2022-08-04",
+    "endDate": "2022-08-10"
+  },
+  {
+    "title": "ETHLatam",
+    "to": "https://twitter.com/ethlatam",
+    "sponsor": null,
+    "location": "Buenos Aires, Argentina",
+    "description": "A 4-day conference that builds upon the work of the local pioneers that laid the foundations for a vibrant community that made crypto mainstream in Argentina.",
+    "startDate": "2022-08-11",
+    "endDate": "2022-08-14"
+  },
+  {
+    "title": "ETHMexico",
+    "to": "https://mexico.ethglobal.com/",
     "sponsor": null,
     "location": "Mexico City, Mexico",
-    "description": "Located in the heart of the nation’s crypto scene, come prepared for a strong showing from the Mexican crypto diaspora—and a good time.",
+    "description": "Join ETHGlobal's hackathon in the heart of the Mexico’s crypto scene, come prepared to build with the passionate Mexican community!",
     "startDate": "2022-08-19",
     "endDate": "2022-08-21"
   },
@@ -284,6 +320,15 @@
     "sponsor": null,
     "location": "Stanford, USA",
     "description": "DeFi is an emerging suite of applications for decentralized asset management over blockchain technology. ",
+    "startDate": "2022-08-27",
+    "endDate": "2022-08-28"
+  },
+  {
+    "title": "Hack.Summit('SF')",
+    "to": "https://sf.hacksummit.org/",
+    "sponsor": null,
+    "location": "San Francisco, California",
+    "description": "Hack.Summit('SF') is a 2-day blockchain summit hosted by Hack.VC & Dystopia Labs",
     "startDate": "2022-08-27",
     "endDate": "2022-08-28"
   },
@@ -310,9 +355,18 @@
     "to": "https://online.ethglobal.com/",
     "sponsor": null,
     "location": "Remote",
-    "description": "Our biggest online event will happen again next September.",
+    "description": "ETHGlobal's biggest global online event will happen again this September with hundreds of projects and weekly summits!",
     "startDate": "2022-09-01",
     "endDate": "2022-09-30"
+  },
+  {
+    "title": "EthereumSP",
+    "to": "https://www.ethereumbrasil.com/",
+    "sponsor": null,
+    "location": "São Paulo, Brazil",
+    "description": "A event dedicated to support the construction of the brazilian web3 builder community.",
+    "startDate": "2022-09-27",
+    "endDate": "2022-09-29"
   },
   {
     "title": "ETHBogotá",
@@ -322,6 +376,15 @@
     "description": "Join for ETHGlobal's return to South America and kick off Devcon in the perfect way, by building.",
     "startDate": "2022-10-07",
     "endDate": "2022-10-09"
+  },
+  {
+    "title": "DeFi Bogotá",
+    "to": "https://2022.defibogota.org/",
+    "sponsor": null,
+    "location": "Bogotá, Colombia",
+    "description": "DeFi Bogotá is a DeFi-focused summit in Colombia.",
+    "startDate": "2022-10-10",
+    "endDate": "2022-10-10"
   },
   {
     "title": "Devcon",
@@ -342,15 +405,15 @@
     "endDate": "2022-11-06"
   },
   {
-    "title": "ETHTaipei",
+    "title": "ETHIndia",
     "to": "https://airtable.com/shrZ89OEwQJRtXHPv/",
     "sponsor": null,
-    "location": "Taipei, Taiwan",
-    "description": "Join ETHGlobal's first hackathon in Taiwan and return to Asia!",
+    "location": "Bangalore, India",
+    "description": "ETHGlobal teams up with Devfolio to create another iconic ETHIndia to cap off an incredible year for Ethereum!",
     "startDate": "2022-12-02",
     "endDate": "2022-12-04"
   },
-    {
+  {
     "title": "ETHWarsaw",
     "to": "https://www.ethwarsaw.dev/",
     "sponsor": null,

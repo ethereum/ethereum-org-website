@@ -33,7 +33,6 @@ Most testnets use a proof-of-authority consensus mechanism. This means a small n
 
 ETH on testnets has no real value; therefore, there are no markets for testnet ETH. Since you need ETH to actually interact with Ethereum, most people get testnet ETH from faucets. Most faucets are webapps where you can input an address which you request ETH to be sent to.
 
-
 #### Sepolia {#sepolia}
 
 A proof-of-work testnet; this means it's the best like-for-like representation of Ethereum.
@@ -41,10 +40,12 @@ A proof-of-work testnet; this means it's the best like-for-like representation o
 - [Website](https://sepolia.dev/)
 - [Github](https://github.com/goerli/sepolia)
 - [Otterscan](https://sepolia.otterscan.io/)
+- [Etherscan](https://sepolia.etherscan.io)
 
 ##### Sepolia faucets
 
 - [Sepolia faucet](https://faucet.sepolia.dev/)
+- [FaucETH](https://fauceth.komputing.org)
 
 #### Görli {#goerli}
 
@@ -106,6 +107,7 @@ A very old proof-of-authority testnet for those still running OpenEthereum clien
 A testnet for [Arbitrum](https://arbitrum.io/).
 
 Arbitrum Rinkeby faucets:
+
 - [FaucETH](https://fauceth.komputing.org) (multi-Chain faucet without the need for social account)
 - [Chainlink faucet](https://faucets.chain.link/)
 - [Paradigm faucet](https://faucet.paradigm.xyz/)
@@ -115,6 +117,7 @@ Arbitrum Rinkeby faucets:
 A testnet for [Optimism](https://www.optimism.io/).
 
 Optimistic Kovan faucets:
+
 - [FaucETH](https://fauceth.komputing.org) (multi-Chain faucet without the need for social account)
 - [Paradigm faucet](https://faucet.paradigm.xyz/)
 

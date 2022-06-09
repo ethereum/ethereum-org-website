@@ -2157,7 +2157,8 @@
       "profile": "https://github.com/wackerow",
       "contributions": [
         "code",
-        "bug"
+        "bug",
+        "doc"
       ]
     },
     {
@@ -5254,7 +5255,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/82793845?v=4",
       "profile": "https://github.com/bleesherman",
       "contributions": [
-        "content"
+        "content",
+        "doc"
       ]
     },
     {
@@ -5930,7 +5932,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/25297591?v=4",
       "profile": "http://www.daita.tech",
       "contributions": [
-        "doc"
+        "doc",
+        "content"
       ]
     },
     {
@@ -6377,9 +6380,7 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/75273616?v=4",
       "profile": "https://github.com/HursitTarcan",
       "contributions": [
-        "bug",
-        "code",
-        "a11y"
+        "code"
       ]
     },
     {
@@ -6841,7 +6842,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/43795504?v=4",
       "profile": "https://github.com/vdusart",
       "contributions": [
-        "doc"
+        "doc",
+        "code"
       ]
     },
     {
@@ -7468,7 +7470,10 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/44942598?v=4",
       "profile": "https://github.com/SuperDelphi",
       "contributions": [
-        "content"
+        "content",
+        "translation",
+        "bug",
+        "doc"
       ]
     },
     {
@@ -7576,6 +7581,200 @@
       "name": "Elyanil Liranzo-Castro",
       "avatar_url": "https://avatars.githubusercontent.com/u/11803254?v=4",
       "profile": "https://github.com/yanil3500",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "LichuAcu",
+      "name": "Lichu Acuña",
+      "avatar_url": "https://avatars.githubusercontent.com/u/54295410?v=4",
+      "profile": "https://www.linkedin.com/in/lisandroea/?locale=en_US",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "avcdsld",
+      "name": "Takamasa Arakawa",
+      "avatar_url": "https://avatars.githubusercontent.com/u/10495516?v=4",
+      "profile": "https://github.com/avcdsld",
+      "contributions": [
+        "code",
+        "bug"
+      ]
+    },
+    {
+      "login": "skaunov",
+      "name": "skaunov",
+      "avatar_url": "https://avatars.githubusercontent.com/u/65976143?v=4",
+      "profile": "https://github.com/skaunov",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "pcowgill",
+      "name": "Paul Cowgill",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2731712?v=4",
+      "profile": "https://paulcowgill.com",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "zjiekai",
+      "name": "zjiekai",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1871071?v=4",
+      "profile": "https://github.com/zjiekai",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "WiiCoder",
+      "name": "wii u",
+      "avatar_url": "https://avatars.githubusercontent.com/u/65171537?v=4",
+      "profile": "https://github.com/WiiCoder",
+      "contributions": [
+        "ideas"
+      ]
+    },
+    {
+      "login": "MonsieurDMA",
+      "name": "MonsieurDMA",
+      "avatar_url": "https://avatars.githubusercontent.com/u/92155252?v=4",
+      "profile": "https://github.com/MonsieurDMA",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "fennar01",
+      "name": "fennar01",
+      "avatar_url": "https://avatars.githubusercontent.com/u/42185291?v=4",
+      "profile": "https://github.com/fennar01",
+      "contributions": [
+        "ideas",
+        "doc"
+      ]
+    },
+    {
+      "login": "WilliamWelsh",
+      "name": "William",
+      "avatar_url": "https://avatars.githubusercontent.com/u/16886888?v=4",
+      "profile": "https://williamalanwelsh.com",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "motemotech",
+      "name": "motemotech",
+      "avatar_url": "https://avatars.githubusercontent.com/u/59491191?v=4",
+      "profile": "https://github.com/motemotech",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "Mousticke",
+      "name": "mousticke.eth",
+      "avatar_url": "https://avatars.githubusercontent.com/u/16734238?v=4",
+      "profile": "https://github.com/Mousticke",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "brightiron",
+      "name": "brightiron",
+      "avatar_url": "https://avatars.githubusercontent.com/u/95196612?v=4",
+      "profile": "https://github.com/brightiron",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "modernxpunk",
+      "name": "oleksandrkovalskiy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/65621247?v=4",
+      "profile": "https://github.com/modernxpunk",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "yoshikouki",
+      "name": "yoshikouki",
+      "avatar_url": "https://avatars.githubusercontent.com/u/53972292?v=4",
+      "profile": "http://yoshikouki.com",
+      "contributions": [
+        "doc",
+        "ideas"
+      ]
+    },
+    {
+      "login": "graz-network",
+      "name": "Graz Network",
+      "avatar_url": "https://avatars.githubusercontent.com/u/102697012?v=4",
+      "profile": "http://graz.network",
+      "contributions": [
+        "doc",
+        "translation"
+      ]
+    },
+    {
+      "login": "cryptoversidad",
+      "name": "Cryptoversidad",
+      "avatar_url": "https://avatars.githubusercontent.com/u/107050863?v=4",
+      "profile": "https://www.youtube.com/c/Cryptoversidad",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "disconnect3d",
+      "name": "Disconnect3d",
+      "avatar_url": "https://avatars.githubusercontent.com/u/10009354?v=4",
+      "profile": "https://disconnect3d.pl/",
+      "contributions": [
+        "doc",
+        "bug"
+      ]
+    },
+    {
+      "login": "setgree",
+      "name": "Seth Ariel Green",
+      "avatar_url": "https://avatars.githubusercontent.com/u/9850322?v=4",
+      "profile": "http://setharielgreen.com",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "lcalixxto",
+      "name": "Luisa Calixto",
+      "avatar_url": "https://avatars.githubusercontent.com/u/98348072?v=4",
+      "profile": "https://www.linkedin.com/in/lcalixxto/",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "theanneli",
+      "name": "theanneli",
+      "avatar_url": "https://avatars.githubusercontent.com/u/106612248?v=4",
+      "profile": "https://github.com/theanneli",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "deric-alchemy",
+      "name": "Deric | Alchemy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/59844056?v=4",
+      "profile": "https://www.linkedin.com/in/dericcheng/",
       "contributions": [
         "doc"
       ]

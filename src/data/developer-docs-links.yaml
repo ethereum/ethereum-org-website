@@ -154,6 +154,9 @@
 - id: docs-nav-advanced
   path: /developers/docs/
   items:
+    - id: docs-nav-bridges
+      to: /developers/docs/bridges/
+      description: docs-nav-bridges-description
     - id: docs-nav-standards
       to: /developers/docs/standards/
       description: docs-nav-standards-description
@@ -203,9 +206,9 @@
       to: /developers/docs/data-structures-and-encoding/
       description: docs-nav-data-structures-and-encoding-description
       items:
-        - id: docs-nav-data-structures-and-encoding-rlp
-          to: /developers/docs/data-structures-and-encoding/rlp/
         - id: docs-nav-data-structures-and-encoding-patricia-merkle-trie
           to: /developers/docs/data-structures-and-encoding/patricia-merkle-trie/
+        - id: docs-nav-data-structures-and-encoding-rlp
+          to: /developers/docs/data-structures-and-encoding/rlp/
         - id: docs-nav-data-structures-and-encoding-ssz
           to: /developers/docs/data-structures-and-encoding/ssz/

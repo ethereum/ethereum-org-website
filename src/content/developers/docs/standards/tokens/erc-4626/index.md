@@ -30,6 +30,7 @@ To better understand this page, we recommend you first read about [token standar
 ```solidity
 function deposit(address _to, uint256 _value) public returns (uint256 _shares)
 ```
+
 This function deposits the `_value` tokens into the vault and grants ownership to `_to`.
 
 #### withdraw {#withdraw}
@@ -37,6 +38,7 @@ This function deposits the `_value` tokens into the vault and grants ownership t
 ```solidity
 function withdraw(address _to, uint256 _value) public returns (uint256 _shares)
 ```
+
 This function withdraws `_value` token from the vault and transfers them to `_to`.
 
 #### totalHoldings {#totalholdings}
@@ -44,6 +46,7 @@ This function withdraws `_value` token from the vault and transfers them to `_to
 ```solidity
 function totalHoldings() public view returns (uint256)
 ```
+
 This function returns the total amount of underlying tokens held by the vault.
 
 #### balanceOfUnderlying {#balanceofunderlying}
@@ -51,6 +54,7 @@ This function returns the total amount of underlying tokens held by the vault.
 ```solidity
 function balanceOfUnderlying(address _owner) public view returns (uint256)
 ```
+
 This function returns the total amount of underlying tokens held in the vault for `_owner`.
 
 #### underlying {#underlying}
@@ -58,6 +62,7 @@ This function returns the total amount of underlying tokens held in the vault fo
 ```solidity
 function underlying() public view returns (address)
 ```
+
 Returns the address of the token the vault uses for accounting, depositing, and withdrawing.
 
 #### totalSupply {#totalsupply}
@@ -65,6 +70,7 @@ Returns the address of the token the vault uses for accounting, depositing, and 
 ```solidity
 function totalSupply() public view returns (uint256)
 ```
+
 Returns the total number of unredeemed vault shares in circulation.
 
 #### balanceOf {#balanceof}
@@ -72,6 +78,7 @@ Returns the total number of unredeemed vault shares in circulation.
 ```solidity
 function balanceOf(address _owner) public view returns (uint256)
 ```
+
 Returns the total amount of vault shares the `_owner` currently has.
 
 #### redeem {#redeem}
@@ -79,6 +86,7 @@ Returns the total amount of vault shares the `_owner` currently has.
 ```solidity
 function redeem(address _to, uint256 _shares) public returns (uint256 _value)
 ```
+
 Redeems a specific number of `_shares` for underlying tokens and transfers them to `_to`.
 
 #### exchangeRate {#exchangerate}
@@ -86,7 +94,9 @@ Redeems a specific number of `_shares` for underlying tokens and transfers them 
 ```solidity
 function exchangeRate() public view returns (uint256)
 ```
+
 The amount of underlying tokens one `baseUnit` of vault shares is redeemable for. For example:
+
 ```solidity
 _shares * exchangeRate() / baseUnit() = _value.
 ```
@@ -100,17 +110,17 @@ exchangeRate() * totalSupply() MUST equal totalHoldings().
 ```solidity
 function baseUnit() public view returns(uint256)
 ```
+
 The decimal scalar for vault shares and operations involving `exchangeRate()`.
-
-
 
 ### Events {#events}
 
 #### Deposit Event
 
 **MUST** be emitted when tokens are deposited into the vault
+
 ```solidity
-event Deposit(address indexed _from, addres indexed _to, uint256 _value)
+event Deposit(address indexed _from, address indexed _to, uint256 _value)
 ```
 
 Where `_from` is the user who triggered the deposit and approved `_value` underlying tokens to the vault, and `_to` is the user who can withdraw the deposited tokens.
@@ -118,9 +128,11 @@ Where `_from` is the user who triggered the deposit and approved `_value` underl
 #### Widthdraw Event
 
 **MUST** be emitted when tokens are withdrawn from the vault by a depositor.
+
 ```solidity
 event Withdraw(address indexed _owner, address indexed _to, uint256 _value)
 ```
+
 Where `_from` is the user who triggered the withdrawal and held `_value` underlying tokens in the vault, and `_to` is the user who received the withdrawn tokens.
 
 _Note_: All batch functions, including the hook, are also available in non-batch versions. This is done to save gas, as transferring just one asset will likely remain to be the most common method. For clarity in the explanations, we've left them out, including the safe transfer rules. Remove the 'Batch' and the names are identical.
@@ -128,4 +140,4 @@ _Note_: All batch functions, including the hook, are also available in non-batch
 ## Further reading {#further-reading}
 
 - [EIP-4626: Tokenized vault Standard](https://eips.ethereum.org/EIPS/eip-4626)
-- [ERC-4626: Github Repo](https://github.com/Rari-Capital/solmate/blob/main/src/mixins/ERC4626.sol)
+- [ERC-4626: GitHub Repo](https://github.com/Rari-Capital/solmate/blob/main/src/mixins/ERC4626.sol)
