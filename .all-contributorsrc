@@ -7434,7 +7434,8 @@
       "profile": "https://github.com/byhow",
       "contributions": [
         "doc",
-        "bug"
+        "bug",
+        "code"
       ]
     },
     {
@@ -7729,6 +7730,52 @@
       "name": "Cryptoversidad",
       "avatar_url": "https://avatars.githubusercontent.com/u/107050863?v=4",
       "profile": "https://www.youtube.com/c/Cryptoversidad",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "disconnect3d",
+      "name": "Disconnect3d",
+      "avatar_url": "https://avatars.githubusercontent.com/u/10009354?v=4",
+      "profile": "https://disconnect3d.pl/",
+      "contributions": [
+        "doc",
+        "bug"
+      ]
+    },
+    {
+      "login": "setgree",
+      "name": "Seth Ariel Green",
+      "avatar_url": "https://avatars.githubusercontent.com/u/9850322?v=4",
+      "profile": "http://setharielgreen.com",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "lcalixxto",
+      "name": "Luisa Calixto",
+      "avatar_url": "https://avatars.githubusercontent.com/u/98348072?v=4",
+      "profile": "https://www.linkedin.com/in/lcalixxto/",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "theanneli",
+      "name": "theanneli",
+      "avatar_url": "https://avatars.githubusercontent.com/u/106612248?v=4",
+      "profile": "https://github.com/theanneli",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "deric-alchemy",
+      "name": "Deric | Alchemy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/59844056?v=4",
+      "profile": "https://www.linkedin.com/in/dericcheng/",
       "contributions": [
         "doc"
       ]
