@@ -3,6 +3,7 @@ import { ListItem } from "./SharedStyledComponents"
 import Translation from "./Translation"
 import Link from "./Link"
 import docLinks from "../data/developer-docs-links.yaml"
+import { TranslationKey } from "../utils/translations"
 
 export interface IProps {
   headerId: string
@@ -19,21 +20,21 @@ const DeveloperDocsLinks: React.FC<IProps> = ({ headerId }) => (
               <ListItem key={id}>
                 {to || path ? (
                   <Link to={to || path}>
-                    <Translation id={id} />
+                    <Translation id={id as TranslationKey} />
                   </Link>
                 ) : (
-                  <Translation id={id} />
+                  <Translation id={id as TranslationKey} />
                 )}
                 <i>
                   {" – "}
-                  <Translation id={description} />
+                  <Translation id={description as TranslationKey} />
                 </i>
                 <ul>
                   {items &&
                     items.map(({ id, to, path }) => (
                       <ListItem key={id}>
                         <Link to={to || path}>
-                          <Translation id={id} />
+                          <Translation id={id as TranslationKey} />
                         </Link>
                       </ListItem>
                     ))}

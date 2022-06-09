@@ -6,6 +6,7 @@ import Emoji from "./Emoji"
 import Translation from "./Translation"
 
 import docLinks, { DeveloperDocsLink } from "../data/developer-docs-links.yaml"
+import { TranslationKey } from "../utils/translations"
 
 const Container = styled.div`
   display: flex;
@@ -134,7 +135,7 @@ const DocsNav: React.FC<IProps> = ({ relativePath }) => {
               <Translation id="previous" />
             </UppercaseSpan>
             <PreviousNavLink to={previousDoc.to}>
-              <Translation id={previousDoc.id} />
+              <Translation id={previousDoc.id as TranslationKey} />
             </PreviousNavLink>
           </PreviousTextDiv>
         </PreviousCard>
@@ -148,7 +149,7 @@ const DocsNav: React.FC<IProps> = ({ relativePath }) => {
               <Translation id="next" />
             </UppercaseSpan>
             <NextNavLink to={nextDoc.to}>
-              <Translation id={nextDoc.id} />
+              <Translation id={nextDoc.id as TranslationKey} />
             </NextNavLink>
           </NextTextDiv>
           <EmojiLink to={nextDoc.to}>
