@@ -14,7 +14,7 @@ summaryPoint4: With The Merge, Ethereum's energy consumption drops by 99.95%. We
 <UpgradeStatus dateKey="page-upgrades-merge-date">
 The Merge is one of the most significant and high-stakes upgrades in the history of Ethereum. Extensive testing and bug bounties have been underway for years to ensure a safe transition to proof-of-stake.
 
-This process is in its final stages, with plans to undergo The Merge on a few public testnets before finally moving forward with Mainnet. If you’re as excited about The Merge as we are, follow the <a href="https://blog.ethereum.org">EF Blog</a> or the client communication channels for the latest official word on <em>When Merge?</em>
+This process is in its final stages, with plans to undergo The Merge on a few public testnets before finally moving forward with Mainnet. If you’re as excited about The Merge as we are, follow the [EF Blog](https://blog.ethereum.org) or the client communication channels for the latest official word on _When Merge?_
 </UpgradeStatus>
 
 ## What is The Merge? {#what-is-the-docking}
@@ -36,6 +36,10 @@ The Beacon Chain has not been processing Mainnet transactions, and for all inten
 The Merge itself represents the official switch to using the Beacon Chain as the official means of block production. Mining will no longer be the means of producing valid blocks, and instead this role will land with the proof-of-stake validators who will then be responsible for processing the validity of all transactions, and proposing blocks.
 
 No history is lost. As Mainnet is merged with the Beacon Chain, the entire transactional history of Ethereum comes with it. You don't need to do anything. Your funds are safe.
+
+<InfoBanner>
+This transition to proof-of-stake will come with some changes to the way ether is supplied. Learn more about <a href="/upgrades/merge/eth-issuance/">ether issuance before and after The Merge</a>.
+</InfoBanner>
 
 ## What to I need to do to get ready? {#preparing-for-the-merge}
 
@@ -110,7 +114,9 @@ As we approach The Merge of Ethereum Mainnet, **you should be on high alert for 
 
 ## After The Merge {#after-the-merge}
 
-This will signal the end of proof-of-work for Ethereum and start the era of a more sustainable, eco-friendly Ethereum. This will also set the stage for further scalability upgrades not possible under proof-of-work, bringing Ethereum one step closer to achieving the full scale, security and sustainability outlined in its [Ethereum vision](/upgrades/vision/).
+This will signal the end of proof-of-work for Ethereum and start the era of a more sustainable, eco-friendly Ethereum. Learn more about [Ethereum energy consumption](/energy-consumption/).
+
+This will also set the stage for further scalability upgrades not possible under proof-of-work, bringing Ethereum one step closer to achieving the full scale, security and sustainability outlined in its [Ethereum vision](/upgrades/vision/).
 
 ## Misconceptions about The Merge {#misconceptions}
 
@@ -128,6 +134,7 @@ Running a "non block-producing" node is not only _possible_ for anyone under eit
 The ability for anyone to run their own node is _absolutely essential_ to maintaining the decentralization of the Ethereum network.
 
 [More on running your own node](/run-a-node/)
+
 </ExpandableCard>
 
 <ExpandableCard
@@ -228,6 +235,6 @@ Plans for sharding are rapidly evolving, but given the rise and success of layer
   Data sharding
 </ButtonLink>
 
-## Read more {#read-more}
+## Further reading {#further-reading}
 
 <MergeArticleList />
