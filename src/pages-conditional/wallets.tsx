@@ -2,18 +2,18 @@ import React, { useEffect, useState } from "react"
 import styled from "styled-components"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { useIntl } from "gatsby-plugin-intl"
-import { graphql } from "gatsby"
+import { graphql, PageProps } from "gatsby"
 import { shuffle } from "lodash"
 
-import PageHero from "../../components/PageHero"
-import Translation from "../../components/Translation"
-import Callout from "../../components/Callout"
-import Card from "../../components/Card"
-import Link from "../../components/Link"
-import ButtonLink from "../../components/ButtonLink"
-import PageMetadata from "../../components/PageMetadata"
-import HorizontalCard from "../../components/HorizontalCard"
-import CardList from "../../components/CardList"
+import PageHero from "../components/PageHero"
+import Translation from "../components/Translation"
+import Callout from "../components/Callout"
+import Card from "../components/Card"
+import Link from "../components/Link"
+import ButtonLink from "../components/ButtonLink"
+import PageMetadata from "../components/PageMetadata"
+import HorizontalCard from "../components/HorizontalCard"
+import CardList from "../components/CardList"
 import {
   CardContainer,
   Content,
@@ -22,9 +22,10 @@ import {
   Page,
   StyledCard,
   TwoColumnContent,
-} from "../../components/SharedStyledComponents"
+} from "../components/SharedStyledComponents"
 
-import { translateMessageId } from "../../utils/translations"
+import { translateMessageId } from "../utils/translations"
+import { Context } from "../types"
 
 const StyledTwoColumnContent = styled(TwoColumnContent)`
   margin-bottom: -2rem;
@@ -216,25 +217,33 @@ const articles = [
   },
 ]
 
-const WalletsPage = ({ data }) => {
+const WalletsPage = ({
+  data,
+}: PageProps<Queries.WalletsPageQuery, Context>) => {
   const intl = useIntl()
-  const [wallets, setWallets] = useState([])
+  const [wallets, setWallets] = useState<Array<Partial<Queries.WalletsCsv>>>([])
 
   useEffect(() => {
     const nodes = data.allWallets.nodes
+
     // Add fields for CardList
-    const randomWallets = shuffle(
-      nodes.map((node) => {
-        node.image = getImage(data[node.id])
-        node.title = node.name
-        node.description = translateMessageId(
+    const cardWallets = nodes.map((node) => {
+      return {
+        ...node,
+        image: getImage(node.image),
+        // @ts-ignore
+        alt: translateMessageId(`page-find-wallet-${node.id}-logo-alt`, intl),
+        title: node.name,
+        description: translateMessageId(
+          // @ts-ignore
           `page-find-wallet-description-${node.id}`,
           intl
-        )
-        node.link = node.url
-        return node
-      })
-    )
+        ),
+        link: node.url,
+      }
+    })
+
+    const randomWallets = shuffle(cardWallets)
 
     setWallets(randomWallets)
   }, [data, intl])
@@ -357,7 +366,6 @@ const WalletsPage = ({ data }) => {
               <WalletType
                 key={idx}
                 emoji={type.emoji}
-                title={type.title}
                 description={type.description}
                 size={2.5}
               />
@@ -558,7 +566,7 @@ export const listImage = graphql`
 `
 
 export const query = graphql`
-  {
+  query WalletsPage {
     hero: file(relativePath: { eq: "wallet.png" }) {
       childImageSharp {
         gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
@@ -608,6 +616,9 @@ export const query = graphql`
         has_high_volume_purchases
         has_dex_integrations
         has_multisig
+        image {
+          ...listImage
+        }
       }
     }
     timestamp: walletsCsv {
@@ -620,147 +631,6 @@ export const query = graphql`
           }
         }
       }
-    }
-    alpha: file(relativePath: { eq: "wallets/alpha.png" }) {
-      ...listImage
-    }
-    argent: file(relativePath: { eq: "wallets/argent.png" }) {
-      ...listImage
-    }
-    atomic: file(relativePath: { eq: "wallets/atomic.png" }) {
-      ...listImage
-    }
-    bitcoindotcom: file(relativePath: { eq: "wallets/bitcoindotcom.png" }) {
-      ...walletCardImage
-    }
-    bitski: file(relativePath: { eq: "wallets/bitski.png" }) {
-      ...listImage
-    }
-    blockchain: file(relativePath: { eq: "wallets/blockchain.png" }) {
-      ...listImage
-    }
-    coinbase: file(relativePath: { eq: "wallets/coinbase.png" }) {
-      ...listImage
-    }
-    coinomi: file(relativePath: { eq: "wallets/coinomi.png" }) {
-      ...listImage
-    }
-    dcent: file(relativePath: { eq: "wallets/dcent.png" }) {
-      ...listImage
-    }
-    eidoo: file(relativePath: { eq: "wallets/eidoo.png" }) {
-      ...listImage
-    }
-    enjin: file(relativePath: { eq: "wallets/enjin.png" }) {
-      ...listImage
-    }
-    eql: file(relativePath: { eq: "wallets/eql.png" }) {
-      ...listImage
-    }
-    fortmatic: file(relativePath: { eq: "wallets/fortmatic.png" }) {
-      ...listImage
-    }
-    gnosis: file(relativePath: { eq: "wallets/gnosis.png" }) {
-      ...listImage
-    }
-    guarda: file(relativePath: { eq: "wallets/guarda.png" }) {
-      ...listImage
-    }
-    hyperpay: file(relativePath: { eq: "wallets/hyperpay.png" }) {
-      ...listImage
-    }
-    imtoken: file(relativePath: { eq: "wallets/imtoken.png" }) {
-      ...listImage
-    }
-    ledger: file(relativePath: { eq: "wallets/ledger.png" }) {
-      ...listImage
-    }
-    linen: file(relativePath: { eq: "wallets/linen.png" }) {
-      ...listImage
-    }
-    lumi: file(relativePath: { eq: "wallets/lumi.png" }) {
-      ...listImage
-    }
-    mathwallet: file(relativePath: { eq: "wallets/mathwallet.png" }) {
-      ...listImage
-    }
-    metamask: file(relativePath: { eq: "wallets/metamask.png" }) {
-      ...listImage
-    }
-    monolith: file(relativePath: { eq: "wallets/monolith.png" }) {
-      ...listImage
-    }
-    multis: file(relativePath: { eq: "wallets/multis.png" }) {
-      ...listImage
-    }
-    mycrypto: file(relativePath: { eq: "wallets/mycrypto.png" }) {
-      ...listImage
-    }
-    myetherwallet: file(relativePath: { eq: "wallets/myetherwallet.png" }) {
-      ...listImage
-    }
-    pillar: file(relativePath: { eq: "wallets/pillar.png" }) {
-      ...listImage
-    }
-    portis: file(relativePath: { eq: "wallets/portis.png" }) {
-      ...listImage
-    }
-    rainbow: file(relativePath: { eq: "wallets/rainbow.png" }) {
-      ...listImage
-    }
-    samsung: file(relativePath: { eq: "wallets/samsung.png" }) {
-      ...listImage
-    }
-    squarelink: file(relativePath: { eq: "wallets/squarelink.png" }) {
-      ...listImage
-    }
-    status: file(relativePath: { eq: "wallets/status.png" }) {
-      ...listImage
-    }
-    torus: file(relativePath: { eq: "wallets/torus.png" }) {
-      ...listImage
-    }
-    trezor: file(relativePath: { eq: "wallets/trezor.png" }) {
-      ...listImage
-    }
-    trust: file(relativePath: { eq: "wallets/trust.png" }) {
-      ...listImage
-    }
-    unstoppable: file(relativePath: { eq: "wallets/unstoppable.png" }) {
-      ...listImage
-    }
-    zengo: file(relativePath: { eq: "wallets/zengo.png" }) {
-      ...listImage
-    }
-    tokenpocket: file(relativePath: { eq: "wallets/tokenpocket.png" }) {
-      ...listImage
-    }
-    walleth: file(relativePath: { eq: "wallets/walleth.png" }) {
-      ...listImage
-    }
-    safepal: file(relativePath: { eq: "wallets/safepal.png" }) {
-      ...listImage
-    }
-    opera: file(relativePath: { eq: "wallets/opera.png" }) {
-      ...listImage
-    }
-    coin98: file(relativePath: { eq: "wallets/coin98.png" }) {
-      ...listImage
-    }
-    bitkeep: file(relativePath: { eq: "wallets/bitkeep.png" }) {
-      ...listImage
-    }
-    keystone: file(relativePath: { eq: "wallets/keystone.png" }) {
-      ...listImage
-    }
-    loopring: file(relativePath: { eq: "wallets/loopring.png" }) {
-      ...listImage
-    }
-    numio: file(relativePath: { eq: "wallets/numio.png" }) {
-      ...listImage
-    }
-    airgap: file(relativePath: { eq: "wallets/airgap.png" }) {
-      ...listImage
     }
   }
 `

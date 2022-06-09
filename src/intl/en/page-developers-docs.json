@@ -52,7 +52,7 @@
   "docs-nav-java-script-apis": "JavaScript APIs",
   "docs-nav-javascript": "JavaScript",
   "docs-nav-json-rpc": "JSON-RPC",
-  "docs-nav-mev": "Miner extractable value (MEV)",
+  "docs-nav-mev": "Maximal extractable value (MEV)",
   "docs-nav-mev-description": "How value is extracted from the Ethereum blockchain beyond the block reward",
   "docs-nav-mining": "Mining",
   "docs-nav-mining-algorithms": "Mining algorithms",
