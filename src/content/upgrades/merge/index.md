@@ -159,30 +159,30 @@ Many dapps require a number of PoW block confirmations that take a period of tim
 
 <ExpandableCard
 title="Misconception 4: &quot;You can withdraw staked ETH once The Merge occurs.&quot;"
-contentPreview="False. Staking withdrawals are not yet enabled with The Merge.">
+contentPreview="False. Staking withdrawals are not yet enabled with The Merge. These will have to wait until the Shanghai upgrade to follow.">
 Staked ETH, staking rewards to date, and newly issued ETH immediately after The Merge will still be locked on the Beacon Chain without the ability to withdraw.
 
-Withdrawal functionality is planned for the Shanghai upgrade to follow The Merge. This means that newly issued ETH, though accumulating on the Beacon Chain, will remain locked and illiquid for at least 6-12 months following The Merge.
+Withdrawal functionality is planned for the **Shanghai upgrade** to follow The Merge. This means that newly issued ETH, though accumulating on the Beacon Chain, will remain locked and illiquid for at least 6-12 months following The Merge.
 </ExpandableCard>
 
 <ExpandableCard
-title="Misconception 5: &quot;When withdrawals are enabled, stakers will all exit at once.&quot;"
+title="Misconception 5: &quot;Validators will not receive any liquid ETH rewards til the Shanghai upgrade when withdrawals are enabled.&quot;"
+contentPreview="False. Fee tips/MEV will be credited to a Mainnet account controlled by the validator, available immediately.">
+This may seem counterintuitive to the above note that withdrawals are not enabled til the Shanghai upgrade, but validators WILL have immediate access to the fee rewards/MEV earned during block proposals.
+
+ETH is issued by the protocol as a reward to validators for contributing to consensus. This _newly issued_ ETH is accounted for on the Beacon Chain (consensus layer), where a validator has a unique address that holds its staked ETH and protocol rewards. This ETH is locked until Shanghai.
+
+ETH on the _execution layer_ (Mainnet as we know it) is accounted for separately from the consensus layer. When users execute transactions that involve Mainnet, ETH must be paid to cover the gas which includes a tip to the validator. This ETH is already on the execution layer, is NOT being newly issued by the protocol, and is available to the validator immediately (given a proper `fee recipient` address is provided to the client software).
+</ExpandableCard>
+
+<ExpandableCard
+title="Misconception 6: &quot;When withdrawals are enabled, stakers will all exit at once.&quot;"
 contentPreview="False. Validator exits are rate limited for security reasons.">
 After the Shanghai upgrade enabled withdrawals, all validators will be incentivized to withdraw their staking balance above 32 ETH, as these funds to not add to yield, and are otherwise locked. Depending on the APR (determined by total ETH staked), they may be incentivized to exit their validator(s) to reclaim their entire balance, or potentially to stake even more using their rewards to earn more yield.
 
 An important caveat here, full validator exits are rate limited by the protocol, so only 6 validators may exit per epoch (every 6.4 minutes, so 1350/day, or only ~43,200 ETH/day, out of >10 million ETH staked). This rate limit adjusts depending on total ETH staked, and acts as a bottle neck to prevent a mass exodus of funds, and also prevents a potential attacker from using their stake to commit a slashable offense and then exiting their entire staking balance in the same epoch before the slashing penalty can be enforced.
 
 The APR is intentionally dynamic, allowing a market of stakers to find a balance of how much they're willing to be paid to help secure the network. When withdrawals are enabled, if the rate is too low, then validators will exit, at a rate limited by the protocol. Gradually this will raise the APR for everyone who remains, slowly attracting new or returning stakers yet again.
-</ExpandableCard>
-
-<ExpandableCard
-title="Misconception 6: &quot;Validators will not receive any liquid ETH rewards until Shanghai upgrade when withdrawals are enabled.&quot;"
-contentPreview="False. Fee tips/MEV will be credited to a Mainnet account controlled by the validator, available immediately.">
-This may seem counterintuitive to the above note that withdrawals are not enabled til Shanghai, but validators WILL have immediate access to the fee rewards/MEV earned during block proposals.
-
-ETH is issued by the protocol as a reward to validators for contributing to consensus. This _newly issued_ ETH is accounted for on the Beacon Chain (consensus layer), where a validator has a unique address that holds its staked ETH and protocol rewards. This ETH is locked until Shanghai.
-
-ETH on the _execution layer_ (Mainnet as we know it) is accounted for separately from the consensus layer. When users execute transactions that involve Mainnet, ETH must be paid to cover the gas which includes a tip to the validator. This ETH is already on the execution layer, is NOT being newly issued by the protocol, and is available to the validator immediately (given a proper `fee recipient` address is provided to the client software).
 </ExpandableCard>
 
 <ExpandableCard
