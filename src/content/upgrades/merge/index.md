@@ -52,9 +52,8 @@ For everyday users, holders, or non-node-operating stakers there is nothing you 
 <ExpandableCard
 title="Staking node operators and providers"
 contentPreview="If you are a staker running your own node setup, or a node infrastructure provider, there are a few things you need to be aware of to be prepared for The Merge."
-id="staking-node-operators"
-
-> Key action items include:
+id="staking-node-operators">
+Key action items include:
 
 - Running _both_ a consensus layer (CL) client as well as an execution layer (EL) client. Third-party endpoints to obtain execution data will be unavailable after The Merge.
 - Authenticating both EL and CL clients with a shared JWT secret so they can securely communicate with one another.
@@ -106,9 +105,8 @@ For more information, check out this blog post by Tim Beiko on [How The Merge Im
 <ExpandableCard
 title="Users and holders"
 contentPreview="You do not need to anything to protect your funds entering The Merge."
-id="users-holders"
-
-> <em>This bears repeating</em>: As a user or holder of ETH or any other digital asset on Ethereum, <strong>you do not need to do anything with your funds or wallet before The Merge.</strong>
+id="users-holders">
+<em>This bears repeating</em>: As a user or holder of ETH or any other digital asset on Ethereum, <strong>you do not need to do anything with your funds or wallet before The Merge.</strong>
 
 Despite swapping out proof-of-work, the entire history of Ethereum since genesis remains intact and unaltered after the transition to proof-of-stake. Any funds being protected by your own wallet before The Merge will still be accessible in the same manner after The Merge. No action is required to "upgrade" on your part.
 
@@ -121,18 +119,16 @@ As we approach The Merge of Ethereum Mainnet, **you should be on high alert for 
 
 <ExpandableCard
 title="&quot;The Merge will reduce gas fees.&quot;"
-contentPreview="False. The Merge is a change of consensus mechanism, not an expansion of network capacity, and will not result in lower gas fees."
-
-> Gas fees are a product of network demand relative to the capacity of the network. The Merge deprecates the use of proof-of-work, transitioning to proof-of-stake for consensus, but does not significantly change any parameters that directly influence network capacity or throughput.
+contentPreview="False. The Merge is a change of consensus mechanism, not an expansion of network capacity, and will not result in lower gas fees.">
+Gas fees are a product of network demand relative to the capacity of the network. The Merge deprecates the use of proof-of-work, transitioning to proof-of-stake for consensus, but does not significantly change any parameters that directly influence network capacity or throughput.
 
 With a [rollup-centric roadmap](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698), efforts are being focused on scaling user activity at layer 2, while enabling layer 1 Mainnet as a secure decentralized settlement layer optimized for rollup data storage to help make rollup transactions exponentially cheaper. The transition to proof-of-stake is a critical precursor to realizing this.
 </ExpandableCard>
 
 <ExpandableCard
 title="&quot;Transactions will be noticably faster after The Merge&quot;"
-contentPreview="False. Though some slight changes exist, transaction speed will mostly remain the same on layer 1."
-
-> The "speed" of a transaction can be measured a few ways, including time to be included in a block, and also time to "finalization." Both of these change slightly, but not in a way that will be felt significantly by users.
+contentPreview="False. Though some slight changes exist, transaction speed will mostly remain the same on layer 1.">
+The "speed" of a transaction can be measured a few ways, including time to be included in a block, and also time to "finalization." Both of these change slightly, but not in a way that will be felt significantly by users.
 
 Historically with proof-of-work (PoW) block times target ~13.3 seconds. On the Beacon Chain, slots occur every 12 seconds exactly, each of which is an opportunity for a validator to publish a block. Most slots have blocks, but not necessarily all (ie. a validator is offline). In most cases, blocks will be produced ~10% more frequently under PoS than under PoW, but this is a fairly insignificant change in the scaling game, and unlikely to be noticed by users.
 
@@ -143,18 +139,16 @@ Many dapps require a number of PoW block confirmations that take a period of tim
 
 <ExpandableCard
 title="&quot;You can withdraw staked ETH once The Merge occurs.&quot;"
-contentPreview="False. Staking withdrawals are not yet enabled with The Merge."
-
-> Staked ETH, staking rewards to date, and newly issued ETH immediately after The Merge will still be locked on the Beacon Chain without the ability to withdraw.
+contentPreview="False. Staking withdrawals are not yet enabled with The Merge.">
+Staked ETH, staking rewards to date, and newly issued ETH immediately after The Merge will still be locked on the Beacon Chain without the ability to withdraw.
 
 Withdrawal functionality is planned for the Shanghai upgrade to follow The Merge. This means that newly issued ETH, though accumulating on the Beacon Chain, will remain locked and illiquid for at least 6-12 months following The Merge.
 </ExpandableCard>
 
 <ExpandableCard
 title="&quot;When withdrawals are enabled, stakers will all exit at once.&quot;"
-contentPreview="False. Validator exits are rate limited for security reasons."
-
-> After the Shanghai update enabled withdrawals, all validators will be incentivized to withdraw their staking balance above 32 ETH, as these funds to not add to yield, and are otherwise locked. Depending on the APR (determined by total ETH staked), they may be incentivized to exit their validator(s) to reclaim their entire balance, or potentially to stake even more using their rewards to earn more yield.
+contentPreview="False. Validator exits are rate limited for security reasons.">
+After the Shanghai update enabled withdrawals, all validators will be incentivized to withdraw their staking balance above 32 ETH, as these funds to not add to yield, and are otherwise locked. Depending on the APR (determined by total ETH staked), they may be incentivized to exit their validator(s) to reclaim their entire balance, or potentially to stake even more using their rewards to earn more yield.
 
 An important caveat here, full validator exits are rate limited by the protocol, so only 6 validators may exit per epoch (every 6.4 minutes, so 1350/day, or only ~43,200 ETH/day, out of >10 million ETH staked). This rate limit adjusts depending on total ETH staked, and acts as a bottle neck to prevent a mass exodus of funds, and also prevents a potential attacker from using their stake to commit a slashable offense and then exiting their entire staking balance in the same epoch before the slashing penalty can be enforced.
 
@@ -163,9 +157,8 @@ The APR is intentionally dynamic, allowing a market of stakers to find a balance
 
 <ExpandableCard
 title="&quot;Validators will not receive any liquid ETH rewards until Shanghai when withdrawals are enabled.&quot;"
-contentPreview="False. Fee tips/MEV will be credited to a Mainnet account controlled by the validator, available immediately."
-
-> This may seem counterintuitive to the above note that withdrawals are not enabled til Shanghai, but validators WILL have immediate access to the fee rewards/MEV earned during block proposals.
+contentPreview="False. Fee tips/MEV will be credited to a Mainnet account controlled by the validator, available immediately.">
+This may seem counterintuitive to the above note that withdrawals are not enabled til Shanghai, but validators WILL have immediate access to the fee rewards/MEV earned during block proposals.
 
 ETH is issued by the protocol as a reward to validators for contributing to consensus. This _newly issued_ ETH is accounted for on the Beacon Chain (consensus layer), where a validator has a unique address that holds its staked ETH and protocol rewards. This ETH is locked until Shanghai.
 
@@ -184,9 +177,8 @@ Looking at recent blockchain activity, approximately 10% of all gas fees being p
 
 <ExpandableCard
 title="&quot;Running a node requires staking 32 ETH.&quot;"
-contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum, aka run a node. No ETH required—not before The Merge, not after The Merge, not ever."
-
-> There are two general types of Ethereum nodes: nodes that can propose blocks, and nodes that don't.
+contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum, aka run a node. No ETH required—not before The Merge, not after The Merge, not ever.">
+There are two general types of Ethereum nodes: nodes that can propose blocks, and nodes that don't.
 
 Nodes that can propose blocks are only a _subset_ of the total nodes on the network. This category includes mining nodes under proof-of-work (PoW), and validator nodes under proof-of-stake (PoS). This category requires committing economic resources (such as GPU hash power in PoW, or staked ETH in PoS), in exchange for the ability to occasionally propose the next block and earn protocol rewards.
 
@@ -201,9 +193,8 @@ The ability for anyone to run their own node is _absolutely essential_ to mainta
 
 <ExpandableCard
 title="&quot;The Merge will result in downtime of the chain.&quot;"
-contentPreview="False. The Merge upgrade is designed to transition to proof-of-stake with zero downtime."
-
-> An immense amount of work has been put into making sure the transition to proof-of-stake does not disrupt the network or its users.
+contentPreview="False. The Merge upgrade is designed to transition to proof-of-stake with zero downtime.">
+An immense amount of work has been put into making sure the transition to proof-of-stake does not disrupt the network or its users.
 
 The Merge is akin to changing an engine on a rocketship mid-flight, and is designed to be performed without any need to pause anything during the switch. The Merge will be triggered by what is known as a TTD, or [terminal total difficulty](/glossary/#terminal-total-difficult), which is a cumulative measure of the total mining power that has gone into building the chain. When the time comes, and this criteria is met, blocks will go from being produced using proof-of-work in one block, to being produced by proof-of-stake in the next.
 
