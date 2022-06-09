@@ -12,6 +12,7 @@ import Emoji from "./Emoji"
 import Translation from "./Translation"
 import { StyledSelect as Select } from "./SharedStyledComponents"
 import { translateMessageId } from "../utils/translations"
+import { Lang } from "../utils/languages"
 
 const Container = styled.div`
   width: 100%;
@@ -133,8 +134,18 @@ export const cardListImage = graphql`
   }
 `
 
+export interface Wallet {
+  title: string
+  description: string
+  link: string
+  image: string
+  alt: string
+}
+
+export interface IProps {}
+
 // TODO move component into get-eth.js page?
-const EthExchanges = () => {
+const EthExchanges: React.FC<IProps> = () => {
   const intl = useIntl()
   const placeholderString = translateMessageId(
     "page-get-eth-exchanges-search",
@@ -516,11 +527,15 @@ const EthExchanges = () => {
   }
 
   const lastUpdated = getLocaleTimestamp(
-    intl.locale,
+    intl.locale as Lang,
     data.timestamp.parent.fields.gitLogLatestDate
   )
 
-  const [state, setState] = useState({ selectedCountry: {} })
+  const [state, setState] = useState<{
+    selectedCountry: {
+      country?: string
+    }
+  }>({ selectedCountry: {} })
 
   const handleSelectChange = (selectedOption) => {
     trackCustomEvent({
@@ -543,9 +558,15 @@ const EthExchanges = () => {
   const exchangesArray = Object.keys(exchanges)
   const walletProvidersArray = Object.keys(walletProviders)
   // Construct arrays for CardList
-  let filteredExchanges = []
-  let filteredWalletProviders = []
-  let filteredWallets = []
+  let filteredExchanges: Array<{
+    title: string
+    description: string
+    link: string
+    image: string
+    alt: string
+  }> = []
+  let filteredWalletProviders: Array<string> = []
+  let filteredWallets: Array<Wallet> = []
 
   const hasSelectedCountry = !!state.selectedCountry.country
   if (hasSelectedCountry) {
@@ -555,7 +576,7 @@ const EthExchanges = () => {
       // Format array for <CardList/>
       .map((exchange) => {
         // Add state exceptions if Country is USA
-        let description = null
+        let description = ""
         if (
           state.selectedCountry.country ===
           translateMessageId("page-get-eth-exchanges-usa", intl)
@@ -573,6 +594,7 @@ const EthExchanges = () => {
           description,
           link: exchanges[exchange].url,
           image: getImage(exchanges[exchange].image),
+          alt: exchanges[exchange].url,
         }
       })
       .sort((a, b) => a.title.localeCompare(b.title))
@@ -593,7 +615,7 @@ const EthExchanges = () => {
             const walletObject =
               walletProviders[currentProvider].wallets[currentWallet]
             // Add state exceptions if Country is USA
-            let description = null
+            let description = ""
             if (
               state.selectedCountry.country ===
               translateMessageId("page-get-eth-exchanges-usa", intl)
@@ -614,10 +636,11 @@ const EthExchanges = () => {
               description,
               link: walletObject.url,
               image: getImage(walletObject.image),
+              alt: walletObject.url,
             })
-          }, [])
+          }, [] as Array<Wallet>)
         )
-      }, [])
+      }, [] as Array<Wallet>)
       .sort((a, b) => a.title.localeCompare(b.title))
   }
 
