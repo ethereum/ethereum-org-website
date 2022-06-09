@@ -99,7 +99,7 @@ const StablecoinAccordion: React.FC<IProps> = ({
     <Card>
       <Content>
         <TitleContainer>
-          <StyledEmoji svg text={emoji} size={4} />
+          <StyledEmoji text={emoji} size={4} />
           <Question>
             <Title>{title}</Title>
             <TextPreview>{contentPreview}</TextPreview>
