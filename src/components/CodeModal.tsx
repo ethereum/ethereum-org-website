@@ -82,8 +82,21 @@ const Overlay = ({ isActive }) => (
   />
 )
 
-const CodeModal = ({ children, className, isOpen, setIsOpen, title }) => {
-  const ref = useRef()
+export interface IProps {
+  className?: string
+  isOpen: boolean
+  setIsOpen: (boolean: boolean) => void
+  title: string
+}
+
+const CodeModal: React.FC<IProps> = ({
+  children,
+  className,
+  isOpen,
+  setIsOpen,
+  title,
+}) => {
+  const ref = useRef<HTMLInputElement>(null)
 
   // Close modal on outside clicks & `Escape` keypress
   useOnClickOutside(ref, () => setIsOpen(false))

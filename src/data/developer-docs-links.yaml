@@ -206,9 +206,9 @@
       to: /developers/docs/data-structures-and-encoding/
       description: docs-nav-data-structures-and-encoding-description
       items:
-        - id: docs-nav-data-structures-and-encoding-rlp
-          to: /developers/docs/data-structures-and-encoding/rlp/
         - id: docs-nav-data-structures-and-encoding-patricia-merkle-trie
           to: /developers/docs/data-structures-and-encoding/patricia-merkle-trie/
+        - id: docs-nav-data-structures-and-encoding-rlp
+          to: /developers/docs/data-structures-and-encoding/rlp/
         - id: docs-nav-data-structures-and-encoding-ssz
           to: /developers/docs/data-structures-and-encoding/ssz/
