@@ -4,7 +4,7 @@ import styled from "styled-components"
 import { motion } from "framer-motion"
 
 // Components
-import Translation from "../components/Translation"
+import Translation from "./Translation"
 
 // Utils
 import { trackCustomEvent } from "../utils/matomo"
@@ -89,7 +89,16 @@ const ButtonLink = styled.button`
   color: ${(props) => props.theme.colors.primary};
 `
 
-const ExpandableCard = ({
+export interface IProps {
+  contentPreview: string
+  title: string
+  svg: any
+  alt: string
+  eventCategory: string
+  eventName: string
+}
+
+const ExpandableCard: React.FC<IProps> = ({
   children,
   contentPreview,
   title,
@@ -148,8 +157,10 @@ const ExpandableCard = ({
       onClick={() => {
         // Card will not collapse if clicking on a link or selecting text
         if (
-          window.getSelection().toString().length === 0 &&
-          !window.event.target.className.includes("ExternalLink")
+          window.getSelection()?.toString().length === 0 &&
+          !(window.event?.target as HTMLDivElement)?.className.includes(
+            "ExternalLink"
+          )
         ) {
           !isVisible && trackCustomEvent(matomo)
           setIsVisible(!isVisible)
