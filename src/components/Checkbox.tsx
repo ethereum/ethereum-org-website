@@ -57,8 +57,7 @@ const Label = styled.span`
 export interface IProps {
   callback?: () => void
   checked: boolean
-  ariaContent: string
-  className: string
+  className?: string
   size?: number
 }
 
@@ -66,7 +65,6 @@ const Checkbox: React.FC<IProps> = ({
   callback,
   checked,
   children,
-  ariaContent,
   className,
   size = 2,
   ...rest

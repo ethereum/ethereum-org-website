@@ -96,10 +96,10 @@ const CodeModal: React.FC<IProps> = ({
   setIsOpen,
   title,
 }) => {
-  const ref = useRef() as React.MutableRefObject<HTMLInputElement>
+  const ref = useRef<HTMLInputElement>(null)
 
   // Close modal on outside clicks & `Escape` keypress
-  useOnClickOutside(ref, () => setIsOpen(false), [""])
+  useOnClickOutside(ref, () => setIsOpen(false))
   useKeyPress(`Escape`, () => setIsOpen(false))
 
   return (

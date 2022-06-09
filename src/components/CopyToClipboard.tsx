@@ -8,7 +8,7 @@ export interface IProps {
 
 const CopyToClipboard: React.FC<IProps> = ({ children, text }) => {
   const [isCopied, setIsCopied] = useState(false)
-  const targetEl = useRef(null)
+  const targetEl = useRef<HTMLDivElement>(null)
   const timer = useRef(0)
 
   useEffect(() => {
