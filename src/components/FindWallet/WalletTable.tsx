@@ -2,6 +2,9 @@
 import React, { useState } from "react"
 import styled from "styled-components"
 
+// Components
+import { StyledSelect as Select } from "../SharedStyledComponents"
+
 // Styles
 const Container = styled.div`
   width: 100%;
@@ -14,7 +17,7 @@ const Grid = styled.div`
 `
 
 const WalletContentHeader = styled(Grid)`
-  height: 42px;
+  height: 50px;
   border-bottom: 1px solid ${(props) => props.theme.colors.primary};
   cursor: pointer;
   position: sticky;
@@ -27,90 +30,186 @@ const WalletContentHeader = styled(Grid)`
   }
 `
 
-const FeatureDropdown = styled.div``
+// https://react-select.com/styles#using-classnames
+// Pass menuIsOpen={true} to component to debug
+const StyledSelect = styled(Select)`
+  .react-select__control {
+    border: none;
+    background: none;
+
+    .react-select__value-container {
+      .react-select__single-value {
+        color: ${(props) => props.theme.colors.primary};
+      }
+    }
+
+    .react-select__indicators {
+      .react-select__indicator-separator {
+        background: none;
+      }
+      .react-select__indicator {
+        color: ${(props) => props.theme.colors.text};
+      }
+    }
+
+    &:hover {
+      background: ${(props) => props.theme.colors.primary};
+      .react-select__value-container {
+        .react-select__single-value {
+          color: ${(props) => props.theme.colors.text};
+        }
+      }
+
+      .react-select__indicators {
+        .react-select__indicator-separator {
+          background: none;
+        }
+        .react-select__indicator {
+          color: ${(props) => props.theme.colors.text};
+        }
+      }
+    }
+  }
+
+  .react-select__control--is-focused {
+    border: none;
+    background: ${(props) => props.theme.colors.primary};
+
+    .react-select__value-container {
+      .react-select__single-value {
+        color: ${(props) => props.theme.colors.text};
+      }
+    }
+
+    .react-select__indicators {
+      background: ${(props) => props.theme.colors.primary};
+      .react-select__value-container {
+        .react-select__single-value {
+          color: ${(props) => props.theme.colors.text};
+        }
+      }
+
+      .react-select__indicators {
+        .react-select__indicator {
+          color: ${(props) => props.theme.colors.text};
+        }
+      }
+    }
+  }
+
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    .react-select__control {
+      padding: 14px 0;
+    }
+  }
+`
+
+const Wallet = styled(Grid)``
 
 // Constants
 const featureDropdownItems = [
   {
-    name: "Open source",
+    label: "Open source",
+    value: "Open source",
     filterKey: "open_source",
   },
   {
-    name: "Self custody",
+    label: "Self custody",
+    value: "Self custody",
     filterKey: "non_custodial",
   },
   {
-    name: "Hardware wallet support",
+    label: "Hardware wallet support",
+    value: "Hardware wallet support",
     filterKey: "hardware_support",
   },
   {
-    name: "WalletConnect",
+    label: "WalletConnect",
+    value: "WalletConnect",
     filterKey: "walletconnect",
   },
   {
-    name: "RPC importing",
+    label: "RPC importing",
+    value: "RPC importing",
     filterKey: "rpc_importing",
   },
   {
-    name: "NFT support",
+    label: "NFT support",
+    value: "NFT support",
     filterKey: "nft_support",
   },
   {
-    name: "Connect to dapps",
+    label: "Connect to dapps",
+    value: "Connect to dapps",
     filterKey: "connect_to_dapps",
   },
   {
-    name: "Staking",
+    label: "Staking",
+    value: "Staking",
     filterKey: "staking",
   },
   {
-    name: "Swaps",
+    label: "Swaps",
+    value: "Swaps",
     filterKey: "swaps",
   },
   {
-    name: "Layer 2",
+    label: "Layer 2",
+    value: "Layer 2",
     filterKey: "layer_2",
   },
   {
-    name: "Gas fee customization",
+    label: "Gas fee customization",
+    value: "Gas fee customization",
     filterKey: "gas_fee_customization",
   },
   {
-    name: "ENS support",
+    label: "ENS support",
+    value: "ENS support",
     filterKey: "ens_support",
   },
   {
-    name: "Buy crypto",
+    label: "Buy crypto",
+    value: "Buy crypto",
     filterKey: "buy_crypto",
   },
   {
-    name: "Token importing",
+    label: "Token importing",
+    value: "Token importing",
     filterKey: "erc_20_support",
   },
   {
-    name: "Buy crypto",
+    label: "Buy crypto",
+    value: "Buy crypto",
     filterKey: "buy_crypto",
   },
   {
-    name: "Withdraw crypto",
+    label: "Withdraw crypto",
+    value: "Withdraw crypto",
     filterKey: "withdraw_crypto",
   },
   {
-    name: "Multisig",
+    label: "Multisig",
+    value: "Multisig",
     filterKey: "multisig",
   },
   {
-    name: "Social recovery",
+    label: "Social recovery",
+    value: "Social recovery",
     filterKey: "social_recovery",
   },
 ]
 
 const WalletTable = ({ data, walletData }) => {
-  const [selectedFeatures, setSelectedFeatures] = useState([
-    featureDropdownItems[0],
-    featureDropdownItems[1],
-    featureDropdownItems[2],
-  ])
+  const [firstFeatureSelect, setFirstFeatureSelect] = useState(
+    featureDropdownItems[0]
+  )
+  const [secondFeatureSelect, setSecondFeatureSelect] = useState(
+    featureDropdownItems[1]
+  )
+  const [thirdFeatureSelect, setThirdFeatureSelect] = useState(
+    featureDropdownItems[2]
+  )
 
   return (
     <Container>
@@ -119,18 +218,47 @@ const WalletTable = ({ data, walletData }) => {
         <p>
           <span>{walletData.length} wallets</span> out of {walletData.length}
         </p>
-        <FeatureDropdown>
-          <p>{selectedFeatures[0].name}</p>
-        </FeatureDropdown>
-        <FeatureDropdown>
-          <p>{selectedFeatures[1].name}</p>
-        </FeatureDropdown>
-        <FeatureDropdown>
-          <p>{selectedFeatures[2].name}</p>
-        </FeatureDropdown>
+        <StyledSelect
+          className="react-select-container"
+          classNamePrefix="react-select"
+          options={featureDropdownItems}
+          onChange={(selectedOption) => {
+            setFirstFeatureSelect(selectedOption)
+          }}
+          defaultValue={firstFeatureSelect}
+        />
+        <StyledSelect
+          className="react-select-container"
+          classNamePrefix="react-select"
+          options={featureDropdownItems}
+          onChange={(selectedOption) => {
+            setSecondFeatureSelect(selectedOption)
+          }}
+          defaultValue={secondFeatureSelect}
+        />
+        <StyledSelect
+          className="react-select-container"
+          classNamePrefix="react-select"
+          options={featureDropdownItems}
+          onChange={(selectedOption) => {
+            setThirdFeatureSelect(selectedOption)
+          }}
+          defaultValue={thirdFeatureSelect}
+        />
       </WalletContentHeader>
       {walletData.map((wallet) => {
-        return <p>{wallet.name}</p>
+        console.log(wallet)
+        return (
+          <Wallet>
+            <div>
+              <p>{wallet.name}</p>
+            </div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </Wallet>
+        )
       })}
     </Container>
   )

@@ -79,6 +79,7 @@ const FilterTabs = styled.div`
   position: sticky;
   top: 76px;
   padding-top: 8px;
+  height: 50px;
   background: ${(props) => props.theme.colors.background};
   z-index: 1;
 `
@@ -86,7 +87,6 @@ const FilterTabs = styled.div`
 const FilterTab = styled.div<{
   active: boolean
 }>`
-  height: 34px;
   width: 50%;
   text-align: center;
   background: ${(props) =>
