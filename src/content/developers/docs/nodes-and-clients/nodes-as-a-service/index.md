@@ -44,17 +44,18 @@ Read more about the [benefits of running your own node](/developers/docs/nodes-a
 
 Here is a list of some of the most popular Ethereum node providers, feel free to add any that are missing! Each node service offers different benefits and features in addition to free or paid tiers, you should investigate which ones best suit your needs prior to making a decision.
 
-- [**Alchemy**](https://www.alchemy.com/)
+- [**Alchemy**](https://alchemy.com/)
   - [Docs](https://docs.alchemyapi.io/)
   - Features
-    - Free tier option
-    - Scale as you go
-    - Free archival data
-    - Analytics tools
-    - Dashboard
-    - Unique API endpoints
-    - Webhooks
-    - Direct support
+    - Largest free tier with 300M compute units per month (~30M getLatestBlock requests)
+    - Multichain support for Polygon, Starknet, Optimism, Arbitrum
+    - Powering ~70% of the largest Ethereum dApps and DeFi transaction volume
+    - Real-time webhook alerts via Alchemy Notify
+    - Best-in-class support and reliability / stability
+    - Alchemy's NFT API
+    - Dashboard with Request Explorer, Mempool Watcher, and Composer
+    - Integrated testnet faucet access
+    - Active Discord builder community with 18k users
 - [**Ankr**](https://www.ankr.com/)
   - [Docs](https://docs.ankr.com/)
   - Features

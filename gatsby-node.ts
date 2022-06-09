@@ -8,6 +8,8 @@ import type { GatsbyNode } from "gatsby"
 
 import type { Context } from "./src/types"
 
+import * as Schema from "./src/schema"
+
 import mergeTranslations from "./src/scripts/mergeTranslations"
 import copyContributors from "./src/scripts/copyContributors"
 
@@ -338,11 +340,7 @@ export const createPages: GatsbyNode<any, Context>["createPages"] = async ({
         )
         createPage({
           path: `/${lang}/${page}/`,
-          component: path.resolve(
-            page === "wallets"
-              ? `src/pages-conditional/${page}/index.js`
-              : `src/pages-conditional/${page}.js`
-          ),
+          component: path.resolve(`src/pages-conditional/${page}.tsx`),
           context: {
             slug: `/${lang}/${page}/`,
             intl: {
@@ -394,54 +392,14 @@ export const onCreatePage: GatsbyNode<any, Context>["onCreatePage"] = async ({
 }
 
 export const createSchemaCustomization: GatsbyNode["createSchemaCustomization"] =
-  ({ actions }) => {
+  ({ actions, schema }) => {
     const { createTypes } = actions
-    const typeDefs = `
-    type Mdx implements Node {
-      frontmatter: Frontmatter
-    }
-    type Frontmatter {
-      sidebar: Boolean
-      sidebarDepth: Int
-      incomplete: Boolean
-      template: String
-      summaryPoint1: String!
-      summaryPoint2: String!
-      summaryPoint3: String!
-      summaryPoint4: String!
-      position: String
-      compensation: String
-      location: String
-      type: String
-      link: String
-      address: String
-      skill: String
-      published: String
-      sourceUrl: String
-      source: String
-      author: String
-      tags: [String]
-      isOutdated: Boolean
-    }
-    type ConsensusBountyHuntersCsv implements Node {
-      username: String,
-      name: String,
-      score: Int
-    }
-     type ExecutionBountyHuntersCsv implements Node {
-      username: String,
-      name: String,
-      score: Int
-    }
-  `
-    createTypes(typeDefs)
+    const { sdls, builders } = Schema
 
-    // Optimization. Ref: https://www.gatsbyjs.com/docs/scaling-issues/#switch-off-type-inference-for-sitepagecontext
-    createTypes(`
-    type SitePage implements Node @dontInfer {
-      path: String!
-    }
-  `)
+    createTypes([
+      ...Object.keys(sdls).map((sdlKey) => sdls[sdlKey]),
+      schema.buildObjectType(builders.WalletsCsv),
+    ])
   }
 
 export const onPreBootstrap: GatsbyNode["onPreBootstrap"] = ({ reporter }) => {
