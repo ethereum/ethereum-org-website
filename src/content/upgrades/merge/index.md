@@ -188,7 +188,7 @@ ETH on the _execution layer_ (Mainnet as we know it) is accounted for separately
 <ExpandableCard
 title="Misconception 7: &quot;Staking APR is expected to triple after The Merge.&quot;"
 contentPreview="False. More up-to-date estimations predict closer to a 50% increase in APR post-merge, not a 200% increase.">
-The APR for stakers is expected to increase post-merge. To understand by how much, it is important to recognize where this increase in APR is coming from. This does not come from an increase in protocol ETH issuance (ETH issuance after The Merge is in fact decreasing by ~90%), but is instead a reallocation of transaction fees that will start going to validators instead of miners.
+The APR for stakers is expected to increase post-merge. To understand by how much, it is important to recognize where this increase in APR is coming from. This does not come from an increase in protocol ETH issuance (<a href="/upgrades/merge/eth-issuance/">ETH issuance after The Merge</a> is in fact decreasing by ~90%), but is instead a reallocation of transaction fees that will start going to validators instead of miners.
 
 This will be a new separate source of revenue for validators when they propose blocks. As you can imagine, the amount of fees a validator receives is proportional to network activity at the time of their proposed block. The more fees being paid by users, the more fees validators will receive.
 
