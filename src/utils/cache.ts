@@ -33,13 +33,12 @@ export const writeToCache = <T>(key: string, value: T): void => {
  * with an empty value and timestamp set to 0
  * @see CacheStorage
  * @param {string} key stored in the local storage
- * @returns
+ * @returns {CacheStorage<T>} element stored in browser local storage
  */
 const readFromCache = <T>(key: string): CacheStorage<T> => {
-  return (
-    JSON.parse(localStorage.getItem(key) || stringifyEmptyCacheItemStorage) ||
-    emptyCacheItemStorage
-  )
+  return JSON.parse(
+    localStorage.getItem(key) || stringifyEmptyCacheItemStorage
+  ) as CacheStorage<T>
 }
 
 /**
