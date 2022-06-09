@@ -15,7 +15,7 @@ You should understand the [basics of Ethereum](/developers/docs/intro-to-ethereu
 
 ## Public networks {#public-networks}
 
-Public networks are accessible to anyone in the world with an internet connection. Anyone can read or create transactions on a public blockchain and validate the transactions being executed. A consensus of peers decides on agreement of transactions and the state of the network.
+Public networks are accessible to anyone in the world with an internet connection. Anyone can read or create transactions on a public blockchain and validate the transactions being executed. The consensus among peers decides on the inclusion of transactions and the state of the network.
 
 ### Ethereum Mainnet {#ethereum-mainnet}
 
