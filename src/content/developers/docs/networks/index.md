@@ -27,7 +27,7 @@ When people and exchanges discuss ETH prices, they're talking about Mainnet ETH.
 
 In addition to Mainnet, there are public testnets. These are networks used by protocol developers or smart contract developers to test both protocol upgrades as well as potential smart contracts in a production-like environment before deployment to Mainnet. Think of this as an analog to production versus staging servers.
 
-We advise you to test any contract code you write on a testnet before deploying to the Mainnet. Among dapps that integrate with existing smart contracts, most projects have copies deployed to testnets.
+You should test any contract code you write on a testnet before deploying to Mainnet. Among dapps that integrate with existing smart contracts, most projects have copies deployed to testnets.
 
 Most testnets use a proof-of-authority consensus mechanism. This means a small number of nodes are chosen to validate transactions and create new blocks – staking their identity in the process. Testnets do not incentivize proof-of-work mining, which can leave them vulnerable.
 
@@ -35,7 +35,7 @@ ETH on testnets has no real value; therefore, there are no markets for testnet E
 
 #### Sepolia {#sepolia}
 
-A proof-of-work testnet that has the best available like-for-like representation of Ethereum.
+A proof-of-work testnet. The best like-for-like representation of Ethereum Mainnet.
 
 - [Website](https://sepolia.dev/)
 - [Github](https://github.com/goerli/sepolia)
@@ -133,7 +133,7 @@ There are projects and tools dedicated to assist with this. Learn more about [de
 
 ### Consortium networks {#consortium-networks}
 
-The consensus process is controlled by a pre-defined set of nodes that are trusted -- for example, a private network of known academic institutions that each govern a single node, and blocks are validated by a threshold of signatories within the network.
+The consensus process is controlled by a pre-defined set of nodes that are trusted. For example, a private network of known academic institutions that each govern a single node, and blocks are validated by a threshold of signatories within the network.
 
 If a public Ethereum network is like the public internet, a consortium network is like a private intranet.
 
