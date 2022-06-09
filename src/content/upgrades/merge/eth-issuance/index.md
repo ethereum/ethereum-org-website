@@ -39,8 +39,6 @@ Issuance of new ETH on this chain is rewarded to validators for properly attesti
 
 Total ETH supply: **~119,300,000 ETH** (as of Q2 2022)
 
-<!-- DELETE ME // 86400 seconds per day, 31536000 sec/year -->
-
 **EL issuance:** <br/>
 
 - Estimating at 2.08 ETH per 13.3 seconds\*: **~4,930,000** ETH issued in a year
