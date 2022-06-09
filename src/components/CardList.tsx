@@ -3,6 +3,7 @@ import styled from "styled-components"
 import { GatsbyImage } from "gatsby-plugin-image"
 
 import Link from "./Link"
+import { ImageProp } from "../types"
 
 const Table = styled.div`
   background-color: ${(props) => props.theme.colors.background};
@@ -71,7 +72,25 @@ const Image = styled(GatsbyImage)`
   margin-top: 4px;
 `
 
-const CardList = ({ content, className, clickHandler }) => (
+export type CardListItem = {
+  title: string
+  description?: string
+  caption?: string
+  link?: string
+  id?: string | number
+} & ImageProp
+
+export interface IProps {
+  content: Array<CardListItem>
+  className?: string
+  clickHandler?: (idx: string | number) => void
+}
+
+const CardList: React.FC<IProps> = ({
+  content,
+  className,
+  clickHandler = () => null,
+}) => (
   <Table className={className}>
     {content.map((listItem, idx) => {
       const { title, description, caption, link, image, alt, id } = listItem
