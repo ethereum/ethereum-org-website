@@ -343,7 +343,7 @@ const EthPage = (props: PageProps<Queries.EthPageQuery, Context>) => {
           <p>
             <Translation id="page-eth-whats-unique-desc" />
           </p>
-          <EthVideo alt={translateMessageId("page-eth-video-alt", intl)} />
+          <EthVideo />
           <div>
             <H4>
               <Translation id="page-eth-fuels" />
