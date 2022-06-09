@@ -103,7 +103,7 @@ export interface IProps {
   contentPreview: string
   background: string
   forceOpen: boolean
-  className: string
+  className?: string
 }
 
 const ExpandableInfo: React.FC<IProps> = ({
