@@ -46,7 +46,13 @@ Kiln is a public testnet specifically designed for testing The Merge. Ethereum o
 
 The Kiln Raspberry Pi 4 image is a "plug and play" image that automatically installs and sets up both the execution and consensus clients, configuring them to talk to each other and connect to the Kiln network. All the user needs to do is start their processes using a simple command. The image contains four execution clients (Geth, Nethermind, Besu and Erigon) and four consensus clients (Lighthouse, Prysm, Nimbus, Teku) that the user can choose from.
 
-Download the Raspberry Pi image from [Ethereum on Arm](https://ethereumonarm-my.sharepoint.com/:u:/p/dlosada/ES56R_SuvaVFkiMO1Tgnf6kB7lEbBfla5c2c18E3WQRJzA?download=1) and verify the file with the following SH256 hash: `485cf36128ca60a41b5de82b5fee3ee46b7c479d0fc5dfa5b9341764414c4c57`.
+Download the Raspberry Pi image from [Ethereum on Arm](https://ethereumonarm-my.sharepoint.com/:u:/p/dlosada/ES56R_SuvaVFkiMO1Tgnf6kB7lEbBfla5c2c18E3WQRJzA?download=1) and verify the SHA256 hash:
+
+```sh
+# From directory containing the downloaded image
+shasum -a 256 ethonarm_kiln_22.03.01.img.zip
+# Hash should output: 485cf36128ca60a41b5de82b5fee3ee46b7c479d0fc5dfa5b9341764414c4c57
+```
 
 Note that for users that do not own a Raspberry Pi but do have an AWS account, there are ARM instances available that can run the same image. Instructions and the AWS image are available to download from Ethereum on Arm (https://ethereum-on-arm-documentation.readthedocs.io/en/latest/kiln/kiln-testnet.html).
 
