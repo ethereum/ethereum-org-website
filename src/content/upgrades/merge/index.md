@@ -121,7 +121,7 @@ This will also set the stage for further scalability upgrades not possible under
 ## Misconceptions about The Merge {#misconceptions}
 
 <ExpandableCard
-title="Misconception 1: &quot;Running a node requires staking 32 ETH.&quot;"
+title="Misconception: &quot;Running a node requires staking 32 ETH.&quot;"
 contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum, aka run a node. No ETH required—not before The Merge, not after The Merge, not ever.">
 There are two general types of Ethereum nodes: nodes that can propose blocks, and nodes that don't.
 
@@ -138,7 +138,7 @@ The ability for anyone to run their own node is _absolutely essential_ to mainta
 </ExpandableCard>
 
 <ExpandableCard
-title="Misconception 2: &quot;The Merge will reduce gas fees.&quot;"
+title="Misconception: &quot;The Merge will reduce gas fees.&quot;"
 contentPreview="False. The Merge is a change of consensus mechanism, not an expansion of network capacity, and will not result in lower gas fees.">
 Gas fees are a product of network demand relative to the capacity of the network. The Merge deprecates the use of proof-of-work, transitioning to proof-of-stake for consensus, but does not significantly change any parameters that directly influence network capacity or throughput.
 
@@ -146,7 +146,7 @@ With a [rollup-centric roadmap](https://ethereum-magicians.org/t/a-rollup-centri
 </ExpandableCard>
 
 <ExpandableCard
-title="Misconception 3: &quot;Transactions will be noticeably faster after The Merge&quot;"
+title="Misconception: &quot;Transactions will be noticeably faster after The Merge&quot;"
 contentPreview="False. Though some slight changes exist, transaction speed will mostly remain the same on layer 1.">
 The "speed" of a transaction can be measured a few ways, including time to be included in a block, and also time to "finalization." Both of these change slightly, but not in a way that will be felt significantly by users.
 
@@ -158,7 +158,7 @@ Many dapps require a number of PoW block confirmations that take a period of tim
 </ExpandableCard>
 
 <ExpandableCard
-title="Misconception 4: &quot;You can withdraw staked ETH once The Merge occurs.&quot;"
+title="Misconception: &quot;You can withdraw staked ETH once The Merge occurs.&quot;"
 contentPreview="False. Staking withdrawals are not yet enabled with The Merge. These will have to wait until the Shanghai upgrade to follow.">
 Staked ETH, staking rewards to date, and newly issued ETH immediately after The Merge will still be locked on the Beacon Chain without the ability to withdraw.
 
@@ -166,7 +166,7 @@ Withdrawal functionality is planned for the **Shanghai upgrade** to follow The M
 </ExpandableCard>
 
 <ExpandableCard
-title="Misconception 5: &quot;Validators will not receive any liquid ETH rewards til the Shanghai upgrade when withdrawals are enabled.&quot;"
+title="Misconception: &quot;Validators will not receive any liquid ETH rewards til the Shanghai upgrade when withdrawals are enabled.&quot;"
 contentPreview="False. Fee tips/MEV will be credited to a Mainnet account controlled by the validator, available immediately.">
 This may seem counterintuitive to the above note that withdrawals are not enabled til the Shanghai upgrade, but validators WILL have immediate access to the fee rewards/MEV earned during block proposals.
 
@@ -176,7 +176,7 @@ ETH on the _execution layer_ (Mainnet as we know it) is accounted for separately
 </ExpandableCard>
 
 <ExpandableCard
-title="Misconception 6: &quot;When withdrawals are enabled, stakers will all exit at once.&quot;"
+title="Misconception: &quot;When withdrawals are enabled, stakers will all exit at once.&quot;"
 contentPreview="False. Validator exits are rate limited for security reasons.">
 After the Shanghai upgrade enabled withdrawals, all validators will be incentivized to withdraw their staking balance above 32 ETH, as these funds to not add to yield, and are otherwise locked. Depending on the APR (determined by total ETH staked), they may be incentivized to exit their validator(s) to reclaim their entire balance, or potentially to stake even more using their rewards to earn more yield.
 
@@ -186,7 +186,7 @@ The APR is intentionally dynamic, allowing a market of stakers to find a balance
 </ExpandableCard>
 
 <ExpandableCard
-title="Misconception 7: &quot;Staking APR is expected to triple after The Merge.&quot;"
+title="Misconception: &quot;Staking APR is expected to triple after The Merge.&quot;"
 contentPreview="False. More up-to-date estimations predict closer to a 50% increase in APR post-merge, not a 200% increase.">
 The APR for stakers is expected to increase post-merge. To understand by how much, it is important to recognize where this increase in APR is coming from. This does not come from an increase in protocol ETH issuance (<a href="/upgrades/merge/eth-issuance/">ETH issuance after The Merge</a> is in fact decreasing by ~90%), but is instead a reallocation of transaction fees that will start going to validators instead of miners.
 
@@ -196,7 +196,7 @@ Looking at recent blockchain activity, approximately 10% of all gas fees being p
 </ExpandableCard>
 
 <ExpandableCard
-title="Misconception 8: &quot;The Merge will result in downtime of the chain.&quot;"
+title="Misconception: &quot;The Merge will result in downtime of the chain.&quot;"
 contentPreview="False. The Merge upgrade is designed to transition to proof-of-stake with zero downtime.">
 An immense amount of work has been put into making sure the transition to proof-of-stake does not disrupt the network or its users.
 
