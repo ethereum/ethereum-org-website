@@ -6,6 +6,7 @@ import Emoji from "./Emoji"
 import Translation from "./Translation"
 
 import docLinks, { DeveloperDocsLink } from "../data/developer-docs-links.yaml"
+import { TranslationKey } from "../utils/translations"
 
 const Container = styled.div`
   display: flex;
@@ -80,7 +81,7 @@ const UppercaseSpan = styled.span`
 
 export interface DocsArrayProps {
   to: string
-  id: string
+  id: TranslationKey
 }
 
 export interface IProps {
