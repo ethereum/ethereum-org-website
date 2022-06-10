@@ -98,7 +98,7 @@ sudo journalctl -u geth-lh -f
 sudo journalctl -u lh-geth-beacon -f
 ```
 
-The specific service names for every combination of clients are available at the [Ethereum on Arm docs](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/kiln/kiln-testnet.html#id2). Theyu can be used to update the commands provided here for any combination.
+The specific service names for every combination of clients are available at the [Ethereum on Arm docs](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/kiln/kiln-testnet.html#id2). They can be used to update the commands provided here for any combination.
 
 ## Validators {#validators}
 
@@ -114,7 +114,7 @@ Keep the mnemonic phrase safe! The command above generated two files in the node
 
 Once the deposit data file is available on the computer running the launchpad, it can be dragged and dropped onto the `+` on the launchpad screen. Follow the instructions on the screen to send a transaction to the deposit contract.
 
-Back on the Raspberry Pi, a validator cna be started. This requires importing the validator keys, setting the address to collect rewards, then starting the preconfigured validator process. The example below is for Lighthouse - instructions for other consensus clients are available on the [Ethereum on Arm docs](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/kiln/kiln-testnet.html#lighthouse):
+Back on the Raspberry Pi, a validator can be started. This requires importing the validator keys, setting the address to collect rewards, then starting the preconfigured validator process. The example below is for Lighthouse—instructions for other consensus clients are available on the [Ethereum on Arm docs](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/kiln/kiln-testnet.html#lighthouse):
 
 ```shell
 # import the validator keys
@@ -132,7 +132,7 @@ Congratulations, you now have a full Ethereum node and validator running on a Ra
 ## Feedback appreciated {#feedback-appreciated}
 
 We know the Raspberry Pi has a massive user base that could have a very positive impact on the health of the Ethereum network.
-Please dig into the details in this tutorial, try running on other testnets or even Ethereum Mainnet, check out the Ethereum on Arm Github, gvie feedback, raise issues and pull requests and help advance the technology and documentation!
+Please dig into the details in this tutorial, try running on other testnets or even Ethereum Mainnet, check out the Ethereum on Arm Github, give feedback, raise issues and pull requests and help advance the technology and documentation!
 
 ## References {#references}
 
