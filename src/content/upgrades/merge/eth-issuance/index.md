@@ -21,17 +21,17 @@ We can break the supply of ETH into two primary forces: issuance, and burn.
 
 The **issuance** of ETH is the process of creating ETH that did not previously exist on the balance sheet, while the **burning** of ETH refers to when existing ETH is permanently removed from circulation. The rate of each of these fluctuates based on a number of parameters, and the balance between them determines the resulting inflation/deflation rate of ether.
 
-The way ETH is issued will undergo some changes at time of The Merge. Currently, new ETH is issued from two main sources: the execution layer (EL, i.e. Mainnet) and the consensus layer (CL, i.e. Beacon Chain). After The Merge, issuance from the execution layer will go to zero. Let's break this down.
+The way ETH is issued will undergo some changes at time of The Merge. Currently, new ETH is issued from two main sources: the execution layer (i.e. Mainnet) and the consensus layer (i.e. Beacon Chain). After The Merge, issuance from the execution layer will go to zero. Let's break this down.
 
 ## Pre-merge {#pre-merge}
 
-### EL Issuance {#el-issuance-pre-merge}
+### Execution layer issuance {#el-issuance-pre-merge}
 
-Under proof-of-work, miners only interact with the EL, and are rewarded in the form of block rewards being the first to solve blocks. Since the [Constantinople upgrade](/history/#constantinople) on Feb-28-2019 this reward has been 2 ETH per block. Miners are also rewarded for publishing [ommer](/glossary/#ommer) blocks, which are valid blocks that don't end up in the longest/canonical chain. These rewards max out at 1.75 ETH per ommer, and are _in addition to_ the reward issued from the canonical block. Mining is an economically intensive activity, which requires high levels of ETH issuance to sustain.
+Under proof-of-work, miners only interact with the execution layer, and are rewarded in the form of block rewards being the first to solve blocks. Since the [Constantinople upgrade](/history/#constantinople) in 2019 this reward has been 2 ETH per block. Miners are also rewarded for publishing [ommer](/glossary/#ommer) blocks, which are valid blocks that don't end up in the longest/canonical chain. These rewards max out at 1.75 ETH per ommer, and are _in addition to_ the reward issued from the canonical block. Mining is an economically intensive activity, which requires high levels of ETH issuance to sustain.
 
-### CL Issuance {#cl-issuance-pre-merge}
+### Consensus layer issuance {#cl-issuance-pre-merge}
 
-The [Beacon Chain](/history/#beacon-chain-genesis) has been live since Dec-01-2020, which is secured by proof-of-stake validators, not miners. This chain was bootstrapped by Ethereum users depositing ETH one-way into a smart contract on Mainnet, which the Beacon Chain listens to, crediting the user with an equal amount on the new chain. Right now these validators are not processing transactions, and are essentially coming to consensus on the state of the validator pool itself.
+The [Beacon Chain](/history/#beacon-chain-genesis) has been live since 2020, which is secured by proof-of-stake validators, not miners. This chain was bootstrapped by Ethereum users depositing ETH one-way into a smart contract on Mainnet, which the Beacon Chain listens to, crediting the user with an equal amount on the new chain. Right now these validators are not processing transactions, and are essentially coming to consensus on the state of the validator pool itself.
 
 Issuance of new ETH on this chain is rewarded to validators for properly attesting to the state of the chain, and is also rewarded when a validator proposes a block. Rewards (or penalties) are calculated and distributed every epoch (6.4 minutes) based on validator performance for that time period. These rewards are _significantly_ lower than the 2 ETH being issued under proof-of-work today every ~13.5 seconds, as operating a validating node is not an economically intense activity, thus does not require or warrant as high a reward.
 
@@ -39,33 +39,33 @@ Issuance of new ETH on this chain is rewarded to validators for properly attesti
 
 Total ETH supply: **~119,300,000 ETH** (as of Q2 2022)
 
-**EL issuance:** <br/>
+**Execution layer issuance:** <br/>
 
 - Estimating at 2.08 ETH per 13.3 seconds\*: **~4,930,000** ETH issued in a year
 - Currently inflating at **~4.13%** (4.93M per year / 119.3M total)
 - \*This includes the 2 ETH per canonical block, plus an average of 0.08 ETH over time from ommer blocks. Also uses 13.3 second, the baseline block time target without any influence from a [difficulty bomb](/glossary/#difficulty-bomb). ([See source](https://bitinfocharts.com/ethereum/))
 
-**CL issuance:**
+**Consensus layer issuance:**
 
-- Using 13,000,000 total ETH staked, the rate of ETH issuance is ~1600 ETH/day ([SeeSource](https://ultrasound.money/))
+- Using 13,000,000 total ETH staked, the rate of ETH issuance is ~1600 ETH/day ([See source](https://ultrasound.money/))
 - Results in **~584,000** ETH issued in a year
 - Currently inflating at **~0.49%** (584K per year / 119.3M total)
 
 <InfoBanner>
 <strong>Total annual issuance rate: ~4.62%</strong> (4.13% + 0.49%)
 
-**~89.4%** of the issuance is going to miners on the EL (4.13 / 4.62 \* 100)
+**~89.4%** of the issuance is going to miners on the execution layer (4.13 / 4.62 \* 100)
 
-**~10.6%** is being issued to stakers on the CL (0.49 / 4.62 \* 100)
+**~10.6%** is being issued to stakers on the consensus layer (0.49 / 4.62 \* 100)
 </InfoBanner>
 
 ## Post-merge {#post-merge}
 
-### EL Issuance {#el-issuance-post-merge}
+### Execution layer issuance {#el-issuance-post-merge}
 
-Will be zero. Proof-of-work will no longer be valid under the rules of consensus, and all EL activity will be included in "beacon blocks" which are published and attested to by proof-of-stake validators.
+Will be zero. Proof-of-work will no longer be valid under the rules of consensus, and all execution layer activity will be included in "beacon blocks" which are published and attested to by proof-of-stake validators.
 
-### CL Issuance {#cl-issuance-post-merge}
+### Consensus layer issuance {#cl-issuance-post-merge}
 
 Will continue as it was, with small rewards for attesting-to and proposing blocks. These rewards will continue to accrue to _validator balances_ that are managed within the consensus layer. These are separate Ethereum accounts to the accounts we're used to on Mainnet, and until the Shanghai upgrade funds from validator accounts will not be withdrawable/transferrable. This means that although new ETH is still being issued, 100% of it will be locked from the market until this upgrade occurs. When the Shanghai upgrade is rolled out, this ETH will become available.
 
@@ -76,8 +76,8 @@ Stakers may also choose to exit and withdrawal their entire validator balance, b
 ### Post-merge inflation breakdown {#post-merge-inflation-breakdown}
 
 - Total ETH supply: **~119,300,000 ETH** (as of Q2 2022)
-- EL issuance: **0**
-- CL issuance: Same as above, **~0.49%** annual issuance rate (with 13 million ETH staked)
+- Execution layer issuance: **0**
+- Consensus layer issuance: Same as above, **~0.49%** annual issuance rate (with 13 million ETH staked)
 - Total annual issuance rate: **~0.49%**
 
 <InfoBanner>
