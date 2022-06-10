@@ -12,7 +12,7 @@ summaryPoint4: With The Merge, Ethereum's energy consumption drops by 99.95%. We
 ---
 
 <UpgradeStatus dateKey="page-upgrades-merge-date">
-The Merge is one of the most significant and high-stakes upgrades in the history of Ethereum. Extensive testing and bug bounties have been underway for years to ensure a safe transition to proof-of-stake.
+The Merge is the most significant and high-stakes upgrade in the history of Ethereum. Extensive testing and bug bounties were undertaken to ensure a safe transition to proof-of-stake.
 
 This process is in its final stages, with plans to undergo The Merge on a few public testnets before finally moving forward with Mainnet. If you’re as excited about The Merge as we are, follow the [EF Blog](https://blog.ethereum.org) or the client communication channels for the latest official word on _When Merge?_
 </UpgradeStatus>
@@ -23,13 +23,13 @@ The Merge represents the merger of the existing execution layer of Ethereum (the
 
 It's important to remember that initially, the [Beacon Chain](/upgrades/beacon-chain/) (the new "consensus layer") shipped separately from [Mainnet](/glossary/#mainnet). Ethereum Mainnet (the "execution layer") continues to be secured by [proof-of-work](/developers/docs/consensus-mechanisms/pow/), even while the Beacon Chain runs in parallel using [proof-of-stake](/developers/docs/consensus-mechanisms/pos/). The approaching Merge is when these two systems finally come together, and proof-of-work is replaced permanently by proof-of-stake.
 
-Imagine Ethereum is a space ship that isn’t quite ready for an interstellar voyage. With the Beacon Chain the community has built a new engine and a hardened hull. After significant testing, it's almost time to hot-swap in the new engine for the old mid-flight. This will merge the new more efficient engine into the existing ship, ready to put in some serious lightyears and take on the universe.
+Let's consider an example. Imagine Ethereum is a spaceship that isn't quite ready for an interstellar voyage. With the Beacon Chain, the community has built a new engine and a hardened hull. After significant testing, it's almost time to hot-swap the new engine for the old mid-flight. This will merge the new, more efficient engine into the existing ship, ready to put in some serious lightyears and take on the universe.
 
 ## Merging with Mainnet {#merging-with-mainnet}
 
-Since genesis, Mainnet has been secured by proof-of-work. This is the main Ethereum blockchain that we're all used to—it contains every transaction, every smart contract, and every balance since it began in July 2015.
+Since genesis, Mainnet has been secured by proof-of-work. This is the main Ethereum blockchain we're all used to—it contains every transaction, smart contract, and balance since it began in July 2015.
 
-During this growing history, developers have been hard at work preparing for an eventual transition away from proof-of-work, to proof-of-stake instead. On December 1, 2020 the Beacon Chain was born, which has since lived as a separate blockchain to Mainnet, running in parallel.
+During this growing history, developers have been hard at work preparing for an eventual transition away from proof-of-work to proof-of-stake instead. On December 1, 2020, the Beacon Chain was created, which has since existed as a separate blockchain to Mainnet, running in parallel.
 
 The Beacon Chain has not been processing Mainnet transactions, and for all intents and purposed has simply been coming to consensus on the state of itself... which is great and all, but after extensive testing, the time for it to come to consensus on more than just itself is rapidly approaching.
 
