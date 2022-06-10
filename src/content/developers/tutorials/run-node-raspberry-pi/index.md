@@ -24,11 +24,11 @@ To use Ethereum on Arm to turn a Raspberry Pi into an Ethereum node, the followi
 - A case with heatsink and fan
 - USB keyboard, Monitor and HDMI cable (micro-HDMI) (Optional)
 
-## Why run Ethereum on ARM?
+## Why run Ethereum on ARM? {#why-run-ethereum-on-arm}
 
 ARM boards are very affordable, flexible, small computers. They are good choices for running Ethereum nodes because they can be bought cheaply, configured so that all their resources focus just on the node, making them efficient, they consume low amounts of power and have are physically small so they can fit unobtrusively in any home. It is also very easy to spin up nodes because the Raspberry Pi's MicroSD can simply be flashed with a prebuilt image, with no downloading or building software required.
 
-## How does it work?
+## How does it work? {#how-does-it-work}
 
 The Raspberry Pi's memory card is flashed with a prebuilt image. This image contains everything needed to run an Ethereum node. With a flashed card, all the user needs to do is power-on the Raspberry Pi. All the processes required to run the node are automatically started. This works because the memory card contains a Linux-based operating system (OS) on top of which system-level processes are automatically run that turn the unit into an Ethereum node.
 
@@ -36,11 +36,11 @@ Ethereum cannot be run using the popular Raspberry Pi Linux OS "Raspbian" becaus
 
 **Images take care of all the necessary steps**, from setting up the environment and formatting the SSD disk to installing and running the Ethereum software as well as starting the blockchain synchronization.
 
-## Note on execution and consensus clients
+## Note on execution and consensus clients {#note-on-execution-and-consensus-clients}
 
 The Ethereum on Arm documentation explains how to set up _either_ an execution client OR a consensus client, except for two Ethereum testnets (Kiln and Ropsten). This optionality is only possible in advance of Ethereum's upcoming transition from proof-of-work (PoW) to proof-of-stake (PoS) known as [The Merge](/upgrades/merge). After The Merge, it will not be possible to run execution and consensus clients separately - they must be run as a pair. Therefore, in this tutorial we will run a pair of execution and consensus clients together on an Ethereum testnet (Kiln).
 
-## The Kiln Raspberry Pi 4 Image
+## The Kiln Raspberry Pi 4 Image {#the-kiln-raspberry-pi-4-image}
 
 Kiln is a public testnet specifically designed for testing The Merge. Ethereum on Arm developed an image allowing users to rapidly spin up a pair of Ethereum clients on this merge testnet. The Kiln merge has already happened, but the network is still live, so it can be used for this tutorial. Ether on Kiln has no real-world value.
 
@@ -50,7 +50,7 @@ Download the Raspberry Pi image from [Ethereum on Arm](https://ethereumonarm-my.
 
 Note that for users that do not own a Raspberry Pi but do have an AWS account, there are ARM instances available that can run the same image. Instructions and the AWS image are available to download from Ethereum on Arm (https://ethereum-on-arm-documentation.readthedocs.io/en/latest/kiln/kiln-testnet.html).
 
-## Flashing the MicroSD
+## Flashing the MicroSD {#flashing-the-microsd}
 
 The MicroSD card that will be used for the Raspberry Pi should first be inserted into a desktop or laptop so it can be flashed. Then, the following terminal commands will flash the downloaded image onto the SD card:
 
@@ -71,7 +71,7 @@ sudo dd bs=1M if=ethonarm_kiln_22.03.01.img of=/dev/mmcblk0 conv=fdatasync statu
 
 The card is now flashed, so it can be inserted into the Raspberry Pi.
 
-## Start the node
+## Start the node {#start-the-node}
 
 With the SD card inserted into the Raspberry Pi, connect the ethernet cable and SSD then switch the power on. The OS will boot up and automatically start performing the preconfigured tasks that turn the Raspberry Pi into an Ethereum node, including installing and building the client software. This will probably take 10-15 minutes.
 
@@ -100,7 +100,7 @@ sudo journalctl -u lh-geth-beacon -f
 
 The specific service names for every combination of clients are available at the [Ethereum on Arm docs](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/kiln/kiln-testnet.html#id2). Theyu can be used to update the commands provided here for any combination.
 
-## Validators
+## Validators {#validators}
 
 In order to run a validator it is first necessary to deposit 32 test-ether into the Kiln deposit contract. This means the user must have access to an account containing 32 ETH. This can be done by following the step-by-step guide on the [Kiln Launchpad](https://kiln.launchpad.ethereum.org/en/). Do this on a desktop/laptop, built do not generate keys - this can be done directly on the Raspberry Pi.
 
