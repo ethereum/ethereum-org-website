@@ -15,6 +15,7 @@ import {
 import {
   MdAdd,
   MdBrightness2,
+  MdCircle,
   MdClose,
   MdDone,
   MdExpandLess,
@@ -56,6 +57,7 @@ const Icon: React.FC<IProps> = ({
     {name === "add" && <MdAdd />}
     {name === "chevronUp" && <MdExpandLess />}
     {name === "chevronDown" && <MdExpandMore />}
+    {name === "circle" && <MdCircle />}
     {name === "arrowRight" && <MdArrowForward />}
     {name === "close" && <MdClose />}
     {name === "darkTheme" && <MdBrightness2 />}

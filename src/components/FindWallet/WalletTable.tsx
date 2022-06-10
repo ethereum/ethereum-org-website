@@ -1,8 +1,11 @@
 // Libraries
 import React, { useState } from "react"
+import { getImage, GatsbyImage } from "gatsby-plugin-image"
 import styled from "styled-components"
 
 // Components
+import Icon from "../Icon"
+import Link from "../Link"
 import { StyledSelect as Select } from "../SharedStyledComponents"
 
 // Styles
@@ -104,7 +107,41 @@ const StyledSelect = styled(Select)`
   }
 `
 
-const Wallet = styled(Grid)``
+const Wallet = styled(Grid)`
+  padding: 25px 4px;
+  border-bottom: 1px solid ${(props) => props.theme.colors.lightBorder};
+`
+
+const FlexInfo = styled.div`
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+
+  p {
+    margin: 0;
+    padding: 0;
+  }
+`
+
+const Image = styled(GatsbyImage)`
+  height: 56px;
+  width: 56px;
+`
+
+const SecondaryText = styled.p`
+  font-size: 14px;
+  line-height: 14px;
+  color: ${(props) => props.theme.colors.text200};
+`
+
+const WalletFeatureCircle = styled(Icon)<{ hasFeature: boolean }>`
+  fill: ${(props) =>
+    props.hasFeature ? props.theme.colors.primary : props.theme.colors.text200};
+`
+
+const WalletMoreInfoArrow = styled(Icon)`
+  fill: ${(props) => props.theme.colors.primary};
+`
 
 // Constants
 const featureDropdownItems = [
@@ -247,16 +284,50 @@ const WalletTable = ({ data, walletData }) => {
         />
       </WalletContentHeader>
       {walletData.map((wallet) => {
-        console.log(wallet)
+        const test = `${wallet.ios ? "iOS" : ""} 
+        ${wallet.android ? "Android" : ""} 
+        ${wallet.linux ? "Linux" : 0} 
+        ${wallet.windows ? "Windows" : 0} 
+        ${wallet.macOS ? "macOS" : ""} 
+        ${wallet.chromium ? "Chromium" : ""} 
+        ${wallet.firefox ? "Firefox" : ""} 
+        ${wallet.hardware ? "Hardware" : ""}`
         return (
           <Wallet>
-            <div>
-              <p>{wallet.name}</p>
-            </div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+            <FlexInfo>
+              <div>
+                <Image
+                  image={getImage(data[wallet.image_name])!}
+                  objectFit="contain"
+                />
+              </div>
+              <div>
+                <p>{wallet.name}</p>
+                <SecondaryText>{test}</SecondaryText>
+                <Link to={wallet.url}>Check out {wallet.name}</Link>
+              </div>
+            </FlexInfo>
+            <FlexInfo>
+              <WalletFeatureCircle
+                name="circle"
+                hasFeature={wallet[firstFeatureSelect.filterKey]}
+              />
+            </FlexInfo>
+            <FlexInfo>
+              <WalletFeatureCircle
+                name="circle"
+                hasFeature={wallet[secondFeatureSelect.filterKey]}
+              />
+            </FlexInfo>
+            <FlexInfo>
+              <WalletFeatureCircle
+                name="circle"
+                hasFeature={wallet[thirdFeatureSelect.filterKey]}
+              />
+            </FlexInfo>
+            <FlexInfo>
+              <WalletMoreInfoArrow name="chevronDown" />
+            </FlexInfo>
           </Wallet>
         )
       })}
