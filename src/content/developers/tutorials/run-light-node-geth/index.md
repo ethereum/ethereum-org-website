@@ -7,6 +7,7 @@ skill: beginner
 lang: en
 sidebar: true
 published: 2022-03-04
+preMergeBanner: true
 ---
 
 You may be interested in running an [Ethereum node](/developers/docs/nodes-and-clients/). One of the easiest ways to do so is by downloading, installing, and running Geth. With Geth, we can have a light node up and running in minutes.

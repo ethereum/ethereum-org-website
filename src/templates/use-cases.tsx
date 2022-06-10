@@ -36,6 +36,7 @@ import {
 } from "../components/SharedStyledComponents"
 import Emoji from "../components/Emoji"
 import YouTube from "../components/YouTube"
+import PreMergeBanner from "../components/PreMergeBanner"
 
 import { isLangRightToLeft } from "../utils/translations"
 import { getSummaryPoints } from "../utils/getSummaryPoints"
@@ -120,7 +121,7 @@ const InfoTitle = styled.h2`
   margin-top: 0rem;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     text-align: left;
-    font-size: 2.5rem
+    font-size: 2.5rem;
     display: none;
   }
 `
@@ -306,6 +307,7 @@ const UseCasePage = ({
   }
 
   const isRightToLeft = isLangRightToLeft(mdx.frontmatter.lang as Lang)
+  const showMergeBanner = !!mdx.frontmatter.preMergeBanner
   const tocItems = mdx.tableOfContents?.items
   const summaryPoints = getSummaryPoints(mdx.frontmatter)
 
@@ -342,15 +344,19 @@ const UseCasePage = ({
 
   return (
     <Container>
-      <StyledBannerNotification shouldShow>
-        <StyledEmoji text=":pencil:" />
-        <div>
-          <Translation id="template-usecase-banner" />{" "}
-          <Link to={absoluteEditPath}>
-            <Translation id="template-usecase-edit-link" />
-          </Link>
-        </div>
-      </StyledBannerNotification>
+      {showMergeBanner ? (
+        <PreMergeBanner />
+      ) : (
+        <StyledBannerNotification shouldShow>
+          <StyledEmoji text=":pencil:" />
+          <div>
+            <Translation id="template-usecase-banner" />{" "}
+            <Link to={absoluteEditPath}>
+              <Translation id="template-usecase-edit-link" />
+            </Link>
+          </div>
+        </StyledBannerNotification>
+      )}
       <HeroContainer>
         <TitleCard>
           <Emoji size={4} text={mdx.frontmatter.emoji} />
@@ -438,6 +444,7 @@ export const useCasePageQuery = graphql`
           }
         }
         isOutdated
+        preMergeBanner
       }
       body
       tableOfContents
