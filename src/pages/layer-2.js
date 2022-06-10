@@ -683,10 +683,12 @@ const Layer2Page = ({ data }) => {
           NOTE: When bridging over and using layer 2, it is important to note
           that you will control the address for you EOA account just like on
           Ethereum Mainnet. However, if you are using a smart contract wallet,
-          you will not have control over this address on a layer 2 by default
-          unless deployed using `CREATE2`. If you are bridging or sending funds
-          to a smart contract wallet, test this out first to make sure you
-          control that address on the layer 2 you are using.
+          such as <Link to="https://gnosis-safe.io/">Gnosis Safe</Link> or{" "}
+          <Link to="https://www.argent.xyz/">Argent</Link>, you will not have
+          control over this address on a layer 2 by default unless deployed
+          using `CREATE2`. If you are bridging or sending funds to a smart
+          contract wallet, test this out first to make sure you control that
+          address on the layer 2 you are using.
         </p>
         <h3>
           <Translation id="layer-2-use-layer-2-generalized-title" />
