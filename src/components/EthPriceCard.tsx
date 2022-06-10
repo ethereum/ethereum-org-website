@@ -137,7 +137,7 @@ const EthPriceCard: React.FC<IProps> = ({ className, isLeftAlign }) => {
     price = <Translation id="loading-error-refresh" />
   }
 
-  const isNegativeChange = state.percentChangeUSD < 0
+  const isNegativeChange = state?.percentChangeUSD < 0
 
   const change = state.percentChangeUSD
     ? isNegativeChange

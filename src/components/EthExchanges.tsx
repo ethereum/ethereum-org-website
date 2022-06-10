@@ -558,13 +558,7 @@ const EthExchanges: React.FC<IProps> = () => {
   const exchangesArray = Object.keys(exchanges)
   const walletProvidersArray = Object.keys(walletProviders)
   // Construct arrays for CardList
-  let filteredExchanges: Array<{
-    title: string
-    description: string
-    link: string
-    image: string
-    alt: string
-  }> = []
+  let filteredExchanges: Array<Wallet> = []
   let filteredWalletProviders: Array<string> = []
   let filteredWallets: Array<Wallet> = []
 
