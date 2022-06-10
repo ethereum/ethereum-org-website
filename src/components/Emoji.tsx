@@ -4,7 +4,7 @@ import styled from "styled-components"
 import { margin, MarginProps } from "styled-system"
 
 export interface IProps extends MarginProps {
-  size: number
+  size?: number
   text: string
 }
 

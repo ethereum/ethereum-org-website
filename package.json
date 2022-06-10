@@ -87,6 +87,7 @@
   "scripts": {
     "build": "gatsby build",
     "build:lambda": "netlify-lambda build src/lambda",
+    "clean": "gatsby clean",
     "copy-contributors": "node src/scripts/copy-contributors.js",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "generate-heading-ids": "node src/scripts/generate-heading-ids.js",

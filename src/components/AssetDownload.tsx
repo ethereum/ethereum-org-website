@@ -7,7 +7,31 @@ import ButtonLink from "./ButtonLink"
 import Emoji from "./Emoji"
 import Link from "./Link"
 
-const Container = styled.div`
+export interface IHide {
+  shouldHide: boolean
+}
+
+export interface IPropsBase {
+  alt: string
+  artistName?: string
+  artistUrl?: string
+  src?: string
+  shouldHide?: boolean
+  title: string
+}
+
+interface IPropsWithSVG extends IPropsBase {
+  svg: React.FC<React.SVGProps<SVGSVGElement> & { alt: string }>
+  image?: never
+}
+interface IPropsWithImage extends IPropsBase {
+  svg?: never
+  image: string
+}
+
+export type IProps = IPropsWithImage | IPropsWithSVG
+
+const Container = styled.div<IHide>`
   flex: 1 1 45%;
   display: flex;
   flex-direction: column;
@@ -58,7 +82,7 @@ const ButtonContainer = styled.div`
 `
 
 // TODO add ability to download SVGs
-const AssetDownload = ({
+const AssetDownload: React.FC<IProps> = ({
   alt,
   artistName,
   artistUrl,
