@@ -3,7 +3,6 @@ title: Ethereum Governance
 description: An introduction to how decisions about Ethereum are made.
 lang: en
 sidebar: true
-preMergeBanner: true
 ---
 
 # Introduction to Ethereum governance {#introduction}

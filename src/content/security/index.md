@@ -3,7 +3,6 @@ title: Ethereum security and scam prevention
 description: Staying safe on Ethereum
 lang: en
 sidebar: true
-preMergeBanner: true
 ---
 
 # Ethereum security and scam prevention {#introduction}
