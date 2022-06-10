@@ -3,7 +3,8 @@ This is a guide how to strategically prepare event tracking when creating a new 
 
 Events are good to measure user engagement on the website. We create custom reports in Matomo to view events of specific URL. Events ashould be grouped by specific topic + position on the page. (Ex: L2 page external links, selected bridge, selected cex)
 
-You can track virtually any website element with event tracking, including:
+## What to measure?
+You can track virtually any website element with event tracking. Ideally, ask yourself what design decision/assumptions have been made on the page and should/could be validated by measured performance: 
 - clicks
 - downloads
 - Popup viewed
