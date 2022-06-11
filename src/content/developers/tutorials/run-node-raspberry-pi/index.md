@@ -17,7 +17,7 @@ To use Ethereum on Arm to turn a Raspberry Pi into an Ethereum node, the followi
 
 - Raspberry 4 (model B 8GB)
 - MicroSD Card (16 GB Class 10 minimum)
-- 1 TB SSD minimum USB 3.0 disk or an SSD with an USB to SATA case (see Storage section).
+- 2 TB SSD minimum USB 3.0 disk or an SSD with a USB to SATA case.
 - Power supply
 - Ethernet cable
 - Port forwarding (see clients for further info)
@@ -38,7 +38,11 @@ Ethereum cannot be run using the popular Raspberry Pi Linux OS "Raspbian" becaus
 
 ## Note on execution and consensus clients {#note-on-execution-and-consensus-clients}
 
-The Ethereum on Arm documentation explains how to set up _either_ an execution client OR a consensus client, except for two Ethereum testnets (Kiln and Ropsten). This optionality is only possible in advance of Ethereum's upcoming transition from proof-of-work (PoW) to proof-of-stake (PoS) known as [The Merge](/upgrades/merge). After The Merge, it will not be possible to run execution and consensus clients separately - they must be run as a pair. Therefore, in this tutorial we will run a pair of execution and consensus clients together on an Ethereum testnet (Kiln).
+The Ethereum on Arm documentation explains how to set up _either_ an execution client OR a consensus client, except for two Ethereum testnets (Kiln and Ropsten). This optionality is only possible in advance of Ethereum's upcoming transition from proof-of-work (PoW) to proof-of-stake (PoS) known as [The Merge](/upgrades/merge).
+
+<InfoBanner>
+After The Merge, it will not be possible to run execution and consensus clients separately—they must be run as a pair. Therefore, in this tutorial we will run a pair of execution and consensus clients together on an Ethereum testnet (Kiln).
+</InfoBanner>
 
 ## The Kiln Raspberry Pi 4 Image {#the-kiln-raspberry-pi-4-image}
 
@@ -108,7 +112,7 @@ The specific service names for every combination of clients are available at the
 
 ## Validators {#validators}
 
-In order to run a validator it is first necessary to deposit 32 test-ether into the Kiln deposit contract. This means the user must have access to an account containing 32 ETH. This can be done by following the step-by-step guide on the [Kiln Launchpad](https://kiln.launchpad.ethereum.org/en/). Do this on a desktop/laptop, built do not generate keys - this can be done directly on the Raspberry Pi.
+In order to run a validator you must first have access to 32 testnet ETH, which must be deposited into the Kiln deposit contract. This can be done by following the step-by-step guide on the [Kiln Launchpad](https://kiln.launchpad.ethereum.org/en/). Do this on a desktop/laptop, but do not generate keys—this can be done directly on the Raspberry Pi.
 
 Open a terminal on the Raspberry Pi and run the following command to generate the deposit keys:
 
