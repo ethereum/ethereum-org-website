@@ -1,5 +1,5 @@
 // Libraries
-import React, { useState } from "react"
+import React, { ComponentType, SVGProps, useState } from "react"
 import styled from "styled-components"
 import { motion } from "framer-motion"
 
@@ -92,8 +92,7 @@ const ButtonLink = styled.button`
 export interface IProps {
   contentPreview: string
   title: string
-  svg: any
-  alt: string
+  svg?: ComponentType<SVGProps<SVGElement>>
   eventCategory: string
   eventName: string
 }
@@ -103,7 +102,6 @@ const ExpandableCard: React.FC<IProps> = ({
   contentPreview,
   title,
   svg: Svg,
-  alt,
   eventCategory,
   eventName,
 }) => {
@@ -170,7 +168,7 @@ const ExpandableCard: React.FC<IProps> = ({
       <Content>
         <Question>
           <Header>
-            {!!Svg && <Svg alt={alt} />}
+            {!!Svg && <Svg />}
             <Title>{title}</Title>
           </Header>
           <TextPreview>{contentPreview}</TextPreview>

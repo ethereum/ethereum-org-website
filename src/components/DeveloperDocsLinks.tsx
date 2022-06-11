@@ -20,21 +20,21 @@ const DeveloperDocsLinks: React.FC<IProps> = ({ headerId }) => (
               <ListItem key={id}>
                 {to || path ? (
                   <Link to={to || path}>
-                    <Translation id={id as TranslationKey} />
+                    <Translation id={id} />
                   </Link>
                 ) : (
-                  <Translation id={id as TranslationKey} />
+                  <Translation id={id} />
                 )}
                 <i>
                   {" – "}
-                  <Translation id={description as TranslationKey} />
+                  <Translation id={description} />
                 </i>
                 <ul>
                   {items &&
                     items.map(({ id, to, path }) => (
                       <ListItem key={id}>
                         <Link to={to || path}>
-                          <Translation id={id as TranslationKey} />
+                          <Translation id={id} />
                         </Link>
                       </ListItem>
                     ))}

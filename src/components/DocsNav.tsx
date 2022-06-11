@@ -135,7 +135,7 @@ const DocsNav: React.FC<IProps> = ({ relativePath }) => {
               <Translation id="previous" />
             </UppercaseSpan>
             <PreviousNavLink to={previousDoc.to}>
-              <Translation id={previousDoc.id as TranslationKey} />
+              <Translation id={previousDoc.id} />
             </PreviousNavLink>
           </PreviousTextDiv>
         </PreviousCard>
@@ -149,7 +149,7 @@ const DocsNav: React.FC<IProps> = ({ relativePath }) => {
               <Translation id="next" />
             </UppercaseSpan>
             <NextNavLink to={nextDoc.to}>
-              <Translation id={nextDoc.id as TranslationKey} />
+              <Translation id={nextDoc.id} />
             </NextNavLink>
           </NextTextDiv>
           <EmojiLink to={nextDoc.to}>

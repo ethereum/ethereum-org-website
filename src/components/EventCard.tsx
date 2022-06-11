@@ -123,7 +123,7 @@ const EventCard: React.FC<IProps> = ({
   <StyledCard className={className}>
     <StyledCardReference />
     <StyledCardContent
-      className={isEven ? ("style-card-content-right" as string) : ""}
+      className={isEven ? "style-card-content-right" : undefined}
     >
       <Date>
         {date}

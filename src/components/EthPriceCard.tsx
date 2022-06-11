@@ -87,7 +87,7 @@ const ChangeTime = styled.div`
 `
 
 export interface IProps {
-  className: string
+  className?: string
   isLeftAlign: boolean
 }
 

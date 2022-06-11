@@ -134,7 +134,7 @@ export const cardListImage = graphql`
   }
 `
 
-export interface Wallet {
+export interface WalletAndExchange {
   title: string
   description: string
   link: string
@@ -151,8 +151,8 @@ const EthExchanges: React.FC<IProps> = () => {
     "page-get-eth-exchanges-search",
     intl
   )
-  const data = useStaticQuery(graphql`
-    query {
+  const data = useStaticQuery<Queries.EthExchangesQuery>(graphql`
+    query EthExchanges {
       exchangesByCountry: allExchangesByCountryCsv {
         nodes {
           binance
@@ -528,20 +528,24 @@ const EthExchanges: React.FC<IProps> = () => {
 
   const lastUpdated = getLocaleTimestamp(
     intl.locale as Lang,
-    data.timestamp.parent.fields.gitLogLatestDate
+    data.timestamp!.parent!.fields.gitLogLatestDate
   )
 
+  interface Country {
+    country?: string
+  }
+
   const [state, setState] = useState<{
-    selectedCountry: {
-      country?: string
-    }
+    selectedCountry: Country
   }>({ selectedCountry: {} })
 
-  const handleSelectChange = (selectedOption) => {
+  const handleSelectChange: (selectedOption: Country) => void = (
+    selectedOption
+  ) => {
     trackCustomEvent({
       eventCategory: `Country input`,
       eventAction: `Selected`,
-      eventName: selectedOption.country,
+      eventName: selectedOption.country!,
     })
     setState({ selectedCountry: selectedOption })
   }
@@ -553,14 +557,14 @@ const EthExchanges: React.FC<IProps> = () => {
       node.label = node.country
       return node
     })
-    .sort((a, b) => a.country.localeCompare(b.country))
+    .sort((a, b) => a.country!.localeCompare(b.country!))
 
   const exchangesArray = Object.keys(exchanges)
   const walletProvidersArray = Object.keys(walletProviders)
   // Construct arrays for CardList
-  let filteredExchanges: Array<Wallet> = []
+  let filteredExchanges: Array<WalletAndExchange> = []
   let filteredWalletProviders: Array<string> = []
-  let filteredWallets: Array<Wallet> = []
+  let filteredWallets: Array<WalletAndExchange> = []
 
   const hasSelectedCountry = !!state.selectedCountry.country
   if (hasSelectedCountry) {
@@ -632,9 +636,9 @@ const EthExchanges: React.FC<IProps> = () => {
               image: getImage(walletObject.image),
               alt: walletObject.url,
             })
-          }, [] as Array<Wallet>)
+          }, [] as Array<WalletAndExchange>)
         )
-      }, [] as Array<Wallet>)
+      }, [] as Array<WalletAndExchange>)
       .sort((a, b) => a.title.localeCompare(b.title))
   }
 
