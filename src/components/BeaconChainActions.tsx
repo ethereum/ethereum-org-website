@@ -6,10 +6,11 @@ import { useIntl } from "gatsby-plugin-intl"
 
 import { translateMessageId } from "../utils/translations"
 
-import CardList from "./CardList"
+import CardList, { CardListItem } from "./CardList"
 import Card from "./Card"
 import ButtonLink from "./ButtonLink"
-import Translation from "../components/Translation"
+import Translation from "./Translation"
+import { GatsbyImageProps } from "gatsby-plugin-image"
 
 const Container = styled.div`
   margin-bottom: 4rem;
@@ -69,36 +70,45 @@ export const DataLogo = graphql`
   }
 `
 
-const BeaconChainActions = () => {
-  const intl = useIntl()
-  const data = useStaticQuery(graphql`
-    query {
-      beaconscan: file(relativePath: { eq: "upgrades/etherscan.png" }) {
-        ...DataLogo
-      }
-      beaconchain: file(relativePath: { eq: "upgrades/beaconchainemoji.png" }) {
-        ...DataLogo
-      }
+const BeaconStaticQuery = graphql`
+  query {
+    beaconscan: file(relativePath: { eq: "upgrades/etherscan.png" }) {
+      ...DataLogo
     }
-  `)
+    beaconchain: file(relativePath: { eq: "upgrades/beaconchainemoji.png" }) {
+      ...DataLogo
+    }
+  }
+`
 
-  const datapoints = [
+type BeaconQueryTypes = {
+  beaconscan: string
+  beaconchain: string
+}
+
+const BeaconChainActions: React.FC = () => {
+  const intl = useIntl()
+  const data = useStaticQuery<BeaconQueryTypes>(BeaconStaticQuery)
+
+  const datapoints: CardListItem[] = [
     {
       title: "beaconscan",
       image: getImage(data.beaconscan),
+      alt: "test beaconscan",
       link: "https://beaconscan.com",
       description: translateMessageId("consensus-beaconscan-desc", intl),
     },
     {
       title: "beaconcha.in",
       image: getImage(data.beaconchain),
+      alt: "beaconcha test",
       link: "https://beaconcha.in",
       description: translateMessageId("consensus-beaconcha-in-desc", intl),
     },
   ]
 
   //TODO: we should refactor the naming here instead of using authors into the description field
-  const reads = [
+  const reads: CardListItem[] = [
     {
       title: translateMessageId(
         "page-upgrade-article-title-two-point-oh",
