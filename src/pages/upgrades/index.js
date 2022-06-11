@@ -502,9 +502,6 @@ const Eth2IndexPage = ({ data }) => {
               </Link>
               <p>
                 <Translation id="page-upgrades-merge-answer-1" />{" "}
-                <Link to="/glossary/#mainnet">
-                  <Translation id="page-upgrades-merge-mainnet" />
-                </Link>
               </p>
               <Link to="/upgrades/shard-chains/">
                 <Translation id="page-upgrades-shard-title" />
@@ -522,15 +519,12 @@ const Eth2IndexPage = ({ data }) => {
             >
               <p>
                 <Translation id="page-upgrades-answer-1" />{" "}
-                <Link to="/upgrades/beacon-chain/">
-                  <Translation id="page-upgrades-more-on-upgrades" />
-                </Link>
               </p>
               <p>
                 <Translation id="page-upgrades-answer-2" />{" "}
-                <Link to="/glossary/#mainnet">
-                  <Translation id="page-upgrades-merge-mainnet" />
-                </Link>{" "}
+                <Link to="/upgrades/merge/">
+                  <Translation id="page-upgrades-merge-btn" />
+                </Link>
               </p>
               <p>
                 <Translation id="page-upgrades-answer-4" />{" "}
@@ -553,17 +547,32 @@ const Eth2IndexPage = ({ data }) => {
                 </Link>
               </p>
               <p>
-                <Translation id="page-upgrades-question-3-answer-2" />
+                <Translation id="page-upgrades-question-3-answer-2a" />
               </p>
               <ul>
                 <li>
                   <Link to="/upgrades/merge/">
-                    <Translation id="page-upgrades-just-docking" />
+                    <Translation id="page-upgrades-merge-btn" />
                   </Link>
                 </li>
                 <li>
+                  <Link to="https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer/">
+                    <Translation id="page-upgrades-question-3-answer-2a-link" />
+                  </Link>
+                </li>
+              </ul>
+              <p>
+                <Translation id="page-upgrades-question-3-answer-2b" />
+              </p>
+              <ul>
+                <li>
                   <Link to="/upgrades/shard-chains/">
                     <Translation id="page-upgrades-shard-lower" />
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/layer-2/">
+                    <Translation id="page-upgrades-layer-2-rollups" />
                   </Link>
                 </li>
               </ul>
@@ -583,14 +592,14 @@ const Eth2IndexPage = ({ data }) => {
             >
               <p>
                 <Translation id="page-upgrades-question-4-answer-1" />{" "}
-                <Link to="/developers/docs/mining/">
-                  <Translation id="page-upgrades-miners" />
+                <Link to="/glossary/#mainnet">
+                  <Translation id="page-upgrades-merge-mainnet" />
                 </Link>
               </p>
               <p>
                 <Translation id="page-upgrades-question-4-answer-2" />{" "}
                 <Link to="/upgrades/merge/">
-                  <Translation id="page-upgrades-just-docking" />
+                  <Translation id="page-upgrades-merge-btn" />
                 </Link>
               </p>
               <p>
@@ -654,34 +663,37 @@ const Eth2IndexPage = ({ data }) => {
               <p>
                 <Translation id="page-upgrades-question-6-answer-1" />
               </p>
+              <p>
+                <Link to="https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer/">
+                  <Translation id="page-upgrades-question-6-answer-1-link" />
+                </Link>
+              </p>
+              <p>
+                <Translation id="page-upgrades-question-6-answer-2" />
+              </p>
               <ul>
                 <li>
-                  <Link to="/upgrades/merge/">
-                    <Translation id="page-upgrades-just-docking" />
+                  <Translation id="page-upgrades-question-6-answer-3" />{" "}
+                  <Link to="https://blog.ethereum.org">
+                    <Translation id="page-upgrades-eth-blog" />
                   </Link>
                 </li>
                 <li>
-                  <Link to="/upgrades/shard-chains/">
-                    <Translation id="page-upgrades-shard-lower" />
+                  <Translation id="page-upgrades-question-6-answer-4" />{" "}
+                  <Link to="https://eth2.news">
+                    <Translation id="page-upgrades-whats-new" />
+                  </Link>
+                </li>
+                <li>
+                  <Translation id="page-upgrades-question-6-answer-5" />{" "}
+                  <Link to="https://ethresear.ch">
+                    <Translation id="page-upgrades-question-3-answer-3-link" />
                   </Link>
                 </li>
               </ul>
               <p>
-                <Translation id="page-upgrades-question-6-answer-3" />{" "}
-                <Link to="https://blog.ethereum.org">
-                  <Translation id="page-upgrades-eth-blog" />
-                </Link>
-              </p>
-              <p>
-                <Translation id="page-upgrades-question-6-answer-4" />{" "}
-                <Link to="https://eth2.news">
-                  <Translation id="page-upgrades-whats-new" />
-                </Link>
-              </p>
-              <p>
-                <Translation id="page-upgrades-question-6-answer-5" />{" "}
-                <Link to="https://ethresear.ch">
-                  <Translation id="page-upgrades-question-3-answer-3-link" />
+                <Link to="/upgrades/merge/">
+                  <Translation id="page-upgrades-merge-btn" />
                 </Link>
               </p>
             </ExpandableCard>
@@ -745,12 +757,12 @@ const Eth2IndexPage = ({ data }) => {
               </p>
               <p>
                 <Translation id="page-upgrades-question-8-answer-2" />{" "}
-                <Link to="/upgrades/beacon-chain">
-                  <Translation id="page-upgrades-upgrades-guide" />
-                </Link>
               </p>
               <p>
-                <Translation id="page-upgrades-question-8-answer-3" />
+                <Translation id="page-upgrades-question-8-answer-3" />{" "}
+                <Link to="/energy-consumption/">
+                  <Translation id="page-upgrades-energy-consumption" />
+                </Link>
               </p>
               <p>
                 <Translation id="page-upgrades-question-8-answer-4" />
