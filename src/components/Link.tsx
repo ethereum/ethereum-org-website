@@ -67,6 +67,7 @@ const GlossaryIcon = styled(Icon)`
 export interface IProps {
   to?: string
   href?: string
+  dir?: "ltr" | "rtl"
   hideArrow?: boolean
   className?: string
   isPartiallyActive?: boolean

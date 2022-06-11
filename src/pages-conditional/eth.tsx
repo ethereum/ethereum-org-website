@@ -495,7 +495,7 @@ const EthPage = (props: PageProps<Queries.EthPageQuery, Context>) => {
           <h4>
             <Translation id="page-eth-more-on-tokens" />
           </h4>
-          <CardList id="tokens" content={tokenLinks} />
+          <CardList content={tokenLinks} />
         </LeftColumn>
         <RightColumn>
           <h3>
