@@ -317,7 +317,7 @@ const dropdownLinks = {
     },
     {
       text: "page-upgrades-upgrades-shard-chains",
-      to: "/upgrades/shard-chains/",
+      to: "/upgrades/sharding/",
     },
   ],
 }

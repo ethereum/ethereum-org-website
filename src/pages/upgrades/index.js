@@ -102,8 +102,9 @@ const ContributeCard = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 0rem 3rem;
+  margin: 0rem auto;
   margin-bottom: 2rem;
+  max-width: 100ch;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     margin-left: 0rem;
     margin-right: 0rem;
@@ -260,7 +261,7 @@ const Eth2IndexPage = ({ data }) => {
       image: getImage(data.shards),
       title: <Translation id="page-upgrades-shard-title" />,
       description: <Translation id="page-upgrades-shard-desc" />,
-      to: "/upgrades/shard-chains/",
+      to: "/upgrades/sharding/",
       date: <Translation id="page-upgrades-shard-estimate" />,
     },
   ]
@@ -503,7 +504,7 @@ const Eth2IndexPage = ({ data }) => {
               <p>
                 <Translation id="page-upgrades-merge-answer-1" />{" "}
               </p>
-              <Link to="/upgrades/shard-chains/">
+              <Link to="/upgrades/sharding/">
                 <Translation id="page-upgrades-shard-title" />
               </Link>
               <p>
@@ -566,7 +567,7 @@ const Eth2IndexPage = ({ data }) => {
               </p>
               <ul>
                 <li>
-                  <Link to="/upgrades/shard-chains/">
+                  <Link to="/upgrades/sharding/">
                     <Translation id="page-upgrades-shard-lower" />
                   </Link>
                 </li>
@@ -847,7 +848,7 @@ const Eth2IndexPage = ({ data }) => {
               </p>
               <p>
                 <Translation id="page-upgrades-question-10-answer-7" />{" "}
-                <Link to="/upgrades/shard-chains/#code-execution">
+                <Link to="/upgrades/sharding/#code-execution">
                   <Translation id="page-upgrades-question-10-answer-8" />
                 </Link>
               </p>
