@@ -81,7 +81,7 @@ const UppercaseSpan = styled.span`
 
 export interface DocsArrayProps {
   to: string
-  id: string
+  id: TranslationKey
 }
 
 export interface IProps {

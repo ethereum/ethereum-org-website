@@ -1,14 +1,15 @@
 // temporary override until we figure out how to solve the `getImage` type
-// errors.
-// TODO: create issue in Gatsby repo
+// error. https://github.com/gatsbyjs/gatsby/issues/35748
 declare module "gatsby-plugin-image"
 
 declare module "*developer-docs-links.yaml" {
+  import { TranslationKey } from "./src/utils/translations"
+
   export interface DeveloperDocsLink {
-    id: string
+    id: TranslationKey
     to: string
     path: string
-    description: string
+    description: TranslationKey
     items: Array<DeveloperDocsLink>
   }
   const content: Array<DeveloperDocsLink>

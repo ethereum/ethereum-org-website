@@ -68,6 +68,7 @@ export interface IProps {
   to?: string
   dir?: string
   href?: string
+  dir?: "ltr" | "rtl"
   hideArrow?: boolean
   className?: string
   isPartiallyActive?: boolean

@@ -82,13 +82,24 @@ const StyledEmoji = styled(Emoji)`
   }
 `
 
-const StablecoinAccordion = ({ children, contentPreview, title, emoji }) => {
+export interface IProps {
+  contentPreview: string
+  title: string
+  emoji: string
+}
+
+const StablecoinAccordion: React.FC<IProps> = ({
+  children,
+  contentPreview,
+  title,
+  emoji,
+}) => {
   const [isVisible, setIsVisible] = useState(false)
   return (
     <Card>
       <Content>
         <TitleContainer>
-          <StyledEmoji svg text={emoji} size={4} />
+          <StyledEmoji text={emoji} size={4} />
           <Question>
             <Title>{title}</Title>
             <TextPreview>{contentPreview}</TextPreview>

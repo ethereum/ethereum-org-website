@@ -353,7 +353,7 @@ const UseCasePage = ({
       </StyledBannerNotification>
       <HeroContainer>
         <TitleCard>
-          <Emoji size={4} text={mdx.frontmatter.emoji} />
+          <Emoji size={4} text={mdx.frontmatter.emoji!} />
           <Title>{mdx.frontmatter.title}</Title>
           <SummaryBox>
             <ul>
