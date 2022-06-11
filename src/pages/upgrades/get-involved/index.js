@@ -15,6 +15,7 @@ import ButtonLink from "../../../components/ButtonLink"
 import PageMetadata from "../../../components/PageMetadata"
 import CardList from "../../../components/CardList"
 import Translation from "../../../components/Translation"
+import Link from "../../../components/Link"
 
 import {
   CardContainer,
@@ -171,9 +172,52 @@ const GetInvolvedPage = ({ data, location }) => {
     (a, b) => b.score - a.score
   )
 
-  const [clients, setClients] = useState([])
+  const [clients, setClients] = useState({ el: [], cl: [] })
 
   useEffect(() => {
+    const executionClients = [
+      {
+        name: "Besu",
+        background: "#546D78",
+        description: (
+          <Translation id="page-upgrades-get-involved-written-java" />
+        ),
+        alt: "consensus-client-besu-logo-alt",
+        url: "https://besu.hyperledger.org/en/stable/HowTo/Get-Started/Install-Binaries/",
+        image: () => data.besu,
+        githubUrl: "https://github.com/hyperledger/besu",
+      },
+      {
+        name: "Erigon",
+        background: "#3A4B56",
+        description: <Translation id="page-upgrades-get-involved-written-go" />,
+        alt: "consensus-client-erigon-logo-alt",
+        url: "https://github.com/ledgerwatch/erigon#erigon",
+        image: () => data.erigon,
+        githubUrl: "https://github.com/ledgerwatch/erigon",
+      },
+      {
+        name: "Geth",
+        background: "#303D4E",
+        description: <Translation id="page-upgrades-get-involved-written-go" />,
+        alt: "consensus-client-geth-logo-alt",
+        url: "https://geth.ethereum.org/docs/getting-started",
+        image: () => data.geth,
+        githubUrl: "https://github.com/ethereum/go-ethereum",
+      },
+      {
+        name: "Nethermind",
+        background: "#21222D",
+        description: (
+          <Translation id="page-upgrades-get-involved-written-c-sharp" />
+        ),
+        alt: "consensus-client-lodestar-logo-alt",
+        url: "https://docs.nethermind.io/nethermind/",
+        image: () => data.nethermind,
+        githubUrl: "https://github.com/NethermindEth/nethermind",
+      },
+    ]
+
     const consensusClients = [
       {
         name: "Prysm",
@@ -233,12 +277,16 @@ const GetInvolvedPage = ({ data, location }) => {
       },
     ]
 
-    const randomizedClients = shuffle(consensusClients)
+    const shuffledExecutionClients = shuffle(executionClients)
+    const shuffledConsensusClients = shuffle(consensusClients)
     // Sort beta clients to the end
-    const randClientsBetaLast = randomizedClients.sort((_, { isBeta }) =>
-      isBeta ? -1 : 0
+    const pseudoShuffledConsensusClients = shuffledConsensusClients.sort(
+      (_, { isBeta }) => (isBeta ? -1 : 0)
     )
-    setClients(randClientsBetaLast)
+    setClients({
+      el: shuffledExecutionClients,
+      cl: pseudoShuffledConsensusClients,
+    })
   }, [data])
 
   const ethresearch = [
@@ -288,6 +336,29 @@ const GetInvolvedPage = ({ data, location }) => {
     },
   ]
 
+  const getClientCards = (layer) => {
+    if (!Object.keys(clients).includes(layer)) return
+    return (
+      <StyledCardGrid>
+        {clients[layer].map((client, idx) => (
+          <ProductCard
+            key={idx}
+            url={client.url}
+            background={client.background}
+            image={getImage(client.image(isDarkTheme))}
+            name={client.name}
+            description={client.description}
+            alt={translateMessageId(client.alt, intl)}
+            githubUrl={client.githubUrl}
+            hideStars={true}
+          >
+            {client.children}
+          </ProductCard>
+        ))}
+      </StyledCardGrid>
+    )
+  }
+
   return (
     <Page>
       <PageMetadata
@@ -335,31 +406,25 @@ const GetInvolvedPage = ({ data, location }) => {
           <Translation id="page-upgrades-get-involved-run-clients" />
         </h2>
         <p>
-          <Translation id="page-upgrades-get-involved-run-clients-desc" />
-        </p>
-        <p>
-          <Translation id="page-upgrades-get-involved-run-clients-desc-2" />
+          <Translation id="page-upgrades-get-involved-run-clients-desc" />{" "}
+          <Link to="https://clientdiversity.org">
+            <Translation id="page-upgrades-get-involved-run-clients-desc-link" />
+          </Link>
         </p>
         <h3>
-          <Translation id="page-upgrades-get-involved-run-clients-production" />
+          <Translation id="page-upgrades-get-involved-run-clients-execution" />
         </h3>
-        <StyledCardGrid>
-          {clients.map((client, idx) => (
-            <ProductCard
-              key={idx}
-              url={client.url}
-              background={client.background}
-              image={getImage(client.image(isDarkTheme))}
-              name={client.name}
-              description={client.description}
-              alt={translateMessageId(client.alt, intl)}
-              githubUrl={client.githubUrl}
-              hideStars={true}
-            >
-              {client.children}
-            </ProductCard>
-          ))}
-        </StyledCardGrid>
+        <p>
+          <Translation id="page-upgrades-get-involved-run-clients-execution-desc" />
+        </p>
+        {getClientCards("el")}
+        <h3>
+          <Translation id="page-upgrades-get-involved-run-clients-consensus" />
+        </h3>
+        <p>
+          <Translation id="page-upgrades-get-involved-run-clients-consensus-desc" />
+        </p>
+        {getClientCards("cl")}
       </Content>
       <Staking>
         <StyledCalloutBanner
@@ -473,7 +538,13 @@ export const query = graphql`
         )
       }
     }
-    prysm: file(relativePath: { eq: "upgrades/prysm.png" }) {
+    besu: file(relativePath: { eq: "upgrades/besu-card.png" }) {
+      ...Clients
+    }
+    erigon: file(relativePath: { eq: "upgrades/erigon-card.png" }) {
+      ...Clients
+    }
+    geth: file(relativePath: { eq: "upgrades/geth.png" }) {
       ...Clients
     }
     lighthouseLight: file(
@@ -484,16 +555,22 @@ export const query = graphql`
     lighthouseDark: file(relativePath: { eq: "upgrades/lighthouse-dark.png" }) {
       ...Clients
     }
+    lodestar: file(relativePath: { eq: "upgrades/lodestar.png" }) {
+      ...Clients
+    }
+    nethermind: file(relativePath: { eq: "upgrades/nethermind-card.png" }) {
+      ...Clients
+    }
+    nimbus: file(relativePath: { eq: "upgrades/nimbus.png" }) {
+      ...Clients
+    }
+    prysm: file(relativePath: { eq: "upgrades/prysm.png" }) {
+      ...Clients
+    }
     tekuDark: file(relativePath: { eq: "upgrades/teku-dark.png" }) {
       ...Clients
     }
     tekuLight: file(relativePath: { eq: "upgrades/teku-light.png" }) {
-      ...Clients
-    }
-    lodestar: file(relativePath: { eq: "upgrades/lodestar.png" }) {
-      ...Clients
-    }
-    nimbus: file(relativePath: { eq: "upgrades/nimbus.png" }) {
       ...Clients
     }
   }
