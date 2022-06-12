@@ -22,7 +22,6 @@ const Grid = styled.div`
 const WalletContentHeader = styled(Grid)`
   height: 50px;
   border-bottom: 1px solid ${(props) => props.theme.colors.primary};
-  cursor: pointer;
   position: sticky;
   top: 76px;
   padding-top: 8px;
@@ -39,6 +38,7 @@ const StyledSelect = styled(Select)`
   .react-select__control {
     border: none;
     background: none;
+    cursor: pointer;
 
     .react-select__value-container {
       .react-select__single-value {
@@ -242,6 +242,11 @@ const featureDropdownItems = [
 ]
 
 const WalletTable = ({ data, walletData }) => {
+  const [walletCardData, setWalletData] = useState(
+    walletData.map((wallet) => {
+      return { ...wallet, moreInfo: false }
+    })
+  )
   const [firstFeatureSelect, setFirstFeatureSelect] = useState(
     featureDropdownItems[0]
   )
@@ -252,12 +257,19 @@ const WalletTable = ({ data, walletData }) => {
     featureDropdownItems[2]
   )
 
+  const updateMoreInfo = (idx) => {
+    const temp = [...walletCardData]
+    temp[idx].moreInfo = !temp[idx].moreInfo
+    setWalletData(temp)
+  }
+
   return (
     <Container>
       {/* TODO: Change this span info for fitlered wallets when implemented */}
       <WalletContentHeader>
         <p>
-          <span>{walletData.length} wallets</span> out of {walletData.length}
+          <span>{walletCardData.length} wallets</span> out of{" "}
+          {walletCardData.length}
         </p>
         <StyledSelect
           className="react-select-container"
@@ -287,7 +299,7 @@ const WalletTable = ({ data, walletData }) => {
           defaultValue={thirdFeatureSelect}
         />
       </WalletContentHeader>
-      {walletData.map((wallet) => {
+      {walletCardData.map((wallet, idx) => {
         const deviceLabels: Array<string> = []
 
         wallet.ios && deviceLabels.push("iOS")
@@ -333,8 +345,21 @@ const WalletTable = ({ data, walletData }) => {
               />
             </FlexInfoCenter>
             <FlexInfoCenter>
-              <WalletMoreInfoArrow name="chevronDown" />
+              <div
+                style={{ cursor: "pointer" }}
+                onClick={() => updateMoreInfo(idx)}
+              >
+                <WalletMoreInfoArrow
+                  name={wallet.moreInfo ? "chevronUp" : "chevronDown"}
+                />
+              </div>
             </FlexInfoCenter>
+            {wallet.moreInfo && (
+              <div>
+                <p>Hello world</p>
+                <p>{wallet.name}</p>
+              </div>
+            )}
           </Wallet>
         )
       })}
