@@ -59,7 +59,7 @@ Originally, the plan was to work on shard chains before The Merge – to address
 
 This will be an ongoing assessment from the community as to the need for potentially multiple rounds of shard chains to allow for endless scalability.
 
-<ButtonLink to="/upgrades/shard-chains/">
+<ButtonLink to="/upgrades/sharding/">
   Shard chains
 </ButtonLink>
 

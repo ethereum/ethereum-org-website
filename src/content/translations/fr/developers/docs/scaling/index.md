@@ -28,7 +28,7 @@ Cette méthode de mise à l’échelle nécessite des modifications du protocole
 
 La fragmentation est le processus de fractionnement horizontal d'une base de données pour répartir la charge. Dans le cadre d'Ethereum, cette fragmentation permettra de réduire l'encombrement du réseau en augmentant le nombre de transactions par seconde grâce à la création de nouvelles chaînes, appelées « fragments ». Cela allègera également la charge pour chaque validateur qui ne sera plus tenu de traiter l’intégralité de toutes les transactions sur le réseau.
 
-En savoir plus sur [la fragmentation](/upgrades/shard-chains/).
+En savoir plus sur [la fragmentation](/upgrades/sharding/).
 
 ## Mise à l'echelle hors de la chaîne {#off-chain-scaling}
 

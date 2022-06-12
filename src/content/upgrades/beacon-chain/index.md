@@ -17,7 +17,7 @@ summaryPoint4: You might know this as "Phase 0" on technical roadmaps.
 
 ## What does the Beacon Chain do? {#what-does-the-beacon-chain-do}
 
-The Beacon Chain will conduct or coordinate the expanded network of [shards](/upgrades/shard-chains/) and [stakers](/staking/). But it won't be like the [Ethereum Mainnet](/glossary/#mainnet) of today. It can't handle accounts or smart contracts.
+The Beacon Chain will conduct or coordinate the expanded network of [shards](/upgrades/sharding/) and [stakers](/staking/). But it won't be like the [Ethereum Mainnet](/glossary/#mainnet) of today. It can't handle accounts or smart contracts.
 
 The Beacon Chain’s role will change over time but it’s a foundational component for [the secure, sustainable and scalable Ethereum we’re working towards](/upgrades/vision/).
 
@@ -33,7 +33,7 @@ Staking and becoming a validator is easier than [mining](/developers/docs/mining
 If you're interested in becoming a validator and helping secure the Beacon Chain, <a href="/staking/">learn more about staking</a>.
 </InfoBanner>
 
-This is also an important change for another upgrade: [shard chains](/upgrades/shard-chains/).
+This is also an important change for another upgrade: [shard chains](/upgrades/sharding/).
 
 ### Setting up for shard chains {#setting-up-for-shard-chains}
 
@@ -57,7 +57,7 @@ The Beacon Chain, at first, will exist separately to the Ethereum Mainnet we use
 
 Shard chains can only safely enter the Ethereum ecosystem with a proof-of-stake consensus mechanism in place. The Beacon Chain will introduce staking, paving the way for the shard chain upgrade to follow.
 
-<ButtonLink to="/upgrades/shard-chains/">
+<ButtonLink to="/upgrades/sharding/">
     Shard chains
 </ButtonLink>
 

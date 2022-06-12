@@ -57,4 +57,4 @@ Inițial, planul era ca lanțurile de fragmente să fie folosite înainte de uni
 
 Acest lucru va fi evaluat în continuu de către comunitate în ceea ce privește necesitatea unor potențiale runde multiple de lanțuri de fragmente pentru a permite o scalabilitate infinită.
 
-<ButtonLink to="/upgrades/shard-chains/">Lanțuri de fragmente</ButtonLink>
+<ButtonLink to="/upgrades/sharding/">Lanțuri de fragmente</ButtonLink>
