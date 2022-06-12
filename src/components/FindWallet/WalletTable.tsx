@@ -13,6 +13,10 @@ const Container = styled.div`
   width: 100%;
 `
 
+const WalletContainer = styled(Container)`
+  border-bottom: 1px solid ${(props) => props.theme.colors.lightBorder};
+`
+
 const Grid = styled.div`
   display: grid;
   grid-template-columns: 40% auto auto auto 5%;
@@ -109,7 +113,6 @@ const StyledSelect = styled(Select)`
 
 const Wallet = styled(Grid)`
   padding: 25px 4px;
-  border-bottom: 1px solid ${(props) => props.theme.colors.lightBorder};
 `
 
 const FlexInfo = styled.div`
@@ -147,97 +150,120 @@ const WalletMoreInfoArrow = styled(Icon)`
   fill: ${(props) => props.theme.colors.primary};
 `
 
+const WalletMoreInfo = styled.div`
+  display: grid;
+  grid-template-columns: 100px auto auto auto auto;
+  width: 100%;
+`
+
+const FeatureLabel = styled.p<{ hasFeature: boolean }>`
+  color: ${(props) =>
+    props.hasFeature ? props.theme.colors.primary : props.theme.colors.text200};
+`
+
 // Constants
 const featureDropdownItems = [
   {
     label: "Open source",
     value: "Open source",
     filterKey: "open_source",
+    category: "security",
   },
   {
     label: "Self custody",
     value: "Self custody",
     filterKey: "non_custodial",
+    category: "security",
   },
   {
     label: "Hardware wallet support",
     value: "Hardware wallet support",
     filterKey: "hardware_support",
+    category: "feature",
   },
   {
     label: "WalletConnect",
     value: "WalletConnect",
     filterKey: "walletconnect",
+    category: "feature",
   },
   {
     label: "RPC importing",
     value: "RPC importing",
     filterKey: "rpc_importing",
+    category: "feature",
   },
   {
     label: "NFT support",
     value: "NFT support",
     filterKey: "nft_support",
+    category: "feature",
   },
   {
     label: "Connect to dapps",
     value: "Connect to dapps",
     filterKey: "connect_to_dapps",
+    category: "feature",
   },
   {
     label: "Staking",
     value: "Staking",
     filterKey: "staking",
+    category: "feature",
   },
   {
     label: "Swaps",
     value: "Swaps",
     filterKey: "swaps",
+    category: "feature",
   },
   {
     label: "Layer 2",
     value: "Layer 2",
     filterKey: "layer_2",
+    category: "feature",
   },
   {
     label: "Gas fee customization",
     value: "Gas fee customization",
     filterKey: "gas_fee_customization",
+    category: "feature",
   },
   {
     label: "ENS support",
     value: "ENS support",
     filterKey: "ens_support",
-  },
-  {
-    label: "Buy crypto",
-    value: "Buy crypto",
-    filterKey: "buy_crypto",
+    category: "feature",
   },
   {
     label: "Token importing",
     value: "Token importing",
     filterKey: "erc_20_support",
+    category: "feature",
   },
   {
     label: "Buy crypto",
     value: "Buy crypto",
     filterKey: "buy_crypto",
+    category: "trade_and_buy",
   },
   {
     label: "Withdraw crypto",
     value: "Withdraw crypto",
     filterKey: "withdraw_crypto",
+    category: "trade_and_buy",
   },
   {
     label: "Multisig",
     value: "Multisig",
     filterKey: "multisig",
+    category: "smart_contract",
   },
   {
     label: "Social recovery",
     value: "Social recovery",
     filterKey: "social_recovery",
+    category: "smart_contract",
   },
 ]
 
@@ -320,55 +346,100 @@ const WalletTable = ({ data, filters, walletData }) => {
         wallet.hardware && deviceLabels.push("Hardware")
 
         return (
-          <Wallet>
-            <FlexInfo>
-              <div>
-                <Image
-                  image={getImage(data[wallet.image_name])!}
-                  objectFit="contain"
+          <WalletContainer>
+            <Wallet>
+              <FlexInfo>
+                <div>
+                  <Image
+                    image={getImage(data[wallet.image_name])!}
+                    objectFit="contain"
+                  />
+                </div>
+                <div>
+                  <p>{wallet.name}</p>
+                  <SecondaryText>{deviceLabels.join(" | ")}</SecondaryText>
+                  <Link to={wallet.url}>Check out {wallet.name}</Link>
+                </div>
+              </FlexInfo>
+              <FlexInfoCenter>
+                <WalletFeatureCircle
+                  name="circle"
+                  hasFeature={wallet[firstFeatureSelect.filterKey]}
                 />
-              </div>
-              <div>
-                <p>{wallet.name}</p>
-                <SecondaryText>{deviceLabels.join(" | ")}</SecondaryText>
-                <Link to={wallet.url}>Check out {wallet.name}</Link>
-              </div>
-            </FlexInfo>
-            <FlexInfoCenter>
-              <WalletFeatureCircle
-                name="circle"
-                hasFeature={wallet[firstFeatureSelect.filterKey]}
-              />
-            </FlexInfoCenter>
-            <FlexInfoCenter>
-              <WalletFeatureCircle
-                name="circle"
-                hasFeature={wallet[secondFeatureSelect.filterKey]}
-              />
-            </FlexInfoCenter>
-            <FlexInfoCenter>
-              <WalletFeatureCircle
-                name="circle"
-                hasFeature={wallet[thirdFeatureSelect.filterKey]}
-              />
-            </FlexInfoCenter>
-            <FlexInfoCenter>
-              <div
-                style={{ cursor: "pointer" }}
-                onClick={() => updateMoreInfo(idx)}
-              >
-                <WalletMoreInfoArrow
-                  name={wallet.moreInfo ? "chevronUp" : "chevronDown"}
+              </FlexInfoCenter>
+              <FlexInfoCenter>
+                <WalletFeatureCircle
+                  name="circle"
+                  hasFeature={wallet[secondFeatureSelect.filterKey]}
                 />
-              </div>
-            </FlexInfoCenter>
+              </FlexInfoCenter>
+              <FlexInfoCenter>
+                <WalletFeatureCircle
+                  name="circle"
+                  hasFeature={wallet[thirdFeatureSelect.filterKey]}
+                />
+              </FlexInfoCenter>
+              <FlexInfoCenter>
+                <div
+                  style={{ cursor: "pointer" }}
+                  onClick={() => updateMoreInfo(idx)}
+                >
+                  <WalletMoreInfoArrow
+                    name={wallet.moreInfo ? "chevronUp" : "chevronDown"}
+                  />
+                </div>
+              </FlexInfoCenter>
+            </Wallet>
             {wallet.moreInfo && (
-              <div>
-                <p>Hello world</p>
-                <p>{wallet.name}</p>
-              </div>
+              <WalletMoreInfo>
+                <div></div>
+                <div>
+                  <h4>Features</h4>
+                  {featureDropdownItems.map((feature) => {
+                    if (feature.category === "feature")
+                      return (
+                        <FeatureLabel hasFeature={wallet[feature.filterKey]}>
+                          {feature.label}
+                        </FeatureLabel>
+                      )
+                  })}
+                </div>
+                <div>
+                  <h4>Security</h4>
+                  {featureDropdownItems.map((feature) => {
+                    if (feature.category === "security")
+                      return (
+                        <FeatureLabel hasFeature={wallet[feature.filterKey]}>
+                          {feature.label}
+                        </FeatureLabel>
+                      )
+                  })}
+                </div>
+                <div>
+                  <h4>Trade & buy</h4>
+                  {featureDropdownItems.map((feature) => {
+                    if (feature.category === "trade_and_buy")
+                      return (
+                        <FeatureLabel hasFeature={wallet[feature.filterKey]}>
+                          {feature.label}
+                        </FeatureLabel>
+                      )
+                  })}
+                </div>
+                <div>
+                  <h4>Smart contract</h4>
+                  {featureDropdownItems.map((feature) => {
+                    if (feature.category === "smart_contract")
+                      return (
+                        <FeatureLabel hasFeature={wallet[feature.filterKey]}>
+                          {feature.label}
+                        </FeatureLabel>
+                      )
+                  })}
+                </div>
+              </WalletMoreInfo>
             )}
-          </Wallet>
+          </WalletContainer>
         )
       })}
     </Container>
