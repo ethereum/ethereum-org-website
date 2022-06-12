@@ -299,7 +299,6 @@ const WalletTable = ({ data, walletData }) => {
         wallet.firefox && deviceLabels.push("Firefox")
         wallet.hardware && deviceLabels.push("Hardware")
 
-        console.log(deviceLabels)
         return (
           <Wallet>
             <FlexInfo>
