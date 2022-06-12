@@ -288,14 +288,18 @@ const WalletTable = ({ data, walletData }) => {
         />
       </WalletContentHeader>
       {walletData.map((wallet) => {
-        const test = `${wallet.ios ? "iOS" : ""} 
-        ${wallet.android ? "Android" : ""} 
-        ${wallet.linux ? "Linux" : 0} 
-        ${wallet.windows ? "Windows" : 0} 
-        ${wallet.macOS ? "macOS" : ""} 
-        ${wallet.chromium ? "Chromium" : ""} 
-        ${wallet.firefox ? "Firefox" : ""} 
-        ${wallet.hardware ? "Hardware" : ""}`
+        const deviceLabels: Array<string> = []
+
+        wallet.ios && deviceLabels.push("iOS")
+        wallet.android && deviceLabels.push("Android")
+        wallet.linux && deviceLabels.push("Linux")
+        wallet.windows && deviceLabels.push("Windows")
+        wallet.macOS && deviceLabels.push("macOS")
+        wallet.chromium && deviceLabels.push("Chromium")
+        wallet.firefox && deviceLabels.push("Firefox")
+        wallet.hardware && deviceLabels.push("Hardware")
+
+        console.log(deviceLabels)
         return (
           <Wallet>
             <FlexInfo>
@@ -307,7 +311,7 @@ const WalletTable = ({ data, walletData }) => {
               </div>
               <div>
                 <p>{wallet.name}</p>
-                <SecondaryText>{test}</SecondaryText>
+                <SecondaryText>{deviceLabels.join(" | ")}</SecondaryText>
                 <Link to={wallet.url}>Check out {wallet.name}</Link>
               </div>
             </FlexInfo>
