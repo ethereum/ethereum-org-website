@@ -123,6 +123,10 @@ const FlexInfo = styled.div`
   }
 `
 
+const FlexInfoCenter = styled(FlexInfo)`
+  justify-content: center;
+`
+
 const Image = styled(GatsbyImage)`
   height: 56px;
   width: 56px;
@@ -307,27 +311,27 @@ const WalletTable = ({ data, walletData }) => {
                 <Link to={wallet.url}>Check out {wallet.name}</Link>
               </div>
             </FlexInfo>
-            <FlexInfo>
+            <FlexInfoCenter>
               <WalletFeatureCircle
                 name="circle"
                 hasFeature={wallet[firstFeatureSelect.filterKey]}
               />
-            </FlexInfo>
-            <FlexInfo>
+            </FlexInfoCenter>
+            <FlexInfoCenter>
               <WalletFeatureCircle
                 name="circle"
                 hasFeature={wallet[secondFeatureSelect.filterKey]}
               />
-            </FlexInfo>
-            <FlexInfo>
+            </FlexInfoCenter>
+            <FlexInfoCenter>
               <WalletFeatureCircle
                 name="circle"
                 hasFeature={wallet[thirdFeatureSelect.filterKey]}
               />
-            </FlexInfo>
-            <FlexInfo>
+            </FlexInfoCenter>
+            <FlexInfoCenter>
               <WalletMoreInfoArrow name="chevronDown" />
-            </FlexInfo>
+            </FlexInfoCenter>
           </Wallet>
         )
       })}
