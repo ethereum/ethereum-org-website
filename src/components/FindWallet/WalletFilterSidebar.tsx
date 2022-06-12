@@ -7,6 +7,23 @@ import styled from "styled-components"
 import Checkbox from "../Checkbox"
 import Icon from "../Icon"
 
+// Icons
+import Browser from "../../assets/wallets/browser.svg"
+import BuyCrypto from "../../assets/wallets/buy_crypto.svg"
+import Desktop from "../../assets/wallets/desktop.svg"
+import ENSSupport from "../../assets/wallets/ens_support.svg"
+import ERC20Support from "../../assets/wallets/erc_20_support.svg"
+import GasFeeCustomization from "../../assets/wallets/gas_fee_customization.svg"
+import HardwareSupport from "../../assets/wallets/hardware_support.svg"
+import Hardware from "../../assets/wallets/hardware.svg"
+import Layer2 from "../../assets/wallets/layer_2.svg"
+import Mobile from "../../assets/wallets/mobile.svg"
+import NFTSupport from "../../assets/wallets/nft_support.svg"
+import NonCustodial from "../../assets/wallets/non_custodial.svg"
+import OpenSource from "../../assets/wallets/open_source.svg"
+import RPCImporting from "../../assets/wallets/rpc_importing.svg"
+import Staking from "../../assets/wallets/staking.svg"
+
 // Styles
 const Container = styled.div`
   display: flex;
@@ -62,14 +79,22 @@ const OptionGrid = styled.div`
   }
 `
 
+const IconContainer = styled.div`
+  svg {
+    width: 24px;
+    height: 24px;
+
+    path {
+      fill: white;
+      stroke: white;
+    }
+  }
+`
+
 const OptionDescription = styled.p`
   font-size: 12px;
   line-height: 14px;
   color: ${(props) => props.theme.colors.text200};
-`
-
-const Image = styled(GatsbyImage)`
-  height: 24px;
 `
 
 const CheckboxGrid = styled.div`
@@ -103,6 +128,7 @@ const WalletFilterSidebar = ({ data, filters, updateFilterOption }) => {
       items: [
         {
           title: "Mobile",
+          icon: <Mobile />,
           description: "Phone or mobile based wallets.",
           filterKey: undefined,
           options: [
@@ -120,6 +146,7 @@ const WalletFilterSidebar = ({ data, filters, updateFilterOption }) => {
         },
         {
           title: "Desktop",
+          icon: <Desktop />,
           description: "Desktop based wallets.",
           filterKey: undefined,
           options: [
@@ -142,6 +169,7 @@ const WalletFilterSidebar = ({ data, filters, updateFilterOption }) => {
         },
         {
           title: "Browser",
+          icon: <Browser />,
           description: "Browser extension wallets.",
           filterKey: undefined,
           options: [
@@ -159,6 +187,7 @@ const WalletFilterSidebar = ({ data, filters, updateFilterOption }) => {
         },
         {
           title: "Hardware",
+          icon: <Hardware />,
           description: "Hardware baesd wallets.",
           filterKey: "hardware",
           options: [],
@@ -171,6 +200,7 @@ const WalletFilterSidebar = ({ data, filters, updateFilterOption }) => {
       items: [
         {
           title: "Open source",
+          icon: <OpenSource />,
           description:
             "Wallet code for the wallet is open sourced for users to inspect and edit.",
           filterKey: "open_source",
@@ -178,6 +208,7 @@ const WalletFilterSidebar = ({ data, filters, updateFilterOption }) => {
         },
         {
           title: "Non-custodial",
+          icon: <NonCustodial />,
           description: "Who has control over the keys for your wallet.",
           filterKey: "non_custodial",
           options: [],
@@ -190,6 +221,7 @@ const WalletFilterSidebar = ({ data, filters, updateFilterOption }) => {
       items: [
         {
           title: "Hardware support",
+          icon: <HardwareSupport />,
           description:
             "You can connect a hardware wallet and sign transactions with it.",
           filterKey: "hardware_support",
@@ -197,6 +229,7 @@ const WalletFilterSidebar = ({ data, filters, updateFilterOption }) => {
         },
         {
           title: "WalletConnect",
+          icon: <></>,
           description:
             "You can connect to applications that support WalletConnect.",
           filterKey: "walletconnect",
@@ -204,6 +237,7 @@ const WalletFilterSidebar = ({ data, filters, updateFilterOption }) => {
         },
         {
           title: "RPC importing",
+          icon: <RPCImporting />,
           description:
             "You can import RPC endpoint data to connect to different nodes/networks.",
           filterKey: "rpc_importing",
@@ -211,6 +245,7 @@ const WalletFilterSidebar = ({ data, filters, updateFilterOption }) => {
         },
         {
           title: "NFT support",
+          icon: <NFTSupport />,
           description:
             "You can view and interact with your NFTs in the wallet.",
           filterKey: "nft_support",
@@ -218,6 +253,7 @@ const WalletFilterSidebar = ({ data, filters, updateFilterOption }) => {
         },
         {
           title: "Connect to decentralized apps",
+          icon: <></>,
           description:
             "You can connect to applications build on the Ethereum network.",
           filterKey: "connect_to_dapps",
@@ -225,6 +261,7 @@ const WalletFilterSidebar = ({ data, filters, updateFilterOption }) => {
         },
         {
           title: "Staking",
+          icon: <Staking />,
           description:
             "You can use a simple interface to stake directly in the wallet.",
           filterKey: "staking",
@@ -232,12 +269,14 @@ const WalletFilterSidebar = ({ data, filters, updateFilterOption }) => {
         },
         {
           title: "Layer 2",
+          icon: <Layer2 />,
           description: "You can use layer 2 networks in the wallet.",
           filterKey: "layer_2",
           options: [],
         },
         {
           title: "Gas fee customization",
+          icon: <GasFeeCustomization />,
           description:
             "The user is able to customize their gas inputs (base free, priority fee, max fee).",
           filterKey: "gas_fee_customization",
@@ -245,6 +284,7 @@ const WalletFilterSidebar = ({ data, filters, updateFilterOption }) => {
         },
         {
           title: "ENS support",
+          icon: <ENSSupport />,
           description:
             "The wallet supports sending transactions to ENS addresses.",
           filterKey: "ens_support",
@@ -252,6 +292,7 @@ const WalletFilterSidebar = ({ data, filters, updateFilterOption }) => {
         },
         {
           title: "Token importing",
+          icon: <ERC20Support />,
           description:
             "Can import ERC-20 token contract addresses into the wallet.",
           filterKey: "erc_20_support",
@@ -265,6 +306,7 @@ const WalletFilterSidebar = ({ data, filters, updateFilterOption }) => {
       items: [
         {
           title: "Buy crypto",
+          icon: <BuyCrypto />,
           description:
             "User is able to buy crypto with fiat directly in the wallet.",
           filterKey: "buy_crypto",
@@ -272,6 +314,7 @@ const WalletFilterSidebar = ({ data, filters, updateFilterOption }) => {
         },
         {
           title: "Withdraw crypto",
+          icon: <></>,
           description:
             "User is able to withdraw to fiat directly in the wallet.",
           filterKey: "withdraw_crypto",
@@ -285,6 +328,7 @@ const WalletFilterSidebar = ({ data, filters, updateFilterOption }) => {
       items: [
         {
           title: "Multisig",
+          icon: <></>,
           description:
             "Wallets that require two or more signatures from private keys for a transaction.",
           filterKey: "multisig",
@@ -292,6 +336,7 @@ const WalletFilterSidebar = ({ data, filters, updateFilterOption }) => {
         },
         {
           title: "Social recovery",
+          icon: <></>,
           description:
             "Wallets that allow guardians to change the signing key for smart contract wallets.",
           filterKey: "social_recovery",
@@ -328,10 +373,7 @@ const WalletFilterSidebar = ({ data, filters, updateFilterOption }) => {
                 return (
                   <FilterOption>
                     <OptionGrid>
-                      <Image
-                        image={getImage(data.mobile)!}
-                        objectFit="contain"
-                      />
+                      <IconContainer>{item.icon}</IconContainer>
                       <p>{item.title}</p>
                       <div>
                         {item.filterKey && (

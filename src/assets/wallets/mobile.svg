@@ -1,0 +1,8 @@
+<svg width="150" height="214" viewBox="0 0 150 214" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="path-1-inside-1_1503_29471" fill="white">
+<rect x="150" width="214" height="150" rx="10.67" transform="rotate(90 150 0)"/>
+</mask>
+<rect x="150" width="214" height="150" rx="10.67" transform="rotate(90 150 0)" stroke="black" stroke-width="21.342" mask="url(#path-1-inside-1_1503_29471)"/>
+<path d="M57 187H91" stroke="black" stroke-width="10.67" stroke-linecap="round"/>
+<circle cx="75" cy="30" r="8" fill="black"/>
+</svg>
