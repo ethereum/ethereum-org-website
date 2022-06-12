@@ -220,7 +220,7 @@ const FindWalletPage = ({ data, location }) => {
           </div>
         </FilterSidebar>
         <WalletContent>
-          <WalletTable data={data} walletData={walletData} />
+          <WalletTable data={data} filters={filters} walletData={walletData} />
         </WalletContent>
       </TableContent>
       <Note>

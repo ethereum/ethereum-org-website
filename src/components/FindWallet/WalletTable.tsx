@@ -241,7 +241,7 @@ const featureDropdownItems = [
   },
 ]
 
-const WalletTable = ({ data, walletData }) => {
+const WalletTable = ({ data, filters, walletData }) => {
   const [walletCardData, setWalletData] = useState(
     walletData.map((wallet) => {
       return { ...wallet, moreInfo: false }
@@ -263,12 +263,20 @@ const WalletTable = ({ data, walletData }) => {
     setWalletData(temp)
   }
 
+  const filteredWallets = walletCardData.filter((wallet) => {
+    if (filters.android) {
+      return filters.android === wallet.android
+    }
+
+    return wallet
+  })
+
   return (
     <Container>
       {/* TODO: Change this span info for fitlered wallets when implemented */}
       <WalletContentHeader>
         <p>
-          <span>{walletCardData.length} wallets</span> out of{" "}
+          <span>{filteredWallets.length} wallets</span> out of{" "}
           {walletCardData.length}
         </p>
         <StyledSelect
@@ -299,7 +307,7 @@ const WalletTable = ({ data, walletData }) => {
           defaultValue={thirdFeatureSelect}
         />
       </WalletContentHeader>
-      {walletCardData.map((wallet, idx) => {
+      {filteredWallets.map((wallet, idx) => {
         const deviceLabels: Array<string> = []
 
         wallet.ios && deviceLabels.push("iOS")
