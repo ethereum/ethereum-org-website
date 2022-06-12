@@ -290,16 +290,19 @@ const WalletTable = ({ data, filters, walletData }) => {
   }
 
   const filteredWallets = walletCardData.filter((wallet) => {
-    if (filters.android) {
-      return filters.android === wallet.android
-    }
+    let showWallet = true
 
-    return wallet
+    Object.keys(filters).forEach((filter) => {
+      if (filters[filter] && showWallet === true) {
+        showWallet = filters[filter] === wallet[filter]
+      }
+    })
+
+    return showWallet
   })
 
   return (
     <Container>
-      {/* TODO: Change this span info for fitlered wallets when implemented */}
       <WalletContentHeader>
         <p>
           <span>{filteredWallets.length} wallets</span> out of{" "}
