@@ -9,34 +9,34 @@ In Ethereum, a node proposing a new block is required to make the underlying dat
 
 ## What is data availability? {#what-is-data-availability}
 
-“Data availability” is a guarantee that all transaction data for a block was published by the block proposer and is available to other network participants. As explained in “[Intro to Ethereum](/developers/docs/intro-to-ethereum/)”, Ethereum transactions are processed in [blocks](/developers/docs/blocks/) and chained together to form the “blockchain”.
+Data availability is the guarantee that the block proposer published all transaction data for a block and that the transaction data is available to other network participants. Ethereum transactions get processed in [blocks](/developers/docs/blocks/). These blocks are chained together to form the "blockchain".
 
 Each block has two major parts: 
 
 - The **block header**: This contains general information (metadata) about the block, such as the timestamp, block hash, block number, etc.
 - The  **block body**: This contains the actual transactions processed as part of the block. 
 
-[Miner nodes](/developers/docs/consensus-mechanisms/pow/mining/) (or validators in [proof-of-stake](/developers/docs/consensus-mechanisms/pos/)) proposing new blocks must publish both the block header and block body. This allows nodes participating in [consensus](/developers/docs/consensus-mechanisms/) (full nodes) to download the block and confirm that transactions follow Ethereum’s consensus protocol. 
+To propose a block, [miners](/developers/docs/consensus-mechanisms/pow/mining/) (or validators in [proof-of-stake](/developers/docs/consensus-mechanisms/pos/)) must publish the entire block (block header and block body). Publishing the entire block lets nodes participating in consensus download the block and confirm that all transactions in the block are valid.
 
 [Full nodes](/developers/docs/nodes-and-clients/#full-node) are different from [light nodes](/developers/docs/nodes-and-clients/#light-node) that only download the block header. Without full nodes verifying transactions, block proposers could get away with inserting malicious transactions in blocks. 
 
 ### The data availability problem {#the-data-availability-problem}
 
-The data availability problem is encapsulated in one question: “How do we verify that the data for a newly produced block is actually available?” As mentioned, the security Ethereum rests on the assumption that full nodes have access to block data. 
+We can encapsulate the data availability problem into the question: "how do we verify that the data for a newly produced block is available?". This data being available is crucial as the security of Ethereum assumes that full nodes have access to block data. 
 
-If a block producer publishes a new block, but hides some (or all) of the underlying information, they might be able to finalize invalid transactions. Even if a block is valid, withholding data still has negative implications for users and the functionality of the network.   
+If a miner proposes a block without all the data being available, it could reach finality whilst containing invalid transactions. Even if the block is valid, the block's data not being fully available to validate has negative implications for users and the functionality of the network.
 
-Most early discussions around data availability concerned the visibility of transaction data to full nodes (validators) participating in Ethereum’s consensus. However, newer DA research is also focused on verifying data availability with light clients. For light clients, the problem of data availability concerns validating a block’s data availability without having to download the entire block. 
+Most early discussions around data availability concerned the visibility of transaction data to full nodes (validators) participating in Ethereum’s consensus. However, recent data availability research is also focused on verifying data availability with light clients. For light clients, the problem of data availability concerns validating a block’s data availability without having to download every entire block. 
 
 ### Data availability vs. data retrievability {#data-availability-vs-data-retrievability}
 
-Data availability is a different idea from data retrievability. Data availability is the ability of peer-to-peer nodes to download transaction data for a block while it is being proposed for addition to the chain. In other words, data availability is relevant when a block is yet to pass consensus. 
+Data availability is different from data retrievability. Data availability is the ability of nodes to download transaction data for a block while it is being proposed for addition to the chain. In other words, data availability is relevant when a block is yet to pass consensus.
 
 Data retrievability is the ability of nodes to download transactions from a block *after* it has passed consensus. Essentially, data retrievability is concerned with retrieving data from historical blocks. A block becomes “historical” when other blocks have been built on it. 
 
-The core Ethereum protocol is primarily concerned with data availability, not data retrievability. It isn’t the blockckhain’s duty to store data for every transaction it reaches consensus on. Besides, storing state data in perpetuity increases hardware requirements for full nodes and may harm decentralization. 
+The core Ethereum protocol is primarily concerned with data availability, not data retrievability. Ethereum will not store data for every transaction it has processed forever, as doing so increases storage requirements for full nodes, negatively impacting Ethereum's decentralization.
 
-Nevertheless, data retrievability is a much easier problem to solve than data availability. The ability to retrieve historical blockchain data only needs a weak `1-of-N` assumption, meaning only one honest node has to store the data to make it retrievable. It is also assumed that many entities, such as blockchain explorers, have incentives to store archival data and can make it available to others on request. 
+Fortunately, data retrievability is a much easier problem to solve than data availability. The ability to retrieve historical blockchain data only needs one honest node to store it for it to be retrievable. Furthermore, some entities, such as blockchain explorers, have incentives to store archival data and make it available to others on request. 
 
 [More on solutions to the data retrievability problem](https://notes.ethereum.org/@vbuterin/data_sharding_roadmap#Who-would-store-historical-data-under-sharding).
 
@@ -52,7 +52,7 @@ This is important because other network participants, such as light clients, rel
 
 ### Decentralized scalability {#decentralized-scalability}
 
-Due to Ethereum’s constraints, scalability has become a widely discussed topic. However, Ethereum’s vision is to [scale computation without trading off decentralization and security[(/upgrades/vision/). Data availability is critical to achieving decentralized scalability as explained below:
+[Ethereum’s goal is to scale computation without trading off decentralization and security[(/upgrades/vision/). Due to the constraints of the monolithic blockchain architecture, data availability is critical to achieving decentralized scalability.
 
 
 #### Data availability and layer 2 scaling {#data-availability-and-layer-2-scaling}
@@ -63,7 +63,7 @@ Thousands of transactions could happen off-chain, but Ethereum nodes need to pro
 
 However, for Ethereum to guarantee the security of rollups, it needs a mechanism for verifying the validity of off-chain transactions. This is where data availability comes into the picture. 
 
-[Optimistic Rollups](/developers/docs/scaling/optimistic-rollups/) post (compressed) transaction data to Ethereum as `calldata`. This allows anyone to verify the state of the rollup and also provides guarantees of transaction validity. If a particular transaction is invalid, a verifier can use the available transaction data to construct a [fraud proof](/glossary/#fraud-proof) to challenge it. 
+[Optimistic rollups](/developers/docs/scaling/optimistic-rollups/) post compressed transaction data to Ethereum as `calldata`. This allows anyone to verify the state of the rollup and also provides guarantees of transaction validity. If a transaction is invalid, a verifier can use the available transaction data to construct a [fraud proof](/glossary/#fraud-proof) to challenge it. 
 
 [Zero-knowledge (ZK) rollups](/developers/docs/scaling/zk-rollups) don't need to post transaction data since zero-knowledge proofs 
 validity proofs](/glossary/#zk-proof) guarantee the correctness of state transitions. However, we cannot guarantee the functionality of the ZK-rollup (or interact with it) without access to its state data. 
