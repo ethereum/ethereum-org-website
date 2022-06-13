@@ -48,7 +48,7 @@ Hardhat Network comes built-in with Hardhat, an Ethereum development environment
 - [Website](https://hardhat.org/)
 - [GitHub](https://github.com/nomiclabs/hardhat)
 
-### Local Beacon Chains
+### Local Beacon Chains {#local-beacon-chains}
 
 Some consensus clients have built-in tools for spinning up local Beacon chains for testing purposes. Instructions for Lighthouse, Nimbus and Lodestar are available at:
 
