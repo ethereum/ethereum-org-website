@@ -2158,7 +2158,8 @@
       "contributions": [
         "code",
         "bug",
-        "doc"
+        "doc",
+        "design"
       ]
     },
     {
@@ -7798,6 +7799,16 @@
         "translation",
         "bug",
         "doc"
+      ]
+    },
+    {
+      "login": "amithkk",
+      "name": "Amith KK",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1029727?v=4",
+      "profile": "http://amithkk.github.io",
+      "contributions": [
+        "doc",
+        "bug"
       ]
     }
   ],

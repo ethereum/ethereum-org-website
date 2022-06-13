@@ -7,7 +7,7 @@ sidebar: true
 
 Această documentație este concepută pentru a vă ajuta să construiţi cu Ethereum. Tratează Ethereum ca un concept, explică stiva tehnică Ethereum și documentează subiecte avansate pentru aplicații și cazuri de utilizare mai complexe.
 
-Modul în care lucrăm este open-source, în colaborare cu comunitatea, așa că nu ezitaţi să sugeraţi subiecte noi, să adăugaţi conținut nou și să oferiţi exemple oriunde credeţi că ar fi util. Toată documentația se poate edita prin GitHub – dacă nu sunteţi sigur cum, [urmaţi aceste instrucțiuni](https://github.com/ethereum/ethereum-org-website/tree/dev/docs/contributing/EDITING_MARKDOWN.md).
+Modul în care lucrăm este open-source, în colaborare cu comunitatea, așa că nu ezitaţi să sugeraţi subiecte noi, să adăugaţi conținut nou și să oferiţi exemple oriunde credeţi că ar fi util. Toată documentația se poate edita prin GitHub – dacă nu sunteţi sigur cum, [urmaţi aceste instrucțiuni](https://github.com/ethereum/ethereum-org-website/tree/dev/docs/contributing/editing-markdown.md).
 
 ## Module de dezvoltare {#development-modules}
 
