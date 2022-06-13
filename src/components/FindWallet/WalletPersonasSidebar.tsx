@@ -1,9 +1,23 @@
 // Libraries
-import React, { useState } from "react"
+import React, { ReactSVGElement, useState } from "react"
 import styled from "styled-components"
 
 // Components
 import Icon from "../Icon"
+
+// Icons
+import BuyCrypto from "../../assets/wallets/buy_crypto.svg"
+import ENSSupport from "../../assets/wallets/ens_support.svg"
+import ERC20Support from "../../assets/wallets/erc_20_support.svg"
+import GasFeeCustomization from "../../assets/wallets/gas_fee_customization.svg"
+import HardwareSupport from "../../assets/wallets/hardware_support.svg"
+import Hardware from "../../assets/wallets/hardware.svg"
+import Layer2 from "../../assets/wallets/layer_2.svg"
+import NFTSupport from "../../assets/wallets/nft_support.svg"
+import NonCustodial from "../../assets/wallets/non_custodial.svg"
+import OpenSource from "../../assets/wallets/open_source.svg"
+import RPCImporting from "../../assets/wallets/rpc_importing.svg"
+import Staking from "../../assets/wallets/staking.svg"
 
 // Styles
 const Container = styled.div`
@@ -53,11 +67,24 @@ const StyledIcon = styled(Icon)<{ selected: boolean }>`
       : props.theme.colors.secondary};
 `
 
+const PersonaFeature = styled.div`
+  display: flex;
+  gap: 0.5rem;
+  svg {
+    width: 24px;
+    height: 24px;
+    path {
+      fill: ${(props) => props.theme.colors.text};
+      stroke: ${(props) => props.theme.colors.text};
+    }
+  }
+`
+
 // Types
 interface Personas {
   title: string
   description: string
-  featureHighlight: string[]
+  featureHighlight: { label: string; icon: JSX.Element }[]
   presetFilters: {
     android: boolean
     ios: boolean
@@ -87,6 +114,81 @@ interface Personas {
   }
 }
 
+const filterLabels = {
+  hardware: {
+    label: "Hardware",
+    icon: <Hardware />,
+  },
+  open_source: {
+    label: "Open source",
+    icon: <OpenSource />,
+  },
+  non_custodial: {
+    label: "Non-custodial",
+    icon: <NonCustodial />,
+  },
+  hardware_support: {
+    label: "Hardware support",
+    icon: <HardwareSupport />,
+  },
+  walletconnect: {
+    label: "WalletConnect",
+    icon: <></>,
+  },
+  rpc_importing: {
+    label: "RPC importing",
+    icon: <RPCImporting />,
+  },
+  nft_support: {
+    label: "NFT support",
+    icon: <NFTSupport />,
+  },
+  connect_to_dapps: {
+    label: "Connect to apps",
+    icon: <></>,
+  },
+  staking: {
+    label: "Staking",
+    icon: <Staking />,
+  },
+  swaps: {
+    label: "Swaps",
+    icon: <></>,
+  },
+  layer_2: {
+    label: "Layer 2",
+    icon: <Layer2 />,
+  },
+  gas_fee_customization: {
+    label: "Gas fee customization",
+    icon: <GasFeeCustomization />,
+  },
+  ens_support: {
+    label: "ENS support",
+    icon: <ENSSupport />,
+  },
+  buy_crypto: {
+    label: "Buy crypto",
+    icon: <BuyCrypto />,
+  },
+  withdraw_crypto: {
+    label: "Withdraw crypto",
+    icon: <></>,
+  },
+  multisig: {
+    label: "Multisig",
+    icon: <></>,
+  },
+  social_recovery: {
+    label: "Social recovery",
+    icon: <></>,
+  },
+  erc_20_support: {
+    label: "Token support",
+    icon: <ERC20Support />,
+  },
+}
+
 const WalletPersonasSidebar = ({ setFilters }) => {
   const [selectedPersona, setSelectedPersona] = useState(NaN)
 
@@ -94,7 +196,12 @@ const WalletPersonasSidebar = ({ setFilters }) => {
     {
       title: "I'm new to Ethereum",
       description: "You are a first time user looking for your first wallet",
-      featureHighlight: ["feature", "feature", "feature", "feature"],
+      featureHighlight: [
+        filterLabels.buy_crypto,
+        filterLabels.withdraw_crypto,
+        filterLabels.nft_support,
+        filterLabels.layer_2,
+      ],
       presetFilters: {
         android: true,
         ios: true,
@@ -127,7 +234,12 @@ const WalletPersonasSidebar = ({ setFilters }) => {
       title: "I'm a hodler",
       description:
         "You are someone that has tokens and don’t want to touch them",
-      featureHighlight: ["feature", "feature", "feature", "feature"],
+      featureHighlight: [
+        filterLabels.hardware,
+        filterLabels.hardware_support,
+        filterLabels.open_source,
+        filterLabels.layer_2,
+      ],
       presetFilters: {
         android: true,
         ios: true,
@@ -160,7 +272,12 @@ const WalletPersonasSidebar = ({ setFilters }) => {
       title: "I'm use decentralized finance",
       description:
         "You are someone that follows DeFI and want’s a wallet easy to use",
-      featureHighlight: ["feature", "feature", "feature", "feature"],
+      featureHighlight: [
+        filterLabels.swaps,
+        filterLabels.erc_20_support,
+        filterLabels.hardware_support,
+        filterLabels.layer_2,
+      ],
       presetFilters: {
         android: true,
         ios: true,
@@ -193,7 +310,12 @@ const WalletPersonasSidebar = ({ setFilters }) => {
       title: "I'm a developer",
       description:
         "You are developer and needs a wallet that helps develop dapps",
-      featureHighlight: ["feature", "feature", "feature", "feature"],
+      featureHighlight: [
+        filterLabels.rpc_importing,
+        filterLabels.walletconnect,
+        filterLabels.nft_support,
+        filterLabels.erc_20_support,
+      ],
       presetFilters: {
         android: true,
         ios: true,
@@ -226,7 +348,12 @@ const WalletPersonasSidebar = ({ setFilters }) => {
       title: "I use multiple chains",
       description:
         "You use wallets on other chains and wants to get in ethereum",
-      featureHighlight: ["feature", "feature", "feature", "feature"],
+      featureHighlight: [
+        filterLabels.layer_2,
+        filterLabels.rpc_importing,
+        filterLabels.erc_20_support,
+        filterLabels.nft_support,
+      ],
       presetFilters: {
         android: true,
         ios: true,
@@ -259,7 +386,12 @@ const WalletPersonasSidebar = ({ setFilters }) => {
       title: "I'm all about NFT's",
       description:
         "You are someone that is all about NFTs a wallet has to ready",
-      featureHighlight: ["feature", "feature", "feature", "feature"],
+      featureHighlight: [
+        filterLabels.nft_support,
+        filterLabels.layer_2,
+        filterLabels.walletconnect,
+        filterLabels.hardware_support,
+      ],
       presetFilters: {
         android: true,
         ios: true,
@@ -312,7 +444,10 @@ const WalletPersonasSidebar = ({ setFilters }) => {
             <p>{persona.description}</p>
             <Grid>
               {persona.featureHighlight.map((feature) => (
-                <p>{feature}</p>
+                <PersonaFeature>
+                  {feature.icon}
+                  <p>{feature.label}</p>
+                </PersonaFeature>
               ))}
             </Grid>
           </Persona>
