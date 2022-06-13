@@ -17,7 +17,7 @@ export interface IProps {
 
 const PreMergeBanner: React.FC<IProps> = ({ className }) => (
   <StyledBannerNotification shouldShow className={className}>
-    The Merge is approaching which comes with many changes to Ethereum. Some
+    The Merge is approaching, and with it comes many changes to Ethereum. Some
     content on this page may be out-of-date related to these changes, and
     updates are coming soon.{" "}
     <Link to="/upgrades/merge/">Learn more about The Merge.</Link>
