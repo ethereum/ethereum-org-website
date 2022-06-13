@@ -60,9 +60,9 @@ Users can send short messages called "Peeps", which cannot be deleted or modifie
 
 ### Mirror {#mirror}
 
-[Mirror](https://mirror.xyz/) is a decentralized and user-owned content distribution platform similar to Medium. Users can sign up by connecting their wallets or providing an Ethereum Name Service (ENS) username.
+[Mirror](https://mirror.xyz/) is a web3-enabled writing platform that aims to be decentralized and user-owned. Users can read and write for free on Mirror by simply connecting their wallets. Users can also collect writing and subscribe to their favorite writers.
 
-Posts published on Mirror are permanently stored on Arweave, a decentralized storage platform. Users can earn money by selling their articles as [non-fungible tokens (NFTs)](https://ethereum.org/en/nft/).
+Posts published on Mirror are permanently stored on Arweave, a decentralized storage platform, and can be minted as collectable [non-fungible tokens (NFTs)](/nft/) known as Writing NFTs. Writing NFTs are completely free for writers to create, and collection happens on an Ethereum L2 — making transactions inexpensive, fast, and environmentally friendly.
 
 ### MINDS {#minds}
 
