@@ -7788,6 +7788,17 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "dalmau",
+      "name": "Jordi Pascual",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7261873?v=4",
+      "profile": "https://github.com/dalmau",
+      "contributions": [
+        "translation",
+        "bug",
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
