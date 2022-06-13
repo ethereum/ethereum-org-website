@@ -157,6 +157,7 @@ const FlexInfo = styled.div`
 
 const FlexInfoCenter = styled(FlexInfo)`
   justify-content: center;
+  cursor: pointer;
 `
 
 const Image = styled(GatsbyImage)`
@@ -467,19 +468,19 @@ const WalletTable = ({ data, filters, walletData }) => {
                   <Link to={wallet.url}>Check out {wallet.name}</Link>
                 </div>
               </FlexInfo>
-              <FlexInfoCenter>
+              <FlexInfoCenter onClick={() => updateMoreInfo(idx)}>
                 <WalletFeatureCircle
                   name="circle"
                   hasFeature={wallet[firstFeatureSelect.filterKey]}
                 />
               </FlexInfoCenter>
-              <FlexInfoCenter>
+              <FlexInfoCenter onClick={() => updateMoreInfo(idx)}>
                 <WalletFeatureCircle
                   name="circle"
                   hasFeature={wallet[secondFeatureSelect.filterKey]}
                 />
               </FlexInfoCenter>
-              <FlexInfoCenter>
+              <FlexInfoCenter onClick={() => updateMoreInfo(idx)}>
                 <WalletFeatureCircle
                   name="circle"
                   hasFeature={wallet[thirdFeatureSelect.filterKey]}
