@@ -51,7 +51,9 @@ const ModalBackground = styled.div`
   z-index: 1001; /* Above the nav bar */
 `
 
-const Container = styled.div`
+const Container = styled.div<{
+  bottomOffset: number
+}>`
   display: flex;
   box-sizing: border-box;
   width: 300px;
@@ -141,9 +143,13 @@ const IconContainer = styled(NakedButton)`
   transition: transform 0.2s ease-in-out;
 `
 
-const FeedbackWidget = ({ className }) => {
+export interface IProps {
+  className?: string
+}
+
+const FeedbackWidget: React.FC<IProps> = ({ className }) => {
   const intl = useIntl()
-  const containerRef = useRef()
+  const containerRef = useRef<HTMLInputElement>(null)
   useOnClickOutside(containerRef, () => handleClose(), [`mousedown`])
   const [isOpen, setIsOpen] = useState(false)
   const [feedbackSubmitted, setFeedbackSubmitted] = useState(false)
@@ -197,7 +203,7 @@ const FeedbackWidget = ({ className }) => {
     trackCustomEvent({
       eventCategory: `FeedbackWidget toggled`,
       eventAction: `Clicked`,
-      label: `Closed feedback widget`,
+      eventName: `Closed feedback widget`,
     })
   }
   const handleOpen = () => {
@@ -205,14 +211,14 @@ const FeedbackWidget = ({ className }) => {
     trackCustomEvent({
       eventCategory: `FeedbackWidget toggled`,
       eventAction: `Clicked`,
-      label: `Opened feedback widget`,
+      eventName: `Opened feedback widget`,
     })
   }
   const handleSubmit = (choice) => {
     trackCustomEvent({
       eventCategory: `Page is helpful feedback`,
       eventAction: `Clicked`,
-      label: choice,
+      eventName: choice,
     })
     setIsHelpful(choice)
     setFeedbackSubmitted(true)
@@ -221,7 +227,7 @@ const FeedbackWidget = ({ className }) => {
     trackCustomEvent({
       eventCategory: `Feedback survey opened`,
       eventAction: `Clicked`,
-      label: "Feedback survey opened",
+      eventName: "Feedback survey opened",
     })
     window && surveyUrl && window.open(surveyUrl, "_blank")
     setIsOpen(false) // Close widget without triggering redundant tracker event
