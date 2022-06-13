@@ -5,7 +5,7 @@ lang: en
 sidebar: true
 ---
 
-A [consensus mechanism](/developers/docs/consensus-mechanisms/) is a set of rules and incentives that enable nodes to come to agreement about the state of the Ethereum network. There are several different classes of consensus mechanisms that have been implemented on various blockchains, including [proof-of-work (PoW)](/developers/docs/consensus-mechanisms/pow/), proof-of-stake (PoS) and proof-of-authority (PoA). Ethereum has used PoW since its genesis, but is moving to PoS. This was always the plan because PoS is thought to be more secure than PoW, uses drastically less energy, and enables new scaling solutions to be implemented. However, proof-of-stake is also more complex than proof-of-work and refining the mechanism has taken years of research and development. The challenge now is to implement PoS on the live Ethereum network - a process known as ["The Merge"](/upgrades/merge/).
+Proof-of-stake (PoS) is the [consensus mechanism](/developers/docs/consensus-mechanisms/) that Ethereum will use after [The Merge](/upgrades/merge). Ethereum is moving off of [proof-of-work (PoW)](/developers/docs/consensus-mechanisms/pow/) to proof-of-stake because it is more secure, less energy-intensive, and better for implementing new scaling solutions. While it has always been the plan to transition to proof-of-stake, it is also more complex than proof-of-work, and refining the mechanism has taken years of research and development. The challenge now is to implement proof-of-stake on Ethereum Mainnet. This process is called ["The Merge"](/upgrades/merge/).
 
 ## Prerequisites {#prerequisites}
 

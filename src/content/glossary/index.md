@@ -355,7 +355,7 @@ Ethereum's execution layer is the network of [execution clients](#execution-clie
 
 ### externally owned account (EOA) {#eoa}
 
-An [account](#account) created by or for human users of the Ethereum network.
+Externally owned accounts (EOAs) are [accounts](#account) that are controlled by users who control the [private keys](#private-key) for an account, typically generated using a [seed phrase](#hd-wallet-seed). Externally owned accounts are accounts without any code associated with them. Typically these accounts are used with a [wallet](#wallet).
 
 ### Ethereum Request for Comments (ERC) {#erc}
 
