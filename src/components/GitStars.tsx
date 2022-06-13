@@ -46,8 +46,18 @@ const Text = styled.div`
   font-size: 0.8125rem;
   background: ${(props) => props.theme.colors.searchBackgroundEmpty};
 `
+export interface GitHubRepo {
+  stargazerCount: number
+  url: string
+}
 
-const GitStars = ({ gitHubRepo, className, hideStars }) => {
+export interface IProps {
+  gitHubRepo: GitHubRepo
+  className?: string
+  hideStars: string
+}
+
+const GitStars: React.FC<IProps> = ({ gitHubRepo, className, hideStars }) => {
   // Stringify with commas
   let starsString = gitHubRepo.stargazerCount.toString()
   const rgx = /(\d+)(\d{3})/
