@@ -3,7 +3,6 @@ import { ListItem } from "./SharedStyledComponents"
 import Translation from "./Translation"
 import Link from "./Link"
 import docLinks from "../data/developer-docs-links.yaml"
-import { TranslationKey } from "../utils/translations"
 
 export interface IProps {
   headerId: string
