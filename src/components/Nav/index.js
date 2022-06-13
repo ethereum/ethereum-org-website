@@ -202,7 +202,7 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
         },
         {
           text: "decentralized-identity",
-          to: "/identity/",
+          to: "/decentralized-identity/",
         },
       ],
     },
