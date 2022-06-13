@@ -50,7 +50,7 @@ Hardhat Network comes built-in with Hardhat, an Ethereum development environment
 
 ### Local Beacon Chains {#local-beacon-chains}
 
-Some consensus clients have built-in tools for spinning up local Beacon chains for testing purposes. Instructions for Lighthouse, Nimbus and Lodestar are available at:
+Some consensus clients have built-in tools for spinning up local Beacon chains for testing purposes. Instructions for Lighthouse, Nimbus and Lodestar are available:
 
 [Local testnet using Lodestar](https://chainsafe.github.io/lodestar/usage/local/)
 [Local testnet using Lighthouse](https://lighthouse-book.sigmaprime.io/setup.html#local-testnets)
