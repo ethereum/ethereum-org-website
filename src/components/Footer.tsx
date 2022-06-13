@@ -7,7 +7,8 @@ import { getLocaleTimestamp } from "../utils/time"
 import Translation from "./Translation"
 import Link from "./Link"
 import Icon from "./Icon"
-import { isLangRightToLeft } from "../utils/translations"
+import { isLangRightToLeft, TranslationKey } from "../utils/translations"
+import { Lang } from "../utils/languages"
 
 const StyledFooter = styled.footer`
   padding-top: 3rem;
@@ -121,12 +122,23 @@ const socialLinks = [
   },
 ]
 
-const Footer = () => {
+export interface LinkSection {
+  title: TranslationKey
+  links: Array<{
+    to: string
+    text: TranslationKey
+    isPartiallyActive?: boolean
+  }>
+}
+
+export interface IProps {}
+
+const Footer: React.FC<IProps> = () => {
   const intl = useIntl()
 
-  const isPageRightToLeft = isLangRightToLeft(intl.locale)
+  const isPageRightToLeft = isLangRightToLeft(intl.locale as Lang)
 
-  const linkSections = [
+  const linkSections: Array<LinkSection> = [
     {
       title: "use-ethereum",
       links: [
@@ -355,7 +367,7 @@ const Footer = () => {
             <LastUpdated>
               <Translation id="website-last-updated" />:{" "}
               {getLocaleTimestamp(
-                intl.locale,
+                intl.locale as Lang,
                 data.allSiteBuildMetadata.edges[0].node.buildTime
               )}
             </LastUpdated>
@@ -375,7 +387,7 @@ const Footer = () => {
             </SocialIcons>
           </FooterTop>
           <LinkGrid>
-            {linkSections.map((section, idx) => (
+            {linkSections.map((section: LinkSection, idx) => (
               <LinkSection key={idx}>
                 <SectionHeader>
                   <Translation id={section.title} />
@@ -384,7 +396,7 @@ const Footer = () => {
                   {section.links.map((link, linkIdx) => (
                     <ListItem key={linkIdx}>
                       <FooterLink
-                        dir={isPageRightToLeft ? "auto" : "ltr"}
+                        dir={isPageRightToLeft ? "rtl" : "ltr"}
                         to={link.to}
                         isPartiallyActive={false}
                       >
