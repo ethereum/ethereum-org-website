@@ -8,6 +8,19 @@ import Icon from "../Icon"
 import Link from "../Link"
 import { StyledSelect as Select } from "../SharedStyledComponents"
 
+// Icons
+import BuyCrypto from "../../assets/wallets/buy_crypto.svg"
+import ENSSupport from "../../assets/wallets/ens_support.svg"
+import ERC20Support from "../../assets/wallets/erc_20_support.svg"
+import GasFeeCustomization from "../../assets/wallets/gas_fee_customization.svg"
+import HardwareSupport from "../../assets/wallets/hardware_support.svg"
+import Layer2 from "../../assets/wallets/layer_2.svg"
+import NFTSupport from "../../assets/wallets/nft_support.svg"
+import NonCustodial from "../../assets/wallets/non_custodial.svg"
+import OpenSource from "../../assets/wallets/open_source.svg"
+import RPCImporting from "../../assets/wallets/rpc_importing.svg"
+import Staking from "../../assets/wallets/staking.svg"
+
 // Styles
 const Container = styled.div`
   width: 100%;
@@ -168,9 +181,30 @@ const ColoredLine = styled.div<{ color: string }>`
   );
 `
 
-const FeatureLabel = styled.p<{ hasFeature: boolean }>`
-  color: ${(props) =>
-    props.hasFeature ? props.theme.colors.primary : props.theme.colors.text200};
+const FeatureLabel = styled.div<{ hasFeature: boolean }>`
+  display: flex;
+  gap: 0.5rem;
+  svg {
+    width: 24px;
+    height: 24px;
+
+    path {
+      fill: ${(props) =>
+        props.hasFeature
+          ? props.theme.colors.primary
+          : props.theme.colors.text200};
+      stroke: ${(props) =>
+        props.hasFeature
+          ? props.theme.colors.primary
+          : props.theme.colors.text200};
+    }
+  }
+  p {
+    color: ${(props) =>
+      props.hasFeature
+        ? props.theme.colors.primary
+        : props.theme.colors.text200};
+  }
 `
 
 // Constants
@@ -180,102 +214,119 @@ const featureDropdownItems = [
     value: "Open source",
     filterKey: "open_source",
     category: "security",
+    icon: <OpenSource />,
   },
   {
     label: "Self custody",
     value: "Self custody",
     filterKey: "non_custodial",
     category: "security",
+    icon: <NonCustodial />,
   },
   {
     label: "Hardware wallet support",
     value: "Hardware wallet support",
     filterKey: "hardware_support",
     category: "feature",
+    icon: <HardwareSupport />,
   },
   {
     label: "WalletConnect",
     value: "WalletConnect",
     filterKey: "walletconnect",
     category: "feature",
+    icon: <></>,
   },
   {
     label: "RPC importing",
     value: "RPC importing",
     filterKey: "rpc_importing",
     category: "feature",
+    icon: <RPCImporting />,
   },
   {
     label: "NFT support",
     value: "NFT support",
     filterKey: "nft_support",
     category: "feature",
+    icon: <NFTSupport />,
   },
   {
     label: "Connect to dapps",
     value: "Connect to dapps",
     filterKey: "connect_to_dapps",
     category: "feature",
+    icon: <></>,
   },
   {
     label: "Staking",
     value: "Staking",
     filterKey: "staking",
     category: "feature",
+    icon: <Staking />,
   },
   {
     label: "Swaps",
     value: "Swaps",
     filterKey: "swaps",
     category: "feature",
+    icon: <></>,
   },
   {
     label: "Layer 2",
     value: "Layer 2",
     filterKey: "layer_2",
     category: "feature",
+    icon: <Layer2 />,
   },
   {
     label: "Gas fee customization",
     value: "Gas fee customization",
     filterKey: "gas_fee_customization",
     category: "feature",
+    icon: <GasFeeCustomization />,
   },
   {
     label: "ENS support",
     value: "ENS support",
     filterKey: "ens_support",
     category: "feature",
+    icon: <ENSSupport />,
   },
   {
     label: "Token importing",
     value: "Token importing",
     filterKey: "erc_20_support",
     category: "feature",
+    icon: <ERC20Support />,
   },
   {
     label: "Buy crypto",
     value: "Buy crypto",
     filterKey: "buy_crypto",
     category: "trade_and_buy",
+    icon: <BuyCrypto />,
   },
   {
     label: "Withdraw crypto",
     value: "Withdraw crypto",
     filterKey: "withdraw_crypto",
     category: "trade_and_buy",
+    icon: <></>,
   },
   {
     label: "Multisig",
     value: "Multisig",
     filterKey: "multisig",
     category: "smart_contract",
+    icon: <></>,
   },
   {
     label: "Social recovery",
     value: "Social recovery",
     filterKey: "social_recovery",
     category: "smart_contract",
+    icon: <></>,
   },
 ]
 
@@ -417,7 +468,8 @@ const WalletTable = ({ data, filters, walletData }) => {
                       if (feature.category === "feature")
                         return (
                           <FeatureLabel hasFeature={wallet[feature.filterKey]}>
-                            {feature.label}
+                            {feature.icon}
+                            <p>{feature.label}</p>
                           </FeatureLabel>
                         )
                     })}
@@ -428,7 +480,8 @@ const WalletTable = ({ data, filters, walletData }) => {
                       if (feature.category === "security")
                         return (
                           <FeatureLabel hasFeature={wallet[feature.filterKey]}>
-                            {feature.label}
+                            {feature.icon}
+                            <p>{feature.label}</p>
                           </FeatureLabel>
                         )
                     })}
@@ -439,7 +492,8 @@ const WalletTable = ({ data, filters, walletData }) => {
                       if (feature.category === "trade_and_buy")
                         return (
                           <FeatureLabel hasFeature={wallet[feature.filterKey]}>
-                            {feature.label}
+                            {feature.icon}
+                            <p>{feature.label}</p>
                           </FeatureLabel>
                         )
                     })}
@@ -450,7 +504,8 @@ const WalletTable = ({ data, filters, walletData }) => {
                       if (feature.category === "smart_contract")
                         return (
                           <FeatureLabel hasFeature={wallet[feature.filterKey]}>
-                            {feature.label}
+                            {feature.icon}
+                            <p>{feature.label}</p>
                           </FeatureLabel>
                         )
                     })}
