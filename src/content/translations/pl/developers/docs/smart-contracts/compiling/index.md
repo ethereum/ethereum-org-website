@@ -276,4 +276,4 @@ Poniżej znajduje się ABI dla kontraktu z tokenem ERC-20. ERC-20 to token, któ
 ## Powiązane tematy {#related-topics}
 
 - [Biblioteki JavaScript](/developers/docs/apis/javascript/)
-- [Maszyna Wirtualna Ethereum](/developers/docs/ethereum-virtual-machine/)
+- [Maszyna Wirtualna Ethereum](/developers/docs/evm/)
