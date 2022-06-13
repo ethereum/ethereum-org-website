@@ -53,7 +53,7 @@ Up to date client diversity data for the consensus layer is now available at htt
 
 ## Execution layer {#execution-layer}
 
-Up until now, the conversation around client diversity has focused mainly on the consensus layer. However, the execution client [Geth](https://geth.ethereum.org) currently accounts for around 85% of all nodes. This is problematic for the same reasons as for consensus clients. For example, a bug in Geth affecting transaction-handling or constructing execution payloads could lead to bugged information being finalized by the consensus clients. Therefore, Ethereum would be healthier with a more even distribution of execution clients, ideally with no client representing more than 33% of the network.
+Until now, the conversation around client diversity has focused mainly on the consensus layer. However, the execution client [Geth](https://geth.ethereum.org) currently accounts for around 85% of all nodes. This percentage is problematic for the same reasons as for consensus clients. For example, a bug in Geth affecting transaction handling or constructing execution payloads could lead to consensus clients finalizing problematic or bugged transactions. Therefore, Ethereum would be healthier with a more even distribution of execution clients, ideally with no client representing more than 33% of the network.
 
 ## Use a minority client {#use-minority-client}
 
