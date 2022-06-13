@@ -65,16 +65,28 @@ const TableContent = styled(Content)`
   gap: 24px;
 `
 
-const FilterSidebar = styled.div`
+const MobileFilterToggle = styled.div`
+  display: none;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    display: block;
+  }
+`
+
+const FilterSidebar = styled.div<{ showMobileSidebar: boolean }>`
   width: 25%;
   display: flex;
   flex-direction: column;
   gap: 24px;
 
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    width: 0;
-    height: 0;
-    display: none;
+    width: ${(props) => (props.showMobileSidebar ? "350px" : "0")};
+    height: ${(props) => (props.showMobileSidebar ? "100%" : "0")};
+    display: ${(props) => (props.showMobileSidebar ? "flex" : "none")};
+  }
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    width: ${(props) => (props.showMobileSidebar ? "375px" : "0")};
+    height: ${(props) => (props.showMobileSidebar ? "100%" : "0")};
+    display: ${(props) => (props.showMobileSidebar ? "flex" : "none")};
   }
 `
 
@@ -116,11 +128,16 @@ const FilterTab = styled.div<{
   }
 `
 
-const WalletContent = styled.div`
+const WalletContent = styled.div<{ showMobileSidebar: boolean }>`
   width: 75%;
 
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     width: 100%;
+  }
+
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    width: 100%;
+    display: ${(props) => (props.showMobileSidebar ? "none" : "")};
   }
 `
 
@@ -139,6 +156,7 @@ const FindWalletPage = ({ data, location }) => {
   const intl = useIntl()
 
   const [showFeatureFilters, setShowFeatureFilters] = useState(false)
+  const [showMobileSidebar, setShowMobileSidebar] = useState(false)
   const [filters, setFilters] = useState({
     android: false,
     ios: false,
@@ -211,9 +229,24 @@ const FindWalletPage = ({ data, location }) => {
           objectFit="contain"
         />
       </HeroContainer>
-
+      <MobileFilterToggle
+        onClick={() => {
+          setShowMobileSidebar(!showMobileSidebar)
+        }}
+      >
+        <p>Filters</p>
+        <p>
+          {Object.values(filters).reduce((acc, filter) => {
+            if (filter) {
+              acc += 1
+            }
+            return acc
+          }, 0)}{" "}
+          active
+        </p>
+      </MobileFilterToggle>
       <TableContent>
-        <FilterSidebar>
+        <FilterSidebar showMobileSidebar={showMobileSidebar}>
           <FilterTabs>
             <FilterTab
               active={!showFeatureFilters}
@@ -240,7 +273,7 @@ const FindWalletPage = ({ data, location }) => {
             )}
           </div>
         </FilterSidebar>
-        <WalletContent>
+        <WalletContent showMobileSidebar={showMobileSidebar}>
           <WalletTable data={data} filters={filters} walletData={walletData} />
         </WalletContent>
       </TableContent>
