@@ -329,6 +329,10 @@ const UseCasePage = ({ data, pageContext }) => {
         text: "template-usecase-dropdown-social-networks",
         to: "/social-networks/",
       },
+      {
+        text: "template-usecase-dropdown-identity",
+        to: "/decentralized-identity/",
+      },
     ],
   }
 
