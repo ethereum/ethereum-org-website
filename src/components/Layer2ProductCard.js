@@ -2,10 +2,14 @@
 import React from "react"
 import styled from "styled-components"
 import { GatsbyImage } from "gatsby-plugin-image"
+import { useIntl } from "gatsby-plugin-intl"
 
 // Components
 import ButtonLink from "./ButtonLink"
 import Link from "./Link"
+
+// Utils
+import { translateMessageId } from "../utils/translations"
 
 // Styles
 const ImageWrapper = styled.div`
@@ -87,6 +91,8 @@ const Layer2ProductCard = ({
   tokenLists,
   ecosystemPortal,
 }) => {
+  const intl = useIntl()
+
   return (
     <Card>
       <ImageWrapper background={background}>
@@ -97,16 +103,30 @@ const Layer2ProductCard = ({
           <Title>{name}</Title>
           {children && <Children>{children}</Children>}
           <Description>{description}</Description>
-          {note.length > 0 && <Description>Note: {note}</Description>}
+          {note.length > 0 && (
+            <Description>
+              {translateMessageId("layer-2-note", intl)} {note}
+            </Description>
+          )}
         </div>
-        {bridge && <Link to={bridge}>{name} Bridge</Link>}
-        {ecosystemPortal && (
-          <Link to={ecosystemPortal}>{name} Ecosystem Portal</Link>
+        {bridge && (
+          <Link to={bridge}>
+            {name} {translateMessageId("layer-2-bridge", intl)}
+          </Link>
         )}
-        {tokenLists && <Link to={tokenLists}>{name} Token Lists</Link>}
+        {ecosystemPortal && (
+          <Link to={ecosystemPortal}>
+            {name} {translateMessageId("layer-2-ecosystem-portal", intl)}
+          </Link>
+        )}
+        {tokenLists && (
+          <Link to={tokenLists}>
+            {name} {translateMessageId("layer-2-token-lists", intl)}
+          </Link>
+        )}
       </Content>
-      <StyledButtonLink to={url} hideArrow={true}>
-        Explore {name}
+      <StyledButtonLink to={url}>
+        {translateMessageId("layer-2-explore", intl)} {name}
       </StyledButtonLink>
     </Card>
   )

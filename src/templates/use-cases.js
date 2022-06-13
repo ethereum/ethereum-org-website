@@ -325,6 +325,10 @@ const UseCasePage = ({ data, pageContext }) => {
         text: "template-usecase-dropdown-dao",
         to: "/dao/",
       },
+      {
+        text: "template-usecase-dropdown-social-networks",
+        to: "/social-networks/",
+      },
     ],
   }
 

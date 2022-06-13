@@ -51,7 +51,7 @@ Cần một hướng dẫn cơ bản hơn? Tham khảo [ethereum.org/learn](/vi/
 - [py-evm](https://github.com/ethereum/py-evm) - _triển khai máy ảo Ethereum_
 - [py-solc-x](https://pypi.org/project/py-solc-x/) - _Trình tập trung Python xung quanh trình biên dịch solc solidity với hỗ trợ 0,5.x_
 - [py-wasm](https://github.com/ethereum/py-wasm) - _Python thực hiện trình thông dịch lắp ráp web_
-- [pydevp2p](https://github.com/ethereum/pydevp2p) - _Triển khai ngăn xếp Ethereum P2P_
+- [pydevp2p](https://github.com/ethereum/pydevp2p) - _Triển khai Ethereum Stack P2P_
 - [pymaker](https://github.com/makerdao/pymaker) - _Python API cho hợp đồng của nhà sản xuất_
 - [Mamba](https://mamba.black) - _framework để viết, biên dịch và triển khai các hợp đồng thông minh được viết bằng ngôn ngữ Vyper_
 - [Trinity](https://github.com/ethereum/trinity) - _Ứng dụng Ethereum Python_

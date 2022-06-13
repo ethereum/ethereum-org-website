@@ -57,3 +57,4 @@ Multiple implementations of Optimistic rollups exist that you can integrate into
 - [The Essential Guide to Arbitrum](https://newsletter.banklesshq.com/p/the-essential-guide-to-arbitrum)
 - [How does Optimism's Rollup really work?](https://research.paradigm.xyz/optimism)
 - [OVM Deep Dive](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)
+- [More on layer 2](/layer-2/)

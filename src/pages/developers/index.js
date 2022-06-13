@@ -423,6 +423,13 @@ const DevelopersPage = ({ data }) => {
             <p>
               <Translation id="page-developers-mining-desc" />
             </p>
+
+            <Link to="/developers/docs/consensus-mechanisms/pow/mining-algorithms/">
+              <Translation id="page-developers-mining-algorithms-link" />
+            </Link>
+            <p>
+              <Translation id="page-developers-mining-algorithms-desc" />
+            </p>
           </Column>
           <RightColumn>
             <h3>
@@ -513,6 +520,18 @@ const DevelopersPage = ({ data }) => {
             </Link>
             <p>
               <Translation id="page-developers-scaling-desc" />
+            </p>
+            <Link to="/developers/docs/networking-layer/">
+              <Translation id="page-developers-networking-layer-link" />
+            </Link>
+            <p>
+              <Translation id="page-developers-networking-layer-desc" />
+            </p>
+            <Link to="/developers/docs/data-structures-and-encoding/">
+              <Translation id="page-developers-data-structures-and-encoding-link" />
+            </Link>
+            <p>
+              <Translation id="page-developers-data-structures-and-encoding-desc" />
             </p>
           </RightColumn>
         </ThreeColumnContent>

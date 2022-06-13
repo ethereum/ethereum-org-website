@@ -186,12 +186,13 @@ const StatDivider = styled.div`
 
 const Layer2Page = ({ data }) => {
   const intl = useIntl()
-  const localeForStatsBoxNumbers = getLocaleForNumberFormat(intl.locale)
   const [tvl, setTVL] = useState("loading...")
   const [percentChangeL2, setL2PercentChange] = useState("loading...")
   const [averageFee, setAverageFee] = useState("loading...")
 
   useEffect(() => {
+    const localeForStatsBoxNumbers = getLocaleForNumberFormat(intl.locale)
+
     const fetchL2Beat = async () => {
       try {
         const l2BeatData = await getData(`${GATSBY_FUNCTIONS_PATH}/l2beat`)
@@ -211,7 +212,9 @@ const Layer2Page = ({ data }) => {
             l2BeatData.data[l2BeatData.data.length - 31][1]) *
           100
         ).toFixed(2)
-        setL2PercentChange(percentage > 0 ? `+${percentage}%` : `{percentage}%`)
+        setL2PercentChange(
+          percentage > 0 ? `+${percentage}%` : `${percentage}%`
+        )
       } catch (error) {
         console.error(error)
         setTVL("Error, please refresh.")
@@ -252,23 +255,27 @@ const Layer2Page = ({ data }) => {
       }
     }
     fetchCryptoStats()
-  }, [])
+  }, [intl.locale])
 
   const heroContent = {
-    title: "Layer 2",
-    header: "Ethereum for everyone",
-    subtitle:
-      "Scaling Ethereum without compromising on security or decentralization.",
+    title: translateMessageId("layer-2-hero-title", intl),
+    header: translateMessageId("layer-2-hero-header", intl),
+    subtitle: translateMessageId("layer-2-hero-subtitle", intl),
     image: getImage(data.heroImage),
-    alt: "test",
+    alt: translateMessageId("layer-2-hero-alt-text", intl),
     buttons: [
       {
-        content: "What is layer 2",
+        content: translateMessageId("layer-2-hero-button-1", intl),
         pathId: "what-is-layer-2",
       },
       {
-        content: "Use layer 2",
+        content: translateMessageId("layer-2-hero-button-2", intl),
         pathId: "use-layer-2",
+        isSecondary: "isSecondary",
+      },
+      {
+        content: translateMessageId("layer-2-hero-button-3", intl),
+        pathId: "how-to-get-onto-layer-2",
         isSecondary: "isSecondary",
       },
     ],
@@ -277,40 +284,49 @@ const Layer2Page = ({ data }) => {
   const layer2Cards = [
     {
       emoji: ":money_with_wings:",
-      title: "Lower fees",
-      description:
-        "By combining multiple off-chain transactions into a single layer 1 transaction, transaction fees are massively reduced, making Ethereum more accessible for all.",
+      title: translateMessageId("layer-2-lower-fees-title", intl),
+      description: translateMessageId("layer-2-lower-fees-description", intl),
     },
     {
       emoji: ":closed_lock_with_key:",
-      className: "security-card",
-      title: "Maintain security",
-      description:
-        "Layer 2 blockchains settle their transactions on Ethereum Mainnet, allowing users to benefit from the security of the Ethereum network.",
+      title: translateMessageId("layer-2-maintain-security-title", intl),
+      description: translateMessageId(
+        "layer-2-maintain-security-description",
+        intl
+      ),
     },
     {
       emoji: ":hammer_and_wrench:",
-      title: "Expand use cases",
-      description:
-        "With higher transactions per second, lower fees, and new technology, projects will expand into new applications with improved user experience.",
+      title: translateMessageId("layer-2-expand-use-cases-title", intl),
+      description: translateMessageId(
+        "layer-2-expand-use-cases-description",
+        intl
+      ),
     },
   ]
 
   const rollupCards = [
     {
       image: getImage(data.optimisticRollup),
-      title: "Optimistic rollups",
-      description:
-        "Optimistic rollups are 'optimistic' in the sense that transactions are assumed to be valid, but can be challenged if necessary. If an invalid transaction is suspected, a fault proof is ran to see if this has taken place.",
-      childSentence: "More on optimistic rollups",
+      title: translateMessageId("layer-2-optimistic-rollups-title", intl),
+      description: translateMessageId(
+        "layer-2-optimistic-rollups-description",
+        intl
+      ),
+      childSentence: translateMessageId(
+        "layer-2-optimistic-rollups-childSentance",
+        intl
+      ),
       childLink: "/developers/docs/scaling/optimistic-rollups/",
     },
     {
       image: getImage(data.zkRollup),
-      title: "Zero-knowledge rollups",
-      description:
-        "Zero-knowledge rollups use validity proofs where transactions are computed off-chain, and then compressed data is supplied to Ethereum Mainnet as a proof of their validity.",
-      childSentence: "More on zk-rollups",
+      title: translateMessageId("layer-2-zk-rollups-title", intl),
+      description: translateMessageId("layer-2-zk-rollups-description", intl),
+      childSentence: translateMessageId(
+        "layer-2-zk-rollups-childSentance",
+        intl
+      ),
       childLink: "/developers/docs/scaling/zk-rollups/",
     },
   ]
@@ -319,24 +335,30 @@ const Layer2Page = ({ data }) => {
     information: [
       {
         title: "L2BEAT",
-        description:
-          "L2BEAT is a great resource for looking at technical risk assessments of layer 2 projects. We recommend checking out their resources when researching specific layer 2 projects.",
+        description: translateMessageId(
+          "layer-2-tools-l2beat-description",
+          intl
+        ),
         link: "https://l2beat.com",
         image: getImage(data.l2beat),
         alt: "L2BEAT",
       },
       {
         title: "L2 Fees",
-        description:
-          "L2 Fees lets you see the current cost (denominated in USD) for doing transactions on different layer 2s.",
+        description: translateMessageId(
+          "layer-2-tools-l2fees-description",
+          intl
+        ),
         link: "https://l2fees.info",
         image: getImage(data.doge),
         alt: "L2 Fees",
       },
       {
         title: "Chainlist",
-        description:
-          "Chainlist is a great resource for importing network RPC's into supporting wallets. You will find RPC's for layer 2 projects here to help get you connected.",
+        description: translateMessageId(
+          "layer-2-tools-chainlist-description",
+          intl
+        ),
         link: "https://chainlist.org",
         image: getImage(data.doge),
         alt: "Chainlist",
@@ -345,24 +367,30 @@ const Layer2Page = ({ data }) => {
     walletManagers: [
       {
         title: "Zapper",
+        description: translateMessageId(
+          "layer-2-tools-zapper-description",
+          intl
+        ),
         link: "https://zapper.fi/",
-        description:
-          "Manage your entire web3 portfolio from DeFi to NFTs and whatever comes next. Invest in the latest opportunities from one convenient place.",
         image: getImage(data.zapper),
         alt: "Zapper",
       },
       {
         title: "Zerion",
-        description:
-          "Build and manage your entire DeFi portfolio from one place. Discover the world of decentralized finance today.",
+        description: translateMessageId(
+          "layer-2-tools-zerion-description",
+          intl
+        ),
         link: "https://zerion.io",
         image: getImage(data.zerion),
         alt: "Zerion",
       },
       {
         title: "DeBank",
-        description:
-          "Keep up with all the important happenings in the web3 world",
+        description: translateMessageId(
+          "layer-2-tools-debank-description",
+          intl
+        ),
         link: "https://debank.com",
         image: getImage(data.debank),
         alt: "DeBank",
@@ -396,7 +424,9 @@ const Layer2Page = ({ data }) => {
             <StatBox>
               <StatPrimary>{tvl}</StatPrimary>
               <StatSpan>
-                <StatDescription>TVL locked in layer 2 (USD)</StatDescription>
+                <StatDescription>
+                  <Translation id="layer-2-statsbox-1" />
+                </StatDescription>
                 <Tooltip
                   content={tooltipContent({
                     apiUrl: "https://l2beat.com/",
@@ -412,7 +442,7 @@ const Layer2Page = ({ data }) => {
               <StatPrimary>{averageFee}</StatPrimary>
               <StatSpan>
                 <StatDescription>
-                  Average layer 2 ETH transfer fee (USD)
+                  <Translation id="layer-2-statsbox-2" />
                 </StatDescription>
                 <Tooltip
                   content={tooltipContent({
@@ -428,7 +458,9 @@ const Layer2Page = ({ data }) => {
             <StatBox>
               <StatPrimary>{percentChangeL2}</StatPrimary>
               <StatSpan>
-                <StatDescription>Layer 2 TVL change (30 days)</StatDescription>
+                <StatDescription>
+                  <Translation id="layer-2-statsbox-3" />
+                </StatDescription>
                 <Tooltip
                   content={tooltipContent({
                     apiUrl: "https://l2beat.com/",
@@ -446,19 +478,14 @@ const Layer2Page = ({ data }) => {
       <PaddedContent id="what-is-layer-2">
         <TwoColumnContent>
           <Flex50>
-            <h2>What is layer 2?</h2>
+            <h2>
+              <Translation id="layer-2-what-is-layer-2-title" />
+            </h2>
             <p>
-              Layer 2 (L2) is a collective term to describe a specific set of
-              Ethereum scaling solutions.{" "}
-              <b>
-                A layer 2 is separate blockchain that extends Ethereum and
-                inherits the security guarantees of Ethereum
-              </b>
-              .
+              <Translation id="layer-2-what-is-layer-2-1" />
             </p>
             <p>
-              Now let’s dig into it a bit more, and to do this we need to
-              explain layer 1 (L1).
+              <Translation id="layer-2-what-is-layer-2-2" />
             </p>
           </Flex50>
           <Flex50>
@@ -471,55 +498,43 @@ const Layer2Page = ({ data }) => {
         </TwoColumnContent>
       </PaddedContent>
       <LightGrayContent>
-        <h2>What is Layer 1?</h2>
+        <h2>
+          <Translation id="layer-2-what-is-layer-1-title" />
+        </h2>
         <TwoColumnContent>
           <Flex50>
             <p>
-              Layer 1 is the base blockchain. Ethereum and Bitcoin are both
-              layer 1 blockchains because they are the{" "}
-              <b>
-                underlying foundation that various layer 2 networks build on top
-                of
-              </b>
-              . Examples of layer 2 projects include "rollups" on Ethereum and
-              the Lighting Network on top of Bitcoin. All user transaction
-              activity on these layer 2 projects can ultimately settle back to
-              the layer 1 blockchain.
+              <Translation id="layer-2-what-is-layer-1-1" />
             </p>
             <p>
-              Ethereum also functions as a data availability layer for layer 2s.
-              Layer 2 projects will post their transaction data onto Ethereum,
-              relying on Ethereum for data availability. This data can be used
-              to get the state of the layer 2, or to dispute transactions on
-              layer 2.
+              <Translation id="layer-2-what-is-layer-1-2" />
             </p>
           </Flex50>
-          {/* TODO: Convert these inline styles into styled components */}
           <Flex50>
             <p>
-              <b>Ethereum as the layer 1 includes:</b>
+              <Translation id="layer-2-what-is-layer-1-list-title" />
             </p>
             <OrderedList
               listData={[
                 <p>
-                  <b>A network of node operators</b> to secure and validate the
-                  network
+                  <Translation id="layer-2-what-is-layer-1-list-1" />
                 </p>,
                 <p>
-                  <b>A network of block producers</b>
+                  <Translation id="layer-2-what-is-layer-1-list-2" />
                 </p>,
                 <p>
-                  <b>The blockchain</b> itself and the history of transaction
-                  data
+                  <Translation id="layer-2-what-is-layer-1-list-3" />
                 </p>,
                 <p>
-                  <b>The consensus mechanism</b> for the network
+                  <Translation id="layer-2-what-is-layer-1-list-4" />
                 </p>,
               ]}
             />
             <p>
-              Still confused on Ethereum?{" "}
-              <Link to="/what-is-ethereum/">Learn what Ethereum is</Link>.
+              <Translation id="layer-2-what-is-layer-1-list-link-1" />{" "}
+              <Link to="/what-is-ethereum/">
+                <Translation id="layer-2-what-is-layer-1-list-link-2" />
+              </Link>
             </p>
           </Flex50>
         </TwoColumnContent>
@@ -542,55 +557,33 @@ const Layer2Page = ({ data }) => {
             />
           </FlexContainer>
           <FlexContainer flexPercent="50">
-            <h2>Why do we need layer 2?</h2>
+            <h2>
+              <Translation id="layer-2-why-do-we-need-layer-2-title" />
+            </h2>
             <p>
-              Three desirable properties of a blockchain are that it is{" "}
-              <b>decentralized, secure, and scalable</b>. The{" "}
-              <Link to="https://www.ledger.com/academy/what-is-the-blockchain-trilemma">
-                blockchain trilemma
-              </Link>{" "}
-              states that a simple blockchain architecture can only achieve two
-              out of three. Want a secure and decentralized blockchain? You need
-              to sacrifice scalability.
+              <Translation id="layer-2-why-do-we-need-layer-2-1" />
             </p>
             <p>
-              Ethereum has reached the network's current capacity with{" "}
-              <Link to="https://etherscan.io/chart/tx">
-                1+ million transactions per day
-              </Link>
-              and high demand for each of these transactions. The success of
-              Ethereum and the demand to use it has caused gas prices to rise
-              substantially. Therefore the{" "}
-              <Link to="/developers/docs/scaling/">
-                need for scaling solutions
-              </Link>{" "}
-              has increased in demand as well. This is where layer 2 networks
-              come in.
+              <Translation id="layer-2-why-do-we-need-layer-2-2" />
             </p>
 
-            <h3>Scalability</h3>
+            <h3>
+              <Translation id="layer-2-why-do-we-need-layer-2-scalability" />
+            </h3>
             <p>
-              The main goal of scalability is to increase transaction speed
-              (faster finality) and transaction throughput (higher transactions
-              per second) without sacrificing decentralization or security.
+              <Translation id="layer-2-why-do-we-need-layer-2-scalability-1" />
             </p>
             <p>
-              The Ethereum community has taken a strong stance that it would not
-              throw out decentralization or security in order to scale. Until{" "}
-              <Link to="/upgrades/sharding/">sharding</Link>, Ethereum Mainnet
-              (layer 1) is only able to process{" "}
-              <Link to="https://ethtps.info/Network/Ethereum">
-                roughly 15 transactions per second
-              </Link>
-              . When demand to use Ethereum is high, the network becomes
-              congested, which increases transaction fees and prices out users
-              who cannot afford those fees. That is where layer 2 comes in to
-              scale Ethereum today.
+              <Translation id="layer-2-why-do-we-need-layer-2-scalability-2" />
             </p>
-            <Link to="/upgrades/vision/">More on Ethereum's vision</Link>
+            <Link to="/upgrades/vision/">
+              <Translation id="layer-2-why-do-we-need-layer-2-scalability-3" />
+            </Link>
           </FlexContainer>
         </TwoColumnContent>
-        <h3>Benefits of layer 2</h3>
+        <h3>
+          <Translation id="layer-2-benefits-of-layer-2-title" />
+        </h3>
         <InfoGrid>
           {layer2Cards.map(({ emoji, title, description }, idx) => (
             <Card
@@ -606,49 +599,25 @@ const Layer2Page = ({ data }) => {
       <PaddedContent>
         <TwoColumnContent>
           <FlexContainer flexPercent="50">
-            <h2>How does layer 2 work?</h2>
+            <h2>
+              <Translation id="layer-2-how-does-layer-2-work-title" />
+            </h2>
             <p>
-              As we mentioned above, Layer 2 is a collective term for Ethereum
-              scaling solutions that handle transactions off Ethereum layer 1
-              while still taking advantage of the robust decentralized security
-              of Ethereum layer 1.{" "}
-              <b>A layer 2 is a separate blockchain that extends Ethereum</b>.
-              How does that work?
+              <Translation id="layer-2-how-does-layer-2-work-1" />
             </p>
             <p>
-              A layer 2 blockchain regularly communicates with Ethereum (by
-              submitting bundles of transactions) in order to ensure it has
-              similar security and decentralization guarantees. All this
-              requires no changes to the layer 1 protocol (Ethereum). This lets
-              layer 1 handle security, data availability, and decentralization,
-              while layer 2s handles scaling. Layer 2s take the transactional
-              burden away from the layer 1 and post finalized proofs back to the
-              layer 1. By removing this transaction load from layer 1, the base
-              layer becomes less congested, and everything becomes more
-              scalable.
+              <Translation id="layer-2-how-does-layer-2-work-2" />
             </p>
-            <h3>Rollups</h3>
+            <h3>
+              <Translation id="layer-2-rollups-title" />
+            </h3>
             <p>
-              Rollups are currently the preferred layer 2 solution for scaling
-              Ethereum. By using rollups, users can{" "}
-              <Link to="https://l2fees.info/">
-                reduce gas fees by up to 100x
-              </Link>{" "}
-              compared to layer 1.
+              <Translation id="layer-2-rollups-1" />
             </p>
             <p>
-              Rollups bundle (or ’roll up’) hundreds of transactions into a
-              single transaction on layer 1. This distributes the L1 transaction
-              fees across everyone in the rollup, making it cheaper for each
-              user. Rollup transactions get executed outside of layer 1 but the
-              transaction data gets posted to layer 1. By posting transaction
-              data onto layer 1, rollups inherit the security of Ethereum. There
-              are two different approaches to rollups: optimistic and
-              zero-knowledge - they differ primarily on how this transaction
-              data is posted to L1.
+              <Translation id="layer-2-rollups-2" />
             </p>
           </FlexContainer>
-          {/* TODO: Convert these inline styles into styled components */}
           <FlexContainer
             flexPercent="50"
             style={{
@@ -686,42 +655,35 @@ const Layer2Page = ({ data }) => {
 
       <PaddedContent>
         <InfoBanner isWarning={true}>
-          <h2>Do your own research: risks of layer 2</h2>
+          <h2>
+            <Translation id="layer-2-dyor-title" />
+          </h2>
           <p>
-            Since layer 2 chains inherit security from Ethereum, in an ideal
-            world, they are as safe as L1 Ethereum. However, many of the{" "}
-            <b>projects are still young and somewhat experimental</b>. After
-            years of research and development, many of the L2 technologies that
-            will scale Ethereum launched in 2021. Many projects still have
-            additional trust assumptions as they work to decentralize their
-            networks. Always do your own research to decide if you're
-            comfortable with any risks involved.
+            <Translation id="layer-2-dyor-1" />
           </p>
           <p>
-            For more information on the technology, risks, and trust assumptions
-            of layer 2s, we recommend checking out L2BEAT, which provides a
-            comprehensive risk assessment framework of each project.
+            <Translation id="layer-2-dyor-2" />
           </p>
           <p>
             <ButtonLink to="https://l2beat.com/?view=risk">
-              Go to L2BEAT
+              <Translation id="layer-2-dyor-3" />
             </ButtonLink>
           </p>
         </InfoBanner>
       </PaddedContent>
 
       <PaddedContent id="use-layer-2">
-        <h2>Use layer 2</h2>
+        <h2>
+          <Translation id="layer-2-use-layer-2-title" />
+        </h2>
         <p>
-          Now that you understand why layer 2 exists and how it works, let's get
-          you up and running!
+          <Translation id="layer-2-use-layer-2-1" />
         </p>
-        <h3>Generalized layer 2s</h3>
+        <h3>
+          <Translation id="layer-2-use-layer-2-generalized-title" />
+        </h3>
         <p>
-          Generalized layer 2s behave just like Ethereum — but cheaper. Anything
-          that you can do on Ethereum layer 1, you can also do on layer 2. Many
-          dapps have already begun to migrate to these networks or have skipped
-          Mainnet altogether to deploy straight on a layer 2.
+          <Translation id="layer-2-use-layer-2-generalized-1" />
         </p>
         <CardGrid>
           {layer2DataCombined
@@ -732,7 +694,7 @@ const Layer2Page = ({ data }) => {
                   key={idx}
                   background={l2.background}
                   image={getImage(data[l2.imageKey])}
-                  description={l2.description}
+                  description={translateMessageId(l2.descriptionKey, intl)}
                   url={l2.website}
                   note={translateMessageId(l2.noteKey, intl)}
                   name={l2.name}
@@ -746,11 +708,11 @@ const Layer2Page = ({ data }) => {
       </PaddedContent>
 
       <PaddedContent>
-        <h3>Application specific layer 2s</h3>
+        <h3>
+          <Translation id="layer-2-use-layer-2-application-specific-title" />
+        </h3>
         <p>
-          Application specific layer 2s are projects that specialize in
-          optimizing for a specific application space, bringing improved
-          performance.
+          <Translation id="layer-2-use-layer-2-application-specific-1" />
         </p>
         <CardGrid>
           {layer2DataCombined
@@ -761,7 +723,7 @@ const Layer2Page = ({ data }) => {
                   key={idx}
                   background={l2.background}
                   image={getImage(data[l2.imageKey])}
-                  description={l2.description}
+                  description={translateMessageId(l2.descriptionKey, intl)}
                   url={l2.website}
                   note={translateMessageId(l2.noteKey, intl)}
                   name={l2.name}
@@ -779,48 +741,33 @@ const Layer2Page = ({ data }) => {
       </PaddedContent>
 
       <PaddedContent>
-        <h2>A note on sidechains, validiums, and alternative blockchains</h2>
+        <h2>
+          <Translation id="layer-2-sidechains-title" />
+        </h2>
         <TwoColumnContent>
           <Flex50>
             <p>
-              <b>Sidechains and validiums</b> are blockchains that allow assets
-              from Ethereum to be bridged over and used on another blockchain.
-              Sidechains and validiums run in parallel with Ethereum, and
-              interact with Ethereum through bridges, but they do not derive
-              their security or data availability from Ethereum.
+              <Translation id="layer-2-sidechains-1" />
             </p>
             <p>
-              Both scale similarly to layer 2s - they offer lower transaction
-              fees and higher transaction throughput - but have different trust
-              assumptions.
+              <Translation id="layer-2-sidechains-2" />
             </p>
             <p>
-              More on{" "}
-              <Link to="/developers/docs/scaling/sidechains/">sidechains</Link>{" "}
-              and <Link to="/developers/docs/scaling/validium/">validiums</Link>
+              <Translation id="layer-2-sidechains-3" />
             </p>
           </Flex50>
           <Flex50>
             <p>
-              Some <b>layer 1 blockchains</b> have higher throughput and lower
-              transaction fees than Ethereum. These alternative layer 1s have
-              had to <b>sacrifice on security or decentralization</b> in order
-              to achieve higher transactions per second and lower transaction
-              fees.
+              <Translation id="layer-2-sidechains-4" />
             </p>
             <p>
-              The Ethereum ecosystem is firmly aligned that{" "}
-              <b>
-                layer 2 scaling is the only way to solve the scalability
-                trilemma
-              </b>{" "}
-              while remaining decentralized and secure.
+              <Translation id="layer-2-sidechains-5" />
             </p>
           </Flex50>
         </TwoColumnContent>
       </PaddedContent>
 
-      <PaddedContent>
+      <PaddedContent id="how-to-get-onto-layer-2">
         <Layer2Onboard
           layer2DataCombined={layer2DataCombined}
           ethIcon={getImage(data.ethHome)}
@@ -828,7 +775,9 @@ const Layer2Page = ({ data }) => {
       </PaddedContent>
 
       <PaddedContent>
-        <h2>Tools to be effective on layer 2</h2>
+        <h2>
+          <Translation id="layer-2-tools-title" />
+        </h2>
         <TwoColumnContent>
           <Flex50>
             <ProductList
@@ -846,140 +795,101 @@ const Layer2Page = ({ data }) => {
       </PaddedContent>
 
       <PaddedContent>
-        <h2>FAQ</h2>
-        <ExpandableCard title="Why is there no 'official' Ethereum L2?">
+        <h2>
+          <Translation id="layer-2-faq-title" />
+        </h2>
+        <ExpandableCard
+          title={`${translateMessageId("layer-2-faq-question-1-title", intl)}`}
+        >
           <p>
-            Just as there is no 'official' Ethereum client, there is no
-            'official' Ethereum layer 2. Ethereum is permissionless -
-            technically anyone can create a layer 2! Multiple teams will
-            implement their version of a layer 2, and the ecosystem as a whole
-            will benefit from a diversity of design approaches that are
-            optimized for different use cases. Much like we have multiple
-            Ethereum clients developed by multiple teams in order to have
-            diversity in the network, this too will be how layer 2s develop in
-            the future.
+            <Translation id="layer-2-faq-question-1-description-1" />
           </p>
         </ExpandableCard>
-        <ExpandableCard title="What is the difference between optimistic and zero-knowledge rollups?">
+        <ExpandableCard
+          title={`${translateMessageId("layer-2-faq-question-2-title", intl)}`}
+        >
           <p>
-            Both optimistic and zero-knowledge rollups bundle (or ’roll up’)
-            hundreds of transactions into a single transaction on layer 1.
-            Rollup transactions get executed outside of layer 1 but transaction
-            data gets posted to layer 1.
+            <Translation id="layer-2-faq-question-2-description-1" />
           </p>
           <p>
-            The primary difference is what data is posted to the layer 1 and how
-            the data is verified. Validity proofs (used by zero-knowledge
-            rollups) run the computations off-chain and post a proof, whereas
-            fault proofs (used by optimistic rollups) only run the computations
-            on-chain when fault is suspected and must be checked.
+            <Translation id="layer-2-faq-question-2-description-2" />
           </p>
           <p>
-            At the moment, most zk-rollups are application specific, in contrast
-            with optimistic rollups which have largely been generalizable.
+            <Translation id="layer-2-faq-question-2-description-3" />
           </p>
           <p>
-            More info on{" "}
-            <Link to="/developers/docs/scaling/optimistic-rollups/">
-              optimistic rollups
-            </Link>{" "}
-            and{" "}
-            <Link to="/developers/docs/scaling/zk-rollups/">
-              zero-knowledge rollups
-            </Link>
-            .
+            <Translation id="layer-2-faq-question-2-description-4" />
           </p>
         </ExpandableCard>
-        <ExpandableCard title="Is scaling at layer 1 possible?">
+        <ExpandableCard
+          title={`${translateMessageId("layer-2-faq-question-3-title", intl)}`}
+        >
           <p>
-            Yes. Currently in the Ethereum roadmap there are plans for shard
-            chains. While these are in the roadmap, further scaling through
-            layer 2 networks is still necessary.{" "}
-            <Link to="/upgrades/shard-chains/">More info on sharding</Link>.
+            <Translation id="layer-2-faq-question-3-description-1" />
           </p>
         </ExpandableCard>
-        <ExpandableCard title="What are the risks with layer 2?">
+        <ExpandableCard
+          title={`${translateMessageId("layer-2-faq-question-4-title", intl)}`}
+        >
           <p>
-            Layer 2 projects contain additional risks compared to holding funds
-            and transacting directly on Ethereum Mainnet. For instance,
-            sequencers may go down, leading you to have to wait to access funds.
+            <Translation id="layer-2-faq-question-4-description-1" />
           </p>
           <p>
-            We encourage you to do your own research before transferring
-            significant funds to a layer 2. For more information on the
-            technology, risks, and trust assumptions of layer 2s, we recommend
-            checking out <Link to="https://l2beat.com/?view=risk">L2BEAT</Link>,
-            which provides a comprehensive risk assessment framework of each
-            project.
+            <Translation id="layer-2-faq-question-4-description-2" />
           </p>
           <p>
-            Blockchain bridges, which facilitate asset transfers to layer 2, are
-            in their early stages of development and it is likely that the
-            optimal bridge design has not been discovered yet. There have been{" "}
-            <Link to="https://rekt.news/wormhole-rekt/">
-              recent hacks of bridges
-            </Link>
-            . <Link to="/bridges/">More information on bridges</Link>.
+            <Translation id="layer-2-faq-question-4-description-3" />
           </p>
         </ExpandableCard>
-        <ExpandableCard title="Why aren't some layer 2 projects listed here?">
+        <ExpandableCard
+          title={`${translateMessageId("layer-2-faq-question-5-title", intl)}`}
+        >
           <p>
-            We want to make sure we list the best resources possible so users
-            can navigate the layer 2 space in a safe and confident manner. We
-            maintain a framework of criteria for how projects are evaluated for
-            inclusion.{" "}
-            <Link to="/contributing/adding-layer-2/">
-              View our layer 2 listing policy here
-            </Link>
-            .
+            <Translation id="layer-2-faq-question-5-description-1" />
           </p>
           <p>
-            Anyone is free to suggest adding a layer 2 on ethereum.org. If
-            there's a layer 2 that we have missed,{" "}
-            <Link to="https://github.com/ethereum/ethereum-org-website/issues/new?&template=suggest_layer2.md">
-              please suggest it
-            </Link>
+            <Translation id="layer-2-faq-question-5-description-2" />
           </p>
         </ExpandableCard>
       </PaddedContent>
 
       <PaddedContent>
-        <h2>Further reading</h2>
+        <h2>
+          <Translation id="layer-2-further-reading-title" />
+        </h2>
         <ul>
           <li>
             <Link to="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">
-              A rollup-centric ethereum roadmap
+              <Translation id="a-rollup-centric-ethereum-roadmap" />
             </Link>{" "}
             <i>- Vitalik Buterin </i>
           </li>
           <li>
             <Link to="https://vitalik.ca/general/2021/01/05/rollup.html">
-              An Incomplete Guide to Rollups
+              <Translation id="an-incomplete-guide-to-rollups" />
             </Link>{" "}
             <i>- Vitalik Buterin</i>
           </li>
           <li>
             <Link to="https://www.youtube.com/watch?v=DyNbmgkyxJI">
-              Polygon sidechain vs Ethereum rollups: Layer 2 scaling approaches
-              | Vitalik Buterin and Lex Fridman
+              <Translation id="polygon-sidechain-vs-ethereum-rollups" />
             </Link>{" "}
             <i>- Lex Clips</i>
           </li>
           <li>
             <Link to="https://www.youtube.com/watch?v=7pWxCklcNsU">
-              ROLLUPS - The Ultimate Ethereum Scaling Strategy? Arbitrum &
-              Optimism Explained
+              <Translation id="rollups-the-ultimate-ethereum-scaling-strategy" />
             </Link>{" "}
             <i>- Finematics</i>
           </li>
           <li>
             <Link to="/upgrades/shard-chains/">
-              Scaling layer 1 with shard chains
+              <Translation id="scaling-layer-1-with-shard-chains" />
             </Link>
           </li>
           <li>
             <Link to="https://barnabe.substack.com/p/understanding-rollup-economics-from?s=r">
-              Understanding rollup economics from first principals
+              <Translation id="understanding-rollup-economics-from-first-principals" />
             </Link>{" "}
             <i>- Barnabé Monnot</i>
           </li>

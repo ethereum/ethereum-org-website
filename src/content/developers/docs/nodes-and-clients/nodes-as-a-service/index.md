@@ -18,7 +18,7 @@ If you don't already have an understanding of what nodes and clients are, check 
 
 Node service providers run distributed node clients behind the scenes for you, so you don't have to.
 
-These services typically provide an API key that you can use to write to and read from the blockchain. They often include access to [Ethereum testnets](/developers/docs/networks/#testnets) in addition to Mainnet.
+These services typically provide an API key that you can use to write to and read from the blockchain. They often include access to [Ethereum testnets](/developers/docs/networks/#ethereum-testnets) in addition to Mainnet.
 
 Some services offer you your own dedicated node that they manage for you, while others use load balancers to distribute activity across nodes.
 
@@ -44,17 +44,18 @@ Read more about the [benefits of running your own node](/developers/docs/nodes-a
 
 Here is a list of some of the most popular Ethereum node providers, feel free to add any that are missing! Each node service offers different benefits and features in addition to free or paid tiers, you should investigate which ones best suit your needs prior to making a decision.
 
-- [**Alchemy**](https://www.alchemy.com/)
+- [**Alchemy**](https://alchemy.com/)
   - [Docs](https://docs.alchemyapi.io/)
   - Features
-    - Free tier option
-    - Scale as you go
-    - Free archival data
-    - Analytics tools
-    - Dashboard
-    - Unique API endpoints
-    - Webhooks
-    - Direct support
+    - Largest free tier with 300M compute units per month (~30M getLatestBlock requests)
+    - Multichain support for Polygon, Starknet, Optimism, Arbitrum
+    - Powering ~70% of the largest Ethereum dApps and DeFi transaction volume
+    - Real-time webhook alerts via Alchemy Notify
+    - Best-in-class support and reliability / stability
+    - Alchemy's NFT API
+    - Dashboard with Request Explorer, Mempool Watcher, and Composer
+    - Integrated testnet faucet access
+    - Active Discord builder community with 18k users
 - [**Ankr**](https://www.ankr.com/)
   - [Docs](https://docs.ankr.com/)
   - Features
@@ -85,6 +86,18 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Bring your cloud
     - Pay-per-hour pricing
     - Direct 24/7 support
+- [**DataHub**](https://datahub.figment.io)
+  - [Docs](https://docs.figment.io/)
+  - Features
+    - Free tier option with 3,000,000 reqs/month
+    - RPC and WSS endpoints
+    - Dedicated full and archive nodes
+    - Auto-Scaling (Volume Discounts)
+    - Free archival data
+    - Service Analytics
+    - Dashboard
+    - Direct 24/7 Support
+    - Pay in Crypto (Enterprise)
 - [**GetBlock**](https://getblock.io/)
   - [Docs](https://getblock.io/docs/get-started/authentication-with-api-key/)
   - Features
@@ -203,6 +216,14 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Support for various nodes
     - Resource scaling
     - High processing speeds
+- [**ZMOK**](https://zmok.io/)
+  - [Docs](https://docs.zmok.io/)
+  - Features
+    - Front-running as a service
+    - Global transactions mempool with search/filtering methods
+    - Unlimited TX fee and infinite Gas for sending transactions
+    - Fastest getting of the new block and reading of the blockchain
+    - The best price per API call guarantee
 
 ## Further reading {#further-reading}
 

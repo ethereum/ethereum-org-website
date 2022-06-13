@@ -19,7 +19,7 @@ Ha nem tudod, hogy mik azok a csomópontok és kliensek, akkor nézd meg a [Csom
 
 A csomópontszolgáltatók elosztott csomópont klienseket futtatnak a színfalak mögött, így neked nem kell.
 
-Ezek a szolgáltatások általában egy API kulcsot adnak, amivel írhatsz és olvashatsz a blokkláncról. Gyakran biztosítanak hozzáférést az [Ethereum tesztnetekhez](/developers/docs/networks/#testnets) a főhálózat mellett.
+Ezek a szolgáltatások általában egy API kulcsot adnak, amivel írhatsz és olvashatsz a blokkláncról. Gyakran biztosítanak hozzáférést az [Ethereum tesztnetekhez](/developers/docs/networks/#ethereum-testnets) a főhálózat mellett.
 
 Egyes szolgáltatások saját dedikált csomópontot kínálnak, amelyet a te számodra tartanak fenn, míg mások terheléselosztókkal oszlatják el a tevékenységet a csomópontok között.
 

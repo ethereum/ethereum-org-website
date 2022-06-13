@@ -163,9 +163,9 @@ Erigon（前称 TurbohyGeth）是 Go Ethereum 的一个分叉，注重速度和�
 
 同步模式代表了这个过程的不同方法，并有不同的权衡。 客户端在实现同步算法方面也有所不同。 有关部署的具体细节，请参考您所选择的客户端的官方文件。
 
-#### 战略概览 {#overview-of-strategies}
+#### 策略概览 {#overview-of-strategies}
 
-蛛网客户端使用的同步方法概览：
+主网客户端使用的同步方法概览：
 
 ##### 完全同步 {#full-sync}
 
@@ -192,7 +192,7 @@ Erigon（前称 TurbohyGeth）是 Go Ethereum 的一个分叉，注重速度和�
 
 ##### 快照同步
 
-由 Geth 执行。 使用动态快照，用户可以检索所有帐户和存储数据，而不下载中间三角形节点，然后在本地重建 Merkle trie。
+由 Geth 实现。 使用动态快照，用户可以检索所有帐户和存储数据，而不下载中间三角形节点，然后在本地重建 Merkle trie。
 
 - Geth 开发的最快同步策略，为当前默认值
 - 节省大量磁盘使用和网络带宽，同时不影响安全。
@@ -201,7 +201,7 @@ Erigon（前称 TurbohyGeth）是 Go Ethereum 的一个分叉，注重速度和�
 
 ##### 压缩同步
 
-由 OpenEthereum 执行。 节点定期生成一个对共识至关重要的状态快照，任何节点都可以通过网络获取这些快照，从而能够从这个节点快速同步。
+由 OpenEthereum 实现。 节点定期生成一个对共识至关重要的状态快照，任何节点都可以通过网络获取这些快照，从而能够从这个节点快速同步。
 
 - OpenEthereum 的最快和默认同步模式依赖于节点提供的静态快照。
 - 它和快照同步的策略类似，但没有确定的安全效益。
@@ -210,7 +210,7 @@ Erigon（前称 TurbohyGeth）是 Go Ethereum 的一个分叉，注重速度和�
 
 ##### Beam 同步
 
-由 Nethermind 和 Trinity 执行。 可以快速同步，但也可以下载执行最新模块所需的数据，这允许您在启动后的最初几分钟内查询链上信息。
+由 Nethermind 和 Trinity 实现。 可以快速同步，但也可以下载执行最新模块所需的数据，这允许您在启动后的最初几分钟内查询链上信息。
 
 - 首先同步状态，并允许您在几分钟内查询 RPC。
 - 后台同步速度放慢，RPC 响应可能失败，仍处于开发阶段，但并非完全可靠。
@@ -245,9 +245,9 @@ Erigon（前称 TurbohyGeth）是 Go Ethereum 的一个分叉，注重速度和�
 | ----------------------------------------------------------- | ---------- | --------------------- | ------------------------------- |
 | [Teku](https://pegasys.tech/teku)                           | Java       | Linux, Windows, macOS | 信标链，Prater                  |
 | [Nimbus](https://nimbus.team/)                              | Nim        | Linux，Windows，macOS | 信标链，Prater                  |
-| [Lighthouse](https://lighthouse-book.sigmaprime.io/)        | Rust 语言  | Linux，Windows，macOS | 信标链，Prater，Pyrmont         |
+| [Lighthouse](https://lighthouse-book.sigmaprime.io/)        | Rust       | Linux，Windows，macOS | 信标链，Prater，Pyrmont         |
 | [Lodestar](https://lodestar.chainsafe.io/)                  | TypeScript | Linux，Windows，macOS | 信标链，Prater                  |
-| [Prysm](https://docs.prylabs.network/docs/getting-started/) | 出发       | Linux，Windows，macOS | 信标链，Gnosis，Prater，Pyrmont |
+| [Prysm](https://docs.prylabs.network/docs/getting-started/) | Go         | Linux，Windows，macOS | 信标链，Gnosis，Prater，Pyrmont |
 
 ## 硬件 {#hardware}
 
@@ -257,7 +257,7 @@ Erigon（前称 TurbohyGeth）是 Go Ethereum 的一个分叉，注重速度和�
 
 ### 要求 {#requirements}
 
-在安装任何客户端之前，请确保您的计算机有足够的资源运行它。 最低要求和建议请见下文，然而核心部分在于磁盘空间。 同步以太坊区块链需要进行高强度的输入/输出。 最好有一个固态硬盘 (SSD)。 要在机械硬盘上运行以太坊客户端，您将需要至少 8GB 的内存作为缓存。
+在安装任何客户端之前，请确保您的计算机有足够的资源运行它。 最低要求和建议请见下文，然而核心部分在于磁盘空间。 同步以太坊区块链是高强度的输入/输出。 最好有一个固态硬盘 (SSD)。 要在机械硬盘上运行以太坊客户端，您将需要至少 8GB 的内存作为缓存。
 
 #### 最低要求 {#recommended-specifications}
 
@@ -292,7 +292,7 @@ Erigon（前称 TurbohyGeth）是 Go Ethereum 的一个分叉，注重速度和�
 
 ### 单板计算机上的以太坊 {#ethereum-on-a-single-board-computer}
 
-运行以太坊节点的最方便和最便宜的方法是使用 Raspberry Pi 这样的 ARM 架构的单板计算机。 [Ethereum on ARM](https://twitter. com/EthereumOnARM)提供 Geth、OpenEthereum、Nethermind 和 Besu 客户端的图像。 这是一个关于[如何构建和设置 ARM 客户端](/developers/tutorials/run-node-raspberry-pi/)的简单教程。
+运行以太坊节点的最方便和最便宜的方法是使用 Raspberry Pi 这样的 ARM 架构的单板计算机。 [Ethereum on ARM](https://twitter.com/EthereumOnARM)提供 Geth、OpenEthereum、Nethermind 和 Besu 客户端的图像。 这是一个关于[如何构建和设置 ARM 客户端](/developers/tutorials/run-node-raspberry-pi/)的简单教程。
 
 像这样小型、实惠和高效的设备是在家里运行节点的理想选择。
 

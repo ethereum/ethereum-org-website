@@ -32,7 +32,7 @@ Markdown will be translated as whole pages of content, so no specific action is 
   - This results in significant challenges during the translation process, as written syntax for each language will vary in terms of ordering subjects/verbs/etc.
   - If you're wanting to link to something within your sentence, create a link at the end of the sentence or paragraph:
 
-  ```jsx
+  ```tsx
   <p>
     All Ethereum transactions require a fee, known as Gas, that gets paid to the
     miner. <Link to="link">More on Gas</Link>
@@ -41,7 +41,7 @@ Markdown will be translated as whole pages of content, so no specific action is 
 
   Once, you've added your English content to the appropriate JSON file, the above code should look something more like:
 
-  ```jsx
+  ```tsx
   <p>
     <Translation id="page-transactions" />{" "}
     <Link to="link">
@@ -52,11 +52,11 @@ Markdown will be translated as whole pages of content, so no specific action is 
 
   - _tl;dr Each individual JSON entry should be a complete phrase by itself_
 
-- This is done using the `Translation` component. However there is an alternative method for regular JS: `gatsby-plugin-intl` with `/src/utils/translations.js`
+- This is done using the `Translation` component. However there is an alternative method for regular JS: `gatsby-plugin-intl` with `/src/utils/translations.ts`
 
   - **Method one: `<Translation />` component (preferred if only needed in JSX)**
 
-    ```jsx
+    ```tsx
     import { Translation } from "src/components/Translation"
 
     // Utilize in JSX using
@@ -65,7 +65,7 @@ Markdown will be translated as whole pages of content, so no specific action is 
 
   - **Method two: `translateMessageId()`**
 
-    ```jsx
+    ```tsx
     import { useIntl } from "gatsby-plugin-intl"
     import { translateMessageId } from "src/utils/translations"
 
@@ -74,7 +74,7 @@ Markdown will be translated as whole pages of content, so no specific action is 
     translateMessageId("language-json-key", intl)
     ```
 
-    ```jsx
+    ```tsx
     const siteTitle = translateMessageId("site-title", intl)
     ```
 
@@ -82,11 +82,11 @@ Markdown will be translated as whole pages of content, so no specific action is 
 
 - Components and pages are written using arrow function syntax with React hooks in lieu of using class-based components
 
-```jsx
+```tsx
 // Example
 import React, { useState, useEffect } from "react"
 
-const ComponentName = (props) => {
+const ComponentName: React.FC = (props) => {
   // useState hook for managing state variables
   const [greeting, setGreeting] = useState("")
 
@@ -103,12 +103,12 @@ export default ComponentName
 
 ## Styling
 
-- `src/theme.js` - Declares site color themes, breakpoints and other constants (try to utilize these colors first)
+- `src/theme.ts` - Declares site color themes, breakpoints and other constants (try to utilize these colors first)
 - We use [styled-components](https://styled-components.com/)
 
   - Tagged template literals are used to style custom components
 
-  ```jsx
+  ```tsx
   // Example of styling syntax using styled-components
 
   import styled from "styled-components"
@@ -130,10 +130,10 @@ export default ComponentName
 
   - Recommended VS Code Plugin: `vscode-styled-components` <br>To install: Open VS Code > `Ctrl+P` / `Cmd+P` > Run: <br>`ext install vscode-styled-components`
 
-- Values from `src/theme.js` are automatically passed as a prop object to styled components
+- Values from `src/theme.ts` are automatically passed as a prop object to styled components
 
-  ```jsx
-  // Example of theme.js usage
+  ```tsx
+  // Example of theme.ts usage
 
   import styled from "styled-components"
 
@@ -148,7 +148,7 @@ export default ComponentName
 - [Framer Motion](https://www.framer.com/motion/) - An open source and production-ready motion library for React on the web, used for our animated designs
 - **Emojis**: We use [Twemoji](https://twemoji.twitter.com/), an open-source emoji set created by Twitter. These are hosted by us, and used to provide a consistent experience across operating systems.
 
-```jsx
+```tsx
 // Example of emoji use
 import Emoji from "./Emoji"
 
@@ -157,12 +157,12 @@ import Emoji from "./Emoji"
 ```
 
 - **Icons**: We use [React Icons](https://react-icons.github.io/react-icons/)
-  - `src/components/Icon.js` is the component used to import icons to be used
+  - `src/components/Icon.ts` is the component used to import icons to be used
   - If an icon you want to use is not listed you will need to add it to this file
 
-`src/components/Icon.js`:
+`src/components/Icon.ts`:
 
-```jsx
+```tsx
 // Example of how to add new icon not listed
 import { ZzIconName } from "react-icons/zz"
 
@@ -174,7 +174,7 @@ import { ZzIconName } from "react-icons/zz"
 
 From React component:
 
-```jsx
+```tsx
 // Example of icon use
 import Icon from "./Icon"
 
@@ -187,7 +187,7 @@ import Icon from "./Icon"
 - [Gatsby + GraphQL](https://www.gatsbyjs.com/docs/graphql/) used for loading of images and preferred for API calls (in lieu of REST, if possible/practical). Utilizes static page queries that run at build time, not at run time, optimizing performance.
 - Image loading example:
 
-```jsx
+```tsx
 import { graphql } from "gatsby"
 
 export const query = graphql`
@@ -209,7 +209,7 @@ export const query = graphql`
 
 - API call example:
 
-```jsx
+```tsx
 import { graphql } from "gatsby"
 
 export const repoInfo = graphql`

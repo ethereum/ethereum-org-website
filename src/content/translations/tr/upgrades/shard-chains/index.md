@@ -12,7 +12,7 @@ summaryPoint4: Bu yükseltme, sonrasında Mainnet ile İşaret Zincirini birleş
 ---
 
 <UpgradeStatus dateKey="page-upgrades-shards-date">
-    Parça zincirleri, <a href="/upgrades/merge/">Birleştirme</a> sonrasında işin ne kadar hızlı ilerlediğine bağlı olarak 2022'de gönderilecektir. Bu parçalar, Ethereum'a verileri depolamak ve bunlara erişmek için daha fazla kapasite sağlayacak, ancak kod yürütmek için kullanılmayacak.
+    Parça zincirleri, <a href="/upgrades/merge/">Birleştirme</a> sonrasında işin ne kadar hızlı ilerlediğine bağlı olarak 2022'de gönderilecektir. Bu parçalar, Ethereum'a verileri depolamak ve bunlara erişmek için daha fazla kapasite sağlayacak, ancak yürütme kodu olarak kullanılmayacak.
 </UpgradeStatus>
 
 ## Parçalama nedir? {#what-is-sharding}

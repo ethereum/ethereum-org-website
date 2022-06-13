@@ -119,7 +119,7 @@ const LearningToolsPage = ({ data }) => {
     {
       name: "CryptoZombies",
       description: "page-learning-tools-cryptozombies-description",
-      url: "https://cryptozombies.io/en/solidity",
+      url: "https://cryptozombies.io/",
       image: getImage(data.cryptoZombie),
       alt: "page-learning-tools-cryptozombies-logo-alt",
       background: "#2b2f48",
@@ -185,7 +185,7 @@ const LearningToolsPage = ({ data }) => {
     {
       name: "Questbook",
       description: "page-learning-tools-questbook-description",
-      url: "https://questbook.app/",
+      url: "https://learn.questbook.xyz/",
       image: getImage(data.questbook),
       alt: "page-learning-tools-questbook-logo-alt",
       background: "#141236",

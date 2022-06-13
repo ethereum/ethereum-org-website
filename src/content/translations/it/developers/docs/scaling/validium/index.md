@@ -7,7 +7,7 @@ incomplete: true
 sidebarDepth: 3
 ---
 
-Usa prove di validità come [i rollup ZK](/developers/docs/scaling/layer-2-rollups#zk-rollups) ma i dati non sono archiviati sul livello 1 della catena di Ethereum. Ciò può tradursi in 10.000 transazioni al secondo per catena validium, con la possibilità di eseguire più catene in parallelo.
+Usa prove di validità come [i rollup ZK](/developers/docs/scaling/zk-rollups/) ma i dati non sono archiviati sul livello 1 della catena di Ethereum. Ciò può tradursi in 10.000 transazioni al secondo per catena validium, con la possibilità di eseguire più catene in parallelo.
 
 ## Prerequisiti {#prerequisites}
 
@@ -28,7 +28,6 @@ Diversi progetti forniscono implementazioni di Validium che puoi integrare nelle
 
 - [Starkware](https://starkware.co/)
 - [Matter Labs zkPorter](https://matter-labs.io/)
-- [Loopring](https://loopring.org/#/)
 
 ## Letture consigliate {#further-reading}
 

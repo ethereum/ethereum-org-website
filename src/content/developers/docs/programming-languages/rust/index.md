@@ -43,6 +43,7 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 - [Getting Started with Enigma - In Rust Programming Language](https://blog.enigma.co/getting-started-with-discovery-the-rust-programming-language-4d1e0b06de15)
 - [An Intro to Secret Contracts](https://blog.enigma.co/getting-started-with-enigma-an-intro-to-secret-contracts-cdba4fe501c2)
 - [Deploying Solidity Contracts on Oasis (Compound)](https://docs.oasis.dev/tutorials/deploy-solidity.html#deploy-using-truffle)
+- [Build a blockchain in Rust](https://blog.logrocket.com/how-to-build-a-blockchain-in-rust/)
 
 ## Rust projects and tools {#rust-projects-and-tools}
 
