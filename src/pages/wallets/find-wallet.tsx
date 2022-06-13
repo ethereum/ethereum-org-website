@@ -173,6 +173,14 @@ const FindWalletPage = ({ data, location }) => {
     setFilters(updatedFilters)
   }
 
+  const updateFilterOptions = (keys, value) => {
+    const updatedFilters = { ...filters }
+    for (let key of keys) {
+      updatedFilters[key] = value
+    }
+    setFilters(updatedFilters)
+  }
+
   return (
     <Page>
       <PageMetadata
@@ -223,9 +231,9 @@ const FindWalletPage = ({ data, location }) => {
           <div>
             {showFeatureFilters ? (
               <WalletFilterSidebar
-                data={data}
                 filters={filters}
                 updateFilterOption={updateFilterOption}
+                updateFilterOptions={updateFilterOptions}
               />
             ) : (
               <WalletPersonasSidebar setFilters={setFilters} />

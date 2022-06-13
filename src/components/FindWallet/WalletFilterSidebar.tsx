@@ -120,7 +120,11 @@ const ToggleIcon = styled(Icon)`
 
 // Types
 
-const WalletFilterSidebar = ({ data, filters, updateFilterOption }) => {
+const WalletFilterSidebar = ({
+  filters,
+  updateFilterOption,
+  updateFilterOptions,
+}) => {
   const [filterOptions, setFilterOptions] = useState([
     {
       title: "Device",
@@ -131,6 +135,7 @@ const WalletFilterSidebar = ({ data, filters, updateFilterOption }) => {
           icon: <Mobile />,
           description: "Phone or mobile based wallets.",
           filterKey: undefined,
+          showOptions: false,
           options: [
             {
               name: "Android",
@@ -149,6 +154,7 @@ const WalletFilterSidebar = ({ data, filters, updateFilterOption }) => {
           icon: <Desktop />,
           description: "Desktop based wallets.",
           filterKey: undefined,
+          showOptions: false,
           options: [
             {
               name: "Linux",
@@ -172,6 +178,7 @@ const WalletFilterSidebar = ({ data, filters, updateFilterOption }) => {
           icon: <Browser />,
           description: "Browser extension wallets.",
           filterKey: undefined,
+          showOptions: false,
           options: [
             {
               name: "Firefox",
@@ -190,6 +197,7 @@ const WalletFilterSidebar = ({ data, filters, updateFilterOption }) => {
           icon: <Hardware />,
           description: "Hardware baesd wallets.",
           filterKey: "hardware",
+          showOptions: undefined,
           options: [],
         },
       ],
@@ -204,6 +212,7 @@ const WalletFilterSidebar = ({ data, filters, updateFilterOption }) => {
           description:
             "Wallet code for the wallet is open sourced for users to inspect and edit.",
           filterKey: "open_source",
+          showOptions: undefined,
           options: [],
         },
         {
@@ -211,6 +220,7 @@ const WalletFilterSidebar = ({ data, filters, updateFilterOption }) => {
           icon: <NonCustodial />,
           description: "Who has control over the keys for your wallet.",
           filterKey: "non_custodial",
+          showOptions: undefined,
           options: [],
         },
       ],
@@ -225,6 +235,7 @@ const WalletFilterSidebar = ({ data, filters, updateFilterOption }) => {
           description:
             "You can connect a hardware wallet and sign transactions with it.",
           filterKey: "hardware_support",
+          showOptions: undefined,
           options: [],
         },
         {
@@ -233,6 +244,7 @@ const WalletFilterSidebar = ({ data, filters, updateFilterOption }) => {
           description:
             "You can connect to applications that support WalletConnect.",
           filterKey: "walletconnect",
+          showOptions: undefined,
           options: [],
         },
         {
@@ -241,6 +253,7 @@ const WalletFilterSidebar = ({ data, filters, updateFilterOption }) => {
           description:
             "You can import RPC endpoint data to connect to different nodes/networks.",
           filterKey: "rpc_importing",
+          showOptions: undefined,
           options: [],
         },
         {
@@ -249,6 +262,7 @@ const WalletFilterSidebar = ({ data, filters, updateFilterOption }) => {
           description:
             "You can view and interact with your NFTs in the wallet.",
           filterKey: "nft_support",
+          showOptions: undefined,
           options: [],
         },
         {
@@ -257,6 +271,7 @@ const WalletFilterSidebar = ({ data, filters, updateFilterOption }) => {
           description:
             "You can connect to applications build on the Ethereum network.",
           filterKey: "connect_to_dapps",
+          showOptions: undefined,
           options: [],
         },
         {
@@ -265,6 +280,7 @@ const WalletFilterSidebar = ({ data, filters, updateFilterOption }) => {
           description:
             "You can use a simple interface to stake directly in the wallet.",
           filterKey: "staking",
+          showOptions: undefined,
           options: [],
         },
         {
@@ -272,6 +288,7 @@ const WalletFilterSidebar = ({ data, filters, updateFilterOption }) => {
           icon: <Layer2 />,
           description: "You can use layer 2 networks in the wallet.",
           filterKey: "layer_2",
+          showOptions: undefined,
           options: [],
         },
         {
@@ -280,6 +297,7 @@ const WalletFilterSidebar = ({ data, filters, updateFilterOption }) => {
           description:
             "The user is able to customize their gas inputs (base free, priority fee, max fee).",
           filterKey: "gas_fee_customization",
+          showOptions: undefined,
           options: [],
         },
         {
@@ -288,6 +306,7 @@ const WalletFilterSidebar = ({ data, filters, updateFilterOption }) => {
           description:
             "The wallet supports sending transactions to ENS addresses.",
           filterKey: "ens_support",
+          showOptions: undefined,
           options: [],
         },
         {
@@ -296,6 +315,7 @@ const WalletFilterSidebar = ({ data, filters, updateFilterOption }) => {
           description:
             "Can import ERC-20 token contract addresses into the wallet.",
           filterKey: "erc_20_support",
+          showOptions: undefined,
           options: [],
         },
       ],
@@ -310,6 +330,7 @@ const WalletFilterSidebar = ({ data, filters, updateFilterOption }) => {
           description:
             "User is able to buy crypto with fiat directly in the wallet.",
           filterKey: "buy_crypto",
+          showOptions: undefined,
           options: [],
         },
         {
@@ -318,6 +339,7 @@ const WalletFilterSidebar = ({ data, filters, updateFilterOption }) => {
           description:
             "User is able to withdraw to fiat directly in the wallet.",
           filterKey: "withdraw_crypto",
+          showOptions: undefined,
           options: [],
         },
       ],
@@ -332,6 +354,7 @@ const WalletFilterSidebar = ({ data, filters, updateFilterOption }) => {
           description:
             "Wallets that require two or more signatures from private keys for a transaction.",
           filterKey: "multisig",
+          showOptions: undefined,
           options: [],
         },
         {
@@ -340,6 +363,7 @@ const WalletFilterSidebar = ({ data, filters, updateFilterOption }) => {
           description:
             "Wallets that allow guardians to change the signing key for smart contract wallets.",
           filterKey: "social_recovery",
+          showOptions: undefined,
           options: [],
         },
       ],
@@ -350,6 +374,18 @@ const WalletFilterSidebar = ({ data, filters, updateFilterOption }) => {
     const updatedFilterOptions = [...filterOptions]
     updatedFilterOptions[idx].open = !updatedFilterOptions[idx].open
     setFilterOptions(updatedFilterOptions)
+  }
+
+  const setShowOptions = (idx, itemidx, value) => {
+    const updatedFilterOptions = [...filterOptions]
+    updatedFilterOptions[idx].items[itemidx].showOptions =
+      !updatedFilterOptions[idx].items[itemidx].showOptions
+    setFilterOptions(updatedFilterOptions)
+
+    const keys = updatedFilterOptions[idx].items[itemidx].options.map(
+      (item) => item.filterKey
+    )
+    updateFilterOptions(keys, value)
   }
 
   return (
@@ -369,7 +405,7 @@ const WalletFilterSidebar = ({ data, filters, updateFilterOption }) => {
               />
             </Header>
             {filterOption.open &&
-              filterOption.items.map((item) => {
+              filterOption.items.map((item, itemidx) => {
                 return (
                   <FilterOption>
                     <OptionGrid>
@@ -377,7 +413,6 @@ const WalletFilterSidebar = ({ data, filters, updateFilterOption }) => {
                       <p>{item.title}</p>
                       <div>
                         {item.filterKey && (
-                          // TODO: Make actual toggle component
                           <div
                             onClick={() => {
                               updateFilterOption(item.filterKey)
@@ -393,6 +428,18 @@ const WalletFilterSidebar = ({ data, filters, updateFilterOption }) => {
                             />
                           </div>
                         )}
+                        {item.showOptions !== undefined && (
+                          <div
+                            onClick={() => {
+                              setShowOptions(idx, itemidx, !item.showOptions)
+                            }}
+                          >
+                            <ToggleIcon
+                              name={item.showOptions ? "toggleOn" : "toggleOff"}
+                              size="30"
+                            />
+                          </div>
+                        )}
                       </div>
                     </OptionGrid>
                     <OptionGrid>
@@ -400,7 +447,7 @@ const WalletFilterSidebar = ({ data, filters, updateFilterOption }) => {
                       <OptionDescription>{item.description}</OptionDescription>
                       <div></div>
                     </OptionGrid>
-                    {item.options.length > 0 && (
+                    {item.options.length > 0 && item.showOptions && (
                       <CheckboxGrid>
                         {item.options.map((option) => {
                           return (
