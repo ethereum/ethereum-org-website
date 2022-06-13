@@ -320,6 +320,14 @@ const UseCasePage = ({
   if (pageContext.slug.includes("nft")) {
     useCase = "nft"
   }
+  // Use the same styling as DeFi page for hero image
+  if (pageContext.slug.includes("social")) {
+    useCase = "defi"
+  }
+  // Use the same styling as DAOs page for hero image
+  if (pageContext.slug.includes("identity")) {
+    useCase = "dao"
+  }
 
   const dropdownLinks = {
     text: "template-usecase-dropdown",
@@ -336,6 +344,14 @@ const UseCasePage = ({
       {
         text: "template-usecase-dropdown-dao",
         to: "/dao/",
+      },
+      {
+        text: "template-usecase-dropdown-social-networks",
+        to: "/social-networks/",
+      },
+      {
+        text: "template-usecase-dropdown-identity",
+        to: "/decentralized-identity/",
       },
     ],
   }
