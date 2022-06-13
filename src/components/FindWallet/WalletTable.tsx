@@ -34,10 +34,26 @@ const Grid = styled.div`
   display: grid;
   grid-template-columns: 40% auto auto auto 5%;
   width: 100%;
+
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    grid-template-columns: 40% auto auto 0% 5%;
+
+    div:nth-child(4) {
+      visibility: hidden;
+    }
+  }
+
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    grid-template-columns: 40% auto 0% 0% 5%;
+
+    div:nth-child(3) {
+      visibility: hidden;
+    }
+  }
 `
 
 const WalletContentHeader = styled(Grid)`
-  height: 50px;
+  min-height: 50px;
   border-bottom: 1px solid ${(props) => props.theme.colors.primary};
   position: sticky;
   top: 76px;
@@ -163,10 +179,23 @@ const WalletMoreInfoArrow = styled(Icon)`
   fill: ${(props) => props.theme.colors.primary};
 `
 
+const WalletMoreInfoContainer = styled.div`
+  display: grid;
+  grid-template-columns: 65px auto;
+  width: 100%;
+`
+
 const WalletMoreInfo = styled.div`
   display: grid;
-  grid-template-columns: 65px auto auto auto auto;
+  grid-template-columns: auto auto auto;
   width: 100%;
+
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    grid-template-columns: auto auto;
+  }
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    grid-template-columns: auto;
+  }
 `
 
 const ColoredLine = styled.div<{ color: string }>`
@@ -469,59 +498,69 @@ const WalletTable = ({ data, filters, walletData }) => {
             </Wallet>
             {wallet.moreInfo && (
               <div>
-                <WalletMoreInfo>
+                <WalletMoreInfoContainer>
                   <div>
                     <ColoredLine color={wallet.brand_color} />
                   </div>
-                  <div>
-                    <h4>Features</h4>
-                    {featureDropdownItems.map((feature) => {
-                      if (feature.category === "feature")
-                        return (
-                          <FeatureLabel hasFeature={wallet[feature.filterKey]}>
-                            {feature.icon}
-                            <p>{feature.label}</p>
-                          </FeatureLabel>
-                        )
-                    })}
-                  </div>
-                  <div>
-                    <h4>Security</h4>
-                    {featureDropdownItems.map((feature) => {
-                      if (feature.category === "security")
-                        return (
-                          <FeatureLabel hasFeature={wallet[feature.filterKey]}>
-                            {feature.icon}
-                            <p>{feature.label}</p>
-                          </FeatureLabel>
-                        )
-                    })}
-                  </div>
-                  <div>
-                    <h4>Trade & buy</h4>
-                    {featureDropdownItems.map((feature) => {
-                      if (feature.category === "trade_and_buy")
-                        return (
-                          <FeatureLabel hasFeature={wallet[feature.filterKey]}>
-                            {feature.icon}
-                            <p>{feature.label}</p>
-                          </FeatureLabel>
-                        )
-                    })}
-                  </div>
-                  <div>
-                    <h4>Smart contract</h4>
-                    {featureDropdownItems.map((feature) => {
-                      if (feature.category === "smart_contract")
-                        return (
-                          <FeatureLabel hasFeature={wallet[feature.filterKey]}>
-                            {feature.icon}
-                            <p>{feature.label}</p>
-                          </FeatureLabel>
-                        )
-                    })}
-                  </div>
-                </WalletMoreInfo>
+                  <WalletMoreInfo>
+                    <div>
+                      <h4>Features</h4>
+                      {featureDropdownItems.map((feature) => {
+                        if (feature.category === "feature")
+                          return (
+                            <FeatureLabel
+                              hasFeature={wallet[feature.filterKey]}
+                            >
+                              {feature.icon}
+                              <p>{feature.label}</p>
+                            </FeatureLabel>
+                          )
+                      })}
+                    </div>
+                    <div>
+                      <h4>Security</h4>
+                      {featureDropdownItems.map((feature) => {
+                        if (feature.category === "security")
+                          return (
+                            <FeatureLabel
+                              hasFeature={wallet[feature.filterKey]}
+                            >
+                              {feature.icon}
+                              <p>{feature.label}</p>
+                            </FeatureLabel>
+                          )
+                      })}
+                    </div>
+                    <div>
+                      <h4>Trade & buy</h4>
+                      {featureDropdownItems.map((feature) => {
+                        if (feature.category === "trade_and_buy")
+                          return (
+                            <FeatureLabel
+                              hasFeature={wallet[feature.filterKey]}
+                            >
+                              {feature.icon}
+                              <p>{feature.label}</p>
+                            </FeatureLabel>
+                          )
+                      })}
+                    </div>
+                    <div>
+                      <h4>Smart contract</h4>
+                      {featureDropdownItems.map((feature) => {
+                        if (feature.category === "smart_contract")
+                          return (
+                            <FeatureLabel
+                              hasFeature={wallet[feature.filterKey]}
+                            >
+                              {feature.icon}
+                              <p>{feature.label}</p>
+                            </FeatureLabel>
+                          )
+                      })}
+                    </div>
+                  </WalletMoreInfo>
+                </WalletMoreInfoContainer>
                 <SocialsContainer>
                   <p>{wallet.name} links</p>
                   <Socials>

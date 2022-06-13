@@ -70,6 +70,12 @@ const FilterSidebar = styled.div`
   display: flex;
   flex-direction: column;
   gap: 24px;
+
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    width: 0;
+    height: 0;
+    display: none;
+  }
 `
 
 const FilterTabs = styled.div`
@@ -112,6 +118,10 @@ const FilterTab = styled.div<{
 
 const WalletContent = styled.div`
   width: 75%;
+
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    width: 100%;
+  }
 `
 
 const Note = styled.div`
