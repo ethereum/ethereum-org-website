@@ -56,8 +56,7 @@ const H3 = styled.h3`
 
 const Grid = styled.div`
   display: grid;
-  grid-template-columns: auto auto;
-  grid-column-gap: 3rem;
+  grid-template-columns: 50% 50%;
 `
 
 const StyledIcon = styled(Icon)<{ selected: boolean }>`

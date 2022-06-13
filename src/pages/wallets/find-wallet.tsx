@@ -79,9 +79,13 @@ const FilterTabs = styled.div`
   position: sticky;
   top: 76px;
   padding-top: 8px;
-  height: 50px;
+  min-height: 50px;
   background: ${(props) => props.theme.colors.background};
   z-index: 1;
+
+  p {
+    margin: 0;
+  }
 `
 
 const FilterTab = styled.div<{
@@ -92,8 +96,7 @@ const FilterTab = styled.div<{
   background: ${(props) =>
     props.active === true ? props.theme.colors.primary : "none"};
   border-radius: 4px 4px 0px 0px;
-  display: inline-block;
-  line-height: 200%;
+  padding: 10px;
   vertical-align: middle;
 
   color: ${(props) =>
@@ -198,13 +201,13 @@ const FindWalletPage = ({ data, location }) => {
               active={!showFeatureFilters}
               onClick={() => setShowFeatureFilters(false)}
             >
-              PROFILE FILTERS
+              <p>PROFILE FILTERS</p>
             </FilterTab>
             <FilterTab
               active={showFeatureFilters}
               onClick={() => setShowFeatureFilters(true)}
             >
-              FEATURE FILTERS
+              <p>FEATURE FILTERS</p>
             </FilterTab>
           </FilterTabs>
           <div>
