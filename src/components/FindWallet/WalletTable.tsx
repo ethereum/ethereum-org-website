@@ -152,8 +152,20 @@ const WalletMoreInfoArrow = styled(Icon)`
 
 const WalletMoreInfo = styled.div`
   display: grid;
-  grid-template-columns: 100px auto auto auto auto;
+  grid-template-columns: 65px auto auto auto auto;
   width: 100%;
+`
+
+const ColoredLine = styled.div<{ color: string }>`
+  --color: ${(props) => props.color};
+  margin: auto;
+  width: 0.25rem;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    var(--color) 0%,
+    rgba(217, 217, 217, 0) 97.4%
+  );
 `
 
 const FeatureLabel = styled.p<{ hasFeature: boolean }>`
@@ -394,53 +406,58 @@ const WalletTable = ({ data, filters, walletData }) => {
               </FlexInfoCenter>
             </Wallet>
             {wallet.moreInfo && (
-              <WalletMoreInfo>
-                <div></div>
-                <div>
-                  <h4>Features</h4>
-                  {featureDropdownItems.map((feature) => {
-                    if (feature.category === "feature")
-                      return (
-                        <FeatureLabel hasFeature={wallet[feature.filterKey]}>
-                          {feature.label}
-                        </FeatureLabel>
-                      )
-                  })}
-                </div>
-                <div>
-                  <h4>Security</h4>
-                  {featureDropdownItems.map((feature) => {
-                    if (feature.category === "security")
-                      return (
-                        <FeatureLabel hasFeature={wallet[feature.filterKey]}>
-                          {feature.label}
-                        </FeatureLabel>
-                      )
-                  })}
-                </div>
-                <div>
-                  <h4>Trade & buy</h4>
-                  {featureDropdownItems.map((feature) => {
-                    if (feature.category === "trade_and_buy")
-                      return (
-                        <FeatureLabel hasFeature={wallet[feature.filterKey]}>
-                          {feature.label}
-                        </FeatureLabel>
-                      )
-                  })}
-                </div>
-                <div>
-                  <h4>Smart contract</h4>
-                  {featureDropdownItems.map((feature) => {
-                    if (feature.category === "smart_contract")
-                      return (
-                        <FeatureLabel hasFeature={wallet[feature.filterKey]}>
-                          {feature.label}
-                        </FeatureLabel>
-                      )
-                  })}
-                </div>
-              </WalletMoreInfo>
+              <div>
+                <WalletMoreInfo>
+                  <div>
+                    <ColoredLine color={wallet.brand_color} />
+                  </div>
+                  <div>
+                    <h4>Features</h4>
+                    {featureDropdownItems.map((feature) => {
+                      if (feature.category === "feature")
+                        return (
+                          <FeatureLabel hasFeature={wallet[feature.filterKey]}>
+                            {feature.label}
+                          </FeatureLabel>
+                        )
+                    })}
+                  </div>
+                  <div>
+                    <h4>Security</h4>
+                    {featureDropdownItems.map((feature) => {
+                      if (feature.category === "security")
+                        return (
+                          <FeatureLabel hasFeature={wallet[feature.filterKey]}>
+                            {feature.label}
+                          </FeatureLabel>
+                        )
+                    })}
+                  </div>
+                  <div>
+                    <h4>Trade & buy</h4>
+                    {featureDropdownItems.map((feature) => {
+                      if (feature.category === "trade_and_buy")
+                        return (
+                          <FeatureLabel hasFeature={wallet[feature.filterKey]}>
+                            {feature.label}
+                          </FeatureLabel>
+                        )
+                    })}
+                  </div>
+                  <div>
+                    <h4>Smart contract</h4>
+                    {featureDropdownItems.map((feature) => {
+                      if (feature.category === "smart_contract")
+                        return (
+                          <FeatureLabel hasFeature={wallet[feature.filterKey]}>
+                            {feature.label}
+                          </FeatureLabel>
+                        )
+                    })}
+                  </div>
+                </WalletMoreInfo>
+                <p>Socials</p>
+              </div>
             )}
           </WalletContainer>
         )
