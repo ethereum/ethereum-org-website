@@ -6,11 +6,12 @@ import { useIntl } from "gatsby-plugin-intl"
 
 import { translateMessageId } from "../utils/translations"
 
-import CardList, { CardListItem } from "./CardList"
+import CardList from "./CardList"
 import Card from "./Card"
 import ButtonLink from "./ButtonLink"
 import Translation from "./Translation"
-import { GatsbyImageProps } from "gatsby-plugin-image"
+
+import type { CardListItem } from "./CardList"
 
 const Container = styled.div`
   margin-bottom: 4rem;
@@ -70,6 +71,12 @@ export const DataLogo = graphql`
   }
 `
 
+type ChildImage = {
+  childImageSharp: {
+    gatsbyImageData: Record<string, unknown>
+  }
+}
+
 const BeaconStaticQuery = graphql`
   query {
     beaconscan: file(relativePath: { eq: "upgrades/etherscan.png" }) {
@@ -82,33 +89,33 @@ const BeaconStaticQuery = graphql`
 `
 
 type BeaconQueryTypes = {
-  beaconscan: string
-  beaconchain: string
+  beaconscan: ChildImage
+  beaconchain: ChildImage
 }
 
 const BeaconChainActions: React.FC = () => {
   const intl = useIntl()
   const data = useStaticQuery<BeaconQueryTypes>(BeaconStaticQuery)
 
-  const datapoints: CardListItem[] = [
+  const datapoints: Array<CardListItem> = [
     {
       title: "beaconscan",
       image: getImage(data.beaconscan),
-      alt: "test beaconscan",
+      alt: "",
       link: "https://beaconscan.com",
       description: translateMessageId("consensus-beaconscan-desc", intl),
     },
     {
       title: "beaconcha.in",
       image: getImage(data.beaconchain),
-      alt: "beaconcha test",
+      alt: "",
       link: "https://beaconcha.in",
       description: translateMessageId("consensus-beaconcha-in-desc", intl),
     },
   ]
 
   //TODO: we should refactor the naming here instead of using authors into the description field
-  const reads: CardListItem[] = [
+  const reads: Array<CardListItem> = [
     {
       title: translateMessageId(
         "page-upgrade-article-title-two-point-oh",
