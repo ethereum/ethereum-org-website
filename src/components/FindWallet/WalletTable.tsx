@@ -207,6 +207,17 @@ const FeatureLabel = styled.div<{ hasFeature: boolean }>`
   }
 `
 
+const SocialsContainer = styled.div`
+  text-align: center;
+  padding-bottom: 22px;
+`
+
+const Socials = styled.div`
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+`
+
 // Constants
 const featureDropdownItems = [
   {
@@ -511,7 +522,24 @@ const WalletTable = ({ data, filters, walletData }) => {
                     })}
                   </div>
                 </WalletMoreInfo>
-                <p>Socials</p>
+                <SocialsContainer>
+                  <p>{wallet.name} links</p>
+                  <Socials>
+                    <Link to={wallet.url} hideArrow={true}>
+                      <Icon name="webpage" size={"2rem"} color={true} />
+                    </Link>
+                    {wallet.twitter && (
+                      <Link to={wallet.twitter} hideArrow={true}>
+                        <Icon name="twitter" size={"2rem"} color={true} />
+                      </Link>
+                    )}
+                    {wallet.discord && (
+                      <Link to={wallet.discord} hideArrow={true}>
+                        <Icon name="discord" size={"2rem"} color={true} />
+                      </Link>
+                    )}
+                  </Socials>
+                </SocialsContainer>
               </div>
             )}
           </WalletContainer>
