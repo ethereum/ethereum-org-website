@@ -187,7 +187,7 @@ const WalletMoreInfoContainer = styled.div`
 
 const WalletMoreInfo = styled.div`
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: auto auto auto auto;
   width: 100%;
 
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
