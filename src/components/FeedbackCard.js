@@ -3,6 +3,7 @@ import styled from "styled-components"
 import { ButtonSecondary } from "./SharedStyledComponents"
 import { trackCustomEvent } from "../utils/matomo"
 import Translation from "./Translation"
+import Link from "./Link"
 
 const Card = styled.div`
   border: 1px solid ${({ theme }) => theme.colors.border};
@@ -41,12 +42,35 @@ const ButtonContainer = styled.div`
 const FeedbackCard = ({ prompt, className }) => {
   const [feedbackSubmitted, setFeedbackSubmitted] = useState(false)
   const [isHelpful, setIsHelpful] = useState(false)
-  const feedbackPrompt = prompt || <Translation id="feedback-prompt" />
-  const title = isHelpful ? (
-    <Translation id="feedback-title-helpful" />
-  ) : (
-    <Translation id="feedback-title-not-helpful" />
-  )
+  const location = typeof window !== "undefined" ? window.location.href : ""
+  const isStaking = location.includes("staking")
+
+  const getTitle = (feedbackSubmitted, isStaking, isHelpful) => {
+    if (!feedbackSubmitted)
+      return prompt || <Translation id="feedback-prompt" />
+    if (isStaking)
+      return isHelpful ? (
+        <>
+          <p>Thanks for the feedback! Want to add more input?</p>
+          <Link to={`https://gzmn3wgk.paperform.co/?url=${location}`}>
+            Check out our current staking survey!
+          </Link>
+        </>
+      ) : (
+        <>
+          <p>How can we do better?</p>
+          <Link to={`https://zlj83p6l.paperform.co/?url=${location}`}>
+            Check out our current staking survey!
+          </Link>
+        </>
+      )
+
+    return isHelpful ? (
+      <Translation id="feedback-title-helpful" />
+    ) : (
+      <Translation id="feedback-title-not-helpful" />
+    )
+  }
 
   const handleClick = (isHelpful) => {
     trackCustomEvent({
@@ -60,7 +84,7 @@ const FeedbackCard = ({ prompt, className }) => {
   return (
     <Card className={className}>
       <Content>
-        <Title>{feedbackSubmitted ? title : feedbackPrompt}</Title>
+        <Title>{getTitle(feedbackSubmitted, isStaking, isHelpful)}</Title>
         {!feedbackSubmitted && (
           <ButtonContainer>
             <ButtonSecondary onClick={() => handleClick(true)}>

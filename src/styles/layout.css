@@ -197,6 +197,7 @@ html {
 }
 * {
   box-sizing: inherit;
+  scroll-margin-top: 6rem;
 }
 *:before {
   box-sizing: inherit;
@@ -417,6 +418,10 @@ table {
   line-height: 1.45rem;
   border-collapse: collapse;
   width: 100%;
+}
+th,
+td {
+  hyphens: auto;
 }
 fieldset {
   margin-left: 0;

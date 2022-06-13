@@ -736,7 +736,7 @@ Una [diramazione permanente](#hard-fork) della blockchain Ethereum, che si è ve
 
 Abbreviazione di "rete di prova", una rete usata per simulare il comportamento della rete principale di Ethereum (vedi [Rete principale](#mainnet)).
 
-<DocLink to="/developers/docs/networks/#testnets">
+<DocLink to="/developers/docs/networks/#ethereum-testnets">
   Reti di prova
 </DocLink>
 

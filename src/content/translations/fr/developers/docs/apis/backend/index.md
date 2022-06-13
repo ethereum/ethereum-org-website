@@ -7,13 +7,13 @@ sidebar: true
 
 Pour qu'une application logicielle puisse interagir avec la blockchain Ethereum (c'est-à-dire lire les données de la blockchain et/ou envoyer des transactions sur le réseau), elle doit se connecter à un nœud Ethereum.
 
-À cette fin, chaque client Ethereum met en œuvre la spécification JSON-RPC, de sorte qu'il existe un ensemble uniforme de points de terminaison sur lesquels les applications peuvent s'appuyer.
+Dans cet objectif, chaque client Ethereum implémente la spécification [JSON-RPC](/developers/docs/apis/json-rpc/) pour former un ensemble uniforme de [points de terminaison](/developers/docs/apis/json-rpc/#json-rpc-methods) sur lesquels les applications peuvent s'appuyer.
 
 Si vous souhaitez utiliser un langage de programmation spécifique pour vous connecter à un nœud Ethereum, vous pouvez développer votre propre solution, mais il existe plusieurs bibliothèques pratiques au sein de l'écosystème qui facilitent grandement cette tâche. Grâce à ces bibliothèques, les développeurs peuvent rédiger des méthodes intuitives d'une seule ligne pour initialiser des demandes RPC JSON (sous le capot) qui interagissent avec Ethereum.
 
 ## Prérequis {#prerequisites}
 
-Il peut être utile de comprendre en quoi consiste la [pile Ethereum](/developers/docs/ethereum-stack/) et les [clients Ethereum](/docs/nodes-and-clients/).
+Il peut être utile de comprendre en quoi consiste la [pile Ethereum](/developers/docs/ethereum-stack/) et les [clients Ethereum](/developers/docs/nodes-and-clients/).
 
 ## Pourquoi utiliser une bibliothèque ? {#why-use-a-library}
 
@@ -23,12 +23,12 @@ Les bibliothèques suppriment une grande partie de la complexité de l'interacti
 
 **Alchemy -** **_Plateforme de développement Ethereum._**
 
-- [alchemyapi.io](https://alchemyapi.io)
+- [alchemy.com](https://www.alchemy.com/)
 - [Documentation](https://docs.alchemyapi.io/)
 - [GitHub](https://github.com/alchemyplatform)
-- [Discord](https://discord.gg/kwqVnrA)
+- [Discord](https://discord.com/invite/A39JVCM)
 
-**BlockCypher -** **_API Ethereum Web_**
+**BlockCypher -** **_APIs Ethereum Web_**
 
 - [blockcypher.com](https://www.blockcypher.com/)
 - [Documentation](https://www.blockcypher.com/dev/ethereum/)
@@ -43,7 +43,12 @@ Les bibliothèques suppriment une grande partie de la complexité de l'interacti
 
 - [cloudflare-eth.com](https://cloudflare-eth.com)
 
-**Nodesmith -** **_API JSON-RPC pour accéder au réseau principal et aux réseaux de test Ethereum_**
+**DataHub by Figment -** **_Services API Web3 avec réseau principal et réseaux de tests Ethereum._**
+
+- [DataHub](https://www.figment.io/datahub)
+- [Documentation](https://docs.figment.io/introduction/what-is-datahub)
+
+**Nodesmith -** **_Accès API JSON-RPC API au réseau principal et aux réseaux tests Ethereum._**
 
 - [nodesmith.io](https://nodesmith.io/network/ethereum/)
 - [Documentation](https://nodesmith.io/docs/#/ethereum/apiRef)
@@ -57,15 +62,17 @@ Les bibliothèques suppriment une grande partie de la complexité de l'interacti
 - [chainstack.com](https://chainstack.com)
 - [Documentation](https://docs.chainstack.com)
 
-**QuikNode -** **_Plateforme de développement de la blockchain_**
+**QuikNode -** **_Infrastructure Blockchain en tant que service_**
 
-- [quiknode.io](https://quiknode.io)
+- [quicknode.com](https://quicknode.com)
+- [Documentation](https://www.quicknode.com/docs)
+- [Discord](https://discord.gg/NaR7TtpvJq)
 
 **Python Tooling -** **_Diverses bibliothèques pour interagir avec Ethereum via Python_**
 
 - [py.ethereum.org](http://python.ethereum.org/)
-- [GitHub Web3.py](https://github.com/ethereum/web3.py)
-- [Chat Web3.py](https://gitter.im/ethereum/web3.py)
+- [Github web3.py](https://github.com/ethereum/web3.py)
+- [Chat web3.py](https://gitter.im/ethereum/web3.py)
 
 **web3j -** **_Bibliothèque d'intégration Java/Android/Kotlin/Scala pour Ethereum_**
 
@@ -85,6 +92,26 @@ Les bibliothèques suppriment une grande partie de la complexité de l'interacti
 - [Documentation](http://docs.nethereum.com/en/latest/)
 - [Discord](https://discord.com/invite/jQPrR58FxX)
 
+**Tatum -** **_Plateforme de développement de la blockchain._**
+
+- [Tatum](https://tatum.io/)
+- [GitHub](https://github.com/tatumio/)
+- [Documentation](https://docs.tatum.io/)
+- [Discord](https://discord.gg/EDmW3kjTC9)
+
+**Watchdata** **_ - fournit un accès API simple et fiable à la blockchain Ethereum._**
+
+- [Watchdata](https://watchdata.io/)
+- [Documentation](https://docs.watchdata.io/)
+- [Discord](https://discord.com/invite/TZRJbZ6bdn)
+
+**Zmok -** **_Nœuds Ethereum orientés vitesse comme API JSON-RPC/WebSockets_**
+
+- [zmok.io](https://zmok.io/)
+- [GitHub](https://github.com/zmok-io)
+- [Documentation](https://docs.zmok.io/)
+- [Discord](https://discord.gg/fAHeh3ka6s)
+
 ## Complément d'information {#further-reading}
 
 _Une ressource communautaire vous a aidé ? Modifiez cette page et ajoutez-la !_
@@ -92,7 +119,7 @@ _Une ressource communautaire vous a aidé ? Modifiez cette page et ajoutez-la !_
 ## Sujets connexes {#related-topics}
 
 - [Nœuds et clients](/developers/docs/nodes-and-clients/)
-- [Frameworks de développement](/developers/docs/frameworks/)
+- [Infrastructures de développement](/developers/docs/frameworks/)
 
 ## Tutoriels connexes {#related-tutorials}
 

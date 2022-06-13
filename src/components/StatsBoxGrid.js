@@ -10,7 +10,11 @@ import Tooltip from "./Tooltip"
 import Link from "./Link"
 import Icon from "./Icon"
 
-import { isLangRightToLeft, translateMessageId } from "../utils/translations"
+import {
+  isLangRightToLeft,
+  translateMessageId,
+  getLocaleForNumberFormat,
+} from "../utils/translations"
 import { getData } from "../utils/cache"
 
 import { GATSBY_FUNCTIONS_PATH } from "../constants"
@@ -261,6 +265,7 @@ const RangeSelector = ({ state, setState }) => (
 
 const StatsBoxGrid = () => {
   const intl = useIntl()
+
   const [ethPrices, setEthPrices] = useState({
     data: [],
     value: 0,
@@ -287,8 +292,10 @@ const StatsBoxGrid = () => {
   const [selectedRangeTxs, setSelectedRangeTxs] = useState(ranges[0])
 
   useEffect(() => {
+    const localeForStatsBoxNumbers = getLocaleForNumberFormat(intl.locale)
+
     const formatPrice = (price) => {
-      return new Intl.NumberFormat(intl.locale, {
+      return new Intl.NumberFormat(localeForStatsBoxNumbers, {
         style: "currency",
         currency: "USD",
         minimumSignificantDigits: 3,
@@ -297,7 +304,7 @@ const StatsBoxGrid = () => {
     }
 
     const formatTVL = (tvl) => {
-      return new Intl.NumberFormat(intl.locale, {
+      return new Intl.NumberFormat(localeForStatsBoxNumbers, {
         style: "currency",
         currency: "USD",
         notation: "compact",
@@ -307,7 +314,7 @@ const StatsBoxGrid = () => {
     }
 
     const formatTxs = (txs) => {
-      return new Intl.NumberFormat(intl.locale, {
+      return new Intl.NumberFormat(localeForStatsBoxNumbers, {
         notation: "compact",
         minimumSignificantDigits: 3,
         maximumSignificantDigits: 4,
@@ -315,7 +322,7 @@ const StatsBoxGrid = () => {
     }
 
     const formatNodes = (nodes) => {
-      return new Intl.NumberFormat(intl.locale, {
+      return new Intl.NumberFormat(localeForStatsBoxNumbers, {
         minimumSignificantDigits: 3,
         maximumSignificantDigits: 4,
       }).format(nodes)

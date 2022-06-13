@@ -17,7 +17,7 @@ Know of an educational resource in your language? [Open an issue](https://github
 
 ## Ethereum.org resources {#ethereum-org}
 
-Ethereum.org is translated is natively translated into over 40 languages which you can find on our [languages page](/languages).
+Ethereum.org is natively translated into over 40 languages which you can find on our [languages page](/languages).
 
 If you are bilingual and want to help us reach more people, you can also get involved with the [ethereum.org Translation Program](/contributing/translation-program/#translation-program) and help us translate the website.
 
@@ -46,7 +46,7 @@ If you are bilingual and want to help us reach more people, you can also get inv
 **General resources**
 
 - [Ethereum.cn](https://www.ethereum.cn/) - community maintained content, covering the consensus layer upgrade, all core dev meeting notes, layer 2, etc.
-- [EthFans](https://ethfans.org/) - learn everything from the basics to advanced Ethereum topics
+- [EthFans](https://github.com/editor-Ajian/EthFans.org-annual-collected-works/) - learn everything from the basics to advanced Ethereum topics
 - [Unitimes](https://mp.weixin.qq.com/s/tvloZSDBSOQN9zDQj_91kA) - community maintained content, covering Ethereum, DeFi, NFT, Web3-related knowledge
 - [123ETH](https://123eth.org/) - a Portal to the Ethereum ecosystem
 - [Zhen Xiao](http://zhenxiao.com/blockchain/) - free online courses about cryptocurrency and its applications
@@ -98,6 +98,7 @@ If you are bilingual and want to help us reach more people, you can also get inv
 - [Curso Introducción a Ethereum Development](https://youtube.com/playlist?list=PLTqiwJDd_R8y9pfUBjhkVa1IDMwyQz-fU) - Solidity basics, testing and deployment of your first smart contract
 - [Curso Introducción a Seguridad y Hacking en Ethereum](https://youtube.com/playlist?list=PLTqiwJDd_R8yHOvteko_DmUxUTMHnlfci) - understand common vulnerabilities and security issues in real smart contracts
 - [Curso Introducción a DeFi Development](https://youtube.com/playlist?list=PLTqiwJDd_R8zZiP9_jNdaPqA3HqoW2lrS) - learn how DeFi smart contracts work in Solidity and create your own Automated Market Maker
+- [Cryptoversidad](https://www.youtube.com/c/Cryptoversidad) - Non-technical blockchain education from beginner to advanced. Learn everything about crypto and Ethereum.
 
 ### Turkish {#tr}
 

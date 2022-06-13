@@ -228,6 +228,12 @@
     "link": "https://www.meetup.com/Blockchain-and-Brews/"
   },
   {
+    "title": "ETH SD",
+    "emoji": ":us:",
+    "location": "San Diego",
+    "link": "https://withkoji.com/@ethsd"
+  },
+  {
     "title": "SF Ethereum Developers",
     "emoji": ":us:",
     "location": "SF/ Bay Area",
@@ -262,5 +268,17 @@
     "emoji": ":thailand:",
     "location": "Chiang Mai",
     "link": "https://www.facebook.com/groups/219236462407862/"
+  },
+  {
+    "title": "ETH Warsaw",
+    "emoji": ":poland:",
+    "location": "Warsaw",
+    "link": "https://www.meetup.com/ethwarsaw-meetup/"
+  },
+  {
+    "title": "Chicago Ethereum Meetup",
+    "emoji": ":us:",
+    "location": "Chicago",
+    "link": "https://www.meetup.com/Chicago-Ethereum-Meetup/"
   }
 ]

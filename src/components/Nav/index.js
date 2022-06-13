@@ -320,10 +320,13 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
           text: "ethereum-events",
           to: "/community/events/",
         },
-
         {
           text: "get-involved",
           to: "/community/get-involved/",
+        },
+        {
+          text: "open-research",
+          to: "/community/research/",
         },
         {
           text: "grants",
@@ -424,7 +427,7 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
                   isDarkTheme ? "Switch to Light Theme" : "Switch to Dark Theme"
                 }
               >
-                <NavIcon name={isDarkTheme ? "darkTheme" : "lightTheme"} />
+                <NavIcon name={isDarkTheme ? "lightTheme" : "darkTheme"} />
               </ThemeToggle>
               <RightNavLink to="/languages/">
                 <NavIcon name="language" />

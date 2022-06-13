@@ -8,7 +8,7 @@ incomplete: true
 
 ## Outils de test et bibliothèques {#testing-tools-and-libraries}
 
-**Waffle -** **_Framework logiciel pour le développement et le test de contrats intelligents avancés (basé sur ethers.js)_**
+**Waffle -** **_Infrastructure logiciel pour le développement et le test de contrats intelligents avancés (basé sur ethers.js)_**
 
 - [getwaffle.io](https://getwaffle.io/)
 - [GitHub](https://github.com/EthWorks/Waffle)
@@ -17,18 +17,18 @@ incomplete: true
 
 - [GitHub](https://github.com/sc-forks/solidity-coverage)
 
-**Whiteblock Genesis -** **_Plateforme de test et sandbox de développement de bout en bout pour la blockchain_**
+**Whiteblock Genesis - \*\***_Plateforme de test et sandbox de développement de bout en bout pour la blockchain_\*\*
 
 - [Whiteblock.io](https://whiteblock.io)
 - [Documentation](https://docs.whiteblock.io)
 - [GitHub](https://github.com/whiteblock/genesis)
 
-**Environnement de test OpenZeppelin -** **_Test de contrat intelligent extrêmement rapide. Installation en une ligne pour une expérience de test géniale._**
+**Environnement de test OpenZeppelin -** **_Test de contrat intelligent ultra rapide. Installation en une ligne pour une expérience de test exceptionnelle._**
 
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-test-environment)
 - [Documentation](https://docs.openzeppelin.com/test-environment/)
 
-**OpenZeppelin Test Helpers -** **_Bibliothèque d'assertions pour tester contrats intelligents Ethereum. Assurez vous que vos contrat se comporte comme prévu._**
+**OpenZeppelin Test Helpers -** **_Bibliothèque d'assertions pour tester des contrats intelligents Ethereum. Assurez-vous que vos contrats se comportent comme prévu !_**
 
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-test-helpers)
 - [Documentation](https://docs.openzeppelin.com/test-helpers)
@@ -42,6 +42,7 @@ incomplete: true
 - [Comment utiliser Slither pour trouver les bogues dans les contrats intelligents](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
 - [Comment simuler des contrats Solidity pour les tests](/developers/tutorials/how-to-mock-solidity-contracts-for-testing/)
 - [Comment passer des tests Truffle à l’environnement de test OpenZeppelin](https://docs.openzeppelin.com/test-environment/0.1/migrating-from-truffle)
+- [Comment tester les contrats après leur déploiement sur un réseau](https://fulldecent.blogspot.com/2019/04/testing-deployed-ethereum-contracts.html)
 
 ## Complément d'information {#further-reading}
 

@@ -25,7 +25,7 @@ I _trader_ inviano un tipo di token al pool e ricevono l'altro (ad esempio, invi
 
 Quando i fornitori di liquidità rivogliono indietro le loro risorse, possono bruciare i token del pool e ricevere i token, compresa la quota di ricompense.
 
-[Clicca qui per una descrizione completa](https://uniswap.org/docs/v2/core-concepts/swaps/).
+[Clicca qui per una descrizione completa](https://docs.uniswap.org/protocol/V2/concepts/core-concepts/swaps/).
 
 ### Perché v2? Perché non v3? {#why-v2}
 
@@ -892,11 +892,11 @@ I contratti periferici sono l'API (interfaccia del programma applicativo) per Un
 
 ### UniswapV2Router01.sol {#UniswapV2Router01}
 
-[Questo contratto](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router01.sol) è problematico e [non dovrebbe essere più usato](https://uniswap.org/docs/v2/smart-contracts/router01/). Fortunatamente, i contratti periferici sono privi di stato e non detengono alcuna risorsa, quindi è facile deprecarli e suggerire alle persone di usare una soluzione alternativa, ad esempio `UniswapV2Router02`.
+[Questo contratto](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router01.sol) è problematico e [non dovrebbe essere più usato](https://docs.uniswap.org/protocol/V2/reference/smart-contracts/router-01/). Fortunatamente, i contratti periferici sono privi di stato e non detengono alcuna risorsa, quindi è facile deprecarli e suggerire alle persone di usare una soluzione alternativa, ad esempio `UniswapV2Router02`.
 
 ### UniswapV2Router02.sol {#UniswapV2Router02}
 
-In gran parte dei casi puoi usare Uniswap tramite [questo contratto](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router02.sol). Puoi vedere come usarlo [qui](https://uniswap.org/docs/v2/smart-contracts/router02/).
+In gran parte dei casi puoi usare Uniswap tramite [questo contratto](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router02.sol). Puoi vedere come usarlo [qui](https://docs.uniswap.org/protocol/V2/reference/smart-contracts/router-02/).
 
 ```solidity
 pragma solidity =0.6.6;

@@ -50,10 +50,12 @@
   "page-developers-learn-tutorials-cta": "View tutorials",
   "page-developers-learn-tutorials-desc": "Learn Ethereum development step-by-step from builders who have already done it.",
   "page-developers-meta-desc": "Documentation, tutorials, and tools for developers building on Ethereum.",
-  "page-developers-mev-desc": "An introduction to miner extractable value (MEV)",
-  "page-developers-mev-link": "Miner extractable value (MEV)",
+  "page-developers-mev-desc": "An introduction to maximal extractable value (MEV)",
+  "page-developers-mev-link": "Maximal extractable value (MEV)",
   "page-developers-mining-desc": "How new blocks are created and consensus is reached",
   "page-developers-mining-link": "Mining",
+  "page-developers-mining-algorithms-desc": "Information on Ethereum's mining algorithms",
+  "page-developers-mining-algorithms-link": "Mining algorithms",
   "page-developers-networks-desc": "An overview of Mainnet and the test networks",
   "page-developers-networks-link": "Networks",
   "page-developers-node-clients-desc": "How blocks and transactions are verified in the network",
@@ -84,5 +86,11 @@
   "page-developers-transactions-desc": "The way Ethereum state changes",
   "page-developers-transactions-link": "Transactions",
   "page-developers-web3-desc": "How the web3 world of development is different",
-  "page-developers-web3-link": "Web2 vs Web3"
+  "page-developers-web3-link": "Web2 vs Web3",
+  "page-developers-networking-layer": "Networking Layer",
+  "page-developers-networking-layer-link": "Networking Layer",
+  "page-developers-networking-layer-desc": "Introduction to the Ethereum networking layer",
+  "page-developers-data-structures-and-encoding": "Data structures and encoding",
+  "page-developers-data-structures-and-encoding-link": "Data structures and encoding",
+  "page-developers-data-structures-and-encoding-desc": "Introduction to the data structures and encoding schema used in the Ethereum stack"
 }

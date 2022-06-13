@@ -168,7 +168,7 @@ Veel Ethereum-portemonnees bieden limieten aan bescherming tegen het leeglopen v
 Scammers zijn altijd op zoek naar manieren om uw geld te stelen. Het is onmogelijk om de zwendelpraktijken volledig te stoppen, maar we kunnen ze minder effectief maken door ons bewust te zijn van de meeste gebruikte technieken. Er zijn veel variaties van deze oplichters, maar over het algemeen volgen ze dezelfde patronen van hoog niveau. Onthoud in elk geval:
 
 - wees altijd sceptisch
-- niemand zal u gratis of afgeprijsd ETH geven!
+- niemand zal u gratis of afgeprijsd ETH geven
 - niemand heeft toegang nodig tot uw privé-sleutels of persoonlijke informatie
 
 ### Giveaway-scam {#giveaway}

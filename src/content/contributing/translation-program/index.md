@@ -11,15 +11,16 @@ The Translation Program is a collaborative effort to translate ethereum.org into
 
 Our progress so far:
 
-- [**3,200 +** translators](/contributing/translation-program/acknowledgements/)
-- [**43** languages live on site](/languages/)
+- [**3,600 +** translators](/contributing/translation-program/contributors/)
+- [**46** languages live on site](/languages/)
 - [**2.9 million** words translated in 2021](/contributing/translation-program/acknowledgements/)
+- [**1.5 million** words translated in 2022 so far](/contributing/translation-program/acknowledgements/)
 
 If you want to get involved and help us grow the global Ethereum community by translating the website into your language, follow the steps below!
 
 <InfoBanner emoji=":tada:">
   Check out our <Link to="/contributing/translation-program/acknowledgements/">Translator Acknowledgements</Link> page, and{" "}
-  claim your POAP token! If you translated ethereum.org in 2021, there's a unique POAP waiting for you.{" "}
+  claim your POAP token! If you translated ethereum.org in 2022, there's a unique POAP waiting for you.{" "}
   <Link to="/contributing/translation-program/acknowledgements/#poap">More on POAPs</Link>
 </InfoBanner>
 

@@ -84,13 +84,13 @@ You can find some examples of what these strings look like for translators and h
 
 ### Crowdin warnings {#crowdin-warnings}
 
-Crowdin has a built-in feature that warns translators when they are about to make a mistake. If you suggest a translation and forget to include a tag from the source, translate elements that should not be translated, add several consecutive spaces, forget end punctuation, etc., Crowdin will automatically warn you of this before saving your translation.
+Crowdin has a built-in feature that warns translators when they are about to make a mistake. Crowdin will automatically warn you of this before saving your translation if you forget to include a tag from the source, translate elements that should not be translated, add several consecutive spaces, forget end punctuation, etc.
 If you see a warning like this, please go back and double-check the suggested translation.
 
 **Never ignore these warnings, as they usually mean that something is wrong, or that the translation is missing a key part of the source text.**
 
 An example of a Crowdin warning when you forget to add a tag to your translation:
-![Example of a Crowdin warning.png](./crowdin-warning-example.png)
+![Example of a Crowdin warning](./crowdin-warning-example.png)
 
 ### Dealing with tags and code snippets {#dealing-with-tags}
 
@@ -100,7 +100,7 @@ A lot of the source content contains tags and variables, which are highlighted i
 
 You may notice full links to pages on ethereum.org or other websites.
 
-These should be identical to the source and not changed or translated. If you translate a link or change it in any way, even just removing a part of it, like a backslash (/), this will lead to broken and unusable links.
+These should be identical to the source and not changed or translated. If you translate a link or change it in any way, even just removing a part of it, like a slash (/), this will lead to broken and unusable links.
 
 The best way to handle links is to copy them directly from the source, either by clicking on them or using the ‘Copy Source’ button (Alt+C).
 

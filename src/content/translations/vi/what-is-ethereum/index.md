@@ -11,7 +11,7 @@ Bạn mới bắt đầu tìm hiểu Ethereum? Bạn đang ở đúng nơi. Bắ
 **Ethereum là nền tảng cho kỷ nguyên của internet mới:**
 
 - Internet, nơi mà tiền và quá trình thanh toán được tích hợp.
-- Internet nơi người dùng có thể sở hữu dữ liệu của họ và ứng dụng của bạn không bị bí mật thu thập thông tin và đánh cắp từ bạn.
+- Internet, nơi người dùng có thể sở hữu dữ liệu của họ và ứng dụng của bạn không bị bí mật thu thập thông tin và đánh cắp từ bạn.
 - Internet, nơi mà mọi người có thể tiếp cận với một hệ thống tài chính mở.
 - Internet được xây dựng trên cơ sở hạ tầng truy cập mở, trung lập, không bị tổ chức hay cá nhân nào kiểm soát.
 

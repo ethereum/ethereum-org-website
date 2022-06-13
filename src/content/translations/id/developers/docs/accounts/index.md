@@ -46,7 +46,7 @@ Akun Ethereum memiliki empat bidang:
 - `codeHash` – Hash ini merujuk pada _kode_ sebuah akun di mesin virtual Ethereum (EVM). Akun kontrak memiliki potongan kode yang diprogramkan ke dalamnya yang dapat melakukan berbagai operasi. Kode EVM ini dieksekusi jika akun menerima pemanggilan message. Tidak dapat diubah, tidak seperti field akun lainnya. Semua potongan kode tersebut disimpan dalam basis data state di bawah hash yang sesuai untuk proses pengambilan nanti. Nilai hash ini dikenal sebagai codeHash. Untuk kepemilikan akun eksternal, bidang codeHash adalah hash dari string kosong.
 - `storageRoot` – Terkadang dikenal sebagai hash penyimpanan. Hash 256-bit dari node akar pohon Merkle Patricia yang mengkodekan konten penyimpanan akun (pemetaan di antara nilai bilangan bulat 256-bit), yang dikodekan ke dalam pohon sebagai pemetaan dari hash 256-bit Keccak dari kunci bilangan bulat 256-bit ke nilai bilangan bulat 256-bit yang dikodekan RLP. Pohon ini mengkodekan hash dari konten penyimpanan akun ini, dan bersifat kosong secara default.
 
-![Diagram yang menunjukan susunan akun](../../../../../developers/docs/accounts/accounts.png) _Diagram diadaptasi dari [Ethereum EVM yang diilustrasikan](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![Diagram yang menunjukan susunan akun](./accounts.png) _Diagram diadaptasi dari [Ethereum EVM yang diilustrasikan](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 ## Akun dan pasangan kunci dengan kepemilikan eksternal {#externally-owned-accounts-and-key-pairs}
 
@@ -66,7 +66,7 @@ Contoh:
 
 `fffffffffffffffffffffffffffffffebaaedce6af48a03bbfd25e8cd036415f`
 
-Kunci publik dihasilkan oleh kunci privat yang menggunakan [Algoritma Tanda Tangan Digital Kurva Eliptik](https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm). Anda mendapatkan alamat publik untuk akun Anda dengan mengambil 20 bita terakhir dari kunci publik hash Keccak-256 dan menambahkan `0x` ke bagian awal alamat.
+Kunci publik dihasilkan oleh kunci privat yang menggunakan [Algoritma Tanda Tangan Digital Kurva Eliptik](https://wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm). Anda mendapatkan alamat publik untuk akun Anda dengan mengambil 20 bita terakhir dari kunci publik hash Keccak-256 dan menambahkan `0x` ke bagian awal alamat.
 
 Berikut adalah contoh membuat akun di konsol menggunakan `personal_newAccount` GETH
 
@@ -94,11 +94,11 @@ Contoh:
 
 `0x06012c8cf97bead5deae237070f9587f8e7a266d`
 
-Alamat kontrak biasanya diberikan saat kontrak diterapkan ke Blockchain Ethereum. Alamat ini berasal dari alamat kreator dan jumlah transaksi yang dikirim dari alamat tersebut (“nonce”).
+Alamat kontrak biasanya diberikan saat kontrak diterapkan ke Rantai Blok Ethereum. Alamat ini berasal dari alamat pembuat dan jumlah transaksi yang dikirim dari alamat tersebut (“nonce”).
 
 ## Catatan pada dompet {#a-note-on-wallets}
 
-Akun bukanlah dompet. Dompet adalah pasangan kunci yang terkait dengan akun milik pengguna, yang darinya memungkinkan pengguna melakukan transaksi atau mengelola akun.
+Akun bukanlah dompet. Akun adalah pasangan kunci untuk akun Ethereum yang dimiliki pengguna. Dompet adalah antarmuka atau aplikasi yang memungkinkan Anda berinteraksi dengan akun Ethereum Anda.
 
 ## Demo visual {#a-visual-demo}
 

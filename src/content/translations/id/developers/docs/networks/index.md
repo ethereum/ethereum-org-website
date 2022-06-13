@@ -11,7 +11,7 @@ Jaringan adalah lingkungan Ethereum berbeda yang bisa Anda akses untuk kasus pen
 
 ## Prasyarat {#prerequisites}
 
-Anda harus mengerti konsep dasar tentang Ethereum sebelum membaca lebih banyak tentang jaringan berbeda karena jaringan percobaan akan memberi Anda versi Ethereum yang murah dan aman untuk keperluan uji coba. Coba lihat [pengantar Ethereum](/developers/docs/intro-to-ethereum/) kami.
+Anda harus mengerti konsep dasar tentang Ethereum sebelum membaca lebih banyak tentang jaringan berbeda karena jaringan percobaan akan memberi Anda versi Ethereum yang murah dan aman untuk keperluan uji coba. Coba [pengantar Ethereum](/developers/docs/intro-to-ethereum/) kami.
 
 ## Jaringan publik {#public-networks}
 
@@ -23,7 +23,7 @@ Jaringan Utama adalah blokchain produksi Ethereum publik yang utama, di mana tra
 
 Saat orang-orang dan bursa membahas harga ETH, mereka sedang berbicara tentang Jaringan Utama ETH.
 
-### Testnet {#testnets}
+### Jaringan percobaan {#testnets}
 
 Selain Jaringan Utama, ada testnet publik. Ini adalah jaringan yang digunakan pengembang protokol atau kontrak pintar untuk menguji peningkatan protokol serta kontrak pintar potensial dalam lingkungan yang menyerupai produksi sebelum proses penerapan ke Jaringan Utama. Anggap ini sebagai analog dari server produksi versus server pementasan.
 
@@ -31,29 +31,77 @@ Secara umum, penting menguji kode kontrak apa pun yang Anda tulis di testnet seb
 
 Kebanyakan testnet menggunakan mekanisme konsensus bukti otoritas. Ini berarti sejumlah kecil node dipilih untuk memvalidasi transaksi dan membuat blok baru - mempertaruhkan identitas mereka dalam prosesnya. Sulit untuk memberi insentif terhadap penambangan pada testnet bukti kerja yang bisa membuatnya rentan terhadap serangan.
 
+ETH dalam testnet tidak punya nilai sebenarnya; oleh karena itu, tidak ada pasar untuk ETH testnet. Karena Anda membutuhkan ETH untuk benar-benar berinteraksi dengan Ethereum, kebanyakan orang mendapatkan ETH testnet dari keran. Sebagian besar keran adalah aplikasi web tempat Anda dapat memasukkan alamat pengiriman ETH yang Anda minta.
+
+#### Arbitrum Rinkeby {#arbitrum-rinkeby}
+
+Testnet untuk [Arbitrum](https://arbitrum.io/).
+
+##### Keran Arbitrum Rinkeby
+
+- [FaucETH](https://fauceth.komputing.org)(Keran Multi-Rantai tanpa memerlukan akun sosial)
+- [Keran Chainlink](https://faucets.chain.link/)
+- [Keran Paradigm](https://faucet.paradigm.xyz/)
+
 #### Görli {#goerli}
 
 Testnet bukti otoritas yang berfungsi di seluruh klien.
+
+##### Keran Görli
+
+- [Keran Görli](https://faucet.goerli.mudit.blog/)
+- [Keran Chainlink](https://faucets.chain.link/)
+- [Alchemy Goerli Faucet](https://goerlifaucet.com/)
+
+#### Kintsugi {#kintsugi}
+
+Testnet gabungan untuk Ethereum.
+
+##### Keran Kintsugi
+
+- [FaucETH](https://fauceth.komputing.org)(Keran Multi-Rantai tanpa memerlukan akun sosial)
+- [Keran Kintsugi](https://faucet.kintsugi.themerge.dev/)
 
 #### Kovan {#kovan}
 
 Testnet bukti kerja untuk mereka yang menjalankan klien OpenEthereum.
 
+##### Keran Kovan
+
+- [FaucETH](https://fauceth.komputing.org)(Keran Multi-Rantai tanpa memerlukan akun sosial)
+- [Keran Kovan](https://faucet.kovan.network/)
+- [Keran Chainlink](https://faucets.chain.link/)
+- [Keran Paradigm](https://faucet.paradigm.xyz/)
+
+#### Optimisic Kovan {#optimistic-kovan}
+
+Testnet untuk [Optimism](https://www.optimism.io/).
+
+##### Keran Optimistic Kovan
+
+- [FaucETH](https://fauceth.komputing.org)(Keran Multi-Rantai tanpa memerlukan akun sosial)
+- [Keran Paradigm](https://faucet.paradigm.xyz/)
+
 #### Rinkeby {#rinkeby}
 
 Testnet bukti otoritas bagi mereka yang menjalankan klien Geth.
+
+##### Keran Rinkeby
+
+- [FaucETH](https://fauceth.komputing.org)(Keran Multi-Rantai tanpa memerlukan akun sosial)
+- [Keran Alchemy](https://RinkebyFaucet.com)
+- [Keran Chainlink](https://faucets.chain.link/)
+- [Keran Paradigm](https://faucet.paradigm.xyz/)
+- [Keran Rinkeby](https://faucet.rinkeby.io/)
 
 #### Ropsten {#ropsten}
 
 Testnet bukti kerja. Ini berarti representasi Ethereum yang terbaik.
 
-### Keran testnet {#testnet-faucets}
+##### Keran Ropsten
 
-ETH dalam testnet tidak punya nilai sebenarnya; oleh karena itu, tidak ada pasar untuk ETH testnet. Karena Anda membutuhkan ETH untuk benar-benar berinteraksi dengan Ethereum, kebanyakan orang mendapatkan ETH testnet dari keran. Sebagian besar keran adalah aplikasi web tempat Anda dapat memasukkan alamat pengiriman ETH yang Anda minta.
-
-- [Keran Görli](https://faucet.goerli.mudit.blog/)
-- [Keran Kovan](https://faucet.kovan.network/)
-- [Keran Rinkeby](https://faucet.rinkeby.io/)
+- [FaucETH](https://fauceth.komputing.org)(Keran Multi-Rantai tanpa memerlukan akun sosial)
+- [Keran Paradigm](https://faucet.paradigm.xyz/)
 
 ## Jaringan privat {#private-networks}
 
@@ -67,10 +115,15 @@ Ada proyek dan peralatan yang didedikasikan untuk membantu proses ini. Pelajari 
 
 ### Jaringan Konsorsium {#consortium-networks}
 
-Proses konsensusnya dikendalikan oleh kumpulan node terpercaya yang telah ditentukan sebelumnya. Sebagai contoh, jaringan privat dari institusi akademis terkenal yang masing-masing mengurus satu node, dan blok divalidasi oleh ambang batas penandatangan dalam jaringan.
+Proses konsensusnya dikendalikan oleh kumpulan node tepercaya yang telah ditentukan sebelumnya. Sebagai contoh, jaringan privat dari institusi akademis terkenal yang masing-masing mengurus satu node, dan blok divalidasi oleh ambang batas penandatangan dalam jaringan.
 
 Jika jaringan Ethereum publik seperti internet publik, Anda bisa menganggap jaringan konsorsium sebagai intranet privat.
 
-## Bacaan lebih lanjut {#further-reading}
+## Alat terkait {#related-tools}
+
+- [Chainlist](https://chainlist.org/) _daftar jaringan EVM untuk menghubungkan dompet dan para penyedia dengan ID Rantai dan ID Jaringan yang sesuai_
+- [Rantai berbasis EVM](https://github.com/ethereum-lists/chains) _repo rantai metadata GitHub yang menggerakkan Chainlist_
+
+## Bacaan lebih Lanjut {#further-reading}
 
 _Tahu tentang sumber daya komunitas yang membantu Anda? Edit halaman ini dan tambahkan!_

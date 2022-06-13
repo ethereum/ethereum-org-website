@@ -7,6 +7,7 @@ import { getLocaleTimestamp } from "../utils/time"
 import Translation from "./Translation"
 import Link from "./Link"
 import Icon from "./Icon"
+import { isLangRightToLeft } from "../utils/translations"
 
 const StyledFooter = styled.footer`
   padding-top: 3rem;
@@ -122,6 +123,8 @@ const socialLinks = [
 
 const Footer = () => {
   const intl = useIntl()
+
+  const isPageRightToLeft = isLangRightToLeft(intl.locale)
 
   const linkSections = [
     {
@@ -260,6 +263,10 @@ const Footer = () => {
           text: "esp",
         },
         {
+          to: "/bug-bounty/",
+          text: "ethereum-bug-bounty",
+        },
+        {
           to: "/community/grants",
           text: "grant-programs",
         },
@@ -376,7 +383,11 @@ const Footer = () => {
                 <List>
                   {section.links.map((link, linkIdx) => (
                     <ListItem key={linkIdx}>
-                      <FooterLink to={link.to} isPartiallyActive={false}>
+                      <FooterLink
+                        dir={isPageRightToLeft ? "auto" : "ltr"}
+                        to={link.to}
+                        isPartiallyActive={false}
+                      >
                         <Translation id={link.text} />
                       </FooterLink>
                     </ListItem>

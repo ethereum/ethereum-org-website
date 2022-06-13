@@ -26,7 +26,7 @@ import {
   Content,
   Divider,
   Page,
-  CardGrid,
+  InfoGrid,
 } from "../components/SharedStyledComponents"
 import ExpandableCard from "../components/ExpandableCard"
 import ExpandableInfo from "../components/ExpandableInfo"
@@ -177,23 +177,6 @@ const StyledExpandableInfo = styled(ExpandableInfo)`
   @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
     margin: 0;
     width: 100%;
-  }
-`
-
-const InfoGrid = styled(CardGrid)`
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr));
-  gap: 1rem 2rem;
-  & > div {
-    height: fit-content;
-    &:hover {
-      transition: 0.1s;
-      transform: scale(1.01);
-      svg {
-        transition: 0.1s;
-        transform: scale(1.1);
-      }
-    }
   }
 `
 

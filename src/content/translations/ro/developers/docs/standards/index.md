@@ -6,33 +6,36 @@ sidebar: true
 incomplete: true
 ---
 
-## Prezentarea generală a standardelor {#standards-overview}
+## Prezentare generală a standardelor {#standards-overview}
 
-Comunitatea Ethereum a adoptat multe standarde care ajută la menținerea proiectelor (cum ar fi [clienți Ethereum](/developers/docs/nodes-and-clients/) și portofele) interoperabile între implementări și asigură menținerea compatibilității între contractele inteligente și aplicațiile dapp.
+Comunitatea Ethereum a adoptat multe standarde care ajută la menținerea proiectelor (cum ar fi [clienții Ethereum](/developers/docs/nodes-and-clients/) și portofelele) interoperabile la implementare și asigură menținerea combinabilităţii contractelor inteligente cu aplicațiile dapp.
 
-De obicei, standardele sunt introduse ca [Propuneri de îmbunătățire Ethereum](/eips/) (EIP), care sunt discutate de membrii comunității prin intermediul unui [proces standard](https://eips.ethereum.org/EIPS/eip-1).
+De obicei standardele sunt introduse ca [Propuneri de îmbunătățire pentru Ethereum](/eips/) (EIP), care sunt discutate de membrii comunității prin intermediul unui [proces standard](https://eips.ethereum.org/EIPS/eip-1).
 
-- [Introducere în EIP-uri](/eips/)
-- [Listă de EIP-uri](https://eips.ethereum.org/)
-- [Depozit github de EIP-uri](https://github.com/ethereum/EIPs)
+- [Introducere despre EIP-uri](/eips/)
+- [Lista EIP-urilor](https://eips.ethereum.org/)
+- [EIP GitHub repo](https://github.com/ethereum/EIPs)
 - [Forum de discuții EIP](https://ethereum-magicians.org/c/eips)
-- [Prezentare generală a guvernanței Ethereum](https://blog.bmannconsulting.com/ethereum-governance/) _31 martie 2019 - Boris Mann_
+- [Introducere despre guvernanța Ethereum](/governance/)
+- [Prezentare generală a guvernanței Ethereum](https://web.archive.org/web/20201107234050/https://blog.bmannconsulting.com/ethereum-governance/) _31 martie 2019 - Boris Mann_
 - [Guvernarea dezvoltării protocolului Ethereum și coordonarea actualizării rețelei](https://hudsonjameson.com/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) _23 martie 2020 - Hudson Jameson_
-- [Lista de redare a tuturor ședințelor Ethereum Core Dev](https://www.youtube.com/playlist?list=PLaM7G4Llrb7zfMXCZVEXEABT8OSnd4-7w) _(Listă de redare YouTube)_
+- [Lista de redare a tuturor ședințelor dezvoltatorilor de bază pentru Ethereum](https://www.youtube.com/playlist?list=PLaM7G4Llrb7zfMXCZVEXEABT8OSnd4-7w) _(Listă de redare YouTube)_
 
 ## Tipuri de standarde {#types-of-standards}
 
-Anumite EIP-uri se referă la standarde la nivel de aplicație (de exemplu, un format standard de contract inteligent), care sunt introduse ca [Cereri de comentarii Ethereum (ERC)](https://eips.ethereum.org/erc). Multe ERC-uri sunt standarde critice, cu utilizare largă în întregul ecosistem Ethereum.
+Anumite EIP-uri se referă la standarde la nivelul aplicațiilor (de exemplu, un format standard de contract inteligent), care sunt introduse ca [Cereri de comentarii Ethereum (ERC)](https://eips.ethereum.org/erc). Multe ERC-uri sunt standarde de importanţă majoră, cu utilizare largă în întregul ecosistem Ethereum.
 
-- [Listă de ERC-uri](https://eips.ethereum.org/erc)
+- [Lista ERC-urilor](https://eips.ethereum.org/erc)
 
-### Standarde token {#token-standards}
+### Standarde de tokenuri {#token-standards}
 
-- [ERC-20 - Interfață standard pentru tokenuri](/developers/docs/standards/tokens/erc-20/)
-- [ERC-721 - Interfață standard pentru tokenuri non-fungibile](/developers/docs/standards/tokens/erc-721/)
+- [ERC-20](/developers/docs/standards/tokens/erc-20/) - O interfață standard pentru tokenuri fungibile (interschimbabile), cum ar fi tokenurile de vot, tokenurile de miză sau monedele virtuale.
+- [ERC-721](/developers/docs/standards/tokens/erc-721/) - O interfață standard pentru tokenuri nefungibile, cum ar fi un act de proprietate pentru opere de artă sau o melodie.
+- [ERC-777](/developers/docs/standards/tokens/erc-777/) - Un standard de tokenuri îmbunătățit față de ERC-20.
+- [ERC-1155](/developers/docs/standards/tokens/erc-1155/) - Un standard de tokenuri care poate conține atât active fungibile, cât și nefungibile.
 
-Află mai multe informații despre [standarde de tokenuri](/developers/docs/standards/tokens/).
+Aflaţi mai multe despre [standardele de tokenuri](/developers/docs/standards/tokens/).
 
 ## Referințe suplimentare {#further-reading}
 
-_Cunoști o resursă comunitară care te-a ajutat? Editează această pagină și adaug-o!_
+_Cunoașteți o resursă a comunității care v-a ajutat? Editați această pagină și adăugați-o!_

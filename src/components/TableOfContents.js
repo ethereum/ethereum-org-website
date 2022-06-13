@@ -178,8 +178,9 @@ const AsideMobile = styled.aside`
   /* TODO find better way - this accounts for huge header margin top */
   /* but if doc DOESN'T start w/ header, it overlaps, e.g. /docs/accounts/  */
   /* margin-bottom: -10rem; */
-  @media (min-width: ${(props) => props.theme.breakpoints.l}) {
-    display: none;
+  display: none;
+  @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
+    display: block;
   }
 `
 
@@ -377,7 +378,7 @@ const TableOfContents = ({
       <OuterList>
         {shouldShowEditButtom && (
           <ButtonContainer>
-            <ButtonLink to={editPath} isSecondary={true} mt={0}>
+            <ButtonLink to={editPath} isSecondary={true} hideArrow mt={0}>
               <ButtonContent>
                 <GithubIcon name="github" />{" "}
                 <span>

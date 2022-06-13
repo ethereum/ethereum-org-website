@@ -80,13 +80,13 @@ const SubjectPill = styled.div`
       case "Vyper":
         return theme.colors.tagBlue
       case "web3":
-        return theme.colors.tagTurqouise
+        return theme.colors.tagTurquoise
       case "JavaScript":
         return theme.colors.tagRed
       case "TypeScript":
         return theme.colors.tagBlue
       case "Go":
-        return theme.colors.tagTurqouise
+        return theme.colors.tagTurquoise
       case "Python":
         return theme.colors.tagMint
       case "Rust":
@@ -205,9 +205,7 @@ const ProductCard = ({
             </SubjectPill>
           ))}
       </SubjectContainer>
-      <StyledButtonLink to={url} hideArrow={true}>
-        Open {name}
-      </StyledButtonLink>
+      <StyledButtonLink to={url}>Open {name}</StyledButtonLink>
     </Card>
   )
 }

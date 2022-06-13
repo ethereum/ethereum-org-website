@@ -13,9 +13,9 @@ Les blocs sont un sujet très accessible pour les débutants. Mais pour vous aid
 
 ## Pourquoi les blocs? {#why-blocks}
 
-Pour garantir que tous les participants au réseau Ethereum maintiennent un état synchronisé et s'accordent sur l'historique précis des transactions, nous regroupons les transactions en blocs. Cela signifie que des dizaines (ou des centaines) de transactions sont engagées, acceptées et synchronisées en même temps.
+Afin de s'assurer que tous les participants du réseau Ethereum restent synchronisés et s'accordent sur l'historique exacte des transactions, les transactions sont traitées par blocs. Cela signifie que des dizaines (ou des centaines) de transactions sont engagées, acceptées et synchronisées en même temps.
 
-![Diagramme montrant une transaction dans un bloc qui cause des changements d'état](../../../../../developers/docs/blocks/tx-block.png) _Schéma adapté à partir du document [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![Un schéma montrant la transaction dans un bloc provoquant des changements d'état](./tx-block.png) _Schéma adapté à partir du document [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 En espaçant les engagements, nous donnons à tous les participants du réseau suffisamment de temps pour parvenir à un consensus : même si des demandes de transaction se produisent des dizaines de fois par seconde, sur Ethereum les blocs sont engagés environ une fois toutes les quinze secondes.
 
@@ -29,30 +29,35 @@ Une fois qu'un bloc est assemblé (miné) par un mineur sur le réseau, il est p
 
 <YouTube id="_160oMzblY8" />
 
-## Protocole de "preuve de travail" {#proof-of-work-protocol}
+## Protocole de « preuve de travail » {#proof-of-work-protocol}
 
-Preuve de travail signifie ceci :
+La preuve de travail implique les points suivants :
 
-- Les nœuds miniers requièrent une quantité d'énergie, un délai et une puissance de calcul variables mais substantiels pour produire un "certificat de légitimité" pour tout bloc qu’ils proposent au réseau. Cela aide à protéger ce dernier contre les attaques de spam/déni de service, entre autres, puisque les certificats sont coûteux à produire.
-- Les autres mineurs qui entendent parler d'un nouveau bloc avec un certificat de légitimité valide doivent accepter le nouveau bloc en tant que bloc conforme suivant sur la blockchain.
-- Le délai exact nécessaire à chaque mineur pour produire ce certificat est une variable aléatoire avec d'importants écarts. Cela garantit qu'il est peu probable* que deux mineurs produisent simultanément des validations pour un bloc proposé en même temps. Lorsqu'un mineur produit et propage un nouveau bloc certifié, il peut être presque certain qu'il sera accepté par le réseau comme le bloc conforme suivant sur la blockchain, sans conflit* (bien qu'il existe également un protocole pour traiter les conflits dans le cas où deux blockchains certifiés sont produites presque simultanément).
+- Les nœuds miniers requièrent une quantité d'énergie, un délai et une puissance de calcul variables mais substantiels pour produire un « certificat de légitimité » pour tout bloc qu’ils proposent au réseau. Cela permet de protéger le réseau contre des attaques par pourriels/déni de service, entre autres, puisque c'est coûteux à produire les certificats.
+- Les autres mineurs qui viennent de savoir à propos d'un nouvel bloc avec un certificat de légitimité valide doivent l'accepter comme le bloc prochain canonique sur la blockchain.
+- Le délai exact nécessaire à chaque mineur pour produire ce certificat est une variable aléatoire avec d'importants écarts. Cela garantit que deux mineurs ne produisent pas des validations pour le prochain bloc simultanément ; lorsqu'un mineur produit et propage un nouveau bloc certifié, il est presque sûre que le bloc sera accepté par le réseau comme le prochain bloc canonique sur la blockchain sans conflit (toutefois il existe un protocole pour gérer les conflits dans le cas où deux chaînes de blocs certifiés sont produites presque simultanément).
 
 [En savoir plus sur le minage](/developers/docs/consensus-mechanisms/pow/mining/)
 
 ## Que contient un bloc ? {#block-anatomy}
 
-- Horodatage : le moment où le bloc a été miné.
-- Numéro de bloc : la longueur de la blockchain en blocs.
-- Difficulté : l’effort nécessaire pour miner le bloc.
-- mixHash : un identifiant unique pour ce bloc.
-- Un hachage parent : l'identifiant unique du bloc précédent (c'est ainsi que les blocs sont liés dans une chaîne).
-- Liste des transactions : les transactions incluses dans le bloc.
-- Racine de l'état : l’état entier du système. Les soldes du compte, le stockage du contrat, le code du contrat et les nonces de compte sont à l’intérieur.
-- Nonce : un hachage qui, lorsqu'il est combiné avec le mixHash, prouve que le bloc a reçu [une preuve de travail](/developers/docs/consensus-mechanisms/pow/).
+- `timestamp` – le moment auquel le bloc a été miné.
+- `blockNumber` – la longueur de la blockchain en blocs.
+- `baseFeePerGas` - les frais minimums requis par unité de gaz pour qu'une transaction soit enregistrée dans le bloc.
+- `difficulty` – l'effort requis pour miner un bloc.
+- `mixHash` – un identifiant unique pour ce bloc.
+- `parentHash` – un identifiant unique pour le bloc précèdent (c'est ainsi que les blocs sont liés dans une chaîne).
+- `transactions` – les transactions incluses dans le bloc.
+- `stateRoot` – l'état global du système : les solde des comptes, le stockage du contrat, le code du contrat et les nonces des comptes sont inclues.
+- `nonce` – le hachage, qui en combinaison avec mixHash, prouve que le bloc a été passe par la [ preuve de travail ](/developers/docs/consensus-mechanisms/pow/).
+
+## Durée de blocage {#block-time}
+
+Durée de blocage se réfère au temps mis pour miner un nouvel bloc. Dans l'Ethereum, la durée de blockage moyenne est entre 12 à 14 seconds et l'on l'évalue après chaque bloc. La durée de blockage attendue est définie constante au niveau du protocole et on l'utilisé pour protéger la sécurité du réseau lorsque les mineurs ajoutent plus de puissance de calcul. La durée de blockage moyenne est comparée à la durée de blockage attendu, et si la durée de blockage moyenne est élevée, la difficulté est réduite dans l'en-tête de bloc. Si la durée de blockage moyenne est moins que la durée de blockage attendue, la difficulté sera augmentée.
 
 ## Taille des blocs {#block-size}
 
-Une dernière remarque importante : les blocs eux-mêmes ont une taille limitée. Chaque bloc a une limite de carburant qui est fixée par le réseau et les mineurs collectivement : la quantité totale de carburant dépensée pour toutes les transactions du bloc doit être inférieure à la limite fixée. C'est important car cela garantit que les blocs ne peuvent pas être arbitrairement grands. Si les blocs pouvaient être arbitrairement grands, les nœuds complets moins performants ne pourraient plus progressivement suivre le réseau en raison des exigences en matière d'espace et de vitesse. La limite de carburant par bloc a été initialisée à 5 000 au bloc 0. Tout mineur qui exploite un nouveau bloc peut modifier la limite de carburant d'environ 0,1 % maximum dans les deux sens par rapport à la limite de carburant du bloc parent. La limite de carburant définie en novembre 2018 se situe aux alentours de 8 000 000.
+Une dernière remarque importante : les blocs eux-mêmes ont une taille limitée. Chaque bloc vise une taille cible de 15 million carburant mais leur taille s'adapte aux exigences du réseau, jusqu'à la limite de 30 million carburant (deux fois le taille cible de bloc). La quantité totale de gaz dépensée par toutes les transactions dans le bloc doit être moins que la limite de carburant du bloc. C'est important car cela garantit que les blocs ne peuvent pas être arbitrairement grands. Si les blocs pouvaient être arbitrairement grands, les nœuds complets moins performants ne pourraient plus progressivement suivre le réseau en raison des exigences en matière d'espace et de vitesse.
 
 ## Complément d'information {#further-reading}
 
@@ -62,4 +67,4 @@ _Une ressource communautaire vous a aidé ? Modifiez cette page et ajoutez-la !_
 
 - [Minage](/developers/docs/consensus-mechanisms/pow/mining/)
 - [Transactions](/developers/docs/transactions/)
-- [Gas](/developers/docs/gas/)
+- [Gaz](/developers/docs/gas/)
