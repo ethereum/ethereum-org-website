@@ -12,7 +12,6 @@ import Emoji from "./Emoji"
 import Translation from "./Translation"
 import { StyledSelect as Select } from "./SharedStyledComponents"
 import { translateMessageId } from "../utils/translations"
-import { Lang } from "../utils/languages"
 
 const Container = styled.div`
   width: 100%;
@@ -134,25 +133,15 @@ export const cardListImage = graphql`
   }
 `
 
-export interface WalletAndExchange {
-  title: string
-  description: string
-  link: string
-  image: string
-  alt: string
-}
-
-export interface IProps {}
-
 // TODO move component into get-eth.js page?
-const EthExchanges: React.FC<IProps> = () => {
+const EthExchanges = () => {
   const intl = useIntl()
   const placeholderString = translateMessageId(
     "page-get-eth-exchanges-search",
     intl
   )
-  const data = useStaticQuery<Queries.EthExchangesQuery>(graphql`
-    query EthExchanges {
+  const data = useStaticQuery(graphql`
+    query {
       exchangesByCountry: allExchangesByCountryCsv {
         nodes {
           binance
@@ -527,25 +516,17 @@ const EthExchanges: React.FC<IProps> = () => {
   }
 
   const lastUpdated = getLocaleTimestamp(
-    intl.locale as Lang,
-    data.timestamp!.parent!.fields.gitLogLatestDate
+    intl.locale,
+    data.timestamp.parent.fields.gitLogLatestDate
   )
 
-  interface Country {
-    country?: string
-  }
+  const [state, setState] = useState({ selectedCountry: {} })
 
-  const [state, setState] = useState<{
-    selectedCountry: Country
-  }>({ selectedCountry: {} })
-
-  const handleSelectChange: (selectedOption: Country) => void = (
-    selectedOption
-  ) => {
+  const handleSelectChange = (selectedOption) => {
     trackCustomEvent({
       eventCategory: `Country input`,
       eventAction: `Selected`,
-      eventName: selectedOption.country!,
+      eventName: selectedOption.country,
     })
     setState({ selectedCountry: selectedOption })
   }
@@ -557,14 +538,14 @@ const EthExchanges: React.FC<IProps> = () => {
       node.label = node.country
       return node
     })
-    .sort((a, b) => a.country!.localeCompare(b.country!))
+    .sort((a, b) => a.country.localeCompare(b.country))
 
   const exchangesArray = Object.keys(exchanges)
   const walletProvidersArray = Object.keys(walletProviders)
   // Construct arrays for CardList
-  let filteredExchanges: Array<WalletAndExchange> = []
-  let filteredWalletProviders: Array<string> = []
-  let filteredWallets: Array<WalletAndExchange> = []
+  let filteredExchanges = []
+  let filteredWalletProviders = []
+  let filteredWallets = []
 
   const hasSelectedCountry = !!state.selectedCountry.country
   if (hasSelectedCountry) {
@@ -574,7 +555,7 @@ const EthExchanges: React.FC<IProps> = () => {
       // Format array for <CardList/>
       .map((exchange) => {
         // Add state exceptions if Country is USA
-        let description = ""
+        let description = null
         if (
           state.selectedCountry.country ===
           translateMessageId("page-get-eth-exchanges-usa", intl)
@@ -592,7 +573,6 @@ const EthExchanges: React.FC<IProps> = () => {
           description,
           link: exchanges[exchange].url,
           image: getImage(exchanges[exchange].image),
-          alt: exchanges[exchange].url,
         }
       })
       .sort((a, b) => a.title.localeCompare(b.title))
@@ -613,7 +593,7 @@ const EthExchanges: React.FC<IProps> = () => {
             const walletObject =
               walletProviders[currentProvider].wallets[currentWallet]
             // Add state exceptions if Country is USA
-            let description = ""
+            let description = null
             if (
               state.selectedCountry.country ===
               translateMessageId("page-get-eth-exchanges-usa", intl)
@@ -634,11 +614,10 @@ const EthExchanges: React.FC<IProps> = () => {
               description,
               link: walletObject.url,
               image: getImage(walletObject.image),
-              alt: walletObject.url,
             })
-          }, [] as Array<WalletAndExchange>)
+          }, [])
         )
-      }, [] as Array<WalletAndExchange>)
+      }, [])
       .sort((a, b) => a.title.localeCompare(b.title))
   }
 
