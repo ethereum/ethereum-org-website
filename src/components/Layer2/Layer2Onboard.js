@@ -6,7 +6,6 @@ import { useIntl } from "gatsby-plugin-intl"
 
 // Components
 import ButtonLink from "../../components/ButtonLink"
-import Link from "../../components/Link"
 import Translation from "../../components/Translation"
 import { StyledSelect as Select } from "../SharedStyledComponents"
 
