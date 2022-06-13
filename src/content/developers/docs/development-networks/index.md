@@ -48,6 +48,21 @@ Hardhat Network comes built-in with Hardhat, an Ethereum development environment
 - [Website](https://hardhat.org/)
 - [GitHub](https://github.com/nomiclabs/hardhat)
 
+### Local Beacon Chains {#local-beacon-chains}
+
+Some consensus clients have built-in tools for spinning up local Beacon chains for testing purposes. Instructions for Lighthouse, Nimbus and Lodestar are available:
+
+- [Local testnet using Lodestar](https://chainsafe.github.io/lodestar/usage/local/)
+- [Local testnet using Lighthouse](https://lighthouse-book.sigmaprime.io/setup.html#local-testnets)
+- [Local testnet using Nimbus](https://github.com/status-im/nimbus-eth1/blob/master/fluffy/docs/local_testnet.md)
+
+### Public Beacon Test-chains {#public-beacon-testchains}
+
+There are also public test implementations of the Beacon Chain. The recommended testnet with long-term support is Prater (which will eventually merge with the Goerli chain). The Ropsten Chain was recently merged with its own Beacon Chain and is currently still available for testing consensus client implementations and post-merge application development.
+
+- [Prater Staking Launchpad](https://prater.launchpad.ethereum.org/en/)
+- [Ropsten Staking Launchpad](https://ropsten.launchpad.ethereum.org/en/)
+
 ## Further reading {#further-reading}
 
 _Know of a community resource that helped you? Edit this page and add it!_
