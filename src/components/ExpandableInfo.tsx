@@ -5,7 +5,9 @@ import { GatsbyImage } from "gatsby-plugin-image"
 
 import Icon from "./Icon"
 
-const Card = styled.div`
+const Card = styled.div<{
+  background: string
+}>`
   border: 1px solid ${({ theme }) => theme.colors.border};
   border-radius: 2px;
   padding: 1.5rem;
@@ -95,7 +97,16 @@ const ButtonContainer = styled(motion.div)`
   }
 `
 
-const ExpandableInfo = ({
+export interface IProps {
+  image?: string
+  title: string
+  contentPreview: string
+  background: string
+  forceOpen: boolean
+  className?: string
+}
+
+const ExpandableInfo: React.FC<IProps> = ({
   image,
   title,
   contentPreview,

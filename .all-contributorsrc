@@ -2158,7 +2158,8 @@
       "contributions": [
         "code",
         "bug",
-        "doc"
+        "doc",
+        "design"
       ]
     },
     {
@@ -7778,6 +7779,36 @@
       "profile": "https://www.linkedin.com/in/dericcheng/",
       "contributions": [
         "doc"
+      ]
+    },
+    {
+      "login": "Ahmetbasli",
+      "name": "Ahmetbasli",
+      "avatar_url": "https://avatars.githubusercontent.com/u/68350525?v=4",
+      "profile": "https://github.com/Ahmetbasli",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "dalmau",
+      "name": "Jordi Pascual",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7261873?v=4",
+      "profile": "https://github.com/dalmau",
+      "contributions": [
+        "translation",
+        "bug",
+        "doc"
+      ]
+    },
+    {
+      "login": "amithkk",
+      "name": "Amith KK",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1029727?v=4",
+      "profile": "http://amithkk.github.io",
+      "contributions": [
+        "doc",
+        "bug"
       ]
     }
   ],
