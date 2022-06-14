@@ -1,8 +1,9 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, PageProps } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
 import { getImage } from "gatsby-plugin-image"
-import styled from "styled-components"
+import styled, { DefaultTheme } from "styled-components"
+import type { Context } from "../../types"
 
 import ButtonDropdown from "../../components/ButtonDropdown"
 import ButtonLink from "../../components/ButtonLink"
@@ -23,7 +24,7 @@ import StakingHierarchy from "../../components/Staking/StakingHierarchy"
 import StakingHomeTableOfContents from "../../components/Staking/StakingHomeTableOfContents"
 import StakingCommunityCallout from "../../components/Staking/StakingCommunityCallout"
 
-import { translateMessageId } from "../../utils/translations"
+import { translateMessageId, TranslationKey } from "../../utils/translations"
 
 const HeroStatsWrapper = styled.div`
   display: flex;
@@ -182,7 +183,8 @@ const ColorH3 = styled.h3`
         return ""
     }
   }};
-  color: ${({ theme, color }) => theme.colors[color]};
+  color: ${({ theme, color }: { theme: DefaultTheme; color: string }) =>
+    theme.colors[color]};
 `
 
 const StyledButtonLink = styled(ButtonLink)`
@@ -215,7 +217,14 @@ const StyledCard = styled(Card)`
   }
 `
 
-const benefits = [
+type BenefitsType = {
+  title: TranslationKey
+  emoji: string
+  description: TranslationKey
+  linkText?: TranslationKey
+  to?: string
+}
+const benefits: BenefitsType[] = [
   {
     title: "page-staking-benefits-1-title",
     emoji: "💰",
@@ -235,7 +244,9 @@ const benefits = [
   },
 ]
 
-const StakingPage = ({ data }) => {
+const StakingPage = ({
+  data,
+}: PageProps<Queries.StakingPageIndexQuery, Context>) => {
   const intl = useIntl()
 
   const heroContent = {
@@ -369,7 +380,7 @@ const StakingPage = ({ data }) => {
                     key={idx}
                     description={translateMessageId(description, intl)}
                   >
-                    {to && (
+                    {to && linkText && (
                       <Link to={to}>{translateMessageId(linkText, intl)}</Link>
                     )}
                   </StyledCard>
@@ -611,16 +622,25 @@ const StakingPage = ({ data }) => {
             </ExpandableCard>
             <ExpandableCard
               title={translateMessageId("page-staking-faq-1-question", intl)}
+              contentPreview=""
+              eventName=""
+              eventCategory=""
             >
               <Translation id="page-staking-faq-1-answer" />
             </ExpandableCard>
             <ExpandableCard
               title={translateMessageId("page-staking-faq-2-question", intl)}
+              contentPreview=""
+              eventName=""
+              eventCategory=""
             >
               <Translation id="page-staking-faq-2-answer" />
             </ExpandableCard>
             <ExpandableCard
               title={translateMessageId("page-staking-faq-3-question", intl)}
+              contentPreview=""
+              eventName=""
+              eventCategory=""
             >
               <p>
                 <Translation id="page-staking-faq-3-answer-p1" />
@@ -700,7 +720,7 @@ const StakingPage = ({ data }) => {
 export default StakingPage
 
 export const query = graphql`
-  {
+  query StakingPageIndex {
     rhino: file(relativePath: { eq: "upgrades/upgrade_rhino.png" }) {
       childImageSharp {
         gatsbyImageData(

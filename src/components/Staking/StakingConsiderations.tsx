@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import styled from "styled-components"
+import styled, { DefaultTheme } from "styled-components"
 // SVG imports
 import GreenCheck from "../../assets/staking/green-check-product-glyph.svg"
 import Caution from "../../assets/staking/caution-product-glyph.svg"
@@ -18,6 +18,7 @@ import LiquidityToken from "../../assets/staking/liquidity-token.svg"
 import ButtonDropdown from "../ButtonDropdown"
 import Translation from "../Translation"
 import { trackCustomEvent } from "../../utils/matomo"
+import { TranslationKey } from "../../utils/translations"
 
 const Container = styled.div`
   display: flex;
@@ -47,7 +48,7 @@ const ListItem = styled.li`
   box-sizing: border-box;
   position: relative;
   height: 2rem;
-  ${({ theme, active }) =>
+  ${({ theme, active }: { theme: DefaultTheme; active: boolean }) =>
     active
       ? `
     background: ${theme.colors.primary};
@@ -116,7 +117,21 @@ const Indicator = styled.div`
   }
 `
 
-const data = {
+type DataType = {
+  title: TranslationKey
+  description: TranslationKey
+  valid: TranslationKey
+  caution: TranslationKey | ""
+  warning: TranslationKey
+  Svg: any
+  matomo: {
+    eventCategory: string
+    eventAction: string
+    eventName: string
+  }
+}
+
+const data: { [key in "solo" | "saas" | "pools"]: DataType[] } = {
   solo: [
     {
       title: "page-staking-considerations-solo-1-title",
@@ -437,7 +452,11 @@ const data = {
   ],
 }
 
-const StakingConsiderations = ({ page }) => {
+export interface IProps {
+  page: "solo" | "saas" | "pools"
+}
+
+const StakingConsiderations: React.FC<IProps> = ({ page }) => {
   const [activeIndex, setActiveIndex] = useState(0)
 
   const pageData = data[page]

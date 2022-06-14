@@ -29,7 +29,11 @@ const StyledButtonLink = styled(ButtonLink)`
   }
 `
 
-const StakingCommunityCallout = (props) => {
+export interface IProps {
+  id?: string
+}
+
+const StakingCommunityCallout: React.FC<IProps> = (props, id) => {
   const intl = useIntl()
   const { image } = useStaticQuery(graphql`
     {
@@ -53,6 +57,7 @@ const StakingCommunityCallout = (props) => {
       alt={translateMessageId("page-staking-image-alt", intl)}
       titleKey={"page-staking-join-community"}
       descriptionKey={"page-staking-join-community-desc"}
+      id={id}
     >
       <ButtonContainer>
         <StyledButtonLink

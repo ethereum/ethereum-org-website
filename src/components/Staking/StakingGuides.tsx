@@ -11,7 +11,7 @@ const StyledCardList = styled(CardList)`
   gap: 1rem;
 `
 
-const StakingGuides = () => {
+const StakingGuides: React.FC = () => {
   const guides = [
     {
       title: "CoinCashew's Ethereum 2.0 Guide",

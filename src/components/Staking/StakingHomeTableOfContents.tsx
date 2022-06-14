@@ -2,6 +2,7 @@ import React from "react"
 import { motion } from "framer-motion"
 import { Link } from "gatsby"
 import styled from "styled-components"
+import { TranslationKey } from "../../utils/translations"
 
 const StyledTableOfContentsLink = styled(Link)`
   position: relative;
@@ -10,7 +11,11 @@ const StyledTableOfContentsLink = styled(Link)`
   margin-bottom: 0.5rem !important;
 `
 
-const TableOfContentsLink = ({ item: { id, title } }) => {
+const TableOfContentsLink = ({
+  item: { id, title },
+}: {
+  item: { id: string; title: string }
+}) => {
   const url = `#${id}`
   let isActive = false
   if (typeof window !== `undefined`) {
@@ -56,22 +61,22 @@ const ListItem = styled.li`
   margin: 0;
 `
 
-const ItemsList = ({ items }) =>
-  items.map((item, index) => (
-    <ListItem key={index}>
-      <div>
-        <TableOfContentsLink item={item} />
-      </div>
-    </ListItem>
-  ))
-
-const StakingHomeTableOfContents = ({ items, className }) => {
+export interface IProps {
+  items: { id: string; title: string }[]
+}
+const StakingHomeTableOfContents: React.FC<IProps> = ({ items }) => {
   if (!items) return null
 
   return (
-    <Aside className={className}>
+    <Aside>
       <OuterList>
-        <ItemsList items={items} />
+        {items.map((item, index) => (
+          <ListItem key={index}>
+            <div>
+              <TableOfContentsLink item={item} />
+            </div>
+          </ListItem>
+        ))}
       </OuterList>
     </Aside>
   )

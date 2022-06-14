@@ -50,7 +50,9 @@ const Container = styled.div`
   }
 `
 
-const Section = styled.div`
+const Section = styled.div<{
+  number: string
+}>`
   --color: ${({ number, theme }) => {
     switch (number) {
       case "1":
@@ -146,7 +148,7 @@ const Section = styled.div`
   aside::after {
     border-image: linear-gradient(to bottom, var(--color), var(--next-color)) 1
       100%;
-    --scale: ${({ number }) => 1.05 + number / 70};
+    --scale: ${({ number }) => 1.05 + parseInt(number) / 70};
     --translate: ${({ number }) => number}px;
     transform: scale(var(--scale)) translateY(var(--translate));
   }
@@ -220,7 +222,9 @@ const Ether = styled(FlexCentered)`
   margin: 0 auto;
 `
 
-const StyledEtherSvg = styled(EtherSvg)`
+const StyledEtherSvg = styled(EtherSvg)<{
+  size: string
+}>`
   --size: ${({ size }) => size};
   width: var(--size);
   height: var(--size);
@@ -248,7 +252,7 @@ const Line = styled.aside`
   }
 `
 
-const StakingHierarchy = () => {
+const StakingHierarchy: React.FC = () => {
   return (
     <Container>
       <Section number="1">

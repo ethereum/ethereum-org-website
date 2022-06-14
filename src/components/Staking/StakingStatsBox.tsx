@@ -6,6 +6,7 @@ import Translation from "../Translation"
 import { getLocaleForNumberFormat } from "../../utils/translations"
 import { getData } from "../../utils/cache"
 import calculateStakingRewards from "../../utils/calculateStakingRewards"
+import { Lang } from "../../utils/languages"
 
 const Container = styled.div`
   display: flex;
@@ -59,13 +60,15 @@ const ErrorMessage = () => (
 
 const StatsBoxGrid = () => {
   const intl = useIntl()
-  const [totalEth, setTotalEth] = useState(0)
-  const [totalValidators, setTotalValidators] = useState(0)
-  const [currentApr, setCurrentApr] = useState(0)
+  const [totalEth, setTotalEth] = useState<string>("0")
+  const [totalValidators, setTotalValidators] = useState<string>("0")
+  const [currentApr, setCurrentApr] = useState<string>("0")
   const [error, setError] = useState(false)
 
   useEffect(() => {
-    const localeForStatsBoxNumbers = getLocaleForNumberFormat(intl.locale)
+    const localeForStatsBoxNumbers = getLocaleForNumberFormat(
+      intl.locale as Lang
+    )
 
     const formatInteger = (amount) =>
       new Intl.NumberFormat(localeForStatsBoxNumbers).format(amount)
@@ -81,7 +84,9 @@ const StatsBoxGrid = () => {
       try {
         const {
           data: { totalvalidatorbalance, validatorscount },
-        } = await getData("https://mainnet.beaconcha.in/api/v1/epoch/latest")
+        } = await getData<{
+          data: { totalvalidatorbalance: number; validatorscount: number }
+        }>("https://mainnet.beaconcha.in/api/v1/epoch/latest")
 
         const valueTotalEth = formatInteger(
           (totalvalidatorbalance * 1e-9).toFixed(0)

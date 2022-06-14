@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react"
 import styled from "styled-components"
-import { graphql } from "gatsby"
+import { graphql, PageProps } from "gatsby"
 import makeBlockie from "ethereum-blockies-base64"
 import { getImage } from "gatsby-plugin-image"
 import { useIntl } from "gatsby-plugin-intl"
+import type { Context } from "../../types"
 
 import Breadcrumbs from "../../components/Breadcrumbs"
 import ButtonLink from "../../components/ButtonLink"
@@ -22,7 +23,7 @@ import {
   FakeLink,
 } from "../../components/SharedStyledComponents"
 import { DEPOSIT_CONTRACT_ADDRESS } from "../../data/addresses"
-import { translateMessageId } from "../../utils/translations"
+import { translateMessageId, TranslationKey } from "../../utils/translations"
 
 const Page = styled.div`
   width: 100%;
@@ -188,14 +189,25 @@ const StyledFakeLink = styled(FakeLink)`
   margin-right: 0.5rem;
 `
 
-const CHUNKED_ADDRESS = DEPOSIT_CONTRACT_ADDRESS.match(/.{1,3}/g).join(" ")
+const CHUNKED_ADDRESS = DEPOSIT_CONTRACT_ADDRESS.match(/.{1,3}/g)?.join(" ")
 
 const blockieSrc = makeBlockie(DEPOSIT_CONTRACT_ADDRESS)
 
-const DepositContractPage = ({ data, location }) => {
+const DepositContractPage = ({
+  data,
+  location,
+}: PageProps<Queries.DepositContractPageQuery, Context>) => {
   const intl = useIntl()
 
-  const [state, setState] = useState({
+  const [state, setState] = useState<{
+    browserHasTextToSpeechSupport: boolean
+    textToSpeechRequest: SpeechSynthesisUtterance | undefined
+    isSpeechActive: boolean
+    showAddress: boolean
+    userHasUsedLaunchpad: boolean
+    userUnderstandsStaking: boolean
+    userWillCheckOtherSources: boolean
+  }>({
     browserHasTextToSpeechSupport: false,
     textToSpeechRequest: undefined,
     isSpeechActive: false,
@@ -256,7 +268,9 @@ const DepositContractPage = ({ data, location }) => {
     if (state.isSpeechActive) {
       window.speechSynthesis.cancel()
     } else {
-      window.speechSynthesis.speak(state.textToSpeechRequest)
+      window.speechSynthesis.speak(
+        state.textToSpeechRequest as SpeechSynthesisUtterance
+      )
     }
   }
 
@@ -411,7 +425,7 @@ const DepositContractPage = ({ data, location }) => {
                 {state.browserHasTextToSpeechSupport && (
                   <TextToSpeech>
                     <StyledFakeLink onClick={handleTextToSpeech}>
-                      <Translation id={textToSpeechText} />
+                      <Translation id={textToSpeechText as TranslationKey} />
                     </StyledFakeLink>{" "}
                     <Emoji text={textToSpeechEmoji} size={1} />
                   </TextToSpeech>
@@ -481,7 +495,7 @@ export const sourceImage = graphql`
 `
 
 export const query = graphql`
-  query {
+  query DepositContractPage {
     consensys: file(relativePath: { eq: "projects/consensys.png" }) {
       ...sourceImage
     }
