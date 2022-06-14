@@ -196,6 +196,14 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
           text: "run-a-node",
           to: "/run-a-node/",
         },
+        {
+          text: "decentralized-social-networks",
+          to: "/social-networks/",
+        },
+        {
+          text: "decentralized-identity",
+          to: "/decentralized-identity/",
+        },
       ],
     },
     {

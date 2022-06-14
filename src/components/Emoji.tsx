@@ -1,9 +1,14 @@
 import React from "react"
 import { Twemoji } from "react-emoji-render"
 import styled from "styled-components"
-import { margin } from "styled-system"
+import { margin, MarginProps } from "styled-system"
 
-const StyledEmoji = styled(Twemoji)`
+export interface IProps extends MarginProps {
+  size?: number
+  text: string
+}
+
+const StyledEmoji = styled(Twemoji)<{ size: number }>`
   & > img {
     width: ${(props) => props.size}em !important;
     height: ${(props) => props.size}em !important;
@@ -13,7 +18,7 @@ const StyledEmoji = styled(Twemoji)`
   ${margin}
 `
 
-const Emoji = ({ size = 1.5, text, ...props }) => {
+const Emoji: React.FC<IProps> = ({ size = 1.5, text, ...props }) => {
   return <StyledEmoji size={size} text={text} svg {...props} />
 }
 

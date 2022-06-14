@@ -65,6 +65,8 @@ The execution layer is concerned with executing transactions, running the [Ether
 
 - [Database optimizations](https://github.com/ledgerwatch/erigon/blob/devel/docs/programmers_guide/db_faq.md)
 - [State expiry](https://notes.ethereum.org/@vbuterin/state_expiry_eip)
+- [Paths to state expiry](https://hackmd.io/@vbuterin/state_expiry_paths)
+- [Verkel and state expiry proposal](https://notes.ethereum.org/@vbuterin/verkle_and_state_expiry_proposal)
 - [History management](https://eips.ethereum.org/EIPS/eip-4444)
 - [Verkle Trees](https://vitalik.ca/general/2021/06/18/verkle.html)
 - [Data availability sampling](https://github.com/ethereum/research/wiki/A-note-on-data-availability-and-erasure-coding)

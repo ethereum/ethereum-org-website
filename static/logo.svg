@@ -1,18 +1,1 @@
-<?xml version="1.0" encoding="utf-8"?>
-<svg
-  version="1.2"
-  baseProfile="tiny-ps"
-  xmlns="http://www.w3.org/2000/svg"
-  xmlns:xlink="http://www.w3.org/1999/xlink"
-  viewBox="0 0 1920 1080"
-  xml:space="preserve"
->
-  <title>Ethereum</title>
-  <desc>Ethereum logo</desc>
-  <polyline fill="#53D3E0" points="660,610.7 960,797.9 960,1040 " />
-  <polyline fill="#5A9DED" points="1260,610.7 960,797.9 960,1040 " />
-  <polygon fill="#FFE94D" points="660,550.2 960,383.2 960,40 " />
-  <polygon fill="#A7DF7E" points="960,737.4 960,383.2 660,550.2 " />
-  <polygon fill="#FF9C92" points="960,40 960,383.2 1260,550.2 " />
-  <polygon fill="#D797D1" points="960,383.2 960,737.4 1260,550.2 " />
-</svg>
+<?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none" version="1.2" baseProfile="tiny-ps"><title>Ethereum logo</title><path d="M9 22.116L19.9999 29.0424V38.0002" fill="#53D3E0"></path><path d="M30.9999 22.116L20 29.0424V38.0002" fill="#5A9DED"></path><path d="M9 19.8775L19.9999 13.6985V1L9 19.8775Z" fill="#FFE94D"></path><path d="M19.9999 26.8039V13.6985L9 19.8775L19.9999 26.8039Z" fill="#A7DF7E"></path><path d="M20 1V13.6985L30.9999 19.8775L20 1Z" fill="#FF9C92"></path><path d="M20 13.6985V26.8039L30.9999 19.8775L20 13.6985Z" fill="#D797D1"></path></svg>

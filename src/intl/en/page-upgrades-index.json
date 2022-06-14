@@ -1,6 +1,10 @@
 {
+  "consensus-client-besu-logo-alt": "Besu logo",
+  "consensus-client-erigon-logo-alt": "Erigon logo",
+  "consensus-client-geth-logo-alt": "Geth logo",
   "consensus-client-lighthouse-logo-alt": "Lighthouse logo",
   "consensus-client-lodestar-logo-alt": "Lodestar logo",
+  "consensus-client-nethermind-logo-alt": "Nethermind logo",
   "consensus-client-nimbus-logo-alt": "Nimbus logo",
   "consensus-client-prysm-logo-alt": "Prysm logo",
   "consensus-client-teku-logo-alt": "Teku logo",
