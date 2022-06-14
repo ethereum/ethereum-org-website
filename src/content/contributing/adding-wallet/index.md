@@ -36,7 +36,7 @@ Wallets are rapidly changing in Ethereum. We've tried to create a fair framework
 - **Hardware wallet support** - users can connect their hardware wallet to sign transactions.
 - **WalletConnect** - users can connect to dapps using WalletConnect.
 - **Importing Ethereum RPC endpoints** - users can import node RPC data, allowing them to connect to a node of their choice, or other EVM compatible networks.
-- **NFTs** - users are able to view and interact with their NFT’s in the wallet.
+- **NFTs** - users are able to view and interact with their NFTs in the wallet.
 - **Connect to Ethereum applications** - users are able to connect to and use Ethereum applications.
 - **Staking** - users are able to stake directly through the wallet.
 - **Swaps** - users are able to swap tokens through the wallet.
