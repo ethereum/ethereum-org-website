@@ -57,6 +57,7 @@ const H3 = styled.h3`
 const Grid = styled.div`
   display: grid;
   grid-template-columns: 50% 50%;
+  width: 100%;
 `
 
 const StyledIcon = styled(Icon)<{ selected: boolean }>`
@@ -68,10 +69,11 @@ const StyledIcon = styled(Icon)<{ selected: boolean }>`
 
 const PersonaFeature = styled.div`
   display: flex;
-  gap: 0.5rem;
+  gap: 0.25rem;
+  font-size: 0.9rem;
   svg {
-    width: 24px;
-    height: 24px;
+    width: 28px;
+    height: 28px;
     path {
       fill: ${(props) => props.theme.colors.text};
       stroke: ${(props) => props.theme.colors.text};
