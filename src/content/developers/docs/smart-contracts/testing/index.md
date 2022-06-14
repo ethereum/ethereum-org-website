@@ -132,15 +132,15 @@ Bug bounty programs often attract a broad class of ethical hackers and independe
 
 ### Unit testing tools {#unit-testing-tools}
 
-**Solidity-Coverage** - _A Solidity code coverage tool useful for testing smart contracts._
+**Solidity-Coverage** - _Solidity code coverage tool useful for testing smart contracts._
 - [GitHub](https://github.com/sc-forks/solidity-coverage)
 
-**Waffle** - _A framework for advanced smart contract development and testing (based on ethers.js)_.
+**Waffle** - _Framework for advanced smart contract development and testing (based on ethers.js)_.
 - [Documentation](https://ethereum-waffle.readthedocs.io/en/latest/)
 - [GitHub](https://github.com/TrueFiEng/Waffle) 
 - [Website](https://getwaffle.io/)
 
-**Remix Tests** - _A tool for testing Solidity smart contracts. Works underneath Remix IDE "Solidity Unit Testing" plugin which is used to write and run test cases for a contract._
+**Remix Tests** - _Tool for testing Solidity smart contracts. Works underneath Remix IDE "Solidity Unit Testing" plugin which is used to write and run test cases for a contract._
 - [Documentation](https://remix-ide.readthedocs.io/en/latest/unittesting.html) 
 - [GitHub](https://github.com/ethereum/remix-project/tree/master/libs/remix-tests)  
 
@@ -156,6 +156,13 @@ Bug bounty programs often attract a broad class of ethical hackers and independe
 - [Documentation](https://eth-brownie.readthedocs.io/en/v1.0.0_a/tests.html) 
 - [GitHub](https://github.com/eth-brownie/brownie) 
 
+**Foundry Tests** - _Foundry offers Forge, a fast and flexible Ethereum testing framework capable of executing simple unit tests, gas optimization checks, and contract fuzzing._
+- [GitHub](https://github.com/foundry-rs/foundry/tree/master/forge)
+- [Documentation](https://book.getfoundry.sh/forge/)
+
+**Etheno** - _All-in-one Ethereum testing tool comprising a JSON RPC multiplexer, analysis tool wrapper, and test integration tool. Etheno eliminates the complexity of setting up analysis tools like Manticore and Echidna on large, multi-contract projects._
+- [GitHub](https://github.com/crytic/etheno)
+
 ### Static analysis tools {#static-analysis-tools}
  
 **Mythril** - _EVM bytecode assessment tool for detecting contract vulnerabilities using taint analysis, concolic analysis, and control flow checking._
@@ -163,41 +170,47 @@ Bug bounty programs often attract a broad class of ethical hackers and independe
 - [GitHub](https://github.com/ConsenSys/mythril-classic) 
 - [Documentation](https://mythril-classic.readthedocs.io/en/master/about.html) 
 
-**Manticore** - _A static analysis tool for analyzing EVM bytecode based on symbolic execution._
-- [GitHub](https://github.com/trailofbits/manticore)  
-- [Documentation](https://github.com/trailofbits/manticore/wiki) 
+**Slither** - _Python-based Solidity static analysis framework for finding vulnerabilities, enhancing code comprehension, and writing custom analyses for smart contracts._ 
+- [GitHub](https://github.com/crytic/slither)
+
+**Rattle** - _EVM bytecode static analysis framework designed to work on deployed smart contracts._
+- [GitHub](https://github.com/crytic/rattle)
 
 ### Dynamic analysis tools {#dynamic-analysis-tools}
 
-**Echidna** - _A fast contract fuzzer for detecting vulnerabilities in smart contracts through property-based testing._
+**Echidna** - _Fast contract fuzzer for detecting vulnerabilities in smart contracts through property-based testing._
 - [GitHub](https://github.com/crytic/echidna/) 
 
 **Harvey** - _Automated fuzzing tool useful for detecting property violations in smart contract code._
 - [Website](https://consensys.net/diligence/fuzzing/)
 
+**Manticore** - _Dynamic symbolic execution framework for analyzing EVM bytecode._
+- [GitHub](https://github.com/trailofbits/manticore)  
+- [Documentation](https://github.com/trailofbits/manticore/wiki) 
+
 ### Smart contract auditing services {#smart-contract-auditing-services}
 
-**ConsenSys Diligence** - _Helps projects across the blockchain ecosystem to ensure their protocols are ready for launch and built to protect users._
+**ConsenSys Diligence** - _Smart contract auditing service helping projects across the blockchain ecosystem ensure their protocols are ready for launch and built to protect users._
 - [Website](https://consensys.net/diligence/) 
 
-**CertiK** - _A blockchain security firm pioneering the use of cutting-edge formal Verification technology on smart contracts and blockchain networks._
+**CertiK** - _Blockchain security firm pioneering the use of cutting-edge formal Verification technology on smart contracts and blockchain networks._
 - [Website](https://www.certik.com/) 
 
-**Trail of Bits** - _Combines security research with an attacker mentality to reduce risk and fortify code._
+**Trail of Bits** - _Cybersecurity company that combines security research with an attacker mentality to reduce risk and fortify code._
 - [Website](https://www.trailofbits.com/) 
 
-**PeckShield** - _A blockchain security company that offers products and services for security, privacy, and usability of the entire blockchain ecosystem._
+**PeckShield** - _Blockchain security company offering products and services for the security, privacy, and usability of the entire blockchain ecosystem._
 - [Website](https://peckshield.com/) 
 
-**QuantStamp** - _Facilitates the mainstream adoption of blockchain technology through security and risk assessment services._
+**QuantStamp** - _Auditing service facilitating the mainstream adoption of blockchain technology through security and risk assessment services._
 - [Website](https://quantstamp.com/) 
 
 ### Bug bounty platforms {#bug-bounty-platforms}
 
-**Immunefi** - _A bug bounty platform for smart contracts and DeFi projects, where security researchers review code, disclose vulnerabilities, get paid, and make crypto safer._
+**Immunefi** - _Bug bounty platform for smart contracts and DeFi projects, where security researchers review code, disclose vulnerabilities, get paid, and make crypto safer._
 - [Website](https://immunefi.com/) 
 
-**HackerOne** - _A vulnerability coordination and bug bounty platform that connects businesses with penetration testers and cybersecurity researchers._
+**HackerOne** - _Vulnerability coordination and bug bounty platform that connects businesses with penetration testers and cybersecurity researchers._
 - [Website](https://www.hackerone.com/) 
 
 ## Related tutorials {#related-tutorials}
@@ -210,6 +223,8 @@ Bug bounty programs often attract a broad class of ethical hackers and independe
 - [How to mock Solidity contracts for testing](/developers/tutorials/how-to-mock-solidity-contracts-for-testing/)
 - [How to migrate from Truffle Tests to OpenZeppelin Test Environment](https://docs.openzeppelin.com/test-environment/0.1/migrating-from-truffle)
 - [How to test contracts after they have been deployed on a network](https://fulldecent.blogspot.com/2019/04/testing-deployed-ethereum-contracts.html)
+- [Learn Blockchain, Solidity, and Full Stack Web3 Development with JavaScript (YouTube)](https://www.youtube.com/watch?v=gyMwXuJrbJQ)
+- [Solidity, Blockchain, and Smart Contract Course (YouTube)](https://www.youtube.com/watch?v=M576WGiDBdQ)
 
 ## Further reading {#further-reading}
 
