@@ -9,14 +9,13 @@ sidebar: true
 published: 2022-03-04
 ---
 
-<b> Please note that Geth light clients can be very slow to find peers. This is because they rely on full-node operators opting-in to be light servers that the light clients can request data from. There are usually only a small number of light servers available.
+**Please note that Geth light clients can be very slow to find peers. This is because they rely on full-node operators volunteering themselves as light servers from which the light clients can request data. There are usually only a small number of light servers available.**
 
-Also note that after [The Merge]() a Geth node alone will not be sufficient - a consensus client must be connected to it in order to track the head of the chain.
-</b>
+**Also, note that after [The Merge](/upgrades/merge/), a Geth node alone will not be sufficient - a consensus client must be connected to it to track the head of the chain.**
 
 You may be interested in running an [Ethereum node](/developers/docs/nodes-and-clients/). One of the easiest ways to do so is by downloading, installing, and running [Geth](https://geth.ethereum.org). With Geth, we can have a light node up and running in minutes.
 
-A light client requires less than 400MB of storage whilst still allowing full interactivity with the Ethereum state. Light clients retrieve data from remote peers, so some queries may take longer to respond in comparison to other sync modes.
+A light client requires less than 400MB of storage whilst still allowing full interactivity with the Ethereum state. Light clients retrieve data from remote peers, so some queries may take longer to respond to than other sync modes.
 
 For an explanation of the differences between the different sync modes, read our [nodes and clients developer docs](/developers/docs/nodes-and-clients/#node-types).
 
@@ -57,17 +56,6 @@ Once enabled, run `curl http://127.0.0.1:8545`. This should report no error.
 ### Allow remote connections {#allow-remote-connections}
 
 ## To allow remote hosts to connect to your node, launch Geth with the following command:
-
-title: How to run a light node with Geth
-description: How to download, install and run a lightclient with Geth.
-authors: "Brian Gu"
-tags: ["clients", "geth", "nodes"]
-skill: beginner
-lang: en
-sidebar: true
-published: 2022-03-04
-
----
 
 You may be interested in running an [Ethereum node](/developers/docs/nodes-and-clients/). One of the easiest ways to do so is by downloading, installing, and running Geth. With Geth, we can have a light node up and running in minutes.
 
