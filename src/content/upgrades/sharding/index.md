@@ -1,23 +1,23 @@
 ---
-title: Shard chains
-description: Learn about shard chains - partitions of the network that give Ethereum more transaction capacity and make it easier to run.
+title: Sharding
+description: Learn about data sharding - breaking up and distributing the data load needed to give Ethereum more transaction capacity and make it easier to run.
 lang: en
 template: upgrade
 sidebar: true
 image: ../../../assets/upgrades/newrings.png
 summaryPoint1: Sharding is a multi-phase upgrade to improve Ethereum’s scalability and capacity.
-summaryPoint2: Shard chains provide extra, cheaper, storage layers for applications and rollups to store data.
+summaryPoint2: Sharding provides secure distribution of data storage requirements, enabling rollups to be even cheaper, and making nodes easier to operate.
 summaryPoint3: They enable layer 2 solutions to offer low transaction fees while leveraging the security of Ethereum.
 summaryPoint4: This upgrade is planned to follow The Merge of Mainnet with the Beacon Chain.
 ---
 
 <UpgradeStatus dateKey="page-upgrades-shards-date">
-    Shard chains should ship sometime in 2023, depending on how quickly work progresses after <a href="/upgrades/merge/">The Merge</a>. These shards will give Ethereum more capacity to store and access data, but they won’t be used for executing code.
+    Sharding should ship sometime in 2023, depending on how quickly work progresses after <a href="/upgrades/merge/">The Merge</a>. These shards will give Ethereum more capacity to store and access data, but they won’t be used for executing code.
 </UpgradeStatus>
 
 ## What is sharding? {#what-is-sharding}
 
-Sharding is the process of splitting a database horizontally to spread the load – it’s a common concept in computer science. In an Ethereum context, sharding will reduce network congestion and increase transactions per second by creating new chains, known as “shards”.
+Sharding is the process of splitting a database horizontally to spread the load – it’s a common concept in computer science. In an Ethereum context, sharding will work synergistically with [layer 2 rollups] by splitting up the burden of handling the large amount of data needed by rollups over the entire network. This will continue to reduce network congestion and increase transactions per second.
 
 This is important for reasons other than scalability.
 
@@ -25,7 +25,7 @@ This is important for reasons other than scalability.
 
 ### Everyone can run a node {#everyone-can-run-a-node}
 
-Sharding is a good way to scale if you want to keep things decentralized as the alternative is to scale by increasing the size of the existing database. This would make Ethereum less accessible for network validators because they'd need powerful and expensive computers. With shard chains, validators only need to store/run data for the shard they're validating, not the entire network (like what happens today). This speeds things up and drastically reduces hardware requirements.
+Sharding is a good way to scale if you want to keep things decentralized as the alternative is to scale by increasing the size of the existing database. This would make Ethereum less accessible for network validators because they'd need powerful and expensive computers. With sharding, validators will no longer be required to store all of this data themselves, but instead can use data techniques to confirm that the data has been made available by the network as a whole. This drastically reduces the cost of storing data on layer 1 by reducing hardware requirements.
 
 ### More network participation {#more-network-participation}
 
@@ -35,18 +35,23 @@ With lower hardware requirements, sharding will make it easier to run [clients](
 
 <br />
 
-<InfoBanner isWarning={true}>
-  At first, you'll need to run a Mainnet client at the same time as your Beacon Chain client. <a href="https://launchpad.ethereum.org" target="_blank">The launchpad</a> will walk you through the hardware requirements and process. Alternatively you can use a <a href="/developers/docs/apis/backend/#available-libraries">backend API</a>.
+<InfoBanner isWarning>
+  At first, you'll need to run a Mainnet (execution layer) client at the same time as your Beacon Chain (consensus later) client. <a href="https://launchpad.ethereum.org" target="_blank">The launchpad</a> will walk you through the hardware requirements and process.
 </InfoBanner>
 
 ## Shard chains version 1: data availability {#data-availability}
+
+<InfoBanner emoji=":construction:" isWarning>
+  <strong>Note:</strong> The plans for sharding have been evolving as more efficient paths to scaling have been developed. "Danksharding" is a new approach to sharding, which does not utilize the concept of shard "chains" but instead uses shard "blobs" to split up the data, along with "data availability sampling" to confirm all data has been made available. This change in plan solves the same original problem.<br/><br/>
+  <strong>Details below may be out of date with the latest development plans.</strong> While we update things, check out <a href="https://members.delphidigital.io/reports/the-hitchhikers-guide-to-ethereum">The Hitchhiker's Guide to the Ethereum</a> for an excellent breakdown of Ethereum plans after The Merge.
+</InfoBanner>
 
 When the first shard chains are shipped they will just provide extra data to the network. They won’t handle transactions or smart contracts. But they’ll still offer incredible improvements to transactions per second when combined with rollups.
 
 Rollups are a "layer 2" technology that exists today. They allow dapps to bundle or “roll up” transactions into a single transaction off-chain, generate a cryptographic proof and then submit it to the chain. This reduces the data needed for a transaction. Combine this with all the extra data availability provided by shards and you get 100,000 transactions per second.
 
-<InfoBanner isWarning={false}>
-  Given recent progress in layer 2 scaling solution research and development, this has prompted the prioritization of The Merge upgrade ahead of shard chains. These will be the focus following Mainnet transition to proof-of-stake.
+<InfoBanner>
+  Given recent progress in layer 2 scaling solution research and development, this has prompted the prioritization of transitioning to proof-of-stake ahead of sharding. Sharding will be the focus following The Merge.
 
 [More on rollups](/developers/docs/scaling/#rollups)
 </InfoBanner>
@@ -69,7 +74,7 @@ This would mean we don’t give shards the capability to handle smart contracts 
 
 #### 2. Have some execution shards {#some-execution-shards}
 
-Perhaps there’s a compromise where we don’t need all shards (64 are planned right now) to be smarter. We could just add this functionality to a few and leave the rest. This could speed the delivery up.
+Perhaps there’s a compromise where we don’t need all shards to be smarter. We could just add this functionality to a few and leave the rest. This could speed the delivery up.
 
 #### 3. Wait until we can do Zero Knowledge (ZK) snarks {#wait-for-zk-snarks}
 
