@@ -29,8 +29,8 @@ Certain EIPs relate to application-level standards (e.g. a standard smart-contra
 
 ### Token standards {#token-standards}
 
-- [ERC-20](/developers/docs/standards/tokens/erc-20/) - A standard interface for fungible (interchangeable) tokens, like voting tokens, staking tokens or virtual currencies. Think of it as a set of rules or functions that a newly created token in the Ethereum network must respect or follow.
-- [ERC-721](/developers/docs/standards/tokens/erc-721/) - A standard interface for non-fungible tokens, like a deed for artwork or a song. Things or assets that use ERC-721 will record and assign the ownership to the account numbers.
+- [ERC-20](/developers/docs/standards/tokens/erc-20/) - A standard interface for fungible (interchangeable) tokens, like voting tokens, staking tokens or virtual currencies.
+- [ERC-721](/developers/docs/standards/tokens/erc-721/) - A standard interface for non-fungible tokens, like a deed for artwork or a song.
 - [ERC-777](/developers/docs/standards/tokens/erc-777/) - A token standard improving over ERC-20.
 - [ERC-1155](/developers/docs/standards/tokens/erc-1155/) - A token standard which can contain both fungible and non-fungible assets.
 - [ERC-4626](/developers/docs/standards/tokens/erc-4626/) - A tokenized vault standard designed to optimize and unify the technical parameters of yield-bearing vaults.
@@ -39,6 +39,6 @@ Learn more about [token standards](/developers/docs/standards/tokens/).
 
 ## Further reading {#further-reading}
 
-- [Ethereum Improvement Proposals (EIPs)](https://ethereum.org/en/eips/)
+- [Ethereum Improvement Proposals (EIPs)](/eips/)
 
 _Know of a community resource that helped you? Edit this page and add it!_
