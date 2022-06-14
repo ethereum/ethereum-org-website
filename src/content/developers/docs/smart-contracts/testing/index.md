@@ -86,7 +86,7 @@ You can think of this stage as checking the end-to-end flow of your smart contra
 
 Here, end-users can perform trial runs and report any issues with the contract’s business logic and overall functionality. System testing is important because you cannot change code once the contract is deployed in the main EVM environment. 
 
-System testing can also cover separate testing measures, such as load testing and regression testing. A load test (also called a stress test) assesses the program's ability to perform optimally under real-time loads, while regression tests ensure changes made during development (after previous unit tests) didn't introduce new defects in the final contract. 
+System testing can also cover separate testing measures, such as load testing and regression testing. A load test (also called a stress test) assesses the program's ability to perform optimally under real-time loads, while regression tests ensure changes made during development (after previous tests) didn't introduce new defects in the final contract. 
 
 ### 2. Static/dynamic analysis {#static-dynamic-analysis}
 
@@ -215,5 +215,4 @@ Bug bounty programs often attract a broad class of ethical hackers and independe
 
 - [An In-Depth Guide to Testing Ethereum Smart Contracts](https://iamdefinitelyahuman.medium.com/an-in-depth-guide-to-testing-ethereum-smart-contracts-2e41b2770297) - _Ben Hauser_
 - [How to Test Ethereum Smart Contracts](https://betterprogramming.pub/how-to-test-ethereum-smart-contracts-35abc8fa199d) - _Alex Roan_
-
 
