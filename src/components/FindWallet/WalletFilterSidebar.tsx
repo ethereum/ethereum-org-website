@@ -68,21 +68,22 @@ const FilterOption = styled.div`
 
 const OptionGrid = styled.div`
   display: grid;
-  grid-template-columns: 24px auto 34px;
+  grid-template-columns: 28px auto 34px;
   width: 100%;
   align-items: center;
 
   p {
     margin: 0;
     line-height: 20px;
-    padding: 0 12px;
+    padding: 0 10px;
   }
 `
 
 const IconContainer = styled.div`
   svg {
-    width: 24px;
-    height: 24px;
+    width: 28px;
+    height: 28px;
+    margin-top: 8px;
 
     path {
       fill: white;
