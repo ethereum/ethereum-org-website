@@ -102,10 +102,11 @@ If you're more of a technical user, learn how to [spin up your own node](/develo
 
 ### Resources {#resources}
 
-- [Running Ethereum Full Nodes: A Complete Guide](https://medium.com/coinmonks/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _Nov 7, 2019 - Justin Leroux_
-- [Node Configuration Cheat Sheet](https://dev.to/5chdn/ethereum-node-configuration-modes-cheat-sheet-25l8) _Jan 5, 2019 - Afri Schoeden_
-- [How To Install & Run a Geth Node](https://www.quiknode.io/guides/infrastructure/how-to-install-and-run-a-geth-node) _Oct 4, 2020 - Sahil Sen_
-- [How To Install & Run a OpenEthereum (fka. Parity) Node](https://www.quiknode.io/guides/infrastructure/how-to-run-a-openethereum-ex-parity-client-node) _Sept 22, 2020 - Sahil Sen_
+- [Running Ethereum Full Nodes: A Complete Guide](https://www.coindesk.com/learn/ethereum-nodes-and-clients-a-complete-guide/)
+- [Running your own Ethereum node](/developers/docs/nodes-and-clients/run-a-node)
+- [Geth documentation](https://geth.ethereum.org/)
+- [How To Install & Run a Lighthouse Node](https://hackernoon.com/how-to-run-an-eth-20-beacon-node-using-the-lighthouse-macos-client-7t2u3wtv)
+- [Nimbus node quick-start guide](https://nimbus.guide/quick-start.html)
 
 ## Alternatives {#alternatives}
 
