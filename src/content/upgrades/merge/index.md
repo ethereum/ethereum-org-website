@@ -45,7 +45,19 @@ This transition to proof-of-stake will come with some changes to the way ether i
 
 The Merge is one of the most significant and anticipated upgrades in the history of Ethereum, and although in the long-term its impact will be felt by everyone, in the near-term some folks will need to take action to be fully prepared.
 
-For everyday users, holders, or non-node-operating stakers there is **nothing you need to do**, but a few things you should be aware of heading into The Merge. [More on this below.](#users-holders)
+### Users and holders {#users-holders}
+
+**You do not need to anything to protect your funds entering The Merge.**
+
+_This bears repeating_: As a user or holder of ETH or any other digital asset on Ethereum, as well as non-node-operating stakers, **you do not need to do anything with your funds or wallet before The Merge.**
+
+Despite swapping out proof-of-work, the entire history of Ethereum since genesis remains intact and unaltered after the transition to proof-of-stake. Any funds being protected by your own wallet before The Merge will still be accessible in the same manner after The Merge. No action is required to "upgrade" on your part.
+
+As we approach The Merge of Ethereum Mainnet, **you should be on high alert for scams trying to take advantage of users during this transition.** Do not send your ETH anywhere in attempt to "upgrade to ETH2." There is no "ETH2" token, and there is nothing more you need to do for your funds to remain safe.
+
+[More on Ethereum security](/security/#eth2-token-scam)
+
+### Node operators and dapp developers {#node-operators-dapp-developers}
 
 <ExpandableCard
 title="Staking node operators and providers"
@@ -99,18 +111,6 @@ These changes relate to <br/><br/>
 
 For more information, check out this blog post by Tim Beiko on [How The Merge Impacts Ethereum’s Application Layer](https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer/).
 </ExpandableCard>
-
-### Users and holders {#users-holders}
-
-<strong>You do not need to anything to protect your funds entering The Merge.</strong><br/><br/>
-
-<em>This bears repeating</em>: As a user or holder of ETH or any other digital asset on Ethereum, <strong>you do not need to do anything with your funds or wallet before The Merge.</strong>
-
-Despite swapping out proof-of-work, the entire history of Ethereum since genesis remains intact and unaltered after the transition to proof-of-stake. Any funds being protected by your own wallet before The Merge will still be accessible in the same manner after The Merge. No action is required to "upgrade" on your part.
-
-As we approach The Merge of Ethereum Mainnet, **you should be on high alert for scams trying to take advantage of users during this transition.** Do not send your ETH anywhere in attempt to "upgrade to ETH2." There is no "ETH2" token, and there is nothing more you need to do for your funds to remain safe.
-
-[More on Ethereum security](/security/#eth2-token-scam)
 
 ## After The Merge {#after-the-merge}
 
