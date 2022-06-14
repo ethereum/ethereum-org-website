@@ -179,6 +179,16 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
   - Features
     - Free tier option
     - Scale as you go
+- [**SenseiNode**](https://senseinode.com/)
+  - [Docs](https://github.com/Sensei-Node)
+  - Features
+    - Latin America geolocated nodes
+    - Open access to Public RPC API endpoints for several chains
+    - Load balancing and node health monitoring
+    - Scale as you go
+    - Analytics tools
+    - Dashboard
+    - Direct support
 - [**SettleMint**](https://console.settlemint.com/)
   - [Docs](https://docs.settlemint.com/)
   - Features
