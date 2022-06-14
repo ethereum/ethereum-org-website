@@ -13,7 +13,9 @@ Anyone is free to suggest adding a wallet on ethereum.org. If there's a wallet t
 
 Anyone is free to suggest a new wallet. Wallets are currently listed on:
 
-- [ethereum.org/wallets/find-wallet](/wallets/find-wallet/)
+- [ethereum.org/wallets/find-wallet/](/wallets/find-wallet/)
+- [ethereum.org/wallets/](/wallets/)
+- [ethereum.org/get-eth/](/get-eth/)
 
 Wallets are rapidly changing in Ethereum. We've tried to create a fair framework for consideration on ethereum.org but the listing criteria will change and evolve over time.
 
@@ -56,7 +58,7 @@ Wallets are rapidly changing in Ethereum. We've tried to create a fair framework
 
 If you want to add a wallet to ethereum.org, create an issue on GitHub.
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml&title=Suggest+a+wallet">
+<ButtonLink to="https://github.com/ethereum/ethereum-org-website/blob/dev/.github/ISSUE_TEMPLATE/suggest_wallet.yaml">
   Create an issue
 </ButtonLink>
 
@@ -66,6 +68,8 @@ As is the fluid nature of Ethereum, teams and products come and go and innovatio
 
 - ensure that all wallets and dapps listed still fulfil our criteria
 - verify there aren't products that have been suggested that meet more of our criteria than the ones currently listed
+
+Ethereum.org is maintained by the open source community & we rely on the community to help keep this up to date. If you notice any information wallets that needs to be updated, please [open an issue](https://github.com/ethereum/ethereum-org-website/blob/dev/.github/ISSUE_TEMPLATE/suggest_wallet.yaml) or [pull request](https://github.com/ethereum/ethereum-org-website/pulls)!
 
 ## Terms of use {#terms-of-use}
 
