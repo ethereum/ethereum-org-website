@@ -31,9 +31,9 @@ Learn more at [devcon.org](https://devcon.org/), check out the [Devcon Blog](htt
 
 ### Fellowship Program {#fellowship-program}
 
-The [Ethereum Foundation Fellowship Program](https://fellowship.ethereum.foundation/) is an initiative to help address gaps in representation across cultures, nationalities, and economic classes. The Fellowship Program is about bridging these gaps by identifying and supporting unique and talented individuals helping to enable Ethereum’s relevance and breaking down barriers to entry for those underrepresented people and communities who will become the future of web3.
+The [Ethereum Foundation Fellowship Program](https://fellowship.ethereum.foundation/) is an initiative to help address gaps in representation across cultures, nationalities, and economic classes. The Fellowship Program is about bridging these gaps by identifying and supporting unique and talented individuals helping to enable Ethereum’s relevance, and breaking down barriers to entry for those underrepresented people and communities who will become the future of Web3.
 
-Learn more at [fellowship.ethereum.foundation](https://fellowship.ethereum.foundation/).
+[Learn more at fellowship.ethereum.foundation](https://fellowship.ethereum.foundation/).
 
 <br/>
 
