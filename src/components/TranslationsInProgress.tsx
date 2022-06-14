@@ -16,14 +16,25 @@ const LangItem = styled(CardItem)`
   flex: 1 1 200px;
 `
 
-const TranslationsInProgress = () => {
-  const [translationsInProgress, setTranslationsInProgress] = useState([])
+type LanguageType = {
+  name: string
+  code: string
+  translated_progress: string
+  approved_progress: string
+}
+
+export interface IProps {}
+
+const TranslationsInProgress: React.FC<IProps> = () => {
+  const [translationsInProgress, setTranslationsInProgress] = useState<
+    LanguageType[]
+  >([])
 
   useEffect(() => {
     axios
       .get(`${GATSBY_FUNCTIONS_PATH}/translations`)
       .then((response) => {
-        let languages = []
+        let languages: LanguageType[] = []
         if (response.data && response.data.data) {
           languages = response.data.data
         }

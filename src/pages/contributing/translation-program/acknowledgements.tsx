@@ -1,9 +1,10 @@
 // Libraries
 import React, { useContext } from "react"
-import { graphql } from "gatsby"
+import { graphql, PageProps } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { useIntl } from "gatsby-plugin-intl"
 import styled, { ThemeContext } from "styled-components"
+import type { Context } from "../../../types"
 
 // Components
 import ActionCard from "../../../components/ActionCard"
@@ -103,7 +104,13 @@ const CentralActionCard = styled(ActionCard)`
   }
 `
 
-const TranslatorAcknowledgements = ({ data, location }) => {
+const TranslatorAcknowledgements = ({
+  data,
+  location,
+}: PageProps<Queries.TranslatorAcknowledgementsQuery, Context>) => {
+  console.log("Hendrik", data)
+  console.dir(data)
+  console.log("Hendrik", location)
   const intl = useIntl()
   const themeContext = useContext(ThemeContext)
   const isDarkTheme = themeContext.isDark
@@ -269,7 +276,7 @@ const TranslatorAcknowledgements = ({ data, location }) => {
 export default TranslatorAcknowledgements
 
 export const query = graphql`
-  query {
+  query TranslatorAcknowledgements {
     dogeComputer: file(relativePath: { eq: "doge-computer.png" }) {
       childImageSharp {
         gatsbyImageData(

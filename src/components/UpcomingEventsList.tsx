@@ -3,14 +3,26 @@ import React, { useEffect, useState } from "react"
 import styled from "styled-components"
 
 // Components
-import EventCard from "../components/EventCard"
-import InfoBanner from "../components/InfoBanner"
-import Link from "../components/Link"
-import Translation from "../components/Translation"
-import ButtonLink from "../components/ButtonLink"
+import EventCard from "./EventCard"
+import InfoBanner from "./InfoBanner"
+import Link from "./Link"
+import Translation from "./Translation"
+import ButtonLink from "./ButtonLink"
 
 // Data
 import events from "../data/community-events.json"
+
+type EventType = {
+  title: string
+  to: string
+  sponsor: string
+  location: string
+  description: string
+  startDate: string
+  endDate: string
+  date: string // calculated from other fields later
+  formattedDetails: string // calculated from other fields later
+}
 
 const EventList = styled.div`
   /* Adding direction ltr as a temporary fix to styling bug */
@@ -50,20 +62,28 @@ const ButtonLinkContainer = styled.div`
   margin-top: 1.25rem;
 `
 
-const UpcomingEventsList = () => {
+export interface IProps {}
+
+const UpcomingEventsList: React.FC<IProps> = () => {
   const eventsPerLoad = 10
-  const [orderedUpcomingEvents, setOrderedUpcomingEvents] = useState()
+  const [orderedUpcomingEvents, setOrderedUpcomingEvents] = useState<
+    EventType[]
+  >([])
   const [maxRange, setMaxRange] = useState(eventsPerLoad)
   const [isVisible, setIsVisible] = useState(true)
 
   // Create Date object from each YYYY-MM-DD JSON date string
-  const dateParse = (dateString) => {
+  const dateParse = (dateString: string) => {
     const parts = dateString.split("-")
-    return new Date(parts[0], parts[1] - 1, parts[2])
+    return new Date(
+      parseInt(parts[0]),
+      parseInt(parts[1]) - 1,
+      parseInt(parts[2])
+    )
   }
 
   useEffect(() => {
-    const eventsList = [...events]
+    const eventsList: EventType[] = [...events] as EventType[]
     const yesterday = new Date()
     yesterday.setDate(yesterday.getDate() - 1)
 
@@ -74,7 +94,8 @@ const UpcomingEventsList = () => {
 
     // Sort events by start date
     const orderedEvents = upcomingEvents.sort(
-      (a, b) => dateParse(a.startDate) - dateParse(b.startDate)
+      (a: EventType, b: EventType) =>
+        dateParse(a.startDate).getTime() - dateParse(b.startDate).getTime()
     )
 
     // Add formatted string to display

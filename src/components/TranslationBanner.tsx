@@ -1,14 +1,11 @@
-// Libraries
 import React, { useEffect, useState } from "react"
 import styled from "styled-components"
 
-// Component
-import { ButtonPrimary } from "./SharedStyledComponents"
-import Emoji from "./Emoji"
+import ButtonLink from "./ButtonLink"
 import Icon from "./Icon"
+import Emoji from "./Emoji"
 import Translation from "./Translation"
 
-// Styles
 const H3 = styled.h3`
   font-weight: 700;
   line-height: 100%;
@@ -16,7 +13,9 @@ const H3 = styled.h3`
   margin-bottom: 0;
 `
 
-const BannerContainer = styled.div`
+const BannerContainer = styled.div<{
+  isOpen: boolean
+}>`
   display: ${(props) => (props.isOpen ? `block` : `none`)};
   bottom: 2rem;
   right: 2rem;
@@ -44,7 +43,9 @@ const StyledBanner = styled.div`
   }
 `
 
-const BannerContent = styled.div`
+const BannerContent = styled.div<{
+  isPageRightToLeft: boolean
+}>`
   display: flex;
   flex-direction: column;
   align-items: ${(props) =>
@@ -55,13 +56,14 @@ const BannerContent = styled.div`
   }
 `
 
-const BannerClose = styled.div`
+const BannerClose = styled.div<{
+  isPageRightToLeft: boolean
+}>`
   position: absolute;
   top: 0;
   right: ${(props) => (props.isPageRightToLeft ? `auto` : 0)};
   margin: 1rem;
 `
-
 const BannerCloseIcon = styled(Icon)`
   cursor: pointer;
 `
@@ -92,25 +94,43 @@ const StyledEmoji = styled(Emoji)`
   }
 `
 
-const TranslationBannerLegal = ({
+const SecondaryButtonLink = styled(ButtonLink)`
+  margin-left: 0.5rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    margin-left: 0rem;
+    margin-top: 0.5rem;
+  }
+  color: #333333;
+  border: 1px solid #333333;
+  background-color: transparent;
+`
+
+export interface IProps {
+  shouldShow: boolean
+  isPageRightToLeft: boolean
+  originalPagePath: boolean
+  isPageContentEnglish: boolean
+}
+
+const TranslationBanner: React.FC<IProps> = ({
   shouldShow,
-  originalPagePath,
   isPageRightToLeft,
+  originalPagePath,
+  isPageContentEnglish,
 }) => {
-  // Default to isOpen being false, and let the useEffect set this.
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(shouldShow)
 
   useEffect(() => {
-    if (
-      localStorage.getItem(
-        `dont-show-translation-legal-banner-${originalPagePath}`
-      ) === "true"
-    ) {
-      setIsOpen(false)
-    } else {
-      setIsOpen(shouldShow)
-    }
+    setIsOpen(shouldShow)
   }, [originalPagePath, shouldShow])
+
+  const headerTextId = isPageContentEnglish
+    ? "translation-banner-title-new"
+    : "translation-banner-title-update"
+
+  const bodyTextId = isPageContentEnglish
+    ? "translation-banner-body-new"
+    : "translation-banner-body-update"
 
   return (
     <BannerContainer isOpen={isOpen}>
@@ -118,25 +138,30 @@ const TranslationBannerLegal = ({
         <BannerContent isPageRightToLeft={isPageRightToLeft}>
           <Row>
             <H3>
-              <Translation id="translation-banner-no-bugs-title" />
-              <StyledEmoji ml={"0.5rem"} size={1.5} text=":bug:" />
+              <Translation id={headerTextId} />
             </H3>
+            <StyledEmoji
+              ml={"0.5rem"}
+              size={1.5}
+              text=":globe_showing_asia_australia:"
+            />
           </Row>
           <p>
-            <Translation id="translation-banner-no-bugs-content" />
+            <Translation id={bodyTextId} />
           </p>
           <ButtonRow>
-            <ButtonPrimary
-              onClick={() => {
-                localStorage.setItem(
-                  `dont-show-translation-legal-banner-${originalPagePath}`,
-                  true
-                )
-                setIsOpen(false)
-              }}
-            >
-              <Translation id="translation-banner-no-bugs-dont-show-again" />
-            </ButtonPrimary>
+            <div>
+              <ButtonLink to="/contributing/translation-program/">
+                <Translation id="translation-banner-button-translate-page" />
+              </ButtonLink>
+            </div>
+            {!isPageContentEnglish && (
+              <div>
+                <SecondaryButtonLink isSecondary to={`/en${originalPagePath}`}>
+                  <Translation id="translation-banner-button-see-english" />
+                </SecondaryButtonLink>
+              </div>
+            )}
           </ButtonRow>
         </BannerContent>
         <BannerClose
@@ -150,4 +175,4 @@ const TranslationBannerLegal = ({
   )
 }
 
-export default TranslationBannerLegal
+export default TranslationBanner
