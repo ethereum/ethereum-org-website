@@ -39,12 +39,7 @@ const ButtonContainer = styled.div`
   }
 `
 
-export interface IProps {
-  prompt?: string
-  className?: string
-}
-
-const FeedbackCard: React.FC<IProps> = ({ prompt, className }) => {
+const FeedbackCard = ({ prompt, className }) => {
   const [feedbackSubmitted, setFeedbackSubmitted] = useState(false)
   const [isHelpful, setIsHelpful] = useState(false)
   const location = typeof window !== "undefined" ? window.location.href : ""

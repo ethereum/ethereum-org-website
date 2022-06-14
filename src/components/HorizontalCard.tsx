@@ -1,4 +1,4 @@
-import React from "react"
+import React, { ReactNode } from "react"
 import styled from "styled-components"
 import Emoji from "./Emoji"
 
@@ -24,8 +24,8 @@ const Title = styled.p`
 
 export interface IProps {
   emoji: string
-  title?: string | JSX.Element
-  description: string | JSX.Element
+  title?: ReactNode
+  description: ReactNode
   className?: string
   emojiSize?: number
 }

@@ -54,7 +54,7 @@ export interface GitHubRepo {
 export interface IProps {
   gitHubRepo: GitHubRepo
   className?: string
-  hideStars: string
+  hideStars: boolean
 }
 
 const GitStars: React.FC<IProps> = ({ gitHubRepo, className, hideStars }) => {
