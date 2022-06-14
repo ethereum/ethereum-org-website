@@ -1920,7 +1920,8 @@
       "avatar_url": "https://avatars3.githubusercontent.com/u/9886144?v=4",
       "profile": "https://github.com/gichiba",
       "contributions": [
-        "content"
+        "content",
+        "doc"
       ]
     },
     {
@@ -2158,7 +2159,8 @@
       "contributions": [
         "code",
         "bug",
-        "doc"
+        "doc",
+        "design"
       ]
     },
     {
@@ -7778,6 +7780,65 @@
       "profile": "https://www.linkedin.com/in/dericcheng/",
       "contributions": [
         "doc"
+      ]
+    },
+    {
+      "login": "Ahmetbasli",
+      "name": "Ahmetbasli",
+      "avatar_url": "https://avatars.githubusercontent.com/u/68350525?v=4",
+      "profile": "https://github.com/Ahmetbasli",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "dalmau",
+      "name": "Jordi Pascual",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7261873?v=4",
+      "profile": "https://github.com/dalmau",
+      "contributions": [
+        "translation",
+        "bug",
+        "doc"
+      ]
+    },
+    {
+      "login": "amithkk",
+      "name": "Amith KK",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1029727?v=4",
+      "profile": "http://amithkk.github.io",
+      "contributions": [
+        "doc",
+        "bug"
+      ]
+    },
+    {
+      "login": "ArpitIngle",
+      "name": "Arpit Ingle",
+      "avatar_url": "https://avatars.githubusercontent.com/u/37828045?v=4",
+      "profile": "https://github.com/ArpitIngle",
+      "contributions": [
+        "ideas"
+      ]
+    },
+    {
+      "login": "Seek4samurai",
+      "name": "Gourav Singh Rawat",
+      "avatar_url": "https://avatars.githubusercontent.com/u/69115613?v=4",
+      "profile": "https://seek4samurai.vercel.app/",
+      "contributions": [
+        "doc",
+        "ideas"
+      ]
+    },
+    {
+      "login": "jonasbostoen",
+      "name": "mempirate",
+      "avatar_url": "https://avatars.githubusercontent.com/u/32879610?v=4",
+      "profile": "https://netbound.io",
+      "contributions": [
+        "doc",
+        "bug"
       ]
     }
   ],

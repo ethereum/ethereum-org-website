@@ -101,7 +101,17 @@ const Title = styled.h3`
   margin-top: 0;
 `
 
-const EventCard = ({
+export interface IProps {
+  title: string
+  to: string
+  date: string
+  description: string
+  className?: string
+  location: string
+  isEven: boolean
+}
+
+const EventCard: React.FC<IProps> = ({
   title,
   to,
   date,
@@ -112,7 +122,9 @@ const EventCard = ({
 }) => (
   <StyledCard className={className}>
     <StyledCardReference />
-    <StyledCardContent className={isEven && "style-card-content-right"}>
+    <StyledCardContent
+      className={isEven ? "style-card-content-right" : undefined}
+    >
       <Date>
         {date}
         <Emoji text=":spiral_calendar:" size={1} ml={`0.5em`} />
