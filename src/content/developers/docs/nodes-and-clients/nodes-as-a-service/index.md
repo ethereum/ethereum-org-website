@@ -10,6 +10,8 @@ sidebarDepth: 2
 
 Running your own [Ethereum node](/developers/docs/nodes-and-clients/#what-are-nodes-and-clients) can be challenging, especially when getting started or while scaling fast. There are a [number of services](#popular-node-services) that run optimized node infrastructures for you, so you can focus on developing your application or product instead. We'll explain how node services work, the pros and cons for using them and list providers if you are interested in getting started.
 
+**Note: it has been common for users to run consensus clients locally and use a node-as-a-service provider in place of a local execution client. This will not be possible at The Merge - users will be required to run BOTH clients locally. Users relying on node-as-a-service providers for their consensus clients will not merge correctly and will not be able to follow the Ethereum chain. Now is the time to install a local execution client!**
+
 ## Prerequisites {#prerequisites}
 
 If you don't already have an understanding of what nodes and clients are, check out [Nodes and clients](/developers/docs/nodes-and-clients/).
