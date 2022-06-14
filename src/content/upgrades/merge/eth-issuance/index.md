@@ -71,7 +71,7 @@ Will continue as it was, with small rewards for attesting-to and proposing block
 
 When validator withdrawals are enabled, stakers will be incentivized to remove their _earnings/rewards (balance over 32)_ as these funds are otherwise not contributing to their stake weight (which maxes as 32).
 
-Stakers may also choose to exit and withdrawal their entire validator balance, but it is important to remember that full validator exits are rate limited. Depending on the total ETH staked at the time, only 6 validators may exit in a given epoch (6.4 minute period). This decreases to as low as 4 as more validators leave, to intentionally prevent the ability for large amounts of staked ETH to leave at once.
+Stakers may also choose to exit and withdraw their entire validator balance, but it is important to remember that full validator exits are rate limited. Depending on the total ETH staked at the time, only 6 validators may exit in a given epoch (6.4 minute period). This decreases to as low as 4 as more validators leave, to intentionally prevent the ability for large amounts of staked ETH to leave at once.
 
 ### Post-merge inflation breakdown {#post-merge-inflation-breakdown}
 
@@ -93,7 +93,7 @@ This flip side of ETH issuance is the rate at which ETH is burned. To execute a 
 Fee burning went live with the <a href="/history/#london">London upgrade</a> in August 2021, and will not change after the Merge.
 </InfoBanner>
 
-On top of the fee burn implemented by the London upgrade, validators can also incur penalties for being offline, or worse they can be slashed for breaking specific rules that threaten network security. These penalties result in a reduction of ETH from that validators balance, which is not directly rewarded to any other account, effectively burning it from circulation.
+On top of the fee burn implemented by the London upgrade, validators can also incur penalties for being offline, or worse they can be slashed for breaking specific rules that threaten network security. These penalties result in a reduction of ETH from that validator's balance, which is not directly rewarded to any other account, effectively burning it from circulation.
 
 ## Further reading {#further-reading}
 

@@ -8,34 +8,34 @@ image: ../../../assets/upgrades/merge.png
 summaryPoint1: Soon the current Ethereum Mainnet will merge with the Beacon Chain proof-of-stake system.
 summaryPoint2: This will mark the end of proof-of-work for Ethereum, and the full transition to proof-of-stake.
 summaryPoint3: This sets the stage for future scaling upgrades including data sharding.
-summaryPoint4: With The Merge, Ethereum's energy consumption drops by 99.95%. Welcome to a new greener Ethereum.
+summaryPoint4: The Merge will reduce Ethereum's energy consumption by ~99.95%. Welcome to a new greener Ethereum.
 ---
 
 <UpgradeStatus dateKey="page-upgrades-merge-date">
-The Merge is the most significant and high-stakes upgrade in the history of Ethereum. Extensive testing and bug bounties were undertaken to ensure a safe transition to proof-of-stake.
+The Merge is the most significant upgrade in the history of Ethereum. Extensive testing and bug bounties were undertaken to ensure a safe transition to proof-of-stake.
 
-This process is in its final stages, with plans to undergo The Merge on a few public testnets before finally moving forward with Mainnet. If you’re as excited about The Merge as we are, follow the [EF Blog](https://blog.ethereum.org) or the client communication channels for the latest official word on _When Merge?_
+This process is in its final stages, with plans to undergo The Merge on a few public testnets before finally moving forward with Mainnet. If you're excited about The Merge, follow the [EF Blog](https://blog.ethereum.org) or the client communication channels for the latest official word on _When Merge?_
 </UpgradeStatus>
 
-## What is The Merge? {#what-is-the-docking}
+## What is The Merge? {#what-is-the-merge}
 
-The Merge represents the merger of the existing execution layer of Ethereum (the Mainnet we use today) with its new proof-of-stake consensus layer, the Beacon Chain.
+The Merge represents the merger of the existing execution layer of Ethereum (the Mainnet we use today) with its new proof-of-stake consensus layer, the Beacon Chain. This eliminates the need for energy-intensive mining, and instead secures the network using staked ether. A truly exciting step in realizing the Ethereum vision – more scalability, security, and sustainability.
 
-It's important to remember that initially, the [Beacon Chain](/upgrades/beacon-chain/) (the new "consensus layer") shipped separately from [Mainnet](/glossary/#mainnet). Ethereum Mainnet (the "execution layer") continues to be secured by [proof-of-work](/developers/docs/consensus-mechanisms/pow/), even while the Beacon Chain runs in parallel using [proof-of-stake](/developers/docs/consensus-mechanisms/pos/). The approaching Merge is when these two systems finally come together, and proof-of-work is replaced permanently by proof-of-stake.
+It's important to remember that initially, the [Beacon Chain](/upgrades/beacon-chain/) (the new "consensus layer") shipped separately from [Mainnet](/glossary/#mainnet). Ethereum Mainnet (the "execution layer") - with all it's accounts, balances, smart contracts, and blockchain state - continues to be secured by [proof-of-work](/developers/docs/consensus-mechanisms/pow/), even while the Beacon Chain runs in parallel using [proof-of-stake](/developers/docs/consensus-mechanisms/pos/). The approaching Merge is when these two systems finally come together, and proof-of-work is replaced permanently by proof-of-stake.
 
-Let's consider an example. Imagine Ethereum is a spaceship that isn't quite ready for an interstellar voyage. With the Beacon Chain, the community has built a new engine and a hardened hull. After significant testing, it's almost time to hot-swap the new engine for the old mid-flight. This will merge the new, more efficient engine into the existing ship, ready to put in some serious lightyears and take on the universe.
+Let's consider an analogy. Imagine Ethereum is a spaceship that isn't quite ready for an interstellar voyage. With the Beacon Chain, the community has built a new engine and a hardened hull. After significant testing, it's almost time to hot-swap the new engine for the old mid-flight. This will merge the new, more efficient engine into the existing ship, ready to put in some serious lightyears and take on the universe.
 
 ## Merging with Mainnet {#merging-with-mainnet}
 
-Since genesis, Mainnet has been secured by proof-of-work. This is the main Ethereum blockchain we're all used to—it contains every transaction, smart contract, and balance since it began in July 2015.
+Since [genesis](/history/#frontier), Mainnet has been secured by proof-of-work. This is the Ethereum blockchain we're all used to—it contains every transaction, smart contract, and balance since it began in July 2015.
 
-During this growing history, developers have been hard at work preparing for an eventual transition away from proof-of-work to proof-of-stake instead. On December 1, 2020, the Beacon Chain was created, which has since existed as a separate blockchain to Mainnet, running in parallel.
+Throughout Ethereum's history, developers have been hard at work preparing for an eventual transition away from proof-of-work to proof-of-stake. On December 1, 2020, the Beacon Chain was created, which has since existed as a separate blockchain to Mainnet, running in parallel.
 
 The Beacon Chain has not been processing Mainnet transactions, and for all intents and purposed has simply been coming to consensus on the state of itself... which is great and all, but after extensive testing, the time for it to come to consensus on more than just itself is rapidly approaching.
 
-The Merge itself represents the official switch to using the Beacon Chain as the official means of block production. Mining will no longer be the means of producing valid blocks, and instead this role will land with the proof-of-stake validators who will then be responsible for processing the validity of all transactions, and proposing blocks.
+The Merge represents the official switch to using the Beacon Chain as the engine of block production. Mining will no longer be the means of producing valid blocks. Instead, the proof-of-stake validators assume this role and will be responsible for processing the validity of all transactions and proposing blocks.
 
-No history is lost. As Mainnet is merged with the Beacon Chain, the entire transactional history of Ethereum comes with it. You don't need to do anything. Your funds are safe.
+No history is lost. As Mainnet gets merged with the Beacon Chain, it will also merge the entire transactional history of Ethereum. You don't need to do anything. Your funds are safe.
 
 <InfoBanner>
 This transition to proof-of-stake will come with some changes to the way ether is supplied. Learn more about <a href="/upgrades/merge/eth-issuance/">ether issuance before and after The Merge</a>.
@@ -146,7 +146,7 @@ With a [rollup-centric roadmap](https://ethereum-magicians.org/t/a-rollup-centri
 </ExpandableCard>
 
 <ExpandableCard
-title="Misconception: &quot;Transactions will be noticeably faster after The Merge&quot;"
+title="Misconception: &quot;Transactions will be noticeably faster after The Merge.&quot;"
 contentPreview="False. Though some slight changes exist, transaction speed will mostly remain the same on layer 1.">
 The "speed" of a transaction can be measured a few ways, including time to be included in a block, and also time to "finalization." Both of these change slightly, but not in a way that will be felt significantly by users.
 
@@ -178,9 +178,9 @@ ETH on the _execution layer_ (Mainnet as we know it) is accounted for separately
 <ExpandableCard
 title="Misconception: &quot;When withdrawals are enabled, stakers will all exit at once.&quot;"
 contentPreview="False. Validator exits are rate limited for security reasons.">
-After the Shanghai upgrade enabled withdrawals, all validators will be incentivized to withdraw their staking balance above 32 ETH, as these funds to not add to yield, and are otherwise locked. Depending on the APR (determined by total ETH staked), they may be incentivized to exit their validator(s) to reclaim their entire balance, or potentially to stake even more using their rewards to earn more yield.
+After the Shanghai upgrade enabled withdrawals, all validators will be incentivized to withdraw their staking balance above 32 ETH, as these funds do not add to yield, and are otherwise locked. Depending on the APR (determined by total ETH staked), they may be incentivized to exit their validator(s) to reclaim their entire balance, or potentially to stake even more using their rewards to earn more yield.
 
-An important caveat here, full validator exits are rate limited by the protocol, so only 6 validators may exit per epoch (every 6.4 minutes, so 1350/day, or only ~43,200 ETH/day, out of >10 million ETH staked). This rate limit adjusts depending on total ETH staked, and acts as a bottle neck to prevent a mass exodus of funds, and also prevents a potential attacker from using their stake to commit a slashable offense and then exiting their entire staking balance in the same epoch before the slashing penalty can be enforced.
+An important caveat here, full validator exits are rate limited by the protocol, so only 6 validators may exit per epoch (every 6.4 minutes, so 1350/day, or only ~43,200 ETH/day, out of >10 million ETH staked). This rate limit adjusts depending on total ETH staked, and acts as a bottleneck to prevent a mass exodus of funds, and also prevents a potential attacker from using their stake to commit a slashable offense and then exiting their entire staking balance in the same epoch before the slashing penalty can be enforced.
 
 The APR is intentionally dynamic, allowing a market of stakers to find a balance of how much they're willing to be paid to help secure the network. When withdrawals are enabled, if the rate is too low, then validators will exit, at a rate limited by the protocol. Gradually this will raise the APR for everyone who remains, slowly attracting new or returning stakers yet again.
 </ExpandableCard>
@@ -192,7 +192,7 @@ The APR for stakers is expected to increase post-merge. To understand by how muc
 
 This will be a new separate source of revenue for validators when they propose blocks. As you can imagine, the amount of fees a validator receives is proportional to network activity at the time of their proposed block. The more fees being paid by users, the more fees validators will receive.
 
-Looking at recent blockchain activity, approximately 10% of all gas fees being paid are currently going to miners in the form of a tip, while the rest is burnt. Outdated predictions estimated this percentage to be much higher, and was calculated when network usage was at all time highs. Extrapolating the 10% number to average recent network activity, it is estimated that the APR for staking will increase to ~7%, approximately 50% higher than the base issuance APR at time of writing.
+Looking at recent blockchain activity, approximately 10% of all gas fees being paid are currently going to miners in the form of a tip, while the rest is burnt. Outdated predictions estimated this percentage to be much higher, and was calculated when network usage was at all time highs. Extrapolating the 10% number to average recent network activity, it is estimated that the APR for staking will increase to ~7%, approximately 50% higher than the base issuance APR (as of June 2022).
 </ExpandableCard>
 
 <ExpandableCard
@@ -221,13 +221,13 @@ Blocks will instead be proposed by validating nodes that have ether staked for t
 
 ### The Merge and the Shanghai upgrade {#merge-and-shanghai}
 
-In order to simplify and maximize focus on a successful transition to proof-of-stake, The Merge upgrade will not include certain anticipated features such as the ability to withdraw staked ETH. The Shanghai upgrade is planned to follow The Merge, in which the ability to withdraw is slotted as a top priority.
+In order to simplify and maximize focus on a successful transition to proof-of-stake, The Merge upgrade will not include certain anticipated features such as the ability to withdraw staked ETH. The Shanghai upgrade is planned to follow The Merge, which will enable the ability for stakers to withdraw.
 
 Stay up-to-date with the [Shanghai upgrade planning issue on GitHub](https://github.com/ethereum/pm/issues/450), or the [EF Research and Development Blog](https://blog.ethereum.org/category/research-and-development/). For those curious, learn more about [What Happens After The Merge](https://youtu.be/7ggwLccuN5s?t=101), presented by Vitalik at the April 2021 ETHGlobal event.
 
 ### The Merge and data sharding {#merge-and-data-sharding}
 
-Originally, the plan was to work on shard chains before The Merge—to address scalability. However, with the boom of [layer 2 scaling solutions](/layer-2/), the priority has shifted to swapping proof-of-work to proof-of-stake via The Merge.
+Originally, the plan was to work on shard chains before The Merge in order to address scalability. However, with the boom of [layer 2 scaling solutions](/layer-2/), the priority has shifted to swapping proof-of-work to proof-of-stake via The Merge.
 
 Plans for sharding are rapidly evolving, but given the rise and success of layer 2 technologies to scale transaction execution, sharding plans have shifted to finding the most optimal way to distribute the burden of storing compressed calldata from rollup contracts, allowing for exponential growth in network capacity. This would not be possible without first transitioning to proof-of-stake.
 
