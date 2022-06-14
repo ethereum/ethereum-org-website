@@ -18,6 +18,9 @@ import WalletTable from "../../components/FindWallet/WalletTable"
 // Data
 import walletData from "../../data/find-wallet/wallet-data"
 
+// Icons
+import FilterBurger from "../../assets/wallets/filter_burger.svg"
+
 // Utils
 import { translateMessageId } from "../../utils/translations"
 
@@ -68,8 +71,32 @@ const TableContent = styled(Content)`
 const MobileFilterToggle = styled.div`
   display: none;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    display: block;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    background: #141414;
+    border: 1px solid #404040;
+    border-radius: 0px 4px 4px 0px;
+    padding: 6px 20px 10px 20px;
+    margin: auto;
+    margin-left: 0;
   }
+
+  p {
+    margin: 0;
+  }
+
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+`
+
+const SecondaryText = styled.p`
+  font-size: 14px;
+  line-height: 14px;
+  color: ${(props) => props.theme.colors.text200};
 `
 
 const FilterSidebar = styled.div<{ showMobileSidebar: boolean }>`
@@ -234,16 +261,19 @@ const FindWalletPage = ({ data, location }) => {
           setShowMobileSidebar(!showMobileSidebar)
         }}
       >
-        <p>Filters</p>
-        <p>
-          {Object.values(filters).reduce((acc, filter) => {
-            if (filter) {
-              acc += 1
-            }
-            return acc
-          }, 0)}{" "}
-          active
-        </p>
+        <div>
+          <p>FILTERS</p>
+          <SecondaryText>
+            {Object.values(filters).reduce((acc, filter) => {
+              if (filter) {
+                acc += 1
+              }
+              return acc
+            }, 0)}{" "}
+            active
+          </SecondaryText>
+        </div>
+        <FilterBurger />
       </MobileFilterToggle>
       <TableContent>
         <FilterSidebar showMobileSidebar={showMobileSidebar}>
