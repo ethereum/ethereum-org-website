@@ -34,7 +34,7 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 ## Intermediate articles and docs {#intermediate-articles-and-docs}
 
 - [Go Ethereum Documentation](https://geth.ethereum.org/docs/) - _The documentation for the official Ethereum Golang_
-- [Turbo-Geth Programmer's Guide](https://github.com/ledgerwatch/turbo-geth/blob/master/docs/programmers_guide/guide.md) - _Illustrated guide including the state tree, multi-proofs, and transaction processing_
+- [Erigon Programmer's Guide](https://github.com/ledgerwatch/erigon/blob/devel/docs/programmers_guide/guide.md) - _Illustrated guide including the state tree, multi-proofs, and transaction processing_
 - [Turbo-Geth and Stateless Ethereum](https://youtu.be/3-Mn7OckSus?t=394) - _2020 Ethereum Community Conference (EthCC 3)_
 - [Turbo-Geth: optimising Ethereum clients](https://www.youtube.com/watch?v=CSpc1vZQW2Q) - _2018 Devcon 4_
 - [Go Ethereum GoDoc](https://godoc.org/github.com/ethereum/go-ethereum)
@@ -55,7 +55,7 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 
 - [Geth / Go Ethereum](https://github.com/ethereum/go-ethereum) - _Official Go implementation of the Ethereum protocol_
 - [Go Ethereum Code Analysis](https://github.com/ZtesoftCS/go-ethereum-code-analysis) - _Review and analysis of Go Ethereum source code_
-- [Turbo-Geth](https://github.com/ledgerwatch/turbo-geth) - _Faster derivative of Go Ethereum_
+- [Erigon](https://github.com/ledgerwatch/erigon) - _Faster derivative of Go Ethereum, with a focus on archive nodes_
 - [Golem](https://github.com/golemfactory/golem) - _Golem is creating a global market for computing power_
 - [Quorum](https://github.com/jpmorganchase/quorum) - _A permissioned implementation of Ethereum supporting data privacy_
 - [Prysm](https://github.com/prysmaticlabs/prysm) - _Ethereum 'Serenity' 2.0 Go Implementation_
