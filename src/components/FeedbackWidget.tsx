@@ -151,9 +151,9 @@ const FeedbackWidget: React.FC<IProps> = ({ className }) => {
   const intl = useIntl()
   const containerRef = useRef<HTMLInputElement>(null)
   useOnClickOutside(containerRef, () => handleClose(), [`mousedown`])
-  const [isOpen, setIsOpen] = useState(false)
-  const [feedbackSubmitted, setFeedbackSubmitted] = useState(false)
-  const [isHelpful, setIsHelpful] = useState(null)
+  const [isOpen, setIsOpen] = useState<boolean>(false)
+  const [feedbackSubmitted, setFeedbackSubmitted] = useState<boolean>(false)
+  const [isHelpful, setIsHelpful] = useState<boolean | null>(null)
 
   const location = typeof window !== "undefined" ? window.location.href : ""
 
@@ -198,7 +198,7 @@ const FeedbackWidget: React.FC<IProps> = ({ className }) => {
     return offset
   }, [location])
 
-  const handleClose = () => {
+  const handleClose = (): void => {
     setIsOpen(false)
     trackCustomEvent({
       eventCategory: `FeedbackWidget toggled`,
@@ -206,7 +206,7 @@ const FeedbackWidget: React.FC<IProps> = ({ className }) => {
       eventName: `Closed feedback widget`,
     })
   }
-  const handleOpen = () => {
+  const handleOpen = (): void => {
     setIsOpen(true)
     trackCustomEvent({
       eventCategory: `FeedbackWidget toggled`,
@@ -214,16 +214,16 @@ const FeedbackWidget: React.FC<IProps> = ({ className }) => {
       eventName: `Opened feedback widget`,
     })
   }
-  const handleSubmit = (choice) => {
+  const handleSubmit = (choice: boolean): void => {
     trackCustomEvent({
       eventCategory: `Page is helpful feedback`,
       eventAction: `Clicked`,
-      eventName: choice,
+      eventName: String(choice),
     })
     setIsHelpful(choice)
     setFeedbackSubmitted(true)
   }
-  const handleSurveyOpen = () => {
+  const handleSurveyOpen = (): void => {
     trackCustomEvent({
       eventCategory: `Feedback survey opened`,
       eventAction: `Clicked`,

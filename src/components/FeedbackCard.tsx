@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { ReactNode, useState } from "react"
 import styled from "styled-components"
 import { ButtonSecondary } from "./SharedStyledComponents"
 import { trackCustomEvent } from "../utils/matomo"
@@ -50,7 +50,11 @@ const FeedbackCard: React.FC<IProps> = ({ prompt, className }) => {
   const location = typeof window !== "undefined" ? window.location.href : ""
   const isStaking = location.includes("staking")
 
-  const getTitle = (feedbackSubmitted, isStaking, isHelpful) => {
+  const getTitle = (
+    feedbackSubmitted: boolean,
+    isStaking: boolean,
+    isHelpful: boolean
+  ): ReactNode => {
     if (!feedbackSubmitted)
       return prompt || <Translation id="feedback-prompt" />
     if (isStaking)
@@ -77,11 +81,11 @@ const FeedbackCard: React.FC<IProps> = ({ prompt, className }) => {
     )
   }
 
-  const handleClick = (isHelpful) => {
+  const handleClick = (isHelpful: boolean): void => {
     trackCustomEvent({
       eventCategory: `Page is helpful feedback`,
       eventAction: `Clicked`,
-      eventName: isHelpful,
+      eventName: String(isHelpful),
     })
     setIsHelpful(isHelpful)
     setFeedbackSubmitted(true)

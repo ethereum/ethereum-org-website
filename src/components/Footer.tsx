@@ -396,7 +396,7 @@ const Footer: React.FC<IProps> = () => {
                   {section.links.map((link, linkIdx) => (
                     <ListItem key={linkIdx}>
                       <FooterLink
-                        dir={isPageRightToLeft ? "rtl" : "ltr"}
+                        dir={isPageRightToLeft ? "auto" : "ltr"}
                         to={link.to}
                         isPartiallyActive={false}
                       >

@@ -52,7 +52,7 @@ const SkeletonContainer = styled(Container)<{
   loading: boolean
 }>`
   justify-content: flex-start;
-  position: absolute;é
+  position: absolute;
   width: 100%;
   height: 100%;
   left: 0;
@@ -227,6 +227,21 @@ const COMMIT_HISTORY = gql`
   }
 `
 
+interface Author {
+  name: string
+  email: string
+  avatarUrl: string
+  user: {
+    login: string
+    url: string
+  }
+}
+
+interface Commit {
+  author: Author
+  committedDate: string
+}
+
 export interface IProps {
   relativePath: string
   className?: string
@@ -247,15 +262,14 @@ const FileContributors: React.FC<IProps> = ({
 
   if (error) return null
 
-  const commits = data?.repository?.ref?.target?.history?.edges?.map(
-    (commit) => commit.node
-  )
+  const commits: Array<Commit> =
+    data?.repository?.ref?.target?.history?.edges?.map((commit) => commit.node)
 
   const lastCommit = commits?.[0] || {}
   const lastContributor = lastCommit?.author || {}
   const uniqueContributors =
     commits?.reduce(
-      (res, cur) => {
+      (res: Array<Author>, cur: Commit) => {
         if (cur.author.user === null) {
           return res
         }
