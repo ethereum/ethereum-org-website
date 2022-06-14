@@ -176,6 +176,10 @@ const FeedbackWidget: React.FC<IProps> = ({ className }) => {
         [YES]: `https://gzmn3wgk.paperform.co/?url=${location}`,
         [NO]: `https://zlj83p6l.paperform.co/?url=${location}`,
       },
+      "find-wallet": {
+        [YES]: "https://wsf1ubwu.paperform.co",
+        [NO]: "https://wsf1ubwu.paperform.co,",
+      },
     }
     let url = surveyUrls.__default[isHelpful ? YES : NO]
     Object.keys(surveyUrls).forEach((key) => {
