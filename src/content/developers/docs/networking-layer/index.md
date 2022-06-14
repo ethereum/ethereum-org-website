@@ -10,6 +10,8 @@ Ethereum is a peer-to-peer network with thousands of nodes that must be able to 
 
 After [The Merge](/upgrades/merge/), there will be two parts of client software (execution clients and consensus clients), each with its own distinct networking stack. As well as communicating with other Ethereum nodes, the execution and consensus clients have to communicate with each other. This page gives an introductory explanation of the protocols that enable this communication.
 
+**Note that after [The Merge](/upgrades/merge) execution clients will no longer be responsible for gossiping blocks, but they will still gossip transactions over the execution-layer peer-to-peer network. Transactions will be passed to consensus clients via a local RPC connection, where they will be packaged into Beacon blocks. Consensus clients will then gossip Beacon blocks across their p2p network.**
+
 ## Prerequisites {#prerequisites}
 
 Some knowledge of Ethereum [nodes and clients](/src/content/developers/docs/nodes-and-clients/) will be helpful for understanding this page.
