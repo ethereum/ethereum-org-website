@@ -14,7 +14,7 @@ summaryPoint3: Thanks to crypto, users now have the tools to issue, hold and con
 
 Identity underpins virtually every aspect of your life today. Using online services, opening a bank account, voting in elections, buying property, securing employment—all of these things require proving your identity.
 
-However, traditional identity management systems have long relied on centralized intermediaries who issue, hold, and control your identifiers and [attestations](#what-are-attestations). This means you cannot control your identity-related information, or decide who has access to personally identifiable information (PII) and how much access these parties have.
+However, traditional identity management systems have long relied on centralized intermediaries who issue, hold, and control your identifiers and [attestations](#what-are-attestations). This means you cannot control your identity-related information or decide who has access to personally identifiable information (PII) and how much access these parties have.
 
 To solve these problems, we have decentralized identity systems built on public blockchains like Ethereum. Decentralized identity allows individuals to manage their identity-related information. With decentralized identity solutions, _you_ can create identifiers and claim and hold your attestations without relying on central authorities, like service providers or governments.
 
@@ -108,9 +108,9 @@ Here's an example to show how on-chain attestations might work in practice:
 
 3. The smart contract selling shares can check the registry contract for the identities of screened buyers, making it possible for the smart contract to determine who is permitted to buy shares or not.
 
-### Soulbound tokens and identity
+### Soulbound tokens and identity {#soulbound}
 
-[Soulbound Tokens](https://vitalik.ca/general/2022/01/26/soulbound.html) (non-transferable NFTs) could be used to collect information unique to a specific wallet. This effectively creates a unique on-chain identity bound to a specific Ethereum address that could include tokens representing achievements (e.g. finishing some specific online course or a particular score in a game) or participation in communities.
+[Soulbound tokens](https://vitalik.ca/general/2022/01/26/soulbound.html) (non-transferable NFTs) could be used to collect information unique to a specific wallet. This effectively creates a unique on-chain identity bound to a particular Ethereum address that could include tokens representing achievements (e.g. finishing some specific online course or passing a threshold score in a game) or community participation.
 
 ## Benefits of decentralized identity {#benefits-of-decentralized-identity}
 
@@ -124,7 +124,7 @@ Here's an example to show how on-chain attestations might work in practice:
 
 5. Decentralized identity should work well with emerging zero-knowledge technologies that will enable individuals to prove they own or have done something without revealing what that thing is. This could become a powerful way to combine trust and privacy for applications such as voting.
 
-6. Decentralized identity enables anti-Sybil mechanisms that can identify when one individual human is pretending to be multiple humans in order to game or spam some system.
+6. Decentralized identity enables anti-Sybil mechanisms to identify when one individual human is pretending to be multiple humans to game or spam some system.
 
 ## Decentralized identity use-cases {#decentralized-identity-use-cases}
 
@@ -148,9 +148,9 @@ Online voting and social media are two novel applications for decentralized iden
 
 Decentralized identity can help create online communities that are free of fake accounts. For example, each user might have to authenticate their identity using an on-chain identity system, like the Ethereum Name Service, reducing the possibility of bots.
 
-### 4. Anti-Sybil protection
+### 4. Anti-Sybil protection {#sybil-protection}
 
-Sybil attacks refer to individual humans tricking a system into thinking they are multiple people in order to increase their influence. [Grant-giving applications](https://gitcoin.co/grants/) that use [quadratic voting](https://www.radicalxchange.org/concepts/plural-voting/) are vulnerable to these Sybil attacks because the value of a grant is increased when more individuals vote for it, incentivizing users to split their contributions across many identities. Decentralized identities help to prevent this by rasing the burden on each participant to prove that they are really human, although often without having to reveal specific private information.
+Sybil attacks refer to individual humans tricking a system into thinking they are multiple people to increase their influence. [Grant-giving applications](https://gitcoin.co/grants/) that use [quadratic voting](https://www.radicalxchange.org/concepts/plural-voting/) are vulnerable to these Sybil attacks because the value of a grant is increased when more individuals vote for it, incentivizing users to split their contributions across many identities. Decentralized identities help to prevent this by raising the burden on each participant to prove that they are really human, although often without having to reveal specific private information.
 
 ## Use decentralized identity {#use-decentralized-identity}
 
@@ -160,7 +160,7 @@ There are many ambitious projects using Ethereum as a foundation for decentraliz
 - **[SpruceID](https://www.spruceid.com/)** - _A decentralized identity project which allows users to control digital identity with Ethereum accounts and ENS profiles instead of relying on third-party services._
 - **[Proof of Humanity](https://www.proofofhumanity.id)** - _Proof of Humanity (or PoH) is a social identity verification system built on Ethereum._
 - **[BrightID](https://www.brightid.org/)** - _A decentralized, open-source social identity network seeking to reform identity verification through the creation and analysis of a social graph._
-- - **[Proof-of-personhood Passport](https://proofofpersonhood.com/)** - _A decentralized digital identity aggregator._
+- **[Proof-of-personhood Passport](https://proofofpersonhood.com/)** - _A decentralized digital identity aggregator._
 
 ## Further reading {#further-reading}
 
