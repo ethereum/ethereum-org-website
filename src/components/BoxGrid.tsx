@@ -1,35 +1,26 @@
 import React, { useState } from "react"
 import styled from "styled-components"
-
 import Emoji from "./Emoji"
 
-export interface IOpener {
-  isOpen: boolean
-}
-
-export interface IGridStyle {
-  columnNumber: number
-}
-
-export interface IColor {
-  color: string
-}
-
-export interface IBaseItem {
+export interface IBoxItem {
   emoji: string
   title: string
   description: string
 }
 
-export interface IBoxStyle extends IOpener, IGridStyle, IColor {}
-
-export interface IGridItemProps extends IBaseItem, IBoxStyle {
-  index: number
-  callback: (idx: number) => void
+export interface IProps {
+  items: Array<IBoxItem>
 }
 
-export interface IBoxProps {
-  items: Array<IBaseItem>
+interface IBoxStyle {
+  isOpen: boolean
+  columnNumber: number
+  color: string
+}
+
+interface IGridItemProps extends IBoxItem, IBoxStyle {
+  index: number
+  callback: (idx: number) => void
 }
 
 const Title = styled.h3`
@@ -99,7 +90,7 @@ const Box = styled.div<IBoxStyle>`
 `
 
 // Represent string as 32-bit integer
-const hashCode = (stringPhrase: string) => {
+const hashCode = (stringPhrase: string): number => {
   let hash = 0
   for (const char of stringPhrase) {
     const code = char.charCodeAt(0)
@@ -153,7 +144,7 @@ const GridItem: React.FC<IGridItemProps> = ({
   )
 }
 
-const BoxGrid: React.FC<IBoxProps> = ({ items }) => {
+const BoxGrid: React.FC<IProps> = ({ items }) => {
   const [indexOpen, setOpenIndex] = useState(0)
 
   return (
