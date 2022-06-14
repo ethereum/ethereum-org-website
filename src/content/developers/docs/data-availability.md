@@ -5,7 +5,7 @@ lang: en
 sidebar: true
 ---
 
-Trustlessness is a major premise of public blockchains ("don't trust, verify"). One of the ways Ethereum reduces trust assumptions is by enforcing rules on data availability: a block producer proposing a new block is required publish the data that went into building the block on the network.  
+Trustlessness is a major premise of public blockchains ("don't trust, verify"). One of the ways Ethereum reduces trust assumptions is by enforcing rules on data availability. Block producers are required to publish the data for each block, which nodes participating in Ethereum's consensus store locally. 
 
 All nodes on the Ethereum network execute the transactions in blocks they receive from peers to ensure that the changes proposed by a block producer precisely match those computed independently by the node. This is how nodes verify that new information is valid, rather than having to trust that block producers are honest. This is not possible if any data is missing. 
 
