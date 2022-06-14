@@ -7830,6 +7830,16 @@
         "doc",
         "ideas"
       ]
+    },
+    {
+      "login": "jonasbostoen",
+      "name": "mempirate",
+      "avatar_url": "https://avatars.githubusercontent.com/u/32879610?v=4",
+      "profile": "https://netbound.io",
+      "contributions": [
+        "doc",
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
