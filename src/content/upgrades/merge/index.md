@@ -53,8 +53,8 @@ contentPreview="If you are a staker running your own node setup, or a node infra
 id="staking-node-operators">
 Key action items include:
 
-- Running _both_ a consensus layer (CL) client as well as an execution layer (EL) client. Third-party endpoints to obtain execution data will be unavailable after The Merge.
-- Authenticating both EL and CL clients with a shared JWT secret so they can securely communicate with one another.
+- Running _both_ a consensus layer client as well as an execution layer client. Third-party endpoints to obtain execution data will be unavailable after The Merge.
+- Authenticating both execution layer and consensus layer clients with a shared JWT secret so they can securely communicate with one another.
 
 Not completing the above items will result in your node being seen as "offline" after The Merge until both layers are synced and authenticated.
 
@@ -69,16 +69,16 @@ Note for stakers using [SaaS](/staking/saas/) or [staking pools](/staking/pools/
 
 <ExpandableCard
 title="Non-validating node operators and infrastructure providers"
-contentPreview="If you're operating a non-validating Ethereum node, the most significant change that comes with The Merge is the requirement to run clients for BOTH the execution layer (EL) AND the consensus layer (CL)."
+contentPreview="If you're operating a non-validating Ethereum node, the most significant change that comes with The Merge is the requirement to run clients for BOTH the execution layer AND the consensus layer."
 id="node-operators">
-You probably are already running an EL client, such as Geth, Erigon, Besu or Nethermind. Up until The Merge, an EL client was enough to receive, properly validate, and propagate blocks being gossiped by the network. _After The Merge_, the validity of transactions contained within an execution payload will also depend on the validity of the "consensus block" it is contained within.
+You probably are already running an execution layer client, such as Geth, Erigon, Besu or Nethermind. Up until The Merge, an execution layer client was enough to receive, properly validate, and propagate blocks being gossiped by the network. _After The Merge_, the validity of transactions contained within an execution payload will also depend on the validity of the "consensus block" it is contained within.
 
-This means that a full Ethereum node after The Merge requires both an EL client as well as a CL client. These two clients work tightly together using a new Engine API to properly determine the latest state of the network. The Engine API requires authentication using a JWT secret, which is provided to both clients allowing secure communication.
+This means that a full Ethereum node after The Merge requires both an execution layer client as well as a consensus layer client. These two clients work tightly together using a new Engine API to properly determine the latest state of the network. The Engine API requires authentication using a JWT secret, which is provided to both clients allowing secure communication.
 
 Key action items include:
 
-- Installing a CL client in addition to an EL client
-- Authenticating both EL and CL clients with a shared JWT secret so they can securely communicate with one another.
+- Installing a consensus layer client in addition to an execution layer client
+- Authenticating both execution layer and consensus layer clients with a shared JWT secret so they can securely communicate with one another.
 
 Not completing the above items in time for The Merge will result in your node appearing to be "offline" until both layers are synced and authenticated.
 
