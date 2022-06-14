@@ -32,17 +32,17 @@ Although Ethereum's consensus mechanism is necessary for security, it may not ap
 
 Plasma supposes that Ethereum Mainnet doesn't need to verify all transactions. Instead, we can process transactions off Mainnet, freeing nodes from having to validate every transaction. 
 
-Off-chain computation is necessary since Plasma chains can optimize for speed and cost. For example, a Plasma chain may—and most often does—use a single "Operator" to manage the ordering and execution of transactions. With just one entity verifying transactions, processing times on a plasma chain are faster than Ethereum Mainnet. 
+Off-chain computation is necessary since Plasma chains can optimize for speed and cost. For example, a Plasma chain may—and most often does—use a single "operator" to manage the ordering and execution of transactions. With just one entity verifying transactions, processing times on a plasma chain are faster than Ethereum Mainnet. 
 
 ### State commitments {#state-commitments}
 
-While Plasma executes transactions off-chain, they are settled on the main Ethereum execution layer—otherwise, Plasma chains cannot benefit from Ethereum's security guarantees. But finalizing off-chain transactions without knowing the state of the plasma chain would break the security model and allow the proliferation of invalid transactions. This is why the **Operator**, the entity responsible for producing blocks on the plasma chain, is required to publish "state commitments" on Ethereum periodically. 
+While Plasma executes transactions off-chain, they are settled on the main Ethereum execution layer—otherwise, Plasma chains cannot benefit from Ethereum's security guarantees. But finalizing off-chain transactions without knowing the state of the plasma chain would break the security model and allow the proliferation of invalid transactions. This is why the operator, the entity responsible for producing blocks on the plasma chain, is required to publish "state commitments" on Ethereum periodically. 
 
-A [commitment scheme](https://en.wikipedia.org/wiki/Commitment_scheme) is a cryptographic technique for committing to a value or statement without revealing it to another party. Commitments are "binding" in the sense that you cannot change the value or statement once you've committed to it. State commitments in Plasma take the form of "Merkle roots" (derived from a [Merkle tree](/whitepaper/#merkle-trees)) which the Operator sends at intervals to the Plasma contract on the Ethereum chain. 
+A [commitment scheme](https://en.wikipedia.org/wiki/Commitment_scheme) is a cryptographic technique for committing to a value or statement without revealing it to another party. Commitments are "binding" in the sense that you cannot change the value or statement once you've committed to it. State commitments in Plasma take the form of "Merkle roots" (derived from a [Merkle tree](/whitepaper/#merkle-trees)) which the operator sends at intervals to the Plasma contract on the Ethereum chain. 
 
 Merkle roots are cryptographic primitives that enable compressing of large amounts of information. A Merkle root (also called a "block root" in this case) could represent all the transactions in a block. Merkle roots also make it easier to verify that a small piece of data is part of the larger dataset. For instance, a user can produce a [Merkle proof](/developers/tutorials/merkle-proofs-for-offline-data-integrity/#main-content) to prove the inclusion of a transaction in a specific block.  
 
-Merkle roots are important for providing information about the off-chain's state to Ethereum. You can think of Merkle roots as "save points": the Operator is saying, "This is the state of the Plasma chain at x point in time, and this is the Merkle root as proof." The Operator is committing to the *current state* of the plasma chain with a Merkle root, which is why it is called a "state commitment". 
+Merkle roots are important for providing information about the off-chain's state to Ethereum. You can think of Merkle roots as "save points": the operator is saying, "This is the state of the Plasma chain at x point in time, and this is the Merkle root as proof." The operator is committing to the *current state* of the plasma chain with a Merkle root, which is why it is called a "state commitment". 
 
 ### Entries and exits {#entries-and-exits}
 
@@ -82,7 +82,7 @@ If Bob's challenge succeeds, Alice's withdrawal request is canceled. However, th
 
 ## The mass exit problem in plasma {#the-mass-exit-problem-in-plasma}
 
-The mass exit problem occurs when a large number of users try to withdraw from a plasma chain at the same time. Why this problem exists has to do with one of Plasma's biggest problems: data unavailability. 
+The mass exit problem occurs when a large number of users try to withdraw from a plasma chain at the same time. Why this problem exists has to do with one of Plasma's biggest problems: **data unavailability**. 
 
 Data availability is the ability to verify that the information for a proposed block was actually published on the blockchain network. A block is "unavailable" if the producer publishes the block itself but withholds data used to create the block. 
 
@@ -90,19 +90,19 @@ Blocks must be available if nodes are to be able to download the block and verif
 
 Data availability also helps with securing off-chain scaling protocols that build on Ethereum's base layer. By forcing operators on these chains to publish transaction data on Ethereum, anyone can challenge invalid blocks by constructing fraud proofs referencing the correct state of the chain. 
 
-Plasma chains primarily store transaction data with the Operator and **do not publish any data on Mainnet** (i.e., besides periodic state commitments). This means users must rely on the Operator to provide block data if they need to create fraud proofs challenging invalid transactions. If this system works, then users can always use fraud proofs to secure funds. 
+Plasma chains primarily store transaction data with the operator and **do not publish any data on Mainnet** (i.e., besides periodic state commitments). This means users must rely on the operator to provide block data if they need to create fraud proofs challenging invalid transactions. If this system works, then users can always use fraud proofs to secure funds. 
 
-The problem starts when the Operator, not just any user, is the party acting maliciously. Because the Operator is in sole control of the blockchain, they have more incentive to advance invalid state transitions on a larger scale, such as stealing funds belonging to users on the plasma chain. 
+The problem starts when the operator, not just any user, is the party acting maliciously. Because the operator is in sole control of the blockchain, they have more incentive to advance invalid state transitions on a larger scale, such as stealing funds belonging to users on the plasma chain. 
 
-In this case, using the classic fraud-proof system cannot work. The Operator could easily make an invalid transaction transferring Alice and Bob's funds to their wallet and hide the data necessary for creating the fraud-proof. This is possible because the Operator isn't required to make data available to users or Mainnet.  
+In this case, using the classic fraud-proof system cannot work. The operator could easily make an invalid transaction transferring Alice and Bob's funds to their wallet and hide the data necessary for creating the fraud-proof. This is possible because the operator isn't required to make data available to users or Mainnet.  
 
-Therefore, the most optimistic solution is to attempt a "mass exit" of users from the plasma chain. The mass exit slows down the malicious Operator's plan to steal funds and provides some measure of protection for users. Withdrawal requests are ordered based on when each UTXO (or token) was created, preventing malicious operators from front-running honest users. 
+Therefore, the most optimistic solution is to attempt a "mass exit" of users from the plasma chain. The mass exit slows down the malicious operator's plan to steal funds and provides some measure of protection for users. Withdrawal requests are ordered based on when each UTXO (or token) was created, preventing malicious operators from front-running honest users. 
 
 Nonetheless, we still need a way to verify the validity of withdrawal requests during a mass exit—to prevent opportunistic individuals from cashing in on the chaos processing invalid exits. The solution is simple: require users to post the last **valid state of the chain** to exit their money. 
 
-But this approach still has problems. For instance, if all users on a plasma chain need to exit (which is possible in the case of a malicious Operator), then the entire valid state of the plasma chain must be dumped on Ethereum's base layer at once. With the arbitrary size of plasma chains (high throughput = more data) and constraints on Ethereum's processing speeds, this is not an ideal solution. 
+But this approach still has problems. For instance, if all users on a plasma chain need to exit (which is possible in the case of a malicious operator), then the entire valid state of the plasma chain must be dumped on Ethereum's base layer at once. With the arbitrary size of plasma chains (high throughput = more data) and constraints on Ethereum's processing speeds, this is not an ideal solution. 
 
-Although exit games sound nice in theory, real-life mass exits will likely trigger network-wide congestion on Ethereum itself. Besides harming Ethereum's functionality, a poorly coordinated mass exit means that users may be unable to withdraw funds before the Operator drains every account on the plasma chain. 
+Although exit games sound nice in theory, real-life mass exits will likely trigger network-wide congestion on Ethereum itself. Besides harming Ethereum's functionality, a poorly coordinated mass exit means that users may be unable to withdraw funds before the operator drains every account on the plasma chain. 
 
 ## Pros and cons of plasma {#pros-and-cons-of-plasma}
 
@@ -130,7 +130,7 @@ Conversely, optimistic rollups, are compatible with the [Ethereum Virtual Machin
 
 ### Data unavailability {#data-unavailability}
 
-As explained earlier, Plasma suffers from a data availability problem. If a malicious Operator advanced an invalid transition on the plasma chain, users would be unable to challenge it since the Operator can withhold data needed to create the fraud-proof. Rollups solve this problem by forcing operators to post transaction data on Ethereum, allowing anyone to verify the chain's state and create fraud proofs if necessary. 
+As explained earlier, plasma suffers from a data availability problem. If a malicious operator advanced an invalid transition on the plasma chain, users would be unable to challenge it since the operator can withhold data needed to create the fraud-proof. Rollups solve this problem by forcing operators to post transaction data on Ethereum, allowing anyone to verify the chain's state and create fraud proofs if necessary. 
 
 ### Mass exit problem {#mass-exit-problem}
 
