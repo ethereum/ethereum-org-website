@@ -6,11 +6,11 @@ sidebar: true
 incomplete: true
 ---
 
-Testing [smart contracts](/developers/docs/smart-contracts/) is one of the most important measures for improving [smart contract security](/developers/docs/smart-contracts/security/). Unlike traditional software, smart contracts cannot be fixed after launching, making it imperative to test rigorously before deploying contracts on the Ethereum network. 
+Testing [smart contracts](/developers/docs/smart-contracts/) is one of the most important measures for improving [smart contract security](/developers/docs/smart-contracts/security/). Unlike traditional software, smart contracts cannot typically be updated after launching, making it imperative to test rigorously before deploying contracts on the Ethereum network. 
 
 ## What is smart contract testing? {#what-is-smart-contract-testing}
 
-Smart contract testing means performing detailed analysis and evaluation of a smart contract to assess the quality of its source code during the development cycle. Testing a smart contract makes it easier to identify bugs and vulnerabilities and reduces the possibility of software errors that could lead to costly [zero-day exploits](https://en.wikipedia.org/wiki/Zero-day_(computing)).
+Smart contract testing means performing detailed analysis and evaluation of a smart contract to assess the quality of its source code during the development cycle. Testing a smart contract makes it easier to identify bugs and vulnerabilities and reduces the possibility of software errors that could lead to costly exploits.
 
 Smart contract testing takes many forms, with different methods offering benefits. Strategies for testing Ethereum smart contracts can be classified into two broad categories: **automated testing** and **manual testing**. 
 
@@ -54,11 +54,11 @@ Functional testing verifies the functionality of a smart contract and provides a
 
 Functional testing covers three methods: **unit testing**, **integration testing**, and **system testing**.
 
-- **Unit testing**
+#### Unit testing
 
 Unit testing involves testing individual components in a smart contract for correctness. A unit test is simple, quick to run, and provides a clear idea of what went wrong if the test fails. 
 
-Unit tests are crucial for smart contract development, especially if you need to add new logic to the code. You can verify the behavior of each feature and confirm that it executes as intended.
+Unit tests are crucial for smart contract development, especially if you need to add new logic to the code. You can verify the behavior of each function and confirm that it executes as intended.
 
 Running a unit test often requires creating *assertions*—simple, informal statements specifying requirements for a smart contract. Unit testing can then be used to test each assertion and see if it holds true under execution. 
 
@@ -70,7 +70,7 @@ ii. "Non-admins cannot mint new tokens"
 
 iii. "The contract reverts on errors" 
 
-- **Integration testing**
+#### Integration testing
 
 Integration testing is a level higher than unit testing on the testing hierarchy. In integration testing, individual components of the smart contract are tested together. 
 
@@ -78,25 +78,24 @@ This approach detects errors arising from interactions between different compone
 
 Integration testing can be useful for ensuring that things like [inheritance](https://docs.soliditylang.org/en/v0.8.12/contracts.html#inheritance) and dependency injection work properly. 
 
-- **System testing**
+#### System testing
 
 System testing is the final phase of functional testing for smart contracts. A system evaluates the smart contract as one fully integrated product to see if it performs as specified in the technical requirements.
 
-You can think of this stage as checking the end-to-end flow of your smart contract from a user’s point of view. A good way to perform system testing on a smart contract is to deploy it on a production environment, such as a [testnet](/developers/docs/networks/#ethereum-testnets) or [development network](/developers/docs/development-networks/).  
+You can think of this stage as checking the end-to-end flow of your smart contract from a user’s point of view. A good way to perform system testing on a smart contract is to deploy it on a production-like environment, such as a [testnet](/developers/docs/networks/#ethereum-testnets) or [development network](/developers/docs/development-networks/).  
 
 Here, end-users can perform trial runs and report any issues with the contract’s business logic and overall functionality. System testing is important because you cannot change code once the contract is deployed in the main EVM environment. 
 
-System testing can also cover separate testing measures, such as load testing and regression testing. A load test (also called a stress test) assesses the program's ability to perform optimally under real-time loads, while regression tests ensure changes made during development (after previous tests) didn't introduce new defects in the final contract. 
 
 ### 2. Static/dynamic analysis {#static-dynamic-analysis}
 
 Static analysis and dynamic analysis are two automated testing methods for evaluating the security qualities of smart contracts. Both techniques, however, use different approaches for finding defects in contract code. 
 
-- **Static analysis**
+#### Static analysis
 
 Static analysis examines the source code or bytecode of a smart contract before execution. This means you can debug contract code without actually running the program. Static analyzers can detect common vulnerabilities in Ethereum smart contracts and aid compliance with best practices. 
 
-- **Dynamic analysis**
+#### Dynamic analysis
 
 Dynamic analysis techniques require executing the smart contract in a runtime environment to identify issues in your code. Dynamic code analyzers observe contract behaviors during execution and generate a detailed report of identified vulnerabilities and property violations. 
 
