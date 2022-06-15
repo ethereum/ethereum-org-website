@@ -24,6 +24,7 @@ import OpenSource from "../../assets/wallets/open_source.svg"
 import RPCImporting from "../../assets/wallets/rpc_importing.svg"
 import Staking from "../../assets/wallets/staking.svg"
 import WalletConnect from "../../assets/wallets/walletconnect.svg"
+import ConnectDapps from "../../assets/wallets/connect_dapps.svg"
 
 
 // Styles
@@ -270,7 +271,7 @@ const WalletFilterSidebar = ({
         },
         {
           title: "Connect to decentralized apps",
-          icon: <></>,
+          icon: <ConnectDapps />,
           description:
             "You can connect to applications build on the Ethereum network.",
           filterKey: "connect_to_dapps",

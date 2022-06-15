@@ -19,6 +19,7 @@ import OpenSource from "../../assets/wallets/open_source.svg"
 import RPCImporting from "../../assets/wallets/rpc_importing.svg"
 import Staking from "../../assets/wallets/staking.svg"
 import WalletConnect from "../../assets/wallets/walletconnect.svg"
+import ConnectDapps from "../../assets/wallets/connect_dapps.svg"
 
 
 // Styles
@@ -148,7 +149,7 @@ const filterLabels = {
   },
   connect_to_dapps: {
     label: "Connect to apps",
-    icon: <></>,
+    icon: <ConnectDapps />,
   },
   staking: {
     label: "Staking",

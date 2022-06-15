@@ -21,6 +21,7 @@ import OpenSource from "../../assets/wallets/open_source.svg"
 import RPCImporting from "../../assets/wallets/rpc_importing.svg"
 import Staking from "../../assets/wallets/staking.svg"
 import WalletConnect from "../../assets/wallets/walletconnect.svg"
+import ConnectDapps from "../../assets/wallets/connect_dapps.svg"
 
 // Styles
 const Container = styled.div`
@@ -298,7 +299,7 @@ const featureDropdownItems = [
     value: "Connect to dapps",
     filterKey: "connect_to_dapps",
     category: "feature",
-    icon: <></>,
+    icon: <ConnectDapps />,
   },
   {
     label: "Staking",
