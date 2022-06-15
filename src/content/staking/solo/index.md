@@ -162,12 +162,6 @@ Equivalent bugs in a <em>minority client would never finalize</em> and thus woul
 <p><a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50">Learn more about slashing prevention</a></p>
 </ExpandableCard>
 
-<ExpandableCard title="Is staking already live?">
-Yes and no. Staking has been live since December 1, 2020, but until the Merge happens, the proof-of-stake consensus remains isolated on its own chain, while the existing Ethereum network as we know it continues to operate using proof-of-work. These two chains start separate, but with the Merge, proof-of-work will be fully deprecated, and proof-of-stake will become the sole means of consensus from here-on-out.
-
-This means that staking is currently live for users to deposit their ETH, run a validator client, and start earning rewards. After the Merge, stakers will earn higher rewards as validators begin to process transactions and earn fee tips on top of protocol rewards. After the Shanghai update (planned to follow the Merge by a few months), stakers will then be able to withdraw rewards and funds from their validator balance.
-</ExpandableCard>
-
 <ExpandableCard title="Which client is best?">
 Individual clients may vary slightly in terms of performance and user interface, as each are developed by different teams using a variety of programming languages. That being said, none of them are "best." All production clients are excellent pieces of software, that all perform the same core functions to sync and interact with the blockchain.
 
