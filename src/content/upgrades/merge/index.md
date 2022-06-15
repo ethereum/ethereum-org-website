@@ -5,7 +5,7 @@ lang: en
 template: upgrade
 sidebar: true
 image: ../../../assets/upgrades/merge.png
-summaryPoint1: Soon the current Ethereum Mainnet will merge with the Beacon Chain proof-of-stake system.
+summaryPoint1: Soon, the current Ethereum Mainnet will merge with the Beacon Chain proof-of-stake system.
 summaryPoint2: This will mark the end of proof-of-work for Ethereum, and the full transition to proof-of-stake.
 summaryPoint3: This sets the stage for future scaling upgrades including data sharding.
 summaryPoint4: The Merge will reduce Ethereum's energy consumption by ~99.95%. Welcome to a new greener Ethereum.
@@ -19,19 +19,19 @@ This process is in its final stages, with plans to undergo The Merge on a few pu
 
 ## What is The Merge? {#what-is-the-merge}
 
-The Merge represents the merger of the existing execution layer of Ethereum (the Mainnet we use today) with its new proof-of-stake consensus layer, the Beacon Chain. This eliminates the need for energy-intensive mining, and instead secures the network using staked ether. A truly exciting step in realizing the Ethereum vision – more scalability, security, and sustainability.
+The Merge represents the joining of the existing execution layer of Ethereum (the Mainnet we use today) with its new proof-of-stake consensus layer, the Beacon Chain. It eliminates the need for energy-intensive mining and instead secures the network using staked ETH. A truly exciting step in realizing the Ethereum vision – more scalability, security, and sustainability.
 
-It's important to remember that initially, the [Beacon Chain](/upgrades/beacon-chain/) (the new "consensus layer") shipped separately from [Mainnet](/glossary/#mainnet). Ethereum Mainnet (the "execution layer") - with all it's accounts, balances, smart contracts, and blockchain state - continues to be secured by [proof-of-work](/developers/docs/consensus-mechanisms/pow/), even while the Beacon Chain runs in parallel using [proof-of-stake](/developers/docs/consensus-mechanisms/pos/). The approaching Merge is when these two systems finally come together, and proof-of-work is replaced permanently by proof-of-stake.
+It's important to remember that initially, the [Beacon Chain](/upgrades/beacon-chain/) shipped separately from [Mainnet](/glossary/#mainnet). Ethereum Mainnet - with all it's accounts, balances, smart contracts, and blockchain state - continues to be secured by [proof-of-work](/developers/docs/consensus-mechanisms/pow/), even while the Beacon Chain runs in parallel using [proof-of-stake](/developers/docs/consensus-mechanisms/pos/). The approaching Merge is when these two systems finally come together, and proof-of-work is replaced permanently by proof-of-stake.
 
 Let's consider an analogy. Imagine Ethereum is a spaceship that isn't quite ready for an interstellar voyage. With the Beacon Chain, the community has built a new engine and a hardened hull. After significant testing, it's almost time to hot-swap the new engine for the old mid-flight. This will merge the new, more efficient engine into the existing ship, ready to put in some serious lightyears and take on the universe.
 
 ## Merging with Mainnet {#merging-with-mainnet}
 
-Since [genesis](/history/#frontier), Mainnet has been secured by proof-of-work. This is the Ethereum blockchain we're all used to—it contains every transaction, smart contract, and balance since it began in July 2015.
+Since [genesis](/history/#frontier), proof-of-work has secured Mainnet. This is the Ethereum blockchain we're all used to—it contains every transaction, smart contract, and balance since it began in July 2015.
 
 Throughout Ethereum's history, developers have been hard at work preparing for an eventual transition away from proof-of-work to proof-of-stake. On December 1, 2020, the Beacon Chain was created, which has since existed as a separate blockchain to Mainnet, running in parallel.
 
-The Beacon Chain has not been processing Mainnet transactions, and for all intents and purposed has simply been coming to consensus on the state of itself... which is great and all, but after extensive testing, the time for it to come to consensus on more than just itself is rapidly approaching.
+The Beacon Chain has not been processing Mainnet transactions. Instead, it has been reaching consensus on its own state by agreeing on active validators and their account balances. After extensive testing, the Beacon Chain's time to reach consensus on more is rapidly approaching. After The Merge, the Beacon Chain will be the consensus engine for all network data, including execution layer transactions and account balances.
 
 The Merge represents the official switch to using the Beacon Chain as the engine of block production. Mining will no longer be the means of producing valid blocks. Instead, the proof-of-stake validators assume this role and will be responsible for processing the validity of all transactions and proposing blocks.
 
@@ -47,13 +47,13 @@ The Merge is one of the most significant and anticipated upgrades in the history
 
 ### Users and holders {#users-holders}
 
-**You do not need to anything to protect your funds entering The Merge.**
+**You do not need to do anything to protect your funds entering The Merge.**
 
 _This bears repeating_: As a user or holder of ETH or any other digital asset on Ethereum, as well as non-node-operating stakers, **you do not need to do anything with your funds or wallet before The Merge.**
 
-Despite swapping out proof-of-work, the entire history of Ethereum since genesis remains intact and unaltered after the transition to proof-of-stake. Any funds being protected by your own wallet before The Merge will still be accessible in the same manner after The Merge. No action is required to "upgrade" on your part.
+Despite swapping out proof-of-work, the entire history of Ethereum since genesis remains intact and unaltered after the transition to proof-of-stake. Any funds held in your wallet before The Merge will still be accessible after The Merge. **No action is required to upgrade on your part.**
 
-As we approach The Merge of Ethereum Mainnet, **you should be on high alert for scams trying to take advantage of users during this transition.** Do not send your ETH anywhere in attempt to "upgrade to ETH2." There is no "ETH2" token, and there is nothing more you need to do for your funds to remain safe.
+As we approach The Merge of Ethereum Mainnet, **you should be on high alert for scams trying to take advantage of users during this transition.** Do not send your ETH anywhere in an attempt to "upgrade to ETH2." There is no "ETH2" token, and there is nothing more you need to do for your funds to remain safe.
 
 [More on Ethereum security](/security/#eth2-token-scam)
 
@@ -61,7 +61,7 @@ As we approach The Merge of Ethereum Mainnet, **you should be on high alert for 
 
 <ExpandableCard
 title="Staking node operators and providers"
-contentPreview="If you are a staker running your own node setup, or a node infrastructure provider, there are a few things you need to be aware of to be prepared for The Merge."
+contentPreview="If you are a staker running your own node setup or a node infrastructure provider, there are a few things you need to be aware of to be prepared for The Merge."
 id="staking-node-operators">
 Key action items include:
 
@@ -74,7 +74,7 @@ Not completing the above items will result in your node being seen as "offline" 
 
 Not setting a `fee recipient` will still allow your validator to behave as usual, but you will miss out on unburnt fee tips and any MEV you would have otherwise earned in blocks your validator proposes.
 
-For more detailed information and summary of links to client resources, stakers are encouraged to check out the [Merge Readiness Checklist](https://launchpad.ethereum.org/en/merge-readiness/) over on the Staking Launchpad to make sure you're fully prepared for The Merge.
+For more detailed information and a summary of links to client resources, stakers are encouraged to check out the [Merge Readiness Checklist](https://launchpad.ethereum.org/en/merge-readiness/) over on the Staking Launchpad to make sure you're fully prepared for The Merge.
 
 Note for stakers using [SaaS](/staking/saas/) or [staking pools](/staking/pools/): There is nothing you need to do to prepare for The Merge. [More below on staying safe.](#users-holders)
 </ExpandableCard>
@@ -94,7 +94,7 @@ Key action items include:
 
 Not completing the above items in time for The Merge will result in your node appearing to be "offline" until both layers are synced and authenticated.
 
-Node operators can also check out the [Merge Readiness Checklist](https://launchpad.ethereum.org/en/merge-readiness/) on the Staking Launchpad for more information, as much of the details apply to all node operators.
+Node operators can also check out the [Merge Readiness Checklist](https://launchpad.ethereum.org/en/merge-readiness/) on the Staking Launchpad for more information, as many of the details apply to all node operators.
 </ExpandableCard>
 
 <ExpandableCard
