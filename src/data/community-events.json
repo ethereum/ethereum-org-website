@@ -1,5 +1,14 @@
 [
   {
+    "title": "ETHVietnam",
+    "to": "https://www.eth-vietnam.com/",
+    "sponsor": null,
+    "location": "HoChiMinh City, Vietnam",
+    "description": "The Ethereum Vietnam is the largest & the first annual Vietnam Ethereum event focused on technology and community.",
+    "startDate": "2022-08-31",
+    "endDate": "2022-09-04"
+  },
+  {
     "title": "ETHDenver",
     "to": "https://www.ethdenver.com/",
     "sponsor": null,
