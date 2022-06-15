@@ -204,6 +204,9 @@ Bug bounty programs often attract a broad class of ethical hackers and independe
 **QuantStamp** - _Auditing service facilitating the mainstream adoption of blockchain technology through security and risk assessment services._
 - [Website](https://quantstamp.com/) 
 
+**OpenZeppelin** - _Smart contract security company providing security audits for distributed systems._
+- [Website](https://www.openzeppelin.com/security-audits)
+
 ### Bug bounty platforms {#bug-bounty-platforms}
 
 **Immunefi** - _Bug bounty platform for smart contracts and DeFi projects, where security researchers review code, disclose vulnerabilities, get paid, and make crypto safer._
