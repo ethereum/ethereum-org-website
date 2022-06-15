@@ -23,6 +23,7 @@ import Staking from "../../assets/wallets/staking.svg"
 import WalletConnect from "../../assets/wallets/walletconnect.svg"
 import ConnectDapps from "../../assets/wallets/connect_dapps.svg"
 import WithdrawCrypto from "../../assets/wallets/withdraw_crypto.svg"
+import Multisig from "../../assets/wallets/multisig.svg"
 
 // Styles
 const Container = styled.div`
@@ -363,7 +364,7 @@ const featureDropdownItems = [
     value: "Multisig",
     filterKey: "multisig",
     category: "smart_contract",
-    icon: <></>,
+    icon: <Multisig />,
   },
   {
     label: "Social recovery",
