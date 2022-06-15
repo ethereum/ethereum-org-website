@@ -680,7 +680,7 @@ const Layer2Page = ({ data }) => {
           <Translation id="layer-2-use-layer-2-1" />
         </p>
         <p>
-          <Translation id="layer-2-use-layer-2-note" />
+          <Translation id="layer-2-contract-accounts" />
         </p>
         <h3>
           <Translation id="layer-2-use-layer-2-generalized-title" />
