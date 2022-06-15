@@ -365,6 +365,12 @@ const EthPage = (props: PageProps<Queries.EthPageQuery, Context>) => {
               </Link>
             </p>
             <p>
+              <Translation id="page-eth-fuels-desc-4" />{" "}
+              <Link to="/run-a-node/">
+                <Translation id="page-eth-fuels-desc-4-link" />
+              </Link>
+            </p>
+            <p>
               <Translation id="page-eth-fuels-staking" />{" "}
               <Link to="/staking/">
                 <Translation id="page-eth-fuels-more-staking" />
