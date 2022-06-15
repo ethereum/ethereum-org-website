@@ -38,7 +38,7 @@ The Merge represents the official switch to using the Beacon Chain as the engine
 No history is lost. As Mainnet gets merged with the Beacon Chain, it will also merge the entire transactional history of Ethereum. You don't need to do anything. Your funds are safe.
 
 <InfoBanner>
-This transition to proof-of-stake will come with some changes to the way ether is supplied. Learn more about <a href="/upgrades/merge/eth-issuance/">ether issuance before and after The Merge</a>.
+This transition to proof-of-stake will come with some changes to the way ether is supplied. Learn more about <a href="/upgrades/merge/issuance/">ether issuance before and after The Merge</a>.
 </InfoBanner>
 
 ## What to I need to do to get ready? {#preparing-for-the-merge}
@@ -188,7 +188,7 @@ The APR is intentionally dynamic, allowing a market of stakers to find a balance
 <ExpandableCard
 title="Misconception: &quot;Staking APR is expected to triple after The Merge.&quot;"
 contentPreview="False. More up-to-date estimations predict closer to a 50% increase in APR post-merge, not a 200% increase.">
-The APR for stakers is expected to increase post-merge. To understand by how much, it is important to recognize where this increase in APR is coming from. This does not come from an increase in protocol ETH issuance (<a href="/upgrades/merge/eth-issuance/">ETH issuance after The Merge</a> is in fact decreasing by ~90%), but is instead a reallocation of transaction fees that will start going to validators instead of miners.
+The APR for stakers is expected to increase post-merge. To understand by how much, it is important to recognize where this increase in APR is coming from. This does not come from an increase in protocol ETH issuance (<a href="/upgrades/merge/issuance/">ETH issuance after The Merge</a> is in fact decreasing by ~90%), but is instead a reallocation of transaction fees that will start going to validators instead of miners.
 
 This will be a new separate source of revenue for validators when they propose blocks. As you can imagine, the amount of fees a validator receives is proportional to network activity at the time of their proposed block. The more fees being paid by users, the more fees validators will receive.
 

@@ -1,27 +1,30 @@
 ---
-title: How The Merge impacts ether supply
-description: Breakdown on how The Merge will impact ether supply
+title: How The Merge impacts ETH supply
+description: Breakdown on how The Merge will impact ETH supply
 lang: en
 sidebar: true
 ---
 
-# How The Merge impacts ether supply {#how-the-merge-impacts-ether-supply}
+# How The Merge impacts ETH supply {#how-the-merge-impacts-ETH-supply}
+
+We can break the supply of ETH into two primary forces: issuance, and burn.
+
+The **issuance** of ETH is the process of creating ETH that did not previously exist on the balance sheet, while the **burning** of ETH refers to when existing ETH is permanently removed from circulation. The rate of each of these fluctuates based on a number of parameters, and the balance between them determines the resulting inflation/deflation rate of ETH.
 
 <Card
-emoji=":chart_decreasing:">
+emoji=":chart_decreasing:"
+title="ETH issuance tldr">
 
 - Mining rewards ~13,000 ETH/day pre-merge
 - Staking rewards ~1,600 ETH/day pre-merge
 - **After The Merge, only the ~1,600 ETH per day will remain, dropping total new ETH issuance by ~90%**
-- <Emoji text=":fire:" size="1" /> The burn: At an average gas price of at least 16 gwei, at least 1,600 ETH is burned every day, which effectively brings net ETH inflation to zero or less post-merge.
+- The burn: At an average gas price of at least 16 gwei, at least 1,600 ETH is burned every day, which effectively brings net ETH inflation to zero or less post-merge.
 
 </Card>
 
-We can break the supply of ETH into two primary forces: issuance, and burn.
-
-The **issuance** of ETH is the process of creating ETH that did not previously exist on the balance sheet, while the **burning** of ETH refers to when existing ETH is permanently removed from circulation. The rate of each of these fluctuates based on a number of parameters, and the balance between them determines the resulting inflation/deflation rate of ether.
-
 The way ETH is issued will undergo some changes at time of The Merge. Currently, new ETH is issued from two main sources: the execution layer (i.e. Mainnet) and the consensus layer (i.e. Beacon Chain). After The Merge, issuance from the execution layer will go to zero. Let's break this down.
+
+[More on The Merge](/upgrades/merge/)
 
 ## Pre-merge {#pre-merge}
 
@@ -39,7 +42,7 @@ Issuance of new ETH on this chain is rewarded to validators for properly attesti
 
 Total ETH supply: **~119,300,000 ETH** (as of Q2 2022)
 
-**Execution layer issuance:** <br/>
+**Execution layer issuance:**
 
 - Estimating at 2.08 ETH per 13.3 seconds\*: **~4,930,000** ETH issued in a year
 - Currently inflating at **~4.13%** (4.93M per year / 119.3M total)
@@ -52,11 +55,9 @@ Total ETH supply: **~119,300,000 ETH** (as of Q2 2022)
 - Currently inflating at **~0.49%** (584K per year / 119.3M total)
 
 <InfoBanner>
-<strong>Total annual issuance rate: ~4.62%</strong> (4.13% + 0.49%)
-
-**~89.4%** of the issuance is going to miners on the execution layer (4.13 / 4.62 \* 100)
-
-**~10.6%** is being issued to stakers on the consensus layer (0.49 / 4.62 \* 100)
+<strong>Total annual issuance rate: ~4.62%</strong> (4.13% + 0.49%)<br/><br/>
+<strong>~89.4%</strong> of the issuance is going to miners on the execution layer (4.13 / 4.62 \* 100)<br/><br/>
+<strong>~10.6%</strong> is being issued to stakers on the consensus layer (0.49 / 4.62 \* 100)
 </InfoBanner>
 
 ## Post-merge {#post-merge}
