@@ -20,6 +20,7 @@ import RPCImporting from "../../assets/wallets/rpc_importing.svg"
 import Staking from "../../assets/wallets/staking.svg"
 import WalletConnect from "../../assets/wallets/walletconnect.svg"
 import ConnectDapps from "../../assets/wallets/connect_dapps.svg"
+import WithdrawCrypto from "../../assets/wallets/withdraw_crypto.svg"
 
 
 // Styles
@@ -177,7 +178,7 @@ const filterLabels = {
   },
   withdraw_crypto: {
     label: "Withdraw crypto",
-    icon: <></>,
+    icon: <WithdrawCrypto />,
   },
   multisig: {
     label: "Multisig",

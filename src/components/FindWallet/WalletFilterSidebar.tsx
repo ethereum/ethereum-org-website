@@ -25,6 +25,7 @@ import RPCImporting from "../../assets/wallets/rpc_importing.svg"
 import Staking from "../../assets/wallets/staking.svg"
 import WalletConnect from "../../assets/wallets/walletconnect.svg"
 import ConnectDapps from "../../assets/wallets/connect_dapps.svg"
+import WithdrawCrypto from "../../assets/wallets/withdraw_crypto.svg"
 
 
 // Styles
@@ -339,7 +340,7 @@ const WalletFilterSidebar = ({
         },
         {
           title: "Withdraw crypto",
-          icon: <></>,
+          icon: <WithdrawCrypto />,
           description:
             "User is able to withdraw to fiat directly in the wallet.",
           filterKey: "withdraw_crypto",
