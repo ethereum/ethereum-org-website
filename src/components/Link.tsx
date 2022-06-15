@@ -7,7 +7,6 @@ import Icon from "./Icon"
 
 import { languageMetadata } from "../utils/languages"
 import { trackCustomEvent, EventOptions } from "../utils/matomo"
-import { StringValueNode } from "graphql"
 
 const HASH_PATTERN = /^#.*/
 // const DOMAIN_PATTERN = /^(?:https?:)?[/]{2,}([^/]+)/
@@ -67,6 +66,7 @@ const GlossaryIcon = styled(Icon)`
 export interface IProps {
   to?: string
   href?: string
+  dir?: "ltr" | "rtl" | "auto"
   hideArrow?: boolean
   className?: string
   isPartiallyActive?: boolean

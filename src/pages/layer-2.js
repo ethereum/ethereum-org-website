@@ -679,6 +679,20 @@ const Layer2Page = ({ data }) => {
         <p>
           <Translation id="layer-2-use-layer-2-1" />
         </p>
+        <p>
+          <strong>NOTE:</strong> When bridging over and using layer 2, it is important to note
+          that you will control the address for your{" "}
+          <Link to="/glossary/#eoa">EOA account</Link> (an account where only a
+          single private key controls the account) just like on Ethereum
+          Mainnet. However, if you are using a{" "}
+          <Link to="/glossary/#contract-account">contract account</Link>, such
+          as <Link to="https://gnosis-safe.io/">Gnosis Safe</Link> or{" "}
+          <Link to="https://www.argent.xyz/">Argent</Link>, you will not have
+          control over this address on a layer 2 until you redeploy your
+          contract account to that address on the layer 2. If you are bridging
+          or sending funds to a contract account, and you do not control this
+          address for the contract account, your funds may be lost.
+        </p>
         <h3>
           <Translation id="layer-2-use-layer-2-generalized-title" />
         </h3>

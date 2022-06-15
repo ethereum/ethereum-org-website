@@ -70,7 +70,7 @@ export interface IProps {
   alt?: string
   image: string
   title: string
-  description: string
+  description?: string
   className?: string
   isRight?: boolean
   isBottom?: boolean
