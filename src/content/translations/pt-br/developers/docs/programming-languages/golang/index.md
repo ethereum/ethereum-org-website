@@ -55,7 +55,7 @@ Precisa de uma introdução geral? Confira [ethereum.org/learn](/learn/) ou [eth
 
 - [Geth / Go Ethereum](https://github.com/ethereum/go-ethereum) - _Implementação Oficial do protocolo da Ethereum_
 - [Go Ethereum Code Analysis](https://github.com/ZtesoftCS/go-ethereum-code-analysis) - _Revisão e analise do código-fonte do Go Ethereum_
-- [Erigon](https://github. com/ledgerwatch/turbo-geth) - _Mais rápido derivado da Go Ethereum_
+- [Erigon](https://github.com/ledgerwatch/erigon) - _Mais rápido derivado da Go Ethereum_
 - [Golem](https://github.com/golemfactory/golem) - _Golem está criando um mercado global para computação distribuída_
 - [Quorum](https://github.com/jpmorganchase/quorum) - _Uma implementação permissionada da Ethereum com suporte a privacidade de dados_
 - [Prysm](https://github.com/prysmaticlabs/prysm) - _Implementação em Go da Ethereum 'Serenity' 2.0_
