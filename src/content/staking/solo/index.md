@@ -89,6 +89,10 @@ The Staking Launchpad is an open source application that will help you become a 
 
 <StakingLaunchpadWidget />
 
+<InfoBanner emoji=":panda:" isWarning>
+<strong>Note for existing stakers:</strong> The Merge is approaching which brings a few changes since staking was launched. Make sure you're prepared with the <a href="https://launchpad.ethereum.org/en/merge-readiness">Merge readiness checklist</a> over on the Staking Launchpad.
+</InfoBanner>
+
 ## What to consider with node and client setup tools {#node-tool-considerations}
 
 There are a growing number of tools and services to help you solo stake your ETH, but each come with different risks and benefits.
