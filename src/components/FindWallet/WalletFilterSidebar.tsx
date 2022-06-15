@@ -23,6 +23,8 @@ import NonCustodial from "../../assets/wallets/non_custodial.svg"
 import OpenSource from "../../assets/wallets/open_source.svg"
 import RPCImporting from "../../assets/wallets/rpc_importing.svg"
 import Staking from "../../assets/wallets/staking.svg"
+import WalletConnect from "../../assets/wallets/walletconnect.svg"
+
 
 // Styles
 const Container = styled.div`
@@ -241,7 +243,7 @@ const WalletFilterSidebar = ({
         },
         {
           title: "WalletConnect",
-          icon: <></>,
+          icon: <WalletConnect />,
           description:
             "You can connect to applications that support WalletConnect.",
           filterKey: "walletconnect",

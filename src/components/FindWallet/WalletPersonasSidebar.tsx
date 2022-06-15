@@ -18,6 +18,8 @@ import NonCustodial from "../../assets/wallets/non_custodial.svg"
 import OpenSource from "../../assets/wallets/open_source.svg"
 import RPCImporting from "../../assets/wallets/rpc_importing.svg"
 import Staking from "../../assets/wallets/staking.svg"
+import WalletConnect from "../../assets/wallets/walletconnect.svg"
+
 
 // Styles
 const Container = styled.div`
@@ -134,7 +136,7 @@ const filterLabels = {
   },
   walletconnect: {
     label: "WalletConnect",
-    icon: <></>,
+    icon: <WalletConnect />,
   },
   rpc_importing: {
     label: "RPC importing",

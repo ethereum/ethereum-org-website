@@ -20,6 +20,7 @@ import NonCustodial from "../../assets/wallets/non_custodial.svg"
 import OpenSource from "../../assets/wallets/open_source.svg"
 import RPCImporting from "../../assets/wallets/rpc_importing.svg"
 import Staking from "../../assets/wallets/staking.svg"
+import WalletConnect from "../../assets/wallets/walletconnect.svg"
 
 // Styles
 const Container = styled.div`
@@ -276,7 +277,7 @@ const featureDropdownItems = [
     value: "WalletConnect",
     filterKey: "walletconnect",
     category: "feature",
-    icon: <></>,
+    icon: <WalletConnect />,
   },
   {
     label: "RPC importing",
