@@ -27,6 +27,7 @@ import WalletConnect from "../../assets/wallets/walletconnect.svg"
 import ConnectDapps from "../../assets/wallets/connect_dapps.svg"
 import WithdrawCrypto from "../../assets/wallets/withdraw_crypto.svg"
 import Multisig from "../../assets/wallets/multisig.svg"
+import SocialRecover from "../../assets/wallets/social_recover.svg"
 
 
 // Styles
@@ -365,7 +366,7 @@ const WalletFilterSidebar = ({
         },
         {
           title: "Social recovery",
-          icon: <></>,
+          icon: <SocialRecover />,
           description:
             "Wallets that allow guardians to change the signing key for smart contract wallets.",
           filterKey: "social_recovery",

@@ -22,6 +22,7 @@ import WalletConnect from "../../assets/wallets/walletconnect.svg"
 import ConnectDapps from "../../assets/wallets/connect_dapps.svg"
 import WithdrawCrypto from "../../assets/wallets/withdraw_crypto.svg"
 import Multisig from "../../assets/wallets/multisig.svg"
+import SocialRecover from "../../assets/wallets/social_recover.svg"
 
 
 // Styles
@@ -187,7 +188,7 @@ const filterLabels = {
   },
   social_recovery: {
     label: "Social recovery",
-    icon: <></>,
+    icon: <SocialRecover />,
   },
   erc_20_support: {
     label: "Token support",

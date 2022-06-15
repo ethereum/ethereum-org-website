@@ -24,6 +24,7 @@ import WalletConnect from "../../assets/wallets/walletconnect.svg"
 import ConnectDapps from "../../assets/wallets/connect_dapps.svg"
 import WithdrawCrypto from "../../assets/wallets/withdraw_crypto.svg"
 import Multisig from "../../assets/wallets/multisig.svg"
+import SocialRecover from "../../assets/wallets/social_recover.svg"
 
 // Styles
 const Container = styled.div`
@@ -371,7 +372,7 @@ const featureDropdownItems = [
     value: "Social recovery",
     filterKey: "social_recovery",
     category: "smart_contract",
-    icon: <></>,
+    icon: <SocialRecover />,
   },
 ]
 
