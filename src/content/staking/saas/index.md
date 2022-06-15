@@ -85,6 +85,14 @@ All of these keys can always be regenerated in a reproducible manner using your 
 The Merge will <em>not</em> enable the ability to withdraw your stake or protocol rewards; this feature is planned for the Shanghai upgrade, which will follow the Merge by an estimated six months to a year.
 </ExpandableCard>
 
+<ExpandableCard title="I use an SaaS, do I need to do anything for The Merge?">
+ETH/token holders, pooled/SaaS stakers and general Ethereum users <strong>do not need to do anything to prepare for The Merge</strong>.
+
+There are a few things node operators must attend to for this upgrade. Check with your individual staking provider for assurance their systems are ready to go.
+
+Learn more about [The Merge](/upgrades/merge/)
+</ExpandableCard>
+
 <ExpandableCard title="What happens if I get slashed?" eventCategory="SaasStaking" eventName="clicked what happens if I get slashed">
 By using an SaaS provider, you are entrusting the operation of your node to someone else. This comes with the risk of poor node performance, which is not in your control. In the event your validator is slashed, your validator balance will be penalized and forcibly removed from the validator pool. These funds will be locked until withdrawals are enabled at the protocol level.
 
