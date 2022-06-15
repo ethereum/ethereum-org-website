@@ -31,11 +31,13 @@ It’s generally important to test any contract code you write on a testnet befo
 
 Most testnets use a proof-of-authority consensus mechanism. This means a small number of nodes are chosen to validate transactions and create new blocks – staking their identity in the process. It's hard to incentivise mining on a proof-of-work testnet which can leave it vulnerable.
 
+As [The Merge](/upgrades/merge) get closer more of the public proof-of-work and proof-of-authority testnets are becoming proof-of-stake. Swapping their consensus mechanisms acts as rehearsals for the Ethereum Mainnet merge. Ropsten, Sepolia and Goerli are all expected to be proof-of-stake networks by the end of summer 2022, with Goerli being maintained long term.
+
 ETH on testnets has no real value; therefore, there are no markets for testnet ETH. Since you need ETH to actually interact with Ethereum, most people get testnet ETH from faucets. Most faucets are webapps where you can input an address which you request ETH to be sent to.
 
 #### Sepolia {#sepolia}
 
-A proof-of-work testnet; this means it's the best like-for-like representation of Ethereum.
+A proof-of-work testnet; this means it's the best like-for-like representation of Ethereum. Sepolia is expected to undergo The Merge to proof-of-stake in summer 2022. It is not yet certain whether it will then be maintained long term.
 
 - [Website](https://sepolia.dev/)
 - [Github](https://github.com/goerli/sepolia)
@@ -49,7 +51,7 @@ A proof-of-work testnet; this means it's the best like-for-like representation o
 
 #### Görli {#goerli}
 
-A proof-of-authority testnet that works across clients; an ideal testnet for application developers.
+A proof-of-authority testnet that works across clients; an ideal testnet for application developers. Goerli will be the final testnet merged to proof-of-stake before Ethereum Mainnet is merged. This is expected to happen in summer 2022. Goerlia is expected to be maintained long term as a proof-of-stake testnet.
 
 - [Website](https://goerli.net/)
 - [Github](https://github.com/goerli/testnet)
@@ -65,7 +67,7 @@ A proof-of-authority testnet that works across clients; an ideal testnet for app
 
 _Note, [the Ropsten testnet is deprecated](https://github.com/ethereum/pm/issues/460) and will no longer receive protocol upgrades. Please consider migrating your applications to Sepolia or Görli._
 
-A proof-of-work testnet. It only serves historical relevance and is mainly used by core developers for testing protocol upgrades.
+Ropsten was a proof-of-work testnet that went through The Merge to proof-of-stake in May 2022. It can be used to test applications on a merged network, but it is not expected to be maintained long term and is likely to deprecated before summer 2023.
 
 ##### Ropsten faucets
 
