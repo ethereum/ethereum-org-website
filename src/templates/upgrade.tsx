@@ -38,6 +38,7 @@ import {
 } from "../components/SharedStyledComponents"
 import Emoji from "../components/Emoji"
 import YouTube from "../components/YouTube"
+import MergeInfographic from "../components/MergeInfographic"
 
 import { getLocaleTimestamp } from "../utils/time"
 import { isLangRightToLeft } from "../utils/translations"
@@ -176,6 +177,7 @@ const components = {
   ShardChainsList,
   MergeArticleList,
   YouTube,
+  MergeInfographic,
 }
 
 const Title = styled.h1`
