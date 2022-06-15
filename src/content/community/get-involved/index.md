@@ -118,3 +118,4 @@ The Ethereum ecosystem is on a mission to fund public goods and impactful projec
 - [ΜΓΔ](https://metagammadelta.com/) (Meta Gamma Delta) [@metagammadelta](https://twitter.com/metagammadelta) - _Women-led projects_
 - [MolochDAO](https://molochdao.com) [@MolochDAO](https://twitter.com/MolochDAO) - _Community focused on funding Ethereum development_
 - [Raid Guild](https://raidguild.org) [@RaidGuild](https://twitter.com/RaidGuild) - _Collective of Web3 builders_
+- [Explore - The Dapp List](https://thedapplist.com/dapps/category?category=Dao) [@TheDappList](https://twitter.com/TheDappList) - _Explore community curated & governed DAOs_
