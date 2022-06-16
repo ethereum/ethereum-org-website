@@ -28,6 +28,7 @@ import ConnectDapps from "../../assets/wallets/connect_dapps.svg"
 import WithdrawCrypto from "../../assets/wallets/withdraw_crypto.svg"
 import Multisig from "../../assets/wallets/multisig.svg"
 import SocialRecover from "../../assets/wallets/social_recover.svg"
+import Swap from "../../assets/wallets/swap.svg"
 
 
 // Styles
