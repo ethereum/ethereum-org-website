@@ -99,7 +99,7 @@
   "layer-2-faq-question-2-description-3": "At the moment, most zk-rollups are application specific, in contrast with optimistic rollups which have largely been generalizable.",
   "layer-2-faq-question-2-description-4": "More info on <a href=\"/developers/docs/scaling/optimistic-rollups/\">optimistic rollups</a> and <a href=\"/developers/docs/scaling/zk-rollups/\">zero-knowledge rollups</a>.",
   "layer-2-faq-question-3-title": "Is scaling at layer 1 possible?",
-  "layer-2-faq-question-3-description-1": "Yes. Currently in the Ethereum roadmap there are plans for shard chains. While these are in the roadmap, further scaling through layer 2 networks is still necessary. <a href=\"/upgrades/shard-chains/\">More info on sharding</a>.",
+  "layer-2-faq-question-3-description-1": "Yes. Currently in the Ethereum roadmap there are plans for shard chains. While these are in the roadmap, further scaling through layer 2 networks is still necessary. <a href=\"/upgrades/sharding/\">More info on sharding</a>.",
   "layer-2-faq-question-4-title": "What are the risks with layer 2?",
   "layer-2-faq-question-4-description-1": "Layer 2 projects contain additional risks compared to holding funds and transacting directly on Ethereum Mainnet. For instance, sequencers may go down, leading you to have to wait to access funds.",
   "layer-2-faq-question-4-description-2": "We encourage you to do your own research before transferring significant funds to a layer 2. For more information on the technology, risks, and trust assumptions of layer 2s, we recommend checking out <a href=\"https://l2beat.com/?view=risk\">L2BEAT</a>, which provides a comprehensive risk assessment framework of each project.",

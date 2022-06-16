@@ -39,9 +39,9 @@ El ether se mintea cuando un minero crea un bloque en la cadena de bloques de Et
 
 Además de crear ether a través de las recompensas por bloque, el ether puede destruirse mediante un proceso llamado «quema». Cuando se quema el ether, este se elimina de la circulación de forma permanente.
 
-La quema de ether se produce en cada transacción en Ethereum. When users pay for their transactions, a base gas fee, set by the network according to transactional demand, gets destroyed. This, coupled with variable block sizes and a maximum gas fee, simplifies transaction fee estimation on Ethereum. When network demand is high, [blocks](https://etherscan.io/block/12965263) can burn more ether than they mint, effectively offsetting ether issuance.
+La quema de ether se produce en cada transacción en Ethereum. Cuando los usuarios pagan por sus transacciones, se destruye una tasa de gas base, fijada por la red en función de la demanda transaccional. Esto, unido al tamaño variable de los bloques y a una tasa máxima de gas, simplifica la estimación de la tasa de transacción en Ethereum. Cuando la demanda de la red es alta, [los bloques](https://etherscan.io/block/12965263) pueden quemar más éter del que acuñan, compensando así la emisión de éter.
 
-Burning the base fee prevents various ways the miners could manipulate it otherwise. For example, if miners got the base fee, they could include their own transactions for free and raise the base fee for everyone else. Alternatively, they could refund the base fee to some users off-chain, leading to a more opaque and complex transaction fee market.
+La quema de la tasa base evita que los mineros puedan manipularla de otra manera. Por ejemplo, si los mineros obtuvieran la tarifa base, podrían incluir sus propias transacciones de forma gratuita y aumentar la tarifa base para todos los demás. También podrían devolver la tarifa base a algunos usuarios fuera de la cadena, lo que llevaría a un mercado de tarifas de transacción más opaco y complejo.
 
 ## Denominaciones de ether {#denominations}
 

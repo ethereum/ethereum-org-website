@@ -276,4 +276,4 @@ Aşağıda ERC-20 token sözleşmesinin ABI'si bulunuyor. Bir ERC-20, Ethereum �
 ## İlgili konular {#related-topics}
 
 - [JavaScript istemci kütüphaneleri](/developers/docs/apis/javascript/)
-- [Ethereum sanal makinesi](/developers/docs/ethereum-virtual-machine/)
+- [Ethereum sanal makinesi](/developers/docs/evm/)

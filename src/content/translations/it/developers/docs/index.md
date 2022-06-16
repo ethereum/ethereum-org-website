@@ -7,7 +7,7 @@ sidebar: true
 
 Questa documentazione è stata creata per supportare nello sviluppo per Ethereum. Tratta il concetto che sta alla base di Ethereum, spiega lo stack e propone documentazione su argomenti avanzati per utilizzi e casi d'uso più complessi.
 
-È stata creata congiuntamente dalla community ed è open source, quindi suggerisci pure nuovi argomenti, aggiungi contenuti o inserisci esempi dove credi che possano essere utili. Tutta la documentazione è modificabile tramite GitHub – se non sai come fare, [segui queste istruzioni](https://github.com/ethereum/ethereum-org-website/tree/dev/docs/contributing/EDITING_MARKDOWN.md).
+È stata creata congiuntamente dalla community ed è open source, quindi suggerisci pure nuovi argomenti, aggiungi contenuti o inserisci esempi dove credi che possano essere utili. Tutta la documentazione è modificabile tramite GitHub – se non sai come fare, [segui queste istruzioni](https://github.com/ethereum/ethereum-org-website/tree/dev/docs/contributing/editing-markdown.md).
 
 ## Moduli di sviluppo {#development-modules}
 

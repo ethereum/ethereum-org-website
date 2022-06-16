@@ -4,11 +4,14 @@ description: An introduction to Ethereum's networking layer.
 lang: en
 sidebar: true
 sidebarDepth: 2
+preMergeBanner: true
 ---
 
 Ethereum is a peer-to-peer network with thousands of nodes that must be able to communicate with one another using standardized protocols. The "networking layer" is the stack of protocols that allow those nodes to find each other and exchange information. This includes "gossiping" information (one-to-many communication) over the network as well as swapping requests and responses between specific nodes (one-to-one communication). Each node must adhere to specific networking rules to ensure they are sending and receiving the correct information.
 
 After [The Merge](/upgrades/merge/), there will be two parts of client software (execution clients and consensus clients), each with its own distinct networking stack. As well as communicating with other Ethereum nodes, the execution and consensus clients have to communicate with each other. This page gives an introductory explanation of the protocols that enable this communication.
+
+**Note that after [The Merge](/upgrades/merge) execution clients will no longer be responsible for gossiping blocks, but they will still gossip transactions over the execution-layer peer-to-peer network. Transactions will be passed to consensus clients via a local RPC connection, where they will be packaged into Beacon blocks. Consensus clients will then gossip Beacon blocks across their p2p network.**
 
 ## Prerequisites {#prerequisites}
 

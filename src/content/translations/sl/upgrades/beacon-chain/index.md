@@ -17,7 +17,7 @@ summaryPoint4: Oddajniško verigo morda poznate pod imenom "faza 0", ki se upora
 
 ## Kakšen je namen oddajniške verige? {#what-does-the-beacon-chain-do}
 
-Oddajniška veriga bo izvajala in usklajevala razširjeno omrežje [drobcev](/upgrades/shard-chains/) in [zastavljavcev](/staking/). Vendar ne bo enaka kot [glavno Ethereum omrežje](/glossary/#mainnet) danes. Ne more obdelovati računov ali pametnih pogodb.
+Oddajniška veriga bo izvajala in usklajevala razširjeno omrežje [drobcev](/upgrades/sharding/) in [zastavljavcev](/staking/). Vendar ne bo enaka kot [glavno Ethereum omrežje](/glossary/#mainnet) danes. Ne more obdelovati računov ali pametnih pogodb.
 
 Vloga oddajniške verige se bo sčasoma spremenila, vendar je temeljni sestavni del [varnega, trajnostnega in nadgradljivega Ethereuma, ki ga želimo razviti](/upgrades/vision/).
 
@@ -33,7 +33,7 @@ Zastavljanje in delovanje kot validator sta lažja kot [rudarjenje](/developers/
 Če vas zanima, da bi postali validator in pomagali zaščititi oddajniško verigo, <a href="/staking/">preberite več o zastavljanju</a>.
 </InfoBanner>
 
-To je prav tako pomembna sprememba za drugo Eth2 nadgradnjo: [razdrobljene verige](/upgrades/shard-chains/).
+To je prav tako pomembna sprememba za drugo Eth2 nadgradnjo: [razdrobljene verige](/upgrades/sharding/).
 
 ### Priprava na razdrobljene verige {#setting-up-for-shard-chains}
 
@@ -55,7 +55,7 @@ Oddajniška veriga bo sprva obstajala ločeno od glavnega omrežja, ki ga uporab
 
 Razdrobljene verige lahko v ekosistem Ethereum varno vstopijo samo, ko je vključen mehanizem za doseganje soglasja z dokazom o deležu. Oddajniška veriga bo uvedla zastavljanje in tlakovala pot za nadgradnjo razdrobljenih verig, ki prihaja.
 
-<ButtonLink to="/upgrades/shard-chains/">Razdrobljene verige</ButtonLink>
+<ButtonLink to="/upgrades/sharding/">Razdrobljene verige</ButtonLink>
 
 <Divider />
 

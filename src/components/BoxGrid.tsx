@@ -1,7 +1,27 @@
 import React, { useState } from "react"
 import styled from "styled-components"
-
 import Emoji from "./Emoji"
+
+export interface IBoxItem {
+  emoji: string
+  title: string
+  description: string
+}
+
+export interface IProps {
+  items: Array<IBoxItem>
+}
+
+interface IBoxStyle {
+  isOpen: boolean
+  columnNumber: number
+  color: string
+}
+
+interface IGridItemProps extends IBoxItem, IBoxStyle {
+  index: number
+  callback: (idx: number) => void
+}
 
 const Title = styled.h3`
   font-size: 2.5rem;
@@ -35,7 +55,7 @@ const StyledEmoji = styled(Emoji)`
   }
 `
 
-const Box = styled.div`
+const Box = styled.div<IBoxStyle>`
   grid-row-start: ${(props) => (props.isOpen ? `1` : `auto`)};
   grid-row-end: ${(props) => (props.isOpen ? `span 2` : `auto`)};
   grid-column-start: ${(props) => (props.isOpen ? props.columnNumber : `auto`)};
@@ -70,9 +90,9 @@ const Box = styled.div`
 `
 
 // Represent string as 32-bit integer
-const hashCode = (string) => {
+const hashCode = (stringPhrase: string): number => {
   let hash = 0
-  for (const char of string) {
+  for (const char of stringPhrase) {
     const code = char.charCodeAt(0)
     hash = (hash << 5) - hash + code
     hash |= 0
@@ -91,7 +111,7 @@ const colors = [
   "gridPurple",
 ]
 
-const GridItem = ({
+const GridItem: React.FC<IGridItemProps> = ({
   description,
   columnNumber,
   emoji,
@@ -112,9 +132,9 @@ const GridItem = ({
       color={color}
     >
       {isOpen ? (
-        <Emoji mb={"2rem"} text={emoji} size="6" />
+        <Emoji mb={"2rem"} text={emoji} size={6} />
       ) : (
-        <StyledEmoji size="6" text={emoji} />
+        <StyledEmoji size={6} text={emoji} />
       )}
       <div>
         <Title>{title}</Title>
@@ -124,12 +144,12 @@ const GridItem = ({
   )
 }
 
-const BoxGrid = ({ items }) => {
+const BoxGrid: React.FC<IProps> = ({ items }) => {
   const [indexOpen, setOpenIndex] = useState(0)
 
   return (
     <Grid>
-      {items.map((item, idx) => {
+      {items.map((item, idx: number) => {
         let columnNumber = idx + 1
         if (columnNumber > 4) {
           columnNumber = columnNumber - 3

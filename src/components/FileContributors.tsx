@@ -10,6 +10,7 @@ import Modal from "./Modal"
 import Translation from "./Translation"
 import { ButtonSecondary } from "./SharedStyledComponents"
 import { getLocaleTimestamp } from "../utils/time"
+import { Lang } from "../utils/languages"
 
 const loadingStyles = css`
   font-size: 0;
@@ -47,7 +48,9 @@ const Container = styled.div`
   }
 `
 
-const SkeletonContainer = styled(Container)`
+const SkeletonContainer = styled(Container)<{
+  loading: boolean
+}>`
   justify-content: flex-start;
   position: absolute;
   width: 100%;
@@ -224,7 +227,32 @@ const COMMIT_HISTORY = gql`
   }
 `
 
-const FileContributors = ({ relativePath, className, editPath }) => {
+interface Author {
+  name: string
+  email: string
+  avatarUrl: string
+  user: {
+    login: string
+    url: string
+  }
+}
+
+interface Commit {
+  author: Author
+  committedDate: string
+}
+
+export interface IProps {
+  relativePath: string
+  className?: string
+  editPath?: string
+}
+
+const FileContributors: React.FC<IProps> = ({
+  relativePath,
+  className,
+  editPath,
+}) => {
   const [isModalOpen, setModalOpen] = useState(false)
   const intl = useIntl()
 
@@ -234,15 +262,14 @@ const FileContributors = ({ relativePath, className, editPath }) => {
 
   if (error) return null
 
-  const commits = data?.repository?.ref?.target?.history?.edges?.map(
-    (commit) => commit.node
-  )
+  const commits: Array<Commit> =
+    data?.repository?.ref?.target?.history?.edges?.map((commit) => commit.node)
 
   const lastCommit = commits?.[0] || {}
   const lastContributor = lastCommit?.author || {}
   const uniqueContributors =
     commits?.reduce(
-      (res, cur) => {
+      (res: Array<Author>, cur: Commit) => {
         if (cur.author.user === null) {
           return res
         }
@@ -300,7 +327,7 @@ const FileContributors = ({ relativePath, className, editPath }) => {
               </Link>
             )}
             {!lastContributor.user && <span>{lastContributor.name}</span>},{" "}
-            {getLocaleTimestamp(intl.locale, lastCommit.committedDate)}
+            {getLocaleTimestamp(intl.locale as Lang, lastCommit.committedDate)}
           </Info>
         </LeftContent>
         <ButtonContainer>

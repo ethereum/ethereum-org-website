@@ -276,4 +276,4 @@ Vous trouverez ci-dessous l’ABI pour le contrat de jetons ERC-20. Un jeton ERC
 ## Sujets connexes {#related-topics}
 
 - [Bibliothèques clientes JavaScript](/developers/docs/apis/javascript/)
-- [Machine virtuelle Ethereum (EVM)](/developers/docs/ethereum-virtual-machine/)
+- [Machine virtuelle Ethereum (EVM)](/developers/docs/evm/)

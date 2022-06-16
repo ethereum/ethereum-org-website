@@ -59,7 +59,7 @@ No início, o plano era trabalhar em cadeias de fragmentos antes da fusão – p
 
 Essa será uma avaliação contínua da comunidade quanto à necessidade de rodadas potencialmente múltiplas de cadeias de fragmentos para permitir dimensionamento sem limites.
 
-<ButtonLink to="/upgrades/shard-chains/">
+<ButtonLink to="/upgrades/sharding/">
   Cadeias de fragmentos
 </ButtonLink>
 

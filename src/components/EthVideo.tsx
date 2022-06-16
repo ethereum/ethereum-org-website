@@ -4,7 +4,12 @@ import { ThemeContext } from "styled-components"
 import darkVideo from "../assets/ethereum-hero-dark.mp4"
 import lightVideo from "../assets/ethereum-hero-light.mp4"
 
-const EthVideo = ({ className, videoSrc, alt }) => {
+export interface IProps {
+  className?: string
+  videoSrc?: string
+}
+
+const EthVideo: React.FC<IProps> = ({ className, videoSrc }) => {
   const themeContext = useContext(ThemeContext)
   const isDarkTheme = themeContext.isDark
 
@@ -14,7 +19,6 @@ const EthVideo = ({ className, videoSrc, alt }) => {
     <div className={className}>
       <video
         id="hero-video"
-        alt={alt}
         width="100%"
         height="auto"
         src={src}

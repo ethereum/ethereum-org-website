@@ -7,7 +7,7 @@ sidebar: true
 
 本文档旨在帮助您构建以太坊。 它从概念层面，解释了以太坊的技术堆栈，并记录了以太坊更复杂的应用和使用案例。
 
-基于开源社区的努力，您可以随时提出新的主题，添加新内容，并在您认为可能有用的地方提供示例。 所有文档都可通过 GitHub 编辑 — 如果您不了解如何使用，[请遵循这些说明](https://github.com/ethereum/ethereum-org-website/tree/dev/docs/contributing/EDITING_MARKDOWN.md)。
+基于开源社区的努力，您可以随时提出新的主题，添加新内容，并在您认为可能有用的地方提供示例。 所有文档都可通过 GitHub 编辑 — 如果您不了解如何使用，[请遵循这些说明](https://github.com/ethereum/ethereum-org-website/tree/dev/docs/contributing/editing-markdown.md)。
 
 ## 开发单元 {#development-modules}
 
