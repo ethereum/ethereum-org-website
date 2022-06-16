@@ -17,7 +17,7 @@ summaryPoint4: This upgrade is planned to follow The Merge of Mainnet with the B
 
 ## What is sharding? {#what-is-sharding}
 
-Sharding is the process of splitting a database horizontally to spread the load – it’s a common concept in computer science. In an Ethereum context, sharding will work synergistically with [layer 2 rollups] by splitting up the burden of handling the large amount of data needed by rollups over the entire network. This will continue to reduce network congestion and increase transactions per second.
+Sharding is the process of splitting a database horizontally to spread the load – it’s a common concept in computer science. In an Ethereum context, sharding will work synergistically with [layer 2 rollups](/layer-2/) by splitting up the burden of handling the large amount of data needed by rollups over the entire network. This will continue to reduce network congestion and increase transactions per second.
 
 This is important for reasons other than scalability.
 
