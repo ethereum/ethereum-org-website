@@ -3,7 +3,7 @@ import React, { useState } from "react"
 import { getImage, GatsbyImage } from "gatsby-plugin-image"
 import styled from "styled-components"
 import { components } from "react-select"
-const { Option } = components
+const { Control, Option } = components
 
 // Components
 import Icon from "../Icon"
@@ -81,6 +81,16 @@ const StyledSelect = styled(Select)`
     background: none;
     cursor: pointer;
 
+    svg {
+      width: 24px;
+      height: 24px;
+
+      path {
+        fill: ${(props) => props.theme.colors.primary};
+        stroke: ${(props) => props.theme.colors.primary};
+      }
+    }
+
     .react-select__value-container {
       .react-select__single-value {
         color: ${(props) => props.theme.colors.primary};
@@ -98,6 +108,16 @@ const StyledSelect = styled(Select)`
 
     &:hover {
       background: ${(props) => props.theme.colors.primary};
+
+      svg {
+        width: 24px;
+        height: 24px;
+
+        path {
+          fill: ${(props) => props.theme.colors.text};
+          stroke: ${(props) => props.theme.colors.text};
+        }
+      }
       .react-select__value-container {
         .react-select__single-value {
           color: ${(props) => props.theme.colors.text};
@@ -118,6 +138,16 @@ const StyledSelect = styled(Select)`
   .react-select__control--is-focused {
     border: none;
     background: ${(props) => props.theme.colors.primary};
+
+    svg {
+      width: 24px;
+      height: 24px;
+
+      path {
+        fill: ${(props) => props.theme.colors.text};
+        stroke: ${(props) => props.theme.colors.text};
+      }
+    }
 
     .react-select__value-container {
       .react-select__single-value {
@@ -442,14 +472,18 @@ const WalletTable = ({ data, filters, walletData }) => {
     return showWallet
   })
 
-  const IconOption = (props) => {
-    return (
-      <Option {...props}>
-        {props.data.icon}
-        {props.data.label}
-      </Option>
-    )
-  }
+  const IconOption = (props) => (
+    <Option {...props}>
+      {props.data.icon}
+      {props.data.label}
+    </Option>
+  )
+
+  const IconControl = ({ children, ...props }) => (
+    <Control {...props}>
+      {props.selectProps.value.icon} {children}
+    </Control>
+  )
 
   return (
     <Container>
@@ -466,7 +500,7 @@ const WalletTable = ({ data, filters, walletData }) => {
             setFirstFeatureSelect(selectedOption)
           }}
           defaultValue={firstFeatureSelect}
-          components={{ Option: IconOption }}
+          components={{ Option: IconOption, Control: IconControl }}
         />
         <StyledSelect
           className="react-select-container"
@@ -476,7 +510,7 @@ const WalletTable = ({ data, filters, walletData }) => {
             setSecondFeatureSelect(selectedOption)
           }}
           defaultValue={secondFeatureSelect}
-          components={{ Option: IconOption }}
+          components={{ Option: IconOption, Control: IconControl }}
         />
         <StyledSelect
           className="react-select-container"
@@ -486,7 +520,7 @@ const WalletTable = ({ data, filters, walletData }) => {
             setThirdFeatureSelect(selectedOption)
           }}
           defaultValue={thirdFeatureSelect}
-          components={{ Option: IconOption }}
+          components={{ Option: IconOption, Control: IconControl }}
         />
       </WalletContentHeader>
       {filteredWallets.map((wallet, idx) => {
