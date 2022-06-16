@@ -221,7 +221,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                   </li>
                   <li>
                     Fees can be high depending on the demand so we reccomend
-                    using Layer 2s.
+                    using <Link to="/layer-2">Layer 2s</Link>.
                   </li>
                   <li>
                     There are options for custodial and non custodial wallets.
