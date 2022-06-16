@@ -680,8 +680,8 @@ const Layer2Page = ({ data }) => {
           <Translation id="layer-2-use-layer-2-1" />
         </p>
         <p>
-          <strong>NOTE:</strong> When bridging over and using layer 2, it is important to note
-          that you will control the address for your{" "}
+          <strong>NOTE:</strong> When bridging over and using layer 2, it is
+          important to note that you will control the address for your{" "}
           <Link to="/glossary/#eoa">EOA account</Link> (an account where only a
           single private key controls the account) just like on Ethereum
           Mainnet. However, if you are using a{" "}

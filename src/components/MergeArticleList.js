@@ -19,9 +19,24 @@ const reads = [
     link: "https://consensys.net/blog/news/the-state-of-the-merge-an-update-on-ethereums-merge-to-proof-of-stake-in-2022/",
   },
   {
-    title: "Announcing the Kintsugi Merge Testnet",
+    title: "Announcing the Ropsten Merge Testnet",
     description: "Ethereum Foundation",
-    link: "https://blog.ethereum.org/2021/12/20/kintsugi-merge-testnet/",
+    link: "https://blog.ethereum.org/2022/05/30/ropsten-merge-announcement/",
+  },
+  {
+    title: "Execution layer specs",
+    description: "Ethereum Foundation",
+    link: "https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/merge.md",
+  },
+  {
+    title: "Consensus layer specs",
+    description: "Ethereum Foundation",
+    link: "https://github.com/ethereum/consensus-specs/tree/dev/specs/bellatrix",
+  },
+  {
+    title: "Engine API specs",
+    description: "Ethereum Foundation",
+    link: "https://github.com/ethereum/execution-apis/tree/main/src/engine",
   },
 ]
 
