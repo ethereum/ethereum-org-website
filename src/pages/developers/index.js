@@ -238,8 +238,7 @@ const DevelopersPage = ({ data }) => {
         description={translateMessageId("page-developers-meta-desc", intl)}
       />
       <PreMergeBanner announcementOnly>
-        Some docs may be out-of-date related to these changes and have been
-        marked with a banner similar to this. Updates coming soon.
+        <Translation id="page-upgrades-merge-banner-developers-landing" />
       </PreMergeBanner>
       <Content>
         <HeroContainer>

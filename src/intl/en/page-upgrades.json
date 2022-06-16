@@ -1,5 +1,8 @@
 {
   "page-upgrades-beacon-date": "Shipped!",
   "page-upgrades-merge-date": "~Q3/Q4 2022",
-  "page-upgrades-shards-date": "~2023"
+  "page-upgrades-shards-date": "~2023",
+  "page-upgrades-merge-banner-intro": "The Merge is approaching, and comes with changes to Ethereum.",
+  "page-upgrades-merge-banner-content-outdated": "Some content on this page may be out-of-date related to these changes, and updates are coming soon.",
+  "page-upgrades-merge-banner-developers-landing": "Some docs may be out-of-date related to these changes and have been marked with a banner similar to this. Updates coming soon."
 }

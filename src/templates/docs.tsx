@@ -200,9 +200,9 @@ const DocsPage = ({
       )}
       {showMergeBanner && (
         <PreMergeBanner announcementOnly={isDevelopersHome}>
-          {isDevelopersHome &&
-            "Some docs may be out-of-date related to these changes and have been \
-            marked with a banner similar to this. Updates coming soon."}
+          {isDevelopersHome && (
+            <Translation id="page-upgrades-merge-banner-developers-landing" />
+          )}
         </PreMergeBanner>
       )}
       <ContentContainer isZenMode={isZenMode}>

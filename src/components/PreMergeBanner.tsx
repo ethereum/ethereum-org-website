@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import BannerNotification from "./BannerNotification"
 import Link from "./Link"
-import Translations from "../Translations"
+import Translation from "../Translation"
 
 const StyledBannerNotification = styled(BannerNotification)`
   display: flex;
@@ -31,10 +31,14 @@ const PreMergeBanner: React.FC<IProps> = ({
 }) => (
   <StyledBannerNotification shouldShow className={className}>
     <p>
-      The Merge is approaching, and comes with changes to Ethereum.{" "}
-      {!announcementOnly &&
-        "Some content on this page may be out-of-date related to these changes, and updates are coming soon. "}
-      {children} <Link to="/upgrades/merge/">Learn more about The Merge</Link>
+      <Translation id="page-upgrades-merge-banner-intro" />{" "}
+      {!announcementOnly && (
+        <Translation id="page-upgrades-merge-banner-content-outdated" />
+      )}{" "}
+      {children}{" "}
+      <Link to="/upgrades/merge/">
+        <Translation id="page-upgrades-merge-btn" />
+      </Link>
     </p>
   </StyledBannerNotification>
 )
