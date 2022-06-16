@@ -130,7 +130,7 @@ export const Banner = styled.div`
   margin: 50px 0;
   display: flex;
   border-radius: 10px;
-  background-color: #2a3233;
+  background: ${(props) => props.theme.colors.cardGradient};
 
   h3 {
     margin-top: 0;
