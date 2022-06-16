@@ -8,7 +8,7 @@ incomplete: true
 
 ## Introduction {#introduction}
 
-One of the many Ethereum development standards focus on token interfaces. These standards help ensure smart contracts remain composable, so for instance when a new project issues a token, that it remains compatible with existing decentralized exchanges.
+Many Ethereum development standards focus on token interfaces. These standards help ensure smart contracts remain composable, so for instance when a new project issues a token, that it remains compatible with existing decentralized exchanges.
 
 ## Prerequisites {#prerequisites}
 
