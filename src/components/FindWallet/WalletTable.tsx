@@ -59,7 +59,7 @@ const WalletContentHeader = styled(Grid)`
   min-height: 50px;
   border-bottom: 1px solid ${(props) => props.theme.colors.primary};
   position: sticky;
-  top: 76px;
+  top: 132px;
   padding-top: 8px;
   background: ${(props) => props.theme.colors.background};
   z-index: 1;

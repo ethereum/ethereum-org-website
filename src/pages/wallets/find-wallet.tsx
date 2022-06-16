@@ -68,10 +68,19 @@ const TableContent = styled(Content)`
   gap: 24px;
 `
 
+const MobileFilterToggleContainer = styled.div`
+  position: sticky;
+  top: 76px;
+  background: ${(props) => props.theme.colors.background};
+  width: 100%;
+  z-index: 1;
+`
+
 const MobileFilterToggle = styled.div`
   display: none;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     display: flex;
+    float: left;
     gap: 1rem;
     justify-content: center;
     align-items: center;
@@ -81,6 +90,7 @@ const MobileFilterToggle = styled.div`
     padding: 6px 20px 10px 20px;
     margin: auto;
     margin-left: 0;
+    z-index: 1;
   }
 
   p {
@@ -256,25 +266,27 @@ const FindWalletPage = ({ data, location }) => {
           objectFit="contain"
         />
       </HeroContainer>
-      <MobileFilterToggle
-        onClick={() => {
-          setShowMobileSidebar(!showMobileSidebar)
-        }}
-      >
-        <div>
-          <p>FILTERS</p>
-          <SecondaryText>
-            {Object.values(filters).reduce((acc, filter) => {
-              if (filter) {
-                acc += 1
-              }
-              return acc
-            }, 0)}{" "}
-            active
-          </SecondaryText>
-        </div>
-        <FilterBurger />
-      </MobileFilterToggle>
+      <MobileFilterToggleContainer>
+        <MobileFilterToggle
+          onClick={() => {
+            setShowMobileSidebar(!showMobileSidebar)
+          }}
+        >
+          <div>
+            <p>FILTERS</p>
+            <SecondaryText>
+              {Object.values(filters).reduce((acc, filter) => {
+                if (filter) {
+                  acc += 1
+                }
+                return acc
+              }, 0)}{" "}
+              active
+            </SecondaryText>
+          </div>
+          <FilterBurger />
+        </MobileFilterToggle>
+      </MobileFilterToggleContainer>
       <TableContent>
         <FilterSidebar showMobileSidebar={showMobileSidebar}>
           <FilterTabs>
