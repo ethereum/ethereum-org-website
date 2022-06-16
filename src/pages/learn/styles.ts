@@ -110,13 +110,18 @@ export const Center = styled.div`
 `
 
 export const DocsContainer = styled.div`
-  margin: 0 100px;
+  margin: 0 135px;
   display: flex;
   flex-flow: column nowrap;
   gap: 10px;
+
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    margin: 0;
+  }
 `
 
 export const AdditionalReadingHeader = styled.h4`
+  margin-top: 40px;
   font-weight: 700;
   text-align: center;
 `
@@ -134,6 +139,10 @@ export const Banner = styled.div`
   ul {
     margin-bottom: 0;
   }
+
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    flex-flow: column nowrap;
+  }
 `
 
 export const BannerBody = styled.div`
@@ -142,4 +151,11 @@ export const BannerBody = styled.div`
 
 export const BannerImage = styled.div`
   align-self: end;
+`
+
+export const Section = styled.section`
+  margin-top: 100px;
+  &:first-child {
+    margin-top: 0;
+  }
 `
