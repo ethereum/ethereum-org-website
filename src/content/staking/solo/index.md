@@ -90,7 +90,7 @@ The Staking Launchpad is an open source application that will help you become a 
 <StakingLaunchpadWidget />
 
 <InfoBanner emoji=":panda:" isWarning>
-<strong>Note for existing stakers:</strong> The Merge is approaching which brings a few changes since staking was launched. Make sure you're prepared with the <a href="https://launchpad.ethereum.org/en/merge-readiness">Merge readiness checklist</a> over on the Staking Launchpad.
+<strong>Note for existing stakers:</strong> The Merge is approaching, which brings a few changes since staking was launched. Make sure you're prepared with the <a href="https://launchpad.ethereum.org/en/merge-readiness">Merge readiness checklist</a> over on the Staking Launchpad.
 </InfoBanner>
 
 ## What to consider with node and client setup tools {#node-tool-considerations}
@@ -181,9 +181,9 @@ Offline penalties are proportional to how many others are offline at the same ti
 </ExpandableCard>
 
 <ExpandableCard title="Do I need to do anything before The Merge?">
-Anyone currently running a CL (Beacon Chain) client will be required to also run an EL client after The Merge. This is a result of the new Engine API that will be used to interface between the two layers, requiring a JWT secret. Anyone currently running a Beacon Chain without an execution layer client will need to sync the execution layer before The Merge to continue being in sync with the network.
+Stakers currently running a consensus layer client (Beacon Chain) will also be required to run an execution layer client after The Merge. The new Engine API will be used to interface between the two layers, requiring a JWT secret. If you currently run a Beacon Chain without an execution layer client, you will need to sync the execution layer before The Merge to stay in sync with the network.
 
-The Merge will also bring unburnt transaction fees to validators. These fees do not accumulate in the balance associated with the validator keys, but instead can be directed to a regular Ethereum address of your choice. In order to properly receive the priority fees/tips from proposed blocks, stakers must update their client settings with the address they would like to receive tips at.
+The Merge will also bring unburnt transaction fees to validators. These fees do not accumulate in the balance associated with the validator keys but instead can be directed to a regular Ethereum address of your choice. To receive your tips (priority fees) from proposed blocks, you should update your client settings with the address you want your tips sent to.
 
 Links to individual client documentation and additional information can be found on the Merge readiness checklist over on the Launchpad.
 

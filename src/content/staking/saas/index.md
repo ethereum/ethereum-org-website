@@ -85,10 +85,10 @@ All of these keys can always be regenerated in a reproducible manner using your 
 The Merge will <em>not</em> enable the ability to withdraw your stake or protocol rewards; this feature is planned for the Shanghai upgrade, which will follow the Merge by an estimated six months to a year.
 </ExpandableCard>
 
-<ExpandableCard title="I use an SaaS, do I need to do anything for The Merge?">
-ETH/token holders, pooled/SaaS stakers and general Ethereum users <strong>do not need to do anything to prepare for The Merge</strong>.
+<ExpandableCard title="Do SaaS stakers need to do anything for The Merge?">
+SaaS stakers <strong>do not need to do anything to prepare for The Merge</strong>.
 
-There are a few things node operators must attend to for this upgrade. Check with your individual staking provider for assurance their systems are ready to go.
+There are a few things node operators must attend to for this upgrade. Check with your staking provider for assurance their systems are ready to go.
 
 Learn more about [The Merge](/upgrades/merge/)
 </ExpandableCard>
