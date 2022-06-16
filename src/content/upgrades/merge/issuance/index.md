@@ -82,7 +82,7 @@ Stakers may also choose to exit and withdraw their entire validator balance. To 
 - Total annual issuance rate: **~0.49%**
 
 <InfoBanner>
-Total annual issuance rate: <strong>~0.49%</strong>
+Total annual issuance rate: <strong>~0.49%</strong><br/><br/>
 Net reduction in annual ETH issuance: <strong>~89.4%</strong> (0.49% / 4.62% * 100)
 </InfoBanner>
 
