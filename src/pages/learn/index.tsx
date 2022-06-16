@@ -351,7 +351,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
             >
               <>
                 <Center>
-                  <GatsbyImage image={getImage(data.financeTransparent)} />
+                  <GatsbyImage image={getImage(data.rhino)} />
                 </Center>
                 <ButtonLink>Start staking</ButtonLink>
               </>
@@ -362,7 +362,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
             >
               <>
                 <Center>
-                  <GatsbyImage image={getImage(data.stablecoins)} />
+                  <GatsbyImage image={getImage(data.ethereumInside)} />
                 </Center>
                 <ButtonLink>Run a node</ButtonLink>
               </>
@@ -381,7 +381,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
             >
               <>
                 <Center>
-                  <GatsbyImage image={getImage(data.financeTransparent)} />
+                  <GatsbyImage image={getImage(data.hackathon)} />
                 </Center>
                 <ButtonLink>Is Ethereum green?</ButtonLink>
               </>
@@ -392,7 +392,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
             >
               <>
                 <Center>
-                  <GatsbyImage image={getImage(data.stablecoins)} />
+                  <GatsbyImage image={getImage(data.merge)} />
                 </Center>
                 <ButtonLink>Read more</ButtonLink>
               </>
@@ -403,7 +403,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
             >
               <>
                 <Center>
-                  <GatsbyImage image={getImage(data.stablecoins)} />
+                  <GatsbyImage image={getImage(data.financeTransparent)} />
                 </Center>
                 <ButtonLink>Read whitepaper</ButtonLink>
               </>
@@ -430,7 +430,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
             >
               <>
                 <Center>
-                  <GatsbyImage image={getImage(data.financeTransparent)} />
+                  <GatsbyImage image={getImage(data.enterprise)} />
                 </Center>
                 <ButtonLink>Explore more</ButtonLink>
               </>
@@ -441,7 +441,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
             >
               <>
                 <Center>
-                  <GatsbyImage image={getImage(data.stablecoins)} />
+                  <GatsbyImage image={getImage(data.dogeComputer)} />
                 </Center>
                 <ButtonLink>How can I get Involved?</ButtonLink>
               </>
@@ -452,7 +452,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
             >
               <>
                 <Center>
-                  <GatsbyImage image={getImage(data.stablecoins)} />
+                  <GatsbyImage image={getImage(data.impact)} />
                 </Center>
                 <ButtonLink>Explore communities</ButtonLink>
               </>
@@ -529,6 +529,23 @@ export const query = graphql`
     developersEthBlocks: file(
       relativePath: { eq: "developers-eth-blocks.png" }
     ) {
+      ...CardImageFragment
+    }
+    rhino: file(relativePath: { eq: "upgrades/upgrade_rhino.png" }) {
+      ...CardImageFragment
+    }
+    ethereumInside: file(
+      relativePath: { eq: "run-a-node/ethereum-inside.png" }
+    ) {
+      ...CardImageFragment
+    }
+    merge: file(relativePath: { eq: "upgrades/merge.png" }) {
+      ...CardImageFragment
+    }
+    hackathon: file(relativePath: { eq: "hackathon_transparent.png" }) {
+      ...CardImageFragment
+    }
+    enterprise: file(relativePath: { eq: "enterprise-eth.png" }) {
       ...CardImageFragment
     }
     newRings: file(relativePath: { eq: "upgrades/newrings.png" }) {
