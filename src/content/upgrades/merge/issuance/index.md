@@ -56,8 +56,8 @@ Total ETH supply: **~119,300,000 ETH** (as of Q2 2022)
 
 <InfoBanner>
 <strong>Total annual issuance rate: ~4.62%</strong> (4.13% + 0.49%)<br/><br/>
-<strong>~89.4%</strong> of the issuance is going to miners on the execution layer (4.13 / 4.62 \* 100)<br/><br/>
-<strong>~10.6%</strong> is being issued to stakers on the consensus layer (0.49 / 4.62 \* 100)
+<strong>~89.4%</strong> of the issuance is going to miners on the execution layer (4.13 / 4.62 * 100)<br/><br/>
+<strong>~10.6%</strong> is being issued to stakers on the consensus layer (0.49 / 4.62 * 100)
 </InfoBanner>
 
 ## Post-merge {#post-merge}
