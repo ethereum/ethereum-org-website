@@ -3,6 +3,7 @@ title: Networks
 description: An overview of Ethereum's networks and where to get testnet ether (ETH) for testing your application.
 lang: en
 sidebar: true
+preMergeBanner: true
 ---
 
 Networks are different Ethereum environments you can access for development, testing, or production use cases. Since Ethereum is a protocol, there can be multiple independent "networks" that conform to the protocol without interacting with each other.
