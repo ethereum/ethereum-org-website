@@ -57,7 +57,7 @@ Proof-of-stake has the advantage of having a registry of all approved block prod
 
 This responsibility is in contrast to proof-of-work, where miners have no obligation to the network and could stop mining and turn their node software off permanently in an instant without repercussion. There is also no registry of known block proposers and no reliable way to split network responsibilities safely.
 
-[More on sharding](/upgrades/shard-chains/)
+[More on sharding](/upgrades/sharding/)
 
 ## Relationship between upgrades {#relationship-between-upgrades}
 
