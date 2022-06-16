@@ -130,6 +130,7 @@ const FilterTabs = styled.div`
 
   p {
     margin: 0;
+    letter-spacing: 0.02rem;
   }
 `
 
@@ -282,13 +283,13 @@ const FindWalletPage = ({ data, location }) => {
               active={!showFeatureFilters}
               onClick={() => setShowFeatureFilters(false)}
             >
-              <p>PROFILE FILTERS</p>
+              <p>Profile Filters</p>
             </FilterTab>
             <FilterTab
               active={showFeatureFilters}
               onClick={() => setShowFeatureFilters(true)}
             >
-              <p>FEATURE FILTERS</p>
+              <p>Feature Filters</p>
             </FilterTab>
           </FilterTabs>
           <div>

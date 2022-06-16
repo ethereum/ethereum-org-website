@@ -42,9 +42,17 @@ const Grid = styled.div`
   display: grid;
   grid-template-columns: 40% auto auto auto 5%;
   width: 100%;
+  column-gap: 0.5rem;
+  align-items: center;
+  
 
   p {
     margin: 0;
+  }
+
+  :hover{
+    background: ${(props) => props.theme.colors.boxShadow};
+    transition: 0.5s all;
   }
 
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
@@ -57,11 +65,10 @@ const Grid = styled.div`
 `
 
 const WalletContentHeader = styled(Grid)`
-  min-height: 50px;
   border-bottom: 1px solid ${(props) => props.theme.colors.primary};
   position: sticky;
   top: 76px;
-  padding-top: 8px;
+  padding: 8px;
   background: ${(props) => props.theme.colors.background};
   z-index: 1;
 
@@ -235,8 +242,16 @@ const FlexInfo = styled.div`
   align-items: center;
 
   p {
-    margin: 0;
     padding: 0;
+    font-size: 1.2rem;
+  }
+  p + p {
+    margin: 0.1rem 0 0.3rem;
+    font-size: 0.9rem;
+  }
+  p + a {
+    font-size: 0.9rem;
+    
   }
 `
 
@@ -251,8 +266,8 @@ const Image = styled(GatsbyImage)`
 `
 
 const SecondaryText = styled.p`
-  font-size: 14px;
-  line-height: 14px;
+  font-size: 0.7rem;
+  line-height: 0.85rem;
   color: ${(props) => props.theme.colors.text200};
 `
 

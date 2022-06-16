@@ -51,7 +51,8 @@ const Title = styled.div`
   display: flex;
   align-items: center;
   gap: "1rem";
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
+
 `
 
 const H3 = styled.h3`
@@ -59,6 +60,13 @@ const H3 = styled.h3`
   margin-left: 0.5rem;
   margin-top: 0;
   margin-bottom: 0;
+`
+
+const H4 = styled.h4`
+  margin-top: 0;
+  color: ${(props) => props.theme.colors.secondary};
+  font-size: 0.9rem;
+  font-weight: normal;
 `
 
 const Grid = styled.div`
@@ -76,8 +84,9 @@ const StyledIcon = styled(Icon)<{ selected: boolean }>`
 
 const PersonaFeature = styled.div`
   display: flex;
-  gap: 0.25rem;
-  font-size: 0.9rem;
+  gap: 0.2rem;
+  font-size: 0.85rem;
+  margin: 0.1rem;
   svg {
     width: 28px;
     height: 28px;
@@ -449,7 +458,7 @@ const WalletPersonasSidebar = ({ setFilters }) => {
               />
               <H3>{persona.title}</H3>
             </Title>
-            <p>{persona.description}</p>
+            <H4>{persona.description}</H4>
             <Grid>
               {persona.featureHighlight.map((feature) => (
                 <PersonaFeature>
