@@ -233,8 +233,8 @@ Originally, the plan was to work on sharding before The Merge to address scalabi
 
 Plans for sharding are rapidly evolving, but given the rise and success of layer 2 technologies to scale transaction execution, sharding plans have shifted to finding the most optimal way to distribute the burden of storing compressed calldata from rollup contracts, allowing for exponential growth in network capacity. This would not be possible without first transitioning to proof-of-stake.
 
-<ButtonLink to="/upgrades/shard-chains/">
-  Data sharding
+<ButtonLink to="/upgrades/sharding/">
+  Sharding
 </ButtonLink>
 
 ## Further reading {#further-reading}

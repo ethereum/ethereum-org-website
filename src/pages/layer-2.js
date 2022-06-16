@@ -897,7 +897,7 @@ const Layer2Page = ({ data }) => {
             <i>- Finematics</i>
           </li>
           <li>
-            <Link to="/upgrades/shard-chains/">
+            <Link to="/upgrades/sharding/">
               <Translation id="scaling-layer-1-with-shard-chains" />
             </Link>
           </li>

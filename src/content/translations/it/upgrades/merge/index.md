@@ -59,7 +59,7 @@ In origine, il piano era quello di operare sulle shard chain prima della Fusione
 
 Si tratterà di una valutazione continua da parte della community circa la necessità di cicli potenzialmente multipli di shard chain per consentire una scalabilità senza fine.
 
-<ButtonLink to="/upgrades/shard-chains/">
+<ButtonLink to="/upgrades/sharding/">
   Shard chain
 </ButtonLink>
 

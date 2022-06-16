@@ -409,7 +409,7 @@ It's estimated that scalability upgrades will allow the network to process betwe
 
 [Vitalik Buterin on transactions per second potential with sharding](https://twitter.com/VitalikButerin/status/1312905884549300224)
 
-At the bare minimum, sharding will allow 64 times the amount of transactions as today which sits at around 15 transactions. That's the amount of shard chains (extra data and capacity) being introduced. [More on shard chains](/upgrades/shard-chains/)
+At the bare minimum, sharding will allow 64 times the amount of transactions as today which sits at around 15 transactions. That's the amount of shard chains (extra data and capacity) being introduced. [More on shard chains](/upgrades/sharding/)
 
 That means we can estimate how long it will take to process 100,000 transactions so we can compare it to the Visa example above.
 
