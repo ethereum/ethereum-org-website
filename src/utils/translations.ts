@@ -4,7 +4,7 @@ import type { Lang } from "./languages"
 
 import defaultStrings from "../intl/en.json"
 
-type TranslationKey = keyof typeof defaultStrings
+export type TranslationKey = keyof typeof defaultStrings
 
 const consoleError = (message: string): void => {
   const { NODE_ENV } = process.env

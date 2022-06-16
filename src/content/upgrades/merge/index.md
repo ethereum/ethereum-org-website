@@ -227,9 +227,9 @@ In order to simplify and maximize focus on a successful transition to proof-of-s
 
 Stay up-to-date with the [Shanghai upgrade planning issue on GitHub](https://github.com/ethereum/pm/issues/450), or the [EF Research and Development Blog](https://blog.ethereum.org/category/research-and-development/). For those curious, learn more about [What Happens After The Merge](https://youtu.be/7ggwLccuN5s?t=101), presented by Vitalik at the April 2021 ETHGlobal event.
 
-### The Merge and data sharding {#merge-and-data-sharding}
+### The Merge and sharding {#merge-and-data-sharding}
 
-Originally, the plan was to work on shard chains before The Merge to address scalability. However, with the boom of [layer 2 scaling solutions](/layer-2/), the priority has shifted to swapping proof-of-work to proof-of-stake via The Merge.
+Originally, the plan was to work on sharding before The Merge to address scalability. However, with the boom of [layer 2 scaling solutions](/layer-2/), the priority has shifted to swapping proof-of-work to proof-of-stake via The Merge.
 
 Plans for sharding are rapidly evolving, but given the rise and success of layer 2 technologies to scale transaction execution, sharding plans have shifted to finding the most optimal way to distribute the burden of storing compressed calldata from rollup contracts, allowing for exponential growth in network capacity. This would not be possible without first transitioning to proof-of-stake.
 
