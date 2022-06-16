@@ -9,7 +9,7 @@ import Card from "../../components/Card"
 import Callout from "../../components/Callout"
 import Link from "../../components/Link"
 import Translation from "../../components/Translation"
-
+import PreMergeBanner from "../../components/PreMergeBanner"
 import ButtonLink from "../../components/ButtonLink"
 import PageMetadata from "../../components/PageMetadata"
 import {
@@ -237,6 +237,10 @@ const DevelopersPage = ({ data }) => {
         title={translateMessageId("page-developer-meta-title", intl)}
         description={translateMessageId("page-developers-meta-desc", intl)}
       />
+      <PreMergeBanner announcementOnly>
+        Some docs may be out-of-date related to these changes and have been
+        marked with a banner similar to this. Updates coming soon.
+      </PreMergeBanner>
       <Content>
         <HeroContainer>
           <HeroCopyContainer>

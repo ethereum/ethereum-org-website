@@ -180,11 +180,12 @@ const DocsPage = ({
 
   const tocItems = mdx.tableOfContents?.items
   const isPageIncomplete = !!mdx.frontmatter.incomplete
-  const showMergeBanner = !!mdx.frontmatter.preMergeBanner
 
   const { editContentUrl } = siteData.siteMetadata || {}
   const { relativePath, slug } = pageContext
   const absoluteEditPath = `${editContentUrl}${relativePath}`
+  const isDevelopersHome = relativePath.endsWith("/developers/docs/index.md")
+  const showMergeBanner = !!mdx.frontmatter.preMergeBanner || isDevelopersHome
 
   return (
     <Page dir={isRightToLeft ? "rtl" : "ltr"}>
@@ -194,11 +195,16 @@ const DocsPage = ({
       />
       {isPageIncomplete && (
         <BannerNotification shouldShow={isPageIncomplete}>
-          {/* TODO move to common.json */}
           <Translation id="banner-page-incomplete" />
         </BannerNotification>
       )}
-      {showMergeBanner && <PreMergeBanner />}
+      {showMergeBanner && (
+        <PreMergeBanner announcementOnly>
+          {isDevelopersHome &&
+            "Some docs may be out-of-date related to these changes and have been \
+            marked with a banner similar to this. Updates coming soon."}
+        </PreMergeBanner>
+      )}
       <ContentContainer isZenMode={isZenMode}>
         <Content>
           <H1 id="top">{mdx.frontmatter.title}</H1>
