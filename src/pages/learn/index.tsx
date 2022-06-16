@@ -103,8 +103,11 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
             <p>
               You have probably heard a thing or two about cryptocurrencies,
               Bitcoin and blockchain, but do you know what those actually are
-              and how they relate to Ethereum? And what is Ethereum anyway?
-              Check out our introductory What is Ethereum page.
+              and how they relate to Ethereum? And what is Ethereum anyway?{" "}
+              <strong>
+                Check out our introductory{" "}
+                <Link to="/what-is-ethereum/">What is Ethereum</Link> page.
+              </strong>
             </p>
             <p>
               Not only that Ethereum can do what Bitcoin does (transfer money
@@ -122,7 +125,9 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                   <Center>
                     <GatsbyImage image={getImage(data.whatIsEth)} />
                   </Center>
-                  <ButtonLink>What is Ethereum?</ButtonLink>
+                  <ButtonLink to="/what-is-ethereum/">
+                    What is Ethereum?
+                  </ButtonLink>
                 </>
               </Card>
               <Card
@@ -133,7 +138,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                   <Center>
                     <GatsbyImage image={getImage(data.eth)} />
                   </Center>
-                  <ButtonLink>What is ETH?</ButtonLink>
+                  <ButtonLink to="/eth">What is ETH?</ButtonLink>
                 </>
               </Card>
               <Card
@@ -145,7 +150,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                   <Center>
                     <GatsbyImage image={getImage(data.impact)} />
                   </Center>
-                  <ButtonLink>Where to get ETH?</ButtonLink>
+                  <ButtonLink to="/">Where to get ETH?</ButtonLink>
                 </>
               </Card>
             </CardGrid>
@@ -154,7 +159,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
               Additional reading on Ethereum
             </AdditionalReadingHeader>
             <DocsContainer>
-              <DocLink to="/">What are Smart Contracts?</DocLink>
+              <DocLink to="/smart-contracts">What are Smart Contracts?</DocLink>
               <DocLink to="/">A technical introduction to Ethereum</DocLink>
               <DocLink to="/">What is Web3?</DocLink>
               <DocLink to="/">Decentralizing Everything</DocLink>
@@ -178,7 +183,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                   <Center>
                     <GatsbyImage image={getImage(data.wallet)} />
                   </Center>
-                  <ButtonLink>What is a wallet?</ButtonLink>
+                  <ButtonLink to="/wallets">What is a wallet?</ButtonLink>
                 </>
               </Card>
               <Card
@@ -189,7 +194,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                   <Center>
                     <GatsbyImage image={getImage(data.futureTransparent)} />
                   </Center>
-                  <ButtonLink>List of wallets</ButtonLink>
+                  <ButtonLink to="/wallets">List of wallets</ButtonLink>
                 </>
               </Card>
               <Card
@@ -200,7 +205,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                   <Center>
                     <GatsbyImage image={getImage(data.dogeComputer)} />
                   </Center>
-                  <ButtonLink>Crypto security 101</ButtonLink>
+                  <ButtonLink to="/security">Crypto security 101</ButtonLink>
                 </>
               </Card>
             </CardGrid>
