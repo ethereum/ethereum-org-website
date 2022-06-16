@@ -2,6 +2,8 @@
 import React, { useState } from "react"
 import { getImage, GatsbyImage } from "gatsby-plugin-image"
 import styled from "styled-components"
+import { components } from "react-select"
+const { Option } = components
 
 // Components
 import Icon from "../Icon"
@@ -64,6 +66,7 @@ const WalletContentHeader = styled(Grid)`
   top: 76px;
   padding-top: 8px;
   background: ${(props) => props.theme.colors.background};
+  z-index: 1;
 
   span {
     color: ${(props) => props.theme.colors.primary};
@@ -133,6 +136,35 @@ const StyledSelect = styled(Select)`
       .react-select__indicators {
         .react-select__indicator {
           color: ${(props) => props.theme.colors.text};
+        }
+      }
+    }
+  }
+
+  .react-select__menu {
+    .react-select__menu-list {
+      .react-select__option {
+        display: flex;
+        gap: 0.5rem;
+        svg {
+          width: 24px;
+          height: 24px;
+
+          path {
+            fill: ${(props) => props.theme.colors.text};
+            stroke: ${(props) => props.theme.colors.text};
+          }
+        }
+      }
+      .react-select__option--is-selected {
+        svg {
+          width: 24px;
+          height: 24px;
+
+          path {
+            fill: ${(props) => props.theme.colors.buttonColor};
+            stroke: ${(props) => props.theme.colors.buttonColor};
+          }
         }
       }
     }
@@ -410,6 +442,15 @@ const WalletTable = ({ data, filters, walletData }) => {
     return showWallet
   })
 
+  const IconOption = (props) => {
+    return (
+      <Option {...props}>
+        {props.data.icon}
+        {props.data.label}
+      </Option>
+    )
+  }
+
   return (
     <Container>
       <WalletContentHeader>
@@ -425,6 +466,7 @@ const WalletTable = ({ data, filters, walletData }) => {
             setFirstFeatureSelect(selectedOption)
           }}
           defaultValue={firstFeatureSelect}
+          components={{ Option: IconOption }}
         />
         <StyledSelect
           className="react-select-container"
@@ -434,6 +476,7 @@ const WalletTable = ({ data, filters, walletData }) => {
             setSecondFeatureSelect(selectedOption)
           }}
           defaultValue={secondFeatureSelect}
+          components={{ Option: IconOption }}
         />
         <StyledSelect
           className="react-select-container"
@@ -443,6 +486,7 @@ const WalletTable = ({ data, filters, walletData }) => {
             setThirdFeatureSelect(selectedOption)
           }}
           defaultValue={thirdFeatureSelect}
+          components={{ Option: IconOption }}
         />
       </WalletContentHeader>
       {filteredWallets.map((wallet, idx) => {
