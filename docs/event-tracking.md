@@ -1,8 +1,22 @@
 # Event tracking on ethereum.org
 
-This is a guide how to prepare event tracking when creating a new page or redesigning an existing page.
+This is a guide on how to prepare event tracking when creating a new page or redesigning an existing page.
 
-Events are useful for measuring user engagement on the website. It's a great way to validate our design decisions and assumptions. We can create custom reports in Matomo to view events of specific URL. Events should be grouped by specific topic + position on the page. (Ex: L2 page external links, selected bridge, selected cex)
+## What are events?
+
+Events are user interactions on the application that cannot be tracked by standard pageviews within a session. We create custom code snippets in the application in order to trigger these events.
+
+Events are useful for measuring user engagement on the website. Tracking events lets us know when users interact with elements and forms and can help us understand how successful users are at accomplishing their goals.
+
+Event tracking is a great way to validate our design decisions and assumptions. We can create reports in Matomo to gather insights and improve our product.
+
+[View the Matomo guide on event tracking](https://matomo.org/guide/reports/event-tracking/).
+
+## How is event tracking implemented?
+
+ethereum.org uses Matomo, an open-source alternative to Google Analytics that allows to protect user privacy by not sharing any analytics with third parties.
+
+We implmented Matomo using the [JavaScript tracking client](https://developer.matomo.org/guides/tracking-javascript-guide) via the [`gatsby-matomo-plugin`](https://github.com/kremalicious/gatsby-plugin-matomo) Gatsby plugin.
 
 ## What to measure?
 
@@ -10,13 +24,18 @@ Ideally, ask yourself what design decision/assumptions have been made on the pag
 
 - clicks
 - downloads
-- Popup viewed
-- Form field abandons
-- Scrolling down a page
+- site searches
+- popups viewed/dismissed
+- form fields abandoned
+- scroll behavior down a page
 
 This data can be later used to decide whether a feature is being used or is underperforming.
 
+It's helpful to ask yourself how the results of what we track and measure might influence our decision making. If measuring something won't help us make concrete product decisions, it's probably not worth tracking.
+
 # How to name events?
+
+Broadly, events should be grouped by specific topic (e.g. L2 page external links, selected bridge, selected cex).
 
 ## Each event comprises of 4 hierarchical values:
 
