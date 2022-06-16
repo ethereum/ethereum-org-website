@@ -73,7 +73,7 @@ Alternatively, pools that utilize an ERC-20 liquidity token allow users to trade
 </ExpandableCard>
 
 <ExpandableCard title="Do pooled stakers need to do anything for The Merge?">
-ETH/token holders, pooled/SaaS stakers and general Ethereum users <strong>do not need to do anything to prepare for The Merge</strong>.
+Pooled stakers <strong>do not need to do anything to prepare for The Merge</strong>.
 
 However, as The Merge approaches, be on high alert for scammers. **You do not need to upgrade your ETH or staked ETH tokens** for the transition to proof-of-stake.
 
