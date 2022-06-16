@@ -112,7 +112,7 @@ const MergeInfographic: React.FC<IProps> = ({ className }) => {
   return (
     <Container className={className}>
       <ExecutionLayer>
-        Ethereum State: transactions, apps, contracts, balances
+        <Translation id="page-upgrades-merge-infographic-el" />
       </ExecutionLayer>
       <SvgText getString={getString} />
       <Background />

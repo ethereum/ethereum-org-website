@@ -17,8 +17,6 @@ summaryPoint4: Précédemment, cette étape était appelée « le docking ».
 
 ## Qu'est-ce que la fusion ? {#what-is-the-docking}
 
-<MergeInfographic />
-
 Il est important de se rappeler que, dans un premier temps, la [chaîne phare](/upgrades/beacon-chain/) sortira séparément du [réseau principal](/glossary/#mainnet) - la chaîne que nous utilisons aujourd'hui. Le réseau principal Ethereum continuera d'être sécurisé par [la preuve de travail](/developers/docs/consensus-mechanisms/pow/), même lorsque la chaîne phare fonctionnera en parallèle en utilisant [la preuve de mise à enjeu](/developers/docs/consensus-mechanisms/pos/). La fusion se fera au moment où ces deux systèmes se réuniront enfin.
 
 Imaginez qu'Ethereum est un vaisseau spatial qui n’est pas tout à fait prêt pour un voyage interstellaire. Avec la chaîne phare, la communauté a construit un nouveau moteur et une coque renforcée. Quand il sera temps, le vaisseau actuel s'arrimera à ce nouveau système, fusionnant en un seul vaisseau, prêt à parcourir des années lumières et à s'emparer de l'univers.
