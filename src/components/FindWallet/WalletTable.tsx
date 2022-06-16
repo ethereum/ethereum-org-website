@@ -42,11 +42,17 @@ const Grid = styled.div`
   grid-template-columns: 40% auto auto auto 5%;
   width: 100%;
 
+  p {
+    margin: 0;
+  }
+
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     grid-template-columns: 40% auto auto 0% 5%;
 
     div:nth-child(4) {
       visibility: hidden;
+      width: 0;
+      height: 0;
     }
   }
 
@@ -55,6 +61,8 @@ const Grid = styled.div`
 
     div:nth-child(3) {
       visibility: hidden;
+      width: 0;
+      height: 0;
     }
   }
 `
@@ -70,6 +78,11 @@ const WalletContentHeader = styled(Grid)`
 
   span {
     color: ${(props) => props.theme.colors.primary};
+  }
+
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    gap: 0.5rem;
+    align-items: center;
   }
 `
 
