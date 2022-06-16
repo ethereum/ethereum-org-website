@@ -199,7 +199,7 @@ const DocsPage = ({
         </BannerNotification>
       )}
       {showMergeBanner && (
-        <PreMergeBanner announcementOnly>
+        <PreMergeBanner announcementOnly={isDevelopersHome}>
           {isDevelopersHome &&
             "Some docs may be out-of-date related to these changes and have been \
             marked with a banner similar to this. Updates coming soon."}
