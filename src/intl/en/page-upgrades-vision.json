@@ -33,7 +33,7 @@
   "page-upgrades-vision-security-desc-8": "Ethereum's security model also needs to change because of the introduction of sharding. The Beacon Chain will coordinate all of the validators who will be responsible for asserting that all data has been made available, but every node will no longer be required to hold the entire history of the chain. A new role is also anticipated, known as a dedicated block builder, who will work alongside block proposers (validators) for efficient and safe block production. Proof-of-stake is a prerequisite to sharding.",
   "page-upgrades-vision-security-desc-10": "Staking also means you don't need to invest in elite hardware to participate directly in consensus. This should encourage more people to become a validator, increasing the network's decentralization and decreasing the attack surface area.",
   "page-upgrades-vision-security-staking": "Stake ETH",
-  "page-upgrades-vision-security-validator": "You can become a validator by staking your ETH, but remember, you don't need any ETH to run your own node.",
+  "page-upgrades-vision-security-validator": "You can become a validator by staking your ETH.",
   "page-upgrades-vision-shard-chains": "shard chains",
   "page-upgrades-vision-shard-date": "Estimate: 2021",
   "page-upgrades-vision-shard-desc-4": "Shard chains will spread the load of the network into 64 new blockchains. Shards have the potential to drastically improve transaction speed - up to 100,000 per second.",
