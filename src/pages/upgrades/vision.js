@@ -117,7 +117,7 @@ const VisionPage = ({ data, location }) => {
       image: getImage(data.shards),
       title: <Translation id="page-upgrades-shard-title" />,
       description: <Translation id="page-upgrades-shard-desc" />,
-      to: "/upgrades/shard-chains/",
+      to: "/upgrades/sharding/",
       date: <Translation id="page-upgrades-shard-estimate" />,
     },
   ]
@@ -217,7 +217,7 @@ const VisionPage = ({ data, location }) => {
           </p>
           <p>
             <Translation id="page-upgrades-vision-scalability-desc-4" />{" "}
-            <Link to="/upgrades/shard-chains/">
+            <Link to="/upgrades/sharding/">
               <Translation id="page-upgrades-vision-shard-upgrade" />
             </Link>{" "}
           </p>
@@ -282,7 +282,7 @@ const VisionPage = ({ data, location }) => {
               <Translation id="page-upgrades-vision-sustainability-desc-8" />
             </p>
             <ButtonLink to="/upgrades/merge/">
-              <Translation id="page-upgrades-vision-merge-btn" />
+              <Translation id="page-upgrades-merge-btn" />
             </ButtonLink>
           </InfoBanner>
         </CentralContent>

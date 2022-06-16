@@ -30,6 +30,7 @@ import UpgradeTableOfContents from "../components/UpgradeTableOfContents"
 import Translation from "../components/Translation"
 import TranslationsInProgress from "../components/TranslationsInProgress"
 import SectionNav from "../components/SectionNav"
+import ExpandableCard from "../components/ExpandableCard"
 import {
   Divider,
   Paragraph,
@@ -176,6 +177,7 @@ const components = {
   ShardChainsList,
   MergeArticleList,
   YouTube,
+  ExpandableCard,
 }
 
 const Title = styled.h1`
@@ -317,7 +319,7 @@ const dropdownLinks = {
     },
     {
       text: "page-upgrades-upgrades-shard-chains",
-      to: "/upgrades/shard-chains/",
+      to: "/upgrades/sharding/",
     },
   ],
 }

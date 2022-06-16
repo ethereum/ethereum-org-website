@@ -11,6 +11,7 @@ alt: An Eth logo being displayed via hologram.
 summaryPoint1: A way to represent anything unique as an Ethereum-based asset.
 summaryPoint2: NFTs are giving more power to content creators than ever before.
 summaryPoint3: Powered by smart contracts on the Ethereum blockchain.
+preMergeBanner: true
 ---
 
 NFTs are currently taking the digital art and collectibles world by storm. Digital artists are seeing their lives change thanks to huge sales to a new crypto-audience. And celebrities are joining in as they spot a new opportunity to connect with fans. But digital art is only one way to use NFTs. Really they can be used to represent ownership of any unique asset, like a deed for an item in the digital or physical realm.
@@ -408,7 +409,7 @@ It's estimated that scalability upgrades will allow the network to process betwe
 
 [Vitalik Buterin on transactions per second potential with sharding](https://twitter.com/VitalikButerin/status/1312905884549300224)
 
-At the bare minimum, sharding will allow 64 times the amount of transactions as today which sits at around 15 transactions. That's the amount of shard chains (extra data and capacity) being introduced. [More on shard chains](/upgrades/shard-chains/)
+At the bare minimum, sharding will allow 64 times the amount of transactions as today which sits at around 15 transactions. That's the amount of shard chains (extra data and capacity) being introduced. [More on shard chains](/upgrades/sharding/)
 
 That means we can estimate how long it will take to process 100,000 transactions so we can compare it to the Visa example above.
 
