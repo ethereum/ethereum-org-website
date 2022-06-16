@@ -72,7 +72,7 @@ Consensus layer issuance will continue as before The Merge, with small rewards f
 
 When validator withdrawals are enabled, stakers will be incentivized to remove their _earnings/rewards (balance over 32 ETH)_ as these funds are otherwise not contributing to their stake weight (which maxes as 32).
 
-Stakers may also choose to exit and withdraw their entire validator balance, but it is important to remember that full validator exits are rate limited. Depending on the total ETH staked at the time, only 6 validators may exit in a given epoch (6.4 minute period). This decreases to as low as 4 as more validators leave, to intentionally prevent the ability for large amounts of staked ETH to leave at once.
+Stakers may also choose to exit and withdraw their entire validator balance. To ensure Ethereum is stable, the number of validators leaving simultaneously is capped. Only six validators may exit in a given epoch (6.4 minute period) depending on the total ETH staked at the time. This decreases to as low as four as more validators withdraw to intentionally prevent large destabilizing amounts of staked ETH from leaving at once.
 
 ### Post-merge inflation breakdown {#post-merge-inflation-breakdown}
 

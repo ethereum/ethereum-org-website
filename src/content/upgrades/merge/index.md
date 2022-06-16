@@ -8,7 +8,7 @@ image: ../../../assets/upgrades/merge.png
 summaryPoint1: Soon, the current Ethereum Mainnet will merge with the Beacon Chain proof-of-stake system.
 summaryPoint2: This will mark the end of proof-of-work for Ethereum, and the full transition to proof-of-stake.
 summaryPoint3: This sets the stage for future scaling upgrades including data sharding.
-summaryPoint4: The Merge will reduce Ethereum's energy consumption by ~99.95%. Welcome to a new greener Ethereum.
+summaryPoint4: The Merge will reduce Ethereum's energy consumption by ~99.95%.
 ---
 
 <UpgradeStatus dateKey="page-upgrades-merge-date">
@@ -41,7 +41,7 @@ No history is lost. As Mainnet gets merged with the Beacon Chain, it will also m
 This transition to proof-of-stake will come with some changes to the way ether is supplied. Learn more about <a href="/upgrades/merge/issuance/">ether issuance before and after The Merge</a>.
 </InfoBanner>
 
-## What to I need to do to get ready? {#preparing-for-the-merge}
+## What do I need to do to get ready? {#preparing-for-the-merge}
 
 The Merge is one of the most significant and anticipated upgrades in the history of Ethereum, and although in the long-term its impact will be felt by everyone, in the near-term some folks will need to take action to be fully prepared.
 
@@ -63,14 +63,14 @@ As we approach The Merge of Ethereum Mainnet, **you should be on high alert for 
 title="Staking node operators and providers"
 contentPreview="If you are a staker running your own node setup or a node infrastructure provider, there are a few things you need to be aware of to be prepared for The Merge."
 id="staking-node-operators">
+
 Key action items include:
 
-- Running _both_ a consensus layer client as well as an execution layer client. Third-party endpoints to obtain execution data will be unavailable after The Merge.
-- Authenticating both execution layer and consensus layer clients with a shared JWT secret so they can securely communicate with one another.
+1. Run _both_ a consensus layer client and an execution layer client; third-party endpoints to obtain execution data will be unavailable after The Merge.
+1. Authenticate both execution layer and consensus layer clients with a shared JWT secret so they can securely communicate.
+1. Set a `fee recipient` address to receive your earned transaction fee tips/MEV.
 
-Not completing the above items will result in your node being seen as "offline" after The Merge until both layers are synced and authenticated.
-
-- Setting a `fee recipient` address to direct your earned transaction fee tips/MEV to.
+Not completing the first two items above items will result in your node being seen as "offline" after The Merge until both layers are synced and authenticated.
 
 Not setting a `fee recipient` will still allow your validator to behave as usual, but you will miss out on unburnt fee tips and any MEV you would have otherwise earned in blocks your validator proposes.
 
@@ -83,14 +83,15 @@ Note for stakers using [SaaS](/staking/saas/) or [staking pools](/staking/pools/
 title="Non-validating node operators and infrastructure providers"
 contentPreview="If you're operating a non-validating Ethereum node, the most significant change that comes with The Merge is the requirement to run clients for BOTH the execution layer AND the consensus layer."
 id="node-operators">
+
 You probably are already running an execution layer client, such as Geth, Erigon, Besu or Nethermind. Up until The Merge, an execution layer client was enough to receive, properly validate, and propagate blocks being gossiped by the network. _After The Merge_, the validity of transactions contained within an execution payload will also depend on the validity of the "consensus block" it is contained within.
 
-This means that a full Ethereum node after The Merge requires both an execution layer client as well as a consensus layer client. These two clients work tightly together using a new Engine API to properly determine the latest state of the network. The Engine API requires authentication using a JWT secret, which is provided to both clients allowing secure communication.
+As a result, a full Ethereum node after The Merge requires both an execution layer client and a consensus layer client. These two clients work together using a new Engine API. The Engine API requires authentication using a JWT secret, which is provided to both clients allowing secure communication.
 
 Key action items include:
 
 - Install a consensus layer client in addition to an execution layer client
-- Authenticating both execution layer and consensus layer clients with a shared JWT secret so they can securely communicate with one another.
+- Authenticate execution and consensus clients with a shared JWT secret so they can securely communicate with one another.
 
 Not completing the above items in time for The Merge will result in your node appearing to be "offline" until both layers are synced and authenticated.
 
@@ -101,7 +102,8 @@ Node operators can also check out the [Merge Readiness Checklist](https://launch
 title="Dapp and smart contract developers"
 contentPreview="The Merge has been designed to have minimal impact on smart contract and dapp developers, but there are a few small things devs may want to be aware of heading into The Merge."
 id="developers">
-These changes relate to <br/><br/>
+
+The Merge comes with changes to consensus, which also includes changes related to:
 
 - block structure
 - slot/block timing
