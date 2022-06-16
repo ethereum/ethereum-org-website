@@ -477,6 +477,10 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
             </CardGrid>
           </Section>
 
+          <Section>
+            <h2>Books and podcasts</h2>
+          </Section>
+
           <FeedbackCard />
         </ContentContainer>
       </Page>
