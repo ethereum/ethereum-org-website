@@ -33,6 +33,7 @@ import {
   Header4,
   ListItem,
 } from "../components/SharedStyledComponents"
+import PreMergeBanner from "../components/PreMergeBanner"
 
 import { ZenModeContext } from "../contexts/ZenModeContext.js"
 import { isLangRightToLeft } from "../utils/translations"
@@ -179,6 +180,7 @@ const DocsPage = ({
 
   const tocItems = mdx.tableOfContents?.items
   const isPageIncomplete = !!mdx.frontmatter.incomplete
+  const showMergeBanner = !!mdx.frontmatter.preMergeBanner
 
   const { editContentUrl } = siteData.siteMetadata || {}
   const { relativePath, slug } = pageContext
@@ -190,10 +192,13 @@ const DocsPage = ({
         title={mdx.frontmatter.title}
         description={mdx.frontmatter.description}
       />
-      <BannerNotification shouldShow={isPageIncomplete}>
-        {/* TODO move to common.json */}
-        <Translation id="banner-page-incomplete" />
-      </BannerNotification>
+      {isPageIncomplete && (
+        <BannerNotification shouldShow={isPageIncomplete}>
+          {/* TODO move to common.json */}
+          <Translation id="banner-page-incomplete" />
+        </BannerNotification>
+      )}
+      {showMergeBanner && <PreMergeBanner />}
       <ContentContainer isZenMode={isZenMode}>
         <Content>
           <H1 id="top">{mdx.frontmatter.title}</H1>
@@ -253,6 +258,7 @@ export const query = graphql`
         sidebar
         sidebarDepth
         isOutdated
+        preMergeBanner
       }
       body
       tableOfContents

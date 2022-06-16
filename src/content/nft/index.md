@@ -11,6 +11,7 @@ alt: An Eth logo being displayed via hologram.
 summaryPoint1: A way to represent anything unique as an Ethereum-based asset.
 summaryPoint2: NFTs are giving more power to content creators than ever before.
 summaryPoint3: Powered by smart contracts on the Ethereum blockchain.
+preMergeBanner: true
 ---
 
 NFTs are currently taking the digital art and collectibles world by storm. Digital artists are seeing their lives change thanks to huge sales to a new crypto-audience. And celebrities are joining in as they spot a new opportunity to connect with fans. But digital art is only one way to use NFTs. Really they can be used to represent ownership of any unique asset, like a deed for an item in the digital or physical realm.

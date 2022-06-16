@@ -3,6 +3,7 @@ title: Development Networks
 description: An overview of development networks and the tools available to help build Ethereum applications.
 lang: en
 sidebar: true
+preMergeBanner: true
 ---
 
 When building an Ethereum application with smart contracts, you'll want to run it on a local network to see how it works before deploying it.
