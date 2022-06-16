@@ -30,7 +30,11 @@ const Ghost = styled(BaseCard)`
   background-color: ${(props) => props.theme.colors.ghostCardGhost};
 `
 
-const GhostCard = ({ children, className }) => (
+export interface IProps {
+  className?: string
+}
+
+const GhostCard: React.FC<IProps> = ({ children, className }) => (
   <Container className={className}>
     <Ghost />
     <Card className="ghost-card-base">{children}</Card>

@@ -1,4 +1,4 @@
-import React from "react"
+import React, { ReactNode } from "react"
 import styled from "styled-components"
 import { GatsbyImage } from "gatsby-plugin-image"
 
@@ -73,9 +73,9 @@ const Image = styled(GatsbyImage)`
 `
 
 export type CardListItem = {
-  title: string
-  description?: string
-  caption?: string
+  title?: ReactNode
+  description?: ReactNode
+  caption?: ReactNode
   link?: string
   id?: string | number
 } & ImageProp

@@ -406,7 +406,7 @@ On estime que les mises à niveau d'évolutivité vont permettre au réseau de t
 
 [Vitalik Buterin sur le potentiel de transactions par seconde avec la fragmentation](https://twitter.com/VitalikButerin/status/1312905884549300224)
 
-Au strict minimum, la fragmentation va permettre 64 fois plus de transactions à la seconde qu'à l'heure actuelle, avec environ 15 transactions à la seconde. C'est la quantité de chaînes de fragments (données et capacité supplémentaires) qui est introduite. [En savoir plus sur les chaînes de fragments](/upgrades/shard-chains/)
+Au strict minimum, la fragmentation va permettre 64 fois plus de transactions à la seconde qu'à l'heure actuelle, avec environ 15 transactions à la seconde. C'est la quantité de chaînes de fragments (données et capacité supplémentaires) qui est introduite. [En savoir plus sur les chaînes de fragments](/upgrades/sharding/)
 
 Cela signifie que nous pouvons estimer le temps qu'il faudra pour traiter 100 000 transactions et le comparer à l'exemple Visa ci-dessus.
 

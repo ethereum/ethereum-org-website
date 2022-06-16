@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react"
 import styled from "styled-components"
 import axios from "axios"
 
-import Translation from "../components/Translation"
+import Translation from "./Translation"
 import Icon from "./Icon"
 import Link from "./Link"
 import Tooltip from "./Tooltip"
@@ -12,7 +12,10 @@ const InfoIcon = styled(Icon)`
   fill: ${(props) => props.theme.colors.text200};
 `
 
-const Card = styled.div`
+const Card = styled.div<{
+  isLeftAlign: boolean
+  isNegativeChange: boolean
+}>`
   display: flex;
   flex-direction: column;
   align-items: ${(props) => (props.isLeftAlign ? `flex-start` : `center`)};
@@ -42,7 +45,9 @@ const Title = styled.h4`
   color: ${(props) => props.theme.colors.text200};
 `
 
-const Price = styled.div`
+const Price = styled.div<{
+  hasError: boolean
+}>`
   line-height: 1.4;
   font-weight: 400;
   margin: ${(props) => (props.hasError ? `1rem 0` : 0)};
@@ -51,7 +56,9 @@ const Price = styled.div`
     props.hasError ? props.theme.colors.fail : props.theme.colors.text};
 `
 
-const ChangeContainer = styled.div`
+const ChangeContainer = styled.div<{
+  isLeftAlign: boolean
+}>`
   width: 100%;
   display: flex;
   align-items: center;
@@ -59,7 +66,9 @@ const ChangeContainer = styled.div`
   min-height: 33px; /* prevents jump when price loads*/
 `
 
-const Change = styled.div`
+const Change = styled.div<{
+  isNegativeChange: boolean
+}>`
   font-size: 1.5rem;
   line-height: 140%;
   margin-right: 1rem;
@@ -77,11 +86,16 @@ const ChangeTime = styled.div`
   color: ${(props) => props.theme.colors.text300};
 `
 
+export interface IProps {
+  className?: string
+  isLeftAlign: boolean
+}
+
 // TODO add prop to left vs. center align
-const EthPriceCard = ({ className, isLeftAlign }) => {
+const EthPriceCard: React.FC<IProps> = ({ className, isLeftAlign }) => {
   const [state, setState] = useState({
     currentPriceUSD: "",
-    percentChangeUSD: "",
+    percentChangeUSD: 0,
     hasError: false,
   })
 
@@ -93,9 +107,8 @@ const EthPriceCard = ({ className, isLeftAlign }) => {
       .then((response) => {
         if (response.data && response.data.ethereum) {
           const currentPriceUSD = response.data.ethereum.usd
-          const percentChangeUSD = +response.data.ethereum.usd_24h_change.toFixed(
-            2
-          )
+          const percentChangeUSD =
+            +response.data.ethereum.usd_24h_change.toFixed(2)
           setState({
             currentPriceUSD,
             percentChangeUSD,
@@ -106,6 +119,7 @@ const EthPriceCard = ({ className, isLeftAlign }) => {
       .catch((error) => {
         console.error(error)
         setState({
+          ...state,
           hasError: true,
         })
       })
@@ -123,7 +137,7 @@ const EthPriceCard = ({ className, isLeftAlign }) => {
     price = <Translation id="loading-error-refresh" />
   }
 
-  const isNegativeChange = state.percentChangeUSD && state.percentChangeUSD < 0
+  const isNegativeChange = state?.percentChangeUSD < 0
 
   const change = state.percentChangeUSD
     ? isNegativeChange

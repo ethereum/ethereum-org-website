@@ -406,7 +406,7 @@ Si stima che gli aggiornamenti di scalabilità consentiranno alla rete di elabor
 
 [Vitalik Buterin sulle transazioni per secondo potenziali con lo sharding](https://twitter.com/VitalikButerin/status/1312905884549300224)
 
-Come minimo, lo sharding consentirà 64 volte la quantità di transazioni di oggi, che si attesta a circa 15 transazioni. È la quantità di shard chain (dati e capacità supplementari) che vengono introdotte. [Maggiori informazioni sulle shard chain](/upgrades/shard-chains/)
+Come minimo, lo sharding consentirà 64 volte la quantità di transazioni di oggi, che si attesta a circa 15 transazioni. È la quantità di shard chain (dati e capacità supplementari) che vengono introdotte. [Maggiori informazioni sulle shard chain](/upgrades/sharding/)
 
 Ciò significa che possiamo stimare quanto tempo ci vorrà per elaborare 100.000 transazioni in modo da poterlo confrontare con l'esempio di Visa sopra riportato.
 

@@ -17,7 +17,7 @@ summaryPoint4: Być może znasz ten etap jako „Faza 1.5” z technicznego harm
 
 ## Czym jest dokowanie? {#what-is-the-docking}
 
-Ważne jest, by pamiętać, że początkowo inne ulepszenia Eth2 zostaną przetransportowane oddzielnie z [sieci głównej](/glossary/#mainnet) — sieci, której używamy dzisiaj. Sieć główna Ethereum będzie nadal zabezpieczona za pomocą [proof-of-work](/developers/docs/consensus-mechanisms/pow/), nawet gdy [łańcuch śledzący](/upgrades/beacon-chain/) i jego [łańcuch odłamków](/upgrades/shard-chains/) działają równolegle przy użyciu [proof-of-stake](/developers/docs/consensus-mechanisms/pos/). Dokowanie jest łączeniem tych dwóch systemów.
+Ważne jest, by pamiętać, że początkowo inne ulepszenia Eth2 zostaną przetransportowane oddzielnie z [sieci głównej](/glossary/#mainnet) — sieci, której używamy dzisiaj. Sieć główna Ethereum będzie nadal zabezpieczona za pomocą [proof-of-work](/developers/docs/consensus-mechanisms/pow/), nawet gdy [łańcuch śledzący](/upgrades/beacon-chain/) i jego [łańcuch odłamków](/upgrades/sharding/) działają równolegle przy użyciu [proof-of-stake](/developers/docs/consensus-mechanisms/pos/). Dokowanie jest łączeniem tych dwóch systemów.
 
 Wyobraź sobie że Ethereum jest statkiem kosmicznym, który nie jest gotowy na międzygalaktyczną podróż. Dzięki łańcuchowi śledzącemu i łańcuchom odłamkowym społeczność zbuduje nowy silnik i utwardzony kadłub. Kiedy przyjdzie czas, statek zostanie zadokowany z tymi nowymi systemami, więc będzie mógł być jedną całością, gotową do podróży na odległość wielu lat świetlnych i odkrywania wszechświata.
 
@@ -45,4 +45,4 @@ Kiedy nastąpi dokowanie, stakerzy zostaną przydzieleni do walidacji sieci gł�
 
 W momencie, gdy sieć główna staje się odłamkiem, udana implementacja łańcuchów odłamkowych jest kluczowa dla tej aktualizacji. Najprawdopodobniej ta sytuacja odegra kluczową rolę w pomaganiu społeczności w decydowaniu o dalszym rozwoju drugiego ulepszenia shardingu. To ulepszenie sprawi że pojawią się inne odłamki podobne do sieci głównej: będą gotowe do obsługi transakcji, inteligentnych kontraktów, a nie tylko dostarczania większej ilości danych.
 
-<ButtonLink to="/upgrades/shard-chains/">Łańcuchy odłamkowe</ButtonLink>
+<ButtonLink to="/upgrades/sharding/">Łańcuchy odłamkowe</ButtonLink>

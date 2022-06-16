@@ -36,7 +36,7 @@ Conversely, plasma chains derive their security from Mainnet. This makes them me
 
 ### Plasma vs sharding {#plasma-vs-sharding}
 
-Both plasma chains and [shard chains](/upgrades/shard-chains/) periodically publish cryptographic proofs to Ethereum Mainnet. However, both have different security properties.
+Both plasma chains and [shard chains](/upgrades/sharding/) periodically publish cryptographic proofs to Ethereum Mainnet. However, both have different security properties.
 
 Shard chains commit "collation headers" to Mainnet containing detailed information about each data shard. Nodes on Mainnet verify and enforce the validity of data shards, reducing the possibility of invalid shard transitions and protecting the network against malicious activity.
 
