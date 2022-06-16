@@ -82,9 +82,23 @@ export const ContentContainer = styled.article`
   }
 `
 export const Card = styled(OriginalCard)`
+  border-radius: 10px;
   justify-content: space-between;
   h3 {
     margin-top: 0;
+  }
+`
+
+export const CardGradient = styled(Card)`
+  justify-content: start;
+  background: ${(props) => props.theme.colors.cardGradient};
+
+  ul {
+    flex: 1;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    margin-bottom: 0;
   }
 `
 

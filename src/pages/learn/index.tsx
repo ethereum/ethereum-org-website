@@ -30,7 +30,9 @@ import {
   Banner,
   BannerBody,
   BannerImage,
+  CardGradient,
 } from "./styles"
+import Link from "../../components/Link"
 
 const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
   const intl = useIntl()
@@ -294,6 +296,38 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                 <ButtonLink>Explore dApps</ButtonLink>
               </>
             </Card>
+            <CardGradient
+              title="Emerging usecases"
+              description="There are also other prominent industries being disrupted by blockchain:"
+            >
+              <ul>
+                <li>
+                  <Link to="https://future.com/what-is-decentralized-science-aka-desci/">
+                    Decentralised Science (Desci)
+                  </Link>
+                </li>
+                <li>
+                  <Link to="https://decrypt.co/resources/what-are-play-to-earn-games-how-players-are-making-a-living-with-nfts">
+                    Play-to-earn Games (GameFI)
+                  </Link>
+                </li>
+                <li>
+                  <Link to="https://woodstockfund.medium.com/quadratic-funding-better-way-to-fund-public-goods-76f1679b2ba2">
+                    Fundraising via Quadratic Funding
+                  </Link>
+                </li>
+                <li>
+                  <Link to="https://hbr.org/2022/01/how-walmart-canada-uses-blockchain-to-solve-supply-chain-challenges">
+                    Supply chain management
+                  </Link>
+                </li>
+                <li>
+                  <Link to="https://tykn.tech/self-sovereign-identity/">
+                    Self-sovereign identity
+                  </Link>
+                </li>
+              </ul>
+            </CardGradient>
           </CardGrid>
 
           <AdditionalReadingHeader>
