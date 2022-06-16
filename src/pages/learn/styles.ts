@@ -1,6 +1,7 @@
 import styled from "styled-components"
 
 import PageHero from "../../components/PageHero"
+import OriginalCard from "../../components/Card"
 
 export const Container = styled.div`
   position: relative;
@@ -79,4 +80,52 @@ export const ContentContainer = styled.article`
       color: ${(props) => props.theme.colors.text200};
     }
   }
+`
+export const Card = styled(OriginalCard)`
+  justify-content: space-between;
+  h3 {
+    margin-top: 0;
+  }
+`
+
+export const Center = styled.div`
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`
+
+export const DocsContainer = styled.div`
+  margin: 0 100px;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 10px;
+`
+
+export const AdditionalReadingHeader = styled.h4`
+  font-weight: 700;
+  text-align: center;
+`
+
+export const Banner = styled.div`
+  margin: 50px 0;
+  display: flex;
+  border-radius: 10px;
+  background-color: #2a3233;
+
+  h3 {
+    margin-top: 0;
+  }
+
+  ul {
+    margin-bottom: 0;
+  }
+`
+
+export const BannerBody = styled.div`
+  padding: 40px;
+`
+
+export const BannerImage = styled.div`
+  align-self: end;
 `
