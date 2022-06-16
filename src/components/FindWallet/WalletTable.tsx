@@ -48,22 +48,10 @@ const Grid = styled.div`
 
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     grid-template-columns: 40% auto auto 0% 5%;
-
-    div:nth-child(4) {
-      visibility: hidden;
-      width: 0;
-      height: 0;
-    }
   }
 
   @media (max-width: ${(props) => props.theme.breakpoints.s}) {
     grid-template-columns: 40% auto 0% 0% 5%;
-
-    div:nth-child(3) {
-      visibility: hidden;
-      width: 0;
-      height: 0;
-    }
   }
 `
 
@@ -217,6 +205,22 @@ const StyledSelect = styled(Select)`
     .react-select__control {
       padding: 14px 0;
     }
+  }
+`
+
+const SecondStyledSelect = styled(StyledSelect)`
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    display: none;
+    height: 0;
+    width: 0;
+  }
+`
+
+const ThirdStyledSelect = styled(StyledSelect)`
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    display: none;
+    height: 0;
+    width: 0;
   }
 `
 
@@ -515,7 +519,7 @@ const WalletTable = ({ data, filters, walletData }) => {
           defaultValue={firstFeatureSelect}
           components={{ Option: IconOption, Control: IconControl }}
         />
-        <StyledSelect
+        <SecondStyledSelect
           className="react-select-container"
           classNamePrefix="react-select"
           options={featureDropdownItems}
@@ -525,7 +529,7 @@ const WalletTable = ({ data, filters, walletData }) => {
           defaultValue={secondFeatureSelect}
           components={{ Option: IconOption, Control: IconControl }}
         />
-        <StyledSelect
+        <ThirdStyledSelect
           className="react-select-container"
           classNamePrefix="react-select"
           options={featureDropdownItems}
