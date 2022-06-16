@@ -23,6 +23,7 @@ import ConnectDapps from "../../assets/wallets/connect_dapps.svg"
 import WithdrawCrypto from "../../assets/wallets/withdraw_crypto.svg"
 import Multisig from "../../assets/wallets/multisig.svg"
 import SocialRecover from "../../assets/wallets/social_recover.svg"
+import Swap from "../../assets/wallets/swap.svg"
 
 
 // Styles
@@ -160,7 +161,7 @@ const filterLabels = {
   },
   swaps: {
     label: "Swaps",
-    icon: <></>,
+    icon: <Swap />,
   },
   layer_2: {
     label: "Layer 2",
