@@ -21,10 +21,6 @@ Science is the process of discovering new truths about the world. These truths p
 
 To discover truths about the world, scientists need access to funding, scientific tools and communication channels. When control over these ressources is too centralized, new and unconventional ideas are often not explored. The goal of DeSci is focused on building decentralized resources for scientists - so everyone can participate in new scientific discovery.
 
-
-Desci vs. traditional biotech?
-Create side by side table comparison (like we have on DeFi/NFT/DAO pages
-
 ### A comparison {#desci-comparison}
 
 | DeSci                                                                                               | Traditional science                                                                                                            |
