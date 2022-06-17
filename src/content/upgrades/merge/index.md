@@ -7,7 +7,7 @@ sidebar: true
 image: ../../../assets/upgrades/merge.png
 summaryPoint1: Soon, the current Ethereum Mainnet will merge with the Beacon Chain proof-of-stake system.
 summaryPoint2: This will mark the end of proof-of-work for Ethereum, and the full transition to proof-of-stake.
-summaryPoint3: This sets the stage for future scaling upgrades including data sharding.
+summaryPoint3: This sets the stage for future scaling upgrades including sharding.
 summaryPoint4: The Merge will reduce Ethereum's energy consumption by ~99.95%.
 ---
 
@@ -215,7 +215,7 @@ The Ethereum upgrades are all somewhat interrelated. So let’s recap how The Me
 
 The Merge represents the formal adoption of the Beacon Chain as the new consensus layer to the current Mainnet execution layer. Once The Merge happens, validators will be assigned to secure Ethereum Mainnet, and mining on [proof-of-work](/developers/docs/consensus-mechanisms/pow/) will no longer be a valid means of block production.
 
-Blocks will instead be proposed by validating nodes that have ether staked for the right to participate in consensus. These upgrades set the stage for future scalability upgrades, including data sharding.
+Blocks will instead be proposed by validating nodes that have ether staked for the right to participate in consensus. These upgrades set the stage for future scalability upgrades, including sharding.
 
 <ButtonLink to="/upgrades/beacon-chain/">
   The Beacon Chain

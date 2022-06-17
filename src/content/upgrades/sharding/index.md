@@ -1,6 +1,6 @@
 ---
 title: Sharding
-description: Learn about data sharding - breaking up and distributing the data load needed to give Ethereum more transaction capacity and make it easier to run.
+description: Learn about sharding - breaking up and distributing the data load needed to give Ethereum more transaction capacity and make it easier to run.
 lang: en
 template: upgrade
 sidebar: true
