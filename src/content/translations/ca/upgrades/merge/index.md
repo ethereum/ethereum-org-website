@@ -59,7 +59,7 @@ Originalment, el pla era treballar en cadenes de fragments abans de La Fusió, p
 
 La comunitat avaluarà de forma contínua la necessitat de múltiples rondes de cadenes de fragments per permetre una escalabilitat infinita.
 
-<ButtonLink to="/upgrades/shard-chains/">
+<ButtonLink to="/upgrades/sharding/">
   Cadenes de fragments
 </ButtonLink>
 

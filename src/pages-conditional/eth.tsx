@@ -507,7 +507,7 @@ const EthPage = (props: PageProps<Queries.EthPageQuery, Context>) => {
               emoji={token.emoji}
               title={token.title}
               description={token.description}
-              size={5}
+              emojiSize={5}
             />
           ))}
         </RightColumn>

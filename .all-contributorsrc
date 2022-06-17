@@ -7840,6 +7840,44 @@
         "doc",
         "bug"
       ]
+    },
+    {
+      "login": "Barukimang",
+      "name": "Barukimang",
+      "avatar_url": "https://avatars.githubusercontent.com/u/16764792?v=4",
+      "profile": "https://github.com/Barukimang",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "kuzdogan",
+      "name": "Kaan Uzdoğan",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13069972?v=4",
+      "profile": "http://kaanuzdogan.com",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "NiloCK",
+      "name": "Colin Kennedy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/10780590?v=4",
+      "profile": "https://github.com/NiloCK",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "TimGrey998",
+      "name": "XOF",
+      "avatar_url": "https://avatars.githubusercontent.com/u/57596934?v=4",
+      "profile": "https://github.com/TimGrey998",
+      "contributions": [
+        "doc",
+        "translation",
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,

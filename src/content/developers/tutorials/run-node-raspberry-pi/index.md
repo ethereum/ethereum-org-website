@@ -9,6 +9,7 @@ skill: intermediate
 published: 2020-05-07
 source: r/ethereum
 sourceUrl: https://www.reddit.com/r/ethereum/comments/gf3nhg/ethereum_on_arm_raspberry_pi_4_images_release/
+preMergeBanner: true
 ---
 
 **TL;DR**: Flash your Raspberry Pi 4, plug in an ethernet cable, connect the SSD disk and power up the device to turn the Raspberry Pi 4 into a full Ethereum node running the execution layer, or the consensus layer (Beacon Chain / validator)

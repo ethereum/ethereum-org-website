@@ -37,7 +37,7 @@ Jeżeli poświadczasz szkodliwe bloki, tracisz zastaw.
 
 ### Łańcuch śledzący {#the-beacon-chain}
 
-Gdy Ethereum zastąpi proof-of-work przez proof-of-stake, zostanie dodana złożoność [łańcuchów odłamkowych](/upgrades/shard-chains/). Są to oddzielne blockchainy, które będą potrzebowały walidatorów do przetwarzania transakcji i tworzenia nowych bloków. Planowane są 64 łańcuchy odłamkowe, a wszystkie one wymagają współdzielonego porozumienia w kwestii stanu sieci. Potrzebna jest więc dodatkowa koordynacja, która zostanie zrealizowana z użyciem [łańcucha nawigacyjnego](/upgrades/beacon-chain/).
+Gdy Ethereum zastąpi proof-of-work przez proof-of-stake, zostanie dodana złożoność [łańcuchów odłamkowych](/upgrades/sharding/). Są to oddzielne blockchainy, które będą potrzebowały walidatorów do przetwarzania transakcji i tworzenia nowych bloków. Planowane są 64 łańcuchy odłamkowe, a wszystkie one wymagają współdzielonego porozumienia w kwestii stanu sieci. Potrzebna jest więc dodatkowa koordynacja, która zostanie zrealizowana z użyciem [łańcucha nawigacyjnego](/upgrades/beacon-chain/).
 
 Łańcuch śledzący odbiera informację o stanie z odłamków (fragmentów) i udostępnia ją innym odłamkom, aby sieć mogła pozostać zsynchronizowana. Łańcuch śledzący zarządza również walidatorami, od rejestrowania ich depozytów zastawnych po wydawanie im nagród i kar.
 

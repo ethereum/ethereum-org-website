@@ -59,7 +59,7 @@ Başlangıçta plan, ölçeklenebilirliği ele almak için Birleştirmeden önce
 
 Bu, sonsuz ölçeklenebilirliğe izin vermek için potansiyel olarak birden fazla parça zinciri turuna duyulan ihtiyaç konusunda topluluk tarafından, devam eden bir değerlendirme olacaktır.
 
-<ButtonLink to="/upgrades/shard-chains/">
+<ButtonLink to="/upgrades/sharding/">
   Shard zincirleri
 </ButtonLink>
 

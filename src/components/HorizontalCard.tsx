@@ -1,6 +1,6 @@
-import React from "react"
+import React, { ReactNode } from "react"
 import styled from "styled-components"
-import Emoji from "../components/Emoji"
+import Emoji from "./Emoji"
 
 const StyledCard = styled.div`
   border-radius: 4px;
@@ -19,9 +19,18 @@ const Description = styled.p`
 `
 
 const Title = styled.p`
-  font-size: 1.25rem;`
+  font-size: 1.25rem;
+`
 
-const HorizontalCard = ({
+export interface IProps {
+  emoji: string
+  title?: ReactNode
+  description: ReactNode
+  className?: string
+  emojiSize?: number
+}
+
+const HorizontalCard: React.FC<IProps> = ({
   emoji,
   title,
   description,

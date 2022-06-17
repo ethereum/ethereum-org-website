@@ -59,7 +59,7 @@ El plan inicial consistía en trabajar en cadenas de fragmentos antes de la fusi
 
 La necesidad de múltiples rondas de cadenas de fragmentos para permitir una escalabilidad infinita será objeto de evaluación continua por parte de la comunidad.
 
-<ButtonLink to="/upgrades/shard-chains/">
+<ButtonLink to="/upgrades/sharding/">
   Cadenas de fragmentos
 </ButtonLink>
 

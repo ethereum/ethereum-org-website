@@ -597,6 +597,19 @@ const StakingPage = ({ data }) => {
           <Content>
             <h2 id={tocItems.faq.id}>{tocItems.faq.title}</h2>
             <ExpandableCard
+              title={translateMessageId("page-staking-faq-4-question", intl)}
+            >
+              <p>
+                <Translation id="page-staking-faq-4-answer-p1" />
+              </p>
+              <p>
+                <Translation id="page-staking-faq-4-answer-p2" />
+              </p>
+              <ButtonLink to="/upgrades/merge/">
+                <Translation id="page-upgrades-merge-btn" />
+              </ButtonLink>
+            </ExpandableCard>
+            <ExpandableCard
               title={translateMessageId("page-staking-faq-1-question", intl)}
             >
               <Translation id="page-staking-faq-1-answer" />
