@@ -314,38 +314,47 @@ const ColoredLine = styled.div<{ color: string }>`
 const FeatureLabel = styled.div<{ hasFeature: boolean }>`
   display: flex;
   gap: 0.5rem;
+  font-size: 0.9rem;
+  line-height: 1.75rem;
   svg {
-    width: 24px;
-    height: 24px;
+    width: 1.75rem;
+    height: 1.75rem;
 
     path {
       fill: ${(props) =>
         props.hasFeature
           ? props.theme.colors.primary
-          : props.theme.colors.text200};
-      stroke: ${(props) =>
-        props.hasFeature
-          ? props.theme.colors.primary
-          : props.theme.colors.text200};
+          : props.theme.colors.tableItemBoxShadow};
     }
   }
   p {
+    margin-bottom: 0.75rem;
     color: ${(props) =>
       props.hasFeature
         ? props.theme.colors.primary
-        : props.theme.colors.text200};
+        : props.theme.colors.tableItemBoxShadow};
   }
 `
 
 const SocialsContainer = styled.div`
   text-align: center;
-  padding-bottom: 22px;
+  padding-bottom: 1rem;
+  p{
+    margin: 0;
+  }
+  a{
+    height: 32px;
+  }
+  
 `
 
 const Socials = styled.div`
   display: flex;
   gap: 1rem;
   justify-content: center;
+  align-items: center;
+  padding-bottom: 2rem:
+
 `
 
 // Constants
@@ -679,8 +688,8 @@ const WalletTable = ({ data, filters, walletData }) => {
                   </WalletMoreInfo>
                 </WalletMoreInfoContainer>
                 <SocialsContainer>
-                  <p>{wallet.name} links</p>
                   <Socials>
+                    <p>{wallet.name} links</p>
                     <Link to={wallet.url} hideArrow={true}>
                       <Icon name="webpage" size={"2rem"} color={true} />
                     </Link>
