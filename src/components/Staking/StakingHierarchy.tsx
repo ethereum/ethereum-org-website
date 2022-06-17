@@ -51,17 +51,17 @@ const Container = styled.div`
 `
 
 const Section = styled.div<{
-  number: string
+  number: number
 }>`
   --color: ${({ number, theme }) => {
     switch (number) {
-      case "1":
+      case 1:
         return theme.colors.stakingGold
-      case "2":
+      case 2:
         return theme.colors.stakingGreen
-      case "3":
+      case 3:
         return theme.colors.stakingBlue
-      case "4":
+      case 4:
         return theme.colors.stakingRed
       default:
         return "#000000"
@@ -69,13 +69,13 @@ const Section = styled.div<{
   }};
   --next-color: ${({ number, theme }) => {
     switch (number) {
-      case "1":
+      case 1:
         return theme.colors.stakingGreen
-      case "2":
+      case 2:
         return theme.colors.stakingBlue
-      case "3":
+      case 3:
         return theme.colors.stakingRed
-      case "4":
+      case 4:
         return "#00000000"
       default:
         return "#000000"
@@ -83,13 +83,13 @@ const Section = styled.div<{
   }};
   --fill-color: ${({ number, theme }) => {
     switch (number) {
-      case "1":
+      case 1:
         return theme.colors.stakingGoldFill
-      case "2":
+      case 2:
         return theme.colors.stakingGreenFill
-      case "3":
+      case 3:
         return theme.colors.stakingBlueFill
-      case "4":
+      case 4:
         return theme.colors.stakingRedFill
       default:
         return "#000000"
@@ -148,7 +148,7 @@ const Section = styled.div<{
   aside::after {
     border-image: linear-gradient(to bottom, var(--color), var(--next-color)) 1
       100%;
-    --scale: ${({ number }) => 1.05 + parseInt(number) / 70};
+    --scale: ${({ number }) => 1.05 + number / 70};
     --translate: ${({ number }) => number}px;
     transform: scale(var(--scale)) translateY(var(--translate));
   }
@@ -251,11 +251,12 @@ const Line = styled.aside`
     display: none;
   }
 `
+export interface IProps {}
 
-const StakingHierarchy: React.FC = () => {
+const StakingHierarchy: React.FC<IProps> = () => {
   return (
     <Container>
-      <Section number="1">
+      <Section number={1}>
         <Ether>
           <StyledEtherSvg size="100%" />
         </Ether>
@@ -306,7 +307,7 @@ const StakingHierarchy: React.FC = () => {
           </ButtonLink>
         </Content>
       </Section>
-      <Section number="2">
+      <Section number={2}>
         <Ether>
           <StyledEtherSvg size="90%" />
         </Ether>
@@ -354,7 +355,7 @@ const StakingHierarchy: React.FC = () => {
           </ButtonLink>
         </Content>
       </Section>
-      <Section number="3">
+      <Section number={3}>
         <Ether>
           <StyledEtherSvg size="80%" />
         </Ether>
@@ -410,7 +411,7 @@ const StakingHierarchy: React.FC = () => {
           </ButtonLink>
         </Content>
       </Section>
-      <Section number="4">
+      <Section number={4}>
         <Ether>
           <StyledEtherSvg size="70%" />
         </Ether>

@@ -33,7 +33,7 @@ export interface IProps {
   id?: string
 }
 
-const StakingCommunityCallout: React.FC<IProps> = (props, id) => {
+const StakingCommunityCallout: React.FC<IProps> = (props) => {
   const intl = useIntl()
   const { image } = useStaticQuery(graphql`
     {
@@ -57,7 +57,6 @@ const StakingCommunityCallout: React.FC<IProps> = (props, id) => {
       alt={translateMessageId("page-staking-image-alt", intl)}
       titleKey={"page-staking-join-community"}
       descriptionKey={"page-staking-join-community-desc"}
-      id={id}
     >
       <ButtonContainer>
         <StyledButtonLink

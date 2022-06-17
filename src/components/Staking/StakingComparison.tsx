@@ -64,22 +64,26 @@ const StyledPoolGlyph = styled(PoolGlyph)`
     fill: ${({ theme }) => theme.colors.stakingBlue};
   }
 `
-export interface IProps {
-  page: "solo" | "saas" | "pools"
-  className: string
+
+interface DataType {
+  title: TranslationKey
+  linkText: TranslationKey
+  to: string
+  matomo: EventOptions
+  color: any
+  glyph: any
 }
+
+type StakingTypePage = "solo" | "saas" | "pools"
+
+export interface IProps {
+  page: StakingTypePage
+  className?: string
+}
+
 const StakingComparison: React.FC<IProps> = ({ page, className }) => {
   const themeContext = useContext(ThemeContext)
   const { stakingGold, stakingGreen, stakingBlue } = themeContext.colors
-
-  type DataType = {
-    title: TranslationKey
-    linkText: TranslationKey
-    to: string
-    matomo: EventOptions
-    color: any
-    glyph: any
-  }
 
   const solo: DataType = {
     title: "page-staking-dropdown-solo",
@@ -118,7 +122,7 @@ const StakingComparison: React.FC<IProps> = ({ page, className }) => {
     glyph: <StyledPoolGlyph />,
   }
   const data: {
-    [key in "solo" | "saas" | "pools"]: (DataType & {
+    [key in StakingTypePage]: (DataType & {
       content: TranslationKey
     })[]
   } = {

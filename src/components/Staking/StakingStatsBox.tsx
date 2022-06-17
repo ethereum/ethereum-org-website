@@ -58,7 +58,9 @@ const ErrorMessage = () => (
   </IndicatorSpan>
 )
 
-const StatsBoxGrid = () => {
+export interface IProps {}
+
+const StatsBoxGrid: React.FC<IProps> = () => {
   const intl = useIntl()
   const [totalEth, setTotalEth] = useState<string>("0")
   const [totalValidators, setTotalValidators] = useState<string>("0")

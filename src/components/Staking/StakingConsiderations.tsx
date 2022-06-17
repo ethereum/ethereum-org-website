@@ -17,7 +17,7 @@ import LiquidityToken from "../../assets/staking/liquidity-token.svg"
 // Component imports
 import ButtonDropdown from "../ButtonDropdown"
 import Translation from "../Translation"
-import { trackCustomEvent } from "../../utils/matomo"
+import { EventOptions, trackCustomEvent } from "../../utils/matomo"
 import { TranslationKey } from "../../utils/translations"
 
 const Container = styled.div`
@@ -42,13 +42,13 @@ const List = styled.div`
 
 // TODO: Make mobile responsive
 
-const ListItem = styled.li`
+const ListItem = styled.li<{ active: boolean }>`
   padding: 0.125rem 0.5rem;
   cursor: pointer;
   box-sizing: border-box;
   position: relative;
   height: 2rem;
-  ${({ theme, active }: { theme: DefaultTheme; active: boolean }) =>
+  ${({ theme, active }) =>
     active
       ? `
     background: ${theme.colors.primary};
@@ -124,11 +124,7 @@ type DataType = {
   caution: TranslationKey | ""
   warning: TranslationKey
   Svg: any
-  matomo: {
-    eventCategory: string
-    eventAction: string
-    eventName: string
-  }
+  matomo: EventOptions
 }
 
 const data: { [key in "solo" | "saas" | "pools"]: DataType[] } = {

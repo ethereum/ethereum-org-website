@@ -91,10 +91,10 @@ const Pills = styled(PaddedDiv)`
   /* padding-top: 1rem; */
 `
 
-const Pill = styled.div`
+const Pill = styled.div<{ type: string }>`
   text-align: center;
   padding: 0.25rem 0.75rem;
-  color: ${({ theme, type }: { theme: DefaultTheme; type: string }) =>
+  color: ${({ theme, type }) =>
     type ? "rgba(0, 0, 0, 0.6)" : theme.colors.text200};
   background: ${({ theme, type }) => {
     if (!type) return "transparent"
