@@ -430,5 +430,14 @@
     "description": "Join Warsaw Web3 community in the first in-person conference and hackathon!",
     "startDate": "2022-09-01",
     "endDate": "2022-09-04"
+  },
+  {
+    "title": "ETHSafari",
+    "to": "https://ethsafari.xyz/",
+    "sponsor": null,
+    "location": "Nairobi & Kilifi, Kenya",
+    "description": "Welcome to the latest greatest ETH event happening in Africa!",
+    "startDate": "2022-09-18",
+    "endDate": "2022-09-25"
   }
 ]
