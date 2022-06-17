@@ -41,7 +41,7 @@ const Persona = styled.div<{
   align-items: flex-start;
   padding: 24px;
   background: ${(props) =>
-    props.selected === true ? "#432E1B" : props.theme.colors.ednBackground};
+    props.selected === true ? props.theme.colors.primary100 : props.theme.colors.ednBackground};
   border: 1px solid #3d3d3d;
   border-radius: 4px;
   cursor: pointer;
@@ -96,6 +96,7 @@ const PersonaFeature = styled.div`
     }
   }
 `
+
 
 // Types
 interface Personas {
