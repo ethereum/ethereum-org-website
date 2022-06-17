@@ -577,12 +577,6 @@ const Eth2IndexPage = ({ data }) => {
                   </Link>
                 </li>
               </ul>
-              <p>
-                <Translation id="page-upgrades-question-3-answer-3" />
-              </p>
-              <Link to="https://ethresear.ch">
-                <Translation id="page-upgrades-question-3-answer-3-link" />
-              </Link>
             </ExpandableCard>
             <ExpandableCard
               contentPreview={translateMessageId(
