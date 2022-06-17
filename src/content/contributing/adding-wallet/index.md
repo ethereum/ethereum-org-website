@@ -24,7 +24,7 @@ Wallets are rapidly changing in Ethereum. We've tried to create a fair framework
 ### Criteria for inclusion: the must-haves {#the-must-haves}
 
 - **A security-tested product** - whether through audit, an internal security team, open sourced coded, or some other method, your wallet's security must be reliable. This reduces the risk to our users and shows us that you take security seriously.
-- **A wallet that has been “live” for over 6 months OR released by a group with a reputable track record** - this is another indication of security. 6 months is a good time frame for critical bugs and exploitations to have been found. We ask 6 months to help filter out forks that are quickly abandoned as projects.
+- **A wallet that has been “live” for over six months OR released by a group with a reputable track record** - this is another indication of security. Six months is a good time frame for critical bugs and exploitations to have been found. We ask six months to help filter out forks that are quickly abandoned as projects.
 - **Worked on by an active team** - this helps to ensure quality and that a user will get support for their queries.
 - **Honest and accurate listing information** - it is expected that any suggested listings from projects come with honest and accurate information. Products that falsify listing information, such as declaring your product is “open source” when it is not, will be removed.
 - **Point of contact** - A point of contact for the wallet will greatly help us get accurate information when changes are made. This will keep updating ethereum.org manageable when gathering future information.
