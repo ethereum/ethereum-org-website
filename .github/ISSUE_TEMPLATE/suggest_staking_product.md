@@ -6,7 +6,7 @@ labels: "feature :sparkles:, content :fountain_pen:"
 assignees: ""
 ---
 
-Before suggesting a staking product or service, make sure you've read [our listing policy](/contributing/adding-staking-product/).
+Before suggesting a staking product or service, make sure you've read [our listing policy](/contributing/adding-staking-products/).
 
 Only continue with the issue if the staking product meets the criteria listed there.
 

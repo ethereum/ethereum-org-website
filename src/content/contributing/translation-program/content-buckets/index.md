@@ -159,7 +159,7 @@ Below is a breakdown of the website pages each content bucket contains.
 - [Adding glossary terms](/contributing/adding-glossary-terms/)
 - [Adding layer 2s](/contributing/adding-layer-2/)
 - [Adding products](/contributing/adding-products/)
-- [Adding staking products](/contributing/adding-staking-product/)
+- [Adding staking products](/contributing/adding-staking-products/)
 - [Adding content resources](/contributing/content-resources/)
 - [Translation Program](/contributing/translation-program/)
 - [Translation guide](/contributing/translation-program/translation-guide/)

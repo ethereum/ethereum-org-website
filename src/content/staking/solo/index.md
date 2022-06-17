@@ -119,7 +119,7 @@ These tools can be used as an alternative to the [Staking Deposit CLI](https://g
 
 <StakingProductsCardGrid category="keyGen" />
 
-Have a suggestion for a staking tool we missed? Check out our [product listing policy](/contributing/adding-staking-product/) to see if it would be a good fit, and to submit it for review.
+Have a suggestion for a staking tool we missed? Check out our [product listing policy](/contributing/adding-staking-products/) to see if it would be a good fit, and to submit it for review.
 
 ## Explore solo staking guides {#staking-guides}
 
