@@ -115,7 +115,7 @@ sidebarDepth: 2
 | [OpenEthereum](https://github.com/openethereum/openethereum) | Rust     | Linux，Windows，macOS | Mainnet、Kovan、Ropsten 及更多                | Warp，完整 | Archive, Pruned |
 | [Nethermind](http://nethermind.io/)                          | C#, .NET | Linux，Windows，macOS | Mainnet、Gounderster、Ropsten、Rinkeby 及更多 | 快速，完整 | Archive, Pruned |
 | [Besu](https://pegasys.tech/solutions/hyperledger-besu/)     | Java     | Linux，Windows，macOS | Mainnet、Rinkeby、Ropsten 和 Görli            | 快速，完整 | Archive, Pruned |
-| [Erigon](https://github.com/ledgerwatch/erigon)              | 出发     | Linux、Windows、macOS | Mainnet、Görli、Rinkeby、Ropsten              | 快速、完整 | Archive、Pruned |
+| [Erigon](https://github.com/ledgerwatch/erigon)              | Go     | Linux、Windows、macOS | Mainnet、Görli、Rinkeby、Ropsten              | 快速、完整 | Archive、Pruned |
 
 更多关于支持网络的信息，请在[以太坊网络中查阅](/developers/docs/networks/)。
 
@@ -241,7 +241,7 @@ Erigon（前称 TurbohyGeth）是 Go Ethereum 的一个分叉，注重速度和�
 
 [查看共识客户端](/upgrades/get-involved/#clients)。
 
-| 客户端                                                       | 语言        | 操作系统：             | 网络                            |
+| 客户端                                                      | 语言       | 操作系统：            | 网络                            |
 | ----------------------------------------------------------- | ---------- | --------------------- | ------------------------------- |
 | [Teku](https://pegasys.tech/teku)                           | Java       | Linux, Windows, macOS | 信标链，Prater                  |
 | [Nimbus](https://nimbus.team/)                              | Nim        | Linux，Windows，macOS | 信标链，Prater                  |

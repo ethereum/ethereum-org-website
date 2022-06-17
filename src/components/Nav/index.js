@@ -196,6 +196,14 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
           text: "run-a-node",
           to: "/run-a-node/",
         },
+        {
+          text: "decentralized-social-networks",
+          to: "/social-networks/",
+        },
+        {
+          text: "decentralized-identity",
+          to: "/decentralized-identity/",
+        },
       ],
     },
     {
@@ -316,10 +324,13 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
           text: "ethereum-events",
           to: "/community/events/",
         },
-
         {
           text: "get-involved",
           to: "/community/get-involved/",
+        },
+        {
+          text: "open-research",
+          to: "/community/research/",
         },
         {
           text: "grants",

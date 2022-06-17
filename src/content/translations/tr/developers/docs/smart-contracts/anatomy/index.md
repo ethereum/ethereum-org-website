@@ -629,7 +629,7 @@ contract CryptoPizza is IERC721, ERC165 {
         // than to check the size of the code at that address.
         // Bunun nasıl çalıştığı hakkında daha fazla ayrıntı için
         // bkz. https://ethereum.stackexchange.com/a/14016/36603.
-        // Serenity sürümünden önce bunu tekrar kontrol edin, 
+        // Serenity sürümünden önce bunu tekrar kontrol edin,
         // çünkü o zaman tüm adresler sözleşme olacaktır.
         // solium-disable-next-line security/no-inline-assembly
         assembly {

@@ -59,7 +59,7 @@ summaryPoint4: ما پیش تر به این کار "داکینیگ" می‌ گف
 
 این یک ارزیابی مداوم از جامعه برای پاسخ به چندین دوره احتمالی از خده زنجیره های شارد برای امکان پذیر کردن مقیاس پذیری بی نهایت است.
 
-<ButtonLink to="/upgrades/shard-chains/">
+<ButtonLink to="/upgrades/sharding/">
   خرده زنجیرها
 </ButtonLink>
 

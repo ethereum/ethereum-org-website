@@ -17,6 +17,7 @@
   "brand-assets": "Brand assets",
   "bridges": "Blockchain bridges",
   "bug-bounty": "Bug bounty",
+  "close": "Close",
   "coinbase-logo": "Coinbase logo",
   "coinmama-logo": "Coinmama logo",
   "community": "Community",
@@ -193,6 +194,7 @@
   "oasis-logo": "Oasis logo",
   "online": "Online",
   "on-this-page": "On this page",
+  "open-research": "Open research",
   "page-content": "Page content",
   "page-enterprise": "Enterprise",
   "page-last-updated": "Page last updated",
@@ -215,7 +217,6 @@
   "security": "Security",
   "see-contributors": "See contributors",
   "set-up-local-env": "Set up local environment",
-  "shard-chains": "Shard chains",
   "show-all": "Show all",
   "show-less": "Show less",
   "site-description": "Ethereum is a global, decentralized platform for money and new kinds of applications. On Ethereum, you can write code that controls money, and build applications accessible anywhere in the world.",
@@ -264,5 +265,7 @@
   "defi-page": "Decentralized finance (DeFi)",
   "dao-page": "Decentralized autonomous organisations (DAOs)",
   "nft-page": "Non-fungible tokens (NFTs)",
+  "decentralized-social-networks": "Decentralized social networks",
+  "decentralized-identity": "Decentralized identity",
   "yes": "Yes"
 }

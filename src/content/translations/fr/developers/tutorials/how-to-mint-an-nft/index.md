@@ -311,15 +311,13 @@ async function mintNFT(tokenURI) {
     })
 }
 
-mintNFT(
-  "ipfs://QmYueiuRNmL4MiA2GwtVMm6ZagknXnSpQnB3z2gWbz36hP"
-)
+mintNFT("ipfs://QmYueiuRNmL4MiA2GwtVMm6ZagknXnSpQnB3z2gWbz36hP")
 ```
 
 Maintenant, exécutez `node scripts/mint-nft.js` pour déployer votre NFT. Après quelques secondes, vous devriez voir une réponse comme celle-ci dans votre terminal :
 
     The hash of your transaction is: 0x10e5062309de0cd0be7edc92e8dbab191aa2791111c44274483fa766039e0e00
-    
+
     Check Alchemy's Mempool to view the status of your transaction!
 
 Ensuite, consultez votre [Alchemy mempool](https://dashboard.alchemyapi.io/mempool) pour voir l'état de votre transaction (en attente, minée ou rejetée par le réseau). Si votre transaction a été rejetée, il est également utile de vérifier [Ropsten Etherscan](https://ropsten.etherscan.io/) et rechercher votre hachage de transaction.

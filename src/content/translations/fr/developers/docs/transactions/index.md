@@ -1,6 +1,6 @@
 ---
 title: Transactions
-description: 'Présentation des transactions Ethereum : leur fonctionnement, leur structure de données et comment les envoyer via une application.'
+description: "Présentation des transactions Ethereum : leur fonctionnement, leur structure de données et comment les envoyer via une application."
 lang: fr
 sidebar: true
 ---

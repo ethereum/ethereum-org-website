@@ -72,6 +72,14 @@ Currently, withdrawing funds from a validator on the Beacon Chain is not possibl
 Alternatively, pools that utilize an ERC-20 liquidity token allow users to trade this token in the open market, effectively allowing you to "withdraw" without actually removing ETH from the Beacon Chain.
 </ExpandableCard>
 
+<ExpandableCard title="Do pooled stakers need to do anything for The Merge?">
+Pooled stakers <strong>do not need to do anything to prepare for The Merge</strong>.
+
+However, as The Merge approaches, be on high alert for scammers. **You do not need to upgrade your ETH or staked ETH tokens** for the transition to proof-of-stake.
+
+Learn more about [The Merge](/upgrades/merge/)
+</ExpandableCard>
+
 <ExpandableCard title="Is this different from staking with my exchange?">
 There are many similarities between these pooled staking options and centralized exchanges, such as the ability to stake small amounts of ETH and have them bundled together to activate validators.
 
