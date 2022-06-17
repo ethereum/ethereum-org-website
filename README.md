@@ -1265,6 +1265,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="https://netbound.io"><img src="https://avatars.githubusercontent.com/u/32879610?v=4?s=100" width="100px;" alt=""/><br /><sub><b>mempirate</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=jonasbostoen" title="Documentation">📖</a> <a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Ajonasbostoen" title="Bug reports">🐛</a></td>
     <td align="center"><a href="https://github.com/Barukimang"><img src="https://avatars.githubusercontent.com/u/16764792?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Barukimang</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=Barukimang" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://kaanuzdogan.com"><img src="https://avatars.githubusercontent.com/u/13069972?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Kaan Uzdoğan</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=kuzdogan" title="Documentation">📖</a></td>
   </tr>
 </table>
 
