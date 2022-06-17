@@ -71,6 +71,9 @@ const FilterOption = styled.div`
   border-bottom: 1px solid ${(props) => props.theme.colors.lightBorder};
   width: 100%;
   padding: 18.5px 12px 12px 12px;
+  :last-child{
+    border:none;
+  }
 `
 
 const OptionGrid = styled.div`
@@ -81,7 +84,7 @@ const OptionGrid = styled.div`
 
   p {
     margin: 0;
-    line-height: 20px;
+    line-height: 1.1rem;
     padding: 0 10px;
   }
 `
@@ -100,8 +103,8 @@ const IconContainer = styled.div`
 `
 
 const OptionDescription = styled.p`
-  font-size: 12px;
-  line-height: 14px;
+  font-size: 0.85rem;
+  line-height: 0.8rem;
   color: ${(props) => props.theme.colors.text200};
 `
 
