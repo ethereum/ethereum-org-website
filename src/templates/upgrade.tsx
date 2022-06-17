@@ -386,18 +386,6 @@ const UpgradePage = ({
               maxDepth={mdx.frontmatter.sidebarDepth}
             />
           )}
-          <DismissibleCard storageKey="dismissed-eth-upgrade-psa">
-            <Emoji text=":cheering_megaphone:" size={5} />
-            <h2>
-              <Translation id="eth-upgrade-what-happened" />
-            </h2>
-            <p>
-              <Translation id="eth-upgrade-what-happened-description" />{" "}
-              <Link to="https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/">
-                <Translation id="more-info" />.
-              </Link>
-            </p>
-          </DismissibleCard>
         </InfoColumn>
         <ContentContainer id="content">
           {/* <DesktopBreadcrumbs slug={mdx.fields.slug} startDepth={1} /> */}

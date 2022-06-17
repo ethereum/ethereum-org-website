@@ -59,8 +59,6 @@
   "consensus-run-beacon-chain": "Запуск клиента с консенсусом",
   "consensus-run-beacon-chain-desc": "Ethereum нужно как можно больше запущенных клиентов. Помогите Ethereum принести обществу пользу!",
   "consensus-when-shipping": "Когда это запустится?",
-  "eth-upgrade-what-happened": "Что случилось с Eth2?",
-  "eth-upgrade-what-happened-description": "Термин Eth2 вышел из употребления по мере нашего приближения к слиянию. «Уровень консенсуса» включает в себя то, что ранее было известно как Eth2.",
   "ethereum": "Ethereum",
   "ethereum-upgrades": "Обновления Ethereum",
   "ethereum-brand-assets": "Активы бренда Ethereum",
