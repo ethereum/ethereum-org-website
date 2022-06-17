@@ -6,7 +6,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Before suggesting a wallet, make sure you've read [our listing policy](https://www.ethereum.org/en/contributing/adding-wallet/). Only continue with the issue if the wallet meets the criteria listed there.
+        Before suggesting a wallet, make sure you've read [our listing policy](https://www.ethereum.org/en/contributing/adding-wallets/). Only continue with the issue if the wallet meets the criteria listed there.
   - type: markdown
     id: project_info
     attributes:
