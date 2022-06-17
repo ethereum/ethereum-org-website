@@ -7,7 +7,7 @@ sidebar: true
 
 Diese Dokumentation soll dir helfen, mit Ethereum zu entwickeln. Es umfasst Ethereum als Konzept, erklärt den Ethereum-Technologie-Stack, dokumentiert fortgeschrittene Themen für komplexere Anwendungen und Anwendungsfälle.
 
-Dies ist eine Open-Source-Community-Anstrengung, also zögere nicht, neue Themen vorzuschlagen oder neue Inhalte hinzuzufügen, und gib Beispiele an, wo immer du denkst, dass dies hilfreich sein könnte. Alle Entwicklerdokumentationen können auf GitHub editiert werden. Falls du dir nicht sicher bist wie, [folge einfach dieser Anleitung](https://github.com/ethereum/ethereum-org-website/blob/dev/docs/contributing/editing-markdown.md).
+Dies ist eine Open-Source-Community-Anstrengung, also zögere nicht, neue Themen vorzuschlagen oder neue Inhalte hinzuzufügen, und gib Beispiele an, wo immer du denkst, dass dies hilfreich sein könnte. Alle Entwicklerdokumentationen können auf GitHub editiert werden. Falls du dir nicht sicher bist wie, [folge einfach dieser Anleitung](https://github.com/ethereum/ethereum-org-website/blob/dev/docs/editing-markdown.md).
 
 ## Entwicklungsmodule {#development-modules}
 
