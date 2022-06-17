@@ -3,7 +3,6 @@ import { graphql, PageProps } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { useIntl } from "gatsby-plugin-intl"
 
-import { CardGrid } from "../../components/SharedStyledComponents"
 import StakingHomeTableOfContents from "../../components/Staking/StakingHomeTableOfContents"
 import FeedbackCard from "../../components/FeedbackCard"
 import PageMetadata from "../../components/PageMetadata"
@@ -32,6 +31,7 @@ import {
   BannerImage,
   CardGradient,
   Section,
+  CardGrid,
 } from "./styles"
 import Link from "../../components/Link"
 

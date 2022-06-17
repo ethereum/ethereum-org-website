@@ -2,6 +2,7 @@ import styled from "styled-components"
 
 import PageHero from "../../components/PageHero"
 import OriginalCard from "../../components/Card"
+import { CardGrid as OriginalCardGrid } from "../../components/SharedStyledComponents"
 
 export const Container = styled.div`
   position: relative;
@@ -158,4 +159,8 @@ export const Section = styled.section`
   &:first-child {
     margin-top: 0;
   }
+`
+
+export const CardGrid = styled(OriginalCardGrid)`
+  margin-top: 35px;
 `
