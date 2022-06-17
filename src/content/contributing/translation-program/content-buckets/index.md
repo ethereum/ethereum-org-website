@@ -49,7 +49,7 @@ Below is a breakdown of the website pages each content bucket contains.
 - [Ethereum vision](/upgrades/vision/)
 - [The Beacon Chain](/upgrades/beacon-chain/)
 - [The Merge](/upgrades/merge/)
-- [Shard chains](/upgrades/shard-chains/)
+- [Shard chains](/upgrades/sharding/)
 - [Staking](/staking/)
 - [Ethereum upgrades get involved](/upgrades/get-involved/)
 - [Consensus layer bug bounty](/upgrades/bug-bounty/)

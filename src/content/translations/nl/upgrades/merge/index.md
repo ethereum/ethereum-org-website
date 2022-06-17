@@ -59,7 +59,7 @@ Oorspronkelijk was het plan om aan shardketens te werken voor de merge, om de sc
 
 Dit zal een voortdurende beoordeling zijn van de gemeenschap over de noodzaak van mogelijk meerdere rondes van shardketens om eindeloze schaalbaarheid mogelijk te maken.
 
-<ButtonLink to="/upgrades/shard-chains/">
+<ButtonLink to="/upgrades/sharding/">
   Shardketens
 </ButtonLink>
 
