@@ -218,8 +218,8 @@ The following make up the cost of using an optimistic rollup:
 | Transaction data is stored on the layer 1 chain, improving transparency, security, censorship-resistance, and decentralization. | Centralized rollup operators (sequencers) can influence transaction ordering.                                                                   | 
 | Fraud proving guarantees trustless finality and allows honest minorities to secure the chain.                     | A malicious operator can steal funds by posting invalid blocks and state commitments.                                                                              | 
 | Computing fraud proofs is open to regular L2 node, unlike validity proofs (used in ZK-rollups) that require special hardware.  | Security model relies on at least one honest node executing rollup transactions and submitting fraud proofs to challenge invalid state transitions.                  | 
-| Optimistic rollups have "trustless liveness" (anyone can force the chain to advance by executing transactions and posting assertions)| Users must wait for the one-week challenge period to expire before withdrawing funds back to Ethereum.                                                        |
-| Optimistic rollups rely on well-designed cryptoeconomic incentives to increase security on the chain.                            |
+| Rollups benefit from "trustless liveness" (anyone can force the chain to advance by executing transactions and posting assertions)      | Users must wait for the one-week challenge period to expire before withdrawing funds back to Ethereum.                                                              |
+| Optimistic rollups rely on well-designed cryptoeconomic incentives to increase security on the chain.                            | Rollups must post all transaction data on-chain, which can increase costs. 
 
 ### A visual explanation of optimistic rollups {#optimistic-video}
 
