@@ -18,7 +18,7 @@ sidebarDepth: 2
 
 通过查看此[节点图](https://etherscan.io/nodetracker)，您可以查看以太坊网络的实时视图。
 
-[以太坊客户端](/developers/docs/nodes-and-clients/#execution-clients)存在多种编程语言（如 Go、Rust、JavaScrip、Python、C# .NET 和 Java）的版本。 这些实现的共同之处是它们都遵循了正式规范（原为[以太坊黄皮书](https://ethereum.github.io/yellowpaper/paper.pdf)）。 此规范决定了以太坊网络和区块链的功能。
+[以太坊客户端](/developers/docs/nodes-and-clients/#execution-clients)存在多种编程语言（如 Go、Rust、JavaScript、Python、C# .NET 和 Java）的版本。 这些实现的共同之处是它们都遵循了正式规范（原为[以太坊黄皮书](https://ethereum.github.io/yellowpaper/paper.pdf)）。 此规范决定了以太坊网络和区块链的功能。
 
 ![执行客户端](./client-diagram.png) 以太坊客户端功能的简化图表。
 
