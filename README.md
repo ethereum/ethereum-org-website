@@ -1269,6 +1269,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/NiloCK"><img src="https://avatars.githubusercontent.com/u/10780590?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Colin Kennedy</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=NiloCK" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/TimGrey998"><img src="https://avatars.githubusercontent.com/u/57596934?v=4?s=100" width="100px;" alt=""/><br /><sub><b>XOF</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=TimGrey998" title="Documentation">📖</a> <a href="#translation-TimGrey998" title="Translation">🌍</a> <a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3ATimGrey998" title="Bug reports">🐛</a></td>
     <td align="center"><a href="https://github.com/ManuKashyap01"><img src="https://avatars.githubusercontent.com/u/76866512?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Manu kashyap</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=ManuKashyap01" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://arjenzhou.com"><img src="https://avatars.githubusercontent.com/u/23600703?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Zhou Yang</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=arjenzhou" title="Documentation">📖</a></td>
   </tr>
 </table>
 
