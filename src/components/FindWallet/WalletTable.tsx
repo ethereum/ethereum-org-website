@@ -89,6 +89,7 @@ const StyledSelect = styled(Select)`
     border: none;
     background: none;
     cursor: pointer;
+    font-size: 0.9rem;
 
     svg {
       width: 24px;
@@ -112,11 +113,13 @@ const StyledSelect = styled(Select)`
       }
       .react-select__indicator {
         color: ${(props) => props.theme.colors.text};
+        padding:0;
       }
     }
 
     &:hover {
       background: ${(props) => props.theme.colors.primary};
+      cursor: pointer;
 
       svg {
         width: 24px;
@@ -184,6 +187,7 @@ const StyledSelect = styled(Select)`
     .react-select__menu-list {
       .react-select__option {
         display: flex;
+        font-size: 0.9rem;
         gap: 0.5rem;
         svg {
           width: 24px;
