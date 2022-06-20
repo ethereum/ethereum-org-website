@@ -90,16 +90,6 @@ const StyledSelect = styled(Select)`
     cursor: pointer;
     font-size: 0.9rem;
 
-    svg {
-      width: 24px;
-      height: 24px;
-
-      path {
-        fill: ${(props) => props.theme.colors.primary};
-        stroke: ${(props) => props.theme.colors.primary};
-      }
-    }
-
     .react-select__value-container {
       .react-select__single-value {
         color: ${(props) => props.theme.colors.primary};
@@ -120,15 +110,6 @@ const StyledSelect = styled(Select)`
       background: ${(props) => props.theme.colors.primary};
       cursor: pointer;
 
-      svg {
-        width: 24px;
-        height: 24px;
-
-        path {
-          fill: ${(props) => props.theme.colors.text};
-          stroke: ${(props) => props.theme.colors.text};
-        }
-      }
       .react-select__value-container {
         .react-select__single-value {
           color: ${(props) => props.theme.colors.text};
@@ -150,16 +131,6 @@ const StyledSelect = styled(Select)`
     border: none;
     background: ${(props) => props.theme.colors.primary};
 
-    svg {
-      width: 24px;
-      height: 24px;
-
-      path {
-        fill: ${(props) => props.theme.colors.text};
-        stroke: ${(props) => props.theme.colors.text};
-      }
-    }
-
     .react-select__value-container {
       .react-select__single-value {
         color: ${(props) => props.theme.colors.text};
@@ -177,36 +148,6 @@ const StyledSelect = styled(Select)`
       .react-select__indicators {
         .react-select__indicator {
           color: ${(props) => props.theme.colors.text};
-        }
-      }
-    }
-  }
-
-  .react-select__menu {
-    .react-select__menu-list {
-      .react-select__option {
-        display: flex;
-        font-size: 0.9rem;
-        gap: 0.5rem;
-        svg {
-          width: 24px;
-          height: 24px;
-
-          path {
-            fill: ${(props) => props.theme.colors.text};
-            stroke: ${(props) => props.theme.colors.text};
-          }
-        }
-      }
-      .react-select__option--is-selected {
-        svg {
-          width: 24px;
-          height: 24px;
-
-          path {
-            fill: ${(props) => props.theme.colors.buttonColor};
-            stroke: ${(props) => props.theme.colors.buttonColor};
-          }
         }
       }
     }
@@ -513,19 +454,6 @@ const WalletTable = ({ data, filters, walletData }) => {
 
     return showWallet
   })
-
-  const IconOption = (props) => (
-    <Option {...props}>
-      {props.data.icon}
-      {props.data.label}
-    </Option>
-  )
-
-  const IconControl = ({ children, ...props }) => (
-    <Control {...props}>
-      {props.selectProps.value.icon} {children}
-    </Control>
-  )
 
   return (
     <Container>
