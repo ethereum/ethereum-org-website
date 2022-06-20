@@ -541,8 +541,6 @@ const WalletTable = ({ data, filters, walletData }) => {
           onChange={(selectedOption) => {
             setFirstFeatureSelect(selectedOption)
           }}
-          defaultValue={firstFeatureSelect}
-          components={{ Option: IconOption, Control: IconControl }}
         />
         <SecondStyledSelect
           className="react-select-container"
@@ -551,8 +549,6 @@ const WalletTable = ({ data, filters, walletData }) => {
           onChange={(selectedOption) => {
             setSecondFeatureSelect(selectedOption)
           }}
-          defaultValue={secondFeatureSelect}
-          components={{ Option: IconOption, Control: IconControl }}
         />
         <ThirdStyledSelect
           className="react-select-container"
@@ -561,8 +557,6 @@ const WalletTable = ({ data, filters, walletData }) => {
           onChange={(selectedOption) => {
             setThirdFeatureSelect(selectedOption)
           }}
-          defaultValue={thirdFeatureSelect}
-          components={{ Option: IconOption, Control: IconControl }}
         />
       </WalletContentHeader>
       {filteredWallets.map((wallet, idx) => {
