@@ -25,7 +25,6 @@ import Multisig from "../../assets/wallets/multisig.svg"
 import SocialRecover from "../../assets/wallets/social_recover.svg"
 import Swap from "../../assets/wallets/swap.svg"
 
-
 // Styles
 const Container = styled.div`
   display: flex;
@@ -41,7 +40,9 @@ const Persona = styled.div<{
   align-items: flex-start;
   padding: 1rem;
   background: ${(props) =>
-    props.selected === true ? props.theme.colors.primary100 : props.theme.colors.ednBackground};
+    props.selected === true
+      ? props.theme.colors.primary100
+      : props.theme.colors.ednBackground};
   border: 1px solid #3d3d3d;
   border-radius: 4px;
   cursor: pointer;
@@ -52,8 +53,6 @@ const Title = styled.div`
   align-items: center;
   gap: "1rem";
   margin-bottom: 0.5rem;
-  
-
 `
 
 const H3 = styled.h3`
@@ -90,11 +89,11 @@ const PersonaFeature = styled.div`
   display: flex;
   gap: 0.2rem;
   font-size: 0.85rem;
-  line-height:0.95rem;
+  line-height: 0.95rem;
   margin: 0.1rem;
   align-items: center;
-  p{
-    margin-bottom:0;
+  p {
+    margin-bottom: 0;
   }
   svg {
     width: 28px;
@@ -105,7 +104,6 @@ const PersonaFeature = styled.div`
     }
   }
 `
-
 
 // Types
 interface Personas {
@@ -456,8 +454,8 @@ const WalletPersonasSidebar = ({ setFilters }) => {
           <Persona
             selected={selectedPersona === idx}
             onClick={() => {
-              setSelectedPersona(idx)
-              setFilters(persona.presetFilters)
+              setSelectedPersona(idx === selectedPersona ? NaN : idx)
+              setFilters(persona.presetFilters) // TODO:  Add reset functionality when deselecting a user persona after adding in reset filter method
             }}
           >
             <Title>
