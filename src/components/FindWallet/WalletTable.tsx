@@ -44,13 +44,12 @@ const Grid = styled.div`
   width: 100%;
   column-gap: 0.5rem;
   align-items: center;
-  
 
   p {
     margin: 0;
   }
 
-  :hover{
+  :hover {
     background: ${(props) => props.theme.colors.boxShadow};
     transition: 0.5s all;
   }
@@ -113,7 +112,7 @@ const StyledSelect = styled(Select)`
       }
       .react-select__indicator {
         color: ${(props) => props.theme.colors.text};
-        padding:0;
+        padding: 0;
       }
     }
 
@@ -255,7 +254,6 @@ const FlexInfo = styled.div`
   }
   p + a {
     font-size: 0.9rem;
-    
   }
 `
 
@@ -343,13 +341,12 @@ const FeatureLabel = styled.div<{ hasFeature: boolean }>`
 const SocialsContainer = styled.div`
   text-align: center;
   padding-bottom: 1rem;
-  p{
+  p {
     margin: 0;
   }
-  a{
+  a {
     height: 32px;
   }
-  
 `
 
 const Socials = styled.div`
@@ -357,8 +354,7 @@ const Socials = styled.div`
   gap: 1rem;
   justify-content: center;
   align-items: center;
-  padding-bottom: 2rem:
-
+  padding-bottom: 2rem;
 `
 
 // Constants
@@ -545,6 +541,7 @@ const WalletTable = ({ data, filters, walletData }) => {
           onChange={(selectedOption) => {
             setFirstFeatureSelect(selectedOption)
           }}
+          defaultValue={firstFeatureSelect}
         />
         <SecondStyledSelect
           className="react-select-container"
@@ -553,6 +550,7 @@ const WalletTable = ({ data, filters, walletData }) => {
           onChange={(selectedOption) => {
             setSecondFeatureSelect(selectedOption)
           }}
+          defaultValue={secondFeatureSelect}
         />
         <ThirdStyledSelect
           className="react-select-container"
@@ -561,6 +559,7 @@ const WalletTable = ({ data, filters, walletData }) => {
           onChange={(selectedOption) => {
             setThirdFeatureSelect(selectedOption)
           }}
+          defaultValue={thirdFeatureSelect}
         />
       </WalletContentHeader>
       {filteredWallets.map((wallet, idx) => {
