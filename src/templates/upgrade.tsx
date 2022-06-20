@@ -39,6 +39,7 @@ import {
 } from "../components/SharedStyledComponents"
 import Emoji from "../components/Emoji"
 import YouTube from "../components/YouTube"
+import MergeInfographic from "../components/MergeInfographic"
 
 import { getLocaleTimestamp } from "../utils/time"
 import { isLangRightToLeft } from "../utils/translations"
@@ -178,6 +179,7 @@ const components = {
   MergeArticleList,
   YouTube,
   ExpandableCard,
+  MergeInfographic,
 }
 
 const Title = styled.h1`
