@@ -480,6 +480,7 @@ const WalletTable = ({ data, filters, walletData }) => {
             setFirstFeatureSelect(selectedOption)
           }}
           defaultValue={firstFeatureSelect}
+          isSearchable={false}
         />
         <SecondStyledSelect
           className="react-select-container"
@@ -489,6 +490,7 @@ const WalletTable = ({ data, filters, walletData }) => {
             setSecondFeatureSelect(selectedOption)
           }}
           defaultValue={secondFeatureSelect}
+          isSearchable={false}
         />
         <ThirdStyledSelect
           className="react-select-container"
@@ -498,6 +500,7 @@ const WalletTable = ({ data, filters, walletData }) => {
             setThirdFeatureSelect(selectedOption)
           }}
           defaultValue={thirdFeatureSelect}
+          isSearchable={false}
         />
       </WalletContentHeader>
       {filteredWallets.map((wallet, idx) => {
