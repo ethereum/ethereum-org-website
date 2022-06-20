@@ -1,6 +1,5 @@
 // Libraries
 import React, { useState } from "react"
-import { getImage, GatsbyImage } from "gatsby-plugin-image"
 import styled from "styled-components"
 
 // Components
@@ -29,7 +28,6 @@ import WithdrawCrypto from "../../assets/wallets/withdraw_crypto.svg"
 import Multisig from "../../assets/wallets/multisig.svg"
 import SocialRecover from "../../assets/wallets/social_recover.svg"
 import Swap from "../../assets/wallets/swap.svg"
-
 
 // Styles
 const Container = styled.div`
@@ -71,8 +69,8 @@ const FilterOption = styled.div`
   border-bottom: 1px solid ${(props) => props.theme.colors.lightBorder};
   width: 100%;
   padding: 18.5px 12px 12px 12px;
-  :last-child{
-    border:none;
+  :last-child {
+    border: none;
   }
 `
 
@@ -81,6 +79,7 @@ const OptionGrid = styled.div`
   grid-template-columns: 28px auto 34px;
   width: 100%;
   align-items: center;
+  cursor: pointer;
 
   p {
     margin: 0;
@@ -114,6 +113,7 @@ const CheckboxGrid = styled.div`
   grid-template-columns: auto auto;
   margin-top: 14px;
   gap: 0.5rem;
+  cursor: pointer;
 `
 
 const CheckboxGridOption = styled.div`
@@ -419,41 +419,47 @@ const WalletFilterSidebar = ({
               filterOption.items.map((item, itemidx) => {
                 return (
                   <FilterOption>
-                    <OptionGrid>
+                    <OptionGrid
+                      onClick={
+                        item.filterKey
+                          ? () => {
+                              updateFilterOption(item.filterKey)
+                            }
+                          : () => {
+                              setShowOptions(idx, itemidx, !item.showOptions)
+                            }
+                      }
+                    >
                       <IconContainer>{item.icon}</IconContainer>
                       <p>{item.title}</p>
                       <div>
                         {item.filterKey && (
-                          <div
-                            onClick={() => {
-                              updateFilterOption(item.filterKey)
-                            }}
-                          >
-                            <ToggleIcon
-                              name={
-                                filters[item.filterKey]
-                                  ? "toggleOn"
-                                  : "toggleOff"
-                              }
-                              size="30"
-                            />
-                          </div>
+                          <ToggleIcon
+                            name={
+                              filters[item.filterKey] ? "toggleOn" : "toggleOff"
+                            }
+                            size="30"
+                          />
                         )}
                         {item.showOptions !== undefined && (
-                          <div
-                            onClick={() => {
-                              setShowOptions(idx, itemidx, !item.showOptions)
-                            }}
-                          >
-                            <ToggleIcon
-                              name={item.showOptions ? "toggleOn" : "toggleOff"}
-                              size="30"
-                            />
-                          </div>
+                          <ToggleIcon
+                            name={item.showOptions ? "toggleOn" : "toggleOff"}
+                            size="30"
+                          />
                         )}
                       </div>
                     </OptionGrid>
-                    <OptionGrid>
+                    <OptionGrid
+                      onClick={
+                        item.filterKey
+                          ? () => {
+                              updateFilterOption(item.filterKey)
+                            }
+                          : () => {
+                              setShowOptions(idx, itemidx, !item.showOptions)
+                            }
+                      }
+                    >
                       <div></div>
                       <OptionDescription>{item.description}</OptionDescription>
                       <div></div>
@@ -462,11 +468,12 @@ const WalletFilterSidebar = ({
                       <CheckboxGrid>
                         {item.options.map((option) => {
                           return (
-                            <CheckboxGridOption>
+                            <CheckboxGridOption
+                              onClick={() => {
+                                updateFilterOption(option.filterKey)
+                              }}
+                            >
                               <Checkbox
-                                callback={() => {
-                                  updateFilterOption(option.filterKey)
-                                }}
                                 checked={filters[option.filterKey]}
                                 size={1.5}
                               />
