@@ -90,7 +90,7 @@ const PersonaFeature = styled.div`
   display: flex;
   gap: 0.2rem;
   font-size: 0.85rem;
-  line-height:0.8rem;
+  line-height:0.95rem;
   margin: 0.1rem;
   align-items: center;
   p{
