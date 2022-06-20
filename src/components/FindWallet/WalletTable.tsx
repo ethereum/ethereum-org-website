@@ -455,6 +455,16 @@ const WalletTable = ({ data, filters, walletData }) => {
     return showWallet
   })
 
+  const filteredFeatureDropdownItems = [...featureDropdownItems].filter(
+    (item) => {
+      return (
+        item.label !== firstFeatureSelect.label &&
+        item.label !== secondFeatureSelect.label &&
+        item.label !== thirdFeatureSelect.label
+      )
+    }
+  )
+
   return (
     <Container>
       <WalletContentHeader>
@@ -465,7 +475,7 @@ const WalletTable = ({ data, filters, walletData }) => {
         <StyledSelect
           className="react-select-container"
           classNamePrefix="react-select"
-          options={featureDropdownItems}
+          options={filteredFeatureDropdownItems}
           onChange={(selectedOption) => {
             setFirstFeatureSelect(selectedOption)
           }}
@@ -474,7 +484,7 @@ const WalletTable = ({ data, filters, walletData }) => {
         <SecondStyledSelect
           className="react-select-container"
           classNamePrefix="react-select"
-          options={featureDropdownItems}
+          options={filteredFeatureDropdownItems}
           onChange={(selectedOption) => {
             setSecondFeatureSelect(selectedOption)
           }}
@@ -483,7 +493,7 @@ const WalletTable = ({ data, filters, walletData }) => {
         <ThirdStyledSelect
           className="react-select-container"
           classNamePrefix="react-select"
-          options={featureDropdownItems}
+          options={filteredFeatureDropdownItems}
           onChange={(selectedOption) => {
             setThirdFeatureSelect(selectedOption)
           }}
