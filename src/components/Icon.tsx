@@ -1,5 +1,4 @@
 import React from "react"
-import PropTypes from "prop-types"
 import styled from "styled-components"
 import { IconContext } from "react-icons"
 import {
@@ -10,7 +9,6 @@ import {
   FaRedditAlien,
   FaStackExchange,
   FaGlobe,
-  FaCheck,
 } from "react-icons/fa"
 import {
   MdAdd,
@@ -29,7 +27,12 @@ import {
   MdFlip,
   MdLiveHelp,
 } from "react-icons/md"
-import { BsQuestionSquareFill, BsToggleOff, BsToggleOn } from "react-icons/bs"
+import {
+  BsArrowCounterclockwise,
+  BsQuestionSquareFill,
+  BsToggleOff,
+  BsToggleOn,
+} from "react-icons/bs"
 import { IoCodeOutline, IoCodeDownload } from "react-icons/io5"
 
 const socialColors = {
@@ -91,6 +94,7 @@ const Icon: React.FC<IProps> = ({
       <FaStackExchange color={color ? socialColors.stackExchange : undefined} />
     )}
     {name === "webpage" && <FaGlobe />}
+    {name === "arrowCounterClockwise" && <BsArrowCounterclockwise />}
   </IconContext.Provider>
 )
 

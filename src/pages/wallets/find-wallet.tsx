@@ -7,6 +7,7 @@ import styled from "styled-components"
 
 // Components
 import Breadcrumbs from "../../components/Breadcrumbs"
+import Icon from "../../components/Icon"
 import Link from "../../components/Link"
 import PageMetadata from "../../components/PageMetadata"
 import { Content, Page } from "../../components/SharedStyledComponents"
@@ -190,43 +191,68 @@ const Note = styled.div`
   }
 `
 
+const ResetContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 3px 8px;
+  border: 1px solid ${(props) => props.theme.colors.primary};
+  border-radius: 3px;
+  max-width: 150px;
+  gap: 0.25rem;
+  cursor: pointer;
+
+  p {
+    margin: 0;
+    color: ${(props) => props.theme.colors.primary};
+  }
+`
+
+const ResetIcon = styled(Icon)`
+  fill: ${(props) => props.theme.colors.primary};
+`
+
+const filterDefault = {
+  android: false,
+  ios: false,
+  linux: false,
+  windows: false,
+  macOS: false,
+  firefox: false,
+  chromium: false,
+  hardware: false,
+  open_source: false,
+  non_custodial: false,
+  hardware_support: false,
+  walletconnect: false,
+  rpc_importing: false,
+  nft_support: false,
+  connect_to_dapps: false,
+  staking: false,
+  swaps: false,
+  layer_2: false,
+  gas_fee_customization: false,
+  ens_support: false,
+  erc_20_support: false,
+  buy_crypto: false,
+  withdraw_crypto: false,
+  multisig: false,
+  social_recovery: false,
+}
+
 const FindWalletPage = ({ data, location }) => {
   const intl = useIntl()
 
   const [showFeatureFilters, setShowFeatureFilters] = useState(false)
   const [showMobileSidebar, setShowMobileSidebar] = useState(false)
-  const [filters, setFilters] = useState({
-    android: false,
-    ios: false,
-    linux: false,
-    windows: false,
-    macOS: false,
-    firefox: false,
-    chromium: false,
-    hardware: false,
-    open_source: false,
-    non_custodial: false,
-    hardware_support: false,
-    walletconnect: false,
-    rpc_importing: false,
-    nft_support: false,
-    connect_to_dapps: false,
-    staking: false,
-    swaps: false,
-    layer_2: false,
-    gas_fee_customization: false,
-    ens_support: false,
-    erc_20_support: false,
-    buy_crypto: false,
-    withdraw_crypto: false,
-    multisig: false,
-    social_recovery: false,
-  })
+  const [filters, setFilters] = useState(filterDefault)
+  const [selectedPersona, setSelectedPersona] = useState(NaN)
 
   const updateFilterOption = (key) => {
     const updatedFilters = { ...filters }
     updatedFilters[key] = !updatedFilters[key]
     setFilters(updatedFilters)
+    setSelectedPersona(NaN)
   }
 
   const updateFilterOptions = (keys, value) => {
@@ -235,6 +261,12 @@ const FindWalletPage = ({ data, location }) => {
       updatedFilters[key] = value
     }
     setFilters(updatedFilters)
+    setSelectedPersona(NaN)
+  }
+
+  const resetFilters = () => {
+    setSelectedPersona(NaN)
+    setFilters(filterDefault)
   }
 
   return (
@@ -304,6 +336,10 @@ const FindWalletPage = ({ data, location }) => {
               <p>Feature Filters</p>
             </FilterTab>
           </FilterTabs>
+          <ResetContainer onClick={resetFilters}>
+            <ResetIcon name="arrowCounterClockwise" size="16" />
+            <p>RESET FILTERS</p>
+          </ResetContainer>
           <div>
             {showFeatureFilters ? (
               <WalletFilterSidebar
@@ -312,7 +348,12 @@ const FindWalletPage = ({ data, location }) => {
                 updateFilterOptions={updateFilterOptions}
               />
             ) : (
-              <WalletPersonasSidebar setFilters={setFilters} />
+              <WalletPersonasSidebar
+                resetFilters={resetFilters}
+                setFilters={setFilters}
+                selectedPersona={selectedPersona}
+                setSelectedPersona={setSelectedPersona}
+              />
             )}
           </div>
         </FilterSidebar>

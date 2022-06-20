@@ -214,9 +214,12 @@ const filterLabels = {
   },
 }
 
-const WalletPersonasSidebar = ({ setFilters }) => {
-  const [selectedPersona, setSelectedPersona] = useState(NaN)
-
+const WalletPersonasSidebar = ({
+  resetFilters,
+  setFilters,
+  selectedPersona,
+  setSelectedPersona,
+}) => {
   const personas: Personas[] = [
     {
       title: "I'm new to Ethereum",
@@ -454,8 +457,12 @@ const WalletPersonasSidebar = ({ setFilters }) => {
           <Persona
             selected={selectedPersona === idx}
             onClick={() => {
-              setSelectedPersona(idx === selectedPersona ? NaN : idx)
-              setFilters(persona.presetFilters) // TODO:  Add reset functionality when deselecting a user persona after adding in reset filter method
+              if (idx === selectedPersona) {
+                resetFilters()
+              } else {
+                setSelectedPersona(idx)
+                setFilters(persona.presetFilters)
+              }
             }}
           >
             <Title>
