@@ -80,6 +80,7 @@ const SvgText: React.FC<SvgProps> = ({ getString }) => {
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
+      aria-hidden="true"
     >
       <Text x="2%" y="35%" fontSize={lg}>
         ⛏ {getString("docs-nav-proof-of-work")}
@@ -110,12 +111,19 @@ const MergeInfographic: React.FC<IProps> = ({ className }) => {
     translateMessageId(id, intl)
 
   return (
-    <Container className={className}>
-      <ExecutionLayer>
+    <Container
+      className={className}
+      role="img"
+      aria-label={translateMessageId(
+        "page-upgrades-merge-infographic-alt-text",
+        intl
+      )}
+    >
+      <ExecutionLayer aria-hidden="true">
         <Translation id="page-upgrades-merge-infographic-el" />
       </ExecutionLayer>
       <SvgText getString={getString} />
-      <Background />
+      <Background aria-hidden="true" />
     </Container>
   )
 }
