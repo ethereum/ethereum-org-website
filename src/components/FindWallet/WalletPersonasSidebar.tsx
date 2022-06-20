@@ -39,7 +39,7 @@ const Persona = styled.div<{
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 24px;
+  padding: 1rem;
   background: ${(props) =>
     props.selected === true ? props.theme.colors.primary100 : props.theme.colors.ednBackground};
   border: 1px solid #3d3d3d;
@@ -52,6 +52,7 @@ const Title = styled.div`
   align-items: center;
   gap: "1rem";
   margin-bottom: 0.5rem;
+  
 
 `
 
@@ -60,10 +61,11 @@ const H3 = styled.h3`
   margin-left: 0.5rem;
   margin-top: 0;
   margin-bottom: 0;
+  font-size: 1.25rem;
 `
 
 const H4 = styled.h4`
-  margin-top: 0;
+  margin: 0 0 0.5rem 0;
   color: ${(props) => props.theme.colors.secondary};
   font-size: 0.9rem;
   font-weight: normal;
@@ -73,6 +75,8 @@ const Grid = styled.div`
   display: grid;
   grid-template-columns: 50% 50%;
   width: 100%;
+  column-gap: 0.2rem;
+  row-gap: 0.5rem;
 `
 
 const StyledIcon = styled(Icon)<{ selected: boolean }>`
@@ -86,7 +90,12 @@ const PersonaFeature = styled.div`
   display: flex;
   gap: 0.2rem;
   font-size: 0.85rem;
+  line-height:0.8rem;
   margin: 0.1rem;
+  align-items: center;
+  p{
+    margin-bottom:0;
+  }
   svg {
     width: 28px;
     height: 28px;
