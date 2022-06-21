@@ -28,10 +28,6 @@ import {
 import { BsQuestionSquareFill, BsToggleOff, BsToggleOn } from "react-icons/bs"
 import { IoCodeOutline, IoCodeDownload } from "react-icons/io5"
 
-const MdArrowUpRight = styled(MdArrowForward)`
-  transform: rotate(-45deg);
-`
-
 const socialColors = {
   reddit: "#ff4301",
   twitter: "#1da1f2",
@@ -57,7 +53,6 @@ const Icon: React.FC<IProps> = ({
     {name === "add" && <MdAdd />}
     {name === "chevronDown" && <MdExpandMore />}
     {name === "arrowRight" && <MdArrowForward />}
-    {name === "arrowUpRight" && <MdArrowUpRight />}
     {name === "close" && <MdClose />}
     {name === "darkTheme" && <MdBrightness2 />}
     {name === "github" && <FaGithub />}

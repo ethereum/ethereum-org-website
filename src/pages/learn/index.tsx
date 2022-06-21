@@ -281,7 +281,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                   <Center>
                     <GatsbyImage image={getImage(data.eth)} />
                   </Center>
-                  <ButtonLink to="/eth">What is ETH?</ButtonLink>
+                  <ButtonLink to="/eth/">What is ETH?</ButtonLink>
                 </>
               </Card>
               <Card
@@ -293,7 +293,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                   <Center>
                     <GatsbyImage image={getImage(data.impact)} />
                   </Center>
-                  <ButtonLink to="/">Where to get ETH?</ButtonLink>
+                  <ButtonLink to="/get-eth/">Where to get ETH?</ButtonLink>
                 </>
               </Card>
             </CardGrid>
@@ -302,10 +302,19 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
               Additional reading on Ethereum
             </AdditionalReadingHeader>
             <DocsContainer>
-              <DocLink to="/smart-contracts">What are Smart Contracts?</DocLink>
-              <DocLink to="/">A technical introduction to Ethereum</DocLink>
-              <DocLink to="/">What is Web3?</DocLink>
-              <DocLink to="/">Decentralizing Everything</DocLink>
+              <DocLink to="/smart-contracts/">
+                What are Smart Contracts?
+              </DocLink>
+              <DocLink to="/developers/docs/">
+                A technical introduction to Ethereum
+              </DocLink>
+              <DocLink to="/web3/">What is Web3?</DocLink>
+              <DocLink
+                to="https://www.youtube.com/watch?v=WSN5BaCzsbo"
+                isExternal
+              >
+                Decentralizing Everything
+              </DocLink>
             </DocsContainer>
           </Section>
 
@@ -326,7 +335,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                   <Center>
                     <GatsbyImage image={getImage(data.wallet)} />
                   </Center>
-                  <ButtonLink to="/wallets">What is a wallet?</ButtonLink>
+                  <ButtonLink to="/wallets/">What is a wallet?</ButtonLink>
                 </>
               </Card>
               <Card
@@ -337,7 +346,9 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                   <Center>
                     <GatsbyImage image={getImage(data.futureTransparent)} />
                   </Center>
-                  <ButtonLink to="/wallets">List of wallets</ButtonLink>
+                  <ButtonLink to="/wallets/find-wallet/">
+                    List of wallets
+                  </ButtonLink>
                 </>
               </Card>
               <Card
@@ -348,7 +359,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                   <Center>
                     <GatsbyImage image={getImage(data.dogeComputer)} />
                   </Center>
-                  <ButtonLink to="/security">Crypto security 101</ButtonLink>
+                  <ButtonLink to="/security/">Crypto security 101</ButtonLink>
                 </>
               </Card>
             </CardGrid>
@@ -364,7 +375,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                   </li>
                   <li>
                     Fees can be high depending on the demand so we reccomend
-                    using <Link to="/layer-2">Layer 2s</Link>.
+                    using <Link to="/layer-2/">Layer 2s</Link>.
                   </li>
                   <li>
                     There are options for custodial and non custodial wallets.
@@ -380,8 +391,12 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
               Additional reading on Ethereum
             </AdditionalReadingHeader>
             <DocsContainer>
-              <DocLink to="/">Ethereum & wallet support</DocLink>
-              <DocLink to="/">Layer 2 - reducing transaction cost</DocLink>
+              <DocLink to="/community/support/">
+                Ethereum & wallet support
+              </DocLink>
+              <DocLink to="/layer-2/">
+                Layer 2 - reducing transaction cost
+              </DocLink>
             </DocsContainer>
           </Section>
 
@@ -401,7 +416,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                   <Center>
                     <GatsbyImage image={getImage(data.financeTransparent)} />
                   </Center>
-                  <ButtonLink>What is DEFI?</ButtonLink>
+                  <ButtonLink to="/defi/">What is DEFI?</ButtonLink>
                 </>
               </Card>
               <Card
@@ -412,7 +427,9 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                   <Center>
                     <GatsbyImage image={getImage(data.stablecoins)} />
                   </Center>
-                  <ButtonLink>What are stablecoins?</ButtonLink>
+                  <ButtonLink to="/stablecoins/">
+                    What are stablecoins?
+                  </ButtonLink>
                 </>
               </Card>
               <Card
@@ -425,7 +442,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                       image={getImage(data.infrastructureTransparent)}
                     />
                   </Center>
-                  <ButtonLink>What are NFTs?</ButtonLink>
+                  <ButtonLink to="/nft/">What are NFTs?</ButtonLink>
                 </>
               </Card>
               <Card
@@ -436,7 +453,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                   <Center>
                     <GatsbyImage image={getImage(data.dao)} />
                   </Center>
-                  <ButtonLink>What are DAOs?</ButtonLink>
+                  <ButtonLink to="/dao/">What are DAOs?</ButtonLink>
                 </>
               </Card>
               <Card
@@ -447,7 +464,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                   <Center>
                     <GatsbyImage image={getImage(data.developersEthBlocks)} />
                   </Center>
-                  <ButtonLink>Explore dApps</ButtonLink>
+                  <ButtonLink to="/dapps/">Explore dApps</ButtonLink>
                 </>
               </Card>
               <CardGradient
@@ -455,6 +472,16 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                 description="There are also other prominent industries being disrupted by blockchain:"
               >
                 <ul>
+                  <li>
+                    <Link to="/decentralized-identity/">
+                      Self-sovereign identity
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/social-networks/">
+                      Decentralized social networks
+                    </Link>
+                  </li>
                   <li>
                     <Link to="https://future.com/what-is-decentralized-science-aka-desci/">
                       Decentralised Science (Desci)
@@ -475,11 +502,6 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                       Supply chain management
                     </Link>
                   </li>
-                  <li>
-                    <Link to="https://tykn.tech/self-sovereign-identity/">
-                      Self-sovereign identity
-                    </Link>
-                  </li>
                 </ul>
               </CardGradient>
             </CardGrid>
@@ -488,8 +510,12 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
               Additional reading on Ethereum
             </AdditionalReadingHeader>
             <DocsContainer>
-              <DocLink to="/">Blockchain in developing countries</DocLink>
-              <DocLink to="/">Ethereum developer resurces</DocLink>
+              <DocLink
+                to="http://governance40.com/wp-content/uploads/2019/06/Blockchain-in-Developing-Countries.pdf"
+                isExternal
+              >
+                Blockchain in developing countries
+              </DocLink>
             </DocsContainer>
           </Section>
 
@@ -509,7 +535,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                   <Center>
                     <GatsbyImage image={getImage(data.rhino)} />
                   </Center>
-                  <ButtonLink>Start staking</ButtonLink>
+                  <ButtonLink to="/staking/">Start staking</ButtonLink>
                 </>
               </Card>
               <Card
@@ -520,7 +546,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                   <Center>
                     <GatsbyImage image={getImage(data.ethereumInside)} />
                   </Center>
-                  <ButtonLink>Run a node</ButtonLink>
+                  <ButtonLink to="/run-a-node/">Run a node</ButtonLink>
                 </>
               </Card>
             </CardGrid>
@@ -541,7 +567,9 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                   <Center>
                     <GatsbyImage image={getImage(data.hackathon)} />
                   </Center>
-                  <ButtonLink>Is Ethereum green?</ButtonLink>
+                  <ButtonLink to="/energy-consumption/">
+                    Is Ethereum green?
+                  </ButtonLink>
                 </>
               </Card>
               <Card
@@ -552,7 +580,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                   <Center>
                     <GatsbyImage image={getImage(data.merge)} />
                   </Center>
-                  <ButtonLink>Read more</ButtonLink>
+                  <ButtonLink to="/upgrades/">Read more</ButtonLink>
                 </>
               </Card>
               <Card
@@ -563,7 +591,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                   <Center>
                     <GatsbyImage image={getImage(data.financeTransparent)} />
                   </Center>
-                  <ButtonLink>Read whitepaper</ButtonLink>
+                  <ButtonLink to="/whitepaper/">Read whitepaper</ButtonLink>
                 </>
               </Card>
             </CardGrid>
@@ -572,11 +600,16 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
               More about Ethereum protocol
             </AdditionalReadingHeader>
             <DocsContainer>
-              <DocLink to="/">Intro to Ethereum for Developers</DocLink>
-              <DocLink to="/">Ethereum Improvement Proposals</DocLink>
-              <DocLink to="/">Ethereum History</DocLink>
-              <DocLink to="/">Governance</DocLink>
-              <DocLink to="/">Bridges</DocLink>
+              <DocLink to="/developers/">
+                Intro to Ethereum for Developers
+              </DocLink>
+              <DocLink to="/eips/">Ethereum Improvement Proposals</DocLink>
+              <DocLink to="/history/">Ethereum History</DocLink>
+              <DocLink to="/governance/">Governance</DocLink>
+              <DocLink to="/bridges/">Bridges</DocLink>
+              <DocLink to="https://weekinethereumnews.com/" isExternal>
+                Week in Ethereum News
+              </DocLink>
             </DocsContainer>
           </Section>
 
@@ -592,7 +625,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                   <Center>
                     <GatsbyImage image={getImage(data.enterprise)} />
                   </Center>
-                  <ButtonLink>Explore more</ButtonLink>
+                  <ButtonLink to="/community/">Explore more</ButtonLink>
                 </>
               </Card>
               <Card
@@ -603,7 +636,9 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                   <Center>
                     <GatsbyImage image={getImage(data.dogeComputer)} />
                   </Center>
-                  <ButtonLink>How can I get Involved?</ButtonLink>
+                  <ButtonLink to="/community/get-involved/">
+                    How can I get Involved?
+                  </ButtonLink>
                 </>
               </Card>
               <Card
@@ -614,7 +649,9 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                   <Center>
                     <GatsbyImage image={getImage(data.impact)} />
                   </Center>
-                  <ButtonLink>Explore communities</ButtonLink>
+                  <ButtonLink to="/community/online/">
+                    Explore communities
+                  </ButtonLink>
                 </>
               </Card>
             </CardGrid>

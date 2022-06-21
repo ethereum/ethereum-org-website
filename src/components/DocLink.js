@@ -21,6 +21,13 @@ const Container = styled(Link)`
     box-shadow: 0 0 1px ${({ theme }) => theme.colors.primary};
     background: ${({ theme }) => theme.colors.tableBackgroundHover};
     border-radius: 4px;
+
+    svg {
+      fill: ${(props) => props.theme.colors.primary};
+      transition: transform 0.1s;
+      transform: scale(1.2)
+        rotate(${({ isExternal }) => (isExternal ? "-45deg" : "0")});
+    }
   }
   @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
     width: 100%;
@@ -43,6 +50,7 @@ const Arrow = styled(Icon)`
   margin: 0rem 1.5rem;
   align-self: center;
   min-width: 2rem;
+  transform: rotate(${({ isExternal }) => (isExternal ? "-45deg" : "0")});
 `
 
 const EmojiCell = styled.div`
@@ -51,7 +59,7 @@ const EmojiCell = styled.div`
 `
 
 const DocLink = ({ to, children, className, isExternal }) => (
-  <Container to={to} className={className}>
+  <Container to={to} className={className} isExternal={isExternal} hideArrow>
     <EmojiCell>
       <Emoji size={1} text=":page_with_curl:" mr={`1rem`} />
     </EmojiCell>
@@ -59,7 +67,8 @@ const DocLink = ({ to, children, className, isExternal }) => (
       <Title>{children}</Title>
     </TextCell>
     <Arrow
-      name={isExternal ? "arrowUpRight" : "arrowRight"}
+      isExternal={isExternal}
+      name="arrowRight"
       color={({ theme }) => theme.colors.text}
     />
   </Container>
