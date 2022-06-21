@@ -46,6 +46,10 @@ const Persona = styled.div<{
   border: 1px solid #3d3d3d;
   border-radius: 4px;
   cursor: pointer;
+
+  &:hover {
+    background: ${(props) => props.theme.colors.primary100};
+  }
 `
 
 const Title = styled.div`
