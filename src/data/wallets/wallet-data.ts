@@ -480,7 +480,7 @@ const walletData: WalletData[] = [
   {
     name: "Brave Wallet",
     image_name: "brave",
-    brand_color: "##fe1f02",
+    brand_color: "#fe1f02",
     url: "https://brave.com/wallet",
     wallet_live_date: "November 2021",
     active_development_team: true,
@@ -527,7 +527,7 @@ const walletData: WalletData[] = [
   {
     name: "Tally Ho!",
     image_name: "tallyho",
-    brand_color: "##0D2321",
+    brand_color: "#0D2321",
     url: "https://tally.cash/",
     wallet_live_date: "December 2021",
     active_development_team: true,
