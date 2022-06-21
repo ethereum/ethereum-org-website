@@ -53,7 +53,6 @@ const Grid = styled.div`
     margin: 0;
   }
 
-
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     grid-template-columns: 40% auto auto 0% 5%;
   }
@@ -69,10 +68,6 @@ const WalletContentHeader = styled(Grid)`
   padding: 8px;
   background: ${(props) => props.theme.colors.background};
   z-index: 1;
-
-  span {
-    color: ${(props) => props.theme.colors.primary};
-  }
 
   @media (max-width: ${(props) => props.theme.breakpoints.s}) {
     gap: 0.5rem;
@@ -90,8 +85,8 @@ const StyledSelect = styled(Select)`
     font-size: 0.9rem;
     padding-right: 0.3rem;
     transition: 0.5s all;
-    svg{
-      fill:${(props) => props.theme.colors.text};
+    svg {
+      fill: ${(props) => props.theme.colors.text};
       transition: 0.5s all;
     }
 
@@ -117,7 +112,7 @@ const StyledSelect = styled(Select)`
       border: 1px solid ${(props) => props.theme.colors.primary};
       color: ${(props) => props.theme.colors.background};
       transition: 0.5s all;
-      svg{
+      svg {
         fill: ${(props) => props.theme.colors.background};
         transition: 0.5s all;
       }
@@ -125,7 +120,6 @@ const StyledSelect = styled(Select)`
       .react-select__value-container {
         .react-select__single-value {
           color: ${(props) => props.theme.colors.background};
-          
         }
       }
 
@@ -215,10 +209,10 @@ const FlexInfo = styled.div`
     border-radius: 4px;
     text-decoration: none;
     transition: 0.5s all;
-    :after{
-      display:none;
+    :after {
+      display: none;
     }
-    :hover{
+    :hover {
       background: ${(props) => props.theme.colors.primary};
       color: ${(props) => props.theme.colors.background};
       transition: 0.5s all;
@@ -497,7 +491,7 @@ const WalletTable = ({ data, filters, walletData }) => {
     <Container>
       <WalletContentHeader>
         <p>
-          <span>{filteredWallets.length} wallets</span> out of{" "}
+          <strong>Showing {filteredWallets.length} wallets</strong> out of{" "}
           {walletCardData.length}
         </p>
         <StyledSelect
