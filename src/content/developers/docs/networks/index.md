@@ -38,12 +38,7 @@ ETH on testnets has no real value; therefore, there are no markets for testnet E
 
 #### Sepolia {#sepolia}
 
-<<<<<<< HEAD
-A proof-of-work testnet. The best like-for-like representation of Ethereum Mainnet.
-=======
 A proof-of-work testnet; this means it's the best like-for-like representation of Ethereum. Sepolia is expected to undergo The Merge to proof-of-stake in summer 2022. It is not yet certain whether it will then be maintained long term.
-
-> > > > > > > networks-page
 
 - [Website](https://sepolia.dev/)
 - [Github](https://github.com/goerli/sepolia)
