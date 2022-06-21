@@ -2,8 +2,6 @@
 import React, { useState } from "react"
 import { getImage, GatsbyImage } from "gatsby-plugin-image"
 import styled from "styled-components"
-import { components } from "react-select"
-const { Control, Option } = components
 
 // Components
 import Icon from "../Icon"
@@ -28,6 +26,8 @@ import WithdrawCrypto from "../../assets/wallets/withdraw_crypto.svg"
 import Multisig from "../../assets/wallets/multisig.svg"
 import SocialRecover from "../../assets/wallets/social_recover.svg"
 import Swap from "../../assets/wallets/swap.svg"
+import Warning from "../../assets/staking/warning-product-glyph.svg"
+import GreenCheck from "../../assets/staking/green-check-product-glyph.svg"
 
 // Styles
 const Container = styled.div`
@@ -234,11 +234,6 @@ const SecondaryText = styled.p`
   font-size: 0.7rem;
   line-height: 0.85rem;
   color: ${(props) => props.theme.colors.text200};
-`
-
-const WalletFeatureCircle = styled(Icon)<{ hasFeature: boolean }>`
-  fill: ${(props) =>
-    props.hasFeature ? props.theme.colors.primary : props.theme.colors.text200};
 `
 
 const WalletMoreInfoArrow = styled(Icon)`
@@ -554,22 +549,25 @@ const WalletTable = ({ data, filters, walletData }) => {
                 </div>
               </FlexInfo>
               <FlexInfoCenter onClick={() => updateMoreInfo(idx)}>
-                <WalletFeatureCircle
-                  name="circle"
-                  hasFeature={wallet[firstFeatureSelect.filterKey]}
-                />
+                {wallet[firstFeatureSelect.filterKey] ? (
+                  <GreenCheck />
+                ) : (
+                  <Warning />
+                )}
               </FlexInfoCenter>
               <FlexInfoCenter onClick={() => updateMoreInfo(idx)}>
-                <WalletFeatureCircle
-                  name="circle"
-                  hasFeature={wallet[secondFeatureSelect.filterKey]}
-                />
+                {wallet[secondFeatureSelect.filterKey] ? (
+                  <GreenCheck />
+                ) : (
+                  <Warning />
+                )}
               </FlexInfoCenter>
               <FlexInfoCenter onClick={() => updateMoreInfo(idx)}>
-                <WalletFeatureCircle
-                  name="circle"
-                  hasFeature={wallet[thirdFeatureSelect.filterKey]}
-                />
+                {wallet[thirdFeatureSelect.filterKey] ? (
+                  <GreenCheck />
+                ) : (
+                  <Warning />
+                )}
               </FlexInfoCenter>
               <FlexInfoCenter>
                 <div
