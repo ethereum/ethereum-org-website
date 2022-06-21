@@ -46,7 +46,6 @@ Here's how an internet of NFTs compared to the internet most of us use today loo
 
 ### NFT examples {#nft-examples}
 
-**NFT examples**
 The NFT world is relatively new. In theory, the scope for NFTs is anything that is unique that needs provable ownership. Here are some examples of NFTs that exist today, to help you get the idea:
 
 - [A unique digital artwork](https://foundation.app/artworks)
@@ -56,14 +55,12 @@ The NFT world is relatively new. In theory, the scope for NFTs is anything that 
 - [A digital collectible](https://www.larvalabs.com/cryptopunks/details/1)
 - [A domain name](https://app.ens.domains/name/ethereum.eth)
 - [A ticket that gives you access to an event or a coupon](https://www.yellowheart.io/)
-- [Buy real world goods - for example, gold] (https://www.tangible.store/)
-- [Fractionilsed Real estate] (https://realt.co/
-- [Degree Certificates] (https://www.degreecert.com/)
-- [Own Music royalties via NFTs] (https://opulous.org/
-- [Move 2 Earn] (https://yeticoineth.com/about.html
-- [Digital Identity] (https://photochromic.io/)
-- [NFTs and De-Fi working together] (https://swellnetwork.io/)
-
+- [Buy real world goods](https://www.tangible.store/)
+- [fractionalized real-estate](https://realt.co/)
+- [Degree Certificates](https://www.degreecert.com/)
+- [Music royalties via NFTs](https://opulous.org/)
+- [Move 2 earn](https://yeticoineth.com/about.html)
+- [Digital identity](https://photochromic.io/)
 
 ### ethereum.org examples {#ethereum-org-examples}
 
@@ -248,28 +245,6 @@ Projects are beginning to explore using NFTs as collateral instead. Imagine you 
 
 And this isn't hard on Ethereum, because both worlds (NFT and DeFi) share the same infrastructure.
 
-Charge your NFT with yield
-
-Charged Particles is still in development although worth exploring the potential.
-They want NFT holders to be able to turn a standard NFT into a yield-generating investment.
-Charged Particles in a protocol layer solution allow users to energize ANY NFT with many different types of interest-bearing assets (e.g. DAI, ETH, etc.).
-The principal of the deposit can optionally be “locked” into the Particle, whereas the interest portion can always be withdrawn, or “discharged”
-[Theidols.io](http://theidols.io/) has a similar project of locking ETH away in staking protocol Lido forever and discharging the ETH rewards to a treasury and the NFT owners.
-
-NFTs as a Bond
-
-A project known as [truefreeze](https://truefreeze.xyz/) aims to reward people for holding their ETH long term. The ETH is locked into an NFT and the user is rewarded for keeping the ETH over a long time period.
-
-The NFT acts as a certificate and can be traded on marketplaces, the buying and selling in this way does not impact the price of ETH.
-The idea is to not place the ETH in a yield farm, or liquidity pair but to allow a user to store ETH in a risk-adjusted manner and increase adoption of crypto.
-
-NFTs making DE-Fi more user friendly
-
-A new staking protocol called [Swell](https://swellnetwork.io) allows a user to [stake](https://ethereum.org/en/staking/) their ETH and also put it into a liquidity pool all in one system and have an NFT represent your holdings. This makes it much less complicated for a user to check and manage.
-Insurance
-Only small experiments have been made by individual users to basket insurance policies into an NFT which can be purchased and gives the holder insurance rights. The NFTs can be bought and sold on an open market.
-
-
 #### Fractional ownership {#fractional-ownership}
 
 NFT creators can also create "shares" for their NFT. This gives investors and fans the opportunity to own a part of an NFT without having to buy the whole thing. This adds even more opportunities for NFT minters and collectors alike.
@@ -294,34 +269,12 @@ As we mentioned, this is an emerging space. NFTs, DAOs, fractionalised tokens ar
 Other NFT Use cases
 **
 Certificates of authenticity - E.g Birth, Marriage, Death and Degrees**
-University degree companies (Degree mills) offering fake degree certificates are reportedly a billion-dollar industry that NFTs can help combat. 
+University degree companies (Degree mills) offering fake degree certificates are reportedly a billion-dollar industry that NFTs can help combat.
 NFTs can be a secure and quick way to verify someone's degree credentials. Cutting out a huge amount of administrative burden and an NFT is much harder to cheat than a certificate on paper
 
 [In South Korea, a university](https://forkast.news/headlines/south-korea-nfts-graduates-hoseo/) already issued degrees via an NFT.
 ‘The university hopes the pivot from a paper-based degree to NFTs will improve access to administrative services and prevent forgery or alteration of the degree’
 Trinity Business School (TBS) in Ireland is also planning on offering NFTs from 2023.
-
-**Digital Identity**
-
-This area is still in its early stages however as the technology develops so will the use cases. 
-When combining these invaluable building blocks with biometrics and NFTs, a persistent and portable identity is created which resolves to a unique and real person, without compromising their privacy or data dignity.
-
-**Ticketing**
-
-Ticketing for events is often misunderstood as QR codes are perceived to do the same.
-
-NFTs can have smart contracts behind them, so an NFT + smart contract could refund you automatically if the concert or plane flight is cancelled without having to apply, which also saves time and administration costs.
-
-Another example of the magic of smart contracts is the revenue from your NFT ticket could automatically pay the artist 40%, the DJ 10%, the lighting crew 2%, the janitors 1%, and on and on. No middle person is needed to orchestrate the payments, which means you pay almost nothing in fees.
-There is also NFT artwork attached to the event you attend (similar to Beatles tickets that are now collectables)
-
-**SAAS subscription model into NFTs**
-This area is in a very early experimentally stage, some companies have started selling NFTs as permanent access to their software instead of a monthly subscription.
-
-The main benefit is that the customer and client are really aligned in giving feedback, and making the product better and the customer is committed to the software provider.
-
-Taking this approach is thinking about their long term strategy to stay relevant with their clients. Another benefit is that NFT can raise capital injection to develop more products and offerings.
-
 
 <Divider />
 
