@@ -432,7 +432,7 @@ const WalletFilterSidebar = ({
                             }
                       }
                     >
-                      <IconContainer>{item.icon}</IconContainer>
+                      <IconContainer aria-hidden="true">{item.icon}</IconContainer>
                       <p>{item.title}</p>
                       <div>
                         {item.filterKey && (
