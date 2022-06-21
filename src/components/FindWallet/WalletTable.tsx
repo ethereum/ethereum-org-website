@@ -84,20 +84,20 @@ const WalletContentHeader = styled(Grid)`
 // Pass menuIsOpen={true} to component to debug
 const StyledSelect = styled(Select)`
   .react-select__control {
-    border: 1px solid ${(props) => props.theme.colors.selectHover};
+    border: 1px solid ${(props) => props.theme.colors.text};
     background: none;
     cursor: pointer;
     font-size: 0.9rem;
     padding-right: 0.3rem;
     transition: 0.5s all;
     svg{
-      fill:${(props) => props.theme.colors.selectHover};
+      fill:${(props) => props.theme.colors.text};
       transition: 0.5s all;
     }
 
     .react-select__value-container {
       .react-select__single-value {
-        color: ${(props) => props.theme.colors.primary};
+        color: ${(props) => props.theme.colors.text};
       }
     }
 
@@ -196,7 +196,7 @@ const Wallet = styled(Grid)`
 const FlexInfo = styled.div`
   display: flex;
   gap: 1rem;
-  align-items: center;
+  align-items: start;
 
   p {
     padding: 0;
@@ -205,6 +205,7 @@ const FlexInfo = styled.div`
   p + p {
     margin: 0.1rem 0 1rem;
     font-size: 0.9rem;
+    line-height: 1rem;
   }
   p + a {
     font-size: 0.9rem;
