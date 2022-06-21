@@ -60,10 +60,39 @@ const Main = styled.main`
   flex-grow: 1;
 `
 
-const Layout = (props) => {
-  const [isDarkTheme, setIsDarkTheme] = useState(false)
-  const [isZenMode, setIsZenMode] = useState(false)
-  const [shouldShowSideNav, setShouldShowSideNav] = useState(false)
+interface PageContext {
+  intl: any
+  isContentEnglish: boolean
+  isLegal: boolean
+  isOutdated: boolean
+  ignoreTranslationBanner: boolean
+}
+
+export interface IProps {
+  data?: {
+    pageData?: {
+      frontmatter?: {
+        isOutdated: boolean
+      }
+    }
+  }
+  location: {
+    hash: string
+  }
+  path: string
+  pageContext: PageContext
+}
+
+const Layout: React.FC<IProps> = ({
+  data,
+  location,
+  path,
+  pageContext,
+  children,
+}) => {
+  const [isDarkTheme, setIsDarkTheme] = useState<boolean>(false)
+  const [isZenMode, setIsZenMode] = useState<boolean>(false)
+  const [shouldShowSideNav, setShouldShowSideNav] = useState<boolean>(false)
 
   // Exit Zen Mode on 'esc' click
   useKeyPress(`Escape`, () => handleZenModeChange(false))
@@ -78,7 +107,7 @@ const Layout = (props) => {
   }, [])
 
   useEffect(() => {
-    if (props.path.includes("/docs/")) {
+    if (path.includes("/docs/")) {
       setShouldShowSideNav(true)
 
       if (localStorage.getItem("zen-mode") !== null) {
@@ -90,50 +119,47 @@ const Layout = (props) => {
       setShouldShowSideNav(false)
     }
 
-    if (props.location.hash && !props.location.hash.includes("gatsby")) {
-      const idTag = props.location.hash.split("#")
+    if (location.hash && !location.hash.includes("gatsby")) {
+      const idTag = location.hash.split("#")
       scrollIntoView(idTag[1])
     }
-  }, [props.path, props.location])
+  }, [path, location])
 
-  const handleThemeChange = () => {
+  const handleThemeChange = (): void => {
     setIsDarkTheme(!isDarkTheme)
     if (localStorage) {
-      localStorage.setItem("dark-theme", !isDarkTheme)
+      localStorage.setItem("dark-theme", String(!isDarkTheme))
     }
   }
 
-  const handleZenModeChange = (val) => {
+  const handleZenModeChange = (val?: boolean): void => {
     // Use 'val' param if provided. Otherwise toggle
     const newVal = val !== undefined ? val : !isZenMode
 
     setIsZenMode(newVal)
     if (localStorage) {
-      localStorage.setItem("zen-mode", newVal)
+      localStorage.setItem("zen-mode", String(newVal))
     }
   }
 
   // IntlProvider & IntlContextProvider appear to be necessary in order to pass context
   // into components that live outside page components (e.g. Nav & Footer).
   // https://github.com/wiziple/gatsby-plugin-intl/issues/116
-  const intl = props.pageContext.intl
+  const intl = pageContext.intl
   const theme = isDarkTheme ? darkTheme : lightTheme
 
   const isPageLanguageEnglish = intl.language === intl.defaultLanguage
-  const isPageContentEnglish = !!props.pageContext.isContentEnglish
-  const isLegal = !!props.pageContext.isLegal
-  const isTranslationBannerIgnored = !!props.pageContext.ignoreTranslationBanner
+  const isPageContentEnglish = !!pageContext.isContentEnglish
+  const isLegal = !!pageContext.isLegal
+  const isTranslationBannerIgnored = !!pageContext.ignoreTranslationBanner
   const isPageTranslationOutdated =
-    !!props.pageContext.isOutdated ||
-    !!props.data?.pageData?.frontmatter?.isOutdated
+    !!pageContext.isOutdated || !!data?.pageData?.frontmatter?.isOutdated
   const isPageRightToLeft = isLangRightToLeft(intl.language)
 
   const shouldShowTranslationBanner =
     (isPageTranslationOutdated ||
       (isPageContentEnglish && !isPageLanguageEnglish)) &&
     !isTranslationBannerIgnored
-
-  const path = props.path
 
   return (
     <ApolloProvider client={client}>
@@ -144,7 +170,7 @@ const Layout = (props) => {
       >
         <IntlContextProvider value={intl}>
           <ThemeProvider theme={theme}>
-            <GlobalStyle isDarkTheme={isDarkTheme} />
+            <GlobalStyle />
             <SkipLink hrefId="#main-content" />
             <TranslationBanner
               shouldShow={shouldShowTranslationBanner}
@@ -157,7 +183,7 @@ const Layout = (props) => {
               isPageRightToLeft={isPageRightToLeft}
               originalPagePath={intl.originalPath}
             />
-            <ContentContainer isZenMode={isZenMode}>
+            <ContentContainer>
               <VisuallyHidden isHidden={isZenMode}>
                 <Nav
                   handleThemeChange={handleThemeChange}
@@ -177,7 +203,7 @@ const Layout = (props) => {
                   <ZenModeContext.Provider
                     value={{ isZenMode, handleZenModeChange }}
                   >
-                    <Main>{props.children}</Main>
+                    <Main>{children}</Main>
                   </ZenModeContext.Provider>
                 </MainContent>
               </MainContainer>
