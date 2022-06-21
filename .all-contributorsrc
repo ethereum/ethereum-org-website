@@ -4899,7 +4899,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/43940590?v=4",
       "profile": "https://www.andrewgallagher-portfolio.com/",
       "contributions": [
-        "content"
+        "content",
+        "code"
       ]
     },
     {
@@ -5119,7 +5120,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/92654?v=4",
       "profile": "https://tomlisankie.com",
       "contributions": [
-        "doc"
+        "doc",
+        "bug"
       ]
     },
     {
@@ -7839,6 +7841,80 @@
       "contributions": [
         "doc",
         "bug"
+      ]
+    },
+    {
+      "login": "Barukimang",
+      "name": "Barukimang",
+      "avatar_url": "https://avatars.githubusercontent.com/u/16764792?v=4",
+      "profile": "https://github.com/Barukimang",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "kuzdogan",
+      "name": "Kaan Uzdoğan",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13069972?v=4",
+      "profile": "http://kaanuzdogan.com",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "NiloCK",
+      "name": "Colin Kennedy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/10780590?v=4",
+      "profile": "https://github.com/NiloCK",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "TimGrey998",
+      "name": "XOF",
+      "avatar_url": "https://avatars.githubusercontent.com/u/57596934?v=4",
+      "profile": "https://github.com/TimGrey998",
+      "contributions": [
+        "doc",
+        "translation",
+        "bug"
+      ]
+    },
+    {
+      "login": "ManuKashyap01",
+      "name": "Manu kashyap",
+      "avatar_url": "https://avatars.githubusercontent.com/u/76866512?v=4",
+      "profile": "https://github.com/ManuKashyap01",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "arjenzhou",
+      "name": "Zhou Yang",
+      "avatar_url": "https://avatars.githubusercontent.com/u/23600703?v=4",
+      "profile": "http://arjenzhou.com",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "burningtree",
+      "name": "tree",
+      "avatar_url": "https://avatars.githubusercontent.com/u/67269?v=4",
+      "profile": "https://keybase.io/tree",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "StephenFluin",
+      "name": "Stephen Fluin",
+      "avatar_url": "https://avatars.githubusercontent.com/u/165056?v=4",
+      "profile": "https://github.com/StephenFluin",
+      "contributions": [
+        "doc"
       ]
     }
   ],

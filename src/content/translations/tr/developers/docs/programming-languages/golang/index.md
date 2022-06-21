@@ -34,9 +34,9 @@ Başlamadan önce temel bilgilere mi ihtiyacınız var? [ethereum.org/learn](/le
 ## Orta Seviye Makaleler ve Belgeler {#intermediate-articles-and-docs}
 
 - [Go Ethereum Belgeleri](https://geth.ethereum.org/docs/) - _Resmi Ethereum Golang belgeleri_
-- [Turbo-Geth Programcı Kılavuzu](https://github.com/ledgerwatch/turbo-geth/blob/master/docs/programmers_guide/guide.md) - _Durum ağacını, çoklu ispatları ve işlem sürecini içeren resimli bir rehber_
-- [Turbo-Geth ve Durumsuz Ethereum](https://youtu.be/3-Mn7OckSus?t=394) - _2020 Ethereum Topluluk Konferansı(EthCC 3)_
-- [Turbo-Geth: Ethereum istemcilerinin optimizasyonu](https://www.youtube.com/watch?v=CSpc1vZQW2Q) - _2018 Devcon 4_
+- [Erigon Programcı Kılavuzu](https://github.com/ledgerwatch/erigon/blob/devel/docs/programmers_guide/guide.md) - _Durum ağacını, çoklu ispatları ve işlem sürecini içeren resimli bir rehber_
+- [Erigon ve Durumsuz Ethereum](https://youtu.be/3-Mn7OckSus?t=394) - _2020 Ethereum Topluluk Konferansı(EthCC 3)_
+- [Erigon: Ethereum istemcilerinin optimizasyonu](https://www.youtube.com/watch?v=CSpc1vZQW2Q) - _2018 Devcon 4_
 - [Go Ethereum GoDoc](https://godoc.org/github.com/ethereum/go-ethereum)
 - [Geth ile Go'da bir Dapp oluşturma](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/creating-a-dapp-in-go-with-geth/)
 - [Golang ve Geth üzerinden Ethereum Private Network ile çalışın](https://myhsts.org/tutorial-learn-how-to-work-with-ethereum-private-network-with-golang-with-geth.php)
@@ -55,7 +55,7 @@ Başlamadan önce temel bilgilere mi ihtiyacınız var? [ethereum.org/learn](/le
 
 - [Geth / Go Ethereum](https://github.com/ethereum/go-ethereum) - _Ethereum protokolünün resmi Go uygulaması_
 - [Go Ethereum Kodu Analizi](https://github.com/ZtesoftCS/go-ethereum-code-analysis) - _Go Ethereum kaynak kodunun incelenmesi ve analizi_
-- [Turbo-Geth](https://github.com/ledgerwatch/turbo-geth) - _Go Ethereum'un daha hızlı bir türevi_
+- [Erigon](https://github.com/ledgerwatch/erigon) - _Go Ethereum'un daha hızlı bir türevi_
 - [Golem](https://github.com/golemfactory/golem) - _Golem, bilgi işlem gücü için küresel bir pazar oluşturuyor_
 - [Quorum](https://github.com/jpmorganchase/quorum) - _İzin verilen veri gizliliğini destekleyen Ethereum uygulaması_
 - [Prysm](https://github.com/prysmaticlabs/prysm) - _ Ethereum "Serenity" 2.0 Go Uygulaması_

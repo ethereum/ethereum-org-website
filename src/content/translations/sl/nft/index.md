@@ -400,7 +400,7 @@ Ocenjuje se, da bo Eth2 omrežju omogočal, da bo procesiralo med 25.000 in 100.
 
 [Vitalik Buterin o potencialu transakcij na sekundo na Eth2](https://twitter.com/VitalikButerin/status/1312905884549300224?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1312905886327664640%7Ctwgr%5E%7Ctwcon%5Es2_&ref_url=https%3A%2F%2Fwww.coinspeaker.com%2Fvitalik-buterin-ethereum-layer-2%2F)
 
-Eth2 bo omogočal vsaj 64-krat večjo količino transakcij kot danes, ko ta številka stoji okoli 15 transakcij. To je število razdrobljenih verig (dodatnih podatkov in kapacitet), ki se jih uvaja. [Več o razdrobljenih verigah](/upgrades/shard-chains/)
+Eth2 bo omogočal vsaj 64-krat večjo količino transakcij kot danes, ko ta številka stoji okoli 15 transakcij. To je število razdrobljenih verig (dodatnih podatkov in kapacitet), ki se jih uvaja. [Več o razdrobljenih verigah](/upgrades/sharding/)
 
 To pomeni, da lahko ocenimo, kako dolgo bo trajalo, da se obdela 100.000 transakcij in tako to primerjamo z zgornjim primerom Vise.
 

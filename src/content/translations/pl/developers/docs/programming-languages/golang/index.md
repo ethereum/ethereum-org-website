@@ -34,9 +34,9 @@ Potrzebujesz bardziej podstawowych informacji? Sprawdź na stronach [ethereum.or
 ## Artykuły dla średniozaawansowanych {#intermediate-articles-and-docs}
 
 - [Go Ethereum Documentation](https://geth.ethereum.org/docs/) — <em x-id="4">dokumentacja oficjalnego Golang Ethereum</em>
-- [Turbo-Geth Programmer's Guide](https://github.com/ledgerwatch/turbo-geth/blob/master/docs/programmers_guide/guide.md) — <em x-id="4">ilustrowany przewodnik uwzględniający drzewo stanowe, wiele dowodów i przetwarzanie transakcji</em>
-- [TTurbo-Geth and Stateless Ethereum](https://youtu.be/3-Mn7OckSus?t=394) — _Konferencja Społeczności Ethereum 2020 (EthCC 3)_
-- [TTurbo-Geth: optimising Ethereum clients](https://www.youtube.com/watch?v=CSpc1vZQW2Q) — _2018 Devcon 4_
+- [Erigon Programmer's Guide](https://github.com/ledgerwatch/erigon/blob/devel/docs/programmers_guide/guide.md) — <em x-id="4">ilustrowany przewodnik uwzględniający drzewo stanowe, wiele dowodów i przetwarzanie transakcji</em>
+- [Turbo-Geth and Stateless Ethereum](https://youtu.be/3-Mn7OckSus?t=394) — _Konferencja Społeczności Ethereum 2020 (EthCC 3)_
+- [Turbo-Geth: optimising Ethereum clients](https://www.youtube.com/watch?v=CSpc1vZQW2Q) — _2018 Devcon 4_
 - [Go Ethereum — dokumentacja Go](https://godoc.org/github.com/ethereum/go-ethereum)
 - [Tworzenie aplikacji zdecentralizowanych w Go z użyciem Geth](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/creating-a-dapp-in-go-with-geth/)
 - [Praca z prywatną siecią Ethereum z Golang i Geth](https://myhsts.org/tutorial-learn-how-to-work-with-ethereum-private-network-with-golang-with-geth.php)
@@ -55,7 +55,7 @@ Potrzebujesz bardziej podstawowych informacji? Sprawdź na stronach [ethereum.or
 
 - [Geth / Go Ethereum](https://github.com/ethereum/go-ethereum) — <em x-id="4">oficjalna implementacja protokołu Ethereum</em>
 - [Go Ethereum Code Analysis](https://github.com/ZtesoftCS/go-ethereum-code-analysis) — <em x-id="4">przegląd i analiza kodu źródłowego Go Ethereum</em>
-- [Turbo-Geth](https://github.com/ledgerwatch/turbo-geth) — <em x-id="4">szybsza pochodna Go Ethereum</em>
+- [Erigon](https://github.com/ledgerwatch/erigon) — <em x-id="4">szybsza pochodna Go Ethereum</em>
 - [Golem](https://github.com/golemfactory/golem) — _Golem tworzy globalny rynek mocy obliczeniowej_
 - [Quorum](https://github.com/jpmorganchase/quorum) — <em x-id="4">uprawniona implementacja Ethereum wspierająca prywatność danych</em>
 - <a href="https://github.com/prysmaticlabs/prysm">Prysm</a> — <em x-id="4">implementacja Ethereum „Serenity” 2.0 przy użyciu Go </em>

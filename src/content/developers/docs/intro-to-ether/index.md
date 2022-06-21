@@ -3,6 +3,7 @@ title: Intro to ether
 description: A developer's introduction to the ether cryptocurrency.
 lang: en
 sidebar: true
+preMergeBanner: true
 ---
 
 ## Prerequisites {#prerequisites}

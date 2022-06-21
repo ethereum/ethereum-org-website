@@ -17,7 +17,7 @@ summaryPoint4: Vous pouvez le connaître sous le nom de « Phase 0 » sur les fe
 
 ## Que fait la chaîne phare ? {#what-does-the-beacon-chain-do}
 
-La chaîne phare dirigera ou coordonnera le réseau étendu de [fragments](/upgrades/shard-chains/) et de [validateurs](/staking/). Mais ce ne sera pas comme le [réseau principal Ethereum](/glossary/#mainnet) d'aujourd'hui. Elle ne peut gérer ni les comptes ni les contrats intelligents.
+La chaîne phare dirigera ou coordonnera le réseau étendu de [fragments](/upgrades/sharding/) et de [validateurs](/staking/). Mais ce ne sera pas comme le [réseau principal Ethereum](/glossary/#mainnet) d'aujourd'hui. Elle ne peut gérer ni les comptes ni les contrats intelligents.
 
 Le rôle de la chaîne phare évoluera au fil du temps, mais restera un élément fondamental de l'[Ethereum sécurisé, durable et évolutif auquel nous travaillons](/upgrades/vision/).
 
@@ -33,7 +33,7 @@ Miser des ETH et devenir validateur est plus simple que de [miner](/developers/d
 Si vous souhaitez devenir validateur et aider à sécuriser la chaîne phare, <a href="/staking/">familiarisez-vous avec le concept de mise en jeu</a>.
 </InfoBanner>
 
-Il s'agit également d'un changement important pour une autre mise à jour : [les chaînes de fragments](/upgrades/shard-chains/).
+Il s'agit également d'un changement important pour une autre mise à jour : [les chaînes de fragments](/upgrades/sharding/).
 
 ### Mise en place des chaînes de fragments {#setting-up-for-shard-chains}
 
@@ -57,7 +57,7 @@ La chaîne phare existera d'abord séparément du réseau principal Ethereum que
 
 Les chaînes de fragments ne peuvent s'ajouter en toute sécurité dans l'écosystème Ethereum que s'il existe un mécanisme de consensus sur la preuve de mise à enjeu. La chaîne phare introduira la mise en jeu, ouvrant la voie à la mise à niveau suivante : la chaîne de fragments.
 
-<ButtonLink to="/upgrades/shard-chains/">
+<ButtonLink to="/upgrades/sharding/">
     Chaînes de fragments
 </ButtonLink>
 

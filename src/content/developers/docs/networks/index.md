@@ -3,6 +3,7 @@ title: Networks
 description: An overview of Ethereum's networks and where to get testnet ether (ETH) for testing your application.
 lang: en
 sidebar: true
+preMergeBanner: true
 ---
 
 Networks are different Ethereum environments you can access for development, testing, or production use cases. Since Ethereum is a protocol, there can be multiple independent "networks" that conform to the protocol without interacting with each other.
@@ -67,7 +68,7 @@ _Note, [the Ropsten testnet is deprecated](https://github.com/ethereum/pm/issues
 
 A proof-of-work testnet. It only serves historical relevance and is mainly used by core developers for testing protocol upgrades.
 
-##### Ropsten faucets
+##### Ropsten faucets
 
 - [FaucETH](https://fauceth.komputing.org) (multi-Chain faucet without the need for social account)
 - [Paradigm faucet](https://faucet.paradigm.xyz/)
@@ -78,7 +79,7 @@ _Note: [the Rinkeby testnet is deprecated](https://github.com/ethereum/pm/issues
 
 A proof-of-authority testnet for those running old versions of the Geth client.
 
-##### Rinkeby faucets
+##### Rinkeby faucets
 
 - [FaucETH](https://fauceth.komputing.org) (multi-Chain faucet without the need for social account)
 - [Alchemy faucet](https://RinkebyFaucet.com)

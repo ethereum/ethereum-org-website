@@ -3,9 +3,10 @@ title: Mining algorithms
 description: A detailed look at the algorithms used for Ethereum mining.
 lang: en
 sidebar: true
+preMergeBanner: true
 ---
 
-Ethereum mining has used two mining algorithms, Dagger Hashimoto and Ethash. Dagger Hashimoto was never used to mine Ethereum, being superseded by Ethash before mainet launched. It was a R&D mining algorithm that paved the way for Ethash. However, it has historical significance as an important innovation in Ethereum's development. Proof-of-work mining itself will be deprecated in favor of proof-of-stake during [The Merge](/merge/), which is forecast to happen in Q3-Q4 2022.
+Ethereum mining has used two mining algorithms, Dagger Hashimoto and Ethash. Dagger Hashimoto was never used to mine Ethereum, being superseded by Ethash before mainet launched. It was a R&D mining algorithm that paved the way for Ethash. However, it has historical significance as an important innovation in Ethereum's development. Proof-of-work mining itself will be deprecated in favor of proof-of-stake during [The Merge](/upgrades/merge/), which is forecast to happen in Q3-Q4 2022. 
 
 The fundamental idea of both mining algorithms is that a miner tries to find a nonce input using brute force computation so that the result is below a certain difficulty threshold. This difficulty threshold can be dynamically adjusted, allowing block production to happen at a regular interval.
 
