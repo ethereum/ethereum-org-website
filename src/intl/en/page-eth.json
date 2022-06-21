@@ -20,7 +20,7 @@
   "page-eth-fuels-desc-3": "The work miners do keeps Ethereum secure and free of centralized control. In other words,",
   "page-eth-fuels-desc-4": "Anyone is free to run Ethereum client software to verify and hold the state of the chain themselves. Node operators are not required to perform the same work as miners, and can quickly verify blocks that are proposed by others to ensure their validity, and to ensure they always have permissionless and private access to the network.",
   "page-eth-fuels-desc-4-link": "More on running a node",
-  "page-eth-fuels-staking": "Soon, ETH will become even more important with staking. When you stake your ETH you'll be able to help secure Ethereum and earn rewards. In this system, the threat of losing your ETH deters attacks.",
+  "page-eth-fuels-staking": "Soon, ETH will become even more important with staking. When you stake your ETH, you'll be able to help secure Ethereum and earn rewards. In this system, the threat of losing their ETH deters attackers.",
   "page-eth-fuels-more-staking": "More on staking",
   "page-eth-get-eth-btn": "Get ETH",
   "page-eth-gov-tokens": "Governance tokens",
