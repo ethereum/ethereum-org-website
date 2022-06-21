@@ -408,6 +408,8 @@ const WalletFilterSidebar = ({
               onClick={() => {
                 setOpen(idx)
               }}
+              role="button"
+              aria-expanded={filterOption.open ? "true" : "false"}
             >
               <h3>{filterOption.title}</h3>
               <StyledIcon
