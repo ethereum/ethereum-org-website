@@ -659,6 +659,105 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
 
           <Section>
             <h2>Books and podcasts</h2>
+            <div>
+              <p>Books on Ethereum and Cryptocurrencies:</p>
+              <ul>
+                <li>
+                  <Link to="https://www.goodreads.com/book/show/55360267-out-of-the-ether">
+                    Out of the Ether: The Amazing Story of Ethereum and the $55
+                    Million Heist that Almost Destroyed It All
+                  </Link>{" "}
+                  <em>September 29, 2020 - Matthew Leising</em>
+                </li>
+                <li>
+                  <Link to="https://www.goodreads.com/en/book/show/50175330-the-infinite-machine">
+                    The Infinite Machine: How an Army of Crypto-hackers Is
+                    Building the Next Internet with Ethereum
+                  </Link>{" "}
+                  <em>July 14, 2020 - Camila Russo</em>
+                </li>
+                <li>
+                  <Link to="https://www.goodreads.com/en/book/show/22174460-the-age-of-cryptocurrency">
+                    The Age of Cryptocurrency: How Bitcoin and the Blockchain
+                    Are Challenging the Global Economic Order
+                  </Link>{" "}
+                  <em>January 12, 2016 - Paul Vigna, Michael J. Casey</em>
+                </li>
+                <li>
+                  <Link to="https://www.goodreads.com/en/book/show/34964890-the-truth-machine">
+                    The Truth Machine: The Blockchain and the Future of
+                    Everything
+                  </Link>{" "}
+                  <em>February 27, 2018 - Paul Vigna, Michael J. Casey</em>
+                </li>
+                <li>
+                  <Link to="https://www.goodreads.com/book/show/23546676-digital-gold">
+                    Digital Gold: Bitcoin and the Inside Story of the Misfits
+                    and Millionaires Trying to Reinvent Money
+                  </Link>{" "}
+                  <em>May 24, 2021 - Nathaniel Popper</em>
+                </li>
+                <li>
+                  <Link to="https://www.goodreads.com/en/book/show/56274031-kings-of-crypto">
+                    Kings of Crypto: One Startup&#39;s Quest to Take
+                    Cryptocurrency Out of Silicon Valley and Onto Wall Street
+                  </Link>{" "}
+                  <em>December 15, 2020 - Jeff John Roberts</em>
+                </li>
+                <li>
+                  <Link to="https://github.com/ethereumbook/ethereumbook">
+                    Mastering Ethereum
+                  </Link>{" "}
+                  <em>
+                    December 23, 2018 – Andreas M. Antonopoulos, Gavin Wood
+                    Ph.D.{" "}
+                  </em>
+                </li>
+              </ul>
+              <p>Podcasts addressing Ethereum and Cryptocurrencies:</p>
+              <ul>
+                <li>
+                  <Link to="https://podcast.ethhub.io/">Into the Ether</Link>{" "}
+                  <em>A podcast focusing on all things Ethereum and DeFi</em>
+                </li>
+                <li>
+                  <Link to="http://podcast.banklesshq.com/">Bankless</Link>{" "}
+                  <em>A guide to Crypto finance</em>
+                </li>
+                <li>
+                  <Link to="https://uncommoncore.co/podcast/">
+                    Uncommon Core
+                  </Link>{" "}
+                  <em>
+                    Explores the transformative nature of trust-minimized
+                    currency and financial services
+                  </em>
+                </li>
+                <li>
+                  <Link to="https://www.zeroknowledge.fm/">Zero Knowledge</Link>{" "}
+                  <em>
+                    Goes deep into the tech that will power the emerging
+                    decentralised web and the community building this
+                  </em>
+                </li>
+                <li>
+                  <Link to="https://epicenter.tv/">Epicenter</Link>{" "}
+                  <em>
+                    Explores the technical, economic, and social implications of
+                    the Crypto industry
+                  </em>
+                </li>
+                <li>
+                  <Link to="https://unchainedpodcast.com/">Unchained</Link>{" "}
+                  <em>
+                    dives deep into the people building the decentralized
+                    internet, the details of this technology that could underpin
+                    our future, and some of the thorniest topics in crypto, such
+                    as regulation, security and privacy
+                  </em>
+                </li>
+              </ul>
+            </div>
           </Section>
 
           <FeedbackCard />
