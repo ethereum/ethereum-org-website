@@ -414,6 +414,15 @@
     "endDate": "2022-11-06"
   },
   {
+    "title": "ETHGathering",
+    "to": "https://www.ethgathering.com/",
+    "sponsor": null,
+    "location": "Barcelona, Spain",
+    "description": "Hosted in one of the world's most vibrant and creative cities, ETH Gathering Barcelona 2022 is a two-day conference focused on the community building the decentralised future.",
+    "startDate": "2022-11-18",
+    "endDate": "2022-11-20"
+  },
+  {
     "title": "ETHIndia",
     "to": "https://airtable.com/shrZ89OEwQJRtXHPv/",
     "sponsor": null,
