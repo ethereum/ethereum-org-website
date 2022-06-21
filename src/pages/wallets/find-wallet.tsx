@@ -114,7 +114,7 @@ const FilterSidebar = styled.div<{ showMobileSidebar: boolean }>`
   width: 25%;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 0.55rem;
 
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     width: ${(props) => (props.showMobileSidebar ? "350px" : "0")};
@@ -152,12 +152,16 @@ const FilterTab = styled.div<{
   text-align: center;
   background: ${(props) =>
     props.active === true ? props.theme.colors.primary : "none"};
-  border-radius: 4px 4px 0px 0px;
+  border-radius: 8px 0px 0px 0px;
   padding: 10px;
   vertical-align: middle;
-
+  
   color: ${(props) =>
-    props.active === true ? "white" : props.theme.colors.text};
+    props.active === true ? props.theme.colors.background : props.theme.colors.text};
+
+  :last-child {
+    border-radius: 0px 8px 0px 0px;
+    }
 
   :hover {
     background: ${(props) =>
@@ -195,16 +199,31 @@ const ResetContainer = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 3px 8px;
-  border: 1px solid ${(props) => props.theme.colors.primary};
-  border-radius: 3px;
-  max-width: 150px;
+  justify-content: center;
+  padding: 2px 4px;
+  border: 1px solid ${(props) => props.theme.colors.selectHover};
+  border-radius: 4px;
+  width: 140px;
+  margin: 0 auto;
   gap: 0.25rem;
+  font-size:0.75rem;
   cursor: pointer;
+  :hover{
+    border: 1px solid ${(props) => props.theme.colors.primary};
+    p{
+      color: ${(props) => props.theme.colors.primary};
+    }
+    svg{
+    fill: ${(props) => props.theme.colors.primary};
+    }
+  }
 
   p {
     margin: 0;
-    color: ${(props) => props.theme.colors.primary};
+    color: ${(props) => props.theme.colors.selectHover};
+  }
+  svg{
+    fill: ${(props) => props.theme.colors.selectHover};
   }
 `
 
@@ -337,7 +356,7 @@ const FindWalletPage = ({ data, location }) => {
             </FilterTab>
           </FilterTabs>
           <ResetContainer onClick={resetFilters}>
-            <ResetIcon name="arrowCounterClockwise" size="16" />
+            <ResetIcon name="arrowCounterClockwise" size="14" />
             <p>RESET FILTERS</p>
           </ResetContainer>
           <div>
