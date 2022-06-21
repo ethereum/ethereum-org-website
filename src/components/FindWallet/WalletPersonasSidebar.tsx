@@ -32,6 +32,39 @@ const Container = styled.div`
   gap: 16px;
 `
 
+const PersonaFeature = styled.div<{
+  selected: boolean
+}>`
+  display: flex;
+  gap: 0.2rem;
+  font-size: 0.85rem;
+  line-height: 0.95rem;
+  margin: 0.1rem;
+  align-items: center;
+  p {
+    margin-bottom: 0;
+    color: ${(props) =>
+      props.selected === true
+        ? props.theme.colors.black
+        : props.theme.colors.text};
+  }
+
+  svg {
+    width: 28px;
+    height: 28px;
+    path {
+      fill: ${(props) =>
+        props.selected === true
+          ? props.theme.colors.black
+          : props.theme.colors.text};
+      stroke: ${(props) =>
+        props.selected === true
+          ? props.theme.colors.black
+          : props.theme.colors.text};
+    }
+  }
+`
+
 const Persona = styled.div<{
   selected: boolean
 }>`
@@ -47,8 +80,35 @@ const Persona = styled.div<{
   border-radius: 4px;
   cursor: pointer;
 
+  h4 {
+    margin: 0 0 0.5rem 0;
+    color: ${(props) =>
+      props.selected === true
+        ? props.theme.colors.black
+        : props.theme.colors.text};
+    font-size: 0.9rem;
+    font-weight: normal;
+  }
+
   &:hover {
     background: ${(props) => props.theme.colors.primary100};
+
+    h4 {
+      color: ${(props) => props.theme.colors.black};
+    }
+
+    p {
+      color: ${(props) => props.theme.colors.black};
+    }
+
+    ${PersonaFeature} {
+      svg {
+        path {
+          fill: ${(props) => props.theme.colors.black};
+          stroke: ${(props) => props.theme.colors.black};
+        }
+      }
+    }
   }
 `
 
@@ -67,13 +127,6 @@ const H3 = styled.h3`
   font-size: 1.25rem;
 `
 
-const H4 = styled.h4`
-  margin: 0 0 0.5rem 0;
-  color: ${(props) => props.theme.colors.secondary};
-  font-size: 0.9rem;
-  font-weight: normal;
-`
-
 const Grid = styled.div`
   display: grid;
   grid-template-columns: 50% 50%;
@@ -87,26 +140,6 @@ const StyledIcon = styled(Icon)<{ selected: boolean }>`
     props.selected === true
       ? props.theme.colors.primary
       : props.theme.colors.secondary};
-`
-
-const PersonaFeature = styled.div`
-  display: flex;
-  gap: 0.2rem;
-  font-size: 0.85rem;
-  line-height: 0.95rem;
-  margin: 0.1rem;
-  align-items: center;
-  p {
-    margin-bottom: 0;
-  }
-  svg {
-    width: 28px;
-    height: 28px;
-    path {
-      fill: ${(props) => props.theme.colors.text};
-      stroke: ${(props) => props.theme.colors.text};
-    }
-  }
 `
 
 // Types
@@ -477,10 +510,10 @@ const WalletPersonasSidebar = ({
               />
               <H3>{persona.title}</H3>
             </Title>
-            <H4>{persona.description}</H4>
+            <h4>{persona.description}</h4>
             <Grid>
               {persona.featureHighlight.map((feature) => (
-                <PersonaFeature>
+                <PersonaFeature selected={selectedPersona === idx}>
                   {feature.icon}
                   <p>{feature.label}</p>
                 </PersonaFeature>
