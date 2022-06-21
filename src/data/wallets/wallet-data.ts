@@ -1,14 +1,61 @@
-const walletData = [
+interface WalletData {
+  name: string
+  image_name: string
+  brand_color: string
+  url: string
+  wallet_live_date: string
+  active_development_team: boolean
+  languages_supported: string[]
+  twitter: string
+  discord: string
+  reddit: string
+  telegram: string
+  ios: boolean
+  android: boolean
+  linux: boolean
+  windows: boolean
+  macOS: boolean
+  firefox: boolean
+  chromium: boolean
+  hardware: boolean
+  open_source: boolean
+  repo_url: string
+  non_custodial: boolean
+  security_audit: string[]
+  spam_protection: boolean
+  hardware_support: boolean
+  walletconnect: boolean
+  rpc_importing: boolean
+  nft_support: boolean
+  connect_to_dapps: boolean
+  staking: boolean
+  swaps: boolean
+  layer_2: boolean
+  gas_fee_customization: boolean
+  ens_support: boolean
+  erc_20_support: boolean
+  eip_1559_support: boolean
+  buy_crypto: boolean
+  withdraw_crypto: boolean
+  multisig: boolean
+  social_recovery: boolean
+  dedicated_support: boolean
+  onboard_documentation: string
+  documentation: string
+}
+
+const walletData: WalletData[] = [
   {
     name: "Keystone",
     image_name: "keystone",
     brand_color: "#ffffff",
     url: "https://keyst.one/",
     wallet_live_date: "Dec 2018",
-    active_development_team: "Yes",
+    active_development_team: true,
     languages_supported: ["en", "zh", "es", "ko"],
     twitter: "https://twitter.com/KeystoneWallet",
     discord: "https://keyst.one/discord",
+    reddit: "",
     telegram: "https://t.me/KeystoneWallet",
     ios: true,
     android: true,
@@ -52,10 +99,11 @@ const walletData = [
     brand_color: "#3F3F3F",
     url: "https://www.numio.one/",
     wallet_live_date: "December 2020",
-    active_development_team: "Yes",
+    active_development_team: true,
     languages_supported: ["en"],
     twitter: "https://twitter.com/GetNumio/",
     discord: "",
+    reddit: "",
     telegram: "",
     ios: true,
     android: true,
@@ -96,7 +144,7 @@ const walletData = [
     brand_color: "#ffffff",
     url: "https://coin98.com/wallet",
     wallet_live_date: "2018",
-    active_development_team: "Yes",
+    active_development_team: true,
     languages_supported: [
       "vi",
       "en",
@@ -113,6 +161,7 @@ const walletData = [
     ],
     twitter: "https://twitter.com/coin98_wallet",
     discord: "https://c98.link/discord",
+    reddit: "",
     telegram: "https://t.me/coin98wallet",
     ios: true,
     android: true,
@@ -153,10 +202,11 @@ const walletData = [
     brand_color: "#ffffff",
     url: "https://loopring.io/#/wallet",
     wallet_live_date: "Nov 25, 2020",
-    active_development_team: "Yes",
+    active_development_team: true,
     languages_supported: ["en", "zh"],
     twitter: "https://twitter.com/loopringorg",
     discord: "http://discord.gg/KkYccYp",
+    reddit: "",
     telegram: "",
     ios: true,
     android: true,
@@ -201,10 +251,11 @@ const walletData = [
     brand_color: "#50249F",
     url: "https://airgap.it/",
     wallet_live_date: "July 2017",
-    active_development_team: "Yes",
+    active_development_team: true,
     languages_supported: ["en", "de", "zh"],
     twitter: "https://twitter.com/AirGap_it/",
     discord: "https://discord.gg/gnWqCQsteh",
+    reddit: "",
     telegram: "https://t.me/AirGap",
     ios: true,
     android: true,
@@ -247,10 +298,11 @@ const walletData = [
     brand_color: "#ffffff",
     url: "https://www.argent.xyz/",
     wallet_live_date: "2018",
-    active_development_team: "Yes",
+    active_development_team: true,
     languages_supported: ["en"],
     twitter: "https://twitter.com/argenthq",
     discord: "https://discord.com/invite/GWSyrHg",
+    reddit: "",
     telegram: "",
     ios: true,
     android: true,
@@ -294,10 +346,11 @@ const walletData = [
     brand_color: "#ffffff",
     url: "https://portis.io",
     wallet_live_date: "Nov, 2018",
-    active_development_team: "Yes",
+    active_development_team: true,
     languages_supported: ["en"],
     twitter: "https://twitter.com/portis_io",
     discord: "",
+    reddit: "",
     telegram: "https://t.me/PortisHQ",
     ios: false,
     android: false,
@@ -338,10 +391,11 @@ const walletData = [
     brand_color: "#0052FF",
     url: "https://www.coinbase.com/wallet/developers",
     wallet_live_date: "2018",
-    active_development_team: "Yes",
+    active_development_team: true,
     languages_supported: ["no response.."],
     twitter: "https://twitter.com/CoinbaseWallet",
     discord: "",
+    reddit: "",
     telegram: "",
     ios: true,
     android: true,
@@ -383,10 +437,11 @@ const walletData = [
     brand_color: "#222021",
     url: "https://frame.sh",
     wallet_live_date: "April 2019",
-    active_development_team: "Yes",
+    active_development_team: true,
     languages_supported: ["en"],
     twitter: "https://twitter.com/0xFrame",
     discord: "https://discord.gg/rr4Yr3JkPq",
+    reddit: "",
     telegram: "",
     ios: false,
     android: false,
@@ -428,7 +483,7 @@ const walletData = [
     brand_color: "##fe1f02",
     url: "https://brave.com/wallet",
     wallet_live_date: "November 2021",
-    active_development_team: "Yes",
+    active_development_team: true,
     languages_supported: ["en"],
     twitter: "https://twitter.com/brave",
     discord: "",
@@ -475,7 +530,7 @@ const walletData = [
     brand_color: "##0D2321",
     url: "https://tally.cash/",
     wallet_live_date: "December 2021",
-    active_development_team: "Yes",
+    active_development_team: true,
     languages_supported: ["en"],
     twitter: "https://twitter.com/TallyCash",
     discord: "chat.tally.cash",
@@ -524,10 +579,11 @@ const walletData = [
     brand_color: "#ffffff",
     url: "https://metamask.io",
     wallet_live_date: "2016",
-    active_development_team: "Yes",
+    active_development_team: true,
     languages_supported: ["TODO: 30 languages!"],
     twitter: "https://twitter.com/metamask",
     discord: "",
+    reddit: "",
     telegram: "",
     ios: true,
     android: true,
