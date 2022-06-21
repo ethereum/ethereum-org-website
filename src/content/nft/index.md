@@ -56,7 +56,7 @@ The NFT world is relatively new. In theory, the scope for NFTs is anything that 
 - [A domain name](https://app.ens.domains/name/ethereum.eth)
 - [A ticket that gives you access to an event or a coupon](https://www.yellowheart.io/)
 - [Buy real world goods](https://www.tangible.store/)
-- [fractionalized real-estate](https://realt.co/)
+- [Fractionalized real-estate](https://realt.co/)
 - [Degree Certificates](https://www.degreecert.com/)
 - [Music royalties via NFTs](https://opulous.org/)
 - [Move 2 earn](https://yeticoineth.com/about.html)
