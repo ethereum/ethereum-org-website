@@ -97,7 +97,6 @@ const ContentContainer = styled.article`
   }
 `
 const Card = styled(OriginalCard)`
-  border-radius: 10px;
   justify-content: space-between;
   h3 {
     margin-top: 0;
