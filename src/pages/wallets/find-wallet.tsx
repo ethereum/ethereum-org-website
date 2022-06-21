@@ -17,7 +17,7 @@ import WalletPersonasSidebar from "../../components/FindWallet/WalletPersonasSid
 import WalletTable from "../../components/FindWallet/WalletTable"
 
 // Data
-import walletData from "../../data/find-wallet/wallet-data"
+import walletData from "../../data/wallets/wallet-data"
 
 // Icons
 import FilterBurger from "../../assets/wallets/filter_burger.svg"
@@ -155,13 +155,15 @@ const FilterTab = styled.div<{
   border-radius: 8px 0px 0px 0px;
   padding: 10px;
   vertical-align: middle;
-  
+
   color: ${(props) =>
-    props.active === true ? props.theme.colors.background : props.theme.colors.text};
+    props.active === true
+      ? props.theme.colors.background
+      : props.theme.colors.text};
 
   :last-child {
     border-radius: 0px 8px 0px 0px;
-    }
+  }
 
   :hover {
     background: ${(props) =>
@@ -206,15 +208,15 @@ const ResetContainer = styled.div`
   width: 140px;
   margin: 0 auto;
   gap: 0.25rem;
-  font-size:0.75rem;
+  font-size: 0.75rem;
   cursor: pointer;
-  :hover{
+  :hover {
     border: 1px solid ${(props) => props.theme.colors.primary};
-    p{
+    p {
       color: ${(props) => props.theme.colors.primary};
     }
-    svg{
-    fill: ${(props) => props.theme.colors.primary};
+    svg {
+      fill: ${(props) => props.theme.colors.primary};
     }
   }
 
@@ -222,7 +224,7 @@ const ResetContainer = styled.div`
     margin: 0;
     color: ${(props) => props.theme.colors.selectHover};
   }
-  svg{
+  svg {
     fill: ${(props) => props.theme.colors.selectHover};
   }
 `
@@ -418,7 +420,7 @@ export const query = graphql`
         gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
       }
     }
-    metamask: file(relativePath: { eq: "wallets/metamask.png" }) {
+    airgap: file(relativePath: { eq: "wallets/airgap.png" }) {
       childImageSharp {
         gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
       }
@@ -428,17 +430,52 @@ export const query = graphql`
         gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
       }
     }
-    rainbow: file(relativePath: { eq: "wallets/rainbow.png" }) {
+    brave: file(relativePath: { eq: "wallets/brave.png" }) {
       childImageSharp {
         gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
       }
     }
-    ledger: file(relativePath: { eq: "wallets/ledger.png" }) {
+    coin98: file(relativePath: { eq: "wallets/coin98.png" }) {
       childImageSharp {
         gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
       }
     }
-    trezor: file(relativePath: { eq: "wallets/trezor.png" }) {
+    coinbase: file(relativePath: { eq: "wallets/coinbase.png" }) {
+      childImageSharp {
+        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+      }
+    }
+    frame: file(relativePath: { eq: "wallets/frame.png" }) {
+      childImageSharp {
+        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+      }
+    }
+    keystone: file(relativePath: { eq: "wallets/keystone.png" }) {
+      childImageSharp {
+        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+      }
+    }
+    loopring: file(relativePath: { eq: "wallets/loopring.png" }) {
+      childImageSharp {
+        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+      }
+    }
+    metamask: file(relativePath: { eq: "wallets/metamask.png" }) {
+      childImageSharp {
+        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+      }
+    }
+    numio: file(relativePath: { eq: "wallets/numio.png" }) {
+      childImageSharp {
+        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+      }
+    }
+    portis: file(relativePath: { eq: "wallets/portis.png" }) {
+      childImageSharp {
+        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+      }
+    }
+    tallyho: file(relativePath: { eq: "wallets/tallyho.png" }) {
       childImageSharp {
         gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
       }
