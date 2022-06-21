@@ -266,15 +266,11 @@ As we mentioned, this is an emerging space. NFTs, DAOs, fractionalised tokens ar
 
 [More on DAOs](/dao/)
 
-Other NFT Use cases
-**
-Certificates of authenticity - E.g Birth, Marriage, Death and Degrees**
-University degree companies (Degree mills) offering fake degree certificates are reportedly a billion-dollar industry that NFTs can help combat.
-NFTs can be a secure and quick way to verify someone's degree credentials. Cutting out a huge amount of administrative burden and an NFT is much harder to cheat than a certificate on paper
+### Certificates of authenticity {#certificates}
 
-[In South Korea, a university](https://forkast.news/headlines/south-korea-nfts-graduates-hoseo/) already issued degrees via an NFT.
-‘The university hopes the pivot from a paper-based degree to NFTs will improve access to administrative services and prevent forgery or alteration of the degree’
-Trinity Business School (TBS) in Ireland is also planning on offering NFTs from 2023.
+Companies offering fake certificates for university degrees are reportedly a billion-dollar industry that NFTs can help combat. NFTs can be a secure and quick way to verify someone's degree credentials.
+
+[In South Korea, one university is already issuing degree certificates as an NFT](https://forkast.news/headlines/south-korea-nfts-graduates-hoseo/), with the hope that NFTs will improve access to administrative services and prevent forgery or alteration of the degree. [Trinity Business School (TBS) in Ireland is also planning on offering NFTs from 2023](https://trinitynews.ie/2022/04/business-school-to-offer-degree-nfts/).
 
 <Divider />
 
