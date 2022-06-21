@@ -47,14 +47,15 @@ const FilterPanel = styled.div`
   border-radius: 4px;
 `
 
-const Header = styled.div`
+const Header = styled.div<{ isOpen: boolean }>`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 1rem 12px 1rem;
+  padding: ${(props) => (props.isOpen ? `0 1rem 12px 1rem` : "0 1rem")};
   cursor: pointer;
   width: 100%;
-  border-bottom: 1px solid ${(props) => props.theme.colors.primary};
+  border-bottom: ${(props) =>
+    props.isOpen ? `1px solid ${props.theme.colors.primary}` : "none"};
 
   h3 {
     color: ${(props) => props.theme.colors.primary};
@@ -410,6 +411,7 @@ const WalletFilterSidebar = ({
               onClick={() => {
                 setOpen(idx)
               }}
+              isOpen={filterOption.open}
               role="button"
               aria-expanded={filterOption.open ? "true" : "false"}
             >
