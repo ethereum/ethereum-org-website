@@ -28,6 +28,7 @@ import WithdrawCrypto from "../../assets/wallets/withdraw_crypto.svg"
 import Multisig from "../../assets/wallets/multisig.svg"
 import SocialRecover from "../../assets/wallets/social_recover.svg"
 import Swap from "../../assets/wallets/swap.svg"
+import { filter } from "lodash"
 
 // Styles
 const Container = styled.div`
@@ -432,7 +433,9 @@ const WalletFilterSidebar = ({
                             }
                       }
                     >
-                      <IconContainer aria-hidden="true">{item.icon}</IconContainer>
+                      <IconContainer aria-hidden="true">
+                        {item.icon}
+                      </IconContainer>
                       <p>{item.title}</p>
                       <div>
                         {item.filterKey && (
@@ -472,6 +475,29 @@ const WalletFilterSidebar = ({
                           return (
                             <CheckboxGridOption
                               onClick={() => {
+                                let closeShowOptions = true
+                                for (let filterOption of item.options) {
+                                  if (filterOption.name === option.name) {
+                                    if (!filters[filterOption.filterKey]) {
+                                      closeShowOptions = false
+                                      break
+                                    }
+                                  } else {
+                                    if (filters[filterOption.filterKey]) {
+                                      closeShowOptions = false
+                                      break
+                                    }
+                                  }
+                                }
+
+                                if (closeShowOptions) {
+                                  setShowOptions(
+                                    idx,
+                                    itemidx,
+                                    !item.showOptions
+                                  )
+                                }
+
                                 updateFilterOption(option.filterKey)
                               }}
                             >
