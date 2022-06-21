@@ -50,7 +50,7 @@ A proof-of-work testnet; this means it's the best like-for-like representation o
 - [Sepolia faucet](https://faucet.sepolia.dev/)
 - [FaucETH](https://fauceth.komputing.org)
 
-#### Görli {#goerli}
+#### Goerli {#goerli}
 
 A proof-of-authority testnet that works across clients; an ideal testnet for application developers. Goerli will be the final testnet merged to proof-of-stake before Ethereum Mainnet is merged. This is expected to happen in summer 2022. Goerlia is expected to be maintained long term as a proof-of-stake testnet.
 
@@ -58,15 +58,15 @@ A proof-of-authority testnet that works across clients; an ideal testnet for app
 - [Github](https://github.com/goerli/testnet)
 - [Etherscan](https://goerli.etherscan.io)
 
-##### Görli faucets
+##### Goerli faucets
 
-- [Görli faucet](https://faucet.goerli.mudit.blog/)
+- [Goerli faucet](https://faucet.goerli.mudit.blog/)
 - [Chainlink faucet](https://faucets.chain.link/)
 - [Alchemy Goerli Faucet](https://goerlifaucet.com/)
 
 #### Ropsten _(deprecated)_ {#ropsten}
 
-_Note, [the Ropsten testnet is deprecated](https://github.com/ethereum/pm/issues/460) and will no longer receive protocol upgrades. Please consider migrating your applications to Sepolia or Görli._
+_Note, [the Ropsten testnet is deprecated](https://github.com/ethereum/pm/issues/460) and will no longer receive protocol upgrades. Please consider migrating your applications to Sepolia or Goerli._
 
 Ropsten was a proof-of-work testnet that went through The Merge to proof-of-stake in May 2022. It can be used to test applications on a merged network, but it is not expected to be maintained long term and is likely to deprecated before summer 2023.
 
@@ -77,7 +77,7 @@ Ropsten was a proof-of-work testnet that went through The Merge to proof-of-stak
 
 #### Rinkeby _(deprecated)_ {#rinkeby}
 
-_Note: [the Rinkeby testnet is deprecated](https://github.com/ethereum/pm/issues/460) and will no longer receive protocol upgrades. Please consider migrating your applications to Sepolia or Görli._
+_Note: [the Rinkeby testnet is deprecated](https://github.com/ethereum/pm/issues/460) and will no longer receive protocol upgrades. Please consider migrating your applications to Sepolia or Goerli._
 
 A proof-of-authority testnet for those running old versions of the Geth client.
 
@@ -91,7 +91,7 @@ A proof-of-authority testnet for those running old versions of the Geth client.
 
 #### Kovan _(deprecated)_ {#kovan}
 
-_Note: [the Kovan testnet is deprecated](https://github.com/ethereum/pm/issues/460) and will no longer receive protocol upgrades. Please consider migrating your applications to Sepolia or Görli._
+_Note: [the Kovan testnet is deprecated](https://github.com/ethereum/pm/issues/460) and will no longer receive protocol upgrades. Please consider migrating your applications to Sepolia or Goerli._
 
 A very old proof-of-authority testnet for those still running OpenEthereum clients.
 
