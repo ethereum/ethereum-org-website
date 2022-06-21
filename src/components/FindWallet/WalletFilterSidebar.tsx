@@ -147,7 +147,7 @@ const WalletFilterSidebar = ({
           icon: <Mobile />,
           description: "Phone or mobile based wallets.",
           filterKey: undefined,
-          showOptions: false,
+          showOptions: filters.android || filters.ios ? true : false,
           options: [
             {
               name: "Android",
@@ -166,7 +166,8 @@ const WalletFilterSidebar = ({
           icon: <Desktop />,
           description: "Desktop based wallets.",
           filterKey: undefined,
-          showOptions: false,
+          showOptions:
+            filters.linux || filters.windows || filters.macOS ? true : false,
           options: [
             {
               name: "Linux",
@@ -190,7 +191,7 @@ const WalletFilterSidebar = ({
           icon: <Browser />,
           description: "Browser extension wallets.",
           filterKey: undefined,
-          showOptions: false,
+          showOptions: filters.firefox || filters.chrome ? true : false,
           options: [
             {
               name: "Firefox",
@@ -476,6 +477,7 @@ const WalletFilterSidebar = ({
                             <CheckboxGridOption
                               onClick={() => {
                                 let closeShowOptions = true
+
                                 for (let filterOption of item.options) {
                                   if (filterOption.name === option.name) {
                                     if (!filters[filterOption.filterKey]) {
