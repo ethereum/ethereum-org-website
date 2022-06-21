@@ -8,7 +8,10 @@ const Container = styled.div`
   justify-content: center;
 `
 
-const Banner = styled.div`
+const Banner = styled.div<{
+  shouldCenter: boolean
+  isWarning: boolean
+}>`
   position: relative;
   z-index: 1;
   display: flex;
@@ -52,7 +55,9 @@ const StyledEmoji = styled(Emoji)`
   }
 `
 
-const Content = styled.div`
+const Content = styled.div<{
+  shouldSpaceBetween: boolean
+}>`
   display: ${(props) => (props.shouldSpaceBetween ? `flex` : `block`)};
   align-items: ${(props) => (props.shouldSpaceBetween ? `center` : `auto`)};
   width: ${(props) => (props.shouldSpaceBetween ? `100%` : `auto`)};
@@ -63,7 +68,15 @@ const Content = styled.div`
   }
 `
 
-const InfoBanner = ({
+export interface IProps {
+  className?: string
+  emoji?: string
+  isWarning?: boolean
+  shouldCenter?: boolean
+  shouldSpaceBetween?: boolean
+}
+
+const InfoBanner: React.FC<IProps> = ({
   children,
   className,
   emoji,
