@@ -36,6 +36,10 @@ const Container = styled.div`
 
 const WalletContainer = styled(Container)`
   border-bottom: 1px solid ${(props) => props.theme.colors.lightBorder};
+  :hover {
+    background: ${(props) => props.theme.colors.boxShadow};
+    transition: 0.5s all;
+  }
 `
 
 const Grid = styled.div`
@@ -49,10 +53,6 @@ const Grid = styled.div`
     margin: 0;
   }
 
-  :hover {
-    background: ${(props) => props.theme.colors.boxShadow};
-    transition: 0.5s all;
-  }
 
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     grid-template-columns: 40% auto auto 0% 5%;
@@ -190,11 +190,25 @@ const FlexInfo = styled.div`
     font-size: 1.2rem;
   }
   p + p {
-    margin: 0.1rem 0 0.3rem;
+    margin: 0.1rem 0 1rem;
     font-size: 0.9rem;
   }
   p + a {
     font-size: 0.9rem;
+    border: 1px solid ${(props) => props.theme.colors.primary};
+    padding: 4px 8px;
+    margin-top: 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: 0.5s all;
+    :after{
+      display:none;
+    }
+    :hover{
+      background: ${(props) => props.theme.colors.primary};
+      color: ${(props) => props.theme.colors.background};
+      transition: 0.5s all;
+    }
   }
 `
 
@@ -528,7 +542,7 @@ const WalletTable = ({ data, filters, walletData }) => {
                 <div>
                   <p>{wallet.name}</p>
                   <SecondaryText>{deviceLabels.join(" | ")}</SecondaryText>
-                  <Link to={wallet.url}>Check out {wallet.name}</Link>
+                  <Link to={wallet.url}>Go to {wallet.name}</Link>
                 </div>
               </FlexInfo>
               <FlexInfoCenter onClick={() => updateMoreInfo(idx)}>
