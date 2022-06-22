@@ -235,7 +235,7 @@ const walletData: WalletData[] = [
     eip_1559_support: true,
     buy_crypto: true,
     withdraw_crypto: false,
-    multisig: false,
+    multisig: true,
     social_recovery: true,
     onboard_documentation: "",
     documentation: "",
