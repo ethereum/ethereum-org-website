@@ -1,12 +1,11 @@
 import React from "react"
-import styled, { DefaultTheme } from "styled-components"
+import styled from "styled-components"
 import Icon from "./Icon"
 import Link from "./Link"
 import Emoji from "./Emoji"
 
 export interface IProps {
   to: string
-  theme?: DefaultTheme
   className?: string
 }
 
@@ -57,7 +56,7 @@ const EmojiCell = styled.div`
   align-items: center;
 `
 
-const DocLink: React.FC<IProps> = ({ to, children, className, theme }) => (
+const DocLink: React.FC<IProps> = ({ to, children, className }) => (
   <Container to={to} className={className || ""}>
     <EmojiCell>
       <Emoji size={1} text=":page_with_curl:" mr={`1rem`} />
