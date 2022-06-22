@@ -7,8 +7,8 @@ lang: en
 sidebar: true
 skill: intermediate
 published: 2022-06-10
-source: [Ethereum on ARM](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/kiln/kiln-testnet.html)
-sourceUrl: https://www.reddit.com/r/ethereum/comments/gf3nhg/ethereum_on_arm_raspberry_pi_4_images_release/
+source: Ethereum on ARM
+sourceUrl: https://ethereum-on-arm-documentation.readthedocs.io/en/latest/kiln/kiln-testnet.html
 preMergeBanner: true
 ---
 
