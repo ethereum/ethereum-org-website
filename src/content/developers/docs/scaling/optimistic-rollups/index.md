@@ -23,7 +23,7 @@ Optimistic rollup operators bundle multiple off-chain transactions together in l
 
 Optimistic rollups are considered “optimistic” because they assume off-chain transactions are valid and don't publish proofs of validity for transaction batches posted on-chain. This separates optimistic rollups from [zero-knowledge rollups](/developers/docs/scaling/zk-rollups) that publish cryptographic [proofs of validity](/glossary/#validity-proof) for off-chain transactions. 
 
-Optimistic rollups instead rely on a fraud-proving scheme to detect malicious transactions. After a rollup batch is submitted on Ethereum, there's a time window (called a challenge period) during which anyone can challenge the validity of a rollup transaction by computing a [fraud proof](/glossary/#fraud-proof). 
+Optimistic rollups instead rely on a fraud-proving scheme scheme to detect cases where transactions are not calculated correctly. After a rollup batch is submitted on Ethereum, there's a time window (called a challenge period) during which anyone can challenge the results of a rollup transaction by computing a [fraud proof](/glossary/#fraud-proof). 
 
 If the fraud proof succeeds, the rollup protocol reverses the invalid block and punishes the malicious operator. If the rollup batch remains unchallenged after the challenge period elapses, it is deemed valid and accepted on Ethereum. The rollup will advance to a new state and the operator can start adding new blocks. 
 
@@ -37,13 +37,13 @@ Although optimistic rollups exist as separate protocols, they are secured by the
 
 As mentioned, optimistic rollups post transaction data to Ethereum as `calldata`. Since the rollup chain's execution is based on submitted transactions, anyone can use this information—anchored on Ethereum’s base layer—to execute the rollup’s state and verify the correctness of state transitions. . 
 
-Data availability is critical because without access to state data, challengers cannot construct fraud proofs to dispute invalid rollup operations. With Ethereum providing data availability, the risk of rollup operators getting away with malicious acts (e.g., submitting invalid blocks) reduces. 
+Data availability is critical because without access to state data, challengers cannot construct fraud proofs to dispute invalid rollup operations. With Ethereum providing data availability, the risk of rollup operators getting away with malicious acts (e.g., submitting invalid blocks) is reduced. 
 
 ### Censorship resistance {#censorship-resistance}
 
 Optimistic rollups also rely on Ethereum for censorship resistance. In an optimistic rollup a centralized entity (the operator) is responsible for processing transactions and submitting rollup blocks to Ethereum. This has some implications: 
 
-- Rollup operators can censor users by going offline, refusing to produce blocks, or submit user transactions to L1. 
+- Rollup operators can censor users by going offline completely, or by refusing to either produce blocks that include certain transactions in them.
 
 - Rollup operators can prevent users from withdrawing funds deposited in the rollup contract by withholding state data necessary to Merkle proofs of ownership. Withholding state data can also conceal the rollup’s state from users and prevent them from interacting with the rollup.  
 
@@ -52,6 +52,8 @@ Optimistic rollups solve this problem by forcing operators to publish data assoc
 - If an optimistic rollup operator goes offline or stops producing transaction batches, another node can use available data to reproduce the rollup’s last state and continue block production. 
 
 - Users can use transaction data to create Merkle proofs proving ownership of funds and withdraw their assets from the rollup. 
+
+- Users can also submit their transactions on L1 instead of to the sequencer, in which case the sequencer has to include the transaction within a certain time limit to continue to produce valid blocks.
 
 ### Settlement {#settlement}
 
@@ -77,7 +79,7 @@ The sequencer is different from a regular rollup operator because they have grea
 
 As mentioned, the operator of an optimistic rollup bundles off-chain transactions into a batch and sends it to Ethereum for notarization. This process involves compressing transaction-related data and publishing it on Ethereum as `calldata`. 
 
-Calldata is a non-modifiable, non-persistent area in a smart contract that behaves like [memory](/developers/docs/smart-contracts/anatomy/#memory). While calldata persists on-chain as part of the blockchain's [history logs](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html?highlight=memory#logs), it is not stored as a part of Ethereum's state. Because calldata does not touch any part of Ethereum's state, it is cheaper to use compared to `memory` or `storage`.
+Calldata is a non-modifiable, non-persistent area in a smart contract that behaves mostly like [memory](/developers/docs/smart-contracts/anatomy/#memory). While calldata persists on-chain as part of the blockchain's [history logs](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html?highlight=memory#logs), it is not stored as a part of Ethereum's state. Because calldata does not touch any part of Ethereum's state, it is cheaper for storing data on-chain.
 
 The `calldata` keyword is also used in Solidity to pass arguments to a smart contract function at execution time. Calldata identifies the function being called during a transaction and holds inputs to the function in the form of an arbitrary sequence of bytes.
 
@@ -101,27 +103,9 @@ As explained, optimistic rollups allow anyone to publish blocks without providin
 
 If someone disputes an assertion, then the rollup protocol will initiate the fraud proof computation. Every type of fraud proof is interactive—someone must post an assertion before another person can challenge it. The difference lies in how many rounds of interaction are required to compute the fraud proof. 
 
-#### Single-round interactive proving {#single-round-interactive-proving}
+Single-round interactive proving schemes replay disputed transactions on L1 to detect invalid assertions. The rollup protocol emulates the re-execution of the disputed transaction on L1 (Ethereum) using a verifier contract, with the computed state root determining who wins the challenge. If the challenger's claim about the rollup’s correct state is correct, the operator is penalized by having their bond slashed. 
 
-Single-round interactive proving schemes replay the disputed transaction on Ethereum to detect fraud. The process starts with the challenger posting a bond and initiating the fraud proof computation, after which they provide relevant information, such as the old state root, their version of the new state root, the disputed transaction, and state data.
-
-The rollup protocol emulates the re-execution of the disputed transaction on L1 (Ethereum) using a verifier contract. Because this process occurs in a sandboxed environment, it isn’t affected by activity on the Ethereum network. 
-
-The state root computed while re-executing the transaction on-chain determines who wins the challenge. If the challenger's claim about the rollup’s correct state is correct, the operator is penalized for fraud by having their bond slashed. 
-
-![Diagram showing what happens when a fraudulent transaction occurs in an Optimistic rollup in Ethereum](./optimistic-rollups.png)
-
-Some notes about this type of fraud proof: 
-
-1. Optimistic rollups that re-execute transactions to detect fraud must publish state commitments for individual transactions in a block. This helps verify the validity of transactions, but also increases data rollups must publish on-chain (with implications for overall rollup costs).
-
-2. Part of the malicious asserter's bond is awarded to the challenger, while the other part is burned. The burning prevents collusion among validators; if two validators collude to initiate bogus challenges, they will still forfeit a considerable chunk of the entire stake. 
-
-3. The challenger's gas costs for initiating the fraud proof are reimbursed. Ben Jones from Optimism describes the bonding system in place:
-
-> _"Anyone who might be able to take an action that you would have to prove fraudulent to secure your funds requires that you post a bond. You basically take some ETH and lock it up and you say "Hey, I promise to tell the truth"... If I don't tell the truth and fraud is proven, this money will be slashed. Not only does some of this money get slashed but some of it will pay for the gas that people spent doing the fraud proof._"
-
-So you can see the incentives: participants get penalized for conducting fraud and reimbursed for proving fraud.
+However, re-executing transactions on L1 to detect fraud requires publishing state commitments for individual transactions and increases the data rollups must publish on-chain. Replaying transactions also incurs significant gas costs. For these reasons, optimistic rollups are switching to multi-round interactive proving, which achieves the same objective (i.e., detecting invalid rollup operations) with more efficiency.  
 
 #### Multi-round interactive proving {#multi-round-interactive-proving}
 
@@ -133,11 +117,15 @@ The asserter is required to provide a “one-step proof” verifying the validit
 
 Some notes about this type of fraud proof: 
 
-1. Multi-round interactive fraud proving is considered efficient because it minimizes the work the L1 chain must do in dispute arbitration. Instead of replaying the entire transaction, Ethereum only needs to re-execute one step in the rollup's execution. 
+1. Multi-round interactive fraud proving is considered efficient because it minimizes the work the L1 chain must do in dispute arbitration. Instead of replaying the entire transaction, the L1 chain only needs to re-execute one step in the rollup's execution. 
 
 2. Bisection protocols reduce the amount of data posted on-chain (no need to publish state commits for every transaction). Also, optimistic rollup transactions don't have constrained by Ethereum's gas limit. Conversely, optimistic rollups re-executing transactions must make sure an L2 transaction has a lower gas limit to emulate its execution within a single Ethereum transaction.  
 
-##### Why fraud proofs matter for optimistic rollups {#fraud-proof-benefits}
+3. Part of the malicious asserter's bond is awarded to the challenger, while the other part is burned. The burning prevents collusion among validators; if two validators collude to initiate bogus challenges, they will still forfeit a considerable chunk of the entire stake. 
+
+4. Both parties (asserters and challengers) are required to respond to each other's actions within the specified time window. Failure to respond promptly causes the defaulting party to forfeit the challenge. 
+
+#### Why fraud proofs matter for optimistic rollups {#fraud-proof-benefits}
 
 Fraud proofs are important because they facilitate *trustless finality* in optimistic rollups. Trustless finality is a quality of optimistic rollups that guarantees that a transaction—so long as it’s valid—will eventually be confirmed. 
 
@@ -165,13 +153,11 @@ After the withdrawal request is initiated on the L2 rollup, the transaction is i
 
 To avoid waiting a week before withdrawing funds to Ethereum, optimistic rollup users can employ a **liquidity provider** (LP). A liquidity provider assumes ownership of a pending L2 withdrawal and pays the user on L1 (in exchange for a fee). 
 
-Liquidity providers can check the validity of the user’s withdrawal request (by executing the chain themselves) before releasing funds. This way they have assurances that the transaction will be confirmed eventually (trustless finality). 
-
-A user can have their exit from the rollup expedited by submitting the withdrawal transaction to an aggregator/sequencer. They can also send it directly to the L1 contract, which will delay the transaction, but protects against censorship. 
+Liquidity providers can check the validity of the user’s withdrawal request (by executing the chain themselves) before releasing funds. This way they have assurances that the transaction will be confirmed eventually (i.e., trustless finality). 
 
 #### 2. EVM compatibility {#evm-compatibility} 
 
-For developers, the advantage of optimistic rollups is their compatibility—or, better still, equivalence—with the [Ethereum Virtual Machine (EVM)](/developers/docs/evm/). EVM-compatible rollups rollups comply with specifications outlined in the [Ethereum Yellow Paper](https://ethereum.github.io/yellowpaper/paper.pdf) and support the EVM at the bytecode level. 
+For developers, the advantage of optimistic rollups is their compatibility—or, better still, equivalence—with the [Ethereum Virtual Machine (EVM)](/developers/docs/evm/). EVM-compatible rollups rollups comply with specifications in the [Ethereum Yellow Paper](https://ethereum.github.io/yellowpaper/paper.pdf) and support the EVM at the bytecode level. 
 
 EVM-compatibility in optimistic rollups has the following benefits:
 
@@ -199,7 +185,7 @@ Many optimistic rollups use a “gas price” scheme, much like Ethereum, to den
 
 1. **State write**: There is a fixed cost for writing to Ethereum’s state (i.e., submitting a transaction on the Ethereum blockchain). Optimistic rollups reduce this cost by batching transactions and spreading fixed costs across multiple users.  
 
-2. **Data publication**: As mentioned, `calldata` must be published to Ethereum for every transaction. Calldata costs are currently governed by [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), which stipulates a cost of 16 gas for non-zero bytes and 4 gas for zero bytes of calldata, respectively. The cost paid on each transaction is influenced by how much calldata needs to be posted on-chain for it. 
+2. **Data publication**: Optimistic rollups publish transaction data and block headers (consisting of the previous block header hash, state root, batch root) to Ethereum as `calldata`. Calldata costs are currently governed by [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), which stipulates a cost of 16 gas for non-zero bytes and 4 gas for zero bytes of calldata, respectively. The cost paid on each transaction is influenced by how much calldata needs to be posted on-chain for it. 
 
 3. **L2 operator fees**: This is the amount paid to the rollup operator as compensation for computational costs incurred in processing transactions, much like miner fees on Ethereum. 
 
