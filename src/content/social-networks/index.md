@@ -76,7 +76,7 @@ Users use the platform's native ERC-20 token $MIND to pay for items. Users can a
 
 By combining blockchain technologies such as Ethereum and IPFS, AKASHA gives developers the freedom and tools to deploy their dapps in a secure environment and create new social experiences weaved with autonomy and agency.
 
-### Ethereum World {#ethereum world}
+### Ethereum World {#ethereum-world}
 
 [Ethereum World](https://ethereum.world/) is the first decentralized social network built with and powered by the AKASHA framework. Ethereum World is dedicated to all Ethereans and communities in the space. It is a public good. 
 
