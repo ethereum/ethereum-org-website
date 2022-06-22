@@ -210,6 +210,11 @@ body:
       label: Does the wallet support multi-chain networks?
       description: Please provide documentation on multi-chain networks this wallet supports.
   - type: input
+    id: wallet_l2_support
+    attributes:
+      label: Does the wallet support Ethereum layer 2 networks?
+      description: Please provide documentation on Ethereum layer 2 networks this wallet supports.
+  - type: input
     id: wallet_customize_gas_fees
     attributes:
       label: Does the wallet allow the user to customize gas fees?
