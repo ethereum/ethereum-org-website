@@ -23,6 +23,7 @@ const Description = styled.p`
 
 export interface IProps {
   image: string
+  alt: string
   title: string
   description: string
   className?: string
@@ -30,13 +31,14 @@ export interface IProps {
 
 const ImageCard: React.FC<IProps> = ({
   image,
+  alt,
   title,
   description,
   children,
   className,
 }) => (
   <StyledCard className={className}>
-    <Image image={image} />
+    <Image image={image} alt={alt} />
     <h3>{title}</h3>
     <Description>{description}</Description>
     {children}
