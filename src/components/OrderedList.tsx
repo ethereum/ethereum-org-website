@@ -2,8 +2,13 @@
 import React from "react"
 import styled from "styled-components"
 
-//Styles
-const Content = styled.div`
+export interface IProps {
+  listData: (string | HTMLParagraphElement)[]
+  className?: string
+}
+
+// Styles
+const Content = styled.div<{ size?: `${string}px` }>`
   margin-bottom: 1.45rem;
 
   ol {
@@ -33,11 +38,11 @@ const Content = styled.div`
   }
 `
 
-// listData should be a list of strings, or HTML components
+// `listData` should be a list of strings, or HTML components
 // ex: [<p>string<p>] or ['string']
-const OrderedList = ({ listData, className }) => {
+const OrderedList: React.FC<IProps> = ({ listData, className }) => {
   return (
-    <Content className={className}>
+    <Content className={className || ""}>
       <ol>
         {listData.map((data, idx) => {
           return <li key={idx}>{data}</li>
