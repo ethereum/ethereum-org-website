@@ -4,6 +4,7 @@ import { graphql } from "gatsby"
 import { getImage, GatsbyImage } from "gatsby-plugin-image"
 import { useIntl } from "gatsby-plugin-intl"
 import styled from "styled-components"
+import { shuffle } from "lodash"
 
 // Components
 import Breadcrumbs from "../../components/Breadcrumbs"
@@ -265,6 +266,8 @@ const filterDefault = {
   social_recovery: false,
 }
 
+const randomizedWalletData = shuffle(walletData)
+
 const FindWalletPage = ({ data, location }) => {
   const intl = useIntl()
 
@@ -383,7 +386,11 @@ const FindWalletPage = ({ data, location }) => {
           </div>
         </FilterSidebar>
         <WalletContent showMobileSidebar={showMobileSidebar}>
-          <WalletTable data={data} filters={filters} walletData={walletData} />
+          <WalletTable
+            data={data}
+            filters={filters}
+            walletData={randomizedWalletData}
+          />
         </WalletContent>
       </TableContent>
       <Note>
