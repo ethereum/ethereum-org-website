@@ -34,9 +34,9 @@ Usa Ethereum para crear aplicaciones descentralizadas (o "dapps"). Estas dapps p
 ## Artículos y documentos de nivel intermedio {#intermediate-articles-and-docs}
 
 - [Documentación Ethereum de Go](https://geth.ethereum.org/docs/): _La documentación oficial para Ethereum Golang_
-- [Guía del Programador Turbo-Geth](https://github.com/ledgerwatch/turbo-geth/blob/master/docs/programmers_guide/guide.md): _Guía ilustrada que incluye el árbol de estado, multi-pruebas y procesamiento de transacciones_
-- [Turbo-Geth and Stateless Ethereum](https://youtu.be/3-Mn7OckSus?t=394): _Conferencia de la Comunidad Ethereum (EthCC 3)_
-- [Turbo-Geth: Optimizando clientes de Ethereum](https://www.youtube.com/watch?v=CSpc1vZQW2Q) - _Devcon 2018 4_
+- [Guía del Programador Erigon](https://github.com/ledgerwatch/erigon/blob/devel/docs/programmers_guide/guide.md): _Guía ilustrada que incluye el árbol de estado, multi-pruebas y procesamiento de transacciones_
+- [Erigon and Stateless Ethereum](https://youtu.be/3-Mn7OckSus?t=394): _Conferencia de la Comunidad Ethereum (EthCC 3)_
+- [Erigon: Optimizando clientes de Ethereum](https://www.youtube.com/watch?v=CSpc1vZQW2Q) - _Devcon 2018 4_
 - [Go Ethereum GoDoc](https://godoc.org/github.com/ethereum/go-ethereum)
 - [Crear una dapp en Go con Geth](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/creating-a-dapp-in-go-with-geth/)
 - [Trabajar con la red privada Ethereum con Golang y Geth](https://myhsts.org/tutorial-learn-how-to-work-with-ethereum-private-network-with-golang-with-geth.php)
@@ -55,7 +55,7 @@ Usa Ethereum para crear aplicaciones descentralizadas (o "dapps"). Estas dapps p
 
 - [Geth/Go Ethereum](https://github.com/ethereum/go-ethereum): _Implementación oficial en Go del protocolo Ethereum_
 - [Análisis de código Go de Ethereum](https://github.com/ZtesoftCS/go-ethereum-code-analysis): _Revisión y análisis del código fuente de Go para Ethereum_
-- [Turbo-Geth](https://github.com/ledgerwatch/turbo-geth)_: Derivada más rápida de Go Ethereum_
+- [Erigon](https://github.com/ledgerwatch/erigon)_: Derivada más rápida de Go Ethereum_
 - [Golem](https://github.com/golemfactory/golem): _Golem está creando un mercado global orientado al poder de la informática_
 - [Quorum](https://github.com/jpmorganchase/quorum): _Una implementación autorizada de Ethereum compatible con la privacidad de datos_
 - [Prysm](https://github.com/prysmaticlabs/prysm): _Implementación de Go de Ethereum 'Serenity' 2.0_

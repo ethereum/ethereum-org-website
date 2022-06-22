@@ -430,5 +430,23 @@
     "description": "Join Warsaw Web3 community in the first in-person conference and hackathon!",
     "startDate": "2022-09-01",
     "endDate": "2022-09-04"
+  },
+  {
+    "title": "ETHBerlin³",
+    "to": "https://ethberlin.ooo/",
+    "sponsor": null,
+    "location": "Berlin, Germany",
+    "description": "ETHBerlin, to the power of 3",
+    "startDate": "2022-09-16",
+    "endDate": "2022-09-18"
+  },
+  {
+    "title": "ETHSafari",
+    "to": "https://ethsafari.xyz/",
+    "sponsor": null,
+    "location": "Nairobi & Kilifi, Kenya",
+    "description": "Welcome to the latest greatest ETH event happening in Africa!",
+    "startDate": "2022-09-18",
+    "endDate": "2022-09-25"
   }
 ]

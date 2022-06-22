@@ -375,7 +375,7 @@ const WalletsPage = ({
                 key={idx}
                 emoji={type.emoji}
                 description={type.description}
-                size={2.5}
+                emojiSize={2.5}
               />
             ))}
           </div>

@@ -3,6 +3,7 @@ title: Transactions
 description: An overview of Ethereum transactions – how they work, their data structure, and how to send them via an application.
 lang: en
 sidebar: true
+preMergeBanner: true
 ---
 
 Transactions are cryptographically signed instructions from accounts. An account will initiate a transaction to update the state of the Ethereum network. The simplest transaction is transferring ETH from one account to another.
@@ -135,7 +136,7 @@ The `value` is 0x3b0559f4 = 990206452.
 
 On Ethereum there are a few different types of transactions:
 
-- Regular transactions: a transaction from one wallet to another.
+- Regular transactions: a transaction from one account to another.
 - Contract deployment transactions: a transaction without a 'to' address, where the data field is used for the contract code.
 - Execution of a contract: a transaction that interacts with a deployed smart contract. In this case, 'to' address is the smart contract address.
 

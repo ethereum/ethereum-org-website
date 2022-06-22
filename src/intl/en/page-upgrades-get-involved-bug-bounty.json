@@ -50,7 +50,6 @@
   "page-upgrades-bug-bounty-quality-repro-desc": ": A Proof of Concept (POC) must be included to be eligible for rewards. Please include test code, scripts and detailed instructions. The easier it is for us to reproduce and verify the vulnerability, the higher the reward.",
   "page-upgrades-bug-bounty-questions": "Questions?",
   "page-upgrades-bug-bounty-rules": "Read rules",
-  "page-upgrades-bug-bounty-shard-chains": "shard chains",
   "page-upgrades-bug-bounty-slogan": "Bug Bounty Program",
   "page-upgrades-bug-bounty-specs": "Consensus Layer Specifications",
   "page-upgrades-bug-bounty-execution-specs": "Execution Layer Specifications",

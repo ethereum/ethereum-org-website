@@ -59,6 +59,6 @@ summaryPoint4: أشرنا إلى هذا سابقًا "بالإرساء".
 
 سيكون هذا تقييمًا متواصلاً من طرف المجتمع بخصوص الحاجة الى عدة حلقات من سلسة الأحزاء لتحقيق قابلية اتساع غير متناهية.
 
-<ButtonLink to="/upgrades/shard-chains/">
+<ButtonLink to="/upgrades/sharding/">
   سلاسل قطع
 </ButtonLink>

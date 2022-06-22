@@ -39,4 +39,6 @@ Learn more about [token standards](/developers/docs/standards/tokens/).
 
 ## Further reading {#further-reading}
 
+- [Ethereum Improvement Proposals (EIPs)](/eips/)
+
 _Know of a community resource that helped you? Edit this page and add it!_

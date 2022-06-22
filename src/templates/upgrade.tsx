@@ -30,6 +30,7 @@ import UpgradeTableOfContents from "../components/UpgradeTableOfContents"
 import Translation from "../components/Translation"
 import TranslationsInProgress from "../components/TranslationsInProgress"
 import SectionNav from "../components/SectionNav"
+import ExpandableCard from "../components/ExpandableCard"
 import {
   Divider,
   Paragraph,
@@ -38,6 +39,7 @@ import {
 } from "../components/SharedStyledComponents"
 import Emoji from "../components/Emoji"
 import YouTube from "../components/YouTube"
+import MergeInfographic from "../components/MergeInfographic"
 
 import { getLocaleTimestamp } from "../utils/time"
 import { isLangRightToLeft } from "../utils/translations"
@@ -176,6 +178,8 @@ const components = {
   ShardChainsList,
   MergeArticleList,
   YouTube,
+  ExpandableCard,
+  MergeInfographic,
 }
 
 const Title = styled.h1`
@@ -317,7 +321,7 @@ const dropdownLinks = {
     },
     {
       text: "page-upgrades-upgrades-shard-chains",
-      to: "/upgrades/shard-chains/",
+      to: "/upgrades/sharding/",
     },
   ],
 }
@@ -384,18 +388,6 @@ const UpgradePage = ({
               maxDepth={mdx.frontmatter.sidebarDepth}
             />
           )}
-          <DismissibleCard storageKey="dismissed-eth-upgrade-psa">
-            <Emoji text=":cheering_megaphone:" size={5} />
-            <h2>
-              <Translation id="eth-upgrade-what-happened" />
-            </h2>
-            <p>
-              <Translation id="eth-upgrade-what-happened-description" />{" "}
-              <Link to="https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/">
-                <Translation id="more-info" />.
-              </Link>
-            </p>
-          </DismissibleCard>
         </InfoColumn>
         <ContentContainer id="content">
           {/* <DesktopBreadcrumbs slug={mdx.fields.slug} startDepth={1} /> */}

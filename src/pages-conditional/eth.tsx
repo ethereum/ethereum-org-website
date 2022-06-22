@@ -359,10 +359,7 @@ const EthPage = (props: PageProps<Queries.EthPageQuery, Context>) => {
               <strong>
                 <Translation id="page-eth-powers-ethereum" />
               </strong>
-              .{" "}
-              <Link to="/developers/docs/consensus-mechanisms/pow/mining/">
-                <Translation id="page-eth-mining-link" />
-              </Link>
+              <Translation id="page-eth-period" />
             </p>
             <p>
               <Translation id="page-eth-fuels-staking" />{" "}
@@ -507,7 +504,7 @@ const EthPage = (props: PageProps<Queries.EthPageQuery, Context>) => {
               emoji={token.emoji}
               title={token.title}
               description={token.description}
-              size={5}
+              emojiSize={5}
             />
           ))}
         </RightColumn>

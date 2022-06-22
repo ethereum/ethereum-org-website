@@ -59,8 +59,6 @@
   "consensus-run-beacon-chain": "Spustit konsensuálního klienta",
   "consensus-run-beacon-chain-desc": "Ethereum potřebuje co nejvíce klientů. Pomozte nám dostat Ethereum do povědomí lidí.",
   "consensus-when-shipping": "Kdy dojde k nasazení?",
-  "eth-upgrade-what-happened": "Co se stalo s „Eth2“?",
-  "eth-upgrade-what-happened-description": "Termín „Eth2“ byl s blížícím se sloučením zastaralý. „Konsensuální vrstva“ zahrnuje to, co se dříve označovalo jako „Eth2“.",
   "ethereum": "Ethereum",
   "ethereum-upgrades": "Vylepšení Etherea",
   "ethereum-brand-assets": "Aktiva značky Ethereum",
