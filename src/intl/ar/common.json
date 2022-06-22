@@ -58,8 +58,6 @@
   "consensus-run-beacon-chain": "تشغيل عميل إجماع آراء",
   "consensus-run-beacon-chain-desc": "يحتاج إثيريوم إلى أكبر عدد ممكن من العملاء. ساعد إثيريوم للمصلحة العامة!",
   "consensus-when-shipping": "متى يتم الشحن؟",
-  "eth-upgrade-what-happened": "ماذا حدث لـ 'Eth2؟'",
-  "eth-upgrade-what-happened-description": "لقد تم التخلي عن مصطلح \"Eth2\" ونحن نقترب من الدمج. \"طبقة إجماع الآراء\" تلخص ما كان يعرف سابقاً باسم \"Eth2\".",
   "ethereum": "إثيريوم",
   "ethereum-upgrades": "ترقية إثيريوم",
   "ethereum-brand-assets": "أصول العلامة التجارية لإيثريوم",
