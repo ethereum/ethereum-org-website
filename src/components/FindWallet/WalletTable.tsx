@@ -303,8 +303,7 @@ const FeatureLabel = styled.div<{ hasFeature: boolean }>`
 `
 
 const SocialsContainer = styled.div`
-  text-align: center;
-  padding-bottom: 1rem;
+  padding-bottom: 2rem;
   p {
     margin: 0;
   }
@@ -316,9 +315,11 @@ const SocialsContainer = styled.div`
 const Socials = styled.div`
   display: flex;
   gap: 1rem;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 2rem;
+  padding: 1rem 0;
+`
+
+const LastUpdated = styled.p`
+  color: ${(props) => props.theme.colors.text300};
 `
 
 // Constants
@@ -657,26 +658,31 @@ const WalletTable = ({ data, filters, walletData }) => {
                         })}
                       </Features>
                     </WalletMoreInfoCategory>
+                    <SocialsContainer>
+                      <Socials>
+                        <p>{wallet.name} links</p>
+                        <Link to={wallet.url} hideArrow={true}>
+                          <Icon name="webpage" size={"2rem"} color={true} />
+                        </Link>
+                        {wallet.twitter && (
+                          <Link to={wallet.twitter} hideArrow={true}>
+                            <Icon name="twitter" size={"2rem"} color={true} />
+                          </Link>
+                        )}
+                        {wallet.discord && (
+                          <Link to={wallet.discord} hideArrow={true}>
+                            <Icon name="discord" size={"2rem"} color={true} />
+                          </Link>
+                        )}
+                      </Socials>
+                      <LastUpdated>
+                        <i>
+                          {wallet.name} info updated on {wallet.last_updated}
+                        </i>
+                      </LastUpdated>
+                    </SocialsContainer>
                   </div>
                 </WalletMoreInfoContainer>
-                <SocialsContainer>
-                  <Socials>
-                    <p>{wallet.name} links</p>
-                    <Link to={wallet.url} hideArrow={true}>
-                      <Icon name="webpage" size={"2rem"} color={true} />
-                    </Link>
-                    {wallet.twitter && (
-                      <Link to={wallet.twitter} hideArrow={true}>
-                        <Icon name="twitter" size={"2rem"} color={true} />
-                      </Link>
-                    )}
-                    {wallet.discord && (
-                      <Link to={wallet.discord} hideArrow={true}>
-                        <Icon name="discord" size={"2rem"} color={true} />
-                      </Link>
-                    )}
-                  </Socials>
-                </SocialsContainer>
               </div>
             )}
           </WalletContainer>

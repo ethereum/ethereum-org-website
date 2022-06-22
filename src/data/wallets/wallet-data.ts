@@ -1,4 +1,5 @@
 interface WalletData {
+  last_updated: string
   name: string
   image_name: string
   brand_color: string
@@ -45,6 +46,7 @@ interface WalletData {
 
 const walletData: WalletData[] = [
   {
+    last_updated: "June 22, 2022",
     name: "Keystone",
     image_name: "keystone",
     brand_color: "#ffffff",
@@ -92,6 +94,7 @@ const walletData: WalletData[] = [
     documentation: "",
   },
   {
+    last_updated: "June 22, 2022",
     name: "Numio",
     image_name: "numio",
     brand_color: "#3F3F3F",
@@ -136,6 +139,7 @@ const walletData: WalletData[] = [
     documentation: "",
   },
   {
+    last_updated: "June 22, 2022",
     name: "Coin98",
     image_name: "coin98",
     brand_color: "#ffffff",
@@ -193,6 +197,7 @@ const walletData: WalletData[] = [
     documentation: "",
   },
   {
+    last_updated: "June 22, 2022",
     name: "Loopring wallet",
     image_name: "loopring",
     brand_color: "#ffffff",
@@ -241,6 +246,7 @@ const walletData: WalletData[] = [
     documentation: "",
   },
   {
+    last_updated: "June 22, 2022",
     name: "AirGap wallet",
     image_name: "airgap",
     brand_color: "#50249F",
@@ -287,6 +293,7 @@ const walletData: WalletData[] = [
     documentation: "",
   },
   {
+    last_updated: "June 22, 2022",
     name: "Argent",
     image_name: "argent",
     brand_color: "#ffffff",
@@ -334,6 +341,7 @@ const walletData: WalletData[] = [
     documentation: "",
   },
   {
+    last_updated: "June 22, 2022",
     name: "Portis",
     image_name: "portis",
     brand_color: "#ffffff",
@@ -378,6 +386,7 @@ const walletData: WalletData[] = [
     documentation: "",
   },
   {
+    last_updated: "June 22, 2022",
     name: "Coinbase wallet",
     image_name: "coinbase",
     brand_color: "#0052FF",
@@ -423,6 +432,7 @@ const walletData: WalletData[] = [
     // note: "Community contribution, let's follow up with Coinbase",
   },
   {
+    last_updated: "June 22, 2022",
     name: "Frame",
     image_name: "frame",
     brand_color: "#222021",
@@ -468,6 +478,7 @@ const walletData: WalletData[] = [
     documentation: "",
   },
   {
+    last_updated: "June 22, 2022",
     name: "Brave Wallet",
     image_name: "brave",
     brand_color: "#fe1f02",
@@ -514,6 +525,7 @@ const walletData: WalletData[] = [
       "https://wallet-docs.brave.com/, https://support.brave.com/hc/en-us/articles/4415497656461-Brave-Wallet-FAQ",
   },
   {
+    last_updated: "June 22, 2022",
     name: "Tally Ho!",
     image_name: "tallyho",
     brand_color: "#0D2321",
@@ -562,6 +574,7 @@ const walletData: WalletData[] = [
       "https://docs.tally.cash/tally/, https://gov.tally.cash/, https://blog.tally.cash/",
   },
   {
+    last_updated: "June 22, 2022",
     name: "MetaMask",
     image_name: "metamask",
     brand_color: "#ffffff",
@@ -606,6 +619,7 @@ const walletData: WalletData[] = [
     documentation: "",
   },
   {
+    last_updated: "June 22, 2022",
     name: "Gnosis Safe",
     image_name: "gnosis",
     brand_color: "#ffffff",
@@ -651,6 +665,7 @@ const walletData: WalletData[] = [
     documentation: "https://docs.gnosis-safe.io/",
   },
   {
+    last_updated: "June 22, 2022",
     name: "Coin wallet",
     image_name: "coinwallet",
     brand_color: "#ffffff",
@@ -722,6 +737,7 @@ const walletData: WalletData[] = [
     documentation: "",
   },
   {
+    last_updated: "June 22, 2022",
     name: "Ambire",
     image_name: "ambire",
     brand_color: "#aa6aff",
