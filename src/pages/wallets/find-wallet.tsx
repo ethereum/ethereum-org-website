@@ -484,5 +484,20 @@ export const query = graphql`
         gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
       }
     }
+    gnosis: file(relativePath: { eq: "wallets/gnosis.png" }) {
+      childImageSharp {
+        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+      }
+    }
+    coinwallet: file(relativePath: { eq: "wallets/coinwallet.png" }) {
+      childImageSharp {
+        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+      }
+    }
+    ambire: file(relativePath: { eq: "wallets/ambire.png" }) {
+      childImageSharp {
+        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+      }
+    }
   }
 `
