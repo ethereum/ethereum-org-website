@@ -74,7 +74,7 @@ The following options are possible for the defaultBlock parameter:
 
 ## Examples
 
-On this page we provide examples of how to use individual JSON_RPC API endpoints using the command line tool, [curl](https://curl.se). These individial endpoint examples are found below in the [Curl examples](#curl-examples) section. Further down the page, we also provide an [end-to-end example](#usage-example) for compiling and deploying a smart contract using a Geth node, the json-rpc api and curl..
+On this page we provide examples of how to use individual JSON_RPC API endpoints using the command line tool, [curl](https://curl.se). These individual endpoint examples are found below in the [Curl examples](#curl-examples) section. Further down the page, we also provide an [end-to-end example](#usage-example) for compiling and deploying a smart contract using a Geth node, the JSON_RPC API and curl.
 
 ## Curl examples {#curl-examples}
 
