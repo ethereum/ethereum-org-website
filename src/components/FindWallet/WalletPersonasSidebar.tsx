@@ -30,6 +30,10 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   gap: 16px;
+
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    padding: 1rem 1rem;
+  }
 `
 
 const PersonaFeature = styled.div<{

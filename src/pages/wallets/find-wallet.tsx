@@ -67,6 +67,10 @@ const HeroImage = styled(GatsbyImage)`
 const TableContent = styled(Content)`
   display: flex;
   gap: 24px;
+
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    padding: 1rem 0;
+  }
 `
 
 const MobileFilterToggleContainer = styled.div`
@@ -122,7 +126,7 @@ const FilterSidebar = styled.div<{ showMobileSidebar: boolean }>`
     display: ${(props) => (props.showMobileSidebar ? "flex" : "none")};
   }
   @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    width: ${(props) => (props.showMobileSidebar ? "375px" : "0")};
+    width: ${(props) => (props.showMobileSidebar ? "100%" : "0")};
     height: ${(props) => (props.showMobileSidebar ? "100%" : "0")};
     display: ${(props) => (props.showMobileSidebar ? "flex" : "none")};
   }
