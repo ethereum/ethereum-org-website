@@ -52,7 +52,7 @@ A proof-of-work testnet; this means it's the best like-for-like representation o
 
 #### Goerli {#goerli}
 
-A proof-of-authority testnet that works across clients; an ideal testnet for application developers. Goerli will be the final testnet merged to proof-of-stake before Ethereum Mainnet is merged. This is expected to happen in summer 2022. Goerlia is expected to be maintained long term as a proof-of-stake testnet.
+A proof-of-authority testnet that works across clients; an ideal testnet for application developers. Goerli will be the final testnet merged to proof-of-stake before Ethereum Mainnet is merged. This is expected to happen in summer 2022. Goerli is expected to be maintained long term as a proof-of-stake testnet.
 
 - [Website](https://goerli.net/)
 - [Github](https://github.com/goerli/testnet)
