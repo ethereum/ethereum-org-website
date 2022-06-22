@@ -20,7 +20,7 @@ More on [zero-knowledge proofs](https://consensys.net/blog/blockchain-explained/
 
 As with ZK-rollups, validity proofs prevent invalid state transitions on validium chains and enhance security guarantees available to users. For instance, a malicious operator cannot steal funds since users can always withdraw funds directly from the on-chain contract [using Merkle proofs](/developers/tutorials/merkle-proofs-for-offline-data-integrity/).
 
-However, user funds can be frozen, particualarly if the data availability managers on the validium chain withold off-chain data from users. This is the major difference between validiums and ZK-rollups—their positions on the data availability spectrum. Both solutions approach data storage differently, which has implications for security and trustlessness.
+However, user funds can be frozen, particularly if the data availability managers on the validium chain withhold off-chain data from users. This is the major difference between validiums and ZK-rollups—their positions on the data availability spectrum. Both solutions approach data storage differently, which has implications for security and trustlessness.
 
 ### On-chain vs off-chain data availability {#on-chain-vs-off-chain-data-availability}
 

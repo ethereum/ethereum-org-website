@@ -1274,6 +1274,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="https://keybase.io/tree"><img src="https://avatars.githubusercontent.com/u/67269?v=4?s=100" width="100px;" alt=""/><br /><sub><b>tree</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=burningtree" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/StephenFluin"><img src="https://avatars.githubusercontent.com/u/165056?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Stephen Fluin</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=StephenFluin" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/hakuta"><img src="https://avatars.githubusercontent.com/u/806605?v=4?s=100" width="100px;" alt=""/><br /><sub><b>hakuta</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=hakuta" title="Documentation">📖</a></td>
   </tr>
 </table>
 
