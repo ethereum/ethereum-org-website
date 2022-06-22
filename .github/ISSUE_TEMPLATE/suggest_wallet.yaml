@@ -136,7 +136,7 @@ body:
   - type: input
     id: wallet_smart_contract_audit
     attributes:
-      label: Has the wallet's smart contract code been audited?
+      label: Has the wallet's smart contract code or security modules been audited?
       description: If yes, provide a link to any audits.
   - type: input
     id: wallet_security_team
