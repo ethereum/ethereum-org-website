@@ -39,7 +39,6 @@ interface WalletData {
   withdraw_crypto: boolean
   multisig: boolean
   social_recovery: boolean
-  dedicated_support: boolean
   onboard_documentation: string
   documentation: string
 }
@@ -89,7 +88,6 @@ const walletData: WalletData[] = [
     withdraw_crypto: false,
     multisig: false,
     social_recovery: false,
-    dedicated_support: true,
     onboard_documentation: "https://support.keyst.one/",
     documentation: "",
   },
@@ -134,7 +132,6 @@ const walletData: WalletData[] = [
     withdraw_crypto: false,
     multisig: false,
     social_recovery: false,
-    dedicated_support: true,
     onboard_documentation: "https://docs.numio.one/",
     documentation: "",
   },
@@ -192,7 +189,6 @@ const walletData: WalletData[] = [
     withdraw_crypto: false,
     multisig: false,
     social_recovery: false,
-    dedicated_support: true,
     onboard_documentation: "https://docs.coin98.com/",
     documentation: "",
   },
@@ -241,7 +237,6 @@ const walletData: WalletData[] = [
     withdraw_crypto: false,
     multisig: false,
     social_recovery: true,
-    dedicated_support: true,
     onboard_documentation: "",
     documentation: "",
   },
@@ -288,7 +283,6 @@ const walletData: WalletData[] = [
     withdraw_crypto: false,
     multisig: false,
     social_recovery: true,
-    dedicated_support: true,
     onboard_documentation: "https://support.airgap.it/",
     documentation: "",
   },
@@ -336,7 +330,6 @@ const walletData: WalletData[] = [
     withdraw_crypto: false,
     multisig: true,
     social_recovery: true,
-    dedicated_support: true,
     onboard_documentation: "https://www.argent.xyz/learn/",
     documentation: "",
   },
@@ -381,7 +374,6 @@ const walletData: WalletData[] = [
     withdraw_crypto: false,
     multisig: false,
     social_recovery: false,
-    dedicated_support: true,
     onboard_documentation: "https://docs.portis.io/",
     documentation: "",
   },
@@ -426,7 +418,6 @@ const walletData: WalletData[] = [
     withdraw_crypto: false,
     multisig: false,
     social_recovery: false,
-    dedicated_support: false,
     onboard_documentation: "https://www.coinbase.com/wallet/tutorials",
     documentation: "",
     note: "Community contribution, let's follow up with Coinbase",
@@ -472,7 +463,6 @@ const walletData: WalletData[] = [
     withdraw_crypto: false,
     multisig: false,
     social_recovery: false,
-    dedicated_support: true,
     onboard_documentation:
       "https://framelabs.notion.site/Getting-Started-Guide-775a95edec3244ce80e118ead8ea6516",
     documentation: "",
@@ -518,7 +508,6 @@ const walletData: WalletData[] = [
     withdraw_crypto: false,
     multisig: false,
     social_recovery: false,
-    dedicated_support: true,
     onboard_documentation:
       "https://wallet-docs.brave.com/, https://support.brave.com/hc/en-us/articles/4415497656461-Brave-Wallet-FAQ",
     documentation:
@@ -568,7 +557,6 @@ const walletData: WalletData[] = [
     withdraw_crypto: false,
     multisig: false,
     social_recovery: false,
-    dedicated_support: true,
     onboard_documentation: "https://docs.tally.cash/tally/",
     documentation:
       "https://docs.tally.cash/tally/, https://gov.tally.cash/, https://blog.tally.cash/",
@@ -614,7 +602,6 @@ const walletData: WalletData[] = [
     withdraw_crypto: false,
     multisig: false,
     social_recovery: false,
-    dedicated_support: true,
     onboard_documentation: "https://support.metamask.io",
     documentation: "",
   },
