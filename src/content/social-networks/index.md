@@ -70,6 +70,18 @@ Posts published on Mirror are permanently stored on Arweave, a decentralized sto
 
 Users use the platform's native ERC-20 token $MIND to pay for items. Users can also earn $MIND tokens by publishing popular content, contributing to the ecosystem, and referring others to the platform.
 
+### AKASHA {#akasha}
+
+[AKASHA](https://akasha.org/) is an open source, development framework for building decentralized apps, worlds, and integrations that enable the [future of social networking.](https://akasha.org/blog/2019/05/03/diving-into-the-oceans-of-time-metamorphosis-part2) 
+
+By combining blockchain technologies such as Ethereum and IPFS, AKASHA gives developers the freedom and tools to deploy their dapps in a secure environment and create new social experiences weaved with autonomy and agency.
+
+### Ethereum World {#ethereum world}
+
+[Ethereum World](https://ethereum.world/) is the first decentralized social network built with and powered by the AKASHA framework. Ethereum World is dedicated to all Ethereans and communities in the space. It is a public good. 
+
+Ethereum World is designed to be social, easy to use, and enable Ethereans to have agency over their experiences! It is a [world](https://akasha.ethereum.world/social-app/feed) in which all Ethereans and communities can find a sense of belonging and togetherness while accelerating Ethereum adoption.
+
 ## Web2 social networks on Ethereum {#web2-social-networks-and-ethereum}
 
 [Web3](/web3/) native social platforms aren't the only ones trying to incorporate blockchain technology into social media. Many centralized platforms are also planning to integrate Ethereum into their infrastructure:
@@ -95,6 +107,7 @@ In May 2022, [Instagram announced support for NFTs](https://about.instagram.com/
 - **[Status.im](https://status.im/)** - _Status is a secure messaging app that uses an open-source, peer-to-peer protocol, and end-to-end encryption to protect your messages from third parties._
 - **[Mirror.xyz](https://mirror.xyz/)** - _Mirror is a decentralized, user-owned publishing platform built on Ethereum for users to crowdfund ideas, monetize content, and build high-value communities._
 - **[Lens Protocol](https://lens.xyz/)** - _Lens Protocol is a composable and decentralized social graph helping creators take ownership of their content wherever they go in the digital garden of the decentralized internet._
+- **[Ethereum World](https://akasha.ethereum.world/social-app/feed)** - _Ethereum World is the first decentralized social network built with and powered by the open source AKASHA framework. Ethereum World is designed to be social, easy to use, and enable Ethereans to have agency over their experiences!_
 
 ## Further reading {#further-reading}
 
@@ -117,3 +130,5 @@ In May 2022, [Instagram announced support for NFTs](https://about.instagram.com/
 - [Status Discord Server](https://discord.com/invite/3Exux7Y)
 - [Mirror Discord Server](https://discord.com/invite/txuCHcE8wV)
 - [r/CryptoCurrency subreddit](https://www.reddit.com/r/CryptoCurrency/)
+- [AKASHA Discourse Forum](https://forum.akasha.org/)
+- [Ethereum World Discord Server](https://discord.gg/2ab9XM7MgX)
