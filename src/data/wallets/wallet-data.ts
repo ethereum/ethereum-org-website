@@ -429,7 +429,7 @@ const walletData: WalletData[] = [
     dedicated_support: false,
     onboard_documentation: "https://www.coinbase.com/wallet/tutorials",
     documentation: "",
-    note: "Community contribution, let's follow up with Coinbase",
+    // note: "Community contribution, let's follow up with Coinbase",
   },
   {
     name: "Frame",
