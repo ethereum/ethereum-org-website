@@ -274,7 +274,7 @@ const walletData: WalletData[] = [
     connect_to_dapps: true,
     staking: true,
     swaps: true,
-    layer_2: true,
+    layer_2: false,
     gas_fee_customization: true,
     ens_support: false,
     erc_20_support: false,
