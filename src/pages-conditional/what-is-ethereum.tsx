@@ -5,29 +5,22 @@ import { graphql, PageProps } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
 
 import Translation from "../components/Translation"
-import ActionCard from "../components/ActionCard"
 import Callout from "../components/Callout"
 import Card from "../components/Card"
-import Link from "../components/Link"
 import ButtonLink from "../components/ButtonLink"
 import PageMetadata from "../components/PageMetadata"
+import Tabs from "../components/Tabs"
 import {
   CardContainer,
   Content,
-  Divider,
-  Intro,
   GrayContainer,
   Page,
+  Width60,
+  Width40,
 } from "../components/SharedStyledComponents"
 
 import { translateMessageId } from "../utils/translations"
 import { Context } from "../types"
-
-const HeroContent = styled(Content)`
-  @media (max-width: ${(props) => props.theme.breakpoints.xl}) {
-    padding: 1rem 2rem 2rem;
-  }
-`
 
 const Slogan = styled.p`
   font-style: normal;
@@ -51,11 +44,6 @@ const Subtitle = styled.div`
   font-size: 1.25rem;
   line-height: 140%;
   color: ${(props) => props.theme.colors.text200};
-`
-const SubtitleTwo = styled.div`
-  font-size: 1.25rem;
-  line-height: 140%;
-  color: ${(props) => props.theme.colors.text300};
 `
 
 const HeroContainer = styled.div`
@@ -96,26 +84,7 @@ const Header = styled.header`
 `
 
 const StyledGrayContatiner = styled(GrayContainer)`
-  padding: 4rem 2rem;
-  margin-top: -14rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.xl}) {
-    margin-top: -15rem;
-  }
-  @media (max-width: 1160px) {
-    margin-top: -14rem;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-top: -12rem;
-  }
-  @media (max-width: 920px) {
-    margin-top: -11rem;
-  }
-  @media (max-width: 870px) {
-    margin-top: -10rem;
-  }
-  @media (max-width: 810px) {
-    margin-top: -9rem;
-  }
+  padding: 4rem 0;
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     margin-top: 0rem;
     box-shadow: none;
@@ -123,11 +92,6 @@ const StyledGrayContatiner = styled(GrayContainer)`
   @media (max-width: ${(props) => props.theme.breakpoints.s}) {
     padding: 2rem 2rem;
   }
-`
-
-const ActionCardContainer = styled(CardContainer)`
-  justify-content: center;
-  margin-bottom: 3rem;
 `
 
 const StyledCard = styled(Card)`
@@ -140,39 +104,10 @@ const StyledCard = styled(Card)`
   }
 `
 
-const Banner = styled(GatsbyImage)`
-  opacity: 0.3;
-  width: 100%;
-  height: 400px;
-`
-
-const BannerContainer = styled.div`
-  position: relative;
-  width: 100%;
-  height: 400px;
-  margin-bottom: 4rem;
-`
-
-const BannerMessage = styled.h2`
-  position: absolute;
-  width: 100%;
-  padding: 0.5rem;
-  top: 30%;
-  text-align: center;
-  font-size: 3rem;
-  line-height: 140%;
-  margin-top: 0;
-  color: ${(props) => props.theme.colors.text};
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    font-size: 2rem;
-    top: 35%;
-  }
-`
-
-const ActionIntro = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 3rem;
+const Summary = styled.div`
+  padding: 1rem;
+  border-radius: 4px;
+  background: ${(props) => props.theme.colors.cardGradient};
 `
 
 const TwoColumnContent = styled(Content)`
@@ -193,27 +128,13 @@ const Column = styled.div`
   margin-bottom: 1.5rem;
 `
 
-const CardColumn = styled.div`
-  flex: 0 1 50%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-start;
-  margin-bottom: 3rem;
-`
-
-const SingleCard = styled(StyledCard)`
-  max-width: 420px;
-  min-width: 320px;
-  margin: 0;
-  @media (min-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-right: 7rem;
-    margin-left: 7rem;
-  }
-`
-
 const StyledCallout = styled(Callout)`
   flex: 1 1 416px;
   min-height: 100%;
+`
+
+const TabContent = styled.p`
+  margin: 0;
 `
 
 const WhatIsEthereumPage = ({
@@ -258,86 +179,17 @@ const WhatIsEthereumPage = ({
     {
       emoji: ":shopping_bags:",
       title: translateMessageId("page-what-is-ethereum-commerce-card", intl),
-      description: translateMessageId(
-        "page-what-is-ethereum-commerce-card-desc",
-        intl
-      ),
+      description:
+        "Customers have a secure, built-in guarantee that funds will only change hands if you provide what was agreed. Likewise, developers can have certainty that the rules won't change on them.",
     },
     {
       emoji: ":handshake:",
-      title: translateMessageId(
-        "page-what-is-ethereum-compatibility-card",
-        intl
-      ),
-      description: translateMessageId(
-        "page-what-is-ethereum-compatibility-card-desc",
-        intl
-      ),
+      title: "All products are composable",
+      description:
+        "Since all apps are built on the same blockchain / share the same state, they can build off each other (similar to legos). This allows for better products and experiences being built all the time.",
     },
   ]
 
-  const actions = [
-    {
-      title: translateMessageId("page-what-is-ethereum-native-title", intl),
-      to: "/eth/",
-      alt: translateMessageId("page-what-is-ethereum-native-alt", intl),
-      image: getImage(data.eth),
-      description: translateMessageId(
-        "page-what-is-ethereum-native-crypto",
-        intl
-      ),
-    },
-    {
-      title: translateMessageId("page-what-is-ethereum-wallets", intl),
-      to: "/wallets/",
-      alt: translateMessageId("page-what-is-ethereum-native-img-alt", intl),
-      image: getImage(data.wallets),
-
-      description: translateMessageId(
-        "page-what-is-ethereum-wallets-desc",
-        intl
-      ),
-    },
-    {
-      title: translateMessageId("page-what-is-ethereum-dapps-title", intl),
-      to: "/dapps/",
-      alt: translateMessageId("page-what-is-ethereum-dapps-img-alt", intl),
-      image: getImage(data.dapps),
-      description: translateMessageId("page-what-is-ethereum-dapps-desc", intl),
-    },
-  ]
-  const usecases = [
-    {
-      title: translateMessageId("page-what-is-ethereum-defi-title", intl),
-      to: "/defi/",
-      alt: translateMessageId("page-what-is-ethereum-defi-alt", intl),
-      image: getImage(data.defi),
-      description: translateMessageId(
-        "page-what-is-ethereum-defi-description",
-        intl
-      ),
-    },
-    {
-      title: translateMessageId("page-what-is-ethereum-nft-title", intl),
-      to: "/nft/",
-      alt: translateMessageId("page-what-is-ethereum-nft-alt", intl),
-      image: getImage(data.nft),
-      description: translateMessageId(
-        "page-what-is-ethereum-nft-description",
-        intl
-      ),
-    },
-    {
-      title: translateMessageId("page-what-is-ethereum-dao-title", intl),
-      to: "/dao/",
-      alt: translateMessageId("page-what-is-ethereum-dao-alt", intl),
-      image: getImage(data.dao),
-      description: translateMessageId(
-        "page-what-is-ethereum-dao-description",
-        intl
-      ),
-    },
-  ]
   return (
     <Page>
       <PageMetadata
@@ -348,7 +200,7 @@ const WhatIsEthereumPage = ({
         )}
         image={getImage(data.ogImage)?.images.fallback.src}
       />
-      <HeroContent>
+      <Content>
         <HeroContainer>
           <Header>
             <Title>
@@ -358,11 +210,10 @@ const WhatIsEthereumPage = ({
               <Translation id="page-what-is-ethereum-desc" />
             </Slogan>
             <Subtitle>
-              <Translation id="page-what-is-ethereum-accessibility" />
+              Learn more about how Ethereum works, the benefits it brings and
+              how it is being used by millions of people around the world. A
+              complete beginner's guide.
             </Subtitle>
-            <SubtitleTwo>
-              <Translation id="page-what-is-ethereum-tools-needed" />
-            </SubtitleTwo>
           </Header>
           <Hero
             image={getImage(data.hero)}
@@ -373,133 +224,134 @@ const WhatIsEthereumPage = ({
             loading="eager"
           />
         </HeroContainer>
-      </HeroContent>
+      </Content>
       <StyledGrayContatiner>
-        <Intro>
-          <p>
-            <Translation id="page-what-is-ethereum-in-depth-description" />
-          </p>
-        </Intro>
-        <CardContainer>
-          {cards.map((card, idx) => (
-            <StyledCard
-              key={idx}
-              emoji={card.emoji}
-              title={card.title}
-              description={card.description}
+        <TwoColumnContent>
+          <Width60>
+            <Summary>
+              <p>
+                <b>Summary</b>
+              </p>
+              <p>
+                Ethereum is a technology that lets you send cryptocurrency to
+                anyone for a small fee. Its also a marketplace of apps that
+                anyone can use and no one can take down. Ethereum doesn’t
+                require any central authority to maintain and secure it.
+                Instead, individuals can make peer-to-peer transactions without
+                needing to trust a third party or one another.
+              </p>
+              <p>Still confused? Let's explain everything step by step.</p>
+            </Summary>
+          </Width60>
+          <Width40 />
+        </TwoColumnContent>
+        <TwoColumnContent>
+          <Width60>
+            <h2>What is a cryptocurrency?</h2>
+            <p>
+              <b>
+                Crypto (short for cryptocurrency) is a new form of digital money
+                powered by cryptography.
+              </b>
+            </p>
+            <p>
+              It alll started in 2008 with Bitcoin. You could use it to send
+              funds to anyone anywhere globally. What made crypto different from
+              normal bank transfers or other services like Paypal is that there
+              was no middle man for the first time.
+            </p>
+            <p>Wait, what is a middle man?</p>
+            <p>
+              Traditionally, banks hold your money for you. They review and
+              process every transaction you request and can decline it. Since
+              banks store the funds, they have a lot of control over it. They
+              can dictate which financial services you have access to and which
+              not.
+            </p>
+            <p>
+              Things are different with crypto. You act as <b>your own bank</b>.
+              Nobody else has access to your funds. You and your friends can
+              make direct <b>peer-to-peer transactions</b> with no single
+              authority controling the transfer. This is possible because of the
+              blockchain technology upon which cryptocurrencies operate.
+            </p>
+          </Width60>
+          <Width40>
+            <GatsbyImage image={getImage(data.wallet)} />
+          </Width40>
+        </TwoColumnContent>
+        <TwoColumnContent>
+          <Width60>
+            <Tabs
+              tabs={[
+                {
+                  title: "What is a blockchain?",
+                  content: (
+                    <TabContent>
+                      <b>A blockchain is a database of transactions</b> that is
+                      updated and shared across many computers in a network.
+                      Every time a new set of transactions is added, its called
+                      a “block” - hence the name blockchain. Most blockchains
+                      are public, and you can only add data, not remove. If
+                      someone wanted to alter any of the information or cheat
+                      the system, they’d need to do so on the majority of
+                      computers on the network. That is a lot! This makes
+                      established blockchains highly secure.
+                    </TabContent>
+                  ),
+                },
+                {
+                  title: "Why is it called cryptocurrency?",
+                  content: "TODO",
+                },
+              ]}
             />
-          ))}
-        </CardContainer>
+          </Width60>
+          <Width40 />
+        </TwoColumnContent>
+        <TwoColumnContent>
+          <Width40>
+            <GatsbyImage image={getImage(data.eth)} />
+          </Width40>
+          <Width60>
+            <h2>What is the difference between Ethereum and Bitcoin?</h2>
+            <p>
+              Launched in 2015, Ethereum builds on Bitcoin's innovation, with
+              some big differences.
+            </p>
+            <p>
+              Both let you use digital money without payment providers or banks.
+              But <b>Ethereum is programmable</b>, so you can also use it to
+              create any type of application on top of it.
+            </p>
+            <p>
+              Ethereum being programmable means that you can build apps that use
+              the blockchain to store data or control what your app can do. This
+              results in a general purpose blockchain that can be programmed to
+              do anything. As there is no limit to what Ethereum can do, it
+              allows for great innovation to happen on the Ethereum network.
+            </p>
+            <p>
+              While Bitcoin is only a payment network, Ethereum is more like a
+              marketplace of financial services, games, social networks and
+              other apps that respect your privacy and cannot censor you.
+            </p>
+          </Width60>
+        </TwoColumnContent>
+        <Content>
+          <h2>What Ethereum can do?</h2>
+          <CardContainer>
+            {cards.map((card, idx) => (
+              <StyledCard
+                key={idx}
+                emoji={card.emoji}
+                title={card.title}
+                description={card.description}
+              />
+            ))}
+          </CardContainer>
+        </Content>
       </StyledGrayContatiner>
-      <BannerContainer>
-        <Banner
-          image={getImage(data.banner)}
-          alt={translateMessageId("page-what-is-ethereum-alt-img-social", intl)}
-        />
-        <BannerMessage>
-          <Translation id="page-what-is-ethereum-welcome" /> <br />
-          <Translation id="page-what-is-ethereum-welcome-2" />
-        </BannerMessage>
-      </BannerContainer>
-      <TwoColumnContent>
-        <Column>
-          <h2>
-            <Translation id="page-what-is-ethereum-101" />
-          </h2>
-          <p>
-            <Translation id="page-what-is-ethereum-101-desc" />
-          </p>
-          <p>
-            <strong>
-              <Translation id="page-what-is-ethereum-101-strong" />
-              <i>
-                <Translation id="page-what-is-ethereum-101-italic" />
-              </i>
-            </strong>
-          </p>
-          <p>
-            <Translation id="page-what-is-ethereum-101-desc-2" />
-          </p>
-          <p>
-            <Translation id="page-what-is-ethereum-101-desc-3" />
-          </p>
-          <p>
-            <Translation id="page-what-is-ethereum-101-desc-4" />
-          </p>
-          <p>
-            <Translation id="page-what-is-ethereum-tryit" />
-          </p>
-        </Column>
-        <CardColumn>
-          <SingleCard
-            emoji=":gear:"
-            title={translateMessageId(
-              "page-what-is-ethereum-singlecard-title",
-              intl
-            )}
-            description={translateMessageId(
-              "page-what-is-ethereum-singlecard-desc",
-              intl
-            )}
-          >
-            <Link to="/learn/">
-              <Translation id="page-what-is-ethereum-singlecard-link" />
-            </Link>
-          </SingleCard>
-        </CardColumn>
-      </TwoColumnContent>
-      <Content>
-        <Divider />
-        <ActionIntro>
-          <h2>
-            <Translation id="page-what-is-ethereum-try" />
-          </h2>
-          <Subtitle>
-            <Translation id="page-what-is-ethereum-get-started" />{" "}
-          </Subtitle>
-          <SubtitleTwo>
-            <Translation id="page-what-is-ethereum-adventure" />
-          </SubtitleTwo>
-        </ActionIntro>
-        <ActionCardContainer>
-          {actions.map((action, idx) => (
-            <ActionCard
-              key={idx}
-              to={action.to}
-              alt={action.alt}
-              image={action.image}
-              title={action.title}
-              description={action.description}
-            />
-          ))}
-        </ActionCardContainer>
-      </Content>
-      <Content>
-        <ActionIntro>
-          <h2>
-            <Translation id="page-what-is-ethereum-use-cases-title" />
-          </h2>
-          <Subtitle>
-            <Translation id="page-what-is-ethereum-use-cases-subtitle" />
-          </Subtitle>
-          <SubtitleTwo>
-            <Translation id="page-what-is-ethereum-use-cases-subtitle-two" />
-          </SubtitleTwo>
-        </ActionIntro>
-        <ActionCardContainer>
-          {usecases.map((usecase, idx) => (
-            <ActionCard
-              key={idx}
-              to={usecase.to}
-              alt={usecase.alt}
-              image={usecase.image}
-              title={usecase.title}
-              description={usecase.description}
-              isBottom={false}
-            />
-          ))}
-        </ActionCardContainer>
-      </Content>
       <TwoColumnContent>
         <Column>
           <h2>
@@ -595,13 +447,30 @@ export const query = graphql`
         gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
       }
     }
+    wallet: file(relativePath: { eq: "wallet.png" }) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 400
+          layout: FIXED
+          placeholder: BLURRED
+          quality: 100
+        )
+      }
+    }
+    eth: file(relativePath: { eq: "eth.png" }) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 470
+          layout: FIXED
+          placeholder: BLURRED
+          quality: 100
+        )
+      }
+    }
     dapps: file(relativePath: { eq: "doge-computer.png" }) {
       ...actionCardImage
     }
     wallets: file(relativePath: { eq: "wallet-cropped.png" }) {
-      ...actionCardImage
-    }
-    eth: file(relativePath: { eq: "eth.png" }) {
       ...actionCardImage
     }
     dao: file(relativePath: { eq: "use-cases/dao-2.png" }) {
