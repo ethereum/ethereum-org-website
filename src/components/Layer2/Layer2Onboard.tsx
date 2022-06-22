@@ -5,8 +5,8 @@ import styled from "styled-components"
 import { useIntl } from "gatsby-plugin-intl"
 
 // Components
-import ButtonLink from "../../components/ButtonLink"
-import Translation from "../../components/Translation"
+import ButtonLink from "../ButtonLink"
+import Translation from "../Translation"
 import { StyledSelect as Select } from "../SharedStyledComponents"
 
 // Data
@@ -163,11 +163,35 @@ const RightSelected = styled.div`
   }
 `
 
-const Layer2Onboard = ({ layer2DataCombined, ethIcon }) => {
+interface Exchange {
+  label?: string
+  value?: string
+  name: string
+  supports_deposits: Array<string>
+  supports_withdrawals: Array<string>
+  url: string
+}
+
+interface Layer2 {
+  label: string
+  name: string
+  value: string
+  bridgeWallets: Array<string>
+  bridge: string
+}
+
+export interface IProps {
+  layer2DataCombined: Array<Layer2>
+  ethIcon: any
+}
+
+const Layer2Onboard: React.FC<IProps> = ({ layer2DataCombined, ethIcon }) => {
   const intl = useIntl()
 
-  const [selectedExchange, setSelectedExchange] = useState(undefined)
-  const [selectedL2, setSelectedL2] = useState(undefined)
+  const [selectedExchange, setSelectedExchange] = useState<
+    Exchange | undefined
+  >(undefined)
+  const [selectedL2, setSelectedL2] = useState<Layer2 | undefined>(undefined)
 
   return (
     <Content>
@@ -249,7 +273,7 @@ const Layer2Onboard = ({ layer2DataCombined, ethIcon }) => {
           <StyledSelect
             className="react-select-container"
             classNamePrefix="react-select"
-            options={cexSupport.map((cex) => {
+            options={cexSupport.map((cex: Exchange) => {
               cex.label = cex.name
               cex.value = cex.name
               return cex
@@ -270,7 +294,7 @@ const Layer2Onboard = ({ layer2DataCombined, ethIcon }) => {
           />
         </RightSelect>
         <EthLogo>
-          <Image image={ethIcon} objectFit="contain" />
+          <Image image={ethIcon} objectFit="contain" alt={ethIcon} />
         </EthLogo>
         {selectedExchange && (
           <RightSelected>
