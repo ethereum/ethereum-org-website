@@ -72,6 +72,7 @@ const WalletContentHeader = styled(Grid)`
   padding: 8px;
   background: ${(props) => props.theme.colors.background};
   z-index: 1;
+  border-bottom: 1px solid ${(props) => props.theme.colors.primary};
 
   @media (max-width: ${(props) => props.theme.breakpoints.s}) {
     gap: 0.5rem;
