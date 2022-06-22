@@ -5,7 +5,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import styled from "styled-components"
 import { cloneDeep } from "lodash"
 
-import NavDropdown from "./Dropdown"
+import Menu from "./Menu"
 import MobileNavMenu from "./Mobile"
 import NakedButton from "../NakedButton"
 import Link from "../Link"
@@ -151,8 +151,8 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
   `)
   const intl = useIntl()
 
-  const linkSections = [
-    {
+  const linkSections = {
+    useEthereum: {
       text: "use-ethereum",
       ariaLabel: "use-ethereum-menu",
       items: [
@@ -206,69 +206,88 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
         },
       ],
     },
-    {
+    learn: {
       text: "learn",
       ariaLabel: "learn-menu",
       items: [
         {
-          text: "what-is-ethereum",
-          to: "/what-is-ethereum/",
+          text: "Start here",
+          items: [
+            {
+              text: "Learn Hub",
+              to: "/learn/",
+            },
+          ],
         },
         {
-          text: "what-is-ether",
-          to: "/eth/",
+          text: "Ethereum basics",
+          items: [
+            {
+              text: "what-is-ethereum",
+              to: "/what-is-ethereum/",
+            },
+            {
+              text: "what-is-ether",
+              to: "/eth/",
+            },
+            {
+              text: "ethereum-wallets",
+              to: "/wallets/",
+            },
+            {
+              text: "ethereum-security",
+              to: "/security/",
+            },
+            {
+              text: "web3",
+              to: "/web3/",
+            },
+            {
+              text: "smart-contracts",
+              to: "/smart-contracts/",
+            },
+          ],
         },
         {
-          text: "smart-contracts",
-          to: "/smart-contracts/",
-        },
-        {
-          text: "ethereum-security",
-          to: "/security/",
-        },
-        {
-          text: "history-of-ethereum",
-          to: "/history/",
-        },
-        {
-          text: "ethereum-whitepaper",
-          to: "/whitepaper/",
-        },
-        {
-          text: "ethereum-upgrades",
-          to: "/upgrades/",
-        },
-        {
-          text: "ethereum-glossary",
-          to: "/glossary/",
-        },
-        {
-          text: "ethereum-governance",
-          to: "/governance/",
-        },
-        {
-          text: "bridges",
-          to: "/bridges/",
-        },
-        {
-          text: "energy-consumption",
-          to: "/energy-consumption/",
-        },
-        {
-          text: "eips",
-          to: "/eips/",
-        },
-        {
-          text: "web3",
-          to: "/web3/",
-        },
-        {
-          text: "guides-and-resources",
-          to: "/learn/",
+          text: "Ethereum protocol",
+          items: [
+            {
+              text: "energy-consumption",
+              to: "/energy-consumption/",
+            },
+            {
+              text: "ethereum-upgrades",
+              to: "/upgrades/",
+            },
+            {
+              text: "eips",
+              to: "/eips/",
+            },
+            {
+              text: "history-of-ethereum",
+              to: "/history/",
+            },
+            {
+              text: "ethereum-whitepaper",
+              to: "/whitepaper/",
+            },
+            {
+              text: "ethereum-glossary",
+              to: "/glossary/",
+            },
+            {
+              text: "ethereum-governance",
+              to: "/governance/",
+            },
+            {
+              text: "bridges",
+              to: "/bridges/",
+            },
+          ],
         },
       ],
     },
-    {
+    developers: {
       text: "developers",
       ariaLabel: "page-developers-aria-label",
       items: [
@@ -294,7 +313,7 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
         },
       ],
     },
-    {
+    enterprise: {
       text: "enterprise",
       ariaLabel: "enterprise-menu",
       items: [
@@ -308,7 +327,7 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
         },
       ],
     },
-    {
+    community: {
       text: "community",
       ariaLabel: "community-menu",
       items: [
@@ -346,7 +365,8 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
         },
       ],
     },
-  ]
+  }
+
   const ednLinks = [
     {
       text: "home",
@@ -404,24 +424,7 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
           {/* Desktop */}
           <InnerContent>
             <LeftItems>
-              {linkSections.map((section, idx) =>
-                section.items || section.component ? (
-                  <NavDropdown
-                    section={section}
-                    key={idx}
-                    hasSubNav={shouldShowSubNav}
-                  />
-                ) : (
-                  <NavListItem key={idx}>
-                    <NavLink
-                      to={section.to}
-                      isPartiallyActive={section.isPartiallyActive}
-                    >
-                      <Translation id={section.text} />
-                    </NavLink>
-                  </NavListItem>
-                )
-              )}
+              <Menu path={path} sections={linkSections} />
             </LeftItems>
             <RightItems>
               <Search useKeyboardShortcuts />

@@ -1,4 +1,4 @@
-import React, { useState, createRef } from "react"
+import React, { useState, createRef, useContext } from "react"
 import styled from "styled-components"
 import { useIntl } from "gatsby-plugin-intl"
 import { motion } from "framer-motion"
@@ -41,14 +41,7 @@ const DropdownList = styled(motion.ul)`
   border-radius: 0.5em;
   background: ${(props) => props.theme.colors.dropdownBackground};
   border: 1px solid ${(props) => props.theme.colors.dropdownBorder};
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-`
-
-const ComponentDropdown = styled(DropdownList)`
-  padding: 0;
-  border: none;
-  background: none;
+  padding: 1rem 0;
 `
 
 const listVariants = {
@@ -91,8 +84,8 @@ const DropdownItem = styled.li`
 const NavLink = styled(Link)`
   text-decoration: none;
   display: block;
-  padding: 0.5rem;
-  color: ${(props) => props.theme.colors.text};
+  padding: 0.5rem 1rem;
+  color: ${(props) => props.theme.colors.text200};
   svg {
     fill: ${(props) => props.theme.colors.text200};
   }
@@ -104,21 +97,32 @@ const NavLink = styled(Link)`
   }
 `
 
-const Online = styled.div`
-  height: 8px;
-  width: 8px;
-  border-radius: 50%;
-  background: ${(props) => props.theme.colors.success400};
-  align-self: flex-start;
-  margin-left: 0.125rem;
+const H2 = styled.h2`
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.3rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  padding: 0 1rem;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  color: ${(props) => props.theme.colors.text};
 `
 
-const NavDropdown = ({ section, hasSubNav }) => {
+const DropdownContext = React.createContext()
+
+const NavDropdown = ({ children, section, hasSubNav }) => {
   const [isOpen, setIsOpen] = useState(false)
   const intl = useIntl()
   const ref = createRef()
 
   const isPageRightToLeft = isLangRightToLeft(intl.locale)
+
+  const toggle = () => setIsOpen((isOpen) => !isOpen)
+  const close = () => setIsOpen(false)
 
   useOnClickOutside(ref, () => setIsOpen(false))
 
@@ -140,54 +144,53 @@ const NavDropdown = ({ section, hasSubNav }) => {
   const ariaLabel = section.ariaLabel || section.text
 
   return (
-    <NavListItem ref={ref} aria-label={translateMessageId(ariaLabel, intl)}>
-      <DropdownTitle
-        dir={isPageRightToLeft ? "auto" : "ltr"}
-        onClick={() => setIsOpen(!isOpen)}
-        onKeyDown={onKeyDownHandler}
-        tabIndex="0"
-      >
-        <Translation id={section.text} />
-        {section.component ? (
-          <Online />
-        ) : (
+    <DropdownContext.Provider
+      value={{ isOpen, toggle, close, tabInteractionHandler }}
+    >
+      <NavListItem ref={ref} aria-label={translateMessageId(ariaLabel, intl)}>
+        <DropdownTitle
+          dir={isPageRightToLeft ? "auto" : "ltr"}
+          onClick={() => toggle()}
+          onKeyDown={onKeyDownHandler}
+          tabIndex="0"
+        >
+          <Translation id={section.text} />
           <StyledIcon isOpen={isOpen} name="chevronDown" />
-        )}
-      </DropdownTitle>
+        </DropdownTitle>
 
-      {section.items ? (
         <DropdownList
           hasSubNav={hasSubNav}
           animate={isOpen ? "open" : "closed"}
           variants={listVariants}
           initial="closed"
         >
-          {section.items.map((item, idx) => (
-            <DropdownItem
-              key={idx}
-              onClick={() => setIsOpen(false)}
-              onKeyDown={(e) =>
-                tabInteractionHandler(e, idx === section.items.length - 1)
-              }
-            >
-              <NavLink to={item.to} tabIndex="-1" isPartiallyActive={false}>
-                <Translation id={item.text} />
-              </NavLink>
-            </DropdownItem>
-          ))}
+          {children}
         </DropdownList>
-      ) : (
-        <ComponentDropdown
-          hasSubNav={hasSubNav}
-          animate={isOpen ? "open" : "closed"}
-          variants={listVariants}
-          initial="closed"
-        >
-          {section.component}
-        </ComponentDropdown>
-      )}
-    </NavListItem>
+      </NavListItem>
+    </DropdownContext.Provider>
   )
 }
+
+const Item = ({ children, isLast, ...rest }) => {
+  const { close, tabInteractionHandler } = useContext(DropdownContext)
+
+  return (
+    <DropdownItem
+      {...rest}
+      onClick={() => close()}
+      onKeyDown={(e) => tabInteractionHandler(e, isLast)}
+    >
+      {children}
+    </DropdownItem>
+  )
+}
+
+const Title = ({ children }) => {
+  return <H2>{children}</H2>
+}
+
+NavDropdown.Item = Item
+NavDropdown.Link = NavLink
+NavDropdown.Title = Title
 
 export default NavDropdown
