@@ -1,8 +1,14 @@
 import React from "react"
-import styled from "styled-components"
+import styled, { DefaultTheme } from "styled-components"
 import Icon from "./Icon"
 import Link from "./Link"
 import Emoji from "./Emoji"
+
+export interface IProps {
+  to: string
+  theme?: DefaultTheme
+  className?: string
+}
 
 const Container = styled(Link)`
   position: relative;
@@ -43,6 +49,7 @@ const Arrow = styled(Icon)`
   margin: 0rem 1.5rem;
   align-self: center;
   min-width: 2rem;
+  color: ${({ theme }) => theme.colors.text};
 `
 
 const EmojiCell = styled.div`
@@ -50,15 +57,15 @@ const EmojiCell = styled.div`
   align-items: center;
 `
 
-const DocLink = ({ to, children, className }) => (
-  <Container to={to} className={className}>
+const DocLink: React.FC<IProps> = ({ to, children, className, theme }) => (
+  <Container to={to} className={className || ""}>
     <EmojiCell>
       <Emoji size={1} text=":page_with_curl:" mr={`1rem`} />
     </EmojiCell>
     <TextCell>
       <Title>{children}</Title>
     </TextCell>
-    <Arrow name="arrowRight" color={({ theme }) => theme.colors.text} />
+    <Arrow name="arrowRight" />
   </Container>
 )
 
