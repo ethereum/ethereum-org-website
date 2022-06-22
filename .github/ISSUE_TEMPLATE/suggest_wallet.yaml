@@ -149,10 +149,10 @@ body:
       label: Any other security testing that should be noted?
       description: Please note any other security precautions taken.
   - type: textarea
-    id: wallet_spam_protection
+    id: wallet_scam_protection
     attributes:
-      label: Spam protection?
-      description: Does the wallet employ any practices to warn users against potential spam (e.g. when interacting with suspicious accounts/contracts)?
+      label: Scam protection?
+      description: Does the wallet employ any practices to warn users against potential scams (e.g. when interacting with suspicious accounts/contracts)?
   - type: markdown
     id: features
     attributes:
