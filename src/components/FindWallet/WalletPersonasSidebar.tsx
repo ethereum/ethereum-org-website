@@ -83,6 +83,7 @@ const Persona = styled.div<{
   border: 1px solid #3d3d3d;
   border-radius: 4px;
   cursor: pointer;
+  transition: 0.5s all;
 
   h4 {
     margin: 0 0 0.5rem 0;
@@ -92,20 +93,25 @@ const Persona = styled.div<{
         : props.theme.colors.text};
     font-size: 0.9rem;
     font-weight: normal;
+    transition: 0.5s all;
   }
 
   &:hover {
     background: ${(props) => props.theme.colors.primary100};
+    transition: 0.5s all;
 
     h4 {
       color: ${(props) => props.theme.colors.black};
+      transition: 0.5s all;
     }
 
     p {
       color: ${(props) => props.theme.colors.black};
+      transition: 0.5s all;
     }
 
     ${PersonaFeature} {
+      transition: 0.5s all;
       svg {
         path {
           fill: ${(props) => props.theme.colors.black};
