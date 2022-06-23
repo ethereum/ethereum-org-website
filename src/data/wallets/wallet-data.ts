@@ -660,7 +660,6 @@ const walletData: WalletData[] = [
     withdraw_crypto: false,
     multisig: true,
     social_recovery: true,
-    dedicated_support: true,
     onboard_documentation: "https://help.gnosis-safe.io/en/",
     documentation: "https://docs.gnosis-safe.io/",
   },
@@ -732,7 +731,6 @@ const walletData: WalletData[] = [
     withdraw_crypto: true,
     multisig: false,
     social_recovery: false,
-    dedicated_support: true,
     onboard_documentation: "https://support.coin.space/hc/en-us",
     documentation: "",
   },
@@ -778,7 +776,6 @@ const walletData: WalletData[] = [
     withdraw_crypto: false,
     multisig: true,
     social_recovery: true,
-    dedicated_support: true,
     onboard_documentation:
       "https://help.ambire.com/hc/en-us/categories/4404980091538-Ambire-Wallet",
     documentation: "",
