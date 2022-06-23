@@ -82,7 +82,7 @@
       }
     },
     {
-      "name": "DAppNode",
+      "name": "DappNode",
       "svgPath": "dappnode-glyph.svg",
       "hue": 175,
       "launchDate": "2020-12-01",
@@ -105,7 +105,7 @@
       "matomo": {
         "eventCategory": "StakingProductCard",
         "eventAction": "Clicked",
-        "eventName": "Clicked DAppNode go to link"
+        "eventName": "Clicked DappNode go to link"
       }
     },
     {
