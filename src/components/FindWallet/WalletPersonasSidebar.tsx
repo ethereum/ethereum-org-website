@@ -49,7 +49,7 @@ const PersonaFeature = styled.div<{
     margin-bottom: 0;
     color: ${(props) =>
       props.selected === true
-        ? props.theme.colors.black
+        ? props.theme.colors.primary
         : props.theme.colors.text};
   }
 
@@ -59,7 +59,7 @@ const PersonaFeature = styled.div<{
     path {
       fill: ${(props) =>
         props.selected === true
-          ? props.theme.colors.black
+          ? props.theme.colors.primary
           : props.theme.colors.text};
       stroke: ${(props) =>
         props.selected === true
@@ -78,27 +78,39 @@ const Persona = styled.div<{
   align-items: flex-start;
   padding: 1.5rem;
   background: ${(props) => props.selected === true 
-      ? props.isDark === true ? props.theme.colors.primary800 : props.theme.colors.primary200
+      ? props.isDark === true ? props.theme.colors.primary900 : props.theme.colors.primary200
       : props.isDark === true ? props.theme.colors.black400 : props.theme.colors.primary100};
   border-radius: 4px;
   cursor: pointer;
   transition: 0.5s all;
 
+  h3{
+    color: ${(props) => props.selected === true 
+      ? props.isDark === true ? props.theme.colors.primary : props.theme.colors.primary
+      : props.isDark === true ? props.theme.colors.text : props.theme.colors.text};
+  }
+
   h4 {
-    margin: 0 0 0.5rem 0;
+    margin: 0.5rem 0 0.8rem 0;
+    padding: 0.7rem 0.6rem 0;
     color: ${(props) =>
       props.selected === true
-        ? props.theme.colors.black
-        : props.theme.colors.text};
+        ? props.theme.colors.primary
+        : props.theme.colors.text200};
     font-size: 0.9rem;
     font-weight: normal;
     transition: 0.5s all;
+    line-height: 1.3;
+    border-top: 1px solid ${(props) =>
+      props.selected === true
+        ? props.theme.colors.primary
+        : props.theme.colors.lightBorder};
   }
 
 
   &:hover {
     background: ${(props) => props.selected === true 
-      ? props.isDark === true ? props.theme.colors.primary800 : props.theme.colors.primary200
+      ? props.isDark === true ? props.theme.colors.primary900 : props.theme.colors.primary200
       : props.isDark === true ? props.theme.colors.black500 : props.theme.colors.primary200};
     transition: 0.5s all;
   }
@@ -108,14 +120,17 @@ const Title = styled.div`
   display: flex;
   align-items: center;
   gap: "1rem";
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.6rem;
+  padding: 0.5rem 0.5rem 0 0.5rem;
+  
 `
 
 const H3 = styled.h3<{ selected: boolean }>`
   margin-left: 0.5rem;
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 1.25rem;
+  font-size: 1.3rem;
+  padding: 0 0.25rem;
 `
 
 const Grid = styled.div`
@@ -127,10 +142,13 @@ const Grid = styled.div`
 `
 
 const StyledIcon = styled(Icon)<{ selected: boolean }>`
+  width: 1.3rem;
+  height: 1.3rem;
+  margin: 0 0.25rem;
   fill: ${(props) =>
     props.selected === true
       ? props.theme.colors.white
-      : props.theme.colors.secondary};
+      : "rgba(0, 0, 0, 0)"};
   background: ${(props) =>
     props.selected === true
       ? props.theme.colors.primary
@@ -139,7 +157,7 @@ const StyledIcon = styled(Icon)<{ selected: boolean }>`
   border: 1px solid ${(props) =>
     props.selected === true
       ? props.theme.colors.primary
-      : props.theme.colors.secondary};
+      : props.theme.colors.text};
 `
 
 // Types
