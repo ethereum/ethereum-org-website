@@ -2,7 +2,6 @@ import React from "react"
 import { motion } from "framer-motion"
 import { Link } from "gatsby"
 import styled from "styled-components"
-import { TranslationKey } from "../../utils/translations"
 
 const StyledTableOfContentsLink = styled(Link)`
   position: relative;
@@ -11,10 +10,17 @@ const StyledTableOfContentsLink = styled(Link)`
   margin-bottom: 0.5rem !important;
 `
 
-const TableOfContentsLink = ({
+interface Item {
+  id: string
+  title: string
+}
+
+interface ITableOfContentsLinkProps {
+  item: Item
+}
+
+const TableOfContentsLink: React.FC<ITableOfContentsLinkProps> = ({
   item: { id, title },
-}: {
-  item: { id: string; title: string }
 }) => {
   const url = `#${id}`
   let isActive = false
@@ -62,8 +68,9 @@ const ListItem = styled.li`
 `
 
 export interface IProps {
-  items: { id: string; title: string }[]
+  items: Array<Item>
 }
+
 const StakingHomeTableOfContents: React.FC<IProps> = ({ items }) => {
   if (!items) return null
 

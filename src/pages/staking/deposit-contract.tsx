@@ -4,7 +4,6 @@ import { graphql, PageProps } from "gatsby"
 import makeBlockie from "ethereum-blockies-base64"
 import { getImage } from "gatsby-plugin-image"
 import { useIntl } from "gatsby-plugin-intl"
-import type { Context } from "../../types"
 
 import Breadcrumbs from "../../components/Breadcrumbs"
 import ButtonLink from "../../components/ButtonLink"
@@ -24,6 +23,7 @@ import {
 } from "../../components/SharedStyledComponents"
 import { DEPOSIT_CONTRACT_ADDRESS } from "../../data/addresses"
 import { translateMessageId, TranslationKey } from "../../utils/translations"
+import type { Context } from "../../types"
 
 const Page = styled.div`
   width: 100%;

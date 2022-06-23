@@ -1,5 +1,11 @@
-import React, { useContext, useEffect, useState } from "react"
-import styled, { DefaultTheme, ThemeContext } from "styled-components"
+import React, {
+  ComponentType,
+  SVGProps,
+  useContext,
+  useEffect,
+  useState,
+} from "react"
+import styled, { ThemeContext } from "styled-components"
 import { shuffle } from "lodash"
 // Data imports
 import stakingProducts from "../../data/staking-products.json"
@@ -140,7 +146,7 @@ const Cta = styled(PaddedDiv)`
   }
 `
 
-const Status = ({ status }) => {
+const Status: React.FC<{ status: FlagType }> = ({ status }) => {
   if (!status) return null
   const styles = { width: "24", height: "auto" }
   switch (status) {
@@ -156,7 +162,9 @@ const Status = ({ status }) => {
   }
 }
 
-const getSvgFromPath = (svgPath) => {
+const getSvgFromPath = (
+  svgPath: string
+): ComponentType<SVGProps<SVGElement>> => {
   const mapping = {
     "abyss-glyph.svg": Abyss,
     "allnodes-glyph.svg": Allnodes,
@@ -175,8 +183,7 @@ const getSvgFromPath = (svgPath) => {
   }
   return mapping[svgPath]
 }
-
-export enum FlagType {
+enum FlagType {
   VALID = "green-check",
   CAUTION = "caution",
   WARNING = "warning",
@@ -184,13 +191,13 @@ export enum FlagType {
   UNKNOWN = "unknown",
 }
 
-export type ProductType = {
+type Product = {
   name: string
   svgPath: string
   color: string
   url: string
-  platforms: string[]
-  ui: string[]
+  platforms: Array<string>
+  ui: Array<string>
   minEth: number
   openSource: FlagType
   audited: FlagType
@@ -206,11 +213,11 @@ export type ProductType = {
   economical: FlagType
   matomo: EventOptions
 }
-export interface IProps {
-  product: ProductType
+interface ICardProps {
+  product: Product
 }
 
-const StakingProductCard: React.FC<IProps> = ({
+const StakingProductCard: React.FC<ICardProps> = ({
   product: {
     name,
     svgPath,
@@ -332,26 +339,30 @@ const StakingProductCard: React.FC<IProps> = ({
   )
 }
 
-const StakingProductCardGrid = ({ category }) => {
+export interface IProps {
+  category: string
+}
+
+const StakingProductCardGrid: React.FC<IProps> = ({ category }) => {
   const themeContext = useContext(ThemeContext)
-  const [rankedProducts, updateRankedProducts] = useState<ProductType[]>([])
+  const [rankedProducts, updateRankedProducts] = useState<Array<Product>>([])
   const isDarkTheme = themeContext.isDark
 
   const [SAT, LUM] = isDarkTheme ? ["50%", "35%"] : ["75%", "60%"]
 
-  const scoreOpenSource = (product) => {
+  const scoreOpenSource = (product: Product): 1 | 0 => {
     return product.openSource === FlagType.VALID ? 1 : 0
   }
 
-  const scoreAudited = (product) => {
+  const scoreAudited = (product: Product): 1 | 0 => {
     return product.audited === FlagType.VALID ? 1 : 0
   }
 
-  const scoreBugBounty = (product) => {
+  const scoreBugBounty = (product: Product): 1 | 0 => {
     return product.bugBounty === FlagType.VALID ? 1 : 0
   }
-
-  const scoreBattleTested = (product) => {
+  1
+  const scoreBattleTested = (product: Product): 2 | 1 | 0 => {
     return product.battleTested === FlagType.VALID
       ? 2
       : product.battleTested === FlagType.CAUTION
@@ -359,23 +370,23 @@ const StakingProductCardGrid = ({ category }) => {
       : 0
   }
 
-  const scoreTrustless = (product) => {
+  const scoreTrustless = (product: Product): 1 | 0 => {
     return product.trustless === FlagType.VALID ? 1 : 0
   }
 
-  const scorePermissionless = (product) => {
+  const scorePermissionless = (product: Product): 1 | 0 => {
     return product.permissionless === FlagType.VALID ? 1 : 0
   }
 
-  const scorePermissionlessNodes = (product) => {
+  const scorePermissionlessNodes = (product: Product): 1 | 0 => {
     return product.permissionlessNodes === FlagType.VALID ? 1 : 0
   }
 
-  const scoreMultiClient = (product) => {
+  const scoreMultiClient = (product: Product): 1 | 0 => {
     return product.multiClient === FlagType.VALID ? 1 : 0
   }
 
-  const scoreDiverseClients = (product) => {
+  const scoreDiverseClients = (product: Product): 2 | 1 | 0 => {
     return product.diverseClients === FlagType.VALID
       ? 2
       : product.diverseClients === FlagType.WARNING
@@ -383,11 +394,11 @@ const StakingProductCardGrid = ({ category }) => {
       : 0
   }
 
-  const scoreEconomical = (product) => {
+  const scoreEconomical = (product: Product): 1 | 0 => {
     return product.economical === FlagType.VALID ? 1 : 0
   }
 
-  const getRankingScore = (product) => {
+  const getRankingScore = (product: Product): number => {
     let score = 0
     score += scoreOpenSource(product)
     score += scoreAudited(product)
@@ -402,7 +413,7 @@ const StakingProductCardGrid = ({ category }) => {
     return score
   }
 
-  const getBattleTestedFlag = (_launchDate) => {
+  const getBattleTestedFlag = (_launchDate: string): FlagType => {
     let battleTested = FlagType.WARNING
     const launchDate = new Date(_launchDate)
     const now = new Date()
@@ -419,13 +430,15 @@ const StakingProductCardGrid = ({ category }) => {
     return battleTested
   }
 
-  const getDiversityOfClients = (_pctMajorityClient) => {
+  const getDiversityOfClients = (
+    _pctMajorityClient: number | null
+  ): FlagType => {
     if (!_pctMajorityClient) return FlagType.UNKNOWN
     if (_pctMajorityClient > 50) return FlagType.WARNING
     return FlagType.VALID
   }
 
-  const getFlagFromBoolean = (bool) =>
+  const getFlagFromBoolean = (bool: boolean): FlagType =>
     !!bool ? FlagType.VALID : FlagType.FALSE
 
   const getBrandProperties = ({
@@ -463,7 +476,7 @@ const StakingProductCardGrid = ({ category }) => {
 
   useEffect(() => {
     const categoryProducts = stakingProducts[category]
-    const products: ProductType[] = []
+    const products: Array<Product> = []
 
     // Pooled staking services
     if (category === "pools") {
@@ -549,4 +562,5 @@ const StakingProductCardGrid = ({ category }) => {
     </CardGrid>
   )
 }
+
 export default StakingProductCardGrid

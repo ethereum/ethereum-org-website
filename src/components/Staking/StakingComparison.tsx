@@ -5,11 +5,11 @@ import Link from "../Link"
 import Translation from "../Translation"
 
 import { EventOptions, trackCustomEvent } from "../../utils/matomo"
+import { TranslationKey } from "../../utils/translations"
 
 import SoloGlyph from "../../assets/staking/staking-glyph-cpu.svg"
 import SaasGlyph from "../../assets/staking/staking-glyph-cloud.svg"
 import PoolGlyph from "../../assets/staking/staking-glyph-token-wallet.svg"
-import { TranslationKey } from "../../utils/translations"
 
 const GradientContainer = styled.div`
   display: flex;

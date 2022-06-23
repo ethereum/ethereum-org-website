@@ -52,7 +52,7 @@ const IndicatorSpan = styled.span`
   font-size: 2rem;
 `
 
-const ErrorMessage = () => (
+const ErrorMessage: React.FC = () => (
   <IndicatorSpan>
     <Translation id="loading-error-refresh" />
   </IndicatorSpan>
@@ -72,10 +72,10 @@ const StatsBoxGrid: React.FC<IProps> = () => {
       intl.locale as Lang
     )
 
-    const formatInteger = (amount) =>
+    const formatInteger = (amount: number): string =>
       new Intl.NumberFormat(localeForStatsBoxNumbers).format(amount)
 
-    const formatPercentage = (amount) =>
+    const formatPercentage = (amount: number): string =>
       new Intl.NumberFormat(localeForStatsBoxNumbers, {
         style: "percent",
         minimumSignificantDigits: 2,
@@ -91,7 +91,7 @@ const StatsBoxGrid: React.FC<IProps> = () => {
         }>("https://mainnet.beaconcha.in/api/v1/epoch/latest")
 
         const valueTotalEth = formatInteger(
-          (totalvalidatorbalance * 1e-9).toFixed(0)
+          Number((totalvalidatorbalance * 1e-9).toFixed(0))
         )
         const valueTotalValidators = formatInteger(validatorscount)
         const currentAprDecimal = calculateStakingRewards(

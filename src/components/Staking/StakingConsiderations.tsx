@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import styled, { DefaultTheme } from "styled-components"
+import styled from "styled-components"
 // SVG imports
 import GreenCheck from "../../assets/staking/green-check-product-glyph.svg"
 import Caution from "../../assets/staking/caution-product-glyph.svg"
@@ -468,7 +468,7 @@ const StakingConsiderations: React.FC<IProps> = ({ page }) => {
     })),
   }
 
-  const handleSelection = (idx) => {
+  const handleSelection = (idx: number): void => {
     setActiveIndex(idx)
   }
 

@@ -3,7 +3,6 @@ import { graphql, PageProps } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
 import { getImage } from "gatsby-plugin-image"
 import styled, { DefaultTheme } from "styled-components"
-import type { Context } from "../../types"
 
 import ButtonDropdown from "../../components/ButtonDropdown"
 import ButtonLink from "../../components/ButtonLink"
@@ -25,6 +24,7 @@ import StakingHomeTableOfContents from "../../components/Staking/StakingHomeTabl
 import StakingCommunityCallout from "../../components/Staking/StakingCommunityCallout"
 
 import { translateMessageId, TranslationKey } from "../../utils/translations"
+import type { Context } from "../../types"
 
 const HeroStatsWrapper = styled.div`
   display: flex;
@@ -170,7 +170,7 @@ const ComparisonGrid = styled.div`
   }
 `
 
-const ColorH3 = styled.h3`
+const ColorH3 = styled.h3<{ color: string }>`
   grid-area: ${({ color }) => {
     switch (color) {
       case "stakingGold":
@@ -183,8 +183,7 @@ const ColorH3 = styled.h3`
         return ""
     }
   }};
-  color: ${({ theme, color }: { theme: DefaultTheme; color: string }) =>
-    theme.colors[color]};
+  color: ${({ theme, color }) => theme.colors[color]};
 `
 
 const StyledButtonLink = styled(ButtonLink)`
@@ -224,7 +223,8 @@ type BenefitsType = {
   linkText?: TranslationKey
   to?: string
 }
-const benefits: BenefitsType[] = [
+
+const benefits: Array<BenefitsType> = [
   {
     title: "page-staking-benefits-1-title",
     emoji: "💰",
@@ -333,7 +333,7 @@ const StakingPage = ({
     },
   }
 
-  const tocArray = Object.keys(tocItems).map((item) => tocItems[item])
+  const tocArray = Object.values(tocItems)
 
   return (
     <PageContainer>
@@ -622,25 +622,16 @@ const StakingPage = ({
             </ExpandableCard>
             <ExpandableCard
               title={translateMessageId("page-staking-faq-1-question", intl)}
-              contentPreview=""
-              eventName=""
-              eventCategory=""
             >
               <Translation id="page-staking-faq-1-answer" />
             </ExpandableCard>
             <ExpandableCard
               title={translateMessageId("page-staking-faq-2-question", intl)}
-              contentPreview=""
-              eventName=""
-              eventCategory=""
             >
               <Translation id="page-staking-faq-2-answer" />
             </ExpandableCard>
             <ExpandableCard
               title={translateMessageId("page-staking-faq-3-question", intl)}
-              contentPreview=""
-              eventName=""
-              eventCategory=""
             >
               <p>
                 <Translation id="page-staking-faq-3-answer-p1" />
