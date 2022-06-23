@@ -63,9 +63,9 @@ A comparison to traditional science
    </td>
   </tr>
   <tr>
-   <td>You raise funding from a global community.
+   <td>You raise funding from a decentralized community.
    </td>
-   <td>You raise funding from a national agency.
+   <td>You raise funding from a centralized entity.
    </td>
   </tr>
   <tr>
