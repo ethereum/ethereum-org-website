@@ -76,10 +76,7 @@ const Persona = styled.div<{
   flex-direction: column;
   align-items: flex-start;
   padding: 1rem;
-  background: ${(props) =>
-    props.selected === true
-      ? props.theme.colors.primary200
-      : props.theme.colors.primary100};
+  background: ${(props) => props.selected === true ? props.theme.colors.primary200 : props.theme.colors.primary100};
   border-radius: 4px;
   cursor: pointer;
   transition: 0.5s all;
