@@ -475,13 +475,13 @@ const WalletTable = ({ data, filters, walletData }) => {
     })
   )
   const [firstFeatureSelect, setFirstFeatureSelect] = useState(
-    featureDropdownItems[0]
-  )
-  const [secondFeatureSelect, setSecondFeatureSelect] = useState(
     featureDropdownItems[1]
   )
+  const [secondFeatureSelect, setSecondFeatureSelect] = useState(
+    featureDropdownItems[13]
+  )
   const [thirdFeatureSelect, setThirdFeatureSelect] = useState(
-    featureDropdownItems[2]
+    featureDropdownItems[9]
   )
 
   const updateMoreInfo = (idx) => {
