@@ -69,7 +69,7 @@ const TableContent = styled(Content)`
   display: flex;
   gap: 24px;
 
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     padding: 1rem 0;
   }
 `

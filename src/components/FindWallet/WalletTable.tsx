@@ -40,10 +40,6 @@ const WalletContainer = styled(Container)`
     background: ${(props) => props.theme.colors.boxShadow};
     transition: 0.5s all;
   }
-
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    padding: 0 1rem;
-  }
 `
 
 const Grid = styled.tr`
@@ -95,6 +91,9 @@ const Wallet = styled(Grid)`
   td {
     padding: 0;
     border-bottom: none;
+  }
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    padding: 25px 1rem;
   }
 `
 
