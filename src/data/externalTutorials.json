@@ -368,7 +368,7 @@
   {
     "url": "https://hardhat.org/tutorial/",
     "title": "Hardhat's tutorial for beginners",
-    "description": "Hardhat's beginners guide to Ethereum contracts and dApp development",
+    "description": "Hardhat's beginners guide to Ethereum contracts and dapp development",
     "author": "Hardhat",
     "authorGithub": "https://https://hardhat.org/",
     "tags": ["hardhat", "solidity", "testing", "smart-contracts"],
@@ -379,7 +379,7 @@
   {
     "url": "https://dev.to/dabit3/the-complete-guide-to-full-stack-ethereum-development-3j13",
     "title": "The Complete Guide to Full Stack Ethereum Development",
-    "description": "Building Full Stack dApps with React, Ethers.js, Solidity, and Hardhat",
+    "description": "Building Full Stack dapps with React, Ethers.js, Solidity, and Hardhat",
     "author": "Nader Dabit",
     "authorGithub": "https://github.com/dabit3",
     "tags": ["solidity", "hardhat", "ethers.js", "smart-contracts", "react"],
