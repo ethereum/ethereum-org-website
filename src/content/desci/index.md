@@ -50,7 +50,7 @@ By creating knowledge that is impartial and available to the public, we enable o
 * publication bias -> enabling publication in a wider range of outlets. 
 * p-hacking -> incentivising transparent and honest reporting of results.
 * cherry picking -> requiring publication of all results, including negative or inconclusive ones. 
-* HARKing: hypothesizing after the results are known -> providing incentives for transparent and honest reporting of results.
+* [HARKing](https://forrt.org/glossary/harking/): hypothesizing after the results are known -> providing incentives for transparent and honest reporting of results.
 
 A comparison to traditional science
 
