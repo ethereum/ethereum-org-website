@@ -101,7 +101,7 @@ A comparison to traditional science
   <tr>
    <td>You can earn tokens and reputation for peer-reviewing work.
    </td>
-   <td>Your peer-review work is unpaid, and often benefitting for-profit publishers.
+   <td>Your peer-review work is unpaid, benefiting for-profit publishers.
    </td>
   </tr>
   <tr>
