@@ -29,7 +29,11 @@ const StyledButtonLink = styled(ButtonLink)`
   }
 `
 
-const StakingCommunityCallout = (props) => {
+export interface IProps {
+  id?: string
+}
+
+const StakingCommunityCallout: React.FC<IProps> = (props) => {
   const intl = useIntl()
   const { image } = useStaticQuery(graphql`
     {
