@@ -241,7 +241,7 @@ Where can people go to start participating?
 ### 
 **IP ownership**
 
-* [Fund and get funded for your research projects](https://discover.molecule.to/)
+* [Molecule: Fund and get funded for your research projects](https://discover.molecule.to/)
 
 ### 
 **Data storage**
