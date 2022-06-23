@@ -49,7 +49,7 @@ By creating knowledge that is impartial and available to the public, we enable o
 * poor data quality -> incentivising transparent data sharing and quality control. 
 * publication bias -> enabling publication in a wider range of outlets. 
 * p-hacking -> incentivising transparent and honest reporting of results.
-* cherry picking -> requiring publication of all results, including negative or inconclusive ones. 
+* [cherry picking](https://pubmed.ncbi.nlm.nih.gov/33999541/) -> requiring publication of all results, including negative or inconclusive ones. 
 * [HARKing](https://forrt.org/glossary/harking/): hypothesizing after the results are known -> providing incentives for transparent and honest reporting of results.
 
 A comparison to traditional science
