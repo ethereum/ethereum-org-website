@@ -57,15 +57,15 @@ A comparison to traditional science
 
 <table>
   <tr>
-   <td><strong>DeSci</strong>
+   <td><strong>Decentralized science (aspiration)</strong>
    </td>
    <td><strong>Traditional science</strong>
    </td>
   </tr>
   <tr>
-   <td>You raise funding from a decentralized community.
+   <td>Distribution of funds is determined by the public using mechanisms such as quadratic voting.
    </td>
-   <td>You raise funding from a centralized entity.
+   <td>Distribution of funds is controlled by small, closed, centralized groups.	
    </td>
   </tr>
   <tr>
