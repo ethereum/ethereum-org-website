@@ -150,15 +150,15 @@ In the example below, you can see that hovering over the <0> tag shows that it r
 
 ### Short vs. full forms/abbreviations {#short-vs-full-forms}
 
-There are a lot of abbreviations used on the website, e.g. dApps, NFT, DAO, DeFi, etc. These abbreviations are commonly used in English and most visitors to the website are familiar with them.
+There are a lot of abbreviations used on the website, e.g. dapps, NFT, DAO, DeFi, etc. These abbreviations are commonly used in English and most visitors to the website are familiar with them.
 
 Since they usually don’t have established translations in other languages, the best way to approach these and similar terms is to provide a descriptive translation of the full form, and add the English abbreviation in brackets.
 
 Do not translate these abbreviations, since most people wouldn’t be familiar with them, and the localized versions would not make much sense to most visitors.
 
-Example of how to translate dApps:
+Example of how to translate dapps:
 
-- Decentralized applications (dApps) → _Translated full form (English abbreviation in brackets)_
+- Decentralized applications (dapps) → _Translated full form (English abbreviation in brackets)_
 
 ### Terms without established translations {#terms-without-established-translations}
 
