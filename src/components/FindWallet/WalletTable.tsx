@@ -142,10 +142,14 @@ const StyledSelect = styled(Select)`
   .react-select__control--is-focused {
     border: none;
     background: ${(props) => props.theme.colors.primary};
+    svg {
+      fill: ${(props) => props.theme.colors.background};
+      transition: 0.5s all;
+    }
 
     .react-select__value-container {
       .react-select__single-value {
-        color: ${(props) => props.theme.colors.text};
+        color: ${(props) => props.theme.colors.background};
       }
     }
 
@@ -153,13 +157,13 @@ const StyledSelect = styled(Select)`
       background: ${(props) => props.theme.colors.primary};
       .react-select__value-container {
         .react-select__single-value {
-          color: ${(props) => props.theme.colors.text};
+          color: ${(props) => props.theme.colors.background};
         }
       }
 
       .react-select__indicators {
         .react-select__indicator {
-          color: ${(props) => props.theme.colors.text};
+          color: ${(props) => props.theme.colors.background};
         }
       }
     }
