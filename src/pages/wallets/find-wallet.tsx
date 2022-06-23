@@ -80,6 +80,7 @@ const MobileFilterToggleContainer = styled.div`
   background: ${(props) => props.theme.colors.background};
   width: 100%;
   z-index: 1;
+  padding: 5px 0;
 `
 
 const MobileFilterToggle = styled.div`
@@ -153,6 +154,10 @@ const FilterTabs = styled.div`
   p {
     margin: 0;
     letter-spacing: 0.02rem;
+  }
+
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    top: 140px;
   }
 `
 

@@ -84,6 +84,10 @@ const WalletContentHeader = styled(Grid)`
     padding: 0;
     border-bottom: none;
   }
+
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    top: 140px;
+  }
 `
 
 const Wallet = styled(Grid)`
