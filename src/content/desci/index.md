@@ -165,7 +165,6 @@ DeSci is building the scientific toolstack needed to onboard Web2 academia into 
 
 Science publishing is famously problematic in that it is managed by publishing houses that rely upon free labor from scientists, reviewers and editors to generate the papers, but then also charge extortionate publishing fees. The public, who have usually indirectly paid for the work and the publication costs through taxation, can often not access that same work without paying the publisher again. The total costs for publishing individual science papers is often five-figures ($USD). This undermines the whole concept of scientific knowledge as a public good while generating huge profits for a small group of publishers.
 
-Censorship resistance probably needs to be added
 
 While free and open-access platforms do exist in the form of pre-print servers (e.g. ArXiv) these platforms lack quality control and anti-sybil mechanisms and do not generally track article-level metrics, meaning they are usually only used to publicize work prior to submission to a traditional publisher. SciHub also exists to make published papers free to access, but not legally, and only after the publishers have already taken their payment and wrapped the work in strict copyright legislation. This leaves an important gap for accessible science papers and data that has an embedded legitimacy mechanism and incentive model. The tools for building such a system exist in Web3.
 
