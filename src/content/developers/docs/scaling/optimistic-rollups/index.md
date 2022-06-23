@@ -5,7 +5,7 @@ lang: en
 sidebar: true
 ---
 
-Optimistic rollups are off-chain protocols designed to extend throughput of Ethereum's base layer. They reduce computation on the main Ethereum chain by processing transactions off-chain, offering significant improvements in processing speeds. Unlike other scaling solutions, such as [sidechains](/developers/docs/scaling/sidechains/), optimistic rollups derive security from Mainnet by publishing transaction results on-chain. 
+Optimistic rollups are layer 2 (L2) protocols designed to extend throughput of Ethereum's base layer. They reduce computation on the main Ethereum chain by processing transactions off-chain, offering significant improvements in processing speeds. Unlike other scaling solutions, such as [sidechains](/developers/docs/scaling/sidechains/), optimistic rollups derive security from Mainnet by publishing transaction results on-chain. 
 
 As computation is the slow, expensive part of using Ethereum, optimistic rollups can offer up to 10-100x improvements in scalability. Optimistic rollups also write transactions to Ethereum as `calldata`, reducing gas costs for users. 
 
@@ -25,7 +25,9 @@ Optimistic rollups are considered “optimistic” because they assume off-chain
 
 Optimistic rollups instead rely on a fraud-proving scheme scheme to detect cases where transactions are not calculated correctly. After a rollup batch is submitted on Ethereum, there's a time window (called a challenge period) during which anyone can challenge the results of a rollup transaction by computing a [fraud proof](/glossary/#fraud-proof). 
 
-If the fraud proof succeeds, the rollup protocol reverses the invalid block and punishes the malicious operator. If the rollup batch remains unchallenged after the challenge period elapses, it is deemed valid and accepted on Ethereum. The rollup will advance to a new state and the operator can start adding new blocks. 
+If the fraud proof succeeds, the rollup protocol rejects the invalid block and punishes the malicious operator. If the rollup batch remains unchallenged after the challenge period elapses, it is deemed valid and accepted on Ethereum. Others can continue to build on an unconfirmed rollup block, but with a caveat: blocks descending from a parent block will be rejected if the parent is later declared invalid. 
+
+rollup will advance to a new state and the operator can start adding new blocks. 
 
 ## How do optimistic rollups interact with Ethereum? {#optimistic-rollups-and-Ethereum} 
 
@@ -123,7 +125,7 @@ Some notes about this type of fraud proof:
 
 3. Part of the malicious asserter's bond is awarded to the challenger, while the other part is burned. The burning prevents collusion among validators; if two validators collude to initiate bogus challenges, they will still forfeit a considerable chunk of the entire stake. 
 
-4. Both parties (asserters and challengers) are required to respond to each other's actions within the specified time window. Failure to respond promptly causes the defaulting party to forfeit the challenge. 
+4. Multi-round interactive proving requires both parties (the asserter and the challenger) to make moves within the specified time window. Failure to act before the deadline expires causes the defaulting party to forfeit the challenge. 
 
 #### Why fraud proofs matter for optimistic rollups {#fraud-proof-benefits}
 
