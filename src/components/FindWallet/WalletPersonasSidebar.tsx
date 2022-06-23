@@ -1,6 +1,6 @@
 // Libraries
-import React, { ReactSVGElement, useState } from "react"
-import styled from "styled-components"
+import React, { useContext } from "react"
+import styled, { ThemeContext } from "styled-components"
 
 // Components
 import Icon from "../Icon"
@@ -71,12 +71,15 @@ const PersonaFeature = styled.div<{
 
 const Persona = styled.div<{
   selected: boolean
+  isDark: boolean
 }>`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 1rem;
-  background: ${(props) => props.selected === true ? props.theme.colors.primary200 : props.theme.colors.primary100};
+  padding: 1.5rem;
+  background: ${(props) => props.selected === true 
+      ? props.isDark === true ? props.theme.colors.primary800 : props.theme.colors.primary200
+      : props.isDark === true ? props.theme.colors.black400 : props.theme.colors.primary100};
   border-radius: 4px;
   cursor: pointer;
   transition: 0.5s all;
@@ -94,38 +97,10 @@ const Persona = styled.div<{
 
 
   &:hover {
-    background: ${(props) =>
-      props.selected === true
-        ? props.theme.colors.primary200
-        : props.theme.colors.primary200};
+    background: ${(props) => props.selected === true 
+      ? props.isDark === true ? props.theme.colors.primary800 : props.theme.colors.primary200
+      : props.isDark === true ? props.theme.colors.black500 : props.theme.colors.primary200};
     transition: 0.5s all;
-
-    h3{
-      color: ${(props) =>
-      props.selected === true
-        ? props.theme.colors.primary
-        : props.theme.colors.black};
-    }
-
-    h4 {
-      color: ${(props) => props.theme.colors.black};
-      transition: 0.5s all;
-    }
-
-    p {
-      color: ${(props) => props.theme.colors.black};
-      transition: 0.5s all;
-    }
-
-    ${PersonaFeature} {
-      transition: 0.5s all;
-      svg {
-        path {
-          fill: ${(props) => props.theme.colors.black};
-          stroke: ${(props) => props.theme.colors.black};
-        }
-      }
-    }
   }
 `
 
@@ -159,7 +134,7 @@ const StyledIcon = styled(Icon)<{ selected: boolean }>`
   background: ${(props) =>
     props.selected === true
       ? props.theme.colors.primary
-      : props.theme.colors.white};;
+      : props.theme.colors.priceCardBackground};;
   border-radius: 4px;
   border: 1px solid ${(props) =>
     props.selected === true
@@ -282,6 +257,7 @@ const WalletPersonasSidebar = ({
   selectedPersona,
   setSelectedPersona,
 }) => {
+  const themeContext = useContext(ThemeContext)
   const personas: Personas[] = [
     {
       title: "I'm new to Ethereum",
@@ -517,6 +493,7 @@ const WalletPersonasSidebar = ({
       {personas.map((persona, idx) => {
         return (
           <Persona
+            isDark={themeContext.isDark}
             selected={selectedPersona === idx}
             onClick={() => {
               if (idx === selectedPersona) {
