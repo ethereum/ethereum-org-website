@@ -66,7 +66,7 @@ Grid could be seen as a successor to Mist, also a standalone, JavaScript-based d
 
 **Alternatives**
 
-[DappNode](https://dappnode.io/) is a platform for deploying and hosting dapps, P2P clients, and blockchain nodes.
+[DAppNode](https://dappnode.io/) is a platform for deploying and hosting dapps, P2P clients, and blockchain nodes.
 
 ### Ethereum Studio {#ethereum-studio}
 
