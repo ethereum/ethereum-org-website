@@ -44,7 +44,7 @@ By creating knowledge that is impartial and available to the public, we enable o
 
 
 * bureaucratic funding structures -> allow for more diverse funding sources (quadratic donations, DAOs, crowdfunding etc.) 
-* replication crisis -> allowing for easier access to data and methods, and by providing incentives for reproducibility.
+* [replication crisis](https://forrt.org/glossary/reproducibility-crisis-aka-replicab/) -> allowing for easier access to data and methods, and by providing incentives for reproducibility.
 * misaligned incentives -> aligning incentives more closely with the goals of science. 
 * poor data quality -> incentivising transparent data sharing and quality control. 
 * [publication bias](https://forrt.org/glossary/publication-bias-file-drawer-proble/) -> enabling publication in a wider range of outlets. 
