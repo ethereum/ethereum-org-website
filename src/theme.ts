@@ -250,6 +250,8 @@ const lightColors = {
   stakingRedFill: "#f8fbf9",
   layer2Gradient:
     "linear-gradient(85.12deg, rgba(185, 185, 241, 0.2) 0%, rgba(84, 132, 234, 0.2) 56.29%, rgba(58, 142, 137, 0.2) 99.99%)",
+  bannerGridGradient:
+    "linear-gradient(90deg, rgba(127,127,213,0.2) 0%, rgba(132,145,221,0.2) 50%, rgba(145,234,228,0.2) 100%)",
 }
 
 // TODO replace random variables w/ baseColor variables
@@ -352,6 +354,8 @@ const darkColors = {
   stakingRedFill: "#313432",
   layer2Gradient:
     "linear-gradient(83.46deg, rgba(127, 127, 213, 0.2) 7.03%, rgba(138, 168, 231, 0.2) 52.42%, rgba(145, 234, 228, 0.2) 98.77%), #1E1E1E",
+  bannerGridGradient:
+    "linear-gradient(90deg, rgba(172, 182, 229, 0.08) 0%, rgba(134, 253, 232, 0.08) 100%)",
 }
 
 const lightThemeColors = Object.assign({}, baseColors, lightColors)

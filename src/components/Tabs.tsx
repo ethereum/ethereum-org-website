@@ -15,6 +15,7 @@ const Tab = styled.li`
 
 const TabButton = styled.button<{ selected: boolean }>`
   display: block;
+  cursor: pointer;
   color: ${({ theme }) => theme.colors.text};
   background-color: ${({ selected, theme }) =>
     selected ? theme.colors.selectActive : "transparent"};

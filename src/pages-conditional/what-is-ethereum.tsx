@@ -10,6 +10,8 @@ import Card from "../components/Card"
 import ButtonLink from "../components/ButtonLink"
 import PageMetadata from "../components/PageMetadata"
 import Tabs from "../components/Tabs"
+import Icon from "../components/Icon"
+import Link from "../components/Link"
 import {
   CardContainer,
   Content,
@@ -18,6 +20,13 @@ import {
   Width60,
   Width40,
 } from "../components/SharedStyledComponents"
+import {
+  Banner,
+  BannerBody,
+  BannerGrid,
+  BannerGridCell,
+  BannerImage,
+} from "../components/BannerGrid"
 
 import { translateMessageId } from "../utils/translations"
 import { Context } from "../types"
@@ -83,14 +92,14 @@ const Header = styled.header`
   }
 `
 
-const StyledGrayContatiner = styled(GrayContainer)`
+const StyledGrayContainer = styled(GrayContainer)`
   padding: 4rem 0;
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     margin-top: 0rem;
     box-shadow: none;
   }
   @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    padding: 2rem 2rem;
+    padding: 2rem 0;
   }
 `
 
@@ -135,6 +144,18 @@ const StyledCallout = styled(Callout)`
 
 const TabContent = styled.p`
   margin: 0;
+`
+
+const StatPrimary = styled.div`
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  line-height: 1;
+`
+
+const StatDescription = styled.div`
+  font-size: 1rem;
+  color: ${(props) => props.theme.colors.text200};
+  max-width: 200px;
 `
 
 const WhatIsEthereumPage = ({
@@ -225,7 +246,7 @@ const WhatIsEthereumPage = ({
           />
         </HeroContainer>
       </Content>
-      <StyledGrayContatiner>
+      <StyledGrayContainer>
         <TwoColumnContent>
           <Width60>
             <Summary>
@@ -302,13 +323,22 @@ const WhatIsEthereumPage = ({
                 },
                 {
                   title: "Why is it called cryptocurrency?",
-                  content: "TODO",
+                  content: (
+                    <TabContent>
+                      Blockchain uses cryptographic techniques to ensure that
+                      your funds are safe. Similar techniques have been used in
+                      the banking industries to ensure the security of monetary
+                      transactions for years. So you could say cryptocurencies
+                      have a bank level of security.
+                    </TabContent>
+                  ),
                 },
               ]}
             />
           </Width60>
           <Width40 />
         </TwoColumnContent>
+
         <TwoColumnContent>
           <Width40>
             <GatsbyImage image={getImage(data.eth)} />
@@ -338,6 +368,7 @@ const WhatIsEthereumPage = ({
             </p>
           </Width60>
         </TwoColumnContent>
+
         <Content>
           <h2>What Ethereum can do?</h2>
           <CardContainer>
@@ -351,7 +382,97 @@ const WhatIsEthereumPage = ({
             ))}
           </CardContainer>
         </Content>
-      </StyledGrayContatiner>
+      </StyledGrayContainer>
+
+      <Banner>
+        <BannerBody>
+          <h2>Ethereum in numbers</h2>
+          <BannerGrid>
+            <BannerGridCell>
+              <StatPrimary>2970</StatPrimary>
+              <StatDescription>
+                Projects built on Ethereum{" "}
+                <Link
+                  to="https://www.stateofthedapps.com/stats/platform/ethereum#new"
+                  hideArrow
+                  ariaLabel="Read more about Ethereum projects stats"
+                >
+                  <Icon name="info" size="1rem" />
+                </Link>
+              </StatDescription>
+            </BannerGridCell>
+            <BannerGridCell>
+              <StatPrimary>71M+</StatPrimary>
+              <StatDescription>
+                Accounts (wallets) with an ETH balance{" "}
+                <Link
+                  to="https://bitcoinist.com/ethereum-reaches-new-milestone-as-over-71-million-wallets-hold-eth/"
+                  hideArrow
+                  ariaLabel="Read more about wallets stats"
+                >
+                  <Icon name="info" size="1rem" />
+                </Link>
+              </StatDescription>
+            </BannerGridCell>
+            <BannerGridCell>
+              <StatPrimary>50.5M</StatPrimary>
+              <StatDescription>
+                Smart contracts on Ethereum{" "}
+                <Link
+                  to="https://www.TODO.com"
+                  hideArrow
+                  ariaLabel="Read more about smart contracts stats"
+                >
+                  <Icon name="info" size="1rem" />
+                </Link>
+              </StatDescription>
+            </BannerGridCell>
+            <BannerGridCell>
+              <StatPrimary>$11.6T</StatPrimary>
+              <StatDescription>
+                Value moved through the Ethereum network in 2021{" "}
+                <Link
+                  to="https://stark.mirror.xyz/q3OnsK7mvfGtTQ72nfoxLyEV5lfYOqUfJIoKBx7BG1I"
+                  hideArrow
+                  ariaLabel="Read more about 2021 Ethereum network stats"
+                >
+                  <Icon name="info" size="1rem" />
+                </Link>
+              </StatDescription>
+            </BannerGridCell>
+            <BannerGridCell>
+              <StatPrimary>$3.5B</StatPrimary>
+              <StatDescription>
+                Creator earnings on Ethereum in 2021{" "}
+                <Link
+                  to="https://stark.mirror.xyz/q3OnsK7mvfGtTQ72nfoxLyEV5lfYOqUfJIoKBx7BG1I"
+                  hideArrow
+                  ariaLabel="Read more about 2021 Ethereum earnings stats"
+                >
+                  <Icon name="info" size="1rem" />
+                </Link>
+              </StatDescription>
+            </BannerGridCell>
+            <BannerGridCell>
+              <StatPrimary>1.1M</StatPrimary>
+              <StatDescription>
+                Number of transactions today{" "}
+                <Link
+                  to="https://www.TODO.com"
+                  hideArrow
+                  ariaLabel="Read more about number of transactions stats"
+                >
+                  <Icon name="info" size="1rem" />
+                </Link>
+              </StatDescription>
+            </BannerGridCell>
+          </BannerGrid>
+        </BannerBody>
+        <BannerImage>
+          <GatsbyImage image={getImage(data.newrings)} />
+        </BannerImage>
+      </Banner>
+
       <TwoColumnContent>
         <Column>
           <h2>
@@ -461,6 +582,16 @@ export const query = graphql`
       childImageSharp {
         gatsbyImageData(
           width: 470
+          layout: FIXED
+          placeholder: BLURRED
+          quality: 100
+        )
+      }
+    }
+    newrings: file(relativePath: { eq: "upgrades/newrings.png" }) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 433
           layout: FIXED
           placeholder: BLURRED
           quality: 100
