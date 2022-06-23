@@ -116,9 +116,7 @@ A comparison to traditional science
 
 ## Ethereum and DeSci
 
-Ethereum provides the right foundation for building a decentralized science stack because it is a security and decentralization champion. 
-
-Only Ethereum has the level of security and also a (nearly) Turing-complete virtual machine that supports a rich application layer. DeSci will thrive on Ethereum Layer-2s, where costs and transaction times are very low but security is inherited from Ethereum. A decentralized system of science will require robust security, minimal monetary and temporal transaction cost, and a rich layer-2 ecosystem for application development. Ethereum provides this foundation on which DeSci can thrive.
+A decentralized system of science will requires robust security, minimal monetary and small transaction cost, and a rich layer-2 ecosystem for application development. Ethereum provides everything needed for for building a decentralized science stack.
 
 
 # Why Web3 needs DeSci
