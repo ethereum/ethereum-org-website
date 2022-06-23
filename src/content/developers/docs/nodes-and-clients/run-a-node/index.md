@@ -19,7 +19,7 @@ If you're new to the topic of running a node, or looking for a less technical pa
 ## Choosing an approach {#choosing-approach}
 
 The first step in spinning up your node is choosing your approach. You have to choose the client (the software), the environment, and the parameters you want to start with.
-This includes the hardware (NUC, laptop, virtual machine, etc), operating system (Windows, Linux, MacOS, FreeBSD etc), client implementation and configuration. Users will have their own individual preferences for each option.
+This includes the hardware (NUC, laptop, virtual machine, etc), operating system (Linux, Windows, macOS, etc), client implementation and configuration. Users will have their own individual preferences for each option.
 
 #### Client settings {#client-settings}
 
@@ -75,7 +75,7 @@ All clients support major operating systems - Linux, MacOS, Windows. This means 
 
 ### Getting the execution client software {#getting-the-execution-client}
 
-First, download your preferred [client software](/developers/docs/nodes-and-clients/#execution-clients)
+First, download your preferred [execution client software](/developers/docs/nodes-and-clients/#execution-clients)
 
 You can simply download an executable application or installation package which suits your operating system and architecture. Always verify signatures and checksums of downloaded packages. Some clients also offer repositories for easier installation and updates.
 If you prefer, you can build from source. All of the clients are open source so you can build them from source code with the proper compiler.
@@ -89,7 +89,7 @@ Executable binaries for stable Mainnet client implementations can be downloaded 
 - [Erigon](https://github.com/ledgerwatch/erigon)
 
 It is also worth noting that client diversity is an [issue on the execution layer](https://clientdiversity.org/),
-with Geth being run on about 85% of all Ethereum nodes. It is recommended that readers on this page at least consider
+with Geth being run on a supermajority (>66%) of all Ethereum nodes. It is recommended that readers on this page consider
 running a minority execution client.
 
 **Note that OpenEthereum [has been deprecated](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd) and is no longer being maintained.** Use it with caution and preferably switch to another client implementation.
@@ -116,18 +116,15 @@ Client execution will initiate its core functions, chosen endpoints, and start l
 
 There are currently five consensus clients to choose from. These are:
 
-[Lighthouse](https://lighthouse-book.sigmaprime.io/): written in Rust
+- [Lighthouse](https://lighthouse-book.sigmaprime.io/): written in Rust
+- [Nimbus](https://nimbus.team/): written in Nim
+- [Prysm](https://docs.prylabs.network/docs/getting-started/): written in Go
+- [Teku](https://pegasys.tech/teku): written in Java
 
-[Nimbus](https://nimbus.team/): written in Nim
-
-[Prysm](https://docs.prylabs.network/docs/getting-started/): written in Go
-
-[Teku](https://pegasys.tech/teku): written in Java
-
-There is currently a [client diversity][client-div-link] issue where a large dominance of Prysm clients poses a risk
+There is currently a [client diversity][/developers/docs/nodes-and-clients/client-diversity/] issue where a large dominance of Prysm clients poses a risk
 to the health of the network. In response to the initial drive to even out the client diversity many Prysm nodes switched
 to Lighthouse to the extent that it now also has a problematic market share. It is therefore recommended to consider choosing
-a minority client.
+a minority client. [See the latest network client usage](https://clientdiversity.org/)
 
 There are several ways to download and install the consensus clients including prebuilt binaries, docker containers
 or building from source. Instructions for each client are provided in the documentation linked in the client list above.
