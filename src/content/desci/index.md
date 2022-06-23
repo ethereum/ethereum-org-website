@@ -47,7 +47,7 @@ By creating knowledge that is impartial and available to the public, we enable o
 * replication crisis -> allowing for easier access to data and methods, and by providing incentives for reproducibility.
 * misaligned incentives -> aligning incentives more closely with the goals of science. 
 * poor data quality -> incentivising transparent data sharing and quality control. 
-* publication bias -> enabling publication in a wider range of outlets. 
+* [publication bias](https://forrt.org/glossary/publication-bias-file-drawer-proble/) -> enabling publication in a wider range of outlets. 
 * [p-hacking](https://www.methodspace.com/blog/primer-p-hacking) -> incentivising transparent and honest reporting of results.
 * [cherry picking](https://pubmed.ncbi.nlm.nih.gov/33999541/) -> requiring publication of all results, including negative or inconclusive ones. 
 * [HARKing](https://forrt.org/glossary/harking/): hypothesizing after the results are known -> providing incentives for transparent and honest reporting of results.
