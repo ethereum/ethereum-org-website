@@ -90,7 +90,7 @@ const MobileFilterToggle = styled.div`
     gap: 1rem;
     justify-content: center;
     align-items: center;
-    background: #141414;
+    background: ${(props) => props.theme.colors.codeBackground};
     border: 1px solid #404040;
     border-radius: 0px 4px 4px 0px;
     padding: 6px 20px 10px 20px;
@@ -106,6 +106,12 @@ const MobileFilterToggle = styled.div`
   svg {
     width: 24px;
     height: 24px;
+    line {
+      stroke: ${(props) => props.theme.colors.primary};
+    }
+    circle {
+      stroke: ${(props) => props.theme.colors.primary};
+    }
   }
 `
 
