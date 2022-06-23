@@ -78,9 +78,8 @@ const Persona = styled.div<{
   padding: 1rem;
   background: ${(props) =>
     props.selected === true
-      ? props.theme.colors.primary100
-      : props.theme.colors.ednBackground};
-  border: 1px solid #3d3d3d;
+      ? props.theme.colors.primary200
+      : props.theme.colors.primary100};
   border-radius: 4px;
   cursor: pointer;
   transition: 0.5s all;
@@ -96,9 +95,20 @@ const Persona = styled.div<{
     transition: 0.5s all;
   }
 
+
   &:hover {
-    background: ${(props) => props.theme.colors.primary100};
+    background: ${(props) =>
+      props.selected === true
+        ? props.theme.colors.primary200
+        : props.theme.colors.primary200};
     transition: 0.5s all;
+
+    h3{
+      color: ${(props) =>
+      props.selected === true
+        ? props.theme.colors.primary
+        : props.theme.colors.black};
+    }
 
     h4 {
       color: ${(props) => props.theme.colors.black};
@@ -129,8 +139,7 @@ const Title = styled.div`
   margin-bottom: 0.5rem;
 `
 
-const H3 = styled.h3`
-  color: ${(props) => props.theme.colors.primary};
+const H3 = styled.h3<{ selected: boolean }>`
   margin-left: 0.5rem;
   margin-top: 0;
   margin-bottom: 0;
@@ -147,6 +156,15 @@ const Grid = styled.div`
 
 const StyledIcon = styled(Icon)<{ selected: boolean }>`
   fill: ${(props) =>
+    props.selected === true
+      ? props.theme.colors.white
+      : props.theme.colors.secondary};
+  background: ${(props) =>
+    props.selected === true
+      ? props.theme.colors.primary
+      : props.theme.colors.white};;
+  border-radius: 4px;
+  border: 1px solid ${(props) =>
     props.selected === true
       ? props.theme.colors.primary
       : props.theme.colors.secondary};

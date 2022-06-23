@@ -46,8 +46,7 @@ const FilterPanel = styled.div`
   flex-direction: column;
   align-items: flex-start;
   padding: 24px;
-  background: ${(props) => props.theme.colors.ednBackground};
-  border: 1px solid #3d3d3d;
+  background: ${(props) => props.theme.colors.primary100};
   border-radius: 4px;
 `
 
