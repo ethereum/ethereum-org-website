@@ -88,6 +88,24 @@ const WalletContentHeader = styled(Grid)`
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     top: 140px;
   }
+
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    grid-template-columns: auto;
+    gap: 1rem;
+    text-align: center;
+    th:nth-of-type(1) {
+      text-align: center;
+    }
+    th:nth-of-type(2) {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      &:before {
+        white-space: nowrap;
+        content: "Compare features";
+      }
+    }
+  }
 `
 
 const Wallet = styled(Grid)`
@@ -192,7 +210,7 @@ const StyledSelect = styled(Select)`
 
   @media (max-width: ${(props) => props.theme.breakpoints.s}) {
     .react-select__control {
-      padding: 14px 0;
+      padding: 0;
     }
   }
 `
