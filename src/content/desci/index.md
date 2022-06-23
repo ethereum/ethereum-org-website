@@ -204,15 +204,13 @@ Flexible Web3 data solutions support the scenarios above in addition to providin
 # Learn more
 
 * [DeSci Wiki by Jocelynn Pearl and Ultrarare](https://docs.google.com/document/d/1aQC6zn-eXflSmpts0XGE7CawbUEHwnL6o-OFXO52PTc/edit#)
-
 * [A guide to decentralized biotech by Jocelynn Pearl for a16z future](https://future.a16z.com/a-guide-to-decentralized-biotech/)
-
 * [The case for DeSci](https://gitcoin.co/blog/desci-the-case-for-decentralised-science/)
-
 * [Guide to DeSci](https://future.com/what-is-decentralized-science-aka-desci/)
-
-* [Building Trustless Systems of Science by Jon Starr (Jringo)](https://medium.com/@jringo/building-systems-of-trustless-science-1cd2d072f673)
-
+* [Decentralized science resources](https://www.vincentweisser.com/decentralized-science)
+* [Molecule’s Biopharma IP-NFTs - A Technical Description](https://molecule.to/blog/molecules-biopharma-ip-nfts-a-technical-description)
+* [Building Trustless Systems of Science by Jon Starr](https://medium.com/@jringo/building-systems-of-trustless-science-1cd2d072f673)
+* [The Emergence of Biotech DAOs](https://molecule.to/blog/the-emergence-of-biotech-daos)
 
 # Get involved: **What can you do in DeSci?**
 
