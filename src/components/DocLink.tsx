@@ -57,7 +57,7 @@ const EmojiCell = styled.div`
 `
 
 const DocLink: React.FC<IProps> = ({ to, children, className }) => (
-  <Container to={to} className={className || ""}>
+  <Container to={to} className={className}>
     <EmojiCell>
       <Emoji size={1} text=":page_with_curl:" mr={`1rem`} />
     </EmojiCell>

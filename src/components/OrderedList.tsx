@@ -3,12 +3,12 @@ import React from "react"
 import styled from "styled-components"
 
 export interface IProps {
-  listData: (string | HTMLParagraphElement)[]
+  listData: Array<React.ReactNode>
   className?: string
 }
 
 // Styles
-const Content = styled.div<{ size?: `${string}px` }>`
+const Content = styled.div`
   margin-bottom: 1.45rem;
 
   ol {
@@ -27,7 +27,7 @@ const Content = styled.div<{ size?: `${string}px` }>`
     position: absolute;
     top: -2px; /* adjusts circle + number up and down */
     left: -3rem;
-    width: ${({ size }) => (size ? size : "35px")};
+    width: "35px";
     aspect-ratio: 1;
     height: 2rem;
     padding-top: 7px; /* adjusts number up and down */
@@ -42,7 +42,7 @@ const Content = styled.div<{ size?: `${string}px` }>`
 // ex: [<p>string<p>] or ['string']
 const OrderedList: React.FC<IProps> = ({ listData, className }) => {
   return (
-    <Content className={className || ""}>
+    <Content className={className}>
       <ol>
         {listData.map((data, idx) => {
           return <li key={idx}>{data}</li>
