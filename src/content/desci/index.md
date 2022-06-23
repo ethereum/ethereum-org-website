@@ -141,8 +141,7 @@ The people and institutions who have been brought on board through DeSci's tooli
 
 ## Innovation
 
-The systems of decentralized science require new ways of funding, creating, reviewing, crediting, storing, and disseminating knowledge. These new methods are applied to science but can be used for other purposes as well. From rich on-chain research objects to IP-NFTs and everything in between, the development happening in DeSci will be pivotal to the digital world moving forward. The Cambrian explosion of projects and concepts since inception creates an environment of rapid experimentation where anything is possible.
-
+Decentralized science will require new ways of funding, creating, reviewing, crediting, storing, and disseminating knowledge. These novel developments will undoubtedly affect other realms as well. From rich on-chain research objects to IP-NFTs and everything in between, the development happening in DeSci will be pivotal to the digital world moving forward.
 
 ## Legitimacy
 
