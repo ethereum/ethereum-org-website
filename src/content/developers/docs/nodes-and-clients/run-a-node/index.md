@@ -25,7 +25,8 @@ This includes the hardware (NUC, laptop, virtual machine, etc), operating system
 
 Client implementations enable different sync modes and various other options. [Sync modes](/developers/docs/nodes-and-clients/#sync-modes) represent different methods of downloading and validating blockchain data. Before starting the node, you should decide what network and sync mode to use. The most important things to consider is the disk space and sync time client will need. Note that after [The Merge](/upgrades/merge) a light execution client will no longer work - a full node will be required.
 
-All features and options can be found in the client's documentation. Various client configurations can be set by executing the client with the corresponding flags. You can get more information on flags from [EthHub](https://docs.ethhub.io/using-ethereum/running-an-ethereum-node/#client-settings) or the client documentation.
+All features and options can be found in the client's documentation. Various client configurations can be set by executing the client with the corresponding flags. You can get more information on flags from the client documentation.
+
 For testing purposes, you might prefer running a client on one of testnet networks. [See overview of supported networks](/developers/docs/nodes-and-clients/#execution-clients).
 
 ### Environment and hardware {#environment-and-hardware}
