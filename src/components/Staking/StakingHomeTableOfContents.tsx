@@ -10,7 +10,18 @@ const StyledTableOfContentsLink = styled(Link)`
   margin-bottom: 0.5rem !important;
 `
 
-const TableOfContentsLink = ({ item: { id, title } }) => {
+interface Item {
+  id: string
+  title: string
+}
+
+interface ITableOfContentsLinkProps {
+  item: Item
+}
+
+const TableOfContentsLink: React.FC<ITableOfContentsLinkProps> = ({
+  item: { id, title },
+}) => {
   const url = `#${id}`
   let isActive = false
   if (typeof window !== `undefined`) {
@@ -56,22 +67,23 @@ const ListItem = styled.li`
   margin: 0;
 `
 
-const ItemsList = ({ items }) =>
-  items.map((item, index) => (
-    <ListItem key={index}>
-      <div>
-        <TableOfContentsLink item={item} />
-      </div>
-    </ListItem>
-  ))
+export interface IProps {
+  items: Array<Item>
+}
 
-const StakingHomeTableOfContents = ({ items, className }) => {
+const StakingHomeTableOfContents: React.FC<IProps> = ({ items }) => {
   if (!items) return null
 
   return (
-    <Aside className={className}>
+    <Aside>
       <OuterList>
-        <ItemsList items={items} />
+        {items.map((item, index) => (
+          <ListItem key={index}>
+            <div>
+              <TableOfContentsLink item={item} />
+            </div>
+          </ListItem>
+        ))}
       </OuterList>
     </Aside>
   )

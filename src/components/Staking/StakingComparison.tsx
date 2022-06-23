@@ -4,7 +4,8 @@ import styled, { ThemeContext } from "styled-components"
 import Link from "../Link"
 import Translation from "../Translation"
 
-import { trackCustomEvent } from "../../utils/matomo"
+import { EventOptions, trackCustomEvent } from "../../utils/matomo"
+import { TranslationKey } from "../../utils/translations"
 
 import SoloGlyph from "../../assets/staking/staking-glyph-cpu.svg"
 import SaasGlyph from "../../assets/staking/staking-glyph-cloud.svg"
@@ -64,11 +65,27 @@ const StyledPoolGlyph = styled(PoolGlyph)`
   }
 `
 
-const StakingComparison = ({ page, className }) => {
+interface DataType {
+  title: TranslationKey
+  linkText: TranslationKey
+  to: string
+  matomo: EventOptions
+  color: any
+  glyph: any
+}
+
+type StakingTypePage = "solo" | "saas" | "pools"
+
+export interface IProps {
+  page: StakingTypePage
+  className?: string
+}
+
+const StakingComparison: React.FC<IProps> = ({ page, className }) => {
   const themeContext = useContext(ThemeContext)
   const { stakingGold, stakingGreen, stakingBlue } = themeContext.colors
 
-  const solo = {
+  const solo: DataType = {
     title: "page-staking-dropdown-solo",
     linkText: "page-staking-learn-more-solo",
     to: "/staking/solo/",
@@ -80,7 +97,7 @@ const StakingComparison = ({ page, className }) => {
     color: stakingGold,
     glyph: <StyledSoloGlyph />,
   }
-  const saas = {
+  const saas: DataType = {
     title: "page-staking-saas-with-abbrev",
     linkText: "page-staking-learn-more-saas",
     to: "/staking/saas/",
@@ -92,7 +109,7 @@ const StakingComparison = ({ page, className }) => {
     color: stakingGreen,
     glyph: <StyledSaasGlyph />,
   }
-  const pools = {
+  const pools: DataType = {
     title: "page-staking-dropdown-pools",
     linkText: "page-staking-learn-more-pools",
     to: "/staking/pools/",
@@ -104,7 +121,11 @@ const StakingComparison = ({ page, className }) => {
     color: stakingBlue,
     glyph: <StyledPoolGlyph />,
   }
-  const data = {
+  const data: {
+    [key in StakingTypePage]: (DataType & {
+      content: TranslationKey
+    })[]
+  } = {
     solo: [
       {
         ...saas,
@@ -136,6 +157,7 @@ const StakingComparison = ({ page, className }) => {
       },
     ],
   }
+
   const selectedData = data[page]
 
   return (

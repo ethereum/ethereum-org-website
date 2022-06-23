@@ -6,6 +6,7 @@ import Translation from "../Translation"
 import { getLocaleForNumberFormat } from "../../utils/translations"
 import { getData } from "../../utils/cache"
 import calculateStakingRewards from "../../utils/calculateStakingRewards"
+import { Lang } from "../../utils/languages"
 
 const Container = styled.div`
   display: flex;
@@ -51,26 +52,30 @@ const IndicatorSpan = styled.span`
   font-size: 2rem;
 `
 
-const ErrorMessage = () => (
+const ErrorMessage: React.FC = () => (
   <IndicatorSpan>
     <Translation id="loading-error-refresh" />
   </IndicatorSpan>
 )
 
-const StatsBoxGrid = () => {
+export interface IProps {}
+
+const StatsBoxGrid: React.FC<IProps> = () => {
   const intl = useIntl()
-  const [totalEth, setTotalEth] = useState(0)
-  const [totalValidators, setTotalValidators] = useState(0)
-  const [currentApr, setCurrentApr] = useState(0)
+  const [totalEth, setTotalEth] = useState<string>("0")
+  const [totalValidators, setTotalValidators] = useState<string>("0")
+  const [currentApr, setCurrentApr] = useState<string>("0")
   const [error, setError] = useState(false)
 
   useEffect(() => {
-    const localeForStatsBoxNumbers = getLocaleForNumberFormat(intl.locale)
+    const localeForStatsBoxNumbers = getLocaleForNumberFormat(
+      intl.locale as Lang
+    )
 
-    const formatInteger = (amount) =>
+    const formatInteger = (amount: number): string =>
       new Intl.NumberFormat(localeForStatsBoxNumbers).format(amount)
 
-    const formatPercentage = (amount) =>
+    const formatPercentage = (amount: number): string =>
       new Intl.NumberFormat(localeForStatsBoxNumbers, {
         style: "percent",
         minimumSignificantDigits: 2,
@@ -81,10 +86,12 @@ const StatsBoxGrid = () => {
       try {
         const {
           data: { totalvalidatorbalance, validatorscount },
-        } = await getData("https://mainnet.beaconcha.in/api/v1/epoch/latest")
+        } = await getData<{
+          data: { totalvalidatorbalance: number; validatorscount: number }
+        }>("https://mainnet.beaconcha.in/api/v1/epoch/latest")
 
         const valueTotalEth = formatInteger(
-          (totalvalidatorbalance * 1e-9).toFixed(0)
+          Number((totalvalidatorbalance * 1e-9).toFixed(0))
         )
         const valueTotalValidators = formatInteger(validatorscount)
         const currentAprDecimal = calculateStakingRewards(

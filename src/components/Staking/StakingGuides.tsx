@@ -11,7 +11,9 @@ const StyledCardList = styled(CardList)`
   gap: 1rem;
 `
 
-const StakingGuides = () => {
+export interface IProps {}
+
+const StakingGuides: React.FC<IProps> = () => {
   const guides = [
     {
       title: "CoinCashew's Ethereum 2.0 Guide",
