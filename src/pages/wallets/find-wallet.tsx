@@ -208,29 +208,27 @@ const ResetContainer = styled.div`
   align-items: center;
   justify-content: center;
   padding: 2px 4px;
-  border: 1px solid ${(props) => props.theme.colors.selectHover};
   border-radius: 4px;
-  width: 140px;
+  width: auto;
   margin: 0 auto;
   gap: 0.25rem;
   font-size: 0.75rem;
   cursor: pointer;
   :hover {
-    border: 1px solid ${(props) => props.theme.colors.primary};
     p {
-      color: ${(props) => props.theme.colors.primary};
+      color: ${(props) => props.theme.colors.selectHover};
     }
     svg {
-      fill: ${(props) => props.theme.colors.primary};
+      fill: ${(props) => props.theme.colors.selectHover};
     }
   }
 
   p {
     margin: 0;
-    color: ${(props) => props.theme.colors.selectHover};
+    color: ${(props) => props.theme.colors.primary};
   }
   svg {
-    fill: ${(props) => props.theme.colors.selectHover};
+    fill: ${(props) => props.theme.colors.primary};
   }
 `
 
