@@ -97,7 +97,7 @@ If you're more of a technical user, learn how to [spin up your own node](/develo
 
 - [GitHub](https://github.com/vrde/ethnode)
 
-**DAppNode -** **_An operating system GUI for running Web3 nodes, including Ethereum and the beacon chain, on a dedicated machine._**
+**DappNode -** **_An operating system GUI for running Web3 nodes, including Ethereum and the beacon chain, on a dedicated machine._**
 
 - [dappnode.io](https://dappnode.io)
 
@@ -269,7 +269,7 @@ There are multiple consensus clients (previously known as 'Eth2' clients) to sup
 
 Hardware requirements differ by client but generally are not that high since the node just needs to stay synced. Don't confuse it with mining which requires much more computing power. Sync time and performance do improve with more powerful hardware however. Depending on your needs and wants, Ethereum can be run on your computer, home server, single-board computers or virtual private servers in the cloud.
 
-An easy way to run your own node is using 'plug and play' boxes like [DAppNode](https://dappnode.io/). It provides hardware for running clients and applications that depend on them with a simple user interface.
+An easy way to run your own node is using 'plug and play' boxes like [DappNode](https://dappnode.io/). It provides hardware for running clients and applications that depend on them with a simple user interface.
 
 ### Requirements {#requirements}
 
