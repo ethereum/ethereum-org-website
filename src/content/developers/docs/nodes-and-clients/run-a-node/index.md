@@ -108,6 +108,8 @@ Run your client on a testnet first to help make sure everything is working corre
 In order to connect to a consensus client the execution client must generate a `jwtsecret` at a known path. This path must be known by both clients as it is used
 to authenticate a local RPC connection between them. The execution client must also define a listening port for authenticated APIs.
 
+**Note that it is recommended to connect an execution and consensus client on a testnet (e.g. Kiln) only for now and await merge-ready client releases before replicating the process on Mainnet.**
+
 There are many ways to configure the execution client. You can use flags or the config file to declare your preferred configuration. Check out your client's documentation for the specific details.
 
 Client execution will initiate its core functions, chosen endpoints, and start looking for peers. After successfully discovering peers, the client starts synchronization. Current blockchain data will be available once the client is successfully synced to the current state.
@@ -139,6 +141,8 @@ client port as an argument.
 The consensus client also needs the path to the execution client's `jwt-secret` in order to authenticate the RPC
 connection between them. Each consensus client has a command similar to `--jwt-secret` that takes the file
 path as an argument. This must be consistent with the `jwtsecret` path provided to the execution client.
+
+**Note that we recommend waiting for merge-ready client releases before doing this on Ethereum Mainnet - for now just practise on a testnet such as Kilmn**
 
 ### Adding Validators {#adding-validators}
 
