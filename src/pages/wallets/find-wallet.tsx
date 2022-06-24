@@ -191,6 +191,9 @@ const FilterTab = styled.div<{
 
 const WalletContent = styled.div<{ showMobileSidebar: boolean }>`
   width: 75%;
+  table{
+    margin:0;
+  }
 
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     width: 100%;

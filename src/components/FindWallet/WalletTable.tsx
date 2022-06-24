@@ -34,6 +34,15 @@ import { opacity } from "styled-system"
 // Styles
 const Container = styled.table`
   width: 100%;
+  th{
+    font-weight: normal;
+    p{
+      font-size: 0.8rem;
+      strong{
+        color:${(props) => props.theme.colors.primary};
+      }
+    }
+  }
 `
 
 const WalletContainer = styled(Container)`
@@ -115,6 +124,7 @@ const Wallet = styled(Grid)`
   td {
     padding: 0;
     border-bottom: none;
+    height:100%;
   }
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     padding: 25px 1rem;
@@ -220,39 +230,26 @@ const StyledSelect = styled(Select)`
 const FlexInfo = styled.div`
   display: flex;
   gap: 1rem;
-  align-items: start;
+  align-items: center;
 
   p {
     padding: 0;
     font-size: 1.2rem;
+    font-weight: bold;
   }
   p + p {
     margin: 0.1rem 0 1rem;
     font-size: 0.9rem;
     line-height: 1rem;
-  }
-  p + a {
-    font-size: 0.9rem;
-    border: 1px solid ${(props) => props.theme.colors.primary};
-    padding: 4px 8px;
-    margin-top: 1rem;
-    border-radius: 4px;
-    text-decoration: none;
-    transition: 0.5s all;
-    :after {
-      display: none;
-    }
-    :hover {
-      background: ${(props) => props.theme.colors.primary};
-      color: ${(props) => props.theme.colors.background};
-      transition: 0.5s all;
-    }
+    font-weight: normal;
   }
 `
 
 const FlexInfoCenter = styled(FlexInfo)`
   justify-content: center;
   cursor: pointer;
+  height: 100%;
+  display:flex;
 `
 
 const Image = styled(GatsbyImage)`
@@ -285,7 +282,9 @@ const WalletMoreInfoCategory = styled.div`
 
   h4 {
     color: ${(props) => props.theme.colors.primary};
-    margin: 0 0 0.5rem;
+    margin: 0 0.2rem 0.5rem;
+    display:block;
+    font-size; 1rem;
   }
 `
 
@@ -346,7 +345,6 @@ const FeatureLabel = styled.div<{ hasFeature: boolean }>`
 `
 
 const SocialsContainer = styled.div`
-  padding-bottom: 2rem;
   p {
     margin: 0;
   }
@@ -357,12 +355,27 @@ const SocialsContainer = styled.div`
 
 const Socials = styled.div`
   display: flex;
-  gap: 1rem;
-  padding: 1rem 0;
+  gap: 0.8rem;
+  p {
+    font-size: 0.9rem;
+    color: ${(props) => props.theme.colors.primary};
+    margin: 0;
+  }
+  a{
+    height: auto;
+    align-items: center;
+    display: flex;
+    :hover{
+      opacity:0.8;
+    }
+  }
+  
 `
 
 const LastUpdated = styled.p`
   color: ${(props) => props.theme.colors.text300};
+  margin:2rem 0;
+  font-size: 0.875rem;
 `
 
 // Constants
@@ -604,7 +617,23 @@ const WalletTable = ({ data, filters, walletData }) => {
                   <div>
                     <p>{wallet.name}</p>
                     <SecondaryText>{deviceLabels.join(" | ")}</SecondaryText>
-                    <Link to={wallet.url}>Go to {wallet.name}</Link>
+                    <SocialsContainer>
+                      <Socials>
+                        <Link to={wallet.url} hideArrow={true}>
+                          <Icon name="webpage" size={"1.5rem"} color={true} />
+                        </Link>
+                        {wallet.twitter && (
+                          <Link to={wallet.twitter} hideArrow={true}>
+                            <Icon name="twitter" size={"1.5rem"} color={true} />
+                          </Link>
+                        )}
+                        {wallet.discord && (
+                          <Link to={wallet.discord} hideArrow={true}>
+                            <Icon name="discord" size={"1.5rem"} color={true} />
+                          </Link>
+                        )}
+                      </Socials>
+                    </SocialsContainer>
                   </div>
                 </FlexInfo>
               </td>
@@ -719,29 +748,11 @@ const WalletTable = ({ data, filters, walletData }) => {
                         })}
                       </Features>
                     </WalletMoreInfoCategory>
-                    <SocialsContainer>
-                      <Socials>
-                        <p>{wallet.name} links</p>
-                        <Link to={wallet.url} hideArrow={true}>
-                          <Icon name="webpage" size={"2rem"} color={true} />
-                        </Link>
-                        {wallet.twitter && (
-                          <Link to={wallet.twitter} hideArrow={true}>
-                            <Icon name="twitter" size={"2rem"} color={true} />
-                          </Link>
-                        )}
-                        {wallet.discord && (
-                          <Link to={wallet.discord} hideArrow={true}>
-                            <Icon name="discord" size={"2rem"} color={true} />
-                          </Link>
-                        )}
-                      </Socials>
-                      <LastUpdated>
-                        <i>
-                          {wallet.name} info updated on {wallet.last_updated}
-                        </i>
-                      </LastUpdated>
-                    </SocialsContainer>
+                    <LastUpdated>
+                      <i>
+                        {wallet.name} info updated on {wallet.last_updated}
+                      </i>
+                    </LastUpdated>
                   </div>
                 </WalletMoreInfoContainer>
               </div>
