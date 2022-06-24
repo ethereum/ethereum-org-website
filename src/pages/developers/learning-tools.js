@@ -17,6 +17,7 @@ import {
   CardGrid,
   Page,
 } from "../../components/SharedStyledComponents"
+import FeedbackCard from "../../components/FeedbackCard"
 
 const StyledPage = styled(Page)`
   margin-top: 4rem;
@@ -313,6 +314,9 @@ const LearningToolsPage = ({ data }) => {
             </ButtonLink>
           </div>
         </CalloutBanner>
+      </Content>
+      <Content>
+        <FeedbackCard />
       </Content>
     </StyledPage>
   )

@@ -22,6 +22,7 @@ import {
 
 import { translateMessageId } from "../utils/translations"
 import { Context } from "../types"
+import FeedbackCard from "../components/FeedbackCard"
 
 const HeroContent = styled(Content)`
   @media (max-width: ${(props) => props.theme.breakpoints.xl}) {
@@ -534,6 +535,9 @@ const WhatIsEthereumPage = ({
             </div>
           </StyledCallout>
         </CardContainer>
+      </Content>
+      <Content>
+        <FeedbackCard />
       </Content>
     </Page>
   )

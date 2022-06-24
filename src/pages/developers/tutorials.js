@@ -23,6 +23,7 @@ import {
 import { getLocaleTimestamp, INVALID_DATETIME } from "../../utils/time"
 
 import foreignTutorials from "../../data/externalTutorials.json"
+import FeedbackCard from "../../components/FeedbackCard"
 
 const SubSlogan = styled.p`
   font-size: 1.25rem;
@@ -472,6 +473,7 @@ const TutorialsPage = ({ data, pageContext }) => {
           )
         })}
       </TutorialContainer>
+      <FeedbackCard />
     </StyledPage>
   )
 }

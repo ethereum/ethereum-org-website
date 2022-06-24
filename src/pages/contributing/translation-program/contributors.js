@@ -17,6 +17,7 @@ import {
 
 // Utils
 import { translateMessageId } from "../../../utils/translations"
+import FeedbackCard from "../../../components/FeedbackCard"
 
 // Styles
 const HorizontalUl = styled.ul`
@@ -117,6 +118,9 @@ const Contributors = ({ data, location }) => {
           </Link>
           .
         </p>
+      </Content>
+      <Content>
+        <FeedbackCard />
       </Content>
     </Page>
   )

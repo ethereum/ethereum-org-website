@@ -13,6 +13,7 @@ import InfoBanner from "../../components/InfoBanner"
 import Link from "../../components/Link"
 import PageMetadata from "../../components/PageMetadata"
 import WalletCompare from "../../components/WalletCompare"
+import FeedbackCard from "../../components/FeedbackCard"
 import { Divider, Page } from "../../components/SharedStyledComponents"
 
 const Subtitle = styled.div`
@@ -139,6 +140,7 @@ const FindWalletPage = ({ location, data }) => {
           </ButtonLink>
         </div>
       </CalloutBanner>
+      <FeedbackCard />
     </Page>
   )
 }
