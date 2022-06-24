@@ -268,7 +268,9 @@ const WalletMoreInfoCategory = styled.div`
 
   h4 {
     color: ${(props) => props.theme.colors.primary};
-    margin: 0 0 0.5rem;
+    margin: 0 0.2rem 0.5rem;
+    display:block;
+    font-size; 1rem;
   }
 `
 
@@ -349,6 +351,9 @@ const Socials = styled.div`
     height: auto;
     align-items: center;
     display: flex;
+    :hover{
+      opacity:0.8;
+    }
   }
   
 `
