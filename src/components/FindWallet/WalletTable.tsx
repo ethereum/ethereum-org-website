@@ -124,6 +124,7 @@ const Wallet = styled(Grid)`
   td {
     padding: 0;
     border-bottom: none;
+    height:100%;
   }
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     padding: 25px 1rem;
@@ -229,7 +230,7 @@ const StyledSelect = styled(Select)`
 const FlexInfo = styled.div`
   display: flex;
   gap: 1rem;
-  align-items: start;
+  align-items: center;
 
   p {
     padding: 0;
@@ -245,6 +246,8 @@ const FlexInfo = styled.div`
 const FlexInfoCenter = styled(FlexInfo)`
   justify-content: center;
   cursor: pointer;
+  height: 100%;
+  display:flex;
 `
 
 const Image = styled(GatsbyImage)`
