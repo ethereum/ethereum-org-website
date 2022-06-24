@@ -1,5 +1,5 @@
 import React from "react"
-import styled from "styled-components"
+import styled, { DefaultTheme, useTheme } from "styled-components"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { graphql, PageProps } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
@@ -7,7 +7,7 @@ import { useIntl } from "gatsby-plugin-intl"
 import Translation from "../components/Translation"
 import Callout from "../components/Callout"
 import Card from "../components/Card"
-import ButtonLink from "../components/ButtonLink"
+import OriginalButtonLink from "../components/ButtonLink"
 import PageMetadata from "../components/PageMetadata"
 import Tabs from "../components/Tabs"
 import Icon from "../components/Icon"
@@ -119,9 +119,12 @@ const Summary = styled.div`
   background: ${(props) => props.theme.colors.cardGradient};
 `
 
-const TwoColumnContent = styled(Content)`
+const TwoColumnContent = styled(Content)<{
+  bgColor?: string
+}>`
   display: flex;
   align-items: center;
+  background-color: ${({ bgColor = "transparent" }) => bgColor};
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     flex-direction: column;
     align-items: flex-start;
@@ -158,10 +161,28 @@ const StatDescription = styled.div`
   max-width: 200px;
 `
 
+const ButtonLink = styled(OriginalButtonLink)``
+
+const ButtonRow = styled.div`
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+
+  & ${ButtonLink} {
+    margin-right: 1rem;
+
+    @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+      margin-bottom: 1rem;
+    }
+  }
+`
+
 const WhatIsEthereumPage = ({
   data,
 }: PageProps<Queries.WhatIsEthereumQuery, Context>) => {
   const intl = useIntl()
+  const theme = useTheme()
 
   const cards = [
     {
@@ -382,118 +403,172 @@ const WhatIsEthereumPage = ({
             ))}
           </CardContainer>
         </Content>
+
+        <Banner>
+          <BannerBody>
+            <h2>Ethereum in numbers</h2>
+            <BannerGrid>
+              <BannerGridCell>
+                <StatPrimary>2970</StatPrimary>
+                <StatDescription>
+                  Projects built on Ethereum{" "}
+                  <Link
+                    to="https://www.stateofthedapps.com/stats/platform/ethereum#new"
+                    hideArrow
+                    ariaLabel="Read more about Ethereum projects stats"
+                  >
+                    <Icon name="info" size="1rem" />
+                  </Link>
+                </StatDescription>
+              </BannerGridCell>
+              <BannerGridCell>
+                <StatPrimary>71M+</StatPrimary>
+                <StatDescription>
+                  Accounts (wallets) with an ETH balance{" "}
+                  <Link
+                    to="https://bitcoinist.com/ethereum-reaches-new-milestone-as-over-71-million-wallets-hold-eth/"
+                    hideArrow
+                    ariaLabel="Read more about wallets stats"
+                  >
+                    <Icon name="info" size="1rem" />
+                  </Link>
+                </StatDescription>
+              </BannerGridCell>
+              <BannerGridCell>
+                <StatPrimary>50.5M</StatPrimary>
+                <StatDescription>
+                  Smart contracts on Ethereum{" "}
+                  <Link
+                    to="https://www.TODO.com"
+                    hideArrow
+                    ariaLabel="Read more about smart contracts stats"
+                  >
+                    <Icon name="info" size="1rem" />
+                  </Link>
+                </StatDescription>
+              </BannerGridCell>
+              <BannerGridCell>
+                <StatPrimary>$11.6T</StatPrimary>
+                <StatDescription>
+                  Value moved through the Ethereum network in 2021{" "}
+                  <Link
+                    to="https://stark.mirror.xyz/q3OnsK7mvfGtTQ72nfoxLyEV5lfYOqUfJIoKBx7BG1I"
+                    hideArrow
+                    ariaLabel="Read more about 2021 Ethereum network stats"
+                  >
+                    <Icon name="info" size="1rem" />
+                  </Link>
+                </StatDescription>
+              </BannerGridCell>
+              <BannerGridCell>
+                <StatPrimary>$3.5B</StatPrimary>
+                <StatDescription>
+                  Creator earnings on Ethereum in 2021{" "}
+                  <Link
+                    to="https://stark.mirror.xyz/q3OnsK7mvfGtTQ72nfoxLyEV5lfYOqUfJIoKBx7BG1I"
+                    hideArrow
+                    ariaLabel="Read more about 2021 Ethereum earnings stats"
+                  >
+                    <Icon name="info" size="1rem" />
+                  </Link>
+                </StatDescription>
+              </BannerGridCell>
+              <BannerGridCell>
+                <StatPrimary>1.1M</StatPrimary>
+                <StatDescription>
+                  Number of transactions today{" "}
+                  <Link
+                    to="https://www.TODO.com"
+                    hideArrow
+                    ariaLabel="Read more about number of transactions stats"
+                  >
+                    <Icon name="info" size="1rem" />
+                  </Link>
+                </StatDescription>
+              </BannerGridCell>
+            </BannerGrid>
+          </BannerBody>
+          <BannerImage>
+            <GatsbyImage image={getImage(data.newrings)} />
+          </BannerImage>
+        </Banner>
+
+        <TwoColumnContent>
+          <Width60>
+            <h2>Why would I use Ethereum?</h2>
+            <p>
+              If you’ve ever sent money overseas (or plan to), or had to worry
+              about the future of your assets due to external forces outside of
+              your control where you live, or been fed up by the numerous
+              restrictions and fees imposed by traditional financial
+              institutions for everyday transactions, you might be interested in
+              what cryptocurrencies have to offer.
+            </p>
+            <p>
+              Bear in mind that Ethereum is a story that is still being written,
+              and many more reasons to use it are being uncovered as it evolves
+              and develops over time.
+            </p>
+          </Width60>
+          <Width40>
+            <GatsbyImage image={getImage(data.chart1)} />
+          </Width40>
+        </TwoColumnContent>
+
+        <TwoColumnContent bgColor={theme.colors.homeBoxTurquoise}>
+          <Width40>
+            <GatsbyImage image={getImage(data.eth2)} />
+          </Width40>
+          <Width60>
+            <h2>What can I do with ETH coin?</h2>
+            <p>
+              Turns out: a lot of things! One of the most prominent usages of
+              the Ethereum technology is decentralised finance (DeFi) that opens
+              whole area of banking services to anybody with an internet
+              connection. You can use your Ether as a collateral to take out
+              loans or provide liquidity to earn interest on your funds.
+            </p>
+            <p>
+              Every action on the Ethereum network requires a certain amount of
+              computational power. This is paid in the form of Ether fee. This
+              means you need at least small amount of ETH to use the network.
+            </p>
+            <p>
+              <ButtonRow>
+                <ButtonLink to="/dapps/">Explore applications</ButtonLink>
+                <ButtonLink to="/defi/" isSecondary>
+                  Learn about DeFi
+                </ButtonLink>
+              </ButtonRow>
+            </p>
+          </Width60>
+        </TwoColumnContent>
+
+        <TwoColumnContent>
+          <Width60>
+            <h2>Meet Ether, Ethereum’s cryptocurrency</h2>
+            <p>
+              Ethereum has a native cryptocurrency called Ether (ETH). It is
+              purely digital, and you can send it to anyone anywhere in the
+              world instantly. The supply of ETH isn’t controlled by any
+              government or company - it is decentralized. New coins (also
+              commonly called tokens) are created only by miners and stakers who
+              maintain the network.
+            </p>
+            <p>
+              <ButtonRow>
+                <ButtonLink to="/eth/">What is Ether?</ButtonLink>
+                <ButtonLink to="/get-eth/" isSecondary>
+                  Get ETH
+                </ButtonLink>
+              </ButtonRow>
+            </p>
+          </Width60>
+          <Width40>
+            <GatsbyImage image={getImage(data.merge)} />
+          </Width40>
+        </TwoColumnContent>
       </StyledGrayContainer>
-
-      <Banner>
-        <BannerBody>
-          <h2>Ethereum in numbers</h2>
-          <BannerGrid>
-            <BannerGridCell>
-              <StatPrimary>2970</StatPrimary>
-              <StatDescription>
-                Projects built on Ethereum{" "}
-                <Link
-                  to="https://www.stateofthedapps.com/stats/platform/ethereum#new"
-                  hideArrow
-                  ariaLabel="Read more about Ethereum projects stats"
-                >
-                  <Icon name="info" size="1rem" />
-                </Link>
-              </StatDescription>
-            </BannerGridCell>
-            <BannerGridCell>
-              <StatPrimary>71M+</StatPrimary>
-              <StatDescription>
-                Accounts (wallets) with an ETH balance{" "}
-                <Link
-                  to="https://bitcoinist.com/ethereum-reaches-new-milestone-as-over-71-million-wallets-hold-eth/"
-                  hideArrow
-                  ariaLabel="Read more about wallets stats"
-                >
-                  <Icon name="info" size="1rem" />
-                </Link>
-              </StatDescription>
-            </BannerGridCell>
-            <BannerGridCell>
-              <StatPrimary>50.5M</StatPrimary>
-              <StatDescription>
-                Smart contracts on Ethereum{" "}
-                <Link
-                  to="https://www.TODO.com"
-                  hideArrow
-                  ariaLabel="Read more about smart contracts stats"
-                >
-                  <Icon name="info" size="1rem" />
-                </Link>
-              </StatDescription>
-            </BannerGridCell>
-            <BannerGridCell>
-              <StatPrimary>$11.6T</StatPrimary>
-              <StatDescription>
-                Value moved through the Ethereum network in 2021{" "}
-                <Link
-                  to="https://stark.mirror.xyz/q3OnsK7mvfGtTQ72nfoxLyEV5lfYOqUfJIoKBx7BG1I"
-                  hideArrow
-                  ariaLabel="Read more about 2021 Ethereum network stats"
-                >
-                  <Icon name="info" size="1rem" />
-                </Link>
-              </StatDescription>
-            </BannerGridCell>
-            <BannerGridCell>
-              <StatPrimary>$3.5B</StatPrimary>
-              <StatDescription>
-                Creator earnings on Ethereum in 2021{" "}
-                <Link
-                  to="https://stark.mirror.xyz/q3OnsK7mvfGtTQ72nfoxLyEV5lfYOqUfJIoKBx7BG1I"
-                  hideArrow
-                  ariaLabel="Read more about 2021 Ethereum earnings stats"
-                >
-                  <Icon name="info" size="1rem" />
-                </Link>
-              </StatDescription>
-            </BannerGridCell>
-            <BannerGridCell>
-              <StatPrimary>1.1M</StatPrimary>
-              <StatDescription>
-                Number of transactions today{" "}
-                <Link
-                  to="https://www.TODO.com"
-                  hideArrow
-                  ariaLabel="Read more about number of transactions stats"
-                >
-                  <Icon name="info" size="1rem" />
-                </Link>
-              </StatDescription>
-            </BannerGridCell>
-          </BannerGrid>
-        </BannerBody>
-        <BannerImage>
-          <GatsbyImage image={getImage(data.newrings)} />
-        </BannerImage>
-      </Banner>
-
-      <TwoColumnContent>
-        <Width60>
-          <h2>Why would I use Ethereum?</h2>
-          <p>
-            If you’ve ever sent money overseas (or plan to), or had to worry
-            about the future of your assets due to external forces outside of
-            your control where you live, or been fed up by the numerous
-            restrictions and fees imposed by traditional financial institutions
-            for everyday transactions, you might be interested in what
-            cryptocurrencies have to offer.
-          </p>
-          <p>
-            Bear in mind that Ethereum is a story that is still being written,
-            and many more reasons to use it are being uncovered as it evolves
-            and develops over time.
-          </p>
-        </Width60>
-        <Width40>
-          <GatsbyImage image={getImage(data.chart1)} />
-        </Width40>
-      </TwoColumnContent>
 
       <TwoColumnContent>
         <Column>
@@ -624,6 +699,26 @@ export const query = graphql`
       childImageSharp {
         gatsbyImageData(
           width: 361
+          layout: FIXED
+          placeholder: BLURRED
+          quality: 100
+        )
+      }
+    }
+    eth2: file(relativePath: { eq: "what-is-eth/eth.png" }) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 243
+          layout: FIXED
+          placeholder: BLURRED
+          quality: 100
+        )
+      }
+    }
+    merge: file(relativePath: { eq: "upgrades/merge.png" }) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 485
           layout: FIXED
           placeholder: BLURRED
           quality: 100
