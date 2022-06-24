@@ -200,9 +200,7 @@ The starting point must be a system that can function without a human in the loo
 Flexible Web3 data solutions support the scenarios above in addition to providing the foundation for truly Open Science, where public goods can be created that have no access permissions and no fees. Web3 Public Data solutions such as IPFS, Arweave and Filecoin are optimized for decentralization. dClimate, for example, provides universal access to climate and weather data, including from weather stations and predictive climate models.
 
 
-
 # Learn more
-
 * [DeSci Wiki by Jocelynn Pearl and Ultrarare](https://docs.google.com/document/d/1aQC6zn-eXflSmpts0XGE7CawbUEHwnL6o-OFXO52PTc/edit#)
 * [A guide to decentralized biotech by Jocelynn Pearl for a16z future](https://future.a16z.com/a-guide-to-decentralized-biotech/)
 * [The case for DeSci](https://gitcoin.co/blog/desci-the-case-for-decentralised-science/)
@@ -213,57 +211,26 @@ Flexible Web3 data solutions support the scenarios above in addition to providin
 * [The Emergence of Biotech DAOs](https://molecule.to/blog/the-emergence-of-biotech-daos)
 
 # Get involved: **What can you do in DeSci?**
-
 Where can people go to start participating?
-
-
-
 * [DeSci Wiki: Overview of initiatives and projects ](https://docs.google.com/document/d/1aQC6zn-eXflSmpts0XGE7CawbUEHwnL6o-OFXO52PTc/edit#)
 
-### 
-**Funding projects**
-
-* [Gitcoin: apply for an scientific open source developer grant](https://gitcoin.co/grants)
-* [VitaDAO: receive funding through sponsored research agreements for longevity research](https://www.vitadao.com/)
-
-### 
-**Running experiments**
-
-* [LabDAO: fold a protein in-silico](https://alphafodl.vercel.app/)
-
-### 
-**Publishing results**
-
-* [ResearchHub: post a scientific result and engage in a conversation with peers](https://www.researchhub.com/)
-
-### 
-**IP ownership**
-
-* [Molecule: Fund and get funded for your research projects](https://discover.molecule.to/)
-
-### 
-**Data storage**
-
-* [dClimate API: query climate data collected by a decentralized community](https://api.dclimate.net/)
-
-
-## **Build DeSci**
-
-Explore projects below to join the DeSci movement.
+### Explore projects below to join the DeSci movement.
 * [Atoms](https://www.atoms.org)
-* [dClimate](https://www.dclimate.net/)
+* [dClimate API: query climate data collected by a decentralized community](https://api.dclimate.net/)
 * [DeSci Foundation](https://descifoundation.org/)
 * [GenomesDAO](https://genomes.io/)
+* [Gitcoin: apply for an scientific open source developer grant](https://gitcoin.co/grants)
+* [Molecule: Fund and get funded for your research projects](https://discover.molecule.to/)
 * [OceanDAO](https://oceanprotocol.com/dao)
 * [Opscientia](https://opsci.io/research/)
-* [LabDAO](https://www.labdao.xyz/)
+* [LabDAO: fold a protein in-silico](https://alphafodl.vercel.app/)
 * [Molecule](https://www.molecule.to/)
 * [Radicle](https://radicle.xyz/)
-* [ResearchHub](https://researchhub.com/)
-* [VitaDAO](https://www.vitadao.com/)
-* 
+* [ResearchHub: post a scientific result and engage in a conversation with peers](https://www.researchhub.com/)
+* [VitaDAO: receive funding through sponsored research agreements for longevity research](https://www.vitadao.com/) 
 
-Thank you to the contributors of this document:
+Thank 
+you to the contributors of this document:
 Sam Richards, Jon Starr, Erik Van Winkle, Carla Ostmann, Omar El Naggar, Vincent Weisser, Philipp Koellinger, Christopher Hill, Niklas Rindtorff, Joseph Cook 
 
 [Link to appendix and graveyard](https://docs.google.com/document/d/1EPqWmMt_U1PHOVTRfzvQfT5UgUiZGowkYYVehy8lgcM/edit?usp=sharing)
