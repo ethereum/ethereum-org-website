@@ -3,6 +3,7 @@ title: Intro to Ethereum
 description: A dapp developer's introduction to the core concepts of Ethereum.
 lang: en
 sidebar: true
+preMergeBanner: true
 ---
 
 ## What is a blockchain? {#what-is-a-blockchain}

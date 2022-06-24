@@ -69,7 +69,7 @@ const TableContent = styled(Content)`
   display: flex;
   gap: 24px;
 
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     padding: 1rem 0;
   }
 `
@@ -80,6 +80,7 @@ const MobileFilterToggleContainer = styled.div`
   background: ${(props) => props.theme.colors.background};
   width: 100%;
   z-index: 1;
+  padding: 5px 0;
 `
 
 const MobileFilterToggle = styled.div`
@@ -90,7 +91,7 @@ const MobileFilterToggle = styled.div`
     gap: 1rem;
     justify-content: center;
     align-items: center;
-    background: #141414;
+    background: ${(props) => props.theme.colors.codeBackground};
     border: 1px solid #404040;
     border-radius: 0px 4px 4px 0px;
     padding: 6px 20px 10px 20px;
@@ -106,6 +107,12 @@ const MobileFilterToggle = styled.div`
   svg {
     width: 24px;
     height: 24px;
+    line {
+      stroke: ${(props) => props.theme.colors.primary};
+    }
+    circle {
+      stroke: ${(props) => props.theme.colors.primary};
+    }
   }
 `
 
@@ -147,6 +154,10 @@ const FilterTabs = styled.div`
   p {
     margin: 0;
     letter-spacing: 0.02rem;
+  }
+
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    top: 140px;
   }
 `
 
@@ -208,29 +219,27 @@ const ResetContainer = styled.div`
   align-items: center;
   justify-content: center;
   padding: 2px 4px;
-  border: 1px solid ${(props) => props.theme.colors.selectHover};
   border-radius: 4px;
-  width: 140px;
+  width: 100%;
   margin: 0 auto;
   gap: 0.25rem;
   font-size: 0.75rem;
   cursor: pointer;
   :hover {
-    border: 1px solid ${(props) => props.theme.colors.primary};
     p {
-      color: ${(props) => props.theme.colors.primary};
+      color: ${(props) => props.theme.colors.selectHover};
     }
     svg {
-      fill: ${(props) => props.theme.colors.primary};
+      fill: ${(props) => props.theme.colors.selectHover};
     }
   }
 
   p {
     margin: 0;
-    color: ${(props) => props.theme.colors.selectHover};
+    color: ${(props) => props.theme.colors.primary};
   }
   svg {
-    fill: ${(props) => props.theme.colors.selectHover};
+    fill: ${(props) => props.theme.colors.primary};
   }
 `
 

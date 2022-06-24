@@ -46,8 +46,8 @@ const FilterPanel = styled.div`
   flex-direction: column;
   align-items: flex-start;
   padding: 24px;
-  background: ${(props) => props.theme.colors.ednBackground};
-  border: 1px solid #3d3d3d;
+  background: ${({ theme }) =>
+    theme.isDark ? theme.colors.black400 : theme.colors.primary100};
   border-radius: 4px;
 `
 
@@ -101,15 +101,14 @@ const IconContainer = styled.div`
     margin-top: 8px;
 
     path {
-      fill: white;
-      stroke: white;
+      fill: ${(props) => props.theme.colors.text};
     }
   }
 `
 
 const OptionDescription = styled.p`
-  font-size: 0.85rem;
-  line-height: 0.8rem;
+  font-size: 0.9rem;
+  line-height: 1.1rem;
   color: ${(props) => props.theme.colors.text200};
 `
 

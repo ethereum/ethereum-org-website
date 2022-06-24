@@ -17,7 +17,9 @@ const Flex = styled.div`
 
 const Image = styled(GatsbyImage)``
 
-const StakingHowSoloWorks = () => {
+export interface IProps {}
+
+const StakingHowSoloWorks: React.FC<IProps> = () => {
   const { image } = useStaticQuery(graphql`
     {
       image: file(relativePath: { eq: "hackathon_transparent.png" }) {

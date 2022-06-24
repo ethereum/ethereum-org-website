@@ -5547,7 +5547,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/735288?v=4",
       "profile": "http://www.sigasi.com",
       "contributions": [
-        "doc"
+        "doc",
+        "code"
       ]
     },
     {
@@ -6828,7 +6829,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/14298799?v=4",
       "profile": "https://github.com/smartcontracts",
       "contributions": [
-        "doc"
+        "doc",
+        "bug"
       ]
     },
     {

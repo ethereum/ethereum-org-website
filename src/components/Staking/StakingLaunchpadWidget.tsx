@@ -45,8 +45,9 @@ const ButtonContainer = styled.div`
     }
   }
 `
+export interface IProps {}
 
-const StakingLaunchpadWidget = () => {
+const StakingLaunchpadWidget: React.FC<IProps> = () => {
   const intl = useIntl()
   const [selection, setSelection] = useState("testnet")
 

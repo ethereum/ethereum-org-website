@@ -28,9 +28,11 @@ import SocialRecover from "../../assets/wallets/social_recover.svg"
 import Swap from "../../assets/wallets/swap.svg"
 import Warning from "../../assets/staking/warning-product-glyph.svg"
 import GreenCheck from "../../assets/staking/green-check-product-glyph.svg"
+import { opacify } from "polished"
+import { opacity } from "styled-system"
 
 // Styles
-const Container = styled.div`
+const Container = styled.table`
   width: 100%;
 `
 
@@ -40,13 +42,9 @@ const WalletContainer = styled(Container)`
     background: ${(props) => props.theme.colors.boxShadow};
     transition: 0.5s all;
   }
-
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    padding: 0 1rem;
-  }
 `
 
-const Grid = styled.div`
+const Grid = styled.tr`
   display: grid;
   grid-template-columns: 40% auto auto auto 5%;
   width: 100%;
@@ -58,11 +56,21 @@ const Grid = styled.div`
   }
 
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    grid-template-columns: 40% auto auto 0% 5%;
-  }
+    grid-template-columns: 60% auto 0% 0% 5%;
 
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    grid-template-columns: 40% auto 0% 0% 5%;
+    th:nth-of-type(3) {
+      display: none;
+    }
+    th:nth-of-type(4) {
+      display: none;
+    }
+
+    td:nth-of-type(3) {
+      display: none;
+    }
+    td:nth-of-type(4) {
+      display: none;
+    }
   }
 `
 
@@ -74,9 +82,42 @@ const WalletContentHeader = styled(Grid)`
   z-index: 1;
   border-bottom: 1px solid ${(props) => props.theme.colors.primary};
 
+  th {
+    padding: 0;
+    border-bottom: none;
+  }
+
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    top: 140px;
+  }
+
   @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    gap: 0.5rem;
-    align-items: center;
+    grid-template-columns: auto;
+    gap: 1rem;
+    text-align: center;
+    th:nth-of-type(1) {
+      text-align: center;
+    }
+    th:nth-of-type(2) {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      &:before {
+        white-space: nowrap;
+        content: "Compare features";
+      }
+    }
+  }
+`
+
+const Wallet = styled(Grid)`
+  padding: 25px 4px;
+  td {
+    padding: 0;
+    border-bottom: none;
+  }
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    padding: 25px 1rem;
   }
 `
 
@@ -142,10 +183,14 @@ const StyledSelect = styled(Select)`
   .react-select__control--is-focused {
     border: none;
     background: ${(props) => props.theme.colors.primary};
+    svg {
+      fill: ${(props) => props.theme.colors.background};
+      transition: 0.5s all;
+    }
 
     .react-select__value-container {
       .react-select__single-value {
-        color: ${(props) => props.theme.colors.text};
+        color: ${(props) => props.theme.colors.background};
       }
     }
 
@@ -153,13 +198,13 @@ const StyledSelect = styled(Select)`
       background: ${(props) => props.theme.colors.primary};
       .react-select__value-container {
         .react-select__single-value {
-          color: ${(props) => props.theme.colors.text};
+          color: ${(props) => props.theme.colors.background};
         }
       }
 
       .react-select__indicators {
         .react-select__indicator {
-          color: ${(props) => props.theme.colors.text};
+          color: ${(props) => props.theme.colors.background};
         }
       }
     }
@@ -167,29 +212,9 @@ const StyledSelect = styled(Select)`
 
   @media (max-width: ${(props) => props.theme.breakpoints.s}) {
     .react-select__control {
-      padding: 14px 0;
+      padding: 0;
     }
   }
-`
-
-const SecondStyledSelect = styled(StyledSelect)`
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    display: none;
-    height: 0;
-    width: 0;
-  }
-`
-
-const ThirdStyledSelect = styled(StyledSelect)`
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    display: none;
-    height: 0;
-    width: 0;
-  }
-`
-
-const Wallet = styled(Grid)`
-  padding: 25px 4px;
 `
 
 const FlexInfo = styled.div`
@@ -253,16 +278,21 @@ const WalletMoreInfoContainer = styled.div`
 
 const WalletMoreInfoCategory = styled.div`
   width: 100%;
+  margin: 3rem 0 0;
+  :first-child {
+    margin: 0.5rem 0 0;
+  }
 
   h4 {
     color: ${(props) => props.theme.colors.primary};
+    margin: 0 0 0.5rem;
   }
 `
 
 const Features = styled.div`
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 0.2rem;
 `
 
 const ColoredLine = styled.div<{ color: string }>`
@@ -279,9 +309,13 @@ const ColoredLine = styled.div<{ color: string }>`
 
 const FeatureLabel = styled.div<{ hasFeature: boolean }>`
   display: flex;
-  gap: 0.5rem;
+  gap: 0.2rem;
   font-size: 0.9rem;
-  line-height: 1.75rem;
+  line-height: 1rem;
+  align-items: center;
+  padding: 0.2rem;
+  margin: 0 1rem;
+  position: relative;
   svg {
     width: 1.75rem;
     height: 1.75rem;
@@ -290,15 +324,24 @@ const FeatureLabel = styled.div<{ hasFeature: boolean }>`
       fill: ${(props) =>
         props.hasFeature
           ? props.theme.colors.text
-          : props.theme.colors.tableItemBoxShadow};
+          : props.theme.colors.secondary};
     }
   }
   p {
-    margin-bottom: 0.75rem;
+    margin-bottom: 0;
     color: ${(props) =>
       props.hasFeature
         ? props.theme.colors.text
-        : props.theme.colors.tableItemBoxShadow};
+        : props.theme.colors.secondary};
+  }
+  :after {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 100%;
+    background: ${(props) =>
+      props.hasFeature ? "rgba(0, 0, 0, 0)" : props.theme.colors.secondary};
+    position: absolute;
   }
 `
 
@@ -452,13 +495,13 @@ const WalletTable = ({ data, filters, walletData }) => {
     })
   )
   const [firstFeatureSelect, setFirstFeatureSelect] = useState(
-    featureDropdownItems[0]
-  )
-  const [secondFeatureSelect, setSecondFeatureSelect] = useState(
     featureDropdownItems[1]
   )
+  const [secondFeatureSelect, setSecondFeatureSelect] = useState(
+    featureDropdownItems[13]
+  )
   const [thirdFeatureSelect, setThirdFeatureSelect] = useState(
-    featureDropdownItems[2]
+    featureDropdownItems[9]
   )
 
   const updateMoreInfo = (idx) => {
@@ -492,40 +535,48 @@ const WalletTable = ({ data, filters, walletData }) => {
   return (
     <Container>
       <WalletContentHeader>
-        <p>
-          <strong>Showing {filteredWallets.length} wallets</strong> out of{" "}
-          {walletCardData.length}
-        </p>
-        <StyledSelect
-          className="react-select-container"
-          classNamePrefix="react-select"
-          options={filteredFeatureDropdownItems}
-          onChange={(selectedOption) => {
-            setFirstFeatureSelect(selectedOption)
-          }}
-          defaultValue={firstFeatureSelect}
-          isSearchable={false}
-        />
-        <SecondStyledSelect
-          className="react-select-container"
-          classNamePrefix="react-select"
-          options={filteredFeatureDropdownItems}
-          onChange={(selectedOption) => {
-            setSecondFeatureSelect(selectedOption)
-          }}
-          defaultValue={secondFeatureSelect}
-          isSearchable={false}
-        />
-        <ThirdStyledSelect
-          className="react-select-container"
-          classNamePrefix="react-select"
-          options={filteredFeatureDropdownItems}
-          onChange={(selectedOption) => {
-            setThirdFeatureSelect(selectedOption)
-          }}
-          defaultValue={thirdFeatureSelect}
-          isSearchable={false}
-        />
+        <th>
+          <p>
+            <strong>Showing {filteredWallets.length} wallets</strong> out of{" "}
+            {walletCardData.length}
+          </p>
+        </th>
+        <th>
+          <StyledSelect
+            className="react-select-container"
+            classNamePrefix="react-select"
+            options={filteredFeatureDropdownItems}
+            onChange={(selectedOption) => {
+              setFirstFeatureSelect(selectedOption)
+            }}
+            defaultValue={firstFeatureSelect}
+            isSearchable={false}
+          />
+        </th>
+        <th>
+          <StyledSelect
+            className="react-select-container"
+            classNamePrefix="react-select"
+            options={filteredFeatureDropdownItems}
+            onChange={(selectedOption) => {
+              setSecondFeatureSelect(selectedOption)
+            }}
+            defaultValue={secondFeatureSelect}
+            isSearchable={false}
+          />
+        </th>
+        <th>
+          <StyledSelect
+            className="react-select-container"
+            classNamePrefix="react-select"
+            options={filteredFeatureDropdownItems}
+            onChange={(selectedOption) => {
+              setThirdFeatureSelect(selectedOption)
+            }}
+            defaultValue={thirdFeatureSelect}
+            isSearchable={false}
+          />
+        </th>
       </WalletContentHeader>
       {filteredWallets.map((wallet, idx) => {
         const deviceLabels: Array<string> = []
@@ -542,50 +593,60 @@ const WalletTable = ({ data, filters, walletData }) => {
         return (
           <WalletContainer>
             <Wallet>
-              <FlexInfo>
-                <div>
-                  <Image
-                    image={getImage(data[wallet.image_name])!}
-                    objectFit="contain"
-                  />
-                </div>
-                <div>
-                  <p>{wallet.name}</p>
-                  <SecondaryText>{deviceLabels.join(" | ")}</SecondaryText>
-                  <Link to={wallet.url}>Go to {wallet.name}</Link>
-                </div>
-              </FlexInfo>
-              <FlexInfoCenter onClick={() => updateMoreInfo(idx)}>
-                {wallet[firstFeatureSelect.filterKey] ? (
-                  <GreenCheck />
-                ) : (
-                  <Warning />
-                )}
-              </FlexInfoCenter>
-              <FlexInfoCenter onClick={() => updateMoreInfo(idx)}>
-                {wallet[secondFeatureSelect.filterKey] ? (
-                  <GreenCheck />
-                ) : (
-                  <Warning />
-                )}
-              </FlexInfoCenter>
-              <FlexInfoCenter onClick={() => updateMoreInfo(idx)}>
-                {wallet[thirdFeatureSelect.filterKey] ? (
-                  <GreenCheck />
-                ) : (
-                  <Warning />
-                )}
-              </FlexInfoCenter>
-              <FlexInfoCenter>
-                <div
-                  style={{ cursor: "pointer" }}
-                  onClick={() => updateMoreInfo(idx)}
-                >
-                  <WalletMoreInfoArrow
-                    name={wallet.moreInfo ? "chevronUp" : "chevronDown"}
-                  />
-                </div>
-              </FlexInfoCenter>
+              <td>
+                <FlexInfo>
+                  <div>
+                    <Image
+                      image={getImage(data[wallet.image_name])!}
+                      objectFit="contain"
+                    />
+                  </div>
+                  <div>
+                    <p>{wallet.name}</p>
+                    <SecondaryText>{deviceLabels.join(" | ")}</SecondaryText>
+                    <Link to={wallet.url}>Go to {wallet.name}</Link>
+                  </div>
+                </FlexInfo>
+              </td>
+              <td>
+                <FlexInfoCenter onClick={() => updateMoreInfo(idx)}>
+                  {wallet[firstFeatureSelect.filterKey] ? (
+                    <GreenCheck />
+                  ) : (
+                    <Warning />
+                  )}
+                </FlexInfoCenter>
+              </td>
+              <td>
+                <FlexInfoCenter onClick={() => updateMoreInfo(idx)}>
+                  {wallet[secondFeatureSelect.filterKey] ? (
+                    <GreenCheck />
+                  ) : (
+                    <Warning />
+                  )}
+                </FlexInfoCenter>
+              </td>
+              <td>
+                <FlexInfoCenter onClick={() => updateMoreInfo(idx)}>
+                  {wallet[thirdFeatureSelect.filterKey] ? (
+                    <GreenCheck />
+                  ) : (
+                    <Warning />
+                  )}
+                </FlexInfoCenter>
+              </td>
+              <td>
+                <FlexInfoCenter>
+                  <div
+                    style={{ cursor: "pointer" }}
+                    onClick={() => updateMoreInfo(idx)}
+                  >
+                    <WalletMoreInfoArrow
+                      name={wallet.moreInfo ? "chevronUp" : "chevronDown"}
+                    />
+                  </div>
+                </FlexInfoCenter>
+              </td>
             </Wallet>
             {wallet.moreInfo && (
               <div>
