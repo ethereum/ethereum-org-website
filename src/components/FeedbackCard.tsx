@@ -20,6 +20,7 @@ const Card = styled.div`
   flex-direction: column;
   margin-bottom: 1rem;
   margin-top: 2rem;
+  width: 100%;
 `
 
 const Content = styled.div`
@@ -69,7 +70,6 @@ const FeedbackCard: React.FC<IProps> = ({ prompt, className }) => {
   const [isHelpful, setIsHelpful] = useState(false)
 
   const surveyUrl = useSurvey(feedbackSubmitted, isHelpful)
-
   const getTitle = (feedbackSubmitted: boolean): ReactNode => {
     if (!feedbackSubmitted)
       return prompt || <Translation id="feedback-widget-prompt-article" />

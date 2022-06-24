@@ -31,4 +31,4 @@ export const useSurvey = (
       }
     })
     return url
-  }, [isHelpful, location])
+  }, [feedbackSubmitted, isHelpful, location])
