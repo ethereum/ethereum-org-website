@@ -62,17 +62,29 @@ const StyledButtonPrimary = styled(ButtonPrimary)`
 
 export interface IProps {
   prompt?: string
+  isArticle?: boolean
   className?: string
 }
 
-const FeedbackCard: React.FC<IProps> = ({ prompt, className }) => {
+const FeedbackCard: React.FC<IProps> = ({
+  prompt,
+  isArticle = false,
+  className,
+}) => {
   const [feedbackSubmitted, setFeedbackSubmitted] = useState(false)
   const [isHelpful, setIsHelpful] = useState(false)
-
   const surveyUrl = useSurvey(feedbackSubmitted, isHelpful)
+
+  const location = typeof window !== "undefined" ? window.location.href : ""
+  const isTutorial = location.includes("tutorials")
+
   const getTitle = (feedbackSubmitted: boolean): ReactNode => {
-    if (!feedbackSubmitted)
-      return prompt || <Translation id="feedback-card-prompt-article" />
+    if (!feedbackSubmitted) {
+      if (prompt) return prompt
+      if (isTutorial) return <Translation id="feedback-card-prompt-tutorial" />
+      if (isArticle) return <Translation id="feedback-card-prompt-article" />
+      return <Translation id="feedback-card-prompt-page" />
+    }
     return <Translation id="feedback-widget-thank-you-title" />
   }
 
