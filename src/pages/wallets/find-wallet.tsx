@@ -220,7 +220,7 @@ const ResetContainer = styled.div`
   justify-content: center;
   padding: 2px 4px;
   border-radius: 4px;
-  width: auto;
+  width: 100%;
   margin: 0 auto;
   gap: 0.25rem;
   font-size: 0.75rem;
