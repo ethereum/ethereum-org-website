@@ -30,6 +30,7 @@ import {
 
 import { translateMessageId } from "../utils/translations"
 import { Context } from "../types"
+import { StaticImage } from "gatsby-plugin-image"
 
 const Slogan = styled.p`
   font-style: normal;
@@ -568,7 +569,186 @@ const WhatIsEthereumPage = ({
             <GatsbyImage image={getImage(data.merge)} />
           </Width40>
         </TwoColumnContent>
+
+        <TwoColumnContent bgColor={theme.colors.homeBoxPurple}>
+          <Width40>
+            <GatsbyImage image={getImage(data.ethInside)} />
+          </Width40>
+          <Width60>
+            <h2>Who runs Ethereum?</h2>
+            <p>
+              Ethereum is not controlled by any one entity. It exists solely
+              through the decentralised participation and cooperation of the
+              community. Ethereum makes use of nodes (a computer with a copy of
+              the Ethereum blockchain data) run by volunteers to replace
+              individual server and cloud systems owned by major internet
+              providers and services.
+            </p>
+            <p>
+              These distributed nodes, run by individuals and businesses all
+              over the world, provide resiliency to the Ethereum network
+              infrastructure. It is therefore much less vulnerable to hacks or
+              shutdowns.{" "}
+              <b>
+                Since its launch in 2015, Ethereum has never suffered downtime
+              </b>
+              . There are currently over 1777 individual nodes running Ethereum
+              network. This makes Ethereum one of the most decentralized
+              cryptocurrencies out there, second only to bitcoin.
+            </p>
+            <p>
+              <ButtonRow>
+                <ButtonLink to="/run-a-node/">Run a node</ButtonLink>
+              </ButtonRow>
+            </p>
+          </Width60>
+        </TwoColumnContent>
+
+        <TwoColumnContent>
+          <Width60>
+            <h2>What are smart contracts?</h2>
+            <p>
+              <b>Smart contracts are simply computer programs</b> living on the
+              Ethereum blockchain. They only{" "}
+              <b>
+                execute when triggered by a transaction from a user (or another
+                contract)
+              </b>
+              . They make Ethereum very flexible in what it can do and
+              distinguish it from other cryptocurrencies. These programs are
+              what we now call decentralized apps, or dapps.
+            </p>
+            <p>
+              Have you ever used a product that changed its terms of service? Or
+              removed a feature you found useful? Once a smart contract is
+              published to Ethereum, it will be online and operational for as
+              long as Ethereum exists. Not even the author can take it down.
+              Since smart contracts are automated, they do not discriminate
+              against any user and are always ready to use.
+            </p>
+            <p>
+              Popular examples of smart contracts are lending apps,
+              decentralized trading exchanges, insurance, crowdfunding apps -
+              basically anything you can think of.
+            </p>
+            <p>
+              <ButtonRow>
+                <ButtonLink to="/smart-contracts/">
+                  More on Smart contracts
+                </ButtonLink>
+                <ButtonLink to="/dapps/" isSecondary>
+                  Explore dapps
+                </ButtonLink>
+              </ButtonRow>
+            </p>
+          </Width60>
+          <Width40>
+            <GatsbyImage image={getImage(data.infra)} />
+          </Width40>
+        </TwoColumnContent>
       </StyledGrayContainer>
+
+      <TwoColumnContent>
+        <Width40>
+          <GatsbyImage image={getImage(data.finance)} />
+        </Width40>
+        <Width60>
+          <h2>
+            I heard crypto is being used as a tool for criminal activity. Is
+            this true?
+          </h2>
+          <p>
+            Like any form of money, some of it will be misused. However, because
+            all Ethereum transactions happen on an open blockchain, it’s often
+            easier for authorities to track illicit activity than it would be in
+            the traditional financial system, arguably making Ethereum a less
+            appealing choice for those who would rather go undetected.
+          </p>
+          <p>
+            Crypto is used much less than fiat currencies for criminal purposes
+            according to the key findings of a recent report by Europol, the
+            European Union Agency for Law Enforcement Cooperation:
+          </p>
+          <p>
+            <em>
+              “The use of cryptocurrencies for illicit activities seems to
+              comprise only a small part of the overall cryptocurrency economy,
+              and it appears to be comparatively smaller than the amount of
+              illicit funds involved in traditional finance.”
+            </em>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <Link to="https://www.europol.europa.eu/publications-events/publications/cryptocurrencies-tracing-evolution-of-criminal-finances#downloads">
+                  Europol Spotlight - Cryptocurrencies - Tracing the evolution
+                  of criminal finances.pdf
+                </Link>{" "}
+                EN (1.4 MB)
+              </li>
+              <li>
+                <Link to="https://go.chainalysis.com/2021-CryptoCrime-Report.html">
+                  Chainalysis (2021), The 2021 Crypto Crime report
+                </Link>{" "}
+                EN
+              </li>
+            </ul>
+          </p>
+        </Width60>
+      </TwoColumnContent>
+
+      <TwoColumnContent>
+        <Width60>
+          <h2>What about Ethereum’s energy consumption?</h2>
+          <p>
+            Ethereum is currently using proof-of-work mechanism that consumes a
+            large amount of energy. In the coming months (Q3/Q4 2022) Ethereum
+            will undergo its biggest update yet and will switch to proof of
+            stake mechanism which will{" "}
+            <b>greatly reduce the enviromental impact</b> it has.
+          </p>
+          <p>
+            This update will reduce the energy required to secure Ethereum by
+            about <b>99.95%</b>, creating a{" "}
+            <b>safer network for a much smaller carbon cost</b>. This will make
+            Ethereum a truly low-carbon blockchain while boosting its security
+            and scalability.
+          </p>
+          <p>
+            <ButtonRow>
+              <ButtonLink to="/energy-consumption/">
+                More on energy consumption
+              </ButtonLink>
+              <ButtonLink to="/upgrades/merge/" isSecondary>
+                The Merge update
+              </ButtonLink>
+            </ButtonRow>
+          </p>
+        </Width60>
+        <Width40>{/* <StaticImage src="/chart1.svg" /> */}</Width40>
+      </TwoColumnContent>
+
+      <Content>
+        <h2>Additional readings</h2>
+        <p>
+          <Link to="https://weekinethereumnews.com/">
+            Week in Ethereum News
+          </Link>{" "}
+          - A weekly newsletter covering key developments across the ecosystem.
+        </p>
+        <p>
+          <Link to="https://stark.mirror.xyz/q3OnsK7mvfGtTQ72nfoxLyEV5lfYOqUfJIoKBx7BG1I">
+            The Year in Ethereum 2021
+          </Link>{" "}
+          Jan 17, 2022 - Josh Stark and Evan Van Ness
+        </p>
+        <p>
+          <Link to="https://stark.mirror.xyz/n2UpRqwdf7yjuiPKVICPpGoUNeDhlWxGqjulrlpyYi0">
+            Atoms, Institutions, Blockchains
+          </Link>{" "}
+          - Why blockchains matter?
+        </p>
+      </Content>
 
       <TwoColumnContent>
         <Column>
@@ -719,6 +899,36 @@ export const query = graphql`
       childImageSharp {
         gatsbyImageData(
           width: 485
+          layout: FIXED
+          placeholder: BLURRED
+          quality: 100
+        )
+      }
+    }
+    ethInside: file(relativePath: { eq: "run-a-node/ethereum-inside.png" }) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 400
+          layout: FIXED
+          placeholder: BLURRED
+          quality: 100
+        )
+      }
+    }
+    infra: file(relativePath: { eq: "infrastructure_transparent.png" }) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 437
+          layout: FIXED
+          placeholder: BLURRED
+          quality: 100
+        )
+      }
+    }
+    finance: file(relativePath: { eq: "finance_transparent.png" }) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 370
           layout: FIXED
           placeholder: BLURRED
           quality: 100
