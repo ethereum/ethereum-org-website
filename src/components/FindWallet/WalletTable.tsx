@@ -262,9 +262,9 @@ const WalletMoreInfoContainer = styled.div`
 const WalletMoreInfoCategory = styled.div`
   width: 100%;
   margin: 3rem 0 0;
-    :first-child{
-      margin: 0.5rem 0 0;
-    }
+  :first-child {
+    margin: 0.5rem 0 0;
+  }
 
   h4 {
     color: ${(props) => props.theme.colors.primary};
@@ -298,7 +298,7 @@ const FeatureLabel = styled.div<{ hasFeature: boolean }>`
   align-items: center;
   padding: 0.2rem;
   margin: 0 1rem;
-  position:relative;
+  position: relative;
   svg {
     width: 1.75rem;
     height: 1.75rem;
@@ -317,16 +317,14 @@ const FeatureLabel = styled.div<{ hasFeature: boolean }>`
         ? props.theme.colors.text
         : props.theme.colors.secondary};
   }
-  :after{
-    content:"";
-    display:block;
-    height:1px;
+  :after {
+    content: "";
+    display: block;
+    height: 1px;
     width: 100%;
-    background:${(props) =>
-      props.hasFeature
-        ? "rgba(0, 0, 0, 0)"
-        : props.theme.colors.secondary};
-    position:absolute;
+    background: ${(props) =>
+      props.hasFeature ? "rgba(0, 0, 0, 0)" : props.theme.colors.secondary};
+    position: absolute;
   }
 `
 

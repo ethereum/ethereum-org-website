@@ -77,17 +77,27 @@ const Persona = styled.div<{
   flex-direction: column;
   align-items: flex-start;
   padding: 1.5rem;
-  background: ${(props) => props.selected === true 
-      ? props.isDark === true ? props.theme.colors.primary900 : props.theme.colors.primary200
-      : props.isDark === true ? props.theme.colors.black400 : props.theme.colors.primary100};
+  background: ${(props) =>
+    props.selected === true
+      ? props.isDark === true
+        ? props.theme.colors.primary900
+        : props.theme.colors.primary200
+      : props.isDark === true
+      ? props.theme.colors.black400
+      : props.theme.colors.primary100};
   border-radius: 4px;
   cursor: pointer;
   transition: 0.5s all;
 
-  h3{
-    color: ${(props) => props.selected === true 
-      ? props.isDark === true ? props.theme.colors.primary : props.theme.colors.primary
-      : props.isDark === true ? props.theme.colors.text : props.theme.colors.text};
+  h3 {
+    color: ${(props) =>
+      props.selected === true
+        ? props.isDark === true
+          ? props.theme.colors.primary
+          : props.theme.colors.primary
+        : props.isDark === true
+        ? props.theme.colors.text
+        : props.theme.colors.text};
   }
 
   h4 {
@@ -101,17 +111,22 @@ const Persona = styled.div<{
     font-weight: normal;
     transition: 0.5s all;
     line-height: 1.3;
-    border-top: 1px solid ${(props) =>
-      props.selected === true
-        ? props.theme.colors.primary
-        : props.theme.colors.lightBorder};
+    border-top: 1px solid
+      ${(props) =>
+        props.selected === true
+          ? props.theme.colors.primary
+          : props.theme.colors.lightBorder};
   }
 
-
   &:hover {
-    background: ${(props) => props.selected === true 
-      ? props.isDark === true ? props.theme.colors.primary900 : props.theme.colors.primary200
-      : props.isDark === true ? props.theme.colors.black500 : props.theme.colors.primary200};
+    background: ${(props) =>
+      props.selected === true
+        ? props.isDark === true
+          ? props.theme.colors.primary900
+          : props.theme.colors.primary200
+        : props.isDark === true
+        ? props.theme.colors.black500
+        : props.theme.colors.primary200};
     transition: 0.5s all;
   }
 `
@@ -122,7 +137,6 @@ const Title = styled.div`
   gap: "1rem";
   margin-bottom: 0.6rem;
   padding: 0.5rem 0.5rem 0 0.5rem;
-  
 `
 
 const H3 = styled.h3<{ selected: boolean }>`
@@ -146,18 +160,17 @@ const StyledIcon = styled(Icon)<{ selected: boolean }>`
   height: 1.3rem;
   margin: 0 0.25rem;
   fill: ${(props) =>
-    props.selected === true
-      ? props.theme.colors.white
-      : "rgba(0, 0, 0, 0)"};
+    props.selected === true ? props.theme.colors.white : "rgba(0, 0, 0, 0)"};
   background: ${(props) =>
     props.selected === true
       ? props.theme.colors.primary
-      : props.theme.colors.priceCardBackground};;
+      : props.theme.colors.priceCardBackground};
   border-radius: 4px;
-  border: 1px solid ${(props) =>
-    props.selected === true
-      ? props.theme.colors.primary
-      : props.theme.colors.text};
+  border: 1px solid
+    ${(props) =>
+      props.selected === true
+        ? props.theme.colors.primary
+        : props.theme.colors.text};
 `
 
 // Types
