@@ -145,6 +145,16 @@ const H3 = styled.h3<{ selected: boolean }>`
   margin-bottom: 0;
   font-size: 1.3rem;
   padding: 0 0.25rem;
+  line-height: 1.7rem;
+`
+const H4 = styled.h4`
+  margin: 0;
+  font-weight: normal;
+  font-size: 0.875rem;
+  padding: 0 1.2rem;
+  line-height: 1.3rem;
+  text-align: center;
+  color: ${(props) => props.theme.colors.secondary}
 `
 
 const Grid = styled.div`
@@ -521,6 +531,7 @@ const WalletPersonasSidebar = ({
 
   return (
     <Container>
+      <H4>Choose the profile that matches your type of user and filter the wallet list</H4>
       {personas.map((persona, idx) => {
         return (
           <Persona
