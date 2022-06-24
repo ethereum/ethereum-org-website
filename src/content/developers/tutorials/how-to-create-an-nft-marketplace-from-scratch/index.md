@@ -25,7 +25,7 @@ Some things to keep in mind:
 
 ### Step 0: Sign up for an Alchemy account and create a new app
 
-If you haven't already, [sign up for your free Alchemy account](https://dashboard.alchemyapi.io/signup/?a=dabb74c129).&#x20;
+If you haven't already, [sign up for your free Alchemy account](https://alchemy.com/signup/eth).&#x20;
 
 You can then create a new app and create API keys from the app dashboard.&#x20;
 
