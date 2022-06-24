@@ -257,6 +257,9 @@ const WhatIsEthereumPage = ({
               how it is being used by millions of people around the world. A
               complete beginner's guide.
             </Subtitle>
+            <ButtonRow>
+              <ButtonLink toId="summary">Let’s start</ButtonLink>
+            </ButtonRow>
           </Header>
           <Hero
             image={getImage(data.hero)}
@@ -269,7 +272,7 @@ const WhatIsEthereumPage = ({
         </HeroContainer>
       </Content>
       <StyledGrayContainer>
-        <TwoColumnContent>
+        <TwoColumnContent id="summary">
           <Width60>
             <Summary>
               <p>

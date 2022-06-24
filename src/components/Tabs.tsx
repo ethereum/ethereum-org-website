@@ -25,8 +25,7 @@ const TabButton = styled.button<{ selected: boolean }>`
   padding: 0.3rem 1rem;
 `
 
-const TabPanel = styled.div<{ display: boolean }>`
-  display: ${({ display }) => (display ? "block" : "none")};
+const TabPanel = styled.div`
   background: ${(props) => props.theme.colors.ednBackground};
   border-radius: 0.5rem;
   border: 1px solid ${(props) => props.theme.colors.lightBorder};
@@ -46,33 +45,30 @@ export interface IProps {
 /**
  * Minimal & temp Tab component until we migrate over a UI lib
  */
-const Tabs = ({ tabs }) => {
-  const [selected, setSelected] = useState(0)
+const Tabs: React.FC<IProps> = ({ tabs }) => {
+  const [selectedIndex, setSelectedIndex] = useState(0)
+  const selectedTab = tabs[selectedIndex]
 
   const handleTabClick = (index: number) => {
-    setSelected(index)
-  }
-
-  if (!tabs.length) {
-    return null
+    setSelectedIndex(index)
   }
 
   return (
     <div>
-      <div>
+      <nav>
         <TabList>
           {tabs.map((tab, index) => (
             <Tab key={index} onClick={() => handleTabClick(index)}>
-              <TabButton selected={index === selected}>{tab.title}</TabButton>
+              <TabButton selected={index === selectedIndex}>
+                {tab.title}
+              </TabButton>
             </Tab>
           ))}
         </TabList>
-      </div>
-      <div>
-        {tabs.map((tab, index) => (
-          <TabPanel display={index === selected}>{tab.content}</TabPanel>
-        ))}
-      </div>
+      </nav>
+      <main>
+        <TabPanel>{selectedTab.content}</TabPanel>
+      </main>
     </div>
   )
 }
