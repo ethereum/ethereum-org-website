@@ -31,6 +31,7 @@ interface WalletData {
   connect_to_dapps: boolean
   staking: boolean
   swaps: boolean
+  multichain?: boolean
   layer_2: boolean
   gas_fee_customization: boolean
   ens_support: boolean
@@ -1095,6 +1096,54 @@ const walletData: WalletData[] = [
     social_recovery: false,
     onboard_documentation: "https://blog.mycrypto.com",
     documentation: "",
+  },
+  {
+    last_updated: "June 24, 2022",
+    name: "Pillar",
+    image_name: "pillar",
+    brand_color: "#7501D9",
+    url: "https://www.pillar.fi/",
+    wallet_live_date: "December 18 2018 V1, June 2020 V2",
+    active_development_team: true,
+    languages_supported: ["en", "et", "ba", "zh"],
+    twitter: "https://twitter.com/PillarWallet",
+    discord: "https://chat.pillar.fi/",
+    reddit: "",
+    telegram: "https://t.me/pillarofficial",
+    ios: true,
+    android: true,
+    linux: false,
+    windows: false,
+    macOS: false,
+    firefox: false,
+    chromium: false,
+    hardware: false,
+    open_source: true,
+    repo_url: "https://github.com/pillarwallet",
+    non_custodial: true,
+    security_audit: [
+      "https://consensys.net/diligence/audits/private/j6eeg3t1ipskpf/#executive-summary",
+    ],
+    scam_protection: false,
+    hardware_support: false,
+    walletconnect: true,
+    rpc_importing: false,
+    nft_support: true,
+    connect_to_dapps: true,
+    staking: false,
+    swaps: true,
+    multichain: true,
+    layer_2: true,
+    gas_fee_customization: false,
+    ens_support: true,
+    erc_20_support: false,
+    eip_1559_support: true,
+    buy_crypto: true,
+    withdraw_crypto: false,
+    multisig: false,
+    social_recovery: false,
+    onboard_documentation: "",
+    documentation: "https://help.pillar.fi/en/",
   },
 ]
 
