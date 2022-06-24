@@ -37,10 +37,7 @@ const Container = styled.table`
   th{
     font-weight: normal;
     p{
-      font-size: 0.8rem;
-      strong{
-        color:${(props) => props.theme.colors.primary};
-      }
+      font-size: 0.9rem;
     }
   }
 `
