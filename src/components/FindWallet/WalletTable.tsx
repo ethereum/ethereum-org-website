@@ -28,6 +28,8 @@ import SocialRecover from "../../assets/wallets/social_recover.svg"
 import Swap from "../../assets/wallets/swap.svg"
 import Warning from "../../assets/staking/warning-product-glyph.svg"
 import GreenCheck from "../../assets/staking/green-check-product-glyph.svg"
+import { opacify } from "polished"
+import { opacity } from "styled-system"
 
 // Styles
 const Container = styled.table`
@@ -276,16 +278,21 @@ const WalletMoreInfoContainer = styled.div`
 
 const WalletMoreInfoCategory = styled.div`
   width: 100%;
+  margin: 3rem 0 0;
+    :first-child{
+      margin: 0.5rem 0 0;
+    }
 
   h4 {
     color: ${(props) => props.theme.colors.primary};
+    margin: 0 0 0.5rem;
   }
 `
 
 const Features = styled.div`
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 0.2rem;
 `
 
 const ColoredLine = styled.div<{ color: string }>`
@@ -302,9 +309,13 @@ const ColoredLine = styled.div<{ color: string }>`
 
 const FeatureLabel = styled.div<{ hasFeature: boolean }>`
   display: flex;
-  gap: 0.5rem;
+  gap: 0.2rem;
   font-size: 0.9rem;
-  line-height: 1.75rem;
+  line-height: 1rem;
+  align-items: center;
+  padding: 0.2rem;
+  margin: 0 1rem;
+  position:relative;
   svg {
     width: 1.75rem;
     height: 1.75rem;
@@ -313,15 +324,26 @@ const FeatureLabel = styled.div<{ hasFeature: boolean }>`
       fill: ${(props) =>
         props.hasFeature
           ? props.theme.colors.text
-          : props.theme.colors.tableItemBoxShadow};
+          : props.theme.colors.secondary};
     }
   }
   p {
-    margin-bottom: 0.75rem;
+    margin-bottom: 0;
     color: ${(props) =>
       props.hasFeature
         ? props.theme.colors.text
-        : props.theme.colors.tableItemBoxShadow};
+        : props.theme.colors.secondary};
+  }
+  :after{
+    content:"";
+    display:block;
+    height:1px;
+    width: 100%;
+    background:${(props) =>
+      props.hasFeature
+        ? "rgba(0, 0, 0, 0)"
+        : props.theme.colors.secondary};
+    position:absolute;
   }
 `
 
