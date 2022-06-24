@@ -30,6 +30,7 @@ import {
 import Emoji from "../components/Emoji"
 import YouTube from "../components/YouTube"
 import PreMergeBanner from "../components/PreMergeBanner"
+import FeedbackCard from "../components/FeedbackCard"
 
 import { isLangRightToLeft } from "../utils/translations"
 import { Lang } from "../utils/languages"
@@ -190,6 +191,7 @@ const TutorialPage = ({
             relativePath={relativePath}
             editPath={absoluteEditPath}
           />
+          <FeedbackCard prompt="Did you find this tutorial helpful?" />
         </ContentContainer>
         {mdx.frontmatter.sidebar && tocItems && (
           <DesktopTableOfContents
