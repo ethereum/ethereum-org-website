@@ -474,6 +474,28 @@ const WhatIsEthereumPage = ({
       </Banner>
 
       <TwoColumnContent>
+        <Width60>
+          <h2>Why would I use Ethereum?</h2>
+          <p>
+            If you’ve ever sent money overseas (or plan to), or had to worry
+            about the future of your assets due to external forces outside of
+            your control where you live, or been fed up by the numerous
+            restrictions and fees imposed by traditional financial institutions
+            for everyday transactions, you might be interested in what
+            cryptocurrencies have to offer.
+          </p>
+          <p>
+            Bear in mind that Ethereum is a story that is still being written,
+            and many more reasons to use it are being uncovered as it evolves
+            and develops over time.
+          </p>
+        </Width60>
+        <Width40>
+          <GatsbyImage image={getImage(data.chart1)} />
+        </Width40>
+      </TwoColumnContent>
+
+      <TwoColumnContent>
         <Column>
           <h2>
             <Translation id="page-what-is-ethereum-explore" />{" "}
@@ -592,6 +614,16 @@ export const query = graphql`
       childImageSharp {
         gatsbyImageData(
           width: 433
+          layout: FIXED
+          placeholder: BLURRED
+          quality: 100
+        )
+      }
+    }
+    chart1: file(relativePath: { eq: "what-is-eth/chart1.png" }) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 361
           layout: FIXED
           placeholder: BLURRED
           quality: 100
