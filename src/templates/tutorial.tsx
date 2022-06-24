@@ -165,7 +165,6 @@ const TutorialPage = ({
   const { editContentUrl } = siteData.siteMetadata || {}
   const { relativePath } = pageContext
   const absoluteEditPath = `${editContentUrl}${relativePath}`
-
   return (
     <div>
       {showMergeBanner && <PreMergeBanner />}
@@ -191,7 +190,7 @@ const TutorialPage = ({
             relativePath={relativePath}
             editPath={absoluteEditPath}
           />
-          <FeedbackCard prompt="Did you find this tutorial helpful?" />
+          <FeedbackCard />
         </ContentContainer>
         {mdx.frontmatter.sidebar && tocItems && (
           <DesktopTableOfContents

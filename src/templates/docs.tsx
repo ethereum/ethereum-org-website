@@ -228,7 +228,7 @@ const DocsPage = ({
               <Translation id="back-to-top" /> ↑
             </a>
           </BackToTop>
-          <FeedbackCard />
+          <FeedbackCard isArticle />
           <DocsNav relativePath={relativePath}></DocsNav>
         </Content>
         {mdx.frontmatter.sidebar && tocItems && (

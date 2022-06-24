@@ -394,9 +394,7 @@ const UpgradePage = ({
           <MDXProvider components={components}>
             <MDXRenderer>{mdx.body}</MDXRenderer>
           </MDXProvider>
-          <FeedbackCard
-            prompt={translateMessageId("feedback-card-prompt-page", intl)}
-          />
+          <FeedbackCard />
         </ContentContainer>
         <MobileButton>
           <MobileButtonDropdown list={dropdownLinks} />

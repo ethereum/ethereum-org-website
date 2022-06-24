@@ -199,7 +199,7 @@ const StaticPage = ({
         <MDXProvider components={components}>
           <MDXRenderer>{mdx.body}</MDXRenderer>
         </MDXProvider>
-        <FeedbackCard />
+        <FeedbackCard isArticle />
       </ContentContainer>
       {mdx.frontmatter.sidebar && tocItems && (
         <TableOfContents
