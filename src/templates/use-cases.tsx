@@ -1,4 +1,5 @@
 import React from "react"
+import { useIntl } from "gatsby-plugin-intl"
 import { graphql, PageProps } from "gatsby"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
@@ -37,8 +38,9 @@ import {
 import Emoji from "../components/Emoji"
 import YouTube from "../components/YouTube"
 import PreMergeBanner from "../components/PreMergeBanner"
+import FeedbackCard from "../components/FeedbackCard"
 
-import { isLangRightToLeft } from "../utils/translations"
+import { isLangRightToLeft, translateMessageId } from "../utils/translations"
 import { getSummaryPoints } from "../utils/getSummaryPoints"
 import { Lang } from "../utils/languages"
 import { Context } from "../types"
@@ -300,6 +302,7 @@ const UseCasePage = ({
   data: { siteData, pageData: mdx },
   pageContext,
 }: PageProps<Queries.UseCasePageQuery, Context>) => {
+  const intl = useIntl()
   if (!siteData || !mdx?.frontmatter) {
     throw new Error(
       "UseCases page template query does not return expected values"
@@ -419,6 +422,9 @@ const UseCasePage = ({
           <MDXProvider components={components}>
             <MDXRenderer>{mdx.body}</MDXRenderer>
           </MDXProvider>
+          <FeedbackCard
+            prompt={translateMessageId("feedback-card-prompt-page", intl)}
+          />
         </ContentContainer>
         <MobileButton>
           <MobileButtonDropdown list={dropdownLinks} />

@@ -72,7 +72,7 @@ const FeedbackCard: React.FC<IProps> = ({ prompt, className }) => {
   const surveyUrl = useSurvey(feedbackSubmitted, isHelpful)
   const getTitle = (feedbackSubmitted: boolean): ReactNode => {
     if (!feedbackSubmitted)
-      return prompt || <Translation id="feedback-widget-prompt-article" />
+      return prompt || <Translation id="feedback-card-prompt-article" />
     return <Translation id="feedback-widget-thank-you-title" />
   }
 
