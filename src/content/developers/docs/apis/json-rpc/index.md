@@ -1551,7 +1551,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_newPendingTransactionFilter"
 ### eth_uninstallFilter {#eth_uninstallfilter}
 
 Uninstalls a filter with given id. Should always be called when watch is no longer needed.
-Additonally Filters timeout when they aren't requested with [eth_getFilterChanges](#eth_getfilterchanges) for a period of time.
+Additionally Filters timeout when they aren't requested with [eth_getFilterChanges](#eth_getfilterchanges) for a period of time.
 
 **Parameters**
 
