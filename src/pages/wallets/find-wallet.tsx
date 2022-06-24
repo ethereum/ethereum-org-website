@@ -525,5 +525,10 @@ export const query = graphql`
         gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
       }
     }
+    imtoken: file(relativePath: { eq: "wallets/imtoken.png" }) {
+      childImageSharp {
+        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+      }
+    }
   }
 `
