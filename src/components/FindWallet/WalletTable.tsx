@@ -235,11 +235,13 @@ const FlexInfo = styled.div`
   p {
     padding: 0;
     font-size: 1.2rem;
+    font-weight: bold;
   }
   p + p {
     margin: 0.1rem 0 1rem;
     font-size: 0.9rem;
     line-height: 1rem;
+    font-weight: normal;
   }
 `
 
