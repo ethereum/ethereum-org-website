@@ -34,6 +34,15 @@ import { opacity } from "styled-system"
 // Styles
 const Container = styled.table`
   width: 100%;
+  th{
+    font-weight: normal;
+    p{
+      font-size: 0.8rem;
+      strong{
+        color:${(props) => props.theme.colors.primary};
+      }
+    }
+  }
 `
 
 const WalletContainer = styled(Container)`
