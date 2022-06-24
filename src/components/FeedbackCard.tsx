@@ -1,13 +1,19 @@
+// Library imports
 import React, { ReactNode, useState } from "react"
 import styled from "styled-components"
-import { ButtonSecondary } from "./SharedStyledComponents"
-import { trackCustomEvent } from "../utils/matomo"
+// Component imports
+import { ButtonPrimary, ButtonSecondary } from "./SharedStyledComponents"
 import Translation from "./Translation"
-import Link from "./Link"
+// SVG imports
+import ThumbsUp from "../assets/feedback-thumbs-up.svg"
+// Utility imports
+import { trackCustomEvent } from "../utils/matomo"
+// import { getFeedbackSurveyUrl } from "../utils/getFeedbackSurveyUrl"
+import { useSurvey } from "../hooks/useSurvey"
 
 const Card = styled.div`
   border: 1px solid ${({ theme }) => theme.colors.border};
-  background-color: ${({ theme }) => theme.colors.background};
+  background: ${({ theme }) => theme.colors.feedbackGradient};
   border-radius: 4px;
   padding: 1.5rem;
   display: flex;
@@ -18,25 +24,39 @@ const Card = styled.div`
 
 const Content = styled.div`
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+  flex-direction: column;
+  gap: 1rem;
 `
 
 const Title = styled.h3`
-  margin-top: 0rem;
-  font-size: 1rem;
-  font-weight: 400;
-  margin-bottom: 0.5rem;
+  margin: 0 0 0.5rem;
+  font-size: 1.375rem;
+  font-weight: 700;
 `
 
 const ButtonContainer = styled.div`
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+`
+
+const StyledButtonSecondary = styled(ButtonSecondary)`
+  display: flex;
+  gap: 0.5rem;
+  color: ${({ theme }) => theme.colors.primary};
+  border-color: ${({ theme }) => theme.colors.primary};
+  line-height: 140%;
+  vertical-align: middle;
+  svg {
+    height: 1.5rem;
+    &.flip {
+      transform: scaleY(-1);
+    }
   }
+`
+
+const StyledButtonPrimary = styled(ButtonPrimary)`
+  color: white;
+  font-weight: 700;
 `
 
 export interface IProps {
@@ -47,63 +67,60 @@ export interface IProps {
 const FeedbackCard: React.FC<IProps> = ({ prompt, className }) => {
   const [feedbackSubmitted, setFeedbackSubmitted] = useState(false)
   const [isHelpful, setIsHelpful] = useState(false)
-  const location = typeof window !== "undefined" ? window.location.href : ""
-  const isStaking = location.includes("staking")
 
-  const getTitle = (
-    feedbackSubmitted: boolean,
-    isStaking: boolean,
-    isHelpful: boolean
-  ): ReactNode => {
+  const surveyUrl = useSurvey(feedbackSubmitted, isHelpful)
+
+  const getTitle = (feedbackSubmitted: boolean): ReactNode => {
     if (!feedbackSubmitted)
-      return prompt || <Translation id="feedback-prompt" />
-    if (isStaking)
-      return isHelpful ? (
-        <>
-          <p>Thanks for the feedback! Want to add more input?</p>
-          <Link to={`https://gzmn3wgk.paperform.co/?url=${location}`}>
-            Check out our current staking survey!
-          </Link>
-        </>
-      ) : (
-        <>
-          <p>How can we do better?</p>
-          <Link to={`https://zlj83p6l.paperform.co/?url=${location}`}>
-            Check out our current staking survey!
-          </Link>
-        </>
-      )
-
-    return isHelpful ? (
-      <Translation id="feedback-title-helpful" />
-    ) : (
-      <Translation id="feedback-title-not-helpful" />
-    )
+      return prompt || <Translation id="feedback-widget-prompt-article" />
+    return <Translation id="feedback-widget-thank-you-title" />
   }
 
-  const handleClick = (isHelpful: boolean): void => {
+  const handleSubmit = (choice: boolean): void => {
     trackCustomEvent({
       eventCategory: `Page is helpful feedback`,
       eventAction: `Clicked`,
-      eventName: String(isHelpful),
+      eventName: String(choice),
     })
-    setIsHelpful(isHelpful)
+    setIsHelpful(choice)
     setFeedbackSubmitted(true)
+  }
+  const handleSurveyOpen = (): void => {
+    trackCustomEvent({
+      eventCategory: `Feedback survey opened`,
+      eventAction: `Clicked`,
+      eventName: "Feedback survey opened",
+    })
+    window && surveyUrl && window.open(surveyUrl, "_blank")
   }
   return (
     <Card className={className}>
       <Content>
-        <Title>{getTitle(feedbackSubmitted, isStaking, isHelpful)}</Title>
-        {!feedbackSubmitted && (
-          <ButtonContainer>
-            <ButtonSecondary onClick={() => handleClick(true)}>
-              <Translation id="yes" />
-            </ButtonSecondary>
-            <ButtonSecondary onClick={() => handleClick(false)} ml={`0.5rem`}>
-              <Translation id="no" />
-            </ButtonSecondary>
-          </ButtonContainer>
+        <Title>{getTitle(feedbackSubmitted)}</Title>
+        {feedbackSubmitted && (
+          <p>
+            <Translation id="feedback-widget-thank-you-subtitle" />{" "}
+            <Translation id="feedback-widget-thank-you-subtitle-ext" />
+          </p>
         )}
+        <ButtonContainer>
+          {!feedbackSubmitted ? (
+            <>
+              <StyledButtonSecondary onClick={() => handleSubmit(true)}>
+                <ThumbsUp />
+                <Translation id="yes" />
+              </StyledButtonSecondary>
+              <StyledButtonSecondary onClick={() => handleSubmit(false)}>
+                <ThumbsUp className="flip" />
+                <Translation id="no" />
+              </StyledButtonSecondary>
+            </>
+          ) : (
+            <StyledButtonPrimary onClick={handleSurveyOpen}>
+              <Translation id="feedback-widget-thank-you-cta" />
+            </StyledButtonPrimary>
+          )}
+        </ButtonContainer>
       </Content>
     </Card>
   )
