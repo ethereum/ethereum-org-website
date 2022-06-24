@@ -142,12 +142,12 @@ The consensus client also needs the path to the execution client's `jwt-secret` 
 connection between them. Each consensus client has a command similar to `--jwt-secret` that takes the file
 path as an argument. This must be consistent with the `jwtsecret` path provided to the execution client.
 
-**Note that we recommend waiting for merge-ready client releases before doing this on Ethereum Mainnet - for now just practise on a testnet such as Kilmn**
+**Note that we recommend waiting for merge-ready client releases before doing this on Ethereum Mainnet - for now just practise on a testnet such as Kiln**
 
 ### Adding Validators {#adding-validators}
 
-Each of the consensus clients have their own validator software that is described in detail in their respective documentation. The easiest way to handle
-staking and validator key generation is to use the [Staking Launchpad](https://launchpad.ethereum.org/).
+Each of the consensus clients have their own validator software that is described in detail in their respective documentation. The easiest way to get started with
+staking and validator key generation is to use the [Prater Testnet Staking Launchpad](https://prater.launchpad.ethereum.org/), allowing you to test your setup. When you're ready for Mainnet, you can repeat these steps using the [Mainnet Staking Launchpad](https://launchpad.ethereum.org/). 
 
 ### Using the node {#using-the-node}
 
