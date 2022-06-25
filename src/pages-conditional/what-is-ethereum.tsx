@@ -31,6 +31,7 @@ import {
 import { translateMessageId } from "../utils/translations"
 import { Context } from "../types"
 import { StaticImage } from "gatsby-plugin-image"
+import AdoptionChart from "../components/AdoptionChart"
 
 const Slogan = styled.p`
   font-style: normal;
@@ -515,7 +516,7 @@ const WhatIsEthereumPage = ({
             </p>
           </Width60>
           <Width40>
-            <GatsbyImage image={getImage(data.chart1)} />
+            <AdoptionChart />
           </Width40>
         </TwoColumnContent>
 
