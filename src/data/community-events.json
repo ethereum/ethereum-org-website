@@ -448,5 +448,23 @@
     "description": "Welcome to the latest greatest ETH event happening in Africa!",
     "startDate": "2022-09-18",
     "endDate": "2022-09-25"
+  },
+  {
+    "title": "Web3Dubai",
+    "to": "https://www.web3dubai.org/",
+    "sponsor": null,
+    "location": "Dubai, UAE",
+    "description": "The Web3Dubai Conference will feature the latest innovations in Web3 technology and modular blockchains with a focus on builder and creator tools, techniques and APIs that help you scale your project and go from 0 to 1.",
+    "startDate": "2022-11-16",
+    "endDate": "2022-11-18"
+  },
+  {
+    "title": "ETHDubai",
+    "to": "https://www.ethdubaiconf.org",
+    "sponsor": null,
+    "location": "Dubai, UAE",
+    "description": "The Ethereum dev conference in Dubai on everything DeFi, NFTs, EVM scaling, layers 2 and more with a focus on decentralization and community projects.",
+    "startDate": "2023-03-14",
+    "endDate": "2023-03-16"
   }
 ]
