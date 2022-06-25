@@ -26,6 +26,7 @@ import WithdrawCrypto from "../../assets/wallets/withdraw_crypto.svg"
 import Multisig from "../../assets/wallets/multisig.svg"
 import SocialRecover from "../../assets/wallets/social_recover.svg"
 import Swap from "../../assets/wallets/swap.svg"
+import Eip1559 from "../../assets/wallets/eip1559.svg"
 import Warning from "../../assets/staking/warning-product-glyph.svg"
 import GreenCheck from "../../assets/staking/green-check-product-glyph.svg"
 import { opacify } from "polished"
@@ -34,9 +35,9 @@ import { opacity } from "styled-system"
 // Styles
 const Container = styled.table`
   width: 100%;
-  th{
+  th {
     font-weight: normal;
-    p{
+    p {
       font-size: 0.9rem;
     }
   }
@@ -121,7 +122,7 @@ const Wallet = styled(Grid)`
   td {
     padding: 0;
     border-bottom: none;
-    height:100%;
+    height: 100%;
   }
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     padding: 25px 1rem;
@@ -246,7 +247,7 @@ const FlexInfoCenter = styled(FlexInfo)`
   justify-content: center;
   cursor: pointer;
   height: 100%;
-  display:flex;
+  display: flex;
 `
 
 const Image = styled(GatsbyImage)`
@@ -358,20 +359,19 @@ const Socials = styled.div`
     color: ${(props) => props.theme.colors.primary};
     margin: 0;
   }
-  a{
+  a {
     height: auto;
     align-items: center;
     display: flex;
-    :hover{
-      opacity:0.8;
+    :hover {
+      opacity: 0.8;
     }
   }
-  
 `
 
 const LastUpdated = styled.p`
   color: ${(props) => props.theme.colors.text300};
-  margin:2rem 0;
+  margin: 2rem 0;
   font-size: 0.875rem;
 `
 

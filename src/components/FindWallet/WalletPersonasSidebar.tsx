@@ -24,6 +24,7 @@ import WithdrawCrypto from "../../assets/wallets/withdraw_crypto.svg"
 import Multisig from "../../assets/wallets/multisig.svg"
 import SocialRecover from "../../assets/wallets/social_recover.svg"
 import Swap from "../../assets/wallets/swap.svg"
+import Eip1559 from "../../assets/wallets/eip1559.svg"
 
 // Styles
 const Container = styled.div`
@@ -154,7 +155,7 @@ const H4 = styled.h4`
   padding: 0 1.2rem;
   line-height: 1.3rem;
   text-align: center;
-  color: ${(props) => props.theme.colors.secondary}
+  color: ${(props) => props.theme.colors.secondary};
 `
 
 const Grid = styled.div`
@@ -531,7 +532,10 @@ const WalletPersonasSidebar = ({
 
   return (
     <Container>
-      <H4>Choose the profile that matches your type of user and filter the wallet list</H4>
+      <H4>
+        Choose the profile that matches your type of user and filter the wallet
+        list
+      </H4>
       {personas.map((persona, idx) => {
         return (
           <Persona

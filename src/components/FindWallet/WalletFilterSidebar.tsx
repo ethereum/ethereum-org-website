@@ -28,6 +28,7 @@ import WithdrawCrypto from "../../assets/wallets/withdraw_crypto.svg"
 import Multisig from "../../assets/wallets/multisig.svg"
 import SocialRecover from "../../assets/wallets/social_recover.svg"
 import Swap from "../../assets/wallets/swap.svg"
+import Eip1559 from "../../assets/wallets/eip1559.svg"
 import { filter } from "lodash"
 
 // Styles
