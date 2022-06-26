@@ -17,7 +17,7 @@ const NotFoundPage: React.FC = () => (
         <Translation id="we-couldnt-find-that-page" />
       </h1>
       <p>
-        <Translation id="try-using-search" />{" "}
+        <Translation id="try-using-search" />
         <Link to="/">
           <Translation id="return-home" />
         </Link>
