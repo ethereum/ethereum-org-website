@@ -20,6 +20,7 @@ import {
   Page,
 } from "../components/SharedStyledComponents"
 import { translateMessageId } from "../utils/translations"
+import { IGatsbyChildImageSharp } from "./assets"
 
 const ButtonRow = styled.div`
   display: flex;
@@ -305,7 +306,25 @@ const StyledCallout = styled(Callout)`
   min-height: 100%;
 `
 
-const CommunityPage = ({ data }) => {
+export interface IProps {
+  data: Record<string, IGatsbyChildImageSharp>
+}
+
+export interface ICard {
+  image: any // Gatsby image type
+  title: string
+  description: string
+  alt: string
+  to: string
+}
+
+export interface IGetInvolvedCard {
+  emoji: string
+  title: string
+  description: string
+}
+
+const CommunityPage: React.FC<IProps> = ({ data }) => {
   const intl = useIntl()
 
   const heroContent = {
@@ -316,7 +335,7 @@ const CommunityPage = ({ data }) => {
     alt: translateMessageId("page-community-hero-alt", intl),
   }
 
-  const cards = [
+  const cards: ICard[] = [
     {
       image: getImage(data.docking),
       title: translateMessageId("page-community-card-1-title", intl),
@@ -359,7 +378,7 @@ const CommunityPage = ({ data }) => {
     },
   ]
 
-  const whyGetInvolvedCards = [
+  const whyGetInvolvedCards: IGetInvolvedCard[] = [
     {
       emoji: ":mage:",
       title: translateMessageId(
