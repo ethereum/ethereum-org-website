@@ -19,8 +19,8 @@ const TopContent = styled.div``
 
 export interface IProps {
   emoji?: string
-  title?: ReactNode
-  description?: ReactNode
+  title?: string | ReactNode
+  description?: string | ReactNode
   className?: string
 }
 

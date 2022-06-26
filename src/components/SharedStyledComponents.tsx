@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { margin } from "styled-system"
+import { margin, MarginProps } from "styled-system"
 import Select from "react-select"
 
 import Card from "./Card"
@@ -233,7 +233,7 @@ export const ButtonPrimary = styled(Button)`
   }
 `
 
-export const ButtonSecondary = styled(Button)`
+export const ButtonSecondary = styled(Button)<MarginProps>`
   color: ${(props) => props.theme.colors.text};
   border: 1px solid ${(props) => props.theme.colors.text};
   background-color: transparent;
@@ -384,7 +384,7 @@ export const OptionContainer = styled.div`
   }
 `
 
-export const Option = styled.button`
+export const Option = styled.button<{ isActive: boolean }>`
   border-radius: 2rem;
   border: 1px solid
     ${(props) =>
@@ -412,7 +412,7 @@ export const Option = styled.button`
   }
 `
 
-export const OptionText = styled.span`
+export const OptionText = styled.span<{ fontSize?: string }>`
   font-size: ${({ fontSize = "1.5rem" }) => fontSize};
   line-height: 100%;
   text-align: center;

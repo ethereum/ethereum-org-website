@@ -71,6 +71,7 @@ export interface IProps {
   className?: string
   isPartiallyActive?: boolean
   ariaLabel?: string
+  isSecondary?: boolean
   customEventOptions?: EventOptions
   onClick?: () => void
 }

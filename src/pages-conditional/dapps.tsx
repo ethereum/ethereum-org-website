@@ -1243,7 +1243,7 @@ const DappsPage = ({
           ))}
         </StyledCardGrid>
       </Content>
-      <FullWidthContainer ref={explore}>
+      <FullWidthContainer>
         <h2 id="explore">
           <Translation id="page-dapps-explore-dapps-title" />
         </h2>
