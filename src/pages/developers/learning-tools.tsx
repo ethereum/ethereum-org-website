@@ -17,7 +17,7 @@ import {
   CardGrid,
   Page,
 } from "../../components/SharedStyledComponents"
-import { IGatsbyChildImageSharp } from "."
+import { IData } from "."
 
 const StyledPage = styled(Page)`
   margin-top: 4rem;
@@ -80,7 +80,7 @@ const StyledCardGrid = styled(CardGrid)`
 
 export interface ILearningTool {
   name: string
-  description: string
+  description: TranslationKey
   url: string
   image: string
   alt: TranslationKey
@@ -89,22 +89,7 @@ export interface ILearningTool {
 }
 
 export interface IProps {
-  data: {
-    bloomtech: IGatsbyChildImageSharp
-    buildspace: IGatsbyChildImageSharp
-    captureTheEther: IGatsbyChildImageSharp
-    chainshot: IGatsbyChildImageSharp
-    consensys: IGatsbyChildImageSharp
-    cryptoZombie: IGatsbyChildImageSharp
-    ethdotbuild: IGatsbyChildImageSharp
-    learn: IGatsbyChildImageSharp
-    nftschool: IGatsbyChildImageSharp
-    oz: IGatsbyChildImageSharp
-    pointer: IGatsbyChildImageSharp
-    questbook: IGatsbyChildImageSharp
-    remix: IGatsbyChildImageSharp
-    replit: IGatsbyChildImageSharp
-  }
+  data: IData
 }
 
 const LearningToolsPage: React.FC<IProps> = ({ data }) => {

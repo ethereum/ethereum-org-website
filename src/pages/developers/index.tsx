@@ -258,21 +258,10 @@ export interface IGatsbyChildImageSharp {
   }
 }
 
+export type IData = Record<string, IGatsbyChildImageSharp>
+
 export interface IProps {
-  data: {
-    developers: {
-      childImageSharp: IGatsbyChildImageSharp
-    }
-    ednHero: {
-      childImageSharp: IGatsbyChildImageSharp
-    }
-    doge: {
-      childImageSharp: IGatsbyChildImageSharp
-    }
-    ogImage: {
-      childImageSharp: IGatsbyChildImageSharp
-    }
-  }
+  data: IData
 }
 
 const DevelopersPage: React.FC<IProps> = ({ data }) => {

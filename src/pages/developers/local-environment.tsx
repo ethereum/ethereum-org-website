@@ -23,7 +23,7 @@ import {
   // InfoBanner,
 } from "../../components/SharedStyledComponents"
 import { getImageData } from "gatsby-plugin-image"
-import { IGatsbyChildImageSharp } from "."
+import { IData } from "."
 
 const StyledPage = styled(Page)`
   margin-top: 4rem;
@@ -377,29 +377,7 @@ const frameworksList: IFramework[] = [
 ]
 
 export interface IProps {
-  data: {
-    atom: IGatsbyChildImageSharp
-    brownie: IGatsbyChildImageSharp
-    createethapp: IGatsbyChildImageSharp
-    embark: IGatsbyChildImageSharp
-    epirus: IGatsbyChildImageSharp
-    ethers: IGatsbyChildImageSharp
-    ethnode: IGatsbyChildImageSharp
-    foundry: IGatsbyChildImageSharp
-    ganache: IGatsbyChildImageSharp
-    hardhat: IGatsbyChildImageSharp
-    hero: IGatsbyChildImageSharp
-    ogImage: IGatsbyChildImageSharp
-    scaffoldeth: IGatsbyChildImageSharp
-    solidity: IGatsbyChildImageSharp
-    soliditytemplate: IGatsbyChildImageSharp
-    truffle: IGatsbyChildImageSharp
-    vscode: IGatsbyChildImageSharp
-    vyper: IGatsbyChildImageSharp
-    waffle: IGatsbyChildImageSharp
-    web3js: IGatsbyChildImageSharp
-    workbench: IGatsbyChildImageSharp
-  }
+  data: IData
 }
 
 const ChooseStackPage: React.FC<IProps> = ({ data }) => {
