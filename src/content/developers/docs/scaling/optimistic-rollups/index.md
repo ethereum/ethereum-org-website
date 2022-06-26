@@ -27,8 +27,6 @@ Optimistic rollups instead rely on a fraud-proving scheme scheme to detect cases
 
 If the fraud proof succeeds, the rollup protocol rejects the invalid block and punishes the malicious operator. If the rollup batch remains unchallenged after the challenge period elapses, it is deemed valid and accepted on Ethereum. Others can continue to build on an unconfirmed rollup block, but with a caveat: blocks descending from a parent block will be rejected if the parent is later declared invalid. 
 
-rollup will advance to a new state and the operator can start adding new blocks. 
-
 ## How do optimistic rollups interact with Ethereum? {#optimistic-rollups-and-Ethereum} 
 
 An optimistic rollup is an off-chain protocol managed by a set of smart contracts deployed on the Ethereum network. Transactions executed off-chain are added to a record stored in the main rollup contract. Like the Ethereum blockchain, this transaction record is immutable and forms the "optimistic rollup chain."
@@ -183,15 +181,15 @@ Finally, we should note that L2 > L1 message calls between contracts need to acc
 
 ## How do optimistic rollup fees work? {#how-do-optimistic-rollup-fees-work}
 
-Many optimistic rollups use a “gas price” scheme, much like Ethereum, to denote how much users pay per transaction. How much users pay for transactions on optimistic rollups depends on the following components:
+Optimistic rollups use a gas fee scheme, much like Ethereum, to denote how much users pay per transaction. Fees charged on optimistic rollups depends on the following components:
 
-1. **State write**: There is a fixed cost for writing to Ethereum’s state (i.e., submitting a transaction on the Ethereum blockchain). Optimistic rollups reduce this cost by batching transactions and spreading fixed costs across multiple users.  
+1. **State write**: Optimistic rollups publish transaction data and block headers (consisting of the previous block header hash, state root, batch root) to Ethereum as `calldata`. The minimum cost of an Ethereum transaction is 21,000 gas. Optimistic rollups can reduce the cost of writing the transaction to L1 by batching multiple transactions in a single block (which amortizes the 21k gas over multiple user transactions). 
 
-2. **Data publication**: Optimistic rollups publish transaction data and block headers (consisting of the previous block header hash, state root, batch root) to Ethereum as `calldata`. Calldata costs are currently governed by [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), which stipulates a cost of 16 gas for non-zero bytes and 4 gas for zero bytes of calldata, respectively. The cost paid on each transaction is influenced by how much calldata needs to be posted on-chain for it. 
+Beyond the base transaction fee, the cost of each state write depends on the size of `calldata` posted to L1. Calldata costs are currently governed by [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), which stipulates a cost of 16 gas for non-zero bytes and 4 gas for zero bytes of calldata, respectively. To reduce user fees, rollup operators compresss transactions to reduce the number of `calldata` bytes published on Ethereum. 
 
-3. **L2 operator fees**: This is the amount paid to the rollup operator as compensation for computational costs incurred in processing transactions, much like miner fees on Ethereum. 
+3. **L2 operator fees**: This is the amount paid to the rollup nodes as compensation for computational costs incurred in processing transactions, much like miner fees on Ethereum. Rollup nodes charge lower transaction fees since L2s have higher processing capacities and aren't faced with the network congestions that force miners on Ethereum to prioritize transactions with higher fees. 
 
-Optimistic rollups apply several mechanisms to reducing fees for users, including reducing `calldata` published per transaction. You can see [here](https://l2fees.info/) for a real-time overview of how it costs to use Ethereum optimistic rollups. 
+Optimistic rollups apply several mechanisms to reducing fees for users, including batching transactions and compressing `calldata` to reduce data publication costs. You can check the [L2 fee tracker](https://l2fees.info/) for a real-time overview of how much it costs to use Ethereum-based optimistic rollups. 
 
 ## How do optimistic rollups scale Ethereum? {#scaling-ethereum-with-optimistic-rollups}
 
@@ -228,7 +226,7 @@ The introduction of [data sharding](/upgrades/shard-chains/) on Ethereum is expe
 | ---------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
 |Offers massive improvements in scalability without sacrificing security or trustlessness.    | Delays in transaction finality due to potential fraud challenges.                                                                                                     |
 | Transaction data is stored on the layer 1 chain, improving transparency, security, censorship-resistance, and decentralization. | Centralized rollup operators (sequencers) can influence transaction ordering.                                                                   | 
-| Fraud proving guarantees trustless finality and allows honest minorities to secure the chain.                     | A malicious operator can steal funds by posting invalid blocks and state commitments.                                                                              | 
+| Fraud proving guarantees trustless finality and allows honest minorities to secure the chain.                     | If there are no honest nodes a malicious operator can steal funds by posting invalid blocks and state commitments.                                                    | 
 | Computing fraud proofs is open to regular L2 node, unlike validity proofs (used in ZK-rollups) that require special hardware.  | Security model relies on at least one honest node executing rollup transactions and submitting fraud proofs to challenge invalid state transitions.                  | 
 | Rollups benefit from "trustless liveness" (anyone can force the chain to advance by executing transactions and posting assertions)      | Users must wait for the one-week challenge period to expire before withdrawing funds back to Ethereum.                                                              |
 | Optimistic rollups rely on well-designed cryptoeconomic incentives to increase security on the chain.                            | Rollups must post all transaction data on-chain, which can increase costs. 
