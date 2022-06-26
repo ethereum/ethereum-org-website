@@ -10,7 +10,7 @@ const StyledPage = styled(Page)`
   margin-top: 4rem;
 `
 
-const NotFoundPage = () => (
+const NotFoundPage: React.FC = () => (
   <StyledPage>
     <Content>
       <h1>
