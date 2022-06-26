@@ -26,6 +26,7 @@ import {
   GradientContainer,
   SloganGradient,
 } from "../components/SharedStyledComponents"
+import { IGatsbyChildImageSharp } from "./assets"
 
 const HeroCard = styled.div`
   display: flex;
@@ -229,7 +230,39 @@ const Faq = styled.div`
   }
 `
 
-const BugBountiesPage = ({ data, location }) => {
+export interface INode {
+  username: string
+  name: string
+  score: number
+}
+
+export interface IBountyHunter {
+  nodes: INode[]
+}
+
+// Defaults all propertys of IData to be of type IGatsbyChildImageSharp, except those explicitly overrided.
+export type IData = Record<string, IGatsbyChildImageSharp> & {
+  consensusBountyHunters: IBountyHunter
+  executionBountyHunters: IBountyHunter
+}
+
+export interface IProps {
+  data: IData
+  location: Location
+}
+
+export interface IClient {
+  title: string
+  link: string
+  image: any
+}
+
+export interface ISpec {
+  title: JSX.Element
+  link: string
+}
+
+const BugBountiesPage: React.FC<IProps> = ({ data, location }) => {
   const intl = useIntl()
   const themeContext = useContext(ThemeContext)
   const isDarkTheme = themeContext.isDark
@@ -243,30 +276,32 @@ const BugBountiesPage = ({ data, location }) => {
     (a, b) => b.score - a.score
   )
 
+  const bountyHuntersArrayToObject: Record<string, INode> = [
+    ...consensusBountyHunters,
+    ...executionBountyHunters,
+  ].reduce((acc, next) => {
+    if (acc[next.name]) {
+      return {
+        ...acc,
+        [next.name]: {
+          ...next,
+          score: acc[next.name].score + next.score,
+        },
+      }
+    }
+
+    return {
+      ...acc,
+      [next.name]: next,
+    }
+  }, {})
+
   // total all counts using name as identifier, then sort
-  const allBounterHunters = Object.values(
-    [...consensusBountyHunters, ...executionBountyHunters].reduce(
-      (acc, next) => {
-        if (acc[next.name]) {
-          return {
-            ...acc,
-            [next.name]: {
-              ...next,
-              score: acc[next.name].score + next.score,
-            },
-          }
-        }
+  const allBounterHunters = Object.values(bountyHuntersArrayToObject).sort(
+    (a, b) => b.score - a.score
+  )
 
-        return {
-          ...acc,
-          [next.name]: next,
-        }
-      },
-      {}
-    )
-  ).sort((a, b) => b.score - a.score)
-
-  const clients = [
+  const clients: IClient[] = [
     {
       title: "Besu",
       link: "https://besu.hyperledger.org/en/stable/",
@@ -326,7 +361,7 @@ const BugBountiesPage = ({ data, location }) => {
     ? getImage(data.lighthouseDark)
     : getImage(data.lighthouseLight)
 
-  const specs = [
+  const specs: ISpec[] = [
     {
       title: <Translation id="page-upgrades-bug-bounty-title-1" />,
       link: "https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/beacon-chain.md",
