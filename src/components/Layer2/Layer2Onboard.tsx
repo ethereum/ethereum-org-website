@@ -182,16 +182,19 @@ interface Layer2 {
 
 export interface IProps {
   layer2DataCombined: Array<Layer2>
-  ethIcon: any
+  ethIcon: string
+  ethIconAlt: string
 }
 
-const Layer2Onboard: React.FC<IProps> = ({ layer2DataCombined, ethIcon }) => {
+const Layer2Onboard: React.FC<IProps> = ({
+  layer2DataCombined,
+  ethIcon,
+  ethIconAlt,
+}) => {
   const intl = useIntl()
 
-  const [selectedExchange, setSelectedExchange] = useState<
-    Exchange | undefined
-  >(undefined)
-  const [selectedL2, setSelectedL2] = useState<Layer2 | undefined>(undefined)
+  const [selectedExchange, setSelectedExchange] = useState<Exchange>()
+  const [selectedL2, setSelectedL2] = useState<Layer2>()
 
   return (
     <Content>
@@ -221,7 +224,7 @@ const Layer2Onboard: React.FC<IProps> = ({ layer2DataCombined, ethIcon }) => {
               l2.value = l2.name
               return l2
             })}
-            onChange={(selectedOption) => {
+            onChange={(selectedOption: Layer2) => {
               trackCustomEvent({
                 eventCategory: `Selected layer 2 to bridge to`,
                 eventAction: `Clicked`,
@@ -278,7 +281,7 @@ const Layer2Onboard: React.FC<IProps> = ({ layer2DataCombined, ethIcon }) => {
               cex.value = cex.name
               return cex
             })}
-            onChange={(selectedOption) => {
+            onChange={(selectedOption: Exchange) => {
               trackCustomEvent({
                 eventCategory: `Selected cex to onboard`,
                 eventAction: `Clicked`,
@@ -294,7 +297,7 @@ const Layer2Onboard: React.FC<IProps> = ({ layer2DataCombined, ethIcon }) => {
           />
         </RightSelect>
         <EthLogo>
-          <Image image={ethIcon} objectFit="contain" alt={ethIcon} />
+          <Image image={ethIcon} objectFit="contain" alt={ethIconAlt} />
         </EthLogo>
         {selectedExchange && (
           <RightSelected>

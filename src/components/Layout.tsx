@@ -26,6 +26,8 @@ import { scrollIntoView } from "../utils/scrollIntoView"
 import { isMobile } from "../utils/isMobile"
 import { SkipLink, SkipLinkAnchor } from "./SkipLink"
 
+import type { Context } from "../types"
+
 const ContentContainer = styled.div`
   position: relative;
   margin: 0px auto;
@@ -60,14 +62,6 @@ const Main = styled.main`
   flex-grow: 1;
 `
 
-interface PageContext {
-  intl: any
-  isContentEnglish: boolean
-  isLegal: boolean
-  isOutdated: boolean
-  ignoreTranslationBanner: boolean
-}
-
 export interface IProps {
   data?: {
     pageData?: {
@@ -80,7 +74,7 @@ export interface IProps {
     hash: string
   }
   path: string
-  pageContext: PageContext
+  pageContext: Context
 }
 
 const Layout: React.FC<IProps> = ({
