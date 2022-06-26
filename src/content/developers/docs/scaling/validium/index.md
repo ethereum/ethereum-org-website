@@ -84,7 +84,7 @@ Data availability managers in validium attest to the availability of data for of
 
 Validiums differ in their approach to data availability management. Some rely on trusted parties to store state data, while others use randomly assigned validators for the task. 
 
-#### Data availability committee (DAC)
+#### Data availability committee (DAC) {#data-availability-committee) 
 
 To guarantee the availability of off-chain data, some validium solutions appoint a group of trusted entities, collectively known as a data availability committee (DAC), to store copies of the state and provide proof of data availability. DACs are easier to implement and require less coordination since membership is low. 
 
@@ -92,7 +92,7 @@ However, users must trust the DAC to make the data available when needed (e.g., 
 
 [More on data availability committees in validiums](https://medium.com/starkware/data-availability-e5564c416424).
 
-#### Bonded data availability
+#### Bonded data availability {#bonded-data-availability}
 
 Other validiums require participants charged with storing offline data to stake (i.e., lock up) tokens in a smart contract before assuming their roles. This stake serves as a “bond” to guarantee honest behavior among data availability managers and reduces trust assumptions. If these participants fail to prove data availability, the bond is slashed.
 
@@ -100,7 +100,7 @@ In a bonded data availability scheme, anyone can be assigned to hold off-chain d
 
 [More on bonded data availability in validiums](https://blog.matter-labs.io/zkporter-a-breakthrough-in-l2-scaling-ed5e48842fbf).
 
-## Volitions and validium
+## Volitions and validium {#volitions-and-validium}
 
 Validiums offer many benefits but come with trade-offs (most notably, data availability). But, as with many scaling solutions, validiums are suited to specific use-cases—which is why volitions were created.
 
@@ -108,7 +108,7 @@ Volitions combine a ZK-rollup and validium chain and allow users to switch betwe
 
 A decentralized exchange (DEX) may prefer using a validium’s scalable and private infrastructure for high-value trades. It can also use a ZK-rollup for users who want a ZK-rollup's higher security guarantees and trustlessness.
 
-## Validiums and EVM compatibility
+## Validiums and EVM compatibility {#validiums-and-evm-compatibility}
 
 Like ZK-rollups, validiums are mostly suited to simple applications, such as token swaps and payments. Supporting general computation and smart contract execution among validiums is difficult to implement, given the considerable overhead of proving [EVM](/developers/docs/evm/) instructions in a zero-knowledge proof circuit. 
 
@@ -118,7 +118,7 @@ Some teams, however, are attempting to optimize existing EVM opcodes for zk-prov
 
 [More on zkEVMs](https://www.alchemy.com/overviews/zkevm). 
 
-## How do validiums scale Ethereum? {#how-do-validiums-scale-ethereum}
+## How do validiums scale Ethereum? {#scaling-ethereum-with-validiums}
 
 ### 1. Off-chain data storage {#off-chain-data-storage}
 
