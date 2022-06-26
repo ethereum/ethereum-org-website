@@ -507,6 +507,7 @@ const TutorialsPage: React.FC<IProps> = ({ data, pageContext }) => {
         )}
         {state.filteredTutorials.map((tutorial) => {
           return (
+            // Todo: Generate a unique id for each tutorial, to property (youtube url) is duplicated in some tutorials
             <TutorialCard key={tutorial.to} to={tutorial.to} hideArrow>
               <TitleContainer>
                 <Title isExternal={tutorial.isExternal}>{tutorial.title}</Title>
