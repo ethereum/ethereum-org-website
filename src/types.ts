@@ -19,3 +19,16 @@ export type Context = {
   isOutdated: boolean
   isContentEnglish?: boolean
 }
+
+export type ForbidOptional<T = {}> = {
+  [P in keyof T]?: never
+}
+
+type OptionalImageProp = {
+  image: string
+  alt: string
+}
+
+type ForbidOptionalImageProp = ForbidOptional<OptionalImageProp>
+
+export type ImageProp = OptionalImageProp | ForbidOptionalImageProp

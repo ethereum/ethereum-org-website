@@ -162,7 +162,7 @@ Hyperledger Besu est un client Ethereum de niveau entreprise pour les réseaux p
 
 #### Erigon {#erigon}
 
-Erigon, anciennement connu sous le nom de Turbo-Geth, est une fourche de Go Ethereum axée sur la vitesse et l'efficacité de l'espace disque. Erigon est une implémentation entièrement repensée d'Ethereum, actuellement écrite en Go mais pour laquelle des implémentations dans d'autres langages sont prévues. L'objectif d'Erigon est de fournir une implémentation plus rapide, plus modulaire et plus optimisée d'Ethereum. Il peut effectuer une synchronisation complète des nœuds d'archive en utilisant moins de 2 To d'espace disque, et ce en moins de 3 jours.
+Erigon, anciennement connu sous le nom de Erigon, est une fourche de Go Ethereum axée sur la vitesse et l'efficacité de l'espace disque. Erigon est une implémentation entièrement repensée d'Ethereum, actuellement écrite en Go mais pour laquelle des implémentations dans d'autres langages sont prévues. L'objectif d'Erigon est de fournir une implémentation plus rapide, plus modulaire et plus optimisée d'Ethereum. Il peut effectuer une synchronisation complète des nœuds d'archive en utilisant moins de 2 To d'espace disque, et ce en moins de 3 jours.
 
 ### Modes de synchronisation {#sync-modes}
 

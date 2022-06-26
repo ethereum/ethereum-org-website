@@ -29,6 +29,7 @@ import {
 } from "../components/SharedStyledComponents"
 import Emoji from "../components/Emoji"
 import YouTube from "../components/YouTube"
+import PreMergeBanner from "../components/PreMergeBanner"
 
 import { isLangRightToLeft } from "../utils/translations"
 import { Lang } from "../utils/languages"
@@ -156,6 +157,7 @@ const TutorialPage = ({
   }
 
   const isRightToLeft = isLangRightToLeft(mdx.frontmatter.lang as Lang)
+  const showMergeBanner = !!mdx.frontmatter.preMergeBanner
 
   const tocItems = mdx.tableOfContents?.items
 
@@ -164,34 +166,40 @@ const TutorialPage = ({
   const absoluteEditPath = `${editContentUrl}${relativePath}`
 
   return (
-    <Page dir={isRightToLeft ? "rtl" : "ltr"}>
-      <PageMetadata
-        title={mdx.frontmatter.title}
-        description={mdx.frontmatter.description}
-        canonicalUrl={mdx.frontmatter.sourceUrl}
-      />
-      <ContentContainer>
-        <H1>{mdx.frontmatter.title}</H1>
-        <TutorialMetadata tutorial={mdx} />
-        <MobileTableOfContents
-          items={tocItems}
-          maxDepth={mdx.frontmatter.sidebarDepth}
-          editPath={absoluteEditPath}
-          isMobile={true}
+    <div>
+      {showMergeBanner && <PreMergeBanner />}
+      <Page dir={isRightToLeft ? "rtl" : "ltr"}>
+        <PageMetadata
+          title={mdx.frontmatter.title}
+          description={mdx.frontmatter.description}
+          canonicalUrl={mdx.frontmatter.sourceUrl}
         />
-        <MDXProvider components={components}>
-          <MDXRenderer>{mdx.body}</MDXRenderer>
-        </MDXProvider>
-        <Contributors relativePath={relativePath} editPath={absoluteEditPath} />
-      </ContentContainer>
-      {mdx.frontmatter.sidebar && tocItems && (
-        <DesktopTableOfContents
-          items={tocItems}
-          maxDepth={mdx.frontmatter.sidebarDepth}
-          editPath={absoluteEditPath}
-        />
-      )}
-    </Page>
+        <ContentContainer>
+          <H1>{mdx.frontmatter.title}</H1>
+          <TutorialMetadata tutorial={mdx} />
+          <MobileTableOfContents
+            items={tocItems}
+            maxDepth={mdx.frontmatter.sidebarDepth}
+            editPath={absoluteEditPath}
+            isMobile={true}
+          />
+          <MDXProvider components={components}>
+            <MDXRenderer>{mdx.body}</MDXRenderer>
+          </MDXProvider>
+          <Contributors
+            relativePath={relativePath}
+            editPath={absoluteEditPath}
+          />
+        </ContentContainer>
+        {mdx.frontmatter.sidebar && tocItems && (
+          <DesktopTableOfContents
+            items={tocItems}
+            maxDepth={mdx.frontmatter.sidebarDepth}
+            editPath={absoluteEditPath}
+          />
+        )}
+      </Page>
+    </div>
   )
 }
 
@@ -225,6 +233,7 @@ export const query = graphql`
         sidebarDepth
         address
         isOutdated
+        preMergeBanner
       }
       body
       tableOfContents

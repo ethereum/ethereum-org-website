@@ -8,7 +8,7 @@ import Icon from "../Icon"
 import Link from "../Link"
 
 import { useOnClickOutside } from "../../hooks/useOnClickOutside"
-import { translateMessageId } from "../../utils/translations"
+import { isLangRightToLeft, translateMessageId } from "../../utils/translations"
 
 // TODO use framer-motion
 const StyledIcon = styled(Icon)`
@@ -118,6 +118,8 @@ const NavDropdown = ({ section, hasSubNav }) => {
   const intl = useIntl()
   const ref = createRef()
 
+  const isPageRightToLeft = isLangRightToLeft(intl.locale)
+
   useOnClickOutside(ref, () => setIsOpen(false))
 
   // Toggle on `enter` key
@@ -140,6 +142,7 @@ const NavDropdown = ({ section, hasSubNav }) => {
   return (
     <NavListItem ref={ref} aria-label={translateMessageId(ariaLabel, intl)}>
       <DropdownTitle
+        dir={isPageRightToLeft ? "auto" : "ltr"}
         onClick={() => setIsOpen(!isOpen)}
         onKeyDown={onKeyDownHandler}
         tabIndex="0"

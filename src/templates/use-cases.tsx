@@ -36,6 +36,7 @@ import {
 } from "../components/SharedStyledComponents"
 import Emoji from "../components/Emoji"
 import YouTube from "../components/YouTube"
+import PreMergeBanner from "../components/PreMergeBanner"
 
 import { isLangRightToLeft } from "../utils/translations"
 import { getSummaryPoints } from "../utils/getSummaryPoints"
@@ -120,7 +121,7 @@ const InfoTitle = styled.h2`
   margin-top: 0rem;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     text-align: left;
-    font-size: 2.5rem
+    font-size: 2.5rem;
     display: none;
   }
 `
@@ -306,6 +307,7 @@ const UseCasePage = ({
   }
 
   const isRightToLeft = isLangRightToLeft(mdx.frontmatter.lang as Lang)
+  const showMergeBanner = !!mdx.frontmatter.preMergeBanner
   const tocItems = mdx.tableOfContents?.items
   const summaryPoints = getSummaryPoints(mdx.frontmatter)
 
@@ -319,6 +321,14 @@ const UseCasePage = ({
   }
   if (pageContext.slug.includes("nft")) {
     useCase = "nft"
+  }
+  // Use the same styling as DeFi page for hero image
+  if (pageContext.slug.includes("social")) {
+    useCase = "defi"
+  }
+  // Use the same styling as DAOs page for hero image
+  if (pageContext.slug.includes("identity")) {
+    useCase = "dao"
   }
 
   const dropdownLinks = {
@@ -337,23 +347,35 @@ const UseCasePage = ({
         text: "template-usecase-dropdown-dao",
         to: "/dao/",
       },
+      {
+        text: "template-usecase-dropdown-social-networks",
+        to: "/social-networks/",
+      },
+      {
+        text: "template-usecase-dropdown-identity",
+        to: "/decentralized-identity/",
+      },
     ],
   }
 
   return (
     <Container>
-      <StyledBannerNotification shouldShow>
-        <StyledEmoji text=":pencil:" />
-        <div>
-          <Translation id="template-usecase-banner" />{" "}
-          <Link to={absoluteEditPath}>
-            <Translation id="template-usecase-edit-link" />
-          </Link>
-        </div>
-      </StyledBannerNotification>
+      {showMergeBanner ? (
+        <PreMergeBanner />
+      ) : (
+        <StyledBannerNotification shouldShow>
+          <StyledEmoji text=":pencil:" />
+          <div>
+            <Translation id="template-usecase-banner" />{" "}
+            <Link to={absoluteEditPath}>
+              <Translation id="template-usecase-edit-link" />
+            </Link>
+          </div>
+        </StyledBannerNotification>
+      )}
       <HeroContainer>
         <TitleCard>
-          <Emoji size={4} text={mdx.frontmatter.emoji} />
+          <Emoji size={4} text={mdx.frontmatter.emoji!} />
           <Title>{mdx.frontmatter.title}</Title>
           <SummaryBox>
             <ul>
@@ -438,6 +460,7 @@ export const useCasePageQuery = graphql`
           }
         }
         isOutdated
+        preMergeBanner
       }
       body
       tableOfContents

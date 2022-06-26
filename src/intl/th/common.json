@@ -59,8 +59,6 @@
   "consensus-run-beacon-chain": "ร่วมเป็น Consensus Client",
   "consensus-run-beacon-chain-desc": "Ethereum ต้องการ Client ที่รันอยู่มากที่สุด ร่วมช่วยอีกแรงเพื่อประโยชน์ของส่วนรวมใน Ethereum!",
   "consensus-when-shipping": "จะส่งมอบเมื่อใด",
-  "eth-upgrade-what-happened": "เกิดอะไรขึ้นกับ \"Eth2\"",
-  "eth-upgrade-what-happened-description": "เลิกใช้คำว่า \"Eth2\" เพราะเมื่อมี The Merge แล้ว จะใช้คำว่า \"Consensus Layer\" แทน",
   "ethereum": "อีเธอเรียม",
   "ethereum-upgrades": "การอัปเกรดอีเธอเรียม",
   "ethereum-brand-assets": "สินทรัพย์แบรนด์อีเธอเรียม",

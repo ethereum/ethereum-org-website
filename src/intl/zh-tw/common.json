@@ -58,8 +58,6 @@
   "consensus-run-beacon-chain": "運行共識用戶端",
   "consensus-run-beacon-chain-desc": "以太坊需要大量客戶協助運作。請為以太坊的共同利益一起努力！",
   "consensus-when-shipping": "何時生效？",
-  "eth-upgrade-what-happened": "「Eth2」怎麼了?",
-  "eth-upgrade-what-happened-description": "以太坊即將合併時，我們決定不再使用「Eth2」這個稱呼，改以「共識層」取而代之。",
   "ethereum": "以太坊",
   "ethereum-upgrades": "以太坊升級",
   "ethereum-brand-assets": "以太坊品牌資產",

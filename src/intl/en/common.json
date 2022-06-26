@@ -61,8 +61,6 @@
   "consensus-run-beacon-chain": "Run a consensus client",
   "consensus-run-beacon-chain-desc": "Ethereum needs as many clients running as possible. Help with this Ethereum public good!",
   "consensus-when-shipping": "When's it shipping?",
-  "eth-upgrade-what-happened": "What happened to 'Eth2?'",
-  "eth-upgrade-what-happened-description": "The term 'Eth2' has been deprecated as we approach The Merge. The 'consensus layer' encapsulates what was formerly known as 'Eth2.'",
   "ethereum": "Ethereum",
   "ethereum-upgrades": "Ethereum upgrades",
   "ethereum-brand-assets": "Ethereum brand assets",
@@ -217,7 +215,6 @@
   "security": "Security",
   "see-contributors": "See contributors",
   "set-up-local-env": "Set up local environment",
-  "shard-chains": "Shard chains",
   "show-all": "Show all",
   "show-less": "Show less",
   "site-description": "Ethereum is a global, decentralized platform for money and new kinds of applications. On Ethereum, you can write code that controls money, and build applications accessible anywhere in the world.",
@@ -266,5 +263,7 @@
   "defi-page": "Decentralized finance (DeFi)",
   "dao-page": "Decentralized autonomous organisations (DAOs)",
   "nft-page": "Non-fungible tokens (NFTs)",
+  "decentralized-social-networks": "Decentralized social networks",
+  "decentralized-identity": "Decentralized identity",
   "yes": "Yes"
 }

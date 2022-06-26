@@ -4,6 +4,7 @@ description: A high level explanation of the importance of Ethereum client diver
 lang: en
 sidebar: true
 sidebarDepth: 2
+preMergeBanner: true
 ---
 
 The behavior of an Ethereum node is controlled by the client software it runs. There are several production-level Ethereum clients, each one developed and maintained in different languages by separate teams. The clients are built to a common spec that ensures the clients seamlessly communicate with each other and have the same functionality and provide an equivalent user experience. However, at the moment the distribution of clients across nodes is not equal enough to realize this network fortification to its full potential. Ideally, users divide roughly equally across the various clients to bring as much client diversity as possible to the network.
@@ -50,6 +51,10 @@ The two pie charts above show snapshots of the current client diversity for the 
 The execution layer data were obtained from [Ethernodes](https://ethernodes.org) on 23/01/22. Data for consensus clients was obtained from [Michael Sproul](https://github.com/sigp/blockprint). Consensus client data is more difficult to obtain because the Beacon Chain clients do not always have unambiguous traces that can be used to identify them. The data was generated using a classification algorithm that sometimes confuses some of the minority clients (see [here](https://twitter.com/sproulM_/status/1440512518242197516) for more details). In the diagram above, these ambiguous classifications are treated with an either/or label (e.g. Nimbus/Teku). Nevertheless, it is clear that the majority of the network is running Prysm. The data is a snapshot over a fixed set of blocks (in this case Beacon blocks in slots 2048001 to 2164916) and Prysm's dominance has sometimes been higher, exceeding 68%. Despite only being snapshots, the values in the diagram provide a good general sense of the current state of client diversity.
 
 Up to date client diversity data for the consensus layer is now available at https://clientdiversity.org/.
+
+## Execution layer {#execution-layer}
+
+Until now, the conversation around client diversity has focused mainly on the consensus layer. However, the execution client [Geth](https://geth.ethereum.org) currently accounts for around 85% of all nodes. This percentage is problematic for the same reasons as for consensus clients. For example, a bug in Geth affecting transaction handling or constructing execution payloads could lead to consensus clients finalizing problematic or bugged transactions. Therefore, Ethereum would be healthier with a more even distribution of execution clients, ideally with no client representing more than 33% of the network.
 
 ## Use a minority client {#use-minority-client}
 

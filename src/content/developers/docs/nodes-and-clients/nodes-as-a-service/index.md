@@ -4,11 +4,14 @@ description: An entry-level overview of node services, the pros and cons, and po
 lang: en
 sidebar: true
 sidebarDepth: 2
+preMergeBanner: true
 ---
 
 ## Introduction {#Introduction}
 
 Running your own [Ethereum node](/developers/docs/nodes-and-clients/#what-are-nodes-and-clients) can be challenging, especially when getting started or while scaling fast. There are a [number of services](#popular-node-services) that run optimized node infrastructures for you, so you can focus on developing your application or product instead. We'll explain how node services work, the pros and cons for using them and list providers if you are interested in getting started.
+
+**Note: it has been common for users to run consensus clients locally and use a node-as-a-service provider in place of a local execution client. This will not be possible at The Merge - users will be required to run BOTH clients locally. Users relying on node-as-a-service providers for their consensus clients will not merge correctly and will not be able to follow the Ethereum chain. Now is the time to install a local execution client!**
 
 ## Prerequisites {#prerequisites}
 
@@ -44,17 +47,18 @@ Read more about the [benefits of running your own node](/developers/docs/nodes-a
 
 Here is a list of some of the most popular Ethereum node providers, feel free to add any that are missing! Each node service offers different benefits and features in addition to free or paid tiers, you should investigate which ones best suit your needs prior to making a decision.
 
-- [**Alchemy**](https://www.alchemy.com/)
+- [**Alchemy**](https://alchemy.com/)
   - [Docs](https://docs.alchemyapi.io/)
   - Features
-    - Free tier option
-    - Scale as you go
-    - Free archival data
-    - Analytics tools
-    - Dashboard
-    - Unique API endpoints
-    - Webhooks
-    - Direct support
+    - Largest free tier with 300M compute units per month (~30M getLatestBlock requests)
+    - Multichain support for Polygon, Starknet, Optimism, Arbitrum
+    - Powering ~70% of the largest Ethereum dApps and DeFi transaction volume
+    - Real-time webhook alerts via Alchemy Notify
+    - Best-in-class support and reliability / stability
+    - Alchemy's NFT API
+    - Dashboard with Request Explorer, Mempool Watcher, and Composer
+    - Integrated testnet faucet access
+    - Active Discord builder community with 18k users
 - [**Ankr**](https://www.ankr.com/)
   - [Docs](https://docs.ankr.com/)
   - Features

@@ -59,8 +59,6 @@
   "consensus-run-beacon-chain": "ഒരു പൊതു കക്ഷി റൺ ചെയ്യുക",
   "consensus-run-beacon-chain-desc": "Ethereum-ന് കഴിയുന്നത്ര കക്ഷികൾ റൺ ചെയ്യേണ്ടത് ആവശ്യമാണ്. പൊതുനന്മയ്ക്കായി ഈ Ethereum-നെ സഹായിക്കൂ!",
   "consensus-when-shipping": "ഇത് ഷിപ്പ് ചെയ്യുന്നത് എപ്പോഴാണ്?",
-  "eth-upgrade-what-happened": "'Eth2' എന്നതിന് എന്ത് സംഭവിച്ചു?",
-  "eth-upgrade-what-happened-description": "ദി മെർജിനെ സമീപിക്കുന്നതിനാൽ 'Eth2' എന്ന പദം ഒഴിവാക്കിയിരിക്കുന്നു. മുമ്പ് 'Eth2' എന്നറിയപ്പെട്ടിരുന്നതിനെ 'പൊതു വരി' എന്ന പദം ഉൾക്കൊള്ളുന്നു.",
   "ethereum": "Ethereum",
   "ethereum-upgrades": "Ethereum അപ്‌ഗ്രേഡുകൾ",
   "ethereum-brand-assets": "Ethereum ബ്രാന്‍ഡ് ആസ്തികള്‍",

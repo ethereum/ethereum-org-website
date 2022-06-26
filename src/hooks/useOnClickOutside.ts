@@ -5,9 +5,8 @@ import { RefObject, useEffect } from "react"
 export const useOnClickOutside = (
   ref: RefObject<HTMLInputElement>,
   handler: () => void,
-  events: Array<string>
+  events: Array<string> = ["mousedown", "touchstart"]
 ) => {
-  if (!events) events = [`mousedown`, `touchstart`]
   const detectClickOutside = (event: Event) => {
     const element = event.target as HTMLElement
     ref.current && event && !ref.current.contains(element) && handler()
