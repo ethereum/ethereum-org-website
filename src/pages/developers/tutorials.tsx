@@ -1,5 +1,9 @@
-import React, { useState } from "react"
-import styled from "styled-components"
+import React, { DetailedHTMLProps, HTMLAttributes, useState } from "react"
+import styled, {
+  DefaultTheme,
+  ThemedStyledFunction,
+  ThemedStyledProps,
+} from "styled-components"
 import { graphql } from "gatsby"
 import { IntlShape, useIntl } from "gatsby-plugin-intl"
 
@@ -23,6 +27,10 @@ import {
 import { getLocaleTimestamp, INVALID_DATETIME } from "../../utils/time"
 
 import foreignTutorials from "../../data/externalTutorials.json"
+
+export interface ITitleProps {
+  isExternal: boolean
+}
 
 const SubSlogan = styled.p`
   font-size: 1.25rem;
@@ -80,6 +88,7 @@ const Author = styled.p`
   text-transform: uppercase;
 `
 
+// Todo: Reformat this to not use type assertions (this is a workaround to avoid any and keep compiler happy)
 const Title = styled.p`
   color: ${(props) => props.theme.colors.text};
   font-weight: 600;
@@ -89,7 +98,7 @@ const Title = styled.p`
   &:after {
     margin-left: 0.125em;
     margin-right: 0.3em;
-    display: ${(props) => (props.isExternal ? "inline" : "none")};
+    display: ${(props: ITitleProps) => (props.isExternal ? "inline" : "none")};
     content: "↗";
     transition: all 0.1s ease-in-out;
     font-style: normal;
@@ -98,7 +107,6 @@ const Title = styled.p`
     margin-right: 0rem;
   }
 `
-
 const PageTitle = styled.h1`
   font-style: normal;
   font-weight: normal;
@@ -267,10 +275,12 @@ export interface ITutorial {
   isExternal: boolean
 }
 
-const TutorialsPage: React.FC<IProps> = ({ data, pageContext }) => {
-  console.log("data", data)
-  console.log("pageContext", pageContext)
+export interface ITutorialsState {
+  activeTagNames: string[]
+  filteredTutorials: ITutorial[]
+}
 
+const TutorialsPage: React.FC<IProps> = ({ data, pageContext }) => {
   const intl = useIntl()
   // Filter tutorials by language and map to object
   const internalTutorials = data.allTutorials.nodes.map<ITutorial>(
@@ -308,7 +318,7 @@ const TutorialsPage: React.FC<IProps> = ({ data, pageContext }) => {
 
   const allTutorials: ITutorial[] = []
 
-  allTutorials.concat(externalTutorials, internalTutorials)
+  allTutorials.push(...externalTutorials, ...internalTutorials)
 
   const hasTutorialsCheck = allTutorials.some(
     (tutorial) => tutorial.lang === pageContext.language
@@ -320,10 +330,12 @@ const TutorialsPage: React.FC<IProps> = ({ data, pageContext }) => {
         ? tutorial.lang === pageContext.language
         : tutorial.lang === "en"
     )
-    .sort((a, b) => new Date(b.published) - new Date(a.published))
+    .sort((a, b) => {
+      return new Date(b.published).getTime() - new Date(a.published).getTime()
+    })
 
   // Tally all subject tag counts
-  const tagsConcatenated = []
+  const tagsConcatenated: string[] = []
   for (const tutorial of filteredTutorials) {
     tagsConcatenated.push(...tutorial.tags)
   }
@@ -341,7 +353,7 @@ const TutorialsPage: React.FC<IProps> = ({ data, pageContext }) => {
     ([name, totalCount]) => ({ name, totalCount })
   ).sort((a, b) => a.name.localeCompare(b.name))
 
-  const [state, setState] = useState({
+  const [state, setState] = useState<ITutorialsState>({
     activeTagNames: [],
     filteredTutorials: filteredTutorials,
   })
@@ -353,7 +365,7 @@ const TutorialsPage: React.FC<IProps> = ({ data, pageContext }) => {
     })
   }
 
-  const handleTagSelect = (tagName) => {
+  const handleTagSelect = (tagName: string) => {
     const activeTagNames = state.activeTagNames
 
     // Add or remove the selected tag
