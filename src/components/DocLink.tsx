@@ -4,6 +4,11 @@ import Icon from "./Icon"
 import Link from "./Link"
 import Emoji from "./Emoji"
 
+export interface IProps {
+  to: string
+  className?: string
+}
+
 const Container = styled(Link)`
   position: relative;
   z-index: 1;
@@ -43,6 +48,7 @@ const Arrow = styled(Icon)`
   margin: 0rem 1.5rem;
   align-self: center;
   min-width: 2rem;
+  color: ${({ theme }) => theme.colors.text};
 `
 
 const EmojiCell = styled.div`
@@ -50,7 +56,7 @@ const EmojiCell = styled.div`
   align-items: center;
 `
 
-const DocLink = ({ to, children, className }) => (
+const DocLink: React.FC<IProps> = ({ to, children, className }) => (
   <Container to={to} className={className}>
     <EmojiCell>
       <Emoji size={1} text=":page_with_curl:" mr={`1rem`} />
@@ -58,7 +64,7 @@ const DocLink = ({ to, children, className }) => (
     <TextCell>
       <Title>{children}</Title>
     </TextCell>
-    <Arrow name="arrowRight" color={({ theme }) => theme.colors.text} />
+    <Arrow name="arrowRight" />
   </Container>
 )
 
