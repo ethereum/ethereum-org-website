@@ -5,7 +5,9 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { useIntl } from "gatsby-plugin-intl"
 import { translateMessageId } from "../utils/translations"
 
-const Logo = () => {
+export interface IProps {}
+
+const Logo: React.FC<IProps> = () => {
   const intl = useIntl()
   const themeContext = useContext(ThemeContext)
   const isDarkTheme = themeContext.isDark

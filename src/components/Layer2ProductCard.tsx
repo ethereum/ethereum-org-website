@@ -12,7 +12,9 @@ import Link from "./Link"
 import { translateMessageId } from "../utils/translations"
 
 // Styles
-const ImageWrapper = styled.div`
+const ImageWrapper = styled.div<{
+  background: string
+}>`
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -78,7 +80,20 @@ const Children = styled.div`
   margin-bottom: 1rem;
 `
 
-const Layer2ProductCard = ({
+export interface IProps {
+  url?: string
+  background: string
+  image: string
+  name: string
+  description: string
+  note?: string
+  alt?: string
+  bridge?: string
+  tokenLists?: string
+  ecosystemPortal?: string
+}
+
+const Layer2ProductCard: React.FC<IProps> = ({
   url,
   background,
   image,

@@ -16,7 +16,9 @@ export type Context = {
   relativePath: string
   intl: Intl
   language: Lang
+  ignoreTranslationBanner?: boolean
   isOutdated: boolean
+  isLegal?: boolean
   isContentEnglish?: boolean
 }
 
