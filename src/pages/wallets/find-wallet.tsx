@@ -68,9 +68,19 @@ const HeroImage = styled(GatsbyImage)`
 const TableContent = styled(Content)`
   display: flex;
   gap: 24px;
+  height: 90vh;
+  overflow: hidden;
+  position: sticky;
+  top: 76px;
+  margin-bottom: 100px;
 
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     padding: 1rem 0;
+    margin-bottom: 120px;
+  }
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    padding: 1rem 0;
+    margin-bottom: 200px;
   }
 `
 
@@ -127,6 +137,7 @@ const FilterSidebar = styled.div<{ showMobileSidebar: boolean }>`
   display: flex;
   flex-direction: column;
   gap: 0.55rem;
+  overflow-y: scroll;
 
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     width: ${(props) => (props.showMobileSidebar ? "350px" : "0")};
@@ -145,7 +156,7 @@ const FilterTabs = styled.div`
   border-bottom: 1px solid ${(props) => props.theme.colors.primary};
   cursor: pointer;
   position: sticky;
-  top: 76px;
+  top: 0;
   padding-top: 8px;
   min-height: 50px;
   background: ${(props) => props.theme.colors.background};
@@ -154,10 +165,6 @@ const FilterTabs = styled.div`
   p {
     margin: 0;
     letter-spacing: 0.02rem;
-  }
-
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    top: 140px;
   }
 `
 
@@ -191,8 +198,9 @@ const FilterTab = styled.div<{
 
 const WalletContent = styled.div<{ showMobileSidebar: boolean }>`
   width: 75%;
-  table{
-    margin:0;
+  overflow-y: scroll;
+  table {
+    margin: 0;
   }
 
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {

@@ -83,7 +83,7 @@ const Grid = styled.tr`
 
 const WalletContentHeader = styled(Grid)`
   position: sticky;
-  top: 76px;
+  top: 0;
   padding: 8px;
   background: ${(props) => props.theme.colors.background};
   z-index: 1;
@@ -92,10 +92,6 @@ const WalletContentHeader = styled(Grid)`
   th {
     padding: 0;
     border-bottom: none;
-  }
-
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    top: 140px;
   }
 
   @media (max-width: ${(props) => props.theme.breakpoints.s}) {
