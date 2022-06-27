@@ -7945,6 +7945,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "creacodigos",
+      "name": "Jorge Santana",
+      "avatar_url": "https://avatars.githubusercontent.com/u/50615503?v=4",
+      "profile": "http://creacodigos.com",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
