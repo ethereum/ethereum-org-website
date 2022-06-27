@@ -195,7 +195,7 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Intuitive dashboard, analytics suite, RPC composer
     - Advanced security features (JWT, masking, whitelisting)
     - NFT data and analytics API
-    - SOC2 [Certified](https://www.quicknode.com/security)
+    - [SOC2 Certified](https://www.quicknode.com/security)
     - Suitable for Developers to Enterprises
 - [**Rivet**](https://rivet.cloud/)
   - [Docs](https://rivet.readthedocs.io/en/latest/)
