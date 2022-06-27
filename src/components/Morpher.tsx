@@ -39,7 +39,7 @@ const Morpher = () => {
   })
 
   // loops over chars to morph a text to another
-  const morpher = (start, end) => {
+  const morpher = (start: string, end: string): void => {
     // array of chars to randomly morph the text between start and end
     const chars = [
       "a",
@@ -70,9 +70,9 @@ const Morpher = () => {
     const frameRate = 30
 
     // text variables
-    const string = start.split("")
+    const textString = start.split("")
     const result = end.split("")
-    const slen = string.length
+    const slen = textString.length
     const rlen = result.length
 
     // time variables
@@ -92,7 +92,7 @@ const Morpher = () => {
       for (let i = count; i < Math.max(slen, rlen); i++) {
         const random = Math.floor(Math.random() * (chars.length - 1))
         // Change letter
-        string[i] = chars[random]
+        textString[i] = chars[random]
       }
 
       // Morph letters from start to end
@@ -101,14 +101,14 @@ const Morpher = () => {
         count += Math.floor(spentTime / splitTime)
         // Morphing
         for (let j = 0; j < count; j++) {
-          string[j] = result[j] || null
+          textString[j] = result[j] || ""
         }
         // Reset spent time
         spentTime = 0
       }
 
       // Update DOM
-      setState({ ...state, text: string.join("") })
+      setState({ ...state, text: textString.join("") })
 
       // Save present date
       past = present.getTime()
@@ -127,7 +127,7 @@ const Morpher = () => {
     update()
   }
 
-  let morphTimeout = null
+  let morphTimeout: NodeJS.Timeout
 
   useEffect(() => {
     let counter = 0

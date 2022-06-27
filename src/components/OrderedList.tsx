@@ -2,7 +2,12 @@
 import React from "react"
 import styled from "styled-components"
 
-//Styles
+export interface IProps {
+  listData: Array<React.ReactNode>
+  className?: string
+}
+
+// Styles
 const Content = styled.div`
   margin-bottom: 1.45rem;
 
@@ -22,7 +27,7 @@ const Content = styled.div`
     position: absolute;
     top: -2px; /* adjusts circle + number up and down */
     left: -3rem;
-    width: ${({ size }) => (size ? size : "35px")};
+    width: 35px;
     aspect-ratio: 1;
     height: 2rem;
     padding-top: 7px; /* adjusts number up and down */
@@ -33,9 +38,9 @@ const Content = styled.div`
   }
 `
 
-// listData should be a list of strings, or HTML components
+// `listData` should be a list of strings, or HTML components
 // ex: [<p>string<p>] or ['string']
-const OrderedList = ({ listData, className }) => {
+const OrderedList: React.FC<IProps> = ({ listData, className }) => {
   return (
     <Content className={className}>
       <ol>

@@ -7927,6 +7927,33 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "MiloBowman",
+      "name": "MiloBowman",
+      "avatar_url": "https://avatars.githubusercontent.com/u/104447804?v=4",
+      "profile": "https://github.com/MiloBowman",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "tadeodao",
+      "name": "tadeo",
+      "avatar_url": "https://avatars.githubusercontent.com/u/94108039?v=4",
+      "profile": "https://github.com/tadeodao",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "creacodigos",
+      "name": "Jorge Santana",
+      "avatar_url": "https://avatars.githubusercontent.com/u/50615503?v=4",
+      "profile": "http://creacodigos.com",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
