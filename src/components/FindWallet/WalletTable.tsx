@@ -229,6 +229,7 @@ const FlexInfo = styled.div`
   display: flex;
   gap: 1rem;
   align-items: center;
+  padding-left: 0.3rem;
 
   p {
     padding: 0;
