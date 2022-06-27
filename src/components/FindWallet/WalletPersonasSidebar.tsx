@@ -134,6 +134,7 @@ const Persona = styled.div<{
 
 const Title = styled.div`
   display: flex;
+  gap: 0.5rem;
   align-items: center;
   gap: "1rem";
   margin-bottom: 0.6rem;
@@ -164,6 +165,11 @@ const Grid = styled.div`
   width: 100%;
   column-gap: 0.2rem;
   row-gap: 0.5rem;
+`
+
+const IconContainer = styled.div`
+  width: 14px;
+  height: 14px;
 `
 
 const StyledIcon = styled(Icon)<{ selected: boolean }>`
@@ -551,11 +557,13 @@ const WalletPersonasSidebar = ({
             }}
           >
             <Title>
-              <StyledIcon
-                name="check"
-                selected={selectedPersona === idx}
-                size="2rem"
-              />
+              <IconContainer>
+                <StyledIcon
+                  name="check"
+                  selected={selectedPersona === idx}
+                  size="2rem"
+                />
+              </IconContainer>
               <H3>{persona.title}</H3>
             </Title>
             <h4>{persona.description}</h4>
