@@ -1,5 +1,5 @@
 import React from "react"
-import styled, { DefaultTheme, useTheme } from "styled-components"
+import styled, { useTheme } from "styled-components"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { graphql, PageProps } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
@@ -27,11 +27,12 @@ import {
   BannerGridCell,
   BannerImage,
 } from "../components/BannerGrid"
+import AdoptionChart from "../components/AdoptionChart"
+import EnergyConsumptionChart from "../components/EnergyConsumptionChart"
 
 import { translateMessageId } from "../utils/translations"
+
 import { Context } from "../types"
-import { StaticImage } from "gatsby-plugin-image"
-import AdoptionChart from "../components/AdoptionChart"
 
 const Slogan = styled.p`
   font-style: normal;
@@ -231,6 +232,49 @@ const WhatIsEthereumPage = ({
       title: "All products are composable",
       description:
         "Since all apps are built on the same blockchain / share the same state, they can build off each other (similar to legos). This allows for better products and experiences being built all the time.",
+    },
+  ]
+
+  const chartData = [
+    {
+      name: "Youtube",
+      amount: 244,
+      color: "#FF0000",
+    },
+    {
+      name: "Gold mining",
+      amount: 240,
+      color: "#D7B14A",
+    },
+    {
+      name: "BTC PoW",
+      amount: 200,
+      color: "#F2A900",
+    },
+    {
+      name: "ETH PoW",
+      amount: 112,
+      color: "#C1B6F5",
+    },
+    {
+      name: "Netflix",
+      amount: 94,
+      color: "#E50914",
+    },
+    {
+      name: "Gaming",
+      amount: 34,
+      color: "#71BB8A",
+    },
+    {
+      name: "Paypal",
+      amount: 0.26,
+      color: "#C1B6F5",
+    },
+    {
+      name: "ETH PoS",
+      amount: 0.01,
+      color: "#C1B6F5",
     },
   ]
 
@@ -729,7 +773,12 @@ const WhatIsEthereumPage = ({
             </ButtonRow>
           </p>
         </Width60>
-        <Width40>{/* <StaticImage src="/chart1.svg" /> */}</Width40>
+        <Width40>
+          <EnergyConsumptionChart
+            data={chartData}
+            legend="Annual Energy Consumption in TW/yr"
+          />
+        </Width40>
       </TwoColumnContent>
 
       <Content>
