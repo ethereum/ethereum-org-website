@@ -287,6 +287,11 @@ const Features = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 0.2rem;
+
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
 `
 
 const ColoredLine = styled.div<{ color: string }>`
