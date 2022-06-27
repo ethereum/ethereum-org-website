@@ -280,5 +280,17 @@
     "emoji": ":us:",
     "location": "Chicago",
     "link": "https://www.meetup.com/Chicago-Ethereum-Meetup/"
+  },
+  {
+    "title": "Web3Dubai",
+    "emoji": ":uae:",
+    "location": "Dubai",
+    "link": "https://www.meetup.com/web3dubai/"
+  },
+  {
+    "title": "DeFi Dubai",
+    "emoji": ":uae:",
+    "location": "Dubai",
+    "link": "https://www.meetup.com/defi-dubai/"
   }
 ]
