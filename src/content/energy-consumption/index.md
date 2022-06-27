@@ -40,6 +40,7 @@ More relevant is the overall energy consumption and carbon footprint of the netw
 
 ![Comparison of energy expenditure across industries](./energy.png)
 
+The figure above shows the annual energy consumption in TWh/yr for various industries (retrieved in June 2022).
 _Note that the estimates presented in the plot are from publicly available sources that have been linked to in the text below. They are
 illustrative and do not represent an official estimate, promise or forecast._
 
