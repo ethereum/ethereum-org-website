@@ -557,7 +557,12 @@ const WalletTable = ({ data, filters, walletData }) => {
           <StyledSelect
             className="react-select-container"
             classNamePrefix="react-select"
-            options={filteredFeatureDropdownItems}
+            options={[
+              {
+                label: "Choose to compare",
+                options: [...filteredFeatureDropdownItems],
+              },
+            ]}
             onChange={(selectedOption) => {
               setFirstFeatureSelect(selectedOption)
             }}
@@ -569,7 +574,12 @@ const WalletTable = ({ data, filters, walletData }) => {
           <StyledSelect
             className="react-select-container"
             classNamePrefix="react-select"
-            options={filteredFeatureDropdownItems}
+            options={[
+              {
+                label: "Choose to compare",
+                options: [...filteredFeatureDropdownItems],
+              },
+            ]}
             onChange={(selectedOption) => {
               setSecondFeatureSelect(selectedOption)
             }}
@@ -581,7 +591,12 @@ const WalletTable = ({ data, filters, walletData }) => {
           <StyledSelect
             className="react-select-container"
             classNamePrefix="react-select"
-            options={filteredFeatureDropdownItems}
+            options={[
+              {
+                label: "Choose to compare",
+                options: [...filteredFeatureDropdownItems],
+              },
+            ]}
             onChange={(selectedOption) => {
               setThirdFeatureSelect(selectedOption)
             }}
