@@ -50,7 +50,7 @@ To simplify, let's think about running a node on both a local physical machine a
 
 Both options have different advantages summed up above. If you are looking for a cloud solution, in addition to many traditional cloud computing providers, there are also services focused on deploying nodes. For example:
 
-- [QuikNode](https://www.quiknode.io/)
+- [QuickNode](https://www.quicknode.com/)
 - [Blockdaemon](https://blockdaemon.com)
 - [LunaNode](https://www.lunanode.com/)
 - [Alchemy](https://www.alchemy.com/)
