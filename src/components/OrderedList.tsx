@@ -27,7 +27,7 @@ const Content = styled.div`
     position: absolute;
     top: -2px; /* adjusts circle + number up and down */
     left: -3rem;
-    width: "35px";
+    width: 35px;
     aspect-ratio: 1;
     height: 2rem;
     padding-top: 7px; /* adjusts number up and down */
