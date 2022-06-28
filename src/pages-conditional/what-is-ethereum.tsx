@@ -964,7 +964,7 @@ export const twoColImage = graphql`
   fragment twoColImage on File {
     childImageSharp {
       gatsbyImageData(
-        height: 400
+        width: 400
         layout: FIXED
         placeholder: BLURRED
         quality: 100
@@ -1004,34 +1004,13 @@ export const query = graphql`
       }
     }
     whatIsCryptocurrency: file(relativePath: { eq: "wallet.png" }) {
-      childImageSharp {
-        gatsbyImageData(
-          width: 400
-          layout: FIXED
-          placeholder: BLURRED
-          quality: 100
-        )
-      }
+      ...twoColImage
     }
     diffEthAndBtc: file(relativePath: { eq: "eth.png" }) {
-      childImageSharp {
-        gatsbyImageData(
-          width: 470
-          layout: FIXED
-          placeholder: BLURRED
-          quality: 100
-        )
-      }
+      ...twoColImage
     }
     stats: file(relativePath: { eq: "upgrades/newrings.png" }) {
-      childImageSharp {
-        gatsbyImageData(
-          width: 433
-          layout: FIXED
-          placeholder: BLURRED
-          quality: 100
-        )
-      }
+      ...twoColImage
     }
     ethCoin: file(relativePath: { eq: "what-is-eth/eth.png" }) {
       childImageSharp {
@@ -1044,48 +1023,20 @@ export const query = graphql`
       }
     }
     meetEth: file(relativePath: { eq: "upgrades/merge.png" }) {
-      childImageSharp {
-        gatsbyImageData(
-          width: 485
-          layout: FIXED
-          placeholder: BLURRED
-          quality: 100
-        )
-      }
+      ...twoColImage
     }
     whoRunsEthereum: file(
       relativePath: { eq: "run-a-node/ethereum-inside.png" }
     ) {
-      childImageSharp {
-        gatsbyImageData(
-          width: 400
-          layout: FIXED
-          placeholder: BLURRED
-          quality: 100
-        )
-      }
+      ...twoColImage
     }
     whatAreSmartContracts: file(
       relativePath: { eq: "infrastructure_transparent.png" }
     ) {
-      childImageSharp {
-        gatsbyImageData(
-          width: 437
-          layout: FIXED
-          placeholder: BLURRED
-          quality: 100
-        )
-      }
+      ...twoColImage
     }
     criminalActivity: file(relativePath: { eq: "finance_transparent.png" }) {
-      childImageSharp {
-        gatsbyImageData(
-          width: 370
-          layout: FIXED
-          placeholder: BLURRED
-          quality: 100
-        )
-      }
+      ...twoColImage
     }
     developers: file(relativePath: { eq: "developers-eth-blocks.png" }) {
       ...calloutImage
