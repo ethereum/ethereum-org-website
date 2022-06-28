@@ -251,7 +251,7 @@ const lightColors = {
   layer2Gradient:
     "linear-gradient(85.12deg, rgba(185, 185, 241, 0.2) 0%, rgba(84, 132, 234, 0.2) 56.29%, rgba(58, 142, 137, 0.2) 99.99%)",
   feedbackGradient:
-    "linear-gradient(83.46deg, #2C2C3211 7.03%, #44404D11 52.42%, #30303811 98.77%)",
+    "linear-gradient(102.7deg, rgba(185, 185, 241, 0.2) 0%, rgba(84, 132, 234, 0.2) 51.56%, rgba(58, 142, 137, 0.2) 100%)",
 }
 
 // TODO replace random variables w/ baseColor variables
