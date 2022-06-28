@@ -93,7 +93,7 @@ A comparison to traditional science
    </td>
   </tr>
   <tr>
-   <td>You publish your work online on your own terms.
+   <td>New models for publishing can be developed that use Web3 primitives for trust, transparency and universal access.
    </td>
    <td>You publish through established pathways.
    </td>
