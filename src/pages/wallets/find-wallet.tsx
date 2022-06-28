@@ -382,7 +382,16 @@ const FindWalletPage = ({ data, location }) => {
               active={showFeatureFilters}
               onClick={() => setShowFeatureFilters(true)}
             >
-              <p>Feature Filters</p>
+              <p>
+                Feature Filters (
+                {Object.values(filters).reduce((acc, filter) => {
+                  if (filter) {
+                    acc += 1
+                  }
+                  return acc
+                }, 0)}
+                )
+              </p>
             </FilterTab>
           </FilterTabs>
           <ResetContainer onClick={resetFilters}>
