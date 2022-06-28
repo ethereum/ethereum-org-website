@@ -33,6 +33,7 @@ import Swap from "../../assets/wallets/swap.svg"
 import Eip1559 from "../../assets/wallets/eip1559.svg"
 import Warning from "../../assets/staking/warning-product-glyph.svg"
 import GreenCheck from "../../assets/staking/green-check-product-glyph.svg"
+import { filter } from "lodash"
 
 // Styles
 const Container = styled.table`
@@ -551,13 +552,30 @@ const WalletTable = ({ data, filters, walletData }) => {
   const filteredWallets = walletCardData.filter((wallet) => {
     let showWallet = true
 
-    Object.keys(filters).forEach((filter) => {
+    const featureFilterKeys = featureDropdownItems.map((item) => item.filterKey)
+    const deviceFiltersTrue = Object.entries(filters)
+      .filter((item) => !featureFilterKeys.includes(item[0]))
+      .filter((item) => item[1])
+      .map((item) => item[0])
+
+    let orCheck = true
+
+    for (let item of deviceFiltersTrue) {
+      if (wallet[item]) {
+        orCheck = true
+        break
+      } else {
+        orCheck = false
+      }
+    }
+
+    featureFilterKeys.forEach((filter) => {
       if (filters[filter] && showWallet === true) {
         showWallet = filters[filter] === wallet[filter]
       }
     })
 
-    return showWallet
+    return orCheck && showWallet
   })
 
   const filteredFeatureDropdownItems = [...featureDropdownItems].filter(
