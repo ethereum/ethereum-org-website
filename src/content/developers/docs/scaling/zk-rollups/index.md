@@ -5,23 +5,22 @@ lang: en
 sidebar: true
 --- 
 
-Zero-knowledge rollups (ZK-rollups) are layer 2 [scaling solutions](/developers/docs/scaling/) that improve throughput on Ethereum Mainnet through off-chain execution. ZK-rollups process transactions independently, but post state data to Mainnet as `calldata`. They also produce cryptographic proofs of validity for transaction batches to guarantee the correctness of off-chain computation. 
+Zero-knowledge rollups (ZK-rollups) are layer 2 [scaling solutions](/developers/docs/scaling/) that increase throughput on Ethereum Mainnet by moving computation and state-storage off-chain. ZK-rollups can process thousands of transactions in a batch and then only post some minimal summary data to Mainnet. This summary data defines the changes that should be made to the Ethereum state and some cryptographic proof that those changes are correct.
 
 ## Prerequisites {#prerequisites}
 
-You should have a good understanding of all the foundational topics and a high-level understanding of [Ethereum scaling](/developers/docs/scaling/). Implementing scaling solutions such as rollups is an advanced topic as the technology is less battle-tested and continues to be researched and developed.
+You should have read and understood our page on [Ethereum scaling](/developers/docs/scaling/) and [layer 2](/layer-2). 
 
-Looking for a more beginner-friendly resource? See our [introduction to layer 2](/layer-2/).
 
 ## What are zero-knowledge rollups? {#what-are-zk-rollups}
 
-**Zero-knowledge rollups (ZK-rollups)** execute transactions on layer 2 (L2), which they bundle (or "roll-up") into batches. ZK-rollup operators produce [validity proofs](/glossary/#validity-proof) to prove the validity of off-chain transactions before submitting batches on-chain. These proofs can come in the form of ZK-SNARKs (Zero-Knowledge Succinct Non-Interactive Argument of Knowledge) or ZK-STARKs (Zero-Knowledge Scalable Transparent Argument of Knowledge). 
+**Zero-knowledge rollups (ZK-rollups)** bundle (or 'roll up') transactions into batches that are executed off-chain. Off-chain computation reduces the amount of data that has to be posted to the blockchain. ZK-rollup operators submit a summary of the changes required to represent all the transactions in a batch rather than sending each transaction individually. They also produce [validity proofs](/glossary/#validity-proof) to prove the correctness of their changes. The validity proof demonstrates with cryptographic certainty that the proposed changes to Ethereum's state are truly the end-result of executing all the transactions in the batch. 
 
-The ZK-rollup smart contract maintains the state of all transactions on the L2 chain, and this state can only be updated with a validity proof. This means that ZK-rollups only need to provide validity proofs to finalize transactions on the layer 1 (L1) chain instead of posting all the transaction data like [optimistic rollups](/developers/docs/scaling/optimistic-rollups/). 
+The ZK-rollup smart contract maintains the state of all transactions on the L2 chain, and this state can only be updated with a validity proof. A validity proof is a cryptographic assurance that the state-change proposed by the rollup is really the result of executing the given batch of transactions.This means that ZK-rollups only need to provide validity proofs to finalize transactions on the layer 1 (L1) chain instead of posting all the transaction data like [optimistic rollups](/developers/docs/scaling/optimistic-rollups/). 
 
-There are no delays when moving funds from ZK-rollups (L2) to Ethereum (L1) because exit transactions are finalized once the ZK-rollup contract verifies the validity proof. Conversely, withdrawing funds from optimistic rollups is subject to a delay to allow anyone to challenge the exit transaction with a [fraud proof](/glossary/#fraud-proof). 
+There are no delays when moving funds from ZK-rollups (L2) to Ethereum (L1) because exit transactions are executed once the ZK-rollup contract verifies the validity proof. Conversely, withdrawing funds from optimistic rollups is subject to a delay to allow anyone to challenge the exit transaction with a [fraud proof](/glossary/#fraud-proof). 
 
-ZK-rollups write transactions to Ethereum as `calldata`, which allows anyone to reconstruct the rollup’s state independently. They also use compression techniques to reduce transaction data—for example, accounts are represented by an index rather than an address, which saves 28 bytes of data. On-chain data publication is a significant cost for rollups, so data compression can reduce fees for users.  
+ZK-rollups write transactions to Ethereum as `calldata`. `calldata` is where data that is included in external calls to smart contract functions gets stored. Information in `calldata` is published on the blockchain, allowing anyone to reconstruct the rollup’s state independently. ZK-rollups use compression techniques to reduce transaction data—for example, accounts are represented by an index rather than an address, which saves 28 bytes of data. On-chain data publication is a significant cost for rollups, so data compression can reduce fees for users.  
 
 ## How do zk-rollups interact with Ethereum? {#zk-rollups-and-ethereum}
 
@@ -35,9 +34,9 @@ ZK-rollups rely on the main Ethereum protocol for the following:
 
 ZK-rollups publish state data for every transaction processed off-chain to Ethereum. With this data, it is possible for individuals or businesses to reproduce the rollup’s state and validate the chain themselves. Ethereum makes this data available to all participants of the network as `calldata`. 
 
-ZK-rollups don’t actually need to publish a lot of transaction data on-chain since validity proofs already verify the authenticity of state transitions. Nonetheless, storing data on-chain is still important for many reasons. Putting state data on-chain allows anyone to rebuild the L2 chain's state and produce batches, preventing malicious operators from arbitrarily freezing the chain. 
+ZK-rollups don’t need to publish much transaction data on-chain because validity proofs already verify the authenticity of state transitions. Nevertheless, storing data on-chain is still important because it allows permissionless, independent verification of the L2 chain's state which in turn allows anyone to submit batches of transactions, preventing malicious operators from censoring or freezing the chain. 
 
-Besides, users cannot interact with the rollup if operators don't publish data on-chain. An inability to access state data means users cannot know the state of their accounts or initiate transactions (e.g., withdrawals) based on state updates.  
+On-chain is required for users to interact with the rollup. Without access to state data users cannot query their account balance or initiate transactions (e.g., withdrawals) that rely on state information.  
 
 ### Transaction finality {#transaction-finality}
 
