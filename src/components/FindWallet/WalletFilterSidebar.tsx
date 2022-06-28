@@ -6,6 +6,9 @@ import styled from "styled-components"
 import Checkbox from "../Checkbox"
 import Icon from "../Icon"
 
+// Data
+import walletFilterData from "../../data/wallets/wallet-filters"
+
 // Icons
 import Browser from "../../assets/wallets/browser.svg"
 import BuyCrypto from "../../assets/wallets/buy_crypto.svg"
@@ -147,73 +150,73 @@ const WalletFilterSidebar = ({
       open: true,
       items: [
         {
-          title: "Mobile",
+          title: walletFilterData.mobile.title,
           icon: <Mobile />,
-          description: "Phone or mobile based wallets.",
-          filterKey: undefined,
+          description: walletFilterData.mobile.description,
+          filterKey: walletFilterData.mobile.filterKey,
           showOptions: filters.android || filters.ios ? true : false,
           options: [
             {
-              name: "Android",
-              filterKey: "android",
+              name: walletFilterData.android.title,
+              filterKey: walletFilterData.android.filterKey,
               inputType: "checkbox",
             },
             {
-              name: "iOS",
-              filterKey: "ios",
+              name: walletFilterData.ios.title,
+              filterKey: walletFilterData.ios.filterKey,
               inputType: "checkbox",
             },
           ],
         },
         {
-          title: "Desktop",
+          title: walletFilterData.desktop.title,
           icon: <Desktop />,
-          description: "Desktop based wallets.",
-          filterKey: undefined,
+          description: walletFilterData.desktop.description,
+          filterKey: walletFilterData.desktop.filterKey,
           showOptions:
             filters.linux || filters.windows || filters.macOS ? true : false,
           options: [
             {
-              name: "Linux",
-              filterKey: "linux",
+              name: walletFilterData.linux.title,
+              filterKey: walletFilterData.linux.filterKey,
               inputType: "checkbox",
             },
             {
-              name: "Windows",
-              filterKey: "windows",
+              name: walletFilterData.windows.title,
+              filterKey: walletFilterData.windows.filterKey,
               inputType: "checkbox",
             },
             {
-              name: "macOS",
-              filterKey: "macOS",
+              name: walletFilterData.macos.title,
+              filterKey: walletFilterData.macos.filterKey,
               inputType: "checkbox",
             },
           ],
         },
         {
-          title: "Browser",
+          title: walletFilterData.browser.title,
           icon: <Browser />,
-          description: "Browser extension wallets.",
-          filterKey: undefined,
+          description: walletFilterData.browser.description,
+          filterKey: walletFilterData.browser.filterKey,
           showOptions: filters.firefox || filters.chrome ? true : false,
           options: [
             {
-              name: "Firefox",
-              filterKey: "firefox",
+              name: walletFilterData.firefox.title,
+              filterKey: walletFilterData.firefox.filterKey,
               inputType: "checkbox",
             },
             {
-              name: "Chromium",
-              filterKey: "chromium",
+              name: walletFilterData.chromium.title,
+              filterKey: walletFilterData.chromium.filterKey,
               inputType: "checkbox",
             },
           ],
         },
         {
-          title: "Hardware",
+          title: walletFilterData.hardware.title,
           icon: <Hardware />,
-          description: "Hardware baesd wallets.",
-          filterKey: "hardware",
+          description: walletFilterData.hardware.description,
+          filterKey: walletFilterData.hardware.filterKey,
           showOptions: undefined,
           options: [],
         },
@@ -224,19 +227,18 @@ const WalletFilterSidebar = ({
       open: true,
       items: [
         {
-          title: "Open source",
+          title: walletFilterData.open_source.title,
           icon: <OpenSource />,
-          description:
-            "Wallet code for the wallet is open sourced for users to inspect and edit.",
-          filterKey: "open_source",
+          description: walletFilterData.open_source.description,
+          filterKey: walletFilterData.open_source.filterKey,
           showOptions: undefined,
           options: [],
         },
         {
-          title: "Non-custodial",
+          title: walletFilterData.non_custodial.title,
           icon: <NonCustodial />,
-          description: "Who has control over the keys for your wallet.",
-          filterKey: "non_custodial",
+          description: walletFilterData.non_custodial.description,
+          filterKey: walletFilterData.non_custodial.filterKey,
           showOptions: undefined,
           options: [],
         },
@@ -247,108 +249,98 @@ const WalletFilterSidebar = ({
       open: true,
       items: [
         {
-          title: "Hardware support",
+          title: walletFilterData.hardware_support.title,
           icon: <HardwareSupport />,
-          description:
-            "You can connect a hardware wallet and sign transactions with it.",
-          filterKey: "hardware_support",
+          description: walletFilterData.hardware_support.description,
+          filterKey: walletFilterData.hardware_support.filterKey,
           showOptions: undefined,
           options: [],
         },
         {
-          title: "WalletConnect",
+          title: walletFilterData.walletconnect.title,
           icon: <WalletConnect />,
-          description:
-            "You can connect to applications that support WalletConnect.",
-          filterKey: "walletconnect",
+          description: walletFilterData.walletconnect.description,
+          filterKey: walletFilterData.walletconnect.filterKey,
           showOptions: undefined,
           options: [],
         },
         {
-          title: "RPC importing",
+          title: walletFilterData.rpc_importing.title,
           icon: <RPCImporting />,
-          description:
-            "You can import RPC endpoint data to connect to different nodes/networks.",
-          filterKey: "rpc_importing",
+          description: walletFilterData.rpc_importing.description,
+          filterKey: walletFilterData.rpc_importing.filterKey,
           showOptions: undefined,
           options: [],
         },
         {
-          title: "NFT support",
+          title: walletFilterData.nft_support.title,
           icon: <NFTSupport />,
-          description:
-            "You can view and interact with your NFTs in the wallet.",
-          filterKey: "nft_support",
+          description: walletFilterData.nft_support.description,
+          filterKey: walletFilterData.nft_support.filterKey,
           showOptions: undefined,
           options: [],
         },
         {
-          title: "Connect to decentralized apps",
+          title: walletFilterData.connect_to_dapps.title,
           icon: <ConnectDapps />,
-          description:
-            "You can connect to applications build on the Ethereum network.",
-          filterKey: "connect_to_dapps",
+          description: walletFilterData.connect_to_dapps.description,
+          filterKey: walletFilterData.connect_to_dapps.filterKey,
           showOptions: undefined,
           options: [],
         },
         {
-          title: "Staking",
+          title: walletFilterData.staking.title,
           icon: <Staking />,
-          description:
-            "You can use a simple interface to stake directly in the wallet.",
-          filterKey: "staking",
+          description: walletFilterData.staking.description,
+          filterKey: walletFilterData.staking.filterKey,
           showOptions: undefined,
           options: [],
         },
         {
-          title: "Swaps",
+          title: walletFilterData.swaps.title,
           icon: <Swap />,
-          description: "Swap ERC-20 tokens right in the wallet.",
-          filterKey: "swaps",
+          description: walletFilterData.swaps.description,
+          filterKey: walletFilterData.swaps.filterKey,
           showOptions: undefined,
           options: [],
         },
         {
-          title: "Layer 2",
+          title: walletFilterData.layer_2.title,
           icon: <Layer2 />,
-          description: "You can use layer 2 networks in the wallet.",
-          filterKey: "layer_2",
+          description: walletFilterData.layer_2.description,
+          filterKey: walletFilterData.layer_2.filterKey,
           showOptions: undefined,
           options: [],
         },
         {
-          title: "Gas fee customization",
+          title: walletFilterData.gas_fee_customization.title,
           icon: <GasFeeCustomization />,
-          description:
-            "The user is able to customize their gas inputs (base free, priority fee, max fee).",
-          filterKey: "gas_fee_customization",
+          description: walletFilterData.gas_fee_customization.description,
+          filterKey: walletFilterData.gas_fee_customization.filterKey,
           showOptions: undefined,
           options: [],
         },
         {
-          title: "ENS support",
+          title: walletFilterData.ens_support.title,
           icon: <ENSSupport />,
-          description:
-            "The wallet supports sending transactions to ENS addresses.",
-          filterKey: "ens_support",
+          description: walletFilterData.ens_support.description,
+          filterKey: walletFilterData.ens_support.filterKey,
           showOptions: undefined,
           options: [],
         },
         {
-          title: "Token importing",
+          title: walletFilterData.erc_20_support.title,
           icon: <ERC20Support />,
-          description:
-            "Can import ERC-20 token contract addresses into the wallet.",
-          filterKey: "erc_20_support",
+          description: walletFilterData.erc_20_support.description,
+          filterKey: walletFilterData.erc_20_support.filterKey,
           showOptions: undefined,
           options: [],
         },
         {
-          title: "EIP-1559 support",
+          title: walletFilterData.eip_1559_support.title,
           icon: <Eip1559 />,
-          description:
-            "Supports type 2 transactions saving users money in gas fees.",
-          filterKey: "eip_1559_support",
+          description: walletFilterData.eip_1559_support.description,
+          filterKey: walletFilterData.eip_1559_support.filterKey,
           showOptions: undefined,
           options: [],
         },
@@ -359,20 +351,18 @@ const WalletFilterSidebar = ({
       open: true,
       items: [
         {
-          title: "Buy crypto",
+          title: walletFilterData.buy_crypto.title,
           icon: <BuyCrypto />,
-          description:
-            "User is able to buy crypto with fiat directly in the wallet.",
-          filterKey: "buy_crypto",
+          description: walletFilterData.buy_crypto.description,
+          filterKey: walletFilterData.buy_crypto.filterKey,
           showOptions: undefined,
           options: [],
         },
         {
-          title: "Withdraw crypto",
+          title: walletFilterData.withdraw_crypto.title,
           icon: <WithdrawCrypto />,
-          description:
-            "User is able to withdraw to fiat directly in the wallet.",
-          filterKey: "withdraw_crypto",
+          description: walletFilterData.withdraw_crypto.description,
+          filterKey: walletFilterData.withdraw_crypto.filterKey,
           showOptions: undefined,
           options: [],
         },
@@ -383,20 +373,18 @@ const WalletFilterSidebar = ({
       open: true,
       items: [
         {
-          title: "Multisig",
+          title: walletFilterData.multisig.title,
           icon: <Multisig />,
-          description:
-            "Wallets that require two or more signatures from private keys for a transaction.",
-          filterKey: "multisig",
+          description: walletFilterData.multisig.description,
+          filterKey: walletFilterData.multisig.filterKey,
           showOptions: undefined,
           options: [],
         },
         {
-          title: "Social recovery",
+          title: walletFilterData.social_recovery.title,
           icon: <SocialRecover />,
-          description:
-            "Wallets that allow guardians to change the signing key for smart contract wallets.",
-          filterKey: "social_recovery",
+          description: walletFilterData.social_recovery.description,
+          filterKey: walletFilterData.social_recovery.filterKey,
           showOptions: undefined,
           options: [],
         },

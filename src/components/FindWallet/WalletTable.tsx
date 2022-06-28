@@ -7,6 +7,10 @@ import styled from "styled-components"
 import Icon from "../Icon"
 import Link from "../Link"
 import { StyledSelect as Select } from "../SharedStyledComponents"
+import Tooltip from "../Tooltip"
+
+// Data
+import walletFilterData from "../../data/wallets/wallet-filters"
 
 // Icons
 import BuyCrypto from "../../assets/wallets/buy_crypto.svg"
@@ -317,17 +321,6 @@ const FeatureLabel = styled.div<{ hasFeature: boolean }>`
   padding: 0.2rem;
   margin: 0 1rem;
   position: relative;
-  svg {
-    width: 1.75rem;
-    height: 1.75rem;
-
-    path {
-      fill: ${(props) =>
-        props.hasFeature
-          ? props.theme.colors.text
-          : props.theme.colors.secondary};
-    }
-  }
   p {
     margin-bottom: 0;
     color: ${(props) =>
@@ -343,6 +336,20 @@ const FeatureLabel = styled.div<{ hasFeature: boolean }>`
     background: ${(props) =>
       props.hasFeature ? "rgba(0, 0, 0, 0)" : props.theme.colors.secondary};
     position: absolute;
+  }
+`
+
+const FeatureIcon = styled.div<{ hasFeature: boolean }>`
+  svg {
+    width: 1.75rem;
+    height: 1.75rem;
+
+    path {
+      fill: ${(props) =>
+        props.hasFeature
+          ? props.theme.colors.text
+          : props.theme.colors.secondary};
+    }
   }
 `
 
@@ -377,6 +384,16 @@ const LastUpdated = styled.p`
   color: ${(props) => props.theme.colors.text300};
   margin: 2rem 0;
   font-size: 0.875rem;
+`
+
+const StyledIcon = styled(Icon)<{ hasFeature: boolean }>`
+  fill: ${(props) =>
+    props.hasFeature ? props.theme.colors.text : props.theme.colors.secondary};
+  &:hover,
+  &:active,
+  &:focus {
+    fill: ${({ theme }) => theme.colors.primary};
+  }
 `
 
 // Constants
@@ -475,7 +492,7 @@ const featureDropdownItems = [
   {
     label: "EIP-1559 support",
     value: "EIP-1559 support",
-    filter: "eip_1559_support",
+    filterKey: "eip_1559_support",
     category: "feature",
     icon: <Eip1559 />,
   },
@@ -716,8 +733,27 @@ const WalletTable = ({ data, filters, walletData }) => {
                               <FeatureLabel
                                 hasFeature={wallet[feature.filterKey!]}
                               >
-                                {feature.icon}
+                                <FeatureIcon
+                                  hasFeature={wallet[feature.filterKey!]}
+                                >
+                                  {feature.icon}
+                                </FeatureIcon>
                                 <p>{feature.label}</p>
+                                <Tooltip
+                                  content={
+                                    <p>
+                                      {
+                                        walletFilterData[feature.filterKey]
+                                          .description
+                                      }
+                                    </p>
+                                  }
+                                >
+                                  <StyledIcon
+                                    name="info"
+                                    hasFeature={wallet[feature.filterKey!]}
+                                  />
+                                </Tooltip>
                               </FeatureLabel>
                             )
                         })}
@@ -732,8 +768,27 @@ const WalletTable = ({ data, filters, walletData }) => {
                               <FeatureLabel
                                 hasFeature={wallet[feature.filterKey!]}
                               >
-                                {feature.icon}
+                                <FeatureIcon
+                                  hasFeature={wallet[feature.filterKey!]}
+                                >
+                                  {feature.icon}
+                                </FeatureIcon>
                                 <p>{feature.label}</p>
+                                <Tooltip
+                                  content={
+                                    <p>
+                                      {
+                                        walletFilterData[feature.filterKey]
+                                          .description
+                                      }
+                                    </p>
+                                  }
+                                >
+                                  <StyledIcon
+                                    name="info"
+                                    hasFeature={wallet[feature.filterKey!]}
+                                  />
+                                </Tooltip>
                               </FeatureLabel>
                             )
                         })}
@@ -748,8 +803,27 @@ const WalletTable = ({ data, filters, walletData }) => {
                               <FeatureLabel
                                 hasFeature={wallet[feature.filterKey!]}
                               >
-                                {feature.icon}
+                                <FeatureIcon
+                                  hasFeature={wallet[feature.filterKey!]}
+                                >
+                                  {feature.icon}
+                                </FeatureIcon>
                                 <p>{feature.label}</p>
+                                <Tooltip
+                                  content={
+                                    <p>
+                                      {
+                                        walletFilterData[feature.filterKey]
+                                          .description
+                                      }
+                                    </p>
+                                  }
+                                >
+                                  <StyledIcon
+                                    name="info"
+                                    hasFeature={wallet[feature.filterKey!]}
+                                  />
+                                </Tooltip>
                               </FeatureLabel>
                             )
                         })}
@@ -764,8 +838,27 @@ const WalletTable = ({ data, filters, walletData }) => {
                               <FeatureLabel
                                 hasFeature={wallet[feature.filterKey!]}
                               >
-                                {feature.icon}
+                                <FeatureIcon
+                                  hasFeature={wallet[feature.filterKey!]}
+                                >
+                                  {feature.icon}
+                                </FeatureIcon>
                                 <p>{feature.label}</p>
+                                <Tooltip
+                                  content={
+                                    <p>
+                                      {
+                                        walletFilterData[feature.filterKey]
+                                          .description
+                                      }
+                                    </p>
+                                  }
+                                >
+                                  <StyledIcon
+                                    name="info"
+                                    hasFeature={wallet[feature.filterKey!]}
+                                  />
+                                </Tooltip>
                               </FeatureLabel>
                             )
                         })}
