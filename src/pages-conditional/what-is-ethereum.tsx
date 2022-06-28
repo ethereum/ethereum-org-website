@@ -130,6 +130,10 @@ const TwoColumnContent = styled.div<{ reverse?: boolean }>`
   @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
     flex-direction: column;
     align-items: flex-start;
+
+    & > *:first-child {
+      margin-bottom: 2rem;
+    }
   }
 `
 
@@ -245,7 +249,7 @@ const WhatIsEthereumPage = ({
     },
   ]
 
-  const chartData = [
+  const energyConsumptionChartData = [
     {
       name: "Youtube",
       amount: 244,
@@ -857,7 +861,7 @@ const WhatIsEthereumPage = ({
         <TwoColumnContent reverse>
           <Width40>
             <EnergyConsumptionChart
-              data={chartData}
+              data={energyConsumptionChartData}
               legend="Annual Energy Consumption in TW/yr"
             />
           </Width40>
