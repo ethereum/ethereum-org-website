@@ -40,10 +40,10 @@ const StyledTableOfContentsLink = styled(Link)`
   margin-bottom: 0.5rem !important;
 `
 
-const slugify = (s) =>
+const slugify = (s: string): string =>
   encodeURIComponent(String(s).trim().toLowerCase().replace(/\s+/g, "-"))
 
-const getCustomId = (title) => {
+const getCustomId = (title: string): string => {
   const match = customIdRegEx.exec(title)
   if (match) {
     return match[2].toLowerCase()
@@ -52,7 +52,7 @@ const getCustomId = (title) => {
   return slugify(title)
 }
 
-const trimmedTitle = (title) => {
+const trimmedTitle = (title: string): string => {
   const match = customIdRegEx.exec(title)
   return match ? title.replace(match[1], "").trim() : title
 }
@@ -89,7 +89,21 @@ const ItemsList = ({ items, depth, maxDepth }) =>
       ))
     : null
 
-const UpgradeTableOfContents = ({ items, maxDepth, className }) => {
+interface Item {
+  items: Array<{ id: string; title: string }>
+}
+
+export interface IProps {
+  items: Array<Item>
+  maxDepth: number | null
+  className?: string
+}
+
+const UpgradeTableOfContents: React.FC<IProps> = ({
+  items,
+  maxDepth,
+  className,
+}) => {
   if (!items) {
     return null
   }
