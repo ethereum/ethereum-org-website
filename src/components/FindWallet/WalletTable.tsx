@@ -240,7 +240,7 @@ const FlexInfo = styled.div`
     font-weight: bold;
   }
   p + p {
-    margin: 0.1rem 0 1rem;
+    margin-top: 0.1rem;
     font-size: 0.9rem;
     line-height: 1rem;
     font-weight: normal;
@@ -263,6 +263,22 @@ const SecondaryText = styled.p`
   font-size: 0.7rem;
   line-height: 0.85rem;
   color: ${(props) => props.theme.colors.text200};
+
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    display: none;
+  }
+`
+
+const SecondaryTextMobile = styled.p`
+  display: none;
+
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    display: block;
+    font-size: 0.7rem;
+    line-height: 0.85rem;
+    margin: 0;
+    color: ${(props) => props.theme.colors.text200};
+  }
 `
 
 const WalletMoreInfoArrow = styled(Icon)`
@@ -355,6 +371,7 @@ const FeatureIcon = styled.div<{ hasFeature: boolean }>`
 `
 
 const SocialsContainer = styled.div`
+  margin-top: 1rem;
   p {
     margin: 0;
   }
@@ -675,6 +692,9 @@ const WalletTable = ({ data, filters, walletData }) => {
                   <div>
                     <p>{wallet.name}</p>
                     <SecondaryText>{deviceLabels.join(" | ")}</SecondaryText>
+                    {deviceLabels.map((label) => (
+                      <SecondaryTextMobile>{label}</SecondaryTextMobile>
+                    ))}
                     <SocialsContainer>
                       <Socials>
                         <Link to={wallet.url} hideArrow={true}>
