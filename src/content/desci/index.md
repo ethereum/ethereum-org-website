@@ -87,7 +87,7 @@ A comparison to traditional science
    </td>
   </tr>
   <tr>
-   <td>You can trade laboratory services freely.
+   <td> Sharing laboratory services is made easier and more transparent using Web3 primitives.
    </td>
    <td>You are constrained to using your local institute's laboratory infrastructure.
    </td>
