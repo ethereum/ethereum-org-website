@@ -146,16 +146,6 @@ However, [advances in zero-knowledge technology](https://hackmd.io/@yezhang/S1_K
 
 Like the EVM, a zkEVM transitions between states after computation is performed on some inputs. The difference is that the zkEVM also creates zero-knowledge proofs to verify the correctness of every step in the program’s execution. Validity proofs could verify the correctness of operations that touch the VM’s state (memory, stack, storage) and the computation itself (i.e., did the operation call the right opcodes and execute them correctly?).
 
-Projects working on zkEVMs include:
-
-- [ZKSync](https://docs.zksync.io/zkevm/) (first production-ready zkEVM on Mainnet)
-
-- [Applied ZKP](https://github.com/privacy-scaling-explorations/zkevm-specs) 
-
-- [Scroll](https://scroll.io/blog/zkEVM)
-
-- [Polygon Hermez](https://docs.hermez.io/zkEVM/architecture/introduction/) 
-
 The introduction of EVM-compatible ZK-rollups is expected to help developers leverage the scalability and security guarantees of zero-knowledge proofs. More importantly, compatibility with native Ethereum infrastructure means developers can build zk-friendly dApps using familiar (and battle-tested) tooling and langugages. 
 
 ## How do ZK-rollup fees work? {#how-do-zk-rollup-fees-work}
@@ -222,10 +212,23 @@ Multiple implementations of ZK-rollups exist that you can integrate into your da
 - [Documentation](https://docs.hermez.io/)
 - [Technology and risk summary](https://l2beat.com/projects/hermez/) 
 
-**ZK-rollups reading**
+## Who is working on a zkEVM? {#zkevm-projects}
+
+Projects working on zkEVMs include:
+
+- **[ZKSync](https://docs.zksync.io/zkevm/)** - _ZkSync 2.0 is an EVM-compatible ZK Rollup being built by Matter Labs, powered by its own zkEVM._
+
+- **[Applied ZKP](https://github.com/privacy-scaling-explorations/zkevm-specs)** - _Applied ZKP is a project funded by the Ethereum Foundation to develop an EVM-compatible ZK-rollup and a mechanism for generating validity proofs for Ethereum blocks._
+
+- **[Scroll](https://scroll.io/blog/zkEVM)** - _Scroll is a tech-driven company working on building a native zkEVM Layer 2 Solution for Ethereum._
+
+- **[Polygon Hermez](https://docs.hermez.io/zkEVM/architecture/introduction/)** - _Hermez 2.0 is a decentralized ZK Rollup on the Ethereum mainnet working on a zero-knowledge Ethereum Virtual Machine (zkEVM) that executes Ethereum transactions in a transparent way, including smart contracts with zero-knowledge-proof validations._
+
+## Further reading on ZK-rollups reading {#further-reading-on-zk-rollups}
 
 - [What Are Zero-Knowledge Rollups?](https://coinmarketcap.com/alexandria/glossary/zero-knowledge-rollups)
 - [EthHub on zk-rollups](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/zk-rollups/)
 - [STARKs vs SNARKs](https://consensys.net/blog/blockchain-explained/zero-knowledge-proofs-starks-vs-snarks/)
 - [What is a zkEVM?](https://www.alchemy.com/overviews/zkevm) 
 - [More on layer 2](/layer-2/)
+
