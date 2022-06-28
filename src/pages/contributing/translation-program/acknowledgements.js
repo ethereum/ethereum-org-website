@@ -16,6 +16,7 @@ import { Content, Page } from "../../../components/SharedStyledComponents"
 
 // Utils
 import { translateMessageId } from "../../../utils/translations"
+import FeedbackCard from "../../../components/FeedbackCard"
 
 // Styles
 const H1 = styled.h1`
@@ -257,6 +258,9 @@ const TranslatorAcknowledgements = ({ data, location }) => {
         <p>
           <Translation id="page-contributing-translation-program-acknowledgements-4" />
         </p>
+      </Content>
+      <Content>
+        <FeedbackCard />
       </Content>
     </Page>
   )

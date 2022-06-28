@@ -27,6 +27,7 @@ import {
   SloganGradient,
 } from "../../../components/SharedStyledComponents"
 import Breadcrumbs from "../../../components/Breadcrumbs"
+import FeedbackCard from "../../../components/FeedbackCard"
 
 const HeroContainer = styled.div`
   padding-left: 0rem;
@@ -498,6 +499,7 @@ const GetInvolvedPage = ({ data, location }) => {
           </RightColumn>
         </ReverseRow>
       </Content>
+      <FeedbackCard />
     </Page>
   )
 }

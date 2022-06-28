@@ -22,6 +22,7 @@ import {
   Page,
   Divider,
 } from "../../components/SharedStyledComponents"
+import FeedbackCard from "../../components/FeedbackCard"
 
 const StyledCardContainer = styled(CardContainer)`
   margin-top: 2rem;
@@ -307,6 +308,7 @@ const VisionPage = ({ data, location }) => {
           ))}
         </StyledCardContainer>
       </Content>
+      <FeedbackCard />
     </Page>
   )
 }
