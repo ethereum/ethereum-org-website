@@ -18,6 +18,7 @@ import {
   Page,
   GrayContainer,
 } from "../../components/SharedStyledComponents"
+import FeedbackCard from "../../components/FeedbackCard"
 
 const HeroContainer = styled.div`
   display: flex;
@@ -539,6 +540,7 @@ const DevelopersPage = ({ data }) => {
           </RightColumn>
         </ThreeColumnContent>
       </GrayContainer>
+      <FeedbackCard />
     </Page>
   )
 }

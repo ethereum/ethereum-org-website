@@ -24,6 +24,7 @@ import {
   Divider,
 } from "../../components/SharedStyledComponents"
 import { translateMessageId } from "../../utils/translations"
+import FeedbackCard from "../../components/FeedbackCard"
 
 const Row = styled.div`
   display: flex;
@@ -871,6 +872,7 @@ const Eth2IndexPage = ({ data }) => {
           </ButtonLink>
         </ResearchContainer>
       </Content>
+      <FeedbackCard />
     </Page>
   )
 }

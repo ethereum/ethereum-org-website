@@ -22,6 +22,7 @@ import {
   Page,
   // InfoBanner,
 } from "../../components/SharedStyledComponents"
+import FeedbackCard from "../../components/FeedbackCard"
 
 const StyledPage = styled(Page)`
   margin-top: 4rem;
@@ -454,6 +455,9 @@ const ChooseStackPage = ({ data }) => {
             </ProductCard>
           ))}
         </CardGrid>
+      </Content>
+      <Content>
+        <FeedbackCard />
       </Content>
       {/* <Content>
         <h2>Create your own stack</h2>
