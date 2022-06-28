@@ -11,7 +11,7 @@ One of the primary strengths of Ethereum is that an active research and engineer
 
 ## How Ethereum research works {#how-ethereum-research-works}
 
-Ethereum research is open and transparent. The culture is to make research tools and outputs as open and interactive as possible, for example, through executable notebooks. Ethereum research moves quickly, with new findings posted and discussed in the open on forums such as [ethresear.ch](https://ethresear.ch/) rather than reaching the community through traditional publications after rounds of peer review.
+Ethereum research is open and transparent. Ethereum's research culture produces tools and other output that are as open and interactive as possible, for example, through executable notebooks. Ethereum research moves quickly, with new findings posted and discussed in the open on forums such as [ethresear.ch](https://ethresear.ch/) rather than reaching the community through traditional publications after rounds of peer review.
 
 ## General research resources {#general-research-resources}
 
