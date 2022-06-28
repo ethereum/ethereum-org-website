@@ -30,7 +30,7 @@ const RightColumn = styled.div`
   }
 `
 
-const UpgradeArticles = () => (
+const UpgradeArticles: React.FC = () => (
   <Container>
     <LeftColumn>
       <h4>Danny Ryan (Ethereum Foundation)</h4>
