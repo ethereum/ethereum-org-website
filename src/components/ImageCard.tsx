@@ -21,9 +21,24 @@ const Description = styled.p`
   opacity: 0.8;
 `
 
-const ImageCard = ({ image, title, description, children, className }) => (
+export interface IProps {
+  image: string
+  alt: string
+  title: string
+  description: string
+  className?: string
+}
+
+const ImageCard: React.FC<IProps> = ({
+  image,
+  alt,
+  title,
+  description,
+  children,
+  className,
+}) => (
   <StyledCard className={className}>
-    <Image image={image} />
+    <Image image={image} alt={alt} />
     <h3>{title}</h3>
     <Description>{description}</Description>
     {children}

@@ -90,11 +90,11 @@ const ButtonLink = styled.button`
 `
 
 export interface IProps {
-  contentPreview: string
+  contentPreview?: string
   title: string
   svg?: ComponentType<SVGProps<SVGElement>>
-  eventCategory: string
-  eventName: string
+  eventCategory?: string
+  eventName?: string
 }
 
 const ExpandableCard: React.FC<IProps> = ({
@@ -102,8 +102,8 @@ const ExpandableCard: React.FC<IProps> = ({
   contentPreview,
   title,
   svg: Svg,
-  eventCategory,
-  eventName,
+  eventCategory = "",
+  eventName = "",
 }) => {
   const [isVisible, setIsVisible] = useState(false)
 

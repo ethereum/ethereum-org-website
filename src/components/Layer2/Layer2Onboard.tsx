@@ -5,8 +5,8 @@ import styled from "styled-components"
 import { useIntl } from "gatsby-plugin-intl"
 
 // Components
-import ButtonLink from "../../components/ButtonLink"
-import Translation from "../../components/Translation"
+import ButtonLink from "../ButtonLink"
+import Translation from "../Translation"
 import { StyledSelect as Select } from "../SharedStyledComponents"
 
 // Data
@@ -163,11 +163,38 @@ const RightSelected = styled.div`
   }
 `
 
-const Layer2Onboard = ({ layer2DataCombined, ethIcon }) => {
+interface Exchange {
+  label?: string
+  value?: string
+  name: string
+  supports_deposits: Array<string>
+  supports_withdrawals: Array<string>
+  url: string
+}
+
+interface Layer2 {
+  label: string
+  name: string
+  value: string
+  bridgeWallets: Array<string>
+  bridge: string
+}
+
+export interface IProps {
+  layer2DataCombined: Array<Layer2>
+  ethIcon: string
+  ethIconAlt: string
+}
+
+const Layer2Onboard: React.FC<IProps> = ({
+  layer2DataCombined,
+  ethIcon,
+  ethIconAlt,
+}) => {
   const intl = useIntl()
 
-  const [selectedExchange, setSelectedExchange] = useState(undefined)
-  const [selectedL2, setSelectedL2] = useState(undefined)
+  const [selectedExchange, setSelectedExchange] = useState<Exchange>()
+  const [selectedL2, setSelectedL2] = useState<Layer2>()
 
   return (
     <Content>
@@ -197,7 +224,7 @@ const Layer2Onboard = ({ layer2DataCombined, ethIcon }) => {
               l2.value = l2.name
               return l2
             })}
-            onChange={(selectedOption) => {
+            onChange={(selectedOption: Layer2) => {
               trackCustomEvent({
                 eventCategory: `Selected layer 2 to bridge to`,
                 eventAction: `Clicked`,
@@ -249,12 +276,12 @@ const Layer2Onboard = ({ layer2DataCombined, ethIcon }) => {
           <StyledSelect
             className="react-select-container"
             classNamePrefix="react-select"
-            options={cexSupport.map((cex) => {
+            options={cexSupport.map((cex: Exchange) => {
               cex.label = cex.name
               cex.value = cex.name
               return cex
             })}
-            onChange={(selectedOption) => {
+            onChange={(selectedOption: Exchange) => {
               trackCustomEvent({
                 eventCategory: `Selected cex to onboard`,
                 eventAction: `Clicked`,
@@ -270,7 +297,7 @@ const Layer2Onboard = ({ layer2DataCombined, ethIcon }) => {
           />
         </RightSelect>
         <EthLogo>
-          <Image image={ethIcon} objectFit="contain" />
+          <Image image={ethIcon} objectFit="contain" alt={ethIconAlt} />
         </EthLogo>
         {selectedExchange && (
           <RightSelected>

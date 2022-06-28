@@ -27,8 +27,18 @@ const Secondary = styled.div`
   font-size: 0.75rem;
   border-radius: 0.25rem;
 `
+export interface IProps {
+  className?: string
+  isSecondary?: boolean
+  color: string
+}
 
-const Pill = ({ children, className, isSecondary, color }) => {
+const Pill: React.FC<IProps> = ({
+  children,
+  className,
+  isSecondary,
+  color,
+}) => {
   return isSecondary ? (
     <Secondary className={className}>{children}</Secondary>
   ) : (

@@ -30,6 +30,7 @@ import {
 import AdoptionChart from "../components/AdoptionChart"
 import EnergyConsumptionChart from "../components/EnergyConsumptionChart"
 import Slider, { EmblaSlide } from "../components/Slider"
+import FeedbackCard from "../components/FeedbackCard"
 
 import { translateMessageId } from "../utils/translations"
 
@@ -949,6 +950,9 @@ const WhatIsEthereumPage = ({
             </div>
           </StyledCallout>
         </CardContainer>
+      </Content>
+      <Content>
+        <FeedbackCard />
       </Content>
     </Page>
   )

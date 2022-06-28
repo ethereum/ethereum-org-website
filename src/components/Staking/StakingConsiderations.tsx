@@ -17,7 +17,8 @@ import LiquidityToken from "../../assets/staking/liquidity-token.svg"
 // Component imports
 import ButtonDropdown from "../ButtonDropdown"
 import Translation from "../Translation"
-import { trackCustomEvent } from "../../utils/matomo"
+import { EventOptions, trackCustomEvent } from "../../utils/matomo"
+import { TranslationKey } from "../../utils/translations"
 
 const Container = styled.div`
   display: flex;
@@ -41,7 +42,7 @@ const List = styled.div`
 
 // TODO: Make mobile responsive
 
-const ListItem = styled.li`
+const ListItem = styled.li<{ active: boolean }>`
   padding: 0.125rem 0.5rem;
   cursor: pointer;
   box-sizing: border-box;
@@ -116,7 +117,17 @@ const Indicator = styled.div`
   }
 `
 
-const data = {
+type DataType = {
+  title: TranslationKey
+  description: TranslationKey
+  valid: TranslationKey
+  caution: TranslationKey | ""
+  warning: TranslationKey
+  Svg: any
+  matomo: EventOptions
+}
+
+const data: { [key in "solo" | "saas" | "pools"]: DataType[] } = {
   solo: [
     {
       title: "page-staking-considerations-solo-1-title",
@@ -437,7 +448,11 @@ const data = {
   ],
 }
 
-const StakingConsiderations = ({ page }) => {
+export interface IProps {
+  page: "solo" | "saas" | "pools"
+}
+
+const StakingConsiderations: React.FC<IProps> = ({ page }) => {
   const [activeIndex, setActiveIndex] = useState(0)
 
   const pageData = data[page]
@@ -453,7 +468,7 @@ const StakingConsiderations = ({ page }) => {
     })),
   }
 
-  const handleSelection = (idx) => {
+  const handleSelection = (idx: number): void => {
     setActiveIndex(idx)
   }
 

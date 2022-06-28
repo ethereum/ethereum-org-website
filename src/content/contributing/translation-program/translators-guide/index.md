@@ -254,7 +254,7 @@ Some examples of what to be particularly mindful of:
 - When translating dates, there are a number of considerations and differences based on the language. These include the date format, separator, capitalization and leading zeros. There are also differences between full-length and numerical dates.
   - Some examples of different date formats:
     - English UK (dd/mm/yyyy) – 1st January, 2022
-    - English US (mm/dd/yyy) – January 1, 2022
+    - English US (mm/dd/yyyy) – January 1st, 2022
     - Chinese (yyyy-mm-dd) – 2022 年 1 月 1 日
     - French (dd/mm/yyyy) – 1er janvier 2022
     - Italian (dd/mm/yyyy) – 1º gennaio 2022

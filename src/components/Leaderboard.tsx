@@ -3,7 +3,7 @@ import styled from "styled-components"
 import Emoji from "./Emoji"
 import Link from "./Link"
 
-import Translation from "../components/Translation"
+import Translation from "./Translation"
 
 const Table = styled.div`
   background-color: ${(props) => props.theme.colors.background};
@@ -62,7 +62,18 @@ const ItemNumber = styled.div`
 
 const githubUrl = `https://github.com/`
 
-const Leaderboard = ({ content, limit = 100 }) => (
+export interface Person {
+  name: string
+  username: string
+  score: number
+}
+
+export interface IProps {
+  content: Array<Person>
+  limit?: number
+}
+
+const Leaderboard: React.FC<IProps> = ({ content, limit = 100 }) => (
   <Table>
     {content
       .filter((_, idx) => idx < limit)
@@ -73,7 +84,7 @@ const Leaderboard = ({ content, limit = 100 }) => (
           ? `${githubUrl}${username}.png?size=40`
           : "https://github.com/random.png?size=40"
         const avatarAlt = hasGitHub ? `${username} GitHub avatar` : ""
-        let emoji = null
+        let emoji: string | null = null
         if (idx === 0) {
           emoji = ":trophy:"
         } else if (idx === 1) {

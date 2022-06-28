@@ -401,12 +401,6 @@ const Leslie = styled(GatsbyImage)`
   }
 `
 
-const StyledFeedbackCard = styled(FeedbackCard)`
-  width: 100%;
-  max-width: 700px;
-  margin: 0 2rem;
-`
-
 const StrongParagraph = styled.p`
   font-size: 150%;
   font-weight: 600;
@@ -1003,9 +997,9 @@ const RunANodePage = ({ data }) => {
           </li>
         </ul>
       </Content>
-      <StyledFeedbackCard
-        prompt={translateMessageId("page-run-a-node-feedback-prompt", intl)}
-      />
+      <Content>
+        <FeedbackCard />
+      </Content>
     </GappedPage>
   )
 }

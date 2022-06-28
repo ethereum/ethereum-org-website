@@ -26,6 +26,7 @@ import {
 
 import { translateMessageId } from "../utils/translations"
 import { Context } from "../types"
+import FeedbackCard from "../components/FeedbackCard"
 
 const StyledTwoColumnContent = styled(TwoColumnContent)`
   margin-bottom: -2rem;
@@ -540,6 +541,9 @@ const WalletsPage = ({
             </div>
           </StyledCallout>
         </CalloutCardContainer>
+      </Content>
+      <Content>
+        <FeedbackCard />
       </Content>
     </Page>
   )
