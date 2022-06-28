@@ -29,7 +29,7 @@ import {
 } from "../components/BannerGrid"
 import AdoptionChart from "../components/AdoptionChart"
 import EnergyConsumptionChart from "../components/EnergyConsumptionChart"
-import Slider, { EmblaSlide } from "../components/WhatIsEthereum/Slider"
+import Slider, { EmblaSlide } from "../components/Slider"
 
 import { translateMessageId } from "../utils/translations"
 

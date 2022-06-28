@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useState } from "react"
 import styled, { useTheme } from "styled-components"
 import useEmblaCarousel from "embla-carousel-react"
 
-import Icon from "../Icon"
+import Icon from "./Icon"
 
 const Embla = styled.div`
   position: relative;
@@ -86,7 +86,9 @@ const DotButton = styled.button<{ selected: boolean }>`
   }
 `
 
-const Slider = ({ children }) => {
+export interface IProps {}
+
+const Slider: React.FC<IProps> = ({ children }) => {
   const theme = useTheme()
   const [emblaRef, embla] = useEmblaCarousel()
   const [prevBtnEnabled, setPrevBtnEnabled] = useState(false)
