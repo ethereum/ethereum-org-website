@@ -354,7 +354,7 @@ const WhatIsEthereumPage = ({
           </TwoColumnContent>
           <TwoColumnContent reverse>
             <Width40>
-              <GatsbyImage image={getImage(data.wallet)} />
+              <GatsbyImage image={getImage(data.whatIsCryptocurrency)} />
             </Width40>
             <Width60>
               <h2>What is a cryptocurrency?</h2>
@@ -430,7 +430,7 @@ const WhatIsEthereumPage = ({
         <Section>
           <TwoColumnContent>
             <Width40>
-              <GatsbyImage image={getImage(data.eth)} />
+              <GatsbyImage image={getImage(data.diffEthAndBtc)} />
             </Width40>
             <Width60>
               <h2>What is the difference between Ethereum and Bitcoin?</h2>
@@ -560,7 +560,7 @@ const WhatIsEthereumPage = ({
               </BannerGrid>
             </BannerBody>
             <BannerImage>
-              <GatsbyImage image={getImage(data.newrings)} />
+              <GatsbyImage image={getImage(data.stats)} />
             </BannerImage>
           </Banner>
         </Section>
@@ -666,7 +666,7 @@ const WhatIsEthereumPage = ({
         <Section bgColor={theme.colors.homeBoxTurquoise}>
           <TwoColumnContent>
             <Width40>
-              <GatsbyImage image={getImage(data.eth2)} />
+              <GatsbyImage image={getImage(data.ethCoin)} />
             </Width40>
             <Width60>
               <h2>What can I do with ETH coin?</h2>
@@ -698,7 +698,7 @@ const WhatIsEthereumPage = ({
         <Section>
           <TwoColumnContent reverse>
             <Width40>
-              <GatsbyImage image={getImage(data.merge)} />
+              <GatsbyImage image={getImage(data.meetEth)} />
             </Width40>
             <Width60>
               <h2>Meet Ether, Ethereum’s cryptocurrency</h2>
@@ -725,7 +725,7 @@ const WhatIsEthereumPage = ({
         <Section bgColor={theme.colors.homeBoxPurple}>
           <TwoColumnContent>
             <Width40>
-              <GatsbyImage image={getImage(data.ethInside)} />
+              <GatsbyImage image={getImage(data.whoRunsEthereum)} />
             </Width40>
             <Width60>
               <h2>Who runs Ethereum?</h2>
@@ -762,7 +762,7 @@ const WhatIsEthereumPage = ({
         <Section>
           <TwoColumnContent reverse>
             <Width40>
-              <GatsbyImage image={getImage(data.infra)} />
+              <GatsbyImage image={getImage(data.whatAreSmartContracts)} />
             </Width40>
             <Width60>
               <h2>What are smart contracts?</h2>
@@ -808,7 +808,7 @@ const WhatIsEthereumPage = ({
       <Section>
         <TwoColumnContent>
           <Width40>
-            <GatsbyImage image={getImage(data.finance)} />
+            <GatsbyImage image={getImage(data.criminalActivity)} />
           </Width40>
           <Width60>
             <h2>
@@ -960,11 +960,11 @@ const WhatIsEthereumPage = ({
 
 export default WhatIsEthereumPage
 
-export const useCaseImage = graphql`
-  fragment useCaseImage on File {
+export const twoColImage = graphql`
+  fragment twoColImage on File {
     childImageSharp {
       gatsbyImageData(
-        height: 260
+        height: 400
         layout: FIXED
         placeholder: BLURRED
         quality: 100
@@ -972,18 +972,7 @@ export const useCaseImage = graphql`
     }
   }
 `
-export const actionCardImage = graphql`
-  fragment actionCardImage on File {
-    childImageSharp {
-      gatsbyImageData(
-        width: 368
-        layout: FIXED
-        placeholder: BLURRED
-        quality: 100
-      )
-    }
-  }
-`
+
 export const calloutImage = graphql`
   fragment calloutImage on File {
     childImageSharp {
@@ -1014,7 +1003,7 @@ export const query = graphql`
         gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
       }
     }
-    wallet: file(relativePath: { eq: "wallet.png" }) {
+    whatIsCryptocurrency: file(relativePath: { eq: "wallet.png" }) {
       childImageSharp {
         gatsbyImageData(
           width: 400
@@ -1024,7 +1013,7 @@ export const query = graphql`
         )
       }
     }
-    eth: file(relativePath: { eq: "eth.png" }) {
+    diffEthAndBtc: file(relativePath: { eq: "eth.png" }) {
       childImageSharp {
         gatsbyImageData(
           width: 470
@@ -1034,7 +1023,7 @@ export const query = graphql`
         )
       }
     }
-    newrings: file(relativePath: { eq: "upgrades/newrings.png" }) {
+    stats: file(relativePath: { eq: "upgrades/newrings.png" }) {
       childImageSharp {
         gatsbyImageData(
           width: 433
@@ -1044,17 +1033,7 @@ export const query = graphql`
         )
       }
     }
-    chart1: file(relativePath: { eq: "what-is-eth/chart1.png" }) {
-      childImageSharp {
-        gatsbyImageData(
-          width: 361
-          layout: FIXED
-          placeholder: BLURRED
-          quality: 100
-        )
-      }
-    }
-    eth2: file(relativePath: { eq: "what-is-eth/eth.png" }) {
+    ethCoin: file(relativePath: { eq: "what-is-eth/eth.png" }) {
       childImageSharp {
         gatsbyImageData(
           width: 243
@@ -1064,7 +1043,7 @@ export const query = graphql`
         )
       }
     }
-    merge: file(relativePath: { eq: "upgrades/merge.png" }) {
+    meetEth: file(relativePath: { eq: "upgrades/merge.png" }) {
       childImageSharp {
         gatsbyImageData(
           width: 485
@@ -1074,7 +1053,9 @@ export const query = graphql`
         )
       }
     }
-    ethInside: file(relativePath: { eq: "run-a-node/ethereum-inside.png" }) {
+    whoRunsEthereum: file(
+      relativePath: { eq: "run-a-node/ethereum-inside.png" }
+    ) {
       childImageSharp {
         gatsbyImageData(
           width: 400
@@ -1084,7 +1065,9 @@ export const query = graphql`
         )
       }
     }
-    infra: file(relativePath: { eq: "infrastructure_transparent.png" }) {
+    whatAreSmartContracts: file(
+      relativePath: { eq: "infrastructure_transparent.png" }
+    ) {
       childImageSharp {
         gatsbyImageData(
           width: 437
@@ -1094,7 +1077,7 @@ export const query = graphql`
         )
       }
     }
-    finance: file(relativePath: { eq: "finance_transparent.png" }) {
+    criminalActivity: file(relativePath: { eq: "finance_transparent.png" }) {
       childImageSharp {
         gatsbyImageData(
           width: 370
@@ -1103,21 +1086,6 @@ export const query = graphql`
           quality: 100
         )
       }
-    }
-    dapps: file(relativePath: { eq: "doge-computer.png" }) {
-      ...actionCardImage
-    }
-    wallets: file(relativePath: { eq: "wallet-cropped.png" }) {
-      ...actionCardImage
-    }
-    dao: file(relativePath: { eq: "use-cases/dao-2.png" }) {
-      ...useCaseImage
-    }
-    defi: file(relativePath: { eq: "finance_transparent.png" }) {
-      ...useCaseImage
-    }
-    nft: file(relativePath: { eq: "infrastructure_transparent.png" }) {
-      ...useCaseImage
     }
     developers: file(relativePath: { eq: "developers-eth-blocks.png" }) {
       ...calloutImage
