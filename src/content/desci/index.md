@@ -95,7 +95,7 @@ A comparison to traditional science
   <tr>
    <td>New models for publishing can be developed that use Web3 primitives for trust, transparency and universal access.
    </td>
-   <td>You publish through established pathways.
+   <td>You publish through established pathways that are frequently acknowledged to be inefficient, biased and exploitative.
    </td>
   </tr>
   <tr>
