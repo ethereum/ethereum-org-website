@@ -111,6 +111,10 @@ const WalletContentHeader = styled(Grid)`
       }
     }
   }
+
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    top: 50;
+  }
 `
 
 const Wallet = styled(Grid)`
