@@ -29,8 +29,6 @@ import Swap from "../../assets/wallets/swap.svg"
 import Eip1559 from "../../assets/wallets/eip1559.svg"
 import Warning from "../../assets/staking/warning-product-glyph.svg"
 import GreenCheck from "../../assets/staking/green-check-product-glyph.svg"
-import { opacify } from "polished"
-import { opacity } from "styled-system"
 
 // Styles
 const Container = styled.table`
@@ -475,6 +473,13 @@ const featureDropdownItems = [
     icon: <ERC20Support />,
   },
   {
+    label: "EIP-1559 support",
+    value: "EIP-1559 support",
+    filter: "eip_1559_support",
+    category: "feature",
+    icon: <Eip1559 />,
+  },
+  {
     label: "Buy crypto",
     value: "Buy crypto",
     filterKey: "buy_crypto",
@@ -657,7 +662,7 @@ const WalletTable = ({ data, filters, walletData }) => {
               </td>
               <td>
                 <FlexInfoCenter onClick={() => updateMoreInfo(idx)}>
-                  {wallet[firstFeatureSelect.filterKey] ? (
+                  {wallet[firstFeatureSelect.filterKey!] ? (
                     <GreenCheck />
                   ) : (
                     <Warning />
@@ -666,7 +671,7 @@ const WalletTable = ({ data, filters, walletData }) => {
               </td>
               <td>
                 <FlexInfoCenter onClick={() => updateMoreInfo(idx)}>
-                  {wallet[secondFeatureSelect.filterKey] ? (
+                  {wallet[secondFeatureSelect.filterKey!] ? (
                     <GreenCheck />
                   ) : (
                     <Warning />
@@ -675,7 +680,7 @@ const WalletTable = ({ data, filters, walletData }) => {
               </td>
               <td>
                 <FlexInfoCenter onClick={() => updateMoreInfo(idx)}>
-                  {wallet[thirdFeatureSelect.filterKey] ? (
+                  {wallet[thirdFeatureSelect.filterKey!] ? (
                     <GreenCheck />
                   ) : (
                     <Warning />
@@ -709,7 +714,7 @@ const WalletTable = ({ data, filters, walletData }) => {
                           if (feature.category === "feature")
                             return (
                               <FeatureLabel
-                                hasFeature={wallet[feature.filterKey]}
+                                hasFeature={wallet[feature.filterKey!]}
                               >
                                 {feature.icon}
                                 <p>{feature.label}</p>
@@ -725,7 +730,7 @@ const WalletTable = ({ data, filters, walletData }) => {
                           if (feature.category === "security")
                             return (
                               <FeatureLabel
-                                hasFeature={wallet[feature.filterKey]}
+                                hasFeature={wallet[feature.filterKey!]}
                               >
                                 {feature.icon}
                                 <p>{feature.label}</p>
@@ -741,7 +746,7 @@ const WalletTable = ({ data, filters, walletData }) => {
                           if (feature.category === "trade_and_buy")
                             return (
                               <FeatureLabel
-                                hasFeature={wallet[feature.filterKey]}
+                                hasFeature={wallet[feature.filterKey!]}
                               >
                                 {feature.icon}
                                 <p>{feature.label}</p>
@@ -757,7 +762,7 @@ const WalletTable = ({ data, filters, walletData }) => {
                           if (feature.category === "smart_contract")
                             return (
                               <FeatureLabel
-                                hasFeature={wallet[feature.filterKey]}
+                                hasFeature={wallet[feature.filterKey!]}
                               >
                                 {feature.icon}
                                 <p>{feature.label}</p>

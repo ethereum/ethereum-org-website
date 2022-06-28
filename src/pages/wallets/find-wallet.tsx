@@ -284,6 +284,7 @@ const filterDefault = {
   withdraw_crypto: false,
   multisig: false,
   social_recovery: false,
+  eip_1559_support: false,
 }
 
 const randomizedWalletData = shuffle(walletData)

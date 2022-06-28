@@ -141,7 +141,7 @@ const Title = styled.div`
   padding: 0.5rem 0.5rem 0 0.5rem;
 `
 
-const H3 = styled.h3<{ selected: boolean }>`
+const H3 = styled.h3`
   margin-left: 0.5rem;
   margin-top: 0;
   margin-bottom: 0;
@@ -221,6 +221,7 @@ interface Personas {
     withdraw_crypto: boolean
     multisig: boolean
     social_recovery: boolean
+    eip_1559_support: boolean
   }
 }
 
@@ -297,6 +298,10 @@ const filterLabels = {
     label: "Token support",
     icon: <ERC20Support />,
   },
+  eip_1559_support: {
+    label: "EIP-1559 support",
+    icon: <Eip1559 />,
+  },
 }
 
 const WalletPersonasSidebar = ({
@@ -316,6 +321,7 @@ const WalletPersonasSidebar = ({
         filterLabels.ens_support,
         filterLabels.erc_20_support,
         filterLabels.buy_crypto,
+        filterLabels.eip_1559_support,
       ],
       presetFilters: {
         android: true,
@@ -343,6 +349,7 @@ const WalletPersonasSidebar = ({
         withdraw_crypto: false,
         multisig: false,
         social_recovery: false,
+        eip_1559_support: true,
       },
     },
     {
@@ -376,6 +383,7 @@ const WalletPersonasSidebar = ({
         withdraw_crypto: false,
         multisig: false,
         social_recovery: false,
+        eip_1559_support: false,
       },
     },
     {
@@ -387,6 +395,7 @@ const WalletPersonasSidebar = ({
         filterLabels.connect_to_dapps,
         filterLabels.gas_fee_customization,
         filterLabels.erc_20_support,
+        filterLabels.eip_1559_support,
       ],
       presetFilters: {
         android: false,
@@ -414,6 +423,7 @@ const WalletPersonasSidebar = ({
         withdraw_crypto: false,
         multisig: false,
         social_recovery: false,
+        eip_1559_support: true,
       },
     },
     {
@@ -454,6 +464,7 @@ const WalletPersonasSidebar = ({
         withdraw_crypto: false,
         multisig: false,
         social_recovery: false,
+        eip_1559_support: false,
       },
     },
     {
@@ -491,6 +502,7 @@ const WalletPersonasSidebar = ({
         withdraw_crypto: false,
         multisig: false,
         social_recovery: false,
+        eip_1559_support: false,
       },
     },
   ]

@@ -29,7 +29,6 @@ import Multisig from "../../assets/wallets/multisig.svg"
 import SocialRecover from "../../assets/wallets/social_recover.svg"
 import Swap from "../../assets/wallets/swap.svg"
 import Eip1559 from "../../assets/wallets/eip1559.svg"
-import { filter } from "lodash"
 
 // Styles
 const Container = styled.div`
@@ -302,6 +301,14 @@ const WalletFilterSidebar = ({
           options: [],
         },
         {
+          title: "Swaps",
+          icon: <Swap />,
+          description: "Swap ERC-20 tokens right in the wallet.",
+          filterKey: "swaps",
+          showOptions: undefined,
+          options: [],
+        },
+        {
           title: "Layer 2",
           icon: <Layer2 />,
           description: "You can use layer 2 networks in the wallet.",
@@ -333,6 +340,15 @@ const WalletFilterSidebar = ({
           description:
             "Can import ERC-20 token contract addresses into the wallet.",
           filterKey: "erc_20_support",
+          showOptions: undefined,
+          options: [],
+        },
+        {
+          title: "EIP-1559 support",
+          icon: <Eip1559 />,
+          description:
+            "Supports type 2 transactions saving users money in gas fees.",
+          filterKey: "eip_1559_support",
           showOptions: undefined,
           options: [],
         },
