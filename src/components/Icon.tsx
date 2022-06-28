@@ -24,6 +24,8 @@ import {
   MdWbSunny,
   MdFlip,
   MdLiveHelp,
+  MdKeyboardArrowLeft,
+  MdKeyboardArrowRight,
 } from "react-icons/md"
 import { BsQuestionSquareFill, BsToggleOff, BsToggleOn } from "react-icons/bs"
 import { IoCodeOutline, IoCodeDownload } from "react-icons/io5"
@@ -53,6 +55,8 @@ const Icon: React.FC<IProps> = ({
     {name === "add" && <MdAdd />}
     {name === "chevronDown" && <MdExpandMore />}
     {name === "arrowRight" && <MdArrowForward />}
+    {name === "arrowRightIos" && <MdKeyboardArrowRight />}
+    {name === "arrowLeftIos" && <MdKeyboardArrowLeft />}
     {name === "close" && <MdClose />}
     {name === "darkTheme" && <MdBrightness2 />}
     {name === "github" && <FaGithub />}

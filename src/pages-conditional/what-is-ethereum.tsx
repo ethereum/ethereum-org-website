@@ -29,6 +29,7 @@ import {
 } from "../components/BannerGrid"
 import AdoptionChart from "../components/AdoptionChart"
 import EnergyConsumptionChart from "../components/EnergyConsumptionChart"
+import Slider, { EmblaSlide } from "../components/WhatIsEthereum/Slider"
 
 import { translateMessageId } from "../utils/translations"
 
@@ -575,6 +576,80 @@ const WhatIsEthereumPage = ({
                 written, and many more reasons to use it are being uncovered as
                 it evolves and develops over time.
               </p>
+              <p>
+                <b>Stablecoins</b> are a novel type of cryptocurrency that
+                relies on a more stable asset as the basis for its value. Most
+                of them are linked to the United States dollar and therefore
+                maintain the value of that currency. These allow for a very
+                cheap and stable global payment system. Many current stablecoins
+                are built on the Ethereum network.
+              </p>
+              <Slider>
+                <EmblaSlide>
+                  <h3>Cheaper and Faster Crossborder Payments</h3>
+                  <p>
+                    Stablecoins also simplify the process of sending money
+                    overseas. It often takes only few minutes to move funds
+                    across the globe, as opposed to the several business days or
+                    even weeks that it may take your average bank, and for a
+                    fraction of the price. Additionally, there is no extra fee
+                    for making a high value transaction, and there are zero
+                    restrictions on where or why you are sending your money.
+                  </p>
+                </EmblaSlide>
+                <EmblaSlide>
+                  <h3>The Quickest Help in Times of Crisis</h3>
+                  <p>
+                    If you are lucky enough to have multiple banking options
+                    through trusted institutions where you live, you may take
+                    for granted the financial freedom, security and stability
+                    that they offer. But for many people around the world facing
+                    political repression or economic hardship, financial
+                    institutions may not provide the protection or services they
+                    need.
+                  </p>
+                  <p>
+                    When war, economic catastrophes or crackdowns on civil
+                    liberties struck the residents of Venezuela, Cuba,
+                    Afghanistan, Nigeria, Belarus, and Ukraine, cryptocurrencies
+                    constituted the quickest and often the only option to retain
+                    financial agency.1 As seen in these examples,
+                    cryptocurrencies like Ethereum can provide unfettered access
+                    to the global economy when people are cut off from the
+                    outside world. Additionally, stablecoins offer a store of
+                    value when local currencies are collapsing due to
+                    superinflation.
+                  </p>
+                </EmblaSlide>
+                <EmblaSlide>
+                  <h3>Empowering Creators</h3>
+                  <p>
+                    In 2021 alone, artists, musicians, writers, and other
+                    creators used Ethereum to earn around $3.5 billion
+                    collectively. This makes Ethereum one of the largest global
+                    platforms for creators, alongside Spotify, YouTube, and
+                    Etsy. Learn more
+                  </p>
+                </EmblaSlide>
+                <EmblaSlide>
+                  <h3>Empowering Gamers</h3>
+                  <p>
+                    Play to earn games (where players are actually rewarded for
+                    playing the games) have recently emerged and are
+                    transforming the gaming industry. Traditionally, it is often
+                    prohibited to trade or transfer in-game assets to other
+                    players for real money. This forces players to use black
+                    market websites that are often a security risk. Blockchain
+                    gaming embraces the ingame economy and promotes such
+                    behavior in a trusted manner.
+                  </p>
+                  <p>
+                    Moreover, players are incentivized by being able to trade
+                    in-game tokens for real money and thus being trully rewarded
+                    for their play time.
+                  </p>
+                </EmblaSlide>
+              </Slider>
             </Width60>
             <Width40>
               <AdoptionChart />
