@@ -3,11 +3,11 @@ import React, { useEffect, useState } from "react"
 import styled from "styled-components"
 
 // Components
-import EventCard from "../components/EventCard"
-import InfoBanner from "../components/InfoBanner"
-import Link from "../components/Link"
-import Translation from "../components/Translation"
-import ButtonLink from "../components/ButtonLink"
+import EventCard from "./EventCard"
+import InfoBanner from "./InfoBanner"
+import Link from "./Link"
+import Translation from "./Translation"
+import ButtonLink from "./ButtonLink"
 
 // Data
 import events from "../data/community-events.json"
@@ -50,20 +50,41 @@ const ButtonLinkContainer = styled.div`
   margin-top: 1.25rem;
 `
 
-const UpcomingEventsList = () => {
+export interface ICommunityEventData {
+  title: string
+  to: string
+  sponsor: string | null
+  location: string
+  description: string
+  startDate: string
+  endDate: string
+}
+
+export interface IOrderedUpcomingEventType extends ICommunityEventData {
+  date: string
+  formattedDetails: string
+}
+
+const UpcomingEventsList: React.FC = () => {
   const eventsPerLoad = 10
-  const [orderedUpcomingEvents, setOrderedUpcomingEvents] = useState()
-  const [maxRange, setMaxRange] = useState(eventsPerLoad)
-  const [isVisible, setIsVisible] = useState(true)
+  const [orderedUpcomingEvents, setOrderedUpcomingEvents] = useState<
+    IOrderedUpcomingEventType[]
+  >([])
+  const [maxRange, setMaxRange] = useState<number>(eventsPerLoad)
+  const [isVisible, setIsVisible] = useState<boolean>(true)
 
   // Create Date object from each YYYY-MM-DD JSON date string
-  const dateParse = (dateString) => {
+  const dateParse = (dateString: string): Date => {
     const parts = dateString.split("-")
-    return new Date(parts[0], parts[1] - 1, parts[2])
+    return new Date(
+      parseInt(parts[0]),
+      parseInt(parts[1]) - 1,
+      parseInt(parts[2])
+    )
   }
 
   useEffect(() => {
-    const eventsList = [...events]
+    const eventsList: ICommunityEventData[] = [...events]
     const yesterday = new Date()
     yesterday.setDate(yesterday.getDate() - 1)
 
@@ -74,7 +95,8 @@ const UpcomingEventsList = () => {
 
     // Sort events by start date
     const orderedEvents = upcomingEvents.sort(
-      (a, b) => dateParse(a.startDate) - dateParse(b.startDate)
+      (a, b) =>
+        dateParse(a.startDate).getTime() - dateParse(b.startDate).getTime()
     )
 
     // Add formatted string to display
@@ -102,10 +124,10 @@ const UpcomingEventsList = () => {
 
   const loadMoreEvents = () => {
     setMaxRange((counter) => counter + eventsPerLoad)
-    setIsVisible(maxRange + eventsPerLoad <= orderedUpcomingEvents?.length)
+    setIsVisible(maxRange + eventsPerLoad <= orderedUpcomingEvents.length)
   }
 
-  if (orderedUpcomingEvents?.length === 0) {
+  if (orderedUpcomingEvents.length === 0) {
     return (
       <InfoBanner emoji=":information_source:">
         <Translation id="page-community-upcoming-events-no-events" />{" "}
@@ -119,21 +141,22 @@ const UpcomingEventsList = () => {
   return (
     <>
       <EventList>
-        {orderedUpcomingEvents
-          ?.slice(0, maxRange)
-          .map(({ title, to, formattedDetails, date, location }, idx) => {
-            return (
-              <EventCard
-                key={idx}
-                title={title}
-                to={to}
-                date={date}
-                description={formattedDetails}
-                location={location}
-                isEven={(idx + 1) % 2 === 0}
-              />
-            )
-          })}
+        {orderedUpcomingEvents &&
+          orderedUpcomingEvents
+            .slice(0, maxRange)
+            .map(({ title, to, formattedDetails, date, location }, idx) => {
+              return (
+                <EventCard
+                  key={idx}
+                  title={title}
+                  to={to}
+                  date={date}
+                  description={formattedDetails}
+                  location={location}
+                  isEven={(idx + 1) % 2 === 0}
+                />
+              )
+            })}
       </EventList>
       <ButtonLinkContainer>
         {isVisible && (
