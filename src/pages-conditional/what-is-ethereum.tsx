@@ -50,19 +50,19 @@ const Title = styled.h1`
   margin-bottom: 1rem;
   margin-top: 0;
   text-transform: uppercase;
-  color: ${(props) => props.theme.colors.textTableOfContents};
+  color: ${({ theme }) => theme.colors.textTableOfContents};
 `
 
 const Subtitle = styled.div`
   font-size: 1.25rem;
   line-height: 140%;
-  color: ${(props) => props.theme.colors.text200};
+  color: ${({ theme }) => theme.colors.text200};
 `
 
 const HeroContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
     flex-direction: column-reverse;
   }
 `
@@ -82,7 +82,7 @@ const Header = styled.header`
   @media (max-width: 1160px) {
     margin-top: 7rem;
   }
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
     margin-top: 4rem;
   }
   @media (max-width: 920px) {
@@ -99,7 +99,7 @@ const Header = styled.header`
 const StyledGrayContainer = styled(GrayContainer)`
   padding: 0;
   margin: 0;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
     margin-top: 0rem;
     box-shadow: none;
   }
@@ -110,7 +110,7 @@ const StyledCard = styled(Card)`
   min-width: 240px;
   margin: 1rem;
   padding: 1.5rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
     flex: 1 1 30%;
   }
 `
@@ -118,15 +118,16 @@ const StyledCard = styled(Card)`
 const Summary = styled.div`
   padding: 1rem;
   border-radius: 4px;
-  background: ${(props) => props.theme.colors.cardGradient};
+  background: ${({ theme }) => theme.colors.cardGradient};
 `
 
-const TwoColumnContent = styled.div`
+const TwoColumnContent = styled.div<{ reverse?: boolean }>`
   width: 100%;
   display: flex;
   align-items: center;
+  flex-direction: ${({ reverse }) => (reverse ? "row-reverse" : "row")};
 
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
     flex-direction: column;
     align-items: flex-start;
   }
@@ -146,7 +147,7 @@ const Section = styled.div<{
 const Column = styled.div`
   flex: 0 0 50%;
   max-width: 75%;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
     max-width: 100%;
   }
   margin-bottom: 1.5rem;
@@ -169,7 +170,7 @@ const StatPrimary = styled.div`
 
 const StatDescription = styled.div`
   font-size: 1rem;
-  color: ${(props) => props.theme.colors.text200};
+  color: ${({ theme }) => theme.colors.text200};
   max-width: 200px;
 `
 
@@ -184,7 +185,7 @@ const ButtonRow = styled.div`
   & ${ButtonLink} {
     margin-right: 1rem;
 
-    @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
       margin-bottom: 1rem;
     }
   }
@@ -346,7 +347,10 @@ const WhatIsEthereumPage = ({
             </Width60>
             <Width40 />
           </TwoColumnContent>
-          <TwoColumnContent>
+          <TwoColumnContent reverse>
+            <Width40>
+              <GatsbyImage image={getImage(data.wallet)} />
+            </Width40>
             <Width60>
               <h2>What is a cryptocurrency?</h2>
               <p>
@@ -378,9 +382,6 @@ const WhatIsEthereumPage = ({
                 blockchain technology upon which cryptocurrencies operate.
               </p>
             </Width60>
-            <Width40>
-              <GatsbyImage image={getImage(data.wallet)} />
-            </Width40>
           </TwoColumnContent>
           <TwoColumnContent>
             <Width60>
@@ -690,7 +691,10 @@ const WhatIsEthereumPage = ({
         </Section>
 
         <Section>
-          <TwoColumnContent>
+          <TwoColumnContent reverse>
+            <Width40>
+              <GatsbyImage image={getImage(data.merge)} />
+            </Width40>
             <Width60>
               <h2>Meet Ether, Ethereum’s cryptocurrency</h2>
               <p>
@@ -710,9 +714,6 @@ const WhatIsEthereumPage = ({
                 </ButtonRow>
               </p>
             </Width60>
-            <Width40>
-              <GatsbyImage image={getImage(data.merge)} />
-            </Width40>
           </TwoColumnContent>
         </Section>
 
@@ -754,7 +755,10 @@ const WhatIsEthereumPage = ({
         </Section>
 
         <Section>
-          <TwoColumnContent>
+          <TwoColumnContent reverse>
+            <Width40>
+              <GatsbyImage image={getImage(data.infra)} />
+            </Width40>
             <Width60>
               <h2>What are smart contracts?</h2>
               <p>
@@ -792,9 +796,6 @@ const WhatIsEthereumPage = ({
                 </ButtonRow>
               </p>
             </Width60>
-            <Width40>
-              <GatsbyImage image={getImage(data.infra)} />
-            </Width40>
           </TwoColumnContent>
         </Section>
       </StyledGrayContainer>
@@ -853,7 +854,13 @@ const WhatIsEthereumPage = ({
       </Section>
 
       <Section>
-        <TwoColumnContent>
+        <TwoColumnContent reverse>
+          <Width40>
+            <EnergyConsumptionChart
+              data={chartData}
+              legend="Annual Energy Consumption in TW/yr"
+            />
+          </Width40>
           <Width60>
             <h2>What about Ethereum’s energy consumption?</h2>
             <p>
@@ -881,12 +888,6 @@ const WhatIsEthereumPage = ({
               </ButtonRow>
             </p>
           </Width60>
-          <Width40>
-            <EnergyConsumptionChart
-              data={chartData}
-              legend="Annual Energy Consumption in TW/yr"
-            />
-          </Width40>
         </TwoColumnContent>
       </Section>
 
