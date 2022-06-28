@@ -13,6 +13,7 @@ import {
 import {
   MdAdd,
   MdBrightness2,
+  MdOutlineCancel,
   MdCircle,
   MdClose,
   MdDone,
@@ -62,6 +63,7 @@ const Icon: React.FC<IProps> = ({
     {name === "chevronDown" && <MdExpandMore />}
     {name === "circle" && <MdCircle />}
     {name === "arrowRight" && <MdArrowForward />}
+    {name === "cancel" && <MdOutlineCancel />}
     {name === "close" && <MdClose />}
     {name === "darkTheme" && <MdBrightness2 />}
     {name === "github" && <FaGithub />}

@@ -126,6 +126,12 @@ const MobileFilterToggle = styled.div`
   }
 `
 
+const StyledIcon = styled(Icon)`
+  fill: ${(props) => props.theme.colors.primary};
+  width: 24;
+  height: 24;
+`
+
 const SecondaryText = styled.p`
   font-size: 14px;
   line-height: 14px;
@@ -366,7 +372,7 @@ const FindWalletPage = ({ data, location }) => {
               active
             </SecondaryText>
           </div>
-          <FilterBurger />
+          {showMobileSidebar ? <StyledIcon name="cancel" /> : <FilterBurger />}
         </MobileFilterToggle>
       </MobileFilterToggleContainer>
       <TableContent>
