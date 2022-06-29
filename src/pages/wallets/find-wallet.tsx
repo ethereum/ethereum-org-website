@@ -144,15 +144,21 @@ const FilterSidebar = styled.div<{ showMobileSidebar: boolean }>`
   flex-direction: column;
   gap: 0.55rem;
   overflow-y: scroll;
+  z-index:10;
+  background: ${(props) => props.theme.colors.background};
+  transition: 0.5s all;
+  
 
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    width: ${(props) => (props.showMobileSidebar ? "350px" : "0")};
-    height: ${(props) => (props.showMobileSidebar ? "100%" : "0")};
+    width: ${(props) => (props.showMobileSidebar ? "350px" : "350px")};
+    left: ${(props) => (props.showMobileSidebar ? "0" : "-400px")};
+    height: ${(props) => (props.showMobileSidebar ? "100%" : "100%")};
     display: ${(props) => (props.showMobileSidebar ? "flex" : "none")};
+    position: ${(props) => (props.showMobileSidebar ? "absolute" : "relative")};
   }
   @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    width: ${(props) => (props.showMobileSidebar ? "100%" : "0")};
-    height: ${(props) => (props.showMobileSidebar ? "100%" : "0")};
+    width: ${(props) => (props.showMobileSidebar ? "90%" : "90%")};
+    height: ${(props) => (props.showMobileSidebar ? "100%" : "100%")};
     display: ${(props) => (props.showMobileSidebar ? "flex" : "none")};
   }
 `
@@ -164,13 +170,14 @@ const FilterTabs = styled.div`
   position: sticky;
   top: 0;
   padding-top: 8px;
-  min-height: 50px;
   background: ${(props) => props.theme.colors.background};
   z-index: 1;
 
   p {
     margin: 0;
     letter-spacing: 0.02rem;
+    font-size:0.9rem;
+    width:100%;
   }
 `
 
@@ -182,8 +189,10 @@ const FilterTab = styled.div<{
   background: ${(props) =>
     props.active === true ? props.theme.colors.primary : "none"};
   border-radius: 8px 0px 0px 0px;
-  padding: 10px;
-  vertical-align: middle;
+  padding: 0.5rem;
+  display: flex;
+  justify-items: center;
+  align-items: center;
 
   color: ${(props) =>
     props.active === true
