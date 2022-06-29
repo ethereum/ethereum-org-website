@@ -149,7 +149,7 @@ const H3 = styled.h3`
   padding: 0 0.25rem;
   line-height: 1.7rem;
 `
-const H4 = styled.h4`
+const ProfileFilterPrompt = styled.span`
   margin: 0;
   font-weight: normal;
   font-size: 0.875rem;
@@ -509,10 +509,10 @@ const WalletPersonasSidebar = ({
 
   return (
     <Container>
-      <H4>
+      <ProfileFilterPrompt>
         Choose the profile that matches your type of user and filter the wallet
         list
-      </H4>
+      </ProfileFilterPrompt>
       {personas.map((persona, idx) => {
         return (
           <Persona
