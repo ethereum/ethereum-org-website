@@ -34,8 +34,17 @@ import EnergyConsumptionChart from "../components/EnergyConsumptionChart"
 import Slider, { EmblaSlide } from "../components/Slider"
 import FeedbackCard from "../components/FeedbackCard"
 
-import { translateMessageId } from "../utils/translations"
+import {
+  getLocaleForNumberFormat,
+  translateMessageId,
+} from "../utils/translations"
+import { Lang } from "../utils/languages"
 
+import useFetchStat, {
+  defaultFormatter,
+  IFetchStat,
+} from "../hooks/useFetchStat"
+import { GATSBY_FUNCTIONS_PATH } from "../constants"
 import { Context } from "../types"
 
 const Slogan = styled.p`
@@ -201,11 +210,56 @@ const ButtonRow = styled.div`
   }
 `
 
+const IndicatorSpan = styled.span`
+  font-size: 1rem;
+`
+
+const ErrorMessage = () => (
+  <IndicatorSpan>
+    <Translation id="loading-error-refresh" />
+  </IndicatorSpan>
+)
+
+const LoadingMessage = () => (
+  <IndicatorSpan>
+    <Translation id="loading" />
+  </IndicatorSpan>
+)
+
+const Stat: React.FC<{ stat: IFetchStat }> = ({ stat }) => {
+  const isLoading = !stat.value
+
+  return stat.hasError ? (
+    <ErrorMessage />
+  ) : isLoading ? (
+    <LoadingMessage />
+  ) : (
+    <>stat.formattedValue</>
+  )
+}
+
 const WhatIsEthereumPage = ({
   data,
 }: PageProps<Queries.WhatIsEthereumQuery, Context>) => {
   const intl = useIntl()
   const theme = useTheme()
+
+  const localeForStatsBoxNumbers = getLocaleForNumberFormat(intl.locale as Lang)
+
+  const txCount = useFetchStat<{
+    result: Array<{ unixTimeStamp: string; transactionCount: number }>
+  }>(
+    `${GATSBY_FUNCTIONS_PATH}/txs`,
+    (response) => {
+      return response.result
+        .map(({ unixTimeStamp, transactionCount }) => ({
+          timestamp: parseInt(unixTimeStamp) * 1000, // unix milliseconds
+          value: transactionCount,
+        }))
+        .sort((a, b) => a.timestamp - b.timestamp)
+    },
+    (value) => defaultFormatter(value, localeForStatsBoxNumbers)
+  )
 
   const cards = [
     {
@@ -591,7 +645,9 @@ const WhatIsEthereumPage = ({
                   </StatDescription>
                 </BannerGridCell>
                 <BannerGridCell>
-                  <StatPrimary>1.1M</StatPrimary>
+                  <StatPrimary>
+                    <Stat stat={txCount} />
+                  </StatPrimary>
                   <StatDescription>
                     Number of transactions{" "}
                     <NoWrapText>
