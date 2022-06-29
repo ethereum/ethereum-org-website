@@ -1,6 +1,6 @@
 ---
 title: Zero-Knowledge Rollups
-description: An introduction to zero-knowledge rollups, a scaling solution used by the Ethereum community. 
+description: An introduction to zero-knowledge rollups as a scaling solution used by the Ethereum community. 
 lang: en
 sidebar: true
 --- 
@@ -11,22 +11,27 @@ Zero-knowledge rollups (ZK-rollups) are layer 2 [scaling solutions](/developers/
 
 You should have read and understood our page on [Ethereum scaling](/developers/docs/scaling/) and [layer 2](/layer-2). 
 
-
 ## What are zero-knowledge rollups? {#what-are-zk-rollups}
 
 **Zero-knowledge rollups (ZK-rollups)** bundle (or 'roll up') transactions into batches that are executed off-chain. Off-chain computation reduces the amount of data that has to be posted to the blockchain. ZK-rollup operators submit a summary of the changes required to represent all the transactions in a batch rather than sending each transaction individually. They also produce [validity proofs](/glossary/#validity-proof) to prove the correctness of their changes. The validity proof demonstrates with cryptographic certainty that the proposed changes to Ethereum's state are truly the end-result of executing all the transactions in the batch. 
 
-The ZK-rollup smart contract maintains the state of all transactions on the L2 chain, and this state can only be updated with a validity proof. A validity proof is a cryptographic assurance that the state-change proposed by the rollup is really the result of executing the given batch of transactions.This means that ZK-rollups only need to provide validity proofs to finalize transactions on the layer 1 (L1) chain instead of posting all the transaction data like [optimistic rollups](/developers/docs/scaling/optimistic-rollups/). 
+The ZK-rollup's state is maintained by a smart contract deployed on the Ethereum network. To update this state, ZK-rollup nodes must submit a validity proof for verification. As mentioned, the validity proof is a cryptographic assurance that the state-change proposed by the rollup is really the result of executing the given batch of transactions. This means that ZK-rollups only need to provide validity proofs to finalize transactions on Ethereum instead of posting all transaction data on-chain like [optimistic rollups](/developers/docs/scaling/optimistic-rollups/). 
 
-There are no delays when moving funds from ZK-rollups (L2) to Ethereum (L1) because exit transactions are executed once the ZK-rollup contract verifies the validity proof. Conversely, withdrawing funds from optimistic rollups is subject to a delay to allow anyone to challenge the exit transaction with a [fraud proof](/glossary/#fraud-proof). 
+There are no delays when moving funds from a ZK-rollup to Ethereum because exit transactions are executed once the ZK-rollup contract verifies the validity proof. Conversely, withdrawing funds from optimistic rollups is subject to a delay to allow anyone to challenge the exit transaction with a [fraud proof](/glossary/#fraud-proof). 
 
 ZK-rollups write transactions to Ethereum as `calldata`. `calldata` is where data that is included in external calls to smart contract functions gets stored. Information in `calldata` is published on the blockchain, allowing anyone to reconstruct the rollup’s state independently. ZK-rollups use compression techniques to reduce transaction data—for example, accounts are represented by an index rather than an address, which saves 28 bytes of data. On-chain data publication is a significant cost for rollups, so data compression can reduce fees for users.  
 
 ## How do zk-rollups interact with Ethereum? {#zk-rollups-and-ethereum}
 
-A ZK-rollup is an L2 chain designed to operate on top of Ethereum’s base layer. The ZK-rollup protocol is managed by smart contracts running on L1, including the main contract that stores rollup blocks, tracks deposits, and monitors state updates. Another L1 contract (the verifier contract) verifies zero-knowledge proofs submitted by block producers. 
+A ZK-rollup chain is an off-chain protocol that operates on top of the Ethereum blockchain and is managed by on-chain Ethereum smart contracts. ZK-rollups execute transactions outside of Mainnet, but periodically commit off-chain transaction batches to an on-chain rollup contract. This transaction record is immutable, much like the Ethereum blockchain, and forms the ZK-rollup chain. 
 
-Although they operate independently, ZK-rollups directly inherit Ethereum's security guarantees. This makes them safer than scaling solutions, such as [sidechains](/developers/docs/scaling/sidechains/), which are responsible for their own consensus and security properties.  
+The ZK-rollup's core architecture is made up of the following components:
+
+1. **On-chain contracts**: As mentioned, the ZK-rollup protocol is controlled by smart contracts running on Ethereum. This includes the main contract which stores rollup blocks, tracks deposits, and monitors state updates. Another on-chain contract (the verifier contract) verifies zero-knowledge proofs submitted by block producers. Thus, Ethereum serves as the base layer or "layer 1" for the ZK-rollup. 
+
+2. **Off-chain virtual machine (VM)**: While the ZK-rollup protocol lives on Ethereum, transaction execution and state storage happen on a separate virtual machine independent of the [EVM](/developers/docs/evm/). This off-chain VM is the execution environment for transactions on the ZK-rollup and serves as the secondary layer or "layer 2" for the ZK-rollup protocol. Validity proofs verified on Ethereum Mainnet guarantee the correctness of state transitions in the off-chain VM.
+
+ZK-rollups are "hybrid scaling solutions"—off-chain protocols that operate independently, but derive security from Ethereum. Specifically, the Ethereum network enforces the validity of state updates on the ZK-rollup and guarantees the availability of data behind every update to the rollup's state. As a result, ZK-rollups are considerably safer than pure off-chain scaling solutions, such as [sidechains](/developers/docs/scaling/sidechains/), which are responsible for their security properties.  
 
 ZK-rollups rely on the main Ethereum protocol for the following:  
 
@@ -58,9 +63,9 @@ Other ZK-rollups may rotate the operator role by using a [proof-of-stake](/devel
 
 #### How ZK-rollups publish transaction data on Ethereum {#how-zk-rollups-publish-transaction-data-on-ethereum} 
 
-As explained, transaction data is published on Ethereum as `calldata`. Calldata is a data area in a smart contract used to pass arguments to a function. Although `calldata` is similar to [memory](/developers/docs/smart-contracts/anatomy/#memory), it isn’t stored as part of Ethereum’s state; rather, it persists on-chain as part of the Ethereum chain's [history logs](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html?highlight=memory#logs). This makes it a cheaper alternative to `memory` or `storage` for storing data on-chain. 
+As explained, transaction data is published on Ethereum as `calldata`. Calldata is a data area in a smart contract used to pass arguments to a function and behaves similarly to [memory](/developers/docs/smart-contracts/anatomy/#memory). While calldata isn’t stored as part of Ethereum’s state; rather, it persists on-chain as part of the Ethereum chain's [history logs](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html?highlight=memory#logs). Calldata does not affect Ethereum's state, making it a cheap way to store data on-chain. 
 
-The`calldata` keyword often identifies the smart contract method being called by a transaction and holds inputs to the method in the form of an arbitrary sequence of bytes. ZK-rollups use it to publish compressed transaction data on-chain; the rollup operator simply adds a new batch by calling the required function in the rollup contract and passes the compressed data as function arguments. 
+The`calldata` keyword often identifies the smart contract method being called by a transaction and holds inputs to the method in the form of an arbitrary sequence of bytes. ZK-rollups use `calldata` to publish compressed transaction data on-chain; the rollup operator simply adds a new batch by calling the required function in the rollup contract and passes the compressed data as function arguments. This helps reduce costs for users since a large part of rollup fees go toward storing transaction data on-chain.
 
 ### State commitments {#state-commitments}
 
@@ -76,7 +81,29 @@ The new state root that the ZK-rollup operator submits to the L1 contract is the
 
 But the rollup contract won’t automatically accept the proposed state commitment until the operator proves the new Merkle root resulted from correct updates to the rollup’s state. The ZK-rollup operator does this by producing a validity proof, a succinct cryptographic commitment verifying the correctness of batched transactions. 
 
-Validity proofs allow parties to prove the correctness of a statement without revealing the statement—hence, they are also called zero-knowledge proofs. ZK-rollups use validity proofs to confirm the correctness of off-chain state transitions without having to re-execute transactions on Ethereum. 
+Validity proofs allow parties to prove the correctness of a statement without revealing the statement itself—hence, they are also called zero-knowledge proofs. ZK-rollups use validity proofs to confirm the correctness of off-chain state transitions without having to re-execute transactions on Ethereum. These proofs can come in the form of a ZK-SNARK (Zero-Knowledge Succint Non-Interactive Argument of Knowledge) or ZK-STARK (Zero-Knowledge Scalable Transparent Argument of Knowledge). 
+
+Both SNARKs and STARKs help attest to the integrity of off-chain computation in ZK-rollups, although each proof type has distinctive features. 
+
+**ZK-SNARKs**
+
+For the ZK-SNARK protocol to work, creating a Common Reference String (CRS) is necessary: the CRS provides public parameters for proving and verifying validity proofs. The security of the proving system depends on the CRS setup; if information used to create public parameters fall into the possession of malicious actors, generating false validity proofs would be a non-trivial task. 
+
+Some ZK-rollups attempt to solve this problem by using a [multi-party computation ceremony (MPC)](https://zkproof.org/2021/06/30/setup-ceremonies/amp/), involving trusted individuals, to generate public parameters for the ZK-SNARK circuit. Each party contributes some randomness (called "toxic waste") to the construct the CRS, which they must destroy immediately. 
+
+Trusted setups are used because they increase the security of the CRS setup. As long as one honest participant destroys their input, the security of the ZK-SNARK system is guaranteed. Still, this approach still requires trusting those involved to delete their sampled randomness and not undermine the system's security guarantees. 
+
+Trust assumptions aside, ZK-SNARKs are popular for their small proof sizes and constant-time verification. As proof verification on L1 constitutes the larger cost of operating a ZK-rollup, L2s use ZK-SNARKs to generate proofs that can be verified quickly and cheaply on Mainnet. 
+
+**ZK-STARKs**
+
+Like ZK-SNARKs, ZK-STARKs prove the validity of off-chain computation without revealing the inputs. However, ZK-STARKs are considered an improvement on ZK-SNARKs because of their scalability and transparency. 
+
+ZK-STARKs are 'transparent', as they can work without the trusted setup of a Common Reference String (CRS). Instead, ZK-STARKs rely on publicly verifiable randomness to set up parameters for generating and verifying proofs. 
+
+ZK-STARKs also provide more scalability because the time needed to prove and verify validity proofs increases *quasilinearly* in relation to the complexity of the underlying computation. With ZK-SNARKs, proving and verification times scale *linearly* in relation to the size of the underlying computation. This means ZK-STARKs require less time than ZK-SNARKs for proving and verifying when large datasets are involved, making them useful for high-volume applications. 
+
+ZK-STARKs are also secure against quantum computers, while the Elliptic Curve Cryptography (ECC) used in ZK-SNARKs is widely believed to be susceptible to quantum computing attacks. The downside to ZK-STARKs is that they produce larger proof sizes, which are more expensive to verify on Ethereum. Also, they don't support recursion, which is key to scaling off-chain compuation with zero-knowledge proofs. 
 
 #### How do validity proofs work in ZK-rollups? {#validity-proofs-in-zk-rollups}
 
