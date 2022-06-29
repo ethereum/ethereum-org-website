@@ -9,16 +9,17 @@ const TabList = styled.ul`
 `
 
 const Tab = styled.li`
-  border-bottom: 1px solid #f4d0a7;
+  border-bottom: 1px solid ${(props) => props.theme.colors.primary};
   margin: 0;
 `
 
 const TabButton = styled.button<{ selected: boolean }>`
   display: block;
   cursor: pointer;
-  color: ${({ theme }) => theme.colors.text};
+  color: ${({ theme, selected }) =>
+    selected ? theme.colors.background : theme.colors.text};
   background-color: ${({ selected, theme }) =>
-    selected ? theme.colors.selectActive : "transparent"};
+    selected ? theme.colors.primary : "transparent"};
   border: 0;
   border-top-left-radius: 0.3rem;
   border-top-right-radius: 0.3rem;

@@ -121,6 +121,10 @@ const Summary = styled.div`
   padding: 1rem;
   border-radius: 4px;
   background: ${({ theme }) => theme.colors.cardGradient};
+
+  p:last-child {
+    margin: 0;
+  }
 `
 
 const TwoColumnContent = styled.div<{ reverse?: boolean }>`
@@ -527,8 +531,9 @@ const WhatIsEthereumPage = ({
                     Smart contracts on Ethereum{" "}
                     <Tooltip
                       content={tooltipContent({
-                        apiUrl: "https://www.TODO.com",
-                        apiProvider: "TODO",
+                        apiUrl:
+                          "https://dune.com/sawmon_and_natalie/smart-contracts-on-ethereum",
+                        apiProvider: "Dune",
                         ariaLabel: "Read more about smart contracts stats",
                       })}
                     >
@@ -611,24 +616,25 @@ const WhatIsEthereumPage = ({
                 written, and many more reasons to use it are being uncovered as
                 it evolves and develops over time.
               </p>
-              <p>
-                <b>Stablecoins</b> are a novel type of cryptocurrency that
-                relies on a more stable asset as the basis for its value. Most
-                of them are linked to the United States dollar and therefore
-                maintain the value of that currency. These allow for a very
-                cheap and stable global payment system. Many current stablecoins
-                are built on the Ethereum network.
-              </p>
+
               <Slider>
                 <EmblaSlide>
                   <h3>Cheaper and Faster Crossborder Payments</h3>
                   <p>
-                    Stablecoins also simplify the process of sending money
-                    overseas. It often takes only few minutes to move funds
-                    across the globe, as opposed to the several business days or
-                    even weeks that it may take your average bank, and for a
-                    fraction of the price. Additionally, there is no extra fee
-                    for making a high value transaction, and there are zero
+                    <b>Stablecoins</b> are a novel type of cryptocurrency that
+                    relies on a more stable asset as the basis for its value.
+                    Most of them are linked to the United States dollar and
+                    therefore maintain the value of that currency. These allow
+                    for a very cheap and stable global payment system. Many
+                    current stablecoins are built on the Ethereum network.
+                  </p>
+                  <p>
+                    Ethereum and stablecoins simplify the process of sending
+                    money overseas. It often takes only few minutes to move
+                    funds across the globe, as opposed to the several business
+                    days or even weeks that it may take your average bank, and
+                    for a fraction of the price. Additionally, there is no extra
+                    fee for making a high value transaction, and there are zero
                     restrictions on where or why you are sending your money.
                   </p>
                 </EmblaSlide>
@@ -645,14 +651,54 @@ const WhatIsEthereumPage = ({
                   </p>
                   <p>
                     When war, economic catastrophes or crackdowns on civil
-                    liberties struck the residents of Venezuela, Cuba,
-                    Afghanistan, Nigeria, Belarus, and Ukraine, cryptocurrencies
-                    constituted the quickest and often the only option to retain
-                    financial agency.1 As seen in these examples,
-                    cryptocurrencies like Ethereum can provide unfettered access
-                    to the global economy when people are cut off from the
-                    outside world. Additionally, stablecoins offer a store of
-                    value when local currencies are collapsing due to
+                    liberties struck the residents of{" "}
+                    <Link
+                      to="https://time.com/5486673/bitcoin-venezuela-authoritarian/"
+                      hideArrow
+                    >
+                      Venezuela
+                    </Link>
+                    ,{" "}
+                    <Link
+                      to="https://www.economist.com/the-americas/2021/10/30/cubas-communist-regime-is-trying-to-control-crypto"
+                      hideArrow
+                    >
+                      Cuba
+                    </Link>
+                    ,{" "}
+                    <Link
+                      to="https://www.aljazeera.com/news/2022/3/21/crypto-provides-fix-for-some-in-crisis-hit-afghanistan"
+                      hideArrow
+                    >
+                      Afghanistan
+                    </Link>
+                    ,{" "}
+                    <Link
+                      to="https://qz.com/africa/1922466/how-bitcoin-powered-nigerias-endsars-protests/"
+                      hideArrow
+                    >
+                      Nigeria
+                    </Link>
+                    ,{" "}
+                    <Link
+                      to="https://www.euronews.com/my-europe/2021/12/22/meet-the-ngo-turning-to-cryptocurrencies-to-help-desperate-belarusians"
+                      hideArrow
+                    >
+                      Belarus
+                    </Link>
+                    , and{" "}
+                    <Link
+                      to="https://internationalbanker.com/finance/cryptocurrencies-filling-crucial-role-in-the-russia-ukraine-conflict/"
+                      hideArrow
+                    >
+                      Ukraine
+                    </Link>
+                    , cryptocurrencies constituted the quickest and often the
+                    only option to retain financial agency.1 As seen in these
+                    examples, cryptocurrencies like Ethereum can provide
+                    unfettered access to the global economy when people are cut
+                    off from the outside world. Additionally, stablecoins offer
+                    a store of value when local currencies are collapsing due to
                     superinflation.
                   </p>
                 </EmblaSlide>
@@ -663,7 +709,13 @@ const WhatIsEthereumPage = ({
                     creators used Ethereum to earn around $3.5 billion
                     collectively. This makes Ethereum one of the largest global
                     platforms for creators, alongside Spotify, YouTube, and
-                    Etsy. Learn more
+                    Etsy.{" "}
+                    <Link
+                      to="https://stark.mirror.xyz/q3OnsK7mvfGtTQ72nfoxLyEV5lfYOqUfJIoKBx7BG1I"
+                      hideArrow
+                    >
+                      Learn more
+                    </Link>
                   </p>
                 </EmblaSlide>
                 <EmblaSlide>
@@ -698,13 +750,14 @@ const WhatIsEthereumPage = ({
               <GatsbyImage image={getImage(data.ethCoin)} />
             </Width40>
             <Width60>
-              <h2>What can I do with ETH coin?</h2>
+              <h2>Meet Ether, Ethereum’s cryptocurrency</h2>
               <p>
-                Turns out: a lot of things! One of the most prominent usages of
-                the Ethereum technology is decentralised finance (DeFi) that
-                opens whole area of banking services to anybody with an internet
-                connection. You can use your Ether as a collateral to take out
-                loans or provide liquidity to earn interest on your funds.
+                Ethereum has a native cryptocurrency called Ether (ETH). It is
+                purely digital, and you can send it to anyone anywhere in the
+                world instantly. The supply of ETH isn’t controlled by any
+                government or company - it is decentralized. New coins (also
+                commonly called tokens) are created only by miners and stakers
+                who maintain the network.
               </p>
               <p>
                 Every action on the Ethereum network requires a certain amount
@@ -714,9 +767,9 @@ const WhatIsEthereumPage = ({
               </p>
               <p>
                 <ButtonRow>
-                  <ButtonLink to="/dapps/">Explore applications</ButtonLink>
-                  <ButtonLink to="/defi/" isSecondary>
-                    Learn about DeFi
+                  <ButtonLink to="/eth/">What is Ether?</ButtonLink>
+                  <ButtonLink to="/get-eth/" isSecondary>
+                    Get ETH
                   </ButtonLink>
                 </ButtonRow>
               </p>
@@ -730,20 +783,19 @@ const WhatIsEthereumPage = ({
               <GatsbyImage image={getImage(data.meetEth)} />
             </Width40>
             <Width60>
-              <h2>Meet Ether, Ethereum’s cryptocurrency</h2>
+              <h2>What can I do with ETH coin?</h2>
               <p>
-                Ethereum has a native cryptocurrency called Ether (ETH). It is
-                purely digital, and you can send it to anyone anywhere in the
-                world instantly. The supply of ETH isn’t controlled by any
-                government or company - it is decentralized. New coins (also
-                commonly called tokens) are created only by miners and stakers
-                who maintain the network.
+                Turns out: a lot of things! One of the most prominent usages of
+                the Ethereum technology is decentralised finance (DeFi) that
+                opens whole area of banking services to anybody with an internet
+                connection. You can use your Ether as a collateral to take out
+                loans or provide liquidity to earn interest on your funds.
               </p>
               <p>
                 <ButtonRow>
-                  <ButtonLink to="/eth/">What is Ether?</ButtonLink>
-                  <ButtonLink to="/get-eth/" isSecondary>
-                    Get ETH
+                  <ButtonLink to="/dapps/">Explore applications</ButtonLink>
+                  <ButtonLink to="/defi/" isSecondary>
+                    Learn about DeFi
                   </ButtonLink>
                 </ButtonRow>
               </p>
@@ -1041,15 +1093,8 @@ export const query = graphql`
     stats: file(relativePath: { eq: "upgrades/newrings.png" }) {
       ...twoColImage
     }
-    ethCoin: file(relativePath: { eq: "what-is-eth/eth.png" }) {
-      childImageSharp {
-        gatsbyImageData(
-          width: 243
-          layout: FIXED
-          placeholder: BLURRED
-          quality: 100
-        )
-      }
+    ethCoin: file(relativePath: { eq: "impact_transparent.png" }) {
+      ...twoColImage
     }
     meetEth: file(relativePath: { eq: "upgrades/merge.png" }) {
       ...twoColImage

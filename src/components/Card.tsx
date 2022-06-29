@@ -33,7 +33,7 @@ const Card: React.FC<IProps> = ({
 }) => (
   <StyledCard className={className}>
     <TopContent>
-      {emoji && <Emoji size={3} text={emoji} mb="1rem" />}
+      {emoji && <Emoji size={3} text={emoji} />}
       {title && <h3>{title}</h3>}
       {description && <Description>{description}</Description>}
     </TopContent>
