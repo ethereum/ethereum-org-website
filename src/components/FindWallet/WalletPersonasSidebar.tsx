@@ -101,24 +101,6 @@ const Persona = styled.div<{
         : props.theme.colors.text};
   }
 
-  h4 {
-    margin: 0.5rem 0 0.8rem 0;
-    padding: 0.7rem 0.6rem 0;
-    color: ${(props) =>
-      props.selected === true
-        ? props.theme.colors.primary
-        : props.theme.colors.text200};
-    font-size: 0.9rem;
-    font-weight: normal;
-    transition: 0.5s all;
-    line-height: 1.3;
-    border-top: 1px solid
-      ${(props) =>
-        props.selected === true
-          ? props.theme.colors.primary
-          : props.theme.colors.lightBorder};
-  }
-
   &:hover {
     background: ${(props) =>
       props.selected === true
