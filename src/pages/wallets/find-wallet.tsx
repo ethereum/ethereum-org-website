@@ -408,9 +408,19 @@ const FindWalletPage = ({ data, location }) => {
               </p>
             </FilterTab>
           </FilterTabs>
-          <ResetContainer onClick={resetFilters}>
-            <ResetIcon name="arrowCounterClockwise" size="14" />
-            <p>RESET FILTERS</p>
+          <ResetContainer
+            role="button"
+            aria-labelledby="reset-filter"
+            onClick={resetFilters}
+          >
+            <ResetIcon
+              aria-hidden="true"
+              name="arrowCounterClockwise"
+              size="14"
+            />
+            <p id="reset-filter" aria-hidden="true">
+              {"Reset filters".toUpperCase()}
+            </p>
           </ResetContainer>
           <div>
             {showFeatureFilters ? (
