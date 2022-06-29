@@ -26,6 +26,9 @@ import SocialRecover from "../../assets/wallets/social_recover.svg"
 import Swap from "../../assets/wallets/swap.svg"
 import Eip1559 from "../../assets/wallets/eip1559.svg"
 
+// Utils
+import { trackCustomEvent } from "../../utils/matomo"
+
 // Styles
 const Container = styled.div`
   display: flex;
@@ -507,9 +510,19 @@ const WalletPersonasSidebar = ({
             onClick={() => {
               if (idx === selectedPersona) {
                 resetFilters()
+                trackCustomEvent({
+                  eventCategory: "UserPersona",
+                  eventAction: `${persona.title}`,
+                  eventName: `${persona.title} false`,
+                })
               } else {
                 setSelectedPersona(idx)
                 setFilters(persona.presetFilters)
+                trackCustomEvent({
+                  eventCategory: "UserPersona",
+                  eventAction: `${persona.title}`,
+                  eventName: `${persona.title} true`,
+                })
               }
             }}
           >

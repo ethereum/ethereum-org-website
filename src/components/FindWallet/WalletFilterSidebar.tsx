@@ -33,6 +33,9 @@ import SocialRecover from "../../assets/wallets/social_recover.svg"
 import Swap from "../../assets/wallets/swap.svg"
 import Eip1559 from "../../assets/wallets/eip1559.svg"
 
+// Utils
+import { trackCustomEvent } from "../../utils/matomo"
+
 // Styles
 const Container = styled.div`
   display: flex;
@@ -437,6 +440,13 @@ const WalletFilterSidebar = ({
                       onClick={
                         item.filterKey
                           ? () => {
+                              trackCustomEvent({
+                                eventCategory: "WalletFilterSidebar",
+                                eventAction: `${filterOption.title}`,
+                                eventName: `${item.filterKey} ${!filters[
+                                  item.filterKey!
+                                ]}`,
+                              })
                               updateFilterOption(item.filterKey)
                             }
                           : () => {
@@ -486,6 +496,13 @@ const WalletFilterSidebar = ({
                         item.filterKey
                           ? () => {
                               updateFilterOption(item.filterKey)
+                              trackCustomEvent({
+                                eventCategory: "WalletFilterSidebar",
+                                eventAction: `${filterOption.title}`,
+                                eventName: `${item.filterKey} ${!filters[
+                                  item.filterKey!
+                                ]}`,
+                              })
                             }
                           : () => {
                               setShowOptions(idx, itemidx, !item.showOptions)
@@ -526,6 +543,20 @@ const WalletFilterSidebar = ({
                                   )
                                 }
 
+                                console.log({
+                                  eventCategory: "WalletFilterSidebar",
+                                  eventAction: `${filterOption.title}`,
+                                  eventName: `${option.filterKey} ${!filters[
+                                    option.filterKey!
+                                  ]}`,
+                                })
+                                trackCustomEvent({
+                                  eventCategory: "WalletFilterSidebar",
+                                  eventAction: `${filterOption.title}`,
+                                  eventName: `${option.filterKey} ${!filters[
+                                    option.filterKey!
+                                  ]}`,
+                                })
                                 updateFilterOption(option.filterKey)
                               }}
                             >

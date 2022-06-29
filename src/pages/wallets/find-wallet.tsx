@@ -25,6 +25,7 @@ import FilterBurger from "../../assets/wallets/filter_burger.svg"
 
 // Utils
 import { translateMessageId } from "../../utils/translations"
+import { trackCustomEvent } from "../../utils/matomo"
 
 // Styles
 const HeroContainer = styled.div`
@@ -371,8 +372,14 @@ const FindWalletPage = ({ data, location }) => {
       </HeroContainer>
       <MobileFilterToggleContainer>
         <MobileFilterToggle
+          showMobileSidebar={showMobileSidebar}
           onClick={() => {
             setShowMobileSidebar(!showMobileSidebar)
+            trackCustomEvent({
+              eventCategory: "MobileFilterToggle",
+              eventAction: `Tap MobileFilterToggle`,
+              eventName: `show mobile filters ${!showMobileSidebar}`,
+            })
           }}
         >
           <div>
@@ -395,13 +402,27 @@ const FindWalletPage = ({ data, location }) => {
           <FilterTabs>
             <FilterTab
               active={!showFeatureFilters}
-              onClick={() => setShowFeatureFilters(false)}
+              onClick={() => {
+                setShowFeatureFilters(false)
+                trackCustomEvent({
+                  eventCategory: "WalletFilterSidebar",
+                  eventAction: `WalletFilterSidebar tab clicked`,
+                  eventName: `show user personas`,
+                })
+              }}
             >
               <p>Profile Filters</p>
             </FilterTab>
             <FilterTab
               active={showFeatureFilters}
-              onClick={() => setShowFeatureFilters(true)}
+              onClick={() => {
+                setShowFeatureFilters(true)
+                trackCustomEvent({
+                  eventCategory: "WalletFilterSidebar",
+                  eventAction: `WalletFilterSidebar tab clicked`,
+                  eventName: `show feature filters`,
+                })
+              }}
             >
               <p>
                 Feature Filters (

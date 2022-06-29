@@ -33,7 +33,9 @@ import Swap from "../../assets/wallets/swap.svg"
 import Eip1559 from "../../assets/wallets/eip1559.svg"
 import Warning from "../../assets/staking/warning-product-glyph.svg"
 import GreenCheck from "../../assets/staking/green-check-product-glyph.svg"
-import { filter } from "lodash"
+
+// Utils
+import { trackCustomEvent } from "../../utils/matomo"
 
 // Styles
 const Container = styled.table`
@@ -309,7 +311,6 @@ const Features = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 0.2rem;
-  
 
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     flex-wrap: nowrap;
@@ -341,22 +342,24 @@ const FeatureLabel = styled.div<{ hasFeature: boolean }>`
   width: 200px;
   p {
     margin-bottom: 0;
-    flex:none;
-    color: ${(props) => props.hasFeature ? props.theme.colors.text : props.theme.colors.secondary};
-    text-decoration: ${(props) => props.hasFeature ? "none" : "line-through"};
+    flex: none;
+    color: ${(props) =>
+      props.hasFeature
+        ? props.theme.colors.text
+        : props.theme.colors.secondary};
+    text-decoration: ${(props) => (props.hasFeature ? "none" : "line-through")};
   }
-  span + p{
-    text-decoration:none;
+  span + p {
+    text-decoration: none;
   }
-  p + div, div + div{
-    svg{
+  p + div,
+  div + div {
+    svg {
       width: 1.5rem;
       fill: ${(props) => props.theme.colors.secondary};
       padding-right: 0.5rem;
     }
   }
-
-
 `
 
 const FeatureIcon = styled.div<{ hasFeature: boolean }>`
@@ -416,18 +419,18 @@ const LastUpdated = styled.p`
     align-items: flex-start;
     flex-flow: column-reverse;
   }
-  a{
-    border-radius:4px;
+  a {
+    border-radius: 4px;
     padding: 0.3rem 0.7rem;
-    margin:0.3rem;
-    text-decoration:none;
+    margin: 0.3rem;
+    text-decoration: none;
     background: ${(props) => props.theme.colors.primary};
     color: ${(props) => props.theme.colors.background};
     @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    margin-left:0;
-    margin-bottom: 0.6rem;
-  }
-    :after{
+      margin-left: 0;
+      margin-bottom: 0.6rem;
+    }
+    :after {
       margin-right: 0.2rem;
     }
     :hover {
@@ -658,6 +661,11 @@ const WalletTable = ({ data, filters, walletData }) => {
             ]}
             onChange={(selectedOption) => {
               setFirstFeatureSelect(selectedOption)
+              trackCustomEvent({
+                eventCategory: "WalletFeatureCompare",
+                eventAction: `Select WalletFeatureCompare`,
+                eventName: `${selectedOption.filterKey} selected`,
+              })
             }}
             defaultValue={firstFeatureSelect}
             isSearchable={false}
@@ -675,6 +683,11 @@ const WalletTable = ({ data, filters, walletData }) => {
             ]}
             onChange={(selectedOption) => {
               setSecondFeatureSelect(selectedOption)
+              trackCustomEvent({
+                eventCategory: "WalletFeatureCompare",
+                eventAction: `Select WalletFeatureCompare`,
+                eventName: `${selectedOption.filterKey} selected`,
+              })
             }}
             defaultValue={secondFeatureSelect}
             isSearchable={false}
@@ -692,6 +705,11 @@ const WalletTable = ({ data, filters, walletData }) => {
             ]}
             onChange={(selectedOption) => {
               setThirdFeatureSelect(selectedOption)
+              trackCustomEvent({
+                eventCategory: "WalletFeatureCompare",
+                eventAction: `Select WalletFeatureCompare`,
+                eventName: `${selectedOption.filterKey} selected`,
+              })
             }}
             defaultValue={thirdFeatureSelect}
             isSearchable={false}
@@ -729,16 +747,43 @@ const WalletTable = ({ data, filters, walletData }) => {
                     ))}
                     <SocialsContainer>
                       <Socials>
-                        <Link to={wallet.url} hideArrow={true}>
+                        <Link
+                          to={wallet.url}
+                          hideArrow={true}
+                          customEventOptions={{
+                            eventCategory: "WalletExternalLinkList",
+                            eventAction: `Go to wallet`,
+                            eventName: `${wallet.name} ${idx}`,
+                            eventValue: filters,
+                          }}
+                        >
                           <Icon name="webpage" size={"1.5rem"} color={true} />
                         </Link>
                         {wallet.twitter && (
-                          <Link to={wallet.twitter} hideArrow={true}>
+                          <Link
+                            to={wallet.twitter}
+                            hideArrow={true}
+                            customEventOptions={{
+                              eventCategory: "WalletExternalLinkList",
+                              eventAction: `Go to wallet`,
+                              eventName: `${wallet.name} ${idx}`,
+                              eventValue: filters,
+                            }}
+                          >
                             <Icon name="twitter" size={"1.5rem"} color={true} />
                           </Link>
                         )}
                         {wallet.discord && (
-                          <Link to={wallet.discord} hideArrow={true}>
+                          <Link
+                            to={wallet.discord}
+                            hideArrow={true}
+                            customEventOptions={{
+                              eventCategory: "WalletExternalLinkList",
+                              eventAction: `Go to wallet`,
+                              eventName: `${wallet.name} ${idx}`,
+                              eventValue: filters,
+                            }}
+                          >
                             <Icon name="discord" size={"1.5rem"} color={true} />
                           </Link>
                         )}
@@ -748,7 +793,16 @@ const WalletTable = ({ data, filters, walletData }) => {
                 </FlexInfo>
               </td>
               <td>
-                <FlexInfoCenter onClick={() => updateMoreInfo(idx)}>
+                <FlexInfoCenter
+                  onClick={() => {
+                    updateMoreInfo(idx)
+                    trackCustomEvent({
+                      eventCategory: "WalletMoreInfo",
+                      eventAction: `More info wallet`,
+                      eventName: `More info ${wallet.name}`,
+                    })
+                  }}
+                >
                   {wallet[firstFeatureSelect.filterKey!] ? (
                     <GreenCheck />
                   ) : (
@@ -757,7 +811,16 @@ const WalletTable = ({ data, filters, walletData }) => {
                 </FlexInfoCenter>
               </td>
               <td>
-                <FlexInfoCenter onClick={() => updateMoreInfo(idx)}>
+                <FlexInfoCenter
+                  onClick={() => {
+                    updateMoreInfo(idx)
+                    trackCustomEvent({
+                      eventCategory: "WalletMoreInfo",
+                      eventAction: `More info wallet`,
+                      eventName: `More info ${wallet.name}`,
+                    })
+                  }}
+                >
                   {wallet[secondFeatureSelect.filterKey!] ? (
                     <GreenCheck />
                   ) : (
@@ -766,7 +829,16 @@ const WalletTable = ({ data, filters, walletData }) => {
                 </FlexInfoCenter>
               </td>
               <td>
-                <FlexInfoCenter onClick={() => updateMoreInfo(idx)}>
+                <FlexInfoCenter
+                  onClick={() => {
+                    updateMoreInfo(idx)
+                    trackCustomEvent({
+                      eventCategory: "WalletMoreInfo",
+                      eventAction: `More info wallet`,
+                      eventName: `More info ${wallet.name}`,
+                    })
+                  }}
+                >
                   {wallet[thirdFeatureSelect.filterKey!] ? (
                     <GreenCheck />
                   ) : (
@@ -778,7 +850,14 @@ const WalletTable = ({ data, filters, walletData }) => {
                 <FlexInfoCenter>
                   <div
                     style={{ cursor: "pointer" }}
-                    onClick={() => updateMoreInfo(idx)}
+                    onClick={() => {
+                      updateMoreInfo(idx)
+                      trackCustomEvent({
+                        eventCategory: "WalletMoreInfo",
+                        eventAction: `More info wallet`,
+                        eventName: `More info ${wallet.name}`,
+                      })
+                    }}
                   >
                     <WalletMoreInfoArrow
                       name={wallet.moreInfo ? "chevronUp" : "chevronDown"}
@@ -938,7 +1017,17 @@ const WalletTable = ({ data, filters, walletData }) => {
                       <i>
                         {wallet.name} info updated on {wallet.last_updated}
                       </i>
-                      <Link to={wallet.url}>Check out {wallet.name}</Link>
+                      <Link
+                        to={wallet.url}
+                        customEventOptions={{
+                          eventCategory: "WalletExternalLinkList",
+                          eventAction: `Go to wallet`,
+                          eventName: `${wallet.name} ${idx}`,
+                          eventValue: filters,
+                        }}
+                      >
+                        Check out {wallet.name}
+                      </Link>
                     </LastUpdated>
                   </div>
                 </WalletMoreInfoContainer>
