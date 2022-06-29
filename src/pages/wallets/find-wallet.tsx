@@ -72,15 +72,17 @@ const TableContent = styled(Content)`
   overflow: hidden;
   position: sticky;
   top: 76px;
-  margin-bottom: 100px;
+  margin-bottom: 150px;
+  border-bottom: 1px solid ${(props) => props.theme.colors.secondary};
+  padding-bottom: 0;
 
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    padding: 1rem 0;
+    padding: 1rem 0 0;
     margin-bottom: 120px;
   }
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    padding: 1rem 0;
-    margin-bottom: 200px;
+    padding: 1rem 0 0;
+    margin-bottom: 230px;
   }
 `
 
@@ -238,6 +240,7 @@ const Note = styled.div`
     font-size: 14px;
     line-height: 23px;
     margin: 0;
+    padding-top: 0.2rem;
   }
 `
 

@@ -37,7 +37,7 @@ import Eip1559 from "../../assets/wallets/eip1559.svg"
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 1rem;
 
   @media (max-width: ${(props) => props.theme.breakpoints.s}) {
     padding: 1rem 1rem;
