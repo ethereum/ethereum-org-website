@@ -430,6 +430,9 @@ const LastUpdated = styled.p`
     :after{
       margin-right: 0.2rem;
     }
+    :hover {
+      opacity: 0.8;
+    }
   }
 `
 
