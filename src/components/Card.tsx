@@ -11,8 +11,17 @@ const StyledCard = styled.div`
   padding: 1.5rem;
 `
 
+const Title = styled.h3`
+  margin-top: 0;
+`
+
 const Description = styled.p`
   opacity: 0.8;
+  margin: 0;
+`
+
+const StyledEmoji = styled(Emoji)`
+  margin-bottom: 1rem;
 `
 
 const TopContent = styled.div``
@@ -33,8 +42,8 @@ const Card: React.FC<IProps> = ({
 }) => (
   <StyledCard className={className}>
     <TopContent>
-      {emoji && <Emoji size={3} text={emoji} />}
-      {title && <h3>{title}</h3>}
+      {emoji && <StyledEmoji size={3} text={emoji} />}
+      {title && <Title>{title}</Title>}
       {description && <Description>{description}</Description>}
     </TopContent>
     {children}
