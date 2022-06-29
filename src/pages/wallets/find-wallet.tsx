@@ -144,10 +144,9 @@ const FilterSidebar = styled.div<{ showMobileSidebar: boolean }>`
   flex-direction: column;
   gap: 0.55rem;
   overflow-y: scroll;
-  z-index:10;
+  z-index: 10;
   background: ${(props) => props.theme.colors.background};
   transition: 0.5s all;
-  
 
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     width: ${(props) => (props.showMobileSidebar ? "350px" : "350px")};
@@ -176,8 +175,8 @@ const FilterTabs = styled.div`
   p {
     margin: 0;
     letter-spacing: 0.02rem;
-    font-size:0.9rem;
-    width:100%;
+    font-size: 0.9rem;
+    width: 100%;
   }
 `
 
@@ -358,7 +357,7 @@ const FindWalletPage = ({ data, location }) => {
         </HeroContent>
         <HeroImage
           image={getImage(data.hero)!}
-          alt={translateMessageId("page-find-wallet-image-alt", intl)}
+          alt=""
           loading="eager"
           objectFit="contain"
         />
