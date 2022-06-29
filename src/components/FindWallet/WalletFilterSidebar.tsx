@@ -450,18 +450,34 @@ const WalletFilterSidebar = ({
                       <p>{item.title}</p>
                       <div>
                         {item.filterKey && (
-                          <ToggleIcon
-                            name={
-                              filters[item.filterKey] ? "toggleOn" : "toggleOff"
+                          <span
+                            aria-label={item.title}
+                            role="checkbox"
+                            aria-checked={
+                              filters[item.filterKey] ? "true" : "false"
                             }
-                            size="30"
-                          />
+                          >
+                            <ToggleIcon
+                              name={
+                                filters[item.filterKey]
+                                  ? "toggleOn"
+                                  : "toggleOff"
+                              }
+                              size="30"
+                            />
+                          </span>
                         )}
                         {item.showOptions !== undefined && (
-                          <ToggleIcon
-                            name={item.showOptions ? "toggleOn" : "toggleOff"}
-                            size="30"
-                          />
+                          <span
+                            aria-label={item.title}
+                            role="checkbox"
+                            aria-checked={item.showOptions ? "true" : "false"}
+                          >
+                            <ToggleIcon
+                              name={item.showOptions ? "toggleOn" : "toggleOff"}
+                              size="30"
+                            />
+                          </span>
                         )}
                       </div>
                     </OptionGrid>
@@ -514,10 +530,11 @@ const WalletFilterSidebar = ({
                               }}
                             >
                               <Checkbox
+                                aria-label={option.name}
                                 checked={filters[option.filterKey!]}
                                 size={1.5}
                               />
-                              <p>{option.name}</p>
+                              <p aria-hidden="true">{option.name}</p>
                             </CheckboxGridOption>
                           )
                         })}
