@@ -95,11 +95,7 @@ const FindWalletPage = ({ location, data }) => {
       />
 
       <HeroContainer>
-        <Hero
-          image={getImage(data.hero)}
-          alt={translateMessageId("page-find-wallet-image-alt", intl)}
-          loading="eager"
-        />
+        <Hero image={getImage(data.hero)} alt="" loading="eager" />
         <Header>
           <Breadcrumbs slug={location.pathname} />
           <h1>
