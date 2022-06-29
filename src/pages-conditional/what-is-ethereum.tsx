@@ -20,6 +20,7 @@ import {
   Page,
   Width60,
   Width40,
+  NoWrapText,
 } from "../components/SharedStyledComponents"
 import {
   Banner,
@@ -496,99 +497,117 @@ const WhatIsEthereumPage = ({
                 <BannerGridCell>
                   <StatPrimary>2970</StatPrimary>
                   <StatDescription>
-                    Projects built on Ethereum{" "}
-                    <Tooltip
-                      content={tooltipContent({
-                        apiUrl:
-                          "https://www.stateofthedapps.com/stats/platform/ethereum#new",
-                        apiProvider: "State of the dapps",
-                        ariaLabel: "Read more about Ethereum projects stats",
-                      })}
-                    >
-                      <Icon name="info" size="1rem" />
-                    </Tooltip>
+                    Projects built on{" "}
+                    <NoWrapText>
+                      Ethereum{" "}
+                      <Tooltip
+                        content={tooltipContent({
+                          apiUrl:
+                            "https://www.stateofthedapps.com/stats/platform/ethereum#new",
+                          apiProvider: "State of the dapps",
+                          ariaLabel: "Read more about Ethereum projects stats",
+                        })}
+                      >
+                        <Icon name="info" size="1rem" />
+                      </Tooltip>
+                    </NoWrapText>
                   </StatDescription>
                 </BannerGridCell>
                 <BannerGridCell>
                   <StatPrimary>71M+</StatPrimary>
                   <StatDescription>
-                    Accounts (wallets) with an ETH balance{" "}
-                    <Tooltip
-                      content={tooltipContent({
-                        apiUrl:
-                          "https://bitcoinist.com/ethereum-reaches-new-milestone-as-over-71-million-wallets-hold-eth/",
-                        apiProvider: "Bitcoinist",
-                        ariaLabel: "Read more about wallets stats",
-                      })}
-                    >
-                      <Icon name="info" size="1rem" />
-                    </Tooltip>
+                    Accounts (wallets) with an ETH{" "}
+                    <NoWrapText>
+                      balance{" "}
+                      <Tooltip
+                        content={tooltipContent({
+                          apiUrl:
+                            "https://bitcoinist.com/ethereum-reaches-new-milestone-as-over-71-million-wallets-hold-eth/",
+                          apiProvider: "Bitcoinist",
+                          ariaLabel: "Read more about wallets stats",
+                        })}
+                      >
+                        <Icon name="info" size="1rem" />
+                      </Tooltip>
+                    </NoWrapText>
                   </StatDescription>
                 </BannerGridCell>
                 <BannerGridCell>
                   <StatPrimary>50.5M</StatPrimary>
                   <StatDescription>
-                    Smart contracts on Ethereum{" "}
-                    <Tooltip
-                      content={tooltipContent({
-                        apiUrl:
-                          "https://dune.com/sawmon_and_natalie/smart-contracts-on-ethereum",
-                        apiProvider: "Dune",
-                        ariaLabel: "Read more about smart contracts stats",
-                      })}
-                    >
-                      <Icon name="info" size="1rem" />
-                    </Tooltip>
+                    Smart contracts on{" "}
+                    <NoWrapText>
+                      Ethereum{" "}
+                      <Tooltip
+                        content={tooltipContent({
+                          apiUrl:
+                            "https://dune.com/sawmon_and_natalie/smart-contracts-on-ethereum",
+                          apiProvider: "Dune",
+                          ariaLabel: "Read more about smart contracts stats",
+                        })}
+                      >
+                        <Icon name="info" size="1rem" />
+                      </Tooltip>
+                    </NoWrapText>
                   </StatDescription>
                 </BannerGridCell>
                 <BannerGridCell>
                   <StatPrimary>$11.6T</StatPrimary>
                   <StatDescription>
-                    Value moved through the Ethereum network in 2021{" "}
-                    <Tooltip
-                      content={tooltipContent({
-                        apiUrl:
-                          "https://stark.mirror.xyz/q3OnsK7mvfGtTQ72nfoxLyEV5lfYOqUfJIoKBx7BG1I",
-                        apiProvider: "Josh Stark Mirror",
-                        ariaLabel:
-                          "Read more about 2021 Ethereum network stats",
-                      })}
-                    >
-                      <Icon name="info" size="1rem" />
-                    </Tooltip>
+                    Value moved through the Ethereum network in{" "}
+                    <NoWrapText>
+                      2021{" "}
+                      <Tooltip
+                        content={tooltipContent({
+                          apiUrl:
+                            "https://stark.mirror.xyz/q3OnsK7mvfGtTQ72nfoxLyEV5lfYOqUfJIoKBx7BG1I",
+                          apiProvider: "Josh Stark Mirror",
+                          ariaLabel:
+                            "Read more about 2021 Ethereum network stats",
+                        })}
+                      >
+                        <Icon name="info" size="1rem" />
+                      </Tooltip>
+                    </NoWrapText>
                   </StatDescription>
                 </BannerGridCell>
                 <BannerGridCell>
                   <StatPrimary>$3.5B</StatPrimary>
                   <StatDescription>
-                    Creator earnings on Ethereum in 2021{" "}
-                    <Tooltip
-                      content={tooltipContent({
-                        apiUrl:
-                          "https://stark.mirror.xyz/q3OnsK7mvfGtTQ72nfoxLyEV5lfYOqUfJIoKBx7BG1I",
-                        apiProvider: "Josh Stark Mirror",
-                        ariaLabel:
-                          "Read more about 2021 Ethereum earnings stats",
-                      })}
-                    >
-                      <Icon name="info" size="1rem" />
-                    </Tooltip>
+                    Creator earnings on Ethereum in{" "}
+                    <NoWrapText>
+                      2021{" "}
+                      <Tooltip
+                        content={tooltipContent({
+                          apiUrl:
+                            "https://stark.mirror.xyz/q3OnsK7mvfGtTQ72nfoxLyEV5lfYOqUfJIoKBx7BG1I",
+                          apiProvider: "Josh Stark Mirror",
+                          ariaLabel:
+                            "Read more about 2021 Ethereum earnings stats",
+                        })}
+                      >
+                        <Icon name="info" size="1rem" />
+                      </Tooltip>
+                    </NoWrapText>
                   </StatDescription>
                 </BannerGridCell>
                 <BannerGridCell>
                   <StatPrimary>1.1M</StatPrimary>
                   <StatDescription>
-                    Number of transactions today{" "}
-                    <Tooltip
-                      content={tooltipContent({
-                        apiUrl: "https://etherscan.io/",
-                        apiProvider: "Etherscan",
-                        ariaLabel:
-                          "Read more about number of transactions stats",
-                      })}
-                    >
-                      <Icon name="info" size="1rem" />
-                    </Tooltip>
+                    Number of transactions{" "}
+                    <NoWrapText>
+                      today{" "}
+                      <Tooltip
+                        content={tooltipContent({
+                          apiUrl: "https://etherscan.io/",
+                          apiProvider: "Etherscan",
+                          ariaLabel:
+                            "Read more about number of transactions stats",
+                        })}
+                      >
+                        <Icon name="info" size="1rem" />
+                      </Tooltip>
+                    </NoWrapText>
                   </StatDescription>
                 </BannerGridCell>
               </BannerGrid>

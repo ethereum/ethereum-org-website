@@ -493,3 +493,7 @@ export const StyledSelect = styled(Select)`
     }
   }
 `
+
+export const NoWrapText = styled.span`
+  white-space: nowrap;
+`
