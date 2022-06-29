@@ -93,21 +93,22 @@ const MobileFilterToggleContainer = styled.div`
   padding: 5px 0;
 `
 
-const MobileFilterToggle = styled.div`
+const MobileFilterToggle = styled.div<{ showMobileSidebar: boolean }>`
   display: none;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     display: flex;
-    float: left;
     gap: 1rem;
     justify-content: center;
     align-items: center;
-    background: ${(props) => props.theme.colors.codeBackground};
-    border: 1px solid #404040;
+    background: ${(props) => props.theme.colors.background};
+    border: 1px solid ${(props) => props.theme.colors.primary};;
+    border-left:none;
     border-radius: 0px 4px 4px 0px;
     padding: 6px 20px 10px 20px;
     margin: auto;
     margin-left: 0;
     z-index: 1;
+    width: ${(props) => (props.showMobileSidebar ? "350px" : "150px")};
   }
 
   p {
@@ -139,21 +140,24 @@ const SecondaryText = styled.p`
 `
 
 const FilterSidebar = styled.div<{ showMobileSidebar: boolean }>`
-  width: 25%;
+  width: 330px;
   display: flex;
   flex-direction: column;
   gap: 0.55rem;
   overflow-y: scroll;
-  z-index: 10;
   background: ${(props) => props.theme.colors.background};
   transition: 0.5s all;
+  z-index: 20;
+  border-radius: 0px 8px 0px 0px;
 
+ 
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     width: ${(props) => (props.showMobileSidebar ? "350px" : "350px")};
     left: ${(props) => (props.showMobileSidebar ? "0" : "-400px")};
     height: ${(props) => (props.showMobileSidebar ? "100%" : "100%")};
     display: ${(props) => (props.showMobileSidebar ? "flex" : "none")};
     position: ${(props) => (props.showMobileSidebar ? "absolute" : "relative")};
+    box-shadow: ${(props) => (props.showMobileSidebar ? "20px 0px 5px 0px rgb(0 0 0 / 38%)" : "none")};
   }
   @media (max-width: ${(props) => props.theme.breakpoints.s}) {
     width: ${(props) => (props.showMobileSidebar ? "90%" : "90%")};
@@ -168,15 +172,15 @@ const FilterTabs = styled.div`
   cursor: pointer;
   position: sticky;
   top: 0;
-  padding-top: 8px;
   background: ${(props) => props.theme.colors.background};
   z-index: 1;
+
 
   p {
     margin: 0;
     letter-spacing: 0.02rem;
     font-size: 0.9rem;
-    width: 100%;
+    width:100%;
   }
 `
 
@@ -188,7 +192,7 @@ const FilterTab = styled.div<{
   background: ${(props) =>
     props.active === true ? props.theme.colors.primary : "none"};
   border-radius: 8px 0px 0px 0px;
-  padding: 0.5rem;
+  padding: 0.9rem 0.4rem;
   display: flex;
   justify-items: center;
   align-items: center;
@@ -357,7 +361,7 @@ const FindWalletPage = ({ data, location }) => {
         </HeroContent>
         <HeroImage
           image={getImage(data.hero)!}
-          alt=""
+          alt={translateMessageId("page-find-wallet-image-alt", intl)}
           loading="eager"
           objectFit="contain"
         />
