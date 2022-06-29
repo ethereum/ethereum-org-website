@@ -182,7 +182,6 @@ const StatPrimary = styled.div`
 const StatDescription = styled.div`
   font-size: 1rem;
   color: ${({ theme }) => theme.colors.text200};
-  max-width: 200px;
 `
 
 const ButtonLink = styled(OriginalButtonLink)``

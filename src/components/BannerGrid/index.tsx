@@ -90,7 +90,7 @@ export const BannerGridCell = styled.div`
       border-left: none;
     }
     &:nth-child(n + 4) {
-      justify-content: end;
+      justify-content: start;
       padding-bottom: 0;
     }
   }

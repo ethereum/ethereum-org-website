@@ -9,17 +9,21 @@ const Container = styled.div`
 const Column = styled.div`
   display: flex;
   flex-direction: column-reverse;
-  margin-left: 1rem;
+  margin-left: 0.5rem;
 
-  &:first:child {
+  &:first-child {
     margin-left: 0;
+  }
+
+  @media (min-width: ${(props) => props.theme.breakpoints.m}) {
+    margin-left: 1rem;
   }
 `
 
 const Cell = styled.div<{ color?: string }>`
   border: 1px solid ${({ theme, color }) => (color ? color : theme.colors.text)};
   color: ${({ theme, color }) => (color ? color : theme.colors.text)};
-  padding: 0.8rem 1.2rem;
+  padding: 0.8rem 0.5rem;
   font-size: 0.9rem;
   font-weight: 700;
   line-height: 1;
@@ -33,6 +37,10 @@ const Cell = styled.div<{ color?: string }>`
   &:nth-child(-n + 2) {
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
+  }
+
+  @media (min-width: ${(props) => props.theme.breakpoints.m}) {
+    padding: 0.8rem 1.2rem;
   }
 `
 
