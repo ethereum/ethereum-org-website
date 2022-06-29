@@ -168,18 +168,18 @@ Birçok Ethereum cüzdanı, boşaltılan hesaplara karşı koruma sağlamak içi
 Dolandırıcılar her zaman paranızı almanın yollarını ararlar. Dolandırıcıları tamamen durdurmak imkansızdır, ancak kullanılan çoğu tekniğin farkında olarak onları daha etkisiz hâle getirebiliriz. Bu dolandırıcılıkların birçok çeşidi vardır, ancak genellikle aynı üst düzey kalıpları izlerler. Ne olursa olsun, unutmayın:
 
 - her zaman şüpheci olun
-- kimse size ücretsiz veya indirimli ETH vermeyecek!
+- kimse size ücretsiz veya indirimli ETH vermeyecek
 - kimsenin özel anahtarlarınıza veya kişisel bilgilerinize erişmesine gerek yok
 
 ### Çekiliş dolandırıcılığı {#giveaway}
 
 Kripto para birimindeki en yaygın dolandırıcılıklardan biri, çekiliş dolandırıcılığıdır. Çekiliş dolandırıcılığı birçok şekilde olabilir, ancak genelde verilen cüzdan adresine ETH gönderirseniz, ETH'nizin iki katını geri alacağınız vaat edilir. *Bu sebepten dolayı, 1 alana 1 bedava dolandırıcılığı olarak da bilinir.*
 
-Bu dolandırıcılıklar genellikle, yanlış kararlar vermeyi teşvik etmek ve sahte bir aciliyet hissi yaratmak için hediyeyi talep etmek için sınırlı bir fırsat süresi şart koşar.
+Bu dolandırıcılıklar genellikle yanlış kararlar vermeye yönlendirmek ve sahte bir aciliyet hissi yaratmak amacıyla hediyeyi talep etmek için sınırlı bir fırsat süresi şart koşar.
 
 #### Sosyal medya hack'leri {#social-media-hacks}
 
-Bunun üst düzey bir versiyonu Temmuz 2020'de önde gelen ünlülerin ve organizasyonların Twitter hesapları çalındığında gerçekleşti. Hacker eş zamanlı olarak çalınan hesaplarda bir Bitcoin çekilişi paylaştı. Aldatıcı tweetler hızlıca fark edilmiş ve silinmiş olsa da, saldırganlar 11 Bitcoin koparmayı başardı (Eylül 2021 itibarıyla 500.000 ABD Doları)
+Bunun üst düzey bir versiyonu Temmuz 2020'de önde gelen ünlülerin ve organizasyonların Twitter hesapları çalındığında gerçekleşti. Hacker eş zamanlı olarak çalınan hesaplarda bir Bitcoin çekilişi paylaştı. Aldatıcı tweetler hızlıca fark edilmiş ve silinmiş olsa da saldırganlar 11 Bitcoin koparmayı başardı (Eylül 2021 itibarıyla 500.000 ABD Doları).
 
 ![Twitter'da bir dolandırıcılık](./appleTwitterScam.png)
 
