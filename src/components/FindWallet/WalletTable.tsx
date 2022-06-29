@@ -409,8 +409,34 @@ const Socials = styled.div`
 
 const LastUpdated = styled.p`
   color: ${(props) => props.theme.colors.text300};
-  margin: 2rem 0;
+  margin: 2rem 1rem;
   font-size: 0.875rem;
+  display: flex;
+  flex-wrap: no-warp;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-flow: column-reverse;
+  }
+  a{
+    border-radius:4px;
+    padding: 0.3rem 0.7rem;
+    margin:0.3rem;
+    text-decoration:none;
+    background: ${(props) => props.theme.colors.primary};
+    color: ${(props) => props.theme.colors.background};
+    @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    margin-left:0;
+    margin-bottom: 0.6rem;
+  }
+    :after{
+      margin-right: 0.2rem;
+    }
+  }
 `
 
 const StyledIcon = styled(Icon)<{ hasFeature: boolean }>`
@@ -915,6 +941,7 @@ const WalletTable = ({ data, filters, walletData }) => {
                       <i>
                         {wallet.name} info updated on {wallet.last_updated}
                       </i>
+                      <Link to={wallet.url}>Check out {wallet.name}</Link>
                     </LastUpdated>
                   </div>
                 </WalletMoreInfoContainer>
