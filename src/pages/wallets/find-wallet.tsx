@@ -109,7 +109,6 @@ const MobileFilterToggle = styled.div<{ showMobileSidebar: boolean }>`
     margin-left: 0;
     z-index: 1;
     width: ${(props) => (props.showMobileSidebar ? "350px" : "150px")};
-
   }
 
   p {
@@ -146,10 +145,9 @@ const FilterSidebar = styled.div<{ showMobileSidebar: boolean }>`
   flex-direction: column;
   gap: 0.55rem;
   overflow-y: scroll;
-  z-index: 10;
   background: ${(props) => props.theme.colors.background};
   transition: 0.5s all;
-  z-index:20;
+  z-index: 20;
   border-radius: 0px 8px 0px 0px;
 
  
@@ -182,7 +180,7 @@ const FilterTabs = styled.div`
     margin: 0;
     letter-spacing: 0.02rem;
     font-size: 0.9rem;
-    width: 100%;
+    width:100%;
   }
 `
 
@@ -363,7 +361,7 @@ const FindWalletPage = ({ data, location }) => {
         </HeroContent>
         <HeroImage
           image={getImage(data.hero)!}
-          alt=""
+          alt={translateMessageId("page-find-wallet-image-alt", intl)}
           loading="eager"
           objectFit="contain"
         />
