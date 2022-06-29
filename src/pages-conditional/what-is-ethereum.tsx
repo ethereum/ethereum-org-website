@@ -1064,7 +1064,7 @@ export const twoColImage = graphql`
     childImageSharp {
       gatsbyImageData(
         width: 400
-        layout: FIXED
+        layout: CONSTRAINED
         placeholder: BLURRED
         quality: 100
       )
