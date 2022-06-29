@@ -37,7 +37,7 @@ const Container = styled.div`
   }
 `
 
-const PersonaFeature = styled.div<{
+const FeatureListItem = styled.li<{
   selected: boolean
 }>`
   display: flex;
@@ -132,6 +132,26 @@ const Persona = styled.div<{
   }
 `
 
+const PersonaDescription = styled.span<{
+  selected: boolean
+}>`
+  margin: 0.5rem 0 0.8rem 0;
+  padding: 0.7rem 0.6rem 0;
+  color: ${(props) =>
+    props.selected === true
+      ? props.theme.colors.primary
+      : props.theme.colors.text200};
+  font-size: 0.9rem;
+  font-weight: normal;
+  transition: 0.5s all;
+  line-height: 1.3;
+  border-top: 1px solid
+    ${(props) =>
+      props.selected === true
+        ? props.theme.colors.primary
+        : props.theme.colors.lightBorder};
+`
+
 const Title = styled.div`
   display: flex;
   gap: 0.5rem;
@@ -159,7 +179,8 @@ const ProfileFilterPrompt = styled.span`
   color: ${(props) => props.theme.colors.secondary};
 `
 
-const Grid = styled.div`
+const FeatureGridList = styled.ul`
+  margin: 0;
   display: grid;
   grid-template-columns: 50% 50%;
   width: 100%;
@@ -528,7 +549,10 @@ const WalletPersonasSidebar = ({
             }}
           >
             <Title>
-              <IconContainer>
+              <IconContainer
+                role="checkbox"
+                aria-label={`${persona.title} filter`}
+              >
                 <StyledIcon
                   name="check"
                   selected={selectedPersona === idx}
@@ -537,15 +561,17 @@ const WalletPersonasSidebar = ({
               </IconContainer>
               <H3>{persona.title}</H3>
             </Title>
-            <h4>{persona.description}</h4>
-            <Grid>
+            <PersonaDescription selected={selectedPersona === idx}>
+              {persona.description}
+            </PersonaDescription>
+            <FeatureGridList aria-label={`${persona.title} filters`}>
               {persona.featureHighlight.map((feature) => (
-                <PersonaFeature selected={selectedPersona === idx}>
-                  {feature.icon}
-                  <p>{feature.label}</p>
-                </PersonaFeature>
+                <FeatureListItem selected={selectedPersona === idx}>
+                  <span aria-hidden="true">{feature.icon}</span>
+                  <span>{feature.label}</span>
+                </FeatureListItem>
               ))}
-            </Grid>
+            </FeatureGridList>
           </Persona>
         )
       })}
