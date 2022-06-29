@@ -341,10 +341,8 @@ const FeatureLabel = styled.div<{ hasFeature: boolean }>`
   width: 200px;
   p {
     margin-bottom: 0;
-    color: ${(props) =>
-      props.hasFeature
-        ? props.theme.colors.text
-        : props.theme.colors.secondary};
+    color: ${(props) => props.hasFeature ? props.theme.colors.text : props.theme.colors.secondary};
+    text-decoration: ${(props) => props.hasFeature ? "none" : "line-through"};
   }
   p + div{
     svg{
@@ -352,15 +350,6 @@ const FeatureLabel = styled.div<{ hasFeature: boolean }>`
       fill: ${(props) => props.theme.colors.secondary};
       padding-right: 0.5rem;
     }
-  }
-  :after {
-    content: "";
-    display: block;
-    height: 1px;
-    width: 100%;
-    background: ${(props) =>
-      props.hasFeature ? "rgba(0, 0, 0, 0)" : props.theme.colors.secondary};
-    position: absolute;
   }
 
 `
