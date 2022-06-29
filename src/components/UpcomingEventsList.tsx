@@ -12,16 +12,19 @@ import ButtonLink from "./ButtonLink"
 // Data
 import events from "../data/community-events.json"
 
-type EventType = {
+interface RawCommunityEvent {
   title: string
   to: string
-  sponsor: string
+  sponsor: string | null
   location: string
   description: string
   startDate: string
   endDate: string
-  date: string // calculated from other fields later
-  formattedDetails: string // calculated from other fields later
+}
+
+interface CommunityEvent extends RawCommunityEvent {
+  date: string
+  formattedDetails: string
 }
 
 const EventList = styled.div`
@@ -67,7 +70,7 @@ export interface IProps {}
 const UpcomingEventsList: React.FC<IProps> = () => {
   const eventsPerLoad = 10
   const [orderedUpcomingEvents, setOrderedUpcomingEvents] = useState<
-    EventType[]
+    Array<CommunityEvent>
   >([])
   const [maxRange, setMaxRange] = useState(eventsPerLoad)
   const [isVisible, setIsVisible] = useState(true)
@@ -83,7 +86,7 @@ const UpcomingEventsList: React.FC<IProps> = () => {
   }
 
   useEffect(() => {
-    const eventsList: EventType[] = [...events] as EventType[]
+    const eventsList: Array<RawCommunityEvent> = [...events]
     const yesterday = new Date()
     yesterday.setDate(yesterday.getDate() - 1)
 
@@ -94,7 +97,7 @@ const UpcomingEventsList: React.FC<IProps> = () => {
 
     // Sort events by start date
     const orderedEvents = upcomingEvents.sort(
-      (a: EventType, b: EventType) =>
+      (a: RawCommunityEvent, b: RawCommunityEvent) =>
         dateParse(a.startDate).getTime() - dateParse(b.startDate).getTime()
     )
 

@@ -107,10 +107,7 @@ const CentralActionCard = styled(ActionCard)`
 const TranslatorAcknowledgements = ({
   data,
   location,
-}: PageProps<Queries.TranslatorAcknowledgementsQuery, Context>) => {
-  console.log("Hendrik", data)
-  console.dir(data)
-  console.log("Hendrik", location)
+}: PageProps<Queries.TranslatorAcknowledgementsPageQuery, Context>) => {
   const intl = useIntl()
   const themeContext = useContext(ThemeContext)
   const isDarkTheme = themeContext.isDark
@@ -276,7 +273,7 @@ const TranslatorAcknowledgements = ({
 export default TranslatorAcknowledgements
 
 export const query = graphql`
-  query TranslatorAcknowledgements {
+  query TranslatorAcknowledgementsPage {
     dogeComputer: file(relativePath: { eq: "doge-computer.png" }) {
       childImageSharp {
         gatsbyImageData(

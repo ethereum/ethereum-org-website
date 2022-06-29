@@ -108,7 +108,7 @@ const SecondaryButtonLink = styled(ButtonLink)`
 export interface IProps {
   shouldShow: boolean
   isPageRightToLeft: boolean
-  originalPagePath: boolean
+  originalPagePath: string
   isPageContentEnglish: boolean
 }
 

@@ -34,7 +34,7 @@ const TagPill = styled(Pill)`
 `
 
 export interface IProps {
-  tags: string[]
+  tags: Array<string>
 }
 
 const TutorialTags: React.FC<IProps> = ({ tags }) => {
@@ -44,7 +44,7 @@ const TutorialTags: React.FC<IProps> = ({ tags }) => {
         const tagColorIdx = hashCode(tag) % colors.length
         const tagColor = colors[tagColorIdx]
         return (
-          <TagPill key={idx} color={tagColor} className="" isSecondary={false}>
+          <TagPill key={idx} color={tagColor}>
             {tag}
           </TagPill>
         )

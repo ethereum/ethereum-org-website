@@ -270,10 +270,7 @@ const Trilemma: React.FC<IProps> = () => {
         <MobileTip>
           <Translation id="page-upgrades-vision-trilemma-modal-tip" />:
         </MobileTip>
-        <ExplanationCard
-          title={cardTitle.toString()}
-          description={cardText.toString()}
-        />
+        <ExplanationCard title={cardTitle} description={cardText} />
       </CardContainer>
       <Mobile>
         <MobileModal
@@ -287,10 +284,7 @@ const Trilemma: React.FC<IProps> = () => {
           variants={slidingContainerVariants}
           initial="closed"
         >
-          <MobileExplanationCard
-            title={cardTitle.toString()}
-            description={cardText.toString()}
-          />
+          <MobileExplanationCard title={cardTitle} description={cardText} />
           <CloseIconContainer onClick={handleModalClose}>
             <Icon name="close" />
           </CloseIconContainer>

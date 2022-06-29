@@ -45,7 +45,7 @@ const HorizontalUl = styled.ul`
 const Contributors = ({
   data,
   location,
-}: PageProps<Queries.ContributorsQuery, Context>) => {
+}: PageProps<Queries.ContributorsPageQuery, Context>) => {
   const intl = useIntl()
   // TODO: Remove specific user checks once Acolad has updated their usernames
   const translatorData =
@@ -153,7 +153,7 @@ const Contributors = ({
 export default Contributors
 
 export const query = graphql`
-  query Contributors {
+  query ContributorsPage {
     allTimeData: alltimeJson {
       data {
         user {

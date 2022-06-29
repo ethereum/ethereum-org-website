@@ -27,14 +27,14 @@ export interface IProps {}
 
 const TranslationsInProgress: React.FC<IProps> = () => {
   const [translationsInProgress, setTranslationsInProgress] = useState<
-    LanguageType[]
+    Array<LanguageType>
   >([])
 
   useEffect(() => {
     axios
       .get(`${GATSBY_FUNCTIONS_PATH}/translations`)
       .then((response) => {
-        let languages: LanguageType[] = []
+        let languages: Array<LanguageType> = []
         if (response.data && response.data.data) {
           languages = response.data.data
         }

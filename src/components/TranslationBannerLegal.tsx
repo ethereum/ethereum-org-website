@@ -101,7 +101,7 @@ const StyledEmoji = styled(Emoji)`
 export interface IProps {
   shouldShow: boolean
   isPageRightToLeft: boolean
-  originalPagePath: boolean
+  originalPagePath: string
 }
 
 const TranslationBannerLegal: React.FC<IProps> = ({
