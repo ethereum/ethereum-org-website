@@ -58,14 +58,8 @@ const FeatureListItem = styled.li<{
     width: 28px;
     height: 28px;
     path {
-      fill: ${(props) =>
-        props.selected === true
-          ? props.theme.colors.primary
-          : props.theme.colors.text};
-      stroke: ${(props) =>
-        props.selected === true
-          ? props.theme.colors.black
-          : props.theme.colors.text};
+      fill: ${(props) => props.theme.colors.text};
+      stroke: ${(props) => props.theme.colors.text};
     }
   }
 `
@@ -91,14 +85,7 @@ const Persona = styled.div<{
   transition: 0.5s all;
 
   h3 {
-    color: ${(props) =>
-      props.selected === true
-        ? props.isDark === true
-          ? props.theme.colors.primary
-          : props.theme.colors.primary
-        : props.isDark === true
-        ? props.theme.colors.text
-        : props.theme.colors.text};
+    color: ${(props) => props.theme.colors.text};
   }
 
   &:hover {
@@ -121,17 +108,13 @@ const PersonaDescription = styled.span<{
   padding: 0.7rem 0.6rem 0;
   color: ${(props) =>
     props.selected === true
-      ? props.theme.colors.primary
+      ? props.theme.colors.text
       : props.theme.colors.text200};
   font-size: 0.9rem;
   font-weight: normal;
   transition: 0.5s all;
   line-height: 1.3;
-  border-top: 1px solid
-    ${(props) =>
-      props.selected === true
-        ? props.theme.colors.primary
-        : props.theme.colors.lightBorder};
+  border-top: 1px solid ${(props) => props.theme.colors.lightBorder};
 `
 
 const Title = styled.div`
@@ -148,7 +131,7 @@ const H3 = styled.h3`
   margin-top: 0;
   margin-bottom: 0;
   font-size: 1.3rem;
-  padding: 0 0.25rem;
+  padding: 0 0.25rem 0 0;
   line-height: 1.7rem;
 `
 const ProfileFilterPrompt = styled.span`
@@ -171,8 +154,8 @@ const FeatureGridList = styled.ul`
 `
 
 const IconContainer = styled.div`
-  width: 14px;
-  height: 14px;
+  width: 1.3rem;
+  height: 1.3rem;
 `
 
 const StyledIcon = styled(Icon)<{ selected: boolean }>`
