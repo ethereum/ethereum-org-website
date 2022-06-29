@@ -46,7 +46,7 @@ const socialColors = {
 
 export interface IProps {
   name?: string
-  color?: string
+  color?: string | boolean
   size?: string
   className?: string
 }

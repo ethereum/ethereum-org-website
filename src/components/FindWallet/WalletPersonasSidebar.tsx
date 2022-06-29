@@ -313,7 +313,7 @@ const WalletPersonasSidebar = ({
   const themeContext = useContext(ThemeContext)
   const personas: Personas[] = [
     {
-      title: "I'm new to Ethereum",
+      title: "I'm new to crypto",
       description: "You are a first time user looking for your first wallet",
       featureHighlight: [
         filterLabels.connect_to_dapps,
@@ -389,7 +389,7 @@ const WalletPersonasSidebar = ({
     {
       title: "Finance",
       description:
-        "You are someone that follows DeFI and want’s a wallet easy to use",
+        "You are someone that uses DeFi and want a wallet that allows you to connect to DeFi applications",
       featureHighlight: [
         filterLabels.hardware_support,
         filterLabels.connect_to_dapps,
@@ -429,7 +429,7 @@ const WalletPersonasSidebar = ({
     {
       title: "I'm a developer",
       description:
-        "You are developer and needs a wallet that helps develop dapps",
+        "You are developer and need a wallet to help develop and test dapps",
       featureHighlight: [
         filterLabels.open_source,
         filterLabels.walletconnect,
@@ -470,7 +470,7 @@ const WalletPersonasSidebar = ({
     {
       title: "I'm all about NFT's",
       description:
-        "You are someone that is all about NFTs a wallet has to ready",
+        "You are someone that is all about NFTs and want a wallet with NFT support",
       featureHighlight: [
         filterLabels.nft_support,
         filterLabels.layer_2,

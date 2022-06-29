@@ -63,7 +63,7 @@ const walletFilterData: { [key: string]: WalletFilter } = {
   open_source: {
     title: "Open source",
     description:
-      "Wallet code for the wallet is open sourced for users to inspect and edit.",
+      "Code for the wallet is open sourced for you to inspect and edit.",
     filterKey: "open_source",
   },
   non_custodial: {
@@ -107,7 +107,7 @@ const walletFilterData: { [key: string]: WalletFilter } = {
   },
   swaps: {
     title: "Swaps",
-    description: "Swap ERC-20 tokens directly in the wallet.",
+    description: "You can swap ERC-20 tokens directly in the wallet.",
     filterKey: "swaps",
   },
   layer_2: {
@@ -118,32 +118,35 @@ const walletFilterData: { [key: string]: WalletFilter } = {
   gas_fee_customization: {
     title: "Gas fee customization",
     description:
-      "The user is able to customize their gas inputs (base fee, priority fee, max fee).",
+      "You are able to customize your gas inputs (base fee, priority fee, max fee).",
     filterKey: "gas_fee_customization",
   },
   ens_support: {
     title: "ENS support",
-    description: "The wallet supports sending transactions to ENS addresses.",
+    description: "You are able to send transactions to ENS addresses.",
     filterKey: "ens_support",
   },
   erc_20_support: {
     title: "Token importing",
-    description: "Can import ERC-20 token contract addresses into the wallet.",
+    description:
+      "You can import ERC-20 token contract addresses into the wallet.",
     filterKey: "erc_20_support",
   },
   eip_1559_support: {
     title: "EIP-1559 support",
-    description: "Supports type 2 transactions saving users money in gas fees.",
+    description: "Supports type 2 transactions saving you money in gas fees.",
     filterKey: "eip_1559_support",
   },
   buy_crypto: {
     title: "Buy crypto",
-    description: "User is able to buy crypto with fiat directly in the wallet.",
+    description:
+      "You are able to buy crypto with fiat directly in the wallet. \n *Note: buying crypto may be region locked.",
     filterKey: "buy_crypto",
   },
   withdraw_crypto: {
     title: "Withdraw crypto",
-    description: "User is able to withdraw to fiat directly in the wallet",
+    description:
+      "You able to withdraw to fiat directly in the wallet. \n *Note: withdrawing crypto may be region locked.",
     filterKey: "withdraw_crypto",
   },
   multisig: {

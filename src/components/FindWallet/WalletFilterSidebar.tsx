@@ -490,12 +490,12 @@ const WalletFilterSidebar = ({
 
                                 for (let filterOption of item.options) {
                                   if (filterOption.name === option.name) {
-                                    if (!filters[filterOption.filterKey]) {
+                                    if (!filters[filterOption.filterKey!]) {
                                       closeShowOptions = false
                                       break
                                     }
                                   } else {
-                                    if (filters[filterOption.filterKey]) {
+                                    if (filters[filterOption.filterKey!]) {
                                       closeShowOptions = false
                                       break
                                     }
@@ -514,7 +514,7 @@ const WalletFilterSidebar = ({
                               }}
                             >
                               <Checkbox
-                                checked={filters[option.filterKey]}
+                                checked={filters[option.filterKey!]}
                                 size={1.5}
                               />
                               <p>{option.name}</p>
