@@ -142,7 +142,8 @@ const SecondaryText = styled.p`
 `
 
 const FilterSidebar = styled.div<{ showMobileSidebar: boolean }>`
-  width: 330px;
+  max-width: 330px;
+  width:100%;
   display: flex;
   flex-direction: column;
   gap: 0.55rem;
@@ -216,7 +217,7 @@ const FilterTab = styled.div<{
 `
 
 const WalletContent = styled.div<{ showMobileSidebar: boolean }>`
-  width: 75%;
+  width: 100%;
   overflow-y: scroll;
   table {
     margin: 0;
