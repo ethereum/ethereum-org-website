@@ -348,13 +348,14 @@ const FeatureLabel = styled.div<{ hasFeature: boolean }>`
   span + p{
     text-decoration:none;
   }
-  p + div{
+  p + div, div + div{
     svg{
       width: 1.5rem;
       fill: ${(props) => props.theme.colors.secondary};
       padding-right: 0.5rem;
     }
   }
+
 
 `
 
