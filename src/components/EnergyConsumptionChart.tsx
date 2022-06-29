@@ -15,7 +15,6 @@ import {
 const Container = styled.div`
   max-width: 500px;
   width: 100%;
-  background-color: ${({ theme }) => theme.colors.chartBackground};
   border-radius: 0.3rem;
 `
 
