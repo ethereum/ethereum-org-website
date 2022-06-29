@@ -310,6 +310,7 @@ const Features = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 0.2rem;
+  
 
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     flex-wrap: nowrap;
@@ -338,12 +339,20 @@ const FeatureLabel = styled.div<{ hasFeature: boolean }>`
   padding: 0.2rem;
   margin: 0 1rem;
   position: relative;
+  width: 200px;
   p {
     margin-bottom: 0;
     color: ${(props) =>
       props.hasFeature
         ? props.theme.colors.text
         : props.theme.colors.secondary};
+  }
+  p + div{
+    svg{
+      width: 1.5rem;
+      fill: ${(props) => props.theme.colors.secondary};
+      padding-right: 0.5rem;
+    }
   }
   :after {
     content: "";
@@ -354,6 +363,7 @@ const FeatureLabel = styled.div<{ hasFeature: boolean }>`
       props.hasFeature ? "rgba(0, 0, 0, 0)" : props.theme.colors.secondary};
     position: absolute;
   }
+
 `
 
 const FeatureIcon = styled.div<{ hasFeature: boolean }>`
