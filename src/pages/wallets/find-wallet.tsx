@@ -143,7 +143,7 @@ const SecondaryText = styled.p`
 
 const FilterSidebar = styled.div<{ showMobileSidebar: boolean }>`
   max-width: 330px;
-  width:100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 0.55rem;
@@ -643,6 +643,11 @@ export const query = graphql`
       }
     }
     tokenpocket: file(relativePath: { eq: "wallets/tokenpocket.png" }) {
+      childImageSharp {
+        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+      }
+    }
+    oneinch: file(relativePath: { eq: "wallets/1inch.png" }) {
       childImageSharp {
         gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
       }

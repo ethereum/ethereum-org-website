@@ -931,7 +931,7 @@ const walletData: WalletData[] = [
   {
     last_updated: "June 24, 2022",
     name: "1inch wallet",
-    image_name: "1inch",
+    image_name: "oneinch",
     brand_color: "#000000",
     url: "https://1inch.io/",
     wallet_live_date: "April 2021",
