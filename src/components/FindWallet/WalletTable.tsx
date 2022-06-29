@@ -345,6 +345,9 @@ const FeatureLabel = styled.div<{ hasFeature: boolean }>`
     color: ${(props) => props.hasFeature ? props.theme.colors.text : props.theme.colors.secondary};
     text-decoration: ${(props) => props.hasFeature ? "none" : "line-through"};
   }
+  span + p{
+    text-decoration:none;
+  }
   p + div{
     svg{
       width: 1.5rem;
