@@ -137,7 +137,6 @@ const Wallet = styled(Grid)`
 const StyledSelect = styled(Select)`
   .react-select__control {
     border: 1px solid ${(props) => props.theme.colors.text};
-    background: none;
     cursor: pointer;
     font-size: 0.9rem;
     padding-right: 0.3rem;
@@ -166,7 +165,7 @@ const StyledSelect = styled(Select)`
     &:hover {
       background: ${(props) => props.theme.colors.primary};
       cursor: pointer;
-      border: 1px solid ${(props) => props.theme.colors.primary};
+      border-color: ${(props) => props.theme.colors.primary};
       color: ${(props) => props.theme.colors.background};
       transition: 0.5s all;
       svg {
@@ -192,7 +191,7 @@ const StyledSelect = styled(Select)`
   }
 
   .react-select__control--is-focused {
-    border: none;
+    border: border: 1px solid ${(props) => props.theme.colors.primary};
     background: ${(props) => props.theme.colors.primary};
     svg {
       fill: ${(props) => props.theme.colors.background};
