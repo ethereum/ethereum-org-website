@@ -144,6 +144,7 @@ const Banner = styled.div`
   margin: 50px 0;
   display: flex;
   border-radius: 10px;
+  overflow: hidden;
   background: ${(props) => props.theme.colors.cardGradient};
 
   h3 {
