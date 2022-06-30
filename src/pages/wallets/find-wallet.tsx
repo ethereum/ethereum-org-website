@@ -512,7 +512,7 @@ const FindWalletPage = ({ data, location }) => {
         </p>
         <p>
           <i>
-            Their descriptions have been provided by the wallet companies
+            Their descriptions have been provided by the wallet projects
             themselves.{" "}
           </i>
         </p>
