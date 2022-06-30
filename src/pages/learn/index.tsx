@@ -125,10 +125,10 @@ const CardImage = styled.div`
 `
 
 const DocsContainer = styled.div`
-  margin: 0 135px;
+  margin: 0 9rem;
   display: flex;
   flex-flow: column nowrap;
-  gap: 10px;
+  gap: 0.8rem;
 
   @media (max-width: ${(props) => props.theme.breakpoints.xl}) {
     margin: 0;
@@ -136,14 +136,14 @@ const DocsContainer = styled.div`
 `
 
 const AdditionalReadingHeader = styled.h3`
-  margin-top: 40px;
+  margin-top: 4rem;
   font-size: 1.2rem;
   font-weight: 700;
   text-align: center;
 `
 
 const Banner = styled.div`
-  margin: 50px 0;
+  margin: 3rem 0;
   display: flex;
   border-radius: 10px;
   overflow: hidden;
@@ -163,7 +163,7 @@ const Banner = styled.div`
 `
 
 const BannerBody = styled.div`
-  padding: 40px;
+  padding: 3rem;
 `
 
 const BannerImage = styled.div`
@@ -171,14 +171,14 @@ const BannerImage = styled.div`
 `
 
 const Section = styled.section`
-  margin-top: 100px;
+  margin-top: 6rem;
   &:first-child {
     margin-top: 0;
   }
 `
 
 const CardGrid = styled(OriginalCardGrid)`
-  margin-top: 35px;
+  margin-top: 2rem;
 `
 
 const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
