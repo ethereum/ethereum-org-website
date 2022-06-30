@@ -101,9 +101,8 @@ const MobileFilterToggle = styled.div<{ showMobileSidebar: boolean }>`
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     display: flex;
     gap: 1rem;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    background: ${(props) => props.theme.colors.background};
     border: 1px solid ${(props) => props.theme.colors.primary};
     border-left: none;
     border-radius: 0px 4px 4px 0px;
@@ -111,7 +110,9 @@ const MobileFilterToggle = styled.div<{ showMobileSidebar: boolean }>`
     margin: auto;
     margin-left: 0;
     z-index: 1;
-    width: ${(props) => (props.showMobileSidebar ? "350px" : "150px")};
+    width: 100%;
+    max-width: ${(props) => (props.showMobileSidebar ? "330px" : "150px")};
+    background: ${(props) => (props.showMobileSidebar ? props.theme.colors.background : props.theme.colors.background)};
   }
 
   p {
@@ -119,8 +120,8 @@ const MobileFilterToggle = styled.div<{ showMobileSidebar: boolean }>`
   }
 
   svg {
-    width: 24px;
-    height: 24px;
+    width: 32px;
+    height: 32px;
     line {
       stroke: ${(props) => props.theme.colors.primary};
     }
