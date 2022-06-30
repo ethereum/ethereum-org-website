@@ -58,8 +58,6 @@
   "consensus-run-beacon-chain": "Rulați un client de consens",
   "consensus-run-beacon-chain-desc": "Ethereum necesită rularea a cât mai multor clienți. Contribuiți în favoarea acestui bun public Ethereum!",
   "consensus-when-shipping": "Când va fi lansat?",
-  "eth-upgrade-what-happened": "Ce s-a întâmplat cu „Eth2”?",
-  "eth-upgrade-what-happened-description": "Termenul „Eth2” a fost abandonat pe măsură ce ne apropiem de fuziune. Termenul „nivelul consensului” încorporează ceea ce era cunoscut anterior ca „Eth2\".",
   "ethereum": "Ethereum",
   "ethereum-upgrades": "Actualizările Ethereum",
   "ethereum-brand-assets": "Materialele de branding Ethereum",

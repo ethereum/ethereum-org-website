@@ -1,4 +1,5 @@
 import React from "react"
+import { useIntl } from "gatsby-plugin-intl"
 import { graphql, PageProps } from "gatsby"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
@@ -36,8 +37,10 @@ import {
 } from "../components/SharedStyledComponents"
 import Emoji from "../components/Emoji"
 import YouTube from "../components/YouTube"
+import PreMergeBanner from "../components/PreMergeBanner"
+import FeedbackCard from "../components/FeedbackCard"
 
-import { isLangRightToLeft } from "../utils/translations"
+import { isLangRightToLeft, translateMessageId } from "../utils/translations"
 import { getSummaryPoints } from "../utils/getSummaryPoints"
 import { Lang } from "../utils/languages"
 import { Context } from "../types"
@@ -120,7 +123,7 @@ const InfoTitle = styled.h2`
   margin-top: 0rem;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     text-align: left;
-    font-size: 2.5rem
+    font-size: 2.5rem;
     display: none;
   }
 `
@@ -299,6 +302,7 @@ const UseCasePage = ({
   data: { siteData, pageData: mdx },
   pageContext,
 }: PageProps<Queries.UseCasePageQuery, Context>) => {
+  const intl = useIntl()
   if (!siteData || !mdx?.frontmatter) {
     throw new Error(
       "UseCases page template query does not return expected values"
@@ -306,6 +310,7 @@ const UseCasePage = ({
   }
 
   const isRightToLeft = isLangRightToLeft(mdx.frontmatter.lang as Lang)
+  const showMergeBanner = !!mdx.frontmatter.preMergeBanner
   const tocItems = mdx.tableOfContents?.items
   const summaryPoints = getSummaryPoints(mdx.frontmatter)
 
@@ -358,15 +363,19 @@ const UseCasePage = ({
 
   return (
     <Container>
-      <StyledBannerNotification shouldShow>
-        <StyledEmoji text=":pencil:" />
-        <div>
-          <Translation id="template-usecase-banner" />{" "}
-          <Link to={absoluteEditPath}>
-            <Translation id="template-usecase-edit-link" />
-          </Link>
-        </div>
-      </StyledBannerNotification>
+      {showMergeBanner ? (
+        <PreMergeBanner />
+      ) : (
+        <StyledBannerNotification shouldShow>
+          <StyledEmoji text=":pencil:" />
+          <div>
+            <Translation id="template-usecase-banner" />{" "}
+            <Link to={absoluteEditPath}>
+              <Translation id="template-usecase-edit-link" />
+            </Link>
+          </div>
+        </StyledBannerNotification>
+      )}
       <HeroContainer>
         <TitleCard>
           <Emoji size={4} text={mdx.frontmatter.emoji!} />
@@ -413,6 +422,7 @@ const UseCasePage = ({
           <MDXProvider components={components}>
             <MDXRenderer>{mdx.body}</MDXRenderer>
           </MDXProvider>
+          <FeedbackCard />
         </ContentContainer>
         <MobileButton>
           <MobileButtonDropdown list={dropdownLinks} />
@@ -454,6 +464,7 @@ export const useCasePageQuery = graphql`
           }
         }
         isOutdated
+        preMergeBanner
       }
       body
       tableOfContents

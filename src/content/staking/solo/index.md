@@ -89,6 +89,10 @@ The Staking Launchpad is an open source application that will help you become a 
 
 <StakingLaunchpadWidget />
 
+<InfoBanner emoji=":panda:" isWarning>
+<strong>Note for existing stakers:</strong> The Merge is approaching, which brings a few changes since staking was launched. Make sure you're prepared with the <a href="https://launchpad.ethereum.org/en/merge-readiness">Merge readiness checklist</a> over on the Staking Launchpad.
+</InfoBanner>
+
 ## What to consider with node and client setup tools {#node-tool-considerations}
 
 There are a growing number of tools and services to help you solo stake your ETH, but each come with different risks and benefits.
@@ -115,7 +119,7 @@ These tools can be used as an alternative to the [Staking Deposit CLI](https://g
 
 <StakingProductsCardGrid category="keyGen" />
 
-Have a suggestion for a staking tool we missed? Check out our [product listing policy](/contributing/adding-staking-product/) to see if it would be a good fit, and to submit it for review.
+Have a suggestion for a staking tool we missed? Check out our [product listing policy](/contributing/adding-staking-products/) to see if it would be a good fit, and to submit it for review.
 
 ## Explore solo staking guides {#staking-guides}
 
@@ -158,12 +162,6 @@ Equivalent bugs in a <em>minority client would never finalize</em> and thus woul
 <p><a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50">Learn more about slashing prevention</a></p>
 </ExpandableCard>
 
-<ExpandableCard title="Is staking already live?">
-Yes and no. Staking has been live since December 1, 2020, but until the Merge happens, the proof-of-stake consensus remains isolated on its own chain, while the existing Ethereum network as we know it continues to operate using proof-of-work. These two chains start separate, but with the Merge, proof-of-work will be fully deprecated, and proof-of-stake will become the sole means of consensus from here-on-out.
-
-This means that staking is currently live for users to deposit their ETH, run a validator client, and start earning rewards. After the Merge, stakers will earn higher rewards as validators begin to process transactions and earn fee tips on top of protocol rewards. After the Shanghai update (planned to follow the Merge by a few months), stakers will then be able to withdraw rewards and funds from their validator balance.
-</ExpandableCard>
-
 <ExpandableCard title="Which client is best?">
 Individual clients may vary slightly in terms of performance and user interface, as each are developed by different teams using a variety of programming languages. That being said, none of them are "best." All production clients are excellent pieces of software, that all perform the same core functions to sync and interact with the blockchain.
 
@@ -183,9 +181,15 @@ Offline penalties are proportional to how many others are offline at the same ti
 </ExpandableCard>
 
 <ExpandableCard title="Do I need to do anything before The Merge?">
-Anyone currently running a CL (Beacon Chain) client will be required to also run an EL client after The Merge. This is a result of the new Engine API that will be used to interface between the two layers. Anyone currently running a Beacon Chain without an execution layer client will need to sync the execution layer before The Merge to continue being in sync with the network.
+Stakers currently running a consensus layer client (Beacon Chain) will also be required to run an execution layer client after The Merge. The new Engine API will be used to interface between the two layers, requiring a JWT secret. If you currently run a Beacon Chain without an execution layer client, you will need to sync the execution layer before The Merge to stay in sync with the network.
 
-The Merge will also bring unburnt transaction fees to validators. These fees do not accumulate in the balance associated with the validator keys, but instead can be directed to a regular Ethereum address of your choice. In order to properly receive the priority fees/tips from proposed blocks, stakers must update their client settings with the address they would like to receive tips at. See individual client documentation for details.
+The Merge will also bring unburnt transaction fees to validators. These fees do not accumulate in the balance associated with the validator keys but instead can be directed to a regular Ethereum address of your choice. To receive your tips (priority fees) from proposed blocks, you should update your client settings with the address you want your tips sent to.
+
+Links to individual client documentation and additional information can be found on the Merge readiness checklist over on the Launchpad.
+
+<ButtonLink to="https://launchpad.ethereum.org/merge-readiness/">
+Merge readiness checklist
+</ButtonLink>
 </ExpandableCard>
 
 ## Further reading {#further-reading}

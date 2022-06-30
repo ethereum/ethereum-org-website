@@ -3,6 +3,7 @@ title: Networks
 description: An overview of Ethereum's networks and where to get testnet ether (ETH) for testing your application.
 lang: en
 sidebar: true
+preMergeBanner: true
 ---
 
 Networks are different Ethereum environments you can access for development, testing, or production use cases. Since Ethereum is a protocol, there can be multiple independent "networks" that conform to the protocol without interacting with each other.
@@ -31,11 +32,13 @@ You should test any contract code you write on a testnet before deploying to Mai
 
 Most testnets use a proof-of-authority consensus mechanism. This means a small number of nodes are chosen to validate transactions and create new blocks – staking their identity in the process. Testnets do not incentivize proof-of-work mining, which can leave them vulnerable.
 
+As [The Merge](/upgrades/merge) get closer more of the public proof-of-work and proof-of-authority testnets are becoming proof-of-stake. Swapping their consensus mechanisms acts as rehearsals for the Ethereum Mainnet merge. Ropsten, Sepolia and Goerli are all expected to be proof-of-stake networks by the end of summer 2022, with Goerli being maintained long term.
+
 ETH on testnets has no real value; therefore, there are no markets for testnet ETH. Since you need ETH to actually interact with Ethereum, most people get testnet ETH from faucets. Most faucets are webapps where you can input an address which you request ETH to be sent to.
 
 #### Sepolia {#sepolia}
 
-A proof-of-work testnet. The best like-for-like representation of Ethereum Mainnet.
+A proof-of-work testnet; this means it's the best like-for-like representation of Ethereum. Sepolia is expected to undergo The Merge to proof-of-stake in summer 2022. It is not yet certain whether it will then be maintained long term.
 
 - [Website](https://sepolia.dev/)
 - [Github](https://github.com/goerli/sepolia)
@@ -47,38 +50,38 @@ A proof-of-work testnet. The best like-for-like representation of Ethereum Mainn
 - [Sepolia faucet](https://faucet.sepolia.dev/)
 - [FaucETH](https://fauceth.komputing.org)
 
-#### Görli {#goerli}
+#### Goerli {#goerli}
 
-A proof-of-authority testnet that works across clients; an ideal testnet for application developers.
+A proof-of-authority testnet that works across clients; an ideal testnet for application developers. Goerli will be the final testnet merged to proof-of-stake before Ethereum Mainnet is merged. This is expected to happen in summer 2022. Goerli is expected to be maintained long term as a proof-of-stake testnet.
 
 - [Website](https://goerli.net/)
 - [Github](https://github.com/goerli/testnet)
 - [Etherscan](https://goerli.etherscan.io)
 
-##### Görli faucets
+##### Goerli faucets
 
-- [Görli faucet](https://faucet.goerli.mudit.blog/)
+- [Goerli faucet](https://faucet.goerli.mudit.blog/)
 - [Chainlink faucet](https://faucets.chain.link/)
 - [Alchemy Goerli Faucet](https://goerlifaucet.com/)
 
 #### Ropsten _(deprecated)_ {#ropsten}
 
-_Note, [the Ropsten testnet is deprecated](https://github.com/ethereum/pm/issues/460) and will no longer receive protocol upgrades. Please consider migrating your applications to Sepolia or Görli._
+_Note, [the Ropsten testnet is deprecated](https://github.com/ethereum/pm/issues/460) and will no longer receive protocol upgrades. Please consider migrating your applications to Sepolia or Goerli._
 
-A proof-of-work testnet. It only serves historical relevance and is mainly used by core developers for testing protocol upgrades.
+Ropsten was a proof-of-work testnet that went through The Merge to proof-of-stake in May 2022. It can be used to test applications on a merged network, but it is not expected to be maintained long term and is likely to deprecated before summer 2023.
 
-##### Ropsten faucets
+##### Ropsten faucets
 
 - [FaucETH](https://fauceth.komputing.org) (multi-Chain faucet without the need for social account)
 - [Paradigm faucet](https://faucet.paradigm.xyz/)
 
 #### Rinkeby _(deprecated)_ {#rinkeby}
 
-_Note: [the Rinkeby testnet is deprecated](https://github.com/ethereum/pm/issues/460) and will no longer receive protocol upgrades. Please consider migrating your applications to Sepolia or Görli._
+_Note: [the Rinkeby testnet is deprecated](https://github.com/ethereum/pm/issues/460) and will no longer receive protocol upgrades. Please consider migrating your applications to Sepolia or Goerli._
 
 A proof-of-authority testnet for those running old versions of the Geth client.
 
-##### Rinkeby faucets
+##### Rinkeby faucets
 
 - [FaucETH](https://fauceth.komputing.org) (multi-Chain faucet without the need for social account)
 - [Alchemy faucet](https://RinkebyFaucet.com)
@@ -88,7 +91,7 @@ A proof-of-authority testnet for those running old versions of the Geth client.
 
 #### Kovan _(deprecated)_ {#kovan}
 
-_Note: [the Kovan testnet is deprecated](https://github.com/ethereum/pm/issues/460) and will no longer receive protocol upgrades. Please consider migrating your applications to Sepolia or Görli._
+_Note: [the Kovan testnet is deprecated](https://github.com/ethereum/pm/issues/460) and will no longer receive protocol upgrades. Please consider migrating your applications to Sepolia or Goerli._
 
 A very old proof-of-authority testnet for those still running OpenEthereum clients.
 

@@ -28,7 +28,7 @@ Această metodă de scalare necesită modificări ale protocolului Ethereum (niv
 
 Fragmentarea este procesul de divizare orizontală a unei baze de date pentru a distribui sarcina. În contextul Ethereum, fragmentarea va reduce congestionarea rețelei și va crește numărul de tranzacții pe secundă prin crearea de noi lanțuri, cunoscute sub numele de „fragmente.” Acest lucru va ușura de asemenea sarcina fiecărui validator, care nu va mai fi nevoit să proceseze integral toate tranzacțiile din întreaga rețea.
 
-Aflați mai multe despre [fragmentare](/upgrades/shard-chains/).
+Aflați mai multe despre [fragmentare](/upgrades/sharding/).
 
 ## Scalarea off-chain {#off-chain-scaling}
 

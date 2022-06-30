@@ -162,7 +162,7 @@ Hyperledger Besu, genel ve izin verilen ağlar için kurumsal düzeyde bir Ether
 
 #### Erigon {#erigon}
 
-Eskiden Turbo-Geth olarak bilinen Erigon, hız ve disk alanı verimliliğine yönelik bir Go Ethereum çatalıdır. Erigon, şu anda Go'da yazılmış, ancak diğer dillerde uygulanması planlanan Ethereum'un tamamen yeniden tasarlanmış bir uygulamasıdır. Erigon'un amacı, Ethereum'un daha hızlı, daha modüler ve daha optimize edilmiş bir uygulamasını sağlamaktır. 3 günden kısa bir sürede 2 Tb'den daha az disk alanı kullanarak tam bir arşiv düğümü senkronizasyonu gerçekleştirebilir
+Eskiden Erigon olarak bilinen Erigon, hız ve disk alanı verimliliğine yönelik bir Go Ethereum çatalıdır. Erigon, şu anda Go'da yazılmış, ancak diğer dillerde uygulanması planlanan Ethereum'un tamamen yeniden tasarlanmış bir uygulamasıdır. Erigon'un amacı, Ethereum'un daha hızlı, daha modüler ve daha optimize edilmiş bir uygulamasını sağlamaktır. 3 günden kısa bir sürede 2 Tb'den daha az disk alanı kullanarak tam bir arşiv düğümü senkronizasyonu gerçekleştirebilir
 
 ### Senkronizasyon modları {#sync-modes}
 

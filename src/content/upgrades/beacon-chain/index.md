@@ -51,13 +51,13 @@ The Merge will have an immediate and profound impact on the carbon footprint of 
 
 ### Setting up for sharding {#setting-up-for-sharding}
 
-After Mainnet merges with the Beacon Chain, the next major upgrade will introduce data sharding to the network.
+After Mainnet merges with the Beacon Chain, the next major upgrade will introduce sharding to the network.
 
 Proof-of-stake has the advantage of having a registry of all approved block producers at any given time, each with ETH at stake. This registry sets the stage for the ability to divide and conquer but reliably split up specific network responsibilities.
 
 This responsibility is in contrast to proof-of-work, where miners have no obligation to the network and could stop mining and turn their node software off permanently in an instant without repercussion. There is also no registry of known block proposers and no reliable way to split network responsibilities safely.
 
-[More on sharding](/upgrades/shard-chains/)
+[More on sharding](/upgrades/sharding/)
 
 ## Relationship between upgrades {#relationship-between-upgrades}
 
@@ -75,7 +75,7 @@ The Beacon Chain, at first, will exist separately to the Ethereum Mainnet we use
 
 Sharding can only safely enter the Ethereum ecosystem with a proof-of-stake consensus mechanism in place. The Beacon Chain introduced staking, which when 'merged' with Mainnet will pave the way for sharding to help further scale Ethereum.
 
-<ButtonLink to="/upgrades/shard-chains/">
+<ButtonLink to="/upgrades/sharding/">
   Shard chains
 </ButtonLink>
 

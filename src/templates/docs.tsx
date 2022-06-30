@@ -33,6 +33,7 @@ import {
   Header4,
   ListItem,
 } from "../components/SharedStyledComponents"
+import PreMergeBanner from "../components/PreMergeBanner"
 
 import { ZenModeContext } from "../contexts/ZenModeContext.js"
 import { isLangRightToLeft } from "../utils/translations"
@@ -183,6 +184,8 @@ const DocsPage = ({
   const { editContentUrl } = siteData.siteMetadata || {}
   const { relativePath, slug } = pageContext
   const absoluteEditPath = `${editContentUrl}${relativePath}`
+  const isDevelopersHome = relativePath.endsWith("/developers/docs/index.md")
+  const showMergeBanner = !!mdx.frontmatter.preMergeBanner || isDevelopersHome
 
   return (
     <Page dir={isRightToLeft ? "rtl" : "ltr"}>
@@ -190,10 +193,18 @@ const DocsPage = ({
         title={mdx.frontmatter.title}
         description={mdx.frontmatter.description}
       />
-      <BannerNotification shouldShow={isPageIncomplete}>
-        {/* TODO move to common.json */}
-        <Translation id="banner-page-incomplete" />
-      </BannerNotification>
+      {isPageIncomplete && (
+        <BannerNotification shouldShow={isPageIncomplete}>
+          <Translation id="banner-page-incomplete" />
+        </BannerNotification>
+      )}
+      {showMergeBanner && (
+        <PreMergeBanner announcementOnly={isDevelopersHome}>
+          {isDevelopersHome && (
+            <Translation id="page-upgrades-merge-banner-developers-landing" />
+          )}
+        </PreMergeBanner>
+      )}
       <ContentContainer isZenMode={isZenMode}>
         <Content>
           <H1 id="top">{mdx.frontmatter.title}</H1>
@@ -217,7 +228,7 @@ const DocsPage = ({
               <Translation id="back-to-top" /> ↑
             </a>
           </BackToTop>
-          <FeedbackCard />
+          <FeedbackCard isArticle />
           <DocsNav relativePath={relativePath}></DocsNav>
         </Content>
         {mdx.frontmatter.sidebar && tocItems && (
@@ -253,6 +264,7 @@ export const query = graphql`
         sidebar
         sidebarDepth
         isOutdated
+        preMergeBanner
       }
       body
       tableOfContents

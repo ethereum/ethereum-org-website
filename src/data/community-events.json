@@ -307,7 +307,7 @@
   },
   {
     "title": "ETHLatam",
-    "to": "https://twitter.com/ethlatam",
+    "to": "http://ethlatam.org/",
     "sponsor": null,
     "location": "Buenos Aires, Argentina",
     "description": "A 4-day conference that builds upon the work of the local pioneers that laid the foundations for a vibrant community that made crypto mainstream in Argentina.",
@@ -414,6 +414,15 @@
     "endDate": "2022-11-06"
   },
   {
+    "title": "ETHGathering",
+    "to": "https://www.ethgathering.com/",
+    "sponsor": null,
+    "location": "Barcelona, Spain",
+    "description": "Hosted in one of the world's most vibrant and creative cities, ETH Gathering Barcelona 2022 is a two-day conference focused on the community building the decentralised future.",
+    "startDate": "2022-11-18",
+    "endDate": "2022-11-20"
+  },
+  {
     "title": "ETHIndia",
     "to": "https://airtable.com/shrZ89OEwQJRtXHPv/",
     "sponsor": null,
@@ -430,5 +439,23 @@
     "description": "Join Warsaw Web3 community in the first in-person conference and hackathon!",
     "startDate": "2022-09-01",
     "endDate": "2022-09-04"
+  },
+  {
+    "title": "ETHBerlin³",
+    "to": "https://ethberlin.ooo/",
+    "sponsor": null,
+    "location": "Berlin, Germany",
+    "description": "ETHBerlin, to the power of 3",
+    "startDate": "2022-09-16",
+    "endDate": "2022-09-18"
+  },
+  {
+    "title": "ETHSafari",
+    "to": "https://ethsafari.xyz/",
+    "sponsor": null,
+    "location": "Nairobi & Kilifi, Kenya",
+    "description": "Welcome to the latest greatest ETH event happening in Africa!",
+    "startDate": "2022-09-18",
+    "endDate": "2022-09-25"
   }
 ]
