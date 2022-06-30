@@ -582,7 +582,7 @@ const featureDropdownItems = [
 const WalletTable = ({ data, filters, walletData }) => {
   const [walletCardData, setWalletData] = useState(
     walletData.map((wallet) => {
-      return { ...wallet, moreInfo: false }
+      return { ...wallet, moreInfo: false, key: wallet.image_name }
     })
   )
   const [firstFeatureSelect, setFirstFeatureSelect] = useState(
@@ -595,9 +595,15 @@ const WalletTable = ({ data, filters, walletData }) => {
     featureDropdownItems[9]
   )
 
-  const updateMoreInfo = (idx) => {
+  const updateMoreInfo = (key) => {
     const temp = [...walletCardData]
-    temp[idx].moreInfo = !temp[idx].moreInfo
+
+    for (const [idx, wallet] of temp.entries()) {
+      if (wallet.key === key) {
+        temp[idx].moreInfo = !temp[idx].moreInfo
+      }
+    }
+
     setWalletData(temp)
   }
 
@@ -844,7 +850,7 @@ const WalletTable = ({ data, filters, walletData }) => {
               <td>
                 <FlexInfoCenter
                   onClick={() => {
-                    updateMoreInfo(idx)
+                    updateMoreInfo(wallet.key)
                     trackCustomEvent({
                       eventCategory: "WalletMoreInfo",
                       eventAction: `More info wallet`,
@@ -862,7 +868,7 @@ const WalletTable = ({ data, filters, walletData }) => {
               <td>
                 <FlexInfoCenter
                   onClick={() => {
-                    updateMoreInfo(idx)
+                    updateMoreInfo(wallet.key)
                     trackCustomEvent({
                       eventCategory: "WalletMoreInfo",
                       eventAction: `More info wallet`,
@@ -880,7 +886,7 @@ const WalletTable = ({ data, filters, walletData }) => {
               <td>
                 <FlexInfoCenter
                   onClick={() => {
-                    updateMoreInfo(idx)
+                    updateMoreInfo(wallet.key)
                     trackCustomEvent({
                       eventCategory: "WalletMoreInfo",
                       eventAction: `More info wallet`,
@@ -900,7 +906,7 @@ const WalletTable = ({ data, filters, walletData }) => {
                   <div
                     style={{ cursor: "pointer" }}
                     onClick={() => {
-                      updateMoreInfo(idx)
+                      updateMoreInfo(wallet.key)
                       trackCustomEvent({
                         eventCategory: "WalletMoreInfo",
                         eventAction: `More info wallet`,
