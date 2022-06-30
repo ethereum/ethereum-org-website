@@ -75,14 +75,14 @@ const Persona = styled.div<{
   flex-direction: column;
   align-items: flex-start;
   padding: 1.5rem;
-  background: ${(props) =>
-    props.selected === true
-      ? props.isDark === true
-        ? props.theme.colors.primary900
-        : props.theme.colors.primary200
-      : props.isDark === true
-      ? props.theme.colors.black400
-      : props.theme.colors.primary100};
+  background: ${({ selected, isDark, theme }) =>
+    selected
+      ? isDark
+        ? theme.colors.primary900
+        : theme.colors.primary200
+      : isDark
+      ? theme.colors.black400
+      : theme.colors.primary100};
   border-radius: 4px;
   cursor: pointer;
   transition: 0.5s all;

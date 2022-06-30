@@ -4,6 +4,7 @@ import { getImage, GatsbyImage } from "gatsby-plugin-image"
 import styled from "styled-components"
 
 // Components
+import ButtonLink from "../ButtonLink"
 import Icon from "../Icon"
 import Link from "../Link"
 import { StyledSelect as Select } from "../SharedStyledComponents"
@@ -124,6 +125,7 @@ const WalletContentHeader = styled(Grid)`
 
 const Wallet = styled(Grid)`
   padding: 25px 4px;
+  cursor: pointer;
   td {
     padding: 0;
     border-bottom: none;
@@ -398,45 +400,25 @@ const Socials = styled.div`
     height: auto;
     align-items: center;
     display: flex;
+    transform: scale(1);
+    transition: transform 0.1s;
     :hover {
-      opacity: 0.8;
+      transform: scale(1.15);
+      transition: transform 0.1s;
     }
   }
 `
 
 const LastUpdated = styled.p`
   color: ${(props) => props.theme.colors.text300};
-  margin: 2rem 1rem;
+  margin: 2rem 0;
   font-size: 0.875rem;
   display: flex;
-  flex-wrap: no-warp;
-  flex-direction: row;
+  gap: 1rem;
   justify-content: space-between;
-  align-items: center;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: flex-start;
-    flex-flow: column-reverse;
-  }
-  a {
-    border-radius: 4px;
-    padding: 0.3rem 0.7rem;
-    margin: 0.3rem;
-    text-decoration: none;
-    background: ${(props) => props.theme.colors.primary};
-    color: ${(props) => props.theme.colors.background};
-    @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-      margin-left: 0;
-      margin-bottom: 0.6rem;
-    }
-    :after {
-      margin-right: 0.2rem;
-    }
-    :hover {
-      opacity: 0.8;
-    }
-  }
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-start;
 `
 
 const StyledIcon = styled(Icon)<{ hasFeature: boolean }>`
@@ -586,10 +568,10 @@ const WalletTable = ({ data, filters, walletData }) => {
     })
   )
   const [firstFeatureSelect, setFirstFeatureSelect] = useState(
-    featureDropdownItems[1]
+    featureDropdownItems[14]
   )
   const [secondFeatureSelect, setSecondFeatureSelect] = useState(
-    featureDropdownItems[13]
+    featureDropdownItems[1]
   )
   const [thirdFeatureSelect, setThirdFeatureSelect] = useState(
     featureDropdownItems[9]
@@ -795,7 +777,16 @@ const WalletTable = ({ data, filters, walletData }) => {
 
         return (
           <WalletContainer>
-            <Wallet>
+            <Wallet
+              onClick={() => {
+                updateMoreInfo(wallet.key)
+                trackCustomEvent({
+                  eventCategory: "WalletMoreInfo",
+                  eventAction: `More info wallet`,
+                  eventName: `More info ${wallet.name}`,
+                })
+              }}
+            >
               <td>
                 <FlexInfo>
                   <div>
@@ -858,16 +849,7 @@ const WalletTable = ({ data, filters, walletData }) => {
                 </FlexInfo>
               </td>
               <td>
-                <FlexInfoCenter
-                  onClick={() => {
-                    updateMoreInfo(wallet.key)
-                    trackCustomEvent({
-                      eventCategory: "WalletMoreInfo",
-                      eventAction: `More info wallet`,
-                      eventName: `More info ${wallet.name}`,
-                    })
-                  }}
-                >
+                <FlexInfoCenter>
                   {wallet[firstFeatureSelect.filterKey!] ? (
                     <GreenCheck />
                   ) : (
@@ -876,16 +858,7 @@ const WalletTable = ({ data, filters, walletData }) => {
                 </FlexInfoCenter>
               </td>
               <td>
-                <FlexInfoCenter
-                  onClick={() => {
-                    updateMoreInfo(wallet.key)
-                    trackCustomEvent({
-                      eventCategory: "WalletMoreInfo",
-                      eventAction: `More info wallet`,
-                      eventName: `More info ${wallet.name}`,
-                    })
-                  }}
-                >
+                <FlexInfoCenter>
                   {wallet[secondFeatureSelect.filterKey!] ? (
                     <GreenCheck />
                   ) : (
@@ -894,16 +867,7 @@ const WalletTable = ({ data, filters, walletData }) => {
                 </FlexInfoCenter>
               </td>
               <td>
-                <FlexInfoCenter
-                  onClick={() => {
-                    updateMoreInfo(wallet.key)
-                    trackCustomEvent({
-                      eventCategory: "WalletMoreInfo",
-                      eventAction: `More info wallet`,
-                      eventName: `More info ${wallet.name}`,
-                    })
-                  }}
-                >
+                <FlexInfoCenter>
                   {wallet[thirdFeatureSelect.filterKey!] ? (
                     <GreenCheck />
                   ) : (
@@ -913,17 +877,7 @@ const WalletTable = ({ data, filters, walletData }) => {
               </td>
               <td>
                 <FlexInfoCenter>
-                  <div
-                    style={{ cursor: "pointer" }}
-                    onClick={() => {
-                      updateMoreInfo(wallet.key)
-                      trackCustomEvent({
-                        eventCategory: "WalletMoreInfo",
-                        eventAction: `More info wallet`,
-                        eventName: `More info ${wallet.name}`,
-                      })
-                    }}
-                  >
+                  <div>
                     <WalletMoreInfoArrow
                       name={wallet.moreInfo ? "chevronUp" : "chevronDown"}
                     />
@@ -1072,10 +1026,7 @@ const WalletMoreInfo = ({ wallet, filters, idx }) => {
             </Features>
           </WalletMoreInfoCategory>
           <LastUpdated>
-            <i>
-              {wallet.name} info updated on {wallet.last_updated}
-            </i>
-            <Link
+            <ButtonLink
               to={wallet.url}
               customEventOptions={{
                 eventCategory: "WalletExternalLinkList",
@@ -1085,7 +1036,10 @@ const WalletMoreInfo = ({ wallet, filters, idx }) => {
               }}
             >
               Check out {wallet.name}
-            </Link>
+            </ButtonLink>
+            <i>
+              {wallet.name} info updated on {wallet.last_updated}
+            </i>
           </LastUpdated>
         </div>
       </WalletMoreInfoContainer>
