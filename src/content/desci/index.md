@@ -25,7 +25,7 @@ Science has been failing to keep up with the demands of the modern world for cen
 
 This is due in part to the gatekeeping of knowledge and resources by third party arbiters, as well as the inability of the general public to participate in and understand the scientific process. 
 
-Decentralized science can help to address these issues by allowing for more diverse funding sources (from DAOs, quadratic donations to crowdfunding and more), easier access to data and methods, and by providing incentives for reproducibility.
+Decentralized science can help to address these issues by allowing for more diverse funding sources (from [DAOs](/dao), [quadratic donations](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531) to crowdfunding and more), easier access to data and methods, and by providing incentives for reproducibility.
 
 ​​
 
@@ -105,7 +105,7 @@ A comparison to traditional science
    </td>
   </tr>
   <tr>
-   <td>You own the IP you generate and distribute it according to transparent terms.
+   <td>You own the intellectual property (IP) you generate and distribute it according to transparent terms.
    </td>
    <td>Your home institution owns the IP you generate. Access to the IP is not transparent.
    </td>
@@ -141,7 +141,7 @@ The people and institutions who have been brought on board through DeSci's tooli
 
 ## Innovation
 
-Decentralized science will require new ways of funding, creating, reviewing, crediting, storing, and disseminating knowledge. These novel developments will undoubtedly affect other realms as well. From rich on-chain research objects to IP-NFTs and everything in between, the development happening in DeSci will be pivotal to the digital world moving forward.
+Decentralized science will require new ways of funding, creating, reviewing, crediting, storing, and disseminating knowledge. These novel developments will undoubtedly affect other realms as well. From rich on-chain research objects to IP recorded as [NFTs](/nft) and everything in between, the development happening in DeSci will be pivotal to the digital world moving forward.
 
 ## Legitimacy
 
@@ -160,10 +160,10 @@ DeSci is building the scientific toolstack needed to onboard Web2 academia into 
 
 ## Publishing
 
-Science publishing is famously problematic in that it is managed by publishing houses that rely upon free labor from scientists, reviewers and editors to generate the papers, but then also charge extortionate publishing fees. The public, who have usually indirectly paid for the work and the publication costs through taxation, can often not access that same work without paying the publisher again. The total costs for publishing individual science papers is often five-figures ($USD). This undermines the whole concept of scientific knowledge as a public good while generating huge profits for a small group of publishers.
+Science publishing is famously problematic in that it is managed by publishing houses that rely upon free labor from scientists, reviewers and editors to generate the papers, but then also charge extortionate publishing fees. The public, who have usually indirectly paid for the work and the publication costs through taxation, can often not access that same work without paying the publisher again. The total costs for publishing individual science papers is often five-figures ($USD). This undermines the whole concept of scientific knowledge as a [public good](https://www.econlib.org/library/Enc/PublicGoods.html) while generating huge profits for a small group of publishers.
 
 
-While free and open-access platforms do exist in the form of pre-print servers (e.g. ArXiv) these platforms lack quality control and anti-sybil mechanisms and do not generally track article-level metrics, meaning they are usually only used to publicize work prior to submission to a traditional publisher. SciHub also exists to make published papers free to access, but not legally, and only after the publishers have already taken their payment and wrapped the work in strict copyright legislation. This leaves an important gap for accessible science papers and data that has an embedded legitimacy mechanism and incentive model. The tools for building such a system exist in Web3.
+While free and open-access platforms do exist in the form of pre-print servers (e.g. ArXiv) these platforms lack quality control and [anti-sybil](https://csrc.nist.gov/glossary/term/sybil_attack) mechanisms and do not generally track article-level metrics, meaning they are usually only used to publicize work prior to submission to a traditional publisher. SciHub also exists to make published papers free to access, but not legally, and only after the publishers have already taken their payment and wrapped the work in strict copyright legislation. This leaves an important gap for accessible science papers and data that has an embedded legitimacy mechanism and incentive model. The tools for building such a system exist in Web3.
 
 
 ## Reproducibility and Replicability
@@ -179,23 +179,23 @@ The current standard model for funding science is that individuals or groups of 
 
 Studies have shown that grant review panels do a poor job of selecting high quality projects. The same proposals given to different panels have wildly different outcomes. As funding has become more scarce it has concentrated into a smaller pool of more senior researchers with more intellectually conservative projects. The effect has been to create a hyper-competitive funding landscape, entrenching perverse incentive and stifling innovation. 
 
-Web3 has the potential to disrupt this broken funding model by experimenting with different incentive models developed by DAOs and web3 broadly. Retroactive public goods funding, quadratic voting and donating, DAO governance, tokenized incentive structures are some of the web3 tools that could revolutionize science funding.
+Web3 has the potential to disrupt this broken funding model by experimenting with different incentive models developed by DAOs and web3 broadly. [Retroactive public goods funding](https://medium.com/ethereum-optimism/retroactive-public-goods-funding-33c9b7d00f0c), [quadratic funding](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531), [DAO governance](https://www.antler.co/blog/daos-and-web3-governance) and [tokenized incentive structures](https://cdixon.org/2017/05/27/crypto-tokens-a-breakthrough-in-open-network-design) are some of the web3 tools that could revolutionize science funding.
 
 
 ## IP Ownership and Development
 
-Intellectual property (IP) is a big problem in traditional science. From being stuck in universities or unused in biotechs, to being notoriously hard to value. However, ownership of digital assets (such as scientific data or articles) is something Web3 does exceptionally well using NFTs.
+Intellectual property (IP) is a big problem in traditional science. From being stuck in universities or unused in biotechs, to being notoriously hard to value. However, ownership of digital assets (such as scientific data or articles) is something Web3 does exceptionally well using [NFTs](/nft).
 
 The same way that NFTs can pass revenue for future transactions back to the original creator, you can establish transparent value attribution chains to reward researchers, governing bodies (like DAOs), or even the subjects whose data is collected. 
 
-IP-NFTs can also function as a key to a decentralized data repository of the research experiments being undertaken, and plug into NFT and DeFi financialization (from fractionalization to lending pools and value appraisal). It also allows for natively onchain entities such as DAOs like VitaDAO to hold research directly on-chain. 
+IP-NFTs can also function as a key to a decentralized data repository of the research experiments being undertaken, and plug into NFT and [DeFi](/defi) financialization (from fractionalization to lending pools and value appraisal). It also allows for natively onchain entities such as DAOs like [VitaDAO](https://www.vitadao.com/) to hold research directly on-chain. 
 
 
 ## Data Storage, Access and Architecture
 
 Scientific data can be made vastly more accessible using Web3 patterns, and distributed storage will enable research to survive cataclysmic events. 
 
-The starting point must be a system that can function without a human in the loop, where instead of key resources being gated by email validation or expensive corporate subscriptions, access can be granted to any decentralized identity holding the right verifiable credentials. This allows sensitive data to be securely replicated by trusted parties, enabling redundancy and censorship resistance, the reproduction of results, and even the ability for multiple parties to collaborate and add new data to the dataset. Confidential computing methods like compute-to-data provide alternative access mechanisms to raw data replication, creating Trusted Research Environments for the most sensitive data. 
+The starting point must be a system that can be accessed by any decentralized identity holding the right verifiable credentials. This allows sensitive data to be securely replicated by trusted parties, enabling redundancy and censorship resistance, reproduction of results, and even the ability for multiple parties to collaborate and add new data to the dataset. Confidential computing methods like [compute-to-data](https://7wdata.be/predictive-analytics/compute-to-data-using-blockchain-to-decentralize-data-science-and-ai-with-the-ocean-protocol) provide alternative access mechanisms to raw data replication, creating Trusted Research Environments for the most sensitive data. 
 
 Flexible Web3 data solutions support the scenarios above in addition to providing the foundation for truly Open Science, where public goods can be created that have no access permissions and no fees. Web3 Public Data solutions such as IPFS, Arweave and Filecoin are optimized for decentralization. dClimate, for example, provides universal access to climate and weather data, including from weather stations and predictive climate models.
 
