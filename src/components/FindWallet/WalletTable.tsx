@@ -702,12 +702,15 @@ const WalletTable = ({ data, filters, walletData }) => {
         <th>
           {filteredWallets.length === walletCardData.length ? (
             <p>
-              <strong>Showing all wallets</strong>
+              Showing all wallets (<strong>{walletCardData.length}</strong>)
             </p>
           ) : (
             <p>
-              <strong>Showing {filteredWallets.length}</strong> of{" "}
-              {walletCardData.length} wallets
+              Showing{" "}
+              <strong>
+                {filteredWallets.length} of {walletCardData.length}
+              </strong>{" "}
+              wallets
             </p>
           )}
         </th>
