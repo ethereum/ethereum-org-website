@@ -536,7 +536,7 @@ const walletData: WalletData[] = [
     active_development_team: true,
     languages_supported: ["en"],
     twitter: "https://twitter.com/TallyCash",
-    discord: "chat.tally.cash",
+    discord: "https://chat.tally.cash",
     reddit: "",
     telegram: "",
     ios: false,
