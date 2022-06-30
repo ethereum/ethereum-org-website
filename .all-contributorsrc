@@ -7963,6 +7963,16 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "RanchHowards",
+      "name": "RanchHowards",
+      "avatar_url": "https://avatars.githubusercontent.com/u/69303624?v=4",
+      "profile": "https://github.com/RanchHowards",
+      "contributions": [
+        "doc",
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
