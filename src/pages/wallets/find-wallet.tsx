@@ -76,7 +76,6 @@ const TableContent = styled(Content)`
   margin-bottom: 150px;
   border-bottom: 1px solid ${(props) => props.theme.colors.secondary};
   padding-bottom: 0;
-  
 
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     padding: 1rem 0 0;
@@ -113,7 +112,10 @@ const MobileFilterToggle = styled.div<{ showMobileSidebar: boolean }>`
     z-index: 1;
     width: 100%;
     max-width: ${(props) => (props.showMobileSidebar ? "330px" : "150px")};
-    background: ${(props) => (props.showMobileSidebar ? props.theme.colors.background : props.theme.colors.background)};
+    background: ${(props) =>
+      props.showMobileSidebar
+        ? props.theme.colors.background
+        : props.theme.colors.background};
   }
 
   p {
@@ -156,7 +158,8 @@ const FilterSidebar = styled.div<{ showMobileSidebar: boolean }>`
   z-index: 20;
   border-radius: 0px 8px 0px 0px;
   scrollbar-width: thin;
-  scrollbar-color: ${(props) => props.theme.colors.lightBorder} ${(props) => props.theme.colors.background};
+  scrollbar-color: ${(props) => props.theme.colors.lightBorder}
+    ${(props) => props.theme.colors.background};
   ::-webkit-scrollbar {
     width: 8px;
   }
@@ -164,7 +167,7 @@ const FilterSidebar = styled.div<{ showMobileSidebar: boolean }>`
     background: ${(props) => props.theme.colors.background};
   }
   ::-webkit-scrollbar-thumb {
-    background-color: ${(props) => props.theme.colors.lightBorder};;
+    background-color: ${(props) => props.theme.colors.lightBorder};
     border-radius: 4px;
     border: 2px solid ${(props) => props.theme.colors.background};
   }
@@ -236,7 +239,8 @@ const WalletContent = styled.div<{ showMobileSidebar: boolean }>`
   width: 100%;
   overflow-y: scroll;
   scrollbar-width: thin;
-  scrollbar-color: ${(props) => props.theme.colors.lightBorder} ${(props) => props.theme.colors.background};
+  scrollbar-color: ${(props) => props.theme.colors.lightBorder}
+    ${(props) => props.theme.colors.background};
   ::-webkit-scrollbar {
     width: 8px;
   }
@@ -244,7 +248,7 @@ const WalletContent = styled.div<{ showMobileSidebar: boolean }>`
     background: ${(props) => props.theme.colors.background};
   }
   ::-webkit-scrollbar-thumb {
-    background-color: ${(props) => props.theme.colors.lightBorder};;
+    background-color: ${(props) => props.theme.colors.lightBorder};
     border-radius: 4px;
     border: 2px solid ${(props) => props.theme.colors.background};
   }
@@ -697,6 +701,16 @@ export const query = graphql`
       }
     }
     oneinch: file(relativePath: { eq: "wallets/1inch.png" }) {
+      childImageSharp {
+        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+      }
+    }
+    rainbow: file(relativePath: { eq: "wallets/rainbow.png" }) {
+      childImageSharp {
+        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+      }
+    }
+    status: file(relativePath: { eq: "wallets/status.png" }) {
       childImageSharp {
         gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
       }
