@@ -132,6 +132,12 @@ const Summary = styled.div`
   border-radius: 4px;
   background: ${({ theme }) => theme.colors.cardGradient};
 
+  h2 {
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    color: ${({ theme }) => theme.colors.text300};
+  }
+
   p:last-child {
     margin: 0;
   }
@@ -404,9 +410,7 @@ const WhatIsEthereumPage = ({
           <TwoColumnContent id="summary">
             <Width60>
               <Summary>
-                <p>
-                  <b>Summary</b>
-                </p>
+                <h2>Summary</h2>
                 <p>
                   Ethereum is a technology that lets you send cryptocurrency to
                   anyone for a small fee. Its also a marketplace of apps that
@@ -433,7 +437,7 @@ const WhatIsEthereumPage = ({
                 </b>
               </p>
               <p>
-                It alll started in 2008 with Bitcoin. You could use it to send
+                It all started in 2008 with Bitcoin. You could use it to send
                 funds to anyone anywhere globally. What made crypto different
                 from normal bank transfers or other services like Paypal is that
                 there was no middle man for the first time.
@@ -447,12 +451,13 @@ const WhatIsEthereumPage = ({
                 which not.
               </p>
               <p>
-                Things are different with crypto. You act as{" "}
-                <b>your own bank</b>. Nobody else has access to your funds. You
-                and your friends can make direct{" "}
-                <b>peer-to-peer transactions</b> with no single authority
-                controling the transfer. This is possible because of the
-                blockchain technology upon which cryptocurrencies operate.
+                Things are different with crypto. You can act as{" "}
+                <b>your own bank</b>
+                if you want to. Nobody else has access to your funds and nobody
+                can tell you what services you can use. You and your friends can
+                make direct <b>peer-to-peer transactions</b> with no single
+                authority controling the transfer. This is possible because of
+                the blockchain technology upon which cryptocurrencies operate.
               </p>
             </Width60>
           </TwoColumnContent>
@@ -768,12 +773,17 @@ const WhatIsEthereumPage = ({
                       Ukraine
                     </Link>
                     , cryptocurrencies constituted the quickest and often the
-                    only option to retain financial agency.1 As seen in these
-                    examples, cryptocurrencies like Ethereum can provide
-                    unfettered access to the global economy when people are cut
-                    off from the outside world. Additionally, stablecoins offer
-                    a store of value when local currencies are collapsing due to
-                    superinflation.
+                    only option to retain financial agency.
+                    <sup>
+                      <Link to="https://www.financialinclusion.tech/" hideArrow>
+                        1
+                      </Link>
+                    </sup>{" "}
+                    As seen in these examples, cryptocurrencies like Ethereum
+                    can provide unfettered access to the global economy when
+                    people are cut off from the outside world. Additionally,
+                    stablecoins offer a store of value when local currencies are
+                    collapsing due to superinflation.
                   </p>
                 </EmblaSlide>
                 <EmblaSlide>
