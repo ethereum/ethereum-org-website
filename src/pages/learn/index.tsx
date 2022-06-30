@@ -287,7 +287,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                 </>
               </Card>
               <Card
-                title="Where to get ETH?"
+                title="Where can I get ETH?"
                 description="There are many ways how to get ETH depending on your
               location."
               >
@@ -295,7 +295,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                   <Center>
                     <GatsbyImage image={getImage(data.impact)} />
                   </Center>
-                  <ButtonLink to="/get-eth/">Where to get ETH?</ButtonLink>
+                  <ButtonLink to="/get-eth/">Where can I get ETH?</ButtonLink>
                 </>
               </Card>
             </CardGrid>
@@ -342,7 +342,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
               </Card>
               <Card
                 title="Find a wallet"
-                description="We will help you find the right wallet for you."
+                description="We will help you find the right wallet."
               >
                 <>
                   <Center>
@@ -466,7 +466,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                   <Center>
                     <GatsbyImage image={getImage(data.developersEthBlocks)} />
                   </Center>
-                  <ButtonLink to="/dapps/">Explore dApps</ButtonLink>
+                  <ButtonLink to="/dapps/">Explore dapps</ButtonLink>
                 </>
               </Card>
               <CardGradient
