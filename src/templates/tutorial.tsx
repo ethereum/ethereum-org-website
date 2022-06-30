@@ -30,6 +30,7 @@ import {
 import Emoji from "../components/Emoji"
 import YouTube from "../components/YouTube"
 import PreMergeBanner from "../components/PreMergeBanner"
+import FeedbackCard from "../components/FeedbackCard"
 
 import { isLangRightToLeft } from "../utils/translations"
 import { Lang } from "../utils/languages"
@@ -164,7 +165,6 @@ const TutorialPage = ({
   const { editContentUrl } = siteData.siteMetadata || {}
   const { relativePath } = pageContext
   const absoluteEditPath = `${editContentUrl}${relativePath}`
-
   return (
     <div>
       {showMergeBanner && <PreMergeBanner />}
@@ -190,6 +190,7 @@ const TutorialPage = ({
             relativePath={relativePath}
             editPath={absoluteEditPath}
           />
+          <FeedbackCard />
         </ContentContainer>
         {mdx.frontmatter.sidebar && tocItems && (
           <DesktopTableOfContents

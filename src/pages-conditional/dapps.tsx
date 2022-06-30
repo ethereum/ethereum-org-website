@@ -35,6 +35,7 @@ import {
 
 import { translateMessageId } from "../utils/translations"
 import { Context } from "../types"
+import FeedbackCard from "../components/FeedbackCard"
 
 const MagiciansImage = styled(GatsbyImage)`
   background-size: cover;
@@ -1678,6 +1679,9 @@ const DappsPage = ({
             </StyledCallout>
           </RightColumn>
         </Row>
+      </Content>
+      <Content>
+        <FeedbackCard />
       </Content>
     </Page>
   )
