@@ -217,7 +217,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
     subtitle:
       "Your educational guide to the world of Ethereum. Learn how Ethereum works and how to connect to it. This page includes technical and non-technical articles, guides, and resources.",
     image: getImage(data.heroImage),
-    alt: "", // TODO
+    alt: "Illustration of a group of people marvelling at an ether (ETH) glyph in awe.",
     buttons: [
       {
         content: "Let's get started",
@@ -268,7 +268,10 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
               >
                 <>
                   <Center>
-                    <GatsbyImage image={getImage(data.whatIsEth)} />
+                    <GatsbyImage
+                      image={getImage(data.whatIsEth)}
+                      alt="Illustration of a person peering into a bazaar, meant to represent Ethereum.1"
+                    />
                   </Center>
                   <ButtonLink to="/what-is-ethereum/">
                     What is Ethereum?
@@ -281,7 +284,10 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
               >
                 <>
                   <Center>
-                    <GatsbyImage image={getImage(data.eth)} />
+                    <GatsbyImage
+                      image={getImage(data.eth)}
+                      alt="Illustration of a group of people marvelling at an ether (ETH) glyph in awe."
+                    />
                   </Center>
                   <ButtonLink to="/eth/">What is ETH?</ButtonLink>
                 </>
@@ -293,7 +299,10 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
               >
                 <>
                   <Center>
-                    <GatsbyImage image={getImage(data.impact)} />
+                    <GatsbyImage
+                      image={getImage(data.impact)}
+                      alt="Illustration of hands offering an ETH symbol."
+                    />
                   </Center>
                   <ButtonLink to="/get-eth/">Where can I get ETH?</ButtonLink>
                 </>
@@ -335,7 +344,10 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
               >
                 <>
                   <Center>
-                    <GatsbyImage image={getImage(data.wallet)} />
+                    <GatsbyImage
+                      image={getImage(data.wallet)}
+                      alt="Illustration of a robot."
+                    />
                   </Center>
                   <ButtonLink to="/wallets/">What is a wallet?</ButtonLink>
                 </>
@@ -346,7 +358,10 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
               >
                 <>
                   <Center>
-                    <GatsbyImage image={getImage(data.futureTransparent)} />
+                    <GatsbyImage
+                      image={getImage(data.futureTransparent)}
+                      alt="Illustration of a futuristic computer set up, powered by Ethereum crystals."
+                    />
                   </Center>
                   <ButtonLink to="/wallets/find-wallet/">
                     List of wallets
@@ -359,7 +374,10 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
               >
                 <>
                   <Center>
-                    <GatsbyImage image={getImage(data.dogeComputer)} />
+                    <GatsbyImage
+                      image={getImage(data.dogeComputer)}
+                      alt="Doge using dapps"
+                    />
                   </Center>
                   <ButtonLink to="/security/">Crypto security 101</ButtonLink>
                 </>
@@ -385,7 +403,10 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                 </ul>
               </BannerBody>
               <BannerImage>
-                <GatsbyImage image={getImage(data.newRings)} />
+                <GatsbyImage
+                  image={getImage(data.newRings)}
+                  alt="Illustration of a person building a futuristic machine"
+                />
               </BannerImage>
             </Banner>
 
@@ -416,7 +437,10 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
               >
                 <>
                   <Center>
-                    <GatsbyImage image={getImage(data.financeTransparent)} />
+                    <GatsbyImage
+                      image={getImage(data.financeTransparent)}
+                      alt="An Ethereum logo made of lego bricks."
+                    />
                   </Center>
                   <ButtonLink to="/defi/">What is DEFI?</ButtonLink>
                 </>
@@ -427,7 +451,10 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
               >
                 <>
                   <Center>
-                    <GatsbyImage image={getImage(data.stablecoins)} />
+                    <GatsbyImage
+                      image={getImage(data.stablecoins)}
+                      alt="The three biggest stablecoins by market cap: Dai, USDC, and Tether."
+                    />
                   </Center>
                   <ButtonLink to="/stablecoins/">
                     What are stablecoins?
@@ -442,6 +469,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                   <Center>
                     <GatsbyImage
                       image={getImage(data.infrastructureTransparent)}
+                      alt="Illustration of a futuristic computer/device."
                     />
                   </Center>
                   <ButtonLink to="/nft/">What are NFTs?</ButtonLink>
@@ -453,7 +481,10 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
               >
                 <>
                   <Center>
-                    <GatsbyImage image={getImage(data.dao)} />
+                    <GatsbyImage
+                      image={getImage(data.dao)}
+                      alt="A representation of a DAO voting on a proposal."
+                    />
                   </Center>
                   <ButtonLink to="/dao/">What are DAOs?</ButtonLink>
                 </>
@@ -464,7 +495,10 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
               >
                 <>
                   <Center>
-                    <GatsbyImage image={getImage(data.developersEthBlocks)} />
+                    <GatsbyImage
+                      image={getImage(data.developersEthBlocks)}
+                      alt="Illustration of a hand building an ETH symbol out of lego bricks."
+                    />
                   </Center>
                   <ButtonLink to="/dapps/">Explore dapps</ButtonLink>
                 </>
@@ -535,7 +569,10 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
               >
                 <>
                   <Center>
-                    <GatsbyImage image={getImage(data.rhino)} />
+                    <GatsbyImage
+                      image={getImage(data.rhino)}
+                      alt="Image of the Rhino mascot for the staking launchpad."
+                    />
                   </Center>
                   <ButtonLink to="/staking/">Start staking</ButtonLink>
                 </>
@@ -546,7 +583,10 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
               >
                 <>
                   <Center>
-                    <GatsbyImage image={getImage(data.ethereumInside)} />
+                    <GatsbyImage
+                      image={getImage(data.ethereumInside)}
+                      alt="Graphic of node"
+                    />
                   </Center>
                   <ButtonLink to="/run-a-node/">Run a node</ButtonLink>
                 </>
@@ -567,7 +607,10 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
               >
                 <>
                   <Center>
-                    <GatsbyImage image={getImage(data.hackathon)} />
+                    <GatsbyImage
+                      image={getImage(data.hackathon)}
+                      alt="Illustration of a person working on a computer."
+                    />
                   </Center>
                   <ButtonLink to="/energy-consumption/">
                     Is Ethereum green?
@@ -580,7 +623,10 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
               >
                 <>
                   <Center>
-                    <GatsbyImage image={getImage(data.merge)} />
+                    <GatsbyImage
+                      image={getImage(data.merge)}
+                      alt="Illustration of a spaceship representing the increased power after Ethereum upgrades."
+                    />
                   </Center>
                   <ButtonLink to="/upgrades/">Read more</ButtonLink>
                 </>
@@ -591,7 +637,10 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
               >
                 <>
                   <Center>
-                    <GatsbyImage image={getImage(data.financeTransparent)} />
+                    <GatsbyImage
+                      image={getImage(data.financeTransparent)}
+                      alt="An Ethereum logo made of lego bricks."
+                    />
                   </Center>
                   <ButtonLink to="/whitepaper/">Read whitepaper</ButtonLink>
                 </>
@@ -625,7 +674,10 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
               >
                 <>
                   <Center>
-                    <GatsbyImage image={getImage(data.enterprise)} />
+                    <GatsbyImage
+                      image={getImage(data.enterprise)}
+                      alt="Illustration of a group of builders working together."
+                    />
                   </Center>
                   <ButtonLink to="/community/">Explore more</ButtonLink>
                 </>
@@ -636,7 +688,10 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
               >
                 <>
                   <Center>
-                    <GatsbyImage image={getImage(data.dogeComputer)} />
+                    <GatsbyImage
+                      image={getImage(data.dogeComputer)}
+                      alt="Doge using dapps"
+                    />
                   </Center>
                   <ButtonLink to="/community/get-involved/">
                     How can I get Involved?
@@ -649,7 +704,10 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
               >
                 <>
                   <Center>
-                    <GatsbyImage image={getImage(data.impact)} />
+                    <GatsbyImage
+                      image={getImage(data.impact)}
+                      alt="Illustration of hands offering an ETH symbol."
+                    />
                   </Center>
                   <ButtonLink to="/community/online/">
                     Explore communities
