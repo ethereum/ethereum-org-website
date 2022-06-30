@@ -7,7 +7,7 @@ interface WalletFilter {
 const walletFilterData: { [key: string]: WalletFilter } = {
   mobile: {
     title: "Mobile",
-    description: "Phone or mobile based wallets.",
+    description: "Wallets with mobile apps",
     filterKey: undefined,
   },
   android: {
@@ -22,7 +22,7 @@ const walletFilterData: { [key: string]: WalletFilter } = {
   },
   desktop: {
     title: "Desktop",
-    description: "Desktop based wallets.",
+    description: "Wallets with desktop apps",
     filterKey: undefined,
   },
   linux: {
@@ -42,7 +42,7 @@ const walletFilterData: { [key: string]: WalletFilter } = {
   },
   browser: {
     title: "Browser",
-    description: "Browser extension wallets.",
+    description: "Wallets with browser extensions",
     filterKey: undefined,
   },
   firefox: {
@@ -57,102 +57,100 @@ const walletFilterData: { [key: string]: WalletFilter } = {
   },
   hardware: {
     title: "Hardware",
-    description: "Hardware based wallets.",
+    description: "Hardware wallets",
     filterKey: "hardware",
   },
   open_source: {
-    title: "Open source",
+    title: "Open-source",
     description:
-      "Code for the wallet is open sourced for you to inspect and edit.",
+      "Open-source software lets anyone audit the integrity and security of the application",
     filterKey: "open_source",
   },
   non_custodial: {
     title: "Non-custodial",
-    description: "Who has control over the keys for your wallet.",
+    description: "Wallets that do not control your private keys",
     filterKey: "non_custodial",
   },
   hardware_support: {
     title: "Hardware support",
     description:
-      "You can connect a hardware wallet and sign transactions with it.",
+      "Wallets that can connect to hardware wallet for better security",
     filterKey: "hardware_support",
   },
   walletconnect: {
     title: "WalletConnect",
-    description: "You can connect to applications that support WalletConnect.",
+    description: "Wallets that support WalletConnect for connecting to dapps",
     filterKey: "walletconnect",
   },
   rpc_importing: {
     title: "RPC importing",
     description:
-      "You can import RPC endpoint data to connect to different nodes/networks.",
+      "Wallets supporting custom RPC endpoints to connect to different nodes or networks",
     filterKey: "rpc_importing",
   },
   nft_support: {
     title: "NFT support",
-    description: "You can view and interact with your NFTs in the wallet",
+    description: "Wallets that support viewing and interacting with your NFTs",
     filterKey: "nft_support",
   },
   connect_to_dapps: {
     title: "Connect to decentralized apps",
     description:
-      "You can connect to applications built on the Ethereum network.",
+      "Wallets that connect to applications built on the Ethereum network",
     filterKey: "connect_to_dapps",
   },
   staking: {
     title: "Staking",
-    description:
-      "You can use a simple interface to stake directly in the wallet.",
+    description: "Stake ETH directly from the wallet",
     filterKey: "staking",
   },
   swaps: {
     title: "Swaps",
-    description: "You can swap ERC-20 tokens directly in the wallet.",
+    description: "Swap ERC-20 tokens directly in the wallet",
     filterKey: "swaps",
   },
   layer_2: {
     title: "Layer 2",
-    description: "You can use layer 2 networks in the wallet.",
+    description: "Wallets supporting Ethereum layer 2s",
     filterKey: "layer_2",
   },
   gas_fee_customization: {
     title: "Gas fee customization",
     description:
-      "You are able to customize your gas inputs (base fee, priority fee, max fee).",
+      "Customize your gas amounts (base fee, priority fee, and max fee)",
     filterKey: "gas_fee_customization",
   },
   ens_support: {
     title: "ENS support",
-    description: "You are able to send transactions to ENS addresses.",
+    description: "Send transactions to ENS addresses",
     filterKey: "ens_support",
   },
   erc_20_support: {
     title: "Token importing",
-    description:
-      "You can import ERC-20 token contract addresses into the wallet.",
+    description: "Import any ERC-20 token to use in the wallet",
     filterKey: "erc_20_support",
   },
   eip_1559_support: {
     title: "EIP-1559 support",
-    description: "Supports type 2 transactions saving you money in gas fees.",
+    description: "Lower gas fees with type-2 transactions",
     filterKey: "eip_1559_support",
   },
   buy_crypto: {
     title: "Buy crypto",
     description:
-      "You are able to buy crypto with fiat directly in the wallet. \n *Note: buying crypto may be region locked.",
+      "Buy crypto directly in the wallet \n *Note: buying crypto may be region specific",
     filterKey: "buy_crypto",
   },
   withdraw_crypto: {
     title: "Withdraw crypto",
     description:
-      "You able to withdraw to fiat directly in the wallet. \n *Note: withdrawing crypto may be region locked.",
+      "Withdraw to fiat directly in the wallet \n *Note: withdrawing crypto may be region specific",
     filterKey: "withdraw_crypto",
   },
   multisig: {
     title: "Multisig",
     description:
-      "Wallets that require two or more signatures from private keys for a transaction",
+      "Wallets that require multiple signatures to authorize a transaction",
     filterKey: "multisig",
   },
   social_recovery: {

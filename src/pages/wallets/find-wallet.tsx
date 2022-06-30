@@ -112,7 +112,10 @@ const MobileFilterToggle = styled.div<{ showMobileSidebar: boolean }>`
     z-index: 1;
     width: 100%;
     max-width: ${(props) => (props.showMobileSidebar ? "330px" : "150px")};
-    background: ${(props) => (props.showMobileSidebar ? props.theme.colors.background : props.theme.colors.background)};
+    background: ${(props) =>
+      props.showMobileSidebar
+        ? props.theme.colors.background
+        : props.theme.colors.background};
   }
 
   p {
@@ -154,6 +157,20 @@ const FilterSidebar = styled.div<{ showMobileSidebar: boolean }>`
   transition: 0.5s all;
   z-index: 20;
   border-radius: 0px 8px 0px 0px;
+  scrollbar-width: thin;
+  scrollbar-color: ${(props) => props.theme.colors.lightBorder}
+    ${(props) => props.theme.colors.background};
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: ${(props) => props.theme.colors.background};
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: ${(props) => props.theme.colors.lightBorder};
+    border-radius: 4px;
+    border: 2px solid ${(props) => props.theme.colors.background};
+  }
 
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     width: ${(props) => (props.showMobileSidebar ? "350px" : "350px")};
@@ -221,6 +238,20 @@ const FilterTab = styled.div<{
 const WalletContent = styled.div<{ showMobileSidebar: boolean }>`
   width: 100%;
   overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: ${(props) => props.theme.colors.lightBorder}
+    ${(props) => props.theme.colors.background};
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: ${(props) => props.theme.colors.background};
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: ${(props) => props.theme.colors.lightBorder};
+    border-radius: 4px;
+    border: 2px solid ${(props) => props.theme.colors.background};
+  }
   table {
     margin: 0;
   }
@@ -485,7 +516,7 @@ const FindWalletPage = ({ data, location }) => {
         </p>
         <p>
           <i>
-            Their descriptions have been provided by the wallet companies
+            Their descriptions have been provided by the wallet projects
             themselves.{" "}
           </i>
         </p>
@@ -670,6 +701,21 @@ export const query = graphql`
       }
     }
     oneinch: file(relativePath: { eq: "wallets/1inch.png" }) {
+      childImageSharp {
+        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+      }
+    }
+    rainbow: file(relativePath: { eq: "wallets/rainbow.png" }) {
+      childImageSharp {
+        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+      }
+    }
+    status: file(relativePath: { eq: "wallets/status.png" }) {
+      childImageSharp {
+        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+      }
+    }
+    aktionariat: file(relativePath: { eq: "wallets/aktionariat.png" }) {
       childImageSharp {
         gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
       }
