@@ -342,7 +342,7 @@ const WalletPersonasSidebar = ({
       },
     },
     {
-      title: "NFT's",
+      title: "NFTs",
       description:
         "You are someone that is all about NFTs and want a wallet with NFT support",
       featureHighlight: [
