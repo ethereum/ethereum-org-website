@@ -129,7 +129,7 @@ const DocsContainer = styled.div`
   flex-flow: column nowrap;
   gap: 10px;
 
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+  @media (max-width: ${(props) => props.theme.breakpoints.xl}) {
     margin: 0;
   }
 `
@@ -322,8 +322,8 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
             <h2 id={tocItems[1].id}>{tocItems[1].title}</h2>
             <p>
               It’s actually quite simple once you get the hang of it. You need
-              an application that is commonly called a “wallet”. It's an app that
-              helps you store your funds and to authenticate/interact with
+              an application that is commonly called a “wallet”. It's an app
+              that helps you store your funds and to authenticate/interact with
               applications on Ethereum.
             </p>
             <CardGrid>
