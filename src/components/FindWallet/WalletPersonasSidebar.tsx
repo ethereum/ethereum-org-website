@@ -474,7 +474,7 @@ const WalletPersonasSidebar = ({
         firefox: false,
         chromium: false,
         hardware: false,
-        open_source: true,
+        open_source: false,
         non_custodial: false,
         hardware_support: false,
         walletconnect: true,
