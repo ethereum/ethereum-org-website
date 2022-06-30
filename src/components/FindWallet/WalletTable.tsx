@@ -700,10 +700,16 @@ const WalletTable = ({ data, filters, walletData }) => {
     <Container>
       <WalletContentHeader>
         <th>
-          <p>
-            <strong>Showing {filteredWallets.length} wallets</strong> out of{" "}
-            {walletCardData.length}
-          </p>
+          {filteredWallets.length === walletCardData.length ? (
+            <p>
+              <strong>Showing all wallets</strong>
+            </p>
+          ) : (
+            <p>
+              <strong>Showing {filteredWallets.length}</strong> of{" "}
+              {walletCardData.length} wallets
+            </p>
+          )}
         </th>
         <th>
           <StyledSelect
