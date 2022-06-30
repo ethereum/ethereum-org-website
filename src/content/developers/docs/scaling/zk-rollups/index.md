@@ -258,4 +258,6 @@ Projects working on zkEVMs include:
 - [STARKs vs SNARKs](https://consensys.net/blog/blockchain-explained/zero-knowledge-proofs-starks-vs-snarks/)
 - [What is a zkEVM?](https://www.alchemy.com/overviews/zkevm) 
 - [More on layer 2](/layer-2/)
+-[ZK-SNARKS under the hood](https://vitalik.ca/general/2017/02/01/zk_snarks.html)
+-[How are SNARKs possible?](https://vitalik.ca/general/2021/01/26/snarks.html)
 
