@@ -87,7 +87,7 @@ The optimization above however introduces some ambiguity.
 
 When traversing paths in nibbles, we may end up with an odd number of nibbles to traverse, but because all data is stored in `bytes` format, it is not possible to differentiate between, for instance, the nibble `1`, and the nibbles `01` (both must be stored as `<01>`). To specify odd length, the partial path is prefixed with a flag.
 
-### Specification: Compact encoding of hex sequence with optional terminator {specification}
+### Specification: Compact encoding of hex sequence with optional terminator {#specification}
 
 The flagging of both _odd vs. even remaining partial path length_ and _leaf vs. extension node_ as described above reside in the first nibble of the partial path of any 2-item node. They result in the following:
 
