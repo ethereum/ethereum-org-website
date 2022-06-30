@@ -245,7 +245,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
             <h2 id={tocItems[0].id}>{tocItems[0].title}</h2>
             <p>
               You have probably heard a thing or two about cryptocurrencies,
-              Bitcoin and blockchain, but do you know what those actually are
+              Bitcoin, and blockchain, but do you know what those actually are
               and how they relate to Ethereum? And what is Ethereum anyway?{" "}
               <strong>
                 Check out our introductory{" "}
@@ -253,7 +253,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
               </strong>
             </p>
             <p>
-              Not only that Ethereum can do what Bitcoin does (transfer money
+              Not only can Ethereum do what Bitcoin does (transfer money
               globally), it’s capable of a lot more – people can actually deploy
               code onto the network. Because it’s so flexible, any kind of
               computer application can be launched on Ethereum.
@@ -275,7 +275,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
               </Card>
               <Card
                 title="What is ETH?"
-                description="The currency of Ethereum network is called Ether or ETH."
+                description="The currency of Ethereum network is called ether or ETH."
               >
                 <>
                   <Center>
@@ -322,8 +322,8 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
             <h2 id={tocItems[1].id}>{tocItems[1].title}</h2>
             <p>
               It’s actually quite simple once you get the hang of it. You need
-              an application that is commonly called a “wallet”. Its an app that
-              helps you store you funds and to authenticate/interact with
+              an application that is commonly called a “wallet”. It's an app that
+              helps you store your funds and to authenticate/interact with
               applications on Ethereum.
             </p>
             <CardGrid>
@@ -339,7 +339,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                 </>
               </Card>
               <Card
-                title="List of wallets"
+                title="Find a wallet"
                 description="We will help you find the right wallet for you."
               >
                 <>
@@ -366,19 +366,19 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
 
             <Banner>
               <BannerBody>
-                <h3>Things to consider</h3>
+                <h3>Things to consider when using Ethereum</h3>
                 <ul>
                   <li>
-                    Each Ethereum transaction requires a fee in form of ETH,
+                    Each Ethereum transaction requires a fee in the form of ETH,
                     even if you need to move different tokens built on Ethereum
                     like USDC or DAI.
                   </li>
                   <li>
-                    Fees can be high depending on the demand so we reccomend
+                    Fees can be high depending on the demand so we recommend
                     using <Link to="/layer-2/">Layer 2s</Link>.
                   </li>
                   <li>
-                    There are options for custodial and non custodial wallets.
+                    There are options for custodial and non-custodial wallets.
                   </li>
                 </ul>
               </BannerBody>
@@ -409,7 +409,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
             </p>
             <CardGrid>
               <Card
-                title="Decentralised Finance"
+                title="Decentralized Finance"
                 description="Explore an alternative financial system that is built without banks and is open to anyone."
               >
                 <>
@@ -433,8 +433,8 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                 </>
               </Card>
               <Card
-                title="Non Fungible Tokens"
-                description="Non fungible tokens represent ownership of unique items."
+                title="Non-fungible tokens"
+                description="Non-fungible tokens represent ownership of unique items."
               >
                 <>
                   <Center>
@@ -457,7 +457,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                 </>
               </Card>
               <Card
-                title="Decentralised applications"
+                title="Decentralized applications"
                 description="Are creating a new digital economy of peer-to-peer services."
               >
                 <>
@@ -468,7 +468,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                 </>
               </Card>
               <CardGradient
-                title="Emerging usecases"
+                title="Emerging use cases"
                 description="There are also other prominent industries being disrupted by blockchain:"
               >
                 <ul>
@@ -484,12 +484,12 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                   </li>
                   <li>
                     <Link to="https://future.com/what-is-decentralized-science-aka-desci/">
-                      Decentralised Science (Desci)
+                      Decentralised Science (DeSci)
                     </Link>
                   </li>
                   <li>
                     <Link to="https://decrypt.co/resources/what-are-play-to-earn-games-how-players-are-making-a-living-with-nfts">
-                      Play-to-earn Games (GameFI)
+                      Play-to-earn games (GameFI)
                     </Link>
                   </li>
                   <li>
@@ -529,7 +529,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
             <CardGrid>
               <Card
                 title="Staking Ethereum"
-                description="Learn about different ways how to earn rewards by staking ETH."
+                description="Learn about different ways to earn rewards by staking ETH."
               >
                 <>
                   <Center>
@@ -573,7 +573,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                 </>
               </Card>
               <Card
-                title="Ethereum Upgrades"
+                title="Ethereum upgrades"
                 description="How are we going to make Ethereum more scalable, secure, and sustainable?"
               >
                 <>
@@ -630,7 +630,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
               </Card>
               <Card
                 title="How can I get involved?"
-                description="There are technical and non-technical ways how to be part of the community."
+                description="There are technical and non-technical ways to be part of the community."
               >
                 <>
                   <Center>
@@ -643,7 +643,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
               </Card>
               <Card
                 title="Online communities"
-                description="These provide great opportunity to ask more specific questions or get involved."
+                description="Online communities provide a great opportunity to ask more specific questions or get involved."
               >
                 <>
                   <Center>
