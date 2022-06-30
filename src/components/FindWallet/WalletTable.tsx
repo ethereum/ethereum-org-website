@@ -4,6 +4,7 @@ import { getImage, GatsbyImage } from "gatsby-plugin-image"
 import styled from "styled-components"
 
 // Components
+import ButtonLink from "../ButtonLink"
 import Icon from "../Icon"
 import Link from "../Link"
 import { StyledSelect as Select } from "../SharedStyledComponents"
@@ -406,37 +407,14 @@ const Socials = styled.div`
 
 const LastUpdated = styled.p`
   color: ${(props) => props.theme.colors.text300};
-  margin: 2rem 1rem;
+  margin: 2rem 0;
   font-size: 0.875rem;
   display: flex;
-  flex-wrap: no-warp;
-  flex-direction: row;
+  gap: 1rem;
   justify-content: space-between;
-  align-items: center;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: flex-start;
-    flex-flow: column-reverse;
-  }
-  a {
-    border-radius: 4px;
-    padding: 0.3rem 0.7rem;
-    margin: 0.3rem;
-    text-decoration: none;
-    background: ${(props) => props.theme.colors.primary};
-    color: ${(props) => props.theme.colors.background};
-    @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-      margin-left: 0;
-      margin-bottom: 0.6rem;
-    }
-    :after {
-      margin-right: 0.2rem;
-    }
-    :hover {
-      opacity: 0.8;
-    }
-  }
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-start;
 `
 
 const StyledIcon = styled(Icon)<{ hasFeature: boolean }>`
@@ -1079,10 +1057,7 @@ const WalletTable = ({ data, filters, walletData }) => {
                       </Features>
                     </WalletMoreInfoCategory>
                     <LastUpdated>
-                      <i>
-                        {wallet.name} info updated on {wallet.last_updated}
-                      </i>
-                      <Link
+                      <ButtonLink
                         to={wallet.url}
                         customEventOptions={{
                           eventCategory: "WalletExternalLinkList",
@@ -1092,7 +1067,10 @@ const WalletTable = ({ data, filters, walletData }) => {
                         }}
                       >
                         Check out {wallet.name}
-                      </Link>
+                      </ButtonLink>
+                      <i>
+                        {wallet.name} info updated on {wallet.last_updated}
+                      </i>
                     </LastUpdated>
                   </div>
                 </WalletMoreInfoContainer>
