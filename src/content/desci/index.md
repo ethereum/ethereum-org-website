@@ -189,7 +189,7 @@ Intellectual property (IP) is a big problem in traditional science. From being s
 The same way that NFTs can pass revenue for future transactions back to the original creator, you can establish transparent value attribution chains to reward researchers, governing bodies (like DAOs), or even the subjects whose data is collected. 
 
 IP-NFTs can also function as a key to a decentralized data repository of the research experiments being undertaken, and plug into NFT and [DeFi](/defi) financialization (from fractionalization to lending pools and value appraisal). It also allows for natively onchain entities such as DAOs like [VitaDAO](https://www.vitadao.com/) to hold research directly on-chain. 
-
+The advent of non-transferable ["soulbound"](https://vitalik.ca/general/2022/01/26/soulbound.html) tokens may also play an important role in DeSci by allowing individuals to prove their experience and credentials linked to their Ethereum address.
 
 ## Data Storage, Access and Architecture
 
