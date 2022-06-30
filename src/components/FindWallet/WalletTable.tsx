@@ -586,10 +586,10 @@ const WalletTable = ({ data, filters, walletData }) => {
     })
   )
   const [firstFeatureSelect, setFirstFeatureSelect] = useState(
-    featureDropdownItems[1]
+    featureDropdownItems[14]
   )
   const [secondFeatureSelect, setSecondFeatureSelect] = useState(
-    featureDropdownItems[13]
+    featureDropdownItems[1]
   )
   const [thirdFeatureSelect, setThirdFeatureSelect] = useState(
     featureDropdownItems[9]
