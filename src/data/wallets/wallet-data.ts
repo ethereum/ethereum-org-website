@@ -596,7 +596,7 @@ const walletData: WalletData[] = [
     firefox: true,
     chromium: true,
     hardware: false,
-    open_source: false,
+    open_source: true,
     repo_url: "https://github.com/MetaMask",
     non_custodial: true,
     security_audit: [],
