@@ -161,7 +161,7 @@ const FilterSidebar = styled.div<{ showMobileSidebar: boolean }>`
     display: ${(props) => (props.showMobileSidebar ? "flex" : "none")};
     position: ${(props) => (props.showMobileSidebar ? "absolute" : "relative")};
     box-shadow: ${(props) =>
-      props.showMobileSidebar ? "20px 0px 5px 0px rgb(0 0 0 / 38%)" : "none"};
+      props.showMobileSidebar ? "0 600px 0 600px rgb(0 0 0 / 65%)" : "none"};
   }
   @media (max-width: ${(props) => props.theme.breakpoints.s}) {
     width: ${(props) => (props.showMobileSidebar ? "90%" : "90%")};
