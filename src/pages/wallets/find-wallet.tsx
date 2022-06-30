@@ -76,6 +76,7 @@ const TableContent = styled(Content)`
   margin-bottom: 150px;
   border-bottom: 1px solid ${(props) => props.theme.colors.secondary};
   padding-bottom: 0;
+  
 
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     padding: 1rem 0 0;
@@ -154,6 +155,19 @@ const FilterSidebar = styled.div<{ showMobileSidebar: boolean }>`
   transition: 0.5s all;
   z-index: 20;
   border-radius: 0px 8px 0px 0px;
+  scrollbar-width: thin;
+  scrollbar-color: ${(props) => props.theme.colors.lightBorder} ${(props) => props.theme.colors.background};
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: ${(props) => props.theme.colors.background};
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: ${(props) => props.theme.colors.lightBorder};;
+    border-radius: 4px;
+    border: 2px solid ${(props) => props.theme.colors.background};
+  }
 
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     width: ${(props) => (props.showMobileSidebar ? "350px" : "350px")};
@@ -221,6 +235,19 @@ const FilterTab = styled.div<{
 const WalletContent = styled.div<{ showMobileSidebar: boolean }>`
   width: 100%;
   overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: ${(props) => props.theme.colors.lightBorder} ${(props) => props.theme.colors.background};
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: ${(props) => props.theme.colors.background};
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: ${(props) => props.theme.colors.lightBorder};;
+    border-radius: 4px;
+    border: 2px solid ${(props) => props.theme.colors.background};
+  }
   table {
     margin: 0;
   }
