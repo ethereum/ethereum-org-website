@@ -916,176 +916,164 @@ const WalletTable = ({ data, filters, walletData }) => {
               </td>
             </Wallet>
             {wallet.moreInfo && (
-              <div>
-                <WalletMoreInfoContainer>
-                  <div>
-                    <ColoredLine color={wallet.brand_color} />
-                  </div>
-                  <div>
-                    <WalletMoreInfoCategory>
-                      <h4>Features</h4>
-                      <Features>
-                        {featureDropdownItems.map((feature) => {
-                          if (feature.category === "feature")
-                            return (
-                              <FeatureLabel
-                                hasFeature={wallet[feature.filterKey!]}
-                              >
-                                <FeatureIcon
-                                  hasFeature={wallet[feature.filterKey!]}
-                                >
-                                  {feature.icon}
-                                </FeatureIcon>
-                                <p>{feature.label}</p>
-                                <Tooltip
-                                  content={
-                                    <p>
-                                      {
-                                        walletFilterData[feature.filterKey]
-                                          .description
-                                      }
-                                    </p>
-                                  }
-                                >
-                                  <StyledIcon
-                                    name="info"
-                                    hasFeature={wallet[feature.filterKey!]}
-                                  />
-                                </Tooltip>
-                              </FeatureLabel>
-                            )
-                        })}
-                      </Features>
-                    </WalletMoreInfoCategory>
-                    <WalletMoreInfoCategory>
-                      <h4>Security</h4>
-                      <Features>
-                        {featureDropdownItems.map((feature) => {
-                          if (feature.category === "security")
-                            return (
-                              <FeatureLabel
-                                hasFeature={wallet[feature.filterKey!]}
-                              >
-                                <FeatureIcon
-                                  hasFeature={wallet[feature.filterKey!]}
-                                >
-                                  {feature.icon}
-                                </FeatureIcon>
-                                <p>{feature.label}</p>
-                                <Tooltip
-                                  content={
-                                    <p>
-                                      {
-                                        walletFilterData[feature.filterKey]
-                                          .description
-                                      }
-                                    </p>
-                                  }
-                                >
-                                  <StyledIcon
-                                    name="info"
-                                    hasFeature={wallet[feature.filterKey!]}
-                                  />
-                                </Tooltip>
-                              </FeatureLabel>
-                            )
-                        })}
-                      </Features>
-                    </WalletMoreInfoCategory>
-                    <WalletMoreInfoCategory>
-                      <h4>Trade & buy</h4>
-                      <Features>
-                        {featureDropdownItems.map((feature) => {
-                          if (feature.category === "trade_and_buy")
-                            return (
-                              <FeatureLabel
-                                hasFeature={wallet[feature.filterKey!]}
-                              >
-                                <FeatureIcon
-                                  hasFeature={wallet[feature.filterKey!]}
-                                >
-                                  {feature.icon}
-                                </FeatureIcon>
-                                <p>{feature.label}</p>
-                                <Tooltip
-                                  content={
-                                    <p>
-                                      {
-                                        walletFilterData[feature.filterKey]
-                                          .description
-                                      }
-                                    </p>
-                                  }
-                                >
-                                  <StyledIcon
-                                    name="info"
-                                    hasFeature={wallet[feature.filterKey!]}
-                                  />
-                                </Tooltip>
-                              </FeatureLabel>
-                            )
-                        })}
-                      </Features>
-                    </WalletMoreInfoCategory>
-                    <WalletMoreInfoCategory>
-                      <h4>Smart contract</h4>
-                      <Features>
-                        {featureDropdownItems.map((feature) => {
-                          if (feature.category === "smart_contract")
-                            return (
-                              <FeatureLabel
-                                hasFeature={wallet[feature.filterKey!]}
-                              >
-                                <FeatureIcon
-                                  hasFeature={wallet[feature.filterKey!]}
-                                >
-                                  {feature.icon}
-                                </FeatureIcon>
-                                <p>{feature.label}</p>
-                                <Tooltip
-                                  content={
-                                    <p>
-                                      {
-                                        walletFilterData[feature.filterKey]
-                                          .description
-                                      }
-                                    </p>
-                                  }
-                                >
-                                  <StyledIcon
-                                    name="info"
-                                    hasFeature={wallet[feature.filterKey!]}
-                                  />
-                                </Tooltip>
-                              </FeatureLabel>
-                            )
-                        })}
-                      </Features>
-                    </WalletMoreInfoCategory>
-                    <LastUpdated>
-                      <i>
-                        {wallet.name} info updated on {wallet.last_updated}
-                      </i>
-                      <Link
-                        to={wallet.url}
-                        customEventOptions={{
-                          eventCategory: "WalletExternalLinkList",
-                          eventAction: `Go to wallet`,
-                          eventName: `${wallet.name} ${idx}`,
-                          eventValue: filters,
-                        }}
-                      >
-                        Check out {wallet.name}
-                      </Link>
-                    </LastUpdated>
-                  </div>
-                </WalletMoreInfoContainer>
-              </div>
+              <WalletMoreInfo wallet={wallet} filters={filters} idx={idx} />
             )}
           </WalletContainer>
         )
       })}
     </Container>
+  )
+}
+
+const WalletMoreInfo = ({ wallet, filters, idx }) => {
+  const walletHasFilter = (filterKey) => {
+    return wallet[filterKey] === true
+  }
+  // Cast as Number because TypeScript warned about sorting implictily by true/false
+  const orderedFeatureDropdownItems = [...featureDropdownItems].sort(
+    (a, b) =>
+      Number(walletHasFilter(b.filterKey)) -
+      Number(walletHasFilter(a.filterKey))
+  )
+
+  return (
+    <div>
+      <WalletMoreInfoContainer>
+        <div>
+          <ColoredLine color={wallet.brand_color} />
+        </div>
+        <div>
+          <WalletMoreInfoCategory>
+            <h4>Features</h4>
+            <Features>
+              {orderedFeatureDropdownItems.map((feature) => {
+                if (feature.category === "feature")
+                  return (
+                    <FeatureLabel hasFeature={wallet[feature.filterKey!]}>
+                      <FeatureIcon hasFeature={wallet[feature.filterKey!]}>
+                        {feature.icon}
+                      </FeatureIcon>
+                      <p>{feature.label}</p>
+                      <Tooltip
+                        content={
+                          <p>
+                            {walletFilterData[feature.filterKey].description}
+                          </p>
+                        }
+                      >
+                        <StyledIcon
+                          name="info"
+                          hasFeature={wallet[feature.filterKey!]}
+                        />
+                      </Tooltip>
+                    </FeatureLabel>
+                  )
+              })}
+            </Features>
+          </WalletMoreInfoCategory>
+          <WalletMoreInfoCategory>
+            <h4>Security</h4>
+            <Features>
+              {orderedFeatureDropdownItems.map((feature) => {
+                if (feature.category === "security")
+                  return (
+                    <FeatureLabel hasFeature={wallet[feature.filterKey!]}>
+                      <FeatureIcon hasFeature={wallet[feature.filterKey!]}>
+                        {feature.icon}
+                      </FeatureIcon>
+                      <p>{feature.label}</p>
+                      <Tooltip
+                        content={
+                          <p>
+                            {walletFilterData[feature.filterKey].description}
+                          </p>
+                        }
+                      >
+                        <StyledIcon
+                          name="info"
+                          hasFeature={wallet[feature.filterKey!]}
+                        />
+                      </Tooltip>
+                    </FeatureLabel>
+                  )
+              })}
+            </Features>
+          </WalletMoreInfoCategory>
+          <WalletMoreInfoCategory>
+            <h4>Trade & buy</h4>
+            <Features>
+              {orderedFeatureDropdownItems.map((feature) => {
+                if (feature.category === "trade_and_buy")
+                  return (
+                    <FeatureLabel hasFeature={wallet[feature.filterKey!]}>
+                      <FeatureIcon hasFeature={wallet[feature.filterKey!]}>
+                        {feature.icon}
+                      </FeatureIcon>
+                      <p>{feature.label}</p>
+                      <Tooltip
+                        content={
+                          <p>
+                            {walletFilterData[feature.filterKey].description}
+                          </p>
+                        }
+                      >
+                        <StyledIcon
+                          name="info"
+                          hasFeature={wallet[feature.filterKey!]}
+                        />
+                      </Tooltip>
+                    </FeatureLabel>
+                  )
+              })}
+            </Features>
+          </WalletMoreInfoCategory>
+          <WalletMoreInfoCategory>
+            <h4>Smart contract</h4>
+            <Features>
+              {orderedFeatureDropdownItems.map((feature) => {
+                if (feature.category === "smart_contract")
+                  return (
+                    <FeatureLabel hasFeature={wallet[feature.filterKey!]}>
+                      <FeatureIcon hasFeature={wallet[feature.filterKey!]}>
+                        {feature.icon}
+                      </FeatureIcon>
+                      <p>{feature.label}</p>
+                      <Tooltip
+                        content={
+                          <p>
+                            {walletFilterData[feature.filterKey].description}
+                          </p>
+                        }
+                      >
+                        <StyledIcon
+                          name="info"
+                          hasFeature={wallet[feature.filterKey!]}
+                        />
+                      </Tooltip>
+                    </FeatureLabel>
+                  )
+              })}
+            </Features>
+          </WalletMoreInfoCategory>
+          <LastUpdated>
+            <i>
+              {wallet.name} info updated on {wallet.last_updated}
+            </i>
+            <Link
+              to={wallet.url}
+              customEventOptions={{
+                eventCategory: "WalletExternalLinkList",
+                eventAction: `Go to wallet`,
+                eventName: `${wallet.name} ${idx}`,
+                eventValue: filters,
+              }}
+            >
+              Check out {wallet.name}
+            </Link>
+          </LastUpdated>
+        </div>
+      </WalletMoreInfoContainer>
+    </div>
   )
 }
 
