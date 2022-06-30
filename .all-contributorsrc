@@ -7954,6 +7954,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "rolodexter",
+      "name": "rolodexter",
+      "avatar_url": "https://avatars.githubusercontent.com/u/977925?v=4",
+      "profile": "http://www.rolodexter1.com",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
