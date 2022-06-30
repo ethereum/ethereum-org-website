@@ -601,6 +601,7 @@ const WalletTable = ({ data, filters, walletData }) => {
     for (const [idx, wallet] of temp.entries()) {
       if (wallet.key === key) {
         temp[idx].moreInfo = !temp[idx].moreInfo
+        break
       }
     }
 
