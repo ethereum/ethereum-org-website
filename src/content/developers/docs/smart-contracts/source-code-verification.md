@@ -5,15 +5,17 @@ lang: en
 sidebar: true
 ---
 
-[Smart contracts](/developers/docs/smart-contracts/) are designed to be “trustless”, meaning users shouldn’t have to trust third parties (e.g., developers and companies) before interacting with a contract. As a requisite for trustleness, users and other developers must be able to verify a smart contract’s source code. Source code verification assures users and developers that the published contract code is the same code running at the contract address on the Ethereum blockchain. 
+[Smart contracts](/developers/docs/smart-contracts/) are designed to be “trustless”, meaning users shouldn’t have to trust third parties (e.g., developers and companies) before interacting with a contract. As a requisite for trustlessness, users and other developers must be able to verify a smart contract’s source code. Source code verification assures users and developers that the published contract code is the same code running at the contract address on the Ethereum blockchain. 
+
+It is important to make the distinction between "source code verification" and "formal verification". The former, which will be explained in detail below, refers to verifying that the given source code of a smart contract in a high-level language (e.g. Solidity) compiles to the same bytecode to be executed at the contract address. The latter describes verifying the correctness of a smart contract, meaning the contract behaves as expected. Although context-dependent, contract verification usually refers to source code verification. 
 
 ## What is source code verification? {#what-is-source-code-verification}
 
-A smart contract’s source code, which are instructions [written in Solidity](/developers/docs/smart-contracts/languages/) or another high-level programming language, is usually [compiled into bytecode](/developers/docs/smart-contracts/compiling/) before being deployed in the [Ethereum Virtual Machine (EVM)](/developers/docs/evm/). This happens because the EVM cannot interpret high-level instructions and requires low-level, machine instructions (**bytecode**) to execute contract logic.  
+Before deploying a smart contract in the [Ethereum Virtual Machine (EVM)](/developers/docs/evm/), developers [compile](/developers/docs/smart-contracts/compiling/) the contract’s source code—instructions [written in Solidity](/developers/docs/smart-contracts/languages/) or another high-level programming language—to bytecode. As the EVM cannot interpret high-level instructions, compiling source code to bytecode (i.e., low-level, machine instructions) is necessary for executing contract logic in the EVM. 
 
 Source code verification is comparing a smart contract’s source code and the compiled bytecode used during the contract creation to detect any differences. Verifying smart contracts matters because the advertised contract code may be different from what runs on the blockchain. 
 
-Source code verification ensures that functions, values, and variables defined in the source code remain the same after the contract is compiled and deployed. Source verification also makes provision for code documentation, so that end-users know what a smart contract is designed to do. 
+Smart contract verification enables investigating what a contract does through the higher-level language it is written in, without having to read machine code. Functions, values, and usually the variable names and comments remain the same with the original source code that is compiled and deployed. This makes reading code much easier. Source verification also makes provision for code documentation, so that end-users know what a smart contract is designed to do. 
 
 ## Why is source code verification important? {#importance-of-source-code-verification}
 
@@ -23,21 +25,23 @@ Trustlessness is arguably the biggest premise for smart contracts and [decentral
 
 For a smart contract to be trustless, the contract code should be available for independent verification.  While the compiled bytecode for every smart contract is publicly available on the blockchain, low-level language is difficult to understand—for both developers and users. 
 
-Projects reduce trust assumptions by publishing the source code of their contracts. But this leads to another problem: it is difficult to verify that the published source code matches the contract bytecode. In this scenario, the value of trustlessness is lost because users have to trust developers not to change contract code (thereby changing the bytecode) before deploying. 
+Projects reduce trust assumptions by publishing the source code of their contracts. But this leads to another problem: it is difficult to verify that the published source code match the contract bytecode. In this scenario, the value of trustlessness is lost because users have to trust developers not to change a contract's business logic (i.e., by changing the bytecode) before deploying it on the blockchain. 
 
 Source code verification tools provide guarantees that a smart contract’s source code files matches the assembly code. The result is a trustless ecosystem, where users don’t blindly trust third parties and instead verify code before depositing funds into a contract. 
 
 ### User Safety {#user-safety}
 
-With smart contracts, there’s usually a lot of money at stake. This calls for higher security guarantees and verification of a smart contract’s logic before using it. Without verification, malicious smart contracts can have [backdoors](https://www.trustnodes.com/2018/11/10/concerns-rise-over-backdoored-smart-contracts), controversial access control mechanisms, exploitable vulnerabilities, and other things that jeopardize user safety. The ability to verify source code for a smart contract reduces attack vectors and improves security for end-users. 
+With smart contracts, there’s usually a lot of money at stake. This calls for higher security guarantees and verification of a smart contract’s logic before using it. Without verification, malicious smart contracts can have [backdoors](https://www.trustnodes.com/2018/11/10/concerns-rise-over-backdoored-smart-contracts), controversial access control mechanisms, exploitable vulnerabilities, and other things that jeopardize user safety. 
+
+Publishing a smart contract's source code files makes it easier for those interested, such as auditors, to assess the contract for potential attack vectors. With multiple parties independently verifying a smart contract, users have stronger guarantees of its security. 
 
 It is standard pratice in Solidity development to annotate source code files with inline comments using [NatSpec](https://docs.soliditylang.org/en/latest/natspec-format.html) (Ethereum Natutral Language Specification Format). NatSpec comments are human-readable descriptions of parts of a contract's code (e.g., contract functions and variables), which let users understand what happens with every contract interaction. 
 
-The problem is that unscruplous developers can deceive users by later inserting malicious code in the contract and changing comments before compiling the source. Source verification can prevent this by checking if comments in the published source file match those used during compilation. 
+The problem is that unscruplous developers can deceive users by later inserting malicious code in a smart contract and changing comments before compiling contract bytecode. Contract verification can prevent this by checking if comments in the published source file match those used during compilation, although this depends on whether the contract was fully or partially verified.
 
-## How to verify source code for Ethereum smart contracts {#how-to-verify-source-code-for-Ethereum-smart-contracts}
+## How to verify source code for Ethereum smart contracts {#source-code-verification-for-ethereum-smart-contracts}
 
-[Deploying a smart contract on Ethereum](/developers/docs/smart-contracts/deploying/) requires sending a transaction with a data payload (compiled bytecode) without specifying a recipient. This payload is generated from the source code file(s), [constructor arguments](https://docs.soliditylang.org/en/v0.8.14/contracts.html#constructor), and available [contract metadata](https://docs.soliditylang.org/en/latest/metadata.html). 
+[Deploying a smart contract on Ethereum](/developers/docs/smart-contracts/deploying/) requires sending a transaction with a data payload (compiled bytecode) to a special address. The data payload is generated from the source code file(s), [constructor arguments](https://docs.soliditylang.org/en/v0.8.14/contracts.html#constructor), and available [contract metadata](https://docs.soliditylang.org/en/latest/metadata.html). 
 
 Compilation is deterministic, meaning it always produces the same output (i.e., contract bytecode) if the same source file, metadata, and constructor paramemeters are used. This means anyone can generate the bytecode for a smart contract if the inputs, such as the original source code and constructor parameters, are available. 
 
