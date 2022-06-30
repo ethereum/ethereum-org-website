@@ -134,8 +134,9 @@ const DocsContainer = styled.div`
   }
 `
 
-const AdditionalReadingHeader = styled.h4`
+const AdditionalReadingHeader = styled.h3`
   margin-top: 40px;
+  font-size: 1.2rem;
   font-weight: 700;
   text-align: center;
 `
