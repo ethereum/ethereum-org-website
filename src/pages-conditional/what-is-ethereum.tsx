@@ -161,8 +161,9 @@ const TwoColumnContent = styled.div<{ reverse?: boolean }>`
 
 const Section = styled.div<{
   bgColor?: string
+  padding?: string
 }>`
-  padding: 3rem 2rem;
+  padding: ${({ padding }) => padding ?? "3rem 2rem"};
   background-color: ${({ bgColor = "transparent" }) => bgColor};
 
   h2 {
@@ -424,43 +425,46 @@ const WhatIsEthereumPage = ({
             </Width60>
             <Width40 />
           </TwoColumnContent>
-          <TwoColumnContent reverse>
-            <Width40>
-              <GatsbyImage image={getImage(data.whatIsCryptocurrency)} />
-            </Width40>
-            <Width60>
-              <h2>What is a cryptocurrency?</h2>
-              <p>
-                <b>
-                  Crypto (short for cryptocurrency) is a new form of digital
-                  money powered by cryptography.
-                </b>
-              </p>
-              <p>
-                It all started in 2008 with Bitcoin. You could use it to send
-                funds to anyone anywhere globally. What made crypto different
-                from normal bank transfers or other services like Paypal is that
-                there was no middle man for the first time.
-              </p>
-              <p>Wait, what is a middle man?</p>
-              <p>
-                Traditionally, banks hold your money for you. They review and
-                process every transaction you request and can decline it. Since
-                banks store the funds, they have a lot of control over it. They
-                can dictate which financial services you have access to and
-                which not.
-              </p>
-              <p>
-                Things are different with crypto. You can act as{" "}
-                <b>your own bank</b>
-                if you want to. Nobody else has access to your funds and nobody
-                can tell you what services you can use. You and your friends can
-                make direct <b>peer-to-peer transactions</b> with no single
-                authority controling the transfer. This is possible because of
-                the blockchain technology upon which cryptocurrencies operate.
-              </p>
-            </Width60>
-          </TwoColumnContent>
+          <Section padding="3rem 0">
+            <TwoColumnContent reverse>
+              <Width40>
+                <GatsbyImage image={getImage(data.whatIsCryptocurrency)} />
+              </Width40>
+              <Width60>
+                <h2>What is a cryptocurrency?</h2>
+                <p>
+                  <b>
+                    Crypto (short for cryptocurrency) is a new form of digital
+                    money powered by cryptography.
+                  </b>
+                </p>
+                <p>
+                  It all started in 2008 with Bitcoin. You could use it to send
+                  funds to anyone anywhere globally. What made crypto different
+                  from normal bank transfers or other services like Paypal is
+                  that there was no middle man for the first time.
+                </p>
+                <p>Wait, what is a middle man?</p>
+                <p>
+                  Traditionally, banks hold your money for you. They review and
+                  process every transaction you request and can decline it.
+                  Since banks store the funds, they have a lot of control over
+                  it. They can dictate which financial services you have access
+                  to and which not.
+                </p>
+                <p>
+                  Things are different with crypto. You can act as{" "}
+                  <b>your own bank</b>
+                  if you want to. Nobody else has access to your funds and
+                  nobody can tell you what services you can use. You and your
+                  friends can make direct <b>peer-to-peer transactions</b> with
+                  no single authority controling the transfer. This is possible
+                  because of the blockchain technology upon which
+                  cryptocurrencies operate.
+                </p>
+              </Width60>
+            </TwoColumnContent>
+          </Section>
           <TwoColumnContent>
             <Width60>
               <Tabs
