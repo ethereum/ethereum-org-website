@@ -30,7 +30,7 @@ Ethereum.org 被翻译为 40 多种语言，您可以在我们的[语言页面](
 - [BeinCrypto](http://www.beincrypto.com.br) - 提供有关加密货币的新闻和文章，包括一个巴西交易所列表
 - [Cointegraph](http://cointelegraph.com.br/category/analysis) - 巴西版 Cointelegraph，一个主要的加密货币新闻机构
 - [Livecoins](http://www.livecoins.com.br/ethereum) - 提供有关加密货币的新闻和工具
-- [Seudinheiro](http://www.seudinheiro.com/criptomoedas/) - 提供有关加密货币的新闻和报告
+- [Seudinheiro](http://www.seudinheiro.com/criptomoedas/) - 加密货币新闻和报告
 
 **教育**
 
@@ -46,7 +46,7 @@ Ethereum.org 被翻译为 40 多种语言，您可以在我们的[语言页面](
 **通用资源**
 
 - [Ethereum.cn](https://www.ethereum.cn/) - 由社区维护网站内容，内容包括共识层升级、所有核心开发者会议记录、以太坊第二层等
-- [EthFans](https://github.com/editor-Ajian/EthFans.org-annual-collected-works/) - 学习从基础到高级以太坊主题的所有知识
+- [EthFans](https://ethfans.org/) - 学习从基础到高级以太坊主题的所有知识
 - [Untimes](https://mp.weixin.qq.com/s/tvloZSDBSOQN9zDQj_91kA) - 由社区维护内容，内容涵盖以太坊、去中心化金融、非同质化代币和 Web3 相关知识
 - [123ETH](https://123eth.org/) - 以太坊生态系统的一个门户网站
 - [Zhen Xiao（肖臻）](http://zhenxiao.com/blockchain/) - 关于加密货币及其应用的免费在线课程
@@ -85,7 +85,7 @@ Ethereum.org 被翻译为 40 多种语言，您可以在我们的[语言页面](
 ### 意大利语 {#it}
 
 - [Ethereum Italia](https://www.ethereum-italia.it/) - 提供有关以太坊的教育、活动和新闻，专注于智能合约和区块链技术
-- [Ethereum Italia Podcast](https://www.ethereum-italia.it/podcast/) - 以太坊意大利语播客
+- [Ethereum Italia Podcast](https://www. ethereum-italia. it/podcast/) - 以太坊意大利语播客
 - [Microsoft Learn (Solidity)](https://docs.microsoft.com/it-it/learn/modules/blockchain-learning-solidity/) - 学习使用 Solidity
 - [Microsoft Learning（智能合约）](https://docs.microsoft.com/it-it/learn/modules/blockchain-solidity-ethereum-smart-contracts/)- 学习用 Solidity 撰写智能合约
 - [Microsoft Learn（去中心化应用程序）](https://docs.microsoft.com/it-it/learn/modules/blockchain-create-ui-decentralized-apps/)- 使用去中心化的应用程序创建用户界面
@@ -112,8 +112,8 @@ Ethereum.org 被翻译为 40 多种语言，您可以在我们的[语言页面](
 
 ### 日语 {#ja}
 
-- [日本虚拟和加密资产交易协会](https://jvcea.or.jp/)
-- [日本加密资产商业协会](https://cryptocurrency-association.org/)
-- [开始使用区块链开发 - 学习 | Microsoft Docs](https://docs.microsoft.com/ja-jp/learn/paths/ethereum-blockchain-development/) - 此学习路径向您介绍区块链和以太坊平台上的开发
-- [掌握以太坊](https://www.oreilly.co.jp/books/9784873118963/) - 用日语掌握以太坊
-- [使用 Solidity 和 Ethereum 进行智能合约开发实践](https://www.oreilly.co.jp/books/9784873119342/) - 日语中使用 Solidity 和 Ethereum 进行智能合约开发实践
+- [日本数字资产交易业协会](https://jvcea.or.jp/)
+- [日本加密货币商业协会](https://cryptocurrency-association.org/)
+- [区块链开发入门 - 学习 | Microsoft 文档](https://docs.microsoft.com/ja-jp/learn/paths/ethereum-blockchain-development/) - 此学习路径向您介绍区块链和以太坊平台上的开发
+- [精通以太坊](https://www.oreilly.co.jp/books/9784873118963/) - 精通以太坊（日文）
+- [Solidity 和以太坊智能合约开发实战](https://www.oreilly.co.jp/books/9784873119342/) - Solidity 和以太坊智能合约开发实战（日文）
