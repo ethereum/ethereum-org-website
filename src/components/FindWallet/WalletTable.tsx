@@ -603,21 +603,68 @@ const WalletTable = ({ data, filters, walletData }) => {
 
   const filteredWallets = walletCardData.filter((wallet) => {
     let showWallet = true
+    let mobileCheck = true
+    let desktopCheck = true
+    let browserCheck = true
+    let hardwareCheck = true
 
     const featureFilterKeys = featureDropdownItems.map((item) => item.filterKey)
-    const deviceFiltersTrue = Object.entries(filters)
-      .filter((item) => !featureFilterKeys.includes(item[0]))
+    const deviceFilters = Object.entries(filters).filter(
+      (item) => !featureFilterKeys.includes(item[0])
+    )
+    const mobileFiltersTrue = deviceFilters
+      .filter((item) => item[0] === "ios" || item[0] === "android")
+      .filter((item) => item[1])
+      .map((item) => item[0])
+    const desktopFiltersTrue = deviceFilters
+      .filter(
+        (item) =>
+          item[0] === "linux" || item[0] === "windows" || item[0] === "macOS"
+      )
+      .filter((item) => item[1])
+      .map((item) => item[0])
+    const browserFiltersTrue = deviceFilters
+      .filter((item) => item[0] === "firefox" || item[0] === "chromium")
+      .filter((item) => item[1])
+      .map((item) => item[0])
+    const hardwareFiltersTrue = deviceFilters
+      .filter((item) => item[0] === "hardware")
       .filter((item) => item[1])
       .map((item) => item[0])
 
-    let orCheck = true
-
-    for (let item of deviceFiltersTrue) {
+    for (let item of mobileFiltersTrue) {
       if (wallet[item]) {
-        orCheck = true
+        mobileCheck = true
         break
       } else {
-        orCheck = false
+        mobileCheck = false
+      }
+    }
+
+    for (let item of desktopFiltersTrue) {
+      if (wallet[item]) {
+        desktopCheck = true
+        break
+      } else {
+        desktopCheck = false
+      }
+    }
+
+    for (let item of browserFiltersTrue) {
+      if (wallet[item]) {
+        browserCheck = true
+        break
+      } else {
+        browserCheck = false
+      }
+    }
+
+    for (let item of hardwareFiltersTrue) {
+      if (wallet[item]) {
+        hardwareCheck = true
+        break
+      } else {
+        hardwareCheck = false
       }
     }
 
@@ -627,7 +674,9 @@ const WalletTable = ({ data, filters, walletData }) => {
       }
     })
 
-    return orCheck && showWallet
+    return (
+      mobileCheck && desktopCheck && browserCheck && hardwareCheck && showWallet
+    )
   })
 
   const filteredFeatureDropdownItems = [...featureDropdownItems].filter(
