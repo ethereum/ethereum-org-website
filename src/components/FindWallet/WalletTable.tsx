@@ -399,8 +399,11 @@ const Socials = styled.div`
     height: auto;
     align-items: center;
     display: flex;
+    transform: scale(1); 
+    transition: transform 0.1s;
     :hover {
-      opacity: 0.8;
+      transform: scale(1.15); 
+      transition: transform 0.1s;
     }
   }
 `
