@@ -87,7 +87,7 @@ Both SNARKs and STARKs help attest to the integrity of off-chain computation in 
 
 **ZK-SNARKs**
 
-For the ZK-SNARK protocol to work, creating a Common Reference String (CRS) is necessary: the CRS provides public parameters for proving and verifying validity proofs. The security of the proving system depends on the CRS setup; if information used to create public parameters fall into the possession of malicious actors, generating false validity proofs would be a non-trivial task. 
+For the ZK-SNARK protocol to work, creating a Common Reference String (CRS) is necessary: the CRS provides public parameters for proving and verifying validity proofs. The security of the proving system depends on the CRS setup; if information used to create public parameters fall into the possession of malicious actors they may be able to generate false validity proofs. 
 
 Some ZK-rollups attempt to solve this problem by using a [multi-party computation ceremony (MPC)](https://zkproof.org/2021/06/30/setup-ceremonies/amp/), involving trusted individuals, to generate public parameters for the ZK-SNARK circuit. Each party contributes some randomness (called "toxic waste") to the construct the CRS, which they must destroy immediately. 
 
