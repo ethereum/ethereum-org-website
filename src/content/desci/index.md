@@ -8,9 +8,9 @@ sidebar: true
 sidebarDepth: 2
 image: ../../assets/future_transparent.png
 alt: TODO.
-summaryPoint1: An global, open alternative to the current scientific system.
-summaryPoint2: Technology that let yous raise funding, run experiments, share data, distribute insights, and more.
-summaryPoint3: Based on the open science movement.
+summaryPoint1: A global, open alternative to the current scientific system.
+summaryPoint2: Technology that enables scientists to raise funding, run experiments, share data, distribute insights, and more.
+summaryPoint3: Builds on the open science movement.
 ---
 
 ## What is decentralized science (DeSci)?
