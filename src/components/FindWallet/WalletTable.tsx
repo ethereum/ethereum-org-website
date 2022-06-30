@@ -125,6 +125,7 @@ const WalletContentHeader = styled(Grid)`
 
 const Wallet = styled(Grid)`
   padding: 25px 4px;
+  cursor: pointer;
   td {
     padding: 0;
     border-bottom: none;
@@ -399,10 +400,10 @@ const Socials = styled.div`
     height: auto;
     align-items: center;
     display: flex;
-    transform: scale(1); 
+    transform: scale(1);
     transition: transform 0.1s;
     :hover {
-      transform: scale(1.15); 
+      transform: scale(1.15);
       transition: transform 0.1s;
     }
   }
@@ -776,7 +777,16 @@ const WalletTable = ({ data, filters, walletData }) => {
 
         return (
           <WalletContainer>
-            <Wallet>
+            <Wallet
+              onClick={() => {
+                updateMoreInfo(wallet.key)
+                trackCustomEvent({
+                  eventCategory: "WalletMoreInfo",
+                  eventAction: `More info wallet`,
+                  eventName: `More info ${wallet.name}`,
+                })
+              }}
+            >
               <td>
                 <FlexInfo>
                   <div>
@@ -839,16 +849,7 @@ const WalletTable = ({ data, filters, walletData }) => {
                 </FlexInfo>
               </td>
               <td>
-                <FlexInfoCenter
-                  onClick={() => {
-                    updateMoreInfo(wallet.key)
-                    trackCustomEvent({
-                      eventCategory: "WalletMoreInfo",
-                      eventAction: `More info wallet`,
-                      eventName: `More info ${wallet.name}`,
-                    })
-                  }}
-                >
+                <FlexInfoCenter>
                   {wallet[firstFeatureSelect.filterKey!] ? (
                     <GreenCheck />
                   ) : (
@@ -857,16 +858,7 @@ const WalletTable = ({ data, filters, walletData }) => {
                 </FlexInfoCenter>
               </td>
               <td>
-                <FlexInfoCenter
-                  onClick={() => {
-                    updateMoreInfo(wallet.key)
-                    trackCustomEvent({
-                      eventCategory: "WalletMoreInfo",
-                      eventAction: `More info wallet`,
-                      eventName: `More info ${wallet.name}`,
-                    })
-                  }}
-                >
+                <FlexInfoCenter>
                   {wallet[secondFeatureSelect.filterKey!] ? (
                     <GreenCheck />
                   ) : (
@@ -875,16 +867,7 @@ const WalletTable = ({ data, filters, walletData }) => {
                 </FlexInfoCenter>
               </td>
               <td>
-                <FlexInfoCenter
-                  onClick={() => {
-                    updateMoreInfo(wallet.key)
-                    trackCustomEvent({
-                      eventCategory: "WalletMoreInfo",
-                      eventAction: `More info wallet`,
-                      eventName: `More info ${wallet.name}`,
-                    })
-                  }}
-                >
+                <FlexInfoCenter>
                   {wallet[thirdFeatureSelect.filterKey!] ? (
                     <GreenCheck />
                   ) : (
@@ -894,17 +877,7 @@ const WalletTable = ({ data, filters, walletData }) => {
               </td>
               <td>
                 <FlexInfoCenter>
-                  <div
-                    style={{ cursor: "pointer" }}
-                    onClick={() => {
-                      updateMoreInfo(wallet.key)
-                      trackCustomEvent({
-                        eventCategory: "WalletMoreInfo",
-                        eventAction: `More info wallet`,
-                        eventName: `More info ${wallet.name}`,
-                      })
-                    }}
-                  >
+                  <div>
                     <WalletMoreInfoArrow
                       name={wallet.moreInfo ? "chevronUp" : "chevronDown"}
                     />

@@ -75,7 +75,7 @@ const Persona = styled.div<{
   flex-direction: column;
   align-items: flex-start;
   padding: 1.5rem;
-  background: ${({ selection, isDark, theme }) =>
+  background: ${({ selected, isDark, theme }) =>
     selected
       ? isDark
         ? theme.colors.primary900
