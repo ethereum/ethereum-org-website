@@ -2,7 +2,8 @@
 import React from "react"
 import styled from "styled-components"
 import { useIntl } from "gatsby-plugin-intl"
-import { graphql } from "gatsby"
+import { graphql, PageProps } from "gatsby"
+import type { Context } from "../../../types"
 
 // Components
 import Breadcrumbs from "../../../components/Breadcrumbs"
@@ -41,22 +42,45 @@ const HorizontalUl = styled.ul`
   }
 `
 
-const Contributors = ({ data, location }) => {
+const Contributors = ({
+  data,
+  location,
+}: PageProps<Queries.ContributorsPageQuery, Context>) => {
   const intl = useIntl()
   // TODO: Remove specific user checks once Acolad has updated their usernames
-  const translatorData = data.allTimeData.data.filter(
-    (item) =>
-      item.user.username !== "ethdotorg" &&
-      !item.user.username.includes("LQS_") &&
-      !item.user.username.includes("REMOVED_USER") &&
-      !item.user.username.includes("Aco_") &&
-      !item.user.fullName.includes("Aco_") &&
-      !item.user.username.includes("Acc_") &&
-      !item.user.fullName.includes("Acc_") &&
-      item.user.username !== "Finnish_Sandberg" &&
-      item.user.username !== "Norwegian_Sandberg" &&
-      item.user.username !== "Swedish_Sandberg"
-  )
+  const translatorData =
+    data.allTimeData?.data?.flatMap(
+      // use flatMap to get cleaner object types withouts nulls
+      (item) => {
+        const user = item?.user
+        if (!user) return []
+
+        const userName = user.username
+        if (!userName) return []
+
+        const fullName = user.fullName ?? ""
+
+        return userName !== "ethdotorg" &&
+          !userName.includes("LQS_") &&
+          !userName.includes("REMOVED_USER") &&
+          !userName.includes("Aco_") &&
+          !fullName.includes("Aco_") &&
+          !userName.includes("Acc_") &&
+          !fullName.includes("Acc_") &&
+          userName !== "Finnish_Sandberg" &&
+          userName !== "Norwegian_Sandberg" &&
+          userName !== "Swedish_Sandberg"
+          ? [
+              {
+                user: {
+                  username: userName,
+                  fullName: fullName,
+                },
+              },
+            ]
+          : []
+      }
+    ) ?? []
 
   return (
     <Page>
@@ -129,7 +153,7 @@ const Contributors = ({ data, location }) => {
 export default Contributors
 
 export const query = graphql`
-  query {
+  query ContributorsPage {
     allTimeData: alltimeJson {
       data {
         user {

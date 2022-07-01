@@ -1,8 +1,13 @@
 import React from "react"
 import styled from "styled-components"
-import Translation from "../components/Translation"
+import { TranslationKey } from "../utils/translations"
+import Translation from "./Translation"
 
-const Container = styled.div`
+export interface IStyledContainer {
+  isShipped: boolean
+}
+
+const Container = styled.div<IStyledContainer>`
   background: ${(props) =>
     props.isShipped
       ? props.theme.colors.upgradeStatusShippedBackground
@@ -42,7 +47,16 @@ const Content = styled.p`
   margin-bottom: 0rem;
 `
 
-const UpgradeStatus = ({ dateKey, children, isShipped = false }) => (
+export interface IProps {
+  dateKey: TranslationKey
+  isShipped?: boolean
+}
+
+const UpgradeStatus: React.FC<IProps> = ({
+  dateKey,
+  children,
+  isShipped = false,
+}) => (
   <Container isShipped={isShipped}>
     <Label>
       <Translation id="consensus-when-shipping" />

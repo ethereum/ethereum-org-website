@@ -50,7 +50,7 @@ const ButtonLinkContainer = styled.div`
   margin-top: 1.25rem;
 `
 
-export interface ICommunityEventData {
+interface ICommunityEventData {
   title: string
   to: string
   sponsor: string | null
@@ -60,15 +60,17 @@ export interface ICommunityEventData {
   endDate: string
 }
 
-export interface IOrderedUpcomingEventType extends ICommunityEventData {
+interface IOrderedUpcomingEventType extends ICommunityEventData {
   date: string
   formattedDetails: string
 }
 
-const UpcomingEventsList: React.FC = () => {
+export interface IProps {}
+
+const UpcomingEventsList: React.FC<IProps> = () => {
   const eventsPerLoad = 10
   const [orderedUpcomingEvents, setOrderedUpcomingEvents] = useState<
-    IOrderedUpcomingEventType[]
+    Array<IOrderedUpcomingEventType>
   >([])
   const [maxRange, setMaxRange] = useState<number>(eventsPerLoad)
   const [isVisible, setIsVisible] = useState<boolean>(true)
@@ -84,7 +86,7 @@ const UpcomingEventsList: React.FC = () => {
   }
 
   useEffect(() => {
-    const eventsList: ICommunityEventData[] = [...events]
+    const eventsList: Array<ICommunityEventData> = [...events]
     const yesterday = new Date()
     yesterday.setDate(yesterday.getDate() - 1)
 
@@ -141,22 +143,21 @@ const UpcomingEventsList: React.FC = () => {
   return (
     <>
       <EventList>
-        {orderedUpcomingEvents &&
-          orderedUpcomingEvents
-            .slice(0, maxRange)
-            .map(({ title, to, formattedDetails, date, location }, idx) => {
-              return (
-                <EventCard
-                  key={idx}
-                  title={title}
-                  to={to}
-                  date={date}
-                  description={formattedDetails}
-                  location={location}
-                  isEven={(idx + 1) % 2 === 0}
-                />
-              )
-            })}
+        {orderedUpcomingEvents
+          ?.slice(0, maxRange)
+          .map(({ title, to, formattedDetails, date, location }, idx) => {
+            return (
+              <EventCard
+                key={idx}
+                title={title}
+                to={to}
+                date={date}
+                description={formattedDetails}
+                location={location}
+                isEven={(idx + 1) % 2 === 0}
+              />
+            )
+          })}
       </EventList>
       <ButtonLinkContainer>
         {isVisible && (

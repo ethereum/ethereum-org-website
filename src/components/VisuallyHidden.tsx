@@ -1,5 +1,4 @@
 import React from "react"
-import PropTypes from "prop-types"
 import styled from "styled-components"
 
 // "Accessibility/SEO Friendly CSS Hiding"
@@ -33,15 +32,11 @@ const Container = styled.span`
   }
 `
 
-const VisuallyHidden = (props) =>
-  props.isHidden ? <Container>{props.children}</Container> : props.children
-
-VisuallyHidden.propTypes = {
-  isHidden: PropTypes.bool,
+export interface IProps {
+  isHidden?: boolean
 }
 
-VisuallyHidden.defaultProps = {
-  isHidden: false,
-}
+const VisuallyHidden: React.FC<IProps> = ({ isHidden = false, children }) =>
+  isHidden ? <Container>{children}</Container> : <>children</>
 
 export default VisuallyHidden

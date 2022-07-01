@@ -13,7 +13,9 @@ const H3 = styled.h3`
   margin-bottom: 0;
 `
 
-const BannerContainer = styled.div`
+const BannerContainer = styled.div<{
+  isOpen: boolean
+}>`
   display: ${(props) => (props.isOpen ? `block` : `none`)};
   bottom: 2rem;
   right: 2rem;
@@ -41,7 +43,9 @@ const StyledBanner = styled.div`
   }
 `
 
-const BannerContent = styled.div`
+const BannerContent = styled.div<{
+  isPageRightToLeft: boolean
+}>`
   display: flex;
   flex-direction: column;
   align-items: ${(props) =>
@@ -52,7 +56,9 @@ const BannerContent = styled.div`
   }
 `
 
-const BannerClose = styled.div`
+const BannerClose = styled.div<{
+  isPageRightToLeft: boolean
+}>`
   position: absolute;
   top: 0;
   right: ${(props) => (props.isPageRightToLeft ? `auto` : 0)};
@@ -99,7 +105,14 @@ const SecondaryButtonLink = styled(ButtonLink)`
   background-color: transparent;
 `
 
-const TranslationBanner = ({
+export interface IProps {
+  shouldShow: boolean
+  isPageRightToLeft: boolean
+  originalPagePath: string
+  isPageContentEnglish: boolean
+}
+
+const TranslationBanner: React.FC<IProps> = ({
   shouldShow,
   isPageRightToLeft,
   originalPagePath,

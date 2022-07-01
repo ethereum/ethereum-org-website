@@ -112,7 +112,17 @@ const Flex = styled.div`
   display: flex;
 `
 
-const TranslationLeaderboard = ({ monthData, quarterData, allTimeData }) => {
+export interface IProps {
+  monthData: any
+  quarterData: any
+  allTimeData: any
+}
+
+const TranslationLeaderboard: React.FC<IProps> = ({
+  monthData,
+  quarterData,
+  allTimeData,
+}) => {
   const leaderboardData = {
     monthData: reverse(sortBy(monthData.data, ({ user }) => user.totalCosts)),
     quarterData: reverse(
@@ -195,7 +205,7 @@ const TranslationLeaderboard = ({ monthData, quarterData, allTimeData }) => {
               sortBy(languages, ({ language }) => language.totalCosts)
             )
 
-            let emoji = null
+            let emoji: string | null = null
             if (idx === 0) {
               emoji = ":trophy:"
             } else if (idx === 1) {

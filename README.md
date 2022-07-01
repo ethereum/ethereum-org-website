@@ -1278,6 +1278,10 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/MiloBowman"><img src="https://avatars.githubusercontent.com/u/104447804?v=4?s=100" width="100px;" alt=""/><br /><sub><b>MiloBowman</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=MiloBowman" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/tadeodao"><img src="https://avatars.githubusercontent.com/u/94108039?v=4?s=100" width="100px;" alt=""/><br /><sub><b>tadeo</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=tadeodao" title="Documentation">📖</a></td>
     <td align="center"><a href="http://creacodigos.com"><img src="https://avatars.githubusercontent.com/u/50615503?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Jorge Santana</b></sub></a><br /><a href="#content-creacodigos" title="Content">🖋</a></td>
+    <td align="center"><a href="http://www.rolodexter1.com"><img src="https://avatars.githubusercontent.com/u/977925?v=4?s=100" width="100px;" alt=""/><br /><sub><b>rolodexter</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=rolodexter" title="Documentation">📖</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/RanchHowards"><img src="https://avatars.githubusercontent.com/u/69303624?v=4?s=100" width="100px;" alt=""/><br /><sub><b>RanchHowards</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=RanchHowards" title="Documentation">📖</a> <a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3ARanchHowards" title="Bug reports">🐛</a></td>
   </tr>
 </table>
 

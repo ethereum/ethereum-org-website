@@ -26,7 +26,7 @@ const reads = [
   {
     title: "Execution layer specs",
     description: "Ethereum Foundation",
-    link: "https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/merge.md",
+    link: "https://github.com/ethereum/execution-specs/",
   },
   {
     title: "Consensus layer specs",
