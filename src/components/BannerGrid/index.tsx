@@ -43,7 +43,7 @@ export const BannerGrid = styled.div`
     grid-template-rows: repeat(3, 1fr);
   }
 
-  @media (min-width: ${(props) => props.theme.breakpoints.xl}) {
+  @media (min-width: ${(props) => props.theme.breakpoints.l}) {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
   }
@@ -71,7 +71,7 @@ export const BannerGridCell = styled.div`
     }
   }
 
-  @media (min-width: ${(props) => props.theme.breakpoints.xl}) {
+  @media (min-width: ${(props) => props.theme.breakpoints.l}) {
     &:nth-child(-n + 2) {
       border-top: 1px solid ${({ theme }) => theme.colors.searchBackground};
     }
