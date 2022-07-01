@@ -8,7 +8,7 @@ import Icon from "../Icon"
 import Link from "../Link"
 
 import { useOnClickOutside } from "../../hooks/useOnClickOutside"
-import { isLangRightToLeft, translateMessageId } from "../../utils/translations"
+import { getDirection, translateMessageId } from "../../utils/translations"
 import { Lang } from "../../utils/languages"
 
 import { ISection } from "./types"
@@ -141,7 +141,7 @@ const NavDropdown: React.FC<IProps> & {
   const intl = useIntl()
   const ref = createRef<HTMLLIElement>()
 
-  const isPageRightToLeft = isLangRightToLeft(intl.locale as Lang)
+  const direction = getDirection(intl.locale as Lang)
 
   const toggle = () => setIsOpen((isOpen) => !isOpen)
   const close = () => setIsOpen(false)
@@ -174,7 +174,7 @@ const NavDropdown: React.FC<IProps> & {
     >
       <NavListItem ref={ref} aria-label={translateMessageId(ariaLabel, intl)}>
         <DropdownTitle
-          dir={isPageRightToLeft ? "auto" : "ltr"}
+          dir={direction}
           onClick={() => toggle()}
           onKeyDown={onKeyDownHandler}
           tabIndex={0}

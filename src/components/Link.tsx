@@ -7,6 +7,7 @@ import Icon from "./Icon"
 
 import { languageMetadata } from "../utils/languages"
 import { trackCustomEvent, EventOptions } from "../utils/matomo"
+import { Direction } from "../types"
 
 const HASH_PATTERN = /^#.*/
 // const DOMAIN_PATTERN = /^(?:https?:)?[/]{2,}([^/]+)/
@@ -66,7 +67,7 @@ const GlossaryIcon = styled(Icon)`
 export interface IProps {
   to?: string
   href?: string
-  dir?: "ltr" | "rtl" | "auto"
+  dir?: Direction
   hideArrow?: boolean
   className?: string
   isPartiallyActive?: boolean

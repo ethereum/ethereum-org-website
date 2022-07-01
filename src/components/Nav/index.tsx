@@ -13,9 +13,9 @@ import Icon from "../Icon"
 import Search from "../Search"
 import Translation from "../Translation"
 import { NavLink } from "../SharedStyledComponents"
-import { translateMessageId, TranslationKey } from "../../utils/translations"
+import { translateMessageId } from "../../utils/translations"
 
-import { IItem, ISection, ISections } from "./types"
+import { IItem, ISections } from "./types"
 
 const NavContainer = styled.div`
   position: sticky;
@@ -475,7 +475,7 @@ const Nav: React.FC<IProps> = ({ handleThemeChange, isDarkTheme, path }) => {
               to={link.to}
               isPartiallyActive={link.isPartiallyActive}
             >
-              <Translation id={link.text as TranslationKey} />
+              <Translation id={link.text} />
             </NavLink>
           ))}
         </SubNav>

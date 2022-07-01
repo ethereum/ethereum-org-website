@@ -1,13 +1,18 @@
+import { useIntl } from "gatsby-plugin-intl"
 import React from "react"
 import styled from "styled-components"
 
-import Translation from "../Translation"
 import NavDropdown from "./Dropdown"
+import Translation from "../Translation"
+import { getDirection } from "../../utils/translations"
 
+import { Lang } from "../../utils/languages"
+import { Direction } from "../../types"
 import { ISections } from "./types"
 
-const TwoColumns = styled.div`
+const TwoColumns = styled.div<{ dir: Direction }>`
   display: flex;
+  flex-direction: ${({ dir }) => (dir === "rtl" ? "row-reverse" : "row")};
 `
 
 export interface IProps {
@@ -16,6 +21,8 @@ export interface IProps {
 }
 
 const Menu: React.FC<IProps> = ({ path, sections }) => {
+  const intl = useIntl()
+  const direction = getDirection(intl.locale as Lang)
   const shouldShowSubNav = path.includes("/developers/")
 
   const { useEthereum, learn, ...restSections } = sections
@@ -35,7 +42,7 @@ const Menu: React.FC<IProps> = ({ path, sections }) => {
       </NavDropdown>
 
       <NavDropdown section={learn} hasSubNav={shouldShowSubNav}>
-        <TwoColumns>
+        <TwoColumns dir={direction}>
           <div>
             {[start, basics].map((section) => (
               <>
