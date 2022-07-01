@@ -61,6 +61,7 @@ const Button = styled.button`
   justify-content: center;
   align-items: center;
   margin-right: 0.8rem;
+  cursor: pointer;
 
   &:last-child {
     margin-right: 0;
