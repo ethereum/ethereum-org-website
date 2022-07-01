@@ -413,7 +413,7 @@ const Nav: React.FC<IProps> = ({ handleThemeChange, isDarkTheme, path }) => {
       <StyledNav aria-label={translateMessageId("nav-primary", intl)}>
         <NavContent>
           <HomeLogoNavLink to="/">
-            <HomeLogo alt={translateMessageId("ethereum-logo", intl)} />
+            <HomeLogo />
           </HomeLogoNavLink>
           {/* Desktop */}
           <InnerContent>
