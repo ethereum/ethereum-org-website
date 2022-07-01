@@ -178,6 +178,8 @@ const NavDropdown: React.FC<IProps> & {
           onClick={() => toggle()}
           onKeyDown={onKeyDownHandler}
           tabIndex={0}
+          role="button"
+          aria-expanded={isOpen ? "true" : "false"}
         >
           <Translation id={section.text} />
           <StyledIcon isOpen={isOpen} name="chevronDown" />
