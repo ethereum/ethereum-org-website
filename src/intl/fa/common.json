@@ -58,8 +58,6 @@
   "consensus-run-beacon-chain": "راه‌اندازی یک کلاینت وفاق",
   "consensus-run-beacon-chain-desc": "اتریوم هر چه بیشتر به کلاینت نیاز دارد. به این کار عام‌المنفعه اتریوم کمک کنید!",
   "consensus-when-shipping": "چه زمانی راه‌اندازی می‌شود؟",
-  "eth-upgrade-what-happened": "چه بر سر «اتر۲» آمد؟",
-  "eth-upgrade-what-happened-description": "اصطلاح «اتر۲» با نزدیک‌شدن ما به ادغام منسوخ شده است. «لایه وفاق» در بر‌گیرنده همان چیزی است که پیشتر با نام «اتر۲» شناخته می‌شد.",
   "ethereum": "اتریوم",
   "ethereum-upgrades": "ارتقاهای اتریوم",
   "ethereum-brand-assets": "دارایی های نام تجاری اتریوم",

@@ -1,7 +1,5 @@
 import React, { useState } from "react"
-import { useStaticQuery, graphql } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import styled from "styled-components"
 import { cloneDeep } from "lodash"
 
@@ -14,6 +12,7 @@ import Search from "../Search"
 import Translation from "../Translation"
 import { NavLink } from "../SharedStyledComponents"
 import { translateMessageId } from "../../utils/translations"
+import HomeIcon from "../../assets/eth-home-icon.svg"
 
 import { IItem, ISections } from "./types"
 
@@ -106,7 +105,8 @@ const HomeLogoNavLink = styled(Link)`
   align-items: center;
 `
 
-const HomeLogo = styled(GatsbyImage)`
+const HomeLogo = styled(HomeIcon)`
+  width: 22px;
   opacity: 0.85;
   &:hover {
     opacity: 1;
@@ -142,21 +142,6 @@ export interface IProps {
 const Nav: React.FC<IProps> = ({ handleThemeChange, isDarkTheme, path }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isSearchOpen, setIsSearchOpen] = useState(false)
-
-  const data = useStaticQuery(graphql`
-    {
-      file(relativePath: { eq: "eth-home-icon.png" }) {
-        childImageSharp {
-          gatsbyImageData(
-            width: 22
-            layout: FIXED
-            placeholder: BLURRED
-            quality: 100
-          )
-        }
-      }
-    }
-  `)
   const intl = useIntl()
 
   const linkSections: ISections = {
@@ -428,10 +413,7 @@ const Nav: React.FC<IProps> = ({ handleThemeChange, isDarkTheme, path }) => {
       <StyledNav aria-label={translateMessageId("nav-primary", intl)}>
         <NavContent>
           <HomeLogoNavLink to="/">
-            <HomeLogo
-              image={getImage(data.file)}
-              alt={translateMessageId("ethereum-logo", intl)}
-            />
+            <HomeLogo alt={translateMessageId("ethereum-logo", intl)} />
           </HomeLogoNavLink>
           {/* Desktop */}
           <InnerContent>

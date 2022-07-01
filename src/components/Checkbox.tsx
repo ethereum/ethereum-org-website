@@ -77,7 +77,12 @@ const Checkbox: React.FC<IProps> = ({
   return (
     <CheckboxContainer className={className} onClick={handleClick}>
       <HiddenCheckbox checked={checked} readOnly {...rest} />
-      <StyledCheckbox checked={checked} className="styled-checkbox" size={size}>
+      <StyledCheckbox
+        aria-hidden="true"
+        checked={checked}
+        className="styled-checkbox"
+        size={size}
+      >
         <Icon checked={checked} viewBox="0 0 24 24">
           <polyline points="20 6 9 17 4 12" />
         </Icon>

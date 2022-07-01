@@ -56,6 +56,12 @@ The NFT world is relatively new. In theory, the scope for NFTs is anything that 
 - [A digital collectible](https://www.larvalabs.com/cryptopunks/details/1)
 - [A domain name](https://app.ens.domains/name/ethereum.eth)
 - [A ticket that gives you access to an event or a coupon](https://www.yellowheart.io/)
+- [Buy real world goods](https://www.tangible.store/)
+- [Fractionalized real-estate](https://realt.co/)
+- [Degree Certificates](https://www.degreecert.com/)
+- [Music royalties via NFTs](https://opulous.org/)
+- [Move 2 earn](https://yeticoineth.com/about.html)
+- [Digital identity](https://photochromic.io/)
 
 ### ethereum.org examples {#ethereum-org-examples}
 
@@ -260,6 +266,12 @@ These are Ethereum-powered organisations that allow strangers, like global share
 As we mentioned, this is an emerging space. NFTs, DAOs, fractionalised tokens are all developing at different paces. But all their infrastructure exists and can work together easily because they all speak the same language: Ethereum. So watch this space.
 
 [More on DAOs](/dao/)
+
+### Certificates of authenticity {#certificates}
+
+Companies offering fake certificates for university degrees are reportedly a billion-dollar industry that NFTs can help combat. NFTs can be a secure and quick way to verify someone's degree credentials.
+
+[In South Korea, one university is already issuing degree certificates as an NFT](https://forkast.news/headlines/south-korea-nfts-graduates-hoseo/), with the hope that NFTs will improve access to administrative services and prevent forgery or alteration of the degree. [Trinity Business School (TBS) in Ireland is also planning on offering NFTs from 2023](https://trinitynews.ie/2022/04/business-school-to-offer-degree-nfts/).
 
 <Divider />
 

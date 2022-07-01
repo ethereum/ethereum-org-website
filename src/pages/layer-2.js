@@ -774,6 +774,7 @@ const Layer2Page = ({ data }) => {
         <Layer2Onboard
           layer2DataCombined={layer2DataCombined}
           ethIcon={getImage(data.ethHome)}
+          ethIconAlt={translateMessageId("ethereum-logo", intl)}
         />
       </PaddedContent>
 

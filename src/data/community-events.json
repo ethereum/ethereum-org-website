@@ -307,7 +307,7 @@
   },
   {
     "title": "ETHLatam",
-    "to": "https://twitter.com/ethlatam",
+    "to": "http://ethlatam.org/",
     "sponsor": null,
     "location": "Buenos Aires, Argentina",
     "description": "A 4-day conference that builds upon the work of the local pioneers that laid the foundations for a vibrant community that made crypto mainstream in Argentina.",
@@ -412,6 +412,15 @@
     "description": "The energy and excitement from ETHSanFrancisco 2018 will be hard to top, but ETHGlobal is excited to return to the Palace of Fine Arts in San Francisco with thousands of attendees!",
     "startDate": "2022-11-04",
     "endDate": "2022-11-06"
+  },
+  {
+    "title": "ETHGathering",
+    "to": "https://www.ethgathering.com/",
+    "sponsor": null,
+    "location": "Barcelona, Spain",
+    "description": "Hosted in one of the world's most vibrant and creative cities, ETH Gathering Barcelona 2022 is a two-day conference focused on the community building the decentralised future.",
+    "startDate": "2022-11-18",
+    "endDate": "2022-11-20"
   },
   {
     "title": "ETHIndia",

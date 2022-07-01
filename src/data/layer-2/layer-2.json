@@ -10,7 +10,7 @@
       "blockExplorer": "https://explorer.arbitrum.io/",
       "ecosystemPortal": "https://portal.arbitrum.one/",
       "tokenLists": "https://arbucks.io/tokens/",
-      "noteKey": "",
+      "noteKey": "layer-2-arbitrum-note",
       "purpose": ["universal"],
       "descriptionKey": "arbitrum-description",
       "imageKey": "arbitrum",
