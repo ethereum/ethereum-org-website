@@ -13,7 +13,9 @@ import Icon from "../Icon"
 import Search from "../Search"
 import Translation from "../Translation"
 import { NavLink } from "../SharedStyledComponents"
-import { translateMessageId } from "../../utils/translations"
+import { translateMessageId, TranslationKey } from "../../utils/translations"
+
+import { IItem, ISection, ISections } from "./types"
 
 const NavContainer = styled.div`
   position: sticky;
@@ -130,8 +132,14 @@ const NavIcon = styled(Icon)`
   fill: ${(props) => props.theme.colors.text};
 `
 
+export interface IProps {
+  handleThemeChange: () => void
+  isDarkTheme: boolean
+  path: string
+}
+
 // TODO display page title on mobile
-const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
+const Nav: React.FC<IProps> = ({ handleThemeChange, isDarkTheme, path }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isSearchOpen, setIsSearchOpen] = useState(false)
 
@@ -151,7 +159,7 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
   `)
   const intl = useIntl()
 
-  const linkSections = {
+  const linkSections: ISections = {
     useEthereum: {
       text: "use-ethereum",
       ariaLabel: "use-ethereum-menu",
@@ -211,15 +219,18 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
       ariaLabel: "learn-menu",
       items: [
         {
+          // @ts-ignore: until we add the translations
           text: "Start here",
           items: [
             {
+              // @ts-ignore: until we add the translations
               text: "Learn Hub",
               to: "/learn/",
             },
           ],
         },
         {
+          // @ts-ignore: until we add the translations
           text: "Ethereum basics",
           items: [
             {
@@ -249,6 +260,7 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
           ],
         },
         {
+          // @ts-ignore: until we add the translations
           text: "Ethereum protocol",
           items: [
             {
@@ -367,7 +379,7 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
     },
   }
 
-  const ednLinks = [
+  const ednLinks: Array<IItem> = [
     {
       text: "home",
       to: "/developers/",
@@ -392,7 +404,7 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
   ]
 
   let mobileLinkSections = cloneDeep(linkSections)
-  const handleMenuToggle = (item) => {
+  const handleMenuToggle = (item?: "search" | "menu"): void => {
     if (item === "menu") {
       setIsMenuOpen(!isMenuOpen)
     } else if (item === "search") {
@@ -463,7 +475,7 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
               to={link.to}
               isPartiallyActive={link.isPartiallyActive}
             >
-              <Translation id={link.text} />
+              <Translation id={link.text as TranslationKey} />
             </NavLink>
           ))}
         </SubNav>

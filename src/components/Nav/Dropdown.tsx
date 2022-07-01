@@ -1,4 +1,4 @@
-import React, { useState, createRef, useContext } from "react"
+import React, { useState, createRef, useContext, ReactNode } from "react"
 import styled from "styled-components"
 import { useIntl } from "gatsby-plugin-intl"
 import { motion } from "framer-motion"
@@ -9,10 +9,13 @@ import Link from "../Link"
 
 import { useOnClickOutside } from "../../hooks/useOnClickOutside"
 import { isLangRightToLeft, translateMessageId } from "../../utils/translations"
+import { Lang } from "../../utils/languages"
+
+import { ISection } from "./types"
 
 // TODO use framer-motion
-const StyledIcon = styled(Icon)`
-  transform: ${(props) => (props.isOpen ? `rotate(180deg)` : ``)};
+const StyledIcon = styled(Icon)<{ isOpen: boolean }>`
+  transform: ${({ isOpen }) => (isOpen ? `rotate(180deg)` : ``)};
 `
 
 const DropdownTitle = styled.span`
@@ -30,10 +33,10 @@ const DropdownTitle = styled.span`
   }
 `
 
-const DropdownList = styled(motion.ul)`
+const DropdownList = styled(motion.ul)<{ hasSubNav: boolean }>`
   margin: 0;
   position: absolute;
-  margin-top: ${(props) => (props.hasSubNav ? `-4.5rem` : `-1rem`)};
+  margin-top: ${({ hasSubNav }) => (hasSubNav ? `-4.5rem` : `-1rem`)};
   list-style-type: none;
   list-style-image: none;
   top: 100%;
@@ -112,14 +115,33 @@ const H2 = styled.h2`
   color: ${(props) => props.theme.colors.text};
 `
 
-const DropdownContext = React.createContext()
+interface IDropdownContext {
+  isOpen: boolean
+  toggle: () => void
+  close: () => void
+  tabInteractionHandler: (
+    e: React.KeyboardEvent<HTMLElement>,
+    shouldClose: boolean
+  ) => void
+}
 
-const NavDropdown = ({ children, section, hasSubNav }) => {
+const DropdownContext = React.createContext<IDropdownContext | null>(null)
+
+export interface IProps {
+  section: ISection
+  hasSubNav: boolean
+}
+
+const NavDropdown: React.FC<IProps> & {
+  Item: typeof Item
+  Link: typeof Link
+  Title: typeof Title
+} = ({ children, section, hasSubNav }) => {
   const [isOpen, setIsOpen] = useState(false)
   const intl = useIntl()
-  const ref = createRef()
+  const ref = createRef<HTMLLIElement>()
 
-  const isPageRightToLeft = isLangRightToLeft(intl.locale)
+  const isPageRightToLeft = isLangRightToLeft(intl.locale as Lang)
 
   const toggle = () => setIsOpen((isOpen) => !isOpen)
   const close = () => setIsOpen(false)
@@ -127,7 +149,7 @@ const NavDropdown = ({ children, section, hasSubNav }) => {
   useOnClickOutside(ref, () => setIsOpen(false))
 
   // Toggle on `enter` key
-  const onKeyDownHandler = (e) => {
+  const onKeyDownHandler = (e: React.KeyboardEvent<HTMLElement>): void => {
     if (e.keyCode === 13) {
       setIsOpen(!isOpen)
     } else if (e.shiftKey && e.keyCode === 9) {
@@ -135,7 +157,10 @@ const NavDropdown = ({ children, section, hasSubNav }) => {
     }
   }
 
-  const tabInteractionHandler = (e, shouldClose) => {
+  const tabInteractionHandler = (
+    e: React.KeyboardEvent<HTMLElement>,
+    shouldClose: boolean
+  ): void => {
     if (shouldClose) {
       e.keyCode === 9 && !e.shiftKey && setIsOpen(false)
     }
@@ -152,7 +177,7 @@ const NavDropdown = ({ children, section, hasSubNav }) => {
           dir={isPageRightToLeft ? "auto" : "ltr"}
           onClick={() => toggle()}
           onKeyDown={onKeyDownHandler}
-          tabIndex="0"
+          tabIndex={0}
         >
           <Translation id={section.text} />
           <StyledIcon isOpen={isOpen} name="chevronDown" />
@@ -171,21 +196,27 @@ const NavDropdown = ({ children, section, hasSubNav }) => {
   )
 }
 
-const Item = ({ children, isLast, ...rest }) => {
-  const { close, tabInteractionHandler } = useContext(DropdownContext)
+interface IItemProp {
+  isLast?: boolean
+}
+
+const Item: React.FC<IItemProp> = ({ children, isLast = false, ...rest }) => {
+  const context = useContext(DropdownContext)
 
   return (
     <DropdownItem
       {...rest}
-      onClick={() => close()}
-      onKeyDown={(e) => tabInteractionHandler(e, isLast)}
+      onClick={() => context?.close()}
+      onKeyDown={(e) => context?.tabInteractionHandler(e, isLast)}
     >
       {children}
     </DropdownItem>
   )
 }
 
-const Title = ({ children }) => {
+interface ITitleProps {}
+
+const Title: React.FC<ITitleProps> = ({ children }) => {
   return <H2>{children}</H2>
 }
 
