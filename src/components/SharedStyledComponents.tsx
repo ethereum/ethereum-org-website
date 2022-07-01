@@ -203,7 +203,7 @@ export const StyledCardMaxWidth = styled(StyledCard)`
 
 // Buttons
 
-const Button = styled.button`
+const Button = styled.button<MarginProps>`
   text-decoration: none;
   display: inline-block;
   white-space: nowrap;
@@ -233,7 +233,7 @@ export const ButtonPrimary = styled(Button)`
   }
 `
 
-export const ButtonSecondary = styled(Button)<MarginProps>`
+export const ButtonSecondary = styled(Button)`
   color: ${(props) => props.theme.colors.text};
   border: 1px solid ${(props) => props.theme.colors.text};
   background-color: transparent;
@@ -384,7 +384,7 @@ export const OptionContainer = styled.div`
   }
 `
 
-export const Option = styled.button<{ isActive: boolean }>`
+export const Option = styled.button<{ isActive?: boolean }>`
   border-radius: 2rem;
   border: 1px solid
     ${(props) =>
