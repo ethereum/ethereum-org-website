@@ -31,7 +31,7 @@ La preuve d'enjeu est le mécanisme sous-jacent qui désigne les validateurs à 
 
 ## Comment fonctionne la preuve d'enjeu Ethereum ? {#how-does-pos-work}
 
-Contrairement à la preuve de travail, les validateurs n'ont pas besoin d'utiliser une importante puissance de calcul car ils sont sélectionnés au hasard et ne sont pas en concurrence. Il n'est pas nécessaire qu'ils minent des blocs, ils doivent juste en créer lorsqu'ils sont choisis, et valider les blocs proposés dans le cas contraire. Cette validation est connue sous le nom d'attestation. Vous pouvez considérer qu'attester revient à dire "ce bloc me paraît correct". Les validateurs obtiennent des récompenses en proposant de nouveaux blocs et en attestant la conformité de ceux qu'ils ont vus.
+Contrairement à la preuve de travail, les validateurs n'ont pas besoin d'utiliser une importante puissance de calcul car ils sont sélectionnés au hasard et ne sont pas en concurrence. Il n'est pas nécessaire qu'ils minent des blocs, ils doivent juste en créer lorsqu'ils sont choisis, et valider les blocs proposés dans le cas contraire. Cette validation est connue sous le nom d'attestation. Vous pouvez considérer qu'attester revient à dire "ce bloc me paraît correct." Les validateurs obtiennent des récompenses en proposant de nouveaux blocs et en attestant la conformité de ceux qu'ils ont vus.
 
 Si vous attestez la conformité de blocs malveillants, vous perdez votre mise.
 

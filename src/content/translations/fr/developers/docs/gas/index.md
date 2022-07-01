@@ -39,7 +39,7 @@ Cette vidéo offre une présentation concise du gaz et des raisons de son existe
 
 [La mise à jour de Londres](/history/#london) a été implémentée le 5 août 2021 pour rendre les transactions sur Ethereum plus prévisibles pour les utilisateurs en remaniant le mécanisme des frais de transactions pour Ethereum. Les avantages de haut niveau introduits par cette modification incluent une meilleure estimation des frais de transaction, de façon générale l'inclusion plus rapide des transactions et la compensation de l'émission d'ETH en saisissant un pourcentage des frais de transaction.
 
-À partir de la mise à jour de Londres du réseau, chaque bloc a des frais de base, le prix minimum par unité de carburant pour l'inclusion dans ce bloc, calculé par le réseau en fonction de la demande d'espace bloc. Comme les frais de base de la transaction sont épuisés, les utilisateurs doivent également fixer un pourboire (frais prioritaires) dans leurs transactions. Le pourboire récompense les mineurs pour l'exécution et la propagation des transactions des utilisateurs dans des blocs et est censé être réglé automatiquement par la plupart des portefeuilles.
+À partir de la mise à jour de Londres du réseau, chaque bloc a des frais de base, le prix minimum par unité de gaz pour l'inclusion dans ce bloc, calculé par le réseau en fonction de la demande d'espace bloc. Comme les frais de base de la transaction sont épuisés, les utilisateurs doivent également fixer un pourboire (frais prioritaires) dans leurs transactions. Le pourboire récompense les mineurs pour l'exécution et la propagation des transactions des utilisateurs dans des blocs et est censé être réglé automatiquement par la plupart des portefeuilles.
 
 Le calcul des frais de transaction totaux fonctionne comme suit : `unités de gaz (limite) * (frais de base + pourboire)`
 
@@ -67,20 +67,20 @@ Les frais de base sont calculés par une formule qui compare la taille du bloc p
 | -------------- | ---------: | ---------------------: | --------------------: |
 | 1              |       15 M |                    0 % |              100 gwei |
 | 2              |        30M |                    0 % |              100 gwei |
-| 3              |       30 M |                 12,5 % |            112,5 gwei |
-| 4              |       30 M |                 12,5 % |            126,6 gwei |
-| 5              |       30 M |                 12,5 % |            142,4 gwei |
-| 6              |       30 M |                 12,5 % |            160,2 gwei |
-| 7              |       30 M |                 12,5 % |            180,2 gwei |
-| 8              |       30 M |                 12,5 % |            202,7 gwei |
+| 3              |        30M |                 12,5 % |            112,5 gwei |
+| 4              |        30M |                 12,5 % |            126,6 gwei |
+| 5              |        30M |                 12,5 % |            142,4 gwei |
+| 6              |        30M |                 12,5 % |            160,2 gwei |
+| 7              |        30M |                 12,5 % |            180,2 gwei |
+| 8              |        30M |                 12,5 % |            202,7 gwei |
 
-En ce qui concerne le marché aux enchères de carburant pré-Londres, ce changement de mécanisme de frais de transaction permet une meilleure prédiction de ces frais. D'apres la table ci-dessus - afin de créer une transaction sur le bloc numéro 9, un portefeuille pourra faire savoir à l'utilisateur avec certitude que les **frais de base maximum** à ajouter au bloc suivant sont `les frais de base actuels * 112,5%` ou `202,8 gwei * 112,5% = 228,1 gwei`.
+En ce qui concerne le marché aux enchères de gaz pré-Londres, ce changement de mécanisme de frais de transaction permet une meilleure prédiction de ces frais. D'apres la table ci-dessus - afin de créer une transaction sur le bloc numéro 9, un portefeuille pourra faire savoir à l'utilisateur avec certitude que les **frais de base maximum** à ajouter au bloc suivant sont `les frais de base actuels * 112,5%` ou `202,8 gwei * 112,5% = 228,1 gwei`.
 
 Il est important de souligner également qu'il est peu probable que l'on voit des périodes de blocs pleins de manière prolongée, dû à la vitesse à laquelle les frais de base augmentent suivant un bloc plein.
 
 | Numéro de bloc | Gaz inclus | Augmentation des frais | Frais de base actuels |
 | -------------- | ---------: | ---------------------: | --------------------: |
-| 30             |       30 M |                 12,5 % |          2 705,6 gwei |
+| 30             |        30M |                 12,5 % |          2 705,6 gwei |
 | ...            |        ... |                 12,5 % |                   ... |
 | 50             |       30 M |                 12,5 % |         28 531,3 gwei |
 | ...            |        ... |                 12,5 % |                   ... |
@@ -88,7 +88,7 @@ Il est important de souligner également qu'il est peu probable que l'on voit de
 
 ### Frais prioritaires (pourboires) {#priority-fee}
 
-Avant la mise à niveau de Londres, les mineurs reçoivent tous les frais de carburant, pour chaque transaction incluse dans un bloc.
+Avant la mise à niveau de Londres, les mineurs reçoivent tous les frais de gaz, pour chaque transaction incluse dans un bloc.
 
 Comme les nouveaux frais de base sont détruits, la mise à niveau de Londres introduit des frais de priorité (pourboire) afin d'inciter les mineurs à inclure une transaction dans le bloc. Sans pourboires, les mineurs auraient un intérêt économique viable à miner des blocs vides, car ils recevraient la même récompense de bloc. Dans des conditions normales, un petit pourboire incite les mineurs à inclure une transaction. Dans le même bloc, pour que certaines transactions soient exécutées de préférence avant d'autres, un pourboire plus élevé sera nécessaire afin de tenter de surenchérir les autres transactions.
 
@@ -146,7 +146,7 @@ Toute personne ayant au moins 32 ETH peut les miser et devenir un validateur res
 
 Si vous cherchez à réduire les frais de gaz pour votre ETH, vous pouvez définir un pourboire pour indiquer le niveau de priorité de votre transaction. Les mineurs « travailleront » et exécuteront des transactions qui offrent un pourboire plus élevé par gaz, car ils peuvent conserver les pourboires que vous offrez et seront moins enclins à exécuter des transactions avec des pourboires moins élevés.
 
-Si vous voulez surveiller les prix du carburant et pouvoir envoyer votre ETH pour moins cher, vous pouvez utiliser différents outils comme :
+Si vous voulez surveiller les prix du gaz et pouvoir envoyer votre ETH pour moins cher, vous pouvez utiliser différents outils comme :
 
 - [Etherscan](https://etherscan.io/gastracker) _- Évaluateur du prix du gaz pour une transaction_
 - [Blocknative ETH Gas Estimator](https://chrome.google.com/webstore/detail/blocknative-eth-gas-estim/ablbagjepecncofimgjmdpnhnfjiecfm) _Extension Chrome pour estimer le gaz à la fois pour les transactions de Type 0 et les transactions de Type 2 EIP-1559 ._

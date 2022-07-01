@@ -17,7 +17,7 @@ Les rollups optimisés s'installent en parallèle à la chaîne principale d'Eth
 
 Avec les rollups optimisés, les transactions sont codées sur la chaîne principale Ethereum en tant que `données d'appel`, ce qui les optimise davantage en réduisant le coût du carburant.
 
-Le calcul étant la partie lente et coûteuse de l'utilisation d'Ethereum, les rollups optimisés peuvent offrir 10 à 100 fois plus d'évolutivité en fonction de la transaction. Ce nombre augmentera encore plus avec l'introduction de [chaînes de fragments](/upgrades/shard-chains) puisque plus de données seront disponibles si une transaction est contestée.
+Le calcul étant la partie lente et coûteuse de l'utilisation d'Ethereum, les rollups optimisés peuvent offrir 10 à 100 fois plus d'évolutivité en fonction de la transaction. Ce nombre augmentera encore plus avec l'introduction de [chaînes de fragments](/upgrades/sharding) puisque plus de données seront disponibles si une transaction est contestée.
 
 ### Contestation des transactions {#disputing-transactions}
 
