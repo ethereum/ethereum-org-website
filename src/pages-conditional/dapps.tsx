@@ -155,7 +155,9 @@ const Column = styled.div`
   }
 `
 
-const FullWidthContainer = styled(Page)`
+const FullWidthContainer = styled(Page)<{
+  scrollRef: React.RefObject<HTMLElement>
+}>`
   margin: 0rem 0rem;
   margin-bottom: 4rem;
   border-top: 1px solid ${(props) => props.theme.colors.border};
@@ -1243,7 +1245,7 @@ const DappsPage = ({
           ))}
         </StyledCardGrid>
       </Content>
-      <FullWidthContainer>
+      <FullWidthContainer scrollRef={explore}>
         <h2 id="explore">
           <Translation id="page-dapps-explore-dapps-title" />
         </h2>
