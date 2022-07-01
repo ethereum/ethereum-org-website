@@ -224,7 +224,7 @@ const Nav: React.FC<IProps> = ({ handleThemeChange, isDarkTheme, path }) => {
           items: [
             {
               // @ts-ignore: until we add the translations
-              text: "Learn Hub",
+              text: "Learn hub",
               to: "/learn/",
             },
           ],
