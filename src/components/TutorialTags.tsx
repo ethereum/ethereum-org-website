@@ -33,16 +33,24 @@ const TagPill = styled(Pill)`
   background-color: ${(props) => props.theme.colors[props.color]};
 `
 
-const Tags = ({ tags }) => {
-  return tags.map((tag, idx) => {
-    const tagColorIdx = hashCode(tag) % colors.length
-    const tagColor = colors[tagColorIdx]
-    return (
-      <TagPill key={idx} color={tagColor}>
-        {tag}
-      </TagPill>
-    )
-  })
+export interface IProps {
+  tags: Array<string>
 }
 
-export default Tags
+const TutorialTags: React.FC<IProps> = ({ tags }) => {
+  return (
+    <>
+      {tags.map((tag, idx) => {
+        const tagColorIdx = hashCode(tag) % colors.length
+        const tagColor = colors[tagColorIdx]
+        return (
+          <TagPill key={idx} color={tagColor}>
+            {tag}
+          </TagPill>
+        )
+      })}
+    </>
+  )
+}
+
+export default TutorialTags

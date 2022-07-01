@@ -1,4 +1,4 @@
-import React from "react"
+import React, { ReactNode } from "react"
 import styled from "styled-components"
 import Emoji from "./Emoji"
 
@@ -28,8 +28,8 @@ const TopContent = styled.div``
 
 export interface IProps {
   emoji?: string
-  title?: string
-  description?: string
+  title?: ReactNode
+  description?: ReactNode
   className?: string
 }
 

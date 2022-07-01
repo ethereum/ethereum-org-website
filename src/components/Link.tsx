@@ -141,11 +141,12 @@ const Link: React.FC<IProps> = ({
         href={to}
         target="_blank"
         rel="noopener noreferrer"
-        onClick={() =>
+        onClick={(e) => {
+          e.stopPropagation()
           trackCustomEvent(
             customEventOptions ? customEventOptions : eventOptions
           )
-        }
+        }}
         aria-label={ariaLabel}
       >
         {children}
@@ -157,11 +158,12 @@ const Link: React.FC<IProps> = ({
         href={to}
         target="_blank"
         rel="noopener noreferrer"
-        onClick={() =>
+        onClick={(e) => {
+          e.stopPropagation()
           trackCustomEvent(
             customEventOptions ? customEventOptions : eventOptions
           )
-        }
+        }}
         aria-label={ariaLabel}
       >
         {children}

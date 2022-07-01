@@ -54,7 +54,9 @@ const Path = styled.path`
   stroke-width: 2px;
 `
 
-const Text = styled.text`
+const Text = styled.text<{
+  isActive: boolean
+}>`
   fill: ${(props) =>
     props.isActive
       ? props.theme.colors.primary400
@@ -73,7 +75,10 @@ const CircleSelect = styled.g`
   cursor: pointer;
 `
 
-const FillCircle = styled.circle`
+const FillCircle = styled.circle<{
+  isActive: boolean
+  isEthereum?: boolean
+}>`
   fill: ${(props) =>
     props.isActive
       ? props.isEthereum
@@ -174,7 +179,9 @@ const CloseIconContainer = styled.span`
   }
 `
 
-const Trilemma = () => {
+export interface IProps {}
+
+const Trilemma: React.FC<IProps> = () => {
   const intl = useIntl()
 
   const [state, setState] = useState({

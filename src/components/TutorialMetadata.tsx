@@ -9,6 +9,7 @@ import { getLocaleTimestamp } from "../utils/time"
 import { FakeLink } from "./SharedStyledComponents"
 import Emoji from "./Emoji"
 import Translation from "./Translation"
+import { Lang } from "../utils/languages"
 
 const Container = styled.div`
   display: flex;
@@ -78,7 +79,11 @@ const AllCapsTranslation = styled(Translation)`
   text-transform: uppercase;
 `
 
-const TutorialMetadata = ({ tutorial, data }) => {
+export interface IProps {
+  tutorial: any
+}
+
+const TutorialMetadata: React.FC<IProps> = ({ tutorial }) => {
   const intl = useIntl()
 
   const frontmatter = tutorial.frontmatter
@@ -93,7 +98,9 @@ const TutorialMetadata = ({ tutorial, data }) => {
         <PillContainer>
           <TutorialTags tags={frontmatter.tags} />
         </PillContainer>
-        <SkillPill isSecondary={true}>{frontmatter.skill}</SkillPill>
+        <SkillPill isSecondary={true} className="" color="">
+          {frontmatter.skill}
+        </SkillPill>
       </TagsContainer>
       <HorizontalContainer>
         {author && (
@@ -111,7 +118,7 @@ const TutorialMetadata = ({ tutorial, data }) => {
         {published && (
           <DataContainer>
             <Emoji size={1} mr={`0.5em`} text=":calendar:" />
-            {getLocaleTimestamp(intl.locale, published)}
+            {getLocaleTimestamp(intl.locale as Lang, published)}
           </DataContainer>
         )}
         <DataContainer>

@@ -16,7 +16,9 @@ const H3 = styled.h3`
   margin-bottom: 0;
 `
 
-const BannerContainer = styled.div`
+const BannerContainer = styled.div<{
+  isOpen: boolean
+}>`
   display: ${(props) => (props.isOpen ? `block` : `none`)};
   bottom: 2rem;
   right: 2rem;
@@ -44,7 +46,9 @@ const StyledBanner = styled.div`
   }
 `
 
-const BannerContent = styled.div`
+const BannerContent = styled.div<{
+  isPageRightToLeft: boolean
+}>`
   display: flex;
   flex-direction: column;
   align-items: ${(props) =>
@@ -55,7 +59,9 @@ const BannerContent = styled.div`
   }
 `
 
-const BannerClose = styled.div`
+const BannerClose = styled.div<{
+  isPageRightToLeft: boolean
+}>`
   position: absolute;
   top: 0;
   right: ${(props) => (props.isPageRightToLeft ? `auto` : 0)};
@@ -92,7 +98,13 @@ const StyledEmoji = styled(Emoji)`
   }
 `
 
-const TranslationBannerLegal = ({
+export interface IProps {
+  shouldShow: boolean
+  isPageRightToLeft: boolean
+  originalPagePath: string
+}
+
+const TranslationBannerLegal: React.FC<IProps> = ({
   shouldShow,
   originalPagePath,
   isPageRightToLeft,
@@ -130,7 +142,7 @@ const TranslationBannerLegal = ({
               onClick={() => {
                 localStorage.setItem(
                   `dont-show-translation-legal-banner-${originalPagePath}`,
-                  true
+                  "true"
                 )
                 setIsOpen(false)
               }}
