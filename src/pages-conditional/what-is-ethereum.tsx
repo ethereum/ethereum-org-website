@@ -241,7 +241,7 @@ const Stat: React.FC<{ stat: IFetchStat }> = ({ stat }) => {
   ) : isLoading ? (
     <LoadingMessage />
   ) : (
-    <>stat.formattedValue</>
+    <>{stat.formattedValue}</>
   )
 }
 
