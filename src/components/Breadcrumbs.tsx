@@ -3,8 +3,8 @@ import styled from "styled-components"
 import { useIntl } from "gatsby-plugin-intl"
 
 import Link from "./Link"
-import { supportedLanguages } from "../utils/languages"
-import { translateMessageId } from "../utils/translations"
+import { isLang, supportedLanguages } from "../utils/languages"
+import { isTranslationKey, translateMessageId } from "../utils/translations"
 
 const ListContainer = styled.nav`
   margin-bottom: 2rem;
@@ -47,6 +47,11 @@ const CrumbLink = styled(Link)`
   }
 `
 
+export interface IProps {
+  slug: string
+  startDepth?: number
+}
+
 // Generate crumbs from slug
 // e.g. "/en/eth2/proof-of-stake/" will generate:
 // [
@@ -60,20 +65,27 @@ const CrumbLink = styled(Link)`
 //   { fullPath: "/en/eth2/", text: "ETH2" },
 //   { fullPath: "/en/eth2/proof-of-stake/", text: "PROOF OF STAKE" },
 // ]
-const Breadcrumbs = ({ slug, startDepth = 0, ...restProps }) => {
+const Breadcrumbs: React.FC<IProps> = ({
+  slug,
+  startDepth = 0,
+  ...restProps
+}) => {
   const intl = useIntl()
 
-  const split = slug.split("/")
-  const sliced = split.filter((item) => !!item).slice(startDepth)
+  const slugChunk = slug.split("/")
+  const sliced = slugChunk.filter((item) => !!item).slice(startDepth)
 
   const crumbs = sliced.map((path, idx) => {
     // If homepage (e.g. "en"), set text to "home" translation
-    const text = supportedLanguages.includes(path)
-      ? translateMessageId("page-index-meta-title", intl)
-      : translateMessageId(path, intl)
+    const text =
+      isLang(path) && supportedLanguages.includes(path)
+        ? translateMessageId("page-index-meta-title", intl)
+        : isTranslationKey(path)
+        ? translateMessageId(path, intl)
+        : ""
 
     return {
-      fullPath: split.slice(0, idx + 2 + startDepth).join("/") + "/",
+      fullPath: slugChunk.slice(0, idx + 2 + startDepth).join("/") + "/",
       text: text.toUpperCase(),
     }
   })
