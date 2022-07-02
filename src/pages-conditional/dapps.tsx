@@ -155,9 +155,7 @@ const Column = styled.div`
   }
 `
 
-const FullWidthContainer = styled(Page)<{
-  scrollRef: React.RefObject<HTMLElement>
-}>`
+const FullWidthContainer = styled(Page)`
   margin: 0rem 0rem;
   margin-bottom: 4rem;
   border-top: 1px solid ${(props) => props.theme.colors.border};
@@ -351,7 +349,7 @@ const DappsPage = ({
   const [selectedCategory, setCategory] = useState<CategoryType>(
     CategoryType.FINANCE
   )
-  const explore = useRef<HTMLElement>(null)
+  const explore = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     // Fetch category on load
@@ -1245,7 +1243,7 @@ const DappsPage = ({
           ))}
         </StyledCardGrid>
       </Content>
-      <FullWidthContainer scrollRef={explore}>
+      <FullWidthContainer ref={explore}>
         <h2 id="explore">
           <Translation id="page-dapps-explore-dapps-title" />
         </h2>
