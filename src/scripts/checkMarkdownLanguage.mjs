@@ -19,7 +19,6 @@ const getMarkdownFilesWithLanguage = () => {
     ])
 
     markdownFilesWithLanguageCommand.stdout.on("data", (data) => {
-      console.log(data.toString("utf8"))
       resolve(data)
     })
 
@@ -42,7 +41,6 @@ const getAllMarkdownFiles = () => {
     ])
 
     allMarkdownFilesCommand.stdout.on("data", (data) => {
-      console.log(data.toString("utf8"))
       resolve(data)
     })
 
@@ -58,6 +56,7 @@ const getAllMarkdownFiles = () => {
 
 const doAllMarkdownsHaveALanguage = async () => {
   try {
+    console.log("Checking Markdown Content Files")
     const allMarkdownFilesBuffer = await getAllMarkdownFiles()
     const markdownFilesWithLanguageBuffer = await getMarkdownFilesWithLanguage()
     const comparisonResult = Buffer.compare(
