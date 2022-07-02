@@ -26,15 +26,16 @@ Looking for future protocol upgrades? [Learn about upcoming upgrades to Ethereum
 
 ## 2022 {#2022}
 
-### _(Planned)_ Gray Glacier {#gray-glacier}
+### Gray Glacier {#gray-glacier}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /><code>Estimated: Jun-29-2022</code><br />
+<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /><code>Jun-30-2022 10:54:04 AM +UTC</code><br />
 <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Block number: <a href="https://etherscan.io/block/15050000">15,050,000</a><br />
-<Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} />ETH price: <i>to be determined</i><br />
+<Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} />ETH price: $1,069 USD<br />
+<Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20220630094629/https://ethereum.org/en/">ethereum.org on waybackmachine</a>
 
 #### Summary {#gray-glacier-summary}
 
-The Gray Glacier network upgrade pushes back the [difficulty bomb](/glossary/#difficulty-bomb) by three months. This is the only change introduced in this upgrade, and is similar in nature to the [Arrow Glacier](#arrow-glacier) and [Muir Glacier](#muir-glacier) upgrades. Similar changes have been performed on the [Byzantium](#byzantium), [Constantinople](#constantinople) and [London](#london) network upgrades.
+The Gray Glacier network upgrade pushed back the [difficulty bomb](/glossary/#difficulty-bomb) by three months. This is the only change introduced in this upgrade, and is similar in nature to the [Arrow Glacier](#arrow-glacier) and [Muir Glacier](#muir-glacier) upgrades. Similar changes have been performed on the [Byzantium](#byzantium), [Constantinople](#constantinople) and [London](#london) network upgrades.
 
 - [EF Blog - Gray Glacier Upgrade Announcement](https://blog.ethereum.org/2022/06/16/gray-glacier-announcement/)
 
