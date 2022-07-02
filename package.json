@@ -102,7 +102,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "pretty-quick --staged"
+      "pre-commit": "npm run-script check-markdown-language-tag && pretty-quick --staged"
     }
   },
   "volta": {
