@@ -57,13 +57,21 @@ const getAllMarkdownFiles = () => {
 }
 
 const doAllMarkdownsHaveALanguage = async () => {
-  const allMarkdownFilesBuffer = await getAllMarkdownFiles()
-  const markdownFilesWithLanguageBuffer = await getMarkdownFilesWithLanguage()
-  const comparisonResult = Buffer.compare(
-    allMarkdownFilesBuffer,
-    markdownFilesWithLanguageBuffer
-  )
-  return comparisonResult === 0 ? true : false
+  try {
+    const allMarkdownFilesBuffer = await getAllMarkdownFiles()
+    const markdownFilesWithLanguageBuffer = await getMarkdownFilesWithLanguage()
+    const comparisonResult = Buffer.compare(
+      allMarkdownFilesBuffer,
+      markdownFilesWithLanguageBuffer
+    )
+    return comparisonResult === 0 ? true : false
+  } catch (error) {
+    throw error
+  }
+}
+
+const throwError = (message) => {
+  console.log("\x1b[91m%s\x1b[0m", "ERROR", message)
 }
 
 doAllMarkdownsHaveALanguage()
@@ -71,9 +79,13 @@ doAllMarkdownsHaveALanguage()
     if (result) {
       process.exitCode = 0
     } else {
+      throwError(
+        "Markdown content needs to have a lang attribute in the frontmatter"
+      )
       process.exitCode = 1
     }
   })
   .catch((error) => {
+    throwError("checkMarkdownLanguage Hook Failed")
     process.exitCode = 1
   })
