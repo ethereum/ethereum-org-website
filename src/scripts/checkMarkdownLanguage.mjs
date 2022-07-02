@@ -13,9 +13,9 @@ const getMarkdownFilesWithLanguage = () => {
     const markdownFilesWithLanguageCommand = spawn("git", [
       ...commonDiffCommand,
       "-G",
-      "lang:",
+      "lang:[ ]*\\w+",
       "--",
-      "*.md",
+      "src/content/*.md",
     ])
 
     markdownFilesWithLanguageCommand.stdout.on("data", (data) => {
@@ -38,7 +38,7 @@ const getAllMarkdownFiles = () => {
     const allMarkdownFilesCommand = spawn("git", [
       ...commonDiffCommand,
       "--",
-      "*.md",
+      "src/content/*.md",
     ])
 
     allMarkdownFilesCommand.stdout.on("data", (data) => {
