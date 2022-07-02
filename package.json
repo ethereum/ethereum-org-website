@@ -93,6 +93,7 @@
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "generate-heading-ids": "node src/scripts/generate-heading-ids.js",
     "merge-translations": "node src/scripts/merge-translations.js",
+	"check-markdown-language-tag": "node src/scripts/checkMarkdownLanguage.mjs",
     "start": "gatsby develop",
     "start:lambda": "netlify-lambda serve src/lambda",
     "start:static": "gatsby build && gatsby serve",
