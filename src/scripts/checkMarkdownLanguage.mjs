@@ -56,4 +56,24 @@ const getAllMarkdownFiles = () => {
   })
 }
 
-await getAllMarkdownFiles()
+const doAllMarkdownsHaveALanguage = async () => {
+  const allMarkdownFilesBuffer = await getAllMarkdownFiles()
+  const markdownFilesWithLanguageBuffer = await getMarkdownFilesWithLanguage()
+  const comparisonResult = Buffer.compare(
+    allMarkdownFilesBuffer,
+    markdownFilesWithLanguageBuffer
+  )
+  return comparisonResult === 0 ? true : false
+}
+
+doAllMarkdownsHaveALanguage()
+  .then((result) => {
+    if (result) {
+      process.exitCode = 0
+    } else {
+      process.exitCode = 1
+    }
+  })
+  .catch((error) => {
+    process.exitCode = 1
+  })
