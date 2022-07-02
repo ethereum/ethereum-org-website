@@ -51,7 +51,6 @@ const StyledIcon = styled(Icon)`
 
 export interface IProps {
   name: string
-  key: string
   onSelect: (tagName: string) => void
   value: string
   isActive: boolean
@@ -60,7 +59,6 @@ export interface IProps {
 
 const Tag: React.FC<IProps> = ({
   name,
-  key,
   onSelect,
   value,
   isActive = true,
@@ -69,7 +67,7 @@ const Tag: React.FC<IProps> = ({
   const iconName = isActive ? "close" : "add"
 
   return (
-    <StyledTag key={key} onClick={() => onSelect(value)} isActive={isActive}>
+    <StyledTag onClick={() => onSelect(value)} isActive={isActive}>
       {name}
       {shouldShowIcon && <StyledIcon name={iconName} size="18" />}
     </StyledTag>
