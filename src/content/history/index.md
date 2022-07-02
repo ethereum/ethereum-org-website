@@ -45,10 +45,6 @@ The Gray Glacier network upgrade pushed back the [difficulty bomb](/glossary/#di
 
 </ExpandableCard>
 
-#### <Emoji text=":police_car_light:" size={1} mr="0.5rem" />Node operators {#gray-glacier-node-operators}
-
-Be sure to upgrade your client software to the latest version before June 27, 2022 to account for variable block times. This will help avoid having your client sync to a pre-fork chain, resulting in the inability to send funds or properly verify transactions.
-
 <Divider />
 
 ## 2021 {#2021}
