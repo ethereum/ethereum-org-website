@@ -1,5 +1,5 @@
 ---
-title: Mutabakat mekanizmaları
+title: Konsensus mekanizmaları
 description: Dağıtılmış sistemlerde bulunan mutabakat protokolleri ve bu protokollerin Ethereum'daki rolü hakkında açıklama.
 lang: tr
 sidebar: true
@@ -10,7 +10,7 @@ Ethereum gibi, özünde dağıtılmış sistemler olan blok zincirlerinde ağ d�
 
 Mutabakat mekanizmaları doğrudan bir dapp inşa etmeyle bağlantılı olmasa da, onları anlamak gaz ücretleri ve işlem zamanları gibi siz ve kullanıcı deneyiminizle ilgili konseptleri aydınlatacaktır.
 
-## Ön Koşullar {#prerequisites}
+## Ön koşullar {#prerequisites}
 
 Bu sayfayı daha iyi anlamak için önce [Ethereum'a Giriş](/developers/docs/intro-to-ethereum/) metnimizi okumanızı öneririz.
 
