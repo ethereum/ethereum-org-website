@@ -667,7 +667,11 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
 
           <Section>
             <h2 id={tocItems[5].id}>{tocItems[5].title}</h2>
-            <p>For users most interested in Ethereum protocol itself.</p>
+            <p>
+              A big portion of Ethereum’s success is thanks to its dedicated
+              community. There are thousands of inspiring and driven people who
+              help push Ethereum’s vision forward. Come and join us!
+            </p>
             <CardGrid>
               <Card
                 title="Community hub"
