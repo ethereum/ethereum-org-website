@@ -9,11 +9,11 @@ sidebarDepth: 3
 
 [ZK-rolluplar](/developers/docs/scaling/zk-rollups/) gibi doğruluk ispatlarını kullanırlar fakat veri, Ethereum katman 1 zincirinde depolanmaz. Bu, her bir validium zinciri başına saniyede 10 bin işlem yapılabilmesini ve birden çok zincirle birlikte paralel olarak çalışabilmesine olanak sağlar.
 
-## Ön Koşullar {#prerequisites}
+## Ön koşullar {#prerequisites}
 
 Temeli oluşturan tüm konuları iyi anlamalı ve [Ethereum ölçeklendirilmesi](/developers/docs/scaling/) konusunda ileri düzeyde bilgiye sahip olmalısınız. Validium gibi ölçeklendirme çözümlerini yürürlüğe koymak teknoloji az test edildiği, araştırıldığı ve geliştirildiği için ileri seviye bir konudur.
 
-## Artıları ve Eksileri {#pros-and-cons}
+## Artıları ve eksileri {#pros-and-cons}
 
 | Artıları                                                                                                                                            | Eksileri                                                                                                                                                          |
 | --------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
