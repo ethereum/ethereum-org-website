@@ -696,7 +696,7 @@ Famille de fonctions de hachage cryptographique publiées par le National Instit
 
 Une chaîne par [preuve d'enjeu](#pos) coordonnée par la [chaîne phare](#beacon-chain) et sécurisée par les [validateurs](#validator). 64 ajouts au réseau seront réalisés dans le cadre de la mise à niveau des chaînes de fragments. Les chaînes de fragments offriront un débit de transaction accru pour Ethereum en fournissant des données supplémentaires aux solutions de [couche 2](#layer-2) comme les [rollups optimistes](#optimistic-rollups) et les [rollups ZK](#zk-rollups).
 
-<DocLink to="/upgrades/shard-chains">
+<DocLink to="/upgrades/sharding">
   Chaînes de fragments
 </DocLink>
 
