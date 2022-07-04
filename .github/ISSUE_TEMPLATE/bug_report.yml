@@ -1,0 +1,53 @@
+name: Bug report
+description: Something isn't working as expected? Report your bugs here.
+labels: ["bug :bug:"]
+body:
+  - type: textarea
+    attributes:
+      label: Description
+      description: Describe the issue that you're seeing.
+      placeholder: Be as precise as you can. Feel free to share screenshots, videos, or data from the devtools of your browser.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Steps to Reproduce
+      description: Clear steps describing how to reproduce the issue.
+      value: |
+        1. Go to '...'
+        2. Click on '...'
+        3. Scroll down to '...'
+        4. See error
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Expected behaviour
+      description: A concise description of what you expected to happen.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Environment
+      description: If relevant to the bug, please share details about your environment.
+      placeholder: |
+        **Desktop (please complete the following information):**
+
+        - OS: [e.g. iOS]
+        - Browser: [e.g. chrome, safari]
+        - Version: [e.g. 22]
+
+        **Smartphone (please complete the following information):**
+
+        - Device: [e.g. iPhone6]
+        - OS: [e.g. iOS8.1]
+        - Browser: [e.g. stock browser, safari]
+        - Version: [e.g. 22]
+    validations:
+      required: false
+  - type: checkboxes
+    attributes:
+      label: Want to contribute? 👋
+      description: Please check this if you'd like to work on this issue.
+      options:
+        - label: We love contributions from the Ethereum community! Please select this box or comment on an issue if you're interested in helping out with a PR.

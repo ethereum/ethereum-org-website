@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: ethereum.org Discord
+    url: https://ethereum.org/discord
+    about: Want to chat contributing to ethereum.org? Join our Discord!
