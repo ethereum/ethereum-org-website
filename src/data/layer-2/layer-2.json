@@ -142,6 +142,22 @@
       "descriptionKey": "zkspace-description",
       "imageKey": "zkspace",
       "background": "black"
+    },
+    {
+      "name": "Polygon Hermez",
+      "website": "https://hermez.io/",
+      "developerDocs": "https://docs.hermez.io/",
+      "l2beat": "https://l2beat.com/projects/hermez/",
+      "bridge": "https://wallet.hermez.io/login",
+      "bridgeWallets": ["MetaMask", "WalletConnect"],
+      "blockExplorer": "explorer.hermez.io",
+      "ecosystemPortal": "",
+      "tokenLists": "",
+      "noteKey": "",
+      "purpose": ["payments"],
+      "description": "Polygon Hermez is an open-source ZK-Rollup optimized for secure, low-cost and usable token transfers on the wings of Ethereum",
+      "imageKey": "hermez",
+      "background": "#7b40e5"
     }
   ]
 }
