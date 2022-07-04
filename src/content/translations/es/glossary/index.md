@@ -616,7 +616,7 @@ Una familia de funciones de hash criptográficas publicadas por el NIST (siglas 
 
 Una cadena de [prueba de participación](#proof-of-stake) coordinada por la [cadena de baliza](#beacon-chain) y asegurada mediante los [validadores](#validator). Se producirán 64 adiciones a la red como parte de la actualización de la cadena de fragmentos Eth2. Las cadenas de fragmentos ofrecerán un mayor rendimiento de la transacción para Ethereum, ya que proporcionan datos adicionales a soluciones de [capa 2](#layer-2) como [Optimistic Rollups](#optimistic-rollups) y [ZK Rollups](#zk-rollups).
 
-<DocLink to="/upgrades/shard-chains">
+<DocLink to="/upgrades/sharding">
   Cadenas de fragmentos
 </DocLink>
 
