@@ -1,5 +1,5 @@
 import React from "react"
-import styled from "styled-components"
+import styled, { useTheme } from "styled-components"
 import Icon from "./Icon"
 import Link from "./Link"
 import Emoji from "./Emoji"
@@ -7,9 +7,10 @@ import Emoji from "./Emoji"
 export interface IProps {
   to: string
   className?: string
+  isExternal?: boolean
 }
 
-const Container = styled(Link)`
+const Container = styled(Link)<{ isExternal: boolean }>`
   position: relative;
   z-index: 1;
   text-decoration: none;
@@ -26,6 +27,13 @@ const Container = styled(Link)`
     box-shadow: 0 0 1px ${({ theme }) => theme.colors.primary};
     background: ${({ theme }) => theme.colors.tableBackgroundHover};
     border-radius: 4px;
+
+    svg {
+      fill: ${(props) => props.theme.colors.primary};
+      transition: transform 0.1s;
+      transform: scale(1.2)
+        rotate(${({ isExternal }) => (isExternal ? "-45deg" : "0")});
+    }
   }
   @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
     width: 100%;
@@ -44,11 +52,11 @@ const Title = styled.p`
   margin: 0;
 `
 
-const Arrow = styled(Icon)`
+const Arrow = styled(Icon)<{ isExternal: boolean }>`
   margin: 0rem 1.5rem;
   align-self: center;
   min-width: 2rem;
-  color: ${({ theme }) => theme.colors.text};
+  transform: rotate(${({ isExternal }) => (isExternal ? "-45deg" : "0")});
 `
 
 const EmojiCell = styled.div`
@@ -56,16 +64,29 @@ const EmojiCell = styled.div`
   align-items: center;
 `
 
-const DocLink: React.FC<IProps> = ({ to, children, className }) => (
-  <Container to={to} className={className}>
-    <EmojiCell>
-      <Emoji size={1} text=":page_with_curl:" mr={`1rem`} />
-    </EmojiCell>
-    <TextCell>
-      <Title>{children}</Title>
-    </TextCell>
-    <Arrow name="arrowRight" />
-  </Container>
-)
+const DocLink: React.FC<IProps> = ({
+  to,
+  children,
+  className,
+  isExternal = false,
+}) => {
+  const theme = useTheme()
+
+  return (
+    <Container to={to} className={className} isExternal={isExternal} hideArrow>
+      <EmojiCell>
+        <Emoji size={1} text=":page_with_curl:" mr={`1rem`} />
+      </EmojiCell>
+      <TextCell>
+        <Title>{children}</Title>
+      </TextCell>
+      <Arrow
+        isExternal={isExternal}
+        color={theme.colors.text}
+        name="arrowRight"
+      />
+    </Container>
+  )
+}
 
 export default DocLink
