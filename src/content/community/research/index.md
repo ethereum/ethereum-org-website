@@ -11,13 +11,17 @@ One of the primary strengths of Ethereum is that an active research and engineer
 
 ## How Ethereum research works {#how-ethereum-research-works}
 
-Ethereum research is open and transparent. The culture is to make research tools and outputs as open and interactive as possible, for example, through executable notebooks. Ethereum research moves quickly, with new findings posted and discussed in the open on forums such as [ethresear.ch](https://ethresear.ch/) rather than reaching the community through traditional publications after rounds of peer review.
+Ethereum research is open and transparent, embodying principles of [Decentralized Science (DeSci)](https://hackernoon.com/desci-decentralized-science-as-our-chance-to-recover-the-real-science). The culture is to make research tools and outputs as open and interactive as possible, for example, through executable notebooks. Ethereum research moves quickly, with new findings posted and discussed in the open on forums such as [ethresear.ch](https://ethresear.ch/) rather than reaching the community through traditional publications after rounds of peer review.
 
 ## General research resources {#general-research-resources}
 
 Regardless of the specific topic, there is a wealth of information on Ethereum research to be found at [ethresear.ch](https://ethresear.ch) and the [Eth R&D Discord channel](https://discord.gg/n7JxAeRu). These are the primary places where Ethereum researchers discuss the latest ideas and development opportunities.
 
 This report published in May 2022 by [DelphiDigital](https://members.delphidigital.io/reports/the-hitchhikers-guide-to-ethereum) provides a good overview of the Ethereum roadmap.
+
+## Sources of Funding {#sources-of-funding}
+
+You can get involved with Ethereum research and get paid for it! For example, [the Ethereum Foundation](/foundation/) recently ran an [Academic Grants funding round](/community/grants/academic-grants-round/). You can find information on active and upcoming funding opportunities on [the Ethereum grants page](/community/grants/).
 
 ## Protocol research {#protocol-research}
 
@@ -106,7 +110,7 @@ There are now several Layer 2 protocols that scale Ethereum using different tech
 
 #### Recent research {#recent-research-2}
 
-- [Arbitrum's fair-ordering for sequencers](https://eprint.iacr.org/2020/269.pdf)
+- [Arbitrum's fair-ordering for sequencers](https://eprint.iacr.org/2021/1465)
 - [ethresear.ch Layer 2](https://ethresear.ch/c/layer-2/32)
 - [Rollup-centric roadmap](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698)
 - [L2Beat](https://l2beat.com/)
@@ -216,62 +220,65 @@ To onboard more people onto Ethereum, the ecosystem must improve the UX/UI. This
 
 ## Economics {#economics}
 
-There are complex crypto-economic factors relating to Ethereum's native asset (ether) and the tokens built on top of it (for example NFTs and ERC20 tokens).
+Economics research in Ethereum broadly follows two approaches: validate the security of mechanisms relying on economic incentives ("microeconomics") and analyse the flows of value between protocols, applications and users ("macroeconomics"). There are complex crypto-economic factors relating to Ethereum's native asset (ether) and the tokens built on top of it (for example NFTs and ERC20 tokens).
 
 #### Background reading {#background-reading-9}
 
-- [Rollup economics from first principles](https://barnabe.substack.com/p/understanding-rollup-economics-from?utm_source=url)
 - [Robust Incentives Group](https://ethereum.github.io/rig/)
+- [ETHconomics workshop at Devconnect](https://www.youtube.com/playlist?list=PLTLjFJ0OQOj5PHRvA2snoOKt2udVsyXEm)
 
 #### Recent research {#recent-research-9}
 
-- [Empirical analysis of EIP1559]([https://arxiv.org/abs/2110.04753)
-- [MEV auctions](https://ethresear.ch/t/mev-auction-auctioning-transaction-ordering-rights-as-a-solution-to-miner-extractable-value/6788)
-- [Circulating supply equilibrium](https://ethresear.ch/t/circulating-supply-equilibrium-for-ethereum-and-minimum-viable-issuance-during-the-proof-of-stake-era/10954#6-enforcing-minimum-viable-issuance-with-a-variable-base-reward-factor-19)
+- [Empirical analysis of EIP1559](https://arxiv.org/abs/2201.05574)
+- [Circulating supply equilibrium](https://ethresear.ch/t/circulating-supply-equilibrium-for-ethereum-and-minimum-viable-issuance-during-the-proof-of-stake-era/10954)
 - [Quantifying MEV: How dark is the forest?](https://arxiv.org/abs/2101.05511)
-- [EIP 1559: One month later](https://arxiv.org/abs/2110.04753)
 
-### Proof-of-stake incentives {#proof-of-stake-incentives}
+### Blockspace and fee markets {#blockspace-fee-markets}
 
-When Ethereum transitions to proof-of-stake, validators will use its native asset (ether) as collateral. The cryptoeconomics of this determines the security of the network. Sophisticated validators may be able to exploit the nuances of the incentive layer to their own advantage by extracting MEV or launching explicit attacks.
+Blockspace markets govern the inclusion of end-user transactions, either directly on Ethereum (Layer 1) or on bridged networks, e.g., rollups (Layer 2). On Ethereum, transactions are submitted to the fee market deployed in-protocol as EIP-1559, protecting the chain from spam and pricing congestion. On both layers, transactions may produce externalities, known as Maximal Extractable Value (MEV), which induce new market structures to capture or manage these externalities.
 
 #### Background reading {#background-reading-10}
 
-- [Robist Incentives Group: PoS incentives](https://ethereum.github.io/beaconrunner/)
+- [Transaction Fee Mechanism Design for the Ethereum Blockchain: An Economic Analysis of EIP-1559 (Tim Roughgarden, 2020)](https://timroughgarden.org/papers/eip1559.pdf)
+- [Simulations of EIP-1559 (Robust Incentives Group)](https://ethereum.github.io/abm1559)
+- [Rollup economics from first principles](https://barnabe.substack.com/p/understanding-rollup-economics-from?utm_source=url)
+- [Flash Boys 2.0: Frontrunning, Transaction Reordering, and Consensus Instability in Decentralized Exchanges](https://arxiv.org/abs/1904.05234)
 
 #### Recent research {#recent-research-10}
 
-- [Vitalik on PBS](https://notes.ethereum.org/s3JToeApTx6CKLJt8AbhFQ#Hybrid-PBS-can-we-use-proposers-only-for-inclusion-of-last-resort)
+- [Multidimensional EIP-1559 video presentation](https://youtu.be/QbR4MTgnCko)
+- [Cross domain MEV](http://arxiv.org/abs/2112.01472)
+- [MEV auctions](https://ethresear.ch/t/mev-auction-auctioning-transaction-ordering-rights-as-a-solution-to-miner-extractable-value/6788)
+
+### Proof-of-stake incentives {#proof-of-stake-incentives}
+
+When Ethereum transitions to proof-of-stake, validators will use its native asset (ether) as collateral. The cryptoeconomics of this determines the security of the network. Sophisticated validators may be able to exploit the nuances of the incentive layer to launch explicit attacks.
+
+#### Background reading {#background-reading-11}
+
+- [Ethereum economics masterclass and economic model](https://github.com/CADLabs/ethereum-economic-model)
+- [Simulations of PoS incentives (Robust Incentives Group)](https://ethereum.github.io/beaconrunner/)
+
+#### Recent research {#recent-research-11}
+
+- [Increasing censorship resistance of transactions under proposer/builder separation (PBS)](https://notes.ethereum.org/s3JToeApTx6CKLJt8AbhFQ)
 - [Three Attacks on PoS Ethereum](https://arxiv.org/abs/2110.10086)
-- [Low-cost attacks on Ethereum 2.0 by sub 1/3 stakeholders](https://arxiv.org/abs/2102.02247)
 
 ### Liquid staking and derivatives {#liquid-staking-and-derivatives}
 
 Liquid staking allows users with less than 32 ETH to receive staking yields by swapping ether for a token representing staked ether that can be used in DeFi. However, the incentives and market dynamics associated with liquid staking are still being discovered, as well as its effect on Ethereum's security (e.g. centralization risks).
 
-#### Background reading {#background-reading-11}
-
-- [Ethresear.ch liquid staking](https://ethresear.ch/search?q=liquid%20staking)
-
-#### Recent research {#recent-research-11}
-
-- [Handling withdrawals from Lido](https://ethresear.ch/t/handling-withdrawals-in-lidos-eth-liquid-staking-protocol/8873)
-- [Withdrawal credentials](https://ethresear.ch/t/withdrawal-credential-rotation-from-bls-to-eth1/8722)
-
-### Fee markets {#fee-markets}
-
-Ethereum transaction fees protect the network from spam, denial-of-service attacks and bad smart-contract code. However, it also affects the end-user by influencing the cost of interacting with Ethereum. Balancing network security with end-user experience is an ongoing challenge that requires further research and development.
-
 #### Background reading {#background-reading-12}
 
-- [EIP-1559 (Robust Incentives Group)](https://ethereum.github.io/abm1559/notebooks/eip1559.html)
+- [Ethresear.ch liquid staking](https://ethresear.ch/search?q=liquid%20staking)
+- [Lido: The road to trustless Ethereum staking](https://blog.lido.fi/the-road-to-trustless-ethereum-staking/)
+- [Rocket Pool: Staking protocol introduction](https://medium.com/rocket-pool/rocket-pool-staking-protocol-part-1-8be4859e5fbd)
 
 #### Recent research {#recent-research-12}
 
-- [EIP-4396](https://eips.ethereum.org/EIPS/eip-4396)
-- [Multidimensional EIP-1559](https://ethresear.ch/t/multidimensional-eip-1559/11651)
-- [Making EIP-1559 more like an AMM curve](https://ethresear.ch/t/make-eip-1559-more-like-an-amm-curve/9082)
-- [Cross domain MEV](http://arxiv.org/abs/2112.01472)
+- [Handling withdrawals from Lido](https://ethresear.ch/t/handling-withdrawals-in-lidos-eth-liquid-staking-protocol/8873)
+- [Withdrawal credentials](https://ethresear.ch/t/withdrawal-credential-rotation-from-bls-to-eth1/8722)
+- [The risks of Liquid Staking Derivatives](https://notes.ethereum.org/@djrtwo/risks-of-lsd)
 
 ## Testing {#testing}
 
@@ -390,7 +397,3 @@ Decentralizing the entire Ethereum tech stack is an important research area. Cur
 #### Recent research {#recent-research-20}
 
 - [Smart contract composability](/developers/docs/smart-contracts/composability/)
-
-## Sources of Funding {#sources-of-funding}
-
-You can get involved with Ethereum research and get paid for it! For example, [the Ethereum Foundation](/foundation/) recently ran an [Academic Grants funding round](/community/grants/academic-grants-round/). You can find information on active and upcoming funding opportunities on [the Ethereum grants page](/community/grants/).
