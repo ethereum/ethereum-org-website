@@ -4,7 +4,11 @@ import { GatsbyImage } from "gatsby-plugin-image"
 import ButtonLink from "./ButtonLink"
 import { Content } from "./SharedStyledComponents"
 
-const HeroContainer = styled.div`
+export interface IIsReverse {
+  isReverse: boolean
+}
+
+const HeroContainer = styled.div<IIsReverse>`
   display: flex;
   justify-content: space-between;
   margin-top: 2rem;
@@ -89,7 +93,20 @@ const StyledButtonLink = styled(ButtonLink)`
   }
 `
 
-const PageHero = ({ content, children, className, isReverse }) => {
+// TODO: fix content type, once an interface is created for the data
+export interface IProps {
+  content: any
+  isReverse?: boolean
+  children?: React.ReactNode
+  className?: string
+}
+
+const PageHero: React.FC<IProps> = ({
+  content,
+  isReverse = false,
+  children,
+  className,
+}) => {
   const { buttons, title, header, subtitle, image, alt } = content
   return (
     <Content>
