@@ -170,6 +170,10 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
           to: "/dao/",
         },
         {
+          text: "desci-page",
+          to: "/desci/",
+        },
+        {
           text: "page-stablecoins-title",
           to: "/stablecoins/",
         },
