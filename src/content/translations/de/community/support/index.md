@@ -35,7 +35,7 @@ _Das ist keine vollständige Liste. Brauchen Sie Hilfe bei der Suche nach Unters
 
 Suchen Sie eine Ethereum-Wallet? [Sehen Sie sich unsere vollständige Liste der Ethereum-Wallets an](/wallets/find-wallet/).
 
-## dApps erstellen {#building-support}
+## DApps erstellen {#building-support}
 
 Erstellen kann durchaus schwer sein. Hier finden Sie einige Breiche mit Schwerpunkt auf Entwicklung mit erfahrenen Ethereum-Entwicklern, die Ihnen gerne helfen.
 
@@ -46,7 +46,7 @@ Erstellen kann durchaus schwer sein. Hier finden Sie einige Breiche mit Schwerpu
 
 In unserem Bereich mit [Ethereum-Entwicklerressourcen](/developers/) finden Sie auch Dokumentationen und Entwicklungsleitfäden.
 
-### Tools {#dapp-tooling}
+### Werkzeuge {#dapp-tooling}
 
 Bezieht sich Ihre Frage auf ein bestimmtes Tool, Projekt oder eine Bibliothek? Die meisten Projekte haben Chat-Server oder Foren, die Unterstützung bieten.
 

@@ -30,7 +30,7 @@ Wenn Sie zweisprachig sind und uns helfen möchten, mehr Menschen zu erreichen, 
 - [BeInCrypto](http://www.beincrypto.com.br) – Nachrichten und Artikel über Kryptowährungen, einschließlich einer Liste von verfügbaren Handelsplätzen in Brasilien
 - [Cointelegraph](http://cointelegraph.com.br/category/analysis) – brasilianische Version von Cointelegraph, einer wichtigen Nachrichtenquelle für Kryptowährungen
 - [Livecoins](http://www.livecoins.com.br/ethereum) – Nachrichten zu Kryptowährungen und Tools
-- [Seudinheiro](http://www.seudinheiro.com/criptomoedas/) – Nachrichten und Berichte über Kryptowährungen
+- [Seudinheiro](http://www.seudinheiro.com/criptomoedas/) - Nachrichten und Berichte über Kryptowährungen
 
 **Bildung**
 
@@ -60,7 +60,7 @@ Wenn Sie zweisprachig sind und uns helfen möchten, mehr Menschen zu erreichen, 
 
 **Für Entwickler**
 
-- [DappLearning](https://github.com/Dapp-Learning-DAO/Dapp-Learning) – eine Lerngruppe, um Mainstream dApp-Projekte zu studieren, wöchentlich findet ein Gedankenaustausch statt
+- [DappLearning](https://github.com/Dapp-Learning-DAO/Dapp-Learning) – eine Lerngruppe, um Mainstream DApp-Projekte zu studieren, wöchentlich findet ein Gedankenaustausch statt
 - [LearnBlockchain](https://learnblockchain.cn/) – eine Community für Entwickler, die Informationen über die Blockchain-Technologie austauschen
 
 **Für Kryptographieforscher**
@@ -88,7 +88,7 @@ Wenn Sie zweisprachig sind und uns helfen möchten, mehr Menschen zu erreichen, 
 - [Ethereum Italia Podcast](https://www.ethereum-italia.it/podcast/) – Ethereum-Podcast auf Italienisch
 - [Microsoft Learn (Solidity)](https://docs.microsoft.com/it-it/learn/modules/blockchain-learning-solidity/) – Lernen, wie man Solidity verwendet
 - [Microsoft Learn (Smart Contracts)](https://docs.microsoft.com/it-it/learn/modules/blockchain-solidity-ethereum-smart-contracts/) – Lernen, wie man mit Solidity Smart Contracts schreibt
-- [Microsoft Learn (dApps)](https://docs.microsoft.com/it-it/learn/modules/blockchain-create-ui-decentralized-apps/) – Erstellen eine Benutzeroberfläche mit dezentralen Anwendungen
+- [Microsoft Learn (DApps)](https://docs.microsoft.com/it-it/learn/modules/blockchain-create-ui-decentralized-apps/) – Erstellen eine Benutzeroberfläche mit dezentralen Anwendungen
 
 ### Spanisch {#es}
 
@@ -106,7 +106,7 @@ Wenn Sie zweisprachig sind und uns helfen möchten, mehr Menschen zu erreichen, 
 
 ### Vietnamesisch {#vi}
 
-- [Tino Group](https://wiki.tino.org/ethereum-la-gi/) – Überblick über Ethereum, dApps, Wallets und FAQs
+- [Tino Group](https://wiki.tino.org/ethereum-la-gi/) – Überblick über Ethereum, DApps, Wallets und FAQs
 - [Tap Chi Bitcoin](https://tapchibitcoin.io/tap-chi/tin-tuc-ethereum-eth) – Webplattform mit Unterseiten für Ethereum-Nachrichten und -Bildung
 - [Coin68](https://coin68.com/ethereum-tieu-diem/) – Kryptowährungsportal mit Ethereum-Nachrichten und Bildungsinhalten
 
