@@ -86,15 +86,15 @@ lang: fa
 **می‌خواهید یک شغل مرتبط با اتریوم پیدا کنید؟**
 
 - [فرصت‌های شغلی ethereum.org](/about/#open-jobs)
-- [Ethereum Foundation job board (Lever)](https://jobs.lever.co/ethereumfoundation)
-- [Ethereum Foundation job board (BambooHR)](https://ethereum.bamboohr.com/jobs/)
-- [فرصت‌های شغلی مرتبط با ارزهای رمزنگاری شده](https://cryptocurrencyjobs.co/ethereum/)
+- [سایت استخدامی بنیاد اتریوم (Lever)](https://jobs.lever.co/ethereumfoundation)
+- [سایت استخدامی بنیاد اتریوم (BambooHR)](https://ethereum.bamboohr.com/jobs/)
+- [فرصت‌های شغلی مرتبط با ارزهای رمزنگاری‌شده](https://cryptocurrencyjobs.co/ethereum/)
 - [Crypto.jobs](https://crypto.jobs/)
 - [مشاغل در ConsenSys](https://consensys.net/careers/)
 - [فهرست فرصت‌های شغلی رمزنگاری](https://cryptojobslist.com/ethereum-jobs)
-- [سایت استخدام Bankless](https://pallet.xyz/list/bankless/jobs)
+- [سایت استخدامی Bankless](https://pallet.xyz/list/bankless/jobs)
 - [فرصت‌های شغلی useWeb3](https://www.useweb3.xyz/jobs)
-- [فرصت‌های شغلی Web3](https://web3.career)
+- [فرصت‌های شغلی وب 3](https://web3.career)
 - [Web3 Army](https://web3army.xyz/)
 
 ## پیوستن به DAO {#decentralized-autonomous-organizations-daos}
@@ -114,4 +114,4 @@ lang: fa
 - [dOrg](https://dOrg.tech) [@dOrg_tech](https://twitter.com/dOrg_tech) - _شرکت جمعی توسعه‌ی Web3 Freelancer که به‌عنوان DAO کار می‌کند_
 - [HausDAO](https://daohaus.club) [@nowdaoit](https://twitter.com/nowdaoit) - _حاکمیت اجتماعی DAOhaus_
 - [Developer DAO](https://www.developerdao.com/) [@developer_dao](https://twitter.com/developer_dao) - _جامعه‌ی سازندگانی که به مالکیت جمعی اینترنت اعتقاد دارند_
-- [DXdao](https://DXdao.eth.link/) [@DXdao](https://twitter.com/DXdao_) - _توسعه غیرمتمرکز & حاکمیت dApps & پروتکل ها_
+- [DXdao](https://DXdao.eth.link/) [@DXdao](https://twitter.com/DXdao_) - _توسعه غیرمتمرکز، حاکمیت dAppها و پروتکل‌ها_
