@@ -44,7 +44,7 @@ Die meisten Layer-2-Lösungen basieren auf einem Server oder einer Gruppe von Se
 
 Eine bestimmte Layer-2-Instanz kann offen sein und von vielen Anwendungen gemeinsam genutzt werden, oder sie kann von einem Projekt bereitgestellt werden und nur dessen Anwendung unterstützen.
 
-#### Warum wird Layer-2 gebraucht? {#why-is-layer-2-needed}
+#### Warum wird Eth2 gebraucht? {#why-is-layer-2-needed}
 
 - Mehr Transaktionen pro Sekunde verbessern die Benutzererfahrung erheblich und reduzieren die Netzwerküberlastung auf dem Ethereum Mainnet.
 - Transaktionen werden zu einer einzigen Transaktion auf dem Ethereum Mainnet zusammengefasst, wodurch die Gasgebühren für Benutzer gesenkt werden. Dadurch wiederum wird Ethereum für die Menschen überall integrativer und zugänglicher.
@@ -86,7 +86,7 @@ Lernen Sie mehr über [Validium](/developers/docs/scaling/validium/).
 
 ## Warum werden so viele Skalierungslösungen benötigt? {#why-do-we-need-these}
 
-- Mehrere Lösungen können dazu beitragen, die Gesamtüberlastung in einem Teil des Netzwerks zu verringern, und verhindern außerdem einzelne Fehlerquellen.
+- Mehrere Lösungen können dazu beitragen, die Gesamtüberlastung in einem Teil des Netzes zu verringern, und verhindern außerdem einzelne Fehlerquellen.
 - Das Ganze ist größer als die Summe seiner Teile. Es können verschiedene Lösungen existieren und miteinander harmonieren, was einen exponentiellen Effekt auf die künftige Transaktionsgeschwindigkeit und den Durchsatz ermöglicht.
 - Nicht alle Lösungen erfordern die direkte Nutzung des Ethereum-Konsens-Algorithmus, und Alternativen können Vorteile bieten, die sonst nur schwer zu erreichen wären.
 - Eine einzige Skalierungslösung reicht nicht aus, um die [Ethereum Vision](/upgrades/vision/) zu erfüllen.

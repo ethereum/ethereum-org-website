@@ -7,7 +7,7 @@ sidebar: true
 
 ## Voraussetzungen {#prerequisites}
 
-Sie sollten ein gutes Verständnis für alle grundlegenden Themen und ein umfassendes Verständnis für [Ethereum-Skalierung](/developers/docs/scaling/) haben. Die Implementierung von Skalierungslösungen wie Rollups ist ein fortgeschrittenes Thema, da die Technologie weniger erprobt ist und weiter erforscht und entwickelt wird.
+Sie sollten ein gutes Verständnis aller grundlegenden Themen und ein umfassendes Verständnis für [Ethereum-Skalierung](/developers/docs/scaling/) haben. Die Implementierung von Skalierungslösungen wie Rollups ist ein fortgeschrittenes Thema, da die Technologie weniger erprobt ist und weiter erforscht und entwickelt wird.
 
 Suchen Sie nach einer anfängerfreundlicheren Einführung? Siehe unsere [Einführung in Layer 2](/layer-2/).
 
@@ -23,7 +23,7 @@ Da sie sich auf Layer 2 befinden, können ZK-Rollups optimiert werden, um die Tr
 
 ### Vor- und Nachteile {#zk-pros-and-cons}
 
-| Vorteile                                                                                                                                  | Nachteile                                                                                                               |
+| Vorteile                                                                                                                                  | Kontra                                                                                                                  |
 | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
 | Schnellere Finalzeit, da der Zustand sofort überprüft wird, sobald die Beweise an die Hauptkette gesendet werden.                         | Einige haben keine EVM-Unterstützung.                                                                                   |
 | Nicht anfällig für wirtschaftliche Angriffe, für die [Optimistische Rollups](#optimistic-pros-and-cons) anfällig sein können.             | Die Validitätsnachweise sind rechenintensiv – für Anwendungen mit geringer Aktivität auf der Blockchain nicht sinnvoll. |
