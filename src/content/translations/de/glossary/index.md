@@ -696,7 +696,7 @@ Eine Familie kryptographischer Hashfunktionen, die vom National Institute of Sta
 
 Eine [Proof-of-Stake](#pos)-Kette, die von der [Beacon Chain](#beacon-chain) koordiniert und von [Validatoren](#validator) gesichert wird. Im Rahmen des Shard-Chain-Upgrades werden dem Netzwerk 64 weitere hinzugefügt. Shard Chains werden einen erhöhten Transaktionsdurchsatz für Ethereum bieten, indem sie zusätzliche Daten für [Layer-2](#layer-2)-Lösungen wie [Optimistic Rollups](#optimistic-rollups) und [ZK-Rollups](#zk-rollups) bereitstellen.
 
-<DocLink to="/upgrades/shard-chains">
+<DocLink to="/upgrades/sharding">
   Shard Chains
 </DocLink>
 

@@ -17,7 +17,7 @@ Optimistische Rollups laufen parallel zur Ethereum-Hauptkette auf Layer 2. Sie b
 
 Mit optimistischen Rollups werden Transaktionen als `Calldata` in die Ethereum-Hauptkette geschrieben, wodurch sie weiter optimiert werden, indem die Gaskosten reduziert werden.
 
-Da die Berechnung der langsame und teure Teil der Verwendung von Ethereum ist, können optimistische Rollups die Skalierbarkeit je nach Transaktion bis zu 10-100x verbessern. Diese Zahl wird mit der Einführung von [Shard-Chains](/upgrades/shard-chains) noch weiter steigen, da mehr Daten verfügbar sein werden, wenn eine Transaktion angefochten wird.
+Da die Berechnung der langsame und teure Teil der Verwendung von Ethereum ist, können optimistische Rollups die Skalierbarkeit je nach Transaktion bis zu 10-100x verbessern. Diese Zahl wird mit der Einführung von [Shard-Chains](/upgrades/sharding) noch weiter steigen, da mehr Daten verfügbar sein werden, wenn eine Transaktion angefochten wird.
 
 ### Transaktionen anfechten {#disputing-transactions}
 
