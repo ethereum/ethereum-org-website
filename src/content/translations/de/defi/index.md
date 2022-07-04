@@ -125,7 +125,7 @@ Es gibt zwei etablierte Möglichkeiten, um Geld von dezentralen Anbietern zu lei
 - Pool-basiert, das heißt Kreditgeber stellen Geldmittel (Liquidität) für ein Pool bereit, aus dem Kreditnehmer die Mittel leihen können.
 
 <ButtonLink to="/dapps/?category=finance">
-  Siehe Lending-DApps
+  Siehe Lending-dApps
 </ButtonLink>
 
 Auf dezentrale Kreditanbieter zurückzugreifen, bietet viele Vorteile...

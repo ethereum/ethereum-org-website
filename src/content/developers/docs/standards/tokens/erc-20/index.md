@@ -25,7 +25,7 @@ where the ERC-20 plays its role! This standard allows developers to build token 
 **What is ERC-20?**
 
 The ERC-20 introduces a standard for Fungible Tokens, in other words, they have a property that makes each Token be exactly
-the same (in type and value) of another Token. For example, an ERC-20 Token acts just like the ETH, meaning that 1 Token
+the same (in type and value) as another Token. For example, an ERC-20 Token acts just like the ETH, meaning that 1 Token
 is and will always be equal to all the other Tokens.
 
 ## Prerequisites {#prerequisites}

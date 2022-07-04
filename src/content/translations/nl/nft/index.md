@@ -406,7 +406,7 @@ Geschat wordt dat upgrades voor schaalbaarheid het netwerk toestaan om tussen de
 
 [Vitalik Buterin over het potentieel voor transacties per seconde met sharding](https://twitter.com/VitalikButerin/status/1312905884549300224)
 
-Minimaal zal sharding 64 keer de hoeveelheid transacties van vandaag de dag toestaan, die momenteel op ongeveer 15 transacties staat. Dat is de hoeveelheid shardketens (extra gegevens en capaciteit) die wordt geïntroduceerd. [Meer over shardketens](/upgrades/shard-chains/)
+Minimaal zal sharding 64 keer de hoeveelheid transacties van vandaag de dag toestaan, die momenteel op ongeveer 15 transacties staat. Dat is de hoeveelheid shardketens (extra gegevens en capaciteit) die wordt geïntroduceerd. [Meer over shardketens](/upgrades/sharding/)
 
 Dat betekent dat we kunnen inschatten hoelang het zal duren om 100.000 transacties te verwerken zodat we het kunnen vergelijken met het bovenstaande voorbeeld van Visa.
 

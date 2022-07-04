@@ -33,9 +33,12 @@ Certain EIPs relate to application-level standards (e.g. a standard smart-contra
 - [ERC-721](/developers/docs/standards/tokens/erc-721/) - A standard interface for non-fungible tokens, like a deed for artwork or a song.
 - [ERC-777](/developers/docs/standards/tokens/erc-777/) - A token standard improving over ERC-20.
 - [ERC-1155](/developers/docs/standards/tokens/erc-1155/) - A token standard which can contain both fungible and non-fungible assets.
+- [ERC-4626](/developers/docs/standards/tokens/erc-4626/) - A tokenized vault standard designed to optimize and unify the technical parameters of yield-bearing vaults.
 
 Learn more about [token standards](/developers/docs/standards/tokens/).
 
 ## Further reading {#further-reading}
+
+- [Ethereum Improvement Proposals (EIPs)](/eips/)
 
 _Know of a community resource that helped you? Edit this page and add it!_

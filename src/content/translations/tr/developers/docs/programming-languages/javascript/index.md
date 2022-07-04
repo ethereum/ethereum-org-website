@@ -32,7 +32,7 @@ Kendi akıllı sözleşmenizi yazmak isteyen bir JavaScript geliştiricisiyseniz
 
 ### Ethereum sanal makinesi {#the-ethereum-virtual-machine}
 
-[Ethereum'un sanal makinesinin](/en/developers/docs/evm/) bir JavaScript uygulaması bulunuyor. Bu uygulama, en güncel çatallanma kurallarını destekler. Çatallanma kuralları, planlanan yükseltmelerin bir sonucu olarak EVM'de yapılan değişiklikleri ifade eder.
+[Ethereum'un sanal makinesinin](/developers/docs/evm/) bir JavaScript uygulaması bulunuyor. Bu uygulama, en güncel çatallanma kurallarını destekler. Çatallanma kuralları, planlanan yükseltmelerin bir sonucu olarak EVM'de yapılan değişiklikleri ifade eder.
 
 Daha iyi anlamak için kontrol edebileceğiniz çeşitli JavaScript paketlerine ayrılmıştır:
 

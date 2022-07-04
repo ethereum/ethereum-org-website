@@ -14,7 +14,9 @@ const GitHubSlugger = require("github-slugger")
 // TODO we should auto-run this script when new markdown files are added to the project
 
 const toc = {}
+
 let curLevel = [0, 0, 0]
+let curMaxLevel = 1
 
 const walk = (dir, doc) => {
   let results = []
@@ -57,10 +59,19 @@ const addHeaderID = (line, slugger, write = false) => {
     .replace(/\{#[^}]+\}/, "")
     .trim()
   const headingLevel = line.slice(0, line.indexOf(" "))
-  curLevel[headingLevel.length - 1]++
-  for (let l = headingLevel.length; l < 3; l++) {
+
+  curMaxLevel =
+    headingLevel.length > curMaxLevel ? headingLevel.length : curMaxLevel
+
+  const headingLevelArrayIndex = headingLevel.length - 1
+  if (!curLevel[headingLevelArrayIndex]) {
+    curLevel[headingLevelArrayIndex] = 0
+  }
+  curLevel[headingLevelArrayIndex]++
+  for (let l = headingLevel.length; l < curMaxLevel; l++) {
     curLevel[l] = 0
   }
+  curMaxLevel = 1
   const headerNumber = curLevel.join(".")
   let slug = null
   if (!write) {

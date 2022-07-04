@@ -627,9 +627,9 @@ contract CryptoPizza is IERC721, ERC165 {
         uint256 size;
         // Currently there is no better way to check if there is a contract in an address
         // than to check the size of the code at that address.
-        // Bkz. https://ethereum.stackexchange.com/a/14016/36603
-        // bunun nasıl çalıştığı hakkında daha fazla ayrıntı için.
-        // TODO Serenity sürümünden önce bunu tekrar kontrol edin,
+        // Bunun nasıl çalıştığı hakkında daha fazla ayrıntı için
+        // bkz. https://ethereum.stackexchange.com/a/14016/36603.
+        // Serenity sürümünden önce bunu tekrar kontrol edin,
         // çünkü o zaman tüm adresler sözleşme olacaktır.
         // solium-disable-next-line security/no-inline-assembly
         assembly {

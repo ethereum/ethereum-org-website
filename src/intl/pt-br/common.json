@@ -58,8 +58,6 @@
   "consensus-run-beacon-chain": "Executar um cliente de consenso",
   "consensus-run-beacon-chain-desc": "Ethereum precisa da maior quantidade possível de clientes sendo executados. Ajude com este bem público do Ethereum!",
   "consensus-when-shipping": "Quando estará disponível?",
-  "eth-upgrade-what-happened": "O que aconteceu com \"Eth2?\"",
-  "eth-upgrade-what-happened-description": "O termo \"Eth2\" está sendo descontinuado conforme o processo de integração se aproxima. A \"camada de consenso\" representa o que anteriormente era conhecido como \"Eth2\".",
   "ethereum": "Ethereum",
   "ethereum-upgrades": "Melhorias na Ethereum",
   "ethereum-brand-assets": "Ativos da marca Ethereum",

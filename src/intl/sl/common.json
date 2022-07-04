@@ -59,8 +59,6 @@
   "consensus-run-beacon-chain": "Zaženite soglasje stranke",
   "consensus-run-beacon-chain-desc": "Ethereum potrebuje čim več aktivnih odjemalcev. Pomagajte v javno dobro Ethereuma.",
   "consensus-when-shipping": "Kdaj bo na voljo?",
-  "eth-upgrade-what-happened": "Kaj se je zgodilo z \"Eth2?\"",
-  "eth-upgrade-what-happened-description": "Izraz \"Eth2\" je z bližajočo se spojitvijo postal zastarel. \"Plast soglasja\" povzema, kar je bilo prej znano kot \"Eth2.\"",
   "ethereum": "Ethereum",
   "ethereum-upgrades": "Ethereum nadgradnje",
   "ethereum-brand-assets": "Gradivo blagovne znamke Ethereum",

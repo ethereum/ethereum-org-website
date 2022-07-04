@@ -27,6 +27,8 @@ import {
   Page,
   GradientContainer,
 } from "../components/SharedStyledComponents"
+import FeedbackCard from "../components/FeedbackCard"
+
 import { translateMessageId } from "../utils/translations"
 import { getData } from "../utils/cache"
 
@@ -333,6 +335,7 @@ const StablecoinsPage = ({ data }) => {
         const ethereumStablecoinData = stablecoinData.filter(
           (stablecoin) =>
             ethereumData.findIndex(
+              // eslint-disable-next-line eqeqeq
               (etherToken) => stablecoin.id == etherToken.id
             ) > -1
         )
@@ -826,6 +829,9 @@ const StablecoinsPage = ({ data }) => {
           <Translation id="page-stablecoins-types-of-stablecoin" />
         </H2>
         <StablecoinBoxGrid items={features} />
+      </Content>
+      <Content>
+        <FeedbackCard />
       </Content>
     </Page>
   )

@@ -100,7 +100,7 @@ A lot of the source content contains tags and variables, which are highlighted i
 
 You may notice full links to pages on ethereum.org or other websites.
 
-These should be identical to the source and not changed or translated. If you translate a link or change it in any way, even just removing a part of it, like a backslash (/), this will lead to broken and unusable links.
+These should be identical to the source and not changed or translated. If you translate a link or change it in any way, even just removing a part of it, like a slash (/), this will lead to broken and unusable links.
 
 The best way to handle links is to copy them directly from the source, either by clicking on them or using the ‘Copy Source’ button (Alt+C).
 
@@ -253,8 +253,8 @@ Some examples of what to be particularly mindful of:
 
 - When translating dates, there are a number of considerations and differences based on the language. These include the date format, separator, capitalization and leading zeros. There are also differences between full-length and numerical dates.
   - Some examples of different date formats:
-    - English UK (mm/dd/yyyy) – 1st January, 2022
-    - English US (dd/mm/yyyy) – January 1, 2022
+    - English UK (dd/mm/yyyy) – 1st January, 2022
+    - English US (mm/dd/yyyy) – January 1st, 2022
     - Chinese (yyyy-mm-dd) – 2022 年 1 月 1 日
     - French (dd/mm/yyyy) – 1er janvier 2022
     - Italian (dd/mm/yyyy) – 1º gennaio 2022

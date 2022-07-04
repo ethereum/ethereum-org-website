@@ -1,0 +1,296 @@
+name: Suggest a wallet
+description: Suggest a new wallet to list on ethereum.org
+title: Suggest a wallet
+labels: ["wallet :purse:"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Before suggesting a wallet, make sure you've read [our listing policy](https://www.ethereum.org/en/contributing/adding-wallets/). Only continue with the issue if the wallet meets the criteria listed there.
+  - type: markdown
+    id: project_info
+    attributes:
+      value: "## Project info"
+  - type: input
+    id: wallet_name
+    attributes:
+      label: Wallet name
+      description: Please provide the official name of the wallet.
+    validations:
+      required: true
+  - type: textarea
+    id: wallet_description
+    attributes:
+      label: Wallet description
+      description: Please provide a short 1-2 sentence description of the wallet. Avoid unsubstantiated marketing claims like “the best Ethereum wallet”.
+    validations:
+      required: true
+  - type: textarea
+    id: wallet_logo
+    attributes:
+      label: Wallet logo
+      description: |
+        Please provide an SVG or hi-res transparent PNG
+        Tip: You can attach images by clicking this area to highlight it and then dragging files in.
+    validations:
+      required: true
+  - type: input
+    id: wallet_background
+    attributes:
+      label: Background color for brand logo
+      description: Please provide a hex code for the brand color. This will be added to the background of the wallet card.
+    validations:
+      required: true
+  - type: input
+    id: wallet_url
+    attributes:
+      label: URL to the project
+      description: Please provide a URL (e.g. to the website of the wallet).
+    validations:
+      required: true
+  - type: input
+    id: wallet_live_date
+    attributes:
+      label: When did the wallet go live to users?
+      description: Please provide a date when the wallet was usable by the public
+    validations:
+      required: true
+  - type: input
+    id: wallet_active_development_team
+    attributes:
+      label: Does the wallet have an active development team?
+      description: Are developers actively working on the wallet? Provide proof that the wallet is actively being worked on (ex. GitHub repo link).
+    validations:
+      required: true
+  - type: input
+    id: wallet_globally_accessible
+    attributes:
+      label: Is the wallet globally accessible?
+      description: Please list any KYC requirements or geographic limitations of the wallet, if any exist.
+    validations:
+      required: true
+  - type: input
+    id: wallet_languages
+    attributes:
+      label: Is the wallet available in multiple languages?
+      description: Please list languages that the wallet actively supports.
+  - type: textarea
+    id: wallet_socials
+    attributes:
+      label: What social links are there for the project?
+      description: Please provide social links for the wallet (Discord, Twitter, etc.)
+    validations:
+      required: true
+  - type: markdown
+    id: device
+    attributes:
+      value: "## Device"
+  - type: textarea
+    id: wallet_mobile
+    attributes:
+      label: Does the wallet have a mobile app? If yes, which operating systems are supported (iOS, Android)?
+      description: Please provide app store links for the operating systems supported.
+  - type: textarea
+    id: wallets_desktop
+    attributes:
+      label: Does the wallet have a desktop app? If yes, which operating systems are supported (Windows, Mac, Linux)?
+      description: Please provide links and information for the desktop operating systems supported.
+  - type: textarea
+    id: wallets_browser
+    attributes:
+      label: Does the wallet have a browser extension? If yes, which browsers are supported (Chromium, Firefox, Safari)?
+      description: Please provide links and information for the browsers that are supported.
+  - type: textarea
+    id: wallets_hardware
+    attributes:
+      label: Is it a hardware wallet?
+      description: How does it broadcast signed transactions (e.g. USB, Bluetooth, QR code)?
+  - type: markdown
+    id: security
+    attributes:
+      value: "## Security"
+  - type: input
+    id: wallet_source_code
+    attributes:
+      label: Is the source code for the wallet fully open-source?
+      description: If yes, please provide a direct link to the repository.
+  - type: input
+    id: wallet_license
+    attributes:
+      label: What license is the wallet software released under?
+      description: Please provide information on the software license used for the wallet.
+  - type: textarea
+    id: wallet_custodial
+    attributes:
+      label: Who holds the private keys?
+      description: |
+        Users must have access to private keys without reliance on a company remaining in business to be listed as a wallet.
+        Do users have access to their public and private keys? Does anyone else? If the company/project were to disappear, would users still be able to access their funds?
+    validations:
+      required: true
+  - type: textarea
+    id: wallet_security_documentation
+    attributes:
+      label: Please describe the measures taken to ensure the wallet's security and provide documentation wherever possible
+      description: Please provide a link to any security audits, code reports, and bug bounties. If you haven't been audited but think the wallet should be listed anyway, explain here.
+  - type: input
+    id: wallet_smart_contract_audit
+    attributes:
+      label: Has the wallet's smart contract code or security modules been audited?
+      description: If yes, provide a link to any audits.
+  - type: input
+    id: wallet_security_team
+    attributes:
+      label: Does the wallet have an internal security team?
+      description: If yes, please provide details.
+  - type: textarea
+    id: wallet_security_testing
+    attributes:
+      label: Any other security testing that should be noted?
+      description: Please note any other security precautions taken.
+  - type: textarea
+    id: wallet_scam_protection
+    attributes:
+      label: Scam protection?
+      description: Does the wallet employ any practices to warn users against potential scams (e.g. when interacting with suspicious accounts/contracts)?
+  - type: markdown
+    id: features
+    attributes:
+      value: "## Features"
+  - type: dropdown
+    id: wallet_hardware_support
+    attributes:
+      label: Does the wallet support connecting to a hardware wallet?
+      options:
+        - "Yes"
+        - "No"
+    validations:
+      required: true
+  - type: dropdown
+    id: wallet_walletconnect
+    attributes:
+      label: Does the wallet support WalletConnect?
+      options:
+        - "Yes"
+        - "No"
+    validations:
+      required: true
+  - type: input
+    id: wallet_rpc_importing
+    attributes:
+      label: Does the wallet support importing Ethereum RPC endpoints?
+      description: Please provide documentation on how a user can import an Ethereum RPC into the wallet.
+  - type: dropdown
+    id: wallet_nft_viewing
+    attributes:
+      label: Does the wallet support viewing and interacting with NFTs?
+      options:
+        - "Yes"
+        - "No"
+    validations:
+      required: true
+  - type: input
+    id: wallet_dapp_support
+    attributes:
+      label: Does the wallet support connecting to Ethereum applications?
+      description: Please provide documentation for how users connect to applications. List examples (ie. connect wallet to dapp, in wallet browser, etc.)
+  - type: input
+    id: wallet_direct_staking
+    attributes:
+      label: Does the wallet support staking directly?
+      description: Please provide documentation on direct staking this wallet supports.
+  - type: input
+    id: wallet_swaps
+    attributes:
+      label: Does the wallet support swaps directly?
+      description: Please provide documentation on swaps.
+  - type: input
+    id: wallet_multi_chain_support
+    attributes:
+      label: Does the wallet support multi-chain networks?
+      description: Please provide documentation on multi-chain networks this wallet supports.
+  - type: input
+    id: wallet_l2_support
+    attributes:
+      label: Does the wallet support Ethereum layer 2 networks?
+      description: Please provide documentation on Ethereum layer 2 networks this wallet supports.
+  - type: input
+    id: wallet_customize_gas_fees
+    attributes:
+      label: Does the wallet allow the user to customize gas fees?
+      description: Please provide documentation on how users can customize gas fees for transactions.
+  - type: input
+    id: wallet_ens_support
+    attributes:
+      label: Does the wallet support sending transactions to ENS addresses?
+      description: Please provide information on ENS support.
+  - type: input
+    id: wallet_erc_20_support
+    attributes:
+      label: Does the wallet support importing or automatically querying and displaying ERC-20 tokens?
+      description: Please provide documentation on how to import tokens into the wallet.
+  - type: input
+    id: wallet_eip_1559_support
+    attributes:
+      label: Does the wallet support EIP-1559 (type 2) transactions?
+      description: Please provide information on the type of transactions this wallet supports.
+  - type: markdown
+    id: finance
+    attributes:
+      value: "## Finance"
+  - type: input
+    id: wallet_fiat_onramp
+    attributes:
+      label: Does the wallet have fiat on-ramps through credit/debit cards, wire transfers, or bank transfers (ACH)?
+      description: Please provide documentation on how a user is able to onboard and purchase crypto in the wallet.
+  - type: input
+    id: wallet_fiat_withdrawals
+    attributes:
+      label: Does the wallet support withdrawals to fiat?
+      description: an a user cash out their crypto assets directly to a card or bank account? Please provide documentation.
+  - type: markdown
+    id: smart_contract
+    attributes:
+      value: "## Smart contract"
+  - type: input
+    id: wallet_multi_signature
+    attributes:
+      label: Is the wallet a multi-signature wallet?
+      description: Please provide documentation on how users set up and use the multisig functionality for the wallet.
+  - type: input
+    id: wallet_social_recovery
+    attributes:
+      label: Does the wallet support social recovery?
+      description: Please provide documentation on how users set up guardians and use social recovery for the wallet.
+  - type: markdown
+    id: support
+    attributes:
+      value: "## Support"
+  - type: textarea
+    id: wallet_contact
+    attributes:
+      label: Who can the ethereum.org team can contact regarding the wallet in future?
+      description: |
+        If possible, provide a Telegram, Discord, or Twitter username.
+        Please note that as a result of any future dispute the wallet may be temporarily removed from ethereum.org. Having a contact person allows lets us avoid this situation and resolve issues more quickly.
+  - type: textarea
+    id: wallet_support_team
+    attributes:
+      label: Does the wallet have a dedicated support team?
+      description: |
+        Where should we send users that are having issues?
+        How fast is the support?
+  - type: textarea
+    id: wallet_educational_resources
+    attributes:
+      label: What educational resources/documentation do you provide to users?
+      description: Please provide links to developer documentation, user documentation, and/or educational resources.
+  - type: markdown
+    id: extra
+    attributes:
+      value: "## Extra"
+  - type: textarea
+    id: wallet_extra
+    attributes:
+      label: Does the wallet have any integrated tools not mentioned above?
+      description: Please provide any information about extra features this wallet has that we may have missed in the above criteria. (e.g. privacy features, transaction batching, etc).

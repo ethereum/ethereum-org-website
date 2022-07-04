@@ -6,7 +6,8 @@ import { useIntl } from "gatsby-plugin-intl"
 import { Location } from "@reach/router"
 import { getSrc } from "gatsby-plugin-image"
 
-import { translateMessageId, languageMetadata } from "../utils/translations"
+import { languageMetadata } from "../utils/languages"
+import { translateMessageId } from "../utils/translations"
 
 const supportedLanguages = Object.keys(languageMetadata)
 

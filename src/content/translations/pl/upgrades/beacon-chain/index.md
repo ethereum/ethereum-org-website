@@ -17,7 +17,7 @@ summaryPoint4: Być może znasz to jako "etap 0" w hamonogramie technicznym
 
 ## Co robi łańcuch śledzący? {#what-does-the-beacon-chain-do}
 
-Łańcuch śledzący będzie prowadził lub koordynował rozszerzoną sieć [fragmentów](/upgrades/shard-chains/) i [zastawiających](/staking/). Ale nie będzie jak sieć główna [Ethereum](/glossary/#mainnet) dzisiaj. Nie może on obsługiwać kont ani inteligentnych kontraktów.
+Łańcuch śledzący będzie prowadził lub koordynował rozszerzoną sieć [fragmentów](/upgrades/sharding/) i [zastawiających](/staking/). Ale nie będzie jak sieć główna [Ethereum](/glossary/#mainnet) dzisiaj. Nie może on obsługiwać kont ani inteligentnych kontraktów.
 
 Rola łańcucha śledzącego z czasem się zmieni, ale jest to podstawowy komponent [bezpiecznego, zrównoważonego i skalowalnego Ethereum, nad którym pracujemy](/upgrades/vision/).
 
@@ -33,7 +33,7 @@ Zastawianie i stawanie się walidatorem jest łatwiejsze niż [wydobywanie](/dev
 Jeżeli jesteś zainteresowany staniem się walidatorem i pomocą w zabezpieczaniu łańcucha śledzącego, <a href="/staking/">dowiedz się więcej o zastawianiu</a>.
 </InfoBanner>
 
-Jest to również ważna zmiana w stosunku do drugiej aktualizacji Eth2: [łańcuchów szczątkowych](/upgrades/shard-chains/).
+Jest to również ważna zmiana w stosunku do drugiej aktualizacji Eth2: [łańcuchów szczątkowych](/upgrades/sharding/).
 
 ### Ustawianie łańcuchów szczątkowych {#setting-up-for-shard-chains}
 
@@ -55,7 +55,7 @@ Wszystkie ulepszenia Eth2 są poniekąd wzajemnie powiązane. Więc podsumujmy, 
 
 Łańcuch śledzący będzie początkowo odrębny od głównej sieci Ethereum, której używamy dziś. Jednak ostatecznie zostaną one połączone.
 
-<ButtonLink to="/upgrades/shard-chains/">Dokowanie</ButtonLink>
+<ButtonLink to="/upgrades/sharding/">Dokowanie</ButtonLink>
 
 <Divider />
 

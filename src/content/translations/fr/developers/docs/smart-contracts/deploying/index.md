@@ -13,7 +13,7 @@ Déployer un contrat intelligent consiste à envoyer sur la blockchain une trans
 
 Il est préférable d'avoir compris en quoi consiste les [réseaux Ethereum](/developers/docs/networks/), les [transactions](/developers/docs/transactions/) et l'[anatomie des contrats intelligents](/developers/docs/smart-contracts/anatomy/) avant de déployer des contrats intelligents.
 
-Le déploiement d'un contrat coûte également des ethers, nous vous recommandons donc de vous familiariser avec le [carburant et les frais](/developers/docs/gas/) sur Ethereum.
+Le déploiement d'un contrat coûte également des ethers, nous vous recommandons donc de vous familiariser avec le [gaz et les frais](/developers/docs/gas/) sur Ethereum.
 
 Enfin, comme vous devrez compiler votre contrat avant de le déployer, assurez-vous d'avoir lu la page sur la [compilation des contrats intelligents](/developers/docs/smart-contracts/compiling/).
 

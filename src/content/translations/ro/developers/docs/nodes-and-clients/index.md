@@ -162,7 +162,7 @@ Hyperledger Besu este un client Ethereum de nivel de întreprindere pentru rețe
 
 #### Erigon {#erigon}
 
-Erigon, cunoscut anterior sub denumirea de Turbo-Geth, este un fork Go Ethereum ce vizează creşterea vitezei şi a eficienţei spaţiului pe disc. Erigon este o implementare complet reproiectată a lui Ethereum, actualmente scrisă în Go, dar care urmează să fie implementată și în alte limbaje. Scopul Erigon este de a oferi o implementare mai rapidă, mai modulară și mai optimizată a lui Ethereum. It can perform a full archive node sync using less than 2TB of disk space, in under 3 days
+Erigon, cunoscut anterior sub denumirea de Erigon, este un fork Go Ethereum ce vizează creşterea vitezei şi a eficienţei spaţiului pe disc. Erigon este o implementare complet reproiectată a lui Ethereum, actualmente scrisă în Go, dar care urmează să fie implementată și în alte limbaje. Scopul Erigon este de a oferi o implementare mai rapidă, mai modulară și mai optimizată a lui Ethereum. It can perform a full archive node sync using less than 2TB of disk space, in under 3 days
 
 ### Moduri de sincronizare {#sync-modes}
 

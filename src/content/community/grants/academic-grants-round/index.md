@@ -8,8 +8,8 @@ sidebarDepth: 2
 
 # Academic Grants Round {#academic-grants-round}
 
-<InfoBanner>
-  This call is now open! Apply before May 8, 2022! <a href="https://esp.ethereum.foundation/academic-grants/" target="_blank">Apply here</a>.
+<InfoBanner emoji=":warning:" isWarning={true}>
+  The deadline has passed. Applications are now closed.
 </InfoBanner>
 
 _The Ethereum Foundation is sponsoring a wave of grants to support Ethereum-related academic work. This grants round has up to $750,000 in total available. Proposals are due <b>May 8, 2022</b>. All of the details you’ll need to apply can be found below._
@@ -99,9 +99,9 @@ title="What makes for a good proposal?">
 	title="What stage does my idea or project need to be in?">
 
    <p>If you have a follow-up idea of a previous research you conducted or if your research is aligned with the wishlist domains, we want to hear about it! The goal is to advance knowledge that pushes the Ethereum ecosystem forward.</p>
-   
+
 </ExpandableCard>
-   
+
 <ExpandableCard
 	contentPreview="Formal research output which is open-source."
 	title="What should the output be?">
@@ -125,7 +125,7 @@ title="What is the expected duration of the research project?">
    <p>We envision projects to take between 6 to 12 months, however, we are open to some flexibility depending on the project proposal.</p>
 
 </ExpandableCard>
- 
+
 <ExpandableCard
 	contentPreview="On a rolling basis."
 	title="Are applications evaluated on a rolling basis or at the end of the deadline?">
@@ -133,11 +133,10 @@ title="What is the expected duration of the research project?">
    <p>Project submissions will be evaluated on a rolling basis and contact will be made with each applicant to inform about the evaluation outcome.</p>
 
 </ExpandableCard>
- 
+
 <ExpandableCard
-	contentPreview="Reach out to the Ecosystem Support Program!"
-	title="What if I miss the deadline?"
->
+contentPreview="Reach out to the Ecosystem Support Program!"
+title="What if I miss the deadline?">
 
    <p>We encourage you to submit an inquiry for support through the Ecosystem Support Program.</p>
 

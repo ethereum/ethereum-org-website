@@ -37,7 +37,7 @@ Ha tanúsítasz egy rosszindulatú blokkot, akkor elveszted a letéted.
 
 ### A Beacon Chain {#the-beacon-chain}
 
-Amikor az Ethereum leváltja a proof-of-work-öt a proof-of-stake-kel, hozzáadott komplexitás fog életbe lépni a [shard láncok](/upgrades/shard-chains/) által. Ezek különálló blokkláncok, melynek szükségük van validátorokra, hogy tranzakciókat dolgozzanak fel és új blokkokat hozzanak létre. A terv az, hogy 64 shard láncot fogunk létrehozni, melyeknek megosztottan egyet kell érteniük a hálózat állapotára vonatkozóan. Így további koordináció szükségeltetik, ezt pedig [a beacon chain](/upgrades/beacon-chain/) fogja biztosítani.
+Amikor az Ethereum leváltja a proof-of-work-öt a proof-of-stake-kel, hozzáadott komplexitás fog életbe lépni a [shard láncok](/upgrades/sharding/) által. Ezek különálló blokkláncok, melynek szükségük van validátorokra, hogy tranzakciókat dolgozzanak fel és új blokkokat hozzanak létre. A terv az, hogy 64 shard láncot fogunk létrehozni, melyeknek megosztottan egyet kell érteniük a hálózat állapotára vonatkozóan. Így további koordináció szükségeltetik, ezt pedig [a beacon chain](/upgrades/beacon-chain/) fogja biztosítani.
 
 A Beacon Chain állapot információkat kap a shardoktól, melyet elérhetővé tesz a többi shard számára, hogy azok szinkronban tudjanak maradni. A Beacon Chain fogja kezelni a validátorokat is a letétbetételtől egészen a jutalmak és büntetések kiosztásáig.
 

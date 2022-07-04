@@ -17,7 +17,7 @@ summaryPoint4: Puede que se describa como «Fase 0» en las hojas de ruta técni
 
 ## ¿Qué hace la cadena de baliza? {#what-does-the-beacon-chain-do}
 
-La cadena de baliza conducirá o coordinará la expansión de la red de [fragmentos](/upgrades/shard-chains/) y [participantes](/staking/). Pero no será como la [red principal de Ethereum](/glossary/#mainnet) de hoy en día: no puede manejar cuentas o contratos inteligentes.
+La cadena de baliza conducirá o coordinará la expansión de la red de [fragmentos](/upgrades/sharding/) y [participantes](/staking/). Pero no será como la [red principal de Ethereum](/glossary/#mainnet) de hoy en día: no puede manejar cuentas o contratos inteligentes.
 
 La función de la cadena de baliza cambiará con el tiempo, pero es un componente fundamental para lograr el [ Ethereum seguro, sostenible y escalable en el que estamos trabajando](/upgrades/vision/).
 
@@ -57,7 +57,7 @@ La cadena de baliza al principio existirá con independencia de la red principal
 
 Las cadenas de fragmentos solo pueden introducirse en el ecosistema Ethereum de manera segura con un mecanismo de consenso de la prueba de participación establecido. La cadena de baliza introducirá la apuesta y allanará el camino a la cadena de fragmentos actualizada que se implementará posteriormente.
 
-<ButtonLink to="/upgrades/shard-chains/">
+<ButtonLink to="/upgrades/sharding/">
     Cadenas de fragmentos
 </ButtonLink>
 

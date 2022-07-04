@@ -17,23 +17,18 @@ incomplete: true
 
 - [GitHub](https://github.com/sc-forks/solidity-coverage)
 
-**hevm -** **_Implémentation de l'EVM spécialement conçue pour le test d'unités et le débogage de contrats intelligents_**
-
-- [GitHub](https://github.com/dapphub/dapptools/tree/master/src/hevm)
-- [Chat DappHub](https://dapphub.chat/)
-
 **Whiteblock Genesis - \*\***_Plateforme de test et sandbox de développement de bout en bout pour la blockchain_\*\*
 
 - [Whiteblock.io](https://whiteblock.io)
 - [Documentation](https://docs.whiteblock.io)
 - [GitHub](https://github.com/whiteblock/genesis)
 
-**Environnement de test OpenZeppelin -** **_Test de contrat intelligent extrêmement rapide. Installation en une ligne pour une expérience de test géniale._**
+**Environnement de test OpenZeppelin -** **_Test de contrat intelligent ultra rapide. Installation en une ligne pour une expérience de test exceptionnelle._**
 
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-test-environment)
 - [Documentation](https://docs.openzeppelin.com/test-environment/)
 
-**OpenZeppelin Test Helpers -** \*\*\_Bibliothèque d'assertions pour tester contrats intelligents Ethereum. Assurez vous que vos contrat se comporte comme prévu.
+**OpenZeppelin Test Helpers -** **_Bibliothèque d'assertions pour tester des contrats intelligents Ethereum. Assurez-vous que vos contrats se comportent comme prévu !_**
 
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-test-helpers)
 - [Documentation](https://docs.openzeppelin.com/test-helpers)

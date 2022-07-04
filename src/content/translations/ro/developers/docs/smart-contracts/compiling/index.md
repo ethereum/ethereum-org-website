@@ -276,4 +276,4 @@ Mai jos este ABI-ul pentru contractul de token ERC-20. Un ERC-20 este un token p
 ## Subiecte corelate {#related-topics}
 
 - [JavaScript client libraries](/developers/docs/apis/javascript/)
-- [Mașina virtuală Ethereum](/developers/docs/ethereum-virtual-machine/)
+- [Mașina virtuală Ethereum](/developers/docs/evm/)

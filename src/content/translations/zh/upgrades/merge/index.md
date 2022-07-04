@@ -59,7 +59,7 @@ summaryPoint4: 我们以前将此称为“对接”。
 
 这需要社区进行持续评估，以确定是否可能需要多轮分片链来实现无限的可扩展性。
 
-<ButtonLink to="/upgrades/shard-chains/">
+<ButtonLink to="/upgrades/sharding/">
   分片链
 </ButtonLink>
 

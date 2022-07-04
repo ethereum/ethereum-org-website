@@ -1,5 +1,5 @@
 const fs = require("fs")
-const translations = require("../../src/data/translations.json")
+const translations = require("../../src/utils/languages").default
 
 var config = {
   index_name: "prod-ethereum-org",

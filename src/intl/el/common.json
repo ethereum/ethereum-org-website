@@ -58,8 +58,6 @@
   "consensus-run-beacon-chain": "Εκτέλεση συναινετικής εφαρμογής πελάτη",
   "consensus-run-beacon-chain-desc": "Το Ethereum χρειάζεται όσο το δυνατόν περισσότερους πελάτες. Βοηθήστε με αυτό το δημόσιο αγαθό του Ethereum!",
   "consensus-when-shipping": "Πότε καταφτάνει;",
-  "eth-upgrade-what-happened": "Τι συνέβη στο «Eth2»;",
-  "eth-upgrade-what-happened-description": "Ο όρος «Eth2» έχει υποβαθμιστεί, καθώς πλησιάζουμε στη συγχώνευση. Ο όρος «συναινετικό επίπεδο» αντιπροσωπεύει πλέον αυτό που ήταν γνωστό ως «Eth2».",
   "ethereum": "Ethereum",
   "ethereum-upgrades": "Αναβαθμίσεις Ethereum",
   "ethereum-brand-assets": "Ψηφιακά στοιχεία επωνυμίας Ethereum",

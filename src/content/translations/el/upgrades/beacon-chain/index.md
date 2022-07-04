@@ -17,7 +17,7 @@ summaryPoint4: Μπορεί να το γνωρίζετε αυτό ως "Φάση
 
 ## Τι ακριβώς κάνει η κύρια αλυσίδα; {#what-does-the-beacon-chain-do}
 
-Η κύρια αλυσίδα θα διεξάγει ή θα συντονίζει το διευρυμένο δίκτυο των [shards](/upgrades/shard-chains/) και των [stakers](/staking/). Αλλά δεν θα είναι όπως το σημερινό [κεντρικό δίκτυο του Ethereum](/glossary/#mainnet). Δεν μπορεί να χειριστεί λογαριασμούς ή έξυπνα συμβόλαια.
+Η κύρια αλυσίδα θα διεξάγει ή θα συντονίζει το διευρυμένο δίκτυο των [shards](/upgrades/sharding/) και των [stakers](/staking/). Αλλά δεν θα είναι όπως το σημερινό [κεντρικό δίκτυο του Ethereum](/glossary/#mainnet). Δεν μπορεί να χειριστεί λογαριασμούς ή έξυπνα συμβόλαια.
 
 Ο ρόλος της κύρια αλυσίδας θα αλλάξει με την πάροδο του χρόνου, αλλά είναι ένα θεμελιώδες συστατικό για [ένα ασφαλές, βιώσιμο και κλιμακούμενο Ethereum προς το οποίο εργαζόμαστε](/upgrades/vision/).
 
@@ -33,7 +33,7 @@ summaryPoint4: Μπορεί να το γνωρίζετε αυτό ως "Φάση
 Αν ενδιαφέρεστε να γίνετε επικυρωτής και να βοηθήσετε στην ασφάλιση του Beacon Chain, <a href="/staking/">μάθετε περισσότερα για το staking</a>.
 </InfoBanner>
 
-Αυτή είναι επίσης μια σημαντική αλλαγή για τη δεύτερη αναβάθμιση Eth2: [shard chains](/upgrades/shard-chains/).
+Αυτή είναι επίσης μια σημαντική αλλαγή για τη δεύτερη αναβάθμιση Eth2: [shard chains](/upgrades/sharding/).
 
 ### Ρύθμιση για τις shard chains {#setting-up-for-shard-chains}
 
@@ -55,7 +55,7 @@ summaryPoint4: Μπορεί να το γνωρίζετε αυτό ως "Φάση
 
 Οι Shard chains μπορούν να εισέλθουν με ασφάλεια στο οικοσύστημα του Ethereum μόνο με έναν μηχανισμό επαλήθευσης (proof-of-stake). Η κύρια αλυσίδα θα εισαγάγει το staking, ανοίγοντας το δρόμο για την αναβάθμιση της shard chain.
 
-<ButtonLink to="/upgrades/shard-chains/">Shard chains</ButtonLink>
+<ButtonLink to="/upgrades/sharding/">Shard chains</ButtonLink>
 
 <Divider />
 

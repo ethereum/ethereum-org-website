@@ -56,7 +56,7 @@ If you have ETH on Ethereum Mainnet and you want to explore an alt L1 to try out
 
 ### Own native crypto assets {#own-native}
 
-Let’s say you want to own native $LUNA, but you only have funds on Ethereum Mainnet. To gain exposure to $LUNA on Ethereum, you can buy Wrapped Luna (WLUNA). However, WLUNA is an ERC-20 token native to the Ethereum network, which means it’s an Ethereum version of LUNA and not the original asset in the Terra ecosystem. To own native $LUNA, you would have to bridge your assets from Ethereum to Terra using the [Terra Bridge](https://bridge.terra.money/). This will bridge your Wrapped LUNA and convert it into native LUNA.
+Let’s say you want to own native Bitcoin (BTC), but you only have funds on Ethereum Mainnet. To gain exposure to BTC on Ethereum, you can buy Wrapped Bitcoin (WBTC). However, WBTC is an ERC-20 token native to the Ethereum network, which means it’s an Ethereum version of Bitcoin and not the original asset on the Bitcoin blockchain. To own native BTC, you would have to bridge your assets from Ethereum to Bitcoin using a bridge. This will bridge your WBTC and convert it into native BTC. Alternatively, you might own BTC and want to use it in Ethereum DeFi protocols. This would require bridging the other way, from BTC to WBTC which can then be used as an asset on Ethereum.
 
 <InfoBanner shouldCenter emoji=":bulb:">
   You can also do all of the above using a <a href="/get-eth/">centralized exchange</a>. However, unless your funds are already on an exchange, it would involve multiple steps, and you’d likely be better off using a bridge.

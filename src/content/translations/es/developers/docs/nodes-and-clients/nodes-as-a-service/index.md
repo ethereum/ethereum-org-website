@@ -18,7 +18,7 @@ Si aún no entiendes qué son los nodos y los clientes, consulta [Nodos y client
 
 Los proveedores de servicios de nodos ejecutan clientes de nodos distribuidos para ti, así que tú no tienes que hacerlo.
 
-Estos servicios suelen proporcionar una clave de API, que puedes usar para escribir y leer desde la blockchain. Además, suelen incluir acceso a [redes de pruebas de Ethereum](/developers/docs/networks/#testnets), además de a la red principal.
+Estos servicios suelen proporcionar una clave de API, que puedes usar para escribir y leer desde la blockchain. Además, suelen incluir acceso a [redes de pruebas de Ethereum](/developers/docs/networks/#ethereum-testnets), además de a la red principal.
 
 Algunos servicios te ofrecen tu propio nodo que ellos gestionan para ti, mientras que otros usan equilibradores de carga para distribuir la actividad a través de los nodos.
 

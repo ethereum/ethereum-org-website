@@ -19,7 +19,7 @@ Jeśli nie wiesz jeszcze, czym są węzły i klienci, sprawdź [Węzły i klienc
 
 Dostawcy usług węzłów obsługują dla Ciebie klientów węzłów rozproszonych, więc nie musisz tego robić.
 
-Te usługi zazwyczaj zapewniają klucz API, którego możesz użyć do pisania i odczytywania z blockchainu. Często obejmują one dostęp do [sieci testowych Ethereum](/developers/docs/networks/#testnets) oprócz sieci głównej.
+Te usługi zazwyczaj zapewniają klucz API, którego możesz użyć do pisania i odczytywania z blockchainu. Często obejmują one dostęp do [sieci testowych Ethereum](/developers/docs/networks/#ethereum-testnets) oprócz sieci głównej.
 
 Niektóre usługi oferują własny dedykowany węzeł, którym zarządzają za Ciebie, podczas gdy inne używają systemów równoważenia obciążenia do dystrybucji aktywności między węzłami.
 

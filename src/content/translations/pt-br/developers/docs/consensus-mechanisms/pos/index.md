@@ -23,7 +23,7 @@ A prova de participação vem com várias melhorias referente ao sistema de prov
 - melhor eficiência energética: você não precisa usar muita energia minerando blocos
 - menores barreiras à entrada, redução dos requisitos de hardware — você não precisa de um hardware potente para ter a chance de criar novos blocos
 - maior imunidade à centralização: a prova de participação deve gerar mais nós na rede
-- suporte mais forte para as [cadeias de fragmentos](/upgrades/shard-chains/) – uma atualização chave para dimensionamento da rede Ethereum
+- suporte mais forte para as [cadeias de fragmentos](/upgrades/sharding/) – uma atualização chave para dimensionamento da rede Ethereum
 
 ## Prova de participação, participação (staking) e validadores {#pos-staking-validators}
 
@@ -37,7 +37,7 @@ Se você atesta/certifica blocos maliciosos, perde sua participação (stake).
 
 ### A Beacon Chain {#the-beacon-chain}
 
-Quando o Ethereum substituir a prova de trabalho para a prova de participação, existirá uma complexidade adicional devido às [cadeias de fragmentos](/upgrades/shard-chains/). Estas são blockchains separadas que vão precisar de validadores para processar transações e criar novos blocos. O plano é ter 64 cadeias de fragmentos e todas elas precisam de uma compreensão compartilhada do estado da rede. Como resultado, uma coordenação extra é necessária, e será feita pela chamada cadeia de referência ou [Beacon Chain](/upgrades/beacon-chain/).
+Quando o Ethereum substituir a prova de trabalho para a prova de participação, existirá uma complexidade adicional devido às [cadeias de fragmentos](/upgrades/sharding/). Estas são blockchains separadas que vão precisar de validadores para processar transações e criar novos blocos. O plano é ter 64 cadeias de fragmentos e todas elas precisam de uma compreensão compartilhada do estado da rede. Como resultado, uma coordenação extra é necessária, e será feita pela chamada cadeia de referência ou [Beacon Chain](/upgrades/beacon-chain/).
 
 A Beacon Chain recebe informações de estado de fragmentos (shards) e as disponibiliza para outros fragmentos para que a rede possa permanecer em sincronia. A Beacon Chain também gerenciará os validadores, do registro de depósito de suas participações (stakes) até a emissão de suas recompensas e penalidades.
 

@@ -265,7 +265,6 @@ const RangeSelector = ({ state, setState }) => (
 
 const StatsBoxGrid = () => {
   const intl = useIntl()
-  const localeForStatsBoxNumbers = getLocaleForNumberFormat(intl.locale)
 
   const [ethPrices, setEthPrices] = useState({
     data: [],
@@ -293,6 +292,8 @@ const StatsBoxGrid = () => {
   const [selectedRangeTxs, setSelectedRangeTxs] = useState(ranges[0])
 
   useEffect(() => {
+    const localeForStatsBoxNumbers = getLocaleForNumberFormat(intl.locale)
+
     const formatPrice = (price) => {
       return new Intl.NumberFormat(localeForStatsBoxNumbers, {
         style: "currency",

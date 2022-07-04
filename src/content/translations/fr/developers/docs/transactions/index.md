@@ -19,7 +19,7 @@ Une transaction Ethereum est une action initiée par un compte externe, c'est-à
 
 Les transactions, qui modifient l'état de l'EVM, doivent être diffusées sur l'ensemble du réseau. N'importe quel nœud peut diffuser une demande pour qu'une transaction soit exécutée sur l'EVM. Un mineur exécutera ensuite la transaction et propagera au reste du réseau le changement d'état qui en résultera.
 
-Les transactions impliquent le paiement de frais et doivent être minées pour être valides. Pour simplifier ce chapitre, nous aborderons les frais de carburant et le minage dans d'utres sections.
+Les transactions impliquent le paiement de frais et doivent être minées pour être valides. Pour simplifier ce chapitre, nous aborderons les frais de gaz et le minage dans d'autres sections.
 
 Une transaction soumise comprend les informations suivantes :
 
@@ -27,11 +27,11 @@ Une transaction soumise comprend les informations suivantes :
 - `signature` : identifiant de l'expéditeur. Cette signature est générée lorsque la clé privée de l'expéditeur signe la transaction, et confirme que l'expéditeur a autorisé cette transaction.
 - `value` : quantité d'ETH à transférer de l'expéditeur au destinataire (en WEI, une dénomination de l'ETH).
 - `data` : champ facultatif pour inclure des données arbitraires.
-- `gasLimit` : Quantité maximum d’unités de carburant pouvant être consommée par la transaction. Les unités de carburant représentent les étapes de calcul.
-- `maxPriorityFeePerGas` : la quantité maximale de carburant à inclure comme un pourboire pour le mineur.
-- `maxFeePerGas` : montant maximum de carburant prêt à être payé pour la transaction (incluant `baseFeePerGas` et `maxPriorityFeePerGas`).
+- `gasLimit` : Quantité maximum d’unités de gaz pouvant être consommée par la transaction. Les unités de gaz représentent les étapes de calcul.
+- `maxPriorityFeePerGas` : la quantité maximale de gaz à inclure comme un pourboire pour le mineur.
+- `maxFeePerGas` : Montant maximum de gaz prêt à être payé pour la transaction (incluant `baseFeePerGas` et `maxPriorityFeePerGas`).
 
-Le carburant est une référence au calcul nécessaire au traitement de la transaction par un mineur. Les utilisateurs doivent payer des frais pour ce calcul. La `gasLimit` et le `gasPrice` déterminent les frais de transaction maximum payés au mineur. [Plus d'infos sur le carburant](/developers/docs/gas/)
+Le gaz est une référence au calcul nécessaire au traitement de la transaction par un mineur. Les utilisateurs doivent payer des frais pour ce calcul. La `gasLimit` et le `gasPrice` déterminent les frais de transaction maximum payés au mineur. [Plus d'infos sur le gaz](/developers/docs/gas/)
 
 L'objet de transaction ressemblera un peu à ceci :
 
@@ -109,9 +109,9 @@ La grande majorité des transactions accèdent à un contrat provenant d'un comp
 
 Les quatre premiers octets indiquent la fonction à appeler, en utilisant l'empreinte numérique de son nom et de ses arguments. Vous pouvez parfois identifier la fonction depuis le sélecteur à l'aide de [cette base de données](https://www.4byte.directory/signatures/).
 
-Le reste des calldata est constitué des arguments, [encodés comme spécifiés dans les spécifications ABI](https://docs.soliditylang.org/en/latest/abi-spec.html#formal-specification-of-the-encoding).
+Le reste des calldata est constitué des arguments, [encodés comme indiqué dans les spécifications ABI](https://docs.soliditylang.org/en/latest/abi-spec.html#formal-specification-of-the-encoding).
 
-Par exemple, regardons [cette transaction](https://etherscan.io/tx/0xd0dcbe007569fcfa1902dae0ab8b4e078efe42e231786312289b1eee5590f6a1). Utilisez **Cliquer pour en voir plus** pour voir les calldata.
+Par exemple, prenons [cette transaction](https://etherscan.io/tx/0xd0dcbe007569fcfa1902dae0ab8b4e078efe42e231786312289b1eee5590f6a1). Utilisez **Cliquer pour en voir plus** pour voir les calldata.
 
 Le sélecteur de fonction est `0xa9059cbb`. Il existe plusieurs [fonctions connues avec cette signature](https://www.4byte.directory/signatures/?bytes4_signature=0xa9059cbb). Dans ce cas, [le code source du contrat](https://etherscan.io/address/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48#code) a été chargé sur Etherscan, nous savons donc que la fonction est `transfer(address,uint256)`.
 
@@ -122,7 +122,7 @@ Le reste des données est :
 000000000000000000000000000000000000000000000000000000003b0559f4
 ```
 
-Selon les spécifications ABI, des valeurs entières (comme les adresses, qui sont des entiers de 20 octets) qui apparaissent dans l'ABI sous la forme de mots de 32 octets, complétés de zéros en début. Donc nous savons que l'adresse `to` est [`4f6742badb049791cd9a37ea913f2bac38d01279`](https://etherscan.io/address/0x4f6742badb049791cd9a37ea913f2bac38d01279). La valeur `value` est 0x3b0559f4 = 990206452.
+Selon les spécifications ABI, les valeurs entières (comme les adresses, qui sont des entiers de 20 octets) apparaissent dans l'ABI sous forme de mots de 32 octets, complétées de zéros au début. Nous savons donc que l'adresse `to` est [`4f6742badb049791cd9a37ea913f2bac38d01279`](https://etherscan.io/address/0x4f6742badb049791cd9a37ea913f2bac38d01279). La valeur `value` est 0x3b0559f4 = 990206452.
 
 ## Type de transaction {#types-of-transactions}
 
@@ -132,16 +132,16 @@ Sur Ethereum, il existe plusieurs types de transactions :
 - Transactions de déploiement de contrats : une transaction sans adresse « to », où le champ de données est utilisé pour le code du contrat.
 - Exécution d'un contrat : une transaction qui interagit avec un contrat intelligent déployé. Dans ce cas précis, l'adresse "to" est celle du contrat intelligent.
 
-### À propos du carburant {#on-gas}
+### À propos du gaz {#on-gas}
 
-Comme mentionné, les transactions ont un coût en [gaz](/developers/docs/gas/) pour être exécutées. Les transactions simples de transfert requièrent 21 000 unités de carburant.
+Comme mentionné, les transactions ont un coût en [gaz](/developers/docs/gas/) pour être exécutées. Les transactions simples de transfert requièrent 21 000 unités de gaz.
 
-Donc pour que Bob envoie 1 ETH à Alice avec un `baseFeePerGas` de 190 gwei et `maxPriorityFeePerGas` de 10 gwei, Bob devra payer les frais suivants :
+Ainsi, pour envoyer 1 ETH à Alice avec un `baseFeePerGas` de 190 gwei et `maxPriorityFeePerGas` de 10 gwei, Bob devra payer les frais suivants :
 
 ```
-(190 + 10) * 21000 = 4,200,000 gwei
+(190 + 10) * 21000 = 4 200 000 gwei
 -- soit --
-0.0042 ETH
+0,0042 ETH
 ```
 
 Le compte de Marc sera débité de **-1,0042 ETH**.
@@ -152,7 +152,7 @@ Les frais de base seront brûlés **-0.00399 ETH**
 
 Le mineur garde le pourboire **+0.000210 ETH**
 
-Du carburant est également requis pour toute interaction avec un contrat intelligent.
+Du gaz est également requis pour toute interaction avec un contrat intelligent.
 
 ![Diagramme montrant comment le carburant non utilisé est remboursé](./gas-tx.png) _Schéma adapté à partir du document [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
@@ -178,13 +178,13 @@ Regardez Austin vous guider à travers les transactions, le carburant et le mina
 
 ## Enveloppe de transaction saisie {#typed-transaction-envelope}
 
-Ethereum avait à l'origine un unique format pour les transactions. Chaque transaction contenait une nonce, le prix du carburant, la limite de carburant, à l'adresse, la valeur, les données, v, r et s. Ces champs sont encodés en RLP, pour ressembler à ceci :
+Ethereum avait à l'origine un unique format pour les transactions. Chaque transaction contenait une nonce, le prix du carburant, la limite de carburant, l'adresse de destination, la valeur, les données, v, r et s. Ces champs sont encodés en RLP, pour ressembler à ceci :
 
 `RLP([nonce, gasPrice, gasLimit, to, value, data, v, r, s])`
 
-Ethereum a évolué pour prendre en charge plusieurs types de transactions afin de permettre l'implémentation de nouvelles fonctionnalités telles que les listes d'accès et [EIP-1559](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md) sans affecter les formats de transactions existants.
+Ethereum a évolué pour prendre en charge plusieurs types de transactions afin de permettre l'implémentation de nouvelles fonctionnalités telles que les listes d'accès [EIP-1559](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md) sans affecter les formats de transactions existants.
 
-[EIP-2718 : Enveloppe de transaction saisie](https://eips.ethereum.org/EIPS/eip-2718) définit un type de transaction qui est une enveloppe pour les futurs types de transaction.
+[EIP-2718 : Enveloppe de transaction saisie](https://eips.ethereum.org/EIPS/eip-2718) définit un type de transaction qui sert d'enveloppe à de futurs types de transaction.
 
 L'EIP-2718 est une nouvelle enveloppe généralisée pour les opérations saisies. Dans la nouvelle norme, les transactions sont interprétées comme :
 

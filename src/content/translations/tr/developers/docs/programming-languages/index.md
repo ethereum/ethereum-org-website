@@ -5,7 +5,7 @@ lang: tr
 sidebar: true
 ---
 
-Geliştiricilerin Ethereum üzerine inşa etmek için [akıllı sözleşmeler](/developers/docs/smart-contracts/) yazması gerektiği yaygın bir yanlış anlamadır. Bu yanlıştır. Ethereum ağı ve topluluğunun güzelliklerinden biri, herhangi bir programlama dilinde [katılım](/community/) sağlayabilmenizdir.
+Geliştiricilerin, Ethereum üzerinde inşa etmek için [akıllı sözleşmeler](/developers/docs/smart-contracts/) yazması gerektiği yaygın bir yanlış anlaşılmadır. Bu yanlıştır. Ethereum ağı ve topluluğunun güzelliklerinden biri, herhangi bir programlama dilinde [katılım](/community/) sağlayabilmenizdir.
 
 Ethereum ve topluluğu açık kaynak ile iç içecidir. Geniş bir dil yelpazesinde topluluk projeleri; istemci uygulamaları, API'ler, geliştirme çerçeveleri, test araçları bulabilirsiniz.
 

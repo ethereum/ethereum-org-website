@@ -62,7 +62,7 @@ Les bibliothèques suppriment une grande partie de la complexité de l'interacti
 - [chainstack.com](https://chainstack.com)
 - [Documentation](https://docs.chainstack.com)
 
-**QuikNode -** **_Service d'Infrastructure de Blockchain_**
+**QuikNode -** **_Infrastructure Blockchain en tant que service_**
 
 - [quicknode.com](https://quicknode.com)
 - [Documentation](https://www.quicknode.com/docs)

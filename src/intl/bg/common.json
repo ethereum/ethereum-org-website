@@ -59,8 +59,6 @@
   "consensus-run-beacon-chain": "Активирайте клиент за консенсус",
   "consensus-run-beacon-chain-desc": "Етереум има нужда от колкото може повече клиенти. Помогнете за общественото благо на Етереум!",
   "consensus-when-shipping": "Кога излиза?",
-  "eth-upgrade-what-happened": "Какво се случи с „Eth2“?",
-  "eth-upgrade-what-happened-description": "С наближаването на сливането (The Merge) терминът „Eth2“ бива отхвърлен. Това, което преди беше известно като „Eth2“, сега е „консенсусен слой“ (consensus layer).",
   "ethereum": "Етереум",
   "ethereum-upgrades": "Подобрения на Етереум",
   "ethereum-brand-assets": "Характеристики на марката Етереум",

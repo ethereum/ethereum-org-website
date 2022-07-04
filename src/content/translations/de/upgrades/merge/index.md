@@ -59,7 +59,7 @@ Ursprünglich war geplant, vor der Zusammenführung an Shard Chains zu arbeiten,
 
 Hier wird eine fortlaufende Bewertung der Gemeinschaft geben, ob ggf. mehrere Runden von Shard Chains erforderlich werden, um eine unbegrenzte Skalierbarkeit zu ermöglichen.
 
-<ButtonLink to="/upgrades/shard-chains/">
+<ButtonLink to="/upgrades/sharding/">
   Shard Chains
 </ButtonLink>
 

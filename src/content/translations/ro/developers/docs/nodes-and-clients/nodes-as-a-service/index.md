@@ -18,7 +18,7 @@ Dacă nu aţi înțeles încă ce sunt nodurile și clienții, consultaţi secţ
 
 Furnizorii de servicii de noduri rulează în culise clienți de noduri distribuite pentru dvs., ca să nu fiţi nevoit să o faceţi dvs.
 
-Aceste servicii oferă de obicei o cheie API pe care o puteţi utiliza pentru a scrie și a citi din blockchain. Acestea includ adesea și accesul la [testnet-ul Ethereum](/developers/docs/networks/#testnets), în plus față de Mainnet.
+Aceste servicii oferă de obicei o cheie API pe care o puteţi utiliza pentru a scrie și a citi din blockchain. Acestea includ adesea și accesul la [testnet-ul Ethereum](/developers/docs/networks/#ethereum-testnets), în plus față de Mainnet.
 
 Unele servicii vă oferă propriul nod dedicat, pe care îl gestionează pentru dvs., în timp ce altele folosesc echilibratori de încărcare pentru a distribui activitatea între noduri.
 

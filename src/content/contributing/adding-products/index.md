@@ -108,6 +108,6 @@ _We're also investigating options for voting so the community can indicate their
 
 If you want to add a wallet or dapp to ethereum.org and it meets the criteria, create an issue on GitHub.
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.md&title=">
+<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new/choose">
   Create an issue
 </ButtonLink>

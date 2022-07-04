@@ -13,11 +13,13 @@ Le contrat intelligent est un type de [compte Ethereum](/developers/docs/account
 
 ## Prérequis {#prerequisites}
 
-Assurez-vous d'avoir lu les pages [Contrats](/developers/docs/accounts/), [Transactions](/developers/docs/transactions/) et [Machine virtuelle Ethereum](/developers/docs/evm/) avant de vous intéresser aux contrats intelligents.
+Si vous venez tout juste de débuter ou si vous cherchez une introduction moins technique, nous vous recommandons notre [introduction aux contrats intelligents](/smart-contracts/).
+
+Assurez-vous d'avoir lu les pages [Contrats](/developers/docs/accounts/), [Transactions](/developers/docs/transactions/) et [Machine virtuelle Ethereum](/developers/docs/evm/) avant de vous lancer dans le monde des contrats intelligents.
 
 ## Distributeur automatique numérique {#a-digital-vending-machine}
 
-La meilleure métaphore pour un contrat intelligent est peut-être celle d'un distributeur automatique, tel que décrit par [Nick Szabo](https://unenumerated.blogspot.com/). Avec les bonnes entrées, une certaine sortie est garantie.
+La meilleure métaphore pour décrire un contrat intelligent est peut-être celle d'un distributeur automatique, tel que décrit par [Nick Szabo](https://unenumerated.blogspot.com/). Avec les bonnes entrées, une certaine sortie est garantie.
 
 Pour obtenir une sucrerie d'un distributeur automatique :
 
@@ -66,7 +68,7 @@ Tout comme un distributeur automatique peut remplacer un employé dans une bouti
 
 ## Sans autorisation {#permissionless}
 
-N'importe qui peut rédiger un contrat intelligent et le déployer sur le réseau. Il vous suffit d'apprendre à coder dans un [langage de contrat intelligent](/developers/docs/smart-contracts/languages/) et de disposer de suffisamment d'ETH pour déployer votre contrat. Techniquement, déployer un contrat intelligent constitue une transaction. Vous devez donc payer pour le [carburant](/developers/docs/gas/), comme vous le feriez pour un simple transfert d'ETH. Les coûts en carburant pour déployer un contrat est cependant beaucoup plus élevé.
+N'importe qui peut rédiger un contrat intelligent et le déployer sur le réseau. Il vous suffit d'apprendre à coder dans un [langage de contrat intelligent](/developers/docs/smart-contracts/languages/) et de disposer de suffisamment d'ETH pour déployer votre contrat. Techniquement, le fait de déployer un contrat intelligent constitue une transaction. Vous devez donc payer pour le [carburant](/developers/docs/gas/), comme vous le feriez pour un simple transfert d'ETH. Les coûts en carburant pour déployer un contrat sont cependant beaucoup plus élevés.
 
 Pour la rédaction des contrats intelligents, Ethereum propose aux développeurs des langages conviviaux :
 
@@ -79,17 +81,17 @@ Toutefois, pour que la machine virtuelle Ethereum puisse interpréter et stocker
 
 ## Composabilité {#composability}
 
-Les contrats intelligents sont publics sur Ethereum et peuvent être considérés comme des API ouvertes. Cela signifie que vous pouvez appeler d'autres contrats intelligents dans votre propre contrat afin d'étendre considérablement ce qui est possible. Certains d'entre eux peuvent même déployer d'autres contrats.
+Sur Ethereum, les contrats intelligents sont publics. Ils peuvent être considérés comme des API ouvertes. Cela signifie que vous pouvez appeler d'autres contrats intelligents dans votre propre contrat afin d'étendre considérablement les possibilités. Certains d'entre eux peuvent même déployer d'autres contrats.
 
-En savoir plus sur la [composabilité des contrats](/developers/docs/smart-contracts/composability/).
+En savoir plus sur la [composabilité des contrats intelligents](/developers/docs/smart-contracts/composability/).
 
 ## Limitations {#limitations}
 
-Les contrats intelligents seuls ne peuvent pas obtenir d'informations sur les événements du « monde réel », car ils ne peuvent pas envoyer de demande HTTP. C'est le concept. Le fait de s'appuyer sur des informations externes pourrait compromettre le consensus, c'est donc important pour la sécurité et la décentralisation.
+Les contrats intelligents seuls ne peuvent pas obtenir d'informations sur les événements du "monde réel", dans la mesure où ils ne peuvent pas envoyer de requêtes HTTP. C'est un choix délibéré. Le fait de s'appuyer sur des informations externes pourrait compromettre le consensus, qui est essentiel en matière de sécurité et de décentralisation.
 
 Il existe des moyens de contourner le problème en utilisant [oracles](/developers/docs/oracles/).
 
-Une autre limitation des contrats intelligents est la taille maximale du contrat. Un contrat intelligent peut être de 24 Ko au maximum ou il manquera de carburant. Ceci peut être contourné en utilisant [Le modèle du diamant](https://eips.ethereum.org/EIPS/eip-2535).
+Une autre limitation des contrats intelligents est la taille maximale des contrats. Un contrat intelligent ne peut pas dépasser 24 Ko, sans quoi il manquera de carburant. Ceci peut être contourné en utilisant [Le modèle du diamant](https://eips.ethereum.org/EIPS/eip-2535).
 
 ## Ressources de contrats intelligents {#smart-contract-resources}
 

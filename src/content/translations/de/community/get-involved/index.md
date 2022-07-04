@@ -86,13 +86,13 @@ Das Ethereum-Ökosystem hat es sich zur Aufgabe gemacht, das Allgemeinwohl und w
 **Möchten Sie einen Job bei Ethereum finden?**
 
 - [Jobs auf ethereum.org](/about/#open-jobs)
-- [Ethereum Foundation Stellenportal (Lever)](https://jobs.lever.co/ethereumfoundation)
-- [Ethereum Foundation Stellenportal (BambooHR)](https://ethereum.bamboohr.com/jobs/)
-- [Jobs in der Kryptowährung](https://cryptocurrencyjobs.co/ethereum/)
+- [Ethereum Foundation-Stellenportal (Lever)](https://jobs.lever.co/ethereumfoundation)
+- [Ethereum Foundation-Stellenportal (BambooHR)](https://ethereum.bamboohr.com/jobs/)
+- [Jobs im Zusammenhang mit Kryptowährung](https://cryptocurrencyjobs.co/ethereum/)
 - [Crypto.jobs](https://crypto.jobs/)
 - [Karriere bei ConsenSys](https://consensys.net/careers/)
 - [Liste mit Jobs in der Krypto-Welt](https://cryptojobslist.com/ethereum-jobs)
-- [Stellenbörse für Jobs ohne Bankbezug](https://pallet.xyz/list/bankless/jobs)
+- [Stellenportal für Jobs ohne Bankbezug](https://pallet.xyz/list/bankless/jobs)
 - [Jobs bei useWeb3](https://www.useweb3.xyz/jobs)
 - [Jobs bei Web3](https://web3.career)
 - [Web3 Army](https://web3army.xyz/)
@@ -114,4 +114,4 @@ DAOs sind dezentralisierte, autonome Organisationen. Diese Gruppen nutzen die Et
 - [dOrg](https://dOrg.tech) [@dOrg_tech](https://twitter.com/dOrg_tech) – _Web3-Entwicklungskollektiv aus Freiberuflern, das als DAO arbeitet_
 - [HausDAO](https://daohaus.club) [@nowdaoit](https://twitter.com/nowdaoit) - _Community-Governance von DAOhaus_
 - [Developer DAO](https://www.developerdao.com/) [@developer_dao](https://twitter.com/developer_dao) – _Gemeinschaft aus Erstellern, die an das kollektive Eigentum am Internet glauben_
-- [DXdao](https://DXdao.eth.link/) [@DXdao](https://twitter.com/DXdao_) - _Dezentralisierte Entwicklung & Governance von dApps & Protokolle_
+- [DXdao](https://DXdao.eth.link/) [@DXdao](https://twitter.com/DXdao_) – _Dezentralisierte Entwicklung und Governance von Apps und Protokollen_

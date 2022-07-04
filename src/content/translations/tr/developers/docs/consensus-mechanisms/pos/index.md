@@ -23,7 +23,7 @@ Hisse ispatı, bir dizi iyileştirme ile iş ispatının (PoW) yerini alacak:
 - daha iyi enerji verimliliği - blok madenciliği için yüksek enerji kullanmanıza gerek yok
 - daha düşük giriş bedeli ve donanım gereksinimleri - yeni bloklar oluşturma kabiliyeti için elit donanıma ihtiyacınız yok
 - merkezileştirmeye karşı daha güçlü bağışıklık - hisse ispatı ağdaki düğüm sayısını artıracaktır
-- [parça zincirleri](/upgrades/shard-chains/) için daha güçlü destek - Ethereum ağını ölçeklendirme için önemli bir yükseltme
+- [parça zincirleri](/upgrades/sharding/) için daha güçlü destek - Ethereum ağını ölçeklendirme için önemli bir yükseltme
 
 ## Hisse ispatı, stake etme ve doğrulayıcılar {#pos-staking-validators}
 
@@ -37,7 +37,7 @@ Kötü niyetli blokları tasdiklerseniz, stake ettiğiniz miktarı kaybedersiniz
 
 ### İşaret zinciri {#the-beacon-chain}
 
-Ethereum, iş ispatını hisse ispatı ile değiştirdiğinde, [parça zincirlerinin (shard chain)](/upgrades/shard-chains/) karmaşıklığı artacaktır. Bunlar, işlemleri gerçekleştirmek ve yeni bloklar oluşturmak için doğrulayıcılara ihtiyaç duyacak ayrı blok zincirleridir. 64 parça zincirinin bulunması ve hepsinin ağın durumu hakkında ortak bir anlayışa sahip olması planlanır. Sonuç olarak, ekstra koordinasyon gereklidir ve bu koordinasyon [işaret zinciri](/upgrades/beacon-chain/) tarafından sağlanacaktır.
+Ethereum, iş ispatını hisse ispatı ile değiştirdiğinde, [parça zincirlerinin (shard chain)](/upgrades/sharding/) karmaşıklığı artacaktır. Bunlar, işlemleri gerçekleştirmek ve yeni bloklar oluşturmak için doğrulayıcılara ihtiyaç duyacak ayrı blok zincirleridir. 64 parça zincirinin bulunması ve hepsinin ağın durumu hakkında ortak bir anlayışa sahip olması planlanır. Sonuç olarak, ekstra koordinasyon gereklidir ve bu koordinasyon [işaret zinciri](/upgrades/beacon-chain/) tarafından sağlanacaktır.
 
 İşaret zinciri, parçalardan durum bilgilerini alır ve ağın senkronize kalabilmesi için diğer parçalar için kullanılabilir hâle getirir. Aynı zamanda işaret zinciri, stake yatırımlarını kaydetmekten ödüllerini ve cezalarını vermeye kadar doğrulayıcıları yönetecektir.
 

@@ -50,7 +50,7 @@ Besoin d’une approche plus élémentaire ? Consultez [ethereum.org/learn](/le
 
 - [Web3.py](https://github.com/ethereum/web3.py) - _Bibliothèque Python pour interagir avec Ethereum_
 - [Singe](https://github.com/ApeWorX/ape) - _L'outil de développement de contrats intelligents pour pythonistes, les data scientists et les professionnels de la sécurité_
-- [Brownie](https://github.com/eth-brownie/brownie) - _Infrastructure Python pour déployer et tester les contrats intelligents Ethereum, et interagir avec ceux-ci_
+- [Brownie](https://github.com/eth-brownie/brownie) - _Infrastructure Python pour déployer et tester les contrats intelligents Ethereum, et interagir avec ces derniers_
 - [Vyper](https://github.com/ethereum/vyper/) - _Langage des contrats intelligents en Python pour l'EVM_
 - [py-evm](https://github.com/ethereum/py-evm) - _Implémentation de la machine virtuelle Ethereum_
 - [eth-tester](https://github.com/ethereum/eth-tester) - _Outils pour tester des applications basées sur Ethereum_

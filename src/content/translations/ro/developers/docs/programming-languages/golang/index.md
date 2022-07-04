@@ -34,9 +34,9 @@ Aveţi nevoie de o scurtă introducere? Accesaţi [ethereum.org/learn](/learn/) 
 ## Articole și documentații de nivel intermediar {#intermediate-articles-and-docs}
 
 - [Documentație Go Ethereum](https://geth.ethereum.org/docs/) - _Documentația oficială pentru Ethereum Golang_
-- [Ghidul programatorului Turbo-Geth](https://github.com/ledgerwatch/turbo-geth/blob/master/docs/programmers_guide/guide.md) – _Ghid ilustrat ce cuprinde arborele de stare, dovezile multiple și procesarea tranzacțiilor_
-- [Turbo-Geth și Ethereum fără stare](https://youtu.be/3-Mn7OckSus?t=394) - _Conferința comunitară Ethereum din 2020 (EthCC 3)_
-- [Turbo-Geth: optimizarea clienților Ethereum](https://www.youtube.com/watch?v=CSpc1vZQW2Q) - _2018 Devcon 4_
+- [Ghidul programatorului Erigon](https://github.com/ledgerwatch/erigon/blob/devel/docs/programmers_guide/guide.md) – _Ghid ilustrat ce cuprinde arborele de stare, dovezile multiple și procesarea tranzacțiilor_
+- [Erigon și Ethereum fără stare](https://youtu.be/3-Mn7OckSus?t=394) - _Conferința comunitară Ethereum din 2020 (EthCC 3)_
+- [Erigon: optimizarea clienților Ethereum](https://www.youtube.com/watch?v=CSpc1vZQW2Q) - _2018 Devcon 4_
 - [Go Ethereum GoDoc](https://godoc.org/github.com/ethereum/go-ethereum)
 - [Crearea unei aplicații descentralizate în Go cu Geth](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/creating-a-dapp-in-go-with-geth/)
 - [Utilizarea unei rețele private Ethereum cu Golang și Geth](https://myhsts.org/tutorial-learn-how-to-work-with-ethereum-private-network-with-golang-with-geth.php)
@@ -55,7 +55,7 @@ Aveţi nevoie de o scurtă introducere? Accesaţi [ethereum.org/learn](/learn/) 
 
 - [Geth / Go Ethereum](https://github.com/ethereum/go-ethereum) - _Implementarea oficială Go a protocolului Ethereum_
 - [Go Ethereum Code Analysis](https://github.com/ZtesoftCS/go-ethereum-code-analysis) - _Evaluarea și analiza codului sursă Go Ethereum_
-- [Turbo-Geth](https://github.com/ledgerwatch/turbo-geth) - _Derivat mai rapid al Go Ethereum_
+- [Erigon](https://github.com/ledgerwatch/erigon) - _Derivat mai rapid al Go Ethereum_
 - [Golem](https://github.com/golemfactory/golem) - _Golem construiește o piață globală pentru puterea de calcul_
 - [Quorum](https://github.com/jpmorganchase/quorum) - _O implementare Ethereum cu sistem de permisiuni și suport pentru confidențialitatea datelor_
 - [Prysm](https://github.com/prysmaticlabs/prysm) - _Implementare Go Ethereum „Serenity” 2.0_

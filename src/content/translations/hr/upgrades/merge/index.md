@@ -17,7 +17,7 @@ summaryPoint4: To vam može biti poznato kao „faza 1.5” na tehničkim planov
 
 ## Što je spajanje? {#what-is-the-docking}
 
-Važno je imati na umu da se u početku ostale nadogradnje Eth2 isporučuju odvojeno od [ glavne mreže ](/glossary/#mainnet) – lanca kojim se koristimo danas. Glavna mreža Ethereum i dalje biti osigurana pomoću mehanizma [proof-of-work](/developers/docs/consensus-mechanisms/pow/), čak i dok [Beacon Chain](/upgrades/beacon-chain/) i njegovi [lanci djelića](/upgrades/shard-chains/) rade paralelno pomoću mehanizma [proof-of-stake](/developers/docs/consensus-mechanisms/pos/). Spajanje je kad se ova dva sustava sjedine.
+Važno je imati na umu da se u početku ostale nadogradnje Eth2 isporučuju odvojeno od [ glavne mreže ](/glossary/#mainnet) – lanca kojim se koristimo danas. Glavna mreža Ethereum i dalje biti osigurana pomoću mehanizma [proof-of-work](/developers/docs/consensus-mechanisms/pow/), čak i dok [Beacon Chain](/upgrades/beacon-chain/) i njegovi [lanci djelića](/upgrades/sharding/) rade paralelno pomoću mehanizma [proof-of-stake](/developers/docs/consensus-mechanisms/pos/). Spajanje je kad se ova dva sustava sjedine.
 
 Zamislite da je Ethereum svemirski brod koji nije baš spreman za međuzvjezdano putovanje. Zajednica je s nadogradnjom Beacon chain i lancima djelića izgradila novi motor i očvrsnuti trup. Kad dođe vrijeme, trenutačni brod pristat će uz novi sustav i oni će postati jedno, spremni za ozbiljne svjetlosne godine i zauzimanje svemira.
 
@@ -45,4 +45,4 @@ Nakon spajanja, bit će dodijeljeni učesnici koji će provjeriti valjanost mre�
 
 Kad glavna mreža postane djelić, uspješna implementacija lanaca djelića bit će presudna za ovu nadogradnju. Vjerojatno će tranzicija igrati važnu ulogu u pomaganju zajednici da odluči hoće li pokrenuti drugu nadogradnju na metodu razdjeljivanja. Ova će nadogradnja kreirati druge djeliće poput glavne mreže: oni će moći obrađivati transakcije i pametne ugovore, a ne samo pružati više podataka.
 
-<ButtonLink to="/upgrades/shard-chains/">Lanci djelića</ButtonLink>
+<ButtonLink to="/upgrades/sharding/">Lanci djelića</ButtonLink>

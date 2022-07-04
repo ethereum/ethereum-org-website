@@ -378,7 +378,7 @@ const TableOfContents = ({
       <OuterList>
         {shouldShowEditButtom && (
           <ButtonContainer>
-            <ButtonLink to={editPath} isSecondary={true} mt={0}>
+            <ButtonLink to={editPath} isSecondary={true} hideArrow mt={0}>
               <ButtonContent>
                 <GithubIcon name="github" />{" "}
                 <span>
@@ -394,10 +394,7 @@ const TableOfContents = ({
               <Translation id="zen-mode" />
             </ZenModeText>
             <ZenModeToggleContainer onClick={(_e) => handleZenModeChange()}>
-              <Icon
-                name={isZenMode ? "zenModeOn" : "zenModeOff"}
-                size="1.6rem"
-              />
+              <Icon name={isZenMode ? "toggleOn" : "toggleOff"} size="1.6rem" />
             </ZenModeToggleContainer>
           </ZenModeContainer>
         )}

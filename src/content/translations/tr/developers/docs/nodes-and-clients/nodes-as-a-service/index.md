@@ -18,7 +18,7 @@ Düğümlerin ve istemcilerin ne olduğu konusunda henüz bir fikriniz yoksa, [D
 
 Düğüm hizmeti sağlayıcıları, siz uğraşmayın diye sahne arkasında sizin için dağıtılmış düğüm istemcileri çalıştırır.
 
-Bu hizmetler tipik olarak blok zincirine yazmak ve blok zincirinden okumak için kullanabileceğiniz bir API anahtarı sağlar. Bunlar genellikle Mainnet'e ek olarak [Ethereum test ağlarına](/developers/docs/networks/#testnets) erişim içerir.
+Bu hizmetler tipik olarak blok zincirine yazmak ve blok zincirinden okumak için kullanabileceğiniz bir API anahtarı sağlar. Bunlar genellikle Mainnet'e ek olarak [Ethereum test ağlarına](/developers/docs/networks/#ethereum-testnets) erişim içerir.
 
 Bazı hizmetler, sizin için yönettikleri kendi özel düğümünüzü sunarken, diğerleri etkinliği düğümler arasında dağıtmak için yük dengeleyicileri kullanır.
 
@@ -32,7 +32,7 @@ Düğüm hizmetlerinin özel anahtarlarınızı veya bilgilerinizi saklamadığ�
 
 Bir düğüm hizmeti kullanmanın asıl faydası, düğümlere bakım yapmak ve yönetmek için uğraşmanız gerekmemesidir. Bu, altyapı bakımı konusunda endişelenmek yerine ürününüzü oluşturmaya odaklanmanıza olanak tanır.
 
-Kendi düğümlerinizi çalıştırmak, depolamadan bant genişliğine ve mühendisliğe harcanan değerli zamana kadar çok pahalıya mal olabilir. Ölçeklendirirken daha fazla düğüm başlatmak, düğümleri en son sürümlere yükseltmek ve durum tutarlılığını sağlamak gibi şeyler, istediğiniz web3 ürününde kaynak oluşturma ve harcama konusunda olumsuz etkilere yol açabilir.
+Kendi düğümlerinizi çalıştırmak, depolamadan bant genişliğine ve mühendisliğe harcanan değerli zamana kadar çok pahalıya mal olabilir. Ölçeklendirirken daha fazla düğüm başlatmak, düğümleri en son sürümlere yükseltmek ve durum tutarlılığını sağlamak gibi şeyler, istediğiniz web3 ürününde kaynak oluşturma ve harcama konusundan sizi uzaklaştırabilir.
 
 ## Bir Düğüm Hizmeti kullanmanın eksileri nelerdir? {#cons-of-using-a-node-service}
 
@@ -119,7 +119,7 @@ Bir düğüm hizmeti kullanarak, ürününüzün altyapı yönünü merkezileşt
   - [Belgeler](https://docs.kaleido.io/)
   - Özellikler
     - Ücretsiz başlangıç ​​seviyesi
-    - Tek tıklamayla Ethereum düğüm dağıtımı
+    - Tek tıklamayla Ethereum düğümü dağıtımı
     - Özelleştirilebilir istemciler ve algoritmalar (Geth, Quorum & Besu || PoA, IBFT & Raft)
     - 500+ yönetimsel ve servis API'leri
     - Ethereum işlem arzı için RESTful arayüz (Apache Kafka destekli)
@@ -130,76 +130,76 @@ Bir düğüm hizmeti kullanarak, ürününüzün altyapı yönünü merkezileşt
     - Hayli ölçeklenebilir, esnek, hızlı ve güvenilir altyapı
     - Bulut HSM gizli anahtar yönetimi
     - Ethereum Mainnet Bağlama
-    - ISO 27k ve SOC 2, Tür 2 sertifikasyonları
-    - Dinamik yürütüm esnası konfigürasyon (örneğin bulut entegrasyonları ekleme, düğüm girdilerini değiştirme v.b.)
+    - ISO 27k ve SOC 2, Tip 2 sertifikasyonları
+    - Dinamik program konfigürasyonu (örneğin bulut entegrasyonları ekleme, düğüm girdilerini değiştirme v.b.)
     - Çoklu bulut, çoklu bölge ve hibrit dağıtım düzenlemeleri için destek
     - Basit saatlik SaaS-esaslı ücretlendirme
     - SLA'lar ve 7/24 destek
 - [**Moralis**](https://moralis.io/)
   - [Belgeler](https://docs.moralis.io/)
   - Özellikler
-    - Ücretsiz paylaşılan düğümler
-    - Ücretsiz paylaşılan arşiv düğümleri
+    - Ücretsiz paylaşımlı düğümler
+    - Ücretsiz paylaşımlı arşiv düğümleri
     - Gizlilik odaklı (kayıt politikası yok)
     - Çapraz zincir desteği
     - Kullandıkça ölçeklendir
-    - Gösterge paneli
-    - Benzersiz Ethereum SDK'sı
+    - Gösterge Paneli
+    - Benzersiz Ethereum SDK'si
     - Benzersiz API uç noktaları
     - Doğrudan teknik destek
 - [**Pocket Network**](https://www.pokt.network/)
   - [Belgeler](https://docs.pokt.network/home/)
   - Özellikler
-    - Merkeziyetsiz RPC Protokolü ve Pazar Yeri
-    - Ücretsiz Katman Başına 1 Milyon İstek (uç nokta başına maksimum 2)
-    - [Genel Uç Noktalar](https://docs.pokt.network/home/resources/public-rpc-endpoints)
+    - Merkeziyetsiz RPC Protokolü ve Pazar
+    - Günlük 1 Milyon Talep Bulunan Ücretsiz Seviye (uç nokta başına maksimum 2)
+    - [Açık Uç Noktalar](https://docs.pokt.network/home/resources/public-rpc-endpoints)
     - Pre-Stake+ Programı (günde 1 milyondan fazla isteğe ihtiyacınız varsa)
     - 15+ Blok Zinciri Desteklenir
-    - Uygulamaları sunmak için POKT kazanan 6400+ Düğüm
-    - Arşiv Düğümü, İzlemeli Arşiv Düğümü ve Testnet Düğümü Desteği
-    - Ethereum Mainnet Düğüm İstemci Çeşitliliği
-    - Tek Hata Noktası Yok
+    - Uygulamalara hizmet ederek POKT kazanan 6400+ Düğüm
+    - Arşiv Düğümü, İzlemeli Arşiv Düğümü ve Test Ağı Düğümü Desteği
+    - Ethereum Mainnet Düğüm İstemcisi Çeşitliliği
+    - Tek Başarısızlık Noktası Yok
     - Sıfır Kesinti Süresi
-    - Uygun Maliyetli Sıfıra Yakın Tokenomik (ağ bant genişliği için bir kez POKT hissesi)
+    - Uygun Maliyetli Sıfıra Yakın Tokenomik (ağ bant genişliği için bir kez POKT stake edin)
     - Aylık batık maliyet yok, altyapınızı bir varlığa dönüştürün
     - Protokolde yerleşik olarak bulunan Yük Dengeleme
-    - Gün başına istek sayısını ve saat başına düğüm sayısını sonsuz olarak ölçeklendirin
+    - Gün başına talep sayısını ve saat başına düğüm sayısını sonsuz olarak ölçeklendirin
     - En özel, sansüre dayanıklı seçenek
     - Uygulamalı geliştirici desteği
-    - Cep Portalı gösterge tablosu ve analitiği
+    - [Pocket Portal](https://bit.ly/ETHorg_POKTportal) gösterge tablosu ve analizleri
 - [**QuikNode**](https://www.quiknode.io/)
   - Özellikler
     - 7 günlük ücretsiz deneme
     - Çeşitli destek
     - Webkancaları
-    - Gösterge paneli
+    - Gösterge Paneli
     - Analizler
 - [**Rivet**](https://rivet.cloud/)
   - [Belgeler](https://rivet.readthedocs.io/en/latest/)
   - Özellikler
-    - Ücretsiz katman seçeneği
+    - Ücretsiz seviye seçeneği
     - Kullandıkça ölçeklendirin
 - [**SettleMint**](https://console.settlemint.com/)
   - [Belgeler](https://docs.settlemint.com/)
   - Özellikler
     - Ücretsiz deneme
     - Kullandıkça ölçeklendir
-    - GraphQL destek
+    - GraphQL desteği
     - RPC ve WSS uç noktaları
-    - İthaf olunmuş tam düğümler
-    - Bulutunu getir
+    - Özel tam düğümler
+    - Bulutunuzu getirin
     - Analiz araçları
-    - Gösterge paneli
+    - Gösterge Paneli
     - Saat başına ödeme fiyatlandırması
     - Doğrudan destek
 - [**Watchdata**](https://watchdata.io/)
   - [Belgeler](https://docs.watchdata.io/)
   - Özellikler
     - Veri güvenilirliği
-    - Kopmayan kesintisiz bağlantı
+    - Kopmayan sıfır kesinti bağlantı
     - Süreç otomasyonu
     - Ücretsiz tarifeler
-    - Herhangi bir kullanıcıya uyan yüksek sınırlar
+    - Tüm kullanıcılara uygun yüksek sınırlar
     - Çeşitli düğümler için destek
     - Kaynak ölçeklendirme
     - Yüksek işlem hızları

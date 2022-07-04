@@ -23,7 +23,7 @@ La proof-of-stake porta con sé una serie di miglioramenti rispetto al sistema P
 - migliore efficienza energetica: non occorre molta energia per il mining dei blocchi
 - minori barriere all'ingresso, requisiti hardware ridotti: non serve hardware d'èlite per avere la possibilità di creare nuovi blocchi
 - maggiore immunità alla centralizzazione: la proof-of-stake dovrebbe portare un maggior numero di nodi alla rete
-- Migliore supporto per le [catene di shard](/upgrades/shard-chains/): un aggiornamento importante per scalare la rete Ethereum
+- Migliore supporto per le [catene di shard](/upgrades/sharding/): un aggiornamento importante per scalare la rete Ethereum
 
 ## Proof-of-stake, staking e validatori {#pos-staking-validators}
 
@@ -37,7 +37,7 @@ Se attesti un blocco dannoso, perdi il tuo stake.
 
 ### La beacon chain {#the-beacon-chain}
 
-Dal momento in cui Ethereum sostituirà il Proof of Work con il proof-of-stake, verrà aggiunta la complessità delle [catene di shard](/upgrades/shard-chains/). Si tratta di blockchain separate, in cui i validatori dovranno elaborare transazioni e creare nuovi blocchi. Si prevede di avere 64 shard chain e tutte dovranno avere una comprensione condivisa dello stato della rete. Ne risulta che è necessaria una maggiore coordinazione, che sarà garantita [dalla Beacon Chain](/upgrades/beacon-chain/).
+Dal momento in cui Ethereum sostituirà il Proof of Work con il proof-of-stake, verrà aggiunta la complessità delle [catene di shard](/upgrades/sharding/). Si tratta di blockchain separate, in cui i validatori dovranno elaborare transazioni e creare nuovi blocchi. Si prevede di avere 64 shard chain e tutte dovranno avere una comprensione condivisa dello stato della rete. Ne risulta che è necessaria una maggiore coordinazione, che sarà garantita [dalla Beacon Chain](/upgrades/beacon-chain/).
 
 La beacon chain riceve informazioni sullo stato dagli shard e le rende disponibili ad altri shard, in modo che la rete possa rimanere sincronizzata. La beacon chain gestirà anche i validatori, dalla registrazione dei depositi di stake fino all'emissione delle ricompense o delle penalità.
 

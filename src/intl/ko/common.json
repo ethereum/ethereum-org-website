@@ -58,8 +58,6 @@
   "consensus-run-beacon-chain": "합의 클라이언트 실행하기",
   "consensus-run-beacon-chain-desc": "이더리움은 최대한 많은 클라이언트를 실행해야 합니다. 이더리움의 공익을 위해 이를 도와 주세요!",
   "consensus-when-shipping": "언제 런칭하나요?",
-  "eth-upgrade-what-happened": "'이더2(Eth2)'에게 무슨 일이 있어났나요?",
-  "eth-upgrade-what-happened-description": "'이더2(Eth2)'란 용어는 합병이 진행됨에 따라 더 이상 사용하지 않기로 했습니다. 대신 '합의 레이어(consensus layer)'라는, '이더2'의 의미를 내포하는 용어를 사용합니다.",
   "ethereum": "이더리움",
   "ethereum-upgrades": "이더리움 업그레이드",
   "ethereum-brand-assets": "이더리움 브랜드 자산",

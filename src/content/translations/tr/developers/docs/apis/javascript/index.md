@@ -152,7 +152,7 @@ Kurulumdan sonra şunları yapabileceksiniz:
 
 ### Akıllı sözleşme fonksiyonlarıyla etkileşim kurmak {#interact-with-smart-contract-functions}
 
-JavaScript istemci kitaplıkları, derlenmiş bir sözleşmenin İkili Arabirimi Uygulaması (ABI) okuyarak uygulamanızın akıllı sözleşme işlevlerini çağırmasına olanak tanır.
+Javascript istemci kütüphaneleri, derlenmiş bir sözleşmenin Uygulama İkili Arabirimini (ABI) okuyarak uygulamanızın akıllı sözleşme fonksiyonlarını çağırmasına olanak tanır.
 
 ABI, esasen sözleşmenin fonksiyonlarını bir JSON formatında açıklar ve onu normal bir JavaScript nesnesi gibi kullanmanıza izin verir.
 
@@ -285,5 +285,5 @@ _Size yardımcı olan bir topluluk kaynağı mı biliyorsunuz? Bu sayfayı düze
 ## İlgili öğreticiler {#related-tutorials}
 
 - [JavaScript'te Ethereum blok zincirini kullanmak için Web3js'yi kurun](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– Projenizde web3.js kurulumu için talimatlar._
-- [JavaScript'ten akıllı sözleşme çağırma](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– DAI belirtecini kullanarak, JavaScript kullanarak sözleşme işlevini nasıl çağıracağınızı görün._
+- [JavaScript'ten akıllı sözleşme çağırma](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– DAI token'ını kullanarak, JavaScript ile sözleşme fonksiyonunu nasıl çağıracağınızı görün._
 - [Web3 ve Alchemy kullanarak işlem gönderme](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) _– Arka uçtan işlem göndermek için adım adım izlenecek yol._

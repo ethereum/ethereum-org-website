@@ -46,7 +46,7 @@ Wenn Sie zweisprachig sind und uns helfen möchten, mehr Menschen zu erreichen, 
 **Allgemeine Ressourcen**
 
 - [Ethereum.cn](https://www.ethereum.cn/) – von der Community gepflegte Inhalte, die das Upgrade der Konsensschicht, alle Notizen zu den Kernentwicklungssitzungen, Layer 2 usw. umfassen
-- [EthFans](https://github.com/editor-Ajian/EthFans.org-annual-collected-works/) – Lernen Sie alles von den Grundlagen bis zu Ethereum-Themen für Fortgeschrittene
+- [EthFans](https://ethfans.org/) – Lernen Sie alles von den Grundlagen bis zu Ethereum-Themen für Fortgeschrittene
 - [Unitimes](https://mp.weixin.qq.com/s/tvloZSDBSOQN9zDQj_91kA) – von der Community gepflegte Inhalte, die Ethereum, DeFi, NFT, Web3-bezogenes Wissen abdecken
 - [123ETH](https://123eth.org/) – ein Portal für das Ethereum-Ökosystem
 - [Zhen Xiao](http://zhenxiao.com/blockchain/) – kostenlose Online-Kurse über Kryptowährungen und ihre Anwendungen
@@ -112,8 +112,8 @@ Wenn Sie zweisprachig sind und uns helfen möchten, mehr Menschen zu erreichen, 
 
 ### Japanisch {#ja}
 
-- [Japanische Vereinigung für den Austausch virtueller und kryptografischer Vermögenswerte](https://jvcea.or.jp/)
-- [Japanische Cryptoasset Business Association](https://cryptocurrency-association.org/)
-- [Einstieg in die Blockchain-Entwicklung | Microsoft Docs](https://docs.microsoft.com/ja-jp/learn/paths/ethereum-blockchain-development/) - Dieser Lernpfad führt Sie in die Blockchain und die Entwicklung auf der Ethereum-Plattform ein
-- [Mastering Ethereum](https://www.oreilly.co.jp/books/9784873118963/) - Mastering Ethereum auf Japanisch
-- [Hands-On Smart Contract-Entwicklung mit Solidität und Ethereum](https://www.oreilly.co.jp/books/9784873119342/) - Hands-On Smart Contract-Entwicklung mit Solidität und Ethereum auf Japanisch
+- [Japan Virtual and Crypto assets Exchange Association](https://jvcea.or.jp/)
+- [Japan Cryptoasset Business Association](https://cryptocurrency-association.org/)
+- [Einstieg in die Blockchain-Entwicklung – Mehr erfahren | Microsoft Docs](https://docs.microsoft.com/ja-jp/learn/paths/ethereum-blockchain-development/) – Dieser Lernpfad führt Sie in die Blockchain und die Entwicklung auf der Ethereum-Plattform ein
+- [Ethereum meistern](https://www.oreilly.co.jp/books/9784873118963/) – "Ethereum meistern" auf Japanisch
+- [Interaktive Smart-Contract-Entwicklung mit Solidity und Ethereum](https://www.oreilly.co.jp/books/9784873119342/) – "Interaktive Smart-Contract-Entwicklung mit Solidity und Ethereum" auf Japanisch

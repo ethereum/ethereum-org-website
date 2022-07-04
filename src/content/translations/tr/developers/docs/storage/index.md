@@ -165,13 +165,13 @@ Hisse İspatı tabanlı:
 **Filebase - _IPFS, Sia, Skynet ve Storj dahil olmak üzere birden fazla merkezi olmayan depolama ağında veri depolamanıza izin veren ilk S3 uyumlu nesne depolama platformu._**
 
 - [Filebase.com](https://filebase.com/)
-- [Dökümanlar](https://docs.filebase.com/)
+- [Belgeler](https://docs.filebase.com/)
 - [GitHub](https://github.com/filebase)
 
 ## Daha fazla bilgi {#further-reading}
 
 - [Merkeziyetsiz Depolama Nedir?](https://coinmarketcap.com/alexandria/article/what-is-decentralized-storage-a-deep-dive-by-filecoin) - _CoinMarketCap_
-- [Merkeziyetsiz Depolamayla İlgili Beş Yaygın Efsaneyi Çürütmek](https://www.storj.io/blog/busting-five-common-myths-about-decentralized-storage) - _Storj_
+- [Merkeziyetsiz Depolamayla İlgili Beş Yaygın Efsanenin Çürütülmesi](https://www.storj.io/blog/busting-five-common-myths-about-decentralized-storage) - _Storj_
 
 _Size yardımcı olan bir topluluk kaynağı mı biliyorsunuz? Bu sayfayı düzenleyin ve onu ekleyin!_
 

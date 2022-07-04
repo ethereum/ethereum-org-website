@@ -12,7 +12,7 @@ Akıllı sözleşmeler Ethereum üzerinde herkese açıktır ve açık API'ler o
 
 ## İlgili öğreticiler {#related-tutorials}
 
-- [Sözleşme Birleştirilebilirliği: Ethereum Akıllı Sözleşme Geliştirmenin Yapı Taşları](https://blog.decentlabs.io/contract-composability-the-building-blocks-of-ethereum-smart-contract-development/)
+- [Sözleşme Birleştirilebilirliği: Ethereum Akıllı Sözleşme Geliştirmenin Yapı Taşları](https://www.decentlabs.io/blog/contract-composability-the-building-blocks-of-ethereum-smart-contract-development)
 - [create-eth-app ile Dapp ön uç geliştirmeye bir adım önde başlayın](/developers/tutorials/kickstart-your-dapp-frontend-development-wth-create-eth-app/) _– Popüler akıllı sözleşmelerle uygulamalar oluşturmak için create-eth-app kullanımına genel bir bakış._
 
 ## Daha fazla bilgi {#further-reading}

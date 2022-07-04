@@ -59,7 +59,7 @@ Hapo awali, mpango huo ulikuwa ukifanya kazi kwenye minyororo iliyokatwa kabla y
 
 Hii itakuwa tathmini inayoendelea kutoka kwa jamii juu ya hitaji la raundi nyingi za vipande vya minyororo ili kuruhusu uendelevu usio na mwisho.
 
-<ButtonLink to="/upgrades/shard-chains/">
+<ButtonLink to="/upgrades/sharding/">
   Vipande vya minyororo
 </ButtonLink>
 

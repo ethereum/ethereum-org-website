@@ -59,7 +59,7 @@ Restez à jour avec le [Blog de Recherche et Développement EF](https://blog.eth
 
 Il s'agira d'une évaluation continue de la part de la communauté quant à la potentielle nécessité de plusieurs séries de chaînes fragmentées afin de permettre une évolutivité sans fin.
 
-<ButtonLink to="/upgrades/shard-chains/">
+<ButtonLink to="/upgrades/sharding/">
   Chaines de fragments
 </ButtonLink>
 

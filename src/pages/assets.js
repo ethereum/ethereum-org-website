@@ -10,6 +10,7 @@ import Link from "../components/Link"
 import PageMetadata from "../components/PageMetadata"
 import Translation from "../components/Translation"
 import { Page, Content } from "../components/SharedStyledComponents"
+import FeedbackCard from "../components/FeedbackCard"
 
 import { translateMessageId } from "../utils/translations"
 import EthGlyphColoredSvg from "../assets/assets/eth-glyph-colored.svg"
@@ -492,6 +493,7 @@ const AssetsPage = ({ data }) => {
           />
         </Row>
       </Content>
+      <FeedbackCard />
     </Page>
   )
 }

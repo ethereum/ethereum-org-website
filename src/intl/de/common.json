@@ -59,8 +59,6 @@
   "consensus-run-beacon-chain": "Einen Consensus-Client ausführen",
   "consensus-run-beacon-chain-desc": "Ethereum braucht so viele Clients wie möglich. Hilf mit diesem öffentlichen Gut!",
   "consensus-when-shipping": "Wann wird es veröffentlicht?",
-  "eth-upgrade-what-happened": "Was ist mit „Eth2“ passiert?",
-  "eth-upgrade-what-happened-description": "Der Begriff „Eth2“ wird schrittweise veralten und wegfallen. Was heute noch als „Eth2“ bekannt ist, wird zukünftig den Namen „Consensus Layer“ tragen.",
   "ethereum": "Ethereum",
   "ethereum-upgrades": "Die Ethereum Upgrades",
   "ethereum-brand-assets": "Ethereum – Marken-Assets",

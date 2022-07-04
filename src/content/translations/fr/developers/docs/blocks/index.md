@@ -67,4 +67,4 @@ _Une ressource communautaire vous a aidé ? Modifiez cette page et ajoutez-la !_
 
 - [Minage](/developers/docs/consensus-mechanisms/pow/mining/)
 - [Transactions](/developers/docs/transactions/)
-- [Gas](/developers/docs/gas/)
+- [Gaz](/developers/docs/gas/)

@@ -12,7 +12,7 @@ _This introductory paper was originally published in 2014 by Vitalik Buterin, th
 
 _While several years old, we maintain this paper because it continues to serve as a useful reference and an accurate representation of Ethereum and its vision. To learn about the latest developments of Ethereum, and how changes to the protocol are made, we recommend [this guide](/learn/)._
 
-[Open the Ethereum Whitepaper as a PDF](./whitepaper-pdf/Ethereum_Whitepaper_-_Buterin_2014.pdf)
+[Researchers and academics seeking a historical or canonical version of the whitepaper [from December 2014] should use this PDF.](./whitepaper-pdf/Ethereum_Whitepaper_-_Buterin_2014.pdf)
 
 ## A Next-Generation Smart Contract and Decentralized Application Platform {#a-next-generation-smart-contract-and-decentralized-application-platform}
 
@@ -32,25 +32,45 @@ The mechanism behind proof-of-work was a breakthrough in the space because it si
 
 From a technical standpoint, the ledger of a cryptocurrency such as Bitcoin can be thought of as a state transition system, where there is a "state" consisting of the ownership status of all existing bitcoins and a "state transition function" that takes a state and a transaction and outputs a new state which is the result. In a standard banking system, for example, the state is a balance sheet, a transaction is a request to move $X from A to B, and the state transition function reduces the value in A's account by $X and increases the value in B's account by $X. If A's account has less than $X in the first place, the state transition function returns an error. Hence, one can formally define:
 
-    APPLY(S,TX) -> S' or ERROR
+```
+APPLY(S,TX) -> S' or ERROR
+```
 
 In the banking system defined above:
 
-    APPLY({ Alice: $50, Bob: $50 },"send $20 from Alice to Bob") = { Alice: $30, Bob: $70 }
+```js
+APPLY({ Alice: $50, Bob: $50 },"send $20 from Alice to Bob") = { Alice: $30, Bob: $70 }
+```
 
 But:
 
-    APPLY({ Alice: $50, Bob: $50 },"send $70 from Alice to Bob") = ERROR
+```js
+APPLY({ Alice: $50, Bob: $50 },"send $70 from Alice to Bob") = ERROR
+```
 
-The "state" in Bitcoin is the collection of all coins (technically, "unspent transaction outputs" or UTXO) that have been minted and not yet spent, with each UTXO having a denomination and an owner (defined by a 20-byte address which is essentially a cryptographic public key<sup>[fn. 1](#notes)</sup>). A transaction contains one or more inputs, with each input containing a reference to an existing UTXO and a cryptographic signature produced by the private key associated with the owner's address, and one or more outputs, with each output containing a new UTXO to be added to the state.
+The "state" in Bitcoin is the collection of all coins (technically, "unspent transaction outputs" or UTXO) that have been minted and not yet spent, with each UTXO having a denomination and an owner (defined by a 20-byte address which is essentially a cryptographic public key<sup>[fn1](#notes)</sup>). A transaction contains one or more inputs, with each input containing a reference to an existing UTXO and a cryptographic signature produced by the private key associated with the owner's address, and one or more outputs, with each output containing a new UTXO to be added to the state.
 
 The state transition function `APPLY(S,TX) -> S'` can be defined roughly as follows:
 
-1. For each input in `TX`:
-   - If the referenced UTXO is not in `S`, return an error.
-   - If the provided signature does not match the owner of the UTXO, return an error.
-2. If the sum of the denominations of all input UTXO is less than the sum of the denominations of all output UTXO, return an error.
-3. Return `S` with all input UTXO removed and all output UTXO added.
+<ol>
+  <li>
+    For each input in <code>TX</code>:
+    <ul>
+    <li>
+        If the referenced UTXO is not in <code>S</code>, return an error.
+    </li>
+    <li>
+        If the provided signature does not match the owner of the UTXO, return an error.
+    </li>
+    </ul>
+  </li>
+  <li>
+    If the sum of the denominations of all input UTXO is less than the sum of the denominations of all output UTXO, return an error.
+  </li>
+  <li>
+    Return <code>S</code> with all input UTXO removed and all output UTXO added.
+  </li>
+</ol>
 
 The first half of the first step prevents transaction senders from spending coins that do not exist, the second half of the first step prevents transaction senders from spending other people's coins, and the second step enforces conservation of value. In order to use this for payment, the protocol is as follows. Suppose Alice wants to send 11.7 BTC to Bob. First, Alice will look for a set of available UTXO that she owns that totals up to at least 11.7 BTC. Realistically, Alice will not be able to get exactly 11.7 BTC; say that the smallest she can get is 6+4+2=12. She then creates a transaction with those three inputs and two outputs. The first output will be 11.7 BTC with Bob's address as its owner, and the second output will be the remaining 0.3 BTC "change", with the owner being Alice herself.
 
@@ -63,7 +83,7 @@ If we had access to a trustworthy centralized service, this system would be triv
 The algorithm for checking if a block is valid, expressed in this paradigm, is as follows:
 
 1. Check if the previous block referenced by the block exists and is valid.
-2. Check that the timestamp of the block is greater than that of the previous block<sup>[fn. 2](#notes)</sup> and less than 2 hours into the future
+2. Check that the timestamp of the block is greater than that of the previous block<sup>[fn2](#notes)</sup> and less than 2 hours into the future
 3. Check that the proof-of-work on the block is valid.
 4. Let `S[0]` be the state at the end of the previous block.
 5. Suppose `TX` is the block's transaction list with `n` transactions. For all `i` in `0...n-1`, set `S[i+1] = APPLY(S[i],TX[i])` If any application returns an error, exit and return false.
@@ -182,8 +202,10 @@ The Ethereum state transition function, `APPLY(S,TX) -> S'` can be defined as fo
 
 For example, suppose that the contract's code is:
 
-    if !self.storage[calldataload(0)]:
-        self.storage[calldataload(0)] = calldataload(32)
+```py
+if !self.storage[calldataload(0)]:
+  self.storage[calldataload(0)] = calldataload(32)
+```
 
 Note that in reality the contract code is written in the low-level EVM code; this example is written in Serpent, one of our high-level languages, for clarity, and can be compiled down to EVM code. Suppose that the contract's storage starts off empty, and a transaction is sent with 10 ether value, 2000 gas, 0.001 ether gasprice, and 64 bytes of data, with bytes 0-31 representing the number `2` and bytes 32-63 representing the string `CHARLIE`. The process for the state transition function in this case is as follows:
 
@@ -239,10 +261,12 @@ On-blockchain token systems have many applications ranging from sub-currencies r
 
 The basic code for implementing a token system in Serpent looks as follows:
 
-    def send(to, value):
-        if self.storage[msg.sender] >= value:
-            self.storage[msg.sender] = self.storage[msg.sender] - value
-            self.storage[to] = self.storage[to] + value
+```py
+def send(to, value):
+  if self.storage[msg.sender] >= value:
+    self.storage[msg.sender] = self.storage[msg.sender] - value
+    self.storage[to] = self.storage[to] + value
+```
 
 This is essentially a literal implementation of the "banking system" state transition function described further above in this document. A few extra lines of code need to be added to provide for the initial step of distributing the currency units in the first place and a few other edge cases, and ideally a function would be added to let other contracts query for the balance of an address. But that's all there is to it. Theoretically, Ethereum-based token systems acting as sub-currencies can potentially include another important feature that on-chain Bitcoin-based meta-currencies lack: the ability to pay transaction fees directly in that currency. The way this would be implemented is that the contract would maintain an ether balance with which it would refund ether used to pay fees to the sender, and it would refill this balance by collecting the internal currency units that it takes in fees and reselling them in a constant running auction. Users would thus need to "activate" their accounts with ether, but once the ether is there it would be reusable because the contract would refund it each time.
 
@@ -265,9 +289,11 @@ In practice, however, issuers are not always trustworthy, and in some cases the 
 
 The earliest alternative cryptocurrency of all, [Namecoin](http://namecoin.org/), attempted to use a Bitcoin-like blockchain to provide a name registration system, where users can register their names in a public database alongside other data. The major cited use case is for a [DNS](https://wikipedia.org/wiki/Domain_Name_System) system, mapping domain names like "bitcoin.org" (or, in Namecoin's case, "bitcoin.bit") to an IP address. Other use cases include email authentication and potentially more advanced reputation systems. Here is the basic contract to provide a Namecoin-like name registration system on Ethereum:
 
-    def register(name, value):
-        if !self.storage[name]:
-            self.storage[name] = value
+```py
+def register(name, value):
+  if !self.storage[name]:
+    self.storage[name] = value
+```
 
 The contract is very simple; all it is is a database inside the Ethereum network that can be added to, but not modified or removed from. Anyone can register a name with some value, and that registration then sticks forever. A more sophisticated name registration contract will also have a "function clause" allowing other contracts to query it, as well as a mechanism for the "owner" (ie. the first registerer) of a name to change the data or transfer ownership. One can even add reputation and web-of-trust functionality on top.
 
@@ -366,8 +392,10 @@ floating cap: no block can have more operations than
 `BLK_LIMIT_FACTOR` times the long-term exponential moving average.
 Specifically:
 
-    blk.oplimit = floor((blk.parent.oplimit \* (EMAFACTOR - 1) +
-    floor(parent.opcount \* BLK\_LIMIT\_FACTOR)) / EMA\_FACTOR)
+```js
+blk.oplimit = floor((blk.parent.oplimit \* (EMAFACTOR - 1) +
+floor(parent.opcount \* BLK\_LIMIT\_FACTOR)) / EMA\_FACTOR)
+```
 
 `BLK_LIMIT_FACTOR` and `EMA_FACTOR` are constants that will be set to 65536 and 1.5 for the time being, but will likely be changed after further analysis.
 
@@ -386,12 +414,14 @@ As described in the state transition section, our solution works by requiring a 
 
 The alternative to Turing-completeness is Turing-incompleteness, where `JUMP` and `JUMPI` do not exist and only one copy of each contract is allowed to exist in the call stack at any given time. With this system, the fee system described and the uncertainties around the effectiveness of our solution might not be necessary, as the cost of executing a contract would be bounded above by its size. Additionally, Turing-incompleteness is not even that big a limitation; out of all the contract examples we have conceived internally, so far only one required a loop, and even that loop could be removed by making 26 repetitions of a one-line piece of code. Given the serious implications of Turing-completeness, and the limited benefit, why not simply have a Turing-incomplete language? In reality, however, Turing-incompleteness is far from a neat solution to the problem. To see why, consider the following contracts:
 
-    C0: call(C1); call(C1);
-    C1: call(C2); call(C2);
-    C2: call(C3); call(C3);
-    ...
-    C49: call(C50); call(C50);
-    C50: (run one step of a program and record the change in storage)
+```sh
+C0: call(C1); call(C1);
+C1: call(C2); call(C2);
+C2: call(C3); call(C3);
+...
+C49: call(C50); call(C50);
+C50: (run one step of a program and record the change in storage)
+```
 
 Now, send a transaction to A. Thus, in 51 transactions, we have a contract that takes up 2<sup>50</sup> computational steps. Miners could try to detect such logic bombs ahead of time by maintaining a value alongside each contract specifying the maximum number of computational steps that it can take, and calculating this for contracts calling other contracts recursively, but that would require miners to forbid contracts that create other contracts (since the creation and execution of all 26 contracts above could easily be rolled into a single contract). Another problematic point is that the address field of a message is a variable, so in general it may not even be possible to tell which other contracts a given contract will call ahead of time. Hence, all in all, we have a surprising conclusion: Turing-completeness is surprisingly easy to manage, and the lack of Turing-completeness is equally surprisingly difficult to manage unless the exact same controls are in place - but in that case why not just let the protocol be Turing-complete?
 
@@ -461,33 +491,21 @@ The concept of an arbitrary state transition function as implemented by the Ethe
 
 ### Notes {#notes}
 
-1.  A sophisticated reader may notice that in fact a Bitcoin address is
-    the hash of the elliptic curve public key, and not the public key
-    itself. However, it is in fact perfectly legitimate cryptographic
-    terminology to refer to the pubkey hash as a public key itself. This
-    is because Bitcoin's cryptography can be considered to be a custom
-    digital signature algorithm, where the public key consists of the
-    hash of the ECC pubkey, the signature consists of the ECC pubkey
-    concatenated with the ECC signature, and the verification algorithm
-    involves checking the ECC pubkey in the signature against the ECC
-    pubkey hash provided as a public key and then verifying the ECC
-    signature against the ECC pubkey.
-2.  Technically, the median of the 11 previous blocks.
-3.  Internally, 2 and "CHARLIE" are both numbers, with the latter being
-    in big-endian base 256 representation. Numbers can be at least 0 and
-    at most 2<sup>256</sup>-1.
+1. A sophisticated reader may notice that in fact a Bitcoin address is the hash of the elliptic curve public key, and not the public key itself. However, it is in fact perfectly legitimate cryptographic terminology to refer to the pubkey hash as a public key itself. This is because Bitcoin's cryptography can be considered to be a custom digital signature algorithm, where the public key consists of the hash of the ECC pubkey, the signature consists of the ECC pubkey concatenated with the ECC signature, and the verification algorithm involves checking the ECC pubkey in the signature against the ECC pubkey hash provided as a public key and then verifying the ECC signature against the ECC pubkey.
+2. Technically, the median of the 11 previous blocks.
+3. Internally, 2 and "CHARLIE" are both numbers<sup>[fn3](#notes)</sup>, with the latter being in big-endian base 256 representation. Numbers can be at least 0 and at most 2<sup>256</sup>-1.
 
 ### Further Reading {#further-reading}
 
-1.  [Intrinsic value](http://bitcoinmagazine.com/8640/an-exploration-of-intrinsic-value-what-it-is-why-bitcoin-doesnt-have-it-and-why-bitcoin-does-have-it/)
-2.  [Smart property](https://en.bitcoin.it/wiki/Smart_Property)
-3.  [Smart contracts](https://en.bitcoin.it/wiki/Contracts)
-4.  [B-money](http://www.weidai.com/bmoney.txt)
-5.  [Reusable proofs of work](https://nakamotoinstitute.org/finney/rpow/)
-6.  [Secure property titles with owner authority](https://nakamotoinstitute.org/secure-property-titles/)
-7.  [Bitcoin whitepaper](http://bitcoin.org/bitcoin.pdf)
-8.  [Namecoin](https://namecoin.org/)
-9.  [Zooko's triangle](https://wikipedia.org/wiki/Zooko's_triangle)
+1. [Intrinsic value](http://bitcoinmagazine.com/8640/an-exploration-of-intrinsic-value-what-it-is-why-bitcoin-doesnt-have-it-and-why-bitcoin-does-have-it/)
+2. [Smart property](https://en.bitcoin.it/wiki/Smart_Property)
+3. [Smart contracts](https://en.bitcoin.it/wiki/Contracts)
+4. [B-money](http://www.weidai.com/bmoney.txt)
+5. [Reusable proofs of work](https://nakamotoinstitute.org/finney/rpow/)
+6. [Secure property titles with owner authority](https://nakamotoinstitute.org/secure-property-titles/)
+7. [Bitcoin whitepaper](http://bitcoin.org/bitcoin.pdf)
+8. [Namecoin](https://namecoin.org/)
+9. [Zooko's triangle](https://wikipedia.org/wiki/Zooko's_triangle)
 10. [Colored coins whitepaper](https://docs.google.com/a/buterin.com/document/d/1AnkP_cVZTCMLIzw4DvsW6M8Q2JC0lIzrTLuoWu2z1BE/edit)
 11. [Mastercoin whitepaper](https://github.com/mastercoin-MSC/spec)
 12. [Decentralized autonomous corporations, Bitcoin Magazine](http://bitcoinmagazine.com/7050/bootstrapping-a-decentralized-autonomous-corporation-part-i/)

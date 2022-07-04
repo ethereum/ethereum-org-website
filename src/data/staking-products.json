@@ -350,59 +350,6 @@
         "eventAction": "Clicked",
         "eventName": "Clicked Abyss Finance go to link"
       }
-    },
-    {
-      "name": "StakeWise Solo",
-      "svgPath": "stakewise-glyph.svg",
-      "hue": 220,
-      "launchDate": "2021-02-01",
-      "url": "https://app.stakewise.io/solo",
-      "audits": [
-        {
-          "name": "Omniscia",
-          "url": "https://github.com/stakewise/contracts/blob/master/audits/2021-11-25-Omniscia.pdf",
-          "date": "2021-11-25"
-        },
-        {
-          "name": "Certik",
-          "url": "https://github.com/stakewise/contracts/blob/master/audits/2021-06-01-Certik.pdf",
-          "date": "2021-06-01"
-        },
-        {
-          "name": "Certik",
-          "url": "https://github.com/stakewise/contracts/blob/master/audits/2021-04-18-Certik.pdf",
-          "date": "2021-04-18"
-        },
-        {
-          "name": "Runtime Verification",
-          "url": "https://github.com/stakewise/contracts/blob/master/audits/2021-01-14-RuntimeVerification.pdf",
-          "date": "2021-01-14"
-        }
-      ],
-      "minEth": 32,
-      "additionalStake": null,
-      "additionalStakeUnit": null,
-      "monthlyFee": 10,
-      "monthlyFeeUnit": "USD",
-      "isFoss": true,
-      "hasBugBounty": false,
-      "isTrustless": false,
-      "isPermissionless": true,
-      "pctMajorityClient": null,
-      "isSelfCustody": false,
-      "platforms": ["Browser"],
-      "ui": ["GUI"],
-      "socials": {
-        "discord": "https://discord.gg/8Zf7tKyXeZ",
-        "twitter": "https://twitter.com/stakewise_io",
-        "telegram": "https://t.me/stakewise_io",
-        "github": "https://github.com/stakewise"
-      },
-      "matomo": {
-        "eventCategory": "StakingProductCard",
-        "eventAction": "Clicked",
-        "eventName": "Clicked StakeWise Solo go to link"
-      }
     }
   ],
   "pools": [
@@ -503,7 +450,7 @@
       }
     },
     {
-      "name": "StakeWise Pool",
+      "name": "StakeWise",
       "svgPath": "stakewise-glyph.svg",
       "hue": 220,
       "launchDate": "2021-02-01",
@@ -545,10 +492,10 @@
         }
       ],
       "isFoss": true,
-      "hasBugBounty": false,
-      "isTrustless": false,
+      "hasBugBounty": true,
+      "isTrustless": true,
       "hasPermissionlessNodes": false,
-      "pctMajorityClient": null,
+      "pctMajorityClient": 43.1,
       "platforms": ["Browser"],
       "ui": ["GUI"],
       "socials": {
@@ -582,7 +529,7 @@
       "isTrustless": true,
       "hasPermissionlessNodes": false,
       "pctMajorityClient": 0.0,
-      "platforms": ["Browser"],
+      "platforms": ["Browser", "Wallet"],
       "ui": ["GUI"],
       "twitter": "https://twitter.com/stakefish",
       "telegram": "https://t.me/stakefish",

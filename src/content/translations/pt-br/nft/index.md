@@ -406,7 +406,7 @@ Estima-se que a melhoria de dimensionamento permitirá que a rede processe entre
 
 [Vitalik Buterin sobre transações potenciais por segundo com a fragmentação](https://twitter.com/VitalikButerin/status/1312905884549300224)
 
-No mínimo, a fragmentação permitirá 64 vezes mais transações, que hoje está em torno de 15 transações. Essa é a quantidade de cadeias de fragmentos (dados extras e capacidade) sendo introduzida. [Mais sobre cadeias de fragmentação](/upgrades/shard-chains/)
+No mínimo, a fragmentação permitirá 64 vezes mais transações, que hoje está em torno de 15 transações. Essa é a quantidade de cadeias de fragmentos (dados extras e capacidade) sendo introduzida. [Mais sobre cadeias de fragmentação](/upgrades/sharding/)
 
 Isso significa que podemos estimar quanto tempo levará para processar 100.000 transações, para que possamos comparar com o exemplo da Visa acima.
 

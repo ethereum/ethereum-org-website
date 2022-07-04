@@ -59,8 +59,6 @@
   "consensus-run-beacon-chain": "Konszenzus kliens futtatása",
   "consensus-run-beacon-chain-desc": "Az Ethereum annyi futó klienst igényel, amennyi lehetséges. Segítsd ezzel az Ethereum közjavat!",
   "consensus-when-shipping": "Mikor lesz kész?",
-  "eth-upgrade-what-happened": "Mi történt az „Eth2”-vel?",
-  "eth-upgrade-what-happened-description": "Az „Eth2” kifejezés elavulttá vált, ahogy közeledünk az egyesítéshez. A „konszenzusos réteg” magában foglalja azt, amit korábban „Eth2” néven ismertünk",
   "ethereum": "Ethereum",
   "ethereum-upgrades": "Az Ethereum fejlesztései",
   "ethereum-brand-assets": "Ethereum márkanév",

@@ -17,7 +17,7 @@ summaryPoint4: 您可能知道，它在技术路线图上属于“阶段 0”。
 
 ## 信标链有什么作用？ {#what-does-the-beacon-chain-do}
 
-信标链将处理或协调[分片](/upgrades/shard-chains/)和[质押人](/staking/)的扩展网络。 但它会与今天的[以太坊主网](/glossary/#mainnet)不同。 它无法处理帐户或智能合约。
+信标链将处理或协调[分片](/upgrades/sharding/)和[质押人](/staking/)的扩展网络。 但它会与今天的[以太坊主网](/glossary/#mainnet)不同。 它无法处理帐户或智能合约。
 
 信标链的角色将随着时间的推移而改变，但它是[我们正在努力实现的安全、可持续和可扩展以太坊的](/upgrades/vision/)基础组件。
 
@@ -33,7 +33,7 @@ summaryPoint4: 您可能知道，它在技术路线图上属于“阶段 0”。
 如果您有兴趣成为验证者并帮助保护信标链，请点击<a href="/staking/">了解关于质押的更多信息</a>。
 </InfoBanner>
 
-引入该机制这一重要变化也有助于实现另一个升级：[分片链](/upgrades/shard-chains/)。
+引入该机制这一重要变化也有助于实现另一个升级：[分片链](/upgrades/sharding/)。
 
 ### 设置分片链 {#setting-up-for-shard-chains}
 
@@ -57,7 +57,7 @@ summaryPoint4: 您可能知道，它在技术路线图上属于“阶段 0”。
 
 分片链只有在已建立权益证明共识机制的情况下才能安全进入以太坊生态系统。 信标链将引入权益质押，为后续的分片链升级奠定基础。
 
-<ButtonLink to="/upgrades/shard-chains/">
+<ButtonLink to="/upgrades/sharding/">
     分片链
 </ButtonLink>
 

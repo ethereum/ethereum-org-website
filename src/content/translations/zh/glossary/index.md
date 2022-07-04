@@ -722,7 +722,7 @@ Gigawei 的缩写，[ether](#ether) 的一个货币单位，通常用于计算 [
 
 "测试网络"的简称，用于模拟以太坊主网行为的网络（参阅 [mainnet 主网](#mainnet)）。
 
-<DocLink to="/developers/docs/networks/#testnets">
+<DocLink to="/developers/docs/networks/#ethereum-testnets">
   测试网
 </DocLink>
 

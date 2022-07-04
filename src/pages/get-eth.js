@@ -23,6 +23,7 @@ import {
   StyledCard,
   TwoColumnContent,
 } from "../components/SharedStyledComponents"
+import FeedbackCard from "../components/FeedbackCard"
 
 const Subtitle = styled.div`
   font-size: 1.25rem;
@@ -425,6 +426,7 @@ const GetETHPage = ({ data }) => {
           </ButtonLink>
         </div>
       </CalloutBanner>
+      <FeedbackCard />
     </Page>
   )
 }

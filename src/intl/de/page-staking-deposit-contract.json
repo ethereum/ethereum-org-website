@@ -2,7 +2,7 @@
   "page-staking-deposit-contract-address": "Adresse des Einzahlungsvertrags zum Staken",
   "page-staking-deposit-contract-address-caption": "Wir haben Leerzeichen hinzugefügt, um die Adresse besser lesbar zu machen",
   "page-staking-deposit-contract-address-check-btn": "Überprüfen Sie die Einzahlungsvertragsadresse",
-  "page-staking-deposit-contract-checkbox1": "Ich habe bereits das Launchpad verwendet, um meinen Ethereum-Validierer einzurichten.",
+  "page-staking-deposit-contract-checkbox1": "Ich habe bereits das Launchpad verwendet, um meinen Ethereum-Validator einzurichten.",
   "page-staking-deposit-contract-checkbox2": "Ich verstehe, dass ich das Launchpad verwenden muss, um zu staken. Einfache Überweisungen an diese Adresse werden nicht funktionieren.",
   "page-staking-deposit-contract-checkbox3": "Ich werde die Adresse des Einzahlungsvertrags mit anderen Quellen überprüfen.",
   "page-staking-deposit-contract-confirm-address": "Bestätigen, um die Adresse anzuzeigen",

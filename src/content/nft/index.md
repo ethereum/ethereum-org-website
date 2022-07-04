@@ -11,6 +11,7 @@ alt: An Eth logo being displayed via hologram.
 summaryPoint1: A way to represent anything unique as an Ethereum-based asset.
 summaryPoint2: NFTs are giving more power to content creators than ever before.
 summaryPoint3: Powered by smart contracts on the Ethereum blockchain.
+preMergeBanner: true
 ---
 
 NFTs are currently taking the digital art and collectibles world by storm. Digital artists are seeing their lives change thanks to huge sales to a new crypto-audience. And celebrities are joining in as they spot a new opportunity to connect with fans. But digital art is only one way to use NFTs. Really they can be used to represent ownership of any unique asset, like a deed for an item in the digital or physical realm.
@@ -55,6 +56,12 @@ The NFT world is relatively new. In theory, the scope for NFTs is anything that 
 - [A digital collectible](https://www.larvalabs.com/cryptopunks/details/1)
 - [A domain name](https://app.ens.domains/name/ethereum.eth)
 - [A ticket that gives you access to an event or a coupon](https://www.yellowheart.io/)
+- [Buy real world goods](https://www.tangible.store/)
+- [Fractionalized real-estate](https://realt.co/)
+- [Degree Certificates](https://www.degreecert.com/)
+- [Music royalties via NFTs](https://opulous.org/)
+- [Move 2 earn](https://yeticoineth.com/about.html)
+- [Digital identity](https://photochromic.io/)
 
 ### ethereum.org examples {#ethereum-org-examples}
 
@@ -260,6 +267,12 @@ As we mentioned, this is an emerging space. NFTs, DAOs, fractionalised tokens ar
 
 [More on DAOs](/dao/)
 
+### Certificates of authenticity {#certificates}
+
+Companies offering fake certificates for university degrees are reportedly a billion-dollar industry that NFTs can help combat. NFTs can be a secure and quick way to verify someone's degree credentials.
+
+[In South Korea, one university is already issuing degree certificates as an NFT](https://forkast.news/headlines/south-korea-nfts-graduates-hoseo/), with the hope that NFTs will improve access to administrative services and prevent forgery or alteration of the degree. [Trinity Business School (TBS) in Ireland is also planning on offering NFTs from 2023](https://trinitynews.ie/2022/04/business-school-to-offer-degree-nfts/).
+
 <Divider />
 
 ## Ethereum and NFTs {#ethereum-and-nfts}
@@ -408,7 +421,7 @@ It's estimated that scalability upgrades will allow the network to process betwe
 
 [Vitalik Buterin on transactions per second potential with sharding](https://twitter.com/VitalikButerin/status/1312905884549300224)
 
-At the bare minimum, sharding will allow 64 times the amount of transactions as today which sits at around 15 transactions. That's the amount of shard chains (extra data and capacity) being introduced. [More on shard chains](/upgrades/shard-chains/)
+At the bare minimum, sharding will allow 64 times the amount of transactions as today which sits at around 15 transactions. That's the amount of shard chains (extra data and capacity) being introduced. [More on shard chains](/upgrades/sharding/)
 
 That means we can estimate how long it will take to process 100,000 transactions so we can compare it to the Visa example above.
 

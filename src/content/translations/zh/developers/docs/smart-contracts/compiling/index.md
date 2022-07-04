@@ -276,4 +276,4 @@ Anchor Link Xpath: /ul[19]/li/a 文件： Decentralized Storage
 ## 相关主题 {#related-topics}
 
 - [JavaScript 客户端库](/developers/docs/apis/javascript/)
-- [以太坊虚拟机](/developers/docs/ethereum-virtual-machine/)
+- [以太坊虚拟机](/developers/docs/evm/)

@@ -56,7 +56,7 @@ Sürekli olarak kötü niyetli ancak geçerli bloklar oluşturabilmek için, di�
 
 İş ispatı ayrıca sisteme yeni para birimi vermekten ve madencileri işi yapmaya teşvik etmekten de sorumludur.
 
-Başarılı şekilde bir blok oluşturan madenciler taze basılmış iki ETH ile ödüllendirilirler ancak ana ücret yakıldığı için artık tüm işlem ücretlerini almazlar, bahşiş ve blok ödülü madenciye gider. Bir madenci ayrıca bir amca bloğu için de 1,75 ETH alabilir. Amca blokları (Uncle blocks), pratik olarak başka bir madencinin başarılı bloğu kazmasıyla aynı anda başka bir madenci tarafından oluşturulan geçerli bloklardır. Amca blokları genellikle ağ gecikmesi sebebiyle gerçekleşir.
+Başarılı şekilde bir blok oluşturan madenciler, taze basılmış iki ETH ile ödüllendirilirler ancak ana ücret yakıldığı için artık tüm işlem ücretlerini almazlar, bahşiş ve blok ödülü madenciye gider. Bir madenci ayrıca bir amca bloğu için de 1,75 ETH alabilir. Amca blokları (Uncle blocks), pratik olarak başka bir madencinin başarılı bloğu kazmasıyla aynı anda başka bir madenci tarafından oluşturulan geçerli bloklardır. Amca blokları genellikle ağ gecikmesi sebebiyle gerçekleşir.
 
 ## Kesinlik {#finality}
 

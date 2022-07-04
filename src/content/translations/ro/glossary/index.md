@@ -808,7 +808,7 @@ O [furculiță tare](#hard-fork) a blockchain-ului Ethereum, care a avut loc la 
 
 Prescurtare de la "rețea de testare", o rețea utilizată pentru a simula comportamentul rețelei principale Ethereum (a se vedea [Rețelei principale](#mainnet)).
 
-<DocLink to="/developers/docs/networks/#testnets">
+<DocLink to="/developers/docs/networks/#ethereum-testnets">
   Rețele de testare
 </DocLink>
 

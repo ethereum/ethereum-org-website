@@ -12,7 +12,7 @@ Kendi düğümünüzü çalıştırmak size birçok fayda sağlar, yeni fırsatl
 
 Bir Ethereum düğümünün ne olduğunu ve neden bir istemci çalıştırmak isteyebileceğinizi anlamalısınız. Bunlar, [Düğümler ve istemciler](/developers/docs/nodes-and-clients/) bölümünde anlatılmıştır.
 
-Eğer düğüm çalıştırma konusuna yeniyseniz, veya daha az teknik bir yol arıyorsanız, ilk olarak [bir Ethereum düğümü çalıştırmak üzerine](/run-a-node) kullanıcı dostu öğreticimize göz atmanızı öneririz.
+Eğer düğüm çalıştırma konusunda acemiyseniz veya daha az teknik bir yol arıyorsanız, ilk olarak [bir Ethereum düğümü çalıştırmak üzerine](/run-a-node) kullanıcı dostu öğreticimize göz atmanızı öneririz.
 
 ## Bir yaklaşım seçme {#choosing-approach}
 
@@ -77,7 +77,7 @@ Stabil Mainnet istemci uygulamaları için yürütülebilir ikili programlar yay
 - [Besu](https://pegasys.tech/solutions/hyperledger-besu/)
 - [Erigon](https://github.com/ledgerwatch/erigon)
 
-**OpenEthereum'un [kullanımdan kaldırıldığını](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd) ve artık bakıma tabi olmadığını unutmayın.** Dikkatli kullanın ve tercihen başka bir istemci uygulamasına geçin.
+**OpenEthereum'un [kullanımdan kaldırıldığını](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd) ve artık sürdürülmediğini unutmayın**. Dikkatli kullanın ve tercihen başka bir istemci uygulamasına geçin.
 
 ### İstemciyi başlatma {#starting-the-client}
 
@@ -141,13 +141,15 @@ _Bu, mutabakat katmanı doğrulayıcı düğümleri için geçerli değildir._ D
 
 İstemci yazılımınızı en son güvenlik yamaları, özellikler ve [EIP'ler](/eips/) ile güncel tutmalısınız. Özellikle [sert çatallanmalardan](/history/) önce, doğru istemci sürümünü çalıştırdığınızdan emin olun.
 
+Her istemci uygulamasının, eşler arası protokolde kullanılan insan tarafından okunabilir bir sürüm dizesi vardır, ancak komut satırından da erişilebilir. Bu sürüm dizesi, kullanıcıların doğru sürümü çalıştırıp çalıştırmadıklarını kontrol etmelerini sağlar ve belirli istemcilerin ağ üzerindeki dağılımını ölçmekle ilgilenen blok gezginlerine ve diğer analitik araçlara izin verir. Sürüm dizileri hakkında daha fazla bilgi için lütfen bireysel istemci belgelerine bakın.
+
 #### Ek hizmetler çalıştırma {#running-additional-services}
 
 Kendi düğümünüzü çalıştırmak Ethereum istemci RPC'sine doğrudan erişim gerektiren hizmetleri kullanmanızı sağlar. Bu hizmetler, Ethereum'un üzerinde inşa edilen [katman 2 çözümleri](/developers/docs/scaling/#layer-2-scaling), [mutabakat katmanı istemcileri](/upgrades/get-involved/#clients) ve diğer Ethereum altyapıları gibi hizmetlerdir.
 
 #### Düğümü gözetleme {#monitoring-the-node}
 
-Düğümünüzü düzgün şekilde gözlemlemek istiyorsanız, metrik toplamayı gözden geçirin. İstemciler düğümünüz hakkında kapsamlı veri alabilmeniz için metrik uç noktaları sunar. [Grafana](https://grafana.com/) gibi uygulamalarda görselleştirmelere ve tablolara dökebileceğiniz veri tabanları oluşturmak için [InfluxDB](https://www.influxdata.com/get-influxdb/) veya [Prometheus](https://prometheus.io/) gibi araçlar kullanın. Bu yazılımları kullanmak için birçok farklı kurulum ve düğümünüzle ağı tamamen görselleştirebilmek için farklı Grafana gösterge panelleri bulunmaktadır. Gözetlemenize dahil olarak, makinenizin performansına da dikkat etmeyi unutmayın. Düğümünüzün başlangıç senkronizasyonu esnasında istemci yazılımı CPU ve RAM üzerinde ağırlık yapabilir. Grafana'ya ek olarak, işletim sisteminizin sunduğu `htop` veya `uptime` gibi araçları da kullanabilirsiniz.
+Düğümünüzü düzgün şekilde gözlemlemek istiyorsanız, metrik toplamayı gözden geçirin. İstemciler, düğümünüz hakkında kapsamlı veri alabilmeniz için metrik uç noktaları sunar. [Grafana](https://grafana.com/) gibi uygulamalarda görselleştirmelere ve tablolara dökebileceğiniz veri tabanları oluşturmak için [InfluxDB](https://www.influxdata.com/get-influxdb/) veya [Prometheus](https://prometheus.io/) gibi araçlar kullanın. Bu yazılımları kullanmak için birçok farklı kurulum ve düğümünüzle ağı tamamen görselleştirebilmek için farklı Grafana gösterge panelleri bulunmaktadır. Gözetlemenize dahil olarak, makinenizin performansına da dikkat etmeyi unutmayın. Düğümünüzün başlangıç senkronizasyonu esnasında istemci yazılımı CPU ve RAM üzerinde ağırlık yapabilir. Grafana'ya ek olarak, işletim sisteminizin sunduğu `htop` veya `uptime` gibi araçları da kullanabilirsiniz.
 
 ## Daha fazla bilgi {#further-reading}
 

@@ -166,7 +166,9 @@ const ButtonDropdown = ({ list, className }) => {
               </NavLink>
             )}
             {!!callback && (
-              <NakedNavLink onClick={() => callback(idx)}>{text}</NakedNavLink>
+              <NakedNavLink onClick={() => callback(idx)}>
+                <Translation id={text} />
+              </NakedNavLink>
             )}
           </DropdownItem>
         ))}

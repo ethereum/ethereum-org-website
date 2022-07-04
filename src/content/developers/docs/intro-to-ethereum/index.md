@@ -3,6 +3,7 @@ title: Intro to Ethereum
 description: A dapp developer's introduction to the core concepts of Ethereum.
 lang: en
 sidebar: true
+preMergeBanner: true
 ---
 
 ## What is a blockchain? {#what-is-a-blockchain}
@@ -19,7 +20,7 @@ Ethereum currently uses a [proof-of-work](/developers/docs/consensus-mechanisms/
 
 New blocks are broadcast to the nodes in the network, checked and verified, thus updating the state of the blockchain for everyone.
 
-So to summarize, when you send ETH to someone, the transaction must be mined and included in a new block. The updated state is then shared with the entire network.
+So to summarize, when you send ETH to someone, the transaction must be added to the block which will get mined. The updated state is then shared with the entire network.
 
 Watch Austin walk you through blockchains:
 
@@ -51,7 +52,7 @@ The amount of ether paid corresponds to the time required to do the computation.
 
 In practice, participants don't write new code every time they want to request a computation on the EVM. Rather, application developers upload programs (reusable snippets of code) into EVM state, and users make requests to execute these code snippets with varying parameters. We call the programs uploaded to and executed by the network smart contracts.
 
-At a very basic level, you can think of a smart contract like a sort of vending machine: a script that, when called with certain parameters, performs some actions or computation if certain conditions are satisfied. For example, a simple vendor smart contract could create and assign ownership of a digital asset if the caller sends ether to a specific recipient.
+At a very basic level, you can think of a smart contract like a sort of vending machine: a script that, when called with certain parameters, performs some actions or computation if certain conditions are satisfied. For example, a simple vendor smart contract could create and assign ownership of a digital asset if the caller sends ETH to a specific recipient.
 
 Any developer can create a smart contract and make it public to the network, using the blockchain as its data layer, for a fee paid to the network. Any user can then call the smart contract to execute its code, again for a fee paid to the network.
 
@@ -65,7 +66,7 @@ The sequence of all blocks that have been committed to the Ethereum network in t
 
 ### ETH {#eth}
 
-The native cryptocurrency of Ethereum. Users pay ether to other users to have their code execution requests fulfilled.
+**Ether (ETH)** is the native cryptocurrency of Ethereum. Users pay ETH to other users to have their code execution requests fulfilled.
 
 [More on ETH](/developers/docs/intro-to-ether/)
 
@@ -83,7 +84,7 @@ The real-life machines which are storing the EVM state. Nodes communicate with e
 
 ### Accounts {#accounts}
 
-Where ether is stored. Users can initialize accounts, deposit ether into the accounts, and transfer ether from their accounts to other users. Accounts and account balances are stored in a big table in the EVM; they are a part of the overall EVM state.
+Where ETH is stored. Users can initialize accounts, deposit ETH into the accounts, and transfer ETH from their accounts to other users. Accounts and account balances are stored in a big table in the EVM; they are a part of the overall EVM state.
 
 [More on accounts](/developers/docs/accounts/)
 
@@ -91,7 +92,7 @@ Where ether is stored. Users can initialize accounts, deposit ether into the acc
 
 A "transaction request" is the formal term for a request for code execution on the EVM, and a "transaction" is a fulfilled transaction request and the associated change in the EVM state. Any user can broadcast a transaction request to the network from a node. For the transaction request to affect the agreed-upon EVM state, it must be validated, executed, and "committed to the network" by another node. Execution of any code causes a state change in the EVM; upon commitment, this state change is broadcast to all nodes in the network. Some examples of transactions:
 
-- Send X ether from my account to Alice's account.
+- Send X ETH from my account to Alice's account.
 - Publish some smart contract code into EVM state.
 - Execute the code of the smart contract at address X in the EVM, with arguments Y.
 

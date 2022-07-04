@@ -59,8 +59,6 @@
   "consensus-run-beacon-chain": "सहमति ग्राहक चलाएँ",
   "consensus-run-beacon-chain-desc": "एथेरियम को ज़्यादा से ज़्यादा क्लाइंट चलाने की ज़रूरत होती है। इस एथेरियम सार्वजनिक हित में मदद करें!",
   "consensus-when-shipping": "यह कब शिप हो रहा है?",
-  "eth-upgrade-what-happened": "'Eth2' का क्या हुआ?",
-  "eth-upgrade-what-happened-description": "जैसे-जैसे हम मर्ज के करीब पहुँच रहे हैं, 'Eth2' शब्द का उपयोग बंद किया जा रहा है। 'सहमति परत' में वह चीज़ शामिल है, जिसे पहले 'Eth2' के नाम से जाना जाता था।",
   "ethereum": "Ethereum",
   "ethereum-upgrades": "एथेरियम के अपग्रेड",
   "ethereum-brand-assets": "इथेरियम ब्रांड संपत्ति",

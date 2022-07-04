@@ -30,7 +30,7 @@ Certains principes fondamentaux nous aident à atteindre ces objectifs.
 
 Nous voulons intéresser nos utilisateurs et répondre à leurs questions. Notre portail doit donc proposer des informations, des "moments magiques" ainsi que des liens vers les brillantes ressources communautaires disponibles. Notre objectif, en matière de contenu, est de proposer un "portail d’intégration" et non un substitut aux vastes ressources qui existent déjà. Nous tenons à soutenir et à intégrer les ressources créées par la communauté en leur donnant plus de visibilité et en facilitant leur découverte.
 
-La communauté [Ethereum](/community/) est au cœur de cette démarche : nous ne devons pas seulement la servir, nous devons travailler avec ses membres et intégrer leurs commentaires. Le site Web n'est pas seulement destiné à la communauté actuelle, mais aussi à celle que nous espérons devenir. Nous devons nous rappeler que notre communauté est mondiale, constituée de personnes parlant différentes langues, provenant de différentes régions et possédant différentes cultures.
+[La communauté Ethereum](/community/) est au cœur de cette démarche : nous ne devons pas uniquement la servir, nous devons travailler avec ses membres et intégrer leurs commentaires. Le site Web n'est pas seulement destiné à la communauté actuelle, mais aussi à celle que nous espérons devenir. Nous devons nous rappeler que notre communauté est mondiale, constituée de personnes parlant différentes langues, provenant de différentes régions et possédant différentes cultures.
 
 ### 2. ethereum.org est en constante évolution 🛠 {#core-principles-2}
 
@@ -48,12 +48,24 @@ Ethereum est un vaste concept qui comprend une communauté, une technologie, un 
 
 ## Principes de conception {#design-principles}
 
-Nous utilisons des principes de conception qui guident nos décisions en matière de contenu et de design du site : [Principes de conception](/contributing/design-principles/).
+Nous utilisons un ensemble de [principes de conception](/contributing/design-principles/) pour guider nos décisions en matière de contenu et de conception sur le site.
 
-N'hésitez pas à nous faire part de vos commentaires sur le sujet. Rappelez-vous qu'ethereum.org est fait pour la communauté, par la communauté.
+## Guide de style {#style-guide}
 
-Assurez-vous de lire les principes si vous souhaitez [contribuer au site](/contributing/).
+Nous nous appuyons sur un [guide de style](/contributing/style-guide/) pour standardiser certains aspects de l'écriture de contenu et ainsi faciliter le processus de contribution.
+
+Nous vous invitons à nous faire part de vos commentaires sur les principes de conception et le guide de style. Rappelez-vous qu'ethereum.org est fait pour la communauté, par la communauté.
+
+Assurez-vous de lire [nos principes](/contributing/design-principles/) et [notre guide de style](/contributing/style-guide/) si vous souhaitez [contribuer au site](/contributing/).
 
 ## Feuille de route {#roadmap}
 
 <Roadmap />
+
+## Offres d'emploi {#open-jobs}
+
+Bien que ce site soit open source et que tout le monde puisse y travailler, nous avons une équipe dédiée à ethereum.org et à d'autres projets web de l'Ethereum Foundation.
+
+Nous publierons les offres d'emploi ici. Si aucun poste ne vous correspond, rendez-vous sur [Discord](https://discord.gg/CetY6Y4) et faites-nous savoir de quelle manière vous aimeriez travailler avec nous !
+
+Vous cherchez un poste en dehors de l'équipe d'Ethereum.org ? [Découvrez d'autres emplois liés à Ethereum](/community/get-involved/#ethereum-jobs/).

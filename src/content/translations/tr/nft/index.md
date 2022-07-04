@@ -406,7 +406,7 @@ Eylül 2020 yıl sonunda 140.839.000.000 işlem gerçekleştirdiler – [Visa ma
 
 [Vitalik Buterin'in parçalama ile saniye başına işlem potansiyeli hakkında düşünceleri](https://twitter.com/VitalikButerin/status/1312905884549300224)
 
-Parçalama, bugün yaklaşık 15 işlem olan işlem miktarının en az 64 katını mümkün kılacaktır. Bu, kullanıma giren parça zincirlerinin (ekstra veri ve kapasite) miktarıdır. [Parça zincirleri hakkında daha fazla bilgi](/upgrades/shard-chains/)
+Parçalama, bugün yaklaşık 15 işlem olan işlem miktarının en az 64 katını mümkün kılacaktır. Bu, kullanıma giren parça zincirlerinin (ekstra veri ve kapasite) miktarıdır. [Parça zincirleri hakkında daha fazla bilgi](/upgrades/sharding/)
 
 Bu, yukarıdaki Visa örneğiyle karşılaştırabilmemiz için 100.000 işlemin ne kadar süreceğini tahmin edebileceğimiz anlamına gelir.
 

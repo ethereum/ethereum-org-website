@@ -30,14 +30,14 @@ Esto no significa que todos los servicios deban ser convertidos en una dapp. Est
 
 Web3 tiene algunas limitaciones ahora mismo:
 
-- Escalabilidad: Las transacciones son más lentas en web3 porque son descentralizadas. Los cambios a estado, como un pago, deben ser procesados por un minero y propagados a través de la red.
+- Escalabilidad: Las transacciones son más lentas en web3 porque son descentralizadas. Los cambios de estado, como un pago, deben ser procesados por un minero y propagados a través de la red.
 - UX: Interactuar con aplicaciones web3 puede requerir pasos adicionales, software y formación. Esto puede ser un obstáculo para su implantación.
 - Accesibilidad: la falta de integración en los navegadores web modernos hace que web3 sea menos accesible para la mayoría de los usuarios.
 - Coste: las dapps más exitosas introducen partes muy pequeñas de su código en la cadena de bloques, ya que resulta costoso.
 
 ## Centralización vs descentralización {#centralization-vs-decentralization}
 
-En siguiente la tabla, enumeramos algunas de las ventajas y desventajas de las redes digitales centralizadas y descentralizadas.
+En la siguiente tabla, enumeramos algunas de las ventajas y desventajas de las redes digitales centralizadas y descentralizadas.
 
 | Sistemas centralizados                                                                                                                                                                                                                                                | Sistemas descentralizados                                                                                                                                                                                                                                                |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |

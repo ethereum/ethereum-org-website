@@ -168,18 +168,18 @@ Viele Ethereum-Wallets bieten Schutz gegen die komplette Entleerung durch Hacker
 Betrüger suchen immer nach Möglichkeiten, an Ihr Geld zu gelangen. Es ist unmöglich, Betrüger gänzlich aufzuhalten. Doch wir können dafür sorgen, dass sie weniger erfolgreich sind, indem wir uns bewusst machen, wie sie vorgehen. Es gibt viele Variationen von Betrugsversuchen, aber die meisten folgen denselben Mustern. Merken Sie sich auf jeden Fall Folgendes:
 
 - Seien Sie immer skeptisch
-- Niemand wird Ihnen kostenlose oder günstigere ETH geben!
+- Niemand wird Ihnen ETH kostenlos oder zu einem günstigeren Preis geben
 - Niemand benötigt Zugang zu Ihren Private-Keys oder anderen persönlichen Informationen!
 
 ### Giveaway-Betrug {#giveaway}
 
 Einer der häufigsten Betrugsfälle in der Welt der Kryptowährungen ist der Giveaway-Betrug. Der Giveaway-Betrug kann viele Formen annehmen. Allgemein wird aber gefordert, dass Sie ETH an eine angegebene Wallet-Adresse senden und dann die doppelte Menge an ETH zurückerhalten. *Aus diesem Grund wird dieser Betrug auch häufig als „2-für-1“-Betrug bezeichnet.*
 
-Bei einem solchen Betrug haben Sie meist wenig Zeit, um das Angebot anzunehmen. So haben Sie wenig Zeit, die Entscheidung zu überdenken, und es wird ein falsches Gefühl der Dringlichkeit erzeugt.
+Im Rahmen solcher Betrugsmaschen wird in der Regel ein kurzer Zeitraum vorgegeben, der für die Inanspruchnahme eines Geschenks gewährt wird, um schlechte Entscheidungen zu fördern und ein falsches Gefühl von Dringlichkeit zu erzeugen.
 
 #### Social-Media-Hacks {#social-media-hacks}
 
-Eine namhafte Variante des Giveaway-Betrugs gab es im Juli 2020, als die Twitter-Konten prominenter Personen und Organisationen gehackt wurden. Die Hacker veröffentlichten ein Bitcoin-Giveaway auf allen gehackten Konten gleichzeitig. Obwohl die betrügerischen Tweets schnell bemerkt und gelöscht wurden, gelang es den Hackern mit 11 Bitcoins (im Wert von $ 500.000, Stand September 2021) zu entkommen.
+Eine namhafte Variante des Giveaway-Betrugs gab es im Juli 2020, als die Twitter-Konten prominenter Personen und Organisationen gehackt wurden. Die Hacker veröffentlichten ein Bitcoin-Giveaway auf allen gehackten Konten gleichzeitig. Obwohl die betrügerischen Tweets schnell bemerkt und gelöscht wurden, gelang es den Hackern dennoch, 11 Bitcoin (oder umgerechnet 500.000 Dollar, Stand September 2021) zu erbeuten.
 
 ![Ein Betrug auf Twitter](./appleTwitterScam.png)
 

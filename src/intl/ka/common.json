@@ -58,8 +58,6 @@
   "consensus-run-beacon-chain": "გაუშვი კონსენსუსის კლიენტი",
   "consensus-run-beacon-chain-desc": "ეთერეუმს სჭირდება რაც შეიძლება მეტი კლიენტი. დაეხმარე ეთერეუმის საზოგადოების საკეთილდღეოდ!",
   "consensus-when-shipping": "როდის არის მიწოდება?",
-  "eth-upgrade-what-happened": "რა დაემართა 'Eth2-ს?'",
-  "eth-upgrade-what-happened-description": "ტერმინი 'Eth2' მოძველებულია, როდესაც ჩვენ ვსაუბრობთ შერწყმაზე. 'კონსენსუსის ფენა' მოიცავს იმას, რაც ადრე ცნობილი იყო როგორც 'Eth2.'",
   "ethereum": "ეთერეუმი",
   "ethereum-upgrades": "ეთერეუმის განახლებები",
   "ethereum-brand-assets": "ეთერეუმის ბრენდის აქტივები",

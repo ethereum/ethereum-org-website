@@ -200,10 +200,6 @@
     "toPath": "/en/community/grants/"
   },
   {
-    "fromPath": "/*/grants/",
-    "toPath": "/:splat/community/grants"
-  },
-  {
     "fromPath": "/no/*",
     "toPath": "/nb/:splat"
   },
@@ -293,7 +289,11 @@
   },
   {
     "fromPath": "/*/eth2/shard-chains/",
-    "toPath": "/:splat/upgrades/shard-chains/"
+    "toPath": "/:splat/upgrades/sharding/"
+  },
+  {
+    "fromPath": "/*/upgrades/shard-chains/",
+    "toPath": "/:splat/upgrades/sharding/"
   },
   {
     "fromPath": "/*/eth2/staking/",

@@ -34,9 +34,9 @@ Perlu penjelasan yang lebih mendasar? Kunjungi [ethereum.org/learn](/learn/) ata
 ## Artikel dan dokumen tingkat menengah {#intermediate-articles-and-docs}
 
 - [Dokumentasi Go Ethereum](https://geth.ethereum.org/docs/) - _Dokumentasi untuk Golang Ethereum resmi_
-- [Panduan Programmer Turbo-Geth](https://github.com/ledgerwatch/turbo-geth/blob/master/docs/programmers_guide/guide.md) - _Panduan bergambar yang mencakup pohon state, multibukti, dan pemrosesan transaksi_
-- [Turbo-Geth dan Ethereum Tanpa State](https://youtu.be/3-Mn7OckSus?t=394) - _Konferensi Komunitas Ethereum 2020 (EthCC 3)_
-- [Turbo-Geth: mengoptimalkan klien Ethereum](https://www.youtube.com/watch?v=CSpc1vZQW2Q) - _Devcon 4 2018_
+- [Panduan Programmer Erigon](https://github.com/ledgerwatch/erigon/blob/devel/docs/programmers_guide/guide.md) - _Panduan bergambar yang mencakup pohon state, multibukti, dan pemrosesan transaksi_
+- [Erigon dan Ethereum Tanpa State](https://youtu.be/3-Mn7OckSus?t=394) - _Konferensi Komunitas Ethereum 2020 (EthCC 3)_
+- [Erigon: mengoptimalkan klien Ethereum](https://www.youtube.com/watch?v=CSpc1vZQW2Q) - _Devcon 4 2018_
 - [Go Ethereum GoDoc](https://godoc.org/github.com/ethereum/go-ethereum)
 - [Membuat Dapp dalam Go dengan Geth](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/creating-a-dapp-in-go-with-geth/)
 - [Bekerja dengan Jaringan Privat Ethereum dengan Golang dan Geth](https://myhsts.org/tutorial-learn-how-to-work-with-ethereum-private-network-with-golang-with-geth.php)
@@ -55,7 +55,7 @@ Perlu penjelasan yang lebih mendasar? Kunjungi [ethereum.org/learn](/learn/) ata
 
 - [Geth/Go Ethereum](https://github.com/ethereum/go-ethereum) - _Implementasi Go resmi untuk protokol Ethereum_
 - [Analisis Kode Go Ethereum](https://github.com/ZtesoftCS/go-ethereum-code-analysis) - _Ulasan dan analisa kode sumber Go Ethereum_
-- [Turbo-Geth](https://github.com/ledgerwatch/turbo-geth) - _Turunan Go Ethereum yang lebih cepat_
+- [Erigon](https://github.com/ledgerwatch/erigon) - _Turunan Go Ethereum yang lebih cepat_
 - [Golem](https://github.com/golemfactory/golem) - _Golem sedang menciptakan pasar global untuk daya komputasi_
 - [Quorum](https://github.com/jpmorganchase/quorum) - _Sebuah implementasi Ethereum berizin yang mendukung privasi data_
 - [Prysm](https://github.com/prysmaticlabs/prysm) - _Implementasi Go 'Serenity' 2.0 Ethereum_

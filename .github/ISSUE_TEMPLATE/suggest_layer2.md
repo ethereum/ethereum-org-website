@@ -6,7 +6,7 @@ labels: "feature :sparkles:, content :fountain_pen:"
 assignees: ""
 ---
 
-Before suggesting a layer 2, make sure you've read [our listing policy](/contributing/adding-layer-2/).
+Before suggesting a layer 2, make sure you've read [our listing policy](/contributing/adding-layer-2s/).
 
 Only continue with the issue if your layer 2 meets the criteria listed there.
 

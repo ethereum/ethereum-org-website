@@ -26,7 +26,6 @@ import {
   Content,
   Divider,
   Page,
-  CardGrid,
   InfoGrid,
 } from "../components/SharedStyledComponents"
 import ExpandableCard from "../components/ExpandableCard"
@@ -415,12 +414,6 @@ const Leslie = styled(GatsbyImage)`
   @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
     transform: scaleX(-1) translateY(-3rem);
   }
-`
-
-const StyledFeedbackCard = styled(FeedbackCard)`
-  width: 100%;
-  max-width: 700px;
-  margin: 0 2rem;
 `
 
 const StrongParagraph = styled.p`
@@ -1019,9 +1012,9 @@ const RunANodePage = ({ data }) => {
           </li>
         </ul>
       </Content>
-      <StyledFeedbackCard
-        prompt={translateMessageId("page-run-a-node-feedback-prompt", intl)}
-      />
+      <Content>
+        <FeedbackCard />
+      </Content>
     </GappedPage>
   )
 }

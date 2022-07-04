@@ -4,6 +4,7 @@ description: An introduction to block explorers, your portal into the world of b
 lang: en
 sidebar: true
 sidebarDepth: 3
+preMergeBanner: true
 ---
 
 Block explorers are your portal to Ethereum's data. You can use them to see real-time data on blocks, transactions, miners, accounts, and other on-chain activity.

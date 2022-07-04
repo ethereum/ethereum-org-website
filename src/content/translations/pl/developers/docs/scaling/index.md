@@ -27,7 +27,7 @@ Ta metoda skalowania wymaga zmian w protokole Ethereum ([sieć główna](/glossa
 
 Sharding jest procesem poziomego dzielenia bazy danych w celu rozłożenia obciążenia. W kontekście Ethereum sharding zmniejszy zatłoczenie sieci i zwiększy liczbę transakcji na sekundę dzięki tworzeniu nowych łańcuchów — „odłamków”. Odciąży to również każdego walidatora, który nie będzie już musiał przetwarzać wszystkich transakcji w całej sieci.
 
-Dowiedz się więcej o <a href="/upgrades/shard-chains/">shardingu</a>.
+Dowiedz się więcej o <a href="/upgrades/sharding/">shardingu</a>.
 
 ## Skalowanie off-chain {#off-chain-scaling}
 

@@ -50,7 +50,7 @@ More on [proof-of-work](/developers/docs/consensus-mechanisms/pow/)
 
 ### Proof-of-stake {#proof-of-stake}
 
-Ethereum has plans to upgrade to a **proof-of-stake (PoS)** consensus protocol.
+Ethereum plans to upgrade to a **proof-of-stake (PoS)** consensus protocol.
 
 #### Block creation {#pos-block-creation}
 

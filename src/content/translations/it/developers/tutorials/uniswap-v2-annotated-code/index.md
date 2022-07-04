@@ -25,7 +25,7 @@ I _trader_ inviano un tipo di token al pool e ricevono l'altro (ad esempio, invi
 
 Quando i fornitori di liquidità rivogliono indietro le loro risorse, possono bruciare i token del pool e ricevere i token, compresa la quota di ricompense.
 
-[Clicca qui per una descrizione completa](https://uniswap.org/docs/v2/core-concepts/swaps/).
+[Clicca qui per una descrizione completa](https://docs.uniswap.org/protocol/V2/concepts/core-concepts/swaps/).
 
 ### Perché v2? Perché non v3? {#why-v2}
 
