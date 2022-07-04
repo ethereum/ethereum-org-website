@@ -57,7 +57,7 @@
   "page-developers-networks-desc": "メインネットとテストネットワークの概要",
   "page-developers-networks-link": "ネットワーク",
   "page-developers-node-clients-desc": "ネットワークでブロックとトランザクションがどのように検証されるか",
-  "page-developers-node-clients-link": " ノードとクライアント",
+  "page-developers-node-clients-link": "ノードとクライアント",
   "page-developers-oracle-desc": "スマートコントラクトにオフチェーンデータを取得する",
   "page-developers-oracles-link": "オラクル",
   "page-developers-play-code": "コードを使ってプレイ",

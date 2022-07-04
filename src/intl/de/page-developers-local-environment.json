@@ -13,7 +13,7 @@
   "page-local-environment-framework-feature-4": "Konfiguration für die Verbindung zu Ethereum-Netzwerken und dem Einsatz von Verträgen, sei es zu einer lokal laufenden Instanz oder zu einem öffentlichen Netzwerk von Ethereum.",
   "page-local-environment-framework-feature-5": "Dezentralisierte App-Verteilung – Integration mit Speicheroptionen wie IPFS.",
   "page-local-environment-framework-features": "Diese Frameworks verfügen über eine Vielzahl von Funktionen, wie zum Beispiel:",
-  "page-local-environment-frameworks-desc": "Wir empfehlen, ein Framework auszuwählen, besonders wenn Sie gerade erst anfangen. Das Aufbauen einer vollwertigen dApp erfordert unterschiedliche Technologien. Frameworks enthalten viele der benötigten Funktionen oder bieten einfache Plugin-Systeme, um die gewünschten Werkzeuge auszuwählen.",
+  "page-local-environment-frameworks-desc": "Wir empfehlen, ein Framework auszuwählen, besonders wenn Sie gerade erst anfangen. Das Aufbauen einer vollwertigen DApp erfordert unterschiedliche Technologien. Frameworks enthalten viele der benötigten Funktionen oder bieten einfache Plugin-Systeme, um die gewünschten Werkzeuge auszuwählen.",
   "page-local-environment-frameworks-title": "Frameworks und vorgefertigte Stacks",
   "page-local-environment-hardhat-desc": "Hardhat ist eine Ethereum-Entwicklungsumgebung für Profi-Anwender.",
   "page-local-environment-hardhat-logo-alt": "Hardhat-Logo",
@@ -28,7 +28,7 @@
   "page-local-environment-setup-title": "Richten Sie Ihre lokale Entwicklungsumgebung ein",
   "page-local-environment-solidity-template-desc": "Eine GitHub-Vorlage eines vorkompilierten Setups für Ihre Solidity-Smart-Contracts. Enthält ein lokales Hardhat-Netzwerk, Waffle für Tests, Ether für Wallet-Implementierungen und mehr.",
   "page-local-environment-solidity-template-logo-alt": "Solidity-Vorlagen-Logo",
-  "page-local-environment-truffle-desc": "Die Truffle Suite bringt Entwickler so bequem wie möglich von der Idee zur dApp.",
+  "page-local-environment-truffle-desc": "Die Truffle Suite bringt Entwickler so bequem wie möglich von der Idee zur DApp.",
   "page-local-environment-truffle-logo-alt": "Truffel-Logo",
   "page-local-environment-waffle-desc": "Die fortschrittlichste Test-Bibliothek für Smart-Contracts. Verwenden Sie sie alleine oder mit Scaffold-eth oder Hardhat.",
   "page-local-environment-waffle-logo-alt": "Waffle-Logo"
