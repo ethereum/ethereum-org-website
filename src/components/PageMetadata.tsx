@@ -28,7 +28,7 @@ export interface IProps {
   // meta needs to be optional as how it was passed in other
   // components but as `[].concat(undefined)` produces `[undefined]`,
   // a default value needs to be provided in the actual component
-  meta?: Meta[]
+  meta?: Array<Meta>
   image?: string
   title: string
   canonicalUrl?: string
@@ -36,7 +36,7 @@ export interface IProps {
 
 const PageMetadata: React.FC<IProps> = ({
   description,
-  meta,
+  meta = [],
   title,
   image,
   canonicalUrl,
@@ -206,7 +206,7 @@ const PageMetadata: React.FC<IProps> = ({
                 property: `og:site_name`,
                 content: `ethereum.org`,
               },
-            ].concat(meta ?? [])}
+            ].concat(meta)}
           >
             <script type="application/ld+json">
               {`
