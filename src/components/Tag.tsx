@@ -1,9 +1,12 @@
 import React from "react"
 import styled from "styled-components"
-
 import Icon from "./Icon"
 
-const StyledTag = styled.button`
+export interface IIsActive {
+  isActive: boolean
+}
+
+const StyledTag = styled.button<IIsActive>`
   display: flex;
   align-items: center;
   padding: 4px 8px;
@@ -46,21 +49,25 @@ const StyledIcon = styled(Icon)`
   margin-left: 1em;
 `
 
-const Tag = ({
+export interface IProps {
+  name: string
+  onSelect: (tagName: string) => void
+  value: string
+  isActive: boolean
+  shouldShowIcon: boolean
+}
+
+const Tag: React.FC<IProps> = ({
   name,
   onSelect,
   value,
   isActive = true,
   shouldShowIcon = true,
 }) => {
-  const handleSelect = () => {
-    onSelect(value)
-  }
-
   const iconName = isActive ? "close" : "add"
 
   return (
-    <StyledTag onClick={handleSelect} isActive={isActive}>
+    <StyledTag onClick={() => onSelect(value)} isActive={isActive}>
       {name}
       {shouldShowIcon && <StyledIcon name={iconName} size="18" />}
     </StyledTag>
