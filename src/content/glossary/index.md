@@ -614,6 +614,10 @@ The [fork-choice algorithm](#fork-choice-algorithm) used by Ethereum's consensus
 
 Short for "main network," this is the main public Ethereum [blockchain](#blockchain). Real ETH, real value, and real consequences. Also known as layer 1 when discussing [layer 2](#layer-2) scaling solutions. (Also, see [testnet](#testnet))
 
+<DocLink to="/developers/docs/networks/">
+  Ethereum networks
+</DocLink>
+
 ### memory-hard {#memory-hard}
 
 Memory hard functions are processes that experience a drastic decrease in speed or feasibility when the amount of available memory even slightly decreases. An example id the Ethereum mining algorithm [Ethash](#ethash).
