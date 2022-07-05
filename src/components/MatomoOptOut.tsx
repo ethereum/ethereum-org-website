@@ -24,29 +24,31 @@ const Container = styled.div`
   }
 `
 
-const MatomoOptOut = () => {
-  const [loading, setLoading] = useState(true)
-  const [isOptedOut, setIsOptedOut] = useState(false)
+export interface IProps {}
+
+const MatomoOptOut: React.FC<IProps> = () => {
+  const [loading, setLoading] = useState<boolean>(true)
+  const [isOptedOut, setIsOptedOut] = useState<boolean>(false)
 
   useEffect(() => {
     // Load user choice for Matomo tracking from localStorage
-    const savedOptOut = JSON.parse(localStorage.getItem(MATOMO_LS_KEY))
+    const savedOptOut = JSON.parse(localStorage.getItem(MATOMO_LS_KEY)!)
     // If saved opt-out selection is `true` then set this as local checkbox state
     // Else, instantiate localStorage value to `false`
     if (savedOptOut) {
       setIsOptedOut(true)
     } else {
-      localStorage.setItem(MATOMO_LS_KEY, false)
+      localStorage.setItem(MATOMO_LS_KEY, "false")
     }
     setLoading(false)
   }, [])
 
-  const handleCheckbox = ({ target: { checked } }) => {
+  const handleCheckbox = ({ target: { checked } }): void => {
     // Set local opt-out state based on check mark
     // Note: `checked` in the UI refers to being opted-in
     setIsOptedOut(!checked)
     // Save selection to localStorage
-    localStorage.setItem(MATOMO_LS_KEY, !checked)
+    localStorage.setItem(MATOMO_LS_KEY, String(!checked))
   }
   return (
     <Container>
@@ -66,7 +68,7 @@ const MatomoOptOut = () => {
             checked={!isOptedOut}
             onChange={handleCheckbox}
           />
-          <label for="matomo">
+          <label htmlFor="matomo">
             {isOptedOut
               ? "You are opted out. Check this box to opt-in."
               : "You are not opted out. Uncheck this box to opt-out."}
