@@ -66,7 +66,11 @@ const ModalCloseIcon = styled(Icon)`
   cursor: pointer;
 `
 
-const Overlay = ({ isActive }) => (
+export interface IPropsOverlay {
+  isActive: boolean
+}
+
+const Overlay: React.FC<IPropsOverlay> = ({ isActive }) => (
   <StyledOverlay
     initial={false}
     animate={{ opacity: isActive ? 1 : 0, zIndex: isActive ? 1001 : -1 }}
@@ -74,10 +78,21 @@ const Overlay = ({ isActive }) => (
   />
 )
 
-const Modal = ({ children, className, isOpen, setIsOpen }) => {
-  const ref = useRef()
+export interface IProps {
+  className: string
+  isOpen: boolean
+  setIsOpen: (boolean: boolean) => void
+}
 
-  const fixOverflow = (isOpen) => {
+const Modal: React.FC<IProps> = ({
+  children,
+  className,
+  isOpen,
+  setIsOpen,
+}) => {
+  const ref = useRef<HTMLInputElement>(null)
+
+  const fixOverflow = (isOpen: boolean): void => {
     if (typeof window !== "undefined") {
       document.documentElement.style.overflow = isOpen ? "hidden" : "unset"
     }
