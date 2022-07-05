@@ -14,7 +14,7 @@ Herkes ethereum.org'da bir stake ürünü veya hizmeti eklemeyi önermekte özg�
 Şu anda stake ürün ve hizmetlerini aşağıdaki sayfalarda listeliyoruz:
 
 - [Tekli staking](/staking/solo/)
-- [Hizmet olarak stake etme](/staking/saas/)
+- [Bir hizmet olarak stake etme](/staking/saas/)
 - [Stake havuzları](/staking/pools/)
 
 İşaret Zincirindeki hisse ispatı, 1 Aralık 2020'den beri yayında. Stake etme hâlâ nispeten yeni olsa da, ethereum.org'da değerlendirilmek üzere adil ve şeffaf bir çerçeve oluşturmaya çalıştık, ancak listeleme kriterleri zamanla değişip gelişecek ve bu kriterler nihayetinde ethereum.org web sitesi ekibinin takdirindedir.
@@ -43,7 +43,7 @@ Stake etme ürünleri veya hizmet sunumları aşağıdaki kriterlere göre değe
 
 **Proje aktif olarak sürdürülüyor mu?**
 
-- Projeyi geliştiren aktif bir ekip var mı? Projeye kimler dahil?
+- Projeyi geliştiren aktif bir ekip var mı? Kimler dahil olur?
 - Yalnızca aktif olarak bakımı yapılan ürünler dikkate alınacaktır.
 
 **Ürün veya hizmet güvenilen/insan aracılardan arındırılmış mı?**
@@ -168,5 +168,5 @@ Bu kriterlerin kod mantığı ve ağırlıkları şu anda depomuzdaki [bu JavaSc
 Ethereum.org'a stake etme ürünü veya hizmeti eklemek istiyorsanız GitHub'da bir konu oluşturun.
 
 <ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?&template=suggest_staking_product.md">
-  Bir konu oluştur
+  Bir konu oluşturun
 </ButtonLink>
