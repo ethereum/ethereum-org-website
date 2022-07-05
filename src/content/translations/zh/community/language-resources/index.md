@@ -85,7 +85,7 @@ Ethereum.org 被翻译为 40 多种语言，您可以在我们的[语言页面](
 ### 意大利语 {#it}
 
 - [Ethereum Italia](https://www.ethereum-italia.it/) - 提供有关以太坊的教育、活动和新闻，专注于智能合约和区块链技术
-- [Ethereum Italia Podcast](https://www. ethereum-italia. it/podcast/) - 以太坊意大利语播客
+- [Ethereum Italia Podcast](https://www.ethereum-italia.it/podcast/) - 以太坊意大利语播客
 - [Microsoft Learn (Solidity)](https://docs.microsoft.com/it-it/learn/modules/blockchain-learning-solidity/) - 学习使用 Solidity
 - [Microsoft Learning（智能合约）](https://docs.microsoft.com/it-it/learn/modules/blockchain-solidity-ethereum-smart-contracts/)- 学习用 Solidity 撰写智能合约
 - [Microsoft Learn（去中心化应用程序）](https://docs.microsoft.com/it-it/learn/modules/blockchain-create-ui-decentralized-apps/)- 使用去中心化的应用程序创建用户界面
