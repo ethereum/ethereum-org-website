@@ -11,7 +11,9 @@ const TableContainer = styled.div`
   }
 `
 
-const MarkdownTable = ({ children }) => (
+export interface IProps {}
+
+const MarkdownTable: React.FC<IProps> = ({ children }) => (
   <TableContainer>
     <table>{children}</table>
   </TableContainer>
