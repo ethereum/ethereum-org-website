@@ -201,7 +201,7 @@ Burada alanlar şu şekilde tanımlanır:
 
 _Size yardımcı olan bir topluluk kaynağı mı biliyorsunuz? Bu sayfayı düzenleyin ve onu ekleyin!_
 
-## İlgili Konular {#related-topics}
+## İlgili konular {#related-topics}
 
 - [Hesaplar](/developers/docs/accounts/)
 - [Ethereum sanal makinesi (EVM)](/developers/docs/evm/)
