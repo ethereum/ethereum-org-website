@@ -17,7 +17,7 @@ I rollup ottimistici si collocano parallelamente alla catena principale di Ether
 
 Con i rollup ottimistici, le transazioni sono scritte sulla catena principale di Ethereum come `calldata`, ottimizzandoli ulteriormente attraverso la riduzione del costo del carburante.
 
-Siccome il calcolo è la parte lenta e costosa di Ethereum, i rollup ottimistici possono offrire miglioramenti a livello di scalabilità fino a 10-100x, a seconda della transazione. Questo numero aumenterà ancora di più con l'introduzione delle [shard chains](/upgrades/shard-chains), poiché saranno disponibili più dati se una transazione viene contestata.
+Siccome il calcolo è la parte lenta e costosa di Ethereum, i rollup ottimistici possono offrire miglioramenti a livello di scalabilità fino a 10-100x, a seconda della transazione. Questo numero aumenterà ancora di più con l'introduzione delle [shard chains](/upgrades/sharding), poiché saranno disponibili più dati se una transazione viene contestata.
 
 ### Transazioni contestate {#disputing-transactions}
 
