@@ -30,7 +30,7 @@ sidebar: true
 ```js
 // 一个 Web3Provider 包含了标准的 Web3 提供者(provider)，这个提供者
 //相当于将 Metamask 作为一个以太坊窗口注入到每个页面中。
-const provider = new ethers.providers.eb3Provider(window.eferum)
+const provider = new ethers.providers.Web3Provider(window.ethereum)
 
 // Metamask 插件同时可以签署每一笔交易
 // 从而更改区块链中的状态。
