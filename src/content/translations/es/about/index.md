@@ -32,7 +32,7 @@ Queremos que nuestros usuarios muestren su interés y que se responda a sus preg
 
 [La comunidad de Ethereum](/community/) está en el centro de esto: necesitamos no solo servir a la comunidad, sino trabajar con ella e incorporar sus opiniones. El sitio web no es solamente para la comunidad que tenemos actualmente, sino para la comunidad en la que deseamos desarrollarnos. Debemos recordar que nuestra comunidad es global y alberga personas con muchos idiomas, de muchas regiones y de diversas culturas.
 
-### 2. Ethereum.org está siempre evolucionando 🛠 {#core-principles-2}
+### 2. ethereum.org está siempre evolucionando 🛠 {#core-principles-2}
 
 Ethereum y la comunidad están siempre evolucionando, así que ethereum.org también lo hace. Por eso, nuestro sitio tiene un sistema de diseño simple y una estructura modular. Hacemos cambios iterativos a medida que aprendemos más sobre cómo las personas usan el sitio y lo que la comunidad quiere de él.
 
