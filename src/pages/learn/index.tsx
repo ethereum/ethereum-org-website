@@ -250,9 +250,11 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
               You have probably heard a thing or two about cryptocurrencies,
               Bitcoin, and blockchain, but do you know what those actually are
               and how they relate to Ethereum? And what is Ethereum anyway?{" "}
+            </p>
+            <p>
               <strong>
                 Check out our introductory{" "}
-                <Link to="/what-is-ethereum/">What is Ethereum</Link> page.
+                <Link to="/what-is-ethereum/">"What is Ethereum?"</Link> page.
               </strong>
             </p>
             <p>
@@ -727,6 +729,13 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
             <div>
               <p>Books on Ethereum and Cryptocurrencies:</p>
               <ul>
+                <li>
+                  <Link to="https://www.goodreads.com/book/show/57356067-the-cryptopians">
+                    The Cryptopians: Idealism, Greed, Lies, and the Making of
+                    the First Big Cryptocurrency Craze
+                  </Link>{" "}
+                  <em>February 22, 2022 - Laura Shin</em>
+                </li>
                 <li>
                   <Link to="https://www.goodreads.com/book/show/55360267-out-of-the-ether">
                     Out of the Ether: The Amazing Story of Ethereum and the $55
