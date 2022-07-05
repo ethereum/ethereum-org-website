@@ -720,7 +720,7 @@ Periodo di tempo (12 secondi) in cui un nuovo blocco della [beacon chain](#beaco
   Proof of Stake
 </DocLink>
 
-### Smart Contract {#smart-contract}
+### smart contract {#smart-contract}
 
 Programma eseguito sull'infrastruttura di calcolo Ethereum.
 
