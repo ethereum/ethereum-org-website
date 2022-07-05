@@ -10,17 +10,17 @@ Validium is a [scaling solution](/developers/docs/scaling/) that enforces integr
 
 ## Prerequisites {#prerequisites}
 
-You should have a good understanding of all the foundational topics and a high-level understanding of [Ethereum scaling](/developers/docs/scaling/). Implementing scaling solutions such as Validium is an advanced topic as the technology is less battle-tested, and continues to be researched and developed.
+You should have read and understood our page on [Ethereum scaling](/developers/docs/scaling/) and [layer 2](/layer-2). 
 
 ## What is validium? {#what-is-validium}
 
-Validiums are scaling solutions that use off-chain data availability and computation designed to improve throughput by processing transactions off the Ethereum Mainnet. Like zero-knowledge rollups (ZK-rollups), validiums publish [zero-knowledge proofs](/glossary/#zk-proof) to verify off-chain transactions on Ethereujm. This prevents invalid state transitions and enhances the security guarantees of a validium chain. 
+Validiums are scaling solutions that use off-chain data availability and computation designed to improve throughput by processing transactions off the Ethereum Mainnet. Like zero-knowledge rollups (ZK-rollups), validiums publish [zero-knowledge proofs](/glossary/#zk-proof) to verify off-chain transactions on Ethereum. This prevents invalid state transitions and enhances the security guarantees of a validium chain. 
 
 These "validity proofs" can come in the form of ZK-SNARKs (Zero-Knowledge Succinct Non-Interactive Argument of Knowledge) or ZK-STARKs (Zero-Knowledge Scalable Transparent ARgument of Knowledge). More on [zero-knowledge proofs](https://consensys.net/blog/blockchain-explained/zero-knowledge-proofs-starks-vs-snarks/).
 
 Funds belonging to validium users are controlled by a smart contract on Ethereum. Validiums offer near-instant withdrawals, much like ZK-rollups do; once the validity proof for a withdrawal request has been verified on Mainnet, users can withdraw funds by providing [Merkle proofs](/developers/tutorials/merkle-proofs-for-offline-data-integrity/). The Merkle proof validates the inclusion of the user’s withdrawal transaction in a verified transaction batch, allowing the on-chain contract to process the withdrawal. 
 
-However, we must also note that validium users can have their funds frozen and withdrawals restricted. This can happen if data availability managers on the validium chain withhold off-chain state data from users. Without access to transaction data, users cannot compute the Merkle proof required to prove ownership of funds and execute withdrawals.  
+However, validium users can have their funds frozen and withdrawals restricted. This can happen if data availability managers on the validium chain withhold off-chain state data from users. Without access to transaction data, users cannot compute the Merkle proof required to prove ownership of funds and execute withdrawals.  
 
 This is the major difference between validiums and ZK-rollups—their positions on the data availability spectrum. Both solutions approach data storage differently, which has implications for security and trustlessness. 
 
