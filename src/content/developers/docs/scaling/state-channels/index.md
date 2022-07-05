@@ -13,11 +13,10 @@ You should have read and understood our pages on [Ethereum scaling](/developers/
 
 ## What are channels? {#what-are-channels}
 
-Public blockchains, such as Ethereum, experience scalability issues due to their distributed architecture: on-chain transactions must be executed by all nodes, even if the said transactions concern a small number of users. Blockchain channels solve this problem by allowing users to keep interactions off the main blockchain.
+Public blockchains, such as Ethereum, face scalability challenges due to their distributed architecture: on-chain transactions must be executed by all nodes. Nodes have to be able to handle the volume of transactions in a block using modest hardware, imposing a limit on the transaction throughput to keep the network decentralized. Blockchain channels solve this problem by allowing users to interact off the main blockchain.
 
-Channels are simple bi-directional, peer-to-peer protocols that allow two parties to execute transactions off-chain. A channel functions as a fraud proof-based, multisignature state machine replicated by two P2P nodes. 
+Channels are simple peer-to-peer protocols that allow two parties to make many transactions between themselves and then only post the final results to the blockchain. The channel uses cryptography to demonstrate that the summary data they generate is truly the result of a valid set of intermediate transactions. A ["multisig"](developers/docs/smart-contracts/#multisig) smart contract ensures the transactions are signed by the correct parties.
 
-Channel peers interact by proposing state updates and signing updates from others. Blockchain channels require all participants to sign state updates, hence their description as "multisignature state machines."
 
 With channels, state changes are executed and validated by interested parties, minimizing computation on Ethereum's execution layer. This decreases congestion on Ethereum and also increases transaction processing speeds for users. 
 
@@ -37,19 +36,18 @@ Payment channels were among the earliest scaling solutions designed to minimize 
 
 ## State channels {#state-channels}
 
-Although useful in many ways, payment channels had limited applications. Beyond supporting off-chain payments, payment channels weren't useful for handling general state transition logic. State channels were created to solve this problem and make channel designs useful for scaling general-purpose computation. 
+Apart from supporting off-chain payments, payment channels have not proven useful for handling general state transition logic. State channels were created to solve this problem and make channels useful for scaling general-purpose computation. 
 
-State channels built on the idea of off-chain execution and extended it from simple state updates (e.g., token transfers) to arbitrary state transitions. State channels are designed to support general computation, making them more useful than ordinary payment channels. 
 
-State channels still have a lot in common with payment channels. For example, users interact by exchanging cryptographically signed messages (transactions), which the other must also sign. If a proposed state update isn't signed by all participants, it cannot achieve validity. 
+State channels still have a lot in common with payment channels. For example, users interact by exchanging cryptographically signed messages (transactions), which the other must also sign. If a proposed state update isn't signed by all participants, it is not valid. 
 
-The major difference comes from the design of state channels. In addition to holding the ledger balance, the channel's state also references the current state of the contract's storage (i.e., values of contract variables). 
+However, in addition to holding the user's balances, the channel also tracks the current state of the contract's storage (i.e., values of contract variables). 
 
 This makes it possible to execute a smart contract off-chain between two users. In this scenario, updates to the smart contract's internal state require only the approval of the peers who created the channel. 
 
 While this solves the scalability problem described earlier, it has implications for security. On Ethereum, the validity of state transitions on Ethereum is enforced by the network's consensus protocol. This makes it impossible to propose an invalid update to a smart contract's state or alter smart contract execution. 
 
-State channels don't have the same security guarantees. To some extent, a state channel is a miniature version of Mainnet...with two nodes. With a limited set of participants enforcing rules, the possibility of malicious behavior (e.g., proposing invalid state updates) increases. To ensure security, state channels rely on a dispute arbitration system based on [fraud proofs](/glossary/#fraud-proof). 
+State channels don't have the same security guarantees. To some extent, a state channel is a miniature version of Mainnet. With a limited set of participants enforcing rules, the possibility of malicious behavior (e.g., proposing invalid state updates) increases. State channels derive their security from a dispute arbitration system based on [fraud proofs](/glossary/#fraud-proof). 
 
 ## How do state channels interact with Ethereum? {#how-do-state-channels-interact-with-ethereum}
 
