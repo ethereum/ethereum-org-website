@@ -74,7 +74,7 @@ Ethereum'un enerji tüketimi tarihsel olarak önemli olsa da, enerjiye aç bir b
 - [Ethereum Enerji Tüketimi Endeksi](https://digiconomist.net/ethereum-energy-consumption/) – _Digiconomist_
 - [ETHMerge.com](https://ethmerge.com/) — *[@InsideTheSim](https://twitter.com/InsideTheSim)*
 
-## İlgili Konular {#related-topics}
+## İlgili konular {#related-topics}
 
 - [Ethereum'un vizyonu](/upgrades/vision/)
 - [İşaret Zinciri](/upgrades/beacon-chain)
