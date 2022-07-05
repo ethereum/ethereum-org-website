@@ -12,12 +12,12 @@ La construction d'une dApp complète nécessite différentes technologies. Les i
 Ces infrastructures sont livrés avec de nombreuses fonctionnalités prêtes à l'emploi :
 
 - Fonctionnalités pour faire tourner une instance locale de la blockchain.
-- Utilitaires pour compiler et tester vos contrats intelligents.
+- Des utilitaires pour compiler et tester vos contrats intelligents.
 - Modules de développement client pour construire votre application orientée utilisateur au sein du même projet/référentiel.
 - Configuration pour se connecter aux réseaux Ethereum et déployer des contrats, que ce soit sur une instance exécutée localement ou sur l'un des réseaux publics Ethereum.
 - Distribution d'applications décentralisées, intégration à des options de stockage comme IPFS.
 
-## Prérequis {#prerequisites}
+## Pré-requis {#prerequisites}
 
 Avant de plonger dans les infrastructures, nous vous recommandons de commencer par lire notre introduction aux [dApps](/developers/docs/dapps/) et à la [pile Ethereum](/developers/docs/ethereum-stack/).
 

@@ -1,5 +1,5 @@
 ---
-title: Données et analyses
+title: Données et statistiques
 description: Comment obtenir des analyses et des données sur la blockchain utiles pour votre Dapps
 lang: fr
 sidebar: true

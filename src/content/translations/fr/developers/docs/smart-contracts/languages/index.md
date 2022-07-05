@@ -1,5 +1,5 @@
 ---
-title: Les langages des contrats intelligents
+title: Langages du contrat intelligent
 description: "Présentation et comparaison des deux principaux langages de contrat intelligent : Solidity et Vyper"
 lang: fr
 sidebar: true
@@ -207,7 +207,7 @@ Si vous débutez avec Ethereum et que vous n'avez pas encore jamais codé avec d
 
 - Langage intermédiaire pour Ethereum
 - Prends en charge l'[EVM](/developers/docs/evm) et l'[Ewasm](https://github.com/ewasm), un assemblage Web au petit goût d'Ethereum conçu pour être un dénominateur commun utilisable sur les deux plateformes.
-- Excellente cible pour les phases d'optimisation de haut niveau qui peuvent bénéficier à la fois aux plateformes EVM et eWASM.
+- Excellente cible pour les phases d'optimisation de haut niveau qui peuvent bénéficier à la fois aux plateformes EVM et Ewasm.
 
 **Yul+**
 
@@ -306,7 +306,7 @@ Voici quelques éléments à considérer si vous n'en avez encore essayé :
 ### Quels sont les avantages de Yul et Yul+ ? {#yul-advantages}
 
 - Language simple et fonctionnel de bas niveau.
-- Permet de se rapprocher au plus près de l'EVM brute, ce qui peut aider à optimiser l'utilisation du carburant de vos contrats.
+- Permet de se rapprocher au plus près de l'EVM brute, ce qui peut aider à optimiser l'utilisation du gaz de vos contrats.
 
 ## Comparaison des langages {#language-comparisons}
 
