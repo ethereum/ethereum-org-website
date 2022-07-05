@@ -1,15 +1,15 @@
 ---
 title: 如何在钱包中查看您的非同质化代币（非同质化代币系列教程第 3/3 部分）
 description: 本教程介绍了如何在 MetaMask 上查看所持有的非同质化代币！
-author: "Sumi Mudgil"
+author: "苏米-穆德吉尔"
 tags:
-  - "非同质化代币"
+  - "NFT"
   - "ERC-721"
   - "Alchemy"
   - "MetaMask"
   - "非同质化代币"
   - "Solidity"
-skill: 初学者
+skill: 入门
 lang: zh
 sidebar: true
 published: 2021-04-22
