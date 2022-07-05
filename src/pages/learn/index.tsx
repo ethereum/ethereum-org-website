@@ -830,6 +830,12 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                     as regulation, security and privacy
                   </em>
                 </li>
+                <li>
+                  <Link to="https://www.intothebytecode.xyz/">
+                    Into the Bytecode
+                  </Link>{" "}
+                  <em>A podcast about the ideas shaping crypto</em>
+                </li>
               </ul>
             </div>
           </Section>
