@@ -46,7 +46,7 @@ Geliştirme zor olabilir. İşte size yardımcı olmaktan mutluluk duyan deneyim
 
 [Ethereum geliştirici kaynakları](/developers/) bölümümüzde de belgelere ve geliştirme kılavuzlarına ulaşabilirsiniz.
 
-### Araçlandırma {#dapp-tooling}
+### İşleme {#dapp-tooling}
 
 Sorunuz belirli bir araç, proje veya kütüphane ile mi ilgili? Çoğu projede sizi desteklemeye adanmış sohbet sunucuları veya forumlar bulunur.
 

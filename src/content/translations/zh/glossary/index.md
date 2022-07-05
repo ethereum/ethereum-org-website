@@ -634,7 +634,7 @@ Gigawei 的缩写，[ether](#ether) 的一个货币单位，通常用于计算 [
 
 由[信标链](#beacon-chain)管理并由[验证者](#validator)保护的[权益证明](#pos)链。 作为 Eth2 分片链升级的一部分，将有 64 个加入该网络。 分片链为[二层](#layer-2)解决方案提供额外数据，例如为 [optimistic rollup](#optimistic-rollups) 和 [ZK rollup](#zk-rollups) 提供额外的交易吞吐量。
 
-<DocLink to="/upgrades/shard-chains">
+<DocLink to="/upgrades/sharding">
   分片链
 </DocLink>
 
