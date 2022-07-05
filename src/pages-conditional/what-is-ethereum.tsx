@@ -921,7 +921,7 @@ const WhatIsEthereumPage = ({
                 . There are currently over 1777 individual nodes running
                 Ethereum network. This makes Ethereum one of the most
                 decentralized cryptocurrencies out there, second only to
-                bitcoin.
+                Bitcoin.
               </p>
               <p>
                 <ButtonRow>
@@ -1051,9 +1051,9 @@ const WhatIsEthereumPage = ({
             <p>
               This update will reduce the energy required to secure Ethereum by
               about <b>99.95%</b>, creating a{" "}
-              <b>safer network for a much smaller carbon cost</b>. This will
-              make Ethereum a truly low-carbon blockchain while boosting its
-              security and scalability.
+              <b>more secure network for a much smaller carbon cost</b>. This
+              will make Ethereum a truly low-carbon blockchain while boosting
+              its security and scalability.
             </p>
             <p>
               <ButtonRow>
@@ -1070,7 +1070,7 @@ const WhatIsEthereumPage = ({
       </Section>
 
       <Content>
-        <h2>Additional readings</h2>
+        <h2>Additional reading</h2>
         <p>
           <Link to="https://weekinethereumnews.com/">
             Week in Ethereum News
