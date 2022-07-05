@@ -85,7 +85,7 @@ const Overlay = ({ isActive }) => (
 export interface IProps {
   className?: string
   isOpen: boolean
-  setIsOpen: (boolean: boolean) => void
+  setIsOpen: (isOpen: boolean) => void
   title: string
 }
 
