@@ -106,7 +106,7 @@ Akıllı sözleşmelerin diğer bir kısıtlaması ise maksimum sözleşme boyut
 - [Dappsys](https://dappsys.readthedocs.io/)
 - [GitHub](https://github.com/dapphub/dappsys)
 
-## Daha Fazla Okuyun {#further-reading}
+## Daha fazla bilgi {#further-reading}
 
 - [Akıllı Sözleşmeler: Avukatların Yerini Alacak Blok Zinciri Teknolojisi](https://blockgeeks.com/guides/smart-contracts/) _– Blockgeeks_
 - [Akıllı Sözleşme Geliştirme için En İyi Yöntemler](https://yos.io/2019/11/10/smart-contract-development-best-practices/) _– 10 Kasım 2019 - Yos Riady_
