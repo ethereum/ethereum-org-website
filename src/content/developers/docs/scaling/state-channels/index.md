@@ -165,6 +165,8 @@ Channel-based payments have the following advantages:
  
 3. **Latency**: Off-chain transactions conducted between channel participants can be settled instantly, if both parties cooperate, reducing delays. In contrast, sending a transaction on Mainnet requires waiting for nodes to process the transaction, produce a new block with the transaction, and reach consensus. Users may also need to wait for more block confirmations before considering a transaction finalized. 
 
+Implementing state channels on layer 2 solutions, such as [rollups](/developers/docs/scaling/#rollups), could make them even more attractive for payments. While channels offer cheap payments, the costs of setting up the on-chain contract on Mainnet during the opening phase can be get expensive—especially when gas fees spike. Ethereum-based rollups offer [lower transaction fees](https://l2fees.info/) and can reduce overhead for channel participants by bringing down setup fees. 
+
 ### Microtransactions {#microtransactions}
 
 Microtransactions are low-value payments (e.g., lower than a fraction of a dollar) that businesses cannot process without incurring losses. These entities must pay payment service providers, which they cannot do if the margin on customer payments is too low to make a profit. 
