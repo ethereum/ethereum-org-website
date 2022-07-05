@@ -91,7 +91,7 @@ Voici quelques exemples de solutions L2 prêtes pour la production ou qui le ser
   - [Starkware](https://starkware.co)
   - [Matter Labs zkPorter](https://matter-labs.io/)
 - Plasma (données hors chaîne, preuves de fraude)
-  - [Réseau OMG](https://omg.network/)
+  - [OMG Network](https://omg.network/)
   - [Gazelle](https://gzle.io)
   - [Matic Network](https://matic.network/)
   - [LeapDAO](https://ipfs.leapdao.org/)
