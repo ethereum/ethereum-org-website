@@ -112,7 +112,7 @@ Once a peer triggers the on-chain dispute-resolution system, the other party is 
 
 Whatever the case may be, channel users always have strong finality guarantees: if the state transition in their possession was signed by all members and is the most recent update, then it is of equal finality with a regular on-chain transaction. They still have to challenge the other party on-chain, but the only possible outcome is finalizing the last valid state, which they hold. 
 
-#### How do state channels interact with Ethereum? {#how-do-state-channels-interact-with-ethereum}
+### How do state channels interact with Ethereum? {#how-do-state-channels-interact-with-ethereum}
 
 Although they exist as off-chain protocols, state channels have an on-chain component: the smart contract deployed on Ethereum when opening the channel. This contract controls the assets deposited into the channel, verifies state updates, and arbitrates disputes between participants. 
 
