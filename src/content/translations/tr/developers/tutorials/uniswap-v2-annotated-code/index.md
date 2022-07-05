@@ -25,7 +25,7 @@ _Ticaret yapanlar_, havuza bir tür token gönderir ve (örneğin, **Token0** g�
 
 Likidite sağlayıcıları varlıklarını geri istediklerinde havuz token'larını yakabilir ve ödül payları da dahil olmak üzere token'larını geri alabilirler.
 
-[Daha geniş çaplı bir açıklama için buraya tıklayın](https://uniswap.org/docs/v2/core-concepts/swaps/).
+[Daha geniş çaplı bir açıklama için buraya tıklayın](https://docs.uniswap.org/protocol/V2/concepts/core-concepts/swaps/).
 
 ### Neden v2? Neden v3 değil? {#why-v2}
 
