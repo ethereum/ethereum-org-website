@@ -68,7 +68,7 @@ Da der Energieverbrauch bei Ethereum bis dato immens war, wurde aufseiten der Ex
 
 ## Weiterführende Informationen {#further-reading}
 
-- [A country's worth of power, no more](https://blog.ethereum.org/2021/05/18/country-power-no-more/) – _Carl Beekhuizen, 18. Mai 2021_
+- [Der Strombedarf eines Landes, nicht mehr](https://blog.ethereum.org/2021/05/18/country-power-no-more/) – _Carl Beekhuizen, 18. Mai 2021_
 - [Ethereums Energieverbrauch](https://mirror.xyz/jmcook.eth/ODpCLtO4Kq7SCVFbU4He8o8kXs418ZZDTj0lpYlZkR8)
 - [Ethereums Emissionen: eine Bottom-Up-Schätzung](https://kylemcdonald.github.io/ethereum-emissions/) – Kyle McDonald
 - [Ethereums Energieverbrauchindex](https://digiconomist.net/ethereum-energy-consumption/) – _Digiconomist_
