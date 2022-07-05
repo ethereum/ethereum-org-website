@@ -1,12 +1,12 @@
 import React from "react"
 import styled from "styled-components"
-import CardList from "./CardList"
+import CardList, { CardListItem } from "./CardList"
 
 const Container = styled.div`
   margin-bottom: 4rem;
 `
 
-const reads = [
+const reads: Array<CardListItem> = [
   {
     title: "Ethmerge",
     description: "Ethmerge",
@@ -40,7 +40,9 @@ const reads = [
   },
 ]
 
-const MergeArticleList = () => (
+export interface IProps {}
+
+const MergeArticleList: React.FC<IProps> = () => (
   <Container>
     <CardList content={reads} />
   </Container>
