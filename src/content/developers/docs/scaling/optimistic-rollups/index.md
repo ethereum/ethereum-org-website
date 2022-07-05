@@ -1,6 +1,6 @@
 ---
 title: Optimistic Rollups
-description: An introduction to optimistic rollups, a scaling solution used by the Ethereum community. 
+description: An introduction to optimistic rollups as a scaling solution used by the Ethereum community. 
 lang: en
 sidebar: true
 ---
@@ -11,9 +11,7 @@ As computation is the slow, expensive part of using Ethereum, optimistic rollups
 
 ## Prerequisites {#prerequisites}
 
-You should have a good understanding of all the foundational topics and a high-level understanding of [Ethereum scaling](/developers/docs/scaling/). Implementing scaling solutions such as rollups is an advanced topic as the technology is less battle-tested and continues to be researched and developed.
-
-Looking for a more beginner-friendly resource? See our [introduction to layer 2](/layer-2/).
+You should have read and understood our pages on [Ethereum scaling](/developers/docs/scaling/) and [layer 2](/layer-2/). 
 
 ## What is an optimistic rollup? {#what-is-an-optimistic-rollup} 
 
@@ -25,13 +23,25 @@ Optimistic rollups are considered “optimistic” because they assume off-chain
 
 Optimistic rollups instead rely on a fraud-proving scheme scheme to detect cases where transactions are not calculated correctly. After a rollup batch is submitted on Ethereum, there's a time window (called a challenge period) during which anyone can challenge the results of a rollup transaction by computing a [fraud proof](/glossary/#fraud-proof). 
 
-If the fraud proof succeeds, the rollup protocol rejects the invalid block and punishes the malicious operator. If the rollup batch remains unchallenged after the challenge period elapses, it is deemed valid and accepted on Ethereum. Others can continue to build on an unconfirmed rollup block, but with a caveat: blocks descending from a parent block will be rejected if the parent is later declared invalid. 
+If the fraud proof succeeds, the rollup protocol re-executes the transaction(s) and updates the rollup's state accordingly. The other effect of a successful fraud proof is that the sequencer responsible for including the incorrectly executed transaction in a block receives a penalty. 
+
+If the rollup batch remains unchallenged (i.e., all transactions are correctly executed) after the challenge period elapses, it is deemed valid and accepted on Ethereum. Others can continue to build on an unconfirmed rollup block, but with a caveat: transaction results will be reversed if based on an incorrectly executed transaction published previously. 
 
 ## How do optimistic rollups interact with Ethereum? {#optimistic-rollups-and-Ethereum} 
 
-An optimistic rollup is an off-chain protocol managed by a set of smart contracts deployed on the Ethereum network. Transactions executed off-chain are added to a record stored in the main rollup contract. Like the Ethereum blockchain, this transaction record is immutable and forms the "optimistic rollup chain."
+Optimistic rollups are [off-chain scaling solutions](/developers/docs/scaling/#off-chain-scaling) built to operate on top of Ethereum. Each optimistic rollup is managed by a set of smart contracts deployed on the Ethereum network. Optimistic rollups process transactions off the main Ethereum chain, but post off-chain transaction (in batches) to an on-chain rollup contract. Like the Ethereum blockchain, this transaction record is immutable and forms the "optimistic rollup chain."
 
-Although optimistic rollups exist as separate protocols, they are secured by the Ethereum network. Among other things, Ethereum guarantees the correctness of a rollup’s off-chain computation and the availability of data behind the computation. 
+The architecure of an optimistic rollup comprises the following parts: 
+
+**On-chain contracts**: The optimistic rollups's operation is controlled by smart contracts running on Ethereum. This includes contracts that store rollup blocks, monitor state updates on the rollup, and track user deposits. In this sense Ethereum serves as the base layer or "layer 1" for optimistic rollups.
+
+**Off-chain virtual machine (VM)**: Although contracts managing the optimistic rollup protocol run on Ethereum, the rollup protocol performs computation and state storage on another virtual machine separate from the [Ethereum Virtual Machine](/developers/docs/evm/). The off-chain VM is where applications live and state changes executed; it serves as the upper layer or "layer 2" for an optimistic rollup. 
+
+As optimistic rollups are designed to run programs either written or compiled for the EVM, the off-chain VM incorporates many EVM design specs. Additionally, fraud proofs computed on-chain allows the Ethereum network to enforce the validity of state changes computed in the off-chain VM. 
+
+Optimistic rollups are described as 'hybrid scaling solutions' because, while they exist as separate protocols, their security properties derive from Ethereum. Among other things, Ethereum guarantees the correctness of a rollup’s off-chain computation and the availability of data behind the computation. This makes optimistic rollups more secure than pure off-chain scaling protocols (e.g., [sidechains](/developers/docs/scaling/sidechains/)) that do not rely on Ethereum for security. 
+
+Optimistic rollups rely on the main Ethereum protocol for the following: 
 
 ### Data availability {data-availability}
 
@@ -61,7 +71,7 @@ Another role Ethereum plays in the context of optimistic rollups is that of a se
 
 Ethereum Mainnet provides a hub for optimistic rollups to verify fraud proofs and resolve disputes. Moreover, transactions conducted on the rollup are only final *after* the rollup block is accepted on Ethereum. Once a rollup transaction is committed to Ethereum’s base layer, it cannot be rolled back (except in the highly unlikely case of a chain reorganization).
 
-## How optimistic rollups work {#how-optimistic-rollups-work} 
+## How do optimistic rollups work? {#how-optimistic-rollups-work} 
 
 ### Transaction execution and aggregation {#transaction-execution-and-aggregation}
 
@@ -89,13 +99,13 @@ Here is [an example](https://etherscan.io/tx/0x9102bfce17c58b5fc1c974c24b6bb7a92
 
 ### State commitments {#state-commitments} 
 
-At any point in time, the optimistic rollup’s state—accounts, balances, contract code, etc—is organized as a [Merkle tree](/whitepaper/#merkle-trees) called a “state tree”. The root of this Merkle tree, referencing the rollup’s latest state, is hashed and stored in the rollup contract. Every state transition on the chain produces a new rollup state, which an operator commits to by computing a new state root.
+At any point in time, the optimistic rollup’s state (accounts, balances, contract code, etc.) is organized as a [Merkle tree](/whitepaper/#merkle-trees) called a “state tree”. The root of this Merkle tree (state root), which references the rollup’s latest state, is hashed and stored in the rollup contract. Every state transition on the chain produces a new rollup state, which an operator commits to by computing a new state root.
 
 The operator is required to submit both old state roots and new state roots when posting batches. If the old state root matches the existing state root in the on-chain contract, the latter is discarded and replaced with the new state root. 
 
 The rollup operator is also required to commit a Merkle root for the transaction batch itself. This allows anyone to prove the inclusion of a transaction in the batch (on L1) by presenting a [Merkle proof](/developers/tutorials/merkle-proofs-for-offline-data-integrity/). 
 
-State commitments, especially state roots, are neccessary for detecting fraud in optimistic rollups. They also make it easier to reverse an invalid block; the rollup contract only has to revert to the last valid block's state root to declare it the canonical block. 
+State commitments, especially state roots, are necessary for proving the correctness of state changes in an optimistic rollup. The rollup contract accepts new state roots from operators immediately they are posted, but can later delete invalid state roots to restore the rollup to its correct state. 
 
 ### Fraud proving {#fraud-proving}
 
@@ -143,7 +153,9 @@ Optimistic rollups are designed for interoperability with Ethereum Mainnet and a
 
 To use an optimistic rollup, users deposit ETH, ERC-20 tokens, and other accepted assets in the rollup’s [bridge](/developers/docs/bridges/) contract on L1. The bridge contract will relay the transaction to L2, where an equivalent amount of assets is minted and sendt to the user’s chosen address on the optimistic rollup. 
 
-Typically, user-generated transactions (like an L1 > L2 deposit) are queued until the sequencer re-submits them to the rollup contract. However, to preserve censorship resistance, users are allowed to submit a transaction to the rollup contract if it has been delayed past the maximum time allowed. 
+User-generated transactions (like an L1 > L2 deposit) are usually queued until the sequencer re-submits them to the rollup contract. However, to preserve censorship resistance, optimistic rollups allow users are allowed to submit a transaction directly to the on-chain rollup contract if it has been delayed past the maximum time allowed. 
+
+Some optimistic rollups adopt a more straightforward approach to prevent sequencers from censoring users. Here, a block is defined by all transactions submitted to the L1 contract since the previous block (e.g., deposits) in addition to the transactions processed on the rollup chain. If a sequencer ignores an L1 transaction, it will publish the (provably) wrong state root; therefore, sequencers cannot delay user-generated messages once posted on L1. 
 
 ##### Exiting the rollup {#exiting-the-rollup} 
 
@@ -251,4 +263,5 @@ Multiple implementations of Optimistic rollups exist that you can integrate into
 - [The Essential Guide to Arbitrum](https://newsletter.banklesshq.com/p/the-essential-guide-to-arbitrum)
 - [How does Optimism's Rollup really work?](https://research.paradigm.xyz/optimism)
 - [OVM Deep Dive](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)
+- [What is the Optimistic Virtual Machine?](https://www.alchemy.com/overviews/optimistic-virtual-machine)
 - [More on layer 2](/layer-2/)
