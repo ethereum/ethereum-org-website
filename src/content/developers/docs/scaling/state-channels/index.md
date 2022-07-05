@@ -38,7 +38,6 @@ Payment channels were among the earliest scaling solutions designed to minimize 
 
 Apart from supporting off-chain payments, payment channels have not proven useful for handling general state transition logic. State channels were created to solve this problem and make channels useful for scaling general-purpose computation. 
 
-
 State channels still have a lot in common with payment channels. For example, users interact by exchanging cryptographically signed messages (transactions), which the other must also sign. If a proposed state update isn't signed by all participants, it is not valid. 
 
 However, in addition to holding the user's balances, the channel also tracks the current state of the contract's storage (i.e., values of contract variables). 
@@ -49,30 +48,7 @@ While this solves the scalability problem described earlier, it has implications
 
 State channels don't have the same security guarantees. To some extent, a state channel is a miniature version of Mainnet. With a limited set of participants enforcing rules, the possibility of malicious behavior (e.g., proposing invalid state updates) increases. State channels derive their security from a dispute arbitration system based on [fraud proofs](/glossary/#fraud-proof). 
 
-## How do state channels interact with Ethereum? {#how-do-state-channels-interact-with-ethereum}
-
-Although they exist as off-chain protocols, state channels have an on-chain component: the smart contract deployed on Ethereum when opening the channel. This contract controls the assets deposited into the channel, verifies state updates, and arbitrates disputes between participants. 
-
-State channels don't publish transaction data or state commitments to Mainnet, unlike [layer 2](/layer-2/) scaling solutions. However, they are more connected to Mainnet than, say, [sidechains](/developers/docs/scaling/sidechains/), making them somewhat safer.  
-
-State channels rely on the main Ethereum protocol for the following:
-
-### 1. Liveness {#liveness}
-The on-chain contract deployed when opening the channel is responsible for the channel's functionality. If the contract is running on Ethereum, then the channel is always available for usage. Conversely, a sidechain can always fail, even if Mainnet is operational, putting user funds at risk. 
-
-### 2. Security {#security}
-
-To some extent, state channels rely on Ethereum to provide security and protect users from malicious peers. As discussed in later sections, channels use a fraud proof mechanism that lets users challenge attempts to finalize the channel with an invalid or stale update. 
-
-In this case, the honest party provides the latest valid state of the channel as a fraud proof to the on-chain contract for verification. Fraud proofs enable mutually distrustful parties to conduct off-chain transactions without risking their funds in the process. 
-
-### 3. Finality {#finality}
-
-State updates collectively signed by channel users are considered as good as on-chain transactions. Still, all in-channel activity only achieves true finality when the channel is closed on Ethereum. 
-
-In the optimistic case, both parties can cooperate and sign the final state update and submit on-chain to close the channel, after which the funds are distributed according to the channel's final state. In the pessimistic case, where someone tries to cheat by posting an incorrect state update on-chain, their transaction isn't finalized until the challenge window elapses.
-
-## How do state channels work? {#how-do-state-channels-work}
+## How state channels work {#how-state-channels-work}
 
 Basically, the activity in a state channel is a session of interactions involving users and a blockchain system. Users mostly communicate with each other off-chain and only interact with the underlying blockchain to open the channel, close the channel, or settle potential disputes between participants. 
 
@@ -118,7 +94,7 @@ The scenario described above represents what happens in the happy case. Sometime
 
 Whenever consensus breaks down between participating actors in a channel, the last option is to rely on Mainnet's consensus to enforce the channel's final, valid state. In this case, closing the state channel requires settling disputes on-chain. 
 
-#### Settling disputes {#settling-disputes}
+### Settling disputes {#settling-disputes}
 
 Typically, parties in a channel agree on closing the channel beforehand and co-sign the last state transition, which they submit to the smart contract. Once the update is approved on-chain, execution of the off-chain smart contract ends and participants exit the channel with their money. 
 
@@ -135,6 +111,29 @@ As a countermeasure, state channels allow honest users to challenge invalid stat
 Once a peer triggers the on-chain dispute-resolution system, the other party is required to respond within a time limit (called the challenge window). This allows users to challenge the exit transaction, especially if the other party is applying a stale update. 
 
 Whatever the case may be, channel users always have strong finality guarantees: if the state transition in their possession was signed by all members and is the most recent update, then it is of equal finality with a regular on-chain transaction. They still have to challenge the other party on-chain, but the only possible outcome is finalizing the last valid state, which they hold. 
+
+#### How do state channels interact with Ethereum? {#how-do-state-channels-interact-with-ethereum}
+
+Although they exist as off-chain protocols, state channels have an on-chain component: the smart contract deployed on Ethereum when opening the channel. This contract controls the assets deposited into the channel, verifies state updates, and arbitrates disputes between participants. 
+
+State channels don't publish transaction data or state commitments to Mainnet, unlike [layer 2](/layer-2/) scaling solutions. However, they are more connected to Mainnet than, say, [sidechains](/developers/docs/scaling/sidechains/), making them somewhat safer.  
+
+State channels rely on the main Ethereum protocol for the following:
+
+#### 1. Liveness {#liveness}
+The on-chain contract deployed when opening the channel is responsible for the channel's functionality. If the contract is running on Ethereum, then the channel is always available for usage. Conversely, a sidechain can always fail, even if Mainnet is operational, putting user funds at risk. 
+
+#### 2. Security {#security}
+
+To some extent, state channels rely on Ethereum to provide security and protect users from malicious peers. As discussed in later sections, channels use a fraud proof mechanism that lets users challenge attempts to finalize the channel with an invalid or stale update. 
+
+In this case, the honest party provides the latest valid state of the channel as a fraud proof to the on-chain contract for verification. Fraud proofs enable mutually distrustful parties to conduct off-chain transactions without risking their funds in the process. 
+
+#### 3. Finality {#finality}
+
+State updates collectively signed by channel users are considered as good as on-chain transactions. Still, all in-channel activity only achieves true finality when the channel is closed on Ethereum. 
+
+In the optimistic case, both parties can cooperate and sign the final state update and submit on-chain to close the channel, after which the funds are distributed according to the channel's final state. In the pessimistic case, where someone tries to cheat by posting an incorrect state update on-chain, their transaction isn't finalized until the challenge window elapses.
 
 ## Virtual state channels {#virtual-state-channels}
 
@@ -251,6 +250,7 @@ Multiple projects provide implementations of state channels that you can integra
 - [Making Sense of Ethereum’s Layer 2 Scaling Solutions: State Channels, Plasma, and Truebit](https://medium.com/l4-media/making-sense-of-ethereums-layer-2-scaling-solutions-state-channels-plasma-and-truebit-22cb40dcc2f4) _– Josh Stark, Feb 12 2018_
 - [State Channels - an explanation](https://www.jeffcoleman.ca/state-channels/) _Nov 6, 2015 - Jeff Coleman_
 - [Basics of State Channels](https://education.district0x.io/general-topics/understanding-ethereum/basics-state-channels/) _District0x_
+- [Blockchain State Channels: A State of the Art](https://ieeexplore.ieee.org/document/9627997)
 
 **Payment channels**
 - [EthHub on payment channels](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/payment-channels/)
