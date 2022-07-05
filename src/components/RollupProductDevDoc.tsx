@@ -25,7 +25,11 @@ const Content = styled.div`
   padding: 1rem 1rem 0 1rem;
 `
 
-const RollupProductDevDoc = ({ rollupType }) => {
+export interface IProps {
+  rollupType: string
+}
+
+const RollupProductDevDoc: React.FC<IProps> = ({ rollupType }) => {
   return (
     <div>
       {rollups[rollupType].map(
