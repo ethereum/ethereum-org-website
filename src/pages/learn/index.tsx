@@ -210,6 +210,10 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
       id: "learn-about-the-ethereum-community",
       title: "Learn about the Ethereum community",
     },
+    {
+      id: "books-and-podcasts",
+      title: "Books and podcasts",
+    },
   ]
 
   const heroContent = {
@@ -725,7 +729,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
           </Section>
 
           <Section>
-            <h2>Books and podcasts</h2>
+            <h2 id={tocItems[6].id}>{tocItems[6].title}</h2>
             <div>
               <p>Books on Ethereum and Cryptocurrencies:</p>
               <ul>
@@ -788,7 +792,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                   </em>
                 </li>
               </ul>
-              <p>Podcasts addressing Ethereum and Cryptocurrencies:</p>
+              <p>Podcasts covering Ethereum and Cryptocurrencies:</p>
               <ul>
                 <li>
                   <Link to="https://podcast.ethhub.io/">Into the Ether</Link>{" "}
