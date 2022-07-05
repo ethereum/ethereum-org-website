@@ -46,7 +46,7 @@ La sécurité du réseau est assurée par le fait qu'il vous faudrait 51 % de l
 
 En savoir plus sur la [preuve de travail](/developers/docs/consensus-mechanisms/pow/)
 
-### preuve d'enjeu {#proof-of-stake}
+### Preuve d'enjeu {#proof-of-stake}
 
 Ethereum a prévu de passer au protocole consensuel de la **preuve d'enjeu (PoS)**.
 
