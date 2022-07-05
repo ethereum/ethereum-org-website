@@ -841,9 +841,9 @@ const WhatIsEthereumPage = ({
               <GatsbyImage image={getImage(data.ethCoin)} />
             </Width40>
             <Width60>
-              <h2>Meet Ether, Ethereum’s cryptocurrency</h2>
+              <h2>Meet ether, Ethereum’s cryptocurrency</h2>
               <p>
-                Ethereum has a native cryptocurrency called Ether (ETH). It is
+                Ethereum has a native cryptocurrency called ether (ETH). It is
                 purely digital, and you can send it to anyone anywhere in the
                 world instantly. The supply of ETH isn’t controlled by any
                 government or company - it is decentralized and completely
@@ -852,13 +852,13 @@ const WhatIsEthereumPage = ({
               </p>
               <p>
                 Every action on the Ethereum network requires a certain amount
-                of computational power. This is paid in the form of an Ether
-                fee. This means you need at least a small amount of ETH to use
-                the network.
+                of computational power. This fee is paid in the form of ether.
+                This means you need at least a small amount of ETH to use the
+                network.
               </p>
               <p>
                 <ButtonRow>
-                  <ButtonLink to="/eth/">What is Ether?</ButtonLink>
+                  <ButtonLink to="/eth/">What is ether?</ButtonLink>
                   <ButtonLink to="/get-eth/" isSecondary>
                     Get ETH
                   </ButtonLink>
@@ -879,7 +879,7 @@ const WhatIsEthereumPage = ({
                 Turns out: a lot of things! One of the most prominent usages of
                 the Ethereum technology is decentralized finance (DeFi) that
                 opens entire areas of banking services to anybody with an
-                internet connection. You can use your Ether as a collateral to
+                internet connection. You can use your ether as a collateral to
                 take out loans or provide liquidity to earn interest on your
                 funds.
               </p>
