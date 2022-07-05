@@ -213,6 +213,30 @@ const published = (locale, published) => {
   ) : null
 }
 
+const Skill = {
+  Beginner: "beginner",
+  Intermediate: "intermediate",
+  Advanced: "advanced",
+}
+
+const SkillTranslationId = {
+  Beginner: "page-tutorial-beginner",
+  Intermediate: "page-tutorial-intermediate",
+  Advanced: "page-tutorial-advanced",
+}
+
+const getSkillTranslationId = (skill) => {
+  const lowercasedSkill = skill.toLowerCase()
+
+  if (Skill.Beginner === lowercasedSkill) return SkillTranslationId.Beginner
+  if (Skill.Intermediate === lowercasedSkill)
+    return SkillTranslationId.Intermediate
+  if (Skill.Advanced === lowercasedSkill) return SkillTranslationId.Advanced
+
+  // Returning the original string to preserve translations until we are ready to remove them.
+  return skill
+}
+
 const TutorialsPage = ({ data, pageContext }) => {
   const intl = useIntl()
   // Filter tutorials by language and map to object
@@ -435,7 +459,9 @@ const TutorialsPage = ({ data, pageContext }) => {
             <TutorialCard key={tutorial.to} to={tutorial.to} hideArrow>
               <TitleContainer>
                 <Title isExternal={tutorial.isExternal}>{tutorial.title}</Title>
-                <Pill isSecondary={true}>{tutorial.skill}</Pill>
+                <Pill isSecondary={true}>
+                  <Translation id={getSkillTranslationId(tutorial.skill)} />
+                </Pill>
               </TitleContainer>
               <Author>
                 {/* TODO: Refactor each tutorial tag as a component */}
