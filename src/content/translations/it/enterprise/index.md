@@ -25,7 +25,7 @@ Molte aziende e consorzi hanno distribuito blockchain private e con permessi per
 ### Differenze fondamentali {#key-differences}
 
 - Sicurezza/immutabilità della blockchain - La resistenza della blockchain a manomissioni è determinata dall'algoritmo di consenso. La rete principale Ethereum è resa sicura dall'interazione tra migliaia di nodi indipendenti eseguiti da individui e miner in tutto il mondo. Le catene private solitamente hanno un numero ridotto di nodi, controllati da una o da poche organizzazioni; questi nodi possono essere controllati in modo rigido, ma basta che pochi vengano compromessi perché la catena venga riscritta o vengano commesse transazioni fraudolente.
-- Prestazioni - Siccome le catene aziendali Ethereum possono usare nodi ad alte prestazioni, con requisiti hardware speciali e algoritmi di consenso diversi come la Proof of Authority, possono raggiungere volumi maggiori per le transazioni sul livello base (livello 1). Sulla rete principale di Ethereum, si possono ottenere volumi elevati con l'uso delle [soluzioni di scalabilità di Livello 2](/developers/docs/scaling/layer-2-rollups/).
+- Prestazioni - Siccome le catene aziendali Ethereum possono usare nodi ad alte prestazioni, con requisiti hardware speciali e algoritmi di consenso diversi come la Proof of Authority, possono raggiungere volumi maggiori per le transazioni sul livello base (livello 1). Sulla Rete principale di Ethereum si possono ottenere volumi elevati usando le [soluzioni di ridimensionamento del Livello 2](/developers/docs/scaling/#layer-2-scaling).
 - Costo - Il costo per eseguire una catena privata si riflette principalmente nel lavoro di configurazione e gestione della catena e dei server che la eseguono. Benché non ci siano costi per connettersi alla rete principale di Ethereum, esiste un costo del carburante per ogni transazione, da pagare in ether. Per far sì che gli utenti finali ma anche le imprese non debbano usare direttamente l'ether nelle loro transazioni, sono in via di sviluppo i cosiddetti relayer delle transazioni (chiamati anche Stazioni di servizio o Gas Station). Alcune [analisi](https://github.com/EYBlockchain/fundamental-cost-of-ownership/blob/master/EY%20Total%20Cost%20of%20Ownership%20for%20Blockchain%20Solutions.pdf) hanno mostrato che il costo totale per gestire un'applicazione può essere più basso sulla rete principale che su una catena privata.
 - Gestione dei permessi per i nodi - Solo i nodi autorizzati possono unirsi a catene private. Chiunque può configurare un nodo sulla rete principale Ethereum.
 - Privacy - L'accesso ai dati scritti sulle catene private può essere controllato limitando l'accesso alla rete e, su base più granulare, tramite controllo degli accessi e transazioni private. Tutti i dati scritti sul livello 1 della rete principale sono visibili a chiunque, quindi le informazioni sensibili devono essere conservate e trasmesse esternamente alla catena oppure criptate. Stanno emergendo modelli di progettazione a questo scopo (ad esempio Baseline, Aztec) e soluzioni di livello 2 che possono mantenere i dati isolati e separati dal livello 1.
@@ -72,7 +72,7 @@ Alcuni sforzi collaborativi per rendere la rete Ethereum aziendale più intuitiv
 
 ### Soluzioni di scalabilità {#scalability-solutions}
 
-[Livello 2](/developers/docs/scaling/layer-2-rollups/) è una serie di tecnologie o sistemi eseguiti su Ethereum (livello 1) che ereditano le proprietà di sicurezza dal livello 1 e forniscono capacità di elaborazione delle transazioni superiori (produttività), commissioni sulle transazioni inferiori (costi operativi) e conferme delle transazioni più veloci rispetto al livello 1. Le soluzioni di ridimensionamento di livello 2 sono protette dal livello 1, ma consentono alle applicazioni della blockchain di gestire molti più utenti o azioni o dati rispetto al livello 1. Molte sfruttano gli ultimi progetti in fatto di crittografia e prove zero-knowledge (ZK) per massimizzare prestazioni e sicurezza.
+Il [Livello 2](/developers/docs/scaling/#layer-2-scaling) è una serie di tecnologie o sistemi eseguiti in Ethereum (Livello 1), che ereditano le proprietà di sicurezza dal Livello 1 e forniscono capacità superiori di elaborazione delle transazioni (volumi), minori commissioni sulle transazioni (costi operativi) e conferme delle transazioni più veloci rispetto al Livello 1. Le soluzioni di ridimensionamento di livello 2 sono protette dal livello 1, ma consentono alle applicazioni della blockchain di gestire molti più utenti o azioni o dati rispetto al livello 1. Molte sfruttano gli ultimi progetti in fatto di crittografia e prove zero-knowledge (ZK) per massimizzare prestazioni e sicurezza.
 
 Creare un'applicazione su una soluzione di scalabilità livello 2 può aiutare a [gestire molte problematiche che precedentemente hanno portato le aziende a sviluppare sulle blockchain private](https://entethalliance.org/how-ethereum-layer-2-scaling-solutions-address-barriers-to-enterprises-building-on-mainnet/), mantenendo i vantaggi legati allo sviluppo sulla rete principale.
 
@@ -115,6 +115,7 @@ Ecco alcune applicazioni aziendali che sono state distribuite alla rete principa
 - [Brave Browser](https://basicattentiontoken.org/) _paga gli utenti per l'attenzione dedicata agli annunci e gli utenti possono pagare gli editori per supportarli, tramite il Token Basic Attention._
 - [hCaptcha](https://www.hcaptcha.com/) _Sistema CAPTCHA di prevenzione da bot che paga gli operatori dei siti web per l'operazione di etichettatura dei dati da parte degli utenti per il machine learning. Ora distribuito da Cloudflare._
 - [Audius](https://audius.co/) _un servizio di streaming che collega i fan musicali direttamente agli artisti e consente a questi ultimi di essere pagati totalmente dai fan, direttamente e istantaneamente per ogni flusso_
+- [EthereumAds](https://ethereumads.com/) _consente agli operatori dei siti web di vendere spazi pubblicitari e di essere pagati tramite Ethereum_
 
 ### Finanza {#finance}
 
@@ -125,6 +126,7 @@ Ecco alcune applicazioni aziendali che sono state distribuite alla rete principa
 - [Tinlake](https://tinlake.centrifuge.io/) _sconti commerciali tramite risorse tokenizzate del mondo reale quali fatture, mutui o royalty in streaming_
 - [Kratos](https://triterras.com/kratos) _piattaforma finanziaria di commercio di beni che connette i negoziatori di merci per conto proprio e consente loro di scambiare e procurarsi capitale dagli istituti di credito direttamente online_
 - [Fasset](https://www.fasset.com/) _piattaforma per supportare l'infrastruttura sostenibile_
+- [Taurus](https://www.taurushq.com/) _emette titoli tokenizzati_
 
 ### Autenticazione dei dati {#notarization-of-data}
 
@@ -133,16 +135,18 @@ Ecco alcune applicazioni aziendali che sono state distribuite alla rete principa
 - [ANSA](https://cointelegraph.com/news/italys-top-news-agency-uses-blockchain-to-fight-fake-coronavirus-news) _la maggiore agenzia di stampa italiana combatte contro le fake news e consente ai lettori di verificare l'origine delle notizie registrandole sulla rete principale_
 - [Verizon](https://decrypt.co/46745/verizon-news-press-releases-ethereum-full-transparency) _registra le conferenze stampa su Ethereum per assicurare responsabilità a livello societario e attendibilità_
 - [Breitling](https://www.coindesk.com/breitling-arianee-all-new-watches-ethereum) _registra la provenienza e lo storico delle riparazioni degli orologi su Ethereum_
+- [EthSign](https://ethsign.xyz/) _registra i documenti elettronici firmati sulla blockchain di Ethereum_
 
 ### Catena d'approvvigionamento {#supply-chain}
 
 - [CargoX](https://cargox.io/press-releases/full/cargox-becomes-first-public-blockchain-ethereum-bill-lading-provider-approved-international-group-pi-clubs) _fornitore di polizze di carico e trasferimento di documenti_
 - [Morpheus.network](https://morpheus.network/) _piattaforma di automatizzazione della catena d'approvvigionamento che implementa un ibrido di catene private con dati autenticati sulla rete principale Ethereum e viene utilizzata da aziende come il distributore di carburante e petrolio canadese Federated Co-op Ltd. e il fornitore di alimenti per animali domestici argentino Vitalcan_
 - [Minespider](https://www.minespider.com/) _monitoraggio della catena di approvvigionamento_
-- [ShipChain](https://shipchain.io) _sidechain pubblica di Ethereum e sistema aziendale per la visibilità e l'attendibilità della catena d'approvvigionamento, specialmente per la logistica multimodale_
 - [Follow Our Fibre](https://www.followourfibre.com) _tracciabilità della filiera della viscosa_
 - [EY OpsChain Network Procurement](https://blockchain.ey.com/products/contract-manager) _consente alle aziende di interagire in un flusso di lavoro di approvvigionamento emettendo richieste di RFQ, contratti, ordini d'acquisto e fatture sulla rete di partner aziendali fidati_
 - [Treum](https://treum.io/) _assicura trasparenza, tracciabilità e commerciabilità alle catene d'approvvigionamento usando la tecnologia della blockchain_
+- [TradeTrust](https://www.tradetrust.io/) _verifica le Polizze di Carico (B/L) per la spedizione internazionale_
+- [Birra Peroni](https://www.ey.com/en_gl/news/2021/05/birra-peroni-is-the-first-industrial-organization-to-mint-unique-non-fungible-tokens-using-ey-opschain-traceability) _conia NFT per ogni nuovo lotto di birra, consentendo una maggiore visibilità ed efficienza lungo l'intera catena di approvvigionamento_
 
 ### Credenziali e certificazioni {#credentials}
 

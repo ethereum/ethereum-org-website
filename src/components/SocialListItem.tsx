@@ -17,7 +17,10 @@ const StyledIcon = styled(Icon)`
   padding-right: 0.75rem;
 `
 
-const SocialListItem = ({ children, socialIcon }) => {
+export interface IProps {
+  socialIcon: string
+}
+const SocialListItem: React.FC<IProps> = ({ children, socialIcon }) => {
   return (
     <Item>
       <div>

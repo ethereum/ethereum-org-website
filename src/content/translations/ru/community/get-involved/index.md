@@ -1,5 +1,5 @@
 ---
-title: Как я могу участвовать в жизни сообщества?
+title: Как я могу принять участие?
 description: Как участвовать в жизни сообщества Ethereum.
 sidebar: true
 lang: ru
@@ -86,12 +86,12 @@ lang: ru
 **Хотите найти работу в Ethereum?**
 
 - [Вакансии в ethereum.org](/about/#open-jobs)
-- [Ethereum Foundation job board (Lever)](https://jobs.lever.co/ethereumfoundation)
-- [Ethereum Foundation job board (BambooHR)](https://ethereum.bamboohr.com/jobs/)
+- [Вакансии в Ethereum Foundation (Lever)](https://jobs.lever.co/ethereumfoundation)
+- [Вакансии в Ethereum Foundation (BambooHR)](https://ethereum.bamboohr.com/jobs/)
 - [Вакансии в сфере криптовалют](https://cryptocurrencyjobs.co/ethereum/)
 - [Crypto.jobs](https://crypto.jobs/)
 - [Вакансии в ConsenSys](https://consensys.net/careers/)
-- [Crypto Jobs List](https://cryptojobslist.com/ethereum-jobs)
+- [Список вакансий в сфере криптовалют](https://cryptojobslist.com/ethereum-jobs)
 - [Объявления о вакансиях на Bankless](https://pallet.xyz/list/bankless/jobs)
 - [Вакансии на useWeb3](https://www.useweb3.xyz/jobs)
 - [Вакансии на Web3](https://web3.career)
@@ -114,4 +114,4 @@ DAO — децентрализованные автономные организ
 - [dOrg](https://dOrg.tech) [@dOrg_tech](https://twitter.com/dOrg_tech) — _коллектив разработчиков-фрилансеров Web3, работающий как децентрализованная автономная организация (DAO)_
 - [HausDAO](https://daohaus.club) [@nowdaoit](https://twitter.com/nowdaoit) — _сообщество управления DAOhaus_
 - [Developer DAO](https://www.developerdao.com/) [@developer_dao](https://twitter.com/developer_dao) — _сообщество разработчиков, которые верят в коллективное владение Интернетом_
-- [DXdao](https://DXdao.eth.link/) [@DXdao](https://twitter.com/DXdao_) - _Decentralized development & governance of dApps & protocols_
+- [DXdao](https://DXdao.eth.link/) [@DXdao](https://twitter.com/DXdao_) — _децентрализованная разработка и управление dApp и протоколами_

@@ -8,20 +8,20 @@ incomplete: false
 
 <div class="featured">Ruby tabanlı projeleri ve araçları kullanarak Ethereum için nasıl geliştirme yapacağınızı öğrenin.</div>
 
-Kripto para birimi ve blok zinciri teknolojisinin faydalarını kullanan merkeziyetsiz uygulamalar (veya "dapp'ler") oluşturmak için Ethereum'u kullanın. Bu dapp'ler güvenilir olabilir, yani Ethereum'a dağıtıldıktan sonra her zaman programlandığı gibi çalışırlar. Yeni tür finansal uygulamalar oluşturmak için dijital varlıkları kontrol edebilirler. Merkeziyetsiz olabilirler, yani tek bir varlık veya kişi onları kontrol etmez ve sansürlemenin neredeyse imkansız olduğu anlamına gelir.
+Kripto Para ve Blok Zincirinin avantajlarını kullanarak Merkezsiz uygulamalar (veya "dApps") oluşturmak için Ethereum'u kullanın. Bu dapp'ler güvenilir olabilir, yani Ethereum'a dağıtıldıktan sonra her zaman programlandığı gibi çalışırlar. Yeni tür finansal uygulamalar oluşturmak için dijital varlıkları kontrol edebilirler. Merkezsiz olabilirler, yani hiç bir kurum veya kişi onları kontrol edemez ve sansürlenmeleri neredeyse imkansızdır.
 
-## Akıllı sözleşmeleri ve Solidity dilini kullanmaya başlama {#getting-started-with-smart-contracts-and-solidity}
+## Akıllı Sözleşmeler ve Solidity Dilini Öğrenmeye Başlangıç {#getting-started-with-smart-contracts-and-solidity}
 
 **Ruby'yi Ethereum ile entegre etmek için ilk adımlarınızı atın**
 
 Başlamadan önce daha temel bir bilgiye mi ihtiyacınız var? [ethereum.org/learn](/learn/) veya [ethereum.org/developers](/developers/)'a göz atın.
 
-- [Blok Zinciri Açıklaması](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
+- [Blockchain Açıklaması](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
 - [Akıllı Sözleşmeleri Anlamak](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
 - [İlk Akıllı Sözleşmenizi Yazın](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
 - [Solidity'i Nasıl Derleyeceğinizi ve Dağıtacağınızı Öğrenin](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 
-## Başlangıç ​​makaleleri {#beginner-articles}
+## Başlangıç ​​seviyesi makaleler {#beginner-articles}
 
 - [Sonunda Ethereum hesaplarını anlamak](https://dev.to/q9/finally-understanding-ethereum-accounts-1kpe)
 - [Sonunda MetaMask ile Rails Kullanıcılarının Doğrulanması](https://dev.to/q9/finally-authenticating-rails-users-with-metamask-3fj)

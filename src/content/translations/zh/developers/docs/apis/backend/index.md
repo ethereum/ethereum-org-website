@@ -9,15 +9,15 @@ sidebar: true
 
 为此目的，每个以太坊客户端都执行 [JSON-RPC](/developers/docs/apis/json-rpc/) 规范，所以应用程序可以依赖统一的[端点](/developers/docs/apis/json-rpc/#json-rpc-methods)集。
 
-如果您想使用特定的编程语言去连接以太坊的节点，您可自行选择，但是在社区中已有几个方便的库，可以更方便地实现应用程序与以太坊的连接。 通过这些库，开发者可以方便地写下直观的一行函数来初始化（后端的）JSON RPC 请求并用于与以太坊进行交互。
+如果您想使用特定的编程语言去连接以太坊的节点，您可自行选择，但是在社区中已有几个方便的库，可以更方便地实现应用程序与以太坊的连接。 通过这些库，开发者可以写下直观易懂甚至单行的代码就能初始化与以太坊的互动（背后使用 JSON RPC 请求）。
 
-## 前置要求 {#prerequisites}
+## 先决条件 {#prerequisites}
 
 了解[以太坊堆栈](/developers/docs/ethereum-stack/)和[以太坊客户端](/developers/docs/nodes-and-clients/)可能会对您有所帮助。
 
 ## 为什么要使用库？ {#why-use-a-library}
 
-这些库降低了与一个以太坊节点交互的复杂性。 它们还提供实用的函数（例如：将 ETH 转化为 Gwei），而作为开发者，您可以花费更少的时间来处理以太坊客户端的复杂问题，从而将更多的时间集中于处理您的应用程序的独特功能。
+这些库降低了大多数与一个以太坊节点交互的复杂度。 它们还提供实用的函数（例如：将 ETH 转化为 Gwei），而作为开发者，您可以花费更少的时间来处理以太坊客户端的复杂问题，从而将更多的时间集中于处理您的应用程序的独特功能。
 
 ## 可用的库 {#available-libraries}
 
@@ -28,7 +28,7 @@ sidebar: true
 - [GitHub](https://github.com/alchemyplatform)
 - [Discord](https://discord.com/invite/A39JVCM)
 
-**BlockCypher -** **_以太坊网络 API。_**
+**BlockCypher -** **_以太坊 Web 应用程序接口。_**
 
 - [blockcypher.com](https://www.blockcypher.com/)
 - [相关文档](https://www.blockcypher.com/dev/ethereum/)
@@ -62,7 +62,7 @@ sidebar: true
 - [chainstack.com](https://chainstack.com)
 - [相关文档](https://docs.chainstack.com)
 
-**QuickNode -** **_区块链基础设施即服务。_**
+**QuickNode -** **_ 区块链基础设施即服务。_**
 
 - [quicknode.com](https://quicknode.com)
 - [相关文档](https://www.quicknode.com/docs)
@@ -105,7 +105,7 @@ sidebar: true
 - [相关文档](https://docs.watchdata.io/)
 - [Discord](https://discord.com/invite/TZRJbZ6bdn)
 
-**Zmok -** **_以速度为导向的以太坊节点作为 JSON-RPC/WebSockets API 接口。_**
+**Zmok -** **_ 注重速度的以太坊节点即 JSON-RPC/WebSockets 应用程序接口。_**
 
 - [zmok.io](https://zmok.io/)
 - [GitHub](https://github.com/zmok-io)
@@ -121,7 +121,7 @@ _还有哪些社区资源帮助过您？ 编辑并添加本页面！_
 - [节点和客户端](/developers/docs/nodes-and-clients/)
 - [开发框架](/developers/docs/frameworks/)
 
-## 相关教程 {#related-tutorials}
+## 相关参考 {#related-tutorials}
 
 - [设置 Web3js 以在 JavaScript 中使用以太坊区块链](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– 在项目中设置 web3.js 的说明。_
 - [从 JavaScript 中调用智能合约](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– 使用 DAI 代币，从而使用 JavaScript 调用合约函数。_

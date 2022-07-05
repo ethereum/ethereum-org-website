@@ -17,7 +17,7 @@ Yeni başlayanlar için daha uygun bir kaynak mı arıyorsunuz? [Katman 2'ye gir
 
 İyimser toplamalarla, işlemler ana Ethereum zincirine `calldata` olarak yazılır ve gaz maliyetini azaltarak daha da optimize edilir.
 
-Hesaplama, Ethereum kullanmanın yavaş ve pahalı kısmı olduğundan İyimser toplamalar, işleme bağlı olarak ölçeklenebilirlikte 10-100 kata kadar iyileştirme sunabilir. [Parça zincirlerin](/upgrades/sharding) kullanıma sunulmasıyla bu sayı daha da artacak çünkü bir işleme itiraz edildiğinde daha fazla veri mevcut olacak.
+Hesaplama, Ethereum kullanmanın yavaş ve pahalı kısmı olduğundan İyimser toplamalar, işleme bağlı olarak ölçeklenebilirlikte 10-100 kata kadar iyileştirme sunabilir. [Parça zincirlerin](/upgrades/sharding/) kullanıma sunulmasıyla bu sayı daha da artacak çünkü bir işleme itiraz edildiğinde daha fazla veri mevcut olacak.
 
 ### İşlemlere itiraz etme {#disputing-transactions}
 
