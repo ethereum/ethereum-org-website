@@ -43,7 +43,9 @@ const MatomoOptOut: React.FC<IProps> = () => {
     setLoading(false)
   }, [])
 
-  const handleCheckbox = ({ target: { checked } }): void => {
+  const handleCheckbox = ({
+    target: { checked },
+  }: React.ChangeEvent<HTMLInputElement>): void => {
     // Set local opt-out state based on check mark
     // Note: `checked` in the UI refers to being opted-in
     setIsOptedOut(!checked)

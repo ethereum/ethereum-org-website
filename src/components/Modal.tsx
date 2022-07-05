@@ -81,7 +81,7 @@ const Overlay: React.FC<IPropsOverlay> = ({ isActive }) => (
 export interface IProps {
   className?: string
   isOpen: boolean
-  setIsOpen: (boolean: boolean) => void
+  setIsOpen: (isOpen: boolean) => void
 }
 
 const Modal: React.FC<IProps> = ({
