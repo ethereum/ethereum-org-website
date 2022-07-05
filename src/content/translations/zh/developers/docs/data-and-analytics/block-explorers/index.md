@@ -8,7 +8,7 @@ sidebarDepth: 3
 
 区块浏览器是您进入以太坊数据世界的大门。 您可以通过区块浏览器来查看实时的区块、交易、矿工、帐户以及其他的链上相关活动。
 
-## 前提条件 {#prerequisites}
+## 先决条件 {#prerequisites}
 
 您应该理解以太坊的基本概念，以便您能够理解区块浏览器向您展示的数据。 开始[介绍以太坊](/developers/docs/intro-to-ethereum/)。
 
@@ -18,7 +18,7 @@ sidebarDepth: 3
 - [Etherchain](https://www.etherchain.org/)
 - [Ethplorer](https://ethplorer.io/) -_ 支持中文、西班牙语、法语、土耳其语、俄语、韩语和越南语_
 - [Blockchair](https://blockchair.com/ethereum) --_也有西班牙文、法文、意大利文、荷兰文、葡萄牙文、俄文、中文和波斯文_
-- [Blockscout--区块链浏览器](https://blockscout.com/)
+- [Blockscout](https://blockscout.com/)
 - [OKLink](https://www.oklink.com/eth)
 
 ## 数据 {#data}
@@ -265,11 +265,11 @@ Slot 是区块创建的机会，每个 slot 可用的数据包括：
 
 ## 延伸阅读 {#further-reading}
 
-_还有哪些社区资源对您有所帮助？ 编辑并添加本页面！_
+_还有哪些社区资源对您有所帮助？ 请编辑本页面并添加它！_
 
 ## 相关主题 {#related-topics}
 
-- [挖矿](/developers/docs/consensus-mechanisms/pow/mining/)
+- [矿工](/developers/docs/consensus-mechanisms/pow/mining/)
 - [交易](/developers/docs/transactions/)
 - [帐户](/developers/docs/accounts/)
 - [网络](/developers/docs/networks/)
