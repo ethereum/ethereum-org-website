@@ -11,7 +11,36 @@ import { translateMessageId } from "../utils/translations"
 
 const supportedLanguages = Object.keys(languageMetadata)
 
-const PageMetadata = ({ description, meta, title, image, canonicalUrl }) => {
+type NameMeta = {
+  name: string
+  content: string
+}
+
+type PropMeta = {
+  property: string
+  content: string
+}
+
+export type Meta = NameMeta | PropMeta
+
+export interface IProps {
+  description?: string
+  // meta needs to be optional as how it was passed in other
+  // components but as `[].concat(undefined)` produces `[undefined]`,
+  // a default value needs to be provided in the actual component
+  meta?: Array<Meta>
+  image?: string
+  title: string
+  canonicalUrl?: string
+}
+
+const PageMetadata: React.FC<IProps> = ({
+  description,
+  meta = [],
+  title,
+  image,
+  canonicalUrl,
+}) => {
   const {
     site,
     ogImageDefault,
@@ -207,7 +236,18 @@ PageMetadata.defaultProps = {
 
 PageMetadata.propTypes = {
   description: PropTypes.string,
-  meta: PropTypes.arrayOf(PropTypes.object),
+  meta: PropTypes.arrayOf(
+    PropTypes.oneOfType([
+      PropTypes.shape({
+        name: PropTypes.string.isRequired,
+        content: PropTypes.string.isRequired,
+      }),
+      PropTypes.shape({
+        property: PropTypes.string.isRequired,
+        content: PropTypes.string.isRequired,
+      }),
+    ]).isRequired
+  ),
   image: PropTypes.string,
   title: PropTypes.string.isRequired,
 }
