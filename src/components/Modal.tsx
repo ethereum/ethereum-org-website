@@ -79,7 +79,7 @@ const Overlay: React.FC<IPropsOverlay> = ({ isActive }) => (
 )
 
 export interface IProps {
-  className: string
+  className?: string
   isOpen: boolean
   setIsOpen: (boolean: boolean) => void
 }
