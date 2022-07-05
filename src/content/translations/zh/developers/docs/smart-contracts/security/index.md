@@ -259,7 +259,7 @@ contract NoLongerAVictim {
 
 **有关形式验证的信息**
 
-- [How formal verification of smart-contacts works](https://runtimeverification.com/blog/how-formal-verification-of-smart-contracts-works/) _July 20, 2018 - Brian Marick_
+- [智能合约的形式验证如何工作](https://runtimeverification.com/blog/how-formal-verification-of-smart-contracts-works/) _July 20, 2018 - Brian Marick_
 - [形式验证如何确保智能合约无懈可击](https://media.consensys.net/how-formal-verification-can-ensure-flawless-smart-contracts-cbda8ad99bd1) _2018 年 1 月 29 日 - Bernard Mueller_
 
 ### 使用工具 {#using-tools}
