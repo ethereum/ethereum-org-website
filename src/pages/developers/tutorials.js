@@ -214,24 +214,24 @@ const published = (locale, published) => {
 }
 
 const Skill = {
-  Beginner: "beginner",
-  Intermediate: "intermediate",
-  Advanced: "advanced",
+  BEGINNER: "beginner",
+  INTERMEDIATE: "intermediate",
+  ADVANCED: "advanced",
 }
 
 const SkillTranslationId = {
-  Beginner: "page-tutorial-beginner",
-  Intermediate: "page-tutorial-intermediate",
-  Advanced: "page-tutorial-advanced",
+  BEGINNER: "page-tutorial-beginner",
+  INTERMEDIATE: "page-tutorial-intermediate",
+  ADVANCED: "page-tutorial-advanced",
 }
 
 const getSkillTranslationId = (skill) => {
   const lowercasedSkill = skill.toLowerCase()
 
-  if (Skill.Beginner === lowercasedSkill) return SkillTranslationId.Beginner
-  if (Skill.Intermediate === lowercasedSkill)
-    return SkillTranslationId.Intermediate
-  if (Skill.Advanced === lowercasedSkill) return SkillTranslationId.Advanced
+  if (Skill.BEGINNER === lowercasedSkill) return SkillTranslationId.BEGINNER
+  if (Skill.INTERMEDIATE === lowercasedSkill)
+    return SkillTranslationId.INTERMEDIATE
+  if (Skill.ADVANCED === lowercasedSkill) return SkillTranslationId.ADVANCED
 
   // Returning the original string to preserve translations until we are ready to remove them.
   return skill
