@@ -10,13 +10,15 @@ tags:
 skill: débutant
 lang: fr
 sidebar: true
-published: 2020-04-19
+published: 19/04/2020
 source: EthereumDev
 sourceUrl: https://ethereumdev.io/calling-a-smart-contract-from-javascript/
 address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 ---
 
-Dans ce tutoriel, nous allons voir comment appeler une fonction de [contrat intelligent](/developers/docs/smart-contracts/) à partir de JavaScript. La première consiste à lire l'état d'un contrat intelligent (par exemple, le solde d'un détenteur d'ERC20), puis nous modifierons l'état de la blockchain en effectuant un transfert de jeton. Vous devriez déjà être familiarisé avec [la configuration d'un environnement JS pour interagir avec la blockchain](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/).
+Dans ce tutoriel, nous allons voir comment appeler une fonction de
+
+contrat intelligent<0> à partir de JavaScript. La première consiste à lire l'état d'un contrat intelligent (par exemple, le solde d'un détenteur d'ERC20), puis nous modifierons l'état de la blockchain en effectuant un transfert de jeton. Vous devriez déjà être familiarisé avec [la configuration d'un environnement JS pour interagir avec la blockchain](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/).</p>
 
 Pour cet exemple, nous allons jouer avec le jeton DAI, à des fins de test, nous allons créer une fourche de la blockchain en utilisant ganache-cli et débloquer une adresse qui a déjà beaucoup de DAI :
 

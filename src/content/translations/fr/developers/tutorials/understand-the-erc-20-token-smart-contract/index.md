@@ -1,6 +1,6 @@
 ---
 title: Comprendre le contrat intelligent de jeton ERC-20
-description: Introduction au déploiement de votre premier contrat intelligent sur le réseau de test Ethereum
+description: Introduction au déploiement de votre premier contrat intelligent sur un réseau de test Ethereum
 author: "jdourlens"
 tags:
   - "contrats intelligents"
@@ -11,7 +11,7 @@ tags:
 skill: débutant
 lang: fr
 sidebar: true
-published: 2020-04-05
+published: 05/04/2020
 source: EthereumDev
 sourceUrl: https://ethereumdev.io/understand-the-erc20-token-smart-contract/
 address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"

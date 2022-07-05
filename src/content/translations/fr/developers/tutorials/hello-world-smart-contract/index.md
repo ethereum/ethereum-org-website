@@ -12,7 +12,7 @@ tags:
 skill: débutant
 lang: fr
 sidebar: true
-published: 2021-03-31
+published: 31-03-2021
 ---
 
 Si vous débutez dans le développement de blockchain et ne savez pas par où commencer, ou si vous souhaitez uniquement comprendre comment déployer et interagir avec les contrats intelligents, ce guide est fait pour vous. Nous allons parcourir la création et le déploiement d'un contrat intelligent simple sur le réseau de test de Ropsten à l'aide d'un portefeuille virtuel ([MetaMask](https://metamask.io/)), [Solidity](https://docs.soliditylang.org/en/v0.8.0/), [Hardhat](https://hardhat.org/), et [Alchemy](https://alchemyapi.io/eth) (ne vous inquiétez pas si vous ne comprenez pas à ce stade ce que cela signifie, nous allons l'expliquer).
@@ -37,7 +37,7 @@ Une fois que vous avez créé un compte Alchemy, vous pouvez générer une clé 
 
 ![créer une vue de l'application Hello world](./create-app-view-hello-world.png)
 
-3. Cliquez sur « Create App » et voilà ! Votre application devrait apparaître dans le tableau ci-dessous.
+3. Cliquez sur « Créer l'application » et voilà ! Votre application devrait apparaître dans le tableau.
 
 ## Étape 3 : Créez un compte Ethereum (adresse) {#step-3}
 
@@ -233,7 +233,7 @@ PRIVATE_KEY = "your-metamask-private-key"
 Pour les relier à notre code, nous ferons référence à ces variables dans notre fichier `hardhat.config.js` à l'étape 13.
 
 <InfoBanner isWarning={true}>
-Ne propagez pas le fichier <code>.env</code> ! Assurez-vous de ne jamais partager ou exposer votre fichier <code>.env</code> à quiconque, car vous compromettez vos secrets en le faisant. Si vous utilisez le contrôle de version, ajoutez votre <code>.env</code> à un fichier <a href="https://git-scm.com/docs/gitignore">gitignore</a>.
+Ne propagez pas le fichier <code>.env</code> ! Veillez à ne jamais partager ou exposer votre fichier <code>.env</code> avec quiconque car vous compromettez vos secrets en le faisant. Si vous utilisez le contrôle de version, ajoutez votre <code>.env</code> à un fichier <a href="https://git-scm.com/docs/gitignore">gitignore</a>.
 </InfoBanner>
 
 ## Étape 12 : Installez Ethers.js {#step-12-install-ethersjs}
