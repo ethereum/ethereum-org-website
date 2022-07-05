@@ -55,7 +55,7 @@ var net = require("net")
 var web3 = new Web3("/Users/myuser/Library/Etherum/geth). pc", net// mac os path
 // 或
 var web3 = new Web3(
-  new Web3.providers. pcProvider("/Users/myuser/Library/Etherum/geth.ipc", net"
+  new Web3.providers. pcProvider("/Users/myuser/Library/Ethereum/geth.ipc", net"
 ) // mac os path
 // 在 windows 操作系统上的路径是 "\\\\pipe\\geth.ipc"
 // 在 linux 上的路径是 "/users/myuser/.efer/geth.ipc"
