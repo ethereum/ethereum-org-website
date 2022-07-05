@@ -52,7 +52,7 @@ web3.setProvider(new Web3.providers.WebsocketProvider("ws://localhost:8546"))
 
 // 在 node.js 中使用 IPC 提供者
 var net = require("net")
-var web3 = new Web3("/Users/myuser/Library/Etherum/geth). pc", net// mac os path
+var web3 = new Web3("/Users/myuser/Library/Ethereum/geth).ipc", net// mac os path
 // 或
 var web3 = new Web3(
   new Web3.providers. pcProvider("/Users/myuser/Library/Ethereum/geth.ipc", net"
