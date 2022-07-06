@@ -210,6 +210,10 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
       id: "learn-about-the-ethereum-community",
       title: "Learn about the Ethereum community",
     },
+    {
+      id: "books-and-podcasts",
+      title: "Books and podcasts",
+    },
   ]
 
   const heroContent = {
@@ -250,10 +254,12 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
               You have probably heard a thing or two about cryptocurrencies,
               Bitcoin, and blockchain, but do you know what those actually are
               and how they relate to Ethereum? And what is Ethereum anyway?{" "}
-              <strong>
-                Check out our introductory{" "}
-                <Link to="/what-is-ethereum/">What is Ethereum</Link> page.
-              </strong>
+            </p>
+            <p>
+              <Link to="/what-is-ethereum/">
+                Check out our introduction to Ethereum
+              </Link>
+              .
             </p>
             <p>
               Not only can Ethereum do what Bitcoin does (transfer money
@@ -264,8 +270,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
             <CardGrid>
               <Card
                 title="What is Ethereum?"
-                description="If you are new, start here and learn the basics of what
-              crypto and Ethereum are and why they matter."
+                description="If you are new, start here. Learn the basics of crypto why Ethereum matters."
               >
                 <>
                   <CardImage>
@@ -281,7 +286,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
               </Card>
               <Card
                 title="What is ETH?"
-                description="The currency of Ethereum network is called ether or ETH."
+                description="The currency of the Ethereum network is called ether or ETH."
               >
                 <>
                   <CardImage>
@@ -295,8 +300,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
               </Card>
               <Card
                 title="Where can I get ETH?"
-                description="There are many ways how to get ETH depending on your
-              location."
+                description="There are many ways to aquire ETH depending on your location."
               >
                 <>
                   <CardImage>
@@ -315,7 +319,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
             </AdditionalReadingHeader>
             <DocsContainer>
               <DocLink to="/smart-contracts/">
-                What are Smart Contracts?
+                What are smart contracts?
               </DocLink>
               <DocLink to="/developers/docs/">
                 A technical introduction to Ethereum
@@ -335,13 +339,13 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
             <p>
               It’s actually quite simple once you get the hang of it. You need
               an application that is commonly called a “wallet”. It's an app
-              that helps you store your funds and to authenticate/interact with
-              applications on Ethereum.
+              that helps you store your funds and to authenticate and interact
+              with applications on Ethereum.
             </p>
             <CardGrid>
               <Card
                 title="What is a wallet?"
-                description="How you manage your ETH and your Ethereum account."
+                description="How you manage your ETH and your Ethereum accounts."
               >
                 <>
                   <CardImage>
@@ -355,7 +359,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
               </Card>
               <Card
                 title="Find a wallet"
-                description="We will help you find the right wallet."
+                description="We will help you find the right wallet based on the features you care about."
               >
                 <>
                   <CardImage>
@@ -371,7 +375,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
               </Card>
               <Card
                 title="Crypto security 101"
-                description="Learn how to identify scams and see the list of most common tricks."
+                description="Learn how to identify scams and how to avoid the most common tricks."
               >
                 <>
                   <CardImage>
@@ -392,7 +396,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                   <li>
                     Each Ethereum transaction requires a fee in the form of ETH,
                     even if you need to move different tokens built on Ethereum
-                    like USDC or DAI.
+                    like the stablecoins USDC or DAI.
                   </li>
                   <li>
                     Fees can be high depending on the demand so we recommend
@@ -416,7 +420,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
             </AdditionalReadingHeader>
             <DocsContainer>
               <DocLink to="/community/support/">
-                Ethereum & wallet support
+                Ethereum and wallet support
               </DocLink>
               <DocLink to="/layer-2/">
                 Layer 2 - reducing transaction cost
@@ -521,12 +525,12 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                   </li>
                   <li>
                     <Link to="https://future.com/what-is-decentralized-science-aka-desci/">
-                      Decentralised Science (DeSci)
+                      Decentralized Science (DeSci)
                     </Link>
                   </li>
                   <li>
                     <Link to="https://decrypt.co/resources/what-are-play-to-earn-games-how-players-are-making-a-living-with-nfts">
-                      Play-to-earn games (GameFI)
+                      Play-to-earn games
                     </Link>
                   </li>
                   <li>
@@ -649,7 +653,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
             </CardGrid>
 
             <AdditionalReadingHeader>
-              More about Ethereum protocol
+              More about the Ethereum protocol
             </AdditionalReadingHeader>
             <DocsContainer>
               <DocLink to="/developers/">
@@ -723,10 +727,17 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
           </Section>
 
           <Section>
-            <h2>Books and podcasts</h2>
+            <h2 id={tocItems[6].id}>{tocItems[6].title}</h2>
             <div>
               <p>Books on Ethereum and Cryptocurrencies:</p>
               <ul>
+                <li>
+                  <Link to="https://www.goodreads.com/book/show/57356067-the-cryptopians">
+                    The Cryptopians: Idealism, Greed, Lies, and the Making of
+                    the First Big Cryptocurrency Craze
+                  </Link>{" "}
+                  <em>February 22, 2022 - Laura Shin</em>
+                </li>
                 <li>
                   <Link to="https://www.goodreads.com/book/show/55360267-out-of-the-ether">
                     Out of the Ether: The Amazing Story of Ethereum and the $55
@@ -779,7 +790,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                   </em>
                 </li>
               </ul>
-              <p>Podcasts addressing Ethereum and Cryptocurrencies:</p>
+              <p>Podcasts covering Ethereum and Cryptocurrencies:</p>
               <ul>
                 <li>
                   <Link to="https://podcast.ethhub.io/">Into the Ether</Link>{" "}
@@ -802,7 +813,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                   <Link to="https://www.zeroknowledge.fm/">Zero Knowledge</Link>{" "}
                   <em>
                     Goes deep into the tech that will power the emerging
-                    decentralised web and the community building this
+                    decentralized web and the community building this
                   </em>
                 </li>
                 <li>
@@ -820,6 +831,12 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                     our future, and some of the thorniest topics in crypto, such
                     as regulation, security and privacy
                   </em>
+                </li>
+                <li>
+                  <Link to="https://www.intothebytecode.xyz/">
+                    Into the Bytecode
+                  </Link>{" "}
+                  <em>A podcast about the ideas shaping crypto</em>
                 </li>
               </ul>
             </div>
