@@ -23,7 +23,7 @@ Antes de mergulhar em frameworks, recomendamos que você primeiro leia a nossa i
 
 ## Frameworks disponíveis {#available-frameworks}
 
-**Truffle -\*\***_Um ambiente de desenvolvimento, teste de framework, compilação e outras ferramentas._\*\*
+**Truffle -** **_Um ambiente de desenvolvimento, teste de framework, compilação e outras ferramentas._**
 
 - [trufflesuite.com](https://www.trufflesuite.com/)
 - [GitHub](https://github.com/trufflesuite/truffle)
@@ -43,7 +43,7 @@ Antes de mergulhar em frameworks, recomendamos que você primeiro leia a nossa i
 - [Documentação](https://eth-brownie.readthedocs.io/en/latest/)
 - [GitHub](https://github.com/eth-brownie/brownie)
 
-**Embark -\*\***_Um ambiente de desenvolvimento, teste de framework e outras ferramentas integradas com a Ethereum, IPFS e Whisper._\*\*
+**Embark -** **_Um ambiente de desenvolvimento, teste de framework e outras ferramentas integradas com a Ethereum, IPFS e Whisper._**
 
 - [Documentação](https://embark.status.im/docs/)
 - [GitHub](https://github.com/embark-framework/embark)

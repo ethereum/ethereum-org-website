@@ -94,7 +94,7 @@ contract MyNFT is ERC721 {
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-contracts)
 - [社区论坛](https://forum.openzeppelin.com/c/general/16)
 
-**DappSys - \*\***_安全、简单、灵活的智能合约构建块。_\*\*
+**DappSys -** **_安全、简单、灵活的智能合约构建块。_**
 
 - [相关文档](https://dappsys.readthedocs.io/)
 - [GitHub](https://github.com/dapphub/dappsys)
