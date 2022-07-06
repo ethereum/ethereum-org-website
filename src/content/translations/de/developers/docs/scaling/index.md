@@ -44,7 +44,7 @@ Die meisten Layer-2-Lösungen basieren auf einem Server oder einer Gruppe von Se
 
 Eine bestimmte Layer-2-Instanz kann offen sein und von vielen Anwendungen gemeinsam genutzt werden, oder sie kann von einem Projekt bereitgestellt werden und nur dessen Anwendung unterstützen.
 
-#### Warum wird Eth2 gebraucht? {#why-is-layer-2-needed}
+#### Warum wird Layer-2 gebraucht? {#why-is-layer-2-needed}
 
 - Mehr Transaktionen pro Sekunde verbessern die Benutzererfahrung erheblich und reduzieren die Netzwerküberlastung auf dem Ethereum Mainnet.
 - Transaktionen werden zu einer einzigen Transaktion auf dem Ethereum Mainnet zusammengefasst, wodurch die Gasgebühren für Benutzer gesenkt werden. Dadurch wiederum wird Ethereum für die Menschen überall integrativer und zugänglicher.
