@@ -11,7 +11,7 @@ Maksimal çıkarılabilir değer (MEV), bir bloktaki işlemlerin sırasını dah
 
 Bu kavram ilk olarak [iş ispatı](/developers/docs/consensus-mechanisms/pow/) bağlamında uygulandı ve başlangıçta "Madenci çıkarılabilirlik değeri" olarak adlandırıldı. Bunun sebebi, iş ispatında madencilerin katılım, çıkarım ve sıralamayı kontrol etmesidir. Ancak, [Birleştirme](/upgrades/merge) aracılığıyla hisse ispatına geçişten sonra bu rollerden doğrulayıcılar sorumlu olacak ve madencilik artık geçerli olmayacak. Buradaki değer çıkarma yöntemleri, bu geçişten sonra da devam edeceği için bir isim değişikliğine ihtiyaç duyuldu. Süreklilik için aynı kısaltmayı korurken aynı temel anlamı korumak için "maksimal çıkarılabilir değer" artık daha kapsayıcı bir ikame olarak kullanılmaktadır.
 
-## Ön Koşullar {#prerequisites}
+## Ön koşullar {#prerequisites}
 
 [İşlemler](/developers/docs/transactions/), [bloklar](/developers/docs/blocks/), [gaz](/developers/docs/gas/) ve [madencilik](/developers/docs/consensus-mechanisms/pow/mining/) hakkında bilgi sahibi olduğunuzdan emin olun. [Dapp'ler](/dapps/) ve [DeFi](/defi/) ile aşina olmak da yardımcı olabilir.
 
@@ -120,7 +120,7 @@ DeFi büyüdükçe ve popülaritesi arttıkça, MEV yakında temel Ethereum blok
 - [Flashbotlar GitHub](https://github.com/flashbots/pm)
 - [MEV-Explore](https://explore.flashbots.net/) _MEV işlemleri için gösterge paneli ve canlı işlem gezgini_
 
-## Daha fazla bilgi {#further-reading}
+## Daha fazla okuma {#further-reading}
 
 - [Madenci Çıkarılabilirlik Değeri (MEV) nedir?](https://blog.chain.link/what-is-miner-extractable-value-mev/)
 - [MEV ve Ben](https://research.paradigm.xyz/MEV)

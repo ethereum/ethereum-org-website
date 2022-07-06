@@ -1,5 +1,5 @@
 ---
-title: Web2 et Web3
+title: Web2 vs Web3
 description:
 lang: fr
 sidebar: true
@@ -28,7 +28,7 @@ De nombreux développeurs Web3 ont choisi de construire des dApps en raison de l
 
 Cela ne signifie pas pour autant que tous les services doivent être transformés en dApps. Ces exemples illustrent simplement les principales différences entre les services Web2 et Web3.
 
-## Limitation du Web3 {#web3-limitations}
+## Limitations du Web3 {#web3-limitations}
 
 Le Web3 affiche actuellement quelques limitations :
 

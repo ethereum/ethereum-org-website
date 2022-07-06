@@ -10,7 +10,7 @@ Ethereum, Bitcoin gibi şu anda **[İş ispatı (PoW)](https://wikipedia.org/wik
 
 Önümüzdeki sene, **[Hisse ispatı (PoS)](/developers/docs/consensus-mechanisms/pos)** aşamalı olarak iş ispatının yerini alacaktır. Hisse ispatına geçiş ayrıca Ethereum madenciliğini de aşamalı olarak durduracaktır. [Birleştirme hakkında daha fazla bilgi](/upgrades/merge/)
 
-## Ön Koşullar {#prerequisites}
+## Ön koşullar {#prerequisites}
 
 Bu sayfayı daha iyi anlamak için, önce [işlemleri](/developers/docs/transactions/), [blokları](/developers/docs/blocks/) ve [mutabakat mekanizmalarını](/developers/docs/consensus-mechanisms/) okumanızı öneririz.
 
