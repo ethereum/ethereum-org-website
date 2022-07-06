@@ -11,7 +11,7 @@ tags:
 skill: intermédiaire
 lang: fr
 sidebar: true
-published: 07/04/2020
+published: 2020-04-07
 source: EthereumDev
 sourceUrl: https://ethereumdev.io/transfers-and-approval-or-erc20-tokens-from-a-solidity-smart-contract/
 address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"

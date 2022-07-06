@@ -11,7 +11,7 @@ tags:
 skill: débutant
 lang: fr
 sidebar: true
-published: 22/04/2021
+published: 2021-04-22
 ---
 
 Grâce aux NFT, la blockchain a été découverte par le grand public. C'est l'occasion rêvée de comprendre cet engouement en publiant votre propre NFT (jeton ERC-721) sur la blockchain Ethereum !

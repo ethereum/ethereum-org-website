@@ -10,7 +10,7 @@ tags:
   - "blockchain"
   - "web3.py"
 skill: débutant
-published: 08/09/2020
+published: 2020-09-08
 source: Snake charmers
 sourceUrl: https://snakecharmers.ethereum.org/a-developers-guide-to-ethereum-pt-1/
 ---

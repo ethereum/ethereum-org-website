@@ -12,7 +12,7 @@ tags:
 skill: débutant
 lang: fr
 sidebar: true
-published: 31-03-2021
+published: 2021-03-31
 ---
 
 Si vous débutez dans le développement de blockchain et ne savez pas par où commencer, ou si vous souhaitez uniquement comprendre comment déployer et interagir avec les contrats intelligents, ce guide est fait pour vous. Nous allons parcourir la création et le déploiement d'un contrat intelligent simple sur le réseau de test de Ropsten à l'aide d'un portefeuille virtuel ([MetaMask](https://metamask.io/)), [Solidity](https://docs.soliditylang.org/en/v0.8.0/), [Hardhat](https://hardhat.org/), et [Alchemy](https://alchemyapi.io/eth) (ne vous inquiétez pas si vous ne comprenez pas à ce stade ce que cela signifie, nous allons l'expliquer).
