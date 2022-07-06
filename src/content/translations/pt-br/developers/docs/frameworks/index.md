@@ -87,7 +87,7 @@ Alchemy - Plataforma de Desenvolvimento Ethereum
 
 **Foundry -** **_Um conjunto de ferramentas rápido, portátil e modular para o desenvolvimento do aplicativo Ethereum, escrito em Rust._**
 
-- [Documentação](https://onbjerg.github.io/foundry-book/)
+- [Documentação](https://book.getfoundry.sh/)
 - [GitHub](https://github.com/gakonst/foundry/)
 - [Ferramentas para Foundry](https://github.com/crisgarner/awesome-foundry)
 
