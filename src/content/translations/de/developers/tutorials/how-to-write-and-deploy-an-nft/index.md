@@ -11,7 +11,7 @@ tags:
 skill: Einsteiger
 lang: de
 sidebar: true
-published: 22.04.2021
+published: 2021-04-22
 ---
 
 Mit NFTs ist die Blockchain ins Auge der Öffentlichkeit gerückt. Das ist nun eine ausgezeichnete Gelegenheit, sich selbst ein Bild über diesen Hype zu machen. Veröffentlichen Sie dafür Ihren eigenen NFT (ERC-721 Token) auf der Ethereum-Blockchain.
