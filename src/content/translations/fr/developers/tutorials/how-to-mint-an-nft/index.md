@@ -159,7 +159,7 @@ En premier lieu, définissons une fonction nommée `mintNFT(tokenData)` et créo
 
 - `'data': nftContract.methods.mintNFT(PUBLIC_KEY, md).encodeABI()` — Le calcul que nous souhaitons effectuer dans cette transaction — qui, dans le cas présent, est le fait de frapper un NFT
 
-Votre <code>mint-nft.js</code> devrait ressembler à ceci :
+Votre `mint-nft.js` devrait ressembler à ceci :
 
 ```js
    require('dotenv').config();
