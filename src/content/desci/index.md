@@ -160,6 +160,10 @@ Flexible Web3 data solutions support the scenarios above in addition to providin
 
 ## Videos
 * [What's Decentralized Science? ](https://www.youtube.com/watch?v=-DeMklVWNdA)
+* [Conversation between Vitalik Buterin and the scientist Aubrey de Grey about the intersection of longevity research and crypto](https://www.youtube.com/watch?v=x9TSJK1widA)
+* [Conversation between Vitalik Buterin and the scientist Aubrey de Grey about the intersection of longevity research and crypto](https://www.youtube.com/watch?v=x9TSJK1widA)
+* [Scientific Publishing Is Broken. Can web3 Fix It?](https://www.youtube.com/watch?v=WkvzYgCvWj8)
+
 
 ### Get involved: explore projects below to join the DeSci movement.
 * [Atoms: smart contract peer-review)](https://www.atoms.org)
