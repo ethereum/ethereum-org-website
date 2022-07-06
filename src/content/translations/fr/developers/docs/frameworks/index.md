@@ -82,7 +82,7 @@ Avant de plonger dans les infrastructures, nous vous recommandons de commencer p
 
 **Foundry -** **_Une boîte à outils rapide, portable et modulaire pour le développement d'applications Ethereum écrites en Rust._**
 
-- [Documentation](https://onbjerg.github.io/foundry-book/)
+- [Documentation](https://book.getfoundry.sh/)
 - [GitHub](https://github.com/gakonst/foundry/)
 - [Outils pour Foundry](https://github.com/crisgarner/awesome-foundry)
 
