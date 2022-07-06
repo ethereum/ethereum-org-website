@@ -82,7 +82,7 @@ Tam teşekküllü bir dapp inşa etmek teknolojinin farklı parçalarını gerek
 
 **Foundry -** **_Rust ile yazılmış Ethereum uygulama geliştirme için son derece hızlı, taşınabilir ve modüler bir araç takımı._**
 
-- [Belgeler](https://onbjerg.github.io/foundry-book/)
+- [Belgeler](https://book.getfoundry.sh/)
 - [GitHub](https://github.com/gakonst/foundry/)
 - [Foundry için araçlar](https://github.com/crisgarner/awesome-foundry)
 
