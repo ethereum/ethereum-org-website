@@ -45,4 +45,4 @@ sidebar: true
 
 - [什么是零知识 Rollup？](https://coinmarketcap.com/alexandria/glossary/zero-knowledge-rollups)
 - [EthHub 上关于零知识卷叠的介绍](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/zk-rollups/)
-- \[“简洁的非交互式知识论证”对比“可扩展的透明知识论证”\](https://consensys.net/blog/blockchain-explained/zero-knowledge-proofs-starks-vs-snarks/)
+- [简洁的非交互式知识论证”对比“可扩展的透明知识论证](https://consensys.net/blog/blockchain-explained/zero-knowledge-proofs-starks-vs-snarks/)
