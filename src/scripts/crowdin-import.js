@@ -8,15 +8,11 @@ const VERBOSE = false
 const FULL_BUCKET_NAME_SUMMARY = false
 
 /**
- * 1. Copy languages folder from Crowdin export to ./.crowdin, or enter override
- * to point to local unzipped download folder
- * ie: /Home/alice/Downloads/Ethereum.org Translations (translations)/
- */
-const CROWDIN_ROOT_OVERRIDE = ""
-
-/**
+ * 1. Copy languages folder from Crowdin export to ./.crowdin
+ * ie. ./.crowdin/{lang-codes}
+ *
  * 2. Select languages and buckets to import by adding the number of the
- * corresponding content bucket to the `buckets` array
+ * corresponding content bucket to the `buckets` array below
  * ie. `buckets: [1, 10],` would import the "Homepage" and "Learn" buckets
  */
 const SELECTION = [
@@ -210,7 +206,8 @@ const SELECTION = [
   },
 ]
 /**
- * 3. Execute script by running `yarn crowdin-import`
+ * 3. Save file without committing
+ * 4. Execute script by running `yarn crowdin-import`
  */
 
 /******************************
@@ -219,10 +216,7 @@ const SELECTION = [
 
 // Initialize root paths
 const repoRoot = resolve("./")
-const crowdinRoot =
-  CROWDIN_ROOT_OVERRIDE !== repoRoot
-    ? resolve(CROWDIN_ROOT_OVERRIDE)
-    : join(repoRoot, ".crowdin")
+const crowdinRoot = join(repoRoot, ".crowdin")
 // If first time, create directory for user
 if (!existsSync(crowdinRoot)) mkdirSync(crowdinRoot)
 
@@ -249,6 +243,7 @@ const BUCKET_NAMES = [
   "Whitepaper",
   "Docs - Advanced Pages",
   "Learn Pages",
+  "Research Documentation",
   "Contributing",
   "Developer Tutorials I",
   "Developer Tutorials II",
@@ -275,20 +270,17 @@ const scrapeDirectory = (_path, contentSubpath, repoLangCode) => {
   ls.forEach((item) => {
     const source = resolve(`${_path}/${item}`)
     if (item.endsWith(".json")) {
-      const jsonDestinationPath = join(
-        repoRoot,
-        "src",
-        "intl",
-        repoLangCode,
-        item
-      )
+      const jsonDestDirPath = join(repoRoot, "src", "intl", repoLangCode)
+      if (!existsSync(jsonDestDirPath))
+        mkdirSync(jsonDestDirPath, { recursive: true })
+      const jsonDestinationPath = join(jsonDestDirPath, item)
       if (VERBOSE)
         console.log("Copy .json from", source, "to", jsonDestinationPath)
       copyFileSync(source, jsonDestinationPath)
       // Update .json tracker
       trackers[repoLangCode].jsonCopyCount++
     } else if (item.endsWith(".md")) {
-      const destDirPath = join(
+      const mdDestDirPath = join(
         repoRoot,
         "src",
         "content",
@@ -296,10 +288,9 @@ const scrapeDirectory = (_path, contentSubpath, repoLangCode) => {
         repoLangCode,
         contentSubpath
       )
-      const mdDestinationPath = join(destDirPath, item)
-      if (!existsSync(destDirPath)) {
-        mkdirSync(destDirPath, { recursive: true })
-      }
+      if (!existsSync(mdDestDirPath))
+        mkdirSync(mdDestDirPath, { recursive: true })
+      const mdDestinationPath = join(mdDestDirPath, item)
       if (VERBOSE) console.log("Copy .md from", source, "to", mdDestinationPath)
       copyFileSync(source, mdDestinationPath)
       // Update .md tracker
@@ -364,6 +355,12 @@ const summary = importSelection.map((item) => {
     error,
   }
 })
+const langsSummary = summary.reduce(
+  (prev, { repoLangCode }) => `${prev},${repoLangCode}`,
+  ""
+)
+
 console.table(summary)
 console.log("Empty buckets:", trackers.emptyBuckets)
+console.log("Langs to test:", `\nGATSBY_BUILD_LANGS=en${langsSummary}`)
 console.log("🎉 Crowdin import complete.")
