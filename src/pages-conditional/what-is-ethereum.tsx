@@ -312,7 +312,7 @@ const WhatIsEthereumPage = ({
       emoji: ":handshake:",
       title: "All products are composable",
       description:
-        "Since all apps are built on the same blockchain / share the same state, they can build off each other (similar to legos). This allows for better products and experiences being built all the time.",
+        "Since all apps are built on the same blockchain with a shared global state, they can build off each other (like legos). This allows for better products and experiences being built all the time.",
     },
   ]
 
@@ -388,9 +388,9 @@ const WhatIsEthereumPage = ({
               <Translation id="page-what-is-ethereum-desc" />
             </Slogan>
             <Subtitle>
-              Learn more about how Ethereum works, the benefits it brings and
-              how it is being used by millions of people around the world. A
-              complete beginner's guide.
+              A complete beginner's guide to how Ethereum works, the benefits it
+              brings and how it's being used by millions of people around the
+              world.
             </Subtitle>
             <ButtonRow>
               <ButtonLink toId="summary">Let’s start</ButtonLink>
@@ -413,12 +413,14 @@ const WhatIsEthereumPage = ({
               <Summary>
                 <h2>Summary</h2>
                 <p>
-                  Ethereum is a technology that lets you send cryptocurrency to
-                  anyone for a small fee. Its also a marketplace of apps that
-                  anyone can use and no one can take down. Ethereum doesn’t
-                  require any central authority to maintain and secure it.
-                  Instead, individuals can make peer-to-peer transactions
-                  without needing to trust a third party or one another.
+                  Ethereum is an internet technology that lets you send
+                  cryptocurrency to anyone for a small fee. It’s also a
+                  developer platform with a growing marketplace of apps that
+                  anyone can build on, anyone can use, and no one can take down.
+                  Ethereum doesn’t require any central authority to maintain and
+                  secure it. Instead, individuals can make peer-to-peer
+                  transactions without needing to trust a third party or one
+                  another.
                 </p>
                 <p>Still confused? Let's explain everything step by step.</p>
               </Summary>
@@ -441,8 +443,9 @@ const WhatIsEthereumPage = ({
                 <p>
                   It all started in 2008 with Bitcoin. You could use it to send
                   funds to anyone anywhere globally. What made crypto different
-                  from normal bank transfers or other services like Paypal is
-                  that there was no middle man for the first time.
+                  from normal bank transfers or other financial services like
+                  Paypal or Alipay is that there was no middle man for the first
+                  time.
                 </p>
                 <p>Wait, what is a middle man?</p>
                 <p>
@@ -454,13 +457,12 @@ const WhatIsEthereumPage = ({
                 </p>
                 <p>
                   Things are different with crypto. You can act as{" "}
-                  <b>your own bank</b>
-                  if you want to. Nobody else has access to your funds and
-                  nobody can tell you what services you can use. You and your
-                  friends can make direct <b>peer-to-peer transactions</b> with
-                  no single authority controling the transfer. This is possible
-                  because of the blockchain technology upon which
-                  cryptocurrencies operate.
+                  <b>your own bank</b> if you want to. Nobody else has access to
+                  your funds and nobody can tell you what services you can use.
+                  You and anyone else with an internet connection can make
+                  direct <b>peer-to-peer transactions</b> with no single
+                  authority controling the transfer. This is possible because of
+                  the blockchain technology upon which cryptocurrencies operate.
                 </p>
               </Width60>
             </TwoColumnContent>
@@ -481,7 +483,8 @@ const WhatIsEthereumPage = ({
                         remove. If someone wanted to alter any of the
                         information or cheat the system, they’d need to do so on
                         the majority of computers on the network. That is a lot!
-                        This makes established blockchains highly secure.
+                        This makes established blockchains like Ethereum highly
+                        secure.
                       </TabContent>
                     ),
                   },
@@ -489,7 +492,7 @@ const WhatIsEthereumPage = ({
                     title: "Why is it called cryptocurrency?",
                     content: (
                       <TabContent>
-                        Blockchain uses cryptographic techniques to ensure that
+                        Blockchains use cryptographic techniques to ensure that
                         your funds are safe. Similar techniques have been used
                         in the banking industries to ensure the security of
                         monetary transactions for years. So you could say
@@ -538,7 +541,7 @@ const WhatIsEthereumPage = ({
         </Section>
 
         <Section>
-          <h2>What Ethereum can do?</h2>
+          <h2>What can Ethereum do?</h2>
           <CardContainer>
             {cards.map((card, idx) => (
               <StyledCard
@@ -623,7 +626,7 @@ const WhatIsEthereumPage = ({
                         content={tooltipContent({
                           apiUrl:
                             "https://stark.mirror.xyz/q3OnsK7mvfGtTQ72nfoxLyEV5lfYOqUfJIoKBx7BG1I",
-                          apiProvider: "Josh Stark Mirror",
+                          apiProvider: "Josh Stark",
                           ariaLabel:
                             "Read more about 2021 Ethereum network stats",
                         })}
@@ -643,7 +646,7 @@ const WhatIsEthereumPage = ({
                         content={tooltipContent({
                           apiUrl:
                             "https://stark.mirror.xyz/q3OnsK7mvfGtTQ72nfoxLyEV5lfYOqUfJIoKBx7BG1I",
-                          apiProvider: "Josh Stark Mirror",
+                          apiProvider: "Josh Stark",
                           ariaLabel:
                             "Read more about 2021 Ethereum earnings stats",
                         })}
@@ -815,12 +818,12 @@ const WhatIsEthereumPage = ({
                     prohibited to trade or transfer in-game assets to other
                     players for real money. This forces players to use black
                     market websites that are often a security risk. Blockchain
-                    gaming embraces the ingame economy and promotes such
+                    gaming embraces the in-game economy and promotes such
                     behavior in a trusted manner.
                   </p>
                   <p>
                     Moreover, players are incentivized by being able to trade
-                    in-game tokens for real money and thus being trully rewarded
+                    in-game tokens for real money and thus being truly rewarded
                     for their play time.
                   </p>
                 </EmblaSlide>
@@ -838,24 +841,24 @@ const WhatIsEthereumPage = ({
               <GatsbyImage image={getImage(data.ethCoin)} />
             </Width40>
             <Width60>
-              <h2>Meet Ether, Ethereum’s cryptocurrency</h2>
+              <h2>Meet ether, Ethereum’s cryptocurrency</h2>
               <p>
-                Ethereum has a native cryptocurrency called Ether (ETH). It is
+                Ethereum has a native cryptocurrency called ether (ETH). It is
                 purely digital, and you can send it to anyone anywhere in the
                 world instantly. The supply of ETH isn’t controlled by any
-                government or company - it is decentralized. New coins (also
-                commonly called tokens) are created only by miners and stakers
-                who maintain the network.
+                government or company - it is decentralized and completely
+                transparent. New coins (also commonly called tokens) are created
+                only by miners and stakers who maintain the network.
               </p>
               <p>
                 Every action on the Ethereum network requires a certain amount
-                of computational power. This is paid in the form of Ether fee.
-                This means you need at least small amount of ETH to use the
+                of computational power. This fee is paid in the form of ether.
+                This means you need at least a small amount of ETH to use the
                 network.
               </p>
               <p>
                 <ButtonRow>
-                  <ButtonLink to="/eth/">What is Ether?</ButtonLink>
+                  <ButtonLink to="/eth/">What is ether?</ButtonLink>
                   <ButtonLink to="/get-eth/" isSecondary>
                     Get ETH
                   </ButtonLink>
@@ -871,13 +874,14 @@ const WhatIsEthereumPage = ({
               <GatsbyImage image={getImage(data.meetEth)} />
             </Width40>
             <Width60>
-              <h2>What can I do with ETH coin?</h2>
+              <h2>What can I do with ETH coins?</h2>
               <p>
                 Turns out: a lot of things! One of the most prominent usages of
-                the Ethereum technology is decentralised finance (DeFi) that
-                opens whole area of banking services to anybody with an internet
-                connection. You can use your Ether as a collateral to take out
-                loans or provide liquidity to earn interest on your funds.
+                the Ethereum technology is decentralized finance (DeFi) that
+                opens entire areas of banking services to anybody with an
+                internet connection. You can use your ether as a collateral to
+                take out loans or provide liquidity to earn interest on your
+                funds.
               </p>
               <p>
                 <ButtonRow>
@@ -900,7 +904,7 @@ const WhatIsEthereumPage = ({
               <h2>Who runs Ethereum?</h2>
               <p>
                 Ethereum is not controlled by any one entity. It exists solely
-                through the decentralised participation and cooperation of the
+                through the decentralized participation and cooperation of the
                 community. Ethereum makes use of nodes (a computer with a copy
                 of the Ethereum blockchain data) run by volunteers to replace
                 individual server and cloud systems owned by major internet
@@ -917,7 +921,7 @@ const WhatIsEthereumPage = ({
                 . There are currently over 1777 individual nodes running
                 Ethereum network. This makes Ethereum one of the most
                 decentralized cryptocurrencies out there, second only to
-                bitcoin.
+                Bitcoin.
               </p>
               <p>
                 <ButtonRow>
@@ -1047,9 +1051,9 @@ const WhatIsEthereumPage = ({
             <p>
               This update will reduce the energy required to secure Ethereum by
               about <b>99.95%</b>, creating a{" "}
-              <b>safer network for a much smaller carbon cost</b>. This will
-              make Ethereum a truly low-carbon blockchain while boosting its
-              security and scalability.
+              <b>more secure network for a much smaller carbon cost</b>. This
+              will make Ethereum a truly low-carbon blockchain while boosting
+              its security and scalability.
             </p>
             <p>
               <ButtonRow>
@@ -1066,7 +1070,7 @@ const WhatIsEthereumPage = ({
       </Section>
 
       <Content>
-        <h2>Additional readings</h2>
+        <h2>Additional reading</h2>
         <p>
           <Link to="https://weekinethereumnews.com/">
             Week in Ethereum News
