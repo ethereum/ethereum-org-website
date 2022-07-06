@@ -26,7 +26,7 @@ Brauchst du zuerst einen grundsätzlichen Einstieg? Schaue dir [ethereum.org/lea
 
 ## JavaScript-Projekte und Tools {#javascript-project-and-tools}
 
-**Solidity: \*\***_Die beliebteste Sprache für Ethereum, inspiriert von C++, Python und JavaScript_\*\*
+**Solidity: _Die beliebteste Sprache für Ethereum, inspiriert von C++, Python und JavaScript_**
 
 - [Dokumentation](https://solidity.readthedocs.io)
 - [GitHub](https://github.com/ethereum/solidity/)

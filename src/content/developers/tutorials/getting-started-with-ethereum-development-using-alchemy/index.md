@@ -60,7 +60,7 @@ curl https://eth-mainnet.alchemyapi.io/v2/demo \
 -d '{"jsonrpc":"2.0","method":"eth_gasPrice","params":[],"id":73}'
 ```
 
-_**NOTE:** Replace [https://eth-mainnet.alchemyapi.io/v2/demo](https://eth-mainnet.alchemyapi.io/jsonrpc/demo) with your own API key `https://eth-mainnet.alchemyapi.io/v2/**your-api-key`\*\*._
+_**NOTE:** Replace [https://eth-mainnet.alchemyapi.io/v2/demo](https://eth-mainnet.alchemyapi.io/jsonrpc/demo) with your own API key `https://eth-mainnet.alchemyapi.io/v2/**your-api-key`._
 
 **Results:**
 
