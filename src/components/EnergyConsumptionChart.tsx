@@ -33,7 +33,13 @@ const StyledLegend = styled.div`
   margin-top: 2rem;
 `
 
-const CustomTick = ({ x, y, payload }) => {
+interface ITickProps {
+  x: number
+  y: number
+  payload: { value: number | string }
+}
+
+const CustomTick: React.FC<ITickProps> = ({ x, y, payload }) => {
   const theme = useTheme()
 
   return (
@@ -54,7 +60,12 @@ const CustomTick = ({ x, y, payload }) => {
   )
 }
 
-const EnergyConsumptionChart = ({ data, legend }) => {
+export interface IProps {
+  data: Array<{ name: string; amount: number; color: string }>
+  legend: string
+}
+
+const EnergyConsumptionChart: React.FC<IProps> = ({ data, legend }) => {
   const theme = useTheme()
 
   return (
@@ -92,8 +103,8 @@ const EnergyConsumptionChart = ({ data, legend }) => {
               fontSize={14}
               offset={10}
             />
-            {data.map((data, index) => (
-              <Cell key={`cell-${index}`} fill={data.color} />
+            {data.map((cell, index) => (
+              <Cell key={`cell-${index}`} fill={cell.color} />
             ))}
           </Bar>
         </BarChart>
