@@ -509,7 +509,7 @@ Un cliente de Ethreum que no almacena una copia local de la [cadena de bloques](
 
 ### LMD_GHOST {#lmd-ghost}
 
-El [algoritmo de opción de bifurcación](#fork-choice-algorithm) usado por los clientes de consenso de Ethereum para identificar la cabeza de la cadena. LMD-Ghost es un acrónimo que significa «último mensaje dirigido codicioso observado del subárbol», e indica que la cabeza de la cadena es el bloque con la mayor acumulación de <ahref="#atestaciones"> atestaciones</a> en su historia.
+El [algoritmo de opción de bifurcación](#fork-choice-algorithm) usado por los clientes de consenso de Ethereum para identificar la cabeza de la cadena. LMD-Ghost es un acrónimo que significa «último mensaje dirigido codicioso observado del subárbol», e indica que la cabeza de la cadena es el bloque con la mayor acumulación de [atestaciones](#attestation) en su historia.
 
 ## M {#section-m}
 
