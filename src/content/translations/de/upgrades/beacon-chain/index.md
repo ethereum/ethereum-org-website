@@ -50,7 +50,7 @@ Die Ethereum-Upgrades sind alle auf eine Weise miteinander verbunden. Zusammenfa
 Die Beacon Chain wird zunächst getrennt vom Ethereum-Mainnet existieren, welches wir derzeit nutzen. Letztlich werden jedoch beide verbunden sein. Der Plan ist, das Mainnet mit dem Proof-of-Stake-System zu "verschmelzen", das von der Beacon Chain kontrolliert und koordiniert wird.
 
 <ButtonLink to="/upgrades/merge/">
-    The Merge
+    Die Zusammenführung
 </ButtonLink>
 
 ### Shards und die Beacon Chain {#shards-and-beacon-chain}

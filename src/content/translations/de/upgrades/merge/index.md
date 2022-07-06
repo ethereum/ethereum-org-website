@@ -1,5 +1,5 @@
 ---
-title: The Merge
+title: Die Zusammenführung
 description: Erfahren Sie mehr über die Zusammenführung, wenn das Ethereum-Mainnet mit dem durch die Beacon Chain koordinierten Proof-of-Stake-System verbunden wird.
 lang: de
 template: upgrade
