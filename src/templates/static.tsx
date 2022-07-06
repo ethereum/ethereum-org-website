@@ -153,11 +153,12 @@ const StaticPage = ({
 }: PageProps<Queries.StaticPageQuery, Context>) => {
   const intl = useIntl()
 
-  if (!siteData || !mdx?.frontmatter || !mdx.parent) {
+  if (!siteData || !mdx?.frontmatter || !mdx.parent)
     throw new Error(
       "Static page template query does not return expected values"
     )
-  }
+  if (!mdx?.frontmatter?.title)
+    throw new Error("Required `title` property missing for static template")
 
   const isRightToLeft = isLangRightToLeft(mdx.frontmatter.lang as Lang)
 
@@ -181,8 +182,8 @@ const StaticPage = ({
   return (
     <Page dir={isRightToLeft ? "rtl" : "ltr"}>
       <PageMetadata
-        title={mdx.frontmatter.title || ""}
-        description={mdx.frontmatter.description || ""}
+        title={mdx.frontmatter.title}
+        description={mdx.frontmatter.description}
       />
       <ContentContainer>
         <Breadcrumbs slug={slug} />

@@ -331,11 +331,12 @@ const UpgradePage = ({
 }: PageProps<Queries.UpgradePageQuery, Context>) => {
   const intl = useIntl()
 
-  if (!mdx?.frontmatter || !mdx.parent) {
+  if (!mdx?.frontmatter || !mdx.parent)
     throw new Error(
       "Upgrade page template query does not return expected values"
     )
-  }
+  if (!mdx?.frontmatter?.title)
+    throw new Error("Required `title` property missing for upgrade template")
 
   const isRightToLeft = isLangRightToLeft(mdx.frontmatter.lang as Lang)
   const tocItems = mdx.tableOfContents?.items
@@ -377,8 +378,8 @@ const UpgradePage = ({
       </MoreContent>
       <Page dir={isRightToLeft ? "rtl" : "ltr"}>
         <PageMetadata
-          title={mdx.frontmatter.title || ""}
-          description={mdx.frontmatter.description || ""}
+          title={mdx.frontmatter.title}
+          description={mdx.frontmatter.description}
         />
         <InfoColumn>
           <StyledButtonDropdown list={dropdownLinks} />

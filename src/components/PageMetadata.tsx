@@ -41,6 +41,7 @@ const PageMetadata: React.FC<IProps> = ({
   image,
   canonicalUrl,
 }) => {
+  if (!description) console.warn(`Missing PageMetadata description: ${title}`)
   const {
     site,
     ogImageDefault,
