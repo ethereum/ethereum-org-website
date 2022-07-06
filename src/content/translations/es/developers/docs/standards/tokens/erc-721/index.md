@@ -15,13 +15,13 @@ Una ficha no funcional (NFT) se utiliza para identificar algo o a alguien de una
 
 El ERC-721 introduce una norma para NFT, en otras palabras, este tipo de ficha es único y puede tener un valor diferente que otra ficha del mismo contrato inteligente, tal vez debido a su antigüedad, rareza o incluso a algo como su visualidad. Espera, ¿visual?
 
-¡Sí! Todos los NFT tienen una variable `uint256` llamada `tokenId`, así para cualquier Contrato ERC-721, el par `dirección del contrato, uint256 tokenId` debe ser único globalmente. Digo que una dapp puede tener un "convertidor" que usa el `tokenId` como entrada y produce una imagen de algo fresco, como zombies, armas, habilidades o increíbles gatitos.
+¡Sí! Todos los NFT tienen una variable `uint256` llamada `tokenId`, así para cualquier Contrato ERC-721, el par `dirección del contrato, uint256 tokenId` debe ser único globalmente. Dicho esto, un dApp puede tener un "convertidor" que utilice el `tokenId` como entrada y produzca una imagen de algo genial, como zombies, armas, habilidades o gatitos increíbles.
 
-## Requisitos previos {#prerequisites}
+## Prerrequisitos {#prerequisites}
 
 - [Cuentas](/developers/docs/accounts/)
 - [Contratos inteligentes](/developers/docs/smart-contracts/)
-- [Estándares de token](/developers/docs/standards/tokens/)
+- [Estándares de tokens](/developers/docs/standards/tokens/)
 
 ## Cuerpo {#body}
 
@@ -57,7 +57,7 @@ De [EIP-721](https://eips.ethereum.org/EIPS/eip-721):
 
 ### Ejemplos {#web3py-example}
 
-Vamos a ver la importancia de un estándar para que inspeccionemos fácilmente cualquier contrato de token de ERC-721 en Ethereum. Sólo necesitamos la Interfaz binaria de aplicaciones de contrato (ABI) para crear una interfaz a cualquier Token ERC-721. Como puedes ver a continuación, usaremos un ABI simplificado, para que sea un ejemplo de fricción baja.
+Vamos a ver la importancia de un estándar para que inspeccionemos fácilmente cualquier contrato de token de ERC-721 en Ethereum. Sólo necesitamos la Interfaz binaria de aplicaciones de contrato (ABI) para crear una interfaz a cualquier Token ERC-721. Como puedes ver a continuación, usaremos una ABI simplificada, para que sea un ejemplo de fricción bajo.
 
 #### Ejemplo de Web3.py {#web3py-example}
 
@@ -74,12 +74,12 @@ from web3._utils.events import get_event_data
 
 w3 = Web3(Web3.HTTPProvider("https://cloudflare-eth.com"))
 
-ck_token_addr = "0x06012c8cf97BEaD5deAe237070F9587f8E7A266d" # Contrato de ventas de CryptoKitties
+ck_token_addr = "0x06012c8cf97BEaD5deAe237070F9587f8E7A266d"    # CryptoKitties Contract
 
-acc_address = "0xb1690C08E213a35Ed9bAb7B318DE14420FB57d8C" # Subasta de ventas de CryptoKitties
+acc_address = "0xb1690C08E213a35Ed9bAb7B318DE14420FB57d8C"      # CryptoKitties Sales Auction
 
-# Este es un Contrato simplificado de aplicación binaria (ABI) de un Contrato ERC-721 NFT.
-# Sólo expondrá los métodos: balanceOf(address), name(), ownerOf(tokenId), symbol(), totalSupply()
+# This is a simplified Contract Application Binary Interface (ABI) of an ERC-721 NFT Contract.
+# It will expose only the methods: balanceOf(address), name(), ownerOf(tokenId), symbol(), totalSupply()
 simplified_abi = [
     {
         'inputs': [{'internalType': 'address', 'name': 'owner', 'type': 'address'}],
@@ -137,7 +137,7 @@ print(f"{name} [{symbol}] NFTs in Auctions: {kitties_auctions}")
 pregnant_kitties = ck_contract.functions.pregnantKitties().call()
 print(f"{name} [{symbol}] NFTs Pregnants: {pregnant_kitties}")
 
-# Utilizar el evento de transferencia ABI para obtener información sobre Kitties transferidos.
+# Using the Transfer Event ABI to get info about transferred Kitties.
 tx_event_abi = {
     'anonymous': False,
     'inputs': [
@@ -148,7 +148,7 @@ tx_event_abi = {
     'type': 'event'
 }
 
-# Necesitamos la firma del evento para filtrar los registros
+# We need the event's signature to filter the logs
 event_signature = w3.sha3(text="Transfer(address,address,uint256)").hex()
 
 logs = w3.eth.getLogs({
@@ -157,15 +157,15 @@ logs = w3.eth.getLogs({
     "topics": [event_signature]
 })
 
-# Notas:
-# - 120 bloques es el rango máximo para CloudFlare Provider
-# - Si no has encontrado ningún evento de Transferencia, también puedes intentar obtener un tokenId en:
-# https://etherscan. o/address/0x06012c8cf97BEaD5deAe237070F9587f8E7A266d#events
-# Haz clic para expandir los registros del evento y copiar su argumento "tokenId"
+# Notes:
+#   - 120 blocks is the max range for CloudFlare Provider
+#   - If you didn't find any Transfer event you can also try to get a tokenId at:
+#       https://etherscan.io/address/0x06012c8cf97BEaD5deAe237070F9587f8E7A266d#events
+#       Click to expand the event's logs and copy its "tokenId" argument
 
 recent_tx = [get_event_data(w3.codec, tx_event_abi, log)["args"] for log in logs]
 
-kitty_id = recent_tx[0]['tokenId'] # Pegue el "tokenId" aquí desde el enlace de arriba
+kitty_id = recent_tx[0]['tokenId'] # Paste the "tokenId" here from the link above
 is_pregnant = ck_contract.functions.isPregnant(kitty_id).call()
 print(f"{name} [{symbol}] NFTs {kitty_id} is pregnant: {is_pregnant}")
 ```
@@ -234,15 +234,11 @@ recent_births = [get_event_data(w3.codec, ck_extra_events_abi[1], log)["args"] f
 - [Ethereum Name Service (ENS)](https://ens.domains/) ofrece un Nombre en forma descentralizada de abordar los recursos tanto dentro y fuera de la cadena de bloques utilizando nombres sencillos y legibles por humanos.
 - [Unstoppable Domains](https://unstoppabledomains.com/) es una empresa con sede en San Francisco que crea dominios en blockchains. Los dominios de blockchain reemplazan las direcciones de criptomonedas por nombres legibles por humanos y se pueden usar para habilitar sitios web resistentes a la censura.
 - [Las tarjetas no encadenadas](https://godsunchained.com/) son un TCG en la blockchain de Ethereum, que utiliza los NFT para representar la propiedad real en los activos del juego.
+- [Bored Ape Yacht Club](https://boredapeyachtclub.com) es una colección de 10.000 NFT únicos que, además de ser una obra de arte de probada rareza, actúa como token de membresía del club, lo que proporciona ventajas y beneficios a los miembros que aumentan con el tiempo como resultado de los esfuerzos de la comunidad.
 
-## Leer más {#further-reading}
+## Más información {#further-reading}
 
 - [EIP-721: ERC-721 Estándar de token no fungible](https://eips.ethereum.org/EIPS/eip-721)
 - [OpenZeppelin: Documentos de ERC-721](https://docs.openzeppelin.com/contracts/3.x/erc721)
 - [OpenZeppelin: Implementación de ERC-721](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/ERC721.sol)
-
-## Temas relacionados {#related-topics}
-
-- [ERC-20](/developers/docs/standards/tokens/erc-20/)
-- [ERC-777](/developers/docs/standards/tokens/erc-777/)
-- [ERC-1155](/developers/docs/standards/tokens/erc-1155/)
+- [API de NFT de Alchemy](https://docs.alchemy.com/alchemy/enhanced-apis/nft-api)
