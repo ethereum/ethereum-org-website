@@ -13,8 +13,8 @@ Herkes ethereum.org'da bir katman 2 eklemeyi önermekte özgürdür. Kaçırdı�
 
 Şu anda aşağıdaki sayfalarda Katman 2'leri listeliyoruz:
 
-- [İyimser toplamalar](/developers/docs/scaling/optimistic-rollups/)
-- [Sıfır-bilgi toplamalar](/developers/docs/scaling/zk-rollups/)
+- [Optimistic rollups](/developers/docs/scaling/optimistic-rollups/)
+- [Sifir-Bilgi Toplamalari](/developers/docs/scaling/zk-rollups/)
 - [Durum kanalları](/developers/docs/scaling/state-channels/)
 <!-- TODO: Add layer-2 page -->
 
@@ -90,5 +90,5 @@ _Diğer ölçeklendirme çözümlerini katman 2 olarak görmüyoruz._
 Ethereum.org'a bir katman 2 eklemek istiyorsanız, GitHub'da bir konu oluşturun.
 
 <ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?&template=suggest_layer2.md">
-  Bir konu oluştur
+  Bir konu oluşturun
 </ButtonLink>

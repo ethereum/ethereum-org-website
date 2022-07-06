@@ -1,5 +1,5 @@
 ---
-title: İşaret (Beacon) Zinciri
+title: İşaret Zinciri
 description: Hisse ispatını Ethereum'a tanıtan yükseltme olan İşaret Zinciri hakkında bilgi edinin.
 lang: tr
 template: upgrade

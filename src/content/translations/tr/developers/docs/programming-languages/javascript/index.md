@@ -1,5 +1,5 @@
 ---
-title: Javascript geliştiricileri için Ethereum
+title: Javascript Geliştiricileri için Ethereum
 description: JavaScript tabanlı projeler ve araçlarla nasıl Ethereum için geliştireceğinizi öğrenin.
 lang: tr
 sidebar: true
@@ -11,7 +11,7 @@ Yığının her seviyesinde JavaScript (veya benzer bir şey) yazma [fırsatlar�
 
 ## Ethereum ile etkileşime gir {#interact-with-ethereum}
 
-### Javascript API kütüphaneleri {#javascript-api-libraries}
+### JavaScript API kütüphaneleri {#javascript-api-libraries}
 
 Eğer blok zincirini sorgulamak için JavaScript yazmak isterseniz, işlemleri göndermenin ve daha fazlasını yapmanın en uygun yolu bir [JavaScript API kütüphanesi kullanmaktır](/developers/docs/apis/javascript/). Bu API'ler, geliştiricilerin [ Ethereum ağındaki düğümlerle](/developers/docs/nodes-and-clients/) kolayca etkileşim kurmasına olanak tanır.
 

@@ -116,11 +116,11 @@ Ce tableau récapitule les différents clients. Tous ont passé [les tests clien
 
 | Client                                                                  | Langage  | Systèmes d'exploitation | Réseaux                                             | Stratégies de synchronisation | Élagage d'état  |
 | ----------------------------------------------------------------------- | -------- | ----------------------- | --------------------------------------------------- | ----------------------------- | --------------- |
-| [Geth](https://geth.ethereum.org/)                                      | Go       | Linux, Windows, macOS   | Mainnet, Görli, Rinkeby, Ropsten                    | Snap, Full                    | Archive, élagué |
-| [Nethermind](http://nethermind.io/)                                     | C#, .NET | Linux, Windows, macOS   | Réseau principal, Görli, Ropsten, Rinkeby et plus   | Fast, Beam, Archive           | Archive, élagué |
+| [Geth](https://geth.ethereum.org/)                                      | Aller    | Linux, Windows, macOS   | Mainnet, Görli, Rinkeby, Ropsten                    | Snap, Full                    | Archive, élagué |
+| [Nethermind](http://nethermind.io/)                                     | C#, .NET | Linux, Windows, macOS   | Mainnet, Görli, Ropsten, Rinkeby et plus            | Fast, Beam, Archive           | Archive, élagué |
 | [Besu](https://pegasys.tech/solutions/hyperledger-besu/)                | Java     | Linux, Windows, macOS   | Réseau principal, Rinkeby, Ropsten, Görli, and more | Rapide, complète              | Archive, élagué |
-| [Erigon](https://github.com/ledgerwatch/erigon)                         | Aller    | Linux, Windows, macOS   | Réseau principal, Görli, Rinkeby, Ropsten           | Totale                        | Archive, élagué |
-| [OpenEthereum (obsolète)](https://github.com/openethereum/openethereum) | Rust     | Linux, Windows, macOS   | Réseau principal, Kovan, Ropsten et plus            | Warp, complète                | Archive, élagué |
+| [Erigon](https://github.com/ledgerwatch/erigon)                         | Aller    | Linux, Windows, macOS   | Mainnet, Görli, Rinkeby, Ropsten                    | Totale                        | Archive, élagué |
+| [OpenEthereum (obsolète)](https://github.com/openethereum/openethereum) | Rust     | Linux, Windows, macOS   | Mainnet, Kovan, Ropsten et plus                     | Warp, complète                | Archive, élagué |
 
 **Notez que OpenEthereum [a été déprécié](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd) et n'est plus entretenu.** Utilisez-le avec prudence et, de préférence, passez à une autre implémentation client.
 
@@ -162,7 +162,7 @@ Hyperledger Besu est un client Ethereum de niveau entreprise pour les réseaux p
 
 #### Erigon {#erigon}
 
-Erigon, anciennement connu sous le nom de Erigon, est une fourche de Go Ethereum axée sur la vitesse et l'efficacité de l'espace disque. Erigon est une implémentation entièrement repensée d'Ethereum, actuellement écrite en Go mais pour laquelle des implémentations dans d'autres langages sont prévues. L'objectif d'Erigon est de fournir une implémentation plus rapide, plus modulaire et plus optimisée d'Ethereum. Il peut effectuer une synchronisation complète des nœuds d'archive en utilisant moins de 2 To d'espace disque, et ce en moins de 3 jours.
+Erigon, anciennement connu sous le nom de Turbo-Geth, est une fourche de Go Ethereum axée sur la vitesse et l'efficacité de l'espace disque. Erigon est une implémentation entièrement repensée d'Ethereum, actuellement écrite en Go mais pour laquelle des implémentations dans d'autres langages sont prévues. L'objectif d'Erigon est de fournir une implémentation plus rapide, plus modulaire et plus optimisée d'Ethereum. Il peut effectuer une synchronisation complète des nœuds d'archive en utilisant moins de 2 To d'espace disque, et ce en moins de 3 jours.
 
 ### Modes de synchronisation {#sync-modes}
 
@@ -199,7 +199,7 @@ Le mode client léger permet de télécharger tous les en-têtes de bloc, les d
 
 ##### Synchronisation instantanée
 
-Implémenté par Geth. L'utilisation d'instantanés dynamiques servis par les pairs permet de récupérer toutes les données du compte et de stockage sans télécharger les nœuds intermédiaires puis de reconstruire ensuite la tentative Merkle localement.
+Implémenté par Geth. L'utilisation d'instantanés dynamiques servis par les pairs permet de récupérer toutes les données du compte et de stockage sans télécharger les nœuds d'arborescence intermédiaires puis de reconstruire ensuite l'arborescence Merkle localement.
 
 - Stratégie de synchronisation la plus rapide développée par Geth, utilisée actuellement par défaut.
 - Économise l'utilisation du disque et de bande passante du réseau sans pour autant sacrifier la sécurité.
@@ -226,7 +226,7 @@ Implémenté par Nethermind et Trinity. Fonctionne comme une synchronisation rap
 
 #### Configuration dans le client {#client-setup}
 
-Les clients offrent des options de configuration étendues pour répondre à vos besoins. Choisissez celle qui vous convient le mieux en fonction du niveau de sécurité, des données disponibles et des coûts. En dehors de l'algorithme de synchronisation, vous pouvez également configurer l'élagage de différents types d'anciennes données. L'élagage permet de supprimer les données obsolètes, par exemple en supprimant les nœuds d'état qui sont inaccessibles à partir de blocs récents.
+Les clients offrent des options de configuration étendues pour répondre à vos besoins. Choisissez celle qui vous convient le mieux en fonction du niveau de sécurité, des données disponibles et des coûts. En dehors de l'algorithme de synchronisation, vous pouvez également configurer l'élagage de différents types d'anciennes données. L'élagage permet de supprimer les données obsolètes, par exemple en supprimant les nœuds d'état d'arborescence qui sont inaccessibles à partir de blocs récents.
 
 Lisez attentivement la documentation ou la page d'aide du client pour savoir quel mode de synchronisation est le mode par défaut. Vous pouvez définir le type de synchronisation préféré lors de la configuration, comme suit :
 

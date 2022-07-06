@@ -262,7 +262,7 @@ _注:ステークされた ETH を表す、Rocket Pool の rETH、Lido の stETH
 
 <Divider />
 
-## 参考文献 {#further-reading}
+## さらに学びたい方へ {#further-reading}
 
 ### ウェブセキュリティ {#reading-web-security}
 
