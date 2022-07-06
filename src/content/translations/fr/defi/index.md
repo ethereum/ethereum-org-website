@@ -1,5 +1,5 @@
 ---
-title: Finance Décentralisée (DeFi)
+title: Finance décentralisée (DeFi)
 description: Un aperçu de la DeFi sur Ethereum
 lang: fr
 template: use-cases
@@ -185,7 +185,7 @@ Vous pouvez gagner de l'intérêt sur votre cryptomonnaie en le prêtant et en v
 - Vous pouvez retirer un montant de Dai égal à votre solde aDai à tout moment.
 
 <ButtonLink to="/dapps/?category=finance">
-  Voir les prêts dapps
+  Voir les dApps de prêt
 </ButtonLink>
 
 #### Loteries sans risque {#no-loss-lotteries}
@@ -289,7 +289,7 @@ Les produits Ethereum, comme n'importe quel logiciel, peuvent souffrir de bugs e
 Avec tant de choses en cours, vous aurez besoin d'un moyen de suivre tous vos investissements, vos prêts et vos transactions. Il y a une foule de produits qui vous permettent de coordonner toutes vos activités de DeFi à partir d'un seul endroit. C'est la beauté de l'architecture ouverte de DeFi. Les équipes peuvent construire des interfaces où vous ne pouvez pas simplement voir vos balances entre produits mais également utiliser leurs fonctionnalités. Vous pourriez trouver cela utile en explorant plus à propos de la DeFi.
 
 <ButtonLink to="/dapps/?category=finance">
-  Voir le portefeuille dapps
+  Voir les dApps de portefeuille
 </ButtonLink>
 
 <Divider />

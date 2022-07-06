@@ -7,7 +7,7 @@ sidebar: true
 
 智能合约是一种在以太坊某个地址上运行的程序。 它们是由数据和函数组成的，可以在收到交易时执行。 以下概述一个智能合约的组成。
 
-### 前置要求 {#prerequisites}
+### 前提条件 {#prerequisites}
 
 确保您已经先阅读了[智能合约](/developers/docs/smart-contracts/)。 本文档假设您已经熟悉某种编程语言，例如 JavaScript 或 Python。
 
@@ -65,10 +65,10 @@ storedData: int128
 
 示例：
 
-| **属性**          | **状态变量** | **描述**                 |
-| ----------------- | ------------ | ------------------------ |
+| **属性**     | **状态变量** | **描述**                 |
+| ------------ | ------------ | ------------------------ |
 | `block.timestamp` | uint256      | 当前区块的时间戳         |
-| `msg.sender`      | 地址         | 消息的发送者（当前调用） |
+| `msg.sender`     | 地址         | 消息的发送者（当前调用） |
 
 ## 函数 {#functions}
 
@@ -624,10 +624,10 @@ contract CryptoPizza is IERC721, ERC165 {
         uint256 size;
         // Currently there is no better way to check if there is a contract in an address
         // than to check the size of the code at that address.
-        // 参阅 https://ethereum.stackexchange.com/a/14016/36603
-        // 了解更多信息。
-        // TODO：在 Serenity 发布前再次检查这里。
-        // 否则到时所有地址都将判断为合约。
+        // See https://ethereum.stackexchange.com/a/14016/36603
+        // for more details about how this works.
+        // TODO Check this again before the Serenity release, because all addresses will be
+        // contracts then.
         // solium-disable-next-line security/no-inline-assembly
         assembly {
             size := extcodesize(account)

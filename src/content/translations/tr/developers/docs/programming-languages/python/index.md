@@ -1,6 +1,6 @@
 ---
 title: Python Geliştiricileri için Ethereum
-description: Python tabanlı projeler ve araçlarla nasıl Ethereum için geliştireceğinizi öğrenin
+description: Ethereum için Python temelli projeler ve araçları kullanarak nasıl geliştireceğinizi öğrenin
 lang: tr
 sidebar: true
 incomplete: true
@@ -8,20 +8,20 @@ incomplete: true
 
 <div class="featured">Python tabanlı projeler ve araçlarla nasıl Ethereum için geliştireceğinizi öğrenin</div>
 
-Use Ethereum to create decentralized applications (or "dapps") that utilize the benefits of cryptocurrency and blockchain technology. Bu dapp'ler güvenilir olabilir, yani Ethereum'a dağıtıldıktan sonra her zaman programlandığı gibi çalışırlar. Yeni tür finansal uygulamalar oluşturmak için dijital varlıkları kontrol edebilirler. Merkeziyetsiz olabilirler, yani hiç bir kurum veya kişi onları kontrol edemez ve sansürlenmeleri neredeyse imkansızdır.
+Kripto Para ve Blok Zincirinin avantajlarını kullanarak Merkezsiz uygulamalar (veya "dApps") oluşturmak için Ethereum'u kullanın. Bu dapp'ler güvenilir olabilir, yani Ethereum'a dağıtıldıktan sonra her zaman programlandığı gibi çalışırlar. Yeni tür finansal uygulamalar oluşturmak için dijital varlıkları kontrol edebilirler. Merkezsiz olabilirler, yani hiç bir kurum veya kişi onları kontrol edemez ve sansürlenmeleri neredeyse imkansızdır.
 
 ## Akıllı Sözleşmeler ve Solidity Dilini Öğrenmeye Başlangıç {#getting-started-with-smart-contracts-and-solidity}
 
 **Python ve Ethereum'u entegre etmek için ilk adımlarınızı atın**
 
-Başlamadan önce temel bilgilere mi ihtiyacınız var? [ethereum.org/learn](/learn/) veya [ethereum.org/developers](/developers/) adreslerine göz atın.
+Başlamadan önce daha temel bir bilgiye mi ihtiyacınız var? [ethereum.org/learn](/learn/) veya [ethereum.org/developers](/developers/)'a göz atın.
 
-- [Blok Zinciri Açıklaması](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
+- [Blockchain Açıklaması](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
 - [Akıllı Sözleşmeleri Anlamak](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
 - [İlk Akıllı Sözleşmenizi Yazın](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
-- [Solidity'yi Nasıl Derleyeceğinizi ve Dağıtacağınızı Öğrenin](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
+- [Solidity'i Nasıl Derleyeceğinizi ve Dağıtacağınızı Öğrenin](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 
-## Başlangıç seviyesi makaleler {#beginner-articles}
+## Başlangıç ​​seviyesi makaleler {#beginner-articles}
 
 - [Bir (Python) Geliştiricinin Ethereum Rehberi](https://snakecharmers.ethereum.org/a-developers-guide-to-ethereum-pt-1/)
 - [Vyper ile Akıllı Sözleşmelere Giriş](https://kauri.io/#collections/Getting%20Started/an-introduction-to-smart-contracts-with-vyper/)
@@ -30,7 +30,7 @@ Başlamadan önce temel bilgilere mi ihtiyacınız var? [ethereum.org/learn](/le
 - [Web3.py'ye Giriş · Python Geliştiricileri için Ethereum](https://www.dappuniversity.com/articles/web3-py-intro)
 - [Python ve web3.py kullanarak Akıllı Sözleşme çağırma](https://stackoverflow.com/questions/57580702/how-to-call-a-smart-contract-function-using-python-and-web3-py)
 
-## Orta Seviye Makaleler {#intermediate-articles}
+## Orta seviye makaleler {#intermediate-articles}
 
 - [Python Yazılımcıları için Dapp Geliştirme](https://levelup.gitconnected.com/dapps-development-for-python-developers-f52b32b54f28)
 - [Python Ethereum Arayüzü Oluşturma: Bölüm 1](https://hackernoon.com/creating-a-python-ethereum-interface-part-1-4d2e47ea0f4d)
@@ -38,7 +38,7 @@ Başlamadan önce temel bilgilere mi ihtiyacınız var? [ethereum.org/learn](/le
 - [Akıllı Sözleşmeler dağıtmak için Brownie ve Python kullanımı](https://dev.to/patrickalphac/using-brownie-for-to-deploy-smart-contracts-1kkp)
 - [Brownie ile OpenSea üzerinde NFT'ler oluşturma](https://www.freecodecamp.org/news/how-to-make-an-nft-and-render-on-opensea-marketplace/)
 
-## İleri Düzey Kullanım Şekilleri {#advanced-use-patterns}
+## İleri düzey kullanım Şşkilleri {#advanced-use-patterns}
 
 - [Python kullanarak Ethereum akıllı sözleşmesini derleme, dağıtma ve çağırma](https://yohanes.gultom.id/2018/11/28/compiling-deploying-and-calling-ethereum-smartcontract-using-python/)
 - [Slither ile Solidity Akıllı Sözleşmeleri Analiz Edin](https://kauri.io/#collections/DevOps/analyze-solidity-smart-contracts-with-slither/#analyze-solidity-smart-contracts-with-slither)

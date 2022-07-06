@@ -64,7 +64,7 @@ Wir nutzen NFTs, um unseren Mitwirkenden etwas zurückzugeben, und wir haben sog
 
 Wenn Sie einen Beitrag für ethereum.org leisten, können Sie ein POAP-NFT beanspruchen. Das sind Sammlerstücke, die als Nachweis dafür dienen, dass Sie an einer bestimmten Veranstaltung teilgenommen oder etwas dazu beigetragen haben. Einige Krypto-Treffen haben POAPs als Form von Ticket für ihre Veranstaltungen genutzt. [Mehr zum Beitragen](/contributing/#poap).
 
-![ethereum.org-POAP](../../../../assets/use-cases/poap.png)
+![ethereum.org-POAP](./poap.png)
 
 #### ethereum.eth {#ethereum-dot-eth}
 

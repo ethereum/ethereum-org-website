@@ -13,7 +13,7 @@ incomplete: true
 - [getwaffle.io](https://getwaffle.io/)
 - [GitHub](https://github.com/EthWorks/Waffle)
 
-**Solidity-Coverage: \*\***_Herramienta alternativa de cobertura de código de Solidity._\*\*
+**Solidity-Coverage:** **_Herramienta alternativa de cobertura de código de Solidity._**
 
 - [GitHub](https://github.com/sc-forks/solidity-coverage)
 
