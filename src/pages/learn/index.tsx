@@ -233,7 +233,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
 
   return (
     <Container>
-      <PageMetadata title={"Learn Hub"} description={""} />
+      <PageMetadata title={"Learn hub"} description={""} />
 
       <HeroBackground>
         <HeroContainer>
@@ -243,7 +243,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
 
       <Page dir={isRightToLeft ? "rtl" : "ltr"}>
         <InfoColumn>
-          <InfoTitle>Learn Hub</InfoTitle>
+          <InfoTitle>Learn hub</InfoTitle>
           <StakingHomeTableOfContents items={tocItems} />
         </InfoColumn>
 
