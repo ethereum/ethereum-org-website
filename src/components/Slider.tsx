@@ -87,9 +87,11 @@ const DotButton = styled.button<{ selected: boolean }>`
   }
 `
 
-export interface IProps {}
+export interface IProps {
+  onSlideChange?: (slideIndex: number) => void
+}
 
-const Slider: React.FC<IProps> = ({ children }) => {
+const Slider: React.FC<IProps> = ({ children, onSlideChange }) => {
   const theme = useTheme()
   const [emblaRef, embla] = useEmblaCarousel()
   const [prevBtnEnabled, setPrevBtnEnabled] = useState(false)
@@ -100,7 +102,15 @@ const Slider: React.FC<IProps> = ({ children }) => {
   const scrollPrev = useCallback(() => embla && embla.scrollPrev(), [embla])
   const scrollNext = useCallback(() => embla && embla.scrollNext(), [embla])
   const scrollTo = useCallback(
-    (index) => embla && embla.scrollTo(index),
+    (index) => {
+      if (embla) {
+        embla.scrollTo(index)
+      }
+
+      if (onSlideChange) {
+        onSlideChange(index)
+      }
+    },
     [embla]
   )
 
@@ -115,7 +125,13 @@ const Slider: React.FC<IProps> = ({ children }) => {
     if (!embla) return
     onSelect()
     setScrollSnaps(embla.scrollSnapList())
-    embla.on("select", onSelect)
+    embla.on("select", () => {
+      const index = embla.selectedScrollSnap()
+      if (onSlideChange) {
+        onSlideChange(index)
+      }
+      onSelect()
+    })
   }, [embla, setScrollSnaps, onSelect])
 
   return (

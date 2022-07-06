@@ -363,6 +363,7 @@ const WhatIsEthereumPage = ({
   const tabs = [
     {
       title: "What is a blockchain?",
+      eventName: "Blockchain tab",
       content: (
         <TabContent>
           <b>A blockchain is a database of transactions</b> that is updated and
@@ -378,6 +379,7 @@ const WhatIsEthereumPage = ({
     },
     {
       title: "Why is it called cryptocurrency?",
+      eventName: "Cryptocurrency tab",
       content: (
         <TabContent>
           Blockchains use cryptographic techniques to ensure that your funds are
@@ -386,6 +388,21 @@ const WhatIsEthereumPage = ({
           say cryptocurencies have a bank level of security.
         </TabContent>
       ),
+    },
+  ]
+
+  const slides = [
+    {
+      eventName: "Payments slide",
+    },
+    {
+      eventName: "Time of crisis slide",
+    },
+    {
+      eventName: "Creators slide",
+    },
+    {
+      eventName: "Gamers slide",
     },
   ]
 
@@ -504,7 +521,7 @@ const WhatIsEthereumPage = ({
                   trackCustomEvent({
                     eventCategory: `Blockchain/crypto tab`,
                     eventAction: `Clicked`,
-                    eventName: `${tabs[index].title} tab`,
+                    eventName: tabs[index].eventName,
                   })
                 }}
                 tabs={tabs}
@@ -710,7 +727,15 @@ const WhatIsEthereumPage = ({
                 it evolves and develops over time.
               </p>
 
-              <Slider>
+              <Slider
+                onSlideChange={(index) => {
+                  trackCustomEvent({
+                    eventCategory: `What is Ethereum - Slider`,
+                    eventAction: `Clicked`,
+                    eventName: slides[index].eventName,
+                  })
+                }}
+              >
                 <EmblaSlide>
                   <h3>Cheaper and Faster Crossborder Payments</h3>
                   <p>
