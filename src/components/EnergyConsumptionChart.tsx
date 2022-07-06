@@ -33,6 +33,14 @@ const StyledLegend = styled.div`
   margin-top: 2rem;
 `
 
+interface ILegendProps {
+  legend: string
+}
+
+const CustomLegend: React.FC<ILegendProps> = ({ legend }) => {
+  return <StyledLegend>{legend}</StyledLegend>
+}
+
 interface ITickProps {
   x: number
   y: number
@@ -90,7 +98,7 @@ const EnergyConsumptionChart: React.FC<IProps> = ({ data, legend }) => {
             tick={<CustomTick />}
             interval={0}
           />
-          <Legend content={<StyledLegend>{legend}</StyledLegend>} />
+          <Legend content={<CustomLegend legend={legend} />} />
           <Bar
             dataKey="amount"
             radius={[4, 4, 0, 0]}

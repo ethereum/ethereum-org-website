@@ -1047,23 +1047,21 @@ const WhatIsEthereumPage = ({
                 amount of illicit funds involved in traditional finance.”
               </em>
             </p>
-            <p>
-              <ul>
-                <li>
-                  <Link to="https://www.europol.europa.eu/publications-events/publications/cryptocurrencies-tracing-evolution-of-criminal-finances#downloads">
-                    Europol Spotlight - Cryptocurrencies - Tracing the evolution
-                    of criminal finances.pdf
-                  </Link>{" "}
-                  EN (1.4 MB)
-                </li>
-                <li>
-                  <Link to="https://go.chainalysis.com/2021-CryptoCrime-Report.html">
-                    Chainalysis (2021), The 2021 Crypto Crime report
-                  </Link>{" "}
-                  EN
-                </li>
-              </ul>
-            </p>
+            <ul>
+              <li>
+                <Link to="https://www.europol.europa.eu/publications-events/publications/cryptocurrencies-tracing-evolution-of-criminal-finances#downloads">
+                  Europol Spotlight - Cryptocurrencies - Tracing the evolution
+                  of criminal finances.pdf
+                </Link>{" "}
+                EN (1.4 MB)
+              </li>
+              <li>
+                <Link to="https://go.chainalysis.com/2021-CryptoCrime-Report.html">
+                  Chainalysis (2021), The 2021 Crypto Crime report
+                </Link>{" "}
+                EN
+              </li>
+            </ul>
           </Width60>
         </TwoColumnContent>
       </Section>
