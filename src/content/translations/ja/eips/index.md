@@ -31,7 +31,7 @@ EIP 編集者は、技術的な健全性、正しいスペル/文法、および
 - Greg Colvin (コミュニティ)
 - Casey Detrio (EWASM/イーサリアム財団)
 - Matt Garnett (Quilt)
-- Hudson James (イーサリアム財団)
+- Hudson James (Ethereum 財団)
 - Nick Johnson (ENS)
 - Nick Savers (コミュニティ)
 - Micah Zoltu (コミュニティ)
