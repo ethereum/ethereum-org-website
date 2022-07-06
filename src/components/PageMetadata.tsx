@@ -31,7 +31,7 @@ export interface IProps {
   meta?: Array<Meta>
   image?: string
   title: string
-  canonicalUrl?: string
+  canonicalUrl?: string | null
 }
 
 const PageMetadata: React.FC<IProps> = ({

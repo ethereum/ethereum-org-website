@@ -349,12 +349,14 @@ const UpgradePage = ({
 
   const summaryPoints = getSummaryPoints(mdx.frontmatter)
 
+  const slug = mdx.fields?.slug || ""
+
   return (
     <Container>
       <HeroContainer>
         <TitleCard>
-          <DesktopBreadcrumbs slug={mdx.fields?.slug} startDepth={1} />
-          <MobileBreadcrumbs slug={mdx.fields?.slug} startDepth={1} />
+          <DesktopBreadcrumbs slug={slug} startDepth={1} />
+          <MobileBreadcrumbs slug={slug} startDepth={1} />
           <Title>{mdx.frontmatter.title}</Title>
           <SummaryBox>
             <ul>
@@ -375,8 +377,8 @@ const UpgradePage = ({
       </MoreContent>
       <Page dir={isRightToLeft ? "rtl" : "ltr"}>
         <PageMetadata
-          title={mdx.frontmatter.title}
-          description={mdx.frontmatter.description}
+          title={mdx.frontmatter.title || ""}
+          description={mdx.frontmatter.description || ""}
         />
         <InfoColumn>
           <StyledButtonDropdown list={dropdownLinks} />

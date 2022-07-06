@@ -324,8 +324,8 @@ const JobPage = ({
       </HeroContainer>
       <Page dir="ltr">
         <PageMetadata
-          title={mdx.frontmatter.title}
-          description={mdx.frontmatter.description}
+          title={mdx.frontmatter.title || ""}
+          description={mdx.frontmatter.description || ""}
         />
         <InfoColumn>
           <KeyInfo>

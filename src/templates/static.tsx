@@ -176,14 +176,16 @@ const StaticPage = ({
       ? ""
       : `${editContentUrl}${relativePath}`
 
+  const slug = mdx.fields?.slug || ""
+
   return (
     <Page dir={isRightToLeft ? "rtl" : "ltr"}>
       <PageMetadata
-        title={mdx.frontmatter.title}
-        description={mdx.frontmatter.description}
+        title={mdx.frontmatter.title || ""}
+        description={mdx.frontmatter.description || ""}
       />
       <ContentContainer>
-        <Breadcrumbs slug={mdx.fields?.slug} />
+        <Breadcrumbs slug={slug} />
         <LastUpdated
           dir={isLangRightToLeft(intl.locale as Lang) ? "rtl" : "ltr"}
         >
