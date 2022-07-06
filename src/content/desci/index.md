@@ -19,28 +19,12 @@ Decentralized science (DeSci) is a movement that aims to build public infrastruc
 
 The goal of DeSci is to create an ecosystem in which scientists are incentivized to openly share their research and receive credit for their work, while also providing a way for the general public to easily access and contribute to scientific research. DeSci is built on the premise that scientific knowledge should be open and accessible to everyone, and that the process of scientific research should be transparent. DeSci is also intended to create a more decentralized and distributed model for scientific research, which would make it more resistant to censorship and control by central authorities. By decentralizing access to funding, scientific tools and communication channels, DeSci hopes to create an environment where new and unconventional ideas can flourish.
 
-## The problems in science
-
-Science has been failing to keep up with the demands of the modern world for centuries. The mechanisms that have governed scientific inquiry for centuries are no longer providing all the necessary advancements needed in medicine, energy production, materials, exploration, mathematics, and other areas of scientific development. 
-
-This is due in part to the gatekeeping of knowledge and resources by third party arbiters, as well as the inability of the general public to participate in and understand the scientific process. 
-
-Decentralized science can help to address these issues by allowing for more diverse funding sources (from [DAOs](/dao), [quadratic donations](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531) to crowdfunding and more), easier access to data and methods, and by providing incentives for reproducibility.
-
-​​
-
-
-## Why we need science
-
-Science is a process that allows us to create and translate knowledge in order to improve the quality of life for humanity as a whole. It also provides solutions to some of the most complex problems we face. In order to be trustworthy, knowledge produced by science must be replicable and open to scrutiny. This process should be impartial and available to the public. Any knowledge that cannot be replicated or tested for falsifiability should not be considered as the truth.
-
-By creating knowledge that is impartial and available to the public, we enable ourselves to make fundamental technological advancements. These advancements give us the power to more effectively navigate and manipulate our environment, leading to vast improvements in quality of life. As we continue to create impartial knowledge and make technological advancements, we find ourselves capable of managing increasingly complex systems. Today, we are confronted with species-level existential risks, such as climate change and global pandemics. Science is the only process we have that offers equitable positive outcomes.
+Decentralized science allows for more diverse funding sources (from [DAOs](/dao), [quadratic donations](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531) to crowdfunding and more), easier access to data and methods, and by providing incentives for reproducibility.
 
 
 ## How DeSci improves science
 
 **List of key problems in science and how decentralized science can help to address these issues**
-
 
 
 * bureaucratic funding structures -> allow for more diverse funding sources (quadratic donations, DAOs, crowdfunding etc.) 
@@ -117,40 +101,6 @@ A comparison to traditional science
 ## Ethereum and DeSci
 
 A decentralized system of science will requires robust security, minimal monetary and small transaction cost, and a rich layer-2 ecosystem for application development. Ethereum provides everything needed for for building a decentralized science stack.
-
-
-# Why Web3 needs DeSci
-
-
-## Adoption
-
-Decentralized science has the potential to attract new participants and contributors to web3 and to help disseminate knowledge more effectively.
-
-The web3 community is still in its early stages, and there is a lot of work to be done in order to realize the full potential of decentralized science. However, the potential benefits are significant, and it is worth exploring how decentralized science can be used to improve the way we conduct research and share knowledge.
-
-**Participants in Web3**
-
-The tools DeSci produces are easy to understand and can be explained without using technical jargon. For example, research objects are scientific papers that contain more information than a simple PDF. Imagine being able to interact with a research paper instead of just reading it. Imagine being able to see the code used to run simulations and running it yourself with a simple click of a button. Imagine being able to see every change, evolution, and contributor to the research over its lifetime, just like with Git. 
-
-Publishing networks allow research to be published, reviewed, elevated, and replicated without input from a controlling authority or company. Imagine never having to pay to access a research object. Imagine researchers getting paid directly for their work instead of through an intermediary. Imagine a marketplace of people and entities that provide review, curation, and replication services, instead of an oligopoly of a few major conglomerates.
-
-**Contributors to Web3**
-
-The people and institutions who have been brought on board through DeSci's tooling have a lot of experience and knowledge in different areas. They've been working on similar problems to those facing Web3 for a long time. DeSci is making tools that will make their lives easier and let them keep working on the hardest and most rewarding problems facing society.  Having economists and mathematicians, to social psychologists and historians, with centuries of knowledge from hundreds of thousands of academics can help build the foundation of the macro-systems we're trying to create. In doing this, we're inviting them into the trustless world to keep doing what they're good at: solving the most challenging and fulfilling problems society has to offer.
-
-
-## Innovation
-
-Decentralized science will require new ways of funding, creating, reviewing, crediting, storing, and disseminating knowledge. These novel developments will undoubtedly affect other realms as well. From rich on-chain research objects to IP recorded as [NFTs](/nft) and everything in between, the development happening in DeSci will be pivotal to the digital world moving forward.
-
-## Legitimacy
-
-The crypto world is threatened by the possibility of extreme regulation. Web3 needs examples of blockchain use-cases that are easily understood and palatable, demonstrating a capability to increase efficiency, efficacy, reliability, and public trust of critical systems. DeSci is perhaps the best positioned to develop these examples..
-
-
-## Scalable knowledge creation
-
-Current research on Web3 is conducted in a way that is not efficient or effective in producing reliable information. The scientific method is a much better way to distill knowledge, and academia is trained in using this method. DeSci is creating the tool stack needed to apply the scientific method to research on Web3.
 
 
 # DeSci use cases
