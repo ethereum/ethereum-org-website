@@ -41,17 +41,22 @@ interface Tab {
 
 export interface IProps {
   tabs: Array<Tab>
+  onTabClick?: (tabIndex: number) => void
 }
 
 /**
  * Minimal & temp Tab component until we migrate over a UI lib
  */
-const Tabs: React.FC<IProps> = ({ tabs }) => {
+const Tabs: React.FC<IProps> = ({ tabs, onTabClick }) => {
   const [selectedIndex, setSelectedIndex] = useState(0)
   const selectedTab = tabs[selectedIndex]
 
   const handleTabClick = (index: number) => {
     setSelectedIndex(index)
+
+    if (onTabClick) {
+      onTabClick(index)
+    }
   }
 
   return (

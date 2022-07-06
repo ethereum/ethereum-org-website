@@ -39,6 +39,7 @@ import {
   translateMessageId,
 } from "../utils/translations"
 import { Lang } from "../utils/languages"
+import { trackCustomEvent } from "../utils/matomo"
 
 import useFetchStat, {
   defaultFormatter,
@@ -359,6 +360,35 @@ const WhatIsEthereumPage = ({
     },
   ]
 
+  const tabs = [
+    {
+      title: "What is a blockchain?",
+      content: (
+        <TabContent>
+          <b>A blockchain is a database of transactions</b> that is updated and
+          shared across many computers in a network. Every time a new set of
+          transactions is added, its called a “block” - hence the name
+          blockchain. Most blockchains are public, and you can only add data,
+          not remove. If someone wanted to alter any of the information or cheat
+          the system, they’d need to do so on the majority of computers on the
+          network. That is a lot! This makes established blockchains like
+          Ethereum highly secure.
+        </TabContent>
+      ),
+    },
+    {
+      title: "Why is it called cryptocurrency?",
+      content: (
+        <TabContent>
+          Blockchains use cryptographic techniques to ensure that your funds are
+          safe. Similar techniques have been used in the banking industries to
+          ensure the security of monetary transactions for years. So you could
+          say cryptocurencies have a bank level of security.
+        </TabContent>
+      ),
+    },
+  ]
+
   const tooltipContent = ({ apiUrl, apiProvider, ariaLabel }) => (
     <div>
       <Translation id="data-provided-by" />{" "}
@@ -470,37 +500,14 @@ const WhatIsEthereumPage = ({
           <TwoColumnContent>
             <Width60>
               <Tabs
-                tabs={[
-                  {
-                    title: "What is a blockchain?",
-                    content: (
-                      <TabContent>
-                        <b>A blockchain is a database of transactions</b> that
-                        is updated and shared across many computers in a
-                        network. Every time a new set of transactions is added,
-                        its called a “block” - hence the name blockchain. Most
-                        blockchains are public, and you can only add data, not
-                        remove. If someone wanted to alter any of the
-                        information or cheat the system, they’d need to do so on
-                        the majority of computers on the network. That is a lot!
-                        This makes established blockchains like Ethereum highly
-                        secure.
-                      </TabContent>
-                    ),
-                  },
-                  {
-                    title: "Why is it called cryptocurrency?",
-                    content: (
-                      <TabContent>
-                        Blockchains use cryptographic techniques to ensure that
-                        your funds are safe. Similar techniques have been used
-                        in the banking industries to ensure the security of
-                        monetary transactions for years. So you could say
-                        cryptocurencies have a bank level of security.
-                      </TabContent>
-                    ),
-                  },
-                ]}
+                onTabClick={(index) => {
+                  trackCustomEvent({
+                    eventCategory: `Blockchain/crypto tab`,
+                    eventAction: `Clicked`,
+                    eventName: `${tabs[index].title} tab`,
+                  })
+                }}
+                tabs={tabs}
               />
             </Width60>
             <Width40 />
