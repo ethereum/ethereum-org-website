@@ -146,10 +146,9 @@ The starting point must be a system that can be accessed by any decentralized id
 Flexible Web3 data solutions support the scenarios above in addition to providing the foundation for truly Open Science, where public goods can be created that have no access permissions and no fees. Web3 Public Data solutions such as IPFS, Arweave and Filecoin are optimized for decentralization. dClimate, for example, provides universal access to climate and weather data, including from weather stations and predictive climate models.
 
 
-# Get involved: **What can you do in DeSci?**
+# Learn more about what you can do in DeSci?
 
-
-## Learn more
+## Further reading
 * [DeSci Wiki by Jocelynn Pearl and Ultrarare](https://docs.google.com/document/d/1aQC6zn-eXflSmpts0XGE7CawbUEHwnL6o-OFXO52PTc/edit#)
 * [A guide to decentralized biotech by Jocelynn Pearl for a16z future](https://future.a16z.com/a-guide-to-decentralized-biotech/)
 * [The case for DeSci](https://gitcoin.co/blog/desci-the-case-for-decentralised-science/)
@@ -159,8 +158,10 @@ Flexible Web3 data solutions support the scenarios above in addition to providin
 * [Building Trustless Systems of Science by Jon Starr](https://medium.com/@jringo/building-systems-of-trustless-science-1cd2d072f673)
 * [The Emergence of Biotech DAOs](https://molecule.to/blog/the-emergence-of-biotech-daos)
 
+## Videos
+* [What's Decentralized Science? ](https://www.youtube.com/watch?v=-DeMklVWNdA)
 
-### Explore projects below to join the DeSci movement.
+### Get involved: explore projects below to join the DeSci movement.
 * [Atoms: smart contract peer-review)](https://www.atoms.org)
 * [dClimate API: query climate data collected by a decentralized community](https://api.dclimate.net/)
 * [DeSci Foundation: DeSci publishing tool builder](https://descifoundation.org/)
