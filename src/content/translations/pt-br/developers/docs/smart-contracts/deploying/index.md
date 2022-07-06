@@ -52,7 +52,7 @@ Uma vez implantado, o seu contrato terá um endereço Ethereum, como outras [con
 - [GitHub](https://github.com/nomiclabs/hardhat)
 - [Discord](https://discord.com/invite/TETZs2KK4k)
 
-**Truffle -\*\***_Um ambiente de desenvolvimento, teste de framework, compilação e outras ferramentas._\*\*
+**Truffle -** **_Um ambiente de desenvolvimento, teste de framework, compilação e outras ferramentas._**
 
 - [trufflesuite.com](https://www.trufflesuite.com/)
 - [Documentos em redes e implantação de aplicativos](https://www.trufflesuite.com/docs/truffle/advanced/networks-and-app-deployment)
