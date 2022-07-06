@@ -12,7 +12,7 @@ tags:
 skill: 中难度
 lang: zh
 sidebar: true
-published: 2020年12月31日
+published: 2020-12-31
 source: www.github.com
 sourceUrl: https://github.com/strykerin/DeFi-Token-Farm
 ---
