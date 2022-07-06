@@ -10,47 +10,47 @@ image: ../../../../assets/infrastructure_transparent.png
 alt: Un logo Eth affiché par hologramme.
 summaryPoint1: Un moyen de représenter toute chose unique en tant qu'actif Ethereum.
 summaryPoint2: Les NFT offrent plus de possibilités que jamais aux créateurs de contenus.
-summaryPoint3: Alimentés par les contrats intelligents sur la blockchain Ethereum.
+summaryPoint3: Alimentés par des contrats intelligents sur la blockchain Ethereum.
 ---
 
-Les NFT prennent actuellement d'assaut le monde de l'art numérique et des objets de collection. Les artistes numériques voient leur vie changer grâce à des ventes énormes à une nouvelle crypto-audience. Et les célébrités se joignent à elles car elles voient une nouvelle occasion de se connecter avec les fans. Mais l'art numérique n'est qu'une façon d'utiliser les NFT. Ils peuvent être utilisés pour représenter la propriété de n'importe quel actif unique, comme un acte pour un objet dans le domaine numérique ou physique.
+Les NFT révolutionnent actuellement le monde de l'art numérique et des objets de collection. La vie des artistes numériques est bouleversée avec les ventes énormes à un nouveau public crypto. Et les célébrités se joignent à elles car elles voient là une nouvelle occasion de se rapprocher de leurs fans. Mais l'art numérique n'est qu'une façon d'utiliser les NFT. Ils peuvent être utilisés pour attester de la propriété de n'importe quel actif unique, à l'instar d'un acte de propriété d'un objet dans la sphère numérique ou physique.
 
-Si Andy Warhol était né à la fin des années 90, il aurait probablement créé la Soupe de Campbell's en tant que NFT. Ce n'est qu'une question de temps avant que Kanye ne lance un run de Yeezys sur Ethereum. Posséder une voiture pourrait, dans le futur, être possible grâce aux NFT.
+Si Andy Warhol était né à la fin des années 90, il aurait probablement créé sa Campbell's Soup sous forme de NFT. Ce n'est qu'une question de temps avant que Kanye ne lance une paire de baskets Yeezys sur Ethereum. Les NFT pourraient, demain, vous permettre de prouver que vous êtes bien le propriétaire de votre voiture.
 
 ## Qu'est-ce qu'un NFT ? {#what-are-nfts}
 
-Les NFT sont des jetons (tokens) que nous pouvons utiliser pour représenter la propriété d’objets uniques. Ils nous permettent de transformer en jetons des choses comme l'art, les collections, ou même l'immobilier. Ils ne peuvent avoir qu'un seul propriétaire officiel à la fois et ils sont sécurisés par la blockchain Ethereum – personne ne peut modifier le dossier de propriété ou créer une copie d'un NFT.
+Les NFT sont des jetons (tokens) que nous pouvons utiliser pour attester de la propriété d’objets uniques. Ils nous permettent de transformer en jetons des choses comme des objets d'art, de collection, ou même des biens fonciers. Ils ne peuvent avoir qu'un seul propriétaire officiel à la fois et ils sont sécurisés par la blockchain Ethereum – personne ne peut modifier le dossier de propriété ou créer une copie d'un NFT.
 
-NFT signifie jeton non fongible. Non fongible est un terme économique qui décrit des choses comme vos meubles, un dossier de musique ou votre ordinateur. Ces choses ne sont pas échangeables contre d'autres éléments parce-qu'ils ont des propriétés uniques.
+NFT signifie jeton non fongible. Non fongible est un terme économique qui décrit des choses comme vos meubles, une partition de musique ou votre ordinateur. Ces éléments ne sont pas interchangeables avec d'autres parce qu'ils ont des caractéristiques uniques.
 
-Les objets fongibles, par contre, peuvent être échangés car leur valeur les définit plutôt que leurs propriétés uniques. Par exemple, les ETH ou les dollars sont fongibles, car 1 ETH / 1 USD est échangeable contre 1 autre ETH / 1 USD.
+Les objets fongibles, par contre, peuvent être échangés car leur valeur les définit plus que leurs caractéristiques uniques. Par exemple, les ETH ou les dollars sont fongibles, car 1 ETH / $1 USD est échangeable contre 1 autre ETH / $1 USD.
 
 <YouTube id="Xdkkux6OxfM" />
 
 ## L'internet des ressources {#internet-of-assets}
 
-Les NFT et Ethereum résolvent certains des problèmes actuels sur internet. Comme tout devient de plus en plus numérique, il est nécessaire de reproduire les propriétés des objets physiques comme la rareté, l'unicité et la preuve de propriété. Sans compter que les articles numériques ne fonctionnent souvent que dans le contexte de leur produit. Par exemple, vous ne pouvez pas revendre un mp3 iTunes que vous avez acheté, ni échanger les points de fidélité d'une entreprise contre le crédit d'une autre plateforme même s'il y a un marché pour elle.
+Les NFT et Ethereum offrent des solutions à certains des problèmes actuels sur internet. Comme tout se digitalise de plus en plus, il est nécessaire de reproduire les propriétés des objets physiques comme la rareté, l'unicité et la preuve de propriété. Sans compter que les éléments numériques ne fonctionnent souvent que dans le contexte du produit associé. Par exemple, vous ne pouvez pas revendre un mp3 iTunes que vous avez acheté, ni échanger les points de fidélité d'une entreprise contre le crédit d'une autre plateforme même s'il existe un marché pour ces points.
 
-Voici à quoi ressemble un internet de NFT par rapport à l'internet que la plupart d'entre nous utilisent aujourd'hui...
+Voici à quoi ressemble un internet de NFT par rapport à l'internet que la plupart d'entre nous utilisons aujourd'hui...
 
 ### Une comparaison {#nft-comparison}
 
-| Un internet NFT                                                                                                                                                                                                                                | L'internet aujourd'hui                                                                                                                                                                                                               |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Les NFT sont uniques sur le plan numérique, il n'y aura jamais deux même NFT.                                                                                                                                                                  | Une copie d'un fichier, comme un .mp3 ou .jpg, est identique à l'original.                                                                                                                                                           |
-| Chaque NFT doit avoir un propriétaire, permettant une recherche facile pour n'importe qui.                                                                                                                                                     | L'historique de propriété des articles numériques sont stockés sur des serveurs contrôlés par des institutions – vous devez les croire sur parole.                                                                                   |
-| Les NFT sont compatibles avec tout ce qui est basé sur Ethereum. Un ticket NFT pour un événement peut être négocié sur tous les marchés Ethereum, pour un NFT entièrement différent. Vous pourriez échanger une œuvre d'art contre un billet ! | Les entreprises avec des articles numériques doivent fabriquer leur propre infrastructure. Par exemple, une application qui émet des billets numériques pour des événements devrait avoir à construire son propre système d'échange. |
-| Les créateurs de contenu peuvent vendre leur travail n'importe où et accéder à un marché mondial.                                                                                                                                              | Les créateurs dépendent de l'infrastructure et de la distribution des plates-formes qu'ils utilisent. Celles-ci sont souvent soumises à des conditions d'utilisation et à des restrictions géographiques.                            |
-| Les créateurs peuvent conserver les droits de propriété sur leur propre travail et réclamer directement des redevances de revente.                                                                                                             | Les platesformes, telles que les services de diffusion de musique, conservent la majorité des bénéfices tirés des ventes.                                                                                                            |
-| Les objets peuvent être utilisés de façon surprenante. Par exemple, vous pouvez utiliser les œuvres numériques comme garanties dans le cadre d'un prêt décentralisé.                                                                           |                                                                                                                                                                                                                                      |
+| Un internet NFT                                                                                                                                                                                                                                 | Internet aujourd'hui                                                                                                                                                                                                               |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Les NFT sont uniques sur le plan numérique ; il n'y aura jamais deux NFT identiques.                                                                                                                                                            | Une copie d'un fichier, comme un .mp3 ou .jpg, est identique à l'original.                                                                                                                                                         |
+| Chaque NFT doit avoir un propriétaire déclaré publiquement et vérifiable facilement par quiconque.                                                                                                                                              | L'historique de propriété des articles numériques sont stockés sur des serveurs contrôlés par des institutions – vous devez les croire sur parole.                                                                                 |
+| Les NFT sont compatibles avec tout ce qui est basé sur Ethereum. Un ticket NFT pour un événement peut être échangé sur tous les marchés Ethereum contre un NFT entièrement différent. Vous pourriez échanger une œuvre d'art contre un billet ! | Les entreprises qui proposent des articles numériques doivent bâtir leur propre infrastructure. Par exemple, une application qui émet des billets numériques pour des événements devrait disposer de son propre système d'échange. |
+| Les créateurs de contenu peuvent vendre leur travail n'importe où et accéder à un marché mondial.                                                                                                                                               | Les créateurs dépendent de l'infrastructure et de la distribution des plates-formes qu'ils utilisent. Celles-ci sont souvent soumises à des conditions d'utilisation et à des restrictions géographiques.                          |
+| Les créateurs peuvent conserver les droits de propriété sur leur propre travail et réclamer directement des redevances de revente.                                                                                                              | Les plateformes, telles que les services de diffusion de musique en streaming, conservent la majorité des bénéfices tirés des ventes.                                                                                              |
+| Les objets peuvent être utilisés de façon surprenante. Par exemple, vous pouvez utiliser les œuvres numériques comme garanties dans le cadre d'un prêt décentralisé.                                                                            |                                                                                                                                                                                                                                    |
 
 ### Exemples de NFT {#nft-examples}
 
-Le monde des NFT est relativement nouveau. En théorie, la portée des NFT est tout ce qui est unique et qui a besoin d'une preuve de propriété. Voici quelques exemples de NFT qui existent aujourd'hui, pour vous donner une idée :
+L'univers des NFT est relativement nouveau. En théorie, les NFT couvre tout ce qui est unique et qui a besoin d'une preuve de propriété. Voici quelques exemples de NFT qui existent aujourd'hui, pour vous donner une idée :
 
 - [Une œuvre d'art numérique unique](https://foundation.app/artworks)
 - [Une paire de basket unique en édition limitée](https://www.metagrail.co/auctions/91cf83fb-3477-4155-aae8-6dcb9b853397)
-- [Un objet d'un jeu](https://market.decentraland.org/)
+- [Un élément de jeu](https://market.decentraland.org/)
 - [Un texte](https://zora.co/0x517bab7661C315C63C6465EEd1b4248e6f7FE183/145)
 - [Un objet numérique de collection](https://www.larvalabs.com/cryptopunks/details/1)
 - [Un nom de domaine](https://app.ens.domains/name/ethereum.eth)
@@ -82,14 +82,14 @@ Les NFT sont différents des jetons ERC-20, tels que DAI ou LINK, chaque jeton i
   - Musique
   - Vidéos
 - Objets réels :
-  - Titres de propriété d'une voiture
+  - Carte grise de véhicule
   - Billets pour un événement du monde réel
   - Factures transformées en jetons
   - Documents légaux
   - Signatures
 - Et encore plus d'options pour être créatif !
 
-Un NFT ne peut avoir qu'un seul propriétaire à la fois. La propriété est gérée par l'unique identifiant et les métadonnées afin qu’aucun jeton ne puisse être dupliqué. Les NFT sont créé par des contrats intelligents qui attribuent la propriété et gèrent la transférabilité du NFT. Quand quelqu'un crée ou frappe un NFT, il exécute du code stocké dans des contrats intelligents conformes à des normes différentes telles que ERC-721. Cette information est ajoutée à la blockchain où le NFT est géré. Le processus de frappage, de haut niveau, subit les étapes suivantes :
+Un NFT ne peut avoir qu'un seul propriétaire à la fois. La propriété est gérée par l'unique identifiant et les métadonnées afin qu’aucun jeton ne puisse être dupliqué. Les NFT sont créés par des contrats intelligents qui attribuent la propriété et gèrent la transférabilité du NFT. Quand quelqu'un crée ou frappe un NFT, il exécute du code stocké dans des contrats intelligents conformes à des normes différentes telles que ERC-721. Cette information est ajoutée à la blockchain où le NFT est géré. Le processus de frappage, de haut niveau, subit les étapes suivantes :
 
 - Création un nouveau bloc
 - Validation de l'information
@@ -100,7 +100,7 @@ Les NFT ont quelques propriétés spéciales:
 - Chaque jeton frappé a un identifiant unique qui est directement lié à une adresse Ethereum.
 - Ils ne sont pas directement interchangeables avec d'autres jetons 1:1. Par exemple, 1 ETH est exactement identique à un autre ETH. Ce n'est pas le cas avec les NFT.
 - Chaque jeton a un propriétaire et cette information est facilement vérifiable.
-- Ils vivent sur Ethereum et peuvent être achetés et vendus sur n'importe quel marché Ethereum NFT .
+- Ils vivent sur Ethereum et peuvent être achetés et vendus sur n'importe quel marché Ethereum NFT.
 
 En d'autres termes, si vous _possédez_ un NFT :
 
@@ -349,7 +349,7 @@ _Il est aussi important de rappeler qu'Ethereum fait plus que simplement des tra
 
 #### Calendrier {#timelines}
 
-Le processus a déjà commencé. La [chaîne phare](/upgrades/beacon-chain/), la première mise à jour, effectuée en décembre 2020. Elle constitue la base du système de mise en jeu (staking) en permettant aux validateurs (stakers) de participer au réseau. La prochaine étape en matière d'efficience énergétique consiste à fusionner la blockchain actuelle, qui est sécurisée par les mineurs, avec la chaîne phare, où le minage n'est pas nécessaire. Il n'est pas possible d'établir un calendrier précis à ce stade, mais on estime que cela se produira dans le courant de l'année 2022. Ce processus est connu sous le nom de fusion (anciennement appelé « docking »). [En savoir plus sur la fusion](/upgrades/merge/).
+Le processus a déjà commencé. La [chaîne phare](/upgrades/beacon-chain/), la première mise à jour, effectuée en décembre 2020. Elle constitue la base du système de mise en jeu (staking) en permettant aux validateurs (stakers) de participer au réseau. La prochaine étape en matière d'efficience énergétique consiste à fusionner la blockchain actuelle, qui est sécurisée par les mineurs, avec la chaîne phare, où le minage n'est pas nécessaire. Il n'est pas possible d'établir un calendrier précis à ce stade, mais on estime que cela se produira dans le courant de l'année 2022. Ce processus est connu sous le nom de fusion (anciennement appelé "docking"). [En savoir plus sur la fusion.](/upgrades/merge/).
 
 <ButtonLink to="/upgrades/">
   Plus d'infos sur les mises à niveau d'Ethereum
@@ -406,7 +406,7 @@ On estime que les mises à niveau d'évolutivité vont permettre au réseau de t
 
 [Vitalik Buterin sur le potentiel de transactions par seconde avec la fragmentation](https://twitter.com/VitalikButerin/status/1312905884549300224)
 
-Au strict minimum, la fragmentation va permettre 64 fois plus de transactions à la seconde qu'à l'heure actuelle, avec environ 15 transactions à la seconde. C'est la quantité de chaînes de fragments (données et capacité supplémentaires) qui est introduite. [En savoir plus sur les chaînes de fragments](/upgrades/shard-chains/)
+Au strict minimum, la fragmentation va permettre 64 fois plus de transactions à la seconde qu'à l'heure actuelle, avec environ 15 transactions à la seconde. C'est la quantité de chaînes de fragments (données et capacité supplémentaires) qui est introduite. [En savoir plus sur les chaînes de fragments](/upgrades/sharding/)
 
 Cela signifie que nous pouvons estimer le temps qu'il faudra pour traiter 100 000 transactions et le comparer à l'exemple Visa ci-dessus.
 
@@ -430,5 +430,5 @@ En d'autres termes, si Visa a traité 140 839 000 000 transactions à un coût d
 Ethereum en une seule année devrait consommer 5 256 000 kWh. Avec un potentiel de 788 940 000 000 à 3 153 600 000 000 transactions traitées à ce moment-là.
 
 <InfoBanner emoji=":evergreen_tree:">
-  Si vous pensez que ces statistiques sont incorrectes ou peuvent être rendues plus précises, veuillez soulever un problème ou RP. Ce sont des estimations de l'équipe d'ethereum.org réalisées à l'aide d'informations accessibles au public et de la conception prévue d'Ethereum. Cela ne représente pas une promesse officielle de la Fondation Ethereum. 
+  Si vous pensez que ces statistiques sont incorrectes ou peuvent être rendues plus précises, veuillez soulever un problème ou RP. Ce sont des estimations de l'équipe d'ethereum.org réalisées à l'aide d'informations accessibles au public et de la conception prévue d'Ethereum. Cela ne représente pas une promesse officielle de la Fondation Ethereum.
 </InfoBanner>

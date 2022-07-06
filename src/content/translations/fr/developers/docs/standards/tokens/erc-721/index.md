@@ -17,11 +17,11 @@ L'ERC-721 introduit une norme pour les NFT. En d'autres termes, ce type de jeton
 
 Oui ! Tous les NFT ont une variable `uint256` appelée `tokenId` ainsi, pour tout contrat ERC-721, la paire `contract address, uint256 tokenId` doit être globalement unique. Ceci étant dit, une dApp peut intégrer un « convertisseur » qui utilise le `tokenId` comme entrée et affiche une image de quelque chose de cool, comme des zombies, des armes, des compétences ou d'incroyables chatons !
 
-## Prérequis {#prerequisites}
+## Pré-requis {#prerequisites}
 
 - [Comptes](/developers/docs/accounts/)
-- [Contrats intelligents](/developers/docs/smart-contracts/)
-- [Normes de jetons](/developers/docs/standards/tokens/)
+- [Les contrats intelligents ou «&nbsp;_smart contracts_&nbsp;»](/developers/docs/smart-contracts/)
+- [Normes des jetons](/developers/docs/standards/tokens/)
 
 ## Présentation {#body}
 
@@ -47,7 +47,7 @@ De [EIP-721](https://eips.ethereum.org/EIPS/eip-721) :
     function isApprovedForAll(address _owner, address _operator) external view returns (bool);
 ```
 
-#### Événements {#events}
+#### Évènements {#events}
 
 ```solidity
     event Transfer(address indexed _from, address indexed _to, uint256 indexed _tokenId);

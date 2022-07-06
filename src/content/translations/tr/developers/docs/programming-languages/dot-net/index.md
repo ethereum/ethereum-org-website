@@ -1,6 +1,6 @@
 ---
 title: .NET Geliştiricileri için Ethereum
-description: .NET tabanlı projeler ve araçlarla nasıl Ethereum için geliştireceğinizi öğrenin
+description: Ethereum için .NET Temelli projeler ve araçlarla nasıl geliştireceğinizi öğrenin
 lang: tr
 sidebar: true
 incomplete: true
@@ -8,7 +8,7 @@ incomplete: true
 
 <div class="featured">.NET tabanlı projeler ve araçlarla nasıl Ethereum için geliştireceğinizi öğrenin</div>
 
-Ethereum'u, kripto para birimi ve blok zinciri teknolojisinin avantajlarından faydalanan merkeziyetsiz uygulamalar (veya "dapp'ler") oluşturmak için kullanın. Bu dapp'ler güvenilir olabilir, yani Ethereum'a dağıtıldıktan sonra her zaman programlandığı gibi çalışırlar. Yeni tür finansal uygulamalar oluşturmak için dijital varlıkları kontrol edebilirler. Merkeziyetsiz olabilirler, yani hiç bir kurum veya kişi onları kontrol edemez ve sansürlenmeleri neredeyse imkansızdır.
+Kripto Para ve Blok Zincirinin avantajlarını kullanarak Merkezsiz uygulamalar (veya "dApps") oluşturmak için Ethereum'u kullanın. Bu dapp'ler güvenilir olabilir, yani Ethereum'a dağıtıldıktan sonra her zaman programlandığı gibi çalışırlar. Yeni tür finansal uygulamalar oluşturmak için dijital varlıkları kontrol edebilirler. Merkezsiz olabilirler, yani hiç bir kurum veya kişi onları kontrol edemez ve sansürlenmeleri neredeyse imkansızdır.
 
 Ethereum'un üzerinde merkeziyetsiz uygulamalar oluşturun ve Microsoft teknoloji yığınından araçları ve dilleri kullanarak akıllı sözleşmelerle etkileşim kurun: VSCode ve Visual Studio gibi araçlarda .NET Framework/.NET Core/.NET Standard üzerinde C#, # Visual Basic .NET ve F# desteklenir. Microsoft Azure'ı kullanarak Azure üzerinde bir Ethereum Blok zincirini dakikalar içinde yayınlayın. .NET aşkını Ethereum'a taşıyın!
 
@@ -18,7 +18,7 @@ Ethereum'un üzerinde merkeziyetsiz uygulamalar oluşturun ve Microsoft teknoloj
 
 Başlamadan önce temel bilgilere mi ihtiyacınız var? [ethereum.org/learn](/learn/) veya [ethereum.org/developers](/developers/) adreslerine göz atın.
 
-- [Blok Zinciri Açıklaması](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
+- [Blockchain Açıklaması](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
 - [Akıllı Sözleşmeleri Anlamak](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
 - [İlk Akıllı Sözleşmenizi Yazın](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
 - [Solidity'i Nasıl Derleyeceğinizi ve Dağıtacağınızı Öğrenin](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
@@ -44,7 +44,7 @@ Başlamadan önce temel bilgilere mi ihtiyacınız var? [ethereum.org/learn](/le
   - Bir hesaba ether transfer aktarma [C#](http://playground.nethereum.com/csharp/id/1003) [VB.NET](http://playground.nethereum.com/vb/id/2003)
   - ... Ve daha fazlası!
 
-## Orta Seviye Makaleler {#intermediate-articles}
+## Orta seviye makaleler {#intermediate-articles}
 
 - [Nethereum Çalışma Kitabı/Örnek Listesi](http://docs.nethereum.com/en/latest/Nethereum.Workbooks/docs/)
 - [Kendi Geliştirici Test Zincirlerinizi Yayınlayın](https://github.com/Nethereum/Testchains)
@@ -57,7 +57,7 @@ Başlamadan önce temel bilgilere mi ihtiyacınız var? [ethereum.org/learn](/le
 - [Kaleido ve Nethereum](https://kaleido.io/kaleido-and-nethereum/)
 - [Quorum ve Nethereum](https://github.com/Nethereum/Nethereum/blob/master/src/Nethereum.Quorum/README.md)
 
-## İleri Düzey Kullanım Şekilleri {#advanced-use-patterns}
+## İleri düzey kullanım Şşkilleri {#advanced-use-patterns}
 
 - [Azure Anahtar Kasası ve Nethereum](https://github.com/Azure-Samples/bc-community-samples/tree/master/akv-nethereum)
 - [Nethereum.DappHybrid](https://github.com/Nethereum/Nethereum.DappHybrid)
@@ -81,7 +81,7 @@ Nethereum'da çoğu zaman [Gitter](https://gitter.im/Nethereum/Nethereum)'da zam
 
 Nethermind'da [Gitter](https://gitter.im/nethermindeth/nethermind) aracılığıyla iletişime geçelim. PR' veya konular için şuraya bakın: [Nethermind Github deposu](https://github.com/NethermindEth/nethermind).
 
-## Diğer Toplu Listeler {#other-aggregated-lists}
+## Diğer toplu listeler {#other-aggregated-lists}
 
 [Resmi Nethereum Sitesi](https://nethereum.com/)  
 [Resmi Nethermind Sitesi](https://nethermind.io/)

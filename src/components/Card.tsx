@@ -1,4 +1,4 @@
-import React from "react"
+import React, { ReactNode } from "react"
 import styled from "styled-components"
 import Emoji from "./Emoji"
 
@@ -19,8 +19,8 @@ const TopContent = styled.div``
 
 export interface IProps {
   emoji?: string
-  title: string
-  description: string
+  title?: ReactNode
+  description?: ReactNode
   className?: string
 }
 
@@ -34,8 +34,8 @@ const Card: React.FC<IProps> = ({
   <StyledCard className={className}>
     <TopContent>
       {emoji && <Emoji size={3} text={emoji} mb="1rem" />}
-      <h3>{title}</h3>
-      <Description>{description}</Description>
+      {title && <h3>{title}</h3>}
+      {description && <Description>{description}</Description>}
     </TopContent>
     {children}
   </StyledCard>

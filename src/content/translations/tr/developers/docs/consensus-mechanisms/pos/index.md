@@ -23,7 +23,7 @@ Hisse ispatı, bir dizi iyileştirme ile iş ispatının (PoW) yerini alacak:
 - daha iyi enerji verimliliği - blok madenciliği için yüksek enerji kullanmanıza gerek yok
 - daha düşük giriş bedeli ve donanım gereksinimleri - yeni bloklar oluşturma kabiliyeti için elit donanıma ihtiyacınız yok
 - merkezileştirmeye karşı daha güçlü bağışıklık - hisse ispatı ağdaki düğüm sayısını artıracaktır
-- [parça zincirleri](/upgrades/shard-chains/) için daha güçlü destek - Ethereum ağını ölçeklendirme için önemli bir yükseltme
+- [parça zincirleri](/upgrades/sharding/) için daha güçlü destek - Ethereum ağını ölçeklendirme için önemli bir yükseltme
 
 ## Hisse ispatı, stake etme ve doğrulayıcılar {#pos-staking-validators}
 
@@ -35,9 +35,9 @@ Hisse ispatı, yeterli miktarda stake edildiğinde doğrulayıcıları etkinleş
 
 Kötü niyetli blokları tasdiklerseniz, stake ettiğiniz miktarı kaybedersiniz.
 
-### İşaret zinciri {#the-beacon-chain}
+### İşaret (Beacon) zinciri {#the-beacon-chain}
 
-Ethereum, iş ispatını hisse ispatı ile değiştirdiğinde, [parça zincirlerinin (shard chain)](/upgrades/shard-chains/) karmaşıklığı artacaktır. Bunlar, işlemleri gerçekleştirmek ve yeni bloklar oluşturmak için doğrulayıcılara ihtiyaç duyacak ayrı blok zincirleridir. 64 parça zincirinin bulunması ve hepsinin ağın durumu hakkında ortak bir anlayışa sahip olması planlanır. Sonuç olarak, ekstra koordinasyon gereklidir ve bu koordinasyon [işaret zinciri](/upgrades/beacon-chain/) tarafından sağlanacaktır.
+Ethereum, iş ispatını hisse ispatı ile değiştirdiğinde, [parça zincirlerinin (shard chain)](/upgrades/sharding/) karmaşıklığı artacaktır. Bunlar, işlemleri gerçekleştirmek ve yeni bloklar oluşturmak için doğrulayıcılara ihtiyaç duyacak ayrı blok zincirleridir. 64 parça zincirinin bulunması ve hepsinin ağın durumu hakkında ortak bir anlayışa sahip olması planlanır. Sonuç olarak, ekstra koordinasyon gereklidir ve bu koordinasyon [işaret zinciri](/upgrades/beacon-chain/) tarafından sağlanacaktır.
 
 İşaret zinciri, parçalardan durum bilgilerini alır ve ağın senkronize kalabilmesi için diğer parçalar için kullanılabilir hâle getirir. Aynı zamanda işaret zinciri, stake yatırımlarını kaydetmekten ödüllerini ve cezalarını vermeye kadar doğrulayıcıları yönetecektir.
 
@@ -83,7 +83,7 @@ Hisse ispatında hâlâ bir [%51 saldırısı](https://www.investopedia.com/term
 | Stake etme daha merkeziyetsizdir. Katılımın artmasına izin verir ve daha fazla düğüm, madencilikte olduğu gibi artan getiri yüzdesi anlamına gelmez.                                                                                                       |                                                                                         |
 | Stake etme, güvenli parçalamayı mümkün kılar. Parça zincirleri, Ethereum'un aynı anda birden fazla blok oluşturmasını sağlayarak işlem hacmini artırır. Bir iş ispatı sisteminde ağı parçalamak, ağın bir kısmından ödün vermek için gereken gücü düşürür. |                                                                                         |
 
-## Daha fazla bilgi {#further-reading}
+## Daha fazla okuma {#further-reading}
 
 - [Hisse ispatı SSS](https://vitalik.ca/general/2017/12/31/pos_faq.html) _Vitalik Buterin_
 - [Hisse İspatı Nedir?](https://consensys.net/blog/blockchain-explained/what-is-proof-of-stake/) _ ConsenSys_
@@ -93,6 +93,6 @@ Hisse ispatında hâlâ bir [%51 saldırısı](https://www.investopedia.com/term
 - [Hisse İspatı: Zayıf Öznelliği Sevmeyi Nasıl Öğrendim](https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity/) _Vitalik Buterin_
 - [Bir Hisse İspatı Tasarım Felsefesi](https://medium.com/@VitalikButerin/a-proof-of-stake-design-philosophy-506585978d51) _Vitalik Buterin_
 
-## İlgili konular {#related-topics}
+## İlgili Konular {#related-topics}
 
 - [İş ispatı](/developers/docs/consensus-mechanisms/pow/)

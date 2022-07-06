@@ -69,6 +69,8 @@ The execution layer is concerned with executing transactions, running the [Ether
 
 - [Database optimizations](https://github.com/ledgerwatch/erigon/blob/devel/docs/programmers_guide/db_faq.md)
 - [State expiry](https://notes.ethereum.org/@vbuterin/state_expiry_eip)
+- [Paths to state expiry](https://hackmd.io/@vbuterin/state_expiry_paths)
+- [Verkel and state expiry proposal](https://notes.ethereum.org/@vbuterin/verkle_and_state_expiry_proposal)
 - [History management](https://eips.ethereum.org/EIPS/eip-4444)
 - [Verkle Trees](https://vitalik.ca/general/2021/06/18/verkle.html)
 - [Data availability sampling](https://github.com/ethereum/research/wiki/A-note-on-data-availability-and-erasure-coding)
@@ -136,7 +138,7 @@ Sharding Ethereum's blockchain has long been part of the development roadmap. Ho
 
 #### Background reading {#background-reading-4}
 
-- [Introduction to Ethereum sharding](/upgrades/shard-chains/)
+- [Introduction to Ethereum sharding](/upgrades/sharding/)
 - [Proto-Danksharding notes](https://notes.ethereum.org/@vbuterin/proto_danksharding_faq)
 - [Bankless Danksharding video](https://www.youtube.com/watch?v=N5p0TB77flM)
 - [Ethereum Sharding Research Compendium](https://notes.ethereum.org/@serenity/H1PGqDhpm?type=view)

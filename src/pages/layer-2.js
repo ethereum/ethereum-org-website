@@ -679,6 +679,9 @@ const Layer2Page = ({ data }) => {
         <p>
           <Translation id="layer-2-use-layer-2-1" />
         </p>
+        <p>
+          <Translation id="layer-2-contract-accounts" />
+        </p>
         <h3>
           <Translation id="layer-2-use-layer-2-generalized-title" />
         </h3>
@@ -771,6 +774,7 @@ const Layer2Page = ({ data }) => {
         <Layer2Onboard
           layer2DataCombined={layer2DataCombined}
           ethIcon={getImage(data.ethHome)}
+          ethIconAlt={translateMessageId("ethereum-logo", intl)}
         />
       </PaddedContent>
 
@@ -883,7 +887,7 @@ const Layer2Page = ({ data }) => {
             <i>- Finematics</i>
           </li>
           <li>
-            <Link to="/upgrades/shard-chains/">
+            <Link to="/upgrades/sharding/">
               <Translation id="scaling-layer-1-with-shard-chains" />
             </Link>
           </li>

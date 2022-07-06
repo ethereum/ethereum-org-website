@@ -33,7 +33,7 @@ NFT'ler ve Ethereum, bugün internette var olan bazı sorunları çözüyor. Her
 
 Bugün çoğumuzun kullandığı internete kıyasla NFT'lerin interneti şu şekilde görünüyor...
 
-### Karşılaştırma {#nft-comparison}
+### Bir karşılaştırma {#nft-comparison}
 
 | NFT interneti                                                                                                                                                                                                     | Günümüz interneti                                                                                                                                                                            |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -406,7 +406,7 @@ Eylül 2020 yıl sonunda 140.839.000.000 işlem gerçekleştirdiler – [Visa ma
 
 [Vitalik Buterin'in parçalama ile saniye başına işlem potansiyeli hakkında düşünceleri](https://twitter.com/VitalikButerin/status/1312905884549300224)
 
-Parçalama, bugün yaklaşık 15 işlem olan işlem miktarının en az 64 katını mümkün kılacaktır. Bu, kullanıma giren parça zincirlerinin (ekstra veri ve kapasite) miktarıdır. [Parça zincirleri hakkında daha fazla bilgi](/upgrades/shard-chains/)
+Parçalama, bugün yaklaşık 15 işlem olan işlem miktarının en az 64 katını mümkün kılacaktır. Bu, kullanıma giren parça zincirlerinin (ekstra veri ve kapasite) miktarıdır. [Parça zincirleri hakkında daha fazla bilgi](/upgrades/sharding/)
 
 Bu, yukarıdaki Visa örneğiyle karşılaştırabilmemiz için 100.000 işlemin ne kadar süreceğini tahmin edebileceğimiz anlamına gelir.
 
@@ -430,5 +430,5 @@ Başka bir deyişle, Visa 100.000 işlem başına 149 kWh maliyetle 140.839.000.
 Ethereum bir yılda 5.256.000 kWh civarı harcar. Bu süre içerisinde 788.940.000.000 - 3.153.600.000.000 işlem potansiyeli bulunur.
 
 <InfoBanner emoji=":evergreen_tree:">
-  Eğer bu istatistiklerin yanlış olduğunu veya daha isabetli olabileceğini düşünüyorsanız, lütfen bir PR veya konu açın. Bunlar, herkese açık bilgiler ve planlanan Ethereum tasarımı kullanılarak, ethereum.org ekibi tarafından yapılan tahminlerdir. Bu, Ethereum Vakfı'nın resmi bir vaadini temsil etmiyor. 
+  Eğer bu istatistiklerin yanlış olduğunu veya daha isabetli olabileceğini düşünüyorsanız, lütfen bir PR veya konu açın. Bunlar, herkese açık bilgiler ve planlanan Ethereum tasarımı kullanılarak, ethereum.org ekibi tarafından yapılan tahminlerdir. Bu, Ethereum Vakfı'nın resmi bir vaadini temsil etmiyor.
 </InfoBanner>

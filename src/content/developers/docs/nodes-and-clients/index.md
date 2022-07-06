@@ -4,9 +4,12 @@ description: An overview of Ethereum nodes and client software, plus how to set 
 lang: en
 sidebar: true
 sidebarDepth: 2
+preMergeBanner: true
 ---
 
-Ethereum is a distributed network of computers running software (known as nodes) that can verify blocks and transaction data. You need an application, known as a client, on your computer to "run" a node.
+Ethereum is a distributed network of computers (known as nodes) running software that can verify blocks and transaction data. The software application, known as a client, must be run on your computer to turn it into an Ethereum node.
+
+**Note: it is still possible to run an execution client on its own. However, this will no longer be possible after [The Merge](/upgrades/merge). After The Merge, both execution and consensus clients must be run together in order for a user to gain access to the Ethereum network. Some testnets (e.g. Kiln, Ropsten) have already been through their versions of The Merge, meaning execution clients alone are already insufficient for accessing those networks unless they are coupled to a consensus client that can keep track of the head of the chain.**
 
 ## Prerequisites {#prerequisites}
 
@@ -16,14 +19,14 @@ If you're new to the topic of nodes, we recommend first checking out our user-fr
 
 ## What are nodes and clients? {#what-are-nodes-and-clients}
 
-"Node" refers to a running piece of client software. A client is an implementation of Ethereum that verifies all transactions in each block, keeping the network secure and the data accurate.
+A "node" is a computer running Ethereum client software. A client is an implementation of Ethereum that verifies all transactions in each block, keeping the network secure and the data accurate. Up until The Merge, a single piece of software is required to run a full node (or two to run a mining node). After The Merge, two pieces of client software are required to run a full node (three to run a validator node), one to handle and gossip transactions (execution client), one to handle block gossip and fork choice (consensus client) and an optional validator client that handles block production and "voting" on blocks received from its peers.
 
 You can see a real-time view of the Ethereum network by looking at this [map of nodes](https://etherscan.io/nodetracker).
 
-Many [Ethereum clients](/developers/docs/nodes-and-clients/#execution-clients) exist, in a variety of programming languages such as Go, Rust, JavaScript, Typescript, Python, C# .NET, Nim and Java. What these implementations have in common is they all follow a formal specification (originally the [Ethereum Yellow Paper](https://ethereum.github.io/yellowpaper/paper.pdf)). This specification dictates how the Ethereum network and blockchain functions.
+Many [Ethereum execution clients](/developers/docs/nodes-and-clients/#execution-clients) and [consensus clients](/developers/docs/nodes-and-clients/#consensus-clients) exist, in a variety of programming languages such as Go, Rust, JavaScript, Typescript, Python, C# .NET, Nim and Java. What these implementations have in common is they all follow a formal specification. These specifications dictate how the Ethereum network and blockchain functions.
 
-![Execution client](./client-diagram.png)
-Simplified diagram of what Ethereum client features.
+![Coupled execution and consensus clients](./eth1eth2client.png)
+Simplified diagram of a coupled execution and consensus client.
 
 ## Node types {#node-types}
 
@@ -74,7 +77,7 @@ Running your own node enables you to use Ethereum in a truly private, self-suffi
 A diverse set of nodes is important for Ethereum’s health, security and operational resiliency.
 
 - They provide access to blockchain data for lightweight clients that depend on it. In high peaks of usage, there need to be enough full nodes to help light nodes sync. Light nodes don't store the whole blockchain, instead they verify data via the [state roots in block headers](/developers/docs/blocks/#block-anatomy). They can request more information from blocks if they need it.
-- Full nodes enforce the proof-of-work consensus rules so they can’t be tricked into accepting blocks that don't follow them. This provides extra security in the network because if all the nodes were light nodes, which don't do full verification, miners could attack the network and, for example, create blocks with higher rewards.
+- Full nodes enforce the proof-of-work consensus rules so they can’t be tricked into accepting blocks that don't follow them. This provides extra security in the network because if all the nodes were light nodes, which don't do full verification, block producers could attack the network and, for example, create blocks with higher rewards.
 
 If you run a full node, the whole Ethereum network benefits from it.
 
@@ -88,7 +91,7 @@ If you're more of a technical user, learn how to [spin up your own node](/develo
 
 ### Projects {#projects}
 
-[**Select a client and follow their instructions**](#clients)
+**Select a client and follow their instructions**
 
 **ethnode -** **_Run an Ethereum node (Geth or OpenEthereum) for local development._**
 
@@ -100,10 +103,11 @@ If you're more of a technical user, learn how to [spin up your own node](/develo
 
 ### Resources {#resources}
 
-- [Running Ethereum Full Nodes: A Complete Guide](https://medium.com/coinmonks/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _Nov 7, 2019 - Justin Leroux_
-- [Node Configuration Cheat Sheet](https://dev.to/5chdn/ethereum-node-configuration-modes-cheat-sheet-25l8) _Jan 5, 2019 - Afri Schoeden_
-- [How To Install & Run a Geth Node](https://www.quiknode.io/guides/infrastructure/how-to-install-and-run-a-geth-node) _Oct 4, 2020 - Sahil Sen_
-- [How To Install & Run a OpenEthereum (fka. Parity) Node](https://www.quiknode.io/guides/infrastructure/how-to-run-a-openethereum-ex-parity-client-node) _Sept 22, 2020 - Sahil Sen_
+- [Running Ethereum Full Nodes: A Complete Guide](https://www.coindesk.com/learn/ethereum-nodes-and-clients-a-complete-guide/)
+- [Running your own Ethereum node](/developers/docs/nodes-and-clients/run-a-node)
+- [Geth documentation](https://geth.ethereum.org/)
+- [How To Install & Run a Lighthouse Node](https://hackernoon.com/how-to-run-an-eth-20-beacon-node-using-the-lighthouse-macos-client-7t2u3wtv)
+- [Nimbus node quick-start guide](https://nimbus.guide/quick-start.html)
 
 ## Alternatives {#alternatives}
 

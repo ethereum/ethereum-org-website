@@ -12,7 +12,7 @@ incomplete: true
 
 ## 相关教程 {#related-tutorials}
 
-- [合约的可组合性：以太坊智能合约开发的基石](https://blog.decentlabs.io/contract-composability-the-building-blocks-of-ethereum-smart-contract-development/)
+- [合约的可组合性：以太坊智能合约开发的基石](https://www.decentlabs.io/blog/contract-composability-the-building-blocks-of-ethereum-smart-contract-development)
 - [使用“创建以太坊应用程序”启动去中心化应用程序前端开发](/developers/tutorials/kickstart-your-dapp-frontend-development-wth-create-eth-app/) _– 概述如何使用“创建以太坊应用程序”创建带有热门智能合约的应用程序。_
 
 ## 延伸阅读 {#further-reading}

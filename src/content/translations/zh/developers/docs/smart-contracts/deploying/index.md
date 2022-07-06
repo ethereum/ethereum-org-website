@@ -9,7 +9,7 @@ sidebar: true
 
 要部署一个智能合约，只需发送一个包含编译后的智能合约代码的以太坊交易，而不需要指定任何收件人。
 
-## 前置要求 {#prerequisites}
+## 先决条件 {#prerequisites}
 
 在部署智能合约之前，您需要理解[以太坊网络](/developers/docs/networks/), [交易](/developers/docs/transactions/)和[详解智能合约](/developers/docs/smart-contracts/anatomy/)。
 

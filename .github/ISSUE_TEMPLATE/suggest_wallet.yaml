@@ -6,7 +6,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Before suggesting a wallet, make sure you've read [our listing policy](https://www.ethereum.org/en/contributing/adding-products/). Only continue with the issue if the wallet meets the criteria listed there.
+        Before suggesting a wallet, make sure you've read [our listing policy](https://www.ethereum.org/en/contributing/adding-wallets/). Only continue with the issue if the wallet meets the criteria listed there.
   - type: markdown
     id: project_info
     attributes:
@@ -136,7 +136,7 @@ body:
   - type: input
     id: wallet_smart_contract_audit
     attributes:
-      label: Has the wallet's smart contract code been audited?
+      label: Has the wallet's smart contract code or security modules been audited?
       description: If yes, provide a link to any audits.
   - type: input
     id: wallet_security_team
@@ -149,10 +149,10 @@ body:
       label: Any other security testing that should be noted?
       description: Please note any other security precautions taken.
   - type: textarea
-    id: wallet_spam_protection
+    id: wallet_scam_protection
     attributes:
-      label: Spam protection?
-      description: Does the wallet employ any practices to warn users against potential spam (e.g. when interacting with suspicious accounts/contracts)?
+      label: Scam protection?
+      description: Does the wallet employ any practices to warn users against potential scams (e.g. when interacting with suspicious accounts/contracts)?
   - type: markdown
     id: features
     attributes:
@@ -209,6 +209,11 @@ body:
     attributes:
       label: Does the wallet support multi-chain networks?
       description: Please provide documentation on multi-chain networks this wallet supports.
+  - type: input
+    id: wallet_l2_support
+    attributes:
+      label: Does the wallet support Ethereum layer 2 networks?
+      description: Please provide documentation on Ethereum layer 2 networks this wallet supports.
   - type: input
     id: wallet_customize_gas_fees
     attributes:

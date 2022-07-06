@@ -17,7 +17,7 @@ summaryPoint4: S-ar putea să-l cunoști sub numele de „Faza 0” pe foile de 
 
 ## Ce face Lanțul Beacon? {#what-does-the-beacon-chain-do}
 
-Lanțul Beacon va conduce sau va coordona rețeaua extinsă de [fragmente](/upgrades/shard-chains/) și [stakeri](/staking/). Dar nu va fi ca [Rețeaua principală Ethereum](/glossary/#mainnet) de astăzi. Nu poate gestiona conturi sau contracte inteligente.
+Lanțul Beacon va conduce sau va coordona rețeaua extinsă de [fragmente](/upgrades/sharding/) și [stakeri](/staking/). Dar nu va fi ca [Rețeaua principală Ethereum](/glossary/#mainnet) de astăzi. Nu poate gestiona conturi sau contracte inteligente.
 
 Rolul rețelei Beacon se va schimba în timp, dar este o componentă fundamentală pentru [Ethereum-ul sigur, durabil și scalabil la care lucrăm](/upgrades/vision/).
 
@@ -33,7 +33,7 @@ Mizarea și transformarea în validator este mai ușoară decât [minatul](/deve
 Dacă dorești să devii validator și să ajuți la securizarea rețelei Beacon, <a href="/staking/">află mai multe despre mizare</a>.
 </InfoBanner>
 
-Aceasta este o altă schimbare importantă pentru următorul upgrade Eth2: [lanțurile de fragmente](/upgrades/shard-chains/).
+Aceasta este o altă schimbare importantă pentru următorul upgrade Eth2: [lanțurile de fragmente](/upgrades/sharding/).
 
 ### Configurarea lanțurilor de fragmente {#setting-up-for-shard-chains}
 
@@ -55,7 +55,7 @@ La început, Rețeaua Beacon va exista separat de Rețeaua principală Ethereum 
 
 Lanțurile de fragmente nu pot intra în siguranță în ecosistemul Ethereum decât cu un mecanism de consens bazat pe Dovada de Minare(proof-of-stake). Rețeaua Beacon va introduce mizarea, pregătind astfel terenul pentru ca actualizarea lanțului de fragmente să aibă loc.
 
-<ButtonLink to="/upgrades/shard-chains/">Lanțuri de fragmente</ButtonLink>
+<ButtonLink to="/upgrades/sharding/">Lanțuri de fragmente</ButtonLink>
 
 <Divider />
 

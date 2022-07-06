@@ -1,5 +1,5 @@
 ---
-title: Katkıda Bulunma
+title: Katkılar
 description: Ethereum.org'a katkıda bulunmanın farklı yolları hakkında bilgi edinin
 lang: tr
 sidebar: true

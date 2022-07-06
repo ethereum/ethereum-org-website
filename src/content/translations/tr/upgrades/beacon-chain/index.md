@@ -1,5 +1,5 @@
 ---
-title: İşaret (Beacon) Zinciri
+title: İşaret Zinciri
 description: Hisse ispatını Ethereum'a tanıtan yükseltme olan İşaret Zinciri hakkında bilgi edinin.
 lang: tr
 template: upgrade
@@ -17,7 +17,7 @@ summaryPoint4: Bunu teknik yol haritalarından "Aşama 0" olarak biliyor olabili
 
 ## İşaret (Beacon) Zinciri Ne Yapar? {#what-does-the-beacon-chain-do}
 
-İşaret Zinciri, [parçalardan](/upgrades/shard-chains/) ve [stake edenlerden](/staking/) oluşan genişletilmiş ağı yönetir veya koordine eder. Ancak günümüzün [Ethereum ana ağı](/glossary/#mainnet) gibi olmayacaktır. Hesapları veya akıllı sözleşmeleri ele alamaz.
+İşaret Zinciri, [parçalardan](/upgrades/sharding/) ve [stake edenlerden](/staking/) oluşan genişletilmiş ağı yönetir veya koordine eder. Ancak günümüzün [Ethereum ana ağı](/glossary/#mainnet) gibi olmayacaktır. Hesapları veya akıllı sözleşmeleri ele alamaz.
 
 İşaret Zincirinin rolü zamanla değişecek ancak [geliştirmeye çalıştığımız güvenli, sürdürülebilir ve ölçeklenebilir Ethereum](/upgrades/vision/) için temel bir bileşendir.
 
@@ -33,7 +33,7 @@ Paydaşlık ve doğrulayıcı oluşturmak [madencilik](/developers/docs/mining/)
 Bir doğrulayıcı olarak İşaret Zincirinin güvenliğine yardımcı olmak istiyorsanız <a href="/staking/">stake etme konusunda daha fazla bilgi alın</a>.
 </InfoBanner>
 
-Bu ayrıca başka bir yükseltme için de önemli bir değişikliktir: [parça zincirleri](/upgrades/shard-chains/).
+Bu ayrıca başka bir yükseltme için de önemli bir değişikliktir: [parça zincirleri](/upgrades/sharding/).
 
 ### Shard zincirleri kurulumu {#setting-up-for-shard-chains}
 
@@ -57,7 +57,7 @@ Ethereum yükseltmelerinin tamamı bir şekilde ilişkilidir. İşaret (Beacon) 
 
 Parça zincirleri, Ethereum ekosistemine yalnızca hisse ispatı mutabakat mekanizması ile güvenli bir şekilde girebilir. İşaret Zinciri, staking sistemini başlatarak gelecekte parça zinciri yükseltmesine olanak verir.
 
-<ButtonLink to="/upgrades/shard-chains/">
+<ButtonLink to="/upgrades/sharding/">
     Parça zincirleri
 </ButtonLink>
 

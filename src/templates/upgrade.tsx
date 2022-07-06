@@ -12,7 +12,6 @@ import Breadcrumbs from "../components/Breadcrumbs"
 import Card from "../components/Card"
 import Icon from "../components/Icon"
 import Contributors from "../components/Contributors"
-import DismissibleCard from "../components/DismissibleCard"
 import InfoBanner from "../components/InfoBanner"
 import UpgradeStatus from "../components/UpgradeStatus"
 import Link from "../components/Link"
@@ -30,6 +29,7 @@ import UpgradeTableOfContents from "../components/UpgradeTableOfContents"
 import Translation from "../components/Translation"
 import TranslationsInProgress from "../components/TranslationsInProgress"
 import SectionNav from "../components/SectionNav"
+import ExpandableCard from "../components/ExpandableCard"
 import {
   Divider,
   Paragraph,
@@ -38,9 +38,11 @@ import {
 } from "../components/SharedStyledComponents"
 import Emoji from "../components/Emoji"
 import YouTube from "../components/YouTube"
+import MergeInfographic from "../components/MergeInfographic"
+import FeedbackCard from "../components/FeedbackCard"
 
 import { getLocaleTimestamp } from "../utils/time"
-import { isLangRightToLeft } from "../utils/translations"
+import { isLangRightToLeft, translateMessageId } from "../utils/translations"
 import { getSummaryPoints } from "../utils/getSummaryPoints"
 import { Lang } from "../utils/languages"
 import { Context } from "../types"
@@ -176,6 +178,8 @@ const components = {
   ShardChainsList,
   MergeArticleList,
   YouTube,
+  ExpandableCard,
+  MergeInfographic,
 }
 
 const Title = styled.h1`
@@ -317,7 +321,7 @@ const dropdownLinks = {
     },
     {
       text: "page-upgrades-upgrades-shard-chains",
-      to: "/upgrades/shard-chains/",
+      to: "/upgrades/sharding/",
     },
   ],
 }
@@ -384,24 +388,13 @@ const UpgradePage = ({
               maxDepth={mdx.frontmatter.sidebarDepth}
             />
           )}
-          <DismissibleCard storageKey="dismissed-eth-upgrade-psa">
-            <Emoji text=":cheering_megaphone:" size={5} />
-            <h2>
-              <Translation id="eth-upgrade-what-happened" />
-            </h2>
-            <p>
-              <Translation id="eth-upgrade-what-happened-description" />{" "}
-              <Link to="https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/">
-                <Translation id="more-info" />.
-              </Link>
-            </p>
-          </DismissibleCard>
         </InfoColumn>
         <ContentContainer id="content">
           {/* <DesktopBreadcrumbs slug={mdx.fields.slug} startDepth={1} /> */}
           <MDXProvider components={components}>
             <MDXRenderer>{mdx.body}</MDXRenderer>
           </MDXProvider>
+          <FeedbackCard />
         </ContentContainer>
         <MobileButton>
           <MobileButtonDropdown list={dropdownLinks} />

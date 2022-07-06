@@ -1,5 +1,5 @@
 ---
-title: Compiler des contrat intelligents
+title: Compiler des contrats intelligents
 description: Explication de la raison d'une compilation et pourquoi elle est nécessaire pour les contrats intelligents
 lang: fr
 sidebar: true

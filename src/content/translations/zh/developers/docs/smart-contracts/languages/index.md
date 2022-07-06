@@ -16,7 +16,7 @@ sidebar: true
 
 如果您很好奇，喜欢帮助测试仍在大力发展的新语言，则可以尝试使用 Fe，这是一种新兴的智能合约语言，目前仍处于起步阶段。
 
-## 前置要求 {#prerequisites}
+## 先决条件 {#prerequisites}
 
 如果已经有编程语言（特别是关于 JavaScript 或 Python）知识，可以帮助您体验到智能合约语言的差异。 同时，我们建议您在深入理解语言差异之前，先理解作为概念的智能合约。 [智能合约简介](/developers/docs/smart-contracts/)。
 
