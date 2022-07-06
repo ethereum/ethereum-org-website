@@ -1,5 +1,5 @@
 ---
-title: 集成开发环境
+title: 集成开发环境 (IDE)
 description:
 lang: zh
 sidebar: true
@@ -59,7 +59,7 @@ sidebar: true
 
 ## 插件与扩展 {#plugins-extensions}
 
-- [solidity](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity) - 以太坊 Visual Studio Code 中的 Solidity 语言
+- [solidity](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity) - 以太坊中的 Visual Studio Code Solidity 语言
 - [Prettier Solidity](https://github.com/prettier-solidity/prettier-plugin-solidity) - 使用 prettier 的代码格式化工具
 
 ## 延伸阅读 {#further-reading}

@@ -14,7 +14,7 @@ incomplete: true
 
 **迈出第一步，将 Python 与以太坊集成**
 
-需要更基础的入门知识？ 请查看 [ethereum.org/learn](/learn/) 或者 [ethereum.org/developers](/developers/)。
+需要更基础的入门知识？ 请查看 [ethereum.org/learn](/learn/) 或 [ethereum.org/developers](/developers/)。
 
 - [区块链详解](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
 - [理解智能合约](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
@@ -49,25 +49,25 @@ incomplete: true
 ### 活跃： {#active}
 
 - [Web3.py](https://github.com/ethereum/web3.py) - _用于与以太坊交互的 Python 库_
-- [Ape ](https://github.com/ApeWorX/ape) - _适用于 Pythonistas、数据科学家和安全专业人员的智能合约开发工具_
-- [Brownie](https://github.com/eth-brownie/brownie) - _一个用于部署、测试和与以太坊智能合约交互的 Python 框架_
-- [Vyper](https://github.com/ethereum/vyper/) - _一个具有 Python 风格的以太坊智能合约编程语言_
+- [Ape ](https://github.com/ApeWorX/ape) - _面向 Pythonista、数据科学家和安全专业人员的智能合约开发工具_
+- [Brownie](https://github.com/eth-brownie/brownie) - _一个用于部署、测试以太坊智能合约并与之交互的 Python 框架_
+- [Vyper](https://github.com/ethereum/vyper/) - _一种具有 Python 风格的以太坊虚拟机智能合约编程语言_
 - [py-evm](https://github.com/ethereum/py-evm) - _以太坊虚拟机的实现_
-- [eth-tester](https://github.com/ethereum/eth-tester) - _用于测试基于以太坊应用程序的工具_
-- [eth-utils](https://github.com/ethereum/eth-utils/) - _使用以太坊相关代码库的实用函数工具_
-- [py-solc-x](https://pypi.org/project/py-solc-x/) - _Python 封装的 solidity 0.5.x 编译器_
-- [py-wasm](https://github.com/ethereum/py-wasm) - _Web 汇编解释器的 Python 实现_
-- [pydevp2p](https://github.com/ethereum/pydevp2p) - _P2P 协议栈的 Python 实现_
-- [pymaker](https://github.com/makerdao/pymaker) - _Maker 合约的 Python API _
-- [siwe](https://github.com/spruceid/siwe-py) - _注册以太坊 (siwe) 以应用 Python_
-- [用于测试的智能合约](https://github.com/tradingstrategy-ai/smart-contracts-for-testing) - _ERC-20、Uniswap 和其他常见合约随附的一个 Python 包，用于使用 Web3.py 进行测试_
+- [eth-tester](https://github.com/ethereum/eth-tester) - _用于测试以太坊应用程序的工具_
+- [eth-utils](https://github.com/ethereum/eth-utils/) - _使用以太坊相关代码库的实用程序函数_
+- [py-solc-x](https://pypi.org/project/py-solc-x/) - _适用于 solc Solidity 编译器（支持 0.5.x）的 Python 装饰器_
+- [py-wasm](https://github.com/ethereum/py-wasm) - _使用 Python 实现的 Web 汇编解释器_
+- [pydevp2p](https://github.com/ethereum/pydevp2p) - _使用 Python 实现 P2P 协议栈_
+- [pymaker](https://github.com/makerdao/pymaker) - _面向 Maker 合约的 Python 应用程序接口_
+- [siwe](https://github.com/spruceid/siwe-py) - _面向 Python 的以太坊登录服务 (siwe)_
+- [用于测试的智能合约](https://github.com/tradingstrategy-ai/smart-contracts-for-testing) - _ERC-20、Uniswap 和其他常见合约随附的一个 Python 包，供使用 Web3.py 编写测试_
 
 ### 已归档/不再维护： {#archived--no-longer-maintained}
 
 - [Trinity](https://github.com/ethereum/trinity) - _以太坊的 Python 客户端_
 - [Mamba](https://mamba.black) - _一个用 Vyper 语言编写、编译和部署智能合约的框架_
 
-想要获取更多的资源？ 请查看 [ethereum.org/developers](/developers/)。
+正在寻找更多资源？ 请查看 [ethereum.org/developers](/developers/)。
 
 ## 使用 Python 工具的项目 {#projects-using-python-tooling}
 

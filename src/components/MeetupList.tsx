@@ -7,7 +7,7 @@ import { sortBy } from "lodash"
 import Emoji from "./Emoji"
 import InfoBanner from "./InfoBanner"
 import Link from "./Link"
-import Translation from "../components/Translation"
+import Translation from "./Translation"
 
 // Data
 import meetups from "../data/community-meetups.json"
@@ -79,7 +79,14 @@ const StyledInput = styled.input`
   }
 `
 
-const filterMeetups = (query) => {
+export interface Meetup {
+  title: string
+  emoji: string
+  location: string
+  link: string
+}
+
+const filterMeetups = (query: string): Array<Meetup> => {
   if (!query) return sortedMeetups
 
   const lowercaseQuery = query.toLowerCase()
@@ -93,15 +100,18 @@ const filterMeetups = (query) => {
 }
 
 // sort meetups by country and then by city
-const sortedMeetups = sortBy(meetups, ["emoji", "location"])
+const sortedMeetups: Array<Meetup> = sortBy(meetups, ["emoji", "location"])
+
+export interface IProps {}
 
 // TODO create generalized CardList / TableCard
 // TODO prop if ordered list or unordered
-const MeetupList = () => {
-  const [searchField, setSearchField] = useState("")
+const MeetupList: React.FC<IProps> = () => {
+  const [searchField, setSearchField] = useState<string>("")
   const filteredMeetups = filterMeetups(searchField)
 
-  const handleSearch = (event) => setSearchField(event.target.value)
+  const handleSearch = (event: React.ChangeEvent<HTMLInputElement>): void =>
+    setSearchField(event.target.value)
 
   return (
     <div>
