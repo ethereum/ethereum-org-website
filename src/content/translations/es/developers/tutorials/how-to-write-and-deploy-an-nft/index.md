@@ -32,7 +32,7 @@ En este tutorial, también aprovecharemos las herramientas de desarrollo de Alch
 
 ## Paso 2: Crear su aplicación (y llave API) {#make-api-key}
 
-Una vez que haya creado una cuenta de Alchemy, puede generar una clave de API creando una aplicación. Esto nos permitirá hacer solicitudes a la red de pruebas de Ropsten. Consulte <a>esta guía</a> si tiene curiosidad para saber más sobre redes de pruebas.
+Una vez que haya creado una cuenta de Alchemy, puede generar una clave de API creando una aplicación. Esto nos permitirá hacer solicitudes a la red de pruebas de Ropsten. Consulte [esta guía](https://docs.alchemyapi.io/guides/choosing-a-network) si tiene curiosidad para saber más sobre redes de pruebas.
 
 1. Navegue a la página «Crear App» en su tablero Alchemy pasando el cursor sobre «Apps» en la barra de navegación y haciendo clic en «Crear App».
 
