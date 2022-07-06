@@ -8002,6 +8002,15 @@
         "doc",
         "bug"
       ]
+    },
+    {
+      "login": "nikashitsa",
+      "name": "Nikita Verkhovin",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1029908?v=4",
+      "profile": "https://github.com/nikashitsa",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
