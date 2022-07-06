@@ -12,6 +12,7 @@ import Translation from "./Translation"
 
 // Utils
 import { getFreshData } from "../utils/cache"
+import { TranslationKey } from "../utils/translations"
 
 // Constants
 import { GATSBY_FUNCTIONS_PATH } from "../constants"
@@ -48,16 +49,20 @@ const Span = styled.span`
   padding-left: 5px;
 `
 
-const ReleaseBanner = ({ storageKey }) => {
-  const [loading, setLoading] = useState(true)
-  const [show, setShow] = useState(true)
-  const [timeLeft, setTimeLeft] = useState("0")
+export interface IProps {
+  storageKey: string
+}
+
+const ReleaseBanner: React.FC<IProps> = ({ storageKey }) => {
+  const [loading, setLoading] = useState<boolean>(true)
+  const [show, setShow] = useState<boolean>(true)
+  const [timeLeft, setTimeLeft] = useState<string>("0")
 
   useEffect(() => {
     setLoading(true)
     const fetchBlockInfo = async () => {
       try {
-        const data = await getFreshData(
+        const data: string = await getFreshData(
           `${GATSBY_FUNCTIONS_PATH}/etherscanBlock`
         )
         setTimeLeft(data)
@@ -77,14 +82,28 @@ const ReleaseBanner = ({ storageKey }) => {
     }
   }, [storageKey])
 
-  const handleClose = () => {
+  const handleClose = (): void => {
     if (localStorage) {
-      localStorage.setItem(storageKey, true)
+      localStorage.setItem(storageKey, "true")
     }
     setShow(false)
   }
 
-  const renderer = ({ days, hours, minutes, seconds, completed }) => {
+  interface RendererProps {
+    days: number
+    hours: number
+    minutes: number
+    seconds: number
+    completed: boolean
+  }
+
+  const renderer = ({
+    days,
+    hours,
+    minutes,
+    seconds,
+    completed,
+  }: RendererProps): React.ReactNode => {
     if (completed) {
       return (
         <StyledBannerNotification shouldShow={show}>
@@ -92,7 +111,9 @@ const ReleaseBanner = ({ storageKey }) => {
             <Icon name="close" />
           </CloseIconContainer>
           <StyledEmoji size={2} text=":tada:" />
-          <Translation id="london-upgrade-banner-released" />
+          <Translation
+            id={"london-upgrade-banner-released" as TranslationKey}
+          />
           <Span>
             <Link to="/history/#london">
               <Translation id="learn-more" />
@@ -107,7 +128,7 @@ const ReleaseBanner = ({ storageKey }) => {
             <Icon name="close" />
           </CloseIconContainer>
           <StyledEmoji size={2} text=":tada:" />
-          <Translation id="london-upgrade-banner" />
+          <Translation id={"london-upgrade-banner" as TranslationKey} />
           <Span>
             {zeroPad(days, 2)}:{zeroPad(hours, 2)}:{zeroPad(minutes, 2)}:
             {zeroPad(seconds, 2)}!
