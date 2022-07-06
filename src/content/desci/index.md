@@ -169,6 +169,7 @@ Flexible Web3 data solutions support the scenarios above in addition to providin
 * [Atoms: smart contract peer-review)](https://www.atoms.org)
 * [dClimate API: query climate data collected by a decentralized community](https://api.dclimate.net/)
 * [DeSci Foundation: DeSci publishing tool builder](https://descifoundation.org/)
+* [DeSci.World): one-stop shop for users to view, engage with decentralized science) 
 * [Gitcoin: apply for an scientific open source developer grant](https://gitcoin.co/grants)
 * [Molecule: Fund and get funded for your research projects](https://discover.molecule.to/)
 * [OceanDAO: DAO governed funding for data-related science](https://oceanprotocol.com/dao)
