@@ -1,5 +1,5 @@
 ---
-title: Parça Zincirleri  (Shard Chains)
+title: Shard zincirleri
 description: Ethereum'a daha fazla işlem kapasitesi sağlayan ve çalışmasını kolaylaştıran ağ bölümleri - parça zincirleri hakkında bilgi edinin.
 lang: tr
 template: upgrade
@@ -65,7 +65,7 @@ Vitalik Buterin, Bankless podcast ile konuşurken tartışmaya değer 3 potansiy
 
 #### 1. İşlem yürütmenin gerek olmadığı durum {#state-execution-not-needed}
 
-Bu, parçalara akıllı sözleşmelerle başa çıkma kabiliyeti vermememiz ve onları veri depoları olarak bıraktığımız anlamına gelir.
+Bu, parçalara akıllı sözleşmelerle başa çıkma ve onları veri depoları olarak bırakma yeteneği vermediğimiz anlamına gelir.
 
 #### 2. İşlem yürüten bazı parçaların mevcut olması {#some-execution-shards}
 
@@ -87,12 +87,12 @@ Bu hâlâ aktif bir tartışma noktasıdır. Daha fazlasını öğrendikten sonr
 
 Ethereum yükseltmelerinin tamamı bir şekilde ilişkilidir. O hâlde, parça zincirlerinin diğer yükseltmelerle nasıl ilişkilendirildiğini özetleyelim.
 
-### Parçalar (shards) ve işaret (beacon) zinciri {#shards-and-beacon-chain}
+### Parçalar ve işaret zinciri {#shards-and-beacon-chain}
 
 İşaret Zinciri, parçaları güvenli ve senkronize tutacak mantığın tamamını içerir. İşaret Zinciri, ağdaki stake edenleri koordine edecek ve onları üzerinde çalışmaları gereken parçalara atayacaktır. Ayrıca diğer parçalar tarafından erişilebilen parça işlem verilerini alarak ve depolayarak parçalar arasındaki iletişimi kolaylaştıracaktır. Bu, her şeyi güncel tutmak için parçalara Ethereum'un durumunun anlık bir görüntüsünü verecektir.
 
 <ButtonLink to="/upgrades/beacon-chain/">
-  İşaret (Beacon) Zinciri
+  İşaret Zinciri
 </ButtonLink>
 
 ### Parçalar ve birleştirme {#shards-and-docking}

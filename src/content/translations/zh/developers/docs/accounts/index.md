@@ -7,7 +7,7 @@ sidebar: true
 
 一个以太坊帐户是一个具有以太币 (ETH) 余额的实体，可以在以太坊上发送交易。 帐户可以由用户控制，也可以作为智能合约部署。
 
-## 前置要求 {#prerequisites}
+## 先决条件 {#prerequisites}
 
 帐户是一个很适合初学者的主题。 但为了帮助您更好地理解这个页面，我们建议您首先阅读我们的[以太坊简介](/developers/docs/intro-to-ethereum/)。
 
@@ -110,7 +110,7 @@ Repeat passphrase:
 
 ## 延伸阅读 {#further-reading}
 
-_还有哪些社区资源对您有所帮助？ 编辑并添加本页面！_
+_还有哪些社区资源对您有所帮助？ 请编辑本页面并添加它！_
 
 ## 相关主题 {#related-topics}
 

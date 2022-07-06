@@ -8,28 +8,28 @@ sidebar: true
 sidebarDepth: 2
 image: ../../../../assets/use-cases/dao-2.png
 alt: Une représentation d'une DAO qui vote une proposition.
-summaryPoint1: Des communautés appartenant à leurs membres sans pouvoir centraliser.
+summaryPoint1: Des communautés appartenant à leurs membres sans pouvoir centralisé.
 summaryPoint2: Un moyen sûr de collaborer avec des étrangers sur Internet.
-summaryPoint3: Un endroit sécurisé pour engager des fonds pour une cause précise.
+summaryPoint3: Un endroit sûr pour engager des fonds pour une cause précise.
 ---
 
 ## En quoi consistent les DAO ? {#what-are-daos}
 
 Les DAO sont un moyen efficace et sûr de travailler avec des gens partageant les mêmes idées partout dans le monde.
 
-Pensez à eux comme une entreprise native d'Internet qui est collectivement détenue et gérée par ses membres. Elles possèdent une trésorerie intégrée que personne ne peut lire sans l'approbation du groupe. Les décisions sont régies par des propositions et par le vote pour que chacun au sein de l'organisation ait sa voix.
+Pensez à eux comme une entreprise native d'Internet qui est collectivement détenue et gérée par ses membres. Elles possèdent une trésorerie intégrée à laquelle personne ne peut accéder sans l'accord du groupe. Les décisions sont le fruit de propositions sur lesquelles chacun au sein de l'organisation peut statuer
 
-Aucun chef de la direction ne peut autoriser les dépenses en fonction de ses propres caprices et aucune chance de voir un directeur financier douteux manipuler les comptes. Tout est ouvert et les règles relatives aux dépenses sont introduites dans la DAO via son code.
+Aucun dirigeant ne peut autoriser les dépenses qu'il souhaite et il n'y a aucun risque de voir un directeur financier véreux manipuler les comptes. Tout est transparent et les règles relatives aux dépenses sont introduites dans la DAO via son code.
 
 ## Pourquoi avons-nous besoin des DAO ? {#why-dao}
 
-La création d'une organisation avec quelqu'un qui injecte des financements et de l'argent exige beaucoup de confiance dans les personnes avec lesquelles vous travaillez. Mais il est difficile de faire confiance à une personne avec laquelle vous n’avez interagi que sur Internet. Avec les DAO, vous n'avez pas besoin de faire confiance à quelqu'un dans le groupe, juste au code de la DAO, qui est 100 % transparent et vérifiable par n'importe qui.
+Créer une organisation avec quelqu'un qui injecte des fonds et de l'argent exige une grande confiance dans les personnes avec lesquelles vous travaillez. Mais il est difficile de faire confiance à une personne avec laquelle vous n’avez interagi que sur Internet. Avec les DAO, vous n'avez pas besoin de faire confiance à quelqu'un dans le groupe, juste au code de la DAO, qui est 100 % transparent et vérifiable par n'importe qui.
 
 Cela ouvre énormément de nouvelles possibilités de collaboration et de coordination au niveau mondial.
 
 ### Une comparaison {#dao-comparison}
 
-| DAO                                                                                                                               | Un organisme traditionnel                                                                                              |
+| DAO                                                                                                                               | Organisation traditionnelle                                                                                            |
 | --------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
 | Habituellement fixe, et pleinement démocratisée.                                                                                  | Généralement hiérarchique.                                                                                             |
 | Vote requis par les membres pour que tout changement soit mis en œuvre.                                                           | Selon la structure, des changements peuvent être demandés par une seule personne et le vote peut être biaisé.          |
@@ -39,7 +39,7 @@ Cela ouvre énormément de nouvelles possibilités de collaboration et de coordi
 
 ### Exemples de DAO {#dao-examples}
 
-Pour aider votre compréhension, voici quelques exemples de la façon dont vous pourriez utiliser un DAO :
+Pour aider votre compréhension, voici quelques exemples de la façon dont vous pourriez utiliser une DAO :
 
 - Un organisme caritatif – vous pouvez accepter l'adhésion et les dons de n'importe qui dans le monde et le groupe peut décider de la façon dont ils veulent dépenser des dons.
 - Un réseau indépendant – vous pourriez créer un réseau d'entrepreneurs qui mettent en commun leurs fonds pour des espaces de bureaux et des abonnements à des logiciels.
@@ -51,7 +51,7 @@ Il existe différents modèles pour adhérer à une DAO. L'adhésion peut déter
 
 ### Adhésion basée sur des jetons {#token-based-membership}
 
-Habituellement cela se fait totalement sans permission, seulement en fonction du jeton utilisé. La plupart de ces jetons de gouvernance peuvent être échangés sans permission sur un échange décentralisé. D’autres doivent être gagnées en fournissant de la liquidité ou une autre « preuve travail ». Quoi qu’il en soit, il suffit de détenir le jeton pour donner accès au vote.
+Habituellement cela se fait totalement sans permission, seulement en fonction du jeton utilisé. La plupart de ces jetons de gouvernance peuvent être échangés sans permission sur un échange décentralisé. D’autres doivent être gagnées en fournissant de la liquidité ou une autre « preuve de travail ». Quoi qu’il en soit, il suffit de détenir le jeton pour donner accès au vote.
 
 _Typiquement, cela est utilisé pour gouverner des protocoles décentralisés et/ou des jetons de grandes envergures._
 
@@ -59,9 +59,9 @@ _Typiquement, cela est utilisé pour gouverner des protocoles décentralisés et
 
 [MakerDAO](https://makerdao.com) – Le jeton MKR de MakerDAO est largement disponible sur les échanges décentralisés. Ainsi, tout le monde peut en acheter et avoir ainsi un pouvoir de vote sur le futur du protocole Maker.
 
-### Adhésion basée sur des jetons {#share-based-membership}
+### Adhésion basée sur les actions {#share-based-membership}
 
-Les DAO basées sur les actions sont davantage soumises à l'autorisation, mais demeurent très ouvertes. Tous les membres potentiels peuvent soumettre une proposition pour rejoindre le DAO, offrant habituellement une contribution d'une certaine valeur sous la forme de jetons ou de travail. Le nombre d'actions est lié, dans ce cas, au plus ou moins grand pouvoir dans le vote et la propriété de la DAO. Les membres peuvent sortir à tout moment avec leur part proportionnelle de la trésorerie.
+Les DAO basées sur les actions sont davantage soumises à l'autorisation, mais demeurent très ouvertes. Tous les membres potentiels peuvent soumettre une proposition pour rejoindre la DAO, offrant habituellement une contribution d'une certaine valeur sous la forme de jetons ou de travail. Le nombre d'actions est lié, dans ce cas, au plus ou moins grand pouvoir dans le vote et la propriété de la DAO. Les membres peuvent sortir à tout moment avec leur part proportionnelle de la trésorerie.
 
 _Habituellement utilisé pour des organisations plus proches et axées sur l’humanité telles que les organismes de bienfaisance, les collectifs de travailleurs et les clubs d’investissement. Cela peut également concerner la gouvernance les protocoles et des jetons._
 
@@ -106,8 +106,8 @@ Ethereum est une base parfaite pour les DAO pour plusieurs raisons :
 
 ### Articles DAO {#dao-articles}
 
-- [What's a DAO?](https://aragon.org/dao) – [Aragon](https://aragon.org/)
-- [House of DAOs](https://wiki.metagame.wtf/docs/great-houses/house-of-daos) – [Metagame](https://wiki.metagame.wtf/)
+- [Qu'est-ce qu'une DAO ?](https://aragon.org/dao) – [Aragon](https://aragon.org/)
+- [La maison des DAOs](https://wiki.metagame.wtf/docs/great-houses/house-of-daos) – [Metagame](https://wiki.metagame.wtf/)
 - [What is a DAO and what is it for?](https://daohaus.substack.com/p/-what-is-a-dao-and-what-is-it-for) – [DAOhaus](https://daohaus.club/)
 - [How to Start a DAO-Powered Digital Community](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) – [DAOhaus](https://daohaus.club/)
 - [What is a DAO?](https://coinmarketcap.com/alexandria/article/what-is-a-dao) – [Coinmarketcap](https://coinmarketcap.com)
