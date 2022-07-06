@@ -7982,6 +7982,16 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "PraneshASP",
+      "name": "Pranesh A S",
+      "avatar_url": "https://avatars.githubusercontent.com/u/42379522?v=4",
+      "profile": "https://github.com/PraneshASP",
+      "contributions": [
+        "doc",
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
