@@ -33,4 +33,4 @@ _Poznate vir iz skupnosti, ki vam je pomagal? Uredite to stran in ga dodajte!_
 - [Seznam integracij žetonov](/developers/tutorials/token-integration-checklist/) _– seznam stvari, ki jih je treba upoštevati, ko delamo z žetoni._
 - [Razumite pametno pogodbo žetona ERC20](/developers/tutorials/understand-the-erc-20-token-smart-contract/) _– uvod v uveljavitev vaše prve pametne pogodbe na testnem omrežju Ethereum._
 - [Prenosi in odobritve žetonov ERC20 iz pametne pogodbe Solidity](/developers/tutorials/transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract/) _– kako uporabljati pametno pogodbo za interakcijo z žetonom z uporabo jezika Solidity._
-- [Implementacija trga ERC721 [vodnik]](/developers/tutorials/how-to-implement-an-erc721-market/) _ – kako dati tokenizirane predmete v prodajo na decentralizirano oglasno desko._
+- [Implementacija trga ERC721 (vodnik)](/developers/tutorials/how-to-implement-an-erc721-market/) _ – kako dati tokenizirane predmete v prodajo na decentralizirano oglasno desko._
