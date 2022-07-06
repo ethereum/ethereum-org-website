@@ -136,7 +136,7 @@ const SkeletonButtonContainer = styled(ButtonContainer)`
   }
 `
 
-const ContributorsButton = styled(ButtonSecondary)`
+const ContributorsButton = styled(ButtonSecondary)<{ loading: boolean }>`
   background-color: ${(props) => props.theme.colors.background};
   margin-top: 0;
   height: 40px;

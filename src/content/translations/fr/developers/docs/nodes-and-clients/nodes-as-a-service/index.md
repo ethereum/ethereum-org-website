@@ -1,5 +1,5 @@
 ---
-title: Les nœuds en tant que service
+title: Nœuds en tant que service
 description: Présentation de base des services de nœuds, de leurs avantages et inconvénients, et des fournisseurs les plus populaires.
 lang: fr
 sidebar: true
@@ -10,7 +10,7 @@ sidebarDepth: 2
 
 Exécuter votre propre [nœud Ethereum](/developers/docs/nodes-and-clients/#what-are-nodes-and-clients) peut être difficile, en particulier lorsque vous démarrez ou lors d'une croissance rapide. Il existe un certain [nombre de services](#popular-node-services) qui exécutent des infrastructures de nœuds optimisées pour vous, afin que vous puissiez vous concentrer sur le développement de votre application ou de votre produit. Nous vous expliquerons le fonctionnement des services de nœuds, les avantages et les inconvénients de leur utilisation et vous fournirons une liste de fournisseurs si vous souhaitez vous lancer.
 
-## Prérequis {#prerequisites}
+## Pré-requis {#prerequisites}
 
 Si vous ne savez pas encore ce que sont les nœuds et les clients, consultez la page [Nœuds et clients](/developers/docs/nodes-and-clients/).
 
@@ -18,7 +18,7 @@ Si vous ne savez pas encore ce que sont les nœuds et les clients, consultez la 
 
 Les fournisseurs de services de nœuds exécutent les clients de nœuds distribués en arrière-plan pour vous, afin que vous n'ayez pas à le faire.
 
-Ces services fournissent généralement une clé API que vous pouvez utiliser pour écrire sur la blockchain et pour la lire. Ils incluent souvent un accès aux [réseaux de test Ethereum](/developers/docs/networks/#ethereum-testnets) en plus du réseau principal.
+Ces services fournissent généralement une clé API que vous pouvez utiliser pour écrire sur la blockchain et pour la lire. Ils incluent souvent un accès aux [réseaux de test Ethereum](/developers/docs/networks/#testnets) en plus du réseau principal.
 
 Certains services vous offrent votre propre nœud dédié qu'ils gèrent pour vous, tandis que d'autres utilisent des équilibreurs de charge pour répartir l'activité entre les nœuds.
 
@@ -52,20 +52,20 @@ Voici une liste des fournisseurs de nœuds Ethereum les plus populaires. N'hési
     - Données d'archivage gratuites
     - Outils d'analyse
     - Tableau de bord
-    - Points de terminaison API uniques
-    - Liens de rappel
+    - Points de terminaison d'API uniques
+    - lien de rappel
     - Assistance directe
 - [**Ankr**](https://www.ankr.com/)
   - [Documentation](https://docs.ankr.com/)
   - Fonctionnalités
-    - Protocole Ankr : accès ouvert aux points de terminaison API RPC publique pour plus de 8 chaînes
+    - Protocole Ankr : accès ouvert aux points de terminaison d'API RPC publiques pour plus de 8 chaînes
     - Équilibrage de charge et surveillance des nœuds pour une passerelle rapide et fiable vers le nœud disponible le plus proche
     - Niveau Premium activant le point de terminaison WSS et la limite de débit non plafonnée
     - Déploiement d'un nœud complet en un clic et d'un noeud de validateur pour plus de 40 chaînes
     - Mise à l'échelle progressive
     - Outils d'analyse
     - Tableau de bord
-    - RPC, HTTPS et points de terminaison WSS
+    - Points de terminaison WSS, HTTPS et RPC
     - Assistance directe
 - [**BlockDaemon**](https://blockdaemon.com/)
   - [Documentation](https://ubiquity.docs.blockdaemon.com/)
@@ -102,7 +102,7 @@ Voici une liste des fournisseurs de nœuds Ethereum les plus populaires. N'hési
     - Mise à l'échelle progressive
     - Analyses
     - Tableau de bord
-    - Points de terminaison API uniques
+    - Points de terminaison d'API uniques
     - Nœuds complets dédiés
     - Temps de synchronisation rapide pour les déploiements dédiés
     - Assistance directe 24/7
@@ -112,7 +112,7 @@ Voici une liste des fournisseurs de nœuds Ethereum les plus populaires. N'hési
   - Fonctionnalités
     - Option de niveau gratuit
     - Mise à l'échelle progressive
-    - Données d'archivage payantes
+    - Données d'archivage gratuites
     - Assistance directe
     - Tableau de bord
 - [**Kaleido**](https://kaleido.io/)
@@ -140,38 +140,38 @@ Voici une liste des fournisseurs de nœuds Ethereum les plus populaires. N'hési
   - Fonctionnalités
     - Nœuds partagés gratuits
     - Nœuds d'archives partagés gratuits
-    - Focalisé sur la confidentialité (pas de journalisation)
-    - Support inter-chaînes
-    - Montée en charge progressive
+    - Protection de la vie privée (aucune politique de log)
+    - Support de chaîne croisée
+    - Mise à l'échelle progressive
     - Tableau de bord
     - SDK Ethereum unique
-    - Points de terminaison API uniques
+    - Points de terminaison d'API uniques
     - Assistance technique directe
-- [**Réseau Pocket**](https://www.pokt.network/)
+- [**Pocket Network**](https://www.pokt.network/)
   - [Documentation](https://docs.pokt.network/home/)
   - Fonctionnalités
-    - Protocole RPC décentralisé et place de marché
-    - 1 million de requêtes gratuites par jour (par point de terminaison, max 2)
+    - Protocole RPC décentralisé et marché
+    - 1M gratuit de requettes par jour (par point de terminaison, max 2)
     - [Points de terminaison publics](https://docs.pokt.network/home/resources/public-rpc-endpoints)
-    - Programme Pre-Stake+ (si vous avez besoin de plus de 1 million de requêtes par jour)
-    - Plus de 15 blockchains prises en charge
-    - Plus de 6 400 nœuds récompensés en POKT pour mettre à disposition des applications
+    - Programme Pre-Stake+ (si vous avez besoin de plus de 1 million de requettes par jour)
+    - Plus de 15 blockchains pris en charge
+    - Plus de 6 400 nœuds POKT gagnés pour les applications en service
     - Nœud d'archivage, nœud d'archivage avec tracage et assistance pour nœuds Testnet
     - Diversité du client du noeud principal Ethereum
-    - Aucun point unique de défaillance
+    - Aucun point unique d'échec
     - Aucun temps d'arrêt
-    - Tokenomics quasi-nuls et rentables (mise POKT une fois pour la bande passante)
-    - Aucun coût mensuel irrécupérable, transformez votre infrastructure en un véritable actif
+    - Tokenomics rentables et proches de zéro (mise POKT une fois pour la bande passante)
+    - Aucun coût irrécupérable mensuel, transformez votre infrastructure en un actif
     - Équilibrage de charge intégré dans le protocole
-    - Montez en charge à l'infini le nombre de demandes par jour et de nœuds par heure.
-    - Solution la plus confidentielle et la plus résistante à la censure
+    - Échelle infinie du nombre de requêtes par jour et de nœuds par heure
+    - L'option la plus privée et la plus résistante à la censure
     - Support pratique pour les développeurs
     - Tableau de bord et outils d'analyse [Pocket Portal](https://bit.ly/ETHorg_POKTportal)
 - [**QuikNode**](https://www.quiknode.io/)
   - Fonctionnalités
     - 7 jours d’essai gratuit
-    - Assistance diversifiée
-    - Liens de rappel (webhooks)
+    - Assistance variée
+    - lien de rappel
     - Tableau de bord
     - Analyses
 - [**Rivet**](https://rivet.cloud/)
@@ -183,7 +183,7 @@ Voici une liste des fournisseurs de nœuds Ethereum les plus populaires. N'hési
   - [Documentation](https://docs.settlemint.com/)
   - Fonctionnalités
     - Essai gratuit
-    - Montée en charge progressive
+    - Mise à l'échelle progressive
     - Prise en charge de GraphQL
     - RPC et points de terminaison WSS
     - Nœuds complets dédiés

@@ -11,7 +11,7 @@ Tam teşekküllü bir dapp inşa etmek teknolojinin farklı parçalarını gerek
 
 Çerçeveler, aşağıdakiler gibi birçok ezber bozan işlevsellikle gelirler:
 
-- Yerel bir blok zinciri örneği başlatmak için özellikler.
+- Yerel bir blok-zincir örneğini döndürmek için özellikler.
 - Akıllı sözleşmelerinizi derlemek ve test etmek için yardımcı programlar.
 - Kullanıcı odaklı uygulamanızı aynı projede/depoda oluşturmak için istemci geliştirme eklentileri.
 - Ethereum ağlarına bağlanmak ve yerel olarak çalışan bir örneğe veya Ethereum'un genel ağlarından birine sözleşmeleri dağıtmak için yapılandırma.
@@ -86,7 +86,7 @@ Tam teşekküllü bir dapp inşa etmek teknolojinin farklı parçalarını gerek
 - [GitHub](https://github.com/gakonst/foundry/)
 - [Foundry için araçlar](https://github.com/crisgarner/awesome-foundry)
 
-## daha fazla okuma {#further-reading}
+## Daha fazla bilgi {#further-reading}
 
 _Size yardımcı olan bir topluluk kaynağı mı biliyorsunuz? Bu sayfayı düzenleyin ve onu ekleyin!_
 

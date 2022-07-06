@@ -124,7 +124,7 @@ There are currently five consensus clients to choose from. These are:
 - [Prysm](https://docs.prylabs.network/docs/getting-started/): written in Go
 - [Teku](https://pegasys.tech/teku): written in Java
 
-There is currently a [client diversity][/developers/docs/nodes-and-clients/client-diversity/] issue where a large dominance of Prysm clients poses a risk
+There is currently a [client diversity](/developers/docs/nodes-and-clients/client-diversity/) issue where a large dominance of Prysm clients poses a risk
 to the health of the network. In response to the initial drive to even out the client diversity many Prysm nodes switched
 to Lighthouse to the extent that it now also has a problematic market share. It is therefore recommended to consider choosing
 a minority client. [See the latest network client usage](https://clientdiversity.org/)

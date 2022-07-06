@@ -1282,6 +1282,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   </tr>
   <tr>
     <td align="center"><a href="https://github.com/RanchHowards"><img src="https://avatars.githubusercontent.com/u/69303624?v=4?s=100" width="100px;" alt=""/><br /><sub><b>RanchHowards</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=RanchHowards" title="Documentation">📖</a> <a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3ARanchHowards" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="https://github.com/didoshotev"><img src="https://avatars.githubusercontent.com/u/62618421?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Deyan Shotev</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=didoshotev" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/PraneshASP"><img src="https://avatars.githubusercontent.com/u/42379522?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Pranesh A S</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=PraneshASP" title="Documentation">📖</a> <a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3APraneshASP" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="https://github.com/shir22"><img src="https://avatars.githubusercontent.com/u/33841818?v=4?s=100" width="100px;" alt=""/><br /><sub><b>shir22</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=shir22" title="Documentation">📖</a> <a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Ashir22" title="Bug reports">🐛</a></td>
   </tr>
 </table>
 

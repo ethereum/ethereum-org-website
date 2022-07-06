@@ -37,6 +37,6 @@ export interface IProps {
 }
 
 const VisuallyHidden: React.FC<IProps> = ({ isHidden = false, children }) =>
-  isHidden ? <Container>{children}</Container> : <>children</>
+  isHidden ? <Container>{children}</Container> : <>{children}</>
 
 export default VisuallyHidden

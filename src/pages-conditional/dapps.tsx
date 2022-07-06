@@ -349,7 +349,7 @@ const DappsPage = ({
   const [selectedCategory, setCategory] = useState<CategoryType>(
     CategoryType.FINANCE
   )
-  const explore = useRef<HTMLElement>(null)
+  const explore = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     // Fetch category on load

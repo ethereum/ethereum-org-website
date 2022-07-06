@@ -5,7 +5,7 @@ lang: tr
 sidebar: true
 ---
 
-## Ön Koşullar {#prerequisites}
+## Ön koşullar {#prerequisites}
 
 Bu sayfayı daha iyi anlamanıza yardımcı olmak için önce [ Ethereum'a Giriş](/developers/docs/intro-to-ethereum/)'i okumanızı öneririz.
 

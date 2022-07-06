@@ -7,7 +7,7 @@ sidebar: true
 
 # Introduction à la gouvernance d'Ethereum {#introduction}
 
-_Si personne ne possède Ethereum, comment les décisions concernant les changements passés et futurs sur Ethereum sont-elles prises ? La gouvernance d'Ethereum se rapporte au processus qui permet de prendre de telles décisions_
+_Si personne ne possède Ethereum, comment les décisions concernant les changements passés et futurs sur Ethereum sont-elles prises ? On entend par gouvernance d'Ethereum le processus qui permet de prendre des décisions._
 
 <Divider />
 
@@ -21,7 +21,7 @@ Aucune personne ne possède ou ne contrôle le protocole d'Ethereum, mais des d�
 
 ## Gouvernance d'Ethereum {#ethereum-governance}
 
-La gouvernance d'Ethereum est le processus par lequel des changements de protocole sont apportés. Il est important de souligner que ce processus n'est pas lié à la façon dont les gens et les applications utilisent le protocole - Ethereum est sans permission. N'importe qui depuis n'importe où dans le monde peut participer aux activités sur la blockchain. Il n'y a aucune règle définie pour qui peut ou ne peut pas construire une application ou envoyer une transaction. Cependant, il y a un processus pour proposer des modifications au protocole principal, au dessus duquel ces applications s'exécutent. Étant donné que tant de personnes dépendent de la stabilité d'Ethereum, il y a un seuil de coordination très élevé pour les changements de base, y compris les processus sociaux et techniques, pour s'assurer que toute modification d'Ethereum est sécurisée et largement soutenue par la communauté.
+La gouvernance d'Ethereum est le processus par lequel des changements de protocole sont apportés. Il est important de souligner que ce processus n'est pas lié à la façon dont les gens et les applications utilisent le protocole - Ethereum est sans permission. N'importe qui depuis n'importe où dans le monde peut participer aux activités sur la blockchain. Il n'y a aucune règle définie pour qui peut ou ne peut pas construire une application ou envoyer une transaction. Cependant, il y a un processus pour proposer des modifications au protocole principal, au dessus duquel ces applications s'exécutent. Dans la mesure où un très grand nombre de personnes dépendent de la stabilité d'Ethereum, tout changement fondamental apporté à Ethereum, qu'il soit technique ou social, doit être validé par le plus grand nombre afin de s'assurer qu'il soit sûr et largement soutenu par la communauté.
 
 ### Gouvernance sur la blockchain vs hors chaîne {#on-chain-vs-off-chain}
 
@@ -133,7 +133,7 @@ Un sous-ensemble de la communauté a refusé de se forcer, en grande partie parc
 
 Aujourd'hui, la communauté Ethereum a adopté une politique de non-intervention en cas de bugs de contrat ou de perte de fonds pour maintenir la neutralité crédible du système.
 
-Regardez-en plus sur le piratege DAO :
+Regardez-en plus sur le piratage DAO :
 
 <YouTube id="rNeLuBOVe8A" />
 
@@ -156,7 +156,7 @@ Bien que le développement des spécifications et des implémentations ait toujo
 Lorsque la chaîne phare fusionnera avec la couche d'exécution Ethereum, le processus de gouvernance pour proposer des changements sera harmonisé. Ce processus d'implémentation de la fusion est [déjà en cours](https://github.com/ethereum/EIPs/pull/3675).
 
 <ButtonLink to="/upgrades/merge/">
-  Plus d'infos sur la fusion
+  Plus d'informations sur la fusion
 </ButtonLink>
 
 <Divider />

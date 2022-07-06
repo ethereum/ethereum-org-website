@@ -7,7 +7,7 @@ sidebar: true
 
 区块是指一批交易的组合，并且包含链中上一个区块的哈希。 这将区块连接在一起（成为一个链），因为哈希是从区块数据中加密得出的。 这可以防止欺诈，因为以前的任何区块中的任何改变都会使后续所有区块无效，而且所有哈希都会改变，所有运行区块链的人都会注意到。
 
-## 前置要求 {#prerequisites}
+## 先决条件 {#prerequisites}
 
 区块是一个对初学者非常友好的主题。 为了帮助您更好地理解这个页面，我们建议您先阅读[帐户](/developers/docs/accounts/)、[交易](/developers/docs/transactions/)和我们的[以太坊简介](/developers/docs/intro-to-ethereum/)。
 
@@ -15,7 +15,7 @@ sidebar: true
 
 为了确保以太坊网络上的所有参与者保持同步状态并就交易的确切历史达成共识，我们将交易分为多个区块。 这意味着一次提交、商定和同步数十个（或数百个）交易。
 
-![区块中的交易导致状态变化的图表](./tx-block.png) _图表来自 [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![区块中的交易导致状态变化的图表](./tx-block.png) _图表来自 [Ethereum EVM 插图](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 通过间隔提交，即使交易请求每秒发生数十次，我们仍能给所有网络参与者足够的时间达成共识。 以太坊上的区块大约每十五秒提交一次。
 
@@ -65,6 +65,6 @@ _还有哪些社区资源对您有所帮助？ 请编辑本页面并添加！_
 
 ## 相关主题 {#related-topics}
 
-- [挖矿](/developers/docs/consensus-mechanisms/pow/mining/)
+- [矿工](/developers/docs/consensus-mechanisms/pow/mining/)
 - [交易](/developers/docs/transactions/)
-- [Gas](/developers/docs/gas/)
+- [气体 Gas](/developers/docs/gas/)
