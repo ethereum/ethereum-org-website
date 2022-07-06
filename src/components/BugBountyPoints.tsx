@@ -84,10 +84,18 @@ export const TokenLogo = graphql`
 
 const USD_PER_POINT = 2
 
-const BugBountyPoints = () => {
-  const [state, setState] = useState({
-    currentETHPriceUSD: "",
-    currentDAIPriceUSD: "",
+interface State {
+  currentETHPriceUSD?: number
+  currentDAIPriceUSD?: number
+  hasError: boolean
+}
+
+export interface IProps {}
+
+const BugBountyPoints: React.FC<IProps> = () => {
+  const [state, setState] = useState<State>({
+    currentETHPriceUSD: 1,
+    currentDAIPriceUSD: 1,
     hasError: false,
   })
   const themeContext = useContext(ThemeContext)
@@ -119,8 +127,12 @@ const BugBountyPoints = () => {
 
   const isLoading = !state.currentETHPriceUSD
 
-  const pointsInETH = (USD_PER_POINT / state.currentETHPriceUSD).toFixed(5)
-  const pointsInDAI = (USD_PER_POINT / state.currentDAIPriceUSD).toFixed(5)
+  const pointsInETH = !state.hasError
+    ? (USD_PER_POINT / state.currentETHPriceUSD!).toFixed(5)
+    : 0
+  const pointsInDAI = !state.hasError
+    ? (USD_PER_POINT / state.currentDAIPriceUSD!).toFixed(5)
+    : 0
 
   const tooltipContent = (
     <div>
