@@ -24,13 +24,18 @@ Decentralized science allows for more diverse funding sources (from [DAOs](/dao)
 
 ## How DeSci improves science
 
-**List of key problems in science and how decentralized science can help to address these issues**
+An incomplemete list of key problems in science and how decentralized science can help to address these issues
 
 <table>
   <tr>
    <td><strong><h3>Decentralized science (aspiration)</h3></strong>
    </td>
    <td><strong><h3>Traditional science</h3></strong>
+   </td>
+  </tr>
+    <td>DeSci is open to anyone.
+   </td>
+   <td>You must be a member or a physical research institute to do science.
    </td>
   </tr>
   <tr>
@@ -52,11 +57,7 @@ Decentralized science allows for more diverse funding sources (from [DAOs](/dao)
    </td>
   </tr>
   <tr>
-   <td>DeSci is open to anyone.
-   </td>
-   <td>You must be a member or a physical research institute to do science.
-   </td>
-  </tr>
+   
   <tr>
    <td> Sharing laboratory services is made easier and more transparent using Web3 primitives.
    </td>
@@ -83,9 +84,9 @@ Decentralized science allows for more diverse funding sources (from [DAOs](/dao)
   </tr>
   
    <tr>
-   <td>Sharing the full research, including unsuccessful efforts and data generated along the way 
+   <td>Sharing all of the research, including the data that was generated from the unsuccessful efforts by design of having all steps on-chain.
    </td>
-   <td>Publication bias towards sharing mainly successful research experiments.
+   <td>Publication bias means that researchers are more likely to share experiments that had successful results if.
    </td>
   </tr>
   
@@ -145,7 +146,10 @@ The starting point must be a system that can be accessed by any decentralized id
 Flexible Web3 data solutions support the scenarios above in addition to providing the foundation for truly Open Science, where public goods can be created that have no access permissions and no fees. Web3 Public Data solutions such as IPFS, Arweave and Filecoin are optimized for decentralization. dClimate, for example, provides universal access to climate and weather data, including from weather stations and predictive climate models.
 
 
-# Learn more
+# Get involved: **What can you do in DeSci?**
+
+
+## Learn more
 * [DeSci Wiki by Jocelynn Pearl and Ultrarare](https://docs.google.com/document/d/1aQC6zn-eXflSmpts0XGE7CawbUEHwnL6o-OFXO52PTc/edit#)
 * [A guide to decentralized biotech by Jocelynn Pearl for a16z future](https://future.a16z.com/a-guide-to-decentralized-biotech/)
 * [The case for DeSci](https://gitcoin.co/blog/desci-the-case-for-decentralised-science/)
@@ -155,9 +159,6 @@ Flexible Web3 data solutions support the scenarios above in addition to providin
 * [Building Trustless Systems of Science by Jon Starr](https://medium.com/@jringo/building-systems-of-trustless-science-1cd2d072f673)
 * [The Emergence of Biotech DAOs](https://molecule.to/blog/the-emergence-of-biotech-daos)
 
-# Get involved: **What can you do in DeSci?**
-Where can people go to start participating?
-* [DeSci Wiki: Overview of initiatives and projects ](https://docs.google.com/document/d/1aQC6zn-eXflSmpts0XGE7CawbUEHwnL6o-OFXO52PTc/edit#)
 
 ### Explore projects below to join the DeSci movement.
 * [Atoms (smart contract peer-review)](https://www.atoms.org)
@@ -173,8 +174,10 @@ Where can people go to start participating?
 * [ResearchHub: post a scientific result and engage in a conversation with peers](https://www.researchhub.com/)
 * [VitaDAO: receive funding through sponsored research agreements for longevity research](https://www.vitadao.com/) 
 
-Thank 
-you to the contributors of this document:
+—
+
+#### Credits
+Thank you to the contributors of this document:
 Sam Richards, Jon Starr, Erik Van Winkle, Carla Ostmann, Omar El Naggar, Vincent Weisser, Philipp Koellinger, Christopher Hill, Niklas Rindtorff, Joseph Cook 
 
 [Link to appendix and graveyard](https://docs.google.com/document/d/1EPqWmMt_U1PHOVTRfzvQfT5UgUiZGowkYYVehy8lgcM/edit?usp=sharing)
