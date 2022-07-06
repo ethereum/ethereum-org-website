@@ -476,7 +476,10 @@ const WhatIsEthereumPage = ({
           <Section padding="3rem 0">
             <TwoColumnContent reverse>
               <Width40>
-                <GatsbyImage image={getImage(data.whatIsCryptocurrency)} />
+                <GatsbyImage
+                  image={getImage(data.whatIsCryptocurrency)}
+                  alt=""
+                />
               </Width40>
               <Width60>
                 <h2>What is a cryptocurrency?</h2>
@@ -534,7 +537,7 @@ const WhatIsEthereumPage = ({
         <Section>
           <TwoColumnContent>
             <Width40>
-              <GatsbyImage image={getImage(data.diffEthAndBtc)} />
+              <GatsbyImage image={getImage(data.diffEthAndBtc)} alt="" />
             </Width40>
             <Width60>
               <h2>What is the difference between Ethereum and Bitcoin?</h2>
@@ -704,7 +707,7 @@ const WhatIsEthereumPage = ({
               </BannerGrid>
             </BannerBody>
             <BannerImage>
-              <GatsbyImage image={getImage(data.stats)} />
+              <GatsbyImage image={getImage(data.stats)} alt="" />
             </BannerImage>
           </Banner>
         </Section>
@@ -870,7 +873,7 @@ const WhatIsEthereumPage = ({
         <Section bgColor={theme.colors.homeBoxTurquoise}>
           <TwoColumnContent>
             <Width40>
-              <GatsbyImage image={getImage(data.ethCoin)} />
+              <GatsbyImage image={getImage(data.ethCoin)} alt="" />
             </Width40>
             <Width60>
               <h2>Meet ether, Ethereum’s cryptocurrency</h2>
@@ -903,7 +906,7 @@ const WhatIsEthereumPage = ({
         <Section>
           <TwoColumnContent reverse>
             <Width40>
-              <GatsbyImage image={getImage(data.meetEth)} />
+              <GatsbyImage image={getImage(data.meetEth)} alt="" />
             </Width40>
             <Width60>
               <h2>What can I do with ETH coins?</h2>
@@ -930,7 +933,7 @@ const WhatIsEthereumPage = ({
         <Section bgColor={theme.colors.homeBoxPurple}>
           <TwoColumnContent>
             <Width40>
-              <GatsbyImage image={getImage(data.whoRunsEthereum)} />
+              <GatsbyImage image={getImage(data.whoRunsEthereum)} alt="" />
             </Width40>
             <Width60>
               <h2>Who runs Ethereum?</h2>
@@ -966,7 +969,10 @@ const WhatIsEthereumPage = ({
         <Section>
           <TwoColumnContent reverse>
             <Width40>
-              <GatsbyImage image={getImage(data.whatAreSmartContracts)} />
+              <GatsbyImage
+                image={getImage(data.whatAreSmartContracts)}
+                alt=""
+              />
             </Width40>
             <Width60>
               <h2>What are smart contracts?</h2>
@@ -1012,7 +1018,7 @@ const WhatIsEthereumPage = ({
       <Section>
         <TwoColumnContent>
           <Width40>
-            <GatsbyImage image={getImage(data.criminalActivity)} />
+            <GatsbyImage image={getImage(data.criminalActivity)} alt="" />
           </Width40>
           <Width60>
             <h2>
