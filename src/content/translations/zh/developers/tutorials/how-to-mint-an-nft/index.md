@@ -1,7 +1,7 @@
 ---
 title: 如何铸造非同质化代币（非同质化代币教程系列 2/3）
 description: 本教程描述了如何使用我们的智能合约和 Web3 在以太坊区块链上铸造非同质化代币。
-author: "苏米-穆德吉尔"
+author: "Sumi Mudgil"
 tags:
   - "NFT"
   - "ERC-721"
