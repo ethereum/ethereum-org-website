@@ -161,16 +161,16 @@ Flexible Web3 data solutions support the scenarios above in addition to providin
 
 
 ### Explore projects below to join the DeSci movement.
-* [Atoms (smart contract peer-review)](https://www.atoms.org)
+* [Atoms: smart contract peer-review)](https://www.atoms.org)
 * [dClimate API: query climate data collected by a decentralized community](https://api.dclimate.net/)
-* [DeSci Foundation (DeSci think tank)](https://descifoundation.org/)
+* [DeSci Foundation: DeSci publishing tool builder](https://descifoundation.org/)
 * [Gitcoin: apply for an scientific open source developer grant](https://gitcoin.co/grants)
 * [Molecule: Fund and get funded for your research projects](https://discover.molecule.to/)
-* [OceanDAO (DAO governed science funding)](https://oceanprotocol.com/dao)
-* [Opscientia (open decentralized science workflows)](https://opsci.io/research/)
+* [OceanDAO: DAO governed funding for data-related science](https://oceanprotocol.com/dao)
+* [Opscientia: open decentralized science workflows](https://opsci.io/research/)
 * [LabDAO: fold a protein in-silico](https://alphafodl.vercel.app/)
-* [Molecule (open drug discovery)](https://www.molecule.to/)
-* [Radicle (peer to peer code collaboration)](https://radicle.xyz/)
+* [Bio.xyz: get funded for your biotech DAO or desci project](https://www.molecule.to/)
+* [Radicle: peer to peer code collaboration](https://radicle.xyz/)
 * [ResearchHub: post a scientific result and engage in a conversation with peers](https://www.researchhub.com/)
 * [VitaDAO: receive funding through sponsored research agreements for longevity research](https://www.vitadao.com/) 
 
