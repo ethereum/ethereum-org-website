@@ -26,28 +26,15 @@ Decentralized science allows for more diverse funding sources (from [DAOs](/dao)
 
 **List of key problems in science and how decentralized science can help to address these issues**
 
-
-* bureaucratic funding structures -> allow for more diverse funding sources (quadratic donations, DAOs, crowdfunding etc.) 
-* [replication crisis](https://forrt.org/glossary/reproducibility-crisis-aka-replicab/) -> allowing for easier access to data and methods, and by providing incentives for reproducibility.
-* misaligned incentives -> aligning incentives more closely with the goals of science. 
-* poor data quality -> incentivising transparent data sharing and quality control. 
-* [publication bias](https://forrt.org/glossary/publication-bias-file-drawer-proble/) -> enabling publication in a wider range of outlets. 
-* [p-hacking](https://www.methodspace.com/blog/primer-p-hacking) -> incentivising transparent and honest reporting of results.
-* [cherry picking](https://pubmed.ncbi.nlm.nih.gov/33999541/) -> requiring publication of all results, including negative or inconclusive ones. 
-* [HARKing](https://forrt.org/glossary/harking/): hypothesizing after the results are known -> providing incentives for transparent and honest reporting of results.
-
-A comparison to traditional science
-
-
 <table>
   <tr>
-   <td><strong>Decentralized science (aspiration)</strong>
+   <td><strong><h3>Decentralized science (aspiration)</h3></strong>
    </td>
-   <td><strong>Traditional science</strong>
+   <td><strong><h3>Traditional science</h3></strong>
    </td>
   </tr>
   <tr>
-   <td>Distribution of funds is determined by the public using mechanisms such as quadratic voting.
+   <td>Distribution of funds is determined by the public using mechanisms such as quadratic donations or DAOs.
    </td>
    <td>Distribution of funds is controlled by small, closed, centralized groups.	
    </td>
@@ -94,6 +81,14 @@ A comparison to traditional science
    <td>Your home institution owns the IP you generate. Access to the IP is not transparent.
    </td>
   </tr>
+  
+   <tr>
+   <td>Sharing the full research, including unsuccessful efforts and data generated along the way 
+   </td>
+   <td>Publication bias towards sharing mainly successful research experiments.
+   </td>
+  </tr>
+  
 </table>
 
 
