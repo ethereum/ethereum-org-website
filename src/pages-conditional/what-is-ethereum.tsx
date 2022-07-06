@@ -413,16 +413,15 @@ const WhatIsEthereumPage = ({
               <Summary>
                 <h2>Summary</h2>
                 <p>
-                  Ethereum is an internet technology that lets you send
-                  cryptocurrency to anyone for a small fee. It’s also a
-                  developer platform with a growing marketplace of apps that
-                  anyone can build on, anyone can use, and no one can take down.
-                  Ethereum doesn’t require any central authority to maintain and
-                  secure it. Instead, individuals can make peer-to-peer
-                  transactions without needing to trust a third party or one
-                  another.
+                  Ethereum is a technology for building apps and organizations,
+                  holding assets, transacting and communicating without being
+                  controlled by a central authority. There is no need to hand
+                  over all your personal details to use Ethereum - you keep
+                  control of your own data and what is being shared. Ethereum
+                  has its own cryptocurrency, Ether, which is used to pay for
+                  certain activities on the Ethereum network.
                 </p>
-                <p>Still confused? Let's explain everything step by step.</p>
+                <p>Still confused? Let's explain everything step-by-step.</p>
               </Summary>
             </Width60>
             <Width40 />
@@ -449,20 +448,21 @@ const WhatIsEthereumPage = ({
                 </p>
                 <p>Wait, what is a middle man?</p>
                 <p>
-                  Traditionally, banks hold your money for you. They review and
-                  process every transaction you request and can decline it.
-                  Since banks store the funds, they have a lot of control over
-                  it. They can dictate which financial services you have access
-                  to and which not.
+                  A middle-man is a central authority like a bank or government
+                  that intervenes in a transaction between the sender and
+                  recipient. They have the power to surveill, censor or revert
+                  transactions and they can share the sensitive data they
+                  collect about you with third parties. They also often dictate
+                  which financial services you have access to.
                 </p>
                 <p>
-                  Things are different with crypto. You can act as{" "}
-                  <b>your own bank</b> if you want to. Nobody else has access to
-                  your funds and nobody can tell you what services you can use.
-                  You and anyone else with an internet connection can make
-                  direct <b>peer-to-peer transactions</b> with no single
-                  authority controling the transfer. This is possible because of
-                  the blockchain technology upon which cryptocurrencies operate.
+                  Things are different with crypto.{" "}
+                  <b>Transactions directly connect sender and recipient</b>{" "}
+                  without having to deal with any central authority. Nobody else
+                  will have access to your funds and{" "}
+                  <b>nobody can tell you what services you can use</b>. This is
+                  possible because of the blockchain technology upon which
+                  cryptocurrencies operate.
                 </p>
               </Width60>
             </TwoColumnContent>
@@ -520,8 +520,8 @@ const WhatIsEthereumPage = ({
               </p>
               <p>
                 Both let you use digital money without payment providers or
-                banks. But <b>Ethereum is programmable</b>, so you can also use
-                it to create any type of application on top of it.
+                banks. But <b>Ethereum is programmable</b>, so you can also
+                build and deploy decentralized applications on its network.
               </p>
               <p>
                 Ethereum being programmable means that you can build apps that
@@ -918,10 +918,9 @@ const WhatIsEthereumPage = ({
                 <b>
                   Since its launch in 2015, Ethereum has never suffered downtime
                 </b>
-                . There are currently over 1777 individual nodes running
-                Ethereum network. This makes Ethereum one of the most
-                decentralized cryptocurrencies out there, second only to
-                Bitcoin.
+                . There are thousands of individual nodes running Ethereum
+                network. This makes Ethereum one of the most decentralized
+                cryptocurrencies out there, second only to bitcoin.
               </p>
               <p>
                 <ButtonRow>
