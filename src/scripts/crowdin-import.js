@@ -114,6 +114,9 @@ const trackers = {
   emptyBuckets: 0,
 }
 
+const log = (message, ...optionalParams) =>
+  VERBOSE && console.log(message, ...optionalParams)
+
 // Filter out empty requests and map selection to usable array
 const importSelection = Object.keys(USER_SELECTION)
   .filter((repoLangCode) => {
@@ -136,8 +139,7 @@ const scrapeDirectory = (_path, contentSubpath, repoLangCode) => {
       if (!existsSync(jsonDestDirPath))
         mkdirSync(jsonDestDirPath, { recursive: true })
       const jsonDestinationPath = join(jsonDestDirPath, item)
-      if (VERBOSE)
-        console.log("Copy .json from", source, "to", jsonDestinationPath)
+      log("Copy .json from", source, "to", jsonDestinationPath)
       copyFileSync(source, jsonDestinationPath)
       // Update .json tracker
       trackers[repoLangCode].jsonCopyCount++
@@ -153,12 +155,12 @@ const scrapeDirectory = (_path, contentSubpath, repoLangCode) => {
       if (!existsSync(mdDestDirPath))
         mkdirSync(mdDestDirPath, { recursive: true })
       const mdDestinationPath = join(mdDestDirPath, item)
-      if (VERBOSE) console.log("Copy .md from", source, "to", mdDestinationPath)
+      log("Copy .md from", source, "to", mdDestinationPath)
       copyFileSync(source, mdDestinationPath)
       // Update .md tracker
       trackers[repoLangCode].mdCopyCount++
     } else {
-      if (VERBOSE) console.log(`Entering ${_path}/${item}`)
+      log(`Entering ${_path}/${item}`)
       scrapeDirectory(
         `${_path}/${item}`,
         `${contentSubpath}/${item}`,
@@ -222,7 +224,7 @@ const langsSummary = summary.reduce(
   ""
 )
 
+log("Empty buckets:", trackers.emptyBuckets)
 console.table(summary)
-console.log("Empty buckets:", trackers.emptyBuckets)
 console.log("Langs to test:", `\nGATSBY_BUILD_LANGS=en${langsSummary}`)
 console.log("🎉 Crowdin import complete.")
