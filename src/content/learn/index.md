@@ -41,6 +41,7 @@ High-level explanations of Ethereum and blockchain technology generally.
 - [Introduction to Blockchain through Cryptoeconomics - Part 2](https://medium.com/mechanism-labs/introduction-to-bitcoin-through-cryptoeconomics-part-2-proof-of-work-and-nakamoto-consensus-1252f6a6c012) _July 19, 2018 - Zubin Koticha_
 - [Understanding Ethereum](https://allan-gulley.medium.com/understanding-ethereum-819c2096b613?sk=c89f3aa5a4fd8b5fa0dae3042a3fa011) _Apr 27, 2021 - Allan Gulley_
 - [Ethereum's original Whitepaper](/whitepaper/)
+- [A Simpler Guide to Ethereum](https://mirror.xyz/brunny.eth/upIPESej7MjO2rFijwQyx8NBel845fIPV9J5G0Vn4cE) _Apr 13, 2022 - Bruno Lulinski_
 
 ## Smart contracts {#smart-contracts}
 
@@ -135,6 +136,7 @@ Podcasts addressing Ethereum and Cryptocurrencies:
 - [Zero Knowledge](https://www.zeroknowledge.fm/) _Goes deep into the tech that will power the emerging decentralised web and the community building this_
 - [Epicenter](https://epicenter.tv/) _Explores the technical, economic, and social implications of the Crypto industry_
 - [Unchained](https://unchainedpodcast.com/) _dives deep into the people building the decentralized internet, the details of this technology that could underpin our future, and some of the thorniest topics in crypto, such as regulation, security and privacy_
+- [Into the Bytecode](https://www.intothebytecode.xyz/) _A podcast about the ideas shaping crypto_
 
 ## Archived / No longer maintained: {#archived--no-longer-maintained}
 
