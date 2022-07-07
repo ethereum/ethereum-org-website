@@ -42,7 +42,11 @@ import MergeInfographic from "../components/MergeInfographic"
 import FeedbackCard from "../components/FeedbackCard"
 
 import { getLocaleTimestamp } from "../utils/time"
-import { isLangRightToLeft, translateMessageId } from "../utils/translations"
+import {
+  isLangRightToLeft,
+  translateMessageId,
+  TranslationKey,
+} from "../utils/translations"
 import { getSummaryPoints } from "../utils/getSummaryPoints"
 import { Lang } from "../utils/languages"
 import { Context } from "../types"
@@ -312,15 +316,15 @@ const dropdownLinks = {
   ariaLabel: "page-upgrades-upgrades-aria-label",
   items: [
     {
-      text: "page-upgrades-upgrades-beacon-chain",
+      text: "page-upgrades-upgrades-beacon-chain" as TranslationKey,
       to: "/upgrades/beacon-chain/",
     },
     {
-      text: "page-upgrades-upgrades-docking",
+      text: "page-upgrades-upgrades-docking" as TranslationKey,
       to: "/upgrades/merge/",
     },
     {
-      text: "page-upgrades-upgrades-shard-chains",
+      text: "page-upgrades-upgrades-shard-chains" as TranslationKey,
       to: "/upgrades/sharding/",
     },
   ],
@@ -375,8 +379,8 @@ const UpgradePage = ({
       </MoreContent>
       <Page dir={isRightToLeft ? "rtl" : "ltr"}>
         <PageMetadata
-          title={mdx.frontmatter.title}
-          description={mdx.frontmatter.description}
+          title={mdx.frontmatter.title!}
+          description={mdx.frontmatter.description!}
         />
         <InfoColumn>
           <StyledButtonDropdown list={dropdownLinks} />

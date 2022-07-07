@@ -170,9 +170,9 @@ const TutorialPage = ({
       {showMergeBanner && <PreMergeBanner />}
       <Page dir={isRightToLeft ? "rtl" : "ltr"}>
         <PageMetadata
-          title={mdx.frontmatter.title}
-          description={mdx.frontmatter.description}
-          canonicalUrl={mdx.frontmatter.sourceUrl}
+          title={mdx.frontmatter.title!}
+          description={mdx.frontmatter.description!}
+          canonicalUrl={mdx.frontmatter.sourceUrl!}
         />
         <ContentContainer>
           <H1>{mdx.frontmatter.title}</H1>

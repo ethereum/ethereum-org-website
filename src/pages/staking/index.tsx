@@ -263,7 +263,10 @@ const StakingPage = ({
     ariaLabel: "Staking options dropdown menu",
     items: [
       {
-        text: translateMessageId("page-staking-dropdown-home", intl),
+        text: translateMessageId(
+          "page-staking-dropdown-home",
+          intl
+        ) as TranslationKey,
         to: "/staking/",
         matomo: {
           eventCategory: `Staking dropdown`,
@@ -272,7 +275,10 @@ const StakingPage = ({
         },
       },
       {
-        text: translateMessageId("page-staking-dropdown-solo", intl),
+        text: translateMessageId(
+          "page-staking-dropdown-solo",
+          intl
+        ) as TranslationKey,
         to: "/staking/solo/",
         matomo: {
           eventCategory: `Staking dropdown`,
@@ -281,7 +287,10 @@ const StakingPage = ({
         },
       },
       {
-        text: translateMessageId("page-staking-dropdown-saas", intl),
+        text: translateMessageId(
+          "page-staking-dropdown-saas",
+          intl
+        ) as TranslationKey,
         to: "/staking/saas/",
         matomo: {
           eventCategory: `Staking dropdown`,
@@ -290,7 +299,10 @@ const StakingPage = ({
         },
       },
       {
-        text: translateMessageId("page-staking-dropdown-pools", intl),
+        text: translateMessageId(
+          "page-staking-dropdown-pools",
+          intl
+        ) as TranslationKey,
         to: "/staking/pools/",
         matomo: {
           eventCategory: `Staking dropdown`,

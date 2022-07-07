@@ -44,7 +44,7 @@ import StakingConsiderations from "../components/Staking/StakingConsiderations"
 import StakingCommunityCallout from "../components/Staking/StakingCommunityCallout"
 import StakingGuides from "../components/Staking/StakingGuides"
 
-import { isLangRightToLeft } from "../utils/translations"
+import { isLangRightToLeft, TranslationKey } from "../utils/translations"
 import { Context } from "../types"
 import { Lang } from "../utils/languages"
 
@@ -359,7 +359,7 @@ const StakingPage = ({
     ariaLabel: "Staking options dropdown menu",
     items: [
       {
-        text: "Staking home",
+        text: "Staking home" as TranslationKey,
         to: "/staking/",
         matomo: {
           eventCategory: `Staking dropdown`,
@@ -368,7 +368,7 @@ const StakingPage = ({
         },
       },
       {
-        text: "Solo staking",
+        text: "Solo staking" as TranslationKey,
         to: "/staking/solo/",
         matomo: {
           eventCategory: `Staking dropdown`,
@@ -377,7 +377,7 @@ const StakingPage = ({
         },
       },
       {
-        text: "Staking as a service",
+        text: "Staking as a service" as TranslationKey,
         to: "/staking/saas/",
         matomo: {
           eventCategory: `Staking dropdown`,
@@ -386,7 +386,7 @@ const StakingPage = ({
         },
       },
       {
-        text: "Pooled staking",
+        text: "Pooled staking" as TranslationKey,
         to: "/staking/pools/",
         matomo: {
           eventCategory: `Staking dropdown`,
@@ -422,8 +422,8 @@ const StakingPage = ({
       </HeroContainer>
       <Page dir={isRightToLeft ? "rtl" : "ltr"}>
         <PageMetadata
-          title={mdx.frontmatter.title}
-          description={mdx.frontmatter.description}
+          title={mdx.frontmatter.title!}
+          description={mdx.frontmatter.description!}
         />
         <InfoColumn>
           <StyledButtonDropdown list={dropdownLinks} />

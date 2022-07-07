@@ -7,7 +7,9 @@ import styled from "styled-components"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 import ButtonLink from "../components/ButtonLink"
-import ButtonDropdown from "../components/ButtonDropdown"
+import ButtonDropdown, {
+  List as ButtonDropdownList,
+} from "../components/ButtonDropdown"
 import BannerNotification from "../components/BannerNotification"
 import Card from "../components/Card"
 import ExpandableCard from "../components/ExpandableCard"
@@ -334,7 +336,7 @@ const UseCasePage = ({
     useCase = "dao"
   }
 
-  const dropdownLinks = {
+  const dropdownLinks: ButtonDropdownList = {
     text: "template-usecase-dropdown",
     ariaLabel: "template-usecase-dropdown-aria",
     items: [
@@ -404,8 +406,8 @@ const UseCasePage = ({
       </MoreContent>
       <Page dir={isRightToLeft ? "rtl" : "ltr"}>
         <PageMetadata
-          title={mdx.frontmatter.title}
-          description={mdx.frontmatter.description}
+          title={mdx.frontmatter.title!}
+          description={mdx.frontmatter.description!}
         />
         <InfoColumn>
           <StyledButtonDropdown list={dropdownLinks} />
