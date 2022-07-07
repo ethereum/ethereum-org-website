@@ -71,7 +71,7 @@ Some collaborative efforts to make Ethereum enterprise friendly have been made b
 - [Epirus](https://www.web3labs.com/epirus) _a platform for developing, deploying and monitoring blockchain applications by Web3 Labs_
 - [Ernst & Young's ‘Nightfall'](https://github.com/EYBlockchain/nightfall) _a toolkit for private transactions_
 - [EthSigner](https://github.com/ConsenSys/ethsigner) _a transaction signing application to be used with a web3 provider_
-- [Tenderly](https://tenderly.co/) _a Data Platform providing real-time analytics, alerting and monitoring with support for private networks._
+- [Tenderly](https://tenderly.co/) _a Data Platform providing real-time analytics, alerting and monitoring with support for private networks_
 - [Truffle Suite](https://trufflesuite.com) _blockchain development suite (Truffle, Ganache, Drizzle)_
 
 ### Scalability solutions {#scalability-solutions}
@@ -116,8 +116,8 @@ Here are some of the enterprise applications that have been deployed to the publ
 
 ### Payments {#payments}
 
-- [Brave Browser](https://basicattentiontoken.org/) _pays users for their attention to advertisements and users can pay publishers to support them, via the Basic Attention Token._
-- [hCaptcha](https://www.hcaptcha.com/) _Bot prevention CAPTCHA system which pays web site operators for the work done by users to label data for machine learning. Now deployed by Cloudflare._
+- [Brave Browser](https://basicattentiontoken.org/) _pays users for their attention to advertisements and users can pay publishers to support them, via the Basic Attention Token_
+- [hCaptcha](https://www.hcaptcha.com/) _Bot prevention CAPTCHA system which pays web site operators for the work done by users to label data for machine learning. Now deployed by Cloudflare_
 - [Audius](https://audius.co/) _a streaming service that connects music fans directly with artists, and allows artists to be paid in full by their fans, directly and instantly for every stream_
 - [EthereumAds](https://ethereumads.com/) _lets web site operators sell advertising space and get paid via Ethereum_
 
