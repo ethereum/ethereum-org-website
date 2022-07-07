@@ -304,7 +304,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
             </CardGrid>
 
             <AdditionalReadingHeader>
-              Additional reading on Ethereum
+              More on Ethereum basics
             </AdditionalReadingHeader>
             <DocsContainer>
               <DocLink to="/smart-contracts/">
@@ -397,7 +397,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
             </Banner>
 
             <AdditionalReadingHeader>
-              Additional reading on Ethereum
+              More on using Ethereum
             </AdditionalReadingHeader>
             <DocsContainer>
               <DocLink to="/community/support/">
@@ -523,7 +523,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
             </CardGrid>
 
             <AdditionalReadingHeader>
-              Additional reading on Ethereum
+              More on Ethereum use cases
             </AdditionalReadingHeader>
             <DocsContainer>
               <DocLink
@@ -616,7 +616,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
             </CardGrid>
 
             <AdditionalReadingHeader>
-              More about the Ethereum protocol
+              More on the Ethereum protocol
             </AdditionalReadingHeader>
             <DocsContainer>
               <DocLink to="/developers/">Ethereum for developers</DocLink>
