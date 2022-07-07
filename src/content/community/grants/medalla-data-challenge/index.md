@@ -1,5 +1,5 @@
 ---
-title: Medalla data challenge
+title: Clone Medalla data challenge for data vis
 description: Instructions, deadlines, and prize information for the Eth2 Medalla testnet data challenge
 lang: en
 sidebar: true
