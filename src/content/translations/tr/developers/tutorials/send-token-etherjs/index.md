@@ -6,7 +6,7 @@ tags:
   - "ETHERS.JS"
   - "ERC-20"
   - "TOKEN'LAR"
-skill: acemi
+skill: yeni başlayan
 lang: tr
 sidebar: true
 published: 2021-04-06

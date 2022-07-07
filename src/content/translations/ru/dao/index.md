@@ -98,7 +98,7 @@ Ethereum — идеальный фундамент для DAO по ряду пр
 ### Запуск DAO {#start-a-dao}
 
 - [Вызов DAO с DAOHaus](https://app.daohaus.club/summon)
-- [Создание DAO на основе Aragon](https://aragon.org/product)
+- [Создать DAO на основе Aragon](https://aragon.org/product)
 - [Запуск сообщества Colony](https://colony.io/)
 - [Создание DAO с помощью DAOstack](https://daostack.io/)
 

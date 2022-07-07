@@ -7,6 +7,9 @@ import defaultStrings from "../intl/en.json"
 
 export type TranslationKey = keyof typeof defaultStrings
 
+export const isTranslationKey = (key: string): key is TranslationKey =>
+  Object.keys(defaultStrings).includes(key as TranslationKey)
+
 const consoleError = (message: string): void => {
   const { NODE_ENV } = process.env
   if (NODE_ENV === "development") {
