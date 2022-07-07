@@ -10,7 +10,7 @@ tags:
   - "securitate"
   - "testare"
   - "fuzzing"
-skill: avansat
+skill: advanced
 published: 2020-04-10
 source: Construirea de contracte securizate
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/echidna
