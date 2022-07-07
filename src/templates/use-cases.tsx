@@ -303,11 +303,12 @@ const UseCasePage = ({
   pageContext,
 }: PageProps<Queries.UseCasePageQuery, Context>) => {
   const intl = useIntl()
-  if (!siteData || !mdx?.frontmatter) {
+  if (!siteData || !mdx?.frontmatter)
     throw new Error(
       "UseCases page template query does not return expected values"
     )
-  }
+  if (!mdx?.frontmatter?.title)
+    throw new Error("Required `title` property missing for use-cases template")
 
   const isRightToLeft = isLangRightToLeft(mdx.frontmatter.lang as Lang)
   const showMergeBanner = !!mdx.frontmatter.preMergeBanner
@@ -404,8 +405,8 @@ const UseCasePage = ({
       </MoreContent>
       <Page dir={isRightToLeft ? "rtl" : "ltr"}>
         <PageMetadata
-          title={mdx.frontmatter.title || ""}
-          description={mdx.frontmatter.description || ""}
+          title={mdx.frontmatter.title}
+          description={mdx.frontmatter.description}
         />
         <InfoColumn>
           <StyledButtonDropdown list={dropdownLinks} />

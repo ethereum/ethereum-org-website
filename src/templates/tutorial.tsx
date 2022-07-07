@@ -151,11 +151,12 @@ const TutorialPage = ({
   data: { siteData, pageData: mdx },
   pageContext,
 }: PageProps<Queries.TutorialPageQuery, Context>) => {
-  if (!siteData || !mdx?.frontmatter) {
+  if (!siteData || !mdx?.frontmatter)
     throw new Error(
       "Tutorial page template query does not return expected values"
     )
-  }
+  if (!mdx?.frontmatter?.title)
+    throw new Error("Required `title` property missing for tutorial template")
 
   const isRightToLeft = isLangRightToLeft(mdx.frontmatter.lang as Lang)
   const showMergeBanner = !!mdx.frontmatter.preMergeBanner
@@ -170,8 +171,8 @@ const TutorialPage = ({
       {showMergeBanner && <PreMergeBanner />}
       <Page dir={isRightToLeft ? "rtl" : "ltr"}>
         <PageMetadata
-          title={mdx.frontmatter.title || ""}
-          description={mdx.frontmatter.description || ""}
+          title={mdx.frontmatter.title}
+          description={mdx.frontmatter.description}
           canonicalUrl={mdx.frontmatter.sourceUrl}
         />
         <ContentContainer>

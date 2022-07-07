@@ -344,11 +344,12 @@ const StakingPage = ({
   data: { pageData: mdx },
   location,
 }: PageProps<Queries.StakingPageQuery, Context>) => {
-  if (!mdx?.frontmatter) {
+  if (!mdx?.frontmatter || !mdx?.frontmatter?.title)
     throw new Error(
       "Staking page template query does not return expected values"
     )
-  }
+  if (!mdx?.frontmatter?.title)
+    throw new Error("Required `title` property missing for staking template")
 
   const isRightToLeft = isLangRightToLeft(mdx.frontmatter.lang as Lang)
   const tocItems = mdx.tableOfContents?.items
@@ -422,8 +423,8 @@ const StakingPage = ({
       </HeroContainer>
       <Page dir={isRightToLeft ? "rtl" : "ltr"}>
         <PageMetadata
-          title={mdx.frontmatter.title || ""}
-          description={mdx.frontmatter.description || ""}
+          title={mdx.frontmatter.title}
+          description={mdx.frontmatter.description}
         />
         <InfoColumn>
           <StyledButtonDropdown list={dropdownLinks} />
