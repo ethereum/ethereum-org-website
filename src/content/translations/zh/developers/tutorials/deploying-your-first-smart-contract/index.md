@@ -8,7 +8,7 @@ tags:
   - "solidity"
   - "入门指南"
   - "部署"
-skill: 初学者
+skill: beginner
 lang: zh
 sidebar: true
 published: 2020-04-03

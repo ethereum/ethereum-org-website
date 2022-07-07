@@ -9,7 +9,7 @@ tags:
   - "MetaMask"
   - "非同质化代币"
   - "Solidity"
-skill: 初学者
+skill: beginner
 lang: zh
 sidebar: true
 published: 2021-04-22

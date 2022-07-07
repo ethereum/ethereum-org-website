@@ -6,7 +6,7 @@ tags:
   - "交易"
   - "web3.js"
   - "alchemy"
-skill: 初学者
+skill: beginner
 lang: zh
 sidebar: true
 published: 2020-11-04

@@ -7,7 +7,7 @@ tags:
   - "erc-721"
   - "solidity"
   - "代币"
-skill: 中等难度
+skill: intermediate
 lang: zh
 sidebar: true
 published: 2020-03-19
