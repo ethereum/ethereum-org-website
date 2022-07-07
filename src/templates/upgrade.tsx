@@ -379,8 +379,8 @@ const UpgradePage = ({
       </MoreContent>
       <Page dir={isRightToLeft ? "rtl" : "ltr"}>
         <PageMetadata
-          title={mdx.frontmatter.title!}
-          description={mdx.frontmatter.description!}
+          title={mdx.frontmatter.title}
+          description={mdx.frontmatter.description}
         />
         <InfoColumn>
           <StyledButtonDropdown list={dropdownLinks} />
