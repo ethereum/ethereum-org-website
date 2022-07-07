@@ -344,7 +344,7 @@ const StakingPage = ({
   data: { pageData: mdx },
   location,
 }: PageProps<Queries.StakingPageQuery, Context>) => {
-  if (!mdx?.frontmatter || !mdx?.frontmatter?.title)
+  if (!mdx?.frontmatter)
     throw new Error(
       "Staking page template query does not return expected values"
     )
