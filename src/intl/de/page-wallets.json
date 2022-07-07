@@ -38,7 +38,7 @@
   "page-wallets-meta-description": "Was Sie wissen müssen, um Ethereum-Wallets zu verwenden.",
   "page-wallets-meta-title": "Ethereum-Wallets",
   "page-wallets-mobile": "Mobilanwendungen, die Ihr Guthaben von überall aus zugänglich machen",
-  "page-wallets-more-on-dapps-btn": "Mehr zu dApps",
+  "page-wallets-more-on-dapps-btn": "Mehr zu DApps",
   "page-wallets-most-wallets": "Die meisten Wallet-Produkte ermöglichen es Ihnen, ein Ethereum-Konto zu erstellen. Sie benötigen also kein Konto, bevor Sie eine Wallet herunterladen.",
   "page-wallets-protecting-yourself": "Schützen Sie sich und Ihre Anlagen",
   "page-wallets-seed-phrase": "Schreiben Sie Ihre Seed-Phrase auf",
@@ -57,7 +57,7 @@
   "page-wallets-title": "Ethereum-Wallets",
   "page-wallets-triple-check": "Überprüfen Sie alles dreifach",
   "page-wallets-triple-check-desc": "Denken Sie daran, dass Transaktionen nicht rückgängig gemacht werden können und Wallets nicht einfach wiederhergestellt werden können, also sollten Sie Vorsichtsmaßnahmen treffen und immer vorsichtig sein.",
-  "page-wallets-try-dapps": "Testen Sie ein paar dApps",
+  "page-wallets-try-dapps": "Testen Sie ein paar DApps",
   "page-wallets-try-dapps-alt": "Eine Illustration von Mitgliedern der Ethereum-Community in Zusammenarbeit",
   "page-wallets-try-dapps-desc": "dApps sind Anwendungen, die auf Ethereum basieren. Sie sind günstiger, fairer und netter zu Ihren Daten als die meisten traditionellen Anwendungen.",
   "page-wallets-types": "Arten von Wallets",
@@ -66,5 +66,5 @@
   "page-wallets-your-ethereum-account": "Ihr Ethereum-Konto",
   "page-wallets-your-ethereum-account-desc": "Ihre Wallet ist Ihr Fenster in Ihr Ethereum-Konto – Ihr Guthaben, Transaktionsverlauf und vieles mehr. Sie können jedoch jederzeit Wallet-Anbieter austauschen.",
   "page-wallets-your-login": "Ihr Login für Ethereum-Anwendungen",
-  "page-wallets-your-login-desc": "Ihre Wallet lässt Sie mit jeder dezentralen Anwendung über Ihr Ethereum-Konto verbinden. Es ist wie ein Login, den Sie über viele dApps hinweg verwenden können."
+  "page-wallets-your-login-desc": "Ihre Wallet lässt Sie mit jeder dezentralen Anwendung über Ihr Ethereum-Konto verbinden. Es ist wie ein Login, den Sie über viele DApps hinweg verwenden können."
 }

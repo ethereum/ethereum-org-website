@@ -1,4 +1,7 @@
 {
+  "page-get-eth-article-keeping-crypto-safe": "Секрети безпеки вашої криптовалюти",
+  "page-get-eth-article-protecting-yourself": "Як захистити себе й свої кошти",
+  "page-get-eth-article-store-digital-assets": "Як зберігати цифрові об’єкти в мережі Ethereum",
   "page-get-eth-cex": "Централізовані обмінники",
   "page-get-eth-cex-desc": "Обмінники – це компанії, які дають вам змогу купувати криптовалюту за традиційні гроші. Їм належать куплені вами ETH, доки ви не надішлете їх у гаманець, яким керуєте.",
   "page-get-eth-checkout-dapps-btn": "Переглянути додатки",
@@ -21,6 +24,7 @@
   "page-get-eth-exchanges-no-exchanges": "На жаль, у цій країні немає обмінників, у яких ви могли б придбати ETH. Якщо такі є, повідомте нас за адресою",
   "page-get-eth-exchanges-no-exchanges-or-wallets": "На жаль, у цій країні немає обмінників або гаманців, у яких ви могли б придбати ETH. Якщо такі є, повідомте нас за адресою",
   "page-get-eth-exchanges-no-wallets": "На жаль, у цій країні немає гаманців, у яких ви могли б придбати ETH. Якщо такі є, повідомте нас за адресою",
+  "page-get-eth-exchanges-search": "Вкажіть, де ви живете...",
   "page-get-eth-exchanges-success-exchange": "Реєстрація в обміннику може тривати кілька днів у зв’язку з юридичними перевірками.",
   "page-get-eth-exchanges-success-wallet-link": "гаманці",
   "page-get-eth-exchanges-success-wallet-paragraph": "У цій країні можна придбати ETH прямо в наведених тут гаманцях. Докладніше про",

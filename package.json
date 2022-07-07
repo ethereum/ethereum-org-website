@@ -88,6 +88,7 @@
   "scripts": {
     "build": "gatsby build",
     "build:lambda": "netlify-lambda build src/lambda",
+    "build:10gb": "NODE_OPTIONS=--max-old-space-size=10240 gatsby build",
     "clean": "gatsby clean",
     "copy-contributors": "node src/scripts/copy-contributors.js",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",

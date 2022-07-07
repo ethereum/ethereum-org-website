@@ -320,7 +320,7 @@ const dropdownLinks = {
       to: "/upgrades/merge/",
     },
     {
-      text: "page-upgrades-upgrades-shard-chains",
+      text: "page-upgrades-shard-title",
       to: "/upgrades/sharding/",
     },
   ],

@@ -89,7 +89,7 @@ sidebarDepth: 2
 
 - [GitHub](https://github.com/vrde/ethnode)
 
-** DAppNode - \*\***_操作系统 GUI，用于在专用计算机上运行 Web3 节点（包括以太坊和信标链）。_\*\*
+** DAppNode -** **_操作系统 GUI，用于在专用计算机上运行 Web3 节点（包括以太坊和信标链）。_**
 
 - [dappnode.io](https://dappnode.io)
 
