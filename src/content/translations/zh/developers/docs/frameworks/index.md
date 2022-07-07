@@ -82,7 +82,7 @@ sidebar: true
 
 **Foundry -** **_ 一种快速便携的模块化工具包，适用于使用 Rust 语言进行以太坊应用程序开发。_**
 
-- [相关文档](https://onbjerg.github.io/foundry-book/)
+- [相关文档](https://book.getfoundry.sh/)
 - [GitHub](https://github.com/gakonst/foundry/)
 - [面向 Foundry 的工具](https://github.com/crisgarner/awesome-foundry)
 

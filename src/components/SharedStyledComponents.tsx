@@ -140,9 +140,6 @@ export const NavLink = styled(Link)`
       fill: ${(props) => props.theme.colors.primary};
     }
   }
-  &.active {
-    font-weight: bold;
-  }
 `
 
 // Avoid DOM error for nested links

@@ -88,18 +88,18 @@ Por último, al decidir si incluir o no una biblioteca, considera su uso general
 
 ## Herramientas relacionadas {#related-tools}
 
-**Contratos de OpenZeppelin: \*\***_La biblioteca más popular para el desarrollo seguro de contratos inteligentes._\*\*
+**Contratos de OpenZeppelin:** **_La biblioteca más popular para el desarrollo seguro de contratos inteligentes._**
 
 - [Documentación](https://docs.openzeppelin.com/contracts/)
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-contracts)
 - [Foro de la comunidad](https://forum.openzeppelin.com/c/general/16)
 
-**DappSys: \*\***_Bloques de creación simples, flexibles y seguros para contratos inteligentes. _\*\*
+**DappSys:** **_Bloques de creación simples, flexibles y seguros para contratos inteligentes. _**
 
 - [Documentación](https://dappsys.readthedocs.io/)
 - [GitHub](https://github.com/dapphub/dappsys)
 
-**HQ20: \*\***_Un proyecto de Solidity con contratos, bibliotecas y ejemplos para ayudarte a construir aplicaciones distribuidas con todas las características para el mundo real._\*\*
+**HQ20:** **_Un proyecto de Solidity con contratos, bibliotecas y ejemplos para ayudarte a construir aplicaciones distribuidas con todas las características para el mundo real._**
 
 - [GitHub](https://github.com/HQ20/contracts)
 
