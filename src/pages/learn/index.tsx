@@ -253,11 +253,14 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
             <p>
               You have probably heard a thing or two about cryptocurrencies,
               Bitcoin, and blockchain, but do you know what those actually are
-              and how they relate to Ethereum? <Link to="/what-is-ethereum/">And what is Ethereum anyway?</Link>
-            <p>
+              and how they relate to Ethereum?{" "}
+              <Link to="/what-is-ethereum/">And what is Ethereum anyway?</Link>
             </p>
             <p>
-Not only can Ethereum do what Bitcoin does (transfer money globally), it’s capable of much more – anyone can deploy code onto the network. And because it’s so flexible, any computer program can run on Ethereum.
+              Not only can Ethereum do what Bitcoin does (transfer money
+              globally), it’s capable of much more – anyone can deploy code onto
+              the network. And because it’s so flexible, any computer program
+              can run on Ethereum.
             </p>
             <CardGrid>
               <Card
@@ -282,10 +285,7 @@ Not only can Ethereum do what Bitcoin does (transfer money globally), it’s cap
               >
                 <>
                   <CardImage>
-                    <GatsbyImage
-                      image={getImage(data.eth)}
-                      alt=""
-                    />
+                    <GatsbyImage image={getImage(data.eth)} alt="" />
                   </CardImage>
                   <ButtonLink to="/eth/">What is ETH?</ButtonLink>
                 </>
@@ -296,10 +296,7 @@ Not only can Ethereum do what Bitcoin does (transfer money globally), it’s cap
               >
                 <>
                   <CardImage>
-                    <GatsbyImage
-                      image={getImage(data.impact)}
-                      alt=""
-                    />
+                    <GatsbyImage image={getImage(data.impact)} alt="" />
                   </CardImage>
                   <ButtonLink to="/get-eth/">Where can I get ETH?</ButtonLink>
                 </>
@@ -329,7 +326,10 @@ Not only can Ethereum do what Bitcoin does (transfer money globally), it’s cap
           <Section>
             <h2 id={tocItems[1].id}>{tocItems[1].title}</h2>
             <p>
-Using Ethereum is relatively straightforward once you get the hang of it. First, you need to download a "wallet". A wallet is an app that helps you store your crypto and interact with applications on Ethereum.
+              Using Ethereum is relatively straightforward once you get the hang
+              of it. First, you need to download a "wallet". A wallet is an app
+              that helps you store your crypto and interact with applications on
+              Ethereum.
             </p>
             <CardGrid>
               <Card
@@ -368,10 +368,7 @@ Using Ethereum is relatively straightforward once you get the hang of it. First,
               >
                 <>
                   <CardImage>
-                    <GatsbyImage
-                      image={getImage(data.dogeComputer)}
-                      alt=""
-                    />
+                    <GatsbyImage image={getImage(data.dogeComputer)} alt="" />
                   </CardImage>
                   <ButtonLink to="/security/">Stay secure</ButtonLink>
                 </>
@@ -388,16 +385,14 @@ Using Ethereum is relatively straightforward once you get the hang of it. First,
                     like the stablecoins USDC or DAI.
                   </li>
                   <li>
-                    Fees can be high depending on the number of people trying to use Ethereum, so we recommend
-                    using <Link to="/layer-2/">Layer 2s</Link>.
+                    Fees can be high depending on the number of people trying to
+                    use Ethereum, so we recommend using{" "}
+                    <Link to="/layer-2/">Layer 2s</Link>.
                   </li>
                 </ul>
               </BannerBody>
               <BannerImage>
-                <GatsbyImage
-                  image={getImage(data.newRings)}
-                  alt=""
-                />
+                <GatsbyImage image={getImage(data.newRings)} alt="" />
               </BannerImage>
             </Banner>
 
@@ -442,10 +437,7 @@ Using Ethereum is relatively straightforward once you get the hang of it. First,
               >
                 <>
                   <CardImage>
-                    <GatsbyImage
-                      image={getImage(data.stablecoins)}
-                      alt=""
-                    />
+                    <GatsbyImage image={getImage(data.stablecoins)} alt="" />
                   </CardImage>
                   <ButtonLink to="/stablecoins/">
                     What are stablecoins?
@@ -472,10 +464,7 @@ Using Ethereum is relatively straightforward once you get the hang of it. First,
               >
                 <>
                   <CardImage>
-                    <GatsbyImage
-                      image={getImage(data.dao)}
-                      alt=""
-                    />
+                    <GatsbyImage image={getImage(data.dao)} alt="" />
                   </CardImage>
                   <ButtonLink to="/dao/">What are DAOs?</ButtonLink>
                 </>
@@ -560,10 +549,7 @@ Using Ethereum is relatively straightforward once you get the hang of it. First,
               >
                 <>
                   <CardImage>
-                    <GatsbyImage
-                      image={getImage(data.rhino)}
-                      alt=""
-                    />
+                    <GatsbyImage image={getImage(data.rhino)} alt="" />
                   </CardImage>
                   <ButtonLink to="/staking/">Start staking</ButtonLink>
                 </>
@@ -574,10 +560,7 @@ Using Ethereum is relatively straightforward once you get the hang of it. First,
               >
                 <>
                   <CardImage>
-                    <GatsbyImage
-                      image={getImage(data.ethereumInside)}
-                      alt=""
-                    />
+                    <GatsbyImage image={getImage(data.ethereumInside)} alt="" />
                   </CardImage>
                   <ButtonLink to="/run-a-node/">Run a node</ButtonLink>
                 </>
@@ -598,10 +581,7 @@ Using Ethereum is relatively straightforward once you get the hang of it. First,
               >
                 <>
                   <CardImage>
-                    <GatsbyImage
-                      image={getImage(data.hackathon)}
-                      alt=""
-                    />
+                    <GatsbyImage image={getImage(data.hackathon)} alt="" />
                   </CardImage>
                   <ButtonLink to="/energy-consumption/">
                     Is Ethereum green?
@@ -614,10 +594,7 @@ Using Ethereum is relatively straightforward once you get the hang of it. First,
               >
                 <>
                   <CardImage>
-                    <GatsbyImage
-                      image={getImage(data.merge)}
-                      alt=""
-                    />
+                    <GatsbyImage image={getImage(data.merge)} alt="" />
                   </CardImage>
                   <ButtonLink to="/upgrades/">Explore upgrades</ButtonLink>
                 </>
@@ -642,9 +619,7 @@ Using Ethereum is relatively straightforward once you get the hang of it. First,
               More about the Ethereum protocol
             </AdditionalReadingHeader>
             <DocsContainer>
-              <DocLink to="/developers/">
-                Ethereum for developers
-              </DocLink>
+              <DocLink to="/developers/">Ethereum for developers</DocLink>
               <DocLink to="/eips/">Ethereum Improvement Proposals</DocLink>
               <DocLink to="/history/">Ethereum History</DocLink>
               <DocLink to="/governance/">Governance</DocLink>
@@ -658,7 +633,9 @@ Using Ethereum is relatively straightforward once you get the hang of it. First,
           <Section>
             <h2 id={tocItems[5].id}>{tocItems[5].title}</h2>
             <p>
-The success of Ethereum is thanks to its incredibly dedicated community. Thousands of inspiring and driven people help push Ethereum’s vision forward. Come and join us!
+              The success of Ethereum is thanks to its incredibly dedicated
+              community. Thousands of inspiring and driven people help push
+              Ethereum’s vision forward. Come and join us!
             </p>
             <CardGrid>
               <Card
@@ -681,10 +658,7 @@ The success of Ethereum is thanks to its incredibly dedicated community. Thousan
               >
                 <>
                   <CardImage>
-                    <GatsbyImage
-                      image={getImage(data.dogeComputer)}
-                      alt=""
-                    />
+                    <GatsbyImage image={getImage(data.dogeComputer)} alt="" />
                   </CardImage>
                   <ButtonLink to="/community/get-involved/">
                     How can I get Involved?
@@ -697,10 +671,7 @@ The success of Ethereum is thanks to its incredibly dedicated community. Thousan
               >
                 <>
                   <CardImage>
-                    <GatsbyImage
-                      image={getImage(data.impact)}
-                      alt=""
-                    />
+                    <GatsbyImage image={getImage(data.impact)} alt="" />
                   </CardImage>
                   <ButtonLink to="/community/online/">
                     Explore communities
@@ -740,7 +711,7 @@ The success of Ethereum is thanks to its incredibly dedicated community. Thousan
                     The Age of Cryptocurrency: How Bitcoin and the Blockchain
                     Are Challenging the Global Economic Order
                   </Link>{" "}
-                  <em>January 12, 2016 - Paul Vigna, Michael J. Casey</em>
+                  <i>January 12, 2016 - Paul Vigna, Michael J. Casey</i>
                 </li>
                 <li>
                   <Link to="https://www.goodreads.com/en/book/show/34964890-the-truth-machine">
@@ -777,49 +748,49 @@ The success of Ethereum is thanks to its incredibly dedicated community. Thousan
               <ul>
                 <li>
                   <Link to="https://podcast.ethhub.io/">Into the Ether</Link>{" "}
-                  <em>A podcast focusing on all things Ethereum and DeFi</em>
+                  <i>A podcast focusing on all things Ethereum and DeFi</i>
                 </li>
                 <li>
                   <Link to="http://podcast.banklesshq.com/">Bankless</Link>{" "}
-                  <em>A guide to Crypto finance</em>
+                  <i>A guide to Crypto finance</i>
                 </li>
                 <li>
                   <Link to="https://uncommoncore.co/podcast/">
                     Uncommon Core
                   </Link>{" "}
-                  <em>
+                  <i>
                     Explores the transformative nature of trust-minimized
                     currency and financial services
-                  </em>
+                  </i>
                 </li>
                 <li>
                   <Link to="https://www.zeroknowledge.fm/">Zero Knowledge</Link>{" "}
-                  <em>
+                  <i>
                     Goes deep into the tech that will power the emerging
                     decentralized web and the community building this
-                  </em>
+                  </i>
                 </li>
                 <li>
                   <Link to="https://epicenter.tv/">Epicenter</Link>{" "}
-                  <em>
+                  <i>
                     Explores the technical, economic, and social implications of
                     the Crypto industry
-                  </em>
+                  </i>
                 </li>
                 <li>
                   <Link to="https://unchainedpodcast.com/">Unchained</Link>{" "}
-                  <em>
+                  <i>
                     dives deep into the people building the decentralized
                     internet, the details of this technology that could underpin
                     our future, and some of the thorniest topics in crypto, such
                     as regulation, security and privacy
-                  </em>
+                  </i>
                 </li>
                 <li>
                   <Link to="https://www.intothebytecode.xyz/">
                     Into the Bytecode
                   </Link>{" "}
-                  <em>A podcast about the ideas shaping crypto</em>
+                  <i>A podcast about the ideas shaping crypto</i>
                 </li>
               </ul>
             </div>
