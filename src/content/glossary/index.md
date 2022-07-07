@@ -217,10 +217,10 @@ DAG stands for Directed Acyclic Graph. It is a data structure composed of nodes 
 
 ### Dapp {#dapp}
 
-Decentralized application. At a minimum, it is a [smart contract](#smart-contract) and a web user interface. More broadly, a Dapp is a web application that is built on top of open, decentralized, peer-to-peer infrastructure services. In addition, many Dapps include decentralized storage and/or a message protocol and platform.
+Decentralized application. At a minimum, it is a [smart contract](#smart-contract) and a web user interface. More broadly, a dapp is a web application that is built on top of open, decentralized, peer-to-peer infrastructure services. In addition, many dapps include decentralized storage and/or a message protocol and platform.
 
 <DocLink to="/developers/docs/dapps/">
-  Introduction to Dapps
+  Introduction to dapps
 </DocLink>
 
 ### data availability {#data-availability}
@@ -1050,7 +1050,7 @@ Software that holds [private keys](#private-key). Used to access and control Eth
 
 ### Web3 {#web3}
 
-The third version of the web. First proposed by Dr. Gavin Wood, Web3 represents a new vision and focus for web applications- from centrally owned and managed applications, to applications built on decentralized protocols (see [Dapp](#dapp)).
+The third version of the web. First proposed by Dr. Gavin Wood, Web3 represents a new vision and focus for web applications- from centrally owned and managed applications, to applications built on decentralized protocols (see [dapp](#dapp)).
 
 <DocLink to="/developers/docs/web2-vs-web3/">
   Web2 vs Web3
