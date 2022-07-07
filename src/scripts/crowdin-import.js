@@ -11,200 +11,59 @@ const FULL_BUCKET_NAME_SUMMARY = false
  * 1. Copy languages folder from Crowdin export to ./.crowdin
  * ie. ./.crowdin/{lang-codes}
  *
- * 2. Select languages and buckets to import by adding the number of the
- * corresponding content bucket to the `buckets` array below
+ * 2. Select buckets to import by adding the number of the corresponding
+ * content bucket to the chosen language array below
  * ie. `buckets: [1, 10],` would import the "Homepage" and "Learn" buckets
  */
-const SELECTION = [
-  {
-    lang: "ar",
-    buckets: [],
-  },
-  {
-    lang: "az",
-    buckets: [],
-  },
-  {
-    lang: "bg",
-    buckets: [],
-  },
-  {
-    lang: "bn",
-    buckets: [],
-  },
-  {
-    lang: "ca",
-    buckets: [],
-  },
-  {
-    lang: "cs",
-    buckets: [],
-  },
-  {
-    lang: "da",
-    buckets: [],
-  },
-  {
-    lang: "de",
-    buckets: [],
-  },
-  {
-    lang: "el",
-    buckets: [],
-  },
-  {
-    lang: "es",
-    buckets: [],
-  },
-  {
-    lang: "fa",
-    buckets: [],
-  },
-  {
-    lang: "fi",
-    buckets: [],
-  },
-  {
-    lang: "fr",
-    buckets: [],
-  },
-  {
-    lang: "gl",
-    buckets: [],
-  },
-  {
-    lang: "hi",
-    buckets: [],
-  },
-  {
-    lang: "hr",
-    buckets: [],
-  },
-  {
-    lang: "hu",
-    buckets: [],
-  },
-  {
-    lang: "id",
-    buckets: [],
-  },
-  {
-    lang: "ig",
-    buckets: [],
-  },
-  {
-    lang: "it",
-    buckets: [],
-  },
-  {
-    lang: "ja",
-    buckets: [],
-  },
-  {
-    lang: "ka",
-    buckets: [],
-  },
-  {
-    lang: "kk",
-    buckets: [],
-  },
-  {
-    lang: "ko",
-    buckets: [],
-  },
-  {
-    lang: "lt",
-    buckets: [],
-  },
-  {
-    lang: "ml",
-    buckets: [],
-  },
-  {
-    lang: "ms",
-    buckets: [],
-  },
-  {
-    lang: "mr",
-    buckets: [],
-  },
-  {
-    lang: "nb",
-    buckets: [],
-  },
-  {
-    lang: "nl",
-    buckets: [],
-  },
-  {
-    lang: "ph",
-    buckets: [],
-  },
-  {
-    lang: "pl",
-    buckets: [],
-  },
-  {
-    lang: "pt",
-    buckets: [],
-  },
-  {
-    lang: "pt-br",
-    buckets: [],
-  },
-  {
-    lang: "ro",
-    buckets: [],
-  },
-  {
-    lang: "ru",
-    buckets: [],
-  },
-  {
-    lang: "se",
-    buckets: [],
-  },
-  {
-    lang: "sk",
-    buckets: [],
-  },
-  {
-    lang: "sl",
-    buckets: [],
-  },
-  {
-    lang: "sr",
-    buckets: [],
-  },
-  {
-    lang: "sw",
-    buckets: [],
-  },
-  {
-    lang: "th",
-    buckets: [],
-  },
-  {
-    lang: "tr",
-    buckets: [],
-  },
-  {
-    lang: "uk",
-    buckets: [],
-  },
-  {
-    lang: "vi",
-    buckets: [],
-  },
-  {
-    lang: "zh",
-    buckets: [],
-  },
-  {
-    lang: "zh-tw",
-    buckets: [],
-  },
-]
+const USER_SELECTION = {
+  ar: [],
+  az: [],
+  bg: [],
+  bn: [],
+  ca: [],
+  cs: [],
+  da: [],
+  de: [],
+  el: [],
+  es: [],
+  fa: [],
+  fi: [],
+  fr: [],
+  gl: [],
+  hi: [],
+  hr: [],
+  hu: [],
+  id: [],
+  ig: [],
+  it: [],
+  ja: [],
+  ka: [],
+  kk: [],
+  ko: [],
+  lt: [],
+  ml: [],
+  ms: [],
+  mr: [],
+  nb: [],
+  nl: [],
+  ph: [],
+  pl: [],
+  pt: [],
+  "pt-br": [],
+  ro: [],
+  ru: [],
+  se: [],
+  sk: [],
+  sl: [],
+  sr: [],
+  sw: [],
+  th: [],
+  tr: [],
+  uk: [],
+  vi: [],
+  zh: [],
+  "zh-tw": [],
+}
 /**
  * 3. Save file without committing
  * 4. Execute script by running `yarn crowdin-import`
@@ -256,13 +115,16 @@ const trackers = {
 }
 
 // Filter out empty requests and map selection to usable array
-const importSelection = SELECTION.filter(({ buckets }) => {
-  if (buckets.length === 0) trackers.emptyBuckets++
-  return buckets.length > 0
-}).map(({ lang: repoLangCode, buckets }) => {
-  const crowdinLangCode = repoToCrowdinCode[repoLangCode] || repoLangCode
-  return { repoLangCode, crowdinLangCode, buckets }
-})
+const importSelection = Object.keys(USER_SELECTION)
+  .filter((repoLangCode) => {
+    if (!USER_SELECTION[repoLangCode].length) trackers.emptyBuckets++
+    return !!USER_SELECTION[repoLangCode].length
+  })
+  .map((repoLangCode) => ({
+    repoLangCode,
+    crowdinLangCode: repoToCrowdinCode[repoLangCode] || repoLangCode,
+    buckets: USER_SELECTION[repoLangCode],
+  }))
 
 const scrapeDirectory = (_path, contentSubpath, repoLangCode) => {
   if (!existsSync(_path)) return null
