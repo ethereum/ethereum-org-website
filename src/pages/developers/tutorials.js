@@ -24,6 +24,7 @@ import { getLocaleTimestamp, INVALID_DATETIME } from "../../utils/time"
 
 import foreignTutorials from "../../data/externalTutorials.json"
 import FeedbackCard from "../../components/FeedbackCard"
+import { getSkillTranslationId } from "../../components/TutorialMetadata"
 
 const SubSlogan = styled.p`
   font-size: 1.25rem;
@@ -211,19 +212,6 @@ const published = (locale, published) => {
       {localeTimestamp}
     </span>
   ) : null
-}
-
-const Skill = {
-  BEGINNER: "beginner",
-  INTERMEDIATE: "intermediate",
-  ADVANCED: "advanced",
-}
-
-const getSkillTranslationId = (skill) => {
-  if (Object.values(Skill).includes(skill.toLowerCase()))
-    return `page-tutorial-${skill.toLowerCase()}`
-  // Returning the original string to preserve translations until we are ready to remove them.
-  return skill
 }
 
 const TutorialsPage = ({ data, pageContext }) => {
