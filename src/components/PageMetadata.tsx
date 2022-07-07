@@ -24,10 +24,7 @@ type PropMeta = {
 export type Meta = NameMeta | PropMeta
 
 export interface IProps {
-  description?: string
-  // meta needs to be optional as how it was passed in other
-  // components but as `[].concat(undefined)` produces `[undefined]`,
-  // a default value needs to be provided in the actual component
+  description?: string | null
   meta?: Array<Meta>
   image?: string
   title: string
