@@ -8011,6 +8011,16 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "pushkar2112",
+      "name": "Pushkar Verma",
+      "avatar_url": "https://avatars.githubusercontent.com/u/50198312?v=4",
+      "profile": "https://pushkarverma.dev",
+      "contributions": [
+        "doc",
+        "ideas"
+      ]
     }
   ],
   "contributorsPerLine": 7,
