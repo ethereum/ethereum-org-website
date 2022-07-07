@@ -317,6 +317,7 @@ const WhatIsEthereumPage = ({
     },
   ]
 
+  const smallBreakpoint = Number(theme.breakpoints.s.replace("px", ""))
   const energyConsumptionChartData = [
     {
       name: "Youtube",
@@ -327,6 +328,7 @@ const WhatIsEthereumPage = ({
       name: "Gold mining",
       amount: 240,
       color: "#D7B14A",
+      breakpoint: smallBreakpoint,
     },
     {
       name: "BTC PoW",
@@ -347,6 +349,7 @@ const WhatIsEthereumPage = ({
       name: "Gaming",
       amount: 34,
       color: "#71BB8A",
+      breakpoint: smallBreakpoint,
     },
     {
       name: "Paypal",

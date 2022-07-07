@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useMemo } from "react"
 import styled, { useTheme } from "styled-components"
 import {
   BarChart,
@@ -11,6 +11,8 @@ import {
   ResponsiveContainer,
   Legend,
 } from "recharts"
+
+import { useWindowSize } from "../hooks/useWindowSize"
 
 const Container = styled.div`
   max-width: 500px;
@@ -60,7 +62,6 @@ const CustomTick: React.FC<ITickProps> = ({ x, y, payload }) => {
         fill={theme.colors.text}
         textAnchor="middle"
         verticalAnchor="middle"
-        fontSize={12}
       >
         {payload.value}
       </StyledText>
@@ -69,12 +70,28 @@ const CustomTick: React.FC<ITickProps> = ({ x, y, payload }) => {
 }
 
 export interface IProps {
-  data: Array<{ name: string; amount: number; color: string }>
+  data: Array<{
+    name: string
+    amount: number
+    color: string
+    breakpoint?: number
+  }>
   legend: string
 }
 
 const EnergyConsumptionChart: React.FC<IProps> = ({ data, legend }) => {
   const theme = useTheme()
+  const [width] = useWindowSize()
+
+  const filteredData = useMemo(() => {
+    return data.filter((cell) => {
+      if (!cell.breakpoint) {
+        return true
+      }
+
+      return cell.breakpoint < width
+    })
+  }, [data, width])
 
   return (
     <Container>
@@ -83,7 +100,7 @@ const EnergyConsumptionChart: React.FC<IProps> = ({ data, legend }) => {
           margin={{ top: 30, right: 30, bottom: 30, left: 30 }}
           barGap={15}
           barSize={38}
-          data={data}
+          data={filteredData}
         >
           <CartesianGrid
             vertical={false}
@@ -111,7 +128,7 @@ const EnergyConsumptionChart: React.FC<IProps> = ({ data, legend }) => {
               fontSize={14}
               offset={10}
             />
-            {data.map((cell, index) => (
+            {filteredData.map((cell, index) => (
               <Cell key={`cell-${index}`} fill={cell.color} />
             ))}
           </Bar>
