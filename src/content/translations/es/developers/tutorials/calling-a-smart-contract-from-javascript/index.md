@@ -10,7 +10,7 @@ tags:
 skill: principiante
 lang: es
 sidebar: true
-published: 19/04/2020
+published: 2020-04-19
 source: EthereumDev
 sourceUrl: https://ethereumdev.io/ejecutar-un-smart-contract-desde-javascript/
 address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"

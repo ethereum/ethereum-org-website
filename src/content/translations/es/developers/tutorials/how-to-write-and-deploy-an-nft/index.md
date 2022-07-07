@@ -11,7 +11,7 @@ tags:
 skill: principiante
 lang: es
 sidebar: true
-published: 22/04/2021
+published: 2021-04-22
 ---
 
 Los NFT ponen la cadena de bloques en el punto de mira y esto supone una excelente oportunidad para que usted le coja el tranquillo y publique su propio NFT (ERC-721 Token) en la cadena de bloques de Ethereum.
