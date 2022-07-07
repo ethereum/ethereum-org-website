@@ -684,7 +684,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
           <Section>
             <h2 id={tocItems[6].id}>{tocItems[6].title}</h2>
             <div>
-              <h3>Books on Ethereum and Cryptocurrencies:</h3>
+              <h3>Books about Ethereum and Cryptocurrencies</h3>
               <ul>
                 <li>
                   <Link to="https://www.goodreads.com/book/show/57356067-the-cryptopians">
@@ -738,7 +738,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                   </i>
                 </li>
               </ul>
-              <h3>Podcasts covering Ethereum and Cryptocurrencies:</h3>
+              <h3>Podcasts about Ethereum and Cryptocurrencies</h3>
               <ul>
                 <li>
                   <Link to="https://podcast.ethhub.io/">Into the Ether</Link>{" "}
