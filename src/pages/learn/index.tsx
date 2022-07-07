@@ -694,43 +694,37 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                 </li>
                 <li>
                   <Link to="https://www.goodreads.com/book/show/55360267-out-of-the-ether">
-                    Out of the Ether: The Amazing Story of Ethereum and the $55
-                    Million Heist that Almost Destroyed It All
+                    Out of the Ether
                   </Link>{" "}
                   <i>September 29, 2020 - Matthew Leising</i>
                 </li>
                 <li>
                   <Link to="https://www.goodreads.com/en/book/show/50175330-the-infinite-machine">
-                    The Infinite Machine: How an Army of Crypto-hackers Is
-                    Building the Next Internet with Ethereum
+                    The Infinite Machine
                   </Link>{" "}
                   <i>July 14, 2020 - Camila Russo</i>
                 </li>
                 <li>
                   <Link to="https://www.goodreads.com/en/book/show/22174460-the-age-of-cryptocurrency">
-                    The Age of Cryptocurrency: How Bitcoin and the Blockchain
-                    Are Challenging the Global Economic Order
+                    The Age of Cryptocurrency
                   </Link>{" "}
                   <i>January 12, 2016 - Paul Vigna, Michael J. Casey</i>
                 </li>
                 <li>
                   <Link to="https://www.goodreads.com/en/book/show/34964890-the-truth-machine">
-                    The Truth Machine: The Blockchain and the Future of
-                    Everything
+                    The Truth Machine
                   </Link>{" "}
                   <i>February 27, 2018 - Paul Vigna, Michael J. Casey</i>
                 </li>
                 <li>
                   <Link to="https://www.goodreads.com/book/show/23546676-digital-gold">
-                    Digital Gold: Bitcoin and the Inside Story of the Misfits
-                    and Millionaires Trying to Reinvent Money
+                    Digital Gold
                   </Link>{" "}
                   <i>May 24, 2021 - Nathaniel Popper</i>
                 </li>
                 <li>
                   <Link to="https://www.goodreads.com/en/book/show/56274031-kings-of-crypto">
-                    Kings of Crypto: One Startup&#39;s Quest to Take
-                    Cryptocurrency Out of Silicon Valley and Onto Wall Street
+                    Kings of Crypto
                   </Link>{" "}
                   <i>December 15, 2020 - Jeff John Roberts</i>
                 </li>
@@ -744,7 +738,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                   </i>
                 </li>
               </ul>
-              <p>Podcasts covering Ethereum and Cryptocurrencies:</p>
+              <h3>Podcasts covering Ethereum and Cryptocurrencies:</h3>
               <ul>
                 <li>
                   <Link to="https://podcast.ethhub.io/">Into the Ether</Link>{" "}
@@ -780,7 +774,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                 <li>
                   <Link to="https://unchainedpodcast.com/">Unchained</Link>{" "}
                   <i>
-                    dives deep into the people building the decentralized
+                    Dives deep into the people building the decentralized
                     internet, the details of this technology that could underpin
                     our future, and some of the thorniest topics in crypto, such
                     as regulation, security and privacy
