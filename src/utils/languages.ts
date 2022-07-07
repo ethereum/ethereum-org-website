@@ -216,4 +216,7 @@ export const ignoreLanguages = (Object.keys(languages) as Array<Lang>).filter(
   (lang) => !supportedLanguages.includes(lang)
 )
 
+export const isLang = (lang: string): lang is Lang =>
+  Object.keys(languages).includes(lang as Lang)
+
 export default languages

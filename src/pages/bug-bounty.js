@@ -26,6 +26,7 @@ import {
   GradientContainer,
   SloganGradient,
 } from "../components/SharedStyledComponents"
+import FeedbackCard from "../components/FeedbackCard"
 
 const HeroCard = styled.div`
   display: flex;
@@ -808,6 +809,7 @@ const BugBountiesPage = ({ data, location }) => {
         </div>
         <Emoji size={3} text=":email:" />
       </Contact>
+      <FeedbackCard />
     </Page>
   )
 }

@@ -123,7 +123,7 @@ To monitor contract activity across chains, developers can use subgraphs and dev
 
 ## Further reading {#further-reading}
 
-- [Blockchain Bridges](/en/bridges/) – ethereum.org
+- [Blockchain Bridges](/bridges/) – ethereum.org
 - [Blockchain Bridges: Building Networks of Cryptonetworks](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8) Sep 8, 2021 – Dmitriy Berenzon
 - [The Interoperability Trilemma](https://blog.connext.network/the-interoperability-trilemma-657c2cf69f17) Oct 1, 2021 – Arjun Bhuptani
 - [Clusters: How Trusted & Trust-Minimized Bridges Shape the Multi-Chain Landscape](https://blog.celestia.org/clusters/) Oct 4, 2021 – Mustafa Al-Bassam

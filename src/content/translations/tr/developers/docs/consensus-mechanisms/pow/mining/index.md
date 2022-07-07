@@ -6,7 +6,7 @@ sidebar: true
 incomplete: true
 ---
 
-## Ön Koşullar {#prerequisites}
+## Ön koşullar {#prerequisites}
 
 Bu sayfayı daha iyi anlamak için, önce [işlemleri](/developers/docs/transactions/), [blokları](/developers/docs/blocks/) ve [iş ispatını](/developers/docs/consensus-mechanisms/pow/) okumanızı öneririz.
 
@@ -60,13 +60,13 @@ Austin'in madenciliği ve iş ispatı blok zincirini size açıklamasını izley
 
 <YouTube id="zcX7OJ-L8XQ" />
 
-## Daha fazla bilgi {#further-reading}
+## Daha fazla okuma {#further-reading}
 
 - [Ethereum madenciliği yapmak ne anlama geliyor?](https://docs.ethhub.io/using-ethereum/mining/) _EthHub_
 
 ## İlgili araçlar {#related-tools}
 
-- [En büyük Ethereum madencileri](https://etherscan.io/stat/miner?range=7&blocktype=blocks)
+- [En iyi Ethereum madencileri](https://etherscan.io/stat/miner?range=7&blocktype=blocks)
 - [Etherscan madencilik hesaplayıcısı](https://etherscan.io/ether-mining-calculator)
 - [Minerstat madencilik hesaplayıcısı](https://minerstat.com/coin/ETH)
 

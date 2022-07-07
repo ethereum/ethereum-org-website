@@ -12,12 +12,12 @@ La construction d'une dApp complète nécessite différentes technologies. Les i
 Ces infrastructures sont livrés avec de nombreuses fonctionnalités prêtes à l'emploi :
 
 - Fonctionnalités pour faire tourner une instance locale de la blockchain.
-- Utilitaires pour compiler et tester vos contrats intelligents.
+- Des utilitaires pour compiler et tester vos contrats intelligents.
 - Modules de développement client pour construire votre application orientée utilisateur au sein du même projet/référentiel.
 - Configuration pour se connecter aux réseaux Ethereum et déployer des contrats, que ce soit sur une instance exécutée localement ou sur l'un des réseaux publics Ethereum.
 - Distribution d'applications décentralisées, intégration à des options de stockage comme IPFS.
 
-## Prérequis {#prerequisites}
+## Pré-requis {#prerequisites}
 
 Avant de plonger dans les infrastructures, nous vous recommandons de commencer par lire notre introduction aux [dApps](/developers/docs/dapps/) et à la [pile Ethereum](/developers/docs/ethereum-stack/).
 
@@ -43,7 +43,7 @@ Avant de plonger dans les infrastructures, nous vous recommandons de commencer p
 - [Documentation](https://eth-brownie.readthedocs.io/en/latest/)
 - [GitHub](https://github.com/eth-brownie/brownie)
 
-**Embark - \*\***_Environnement de développement, infrastructure de test et autres outils intégrés à Ethereum, IPFS et Whisper_\*\*
+**Embark -** **_Environnement de développement, infrastructure de test et autres outils intégrés à Ethereum, IPFS et Whisper_**
 
 - [Documentation](https://embark.status.im/docs/)
 - [GitHub](https://github.com/embark-framework/embark)
@@ -54,7 +54,7 @@ Avant de plonger dans les infrastructures, nous vous recommandons de commencer p
 - [Documentation](https://docs.web3j.io)
 - [GitHub](https://github.com/web3j/web3j)
 
-**OpenZeppelin SDK - \*\***_La suite d'outils par excellence pour vous aider à développer, compiler, mettre à niveau, déployer et interagir avec des contrats intelligents._\*\*
+**OpenZeppelin SDK -** **_La suite d'outils par excellence pour vous aider à développer, compiler, mettre à niveau, déployer et interagir avec des contrats intelligents._**
 
 - [OpenZeppelin SDK](https://openzeppelin.com/sdk/)
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-sdk)
@@ -82,7 +82,7 @@ Avant de plonger dans les infrastructures, nous vous recommandons de commencer p
 
 **Foundry -** **_Une boîte à outils rapide, portable et modulaire pour le développement d'applications Ethereum écrites en Rust._**
 
-- [Documentation](https://onbjerg.github.io/foundry-book/)
+- [Documentation](https://book.getfoundry.sh/)
 - [GitHub](https://github.com/gakonst/foundry/)
 - [Outils pour Foundry](https://github.com/crisgarner/awesome-foundry)
 

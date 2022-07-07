@@ -15,7 +15,7 @@ sidebar: true
 
 [EIP-1155](https://eips.ethereum.org/EIPS/eip-1155) 中对 ERC-1155 代币进行了全面的描述。
 
-## 前提条件 {#prerequisites}
+## 前体条件 {#prerequisites}
 
 为了更好地理解这一页面的内容，我们建议您先阅读[代币标准](/developers/docs/standards/tokens/)、[ERC-20](/developers/docs/standards/tokens/erc-20/) 和 [ERC-721](/developers/docs/standards/tokens/erc-721/)。
 

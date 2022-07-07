@@ -17,10 +17,10 @@ Sie sollten ein gutes Grundwissen über alle grundlegenden Themen und ein umfass
 
 ## Vor- und Nachteile {#pros-and-cons}
 
-| Vorteile                                               | Nachteile                                                                                                                  |
+| Vorteile                                               | Kontra                                                                                                                     |
 | ------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------- |
-| Etablierte Technologie.                                | Weniger dezentralisiert.                                                                                                   |
-| Unterstützt allgemeine Berechnung, ist EVM-kompatibel. | Verwendet einen separaten Konsensmechanismus. Nicht durch Layer 1 gesichert (technisch gesehen ist es also nicht Layer 2). |
+| Technologie ist etabliert.                             | Weniger dezentralisiert.                                                                                                   |
+| Unterstützt allgemeine Berechnung, ist EVM-Kompatibel. | Verwendet einen separaten Konsensmechanismus. Nicht durch Layer 1 gesichert (technisch gesehen ist es also nicht Layer 2). |
 |                                                        | Ein Quorum von Sidechain Validatoren kann Betrug begehen.                                                                  |
 
 ### Sidechains verwenden {#use-sidechains}
@@ -33,7 +33,7 @@ Mehrere Projekte bieten Implementierungen von Sidechains, die Sie in Ihre dApps 
 
 ## Weiterführende Informationen {#further-reading}
 
-- [EthHub auf Sidechains](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/sidechains/)
+- [EthHub auf sidechains](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/sidechains/)
 - [Skalieren von Ethereum dApps durch Sidechains](https://medium.com/loom-network/dappchains-scaling-ethereum-dapps-through-sidechains-f99e51fff447) _Feb 8, 2018 - Georgios Konstantopoulos_
 
 _Kennen Sie eine Community-Ressource, die Ihnen geholfen hat? Bearbeiten Sie diese Seite und fügen Sie sie hinzu!_

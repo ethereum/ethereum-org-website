@@ -1,5 +1,5 @@
 ---
-title: Ethereum-Governance
+title: Ethereum – Steuerung
 description: Eine Einführung in die Entscheidungsfindung bei Ethereum
 lang: de
 sidebar: true
@@ -34,7 +34,7 @@ Der gegenteilige Ansatz ist die Off-Chain-Governance. Dabei werden Entscheidunge
 _Governance auf Protokollebene erfolgt bei Ethereum off-Chain, doch bei Anwendungsfällen, die auf Ethereum aufbauende, wie zum Beispiel DAOs, greift das System der On-Chain-Governance._
 
 <ButtonLink to="/dao/">
-  Mehr zu DAOs
+  Mehr über DAOs
 </ButtonLink>
 
 <Divider />
@@ -45,7 +45,7 @@ Es gibt verschiedene Interessensvertreter in der [Ethereum-Community](/community
 
 - **Ether-Halter**: Diese Personen halten eine beliebige Menge an ETH. [Mehr zu ETH](/eth/).
 - **Anwendungsbenutzer**: Diese Personen interagieren mit Anwendungen auf der Ethereum-Blockchain.
-- **Anwendungs-/Tool-Entwickler**: Diese Personen schreiben Anwendungen, die auf der Ethereum-Blockchain laufen (z. B. DeFi, NFTs usw.), oder erstellen Tools, um mit Ethereum zu interagieren (z. B. Wallets, Test-Suiten usw.). [Mehr zu dApps](/dapps/).
+- **Anwendungs-/Tool-Entwickler**: Diese Personen schreiben Anwendungen, die auf der Ethereum-Blockchain laufen (z. B. DeFi, NFTs usw.), oder erstellen Tools, um mit Ethereum zu interagieren (z. B. Wallets, Test-Suiten usw.). [Mehr zu DApps](/dapps/).
 - **Knotenbetreiber**: Diese Personen betreiben Knoten (Knotenpunkte), die Blöcke und Transaktionen propagieren, indem sie ungültige Transaktionen, auf die sie stoßen, ablehnen oder blockieren. [Mehr zu Knoten](/developers/docs/nodes-and-clients/).
 - **EIP-Autoren**: Diese Personen schlagen Änderungen am Ethereum-Protokoll in Form von Ethereum-Verbesserungsvorschlägen (Ethereum Improvement Proposal, EIP) vor. [Mehr zu EIPs](/eips/).
 - **Miner/Validator**: Diese Personen betreiben Knoten, die neue Blöcke zur Ethereum-Blockchain hinzufügen können.

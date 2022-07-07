@@ -9,9 +9,9 @@ sidebarDepth: 3
 
 通道允许参与者在链下进行`x`次交易，而在链上只能向网络提交两次交易。 这允许极高的交易吞吐量.
 
-## 前提条件 {#prerequisites}
+## 先决条件 {#prerequisites}
 
-您应该很好地了解所有基本主题，并且对[以太坊扩容](/developers/docs/scaling/)有高级别的理解。 实现诸如渠道之类的扩展解决方案是一个高级主题，因为该技术没有经过多少实战测试，而且还在继续研究和开发。
+您应对所有基础性课题有很好的了解，并且对[以太坊扩容](/developers/docs/scaling/)有深入的了解。 实现诸如渠道之类的扩展解决方案是一个高级主题，因为该技术没有经过多少实战测试，而且还在继续研究和开发。
 
 ## 通道 {#channels}
 
@@ -73,4 +73,4 @@ sidebarDepth: 3
 
 - [支付通道的 EthHub](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/payment-channels/)
 
-_你知道有什么社区资源帮助过你吗？ 编辑并添加本页面！_
+_还有哪些社区资源对您有所帮助？ 请编辑本页面并添加！_

@@ -17,7 +17,7 @@ Token'lar Ethereum'daki hemen hemen her şeyi temsil edebilir:
 - şirket hissesi gibi finansal varlıklar
 - ABD Doları gibi itibari para birimi
 - ons altın
-- ve daha fazlası...
+- ve dahası...
 
 Ethereum'un bu kadar güçlü bir özelliği güçlü bir standart tarafından idare edilmeli, değil mi? ERC-20 tam da bu noktada devreye giriyor! Bu standart, geliştiricilerin diğer ürün ve servislerle uyumlu token uygulamaları inşa etmesini sağlar.
 
@@ -71,7 +71,7 @@ event Approval(address indexed _owner, address indexed _spender, uint256 _value)
 
 Ethereum'daki herhangi bir ERC-20 Token Sözleşmesini incelememizi basitleştirmek için bir Standart'ın ne kadar önemli olduğunu görelim. Herhangi bir ERC-20 token'a arayüz oluşturmak için sadece Sözleşme Uygulama İkili Arayüzü'ne (ABI) ihtiyacımız var. Aşağıda görebileceğiniz gibi az sürtünmeli bir örnek olması için basitleştirilmiş bir ABI kullanacağız.
 
-#### Web3.py Örneği {#web3py-example}
+#### Web3.py örneği {#web3py-example}
 
 İlk olarak, [Web3.py](https://web3py.readthedocs.io/en/stable/quickstart.html#installation) Python kütüphanesini kurduğunuzdan emin olun:
 
@@ -142,8 +142,8 @@ print("Total Supply:", totalSupply)
 print("Addr Balance:", addr_balance)
 ```
 
-## daha fazla okuma {#further-reading}
+## Daha fazla bilgi {#further-reading}
 
-- [EIP-20: ERC-20 Token Standardı](https://eips.ethereum.org/EIPS/eip-20)
+- [EIP-20: ERC-20 Token Standartı](https://eips.ethereum.org/EIPS/eip-20)
 - [OpenZeppelin - Token'lar](https://docs.openzeppelin.com/contracts/3.x/tokens#ERC20)
 - [OpenZeppelin - ERC-20 Uygulaması](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)

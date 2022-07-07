@@ -394,10 +394,7 @@ const TableOfContents = ({
               <Translation id="zen-mode" />
             </ZenModeText>
             <ZenModeToggleContainer onClick={(_e) => handleZenModeChange()}>
-              <Icon
-                name={isZenMode ? "zenModeOn" : "zenModeOff"}
-                size="1.6rem"
-              />
+              <Icon name={isZenMode ? "toggleOn" : "toggleOff"} size="1.6rem" />
             </ZenModeToggleContainer>
           </ZenModeContainer>
         )}

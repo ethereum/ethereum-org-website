@@ -11,7 +11,7 @@ sidebar: true
 
 如果您想要用 JavaScript 连接到一个以太坊节点， 可以使用原生 JavaScript，不过生态系统中存在一些方便的库，使得这个事情变得更加容易。 通过这些库，开发者可以写下直观易懂甚至单行的代码就能初始化与以太坊的互动（背后使用 JSON RPC 请求）。
 
-## 前置要求 {#prerequisites}
+## 先决条件 {#prerequisites}
 
 除了了解 JavaScript 外，了解[以太坊堆栈](/developers/docs/ethereum-stack/)和[以太坊 客户端](/developers/docs/nodes-and-clients/)也许是有帮助的。
 
@@ -28,12 +28,12 @@ sidebar: true
 **Ethers 示例**
 
 ```js
-// A Web3Provider wraps a standard Web3 provider, which is
-// what MetaMask injects as window.ethereum into each page
+// 一个 Web3Provider 包含了标准的 Web3 提供者(provider)，这个提供者
+//相当于将 Metamask 作为一个以太坊窗口注入到每个页面中。
 const provider = new ethers.providers.Web3Provider(window.ethereum)
 
-// The MetaMask plugin also allows signing transactions to
-// send ether and pay to change state within the blockchain.
+// Metamask 插件同时可以签署每一笔交易
+// 从而更改区块链中的状态。
 // 为此，我们需要帐户签名者...
 const signer = provider.getSigner()
 ```
@@ -52,7 +52,7 @@ web3.setProvider(new Web3.providers.WebsocketProvider("ws://localhost:8546"))
 
 // 在 node.js 中使用 IPC 提供者
 var net = require("net")
-var web3 = new Web3("/Users/myuser/Library/Ethereum/geth). pc", net// mac os path
+var web3 = new Web3("/Users/myuser/Library/Ethereum/geth).ipc", net// mac os path
 // 或
 var web3 = new Web3(
   new Web3.providers. pcProvider("/Users/myuser/Library/Ethereum/geth.ipc", net"
@@ -67,7 +67,7 @@ var web3 = new Web3(
 - 燃料评估
 - 智能合约事件
 - 网络 ID
-- 以及更多...
+- 及更多...
 
 ### 钱包功能 {#wallet-functionality}
 
@@ -267,14 +267,14 @@ ethers.utils.formatEther(balance)
 - [相关文档](https://docs.alchemyapi.io/documentation/alchemy-web3)
 - [GitHub](https://github.com/alchemyplatform/alchemy-web3)
 
-**Alchemy NFT API -** **_用于获取 NFT 数据的 API，包括所有权、元数据属性和 更多。_**
+**Alchemy NFT API -** **_ 用于提取非同质化代币数据的应用程序接口，包括所有权、元数据属性等数据。_**
 
 - [相关文档](https://docs.alchemy.com/alchemy/enhanced-apis/nft-api)
 - [GitHub](https://github.com/alchemyplatform/alchemy-web3)
 
 ## 延伸阅读 {#further-reading}
 
-_还有哪些社区资源对您有所帮助？ 编辑并添加本页面！_
+_还有哪些社区资源对您有所帮助？ 请编辑本页面并添加它！_
 
 ## 相关主题 {#related-topics}
 
@@ -284,5 +284,5 @@ _还有哪些社区资源对您有所帮助？ 编辑并添加本页面！_
 ## 相关教程 {#related-tutorials}
 
 - [设置 Web3js 以在 JavaScript 中使用以太坊区块链](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– 在项目中设置 web3.js 的说明。_
-- [在 JavaScript 中调用智能合约](/developers/tutorials/calling-a-smart-contract-from-javascript/) _使用 DAI token，从而使用 JavaScript 调用合约函数。_
-- [使用 web3 和 Alchemy](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) 发送交易 _– 一步步带您了解如何从后端发送一笔交易。_
+- [在 JavaScript 中调用智能合约 ](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– 使用稳定币 DAI 代币，了解如何使用 JavaScript 调用合约函数。_
+- [使用 Web3 和 Alchemy 发送交易](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) _ – 从后端发送交易分步指南。_
