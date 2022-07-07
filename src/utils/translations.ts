@@ -1,10 +1,14 @@
 import { IntlShape } from "gatsby-plugin-intl"
 
 import type { Lang } from "./languages"
+import type { Direction } from "../types"
 
 import defaultStrings from "../intl/en.json"
 
 export type TranslationKey = keyof typeof defaultStrings
+
+export const isTranslationKey = (key: string): key is TranslationKey =>
+  Object.keys(defaultStrings).includes(key as TranslationKey)
 
 const consoleError = (message: string): void => {
   const { NODE_ENV } = process.env
@@ -26,6 +30,14 @@ export const getDefaultMessage = (key: TranslationKey): string => {
 
 export const isLangRightToLeft = (lang: Lang): boolean => {
   return lang === "ar" || lang === "fa"
+}
+
+export const getDirection = (lang?: Lang): Direction => {
+  if (!lang) {
+    return "auto"
+  }
+
+  return isLangRightToLeft(lang) ? "rtl" : "ltr"
 }
 
 export const translateMessageId = (

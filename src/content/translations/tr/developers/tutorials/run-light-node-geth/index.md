@@ -1,7 +1,7 @@
 ---
 title: Geth ile bir hafif (light) düğüm nasıl çalıştırılır
 description: Geth ile bir lightclient nasıl indirilir, kurulur ve çalıştırılır.
-authors: "Brian Gu"
+author: "Brian Gu"
 tags:
   - "istemciler"
   - "geth"

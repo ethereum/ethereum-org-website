@@ -9,7 +9,7 @@ tags:
   - "contracte inteligente"
   - "securitate"
 skill: intermediate
-published: 07 septembrie 2020
+published: 2020-09-07
 source: Construirea de contracte securizate
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis
 ---

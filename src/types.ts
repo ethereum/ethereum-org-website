@@ -22,6 +22,8 @@ export type Context = {
   isContentEnglish?: boolean
 }
 
+export type Direction = "rtl" | "ltr" | "auto"
+
 export type ForbidOptional<T = {}> = {
   [P in keyof T]?: never
 }

@@ -320,7 +320,7 @@ const dropdownLinks = {
       to: "/upgrades/merge/",
     },
     {
-      text: "page-upgrades-upgrades-shard-chains",
+      text: "page-upgrades-shard-title",
       to: "/upgrades/sharding/",
     },
   ],
@@ -331,11 +331,12 @@ const UpgradePage = ({
 }: PageProps<Queries.UpgradePageQuery, Context>) => {
   const intl = useIntl()
 
-  if (!mdx?.frontmatter || !mdx.parent) {
+  if (!mdx?.frontmatter || !mdx.parent)
     throw new Error(
       "Upgrade page template query does not return expected values"
     )
-  }
+  if (!mdx?.frontmatter?.title)
+    throw new Error("Required `title` property missing for upgrade template")
 
   const isRightToLeft = isLangRightToLeft(mdx.frontmatter.lang as Lang)
   const tocItems = mdx.tableOfContents?.items
@@ -349,12 +350,14 @@ const UpgradePage = ({
 
   const summaryPoints = getSummaryPoints(mdx.frontmatter)
 
+  const slug = mdx.fields?.slug || ""
+
   return (
     <Container>
       <HeroContainer>
         <TitleCard>
-          <DesktopBreadcrumbs slug={mdx.fields?.slug} startDepth={1} />
-          <MobileBreadcrumbs slug={mdx.fields?.slug} startDepth={1} />
+          <DesktopBreadcrumbs slug={slug} startDepth={1} />
+          <MobileBreadcrumbs slug={slug} startDepth={1} />
           <Title>{mdx.frontmatter.title}</Title>
           <SummaryBox>
             <ul>
