@@ -41,13 +41,22 @@ export const EmblaSlide = styled.div`
 `
 
 const Buttons = styled.div`
-  position: absolute;
-  bottom: 0;
-  left: 0;
   display: flex;
   flex-direction: row;
-  margin-left: 2rem;
-  margin-bottom: 2rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+  margin-left: 0;
+
+  @media (min-width: ${(props) => props.theme.breakpoints.s}) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    justify-content: left;
+
+    margin-bottom: 2rem;
+    margin-left: 2rem;
+  }
 `
 
 const Button = styled.button`
