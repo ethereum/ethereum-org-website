@@ -262,10 +262,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
               .
             </p>
             <p>
-              Not only can Ethereum do what Bitcoin does (transfer money
-              globally), it’s capable of a lot more – people can actually deploy
-              code onto the network. Because it’s so flexible, any kind of
-              computer application can be launched on Ethereum.
+Not only can Ethereum do what Bitcoin does (transfer money globally), it’s capable of much more – anyone can deploy code onto the network. And because it’s so flexible, any computer program can run on Ethereum.
             </p>
             <CardGrid>
               <Card
