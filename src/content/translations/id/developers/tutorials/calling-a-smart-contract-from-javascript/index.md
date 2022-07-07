@@ -7,7 +7,7 @@ tags:
   - "frontend"
   - "JavaScript"
   - "web3.js"
-skill: pemula
+skill: beginner
 lang: id
 sidebar: true
 published: 19-04-2020

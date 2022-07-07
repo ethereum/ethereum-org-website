@@ -11,7 +11,7 @@ tags:
   - "Blok"
   - "Transaksi"
   - "Gas"
-skill: pemula
+skill: beginner
 lang: id
 sidebar: true
 published: 2021-05-11
