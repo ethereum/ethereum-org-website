@@ -219,20 +219,9 @@ const Skill = {
   ADVANCED: "advanced",
 }
 
-const SkillTranslationId = {
-  BEGINNER: "page-tutorial-beginner",
-  INTERMEDIATE: "page-tutorial-intermediate",
-  ADVANCED: "page-tutorial-advanced",
-}
-
 const getSkillTranslationId = (skill) => {
-  const lowercasedSkill = skill.toLowerCase()
-
-  if (Skill.BEGINNER === lowercasedSkill) return SkillTranslationId.BEGINNER
-  if (Skill.INTERMEDIATE === lowercasedSkill)
-    return SkillTranslationId.INTERMEDIATE
-  if (Skill.ADVANCED === lowercasedSkill) return SkillTranslationId.ADVANCED
-
+  if (Object.values(Skill).includes(skill.toLowerCase()))
+    return `page-tutorial-${skill.toLowerCase()}`
   // Returning the original string to preserve translations until we are ready to remove them.
   return skill
 }
