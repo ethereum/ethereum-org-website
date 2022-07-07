@@ -253,13 +253,8 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
             <p>
               You have probably heard a thing or two about cryptocurrencies,
               Bitcoin, and blockchain, but do you know what those actually are
-              and how they relate to Ethereum? And what is Ethereum anyway?{" "}
-            </p>
+              and how they relate to Ethereum? <Link to="/what-is-ethereum/">And what is Ethereum anyway?</Link>
             <p>
-              <Link to="/what-is-ethereum/">
-                Check out our introduction to Ethereum
-              </Link>
-              .
             </p>
             <p>
 Not only can Ethereum do what Bitcoin does (transfer money globally), it’s capable of much more – anyone can deploy code onto the network. And because it’s so flexible, any computer program can run on Ethereum.
@@ -267,7 +262,7 @@ Not only can Ethereum do what Bitcoin does (transfer money globally), it’s cap
             <CardGrid>
               <Card
                 title="What is Ethereum?"
-                description="If you are new, start here. Learn the basics of crypto why Ethereum matters."
+                description="If you are new, start here to learn the basics of crypto and why Ethereum matters."
               >
                 <>
                   <CardImage>
@@ -283,7 +278,7 @@ Not only can Ethereum do what Bitcoin does (transfer money globally), it’s cap
               </Card>
               <Card
                 title="What is ETH?"
-                description="The currency of the Ethereum network is called ether or ETH."
+                description="Ether (ETH) is the currency powering the Ethereum network and apps."
               >
                 <>
                   <CardImage>
@@ -297,7 +292,7 @@ Not only can Ethereum do what Bitcoin does (transfer money globally), it’s cap
               </Card>
               <Card
                 title="Where can I get ETH?"
-                description="There are many ways to aquire ETH depending on your location."
+                description="There are many ways to get ETH, depending on your location."
               >
                 <>
                   <CardImage>
@@ -318,15 +313,15 @@ Not only can Ethereum do what Bitcoin does (transfer money globally), it’s cap
               <DocLink to="/smart-contracts/">
                 What are smart contracts?
               </DocLink>
-              <DocLink to="/developers/docs//intro-to-ethereum/">
-                A technical introduction to Ethereum
+              <DocLink to="/developers/docs/intro-to-ethereum/">
+                A developers' introduction to Ethereum
               </DocLink>
-              <DocLink to="/web3/">What is Web3?</DocLink>
+              <DocLink to="/web3/">What is web3?</DocLink>
               <DocLink
                 to="https://www.youtube.com/watch?v=WSN5BaCzsbo"
                 isExternal
               >
-                Decentralizing Everything
+                Decentralizing everything
               </DocLink>
             </DocsContainer>
           </Section>
@@ -334,15 +329,12 @@ Not only can Ethereum do what Bitcoin does (transfer money globally), it’s cap
           <Section>
             <h2 id={tocItems[1].id}>{tocItems[1].title}</h2>
             <p>
-              It’s actually quite simple once you get the hang of it. You need
-              an application that is commonly called a “wallet”. It's an app
-              that helps you store your funds and to authenticate and interact
-              with applications on Ethereum.
+Using Ethereum is relatively straightforward once you get the hang of it. First, you need to download a "wallet". A wallet is an app that helps you store your crypto and interact with applications on Ethereum.
             </p>
             <CardGrid>
               <Card
                 title="What is a wallet?"
-                description="How you manage your ETH and your Ethereum accounts."
+                description="Wallets let you manage your ETH and Ethereum applications."
               >
                 <>
                   <CardImage>
@@ -356,7 +348,7 @@ Not only can Ethereum do what Bitcoin does (transfer money globally), it’s cap
               </Card>
               <Card
                 title="Find a wallet"
-                description="We will help you find the right wallet based on the features you care about."
+                description="We'll help you find the best wallet based on the features that matter to you."
               >
                 <>
                   <CardImage>
@@ -371,7 +363,7 @@ Not only can Ethereum do what Bitcoin does (transfer money globally), it’s cap
                 </>
               </Card>
               <Card
-                title="Crypto security 101"
+                title="Crypto security basics"
                 description="Learn how to identify scams and how to avoid the most common tricks."
               >
                 <>
@@ -381,7 +373,7 @@ Not only can Ethereum do what Bitcoin does (transfer money globally), it’s cap
                       alt=""
                     />
                   </CardImage>
-                  <ButtonLink to="/security/">Crypto security 101</ButtonLink>
+                  <ButtonLink to="/security/">Stay secure</ButtonLink>
                 </>
               </Card>
             </CardGrid>
@@ -396,11 +388,8 @@ Not only can Ethereum do what Bitcoin does (transfer money globally), it’s cap
                     like the stablecoins USDC or DAI.
                   </li>
                   <li>
-                    Fees can be high depending on the demand so we recommend
+                    Fees can be high depending on the number of people trying to use Ethereum, so we recommend
                     using <Link to="/layer-2/">Layer 2s</Link>.
-                  </li>
-                  <li>
-                    There are options for custodial and non-custodial wallets.
                   </li>
                 </ul>
               </BannerBody>
@@ -417,10 +406,10 @@ Not only can Ethereum do what Bitcoin does (transfer money globally), it’s cap
             </AdditionalReadingHeader>
             <DocsContainer>
               <DocLink to="/community/support/">
-                Ethereum and wallet support
+                Support for Ethereum and wallets
               </DocLink>
               <DocLink to="/layer-2/">
-                Layer 2 - reducing transaction cost
+                Layer 2: reducing transaction fees
               </DocLink>
             </DocsContainer>
           </Section>
@@ -434,7 +423,7 @@ Not only can Ethereum do what Bitcoin does (transfer money globally), it’s cap
             </p>
             <CardGrid>
               <Card
-                title="Decentralized Finance"
+                title="Decentralized finance (DeFi)"
                 description="Explore an alternative financial system that is built without banks and is open to anyone."
               >
                 <>
@@ -444,7 +433,7 @@ Not only can Ethereum do what Bitcoin does (transfer money globally), it’s cap
                       alt=""
                     />
                   </CardImage>
-                  <ButtonLink to="/defi/">What is DEFI?</ButtonLink>
+                  <ButtonLink to="/defi/">What is DeFi?</ButtonLink>
                 </>
               </Card>
               <Card
@@ -464,7 +453,7 @@ Not only can Ethereum do what Bitcoin does (transfer money globally), it’s cap
                 </>
               </Card>
               <Card
-                title="Non-fungible tokens"
+                title="Non-fungible tokens (NFTs)"
                 description="Non-fungible tokens represent ownership of unique items."
               >
                 <>
@@ -478,8 +467,8 @@ Not only can Ethereum do what Bitcoin does (transfer money globally), it’s cap
                 </>
               </Card>
               <Card
-                title="Decentralized autonomous organizations"
-                description="Organizations that run without the need for coordination by a central entity."
+                title="Decentralized autonomous organizations (DAOs)"
+                description="DAOs run without the need for coordination by a central entity."
               >
                 <>
                   <CardImage>
@@ -492,8 +481,8 @@ Not only can Ethereum do what Bitcoin does (transfer money globally), it’s cap
                 </>
               </Card>
               <Card
-                title="Decentralized applications"
-                description="Are creating a new digital economy of peer-to-peer services."
+                title="Decentralized applications (dapps)"
+                description="Dapps are creating a new digital economy of peer-to-peer services."
               >
                 <>
                   <CardImage>
@@ -512,7 +501,7 @@ Not only can Ethereum do what Bitcoin does (transfer money globally), it’s cap
                 <ul>
                   <li>
                     <Link to="/decentralized-identity/">
-                      Self-sovereign identity
+                      Decentralized identity
                     </Link>
                   </li>
                   <li>
@@ -527,12 +516,12 @@ Not only can Ethereum do what Bitcoin does (transfer money globally), it’s cap
                   </li>
                   <li>
                     <Link to="https://decrypt.co/resources/what-are-play-to-earn-games-how-players-are-making-a-living-with-nfts">
-                      Play-to-earn games
+                      Play-to-earn games (P2E)
                     </Link>
                   </li>
                   <li>
                     <Link to="https://woodstockfund.medium.com/quadratic-funding-better-way-to-fund-public-goods-76f1679b2ba2">
-                      Fundraising via Quadratic Funding
+                      Fundraising through Quadratic Funding
                     </Link>
                   </li>
                   <li>
@@ -561,13 +550,13 @@ Not only can Ethereum do what Bitcoin does (transfer money globally), it’s cap
             <h2 id={tocItems[3].id}>{tocItems[3].title}</h2>
             <p>
               You can help secure Ethereum and earn rewards at the same time on
-              your ETH by staking it. There are several methods of staking
-              depending on your technical knowledge and the amount of ETH.
+              your ETH by staking it. There are different options for staking
+              depending on your technical knowledge and how much ETH you have.
             </p>
             <CardGrid>
               <Card
                 title="Staking Ethereum"
-                description="Learn about different ways to earn rewards by staking ETH."
+                description="Learn how to start staking your ETH."
               >
                 <>
                   <CardImage>
@@ -581,7 +570,7 @@ Not only can Ethereum do what Bitcoin does (transfer money globally), it’s cap
               </Card>
               <Card
                 title="Run a node"
-                description="Run a node to play a crucial part in the Ethereum network."
+                description="Play a critical role in the Ethereum network by running a node."
               >
                 <>
                   <CardImage>
@@ -604,8 +593,8 @@ Not only can Ethereum do what Bitcoin does (transfer money globally), it’s cap
             </p>
             <CardGrid>
               <Card
-                title="Energy Consumption"
-                description="How much energy does it cost to run Ethereum network?"
+                title="Energy consumption"
+                description="How much energy does Ethereum use?"
               >
                 <>
                   <CardImage>
@@ -621,7 +610,7 @@ Not only can Ethereum do what Bitcoin does (transfer money globally), it’s cap
               </Card>
               <Card
                 title="Ethereum upgrades"
-                description="How are we going to make Ethereum more scalable, secure, and sustainable?"
+                description="Ethereum upgrades make it more scalable, secure, and sustainable."
               >
                 <>
                   <CardImage>
@@ -630,7 +619,7 @@ Not only can Ethereum do what Bitcoin does (transfer money globally), it’s cap
                       alt=""
                     />
                   </CardImage>
-                  <ButtonLink to="/upgrades/">Read more</ButtonLink>
+                  <ButtonLink to="/upgrades/">Explore upgrades</ButtonLink>
                 </>
               </Card>
               <Card
@@ -654,7 +643,7 @@ Not only can Ethereum do what Bitcoin does (transfer money globally), it’s cap
             </AdditionalReadingHeader>
             <DocsContainer>
               <DocLink to="/developers/">
-                Intro to Ethereum for Developers
+                Ethereum for developers
               </DocLink>
               <DocLink to="/eips/">Ethereum Improvement Proposals</DocLink>
               <DocLink to="/history/">Ethereum History</DocLink>
@@ -669,9 +658,7 @@ Not only can Ethereum do what Bitcoin does (transfer money globally), it’s cap
           <Section>
             <h2 id={tocItems[5].id}>{tocItems[5].title}</h2>
             <p>
-              A big portion of Ethereum’s success is thanks to its dedicated
-              community. There are thousands of inspiring and driven people who
-              help push Ethereum’s vision forward. Come and join us!
+The success of Ethereum is thanks to its incredibly dedicated community. Thousands of inspiring and driven people help push Ethereum’s vision forward. Come and join us!
             </p>
             <CardGrid>
               <Card
@@ -690,7 +677,7 @@ Not only can Ethereum do what Bitcoin does (transfer money globally), it’s cap
               </Card>
               <Card
                 title="How can I get involved?"
-                description="There are technical and non-technical ways to be part of the community."
+                description="You don't need to be technical to get involved in the Ethereum community."
               >
                 <>
                   <CardImage>
@@ -726,28 +713,27 @@ Not only can Ethereum do what Bitcoin does (transfer money globally), it’s cap
           <Section>
             <h2 id={tocItems[6].id}>{tocItems[6].title}</h2>
             <div>
-              <p>Books on Ethereum and Cryptocurrencies:</p>
+              <h3>Books on Ethereum and Cryptocurrencies:</h3>
               <ul>
                 <li>
                   <Link to="https://www.goodreads.com/book/show/57356067-the-cryptopians">
-                    The Cryptopians: Idealism, Greed, Lies, and the Making of
-                    the First Big Cryptocurrency Craze
+                    The Cryptopians
                   </Link>{" "}
-                  <em>February 22, 2022 - Laura Shin</em>
+                  <i>February 22, 2022 - Laura Shin</i>
                 </li>
                 <li>
                   <Link to="https://www.goodreads.com/book/show/55360267-out-of-the-ether">
                     Out of the Ether: The Amazing Story of Ethereum and the $55
                     Million Heist that Almost Destroyed It All
                   </Link>{" "}
-                  <em>September 29, 2020 - Matthew Leising</em>
+                  <i>September 29, 2020 - Matthew Leising</i>
                 </li>
                 <li>
                   <Link to="https://www.goodreads.com/en/book/show/50175330-the-infinite-machine">
                     The Infinite Machine: How an Army of Crypto-hackers Is
                     Building the Next Internet with Ethereum
                   </Link>{" "}
-                  <em>July 14, 2020 - Camila Russo</em>
+                  <i>July 14, 2020 - Camila Russo</i>
                 </li>
                 <li>
                   <Link to="https://www.goodreads.com/en/book/show/22174460-the-age-of-cryptocurrency">
@@ -761,30 +747,30 @@ Not only can Ethereum do what Bitcoin does (transfer money globally), it’s cap
                     The Truth Machine: The Blockchain and the Future of
                     Everything
                   </Link>{" "}
-                  <em>February 27, 2018 - Paul Vigna, Michael J. Casey</em>
+                  <i>February 27, 2018 - Paul Vigna, Michael J. Casey</i>
                 </li>
                 <li>
                   <Link to="https://www.goodreads.com/book/show/23546676-digital-gold">
                     Digital Gold: Bitcoin and the Inside Story of the Misfits
                     and Millionaires Trying to Reinvent Money
                   </Link>{" "}
-                  <em>May 24, 2021 - Nathaniel Popper</em>
+                  <i>May 24, 2021 - Nathaniel Popper</i>
                 </li>
                 <li>
                   <Link to="https://www.goodreads.com/en/book/show/56274031-kings-of-crypto">
                     Kings of Crypto: One Startup&#39;s Quest to Take
                     Cryptocurrency Out of Silicon Valley and Onto Wall Street
                   </Link>{" "}
-                  <em>December 15, 2020 - Jeff John Roberts</em>
+                  <i>December 15, 2020 - Jeff John Roberts</i>
                 </li>
                 <li>
                   <Link to="https://github.com/ethereumbook/ethereumbook">
                     Mastering Ethereum
                   </Link>{" "}
-                  <em>
+                  <i>
                     December 23, 2018 – Andreas M. Antonopoulos, Gavin Wood
                     Ph.D.{" "}
-                  </em>
+                  </i>
                 </li>
               </ul>
               <p>Podcasts covering Ethereum and Cryptocurrencies:</p>
