@@ -324,7 +324,7 @@ const dropdownLinks = {
       to: "/upgrades/merge/",
     },
     {
-      text: "page-upgrades-upgrades-shard-chains" as TranslationKey,
+      text: "page-upgrades-shard-title" as TranslationKey,
       to: "/upgrades/sharding/",
     },
   ],
