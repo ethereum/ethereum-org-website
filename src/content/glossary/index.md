@@ -875,7 +875,7 @@ Short for "succinct non-interactive argument of knowledge", a SNARK is a type of
 
 ### soft fork {#soft-fork}
 
-A temporary divergence in a [blockchain](#blockchain) that occurs when the [consensus rules](#consensus-rules) become stricter. Contrary to a [hard fork](#hard-fork), a soft fork is backwards compatible; upgraded nodes can validate blocks created by non-upgraded nodes as long as they follow the new consensus rules.
+A divergence in a [blockchain](#blockchain) that occurs when the [consensus rules](#consensus-rules) become change. Contrary to a [hard fork](#hard-fork), a soft fork is backwards compatible; upgraded nodes can validate blocks created by non-upgraded nodes as long as they follow the new consensus rules.
 
 ### Solidity {#solidity}
 
