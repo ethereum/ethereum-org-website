@@ -12,6 +12,8 @@ import Translation from "../Translation"
 import { NavLink } from "../SharedStyledComponents"
 import { translateMessageId } from "../../utils/translations"
 
+import { ISections } from "./types"
+
 const Container = styled.div`
   display: none;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
@@ -149,6 +151,15 @@ const StyledNavLink = styled(NavLink)`
 
 const SectionTitle = styled.div`
   margin: 1rem 0;
+  font-size: 1.3rem;
+  color: ${(props) => props.theme.colors.text};
+`
+
+const SectionSubtitle = styled.div`
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  line-height: 1;
   color: ${(props) => props.theme.colors.text};
 `
 
@@ -250,10 +261,18 @@ const BlankSearchState = styled.div`
   border-radius: 100%;
 `
 
-const MobileNavMenu = ({
+export interface IProps {
+  isMenuOpen: boolean
+  isSearchOpen: boolean
+  isDarkTheme: boolean
+  toggleMenu: (item?: "search" | "menu") => void
+  toggleTheme: () => void
+  linkSections: ISections
+}
+
+const MobileNavMenu: React.FC<IProps> = ({
   isMenuOpen,
   isSearchOpen,
-  isHelpOpen,
   isDarkTheme,
   toggleMenu,
   toggleTheme,
@@ -261,7 +280,12 @@ const MobileNavMenu = ({
 }) => {
   const intl = useIntl()
 
-  const isOpen = isMenuOpen || isSearchOpen || isHelpOpen
+  const isOpen = isMenuOpen || isSearchOpen
+
+  const handleClick = (): void => {
+    toggleMenu()
+  }
+
   return (
     <Container>
       <MenuButton
@@ -286,7 +310,7 @@ const MobileNavMenu = ({
         animate={isOpen ? "open" : "closed"}
         variants={mobileModalVariants}
         initial="closed"
-        onClick={toggleMenu}
+        onClick={handleClick}
       />
       <MenuContainer
         aria-hidden={!isMenuOpen}
@@ -295,8 +319,9 @@ const MobileNavMenu = ({
         initial="closed"
       >
         <MenuItems>
-          {linkSections.map((section, idx) =>
-            section.items ? (
+          {Object.keys(linkSections).map((sectionKey, idx) => {
+            const section = linkSections[sectionKey]
+            return section.items ? (
               <NavListItem
                 key={idx}
                 aria-label={`Select ${translateMessageId(section.text, intl)}`}
@@ -305,20 +330,36 @@ const MobileNavMenu = ({
                   <Translation id={section.text} />
                 </SectionTitle>
                 <SectionItems>
-                  {section.items.map((item, idx) => (
-                    <SectionItem key={idx} onClick={toggleMenu}>
-                      <StyledNavLink
-                        to={item.to}
-                        isPartiallyActive={item.isPartiallyActive}
-                      >
-                        <Translation id={item.text} />
-                      </StyledNavLink>
-                    </SectionItem>
-                  ))}
+                  {section.items.map((item, idx) =>
+                    item.items ? (
+                      <>
+                        <SectionSubtitle>{item.text}</SectionSubtitle>
+                        {item.items.map((item, idx) => (
+                          <SectionItem key={idx} onClick={handleClick}>
+                            <StyledNavLink
+                              to={item.to}
+                              isPartiallyActive={item.isPartiallyActive}
+                            >
+                              <Translation id={item.text} />
+                            </StyledNavLink>
+                          </SectionItem>
+                        ))}
+                      </>
+                    ) : (
+                      <SectionItem key={idx} onClick={handleClick}>
+                        <StyledNavLink
+                          to={item.to}
+                          isPartiallyActive={item.isPartiallyActive}
+                        >
+                          <Translation id={item.text} />
+                        </StyledNavLink>
+                      </SectionItem>
+                    )
+                  )}
                 </SectionItems>
               </NavListItem>
             ) : (
-              <NavListItem onClick={toggleMenu} key={idx}>
+              <NavListItem onClick={handleClick} key={idx}>
                 <NavLink
                   to={section.to}
                   isPartiallyActive={section.isPartiallyActive}
@@ -327,7 +368,7 @@ const MobileNavMenu = ({
                 </NavLink>
               </NavListItem>
             )
-          )}
+          })}
         </MenuItems>
       </MenuContainer>
       <BottomMenu
@@ -348,7 +389,7 @@ const MobileNavMenu = ({
             <Translation id={isDarkTheme ? "dark-mode" : "light-mode"} />
           </BottomItemText>
         </BottomItem>
-        <BottomItem onClick={toggleMenu}>
+        <BottomItem onClick={handleClick}>
           <BottomLink to="/languages/">
             <MenuIcon name="language" />
             <BottomItemText>

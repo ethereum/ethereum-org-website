@@ -3,7 +3,7 @@ import { useIntl } from "gatsby-plugin-intl"
 import styled from "styled-components"
 import { cloneDeep } from "lodash"
 
-import NavDropdown from "./Dropdown"
+import Menu from "./Menu"
 import MobileNavMenu from "./Mobile"
 import NakedButton from "../NakedButton"
 import Link from "../Link"
@@ -13,6 +13,8 @@ import Translation from "../Translation"
 import { NavLink } from "../SharedStyledComponents"
 import { translateMessageId } from "../../utils/translations"
 import HomeIcon from "../../assets/eth-home-icon.svg"
+
+import { IItem, ISections } from "./types"
 
 const NavContainer = styled.div`
   position: sticky;
@@ -130,14 +132,20 @@ const NavIcon = styled(Icon)`
   fill: ${(props) => props.theme.colors.text};
 `
 
+export interface IProps {
+  handleThemeChange: () => void
+  isDarkTheme: boolean
+  path: string
+}
+
 // TODO display page title on mobile
-const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
+const Nav: React.FC<IProps> = ({ handleThemeChange, isDarkTheme, path }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isSearchOpen, setIsSearchOpen] = useState(false)
   const intl = useIntl()
 
-  const linkSections = [
-    {
+  const linkSections: ISections = {
+    useEthereum: {
       text: "use-ethereum",
       ariaLabel: "use-ethereum-menu",
       items: [
@@ -191,69 +199,92 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
         },
       ],
     },
-    {
+    learn: {
       text: "learn",
       ariaLabel: "learn-menu",
       items: [
         {
-          text: "what-is-ethereum",
-          to: "/what-is-ethereum/",
+          // @ts-ignore: until we add the translations
+          text: "Start here",
+          items: [
+            {
+              // @ts-ignore: until we add the translations
+              text: "Learn hub",
+              to: "/learn/",
+            },
+          ],
         },
         {
-          text: "what-is-ether",
-          to: "/eth/",
+          // @ts-ignore: until we add the translations
+          text: "Ethereum basics",
+          items: [
+            {
+              text: "what-is-ethereum",
+              to: "/what-is-ethereum/",
+            },
+            {
+              text: "what-is-ether",
+              to: "/eth/",
+            },
+            {
+              text: "ethereum-wallets",
+              to: "/wallets/",
+            },
+            {
+              text: "ethereum-security",
+              to: "/security/",
+            },
+            {
+              text: "web3",
+              to: "/web3/",
+            },
+            {
+              text: "smart-contracts",
+              to: "/smart-contracts/",
+            },
+          ],
         },
         {
-          text: "smart-contracts",
-          to: "/smart-contracts/",
-        },
-        {
-          text: "ethereum-security",
-          to: "/security/",
-        },
-        {
-          text: "history-of-ethereum",
-          to: "/history/",
-        },
-        {
-          text: "ethereum-whitepaper",
-          to: "/whitepaper/",
-        },
-        {
-          text: "ethereum-upgrades",
-          to: "/upgrades/",
-        },
-        {
-          text: "ethereum-glossary",
-          to: "/glossary/",
-        },
-        {
-          text: "ethereum-governance",
-          to: "/governance/",
-        },
-        {
-          text: "bridges",
-          to: "/bridges/",
-        },
-        {
-          text: "energy-consumption",
-          to: "/energy-consumption/",
-        },
-        {
-          text: "eips",
-          to: "/eips/",
-        },
-        {
-          text: "web3",
-          to: "/web3/",
-        },
-        {
-          text: "guides-and-resources",
-          to: "/learn/",
+          // @ts-ignore: until we add the translations
+          text: "Ethereum protocol",
+          items: [
+            {
+              text: "energy-consumption",
+              to: "/energy-consumption/",
+            },
+            {
+              text: "ethereum-upgrades",
+              to: "/upgrades/",
+            },
+            {
+              text: "eips",
+              to: "/eips/",
+            },
+            {
+              text: "history-of-ethereum",
+              to: "/history/",
+            },
+            {
+              text: "ethereum-whitepaper",
+              to: "/whitepaper/",
+            },
+            {
+              text: "ethereum-glossary",
+              to: "/glossary/",
+            },
+            {
+              text: "ethereum-governance",
+              to: "/governance/",
+            },
+            {
+              text: "bridges",
+              to: "/bridges/",
+            },
+          ],
         },
       ],
     },
-    {
+    developers: {
       text: "developers",
       ariaLabel: "page-developers-aria-label",
       items: [
@@ -279,7 +310,7 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
         },
       ],
     },
-    {
+    enterprise: {
       text: "enterprise",
       ariaLabel: "enterprise-menu",
       items: [
@@ -293,7 +324,7 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
         },
       ],
     },
-    {
+    community: {
       text: "community",
       ariaLabel: "community-menu",
       items: [
@@ -331,8 +362,9 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
         },
       ],
     },
-  ]
-  const ednLinks = [
+  }
+
+  const ednLinks: Array<IItem> = [
     {
       text: "home",
       to: "/developers/",
@@ -357,7 +389,7 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
   ]
 
   let mobileLinkSections = cloneDeep(linkSections)
-  const handleMenuToggle = (item) => {
+  const handleMenuToggle = (item?: "search" | "menu"): void => {
     if (item === "menu") {
       setIsMenuOpen(!isMenuOpen)
     } else if (item === "search") {
@@ -381,29 +413,12 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
       <StyledNav aria-label={translateMessageId("nav-primary", intl)}>
         <NavContent>
           <HomeLogoNavLink to="/">
-            <HomeLogo alt={translateMessageId("ethereum-logo", intl)} />
+            <HomeLogo />
           </HomeLogoNavLink>
           {/* Desktop */}
           <InnerContent>
             <LeftItems>
-              {linkSections.map((section, idx) =>
-                section.items || section.component ? (
-                  <NavDropdown
-                    section={section}
-                    key={idx}
-                    hasSubNav={shouldShowSubNav}
-                  />
-                ) : (
-                  <NavListItem key={idx}>
-                    <NavLink
-                      to={section.to}
-                      isPartiallyActive={section.isPartiallyActive}
-                    >
-                      <Translation id={section.text} />
-                    </NavLink>
-                  </NavListItem>
-                )
-              )}
+              <Menu path={path} sections={linkSections} />
             </LeftItems>
             <RightItems>
               <Search useKeyboardShortcuts />
