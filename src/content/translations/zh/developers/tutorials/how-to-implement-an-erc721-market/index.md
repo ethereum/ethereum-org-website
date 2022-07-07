@@ -68,9 +68,7 @@ mapping(uint256 => Trade) public trades;
 
 接下来的问题是我们需要处理哪些物品，以及用于支付交易的货币是什么。
 
-对于物品，我们只是要求它们实现[ERC-721](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/IERC721.sol?ref=hackernoon.com)的接口。这实际上只是一种在区块链中表示现实世界物品的方式，
-
-尽管它最适合数字资产。 我们将在构造函数中定制化我们自己的 ERC721 合约，这意味着我们分类信息板中的任何资产都需要事先被代币化。</p>
+对于物品，我们只是要求它们实现[ERC-721](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/IERC721.sol?ref=hackernoon.com)的接口。这实际上只是一种在区块链中表示现实世界物品的方式，[尽管它最适合数字资产](https://hackernoon.com/tokenization-of-digital-assets-g0ffk3v8s?ref=hackernoon.com)。 我们将在构造函数中定制化我们自己的 ERC721 合约，这意味着我们分类信息板中的任何资产都需要事先被代币化。
 
 对于付款，我们将做类似的事情。 大多数区块链项目定义了自己的[ERC-20](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol?ref=hackernoon.com)加密货币。 其他一些人更喜欢使用像 DAI 这样的主流技术。 在这个分类信息板的应用中，您只需要在构造函数里决定您构建的货币是什么。 很容易。
 

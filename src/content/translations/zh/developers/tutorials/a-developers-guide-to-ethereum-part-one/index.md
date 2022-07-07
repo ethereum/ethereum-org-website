@@ -240,21 +240,20 @@ Out[9]: AttributeDict({
 
 - 该区块编号是零  - 无论您在多久以前配置了测试器提供者  。 与真实的以太坊网络不同，真实的以太坊网络大概每隔 15 秒就会挖掘一个新的区块，而模拟链则则需要您给它一些工作才增加区块。
 - `transactions` 是一个空列表，原因相同：我们还没有做任何事情。 第一个区块是一个**空区块**，只是为了开个头。
-- 注意，`parentHash<code> 只是一堆空的字节。 这标志着它是链条上的第一个区块，也就是所谓的<strong x-id="1">创世区块</strong>。</li>
-</ul>
+- 注意，`parentHash` 只是一堆空的字节。 这标志着它是链条上的第一个区块，也就是所谓的**创世区块**。
 
-<h2 id="tour-stop-3-transactions" spaces-before="0">第三站：<a href="/developers/docs/transactions/"> 交易
-</a></h2>
+## 第三站：[交易](/developers/docs/transactions/) {#tour-stop-3-transactions}
 
-<p spaces-before="0">在没有交易之前，我们停留在零区块，所以我们给它一个交易。 从一个账户向另一个账户发送一些测试 ETH：</p>
+在没有交易之前，我们停留在零区块，所以我们给它一个交易。 从一个账户向另一个账户发送一些测试 ETH：
 
-<pre><code class="python">In [10]: tx_hash = w3.eth.send_transaction({
+```python
+In [10]: tx_hash = w3.eth.send_transaction({
    'from': w3.eth.accounts[0],
    'to': w3.eth.accounts[1],
    'value': w3.toWei(3, 'ether'),
    'gas': 21000
 })
-`</pre>
+```
 
 这时通常会等上几秒钟，等待交易挖到一个新的区块。 完整的流程是这样的：
 
