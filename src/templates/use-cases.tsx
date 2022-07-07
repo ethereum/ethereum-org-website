@@ -36,6 +36,7 @@ import {
   Paragraph,
   Header1,
   Header4,
+  ListItem,
 } from "../components/SharedStyledComponents"
 import Emoji from "../components/Emoji"
 import YouTube from "../components/YouTube"
@@ -150,6 +151,7 @@ const components = {
   h3: H3,
   h4: Header4,
   p: Paragraph,
+  li: ListItem,
   pre: Pre,
   table: MarkdownTable,
   MeetupList,

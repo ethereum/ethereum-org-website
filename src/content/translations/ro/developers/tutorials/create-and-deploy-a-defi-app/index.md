@@ -12,7 +12,7 @@ tags:
 skill: intermediar
 lang: ro
 sidebar: true
-published: 31-12-2020
+published: 2020-12-31
 source: github.com
 sourceUrl: https://github.com/strykerin/DeFi-Token-Farm
 ---
