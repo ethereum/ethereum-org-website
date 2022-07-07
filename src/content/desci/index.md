@@ -24,7 +24,7 @@ Decentralized science allows for more diverse funding sources (from [DAOs](/dao)
 
 ## How DeSci improves science
 
-An incomplemete list of key problems in science and how decentralized science can help to address these issues
+An incomplete list of key problems in science and how decentralized science can help to address these issues
 
 <table>
   <tr>
@@ -116,7 +116,7 @@ While free and open-access platforms do exist in the form of pre-print servers (
 
 Reproducibility and replicability are the foundations of quality scientific discovery. Findings that are reproducible can be achieved multiple times in a row by the same team using the same methodology. Findings that are replicable can be remade by a different team using the same experimental set-up. 
 
-New primitives being created ensure that reproducibility and replicability are the basis of discovery. We can weave quality science into the technological fabric of academia. Web3 offers the ability to create attestations for each component of an analysis: the raw data, the computational engine, and the result of the application. The beauty of consensus systems is that when a trust network is created for maintaining these components, each network participant can be responsible for reproducing the calculation and validating each result.
+New Web3-native tools can ensure that reproducibility and replicability are the basis of discovery. We can weave quality science into the technological fabric of academia. Web3 offers the ability to create attestations for each component of an analysis: the raw data, the computational engine, and the result of the application. The beauty of consensus systems is that when a trust network is created for maintaining these components, each network participant can be responsible for reproducing the calculation and validating each result.
 
 
 ## Funding
@@ -169,7 +169,7 @@ Flexible Web3 data solutions support the scenarios above in addition to providin
 * [Atoms: smart contract peer-review)](https://www.atoms.org)
 * [dClimate API: query climate data collected by a decentralized community](https://api.dclimate.net/)
 * [DeSci Foundation: DeSci publishing tool builder](https://descifoundation.org/)
-* [DeSci.World): one-stop shop for users to view, engage with decentralized science) 
+* [DeSci.World: one-stop shop for users to view, engage with decentralized science](desci.world) 
 * [Gitcoin: apply for an scientific open source developer grant](https://gitcoin.co/grants)
 * [Molecule: Fund and get funded for your research projects](https://discover.molecule.to/)
 * [OceanDAO: DAO governed funding for data-related science](https://oceanprotocol.com/dao)
