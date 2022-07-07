@@ -8,7 +8,7 @@ tags:
   - "Solidity"
   - "primi passi"
   - "erc-20"
-skill: intermedio
+skill: intermediate
 lang: it
 sidebar: true
 published: 2020-04-07

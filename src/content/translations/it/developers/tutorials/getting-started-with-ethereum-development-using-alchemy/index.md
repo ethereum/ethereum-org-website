@@ -9,7 +9,7 @@ tags:
   - "nodi"
   - "interrogazione"
   - "alchemy"
-skill: principiante
+skill: beginner
 lang: it
 sidebar: true
 published: 2020-10-30

@@ -6,7 +6,7 @@ tags:
   - "smart contract"
   - "sicurezza"
   - "Solidity"
-skill: intermedio
+skill: intermediate
 lang: it
 sidebar: true
 published: 2020-09-07
