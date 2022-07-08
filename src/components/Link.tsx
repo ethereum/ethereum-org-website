@@ -1,6 +1,6 @@
 import React from "react"
 import { Link as GatsbyLink } from "gatsby"
-import { Link as IntlLink } from "gatsby-plugin-intl"
+import { LocalizedLink as IntlLink } from "gatsby-theme-i18n"
 import styled from "styled-components"
 
 import Icon from "./Icon"

@@ -1,6 +1,6 @@
 import React, { useState, createRef, useContext, ReactNode } from "react"
 import styled from "styled-components"
-import { useIntl } from "gatsby-plugin-intl"
+import { useIntl } from "react-intl"
 import { motion } from "framer-motion"
 
 import Translation from "../Translation"

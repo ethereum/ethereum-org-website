@@ -66,7 +66,7 @@ Markdown will be translated as whole pages of content, so no specific action is 
   - **Method two: `translateMessageId()`**
 
     ```tsx
-    import { useIntl } from "gatsby-plugin-intl"
+    import { useIntl } from "react-intl"
     import { translateMessageId } from "src/utils/translations"
 
     // Utilize anywhere in JS using

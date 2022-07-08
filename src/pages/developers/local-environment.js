@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react"
 import styled from "styled-components"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { graphql } from "gatsby"
-import { useIntl } from "gatsby-plugin-intl"
+import { useIntl } from "react-intl"
 import { shuffle } from "lodash"
 
 // import ActionCard from "../../components/ActionCard"
@@ -603,7 +603,7 @@ export const devtoolImage = graphql`
 `
 
 export const query = graphql`
-  {
+  query LocalEnvironmentPage {
     hero: file(relativePath: { eq: "developers-eth-blocks.png" }) {
       childImageSharp {
         gatsbyImageData(

@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import styled from "styled-components"
 import { graphql } from "gatsby"
-import { useIntl } from "gatsby-plugin-intl"
+import { useIntl } from "react-intl"
 
 import Translation from "../../components/Translation"
 import { translateMessageId } from "../../utils/translations"
@@ -480,7 +480,7 @@ const TutorialsPage = ({ data, pageContext }) => {
 export default TutorialsPage
 
 export const query = graphql`
-  query {
+  query TutorialsPage {
     allTutorials: allMdx(
       filter: { slug: { regex: "/tutorials/" } }
       sort: { fields: frontmatter___published, order: DESC }

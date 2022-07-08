@@ -52,6 +52,7 @@ export type Languages = {
 
 export const defaultLanguage: Lang = "en"
 
+// TODO: refactor - read this from `./i18n/config.json` source of truth
 const languages: Languages = {
   en: {
     language: "English",
@@ -193,7 +194,7 @@ const languages: Languages = {
   },
 }
 
-const buildLangs = (process.env.GATSBY_BUILD_LANGS || "")
+export const buildLangs = (process.env.GATSBY_BUILD_LANGS || "")
   .split(",")
   .filter(Boolean)
 

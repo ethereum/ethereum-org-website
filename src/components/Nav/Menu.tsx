@@ -1,6 +1,6 @@
-import { useIntl } from "gatsby-plugin-intl"
 import React from "react"
 import styled from "styled-components"
+import { useIntl } from "react-intl"
 
 import NavDropdown from "./Dropdown"
 import Translation from "../Translation"

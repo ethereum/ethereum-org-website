@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react"
 import styled from "styled-components"
 import { graphql } from "gatsby"
 import { getImage } from "gatsby-plugin-image"
-import { useIntl } from "gatsby-plugin-intl"
+import { useIntl } from "react-intl"
 import { shuffle } from "lodash"
 
 import { translateMessageId } from "../../utils/translations"
@@ -338,7 +338,7 @@ export const learningToolImage = graphql`
 `
 
 export const query = graphql`
-  {
+  query LearningToolsPage {
     captureTheEther: file(
       relativePath: { eq: "dev-tools/capturetheether.png" }
     ) {

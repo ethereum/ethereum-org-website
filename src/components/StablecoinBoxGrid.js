@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { navigate } from "gatsby-plugin-intl"
+import { navigate } from "react-intl"
 import styled from "styled-components"
 import Link from "./Link"
 import Emoji from "./Emoji"

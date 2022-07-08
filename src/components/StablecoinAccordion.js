@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { getImage } from "gatsby-plugin-image"
-import { useIntl, navigate } from "gatsby-plugin-intl"
+import { useIntl, navigate } from "react-intl"
 import styled from "styled-components"
 // TODO add motion animation
 // import { motion } from "framer-motion"

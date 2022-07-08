@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { graphql } from "gatsby"
-import { useIntl } from "gatsby-plugin-intl"
+import { useIntl } from "react-intl"
 
 import { translateMessageId } from "../../utils/translations"
 import Card from "../../components/Card"
@@ -547,7 +547,7 @@ const DevelopersPage = ({ data }) => {
 export default DevelopersPage
 
 export const query = graphql`
-  {
+  query DevelopersPage {
     ednHero: file(relativePath: { eq: "enterprise-eth.png" }) {
       childImageSharp {
         gatsbyImageData(
