@@ -11,6 +11,7 @@ const Container = styled.div`
 
 const Content = styled.div`
   text-align: center;
+  white-space: normal;
   width: 200px;
   color: ${({ theme }) => theme.colors.text};
   background-color: ${({ theme }) => theme.colors.background};

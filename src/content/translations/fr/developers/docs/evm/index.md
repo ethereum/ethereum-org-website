@@ -51,7 +51,7 @@ Cependant, les contrats contiennent un arbre de _stockage_ Merkle Patricia (en t
 
 Le bytecode du contract intelligent compilé s'exécute comme un certain nombre [de codes d'opérations](/developers/docs/evm/opcodes) EVM, qui effectuent des opérations de pile standards comme `XOR`, `AND`, `ADD`, `SUB`, etc. L'EVM implémente également un certain nombre d'opérations de pile spécifiques à la blockchain, comme `ADDRESS`, `BALANCE`, `BLOCKHASH`, etc.
 
-![Diagramme indiquant où le carburant est nécessaire dans les opérations de l'EVM](../gas/gas.png) _Schéma adapté à partir du document [EVM Ethereum illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![Diagramme indiquant où le gaz est nécessaire dans les opérations de l'EVM](../gas/gas.png) _Schéma adapté à partir du document [EVM Ethereum illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 ## Implémentations de l'EVM {#evm-implementations}
 
@@ -77,4 +77,4 @@ Tous les [clients Ethereum](/developers/docs/nodes-and-clients/#execution-client
 
 ## Sujets connexes {#related-topics}
 
-- [Carburant](/developers/docs/gas/)
+- [Gaz](/developers/docs/gas/)

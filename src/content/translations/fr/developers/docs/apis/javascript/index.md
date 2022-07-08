@@ -17,7 +17,7 @@ Il peut être utile de comprendre non seulement en quoi consiste JavaScript, mai
 
 ## Pourquoi utiliser une bibliothèque ? {#why-use-a-library}
 
-Les bibliothèques suppriment une grande partie de la complexité de l'interaction directe avec un nœud Ethereum. Elles fournissent également des fonctions utilitaires (par ex. convertir des ETH en gwei) afin que vous puissiez, en tant que développeur, passer moins de temps à gérer les subtilités des clients Ethereum et plus de temps à vous consacrer aux fonctionnalités uniques de votre application.
+Ces bibliothèques suppriment une grande partie de la complexité d'une interaction directe avec un nœud Ethereum. Elles fournissent également des fonctions utilitaires (par ex. convertir des ETH en gwei) afin que vous puissiez, en tant que développeur, passer moins de temps à gérer les subtilités des clients Ethereum et plus de temps à vous consacrer aux fonctionnalités uniques de votre application.
 
 ## Fonctionnalités d'une bibliothèque {#library-features}
 
@@ -28,12 +28,12 @@ En utilisant des fournisseurs, les bibliothèques vous permettent de vous connec
 **Exemple Ether**
 
 ```js
-// A Web3Provider wraps a standard Web3 provider, which is
-// what MetaMask injects as window.ethereum into each page
+// Un Web3Provider enveloppe un fournisseur Web3 standard, qui est
+// ce que MetaMask injecte comme window.ethereum dans chaque page.
 const provider = new ethers.providers.Web3Provider(window.ethereum)
 
-// The MetaMask plugin also allows signing transactions to
-// send ether and pay to change state within the blockchain.
+// Le plugin MetaMask permet également de signer des transactions pour
+// envoyer de l'ether et payer pour changer l'état de la blockchain.
 // Pour cela, nous avons besoin du signataire du compte...
 const signer = provider.getSigner()
 ```
@@ -64,10 +64,10 @@ var web3 = new Web3(
 Une fois la configuration effectuée, vous pourrez interroger la blockchain pour :
 
 - les numéros de blocs ;
-- le carburant estimé ;
+- le gaz estimé ;
 - les événements du contract intelligent ;
 - l'ID du réseau ;
-- et plus encore...
+- Et plus encore...
 
 ### Fonctionnalités d'un portefeuille {#wallet-functionality}
 
@@ -208,7 +208,7 @@ Donnerait le JSON suivant :
 Cela veut dire que vous pouvez :
 
 - envoyer une transaction vers le contrat intelligent et exécuter sa méthode ;
-- faire un appel afin d'estimer le carburant nécessaire pour exécuter une méthode quand exécutée par le EVM ;
+- faire un appel afin d'estimer le gaz nécessaire pour exécuter une méthode quand exécutée par le EVM ;
 - déployer un contrat ;
 - et plus encore...
 
@@ -268,7 +268,7 @@ ethers.utils.formatEther(balance)
 - [Documentation](https://docs.alchemyapi.io/documentation/alchemy-web3)
 - [GitHub](https://github.com/alchemyplatform/alchemy-web3)
 
-**Alchemy NFT API -** **_API pour récupérer les données NFT, y compris la propriété, les attributs de métadonnées et plus encore._**
+**Alchemy NFT API -** **_API pour récupérer les données NFT, y compris la détention, les attributs de métadonnées et plus encore._**
 
 - [Documentation](https://docs.alchemy.com/alchemy/enhanced-apis/nft-api)
 - [GitHub](https://github.com/alchemyplatform/alchemy-web3)
@@ -277,7 +277,7 @@ ethers.utils.formatEther(balance)
 
 _Une ressource communautaire vous a aidé ? Modifiez cette page et ajoutez-la !_
 
-## Sujets connexes {#related-topics}
+## Thèmes connexes {#related-topics}
 
 - [Nœuds et clients](/developers/docs/nodes-and-clients/)
 - [Infrastructures de développement](/developers/docs/frameworks/)
