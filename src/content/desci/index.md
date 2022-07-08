@@ -15,7 +15,7 @@ summaryPoint3: Builds on the open science movement.
 
 ## What is decentralized science (DeSci)? {#what-is-desci}
 
-Decentralized science (DeSci) is a movement that aims to build public infrastructure for funding, creating, reviewing, crediting, storing, and disseminating scientific knowledge fairly and equitably using the web3 stack.
+Decentralized science (DeSci) is a movement that aims to build public infrastructure for funding, creating, reviewing, crediting, storing, and disseminating scientific knowledge fairly and equitably using the Web3 stack.
 
 The goal of DeSci is to create an ecosystem in which scientists are incentivized to openly share their research and receive credit for their work, while also providing a way for the general public to easily access and contribute to scientific research. DeSci is built on the premise that scientific knowledge should be open and accessible to everyone, and that the process of scientific research should be transparent. DeSci is also intended to create a more decentralized and distributed model for scientific research, which would make it more resistant to censorship and control by central authorities. By decentralizing access to funding, scientific tools and communication channels, DeSci hopes to create an environment where new and unconventional ideas can flourish.
 
@@ -25,34 +25,16 @@ Decentralized science allows for more diverse funding sources (from [DAOs](/dao/
 
 An incomplete list of key problems in science and how decentralized science can help to address these issues
 
-| **Decentralized science
-** | **Traditional science
-** |
-|----------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|
-| Distribution of funds is determined by the public using mechanisms such as quadratic donations or DAOs.
-| Distribution of funds is controlled by small, closed, centralized groups.
-|
-| You collaborate with peers from all over the globe in dynamic teams.
-| Your collaborations are limited by funding organizations and home institutions.
-|
-| Funding decisions are made online and in a transparent way. New funding mechanisms are explored.
-| Funding decisions are made with a long turnaround time and limited transparency. Few funding mechanisms exist.
-|
-| Sharing laboratory services is made easier and more transparent using Web3 primitives.
-| Sharing laboratory resources is often often slow and opaque.
-|
-| New models for publishing can be developed that use Web3 primitives for trust, transparency and universal access.
-| You publish through established pathways that are frequently acknowledged to be inefficient, biased and exploitative.
-|
-| You can earn tokens and reputation for peer-reviewing work.
-| Your peer-review work is unpaid, benefiting for-profit publishers.
-|
-| You own the intellectual property (IP) you generate and distribute it according to transparent terms.
-| Your home institution owns the IP you generate. Access to the IP is not transparent.
-|
-| Sharing all of the research, including the data that was generated from the unsuccessful efforts by design of having all steps on-chain.
-| Publication bias means that researchers are more likely to share experiments that had successful results if.
-|
+| **Decentralized science**                                                                                                                | **Traditional science**                                                                                               |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| Distribution of funds is determined by the public using mechanisms such as quadratic donations or DAOs.                                  | Distribution of funds is controlled by small, closed, centralized groups.                                             |
+| You collaborate with peers from all over the globe in dynamic teams.                                                                     | Your collaborations are limited by funding organizations and home institutions.                                       |
+| Funding decisions are made online and in a transparent way. New funding mechanisms are explored.                                         | Funding decisions are made with a long turnaround time and limited transparency. Few funding mechanisms exist.        |
+| Sharing laboratory services is made easier and more transparent using Web3 primitives.                                                   | Sharing laboratory resources is often often slow and opaque.                                                          |
+| New models for publishing can be developed that use Web3 primitives for trust, transparency and universal access.                        | You publish through established pathways that are frequently acknowledged to be inefficient, biased and exploitative. |
+| You can earn tokens and reputation for peer-reviewing work.                                                                              | Your peer-review work is unpaid, benefiting for-profit publishers.                                                    |
+| You own the intellectual property (IP) you generate and distribute it according to transparent terms.                                    | Your home institution owns the IP you generate. Access to the IP is not transparent.                                  |
+| Sharing all of the research, including the data that was generated from the unsuccessful efforts by design of having all steps on-chain. | Publication bias means that researchers are more likely to share experiments that had successful results if.          |
 
 ## Ethereum and DeSci {#ethereum-and-desci}
 
@@ -80,7 +62,7 @@ The current standard model for funding science is that individuals or groups of 
 
 Studies have shown that grant review panels do a poor job of selecting high quality projects. The same proposals given to different panels have wildly different outcomes. As funding has become more scarce it has concentrated into a smaller pool of more senior researchers with more intellectually conservative projects. The effect has been to create a hyper-competitive funding landscape, entrenching perverse incentive and stifling innovation.
 
-Web3 has the potential to disrupt this broken funding model by experimenting with different incentive models developed by DAOs and web3 broadly. [Retroactive public goods funding](https://medium.com/ethereum-optimism/retroactive-public-goods-funding-33c9b7d00f0c), [quadratic funding](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531), [DAO governance](https://www.antler.co/blog/daos-and-web3-governance) and [tokenized incentive structures](https://cdixon.org/2017/05/27/crypto-tokens-a-breakthrough-in-open-network-design) are some of the web3 tools that could revolutionize science funding.
+Web3 has the potential to disrupt this broken funding model by experimenting with different incentive models developed by DAOs and Web3 broadly. [Retroactive public goods funding](https://medium.com/ethereum-optimism/retroactive-public-goods-funding-33c9b7d00f0c), [quadratic funding](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531), [DAO governance](https://www.antler.co/blog/daos-and-web3-governance) and [tokenized incentive structures](https://cdixon.org/2017/05/27/crypto-tokens-a-breakthrough-in-open-network-design) are some of the Web3 tools that could revolutionize science funding.
 
 ### IP Ownership and Development {#ip-ownership}
 
@@ -114,7 +96,7 @@ Flexible Web3 data solutions support the scenarios above in addition to providin
 
 - [What's Decentralized Science? ](https://www.youtube.com/watch?v=-DeMklVWNdA)
 - [Conversation between Vitalik Buterin and the scientist Aubrey de Grey about the intersection of longevity research and crypto](https://www.youtube.com/watch?v=x9TSJK1widA)
-- [Scientific Publishing Is Broken. Can web3 Fix It?](https://www.youtube.com/watch?v=WkvzYgCvWj8)
+- [Scientific Publishing Is Broken. Can Web3 Fix It?](https://www.youtube.com/watch?v=WkvzYgCvWj8)
 
 ## Get involved {#get-involved}
 
