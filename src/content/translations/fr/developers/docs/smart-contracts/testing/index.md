@@ -17,7 +17,7 @@ incomplete: true
 
 - [GitHub](https://github.com/sc-forks/solidity-coverage)
 
-**Whiteblock Genesis - \*\***_Plateforme de test et sandbox de développement de bout en bout pour la blockchain_\*\*
+**Whiteblock Genesis -** **_Plateforme de test et sandbox de développement de bout en bout pour la blockchain_**
 
 - [Whiteblock.io](https://whiteblock.io)
 - [Documentation](https://docs.whiteblock.io)

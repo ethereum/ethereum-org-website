@@ -7982,6 +7982,45 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "PraneshASP",
+      "name": "Pranesh A S",
+      "avatar_url": "https://avatars.githubusercontent.com/u/42379522?v=4",
+      "profile": "https://github.com/PraneshASP",
+      "contributions": [
+        "doc",
+        "bug"
+      ]
+    },
+    {
+      "login": "shir22",
+      "name": "shir22",
+      "avatar_url": "https://avatars.githubusercontent.com/u/33841818?v=4",
+      "profile": "https://github.com/shir22",
+      "contributions": [
+        "doc",
+        "bug"
+      ]
+    },
+    {
+      "login": "nikashitsa",
+      "name": "Nikita Verkhovin",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1029908?v=4",
+      "profile": "https://github.com/nikashitsa",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "pushkar2112",
+      "name": "Pushkar Verma",
+      "avatar_url": "https://avatars.githubusercontent.com/u/50198312?v=4",
+      "profile": "https://pushkarverma.dev",
+      "contributions": [
+        "doc",
+        "ideas"
+      ]
     }
   ],
   "contributorsPerLine": 7,

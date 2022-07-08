@@ -425,7 +425,7 @@ Xpath: /pre[2]/code
 
 _Nous aimerions avoir plus de documentation sur la création d'un contrat intelligent oracle. Si vous pouvez nous aider, créez une PR !_
 
-## Complément d'information {#further-reading}
+## En lire plus {#further-reading}
 
 **Articles**
 

@@ -109,7 +109,7 @@ sidebar: true
 - [相关文档](https://docs.ipfs.io/)
 - [GitHub](https://github.com/ipfs/ipfs)
 
-\*\*Storj DCS - \_安全、私有、与 S3 兼容的去中心化云对象存储，供开发者使用。</strong></p>
+**Storj DCS - _安全、私有、与 S3 兼容的去中心化云对象存储，供开发者使用。_**
 
 - [Storj.io](https://storj.io/)
 - [相关文档](https://docs.storj.io/)
@@ -132,7 +132,7 @@ sidebar: true
 - [相关文档](https://docs.arweave.org/info/)
 - [Arweave](https://github.com/ArweaveTeam/arweave/)
 
-\*\*0chain - \_0Chain 是一个具有区块分片和 blobbers 的基于权益证明的去中心化存储平台。</strong></p>
+**0chain - _0Chain 是一个具有区块分片和 blobbers 的基于权益证明的去中心化存储平台。_**
 
 - [0Chain.net](https://0chain.net/)
 - [相关文档](https://docs.0chain.net/0chain/)
@@ -156,7 +156,7 @@ sidebar: true
 - [相关文档](https://aleph.im/#/developers/)
 - [GitHub](https://github.com/aleph-im/)
 
-\*\*Ceramic - \_用户控制的星际文件系统数据库存储，用于数据丰富和吸引人的应用程序。</strong></p>
+**Ceramic - _用户控制的星际文件系统数据库存储，用于数据丰富和吸引人的应用程序。_**
 
 - [Ceramic.network](https://ceramic.network/)
 - [相关文档](https://developers.ceramic.network/learn/welcome/)
