@@ -73,6 +73,32 @@ const USER_SELECTION = {
  * Primary script logic below *
  ******************************/
 
+/**
+ * Exported languages from Crowdin come as a .zip file, when unzipped contains
+ * one folder for each language, using Crowdin language codes (which differ
+ * slight from those used in the repo). These folders must be copied into the
+ * root `.crowdin` folder of this repo.
+ *
+ * Using the USER_SELECTION object above, the script iterates through each
+ * language chosen, using the dictionary object below to convert the repo lang
+ * code to the code used by Crowdin (only if needed, defaults to same). `fs`
+ * is used to find matching language folder.
+ *
+ * The "buckets" chosen (type number[]) are then iterated over, opening the
+ * corresponding folder that begins with the same number string (formatted 00).
+ *
+ * Each selected bucket folder is then iterated over, calling the
+ * `scrapeDirectory(_path, contentSubpath, repoLangCode)` function. This function
+ * iterates over every file contained in the working directory. If the filetype
+ * is `.json` the file is moved to the `/src/intl/{lang}/` directory. If the
+ * filetype is `.md` the `contentSubpath` is used to copy the file to its
+ * correct place in `/src/content/translations/{lang}/{contentSubpath}.
+ *
+ * If the directory item is another directory, `scrapeDirectory` is called
+ * recursively, passing the new `_path` and `contentSubpath`. The base case for
+ * this function is no more directory items remaining, and returns void.
+ */
+
 // Initialize root paths
 const repoRoot = resolve("./")
 const crowdinRoot = join(repoRoot, ".crowdin")
@@ -109,25 +135,14 @@ const BUCKET_NAMES = [
   "Developer Tutorials III",
 ]
 
-// Initialize trackers object
+// Initialize trackers object for summary
 const trackers = {
   emptyBuckets: 0,
 }
 
+// Functions
 const log = (message, ...optionalParams) =>
   VERBOSE && console.log(message, ...optionalParams)
-
-// Filter out empty requests and map selection to usable array
-const importSelection = Object.keys(USER_SELECTION)
-  .filter((repoLangCode) => {
-    if (!USER_SELECTION[repoLangCode].length) trackers.emptyBuckets++
-    return !!USER_SELECTION[repoLangCode].length
-  })
-  .map((repoLangCode) => ({
-    repoLangCode,
-    crowdinLangCode: repoToCrowdinCode[repoLangCode] || repoLangCode,
-    buckets: USER_SELECTION[repoLangCode],
-  }))
 
 const scrapeDirectory = (_path, contentSubpath, repoLangCode) => {
   if (!existsSync(_path)) return null
@@ -170,7 +185,19 @@ const scrapeDirectory = (_path, contentSubpath, repoLangCode) => {
   })
 }
 
-// Iterate through and scrape selected buckets
+// Filter out empty requests and map selection to usable array
+const importSelection = Object.keys(USER_SELECTION)
+  .filter((repoLangCode) => {
+    if (!USER_SELECTION[repoLangCode].length) trackers.emptyBuckets++
+    return !!USER_SELECTION[repoLangCode].length
+  })
+  .map((repoLangCode) => ({
+    repoLangCode,
+    crowdinLangCode: repoToCrowdinCode[repoLangCode] || repoLangCode,
+    buckets: USER_SELECTION[repoLangCode],
+  }))
+
+// Iterate through each selected language
 importSelection.forEach(({ repoLangCode, crowdinLangCode, buckets }) => {
   // Initialize tracker for language
   trackers[repoLangCode] = {
@@ -188,6 +215,7 @@ importSelection.forEach(({ repoLangCode, crowdinLangCode, buckets }) => {
     return
   }
   const langLs = readdirSync(_path)
+  // Iterate over each selected bucket, scraping contents with `scrapeDirectory`
   buckets.forEach((bucket) => {
     const paddedBucket = bucket.toString().padStart(2, "0")
     let bucketDirName = ""
