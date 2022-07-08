@@ -91,7 +91,7 @@
     "build:lambda": "netlify-lambda build src/lambda",
     "clean": "gatsby clean",
     "crowdin-clean": "rm -rf .crowdin && mkdir .crowdin",
-    "crowdin-import": "node src/scripts/crowdin-import.js",
+    "crowdin-import": "ts-node src/scripts/crowdin-import.ts",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "generate-heading-ids": "node src/scripts/generate-heading-ids.js",
     "start": "gatsby develop",
