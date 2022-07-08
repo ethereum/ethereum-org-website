@@ -1,11 +1,13 @@
 const { copyFileSync, existsSync, mkdirSync, readdirSync } = require("fs")
 const { resolve, join } = require("path")
-
+const argv = require("minimist")(process.argv.slice(2))
 /**
- * 0. Console summary flags
+ * 0. Console flags
+ * -v,--verbose    Prints verbose console logs
+ * -f,--full       Prints full name of buckets in summary
  */
-const VERBOSE = false
-const FULL_BUCKET_NAME_SUMMARY = false
+const VERBOSE = Boolean(argv.v || argv.verbose)
+const FULL_BUCKET_NAME_SUMMARY = Boolean(argv.f || argv.full)
 
 /**
  * 1. Copy languages folder from Crowdin export to ./.crowdin
