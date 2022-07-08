@@ -130,11 +130,11 @@ Wenn zahlreiche Nodes (meist die Mehrzahl der Nodes im Netzwerk) alle die gleich
 
 Konsens-Clients (wie Prysm, Teku, Nimbus, Lighthouse, Lodestar) führen Ethereums [Proof-of-Stake](#pos)-Konsensalgorithmus aus, der es dem Netzwerk ermöglicht, sich bezüglich des Kopfs der Beacon Chain zu einigen. Konsens-Clients beteiligen sich nicht an der Validierung/am Broadcasting von Transaktionen oder der Ausführung von Zustandsübergängen. Dies geschieht durch [Ausführungsclients](#execution-client).
 
-### Consensus Layer (Konsensschicht)  {#consensus-layer}
+### Consensus Layer (Konsensschicht) {#consensus-layer}
 
 Die Konsensschicht von Ethereum ist das Netzwerk der [Konsens-Clients](#consensus-client).
 
-### Consensus Rules (Konsensregeln)  {#consensus-rules}
+### Consensus Rules (Konsensregeln) {#consensus-rules}
 
 Die Block-Validierungsregeln, denen Full-Nodes folgen, um im Konsens mit anderen Nodes zu bleiben. Nicht zu verwechseln mit [Konsens](#consensus).
 
@@ -146,7 +146,7 @@ Der zweite Teil der [Metropolis](#metropolis)-Ausbaustufe, ursprünglich geplant
 
 Ein Konto, das Code enthält, welcher ausgeführt wird, wenn es eine [Transaktion](#transaction) von einem anderen [Konto](#account) ([EOA](#eoa) oder [Smart Contract](#contract-account)) erhält.
 
-### Contract Creation Transaction (Vertragserstellungs-Transaktion)  {#contract-creation-transaction}
+### Contract Creation Transaction (Vertragserstellungs-Transaktion) {#contract-creation-transaction}
 
 Eine spezielle [Transaktion](#transaction) mit der [Null-Adresse](#zero-address) als Empfänger, die verwendet wird, um einen [Vertrag](#contract-account) zu registrieren und ihn in der Ethereum-Blockchain aufzuzeichnen.
 
@@ -186,7 +186,7 @@ Eine Art [dApp](#dapp), mit der du Token mit anderen im Netzwerk austauschen kan
   Dezentralisierte Börsen
 </DocLink>
 
-### Deed (Beglaubigung)  {#deed}
+### Deed (Beglaubigung) {#deed}
 
 Siehe [non-fungible token (NFT)](#nft)
 
@@ -696,7 +696,7 @@ Eine Familie kryptographischer Hashfunktionen, die vom National Institute of Sta
 
 Eine [Proof-of-Stake](#pos)-Kette, die von der [Beacon Chain](#beacon-chain) koordiniert und von [Validatoren](#validator) gesichert wird. Im Rahmen des Shard-Chain-Upgrades werden dem Netzwerk 64 weitere hinzugefügt. Shard Chains werden einen erhöhten Transaktionsdurchsatz für Ethereum bieten, indem sie zusätzliche Daten für [Layer-2](#layer-2)-Lösungen wie [Optimistic Rollups](#optimistic-rollups) und [ZK-Rollups](#zk-rollups) bereitstellen.
 
-<DocLink to="/upgrades/shard-chains">
+<DocLink to="/upgrades/sharding">
   Shard Chains
 </DocLink>
 
@@ -808,7 +808,7 @@ Eine [Hard-Fork](#hard-fork) der Ethereum-Blockchain, die in Block 2.463.000 auf
 
 Kurz für "Testnetzwerk", ein Netzwerk, das dazu dient, das Verhalten des Hauptnetzwerks von Ethereum zu simulieren (siehe [Hauptnetzwerk](#mainnet)).
 
-<DocLink to="/developers/docs/networks/#testnets">
+<DocLink to="/developers/docs/networks/#ethereum-testnets">
   Testnetze
 </DocLink>
 

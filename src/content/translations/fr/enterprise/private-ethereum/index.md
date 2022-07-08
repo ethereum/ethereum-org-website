@@ -20,7 +20,7 @@ Différentes organisations sont à l'origine d'initiatives collaboratives afin d
 
 ### Protocole et infrastructure {#protocol-and-infrastructure}
 
-- [Chainstack](https://chainstack.com/) _ - Plateforme multicloud et multiprotocole en tant que service permettant aux entreprises de construire, déployer et gérer rapidement des réseaux et des services décentralisés_
+- [Chainstack](https://chainstack.com/) _ Plateforme multicloud et multiprotocole en tant que service permettant aux entreprises de construire, déployer et gérer rapidement des réseaux et des services décentralisés_
 - [Clearmatics Autonity](https://www.clearmatics.com/about/) _- Suite de protocoles qui implémente les protocoles P2P et fournit le logiciel client et l'infrastructure_
 - [Hyperledger Besu](https://www.hyperledger.org/use/besu) _- Client Ethereum open source développé sous Apache 2 et rédigé en Java, qui comprend plusieurs algorithmes de consensus, y compris PoW, et PoA (IBFT, IBFT 2.0, Etherhash et Clique). Ses systèmes d'autorisation complets sont conçus spécifiquement pour être utilisés dans un environnement de consortium._
 - [Hyperledger Burrow](https://www.hyperledger.org/projects/hyperledger-burrow) _ - Client de blockchain modulaire avec interprète de contrats intelligents autorisé, partiellement développé pour la spécification de la machine virtuelle Ethereum (EVM)_

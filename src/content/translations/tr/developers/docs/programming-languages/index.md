@@ -1,5 +1,5 @@
 ---
-title: Programlama dilleri
+title: Dilleri programlama
 description:
 lang: tr
 sidebar: true

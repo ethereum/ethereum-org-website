@@ -8,7 +8,7 @@ incomplete: true
 
 您需要编译您的合约，以便您的 web 应用程序和以太坊虚拟机能够理解它。
 
-## 前提条件 {#prerequisites}
+## 先决条件 {#prerequisites}
 
 在阅读关于编译的文档之前，请阅读我们的[智能合约](/developers/docs/smart-contracts/)和[以太坊虚拟机](/developers/docs/evm/)可能会有帮助。
 
@@ -40,7 +40,7 @@ PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x4 CALLDATASIZE LT PUSH2 0x41 JUMPI PUSH1 0x
 
 ABI 是一份 JSON 文件，描述了部署的合约及这个智能合约的函数。 这在 web2 和 web3 之间的鸿沟上架起交流的桥梁
 
-Anchor Link Xpath: /ul[19]/li/a 文件： Decentralized Storage
+[Javascript 客户端库](/developers/docs/apis/javascript/)将读取**应用程序二进制接口 (ABI)**，以便您在 Web 应用程序接口中调用您的智能合约。
 
 以下是 ERC-20 代币合约的应用程序二进制接口。 ERC-20 是您可以在以太坊交易的代币。
 

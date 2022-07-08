@@ -26,6 +26,7 @@ import {
   GradientContainer,
   SloganGradient,
 } from "../components/SharedStyledComponents"
+import FeedbackCard from "../components/FeedbackCard"
 
 const HeroCard = styled.div`
   display: flex;
@@ -243,10 +244,28 @@ const BugBountiesPage = ({ data, location }) => {
     (a, b) => b.score - a.score
   )
 
-  const allBounterHunters = [
-    ...consensusBountyHunters,
-    ...executionBountyHunters,
-  ].sort((a, b) => b.score - a.score)
+  // total all counts using name as identifier, then sort
+  const allBounterHunters = Object.values(
+    [...consensusBountyHunters, ...executionBountyHunters].reduce(
+      (acc, next) => {
+        if (acc[next.name]) {
+          return {
+            ...acc,
+            [next.name]: {
+              ...next,
+              score: acc[next.name].score + next.score,
+            },
+          }
+        }
+
+        return {
+          ...acc,
+          [next.name]: next,
+        }
+      },
+      {}
+    )
+  ).sort((a, b) => b.score - a.score)
 
   const clients = [
     {
@@ -790,6 +809,7 @@ const BugBountiesPage = ({ data, location }) => {
         </div>
         <Emoji size={3} text=":email:" />
       </Contact>
+      <FeedbackCard />
     </Page>
   )
 }

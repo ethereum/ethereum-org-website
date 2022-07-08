@@ -24,6 +24,7 @@ import {
   LeftColumn,
 } from "../components/SharedStyledComponents"
 import { translateMessageId, isLangRightToLeft } from "../utils/translations"
+import PreMergeBanner from "../components/PreMergeBanner"
 
 const Hero = styled(GatsbyImage)`
   width: 100%;
@@ -704,6 +705,7 @@ contract SimpleDomainRegistry {
         title={translateMessageId("page-index-meta-title", intl)}
         description={translateMessageId("page-index-meta-description", intl)}
       />
+      <PreMergeBanner announcementOnly />
       <Hero
         image={getImage(data.hero)!}
         alt={translateMessageId("page-index-hero-image-alt", intl)}

@@ -217,10 +217,10 @@ DAG stands for Directed Acyclic Graph. It is a data structure composed of nodes 
 
 ### Dapp {#dapp}
 
-Decentralized application. At a minimum, it is a [smart contract](#smart-contract) and a web user interface. More broadly, a Dapp is a web application that is built on top of open, decentralized, peer-to-peer infrastructure services. In addition, many Dapps include decentralized storage and/or a message protocol and platform.
+Decentralized application. At a minimum, it is a [smart contract](#smart-contract) and a web user interface. More broadly, a dapp is a web application that is built on top of open, decentralized, peer-to-peer infrastructure services. In addition, many dapps include decentralized storage and/or a message protocol and platform.
 
 <DocLink to="/developers/docs/dapps/">
-  Introduction to Dapps
+  Introduction to dapps
 </DocLink>
 
 ### data availability {#data-availability}
@@ -355,7 +355,7 @@ Ethereum's execution layer is the network of [execution clients](#execution-clie
 
 ### externally owned account (EOA) {#eoa}
 
-An [account](#account) created by or for human users of the Ethereum network.
+Externally owned accounts (EOAs) are [accounts](#account) that are controlled by users who control the [private keys](#private-key) for an account, typically generated using a [seed phrase](#hd-wallet-seed). Externally owned accounts are accounts without any code associated with them. Typically these accounts are used with a [wallet](#wallet).
 
 ### Ethereum Request for Comments (ERC) {#erc}
 
@@ -873,6 +873,10 @@ Short for "succinct non-interactive argument of knowledge", a SNARK is a type of
   Zero-knowledge rollups
 </DocLink>
 
+### soft fork {#soft-fork}
+
+A divergence in a [blockchain](#blockchain) that occurs when the [consensus rules](#consensus-rules) become change. Contrary to a [hard fork](#hard-fork), a soft fork is backwards compatible; upgraded nodes can validate blocks created by non-upgraded nodes as long as they follow the new consensus rules.
+
 ### Solidity {#solidity}
 
 A procedural (imperative) programming language with syntax that is similar to JavaScript, C++, or Java. The most popular and most frequently used language for Ethereum [smart contracts](#smart-contract). Created by Dr. Gavin Wood.
@@ -957,7 +961,7 @@ The total difficulty is the sum of the Ethash mining difficulty for all blocks u
 
 Short for "test network," a network used to simulate the behavior of the main Ethereum network (see [Mainnet](#mainnet)).
 
-<DocLink to="/developers/docs/networks/#testnets">
+<DocLink to="/developers/docs/networks/#ethereum-testnets">
   Testnets
 </DocLink>
 
@@ -1050,7 +1054,7 @@ Software that holds [private keys](#private-key). Used to access and control Eth
 
 ### Web3 {#web3}
 
-The third version of the web. First proposed by Dr. Gavin Wood, Web3 represents a new vision and focus for web applications- from centrally owned and managed applications, to applications built on decentralized protocols (see [Dapp](#dapp)).
+The third version of the web. First proposed by Dr. Gavin Wood, Web3 represents a new vision and focus for web applications- from centrally owned and managed applications, to applications built on decentralized protocols (see [dapp](#dapp)).
 
 <DocLink to="/developers/docs/web2-vs-web3/">
   Web2 vs Web3

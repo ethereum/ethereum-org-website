@@ -34,9 +34,9 @@ Szükséged van egy méginkább kezdőknek szóló alapozóra? Tekintsd meg az [
 ## Haladó cikkek és dokumentációk {#intermediate-articles-and-docs}
 
 - [Go Ethereum Documentation](https://geth.ethereum.org/docs/) - _A hivatalos Ethereum Golang dokumentáció_
-- [Turbo-Geth Programmer's Guide](https://github.com/ledgerwatch/turbo-geth/blob/master/docs/programmers_guide/guide.md) - _Illusztrált útmutató, mely bemutatja az állapot fát, többszöri bizonyítékokat és a tranzakció feldolgozást_
-- [Turbo-Geth és az állapot nélküli Ethereum](https://youtu.be/3-Mn7OckSus?t=394) - _2020 Ethereum Közösségi Konferenica (EthCC 3)_
-- [Turbo-Geth: Ethereum kliensek optimalizálása](https://www.youtube.com/watch?v=CSpc1vZQW2Q) - _2018 Devcon 4_
+- [Erigon Programmer's Guide](https://github.com/ledgerwatch/erigon/blob/devel/docs/programmers_guide/guide.md) - _Illusztrált útmutató, mely bemutatja az állapot fát, többszöri bizonyítékokat és a tranzakció feldolgozást_
+- [Erigon és az állapot nélküli Ethereum](https://youtu.be/3-Mn7OckSus?t=394) - _2020 Ethereum Közösségi Konferenica (EthCC 3)_
+- [Erigon: Ethereum kliensek optimalizálása](https://www.youtube.com/watch?v=CSpc1vZQW2Q) - _2018 Devcon 4_
 - [Go Ethereum GoDoc](https://godoc.org/github.com/ethereum/go-ethereum)
 - [Egy dapp készítése Go-ban Geth-tel](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/creating-a-dapp-in-go-with-geth/)
 - [Munka Ethereum Privát Hálózaton Golang-gel és Geth-tel](https://myhsts.org/tutorial-learn-how-to-work-with-ethereum-private-network-with-golang-with-geth.php)
@@ -55,7 +55,7 @@ Szükséged van egy méginkább kezdőknek szóló alapozóra? Tekintsd meg az [
 
 - [Geth / Go Ethereum](https://github.com/ethereum/go-ethereum) - _Az Ethereum protokoll hivatalos Go implementációja_
 - [Go Ethereum Code Analysis](https://github.com/ZtesoftCS/go-ethereum-code-analysis) - _Go Ethereum forráskód áttekintése és elemzése_
-- [Turbo-Geth](https://github.com/ledgerwatch/turbo-geth) - _A Go Ethereum gyorsabb származéka_
+- [Erigon](https://github.com/ledgerwatch/erigon) - _A Go Ethereum gyorsabb származéka_
 - [Golem](https://github.com/golemfactory/golem) - _A Golem egy globális piacot teremt a számítási teljesítmény számára_
 - [Quorum](https://github.com/jpmorganchase/quorum) - _Egy engedélyköteles Ethereum implementáció, mely támogatja az adatvédelmet_
 - [Prysm](https://github.com/prysmaticlabs/prysm) - _Ethereum 'Serenity' 2.0 Go implementáció_

@@ -696,7 +696,7 @@ Ulusal Standartlar ve Teknoloji Enstitüsü (NIST) tarafından yayınlanan bir k
 
 [İşaret Zinciri](#beacon-chain) tarafından koordine edilen ve [doğrulayıcılar](#validator) tarafından güvence altına alınan bir [hisse ispatı](#pos) zinciri. Parça zinciri yükseltmesinin bir parçası olarak ağa 64 tanesi eklenecektir. Parça zincirleri, [katman 2](#layer-2) çözümlerine [iyimser toplamalar](#optimistic-rollups) ve [ZK-toplamaları](#zk-rollups) gibi ek veriler sağlayarak Ethereum için artan işlem hacmi sunacak.
 
-<DocLink to="/upgrades/shard-chains">
+<DocLink to="/upgrades/sharding">
   Parça zincirleri
 </DocLink>
 
@@ -808,7 +808,7 @@ Belirli G/Ç (Girdi/Çıktı) yoğun işlemler için [gaz](#gas) hesaplamasını
 
 "Test network"ün (Test ağı) kısaltması, ana Ethereum ağının (bkz. [Mainnet](#mainnet)). davranışını simüle etmek için kullanılan bir ağ.
 
-<DocLink to="/developers/docs/networks/#testnets">
+<DocLink to="/developers/docs/networks/#ethereum-testnets">
   Test Ağları
 </DocLink>
 

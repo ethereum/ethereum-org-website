@@ -1,5 +1,5 @@
 ---
-title: Ethereum Sanal Makinesi (EVM)
+title: Ethereum Sanal Makinası (EVM)
 description: Ethereum Sanal Makinesine (EVM) ve EVM'nin durum, işlem ve akıllı sözleşmelerle olan ilgisine dair bir giriş.
 lang: tr
 sidebar: true
@@ -11,7 +11,7 @@ Ethereum protokolü sadece bu özel durum makinesinin devamlı, kesintisiz ve de
 
 ## Ön koşullar {#prerequisites}
 
-[Bayt](https://wikipedia.org/wiki/Byte), [bellek](https://wikipedia.org/wiki/Computer_memory) ve [yığın](https://wikipedia.org/wiki/Stack_(abstract_data_type)) gibi bilgisayar bilimlerindeki yaygın terminolojiyi temel seviyede kavramak, EVM'yi anlamak için zorunludur. [Hash fonksiyonları](https://wikipedia.org/wiki/Cryptographic_hash_function), [iş ispatı](https://wikipedia.org/wiki/Proof_of_work) ve [Merkle ağacı](https://wikipedia.org/wiki/Merkle_tree) gibi kriptografi/blok zinciri konseptlerine aşina olmak da yardımcı olacaktır.
+[Bayt](https://wikipedia.org/wiki/Byte), [bellek](https://wikipedia.org/wiki/Computer_memory) ve [yığın](<https://wikipedia.org/wiki/Stack_(abstract_data_type)>) gibi bilgisayar bilimlerindeki yaygın terminolojiyi temel seviyede kavramak, EVM'yi anlamak için zorunludur. [Hash fonksiyonları](https://wikipedia.org/wiki/Cryptographic_hash_function), [iş ispatı](https://wikipedia.org/wiki/Proof_of_work) ve [Merkle ağacı](https://wikipedia.org/wiki/Merkle_tree) gibi kriptografi/blok zinciri konseptlerine aşina olmak da yardımcı olacaktır.
 
 ## Defterden durum makinesine {#from-ledger-to-state-machine}
 

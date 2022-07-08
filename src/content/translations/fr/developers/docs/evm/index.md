@@ -11,7 +11,7 @@ Le protocole Ethereum existe par lui même uniquement dans le but de maintenir l
 
 ## Prérequis {#prerequisites}
 
-Une certaine familiarité avec la terminologie commune en informatique, comme [les octets](https://wikipedia.org/wiki/Byte), [la mémoire](https://wikipedia.org/wiki/Computer_memory), et une [pile](https://wikipedia.org/wiki/Stack_(abstract_data_type)) sont nécessaires pour comprendre l'EVM. Il est également utile d'être à l'aise avec les concepts de cryptographie/blockchain comme les [fonctions de hachage](https://wikipedia.org/wiki/Cryptographic_hash_function), la [Preuve de travail](https://wikipedia.org/wiki/Proof_of_work) et l'[arbre de Merkle](https://wikipedia.org/wiki/Merkle_tree).
+Une certaine familiarité avec la terminologie commune en informatique, comme [les octets](https://wikipedia.org/wiki/Byte), [la mémoire](https://wikipedia.org/wiki/Computer_memory), et une [pile](<https://wikipedia.org/wiki/Stack_(abstract_data_type)>) sont nécessaires pour comprendre l'EVM. Il est également utile d'être à l'aise avec les concepts de cryptographie/blockchain comme les [fonctions de hachage](https://wikipedia.org/wiki/Cryptographic_hash_function), la [Preuve de travail](https://wikipedia.org/wiki/Proof_of_work) et l'[arbre de Merkle](https://wikipedia.org/wiki/Merkle_tree).
 
 ## Du registre à la machine d'état {#from-ledger-to-state-machine}
 
@@ -51,7 +51,7 @@ Cependant, les contrats contiennent un arbre de _stockage_ Merkle Patricia (en t
 
 Le bytecode du contract intelligent compilé s'exécute comme un certain nombre [de codes d'opérations](/developers/docs/evm/opcodes) EVM, qui effectuent des opérations de pile standards comme `XOR`, `AND`, `ADD`, `SUB`, etc. L'EVM implémente également un certain nombre d'opérations de pile spécifiques à la blockchain, comme `ADDRESS`, `BALANCE`, `BLOCKHASH`, etc.
 
-![Diagramme indiquant où le carburant est nécessaire dans les opérations de l'EVM](../gas/gas.png) _Schéma adapté à partir du document [EVM Ethereum illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![Diagramme indiquant où le gaz est nécessaire dans les opérations de l'EVM](../gas/gas.png) _Schéma adapté à partir du document [EVM Ethereum illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 ## Implémentations de l'EVM {#evm-implementations}
 
@@ -77,4 +77,4 @@ Tous les [clients Ethereum](/developers/docs/nodes-and-clients/#execution-client
 
 ## Sujets connexes {#related-topics}
 
-- [Carburant](/developers/docs/gas/)
+- [Gaz](/developers/docs/gas/)

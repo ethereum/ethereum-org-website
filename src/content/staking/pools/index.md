@@ -58,18 +58,26 @@ Please note the importance of choosing a service that takes <a href="/developers
 
 <StakingProductsCardGrid category="pools" />
 
-Have a suggestion for a staking tool we missed? Check out our [product listing policy](/contributing/adding-staking-product/) to see if it would be a good fit, and to submit it for review.
+Have a suggestion for a staking tool we missed? Check out our [product listing policy](/contributing/adding-staking-products/) to see if it would be a good fit, and to submit it for review.
 
 ## FAQ {#faq}
 
 <ExpandableCard title="How do I earn rewards?">
-Typically ERC-20 liquidity tokens are issued to stakers that represents the value of their staked ETH plus rewards. Keep in mine that different pools will distribute staking rewards to their users via slightly different methods, but this is the common theme.
+Typically ERC-20 liquidity tokens are issued to stakers that represents the value of their staked ETH plus rewards. Keep in mind that different pools will distribute staking rewards to their users via slightly different methods, but this is the common theme.
 </ExpandableCard>
 
 <ExpandableCard title="When can I withdraw my stake?">
 Currently, withdrawing funds from a validator on the Beacon Chain is not possible, which currently limits the ability to actually <em>redeem</em> your liquidity token for the ETH rewards locked in the consensus layer.
 
 Alternatively, pools that utilize an ERC-20 liquidity token allow users to trade this token in the open market, effectively allowing you to "withdraw" without actually removing ETH from the Beacon Chain.
+</ExpandableCard>
+
+<ExpandableCard title="Do pooled stakers need to do anything for The Merge?">
+Pooled stakers <strong>do not need to do anything to prepare for The Merge</strong>.
+
+However, as The Merge approaches, be on high alert for scammers. **You do not need to upgrade your ETH or staked ETH tokens** for the transition to proof-of-stake.
+
+Learn more about [The Merge](/upgrades/merge/)
 </ExpandableCard>
 
 <ExpandableCard title="Is this different from staking with my exchange?">

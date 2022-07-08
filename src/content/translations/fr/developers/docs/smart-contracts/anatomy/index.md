@@ -1,6 +1,6 @@
 ---
 title: Anatomie des contrats intelligents
-description: 'Examen approfondi des composantes d''un contrat intelligent : les fonctions, les données et les variables.'
+description: "Examen approfondi des composantes d'un contrat intelligent : les fonctions, les données et les variables."
 lang: fr
 sidebar: true
 ---
@@ -640,7 +640,7 @@ contract CryptoPizza is IERC721, ERC165 {
 }
 ```
 
-## Complément d'information {#further-reading}
+## En lire plus {#further-reading}
 
 Consultez la documentation Solidity et Vyper pour une vue d'ensemble plus complète des contrats intelligents :
 

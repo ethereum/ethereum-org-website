@@ -1,5 +1,5 @@
 ---
-title: Akıllı sözleşmeleri derlemek
+title: Akıllı kontratlar derlemek
 description: Neden akıllı sözleşmeleri derlemeniz gerektiği ve derlemenin aslen ne yaptığı hakkında bir açıklama.
 lang: tr
 sidebar: true
@@ -269,7 +269,7 @@ Aşağıda ERC-20 token sözleşmesinin ABI'si bulunuyor. Bir ERC-20, Ethereum �
 ]
 ```
 
-## daha fazla okuma {#further-reading}
+## Daha fazla bilgi {#further-reading}
 
 - [ABI şartnamesi](https://solidity.readthedocs.io/en/v0.7.0/abi-spec.html) _– Solidity_
 

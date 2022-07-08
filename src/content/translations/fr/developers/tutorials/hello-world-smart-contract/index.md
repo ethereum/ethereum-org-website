@@ -37,7 +37,7 @@ Une fois que vous avez créé un compte Alchemy, vous pouvez générer une clé 
 
 ![créer une vue de l'application Hello world](./create-app-view-hello-world.png)
 
-3. Cliquez sur « Create App » et voilà ! Votre application devrait apparaître dans le tableau ci-dessous.
+3. Cliquez sur « Créer l'application » et voilà ! Votre application devrait apparaître dans le tableau.
 
 ## Étape 3 : Créez un compte Ethereum (adresse) {#step-3}
 
@@ -60,7 +60,7 @@ Pour vérifier notre solde, faisons une requête [eth_getBalance](https://docs.a
 ```
 
 > **REMARQUE :** Ce résultat est en wei et non pas en ETH. Le wei est utilisé comme la plus petite dénomination d'ether. La conversion de wei en ETH est : 1 eth = 10<sup>18</sup> wei. Donc si nous convertissons 0x2B5E3AF16B1880000 en décimales, nous obtenons 5\*10¹⁸, ce qui équivaut à 5 ETH.
-> 
+>
 > Ouf ! Notre fausse monnaie est bien là <Emoji text=":money_mouth_face:" size={1} />.
 
 ## Étape 6 : Initialisons notre projet {#step-6}
@@ -107,7 +107,7 @@ About to write to /Users/.../.../.../hello-world/package.json:
 
 Approuvez le package.json et nous sommes prêts à démarrer !
 
-## Étape 7 : Téléchargez [Hardhat](https://hardhat.org/getting-started/#overview ""){#step-7}
+## Étape 7 : Téléchargez [Hardhat](https://hardhat.org/getting-started/#overview){#step-7}
 
 Hardhat est un environnement de développement qui permet de compiler, déployer, tester et déboguer votre logiciel Ethereum. Il aide les développeurs à construire des contrats intelligents et des dApps localement avant de les déployer sur la chaîne en production.
 
@@ -233,7 +233,7 @@ PRIVATE_KEY = "your-metamask-private-key"
 Pour les relier à notre code, nous ferons référence à ces variables dans notre fichier `hardhat.config.js` à l'étape 13.
 
 <InfoBanner isWarning={true}>
-Ne propagez pas le fichier <code>.env</code> ! Assurez-vous de ne jamais partager ou exposer votre fichier <code>.env</code> à quiconque, car vous compromettez vos secrets en le faisant. Si vous utilisez le contrôle de version, ajoutez votre <code>.env</code> à un fichier <a href="https://git-scm.com/docs/gitignore">gitignore</a>.
+Ne propagez pas le fichier <code>.env</code> ! Veillez à ne jamais partager ou exposer votre fichier <code>.env</code> avec quiconque car vous compromettez vos secrets en le faisant. Si vous utilisez le contrôle de version, ajoutez votre <code>.env</code> à un fichier <a href="https://git-scm.com/docs/gitignore">gitignore</a>.
 </InfoBanner>
 
 ## Étape 12 : Installez Ethers.js {#step-12-install-ethersjs}

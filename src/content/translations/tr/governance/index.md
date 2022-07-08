@@ -7,7 +7,7 @@ sidebar: true
 
 # Ethereum yönetişimine giriş {#introduction}
 
-_Hiç kimse Ethereum'un sahibi değilse, Ethereum'a dair geçmişteki ve gelecekteki değişikliklere nasıl karar veriliyor? Ethereum yönetişimi, bu tür kararların alınmasına izin veren süreci ifade eder_
+_Hiç kimse Ethereum'un sahibi değilse, Ethereum'a dair geçmişteki ve gelecekteki değişikliklere nasıl karar veriliyor? Ethereum yönetişimi, bu tür kararların alınmasını sağlayan süreci ifade eder._
 
 <Divider />
 

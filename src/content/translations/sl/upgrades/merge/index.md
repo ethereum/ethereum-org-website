@@ -57,4 +57,4 @@ Začetni načrt je delo na razdrobljenih verigah predvideval pred spojitvijo –
 
 Skupnost bo sprotno ocenjevala potencialno potrebo po več krogih razdrobljenih verig, da bi lahko omogočili neskončno nadgradljivost.
 
-<ButtonLink to="/upgrades/shard-chains/">Razdrobljene verige</ButtonLink>
+<ButtonLink to="/upgrades/sharding/">Razdrobljene verige</ButtonLink>

@@ -1,13 +1,13 @@
 ---
 title: Ethereum hesapları
-description: 'Ethereum hesaplarının bir açıklaması: Hesapların veri yapıları ve anahtar çifti kriptografisi ile ilişkileri.'
+description: "Ethereum hesaplarının bir açıklaması: Hesapların veri yapıları ve anahtar çifti kriptografisi ile ilişkileri."
 lang: tr
 sidebar: true
 ---
 
 Bir Ethereum hesabı, Ethereum üzerinde işlem gönderebilen bir ether (ETH) bakiyesi barındıran bir varlıktır. Hesaplar kullanıcılar tarafından kontrol edilebilir veya akıllı sözleşme olarak dağıtılabilirler.
 
-## Ön Koşullar {#prerequisites}
+## Ön koşullar {#prerequisites}
 
 Hesaplar, yeni başlayanlara uygun bir konudur. Ancak bu sayfayı iyi anlamanız için size ilk olarak [Ethereum'a giriş](/developers/docs/intro-to-ethereum/) yazımızı okumanızı öneriyoruz.
 

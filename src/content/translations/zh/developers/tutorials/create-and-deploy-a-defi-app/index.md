@@ -9,7 +9,7 @@ tags:
   - "truffle"
   - "ganache"
   - "智能合约"
-skill: 中级
+skill: 中难度
 lang: zh
 sidebar: true
 published: 2020-12-31

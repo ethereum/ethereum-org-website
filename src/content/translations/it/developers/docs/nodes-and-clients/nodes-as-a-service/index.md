@@ -18,7 +18,7 @@ Se non hai ancora chiaro cosa siano nodi e client, consulta [Nodi e client](/dev
 
 I fornitori di servizi di nodo eseguono client di nodo distribuiti, quindi non è necessario farlo.
 
-Questi servizi in genere forniscono una chiave API utilizzabile per scrivere e leggere sulla blockchain. Spesso includono l'accesso a [reti di test Ethereum](/developers/docs/networks/#testnets) in aggiunta alla rete principale.
+Questi servizi in genere forniscono una chiave API utilizzabile per scrivere e leggere sulla blockchain. Spesso includono l'accesso a [reti di test Ethereum](/developers/docs/networks/#ethereum-testnets) in aggiunta alla rete principale.
 
 Alcuni servizi offrono un nodo personale dedicato e lo gestiscono, mentre altri usano bilanciatori del carico per distribuire l'attività tra i nodi.
 

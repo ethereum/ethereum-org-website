@@ -64,7 +64,7 @@ Wir nutzen NFTs, um unseren Mitwirkenden etwas zurückzugeben, und wir haben sog
 
 Wenn Sie einen Beitrag für ethereum.org leisten, können Sie ein POAP-NFT beanspruchen. Das sind Sammlerstücke, die als Nachweis dafür dienen, dass Sie an einer bestimmten Veranstaltung teilgenommen oder etwas dazu beigetragen haben. Einige Krypto-Treffen haben POAPs als Form von Ticket für ihre Veranstaltungen genutzt. [Mehr zum Beitragen](/contributing/#poap).
 
-![ethereum.org-POAP](../../../../assets/use-cases/poap.png)
+![ethereum.org-POAP](./poap.png)
 
 #### ethereum.eth {#ethereum-dot-eth}
 
@@ -406,7 +406,7 @@ Schätzungen zufolge ermöglichen Upgrades an der Skalierbarkeit dem Netzwerk, z
 
 [Vitalik Buterin über das Potenzial für Transaktionen pro Sekunde mit Sharding](https://twitter.com/VitalikButerin/status/1312905884549300224)
 
-Sharding wird mindestens 64-fache Beschleunigung der derzeitigen Transkationszahlen pro Sekunde ermöglichen, die aktuell bei 15 liegt. Das ist die Menge der Shard Chains (zusätzliche Daten und Kapazität), die eingeführt werden. [Mehr zu Shard-Chains](/upgrades/shard-chains/)
+Sharding wird mindestens 64-fache Beschleunigung der derzeitigen Transkationszahlen pro Sekunde ermöglichen, die aktuell bei 15 liegt. Das ist die Menge der Shard Chains (zusätzliche Daten und Kapazität), die eingeführt werden. [Mehr zu Shard-Chains](/upgrades/sharding/)
 
 Damit können wir abschätzen, wie lange die Verarbeitung von 100.000 Transaktionen dauert, und das ermöglicht den Vergleich mit dem Visa-Beispiel oben.
 
