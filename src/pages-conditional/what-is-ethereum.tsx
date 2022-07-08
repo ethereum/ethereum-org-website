@@ -493,29 +493,40 @@ const WhatIsEthereumPage = ({
                   </b>
                 </p>
                 <p>
-                  It all started in 2008 with Bitcoin. You could use it to send
-                  funds to anyone anywhere globally. What made crypto different
-                  from normal bank transfers or other financial services like
-                  Paypal or Alipay is that there was no middle man for the first
-                  time.
-                </p>
-                <p>Wait, what is a middle man?</p>
-                <p>
-                  A middle-man is a central authority like a bank or government
-                  that intervenes in a transaction between the sender and
-                  recipient. They have the power to surveill, censor or revert
-                  transactions and they can share the sensitive data they
-                  collect about you with third parties. They also often dictate
-                  which financial services you have access to.
+                  It all started in 2008 with “the Bitcoin paper”. In the wake
+                  of a global financial crisis caused by unsustainable
+                  governmental policies, its author(s) proposed an appealing
+                  alternative to the world: a decentralized monetary system that
+                  could prevent such failures in the future.
                 </p>
                 <p>
-                  Things are different with crypto.{" "}
-                  <b>Transactions directly connect sender and recipient</b>{" "}
-                  without having to deal with any central authority. Nobody else
-                  will have access to your funds and{" "}
-                  <b>nobody can tell you what services you can use</b>. This is
-                  possible because of the blockchain technology upon which
-                  cryptocurrencies operate.
+                  What makes Bitcoin so different from regular bank transfers or
+                  other services like Paypal is that there is no central
+                  authority controlling the network. Instead, Bitcoin
+                  incentivized network participants to keep the network running
+                  through rewards. The network’s behavior gets determined by
+                  code and is completely transparent, making it very
+                  predictable.
+                </p>
+                <p>
+                  In contrast, banks or governments require you to trust their
+                  actions. They can intervene in transactions between the sender
+                  and recipient. They have the power to surveil, censor, revert
+                  transactions, or share sensitive data about you with third
+                  parties. Most importantly, these authorities can change how
+                  money is printed and distributed.
+                </p>
+                <p>
+                  Things are different with crypto. You can trust the system to
+                  follow the predefined rules.{" "}
+                  <strong>
+                    Transactions directly connect sender and recipient
+                  </strong>{" "}
+                  without dealing with a middleman. Nobody else can access your
+                  funds, and{" "}
+                  <strong>nobody can tell you what services you can use</strong>
+                  . This is possible because of the blockchain technology upon
+                  which cryptocurrencies operate.
                 </p>
               </Width60>
             </TwoColumnContent>
@@ -838,7 +849,26 @@ const WhatIsEthereumPage = ({
                     creators used Ethereum to earn around $3.5 billion
                     collectively. This makes Ethereum one of the largest global
                     platforms for creators, alongside Spotify, YouTube, and
-                    Etsy.{" "}
+                    Etsy.
+                  </p>
+                  <p>
+                    It happened so quickly because the digital content industry
+                    today is broken. Until now, the internet’s “creator economy”
+                    has been dominated by large centralized platforms. These
+                    platforms earn revenue from ads or subscriptions, and then
+                    pass only a small fraction of that revenue to creators.
+                  </p>
+                  <p>
+                    NFTs power a new creator economy where creators don't hand
+                    ownership of their content over to the platforms they use to
+                    publicise it. Ownership is baked into the content itself.
+                    When they sell their content, funds go directly to them. If
+                    the new owner then sells the NFT, the original creator can
+                    even automatically receive royalties. This is guaranteed
+                    every time it's sold because the creator's address is part
+                    of the token's metadata – metadata which can't be modified.
+                  </p>
+                  <p>
                     <Link
                       to="https://stark.mirror.xyz/q3OnsK7mvfGtTQ72nfoxLyEV5lfYOqUfJIoKBx7BG1I"
                       hideArrow
