@@ -7,7 +7,7 @@ emoji: ":microscope:"
 sidebar: true
 sidebarDepth: 2
 image: ../../assets/future_transparent.png
-alt: TODO.
+alt: ""
 summaryPoint1: A global, open alternative to the current scientific system.
 summaryPoint2: Technology that enables scientists to raise funding, run experiments, share data, distribute insights, and more.
 summaryPoint3: Builds on the open science movement.
@@ -19,7 +19,7 @@ Decentralized science (DeSci) is a movement that aims to build public infrastruc
 
 The goal of DeSci is to create an ecosystem in which scientists are incentivized to openly share their research and receive credit for their work, while also providing a way for the general public to easily access and contribute to scientific research. DeSci is built on the premise that scientific knowledge should be open and accessible to everyone, and that the process of scientific research should be transparent. DeSci is also intended to create a more decentralized and distributed model for scientific research, which would make it more resistant to censorship and control by central authorities. By decentralizing access to funding, scientific tools and communication channels, DeSci hopes to create an environment where new and unconventional ideas can flourish.
 
-Decentralized science allows for more diverse funding sources (from [DAOs](/dao), [quadratic donations](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531) to crowdfunding and more), easier access to data and methods, and by providing incentives for reproducibility.
+Decentralized science allows for more diverse funding sources (from [DAOs](/dao/), [quadratic donations](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531) to crowdfunding and more), easier access to data and methods, and by providing incentives for reproducibility.
 
 ## How DeSci improves science {#desci-improves-science}
 
@@ -133,12 +133,3 @@ Explore projects and join the DeSci community.
 - [Radicle: peer to peer code collaboration](https://radicle.xyz/)
 - [ResearchHub: post a scientific result and engage in a conversation with peers](https://www.researchhub.com/)
 - [VitaDAO: receive funding through sponsored research agreements for longevity research](https://www.vitadao.com/)
-
-—
-
-#### Credits
-
-Thank you to the contributors of this document:
-Sam Richards, Jon Starr, Erik Van Winkle, Carla Ostmann, Omar El Naggar, Vincent Weisser, Philipp Koellinger, Christopher Hill, Niklas Rindtorff, Joseph Cook
-
-[Link to appendix and graveyard](https://docs.google.com/document/d/1EPqWmMt_U1PHOVTRfzvQfT5UgUiZGowkYYVehy8lgcM/edit?usp=sharing)
