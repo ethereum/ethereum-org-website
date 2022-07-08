@@ -122,6 +122,11 @@ const crowdinRoot: string = join(repoRoot, ".crowdin")
 if (!existsSync(crowdinRoot)) mkdirSync(crowdinRoot)
 
 // Dictionaries
+/**
+ * Some language codes used in the repo differ from those used by Crowdin.
+ * This is used to convert any codes that may differ when performing folder lookup.
+ * Codes that are the same will default as such.
+ */
 const repoToCrowdinCode: { [key: string]: string } = {
   zh: "zh-CN",
   "zh-tw": "zh-TW",
@@ -132,6 +137,10 @@ const repoToCrowdinCode: { [key: string]: string } = {
   ml: "ml-IN",
   sr: "sr-CS",
 }
+/**
+ * Names for each bucket in order, zero indexed.
+ * Used for lookup in summary if FULL_BUCKET_NAME_SUMMARY (-f,--full) flag enabled.
+ */
 const BUCKET_NAMES: string[] = [
   "Homepage",
   "Use Ethereum Pages",
@@ -169,9 +178,26 @@ const trackers: TrackerObject = {
 }
 
 // Functions
+/**
+ * Wrapper function to call console.log() only if VERBOSE (-v, --verbose) flag is enabled
+ *
+ * @param message Any arbitrary message
+ * @param optionalParams Any additional arbitrary messages
+ */
 const log = (message: any, ...optionalParams: any): void => {
   VERBOSE && console.log(message, ...optionalParams)
 }
+/**
+ * Reads `ls` file contents of `_path`, moving .md and .json files
+ * to their corresponding destinations in the repo. Function is called
+ * again recursively for subdirectories.
+ *
+ * @param _path An absolute path to the directory being scraped.
+ * @param contentSubpath The subpath deep to the lang-code directory,
+ * used to construct destination for markdown content files
+ * @param repoLangCode Language code used within the repo
+ * @returns void
+ */
 const scrapeDirectory = (
   _path: string,
   contentSubpath: string,
