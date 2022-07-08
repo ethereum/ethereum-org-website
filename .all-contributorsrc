@@ -8021,6 +8021,15 @@
         "doc",
         "ideas"
       ]
+    },
+    {
+      "login": "vincentweisser",
+      "name": "Vincent Weisser",
+      "avatar_url": "https://avatars.githubusercontent.com/u/32839303?v=4",
+      "profile": "http://vincentweisser.com",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
