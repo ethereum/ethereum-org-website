@@ -25,7 +25,7 @@ ERC-777 是一个易于交易的通证标准，可改进现有的 [ERC-20](/deve
 
 #### 为什么钩子很棒？ {#why-are-hooks-great}
 
-1. 钩子允许向合同发送代币并在单笔交易中通知合约，不像 [ERC-20](https://eips.ethereum.org/EIPS/eip-20)， 需要双重呼叫(`approve`/`transferFrom`) 才能实现这一点。
+1. 钩子允许向合同发送代币并在单笔交易中通知合约，不像 [ERC-20](https://eips.ethereum.org/EIPS/eip-20)， 需要双重呼叫(`同意`/`转账自`) 才能实现这一点。
 2. 未登记钩子的合约与 ERC-777 不相容。 接收合约没有注册钩子时，发送合约会中止交易。 这可以防止意外向非 ERC-777 智能合约转账。
 3. 钩子可以拒绝交易。
 
@@ -37,6 +37,6 @@ ERC-777 是一个易于交易的通证标准，可改进现有的 [ERC-20](/deve
 
 EC-777 合同可以与类似于 ERC-20 合同的合同进行互动。
 
-## 延伸阅读 {#further-reading}
+## 进一步阅读 {#further-reading}
 
 [ERC-777 代币标准](https://eips.ethereum.org/EIPS/eip-777)

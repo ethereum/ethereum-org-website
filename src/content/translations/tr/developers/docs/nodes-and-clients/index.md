@@ -116,10 +116,10 @@ Bu tablo, farklı istemcileri özetlemektedir. Hepsi [istemci testlerini](https:
 
 | İstemci                                                                               | Dil      | İşletim sistemleri    | Ağlar                                      | Senkronizasyon stratejileri | Durum budaması  |
 | ------------------------------------------------------------------------------------- | -------- | --------------------- | ------------------------------------------ | --------------------------- | --------------- |
-| [Geth](https://geth.ethereum.org/)                                                    | Go    | Linux, Windows, macOS | Mainnet, Görli, Rinkeby, Ropsten           | Snap, Full                  | Archive, Pruned |
+| [Geth](https://geth.ethereum.org/)                                                    | Go       | Linux, Windows, macOS | Mainnet, Görli, Rinkeby, Ropsten           | Snap, Full                  | Archive, Pruned |
 | [Nethermind](http://nethermind.io/)                                                   | C#, .NET | Linux, Windows, macOS | Mainnet, Görli, Ropsten, Rinkeby ve dahası | Fast, Beam, Archive         | Archive, Pruned |
 | [Besu](https://pegasys.tech/solutions/hyperledger-besu/)                              | Java     | Linux, Windows, macOS | Mainnet, Rinkeby, Ropsten, Görli ve dahası | Fast, Full                  | Archive, Pruned |
-| [Erigon](https://github.com/ledgerwatch/erigon)                                       | Go    | Linux, Windows, macOS | Mainnet, Görli, Rinkeby, Ropsten           | Full                        | Archive, Pruned |
+| [Erigon](https://github.com/ledgerwatch/erigon)                                       | Go       | Linux, Windows, macOS | Mainnet, Görli, Rinkeby, Ropsten           | Full                        | Archive, Pruned |
 | [OpenEthereum (Kullanımdan kaldırıldı)](https://github.com/openethereum/openethereum) | Rust     | Linux, Windows, macOS | Mainnet, Kovan, Ropsten ve dahası          | Warp, Full                  | Archive, Pruned |
 
 **OpenEthereum'un [kullanımdan kaldırıldığını](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd) ve artık bakıma tabi olmadığını unutmayın.** Dikkatli kullanın ve tercihen başka bir istemci uygulamasına geçin.
@@ -283,7 +283,7 @@ Seçtiğiniz senkronizasyon modu, alan gereksinimlerini etkileyecektir ancak aş
 
 | İstemci      | Disk alanı (fast senkronizasyon) | Disk boyutu (full archive) |
 | ------------ | -------------------------------- | -------------------------- |
-| Geth         | 400 GB+                           | 6 TB+                       |
+| Geth         | 400 GB+                          | 6 TB+                      |
 | OpenEthereum | 280 GB+                          | 6 TB+                      |
 | Nethermind   | 200 GB+                          | 5 TB+                      |
 | Besu         | 750 GB+                          | 5 TB+                      |

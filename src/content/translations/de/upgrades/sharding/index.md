@@ -1,6 +1,6 @@
 ---
 title: Shard Chains
-description: Lerne mehr über Shard Chains – Aufteilung des Netzwerks um Ethereum mehr Kapazität für Transaktionen zu verleihen und es leichter zum Laufen zu bringen.
+description: Erfahre mehr über Shard Chains – jene Aufteilung des Netzwerks, welche Ethereum mehr Kapazität für Transaktionen gibt und den Betrieb erleichtert.
 lang: de
 template: upgrade
 sidebar: true
@@ -43,7 +43,7 @@ Dank Sharding werden geringere Hardwareanforderungen es vereinfachen, [Clients](
 
 Wenn die ersten Shard Chains implementiert sein werden, werden diese zunächst einmal lediglich zusätzliche Daten an das Netzwerk liefern. Sie werden keine Transaktionen oder Smart Contracts verarbeiten. Aber dennoch werden sie unglaubliche Verbesserungen für die Transaktionen pro Sekunde bringen, wenn sie mit Rollups kombiniert werden.
 
-Rollups sind eine "Layer 2"-Technologie, die heute bereits existiert. Sie erlauben dApps, Transaktionen zu bündeln oder sie mittels "Roll up" in eine einzelne Transaktions-Off-Chain zu vereinen, einen kryptographischen Beweis zu erstellen und diesen dann zur Chain zu senden. Dies reduziert die Datenmenge, die für eine Transaktion benötigt wird. Kombiniert mit der zusäzlichen Datenverfügbarkeit durch die Shards erhält man 100.000 Transaktionen pro Sekunde.
+Rollups sind eine "Layer 2"-Technologie, die heute bereits existiert. Sie erlauben DApps, Transaktionen zu bündeln oder sie mittels "Roll up" in eine einzelne Transaktions-Off-Chain zu vereinen, einen kryptographischen Beweis zu erstellen und diesen dann zur Chain zu senden. Dies reduziert die Datenmenge, die für eine Transaktion benötigt wird. Kombiniert mit der zusäzlichen Datenverfügbarkeit durch die Shards erhält man 100.000 Transaktionen pro Sekunde.
 
 <InfoBanner isWarning={false}>
   Angesichts der jüngsten Fortschritte bei der Erforschung und Entwicklung von Layer-2-Skalierungslösungen hat dies dazu geführt, dass das Merge-Upgrade vor den Shard Chains Priorität hat. Diese werden nach dem Übergang vom Mainnet zum Proof of Stake im Mittelpunkt stehen.
