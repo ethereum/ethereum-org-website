@@ -25,71 +25,34 @@ Decentralized science allows for more diverse funding sources (from [DAOs](/dao)
 
 An incomplete list of key problems in science and how decentralized science can help to address these issues
 
-<table>
-  <tr>
-   <td><strong><h3>Decentralized science</h3></strong>
-   </td>
-   <td><strong><h3>Traditional science</h3></strong>
-   </td>
-  </tr>
-    <td>Decentralized science is open to anyone.
-   </td>
-   <td>You must be a member or a physical research institute to do science.
-   </td>
-  </tr>
-  <tr>
-   <td>Distribution of funds is determined by the public using mechanisms such as quadratic donations or DAOs.
-   </td>
-   <td>Distribution of funds is controlled by small, closed, centralized groups.	
-   </td>
-  </tr>
-  <tr>
-   <td>You collaborate with peers from all over the globe in dynamic teams.
-   </td>
-   <td>Your collaborations are limited by funding organizations and home institutions.
-   </td>
-  </tr>
-  <tr>
-   <td>Funding decisions are made online and in a transparent way. New funding mechanisms are explored.
-   </td>
-   <td>Funding decisions are made with a long turnaround time and limited transparency. Few funding mechanisms exist.
-   </td>
-  </tr>
-  <tr>
-   
-  <tr>
-   <td> Sharing laboratory services is made easier and more transparent using Web3 primitives.
-   </td>
-   <td>Sharing laboratory resources is often often slow and opaque.
-   </td>
-  </tr>
-  <tr>
-   <td>New models for publishing can be developed that use Web3 primitives for trust, transparency and universal access.
-   </td>
-   <td>You publish through established pathways that are frequently acknowledged to be inefficient, biased and exploitative.
-   </td>
-  </tr>
-  <tr>
-   <td>You can earn tokens and reputation for peer-reviewing work.
-   </td>
-   <td>Your peer-review work is unpaid, benefiting for-profit publishers.
-   </td>
-  </tr>
-  <tr>
-   <td>You own the intellectual property (IP) you generate and distribute it according to transparent terms.
-   </td>
-   <td>Your home institution owns the IP you generate. Access to the IP is not transparent.
-   </td>
-  </tr>
-  
-   <tr>
-   <td>Sharing all of the research, including the data that was generated from the unsuccessful efforts by design of having all steps on-chain.
-   </td>
-   <td>Publication bias means that researchers are more likely to share experiments that had successful results if.
-   </td>
-  </tr>
-  
-</table>
+| **Decentralized science
+** | **Traditional science
+** |
+|----------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|
+| Distribution of funds is determined by the public using mechanisms such as quadratic donations or DAOs.
+| Distribution of funds is controlled by small, closed, centralized groups.
+|
+| You collaborate with peers from all over the globe in dynamic teams.
+| Your collaborations are limited by funding organizations and home institutions.
+|
+| Funding decisions are made online and in a transparent way. New funding mechanisms are explored.
+| Funding decisions are made with a long turnaround time and limited transparency. Few funding mechanisms exist.
+|
+| Sharing laboratory services is made easier and more transparent using Web3 primitives.
+| Sharing laboratory resources is often often slow and opaque.
+|
+| New models for publishing can be developed that use Web3 primitives for trust, transparency and universal access.
+| You publish through established pathways that are frequently acknowledged to be inefficient, biased and exploitative.
+|
+| You can earn tokens and reputation for peer-reviewing work.
+| Your peer-review work is unpaid, benefiting for-profit publishers.
+|
+| You own the intellectual property (IP) you generate and distribute it according to transparent terms.
+| Your home institution owns the IP you generate. Access to the IP is not transparent.
+|
+| Sharing all of the research, including the data that was generated from the unsuccessful efforts by design of having all steps on-chain.
+| Publication bias means that researchers are more likely to share experiments that had successful results if.
+|
 
 ## Ethereum and DeSci {#ethereum-and-desci}
 
