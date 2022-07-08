@@ -8,7 +8,7 @@ tags:
   - "solidity"
   - "Empezar"
   - "erc-20"
-skill: principiante
+skill: beginner
 lang: es
 sidebar: true
 published: 2020-04-05

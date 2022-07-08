@@ -9,7 +9,7 @@ tags:
   - "python"
   - "cadena de bloques"
   - "web3.py"
-skill: principiante
+skill: beginner
 published: 2020-09-08
 source: Encantadores de serpientes
 sourceUrl: https://snakecharmers.ethereum.org/a-developers-guide-to-ethereum-pt-1/

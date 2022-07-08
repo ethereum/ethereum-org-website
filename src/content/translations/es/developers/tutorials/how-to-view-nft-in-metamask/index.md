@@ -9,7 +9,7 @@ tags:
   - "MetaMask"
   - "tókenes no fungibles"
   - "Solidity"
-skill: principiante
+skill: beginner
 lang: es
 sidebar: true
 published: 22/04/2021
