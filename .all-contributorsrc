@@ -8040,6 +8040,15 @@
         "doc",
         "bug"
       ]
+    },
+    {
+      "login": "Feerol",
+      "name": "Fatih Eren Erol",
+      "avatar_url": "https://avatars.githubusercontent.com/u/47645405?v=4",
+      "profile": "https://github.com/Feerol",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
