@@ -1292,6 +1292,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="http://www.koogawa.com"><img src="https://avatars.githubusercontent.com/u/893643?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Kosuke Ogawa</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=koogawa" title="Documentation">📖</a> <a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Akoogawa" title="Bug reports">🐛</a></td>
     <td align="center"><a href="https://github.com/Feerol"><img src="https://avatars.githubusercontent.com/u/47645405?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Fatih Eren Erol</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=Feerol" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://syskall.com"><img src="https://avatars.githubusercontent.com/u/416585?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Oli Lalonde</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=olalonde" title="Documentation">📖</a></td>
   </tr>
 </table>
 
