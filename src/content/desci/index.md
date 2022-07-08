@@ -28,12 +28,12 @@ An incomplete list of key problems in science and how decentralized science can 
 
 <table>
   <tr>
-   <td><strong><h3>Decentralized science (aspiration)</h3></strong>
+   <td><strong><h3>Decentralized science</h3></strong>
    </td>
    <td><strong><h3>Traditional science</h3></strong>
    </td>
   </tr>
-    <td>DeSci is open to anyone.
+    <td>Decentralized science is open to anyone.
    </td>
    <td>You must be a member or a physical research institute to do science.
    </td>
@@ -160,7 +160,6 @@ Flexible Web3 data solutions support the scenarios above in addition to providin
 
 ## Videos
 * [What's Decentralized Science? ](https://www.youtube.com/watch?v=-DeMklVWNdA)
-* [Conversation between Vitalik Buterin and the scientist Aubrey de Grey about the intersection of longevity research and crypto](https://www.youtube.com/watch?v=x9TSJK1widA)
 * [Conversation between Vitalik Buterin and the scientist Aubrey de Grey about the intersection of longevity research and crypto](https://www.youtube.com/watch?v=x9TSJK1widA)
 * [Scientific Publishing Is Broken. Can web3 Fix It?](https://www.youtube.com/watch?v=WkvzYgCvWj8)
 
