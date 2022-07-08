@@ -9,11 +9,11 @@ sidebar: true
 
 A zero-knowledge proof is a way of proving the validity of a statement without revealing the statement itself. The ‘prover’ is the party trying to prove a claim, while the ‘verifier’ is responsible for validating the claim. 
 
-Zero-knowledge proofs first appeared in a 1985 paper, “The knowledge complexity of interactive proof systems”, co-authored by MIT researchers Shafi Goldwasser, Silvio Micali and Charles Rackoff. The [paper](http://people.csail.mit.edu/silvio/Selected%20Scientific%20Papers/Proof%20Systems/The_Knowledge_Complexity_Of_Interactive_Proof_Systems.pdf)] provides a definition of zero-knowledge proofs widely used today:
+Zero-knowledge proofs first appeared in a 1985 paper, “[The knowledge complexity of interactive proof systems](http://people.csail.mit.edu/silvio/Selected%20Scientific%20Papers/Proof%20Systems/The_Knowledge_Complexity_Of_Interactive_Proof_Systems.pdf)” which provides a definition of zero-knowledge proofs widely used today:
 
 > A zero-knowledge protocol is a method by which one party (the prover) can prove to another party (the verifier) that something is true, without revealing any information apart from the fact that this specific statement is true.
 
-Zero-knowledge proofs have undergone many improvements over the years. Many of these advances have enhanced the usability and efficiency of zero-knowledge proofs, leading to their applications in various areas. 
+Zero-knowledge proofs have improved over the years and they are now being used in several real-world applications. 
 
 ## Why do we need zero-knowledge proofs? {#why-zero-knowledge-proofs-are-important}
 
@@ -55,7 +55,7 @@ A good example that illustrates how interactive proofs work is Jean-Jacques Quis
 
 While revolutionary, interactive proving had limited usefulness since it required the two parties to be available and interact repeatedly. Even if a verifier was convinced of a prover’s honesty, the proof would be unavailable for independent verification (computing a new proof required a new set of messages between the prover and verifier).
 
-To solve this problem, three researchers Manuel Blum, Paul Feldman, and Silvio Micali co-authored a [study](https://dl.acm.org/doi/10.1145/62212.62222) suggesting the first non-interactive zero-knowledge proofs. Under this arrangement the prover and verifier have a shared key, which allows the former to prove knowledge of information (i.e., witness) without providing the information itself. 
+To solve this problem, Manuel Blum, Paul Feldman, and Silvio Micali suggested the first [non-interactive zero-knowledge proofs](https://dl.acm.org/doi/10.1145/62212.62222) where the prover and verifier have a shared key. This allows the prover to demonstrate their knowledge of some information (i.e., witness) without providing the information itself. 
 
 Unlike interactive proofs, noninteractive proofs required only one round of communication between participants (prover and verifier). The prover passes the secret information to a special algorithm to compute a zero-knowledge proof. This proof is sent to the verifier, who checks that the prover knows the secret information using another algorithm. 
 
@@ -75,7 +75,7 @@ ZK-SNARK is an acronym for **Zero-Knowledge Succinct Non-Interactive Argument of
 
 - **Non-interactive**: The proof is ‘non-interactive’ because the prover and verifier only interact once, unlike interactive proofs that require multiple rounds of communication. 
 
-- **Argument**: The proof satisfies the ‘soundness’ requirement, so the possibility of a cheating prover succeeding is extremely low. However, this assumes that provers leverage bounded computation. 
+- **Argument**: The proof satisfies the ‘soundness’ requirement, so cheating is extremely unlikely. 
 
 - **(Of) Knowledge**: The zero-knowledge proof cannot be constructed without access to the secret information (witness). It is difficult, if not impossible, for a prover who doesn’t have the witness to compute a valid zero-knowledge proof. 
 
@@ -83,35 +83,35 @@ The ‘shared key’ mentioned earlier refers to public parameters that the prov
 
 [Multi-party computation (MPC)](https://en.wikipedia.org/wiki/Secure_multi-party_computation) is a way of reducing the risks in generating public parameters. Multiple parties participate in a [trusted setup ceremony](https://zkproof.org/2021/06/30/setup-ceremonies/amp/), where each person contributes some random values to generate the CRS. As long as one honest party destroys their portion of the entropy, the ZK-SNARK protocol retains computational soundness. 
 
-Trusted setups require users to trust the integrity of everyone involved in the parameter-generation process, negating the ‘trustlessness’ principle underpinning blockchain designs. However, advanced research has led to the creation of ZK-STARKs, proving protocols that work with a non-trusted setup. 
+Trusted setups require users to trust the participants in parameter-generation. However, the development of ZK-STARKs has enabled proving protocols that work with a non-trusted setup. 
 
 #### ZK-STARKs {#zk-starks}
 
-ZK-STARK is an acronym for **Zero-Knowledge Scalable Transparent Argument of Knowledge**. If you notice, a ZK-STARK is similar to a ZK-SNARK, except for two qualities:
+ZK-STARK is an acronym for **Zero-Knowledge Scalable Transparent Argument of Knowledge**. ZK-STARKs are similar to ZK-SNARKs, except that they are:
 
 - **Scalable**: ZK-STARK is faster than ZK-SNARK at generating and verifying proofs when the size of the witness is larger. With STARK proofs, prover and verification times only slightly increase as the witness grows (SNARK prover and verifier times increase linearly with witness size). 
 
 - **Transparent**: ZK-STARK relies on publicly verifiable randomness to generate public parameters for proving and verification instead of a trusted setup. Thus, they are more transparent compared to ZK-SNARKs. 
 
-While ZK-STARK improves on ZK-SNARK, it has a significant drawback: it produces larger proofs. As a result, STARK proofs have higher verification overhead—although this arguably becomes less of an issue when generating proofs for large datasets. In this case, a ZK-STARK may be more cost-effective than a ZK-SNARK. 
+ZK-STARKs produce larger proofs than ZK-SNARKs meaning they generally have higher verification overheads. However, there are cases (such as proving large datasets) where ZK-STARKs may be more cost-effective than ZK-SNARKs. 
 
 ## Use-cases for zero-knowledge proofs {#use-cases-for-zero-knowledge-proofs}
 
 ### Anonymous payments {#anonymous-payments} 
 
-Credit card payments are often visible to multiple parties, including the payments provider, your bank, and other interested parties (e.g., government authorities). While financial surveillance is good for curbing illegal financial activities, it poses risks for ordinary citizens. Such individuals may wish to keep details of their transactions away from prying eyes. 
+Credit card payments are often visible to multiple parties, including the payments provider, banks, and other interested parties (e.g., government authorities). While financial surveillance has benefits for identifying illegal activity, it also undermines the privacy of ordinary citizens.
 
-Cryptocurrencies were designed to provide a means for users to conduct private, peer-to-peer transactions. But cryptos only offer marginal improvements on financial privacy, as transaction details are publicly visible on the blockchain. Also, user identities are pseudonymous, not completely anonymous, allowing cutting-edge blockchain analysis tools to correlate wallet addresses with real-life identities. 
+Cryptocurrencies were intended to provide a means for users to conduct private, peer-to-peer transactions. But most cryptocurrency transactions are openly visible on public blockchains. User identities are often pseudonymous and either wilfully linked to real-world identities (e.g. by including ETH addresses on Twitter or Github profiles) or can be associated with real-world identities using basic on and off-chain data analysis. 
 
-However, continued research into financial privacy techniques led to the development of “privacy coins”, which are cryptocurrencies specifically designed for completely anonymous transactions. Privacy-focused blockchains, such as ZCash and Monero, shield transaction details, including sender/receiver addresses, asset type, quantity, and the transaction timeline. 
+There are specific “privacy coins” designed for completely anonymous transactions. Privacy-focused blockchains, such as ZCash and Monero, shield transaction details, including sender/receiver addresses, asset type, quantity, and the transaction timeline.
 
-Some will ask, “How can blockchain nodes verify the validity of transactions without accessing transaction details?”. This is where zero-knowledge proofs come into the picture. By baking in zero-knowledge technology into the protocol, privacy-focused blockchain networks allow nodes to validate transactions without needing to access transaction data. 
+By baking in zero-knowledge technology into the protocol, privacy-focused blockchain networks allow nodes to validate transactions without needing to access transaction data. 
 
-Zero-knowledge proofs are also being applied to anonymizing transactions on public blockchains. An example is Tornado Cash, a decentralized, non-custodial service that allows users to conduct private transactions on Ethereum. Tornado Cash uses zero-knowledge proofs to obfuscate transaction details and guarantee financial privacy.  
+Zero-knowledge proofs are also being applied to anonymizing transactions on public blockchains. An example is Tornado Cash, a decentralized, non-custodial service that allows users to conduct private transactions on Ethereum. Tornado Cash uses zero-knowledge proofs to obfuscate transaction details and guarantee financial privacy.  Unfortunately, because these are "opt-in" privacy tools they are associated with illicit activity. To overcome this, privacy has to eventually become the default on public blockchains.
 
 ### Identity protection {#identity-protection}
 
-The scenario described earlier (proving citizenship) is an example of how current identity management systems put personal information at risk. But, as explained subsequently, zero-knowledge proofs can help individuals validate identity whilst protecting sensitive details. 
+Current identity management systems put personal information at risk. Zero-knowledge proofs can help individuals validate identity whilst protecting sensitive details. 
 
 Zero-knowledge proofs are particularly useful in the context of [decentralized identity](/decentralized-identity/). Decentralized identity (also described as ‘self-sovereign identity’) gives the individual the ability to control access to personal identifiers. Proving your citizenship without revealing your tax ID or passport details is a good example of how zero-knowledge technology enables decentralized identity. 
 
@@ -139,7 +139,7 @@ Here’s how that works in practice:
 
 The benefit here is that the main Ethereum doesn’t have to do any execution and only needs to apply results from outsourced computation to its state. This reduces network congestion and also improves transaction speeds (off-chain protocols optimize for faster execution).
  
-But how can Ethereum be sure that off-chain transactions were executed correctly? The chain needs a way to validate off-chain transactions without re-executing them, or else the value of off-chain execution is lost. 
+The chain needs a way to validate off-chain transactions without re-executing them, or else the value of off-chain execution is lost. 
 
 This is where verifiable computation comes into play. When a node executes a transaction outside of Mainnet, it submits a zero-knowledge proof to prove the correctness of off-chain execution. This proof (called a [validity proof](/glossary/#validity-proof)) guarantees that a transaction is valid, allowing the main Ethereum chain to apply the result to its state—without waiting for anyone to dispute it. 
 
