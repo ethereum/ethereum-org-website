@@ -305,7 +305,7 @@ const summary: SummaryItem[] = importSelection.map(
     }
   }
 )
-const langsSummary = summary.reduce(
+const langsSummary: string = summary.reduce(
   (prev: string, { repoLangCode }: { repoLangCode: string }): string =>
     `${prev},${repoLangCode}`,
   ""
@@ -313,6 +313,10 @@ const langsSummary = summary.reduce(
 
 // Print summary logs
 log("Empty buckets:", trackers.emptyBuckets)
-console.table(summary)
-console.log("Langs to test:", `\nGATSBY_BUILD_LANGS=en${langsSummary}`)
-console.log("🎉 Crowdin import complete.")
+if (summary.length) {
+  console.table(summary)
+  console.log("Langs to test:", `\nGATSBY_BUILD_LANGS=en${langsSummary}`)
+  console.log("🎉 Crowdin import complete.")
+} else {
+  console.warn("Nothing imported, see instruction at top of crowdin-imports.ts")
+}
