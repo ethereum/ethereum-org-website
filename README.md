@@ -1289,6 +1289,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://pushkarverma.dev"><img src="https://avatars.githubusercontent.com/u/50198312?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Pushkar Verma</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=pushkar2112" title="Documentation">📖</a> <a href="#ideas-pushkar2112" title="Ideas, Planning, & Feedback">🤔</a></td>
     <td align="center"><a href="http://vincentweisser.com"><img src="https://avatars.githubusercontent.com/u/32839303?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Vincent Weisser</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=vincentweisser" title="Documentation">📖</a></td>
   </tr>
+  <tr>
+    <td align="center"><a href="http://www.koogawa.com"><img src="https://avatars.githubusercontent.com/u/893643?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Kosuke Ogawa</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=koogawa" title="Documentation">📖</a> <a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Akoogawa" title="Bug reports">🐛</a></td>
+  </tr>
 </table>
 
 <!-- markdownlint-restore -->
