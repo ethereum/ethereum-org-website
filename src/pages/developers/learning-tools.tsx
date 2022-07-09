@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react"
 import styled from "styled-components"
 import { graphql, PageProps } from "gatsby"
-import { getImage } from "gatsby-plugin-image"
 import { useIntl } from "gatsby-plugin-intl"
 import { shuffle } from "lodash"
 import { translateMessageId, TranslationKey } from "../../utils/translations"
@@ -16,9 +15,9 @@ import {
   CardGrid,
   Page,
 } from "../../components/SharedStyledComponents"
-import { IData } from "."
 import FeedbackCard from "../../components/FeedbackCard"
 import { Context } from "../../types"
+import { getImage } from "gatsby-plugin-image"
 
 const StyledPage = styled(Page)`
   margin-top: 4rem;
@@ -86,11 +85,7 @@ export interface ILearningTool {
   image: string
   alt: TranslationKey
   background: string
-  subjects: string[]
-}
-
-export interface IProps {
-  data: IData
+  subjects: Array<string>
 }
 
 const LearningToolsPage = ({
@@ -98,11 +93,11 @@ const LearningToolsPage = ({
 }: PageProps<Queries.DevelopersLearningToolsPageQuery, Context>) => {
   const intl = useIntl()
   const [randomizedSandboxes, setRandomizedSandboxes] = useState<
-    ILearningTool[]
+    Array<ILearningTool>
   >([])
 
   useEffect(() => {
-    const sandboxes: ILearningTool[] = [
+    const sandboxes: Array<ILearningTool> = [
       {
         name: "Remix",
         description: "page-learning-tools-remix-description",
@@ -135,7 +130,7 @@ const LearningToolsPage = ({
     setRandomizedSandboxes(randomizedSandboxes)
   }, [data])
 
-  const games: ILearningTool[] = [
+  const games: Array<ILearningTool> = [
     {
       name: "CryptoZombies",
       description: "page-learning-tools-cryptozombies-description",
@@ -165,7 +160,7 @@ const LearningToolsPage = ({
     },
   ]
 
-  const bootcamps: ILearningTool[] = [
+  const bootcamps: Array<ILearningTool> = [
     {
       name: "ChainShot",
       description: "page-learning-tools-chainshot-description",

@@ -19,8 +19,7 @@ import {
   GrayContainer,
 } from "../../components/SharedStyledComponents"
 import FeedbackCard from "../../components/FeedbackCard"
-
-import type { Context } from "../types"
+import { Context } from "../../types"
 
 const HeroContainer = styled.div`
   display: flex;
@@ -237,35 +236,6 @@ const paths: Array<IDevelopersPath> = [
     button: <Translation id="page-developers-choose-stack" />,
   },
 ]
-
-export interface IGatsbyChildImageSharp {
-  gatsbyImageData: {
-    height: number
-    width: number
-    images: {
-      fallback: {
-        src: string
-        srcSet: string
-        sizes: string
-      }
-      sources: {
-        srcSet: string
-        sizes: string
-        type: string
-      }[]
-    }
-    layout: string
-    placeholder: {
-      fallback: string
-    }
-  }
-}
-
-export type IData = Record<string, IGatsbyChildImageSharp>
-
-export interface IProps {
-  data: IData
-}
 
 const DevelopersPage = ({
   data,

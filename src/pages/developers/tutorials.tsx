@@ -225,7 +225,7 @@ export interface IForeignTutorial {
   description: string
   author: string
   authorGithub: string
-  tags: string[]
+  tags: Array<string>
   skillLevel: string
   timeToRead?: string
   lang: string
@@ -319,7 +319,7 @@ const TutorialsPage = ({
     })
 
   // Tally all subject tag counts
-  const tagsConcatenated: string[] = []
+  const tagsConcatenated: Array<string> = []
   for (const tutorial of filteredTutorials) {
     if (tutorial.tags) {
       tagsConcatenated.push(...tutorial.tags)

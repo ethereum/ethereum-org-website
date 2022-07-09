@@ -22,8 +22,6 @@ import {
   Page,
   // InfoBanner,
 } from "../../components/SharedStyledComponents"
-import { getImageData } from "gatsby-plugin-image"
-import { IData } from "."
 import FeedbackCard from "../../components/FeedbackCard"
 import { Context } from "../../types"
 
@@ -377,10 +375,6 @@ const frameworksList: Array<IFramework> = [
     alt: "page-local-environment-foundry-logo-alt",
   },
 ]
-
-export interface IProps {
-  data: IData
-}
 
 const ChooseStackPage = ({
   data,
