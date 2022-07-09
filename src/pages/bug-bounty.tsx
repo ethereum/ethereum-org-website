@@ -26,7 +26,7 @@ import {
   GradientContainer,
   SloganGradient,
 } from "../components/SharedStyledComponents"
-import { IGatsbyChildImageSharp } from "./assets"
+import FeedbackCard from "../components/FeedbackCard"
 
 const HeroCard = styled.div`
   display: flex;
@@ -843,6 +843,7 @@ const BugBountiesPage: React.FC<IProps> = ({ data, location }) => {
         </div>
         <Emoji size={3} text=":email:" />
       </Contact>
+      <FeedbackCard />
     </Page>
   )
 }

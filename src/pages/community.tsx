@@ -11,6 +11,7 @@ import ButtonLink from "../components/ButtonLink"
 import PageMetadata from "../components/PageMetadata"
 import Translation from "../components/Translation"
 import PageHero from "../components/PageHero"
+import FeedbackCard from "../components/FeedbackCard"
 
 import {
   CardContainer,
@@ -598,6 +599,7 @@ const CommunityPage: React.FC<IProps> = ({ data }) => {
           </StyledCallout>
         </CardContainer>
       </Content>
+      <FeedbackCard />
     </Page>
   )
 }

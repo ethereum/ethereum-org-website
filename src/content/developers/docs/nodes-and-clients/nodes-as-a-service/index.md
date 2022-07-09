@@ -52,7 +52,7 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
   - Features
     - Largest free tier with 300M compute units per month (~30M getLatestBlock requests)
     - Multichain support for Polygon, Starknet, Optimism, Arbitrum
-    - Powering ~70% of the largest Ethereum dApps and DeFi transaction volume
+    - Powering ~70% of the largest Ethereum dapps and DeFi transaction volume
     - Real-time webhook alerts via Alchemy Notify
     - Best-in-class support and reliability / stability
     - Alchemy's NFT API
@@ -183,13 +183,20 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - The most private, censorship-resistant option
     - Hands-on developer support
     - [Pocket Portal](https://bit.ly/ETHorg_POKTportal) dashboard and analytics
-- [**QuikNode**](https://www.quiknode.io/)
+- [**QuickNode**](https://www.quicknode.com)
+  - [Docs](https://www.quicknode.com/docs/)
   - Features
-    - 7 day free trial
-    - Varied support
-    - Webhooks
-    - Dashboard
-    - Analytics
+    - Industry-leading performance and reliability
+    - 24/7 technical support & dev Discord community
+    - Geo-balanced, multi cloud/metal, low-latency network
+    - Multichain support (Optimism, Arbitrum, Polygon + 11 others)
+    - Middle-layers for speed & stability (call routing, cache, indexing)
+    - Smart-Contract monitoring via Webhooks
+    - Intuitive dashboard, analytics suite, RPC composer
+    - Advanced security features (JWT, masking, whitelisting)
+    - NFT data and analytics API
+    - [SOC2 Certified](https://www.quicknode.com/security)
+    - Suitable for Developers to Enterprises
 - [**Rivet**](https://rivet.cloud/)
   - [Docs](https://rivet.readthedocs.io/en/latest/)
   - Features

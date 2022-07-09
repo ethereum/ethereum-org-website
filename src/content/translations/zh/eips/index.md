@@ -11,7 +11,7 @@ sidebar: true
 
 [以太坊改进提议 (EIP)](https://eips.ethereum.org/)是为以太坊潜在新功能或流程提出建议的标准。 EIP 包含提议改进的技术规范，并作为社区的“真相来源”。 在 EIP 的过程中，将会讨论和制定以太坊的网络升级和应用标准。
 
-以太坊社区中的任何人都可以创造一个 EIP。 关于如何编写 EIP 的指南将纳入 [EIP 1](https://eips.ethereum.org/EIPS/eip-1)。 EIP 应提供功能及其原理的简明技术细节和提出的理由。 EIP 作者负责在社区内建立共识并记录反对意见。 提交一个高水平的 EIP 需要很强的技术能力，历史上，大多数 EIP 作者已经成为应用程序或者协议开发者。
+以太坊社区中的任何人都可以创造一个 EIP。 关于如何编写 EIP，你可以在 [EIP 1](https://eips.ethereum.org/EIPS/eip-1) 中找到。 EIP 应提供功能及其原理的简明技术细节和提出的理由。 EIP 作者负责在社区内建立共识并记录反对意见。 提交一个高水平的 EIP 需要很强的技术能力，历史上，大多数 EIP 作者都是应用程序或者协议开发者。
 
 ## 为什么 EIP 很重要？ {#why-do-eips-matter}
 
@@ -58,7 +58,7 @@ EIP 编辑们与 [Ethereum Cat Herders](https://ethereumcatherders.com/) 和 [Et
 
 - [如何创建 EIP](https://eips.ethereum.org/EIPS/eip-1)
 
-## 引用 {#references}
+## 参考文献 {#references}
 
 <cite class="citation">
 

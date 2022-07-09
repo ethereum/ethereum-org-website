@@ -7,15 +7,15 @@ sidebar: true
 
 区块是指一批交易的组合，并且包含链中上一个区块的哈希。 这将区块连接在一起（成为一个链），因为哈希是从区块数据中加密得出的。 这可以防止欺诈，因为以前的任何区块中的任何改变都会使后续所有区块无效，而且所有哈希都会改变，所有运行区块链的人都会注意到。
 
-## 前置要求 {#prerequisites}
+## 先决条件 {#prerequisites}
 
 区块是一个对初学者非常友好的主题。 为了帮助您更好地理解这个页面，我们建议您先阅读[帐户](/developers/docs/accounts/)、[交易](/developers/docs/transactions/)和我们的[以太坊简介](/developers/docs/intro-to-ethereum/)。
 
 ## 为什么要有区块？ {#why-blocks}
 
-为了确保以太坊网络上的所有参与者保持同步状态并就交易的确切历史达成共识，我们将交易分为多个区块。 这意味着一次提交、商定和同步数十个（或数百个）交易。
+为了确保以太坊网络上的所有参与者保持同步状态并就交易的确切历史达成共识，我们将多个交易组成一个区块。 这意味着一次提交、商定和同步数十个（或数百个）交易。
 
-![区块中的交易导致状态变化的图表](./tx-block.png) _图表来自 [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![区块中的交易导致状态变化的图表](./tx-block.png) _图表来自 [Ethereum EVM 插图](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 通过间隔提交，即使交易请求每秒发生数十次，我们仍能给所有网络参与者足够的时间达成共识。 以太坊上的区块大约每十五秒提交一次。
 
@@ -23,7 +23,7 @@ sidebar: true
 
 为了保存交易历史，区块被严格排序（创建的每个新区块都包含一个其父块的引用），区块内的交易也严格排序。 除极少数情况外，在任何特定时间，网络上的所有参与者都同意区块的确切数目和历史， 并且正在努力将当前的活动交易请求分批到下一个区块。
 
-一旦某个区块被网络上的某个矿工放在一起（挖矿），它就会传播到网络的其余部分； 所有节点都将此块添加到其区块链的末尾，并且继续挖掘。 目前，以太坊的“工作量证明”协议指定了确切的块组装（挖矿）过程和提交/共识过程。
+一旦一个区块被网络上的某个矿工打包（被挖矿产生），它就会传播到网络的其余部分； 所有节点都将此块添加到其区块链的末尾，并且继续挖掘。 目前，以太坊的“工作量证明”协议指定了确切的块组装（挖矿）过程和提交/共识过程。
 
 ### 视觉演示 {#a-visual-demo}
 
@@ -65,6 +65,6 @@ _还有哪些社区资源对您有所帮助？ 请编辑本页面并添加！_
 
 ## 相关主题 {#related-topics}
 
-- [挖矿](/developers/docs/consensus-mechanisms/pow/mining/)
+- [矿工](/developers/docs/consensus-mechanisms/pow/mining/)
 - [交易](/developers/docs/transactions/)
-- [Gas](/developers/docs/gas/)
+- [气体 Gas](/developers/docs/gas/)

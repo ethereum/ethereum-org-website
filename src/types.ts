@@ -16,9 +16,13 @@ export type Context = {
   relativePath: string
   intl: Intl
   language: Lang
+  ignoreTranslationBanner?: boolean
   isOutdated: boolean
+  isLegal?: boolean
   isContentEnglish?: boolean
 }
+
+export type Direction = "rtl" | "ltr" | "auto"
 
 export type ForbidOptional<T = {}> = {
   [P in keyof T]?: never

@@ -30,7 +30,7 @@ Ethereum.org, [diller sayfasında](/languages) bulabileceğiniz 40'tan fazla dil
 - [BeInCrypto](http://www.beincrypto.com.br) - kripto para haberleri ve makaleleri, bir borsa listesi ile beraber, Brezilya'da mevcuttur
 - [Cointelegraph](http://cointelegraph.com.br/category/analysis) - Büyük bir kripto para haber merkezi olan Cointelegraph'ın Brezilya versiyonu
 - [Livecoins](http://www.livecoins.com.br/ethereum) - kripto para birimi haberleri ve araçları
-- [Seudinheiro](http://www.seudinheiro.com/criptomoedas/) - kripto para haberleri ve raporları
+- [Seudinheiro](http://www.seudinheiro.com/criptomoedas/) - kriptopara haber ve raporları
 
 **Eğitim**
 

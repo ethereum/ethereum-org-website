@@ -85,7 +85,7 @@ Gli optimistic rollup usano una sidechain parallela alla catena principale di Et
 
 Con gli optimistic rollup, le transazioni sono scritte nella catena principale Ethereum come dati di chiamata, ottimizzando ulteriormente le transazioni in quanto costo del carburante risulta ridotto.
 
-Siccome il calcolo è la parte lenta e costosa di Ethereum, gli optimistic rollup possono offrire miglioramenti alla scalabilità pari a 10-100x, a seconda della transazione. Il numero aumenterà ancora di più con l'introduzione delle [shard chain](/upgrades/shard-chains), con l'upgrade a Eth2. Ci saranno infatti ancora più dati disponibili nel caso di contestazione di una transazione.
+Siccome il calcolo è la parte lenta e costosa di Ethereum, gli optimistic rollup possono offrire miglioramenti alla scalabilità pari a 10-100x, a seconda della transazione. Il numero aumenterà ancora di più con l'introduzione delle [shard chain](/upgrades/sharding), con l'upgrade a Eth2. Ci saranno infatti ancora più dati disponibili nel caso di contestazione di una transazione.
 
 #### Disputa di transazioni {#disputing-transactions}
 
@@ -217,7 +217,7 @@ Combinano le parti migliori di diverse tecnologie di livello 2 e possono offrire
 ## Letture consigliate {#further-reading}
 
 - [Validium And The Layer 2 Two-By-Two — Issue No. 99](https://www.buildblockchain.tech/newsletter/issues/no-99-validium-and-the-layer-2-two-by-two)
-- \[Evaluating Ethereum layer 2 Scaling Solutions: A Comparison Framework\](https://blog.matter-labs.io/evaluating-ethereum-l2-scaling-solutions-a-comparison-framework-b6b2f410f955)
+- [Evaluating Ethereum layer 2 Scaling Solutions: A Comparison Framework](https://blog.matter-labs.io/evaluating-ethereum-l2-scaling-solutions-a-comparison-framework-b6b2f410f955)
 - [Adding Hybrid PoS-Rollup Sidechain to Celer’s Coherent Layer-2 Platform on Ethereum](https://medium.com/celer-network/adding-hybrid-pos-rollup-sidechain-to-celers-coherent-layer-2-platform-d1d3067fe593)
 - [Zero-Knowledge Blockchain Scalability](https://ethworks.io/assets/download/zero-knowledge-blockchain-scaling-ethworks.pdf)
 

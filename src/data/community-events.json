@@ -301,13 +301,13 @@
     "to": "https://zora.ethglobal.com/",
     "sponsor": null,
     "location": "Remote",
-    "description": "ETHGlobal is teaming up with Zora to create a virtual developer and creative focused hackathon! Join and create art, music, dApps, protocols and anything in between.",
+    "description": "ETHGlobal is teaming up with Zora to create a virtual developer and creative focused hackathon! Join and create art, music, dapps, protocols and anything in between.",
     "startDate": "2022-08-04",
     "endDate": "2022-08-10"
   },
   {
     "title": "ETHLatam",
-    "to": "https://twitter.com/ethlatam",
+    "to": "http://ethlatam.org/",
     "sponsor": null,
     "location": "Buenos Aires, Argentina",
     "description": "A 4-day conference that builds upon the work of the local pioneers that laid the foundations for a vibrant community that made crypto mainstream in Argentina.",
@@ -414,6 +414,15 @@
     "endDate": "2022-11-06"
   },
   {
+    "title": "ETHGathering",
+    "to": "https://www.ethgathering.com/",
+    "sponsor": null,
+    "location": "Barcelona, Spain",
+    "description": "Hosted in one of the world's most vibrant and creative cities, ETH Gathering Barcelona 2022 is a two-day conference focused on the community building the decentralised future.",
+    "startDate": "2022-11-18",
+    "endDate": "2022-11-20"
+  },
+  {
     "title": "ETHIndia",
     "to": "https://airtable.com/shrZ89OEwQJRtXHPv/",
     "sponsor": null,
@@ -448,5 +457,23 @@
     "description": "Welcome to the latest greatest ETH event happening in Africa!",
     "startDate": "2022-09-18",
     "endDate": "2022-09-25"
+  },
+  {
+    "title": "Web3Dubai",
+    "to": "https://www.web3dubai.org/",
+    "sponsor": null,
+    "location": "Dubai, UAE",
+    "description": "The Web3Dubai Conference will feature the latest innovations in Web3 technology and modular blockchains with a focus on builder and creator tools, techniques and APIs that help you scale your project and go from 0 to 1.",
+    "startDate": "2022-11-16",
+    "endDate": "2022-11-18"
+  },
+  {
+    "title": "ETHDubai",
+    "to": "https://www.ethdubaiconf.org",
+    "sponsor": null,
+    "location": "Dubai, UAE",
+    "description": "The Ethereum dev conference in Dubai on everything DeFi, NFTs, EVM scaling, layers 2 and more with a focus on decentralization and community projects.",
+    "startDate": "2023-03-14",
+    "endDate": "2023-03-16"
   }
 ]

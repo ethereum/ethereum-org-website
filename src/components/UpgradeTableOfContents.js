@@ -44,6 +44,8 @@ const slugify = (s) =>
   encodeURIComponent(String(s).trim().toLowerCase().replace(/\s+/g, "-"))
 
 const getCustomId = (title) => {
+  // match .md headings
+  // ex. `## Why stake with a pool? {#why-stake-with-a-pool}`
   const match = customIdRegEx.exec(title)
   if (match) {
     return match[2].toLowerCase()

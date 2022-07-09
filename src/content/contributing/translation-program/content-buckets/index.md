@@ -185,7 +185,7 @@ Below is a breakdown of the website pages each content bucket contains.
 - [ERC-20 contract walkthrough](/developers/tutorials/erc20-annotated-code/)
 - [How to implement an ERC-721 market](/developers/tutorials/how-to-implement-an-erc721-market/)
 - [Interact with other contracts from Solidity](/developers/tutorials/interact-with-other-contracts-from-solidity/)
-- [Kickstart your dApp frontend development with create-eth-app](/developers/tutorials/kickstart-your-dapp-frontend-development-wth-create-eth-app/)
+- [Kickstart your dapp frontend development with create-eth-app](/developers/tutorials/kickstart-your-dapp-frontend-development-wth-create-eth-app/)
 - [Merkle proofs for offline data integrity](/developers/tutorials/merkle-proofs-for-offline-data-integrity/)
 - [How to run a light node with Geth](/developers/tutorials/run-light-node-geth/)
 - [Sending tokens using ethers.js](/developers/tutorials/send-token-etherjs/)

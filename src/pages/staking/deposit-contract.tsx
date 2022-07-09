@@ -24,9 +24,13 @@ import {
 import { DEPOSIT_CONTRACT_ADDRESS } from "../../data/addresses"
 import { translateMessageId, TranslationKey } from "../../utils/translations"
 import type { Context } from "../../types"
+import FeedbackCard from "../../components/FeedbackCard"
 
 const Page = styled.div`
   width: 100%;
+`
+
+const Flex = styled.div`
   display: flex;
   border-bottom: 1px solid ${(props) => props.theme.colors.border};
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
@@ -310,171 +314,174 @@ const DepositContractPage = ({
     : ":speaker:"
   return (
     <Page>
-      <PageMetadata
-        title={translateMessageId(
-          "page-staking-deposit-contract-meta-title",
-          intl
-        )}
-        description={translateMessageId(
-          "page-staking-deposit-contract-meta-desc",
-          intl
-        )}
-      />
-      <LeftColumn>
-        <Breadcrumbs slug={location.pathname} startDepth={1} />
-        <Title>
-          <Translation id="page-staking-deposit-contract-title" />
-        </Title>
-        <Subtitle>
-          <Translation id="page-staking-deposit-contract-subtitle" />
-        </Subtitle>
-        <h2>
-          <Translation id="page-staking-deposit-contract-h2" />
-        </h2>
-        <p>
-          <Translation id="page-staking-deposit-contract-staking" />{" "}
-          <Link to="/staking/">
-            <Translation id="page-staking-deposit-contract-staking-more-link" />
-          </Link>
-        </p>
-        <StyledButton to="https://launchpad.ethereum.org">
-          <Translation id="page-staking-deposit-contract-launchpad" />
-        </StyledButton>
-        <h2>
-          <Translation id="page-staking-deposit-contract-staking-check" />
-        </h2>
-        <p>
-          <Translation id="page-staking-deposit-contract-staking-check-desc" />
-        </p>
-        <CardList content={addressSources} />
-      </LeftColumn>
-      <RightColumn>
-        <AddressCard>
-          <CardTag>
-            <Translation id="page-staking-deposit-contract-address-check-btn" />
-          </CardTag>
-          <CardContainer>
-            {!state.showAddress && (
-              <>
-                <Row>
-                  <CardTitle>
-                    <Translation id="page-staking-deposit-contract-confirm-address" />
-                  </CardTitle>
-                </Row>
-                <StyledCheckbox
-                  size={1.5}
-                  checked={state.userHasUsedLaunchpad}
-                  callback={() =>
-                    setState({
-                      ...state,
-                      userHasUsedLaunchpad: !state.userHasUsedLaunchpad,
-                    })
-                  }
-                >
-                  <Translation id="page-staking-deposit-contract-checkbox1" />
-                </StyledCheckbox>
-                <StyledCheckbox
-                  size={1.5}
-                  checked={state.userUnderstandsStaking}
-                  callback={() =>
-                    setState({
-                      ...state,
-                      userUnderstandsStaking: !state.userUnderstandsStaking,
-                    })
-                  }
-                >
-                  <Translation id="page-staking-deposit-contract-checkbox2" />
-                </StyledCheckbox>
-                <StyledCheckbox
-                  size={1.5}
-                  checked={state.userWillCheckOtherSources}
-                  callback={() =>
-                    setState({
-                      ...state,
-                      userWillCheckOtherSources:
-                        !state.userWillCheckOtherSources,
-                    })
-                  }
-                >
-                  <Translation id="page-staking-deposit-contract-checkbox3" />
-                </StyledCheckbox>
-                <CopyButton
-                  disabled={!isButtonEnabled}
-                  onClick={() =>
-                    setState({ ...state, showAddress: !state.showAddress })
-                  }
-                >
-                  <Emoji text=":eyes:" size={1} />{" "}
-                  <Translation id="page-staking-deposit-contract-reveal-address-btn" />
-                </CopyButton>
-              </>
-            )}
-            {state.showAddress && (
-              <>
-                <Row>
-                  <TitleText>
+      <Flex>
+        <PageMetadata
+          title={translateMessageId(
+            "page-staking-deposit-contract-meta-title",
+            intl
+          )}
+          description={translateMessageId(
+            "page-staking-deposit-contract-meta-desc",
+            intl
+          )}
+        />
+        <LeftColumn>
+          <Breadcrumbs slug={location.pathname} startDepth={1} />
+          <Title>
+            <Translation id="page-staking-deposit-contract-title" />
+          </Title>
+          <Subtitle>
+            <Translation id="page-staking-deposit-contract-subtitle" />
+          </Subtitle>
+          <h2>
+            <Translation id="page-staking-deposit-contract-h2" />
+          </h2>
+          <p>
+            <Translation id="page-staking-deposit-contract-staking" />{" "}
+            <Link to="/staking/">
+              <Translation id="page-staking-deposit-contract-staking-more-link" />
+            </Link>
+          </p>
+          <StyledButton to="https://launchpad.ethereum.org">
+            <Translation id="page-staking-deposit-contract-launchpad" />
+          </StyledButton>
+          <h2>
+            <Translation id="page-staking-deposit-contract-staking-check" />
+          </h2>
+          <p>
+            <Translation id="page-staking-deposit-contract-staking-check-desc" />
+          </p>
+          <CardList content={addressSources} />
+        </LeftColumn>
+        <RightColumn>
+          <AddressCard>
+            <CardTag>
+              <Translation id="page-staking-deposit-contract-address-check-btn" />
+            </CardTag>
+            <CardContainer>
+              {!state.showAddress && (
+                <>
+                  <Row>
                     <CardTitle>
-                      <Translation id="page-staking-deposit-contract-address" />
+                      <Translation id="page-staking-deposit-contract-confirm-address" />
                     </CardTitle>
-                    <Caption>
-                      <Translation id="page-staking-deposit-contract-address-caption" />
-                    </Caption>
-                  </TitleText>
-                  <Blockie src={blockieSrc} />
-                </Row>
-                {state.browserHasTextToSpeechSupport && (
-                  <TextToSpeech>
-                    <StyledFakeLink onClick={handleTextToSpeech}>
-                      <Translation id={textToSpeechText as TranslationKey} />
-                    </StyledFakeLink>{" "}
-                    <Emoji text={textToSpeechEmoji} size={1} />
-                  </TextToSpeech>
-                )}
-                <Tooltip
-                  content={translateMessageId(
-                    "page-staking-deposit-contract-warning",
-                    intl
-                  )}
-                >
-                  <Address>{CHUNKED_ADDRESS}</Address>
-                </Tooltip>
-                <ButtonRow>
-                  <CopyToClipboard text={DEPOSIT_CONTRACT_ADDRESS}>
-                    {(isCopied) => (
-                      <CopyButton>
-                        {!isCopied ? (
-                          <div>
-                            <Emoji text=":clipboard:" size={1} />{" "}
-                            <Translation id="page-staking-deposit-contract-copy" />
-                          </div>
-                        ) : (
-                          <div>
-                            <Emoji text=":white_check_mark:" size={1} />{" "}
-                            <Translation id="page-staking-deposit-contract-copied" />
-                          </div>
-                        )}
-                      </CopyButton>
-                    )}
-                  </CopyToClipboard>
-                  <Link
-                    to={`https://etherscan.io/address/${DEPOSIT_CONTRACT_ADDRESS}`}
+                  </Row>
+                  <StyledCheckbox
+                    size={1.5}
+                    checked={state.userHasUsedLaunchpad}
+                    callback={() =>
+                      setState({
+                        ...state,
+                        userHasUsedLaunchpad: !state.userHasUsedLaunchpad,
+                      })
+                    }
                   >
-                    <Translation id="page-staking-deposit-contract-etherscan" />
+                    <Translation id="page-staking-deposit-contract-checkbox1" />
+                  </StyledCheckbox>
+                  <StyledCheckbox
+                    size={1.5}
+                    checked={state.userUnderstandsStaking}
+                    callback={() =>
+                      setState({
+                        ...state,
+                        userUnderstandsStaking: !state.userUnderstandsStaking,
+                      })
+                    }
+                  >
+                    <Translation id="page-staking-deposit-contract-checkbox2" />
+                  </StyledCheckbox>
+                  <StyledCheckbox
+                    size={1.5}
+                    checked={state.userWillCheckOtherSources}
+                    callback={() =>
+                      setState({
+                        ...state,
+                        userWillCheckOtherSources:
+                          !state.userWillCheckOtherSources,
+                      })
+                    }
+                  >
+                    <Translation id="page-staking-deposit-contract-checkbox3" />
+                  </StyledCheckbox>
+                  <CopyButton
+                    disabled={!isButtonEnabled}
+                    onClick={() =>
+                      setState({ ...state, showAddress: !state.showAddress })
+                    }
+                  >
+                    <Emoji text=":eyes:" size={1} />{" "}
+                    <Translation id="page-staking-deposit-contract-reveal-address-btn" />
+                  </CopyButton>
+                </>
+              )}
+              {state.showAddress && (
+                <>
+                  <Row>
+                    <TitleText>
+                      <CardTitle>
+                        <Translation id="page-staking-deposit-contract-address" />
+                      </CardTitle>
+                      <Caption>
+                        <Translation id="page-staking-deposit-contract-address-caption" />
+                      </Caption>
+                    </TitleText>
+                    <Blockie src={blockieSrc} />
+                  </Row>
+                  {state.browserHasTextToSpeechSupport && (
+                    <TextToSpeech>
+                      <StyledFakeLink onClick={handleTextToSpeech}>
+                        <Translation id={textToSpeechText as TranslationKey} />
+                      </StyledFakeLink>{" "}
+                      <Emoji text={textToSpeechEmoji} size={1} />
+                    </TextToSpeech>
+                  )}
+                  <Tooltip
+                    content={translateMessageId(
+                      "page-staking-deposit-contract-warning",
+                      intl
+                    )}
+                  >
+                    <Address>{CHUNKED_ADDRESS}</Address>
+                  </Tooltip>
+                  <ButtonRow>
+                    <CopyToClipboard text={DEPOSIT_CONTRACT_ADDRESS}>
+                      {(isCopied) => (
+                        <CopyButton>
+                          {!isCopied ? (
+                            <div>
+                              <Emoji text=":clipboard:" size={1} />{" "}
+                              <Translation id="page-staking-deposit-contract-copy" />
+                            </div>
+                          ) : (
+                            <div>
+                              <Emoji text=":white_check_mark:" size={1} />{" "}
+                              <Translation id="page-staking-deposit-contract-copied" />
+                            </div>
+                          )}
+                        </CopyButton>
+                      )}
+                    </CopyToClipboard>
+                    <Link
+                      to={`https://etherscan.io/address/${DEPOSIT_CONTRACT_ADDRESS}`}
+                    >
+                      <Translation id="page-staking-deposit-contract-etherscan" />
+                    </Link>
+                  </ButtonRow>
+                </>
+              )}
+              <InfoBanner isWarning={true} emoji=":warning:">
+                <div>
+                  <Translation id="page-staking-deposit-contract-warning-2" />{" "}
+                  <Link to="https://launchpad.ethereum.org">
+                    <Translation id="page-staking-deposit-contract-launchpad-2" />
                   </Link>
-                </ButtonRow>
-              </>
-            )}
-            <InfoBanner isWarning={true} emoji=":warning:" mt={`2rem`}>
-              <div>
-                <Translation id="page-staking-deposit-contract-warning-2" />{" "}
-                <Link to="https://launchpad.ethereum.org">
-                  <Translation id="page-staking-deposit-contract-launchpad-2" />
-                </Link>
-              </div>
-            </InfoBanner>
-          </CardContainer>
-        </AddressCard>
-      </RightColumn>
+                </div>
+              </InfoBanner>
+            </CardContainer>
+          </AddressCard>
+        </RightColumn>
+      </Flex>
+      <FeedbackCard />
     </Page>
   )
 }
