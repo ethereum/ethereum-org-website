@@ -6,7 +6,9 @@ import { useQuery, gql } from "@apollo/client"
 import GitStars from "./GitStars"
 import ButtonLink from "./ButtonLink"
 
-const ImageWrapper = styled.div`
+const ImageWrapper = styled.div<{
+  background: string
+}>`
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -50,7 +52,9 @@ const Content = styled.div`
   flex-direction: column;
 `
 
-const Title = styled.h3`
+const Title = styled.h3<{
+  gitHidden: boolean
+}>`
   margin-top: ${(props) => (props.gitHidden ? "2rem" : "3rem")};
   margin-bottom: 0.75rem;
 `
@@ -67,7 +71,9 @@ const SubjectContainer = styled.div`
   padding: 0 1.5rem;
 `
 
-const SubjectPill = styled.div`
+const SubjectPill = styled.div<{
+  subject: string
+}>`
   text-align: center;
   padding: 0 0.5rem;
   margin: 0 0.75rem 0.5rem 0;
@@ -133,7 +139,21 @@ const REPO_DATA = gql`
   }
 `
 
-const ProductCard = ({
+export interface IProps {
+  url: string
+  background: string
+  image: string
+  name: string
+  description: string
+  note?: string
+  alt?: string
+  githubUrl?: string
+  repoLangCount?: number
+  subjects?: Array<string>
+  hideStars?: boolean
+}
+
+const ProductCard: React.FC<IProps> = ({
   url,
   background,
   image,
@@ -199,11 +219,13 @@ const ProductCard = ({
             </SubjectPill>
           ))}
         {hasRepoData &&
-          data.repository.languages.nodes.map(({ name }, idx) => (
-            <SubjectPill key={idx} subject={name}>
-              {name.toUpperCase()}
-            </SubjectPill>
-          ))}
+          data.repository.languages.nodes.map(
+            ({ name }: { name: string }, idx: number) => (
+              <SubjectPill key={idx} subject={name}>
+                {name.toUpperCase()}
+              </SubjectPill>
+            )
+          )}
       </SubjectContainer>
       <StyledButtonLink to={url}>Open {name}</StyledButtonLink>
     </Card>

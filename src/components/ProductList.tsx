@@ -72,7 +72,21 @@ const StyledButton = styled(ButtonLink)`
   }
 `
 
-const ProductList = ({ content, category }) => (
+export interface Content {
+  title: string
+  description: string
+  link?: string
+  image?: any
+  alt: string
+  id?: string
+}
+
+export interface IProps {
+  content: Array<Content>
+  category: string
+}
+
+const ProductList: React.FC<IProps> = ({ content, category }) => (
   <Product>
     <CategoryTitle>{category}</CategoryTitle>
     {content.map(({ title, description, link, image, alt, id }, idx) => (

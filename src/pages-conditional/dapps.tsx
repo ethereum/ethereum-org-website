@@ -963,6 +963,7 @@ const DappsPage = ({
       ),
       link: "https://async.art/",
       image: getImage(data.asyncart),
+      alt: translateMessageId("page-dapps-async-logo-alt", intl),
     },
   ]
 

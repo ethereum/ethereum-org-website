@@ -3,8 +3,15 @@ import { shuffle } from "lodash"
 
 import Link from "./Link"
 import Translation from "./Translation"
+import { TranslationKey } from "../utils/translations"
 
-const appList = [
+interface App {
+  name: string
+  url: string
+  description: TranslationKey
+}
+
+const appList: Array<App> = [
   {
     name: "Gitcoin",
     url: "https://gitcoin.co",
@@ -42,8 +49,10 @@ const appList = [
   },
 ]
 
-const RandomAppList = () => {
-  const [randomAppList, setRandomAppList] = useState([])
+export interface IProps {}
+
+const RandomAppList: React.FC<IProps> = () => {
+  const [randomAppList, setRandomAppList] = useState<Array<App>>([])
 
   useEffect(() => {
     const list = shuffle(appList)

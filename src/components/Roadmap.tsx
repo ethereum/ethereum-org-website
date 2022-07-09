@@ -3,7 +3,7 @@ import { useIntl } from "gatsby-plugin-intl"
 import styled from "styled-components"
 import axios from "axios"
 
-import Translation from "../components/Translation"
+import Translation from "./Translation"
 import Link from "./Link"
 import { FakeLinkExternal, CardItem as Item } from "./SharedStyledComponents"
 
@@ -23,7 +23,27 @@ const ErrorMsg = styled.div`
   color: ${(props) => props.theme.colors.fail};
 `
 
-const IssueSection = ({ issues }) => {
+export interface Label {
+  name: string
+}
+
+export interface Issue {
+  html_url?: string
+  title: string
+  errorMsg?: string
+  labels: Array<Label>
+  state?: string
+  user?: {
+    login: string
+  }
+  pull_request?: string
+}
+
+export interface IPropsIssueSection {
+  issues: Array<Issue>
+}
+
+const IssueSection: React.FC<IPropsIssueSection> = ({ issues }) => {
   if (!issues) {
     return null
   }
@@ -45,31 +65,34 @@ const IssueSection = ({ issues }) => {
   )
 }
 
-const Roadmap = () => {
+export interface IProps {}
+
+const Roadmap: React.FC<IProps> = () => {
   const intl = useIntl()
-  const issue = {
+  const issue: Issue = {
     title: translateMessageId("loading", intl),
+    labels: [],
   }
-  const blankIssues = Array(6).fill(issue)
-  const [issues, setIssues] = useState({
+  const blankIssues: Array<Issue> = Array(6).fill(issue)
+  const [issues, setIssues] = useState<{ [status: string]: Array<Issue> }>({
     inProgress: blankIssues,
     planned: blankIssues,
     implemented: blankIssues,
   })
 
   // Checks if any of the label objects in the array of labels associated with an issue have the spam label
-  const issueIsSpam = ({ labels }) =>
-    labels.some((label) => label.name === "Type: Spam")
+  const issueIsSpam = (issue: Issue) =>
+    issue.labels.some((label) => label.name === "Type: Spam")
 
-  const issueIsAbandoned = ({ labels }) =>
-    labels.some((label) => label.name === "Status: Abandoned")
+  const issueIsAbandoned = (issue: Issue) =>
+    issue.labels.some((label) => label.name === "Status: Abandoned")
 
   // TODO update to pull PRs & issues separately
   useEffect(() => {
     axios
       .get(`${GATSBY_FUNCTIONS_PATH}/roadmap`)
       .then((response) => {
-        let issues = []
+        let issues: Array<Issue> = []
         if (response.data && response.data.data) {
           issues = response.data.data
           const planned = issues
@@ -104,6 +127,7 @@ const Roadmap = () => {
             .filter(
               (issue) =>
                 issue.state === "closed" &&
+                !!issue.user &&
                 "allcontributors[bot]" !== issue.user.login &&
                 !!issue.pull_request &&
                 !issueIsSpam(issue) &&
@@ -119,11 +143,12 @@ const Roadmap = () => {
       })
       .catch((error) => {
         console.error(error)
-        const errorIssue = {
+        const errorIssue: Issue = {
           title: translateMessageId("loading-error", intl),
           errorMsg: translateMessageId("refresh", intl),
+          labels: [],
         }
-        const errorIssues = Array(3).fill(errorIssue)
+        const errorIssues: Array<Issue> = Array(3).fill(errorIssue)
         setIssues({
           planned: errorIssues,
           inProgress: errorIssues,
