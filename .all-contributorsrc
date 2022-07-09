@@ -8021,6 +8021,43 @@
         "doc",
         "ideas"
       ]
+    },
+    {
+      "login": "vincentweisser",
+      "name": "Vincent Weisser",
+      "avatar_url": "https://avatars.githubusercontent.com/u/32839303?v=4",
+      "profile": "http://vincentweisser.com",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "koogawa",
+      "name": "Kosuke Ogawa",
+      "avatar_url": "https://avatars.githubusercontent.com/u/893643?v=4",
+      "profile": "http://www.koogawa.com",
+      "contributions": [
+        "doc",
+        "bug"
+      ]
+    },
+    {
+      "login": "Feerol",
+      "name": "Fatih Eren Erol",
+      "avatar_url": "https://avatars.githubusercontent.com/u/47645405?v=4",
+      "profile": "https://github.com/Feerol",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "olalonde",
+      "name": "Oli Lalonde",
+      "avatar_url": "https://avatars.githubusercontent.com/u/416585?v=4",
+      "profile": "https://syskall.com",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
