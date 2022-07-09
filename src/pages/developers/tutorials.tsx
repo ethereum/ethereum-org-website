@@ -1,9 +1,5 @@
 import React, { DetailedHTMLProps, HTMLAttributes, useState } from "react"
-import styled, {
-  DefaultTheme,
-  ThemedStyledFunction,
-  ThemedStyledProps,
-} from "styled-components"
+import styled from "styled-components"
 import { graphql, PageProps } from "gatsby"
 import { IntlShape, useIntl } from "gatsby-plugin-intl"
 
@@ -219,7 +215,7 @@ const published = (locale: string, published: string) => {
   ) : null
 }
 
-export interface IForeignTutorial {
+interface IForeignTutorial {
   url: string
   title: string
   description: string
@@ -232,7 +228,7 @@ export interface IForeignTutorial {
   publishDate: string
 }
 
-export interface ITutorial {
+interface ITutorial {
   to?: string | null
   title?: string | null
   description?: string | null
@@ -245,7 +241,7 @@ export interface ITutorial {
   isExternal?: boolean | null
 }
 
-export interface ITutorialsState {
+interface ITutorialsState {
   activeTagNames: Array<string>
   filteredTutorials: Array<ITutorial>
 }

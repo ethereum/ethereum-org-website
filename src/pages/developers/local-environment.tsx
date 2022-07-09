@@ -272,7 +272,7 @@ const H2 = styled.h2`
 //     },
 //   ]
 
-export interface IFramework {
+interface IFramework {
   id: string
   url: string
   githubUrl: string

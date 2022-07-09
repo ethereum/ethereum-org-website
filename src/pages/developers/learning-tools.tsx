@@ -78,7 +78,7 @@ const StyledCardGrid = styled(CardGrid)`
   margin-bottom: 2rem;
 `
 
-export interface ILearningTool {
+interface ILearningTool {
   name: string
   description: TranslationKey
   url: string

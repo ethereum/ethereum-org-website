@@ -198,7 +198,7 @@ const StyledCallout = styled(Callout)`
   }
 `
 
-export interface IDevelopersPath {
+interface IDevelopersPath {
   emoji: string
   title: JSX.Element
   description: JSX.Element
