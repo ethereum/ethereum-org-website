@@ -61,7 +61,7 @@ Estas bibliotecas eliminan en gran parte la complejidad de interactuar directame
 
 - [quiknode.io](https://quiknode.io)
 
-**Herramientas de Python: \*\***_Variedad de bibliotecas para interactuar con Ethereum a través de Python._\*\*
+**Herramientas de Python:** **_Variedad de bibliotecas para interactuar con Ethereum a través de Python._**
 
 - [py.ethereum.org](http://python.ethereum.org/)
 - [GitHub de web3.py](https://github.com/ethereum/web3.py)

@@ -172,9 +172,10 @@ const DocsPage = ({
 }: PageProps<Queries.DocsPageQuery, Context>) => {
   const { isZenMode } = useContext(ZenModeContext)
 
-  if (!siteData || !mdx?.frontmatter) {
+  if (!siteData || !mdx?.frontmatter)
     throw new Error("Docs page template query does not return expected values")
-  }
+  if (!mdx?.frontmatter?.title)
+    throw new Error("Required `title` property missing for docs template")
 
   const isRightToLeft = isLangRightToLeft(mdx.frontmatter.lang as Lang)
 
@@ -228,7 +229,7 @@ const DocsPage = ({
               <Translation id="back-to-top" /> ↑
             </a>
           </BackToTop>
-          <FeedbackCard />
+          <FeedbackCard isArticle />
           <DocsNav relativePath={relativePath}></DocsNav>
         </Content>
         {mdx.frontmatter.sidebar && tocItems && (

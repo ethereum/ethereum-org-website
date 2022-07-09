@@ -49,12 +49,12 @@ Le fait de brûler les frais de base empêche les mineurs de les manipuler de di
 
 Le Wei est la plus petite quantité possible d'éther, et par conséquent, de nombreuses implémentations techniques, comme le [livre jaune d'Ethereum](https://ethereum.github.io/yellowpaper/paper.pdf), baseront tous leurs calculs sur le Wei.
 
-Le Gwei, abrégé de giga-wei, est souvent utilisé pour décrire les frais de carburant sur Ethereum.
+Le Gwei, abrégé de giga-wei, est souvent utilisé pour décrire les frais de gaz sur Ethereum.
 
-| Dénomination | Valeur en ether  | Usage commun                            |
-| ------------ | ---------------- | --------------------------------------- |
-| Wei          | 10<sup>-18</sup> | Implémentations techniques              |
-| Gwei         | 10<sup>-9</sup>  | Frais de carburant lisibles par l'homme |
+| Dénomination | Valeur en ether  | Usage commun                      |
+| ------------ | ---------------- | --------------------------------- |
+| Wei          | 10<sup>-18</sup> | Implémentations techniques        |
+| Gwei         | 10<sup>-9</sup>  | Frais de gaz lisibles par l'homme |
 
 ## Transférer de l'ether {#transferring-ether}
 

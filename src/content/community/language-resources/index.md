@@ -60,7 +60,7 @@ If you are bilingual and want to help us reach more people, you can also get inv
 
 **For developers**
 
-- [DappLearning](https://github.com/Dapp-Learning-DAO/Dapp-Learning) - a learning group to study mainstream dApp projects and share thoughts and comments every week
+- [DappLearning](https://github.com/Dapp-Learning-DAO/Dapp-Learning) - a learning group to study mainstream dapp projects and share thoughts and comments every week
 - [LearnBlockchain](https://learnblockchain.cn/) - a community for devs, sharing information about blockchain technology
 
 **For cryptography researchers**
@@ -95,7 +95,7 @@ If you are bilingual and want to help us reach more people, you can also get inv
 - [Ethereum Italia Podcast](https://www.ethereum-italia.it/podcast/) - Ethereum podcast in Italian
 - [Microsoft Learn (Solidity)](https://docs.microsoft.com/it-it/learn/modules/blockchain-learning-solidity/) - learn how to use Solidity
 - [Microsoft Learn (Smart contracts)](https://docs.microsoft.com/it-it/learn/modules/blockchain-solidity-ethereum-smart-contracts/) - learn about writing smart contracts using Solidity
-- [Microsoft Learn (dApps)](https://docs.microsoft.com/it-it/learn/modules/blockchain-create-ui-decentralized-apps/) - create a user interface with decentralized applications
+- [Microsoft Learn (dapps)](https://docs.microsoft.com/it-it/learn/modules/blockchain-create-ui-decentralized-apps/) - create a user interface with decentralized applications
 
 ### Spanish {#es}
 
@@ -114,7 +114,7 @@ If you are bilingual and want to help us reach more people, you can also get inv
 
 ### Vietnamese {#vi}
 
-- [Tino Group](https://wiki.tino.org/ethereum-la-gi/) - overview of Ethereum, dApps, wallets and FAQs
+- [Tino Group](https://wiki.tino.org/ethereum-la-gi/) - overview of Ethereum, dapps, wallets and FAQs
 - [Tap Chi Bitcoin](https://tapchibitcoin.io/tap-chi/tin-tuc-ethereum-eth) - web platform with subpages for Ethereum news and education
 - [Coin68](https://coin68.com/ethereum-tieu-diem/) - cryptocurrency portal with Ethereum news and educational content
 

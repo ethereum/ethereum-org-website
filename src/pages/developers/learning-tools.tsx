@@ -18,6 +18,7 @@ import {
   Page,
 } from "../../components/SharedStyledComponents"
 import { IData } from "."
+import FeedbackCard from "../../components/FeedbackCard"
 
 const StyledPage = styled(Page)`
   margin-top: 4rem;
@@ -327,6 +328,9 @@ const LearningToolsPage: React.FC<IProps> = ({ data }) => {
             </ButtonLink>
           </div>
         </CalloutBanner>
+      </Content>
+      <Content>
+        <FeedbackCard />
       </Content>
     </StyledPage>
   )

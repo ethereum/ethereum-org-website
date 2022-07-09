@@ -1,5 +1,4 @@
 import React from "react"
-import PropTypes from "prop-types"
 import styled from "styled-components"
 import { IconContext } from "react-icons"
 import {
@@ -14,7 +13,11 @@ import {
 import {
   MdAdd,
   MdBrightness2,
+  MdOutlineCancel,
+  MdCircle,
   MdClose,
+  MdDone,
+  MdExpandLess,
   MdExpandMore,
   MdArrowForward,
   MdInfoOutline,
@@ -24,8 +27,15 @@ import {
   MdWbSunny,
   MdFlip,
   MdLiveHelp,
+  MdKeyboardArrowLeft,
+  MdKeyboardArrowRight,
 } from "react-icons/md"
-import { BsQuestionSquareFill, BsToggleOff, BsToggleOn } from "react-icons/bs"
+import {
+  BsArrowCounterclockwise,
+  BsQuestionSquareFill,
+  BsToggleOff,
+  BsToggleOn,
+} from "react-icons/bs"
 import { IoCodeOutline, IoCodeDownload } from "react-icons/io5"
 
 const socialColors = {
@@ -38,7 +48,7 @@ const socialColors = {
 
 export interface IProps {
   name?: string
-  color?: string
+  color?: string | boolean
   size?: string
   className?: string
 }
@@ -51,17 +61,23 @@ const Icon: React.FC<IProps> = ({
 }) => (
   <IconContext.Provider value={{ size: size, className }}>
     {name === "add" && <MdAdd />}
+    {name === "chevronUp" && <MdExpandLess />}
     {name === "chevronDown" && <MdExpandMore />}
+    {name === "circle" && <MdCircle />}
     {name === "arrowRight" && <MdArrowForward />}
+    {name === "arrowRightIos" && <MdKeyboardArrowRight />}
+    {name === "arrowLeftIos" && <MdKeyboardArrowLeft />}
+    {name === "cancel" && <MdOutlineCancel />}
     {name === "close" && <MdClose />}
     {name === "darkTheme" && <MdBrightness2 />}
     {name === "github" && <FaGithub />}
     {name === "info" && <MdInfoOutline />}
     {name === "language" && <MdLanguage />}
     {name === "lightTheme" && <MdWbSunny />}
-    {name === "zenModeOff" && <BsToggleOff />}
-    {name === "zenModeOn" && <BsToggleOn />}
+    {name === "toggleOff" && <BsToggleOff />}
+    {name === "toggleOn" && <BsToggleOn />}
     {name === "menu" && <MdMenu />}
+    {name === "check" && <MdDone />}
     {name === "twitter" && (
       <FaTwitter color={color ? socialColors.twitter : undefined} />
     )}
@@ -84,6 +100,7 @@ const Icon: React.FC<IProps> = ({
       <FaStackExchange color={color ? socialColors.stackExchange : undefined} />
     )}
     {name === "webpage" && <FaGlobe />}
+    {name === "arrowCounterClockwise" && <BsArrowCounterclockwise />}
   </IconContext.Provider>
 )
 

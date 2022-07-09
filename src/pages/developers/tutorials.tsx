@@ -27,6 +27,7 @@ import {
 import { getLocaleTimestamp, INVALID_DATETIME } from "../../utils/time"
 
 import foreignTutorials from "../../data/externalTutorials.json"
+import FeedbackCard from "../../components/FeedbackCard"
 
 export interface ITitleProps {
   isExternal: boolean
@@ -549,6 +550,7 @@ const TutorialsPage: React.FC<IProps> = ({ data, pageContext }) => {
           )
         })}
       </TutorialContainer>
+      <FeedbackCard />
     </StyledPage>
   )
 }

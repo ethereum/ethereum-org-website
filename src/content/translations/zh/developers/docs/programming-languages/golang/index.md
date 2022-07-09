@@ -8,13 +8,13 @@ incomplete: true
 
 <div class="featured">学习如何使用基于 Go 的项目和工具参与以太坊的开发</div>
 
-使用以太坊创建去中心化应用（即"dapps"）。 这些去中心化应用程序可被信任，意味着一旦被部署到以太坊上，它们将总是按既定程序运行。 它们是去中心化的，意味着它们运行在一个点对点网络中并且不存在单点故障。 不存在单一实体或者个人可以控制它们，它们也几乎不可能被审查。 它们可以通过控制数字资产来创建新的应用。
+使用以太坊创建去中心化应用（即"dapps"）。 这些 dapp 可以是值得信赖的，也即一旦被部署到以太坊上，它们将总是按程序运行。 它们是去中心化的，意味着它们运行在一个点对点网络中并且不存在单点故障。 不存在单一实体或者个人可以控制它们，它们也几乎不可能被审查。 它们可以通过控制数字资产来创建新的应用。
 
 ## 智能合约和 Solidity 语言入门 {#getting-started-with-smart-contracts-and-solidity}
 
 **迈出集成 Go 与以太坊的第一步**
 
-需要更基础的入门知识？ 请查看 [ethereum.org/learn](/learn/) 或者 [ethereum.org/developers](/developers/)。
+需要更基础的入门知识？ 请查看 [ethereum.org/learn](/learn/) 或 [ethereum.org/developers](/developers/)。
 
 - [区块链详解](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
 - [理解智能合约](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
@@ -66,7 +66,7 @@ incomplete: true
 - [Multi Geth](https://github.com/multi-geth/multi-geth) - _支持多种以太坊网络_
 - [Geth Light Client](https://github.com/zsfelfoldi/go-ethereum/wiki/Geth-Light-Client) - _轻量级以太坊子协议的 Geth 实现_
 
-想要获取更多的资源？ 请浏览 [ethereum.org/developers](/developers/)。
+正在寻找更多资源？ 请浏览 [ethereum.org/developers](/developers/)。
 
 ## Go 社区贡献者 {#go-community-contributors}
 

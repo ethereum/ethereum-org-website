@@ -27,5 +27,5 @@ JSON-RPC 是无状态、轻量级远程程序调用协议。 规范主要界定�
 ## 相关主题 {#related-topics}
 
 - [节点和客户端](/developers/docs/nodes-and-clients/)
-- [JavaScript API](/developers/docs/apis/javascript/)
+- [JavaScript 应用程序接口](/developers/docs/apis/javascript/)
 - [后端应用程序接口](/developers/docs/apis/backend/)

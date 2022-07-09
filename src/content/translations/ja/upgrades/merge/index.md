@@ -1,5 +1,5 @@
 ---
-title: マージ
+title: 統合
 description: マージについて - イーサリアムメインネットがビーコンチェーンと統合し、プルーフ・オブ・ステークシステムの実現
 lang: ja
 template: upgrade

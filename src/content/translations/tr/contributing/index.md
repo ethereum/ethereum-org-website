@@ -1,5 +1,5 @@
 ---
-title: Katkıda Bulunma
+title: Katkılar
 description: Ethereum.org'a katkıda bulunmanın farklı yolları hakkında bilgi edinin
 lang: tr
 sidebar: true
@@ -25,8 +25,8 @@ Ethereum.org web sitesi, daha geniş anlamda Ethereum gibi açık kaynaklı bir 
 - [Bir özellik isteyin](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.md&title=) _– Yeni bir özellik veya tasarım hakkında herhangi bir fikrinizi bize bildirin_
 - [Bir sözlük terimi ekleyin](/contributing/adding-glossary-terms) _– Ethereum [sözlüğünü](/glossary/) genişletmeye devam etmemize yardımcı olun_
 - [İçerik oluşturun/düzenleyin](/contributing/#how-to-update-content) _– Yeni sayfalar önerin veya zaten burada olanlar üzerinde değişiklikler yapın_
-- [Bir katman 2 ekleyin](/contributing/adding-layer-2s/) _- İlgili bir sayfaya bir katman 2 ekleyin_
-- [Bir stake etme ürünü veya hizmeti ekleyin](/contributing/adding-staking-products/) - _Tekli stake etme, havuzlu stake etme veya bir hizmet olarak stake etme_
+- [Bir katman 2 ekleyin](/contributing/adding-layer-2) _- İlgili bir sayfaya bir katman 2 ekleyin_
+- [Bir stake etme ürünü veya hizmeti ekleyin](/contributing/adding-staking-product/) - _Tekli stake etme, havuzlu stake etme veya bir hizmet olarak stake etme_
 
 _Herhangi bir sorunuz mu var?_ 🤔 [Discord sunucumuzdan](https://discord.gg/CetY6Y4) bize ulaşın
 
