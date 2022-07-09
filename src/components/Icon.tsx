@@ -27,6 +27,8 @@ import {
   MdWbSunny,
   MdFlip,
   MdLiveHelp,
+  MdKeyboardArrowLeft,
+  MdKeyboardArrowRight,
 } from "react-icons/md"
 import {
   BsArrowCounterclockwise,
@@ -63,6 +65,8 @@ const Icon: React.FC<IProps> = ({
     {name === "chevronDown" && <MdExpandMore />}
     {name === "circle" && <MdCircle />}
     {name === "arrowRight" && <MdArrowForward />}
+    {name === "arrowRightIos" && <MdKeyboardArrowRight />}
+    {name === "arrowLeftIos" && <MdKeyboardArrowLeft />}
     {name === "cancel" && <MdOutlineCancel />}
     {name === "close" && <MdClose />}
     {name === "darkTheme" && <MdBrightness2 />}
