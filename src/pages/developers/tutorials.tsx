@@ -241,7 +241,7 @@ export interface ITutorial {
   skill?: string | null
   timeToRead?: number | null
   published?: string | null
-  lang?: string | null
+  lang: string
   isExternal?: boolean | null
 }
 
