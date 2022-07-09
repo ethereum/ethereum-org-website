@@ -29,6 +29,7 @@ import { getLocaleTimestamp, INVALID_DATETIME } from "../../utils/time"
 import foreignTutorials from "../../data/externalTutorials.json"
 import FeedbackCard from "../../components/FeedbackCard"
 import { Context } from "../../types"
+import { Lang } from "../../utils/languages"
 
 const SubSlogan = styled.p`
   font-size: 1.25rem;
@@ -208,43 +209,14 @@ const ModalTitle = styled.h2`
   margin-bottom: 1rem;
 `
 
-const published = (locale, published) => {
-  const localeTimestamp = getLocaleTimestamp(locale, published)
+const published = (locale: string, published: string) => {
+  const localeTimestamp = getLocaleTimestamp(locale as Lang, published)
   return localeTimestamp !== INVALID_DATETIME ? (
     <span>
       <Emoji text=":calendar:" size={1} ml={`0.5em`} mr={`0.5em`} />{" "}
       {localeTimestamp}
     </span>
   ) : null
-}
-
-export interface IProps {
-  pageContext: {
-    language: string
-    intl: IntlShape
-  }
-  data: {
-    allTutorials: {
-      nodes: {
-        fields: {
-          slug: string
-          readingTime: {
-            minutes: number
-          }
-        }
-        frontmatter: {
-          title: string
-          description: string
-          author: string
-          tags: string[]
-          skill: string
-          published: string
-          lang: string
-        }
-      }[]
-      lang: string
-    }
-  }
 }
 
 export interface IForeignTutorial {
@@ -534,7 +506,8 @@ const TutorialsPage = ({
               <Author>
                 {/* TODO: Refactor each tutorial tag as a component */}
                 <Emoji text=":writing_hand:" size={1} mr={`0.5em`} />
-                {tutorial.author} •{published(intl.locale, tutorial.published)}
+                {tutorial.author} •
+                {published(intl.locale, tutorial.published ?? "")}
                 {tutorial.timeToRead && (
                   <>
                     {" "}
