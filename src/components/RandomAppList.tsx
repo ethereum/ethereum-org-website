@@ -5,7 +5,7 @@ import Link from "./Link"
 import Translation from "./Translation"
 import { TranslationKey } from "../utils/translations"
 
-export interface App {
+interface App {
   name: string
   url: string
   description: TranslationKey
@@ -49,7 +49,9 @@ const appList: Array<App> = [
   },
 ]
 
-const RandomAppList = () => {
+export interface IProps {}
+
+const RandomAppList: React.FC<IProps> = () => {
   const [randomAppList, setRandomAppList] = useState<Array<App>>([])
 
   useEffect(() => {

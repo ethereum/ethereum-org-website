@@ -49,6 +49,14 @@ const Span = styled.span`
   padding-left: 5px;
 `
 
+interface CountdownRendererProps {
+  days: number
+  hours: number
+  minutes: number
+  seconds: number
+  completed: boolean
+}
+
 export interface IProps {
   storageKey: string
 }
@@ -60,7 +68,7 @@ const ReleaseBanner: React.FC<IProps> = ({ storageKey }) => {
 
   useEffect(() => {
     setLoading(true)
-    const fetchBlockInfo = async () => {
+    const fetchBlockInfo = async (): Promise<void> => {
       try {
         const data: string = await getFreshData(
           `${GATSBY_FUNCTIONS_PATH}/etherscanBlock`
@@ -89,21 +97,13 @@ const ReleaseBanner: React.FC<IProps> = ({ storageKey }) => {
     setShow(false)
   }
 
-  interface RendererProps {
-    days: number
-    hours: number
-    minutes: number
-    seconds: number
-    completed: boolean
-  }
-
   const renderer = ({
     days,
     hours,
     minutes,
     seconds,
     completed,
-  }: RendererProps): React.ReactNode => {
+  }: CountdownRendererProps): React.ReactNode => {
     if (completed) {
       return (
         <StyledBannerNotification shouldShow={show}>

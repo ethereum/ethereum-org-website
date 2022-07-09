@@ -7,7 +7,32 @@ import Link from "./Link"
 import Translation from "./Translation"
 
 // Data
-import rollups from "../data/layer-2/layer-2.json"
+import _rollups from "../data/layer-2/layer-2.json"
+
+import { TranslationKey } from "../utils/translations"
+
+type RollupType = "optimistic" | "zk"
+
+interface Rollup {
+  name: string
+  website: string
+  developerDocs: string
+  l2beat: string
+  bridge: string
+  bridgeWallets: Array<string>
+  blockExplorer: string
+  ecosystemPortal: string
+  tokenLists: string
+  noteKey: TranslationKey
+  purpose: Array<string>
+  descriptionKey: string
+  imageKey: string
+  background: string
+}
+
+type Rollups = { [type in RollupType]: Array<Rollup> }
+
+const rollups = _rollups as Rollups
 
 // Styles
 const H4 = styled.h4`
@@ -26,7 +51,7 @@ const Content = styled.div`
 `
 
 export interface IProps {
-  rollupType: string
+  rollupType: RollupType
 }
 
 const RollupProductDevDoc: React.FC<IProps> = ({ rollupType }) => {

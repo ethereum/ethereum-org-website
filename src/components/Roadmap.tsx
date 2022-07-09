@@ -74,7 +74,7 @@ const Roadmap: React.FC<IProps> = () => {
     labels: [],
   }
   const blankIssues: Array<Issue> = Array(6).fill(issue)
-  const [issues, setIssues] = useState<{ [_: string]: Array<Issue> }>({
+  const [issues, setIssues] = useState<{ [status: string]: Array<Issue> }>({
     inProgress: blankIssues,
     planned: blankIssues,
     implemented: blankIssues,
