@@ -83,7 +83,6 @@ const Author = styled.p`
   text-transform: uppercase;
 `
 
-// Todo: Reformat this to not use type assertions (this is a workaround to avoid any and keep compiler happy)
 const Title = styled.p<{ isExternal?: boolean | null }>`
   color: ${(props) => props.theme.colors.text};
   font-weight: 600;
