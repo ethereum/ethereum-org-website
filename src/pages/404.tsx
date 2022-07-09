@@ -5,12 +5,13 @@ import Link from "../components/Link"
 import Translation from "../components/Translation"
 
 import { Page, Content } from "../components/SharedStyledComponents"
+import { PageProps } from "gatsby"
 
 const StyledPage = styled(Page)`
   margin-top: 4rem;
 `
 
-const NotFoundPage: React.FC = () => (
+const NotFoundPage = (props: PageProps) => (
   <StyledPage>
     <Content>
       <h1>
