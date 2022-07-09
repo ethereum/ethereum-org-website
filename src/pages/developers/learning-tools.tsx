@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react"
 import styled from "styled-components"
-import { graphql } from "gatsby"
+import { graphql, PageProps } from "gatsby"
 import { getImage } from "gatsby-plugin-image"
 import { useIntl } from "gatsby-plugin-intl"
 import { shuffle } from "lodash"
-
 import { translateMessageId, TranslationKey } from "../../utils/translations"
 import PageMetadata from "../../components/PageMetadata"
 import Translation from "../../components/Translation"
@@ -19,6 +18,7 @@ import {
 } from "../../components/SharedStyledComponents"
 import { IData } from "."
 import FeedbackCard from "../../components/FeedbackCard"
+import { Context } from "../../types"
 
 const StyledPage = styled(Page)`
   margin-top: 4rem;
@@ -93,7 +93,9 @@ export interface IProps {
   data: IData
 }
 
-const LearningToolsPage: React.FC<IProps> = ({ data }) => {
+const LearningToolsPage = ({
+  data,
+}: PageProps<Queries.DevelopersLearningToolsPageQuery, Context>) => {
   const intl = useIntl()
   const [randomizedSandboxes, setRandomizedSandboxes] = useState<
     ILearningTool[]
@@ -352,7 +354,7 @@ export const learningToolImage = graphql`
 `
 
 export const query = graphql`
-  {
+  query DevelopersLearningToolsPage {
     captureTheEther: file(
       relativePath: { eq: "dev-tools/capturetheether.png" }
     ) {

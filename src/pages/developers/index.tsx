@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import { graphql } from "gatsby"
+import { graphql, PageProps } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
 
 import { translateMessageId } from "../../utils/translations"
@@ -19,6 +19,8 @@ import {
   GrayContainer,
 } from "../../components/SharedStyledComponents"
 import FeedbackCard from "../../components/FeedbackCard"
+
+import type { Context } from "../types"
 
 const HeroContainer = styled.div`
   display: flex;
@@ -205,7 +207,7 @@ export interface IDevelopersPath {
   button: JSX.Element
 }
 
-const paths: IDevelopersPath[] = [
+const paths: Array<IDevelopersPath> = [
   {
     emoji: ":woman_student:",
     title: <Translation id="page-developers-learn" />,
@@ -265,7 +267,9 @@ export interface IProps {
   data: IData
 }
 
-const DevelopersPage: React.FC<IProps> = ({ data }) => {
+const DevelopersPage = ({
+  data,
+}: PageProps<Queries.DevelopersIndexPageQuery, Context>) => {
   const intl = useIntl()
 
   return (
@@ -586,7 +590,7 @@ const DevelopersPage: React.FC<IProps> = ({ data }) => {
 export default DevelopersPage
 
 export const query = graphql`
-  {
+  query DevelopersIndexPage {
     ednHero: file(relativePath: { eq: "enterprise-eth.png" }) {
       childImageSharp {
         gatsbyImageData(

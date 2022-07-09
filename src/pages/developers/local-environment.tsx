@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react"
 import styled from "styled-components"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import { graphql } from "gatsby"
+import { graphql, PageProps } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
 import { shuffle } from "lodash"
 
@@ -25,6 +25,7 @@ import {
 import { getImageData } from "gatsby-plugin-image"
 import { IData } from "."
 import FeedbackCard from "../../components/FeedbackCard"
+import { Context } from "../../types"
 
 const StyledPage = styled(Page)`
   margin-top: 4rem;
@@ -284,7 +285,7 @@ export interface IFramework {
   image?: string
 }
 
-const frameworksList: IFramework[] = [
+const frameworksList: Array<IFramework> = [
   {
     id: "waffle",
     url: "https://getwaffle.io/",
@@ -381,9 +382,11 @@ export interface IProps {
   data: IData
 }
 
-const ChooseStackPage: React.FC<IProps> = ({ data }) => {
+const ChooseStackPage = ({
+  data,
+}: PageProps<Queries.DevelopersLocalEnvironmentPageQuery, Context>) => {
   const intl = useIntl()
-  const [frameworks, setFrameworks] = useState<IFramework[]>([])
+  const [frameworks, setFrameworks] = useState<Array<IFramework>>([])
 
   useEffect(() => {
     const list = shuffle(
@@ -620,7 +623,7 @@ export const devtoolImage = graphql`
 `
 
 export const query = graphql`
-  {
+  query DevelopersLocalEnvironmentPage {
     hero: file(relativePath: { eq: "developers-eth-blocks.png" }) {
       childImageSharp {
         gatsbyImageData(

@@ -4,7 +4,7 @@ import styled, {
   ThemedStyledFunction,
   ThemedStyledProps,
 } from "styled-components"
-import { graphql } from "gatsby"
+import { graphql, PageProps } from "gatsby"
 import { IntlShape, useIntl } from "gatsby-plugin-intl"
 
 import Translation from "../../components/Translation"
@@ -28,10 +28,7 @@ import { getLocaleTimestamp, INVALID_DATETIME } from "../../utils/time"
 
 import foreignTutorials from "../../data/externalTutorials.json"
 import FeedbackCard from "../../components/FeedbackCard"
-
-export interface ITitleProps {
-  isExternal: boolean
-}
+import { Context } from "../../types"
 
 const SubSlogan = styled.p`
   font-size: 1.25rem;
@@ -90,7 +87,7 @@ const Author = styled.p`
 `
 
 // Todo: Reformat this to not use type assertions (this is a workaround to avoid any and keep compiler happy)
-const Title = styled.p`
+const Title = styled.p<{ isExternal?: boolean | null }>`
   color: ${(props) => props.theme.colors.text};
   font-weight: 600;
   font-size: 1.5rem;
@@ -99,7 +96,7 @@ const Title = styled.p`
   &:after {
     margin-left: 0.125em;
     margin-right: 0.3em;
-    display: ${(props: ITitleProps) => (props.isExternal ? "inline" : "none")};
+    display: ${(props) => (props.isExternal ? "inline" : "none")};
     content: "↗";
     transition: all 0.1s ease-in-out;
     font-style: normal;
@@ -264,40 +261,50 @@ export interface IForeignTutorial {
 }
 
 export interface ITutorial {
-  to: string
-  title: string
-  description: string
-  author: string
-  tags: string[]
-  skill: string
-  timeToRead?: number
-  published: string
-  lang: string
-  isExternal: boolean
+  to?: string | null
+  title?: string | null
+  description?: string | null
+  author?: string | null
+  tags: Array<string> | null
+  skill?: string | null
+  timeToRead?: number | null
+  published?: string | null
+  lang?: string | null
+  isExternal?: boolean | null
 }
 
 export interface ITutorialsState {
-  activeTagNames: string[]
-  filteredTutorials: ITutorial[]
+  activeTagNames: Array<string>
+  filteredTutorials: Array<ITutorial>
 }
 
-const TutorialsPage: React.FC<IProps> = ({ data, pageContext }) => {
+const TutorialsPage = ({
+  data,
+  pageContext,
+}: PageProps<Queries.DevelopersTutorialsPageQuery, Context>) => {
   const intl = useIntl()
   // Filter tutorials by language and map to object
   const internalTutorials = data.allTutorials.nodes.map<ITutorial>(
     (tutorial) => ({
       to:
-        tutorial.fields.slug.substr(0, 3) === "/en"
+        tutorial?.fields?.slug?.substr(0, 3) === "/en"
           ? tutorial.fields.slug.substr(3)
-          : tutorial.fields.slug,
-      title: tutorial.frontmatter.title,
-      description: tutorial.frontmatter.description,
-      author: tutorial.frontmatter.author,
-      tags: tutorial.frontmatter.tags.map((tag) => tag.toLowerCase().trim()),
-      skill: tutorial.frontmatter.skill,
-      timeToRead: Math.round(tutorial.fields.readingTime.minutes),
-      published: tutorial.frontmatter.published,
-      lang: tutorial.frontmatter.lang || "en",
+          : tutorial.fields?.slug,
+      title: tutorial?.frontmatter?.title,
+      description: tutorial?.frontmatter?.description,
+      author: tutorial?.frontmatter?.author,
+      tags:
+        tutorial?.frontmatter?.tags && tutorial.frontmatter.tags.length > 0
+          ? tutorial.frontmatter.tags.map((tag) =>
+              tag ? tag.toLowerCase().trim() : ""
+            )
+          : null,
+      skill: tutorial?.frontmatter?.skill,
+      timeToRead: tutorial?.fields?.readingTime?.minutes
+        ? Math.round(tutorial?.fields?.readingTime?.minutes)
+        : null,
+      published: tutorial?.frontmatter?.published,
+      lang: tutorial?.frontmatter?.lang || "en",
       isExternal: false,
     })
   )
@@ -317,7 +324,7 @@ const TutorialsPage: React.FC<IProps> = ({ data, pageContext }) => {
     })
   )
 
-  const allTutorials: ITutorial[] = []
+  const allTutorials: Array<ITutorial> = []
 
   allTutorials.push(...externalTutorials, ...internalTutorials)
 
@@ -332,13 +339,19 @@ const TutorialsPage: React.FC<IProps> = ({ data, pageContext }) => {
         : tutorial.lang === "en"
     )
     .sort((a, b) => {
-      return new Date(b.published).getTime() - new Date(a.published).getTime()
+      if (a.published && b.published) {
+        return new Date(b.published).getTime() - new Date(a.published).getTime()
+      }
+      // Dont order if no published is present
+      return 0
     })
 
   // Tally all subject tag counts
   const tagsConcatenated: string[] = []
   for (const tutorial of filteredTutorials) {
-    tagsConcatenated.push(...tutorial.tags)
+    if (tutorial.tags) {
+      tagsConcatenated.push(...tutorial.tags)
+    }
   }
 
   const allTags = tagsConcatenated.map((tag) => ({ name: tag, totalCount: 1 }))
@@ -382,7 +395,7 @@ const TutorialsPage: React.FC<IProps> = ({ data, pageContext }) => {
     if (activeTagNames.length > 0) {
       filteredTutorials = filteredTutorials.filter((tutorial) => {
         for (const tag of activeTagNames) {
-          if (!tutorial.tags.includes(tag)) {
+          if (!tutorial.tags?.includes(tag)) {
             return false
           }
         }
@@ -509,7 +522,11 @@ const TutorialsPage: React.FC<IProps> = ({ data, pageContext }) => {
         {state.filteredTutorials.map((tutorial) => {
           return (
             // Todo: Generate a unique id for each tutorial, to property (youtube url) is duplicated in some tutorials
-            <TutorialCard key={tutorial.to} to={tutorial.to} hideArrow>
+            <TutorialCard
+              key={tutorial.to}
+              to={tutorial.to ?? undefined}
+              hideArrow
+            >
               <TitleContainer>
                 <Title isExternal={tutorial.isExternal}>{tutorial.title}</Title>
                 <Pill isSecondary={true}>{tutorial.skill}</Pill>
@@ -544,7 +561,7 @@ const TutorialsPage: React.FC<IProps> = ({ data, pageContext }) => {
               </Author>
               <About>{tutorial.description}</About>
               <PillContainer>
-                <TutorialTags tags={tutorial.tags} />
+                <TutorialTags tags={tutorial.tags ?? []} />
               </PillContainer>
             </TutorialCard>
           )
@@ -557,7 +574,7 @@ const TutorialsPage: React.FC<IProps> = ({ data, pageContext }) => {
 export default TutorialsPage
 
 export const query = graphql`
-  query {
+  query DevelopersTutorialsPage {
     allTutorials: allMdx(
       filter: { slug: { regex: "/tutorials/" } }
       sort: { fields: frontmatter___published, order: DESC }
