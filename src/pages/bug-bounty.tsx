@@ -237,19 +237,13 @@ interface INode {
   readonly score: number
 }
 
-export interface IBountyHunter {
-  nodes: Array<INode>
-}
-
-// Defaults all propertys of IData to be of type IGatsbyChildImageSharp, except those explicitly overrided.
-
-export interface IClient {
+interface IClient {
   title: string
   link: string
   image: any
 }
 
-export interface ISpec {
+interface ISpec {
   title: JSX.Element
   link: string
 }
