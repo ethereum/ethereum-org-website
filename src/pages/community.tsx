@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import { graphql } from "gatsby"
+import { graphql, PageProps } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
 
 import ActionCard from "../components/ActionCard"
@@ -21,7 +21,7 @@ import {
   Page,
 } from "../components/SharedStyledComponents"
 import { translateMessageId } from "../utils/translations"
-import { IGatsbyChildImageSharp } from "./assets"
+import { Context } from "../types"
 
 const ButtonRow = styled.div`
   display: flex;
@@ -307,11 +307,7 @@ const StyledCallout = styled(Callout)`
   min-height: 100%;
 `
 
-export interface IProps {
-  data: Record<string, IGatsbyChildImageSharp>
-}
-
-export interface ICard {
+interface ICard {
   image: any // Gatsby image type
   title: string
   description: string
@@ -319,13 +315,15 @@ export interface ICard {
   to: string
 }
 
-export interface IGetInvolvedCard {
+interface IGetInvolvedCard {
   emoji: string
   title: string
   description: string
 }
 
-const CommunityPage: React.FC<IProps> = ({ data }) => {
+const CommunityPage = ({
+  data,
+}: PageProps<Queries.CommunityPageQuery, Context>) => {
   const intl = useIntl()
 
   const heroContent = {
@@ -336,7 +334,7 @@ const CommunityPage: React.FC<IProps> = ({ data }) => {
     alt: translateMessageId("page-community-hero-alt", intl),
   }
 
-  const cards: ICard[] = [
+  const cards: Array<ICard> = [
     {
       image: getImage(data.docking),
       title: translateMessageId("page-community-card-1-title", intl),
@@ -379,7 +377,7 @@ const CommunityPage: React.FC<IProps> = ({ data }) => {
     },
   ]
 
-  const whyGetInvolvedCards: IGetInvolvedCard[] = [
+  const whyGetInvolvedCards: Array<IGetInvolvedCard> = [
     {
       emoji: ":mage:",
       title: translateMessageId(
@@ -607,7 +605,7 @@ const CommunityPage: React.FC<IProps> = ({ data }) => {
 export default CommunityPage
 
 export const query = graphql`
-  query {
+  query CommunityPage {
     enterprise: file(relativePath: { eq: "enterprise-eth.png" }) {
       childImageSharp {
         gatsbyImageData(
