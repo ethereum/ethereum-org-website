@@ -69,8 +69,8 @@ const H2 = styled.h2`
 export interface IProps {
   image: string
   maxImageWidth?: number
-  titleKey: string
-  descriptionKey: string
+  titleKey: TranslationKey
+  descriptionKey: TranslationKey
   alt: string
   className?: string
   id?: string
@@ -95,10 +95,10 @@ const CalloutBanner: React.FC<IProps> = ({
     />
     <Content>
       <H2>
-        <Translation id={titleKey as TranslationKey} />
+        <Translation id={titleKey} />
       </H2>
       <Description>
-        <Translation id={descriptionKey as TranslationKey} />
+        <Translation id={descriptionKey} />
       </Description>
       {children}
     </Content>

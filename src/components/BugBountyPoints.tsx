@@ -85,9 +85,14 @@ export const TokenLogo = graphql`
 const USD_PER_POINT = 2
 
 interface State {
-  currentETHPriceUSD?: number
-  currentDAIPriceUSD?: number
+  currentETHPriceUSD: number
+  currentDAIPriceUSD: number
   hasError: boolean
+}
+
+type GetPriceResponse = {
+  ethereum: { usd: number }
+  dai: { usd: number }
 }
 
 export interface IProps {}
@@ -103,7 +108,7 @@ const BugBountyPoints: React.FC<IProps> = () => {
 
   useEffect(() => {
     axios
-      .get(
+      .get<GetPriceResponse>(
         "https://api.coingecko.com/api/v3/simple/price?ids=ethereum%2Cdai&vs_currencies=usd"
       )
       .then((response) => {
@@ -120,6 +125,7 @@ const BugBountyPoints: React.FC<IProps> = () => {
       .catch((error) => {
         console.error(error)
         setState({
+          ...state,
           hasError: true,
         })
       })

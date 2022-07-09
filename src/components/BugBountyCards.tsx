@@ -110,18 +110,18 @@ const Text = styled.div`
 `
 
 export interface BugBountyCardInfo {
-  lowLabelTranslationId?: string
-  mediumLabelTranslationId?: string
-  highLabelTranslationId?: string
-  criticalLabelTranslationId?: string
-  h2TranslationId: string
-  descriptionTranslationId: string
-  subDescriptionTranslationId: string
-  subHeader1TranslationId: string
-  severityList: Array<string>
-  subHeader2TranslationId: string
-  textTranslationId: string
-  styledButtonTranslationId: string
+  lowLabelTranslationId?: TranslationKey
+  mediumLabelTranslationId?: TranslationKey
+  highLabelTranslationId?: TranslationKey
+  criticalLabelTranslationId?: TranslationKey
+  h2TranslationId: TranslationKey
+  descriptionTranslationId: TranslationKey
+  subDescriptionTranslationId: TranslationKey
+  subHeader1TranslationId: TranslationKey
+  severityList: Array<TranslationKey>
+  subHeader2TranslationId: TranslationKey
+  textTranslationId: TranslationKey
+  styledButtonTranslationId: TranslationKey
 }
 
 const bugBountyCardsInfo: Array<BugBountyCardInfo> = [
@@ -189,59 +189,55 @@ const BugBountyCards: React.FC<IProps> = () => (
       <Card key={`bug-bounty-card-${idx}`}>
         {card.lowLabelTranslationId && (
           <LowLabel>
-            <Translation id={card.lowLabelTranslationId as TranslationKey} />
+            <Translation id={card.lowLabelTranslationId} />
           </LowLabel>
         )}
         {card.mediumLabelTranslationId && (
           <MediumLabel>
-            <Translation id={card.mediumLabelTranslationId as TranslationKey} />
+            <Translation id={card.mediumLabelTranslationId} />
           </MediumLabel>
         )}
         {card.highLabelTranslationId && (
           <HighLabel>
-            <Translation id={card.highLabelTranslationId as TranslationKey} />
+            <Translation id={card.highLabelTranslationId} />
           </HighLabel>
         )}
         {card.criticalLabelTranslationId && (
           <CriticalLabel>
-            <Translation
-              id={card.criticalLabelTranslationId as TranslationKey}
-            />
+            <Translation id={card.criticalLabelTranslationId} />
           </CriticalLabel>
         )}
         <H2>
-          <Translation id={card.h2TranslationId as TranslationKey} />
+          <Translation id={card.h2TranslationId} />
         </H2>
         <Description>
-          <Translation id={card.descriptionTranslationId as TranslationKey} />
+          <Translation id={card.descriptionTranslationId} />
         </Description>
         <SubHeader>
-          <Translation
-            id={card.subDescriptionTranslationId as TranslationKey}
-          />
+          <Translation id={card.subDescriptionTranslationId} />
         </SubHeader>
         <Divider />
         <SubHeader>
-          <Translation id={card.subHeader1TranslationId as TranslationKey} />
+          <Translation id={card.subHeader1TranslationId} />
         </SubHeader>
         <Text>
           <ul>
             {card.severityList.map((listItemId) => (
               <li key={`${listItemId}`}>
-                <Translation id={listItemId as TranslationKey} />
+                <Translation id={listItemId} />
               </li>
             ))}
           </ul>
         </Text>
         <Divider />
         <SubHeader>
-          <Translation id={card.subHeader2TranslationId as TranslationKey} />
+          <Translation id={card.subHeader2TranslationId} />
         </SubHeader>
         <Text>
-          <Translation id={card.textTranslationId as TranslationKey} />
+          <Translation id={card.textTranslationId} />
         </Text>
         <StyledButton to="https://forms.gle/Gnh4gzGh66Yc3V7G8">
-          <Translation id={card.styledButtonTranslationId as TranslationKey} />
+          <Translation id={card.styledButtonTranslationId} />
         </StyledButton>
       </Card>
     ))}

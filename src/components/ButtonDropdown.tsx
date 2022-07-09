@@ -125,7 +125,7 @@ export interface ListItem {
 }
 
 export interface List {
-  text: string
+  text: TranslationKey
   ariaLabel: string
   items: Array<ListItem>
 }
@@ -153,10 +153,7 @@ const ButtonDropdown: React.FC<IProps> = ({ list, className }) => {
     <Container
       className={className}
       ref={ref}
-      aria-label={`Select ${translateMessageId(
-        list.text as TranslationKey,
-        intl
-      )}`}
+      aria-label={`Select ${translateMessageId(list.text, intl)}`}
     >
       <Button
         onClick={() => setIsOpen(!isOpen)}
@@ -164,7 +161,7 @@ const ButtonDropdown: React.FC<IProps> = ({ list, className }) => {
         tabIndex={0}
       >
         <StyledIcon name="menu" />
-        <Translation id={list.text as TranslationKey} />
+        <Translation id={list.text} />
       </Button>
       <DropdownList
         animate={isOpen ? "open" : "closed"}
@@ -180,13 +177,12 @@ const ButtonDropdown: React.FC<IProps> = ({ list, className }) => {
                   trackCustomEvent(matomo)
                 }}
                 to={to}
-                tabIndex="-1"
               >
                 <Translation id={text} />
               </NavLink>
             )}
             {!!to && !matomo && (
-              <NavLink isPartiallyActive={false} to={to} tabIndex="-1">
+              <NavLink isPartiallyActive={false} to={to}>
                 <Translation id={text} />
               </NavLink>
             )}

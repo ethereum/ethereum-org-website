@@ -7,7 +7,9 @@ import styled from "styled-components"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 import ButtonLink from "../components/ButtonLink"
-import ButtonDropdown from "../components/ButtonDropdown"
+import ButtonDropdown, {
+  List as ButtonDropdownList,
+} from "../components/ButtonDropdown"
 import Breadcrumbs from "../components/Breadcrumbs"
 import Card from "../components/Card"
 import Icon from "../components/Icon"
@@ -311,20 +313,20 @@ const TitleCard = styled.div`
   }
 `
 
-const dropdownLinks = {
+const dropdownLinks: ButtonDropdownList = {
   text: "page-upgrades-upgrades-guide",
   ariaLabel: "page-upgrades-upgrades-aria-label",
   items: [
     {
-      text: "page-upgrades-upgrades-beacon-chain" as TranslationKey,
+      text: "page-upgrades-upgrades-beacon-chain",
       to: "/upgrades/beacon-chain/",
     },
     {
-      text: "page-upgrades-upgrades-docking" as TranslationKey,
+      text: "page-upgrades-upgrades-docking",
       to: "/upgrades/merge/",
     },
     {
-      text: "page-upgrades-shard-title" as TranslationKey,
+      text: "page-upgrades-shard-title",
       to: "/upgrades/sharding/",
     },
   ],
