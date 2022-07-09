@@ -29,6 +29,7 @@ export type Lang =
   | "ms"
   | "nl"
   | "nb"
+  | "ph"
   | "pl"
   | "pt"
   | "pt-br"
@@ -142,6 +143,9 @@ const languages: Languages = {
   },
   nb: {
     language: "Norsk",
+  },
+  ph: {
+    language: "Filipino",
   },
   pl: {
     language: "Polski",
