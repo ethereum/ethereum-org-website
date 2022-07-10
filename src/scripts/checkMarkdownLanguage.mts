@@ -8,7 +8,7 @@ const commonDiffCommand = [
   "AM",
 ]
 
-const getMarkdownFilesWithLanguage = () => {
+const getMarkdownFilesWithLanguage = (): Promise<Buffer> => {
   return new Promise((resolve, reject) => {
     const markdownFilesWithLanguageCommand = spawn("git", [
       ...commonDiffCommand,
@@ -18,11 +18,11 @@ const getMarkdownFilesWithLanguage = () => {
       "src/content/*.md",
     ])
 
-    markdownFilesWithLanguageCommand.stdout.on("data", (data) => {
+    markdownFilesWithLanguageCommand.stdout.on("data", (data: Buffer) => {
       resolve(data)
     })
 
-    markdownFilesWithLanguageCommand.stderr.on("data", (data) => {
+    markdownFilesWithLanguageCommand.stderr.on("data", (data: Buffer) => {
       reject(data)
     })
 
@@ -32,7 +32,7 @@ const getMarkdownFilesWithLanguage = () => {
   })
 }
 
-const getAllMarkdownFiles = () => {
+const getAllMarkdownFiles = (): Promise<Buffer> => {
   return new Promise((resolve, reject) => {
     const allMarkdownFilesCommand = spawn("git", [
       ...commonDiffCommand,
@@ -40,11 +40,11 @@ const getAllMarkdownFiles = () => {
       "src/content/*.md",
     ])
 
-    allMarkdownFilesCommand.stdout.on("data", (data) => {
+    allMarkdownFilesCommand.stdout.on("data", (data: Buffer) => {
       resolve(data)
     })
 
-    allMarkdownFilesCommand.stderr.on("data", (data) => {
+    allMarkdownFilesCommand.stderr.on("data", (data: Buffer) => {
       reject(data)
     })
 
@@ -54,7 +54,7 @@ const getAllMarkdownFiles = () => {
   })
 }
 
-const doAllMarkdownsHaveALanguage = async () => {
+const doAllMarkdownsHaveALanguage = async (): Promise<boolean> => {
   try {
     console.log("Checking Markdown Content Files")
     const allMarkdownFilesBuffer = await getAllMarkdownFiles()
@@ -69,7 +69,7 @@ const doAllMarkdownsHaveALanguage = async () => {
   }
 }
 
-const throwError = (message) => {
+const throwError = (message: string | unknown): void => {
   console.log("\x1b[91m%s\x1b[0m", "ERROR", message)
 }
 
