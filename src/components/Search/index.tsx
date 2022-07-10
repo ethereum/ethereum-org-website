@@ -1,4 +1,10 @@
-import React, { useState, useRef } from "react"
+import React, {
+  useState,
+  useRef,
+  RefObject,
+  EventHandler,
+  MouseEventHandler,
+} from "react"
 import { Link as GatsbyLink } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
 import {
@@ -25,7 +31,7 @@ const Root = styled.div`
   grid-gap: 1em;
 `
 
-const HitsWrapper = styled.div`
+const HitsWrapper = styled.div<{ show: boolean }>`
   display: ${(props) => (props.show ? `grid` : `none`)};
   max-height: 80vh;
   overflow: scroll;
@@ -113,8 +119,9 @@ const StyledHighlight = styled(Highlight)`
   }
 `
 
+//FIXME: Add a strict type for `hit` prop
 const PageHit =
-  (clickHandler) =>
+  (clickHandler: MouseEventHandler): React.FC<{ hit: Record<string, any> }> =>
   ({ hit }) => {
     // Make url relative, so `handleSelect` is triggered
     const url = hit.url.replace("https://ethereum.org", "")
@@ -158,7 +165,7 @@ const indices = [
 ]
 
 // Validate against basic requirements of an ETH address
-const isValidAddress = (address) => {
+const isValidAddress = (address): boolean => {
   return /^(0x)?[0-9a-f]{40}$/i.test(address)
 }
 
@@ -207,8 +214,8 @@ const Search: React.FC<ISearchProps> = ({
   useKeyboardShortcuts,
 }) => {
   const intl = useIntl()
-  const containerRef = useRef<HTMLDivElement>()
-  const inputRef = useRef<HTMLInputElement>()
+  const containerRef = useRef<HTMLDivElement>(null)
+  const inputRef = useRef<HTMLInputElement>(null)
   const [query, setQuery] = useState(``)
   const [focus, setFocus] = useState(false)
   const algoliaClient = algoliasearch(
@@ -235,7 +242,7 @@ const Search: React.FC<ISearchProps> = ({
   }
   useOnClickOutside(containerRef, () => setFocus(false))
 
-  const handleSelect = () => {
+  const handleSelect = (): void => {
     setQuery(``)
     setFocus(false)
     if (handleSearchSelect) {
@@ -243,7 +250,7 @@ const Search: React.FC<ISearchProps> = ({
     }
   }
 
-  const focusSearch = (event: KeyboardEvent) => {
+  const focusSearch = (event: KeyboardEvent): void => {
     if (!useKeyboardShortcuts) {
       return
     }
@@ -251,7 +258,7 @@ const Search: React.FC<ISearchProps> = ({
     const searchInput = inputRef.current
     if (document.activeElement !== searchInput) {
       event.preventDefault()
-      searchInput.focus()
+      searchInput?.focus()
     }
   }
 
@@ -271,7 +278,7 @@ const Search: React.FC<ISearchProps> = ({
           setQuery={setQuery}
           onFocus={() => setFocus(true)}
         />
-        <HitsWrapper show={query && query.length > 0 && focus}>
+        <HitsWrapper show={query?.length > 0 && focus}>
           {indices.map(({ name, hitComp }) => (
             <Index key={name} indexName={name}>
               <Results>
