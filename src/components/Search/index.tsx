@@ -197,10 +197,18 @@ const Results = connectStateResults(
   }
 )
 
-const Search = ({ handleSearchSelect, useKeyboardShortcuts }) => {
+interface ISearchProps {
+  handleSearchSelect: () => void
+  useKeyboardShortcuts: boolean
+}
+
+const Search: React.FC<ISearchProps> = ({
+  handleSearchSelect,
+  useKeyboardShortcuts,
+}) => {
   const intl = useIntl()
-  const containerRef = useRef()
-  const inputRef = useRef()
+  const containerRef = useRef<HTMLDivElement>()
+  const inputRef = useRef<HTMLInputElement>()
   const [query, setQuery] = useState(``)
   const [focus, setFocus] = useState(false)
   const algoliaClient = algoliasearch(
@@ -235,7 +243,7 @@ const Search = ({ handleSearchSelect, useKeyboardShortcuts }) => {
     }
   }
 
-  const focusSearch = (event) => {
+  const focusSearch = (event: KeyboardEvent) => {
     if (!useKeyboardShortcuts) {
       return
     }
