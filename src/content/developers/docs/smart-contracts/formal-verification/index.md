@@ -15,7 +15,7 @@ Formal verification is one of the recommended techniques for [testing smart cont
 
 Formal verification is used to evaluate the _correctness_ of software programs and confirm compliance with predefined specifications using formal methods of mathematics. [More on formal verification](https://en.wikipedia.org/wiki/Formal_verification).
 
-In the context of Ethereum, formal verification can prove that a smart contract will only implement the desired business logic.
+In the context of Ethereum, formal verification usually attempts to prove that a smart contract has certain properties, often called invariants. If these properties are violated, attackers can cause harm to protocols and users.
 
 ### Why formal verification is necessary {#why-formal-verification-is-necessary}
 
@@ -41,7 +41,7 @@ The actual verification at this stage consists of checking the source code and c
 
 ### Low-level verification {#low-level-verification}
 
-Smart contracts written in high-level languages are  compiled into **bytecode**—low-level machine instructions that the Ethereum Virtual Machine (EVM) understands. Source code may undergo subtle changes during compilation, which may cause the contract to execute operations not defined in high-level specifications.
+Smart contracts written in high-level languages are compiled into **bytecode**—low-level machine instructions that the Ethereum Virtual Machine (EVM) understands. Source code may undergo subtle changes during compilation, which may cause the contract to execute operations not defined in high-level specifications.
 
 Formal verification can help determine the correctness of a contract's compiled bytecode. This requires creating bytecode-based, low-level specifications that define how a smart contract should behave in the EVM environment.
 
