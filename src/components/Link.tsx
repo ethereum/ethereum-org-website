@@ -97,7 +97,7 @@ const Link: React.FC<IProps> = ({
 
   const isExternal = to.includes("http") || to.includes("mailto:")
   const isHash = isHashLink(to)
-  const isGlossary = to.includes("glossary#")
+  const isGlossary = to.includes("glossary" && "#")
   const isStatic = to.includes("static")
   const isPdf = to.includes(".pdf")
 
