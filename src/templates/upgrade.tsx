@@ -7,7 +7,9 @@ import styled from "styled-components"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 import ButtonLink from "../components/ButtonLink"
-import ButtonDropdown from "../components/ButtonDropdown"
+import ButtonDropdown, {
+  List as ButtonDropdownList,
+} from "../components/ButtonDropdown"
 import Breadcrumbs from "../components/Breadcrumbs"
 import Card from "../components/Card"
 import Icon from "../components/Icon"
@@ -42,7 +44,11 @@ import MergeInfographic from "../components/MergeInfographic"
 import FeedbackCard from "../components/FeedbackCard"
 
 import { getLocaleTimestamp } from "../utils/time"
-import { isLangRightToLeft, translateMessageId } from "../utils/translations"
+import {
+  isLangRightToLeft,
+  translateMessageId,
+  TranslationKey,
+} from "../utils/translations"
 import { getSummaryPoints } from "../utils/getSummaryPoints"
 import { Lang } from "../utils/languages"
 import { Context } from "../types"
@@ -307,7 +313,7 @@ const TitleCard = styled.div`
   }
 `
 
-const dropdownLinks = {
+const dropdownLinks: ButtonDropdownList = {
   text: "page-upgrades-upgrades-guide",
   ariaLabel: "page-upgrades-upgrades-aria-label",
   items: [

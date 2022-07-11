@@ -2,9 +2,11 @@ import React from "react"
 import { graphql, PageProps } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
 import { getImage } from "gatsby-plugin-image"
-import styled, { DefaultTheme } from "styled-components"
+import styled from "styled-components"
 
-import ButtonDropdown from "../../components/ButtonDropdown"
+import ButtonDropdown, {
+  List as ButtonDropdownList,
+} from "../../components/ButtonDropdown"
 import ButtonLink from "../../components/ButtonLink"
 import Card from "../../components/Card"
 import Link from "../../components/Link"
@@ -258,12 +260,12 @@ const StakingPage = ({
     buttons: [],
   }
 
-  const dropdownLinks = {
-    text: "Staking Options",
+  const dropdownLinks: ButtonDropdownList = {
+    text: "Staking Options" as TranslationKey,
     ariaLabel: "Staking options dropdown menu",
     items: [
       {
-        text: translateMessageId("page-staking-dropdown-home", intl),
+        text: "page-staking-dropdown-home",
         to: "/staking/",
         matomo: {
           eventCategory: `Staking dropdown`,
@@ -272,7 +274,7 @@ const StakingPage = ({
         },
       },
       {
-        text: translateMessageId("page-staking-dropdown-solo", intl),
+        text: "page-staking-dropdown-solo",
         to: "/staking/solo/",
         matomo: {
           eventCategory: `Staking dropdown`,
@@ -281,7 +283,7 @@ const StakingPage = ({
         },
       },
       {
-        text: translateMessageId("page-staking-dropdown-saas", intl),
+        text: "page-staking-dropdown-saas",
         to: "/staking/saas/",
         matomo: {
           eventCategory: `Staking dropdown`,
@@ -290,7 +292,7 @@ const StakingPage = ({
         },
       },
       {
-        text: translateMessageId("page-staking-dropdown-pools", intl),
+        text: "page-staking-dropdown-pools",
         to: "/staking/pools/",
         matomo: {
           eventCategory: `Staking dropdown`,
