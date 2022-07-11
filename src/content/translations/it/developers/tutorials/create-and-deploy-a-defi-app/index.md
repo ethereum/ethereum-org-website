@@ -9,7 +9,7 @@ tags:
   - "truffle"
   - "ganache"
   - "Smart Contract"
-skill: intermedio
+skill: intermediate
 lang: it
 sidebar: true
 published: 2020-12-31

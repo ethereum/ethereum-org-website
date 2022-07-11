@@ -8,7 +8,7 @@ tags:
   - "Alchemy"
   - "Solidity"
   - "智能合约"
-skill: 入门
+skill: beginner
 lang: zh
 sidebar: true
 published: 2021-04-22

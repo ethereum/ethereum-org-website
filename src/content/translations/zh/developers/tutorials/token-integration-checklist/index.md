@@ -9,7 +9,7 @@ tags:
   - "智能合约"
   - "安全性"
   - "通证"
-skill: 中级
+skill: intermediate
 published: 2020-08-13
 source: 构建安全的合约
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/token_integration.md

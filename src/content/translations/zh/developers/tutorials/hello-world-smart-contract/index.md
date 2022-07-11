@@ -9,7 +9,7 @@ tags:
   - "智能合约"
   - "入门指南"
   - "部署"
-skill: 入门
+skill: beginner
 lang: zh
 sidebar: true
 published: 2021-03-31

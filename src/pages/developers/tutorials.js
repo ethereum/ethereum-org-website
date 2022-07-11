@@ -24,6 +24,7 @@ import { getLocaleTimestamp, INVALID_DATETIME } from "../../utils/time"
 
 import foreignTutorials from "../../data/externalTutorials.json"
 import FeedbackCard from "../../components/FeedbackCard"
+import { getSkillTranslationId } from "../../components/TutorialMetadata"
 
 const SubSlogan = styled.p`
   font-size: 1.25rem;
@@ -435,7 +436,9 @@ const TutorialsPage = ({ data, pageContext }) => {
             <TutorialCard key={tutorial.to} to={tutorial.to} hideArrow>
               <TitleContainer>
                 <Title isExternal={tutorial.isExternal}>{tutorial.title}</Title>
-                <Pill isSecondary={true}>{tutorial.skill}</Pill>
+                <Pill isSecondary={true}>
+                  <Translation id={getSkillTranslationId(tutorial.skill)} />
+                </Pill>
               </TitleContainer>
               <Author>
                 {/* TODO: Refactor each tutorial tag as a component */}

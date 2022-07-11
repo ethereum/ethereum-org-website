@@ -8,7 +8,7 @@ tags:
   - "optimism"
   - "bridge"
   - "layer 2 (nivel 2)"
-skill: intermediar
+skill: intermediate
 published: 2022-03-30
 lang: ro
 ---

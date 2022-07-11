@@ -9,7 +9,7 @@ tags:
   - "python"
   - "区块链"
   - "web3.py"
-skill: 入门
+skill: beginner
 published: 2020-09-08
 source: Snake charmers
 sourceUrl: https://snakecharmers.ethereum.org/a-developers-guide-to-ethereum-pt-1/

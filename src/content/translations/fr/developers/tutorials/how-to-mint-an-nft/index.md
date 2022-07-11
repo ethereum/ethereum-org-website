@@ -8,7 +8,7 @@ tags:
   - "alchemy"
   - "solidité"
   - "contrats intelligents"
-skill: débutant
+skill: beginner
 lang: fr
 sidebar: true
 published: 2021-04-22

@@ -12,7 +12,7 @@ tags:
   - "compound"
   - "uniswap"
   - "sablier"
-skill: principiante
+skill: beginner
 lang: it
 sidebar: true
 published: 2020-04-27

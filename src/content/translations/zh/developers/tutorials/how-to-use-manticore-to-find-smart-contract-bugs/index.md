@@ -10,7 +10,7 @@ tags:
   - "安全性"
   - "测试"
   - "形式化验证"
-skill: 高级
+skill: advanced
 published: 2020-01-13
 source: 构建安全合约
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore

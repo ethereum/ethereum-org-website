@@ -6,7 +6,7 @@ tags:
   - "客户端"
   - "geth"
   - "节点"
-skill: 入门
+skill: beginner
 lang: zh
 sidebar: true
 published: 2022-03-04

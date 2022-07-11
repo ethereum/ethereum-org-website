@@ -7,7 +7,7 @@ tags:
   - "erc-721"
   - "solidity"
   - "tokeny"
-skill: średnie
+skill: intermediate
 lang: pl
 sidebar: true
 published: 2020-03-19

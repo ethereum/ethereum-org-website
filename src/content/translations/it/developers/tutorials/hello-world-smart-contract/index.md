@@ -9,7 +9,7 @@ tags:
   - "smart contract"
   - "primi passi"
   - "distribuzione"
-skill: principiante
+skill: beginner
 lang: it
 sidebar: true
 published: 2021-03-31
