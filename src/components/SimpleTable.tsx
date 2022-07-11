@@ -4,6 +4,7 @@ import styled from "styled-components"
 import Link from "./Link"
 import Translation from "./Translation"
 import { FakeLinkExternal } from "./SharedStyledComponents"
+import { TranslationKey } from "../utils/translations"
 
 const Table = styled.div`
   display: grid;
@@ -108,8 +109,22 @@ const StyledImage = styled.img`
   margin-right: 1rem;
 `
 
+export interface TableRow {
+  name: string
+  marketCap: string
+  image?: string
+  type: string
+  url: string
+}
+
+export interface IProps {
+  columns: Array<TranslationKey>
+  content: Array<TableRow>
+  hasError: boolean
+}
+
 // TODO generalize this component - currently tailored for stablecoin market caps
-const SimpleTable = ({ columns, content, hasError }) => (
+const SimpleTable: React.FC<IProps> = ({ columns, content, hasError }) => (
   <Table>
     <Header>
       {columns.map((column, idx) => (
