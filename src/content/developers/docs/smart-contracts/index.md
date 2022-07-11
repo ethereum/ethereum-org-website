@@ -68,7 +68,7 @@ Like how a vending machine removes the need for a vendor employee, smart contrac
 
 ## Permissionless {#permissionless}
 
-Anyone can write a smart contract and deploy it to the network. You just need to learn how to code in [smart contract language](/developers/docs/smart-contracts/languages/), and have enough ETH to deploy your contract. Deploying a smart contract is technically a transaction, so you need to pay [Gas](/developers/docs/gas/) in the same way you need to pay gas for a simple ETH transfer. However, gas costs for contract deployment are far higher.
+Anyone can write a smart contract and deploy it to the network. You just need to learn how to code in a [smart contract language](/developers/docs/smart-contracts/languages/), and have enough ETH to deploy your contract. Deploying a smart contract is technically a transaction, so you need to pay [Gas](/developers/docs/gas/) in the same way you need to pay gas for a simple ETH transfer. However, gas costs for contract deployment are far higher.
 
 Ethereum has developer-friendly languages for writing smart contracts:
 
@@ -95,7 +95,7 @@ Another limitation of smart contracts is the maximum contract size. A smart cont
 
 ## Multisig contracts {#multisig}
 
-Multisig (multiple-signature) contracts are smart contract accounts that require multiple valid signatures to execute a transaction. This is very useful for avoiding single points of failure for contracts holding substantial amounts of ether or other tokens. Multisigs also divide responsibility for contract execution and key management between multiple parties and prevent the loss of a single private key leading to irreversible loss of funds. For these reasons, multisig contracts can be used for simple DAO governance. Multisigs require N signatures out of M possible acceptable signatures (where N ≤ M, and M > 1) in order to execute. `N = 3, M = 5` and `N = 4, M = 7` are commonly used. A 4/7 multisig requires four out of seven possible valid signatures. This means the funds are still retrievable even if three signatures are lost. In this case it also means that majority of key-holders must agree and sign in order for the contract to execute.
+Multisig (multiple-signature) contracts are smart contract accounts that require multiple valid signatures to execute a transaction. This is very useful for avoiding single points of failure for contracts holding substantial amounts of ether or other tokens. Multisigs also divide responsibility for contract execution and key management between multiple parties and prevent the loss of a single private key leading to irreversible loss of funds. For these reasons, multisig contracts can be used for simple DAO governance. Multisigs require N signatures out of M possible acceptable signatures (where N ≤ M, and M > 1) in order to execute. `N = 3, M = 5` and `N = 4, M = 7` are commonly used. A 4/7 multisig requires four out of seven possible valid signatures. This means the funds are still retrievable even if three signatures are lost. In this case, it also means that the majority of key-holders must agree and sign in order for the contract to execute.
 
 ## Smart contract resources {#smart-contract-resources}
 
