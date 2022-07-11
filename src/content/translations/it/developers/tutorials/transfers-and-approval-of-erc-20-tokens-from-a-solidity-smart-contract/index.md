@@ -190,7 +190,7 @@ function sell(uint256 amount) public {
 }
 ```
 
-Se tutto funziona come previsto, dovresti vedere 2 eventi (`Transfer` e `Sold`) nella transazione e il saldo di token e di ethereum verrà aggiornato.
+Se tutto funziona come previsto, dovresti vedere 2 eventi (`Transfer` e `Sold`) nella transazione e il saldo di token e di Ethereum verrà aggiornato.
 
 ![Due eventi nella transazione: Transfer e Sold](./transfer-and-sold-events.png)
 

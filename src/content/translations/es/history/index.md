@@ -105,8 +105,8 @@ La actualización de Berlín optimizó el coste del gas para ciertas acciones de
 <ExpandableCard title="EIP de Berlín" contentPreview="Official improvements included in this upgrade.">
 
 - [EIP-2565](https://eips.ethereum.org/EIPS/eip-2565) – _reduce el coste del gas ModExp_
-- [EIP-2718](https://eips. thereum.org/EIPS/eip-2718) - _habilita un soporte más fácil para múltiples tipos de transacción_
-- [EIP-2929](https://eips. thereum.org/EIPS/eip-2929) – _gas aumenta el coste del acceso al estado para códigos de operación_
+- [EIP-2718](https://eips.ethereum.org/EIPS/eip-2718) - _habilita un soporte más fácil para múltiples tipos de transacción_
+- [EIP-2929](https://eips.ethereum.org/EIPS/eip-2929) – _gas aumenta el coste del acceso al estado para códigos de operación_
 - [EIP-2930](https://eips.ethereum.org/EIPS/eip-2930) - _agrega listas de acceso opcionales_
 
 </ExpandableCard>
@@ -245,11 +245,11 @@ La bifurcación de Bizancio:
 - [EIP-658](https://eips.ethereum. rg/EIPS/eip-658) – _se ha añadido el estado de campo a los recibos de la transacción para indicar que se ha realizado correctamente o ha fallado._
 - [EIP-196](https://eips.ethereum. rg/EIPS/eip-196) – _añade una curva elíptica y una multiplicación de escalada para permitir [ZK-Snarks](/Developopers/docs/scaling/zk-rollups/)._
 - [EIP-197](https://eips.ethereum. rg/EIPS/eip-197) – _añade una curva elíptica y una multiplicación de escalada para permitir [ZK-Snarks](/Developers/docs/scaling/zk-rollups/)._
-- [EIP-198](https://eips. thereum.org/EIPS/eip-198) – _habilita la verificación de firma RSA._
+- [EIP-198](https://eips.ethereum.org/EIPS/eip-198) – _habilita la verificación de firma RSA._
 - [EIP-211](https://eips.ethereum.org/EIPS/eip-211) – \_añade soporte para valores de retorno de longitud variable.
 - [EIP-214](https://eips.ethereum.org/EIPS/eip-214) – \_añade el código `STATICALL`, permitiendo llamadas no estatales a otros contratos.
 - [EIP-100](https://eips.ethereum.org/EIPS/eip-100) - _cambia la fórmula de ajuste de dificultad._
-- [EIP-649](https://eips. thereum.org/EIPS/eip-649) – retrasa [bomba de dificultad](/glossary/#difficulty-bomb) 1 año y reduce la recompensa de bloque de 5 a 3 ETH.\_
+- [EIP-649](https://eips.ethereum.org/EIPS/eip-649) – retrasa [bomba de dificultad](/glossary/#difficulty-bomb) 1 año y reduce la recompensa de bloque de 5 a 3 ETH.\_
 
 </ExpandableCard>
 

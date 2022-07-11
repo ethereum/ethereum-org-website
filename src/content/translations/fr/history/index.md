@@ -82,7 +82,7 @@ La mise à niveau London a introduit l'[EIP 1559](https://eips.ethereum.org/EIP
 <ExpandableCard title="Les EIP de London" contentPreview="Official improvements included in this upgrade.">
 
 - [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) – _Améliore le marché des frais de transaction_
-- [EIP-3198](https://eips. thereum.org/EIPS/eip-3198) – _Retourne le « BASEFEE » depuis un bloc_
+- [EIP-3198](https://eips.ethereum.org/EIPS/eip-3198) – _Retourne le « BASEFEE » depuis un bloc_
 - [EIP-3529](https://eips.ethereum. rg/EIPS/eip-3529) - _Diminue les remboursements de gaz pour les opérations EVM _
 - [EIP-3541](https://eips.ethereum. rg/EIPS/eip-3541) - _Empêche le déploiement de contrats commençant par « 0xEF »_
 - [EIP-3554](https://eips.ethereum.org/EIPS/eip-3554) - _Reporte le Ice Age jusqu'en décembre 2021_
@@ -105,8 +105,8 @@ La mise à niveau Berlin a optimisé le coût en gaz pour certaines actions EVM 
 <ExpandableCard title="Les EIP de Berlin" contentPreview="Official improvements included in this upgrade.">
 
 - [EIP-2565](https://eips.ethereum.org/EIPS/eip-2565) – _Diminue le coût en gaz pour ModExp_
-- [EIP-2718](https://eips. thereum.org/EIPS/eip-2718) – _Permet une prise en charge plus facile pour plusieurs types de transactions_
-- [EIP-2929](https://eips. thereum.org/EIPS/eip-2929) – _Augmentation du coût en gaz pour les opcodes d'accès d'état_
+- [EIP-2718](https://eips.ethereum.org/EIPS/eip-2718) – _Permet une prise en charge plus facile pour plusieurs types de transactions_
+- [EIP-2929](https://eips.ethereum.org/EIPS/eip-2929) – _Augmentation du coût en gaz pour les opcodes d'accès d'état_
 - [EIP-2930](https://eips.ethereum.org/EIPS/eip-2930) – _Ajoute des listes d'accès optionnels_
 
 </ExpandableCard>
@@ -245,11 +245,11 @@ La fourche Byzantium a :
 - [EIP-658](https://eips.ethereum. rg/EIPS/eip-658) – _Champ de statut ajouté aux reçus de transaction pour indiquer le succès ou l'échec._
 - [EIP-196](https://eips.ethereum. rg/EIPS/eip-196) – _Ajoute la courbe elliptique et la multiplication scalaire pour permettre les [ZK-Snarks](/developers/docs/layer-2-scaling/#rollups)._
 - [EIP-197](https://eips.ethereum. rg/EIPS/eip-197) – _Ajoute la courbe elliptique et la multiplication scalaire pour permettre les [ZK-Snarks](/developers/docs/layer-2-scaling/#rollups)._
-- [EIP-198](https://eips. thereum.org/EIPS/eip-198) – _Active la vérification de la signature RSA._
+- [EIP-198](https://eips.ethereum.org/EIPS/eip-198) – _Active la vérification de la signature RSA._
 - [EIP-211](https://eips.ethereum.org/EIPS/eip-211) – _Ajoute la prise en charge des valeurs de retour de longueur variable._
 - [EIP-214](https://eips.ethereum.org/EIPS/eip-214) – _Ajoute le code d'opération « STATICCALL » permettant d'effectuer des appels sans changement d'état vers d'autres contrats._
 - [EIP-100](https://eips.ethereum.org/EIPS/eip-100) – _Modifie la formule d'ajustement de difficulté._
-- [EIP-649](https://eips. thereum.org/EIPS/eip-649) – _Retarde la [bombe de difficulté](/glossary/#difficulty-bomb) de 1 an et réduit la récompense des blocs de 5 à 3 ETH._
+- [EIP-649](https://eips.ethereum.org/EIPS/eip-649) – _Retarde la [bombe de difficulté](/glossary/#difficulty-bomb) de 1 an et réduit la récompense des blocs de 5 à 3 ETH._
 
 </ExpandableCard>
 

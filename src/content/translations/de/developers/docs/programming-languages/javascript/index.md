@@ -62,7 +62,7 @@ Im Bereich Ethereum-JavaScript gibt es noch weitere Neuerungen, darunter:
 
 - Bibliotheken mit Wallet-Dienstprogrammen
 - Tools zum Erstellen, Importieren und Exportieren von Ethereum-Schlüsseln
-- Eine Implementierung des `merkle-patricia-Baumes` – Eine Datenstruktur, die im Yellow-Paper von Etherum skizziert wird.
+- Eine Implementierung des `merkle-patricia-Baumes` – Eine Datenstruktur, die im Yellow-Paper von Ethereum skizziert wird.
 
 In [EthereumJS Repo](https://github.com/ethereumjs) finden Sie Informationen zu allen Themen, an denen Sie Interessiert sind.
 
