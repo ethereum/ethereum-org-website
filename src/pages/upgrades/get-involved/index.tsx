@@ -1,13 +1,13 @@
 import React, { useContext, useState, useEffect } from "react"
 import { ThemeContext } from "styled-components"
 import styled from "styled-components"
-import { graphql } from "gatsby"
+import { graphql, PageProps } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
 import { shuffle } from "lodash"
 import { getImage } from "gatsby-plugin-image"
 import { translateMessageId } from "../../../utils/translations"
 import Card from "../../../components/Card"
-import Leaderboard from "../../../components/Leaderboard"
+import Leaderboard, { Person } from "../../../components/Leaderboard"
 import CalloutBanner from "../../../components/CalloutBanner"
 import Emoji from "../../../components/Emoji"
 import ProductCard from "../../../components/ProductCard"
@@ -163,7 +163,44 @@ const StyledCalloutBanner = styled(CalloutBanner)`
   }
 `
 
-const GetInvolvedPage = ({ data, location }) => {
+type Layer = "el" | "cl"
+type Client = {
+  name: string
+  background: string
+  description: JSX.Element
+  alt: string
+  url: string
+  image: (isDarkTheme?: boolean) => string
+  githubUrl: string
+  isBeta?: boolean
+  children?: React.ReactNode
+}
+type Clients = {
+  [key in Layer]: Client[]
+}
+
+type ImageNames =
+  | "besu"
+  | "erigon"
+  | "geth"
+  | "nethermind"
+  | "prysm"
+  | "lighthouseDark"
+  | "lighthouseLight"
+  | "tekuLight"
+  | "tekuDark"
+  | "lodestar"
+  | "nimbus"
+  | "rhino"
+
+type Images = { [key in ImageNames]: string }
+
+type IProps = {
+  bountyHunters: {
+    nodes: Person[]
+  }
+} & Images
+const GetInvolvedPage = ({ data, location }: PageProps<IProps>) => {
   const intl = useIntl()
   const themeContext = useContext(ThemeContext)
   const isDarkTheme = themeContext.isDark
@@ -173,7 +210,7 @@ const GetInvolvedPage = ({ data, location }) => {
     (a, b) => b.score - a.score
   )
 
-  const [clients, setClients] = useState({ el: [], cl: [] })
+  const [clients, setClients] = useState<Clients>({ el: [], cl: [] })
 
   useEffect(() => {
     const executionClients = [
@@ -219,7 +256,7 @@ const GetInvolvedPage = ({ data, location }) => {
       },
     ]
 
-    const consensusClients = [
+    const consensusClients: Client[] = [
       {
         name: "Prysm",
         background: "#23292e",
@@ -431,14 +468,8 @@ const GetInvolvedPage = ({ data, location }) => {
         <StyledCalloutBanner
           image={getImage(data.rhino)}
           alt={translateMessageId("page-staking-image-alt", intl)}
-          titleKey={translateMessageId(
-            "page-upgrades-get-involved-stake",
-            intl
-          )}
-          descriptionKey={translateMessageId(
-            "page-upgrades-get-involved-stake-desc",
-            intl
-          )}
+          titleKey={"page-upgrades-get-involved-stake"}
+          descriptionKey={"page-upgrades-get-involved-stake-desc"}
         >
           <div>
             <ButtonLink to="/staking/">
