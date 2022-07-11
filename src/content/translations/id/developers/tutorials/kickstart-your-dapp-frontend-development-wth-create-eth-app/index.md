@@ -12,7 +12,7 @@ tags:
   - "compound"
   - "uniswap"
   - "sablier"
-skill: pemula
+skill: beginner
 lang: id
 sidebar: true
 published: 2020-04-27

@@ -11,7 +11,7 @@ tags:
   - "the graph"
   - "create-eth-app"
   - "bereaksi"
-skill: tingkat menengah
+skill: intermediate
 published: 2020-09-06
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/thegraph

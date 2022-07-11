@@ -109,7 +109,7 @@ Extraits de code réutilisables (un programme) qu'un développeur publie dans l'
 
 [En savoir plus sur les contrats intelligents](/developers/docs/smart-contracts/)
 
-## Complément d'information {#further-reading}
+## En lire plus {#further-reading}
 
 - [Livre blanc Ethereum](/whitepaper/)
 - [Mais comment fonctionne Ethereum ?](https://www.preethikasireddy.com/post/how-does-ethereum-work-anyway) - _ Preethi Kasireddy_

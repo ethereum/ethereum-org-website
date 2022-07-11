@@ -1,5 +1,5 @@
 ---
-title: Как я могу участвовать в жизни сообщества?
+title: Как я могу принять участие?
 description: Как участвовать в жизни сообщества Ethereum.
 sidebar: true
 lang: ru
@@ -16,7 +16,7 @@ lang: ru
 - Посетите ближайший к вам хакатон [ETHGlobal](http://ethglobal.co/)!
 - Ознакомьтесь с [проектами в вашей компетенции или на языке программирования по вашему выбору](/developers/docs/programming-languages/)
 - [Онлайн-встречи Core Dev](https://www.youtube.com/playlist?list=PLaM7G4Llrb7zfMXCZVEXEABT8OSnd4-7w): смотрите или поучаствуйте сами
-- [Список предпочтений для программы поддержки экосистемы](https://esp.ethereum.foundation/wishlist/) — сферы инструментария, документации и инфраструктуры, в которых активно ищут заявителей на гранты в рамках программы поддержки экосистемы Etherium
+- [Список предпочтений для программы поддержки экосистемы](https://esp.ethereum.foundation/wishlist/) — сферы инструментария, документации и инфраструктуры, в которых активно ищут заявителей на гранты в рамках программы поддержки экосистемы Ethereum
 - [Web3Bridge](https://www.web3bridge.com/) — присоединяйтесь к амбициозному сообществу web3 в их инициативе по выявлению, обучению и поддержке сотен разработчиков и членов сообщества по всей Африке
 
 ## Исследователи и академики <Emoji text=":mag:" size={1} />‍ {#researchers-and-academics}
@@ -37,7 +37,7 @@ lang: ru
 
 ### Напишите материал о Ethereum {#write-content}
 
-- Etherium нужны хорошие писатели, которые смогут рассказать о наших преимуществах простым языком
+- Ethereum нужны хорошие писатели, которые смогут рассказать о наших преимуществах простым языком
 - Не готовы публиковать собственные статьи? Попробуйте внести свой вклад в существующие материалы ресурсов сообщества, таких как [EthHub](https://docs.ethhub.io/), или предложите новый материал для ethereum.org!
 
 ### Попробуйте фиксировать основные моменты онлайн-встреч сообщества {#take-notes}
@@ -75,7 +75,7 @@ lang: ru
 
 ## Менеджеры по продукту <Emoji text=":fountain_pen:" size={1} /> {#product-managers}
 
-- Экосистема Etherium ищет таланты! Многие компании готовы нанимать менеджеров по продукту. Если вы хотите принять участие в проекте с открытым исходным кодом, свяжитесь с [группой Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu) или [MetaCartel](https://www.metacartel.org/)
+- Экосистема Ethereum ищет таланты! Многие компании готовы нанимать менеджеров по продукту. Если вы хотите принять участие в проекте с открытым исходным кодом, свяжитесь с [группой Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu) или [MetaCartel](https://www.metacartel.org/)
 
 ## Маркетинг <Emoji text=":megaphone:" size={1} />‍ {#marketing}
 
@@ -86,12 +86,12 @@ lang: ru
 **Хотите найти работу в Ethereum?**
 
 - [Вакансии в ethereum.org](/about/#open-jobs)
-- [Ethereum Foundation job board (Lever)](https://jobs.lever.co/ethereumfoundation)
-- [Ethereum Foundation job board (BambooHR)](https://ethereum.bamboohr.com/jobs/)
+- [Вакансии в Ethereum Foundation (Lever)](https://jobs.lever.co/ethereumfoundation)
+- [Вакансии в Ethereum Foundation (BambooHR)](https://ethereum.bamboohr.com/jobs/)
 - [Вакансии в сфере криптовалют](https://cryptocurrencyjobs.co/ethereum/)
 - [Crypto.jobs](https://crypto.jobs/)
 - [Вакансии в ConsenSys](https://consensys.net/careers/)
-- [Crypto Jobs List](https://cryptojobslist.com/ethereum-jobs)
+- [Список вакансий в сфере криптовалют](https://cryptojobslist.com/ethereum-jobs)
 - [Объявления о вакансиях на Bankless](https://pallet.xyz/list/bankless/jobs)
 - [Вакансии на useWeb3](https://www.useweb3.xyz/jobs)
 - [Вакансии на Web3](https://web3.career)
@@ -114,4 +114,4 @@ DAO — децентрализованные автономные организ
 - [dOrg](https://dOrg.tech) [@dOrg_tech](https://twitter.com/dOrg_tech) — _коллектив разработчиков-фрилансеров Web3, работающий как децентрализованная автономная организация (DAO)_
 - [HausDAO](https://daohaus.club) [@nowdaoit](https://twitter.com/nowdaoit) — _сообщество управления DAOhaus_
 - [Developer DAO](https://www.developerdao.com/) [@developer_dao](https://twitter.com/developer_dao) — _сообщество разработчиков, которые верят в коллективное владение Интернетом_
-- [DXdao](https://DXdao.eth.link/) [@DXdao](https://twitter.com/DXdao_) - _Decentralized development & governance of dApps & protocols_
+- [DXdao](https://DXdao.eth.link/) [@DXdao](https://twitter.com/DXdao_) — _децентрализованная разработка и управление dApp и протоколами_

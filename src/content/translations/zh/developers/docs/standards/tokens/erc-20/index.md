@@ -25,13 +25,13 @@ sidebar: true
 
 ERC-20 提供了一个同质化代币的标准，换句话说，每个代币与另一个代币（在类型和价值上）完全相同。 例如，一个 ERC-20 代币就像以太币一样，意味着一个代币会并永远会与其他代币一样。
 
-## 前置要求 {#prerequisites}
+## 前体条件 {#prerequisites}
 
 - [帐户](/developers/docs/accounts)
 - [智能合约](/developers/docs/smart-contracts/)
 - [代币标准](/developers/docs/standards/tokens/)
 
-## 正文内容 {#body}
+## 正文 {#body}
 
 ERC-20（以太坊意见征求 20）由 Fabian Vogelsteller 提出于 2015 年 11 月。这是一个能实现智能合约中代币的应用程序接口标准。
 

@@ -1,5 +1,5 @@
 ---
-title: Hizmet olarak düğümler
+title: Hizmet olarak node'lar
 description: Düğüm hizmetleri, bunların artıları ve eksileri ve popüler sağlayıcılara giriş düzeyinde bir genel bakış.
 lang: tr
 sidebar: true
@@ -32,7 +32,7 @@ Düğüm hizmetlerinin özel anahtarlarınızı veya bilgilerinizi saklamadığ�
 
 Bir düğüm hizmeti kullanmanın asıl faydası, düğümlere bakım yapmak ve yönetmek için uğraşmanız gerekmemesidir. Bu, altyapı bakımı konusunda endişelenmek yerine ürününüzü oluşturmaya odaklanmanıza olanak tanır.
 
-Kendi düğümlerinizi çalıştırmak, depolamadan bant genişliğine ve mühendisliğe harcanan değerli zamana kadar çok pahalıya mal olabilir. Ölçeklendirirken daha fazla düğüm başlatmak, düğümleri en son sürümlere yükseltmek ve durum tutarlılığını sağlamak gibi şeyler, istediğiniz web3 ürününde kaynak oluşturma ve harcama konusunda olumsuz etkilere yol açabilir.
+Kendi düğümlerinizi çalıştırmak, depolamadan bant genişliğine ve mühendisliğe harcanan değerli zamana kadar çok pahalıya mal olabilir. Ölçeklendirirken daha fazla düğüm başlatmak, düğümleri en son sürümlere yükseltmek ve durum tutarlılığını sağlamak gibi şeyler, istediğiniz web3 ürününde kaynak oluşturma ve harcama konusundan sizi uzaklaştırabilir.
 
 ## Bir Düğüm Hizmeti kullanmanın eksileri nelerdir? {#cons-of-using-a-node-service}
 
@@ -47,11 +47,11 @@ Bir düğüm hizmeti kullanarak, ürününüzün altyapı yönünü merkezileşt
 - [**Alchemy**](https://www.alchemy.com/)
   - [Belgeler](https://docs.alchemyapi.io/)
   - Özellikler
-    - Ücretsiz seviye seçeneği
-    - Kullandıkça ölçeklendirin
+    - Ücretsiz katman seçeneği
+    - Kullandıkça ölçeklendir
     - Ücretsiz arşiv verileri
     - Analiz araçları
-    - Gösterge Paneli
+    - Gösterge paneli
     - Benzersiz API uç noktaları
     - Webkancaları
     - Doğrudan destek
@@ -62,15 +62,15 @@ Bir düğüm hizmeti kullanarak, ürününüzün altyapı yönünü merkezileşt
     - En yakındaki müsait düğüme hızlı ve güvenli bir geçit oluşturmak için yük dengeleme ve düğüm sağlığı takibi
     - WSS uç noktası ve sınırsız oran limitleri sağlayan Premium seviye
     - Kırktan fazla zincir için tek tıkla tam düğüm ve doğrulayıcı düğüm kurulumu
-    - Kullandıkça ölçeklendirin
+    - Kullandıkça ölçeklendir
     - Analiz araçları
-    - Gösterge Paneli
+    - Gösterge paneli
     - RPC, HTTPS ve WSS uç noktaları
     - Doğrudan destek
 - [**BlockDaemon**](https://blockdaemon.com/)
   - [Belgeler](https://ubiquity.docs.blockdaemon.com/)
   - Faydalar
-    - Gösterge Paneli
+    - Gösterge paneli
     - Düğüm bazında
     - Analizler
 - [**Chainstack**](https://chainstack.com/)
@@ -78,48 +78,48 @@ Bir düğüm hizmeti kullanarak, ürününüzün altyapı yönünü merkezileşt
   - Özellikler
     - Ücretsiz paylaşılan düğümler
     - Paylaşılan arşiv düğümleri
-    - GraphQL desteği
+    - GraphQL destek
     - RPC ve WSS uç noktaları
-    - Özel tam düğümler ve arşiv düğümleri
-    - Özel dağıtımlar için hızlı eşitleme süresi
-    - Bulutunuzu getirin
+    - İthaf olunmuş tam ve arşiv düğümleri
+    - İthaf olunmuş dağıtımlar için hızlı eşitleme süresi
+    - Bulutunu getir
     - Saat başına ödeme fiyatlandırması
-    - Doğrudan 7/24 destek
+    - Doğrudan 24/7 destek
 - [**GetBlock**](https://getblock.io/)
   - [Belgeler](https://getblock.io/docs/get-started/authentication-with-api-key/)
   - Özellikler
     - 40'tan fazla blok zinciri düğümüne erişim
-    - 40 bin ücretsiz günlük talep
+    - 40K ücretsiz günlük istek
     - Sınırsız sayıda API anahtarı
-    - 1 GB/sn ile yüksek bağlantı hızı
+    - 1GB/sn'de yüksek bağlantı hızı
     - İzleme+Arşiv
-    - Gelişmiş analizler
-    - Otomatik güncellemeler
+    - Gelişmiş analitik
+    - Otomatik Güncelleme
     - Teknik destek
 - [**InfStones**](https://infstones.com/)
   - Özellikler
-    - Ücretsiz seviye seçeneği
-    - Kullandıkça ölçeklendirin
+    - Ücretsiz katman seçeneği
+    - Kullandıkça ölçeklendir
     - Analizler
-    - Gösterge Paneli
+    - Gösterge paneli
     - Benzersiz API uç noktaları
-    - Özel tam düğümler
-    - Özel dağıtımlar için hızlı eşitleme süresi
-    - Doğrudan 7/24 destek
+    - İthaf olunmuş tam düğümler
+    - İthaf olunmuş dağıtımlar için hızlı eşitleme süresi
+    - Doğrudan 24/7 destek
     - 50'den fazla blok zinciri düğümüne erişim
 - [**Infura**](https://infura.io/)
   - [Belgeler](https://infura.io/docs)
   - Özellikler
-    - Ücretsiz seviye seçeneği
-    - Kullandıkça ölçeklendirin
+    - Ücretsiz katman seçeneği
+    - Kullandıkça ölçeklendir
     - Ücretli arşiv verileri
-    - Doğrudan Destek
-    - Gösterge Paneli
+    - Doğrudan destek
+    - Gösterge paneli
 - [**Kaleido**](https://kaleido.io/)
   - [Belgeler](https://docs.kaleido.io/)
   - Özellikler
     - Ücretsiz başlangıç ​​seviyesi
-    - Tek tıklamayla Ethereum düğüm dağıtımı
+    - Tek tıklamayla Ethereum düğümü dağıtımı
     - Özelleştirilebilir istemciler ve algoritmalar (Geth, Quorum & Besu || PoA, IBFT & Raft)
     - 500+ yönetimsel ve servis API'leri
     - Ethereum işlem arzı için RESTful arayüz (Apache Kafka destekli)
@@ -130,8 +130,8 @@ Bir düğüm hizmeti kullanarak, ürününüzün altyapı yönünü merkezileşt
     - Hayli ölçeklenebilir, esnek, hızlı ve güvenilir altyapı
     - Bulut HSM gizli anahtar yönetimi
     - Ethereum Mainnet Bağlama
-    - ISO 27k ve SOC 2, Tür 2 sertifikasyonları
-    - Dinamik yürütüm esnası konfigürasyon (örneğin bulut entegrasyonları ekleme, düğüm girdilerini değiştirme v.b.)
+    - ISO 27k ve SOC 2, Tip 2 sertifikasyonları
+    - Dinamik program konfigürasyonu (örneğin bulut entegrasyonları ekleme, düğüm girdilerini değiştirme v.b.)
     - Çoklu bulut, çoklu bölge ve hibrit dağıtım düzenlemeleri için destek
     - Basit saatlik SaaS-esaslı ücretlendirme
     - SLA'lar ve 7/24 destek
@@ -178,7 +178,7 @@ Bir düğüm hizmeti kullanarak, ürününüzün altyapı yönünü merkezileşt
   - [Belgeler](https://rivet.readthedocs.io/en/latest/)
   - Özellikler
     - Ücretsiz katman seçeneği
-    - Kullandıkça ölçeklendirin
+    - Kullandıkça ölçeklendir
 - [**SettleMint**](https://console.settlemint.com/)
   - [Belgeler](https://docs.settlemint.com/)
   - Özellikler
@@ -196,19 +196,19 @@ Bir düğüm hizmeti kullanarak, ürününüzün altyapı yönünü merkezileşt
   - [Belgeler](https://docs.watchdata.io/)
   - Özellikler
     - Veri güvenilirliği
-    - Kopmayan kesintisiz bağlantı
+    - Kopmayan sıfır kesinti bağlantı
     - Süreç otomasyonu
     - Ücretsiz tarifeler
-    - Herhangi bir kullanıcıya uyan yüksek sınırlar
+    - Tüm kullanıcılara uygun yüksek sınırlar
     - Çeşitli düğümler için destek
     - Kaynak ölçeklendirme
     - Yüksek işlem hızları
 
-## Daha fazla bilgi {#further-reading}
+## Daha fazla okuma {#further-reading}
 
 - [Ethereum düğüm hizmetleri listesi](https://ethereumnodes.com/)
 
-## İlgili konular {#related-topics}
+## İlgili Konular {#related-topics}
 
 - [Düğümler ve istemciler](/developers/docs/nodes-and-clients/)
 

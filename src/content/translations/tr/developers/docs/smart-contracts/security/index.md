@@ -217,7 +217,7 @@ Yukarıdaki saldırı türleri akıllı sözleşme kodlama problemlerini (yenide
 
 Daha fazla bilgi:
 
-- [Consensys Akıllı Sözleşme Bilinen Saldırılar](https://consensys.github.io/smart-contract-best-practices/attacks/) - Çoğunluğunda örnek kod olacak şekilde, en önemli zaafiyetlerin gayet okunabilir bir açıklaması.
+- [Consensys Akıllı Sözleşme Bilinen Saldırılar](https://consensys.github.io/smart-contract-best-practices/attacks/) - Çoğunluğunda örnek kod olacak şekilde, en önemli zafiyetlerin gayet okunabilir bir açıklaması.
 - [SWC Registry](https://swcregistry.io/docs/SWC-128) - Ethereum'a ve akıllı sözleşmelere uygulanan CWE'lerin düzenlenmiş bir listesi
 
 ## Güvenlik araçları {#security-tools}
@@ -305,7 +305,7 @@ Slither, bu konuda yeniden giriş için bir potansiyel tespit ederek sorunun ger
 
 Böylece kodunuzla ilgili potansiyel sıkıntıları hızlıca öğrenebilmenizi sağladı. Tüm otomatikleştirilmiş test araçları gibi, Slither mükemmel değildir ve aşırı rapor etmeye meyillidir. Suistimal edilebilir bir zaafiyet olmadığında bile sizi potansiyel bir yeniden giriş hakkında uyarabilir. Genelde kod değişiklikleri arasında Slither çıktısındaki FARKLARI incelemek aşırı derecede aydınlatıcıdır: Projenizin kodu tamamlanıncaya kadar beklemektense ortaya çıkan zaafiyetleri çok daha erken keşfetmeye yardımcı olur.
 
-## Daha Fazla Okuyun {#further-reading}
+## Daha fazla bilgi {#further-reading}
 
 **Akıllı sözleşme güvenliği için en iyi yöntemlere dair kılavuzlar**
 

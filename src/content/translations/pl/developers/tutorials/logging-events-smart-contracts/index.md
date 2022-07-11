@@ -7,7 +7,7 @@ tags:
   - "remix"
   - "solidity"
   - "zdarzenia"
-skill: średnie
+skill: intermediate
 lang: pl
 sidebar: true
 published: 2020-04-03

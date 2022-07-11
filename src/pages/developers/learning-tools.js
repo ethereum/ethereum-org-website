@@ -17,6 +17,7 @@ import {
   CardGrid,
   Page,
 } from "../../components/SharedStyledComponents"
+import FeedbackCard from "../../components/FeedbackCard"
 
 const StyledPage = styled(Page)`
   margin-top: 4rem;
@@ -185,7 +186,7 @@ const LearningToolsPage = ({ data }) => {
     {
       name: "Questbook",
       description: "page-learning-tools-questbook-description",
-      url: "https://questbook.app/",
+      url: "https://learn.questbook.xyz/",
       image: getImage(data.questbook),
       alt: "page-learning-tools-questbook-logo-alt",
       background: "#141236",
@@ -313,6 +314,9 @@ const LearningToolsPage = ({ data }) => {
             </ButtonLink>
           </div>
         </CalloutBanner>
+      </Content>
+      <Content>
+        <FeedbackCard />
       </Content>
     </StyledPage>
   )

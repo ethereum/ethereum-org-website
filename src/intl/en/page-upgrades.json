@@ -1,5 +1,10 @@
 {
+  "page-upgrades-merge-infographic-el": "Ethereum State: transactions, apps, contracts, balances",
+  "page-upgrades-merge-infographic-alt-text": "Infographic illustrating how the Beacon Chain merges into Ethereum's execution layer during the transition from proof-of-work to proof-of-stake.",
   "page-upgrades-beacon-date": "Shipped!",
   "page-upgrades-merge-date": "~Q3/Q4 2022",
-  "page-upgrades-shards-date": "~2023"
+  "page-upgrades-shards-date": "~2023",
+  "page-upgrades-merge-banner-intro": "The Merge is approaching, and comes with changes to Ethereum.",
+  "page-upgrades-merge-banner-content-outdated": "Some content on this page is out-of-date related to these changes. Updates are coming soon.",
+  "page-upgrades-merge-banner-developers-landing": "Some docs have a banner indicating they are out-of-date. Updates coming soon."
 }

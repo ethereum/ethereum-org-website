@@ -9,7 +9,7 @@ tags:
   - "节点"
   - "查询"
   - "Alchemy"
-skill: 初学者
+skill: beginner
 lang: zh
 sidebar: true
 published: 2020-10-30

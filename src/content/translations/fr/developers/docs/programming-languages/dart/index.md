@@ -6,11 +6,11 @@ sidebar: true
 incomplete: true
 ---
 
-## Débuter avec les Contrats intelligents et le langage Solidity {#getting-started-with-smart-contracts-and-solidity}
+## Premiers pas avec les contrats intelligents et le langage Solidity {#getting-started-with-smart-contracts-and-solidity}
 
 ## Tutos {#tutorials}
 
-- [Flutter et blockchain – Dapp Hello World](https://www.geeksforgeeks.org/flutter-and-blockchain-hello-world-dapp/) vous emmène à travers toutes les étapes pour bien débuter :
+- [Flutter et blockchain – dApp Hello World](https://www.geeksforgeeks.org/flutter-and-blockchain-hello-world-dapp/) vous emmène à travers toutes les étapes pour bien débuter :
   1.  Installer la suite de développement [Truffle](https://www.trufflesuite.com/)
   2.  Écrire un contrat intelligent avec [Solidity](https://soliditylang.org/)
   3.  Écrire une interface utilisateur avec Dart

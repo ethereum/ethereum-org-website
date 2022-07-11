@@ -27,6 +27,8 @@ Do you have a background in mathematics, cryptography, or economics? You might b
 - [Ethresear.ch](https://ethresear.ch) - Ethereum’s primary forum for research, and the world’s most influential forum for cryptoeconomics
 - [Ecosystem Support Program's wishlist](https://esp.ethereum.foundation/wishlist/) - research areas where the Ethereum Ecosystem Support Program is actively seeking grant applications
 
+[Explore more active areas of research](/community/research/).
+
 ## Non-technical skillsets <Emoji text=":briefcase:" size={1} />‍ {#non-technical}
 
 If you’re not a developer, it can be hard to know where to start in Ethereum. Here are a few suggestions, along with resources for specific professional backgrounds.
@@ -101,10 +103,10 @@ The Ethereum ecosystem is on a mission to fund public goods and impactful projec
 
 "DAOs" are decentralized autonomous organizations. These groups leverage Ethereum technology to facilitate organization and collaboration. For instance, for controlling membership, voting on proposals, or managing pooled assets. While DAOs are still experimental, they offer opportunities for you to find groups that you identify with, find collaborators, and grow your impact on the Ethereum community. [More on DAOs](/dao/)
 
-- [DAOSquare](https://www.daosquare.io) [@DAOSquare](https://twitter.com/DAOSquare) - _Promote the DAO concept in non-tech field and help people create value through DAO._
+- [DAOSquare](https://www.daosquare.io) [@DAOSquare](https://twitter.com/DAOSquare) - _Promote the DAO concept in non-tech field and help people create value through DAO_
 - [Developer DAO](https://www.developerdao.com/) [@developer_dao](https://twitter.com/developer_dao) - _Community of builders who believe in collective ownership of the internet_
 - [dOrg](https://dOrg.tech) [@dOrg_tech](https://twitter.com/dOrg_tech) - _Freelancer Web3 development collective working as a DAO_
-- [DXdao](https://DXdao.eth.link/) [@DXdao](https://twitter.com/DXdao_) - _Decentralized development & governance of dApps & protocols_
+- [DXdao](https://DXdao.eth.link/) [@DXdao](https://twitter.com/DXdao_) - _Decentralized development & governance of dapps & protocols_
 - [HausDAO](https://daohaus.club) [@nowdaoit](https://twitter.com/nowdaoit) - _Community governance of DAOhaus_
 - [Hero DAO](https://herodao.org/) [@hero_dao](https://twitter.com/hero_dao) - _Community owned superhero franchise_
 - [LexDAO](https://lexdao.coop) [@lex_DAO](https://twitter.com/lex_DAO) - _Legal engineering_

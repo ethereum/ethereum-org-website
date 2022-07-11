@@ -30,7 +30,7 @@ Wenn Sie zweisprachig sind und uns helfen möchten, mehr Menschen zu erreichen, 
 - [BeInCrypto](http://www.beincrypto.com.br) – Nachrichten und Artikel über Kryptowährungen, einschließlich einer Liste von verfügbaren Handelsplätzen in Brasilien
 - [Cointelegraph](http://cointelegraph.com.br/category/analysis) – brasilianische Version von Cointelegraph, einer wichtigen Nachrichtenquelle für Kryptowährungen
 - [Livecoins](http://www.livecoins.com.br/ethereum) – Nachrichten zu Kryptowährungen und Tools
-- [Seudinheiro](http://www.seudinheiro.com/criptomoedas/) – Nachrichten und Berichte über Kryptowährungen
+- [Seudinheiro](http://www.seudinheiro.com/criptomoedas/) - Nachrichten und Berichte über Kryptowährungen
 
 **Bildung**
 
@@ -46,7 +46,7 @@ Wenn Sie zweisprachig sind und uns helfen möchten, mehr Menschen zu erreichen, 
 **Allgemeine Ressourcen**
 
 - [Ethereum.cn](https://www.ethereum.cn/) – von der Community gepflegte Inhalte, die das Upgrade der Konsensschicht, alle Notizen zu den Kernentwicklungssitzungen, Layer 2 usw. umfassen
-- [EthFans](https://github.com/editor-Ajian/EthFans.org-annual-collected-works/) – Lernen Sie alles von den Grundlagen bis zu Ethereum-Themen für Fortgeschrittene
+- [EthFans](https://ethfans.org/) – Lernen Sie alles von den Grundlagen bis zu Ethereum-Themen für Fortgeschrittene
 - [Unitimes](https://mp.weixin.qq.com/s/tvloZSDBSOQN9zDQj_91kA) – von der Community gepflegte Inhalte, die Ethereum, DeFi, NFT, Web3-bezogenes Wissen abdecken
 - [123ETH](https://123eth.org/) – ein Portal für das Ethereum-Ökosystem
 - [Zhen Xiao](http://zhenxiao.com/blockchain/) – kostenlose Online-Kurse über Kryptowährungen und ihre Anwendungen
@@ -60,7 +60,7 @@ Wenn Sie zweisprachig sind und uns helfen möchten, mehr Menschen zu erreichen, 
 
 **Für Entwickler**
 
-- [DappLearning](https://github.com/Dapp-Learning-DAO/Dapp-Learning) – eine Lerngruppe, um Mainstream dApp-Projekte zu studieren, wöchentlich findet ein Gedankenaustausch statt
+- [DappLearning](https://github.com/Dapp-Learning-DAO/Dapp-Learning) – eine Lerngruppe, um Mainstream DApp-Projekte zu studieren, wöchentlich findet ein Gedankenaustausch statt
 - [LearnBlockchain](https://learnblockchain.cn/) – eine Community für Entwickler, die Informationen über die Blockchain-Technologie austauschen
 
 **Für Kryptographieforscher**
@@ -88,7 +88,7 @@ Wenn Sie zweisprachig sind und uns helfen möchten, mehr Menschen zu erreichen, 
 - [Ethereum Italia Podcast](https://www.ethereum-italia.it/podcast/) – Ethereum-Podcast auf Italienisch
 - [Microsoft Learn (Solidity)](https://docs.microsoft.com/it-it/learn/modules/blockchain-learning-solidity/) – Lernen, wie man Solidity verwendet
 - [Microsoft Learn (Smart Contracts)](https://docs.microsoft.com/it-it/learn/modules/blockchain-solidity-ethereum-smart-contracts/) – Lernen, wie man mit Solidity Smart Contracts schreibt
-- [Microsoft Learn (dApps)](https://docs.microsoft.com/it-it/learn/modules/blockchain-create-ui-decentralized-apps/) – Erstellen eine Benutzeroberfläche mit dezentralen Anwendungen
+- [Microsoft Learn (DApps)](https://docs.microsoft.com/it-it/learn/modules/blockchain-create-ui-decentralized-apps/) – Erstellen eine Benutzeroberfläche mit dezentralen Anwendungen
 
 ### Spanisch {#es}
 
@@ -106,14 +106,14 @@ Wenn Sie zweisprachig sind und uns helfen möchten, mehr Menschen zu erreichen, 
 
 ### Vietnamesisch {#vi}
 
-- [Tino Group](https://wiki.tino.org/ethereum-la-gi/) – Überblick über Ethereum, dApps, Wallets und FAQs
+- [Tino Group](https://wiki.tino.org/ethereum-la-gi/) – Überblick über Ethereum, DApps, Wallets und FAQs
 - [Tap Chi Bitcoin](https://tapchibitcoin.io/tap-chi/tin-tuc-ethereum-eth) – Webplattform mit Unterseiten für Ethereum-Nachrichten und -Bildung
 - [Coin68](https://coin68.com/ethereum-tieu-diem/) – Kryptowährungsportal mit Ethereum-Nachrichten und Bildungsinhalten
 
 ### Japanisch {#ja}
 
-- [Japanische Vereinigung für den Austausch virtueller und kryptografischer Vermögenswerte](https://jvcea.or.jp/)
-- [Japanische Cryptoasset Business Association](https://cryptocurrency-association.org/)
-- [Einstieg in die Blockchain-Entwicklung | Microsoft Docs](https://docs.microsoft.com/ja-jp/learn/paths/ethereum-blockchain-development/) - Dieser Lernpfad führt Sie in die Blockchain und die Entwicklung auf der Ethereum-Plattform ein
-- [Mastering Ethereum](https://www.oreilly.co.jp/books/9784873118963/) - Mastering Ethereum auf Japanisch
-- [Hands-On Smart Contract-Entwicklung mit Solidität und Ethereum](https://www.oreilly.co.jp/books/9784873119342/) - Hands-On Smart Contract-Entwicklung mit Solidität und Ethereum auf Japanisch
+- [Japan Virtual and Crypto assets Exchange Association](https://jvcea.or.jp/)
+- [Japan Cryptoasset Business Association](https://cryptocurrency-association.org/)
+- [Einstieg in die Blockchain-Entwicklung – Mehr erfahren | Microsoft Docs](https://docs.microsoft.com/ja-jp/learn/paths/ethereum-blockchain-development/) – Dieser Lernpfad führt Sie in die Blockchain und die Entwicklung auf der Ethereum-Plattform ein
+- [Ethereum meistern](https://www.oreilly.co.jp/books/9784873118963/) – "Ethereum meistern" auf Japanisch
+- [Interaktive Smart-Contract-Entwicklung mit Solidity und Ethereum](https://www.oreilly.co.jp/books/9784873119342/) – "Interaktive Smart-Contract-Entwicklung mit Solidity und Ethereum" auf Japanisch

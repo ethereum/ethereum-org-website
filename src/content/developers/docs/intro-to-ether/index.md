@@ -3,6 +3,7 @@ title: Intro to ether
 description: A developer's introduction to the ether cryptocurrency.
 lang: en
 sidebar: true
+preMergeBanner: true
 ---
 
 ## Prerequisites {#prerequisites}
@@ -33,7 +34,7 @@ It is [common](https://www.reuters.com/article/us-crypto-currencies-lending-insi
 
 Minting is the process in which new ether gets created on the Ethereum ledger. The underlying Ethereum protocol creates the new ether, and it is not possible for a user to create ether.
 
-Ether is minted when a miner creates a block on the Ethereum blockchain. As an incentive to miners, the protocol grants a reward in each block, incrementing the balance of an address set by the block's miner. The block reward has changed over time, and today it is 2 ETH per block.
+Ether is minted when a new block is created on the Ethereum blockchain. As an incentive to build blocks, the protocol grants a reward in each block, incrementing the balance of an address set by the block producer. The block reward has changed over time, and today it is 2 ETH per block. After the merge issuance to each validator depends upon the amount of ether they have staked and their performance.
 
 ## Burning ether {#burning-ether}
 
@@ -41,7 +42,7 @@ As well as creating ether through block rewards, ether can get destroyed by a pr
 
 Ether burn occurs in every transaction on Ethereum. When users pay for their transactions, a base gas fee, set by the network according to transactional demand, gets destroyed. This, coupled with variable block sizes and a maximum gas fee, simplifies transaction fee estimation on Ethereum. When network demand is high, [blocks](https://etherscan.io/block/12965263) can burn more ether than they mint, effectively offsetting ether issuance.
 
-Burning the base fee prevents various ways the miners could manipulate it otherwise. For example, if miners got the base fee, they could include their own transactions for free and raise the base fee for everyone else. Alternatively, they could refund the base fee to some users off-chain, leading to a more opaque and complex transaction fee market.
+Burning the base fee prevents various ways block producers could manipulate it otherwise. For example, if block producers received the base fee, they could include their own transactions for free and raise the base fee for everyone else. Alternatively, they could refund the base fee to some users off-chain, leading to a more opaque and complex transaction fee market.
 
 ## Denominations of ether {#denominations}
 
@@ -68,11 +69,12 @@ When the recipient address is a [smart contract](/developers/docs/smart-contract
 
 Users can query the ether balance of any [account](/developers/docs/accounts/) by inspecting the account's `balance` field, which shows ether holdings denominated in wei.
 
-[Etherscan](https://etherscan.io) is a popular tool to inspect address balances via a web-based application. For example, [this Etherscan page](https://etherscan.io/address/0xde0b295669a9fd93d5f28d9ec85e40f4cb697bae) shows the balance for the Ethereum Foundation.
+[Etherscan](https://etherscan.io) is a popular tool to inspect address balances via a web-based application. For example, [this Etherscan page](https://etherscan.io/address/0xde0b295669a9fd93d5f28d9ec85e40f4cb697bae) shows the balance for the Ethereum Foundation. Account balances can also be queried using wallets or directly by making requests to nodes.
 
 ## Further reading {#further-reading}
 
 - [Defining Ether and Ethereum](https://www.cmegroup.com/education/courses/introduction-to-ether/defining-ether-and-ethereum.html) – _CME Group_
 - [Ethereum Whitepaper](/whitepaper/): The original proposal for Ethereum. This document includes a description of ether and the motivations behind its creation.
+- [Gwei Calculator](https://www.alchemy.com/gwei-calculator): Use this gwei calculator to easily convert wei, gwei, and ether. Simply plug in any amount of wei, gwei, or ETH and automatically calculate the conversion.
 
 _Know of a community resource that helped you? Edit this page and add it!_

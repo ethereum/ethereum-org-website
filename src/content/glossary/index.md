@@ -217,10 +217,10 @@ DAG stands for Directed Acyclic Graph. It is a data structure composed of nodes 
 
 ### Dapp {#dapp}
 
-Decentralized application. At a minimum, it is a [smart contract](#smart-contract) and a web user interface. More broadly, a Dapp is a web application that is built on top of open, decentralized, peer-to-peer infrastructure services. In addition, many Dapps include decentralized storage and/or a message protocol and platform.
+Decentralized application. At a minimum, it is a [smart contract](#smart-contract) and a web user interface. More broadly, a dapp is a web application that is built on top of open, decentralized, peer-to-peer infrastructure services. In addition, many dapps include decentralized storage and/or a message protocol and platform.
 
 <DocLink to="/developers/docs/dapps/">
-  Introduction to Dapps
+  Introduction to dapps
 </DocLink>
 
 ### data availability {#data-availability}
@@ -355,7 +355,7 @@ Ethereum's execution layer is the network of [execution clients](#execution-clie
 
 ### externally owned account (EOA) {#eoa}
 
-An [account](#account) created by or for human users of the Ethereum network.
+Externally owned accounts (EOAs) are [accounts](#account) that are controlled by users who control the [private keys](#private-key) for an account, typically generated using a [seed phrase](#hd-wallet-seed). Externally owned accounts are accounts without any code associated with them. Typically these accounts are used with a [wallet](#wallet).
 
 ### Ethereum Request for Comments (ERC) {#erc}
 
@@ -510,7 +510,6 @@ A [wallet](#wallet) using the hierarchical deterministic (HD) key creation and t
 
 A value used to generate the master [private key](#private-key) and master chain code for an HD [wallet](#wallet). The wallet seed can be represented by mnemonic words, making it easier for humans to copy, back up, and restore private keys.
 
-
 ### homestead {#homestead}
 
 The second development stage of Ethereum, launched in March 2016 at block 1,150,000.
@@ -575,7 +574,6 @@ Every account’s private key/address pair exists as a single keyfile in an Ethe
 
 Cryptographic [hash](#hash) function used in Ethereum. Keccak-256 was standardized as [SHA](#sha)-3.
 
-
 <Divider />
 
 ## L {#section-l}
@@ -615,6 +613,10 @@ The [fork-choice algorithm](#fork-choice-algorithm) used by Ethereum's consensus
 ### Mainnet {#mainnet}
 
 Short for "main network," this is the main public Ethereum [blockchain](#blockchain). Real ETH, real value, and real consequences. Also known as layer 1 when discussing [layer 2](#layer-2) scaling solutions. (Also, see [testnet](#testnet))
+
+<DocLink to="/developers/docs/networks/">
+  Ethereum networks
+</DocLink>
 
 ### memory-hard {#memory-hard}
 
@@ -749,7 +751,7 @@ A secret number that allows Ethereum users to prove ownership of an account or c
 
 ### private chain {#private-chain}
 
-A fully private blockchain is one with permissioned access, not publicly available for use. 
+A fully private blockchain is one with permissioned access, not publicly available for use.
 
 ### proof-of-stake (PoS) {#pos}
 
@@ -875,6 +877,10 @@ Short for "succinct non-interactive argument of knowledge", a SNARK is a type of
   Zero-knowledge rollups
 </DocLink>
 
+### soft fork {#soft-fork}
+
+A divergence in a [blockchain](#blockchain) that occurs when the [consensus rules](#consensus-rules) become change. Contrary to a [hard fork](#hard-fork), a soft fork is backwards compatible; upgraded nodes can validate blocks created by non-upgraded nodes as long as they follow the new consensus rules.
+
 ### Solidity {#solidity}
 
 A procedural (imperative) programming language with syntax that is similar to JavaScript, C++, or Java. The most popular and most frequently used language for Ethereum [smart contracts](#smart-contract). Created by Dr. Gavin Wood.
@@ -951,11 +957,15 @@ A denomination of [ether](#ether). 1 szabo = 10<sup>12</sup> [wei](#wei), 10<sup
 
 A [hard fork](#hard-fork) of the Ethereum blockchain, which occurred at block 2,463,000 to change the [gas](#gas) calculation for certain I/O-intensive operations and to clear the accumulated state from a denial-of-service attack, which exploited the low gas cost of those operations.
 
+### terminal total difficulty (TTD) {#terminal-total-difficulty}
+
+The total difficulty is the sum of the Ethash mining difficulty for all blocks up to some specific point in the blockchain. The terminal total difficulty is a specific value for the total difficulty that will be used as the trigger for execution clients to switch off their mining and block gossip functions so the network can transition to proof-of-stake.
+
 ### testnet {#testnet}
 
 Short for "test network," a network used to simulate the behavior of the main Ethereum network (see [Mainnet](#mainnet)).
 
-<DocLink to="/developers/docs/networks/#testnets">
+<DocLink to="/developers/docs/networks/#ethereum-testnets">
   Testnets
 </DocLink>
 
@@ -1048,7 +1058,7 @@ Software that holds [private keys](#private-key). Used to access and control Eth
 
 ### Web3 {#web3}
 
-The third version of the web. First proposed by Dr. Gavin Wood, Web3 represents a new vision and focus for web applications- from centrally owned and managed applications, to applications built on decentralized protocols (see [Dapp](#dapp)).
+The third version of the web. First proposed by Dr. Gavin Wood, Web3 represents a new vision and focus for web applications- from centrally owned and managed applications, to applications built on decentralized protocols (see [dapp](#dapp)).
 
 <DocLink to="/developers/docs/web2-vs-web3/">
   Web2 vs Web3

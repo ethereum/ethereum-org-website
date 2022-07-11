@@ -5,7 +5,7 @@ lang: tr
 sidebar: true
 ---
 
-İşlemler, hesaplardan kriptografik olarak imzalanmış talimatlardır. Bir hesap, Ethereum ağının durumunu güncellemek için bir işlem başlatacaktır. En basit işlem ETH'yi bir hesaptan diğerine aktarmaktır.
+İşlemler, hesaplardan gelen kriptografik olarak imzalanmış talimatlardır. Bir hesap, Ethereum ağının durumunu güncellemek için bir işlem başlatacaktır. En basit işlem ETH'yi bir hesaptan diğerine aktarmaktır.
 
 ## Ön koşullar {#prerequisites}
 
@@ -105,15 +105,15 @@ Yanıt örneği:
 
 ### Veri alanı {#the-data-field}
 
-İşlemlerin büyük bir çoğunluğu bir sözleşmeye dıştan sahiplenilmiş bir hesaptan erişir. Çoğu sözleşme Solidity ile yazılmıştır ve veri alanlarını [uygulama ikili arayüzü (ABI)](/glossary/#abi/) ile uyumlu olacak şekilde yorumlar.
+İşlemlerin büyük bir çoğunluğu, bir sözleşmeye dıştan sahiplenilmiş bir hesaptan erişir. Çoğu sözleşme Solidity ile yazılmıştır ve veri alanlarını [uygulama ikili arayüzü (ABI)](/glossary/#abi/) ile uyumlu olacak şekilde yorumlar.
 
-İlk dört bayt hangi fonksiyonun çağrılacağını, fonksiyonun isminin ve argümanlarının karmasını kullanarak belirler. Bazen fonksiyonu seçiciden [bu veritabanını](https://www.4byte.directory/signatures/) kullanarak tespit edebilirsiniz.
+İlk dört bayt, fonksiyonun isminin ve argümanlarının hash değerini kullanarak hangi fonksiyonun çağrılacağını belirler. Bazen seçiciden [bu veri tabanını](https://www.4byte.directory/signatures/) kullanarak fonksiyonu tespit edebilirsiniz.
 
-Çağrı verisinin gerisi [ABI koşullarına uygun şekilde şifrelenmiş olan](https://docs.soliditylang.org/en/latest/abi-spec.html#formal-specification-of-the-encoding) argümanlardır.
+Çağrı verisinin geri kalanı, [ABI şartnamesine uygun şekilde şifrelenmiş olan](https://docs.soliditylang.org/en/latest/abi-spec.html#formal-specification-of-the-encoding) argümanlardır.
 
-Örnek olarak, [bu işleme](https://etherscan.io/tx/0xd0dcbe007569fcfa1902dae0ab8b4e078efe42e231786312289b1eee5590f6a1) bakalım. Çağrı verisini görmek için **Daha Fazlasını görmek için Tıkla**'yı kullanın.
+Örnek olarak, [bu işleme](https://etherscan.io/tx/0xd0dcbe007569fcfa1902dae0ab8b4e078efe42e231786312289b1eee5590f6a1) bakalım. Çağrı verisini görmek için **Click to see More** düğmesini kullanın.
 
-Fonksiyon seçicisi `0xa9059cbb`. [Bu imza ile bilinen birkaç fonksiyon](https://www.4byte.directory/signatures/?bytes4_signature=0xa9059cbb) var. Bu durumda [sözleşme kaynak kodu](https://etherscan.io/address/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48#code) Etherscan'e yüklenmiş, yani fonksiyonun `transfer(address,uint256)` olduğunu biliyoruz.
+`0xa9059cbb` fonksiyon seçicisidir. [Bu imza ile bilinen birkaç fonksiyon](https://www.4byte.directory/signatures/?bytes4_signature=0xa9059cbb) var. Bu durumda [sözleşme kaynak kodu](https://etherscan.io/address/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48#code) Etherscan'e yüklenmiş, yani fonksiyonun `transfer(address,uint256)` olduğunu biliyoruz.
 
 Verinin geri kalanı:
 
@@ -122,7 +122,7 @@ Verinin geri kalanı:
 000000000000000000000000000000000000000000000000000000003b0559f4
 ```
 
-ABI koşullarına göre, tamsayı değerleri (20 bayt tamsayılar olan adresler gibi) ABI içinde 32 bayt kelimelerin önü sıfırlarla doldurulmuş şekilde bulunurlar. Yani `to` adresinin [`4f6742badb049791cd9a37ea913f2bac38d01279`](https://etherscan.io/address/0x4f6742badb049791cd9a37ea913f2bac38d01279) olduğunu biliyoruz. `value` ise 0x3b0559f4 = 990206452.
+ABI koşullarına göre, tamsayı değerleri (20 bayt tamsayılar olan adresler gibi) ABI içinde 32 bayt kelimelerin önü sıfırlarla doldurulmuş şekilde bulunurlar. Yani `to` adresinin [`4f6742badb049791cd9a37ea913f2bac38d01279`](https://etherscan.io/address/0x4f6742badb049791cd9a37ea913f2bac38d01279) olduğunu biliyoruz. `value` ise 0x3b0559f4 = 990206452'dir.
 
 ## İşlem türleri {#types-of-transactions}
 
@@ -130,33 +130,33 @@ Ethereum'da birkaç farklı işlem türü vardır:
 
 - Düzenli işlemler: Bir cüzdandan diğerine yapılan işlem.
 - Sözleşme dağıtım işlemleri: Veri alanının sözleşme kodu için kullanıldığı, "to"' (gönderilen adres) adresi olmayan bir işlem.
-- Bir sözleşmenin yürütümü: dağıtılmış akıllı sözleşme ile etkileşime geçen bir işlem. Bu durumda, 'to' adresi akıllı sözleşme adresidir.
+- Bir sözleşmenin yürütümü: dağıtılmış akıllı sözleşme ile etkileşime geçen bir işlem. Bu durumda, "to" adresi akıllı sözleşme adresidir.
 
 ### Gaz hakkında {#on-gas}
 
-Belirtildiği gibi, işlemlerin yürütülmesi [gaz](/developers/docs/gas/) maliyetidir. Basit transfer işlemleri 21000 birim Gaz gerektirir.
+Belirtildiği gibi, işlemlerin yürütülmesi [gaz](/developers/docs/gas/) harcar. Basit transfer işlemleri 21.000 birim Gaz gerektirir.
 
-Dolayısıyla Bob'un Alice 1 ETH'yi 190 gwei `baseFeePerGas` ve 10 gwei `maxPriorityFeePerGas` ile göndermesi için Bob'un aşağıdaki ücreti ödemesi gerekir:
+Dolayısıyla Bob'un 1 ETH'yi Alice'e 190 gwei `baseFeePerGas` ve 10 gwei `maxPriorityFeePerGas` ile göndermesi için Bob'un aşağıdaki ücreti ödemesi gerekir:
 
 ```
-(190 + 10) * 21000 = 4,200,000 gwei
+(190 + 10) * 21.000 = 4.200.000 gwei
 --veya--
-0.0042 ETH
+0,0042 ETH
 ```
 
-Bob'un hesabına borç kaydedilecek **-1.0042 ETH**
+Bob'un hesabı **-1,0042 ETH** borçlandırılır
 
-Alice'in hesabına yatırılacak **+1.0 ETH**
+Alice'in hesabı **+1,0 ETH** alacaklandırılır
 
-Taban ücret yakılacaktır **-0.00399 ETH**
+Taban ücret yakılacaktır **-0,00399 ETH**
 
-Madenci bahşişi elinde tutuyor **+0.000210 ETH**
+Madenci **+0,000210 ETH** bahşişi kendine alır
 
 Gaz, herhangi bir akıllı sözleşme etkileşimi için de gereklidir.
 
-![Kullanılmayan gazın nasıl iade edildiğini gösteren diyagram](./gas-tx.png) _Diyagram, Ethereum EVM resmedici tarafından uyarlanmıştır_
+![Kullanılmayan gazın nasıl iade edildiğini gösteren diyagram](./gas-tx.png) _Diyagram [Ethereum EVM resmediciden](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf) uyarlanmıştır_
 
-İşlemde kullanılmayan gaz kullanıcı hesabına iade edilir.
+İşlemde kullanılmayan gaz, kullanıcı hesabına iade edilir.
 
 ## İşlem yaşam döngüsü {#transaction-lifecycle}
 
@@ -178,11 +178,11 @@ Austin'in işlemlerde, gazda ve madencilikte size yol göstermesini izleyin.
 
 ## Yazılan İşlem Zarfı {#typed-transaction-envelope}
 
-Ethereum'un başlangıçta işlemler için bir formatı vardı. Her işlem, adres, değer, veri, v, r ve s için nonce, gaz fiyatı, gaz limiti içeriyordu. Bu alanlar, şöyle görünecek şekilde RLP kodludur:
+Ethereum'un başlangıçta işlemler için tek bir formatı vardı. Her işlem, adres, değer, veri, v, r ve s için nonce, gaz fiyatı, gaz limiti içeriyordu. Bu alanlar, şöyle görünecek şekilde RLP kodludur:
 
 `RLP([nonce, gasPrice, gasLimit, to, value, data, v, r, s])`
 
-Ethereum, erişim listeleri ve [EIP gibi yeni özelliklere izin vermek için birden çok işlem türünü destekleyecek şekilde gelişti. -1559](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md), eski işlem biçimlerini etkilemeden uygulanacak.
+Ethereum, erişim listelerini ve [EIP-1559](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md)'un eski işlem formatlarını etkilemeden uygulanmasını mümkün kılmak için birçok işlem türünü destekleyecek şekilde evrildi.
 
 [EIP-2718: Yazılan İşlem Zarfı](https://eips.ethereum.org/EIPS/eip-2718), gelecekteki işlem türleri için bir zarf olan bir işlem türünü tanımlar.
 
@@ -190,12 +190,12 @@ EIP-2718, yazılan işlemler için yeni bir genelleştirilmiş zarftır. Yeni st
 
 `TransactionType || TransactionPayload`
 
-Alanların şu şekilde tanımlandığı yerler:
+Burada alanlar şu şekilde tanımlanır:
 
 - `TransactionType` - toplam 128 olası işlem türü için 0 ile 0x7f arasında bir sayı.
 - `TransactionPayload` - işlem türü tarafından tanımlanan rastgele bir bayt dizisi.
 
-## Daha fazla bilgi {#further-reading}
+## Daha fazla okuma {#further-reading}
 
 - [EIP-2718: Yazılan İşlem Zarfı](https://eips.ethereum.org/EIPS/eip-2718)
 

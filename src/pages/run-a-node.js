@@ -26,8 +26,9 @@ import {
   Content,
   Divider,
   Page,
-  CardGrid,
   InfoGrid,
+  Width60,
+  Width40,
 } from "../components/SharedStyledComponents"
 import ExpandableCard from "../components/ExpandableCard"
 import ExpandableInfo from "../components/ExpandableInfo"
@@ -199,23 +200,6 @@ const ColumnNarrow = styled.div`
   inset: auto;
   justify-content: center;
   align-items: center;
-  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
-    width: 100%;
-  }
-`
-
-const Width60 = styled.div`
-  flex: 3;
-  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
-    width: 100%;
-  }
-`
-
-const Width40 = styled.div`
-  flex: 2;
-  display: flex;
-  justify-content: center;
-  align-self: center;
   @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
     width: 100%;
   }
@@ -415,12 +399,6 @@ const Leslie = styled(GatsbyImage)`
   @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
     transform: scaleX(-1) translateY(-3rem);
   }
-`
-
-const StyledFeedbackCard = styled(FeedbackCard)`
-  width: 100%;
-  max-width: 700px;
-  margin: 0 2rem;
 `
 
 const StrongParagraph = styled.p`
@@ -1019,9 +997,9 @@ const RunANodePage = ({ data }) => {
           </li>
         </ul>
       </Content>
-      <StyledFeedbackCard
-        prompt={translateMessageId("page-run-a-node-feedback-prompt", intl)}
-      />
+      <Content>
+        <FeedbackCard />
+      </Content>
     </GappedPage>
   )
 }

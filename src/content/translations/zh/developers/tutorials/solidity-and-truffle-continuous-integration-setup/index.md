@@ -11,7 +11,7 @@ tags:
   - "truffle"
   - "持续集成"
   - "ganache"
-skill: 中等难度
+skill: intermediate
 published: 2020-06-05
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/continuous-integration

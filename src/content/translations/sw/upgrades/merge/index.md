@@ -6,7 +6,7 @@ template: upgrade
 sidebar: true
 image: ../../../../../assets/upgrades/merge.png
 summaryPoint1: Hatimaye Ethereum ya sasa itafanya "muungano" na mfumo wa uthibitisho-wa-hisa wa mnyororo kioleza.
-summaryPoint2: Hii itaweka alama ya kuhitumu kwa ethereum ya uthibitisho-wa-kazi, na mpito mzima kwenda kwenye uthibitisho-wa-hisa.
+summaryPoint2: Hii itaweka alama ya kuhitumu kwa Ethereum ya uthibitisho-wa-kazi, na mpito mzima kwenda kwenye uthibitisho-wa-hisa.
 summaryPoint3: Hii imepangwa kutangulia utolewaji wa minyororo ya vigae.
 summaryPoint4: Kabla tuliita hii hatua kama "utiaji nanga"
 ---
@@ -59,7 +59,7 @@ Hapo awali, mpango huo ulikuwa ukifanya kazi kwenye minyororo iliyokatwa kabla y
 
 Hii itakuwa tathmini inayoendelea kutoka kwa jamii juu ya hitaji la raundi nyingi za vipande vya minyororo ili kuruhusu uendelevu usio na mwisho.
 
-<ButtonLink to="/upgrades/shard-chains/">
+<ButtonLink to="/upgrades/sharding/">
   Vipande vya minyororo
 </ButtonLink>
 

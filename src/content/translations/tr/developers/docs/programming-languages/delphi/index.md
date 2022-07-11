@@ -12,7 +12,7 @@ Delphi programlama dilini kullanarak nasıl Ethereum için geliştireceğinizi �
 
 </div>
 
-Ethereum'u, kripto para birimi ve blok zinciri teknolojisinin avantajlarından faydalanan merkeziyetsiz uygulamalar (veya "dapp'ler") oluşturmak için kullanın. Bu dapp'ler güvenilir olabilir, yani Ethereum'a dağıtıldıktan sonra her zaman programlandığı gibi çalışırlar. Yeni tür finansal uygulamalar oluşturmak için dijital varlıkları kontrol edebilirler. Merkeziyetsiz olabilirler, yani hiç bir kurum veya kişi onları kontrol edemez ve sansürlenmeleri neredeyse imkansızdır.
+Kripto Para ve Blok Zincirinin avantajlarını kullanarak Merkezsiz uygulamalar (veya "dApps") oluşturmak için Ethereum'u kullanın. Bu dapp'ler güvenilir olabilir, yani Ethereum'a dağıtıldıktan sonra her zaman programlandığı gibi çalışırlar. Yeni tür finansal uygulamalar oluşturmak için dijital varlıkları kontrol edebilirler. Merkezsiz olabilirler, yani hiç bir kurum veya kişi onları kontrol edemez ve sansürlenmeleri neredeyse imkansızdır.
 
 Delphi programlama dilini kullanarak Ethereum üzerinde merkeziyetsiz uygulamalar geliştirin ve akıllı sözleşmelerle etkileşime geçin!
 
@@ -22,10 +22,10 @@ Delphi programlama dilini kullanarak Ethereum üzerinde merkeziyetsiz uygulamala
 
 Başlamadan önce temel bilgilere mi ihtiyacınız var? [ethereum.org/learn](/learn/) veya [ethereum.org/developers](/developers/) adreslerine göz atın.
 
-- [Blok Zinciri Açıklaması](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
+- [Blockchain Açıklaması](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
 - [Akıllı Sözleşmeleri Anlamak](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
 - [İlk Akıllı Sözleşmenizi Yazın](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
-- [Solidity'yi Nasıl Derleyeceğinizi ve Dağıtacağınızı Öğrenin](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
+- [Solidity'i Nasıl Derleyeceğinizi ve Dağıtacağınızı Öğrenin](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 
 ## Başlangıç Düzeyi Yardımcı Kaynaklar ve Bağlantılar {#beginner-references-and-links}
 
@@ -41,13 +41,13 @@ Başlamadan önce temel bilgilere mi ihtiyacınız var? [ethereum.org/learn](/le
 - [3 dakikalık bir Akıllı Sözleşme ve Delphi - Bölüm 1](https://medium.com/@svanas/a-3-minute-smart-contract-and-delphi-61d998571d)
 - [3 dakikalık bir Akıllı Sözleşme ve Delphi - Bölüm 2](https://medium.com/@svanas/a-3-minute-smart-contract-and-delphi-part-2-446925faa47b)
 
-## Orta Seviye Makaleler {#intermediate-articles}
+## Orta seviye makaleler {#intermediate-articles}
 
 - [Delphi'de Ethereum tarafından imzalanmış bir mesaj imzası oluşturma](https://medium.com/@svanas/generating-an-ethereum-signed-message-signature-in-delphi-75661ce5031b)
 - [Delphi ile ether aktarımı](https://medium.com/@svanas/transferring-ether-with-delphi-b5f24b1a98a4)
 - [Delphi ile ERC-20 token'larının aktarımı](https://medium.com/@svanas/transferring-erc-20-tokens-with-delphi-bb44c05b295d)
 
-## İleri Düzey Kullanım Şekilleri {#advanced-use-patterns}
+## İleri düzey kullanım Şşkilleri {#advanced-use-patterns}
 
 - [Delphi ve Ethereum İsim Servisi (ENS)](https://medium.com/@svanas/delphi-and-ethereum-name-service-ens-4443cd278af7)
 - [QuikNode, Ethereum ve Delphi](https://medium.com/@svanas/quiknode-ethereum-and-delphi-f7bfc9671c23)

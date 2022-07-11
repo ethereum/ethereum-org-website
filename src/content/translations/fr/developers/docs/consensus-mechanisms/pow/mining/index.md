@@ -24,7 +24,7 @@ Ethereum, comme Bitcoin, utilise actuellement un mécanisme de consensus appelé
 
 Dans les systèmes décentralisés comme Ethereum, nous devons nous assurer que tout le monde s'accorde sur l'ordre des transactions. Les mineurs aident à cela en résolvant des casse-têtes complexes sur le plan informatique afin de produire des blocs, qui constituent un moyen de sécuriser le réseau des attaques.
 
-[Plus d'infos sur la preuve de travail](/developers/docs/consensus-mechanisms/pow/)
+[En savoir plus sur la preuve de travail](/developers/docs/consensus-mechanisms/pow/)
 
 ## Qui peut devenir mineur sur Ethereum ? {#who-can-become-a-miner}
 
@@ -44,7 +44,7 @@ Pour explorer davantage la rentabilité du minage, utilisez un calculateur de mi
 1. Un utilisateur rédige et signe une demande de [transaction](/developers/docs/transactions/) avec la clé privée d'un [compte](/developers/docs/accounts/).
 2. L'utilisateur diffuse la demande de transaction sur l'ensemble du réseau Ethereum à partir de certains [nœuds](/developers/docs/nodes-and-clients/).
 3. Dès qu'il a connaissance de la nouvelle demande de transaction, chaque nœud du réseau Ethereum l'ajoute à son « mempool », une zone d'attente de toutes les demandes de transaction dont il a connaissance et qui n'ont pas encore été engagées dans un bloc de la blockchain.
-4. À un moment donné, un nœud de minage regroupe plusieurs dizaines ou centaines de demandes de transaction dans un [bloc](/developers/docs/blocks/) potentiel, de façon à maximiser les [frais de transaction](/developers/docs/gas/) gagnés, tout en restant sous la limite de carburant du bloc. Dès lors, le nœud de minage :
+4. À un moment donné, un nœud de minage regroupe plusieurs dizaines ou centaines de demandes de transaction dans un [bloc](/developers/docs/blocks/) potentiel, de façon à maximiser les [frais de transaction](/developers/docs/gas/) gagnés, tout en restant sous la limite de gaz du bloc. Dès lors, le nœud de minage :
    1. Vérifie la validité de chaque demande de transaction (c'est-à-dire que personne n'essaie de transférer un ether depuis un compte pour lequel il n'a pas fourni de signature, que la demande n'est pas mal rédigée, etc.), puis exécute le code de la demande, modifiant l'état de sa copie locale de l'EVM, la machine virtuelle d'Ethereum. Le mineur attribue les frais de transaction pour chaque demande de transaction à son propre compte.
    2. Commence le processus de production du « certificat de légitimité de preuve de travail » pour le bloc potentiel, une fois que toutes les demandes de transaction du bloc ont été vérifiées et exécutées sur la copie locale de l'EVM.
 5. Enfin, un mineur finira de produire un certificat pour un bloc qui inclut notre demande de transaction spécifique. Le mineur diffuse ensuite le bloc terminé qui comprend le certificat et la somme de contrôle du nouvel état de l'EVM.
@@ -72,6 +72,6 @@ Regardez Austin vous guider à travers le minage et la blockchain.
 
 ## Sujets connexes {#related-topics}
 
-- [Carburant](/developers/docs/gas/)
+- [Gaz](/developers/docs/gas/)
 - [EVM](/developers/docs/evm/)
 - [Preuve de travail](/developers/docs/consensus-mechanisms/pow/)

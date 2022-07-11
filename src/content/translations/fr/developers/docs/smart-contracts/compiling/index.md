@@ -1,5 +1,5 @@
 ---
-title: Compiler des contrat intelligents
+title: Compiler des contrats intelligents
 description: Explication de la raison d'une compilation et pourquoi elle est nécessaire pour les contrats intelligents
 lang: fr
 sidebar: true
@@ -40,7 +40,7 @@ Le compilateur produira également l'**interface binaire-programme (ABI)** dont 
 
 L'ABI est un fichier JSON qui décrit le contrat déployé et ses fonctions de contrat intelligent. Cela aide à combler le fossé entre Web2 et Web3
 
-Une [bibliothèque cliente JavaScript](/developers/docs/apis/javascript/) va lire l'**ABI** afin que vous puissiez appeler votre contrat intelligent dans l'interface de votre application Web.
+Une [bibliothèque cliente JavaScript](/developers/docs/apis/javascript/) va lire l'**ABI** afin de vous laisser appeler votre contrat intelligent dans l'interface de votre application Web.
 
 Vous trouverez ci-dessous l’ABI pour le contrat de jetons ERC-20. Un jeton ERC-20 est un jeton que vous pouvez échanger sur Ethereum.
 

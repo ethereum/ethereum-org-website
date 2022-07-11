@@ -627,10 +627,10 @@ contract CryptoPizza is IERC721, ERC165 {
         uint256 size;
         // Currently there is no better way to check if there is a contract in an address
         // than to check the size of the code at that address.
-        // See https://ethereum.stackexchange.com/a/14016/36603
-        // for more details about how this works.
-        // TODO Check this again before the Serenity release, because all addresses will be
-        // contracts then.
+        // Voir https://ethereum.stackexchange.com/a/14016/36603
+        // pour plus de détails sur le fonctionnement.
+        // TODO Vérifiez cela à nouveau avant la version Serenity, car toutes les adresses seront alors contractuelles
+        // .
         // solium-disable-next-line security/no-inline-assembly
         assembly {
             size := extcodesize(account)
@@ -640,7 +640,7 @@ contract CryptoPizza is IERC721, ERC165 {
 }
 ```
 
-## Complément d'information {#further-reading}
+## En lire plus {#further-reading}
 
 Consultez la documentation Solidity et Vyper pour une vue d'ensemble plus complète des contrats intelligents :
 

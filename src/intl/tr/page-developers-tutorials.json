@@ -1,4 +1,7 @@
 {
+  "page-tutorial-beginner": "Yeni başlayan",
+  "page-tutorial-intermediate": "Orta düzey",
+  "page-tutorial-advanced": "Gelişmiş",
   "comp-tutorial-metadata-minute-read": "dakikalık okuma",
   "page-tutorial-listing-policy-intro": "Eğitime başlamadan önce listeleme politikalarımızı okuyun.",
   "comp-tutorial-metadata-tip-author": "İpucu yazarı",
@@ -15,8 +18,9 @@
   "page-tutorial-submit-btn": "Bir eğitimi iletin",
   "page-tutorial-submit-tutorial": "Bir eğitimi iletmek için GitHub kullanmanız gerekir. Bir sorun veya bir çekme talebi oluşturmanızı memnuniyetle karşılıyoruz.",
   "page-tutorial-subtitle": "Düzenlenmiş topluluk eğitimleri listemize hoş geldiniz.",
-  "page-tutorial-tags-error": "Bu etiketlerin hiçbirinde eğitici yok henüz",
+  "page-tutorial-tags-error": "Bu etiketlerin hiçbirinde eğitici yok",
   "page-tutorial-title": "Ethereum Geliştirme Sunumları",
   "page-tutorials-meta-description": "İncelenen Ethereum topluluğu eğitimlerine konuya göre göz atın ve filtreleyin.",
+  "page-tutorial-external-link": "Harici",
   "page-tutorials-meta-title": "Ethereum Geliştirme Öğreticileri"
 }

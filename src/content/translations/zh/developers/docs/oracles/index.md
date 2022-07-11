@@ -8,7 +8,7 @@ incomplete: true
 
 预言机是将以太坊连接到链外、真实世界信息的数据源，以便您可以在智能合约中查询数据。 例如，预测市场的去中心化应用程序使用预言机来根据事件进行结算。 预测市场可能要求您使用以太币来打赌下一任美国总统是谁。 他们将使用一个预言机来确认结果并向获胜者付款。
 
-## 前置要求 {#prerequisites}
+## 先决条件 {#prerequisites}
 
 请确保您熟悉[节点](/developers/docs/nodes-and-clients/)、[共识机制](/developers/docs/consensus-mechanisms/)和[智能合约解析](/developers/docs/smart-contracts/anatomy/)，尤其是事件。
 

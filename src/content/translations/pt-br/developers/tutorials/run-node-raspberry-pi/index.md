@@ -72,7 +72,7 @@ Ambas as imagens incluem os mesmos pacotes, a única diferença entre elas é qu
 - Disco SSD 3.0 (ver seção de armazenamento)
 - Fonte de alimentação
 - Cabo de rede
-- Redirecionamento da porta 30303 (camada de execução) e da porta 13000 (camada de consenso) [[4]](/en/developers/tutorials/run-node-raspberry-pi/#references)
+- Redirecionamento da porta 30303 (camada de execução) e da porta 13000 (camada de consenso) [[4]](/developers/tutorials/run-node-raspberry-pi/#references)
 - Um gabinete com dissipador de calor e ventilador (opcional, mas altamente recomendado)
 - Teclado USB, Monitor e cabo HDMI (microHDMI) (opcional)
 

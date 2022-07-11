@@ -86,13 +86,13 @@ Ethereum ekosistemi, kamu mallarını ve etkili projeleri finanse etmeyi hedefle
 **Ethereum'da çalışacağınız bir iş bulmak ister misiniz?**
 
 - [ethereum.org işleri](/about/#open-jobs)
-- [Ethereum Vakfı iş paneli (Lever)](https://jobs.lever.co/ethereumfoundation)
-- [Ethereum Vakfı iş paneli (BambooHR)](https://ethereum.bamboohr.com/jobs/)
+- [Ethereum Vakfı iş ilanları (Lever)](https://jobs.lever.co/ethereumfoundation)
+- [Ethereum Vakfı iş ilanları (BambooHR)](https://ethereum.bamboohr.com/jobs/)
 - [Kripto Para İşleri](https://cryptocurrencyjobs.co/ethereum/)
 - [Crypto.jobs](https://crypto.jobs/)
 - [ConsenSys'de Kariyer](https://consensys.net/careers/)
 - [Kripto İş Listesi](https://cryptojobslist.com/ethereum-jobs)
-- [Bankless iş panosu](https://pallet.xyz/list/bankless/jobs)
+- [Bankless iş ilanları](https://pallet.xyz/list/bankless/jobs)
 - [useWeb3 İşleri](https://www.useweb3.xyz/jobs)
 - [Web3 İşleri](https://web3.career)
 - [Web3 Army](https://web3army.xyz/)

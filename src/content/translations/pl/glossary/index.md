@@ -718,7 +718,7 @@ Nazwa [etheru](#ether). 1 szabo = 10<sup>12</sup> [wei](#wei), 10<sup>6</sup> sz
 
 Skrót od nazwy „sieć testowa”, służy do symulowania zachowania głównej sieci Ethereum (patrz [sieć główna](#mainnet)).
 
-<DocLink to="/developers/docs/networks/#testnets">
+<DocLink to="/developers/docs/networks/#ethereum-testnets">
   Sieci testowe
 </DocLink>
 

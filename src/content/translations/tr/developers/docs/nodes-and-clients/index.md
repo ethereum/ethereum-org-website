@@ -12,7 +12,7 @@ Ethereum, blokları ve işlem verilerini doğrulayabilen yazılım (düğümler 
 
 Daha derine dalmadan ve kendi Ethereum istemci örneğinizi çalıştırmadan önce, eşler arası ağ kavramını ve [EVM'nin temellerini](/developers/docs/evm/) anlamalısınız. [Ethereum'a giriş](/developers/docs/intro-to-ethereum/) yazımıza bir göz atın.
 
-Eğer düğüm konusuna yeniyseniz, ilk olarak kullanıcı dostu [bir Ethereum düğümü çalıştırma](/run-a-node) öğreticimize göz atmanızı öneririz.
+Eğer düğümler konusunda acemiyseniz, ilk olarak [bir Ethereum düğümü çalıştırmak üzerine](/run-a-node) kullanıcı dostu öğreticimize göz atmanızı öneririz.
 
 ## Düğümler ve istemciler nedir? {#what-are-nodes-and-clients}
 
@@ -33,7 +33,7 @@ Go, Rust, JavaScript, Typescript, Python, C# .NET, Nim ve Java gibi çeşitli pr
 - Tam blok zinciri verilerini depolar.
 - Blok doğrulamaya katılır, tüm blokları ve durumları doğrular.
 - Tüm durumlar tam bir düğümden türetilebilir.
-- Ağa hizmet eder ve istek üzerine veri sağlar.
+- Ağa hizmet eder ve talep üzerine veri sağlar.
 
 ### Hafif düğüm {#light-node}
 
@@ -77,7 +77,7 @@ Tam bir düğüm çalıştırırsanız, tüm Ethereum ağı bundan yararlanır.
 
 Kendi Ethereum istemcinizi çalıştırmayı mı düşünüyorsunuz?
 
-Daha acemi dostu bir giriş için, daha fazlasını öğrenmek için [bir düğüm çalıştır](/run-a-node) sayfamızı ziyaret edin.
+Daha acemi dostu bir giriş istiyorsanız, daha fazlasını öğrenmek için [bir düğüm çalıştır](/run-a-node) sayfamızı ziyaret edin.
 
 Eğer daha teknik bir kullanıcıysanız, komut satırı ile nasıl [kendi düğümünüzü çalıştıracağınızı](/developers/docs/nodes-and-clients/run-a-node/) öğrenin!
 
@@ -102,11 +102,11 @@ Eğer daha teknik bir kullanıcıysanız, komut satırı ile nasıl [kendi düğ
 
 ## Alternatifler {#alternatives}
 
-Kendi düğümünüzü çalıştırmak zor olabilir ve her zaman kendinizinkini çalıştırmanız gerekmez. Bu durumda [Infura](https://infura.io), [Alchemy](https://alchemyapi.io) veya [QuikNode](https://www.quiknode.io) gibi bir üçüncü taraf API sağlayıcısı kullanabilirsiniz. Alternatif olarak [ArchiveNode](https://archivenode.io/), Ethereum blok zincirindeki arşiv verilerini, başka türlü karşılayamayacak olan bağımsız geliştiricilere ulaştırmayı uman, topluluk tarafından finanse edilen bir Arşiv düğümüdür. Bu hizmetin kullanımına ilişkin bir genel bakış için [hizmet olarak düğümler](/developers/docs/nodes-and-clients/nodes-as-a-service/) makalesine bakın.
+Kendi düğümünüzü çalıştırmak zor olabilir ve her zaman kendinizinkini çalıştırmanız gerekmez. Bu durumda [Infura](https://infura.io), [Alchemy](https://alchemyapi.io) veya [QuikNode](https://www.quiknode.io) gibi bir üçüncü taraf API sağlayıcısı kullanabilirsiniz. Alternatif olarak [ArchiveNode](https://archivenode.io/), Ethereum blok zincirindeki arşiv verilerini, başka türlü karşılayamayacak olan bağımsız geliştiricilere ulaştırmayı uman, topluluk tarafından finanse edilen bir Arşiv düğümüdür. Bu hizmetlerin kullanımına ilişkin bir genel bakış için [hizmet olarak düğümler](/developers/docs/nodes-and-clients/nodes-as-a-service/) makalesine bakın.
 
 Birisi topluluğunuzda açık bir API'ye sahip bir Ethereum düğümü çalıştırırsa, [Özel RPC aracılığıyla](https://metamask.zendesk.com/hc/en-us/articles/360015290012-Using-a-Local-Node) hafif cüzdanlarınızı (MetaMask gibi) bir topluluk düğümüne yönlendirebilirsiniz ve bazı rastgele güvenilir üçüncü taraflara kıyasla daha fazla gizlilik elde edersiniz.
 
-Öte yandan, bir istemci çalıştırırsanız ihtiyacı olabilecek arkadaşlarınızla paylaşabilirsiniz.
+Öte yandan, bir istemci çalıştırırsanız bu istemciyi, ihtiyacı olabilecek arkadaşlarınızla paylaşabilirsiniz.
 
 ## Yürütüm istemcileri (eskiden "Eth1 istemcileri") {#execution-clients}
 
@@ -117,9 +117,9 @@ Bu tablo, farklı istemcileri özetlemektedir. Hepsi [istemci testlerini](https:
 | İstemci                                                                               | Dil      | İşletim sistemleri    | Ağlar                                      | Senkronizasyon stratejileri | Durum budaması  |
 | ------------------------------------------------------------------------------------- | -------- | --------------------- | ------------------------------------------ | --------------------------- | --------------- |
 | [Geth](https://geth.ethereum.org/)                                                    | Go       | Linux, Windows, macOS | Mainnet, Görli, Rinkeby, Ropsten           | Snap, Full                  | Archive, Pruned |
-| [Nethermind](http://nethermind.io/)                                                   | C#, .NET | Linux, Windows, macOS | Mainnet, Görli, Ropsten, Rinkeby ve dahası | Hızlı, Işın, Arşiv          | Archive, Pruned |
+| [Nethermind](http://nethermind.io/)                                                   | C#, .NET | Linux, Windows, macOS | Mainnet, Görli, Ropsten, Rinkeby ve dahası | Fast, Beam, Archive         | Archive, Pruned |
 | [Besu](https://pegasys.tech/solutions/hyperledger-besu/)                              | Java     | Linux, Windows, macOS | Mainnet, Rinkeby, Ropsten, Görli ve dahası | Fast, Full                  | Archive, Pruned |
-| [Erigon](https://github.com/ledgerwatch/erigon)                                       | Go       | Linux, Windows, macOS | Mainnet, Görli, Rinkeby, Ropsten           | Tam                         | Archive, Pruned |
+| [Erigon](https://github.com/ledgerwatch/erigon)                                       | Go       | Linux, Windows, macOS | Mainnet, Görli, Rinkeby, Ropsten           | Full                        | Archive, Pruned |
 | [OpenEthereum (Kullanımdan kaldırıldı)](https://github.com/openethereum/openethereum) | Rust     | Linux, Windows, macOS | Mainnet, Kovan, Ropsten ve dahası          | Warp, Full                  | Archive, Pruned |
 
 **OpenEthereum'un [kullanımdan kaldırıldığını](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd) ve artık bakıma tabi olmadığını unutmayın.** Dikkatli kullanın ve tercihen başka bir istemci uygulamasına geçin.
@@ -152,7 +152,7 @@ Nethermind, ARM dahil tüm büyük platformlarda çalışan C# .NET teknoloji y�
 
 - optimize edilmiş bir sanal makine
 - durum erişimi
-- prometheus/Grafana gösterge panoları, sıralı kurumsal kayıt desteği, JSON RPC izleme ve analiz eklentileri gibi ağ iletişimi ve zengin özellikler.
+- prometheus/Grafana gösterge panelleri, sıralı kurumsal kayıt desteği, JSON RPC izleme ve analiz eklentileri gibi ağ iletişimi ve zengin özellikler.
 
 Nethermind ayrıca premium kullanıcılar için [ayrıntılı belgeler](https://docs.nethermind.io), güçlü geliştirici desteği, çevrimiçi bir topluluk ve 7/24 desteğe sahiptir.
 
@@ -162,11 +162,11 @@ Hyperledger Besu, genel ve izin verilen ağlar için kurumsal düzeyde bir Ether
 
 #### Erigon {#erigon}
 
-Eskiden Turbo-Geth olarak bilinen Erigon, hız ve disk alanı verimliliğine yönelik bir Go Ethereum çatalıdır. Erigon, şu anda Go'da yazılmış, ancak diğer dillerde uygulanması planlanan Ethereum'un tamamen yeniden tasarlanmış bir uygulamasıdır. Erigon'un amacı, Ethereum'un daha hızlı, daha modüler ve daha optimize edilmiş bir uygulamasını sağlamaktır. 3 günden kısa bir sürede 2 Tb'den daha az disk alanı kullanarak tam bir arşiv düğümü senkronizasyonu gerçekleştirebilir
+Eskiden Erigon olarak bilinen Erigon, hız ve disk alanı verimliliğine yönelik bir Go Ethereum çatalıdır. Erigon, şu anda Go'da yazılmış, ancak diğer dillerde uygulanması planlanan Ethereum'un tamamen yeniden tasarlanmış bir uygulamasıdır. Erigon'un amacı, Ethereum'un daha hızlı, daha modüler ve daha optimize edilmiş bir uygulamasını sağlamaktır. 3 günden kısa bir sürede 2 Tb'den daha az disk alanı kullanarak tam bir arşiv düğümü senkronizasyonu gerçekleştirebilir
 
 ### Senkronizasyon modları {#sync-modes}
 
-Ağdaki mevcut verileri takip etmek ve doğrulamak için Ethereum istemcisinin en son ağ durumuyla senkronize olması gerekir. Bu, akranlardan veri indirerek, bütünlüklerini kriptografik olarak doğrulayarak ve yerel bir blok zinciri veri tabanı oluşturarak yapılır.
+Ağdaki mevcut verileri takip etmek ve doğrulamak için Ethereum istemcisinin en son ağ durumuyla senkronize olması gerekir. Bu, eşlerden veri indirerek, bütünlüklerini kriptografik olarak doğrulayarak ve yerel bir blok zinciri veri tabanı oluşturarak yapılır.
 
 Senkronizasyon modları, çeşitli değiş tokuşlarla bu sürece farklı yaklaşımları temsil eder. İstemciler, eşitleme algoritmalarının uygulanmasında da farklılık gösterir. Uygulamaya ilişkin ayrıntılar için her zaman seçtiğiniz istemcinin resmi belgelerine bakın.
 
@@ -258,13 +258,13 @@ Diğer tüm yapılandırmalar gibi, başlangıç bayrağıyla veya yapılandırm
 
 ## Donanım {#hardware}
 
-Donanım gereksinimleri istemciye göre farklılık gösterir, ancak düğümün yalnızca senkronize kalması gerektiğinden genellikle o kadar yüksek değildir. Çok daha fazla bilgi işlem gücü gerektiren madencilikle karıştırmayın. Bununla birlikte, senkronizasyon süresi ve performansı daha güçlü donanımlarla iyileşir. İhtiyaçlarınıza ve isteklerinize bağlı olarak, Ethereum bilgisayarınızda, ev sunucunuzda, tek kartlı bilgisayarlarda veya buluttaki sanal özel sunucularda çalıştırılabilir.
+Donanım gereksinimleri istemciye göre farklılık gösterir, ancak düğümün yalnızca senkronize kalması gerektiğinden bu gereksinimler genellikle pek yüksek değildir. Çok daha fazla bilgi işlem gücü gerektiren madencilikle karıştırmayın. Bununla birlikte, senkronizasyon süresi ve performansı, daha güçlü donanımlarla iyileşir. İhtiyaçlarınıza ve isteklerinize bağlı olarak; Ethereum bilgisayarınızda, ev sunucunuzda, tek kartlı bilgisayarlarda veya buluttaki sanal özel sunucularda çalıştırılabilir.
 
-Kendi düğümünüzü çalıştırmanın kolay bir yolu, [DAppNode](https://dappnode.io/) gibi "tak ve çalıştır" kutularını kullanmaktır. Basit bir kullanıcı arabirimi ile istemcileri ve bunlara bağlı uygulamaları çalıştırmak için donanım sağlar.
+Kendi düğümünüzü çalıştırmanın kolay bir yolu, [DAppNode](https://dappnode.io/) gibi "tak ve çalıştır" kutularını kullanmaktır. Basit bir kullanıcı arayüzü ile istemcileri ve bunlara bağlı uygulamaları çalıştırmak için donanım sağlar.
 
 ### Gereksinimler {#requirements}
 
-Herhangi bir istemciyi kurmadan önce, lütfen bilgisayarınızın onu çalıştırmak için yeterli kaynaklara sahip olduğundan emin olun. Minimum ve önerilen gereksinimler aşağıda bulunabilir, ancak en önemli kısım disk alanıdır. Ethereum blok zincirini senkronize etmek çok girdi/çıktı yoğundur. Katı hal sürücüsüne (SSD) sahip olmak en iyisidir. HDD'de bir Ethereum istemcisi çalıştırmak için önbellek olarak kullanmak üzere en az 8 GB RAM'e ihtiyacınız olacaktır.
+Herhangi bir istemciyi kurmadan önce, lütfen bilgisayarınızın onu çalıştırmak için yeterli kaynaklara sahip olduğundan emin olun. Minimum ve önerilen gereksinimler aşağıda bulunabilir, ancak en önemli kısım disk alanıdır. Ethereum blok zincirini senkronize etmek yoğun girdi/çıktı kullanır. Katı hâl sürücüsü (SSD) kullanmak en iyisidir. HDD'de bir Ethereum istemcisi çalıştırmak için önbellek olarak kullanmak üzere en az 8 GB RAM'e ihtiyacınız olacaktır.
 
 #### Minimum gereksinimler {#recommended-specifications}
 
@@ -279,7 +279,7 @@ Herhangi bir istemciyi kurmadan önce, lütfen bilgisayarınızın onu çalışt
 - En az 500 GB boş alana sahip hızlı SSD
 - 25+ MBit/sn bant genişliği
 
-Seçtiğiniz senkronizasyon modu, alan gereksinimlerini etkileyecektir, ancak aşağıda her istemci için ihtiyaç duyacağınız disk alanını tahmin ettik.
+Seçtiğiniz senkronizasyon modu, alan gereksinimlerini etkileyecektir ancak aşağıda her istemci için ihtiyaç duyacağınız disk alanına dair tahminler sunduk.
 
 | İstemci      | Disk alanı (fast senkronizasyon) | Disk boyutu (full archive) |
 | ------------ | -------------------------------- | -------------------------- |
@@ -291,15 +291,15 @@ Seçtiğiniz senkronizasyon modu, alan gereksinimlerini etkileyecektir, ancak a�
 
 - Not: Erigon Fast Senkronizasyon yapmaz, ancak Full Pruning mümkündür (yaklaşık 500 GB)
 
-![Tam bir senkronizasyon için gereken GB'yi gösteren bir grafik yükseliş eğiliminde](./full-sync.png)
+![Full senkronizasyon için gereken GB miktarının artışta olduğunu gösteren bir grafik](./full-sync.png)
 
-![Bir arşiv senkronizasyonu için gereken GB'yi gösteren bir grafik yükseliş trendinde](./archive-sync.png)
+![Archive senkronizasyonu için gereken GB miktarının artışta olduğunu gösteren bir grafik](./archive-sync.png)
 
-Bu çizelgeler, depolama gereksinimlerinin her zaman nasıl değiştiğini gösterir. Geth ve OpenEthereum için en güncel veriler için [tam senkronizasyon verilerine](https://etherscan.io/chartsync/chaindefault) ve [eşitleme verilerini arşivleyin](https:/ bakın /etherscan.io/chartsync/chainarchive).
+Bu grafikler, depolama gereksinimlerinin sürekli değişimlerini gösterir. Geth ve OpenEthereum hakkında en güncel veriler için [full senkronizasyon verilerine](https://etherscan.io/chartsync/chaindefault) ve [archive senkronizasyon verilerine](https://etherscan.io/chartsync/chainarchive) göz atın.
 
 ### Tek kartlı bir bilgisayarda Ethereum {#ethereum-on-a-single-board-computer}
 
-Ethereum düğümünü çalıştırmanın en uygun ve ucuz yolu, Raspberry Pi gibi ARM mimarisine sahip tek kartlı bir bilgisayar kullanmaktır. [ARM üzerinde Ethereum](https://twitter.com/EthereumOnARM), Geth, OpenEthereum, Nethermind ve Besu istemcilerinin görüntülerini sağlar. İşte [bir ARM istemcisinin nasıl oluşturulacağı ve kurulacağı](/developers/tutorials/run-node-raspberry-pi/) hakkında basit bir eğitim.
+Ethereum düğümünü çalıştırmanın en uygun ve ucuz yolu, Raspberry Pi gibi ARM mimarisine sahip tek kartlı bir bilgisayar kullanmaktır. [ARM üzerinde Ethereum](https://twitter.com/EthereumOnARM); Geth, OpenEthereum, Nethermind ve Besu istemcilerinin görüntülerini sağlar. İşte [bir ARM istemcisinin nasıl oluşturulacağı ve kurulacağı](/developers/tutorials/run-node-raspberry-pi/) hakkında basit bir eğitim.
 
 Bunun gibi küçük, uygun fiyatlı ve verimli cihazlar, evde bir düğüm çalıştırmak için idealdir.
 

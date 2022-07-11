@@ -9,7 +9,7 @@ tags:
   - "节点"
 lang: zh
 sidebar: true
-skill: 中级
+skill: intermediate
 published: 2020-05-07
 source: r/ethereum
 sourceUrl: https://www.reddit.com/r/ethereum/comments/gf3nhg/ethereum_on_arm_raspberry_pi_4_images_release/
@@ -180,7 +180,7 @@ Password: ethereum
 
 所有客户端都作为 systemd 服务运行。 这一点很重要，因为如果出现问题，系统将自动重启进程。
 
-Geth 和 Prysm 信标链默认运行 (取决于您正在同步的内容，执行层或共识层) ，因此，如果您想切换到其他客户端(例如从 Geth 到 Nethermind)，您需要先停止并禁用 Geth ，并启用并启动另一个客户端：
+Geth 和 Prysm 信标链会默认运行（具体取决于您所同步的内容、执行层或共识层），因此如果您想切换到其他客户端（例如从 Geth 切换到 Nethermind），您需要先停止并禁用 Geth，然后启用并启动另一个客户端：
 
 ```bash
 sudo systemctl stop geth && sudo systemctl disable geth

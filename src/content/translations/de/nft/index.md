@@ -64,7 +64,7 @@ Wir nutzen NFTs, um unseren Mitwirkenden etwas zurückzugeben, und wir haben sog
 
 Wenn Sie einen Beitrag für ethereum.org leisten, können Sie ein POAP-NFT beanspruchen. Das sind Sammlerstücke, die als Nachweis dafür dienen, dass Sie an einer bestimmten Veranstaltung teilgenommen oder etwas dazu beigetragen haben. Einige Krypto-Treffen haben POAPs als Form von Ticket für ihre Veranstaltungen genutzt. [Mehr zum Beitragen](/contributing/#poap).
 
-![ethereum.org-POAP](../../../../assets/use-cases/poap.png)
+![ethereum.org-POAP](./poap.png)
 
 #### ethereum.eth {#ethereum-dot-eth}
 
@@ -382,13 +382,13 @@ Die Verringerung des Energieverbrauchs um 99,95 % durch den Übergang von einem 
 
 - Ein durchschnittlicher Desktop-Computer und damit alles, was man braucht, um Proof-of-Stake auszuführen, verbraucht 0,6 kWh Energie pro Stunde – [Silicon Valley-Energiediagramm](https://www.siliconvalleypower.com/residents/save-energy/appliance-energy-use-chart) (einige Schätzungen liegen bei 0,15 kWh und damit etwas höher)
 
-Zum jetzigen Zeitpunkt gibt es 140.592 Validierer von 16.405 eindeutige Adressen. Davon staken vermutlich 87.897 Validierer von zu Hause aus.
+Zum jetzigen Zeitpunkt gibt es 140.592 Validatoren von 16.405 eindeutige Adressen. Davon staken vermutlich 87.897 Validatoren von zu Hause aus.
 
 Es wird davon ausgegangen, dass der Durchschnittsverbraucher, der von zu Hause staked, ein Desktop-PC-Setup von 100 Watt nutzt, um durchschnittlich 5,4 Validier-Clients laufen zu lassen.
 
-Die 87.897 Validierer, die von zu Hause aus operieren, bringen uns 16.300 Benutzer mit ~1,64 Megawatt an Energie.
+Die 87.897 Validatoren, die von zu Hause aus operieren, bringen uns 16.300 Benutzer mit ~1,64 Megawatt an Energie.
 
-Der Rest der Validierer wird von depotführenden Stakern, wie Börsen und Staking-Services betrieben. Es lässt sich davon ausgehen, dass sie 100 W pro 5,5 Validierer verbrauchen. Das ist eine großzügige Schätzung, um sicher zu sein.
+Der Rest der Validatoren wird von depotführenden Stakern, wie Börsen und Staking-Services betrieben. Es lässt sich davon ausgehen, dass sie 100 W pro 5,5 Validatoren verbrauchen. Das ist eine großzügige Schätzung, um sicher zu sein.
 
 Insgesamt verbraucht Ethereum also durch Proof-of-Stake Energie in der Größenordnung von 2,62 Megawatt. Das entspricht ungefähr einer kleinen amerikanischen Stadt.
 
@@ -406,7 +406,7 @@ Schätzungen zufolge ermöglichen Upgrades an der Skalierbarkeit dem Netzwerk, z
 
 [Vitalik Buterin über das Potenzial für Transaktionen pro Sekunde mit Sharding](https://twitter.com/VitalikButerin/status/1312905884549300224)
 
-Sharding wird mindestens 64-fache Beschleunigung der derzeitigen Transkationszahlen pro Sekunde ermöglichen, die aktuell bei 15 liegt. Das ist die Menge der Shard Chains (zusätzliche Daten und Kapazität), die eingeführt werden. [Mehr zu Shard-Chains](/upgrades/shard-chains/)
+Sharding wird mindestens 64-fache Beschleunigung der derzeitigen Transkationszahlen pro Sekunde ermöglichen, die aktuell bei 15 liegt. Das ist die Menge der Shard Chains (zusätzliche Daten und Kapazität), die eingeführt werden. [Mehr zu Shard-Chains](/upgrades/sharding/)
 
 Damit können wir abschätzen, wie lange die Verarbeitung von 100.000 Transaktionen dauert, und das ermöglicht den Vergleich mit dem Visa-Beispiel oben.
 
@@ -430,5 +430,5 @@ Anders ausgedrückt: Wenn Visa 140.839.000.000 Transaktionen mit einem Energieve
 Der jährliche Energieverbrauchv on Ethereum wird bei 5.256.000 kWh liegen. Bei potenziell 788.940.000.000 - 3.153.600.000.000 in dieser Zeit abgewickelten Transaktionen.
 
 <InfoBanner emoji=":evergreen_tree:">
-  Wenn Sie der Meinung sind, dass diese Statistiken fehlerhaft oder zu ungenau sind, kommunizieren Sie diese Bedenken bitte oder wenden Sie sich an die PR-Abteilung. Das sind Schätzungen des Ethereum.org-Teams, die auf öffentlich verfügbaren Daten und dem aktuellen Ethereum-Design aufbauen. Die Darstellung stellt kein offizielles Versprechen der Ethereum Foundation dar. 
+  Wenn Sie der Meinung sind, dass diese Statistiken fehlerhaft oder zu ungenau sind, kommunizieren Sie diese Bedenken bitte oder wenden Sie sich an die PR-Abteilung. Das sind Schätzungen des Ethereum.org-Teams, die auf öffentlich verfügbaren Daten und dem aktuellen Ethereum-Design aufbauen. Die Darstellung stellt kein offizielles Versprechen der Ethereum Foundation dar.
 </InfoBanner>

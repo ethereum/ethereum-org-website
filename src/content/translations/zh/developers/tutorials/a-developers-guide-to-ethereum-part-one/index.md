@@ -9,7 +9,7 @@ tags:
   - "python"
   - "区块链"
   - "web3.py"
-skill: 初学者
+skill: beginner
 published: 2020-09-08
 source: Snake charmers
 sourceUrl: https://snakecharmers.ethereum.org/a-developers-guide-to-ethereum-pt-1/
@@ -45,7 +45,7 @@ sourceUrl: https://snakecharmers.ethereum.org/a-developers-guide-to-ethereum-pt-
 
 每个 [块](/developers/docs/blocks/) 会引用它前面的区块； `parentHash` 是前一个区块的哈希值。
 
-<div class="featured">注： 以太坊广泛使用 <a href="https://wikipedia.org/wiki/Hash_function">哈希函数</a> 来生成固定大小的值（“哈希值”）。 哈希值在以太坊中发挥着重要作用，但您现在可以放心地将其视为是唯一的 ID 值。</div>
+<div class="featured">注：以太坊广泛使用<a href="https://wikipedia.org/wiki/Hash_function">哈希函数</a>来生成固定大小的值（“哈希”）。 哈希值在以太坊中发挥着重要作用，但您现在可以放心地将其视为是唯一的 ID 值。</div>
 
 ![描述区块链的示意图，其中包括每个区块内的数据](./blockchain-diagram.png)
 
@@ -63,7 +63,7 @@ _区块链本质上是一个链表；每个区块都有一个对前一个区块�
 
 <div class="featured">注：“以太坊节点”和“以太坊客户端”可互换使用。 这两种说法都是指以太坊网络中参与者所运行的软件。 该软件可以读取区块数据，在新区块被添加到链上（“挖矿”）时接收更新、广播新交易等。</div>
 
-[以太坊客户端](/developers/docs/nodes-and-clients/) 可以配置为通过[进程间通信](https://wikipedia.org/wiki/Inter-process_communication)、超文本传输协议或 Websockets 进行访问，因此 Web3.py 也需要完成这个配置。 Web3.py 将这些连接选项称为**提供者**。 您需要从三个提供者中选择一个来连接 Web3.py 实例和您的节点。
+[以太坊客户端](/developers/docs/nodes-and-clients/)可以配置为通过[进程间通信 (IPC)](https://wikipedia.org/wiki/Inter-process_communication)、超文本传输协议 (HTTP) 或网络套接字 (Websockets) 进行访问，因此 Web3.py 也需要完成这个配置。 Web3.py 将这些连接选项称为**提供者**。 您需要从三个提供者中选择一个来连接 Web3.py 实例和您的节点。
 
 ![描述 web3.py 如何使用 IPC 将应用程序连接到以太坊节点的示意图](./web3py-and-nodes.png)
 
@@ -240,11 +240,11 @@ Out[9]: AttributeDict({
 
 - 该区块编号是零  - 无论您在多久以前配置了测试器提供者  。 与真实的以太坊网络不同，真实的以太坊网络大概每隔 15 秒就会挖掘一个新的区块，而模拟链则则需要您给它一些工作才增加区块。
 - `transactions` 是一个空列表，原因相同：我们还没有做任何事情。 第一个区块是一个**空区块**，只是为了开个头。
-- 注意，`parentHash` 只是一堆空的字节。 这标志着它是链条上的第一个区块，也就是所谓的**创世区块**
+- 注意，`parentHash` 只是一堆空的字节。 这标志着它是链条上的第一个区块，也就是所谓的**创世区块**。
 
 ## 第三站：[交易](/developers/docs/transactions/) {#tour-stop-3-transactions}
 
-在没有交易之前，我们停留在零区块，所以我们给它一个交易。 从一个账户向另一个账户发送一些测试 ETH
+在没有交易之前，我们停留在零区块，所以我们给它一个交易。 从一个账户向另一个账户发送一些测试 ETH：
 
 ```python
 In [10]: tx_hash = w3.eth.send_transaction({
@@ -258,7 +258,7 @@ In [10]: tx_hash = w3.eth.send_transaction({
 这时通常会等上几秒钟，等待交易挖到一个新的区块。 完整的流程是这样的：
 
 1. 提交交易并持有交易哈希。 在没有被挖出来之前，交易是“等待中”的。 `tx_hash = w3.eth.send_transaction({ … })`
-2. 等待交易被打包： `w3.eth.wait_for_transaction_receipt(tx_hash)`
+2. 等待交易被开采： `w3.eth.wait_for_transaction_receipt(tx_hash)`
 3. 继续应用逻辑。 查看成功的交易：`w3.eth.get_transaction(tx_hash)`
 
 我们的模拟环境会在一个新的区块中即时添加交易，所以我们可以立即查看交易：
@@ -276,7 +276,7 @@ Out[11]: AttributeDict({
 })
 ```
 
-您将在这里看到一些熟悉的细节：`from` 、`to`和 `value `字段应该与我们的 `send_transaction `调用的输入相匹配。 另一个令人欣慰的是，这项交易被列为 1 号区块内的第一笔交易（`'transactionIndex': 0`）。
+您将在这里看到一些熟悉的细节：`from`、`to `和 `value `字段应该与 `send_transaction `调用的输入相匹配。 另一个令人欣慰的是，这项交易被列为 1 号区块内的第一笔交易（`'transactionIndex': 0`）。
 
 我们也可以通过检查两个相关帐户的余额，轻松验证此次交易是否成功。 三个 ETH 应从一个帐户转移到另一个帐户。
 
@@ -288,7 +288,7 @@ In [13]: w3.eth.get_balance(w3.eth.accounts[1])
 Out[13]: 1000003000000000000000000
 ```
 
-后者看起来不错！ 余额从 1000000 增加到 100003 个 ETH。 但第一个账户发生了什么情况？ 它减少的数量看起来略大于三个 ETH？ 是的，没有免费的午餐，使用以太坊公网需要支付矿工手续费， 它从进行交易的账户中扣除了一笔小额的交易费，金额为 31000wei。
+后者看起来不错！ 余额从 1000000 增加到 100003 个 ETH。 但第一个账户发生了什么情况？ 它减少的数量看起来略大于三个 ETH？ 是的，没有免费的午餐，使用以太坊公网需要支付矿工手续费， 一笔小额交易费从进行交易的帐户中扣除，金额为 31000 wei。
 
 <div class="featured">注：在公共网络上，交易费用根据网络需求和您希望交易处理的速度而变化。 如果您对费用的计算方式感兴趣，请查看我之前关于<a href="https://medium.com/ethereum-grid/ethereum-101-how-are-transactions-included-in-a-block-9ae5f491853f">如何将交易包含在一个区块中</a>的文章。</div>
 

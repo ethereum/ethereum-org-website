@@ -11,7 +11,7 @@ tags:
   - "truffle"
   - "integrazione continua"
   - "ganache"
-skill: intermedio
+skill: intermediate
 published: 2020-06-05
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/continuous-integration

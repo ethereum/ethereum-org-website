@@ -1,11 +1,13 @@
 ---
-title: Web2 et Web3
+title: Web2 vs Web3
 description:
 lang: fr
 sidebar: true
 ---
 
 Web2 fait référence à la version d'Internet que la plupart d'entre nous connaissent aujourd'hui. Un Internet dominé par les sociétés qui fournissent des services en échange de vos données personnelles. Dans le contexte d'Ethereum, Web3 fait référence aux applications décentralisées qui s'exécutent sur la blockchain. Ce sont des applications qui permettent à quiconque de participer sans monétiser ses données personnelles.
+
+Vous recherchez une ressource plus conviviale pour les débutants ? Consultez notre [introduction au Web3](/web3/).
 
 ## Avantages du Web3 {#web3-benefits}
 
@@ -24,11 +26,11 @@ De nombreux développeurs Web3 ont choisi de construire des dApps en raison de l
 | Un service de paiement peut décider de ne pas autoriser les paiements pour certains types de travaux.                             | Les applications de paiement Web3 ne requièrent aucune donnée personnelle et ne peuvent pas empêcher les paiements.               |
 | Les serveurs des applications de travail à la tâche (ou gig-économie) pourraient fermer et affecter les revenus des travailleurs. | Les serveurs Web3 ne peuvent pas fermer. Ils utilisent Ethereum, un réseau décentralisé de milliers d'ordinateurs, comme backend. |
 
-Cela ne veut pas dire que tous les services doivent être transformés en dApps. Ces exemples illustrent simplement les principales différences entre les services Web2 et Web3.
+Cela ne signifie pas pour autant que tous les services doivent être transformés en dApps. Ces exemples illustrent simplement les principales différences entre les services Web2 et Web3.
 
-## Limitation du Web3 {#web3-limitations}
+## Limitations du Web3 {#web3-limitations}
 
-Le Web3 a actuellement quelques limitations :
+Le Web3 affiche actuellement quelques limitations :
 
 - Évolutivité : Les transactions sont plus lentes sur le Web3 car elles sont décentralisées. Les changements d'état, comme un paiement, doivent être traités par un mineur et propagés sur le réseau.
 - UX : Interagir avec les applications Web3 peut nécessiter des étapes, des logiciels et des connaissances supplémentaires. Cela peut constituer un obstacle à son adoption.

@@ -10,7 +10,7 @@ Ethereum, Bitcoin gibi şu anda **[İş ispatı (PoW)](https://wikipedia.org/wik
 
 Önümüzdeki sene, **[Hisse ispatı (PoS)](/developers/docs/consensus-mechanisms/pos)** aşamalı olarak iş ispatının yerini alacaktır. Hisse ispatına geçiş ayrıca Ethereum madenciliğini de aşamalı olarak durduracaktır. [Birleştirme hakkında daha fazla bilgi](/upgrades/merge/)
 
-## Ön Koşullar {#prerequisites}
+## Ön koşullar {#prerequisites}
 
 Bu sayfayı daha iyi anlamak için, önce [işlemleri](/developers/docs/transactions/), [blokları](/developers/docs/blocks/) ve [mutabakat mekanizmalarını](/developers/docs/consensus-mechanisms/) okumanızı öneririz.
 
@@ -56,7 +56,7 @@ Sürekli olarak kötü niyetli ancak geçerli bloklar oluşturabilmek için, di�
 
 İş ispatı ayrıca sisteme yeni para birimi vermekten ve madencileri işi yapmaya teşvik etmekten de sorumludur.
 
-Başarılı şekilde bir blok oluşturan madenciler taze basılmış iki ETH ile ödüllendirilirler ancak ana ücret yakıldığı için artık tüm işlem ücretlerini almazlar, bahşiş ve blok ödülü madenciye gider. Bir madenci ayrıca bir amca bloğu için de 1,75 ETH alabilir. Amca blokları (Uncle blocks), pratik olarak başka bir madencinin başarılı bloğu kazmasıyla aynı anda başka bir madenci tarafından oluşturulan geçerli bloklardır. Amca blokları genellikle ağ gecikmesi sebebiyle gerçekleşir.
+Başarılı şekilde bir blok oluşturan madenciler, taze basılmış iki ETH ile ödüllendirilirler ancak ana ücret yakıldığı için artık tüm işlem ücretlerini almazlar, bahşiş ve blok ödülü madenciye gider. Bir madenci ayrıca bir amca bloğu için de 1,75 ETH alabilir. Amca blokları (Uncle blocks), pratik olarak başka bir madencinin başarılı bloğu kazmasıyla aynı anda başka bir madenci tarafından oluşturulan geçerli bloklardır. Amca blokları genellikle ağ gecikmesi sebebiyle gerçekleşir.
 
 ## Kesinlik {#finality}
 

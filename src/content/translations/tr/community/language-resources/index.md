@@ -30,7 +30,7 @@ Ethereum.org, [diller sayfasında](/languages) bulabileceğiniz 40'tan fazla dil
 - [BeInCrypto](http://www.beincrypto.com.br) - kripto para haberleri ve makaleleri, bir borsa listesi ile beraber, Brezilya'da mevcuttur
 - [Cointelegraph](http://cointelegraph.com.br/category/analysis) - Büyük bir kripto para haber merkezi olan Cointelegraph'ın Brezilya versiyonu
 - [Livecoins](http://www.livecoins.com.br/ethereum) - kripto para birimi haberleri ve araçları
-- [Seudinheiro](http://www.seudinheiro.com/criptomoedas/) - kripto para haberleri ve raporları
+- [Seudinheiro](http://www.seudinheiro.com/criptomoedas/) - kriptopara haber ve raporları
 
 **Eğitim**
 
@@ -46,7 +46,7 @@ Ethereum.org, [diller sayfasında](/languages) bulabileceğiniz 40'tan fazla dil
 **Genel kaynaklar**
 
 - [Ethereum.cn](https://www.ethereum.cn/) - konsensüs katmanı yükseltmesini, tüm çekirdek geliştirme toplantı notlarını, katman 2'yi vb. kapsayan topluluk tarafından sağlanan içerik.
-- [EthFans](https://github.com/editor-Ajian/EthFans.org-annual-collected-works/) - temel konulardan gelişmiş Ethereum konularına kadar her şeyi öğrenin
+- [EthFans](https://ethfans.org/) - temel konulardan gelişmiş Ethereum konularına kadar her şeyi öğrenin
 - [Unitimes](https://mp.weixin.qq.com/s/tvloZSDBSOQN9zDQj_91kA) - Ethereum, DeFi, NFT, Web3 ile ilgili bilgileri kapsayan topluluk tarafından sürdürülen içerikler
 - [123ETH](https://123eth.org/) - Ethereum ekosistemine bir geçit
 - [Zhen Xiao](http://zhenxiao.com/blockchain/) - kripto para ve kullanımları hakkında ücretsiz çevrimiçi kurslar
@@ -114,6 +114,6 @@ Ethereum.org, [diller sayfasında](/languages) bulabileceğiniz 40'tan fazla dil
 
 - [Japonya Sanal ve Kripto varlık Takas Birliği](https://jvcea.or.jp/)
 - [Japonya Kriptovarlık İş Birliği](https://cryptocurrency-association.org/)
-- [Blokzincir geliştirmeye başlayın - Öğren | Microsoft Docs](https://docs.microsoft.com/ja-jp/learn/paths/ethereum-blockchain-development/) - Bu öğrenim yolu sizi blokzincirle ve Ethereum platformu üzerinde geliştirme ile tanıştırır
+- [Blok zinciri geliştirmeye başlayın - Öğren | Microsoft Docs](https://docs.microsoft.com/ja-jp/learn/paths/ethereum-blockchain-development/) - Bu öğrenim yolu, sizi blok zinciri ve Ethereum platformu üzerinde geliştirme ile tanıştırır
 - [Ethereum'da Ustalaşmak](https://www.oreilly.co.jp/books/9784873118963/) - Japonca Ethereum'da Ustalaşmak
 - [Solidity ve Ethereum ile Uygulamalı Akıllı Sözleşme Geliştirme](https://www.oreilly.co.jp/books/9784873119342/) - Japonca Solidity ve Ethereum ile Uygulamalı Akıllı Sözleşme Geliştirme

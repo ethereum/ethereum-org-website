@@ -232,7 +232,7 @@ contract_account = m.solidity_create_contract(source_code, owner=user_account)
 
 #### Riepilogo {#summary}
 
-- Puoi creare account utente e di contratto con [m.create_account](https://manticore.readthedocs.io/en/latest/api.html#manticore.ethereum.ManticoreEVM.create_account) e \[m.solidity_create_contract\] (https://manticore.readthedocs.io/en/latest/api.html#manticore.ethereum.ManticoreEVM.solidity_create_contract.
+- Puoi creare account utente e di contratto con [m.create_account](https://manticore.readthedocs.io/en/latest/api.html#manticore.ethereum.ManticoreEVM.create_account) e [m.solidity_create_contract](https://manticore.readthedocs.io/en/latest/api.html#manticore.ethereum.ManticoreEVM.solidity_create_contract.
 
 ### Esecuzione di transazioni {#executing-transactions}
 

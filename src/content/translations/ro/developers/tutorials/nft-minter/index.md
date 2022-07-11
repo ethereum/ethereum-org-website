@@ -12,8 +12,8 @@ tags:
   - "UI"
   - "wallet (portofel)"
   - "Pinata"
-skill: intermediar
-lang: en
+skill: intermediate
+lang: ro
 sidebar: true
 published: 2021-10-06
 ---

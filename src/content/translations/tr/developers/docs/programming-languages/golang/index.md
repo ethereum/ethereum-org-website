@@ -1,6 +1,6 @@
 ---
 title: Go Geliştiricileri için Ethereum
-description: Go tabanlı projeler ve araçlarla nasıl Ethereum için geliştireceğinizi öğrenin
+description: Ethereum için Go Temelli projeler ve araçlarla nasıl geliştireceğinizi öğrenin
 lang: tr
 sidebar: true
 incomplete: true
@@ -10,21 +10,21 @@ incomplete: true
 
 Ethereum'u, merkeziyetsiz uygulamalar (veya "dapp'ler") oluşturmak için kullanın. Bu dapp'ler güvenilir olabilir, yani Ethereum'a dağıtıldıktan sonra her zaman programlandığı gibi çalışırlar. Merkeziyetsizdirler, yani uçtan uca bir ağda çalışırlar ve tek bir hata noktası yoktur. Hiçbir tekil varlık veya şahıs onları kontrol edemez ve sansürlenmeleri neredeyse imkansızdır. Yeni tür uygulamalar oluşturmak için dijital varlıkları kontrol edebilirler.
 
-## Akıllı sözleşmeler ve Solidity dilini öğrenmeye başlangıç {#getting-started-with-smart-contracts-and-solidity}
+## Akıllı Sözleşmeler ve Solidity Dilini Öğrenmeye Başlangıç {#getting-started-with-smart-contracts-and-solidity}
 
 **Go ve Ethereum'u entegre etmek için ilk adımlarınızı atın**
 
-Başlamadan önce temel bilgilere mi ihtiyacınız var? [ethereum.org/learn](/learn/) veya [ethereum.org/developers](/developers/) adreslerine göz atın.
+Başlamadan önce daha temel bir bilgiye mi ihtiyacınız var? [ethereum.org/learn](/learn/) veya [ethereum.org/developers](/developers/)'a göz atın.
 
-- [Blok Zinciri Açıklaması](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
+- [Blockchain Açıklaması](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
 - [Akıllı Sözleşmeleri Anlamak](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
 - [İlk Akıllı Sözleşmenizi Yazın](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
-- [Solidity'i nasıl derleyeceğinizi ve dağıtacağınızı öğrenin](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
+- [Solidity'i Nasıl Derleyeceğinizi ve Dağıtacağınızı Öğrenin](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 - [Sözleşme Öğreticisi](https://github.com/ethereum/go-ethereum/wiki/Contract-Tutorial)
 
 ## Başlangıç Seviyesi Makaleler ve Kitaplar {#beginner-articles-and-books}
 
-- [Ethereum İstemcinizi Seçmek](https://www.trufflesuite.com/docs/truffle/reference/choosing-an-ethereum-client)
+- [Ethereum İstemcisi Seçimi](https://www.trufflesuite.com/docs/truffle/reference/choosing-an-ethereum-client)
 - [Geth ile Başlarken](https://medium.com/@tzhenghao/getting-started-with-geth-c1a30b8d6458)
 - [Ethereum'a bağlanmak için Golang kullanmak](https://www.youtube.com/watch?v=-7uChuO_VzM)
 - [Golang Kullanarak Ethereum Akıllı Sözleşmeleri Dağıtmak](https://www.youtube.com/watch?v=pytGqQmDslE)
@@ -43,7 +43,7 @@ Başlamadan önce temel bilgilere mi ihtiyacınız var? [ethereum.org/learn](/le
 - [Go ile Ethereum üzerindeki Solidity sözleşmelerinin birim testi](https://medium.com/coinmonks/unit-testing-solidity-contracts-on-ethereum-with-go-3cc924091281)
 - [Geth'i bir kütüphane olarak kullanmak için hızlı bir kaynak](https://medium.com/coinmonks/web3-go-part-1-31c68c68e20e)
 
-## İleri Düzey Kullanım Şekilleri {#advanced-use-patterns}
+## İleri düzey kullanım Şşkilleri {#advanced-use-patterns}
 
 - [GETH ile Simüle Edilen Arka Uç](https://kauri.io/#collections/An%20ethereum%20test%20toolkit%20in%20Go/the-geth-simulated-backend/#_top)
 - [Ethereum ve Quorum Kullanan Hizmet Blok Zinciri Uygulamaları](https://blockchain.dcwebmakers.com/blockchain-as-a-service-apps-using-ethereum-and-quorum.html)

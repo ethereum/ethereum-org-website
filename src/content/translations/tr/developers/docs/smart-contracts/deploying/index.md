@@ -1,5 +1,5 @@
 ---
-title: Akıllı kontratları dağıtmak
+title: Akıllı kontratlar dağıtmak
 description:
 lang: tr
 sidebar: true

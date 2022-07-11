@@ -186,6 +186,12 @@
     "link": "https://www.meetup.com/ethereum/"
   },
   {
+    "title": "Brighton Blockchain",
+    "emoji": ":gb:",
+    "location": "Brighton and Hove",
+    "link": "https://www.meetup.com/brighton-blockchain/"
+  },
+  {
     "title": "Austin Ethereum Meetup",
     "emoji": ":us:",
     "location": "Austin",
@@ -268,5 +274,29 @@
     "emoji": ":thailand:",
     "location": "Chiang Mai",
     "link": "https://www.facebook.com/groups/219236462407862/"
+  },
+  {
+    "title": "ETH Warsaw",
+    "emoji": ":poland:",
+    "location": "Warsaw",
+    "link": "https://www.meetup.com/ethwarsaw-meetup/"
+  },
+  {
+    "title": "Chicago Ethereum Meetup",
+    "emoji": ":us:",
+    "location": "Chicago",
+    "link": "https://www.meetup.com/Chicago-Ethereum-Meetup/"
+  },
+  {
+    "title": "Web3Dubai",
+    "emoji": ":uae:",
+    "location": "Dubai",
+    "link": "https://www.meetup.com/web3dubai/"
+  },
+  {
+    "title": "DeFi Dubai",
+    "emoji": ":uae:",
+    "location": "Dubai",
+    "link": "https://www.meetup.com/defi-dubai/"
   }
 ]

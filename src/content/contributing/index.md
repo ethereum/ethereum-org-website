@@ -36,9 +36,10 @@ The ethereum.org website, like Ethereum more broadly, is an open-source project.
   _– Help us continue to expand the Ethereum [glossary](/glossary/)_
 - [Create/edit content](/contributing/#how-to-update-content)
   _– Suggest new pages or makes tweaks to what's here already_
-- [Add a layer 2](/contributing/adding-layer-2)
+- [Add a layer 2](/contributing/adding-layer-2s/)
   _- Add a layer 2 to a relevant page_
-- [Add a staking product or service](/contributing/adding-staking-product/) - _Add a project that helps facilitate solo staking, pooled staking, or staking as a service_
+- [Add a staking product or service](/contributing/adding-staking-products/) - _Add a project that helps facilitate solo staking, pooled staking, or staking as a service_
+- [Add a wallet](/contributing/adding-wallets/) _- Add a wallet for the [find wallets page](/wallets/find-wallet/)._
 
 _Any questions?_ 🤔 Reach out on our [Discord server](https://discord.gg/CetY6Y4)
 
@@ -84,7 +85,7 @@ If your contribution gets merged into ethereum.org, we'll mint you a unique cont
 ### How to claim {#how-to-claim}
 
 1. Join our [Discord server](https://discord.gg/E8dET2ux8y).
-2. Paste a link to your contribution in the `#🏆 | poaps` channel.
+2. Paste a link to your contribution in the `#🥇 | poaps` channel.
 3. Wait for a member of our team to send you a link to your POAP.
 4. Claim your POAP!
 

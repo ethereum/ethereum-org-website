@@ -28,7 +28,7 @@ Bu ölçeklendirme yöntemi, Ethereum protokolünde değişiklik yapılmasını 
 
 Parçalama, yükü yaymak için bir veri tabanını yatay olarak bölme işlemidir. Ethereum bağlamında parçalama, "parça" olarak bilinen yeni zincirler oluşturarak ağ tıkanıklığını azaltır ve saniye başına işlem kapasitesini artırır. Bu, aynı zamanda doğrulayıcıların ağdaki işlemlerin tamamını işleme zorunluluğunu ortadan kaldırarak tüm doğrulayıcıların yükünü azaltır.
 
-[Parçalama](/upgrades/shard-chains/) hakkında daha fazla bilgi.
+[Parçalama](/upgrades/sharding/) hakkında daha fazla bilgi.
 
 ## Zincir dışında ölçeklendirme {#off-chain-scaling}
 
@@ -44,7 +44,7 @@ Katman 2 çözümlerinin çoğu düğüm, doğrulayıcı, operatör, sıralayıc
 
 Belirli bir katman 2 örneği açık olabilir ve birçok uygulama tarafından paylaşılabilir veya bir proje tarafından kullanılarak yalnızca uygulamalarını desteklemeye adanmış olabilir.
 
-#### Katman 2 neden gerekli? {#why-is-layer-2-needed}
+#### Katman 2 çözümleri neden gerekli? {#why-is-layer-2-needed}
 
 - Saniye başına artan işlem, kullanıcı deneyimini büyük ölçüde iyileştirir ve Mainnet Ethereum'daki ağ tıkanıklığını azaltır.
 - İşlemler, Mainnet Ethereum'da tek bir işlemde toplanır ve Ethereum'u tüm dünyadaki insanlar için daha kapsayıcı ve erişilebilir hâle getiren kullanıcılar için gaz ücretlerini azaltır.
@@ -99,9 +99,9 @@ _Videodaki açıklamanın "Katman 2" terimini tüm zincir dışı ölçeklendirm
 
 <YouTube id="7pWxCklcNsU" />
 
-## Daha fazla bilgi {#further-reading}
+## Daha fazla okuma {#further-reading}
 
-- [Toplama merkezli bir Ethereum yol haritası](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698) _Vitalik Buterin_
+- [A rollup-centric Ethereum roadmap](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698) _Vitalik Buterin_
 - [Ethereum için Katman 2 ölçeklendirme çözümlerinde güncel analitikler](https://www.l2beat.com/)
 - [Ethereum katman 2 Ölçeklendirme Çözümlerini Değerlendirme: Bir Karşılaştırma Çerçevesi](https://medium.com/matter-labs/evaluating-ethereum-l2-scaling-solutions-a-comparison-framework-b6b2f410f955)
 - [Toplamalar için Tamamlanmamış Bir Kılavuz](https://vitalik.ca/general/2021/01/05/rollup.html)

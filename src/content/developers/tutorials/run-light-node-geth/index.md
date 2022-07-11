@@ -1,17 +1,22 @@
 ---
 title: How to run a light node with Geth
 description: How to download, install and run a lightclient with Geth.
-authors: "Brian Gu"
+author: "Brian Gu"
 tags: ["clients", "geth", "nodes"]
 skill: beginner
 lang: en
 sidebar: true
 published: 2022-03-04
+preMergeBanner: true
 ---
 
-You may be interested in running an [Ethereum node](/developers/docs/nodes-and-clients/). One of the easiest ways to do so is by downloading, installing, and running Geth. With Geth, we can have a light node up and running in minutes.
+**Please note that Geth light clients can be very slow to find peers. This is because they rely on full-node operators volunteering themselves as light servers from which the light clients can request data. There are usually only a small number of light servers available.**
 
-A light client requires less than 400MB of storage whilst still allowing full interactivity with the Ethereum state. Light clients retrieve data from remote peers, so some queries may take longer to respond in comparison to other sync modes.
+**Also, note that after [The Merge](/upgrades/merge/), a Geth node alone will not be sufficient - a consensus client must be connected to it to track the head of the chain.**
+
+You may be interested in running an [Ethereum node](/developers/docs/nodes-and-clients/). One of the easiest ways to do so is by downloading, installing, and running [Geth](https://geth.ethereum.org). With Geth, we can have a light node up and running in minutes.
+
+A light client requires less than 400MB of storage whilst still allowing full interactivity with the Ethereum state. Light clients retrieve data from remote peers, so some queries may take longer to respond to than other sync modes.
 
 For an explanation of the differences between the different sync modes, read our [nodes and clients developer docs](/developers/docs/nodes-and-clients/#node-types).
 
@@ -80,7 +85,6 @@ Geth runs your node on [Ethereum Mainnet](/glossary/#mainnet) by default.
 It is also possible to use Geth to run a node on one of the [public test networks](/developers/docs/networks/#ethereum-testnets), by running one of the following commands in Terminal:
 
 ```bash
-geth --syncmode light --ropsten
 geth --syncmode light --rinkeby
 geth --syncmode light --goerli
 ```
