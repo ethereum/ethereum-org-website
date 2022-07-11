@@ -13,7 +13,7 @@ const getMarkdownFilesWithLanguage = (): Promise<Buffer> => {
     const markdownFilesWithLanguageCommand = spawn("git", [
       ...commonDiffCommand,
       "-G",
-      "lang:[ ]*\\w+",
+      "lang:[ ]*[a-zA-Z]+",
       "--",
       "src/content/*.md",
     ])
