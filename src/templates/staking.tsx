@@ -49,6 +49,7 @@ import StakingGuides from "../components/Staking/StakingGuides"
 import { isLangRightToLeft, TranslationKey } from "../utils/translations"
 import { Context } from "../types"
 import { Lang } from "../utils/languages"
+import { Item as ItemTableOfContents } from "../components/TableOfContents"
 
 const Page = styled.div`
   display: flex;
@@ -354,7 +355,7 @@ const StakingPage = ({
     throw new Error("Required `title` property missing for staking template")
 
   const isRightToLeft = isLangRightToLeft(mdx.frontmatter.lang as Lang)
-  const tocItems = mdx.tableOfContents?.items
+  const tocItems = mdx.tableOfContents?.items as Array<ItemTableOfContents>
   const { summaryPoints } = mdx.frontmatter
 
   const dropdownLinks: ButtonDropdownList = {
@@ -413,7 +414,9 @@ const StakingPage = ({
           </ul>
           <MobileTableOfContents
             items={tocItems}
-            maxDepth={mdx.frontmatter.sidebarDepth}
+            maxDepth={
+              mdx.frontmatter.sidebarDepth ? mdx.frontmatter.sidebarDepth : 1
+            }
             isMobile={true}
           />
         </TitleCard>

@@ -36,6 +36,8 @@ import { isLangRightToLeft } from "../utils/translations"
 import { Lang } from "../utils/languages"
 import { Context } from "../types"
 
+import { Item as ItemTableOfContents } from "../components/TableOfContents"
+
 const Page = styled.div`
   display: flex;
   width: 100%;
@@ -161,7 +163,7 @@ const TutorialPage = ({
   const isRightToLeft = isLangRightToLeft(mdx.frontmatter.lang as Lang)
   const showMergeBanner = !!mdx.frontmatter.preMergeBanner
 
-  const tocItems = mdx.tableOfContents?.items
+  const tocItems = mdx.tableOfContents?.items as Array<ItemTableOfContents>
 
   const { editContentUrl } = siteData.siteMetadata || {}
   const { relativePath } = pageContext
@@ -180,7 +182,9 @@ const TutorialPage = ({
           <TutorialMetadata tutorial={mdx} />
           <MobileTableOfContents
             items={tocItems}
-            maxDepth={mdx.frontmatter.sidebarDepth}
+            maxDepth={
+              mdx.frontmatter.sidebarDepth ? mdx.frontmatter.sidebarDepth : 1
+            }
             editPath={absoluteEditPath}
             isMobile={true}
           />
@@ -196,7 +200,9 @@ const TutorialPage = ({
         {mdx.frontmatter.sidebar && tocItems && (
           <DesktopTableOfContents
             items={tocItems}
-            maxDepth={mdx.frontmatter.sidebarDepth}
+            maxDepth={
+              mdx.frontmatter.sidebarDepth ? mdx.frontmatter.sidebarDepth : 1
+            }
             editPath={absoluteEditPath}
           />
         )}

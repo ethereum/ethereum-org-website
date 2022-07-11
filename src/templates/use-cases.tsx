@@ -48,6 +48,8 @@ import { getSummaryPoints } from "../utils/getSummaryPoints"
 import { Lang } from "../utils/languages"
 import { Context } from "../types"
 
+import { Item as ItemTableOfContents } from "../components/TableOfContents"
+
 const Page = styled.div`
   display: flex;
   justify-content: space-between;
@@ -316,7 +318,7 @@ const UseCasePage = ({
 
   const isRightToLeft = isLangRightToLeft(mdx.frontmatter.lang as Lang)
   const showMergeBanner = !!mdx.frontmatter.preMergeBanner
-  const tocItems = mdx.tableOfContents?.items
+  const tocItems = mdx.tableOfContents?.items as Array<ItemTableOfContents>
   const summaryPoints = getSummaryPoints(mdx.frontmatter)
 
   const { editContentUrl } = siteData.siteMetadata || {}
@@ -394,7 +396,9 @@ const UseCasePage = ({
           </SummaryBox>
           <MobileTableOfContents
             items={tocItems}
-            maxDepth={mdx.frontmatter.sidebarDepth}
+            maxDepth={
+              mdx.frontmatter.sidebarDepth ? mdx.frontmatter.sidebarDepth : 1
+            }
             isMobile={true}
           />
         </TitleCard>

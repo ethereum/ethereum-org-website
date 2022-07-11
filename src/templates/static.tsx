@@ -49,6 +49,8 @@ import { isLangRightToLeft } from "../utils/translations"
 import { Lang } from "../utils/languages"
 import { Context } from "../types"
 
+import { Item as ItemTableOfContents } from "../components/TableOfContents"
+
 const Page = styled.div`
   display: flex;
   justify-content: space-between;
@@ -168,7 +170,7 @@ const StaticPage = ({
     ? parent.fields.gitLogLatestDate
     : parent.mtime
 
-  const tocItems = mdx.tableOfContents?.items
+  const tocItems = mdx.tableOfContents?.items as Array<ItemTableOfContents>
   const { editContentUrl } = siteData.siteMetadata || {}
   const { relativePath } = pageContext
   const absoluteEditPath =
@@ -197,7 +199,9 @@ const StaticPage = ({
           editPath={absoluteEditPath}
           items={tocItems}
           isMobile={true}
-          maxDepth={mdx.frontmatter.sidebarDepth}
+          maxDepth={
+            mdx.frontmatter.sidebarDepth ? mdx.frontmatter.sidebarDepth : 1
+          }
         />
         <MDXProvider components={components}>
           <MDXRenderer>{mdx.body}</MDXRenderer>
@@ -208,7 +212,9 @@ const StaticPage = ({
         <TableOfContents
           editPath={absoluteEditPath}
           items={tocItems}
-          maxDepth={mdx.frontmatter.sidebarDepth}
+          maxDepth={
+            mdx.frontmatter.sidebarDepth ? mdx.frontmatter.sidebarDepth : 1
+          }
         />
       )}
     </Page>
