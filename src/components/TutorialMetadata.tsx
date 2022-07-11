@@ -10,6 +10,7 @@ import { FakeLink } from "./SharedStyledComponents"
 import Emoji from "./Emoji"
 import Translation from "./Translation"
 import { Lang } from "../utils/languages"
+import { TranslationKey } from "../utils/translations"
 
 const Container = styled.div`
   display: flex;
@@ -109,7 +110,9 @@ const TutorialMetadata: React.FC<IProps> = ({ tutorial }) => {
           <TutorialTags tags={frontmatter.tags} />
         </PillContainer>
         <SkillPill isSecondary={true} className="" color="">
-          <Translation id={getSkillTranslationId(frontmatter.skill)} />
+          <Translation
+            id={getSkillTranslationId(frontmatter.skill) as TranslationKey}
+          />
         </SkillPill>
       </TagsContainer>
       <HorizontalContainer>
