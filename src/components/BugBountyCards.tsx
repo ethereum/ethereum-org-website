@@ -1,8 +1,9 @@
 import React from "react"
 import styled from "styled-components"
+import { TranslationKey } from "../utils/translations"
 import ButtonLink from "./ButtonLink"
 
-import Translation from "../components/Translation"
+import Translation from "./Translation"
 
 const CardRow = styled.div`
   display: flex;
@@ -108,7 +109,22 @@ const Text = styled.div`
   margin-top: 0.5rem;
 `
 
-const bugBountyCardsInfo = [
+export interface BugBountyCardInfo {
+  lowLabelTranslationId?: TranslationKey
+  mediumLabelTranslationId?: TranslationKey
+  highLabelTranslationId?: TranslationKey
+  criticalLabelTranslationId?: TranslationKey
+  h2TranslationId: TranslationKey
+  descriptionTranslationId: TranslationKey
+  subDescriptionTranslationId: TranslationKey
+  subHeader1TranslationId: TranslationKey
+  severityList: Array<TranslationKey>
+  subHeader2TranslationId: TranslationKey
+  textTranslationId: TranslationKey
+  styledButtonTranslationId: TranslationKey
+}
+
+const bugBountyCardsInfo: Array<BugBountyCardInfo> = [
   {
     lowLabelTranslationId: "page-upgrades-bug-bounty-card-label-2",
     h2TranslationId: "page-upgrades-bug-bounty-card-low",
@@ -165,7 +181,9 @@ const bugBountyCardsInfo = [
   },
 ]
 
-const BugBountyCards = () => (
+export interface IProps {}
+
+const BugBountyCards: React.FC<IProps> = () => (
   <CardRow>
     {bugBountyCardsInfo.map((card, idx) => (
       <Card key={`bug-bounty-card-${idx}`}>

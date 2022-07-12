@@ -18,7 +18,9 @@ import { useOnClickOutside } from "../hooks/useOnClickOutside"
 import { useKeyPress } from "../hooks/useKeyPress"
 import { useSurvey } from "../hooks/useSurvey"
 
-const FixedDot = styled(NakedButton)`
+const FixedDot = styled(NakedButton)<{
+  bottomOffset: number
+}>`
   width: 3rem;
   aspect-ratio: 1;
   border-radius: 50%;

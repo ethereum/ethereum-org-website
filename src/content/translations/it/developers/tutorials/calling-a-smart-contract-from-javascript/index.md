@@ -7,7 +7,7 @@ tags:
   - "frontend"
   - "javascript"
   - "web3.js"
-skill: principiante
+skill: beginner
 lang: it
 sidebar: true
 published: 2020-04-19

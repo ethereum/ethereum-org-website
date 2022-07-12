@@ -22,6 +22,7 @@ export type Lang =
   | "it"
   | "ja"
   | "ka"
+  | "kk"
   | "ko"
   | "lt"
   | "ml"
@@ -29,6 +30,7 @@ export type Lang =
   | "ms"
   | "nl"
   | "nb"
+  | "ph"
   | "pl"
   | "pt"
   | "pt-br"
@@ -123,6 +125,9 @@ const languages: Languages = {
   ka: {
     language: "ქართული",
   },
+  kk: {
+    language: "қазақ",
+  },
   ko: {
     language: "한국어",
   },
@@ -143,6 +148,9 @@ const languages: Languages = {
   },
   nb: {
     language: "Norsk",
+  },
+  ph: {
+    language: "Filipino",
   },
   pl: {
     language: "Polski",

@@ -6,7 +6,7 @@ tags:
   - "transaksi"
   - "web3.js"
   - "alchemy"
-skill: pemula
+skill: beginner
 lang: id
 sidebar: true
 published: 2020-11-04

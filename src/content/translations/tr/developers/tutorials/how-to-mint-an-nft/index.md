@@ -8,7 +8,7 @@ tags:
   - "Alchemy"
   - "Solidity"
   - "akıllı sözleşmeler"
-skill: acemi
+skill: beginner
 lang: tr
 sidebar: true
 published: 2021-04-22
@@ -129,7 +129,7 @@ const nftContract = new web3.eth.Contract(contract.abi, contractAddress)
 
 ## Adım 6: .env dosyasını güncelleyin {#update-env}
 
-Şimdi, Ethereum zincirine işlemler oluşturmak ve göndermek amacıyla, hesap nonce değeri almak için genel ethereum hesap adresinizi kullanacağız (aşağıda açıklanacaktır).
+Şimdi, Ethereum zincirine işlemler oluşturmak ve göndermek amacıyla, hesap nonce değeri almak için genel Ethereum hesap adresinizi kullanacağız (aşağıda açıklanacaktır).
 
 Genel anahtarınızı .env dosyanıza ekleyin: Öğreticinin 1. bölümünü tamamladıysanız, .env dosyamız şimdi şöyle görünmelidir:
 

@@ -197,6 +197,10 @@ const Nav: React.FC<IProps> = ({ handleThemeChange, isDarkTheme, path }) => {
           text: "decentralized-identity",
           to: "/decentralized-identity/",
         },
+        {
+          text: "decentralized-science",
+          to: "/desci/",
+        },
       ],
     },
     learn: {

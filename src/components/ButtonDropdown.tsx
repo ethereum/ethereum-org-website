@@ -12,7 +12,7 @@ import { ButtonSecondary } from "./SharedStyledComponents"
 
 // Utils
 import { useOnClickOutside } from "../hooks/useOnClickOutside"
-import { translateMessageId } from "../utils/translations"
+import { translateMessageId, TranslationKey } from "../utils/translations"
 import { trackCustomEvent } from "../utils/matomo"
 
 const Container = styled.div`
@@ -113,16 +113,38 @@ const NakedNavLink = styled.div`
   }
 `
 
-const ButtonDropdown = ({ list, className }) => {
-  const [isOpen, setIsOpen] = useState(false)
+export interface ListItem {
+  text: TranslationKey
+  to?: string
+  matomo?: {
+    eventCategory: string
+    eventAction: string
+    eventName: string
+  }
+  callback?: (idx: number) => void
+}
+
+export interface List {
+  text: TranslationKey
+  ariaLabel: string
+  items: Array<ListItem>
+}
+
+export interface IProps {
+  list: List
+  className?: string
+}
+
+const ButtonDropdown: React.FC<IProps> = ({ list, className }) => {
+  const [isOpen, setIsOpen] = useState<boolean>(false)
   const intl = useIntl()
-  const ref = createRef()
+  const ref = createRef<HTMLInputElement>()
 
   useOnClickOutside(ref, () => setIsOpen(false))
 
   // Toggle on `enter` key
-  const onKeyDownHandler = (e) => {
-    if (e.keyCode === 13) {
+  const onKeyDownHandler = (e: React.KeyboardEvent<HTMLElement>): void => {
+    if (e.key === "13") {
       setIsOpen(!isOpen)
     }
   }
@@ -136,7 +158,7 @@ const ButtonDropdown = ({ list, className }) => {
       <Button
         onClick={() => setIsOpen(!isOpen)}
         onKeyDown={onKeyDownHandler}
-        tabIndex="0"
+        tabIndex={0}
       >
         <StyledIcon name="menu" />
         <Translation id={list.text} />
@@ -155,13 +177,12 @@ const ButtonDropdown = ({ list, className }) => {
                   trackCustomEvent(matomo)
                 }}
                 to={to}
-                tabIndex="-1"
               >
                 <Translation id={text} />
               </NavLink>
             )}
             {!!to && !matomo && (
-              <NavLink isPartiallyActive={false} to={to} tabIndex="-1">
+              <NavLink isPartiallyActive={false} to={to}>
                 <Translation id={text} />
               </NavLink>
             )}

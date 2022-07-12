@@ -9,7 +9,7 @@ tags:
   - "fabrikalar"
   - "dağıtma"
   - "birleştirilebilirlik"
-skill: gelişmiş
+skill: advanced
 lang: tr
 sidebar: true
 published: 2020-04-05

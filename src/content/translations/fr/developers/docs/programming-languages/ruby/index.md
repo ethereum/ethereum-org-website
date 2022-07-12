@@ -45,7 +45,7 @@ Besoin d’une approche plus élémentaire ? Consultez [ethereum.org/learn](/le
 - [siwe-rails-examples](https://github.com/spruceid/siwe-rails-examples) - _Exemple de SIWE utilisant Ruby on Rails avec contrôleur personnalisé_
 - [omniauth-siwe](https://github.com/spruceid/omniauth-siwe) - _Stratégie OmniAuth pour se connecter avec Ethereum (SIWE)_
 - [omniauth-nft](https://github.com/valthon/omniauth-nft) - _Stratégie OmniAuth pour l'authentification via la détention de NFT_
-- [ethereum-on-rails](https://github.com/q9f/ethereum-on-rails) - _Modèle d'ethereum on Rails permettant de connecter MetaMask à Ruby on Rails_
+- [ethereum-on-rails](https://github.com/q9f/ethereum-on-rails) - _Modèle d'Ethereum on Rails permettant de connecter MetaMask à Ruby on Rails_
 
 ### Archivés / Non entretenus {#archived--no-longer-maintained}
 

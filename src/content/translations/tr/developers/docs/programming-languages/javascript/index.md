@@ -61,7 +61,7 @@ Geliştirme aşamasında bir Ethereumjs istemcisi bulunuyor. Bu, anladığınız
 Ethereum JavaScript alanında aşağıdakiler de dahil olmak üzere pek çok başka şey oluyor:
 
 - cüzdan yardımcı programlarının kütüphaneleri.
-- ethereum anahtarları oluşturmak, bunları içe ve dışa aktarmak için araçlar.
+- Ethereum anahtarları oluşturmak, bunları içe ve dışa aktarmak için araçlar.
 - Ethereum sarı kağıdında açıklanan `merkle-patricia-tree` veri yapısının bir uygulaması.
 
 [EthereumJS deposunda](https://github.com/ethereumjs) en çok ilginizi çeken şeyleri inceleyin

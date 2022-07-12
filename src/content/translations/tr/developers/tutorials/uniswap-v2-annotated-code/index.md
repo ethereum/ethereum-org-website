@@ -6,7 +6,7 @@ sidebar: true
 tags:
   - "katılık"
   - "uniswap"
-skill: orta düzey
+skill: intermediate
 published: 2021-05-01
 lang: tr
 ---

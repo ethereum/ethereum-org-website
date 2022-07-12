@@ -9,7 +9,7 @@ tags:
   - "contracte inteligente"
   - "securitate"
   - "tokenuri"
-skill: intermediar
+skill: intermediate
 published: 2020-08-13
 source: Construirea de contracte sigure
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/token_integration.md

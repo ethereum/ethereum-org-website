@@ -6,7 +6,7 @@ tags:
   - "ETHERS.JS"
   - "ERC-20"
   - "代币"
-skill: 入门
+skill: beginner
 lang: zh
 sidebar: true
 published: 2021-04-06

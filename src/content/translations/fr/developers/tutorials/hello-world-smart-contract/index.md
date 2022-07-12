@@ -9,7 +9,7 @@ tags:
   - "contrats intelligents"
   - "premiers pas"
   - "déploiement"
-skill: débutant
+skill: beginner
 lang: fr
 sidebar: true
 published: 2021-03-31

@@ -937,7 +937,8 @@
       "profile": "https://github.com/EmanHerawy",
       "contributions": [
         "translation",
-        "code"
+        "code",
+        "ideas"
       ]
     },
     {
@@ -4639,7 +4640,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/55439064?v=4",
       "profile": "https://github.com/raj-shekhar1",
       "contributions": [
-        "doc"
+        "doc",
+        "ideas"
       ]
     },
     {
@@ -8027,6 +8029,52 @@
       "name": "Vincent Weisser",
       "avatar_url": "https://avatars.githubusercontent.com/u/32839303?v=4",
       "profile": "http://vincentweisser.com",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "koogawa",
+      "name": "Kosuke Ogawa",
+      "avatar_url": "https://avatars.githubusercontent.com/u/893643?v=4",
+      "profile": "http://www.koogawa.com",
+      "contributions": [
+        "doc",
+        "bug"
+      ]
+    },
+    {
+      "login": "Feerol",
+      "name": "Fatih Eren Erol",
+      "avatar_url": "https://avatars.githubusercontent.com/u/47645405?v=4",
+      "profile": "https://github.com/Feerol",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "olalonde",
+      "name": "Oli Lalonde",
+      "avatar_url": "https://avatars.githubusercontent.com/u/416585?v=4",
+      "profile": "https://syskall.com",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "gingerheart86",
+      "name": "gingerheart86",
+      "avatar_url": "https://avatars.githubusercontent.com/u/100948227?v=4",
+      "profile": "https://github.com/gingerheart86",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "naveen106",
+      "name": "Naveen Kumar",
+      "avatar_url": "https://avatars.githubusercontent.com/u/61573478?v=4",
+      "profile": "https://github.com/naveen106",
       "contributions": [
         "doc"
       ]

@@ -9,7 +9,7 @@ tags:
   - "kontrak pintar"
   - "penyimpanan"
   - "truffle"
-skill: tingkat menengah
+skill: intermediate
 published: 2020-06-26
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/max-contract-size
