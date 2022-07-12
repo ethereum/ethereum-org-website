@@ -1295,6 +1295,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://syskall.com"><img src="https://avatars.githubusercontent.com/u/416585?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Oli Lalonde</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=olalonde" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/gingerheart86"><img src="https://avatars.githubusercontent.com/u/100948227?v=4?s=100" width="100px;" alt=""/><br /><sub><b>gingerheart86</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=gingerheart86" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/naveen106"><img src="https://avatars.githubusercontent.com/u/61573478?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Naveen Kumar</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=naveen106" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/treethought"><img src="https://avatars.githubusercontent.com/u/15894818?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Cam Sweeney</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=treethought" title="Documentation">📖</a></td>
   </tr>
 </table>
 
