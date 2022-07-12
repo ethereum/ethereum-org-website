@@ -39,13 +39,12 @@ A zero-knowledge protocol must satisfy the following criteria:
 
 In basic form, a zero-knowledge proof is made up of three elements: **witness**, **challenge**, and **response**. 
 
-- **Witness**: The witness is the statement to be proven. The proving process starts with creating a set of questions which can only be answered by a party with access to the witness. The prover randomly chooses a question from the set, computes a proof, and sends it to the verifier. 
+- **Witness**: With a zero-knowledge proof, the prover wants to prove knowledge of some hidden information. The secret information is the “witness” to the proof, and the prover's assumed knowledge of the witness establishes a set of questions that can only be answered by a party with knowledge of the information. Thus, the prover starts the proving process by randomly choosing a question, calculating the answer, and sending it to the verifier.
 
-- **Challenge**: The verifier picks another question from the set and asks the prover to answer it. 
+- **Challenge**: The verifier randomly picks another question from the set and asks the prover to answer it. 
 
-- **Response**: The prover accepts the question, calculates the answer, and returns it to the verifier. The prover’s response allows the verifier to check if the former really has access to the witness. 
+- **Response**: The prover accepts the question, calculates the answer, and returns it to the verifier. The prover’s response allows the verifier to check if the former really has access to the witness. To ensure the prover isn’t guessing blindly and getting the correct answers by chance, the verifier picks more questions to ask. By repeating this interaction many times, the possibility of the verifier faking knowledge of the witness drops significantly until the verifier is satisfied.
 
-To ensure the prover isn’t guessing blindly, the verifier picks more questions to ask. By repeating this interaction many times, the possibility of the verifier faking knowledge of the witness drops significantly until the verifier is satisfied.
 
 The above describes the structure of an ‘interactive zero-knowledge proof’. Early zero-knowledge protocols used interactive proving, where verifying the validity of a statement required back-and-forth communication between provers and verifiers. 
 
