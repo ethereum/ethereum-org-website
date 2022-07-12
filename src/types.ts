@@ -22,10 +22,10 @@ export type Context = {
   isContentEnglish?: boolean
 
   // gatsby i18n theme context
-  locale?: string
-  hrefLang?: string
-  originalPath?: string
-  dateFormat?: string
+  locale: Lang
+  hrefLang: string
+  originalPath: string
+  dateFormat: string
 }
 
 export type Direction = "rtl" | "ltr" | "auto"

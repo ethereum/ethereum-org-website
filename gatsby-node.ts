@@ -371,8 +371,8 @@ export const onCreatePage: GatsbyNode<any, Context>["onCreatePage"] = async ({
 
   if (isTranslated && hasNoContext) {
     const { isOutdated, isContentEnglish } = await checkIsPageOutdated(
-      page.path,
-      page.context.language
+      page.context.originalPath,
+      page.context.locale
     )
     deletePage(page)
     createPage<Context>({
