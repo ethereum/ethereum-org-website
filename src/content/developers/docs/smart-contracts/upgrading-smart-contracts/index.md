@@ -64,7 +64,7 @@ The data separation pattern is arguably easier to implement compared to contract
 
 The proxy pattern also uses data separation to keep business logic and data in separate contracts. However, in a proxy pattern, the storage contract (called a proxy) calls the logic contract during code execution. This is a reverse of the data separation method, where the logic contract calls the storage contract. 
 
-The is what happens in a proxy pattern: 
+This is what happens in a proxy pattern: 
 
 1. Users interact with the proxy contract, which stores data, but doesn't hold the business logic.
 
@@ -72,7 +72,7 @@ The is what happens in a proxy pattern:
 
 3. After the call is forwarded to the logic contract, the returned data from the logic contract is retrieved and returned to the user. 
 
-Using the proxy patterns requires an understanding of the **delegatecall** fucntion. Basically, `delegatecall` is an opcode that allows a contract to call another contract, while the actual code execution happens in the context of the calling contract. An implication of using `delegatecall` in proxy patterns is that the proxy contract reads and writes to its storage and executes logic stored at the logic contract as if calling an internal function. 
+Using the proxy patterns requires an understanding of the **delegatecall** function. Basically, `delegatecall` is an opcode that allows a contract to call another contract, while the actual code execution happens in the context of the calling contract. An implication of using `delegatecall` in proxy patterns is that the proxy contract reads and writes to its storage and executes logic stored at the logic contract as if calling an internal function. 
 
 From the [Solidity documentation](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html#delegatecall-callcode-and-libraries): 
 
@@ -105,7 +105,7 @@ The main drawback is that this pattern is mostly useful for rolling out minor up
 
 ### Upgrade mechanism #5: Diamond pattern {#diamond-pattern}
 
-The diamond pattern can be considered an improvement on the proxy pattern. Diamond patterns differ from proxy patterns because the proxy contract delegates function calls to more than one logic contract. 
+The diamond pattern can be considered an improvement on the proxy pattern. Diamond patterns differ from proxy patterns because the diamond proxy contract can delegates function calls to more than one logic contract. 
 
 The logic contracts in the diamond pattern are known as *facets*. To make the diamond pattern work, you need to create an array in the proxy contract that maps [function selectors](https://docs.soliditylang.org/en/v0.8.12/abi-spec.html#function-selector) to different facet addresses. 
 
