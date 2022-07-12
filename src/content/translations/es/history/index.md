@@ -276,7 +276,7 @@ La bifurcación Spurious Dragon fue la segunda respuesta a los ataques de denega
 - [EIP-155](https://eips.ethereum.org/EIPS/eip-155) – _evita que las transacciones de una cadena de Ethereum se transmitan en una cadena alternativa, por ejemplo, una transacción de red de pruebas que se reproduce en la cadena principal de Ethereum._
 - [EIP-160](https://eips.ethereum.org/EIPS/eip-160) – _ajusta los precios del código de operación "EXP" - hace que sea más difícil ralentizar la red a través de operaciones contractuales computacionalmente costosas._
 - [EIP-161](https://eips.ethereum.org/EIPS/eip-161) – _permite la eliminación de cuentas vacías agregadas a los ataques de DOS._
-- [EIP-170](https://eips.ethereum.org/EIPS/eip-170) – _cambia el tamaño máximo de código que puede tener un contrato en la cadena de bloques, a 24.576 bytes._ _
+- [EIP-170](https://eips.ethereum.org/EIPS/eip-170) – _cambia el tamaño máximo de código que puede tener un contrato en la cadena de bloques, a 24.576 bytes._
 
 </ExpandableCard>
 
