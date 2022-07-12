@@ -41,7 +41,7 @@ ETH on testnets has no real value; therefore, there are no markets for testnet E
 A proof-of-work testnet; this means it's the best like-for-like representation of Ethereum. Sepolia is expected to undergo The Merge to proof-of-stake in summer 2022. It is not yet certain whether it will then be maintained long term.
 
 - [Website](https://sepolia.dev/)
-- [Github](https://github.com/goerli/sepolia)
+- [GitHub](https://github.com/goerli/sepolia)
 - [Otterscan](https://sepolia.otterscan.io/)
 - [Etherscan](https://sepolia.etherscan.io)
 
@@ -55,7 +55,7 @@ A proof-of-work testnet; this means it's the best like-for-like representation o
 A proof-of-authority testnet that works across clients; an ideal testnet for application developers. Goerli will be the final testnet merged to proof-of-stake before Ethereum Mainnet is merged. This is expected to happen in summer 2022. Goerli is expected to be maintained long term as a proof-of-stake testnet.
 
 - [Website](https://goerli.net/)
-- [Github](https://github.com/goerli/testnet)
+- [GitHub](https://github.com/goerli/testnet)
 - [Etherscan](https://goerli.etherscan.io)
 
 ##### Goerli faucets
