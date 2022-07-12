@@ -18,6 +18,7 @@ import {
   defaultLanguage,
   Lang,
 } from "./src/utils/languages"
+import { IS_DEV } from "./src/utils/env"
 import redirects from "./redirects.json"
 
 const exec = util.promisify(child_process.exec)
@@ -360,7 +361,7 @@ export const onCreatePage: GatsbyNode<any, Context>["onCreatePage"] = async ({
   // create routes without the lang prefix e.g. `/{path}` as our i18n plugin
   // only creates `/{lang}/{path}` routes. This is useful on dev env to avoid
   // getting a 404 since we don't have server side redirects
-  if (page.path.startsWith(`/${defaultLanguage}`)) {
+  if (IS_DEV && page.path.startsWith(`/${defaultLanguage}`)) {
     const path = page.path.slice(3)
     createPage({ ...page, path })
   }
