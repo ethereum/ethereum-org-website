@@ -107,7 +107,7 @@ The main drawback is that this pattern is mostly useful for rolling out minor up
 
 The diamond pattern can be considered an improvement on the proxy pattern. Diamond patterns differ from proxy patterns because the diamond proxy contract can delegates function calls to more than one logic contract. 
 
-The logic contracts in the diamond pattern are known as *facets*. To make the diamond pattern work, you need to create an array in the proxy contract that maps [function selectors](https://docs.soliditylang.org/en/v0.8.12/abi-spec.html#function-selector) to different facet addresses. 
+The logic contracts in the diamond pattern are known as *facets*. To make the diamond pattern work, you need to create a mapping in the proxy contract that maps [function selectors](https://docs.soliditylang.org/en/v0.8.12/abi-spec.html#function-selector) to different facet addresses. 
 
 When a user makes a function call, the proxy contract checks the mapping to find the facet responsible for executing that function. Then it invokes `delegatecall` (using the fallback function) and redirects the call to the appropriate logic contract.  
 
@@ -132,7 +132,7 @@ The diamond upgrade pattern has some advantages over traditional proxy upgrade p
 
 ## Considerations for upgrading smart contracts {#considerations-for-upgrading-smart-contracts}
 
-1. Use secure access control/authorization mechanisms to prevent unauthorized smart contract upgrades, especially if using the proxy pattern, strategy pattern, or data separation.
+1. Use secure access control/authorization mechanisms to prevent unauthorized smart contract upgrades, especially if using proxy patterns, strategy patterns, or data separation. An example is restricting access to the upgrade function, such that only the contract's owner can call it. 
 
 2. Upgrading smart contracts is a complex activity and requires a high level of dilligence to prevent the introduction of vulnerabilities. 
 
@@ -140,8 +140,12 @@ The diamond upgrade pattern has some advantages over traditional proxy upgrade p
 
 4. Be aware of the costs involved in upgrading contracts. For instance, copying state (e.g., user balances) from an old contract to a new contract during contract migration may require more than one transaction, meaning more gas fees. 
 
+5. Consider implementing **timelocks** to protect users. A timelock refers to a delay enforced on changes to a system—timelocks can be combined with a multi-sig governance system to control upgrades: if a proposed action reaches the required approval threshhold, it doesn't execute until the predefined delay period elapses. 
+
+Timelocks give users some time to exit the system if they disagree with a proposed change (e.g., logic upgrade or new fee schemes). Without timelocks, users need to trust developers not to implement arbitrary changes in a smart contract without prior notice. The drawback here is that timelocks restrict the ability to quickly patch vulnerabilities. 
+
 ## Resources {#resources}
-**OpenZeppelin Upgrades OS - _A suite of tools for deploying and securing upgradeable smart contracts._**
+**OpenZeppelin Upgrades Plugins - _A suite of tools for deploying and securing upgradeable smart contracts._**
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-upgrades) 
 - [Documentation](https://docs.openzeppelin.com/upgrades) 
 
