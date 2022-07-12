@@ -19,7 +19,9 @@ Smart contract verification enables investigating what a contract does through t
 
 ### What is full verification? {#full-verification}
 
-There are some parts of the source code that do not affect the compiled bytecode such as comments or variable names. That means two source codes with different variable names and different comments would both be able to verify the same contract. With that, a malicous actor can add deceiving comments or give misleading variable names inside the source code and get the contract verified with a source code different than the original source code. It is possible to avoid this by appending extra data to the bytecode to serve as a _cryptographical guarantee_ for the exactness of the source code, and as a _fingerprint_ of the compilation information. The necessary information is found in the [Solidity's contract metadata](https://docs.soliditylang.org/en/v0.8.15/metadata.html), and the hash of this file is appended to the bytecode of a contract. You can see it in action in the [metadata playground](https://playground.sourcify.dev)
+There are some parts of the source code that do not affect the compiled bytecode such as comments or variable names. That means two source codes with different variable names and different comments would both be able to verify the same contract. With that, a malicous actor can add deceiving comments or give misleading variable names inside the source code and get the contract verified with a source code different than the original source code. 
+
+It is possible to avoid this by appending extra data to the bytecode to serve as a _cryptographical guarantee_ for the exactness of the source code, and as a _fingerprint_ of the compilation information. The necessary information is found in the [Solidity's contract metadata](https://docs.soliditylang.org/en/v0.8.15/metadata.html), and the hash of this file is appended to the bytecode of a contract. You can see it in action in the [metadata playground](https://playground.sourcify.dev)
 
 The metadata file contains information about the compilation of the contract including the source files and their hashes. Meaning, if any of the compilation settings or even a byte in one of the source files change, the metadata file changes. Consequently the hash of the metadata file, which is appended to the bytecode, also changes. That means if a contract's bytecode + the appended metadata hash match with the given source code and compilation settings, we can be sure this is exactly the same source code used in the original compilation, not even a single byte is different.
 
@@ -52,9 +54,13 @@ Publishing a smart contract's source code files makes it easier for those intere
 Verifying a smart contract basically involves the following steps:
 
 1. Input the source files and compilation settings to a compiler.
+
 2. Compiler outputs the bytecode of the contract
+
 3. Get the bytecode of the deployed contract at a given address
+
 4. Compare the deployed bytecode with the recompiled bytecode. If the codes match, the contract gets verified with the given source code and compilation settings.
+
 5. Additionally, if the the metadata hashes at the end of the bytecode match, it will be a full match.
 
 Note that this is a simplistic description of verification and there are many exceptions that would not work with this such as having [immutable variables](https://docs.sourcify.dev/docs/immutables/).
