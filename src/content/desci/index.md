@@ -110,6 +110,7 @@ Explore projects and join the DeSci community.
 - [Molecule’s Biopharma IP-NFTs - A Technical Description](https://molecule.to/blog/molecules-biopharma-ip-nfts-a-technical-description)
 - [Building Trustless Systems of Science by Jon Starr](https://medium.com/@jringo/building-systems-of-trustless-science-1cd2d072f673)
 - [The Emergence of Biotech DAOs](https://molecule.to/blog/the-emergence-of-biotech-daos)
+- [Paul Kohlhaas - DeSci: The Future of Decentralized Science (podcast)](https://anchor.fm/andrew-steinwold/episodes/Paul-Kohlhaas---DeSci-The-Future-of-Decentralized-Science---Zima-Red-ep-117-e1h683a)
 
 ### Videos {#videos}
 
