@@ -187,7 +187,7 @@ La bifurcación de Estambul:
 <ExpandableCard title="EIP de Estambul" contentPreview="Official improvements included in this fork.">
 
 - [EIP-152](https://eips.ethereum.org/EIPS/eip-152) - _permitir a Ethereum que opere con una divisa que vele por la privacidad, como Zcash._
-- [EIP-1108](https://eips.ethereum.org/EIPS/eip-1108) – _criptografía _más barata para mejorar [gas](/glossary/#gas)._
+- [EIP-1108](https://eips.ethereum.org/EIPS/eip-1108) – _criptografía más barata para mejorar [gas](/glossary/#gas)._
 - [EIP-1344](https://eips.ethereum.org/EIPS/eip-1344) – _protege a Ethereum contra ataques de repetición mediante la adición de `CHAINID` [opcode](/Developers/docs/ethereum-stack/#ethereum-virtual-machine)._
 - [EIP-1884](https://eips.ethereum.org/EIPS/eip-1884) – _optimizando los precios de gas de código opcional basado en el consumo._
 - [EIP-2028](https://eips.ethereum.org/EIPS/eip-2028) – _reduce el coste de CallData para permitir más datos en bloques - bueno para [Escalado de capa 2](/developers/docs/scaling/#layer-2-scaling)._
