@@ -3,6 +3,7 @@ import { ApolloProvider } from "@apollo/client"
 import { ThemeProvider } from "styled-components"
 import styled from "styled-components"
 import { IntlProvider } from "react-intl"
+import { LocaleProvider } from "gatsby-theme-i18n"
 
 import { lightTheme, darkTheme, GlobalStyle } from "../theme"
 
@@ -90,7 +91,7 @@ const Layout: React.FC<IProps> = ({
   const [shouldShowSideNav, setShouldShowSideNav] = useState<boolean>(false)
 
   const locale = pageContext.locale
-  const message = require(`../intl/${locale}.json`)
+  const messages = require(`../intl/${locale}.json`)
 
   // Exit Zen Mode on 'esc' click
   useKeyPress(`Escape`, () => handleZenModeChange(false))
@@ -156,54 +157,56 @@ const Layout: React.FC<IProps> = ({
     !isTranslationBannerIgnored
 
   return (
-    <IntlProvider locale={locale!} key={locale} messages={message}>
-      <ApolloProvider client={client}>
-        <ThemeProvider theme={theme}>
-          <GlobalStyle />
-          <SkipLink hrefId="#main-content" />
-          <TranslationBanner
-            shouldShow={shouldShowTranslationBanner}
-            isPageContentEnglish={isPageContentEnglish}
-            isPageRightToLeft={isPageRightToLeft}
-            originalPagePath={pageContext.originalPath!}
-          />
-          <TranslationBannerLegal
-            shouldShow={isLegal}
-            isPageRightToLeft={isPageRightToLeft}
-            originalPagePath={pageContext.originalPath!}
-          />
-          <ContentContainer>
-            <VisuallyHidden isHidden={isZenMode}>
-              <Nav
-                handleThemeChange={handleThemeChange}
-                isDarkTheme={isDarkTheme}
-                path={path}
-              />
-              {shouldShowSideNav && <SideNavMobile path={path} />}
-            </VisuallyHidden>
-            <SkipLinkAnchor id="main-content" />
-            <MainContainer>
-              {shouldShowSideNav && (
-                <VisuallyHidden isHidden={isZenMode}>
-                  <SideNav path={path} />
-                </VisuallyHidden>
-              )}
-              <MainContent>
-                <ZenModeContext.Provider
-                  value={{ isZenMode, handleZenModeChange }}
-                >
-                  <Main>{children}</Main>
-                </ZenModeContext.Provider>
-              </MainContent>
-            </MainContainer>
-            <VisuallyHidden isHidden={isZenMode}>
-              <Footer />
-            </VisuallyHidden>
-            <FeedbackWidget />
-          </ContentContainer>
-        </ThemeProvider>
-      </ApolloProvider>
-    </IntlProvider>
+    <LocaleProvider pageContext={pageContext}>
+      <IntlProvider locale={locale!} key={locale} messages={messages}>
+        <ApolloProvider client={client}>
+          <ThemeProvider theme={theme}>
+            <GlobalStyle />
+            <SkipLink hrefId="#main-content" />
+            <TranslationBanner
+              shouldShow={shouldShowTranslationBanner}
+              isPageContentEnglish={isPageContentEnglish}
+              isPageRightToLeft={isPageRightToLeft}
+              originalPagePath={pageContext.originalPath!}
+            />
+            <TranslationBannerLegal
+              shouldShow={isLegal}
+              isPageRightToLeft={isPageRightToLeft}
+              originalPagePath={pageContext.originalPath!}
+            />
+            <ContentContainer>
+              <VisuallyHidden isHidden={isZenMode}>
+                <Nav
+                  handleThemeChange={handleThemeChange}
+                  isDarkTheme={isDarkTheme}
+                  path={path}
+                />
+                {shouldShowSideNav && <SideNavMobile path={path} />}
+              </VisuallyHidden>
+              <SkipLinkAnchor id="main-content" />
+              <MainContainer>
+                {shouldShowSideNav && (
+                  <VisuallyHidden isHidden={isZenMode}>
+                    <SideNav path={path} />
+                  </VisuallyHidden>
+                )}
+                <MainContent>
+                  <ZenModeContext.Provider
+                    value={{ isZenMode, handleZenModeChange }}
+                  >
+                    <Main>{children}</Main>
+                  </ZenModeContext.Provider>
+                </MainContent>
+              </MainContainer>
+              <VisuallyHidden isHidden={isZenMode}>
+                <Footer />
+              </VisuallyHidden>
+              <FeedbackWidget />
+            </ContentContainer>
+          </ThemeProvider>
+        </ApolloProvider>
+      </IntlProvider>
+    </LocaleProvider>
   )
 }
 

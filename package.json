@@ -28,7 +28,6 @@
     "gatsby": "^4.15.0",
     "gatsby-plugin-gatsby-cloud": "^4.3.0",
     "gatsby-plugin-image": "^2.0.0",
-    "gatsby-plugin-intl": "^0.3.3",
     "gatsby-plugin-manifest": "^4.10.1",
     "gatsby-plugin-matomo": "^0.9.0",
     "gatsby-plugin-mdx": "^2.14.1",

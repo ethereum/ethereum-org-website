@@ -1,4 +1,4 @@
-import React, { useState, createRef, useContext, ReactNode } from "react"
+import React, { useState, createRef, useContext } from "react"
 import styled from "styled-components"
 import { useIntl } from "react-intl"
 import { motion } from "framer-motion"

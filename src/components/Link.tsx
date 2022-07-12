@@ -204,7 +204,7 @@ const Link: React.FC<IProps> = ({
     )
   }
 
-  // Use `gatsby-plugin-intl` Link (which prepends lang path)
+  // Use `gatsby-theme-i18n` Link (which prepends lang path)
   return (
     <InternalLink
       dir={dir}
