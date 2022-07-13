@@ -48,7 +48,7 @@ DeSci is building the scientific toolset to onboard Web2 academia into the digit
 
 Science publishing is famously problematic because it is managed by publishing houses that rely upon free labor from scientists, reviewers, and editors to generate the papers but then charge exorbitant publishing fees. The public, who have usually indirectly paid for the work and the publication costs through taxation, can often not access that same work without paying the publisher again. The total fees for publishing individual science papers are often five figures ($USD), undermining the whole concept of scientific knowledge as a [public good](https://www.econlib.org/library/Enc/PublicGoods.html) while generating enormous profits for a small group of publishers.
 
-Free and open-access platforms exist in the form of pre-print servers, [such as ArXiv](https://arxiv.org/. However, these platforms lack quality control, [anti-sybil mechanisms](https://csrc.nist.gov/glossary/term/sybil_attack), and do not generally track article-level metrics, meaning they are usually only used to publicize work before submission to a traditional publisher. SciHub also makes published papers free to access, but not legally, and only after the publishers have already taken their payment and wrapped the work in strict copyright legislation. This leaves a critical gap for accessible science papers and data with an embedded legitimacy mechanism and incentive model. The tools for building such a system exist in Web3.
+Free and open-access platforms exist in the form of pre-print servers, [such as ArXiv](https://arxiv.org/). However, these platforms lack quality control, [anti-sybil mechanisms](https://csrc.nist.gov/glossary/term/sybil_attack), and do not generally track article-level metrics, meaning they are usually only used to publicize work before submission to a traditional publisher. SciHub also makes published papers free to access, but not legally, and only after the publishers have already taken their payment and wrapped the work in strict copyright legislation. This leaves a critical gap for accessible science papers and data with an embedded legitimacy mechanism and incentive model. The tools for building such a system exist in Web3.
 
 ### Reproducibility and replicability {#reproducibility-and-replicability}
 
@@ -111,6 +111,7 @@ Explore projects and join the DeSci community.
 - [Molecule’s Biopharma IP-NFTs - A Technical Description](https://molecule.to/blog/molecules-biopharma-ip-nfts-a-technical-description)
 - [Building Trustless Systems of Science by Jon Starr](https://medium.com/@jringo/building-systems-of-trustless-science-1cd2d072f673)
 - [The Emergence of Biotech DAOs](https://molecule.to/blog/the-emergence-of-biotech-daos)
+- [Paul Kohlhaas - DeSci: The Future of Decentralized Science (podcast)](https://anchor.fm/andrew-steinwold/episodes/Paul-Kohlhaas---DeSci-The-Future-of-Decentralized-Science---Zima-Red-ep-117-e1h683a)
 
 ### Videos {#videos}
 
