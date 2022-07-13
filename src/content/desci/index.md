@@ -99,6 +99,7 @@ Explore projects and join the DeSci community.
 - [Bio.xyz: get funded for your biotech DAO or desci project](https://www.molecule.to/)
 - [ResearchHub: post a scientific result and engage in a conversation with peers](https://www.researchhub.com/)
 - [VitaDAO: receive funding through sponsored research agreements for longevity research](https://www.vitadao.com/)
+- [Fleming Protocol: open-source data economy that fuels collaborative biomedical discovery](https://medium.com/@FlemingProtocol/a-data-economy-for-patient-driven-biomedical-innovation-9d56bf63d3dd)
 
 ## Further reading {#further-reading}
 
