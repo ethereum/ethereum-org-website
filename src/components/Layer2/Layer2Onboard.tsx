@@ -6,6 +6,7 @@ import { useIntl } from "gatsby-plugin-intl"
 
 // Components
 import ButtonLink from "../ButtonLink"
+import Link from "../Link"
 import Translation from "../Translation"
 import { StyledSelect as Select } from "../SharedStyledComponents"
 
@@ -214,6 +215,11 @@ const Layer2Onboard: React.FC<IProps> = ({
           <p>
             <Translation id="layer-2-onboard-wallet-1" />
           </p>
+          <p>
+            <Link to="/bridges/">
+              <Translation id="layer-2-more-on-bridges" />
+            </Link>
+          </p>
         </LeftDescription>
         <LeftSelect>
           <StyledSelect
@@ -269,7 +275,10 @@ const Layer2Onboard: React.FC<IProps> = ({
             <Translation id="layer-2-onboard-exchange-1" />
           </p>
           <p>
-            <Translation id="layer-2-onboard-exchange-2" />
+            <Translation id="layer-2-onboard-exchange-2" />{" "}
+            <Link to="/wallets/find-wallet/">
+              <Translation id="layer-2-onboard-find-a-wallet" />
+            </Link>
           </p>
         </RightDescription>
         <RightSelect>
