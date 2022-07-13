@@ -8106,6 +8106,15 @@
         "doc",
         "ideas"
       ]
+    },
+    {
+      "login": "zyjblockchain",
+      "name": "Sandy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/40423181?v=4",
+      "profile": "http://sandyzhou911@gmail.com",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
