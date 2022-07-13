@@ -75,8 +75,7 @@ Ikolojia ya Ethereum iko njiani katika kufadhili bidhaa za umma na miradi inayol
 
 ## Wasimamizi wa bidhaa <Emoji text=":fountain_pen:" size={1} /> {#product-managers}
 
-- Ikolijia ya Ethereum inahitaji talanta zako! Makampuni mengi yanatoa ajira kwa wasimsmizi wa bidhaa. Kama unataka kuanza kwa kuchangia kwenye mradi wa vyanzo huria, wasiliana na
-  [Wafugaji wa Paka wa Ethereum](https://discord.com/invite/Nz6rtfJ8Cu) ama [MetaCartel](https://www.metacartel.org/)</li> </ul>
+- Ikolijia ya Ethereum inahitaji talanta zako! Makampuni mengi yanatoa ajira kwa wasimsmizi wa bidhaa. Kama unataka kuanza kwa kuchangia kwenye mradi wa vyanzo huria, wasiliana na [Wafugaji wa Paka wa Ethereum](https://discord.com/invite/Nz6rtfJ8Cu) ama [MetaCartel](https://www.metacartel.org/)
 
 ## Masoko <Emoji text=":megaphone:" size={1} /> {#marketing}
 
