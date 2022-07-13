@@ -7,7 +7,7 @@ emoji: ":handshake:"
 sidebar: true
 sidebarDepth: 2
 image: ../../../../assets/use-cases/dao-2.png
-alt: Imagen de una DAO votando una propuesta.
+alt: Representación de una DAO votando sobre una propuesta.
 summaryPoint1: Comunidades con propiedad compartida por los miembros sin liderazgo centralizado.
 summaryPoint2: Una forma segura de colaborar con desconocidos en Internet.
 summaryPoint3: Un lugar seguro para entregar fondos a una causa específica.
@@ -17,25 +17,25 @@ summaryPoint3: Un lugar seguro para entregar fondos a una causa específica.
 
 Las DAO son una forma eficaz y segura de trabajar con personas afines en todo el mundo.
 
-Considérelas un negocio de internet que colectivamente pertenece y es gestionado por sus miembros. Han incorporado tesoros a los que nadie tiene autoridad para acceder sin la aprobación del grupo. Las decisiones se rigen por propuestas y se votan para garantizar que todos los miembros de la organización tengan voz.
+Considérelas un negocio de internet que colectivamente pertenece y es gestionado por sus miembros. Han incorporado tesoros a los que nadie tiene autoridad para acceder sin la aprobación del grupo. Las decisiones se rigen por propuestas y votan para garantizar que todos los miembros de la organización tengan voz.
 
-No hay ningún director ejecutivo que pueda autorizar el gasto en base a sus propios caprichos y ninguna posibilidad de que un director financiero manipule los libros. Todo está expuesto y las reglas en torno al gasto se integran en la DAO a través de su código.
+No hay ningún director ejecutivo que pueda autorizar el gasto en base a sus propios caprichos y ninguna posibilidad de que un OFC manipule los libros. Todo está abierto y las reglas en torno al gasto se integran en la DAO a través de su código.
 
 ## ¿Por qué necesitamos DAO? {#why-dao}
 
-Emprender una organización conjunta, que involucre financiación y dinero requiere mucha confianza en las personas con las que se esté trabajando. No obstante, es difícil confiar en alguien con quien solo se ha interactuado en Internet. Con una DAO, no necesita confiar en nadie de su grupo, tan solo en el código de DAO, que es 100 % transparente y cualquier persona puede verificar.
+Iniciar una organización con alguien que involucre financiación y dinero requiere mucha confianza en la gente con la que se está trabajando. Pero es difícil confiar en alguien con quien solo has interactuado en Internet. Con una DAO no necesita confiar en nadie en el grupo, solo en el código de DAO, que es 100 % transparente y verificable por cualquier persona.
 
-Así se abren nuevas oportunidades para la colaboración y coordinación globales.
+Así se abren nuevas oportunidades para la colaboración y coordinación global.
 
 ### Una comparación {#dao-comparison}
 
-| DAO                                                                                                                                   | Una organización tradicional                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| Suele ser plana y totalmente democratizada.                                                                                           | Suele ser jerárquica.                                                                                                           |
-| Los miembros votan previamente cualquier cambio que quieran emprender.                                                                | Dependiendo de la estructura, se pueden exigir cambios a un único grupo o se puede ofrecer la posibilidad de votarlos.          |
-| Los votos cuentan y los resultados se implementan automáticamente sin intermediarios de confianza.                                    | Si se permite la votación, los votos se contabilizan internamente y el resultado de la votación debe ser tramitado manualmente. |
-| Los servicios ofrecidos se gestionan automáticamente de forma descentralizada (por ejemplo, la distribución de fondos filantrópicos). | Requiere tramitación humana o centralización, propensa a la manipulación.                                                       |
-| Toda la actividad es transparente y totalmente pública.                                                                               | La actividad es normalmente privada y limitada al público.                                                                      |
+| DAO                                                                                                                                   | Una organización tradicional                                                                                                     |
+| ------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| Por lo general, plana y totalmente democratizada.                                                                                     | Normalmente jerárquica.                                                                                                          |
+| Votación requerida por los miembros para cualquier cambio a implementar.                                                              | Dependiendo de la estructura, se pueden exigir cambios a un único grupo o se puede ofrecer la opción del voto.                   |
+| Los votos hablan y los resultados se implementan automáticamente sin intermediarios de confianza.                                     | Si se permite la votación, los votos son contabilizados internamente y el resultado de la votación debe ser tratado manualmente. |
+| Los servicios ofrecidos se gestionan automáticamente de forma descentralizada (por ejemplo, la distribución de fondos filantrópicos). | Requiere manipulación humana o automatización controlada centralmente, propensa a la manipulación.                               |
+| Toda la actividad es transparente y totalmente pública.                                                                               | La actividad es normalmente privada y limitada al público.                                                                       |
 
 ### Ejemplos de DAO {#dao-examples}
 
@@ -75,7 +75,7 @@ La columna vertebral de una DAO es su contrato inteligente. El contrato define l
 
 Esto es posible porque los contratos inteligentes son a prueba de manipulación una vez que conectan con Ethereum. No puede editar el código (las reglas de la DAO) sin que la gente se dé cuenta porque todo es público.
 
-<DocLink to="/smart-contracts/">
+<DocLink to="/developers/docs/smart-contracts/">
   Más sobre contratos inteligentes
 </DocLink>
 
@@ -86,7 +86,7 @@ Ethereum es la base perfecta para las DAO por varias razones:
 - El propio consenso de Ethereum se distribuye y establece lo suficiente como para que las organizaciones confíen en la red.
 - El código inteligente del contrato no puede ser modificado una vez se conecte, ni siquiera por sus propietarios. Esto permite a la DAO funcionar siguiendo las reglas con las que fue programada.
 - Los contratos inteligentes pueden enviar/recibir fondos. Sin esto necesitará un intermediario de confianza para administrar los fondos del grupo.
-- La comunidad Ethereum ha demostrado ser más colaborativa que competitiva, permitiendo que emerjan rápidamente las mejores prácticas y sistemas de apoyo.
+- La comunidad Ethereum ha demostrado ser más colaborativa que competitiva, permitiendo que emergan rápidamente las mejores prácticas y sistemas de apoyo.
 
 ## Crear/unirse a una DAO {#join-start-a-dao}
 
@@ -106,12 +106,12 @@ Ethereum es la base perfecta para las DAO por varias razones:
 
 ### Artículos acerca de DAO {#dao-articles}
 
-- [¿Qué es una DAO?](https://aragon.org/dao) – [Aragon](https://aragon.org/)
-- [La casa de las DAO](https://wiki.metagame.wtf/docs/great-houses/house-of-daos) – [Metagamo](https://wiki.metagame.wtf/)
-- [¿Qué es una DAO y para qué sirve?](https://daohaus.substack.com/p/-what-is-a-dao-and-what-is-it-for) – [DAOhaus](https://daohaus.club/)
-- [Cómo iniciar una comunidad digital con una DAO](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) – [DAOhaus](https://daohaus.club/)
-- [¿Qué es una DAO?](https://coinmarketcap.com/alexandria/article/what-is-a-dao) – [Coinmarketcap](https://coinmarketcap.com)
+- [What's a DAO?](https://aragon.org/dao) – [Aragon](https://aragon.org/)
+- [House of DAOs](https://wiki.metagame.wtf/docs/great-houses/house-of-daos) – [Metagame](https://wiki.metagame.wtf/)
+- [What is a DAO and what is it for?](https://daohaus.substack.com/p/-what-is-a-dao-and-what-is-it-for) – [DAOhaus](https://daohaus.club/)
+- [How to Start a DAO-Powered Digital Community](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) – [DAOhaus](https://daohaus.club/)
+- [What is a DAO?](https://coinmarketcap.com/alexandria/article/what-is-a-dao) – [Coinmarketcap](https://coinmarketcap.com)
 
 ### Vídeos {#videos}
 
-- [¿Qué es una DAO en cripto?](https://youtu.be/KHm0uUPqmVE)
+- [¿Qué es una DAO en criptografía?](https://youtu.be/KHm0uUPqmVE)

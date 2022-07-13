@@ -19,7 +19,7 @@ DeFi o Finanzas Descentralizadas es un sistema financiero global y abierto para 
 
 DeFi es un término colectivo que se refiere a los diferentes productos y servicios financieros accesibles para cualquier usuario de Ethereum, cualquier persona con una conexión a Internet. Con DeFi, los mercados siempre se encuentran abiertos y no existen autoridades centralizadas que puedan bloquear las transacciones o denegar el acceso a cualquiera de los servicios. Estos servicios, anteriormente lentos y con riesgo de error humano, ahora son automáticos y más seguros debido a que son manejados por un código que cualquier persona puede inspeccionar y analizar.
 
-Existe una economía creciente criptográfica palpable, en la que se puede prestar, pedir prestado, a corto y a largo plazo, ganar intereses y mucho más. En Argentina, por ejemplo, los usuarios de criptomonedas han logrado escapar de la fuerte inflación que atañe al país a través del uso de las DeFi. Las empresas están empezando a pagar los salarios de sus empleados en tiempo real. Algunas personas han llegado a retirar y pagar préstamos de millones de dólares sin la necesidad de una identificación personal.
+Existe una economía creciente criptográficaallá afuera, en la cual puede prestar, pedir prestado, aumentar/disminuir, ganar interés y mucho más. En Argentina, por ejemplo, los usuarios de criptomonedas han logrado escapar de la fuerte inflación que atañe al país a través del uso de las DeFi. Las empresas están empezando a pagar los salarios de sus empleados en tiempo real. Algunas personas han llegado a retirar y pagar préstamos de millones de dólares sin la necesidad de una identificación personal.
 
 <YouTube id="H-O3r2YMWJ4" />
 
@@ -40,7 +40,7 @@ Una de las mejores maneras de determinar el potencial de las DeFi es entender lo
 
 | DeFi                                                                                                                                  | Finanzas tradicionales                                                                                                                                   |
 | ------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Usted guarda su dinero.                                                                                                               | Las empresas guardan su dinero.                                                                                                                          |
+| Usted guarda su dinero.                                                                                                               | Las empresas gaurdan su dinero.                                                                                                                          |
 | Usted controla el destino de su dinero y la manera en la cual se gasta.                                                               | Debe confiar en que las empresas no gestionen mal su dinero, como por ejemplo, prestarle dinero a personas con un riesgo alto.                           |
 | Los fondos se transfieren en cuestión de minutos.                                                                                     | Los pagos pueden tomar días debido a procesos manuales.                                                                                                  |
 | La actividad financiera se realiza bajo un seudónimo.                                                                                 | La actividad financiera está fuertemente vinculada a su identidad.                                                                                       |
@@ -73,7 +73,7 @@ Esto puede sonar extraño... ¿por qué querría programar mi dinero? Sin embarg
 
 ## ¿Qué puede hacer con DeFi? {#defi-use-cases}
 
-Existe una alternativa descentralizada para la mayoría de servicios financieros. Pero Ethereum también nos presenta la oportunidad de crear productos financieros completamente nuevos. Esta es una lista en constante crecimiento.
+Existe una alternativa decentralizada para la mayoría de servicios financieros. Pero Ethereum también nos presenta la oportunidad de crear productos financieros completamente nuevos. Esta es una lista en constante crecimiento.
 
 - [Envíe dinero a cualquier parte del mundo](#send-money)
 - [Pague sueldos en tiempo real desde y hacia cualquier parte del mundo](#stream-money)
@@ -122,7 +122,7 @@ Las monedas como Dai o USDC tienen un valor que varía en pocos céntimos del d�
 Los préstamos de dinero de proveedores descentralizados se llevan a cabo de dos formas principales.
 
 - Entre pares (también conocido como P2P), en que un prestatario tomará prestado directamente de un prestamista específico.
-- En función de las reservas (o «pools»), cuando los prestamistas proporcionan reservas (liquidez) a una reserva de la que los prestatarios pueden pedir préstamos.
+- En base a las reservas (o «pools»), cuando los prestamistas proporcionan fondos (liquidez) a una reserva de la que los prestatarios pueden pedir préstamos.
 
 <ButtonLink to="/dapps/?category=finance">
   Ver dapps de préstamos
@@ -144,7 +144,7 @@ Cuando usted utiliza un prestamista o crédito descentralizado, tiene acceso a l
 
 #### Eficiencias fiscales {#tax-efficiencies}
 
-Los préstamos pueden proporcionarle acceso a los fondos que necesita sin necesidad de vender sus ETH (operación imponible). En su lugar, puede usar ETH como garantía para un préstamo con una moneda estable. Esto le da el flujo de efectivo que necesita y le permite mantener sus ETH. Las monedas estables son tókenes mucho mejores para cuando necesita dinero ya que no fluctúan en valor como el ETH. [Más sobre las monedas estables](#stablecoins)
+Los préstamos pueden proporcionarle acceso a los fondos que necesita sin necesidad de vender sus ETH (operación imponible). En su lugar, puede usar ETH como garantía para un préstamo con una moneda estable. Esto le da el flujo de efectivo que necesita y le permite mantener sus ETH. Las monedas estables son tókenes mucho mejores para cuando necesita dinero ya que no fluctuan en valor como el ETH. [Más sobre las monedas estables](#stablecoins)
 
 #### Préstamos flash {#flash-loans}
 
@@ -234,7 +234,7 @@ Cuando usa un intercambio centralizado, tiene que depositar sus activos antes de
 
 Hay productos de gestión de fondos en Ethereum que tratarán de hacer crecer su portafolio basándose en la estrategia que usted elija. Este proceso es automático, abierto para todo el mundo y no necesita de un gestor humano que se haga cargo de sus ganancias.
 
-Un buen ejemplo es el [fondo DeFi Pulse Index (DPI)](https://defipulse.com/blog/defi-pulse-index/). Este es un fondo que se reflota automáticamente para asegurarse de que su portafolio siempre incluya [el top de los tókenes DeFi según la capitalización del mercado](https://www.coingecko.com/en/defi). Nunca tendrá que gestionar ninguno de los detalles y puede retirar del fondo cuando usted quiera.
+Un buen ejemplo es el [fondo DeFi Pulse Index (DPI)](https://defipulse.com/blog/defi-pulse-index/). Este es un fondo que se reequilibra automáticamente para asegurarse de que su portafolio siempre incluya [el top de los tókenes DeFi según la capitalización del mercado](https://www.coingecko.com/en/defi). Nunca tendrá que gestionar ninguno de los detalles y puede retirar del fondo cuando usted quiera.
 
 <ButtonLink to="/dapps/?category=finance">
   Ver dapps de inversión
@@ -251,7 +251,7 @@ Ethereum es una plataforma ideal para la recaudación de fondos:
 - Los recaudadores pueden configurar reembolsos automáticos si, por ejemplo, hay una fecha límite y una cantidad mínima a la que no se ha llegado.
 
 <ButtonLink to="/dapps/?category=finance">
-  Ver dApps de recaudación de fondos
+  Ver dapps de recaudación de fondos
 </ButtonLink>
 
 #### Financiación cuadrática {#quadratic-funding}
@@ -275,7 +275,7 @@ Esto significa que el Proyecto A con sus 100 donaciones de 1 dólar puede termin
 
 El aseguramiento descentralizado tiene como objetivo hacer que el aseguramiento sea más barato, se pague más rápido y sea más transparente. Con más automatización, la cobertura es más asequible y los pagos son mucho más rápidos. Los datos usados para decidir sobre su solicitud son completamente transparentes.
 
-Los productos de Ethereum —al igual que el software— pueden sufrir virus y aprovechamiento. Ahora mismo hay muchos productos de seguros enfocándose en proteger a sus usuarios de pérdidas de fondos. Sin embargo, hay proyectos que están empezando a crear cobertura para todo lo que la vida pueda lanzarnos. Un buen ejemplo es la cobertura de Etherisc Crop, que pretende [proteger a los pequeños agricultores en Kenya contra las sequías y las inundaciones](https://blog.etherisc.com/etherisc-teams-up-with-chainlink-to-deliver-crop-insurance-in-kenya-137e433c29dc). El aseguramiento descentralizado ofrece una cobertura más barata para los granjeros a los que se les cobra con precios fuera del de los seguros tradicionales.
+Los productos de Ethereum, como un software, pueden sufrir bugs y exploits. Ahora mismo hay muchos productos de seguros enfocándose en proteger a sus usuarios de pérdidas de fondos. Sin embargo, hay proyectos que están empezando a crear cobertura para todo lo que la vida pueda lanzarnos. Un buen ejemplo es la cobertura de Etherisc Crop, que pretende [proteger a los pequeños agricultores en Kenya contra las sequías y las inundaciones](https://blog.etherisc.com/etherisc-teams-up-with-chainlink-to-deliver-crop-insurance-in-kenya-137e433c29dc). El aseguramiento descentralizado ofrece una cobertura más barata para los granjeros a los que se les cobra con precios fuera del de los seguros tradicionales.
 
 <ButtonLink to="/dapps/?category=finance">
   Ver dapps de aseguramiento
@@ -288,7 +288,7 @@ Los productos de Ethereum —al igual que el software— pueden sufrir virus y a
 Con tantas cosas en marcha, necesitará una forma de realizar un seguimiento de todas sus inversiones, préstamos y operaciones. Existen una gran cantidad de productos que le permiten coordinar toda su actividad de DeFi (Finanzas Descentralizadas) desde un solo lugar. Esta es la belleza de la arquitectura abierta de DeFi. Los equipos pueden crear interfaces en las que no solo puede ver sus saldos entre productos, sino que también puede usar sus funciones. Le resultará más útil a medida que explora más sobre DeFi.
 
 <ButtonLink to="/dapps/?category=finance">
-  Ver dApps de portafolios
+  Ver dapps de protafolios
 </ButtonLink>
 
 <Divider />
@@ -339,16 +339,16 @@ DeFi es un proyecto de código abierto. Puede inspeccionar, copiar e innovar tod
 
 ### Artículos sobre DeFi {#defi-articles}
 
-- [¿Qué son las Finanzas Descentralizadas?](https://docs.ethhub.io/built-on-ethereum/open-finance/what-is-open-finance/) – _ETHHub, actualizado periódicamente_
-- [Una guía sobre DeFi para principiantes](https://blog.coinbase.com/a-beginners-guide-to-decentralized-finance-defi-574c68ff43c4) – _Sid Coelho-Prabhu, 6 de Enero del 2020_
+- [What is Decentralized Finance?](https://docs.ethhub.io/built-on-ethereum/open-finance/what-is-open-finance/) – _ETHHub, actualizado periódicamente_
+- [A beginner's guide to DeFi](https://blog.coinbase.com/a-beginners-guide-to-decentralized-finance-defi-574c68ff43c4) – _Sid Coelho-Prabhu, 6 de enero de 2020_
 
 ### Vídeos {#videos}
 
-- [Finematics - Educación DeFi](https://finematics.com/) – _Vídeos sobre DeFi_
-- [The Defiant](https://www.youtube.com/playlist?list=PLaDcID4s1KronHMKojfjwiHL0DdQEPDcq) – _DeFi Básico: Todo lo que necesitas saber para empezar en este apabullante espacio._
-- [Whiteboard Crypto](https://youtu.be/17QRFlml4pA) – _¿Qué es DeFi?_
+- [Finematics - decentralized finance education](https://finematics.com/) – _Videos on DeFi_
+- [The Defiant](https://www.youtube.com/playlist?list=PLaDcID4s1KronHMKojfjwiHL0DdQEPDcq) – _DeFi basics: Everything you need to know to get started in this occasionally baffling space._
+- [Whiteboard Crypto](https://youtu.be/17QRFlml4pA) _What is DeFi?_
 
 ### Comunidades {#communities}
 
-- [Servidor Discord de DeFi Llama](https://discord.gg/buPFYXzDDd)
+- [Servidor Discord de DeFi](https://discord.gg/buPFYXzDDd)
 - [Servidor Discord de DeFi Pulse](https://discord.gg/Gx4TCTk)
