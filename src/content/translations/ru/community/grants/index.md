@@ -20,18 +20,18 @@ lang: ru
 - [MetaCartel](https://www.metacartel.org/grants/) — _разработка децентрализованных приложений, создание децентрализованной автономной организации (DAO)_ Гранты в размере от 1000 до 8000 долл. США.
 - [Децентрализованная автономная организация (DAO) Moloch](https://www.molochdao.com/) — _конфиденциальность, масштабирование второго уровня, безопасность клиентов и многое другое_
 - [Открытые гранты](https://opengrants.com/explore)
-- [ Гранты DAO](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) — _таблица Google организаций, предлагающих гранты_
+- [Гранты DAO](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) — _таблица Google организаций, предлагающих гранты_
 
 ## Отдельные проекты {#project-specific}
 
 В рамках этих проектов созданы их собственные гранты, направленные на разработку и тестирование собственных технологий.
 
-- [Программа грантов Aave](https://aavegrants.org /) — _гранты DAO от [Aave](https://aave.com /)_
+- [Программа грантов Aave](https://aavegrants.org/) — _гранты DAO от [Aave](https://aave.com/)_
 - [Balancer](https://forms.gle/c68e4fM7JHCQkPkN7) — _фонд экосистемы [Balancer](https://balancer.fi/)_
 - [Программа грантов Compound](https://compoundgrants.org/) — _финансовая экосистема [Compound](https://compound.finance/)_
-- [Программа грантов Consensys](https://consensys.net/grants /) — _гранты Ethereum и финансирование блокчейна [Consensys](https://consensys.net /)_
-- [Программа грантов dYdX](https://dydxgrants.com /) — _децентрализованная биржа [dYdX](https://dydx.exchange /)_
-- [Организация грантов Lido Ecosystem (LEGO)](https://lego.lido.fi /) — _финансовая экосистема [Lido](https://lido.fi /)_
+- [Программа грантов Consensys](https://consensys.net/grants/) — _гранты Ethereum и финансирование блокчейна [Consensys](https://consensys.net/)_
+- [Программа грантов dYdX](https://dydxgrants.com/) — _децентрализованная биржа [dYdX](https://dydx.exchange/)_
+- [Организация грантов Lido Ecosystem (LEGO)](https://lego.lido.fi/) — _финансовая экосистема [Lido](https://lido.fi/)_
 - [Программа грантов mStable](https://docs.mstable.org/advanced/grants-program) — _сообщество [mStable](https://mstable.org/)_
 - [The Graph](https://airtable.com/shrdfvnFvVch3IOVm) — _экосистема [The Graph](https://thegraph.com/)_
 - [Программа грантов Uniswap](https://www.unigrants.org/) — _сообщество [Uniswap](https://uniswap.org/)_
