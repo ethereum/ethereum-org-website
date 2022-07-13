@@ -1,7 +1,7 @@
-import React, { DetailedHTMLProps, HTMLAttributes, useState } from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
 import { graphql, PageProps } from "gatsby"
-import { IntlShape, useIntl } from "gatsby-plugin-intl"
+import { useIntl } from "gatsby-plugin-intl"
 
 import Translation from "../../components/Translation"
 import { translateMessageId } from "../../utils/translations"
@@ -214,7 +214,7 @@ const published = (locale: string, published: string) => {
   ) : null
 }
 
-interface IForeignTutorial {
+interface IExternalTutorial {
   url: string
   title: string
   description: string
@@ -277,7 +277,7 @@ const TutorialsPage = ({
   )
 
   const externalTutorials = foreignTutorials.map<ITutorial>(
-    (tutorial: IForeignTutorial) => ({
+    (tutorial: IExternalTutorial) => ({
       to: tutorial.url,
       title: tutorial.title,
       description: tutorial.description,
@@ -291,9 +291,10 @@ const TutorialsPage = ({
     })
   )
 
-  const allTutorials: Array<ITutorial> = []
-
-  allTutorials.push(...externalTutorials, ...internalTutorials)
+  const allTutorials: Array<ITutorial> = [
+    ...externalTutorials,
+    ...internalTutorials,
+  ]
 
   const hasTutorialsCheck = allTutorials.some(
     (tutorial) => tutorial.lang === pageContext.language
@@ -385,7 +386,6 @@ const TutorialsPage = ({
           intl
         )}
       />
-
       <PageTitle>
         <Translation id="page-tutorial-title" />
       </PageTitle>
@@ -488,7 +488,6 @@ const TutorialsPage = ({
         )}
         {state.filteredTutorials.map((tutorial) => {
           return (
-            // Todo: Generate a unique id for each tutorial, to property (youtube url) is duplicated in some tutorials
             <TutorialCard
               key={tutorial.to}
               to={tutorial.to ?? undefined}

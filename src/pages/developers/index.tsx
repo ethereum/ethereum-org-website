@@ -1,4 +1,4 @@
-import React from "react"
+import React, { ReactNode } from "react"
 import styled from "styled-components"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { graphql, PageProps } from "gatsby"
@@ -200,10 +200,10 @@ const StyledCallout = styled(Callout)`
 
 interface IDevelopersPath {
   emoji: string
-  title: JSX.Element
-  description: JSX.Element
+  title: ReactNode
+  description: ReactNode
   url: string
-  button: JSX.Element
+  button: ReactNode
 }
 
 const paths: Array<IDevelopersPath> = [
