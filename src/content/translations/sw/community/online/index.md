@@ -1,7 +1,7 @@
 ---
 title: Jamii za mtandaoni
 description: Orodha ya mipango ya ruzuku katika mazingira yote ya Ethereum.
-sidebar: kweli
+sidebar: true
 lang: sw
 ---
 
