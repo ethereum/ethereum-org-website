@@ -1,10 +1,10 @@
 import React from "react"
 import styled from "styled-components"
-import Link from "../components/Link"
-import ButtonLink from "../components/ButtonLink"
-import Icon from "../components/Icon"
+import Link from "./Link"
+import ButtonLink from "./ButtonLink"
+import Icon from "./Icon"
 
-import Translation from "../components/Translation"
+import Translation from "./Translation"
 
 const StyledCard = styled.div`
   display: flex;
@@ -70,7 +70,11 @@ const Title = styled.h2`
   padding: 0.25rem;
 `
 
-const CallToContribute = ({ editPath }) => (
+export interface IProps {
+  editPath: string
+}
+
+const CallToContribute: React.FC<IProps> = ({ editPath }) => (
   <StyledCard>
     <ImageColumn>
       ░░░░░░░░░▄░░░░░░░░░░░░░░▄░░░░ ░░░░░░░░▌▒█░░░░░░░░░░░▄▀▒▌░░░

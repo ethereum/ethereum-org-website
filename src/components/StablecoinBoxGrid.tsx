@@ -54,7 +54,9 @@ const Grid = styled.div`
   }
 `
 
-const StyledEmoji = styled(Emoji)`
+const StyledEmoji = styled(Emoji)<{
+  isOpen: boolean
+}>`
   order: ${(props) => (props.isOpen ? `1` : `2`)};
   margin: 0.5rem;
   align-self: center;
@@ -84,7 +86,12 @@ const StyledLink = styled(Link)`
   }
 `
 
-const Box = styled.div`
+const Box = styled.div<{
+  isOpen: boolean
+  columnNumber: number
+  rowNumber: number
+  color: string
+}>`
   grid-row-start: ${(props) => (props.isOpen ? props.rowNumber : `auto`)};
   grid-row-end: ${(props) => (props.isOpen ? `span 3` : `auto`)};
   grid-column-start: ${(props) => (props.isOpen ? props.columnNumber : `auto`)};
@@ -120,7 +127,7 @@ const Box = styled.div`
 `
 
 // Represent string as 32-bit integer
-const hashCode = (string) => {
+const hashCode = (string: string): number => {
   let hash = 0
   for (const char of string) {
     const code = char.charCodeAt(0)
@@ -140,7 +147,27 @@ const colors = [
   "gridPurple",
 ]
 
-const GridItem = ({
+interface ILink {
+  url: string
+  text: string
+}
+
+export interface IPropsGridItem {
+  description: string
+  columnNumber: number
+  rowNumber: number
+  emoji: string
+  index: number
+  title: string
+  isOpen: boolean
+  callback: (index: number) => void
+  color: string
+  pros?: Array<string>
+  cons?: Array<string>
+  links: Array<ILink>
+}
+
+const GridItem: React.FC<IPropsGridItem> = ({
   description,
   columnNumber,
   rowNumber,
@@ -154,7 +181,7 @@ const GridItem = ({
   cons,
   links,
 }) => {
-  const handleClick = () => {
+  const handleClick = (): void => {
     callback(index)
   }
   return (
@@ -167,10 +194,10 @@ const GridItem = ({
       color={color}
     >
       {isOpen ? (
-        <Emoji mb={"2rem"} text={emoji} size="6" />
+        <Emoji mb={"2rem"} text={emoji} size={6} />
       ) : (
         <>
-          <StyledEmoji size="6" text={emoji} />
+          <StyledEmoji size={6} text={emoji} isOpen={true} />
           <Title>{title}</Title>
         </>
       )}
@@ -232,11 +259,15 @@ const GridItem = ({
   )
 }
 
-const StablecoinBoxGrid = ({ items }) => {
-  const [indexOpen, setOpenIndex] = useState(0)
+export interface IProps {
+  items: Array<IPropsGridItem>
+}
+
+const StablecoinBoxGrid: React.FC<IProps> = ({ items }) => {
+  const [indexOpen, setOpenIndex] = useState<number>(0)
 
   // TODO generalize
-  const handleSelect = (idx) => {
+  const handleSelect = (idx: number): void => {
     setOpenIndex(idx)
     if (isMobile()) {
       navigate(`/stablecoins/#type-${idx}`)

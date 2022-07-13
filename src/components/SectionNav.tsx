@@ -31,7 +31,9 @@ const TopContent = styled.div`
   align-items: flex-start;
 `
 
-const SectionNav = ({ children }) => (
+export interface IProps {}
+
+const SectionNav: React.FC<IProps> = ({ children }) => (
   <Card>
     <TopContent>
       <Emoji text=":point_right:" mb={`1em`} />
