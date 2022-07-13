@@ -19,7 +19,7 @@ La community di Ethereum include le persone con diverse esperienze e serie di co
 - [Lista del programma di supporto degli ecosistemi](https://esp.ethereum.foundation/wishlist/) - strumenti, documentazione, e infrastrutture dove il programma di supporto per l'ecosistema Ethereum è attivamente alla ricerca di domande di sovvenzione
 - [Web3Bridge](https://www.web3bridge.com/) - unisciti alla community di aspiranti web3 nella loro iniziativa per identificare, formare e supportare centinaia di sviluppatori e membri della community in tutta l'Africa
 
-## Ricercatori & Accademici <Emoji text=":mag:" size={1} /> <unk> {#researchers-and-academics}
+## Ricercatori & Accademici <Emoji text=":mag:" size={1} /> {#researchers-and-academics}
 
 Hai conoscenze in matematica, crittografia o economia? Potresti essere interessato ad alcuni dei lavori all'avanguardia svolti all'interno dell'ecosistema della rete Ethereum
 
@@ -69,7 +69,7 @@ L'ecosistema Ethereum ha come missione di finanziare beni pubblici e progetti di
 - [Gitcoin](https://gitcoin.co/fund)
 - [clr.fund](https://clr.fund/#/about)
 
-## Professionisti finanziari & Contabili <Emoji text=":chart_with_upwards_trend:" size={1} /> <unk> {#financial-professionals}
+## Professionisti finanziari & Contabili <Emoji text=":chart_with_upwards_trend:" size={1} /> {#financial-professionals}
 
 - Ethereum è la casa della "Finanza Decentralizzata" - una rete di protocolli e applicazioni che offrono un sistema finanziario alternativo. Se sei un professionista finanziario, controlla alcune applicazioni DeFi su [DeFi Pulse](https://defipulse.com/) o su [DeFiPrime](https://defiprime.com)
 - Contabile? Le risorse su Ethereum - ETH, token, DeFi, ecc - introducono molte nuove alternative di contabilità. Puoi incominciare avvicinandoti ad alcuni progetti che hanno il fine di aiutare gli utenti di criptovalute a risolvere le difficoltà riguardanti la contabilità, come [Rotki](https://rotki.com/)
