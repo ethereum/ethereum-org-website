@@ -1299,6 +1299,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/treethought"><img src="https://avatars.githubusercontent.com/u/15894818?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Cam Sweeney</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=treethought" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/moyedx3"><img src="https://avatars.githubusercontent.com/u/108647630?v=4?s=100" width="100px;" alt=""/><br /><sub><b>moyed</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=moyedx3" title="Documentation">📖</a></td>
   </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/shelleyolivia"><img src="https://avatars.githubusercontent.com/u/108895606?v=4?s=100" width="100px;" alt=""/><br /><sub><b>shelleyolivia</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=shelleyolivia" title="Documentation">📖</a> <a href="#ideas-shelleyolivia" title="Ideas, Planning, & Feedback">🤔</a></td>
+  </tr>
 </table>
 
 <!-- markdownlint-restore -->
