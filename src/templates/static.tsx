@@ -152,6 +152,8 @@ const StaticPage = ({
   pageContext,
 }: PageProps<Queries.StaticPageQuery, Context>) => {
   const intl = useIntl()
+  // Show sidebar unless 'sidebar: false' frontmatter is present
+  const shouldShowSidebar = mdx.frontmatter.sidebar !== false ? true : false
 
   if (!siteData || !mdx?.frontmatter || !mdx.parent)
     throw new Error(
@@ -204,7 +206,7 @@ const StaticPage = ({
         </MDXProvider>
         <FeedbackCard isArticle />
       </ContentContainer>
-      {mdx.frontmatter.sidebar && tocItems && (
+      {shouldShowSidebar && tocItems && (
         <TableOfContents
           editPath={absoluteEditPath}
           items={tocItems}

@@ -2,7 +2,6 @@
 title: About Us
 description: About the team, community and mission of ethereum.org
 lang: en
-sidebar: true
 ---
 
 # About ethereum.org {#about-ethereumorg}
