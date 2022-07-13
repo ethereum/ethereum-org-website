@@ -6,7 +6,7 @@ import styled from "styled-components"
 // TODO add motion animation
 // import { motion } from "framer-motion"
 import ButtonLink from "./ButtonLink"
-import CardList from "./CardList"
+import CardList, { CardListItem } from "./CardList"
 import Emoji from "./Emoji"
 import Link from "./Link"
 import Icon from "./Icon"
@@ -197,7 +197,11 @@ const BUY = "buy"
 const GENERATE = "generate"
 const EARN = "earn"
 
-const MoreOrLessLink = ({ isOpen }) => {
+export interface IPropsMoreOrLessLink {
+  isOpen: boolean
+}
+
+const MoreOrLessLink: React.FC<IPropsMoreOrLessLink> = ({ isOpen }) => {
   const text = isOpen ? (
     <Translation id="page-stablecoins-accordion-less" />
   ) : (
@@ -210,8 +214,10 @@ const MoreOrLessLink = ({ isOpen }) => {
   )
 }
 
-const StablecoinAccordion = () => {
-  const [openSection, setOpenSection] = useState("") // default to all closed
+export interface IProps {}
+
+const StablecoinAccordion: React.FC<IProps> = () => {
+  const [openSection, setOpenSection] = useState<string>("") // default to all closed
   const intl = useIntl()
   const data = useStaticQuery(graphql`
     {
@@ -388,7 +394,7 @@ const StablecoinAccordion = () => {
     }
   `)
 
-  const dapps = [
+  const dapps: Array<CardListItem> = [
     {
       title: "Uniswap",
       image: getImage(data.uniswap),
@@ -421,7 +427,7 @@ const StablecoinAccordion = () => {
     },
   ]
 
-  const borrow = [
+  const borrow: Array<CardListItem> = [
     {
       title: "Compound",
       image: getImage(data.compound),
@@ -448,7 +454,7 @@ const StablecoinAccordion = () => {
     },
   ]
 
-  const earn = [
+  const earn: Array<CardListItem> = [
     {
       title: translateMessageId(
         "page-stablecoins-accordion-earn-project-bounties",
@@ -490,7 +496,7 @@ const StablecoinAccordion = () => {
     },
   ]
 
-  const exchanges = [
+  const exchanges: Array<CardListItem> = [
     {
       title: "Coinbase",
       image: getImage(data.coinbase),
@@ -530,7 +536,7 @@ const StablecoinAccordion = () => {
   ]
 
   // TODO generalize
-  const handleSelect = (selectedSection) => {
+  const handleSelect = (selectedSection: string): void => {
     // If section is already open, close it.
     if (openSection === selectedSection) {
       setOpenSection("")
@@ -546,7 +552,7 @@ const StablecoinAccordion = () => {
     <Card>
       <Content id={SWAP} onClick={() => handleSelect(SWAP)}>
         <TitleContainer>
-          <StyledEmoji svg text=":twisted_rightwards_arrows:" size={4} />
+          <StyledEmoji text=":twisted_rightwards_arrows:" size={4} />
           <Question>
             <Row>
               <Title>
@@ -627,7 +633,7 @@ const StablecoinAccordion = () => {
       </ChildrenContent>
       <Content id={BUY} onClick={() => handleSelect(BUY)}>
         <TitleContainer>
-          <StyledEmoji svg text=":shopping_bags:" size={4} />
+          <StyledEmoji text=":shopping_bags:" size={4} />
           <Question>
             <Title>
               <Translation id="page-stablecoins-accordion-buy-title" />
@@ -679,7 +685,7 @@ const StablecoinAccordion = () => {
       </ChildrenContent>
       <Content id={EARN} onClick={() => handleSelect(EARN)}>
         <TitleContainer>
-          <StyledEmoji svg text=":money_bag:" size={4} />
+          <StyledEmoji text=":money_bag:" size={4} />
           <Question>
             <Row>
               <Title>
@@ -733,7 +739,7 @@ const StablecoinAccordion = () => {
       </ChildrenContent>
       <Content id={GENERATE} onClick={() => handleSelect(GENERATE)}>
         <TitleContainer>
-          <StyledEmoji svg text=":handshake:" size={4} />
+          <StyledEmoji text=":handshake:" size={4} />
           <Question>
             <Row>
               <Title>

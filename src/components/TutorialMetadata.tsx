@@ -10,6 +10,7 @@ import { FakeLink } from "./SharedStyledComponents"
 import Emoji from "./Emoji"
 import Translation from "./Translation"
 import { Lang } from "../utils/languages"
+import { TranslationKey } from "../utils/translations"
 
 const Container = styled.div`
   display: flex;
@@ -90,8 +91,8 @@ export enum Skill {
   ADVANCED = "advanced",
 }
 
-export const getSkillTranslationId = (skill: Skill) =>
-  `page-tutorial-${Skill[skill.toUpperCase()]}`
+export const getSkillTranslationId = (skill: Skill): TranslationKey =>
+  `page-tutorial-${Skill[skill.toUpperCase() as keyof typeof Skill]}`
 
 const TutorialMetadata: React.FC<IProps> = ({ tutorial }) => {
   const intl = useIntl()
