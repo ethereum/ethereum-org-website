@@ -162,8 +162,8 @@ export interface IPropsGridItem {
   isOpen: boolean
   callback: (index: number) => void
   color: string
-  pros: Array<string>
-  cons: Array<string>
+  pros?: Array<string>
+  cons?: Array<string>
   links: Array<ILink>
 }
 

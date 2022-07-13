@@ -114,7 +114,7 @@ export interface TableRow {
   marketCap: string
   image?: string
   type: string
-  url: string
+  url?: string
 }
 
 export interface IProps {
