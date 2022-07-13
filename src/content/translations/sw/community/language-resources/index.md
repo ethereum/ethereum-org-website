@@ -84,11 +84,11 @@ Kama unazungumza lugha zaidi ya moja na ungependa kutusaidia kufikia watu wengi 
 
 ### Kiitaliano {#it}
 
-- [Ethereum ya Italia](https://www.ethereum-italia.it/) - Elimu ya Ethereu, </a>Matukio, na taarifa zinazojikiata katika mikataba erevu na teknolijia ya minyororo-ya-bloku
+- [Ethereum ya Italia](https://www.ethereum-italia.it/) - Elimu ya Ethereu, Matukio, na taarifa zinazojikiata katika mikataba erevu na teknolijia ya minyororo-ya-bloku
 - [Podkasti ya Ethereum Italia](https://www.ethereum-italia.it/podcast/) - Podkasti ya Ethereum katika lugha ya Kiitaliano
 - [Jifunze na Microsoft (Solidity)](https://docs.microsoft.com/it-it/learn/modules/blockchain-learning-solidity/) - jifunze jinsi ya kutumia Solidity
 - [Jifunze na Microsoft (mikataba erevu)](https://docs.microsoft.com/it-it/learn/modules/blockchain-solidity-ethereum-smart-contracts/) - jifunze juu ya uandishi wa mikataba erevu ya Ethereum kwa kutmia Solidity
-- [ Jifunze na Microsoft (dApps)](https://docs.microsoft.com/it-it/learn/modules/blockchain-create-ui-decentralized-apps/)- uunda kiolesura kwa kutumia programu zilizogatuliwa
+- [Jifunze na Microsoft (dApps)](https://docs.microsoft.com/it-it/learn/modules/blockchain-create-ui-decentralized-apps/) - uunda kiolesura kwa kutumia programu zilizogatuliwa
 
 ### Kiispaniola {#es}
 
