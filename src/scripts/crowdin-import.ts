@@ -20,7 +20,7 @@ const argv = require("minimist")(process.argv.slice(2))
  *    content bucket to the chosen language array below
  *    ie. `es: [1, 10],` would import the "Homepage" and "Learn" buckets for Spanish
  *
- * 3. Save file without committing \*
+ * 3. Save file without committing
  *
  * 4. Execute script by running `yarn crowdin-import`
  *
@@ -30,7 +30,7 @@ const argv = require("minimist")(process.argv.slice(2))
  * Remember: Revert working changes to this file before committing Crowdin import
  */
 
-type UserSelectionObject = { [key: string]: number[] }
+type UserSelectionObject = { [key: string]: Array<number> }
 const USER_SELECTION: UserSelectionObject = {
   ar: [],
   az: [],
@@ -141,7 +141,7 @@ const repoToCrowdinCode: { [key: string]: string } = {
  * Names for each bucket in order, zero indexed.
  * Used for lookup in summary if FULL_BUCKET_NAME_SUMMARY (-f,--full) flag enabled.
  */
-const BUCKET_NAMES: string[] = [
+const BUCKET_NAMES: Array<string> = [
   "Homepage",
   "Use Ethereum Pages",
   "Use Case Pages",
@@ -161,7 +161,7 @@ const BUCKET_NAMES: string[] = [
 
 // Initialize trackers object for summary
 type LangTrackerEntry = {
-  buckets: string[]
+  buckets: Array<string>
   jsonCopyCount: number
   mdCopyCount: number
   error: string
@@ -204,7 +204,7 @@ const scrapeDirectory = (
   repoLangCode: string
 ): void => {
   if (!existsSync(_path)) return
-  const ls: string[] = readdirSync(_path).filter(
+  const ls: Array<string> = readdirSync(_path).filter(
     (dir: string) => !dir.startsWith(".")
   )
   ls.forEach((item: string) => {
@@ -255,9 +255,9 @@ const scrapeDirectory = (
 type SelectionItem = {
   repoLangCode: string
   crowdinLangCode: string
-  buckets: number[]
+  buckets: Array<number>
 }
-const importSelection: SelectionItem[] = Object.keys(USER_SELECTION)
+const importSelection: Array<SelectionItem> = Object.keys(USER_SELECTION)
   .filter((repoLangCode: string): boolean => {
     if (!USER_SELECTION[repoLangCode].length) trackers.emptyBuckets++
     return !!USER_SELECTION[repoLangCode].length
@@ -288,7 +288,7 @@ importSelection.forEach(
       ].error = `Path doesn't exist for lang ${crowdinLangCode}`
       return
     }
-    const langLs: string[] = readdirSync(_path)
+    const langLs: Array<string> = readdirSync(_path)
     // Iterate over each selected bucket, scraping contents with `scrapeDirectory`
     buckets.forEach((bucket: number): void => {
       const paddedBucket: string = bucket.toString().padStart(2, "0")
@@ -308,12 +308,12 @@ importSelection.forEach(
 // Construct console summary
 type SummaryItem = {
   repoLangCode: string
-  buckets: string[] | number[]
+  buckets: Array<string> | Array<number>
   jsonCopyCount: number
   mdCopyCount: number
   error?: string
 }
-const summary: SummaryItem[] = importSelection.map(
+const summary: Array<SummaryItem> = importSelection.map(
   (item: SelectionItem): SummaryItem => {
     const { buckets: bucketNumbers, repoLangCode } = item
     const {
