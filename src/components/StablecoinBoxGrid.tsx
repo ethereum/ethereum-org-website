@@ -55,7 +55,7 @@ const Grid = styled.div`
 `
 
 const StyledEmoji = styled(Emoji)<{
-  isOpen: boolean
+  isOpen?: boolean
 }>`
   order: ${(props) => (props.isOpen ? `1` : `2`)};
   margin: 0.5rem;
@@ -197,7 +197,7 @@ const GridItem: React.FC<IPropsGridItem> = ({
         <Emoji mb={"2rem"} text={emoji} size={6} />
       ) : (
         <>
-          <StyledEmoji size={6} text={emoji} isOpen={true} />
+          <StyledEmoji size={6} text={emoji} />
           <Title>{title}</Title>
         </>
       )}
