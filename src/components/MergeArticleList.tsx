@@ -7,15 +7,10 @@ const Container = styled.div`
 `
 
 const reads: Array<CardListItem> = [
-   {
-    title: "Technical Aspects of Ethereum Merge",
-    description: "Alchemy",
-    link: "https://www.alchemy.com/overviews/the-ethereum-merge",
-  },
   {
-    title: "How to Migrate from Ropsten to Goerli",
-    description: "Alchemy",
-    link: "https://www.alchemy.com/overviews/migrate-from-ropsten-to-goerli",
+    title: "Ethmerge",
+    description: "Ethmerge",
+    link: "https://ethmerge.com/",
   },
   {
     title: "The Merge is Coming",
@@ -47,11 +42,6 @@ const reads: Array<CardListItem> = [
     title: "Engine API specs",
     description: "Ethereum Foundation",
     link: "https://github.com/ethereum/execution-apis/tree/main/src/engine",
-  },
-  {
-    title: "Ethmerge",
-    description: "Ethmerge",
-    link: "https://ethmerge.com/",
   },
 ]
 
