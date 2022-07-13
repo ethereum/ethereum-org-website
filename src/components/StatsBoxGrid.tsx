@@ -18,6 +18,7 @@ import {
 import { getData } from "../utils/cache"
 
 import { GATSBY_FUNCTIONS_PATH } from "../constants"
+import { Lang } from "../utils/languages"
 
 const Value = styled.span`
   position: absolute;
@@ -58,7 +59,9 @@ const Grid = styled.div`
   }
 `
 
-const Box = styled.div`
+const Box = styled.div<{
+  color: string
+}>`
   position: relative;
   color: ${({ theme }) => theme.colors.text};
   height: 20rem;
@@ -99,13 +102,17 @@ const IndicatorSpan = styled.span`
   font-size: 2rem;
 `
 
-const ErrorMessage = () => (
+export interface IPropsErrorMessage {}
+
+const ErrorMessage: React.FC<IPropsErrorMessage> = () => (
   <IndicatorSpan>
     <Translation id="loading-error-refresh" />
   </IndicatorSpan>
 )
 
-const LoadingMessage = () => (
+export interface IPropsLoadingMessage {}
+
+const LoadingMessage: React.FC<IPropsLoadingMessage> = () => (
   <IndicatorSpan>
     <Translation id="loading" />
   </IndicatorSpan>
@@ -126,7 +133,9 @@ const ButtonContainer = styled.div`
   font-family: ${(props) => props.theme.fonts.monospace};
 `
 
-const Button = styled.button`
+const Button = styled.button<{
+  color: string
+}>`
   background: ${(props) => props.theme.colors.background};
   font-family: ${(props) => props.theme.fonts.monospace};
   font-size: 1.25rem;
@@ -142,7 +151,9 @@ const Button = styled.button`
   }
 `
 
-const ButtonToggle = styled(Button)`
+const ButtonToggle = styled(Button)<{
+  active: boolean
+}>`
   ${({ active, theme }) =>
     active &&
     `
@@ -153,7 +164,28 @@ const ButtonToggle = styled(Button)`
 
 const ranges = ["30d", "90d"]
 
-const GridItem = ({ metric, dir }) => {
+interface State {
+  value: string
+  data: Array<{ timestamp: number }>
+  hasError: boolean
+}
+
+interface Metric {
+  title: string
+  description: string
+  state: State
+  buttonContainer: JSX.Element
+  range: string
+  apiUrl: string
+  apiProvider: string
+}
+
+export interface IPropsGridItem {
+  metric: Metric
+  dir?: string
+}
+
+const GridItem: React.FC<IPropsGridItem> = ({ metric, dir }) => {
   const { title, description, state, buttonContainer, range } = metric
   const isLoading = !state.value
   const value = state.hasError ? (
@@ -172,8 +204,8 @@ const GridItem = ({ metric, dir }) => {
   )
 
   // Returns either 90 or 30-day data range depending on `range` selection
-  const filteredData = (data) => {
-    if (!data) return null
+  const filteredData = (data: Array<{ timestamp: number }>) => {
+    if (!data) return undefined
     if (range === ranges[1]) return [...data]
     return data.filter(({ timestamp }) => {
       const millisecondRange = 1000 * 60 * 60 * 24 * 30
@@ -182,7 +214,7 @@ const GridItem = ({ metric, dir }) => {
     })
   }
 
-  const chart = (
+  const chart: React.ReactNode = (
     <ResponsiveContainer width="100%" height="100%">
       <AreaChart
         data={filteredData(state.data)}
@@ -224,7 +256,7 @@ const GridItem = ({ metric, dir }) => {
   )
 
   return (
-    <Box>
+    <Box color="">
       <div>
         <Title>{title}</Title>
         <p>{description}</p>
@@ -240,14 +272,20 @@ const GridItem = ({ metric, dir }) => {
   )
 }
 
-const tooltipContent = (metric) => (
+const tooltipContent = (metric: Metric) => (
   <div>
     <Translation id="data-provided-by" />{" "}
     <Link to={metric.apiUrl}>{metric.apiProvider}</Link>
   </div>
 )
 
-const RangeSelector = ({ state, setState }) => (
+const RangeSelector = ({
+  state,
+  setState,
+}: {
+  state: string
+  setState: (state: string) => void
+}) => (
   <div>
     {ranges.map((range, idx) => (
       <ButtonToggle
@@ -256,6 +294,7 @@ const RangeSelector = ({ state, setState }) => (
           setState(ranges[idx])
         }}
         key={idx}
+        color={""}
       >
         {range}
       </ButtonToggle>
@@ -263,38 +302,66 @@ const RangeSelector = ({ state, setState }) => (
   </div>
 )
 
-const StatsBoxGrid = () => {
+interface IFetchPriceResponse {
+  timestamp: number
+  value: number
+}
+
+interface IFetchNodeResponse {
+  UTCDate: number
+  TotalNodeCount: number
+}
+
+interface IFetchTotalValueLockedResponse {
+  date: string
+  totalLiquidityUSD: number
+}
+
+interface IFetchTxResponse {
+  unixTimeStamp: string
+  transactionCount: number
+}
+
+export interface IProps {}
+
+const StatsBoxGrid: React.FC<IProps> = () => {
   const intl = useIntl()
 
-  const [ethPrices, setEthPrices] = useState({
+  const [ethPrices, setEthPrices] = useState<State>({
     data: [],
-    value: 0,
+    value: "0",
     hasError: false,
   })
-  const [valueLocked, setValueLocked] = useState({
+  const [valueLocked, setValueLocked] = useState<State>({
     data: [],
-    value: 0,
+    value: "0",
     hasError: false,
   })
-  const [txs, setTxs] = useState({
+  const [txs, setTxs] = useState<State>({
     data: [],
-    value: 0,
+    value: "0",
     hasError: false,
   })
-  const [nodes, setNodes] = useState({
+  const [nodes, setNodes] = useState<State>({
     data: [],
-    value: 0,
+    value: "0",
     hasError: false,
   })
-  const [selectedRangePrice, setSelectedRangePrice] = useState(ranges[0])
-  const [selectedRangeTvl, setSelectedRangeTvl] = useState(ranges[0])
-  const [selectedRangeNodes, setSelectedRangeNodes] = useState(ranges[0])
-  const [selectedRangeTxs, setSelectedRangeTxs] = useState(ranges[0])
+  const [selectedRangePrice, setSelectedRangePrice] = useState<string>(
+    ranges[0]
+  )
+  const [selectedRangeTvl, setSelectedRangeTvl] = useState<string>(ranges[0])
+  const [selectedRangeNodes, setSelectedRangeNodes] = useState<string>(
+    ranges[0]
+  )
+  const [selectedRangeTxs, setSelectedRangeTxs] = useState<string>(ranges[0])
 
   useEffect(() => {
-    const localeForStatsBoxNumbers = getLocaleForNumberFormat(intl.locale)
+    const localeForStatsBoxNumbers = getLocaleForNumberFormat(
+      intl.locale as Lang
+    )
 
-    const formatPrice = (price) => {
+    const formatPrice = (price: number) => {
       return new Intl.NumberFormat(localeForStatsBoxNumbers, {
         style: "currency",
         currency: "USD",
@@ -303,7 +370,7 @@ const StatsBoxGrid = () => {
       }).format(price)
     }
 
-    const formatTVL = (tvl) => {
+    const formatTVL = (tvl: number) => {
       return new Intl.NumberFormat(localeForStatsBoxNumbers, {
         style: "currency",
         currency: "USD",
@@ -313,7 +380,7 @@ const StatsBoxGrid = () => {
       }).format(tvl)
     }
 
-    const formatTxs = (txs) => {
+    const formatTxs = (txs: number) => {
       return new Intl.NumberFormat(localeForStatsBoxNumbers, {
         notation: "compact",
         minimumSignificantDigits: 3,
@@ -321,22 +388,22 @@ const StatsBoxGrid = () => {
       }).format(txs)
     }
 
-    const formatNodes = (nodes) => {
+    const formatNodes = (nodes: number) => {
       return new Intl.NumberFormat(localeForStatsBoxNumbers, {
         minimumSignificantDigits: 3,
         maximumSignificantDigits: 4,
       }).format(nodes)
     }
 
-    const fetchPrices = async () => {
+    const fetchPrices = async (): Promise<void> => {
       try {
         const {
           data: { prices },
-        } = await axios.get(
+        }: { data: { prices: Array<IFetchPriceResponse> } } = await axios.get(
           `https://api.coingecko.com/api/v3/coins/ethereum/market_chart?vs_currency=usd&days=90&interval=daily`
         )
         const data = prices
-          .map(([timestamp, value]) => ({
+          .map(({ timestamp, value }) => ({
             timestamp,
             value,
           }))
@@ -356,9 +423,11 @@ const StatsBoxGrid = () => {
     }
     fetchPrices()
 
-    const fetchNodes = async () => {
+    const fetchNodes = async (): Promise<void> => {
       try {
-        const { result } = await getData(`${GATSBY_FUNCTIONS_PATH}/etherscan`)
+        const { result }: { result: Array<IFetchNodeResponse> } = await getData(
+          `${GATSBY_FUNCTIONS_PATH}/etherscan`
+        )
         const data = result
           .map(({ UTCDate, TotalNodeCount }) => ({
             timestamp: new Date(UTCDate).getTime(),
@@ -381,9 +450,11 @@ const StatsBoxGrid = () => {
     }
     fetchNodes()
 
-    const fetchTotalValueLocked = async () => {
+    const fetchTotalValueLocked = async (): Promise<void> => {
       try {
-        const response = await getData(`${GATSBY_FUNCTIONS_PATH}/defipulse`)
+        const response: Array<IFetchTotalValueLockedResponse> = await getData(
+          `${GATSBY_FUNCTIONS_PATH}/defipulse`
+        )
         const data = response
           .map(({ date, totalLiquidityUSD }) => ({
             timestamp: parseInt(date) * 1000,
@@ -406,12 +477,12 @@ const StatsBoxGrid = () => {
     }
     fetchTotalValueLocked()
 
-    const fetchTxCount = async () => {
+    const fetchTxCount = async (): Promise<void> => {
       try {
-        const response = await getData(
+        const response: Array<IFetchTxResponse> = await getData(
           `${process.env.GATSBY_FUNCTIONS_PATH}/txs`
         )
-        const data = response.result
+        const data = response
           .map(({ unixTimeStamp, transactionCount }) => ({
             timestamp: parseInt(unixTimeStamp) * 1000, // unix milliseconds
             value: transactionCount,
@@ -434,7 +505,7 @@ const StatsBoxGrid = () => {
     fetchTxCount()
   }, [intl.locale])
 
-  const metrics = [
+  const metrics: Array<Metric> = [
     {
       apiProvider: "CoinGecko",
       apiUrl: "https://www.coingecko.com/en/coins/ethereum",
@@ -516,7 +587,7 @@ const StatsBoxGrid = () => {
       range: selectedRangeNodes,
     },
   ]
-  const dir = isLangRightToLeft(intl.locale) ? "rtl" : "ltr"
+  const dir = isLangRightToLeft(intl.locale as Lang) ? "rtl" : "ltr"
   return (
     <Grid>
       {metrics.map((metric, idx) => (
