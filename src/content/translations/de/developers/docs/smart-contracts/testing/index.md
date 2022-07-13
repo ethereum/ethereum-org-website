@@ -8,7 +8,7 @@ incomplete: true
 
 ## Testtools und Bibliotheken {#testing-tools-and-libraries}
 
-**Waffle – **_Ein Framework für fortgeschrittene Smart-Contract-Entwicklungen und Tests (basierend auf ethers.js)_\*\*
+**Waffle – **_Ein Framework für fortgeschrittene Smart-Contract-Entwicklungen und Tests (basierend auf ethers.js)_**
 
 - [getwaffle.io](https://getwaffle.io/)
 - [GitHub](https://github.com/EthWorks/Waffle)
