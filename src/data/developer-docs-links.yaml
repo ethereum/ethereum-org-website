@@ -196,6 +196,8 @@
           to: /developers/docs/scaling/plasma/
         - id: docs-nav-scaling-validium
           to: /developers/docs/scaling/validium/
+    - id: docs-nav-data-availability
+      to: /developers/docs/data-availability/
     - id: docs-nav-networking-layer
       to: /developers/docs/networking-layer/
       description: docs-nav-networking-layer-description
