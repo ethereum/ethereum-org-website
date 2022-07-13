@@ -38,8 +38,7 @@ Se non sei uno sviluppatore, pu√≤ essere difficile sapere da dove iniziare all‚Ä
 ### Scrivi contenuti su Ethereum {#write-content}
 
 - Ethereum ha bisogno di buoni scrittori che possano spiegare il suo valore in un linguaggio semplice
-- Non sei pronto a pubblicare i tuoi articoli? Prendi in considerazione di contribuire a contenuti esistenti sulle risorse della community come
-  , o proponi nuovi contenuti per ethereum.org!</li> </ul>
+- Non sei pronto a pubblicare i tuoi articoli? Prendi in considerazione di contribuire a contenuti esistenti sulle risorse della community come [EthHub](https://docs.ethhub.io/), o proponi nuovi contenuti per ethereum.org!
 
 ### Messa a disposizione per prendere appunti per le riunioni della community {#take-notes}
 
