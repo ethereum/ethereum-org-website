@@ -5,15 +5,20 @@ import { motion, AnimatePresence } from "framer-motion"
 import Icon from "./Icon"
 import Link from "./Link"
 import Translation from "./Translation"
-import { supportedLanguages } from "../utils/languages"
+import { Lang, supportedLanguages } from "../utils/languages"
 import { dropdownIconContainerVariant } from "./SharedStyledComponents"
+import { IPropsNavLink as INavLinkProps } from "./SideNav"
 
 import docLinks from "../data/developer-docs-links.yaml"
+import { DeveloperDocsLink } from "../types"
+import { TranslationKey } from "../utils/translations"
 
 // Traverse all links to find page id
-const getPageTitleId = (to, links) => {
-  let linksArr = Array.isArray(links) ? links : [links]
-  for (const link of linksArr) {
+const getPageTitleId = (
+  to: string,
+  links: Array<DeveloperDocsLink>
+): TranslationKey => {
+  for (const link of links) {
     if (link.to === to) {
       return link.id
     }
@@ -24,6 +29,7 @@ const getPageTitleId = (to, links) => {
       }
     }
   }
+  return "" as TranslationKey
 }
 
 const Container = styled.div`
@@ -109,8 +115,12 @@ const IconContainer = styled(motion.div)`
 `
 const NavItem = styled.div``
 
-const NavLink = ({ item, path, toggle }) => {
-  const [isOpen, setIsOpen] = useState(false)
+export interface IPropsNavLink extends INavLinkProps {
+  toggle: () => void
+}
+
+const NavLink: React.FC<IPropsNavLink> = ({ item, path, toggle }) => {
+  const [isOpen, setIsOpen] = useState<boolean>(false)
 
   if (item.items) {
     return (
@@ -158,19 +168,23 @@ const NavLink = ({ item, path, toggle }) => {
   )
 }
 
+export interface IProps {
+  path: string
+}
+
 // TODO consolidate into SideNav
-const SideNavMobile = ({ path }) => {
-  const [isOpen, setIsOpen] = useState(false)
+const SideNavMobile: React.FC<IProps> = ({ path }) => {
+  const [isOpen, setIsOpen] = useState<boolean>(false)
 
   // Strip language path
   let pagePath = path
-  if (supportedLanguages.includes(pagePath.split("/")[1])) {
+  if (supportedLanguages.includes(pagePath.split("/")[1] as Lang)) {
     pagePath = pagePath.substring(3)
   }
   let pageTitleId = getPageTitleId(pagePath, docLinks)
   if (!pageTitleId) {
     console.warn(`No id found for "pagePath": `, pagePath)
-    pageTitleId = `Change page`
+    pageTitleId = `Change page` as TranslationKey
   }
   return (
     <Container>
