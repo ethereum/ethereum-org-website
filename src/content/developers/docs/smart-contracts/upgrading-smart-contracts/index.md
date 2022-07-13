@@ -14,7 +14,7 @@ However, increased research into improving smart contracts has led to the introd
 
 ## Prerequisites {#prerequisites}
 
-You should have a good understanding of [smart contracts](/developers/docs/smart-contracts/), [smart contract anatomy](/developers/docs/smart-contracts/anatomy/), and the [Ethereum Virtual Machine (EVM)](/developers/docs/evm/). This guide also assumes readers have a grasp of programming in Solidity. 
+You should have a good understanding of [smart contracts](/developers/docs/smart-contracts/), [smart contract anatomy](/developers/docs/smart-contracts/anatomy/), and the [Ethereum Virtual Machine (EVM)](/developers/docs/evm/). This guide also assumes readers have a grasp of programming smart contracts. 
 
 ## What is a smart contract upgrade? {#what-is-a-smart-contract-upgrade}
 
@@ -76,8 +76,8 @@ Using the proxy patterns requires an understanding of the **delegatecall** funct
 
 From the [Solidity documentation](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html#delegatecall-callcode-and-libraries): 
 
-> *There exists a special variant of a message call, named **delegatecall** which is identical to a message call apart from the fact that the code at the target address is executed in the context (i.e. at the address) of the calling contract and `msg.sender` and `msg.value` do not change their values. 
-> This means that a contract can dynamically load code from a different address at runtime. Storage, current address and balance still refer to the calling contract, only the code is taken from the called address.*
+> _There exists a special variant of a message call, named **delegatecall** which is identical to a message call apart from the fact that the code at the target address is executed in the context (i.e. at the address) of the calling contract and `msg.sender` and `msg.value` do not change their values._
+> _This means that a contract can dynamically load code from a different address at runtime. Storage, current address and balance still refer to the calling contract, only the code is taken from the called address._
 
 The proxy contract knows to invoke `delegatecall` whenever a user calls a function because it has a `fallback` function built into it. In Solidity programming the [fallback function](https://docs.soliditylang.org/en/v0.8.9/contracts.html#fallback-function) is executed when a function call does not match functions specified in a contract. 
 
@@ -140,7 +140,7 @@ The diamond upgrade pattern has some advantages over traditional proxy upgrade p
 
 4. Be aware of the costs involved in upgrading contracts. For instance, copying state (e.g., user balances) from an old contract to a new contract during contract migration may require more than one transaction, meaning more gas fees. 
 
-5. Consider implementing **timelocks** to protect users. A timelock refers to a delay enforced on changes to a system—timelocks can be combined with a multi-sig governance system to control upgrades: if a proposed action reaches the required approval threshhold, it doesn't execute until the predefined delay period elapses. 
+5. Consider implementing **timelocks** to protect users. A timelock refers to a delay enforced on changes to a system. Timelocks can be combined with a multi-sig governance system to control upgrades: if a proposed action reaches the required approval threshhold, it doesn't execute until the predefined delay period elapses. 
 
 Timelocks give users some time to exit the system if they disagree with a proposed change (e.g., logic upgrade or new fee schemes). Without timelocks, users need to trust developers not to implement arbitrary changes in a smart contract without prior notice. The drawback here is that timelocks restrict the ability to quickly patch vulnerabilities. 
 
@@ -155,7 +155,7 @@ Timelocks give users some time to exit the system if they disagree with a propos
 - [Using the UUPS proxy pattern to upgrade smart contracts](https://blog.logrocket.com/author/praneshas/) by Pranesh A.S
 - [Web3 Tutorial: Write upgradeable smart contract (proxy) using OpenZeppelin](https://dev.to/yakult/tutorial-write-upgradeable-smart-contract-proxy-contract-with-openzeppelin-1916) by fangjun.eth
 
-## [Further reading] {#further-reading}
+## Further reading {#further-reading}
 - [The State of Smart Contract Upgrades](https://blog.openzeppelin.com/the-state-of-smart-contract-upgrades/) by Santiago Palladino 
 - [Multiple ways to upgrade a Solidity smart contract](https://cryptomarketpool.com/multiple-ways-to-upgrade-a-solidity-smart-contract/) - Crypto Market Pool blog 
 - [Learn: Upgrading Smart Contracts](https://docs.openzeppelin.com/learn/upgrading-smart-contracts) - OpenZeppelin Docs
