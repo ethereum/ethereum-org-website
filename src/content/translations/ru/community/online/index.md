@@ -41,7 +41,7 @@ lang: ru
 
 <Divider />
 
-<Callout emoji=":classicalbuilding:" titleKey="page-community-daos-callout-title" descriptionKey="page-community-daos-callout-description">
+<Callout emoji=":classical_building:" titleKey="page-community-daos-callout-title" descriptionKey="page-community-daos-callout-description">
   <div>
     <ButtonLink to="/community/get-involved/#decentralized-autonomous-organizations-daos">
       Подробнее о DAO
