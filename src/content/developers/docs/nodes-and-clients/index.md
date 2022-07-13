@@ -191,7 +191,7 @@ Nimbus is a consensus client implementation written in Nim under Apache-2.0 lice
 
 ### Lighthouse
 
-Lighthouse is a consensus client implementation written in Rust under Apache-2.0 license.
+Lighthouse is a consensus client implementation written in Rust under the Apache-2.0 license. It is maintained by Sigma Prime and has been stable and production-ready since Beacon Chain genesis. It is relied upon by a wide variety of enterprises, staking pools and individuals. It aims to be secure, performant and interoperable in a wide range of environments from desktop PCs through to sophisticated automated deployments.
 
 ### Lodestar
 
