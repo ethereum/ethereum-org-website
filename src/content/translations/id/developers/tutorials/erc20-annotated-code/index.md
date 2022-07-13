@@ -7,7 +7,7 @@ sidebar: true
 tags:
   - "solidity"
   - "erc-20"
-skill: pemula
+skill: beginner
 published: 2021-03-09
 ---
 
@@ -298,7 +298,7 @@ Seperti usulan namanya, variabel ini menelusuri total persediaan token.
 
 Ketiga variabel ini digunakan untuk meningkatkan keterbacaan. Kedua variabel pertama cukup jelas, tetapi `_decimals` tidak jelas.
 
-Di satu sisi, ethereum tidak memiliki titik mengambang atau variabel pecahan. Di sisi lain, manusia suka bisa membagi token. Satu alasan orang-orang puas dengan emas sebagai mata uang adalah bahwa emas sulit diubah ketika seseorang ingin membeli nilai yang sedikit dari sesuatu yang besar.
+Di satu sisi, Ethereum tidak memiliki titik mengambang atau variabel pecahan. Di sisi lain, manusia suka bisa membagi token. Satu alasan orang-orang puas dengan emas sebagai mata uang adalah bahwa emas sulit diubah ketika seseorang ingin membeli nilai yang sedikit dari sesuatu yang besar.
 
 Solusinya adalah menelusuri bilangan bulat, tetapi sebagai gantinya menghitung token aslinya sebagai token pecahan yang hampir tidak berharga. Dalam kasus ether, token pecahan disebut wei, dan 10^18 wei sama dengan satu ETH. Dalam tulisan, 10.000.000.000.000 wei kira-kira sama dengan satu sen AS atau Euro.
 

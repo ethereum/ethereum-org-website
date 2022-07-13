@@ -24,6 +24,7 @@ import { getLocaleTimestamp, INVALID_DATETIME } from "../../utils/time"
 
 import foreignTutorials from "../../data/externalTutorials.json"
 import FeedbackCard from "../../components/FeedbackCard"
+import { getSkillTranslationId } from "../../components/TutorialMetadata"
 import { Context } from "../../types"
 import { Lang } from "../../utils/languages"
 
@@ -101,6 +102,7 @@ const Title = styled.p<{ isExternal?: boolean | null }>`
     margin-right: 0rem;
   }
 `
+
 const PageTitle = styled.h1`
   font-style: normal;
   font-weight: normal;
@@ -495,7 +497,9 @@ const TutorialsPage = ({
             >
               <TitleContainer>
                 <Title isExternal={tutorial.isExternal}>{tutorial.title}</Title>
-                <Pill isSecondary={true}>{tutorial.skill}</Pill>
+                <Pill isSecondary={true}>
+                  <Translation id={getSkillTranslationId(tutorial.skill)} />
+                </Pill>
               </TitleContainer>
               <Author>
                 {/* TODO: Refactor each tutorial tag as a component */}

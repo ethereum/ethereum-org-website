@@ -189,10 +189,8 @@ La diramazione Instanbul:
 - [EIP-152](https://eips.ethereum.org/EIPS/eip-152) – _consente a Ethereum di funzionare con valuta che preserva la privacy come Zcash._
 - [EIP-1108](https://eips.ethereum.org/EIPS/eip-1108) – _crittografia più economica per migliorare i costi di [gas](/glossary/#gas)._
 - [EIP-1344](https://eips.ethereum.org/EIPS/eip-1344) – _protegge Ethereum dagli attacchi di riproduzione aggiungendo 'CHAINID' [opcode](/developers/docs/ethereum-stack/#ethereum-virtual-machine)._
-- [EIP-1884](https://eips.ethereum.org/EIPS/eip-1884) – _
-  ottimizzazione dei prezzi del gas opcode in base ai consumi._
-- [EIP-2028](https://eips.ethereum.org/EIPS/eip-2028) – _
-  riduce il costo di CallData per consentire più dati nei blocchi, utile per il [ridimensionamento di Layer 2](/developers/docs/scaling/#layer-2-scaling)._
+- [EIP-1884](https://eips.ethereum.org/EIPS/eip-1884) – _ottimizzazione dei prezzi del gas opcode in base ai consumi._
+- [EIP-2028](https://eips.ethereum.org/EIPS/eip-2028) – _riduce il costo di CallData per consentire più dati nei blocchi, utile per il [ridimensionamento di Layer 2](/developers/docs/scaling/#layer-2-scaling)._
 - [EIP-2200](https://eips.ethereum.org/EIPS/eip-2200) – _altre modifiche del prezzo del gas dell'opcode._
 
 </ExpandableCard>
@@ -248,11 +246,9 @@ La diramazione Byzantium:
 - [EIP-196](https://eips.ethereum.org/EIPS/eip-196) – _aggiunge la curva ellittica e la moltiplicazione scalare per consentire [ZK-Snarks](/developers/docs/scaling/zk-rollups/)._
 - [EIP-197](https://eips.ethereum.org/EIPS/eip-197) – _aggiunge la curva ellittica e la moltiplicazione scalare per consentire [ZK-Snarks](/developers/docs/scaling/zk-rollups/)._
 - [EIP-198](https://eips.ethereum.org/EIPS/eip-198) – _abilita la verifica della firma RSA._
-- [EIP-211](https://eips.ethereum.org/EIPS/eip-211) – _
-  aggiunge il supporto per i valori di ritorno di lunghezza variabile._
+- [EIP-211](https://eips.ethereum.org/EIPS/eip-211) – _aggiunge il supporto per i valori di ritorno di lunghezza variabile._
 - [EIP-214](https://eips.ethereum.org/EIPS/eip-214) – _aggiunge l'opcode 'STATICCALL', consentendo chiamate senza cambio di stato ad altri contratti._
-- [EIP-100](https://eips.ethereum.org/EIPS/eip-100) – _
-  cambia la formula di regolazione della difficoltà._
+- [EIP-100](https://eips.ethereum.org/EIPS/eip-100) – _cambia la formula di regolazione della difficoltà._
 - [EIP-649](https://eips.ethereum.org/EIPS/eip-649) – _ritarda [difficulty bomb](/glossary/#difficulty-bomb) di 1 anno e riduce la ricompensa del blocco da 5 a 3 ETH._
 
 </ExpandableCard>

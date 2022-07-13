@@ -105,8 +105,8 @@ La actualización de Berlín optimizó el coste del gas para ciertas acciones de
 <ExpandableCard title="EIP de Berlín" contentPreview="Official improvements included in this upgrade.">
 
 - [EIP-2565](https://eips.ethereum.org/EIPS/eip-2565) – _reduce el coste del gas ModExp_
-- [EIP-2718](https://eips. thereum.org/EIPS/eip-2718) - _habilita un soporte más fácil para múltiples tipos de transacción_
-- [EIP-2929](https://eips. thereum.org/EIPS/eip-2929) – _gas aumenta el coste del acceso al estado para códigos de operación_
+- [EIP-2718](https://eips.ethereum.org/EIPS/eip-2718) - _habilita un soporte más fácil para múltiples tipos de transacción_
+- [EIP-2929](https://eips.ethereum.org/EIPS/eip-2929) – _gas aumenta el coste del acceso al estado para códigos de operación_
 - [EIP-2930](https://eips.ethereum.org/EIPS/eip-2930) - _agrega listas de acceso opcionales_
 
 </ExpandableCard>
@@ -186,11 +186,11 @@ La bifurcación de Estambul:
 
 <ExpandableCard title="EIP de Estambul" contentPreview="Official improvements included in this fork.">
 
-- [EIP-152](https://eips.ethereum.org/EIPS/eip-152) - \_permitir a Ethereum que opere con una divisa que vele por la privacidad, como Zcash.
-- [EIP-1108](https://eips.ethereum.org/EIPS/eip-1108) – criptografía \_más barata para mejorar [gas](/glossary/#gas).
-- [EIP-1344](https://eips.ethereum.org/EIPS/eip-1344) – \_protege a Ethereum contra ataques de repetición mediante la adición de `CHAINID` [opcode](/Developers/docs/ethereum-stack/#ethereum-virtual-machine).
+- [EIP-152](https://eips.ethereum.org/EIPS/eip-152) - _permitir a Ethereum que opere con una divisa que vele por la privacidad, como Zcash._
+- [EIP-1108](https://eips.ethereum.org/EIPS/eip-1108) – _criptografía más barata para mejorar [gas](/glossary/#gas)._
+- [EIP-1344](https://eips.ethereum.org/EIPS/eip-1344) – _protege a Ethereum contra ataques de repetición mediante la adición de `CHAINID` [opcode](/Developers/docs/ethereum-stack/#ethereum-virtual-machine)._
 - [EIP-1884](https://eips.ethereum.org/EIPS/eip-1884) – _optimizando los precios de gas de código opcional basado en el consumo._
-- [EIP-2028](https://eips.ethereum. rg/EIPS/eip-2028) – \_reduce el coste de CallData para permitir más datos en bloques - bueno para [Escalado de capa 2](/developers/docs/scaling/#layer-2-scaling).
+- [EIP-2028](https://eips.ethereum.org/EIPS/eip-2028) – _reduce el coste de CallData para permitir más datos en bloques - bueno para [Escalado de capa 2](/developers/docs/scaling/#layer-2-scaling)._
 - [EIP-2200](https://eips.ethereum.org/EIPS/eip-2200) – _otras alteraciones de código de operación del precio de gas._
 
 </ExpandableCard>
@@ -242,14 +242,14 @@ La bifurcación de Bizancio:
 <ExpandableCard title="EIP de Bizancio" contentPreview="Official improvements included in this fork.">
 
 - [EIP-140](https://eips.ethereum.org/EIPS/eip-140) – _añade el código de operación `REVERT`._
-- [EIP-658](https://eips.ethereum. rg/EIPS/eip-658) – _se ha añadido el estado de campo a los recibos de la transacción para indicar que se ha realizado correctamente o ha fallado._
-- [EIP-196](https://eips.ethereum. rg/EIPS/eip-196) – _añade una curva elíptica y una multiplicación de escalada para permitir [ZK-Snarks](/Developopers/docs/scaling/zk-rollups/)._
-- [EIP-197](https://eips.ethereum. rg/EIPS/eip-197) – _añade una curva elíptica y una multiplicación de escalada para permitir [ZK-Snarks](/Developers/docs/scaling/zk-rollups/)._
-- [EIP-198](https://eips. thereum.org/EIPS/eip-198) – _habilita la verificación de firma RSA._
-- [EIP-211](https://eips.ethereum.org/EIPS/eip-211) – \_añade soporte para valores de retorno de longitud variable.
-- [EIP-214](https://eips.ethereum.org/EIPS/eip-214) – \_añade el código `STATICALL`, permitiendo llamadas no estatales a otros contratos.
+- [EIP-658](https://eips.ethereum.org/EIPS/eip-658) – _se ha añadido el estado de campo a los recibos de la transacción para indicar que se ha realizado correctamente o ha fallado._
+- [EIP-196](https://eips.ethereum.org/EIPS/eip-196) – _añade una curva elíptica y una multiplicación de escalada para permitir [ZK-Snarks](/Developopers/docs/scaling/zk-rollups/)._
+- [EIP-197](https://eips.ethereum.org/EIPS/eip-197) – _añade una curva elíptica y una multiplicación de escalada para permitir [ZK-Snarks](/Developers/docs/scaling/zk-rollups/)._
+- [EIP-198](https://eips.ethereum.org/EIPS/eip-198) – _habilita la verificación de firma RSA._
+- [EIP-211](https://eips.ethereum.org/EIPS/eip-211) – _añade soporte para valores de retorno de longitud variable._
+- [EIP-214](https://eips.ethereum.org/EIPS/eip-214) – _añade el código `STATICALL`, permitiendo llamadas no estatales a otros contratos._
 - [EIP-100](https://eips.ethereum.org/EIPS/eip-100) - _cambia la fórmula de ajuste de dificultad._
-- [EIP-649](https://eips. thereum.org/EIPS/eip-649) – retrasa [bomba de dificultad](/glossary/#difficulty-bomb) 1 año y reduce la recompensa de bloque de 5 a 3 ETH.\_
+- [EIP-649](https://eips.ethereum.org/EIPS/eip-649) – _retrasa [bomba de dificultad](/glossary/#difficulty-bomb) 1 año y reduce la recompensa de bloque de 5 a 3 ETH._
 
 </ExpandableCard>
 
@@ -273,10 +273,10 @@ La bifurcación Spurious Dragon fue la segunda respuesta a los ataques de denega
 
 <ExpandableCard title="EIP de Spurious Dragon" contentPreview="Official improvements included in this fork.">
 
-- [EIP-155](https://eips.ethereum.org/EIPS/eip-155) – _evita que las transacciones de una cadena de Ethereum se transmitan en una cadena alternativa, por ejemplo, una transacción de red de pruebas que se reproduce en la cadena principal de Ethereum. _
-- [EIP-160](https://eips.ethereum.org/EIPS/eip-160) – _ajusta los precios del código de operación "EXP" - hace que sea más difícil ralentizar la red a través de operaciones contractuales computacionalmente costosas. _
-- [EIP-161](https://eips.ethereum.org/EIPS/eip-161) – _permite la eliminación de cuentas vacías agregadas a los ataques de DOS. _
-- [EIP-170](https://eips.ethereum.org/EIPS/eip-170) – _cambia el tamaño máximo de código que puede tener un contrato en la cadena de bloques, a 24.576 bytes. _
+- [EIP-155](https://eips.ethereum.org/EIPS/eip-155) – _evita que las transacciones de una cadena de Ethereum se transmitan en una cadena alternativa, por ejemplo, una transacción de red de pruebas que se reproduce en la cadena principal de Ethereum._
+- [EIP-160](https://eips.ethereum.org/EIPS/eip-160) – _ajusta los precios del código de operación "EXP" - hace que sea más difícil ralentizar la red a través de operaciones contractuales computacionalmente costosas._
+- [EIP-161](https://eips.ethereum.org/EIPS/eip-161) – _permite la eliminación de cuentas vacías agregadas a los ataques de DOS._
+- [EIP-170](https://eips.ethereum.org/EIPS/eip-170) – _cambia el tamaño máximo de código que puede tener un contrato en la cadena de bloques, a 24.576 bytes._
 
 </ExpandableCard>
 
@@ -332,7 +332,7 @@ La bifurcación Homestead que miró hacia el futuro. Incluyó varios cambios de 
 <ExpandableCard title="EIP de Homestead" contentPreview="Official improvements included in this fork.">
 
 - [EIP-2](https://eips.ethereum.org/EIPS/eip-2) – _realiza ediciones al proceso de creación de contratos_
-- [EIP-7](https://eips.ethereum. rg/EIPS/eip-7) – _añade un nuevo código de operación: `DELEGATECALL`_
+- [EIP-7](https://eips.ethereum.org/EIPS/eip-7) – _añade un nuevo código de operación: `DELEGATECALL`_
 - [EIP-8](https://eips.ethereum.org/EIPS/eip-8) – _introduce los requisitos de compatibilidad con devp2p hacia delante_
 
 </ExpandableCard>

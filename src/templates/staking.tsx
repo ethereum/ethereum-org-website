@@ -6,7 +6,9 @@ import { MDXProvider } from "@mdx-js/react"
 import styled from "styled-components"
 
 import ButtonLink from "../components/ButtonLink"
-import ButtonDropdown from "../components/ButtonDropdown"
+import ButtonDropdown, {
+  List as ButtonDropdownList,
+} from "../components/ButtonDropdown"
 import Card from "../components/Card"
 import ExpandableCard from "../components/ExpandableCard"
 import DocLink from "../components/DocLink"
@@ -44,7 +46,7 @@ import StakingConsiderations from "../components/Staking/StakingConsiderations"
 import StakingCommunityCallout from "../components/Staking/StakingCommunityCallout"
 import StakingGuides from "../components/Staking/StakingGuides"
 
-import { isLangRightToLeft } from "../utils/translations"
+import { isLangRightToLeft, TranslationKey } from "../utils/translations"
 import { Context } from "../types"
 import { Lang } from "../utils/languages"
 
@@ -355,12 +357,12 @@ const StakingPage = ({
   const tocItems = mdx.tableOfContents?.items
   const { summaryPoints } = mdx.frontmatter
 
-  const dropdownLinks = {
-    text: "Staking Options",
+  const dropdownLinks: ButtonDropdownList = {
+    text: "Staking Options" as TranslationKey,
     ariaLabel: "Staking options dropdown menu",
     items: [
       {
-        text: "Staking home",
+        text: "Staking home" as TranslationKey,
         to: "/staking/",
         matomo: {
           eventCategory: `Staking dropdown`,
@@ -369,7 +371,7 @@ const StakingPage = ({
         },
       },
       {
-        text: "Solo staking",
+        text: "Solo staking" as TranslationKey,
         to: "/staking/solo/",
         matomo: {
           eventCategory: `Staking dropdown`,
@@ -378,7 +380,7 @@ const StakingPage = ({
         },
       },
       {
-        text: "Staking as a service",
+        text: "Staking as a service" as TranslationKey,
         to: "/staking/saas/",
         matomo: {
           eventCategory: `Staking dropdown`,
@@ -387,7 +389,7 @@ const StakingPage = ({
         },
       },
       {
-        text: "Pooled staking",
+        text: "Pooled staking" as TranslationKey,
         to: "/staking/pools/",
         matomo: {
           eventCategory: `Staking dropdown`,

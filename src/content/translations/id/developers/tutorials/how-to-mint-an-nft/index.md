@@ -8,7 +8,7 @@ tags:
   - "Alchemy"
   - "Solidity"
   - "kontrak pintar"
-skill: pemula
+skill: beginner
 lang: id
 sidebar: true
 published: 2021-04-22
@@ -129,7 +129,7 @@ const nftContract = new web3.eth.Contract(contract.abi, contractAddress)
 
 ## Langkah 6: Perbarui berkas .env {#update-env}
 
-Sekarang, untuk membuat dan mengirim transaksi ke rantai Ethereum, kita akan menggunakan alamat akun ethereum publik Anda untuk mendapatkan nonce akun (akan dijelaskan di bawah).
+Sekarang, untuk membuat dan mengirim transaksi ke rantai Ethereum, kita akan menggunakan alamat akun Ethereum publik Anda untuk mendapatkan nonce akun (akan dijelaskan di bawah).
 
 Tambahkan kunci publik Anda ke berkas .env Anda — Jika Anda menyelesaikan bagian 1 dari tutorial, berkas .env kita seharusnya sekarang tampak seperti ini:
 

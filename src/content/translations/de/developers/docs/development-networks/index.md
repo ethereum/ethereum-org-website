@@ -11,7 +11,7 @@ So, wie Sie einen lokalen Server auf Ihrem Computer für die Webentwicklung lauf
 
 ## Voraussetzungen {#prerequisites}
 
-Sie sollten mit den [Grundlagen des Ethereum-Stacks](/developers/docs/ethereum-stack/) und den [Etherum-Netzwerken](/developers/docs/networks/) vertraut sein, bevor Sie sich mit Entwicklungsnetzwerken beschäftigen.
+Sie sollten mit den [Grundlagen des Ethereum-Stacks](/developers/docs/ethereum-stack/) und den [Ethereum-Netzwerken](/developers/docs/networks/) vertraut sein, bevor Sie sich mit Entwicklungsnetzwerken beschäftigen.
 
 ## Was ist ein Entwicklungsnetzwerk? {#what-is-a-development-network}
 

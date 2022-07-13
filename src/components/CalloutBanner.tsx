@@ -3,6 +3,7 @@ import styled from "styled-components"
 import { GatsbyImage } from "gatsby-plugin-image"
 
 import Translation from "./Translation"
+import { TranslationKey } from "../utils/translations"
 
 const StyledCard = styled.div`
   display: flex;
@@ -65,7 +66,17 @@ const H2 = styled.h2`
   margin-top: 0rem;
 `
 
-const CalloutBanner = ({
+export interface IProps {
+  image: string
+  maxImageWidth?: number
+  titleKey: TranslationKey
+  descriptionKey: TranslationKey
+  alt: string
+  className?: string
+  id?: string
+}
+
+const CalloutBanner: React.FC<IProps> = ({
   image,
   maxImageWidth,
   titleKey,

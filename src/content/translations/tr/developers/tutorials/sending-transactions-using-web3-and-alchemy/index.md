@@ -6,7 +6,7 @@ tags:
   - "İşlemler"
   - "web3.js"
   - "alchemy"
-skill: yeni başlayan
+skill: beginner
 lang: tr
 sidebar: true
 published: 2020-11-04

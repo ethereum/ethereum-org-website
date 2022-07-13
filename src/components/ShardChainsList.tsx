@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import CardList from "./CardList"
+import CardList, { CardListItem } from "./CardList"
 import { useIntl } from "gatsby-plugin-intl"
 
 import { translateMessageId } from "../utils/translations"
@@ -9,9 +9,11 @@ const Container = styled.div`
   margin-bottom: 4rem;
 `
 
-const ShardChainsList = () => {
+export interface IProps {}
+
+const ShardChainsList: React.FC<IProps> = () => {
   const intl = useIntl()
-  const reads = [
+  const reads: Array<CardListItem> = [
     {
       title: translateMessageId(
         "page-upgrade-article-title-sharding-is-great",

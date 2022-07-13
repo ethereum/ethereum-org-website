@@ -11,7 +11,7 @@ tags:
   - "noțiuni de bază"
   - "abonament"
   - "javascript"
-skill: începător
+skill: beginner
 source: Documentație Alchemy
 sourceUrl: https://docs.alchemyapi.io/guides/using-websockets
 published: 2020-12-01

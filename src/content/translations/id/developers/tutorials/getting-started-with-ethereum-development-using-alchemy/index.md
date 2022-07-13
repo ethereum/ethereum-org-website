@@ -9,7 +9,7 @@ tags:
   - "node"
   - "membuat kueri"
   - "alchemy"
-skill: pemula
+skill: beginner
 lang: id
 sidebar: true
 published: 2020-10-30

@@ -6,7 +6,7 @@ tags:
   - "client"
   - "geth"
   - "nodi"
-skill: intermedio
+skill: intermediate
 lang: it
 sidebar: true
 published: 2020-06-14

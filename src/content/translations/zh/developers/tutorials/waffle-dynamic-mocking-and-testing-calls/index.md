@@ -8,7 +8,7 @@ tags:
   - "solidity"
   - "测试"
   - "模拟"
-skill: 中等难度
+skill: intermediate
 lang: zh
 sidebar: true
 published: 2020-11-14

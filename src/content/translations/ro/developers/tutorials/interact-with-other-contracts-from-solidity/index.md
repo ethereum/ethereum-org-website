@@ -9,7 +9,7 @@ tags:
   - "fabrici"
   - "implementare"
   - "combinabilitate"
-skill: avansat
+skill: advanced
 lang: ro
 sidebar: true
 published: 2020-04-05

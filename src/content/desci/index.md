@@ -91,7 +91,7 @@ Explore projects and join the DeSci community.
 - [Atoms: smart contract peer-review)](https://www.atoms.org)
 - [dClimate API: query climate data collected by a decentralized community](https://api.dclimate.net/)
 - [DeSci Foundation: DeSci publishing tool builder](https://descifoundation.org/)
-- [DeSci.World: one-stop shop for users to view, engage with decentralized science](desci.world)
+- [DeSci.World: one-stop shop for users to view, engage with decentralized science](https://desci.world)
 - [Molecule: Fund and get funded for your research projects](https://discover.molecule.to/)
 - [OceanDAO: DAO governed funding for data-related science](https://oceanprotocol.com/dao)
 - [Opscientia: open decentralized science workflows](https://opsci.io/research/)
@@ -99,6 +99,7 @@ Explore projects and join the DeSci community.
 - [Bio.xyz: get funded for your biotech DAO or desci project](https://www.molecule.to/)
 - [ResearchHub: post a scientific result and engage in a conversation with peers](https://www.researchhub.com/)
 - [VitaDAO: receive funding through sponsored research agreements for longevity research](https://www.vitadao.com/)
+- [Fleming Protocol: open-source data economy that fuels collaborative biomedical discovery](https://medium.com/@FlemingProtocol/a-data-economy-for-patient-driven-biomedical-innovation-9d56bf63d3dd)
 
 ## Further reading {#further-reading}
 
