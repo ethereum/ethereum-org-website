@@ -138,7 +138,7 @@ This table summarizes the different clients. All of them are actively maintained
 | ------------------------------------------------------------------------- | -------- | --------------------- | ------------------------------------------ | ------------------- | --------------- |
 | [Geth](https://geth.ethereum.org/)                                        | Go       | Linux, Windows, macOS | Mainnet, Görli, Rinkeby, Ropsten           | Snap, Full          | Archive, Pruned |
 | [Nethermind](http://nethermind.io/)                                       | C#, .NET | Linux, Windows, macOS | Mainnet, Görli, Ropsten, Rinkeby, and more | Snap, Fast, Beam | Archive, Pruned |
-| [Besu](https://pegasys.tech/solutions/hyperledger-besu/)                  | Java     | Linux, Windows, macOS | Mainnet, Rinkeby, Ropsten, Görli, and more | Fast, Full          | Archive, Pruned |
+| [Besu](https://pegasys.tech/solutions/hyperledger-besu/)                  | Java     | Linux, Windows, macOS | Mainnet, Rinkeby, Ropsten, Görli, and more | Fast, Full, Snap, Checkopoit | Archive, Pruned |
 | [Erigon](https://github.com/ledgerwatch/erigon)                           | Go       | Linux, Windows, macOS | Mainnet, Görli, Rinkeby, Ropsten           | Full                | Archive, Pruned |
 
 For more on supported networks, read up on [Ethereum networks](/developers/docs/networks/).
