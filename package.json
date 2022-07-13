@@ -64,7 +64,7 @@
     "react-helmet": "^6.1.0",
     "react-icons": "^4.3.1",
     "react-instantsearch-dom": "^6.6.0",
-    "react-intl": "^6.0.4",
+    "react-intl": "^3.12.1",
     "react-select": "^4.3.0",
     "recharts": "^2.1.9",
     "styled-components": "^5.1.1",
