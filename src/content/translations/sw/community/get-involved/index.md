@@ -9,7 +9,7 @@ lang: sw
 
 Jumuiya ya Ethereum inahusisha watu wa asili tofauti na wenye ujuzi wa kila aina. Endapo wewe ni msanii, msimbuaji au mhasibu, kuna njia za kujihusisha. Hii ni orodha ya mapendekezo yanayoweza kukusaidia.
 
-## Wasimbuaji<Emoji text=":computer:" size={1} /> {#developers}
+## Wasimbuaji <Emoji text=":computer:" size={1} /> {#developers}
 
 - Jifunze kuhusu Ethereum na ijaribishe kwenye [etehereum.org/developers/](/developers/)
 - [Tafuta fadhila kwenye Gitcoin](https://gitcoin.co/), fanyia kazi itilafu ndogo ama kubwa na ujipatie kripto!
@@ -27,7 +27,7 @@ Una taaluma ya hisabati, kriptografia ama uchumi? Unaweza kupenda kazi za viwang
 - [Ethersear.ch](https://ethresear.ch) - Jukwaa la msingi la Ethereum la watafiti, na jukwaa lenye ushawishi mkubwa zaidi duniani kwenye sdarafu za kripto
 - [Orodha pendekezwa ya kuunga mkono Ikolojia ya Ethereum](https://esp.ethereum.foundation/wishlist/) - maeneo amabayo Ikolojia ya Ethereum inatafuta maombi ya fedha kwa ajili ya vifaa, nyaraka, na miundombinu
 
-## Seti zisizo za kiufundi<Emoji text=":briefcase:" size={1} /> {#non-technical}
+## Seti zisizo za kiufundi <Emoji text=":briefcase:" size={1} /> {#non-technical}
 
 Kama wewe sio msanidi programu, inaweza kua vigumu kujua ni wapi unapaswa kuanzia kwenye Ethereum. Kuna mapendekezo kadhaa, pamoja nayo ni vyanzo maalumu kwa kila asili ya taaluma.
 
@@ -76,7 +76,7 @@ Ikolojia ya Ethereum iko njiani katika kufadhili bidhaa za umma na miradi inayol
 ## Wasimamizi wa bidhaa <Emoji text=":fountain_pen:" size={1} /> {#product-managers}
 
 - Ikolijia ya Ethereum inahitaji talanta zako! Makampuni mengi yanatoa ajira kwa wasimsmizi wa bidhaa. Kama unataka kuanza kwa kuchangia kwenye mradi wa vyanzo huria, wasiliana na
-  [ Wafugaji wa Paka wa Ethereum](https://discord.com/invite/Nz6rtfJ8Cu) ama [MetaCartel](https://www.metacartel.org/)</li> </ul>
+  [Wafugaji wa Paka wa Ethereum](https://discord.com/invite/Nz6rtfJ8Cu) ama [MetaCartel](https://www.metacartel.org/)</li> </ul>
 
 ## Masoko <Emoji text=":megaphone:" size={1} /> {#marketing}
 
@@ -109,9 +109,7 @@ Ikolojia ya Ethereum iko njiani katika kufadhili bidhaa za umma na miradi inayol
 - [HausDAO](https://daohaus.club) [@nowdaoit](https://twitter.com/nowdaoit) - _Utawala wa jumuiya ya DAOhaus_
 - [Hero DAO](https://herodao.org/) [@hero_dao](https://twitter.com/hero_dao) - _Superhero franchiseinayomilikiwa na jamii_
 - [LexDAO](https://lexdao.coop)[@lex_DAO](https://twitter.com/lex_DAO) - _Uhandisi wa kisheria_</li>
-
-  - [Machi X](https://machix.com) [@MachiXOfficial](https://twitter.com/MachiXOfficial) - _Jumuiya ya wasanii_
-
+- [Machi X](https://machix.com) [@MachiXOfficial](https://twitter.com/MachiXOfficial) - _Jumuiya ya wasanii_
 - [MetaCartel](https://metacartel.org) [@Metaa_Cartel](https://twitter.com/Meta_Cartel) - _kiota cha DAO_
 - [Ubia wa MetaCartel](https://metacartel.xyz) [@VENTURE_DAO](https://twitter.com/VENTURE_DAO) - _Ubia wa kripto za kabla ya kuanzishwa_
 - [MetaMchezo](https://metagame.wtf) [@MetaShamba](https://twitter.com/MetaFam) - _MMORPG makanika ya Mchezo kwenye maisha halisi_

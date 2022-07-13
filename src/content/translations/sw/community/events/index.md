@@ -19,6 +19,6 @@ Hauoni mkutano unaokufaa? Jaribu kuingia kwenye mkutano. Mikutano hii ni midigo 
 
 <MeetupList />
 
-Unataka kuanzisha mkutano wako mwenyewe? Tupa jicho kwenye[Mtandao wa BUIDL](https://consensys.net/developers/buidlnetwork/), ambao ni mpango wa ConsenSys unaosaidia mikutano yote ya kijamii ndani ya Ethereum.
+Unataka kuanzisha mkutano wako mwenyewe? Tupa jicho kwenye [Mtandao wa BUIDL](https://consensys.net/developers/buidlnetwork/), ambao ni mpango wa ConsenSys unaosaidia mikutano yote ya kijamii ndani ya Ethereum.
 
-Hii ni orodha isiyo kamili inayohifadhiwa na jamii yetu. Unaweza[kupata mikutano zaidi hapa](https://www.meetup.com/topics/ethereum/). Unajua mkutano wowote unaoendelea wa kuongeza kwenye orodha? [Tafadhali uongeze hapa](https://github.com/ethereum/ethereum-org-website/blob/dev/src/data/community-meetups.json)!
+Hii ni orodha isiyo kamili inayohifadhiwa na jamii yetu. Unaweza [kupata mikutano zaidi hapa](https://www.meetup.com/topics/ethereum/). Unajua mkutano wowote unaoendelea wa kuongeza kwenye orodha? [Tafadhali uongeze hapa](https://github.com/ethereum/ethereum-org-website/blob/dev/src/data/community-meetups.json)!

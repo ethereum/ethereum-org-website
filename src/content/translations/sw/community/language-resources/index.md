@@ -39,7 +39,7 @@ Kama unazungumza lugha zaidi ya moja na ungependa kutusaidia kufikia watu wengi 
 - [CriptoFacil](http://www.criptofacil.com/ultimas-noticias/) - taarifa na elimu juu ya kripto, ikijumuisha 'ethereum na DeFi kwa wanaoanza'
 - [CriptoAtivos](http://www.criptoativos.wiki.br/) - Utambuzi kutoka kwenye uwazi wa kripto, blogu na elimu
 - [Cointimes](http://www.cointimes.com.br/) - Taarfia na elimu juu ya kripto
-- [ Kianzilishi cha Web3](https://docs.google.com/document/d/1X8PSTFH7FTw9J-gbKWM6Y430SWCBT8d4t4pJgFQHJ8E/) - muongozo unaojibu maswali yanayoulizwa mara nyingi na maswali ya msingi ya kripto
+- [Kianzilishi cha Web3](https://docs.google.com/document/d/1X8PSTFH7FTw9J-gbKWM6Y430SWCBT8d4t4pJgFQHJ8E/) - muongozo unaojibu maswali yanayoulizwa mara nyingi na maswali ya msingi ya kripto
 
 ### Kichina {#zh}
 
@@ -78,16 +78,16 @@ Kama unazungumza lugha zaidi ya moja na ungependa kutusaidia kufikia watu wengi 
 ### Kijerumani {#de}
 
 - [Jifunze na Microsoft (Solidity)](https://docs.microsoft.com/de-de/learn/modules/blockchain-learning-solidity/) - kwa kutumia Solidity
-- [ Jifunze na Microsoft (mikataba erevu)](https://docs.microsoft.com/de-de/learn/modules/blockchain-solidity-ethereum-smart-contracts/) - Andika Mikataba Erevu ya Ethereum kwa kutmia Solidity
+- [Jifunze na Microsoft (mikataba erevu)](https://docs.microsoft.com/de-de/learn/modules/blockchain-solidity-ethereum-smart-contracts/) - Andika Mikataba Erevu ya Ethereum kwa kutmia Solidity
 - [Jifunze na Microsoft (Mitandao ya Ethereum)](https://docs.microsoft.com/de-de/learn/modules/blockchain-ethereum-networks/) - jiunge na tuma mitandao ya Ethereum
-- [ Jifunze na Microsoft (minyororo-ya-bloku)](https://docs.microsoft.com/de-de/learn/paths/ethereum-blockchain-development/) - kuingia katika uundaji wa minyororo-ya-bloku
+- [Jifunze na Microsoft (minyororo-ya-bloku)](https://docs.microsoft.com/de-de/learn/paths/ethereum-blockchain-development/) - kuingia katika uundaji wa minyororo-ya-bloku
 
 ### Kiitaliano {#it}
 
 - [Ethereum ya Italia](https://www.ethereum-italia.it/) - Elimu ya Ethereu, </a>Matukio, na taarifa zinazojikiata katika mikataba erevu na teknolijia ya minyororo-ya-bloku
-- [ Podkasti ya Ethereum Italia](https://www.ethereum-italia.it/podcast/) - Podkasti ya Ethereum katika lugha ya Kiitaliano
+- [Podkasti ya Ethereum Italia](https://www.ethereum-italia.it/podcast/) - Podkasti ya Ethereum katika lugha ya Kiitaliano
 - [Jifunze na Microsoft (Solidity)](https://docs.microsoft.com/it-it/learn/modules/blockchain-learning-solidity/) - jifunze jinsi ya kutumia Solidity
-- [ Jifunze na Microsoft (mikataba erevu)](https://docs.microsoft.com/it-it/learn/modules/blockchain-solidity-ethereum-smart-contracts/) - jifunze juu ya uandishi wa mikataba erevu ya Ethereum kwa kutmia Solidity
+- [Jifunze na Microsoft (mikataba erevu)](https://docs.microsoft.com/it-it/learn/modules/blockchain-solidity-ethereum-smart-contracts/) - jifunze juu ya uandishi wa mikataba erevu ya Ethereum kwa kutmia Solidity
 - [ Jifunze na Microsoft (dApps)](https://docs.microsoft.com/it-it/learn/modules/blockchain-create-ui-decentralized-apps/)- uunda kiolesura kwa kutumia programu zilizogatuliwa
 
 ### Kiispaniola {#es}
@@ -96,13 +96,13 @@ Kama unazungumza lugha zaidi ya moja na ungependa kutusaidia kufikia watu wengi 
 - [Cointelegraph](https://es.cointelegraph.com/ethereum-for-beginners) - Muongozo wa Ethereum kwa wanaoanza katika lugha ya kihispaniola
 - [ Mafunzo mtandaoni](https://tutoriales.online/curso/solidity) - jifunze solidity na usanidi programu juu ya Ethereum
 - [ Utangulizi wa kozi za uundaji wa Ethereum](https://youtube.com/playlist?list=PLTqiwJDd_R8y9pfUBjhkVa1IDMwyQz-fU) - Misingi ya Solidity, upimaji na usambazji wa mkataba erevu wa kwanza uliounda
-- [ Utangilizi wa usalama na uvamizi kwenye Ethereum](https://youtube.com/playlist?list=PLTqiwJDd_R8yHOvteko_DmUxUTMHnlfci) - elewa wa udhaifu wa kawaida na mambo ya usalama kwenye mikataba erevu ilio halisi
+- [Utangilizi wa usalama na uvamizi kwenye Ethereum](https://youtube.com/playlist?list=PLTqiwJDd_R8yHOvteko_DmUxUTMHnlfci) - elewa wa udhaifu wa kawaida na mambo ya usalama kwenye mikataba erevu ilio halisi
 - [Utangulizi wa kozo za uundaji wa DeFi](https://youtube.com/playlist?list=PLTqiwJDd_R8zZiP9_jNdaPqA3HqoW2lrS) - jifinze jinsi mikataba erevu ya DeFi inavyofanya kazi kwenye Solidity na unda programu ya kutengeneza masoko kiotomatiki
 
 ### Kituruki {#tr}
 
 - [BTk Akademi](https://www.btkakademi.gov.tr/portal/course/blokzincir-ve-kripto-paralar-10569#!/about) - kozi zinazojikita kwenye blockchain na sarafu ya kirpto
-- [ Ubadilishwaji mkuu wa jina: nini kilitokea juu ya Eth2?](https://miningturkiye.org/konu/ethereum-madenciligi-bitiyor-mu-onemli-gelisme.655/) - Fasiri ya kituruki ya chapisho la blogi, linaloelezea kuondoka kwa neno 'Eth2'
+- [Ubadilishwaji mkuu wa jina: nini kilitokea juu ya Eth2?](https://miningturkiye.org/konu/ethereum-madenciligi-bitiyor-mu-onemli-gelisme.655/) - Fasiri ya kituruki ya chapisho la blogi, linaloelezea kuondoka kwa neno 'Eth2'
 
 ### Kivietinamu {#vi}
 

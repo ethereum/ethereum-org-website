@@ -15,12 +15,12 @@ Orodha hii imepangwa na jamii yetu. Ikiwa kuna kitu kinakosekana au sio sahihi, 
 
 Programu hizi zinasaidia ikolojia ya Ethereum kwa kutoa fedha kwa miradi mingi. Hizi ni pamoja na suluhu za kutoweka, ujenzi wa jamii, usalama, faragha, na zaidi. Ruzuku hizi sio maalum kwa jukwaa moja la Ethereum na ni mahali pazuri pa kuanzia ikiwa huna uhakika.
 
-- [Programu ya Usaidizi wa Ekolojia ya EF ](https://esp.ethereum.foundation) - _Kufadhili miradi ya chanzo wazi ambayo inanufaisha Ethereum, kwa kuzingatia zana za ulimwengu , miundombinu, utafiti na bidhaa za umma_
-- [ RFPs za Ethereum ](https://github.com/ethereum/requests-for-proposals) - _ Maombi ya Mapendekezo na Ethereum Foundation ya kazi na miradi katika ikolojia ya Ethereum _
-- [MetaCartel](https://www.metacartel.org/grants/) - _Uendelezaji wa Dapp, uundaji wa DAO_ <br x-id = "2" /> Misaada inayoanzia $1K - $8K USD.
-- [ Moloch DAO ](https://www.molochdao.com/) - _ Faragha, ukuaji wa safu ya 2, usalama wa mteja, na zaidi _
+- [Programu ya Usaidizi wa Ekolojia ya EF](https://esp.ethereum.foundation) - _Kufadhili miradi ya chanzo wazi ambayo inanufaisha Ethereum, kwa kuzingatia zana za ulimwengu , miundombinu, utafiti na bidhaa za umma_
+- [RFPs za Ethereum](https://github.com/ethereum/requests-for-proposals) - _Maombi ya Mapendekezo na Ethereum Foundation ya kazi na miradi katika ikolojia ya Ethereum_
+- [MetaCartel](https://www.metacartel.org/grants/) - _Uendelezaji wa Dapp, uundaji wa DAO_
+- [Moloch DAO](https://www.molochdao.com/) - _Faragha, ukuaji wa safu ya 2, usalama wa mteja, na zaidi_
 - [Ruzuku zilizo wazi](https://opengrants.com/explore)
-- [ Ruzuku za DAO](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) - _Ukurasa wa google wa mashirika yanayotoa Ruzuku._
+- [Ruzuku za DAO](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) - _Ukurasa wa google wa mashirika yanayotoa Ruzuku._
 
 ## Mradi maalum {#project-specific}
 
