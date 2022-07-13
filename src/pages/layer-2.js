@@ -832,13 +832,11 @@ const Layer2Page = ({ data }) => {
             <Link to="/developers/docs/scaling/optimistic-rollups/">
               <Translation id="layer-2-more-info-on-optimistic-rollups" />
             </Link>
-            .
           </p>
           <p>
             <Link to="/developers/docs/scaling/zk-rollups/">
               <Translation id="layer-2-more-info-on-zk-rollups" />
             </Link>
-            .
           </p>
         </ExpandableCard>
         <ExpandableCard
@@ -846,6 +844,8 @@ const Layer2Page = ({ data }) => {
         >
           <p>
             <Translation id="layer-2-faq-question-3-description-1" />{" "}
+          </p>
+          <p>
             <Link to="/upgrades/sharding/">
               <Translation id="layer-2-more-on-sharding" />
             </Link>
@@ -862,6 +862,8 @@ const Layer2Page = ({ data }) => {
           </p>
           <p>
             <Translation id="layer-2-faq-question-4-description-3" />{" "}
+          </p>
+          <p>
             <Link to="/bridges/">
               <Translation id="layer-2-more-on-bridges" />
             </Link>

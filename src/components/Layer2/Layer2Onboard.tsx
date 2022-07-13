@@ -213,7 +213,9 @@ const Layer2Onboard: React.FC<IProps> = ({
             <Translation id="layer-2-onboard-wallet-title" />
           </h4>
           <p>
-            <Translation id="layer-2-onboard-wallet-1" />{" "}
+            <Translation id="layer-2-onboard-wallet-1" />
+          </p>
+          <p>
             <Link to="/bridges/">
               <Translation id="layer-2-more-on-bridges" />
             </Link>
