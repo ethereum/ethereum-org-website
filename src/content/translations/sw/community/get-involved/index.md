@@ -115,4 +115,4 @@ Ikolojia ya Ethereum iko njiani katika kufadhili bidhaa za umma na miradi inayol
 - [KiwandaMeta](https://metafactory.ai) [@KiwandaMeta](https://twitter.com/TheMetaFactory) - _Chapa ya Mavazi ya Nusu dijiti na halisi_
 - [ΜΓΔ](https://metagammadelta.com/) (Meta Gamma Delta) [@metagammadelta](https://twitter.com/metagammadelta) - _miradi ilioongozwa na wanawake_
 - [Moloch](https://molochdao.com) [@MolochDAO](https://twitter.com/MolochDAO) - _Jumuiya inayolenga kutegemeza uboreshwaji wa Ethereum_
-- [Chama cha Uvamizi](https://raidguild.org) [@ChamachaUmavimizi](https://twitter.com/RaidGuild) - _Mkusanyiko wa wajenzi wa Web3_</ul>
+- [Chama cha Uvamizi](https://raidguild.org) [@ChamachaUmavimizi](https://twitter.com/RaidGuild) - _Mkusanyiko wa wajenzi wa Web3_
