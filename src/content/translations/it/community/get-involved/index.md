@@ -19,7 +19,7 @@ La community di Ethereum include le persone con diverse esperienze e serie di co
 - [Lista del programma di supporto degli ecosistemi](https://esp.ethereum.foundation/wishlist/) - strumenti, documentazione, e infrastrutture dove il programma di supporto per l'ecosistema Ethereum è attivamente alla ricerca di domande di sovvenzione
 - [Web3Bridge](https://www.web3bridge.com/) - unisciti alla community di aspiranti web3 nella loro iniziativa per identificare, formare e supportare centinaia di sviluppatori e membri della community in tutta l'Africa
 
-## Ricercatori & Accademici <Emoji text=":mag:" size={1} /> {#researchers-and-academics}
+## Ricercatori & Accademici <Emoji text=":mag:" size={1} /> <unk> {#researchers-and-academics}
 
 Hai conoscenze in matematica, crittografia o economia? Potresti essere interessato ad alcuni dei lavori all'avanguardia svolti all'interno dell'ecosistema della rete Ethereum
 
@@ -38,7 +38,8 @@ Se non sei uno sviluppatore, può essere difficile sapere da dove iniziare all�
 ### Scrivi contenuti su Ethereum {#write-content}
 
 - Ethereum ha bisogno di buoni scrittori che possano spiegare il suo valore in un linguaggio semplice
-- Non sei pronto a pubblicare i tuoi articoli? Prendi in considerazione di contribuire a contenuti esistenti sulle risorse della community come [EthHub](https://docs.ethhub.io/), o proponi nuovi contenuti per ethereum.org!
+- Non sei pronto a pubblicare i tuoi articoli? Prendi in considerazione di contribuire a contenuti esistenti sulle risorse della community come
+  , o proponi nuovi contenuti per ethereum.org!</li> </ul>
 
 ### Messa a disposizione per prendere appunti per le riunioni della community {#take-notes}
 
@@ -68,7 +69,7 @@ L'ecosistema Ethereum ha come missione di finanziare beni pubblici e progetti di
 - [Gitcoin](https://gitcoin.co/fund)
 - [clr.fund](https://clr.fund/#/about)
 
-## Professionisti finanziari & Contabili <Emoji text=":chart_with_upwards_trend:" size={1} /> {#financial-professionals}
+## Professionisti finanziari & Contabili <Emoji text=":chart_with_upwards_trend:" size={1} /> <unk> {#financial-professionals}
 
 - Ethereum è la casa della "Finanza Decentralizzata" - una rete di protocolli e applicazioni che offrono un sistema finanziario alternativo. Se sei un professionista finanziario, controlla alcune applicazioni DeFi su [DeFi Pulse](https://defipulse.com/) o su [DeFiPrime](https://defiprime.com)
 - Contabile? Le risorse su Ethereum - ETH, token, DeFi, ecc - introducono molte nuove alternative di contabilità. Puoi incominciare avvicinandoti ad alcuni progetti che hanno il fine di aiutare gli utenti di criptovalute a risolvere le difficoltà riguardanti la contabilità, come [Rotki](https://rotki.com/)
@@ -86,7 +87,8 @@ L'ecosistema Ethereum ha come missione di finanziare beni pubblici e progetti di
 **Vuoi lavorare con Ethereum?**
 
 - [Lavori di ethereum.org](/about/#open-jobs)
-- [Lavori di Ethereum Foundation](https://ethereum.bamboohr.com/jobs/)
+- [Lavori della Ethereum Foundation (Lever)](https://jobs.lever.co/ethereumfoundation)
+- [Lavori della Ethereum Foundation (BambooHR)](https://ethereum.bamboohr.com/jobs/)
 - [Lavori di Criptovalute](https://cryptocurrencyjobs.co/ethereum/)
 - [Crypto.jobs](https://crypto.jobs/)
 - [Carriere presso ConsenSys](https://consensys.net/careers/)
@@ -100,16 +102,18 @@ L'ecosistema Ethereum ha come missione di finanziare beni pubblici e progetti di
 
 Le "OAD" sono Organizzazioni Autonome Decentralizzate. Questi gruppi sfruttano la tecnologia di Ethereum per facilitare organizzazione e collaborazione. Ad esempio, per il controllo dei membri, il voto su proposte o la gestione delle risorse comuni. Mentre le OAD sono ancora sperimentali, ti offrono l'opportunità di trovare gruppi con cui ti identifichi, trovare collaboratori, ed aumentare il tuo impatto sulla community di Ethereum. [Maggiori informazioni sulle OAD](/dao/)
 
+- [DAOSquare](https://www.daosquare.io) [@DAOSquare](https://twitter.com/DAOSquare) - _Promuovi il concetto di DAO in campo non tecnico e aiuta le persone a creare valore tramite una DAO._
+- [Developer DAO](https://www.developerdao.com/) [@developer_dao](https://twitter.com/developer_dao) - _Community di creatori che credono nella proprietà collettiva di internet_
+- [dOrg](https://dOrg.tech) [@dOrg_tech](https://twitter.com/dOrg_tech) - _Collettivo di sviluppo su base freelance di Web3 operante come una DAO_
+- [DXdao](https://DXdao.eth.link/) [@DXdao](https://twitter.com/DXdao_) - _Sviluppo e governance decentralizzati di dApp e protocolli_
+- [HausDAO](https://daohaus.club) [@nowdaoit](https://twitter.com/nowdaoit) - _Governance comunitaria di DAOhaus_
+- [Hero DAO](https://herodao.org/) [@hero_dao](https://twitter.com/hero_dao) - _Supereroe di proprietà della Comunità_
 - [LexDAO](https://lexdao.coop) [@lex_DAO](https://twitter.com/lex_DAO) - _Ingegneria legale_
 - [Machi X](https://machix.com) [@MachiXOfficial](https://twitter.com/MachiXOfficial) - _Community artistica_
-- [MetaCartel](https://metacartel.org) [@Meta_Cartel](https://twitter.com/Meta_Cartel) - _Incubatore di OAD_
-- [MetaCartel Ventures](https://metacartel.xyz) [@VENTURE_DAO](https://twitter.com/VENTURE_DAO) - _Venture per progetti di cripto pre-seed_
+- [MetaCartel](https://metacartel.org) [@Meta_Cartel](https://twitter.com/Meta_Cartel) - _Incubatore di DAO_
+- [MetaCartel Ventures](https://metacartel.xyz) [@VENTURE_DAO](https://twitter.com/VENTURE_DAO) - _Venture per progetti di cripto pro-seed_
 - [MetaGame](https://metagame.wtf) [@MetaFam](https://twitter.com/MetaFam) - _Meccaniche di Gioco MMORPG per la Vita Reale_
 - [MetaFactory](https://metafactory.ai) [@TheMetaFactory](https://twitter.com/TheMetaFactory) - _Marchi di Abbigliamento Digifisico_
-- [MolochDAO](https://molochdao.com) [@MolochDAO](https://twitter.com/MolochDAO) - _Community concentrata sullo sviluppo di finanziamento di Ethereum_
 - [ΜΓΔ](https://metagammadelta.com/) (Meta Gamma Delta) [@metagammadelta](https://twitter.com/metagammadelta) - _Progetti guidati da donne_
+- [MolochDAO](https://molochdao.com) [@MolochDAO](https://twitter.com/MolochDAO) - _Community concentrata sul finanziamento dello sviluppo di Ethereum_
 - [Raid Guild](https://raidguild.org) [@RaidGuild](https://twitter.com/RaidGuild) - _Collettivo di costruttori di Web3_
-- [DAOSquare](https://www.daosquare.io) [@DAOSquare](https://twitter.com/DAOSquare) - _Promuovi il concetto di OAD nel campo non informatico e aiuta le persone a creare valore tramite un'OAD._
-- [dOrg](https://dOrg.tech) [@dOrg_tech](https://twitter.com/dOrg_tech) - _Collettivo di sviluppo freelance di Web3 operante come una OAD_
-- [HausDAO](https://daohaus.club) [@nowdaoit](https://twitter.com/nowdaoit) - _Governance comunitaria di DAOhaus_
-- [Developer DAO](https://www.developerdao.com/) [@developer_dao](https://twitter.com/developer_dao) - _Community di creatori che credono nella proprietà collettiva di internet_
