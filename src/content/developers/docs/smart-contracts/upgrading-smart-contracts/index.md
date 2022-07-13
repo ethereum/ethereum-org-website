@@ -126,9 +126,10 @@ The diamond upgrade pattern has some advantages over traditional proxy upgrade p
 | Pros                                | Cons                                                                             |
 | ----------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
 | A smart contract upgrade can make it easier to fix vulnerabilities discovered in the post-deployment phase.            | Upgrading smart contracts negates the idea of code immutability, which has implications for decentralization and security.                                          |
-| Developers can use upgrades to add new features to smart contract | Users must trust developers not to modify smart contracts arbitrarily.  |
+| Developers can use logic upgrades to add new features to decentralized applications. | Users must trust developers not to modify smart contracts arbitrarily.  |
 | Smart contract upgrades can improve safety for end-users since bugs can be fixed quickly.                              | Programming upgrade functionality into smart contracts adds another layer of complexity and increases the possibility of critical flaws.                        |
-| The opportunity to upgrade smart contracts may encourage developers to launch projects faster without doing due dilligence during the development phase. | Insecure access control or centralization in smart contracts can make it easier for malicious actors to perform unauthorized upgrades.
+| Contract upgrades give developers more room to experiment with different features and improve dapps over time.             | The opportunity to upgrade smart contracts may encourage developers to launch projects faster without doing due diligence during the development phase.           |
+|                                                                                                                  |    Insecure access control or centralization in smart contracts can make it easier for malicious actors to perform unauthorized upgrades.                          |
 
 ## Considerations for upgrading smart contracts {#considerations-for-upgrading-smart-contracts}
 
