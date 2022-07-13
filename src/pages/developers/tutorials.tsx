@@ -24,7 +24,7 @@ import { getLocaleTimestamp, INVALID_DATETIME } from "../../utils/time"
 
 import foreignTutorials from "../../data/externalTutorials.json"
 import FeedbackCard from "../../components/FeedbackCard"
-import { getSkillTranslationId } from "../../components/TutorialMetadata"
+import { getSkillTranslationId, Skill } from "../../components/TutorialMetadata"
 import { Context } from "../../types"
 import { Lang } from "../../utils/languages"
 
@@ -231,15 +231,15 @@ interface IExternalTutorial {
 
 interface ITutorial {
   to?: string | null
-  title?: string | null
-  description?: string | null
-  author?: string | null
-  tags: Array<string> | null
-  skill?: string | null
+  title: string
+  description: string
+  author: string
+  tags?: Array<string>
+  skill?: Skill
   timeToRead?: number | null
   published?: string | null
   lang: string
-  isExternal?: boolean | null
+  isExternal: boolean
 }
 
 interface ITutorialsState {
@@ -259,16 +259,13 @@ const TutorialsPage = ({
         tutorial?.fields?.slug?.substr(0, 3) === "/en"
           ? tutorial.fields.slug.substr(3)
           : tutorial.fields?.slug,
-      title: tutorial?.frontmatter?.title,
-      description: tutorial?.frontmatter?.description,
-      author: tutorial?.frontmatter?.author,
-      tags:
-        tutorial?.frontmatter?.tags && tutorial.frontmatter.tags.length > 0
-          ? tutorial.frontmatter.tags.map((tag) =>
-              tag ? tag.toLowerCase().trim() : ""
-            )
-          : null,
-      skill: tutorial?.frontmatter?.skill,
+      title: tutorial?.frontmatter?.title || "",
+      description: tutorial?.frontmatter?.description || "",
+      author: tutorial?.frontmatter?.author || "",
+      tags: tutorial?.frontmatter?.tags?.map((tag) =>
+        (tag || "").toLowerCase().trim()
+      ),
+      skill: tutorial?.frontmatter?.skill as Skill,
       timeToRead: tutorial?.fields?.readingTime?.minutes
         ? Math.round(tutorial?.fields?.readingTime?.minutes)
         : null,
@@ -285,7 +282,7 @@ const TutorialsPage = ({
       description: tutorial.description,
       author: tutorial.author,
       tags: tutorial.tags.map((tag) => tag.toLowerCase().trim()),
-      skill: tutorial.skillLevel,
+      skill: tutorial.skillLevel as Skill,
       timeToRead: Number(tutorial.timeToRead),
       published: new Date(tutorial.publishDate).toISOString(),
       lang: tutorial.lang || "en",
@@ -498,7 +495,7 @@ const TutorialsPage = ({
               <TitleContainer>
                 <Title isExternal={tutorial.isExternal}>{tutorial.title}</Title>
                 <Pill isSecondary={true}>
-                  <Translation id={getSkillTranslationId(tutorial.skill)} />
+                  <Translation id={getSkillTranslationId(tutorial.skill!)} />
                 </Pill>
               </TitleContainer>
               <Author>
