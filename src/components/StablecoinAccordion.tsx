@@ -1,14 +1,14 @@
 import React, { useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { getImage } from "gatsby-plugin-image"
-import { useIntl, navigate } from "react-intl"
+import { useIntl } from "react-intl"
 import styled from "styled-components"
 // TODO add motion animation
 // import { motion } from "framer-motion"
 import ButtonLink from "./ButtonLink"
 import CardList, { CardListItem } from "./CardList"
 import Emoji from "./Emoji"
-import Link from "./Link"
+import Link, { navigate } from "./Link"
 import Icon from "./Icon"
 import InfoBanner from "./InfoBanner"
 import Pill from "./Pill"
@@ -544,7 +544,7 @@ const StablecoinAccordion: React.FC<IProps> = () => {
       setOpenSection(selectedSection)
     }
     if (isMobile()) {
-      navigate(`/stablecoins/#${selectedSection}`)
+      navigate(`/stablecoins/#${selectedSection}`, intl)
     }
   }
 

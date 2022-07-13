@@ -1,11 +1,13 @@
 import React from "react"
-import { Link as GatsbyLink } from "gatsby"
+import { Link as GatsbyLink, navigate as gatsbyNavigate } from "gatsby"
 import { LocalizedLink as IntlLink } from "gatsby-theme-i18n"
+import { NavigateOptions } from "@reach/router"
+import { IntlShape } from "react-intl"
 import styled from "styled-components"
 
 import Icon from "./Icon"
 
-import { languageMetadata } from "../utils/languages"
+import { Lang, languageMetadata } from "../utils/languages"
 import { trackCustomEvent, EventOptions } from "../utils/matomo"
 import { Direction } from "../types"
 
@@ -220,6 +222,19 @@ const Link: React.FC<IProps> = ({
       )}
     </InternalLink>
   )
+}
+
+export function navigate(
+  to: string,
+  intl: IntlShape,
+  options?: NavigateOptions<{}>
+) {
+  if (typeof window === "undefined") {
+    return
+  }
+
+  const link = `/${intl.locale as Lang}${to}`
+  gatsbyNavigate(link, options)
 }
 
 export default Link
