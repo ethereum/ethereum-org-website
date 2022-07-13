@@ -74,7 +74,7 @@ Diferentes organizaciones han hecho algunos esfuerzos de colaboración para que 
 
 [Capa 2](/developers/docs/scaling/#layer-2-scaling) es un conjunto de tecnologías o sistemas que se ejecuta en Ethereum (Capa 1), hereda propiedades de seguridad de Capa 1, proporciona una mayor capacidad de procesamiento de transacciones (rendimiento), reduce las tasas de transacción (costes operativos) y acelera las confirmaciones de las transacciones con respecto a Capa 1. Las soluciones de escalado de Capa 2 están aseguradas mediante Capa 1, pero permiten a las aplicaciones de cadena de bloques manejar muchos más usuarios o acciones o datos de los que Capa 1 podría alojar. Muchos de ellos aprovechan los avances recientes en criptografía y pruebas de conocimiento cero (ZK) para maximizar el desempeño y la seguridad.
 
-Crear su aplicación sobre la solución de escalabilidad de Capa 2 puede ayudarle[ a abordar muchas de las preocupaciones que anteriormente han motivado a las empresas a construir sobre cadenas de bloques privadas](https://entethalliance.org/how-ethereum-layer-2-scaling-solutions-address-barriers-to-enterprises-building-on-mainnet/), sin perder las ventajas que supone construir en una red principal.
+Crear su aplicación sobre la solución de escalabilidad de Capa 2 puede ayudarle [a abordar muchas de las preocupaciones que anteriormente han motivado a las empresas a construir sobre cadenas de bloques privadas](https://entethalliance.org/how-ethereum-layer-2-scaling-solutions-address-barriers-to-enterprises-building-on-mainnet/), sin perder las ventajas que supone construir en una red principal.
 
 Ejemplos de soluciones L2 (de Capa 2) que están listas para la producción o que pronto se incluirán:
 

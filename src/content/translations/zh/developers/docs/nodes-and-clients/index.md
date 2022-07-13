@@ -295,11 +295,11 @@ Erigon 以前称为 TurbohyGeth，是 Go Ethereum 的一个分叉，注重速度
 
 ![图表表明，归档同步所需的 GB 数正呈上升趋势。](./archive-sync.png)
 
-上面的图表显示存储要求的持续变化趋势。 关于 Geth 和 OpenEthereum 的最新数据，请参阅[完全同步数据](https://etherscan. io/chartsync/chaindefault)和[归档同步数据](https://etherscan. io/chartsync/chainarchive)。
+上面的图表显示存储要求的持续变化趋势。 关于 Geth 和 OpenEthereum 的最新数据，请参阅[完全同步数据](https://etherscan.io/chartsync/chaindefault)和[归档同步数据](https://etherscan.io/chartsync/chainarchive)。
 
 ### 在单板计算机上运行以太坊 {#ethereum-on-a-single-board-computer}
 
-运行以太坊节点最方便、最便宜的方法是使用具有 ARM 架构的单板计算机，如 Raspberry Pi。 [Ethereum on ARM](https://twitter. com/EthereumOnARM) 提供了 Geth、OpenEthereum、Nethermind 和 Besu 客户端的映像。 请学习关于[如何构建和设置 ARM 客户端](/developers/tutorials/run-node-raspberry-pi/)的简单教程。
+运行以太坊节点最方便、最便宜的方法是使用具有 ARM 架构的单板计算机，如 Raspberry Pi。 [Ethereum on ARM](https://twitter.com/EthereumOnARM) 提供了 Geth、OpenEthereum、Nethermind 和 Besu 客户端的映像。 请学习关于[如何构建和设置 ARM 客户端](/developers/tutorials/run-node-raspberry-pi/)的简单教程。
 
 诸如此类小型、实惠、高效的设备是在家里运行节点的理想选择。
 

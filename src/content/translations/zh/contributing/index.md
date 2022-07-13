@@ -35,7 +35,7 @@ Ethereum.org 网站，像开放的以太坊一样，也是一个开源项目。 
 
 无论您是向网站添加内容、创建内容还是处理未解决的问题，您都需要一个 [GitHub](https://github.com) 帐户。
 
-所有更新都是通过 GitHub 拉取请求流程进行的。 这意味着您要在网站上创建本地副本，做出您的更改，以及请求合并您的更改。 如果您以前从未这样做过，请按照我们 [GitHub 存储库](https://github. com/ethereum/ethereum-org-website)底部的说明进行操作。
+所有更新都是通过 GitHub 拉取请求流程进行的。 这意味着您要在网站上创建本地副本，做出您的更改，以及请求合并您的更改。 如果您以前从未这样做过，请按照我们 [GitHub 存储库](https://github.com/ethereum/ethereum-org-website)底部的说明进行操作。
 
 您不需要权限来处理任何事情，但是最好让我们知道您打算做什么。 您可以这样做：
 
