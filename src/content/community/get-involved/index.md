@@ -63,7 +63,7 @@ By staking your ETH you can earn rewards whilst helping to secure the Ethereum n
 
 - [More on staking](/staking/)
 
-### Support projects {#suport-projects}
+### Support projects {#support-projects}
 
 The Ethereum ecosystem is on a mission to fund public goods and impactful projects. With very small donations you can show your support and allow important work to be realized.
 

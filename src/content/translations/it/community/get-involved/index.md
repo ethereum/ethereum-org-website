@@ -61,7 +61,7 @@ Mettendo in staking i tuoi ETH puoi guadagnare ricompense aiutando a rendere la 
 
 - [Maggiori informazioni sullo staking](/staking/)
 
-### Progetti di supporto {#suport-projects}
+### Progetti di supporto {#support-projects}
 
 L'ecosistema Ethereum ha come missione di finanziare beni pubblici e progetti di grande impatto. Con donazioni molto piccole puoi mostrare il tuo supporto e permettere che questo importante lavoro si realizzi.
 

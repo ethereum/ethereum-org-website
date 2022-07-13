@@ -61,7 +61,7 @@ En jalonnant votre ETH, vous pouvez gagner des récompenses tout en aidant à s�
 
 - [Plus d'infos sur la mise en jeu](/staking/)
 
-### Soutenir les projets {#suport-projects}
+### Soutenir les projets {#support-projects}
 
 L'écosystème Ethereum a pour mission de financer des biens publics et des projets percutants. Avec de très petits dons, vous pouvez montrer votre soutien et permettre la réalisation d'un travail important.
 
