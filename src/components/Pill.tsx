@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
-const Primary = styled.div`
+const Primary = styled.div<{ color?: string }>`
   display: flex;
   background: ${(props) =>
     props.color
