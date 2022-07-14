@@ -6,10 +6,8 @@ import { useIntl } from "react-intl"
 import { Location } from "@reach/router"
 import { getSrc } from "gatsby-plugin-image"
 
-import { languageMetadata } from "../utils/languages"
+import { Lang, supportedLanguages } from "../utils/languages"
 import { translateMessageId } from "../utils/translations"
-
-const supportedLanguages = Object.keys(languageMetadata)
 
 type NameMeta = {
   name: string
@@ -113,7 +111,7 @@ const PageMetadata: React.FC<IProps> = ({
         /* e.g. set ethereum.org/about/ to ethereum.org/en/about/ */
         const { pathname } = location
         let canonicalPath = pathname
-        const firstDirectory = canonicalPath.split("/")[1]
+        const firstDirectory = canonicalPath.split("/")[1] as Lang
         if (!supportedLanguages.includes(firstDirectory)) {
           canonicalPath = `/en${pathname}`
         }

@@ -4,7 +4,6 @@ import path from "path"
 import type { GatsbyConfig } from "gatsby"
 
 import {
-  buildLangs,
   supportedLanguages,
   defaultLanguage,
   ignoreLanguages,
@@ -42,7 +41,9 @@ const config: GatsbyConfig = {
       options: {
         defaultLang: defaultLanguage,
         prefixDefault: true,
-        locales: buildLangs.length ? buildLangs.join(" ") : null,
+        locales: supportedLanguages.length
+          ? supportedLanguages.join(" ")
+          : null,
         configPath: path.resolve(`./i18n/config.json`),
       },
     },

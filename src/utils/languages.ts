@@ -1,3 +1,6 @@
+import i18nConfigs from "../../i18n/config.json"
+import type { Direction } from "../types"
+
 export type Lang =
   | "en"
   | "ar"
@@ -49,160 +52,24 @@ export type Lang =
   | "zh-tw"
 
 export type Languages = {
-  [lang in Lang]: { language: string }
+  [lang in Lang]: {
+    code: string
+    hrefLang: string
+    name: string
+    localName: string
+    langDir: Direction
+    dateFormat: string
+  }
 }
 
 export const defaultLanguage: Lang = "en"
 
-// TODO: refactor - read this from `./i18n/config.json` source of truth
-const languages: Languages = {
-  en: {
-    language: "English",
-  },
-  ar: {
-    language: "العربية",
-  },
-  az: {
-    language: "Azərbaycan",
-  },
-  bg: {
-    language: "български",
-  },
-  bn: {
-    language: "বাংলা",
-  },
-  ca: {
-    language: "Català",
-  },
-  cs: {
-    language: "Čeština",
-  },
-  da: {
-    language: "Dansk",
-  },
-  de: {
-    language: "Deutsch",
-  },
-  el: {
-    language: "Ελληνικά",
-  },
-  es: {
-    language: "Español",
-  },
-  fa: {
-    language: "فارسی",
-  },
-  fi: {
-    language: "Suomi",
-  },
-  fr: {
-    language: "Français",
-  },
-  gl: {
-    language: "Galego",
-  },
-  hi: {
-    language: "हिन्दी",
-  },
-  hr: {
-    language: "Hrvatski",
-  },
-  hu: {
-    language: "Magyar",
-  },
-  id: {
-    language: "Bahasa Indonesia",
-  },
-  ig: {
-    language: "Ibo",
-  },
-  it: {
-    language: "Italiano",
-  },
-  ja: {
-    language: "日本語",
-  },
-  ka: {
-    language: "ქართული",
-  },
-  kk: {
-    language: "қазақ",
-  },
-  ko: {
-    language: "한국어",
-  },
-  lt: {
-    language: "Lietuvis",
-  },
-  ml: {
-    language: "മലയാളം",
-  },
-  mr: {
-    language: "मराठी",
-  },
-  ms: {
-    language: "Melayu",
-  },
-  nl: {
-    language: "Nederlands",
-  },
-  nb: {
-    language: "Norsk",
-  },
-  ph: {
-    language: "Filipino",
-  },
-  pl: {
-    language: "Polski",
-  },
-  pt: {
-    language: "Português",
-  },
-  "pt-br": {
-    language: "Português",
-  },
-  ro: {
-    language: "Română",
-  },
-  ru: {
-    language: "Pусский",
-  },
-  se: {
-    language: "Svenska",
-  },
-  sk: {
-    language: "Slovenský",
-  },
-  sl: {
-    language: "Slovenščina",
-  },
-  sr: {
-    language: "Српски",
-  },
-  sw: {
-    language: "Kiswahili",
-  },
-  th: {
-    language: "ภาษาไทย",
-  },
-  tr: {
-    language: "Türkçe",
-  },
-  uk: {
-    language: "Українська",
-  },
-  vi: {
-    language: "Tiếng Việt",
-  },
-  zh: {
-    language: "简体中文",
-  },
-  "zh-tw": {
-    language: "繁體中文",
-  },
-}
+// same data as in the `config.json` but indexed by language code
+const languages: Languages | {} = i18nConfigs.reduce((result, config) => {
+  return { ...result, [config.code as Lang]: config }
+}, {})
 
-export const buildLangs = (process.env.GATSBY_BUILD_LANGS || "")
+const buildLangs = (process.env.GATSBY_BUILD_LANGS || "")
   .split(",")
   .filter(Boolean)
 
