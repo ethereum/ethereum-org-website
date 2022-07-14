@@ -8133,6 +8133,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "smejak",
+      "name": "Jakub Smékal",
+      "avatar_url": "https://avatars.githubusercontent.com/u/20759274?v=4",
+      "profile": "https://github.com/smejak",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
