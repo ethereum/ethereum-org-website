@@ -57,12 +57,12 @@ const SearchSlash = styled.p`
   }
 `
 
-interface IInputProps {
+interface IInputProps
+  extends React.ComponentPropsWithoutRef<typeof StyledInput> {
   query: string
-  setQuery: (arg: string) => void
-  refine: (arg: string) => void
+  setQuery: (query: string) => void
+  refine: (query: string) => void
   inputRef: React.MutableRefObject<HTMLInputElement>
-  [key: string]: unknown
 }
 
 const Input: React.FC<IInputProps> = ({
