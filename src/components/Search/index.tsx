@@ -10,6 +10,7 @@ import {
   Snippet,
   connectStateResults,
 } from "react-instantsearch-dom"
+import type { StateResultsProvided } from "react-instantsearch-core"
 import algoliasearch from "algoliasearch/lite"
 import { Hit } from "@algolia/client-search"
 import styled from "styled-components"
@@ -160,44 +161,48 @@ const indices = [
 ]
 
 // Validate against basic requirements of an ETH address
-const isValidAddress = (address): boolean => {
+const isValidAddress = (address: string): boolean => {
   return /^(0x)?[0-9a-f]{40}$/i.test(address)
 }
 
-const Results = connectStateResults(
-  ({ searchState: state, searchResults: res, children }) => {
-    if (res && res.nbHits > 0) {
-      return children
-    }
-    if (isValidAddress(state.query)) {
-      return (
-        <div>
-          <p>
-            <strong>
-              <Translation id="search-no-results" />
-            </strong>{" "}
-            "{state.query}"
-          </p>
-          <p>
-            <Translation id="search-eth-address" />{" "}
-            <Link to={`https://etherscan.io/address/${state.query}`}>
-              Etherscan
-            </Link>
-            .
-          </p>
-        </div>
-      )
-    }
+const Results: React.FC<StateResultsProvided> = ({
+  searchState: state,
+  searchResults: res,
+  children,
+}) => {
+  if (res && res.nbHits > 0) {
+    return <>{children}</>
+  }
+  if (state.query && isValidAddress(state.query)) {
     return (
       <div>
-        <strong>
-          <Translation id="search-no-results" />
-        </strong>{" "}
-        "{state.query}"
+        <p>
+          <strong>
+            <Translation id="search-no-results" />
+          </strong>{" "}
+          "{state.query}"
+        </p>
+        <p>
+          <Translation id="search-eth-address" />{" "}
+          <Link to={`https://etherscan.io/address/${state.query}`}>
+            Etherscan
+          </Link>
+          .
+        </p>
       </div>
     )
   }
-)
+  return (
+    <div>
+      <strong>
+        <Translation id="search-no-results" />
+      </strong>{" "}
+      "{state.query}"
+    </div>
+  )
+}
+
+const ConnectedResults = connectStateResults(Results)
 
 interface ISearchProps {
   handleSearchSelect?: () => void
@@ -276,9 +281,9 @@ const Search: React.FC<ISearchProps> = ({
         <HitsWrapper show={query?.length > 0 && focus}>
           {indices.map(({ name, hitComp }) => (
             <Index key={name} indexName={name}>
-              <Results>
+              <ConnectedResults>
                 <Hits hitComponent={PageHit(() => handleSelect())} />
-              </Results>
+              </ConnectedResults>
             </Index>
           ))}
         </HitsWrapper>
