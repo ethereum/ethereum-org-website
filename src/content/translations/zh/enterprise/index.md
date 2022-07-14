@@ -146,7 +146,7 @@ sidebar: true
 - [EY OpsChain 网络采购](https://blockchain.ey.com/products/contract-manager) _可让企业在信任的业务合作伙伴网络中发布报价请求、合约、采购订单和发票，参与采购流程_
 - [Treum](https://treum.io/) _使用区块链技术为供应链带来透明度、可追溯性和可交易性_
 - [TradeTrust](https://www.tradetrust.io/) _ 验证国际运输中的电子提单 (eBL)_
-- [Birra Peroni](https://www.ey.com/en_gl/news/2021/05/birra-peroni-is-the-first-industrial-organization-to-mint-unique-non-fungible-tokens-using -ey-opschain-traceability) _ 可为每批新酿造的啤酒铸造非同质化代币，提高整条供应链的可见性和效率_
+- [Birra Peroni](https://www.ey.com/en_gl/news/2021/05/birra-peroni-is-the-first-industrial-organization-to-mint-unique-non-fungible-tokens-using-ey-opschain-traceability) _ 可为每批新酿造的啤酒铸造非同质化代币，提高整条供应链的可见性和效率_
 
 ### 所有权与证明 {#credentials}
 

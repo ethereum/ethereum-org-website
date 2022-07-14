@@ -70,7 +70,7 @@ Mientras que el consumo energético de Ethereum siempre ha sido considerable, lo
 
 - [El valor energético de un país; nada más](https://blog.ethereum.org/2021/05/18/country-power-no-more/) — _Carl Beekhuizen, 18 de mayo de 2021_
 - [Consumo energético de Ethereum](https://mirror.xyz/jmcook.eth/ODpCLtO4Kq7SCVFbU4He8o8kXs418ZZDTj0lpYlZkR8)
-- [Emisiones de Ethereum Emissions: una estimación de menos a más](https://kylemcdonald. github. io/ethereum-emissions/) _ Kyle McDonald_
+- [Emisiones de Ethereum Emissions: una estimación de menos a más](https://kylemcdonald.github.io/ethereum-emissions/) _ Kyle McDonald_
 - [Índice de consumo energético de Ethereum](https://digiconomist.net/ethereum-energy-consumption/) – _Digiconomist_
 - [ETHMerge.com](https://ethmerge.com/),_[@InsideTheSim](https://twitter.com/InsideTheSim)_
 

@@ -208,7 +208,7 @@ Erigon 以前称为 TurbohyGeth，是 Go Ethereum 的一个分叉，注重速度
 
 ##### 压缩同步
 
-由 OpenEtherum 执行。 节点定期生成一个共识关键状态快照，任何对等节点都可以通过网络提取这些快照，从而能够从这个节点快速同步。
+由 OpenEthereum 执行。 节点定期生成一个共识关键状态快照，任何对等节点都可以通过网络提取这些快照，从而能够从这个节点快速同步。
 
 - OpenEthereum 的最快和默认同步模式依赖于节点提供的静态快照。
 - 它和快照同步的策略类似，但没有确定的安全效益。
@@ -295,11 +295,11 @@ Erigon 以前称为 TurbohyGeth，是 Go Ethereum 的一个分叉，注重速度
 
 ![图表表明，归档同步所需的 GB 数正呈上升趋势。](./archive-sync.png)
 
-上面的图表显示存储要求的持续变化趋势。 关于 Geth 和 OpenEthereum 的最新数据，请参阅[完全同步数据](https://etherscan. io/chartsync/chaindefault)和[归档同步数据](https://etherscan. io/chartsync/chainarchive)。
+上面的图表显示存储要求的持续变化趋势。 关于 Geth 和 OpenEthereum 的最新数据，请参阅[完全同步数据](https://etherscan.io/chartsync/chaindefault)和[归档同步数据](https://etherscan.io/chartsync/chainarchive)。
 
 ### 在单板计算机上运行以太坊 {#ethereum-on-a-single-board-computer}
 
-运行以太坊节点最方便、最便宜的方法是使用具有 ARM 架构的单板计算机，如 Raspberry Pi。 [Ethereum on ARM](https://twitter. com/EthereumOnARM) 提供了 Geth、OpenEthereum、Nethermind 和 Besu 客户端的映像。 请学习关于[如何构建和设置 ARM 客户端](/developers/tutorials/run-node-raspberry-pi/)的简单教程。
+运行以太坊节点最方便、最便宜的方法是使用具有 ARM 架构的单板计算机，如 Raspberry Pi。 [Ethereum on ARM](https://twitter.com/EthereumOnARM) 提供了 Geth、OpenEthereum、Nethermind 和 Besu 客户端的映像。 请学习关于[如何构建和设置 ARM 客户端](/developers/tutorials/run-node-raspberry-pi/)的简单教程。
 
 诸如此类小型、实惠、高效的设备是在家里运行节点的理想选择。
 

@@ -8,7 +8,7 @@ tags:
   - "alchemy"
   - "solidité"
   - "contrats intelligents"
-skill: débutant
+skill: beginner
 lang: fr
 sidebar: true
 published: 2021-04-22
@@ -129,7 +129,7 @@ const nftContract = new web3.eth.Contract(contract.abi, contractAddress)
 
 ## Étape 6 : Mettre à jour le fichier `.env` {#update-env}
 
-Maintenant, pour créer et envoyer des transactions sur la chaîne Ethereum, nous utiliserons votre adresse publique de compte ethereum pour obtenir le nonce du compte (explication à suivre ci-dessous).
+Maintenant, pour créer et envoyer des transactions sur la chaîne Ethereum, nous utiliserons votre adresse publique de compte Ethereum pour obtenir le nonce du compte (explication à suivre ci-dessous).
 
 Ajoutez votre clé publique à votre fichier `.env` — si vous avez terminé la première partie du tutoriel, notre fichier `.env` devrait maintenant ressembler à ceci :
 

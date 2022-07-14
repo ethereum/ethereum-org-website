@@ -50,7 +50,7 @@ Ethereum.org به صورت بومی به بیش از 40 زبان ترجمه شد
 - [Unitimes](https://mp.weixin.qq.com/s/tvloZSDBSOQN9zDQj_91kA) - محتوای نگهداری شده توسط انجمن، پوشش دانش مرتبط با اتریوم، دیفای، NFT،‏ Web3
 - [123ETH](https://123eth.org/) - دروازه‌ای به اکوسیستم اتریوم
 - [Zhen Xiao](http://zhenxiao.com/blockchain/) - دوره‌های آنلاین رایگان درباره ارزهای دیجیتال و کاربردهای آن
-- [Whitepaper اتریوم](https://github.com/ethereum/wiki/wiki/[%E4%B8%AD%E6%96%87]-%E4%BB%A5%E5%A4%AA%E5%9D %8A%E7%99%BD%E7%9A%AE%E4%B9%A6) - نسخه‌ی چینی وایت‌پیپر اتریوم
+- [Whitepaper اتریوم](/zh/whitepaper) - نسخه‌ی چینی وایت‌پیپر اتریوم
 
 **اکوسیستم اتریوم**
 

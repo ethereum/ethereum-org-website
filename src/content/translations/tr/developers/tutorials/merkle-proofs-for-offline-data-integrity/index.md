@@ -6,7 +6,7 @@ tags:
   - "merkle"
   - "bütünlük"
   - "depolama"
-skill: gelişmiş
+skill: advanced
 lang: tr
 sidebar: true
 published: 2021-12-30

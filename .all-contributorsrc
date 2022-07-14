@@ -937,7 +937,8 @@
       "profile": "https://github.com/EmanHerawy",
       "contributions": [
         "translation",
-        "code"
+        "code",
+        "ideas"
       ]
     },
     {
@@ -4639,7 +4640,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/55439064?v=4",
       "profile": "https://github.com/raj-shekhar1",
       "contributions": [
-        "doc"
+        "doc",
+        "ideas"
       ]
     },
     {
@@ -8057,6 +8059,79 @@
       "profile": "https://syskall.com",
       "contributions": [
         "doc"
+      ]
+    },
+    {
+      "login": "gingerheart86",
+      "name": "gingerheart86",
+      "avatar_url": "https://avatars.githubusercontent.com/u/100948227?v=4",
+      "profile": "https://github.com/gingerheart86",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "naveen106",
+      "name": "Naveen Kumar",
+      "avatar_url": "https://avatars.githubusercontent.com/u/61573478?v=4",
+      "profile": "https://github.com/naveen106",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "treethought",
+      "name": "Cam Sweeney",
+      "avatar_url": "https://avatars.githubusercontent.com/u/15894818?v=4",
+      "profile": "https://github.com/treethought",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "moyedx3",
+      "name": "moyed",
+      "avatar_url": "https://avatars.githubusercontent.com/u/108647630?v=4",
+      "profile": "https://github.com/moyedx3",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "shelleyolivia",
+      "name": "shelleyolivia",
+      "avatar_url": "https://avatars.githubusercontent.com/u/108895606?v=4",
+      "profile": "https://github.com/shelleyolivia",
+      "contributions": [
+        "doc",
+        "ideas"
+      ]
+    },
+    {
+      "login": "zyjblockchain",
+      "name": "Sandy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/40423181?v=4",
+      "profile": "http://sandyzhou911@gmail.com",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "NachoRoizman",
+      "name": "NachoRoizman",
+      "avatar_url": "https://avatars.githubusercontent.com/u/107893772?v=4",
+      "profile": "https://github.com/NachoRoizman",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "M-Ivan",
+      "name": "Iván Miragaya",
+      "avatar_url": "https://avatars.githubusercontent.com/u/72365253?v=4",
+      "profile": "https://linkedin.com/in/miragaya-ivan",
+      "contributions": [
+        "code"
       ]
     }
   ],

@@ -82,9 +82,9 @@ La mise à niveau London a introduit l'[EIP 1559](https://eips.ethereum.org/EIP
 <ExpandableCard title="Les EIP de London" contentPreview="Official improvements included in this upgrade.">
 
 - [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) – _Améliore le marché des frais de transaction_
-- [EIP-3198](https://eips. thereum.org/EIPS/eip-3198) – _Retourne le « BASEFEE » depuis un bloc_
-- [EIP-3529](https://eips.ethereum. rg/EIPS/eip-3529) - _Diminue les remboursements de gaz pour les opérations EVM _
-- [EIP-3541](https://eips.ethereum. rg/EIPS/eip-3541) - _Empêche le déploiement de contrats commençant par « 0xEF »_
+- [EIP-3198](https://eips.ethereum.org/EIPS/eip-3198) – _Retourne le « BASEFEE » depuis un bloc_
+- [EIP-3529](https://eips.ethereum.org/EIPS/eip-3529) - _Diminue les remboursements de gaz pour les opérations EVM _
+- [EIP-3541](https://eips.ethereum.org/EIPS/eip-3541) - _Empêche le déploiement de contrats commençant par « 0xEF »_
 - [EIP-3554](https://eips.ethereum.org/EIPS/eip-3554) - _Reporte le Ice Age jusqu'en décembre 2021_
 
 </ExpandableCard>
@@ -105,8 +105,8 @@ La mise à niveau Berlin a optimisé le coût en gaz pour certaines actions EVM 
 <ExpandableCard title="Les EIP de Berlin" contentPreview="Official improvements included in this upgrade.">
 
 - [EIP-2565](https://eips.ethereum.org/EIPS/eip-2565) – _Diminue le coût en gaz pour ModExp_
-- [EIP-2718](https://eips. thereum.org/EIPS/eip-2718) – _Permet une prise en charge plus facile pour plusieurs types de transactions_
-- [EIP-2929](https://eips. thereum.org/EIPS/eip-2929) – _Augmentation du coût en gaz pour les opcodes d'accès d'état_
+- [EIP-2718](https://eips.ethereum.org/EIPS/eip-2718) – _Permet une prise en charge plus facile pour plusieurs types de transactions_
+- [EIP-2929](https://eips.ethereum.org/EIPS/eip-2929) – _Augmentation du coût en gaz pour les opcodes d'accès d'état_
 - [EIP-2930](https://eips.ethereum.org/EIPS/eip-2930) – _Ajoute des listes d'accès optionnels_
 
 </ExpandableCard>
@@ -190,7 +190,7 @@ La fourche Istanbul a :
 - [EIP-1108](https://eips.ethereum.org/EIPS/eip-1108) – _Cryptographie moins onéreuse pour améliorer le coût du [gaz](/glossary/#gas)._
 - [EIP-1344](https://eips.ethereum.org/EIPS/eip-1344) – _Protège Ethereum contre les attaques par rejeu en ajoutant le code d'opération [opcode] « CHAINID » (/developers/docs/ethereum-stack/#ethereum-virtual-machine)._
 - [EIP-1884](https://eips.ethereum.org/EIPS/eip-1884) – _Optimisation du prix du gaz des codes d'opération basés sur la consommation._
-- [EIP-2028](https://eips.ethereum.org/EIPS/eip-2028) – Réduit le coût des données d'appel afin de pouvoir augmenter la taille des données dans les blocs. Utile pour [l'évolutivité de la couche 2](/developers/docs/scaling/layer-2-rollups/).\_
+- [EIP-2028](https://eips.ethereum.org/EIPS/eip-2028) – _Réduit le coût des données d'appel afin de pouvoir augmenter la taille des données dans les blocs. Utile pour [l'évolutivité de la couche 2](/developers/docs/scaling/layer-2-rollups/)._
 - [EIP-2200](https://eips.ethereum.org/EIPS/eip-2200) – _Autres altérations du prix du gaz des codes d'opération._
 
 </ExpandableCard>
@@ -242,14 +242,14 @@ La fourche Byzantium a :
 <ExpandableCard title="Les EIP de Byzantium" contentPreview="Official improvements included in this fork.">
 
 - [EIP-140](https://eips.ethereum.org/EIPS/eip-140) – _Ajoute le code d'opération « REVERT »._
-- [EIP-658](https://eips.ethereum. rg/EIPS/eip-658) – _Champ de statut ajouté aux reçus de transaction pour indiquer le succès ou l'échec._
-- [EIP-196](https://eips.ethereum. rg/EIPS/eip-196) – _Ajoute la courbe elliptique et la multiplication scalaire pour permettre les [ZK-Snarks](/developers/docs/layer-2-scaling/#rollups)._
-- [EIP-197](https://eips.ethereum. rg/EIPS/eip-197) – _Ajoute la courbe elliptique et la multiplication scalaire pour permettre les [ZK-Snarks](/developers/docs/layer-2-scaling/#rollups)._
-- [EIP-198](https://eips. thereum.org/EIPS/eip-198) – _Active la vérification de la signature RSA._
+- [EIP-658](https://eips.ethereum.org/EIPS/eip-658) – _Champ de statut ajouté aux reçus de transaction pour indiquer le succès ou l'échec._
+- [EIP-196](https://eips.ethereum.org/EIPS/eip-196) – _Ajoute la courbe elliptique et la multiplication scalaire pour permettre les [ZK-Snarks](/developers/docs/layer-2-scaling/#rollups)._
+- [EIP-197](https://eips.ethereum.org/EIPS/eip-197) – _Ajoute la courbe elliptique et la multiplication scalaire pour permettre les [ZK-Snarks](/developers/docs/layer-2-scaling/#rollups)._
+- [EIP-198](https://eips.ethereum.org/EIPS/eip-198) – _Active la vérification de la signature RSA._
 - [EIP-211](https://eips.ethereum.org/EIPS/eip-211) – _Ajoute la prise en charge des valeurs de retour de longueur variable._
 - [EIP-214](https://eips.ethereum.org/EIPS/eip-214) – _Ajoute le code d'opération « STATICCALL » permettant d'effectuer des appels sans changement d'état vers d'autres contrats._
 - [EIP-100](https://eips.ethereum.org/EIPS/eip-100) – _Modifie la formule d'ajustement de difficulté._
-- [EIP-649](https://eips. thereum.org/EIPS/eip-649) – _Retarde la [bombe de difficulté](/glossary/#difficulty-bomb) de 1 an et réduit la récompense des blocs de 5 à 3 ETH._
+- [EIP-649](https://eips.ethereum.org/EIPS/eip-649) – _Retarde la [bombe de difficulté](/glossary/#difficulty-bomb) de 1 an et réduit la récompense des blocs de 5 à 3 ETH._
 
 </ExpandableCard>
 
@@ -274,7 +274,7 @@ La fourche Spurious Dragon est la deuxième réponse aux attaques par déni de s
 <ExpandableCard title="Les EIP de Spurious Dragon" contentPreview="Official improvements included in this fork.">
 
 - [EIP-155](https://eips.ethereum.org/EIPS/eip-155) - _Empêche les transactions d'une chaîne Ethereum d'être rediffusées sur une chaîne alternative, par exemple une transaction du réseau de test rejouée sur la chaîne principale Ethereum._
-- [EIP-160](https://eips.ethereum.org/EIPS/eip-160) - \_Règle les prix du code d'opération « EXP ». Rend plus difficile le ralentissement du réseau via des opérations de contrat coûteuses sur le plan du calcul.
+- [EIP-160](https://eips.ethereum.org/EIPS/eip-160) - _Règle les prix du code d'opération « EXP ». Rend plus difficile le ralentissement du réseau via des opérations de contrat coûteuses sur le plan du calcul._
 - [EIP-161](https://eips.ethereum.org/EIPS/eip-161) - _Permet de supprimer les comptes vides ajoutés via les attaques par DoS._
 - [EIP-170](https://eips.ethereum.org/EIPS/eip-170) - _Définit la taille maximale du code d'un contrat sur la blockchain à 24 576 octets._
 
@@ -297,7 +297,7 @@ La fourche Tangerine Whistle est la première réponse aux attaques par déni de
 <ExpandableCard title="Les EIP de Tangerine Whistle" contentPreview="Official improvements included in this fork.">
 
 - [EIP-150](https://eips.ethereum.org/EIPS/eip-150) - _Augmente le coût en gaz des codes d'opération qui peuvent être utilisés dans les attaques par spam._
-- [EIP-158](https://eips.ethereum. rg/EIPS/eip-158) - _Réduit la taille de l'état en supprimant un grand nombre de comptes vides mis dans l'état à très bas prix en raison de failles dans les versions précédentes du protocole Ethereum._
+- [EIP-158](https://eips.ethereum.org/EIPS/eip-158) - _Réduit la taille de l'état en supprimant un grand nombre de comptes vides mis dans l'état à très bas prix en raison de failles dans les versions précédentes du protocole Ethereum._
 
 </ExpandableCard>
 
@@ -332,7 +332,7 @@ La fourche Homestead était tournée vers l'avenir. Elle comprenait plusieurs ch
 <ExpandableCard title="Les EIP d'Homestead" contentPreview="Official improvements included in this fork.">
 
 - [EIP-2](https://eips.ethereum.org/EIPS/eip-2) - _Apporte des modifications au processus de création de contrats._
-- [EIP-7](https://eips.ethereum. rg/EIPS/eip-7) - _Ajoute le nouveau code d'opération « DELEGATECALL »._
+- [EIP-7](https://eips.ethereum.org/EIPS/eip-7) - _Ajoute le nouveau code d'opération « DELEGATECALL »._
 - [EIP-8](https://eips.ethereum.org/EIPS/eip-8)- _Introduit des exigences de compatibilité devp2p._
 
 </ExpandableCard>

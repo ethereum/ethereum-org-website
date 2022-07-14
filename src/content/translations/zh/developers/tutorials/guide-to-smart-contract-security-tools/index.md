@@ -8,7 +8,7 @@ tags:
   - "solidity"
   - "智能合约"
   - "安全性"
-skill: 中级难度
+skill: intermediate
 published: 2020-09-07
 source: 构建安全合约
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis

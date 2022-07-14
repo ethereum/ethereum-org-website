@@ -9,7 +9,7 @@ tags:
   - "节点"
   - "查询"
   - "Alchemy"
-skill: 初学者
+skill: beginner
 lang: zh
 sidebar: true
 published: 2020-10-30
@@ -19,7 +19,7 @@ sourceUrl: https://medium.com/alchemy-api/getting-started-with-ethereum-developm
 
 ![以太坊和Alchemy徽标](../../../../../developers/tutorials/getting-started-with-ethereum-development-using-alchemy/ethereum-alchemy.png)
 
-这是一份关于以太坊开发的初学者指南。 在本教程中，我们将使用[ Alchemy](https://alchemyapi.io/)，这是一个领先的区块链开发者平台，为 70% 的顶级区块链应用程序（包括 Maker、0x、MyEtherWallet、Dharma 和 Kyber）的数百万用户提供支持。 Alchemy 使我们能够访问以太坊链上的 API 端点，这样我们就可以读写交易。
+这是一份关于以太坊开发的初学者指南。 在本教程中，我们将使用 [Alchemy](https://alchemyapi.io/)，这是一个领先的区块链开发者平台，为 70% 的顶级区块链应用程序（包括 Maker、0x、MyEtherWallet、Dharma 和 Kyber）的数百万用户提供支持。 Alchemy 使我们能够访问以太坊链上的 API 端点，这样我们就可以读写交易。
 
 我们将带您注册 Alchemy 来编写您的第一个 web3 脚本！ 无需区块链的开发经验！
 

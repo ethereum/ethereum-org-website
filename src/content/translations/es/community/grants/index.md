@@ -1,5 +1,5 @@
 ---
-title: Ethereum Foundation y programas de subvención para la comunidad
+title: Ethereum Foundation y programas de subvenciones para la comunidad
 description: Un listado de los programas de subvenciones del ecosistema Ethereum.
 sidebar: true
 lang: es
@@ -15,28 +15,26 @@ Esta lista ha sido creada por nuestra comunidad. Si falta algo o encuentra infor
 
 Estos programas apoyan al ecosistema Ethereum ofreciendo subvenciones para una amplia gama de proyectos. Incluyen soluciones de escalabilidad, construcción de comunidad, seguridad y privacidad, entre otras cosas. Las subvenciones no son específicas de ninguna plataforma Ethereum en particular y sirven de acertado punto de partida en caso de duda.
 
-- [Programa de apoyo al ecosistema EF](https://esp.ethereum.foundation): _ financie proyectos de código abierto que beneficien a Ethereum, con enfoque particular en herramientas universales, infraestructura, investigación y bienes públicos_
-  - [Serie de becas académicas](/community/grants/academic-grants-round/): _ Ethereum Foundation está patrocinando una serie de becas para apoyar el trabajo académico relacionado con Ethereum_.
+- [Programa de apoyo al ecosistema EF](https://esp.ethereum.foundation): _ Financie proyectos de código abierto que beneficien a Ethereum, con enfoque particular en herramientas universales, infraestructura, investigación y bienes públicos_
 - [Ethereum RFP](https://github.com/ethereum/requests-for-proposals): _ solicitudes de propuestas («requests for proposals» o RFP en inglés) de Ethereum Foundation para trabajos y proyectos en el ecosistema Ethereum_.
-- [MetaCartel](https://www.metacartel.org/grants/): _desarrollo de dapps, creación de DAO_  
-  . Subvenciones de entre 1.000 y 8.000 USD.
+- [MetaCartel](https://www.metacartel.org/grants/): _desarrollo de dapps, creación de DAO_. Subvenciones de entre 1.000 y 8.000 USD.
 - [Moloch DAO](https://www.molochdao.com/): _privacidad, escalabilidad en capa 2, seguridad del cliente y más_.
 - [Subvenciones abiertas](https://opengrants.com/explore)
-- [DAO Grants](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) - _Google spreadsheet of organizations offering grants_
+- [Subvenciones DAO](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0): _Hoja de cálculo de Google de organizaciones que ofrecen subvenciones_
 
 ## Para proyectos concretos {#project-specific}
 
 Estos proyectos han creado sus propias subvenciones para proyectos con fines de desarrollo y experimentación de su propia tecnología.
 
-- [Aave Grants Program](https://aavegrants.org/) – _[Aave](https://aave.com/) grants DAO_
-- [Balancer](https://forms.gle/c68e4fM7JHCQkPkN7) – _[Balancer](https://balancer.fi/) ecosystem fund_
-- [Compound Grants Program](https://compoundgrants.org/) – _[Compound](https://compound.finance/) finance ecosystem_
-- [Consensys Grants Program](https://consensys.net/grants/) – _[Consensys](https://consensys.net/) blockchain funding & Ethereum grants_
-- [dYdX Grants Program](https://dydxgrants.com/) – _[dYdX](https://dydx.exchange/) decentralized exchange_
-- [Lido Ecosystem Grants Organisation (LEGO)](https://lego.lido.fi/) – _[Lido](https://lido.fi/) finance ecosystem_
-- [mStable Grants Program](https://docs.mstable.org/advanced/grants-program) - _[mStable](https://mstable.org/) community_
-- [TheGraph](https://airtable.com/shrdfvnFvVch3IOVm): _[ecosistema ](https://thegraph.com/)The Graph_
-- [Programa de subsidios Uniswap](https://www.unigrants.org/): _[comunidad ](https://uniswap.org/)Uniswap_
+- [Programa de Subvenciones Aave](https://aavegrants.org/) – _[Aave](https://aave.com/) subvenciones DAO_
+- [Balancer](https://forms.gle/c68e4fM7JHCQkPkN7): _[fondo de ecosistemas](https://balancer.fi/) Balancer_
+- [Programa de subvenciones Compound](https://compoundgrants.org/): _[ecosistema financiero](https://compound.finance/) Compound_
+- [Programa de subvenciones Consensys](https://consensys.net/grants/): _[Consensys:](https://consensys.net/) financiación de cadena de bloques & subvenciones de Ethereum_
+- [dYdX Programa de subvenciones](https://dydxgrants.com/): _[dYdX](https://dydx.exchange/) intercambio descentralizado_
+- [Lido Ecosystem Grants Organisation (LEGO)](https://lego.lido.fi/): _[ecosistema financiero](https://lido.fi/) Lido_
+- [Programa de subvenciones mStable](https://docs.mstable.org/advanced/grants-program) - _[comunidad](https://mstable.org/) mStable_
+- [TheGraph](https://airtable.com/shrdfvnFvVch3IOVm) - _[ecosistema ](https://thegraph.com/)The Graph_
+- [Programa de subvenciones Uniswap](https://www.unigrants.org/): _[comunidad ](https://uniswap.org/)Uniswap_
 
 ## Financiamiento cuadrático {#quadratic-funding}
 

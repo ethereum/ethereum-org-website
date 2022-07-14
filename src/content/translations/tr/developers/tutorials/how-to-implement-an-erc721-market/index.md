@@ -7,7 +7,7 @@ tags:
   - "erc-721"
   - "katılık"
   - "token'lar"
-skill: orta düzey
+skill: intermediate
 lang: tr
 sidebar: true
 published: 2020-03-19

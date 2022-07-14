@@ -9,7 +9,7 @@ tags:
   - "test"
   - "hardhat"
   - "ethers.js"
-skill: base
+skill: beginner
 lang: it
 sidebar: true
 published: 2020-10-16

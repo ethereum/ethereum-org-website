@@ -6,7 +6,7 @@ tags:
   - "istemciler"
   - "geth"
   - "düğümler"
-skill: yeni başlayan
+skill: beginner
 lang: tr
 sidebar: true
 published: 2022-03-04

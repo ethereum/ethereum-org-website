@@ -719,7 +719,7 @@ contract SimpleDomainRegistry {
         <Description>
           <Translation id="page-index-description" />
         </Description>
-        <ButtonLink isSecondary to="/what-is-ethereum/">
+        <ButtonLink isSecondary to="/learn/">
           <Translation id="page-index-title-button" />
         </ButtonLink>
       </Header>
