@@ -1,7 +1,7 @@
 [
   {
     "code": "en",
-    "hrefLang": "en-US",
+    "hrefLang": "en",
     "name": "English",
     "localName": "English",
     "langDir": "ltr",
@@ -12,7 +12,7 @@
     "hrefLang": "ar",
     "name": "العربية",
     "localName": "العربية",
-    "langDir": "ltr",
+    "langDir": "rtl",
     "dateFormat": "MM/DD/YYYY"
   },
   {
@@ -69,7 +69,7 @@
     "name": "Deutsch",
     "localName": "Deutsch",
     "langDir": "ltr",
-    "dateFormat": "MM/DD/YYYY"
+    "dateFormat": "DD/MM/YYYY"
   },
   {
     "code": "el",
@@ -81,18 +81,18 @@
   },
   {
     "code": "es",
-    "hrefLang": "es-ES",
+    "hrefLang": "es",
     "name": "Español",
     "localName": "Español",
     "langDir": "ltr",
-    "dateFormat": "MM/DD/YYYY"
+    "dateFormat": "DD/MM/YYYY"
   },
   {
     "code": "fa",
     "hrefLang": "fa",
     "name": "فارسی",
     "localName": "فارسی",
-    "langDir": "ltr",
+    "langDir": "rtl",
     "dateFormat": "MM/DD/YYYY"
   },
   {
@@ -109,7 +109,7 @@
     "name": "Français",
     "localName": "Français",
     "langDir": "ltr",
-    "dateFormat": "MM/DD/YYYY"
+    "dateFormat": "DD/MM/YYYY"
   },
   {
     "code": "gl",
@@ -165,7 +165,7 @@
     "name": "Italiano",
     "localName": "Italiano",
     "langDir": "ltr",
-    "dateFormat": "MM/DD/YYYY"
+    "dateFormat": "DD/MM/YYYY"
   },
   {
     "code": "ja",
@@ -173,7 +173,7 @@
     "name": "日本語",
     "localName": "日本語",
     "langDir": "ltr",
-    "dateFormat": "MM/DD/YYYY"
+    "dateFormat": "YYYY/MM/DD"
   },
   {
     "code": "ka",
@@ -357,7 +357,7 @@
     "name": "简体中文",
     "localName": "简体中文",
     "langDir": "ltr",
-    "dateFormat": "MM/DD/YYYY"
+    "dateFormat": "YYYY-MM-DD"
   },
   {
     "code": "zh-tw",
@@ -365,6 +365,6 @@
     "name": "繁體中文",
     "localName": "繁體中文",
     "langDir": "ltr",
-    "dateFormat": "MM/DD/YYYY"
+    "dateFormat": "YYYY-MM-DD"
   }
 ]
