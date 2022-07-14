@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion"
 import Icon from "./Icon"
 import Link from "./Link"
 import Translation from "./Translation"
-import { Lang, supportedLanguages } from "../utils/languages"
+import { isLang } from "../utils/languages"
 import { dropdownIconContainerVariant } from "./SharedStyledComponents"
 import { IPropsNavLink as INavLinkProps } from "./SideNav"
 
@@ -178,7 +178,7 @@ const SideNavMobile: React.FC<IProps> = ({ path }) => {
 
   // Strip language path
   let pagePath = path
-  if (supportedLanguages.includes(pagePath.split("/")[1] as Lang)) {
+  if (isLang(pagePath.split("/")[1])) {
     pagePath = pagePath.substring(3)
   }
   let pageTitleId = getPageTitleId(pagePath, docLinks)

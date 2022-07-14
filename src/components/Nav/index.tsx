@@ -1,7 +1,7 @@
 import React, { useState } from "react"
-import { useIntl } from "gatsby-plugin-intl"
 import styled from "styled-components"
 import { cloneDeep } from "lodash"
+import { useIntl } from "react-intl"
 
 import Menu from "./Menu"
 import MobileNavMenu from "./Mobile"

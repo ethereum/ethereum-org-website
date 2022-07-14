@@ -3,7 +3,7 @@ import { ThemeContext } from "styled-components"
 import styled from "styled-components"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { graphql } from "gatsby"
-import { useIntl } from "gatsby-plugin-intl"
+import { useIntl } from "react-intl"
 
 import { translateMessageId } from "../utils/translations"
 import Translation from "../components/Translation"
@@ -843,7 +843,7 @@ export const ClientLogosSmall = graphql`
 `
 
 export const query = graphql`
-  query {
+  query BugBountyPage {
     consensusBountyHunters: allConsensusBountyHuntersCsv(
       sort: { order: DESC, fields: score }
     ) {
