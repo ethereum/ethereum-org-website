@@ -216,6 +216,10 @@ const Footer: React.FC<IProps> = () => {
           to: "/bridges/",
         },
         {
+          text: "zero-knowledge-proofs",
+          to: "/zero-knowledge-proofs/",
+        },
+        {
           text: "energy-consumption",
           to: "/energy-consumption/",
         },

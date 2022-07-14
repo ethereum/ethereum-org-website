@@ -284,6 +284,10 @@ const Nav: React.FC<IProps> = ({ handleThemeChange, isDarkTheme, path }) => {
               text: "bridges",
               to: "/bridges/",
             },
+            {
+              text: "zero-knowledge-proofs",
+              to: "/zero-knowledge-proofs/",
+            },
           ],
         },
       ],
