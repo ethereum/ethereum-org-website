@@ -266,7 +266,7 @@ Embora não haja um substituto para entender os conceitos básicos de segurança
 
 Duas das ferramentas mais populares para a análise de segurança de contratos inteligentes são:
 
-- [Slither](https://github. com/crytic/slither) por [Rastro de Bits](https://www. trailofbits. com/) (versão hospedada: [Critica](https://crytic. io/))
+- [Slither](https://github.com/crytic/slither) por [Rastro de Bits](https://www.trailofbits.com/) (versão hospedada: [Critica](https://crytic.io/))
 - [Mythril](https://github.com/ConsenSys/mythril) por [ConsenSys](https://consensys.net/) (versão hospedada: [MythX](https://mythx.io/))
 
 Ambas são ferramentas úteis que analisam seu código e reportam problemas. Cada uma possui uma versão hospedada [comercial], mas também está disponível para ser executada localmente. O exemplo a seguir é um rápido exemplo de como executar Slither, que é disponibilizado em uma imagem conveniente do Docker `trailofbits/eth-security-toolbox`. Você precisará [instalar o Docker se você ainda não o tiver instalado](https://docs.docker.com/get-docker/).
