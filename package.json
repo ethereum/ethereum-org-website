@@ -97,7 +97,7 @@
   "scripts": {
     "build": "gatsby build",
     "build:lambda": "netlify-lambda build src/lambda",
-    "build:10gb": "NODE_OPTIONS=--max-old-space-size=8192 gatsby build",
+    "build:10gb": "NODE_OPTIONS=--max-old-space-size=10240 gatsby build",
     "clean": "gatsby clean",
     "crowdin-clean": "rm -rf .crowdin && mkdir .crowdin",
     "crowdin-import": "ts-node src/scripts/crowdin-import.ts",

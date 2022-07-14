@@ -10,13 +10,13 @@ import {
   ignoreLanguages,
 } from "./src/utils/languages"
 
+import { IS_PREVIEW } from "./src/utils/env"
+
 const siteUrl = `https://ethereum.org`
 
 const ignoreContent = (process.env.IGNORE_CONTENT || "")
   .split(",")
   .filter(Boolean)
-
-const isPreviewDeploy = process.env.IS_PREVIEW_DEPLOY === "true"
 
 const ignoreTranslations = ignoreLanguages.map(
   (lang) => `**/translations\/${lang}`
@@ -241,7 +241,7 @@ const config: GatsbyConfig = {
 
 // Avoid loading Matomo in preview deploys since NODE_ENV is `production` in
 // there and it will send testing data as production otherwise
-if (!isPreviewDeploy) {
+if (!IS_PREVIEW) {
   config.plugins = [
     ...(config.plugins || []),
     // Matomo analtyics
