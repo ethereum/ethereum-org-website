@@ -10,6 +10,7 @@ import { FakeLink } from "./SharedStyledComponents"
 import Emoji from "./Emoji"
 import Translation from "./Translation"
 import { Lang } from "../utils/languages"
+import { TranslationKey } from "../utils/translations"
 
 const Container = styled.div`
   display: flex;
@@ -38,6 +39,7 @@ const PillContainer = styled.div`
 const SkillPill = styled(Pill)`
   align-self: flex-start;
   margin-bottom: 0.5rem;
+  white-space: nowrap;
 `
 
 const HorizontalContainer = styled.div`
@@ -83,6 +85,15 @@ export interface IProps {
   tutorial: any
 }
 
+export enum Skill {
+  BEGINNER = "beginner",
+  INTERMEDIATE = "intermediate",
+  ADVANCED = "advanced",
+}
+
+export const getSkillTranslationId = (skill: Skill): TranslationKey =>
+  `page-tutorial-${Skill[skill.toUpperCase() as keyof typeof Skill]}`
+
 const TutorialMetadata: React.FC<IProps> = ({ tutorial }) => {
   const intl = useIntl()
 
@@ -99,7 +110,7 @@ const TutorialMetadata: React.FC<IProps> = ({ tutorial }) => {
           <TutorialTags tags={frontmatter.tags} />
         </PillContainer>
         <SkillPill isSecondary={true} className="" color="">
-          {frontmatter.skill}
+          <Translation id={getSkillTranslationId(frontmatter.skill)} />
         </SkillPill>
       </TagsContainer>
       <HorizontalContainer>

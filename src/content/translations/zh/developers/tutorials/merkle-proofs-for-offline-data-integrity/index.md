@@ -6,7 +6,7 @@ tags:
   - "默克尔"
   - "完整性"
   - "存储"
-skill: 高级
+skill: advanced
 lang: zh
 sidebar: true
 published: 2021-12-30

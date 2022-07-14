@@ -8,7 +8,7 @@ tags:
   - "katılık"
   - "başlarken"
   - "dağıtma"
-skill: yeni başlayan
+skill: beginner
 lang: tr
 sidebar: true
 published: 2020-04-03

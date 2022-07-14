@@ -1,6 +1,6 @@
 ---
 title: 添加产品
-description: 将钱包和去中心化应用程序添加到 etherum.org 时适用的政策
+description: 将钱包和去中心化应用程序添加到 ethereum.org 时适用的政策
 lang: zh
 sidebar: true
 ---
@@ -26,7 +26,7 @@ _关于添加钱包的说明：作为[我们的第一季度产品路线图](http
 - _好故事_：上架的内容应该让人感到惊喜
 - _可靠_：一切业务/项目都应该是合法的，以最大限度地减少用户的风险
 
-总体而言，**etherum.org 想要为新用户们提供“无缝的登临体验”**。 出于这个原因，我们根据以下原则添加钱包/去中心化应用程序：
+总体而言，**ethereum.org 想要为新用户们提供“无缝的登临体验”**。 出于这个原因，我们根据以下原则添加钱包/去中心化应用程序：
 
 - 易用性
 - 与其他产品的互操作性
@@ -106,7 +106,7 @@ _我们也在调研投票的可能性，以便社区能够表明他们的喜好�
 
 ## 添加您的产品 {#add-your-product}
 
-如果您想要将钱包或者去中心化应用程序添加到 etherum.org，并且该产品符合标准，请在 GitHub 上创建一个提议。
+如果您想要将钱包或者去中心化应用程序添加到 ethereum.org，并且该产品符合标准，请在 GitHub 上创建一个提议。
 
 <ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.md&title=">
   创建一个议题

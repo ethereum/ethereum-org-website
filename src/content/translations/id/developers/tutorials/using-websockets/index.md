@@ -11,7 +11,7 @@ tags:
   - "memulai"
   - "langganan"
   - "javascript"
-skill: pemula
+skill: beginner
 source: Dokumen Alchemy
 sourceUrl: https://docs.alchemyapi.io/guides/using-websockets
 published: 2020-12-01

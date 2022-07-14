@@ -7,7 +7,7 @@ tags:
   - "前端"
   - "JavaScript"
   - "web3.js"
-skill: 入门
+skill: beginner
 lang: zh
 sidebar: true
 published: 2020-04-19

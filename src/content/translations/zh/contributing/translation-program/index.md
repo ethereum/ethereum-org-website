@@ -46,7 +46,7 @@ Ethereum.org 翻译计划旨在通过将 Ethereum.org 和其他以太坊内容�
 ## 如何翻译 {#how-to-translate}
 
 <InfoBanner shouldCenter emoji=":light_bulb:">
-  我们鼓励您查看etherum.org 翻译风格指南。 该指南包含一些最重要的准则、说明和翻译技巧，帮助翻译人员对网站进行本地化。
+  我们鼓励您查看ethereum.org 翻译风格指南。 该指南包含一些最重要的准则、说明和翻译技巧，帮助翻译人员对网站进行本地化。
   {" "}<Link to="/contributing/translation-program/translators-guide/">查看翻译风格指南</Link>
 </InfoBanner>
 
@@ -116,11 +116,11 @@ Ethereum.org 翻译计划旨在通过将 Ethereum.org 和其他以太坊内容�
 
 **翻译人员官方互动时间**
 
-每个月的第二个星期三是翻译人员的官方互动时间。 互动会在 [etherum.org Discord](https://discord.gg/geKhWjtF) 上的 #office-hours 频道举行，您也可以在那里查看确切的举行时间和其他详细信息。
+每个月的第二个星期三是翻译人员的官方互动时间。 互动会在 [ethereum.org Discord](https://discord.gg/geKhWjtF) 上的 #office-hours 频道举行，您也可以在那里查看确切的举行时间和其他详细信息。
 
 官方互动的目的是让我们的翻译人员有机会提出有关翻译过程的问题、对计划提供反馈、分享他们的想法，或者只是跟我们聊聊天。 参与者还可以了解有关翻译计划的更多信息，并获得有关如何成为 ethereum.org 翻译人员的一些信息。 最后，我们希望通过这些电话会议传达翻译计划取得的最新进展，并与我们的贡献者分享重要的技巧和说明。
 
-如果您是 etherum.org 翻译人员或想要成其中一员，欢迎加入我们这些会议中的任何一场。
+如果您是 ethereum.org 翻译人员或想要成其中一员，欢迎加入我们这些会议中的任何一场。
 
 <InfoBanner shouldCenter emoji=":information_source:">
   如果您在帮助我们进行翻译，您可能会在翻译常见问题中找到一些实用信息。

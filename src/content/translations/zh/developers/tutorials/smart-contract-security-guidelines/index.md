@@ -6,7 +6,7 @@ tags:
   - "solidity"
   - "智能合约"
   - "安全性"
-skill: 中等难度
+skill: intermediate
 lang: zh
 sidebar: true
 published: 2020-09-06

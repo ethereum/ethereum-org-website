@@ -9,7 +9,7 @@ tags:
   - "akıllı sözleşmeler"
   - "başlarken"
   - "dağıtma"
-skill: acemi
+skill: beginner
 lang: tr
 sidebar: true
 published: 2021-03-31

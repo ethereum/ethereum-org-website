@@ -7,7 +7,7 @@ sidebar: true
 tags:
   - "solidity"
   - "erc-20"
-skill: acemi
+skill: beginner
 published: 2021-03-09
 ---
 

@@ -81,4 +81,4 @@ Vous cherchez davantage de ressources ? Consultez [ethereum.org/developers.](/d
 ## Autres ressources {#other-aggregated-lists}
 
 - [Génial Ethereum](https://github.com/btomashvili/awesome-ethereum)
-- [Consensys : une liste définitive des outils pour les développeurs d'Ethereum](https://media. consensys. net/an-definitive-list-of-ethereum-developer-tools-2159ce865974) | [Source GitHub](https://github. com/ConsenSys/ethereum-developer-tools-list)
+- [Consensys: une liste définitive des outils pour les développeurs d'Ethereum](https://media.consensys.net/an-definitive-list-of-ethereum-developer-tools-2159ce865974) | [Source GitHub](https://github.com/ConsenSys/ethereum-developer-tools-list)

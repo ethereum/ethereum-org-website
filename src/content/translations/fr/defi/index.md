@@ -56,7 +56,7 @@ L'une des meilleures façons de voir le potentiel de la DeFi est de comprendre l
 
 Bitcoin à bien des égards a été la première application de la DeFi. Bitcoin vous permet de posséder et de contrôler la valeur et de l'envoyer partout dans le monde. Il le fait en fournissant un moyen à un grand nombre de personnes, qui ne se font pas confiance les unes aux autres, de se mettre d'accord sur un grand livre de comptes sans avoir besoin d'un intermédiaire de confiance. Le Bitcoin est ouvert à tout le monde et personne n'a l'autorité nécessaire pour modifier ses règles. Les règles du Bitcoin, comme sa rareté et son ouverture, sont inscrites dans la technologie. Ce n'est pas comme la finance traditionnelle où les gouvernements peuvent imprimer de l'argent qui déprécie vos épargnes et où les entreprises peuvent fermer les marchés.
 
-L'ethereum s'appuie sur cela. Comme le Bitcoin, les règles ne peuvent pas changer et tout le monde y a accès. Mais cela rend aussi cet argent numérique programmable, en utilisant [contrats intelligents](/glossary#smart-contract), vous pouvez donc aller au-delà du stockage et de la valeur d'envoi.
+L'Ethereum s'appuie sur cela. Comme le Bitcoin, les règles ne peuvent pas changer et tout le monde y a accès. Mais cela rend aussi cet argent numérique programmable, en utilisant [contrats intelligents](/glossary#smart-contract), vous pouvez donc aller au-delà du stockage et de la valeur d'envoi.
 
 <YouTube id="qFBYB4W2tqU" />
 
