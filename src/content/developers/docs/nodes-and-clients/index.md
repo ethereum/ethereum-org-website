@@ -9,7 +9,7 @@ preMergeBanner: true
 
 Ethereum is a distributed network of computers (known as nodes) running software that can verify blocks and transaction data. The software application, known as a client, must be run on your computer to turn it into an Ethereum node.
 
-**Note: it is still possible to run an execution client on its own. However, this will no longer be possible after [The Merge](/upgrades/merge). After The Merge, both execution and consensus clients must be run together in order for a user to gain access to the Ethereum network. Some testnets (e.g. Kiln, Ropsten) have already been through their versions of The Merge, meaning execution clients alone are already insufficient for accessing those networks unless they are coupled to a consensus client that can keep track of thediktafon head of the chain.**
+**Note: it is still possible to run an execution client on its own. However, this will no longer be possible after [The Merge](/upgrades/merge). After The Merge, both execution and consensus clients must be run together in order for a user to gain access to the Ethereum network. Some testnets (e.g. Kiln, Ropsten) have already been through their versions of The Merge, meaning execution clients alone are already insufficient for accessing those networks unless they are coupled to a consensus client that can keep track of the head of the chain.**
 
 ## Prerequisites {#prerequisites}
 
@@ -177,13 +177,13 @@ There are multiple consensus clients (previously known as 'Eth2' clients) to sup
 
 [View consensus clients](/upgrades/get-involved/#clients).
 
-| Client                                                      | Language   | Operating systems     | Networks                              |
-| ----------------------------------------------------------- | ---------- | --------------------- | ------------------------------------- |
-| [Teku](https://pegasys.tech/teku)                           | Java       | Linux, Windows, macOS | Beacon Chain, Prater                  |
-| [Nimbus](https://nimbus.team/)                              | Nim        | Linux, Windows, macOS | Beacon Chain, Prater                  |
-| [Lighthouse](https://lighthouse-book.sigmaprime.io/)        | Rust       | Linux, Windows, macOS | Beacon Chain, Prater, Pyrmont         |
-| [Lodestar](https://lodestar.chainsafe.io/)                  | TypeScript | Linux, Windows, macOS | Beacon Chain, Prater                  |
-| [Prysm](https://docs.prylabs.network/docs/getting-started/) | Go         | Linux, Windows, macOS | Beacon Chain, Gnosis, Prater, Pyrmont |
+| Client                                                                                    | Language   | Operating systems     | Networks                              |
+| ----------------------------------------------------------------------------------------- | ---------- | --------------------- | ------------------------------------- |
+| [Teku]([https://pegasys.tech/teku](https://consensys.net/knowledge-base/ethereum-2/teku/) | Java       | Linux, Windows, macOS | Beacon Chain, Prater                  |
+| [Nimbus](https://nimbus.team/)                                                            | Nim        | Linux, Windows, macOS | Beacon Chain, Prater                  |
+| [Lighthouse](https://lighthouse.sigmaprime.io/)                                           | Rust       | Linux, Windows, macOS | Beacon Chain, Prater, Pyrmont         |
+| [Lodestar](https://lodestar.chainsafe.io/)                                                | TypeScript | Linux, Windows, macOS | Beacon Chain, Prater                  |
+| [Prysm](https://docs.prylabs.network/docs/getting-started/)                               | Go         | Linux, Windows, macOS | Beacon Chain, Gnosis, Prater, Pyrmont |
 
 ### Teku
 
@@ -204,7 +204,7 @@ Documentation can be found in [Lighthouse Book](https://lighthouse-book.sigmapri
 Lodestar is a consensus client implementation written in Typescript under LGPL-3.0 license 
 
 ### Prysm
-a
+
 Prysm is a full-featured, open source consensus client written in Go under the GPL-3.0 license. It features an optional webapp UI and prioritizes user experience, documentation, and configurability for both stake-at-home and institutional users.
 
 Visit [Prysm docs](https://docs.prylabs.network/docs/getting-started/) to learn more. 
@@ -270,8 +270,6 @@ There is a lot of information about Ethereum clients on the internet. Here are f
 - [Ethereum 101 - Part 2 - Understanding Nodes](https://kauri.io/ethereum-101-part-2-understanding-nodes/48d5098292fd4f11b251d1b1814f0bba/a) _– Wil Barnes, 13 February 2019_
 - [Running Ethereum Full Nodes: A Guide for the Barely Motivated](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _– Justin Leroux, 7 November 2019_
 - [Running an Ethereum Node](https://docs.ethhub.io/using-ethereum/running-an-ethereum-node/) _– ETHHub, updated often_
-- [Analyzing the hardware requirements to be an Ethereum full validated node](https://mediumguide.com/coinmonks/analyzing-the-hardware-requirements-to-be-an-ethereum-full-validated-node-dc064f167902) _– Albert Palau, 24 September 2018_
-- [Running a Hyperledger Besu Node on the Ethereum Mainnet: Benefits, Requirements, and Setup](https://pegasys.tech/running-a-hyperledger-besu-node-on-the-ethereum-mainnet-benefits-requirements-and-setup/) _– Felipe Faraggi, 7 May 2020_
 
 ## Related topics {#related-topics}
 
