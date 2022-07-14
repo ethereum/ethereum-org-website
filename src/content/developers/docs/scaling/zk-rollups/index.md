@@ -11,7 +11,7 @@ You should have a good understanding of all the foundational topics and a high-l
 
 Looking for a more beginner-friendly resource? See our [introduction to layer 2](/layer-2/).
 
-You should also be familiar with ZKP technology. See our [primer on zero-knowledge proofs](/zero-knowledge-proofs/).
+You should also be familiar with zero-knowledge proofs. See our [introduction to zero-knowledge proofs](/zero-knowledge-proofs/).
 
 ## Zero-knowledge rollups {#zk-rollups}
 
