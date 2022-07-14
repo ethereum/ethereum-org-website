@@ -200,13 +200,13 @@ const Results = connectStateResults(
 )
 
 interface ISearchProps {
-  handleSearchSelect: () => void
-  useKeyboardShortcuts: boolean
+  handleSearchSelect?: () => void
+  useKeyboardShortcut?: boolean
 }
 
 const Search: React.FC<ISearchProps> = ({
   handleSearchSelect,
-  useKeyboardShortcuts,
+  useKeyboardShortcut = false,
 }) => {
   const intl = useIntl()
   const containerRef = useRef<HTMLDivElement>(null)
@@ -246,7 +246,7 @@ const Search: React.FC<ISearchProps> = ({
   }
 
   const focusSearch = (event: KeyboardEvent): void => {
-    if (!useKeyboardShortcuts) {
+    if (!useKeyboardShortcut) {
       return
     }
 
