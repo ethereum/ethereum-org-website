@@ -471,7 +471,14 @@ const FindWalletPage = ({ data, location }) => {
           <ResetContainer
             role="button"
             aria-labelledby="reset-filter"
-            onClick={resetFilters}
+            onClick={() => {
+              resetFilters()
+              trackCustomEvent({
+                eventCategory: "WalletFilterReset",
+                eventAction: `WalletFilterReset clicked`,
+                eventName: `reset filters`,
+              })
+            }}
           >
             <ResetIcon
               aria-hidden="true"

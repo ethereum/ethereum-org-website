@@ -61,7 +61,7 @@ Al apostar su ETH, puede ganar recompensas mientras ayuda a asegurar la red Ethe
 
 - [Más acerca de las apuestas (staking).](/staking/)
 
-### Apoye proyectos {#suport-projects}
+### Apoye proyectos {#support-projects}
 
 El ecosistema de Ethereum tiene la misión de financiar bienes públicos y proyectos con gran repercusión. A través de donaciones muy pequeñas puede mostrar su apoyo y permitir que se realice un trabajo importante.
 

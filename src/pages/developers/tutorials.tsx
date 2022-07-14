@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import styled from "styled-components"
-import { graphql } from "gatsby"
+import { graphql, PageProps } from "gatsby"
 import { useIntl } from "react-intl"
 
 import Translation from "../../components/Translation"
@@ -24,7 +24,9 @@ import { getLocaleTimestamp, INVALID_DATETIME } from "../../utils/time"
 
 import foreignTutorials from "../../data/externalTutorials.json"
 import FeedbackCard from "../../components/FeedbackCard"
-import { getSkillTranslationId } from "../../components/TutorialMetadata"
+import { getSkillTranslationId, Skill } from "../../components/TutorialMetadata"
+import { Context } from "../../types"
+import { Lang } from "../../utils/languages"
 
 const SubSlogan = styled.p`
   font-size: 1.25rem;
@@ -82,7 +84,7 @@ const Author = styled.p`
   text-transform: uppercase;
 `
 
-const Title = styled.p`
+const Title = styled.p<{ isExternal?: boolean | null }>`
   color: ${(props) => props.theme.colors.text};
   font-weight: 600;
   font-size: 1.5rem;
@@ -204,8 +206,8 @@ const ModalTitle = styled.h2`
   margin-bottom: 1rem;
 `
 
-const published = (locale, published) => {
-  const localeTimestamp = getLocaleTimestamp(locale, published)
+const published = (locale: string, published: string) => {
+  const localeTimestamp = getLocaleTimestamp(locale as Lang, published)
   return localeTimestamp !== INVALID_DATETIME ? (
     <span>
       <Emoji text=":calendar:" size={1} ml={`0.5em`} mr={`0.5em`} />{" "}
@@ -214,39 +216,84 @@ const published = (locale, published) => {
   ) : null
 }
 
-const TutorialsPage = ({ data, pageContext }) => {
+interface IExternalTutorial {
+  url: string
+  title: string
+  description: string
+  author: string
+  authorGithub: string
+  tags: Array<string>
+  skillLevel: string
+  timeToRead?: string
+  lang: string
+  publishDate: string
+}
+
+interface ITutorial {
+  to?: string | null
+  title: string
+  description: string
+  author: string
+  tags?: Array<string>
+  skill?: Skill
+  timeToRead?: number | null
+  published?: string | null
+  lang: string
+  isExternal: boolean
+}
+
+interface ITutorialsState {
+  activeTagNames: Array<string>
+  filteredTutorials: Array<ITutorial>
+}
+
+const TutorialsPage = ({
+  data,
+  pageContext,
+}: PageProps<Queries.DevelopersTutorialsPageQuery, Context>) => {
   const intl = useIntl()
   // Filter tutorials by language and map to object
-  const internalTutorials = data.allTutorials.nodes.map((tutorial) => ({
-    to:
-      tutorial.fields.slug.substr(0, 3) === "/en"
-        ? tutorial.fields.slug.substr(3)
-        : tutorial.fields.slug,
-    title: tutorial.frontmatter.title,
-    description: tutorial.frontmatter.description,
-    author: tutorial.frontmatter.author,
-    tags: tutorial.frontmatter.tags.map((tag) => tag.toLowerCase().trim()),
-    skill: tutorial.frontmatter.skill,
-    timeToRead: Math.round(tutorial.fields.readingTime.minutes),
-    published: tutorial.frontmatter.published,
-    lang: tutorial.frontmatter.lang || "en",
-    isExternal: false,
-  }))
+  const internalTutorials = data.allTutorials.nodes.map<ITutorial>(
+    (tutorial) => ({
+      to:
+        tutorial?.fields?.slug?.substr(0, 3) === "/en"
+          ? tutorial.fields.slug.substr(3)
+          : tutorial.fields?.slug,
+      title: tutorial?.frontmatter?.title || "",
+      description: tutorial?.frontmatter?.description || "",
+      author: tutorial?.frontmatter?.author || "",
+      tags: tutorial?.frontmatter?.tags?.map((tag) =>
+        (tag || "").toLowerCase().trim()
+      ),
+      skill: tutorial?.frontmatter?.skill as Skill,
+      timeToRead: tutorial?.fields?.readingTime?.minutes
+        ? Math.round(tutorial?.fields?.readingTime?.minutes)
+        : null,
+      published: tutorial?.frontmatter?.published,
+      lang: tutorial?.frontmatter?.lang || "en",
+      isExternal: false,
+    })
+  )
 
-  const externalTutorials = foreignTutorials.map((tutorial) => ({
-    to: tutorial.url,
-    title: tutorial.title,
-    description: tutorial.description,
-    author: tutorial.author,
-    tags: tutorial.tags.map((tag) => tag.toLowerCase().trim()),
-    skill: tutorial.skillLevel,
-    timeToRead: tutorial.timeToRead,
-    published: new Date(tutorial.publishDate).toISOString(),
-    lang: tutorial.lang || "en",
-    isExternal: true,
-  }))
+  const externalTutorials = foreignTutorials.map<ITutorial>(
+    (tutorial: IExternalTutorial) => ({
+      to: tutorial.url,
+      title: tutorial.title,
+      description: tutorial.description,
+      author: tutorial.author,
+      tags: tutorial.tags.map((tag) => tag.toLowerCase().trim()),
+      skill: tutorial.skillLevel as Skill,
+      timeToRead: Number(tutorial.timeToRead),
+      published: new Date(tutorial.publishDate).toISOString(),
+      lang: tutorial.lang || "en",
+      isExternal: true,
+    })
+  )
 
-  const allTutorials = [].concat(externalTutorials, internalTutorials)
+  const allTutorials: Array<ITutorial> = [
+    ...externalTutorials,
+    ...internalTutorials,
+  ]
 
   const hasTutorialsCheck = allTutorials.some(
     (tutorial) => tutorial.lang === pageContext.language
@@ -258,12 +305,20 @@ const TutorialsPage = ({ data, pageContext }) => {
         ? tutorial.lang === pageContext.language
         : tutorial.lang === "en"
     )
-    .sort((a, b) => new Date(b.published) - new Date(a.published))
+    .sort((a, b) => {
+      if (a.published && b.published) {
+        return new Date(b.published).getTime() - new Date(a.published).getTime()
+      }
+      // Dont order if no published is present
+      return 0
+    })
 
   // Tally all subject tag counts
-  const tagsConcatenated = []
+  const tagsConcatenated: Array<string> = []
   for (const tutorial of filteredTutorials) {
-    tagsConcatenated.push(...tutorial.tags)
+    if (tutorial.tags) {
+      tagsConcatenated.push(...tutorial.tags)
+    }
   }
 
   const allTags = tagsConcatenated.map((tag) => ({ name: tag, totalCount: 1 }))
@@ -279,7 +334,7 @@ const TutorialsPage = ({ data, pageContext }) => {
     ([name, totalCount]) => ({ name, totalCount })
   ).sort((a, b) => a.name.localeCompare(b.name))
 
-  const [state, setState] = useState({
+  const [state, setState] = useState<ITutorialsState>({
     activeTagNames: [],
     filteredTutorials: filteredTutorials,
   })
@@ -291,7 +346,7 @@ const TutorialsPage = ({ data, pageContext }) => {
     })
   }
 
-  const handleTagSelect = (tagName) => {
+  const handleTagSelect = (tagName: string) => {
     const activeTagNames = state.activeTagNames
 
     // Add or remove the selected tag
@@ -307,7 +362,7 @@ const TutorialsPage = ({ data, pageContext }) => {
     if (activeTagNames.length > 0) {
       filteredTutorials = filteredTutorials.filter((tutorial) => {
         for (const tag of activeTagNames) {
-          if (!tutorial.tags.includes(tag)) {
+          if (!tutorial.tags?.includes(tag)) {
             return false
           }
         }
@@ -330,7 +385,6 @@ const TutorialsPage = ({ data, pageContext }) => {
           intl
         )}
       />
-
       <PageTitle>
         <Translation id="page-tutorial-title" />
       </PageTitle>
@@ -433,17 +487,22 @@ const TutorialsPage = ({ data, pageContext }) => {
         )}
         {state.filteredTutorials.map((tutorial) => {
           return (
-            <TutorialCard key={tutorial.to} to={tutorial.to} hideArrow>
+            <TutorialCard
+              key={tutorial.to}
+              to={tutorial.to ?? undefined}
+              hideArrow
+            >
               <TitleContainer>
                 <Title isExternal={tutorial.isExternal}>{tutorial.title}</Title>
                 <Pill isSecondary={true}>
-                  <Translation id={getSkillTranslationId(tutorial.skill)} />
+                  <Translation id={getSkillTranslationId(tutorial.skill!)} />
                 </Pill>
               </TitleContainer>
               <Author>
                 {/* TODO: Refactor each tutorial tag as a component */}
                 <Emoji text=":writing_hand:" size={1} mr={`0.5em`} />
-                {tutorial.author} •{published(intl.locale, tutorial.published)}
+                {tutorial.author} •
+                {published(intl.locale, tutorial.published ?? "")}
                 {tutorial.timeToRead && (
                   <>
                     {" "}
@@ -470,7 +529,7 @@ const TutorialsPage = ({ data, pageContext }) => {
               </Author>
               <About>{tutorial.description}</About>
               <PillContainer>
-                <TutorialTags tags={tutorial.tags} />
+                <TutorialTags tags={tutorial.tags ?? []} />
               </PillContainer>
             </TutorialCard>
           )
@@ -483,7 +542,7 @@ const TutorialsPage = ({ data, pageContext }) => {
 export default TutorialsPage
 
 export const query = graphql`
-  query TutorialsPage {
+  query DevelopersTutorialsPage {
     allTutorials: allMdx(
       filter: { slug: { regex: "/tutorials/" } }
       sort: { fields: frontmatter___published, order: DESC }

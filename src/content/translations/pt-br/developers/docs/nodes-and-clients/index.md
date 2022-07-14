@@ -43,7 +43,7 @@ Se você quer [executar o seu próprio nó](/developers/docs/nodes-and-clients/r
 
 ### Nó Archive {#archive-node}
 
-- Armazena tudo no nó inteiro e cria um arquivo de estados históricos. Necessário se você quiser consultar algo como um saldo de conta no bloco #4.000.000 ou simplesmente [testar de maneira simples e confiável suas próprias transações definidas sem minerá-las usando OpenEthereum](https://openethereum. github. io/Jsonrpc-trace-module#trace_callmany).
+- Armazena tudo no nó inteiro e cria um arquivo de estados históricos. Necessário se você quiser consultar algo como um saldo de conta no bloco #4.000.000 ou simplesmente [testar de maneira simples e confiável suas próprias transações definidas sem minerá-las usando OpenEthereum](https://openethereum.github.io/Jsonrpc-trace-module#trace_callmany).
 - Esses dados representam unidades de terabytes que tornam os nós de arquivo menos atrativos para usuários médios, mas podem ser úteis para serviços como exploradores de blocos, fornecedores de carteiras e análises de cadeia.
 
 Sincronizar clientes em qualquer modo que não seja o de arquivo resultará na remoção de dados da blockchain. Isso significa que não há arquivo de todo o estado histórico, mas o nó completo é capaz de criá-lo sob demanda.

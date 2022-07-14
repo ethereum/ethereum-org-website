@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react"
 import styled from "styled-components"
-import { graphql } from "gatsby"
+import { graphql, PageProps } from "gatsby"
 import { getImage } from "gatsby-plugin-image"
 import { useIntl } from "react-intl"
 import { shuffle } from "lodash"
-
-import { translateMessageId } from "../../utils/translations"
+import { translateMessageId, TranslationKey } from "../../utils/translations"
 import PageMetadata from "../../components/PageMetadata"
 import Translation from "../../components/Translation"
 import ButtonLink from "../../components/ButtonLink"
@@ -18,6 +17,7 @@ import {
   Page,
 } from "../../components/SharedStyledComponents"
 import FeedbackCard from "../../components/FeedbackCard"
+import { Context } from "../../types"
 
 const StyledPage = styled(Page)`
   margin-top: 4rem;
@@ -78,12 +78,26 @@ const StyledCardGrid = styled(CardGrid)`
   margin-bottom: 2rem;
 `
 
-const LearningToolsPage = ({ data }) => {
+interface ILearningTool {
+  name: string
+  description: TranslationKey
+  url: string
+  image: string
+  alt: TranslationKey
+  background: string
+  subjects: Array<string>
+}
+
+const LearningToolsPage = ({
+  data,
+}: PageProps<Queries.DevelopersLearningToolsPageQuery, Context>) => {
   const intl = useIntl()
-  const [randomizedSandboxes, setRandomizedSandboxes] = useState([])
+  const [randomizedSandboxes, setRandomizedSandboxes] = useState<
+    Array<ILearningTool>
+  >([])
 
   useEffect(() => {
-    const sandboxes = [
+    const sandboxes: Array<ILearningTool> = [
       {
         name: "Remix",
         description: "page-learning-tools-remix-description",
@@ -116,7 +130,7 @@ const LearningToolsPage = ({ data }) => {
     setRandomizedSandboxes(randomizedSandboxes)
   }, [data])
 
-  const games = [
+  const games: Array<ILearningTool> = [
     {
       name: "CryptoZombies",
       description: "page-learning-tools-cryptozombies-description",
@@ -146,7 +160,7 @@ const LearningToolsPage = ({ data }) => {
     },
   ]
 
-  const bootcamps = [
+  const bootcamps: Array<ILearningTool> = [
     {
       name: "ChainShot",
       description: "page-learning-tools-chainshot-description",
@@ -301,10 +315,7 @@ const LearningToolsPage = ({ data }) => {
       <Content>
         <CalloutBanner
           image={getImage(data.learn)}
-          alt={translateMessageId(
-            "page-index-sections-enterprise-image-alt",
-            intl
-          )}
+          alt={translateMessageId("page-index-tout-enterprise-image-alt", intl)}
           titleKey={"page-learning-tools-documentation"}
           descriptionKey={"page-learning-tools-documentation-desc"}
         >
@@ -338,7 +349,7 @@ export const learningToolImage = graphql`
 `
 
 export const query = graphql`
-  query LearningToolsPage {
+  query DevelopersLearningToolsPage {
     captureTheEther: file(
       relativePath: { eq: "dev-tools/capturetheether.png" }
     ) {

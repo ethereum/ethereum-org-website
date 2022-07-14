@@ -271,7 +271,7 @@ Las estafas de AirDrop implican una tentativa de estafa que emite un activo (NFT
 
 ### Seguridad de la Web {#reading-web-security}
 
-- [Esta es la razón por la que no deberías usar textos para la autenticación de dos factores](https://www. theverge. com/2017/9/18/16328172/sms-two-factor-authentication-hack-password-bitcoin) - _The Verge_
+- [Esta es la razón por la que no deberías usar textos para la autenticación de dos factores](https://www.theverge.com/2017/9/18/16328172/sms-two-factor-authentication-hack-password-bitcoin) - _The Verge_
 - [Hasta 3 millones de dispositivos infectados por complementos Chrome y Edge enlazados con malware](https://arstechnica.com/information-technology/2020/12/up-to-3-million-devices-infected-by-malware-laced-chrome-and-edge-add-ons/) - _Dan Goodin_
 - [Cómo crear una contraseña segura que no olvides](https://www.avg.com/en/signal/how-to-create-a-strong-password-that-you-wont-forget) - _AVG_
 - [¿Qué es una clave de seguridad?](https://help.coinbase.com/en/coinbase/getting-started/verify-my-account/security-keys-faq) - _Coinbase_

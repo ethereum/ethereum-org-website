@@ -783,7 +783,7 @@ const WalletTable = ({ data, filters, walletData }) => {
                 trackCustomEvent({
                   eventCategory: "WalletMoreInfo",
                   eventAction: `More info wallet`,
-                  eventName: `More info ${wallet.name}`,
+                  eventName: `More info ${wallet.name} ${wallet.moreInfo}`,
                 })
               }}
             >

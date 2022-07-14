@@ -1,7 +1,7 @@
-import React from "react"
+import React, { ReactNode } from "react"
 import styled from "styled-components"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import { graphql } from "gatsby"
+import { graphql, PageProps } from "gatsby"
 import { useIntl } from "react-intl"
 
 import { translateMessageId } from "../../utils/translations"
@@ -19,6 +19,7 @@ import {
   GrayContainer,
 } from "../../components/SharedStyledComponents"
 import FeedbackCard from "../../components/FeedbackCard"
+import { Context } from "../../types"
 
 const HeroContainer = styled.div`
   display: flex;
@@ -197,7 +198,15 @@ const StyledCallout = styled(Callout)`
   }
 `
 
-const paths = [
+interface IDevelopersPath {
+  emoji: string
+  title: ReactNode
+  description: ReactNode
+  url: string
+  button: ReactNode
+}
+
+const paths: Array<IDevelopersPath> = [
   {
     emoji: ":woman_student:",
     title: <Translation id="page-developers-learn" />,
@@ -208,7 +217,6 @@ const paths = [
   {
     emoji: ":woman_teacher:",
     title: <Translation id="page-developers-learn-tutorials" />,
-
     description: <Translation id="page-developers-learn-tutorials-desc" />,
     url: "/developers/tutorials/",
     button: <Translation id="page-developers-learn-tutorials-cta" />,
@@ -229,7 +237,9 @@ const paths = [
   },
 ]
 
-const DevelopersPage = ({ data }) => {
+const DevelopersPage = ({
+  data,
+}: PageProps<Queries.DevelopersIndexPageQuery, Context>) => {
   const intl = useIntl()
 
   return (
@@ -365,7 +375,10 @@ const DevelopersPage = ({ data }) => {
               <Translation id="page-developers-language-desc" />
             </p>
             <ImageContainer>
-              <Image image={getImage(data.doge)} />
+              <Image
+                image={getImage(data.doge)}
+                alt={translateMessageId("page-assets-doge", intl)}
+              />
             </ImageContainer>
           </Column>
           <Column>
@@ -547,7 +560,7 @@ const DevelopersPage = ({ data }) => {
 export default DevelopersPage
 
 export const query = graphql`
-  query DevelopersPage {
+  query DevelopersIndexPage {
     ednHero: file(relativePath: { eq: "enterprise-eth.png" }) {
       childImageSharp {
         gatsbyImageData(
