@@ -9,7 +9,7 @@ preMergeBanner: true
 
 Ethereum is a distributed network of computers (known as nodes) running software that can verify blocks and transaction data. The software application, known as a client, must be run on your computer to turn it into an Ethereum node.
 
-**Note: it is still possible to run an execution client on its own. However, this will no longer be possible after [The Merge](/upgrades/merge). After The Merge, both execution and consensus clients must be run together in order for a user to gain access to the Ethereum network. Some testnets (e.g. Kiln, Ropsten) have already been through their versions of The Merge, meaning execution clients alone are already insufficient for accessing those networks unless they are coupled to a consensus client that can keep track of the head of the chain.**
+**Note: it is still possible to run an execution client on its own. However, this will no longer be possible after [The Merge](/upgrades/merge). After The Merge, both execution and consensus clients must be run together in order for a user to gain access to the Ethereum network. Some testnets (e.g. Kiln, Ropsten) have already been through their versions of The Merge, meaning execution clients alone are already insufficient for accessing those networks unless they are coupled to a consensus client that can keep track of thediktafon head of the chain.**
 
 ## Prerequisites {#prerequisites}
 
@@ -55,7 +55,6 @@ There are multiple trackers which offer a real-time overview of nodes in the Eth
 - [Ethernodes](https://ethernodes.org/) by Bitfly
 - [Ethereum Node Crawler](https://crawler.ethereum.org/), an [open project](https://github.com/ethereum/node-crawler)
 
-
 ## Node types {#node-types}
 
 If you want to [run your own node](/developers/docs/nodes-and-clients/run-a-node/), you should understand that there are different types of node that consume data differently. In fact, clients can run 3 different types of node - light, full and archive. There are also options of different sync strategies which enable faster synchronization time. Synchronization refers to how quickly it can get the most up-to-date information on Ethereum's state.
@@ -97,6 +96,7 @@ Running your own node enables you to use Ethereum in a truly private, self-suffi
 - You can run and self-host other services which depend on data from Ethereum. Most importantly for example Beacon Chain validator but also software like L2 infrastracture, block explorers, payment processors, etc. 
 - You can provide your own custom RPC endpoints. Publicly for the community or even privately hosted Ethereum endpoint enables people to use your node and avoid big centralized providers. 
 - You can connect to your node using **Inter-process Communications (IPC)** or rewrite the node to load your program as a plugin. This grants low latency, which helps a lot, e.g. when processing a lot of data using web3 libraries or when you need to replace your transactions as fast as possible (i.e. frontrunning).
+- If you would to stake ETH for securing the proof-of-stake consensus and earning rewards, [solo staking](https://ethereum.org/en/staking/solo/) with your own node is the most impactful and secure approach. 
 
 ![How you access Ethereum via your application and nodes](./nodes.png)
 
@@ -138,8 +138,8 @@ This table summarizes the different clients. All of them are actively maintained
 | ------------------------------------------------------------------------- | -------- | --------------------- | ------------------------------------------ | ------------------- | --------------- |
 | [Geth](https://geth.ethereum.org/)                                        | Go       | Linux, Windows, macOS | Mainnet, Görli, Rinkeby, Ropsten           | Snap, Full          | Archive, Pruned |
 | [Nethermind](http://nethermind.io/)                                       | C#, .NET | Linux, Windows, macOS | Mainnet, Görli, Ropsten, Rinkeby, and more | Snap, Fast, Beam | Archive, Pruned |
-| [Besu](https://pegasys.tech/solutions/hyperledger-besu/)                  | Java     | Linux, Windows, macOS | Mainnet, Rinkeby, Ropsten, Görli, and more | Fast, Full, Snap, Checkopoit | Archive, Pruned |
-| [Erigon](https://github.com/ledgerwatch/erigon)                           | Go       | Linux, Windows, macOS | Mainnet, Görli, Rinkeby, Ropsten           | Full                | Archive, Pruned |
+| [Besu](https://pegasys.tech/solutions/hyperledger-besu/)                  | Java     | Linux, Windows, macOS | Mainnet, Rinkeby, Ropsten, Görli, and more | Fast, Full, Snap, Checkpoint | Archive, Pruned |
+| [Erigon](https://github.com/ledgerwatch/erigon)                           | Go       | Linux, Windows, macOS | Mainnet, Görli, Rinkeby, Ropsten           | Full, Snap               | Archive, Pruned |
 
 For more on supported networks, read up on [Ethereum networks](/developers/docs/networks/).
 
@@ -149,9 +149,11 @@ Each client has unique use cases and advantages, so you should choose one based 
 
 Go Ethereum (Geth for short) is one of the original implementations of the Ethereum protocol. Currently, it is the most widespread client with the biggest user base and variety of tooling for users and developers. It is written in Go, fully open source and licensed under the GNU LGPL v3.
 
+Learn more about Geth in its [documentation](https://geth.ethereum.org/docs/). 
+
 #### Nethermind {#nethermind}
 
-Nethermind is an Ethereum implementation created with the C# .NET tech stack, running on all major platforms including ARM. It offers great performance with:
+Nethermind is an Ethereum implementation created with the C# .NET tech stack, licensed with LGPL-3.0, running on all major platforms including ARM. It offers great performance with:
 
 - an optimized virtual machine
 - state access
@@ -162,6 +164,8 @@ Nethermind also has [detailed documentation](https://docs.nethermind.io), strong
 #### Besu {#besu}
 
 Hyperledger Besu is an enterprise-grade Ethereum client for public and permissioned networks. It runs all of the Ethereum Mainnet features, from tracing to GraphQL, has extensive monitoring and is supported by ConsenSys, both in open community channels and through commercial SLAs for enterprises. It is written in Java and is Apache 2.0 licensed.
+
+Besu's extensive [documentation](https://besu.hyperledger.org/en/stable/) will guide you trough all details on its features and setups. 
 
 #### Erigon {#erigon}
 
@@ -193,14 +197,17 @@ Nimbus is a consensus client implementation written in Nim under Apache-2.0 lice
 
 Lighthouse is a consensus client implementation written in Rust under the Apache-2.0 license. It is maintained by Sigma Prime and has been stable and production-ready since Beacon Chain genesis. It is relied upon by a wide variety of enterprises, staking pools and individuals. It aims to be secure, performant and interoperable in a wide range of environments from desktop PCs through to sophisticated automated deployments.
 
+Documentation can be found in [Lighthouse Book](https://lighthouse-book.sigmaprime.io/).
+
 ### Lodestar
 
 Lodestar is a consensus client implementation written in Typescript under LGPL-3.0 license 
 
 ### Prysm
+a
+Prysm is a full-featured, open source consensus client written in Go under the GPL-3.0 license. It features an optional webapp UI and prioritizes user experience, documentation, and configurability for both stake-at-home and institutional users.
 
-Prysm is a consensus client implementation written in Go under GPL-3.0 license.
-
+Visit [Prysm docs](https://docs.prylabs.network/docs/getting-started/) to learn more. 
 
 ### Synchronization modes {#sync-modes}
 
