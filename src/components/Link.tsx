@@ -7,7 +7,7 @@ import styled from "styled-components"
 
 import Icon from "./Icon"
 
-import { Lang, supportedLanguages } from "../utils/languages"
+import { isLang, Lang } from "../utils/languages"
 import { trackCustomEvent, EventOptions } from "../utils/matomo"
 import { Direction } from "../types"
 
@@ -175,8 +175,8 @@ const Link: React.FC<IProps> = ({
   }
 
   // If lang path has been explicitly set, use `gatsby` Link
-  const langPath = to.split("/")[1] as Lang
-  if (supportedLanguages.includes(langPath)) {
+  const langPath = to.split("/")[1]
+  if (isLang(langPath)) {
     return (
       <ExplicitLangInternalLink
         dir={dir}

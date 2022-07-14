@@ -18,9 +18,9 @@ import "@formatjs/intl-numberformat/locale-data/en"
 
 import Layout from "./src/components/Layout"
 import {
-  Lang,
   supportedLanguages,
   defaultLanguage,
+  isLang,
 } from "./src/utils/languages"
 import { Context } from "./src/types"
 
@@ -42,7 +42,7 @@ export const wrapPageElement: GatsbyBrowser<
 
   // client side redirect on paths that don't have a locale in them. Most useful
   // on dev env where we don't have server redirects
-  if (!supportedLanguages.includes(pathLocale as Lang)) {
+  if (!isLang(pathLocale)) {
     let detected =
       window.localStorage.getItem("eth-org-language") ||
       browserLang({
@@ -50,7 +50,7 @@ export const wrapPageElement: GatsbyBrowser<
         fallback: defaultLanguage,
       })
 
-    if (!supportedLanguages.includes(detected as Lang)) {
+    if (!isLang(detected)) {
       detected = defaultLanguage
     }
 
