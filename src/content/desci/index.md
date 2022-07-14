@@ -100,6 +100,7 @@ Explore projects and join the DeSci community.
 - [ResearchHub: post a scientific result and engage in a conversation with peers](https://www.researchhub.com/)
 - [VitaDAO: receive funding through sponsored research agreements for longevity research](https://www.vitadao.com/)
 - [Fleming Protocol: open-source data economy that fuels collaborative biomedical discovery](https://medium.com/@FlemingProtocol/a-data-economy-for-patient-driven-biomedical-innovation-9d56bf63d3dd)
+- [Active Inference Lab](https://www.activeinference.org/)
 
 ## Further reading {#further-reading}
 
@@ -112,6 +113,7 @@ Explore projects and join the DeSci community.
 - [Building Trustless Systems of Science by Jon Starr](https://medium.com/@jringo/building-systems-of-trustless-science-1cd2d072f673)
 - [The Emergence of Biotech DAOs](https://molecule.to/blog/the-emergence-of-biotech-daos)
 - [Paul Kohlhaas - DeSci: The Future of Decentralized Science (podcast)](https://anchor.fm/andrew-steinwold/episodes/Paul-Kohlhaas---DeSci-The-Future-of-Decentralized-Science---Zima-Red-ep-117-e1h683a)
+- [An Active Inference Ontology for Decentralized Science: from Situated Sensemaking to the Epistemic Commons](https://zenodo.org/record/6320575)
 
 ### Videos {#videos}
 
