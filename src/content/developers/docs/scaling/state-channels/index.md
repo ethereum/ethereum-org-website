@@ -22,7 +22,7 @@ With channels, state changes are executed and validated by interested parties, m
 
 Each channel is managed by a [multisig smart contract](/developers/docs/smart-contracts/#multisig) running on Ethereum. To open a channel, participants deploy the channel contract on-chain and deposit funds into it. Both parties collectively sign a state update to initialize the channel's state, after which they can transact quickly and freely off-chain. 
 
-To close the channel, participants submit the last agreed-upon state of the channel on-chain. Afterward, the smart contract distributed the locked funds according to each participant's balance in the channel's final state. 
+To close the channel, participants submit the last agreed-upon state of the channel on-chain. Afterward, the smart contract distributes the locked funds according to each participant's balance in the channel's final state. 
 
 Peer-to-peer channels are particularly useful for situations where some predefined participants wish to transact with high frequency without incurring visible overhead. Blockchain channels fall under two categories: **payment channels** and **state channels**. 
 
