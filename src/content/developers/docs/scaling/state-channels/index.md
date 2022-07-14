@@ -261,3 +261,5 @@ Multiple projects provide implementations of state channels that you can integra
 **Payment channels**
 
 - [EthHub on payment channels](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/payment-channels/)
+
+_Know of a community resource that helped you? Edit this page and add it!_
