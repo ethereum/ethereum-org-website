@@ -2,7 +2,7 @@ import React, { useContext } from "react"
 import { useIntl } from "gatsby-plugin-intl"
 import { ThemeContext } from "styled-components"
 import styled from "styled-components"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import { graphql, PageProps } from "gatsby"
 
 import AssetDownload from "../components/AssetDownload"
@@ -118,7 +118,7 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
           <AssetDownload
             title={translateMessageId("page-assets-hero", intl)}
             alt={translateMessageId("page-assets-hero", intl)}
-            image={data.hero as Record<string, unknown>}
+            image={data.hero}
             artistName="Liam Cobb"
             artistUrl="https://liamcobb.com/"
           />
@@ -128,21 +128,21 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
           <AssetDownload
             title={translateMessageId("page-assets-doge", intl)}
             alt={translateMessageId("page-assets-doge", intl)}
-            image={data.doge as Record<string, unknown>}
+            image={data.doge}
             artistName="William Tempest"
             artistUrl="https://cargocollective.com/willtempest"
           />
           <AssetDownload
             title={translateMessageId("page-assets-blocks", intl)}
             alt={translateMessageId("page-assets-blocks", intl)}
-            image={data.developers as Record<string, unknown>}
+            image={data.developers}
             artistName="William Tempest"
             artistUrl="https://cargocollective.com/willtempest"
           />
           <AssetDownload
             title={translateMessageId("page-assets-enterprise", intl)}
             alt={translateMessageId("page-assets-enterprise", intl)}
-            image={data.enterprise as Record<string, unknown>}
+            image={data.enterprise}
             artistName="William Tempest"
             artistUrl="https://cargocollective.com/willtempest"
           />
@@ -152,21 +152,21 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
           <AssetDownload
             title={translateMessageId("page-assets-infrastructure", intl)}
             alt={translateMessageId("page-assets-infrastructure", intl)}
-            image={data.infrastructure as Record<string, unknown>}
+            image={data.infrastructure}
             artistName="William Tempest"
             artistUrl="https://cargocollective.com/willtempest"
           />
           <AssetDownload
             title={translateMessageId("page-assets-finance", intl)}
             alt={translateMessageId("page-assets-finance", intl)}
-            image={data.finance as Record<string, unknown>}
+            image={data.finance}
             artistName="William Tempest"
             artistUrl="https://cargocollective.com/willtempest"
           />
           <AssetDownload
             title={translateMessageId("page-assets-impact", intl)}
             alt={translateMessageId("page-assets-impact", intl)}
-            image={data.impact as Record<string, unknown>}
+            image={data.impact}
             artistName="William Tempest"
             artistUrl="https://cargocollective.com/willtempest"
           />
@@ -176,14 +176,14 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
           <AssetDownload
             title={translateMessageId("page-assets-future", intl)}
             alt={translateMessageId("page-assets-future", intl)}
-            image={data.future as Record<string, unknown>}
+            image={data.future}
             artistName="William Tempest"
             artistUrl="https://cargocollective.com/willtempest"
           />
           <AssetDownload
             title={translateMessageId("page-assets-hackathon", intl)}
             alt={translateMessageId("page-assets-hackathon", intl)}
-            image={data.hackathon as Record<string, unknown>}
+            image={data.hackathon}
             artistName="William Tempest"
             artistUrl="https://cargocollective.com/willtempest"
           />
@@ -193,14 +193,14 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
           <AssetDownload
             title={translateMessageId("page-assets-robot", intl)}
             alt={translateMessageId("page-assets-robot", intl)}
-            image={data.wallet as Record<string, unknown>}
+            image={data.wallet}
             artistName="William Tempest"
             artistUrl="https://cargocollective.com/willtempest"
           />
           <AssetDownload
             title={translateMessageId("page-assets-robot", intl)}
             alt={translateMessageId("page-assets-robot", intl)}
-            image={data.wallet as Record<string, unknown>}
+            image={data.wallet}
             artistName="William Tempest"
             artistUrl="https://cargocollective.com/willtempest"
             shouldHide={true}
@@ -211,14 +211,14 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
           <AssetDownload
             title={translateMessageId("page-assets-bazaar", intl)}
             alt={translateMessageId("page-assets-bazaar", intl)}
-            image={data.whatIsEthereum as Record<string, unknown>}
+            image={data.whatIsEthereum}
             artistName="Viktor Hachmang"
             artistUrl="http://viktorhachmang.nl/"
           />
           <AssetDownload
             title={translateMessageId("page-assets-eth", intl)}
             alt={translateMessageId("page-assets-eth", intl)}
-            image={data.eth as Record<string, unknown>}
+            image={data.eth}
             artistName="Viktor Hachmang"
             artistUrl="http://viktorhachmang.nl/"
           />
@@ -228,14 +228,14 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
           <AssetDownload
             title={translateMessageId("page-assets-mainnet", intl)}
             alt={translateMessageId("page-assets-mainnet", intl)}
-            image={data.oldShip as Record<string, unknown>}
+            image={data.oldShip}
             artistName="Viktor Hachmang"
             artistUrl="https://viktorhachmang.nl"
           />
           <AssetDownload
             title={translateMessageId("page-assets-merge", intl)}
             alt={translateMessageId("page-assets-merge", intl)}
-            image={data.merge as Record<string, unknown>}
+            image={data.merge}
             artistName="Viktor Hachmang"
             artistUrl="https://viktorhachmang.nl"
           />
@@ -245,14 +245,14 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
           <AssetDownload
             title={translateMessageId("page-assets-beacon-chain", intl)}
             alt={translateMessageId("page-assets-beacon-chain", intl)}
-            image={data.beaconChain as Record<string, unknown>}
+            image={data.beaconChain}
             artistName="Viktor Hachmang"
             artistUrl="http://viktorhachmang.nl/"
           />
           <AssetDownload
             title={translateMessageId("page-assets-sharding", intl)}
             alt={translateMessageId("page-assets-sharding", intl)}
-            image={data.newRings as Record<string, unknown>}
+            image={data.newRings}
             artistName="Viktor Hachmang"
             artistUrl="https://viktorhachmang.nl"
           />
@@ -262,14 +262,14 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
           <AssetDownload
             title={translateMessageId("page-assets-defi", intl)}
             alt={translateMessageId("page-assets-defi", intl)}
-            image={data.defi as Record<string, unknown>}
+            image={data.defi}
             artistName="Patrick Atkins"
             artistUrl="https://www.patrickatkins.co.uk/"
           />
           <AssetDownload
             title={translateMessageId("page-assets-dao", intl)}
             alt={translateMessageId("page-assets-dao", intl)}
-            image={data.dao as Record<string, unknown>}
+            image={data.dao}
             artistName="Patrick Atkins"
             artistUrl="https://www.patrickatkins.co.uk/"
           />
@@ -291,29 +291,29 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
           <AssetDownload
             title={translateMessageId("page-assets-eth-diamond-glyph", intl)}
             alt={translateMessageId("page-assets-eth-diamond-glyph", intl)}
-            image={data.ethDiamondGlyph as Record<string, unknown>}
+            image={data.ethDiamondGlyph}
           />
           <AssetDownload
             title={translateMessageId("page-assets-eth-diamond-gray", intl)}
             alt={translateMessageId("page-assets-eth-diamond-gray", intl)}
-            image={data.ethDiamondBlack as Record<string, unknown>}
+            image={data.ethDiamondBlack}
           />
           <AssetDownload
             title={translateMessageId("page-assets-eth-diamond-color", intl)}
             alt={translateMessageId("page-assets-eth-diamond-color", intl)}
-            image={data.ethDiamondColor as Record<string, unknown>}
+            image={data.ethDiamondColor}
           />
         </Row>
         <Row>
           <AssetDownload
             title={translateMessageId("page-assets-eth-diamond-purple", intl)}
             alt={translateMessageId("page-assets-eth-diamond-purple", intl)}
-            image={data.ethDiamondPurple as Record<string, unknown>}
+            image={data.ethDiamondPurple}
           />
           <AssetDownload
             title={translateMessageId("page-assets-eth-diamond-colored", intl)}
             alt={translateMessageId("page-assets-eth-diamond-colored", intl)}
-            image={data.ethGlyphColored as Record<string, unknown>}
+            image={data.ethGlyphColored}
           />
           <AssetDownload
             title={translateMessageId(
@@ -334,7 +334,7 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
               intl
             )}
             alt={translateMessageId("page-assets-eth-logo-portrait-gray", intl)}
-            image={data.ethPortraitBlack as Record<string, unknown>}
+            image={data.ethPortraitBlack}
           />
           <AssetDownload
             title={translateMessageId(
@@ -345,12 +345,12 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
               "page-assets-eth-logo-landscape-gray",
               intl
             )}
-            image={data.ethLandscapeBlack as Record<string, unknown>}
+            image={data.ethLandscapeBlack}
           />
           <AssetDownload
             title={translateMessageId("page-assets-eth-wordmark-gray", intl)}
             alt={translateMessageId("page-assets-eth-wordmark-gray", intl)}
-            image={data.ethWordmarkBlack as Record<string, unknown>}
+            image={data.ethWordmarkBlack}
           />
         </Row>
         <Row>
@@ -363,7 +363,7 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
               "page-assets-eth-logo-portrait-purple",
               intl
             )}
-            image={data.ethPortraitPurple as Record<string, unknown>}
+            image={data.ethPortraitPurple}
           />
           <AssetDownload
             title={translateMessageId(
@@ -374,12 +374,12 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
               "page-assets-eth-logo-landscape-purple",
               intl
             )}
-            image={data.ethLandscapePurple as Record<string, unknown>}
+            image={data.ethLandscapePurple}
           />
           <AssetDownload
             title={translateMessageId("page-assets-eth-wordmark-purple", intl)}
             alt={translateMessageId("page-assets-eth-wordmark-purple", intl)}
-            image={data.ethWordmarkPurple as Record<string, unknown>}
+            image={data.ethWordmarkPurple}
           />
         </Row>
 
@@ -391,22 +391,22 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
           <AssetDownload
             title={translateMessageId("page-assets-eth-diamond-white", intl)}
             alt={translateMessageId("page-assets-eth-diamond-white", intl)}
-            image={data.ethDiamondBlackWhite as Record<string, unknown>}
+            image={data.ethDiamondBlackWhite}
           />
           <AssetDownload
             title={translateMessageId("page-assets-eth-diamond-gray", intl)}
             alt={translateMessageId("page-assets-eth-diamond-gray", intl)}
-            image={data.ethDiamondBlackGray as Record<string, unknown>}
+            image={data.ethDiamondBlackGray}
           />
           <AssetDownload
             title={translateMessageId("page-assets-eth-diamond-purple", intl)}
             alt={translateMessageId("page-assets-eth-diamond-purple", intl)}
-            image={data.ethDiamondPurplePurple as Record<string, unknown>}
+            image={data.ethDiamondPurplePurple}
           />
           <AssetDownload
             title={translateMessageId("page-assets-eth-diamond-white", intl)}
             alt={translateMessageId("page-assets-eth-diamond-white", intl)}
-            image={data.ethDiamondPurpleWhite as Record<string, unknown>}
+            image={data.ethDiamondPurpleWhite}
           />
         </Row>
         <Row>
@@ -416,7 +416,7 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
               intl
             )}
             alt={translateMessageId("page-assets-eth-logo-portrait-gray", intl)}
-            image={data.ethPortraitBlackGray as Record<string, unknown>}
+            image={data.ethPortraitBlackGray}
           />
           <AssetDownload
             title={translateMessageId(
@@ -427,12 +427,12 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
               "page-assets-eth-logo-landscape-gray",
               intl
             )}
-            image={data.ethLandscapeBlackGray as Record<string, unknown>}
+            image={data.ethLandscapeBlackGray}
           />
           <AssetDownload
             title={translateMessageId("page-assets-eth-wordmark-gray", intl)}
             alt={translateMessageId("page-assets-eth-wordmark-gray", intl)}
-            image={data.ethWordmarkBlackGray as Record<string, unknown>}
+            image={data.ethWordmarkBlackGray}
           />
         </Row>
         <Row>
@@ -445,7 +445,7 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
               "page-assets-eth-logo-portrait-purple",
               intl
             )}
-            image={data.ethPortraitPurplePurple as Record<string, unknown>}
+            image={data.ethPortraitPurplePurple}
           />
           <AssetDownload
             title={translateMessageId(
@@ -456,12 +456,12 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
               "page-assets-eth-logo-landscape-purple",
               intl
             )}
-            image={data.ethLandscapePurplePurple as Record<string, unknown>}
+            image={data.ethLandscapePurplePurple}
           />
           <AssetDownload
             title={translateMessageId("page-assets-eth-wordmark-purple", intl)}
             alt={translateMessageId("page-assets-eth-wordmark-purple", intl)}
-            image={data.ethWordmarkPurplePurple as Record<string, unknown>}
+            image={data.ethWordmarkPurplePurple}
           />
         </Row>
         <Row>
@@ -474,7 +474,7 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
               "page-assets-eth-logo-portrait-white",
               intl
             )}
-            image={data.ethPortraitPurpleWhite as Record<string, unknown>}
+            image={data.ethPortraitPurpleWhite}
           />
           <AssetDownload
             title={translateMessageId(
@@ -485,12 +485,12 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
               "page-assets-eth-logo-landscape-white",
               intl
             )}
-            image={data.ethLandscapePurpleWhite as Record<string, unknown>}
+            image={data.ethLandscapePurpleWhite}
           />
           <AssetDownload
             title={translateMessageId("page-assets-eth-wordmark-white", intl)}
             alt={translateMessageId("page-assets-eth-wordmark-white", intl)}
-            image={data.ethWordmarkPurpleWhite as Record<string, unknown>}
+            image={data.ethWordmarkPurpleWhite}
           />
         </Row>
       </Content>
