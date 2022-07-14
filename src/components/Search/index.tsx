@@ -1,10 +1,4 @@
-import React, {
-  useState,
-  useRef,
-  RefObject,
-  EventHandler,
-  MouseEventHandler,
-} from "react"
+import React, { useState, useRef, MouseEventHandler } from "react"
 import { Link as GatsbyLink } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
 import {
@@ -17,6 +11,7 @@ import {
   connectStateResults,
 } from "react-instantsearch-dom"
 import algoliasearch from "algoliasearch/lite"
+import { Hit } from "@algolia/client-search"
 import styled from "styled-components"
 
 import Input from "./Input"
@@ -121,8 +116,8 @@ const StyledHighlight = styled(Highlight)`
 
 //FIXME: Add a strict type for `hit` prop
 const PageHit =
-  (clickHandler: MouseEventHandler): React.FC<{ hit: Record<string, any> }> =>
-  ({ hit }) => {
+  (clickHandler: MouseEventHandler) =>
+  ({ hit }: { hit: Hit<Record<string, any>> }) => {
     // Make url relative, so `handleSelect` is triggered
     const url = hit.url.replace("https://ethereum.org", "")
     return (
