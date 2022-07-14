@@ -7,7 +7,7 @@ preMergeBanner: true
 ---
 
 <InfoBanner emoji=":wave:">
-   Proof-of-stake will soon replace proof-of-work as Ethereum's consensus mechanism, meaning mining will be switched off. Instead, Ethereum will be secured by validators who stake ETH. You can start staking your ETH today. Read more on <a href="/upgrades/merge/">The Merge</a>, <a href="/developers/docs/consensus-mechanisms/pos/">proof-of-stake</a> and <a href="/staking/">staking</a>.)    
+   Proof-of-stake will soon replace proof-of-work as Ethereum's consensus mechanism, meaning mining will be switched off. Instead, Ethereum will be secured by validators who stake ETH. You can start staking your ETH today. Read more on <a href="/upgrades/merge/">The Merge</a>, <a href="/developers/docs/consensus-mechanisms/pos/">proof-of-stake</a> and <a href="/staking/">staking</a>.    
 </InfoBanner>
 
 ## Prerequisites {#prerequisites}

@@ -73,7 +73,7 @@ Intellectual property (IP) is a big problem in traditional science: from being s
 
 In the same way that NFTs can pass revenue for future transactions back to the original creator, you can establish transparent value attribution chains to reward researchers, governing bodies (like DAOs), or even the subjects whose data is collected.
 
-IP-NFTs can also function as a key to a decentralized data repository of the research experiments being undertaken, and plug into NFT and [DeFi](/defi/) financialization (from fractionalization to lending pools and value appraisal). It also allows natively on-chain entities such as DAOs like [VitaDAO](https://www.vitadao.com/) to conduct research directly on-chain.
+[IP-NFTs](https://medium.com/molecule-blog/ip-nfts-for-researchers-a-new-biomedical-funding-paradigm-91312d8d92e6) can also function as a key to a decentralized data repository of the research experiments being undertaken, and plug into NFT and [DeFi](/defi/) financialization (from fractionalization to lending pools and value appraisal). It also allows natively on-chain entities such as DAOs like [VitaDAO](https://www.vitadao.com/) to conduct research directly on-chain.
 The advent of non-transferable ["soulbound" tokens](https://vitalik.ca/general/2022/01/26/soulbound.html) may also play an important role in DeSci by allowing individuals to prove their experience and credentials linked to their Ethereum address.
 
 ### Data storage, access and architecture {#data-storage}
@@ -100,6 +100,7 @@ Explore projects and join the DeSci community.
 - [ResearchHub: post a scientific result and engage in a conversation with peers](https://www.researchhub.com/)
 - [VitaDAO: receive funding through sponsored research agreements for longevity research](https://www.vitadao.com/)
 - [Fleming Protocol: open-source data economy that fuels collaborative biomedical discovery](https://medium.com/@FlemingProtocol/a-data-economy-for-patient-driven-biomedical-innovation-9d56bf63d3dd)
+- [Active Inference Lab](https://www.activeinference.org/)
 
 ## Further reading {#further-reading}
 
@@ -112,6 +113,7 @@ Explore projects and join the DeSci community.
 - [Building Trustless Systems of Science by Jon Starr](https://medium.com/@jringo/building-systems-of-trustless-science-1cd2d072f673)
 - [The Emergence of Biotech DAOs](https://molecule.to/blog/the-emergence-of-biotech-daos)
 - [Paul Kohlhaas - DeSci: The Future of Decentralized Science (podcast)](https://anchor.fm/andrew-steinwold/episodes/Paul-Kohlhaas---DeSci-The-Future-of-Decentralized-Science---Zima-Red-ep-117-e1h683a)
+- [An Active Inference Ontology for Decentralized Science: from Situated Sensemaking to the Epistemic Commons](https://zenodo.org/record/6320575)
 
 ### Videos {#videos}
 
