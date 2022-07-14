@@ -199,7 +199,7 @@ Commonly described as "multi-hop transfers", routed payments are atomic (i.e., e
 
 To ensure efficiency, state channels place time limits on the ability of channel participants to respond to disputes. This rule assumes that peers will always be online to monitor channel activity and contest challenges when necessary. 
 
-In reality, users can go offline for reasons out of their control (e.g., poor Internet connection, mechanical failure, etc.). If an honest user goes offline, a malicious peer can exploit the situation by presenting old intermediate states to the adjudicator contract and stealing the committed funds. 
+In reality, users can go offline for reasons out of their control (e.g., poor internet connection, mechanical failure, etc.). If an honest user goes offline, a malicious peer can exploit the situation by presenting old intermediate states to the adjudicator contract and stealing the committed funds. 
 
 Some channels use "watchtowers"—entities responsible for watching on-chain dispute events on behalf of others and taking necessary actions, like alerting concerned parties. However, this can add to the costs of using a state channel. 
 
