@@ -54,7 +54,11 @@ function processFrontmatter(md, lang) {
   const frontmatter = matter(file).data
 
   // console.log(frontmatter)
-  if (lang === "fr") console.log(frontmatter.title)
+  // if (lang === "fr") console.log(frontmatter.title)
+
+  if (frontmatter.lang !== lang) {
+    console.log(md)
+  }
 }
 
 const markdownPaths = getAllMarkdownFiles(PATH_TO_ALL_CONTENT)
