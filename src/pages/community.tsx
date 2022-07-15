@@ -308,7 +308,7 @@ const StyledCallout = styled(Callout)`
 `
 
 interface ICard {
-  image: any // Gatsby image type
+  image: any
   title: string
   description: string
   alt: string
