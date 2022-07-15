@@ -1807,13 +1807,6 @@
     "@formatjs/ecma402-abstract" "1.7.1"
     tslib "^2.1.0"
 
-"@formatjs/intl-pluralrules@^1.5.2":
-  version "1.5.9"
-  resolved "https://registry.yarnpkg.com/@formatjs/intl-pluralrules/-/intl-pluralrules-1.5.9.tgz#c363c833c0ccde11eb508de4c09d3eaa232e819a"
-  integrity sha512-37E1ZG+Oqo3qrpUfumzNcFTV+V+NCExmTkkQ9Zw4FSlvJ4WhbbeYdieVapUVz9M0cLy8XrhCkfuM/Kn03iKReg==
-  dependencies:
-    "@formatjs/intl-utils" "^2.3.0"
-
 "@formatjs/intl-relativetimeformat@^4.5.9":
   version "4.5.16"
   resolved "https://registry.yarnpkg.com/@formatjs/intl-relativetimeformat/-/intl-relativetimeformat-4.5.16.tgz#7449cef3213dd66d25924ca41f125f87b58df95a"
@@ -3484,6 +3477,11 @@
   resolved "https://registry.yarnpkg.com/@turist/time/-/time-0.0.2.tgz#32fe0ce708ea0f4512776bd313409f1459976dda"
   integrity sha512-qLOvfmlG2vCVw5fo/oz8WAZYlpe5a5OurgTj3diIxJCdjRHpapC+vQCz3er9LV79Vcat+DifBjeAhOAdmndtDQ==
 
+"@types/browser-lang@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@types/browser-lang/-/browser-lang-0.1.0.tgz#a1dad436c5030a7f43466074012caa0ab077b590"
+  integrity sha512-35YiRsfyH1IQC/a4vLEJX7bRgtjPMnoTEPq27uo9Gs/YVyiw3YEMNeQYvFaznA/UNxp23jTQ+WF3O4Mi1iXwxg==
+
 "@types/cacheable-request@^6.0.1":
   version "6.0.2"
   resolved "https://registry.yarnpkg.com/@types/cacheable-request/-/cacheable-request-6.0.2.tgz#c324da0197de0a98a2312156536ae262429ff6b9"
@@ -3721,16 +3719,7 @@
   dependencies:
     "@types/react" "^17"
 
-"@types/react@*":
-  version "17.0.37"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-17.0.37.tgz#6884d0aa402605935c397ae689deed115caad959"
-  integrity sha512-2FS1oTqBGcH/s0E+CjrCCR9+JMpsu9b69RTFO+40ua43ZqP5MmQ4iUde/dMjWR909KxZwmOQIFq6AV6NjEG5xg==
-  dependencies:
-    "@types/prop-types" "*"
-    "@types/scheduler" "*"
-    csstype "^3.0.2"
-
-"@types/react@^17", "@types/react@^17.0.39":
+"@types/react@*", "@types/react@^17", "@types/react@^17.0.39":
   version "17.0.44"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-17.0.44.tgz#c3714bd34dd551ab20b8015d9d0dbec812a51ec7"
   integrity sha512-Ye0nlw09GeMp2Suh8qoOv0odfgCoowfM/9MG6WeRD60Gq9wS90bdkdRtYbRkNhXOpG4H+YXGvj4wOWhAC0LJ1g==
@@ -8401,18 +8390,6 @@ gatsby-plugin-image@^2.0.0:
     objectFitPolyfill "^2.3.5"
     prop-types "^15.7.2"
 
-gatsby-plugin-intl@^0.3.3:
-  version "0.3.3"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-intl/-/gatsby-plugin-intl-0.3.3.tgz#3a0e55e6641bfcb09fae20215b8f72e2a0ec3de4"
-  integrity sha512-VPugNJv3GDkT6RcOBfncZPw3Eqh98RyvChsXfX7VuMQ8mBVoNB6XyNSIiEGG/atxFrpSp/r3WUKpnzpLLpY5dg==
-  dependencies:
-    "@babel/runtime" "^7.8.4"
-    "@formatjs/intl-pluralrules" "^1.5.2"
-    "@formatjs/intl-relativetimeformat" "^4.5.9"
-    browser-lang "^0.1.0"
-    intl "^1.2.5"
-    react-intl "^3.12.0"
-
 gatsby-plugin-manifest@^4.10.1:
   version "4.11.1"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-4.11.1.tgz#fb3061c2e989acb2634719c1e8645fd1388f4b3b"
@@ -8760,6 +8737,16 @@ gatsby-telemetry@^3.4.0:
     is-docker "^2.2.1"
     lodash "^4.17.21"
     node-fetch "^2.6.6"
+
+gatsby-theme-i18n-react-intl@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/gatsby-theme-i18n-react-intl/-/gatsby-theme-i18n-react-intl-3.0.0.tgz#2a6711b5f37d2386547c801fe407aca3da6bd94d"
+  integrity sha512-FORodw1fbI5favqgY1cqoqE4N0gNxNEt1/nibGG7phWJwWlw0rFgMQnXBIn5UKzDGiX9FVihevqUn14Eo3PTqA==
+
+gatsby-theme-i18n@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/gatsby-theme-i18n/-/gatsby-theme-i18n-3.0.0.tgz#dd4482f0f4842d3142a0d992f29afb6ecd1a62a4"
+  integrity sha512-M8r498/x0IwAQIbt8CQ3G7I9D2bUTBv4dvxD9EPgOGCW9qTVjH5al31vTkxSQ9ialn9BewMQugWQ7AEWwIDrhQ==
 
 gatsby-transformer-csv@^4.0.0:
   version "4.4.0"
@@ -10011,11 +9998,6 @@ intl-messageformat@^7.8.4:
   dependencies:
     intl-format-cache "^4.2.21"
     intl-messageformat-parser "^3.6.4"
-
-intl@^1.2.5:
-  version "1.2.5"
-  resolved "https://registry.yarnpkg.com/intl/-/intl-1.2.5.tgz#82244a2190c4e419f8371f5aa34daa3420e2abde"
-  integrity sha1-giRKIZDE5Bn4Nx9ao02qNCDiq94=
 
 invariant@^2.2.1, invariant@^2.2.3, invariant@^2.2.4:
   version "2.2.4"
@@ -13584,7 +13566,7 @@ react-instantsearch-dom@^6.6.0:
     react-fast-compare "^3.0.0"
     react-instantsearch-core "^6.17.0"
 
-react-intl@^3.12.0:
+react-intl@^3.12.1:
   version "3.12.1"
   resolved "https://registry.yarnpkg.com/react-intl/-/react-intl-3.12.1.tgz#e9a783ea20302e9da25e4eda59e5593a43d2ec80"
   integrity sha512-cgumW29mwROIqyp8NXStYsoIm27+8FqnxykiLSawWjOxGIBeLuN/+p2srei5SRIumcJefOkOIHP+NDck05RgHg==

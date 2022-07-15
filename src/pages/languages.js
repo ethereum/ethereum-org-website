@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import styled from "styled-components"
-import { useIntl } from "gatsby-plugin-intl"
+import { useIntl } from "react-intl"
 
 import PageMetadata from "../components/PageMetadata"
 import Translation from "../components/Translation"
@@ -84,7 +84,7 @@ const LanguagesPage = () => {
     const langMetadata = languageMetadata[lang]
     langMetadata["path"] = `/${lang}/`
     langMetadata["name"] = translateMessageId(`language-${lang}`, intl)
-    const nativeLangTitle = langMetadata["language"]
+    const nativeLangTitle = langMetadata["localName"]
     const englishLangTitle = langMetadata["name"]
     if (
       englishLangTitle.toLowerCase().includes(keyword.toLowerCase()) ||
@@ -142,7 +142,7 @@ const LanguagesPage = () => {
             {translationsCompleted.map((lang) => (
               <LangItem to={lang.path} key={lang["name"]}>
                 <LangTitle>{lang["name"]}</LangTitle>
-                <h4>{lang.language}</h4>
+                <h4>{lang.localName}</h4>
               </LangItem>
             ))}
           </LangContainer>

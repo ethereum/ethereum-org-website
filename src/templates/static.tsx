@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql, PageProps } from "gatsby"
-import { useIntl } from "gatsby-plugin-intl"
+import { useIntl } from "react-intl"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import styled from "styled-components"
@@ -149,7 +149,7 @@ const components = {
 
 const StaticPage = ({
   data: { siteData, pageData: mdx },
-  pageContext,
+  pageContext: { relativePath },
 }: PageProps<Queries.StaticPageQuery, Context>) => {
   const intl = useIntl()
 
@@ -159,6 +159,8 @@ const StaticPage = ({
     )
   if (!mdx?.frontmatter?.title)
     throw new Error("Required `title` property missing for static template")
+  if (!relativePath)
+    throw new Error("Required `relativePath` is missing on pageContext")
 
   const isRightToLeft = isLangRightToLeft(mdx.frontmatter.lang as Lang)
 
@@ -170,7 +172,6 @@ const StaticPage = ({
 
   const tocItems = mdx.tableOfContents?.items
   const { editContentUrl } = siteData.siteMetadata || {}
-  const { relativePath } = pageContext
   const absoluteEditPath =
     relativePath.split("/").includes("whitepaper") ||
     relativePath.split("/").includes("events")

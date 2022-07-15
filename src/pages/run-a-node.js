@@ -2,7 +2,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import { useIntl } from "gatsby-plugin-intl"
+import { useIntl } from "react-intl"
 import styled from "styled-components"
 
 // Assets
@@ -1007,7 +1007,7 @@ const RunANodePage = ({ data }) => {
 export default RunANodePage
 
 export const query = graphql`
-  query {
+  query RunANodePage {
     ethereumInside: file(
       relativePath: { eq: "run-a-node/ethereum-inside.png" }
     ) {

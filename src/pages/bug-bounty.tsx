@@ -3,7 +3,7 @@ import { ThemeContext } from "styled-components"
 import styled from "styled-components"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { graphql, PageProps } from "gatsby"
-import { useIntl } from "gatsby-plugin-intl"
+import { useIntl } from "react-intl"
 
 import { translateMessageId } from "../utils/translations"
 import Translation from "../components/Translation"

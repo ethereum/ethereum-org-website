@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react"
 import styled from "styled-components"
 import { graphql, PageProps } from "gatsby"
-import { useIntl } from "gatsby-plugin-intl"
+import { getImage } from "gatsby-plugin-image"
+import { useIntl } from "react-intl"
 import { shuffle } from "lodash"
 import { translateMessageId, TranslationKey } from "../../utils/translations"
 import PageMetadata from "../../components/PageMetadata"
@@ -17,7 +18,6 @@ import {
 } from "../../components/SharedStyledComponents"
 import FeedbackCard from "../../components/FeedbackCard"
 import { Context } from "../../types"
-import { getImage } from "gatsby-plugin-image"
 
 const StyledPage = styled(Page)`
   margin-top: 4rem;

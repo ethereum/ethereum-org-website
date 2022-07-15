@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { useIntl } from "gatsby-plugin-intl"
+import { useIntl } from "react-intl"
 import { motion } from "framer-motion"
 
 import Emoji from "../Emoji"

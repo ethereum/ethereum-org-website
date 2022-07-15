@@ -1,6 +1,6 @@
 // Library imports
 import React, { useState, useEffect, useRef, useMemo } from "react"
-import { useIntl } from "gatsby-plugin-intl"
+import { useIntl } from "react-intl"
 import styled from "styled-components"
 import FocusTrap from "focus-trap-react"
 // Component imports

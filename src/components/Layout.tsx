@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react"
 import { ApolloProvider } from "@apollo/client"
-import client from "../apollo"
 import { ThemeProvider } from "styled-components"
-import { IntlProvider, IntlContextProvider } from "gatsby-plugin-intl"
 import styled from "styled-components"
+import { IntlProvider } from "react-intl"
+import { LocaleProvider } from "gatsby-theme-i18n"
 
-import "../styles/layout.css"
 import { lightTheme, darkTheme, GlobalStyle } from "../theme"
 
 import Footer from "./Footer"
@@ -16,6 +15,7 @@ import SideNavMobile from "./SideNavMobile"
 import TranslationBanner from "./TranslationBanner"
 import TranslationBannerLegal from "./TranslationBannerLegal"
 import FeedbackWidget from "./FeedbackWidget"
+import { SkipLink, SkipLinkAnchor } from "./SkipLink"
 
 import { ZenModeContext } from "../contexts/ZenModeContext"
 
@@ -24,9 +24,11 @@ import { useKeyPress } from "../hooks/useKeyPress"
 import { isLangRightToLeft } from "../utils/translations"
 import { scrollIntoView } from "../utils/scrollIntoView"
 import { isMobile } from "../utils/isMobile"
-import { SkipLink, SkipLinkAnchor } from "./SkipLink"
 
 import type { Context } from "../types"
+
+import "../styles/layout.css"
+import client from "../apollo"
 
 const ContentContainer = styled.div`
   position: relative;
@@ -88,6 +90,9 @@ const Layout: React.FC<IProps> = ({
   const [isZenMode, setIsZenMode] = useState<boolean>(false)
   const [shouldShowSideNav, setShouldShowSideNav] = useState<boolean>(false)
 
+  const locale = pageContext.locale
+  const messages = require(`../intl/${locale}.json`)
+
   // Exit Zen Mode on 'esc' click
   useKeyPress(`Escape`, () => handleZenModeChange(false))
 
@@ -136,19 +141,15 @@ const Layout: React.FC<IProps> = ({
     }
   }
 
-  // IntlProvider & IntlContextProvider appear to be necessary in order to pass context
-  // into components that live outside page components (e.g. Nav & Footer).
-  // https://github.com/wiziple/gatsby-plugin-intl/issues/116
-  const intl = pageContext.intl
   const theme = isDarkTheme ? darkTheme : lightTheme
 
-  const isPageLanguageEnglish = intl.language === intl.defaultLanguage
+  const isPageLanguageEnglish = pageContext.isDefaultLang
   const isPageContentEnglish = !!pageContext.isContentEnglish
   const isLegal = !!pageContext.isLegal
   const isTranslationBannerIgnored = !!pageContext.ignoreTranslationBanner
   const isPageTranslationOutdated =
     !!pageContext.isOutdated || !!data?.pageData?.frontmatter?.isOutdated
-  const isPageRightToLeft = isLangRightToLeft(intl.language)
+  const isPageRightToLeft = isLangRightToLeft(pageContext.language)
 
   const shouldShowTranslationBanner =
     (isPageTranslationOutdated ||
@@ -156,13 +157,9 @@ const Layout: React.FC<IProps> = ({
     !isTranslationBannerIgnored
 
   return (
-    <ApolloProvider client={client}>
-      <IntlProvider
-        locale={intl.language}
-        defaultLocale={intl.defaultLanguage}
-        messages={intl.messages}
-      >
-        <IntlContextProvider value={intl}>
+    <LocaleProvider pageContext={pageContext}>
+      <IntlProvider locale={locale!} key={locale} messages={messages}>
+        <ApolloProvider client={client}>
           <ThemeProvider theme={theme}>
             <GlobalStyle />
             <SkipLink hrefId="#main-content" />
@@ -170,12 +167,12 @@ const Layout: React.FC<IProps> = ({
               shouldShow={shouldShowTranslationBanner}
               isPageContentEnglish={isPageContentEnglish}
               isPageRightToLeft={isPageRightToLeft}
-              originalPagePath={intl.originalPath}
+              originalPagePath={pageContext.originalPath!}
             />
             <TranslationBannerLegal
               shouldShow={isLegal}
               isPageRightToLeft={isPageRightToLeft}
-              originalPagePath={intl.originalPath}
+              originalPagePath={pageContext.originalPath!}
             />
             <ContentContainer>
               <VisuallyHidden isHidden={isZenMode}>
@@ -207,9 +204,9 @@ const Layout: React.FC<IProps> = ({
               <FeedbackWidget />
             </ContentContainer>
           </ThemeProvider>
-        </IntlContextProvider>
+        </ApolloProvider>
       </IntlProvider>
-    </ApolloProvider>
+    </LocaleProvider>
   )
 }
 

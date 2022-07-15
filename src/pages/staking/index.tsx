@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql, PageProps } from "gatsby"
-import { useIntl } from "gatsby-plugin-intl"
+import { useIntl } from "react-intl"
 import { getImage } from "gatsby-plugin-image"
 import styled from "styled-components"
 

@@ -1,5 +1,5 @@
 import React, { useContext } from "react"
-import { useIntl } from "gatsby-plugin-intl"
+import { useIntl } from "react-intl"
 import { ThemeContext } from "styled-components"
 import styled from "styled-components"
 import { GatsbyImage } from "gatsby-plugin-image"
