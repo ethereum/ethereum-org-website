@@ -8,7 +8,7 @@ const PATH_TO_ALL_CONTENT = "./src/content/"
 const langsArray = fs.readdirSync(PATH_TO_INTL_MARKDOWN)
 langsArray.push("en")
 
-function sortMarkdownFilesIntoLanguages(files) {
+function sortMarkdownPathsIntoLanguages(files) {
   const languages = langsArray.reduce((accumulator, value) => {
     return { ...accumulator, [value]: [] }
   }, {})
@@ -29,14 +29,14 @@ function sortMarkdownFilesIntoLanguages(files) {
   return languages
 }
 
-function getAllMarkdownFiles(dirPath, arrayOfFiles = []) {
+function getAllMarkdownPaths(dirPath, arrayOfFiles = []) {
   let files = fs.readdirSync(dirPath)
 
   arrayOfFiles = arrayOfFiles || []
 
   files.forEach(function (file) {
     if (fs.statSync(dirPath + "/" + file).isDirectory()) {
-      arrayOfFiles = getAllMarkdownFiles(dirPath + "/" + file, arrayOfFiles)
+      arrayOfFiles = getAllMarkdownPaths(dirPath + "/" + file, arrayOfFiles)
     } else {
       const fileToPush = path.join(dirPath, "/", file)
 
@@ -61,8 +61,8 @@ function processFrontmatter(md, lang) {
   }
 }
 
-const markdownPaths = getAllMarkdownFiles(PATH_TO_ALL_CONTENT)
-const markdownPathsByLang = sortMarkdownFilesIntoLanguages(markdownPaths)
+const markdownPaths = getAllMarkdownPaths(PATH_TO_ALL_CONTENT)
+const markdownPathsByLang = sortMarkdownPathsIntoLanguages(markdownPaths)
 
 for (const lang in markdownPathsByLang) {
   markdownPathsByLang[lang].forEach((file) => {
