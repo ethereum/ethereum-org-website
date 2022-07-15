@@ -18,7 +18,7 @@ You should have a good understanding of all the foundational topics and a high-l
 
 Plasma is a framework for improving scalability in public blockchains like Ethereum. As described in the original [Plasma whitepaper](http://plasma.io/plasma.pdf), Plasma chains are built atop another blockchain (called a "root chain"). Each "child chain" extends from the root chain and is generally managed by a smart contract deployed on the parent chain. 
 
-The Plasma contract functions, among other things, as a [bridge](/developers/docs/bridges/), allowing users to move assets between Ethereum Mainnet and the plasma chain. Although this makes them similar to [sidechains](/developers/docs/scaling/sidechains/), plasma chains benefit—at least, to some extent—from Ethereum Mainnet's security. This is unlike sidechains that are solely responsible for their security. 
+The Plasma contract functions, among other things, as a [bridge](/developers/docs/bridges/) allowing users to move assets between Ethereum Mainnet and the plasma chain. Although this makes them similar to [sidechains](/developers/docs/scaling/sidechains/), plasma chains benefit—at least, to some extent—from Ethereum Mainnet's security. This is unlike sidechains that are solely responsible for their security. 
 
 ## How does Plasma work?
 
