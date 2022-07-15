@@ -3,6 +3,26 @@ const path = require("path")
 
 const PATH_TO_INTL_MARKDOWN = "./src/content/translations/"
 
+const langsArray = fs.readdirSync(PATH_TO_INTL_MARKDOWN)
+
+function sortMarkdownFilesIntoLanguages(files) {
+  const languages = langsArray.reduce((accumulator, value) => {
+    return { ...accumulator, [value]: [] }
+  }, {})
+
+  files.forEach((file) => {
+    const langIndex = file.indexOf("/translations/") + 14
+    const isFourCharLang = file.includes("pt-br") || file.includes("zh-tw")
+    const charactersToSlice = isFourCharLang ? 5 : 2
+
+    const lang = file.slice(langIndex, langIndex + charactersToSlice)
+
+    languages[lang].push(file)
+  })
+
+  return languages
+}
+
 function getAllMarkdownFiles(dirPath, arrayOfFiles = []) {
   let files = fs.readdirSync(dirPath)
 
@@ -23,4 +43,5 @@ function getAllMarkdownFiles(dirPath, arrayOfFiles = []) {
   return arrayOfFiles
 }
 
-console.log(getAllMarkdownFiles(PATH_TO_INTL_MARKDOWN))
+const markdownPaths = getAllMarkdownFiles(PATH_TO_INTL_MARKDOWN)
+console.log(sortMarkdownFilesIntoLanguages(markdownPaths))
