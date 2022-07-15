@@ -57,16 +57,17 @@ web3.eth.getBlockNumber(function (error, result) {
 })
 ```
 
-Se viene eseguito, questo programma produrrà semplicemente il numero dell'ultimo blocco: la cima della blockchain. Puoi anche usare le chiamate della </code> funzione ` await/async per evitare di annidare delle callback nel tuo codice:</p>
+Se viene eseguito, questo programma produrrà semplicemente il numero dell'ultimo blocco: la cima della blockchain. Puoi anche usare le chiamate della funzione `await/async` per evitare di annidare delle callback nel tuo codice:
 
-<pre><code class="js">async function getBlockNumber() {
+```js
+async function getBlockNumber() {
   const latestBlockNumber = await web3.eth.getBlockNumber()
   console.log(latestBlockNumber)
   return latestBlockNumber
 }
 
 getBlockNumber()
-`</pre>
+```
 
 Puoi vedere tutte le funzioni disponibili sull'istanza di web3 nella [documentazione ufficiale di web3.js](https://web3js.readthedocs.io/en/v1.2.6/web3-eth.html#).
 
