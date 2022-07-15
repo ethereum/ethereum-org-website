@@ -100,6 +100,7 @@
     "crowdin-import": "ts-node src/scripts/crowdin-import.ts",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "generate-heading-ids": "node src/scripts/generate-heading-ids.js",
+    "markdown-checker": "node src/scripts/markdown-checker.js",
     "start": "gatsby develop",
     "start:lambda": "netlify-lambda serve src/lambda",
     "start:static": "gatsby build && gatsby serve",
