@@ -18,7 +18,7 @@ Gas refers to the unit that measures the amount of computational effort required
 
 Since each Ethereum transaction requires computational resources to execute, each transaction requires a fee. Gas refers to the fee required to conduct a transaction on Ethereum successfully.
 
-![A diagram showing where gas is needed in EVM operations](./gas.png)
+![A diagram showing where gas is needed in EVM operations](/developers/docs/gas/gas.png)
 _Diagram adapted from [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 Gas fees are paid in Ethereum's native currency, ether (ETH). Gas prices are denoted in gwei, which itself is a denomination of ETH - each gwei is equal to 0.000000001 ETH (10<sup>-9</sup> ETH). For example, instead of saying that your gas costs 0.000000001 ether, you can say your gas costs 1 gwei. The word 'gwei' itself means 'giga-wei', and it is equal to 1,000,000,000 wei. Wei itself (named after [Wei Dai](https://wikipedia.org/wiki/Wei_Dai), creator of [b-money](https://www.investopedia.com/terms/b/bmoney.asp)) is the smallest unit of ETH.
@@ -27,11 +27,15 @@ Gas fees are paid in Ethereum's native currency, ether (ETH). Gas prices are den
 
 Since the [London Upgrade](/history/#london) every block has a base fee, the minimum price per unit of gas for inclusion in this block, calculated by the network based on demand for block space. As the base fee of the transaction fee is burnt, users are also expected to set a tip (priority fee) in their transactions. The tip compensates validators for executing and propagating user transactions in blocks and is expected to be set automatically by most wallets.
 
-Calculating the total transaction fee works as follows: `Gas units (limit) * (Base fee + Tip)`
+Calculating the total transaction fee works as follows:
+
+`Gas units (limit) * (Base fee + Tip)`
 
 Let's say Jordan has to pay Taylor 1 ETH. In the transaction, the gas limit is 21,000 units and the base fee is 100 gwei. Jordan includes a tip of 10 gwei.
 
-Using the formula above we can calculate this as `21,000 * (100 + 10) = 2,310,000 gwei` or 0.00231 ETH.
+Using the formula above we can calculate this as
+
+`21,000 * (100 + 10) = 2,310,000 gwei` or 0.00231 ETH.
 
 When Jordan sends the money, 1.00231 ETH will be deducted from Jordan's account.
 Taylor will be credited 1.0000 ETH.
