@@ -1,5 +1,6 @@
 const fs = require("fs")
 const path = require("path")
+const matter = require("gray-matter")
 
 const PATH_TO_INTL_MARKDOWN = "./src/content/translations/"
 const PATH_TO_ALL_CONTENT = "./src/content/"
@@ -48,5 +49,21 @@ function getAllMarkdownFiles(dirPath, arrayOfFiles = []) {
   return arrayOfFiles
 }
 
+function processFrontmatter(md, lang) {
+  const file = fs.readFileSync(md, "utf-8")
+  const frontmatter = matter(file).data
+
+  // console.log(frontmatter)
+  if (lang === "fr") console.log(frontmatter.title)
+}
+
 const markdownPaths = getAllMarkdownFiles(PATH_TO_ALL_CONTENT)
-console.log(sortMarkdownFilesIntoLanguages(markdownPaths))
+const markdownPathsByLang = sortMarkdownFilesIntoLanguages(markdownPaths)
+
+for (const lang in markdownPathsByLang) {
+  markdownPathsByLang[lang].forEach((file) => {
+    processFrontmatter(file, lang)
+  })
+}
+
+// Would it be useful to Luca to quickly get all page titles for a lang?
