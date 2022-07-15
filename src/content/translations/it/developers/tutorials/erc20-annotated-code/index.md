@@ -7,7 +7,7 @@ sidebar: true
 tags:
   - "Solidity"
   - "erc-20"
-skill: beginner
+skill: principiante
 published: 2021-03-09
 ---
 
@@ -72,7 +72,7 @@ Per convenzione, i nomi dell'interfaccia iniziano per `I`.
 
 Questa funzione è `external`, a significare che [può essere chiamata solo dal di fuori del contratto](https://docs.soliditylang.org/en/v0.7.0/cheatsheet.html#index-2). Restituisce la fornitura totale di token nel contratto. Questo valore è restituito usando il tipo più comune in Ethereum, ovvero 256 bit non firmati (256 bit è la dimensione nativa della parola dell'EVM). Questa funzione è anche una `view`, il che significa che non cambia stato, quindi è eseguibile su un nodo singolo invece di farla eseguire da ciascun nodo nella blockchain. Questo tipo di funzione non genera una transazione e non costa [gas](/developers/docs/gas/).
 
-<strong x. id="1">Nota:</strong> In teoria, si potrebbe pensare che il creatore del contratto possa imbrogliare restituendo una fornitura totale inferiore al valore reale, facendo apparire ogni token come più prezioso di quanto sia realmente. Tuttavia, tale timore ignora la vera natura della blockchain. Tutto ciò che succede sulla blockchain è verificabile da ogni nodo. A tale scopo, il codice del linguaggio della macchina e la memoria di ciascun contratto sono disponibili su tutti i nodi. Benché non sia obbligatorio pubblicare il codice di Solidity per il tuo contratto, nessuno ti prenderebbe sul serio se non pubblicassi il codice sorgente e la versione di Solidity con cui lo hai compilato, così da renderlo verificabile rispetto al codice del linguaggio della macchina che hai indicato. Vediamo ad esempio [questo contratto](https://etherscan.io/address/0xa530F85085C6FE2f866E7FdB716849714a89f4CD#code).
+**Nota:** In teoria, si potrebbe pensare che il creatore del contratto possa imbrogliare restituendo una fornitura totale inferiore al valore reale, facendo apparire ogni token come più prezioso di quanto sia realmente. Tuttavia, tale timore ignora la vera natura della blockchain. Tutto ciò che succede sulla blockchain è verificabile da ogni nodo. A tale scopo, il codice del linguaggio della macchina e la memoria di ciascun contratto sono disponibili su tutti i nodi. Benché non sia obbligatorio pubblicare il codice di Solidity per il tuo contratto, nessuno ti prenderebbe sul serio se non pubblicassi il codice sorgente e la versione di Solidity con cui lo hai compilato, così da renderlo verificabile rispetto al codice del linguaggio della macchina che hai indicato. Vediamo ad esempio [questo contratto](https://etherscan.io/address/0xa530F85085C6FE2f866E7FdB716849714a89f4CD#code).
 
 &nbsp;
 
