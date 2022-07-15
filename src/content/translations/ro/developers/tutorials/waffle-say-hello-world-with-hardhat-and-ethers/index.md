@@ -9,7 +9,7 @@ tags:
   - "testare"
   - "hardhat"
   - "ethers.js"
-skill: de bază
+skill: beginner
 lang: ro
 sidebar: true
 published: 2020-10-16

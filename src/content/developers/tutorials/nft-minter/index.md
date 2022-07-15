@@ -1,6 +1,6 @@
 ---
 title: NFT Minter Tutorial
-description: In this tutorial, you’ll build an NFT minter and learn how to create a full stack dApp by connecting your smart contract to a React frontend using MetaMask and Web3 tools.
+description: In this tutorial, you’ll build an NFT minter and learn how to create a full stack dapp by connecting your smart contract to a React frontend using MetaMask and Web3 tools.
 author: "smudgil"
 tags:
   [
@@ -138,7 +138,7 @@ const onMintPressed = async () => {
 ```
 
 - [`useEffect`](https://reactjs.org/docs/hooks-effect.html) - this is a React hook that is called after your component is rendered. Because it has an empty array `[]` prop passed into it (see line 3), it will only be called on the component's _first_ render. Here we'll call our wallet listener and another wallet function to update our UI to reflect whether a wallet is already connected.
-- `connectWalletPressed` - this function will be called to connect the user's MetaMask wallet to our dApp.
+- `connectWalletPressed` - this function will be called to connect the user's MetaMask wallet to our dapp.
 - `onMintPressed` - this function will be called to mint the user's NFT.
 
 Near the end of this file, we have the UI of our component. If you scan this code carefully, you'll notice that we update our `url`, `name`, and `description` state variables when the input in their corresponding text fields change.
@@ -203,7 +203,7 @@ Now that we understand what we're working with, let's set up our Ethereum wallet
 
 ##: Set up your Ethereum wallet {#set-up-your-ethereum-wallet}
 
-For users to be able to interact with your smart contract they will need to connect their Ethereum wallet to your dApp.
+For users to be able to interact with your smart contract they will need to connect their Ethereum wallet to your dapp.
 
 ### Download MetaMask {#download-metamask}
 
@@ -229,9 +229,9 @@ Phew! Our fake money is all there! <Emoji text=":money_mouth_face:" size={1} />
 
 ## Connect MetaMask to your UI {#connect-metamask-to-your-UI}
 
-Now that our MetaMask wallet is set up, let's connect our dApp to it!
+Now that our MetaMask wallet is set up, let's connect our dapp to it!
 
-Because we want to prescribe to the [MVC](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller) paradigm, we're going to create a separate file that contains our functions to manage the logic, data, and rules of our dApp, and then pass those functions to our frontend (our Minter.js component).
+Because we want to prescribe to the [MVC](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller) paradigm, we're going to create a separate file that contains our functions to manage the logic, data, and rules of our dapp, and then pass those functions to our frontend (our Minter.js component).
 
 ### The `connectWallet` function {#connect-wallet-function}
 
@@ -290,9 +290,9 @@ If `window.ethereum` _is not_ present, then that means MetaMask is not installed
 
 Now if `window.ethereum` _is_ present, then that's when things get interesting.
 
-Using a try/catch loop, we'll try to connect to MetaMask by calling`[window.ethereum.request({ method: "eth_requestAccounts" });](https://docs.metamask.io/guide/rpc-api.html#eth-requestaccounts)`. Calling this function will open up MetaMask in the browser, whereby the user will be prompted to connect their wallet to your dApp.
+Using a try/catch loop, we'll try to connect to MetaMask by calling`[window.ethereum.request({ method: "eth_requestAccounts" });](https://docs.metamask.io/guide/rpc-api.html#eth-requestaccounts)`. Calling this function will open up MetaMask in the browser, whereby the user will be prompted to connect their wallet to your dapp.
 
-- If the user chooses to connect, `method: "eth_requestAccounts"` will return an array that contains all of the user's account addresses that are connected to the dApp. Altogether, our `connectWallet` function will return a JSON object that contains the _first_ `address` in this array \(see line 9\) and a `status` message that prompts the user to write a message to the smart contract.
+- If the user chooses to connect, `method: "eth_requestAccounts"` will return an array that contains all of the user's account addresses that are connected to the dapp. Altogether, our `connectWallet` function will return a JSON object that contains the _first_ `address` in this array \(see line 9\) and a `status` message that prompts the user to write a message to the smart contract.
 - If the user rejects the connection, then the JSON object will contain an empty string for the `address` returned and a `status` message that reflects that the user rejected the connection.
 
 ### Add connectWallet function to your Minter.js UI Component {#add-connect-wallet}
@@ -333,13 +333,13 @@ Now, let's save both files `Minter.js` and `interact.js` and test out our UI so 
 
 Open your browser on localhost:3000, and press the "Connect Wallet" button on the top right of the page.
 
-If you have MetaMask installed, you should be prompted to connect your wallet to your dApp. Accept the invitation to connect.
+If you have MetaMask installed, you should be prompted to connect your wallet to your dapp. Accept the invitation to connect.
 
 You should see that the wallet button now reflects that your address is connected.
 
 Next, try refreshing the page... this is strange. Our wallet button is prompting us to connect MetaMask, even though it is already connected...
 
-Don't worry though! We easily can fix that by implementing a function called `getCurrentWalletConnected`, which will check if an address is already connected to our dApp and update our UI accordingly!
+Don't worry though! We easily can fix that by implementing a function called `getCurrentWalletConnected`, which will check if an address is already connected to our dapp and update our UI accordingly!
 
 ### The getCurrentWalletConnected function {#get-current-wallet}
 
@@ -390,7 +390,7 @@ export const getCurrentWalletConnected = async () => {
 
 This code is _very_ similar to the `connectWallet` function we just wrote earlier.
 
-The main difference is that instead of calling the method `eth_requestAccounts`, which opens MetaMask for the user to connect their wallet, here we call the method `eth_accounts`, which simply returns an array containing the MetaMask addresses currently connected to our dApp.
+The main difference is that instead of calling the method `eth_requestAccounts`, which opens MetaMask for the user to connect their wallet, here we call the method `eth_accounts`, which simply returns an array containing the MetaMask addresses currently connected to our dapp.
 
 To see this function in action, let's call it in the `useEffect` function of our `Minter.js` component.
 
@@ -420,7 +420,7 @@ Once you've added this code, try refreshing our browser window. The button shoul
 
 ### Implement addWalletListener {#implement-add-wallet-listener}
 
-The final step in our dApp wallet setup is implementing the wallet listener so our UI updates when our wallet's state changes, such as when the user disconnects or switches accounts.
+The final step in our dapp wallet setup is implementing the wallet listener so our UI updates when our wallet's state changes, such as when the user disconnects or switches accounts.
 
 In your `Minter.js` file, add a function `addWalletListener` that looks like the following:
 
@@ -453,7 +453,7 @@ Let's quickly break down what's happening here:
 
 - First, our function checks if `window.ethereum` is enabled \(i.e. MetaMask is installed\).
   - If it's not, we simply set our `status` state variable to a JSX string that prompts the user to install MetaMask.
-  - If it is enabled, we set up the listener `window.ethereum.on("accountsChanged")` on line 3 that listens for state changes in the MetaMask wallet, which include when the user connects an additional account to the dApp, switches accounts, or disconnects an account. If there is at least one account connected, the `walletAddress` state variable is updated as the first account in the `accounts` array returned by the listener. Otherwise, `walletAddress` is set as an empty string.
+  - If it is enabled, we set up the listener `window.ethereum.on("accountsChanged")` on line 3 that listens for state changes in the MetaMask wallet, which include when the user connects an additional account to the dapp, switches accounts, or disconnects an account. If there is at least one account connected, the `walletAddress` state variable is updated as the first account in the `accounts` array returned by the listener. Otherwise, `walletAddress` is set as an empty string.
 
 Finally, we must call it in our `useEffect` function:
 
@@ -615,7 +615,7 @@ REACT_APP_PINATA_SECRET = <pinata-secret>
 REACT_APP_ALCHEMY_KEY = https://eth-ropsten.alchemyapi.io/v2/<alchemy-key>
 ```
 
-Now that we have our contract ABI and our Alchemy API key, we're ready to load our smart contract using[ Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3).
+Now that we have our contract ABI and our Alchemy API key, we're ready to load our smart contract using [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3).
 
 ### Set up your Alchemy Web3 endpoint and contract {#setup-alchemy-endpoint}
 
@@ -875,6 +875,6 @@ To recap, by building an NFT minter, you successfully learned how to:
 - Call smart contract methods from your frontend
 - Sign transactions using MetaMask
 
-Presumably, you'd like to be able to show off the NFTs minted via your dApp in your wallet — so be sure to check out our quick tutorial [How to View Your NFT in Your Wallet](https://docs.alchemyapi.io/alchemy/tutorials/how-to-write-and-deploy-a-nft-smart-contract/how-to-view-your-nft-in-your-wallet)!
+Presumably, you'd like to be able to show off the NFTs minted via your dapp in your wallet — so be sure to check out our quick tutorial [How to View Your NFT in Your Wallet](https://docs.alchemyapi.io/alchemy/tutorials/how-to-write-and-deploy-a-nft-smart-contract/how-to-view-your-nft-in-your-wallet)!
 
 And, as always, if you have any questions, we're here to help in the [Alchemy Discord](https://discord.gg/gWuC7zB). We can't wait to see how you apply the concepts from this tutorial to your future projects!

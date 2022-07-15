@@ -1,5 +1,5 @@
 ---
-title: Ethereum yığınına giriş
+title: Ethereum Yığınına Giriş
 description: Ethereum yazılım yığınının farklı katmanlarına ve nasıl uyuştuklarına dair bir inceleme.
 lang: tr
 sidebar: true
@@ -55,7 +55,7 @@ Bu kullanıcı arayüzlerini geliştirme yollarınız özünde değişmez. Kulla
 
 Ethereum uygulamanız için [yerel bir geliştirme ortamı kurulumu](/developers/local-environment/) rehberimizi inceleyin.
 
-## Daha fazla bilgi {#further-reading}
+## Daha fazla okuma {#further-reading}
 
 - [Bir Web 3.0 uygulamasının mimarisi](https://www.preethikasireddy.com/post/the-architecture-of-a-web-3-0-application) - _Preethi Kasireddy_
 

@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { graphql } from "gatsby"
-import { useIntl } from "gatsby-plugin-intl"
+import { useIntl } from "react-intl"
 import { getImage } from "gatsby-plugin-image"
 
 import { translateMessageId } from "../../utils/translations"
@@ -316,7 +316,7 @@ const VisionPage = ({ data, location }) => {
 export default VisionPage
 
 export const query = graphql`
-  {
+  query UpgradesVisionPage {
     oldship: file(relativePath: { eq: "upgrades/oldship.png" }) {
       childImageSharp {
         gatsbyImageData(

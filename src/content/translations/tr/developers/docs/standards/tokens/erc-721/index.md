@@ -1,5 +1,5 @@
 ---
-title: ERC-721 Değiştirilemez Token Standardı
+title: ERC-721 Değiştirilemeyen Token Standardı
 description:
 lang: tr
 sidebar: true
@@ -59,7 +59,7 @@ Bir Akıllı Sözleşme aşağıdaki yöntemleri ve olayları uygularsa, ERC-721
 
 Ethereum'daki herhangi bir ERC-721 Token Sözleşmesini incelememizi basitleştirmek için bir Standart'ın ne kadar önemli olduğunu görelim. Herhangi bir ERC-721 token'a arayüz oluşturmak için sadece sözleşmenin Uygulama İkili Arayüzü'ne (ABI) ihtiyacımız var. Aşağıda görebileceğiniz gibi az sürtünmeli bir örnek olması için basitleştirilmiş bir ABI kullanacağız.
 
-#### Web3.py Örneği {#web3py-example}
+#### Web3.py örneği {#web3py-example}
 
 İlk olarak, [Web3.py](https://web3py.readthedocs.io/en/stable/quickstart.html#installation) Python kütüphanesini kurduğunuzdan emin olun:
 

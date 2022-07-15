@@ -8,7 +8,7 @@ tags:
   - "solidity"
   - "primi passi"
   - "distribuzione"
-skill: principiante
+skill: beginner
 lang: it
 sidebar: true
 published: 2020-04-03

@@ -11,7 +11,7 @@ sidebar: true
 
 İlkelerimiz, sitenin görünümünü ve verdiği hissi ve sitedeki içeriği bilgilendirir.
 
-[etereum.org'a katkıda bulunmadan](/contributing/) önce bunları okumalısınız.
+[ethereum.org'a katkıda bulunmadan](/contributing/) önce bunları okumalısınız.
 
 ## Tasarım ilkelerimiz neler? {#ways-to-contribute}
 

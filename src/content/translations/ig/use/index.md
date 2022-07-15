@@ -15,7 +15,7 @@ lang: ig
 
 </div>
 
-## otu. Jiri ngwa komputa aruru na ethereum {#1-use-an-application-built-on-ethereum}
+## otu. Jiri ngwa komputa aruru na Ethereum {#1-use-an-application-built-on-ethereum}
 
 Uzọ kachasị mma iji malite na Ethereum bụ ịwụnye n'ime ya ozugbo! Enwere otutu ngwa komputa Ethereum ị nwere ike iji taa.
 

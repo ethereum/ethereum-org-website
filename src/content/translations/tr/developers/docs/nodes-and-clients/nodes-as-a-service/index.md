@@ -1,5 +1,5 @@
 ---
-title: Hizmet olarak düğümler
+title: Hizmet olarak node'lar
 description: Düğüm hizmetleri, bunların artıları ve eksileri ve popüler sağlayıcılara giriş düzeyinde bir genel bakış.
 lang: tr
 sidebar: true
@@ -18,7 +18,7 @@ Düğümlerin ve istemcilerin ne olduğu konusunda henüz bir fikriniz yoksa, [D
 
 Düğüm hizmeti sağlayıcıları, siz uğraşmayın diye sahne arkasında sizin için dağıtılmış düğüm istemcileri çalıştırır.
 
-Bu hizmetler tipik olarak blok zincirine yazmak ve blok zincirinden okumak için kullanabileceğiniz bir API anahtarı sağlar. Bunlar genellikle Mainnet'e ek olarak [Ethereum test ağlarına](/developers/docs/networks/#ethereum-testnets) erişim içerir.
+Bu hizmetler tipik olarak blok zincirine yazmak ve blok zincirinden okumak için kullanabileceğiniz bir API anahtarı sağlar. Bunlar genellikle Mainnet'e ek olarak [Ethereum test ağlarına](/developers/docs/networks/#testnets) erişim içerir.
 
 Bazı hizmetler, sizin için yönettikleri kendi özel düğümünüzü sunarken, diğerleri etkinliği düğümler arasında dağıtmak için yük dengeleyicileri kullanır.
 
@@ -47,11 +47,11 @@ Bir düğüm hizmeti kullanarak, ürününüzün altyapı yönünü merkezileşt
 - [**Alchemy**](https://www.alchemy.com/)
   - [Belgeler](https://docs.alchemyapi.io/)
   - Özellikler
-    - Ücretsiz seviye seçeneği
-    - Kullandıkça ölçeklendirin
+    - Ücretsiz katman seçeneği
+    - Kullandıkça ölçeklendir
     - Ücretsiz arşiv verileri
     - Analiz araçları
-    - Gösterge Paneli
+    - Gösterge paneli
     - Benzersiz API uç noktaları
     - Webkancaları
     - Doğrudan destek
@@ -62,15 +62,15 @@ Bir düğüm hizmeti kullanarak, ürününüzün altyapı yönünü merkezileşt
     - En yakındaki müsait düğüme hızlı ve güvenli bir geçit oluşturmak için yük dengeleme ve düğüm sağlığı takibi
     - WSS uç noktası ve sınırsız oran limitleri sağlayan Premium seviye
     - Kırktan fazla zincir için tek tıkla tam düğüm ve doğrulayıcı düğüm kurulumu
-    - Kullandıkça ölçeklendirin
+    - Kullandıkça ölçeklendir
     - Analiz araçları
-    - Gösterge Paneli
+    - Gösterge paneli
     - RPC, HTTPS ve WSS uç noktaları
     - Doğrudan destek
 - [**BlockDaemon**](https://blockdaemon.com/)
   - [Belgeler](https://ubiquity.docs.blockdaemon.com/)
   - Faydalar
-    - Gösterge Paneli
+    - Gösterge paneli
     - Düğüm bazında
     - Analizler
 - [**Chainstack**](https://chainstack.com/)
@@ -78,43 +78,43 @@ Bir düğüm hizmeti kullanarak, ürününüzün altyapı yönünü merkezileşt
   - Özellikler
     - Ücretsiz paylaşılan düğümler
     - Paylaşılan arşiv düğümleri
-    - GraphQL desteği
+    - GraphQL destek
     - RPC ve WSS uç noktaları
-    - Özel tam düğümler ve arşiv düğümleri
-    - Özel dağıtımlar için hızlı eşitleme süresi
-    - Bulutunuzu getirin
+    - İthaf olunmuş tam ve arşiv düğümleri
+    - İthaf olunmuş dağıtımlar için hızlı eşitleme süresi
+    - Bulutunu getir
     - Saat başına ödeme fiyatlandırması
-    - Doğrudan 7/24 destek
+    - Doğrudan 24/7 destek
 - [**GetBlock**](https://getblock.io/)
   - [Belgeler](https://getblock.io/docs/get-started/authentication-with-api-key/)
   - Özellikler
     - 40'tan fazla blok zinciri düğümüne erişim
-    - 40 bin ücretsiz günlük talep
+    - 40K ücretsiz günlük istek
     - Sınırsız sayıda API anahtarı
-    - 1 GB/sn ile yüksek bağlantı hızı
+    - 1GB/sn'de yüksek bağlantı hızı
     - İzleme+Arşiv
-    - Gelişmiş analizler
-    - Otomatik güncellemeler
+    - Gelişmiş analitik
+    - Otomatik Güncelleme
     - Teknik destek
 - [**InfStones**](https://infstones.com/)
   - Özellikler
-    - Ücretsiz seviye seçeneği
-    - Kullandıkça ölçeklendirin
+    - Ücretsiz katman seçeneği
+    - Kullandıkça ölçeklendir
     - Analizler
-    - Gösterge Paneli
+    - Gösterge paneli
     - Benzersiz API uç noktaları
-    - Özel tam düğümler
-    - Özel dağıtımlar için hızlı eşitleme süresi
-    - Doğrudan 7/24 destek
+    - İthaf olunmuş tam düğümler
+    - İthaf olunmuş dağıtımlar için hızlı eşitleme süresi
+    - Doğrudan 24/7 destek
     - 50'den fazla blok zinciri düğümüne erişim
 - [**Infura**](https://infura.io/)
   - [Belgeler](https://infura.io/docs)
   - Özellikler
-    - Ücretsiz seviye seçeneği
-    - Kullandıkça ölçeklendirin
+    - Ücretsiz katman seçeneği
+    - Kullandıkça ölçeklendir
     - Ücretli arşiv verileri
-    - Doğrudan Destek
-    - Gösterge Paneli
+    - Doğrudan destek
+    - Gösterge paneli
 - [**Kaleido**](https://kaleido.io/)
   - [Belgeler](https://docs.kaleido.io/)
   - Özellikler
@@ -138,58 +138,58 @@ Bir düğüm hizmeti kullanarak, ürününüzün altyapı yönünü merkezileşt
 - [**Moralis**](https://moralis.io/)
   - [Belgeler](https://docs.moralis.io/)
   - Özellikler
-    - Ücretsiz paylaşımlı düğümler
-    - Ücretsiz paylaşımlı arşiv düğümleri
+    - Ücretsiz paylaşılan düğümler
+    - Ücretsiz paylaşılan arşiv düğümleri
     - Gizlilik odaklı (kayıt politikası yok)
     - Çapraz zincir desteği
     - Kullandıkça ölçeklendir
-    - Gösterge Paneli
-    - Benzersiz Ethereum SDK'si
+    - Gösterge paneli
+    - Benzersiz Ethereum SDK'sı
     - Benzersiz API uç noktaları
     - Doğrudan teknik destek
 - [**Pocket Network**](https://www.pokt.network/)
   - [Belgeler](https://docs.pokt.network/home/)
   - Özellikler
-    - Merkeziyetsiz RPC Protokolü ve Pazar
-    - Günlük 1 Milyon Talep Bulunan Ücretsiz Seviye (uç nokta başına maksimum 2)
-    - [Açık Uç Noktalar](https://docs.pokt.network/home/resources/public-rpc-endpoints)
+    - Merkeziyetsiz RPC Protokolü ve Pazar Yeri
+    - Ücretsiz Katman Başına 1 Milyon İstek (uç nokta başına maksimum 2)
+    - [Genel Uç Noktalar](https://docs.pokt.network/home/resources/public-rpc-endpoints)
     - Pre-Stake+ Programı (günde 1 milyondan fazla isteğe ihtiyacınız varsa)
     - 15+ Blok Zinciri Desteklenir
-    - Uygulamalara hizmet ederek POKT kazanan 6400+ Düğüm
-    - Arşiv Düğümü, İzlemeli Arşiv Düğümü ve Test Ağı Düğümü Desteği
-    - Ethereum Mainnet Düğüm İstemcisi Çeşitliliği
-    - Tek Başarısızlık Noktası Yok
+    - Uygulamaları sunmak için POKT kazanan 6400+ Düğüm
+    - Arşiv Düğümü, İzlemeli Arşiv Düğümü ve Testnet Düğümü Desteği
+    - Ethereum Mainnet Düğüm İstemci Çeşitliliği
+    - Tek Hata Noktası Yok
     - Sıfır Kesinti Süresi
-    - Uygun Maliyetli Sıfıra Yakın Tokenomik (ağ bant genişliği için bir kez POKT stake edin)
+    - Uygun Maliyetli Sıfıra Yakın Tokenomik (ağ bant genişliği için bir kez POKT hissesi)
     - Aylık batık maliyet yok, altyapınızı bir varlığa dönüştürün
     - Protokolde yerleşik olarak bulunan Yük Dengeleme
-    - Gün başına talep sayısını ve saat başına düğüm sayısını sonsuz olarak ölçeklendirin
+    - Gün başına istek sayısını ve saat başına düğüm sayısını sonsuz olarak ölçeklendirin
     - En özel, sansüre dayanıklı seçenek
     - Uygulamalı geliştirici desteği
-    - [Pocket Portal](https://bit.ly/ETHorg_POKTportal) gösterge tablosu ve analizleri
+    - Cep Portalı gösterge tablosu ve analitiği
 - [**QuikNode**](https://www.quiknode.io/)
   - Özellikler
     - 7 günlük ücretsiz deneme
     - Çeşitli destek
     - Webkancaları
-    - Gösterge Paneli
+    - Gösterge paneli
     - Analizler
 - [**Rivet**](https://rivet.cloud/)
   - [Belgeler](https://rivet.readthedocs.io/en/latest/)
   - Özellikler
-    - Ücretsiz seviye seçeneği
-    - Kullandıkça ölçeklendirin
+    - Ücretsiz katman seçeneği
+    - Kullandıkça ölçeklendir
 - [**SettleMint**](https://console.settlemint.com/)
   - [Belgeler](https://docs.settlemint.com/)
   - Özellikler
     - Ücretsiz deneme
     - Kullandıkça ölçeklendir
-    - GraphQL desteği
+    - GraphQL destek
     - RPC ve WSS uç noktaları
-    - Özel tam düğümler
-    - Bulutunuzu getirin
+    - İthaf olunmuş tam düğümler
+    - Bulutunu getir
     - Analiz araçları
-    - Gösterge Paneli
+    - Gösterge paneli
     - Saat başına ödeme fiyatlandırması
     - Doğrudan destek
 - [**Watchdata**](https://watchdata.io/)
@@ -204,11 +204,11 @@ Bir düğüm hizmeti kullanarak, ürününüzün altyapı yönünü merkezileşt
     - Kaynak ölçeklendirme
     - Yüksek işlem hızları
 
-## Daha fazla bilgi {#further-reading}
+## Daha fazla okuma {#further-reading}
 
 - [Ethereum düğüm hizmetleri listesi](https://ethereumnodes.com/)
 
-## İlgili konular {#related-topics}
+## İlgili Konular {#related-topics}
 
 - [Düğümler ve istemciler](/developers/docs/nodes-and-clients/)
 

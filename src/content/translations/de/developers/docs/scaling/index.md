@@ -86,7 +86,7 @@ Lernen Sie mehr über [Validium](/developers/docs/scaling/validium/).
 
 ## Warum werden so viele Skalierungslösungen benötigt? {#why-do-we-need-these}
 
-- Mehrere Lösungen können dazu beitragen, die Gesamtüberlastung in einem Teil des Netzwerks zu verringern, und verhindern außerdem einzelne Fehlerquellen.
+- Mehrere Lösungen können dazu beitragen, die Gesamtüberlastung in einem Teil des Netzes zu verringern, und verhindern außerdem einzelne Fehlerquellen.
 - Das Ganze ist größer als die Summe seiner Teile. Es können verschiedene Lösungen existieren und miteinander harmonieren, was einen exponentiellen Effekt auf die künftige Transaktionsgeschwindigkeit und den Durchsatz ermöglicht.
 - Nicht alle Lösungen erfordern die direkte Nutzung des Ethereum-Konsens-Algorithmus, und Alternativen können Vorteile bieten, die sonst nur schwer zu erreichen wären.
 - Eine einzige Skalierungslösung reicht nicht aus, um die [Ethereum Vision](/upgrades/vision/) zu erfüllen.

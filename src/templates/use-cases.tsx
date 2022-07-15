@@ -1,5 +1,5 @@
 import React from "react"
-import { useIntl } from "gatsby-plugin-intl"
+import { useIntl } from "react-intl"
 import { graphql, PageProps } from "gatsby"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
@@ -7,7 +7,9 @@ import styled from "styled-components"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 import ButtonLink from "../components/ButtonLink"
-import ButtonDropdown from "../components/ButtonDropdown"
+import ButtonDropdown, {
+  List as ButtonDropdownList,
+} from "../components/ButtonDropdown"
 import BannerNotification from "../components/BannerNotification"
 import Card from "../components/Card"
 import ExpandableCard from "../components/ExpandableCard"
@@ -34,6 +36,7 @@ import {
   Paragraph,
   Header1,
   Header4,
+  ListItem,
 } from "../components/SharedStyledComponents"
 import Emoji from "../components/Emoji"
 import YouTube from "../components/YouTube"
@@ -148,6 +151,7 @@ const components = {
   h3: H3,
   h4: Header4,
   p: Paragraph,
+  li: ListItem,
   pre: Pre,
   table: MarkdownTable,
   MeetupList,
@@ -303,11 +307,12 @@ const UseCasePage = ({
   pageContext,
 }: PageProps<Queries.UseCasePageQuery, Context>) => {
   const intl = useIntl()
-  if (!siteData || !mdx?.frontmatter) {
+  if (!siteData || !mdx?.frontmatter)
     throw new Error(
       "UseCases page template query does not return expected values"
     )
-  }
+  if (!mdx?.frontmatter?.title)
+    throw new Error("Required `title` property missing for use-cases template")
 
   const isRightToLeft = isLangRightToLeft(mdx.frontmatter.lang as Lang)
   const showMergeBanner = !!mdx.frontmatter.preMergeBanner
@@ -334,7 +339,7 @@ const UseCasePage = ({
     useCase = "dao"
   }
 
-  const dropdownLinks = {
+  const dropdownLinks: ButtonDropdownList = {
     text: "template-usecase-dropdown",
     ariaLabel: "template-usecase-dropdown-aria",
     items: [

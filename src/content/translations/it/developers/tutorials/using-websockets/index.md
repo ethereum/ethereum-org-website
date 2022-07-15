@@ -11,7 +11,7 @@ tags:
   - "primi passi"
   - "iscrizione"
   - "javascript"
-skill: principiante
+skill: beginner
 source: documentazione Alchemy
 sourceUrl: https://docs.alchemyapi.io/guides/using-websockets
 published: 2020-12-01

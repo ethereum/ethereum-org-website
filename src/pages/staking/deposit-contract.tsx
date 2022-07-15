@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { graphql, PageProps } from "gatsby"
 import makeBlockie from "ethereum-blockies-base64"
 import { getImage } from "gatsby-plugin-image"
-import { useIntl } from "gatsby-plugin-intl"
+import { useIntl } from "react-intl"
 
 import Breadcrumbs from "../../components/Breadcrumbs"
 import ButtonLink from "../../components/ButtonLink"
@@ -469,7 +469,7 @@ const DepositContractPage = ({
                   </ButtonRow>
                 </>
               )}
-              <InfoBanner isWarning={true} emoji=":warning:" mt={`2rem`}>
+              <InfoBanner isWarning={true} emoji=":warning:">
                 <div>
                   <Translation id="page-staking-deposit-contract-warning-2" />{" "}
                   <Link to="https://launchpad.ethereum.org">

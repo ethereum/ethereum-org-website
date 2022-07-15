@@ -19,7 +19,7 @@ incomplete: true
 - [以太坊治理简介](/governance/)
 - [以太坊治理概述](https://web.archive.org/web/20201107234050/https://blog.bmannconsulting.com/ethereum-governance/) _2019 年 3 月 31 日 - Boris Mann_
 - [以太坊协议开发治理和网络升级协调](https://hudsonjameson.com/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) _2020 年 3 月 23 日 - Hudson Jameson_
-- [以太坊核心开发者会议播放列表](https://www.youtube.com/playlist?list=PLaM7G4Llrb7zfMXCZVEXEABT8OSnd4-7w)_（YouTube 播放列表）_
+- [以太坊核心开发者会议播放列表](https://www.youtube.com/playlist?list=PLaM7G4Llrb7zfMXCZVEXEABT8OSnd4-7w) _（YouTube 播放列表）_
 
 ## 标准的类型 {#types-of-standards}
 
@@ -34,7 +34,7 @@ incomplete: true
 - [ERC-777](/developers/docs/standards/tokens/erc-777/) - 关于 ERC-20 的代币标准改进。
 - [ERC-1155](/developers/docs/standards/tokens/erc-1155/) - 一个能包括同质化和非同质化资产的代币标准。
 
-了解更多关于[ 代币标准](/developers/docs/standards/tokens/)的信息。
+了解更多关于 [代币标准](/developers/docs/standards/tokens/)的信息。
 
 ## 延伸阅读 {#further-reading}
 

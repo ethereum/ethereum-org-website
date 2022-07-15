@@ -61,7 +61,7 @@ En jalonnant votre ETH, vous pouvez gagner des récompenses tout en aidant à s�
 
 - [Plus d'infos sur la mise en jeu](/staking/)
 
-### Soutenir les projets {#suport-projects}
+### Soutenir les projets {#support-projects}
 
 L'écosystème Ethereum a pour mission de financer des biens publics et des projets percutants. Avec de très petits dons, vous pouvez montrer votre soutien et permettre la réalisation d'un travail important.
 
@@ -75,7 +75,7 @@ L'écosystème Ethereum a pour mission de financer des biens publics et des proj
 
 ## Chefs de produit <Emoji text=":fountain_pen:" size={1} /> {#product-managers}
 
-- L'écosystème Ethereum a besoin de vos talents ! De nombreuses entreprises embauchent pour des postes de chef de produit. Si vous souhaitez commencer par contribuer à un projet open source, contactez les [Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu) ou [MetaCartel](https:/ /www.metacartel.org/)
+- L'écosystème Ethereum a besoin de vos talents ! De nombreuses entreprises embauchent pour des postes de chef de produit. Si vous souhaitez commencer par contribuer à un projet open source, contactez les [Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu) ou [MetaCartel](https://www.metacartel.org/)
 
 ## Marketing <Emoji text=":megaphone:" size={1} /> {#marketing}
 

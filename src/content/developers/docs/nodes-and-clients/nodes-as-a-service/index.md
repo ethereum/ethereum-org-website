@@ -52,7 +52,7 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
   - Features
     - Largest free tier with 300M compute units per month (~30M getLatestBlock requests)
     - Multichain support for Polygon, Starknet, Optimism, Arbitrum
-    - Powering ~70% of the largest Ethereum dApps and DeFi transaction volume
+    - Powering ~70% of the largest Ethereum dapps and DeFi transaction volume
     - Real-time webhook alerts via Alchemy Notify
     - Best-in-class support and reliability / stability
     - Alchemy's NFT API
@@ -199,9 +199,13 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Suitable for Developers to Enterprises
 - [**Rivet**](https://rivet.cloud/)
   - [Docs](https://rivet.readthedocs.io/en/latest/)
+  - Features - Free tier option - Scale as you go -[**SenseiNode**](https://senseinode.com)
+  - [Docs](https://docs.senseinode.com/)
   - Features
-    - Free tier option
-    - Scale as you go
+  - Dedicated and Share nodes
+  - Dashboard
+  - Hosting off AWS on multiple hosting providers accross different locations in Latin America
+  - Prysm and Lighthouse clients
 - [**SettleMint**](https://console.settlemint.com/)
   - [Docs](https://docs.settlemint.com/)
   - Features

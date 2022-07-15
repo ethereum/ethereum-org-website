@@ -9,7 +9,7 @@ tags:
   - "contrats intelligents"
   - "premiers pas"
   - "déploiement"
-skill: débutant
+skill: beginner
 lang: fr
 sidebar: true
 published: 2021-03-31
@@ -37,7 +37,7 @@ Une fois que vous avez créé un compte Alchemy, vous pouvez générer une clé 
 
 ![créer une vue de l'application Hello world](./create-app-view-hello-world.png)
 
-3. Cliquez sur « Create App » et voilà ! Votre application devrait apparaître dans le tableau ci-dessous.
+3. Cliquez sur « Créer l'application » et voilà ! Votre application devrait apparaître dans le tableau.
 
 ## Étape 3 : Créez un compte Ethereum (adresse) {#step-3}
 
@@ -233,7 +233,7 @@ PRIVATE_KEY = "your-metamask-private-key"
 Pour les relier à notre code, nous ferons référence à ces variables dans notre fichier `hardhat.config.js` à l'étape 13.
 
 <InfoBanner isWarning={true}>
-Ne propagez pas le fichier <code>.env</code> ! Assurez-vous de ne jamais partager ou exposer votre fichier <code>.env</code> à quiconque, car vous compromettez vos secrets en le faisant. Si vous utilisez le contrôle de version, ajoutez votre <code>.env</code> à un fichier <a href="https://git-scm.com/docs/gitignore">gitignore</a>.
+Ne propagez pas le fichier <code>.env</code> ! Veillez à ne jamais partager ou exposer votre fichier <code>.env</code> avec quiconque car vous compromettez vos secrets en le faisant. Si vous utilisez le contrôle de version, ajoutez votre <code>.env</code> à un fichier <a href="https://git-scm.com/docs/gitignore">gitignore</a>.
 </InfoBanner>
 
 ## Étape 12 : Installez Ethers.js {#step-12-install-ethersjs}

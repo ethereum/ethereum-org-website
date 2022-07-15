@@ -13,7 +13,7 @@ Se você quiser usar JavaScript para se conectar a um nó Ethereum, é possível
 
 ## Pré-requisitos {#prerequisites}
 
-Além de entender o JavaScript, pode ser útil entender a [pilha de Ethereum](/developers/docs/ethereum-stack/) e[ clientes Ethereum](/developers/docs/nodes-and-clients/).
+Além de entender o JavaScript, pode ser útil entender a [pilha de Ethereum](/developers/docs/ethereum-stack/) e [clientes Ethereum](/developers/docs/nodes-and-clients/).
 
 ## Por que usar uma biblioteca? {#why-use-a-library}
 

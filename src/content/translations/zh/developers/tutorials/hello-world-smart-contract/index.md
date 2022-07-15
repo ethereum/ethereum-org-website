@@ -9,13 +9,13 @@ tags:
   - "智能合约"
   - "入门指南"
   - "部署"
-skill: 初学者
+skill: beginner
 lang: zh
 sidebar: true
 published: 2021-03-31
 ---
 
-如果您是区块链开发的初学者，还不知道如何开始，或者您只是想了解怎样部署智能合约并与之进行交互，这篇教程就是为您准备的。 通过使用虚拟钱包 ([Metamask](https://metamask.io/))、[Solidity](https://docs.soliditylang.org/en/v0.8.0/)、[Hardhat](https://hardhat.org/) 和 [Alchemy](https://alchemyapi.io/eth)（如果您不理解这些名词的含义，不用担心，后续我们会进行解释），我们将演示在 Ropsten 测试网络上创建并部署一个简单的智能合约。
+如果您是区块链开发的初学者，还不知道如何开始，或者您只是想了解怎样部署智能合约并与之进行交互，这篇教程就是为您准备的。 通过使用虚拟钱包 ([MetaMask](https://metamask.io/))、[Solidity](https://docs.soliditylang.org/en/v0.8.0/)、[Hardhat](https://hardhat.org/) 和 [Alchemy](https://alchemyapi.io/eth)（如果您不理解这些名词的含义，不用担心，后续我们会进行解释），我们将演示在 Ropsten 测试网络上创建并部署一个简单的智能合约。
 
 在本教程的第 2 部分，我们将学习在智能合约部署后如何与之进行交互，第 3 部分将学习如何在 Etherscan 上发布智能合约。
 
@@ -37,13 +37,13 @@ published: 2021-03-31
 
 ![创建应用程序视图 hello world](./create-app-view-hello-world.png)
 
-3. 点击“创建应用程序”即可！ 您的应用程序应该会出现在下面的表格中。
+3. 点击"创建应用程序"，完成！ 您的应用程序应该会出现在下面的表格中。
 
 ## 步骤 3：创建一个以太坊账户（地址） {#step-3}
 
 我们需要一个以太坊帐户来发送和接收交易。 在本教程中，我们将使用 MetaMask——浏览器中的虚拟钱包，用来管理您的以太坊账户地址。 关于[交易](/developers/docs/transactions/)的详细信息。
 
-您可以[在这里](https://metamask.io/download.html)免费下载并创建一个 Metamsk 账户。 创建账户时，或者如果您已经有一个账户时，确保切换到右上方的“Ropsten 测试网络”（这样我们就不会用实际货币进行交易）。
+您可以[在这里](https://metamask.io/download.html)免费下载并创建一个 MetaMask 账户。 创建账户时，或者如果您已经有一个账户时，确保切换到右上方的“Ropsten 测试网络”（这样我们就不会用实际货币进行交易）。
 
 ![metask ropsten 示例](./metamask-ropsten-example.png)
 
@@ -141,7 +141,7 @@ npx hardhat
 
 👷 Welcome to Hardhat v2.0.11 👷‍?
 
-What do you want to do? …
+您想做什么？ …
 Create a sample project
 ❯ Create an empty hardhat.config.js
 Quit
@@ -176,22 +176,23 @@ mkdir scripts
 pragma solidity ^0.7.0;
 
 // Defines a contract named `HelloWorld`.
-// 一个合约是函数和数据（其状态）的集合。 Once deployed, a contract resides at a specific address on the Ethereum blockchain. Learn more: https://solidity.readthedocs.io/en/v0.5.10/structure-of-a-contract.html
+// 一个合约是函数和数据（其状态）的集合。 // 一旦部署，合约就会留在以太坊区块链的一个特定地址上。 Learn more: https://solidity.readthedocs.io/en/v0.5.10/structure-of-a-contract.html
 contract HelloWorld {
 
    // Declares a state variable `message` of type `string`.
-   // 状态变量是其值永久存储在合约存储中的变量。 The keyword `public` makes variables accessible from outside a contract and creates a function that other contracts or clients can call to access the value.
+   // 状态变量是其值永久存储在合约存储中的变量。 // 关键字 `public` 使得可以从合约外部访问。 // 并创建了一个其它合约或客户端可以调用访问该值的函数。
    string public message;
 
-   // Similar to many class-based object-oriented languages, a constructor is a special function that is only executed upon contract creation.
-   // 构造器用于初始化合约的数据。 Learn more:https://solidity.readthedocs.io/en/v0.5.10/contracts.html#constructors
-   constructor(string memory initMessage) {
-
-      // Accepts a string argument `initMessage` and sets the value into the contract's `message` storage variable).
+    // 类似于很多基于类的面向对象语言，
+    // 构造函数是仅在合约创建时执行的特殊函数。
+   // 构造器用于初始化合约的数据。 // 了解更多：https://solidity.readthedocs.io/en/v0.5.10/contracts.html#constructors
+    constructor(string memory initMessage) public {
+        // 接受一个字符变量 `initMessage`
+        // 并为合约的存储变量`message` 赋值
       message = initMessage;
-   }
+    }
 
-   // A public function that accepts a string argument and updates the `message` storage variable.
+    // 一个 public 函数接受字符参数并更新存储变量 `message`
    function update(string memory newMessage) public {
       message = newMessage;
    }
@@ -202,7 +203,7 @@ contract HelloWorld {
 
 ## 步骤 11：将 Metamask 和 Alchemy 连接至您的项目 {#step-11}
 
-我们创建了 Metamask 钱包、Alchemy 帐户，并且编写了一个智能合约，现在是将这三者连起来的时候了。
+我们创建了 MetaMask 钱包、Alchemy 帐户，并且编写了一个智能合约，现在是将这三者连起来的时候了。
 
 从虚拟钱包发送的每笔交易都需要使用您独有的私钥签名。 为了给程序提供此项许可，我们可以安全地将私钥（和 Alchemy 应用程序接口密钥）存储在一个环境文件中。
 
@@ -214,7 +215,7 @@ contract HelloWorld {
 npm install dotenv --save
 ```
 
-然后在我们的项目根目录中创建 `.env` 文件，并将您的 Metamask 私钥和超文本传输协议 Alchemy 应用程序接口网址加入其中。
+然后，在项目的根目录中创建 `.env` 文件，并将您的 Metamask 私钥和超文本传输协议 Alchemy 应用程序接口网址添加到其中。
 
 - 遵循[这些说明](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key)导出您的私钥
 - 请从下方获取超文本传输协议 Alchemy 应用程序接口网址
@@ -233,7 +234,7 @@ PRIVATE_KEY = "your-metamask-private-key"
 为了将这些变量和代码连接，我们将在步骤 13 中调用 `hardhat.config.js` 文件中的这些变量。
 
 <InfoBanner isWarning={true}>
-不要提交 <code>.env</code>！ 请确保永远不要与任何人共享或公开您的 <code>.env</code> 文件，因为这样做会泄露您的秘密。 如果您使用版本控制，请将您的 <code>.env</code> 添加到 <a href="https://git-scm.com/docs/gitignore">gitignore</a> 文件中。
+不要提交 <code>.env</code>！ 请确保永远不要与任何人共享或公开您的 <code>.env</code> 文件，因为这样做会泄露您的私钥。 如果您使用版本控制，请将您的 <code>.env</code> 添加到 <a href="https://git-scm.com/docs/gitignore">gitignore</a> 文件中。
 </InfoBanner>
 
 ## 步骤 12：安装 Ethers.js {#step-12-install-ethersjs}
@@ -344,7 +345,7 @@ Contract deployed to address: 0x6cd7d44516a20882cEa2DE9f205bF401c0d23570
 
 ![etherscan 合约](./etherscan-contract.png)
 
-`From` 地址应该和您的 Metamask 账户地址相同，而 To 地址会显示“Contract Creation”，但如果我们点击进入交易，我们会在 `To` 字段看到我们的合约地址：
+`From` 地址应该和您的 MetaMask 账户地址相同，而 To 地址会显示“Contract Creation”，但如果我们点击进入交易，我们会在 `To` 字段看到我们的合约地址：
 
 ![etherscan 交易](./etherscan-transaction.png)
 

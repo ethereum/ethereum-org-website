@@ -11,6 +11,8 @@ You should have a good understanding of all the foundational topics and a high-l
 
 Looking for a more beginner-friendly resource? See our [introduction to layer 2](/layer-2/).
 
+You should also be familiar with zero-knowledge proofs. See our [introduction to zero-knowledge proofs](/zero-knowledge-proofs/).
+
 ## Zero-knowledge rollups {#zk-rollups}
 
 **Zero-knowledge rollups (ZK-rollups)** bundle (or "roll-up") hundreds of transfers off-chain and generate a cryptographic proof. These proofs can come in the form of SNARKs (succinct non-interactive argument of knowledge) or STARKs (scalable transparent argument of knowledge). SNARKs and STARKs are known as validity proofs and get posted to layer 1.
@@ -46,4 +48,6 @@ Multiple implementations of ZK-rollups exist that you can integrate into your da
 - [What Are Zero-Knowledge Rollups?](https://coinmarketcap.com/alexandria/glossary/zero-knowledge-rollups)
 - [EthHub on zk-rollups](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/zk-rollups/)
 - [STARKs vs SNARKs](https://consensys.net/blog/blockchain-explained/zero-knowledge-proofs-starks-vs-snarks/)
+- [zkEVM](https://hackmd.io/@yezhang/S1_KMMbGt)
+- [Awesome-zkEVM](https://github.com/LuozhuZhang/awesome-zkevm)
 - [More on layer 2](/layer-2/)
