@@ -168,7 +168,7 @@ Se esegui la rete di prova Prater livello di consenso, il tempo di sincronizzazi
 
 ## Monitoraggio delle dashboard {#monitoring-dashboards}
 
-Per questa prima versione, abbiamo incluso 3 dashboard di monitoraggio basate su Prometheus[[5]](/developers/tutorials/run-node-raspberry-pi/#references) / Grafana [[6]](/developers/tutorials/run-node-raspberry-pi/#references) per monitorare il nodo e i dati dei client (Geth e Besu). Puoi accedere tramite il tuo browser web:
+Per questa prima versione, abbiamo incluso 3 dashboard di monitoraggio basate su Prometheus[[5]](/developers/tutorials/run-node-raspberry-pi/#references)/Grafana [[6]](/developers/tutorials/run-node-raspberry-pi/#references) per monitorare il nodo e i dati dei client (Geth e Besu). Puoi accedere tramite il tuo browser web:
 
 ```bash
 URL: http://your_raspberrypi_IP:3000

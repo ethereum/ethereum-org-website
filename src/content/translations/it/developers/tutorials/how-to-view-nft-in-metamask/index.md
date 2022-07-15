@@ -9,7 +9,7 @@ tags:
   - "MetaMask"
   - "token non fungibili"
   - "Solidity"
-skill: beginner
+skill: principiante
 lang: it
 sidebar: true
 published: 2021-04-22
