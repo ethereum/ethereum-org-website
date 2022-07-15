@@ -2,7 +2,7 @@ import React, { useContext } from "react"
 import { useIntl } from "react-intl"
 import { ThemeContext } from "styled-components"
 import styled from "styled-components"
-import { GatsbyImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { graphql, PageProps } from "gatsby"
 
 import AssetDownload from "../components/AssetDownload"
@@ -93,7 +93,7 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
         <HeroContainer>
           <Header>
             <Image
-              image={assetPageHeroImage}
+              image={getImage(assetPageHeroImage)}
               alt={translateMessageId("page-assets-eth-diamond-gray", intl)}
             />
             <h1>
