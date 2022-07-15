@@ -3,15 +3,7 @@
 declare module "gatsby-plugin-image"
 
 declare module "*developer-docs-links.yaml" {
-  import { TranslationKey } from "./src/utils/translations"
-
-  export interface DeveloperDocsLink {
-    id: TranslationKey
-    to: string
-    path: string
-    description: TranslationKey
-    items: Array<DeveloperDocsLink>
-  }
+  import { DeveloperDocsLink } from "./src/types"
   const content: Array<DeveloperDocsLink>
   export default content
 }

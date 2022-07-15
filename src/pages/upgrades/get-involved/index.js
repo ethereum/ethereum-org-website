@@ -2,7 +2,7 @@ import React, { useContext, useState, useEffect } from "react"
 import { ThemeContext } from "styled-components"
 import styled from "styled-components"
 import { graphql } from "gatsby"
-import { useIntl } from "gatsby-plugin-intl"
+import { useIntl } from "react-intl"
 import { shuffle } from "lodash"
 import { getImage } from "gatsby-plugin-image"
 import { translateMessageId } from "../../../utils/translations"
@@ -27,6 +27,7 @@ import {
   SloganGradient,
 } from "../../../components/SharedStyledComponents"
 import Breadcrumbs from "../../../components/Breadcrumbs"
+import FeedbackCard from "../../../components/FeedbackCard"
 
 const HeroContainer = styled.div`
   padding-left: 0rem;
@@ -498,6 +499,7 @@ const GetInvolvedPage = ({ data, location }) => {
           </RightColumn>
         </ReverseRow>
       </Content>
+      <FeedbackCard />
     </Page>
   )
 }
@@ -518,7 +520,7 @@ export const Clients = graphql`
 `
 
 export const query = graphql`
-  {
+  query GetInvolvedPage {
     bountyHunters: allConsensusBountyHuntersCsv(
       sort: { order: DESC, fields: score }
     ) {

@@ -1,5 +1,5 @@
 import React, { useContext } from "react"
-import { useIntl } from "gatsby-plugin-intl"
+import { useIntl } from "react-intl"
 import { ThemeContext } from "styled-components"
 import styled from "styled-components"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
@@ -10,6 +10,7 @@ import Link from "../components/Link"
 import PageMetadata from "../components/PageMetadata"
 import Translation from "../components/Translation"
 import { Page, Content } from "../components/SharedStyledComponents"
+import FeedbackCard from "../components/FeedbackCard"
 
 import { translateMessageId } from "../utils/translations"
 import EthGlyphColoredSvg from "../assets/assets/eth-glyph-colored.svg"
@@ -492,6 +493,7 @@ const AssetsPage = ({ data }) => {
           />
         </Row>
       </Content>
+      <FeedbackCard />
     </Page>
   )
 }
@@ -507,7 +509,7 @@ export const assetItem = graphql`
 `
 
 export const query = graphql`
-  {
+  query AssetsPage {
     ethDiamondBlackHero: file(
       relativePath: { eq: "assets/eth-diamond-black.png" }
     ) {

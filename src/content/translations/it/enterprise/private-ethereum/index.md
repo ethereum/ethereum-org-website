@@ -7,7 +7,7 @@ sidebar: true
 
 # Ethereum privata per le imprese {#private-ethereum-for-enterprise}
 
-Le applicazioni aziendali della blockchain possono essere create sulla rete principale pubblica Ethereum senza autorizzazioni o su blockchain private basate sulla tecnologia di Ethereum. Per ulteriori informazioni sullo sviluppo sulla rete principale Ethereum, vedi [Rete principale Ethereum per le imprese](/enterprise/).
+Le applicazioni blockchain aziendali possono essere create sulla rete principale pubblica Ethereum senza permessi o su blockchain private basate sulla tecnologia Ethereum. Per ulteriori informazioni sullo sviluppo sulla rete principale Ethereum, vedi [Rete principale Ethereum per le imprese](/enterprise/).
 
 ## Risorse per sviluppatori per la rete Ethereum privata per le imprese {#developer-resources-private-enterprise-ethereum}
 

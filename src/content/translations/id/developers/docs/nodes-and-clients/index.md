@@ -293,7 +293,7 @@ Mode sinkronisasi yang Anda pilih akan mempengaruhi persyaratan ukuran ruangan c
 
 ![Sebuah bagan menunjukkan GB yang diperlukan untuk satu sinkronisasi arsip sedang populer](./archive-sync.png)
 
-Bagan ini menunjukkan bagaimana persyaratan kapasitas penyimpanan selalu berubah. Untuk data Geth dan Parity yang paling terbaru, lihat[ data sinkronisasi penuh](https://etherscan.io/chartsync/chaindefault) dan [ data sinkronisasi arsip](https://etherscan.io/chartsync/chainarchive).
+Bagan ini menunjukkan bagaimana persyaratan kapasitas penyimpanan selalu berubah. Untuk data Geth dan Parity yang paling terbaru, lihat [data sinkronisasi penuh](https://etherscan.io/chartsync/chaindefault) dan [ data sinkronisasi arsip](https://etherscan.io/chartsync/chainarchive).
 
 ### Ethereum pada komputer papan tunggal {#ethereum-on-a-single-board-computer}
 

@@ -30,6 +30,7 @@ import {
 import Emoji from "../components/Emoji"
 import YouTube from "../components/YouTube"
 import PreMergeBanner from "../components/PreMergeBanner"
+import FeedbackCard from "../components/FeedbackCard"
 
 import { isLangRightToLeft } from "../utils/translations"
 import { Lang } from "../utils/languages"
@@ -148,13 +149,16 @@ const Contributors = styled(FileContributors)`
 
 const TutorialPage = ({
   data: { siteData, pageData: mdx },
-  pageContext,
+  pageContext: { relativePath },
 }: PageProps<Queries.TutorialPageQuery, Context>) => {
-  if (!siteData || !mdx?.frontmatter) {
+  if (!siteData || !mdx?.frontmatter)
     throw new Error(
       "Tutorial page template query does not return expected values"
     )
-  }
+  if (!mdx?.frontmatter?.title)
+    throw new Error("Required `title` property missing for tutorial template")
+  if (!relativePath)
+    throw new Error("Required `relativePath` is missing on pageContext")
 
   const isRightToLeft = isLangRightToLeft(mdx.frontmatter.lang as Lang)
   const showMergeBanner = !!mdx.frontmatter.preMergeBanner
@@ -162,9 +166,7 @@ const TutorialPage = ({
   const tocItems = mdx.tableOfContents?.items
 
   const { editContentUrl } = siteData.siteMetadata || {}
-  const { relativePath } = pageContext
   const absoluteEditPath = `${editContentUrl}${relativePath}`
-
   return (
     <div>
       {showMergeBanner && <PreMergeBanner />}
@@ -190,6 +192,7 @@ const TutorialPage = ({
             relativePath={relativePath}
             editPath={absoluteEditPath}
           />
+          <FeedbackCard />
         </ContentContainer>
         {mdx.frontmatter.sidebar && tocItems && (
           <DesktopTableOfContents

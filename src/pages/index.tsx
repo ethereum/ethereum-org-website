@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { useIntl } from "gatsby-plugin-intl"
+import { useIntl } from "react-intl"
 import { graphql, PageProps } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import styled from "styled-components"
@@ -24,6 +24,7 @@ import {
   LeftColumn,
 } from "../components/SharedStyledComponents"
 import { translateMessageId, isLangRightToLeft } from "../utils/translations"
+import PreMergeBanner from "../components/PreMergeBanner"
 
 const Hero = styled(GatsbyImage)`
   width: 100%;
@@ -704,6 +705,7 @@ contract SimpleDomainRegistry {
         title={translateMessageId("page-index-meta-title", intl)}
         description={translateMessageId("page-index-meta-description", intl)}
       />
+      <PreMergeBanner announcementOnly />
       <Hero
         image={getImage(data.hero)!}
         alt={translateMessageId("page-index-hero-image-alt", intl)}
@@ -717,7 +719,7 @@ contract SimpleDomainRegistry {
         <Description>
           <Translation id="page-index-description" />
         </Description>
-        <ButtonLink isSecondary to="/what-is-ethereum/">
+        <ButtonLink isSecondary to="/learn/">
           <Translation id="page-index-title-button" />
         </ButtonLink>
       </Header>

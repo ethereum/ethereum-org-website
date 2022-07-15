@@ -6,7 +6,7 @@ tags:
   - "solidity"
   - "contracte inteligente"
   - "securitate"
-skill: intermediar
+skill: intermediate
 lang: ro
 sidebar: true
 published: 2020-09-06

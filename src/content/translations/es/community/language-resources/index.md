@@ -17,7 +17,7 @@ Si prefiere leer en su idioma nativo o conoce a alguien que no hable inglés, a 
 
 ## Recursos de Ethereum.org {#ethereum-org}
 
-Ethereum.org se traduce por nativos a más de 40 idiomas que puede encontrar en nuestra página [languages](/languages).
+Ethereum.org se traduce por nativos a más de 40 idiomas que puede encontrar en nuestra página [idiomas](/languages).
 
 Si es bilingüe y quiere ayudarnos a llegar a más personas, también puede involucrarse en [ethereum.org Translation Program](/contributing/translation-program/#translation-program) y ayudarnos a traducir el sitio web.
 
@@ -112,8 +112,8 @@ Si es bilingüe y quiere ayudarnos a llegar a más personas, también puede invo
 
 ### Japonés {#ja}
 
-- [Japan Virtual and Crypto assets Exchange Association](https://jvcea.or.jp/)
-- [Japan Cryptoasset Business Association](https://cryptocurrency-association.org/)
-- [Get started with blockchain development - Learn | Microsoft Docs](https://docs.microsoft.com/ja-jp/learn/paths/ethereum-blockchain-development/) - This learning path introduces you to blockchain and development on the Ethereum platform
-- [Mastering Ethereum](https://www.oreilly.co.jp/books/9784873118963/) - Mastering Ethereum in Japanese
-- [Hands-On Smart Contract Development with Solidity and Ethereum](https://www.oreilly.co.jp/books/9784873119342/) - Hands-On Smart Contract Development with Solidity and Ethereum in Japanese
+- [Asociación de intercambio de activos virtuales y criptomonedas de Japón](https://jvcea.or.jp/)
+- [Asociación empresarial de criptoactivos de Japón](https://cryptocurrency-association.org/)
+- [Comience con el desarrollo de la cadena de bloques: Aprender | Microsoft Docs](https://docs.microsoft.com/ja-jp/learn/paths/ethereum-blockchain-development/) Esta módulo de aprendizaje es una introducción a la cadena de bloques y el desarrollo en la plataforma Ethereum
+- [Dominar Ethereum](https://www.oreilly.co.jp/books/9784873118963/): Dominar Ethereum en japonés
+- [Desarrollo práctico de contratos inteligentes con Solidity y Ethereum](https://www.oreilly.co.jp/books/9784873119342/): Desarrollo práctico de contratos inteligentes con Solidity y Ethereum en japonés

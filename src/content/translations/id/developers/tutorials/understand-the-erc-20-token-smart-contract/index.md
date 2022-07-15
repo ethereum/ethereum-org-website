@@ -8,7 +8,7 @@ tags:
   - "solidity"
   - "memulai"
   - "erc-20"
-skill: pemula
+skill: beginner
 lang: id
 sidebar: true
 published: 2020-04-05

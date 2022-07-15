@@ -9,7 +9,7 @@ tags:
   - "kontrak pintar"
   - "memulai"
   - "menyebarkan"
-skill: pemula
+skill: beginner
 lang: id
 sidebar: true
 published: 2021-03-31

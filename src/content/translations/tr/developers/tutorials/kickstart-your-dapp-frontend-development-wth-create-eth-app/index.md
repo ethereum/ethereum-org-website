@@ -12,7 +12,7 @@ tags:
   - "compound"
   - "uniswap"
   - "sablier"
-skill: acemi
+skill: beginner
 lang: tr
 sidebar: true
 published: 2020-04-27

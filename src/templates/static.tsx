@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql, PageProps } from "gatsby"
-import { useIntl } from "gatsby-plugin-intl"
+import { useIntl } from "react-intl"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import styled from "styled-components"
@@ -149,15 +149,18 @@ const components = {
 
 const StaticPage = ({
   data: { siteData, pageData: mdx },
-  pageContext,
+  pageContext: { relativePath },
 }: PageProps<Queries.StaticPageQuery, Context>) => {
   const intl = useIntl()
 
-  if (!siteData || !mdx?.frontmatter || !mdx.parent) {
+  if (!siteData || !mdx?.frontmatter || !mdx.parent)
     throw new Error(
       "Static page template query does not return expected values"
     )
-  }
+  if (!mdx?.frontmatter?.title)
+    throw new Error("Required `title` property missing for static template")
+  if (!relativePath)
+    throw new Error("Required `relativePath` is missing on pageContext")
 
   const isRightToLeft = isLangRightToLeft(mdx.frontmatter.lang as Lang)
 
@@ -169,12 +172,13 @@ const StaticPage = ({
 
   const tocItems = mdx.tableOfContents?.items
   const { editContentUrl } = siteData.siteMetadata || {}
-  const { relativePath } = pageContext
   const absoluteEditPath =
     relativePath.split("/").includes("whitepaper") ||
     relativePath.split("/").includes("events")
       ? ""
       : `${editContentUrl}${relativePath}`
+
+  const slug = mdx.fields?.slug || ""
 
   return (
     <Page dir={isRightToLeft ? "rtl" : "ltr"}>
@@ -183,7 +187,7 @@ const StaticPage = ({
         description={mdx.frontmatter.description}
       />
       <ContentContainer>
-        <Breadcrumbs slug={mdx.fields?.slug} />
+        <Breadcrumbs slug={slug} />
         <LastUpdated
           dir={isLangRightToLeft(intl.locale as Lang) ? "rtl" : "ltr"}
         >
@@ -199,7 +203,7 @@ const StaticPage = ({
         <MDXProvider components={components}>
           <MDXRenderer>{mdx.body}</MDXRenderer>
         </MDXProvider>
-        <FeedbackCard />
+        <FeedbackCard isArticle />
       </ContentContainer>
       {mdx.frontmatter.sidebar && tocItems && (
         <TableOfContents

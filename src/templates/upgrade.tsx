@@ -1,18 +1,19 @@
 import React from "react"
 import { graphql, PageProps } from "gatsby"
-import { useIntl } from "gatsby-plugin-intl"
+import { useIntl } from "react-intl"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import styled from "styled-components"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 import ButtonLink from "../components/ButtonLink"
-import ButtonDropdown from "../components/ButtonDropdown"
+import ButtonDropdown, {
+  List as ButtonDropdownList,
+} from "../components/ButtonDropdown"
 import Breadcrumbs from "../components/Breadcrumbs"
 import Card from "../components/Card"
 import Icon from "../components/Icon"
 import Contributors from "../components/Contributors"
-import DismissibleCard from "../components/DismissibleCard"
 import InfoBanner from "../components/InfoBanner"
 import UpgradeStatus from "../components/UpgradeStatus"
 import Link from "../components/Link"
@@ -40,9 +41,14 @@ import {
 import Emoji from "../components/Emoji"
 import YouTube from "../components/YouTube"
 import MergeInfographic from "../components/MergeInfographic"
+import FeedbackCard from "../components/FeedbackCard"
 
 import { getLocaleTimestamp } from "../utils/time"
-import { isLangRightToLeft } from "../utils/translations"
+import {
+  isLangRightToLeft,
+  translateMessageId,
+  TranslationKey,
+} from "../utils/translations"
 import { getSummaryPoints } from "../utils/getSummaryPoints"
 import { Lang } from "../utils/languages"
 import { Context } from "../types"
@@ -307,7 +313,7 @@ const TitleCard = styled.div`
   }
 `
 
-const dropdownLinks = {
+const dropdownLinks: ButtonDropdownList = {
   text: "page-upgrades-upgrades-guide",
   ariaLabel: "page-upgrades-upgrades-aria-label",
   items: [
@@ -320,7 +326,7 @@ const dropdownLinks = {
       to: "/upgrades/merge/",
     },
     {
-      text: "page-upgrades-upgrades-shard-chains",
+      text: "page-upgrades-shard-title",
       to: "/upgrades/sharding/",
     },
   ],
@@ -331,11 +337,12 @@ const UpgradePage = ({
 }: PageProps<Queries.UpgradePageQuery, Context>) => {
   const intl = useIntl()
 
-  if (!mdx?.frontmatter || !mdx.parent) {
+  if (!mdx?.frontmatter || !mdx.parent)
     throw new Error(
       "Upgrade page template query does not return expected values"
     )
-  }
+  if (!mdx?.frontmatter?.title)
+    throw new Error("Required `title` property missing for upgrade template")
 
   const isRightToLeft = isLangRightToLeft(mdx.frontmatter.lang as Lang)
   const tocItems = mdx.tableOfContents?.items
@@ -349,12 +356,14 @@ const UpgradePage = ({
 
   const summaryPoints = getSummaryPoints(mdx.frontmatter)
 
+  const slug = mdx.fields?.slug || ""
+
   return (
     <Container>
       <HeroContainer>
         <TitleCard>
-          <DesktopBreadcrumbs slug={mdx.fields?.slug} startDepth={1} />
-          <MobileBreadcrumbs slug={mdx.fields?.slug} startDepth={1} />
+          <DesktopBreadcrumbs slug={slug} startDepth={1} />
+          <MobileBreadcrumbs slug={slug} startDepth={1} />
           <Title>{mdx.frontmatter.title}</Title>
           <SummaryBox>
             <ul>
@@ -388,24 +397,13 @@ const UpgradePage = ({
               maxDepth={mdx.frontmatter.sidebarDepth}
             />
           )}
-          <DismissibleCard storageKey="dismissed-eth-upgrade-psa">
-            <Emoji text=":cheering_megaphone:" size={5} />
-            <h2>
-              <Translation id="eth-upgrade-what-happened" />
-            </h2>
-            <p>
-              <Translation id="eth-upgrade-what-happened-description" />{" "}
-              <Link to="https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/">
-                <Translation id="more-info" />.
-              </Link>
-            </p>
-          </DismissibleCard>
         </InfoColumn>
         <ContentContainer id="content">
           {/* <DesktopBreadcrumbs slug={mdx.fields.slug} startDepth={1} /> */}
           <MDXProvider components={components}>
             <MDXRenderer>{mdx.body}</MDXRenderer>
           </MDXProvider>
+          <FeedbackCard />
         </ContentContainer>
         <MobileButton>
           <MobileButtonDropdown list={dropdownLinks} />

@@ -61,7 +61,7 @@ Dengan menaruhkan ETH Anda, Anda dapat mendapatkan hadiah sementara menolong men
 
 - [Selengkapnya tentang penaruhan](/staking/)
 
-### Dukung proyek {#suport-projects}
+### Dukung proyek {#support-projects}
 
 Ekosistem Ethereum bertujuan mendanai fasilitas publik dan proyek yang berdampak. Dengan donasi yang sangat kecil, Anda dapat menunjukkan dukungan Anda dan memungkinkan pekerjaan penting dapat diwujudkan.
 

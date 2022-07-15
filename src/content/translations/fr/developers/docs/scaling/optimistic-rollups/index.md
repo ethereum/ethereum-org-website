@@ -1,5 +1,5 @@
 ---
-title: Rollups optimisés
+title: rollups optimisés
 description: Introduction aux rollups optimisés
 lang: fr
 sidebar: true
@@ -7,7 +7,7 @@ sidebar: true
 
 ## Prérequis {#prerequisites}
 
-Vous devez avoir une bonne compréhension de tous les sujets fondamentaux et une compréhension de haut niveau de la [mise à l'échelle Ethereum](/developers/docs/scaling/). La mise en œuvre de solutions de mise à l'échelle telles que les rollups est un sujet avancé, car la technologie est moins éprouvée et toujours en cours de recherche et développement.
+Vous devez avoir une bonne compréhension de tous les sujets fondamentaux et une compréhension approfondie de la [mise à l'échelle d'Ethereum](/developers/docs/scaling/). La mise en œuvre de solutions de mise à l'échelle telles que les rollups est un sujet avancé, car la technologie est moins éprouvée et toujours en cours de recherche et développement.
 
 Vous recherchez une ressource plus conviviale pour les débutants ? Consultez notre [introduction à la Couche 2](/layer-2/).
 
@@ -15,19 +15,19 @@ Vous recherchez une ressource plus conviviale pour les débutants ? Consultez no
 
 Les rollups optimisés s'installent en parallèle à la chaîne principale d'Ethereum pour la couche 2. Ils peuvent offrir des améliorations en matière d'évolutivité, car ils n'effectuent aucun calcul par défaut. Au lieu de cela, après une transaction, ils proposent le nouvel état du réseau principal ou « certifient » la transaction.
 
-Avec les rollups optimisés, les transactions sont codées sur la chaîne principale Ethereum en tant que `données d'appel`, ce qui les optimise davantage en réduisant le coût du carburant.
+Avec les rollups optimisés, les transactions sont codées sur la chaîne principale Ethereum en tant que `données d'appel`, ce qui les optimise davantage en réduisant les frais de gaz.
 
-Le calcul étant la partie lente et coûteuse de l'utilisation d'Ethereum, les rollups optimisés peuvent offrir 10 à 100 fois plus d'évolutivité en fonction de la transaction. Ce nombre augmentera encore plus avec l'introduction de [chaînes de fragments](/upgrades/shard-chains) puisque plus de données seront disponibles si une transaction est contestée.
+Le calcul étant la partie lente et coûteuse de l'utilisation d'Ethereum, les rollups optimisés peuvent offrir 10 à 100 fois plus d'évolutivité en fonction de la transaction. Ce nombre augmentera encore plus avec l'introduction de [chaînes de fragments](/upgrades/sharding) puisque plus de données seront disponibles si une transaction est contestée.
 
 ### Contestation des transactions {#disputing-transactions}
 
-Les rollups optimisés ne calculant pas la transaction, il faut donc implémenter un mécanisme pour garantir que les transactions sont légitimes et non frauduleuses. C'est là que des preuves de fraude entrent en matière. Si quelqu'un remarque une opération frauduleuse, le rollup exécutera une preuve de fraude et effectuera le calcul de la transaction en utilisant les données d'état disponibles. Cela signifie que le délai d'attente pour confirmer une transaction peut être plus allongé avec ce type de rollup plutôt qu'avec un rollup ZK, car la transaction pourrait être contestée.
+Les rollups optimisés ne calculent pas la transaction ; il faut donc implémenter un mécanisme pour garantir que les transactions sont légitimes et non frauduleuses. C'est là que des preuves de fraude entrent en jeu. Si quelqu'un remarque une opération frauduleuse, le rollup exécute une preuve de fraude et effectue le calcul de la transaction en utilisant les données d'état disponibles. Cela signifie que le délai d'attente pour confirmer une transaction peut être plus allongé avec ce type de rollup plutôt qu'avec un rollup ZK, car la transaction peut être contestée.
 
 ![Diagramme montrant ce qui se passe lorsqu'une transaction frauduleuse se produit dans un rollup optimisé sur Ethereum](./optimistic-rollups.png)
 
-Le carburant nécessaire pour effectuer le calcul de la preuve de fraude est remboursé. Chez Optimism, Ben Jones décrit le système de garantie en place :
+Le gaz nécessaire pour effectuer le calcul de la preuve de fraude est remboursé. Chez Optimism, Ben Jones décrit le système de garantie en place :
 
-"_Toute personne susceptible d'entreprendre une action que vous devriez prouver frauduleuse pour garantir vos fonds exige que vous déposiez une caution. Pour résumer, vous bloquez quelques ETH et dites "Je promets de dire la vérité. Si je ne dis pas la vérité et que la fraude est prouvée, je perdrai cet argent. Une partie sera réduite et le reste servira à payer le carburant que les gens ont dépensé pour prouver la fraude_".
+"_Toute personne susceptible d'effectuer une action que vous devriez prouver frauduleuse pour garantir vos fonds, nécessite le versement d'une caution. Pour résumer, vous bloquez quelques ETH et dites « Je promets de dire la vérité. Si je ne dis pas la vérité et que la fraude est prouvée, je perdrai cet argent. Une partie sera réduite et le reste servira à payer le gaz que les gens ont dépensé pour prouver la fraude_ »
 
 Vous pouvez donc voir les incitations : les participants sont pénalisés pour avoir commis une fraude et remboursés pour avoir prouvé la fraude.
 

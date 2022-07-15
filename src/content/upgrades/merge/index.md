@@ -209,6 +209,21 @@ The Merge is like changing an engine on a rocketship mid-flight and is designed 
 Ethereum does not have downtime.
 </ExpandableCard>
 
+## What happened to 'Eth2'? {#eth2}
+
+The term 'Eth2' has been deprecated as we approach The Merge.
+
+After merging 'Eth1' and 'Eth2' into a single chain, there will no longer be two distinct Ethereum networks; there will only be Ethereum.
+
+To limit confusion, the community has updated these terms:
+
+- 'Eth1' is now the 'execution layer', which handles transactions and execution.
+- 'Eth2' is now the 'consensus layer', which handles proof-of-stake consensus.
+
+These terminology updates only change naming conventions; this does not alter Ethereum's goals or roadmap.
+
+[Learn more about the 'Eth2' renaming](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/)
+
 ## Relationship between upgrades {#relationship-between-upgrades}
 
 The Ethereum upgrades are all somewhat interrelated. So let’s recap how The Merge relates to the other upgrades.

@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { getImage } from "gatsby-plugin-image"
-import { useIntl } from "gatsby-plugin-intl"
+import { useIntl } from "react-intl"
 import styled from "styled-components"
 
 import CardList from "./CardList"

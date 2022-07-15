@@ -20,7 +20,7 @@ Eine Art von Angriff auf ein dezentralisiertes [Netzwerk](#network), mit welchem
 
 ### Account (Konto) {#account}
 
-Ein Objekt mit einer [Adresse](#address), einem Saldo, einer [Nonce](#nonce), optionalem Speicher und Code. Ein Konto kann ein [Vertragskonto](#contract-account) oder ein[ externes Konto (Externally owned Account, EOA)](#eoa) sein.
+Ein Objekt mit einer [Adresse](#address), einem Saldo, einer [Nonce](#nonce), optionalem Speicher und Code. Ein Konto kann ein [Vertragskonto](#contract-account) oder ein [externes Konto (Externally owned Account, EOA)](#eoa) sein.
 
 <DocLink to="/developers/docs/accounts">
   Ethereum-Konten
@@ -696,7 +696,7 @@ Eine Familie kryptographischer Hashfunktionen, die vom National Institute of Sta
 
 Eine [Proof-of-Stake](#pos)-Kette, die von der [Beacon Chain](#beacon-chain) koordiniert und von [Validatoren](#validator) gesichert wird. Im Rahmen des Shard-Chain-Upgrades werden dem Netzwerk 64 weitere hinzugefügt. Shard Chains werden einen erhöhten Transaktionsdurchsatz für Ethereum bieten, indem sie zusätzliche Daten für [Layer-2](#layer-2)-Lösungen wie [Optimistic Rollups](#optimistic-rollups) und [ZK-Rollups](#zk-rollups) bereitstellen.
 
-<DocLink to="/upgrades/shard-chains">
+<DocLink to="/upgrades/sharding">
   Shard Chains
 </DocLink>
 

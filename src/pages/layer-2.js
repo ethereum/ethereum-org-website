@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react"
 import { graphql } from "gatsby"
 import { getImage, GatsbyImage } from "gatsby-plugin-image"
 import styled from "styled-components"
-import { useIntl } from "gatsby-plugin-intl"
+import { useIntl } from "react-intl"
 
 // Data
 import layer2Data from "../data/layer-2/layer-2.json"
@@ -756,7 +756,14 @@ const Layer2Page = ({ data }) => {
               <Translation id="layer-2-sidechains-2" />
             </p>
             <p>
-              <Translation id="layer-2-sidechains-3" />
+              <Link to="/developers/docs/scaling/sidechains/">
+                <Translation id="layer-2-more-on-sidechains" />
+              </Link>
+            </p>
+            <p>
+              <Link to="/developers/docs/scaling/validium/">
+                <Translation id="layer-2-more-on-validiums" />
+              </Link>
             </p>
           </Flex50>
           <Flex50>
@@ -774,6 +781,7 @@ const Layer2Page = ({ data }) => {
         <Layer2Onboard
           layer2DataCombined={layer2DataCombined}
           ethIcon={getImage(data.ethHome)}
+          ethIconAlt={translateMessageId("ethereum-logo", intl)}
         />
       </PaddedContent>
 
@@ -821,14 +829,26 @@ const Layer2Page = ({ data }) => {
             <Translation id="layer-2-faq-question-2-description-3" />
           </p>
           <p>
-            <Translation id="layer-2-faq-question-2-description-4" />
+            <Link to="/developers/docs/scaling/optimistic-rollups/">
+              <Translation id="layer-2-more-info-on-optimistic-rollups" />
+            </Link>
+          </p>
+          <p>
+            <Link to="/developers/docs/scaling/zk-rollups/">
+              <Translation id="layer-2-more-info-on-zk-rollups" />
+            </Link>
           </p>
         </ExpandableCard>
         <ExpandableCard
           title={`${translateMessageId("layer-2-faq-question-3-title", intl)}`}
         >
           <p>
-            <Translation id="layer-2-faq-question-3-description-1" />
+            <Translation id="layer-2-faq-question-3-description-1" />{" "}
+          </p>
+          <p>
+            <Link to="/upgrades/sharding/">
+              <Translation id="layer-2-more-on-sharding" />
+            </Link>
           </p>
         </ExpandableCard>
         <ExpandableCard
@@ -841,14 +861,22 @@ const Layer2Page = ({ data }) => {
             <Translation id="layer-2-faq-question-4-description-2" />
           </p>
           <p>
-            <Translation id="layer-2-faq-question-4-description-3" />
+            <Translation id="layer-2-faq-question-4-description-3" />{" "}
+          </p>
+          <p>
+            <Link to="/bridges/">
+              <Translation id="layer-2-more-on-bridges" />
+            </Link>
           </p>
         </ExpandableCard>
         <ExpandableCard
           title={`${translateMessageId("layer-2-faq-question-5-title", intl)}`}
         >
           <p>
-            <Translation id="layer-2-faq-question-5-description-1" />
+            <Translation id="layer-2-faq-question-5-description-1" />{" "}
+            <Link to="/contributing/adding-layer-2s/">
+              <Translation id="layer-2-faq-question-5-view-listing-policy" />
+            </Link>
           </p>
           <p>
             <Translation id="layer-2-faq-question-5-description-2" />
@@ -908,7 +936,7 @@ const Layer2Page = ({ data }) => {
 export default Layer2Page
 
 export const query = graphql`
-  query {
+  query Layer2Page {
     dao: file(relativePath: { eq: "use-cases/dao-2.png" }) {
       childImageSharp {
         gatsbyImageData(

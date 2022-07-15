@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { useIntl } from "gatsby-plugin-intl"
+import { useIntl } from "react-intl"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { graphql } from "gatsby"
 
@@ -23,6 +23,7 @@ import {
   StyledCard,
   TwoColumnContent,
 } from "../components/SharedStyledComponents"
+import FeedbackCard from "../components/FeedbackCard"
 
 const Subtitle = styled.div`
   font-size: 1.25rem;
@@ -425,6 +426,7 @@ const GetETHPage = ({ data }) => {
           </ButtonLink>
         </div>
       </CalloutBanner>
+      <FeedbackCard />
     </Page>
   )
 }
@@ -445,7 +447,7 @@ export const listItemImage = graphql`
 `
 
 export const query = graphql`
-  {
+  query GetEthPage {
     hero: file(relativePath: { eq: "get-eth.png" }) {
       childImageSharp {
         gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)

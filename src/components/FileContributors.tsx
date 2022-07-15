@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { useIntl } from "gatsby-plugin-intl"
+import { useIntl } from "react-intl"
 import styled, { css } from "styled-components"
 import { useQuery, gql } from "@apollo/client"
 
@@ -136,7 +136,7 @@ const SkeletonButtonContainer = styled(ButtonContainer)`
   }
 `
 
-const ContributorsButton = styled(ButtonSecondary)`
+const ContributorsButton = styled(ButtonSecondary)<{ loading: boolean }>`
   background-color: ${(props) => props.theme.colors.background};
   margin-top: 0;
   height: 40px;

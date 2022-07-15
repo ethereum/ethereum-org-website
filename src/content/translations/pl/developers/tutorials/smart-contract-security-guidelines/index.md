@@ -6,7 +6,7 @@ tags:
   - "solidity"
   - "inteligentne kontrakty"
   - "ochrona"
-skill: średnie
+skill: intermediate
 lang: pl
 sidebar: true
 published: 2020-09-06

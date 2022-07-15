@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import { useIntl } from "gatsby-plugin-intl"
+import { useIntl } from "react-intl"
 import { graphql, PageProps } from "gatsby"
 
 import Translation from "../components/Translation"
@@ -30,6 +30,7 @@ import {
 
 import { translateMessageId } from "../utils/translations"
 import { Context } from "../types"
+import FeedbackCard from "../components/FeedbackCard"
 
 const Slogan = styled.p`
   font-style: normal;
@@ -359,10 +360,7 @@ const EthPage = (props: PageProps<Queries.EthPageQuery, Context>) => {
               <strong>
                 <Translation id="page-eth-powers-ethereum" />
               </strong>
-              .{" "}
-              <Link to="/developers/docs/consensus-mechanisms/pow/mining/">
-                <Translation id="page-eth-mining-link" />
-              </Link>
+              <Translation id="page-eth-period" />
             </p>
             <p>
               <Translation id="page-eth-fuels-staking" />{" "}
@@ -512,6 +510,9 @@ const EthPage = (props: PageProps<Queries.EthPageQuery, Context>) => {
           ))}
         </RightColumn>
       </StyledTwoColumnContent>
+      <Content>
+        <FeedbackCard />
+      </Content>
     </Page>
   )
 }

@@ -6,7 +6,7 @@ sidebar: true
 incomplete: true
 ---
 
-## Akıllı sözleşmeler ve Solidity dilini öğrenmeye başlangıç {#getting-started-with-smart-contracts-and-solidity}
+## Akıllı Sözleşmeler ve Solidity Dilini Öğrenmeye Başlangıç {#getting-started-with-smart-contracts-and-solidity}
 
 ## Öğreticiler {#tutorials}
 
