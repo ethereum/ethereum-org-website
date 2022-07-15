@@ -7,7 +7,7 @@ sidebar: true
 
 # Ethereum energy consumption {#introduction}
 
-Ethereum is a green blockchain. It uses a [proof-of-stake](/developers/docs/consensus-mechanisms/pos) consensus mechanism that can be run on low-powered devices and does not require heavy computation to participate. Under Ethereum's proof-of-stake mechanism the network is secured using staked Ether rather than expended energy (as in [proof-of-work](/developers/docs/consensus-mechanisms/pos)). This means the energy expended by the Etheruem network is very small - on the order of 0.01 TWhr/yr.
+Ethereum is a green blockchain. It uses a [proof-of-stake](/developers/docs/consensus-mechanisms/pos) consensus mechanism that can be run on low-powered devices and does not require heavy computation to participate. Ethereum's proof-of-stake mechanism secures the network by using staked ETH rather than expended energy, like in [proof-of-work](/developers/docs/consensus-mechanisms/pos). The switch to proof-of-stake means the energy expended by the Ethereum network is relatively small - on the order of 0.01 TWh/yr.
 
 ## Proof-of-stake energy expenditure {#proof-of-stake-energy}
 
@@ -31,11 +31,11 @@ To put Ethereum's energy consumption in context, we can compare annualized estim
 
 ## A green application layer {#green-applications}
 
-While Ethereum's energy consumption is very low, there are is also a substantial, growing, and highly active **regenerative finance (ReFI)** community building on Ethereum. ReFi applications use DeFi components to build financial applications that have positive externalities benefiting the environment. ReFi is part of a wider "Solarpunk" movement that is closely aligned with Ethereum and aims to couple technological advancement and environmental stewardship. The decentralized, permissionless, composable nature of Ethereum makes it the ideal base layer for the ReFi and solarpunk communities. Through the development of these (and other, e.g. [DeSci](/desci)) Ethereum is becoming an environmentally and socially-positive technology.
+While Ethereum's energy consumption is very low, there is also a substantial, growing, and highly active **regenerative finance (ReFI)** community building on Ethereum. ReFi applications use DeFi components to build financial applications that have positive externalities benefiting the environment. ReFi is part of a wider "Solarpunk" movement that is closely aligned with Ethereum and aims to couple technological advancement and environmental stewardship. The decentralized, permissionless, composable nature of Ethereum makes it the ideal base layer for the ReFi and solarpunk communities. Through the development of these (and others, e.g. [DeSci](/desci/)), Ethereum is becoming an environmentally and socially-positive technology.
 
-## Ethereum's Carbon debt
+## Ethereum's carbon debt {#carbon-debt}
 
-Ethereum's current energy expenditure is very low, but this has not always been the case. Ethereum switched on it's proof-of-stake consensus mechanism in autumn 2022, but for eight years before then it used a proof-of-work mechanism with a much greater environmental cost.
+Ethereum's current energy expenditure is very low, but this has not always been the case. Ethereum switched on its proof-of-stake consensus mechanism in Q3 2022. However, Ethereum used a proof-of-work mechanism from 2014-2022, which had a much greater environmental cost.
 
 Since its inception, Ethereum aimed to implement a proof-of-stake consensus mechanism, but doing so without sacrificing security and decentralization took years of focused research and development. Therefore, a proof-of-work mechanism was used to get the network started. Proof-of-work consensus requires miners to use their computing hardware to solve a puzzle, expending energy in the process. The solution to the puzzle proves that energy has been expended by the miner, demonstrating that they invested real-world value for the right to add to the blockchain. Ethereum's total energy consumption peaked during the apex of the crypto bull market in February 2022 at just under 94 TWh/yr. In the summer before the switch to proof-of-stake, the energy consumption was closer to 60 TWh/yr, comparable to that of Uzbekistan, with a Carbon emission equivalent to that of Azerbaijan (33 MT/yr).
 
