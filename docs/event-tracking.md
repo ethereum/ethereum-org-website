@@ -41,7 +41,7 @@ Broadly, events should be grouped by specific topic (e.g. L2 page external links
 
 1. Category (other events may share the same category if one feature has several actions)
 2. Action
-3. Label (optional)
+3. Name (optional)
 4. Value (optional, can be number or text)
 
 ## Category
