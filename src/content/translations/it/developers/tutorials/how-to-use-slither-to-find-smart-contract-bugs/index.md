@@ -1,5 +1,5 @@
 ---
-title: Come usare Slither per trovare i bug del Smart Contract
+title: Come usare Slither per trovare i bug dello Smart Contract
 description: Come usare Slither per trovare automaticamente bug negli Smart Contract
 author: Trailofbits
 lang: it
@@ -10,7 +10,7 @@ tags:
   - "sicurezza"
   - "test"
   - "analisi statica"
-skill: avanzato
+skill: advanced
 published: 2020-06-09
 source: Creare contratti sicuri
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/slither
@@ -69,7 +69,7 @@ slither project_paths
 
 Oltre ai rilevatori, Slither ha capacità di revisione del codice tramite le sue [stampanti](https://github.com/crytic/slither#printers) e i suoi [strumenti](https://github.com/crytic/slither#tools).
 
-Usa [crytic.io](https://crytic.io) per ottenere accesso ai rilevatori privati e integrazione con GitHub.
+Usa [crytic.io](https://github.com/crytic) per ottenere accesso ai rilevatori privati e integrazione con GitHub.
 
 ## Analisi statica {#static-analysis}
 
