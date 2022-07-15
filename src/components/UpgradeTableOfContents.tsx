@@ -5,6 +5,17 @@ import styled from "styled-components"
 
 const customIdRegEx = /^.+(\s*\{#([A-Za-z0-9\-_]+?)\}\s*)$/
 
+interface Item {
+  id: string
+  title: string
+}
+
+export interface IProps {
+  items: Array<Item>
+  maxDepth: number | null
+  className?: string
+}
+
 const Aside = styled.aside`
   padding: 0rem;
   text-align: right;
@@ -57,14 +68,20 @@ const trimmedTitle = (title: string): string => {
   return match ? title.replace(match[1], "").trim() : title
 }
 
-const TableOfContentsLink = ({ depth, item }) => {
+const TableOfContentsLink = ({
+  depth,
+  item,
+}: {
+  depth: number
+  item: Item
+}) => {
   const url = `#${getCustomId(item.title)}`
   let isActive = false
   if (typeof window !== `undefined`) {
     isActive = window.location.hash === url
   }
-  const isNested = depth === 2
-  let classes = ""
+  const isNested: boolean = depth === 2
+  let classes: string = ""
   if (isActive) {
     classes += " active"
   }
@@ -78,26 +95,28 @@ const TableOfContentsLink = ({ depth, item }) => {
   )
 }
 
-const ItemsList = ({ items, depth, maxDepth }) =>
-  depth <= maxDepth && !!items
-    ? items.map((item, index) => (
+const ItemsList = ({
+  items,
+  depth,
+  maxDepth,
+}: {
+  items: Item[]
+  depth: number
+  maxDepth: number
+}) =>
+  depth <= maxDepth && !!items ? (
+    <React.Fragment>
+      {items.map((item, index) => (
         <ListItem key={index}>
           <div>
             <TableOfContentsLink depth={depth} item={item} />
           </div>
         </ListItem>
-      ))
-    : null
-
-interface Item {
-  items: Array<{ id: string; title: string }>
-}
-
-export interface IProps {
-  items: Array<Item>
-  maxDepth: number | null
-  className?: string
-}
+      ))}
+    </React.Fragment>
+  ) : (
+    <></>
+  )
 
 const UpgradeTableOfContents: React.FC<IProps> = ({
   items,
@@ -109,7 +128,7 @@ const UpgradeTableOfContents: React.FC<IProps> = ({
   }
   // Exclude <h1> from TOC
   if (items.length === 1) {
-    items = items[0].items
+    items = [items[0]]
   }
 
   return (
