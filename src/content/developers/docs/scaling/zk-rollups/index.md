@@ -35,7 +35,7 @@ ZK-rollups are "hybrid scaling solutions"—off-chain protocols that operate ind
 
 ZK-rollups rely on the main Ethereum protocol for the following:
 
-### Data availability {data-availability}
+### Data availability {#data-availability}
 
 ZK-rollups publish state data for every transaction processed off-chain to Ethereum. With this data, it is possible for individuals or businesses to reproduce the rollup’s state and validate the chain themselves. Ethereum makes this data available to all participants of the network as `calldata`.
 
