@@ -64,6 +64,27 @@ Find wallets page redirects to external links (wallets) in two positions: A) thr
 
 Such division allows to specifically identify where user clicked on the page, if all external links were under one category "ExternalLink", we would not be able to measure the performance difference between the list and the modal window.
 
+## Usage
+
+Ethereum.org has a utility function (`trackCustomEvent`) for easily creating Matomo events.
+
+```javascript
+import { trackCustomEvent } from "../utils/matomo"
+```
+
+The function requires an object of event options. See the example below.
+
+```javascript
+  const handleEvent = (): void => {
+    trackCustomEvent({
+      eventCategory: `FeedbackWidget toggled`,
+      eventAction: `Clicked`,
+      eventName: `Opened feedback widget`,
+      eventValue: `1`,
+    })
+  }
+```
+
 ## Hidden gem of tracking: Value
 
 Can be used to get more info on the UX.
