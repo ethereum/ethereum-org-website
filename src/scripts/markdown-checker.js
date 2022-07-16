@@ -21,8 +21,8 @@ const SPELLING_MISTAKES = [
   "Etheerum",
   "Ehtereum",
   "Eferum",
-  "Thereum",
 ]
+const CASE_SENSITVE_SPELLING_MISTAKES = ["Thereum", "Metamask", "Github"]
 // Ideas:
 // Regex for explicit lang path (e.g. /en/) && for glossary links (trailing slash breaks links e.g. /glossary/#pos/ doesn't work)
 // We should have case sensitive spelling mistakes && check they are not in links.
@@ -143,12 +143,25 @@ function processMarkdown(path) {
   }
   */
 
-  for (const mistake of SPELLING_MISTAKES) {
-    const mistakeRegex = new RegExp(mistake, "g")
+  checkMarkdownSpellingMistakes(path, markdownFile, SPELLING_MISTAKES)
+  // Turned this off for testing as there are lots of Github (instead of GitHub) and Metamask (instead of MetaMask).
+  // checkMarkdownSpellingMistakes(path, markdownFile, CASE_SENSITVE_SPELLING_MISTAKES, true)
+}
+
+function checkMarkdownSpellingMistakes(
+  path,
+  file,
+  spellingMistakes,
+  caseSensitive = false
+) {
+  for (const mistake of spellingMistakes) {
+    const mistakeRegex = caseSensitive
+      ? new RegExp(mistake, "g")
+      : new RegExp(mistake, "gi")
     let spellingMistakeMatch
 
-    while ((spellingMistakeMatch = mistakeRegex.exec(markdownFile))) {
-      const lineNumber = getLineNumber(markdownFile, spellingMistakeMatch.index)
+    while ((spellingMistakeMatch = mistakeRegex.exec(file))) {
+      const lineNumber = getLineNumber(file, spellingMistakeMatch.index)
       console.log(
         `Spelling mistake "${mistake}" found at ${path}:${lineNumber}`
       )
