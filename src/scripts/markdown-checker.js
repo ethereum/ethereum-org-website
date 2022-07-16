@@ -79,23 +79,23 @@ function processFrontmatter(path, lang) {
   const frontmatter = matter(file).data
 
   if (!frontmatter.title) {
-    console.warn(`Missing 'title' frontmatter at ${path}.`)
+    console.warn(`Missing 'title' frontmatter at ${path}:`)
   }
   // Description commented out as there are a lot of them missing :-)!
   // if (!frontmatter.description) {
-  //   console.warn(`Missing 'description' frontmatter at ${path}.`)
+  //   console.warn(`Missing 'description' frontmatter at ${path}:`)
   // }
   if (!frontmatter.lang) {
-    console.error(`Missing 'lang' frontmatter at ${path}. Expected: ${lang}.'`)
+    console.error(`Missing 'lang' frontmatter at ${path}: Expected: ${lang}:'`)
   } else if (!(frontmatter.lang === lang)) {
     console.error(
-      `Invalid 'lang' frontmatter at ${path}. Expected: ${lang}'. Received: ${frontmatter.lang}.`
+      `Invalid 'lang' frontmatter at ${path}: Expected: ${lang}'. Received: ${frontmatter.lang}.`
     )
   }
 
   if (path.includes("/tutorials/")) {
     if (!frontmatter.published) {
-      console.warn(`Missing 'published' frontmatter at ${path}.`)
+      console.warn(`Missing 'published' frontmatter at ${path}:`)
     } else {
       try {
         let stringDate = frontmatter.published.toISOString().slice(0, 10)
@@ -103,12 +103,12 @@ function processFrontmatter(path, lang) {
 
         if (!dateIsFormattedCorrectly) {
           console.warn(
-            `Invalid 'published' frontmatter at ${path}. Expected: 'YYYY-MM-DD' Received: ${frontmatter.published}`
+            `Invalid 'published' frontmatter at ${path}: Expected: 'YYYY-MM-DD' Received: ${frontmatter.published}`
           )
         }
       } catch (e) {
         console.warn(
-          `Invalid 'published' frontmatter at ${path}. Expected: 'YYYY-MM-DD' Received: ${frontmatter.published}`
+          `Invalid 'published' frontmatter at ${path}: Expected: 'YYYY-MM-DD' Received: ${frontmatter.published}`
         )
       }
     }
