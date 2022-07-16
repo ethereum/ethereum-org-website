@@ -1,36 +1,33 @@
-import React, { useEffect, useState, useMemo } from "react"
-import styled from "styled-components"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { graphql } from "gatsby"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import React, { useEffect, useMemo, useState } from "react"
 import { useIntl } from "react-intl"
+import styled from "styled-components"
 
 import ButtonLink from "../components/ButtonLink"
 import CalloutBanner from "../components/CalloutBanner"
 import DataProductCard from "../components/DataProductCard"
 import Emoji from "../components/Emoji"
+import FeedbackCard from "../components/FeedbackCard"
 import GhostCard from "../components/GhostCard"
 import HorizontalCard from "../components/HorizontalCard"
 import Icon from "../components/Icon"
-import Link from "../components/Link"
 import InfoBanner from "../components/InfoBanner"
+import Link from "../components/Link"
+import PageHero from "../components/PageHero"
 import PageMetadata from "../components/PageMetadata"
+import ProductList from "../components/ProductList"
+import {
+  CardGrid, Content, Divider, GradientContainer, Page
+} from "../components/SharedStyledComponents"
 import SimpleTable from "../components/SimpleTable"
 import StablecoinAccordion from "../components/StablecoinAccordion"
 import StablecoinBoxGrid from "../components/StablecoinBoxGrid"
 import Tooltip from "../components/Tooltip"
 import Translation from "../components/Translation"
-import PageHero from "../components/PageHero"
-import {
-  CardGrid,
-  Divider,
-  Content,
-  Page,
-  GradientContainer,
-} from "../components/SharedStyledComponents"
-import FeedbackCard from "../components/FeedbackCard"
 
-import { translateMessageId } from "../utils/translations"
 import { getData } from "../utils/cache"
+import { translateMessageId } from "../utils/translations"
 
 const StyledContent = styled(Content)`
   margin-bottom: -2rem;
@@ -261,6 +258,11 @@ const ButtonLinkContainer = styled.div`
   flex-direction: row;
   flex-flow: wrap;
   gap: 1em;
+`
+
+const PaddedContent = styled(Content)`
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 `
 
 const tooltipContent = (
@@ -562,6 +564,19 @@ const StablecoinsPage = ({ data }) => {
     ],
   }
 
+  const toolsData = [
+    {
+      title: "Stablecoins.wtf",
+      description: translateMessageId(
+        "page-stablecoins-tools-stablecoinswtf-description",
+        intl
+      ),
+      link: "https://stablecoins.wtf",
+      image: getImage(data.stablecoinswtf),
+      alt: "Stablecoins.wtf",
+    },
+  ]
+
   return (
     <Page>
       <PageMetadata
@@ -830,6 +845,15 @@ const StablecoinsPage = ({ data }) => {
         </H2>
         <StablecoinBoxGrid items={features} />
       </Content>
+      <PaddedContent id="tools">
+        <h2>
+          <Translation id="page-stablecoins-tools-title" />
+        </h2>
+        <ProductList
+          category="Dashboards & Education"
+          content={toolsData}
+        />
+      </PaddedContent>
       <Content>
         <FeedbackCard />
       </Content>
@@ -936,6 +960,16 @@ export const query = graphql`
         gatsbyImageData(
           width: 24
           layout: FIXED
+          placeholder: BLURRED
+          quality: 100
+        )
+      }
+    }
+    stablecoinswtf: file(relativePath: { eq: "stablecoins/tools/stablecoinswtf.png" }) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 500
+          layout: CONSTRAINED
           placeholder: BLURRED
           quality: 100
         )
