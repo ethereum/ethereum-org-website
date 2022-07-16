@@ -93,9 +93,24 @@ const StyledButtonLink = styled(ButtonLink)`
   }
 `
 
-// TODO: fix content type, once an interface is created for the data
+export interface IButton {
+  path: string
+  pathId: string
+  isSecondary: boolean
+  content: string
+}
+
+export interface IContent {
+  buttons?: Array<IButton>
+  title: string
+  header: string
+  subtitle: string
+  image: string
+  alt: string
+}
+
 export interface IProps {
-  content: any
+  content: IContent
   isReverse?: boolean
   children?: React.ReactNode
   className?: string
@@ -117,7 +132,7 @@ const PageHero: React.FC<IProps> = ({
           <Subtitle>{subtitle}</Subtitle>
           {buttons && (
             <ButtonRow>
-              {buttons.map((button, idx) => (
+              {buttons.map((button: IButton, idx: number) => (
                 <StyledButtonLink
                   isSecondary={button.isSecondary}
                   key={idx}
