@@ -21,6 +21,8 @@ You're from the USA and are planning a trip to Europe. You have USD, but you nee
 
 But, what do you do if you want to make a similar exchange to use a different blockchain? Let's say you want to exchange ETH on Ethereum Mainnet for ETH on [Arbitrum](https://arbitrum.io/). Like the currency exchange we made for euros, we need a mechanism to move our ETH from Ethereum to Arbitrum. Bridges make such a transaction possible. In this case, [Arbitrum has a native bridge](https://bridge.arbitrum.io/) that can transfer ETH from Mainnet onto Arbitrum.
 
+
+
 ## Why do we need bridges? {#why-do-we-need-bridges}
 
 All blockchains have their limitations. For Ethereum to scale and keep up with demand, it has required rollups. Alternatively, L1s like Solana and Avalanche are designed differently to enable higher throughput but at the cost of decentralization.
@@ -35,6 +37,8 @@ Bridges enable:
 - dapps to access the strengths of various blockchains – thus enhancing their capabilities (as protocols now have more design space for innovation).
 - users to access new platforms and leverage the benefits of different chains.
 - developers from different blockchain ecosystems to collaborate and build new platforms for the users.
+
+For instance, for a company like Socket, [bridging is essential](https://www.alchemy.com/blog/alchemy-powering-socket-the-bridging-aggregator) to building a multi-chain ecosystem and faciliating value exchange between L1s like Ethereum to other L1 and L2 protocols.
 
 <Divider />
 
@@ -122,6 +126,7 @@ Bridges are crucial to onboarding users onto Ethereum L2s, and even for users wh
 
 ## Further reading {#further-reading}
 
+- [What Are Cross-Chain Bridges?](https://www.alchemy.com/overviews/cross-chain-bridges) _May 10, 2022 - Alchemy_
 - [What Are Blockchain Bridges And How Can We Classify Them?](https://blog.li.finance/what-are-blockchain-bridges-and-how-can-we-classify-them-560dc6ec05fa) _Feb 18, 2021 - Arjun Chand_
 - [Blockchain Bridges: Building Networks of Cryptonetworks](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8) _Sep 8, 2021 - Dmitriy Berenzon_
 - [Bridges in Crypto-Space](https://medium.com/chainsafe-systems/bridges-in-crypto-space-12e158f5fd1e) _Aug 23, 2021 - Ben Adar Hyman_
