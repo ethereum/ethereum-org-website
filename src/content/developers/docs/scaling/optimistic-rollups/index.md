@@ -17,7 +17,7 @@ Optimistic rollups sit in parallel to the main Ethereum chain on layer 2. They c
 
 With Optimistic rollups, transactions are written to the main Ethereum chain as `calldata`, optimising them further by reducing the gas cost.
 
-As computation is the slow, expensive part of using Ethereum, Optimistic rollups can offer up to 10-100x improvements in scalability dependent on the transaction. This number will increase even more with the introduction of [shard chains](/upgrades/shard-chains) as more data will be available if a transaction is disputed.
+As computation is the slow, expensive part of using Ethereum, Optimistic rollups can offer up to 10-100x improvements in scalability dependent on the transaction. This number will increase even more with the introduction of [shard chains](https://www.alchemy.com/overviews/ethereum-sharding-an-introduction-to-blockchain-sharding) as more data will be available if a transaction is disputed.
 
 ### Disputing transactions {#disputing-transactions}
 
@@ -52,6 +52,7 @@ Multiple implementations of Optimistic rollups exist that you can integrate into
 
 **Optimistic rollups reading**
 
+- [How do Optimistic roll-ups work | The complete guide](https://www.alchemy.com/overviews/optimistic-rollups) 
 - [Everything you need to know about Optimistic Rollup](https://research.paradigm.xyz/rollups)
 - [EthHub on optimistic rollups](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/optimistic_rollups/)
 - [The Essential Guide to Arbitrum](https://newsletter.banklesshq.com/p/the-essential-guide-to-arbitrum)
