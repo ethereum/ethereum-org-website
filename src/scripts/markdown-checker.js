@@ -90,13 +90,29 @@ function processFrontmatterAndLogErrors(path, lang) {
     }
   }
 }
+
+function processMarkdown(path) {
+  const markdownFile = fs.readFileSync(path, "utf-8")
+  const brokenLinkRegex = new RegExp("\\[[^\\]]+\\]\\([^\\)\\s]+\\s[^\\)]+\\)")
+
+  try {
+    const containsBrokenLink = brokenLinkRegex.exec(markdownFile)
+    if (containsBrokenLink) {
+      console.log("broken link")
+    }
+  } catch (e) {
+    console.log("Error when logging broken links", e)
+  }
+}
+
 function checkMarkdown() {
   const markdownPaths = getAllMarkdownPaths(PATH_TO_ALL_CONTENT)
   const markdownPathsByLang = sortMarkdownPathsIntoLanguages(markdownPaths)
 
   for (const lang in markdownPathsByLang) {
-    markdownPathsByLang[lang].forEach((file) => {
-      processFrontmatterAndLogErrors(file, lang)
+    markdownPathsByLang[lang].forEach((path) => {
+      processFrontmatterAndLogErrors(path, lang)
+      processMarkdown(path)
     })
   }
 }
