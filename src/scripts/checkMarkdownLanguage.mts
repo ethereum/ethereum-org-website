@@ -1,5 +1,8 @@
 import { spawn } from "child_process"
 
+const EMPTY_STRING = "EMPTY"
+const NO_VALID_MARKDOWN_FILE = "STAGES md FILES ARE INVALID"
+
 const commonDiffCommand = [
   "diff",
   "--cached",
@@ -8,7 +11,17 @@ const commonDiffCommand = [
   "A",
 ]
 
-const getMarkdownFilesWithLanguage = (): Promise<Buffer> => {
+const throwError = (message: string | unknown): void => {
+  console.log("\x1b[91m%s\x1b[0m", "ERROR", message)
+}
+
+const throwInfo = (message: string | unknown): void => {
+  console.log("\x1b[93m%s\x1b[0m", "INFO", message)
+}
+
+const getMarkdownFilesWithLanguage = (
+  markdownFilesExist = false
+): Promise<Buffer> => {
   return new Promise((resolve, reject) => {
     const markdownFilesWithLanguageCommand = spawn("git", [
       ...commonDiffCommand,
@@ -28,6 +41,13 @@ const getMarkdownFilesWithLanguage = (): Promise<Buffer> => {
 
     markdownFilesWithLanguageCommand.on("error", (error) => {
       reject(error)
+    })
+
+    // THIS WILL ONLY BE `hit` WHEN THE PROCESS closes WITHOUT AN OUTPUT
+    markdownFilesWithLanguageCommand.on("close", (code) => {
+      resolve(
+        Buffer.from(markdownFilesExist ? NO_VALID_MARKDOWN_FILE : EMPTY_STRING)
+      )
     })
   })
 }
@@ -51,31 +71,46 @@ const getAllMarkdownFiles = (): Promise<Buffer> => {
     allMarkdownFilesCommand.on("error", (error) => {
       reject(error)
     })
+
+    // THIS WILL ONLY BE `hit` WHEN THE PROCESS closes WITHOUT AN OUTPUT
+    allMarkdownFilesCommand.on("close", (code) => {
+      resolve(Buffer.from(EMPTY_STRING))
+    })
   })
 }
 
 const doAllMarkdownsHaveALanguage = async (): Promise<boolean> => {
   try {
-    console.log("Checking Markdown Content Files")
+    throwInfo("Checking Markdown Content Files")
     const allMarkdownFilesBuffer = await getAllMarkdownFiles()
-    const markdownFilesWithLanguageBuffer = await getMarkdownFilesWithLanguage()
-    const comparisonResult = Buffer.compare(
-      allMarkdownFilesBuffer,
-      markdownFilesWithLanguageBuffer
-    )
-    return comparisonResult === 0 ? true : false
+    if (allMarkdownFilesBuffer.toString() !== EMPTY_STRING) {
+      throwInfo("Newly Created & Staged Markdown Files Found")
+      console.log(allMarkdownFilesBuffer.toString())
+      const markdownFilesWithLanguageBuffer =
+        await getMarkdownFilesWithLanguage(true)
+      const comparisonResult = Buffer.compare(
+        allMarkdownFilesBuffer,
+        markdownFilesWithLanguageBuffer
+      )
+      if (comparisonResult === 0) {
+        throwInfo("Markdown files have valid lang")
+        return true
+      } else {
+        throwInfo("Markdown files without valid lang exists")
+        return false
+      }
+    }
+    throwInfo("No Newly Created & Staged Markdown Files Found")
+    return true
   } catch (error) {
     throw error
   }
 }
 
-const throwError = (message: string | unknown): void => {
-  console.log("\x1b[91m%s\x1b[0m", "ERROR", message)
-}
-
 doAllMarkdownsHaveALanguage()
   .then((result) => {
     if (result) {
+      console.log("\x1b[92m%s\x1b[0m", "SUCCESS")
       process.exitCode = 0
     } else {
       throwError(
