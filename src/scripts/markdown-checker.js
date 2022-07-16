@@ -5,6 +5,9 @@ const matter = require("gray-matter")
 const PATH_TO_INTL_MARKDOWN = "./src/content/translations/"
 const PATH_TO_ALL_CONTENT = "./src/content/"
 const TUTORIAL_DATE_REGEX = new RegExp("\\d{4}-\\d{2}-\\d{2}")
+const BROKEN_LINK_REGEX = new RegExp("\\[[^\\]]+\\]\\([^\\)\\s]+\\s[^\\)]+\\)")
+// Ideas:
+// Regex for explicit lang path (e.g. /en/) && for glossary links (trailing slash breaks links e.g. /glossary/#pos/ doesn't work)
 
 const langsArray = fs.readdirSync(PATH_TO_INTL_MARKDOWN)
 langsArray.push("en")
@@ -93,16 +96,22 @@ function processFrontmatterAndLogErrors(path, lang) {
 
 function processMarkdown(path) {
   const markdownFile = fs.readFileSync(path, "utf-8")
-  const brokenLinkRegex = new RegExp("\\[[^\\]]+\\]\\([^\\)\\s]+\\s[^\\)]+\\)")
 
-  try {
-    const containsBrokenLink = brokenLinkRegex.exec(markdownFile)
-    if (containsBrokenLink) {
-      console.log("broken link")
-    }
-  } catch (e) {
-    console.log("Error when logging broken links", e)
+  const brokenLink = BROKEN_LINK_REGEX.exec(markdownFile)
+  if (brokenLink) {
+    const lineNumber = getLineNumber(markdownFile, brokenLink.index)
+    console.warn(`Broken link found: ${path}:${lineNumber}`)
   }
+}
+
+function getLineNumber(file, index) {
+  const fileSubstring = file.substring(0, index)
+  const lines = fileSubstring.split("\n")
+  const linePosition = lines.length
+  const charPosition = lines[lines.length - 1].length + 1
+  const lineNumber = `${linePosition}:${charPosition}`
+
+  return lineNumber
 }
 
 function checkMarkdown() {
