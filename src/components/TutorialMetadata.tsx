@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { useIntl } from "gatsby-plugin-intl"
+import { useIntl } from "react-intl"
 import CopyToClipboard from "./CopyToClipboard"
 import Pill from "./Pill"
 import Link from "./Link"
@@ -91,8 +91,8 @@ export enum Skill {
   ADVANCED = "advanced",
 }
 
-export const getSkillTranslationId = (skill: Skill) =>
-  `page-tutorial-${Skill[skill.toUpperCase()]}`
+export const getSkillTranslationId = (skill: Skill): TranslationKey =>
+  `page-tutorial-${Skill[skill.toUpperCase() as keyof typeof Skill]}`
 
 const TutorialMetadata: React.FC<IProps> = ({ tutorial }) => {
   const intl = useIntl()

@@ -171,7 +171,7 @@ const Contributors = styled(FileContributors)`
 
 const DocsPage = ({
   data: { siteData, pageData: mdx },
-  pageContext,
+  pageContext: { relativePath, slug },
 }: PageProps<Queries.DocsPageQuery, Context>) => {
   const { isZenMode } = useContext(ZenModeContext)
 
@@ -179,6 +179,8 @@ const DocsPage = ({
     throw new Error("Docs page template query does not return expected values")
   if (!mdx?.frontmatter?.title)
     throw new Error("Required `title` property missing for docs template")
+  if (!relativePath)
+    throw new Error("Required `relativePath` is missing on pageContext")
 
   const isRightToLeft = isLangRightToLeft(mdx.frontmatter.lang as Lang)
 
@@ -186,7 +188,6 @@ const DocsPage = ({
   const isPageIncomplete = !!mdx.frontmatter.incomplete
 
   const { editContentUrl } = siteData.siteMetadata || {}
-  const { relativePath, slug } = pageContext
   const absoluteEditPath = `${editContentUrl}${relativePath}`
   const isDevelopersHome = relativePath.endsWith("/developers/docs/index.md")
   const showMergeBanner = !!mdx.frontmatter.preMergeBanner || isDevelopersHome

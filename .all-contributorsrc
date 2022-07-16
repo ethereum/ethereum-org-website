@@ -8096,6 +8096,52 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "shelleyolivia",
+      "name": "shelleyolivia",
+      "avatar_url": "https://avatars.githubusercontent.com/u/108895606?v=4",
+      "profile": "https://github.com/shelleyolivia",
+      "contributions": [
+        "doc",
+        "ideas"
+      ]
+    },
+    {
+      "login": "zyjblockchain",
+      "name": "Sandy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/40423181?v=4",
+      "profile": "http://sandyzhou911@gmail.com",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "NachoRoizman",
+      "name": "NachoRoizman",
+      "avatar_url": "https://avatars.githubusercontent.com/u/107893772?v=4",
+      "profile": "https://github.com/NachoRoizman",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "M-Ivan",
+      "name": "Iván Miragaya",
+      "avatar_url": "https://avatars.githubusercontent.com/u/72365253?v=4",
+      "profile": "https://linkedin.com/in/miragaya-ivan",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "smejak",
+      "name": "Jakub Smékal",
+      "avatar_url": "https://avatars.githubusercontent.com/u/20759274?v=4",
+      "profile": "https://github.com/smejak",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,

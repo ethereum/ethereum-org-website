@@ -144,7 +144,7 @@ export interface IProps {
   background: string
   image: string
   name: string
-  description: string
+  description?: string
   note?: string
   alt?: string
   githubUrl?: string

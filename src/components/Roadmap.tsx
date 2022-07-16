@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-import { useIntl } from "gatsby-plugin-intl"
+import { useIntl } from "react-intl"
 import styled from "styled-components"
 import axios from "axios"
 

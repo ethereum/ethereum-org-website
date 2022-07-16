@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react"
 import styled from "styled-components"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import { graphql } from "gatsby"
-import { useIntl } from "gatsby-plugin-intl"
+import { graphql, PageProps } from "gatsby"
+import { useIntl } from "react-intl"
 import { shuffle } from "lodash"
 
 // import ActionCard from "../../components/ActionCard"
@@ -11,7 +11,7 @@ import { shuffle } from "lodash"
 // import Link from "../../components/Link"
 // import ButtonLink from "../../components/ButtonLink"
 import Translation from "../../components/Translation"
-import { translateMessageId } from "../../utils/translations"
+import { translateMessageId, TranslationKey } from "../../utils/translations"
 import PageMetadata from "../../components/PageMetadata"
 import ProductCard from "../../components/ProductCard"
 import {
@@ -23,6 +23,7 @@ import {
   // InfoBanner,
 } from "../../components/SharedStyledComponents"
 import FeedbackCard from "../../components/FeedbackCard"
+import { Context } from "../../types"
 
 const StyledPage = styled(Page)`
   margin-top: 4rem;
@@ -271,7 +272,18 @@ const H2 = styled.h2`
 //     },
 //   ]
 
-const frameworksList = [
+interface IFramework {
+  id: string
+  url: string
+  githubUrl: string
+  background: string
+  name: string
+  description: TranslationKey
+  alt: TranslationKey
+  image?: string
+}
+
+const frameworksList: Array<IFramework> = [
   {
     id: "waffle",
     url: "https://getwaffle.io/",
@@ -364,9 +376,11 @@ const frameworksList = [
   },
 ]
 
-const ChooseStackPage = ({ data }) => {
+const ChooseStackPage = ({
+  data,
+}: PageProps<Queries.DevelopersLocalEnvironmentPageQuery, Context>) => {
   const intl = useIntl()
-  const [frameworks, setFrameworks] = useState([])
+  const [frameworks, setFrameworks] = useState<Array<IFramework>>([])
 
   useEffect(() => {
     const list = shuffle(
@@ -445,7 +459,7 @@ const ChooseStackPage = ({ data }) => {
               key={idx}
               url={framework.url}
               background={framework.background}
-              image={framework.image}
+              image={framework.image!}
               name={framework.name}
               githubUrl={framework.githubUrl}
               repoLangCount={2}
@@ -603,7 +617,7 @@ export const devtoolImage = graphql`
 `
 
 export const query = graphql`
-  {
+  query DevelopersLocalEnvironmentPage {
     hero: file(relativePath: { eq: "developers-eth-blocks.png" }) {
       childImageSharp {
         gatsbyImageData(

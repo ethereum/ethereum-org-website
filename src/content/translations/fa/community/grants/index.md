@@ -33,7 +33,7 @@ lang: fa
 - [برنامه‌ی کمک‌های مالی ترکیبی](https://compoundgrants.org/) - _[Compound](https://compound.finance/) اکوسیستم مالی_
 - [برنامه‌ی کمک هزینه Consensys](https://consensys.net/grants/) - _[Consensys](https://consensys.net/) تأمین مالی زنجیره‌ی بلوکی و کمک‌های مالی اتریوم_
 - [برنامه‌ی کمک‌های مالی dYdX](https://dydxgrants.com/) - _[dYdX](https://dydx.exchange/) تبادل غیرمتمرکز_
-- [سازمان کمک‌های مالی اکوسیستم لیدو (LEGO)](https://lego.lido.fi/) - _[Lido](https://lido. fi/) اکوسیستم مالی_
+- [سازمان کمک‌های مالی اکوسیستم لیدو (LEGO)](https://lego.lido.fi/) - _[Lido](https://lido.fi/) اکوسیستم مالی_
 - [برنامه‌ی کمک هزینه mStable](https://docs.mstable.org/advanced/grants-program) - _[mStable](https://mstable.org/) انجمن_
 - [The Graph](https://airtable.com/shrdfvnFvVch3IOVm) – _[The Graph](https://thegraph.com/) اکوسیستم_
 - [برنامه‌ی کمک‌هزینه‌ی Uniswap](https://www.unigrants.org/) - _[Uniswap](https://uniswap.org/) جامعه‌ی_

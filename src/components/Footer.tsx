@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { useIntl } from "gatsby-plugin-intl"
+import { useIntl } from "react-intl"
 import { StaticQuery, graphql } from "gatsby"
 
 import { getLocaleTimestamp } from "../utils/time"
@@ -214,6 +214,10 @@ const Footer: React.FC<IProps> = () => {
         {
           text: "bridges",
           to: "/bridges/",
+        },
+        {
+          text: "zero-knowledge-proofs",
+          to: "/zero-knowledge-proofs/",
         },
         {
           text: "energy-consumption",

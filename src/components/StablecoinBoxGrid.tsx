@@ -1,7 +1,7 @@
 import React, { useState } from "react"
-import { navigate } from "gatsby-plugin-intl"
 import styled from "styled-components"
-import Link from "./Link"
+import { useIntl } from "react-intl"
+import Link, { navigate } from "./Link"
 import Emoji from "./Emoji"
 import Translation from "./Translation"
 import { isMobile } from "../utils/isMobile"
@@ -264,13 +264,14 @@ export interface IProps {
 }
 
 const StablecoinBoxGrid: React.FC<IProps> = ({ items }) => {
+  const intl = useIntl()
   const [indexOpen, setOpenIndex] = useState<number>(0)
 
   // TODO generalize
   const handleSelect = (idx: number): void => {
     setOpenIndex(idx)
     if (isMobile()) {
-      navigate(`/stablecoins/#type-${idx}`)
+      navigate(`/stablecoins/#type-${idx}`, intl)
     }
   }
 

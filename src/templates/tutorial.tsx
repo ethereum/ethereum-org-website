@@ -151,7 +151,7 @@ const Contributors = styled(FileContributors)`
 
 const TutorialPage = ({
   data: { siteData, pageData: mdx },
-  pageContext,
+  pageContext: { relativePath },
 }: PageProps<Queries.TutorialPageQuery, Context>) => {
   if (!siteData || !mdx?.frontmatter)
     throw new Error(
@@ -159,6 +159,8 @@ const TutorialPage = ({
     )
   if (!mdx?.frontmatter?.title)
     throw new Error("Required `title` property missing for tutorial template")
+  if (!relativePath)
+    throw new Error("Required `relativePath` is missing on pageContext")
 
   const isRightToLeft = isLangRightToLeft(mdx.frontmatter.lang as Lang)
   const showMergeBanner = !!mdx.frontmatter.preMergeBanner
@@ -166,7 +168,6 @@ const TutorialPage = ({
   const tocItems = mdx.tableOfContents?.items as Array<ItemTableOfContents>
 
   const { editContentUrl } = siteData.siteMetadata || {}
-  const { relativePath } = pageContext
   const absoluteEditPath = `${editContentUrl}${relativePath}`
   return (
     <div>
