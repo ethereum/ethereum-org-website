@@ -9,6 +9,7 @@ const BROKEN_LINK_REGEX = new RegExp(
   "\\[[^\\]]+\\]\\([^\\)\\s]+\\s[^\\)]+\\)",
   "g"
 )
+const HTML_TAGS = ["</code", "</p>"]
 // Ideas:
 // Regex for explicit lang path (e.g. /en/) && for glossary links (trailing slash breaks links e.g. /glossary/#pos/ doesn't work)
 
@@ -107,6 +108,26 @@ function processMarkdown(path) {
 
     if (!BROKEN_LINK_REGEX.global) break
   }
+
+  // TODO: refactor history pages to use a component for network upgrade summaries
+  // TODO: create .env commit warning component for tutorials
+  // Ignore tutorials with Javascript and ExpandableCards
+  /* Commented this out due to console noise (but they are things we should fix!)
+  if (!(path.includes("/history/")) && !(markdownFile.includes("```javascript")) && !(markdownFile.includes("ExpandableCard"))) {
+    for (const tag of HTML_TAGS) {
+    
+      const htmlTagRegex = new RegExp(tag, "g")
+      let htmlTagMatch
+
+      while ((htmlTagMatch = htmlTagRegex.exec(markdownFile))) {
+        const lineNumber = getLineNumber(markdownFile, htmlTagMatch.index)
+        console.warn(`Warning: ${tag} tag in markdown at ${path}:${lineNumber}`)
+    
+        if (!htmlTagRegex.global) break
+      }
+    }
+  }
+  */
 }
 
 function getLineNumber(file, index) {
