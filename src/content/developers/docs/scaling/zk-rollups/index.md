@@ -43,7 +43,7 @@ Multiple implementations of ZK-rollups exist that you can integrate into your da
 
 **ZK-rollups reading**
 
-- [What Are Zero-Knowledge Rollups?](https://alchemy.com/blog/zero-knowledge-rollups)
+- [What are zero-knowledge rollups?](https://alchemy.com/blog/zero-knowledge-rollups)
 - [EthHub on zk-rollups](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/zk-rollups/)
 - [STARKs vs SNARKs](https://consensys.net/blog/blockchain-explained/zero-knowledge-proofs-starks-vs-snarks/)
 - [zkEVM](https://hackmd.io/@yezhang/S1_KMMbGt)
