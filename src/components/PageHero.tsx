@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { GatsbyImage } from "gatsby-plugin-image"
-import ButtonLink from "./ButtonLink"
+import ButtonLink, { IProps as IButtonLinkProps } from "./ButtonLink"
 import { Content } from "./SharedStyledComponents"
 
 export interface IIsReverse {
@@ -93,10 +93,7 @@ const StyledButtonLink = styled(ButtonLink)`
   }
 `
 
-export interface IButton {
-  path: string
-  pathId: string
-  isSecondary: boolean
+export interface IButton extends Partial<IButtonLinkProps> {
   content: string
 }
 
@@ -132,12 +129,12 @@ const PageHero: React.FC<IProps> = ({
           <Subtitle>{subtitle}</Subtitle>
           {buttons && (
             <ButtonRow>
-              {buttons.map((button: IButton, idx: number) => (
+              {buttons.map((button, idx) => (
                 <StyledButtonLink
                   isSecondary={button.isSecondary}
                   key={idx}
-                  to={button.path}
-                  toId={button.pathId}
+                  to={button.to}
+                  toId={button.toId}
                 >
                   {button.content}
                 </StyledButtonLink>
