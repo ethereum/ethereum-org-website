@@ -30,24 +30,27 @@ const CASE_SENSITVE_SPELLING_MISTAKES = ["Thereum", "Metamask", "Github"]
 const langsArray = fs.readdirSync(PATH_TO_INTL_MARKDOWN)
 langsArray.push("en")
 
-function getAllMarkdownPaths(dirPath, arrayOfFiles = []) {
+function getAllMarkdownPaths(dirPath, arrayOfMarkdownPaths = []) {
   let files = fs.readdirSync(dirPath)
 
-  arrayOfFiles = arrayOfFiles || []
+  arrayOfMarkdownPaths = arrayOfMarkdownPaths || []
 
-  files.forEach(function (file) {
+  for (const file of files) {
     if (fs.statSync(dirPath + "/" + file).isDirectory()) {
-      arrayOfFiles = getAllMarkdownPaths(dirPath + "/" + file, arrayOfFiles)
+      arrayOfMarkdownPaths = getAllMarkdownPaths(
+        dirPath + "/" + file,
+        arrayOfMarkdownPaths
+      )
     } else {
-      const fileToPush = path.join(dirPath, "/", file)
+      const filePath = path.join(dirPath, "/", file)
 
-      if (fileToPush.includes(".md")) {
-        arrayOfFiles.push(fileToPush)
+      if (filePath.includes(".md")) {
+        arrayOfMarkdownPaths.push(filePath)
       }
     }
-  })
+  }
 
-  return arrayOfFiles
+  return arrayOfMarkdownPaths
 }
 
 function sortMarkdownPathsIntoLanguages(files) {
@@ -55,7 +58,7 @@ function sortMarkdownPathsIntoLanguages(files) {
     return { ...accumulator, [value]: [] }
   }, {})
 
-  files.forEach((file) => {
+  for (const file of files) {
     const isTranslation = file.includes("/translations/")
     const langIndex = file.indexOf("/translations/") + 14
     const isFourCharLang = file.includes("pt-br") || file.includes("zh-tw")
@@ -66,12 +69,12 @@ function sortMarkdownPathsIntoLanguages(files) {
       : "en"
 
     languages[lang].push(file)
-  })
+  }
 
   return languages
 }
 
-function processFrontmatterAndLogErrors(path, lang) {
+function processFrontmatter(path, lang) {
   const file = fs.readFileSync(path, "utf-8")
   const frontmatter = matter(file).data
 
@@ -83,9 +86,9 @@ function processFrontmatterAndLogErrors(path, lang) {
   //   console.warn(`Missing 'description' frontmatter at ${path}.`)
   // }
   if (!frontmatter.lang) {
-    console.log(`Missing 'lang' frontmatter at ${path}. Expected: ${lang}.'`)
+    console.error(`Missing 'lang' frontmatter at ${path}. Expected: ${lang}.'`)
   } else if (!(frontmatter.lang === lang)) {
-    console.warn(
+    console.error(
       `Invalid 'lang' frontmatter at ${path}. Expected: ${lang}'. Received: ${frontmatter.lang}.`
     )
   }
@@ -99,12 +102,12 @@ function processFrontmatterAndLogErrors(path, lang) {
         const dateIsFormattedCorrectly = TUTORIAL_DATE_REGEX.test(stringDate)
 
         if (!dateIsFormattedCorrectly) {
-          console.log(
+          console.warn(
             `Invalid 'published' frontmatter at ${path}. Expected: 'YYYY-MM-DD' Received: ${frontmatter.published}`
           )
         }
       } catch (e) {
-        console.log(
+        console.warn(
           `Invalid 'published' frontmatter at ${path}. Expected: 'YYYY-MM-DD' Received: ${frontmatter.published}`
         )
       }
@@ -162,7 +165,7 @@ function checkMarkdownSpellingMistakes(
 
     while ((spellingMistakeMatch = mistakeRegex.exec(file))) {
       const lineNumber = getLineNumber(file, spellingMistakeMatch.index)
-      console.log(
+      console.warn(
         `Spelling mistake "${mistake}" found at ${path}:${lineNumber}`
       )
     }
@@ -186,10 +189,10 @@ function checkMarkdown() {
   const markdownPathsByLang = sortMarkdownPathsIntoLanguages(markdownPaths)
 
   for (const lang in markdownPathsByLang) {
-    markdownPathsByLang[lang].forEach((path) => {
-      processFrontmatterAndLogErrors(path, lang)
+    for (const path of markdownPathsByLang[lang]) {
+      processFrontmatter(path, lang)
       processMarkdown(path)
-    })
+    }
   }
 }
 
