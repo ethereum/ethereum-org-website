@@ -1,7 +1,7 @@
 import { spawn } from "child_process"
 
 const EMPTY_STRING = "EMPTY"
-const NO_VALID_MARKDOWN_FILE = "STAGES md FILES ARE INVALID"
+const NO_VALID_MARKDOWN_FILE = "Staged Markdown Files Are Invalid"
 
 const commonDiffCommand = [
   "diff",
@@ -96,7 +96,15 @@ const doAllMarkdownsHaveALanguage = async (): Promise<boolean> => {
         throwInfo("Markdown files have valid lang")
         return true
       } else {
-        throwInfo("Markdown files without valid lang exists")
+        throwInfo("Markdown files \x1b[92mwith\x1b[0m valid lang")
+        if (
+          markdownFilesWithLanguageBuffer.toString() === NO_VALID_MARKDOWN_FILE
+        ) {
+          console.log("NONE")
+        } else {
+          console.log(markdownFilesWithLanguageBuffer.toString())
+        }
+        throwInfo("Markdown files \x1b[91mwithout\x1b[0m valid lang exists")
         return false
       }
     }
