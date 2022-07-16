@@ -5,7 +5,7 @@ const commonDiffCommand = [
   "--cached",
   "--name-only",
   "--diff-filter",
-  "AM",
+  "A",
 ]
 
 const getMarkdownFilesWithLanguage = (): Promise<Buffer> => {
