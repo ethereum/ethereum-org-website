@@ -5,7 +5,10 @@ const matter = require("gray-matter")
 const PATH_TO_INTL_MARKDOWN = "./src/content/translations/"
 const PATH_TO_ALL_CONTENT = "./src/content/"
 const TUTORIAL_DATE_REGEX = new RegExp("\\d{4}-\\d{2}-\\d{2}")
-const BROKEN_LINK_REGEX = new RegExp("\\[[^\\]]+\\]\\([^\\)\\s]+\\s[^\\)]+\\)")
+const BROKEN_LINK_REGEX = new RegExp(
+  "\\[[^\\]]+\\]\\([^\\)\\s]+\\s[^\\)]+\\)",
+  "g"
+)
 // Ideas:
 // Regex for explicit lang path (e.g. /en/) && for glossary links (trailing slash breaks links e.g. /glossary/#pos/ doesn't work)
 
@@ -96,11 +99,13 @@ function processFrontmatterAndLogErrors(path, lang) {
 
 function processMarkdown(path) {
   const markdownFile = fs.readFileSync(path, "utf-8")
+  let brokenLinkMatch
 
-  const brokenLink = BROKEN_LINK_REGEX.exec(markdownFile)
-  if (brokenLink) {
-    const lineNumber = getLineNumber(markdownFile, brokenLink.index)
+  while ((brokenLinkMatch = BROKEN_LINK_REGEX.exec(markdownFile))) {
+    const lineNumber = getLineNumber(markdownFile, brokenLinkMatch.index)
     console.warn(`Broken link found: ${path}:${lineNumber}`)
+
+    if (!BROKEN_LINK_REGEX.global) break
   }
 }
 
