@@ -21,7 +21,9 @@ import Pill from "../components/Pill"
 import RandomAppList from "../components/RandomAppList"
 import ExpandableCard from "../components/ExpandableCard"
 import Roadmap from "../components/Roadmap"
-import TableOfContents from "../components/TableOfContents"
+import TableOfContents, {
+  Item as ItemTableOfContents,
+} from "../components/TableOfContents"
 import Translation from "../components/Translation"
 import TranslationsInProgress from "../components/TranslationsInProgress"
 import SectionNav from "../components/SectionNav"
@@ -48,8 +50,6 @@ import { getLocaleTimestamp } from "../utils/time"
 import { isLangRightToLeft } from "../utils/translations"
 import { Lang } from "../utils/languages"
 import { Context } from "../types"
-
-import { Item as ItemTableOfContents } from "../components/TableOfContents"
 
 const Page = styled.div`
   display: flex;
@@ -200,9 +200,7 @@ const StaticPage = ({
           editPath={absoluteEditPath}
           items={tocItems}
           isMobile={true}
-          maxDepth={
-            mdx.frontmatter.sidebarDepth ? mdx.frontmatter.sidebarDepth : 1
-          }
+          maxDepth={mdx.frontmatter.sidebarDepth!}
         />
         <MDXProvider components={components}>
           <MDXRenderer>{mdx.body}</MDXRenderer>
@@ -213,9 +211,7 @@ const StaticPage = ({
         <TableOfContents
           editPath={absoluteEditPath}
           items={tocItems}
-          maxDepth={
-            mdx.frontmatter.sidebarDepth ? mdx.frontmatter.sidebarDepth : 1
-          }
+          maxDepth={mdx.frontmatter.sidebarDepth!}
         />
       )}
     </Page>

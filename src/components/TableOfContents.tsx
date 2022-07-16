@@ -374,7 +374,7 @@ export interface IProps {
 
 const TableOfContents: React.FC<IProps> = ({
   items,
-  maxDepth,
+  maxDepth = 1,
   className,
   slug,
   editPath,

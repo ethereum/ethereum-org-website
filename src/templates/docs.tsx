@@ -16,7 +16,9 @@ import Link from "../components/Link"
 import MarkdownTable from "../components/MarkdownTable"
 import PageMetadata from "../components/PageMetadata"
 import Pill from "../components/Pill"
-import TableOfContents from "../components/TableOfContents"
+import TableOfContents, {
+  Item as ItemTableOfContents,
+} from "../components/TableOfContents"
 import SectionNav from "../components/SectionNav"
 import Translation from "../components/Translation"
 import Emoji from "../components/Emoji"
@@ -39,7 +41,6 @@ import { ZenModeContext } from "../contexts/ZenModeContext.js"
 import { isLangRightToLeft } from "../utils/translations"
 import { Lang } from "../utils/languages"
 import { Context } from "../types"
-import { Item as ItemTableOfContents } from "../components/TableOfContents"
 
 const Page = styled.div`
   display: flex;
@@ -222,9 +223,7 @@ const DocsPage = ({
             editPath={absoluteEditPath}
             items={tocItems}
             isMobile={true}
-            maxDepth={
-              mdx.frontmatter.sidebarDepth ? mdx.frontmatter.sidebarDepth : 1
-            }
+            maxDepth={mdx.frontmatter.sidebarDepth!}
           />
           <MDXProvider components={components}>
             <MDXRenderer>{mdx.body}</MDXRenderer>
@@ -244,9 +243,7 @@ const DocsPage = ({
             editPath={absoluteEditPath}
             items={tocItems}
             isPageIncomplete={isPageIncomplete}
-            maxDepth={
-              mdx.frontmatter.sidebarDepth ? mdx.frontmatter.sidebarDepth : 1
-            }
+            maxDepth={mdx.frontmatter.sidebarDepth!}
           />
         )}
       </ContentContainer>

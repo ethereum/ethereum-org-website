@@ -24,7 +24,9 @@ import Pill from "../components/Pill"
 import RandomAppList from "../components/RandomAppList"
 import Roadmap from "../components/Roadmap"
 import UpgradeTableOfContents from "../components/UpgradeTableOfContents"
-import TableOfContents from "../components/TableOfContents"
+import TableOfContents, {
+  Item as ItemTableOfContents,
+} from "../components/TableOfContents"
 import TranslationsInProgress from "../components/TranslationsInProgress"
 import FeedbackCard from "../components/FeedbackCard"
 import SectionNav from "../components/SectionNav"
@@ -49,7 +51,6 @@ import StakingGuides from "../components/Staking/StakingGuides"
 import { isLangRightToLeft, TranslationKey } from "../utils/translations"
 import { Context } from "../types"
 import { Lang } from "../utils/languages"
-import { Item as ItemTableOfContents } from "../components/TableOfContents"
 
 const Page = styled.div`
   display: flex;
@@ -414,9 +415,7 @@ const StakingPage = ({
           </ul>
           <MobileTableOfContents
             items={tocItems}
-            maxDepth={
-              mdx.frontmatter.sidebarDepth ? mdx.frontmatter.sidebarDepth : 1
-            }
+            maxDepth={mdx.frontmatter.sidebarDepth!}
             isMobile={true}
           />
         </TitleCard>

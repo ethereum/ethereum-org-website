@@ -14,7 +14,9 @@ import Link from "../components/Link"
 import MarkdownTable from "../components/MarkdownTable"
 import PageMetadata from "../components/PageMetadata"
 import Pill from "../components/Pill"
-import TableOfContents from "../components/TableOfContents"
+import TableOfContents, {
+  Item as ItemTableOfContents,
+} from "../components/TableOfContents"
 import SectionNav from "../components/SectionNav"
 import CallToContribute from "../components/CallToContribute"
 import {
@@ -35,8 +37,6 @@ import FeedbackCard from "../components/FeedbackCard"
 import { isLangRightToLeft } from "../utils/translations"
 import { Lang } from "../utils/languages"
 import { Context } from "../types"
-
-import { Item as ItemTableOfContents } from "../components/TableOfContents"
 
 const Page = styled.div`
   display: flex;
@@ -183,9 +183,7 @@ const TutorialPage = ({
           <TutorialMetadata tutorial={mdx} />
           <MobileTableOfContents
             items={tocItems}
-            maxDepth={
-              mdx.frontmatter.sidebarDepth ? mdx.frontmatter.sidebarDepth : 1
-            }
+            maxDepth={mdx.frontmatter.sidebarDepth!}
             editPath={absoluteEditPath}
             isMobile={true}
           />
@@ -201,9 +199,7 @@ const TutorialPage = ({
         {mdx.frontmatter.sidebar && tocItems && (
           <DesktopTableOfContents
             items={tocItems}
-            maxDepth={
-              mdx.frontmatter.sidebarDepth ? mdx.frontmatter.sidebarDepth : 1
-            }
+            maxDepth={mdx.frontmatter.sidebarDepth!}
             editPath={absoluteEditPath}
           />
         )}
