@@ -75,14 +75,14 @@ import { trackCustomEvent } from "../utils/matomo"
 The function requires an object of event options. See the example below.
 
 ```javascript
-const handleEvent = (): void => {
-  trackCustomEvent({
-    eventCategory: `FeedbackWidget toggled`,
-    eventAction: `Clicked`,
-    eventName: `Opened feedback widget`,
-    eventValue: `1`,
-  })
-}
+  const handleEvent = (): void => {
+    trackCustomEvent({
+      eventCategory: `FeedbackWidget toggled`,
+      eventAction: `Clicked`,
+      eventName: `Opened feedback widget`,
+      eventValue: `1`,
+    })
+  }
 ```
 
 ## Hidden gem of tracking: Value
