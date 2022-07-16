@@ -21,6 +21,7 @@ import { getData } from "../utils/cache"
 
 import { GATSBY_FUNCTIONS_PATH } from "../constants"
 import { Lang } from "../utils/languages"
+import { Direction } from "../types"
 
 const Value = styled.span`
   position: absolute;
@@ -62,12 +63,12 @@ const Grid = styled.div`
 `
 
 const Box = styled.div<{
-  color: string
+  color?: string
 }>`
   position: relative;
   color: ${({ theme }) => theme.colors.text};
   height: 20rem;
-  background: ${({ theme, color }) => theme.colors[color]};
+  background: ${({ theme, color = "" }) => theme.colors[color]};
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -108,7 +109,7 @@ const Lines = styled.div`
   height: 65%;
 `
 
-const ButtonContainer = styled.div`
+const ButtonContainer = styled.div<{ dir?: Direction }>`
   position: absolute;
   ${({ dir }) => (dir === "rtl" ? "left:" : "right:")} 20px;
   bottom: 20px;
@@ -144,7 +145,7 @@ const ButtonToggle = styled(Button)<{
   `}
 `
 
-const ranges = ["30d", "90d"]
+const ranges = ["30d", "90d"] as const
 
 interface State {
   value: string
@@ -162,12 +163,12 @@ interface Metric {
   apiProvider: string
 }
 
-export interface IPropsGridItem {
+interface IGridItemProps {
   metric: Metric
-  dir?: string
+  dir?: Direction
 }
 
-const GridItem: React.FC<IPropsGridItem> = ({ metric, dir }) => {
+const GridItem: React.FC<IGridItemProps> = ({ metric, dir }) => {
   const { title, description, state, buttonContainer, range } = metric
   const isLoading = !state.value
   const value = state.hasError ? (
@@ -187,7 +188,7 @@ const GridItem: React.FC<IPropsGridItem> = ({ metric, dir }) => {
 
   // Returns either 90 or 30-day data range depending on `range` selection
   const filteredData = (data: Array<{ timestamp: number }>) => {
-    if (!data) return undefined
+    if (!data) return
     if (range === ranges[1]) return [...data]
     return data.filter(({ timestamp }) => {
       const millisecondRange = 1000 * 60 * 60 * 24 * 30
@@ -238,7 +239,7 @@ const GridItem: React.FC<IPropsGridItem> = ({ metric, dir }) => {
   )
 
   return (
-    <Box color="">
+    <Box>
       <div>
         <Title>{title}</Title>
         <p>{description}</p>
@@ -261,13 +262,12 @@ const tooltipContent = (metric: Metric) => (
   </div>
 )
 
-const RangeSelector = ({
-  state,
-  setState,
-}: {
+interface IRangeSelectorProps {
   state: string
   setState: (state: string) => void
-}) => (
+}
+
+const RangeSelector: React.FC<IRangeSelectorProps> = ({ state, setState }) => (
   <div>
     {ranges.map((range, idx) => (
       <ButtonToggle
@@ -285,13 +285,11 @@ const RangeSelector = ({
 )
 
 interface IFetchPriceResponse {
-  timestamp: number
-  value: number
+  prices: Array<[number, number]>
 }
 
 interface IFetchNodeResponse {
-  UTCDate: number
-  TotalNodeCount: number
+  result: Array<{ UTCDate: number; TotalNodeCount: number }>
 }
 
 interface IFetchTotalValueLockedResponse {
@@ -343,7 +341,7 @@ const StatsBoxGrid: React.FC<IProps> = () => {
       intl.locale as Lang
     )
 
-    const formatPrice = (price: number) => {
+    const formatPrice = (price: number): string => {
       return new Intl.NumberFormat(localeForStatsBoxNumbers, {
         style: "currency",
         currency: "USD",
@@ -352,7 +350,7 @@ const StatsBoxGrid: React.FC<IProps> = () => {
       }).format(price)
     }
 
-    const formatTVL = (tvl: number) => {
+    const formatTVL = (tvl: number): string => {
       return new Intl.NumberFormat(localeForStatsBoxNumbers, {
         style: "currency",
         currency: "USD",
@@ -362,7 +360,7 @@ const StatsBoxGrid: React.FC<IProps> = () => {
       }).format(tvl)
     }
 
-    const formatTxs = (txs: number) => {
+    const formatTxs = (txs: number): string => {
       return new Intl.NumberFormat(localeForStatsBoxNumbers, {
         notation: "compact",
         minimumSignificantDigits: 3,
@@ -370,7 +368,7 @@ const StatsBoxGrid: React.FC<IProps> = () => {
       }).format(txs)
     }
 
-    const formatNodes = (nodes: number) => {
+    const formatNodes = (nodes: number): string => {
       return new Intl.NumberFormat(localeForStatsBoxNumbers, {
         minimumSignificantDigits: 3,
         maximumSignificantDigits: 4,
@@ -381,11 +379,11 @@ const StatsBoxGrid: React.FC<IProps> = () => {
       try {
         const {
           data: { prices },
-        }: { data: { prices: Array<IFetchPriceResponse> } } = await axios.get(
+        } = await axios.get<IFetchPriceResponse>(
           `https://api.coingecko.com/api/v3/coins/ethereum/market_chart?vs_currency=usd&days=90&interval=daily`
         )
         const data = prices
-          .map(({ timestamp, value }) => ({
+          .map(([timestamp, value]) => ({
             timestamp,
             value,
           }))
@@ -407,7 +405,7 @@ const StatsBoxGrid: React.FC<IProps> = () => {
 
     const fetchNodes = async (): Promise<void> => {
       try {
-        const { result }: { result: Array<IFetchNodeResponse> } = await getData(
+        const { result } = await getData<IFetchNodeResponse>(
           `${GATSBY_FUNCTIONS_PATH}/etherscan`
         )
         const data = result
@@ -434,7 +432,7 @@ const StatsBoxGrid: React.FC<IProps> = () => {
 
     const fetchTotalValueLocked = async (): Promise<void> => {
       try {
-        const response: Array<IFetchTotalValueLockedResponse> = await getData(
+        const response = await getData<Array<IFetchTotalValueLockedResponse>>(
           `${GATSBY_FUNCTIONS_PATH}/defipulse`
         )
         const data = response
@@ -461,7 +459,7 @@ const StatsBoxGrid: React.FC<IProps> = () => {
 
     const fetchTxCount = async (): Promise<void> => {
       try {
-        const response: Array<IFetchTxResponse> = await getData(
+        const response = await getData<Array<IFetchTxResponse>>(
           `${process.env.GATSBY_FUNCTIONS_PATH}/txs`
         )
         const data = response

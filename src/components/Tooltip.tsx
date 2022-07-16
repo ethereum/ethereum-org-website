@@ -1,4 +1,4 @@
-import React, { MouseEventHandler, useState } from "react"
+import React, { MouseEventHandler, ReactNode, useState } from "react"
 import styled from "styled-components"
 import * as utils from "../utils/isMobile"
 
@@ -54,7 +54,7 @@ const ModalReturn = styled.div`
 `
 
 export interface IProps {
-  content: JSX.Element | string
+  content: ReactNode
 }
 
 // TODO add `position` prop
@@ -69,16 +69,8 @@ const Tooltip: React.FC<IProps> = ({ content, children }) => {
       )}
       <Container
         title="More info"
-        onMouseEnter={
-          !isMobile
-            ? ((() => setIsVisible(true)) as MouseEventHandler<HTMLDivElement>)
-            : undefined
-        }
-        onMouseLeave={
-          !isMobile
-            ? ((() => setIsVisible(false)) as MouseEventHandler<HTMLDivElement>)
-            : undefined
-        }
+        onMouseEnter={!isMobile ? () => setIsVisible(true) : undefined}
+        onMouseLeave={!isMobile ? () => setIsVisible(false) : undefined}
         onClick={isMobile ? () => setIsVisible(!isVisible) : undefined}
       >
         {children}

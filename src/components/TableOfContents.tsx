@@ -281,7 +281,7 @@ const ItemsList: React.FC<IPropsItemsList> = ({
     return null
   }
   return (
-    <div>
+    <>
       {items.map((item, index) => (
         <ListItem key={index}>
           <div>
@@ -305,7 +305,7 @@ const ItemsList: React.FC<IPropsItemsList> = ({
           </div>
         </ListItem>
       ))}
-    </div>
+    </>
   )
 }
 
