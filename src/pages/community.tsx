@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import { graphql } from "gatsby"
+import { graphql, PageProps } from "gatsby"
 import { useIntl } from "react-intl"
 
 import ActionCard from "../components/ActionCard"
@@ -21,6 +21,7 @@ import {
   Page,
 } from "../components/SharedStyledComponents"
 import { translateMessageId } from "../utils/translations"
+import { Context } from "../types"
 
 const ButtonRow = styled.div`
   display: flex;
@@ -306,7 +307,23 @@ const StyledCallout = styled(Callout)`
   min-height: 100%;
 `
 
-const CommunityPage = ({ data }) => {
+interface ICard {
+  image: any
+  title: string
+  description: string
+  alt: string
+  to: string
+}
+
+interface IGetInvolvedCard {
+  emoji: string
+  title: string
+  description: string
+}
+
+const CommunityPage = ({
+  data,
+}: PageProps<Queries.CommunityPageQuery, Context>) => {
   const intl = useIntl()
 
   const heroContent = {
@@ -317,7 +334,7 @@ const CommunityPage = ({ data }) => {
     alt: translateMessageId("page-community-hero-alt", intl),
   }
 
-  const cards = [
+  const cards: Array<ICard> = [
     {
       image: getImage(data.docking),
       title: translateMessageId("page-community-card-1-title", intl),
@@ -360,7 +377,7 @@ const CommunityPage = ({ data }) => {
     },
   ]
 
-  const whyGetInvolvedCards = [
+  const whyGetInvolvedCards: Array<IGetInvolvedCard> = [
     {
       emoji: ":mage:",
       title: translateMessageId(

@@ -24,7 +24,11 @@ const DivAnchor = styled.div`
   margin-top: -80px;
 `
 
-export const SkipLink = ({ hrefId }) => {
+export interface IProps {
+  hrefId: string
+}
+
+export const SkipLink: React.FC<IProps> = ({ hrefId }) => {
   return (
     <Div>
       <Anchor href={hrefId}>
@@ -34,6 +38,6 @@ export const SkipLink = ({ hrefId }) => {
   )
 }
 
-export const SkipLinkAnchor = ({ id }) => {
+export const SkipLinkAnchor: React.FC<{ id: string }> = ({ id }) => {
   return <DivAnchor id={id}></DivAnchor>
 }
