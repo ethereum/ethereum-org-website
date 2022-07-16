@@ -63,7 +63,7 @@ Other ZK-rollups may rotate the operator role by using a [proof-of-stake](/devel
 
 #### How ZK-rollups publish transaction data on Ethereum {#how-zk-rollups-publish-transaction-data-on-ethereum}
 
-As explained, transaction data is published on Ethereum as `calldata`. Calldata is a data area in a smart contract used to pass arguments to a function and behaves similarly to [memory](/developers/docs/smart-contracts/anatomy/#memory). While calldata isn’t stored as part of Ethereum’s state; rather, it persists on-chain as part of the Ethereum chain's [history logs](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html?highlight=memory#logs). Calldata does not affect Ethereum's state, making it a cheap way to store data on-chain.
+As explained, transaction data is published on Ethereum as `calldata`. `calldata` is a data area in a smart contract used to pass arguments to a function and behaves similarly to [memory](/developers/docs/smart-contracts/anatomy/#memory). While `calldata` isn’t stored as part of Ethereum’s state; rather, it persists on-chain as part of the Ethereum chain's [history logs](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html?highlight=memory#logs). `calldata` does not affect Ethereum's state, making it a cheap way to store data on-chain.
 
 The`calldata` keyword often identifies the smart contract method being called by a transaction and holds inputs to the method in the form of an arbitrary sequence of bytes. ZK-rollups use `calldata` to publish compressed transaction data on-chain; the rollup operator simply adds a new batch by calling the required function in the rollup contract and passes the compressed data as function arguments. This helps reduce costs for users since a large part of rollup fees go toward storing transaction data on-chain.
 
@@ -107,7 +107,7 @@ ZK-STARKs are also secure against quantum computers, while the Elliptic Curve Cr
 
 #### How do validity proofs work in ZK-rollups? {#validity-proofs-in-zk-rollups}
 
-##### Proof generation {#proof-generation}
+##### Proof generation
 
 Before accepting transactions, the operator will perform the usual checks. This includes confirming that:
 
@@ -129,11 +129,11 @@ This Merkle root reflects the sole change in the ZK-rollup's state: a change in 
 
 The proving circuit performs the same process on the receiver's account. It checks if the receiver's account exists under the intermediate state root (using the Merkle proof), increases their balance, re-hashes the account data and combines it with the Merkle proof to generate a new state root.
 
-The process repeats for every transaction; each "loop" creates a new state root from updating the sender's account and a subsequent new root from updating the receiver's account. As explained, every update update to the state root represents one part of the rollup's state tree changing.
+The process repeats for every transaction; each "loop" creates a new state root from updating the sender's account and a subsequent new root from updating the receiver's account. As explained, every update to the state root represents one part of the rollup's state tree changing.
 
 The zk-proving circuit iterates over the entire transaction batch, verifying the sequence of updates that result in a final state root after the last transaction is executed. The last Merkle root computed becomes the newest canonical state root of the ZK-rollup.
 
-##### Proof verification {#proof-verification}
+##### Proof verification
 
 After the proving circuit verifies the correctness of state updates, the L2 operator submits the computed validity proof to the verifier contract on L1. The contract's verification circuit verifies the proof's validity and also checks public inputs that form part of the proof:
 
@@ -163,7 +163,7 @@ Withdrawing from a ZK-rollup to L1 is straightforward. The user initiates the ex
 
 - L1 address to receive deposited funds
 
-The rollup contract hashes the transaction data, check if the batch root exists, and uses the Merkle proof to check if the transaction hash is part of the batch root. Afterward, the contract executes the exit transaction and sends funds to the user's chosen address on L1.
+The rollup contract hashes the transaction data, checks if the batch root exists, and uses the Merkle proof to check if the transaction hash is part of the batch root. Afterward, the contract executes the exit transaction and sends funds to the user's chosen address on L1.
 
 ## ZK-rollups and EVM compatibility {#zk-rollups-and-evm-compatibility}
 
@@ -173,7 +173,7 @@ However, [advances in zero-knowledge technology](https://hackmd.io/@yezhang/S1_K
 
 Like the EVM, a zkEVM transitions between states after computation is performed on some inputs. The difference is that the zkEVM also creates zero-knowledge proofs to verify the correctness of every step in the program’s execution. Validity proofs could verify the correctness of operations that touch the VM’s state (memory, stack, storage) and the computation itself (i.e., did the operation call the right opcodes and execute them correctly?).
 
-The introduction of EVM-compatible ZK-rollups is expected to help developers leverage the scalability and security guarantees of zero-knowledge proofs. More importantly, compatibility with native Ethereum infrastructure means developers can build zk-friendly dApps using familiar (and battle-tested) tooling and langugages.
+The introduction of EVM-compatible ZK-rollups is expected to help developers leverage the scalability and security guarantees of zero-knowledge proofs. More importantly, compatibility with native Ethereum infrastructure means developers can build zk-friendly dapps using familiar (and battle-tested) tooling and languages.
 
 ## How do ZK-rollup fees work? {#how-do-zk-rollup-fees-work}
 
@@ -187,7 +187,7 @@ How much users pay for transactions on ZK-rollups is dependent on the gas fee, j
 
 4. **Proof generation and verification**: ZK-rollup operators must produce validity proofs for transaction batches, which is resource-intensive. Verifying zero-knowledge proofs on Mainnet also costs gas (~ 500,000 gas).
 
-Apart from batching transactions, ZK-rollups reduce fees for users by compressing transaction data. You can see [here](https://l2fees.info/) for a real-time overview of how it costs to use Ethereum ZK-rollups.
+Apart from batching transactions, ZK-rollups reduce fees for users by compressing transaction data. You can [see a real-time overview](https://l2fees.info/) of how it costs to use Ethereum ZK-rollups.
 
 ## How do ZK-rollups scale Ethereum? {#scaling-ethereum-with-zk-rollups}
 
@@ -211,7 +211,7 @@ Recursive proofs, however, make it possible to finalize several blocks with one 
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Validity proofs ensure correctness of off-chain transactions and prevent operators from executing invalid state transitions.                                                                          | The cost associated with computing and verifying validity proofs is substantial and can increase fees for rollup users.                                                                            |
 | Offers faster transaction finality as state updates are approved once validity proofs are verified on L1.                                                                                             | Building EVM-compatible ZK-rollups is difficult due to complexity of zero-knowledge technology.                                                                                                    |
-| Relies on trustless cryptographic mechanisms for security, not the honesty of incentivized actors as with [optimistic rollups](/developers/docs/scaling/optimistic-rollups/#optimistic-pros-and-cons) | Producing validity proofs requires specialized hardware, which may encourage centralized control of the chain by a few parties.                                                                    |
+| Relies on trustless cryptographic mechanisms for security, not the honesty of incentivized actors as with [optimistic rollups](/developers/docs/scaling/optimistic-rollups/#optimistic-pros-and-cons). | Producing validity proofs requires specialized hardware, which may encourage centralized control of the chain by a few parties.                                                                    |
 | Stores data needed to recover the state on the L1 chain, which guarantees security, censorship-resistance, and decentralization.                                                                      | Centralized operators (sequencers) can influence transaction ordering.                                                                                                                             |
 | Users benefit from greater capital efficiency and can withdraw funds from L2 without delays.                                                                                                          | Hardware requirements may reduce the number of participants that can force the chain to make progress, increasing the risk of malicious operators freezing the rollup's state and censoring users. |
 | Doesn't depend on liveness assumptions and users don't have to validate the chain to protect their funds.                                                                                             | Some proving systems (e.g., ZK-SNARK) require a trusted setup which, if mishandled, could potentially compromise a ZK-rollup's security model.                                                     |
