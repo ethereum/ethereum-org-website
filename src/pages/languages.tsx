@@ -7,8 +7,8 @@ import Translation from "../components/Translation"
 import Link from "../components/Link"
 import { Page, Content } from "../components/SharedStyledComponents"
 
-import { languageMetadata } from "../utils/languages"
-import { translateMessageId } from "../utils/translations"
+import { Language, languageMetadata } from "../utils/languages"
+import { translateMessageId, TranslationKey } from "../utils/translations"
 import { CardItem as LangItem } from "../components/SharedStyledComponents"
 import Icon from "../components/Icon"
 import NakedButton from "../components/NakedButton"
@@ -68,10 +68,14 @@ const ResetIcon = styled(Icon)`
   fill: ${(props) => props.theme.colors.text};
 `
 
+interface TranslatedLanguage extends Language {
+  path?: string
+}
+
 const LanguagesPage = () => {
   const intl = useIntl()
-  const [keyword, setKeyword] = useState("")
-  const resetKeyword = (e) => {
+  const [keyword, setKeyword] = useState<string>("")
+  const resetKeyword = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault()
     setKeyword("")
   }
@@ -79,11 +83,14 @@ const LanguagesPage = () => {
     "page-languages-filter-placeholder",
     intl
   )
-  let translationsCompleted = []
+  let translationsCompleted: Array<TranslatedLanguage> = []
   for (const lang in languageMetadata) {
     const langMetadata = languageMetadata[lang]
     langMetadata["path"] = `/${lang}/`
-    langMetadata["name"] = translateMessageId(`language-${lang}`, intl)
+    langMetadata["name"] = translateMessageId(
+      `language-${lang}` as TranslationKey,
+      intl
+    )
     const nativeLangTitle = langMetadata["localName"]
     const englishLangTitle = langMetadata["name"]
     if (
