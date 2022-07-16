@@ -10,8 +10,22 @@ const BROKEN_LINK_REGEX = new RegExp(
   "g"
 )
 const HTML_TAGS = ["</code", "</p>"]
+const SPELLING_MISTAKES = [
+  "Ethreum",
+  "Etherum",
+  "Etherium",
+  "Etheruem",
+  "Etereum",
+  "Eterium",
+  "Etherem",
+  "Etheerum",
+  "Ehtereum",
+  "Eferum",
+  "Thereum",
+]
 // Ideas:
 // Regex for explicit lang path (e.g. /en/) && for glossary links (trailing slash breaks links e.g. /glossary/#pos/ doesn't work)
+// We should have case sensitive spelling mistakes && check they are not in links.
 
 const langsArray = fs.readdirSync(PATH_TO_INTL_MARKDOWN)
 langsArray.push("en")
@@ -106,7 +120,7 @@ function processMarkdown(path) {
     const lineNumber = getLineNumber(markdownFile, brokenLinkMatch.index)
     console.warn(`Broken link found: ${path}:${lineNumber}`)
 
-    if (!BROKEN_LINK_REGEX.global) break
+    // if (!BROKEN_LINK_REGEX.global) break
   }
 
   // TODO: refactor history pages to use a component for network upgrade summaries
@@ -128,6 +142,20 @@ function processMarkdown(path) {
     }
   }
   */
+
+  for (const mistake of SPELLING_MISTAKES) {
+    const mistakeRegex = new RegExp(mistake, "g")
+    let spellingMistakeMatch
+
+    while ((spellingMistakeMatch = mistakeRegex.exec(markdownFile))) {
+      const lineNumber = getLineNumber(markdownFile, spellingMistakeMatch.index)
+      console.log(
+        `Spelling mistake "${mistake}" found at ${path}:${lineNumber}`
+      )
+    }
+
+    if (!mistakeRegex.global) break
+  }
 }
 
 function getLineNumber(file, index) {
