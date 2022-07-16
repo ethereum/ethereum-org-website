@@ -99,6 +99,8 @@
           to: /developers/docs/smart-contracts/deploying/
         - id: docs-nav-verifying-smart-contracts
           to: /developers/docs/smart-contracts/source-code-verification/
+        - id: docs-nav-upgrading-smart-contracts
+          to: /developers/docs/smart-contracts/upgrading-smart-contracts/
         - id: docs-nav-smart-contract-security
           to: /developers/docs/smart-contracts/security/
           description: docs-nav-smart-contract-security-description
