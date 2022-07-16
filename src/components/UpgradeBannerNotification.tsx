@@ -19,7 +19,7 @@ const StyledBannerContent = styled.div`
   align-self: center;
 `
 
-const UpgradeBannerNotification = () => (
+const UpgradeBannerNotification: React.FC = () => (
   <StyledBannerNotification shouldShow>
     <StyledEmoji text=":megaphone:" />
     <StyledBannerContent>

@@ -12,21 +12,6 @@ import ButtonLink from "./ButtonLink"
 // Data
 import events from "../data/community-events.json"
 
-interface RawCommunityEvent {
-  title: string
-  to: string
-  sponsor: string | null
-  location: string
-  description: string
-  startDate: string
-  endDate: string
-}
-
-interface CommunityEvent extends RawCommunityEvent {
-  date: string
-  formattedDetails: string
-}
-
 const EventList = styled.div`
   /* Adding direction ltr as a temporary fix to styling bug */
   /* https://github.com/ethereum/ethereum-org-website/issues/6221 */
@@ -65,18 +50,33 @@ const ButtonLinkContainer = styled.div`
   margin-top: 1.25rem;
 `
 
+interface ICommunityEventData {
+  title: string
+  to: string
+  sponsor: string | null
+  location: string
+  description: string
+  startDate: string
+  endDate: string
+}
+
+interface IOrderedUpcomingEventType extends ICommunityEventData {
+  date: string
+  formattedDetails: string
+}
+
 export interface IProps {}
 
 const UpcomingEventsList: React.FC<IProps> = () => {
   const eventsPerLoad = 10
   const [orderedUpcomingEvents, setOrderedUpcomingEvents] = useState<
-    Array<CommunityEvent>
+    Array<IOrderedUpcomingEventType>
   >([])
-  const [maxRange, setMaxRange] = useState(eventsPerLoad)
-  const [isVisible, setIsVisible] = useState(true)
+  const [maxRange, setMaxRange] = useState<number>(eventsPerLoad)
+  const [isVisible, setIsVisible] = useState<boolean>(true)
 
   // Create Date object from each YYYY-MM-DD JSON date string
-  const dateParse = (dateString: string) => {
+  const dateParse = (dateString: string): Date => {
     const parts = dateString.split("-")
     return new Date(
       parseInt(parts[0]),
@@ -86,7 +86,7 @@ const UpcomingEventsList: React.FC<IProps> = () => {
   }
 
   useEffect(() => {
-    const eventsList: Array<RawCommunityEvent> = [...events]
+    const eventsList: Array<ICommunityEventData> = [...events]
     const yesterday = new Date()
     yesterday.setDate(yesterday.getDate() - 1)
 
@@ -97,7 +97,7 @@ const UpcomingEventsList: React.FC<IProps> = () => {
 
     // Sort events by start date
     const orderedEvents = upcomingEvents.sort(
-      (a: RawCommunityEvent, b: RawCommunityEvent) =>
+      (a, b) =>
         dateParse(a.startDate).getTime() - dateParse(b.startDate).getTime()
     )
 
@@ -126,10 +126,10 @@ const UpcomingEventsList: React.FC<IProps> = () => {
 
   const loadMoreEvents = () => {
     setMaxRange((counter) => counter + eventsPerLoad)
-    setIsVisible(maxRange + eventsPerLoad <= orderedUpcomingEvents?.length)
+    setIsVisible(maxRange + eventsPerLoad <= orderedUpcomingEvents.length)
   }
 
-  if (orderedUpcomingEvents?.length === 0) {
+  if (orderedUpcomingEvents.length === 0) {
     return (
       <InfoBanner emoji=":information_source:">
         <Translation id="page-community-upcoming-events-no-events" />{" "}
