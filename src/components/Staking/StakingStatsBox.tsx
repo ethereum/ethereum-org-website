@@ -3,6 +3,7 @@ import styled from "styled-components"
 import { useIntl } from "gatsby-plugin-intl"
 
 import Translation from "../Translation"
+import StatErrorMessage from "../StatErrorMessage"
 import { getLocaleForNumberFormat } from "../../utils/translations"
 import { getData } from "../../utils/cache"
 import calculateStakingRewards from "../../utils/calculateStakingRewards"
@@ -47,16 +48,6 @@ const Label = styled.p`
   font-size: 0.875rem;
   margin-top: 0.5rem;
 `
-
-const IndicatorSpan = styled.span`
-  font-size: 2rem;
-`
-
-const ErrorMessage: React.FC = () => (
-  <IndicatorSpan>
-    <Translation id="loading-error-refresh" />
-  </IndicatorSpan>
-)
 
 export interface IProps {}
 
@@ -112,7 +103,7 @@ const StatsBoxGrid: React.FC<IProps> = () => {
   }, [intl.locale])
 
   // TODO: Improve error handling
-  if (error) return <ErrorMessage />
+  if (error) return <StatErrorMessage />
 
   return (
     <Container>

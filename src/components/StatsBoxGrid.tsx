@@ -9,6 +9,8 @@ import Translation from "./Translation"
 import Tooltip from "./Tooltip"
 import Link from "./Link"
 import Icon from "./Icon"
+import StatErrorMessage from "./StatErrorMessage"
+import StatLoadingMessage from "./StatLoadingMessage"
 
 import {
   isLangRightToLeft,
@@ -98,26 +100,6 @@ const StyledIcon = styled(Icon)`
   }
 `
 
-const IndicatorSpan = styled.span`
-  font-size: 2rem;
-`
-
-export interface IPropsErrorMessage {}
-
-const ErrorMessage: React.FC<IPropsErrorMessage> = () => (
-  <IndicatorSpan>
-    <Translation id="loading-error-refresh" />
-  </IndicatorSpan>
-)
-
-export interface IPropsLoadingMessage {}
-
-const LoadingMessage: React.FC<IPropsLoadingMessage> = () => (
-  <IndicatorSpan>
-    <Translation id="loading" />
-  </IndicatorSpan>
-)
-
 const Lines = styled.div`
   position: absolute;
   left: 0;
@@ -189,9 +171,9 @@ const GridItem: React.FC<IPropsGridItem> = ({ metric, dir }) => {
   const { title, description, state, buttonContainer, range } = metric
   const isLoading = !state.value
   const value = state.hasError ? (
-    <ErrorMessage />
+    <StatErrorMessage />
   ) : isLoading ? (
-    <LoadingMessage />
+    <StatLoadingMessage />
   ) : (
     <StatRow>
       <span>

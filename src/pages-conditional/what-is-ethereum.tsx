@@ -47,6 +47,8 @@ import useFetchStat, {
 } from "../hooks/useFetchStat"
 import { GATSBY_FUNCTIONS_PATH } from "../constants"
 import { Context } from "../types"
+import StatErrorMessage from "../components/StatErrorMessage"
+import StatLoadingMessage from "../components/StatLoadingMessage"
 
 const Slogan = styled.p`
   font-style: normal;
@@ -218,29 +220,13 @@ const ButtonRow = styled.div`
   }
 `
 
-const IndicatorSpan = styled.span`
-  font-size: 1rem;
-`
-
-const ErrorMessage = () => (
-  <IndicatorSpan>
-    <Translation id="loading-error-refresh" />
-  </IndicatorSpan>
-)
-
-const LoadingMessage = () => (
-  <IndicatorSpan>
-    <Translation id="loading" />
-  </IndicatorSpan>
-)
-
 const Stat: React.FC<{ stat: IFetchStat }> = ({ stat }) => {
   const isLoading = !stat.value
 
   return stat.hasError ? (
-    <ErrorMessage />
+    <StatErrorMessage fontSize="1rem" />
   ) : isLoading ? (
-    <LoadingMessage />
+    <StatLoadingMessage fontSize="1rem" />
   ) : (
     <>{stat.formattedValue}</>
   )
