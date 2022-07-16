@@ -1,8 +1,8 @@
-import React, { useContext } from "react"
+import React, { ReactNode, useContext } from "react"
 import { ThemeContext } from "styled-components"
 import styled from "styled-components"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import { graphql } from "gatsby"
+import { graphql, PageProps } from "gatsby"
 import { useIntl } from "react-intl"
 
 import { translateMessageId } from "../utils/translations"
@@ -27,6 +27,7 @@ import {
   SloganGradient,
 } from "../components/SharedStyledComponents"
 import FeedbackCard from "../components/FeedbackCard"
+import { Context } from "../types"
 
 const HeroCard = styled.div`
   display: flex;
@@ -230,44 +231,87 @@ const Faq = styled.div`
   }
 `
 
-const BugBountiesPage = ({ data, location }) => {
+type BountyHuntersArg = {
+  score?: number | null
+}
+
+function sortBountyHuntersFn(a: BountyHuntersArg, b: BountyHuntersArg) {
+  if (a.score && b.score) {
+    return b.score - a.score
+  }
+
+  return 0
+}
+
+interface INode {
+  readonly username: string
+  readonly name: string
+  readonly score: number
+}
+
+interface IClient {
+  title: string
+  link: string
+  image: any
+}
+
+interface ISpec {
+  title: ReactNode
+  link: string
+}
+
+const BugBountiesPage = ({
+  data,
+  location,
+}: PageProps<Queries.BugBountyPageQuery, Context>) => {
   const intl = useIntl()
   const themeContext = useContext(ThemeContext)
   const isDarkTheme = themeContext.isDark
 
   // TODO sort query isn't working :(
-  const consensusBountyHunters = data.consensusBountyHunters.nodes.sort(
-    (a, b) => b.score - a.score
+  const consensusBountyHuntersNodes = data.consensusBountyHunters
+    .nodes as Array<INode>
+  const consensusBountyHunters = [...consensusBountyHuntersNodes].sort(
+    sortBountyHuntersFn
   )
 
-  const executionBountyHunters = data.executionBountyHunters.nodes.sort(
-    (a, b) => b.score - a.score
+  const executionBountyHuntersNodes = data.executionBountyHunters
+    .nodes as Array<INode>
+  const executionBountyHunters = [...executionBountyHuntersNodes].sort(
+    sortBountyHuntersFn
   )
+
+  const bountyHuntersArrayToObject: Record<string, INode> = [
+    ...consensusBountyHunters,
+    ...executionBountyHunters,
+  ].reduce((acc, next) => {
+    const name = next.name
+    if (!name) {
+      return acc
+    }
+
+    if (acc[name]) {
+      return {
+        ...acc,
+        [name]: {
+          ...next,
+          score: acc[name].score + next.score,
+        },
+      }
+    }
+
+    return {
+      ...acc,
+      [name]: next,
+    }
+  }, {})
 
   // total all counts using name as identifier, then sort
-  const allBounterHunters = Object.values(
-    [...consensusBountyHunters, ...executionBountyHunters].reduce(
-      (acc, next) => {
-        if (acc[next.name]) {
-          return {
-            ...acc,
-            [next.name]: {
-              ...next,
-              score: acc[next.name].score + next.score,
-            },
-          }
-        }
+  const allBounterHunters = Object.values(bountyHuntersArrayToObject).sort(
+    (a, b) => b.score - a.score
+  )
 
-        return {
-          ...acc,
-          [next.name]: next,
-        }
-      },
-      {}
-    )
-  ).sort((a, b) => b.score - a.score)
-
-  const clients = [
+  const clients: Array<IClient> = [
     {
       title: "Besu",
       link: "https://besu.hyperledger.org/en/stable/",
@@ -327,7 +371,7 @@ const BugBountiesPage = ({ data, location }) => {
     ? getImage(data.lighthouseDark)
     : getImage(data.lighthouseLight)
 
-  const specs = [
+  const specs: Array<ISpec> = [
     {
       title: <Translation id="page-upgrades-bug-bounty-title-1" />,
       link: "https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/beacon-chain.md",
