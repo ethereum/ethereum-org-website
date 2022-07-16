@@ -1,10 +1,14 @@
 import React from "react"
 import styled from "styled-components"
 import { GatsbyImage } from "gatsby-plugin-image"
-import ButtonLink from "./ButtonLink"
+import ButtonLink, { IProps as IButtonLinkProps } from "./ButtonLink"
 import { Content } from "./SharedStyledComponents"
 
-const HeroContainer = styled.div`
+export interface IIsReverse {
+  isReverse: boolean
+}
+
+const HeroContainer = styled.div<IIsReverse>`
   display: flex;
   justify-content: space-between;
   margin-top: 2rem;
@@ -89,7 +93,32 @@ const StyledButtonLink = styled(ButtonLink)`
   }
 `
 
-const PageHero = ({ content, children, className, isReverse }) => {
+export interface IButton extends Partial<IButtonLinkProps> {
+  content: string
+}
+
+export interface IContent {
+  buttons?: Array<IButton>
+  title: string
+  header: string
+  subtitle: string
+  image: string
+  alt: string
+}
+
+export interface IProps {
+  content: IContent
+  isReverse?: boolean
+  children?: React.ReactNode
+  className?: string
+}
+
+const PageHero: React.FC<IProps> = ({
+  content,
+  isReverse = false,
+  children,
+  className,
+}) => {
   const { buttons, title, header, subtitle, image, alt } = content
   return (
     <Content>
@@ -104,8 +133,8 @@ const PageHero = ({ content, children, className, isReverse }) => {
                 <StyledButtonLink
                   isSecondary={button.isSecondary}
                   key={idx}
-                  to={button.path}
-                  toId={button.pathId}
+                  to={button.to}
+                  toId={button.toId}
                 >
                   {button.content}
                 </StyledButtonLink>

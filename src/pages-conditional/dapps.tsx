@@ -1150,12 +1150,12 @@ const DappsPage = ({
     buttons: [
       {
         content: translateMessageId("page-dapps-explore-dapps-title", intl),
-        path: "#explore",
+        to: "#explore",
       },
       {
         content: translateMessageId("page-dapps-what-are-dapps", intl),
-        path: "#what-are-dapps",
-        isSecondary: "isSecondary",
+        to: "#what-are-dapps",
+        isSecondary: true,
       },
     ],
   }
