@@ -3,18 +3,9 @@ import { motion } from "framer-motion"
 import { Link } from "gatsby"
 import styled from "styled-components"
 
+import type { Item as ItemTableOfContents } from "./TableOfContents"
+
 const customIdRegEx = /^.+(\s*\{#([A-Za-z0-9\-_]+?)\}\s*)$/
-
-interface Item {
-  id: string
-  title: string
-}
-
-export interface IProps {
-  items: Array<Item>
-  maxDepth: number | null
-  className?: string
-}
 
 const Aside = styled.aside`
   padding: 0rem;
@@ -68,7 +59,14 @@ const trimmedTitle = (title: string): string => {
   return match ? title.replace(match[1], "").trim() : title
 }
 
-const TableOfContentsLink = ({
+export interface Item extends ItemTableOfContents {}
+
+interface IPropsTableOfContentsLink {
+  depth: number
+  item: Item
+}
+
+const TableOfContentsLink: React.FC<IPropsTableOfContentsLink> = ({
   depth,
   item,
 }: {
@@ -95,17 +93,27 @@ const TableOfContentsLink = ({
   )
 }
 
-const ItemsList = ({
+interface IPropsItemsList {
+  items: Array<Item>
+  depth: number
+  maxDepth: number
+}
+
+const ItemsList: React.FC<IPropsItemsList> = ({
   items,
   depth,
   maxDepth,
 }: {
-  items: Item[]
+  items: Array<Item>
   depth: number
   maxDepth: number
-}) =>
-  depth <= maxDepth && !!items ? (
-    <React.Fragment>
+}) => {
+  if (depth > maxDepth || !items) {
+    return null
+  }
+
+  return (
+    <>
       {items.map((item, index) => (
         <ListItem key={index}>
           <div>
@@ -113,14 +121,19 @@ const ItemsList = ({
           </div>
         </ListItem>
       ))}
-    </React.Fragment>
-  ) : (
-    <></>
+    </>
   )
+}
+
+export interface IProps {
+  items: Array<Item>
+  maxDepth?: number
+  className?: string
+}
 
 const UpgradeTableOfContents: React.FC<IProps> = ({
   items,
-  maxDepth,
+  maxDepth = 1,
   className,
 }) => {
   if (!items) {
@@ -134,7 +147,7 @@ const UpgradeTableOfContents: React.FC<IProps> = ({
   return (
     <Aside className={className}>
       <OuterList>
-        <ItemsList items={items} depth={0} maxDepth={maxDepth ? maxDepth : 1} />
+        <ItemsList items={items} depth={0} maxDepth={maxDepth} />
       </OuterList>
     </Aside>
   )
