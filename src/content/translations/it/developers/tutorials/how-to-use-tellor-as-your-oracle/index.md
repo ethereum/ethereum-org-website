@@ -9,7 +9,7 @@ tags:
   - "smart contract"
   - "feed di prezzo"
   - "oracoli"
-skill: principiante
+skill: beginner
 published: 2021-06-29
 source: Documentazione di Tellor
 sourceUrl: https://docs.tellor.io/tellor/

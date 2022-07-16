@@ -7,7 +7,7 @@ sidebar: true
 tags:
   - "solidity"
   - "erc-20"
-skill: 初学者
+skill: beginner
 published: 2021-03-09
 ---
 
@@ -30,7 +30,7 @@ published: 2021-03-09
 &nbsp;
 
 ```solidity
-// SPDX-License-Identifier: MIT
+/ SPDX-许可标识符： MIT
 ```
 
 Solidity 文件中一般需要标识软件许可证。 [您可以在这里看到许可证列表](https://spdx.org/licenses/)。 如果需要不同的 许可证，只需在注释中加以说明。
@@ -248,7 +248,7 @@ import "../../math/SafeMath.sol";
 contract ERC20 is Context, IERC20 {
 ```
 
-此行指定继承，在本例中来自上面的 `IERC20` 和 `Context`，用于 OpenGSN。
+此行为 OpenGSN 指定继承，在本例中来自上面的 `IERC20` 和 `Context`。
 
 &nbsp;
 
@@ -512,7 +512,7 @@ contract ERC20 is Context, IERC20 {
 
 将许可额度从一个非零值设定为另一个非零值是有危险的， 因为您只能控制自己的交易顺序，而无法控制其他人的交易顺序。 假设现在有两个用户，天真的 Alice 和不诚实的 Bill。 Alice 想要从 Bill 处获取一些服务， 她认为值五个代币，所以她给了 Bill 五个代币的许可额度。
 
-之后有了一些变化，Bill 的价格提高到了十个代币。 Alice 仍然想要购买服务，就发送了一笔交易，将 Bill 的许可额度设置为 10。 当 Bill 在交易池中看到这个新的交易时， 他就会发送一笔交易，以花费 Alice 的五个代币，并且设定高得多的 燃料价格，这样就会更快挖矿。 这样的话，Bill 可以先花五个代币，然后 当 Alice 的新许可额度放款后，他就可以再花费十个代币，这样总共花费了 15 个代币， 超过了 Alice 本欲授权的金额。 这种技术叫做 [抢先交易](https://consensys.github.io/smart-contract-best-practices/attacks/#front-running)。
+之后有了一些变化，Bill 的价格提高到了十个代币。 Alice 仍然想要购买服务，就发送了一笔交易，将 Bill 的许可额度设置为 10。 当 Bill 在交易池中看到这个新的交易时， 他就会发送一笔交易，以花费 Alice 的五个代币，并且设定高得多的 燃料价格，这样就会更快挖矿。 这样的话，Bill 可以先花五个代币，然后 当 Alice 的新许可额度放款后，他就可以再花费十个代币，这样总共花费了 15 个代币， 超过了 Alice 本欲授权的金额。 这种技术叫做 [抢先交易](https://consensys.github.io/smart-contract-best-practices/attacks/#front-running)
 
 | Alice 的交易      | Alice 的随机数 | Bill 的交易                   | Bill 的随机数 | Bill 的许可额度 | Bill 从 Alice 处获得的总收入 |
 | ----------------- | -------------- | ----------------------------- | ------------- | --------------- | ---------------------------- |
@@ -521,7 +521,7 @@ contract ERC20 is Context, IERC20 {
 | approve(Bill, 10) | 11             |                               |               | 10              | 5                            |
 |                   |                | transferFrom(Alice, Bill, 10) | 10,124        | 0               | 15                           |
 
-为了避免这个问题，有两个函数（`increaseAllowance` 和 `decreaseAllowance`）使您 能够修改指定数额的许可额度。 所以，如果 Bill 已经花费了五个代币， 他就只能再花五个代币。 根据时间的不同，有两种方法可以工作， 介绍时 Bill 只得到十个代币：
+为了避免这个问题，有两个函数（`increaseAllowance` 和 `decreaseAllowance`）使您 能够修改指定数额的许可额度。 所以，如果 Bill 已经花费了五个代币， 他就只能再花五个代币。 根据时间的不同，有两种方法可以生效， 这两种方法都会使 Bill 最终只得到十个代币：
 
 A：
 
@@ -783,7 +783,7 @@ B：
 }
 ```
 
-这是转账过程中要调用的挂钩函数。 这里是空的，但如果你需要 它做一些你只是覆盖它的事情。
+这是转账过程中要调用的挂钩函数。 该函数是空的，但如果你需要 它做一些事情，只需覆盖它即可。
 
 # 结论 {#conclusion}
 

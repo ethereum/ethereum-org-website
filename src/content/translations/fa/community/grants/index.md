@@ -11,32 +11,32 @@ lang: fa
 
 این فهرست توسط جامعه‌ی ما جمع‌آوری می‌شود. اگر چیزی ناقص یا نادرست است، لطفاً این صفحه را ویرایش کنید!
 
-## اکوسیستم گسترده‌ی اتریوم {#broad-ethereum-ecosystem}
+## اکوسیستم گسترده اتریوم {#broad-ethereum-ecosystem}
 
 این برنامه‌ها از اکوسیستم گسترده‌ی اتریوم با اعطای کمک‌های مالی به دامنه‌ی وسیعی از پروژه‌ها حمایت می‌کنند. راه‌حل‌هایی جهت مقیاس‌پذیری، جامعه‌سازی، ایمنی، حریم شخصی و غیره از این جمله هستند. این کمک‌های مالی مختص به یک پلتفرم اتریوم خاص نیستند و اگر مردد هستید نقطه‌ی خوبی برای شروع است.
 
-- [برنامه پشتیبانی اکوسیستم بنیاد اتریوم](https://esp.ethereum.foundation) - _کمک مالی به پروژه‌های منبع بازی که برای اتریوم سودمند هستند، با تمرکز بر ابزارهای همگانی، زیرساخت، پژوهش و منافع عمومی_
-  - [دوره‌ی کمک‌هزینه‌ی تحصیلی](/community/grants/academic-grants-round/) - _بنیاد اتریوم حامی دسته‌ای از کمک‌های مالی برای حمایت از کارهای دانشگاهی مرتبط با اتریوم است_
+- [برنامه پشتیبانی اکوسیستم بنیاد اتریوم](https://esp.ethereum.foundation) - _تامین مالی پروژه های منبع بازی که به اتریوم سودرسانی می‌کنند، با تمرکز بر ابزار های جهانی، زیرساخت، پژوهش و منافع عمومی_
+- [دوره‌ی کمک‌هزینه‌ی تحصیلی](/community/grants/academic-grants-round/) - _بنیاد اتریوم حامی دسته‌ای از کمک‌های مالی برای حمایت از کارهای دانشگاهی مرتبط با اتریوم است_
 - [درخواست‌های ارائه‌ی پیشنهاد اتریوم](https://github.com/ethereum/requests-for-proposals) - _درخواست‌های پیشنهاد توسط بنیاد اتریوم برای کار و پروژه‌های اکوسیستم اتریوم_
-- [MetaCartel](https://www.metacartel.org/grants/) - \_توسعه‌ی برنامه‌های غیر متمرکز، ساخت سازمان‌های خودمختار نامتمرکز  
-  کمک‌های مالی از 1,000 تا 8,000 دلار آمریکا.
+- [MetaCartel](https://www.metacartel.org/grants/) - _توسعه‌ی برنامه‌های غیر متمرکز، ساخت سازمان‌های خودمختار نامتمرکز  
+  کمک‌های مالی از 1,000 تا 8,000 دلار آمریکا._
 - [Moloch DAO](https://www.molochdao.com/) - _حریم خصوصی، مقیاس پذیری لایه‌ی 2، امنیت کلاینت و غیره_
 - [Open Grants](https://opengrants.com/explore)
-- [ کمک‌های مالی DAO](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) - _صفحه‌گسترده Google از سازمان‌های ارائه دهنده کمک هزینه_
+- [ کمک‌های مالی DAO](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) - _صفحه‌گسترده Google از سازمان‌های ارائه‌دهنده‌ی کمک‌هزینه_
 
 ## خاص هر پروژه {#project-specific}
 
 این پروژه‌ها برای پروژه‌هایی که در راستای توسعه و آزمایش فناوری خود هستند کمک‌های مالی خود را ساخته‌اند.
 
-- [برنامه کمک‌های مالی Aave](https://aavegrants.org/) - _[Aave](https://aave.com/) DAO را اعطا می کند_
-- [تعادل کننده](https://forms.gle/c68e4fM7JHCQkPkN7) - _[بالانس](https://balancer.fi/) a> صندوق اکوسیستم_
-- [برنامه کمک‌های مالی ترکیبی](https://compoundgrants.org/) -_[Compound](https://compound.finance/) اکوسیستم مالی_
-- [برنامه کمک هزینه Consensys](https://consensys.net/grants/) - _[ Consensys](https://consensys.net/) تامین مالی بلاک چین & کمک های مالی اتریوم_
-- [برنامه کمک‌های مالی dYdX](https://dydxgrants.com/) - _[dYdX](https://dydx.exchange/) تبادل غیرمتمرکز_
-- [سازمان کمک‌های مالی اکوسیستم لیدو (LEGO)](https://lego.lido.fi/) - _[Lido](https://lido. fi/) اکوسیستم مالی_
-- [برنامه کمک هزینه mStable](https://docs.mstable.org/advanced/grants-program) - انجمن _[mStable](https://mstable.org/)_
-- [The Graph](https://airtable.com/shrdfvnFvVch3IOVm) – _اکوسیستم [The Graph](https://thegraph.com/)_
-- [برنامه‌ی کمک‌هزینه‌ی Uniswap](https://www.unigrants.org/) - _جامعه‌ی [Uniswap](https://uniswap.org/)_
+- [برنامه کمک‌های مالی Aave](https://aavegrants.org/) - _[Aave](https://aave.com/) DAO را اعطا می‌کند_
+- [Balancer](https://forms.gle/c68e4fM7JHCQkPkN7) – _[Balancer](https://balancer.fi/) صندوق اکوسیستم_
+- [برنامه‌ی کمک‌های مالی ترکیبی](https://compoundgrants.org/) - _[Compound](https://compound.finance/) اکوسیستم مالی_
+- [برنامه‌ی کمک هزینه Consensys](https://consensys.net/grants/) - _[Consensys](https://consensys.net/) تأمین مالی زنجیره‌ی بلوکی و کمک‌های مالی اتریوم_
+- [برنامه‌ی کمک‌های مالی dYdX](https://dydxgrants.com/) - _[dYdX](https://dydx.exchange/) تبادل غیرمتمرکز_
+- [سازمان کمک‌های مالی اکوسیستم لیدو (LEGO)](https://lego.lido.fi/) - _[Lido](https://lido.fi/) اکوسیستم مالی_
+- [برنامه‌ی کمک هزینه mStable](https://docs.mstable.org/advanced/grants-program) - _[mStable](https://mstable.org/) انجمن_
+- [The Graph](https://airtable.com/shrdfvnFvVch3IOVm) – _[The Graph](https://thegraph.com/) اکوسیستم_
+- [برنامه‌ی کمک‌هزینه‌ی Uniswap](https://www.unigrants.org/) - _[Uniswap](https://uniswap.org/) جامعه‌ی_
 
 ## کمک مالی درجه‌ی دوم {#quadratic-funding}
 

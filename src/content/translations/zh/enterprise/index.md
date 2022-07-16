@@ -25,7 +25,7 @@ sidebar: true
 ### 主要区别 {#key-differences}
 
 - 区块链安全/不可变性——区块链能否抵制被篡改是由其协商一致性的算法决定的。 以太网主网的安全是由世界各地的个人和矿工管理的数千个独立节点间的交互保证的。 私有链通常有少数几个节点，由一个或几个组织控制。 这些节点可以被严格地控制，但少数节点重写链上信息或进行欺诈性交易的行为必须受到惩罚。
-- 性能——由于私有的以太坊可能使用具有特殊硬件要求和不同共识算法的高性能节点，例如 POA 等。它们可能在基准层（第一层）实现较高的交易吞吐量。 在以太网主网上，使用 [Layer 2 解决方案](/developers/docs/scaling/#rollups) 可以实现高吞吐量。
+- 性能——由于私有的以太坊可能使用具有特殊硬件要求和不同共识算法的高性能节点，例如 POA 等。它们可能在基准层（第一层）实现较高的交易吞吐量。 在以太网主网上，使用[第二层扩容解决方案](/developers/docs/scaling/#layer-2-scaling)可以实现高吞吐量。
 - 成本——经营私有链的成本主要是建立和管理这条链所花费的精力及运行它的服务器。 虽然与以太网连接没有成本，但每笔交易都有 gas 成本，必须在 Ether 支付。 目前正在开发交易转发器（又名 gas 站），以消除最终用户甚至企业在交易中直接使用 Ether 的必要性。 一些[分析](https://github.com/EYBlockchain/fundamental-cost-of-ownership/blob/master/EY%20Total%20Cost%20of%20Ownership%20for%20Blockchain%20Solutions.pdf)显示，在以太坊主网上运行应用程序的总成本可能低于运行私有链。
 - 节点权限——只有授权的节点可以加入私有链。 任何人都可以在以太坊主链上设置一个节点。
 - 隐私——访问写入私有链的数据可以通过限制访问网络来控制，并更加细粒度地进行访问控制和私有交易。 任何人都可以查看写入到主网一层的所有数据，所以敏感信息应该脱链存储、传输或者加密。 一些实现了以上设想的设计模式已经出现（如 Baseline、Aztec），以及能够保持数据分割的二层解决方案。
@@ -55,7 +55,7 @@ sidebar: true
 - [Chainstack](https://chainstack.com/) _主网和测试网以太坊基础设施托管在公共& 分开的客户云中_
 - [ConsenSys](https://consensys.net/)_ 为以太坊上的开发提供了一系列的工具和产品，同时还包括了咨询和自定义开发服务_
 - [Envision Blockchain](https://envisionblockchain.com/)_ 向专注于以太坊主网的企业提供咨询和开发服务_
-- [EY OpsChain](https://blockchain.ey.com/products/contract-manager) _通过在您信任的商业伙伴网络中签发 RFQ、合同、订单和发票提供了一个采购流程_
+- [EY OpsChain](https://blockchain.ey.com/products/contract-manager) _ 提供了一个采购流程，在您信任的业务合作伙伴网络中签发报价申请、合约、订单和发票_
 - [Hyperledger Besu](https://www.hyperledger.org/use/besu) _ 遵守 Apache 2.0 开源许可并用 Java 编写的开源以太坊客户端_
 - [Infura](https://infura.io/) _对以太坊和 IPFS 网络的可调用的 API 访问_
 - [Provide](https://provide.services/) _为 Enterprise Web3 应用程序提供基础架构和 API_
@@ -72,17 +72,17 @@ sidebar: true
 
 ### 可扩展性解决方案 {#scalability-solutions}
 
-[第二层](/developers/docs/scaling/#rollups) 是一套在以太坊上（一层）运行的技术或系统，它与一层具有相同的安全属性，但提供了更大的交易处理能力（吞吐量），更低交易费（操作费用），和比第一层更快的交易确认速度。 第二层扩容解决方案由第一层保护，但它们使区块链应用程序相比第一层能够处理更多的用户、操作或数据。 其中许多解决方案利用最近在加密和零知识证明（ZK）方面取得的进展，最大限度地提高了性能和安全性。
+[第二层](/developers/docs/scaling/#layer-2-scaling)是一套在以太坊上（第一层）运行的技术或系统，它与第一层具有相同的安全属性，但提供了更大的交易处理能力（吞吐量）、更低的交易费（运营费用），以及比第一层更快的交易确认速度。 第二层扩容解决方案由第一层保护，但它们使区块链应用程序相比第一层能够处理更多的用户、操作或数据。 其中许多解决方案利用最近在加密和零知识证明（ZK）方面取得的进展，最大限度地提高了性能和安全性。
 
-在第二层上开发应用可以帮助 [解决一些当初导致企业开发者在过去选择私有链的问题](https://entethalliance.org/how-ethereum-layer-2-scaling-solutions-address-barriers-to-enterprises-building-on-mainnet/)，同时保留了使用以太坊主网的好处。
+在第二层上开发应用可以帮助[解决一些当初导致企业开发者在过去选择私有链的问题](https://entethalliance.org/how-ethereum-layer-2-scaling-solutions-address-barriers-to-enterprises-building-on-mainnet/)，同时保留了使用以太坊主网的好处。
 
 已准备工作或即将完成的 L2 解决办法的例子包括：
 
 - Optimistic rollups（链上数据、欺诈证明）
   - [Optimism](https://optimism.io/)
   - [Offchain Labs Arbitrum Rollup](https://offchainlabs.com/)
-  - [Offchain Labs Arbitrum Rollup](https://fuel.sh)
-- ZK rollups（链上数据，ZK 有效性证明）
+  - [Fuel Network](https://fuel.sh)
+- ZK-rollups（链上数据，ZK 有效性证明）
   - [Loopring](https://loopring.org)
   - [Starkware](https://starkware.co)
   - [Matter Labs zkSync](https://matter-labs.io/)
@@ -91,7 +91,7 @@ sidebar: true
   - [Starkware](https://starkware.co)
   - [Matter Labs zkPorter](https://matter-labs.io/)
 - Plasma（链下数据，欺诈证明）
-  - [OMG Network](https://omg.network/)
+  - [OMG 网络](https://omg.network/)
   - [Gazelle](https://gzle.io)
   - [Matic Network](https://matic.network/)
   - [LeapDAO](https://ipfs.leapdao.org/)
@@ -104,7 +104,6 @@ sidebar: true
   - [Skale](https://skale.network)
   - [POA Network](https://www.poa.network/)
 - 组合多个类别属性的混合解决方案
-  - [Offchain Labs Arbitrum SCSC](https://offchainlabs.com/arbitrum.pdf)
   - [Celer](https://celer.network)
 
 ## 以太主网上的企业级应用 {#enterprise-live-on-mainnet}
@@ -116,6 +115,7 @@ sidebar: true
 - [Brave 浏览器](https://basicattentiontoken.org/) _让用户关注广告，用户可以通过 BAT 代币支付出版商以支持他们。_
 - [hCaptcha](https://www.hcaptcha.com/) _防止机器人的 CAPTCHA 系统，这个系统将用户标记机器学习数据的费用支付给网站操作者。 现在由 Cloudfllar 部署。_
 - [Audius](https://audius.co/) _一个直接连接音乐粉丝和艺术家的流媒体服务，并且允许艺术家由他们的粉丝全额支付，直接和即时支付给每个流媒体_
+- [EthereumAds（以太坊广告）](https://ethereumads.com/) _供网站运营商出售广告空间并通过以太坊获得报酬_
 
 ### 金融 {#finance}
 
@@ -126,6 +126,7 @@ sidebar: true
 - [Tinlake](https://tinlake.centrifuge.io/) _应收款融资通过代币化的真实资产，如发票、抵押或串流使用费_
 - [Kratos](https://triterras.com/kratos) _商品交易和贸易融资平台，将商品交易者连接起来，并使他们能够直接在线交易和从贷方获得资本_
 - [Fasset](https://www.fasset.com/) _支持可持续基础设施的平台_
+- [Taurus](https://www.taurushq.com/) _发行代币化债券_
 
 ### 数据公证 {#notarization-of-data}
 
@@ -134,16 +135,18 @@ sidebar: true
 - [ANSA](https://cointelegraph.com/news/italys-top-news-agency-uses-blockchain-to-fight-fake-coronavirus-news) _意大利最大的新闻机构与假新闻作斗争，并使读者能够通过在主网上录制这些新闻故事来验证其来源_
 - [Verizon](https://decrypt.co/46745/verizon-news-press-releases-ethereum-full-transparency) _在以太坊上记录新闻稿，以确保公司责任和信用_
 - [Breitling](https://www.coindesk.com/breitling-arianee-all-new-watches-ethereum) _记录以太坊上的手表的出处和修理历史_
+- [EthSign](https://ethsign.xyz/) _在以太坊区块链上记录签署的电子文件_
 
 ### 供应链 {#supply-chain}
 
 - [CargoX](https://cargox.io/press-releases/full/cargox-becomes-first-public-blockchain-ethereum-bill-lading-provider-approved-international-group-pi-clubs) _提单和单证传输提供者_
 - [Morphosus.network](https://morpheus.network/) _供应链自动化平台，它实现了私有链与以太坊主网公证数据的混合，加拿大食品、石油天然气经销有限公司和阿根廷宠物食品供应商 Vitalcan 等目前在使用 _
 - [Minespider](https://www.minespider.com/) _供应链跟踪_
-- [ShipChain](https://shipchain.io) _公开的以太坊侧链，同时也是企业级的可见可信任的供应链，特别是以多式联运物流为目的_
-- [Follow Our Fibre](https://www.followourfibre.com) _直观跟踪供应链_
-- [EY OpsChain Network Procurement](https://blockchain.ey.com/products/contract-manager) _通过在您信任的商业伙伴网络中签发 RFQ、合同、订单和发票提供了一个采购流程_
+- [Follow Our Fibre](https://www.followourfibre.com) _提供粘胶纤维供应链的可追溯性_
+- [EY OpsChain 网络采购](https://blockchain.ey.com/products/contract-manager) _可让企业在信任的业务合作伙伴网络中发布报价请求、合约、采购订单和发票，参与采购流程_
 - [Treum](https://treum.io/) _使用区块链技术为供应链带来透明度、可追溯性和可交易性_
+- [TradeTrust](https://www.tradetrust.io/) _ 验证国际运输中的电子提单 (eBL)_
+- [Birra Peroni](https://www.ey.com/en_gl/news/2021/05/birra-peroni-is-the-first-industrial-organization-to-mint-unique-non-fungible-tokens-using-ey-opschain-traceability) _ 可为每批新酿造的啤酒铸造非同质化代币，提高整条供应链的可见性和效率_
 
 ### 所有权与证明 {#credentials}
 
@@ -151,7 +154,7 @@ sidebar: true
 - [两所意大利高中](https://cointelegraph.com/news/two-italian-high-schools-to-issue-digital-diplomas-with-blockchain) _在以太坊主网上颁发的数字文凭_
 - [圣加仑大学](https://cointelegraph.com/news/swiss-university-fights-fake-diplomas-with-blockchain-technology) _验证瑞士一所大学学位的试点项目_
 - [Malta](https://cointelegraph.com/news/malta-to-store-education-certificates-on-a-blockchain) _ [Hyland](https://www.learningmachine.com/)_ 在主网上记录所有教育证书
-- [波汉科学技术大学](https://www.theblockcrypto.com/linked/55176/south-korean-university-issues-blockchain-stored-diplomas-amid-the-spread-of-the-coronavirus) _南韩大学向其新毕业生提供区块链储存的文凭_
+- [浦项科技大学](https://www.theblockcrypto.com/linked/55176/south-korean-university-issues-blockchain-stored-diplomas-amid-the-spread-of-the-coronavirus) _韩国的大学向其新毕业生提供区块链储存的文凭_
 - [OpenCerts](https://opencerts.io/) _在新加坡发布区块链教育凭据_
 - [BlockCerts](https://www.blockcerts.org/) _开发了一个开放的区块链凭据标准_
 - [SkillTree](http://skilltree.org/) _在线技能培训和认证，可以通过过期触发器或依赖其他技能来配置_
@@ -160,4 +163,4 @@ sidebar: true
 
 - [GridPlus](https://blog.gridplus.io/gridplus-is-live-in-texas-efc83c814601) _电费支付_
 
-如果您想要向这个列表中继续添加，请参阅[贡献说明](/contributing/)。
+如果想要继续向这个列表中添加项目，请参阅[贡献说明](/contributing/)。

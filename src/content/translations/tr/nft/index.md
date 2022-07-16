@@ -33,7 +33,7 @@ NFT'ler ve Ethereum, bugün internette var olan bazı sorunları çözüyor. Her
 
 Bugün çoğumuzun kullandığı internete kıyasla NFT'lerin interneti şu şekilde görünüyor...
 
-### Karşılaştırma {#nft-comparison}
+### Bir karşılaştırma {#nft-comparison}
 
 | NFT interneti                                                                                                                                                                                                     | Günümüz interneti                                                                                                                                                                            |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -398,7 +398,7 @@ Bu, Digiconomist'in Ethereum madencilerinin hâlihazırda tükettiği yıllık 4
 
 100.000 Visa işleminin maliyeti 149 kwH'dir - [2020 itibarıyla Bitcoin ağı işlem başına ortalama enerji tüketiminin VISA ağıyla karşılaştırılması, Statista](https://www.statista.com/statistics/881541/bitcoin-energy-consumption-transaction-comparison-visa/)
 
-Eylül 2020 yıl sonunda 140.839.000.000 işlem gerçekleştirdiler – [Visa mali raporu 2020 4. Çeyrek](https://s1.q4cdn.com/050606653/files/doc_financials/2020/q4/Visa-Inc.-Q4-2020-Operational-Performance-Data. pdf)
+Eylül 2020 yıl sonunda 140.839.000.000 işlem gerçekleştirdiler – [Visa mali raporu 2020 4. Çeyrek](https://s1.q4cdn.com/050606653/files/doc_financials/2020/q4/Visa-Inc.-Q4-2020-Operational-Performance-Data.pdf)
 
 #### 3. Parçalı bir hisse ispatı ağında 100.000 işlem için enerji kullanımı {#fn-3}
 
@@ -430,5 +430,5 @@ Başka bir deyişle, Visa 100.000 işlem başına 149 kWh maliyetle 140.839.000.
 Ethereum bir yılda 5.256.000 kWh civarı harcar. Bu süre içerisinde 788.940.000.000 - 3.153.600.000.000 işlem potansiyeli bulunur.
 
 <InfoBanner emoji=":evergreen_tree:">
-  Eğer bu istatistiklerin yanlış olduğunu veya daha isabetli olabileceğini düşünüyorsanız, lütfen bir PR veya konu açın. Bunlar, herkese açık bilgiler ve planlanan Ethereum tasarımı kullanılarak, ethereum.org ekibi tarafından yapılan tahminlerdir. Bu, Ethereum Vakfı'nın resmi bir vaadini temsil etmiyor. 
+  Eğer bu istatistiklerin yanlış olduğunu veya daha isabetli olabileceğini düşünüyorsanız, lütfen bir PR veya konu açın. Bunlar, herkese açık bilgiler ve planlanan Ethereum tasarımı kullanılarak, ethereum.org ekibi tarafından yapılan tahminlerdir. Bu, Ethereum Vakfı'nın resmi bir vaadini temsil etmiyor.
 </InfoBanner>

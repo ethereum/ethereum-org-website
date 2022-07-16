@@ -3,12 +3,12 @@ title: İlk akıllı sözleşmenizi dağıtın
 description: Ethereum test ağında ilk akıllı sözleşmenizi nasıl dağıtacağınızı öğrenin
 author: "jdourlens"
 tags:
-  - "akıllı sözleşmeler"
-  - "remix"
-  - "solidity"
+  - "akıllı kontratlar"
+  - "karışım"
+  - "katılık"
   - "başlarken"
   - "dağıtma"
-skill: acemi
+skill: beginner
 lang: tr
 sidebar: true
 published: 2020-04-03

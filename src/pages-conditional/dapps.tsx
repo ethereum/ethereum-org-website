@@ -2,7 +2,7 @@ import React, { useRef, useState, useEffect } from "react"
 import styled from "styled-components"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { graphql, PageProps } from "gatsby"
-import { useIntl } from "gatsby-plugin-intl"
+import { useIntl } from "react-intl"
 
 import Translation from "../components/Translation"
 import Pill from "../components/Pill"
@@ -963,6 +963,7 @@ const DappsPage = ({
       ),
       link: "https://async.art/",
       image: getImage(data.asyncart),
+      alt: translateMessageId("page-dapps-async-logo-alt", intl),
     },
   ]
 

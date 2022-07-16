@@ -97,6 +97,8 @@
           to: /developers/docs/smart-contracts/compiling/
         - id: docs-nav-deploying-smart-contracts
           to: /developers/docs/smart-contracts/deploying/
+        - id: docs-nav-verifying-smart-contracts
+          to: /developers/docs/smart-contracts/source-code-verification/
         - id: docs-nav-smart-contract-security
           to: /developers/docs/smart-contracts/security/
           description: docs-nav-smart-contract-security-description
@@ -196,6 +198,9 @@
           to: /developers/docs/scaling/plasma/
         - id: docs-nav-scaling-validium
           to: /developers/docs/scaling/validium/
+    - id: docs-nav-data-availability
+      to: /developers/docs/data-availability/
+      description: docs-nav-data-availability-description
     - id: docs-nav-networking-layer
       to: /developers/docs/networking-layer/
       description: docs-nav-networking-layer-description

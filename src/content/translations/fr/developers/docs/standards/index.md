@@ -15,11 +15,11 @@ Ces normes sont généralement présentées via les [propositions d'amélioratio
 - [Introduction aux EIP](/eips/)
 - [Liste des EIP](https://eips.ethereum.org/)
 - [Repo Github EIP](https://github.com/ethereum/EIPs)
-- [Forum de discussions sur les EIP](https://ethereum-magicians.org/c/eips)
+- [Forum de discussions EIP](https://ethereum-magicians.org/c/eips)
 - [Introduction à la gouvernance d'Ethereum](/governance/)
 - [Ethereum Governance Overview](https://web.archive.org/web/20201107234050/https://blog.bmannconsulting.com/ethereum-governance/) _- Boris Mann, 31 mars 2019_
 - [Ethereum Protocol Development Governance and Network Upgrade Coordination](https://hudsonjameson.com/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) _- Hudson Jameson, 23 mars 2020_
-- [Playlist de toutes les rencontres de l'équipe de développement clé Ethereum](https://www.youtube.com/playlist?list=PLaM7G4Llrb7zfMXCZVEXEABT8OSnd4-7w) _(YouTube Playlist)_
+- [Playlist de toutes les rencontres de l'équipe de développement Ethereum](https://www.youtube.com/playlist?list=PLaM7G4Llrb7zfMXCZVEXEABT8OSnd4-7w) _(YouTube)_
 
 ## Types de normes {#types-of-standards}
 

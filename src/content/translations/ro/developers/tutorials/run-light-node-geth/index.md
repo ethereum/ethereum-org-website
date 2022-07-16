@@ -1,7 +1,7 @@
 ---
 title: Cum se execută un nod ușor cu Geth
 description: How to download, install and run a lightclient with Geth.
-authors: "Brian Gu"
+author: "Brian Gu"
 tags:
   - "clienți"
   - "geth"

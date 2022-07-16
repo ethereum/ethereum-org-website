@@ -21,7 +21,7 @@ Comprender la naturaleza descentralizada de Ethereum es vital, ya que todo aquel
   Aprenda los fundamentos de Ethereum.
 </DocLink>
 
-A pesar de la falta de soporte oficial, muchos grupos, comunidades y proyectos del ecosistema Ethereum están dispuestos a ayudar.
+A pesar de la falta de apoyo oficial, muchos grupos, comunidades y proyectos en todo el ecosistema Ethereum están deseosos de ayudar, y puede encontrar mucha información y recursos útiles en esta página. ¿Todavía le surgen algunas preguntas? Entonces, únase al chat [Discord de Ethereum.org](/discord/) e intentaremos ayudarle.
 
 ## Soporte para la cartera {#wallet-support}
 
@@ -107,4 +107,4 @@ Debido a la demanda de la red, las transacciones en Ethereum pueden a veces esta
 
 #### ¿Cómo puedo minar Ethereum? {#mining-ethereum}
 
-No recomendamos comprar equipo destinado a minar si aún no ha minado en Ethereum. Se prevé que en el segundo trimestre de 2022, llegue [la fusión](/upgrades/merge/), en la que Ethereum cambiará de prueba de trabajo [PoW en inglés] a prueba de participación [PoS en inglés]. Este cambio significa que ya no se podrá minar Ethereum. Si todavía le interesa minar Ethereum, puede pedir ayuda a comunidades mineras, como [/r/EtherMining](https://www.reddit.com/r/EtherMining/).
+No recomendamos comprar equipo destinado a minar si aún no ha minado en Ethereum. En el tercer/cuarto trimestre de 2022, se producirá [la fusión](/upgrades/merge/), cambiando Ethereum de prueba de trabajo a prueba de participación. Este cambio significa que ya no se podrá minar Ethereum. Si todavía le interesa minar Ethereum, puede pedir ayuda a comunidades mineras, como [/r/EtherMining](https://www.reddit.com/r/EtherMining/).

@@ -7,7 +7,7 @@ sidebar: true
 
 您无需从头开始编写项目中的每一个智能合约 我们有许多开源代码的智能合约库可为您的项目提供可重复利用的构建块，从而使您不必重新开始。
 
-## 前置要求 {#prerequisites}
+## 先决条件 {#prerequisites}
 
 在我们跳转到智能合约库之前，清楚地了解一个智能合约的构成是一个不错的主意。 如果尚未进行智能合约的了解，请直接点击[智能合约](/developers/docs/smart-contracts/anatomy/)。
 
@@ -51,7 +51,7 @@ contract MyContract is Ownable {
 }
 ```
 
-另一个比较受欢迎的例子是[ SafeMath ](https://docs.openzeppelin.com/contracts/3.x/utilities#math)或[DsMath](https://dappsys.readthedocs.io/en/latest/ds_math.html)。 这些库（与基础合约不同）提供了语言本身不具有的带有溢出检查的算术函数。 使用这些库而不是本地的算术操作可以来防止您的合约出现溢出错误，这些错误可能会导致灾难性的后果！
+另一个比较受欢迎的例子是 [SafeMath ](https://docs.openzeppelin.com/contracts/3.x/utilities#math)或[DsMath](https://dappsys.readthedocs.io/en/latest/ds_math.html)。 这些库（与基础合约不同）提供了语言本身不具有的带有溢出检查的算术函数。 使用这些库而不是本地的算术操作可以来防止您的合约出现溢出错误，这些错误可能会导致灾难性的后果！
 
 ### 标准 {#standards}
 
@@ -94,7 +94,7 @@ contract MyNFT is ERC721 {
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-contracts)
 - [社区论坛](https://forum.openzeppelin.com/c/general/16)
 
-**DappSys -** **_安全、简单、灵活的智能合约构建模块。_**
+**DappSys -** **_安全、简单、灵活的智能合约构建块。_**
 
 - [相关文档](https://dappsys.readthedocs.io/)
 - [GitHub](https://github.com/dapphub/dappsys)
@@ -103,11 +103,11 @@ contract MyNFT is ERC721 {
 
 - [GitHub](https://github.com/HQ20/contracts)
 
-## 相关教程 {#related-tutorials}
+## 相关参考 {#related-tutorials}
 
-- [以太坊开发者的安全考虑](/developers/docs/smart-contracts/security/) _- 构建智能合约时的安全考虑教程，包括库的使用_。
-- [了解 ERC-20 代币智能合约](/developers/tutorials/understand-the-erc-20-token-smart-contract/) \_-关于 ERC20 标准的教程，由多个库提供。
+- [以太坊开发者的安全考虑](/developers/docs/smart-contracts/security/) _- 构建智能合约时的安全考虑教程，包括库的使用。_
+- [了解 ERC-20 代币智能合约](/developers/tutorials/understand-the-erc-20-token-smart-contract/) _-关于 ERC20 标准的教程，由多个库提供。_
 
 ## 延伸阅读 {#further-reading}
 
-_还有哪些社区资源对您有所帮助？ 编辑并添加本页面！_
+_还有哪些社区资源对您有所帮助？ 请编辑并添加到本页面！_

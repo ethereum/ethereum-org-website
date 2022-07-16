@@ -68,6 +68,23 @@ export const RightColumn = styled(LeftColumn)`
   }
 `
 
+export const Width60 = styled.div`
+  flex: 3;
+  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
+    width: 100%;
+  }
+`
+
+export const Width40 = styled.div`
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
+    width: 100%;
+  }
+`
+
 export const Intro = styled.div`
   max-width: 608px;
   margin-bottom: 4rem;
@@ -122,9 +139,6 @@ export const NavLink = styled(Link)`
     svg {
       fill: ${(props) => props.theme.colors.primary};
     }
-  }
-  &.active {
-    font-weight: bold;
   }
 `
 
@@ -475,4 +489,8 @@ export const StyledSelect = styled(Select)`
       background-color: ${({ theme }) => theme.colors.primary};
     }
   }
+`
+
+export const NoWrapText = styled.span`
+  white-space: nowrap;
 `

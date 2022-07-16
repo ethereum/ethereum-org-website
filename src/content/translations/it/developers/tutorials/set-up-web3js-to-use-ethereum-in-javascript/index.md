@@ -5,7 +5,7 @@ author: "jdourlens"
 tags:
   - "web3.js"
   - "javascript"
-skill: principiante
+skill: beginner
 lang: it
 sidebar: true
 published: 2020-04-11

@@ -3,11 +3,11 @@ title: Bir ERC-721 pazarı nasıl uygulanır
 description: Merkeziyetsiz bir ilan panosunda token'laştırılmış ürünler nasıl satışa sunulur
 author: "Alberto Cuesta Cañada"
 tags:
-  - "akıllı sözleşmeler"
+  - "akıllı kontratlar"
   - "erc-721"
-  - "solidity"
+  - "katılık"
   - "token'lar"
-skill: orta düzey
+skill: intermediate
 lang: tr
 sidebar: true
 published: 2020-03-19

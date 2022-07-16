@@ -61,7 +61,7 @@ Door het staken van uw ETH kunt u beloningen verdienen terwijl u het Ethereum-ne
 
 - [Meer over staking](/staking/)
 
-### Ondersteun projecten {#suport-projects}
+### Ondersteun projecten {#support-projects}
 
 Het Ethereum-ecosysteem is op een missie om publieke goederen te financieren en waardevolle projecten te beïnvloeden. Met zeer kleine donaties kunt u uw steun tonen en toestaan dat belangrijk werk wordt uitgevoerd.
 

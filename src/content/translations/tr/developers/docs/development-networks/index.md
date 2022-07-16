@@ -48,11 +48,11 @@ Hardhat Network, profesyoneller için bir Ethereum geliştirme ortamı olan Hard
 - [Web sitesi](https://hardhat.org/)
 - [GitHub](https://github.com/nomiclabs/hardhat)
 
-## daha fazla okuma {#further-reading}
+## Daha fazla bilgi {#further-reading}
 
 _Size yardımcı olan bir topluluk kaynağı mı biliyorsunuz? Bu sayfayı düzenleyin ve onu ekleyin!_
 
 ## İlgili konular {#related-topics}
 
-- [Geliştirici çerçeveleri](/developers/docs/frameworks/)
+- [Geliştirme çerçeveleri](/developers/docs/frameworks/)
 - [Yerel bir geliştirme ortamı oluşturun](/developers/local-environment/)

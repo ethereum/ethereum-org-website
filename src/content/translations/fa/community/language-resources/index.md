@@ -30,7 +30,7 @@ Ethereum.org به صورت بومی به بیش از 40 زبان ترجمه شد
 - [BeInCrypto](http://www.beincrypto.com.br) - اخبار و مقالات ارزهای دیجیتال، از جمله فهرستی از صرافی‌های موجود در برزیل
 - [Cointelegraph](http://cointelegraph.com.br/category/analysis) - نسخه‌ی برزیلی Cointelegraph، یک رسانه خبری مهم ارزهای دیجیتال
 - [Livecoins](http://www.livecoins.com.br/ethereum) - ابزارها و اخبار ارزهای رمزنگاری‌شده
-- [Seudinheiro](http://www.seudinheiro.com/criptomoedas/) - اخبار و گزارش‌های ارزهای رمزنگاری‌شده
+- [Seudinheiro](http://www.seudinheiro.com/criptomoedas/) - اخبار و گزارش‌های ارزهای دیجیتال
 
 **آموزشی**
 
@@ -46,11 +46,11 @@ Ethereum.org به صورت بومی به بیش از 40 زبان ترجمه شد
 **منابع کلی**
 
 - [Ethereum.cn](https://www.ethereum.cn/) - محتوای نگهداری‌شده توسط انجمن، پوشش ارتقای لایه اجماع، تمام یادداشت‌های گردهمایی‌های برنامه‌نویسی هسته، لایه‌ی 2 و غیره.
-- [EthFans](https://github.com/editor-Ajian/EthFans.org-annual-collected-works/) - همه‌چیز را از اصول اولیه تا موضوعات پیشرفته‌ی اتریوم بیاموزید
+- [EthFans](https://ethfans.org/) - همه‌چیز را از اصول اولیه تا موضوعات پیشرفته‌ی اتریوم بیاموزید
 - [Unitimes](https://mp.weixin.qq.com/s/tvloZSDBSOQN9zDQj_91kA) - محتوای نگهداری شده توسط انجمن، پوشش دانش مرتبط با اتریوم، دیفای، NFT،‏ Web3
 - [123ETH](https://123eth.org/) - دروازه‌ای به اکوسیستم اتریوم
 - [Zhen Xiao](http://zhenxiao.com/blockchain/) - دوره‌های آنلاین رایگان درباره ارزهای دیجیتال و کاربردهای آن
-- [Whitepaper اتریوم](https://github.com/ethereum/wiki/wiki/[%E4%B8%AD%E6%96%87]-%E4%BB%A5%E5%A4%AA%E5%9D %8A%E7%99%BD%E7%9A%AE%E4%B9%A6) - نسخه‌ی چینی وایت‌پیپر اتریوم
+- [Whitepaper اتریوم](/zh/whitepaper) - نسخه‌ی چینی وایت‌پیپر اتریوم
 
 **اکوسیستم اتریوم**
 
@@ -112,8 +112,8 @@ Ethereum.org به صورت بومی به بیش از 40 زبان ترجمه شد
 
 ### ژاپنی {#ja}
 
-- [انجمن تبادل دارایی های مجازی و رمزنگاری ژاپن](https://jvcea.or.jp/)
-- [انجمن تجارت دارایی رمزنگاری ژاپن](https://cryptocurrency-association.org/)
-- [با توسعه بلاک چین شروع کنید - بیاموزید | Microsoft Docs](https://docs.microsoft.com/ja-jp/learn/paths/ethereum-blockchain-development/) - این مسیر یادگیری شما را با بلاک چین و توسعه در پلتفرم اتریوم آشنا می کند
-- [تسلط بر اتریوم](https://www.oreilly.co.jp/books/9784873118963/) - تسلط بر اتریوم به زبان ژاپنی
-- [توسعه قراردادهای هوشمند عملی با Solidity و Ethereum](https://www.oreilly.co.jp/books/9784873119342/) - توسعه قراردادهای هوشمند عملی با Solidity و Ethereum به زبان ژاپنی
+- [انجمن تبادل دارایی‌های مجازی و رمزنگاری‌شده‌ی ژاپن](https://jvcea.or.jp/)
+- [انجمن تجارت دارایی‌های رمزنگاری‌شده‌ی ژاپن](https://cryptocurrency-association.org/)
+- [با توسعه‌ی زنجیره‌‌ی بلوکی شروع کنید - بیاموزید | Microsoft Docs](https://docs.microsoft.com/ja-jp/learn/paths/ethereum-blockchain-development/) - این سایت، شما را با مسیر یادگیری زنجیره‌‌ی بلوکی و توسعه در پلتفرم اتریوم آشنا می‌کند
+- [تبحر در اتریوم](https://www.oreilly.co.jp/books/9784873118963/) - تبحر در اتریوم به زبان ژاپنی
+- [توسعه‌ی قراردادهای هوشمند به‌صورت عملی با Solidity و اتریوم](https://www.oreilly.co.jp/books/9784873119342/) - توسعه‌ی قراردادهای هوشمند عملی با Solidity و اتریوم به زبان ژاپنی

@@ -11,7 +11,7 @@ tags:
   - "the graph"
   - "create-eth-app"
   - "reakcja"
-skill: średnie
+skill: intermediate
 published: 2020-09-06
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/thegraph

@@ -6,7 +6,7 @@ sidebar: true
 incomplete: true
 ---
 
-Ethereum, assim como o Bitcoin, usa atualmente um protocolo de consenso chamado **[ prova de trabalho (PoW)](https://wikipedia.org/wiki/Proof_of_work)**. Isto permite que a rede Ethereum verifique o estado de todas as informações gravadas no blockchain Ethereum, e previne certos tipos de ataques econômicos.
+Ethereum, assim como o Bitcoin, usa atualmente um protocolo de consenso chamado **[prova de trabalho (PoW)](https://wikipedia.org/wiki/Proof_of_work)**. Isto permite que a rede Ethereum verifique o estado de todas as informações gravadas no blockchain Ethereum, e previne certos tipos de ataques econômicos.
 
 Ao longo do próximo ano, a prova de trabalho será gradualmente eliminada em favor da **[prova de participação (PoS)](/developers/docs/consensus-mechanisms/pos)**. A transição para a prova de participação também irá eliminar gradualmente a mineração do Ethereum. [Mais sobre a fusão.](/upgrades/merge/)
 

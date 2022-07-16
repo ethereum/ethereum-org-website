@@ -6,7 +6,7 @@ tags:
   - "tranzacții"
   - "web3.js"
   - "alchemy"
-skill: începător
+skill: beginner
 lang: ro
 sidebar: true
 published: 2020-11-04
