@@ -1,5 +1,5 @@
 import React, { ChangeEvent, FormEvent } from "react"
-import { useIntl } from "gatsby-plugin-intl"
+import { useIntl } from "react-intl"
 import styled from "styled-components"
 import { connectSearchBox } from "react-instantsearch-dom"
 

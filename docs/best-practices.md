@@ -52,7 +52,7 @@ Markdown will be translated as whole pages of content, so no specific action is 
 
   - _tl;dr Each individual JSON entry should be a complete phrase by itself_
 
-- This is done using the `Translation` component. However there is an alternative method for regular JS: `gatsby-plugin-intl` with `/src/utils/translations.ts`
+- This is done using the `Translation` component. However there is an alternative method for regular JS: `gatsby-theme-i18n` with `/src/utils/translations.ts`
 
   - **Method one: `<Translation />` component (preferred if only needed in JSX)**
 
@@ -66,7 +66,7 @@ Markdown will be translated as whole pages of content, so no specific action is 
   - **Method two: `translateMessageId()`**
 
     ```tsx
-    import { useIntl } from "gatsby-plugin-intl"
+    import { useIntl } from "react-intl"
     import { translateMessageId } from "src/utils/translations"
 
     // Utilize anywhere in JS using

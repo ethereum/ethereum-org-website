@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react"
 import { graphql } from "gatsby"
 import { getImage, GatsbyImage } from "gatsby-plugin-image"
 import styled from "styled-components"
-import { useIntl } from "gatsby-plugin-intl"
+import { useIntl } from "react-intl"
 
 // Data
 import layer2Data from "../data/layer-2/layer-2.json"
@@ -936,7 +936,7 @@ const Layer2Page = ({ data }) => {
 export default Layer2Page
 
 export const query = graphql`
-  query {
+  query Layer2Page {
     dao: file(relativePath: { eq: "use-cases/dao-2.png" }) {
       childImageSharp {
         gatsbyImageData(

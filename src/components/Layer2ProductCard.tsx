@@ -2,7 +2,7 @@
 import React from "react"
 import styled from "styled-components"
 import { GatsbyImage } from "gatsby-plugin-image"
-import { useIntl } from "gatsby-plugin-intl"
+import { useIntl } from "react-intl"
 
 // Components
 import ButtonLink from "./ButtonLink"

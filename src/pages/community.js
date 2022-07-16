@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { graphql } from "gatsby"
-import { useIntl } from "gatsby-plugin-intl"
+import { useIntl } from "react-intl"
 
 import ActionCard from "../components/ActionCard"
 import Callout from "../components/Callout"
@@ -588,7 +588,7 @@ const CommunityPage = ({ data }) => {
 export default CommunityPage
 
 export const query = graphql`
-  query {
+  query CommunityPage {
     enterprise: file(relativePath: { eq: "enterprise-eth.png" }) {
       childImageSharp {
         gatsbyImageData(

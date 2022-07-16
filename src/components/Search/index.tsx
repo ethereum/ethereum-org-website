@@ -1,6 +1,6 @@
 import React, { useState, useRef, MouseEventHandler } from "react"
 import { Link as GatsbyLink } from "gatsby"
-import { useIntl } from "gatsby-plugin-intl"
+import { useIntl } from "react-intl"
 import {
   Configure,
   InstantSearch,

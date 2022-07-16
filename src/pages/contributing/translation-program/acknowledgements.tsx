@@ -2,7 +2,7 @@
 import React, { useContext } from "react"
 import { graphql, PageProps } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import { useIntl } from "gatsby-plugin-intl"
+import { useIntl } from "react-intl"
 import styled, { ThemeContext } from "styled-components"
 import type { Context } from "../../../types"
 
