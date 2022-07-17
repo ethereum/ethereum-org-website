@@ -23,7 +23,7 @@ Pamaoja na kutoa maelezo ya kiufundi kwa ajili ya mabadiliko, EIPs ni kitengo am
 
 ## Historia ya EIPs {#history-of-eips}
 
-[Hazina ya Mapendekezo ya Uboreshwaji wa Ethereum (EIPs)yalioko Github](https://github.com/ethereum/EIPs)yaliundwa mwezi Oktoba, 2015. Mchakato wa EIP unategemea/ kuangalia [ Mapendekezo ya Uboreshwaji wa Bitcoin (BIPs)](https://github.com/bitcoin/bips), ambayo yenyewe inajilinganisha /kutegemea mabadiliko yanayoendelea kwenye mchakato wa [ Mapendekezo ya Uboreshwaji wa Python (PEPs)](https://www.python.org/dev/peps/).
+[Hazina ya Mapendekezo ya Uboreshwaji wa Ethereum (EIPs)yalioko GitHub](https://github.com/ethereum/EIPs)yaliundwa mwezi Oktoba, 2015. Mchakato wa EIP unategemea/ kuangalia [ Mapendekezo ya Uboreshwaji wa Bitcoin (BIPs)](https://github.com/bitcoin/bips), ambayo yenyewe inajilinganisha /kutegemea mabadiliko yanayoendelea kwenye mchakato wa [ Mapendekezo ya Uboreshwaji wa Python (PEPs)](https://www.python.org/dev/peps/).
 
 Wahariri wa EIP wanapewa jukumu la kufanya mchakato wa uhakiki wa kiufundi, sarufi/tahjia, na aina ya msimbo sahihi. Martin Becze, Vitalik Buterin, Gavin Wood na wengine wachache ndio wahariri waanzilishi wa EIP kutoka mwaka 2015 kwenda mwishoni mwa mwaka 2016. Wahariri wa sasa wa EIP ni:
 

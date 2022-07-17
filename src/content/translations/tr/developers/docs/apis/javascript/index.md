@@ -152,7 +152,7 @@ Kurulumdan sonra şunları yapabileceksiniz:
 
 ### Akıllı sözleşme fonksiyonlarıyla etkileşim kurmak {#interact-with-smart-contract-functions}
 
-Javascript istemci kütüphaneleri, derlenmiş bir sözleşmenin Uygulama İkili Arabirimini (ABI) okuyarak uygulamanızın akıllı sözleşme fonksiyonlarını çağırmasına olanak tanır.
+JavaScript istemci kütüphaneleri, derlenmiş bir sözleşmenin Uygulama İkili Arabirimini (ABI) okuyarak uygulamanızın akıllı sözleşme fonksiyonlarını çağırmasına olanak tanır.
 
 ABI, esasen sözleşmenin fonksiyonlarını bir JSON formatında açıklar ve onu normal bir JavaScript nesnesi gibi kullanmanıza izin verir.
 

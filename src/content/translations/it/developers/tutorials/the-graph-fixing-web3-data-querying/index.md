@@ -112,7 +112,7 @@ Per motivi di comodità potresti anche usare uno strumento di modelli come musta
 ```yaml
 specVersion: 0.0.1
 description: Placing Bets on Ethereum
-repository: - Github link -
+repository: - GitHub link -
 schema:
   file: ./schema.graphql
 dataSources:
