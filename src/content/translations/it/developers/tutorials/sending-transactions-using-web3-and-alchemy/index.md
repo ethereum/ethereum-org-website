@@ -62,7 +62,7 @@ Okay, ora che ci siamo tolti alcune di queste domande, passiamo al tutorial. Sen
 **NOTA:** Questa guida richiede un profilo di Alchemy, un indirizzo di Ethereum o portafoglio di Metamask, NodeJS e npm installato. Altrimenti, segui questi passaggi:
 
 1.  [Crea un profilo di Alchemy](https://dashboard.alchemyapi.io/signup/)
-2.  [Crea un account di Metamask ](https://metamask.io/) (od ottieni un indirizzo di Ethereum)
+2.  [Crea un account di MetaMask](https://metamask.io/) (od ottieni un indirizzo di Ethereum)
 3.  [Segui questi passaggi per installare NodeJs e NPM](https://docs.alchemy.com/alchemy/guides/alchemy-for-macs)
 
 ## Fasi per inviare la tua transazione {#steps-to-sending-your-transaction}
