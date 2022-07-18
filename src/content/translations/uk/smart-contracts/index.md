@@ -9,7 +9,7 @@ sidebar: true
 
 Розумні контракти є основними будівельними блоками для [програм Ethereum](/dapps/). Це комп’ютерні програми, які зберігаються в блокчейні, що дає нам змогу перетворювати традиційні контракти на цифрові аналоги. Розумні контракти дуже логічні та виконуються в разі відповідності конкретній структурі. Це означає, що вони поводяться точно так, як запрограмовано, і не можуть бути змінені.
 
-Термін «розумний контракт» ввів Нік Шабо. У 1994 році він написав [введення в концепцію](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart.contracts.html), а в 1996 році — [дослідження можливостей розумних контрактів](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best. vwh.net/smart_contracts_2.html).
+Термін «розумний контракт» ввів Нік Шабо. У 1994 році він написав [введення в концепцію](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart.contracts.html), а в 1996 році — [дослідження можливостей розумних контрактів](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart_contracts_2.html).
 
 Нік Шабо уявляв цифровий ринок, побудований на цих автоматичних і криптографічно захищених процесах. Площину, де транзакції та бізнес-процедури не потребуватимуть довіри та відбуватимуться без посередників. Розумні контракти в Ethereum втілюють це бачення в життя.
 

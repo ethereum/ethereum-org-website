@@ -177,7 +177,7 @@ La gobernanza en Ethereum no está estrictamente definida. Muchos participantes 
 
 - [Notas sobre la gobernanza en la cadena de bloques](https://vitalik.ca/general/2017/12/17/voting.html) – _Vitalik Buterin_
 - [Gobernanza de Ethereum](https://docs.ethhub.io/ethereum-basics/governance/) – _ETHHub_
-- [¿Cómo funciona la gobernanza de Ethereum?](https://cryptotesters. com/blog/ethereum-governance) – _Criptotestres_
+- [¿Cómo funciona la gobernanza de Ethereum?](https://cryptotesters.com/blog/ethereum-governance) – _Criptotestres_
 - [Cómo funciona la gobernanza de Ethereum](https://medium.com/coinmonks/how-ethereum-governance-works-71856426b63a) – _Micah Zoltu_
 - [¿Qué es un desarrollador principal de Ethereum?](https://hudsonjameson.com/2020-06-22-what-is-an-ethereum-core-developer/) – _Hudson Jameson_
 - [Gobernanza, parte 2: la plutocracia sigue siendo mala](https://vitalik.ca/general/2018/03/28/plutocracy.html) – _Vitalik Buterin_

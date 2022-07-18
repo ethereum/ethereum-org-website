@@ -106,7 +106,7 @@ Si es bilingüe y quiere ayudarnos a llegar a más personas, también puede invo
 
 ### Vietnamita {#vi}
 
-- [Tino Group](https://wiki.tino.org/ethereum-la-gi/): información general de Ethreum, dapps, carteras y preguntas más frecuentes.
+- [Tino Group](https://wiki.tino.org/ethereum-la-gi/): información general de Ethereum, dapps, carteras y preguntas más frecuentes.
 - [Tap Chi Bitcoin](https://tapchibitcoin.io/tap-chi/tin-tuc-ethereum-eth): plataforma web con subpáginas de noticias y educación de Ethereum.
 - [Coin68](https://coin68.com/ethereum-tieu-diem/): portal de criptomonedas con contenido educativo y noticias de Ethereum.
 
