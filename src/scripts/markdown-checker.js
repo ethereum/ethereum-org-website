@@ -1,7 +1,9 @@
 const fs = require("fs")
 const path = require("path")
 const matter = require("gray-matter")
+const argv = require("minimist")(process.argv.slice(2))
 
+const LANG_ARG = argv.lang || null
 const PATH_TO_INTL_MARKDOWN = "./src/content/translations/"
 const PATH_TO_ALL_CONTENT = "./src/content/"
 const TUTORIAL_DATE_REGEX = new RegExp("\\d{4}-\\d{2}-\\d{2}")
@@ -72,7 +74,13 @@ function sortMarkdownPathsIntoLanguages(files) {
       ? file.slice(langIndex, langIndex + charactersToSlice)
       : "en"
 
-    languages[lang].push(file)
+    if (LANG_ARG) {
+      if (LANG_ARG === lang) {
+        languages[lang].push(file)
+      }
+    } else {
+      languages[lang].push(file)
+    }
   }
 
   return languages
