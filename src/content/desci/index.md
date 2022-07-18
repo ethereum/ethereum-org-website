@@ -102,7 +102,6 @@ Explore projects and join the DeSci community.
 - [Fleming Protocol: open-source data economy that fuels collaborative biomedical discovery](https://medium.com/@FlemingProtocol/a-data-economy-for-patient-driven-biomedical-innovation-9d56bf63d3dd)
 - [Active Inference Lab](https://www.activeinference.org/)
 - [Cherubs DAO: NFT funded and DAO governed impact fund for mental health & brain wellness](https://cherubsdao.com/)
-- [DeSci Collective: a DeSci launchpad for indiviuals and projects looking to create impact in the DeSci space](https://mintable.app/DeSciCollective)
 
 ## Further reading {#further-reading}
 
