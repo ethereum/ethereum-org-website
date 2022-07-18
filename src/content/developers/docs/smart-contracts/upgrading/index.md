@@ -5,8 +5,6 @@ lang: en
 sidebar: true
 ---
 
-# Upgrading Smart Contracts {#upgrading-smart-contracts}
-
 Smart contracts on Ethereum are self-executing programs that run in the Ethereum Virtual Machine (EVM). These programs are immutable by design, which prevents any updates to the business logic once the contract is deployed.
 
 While immutability is necessary for trustlessness, decentralization, and security of smart contracts, it may be a drawback in certain cases. For instance, immutable code can make it impossible for developers to fix vulnerable contracts.
