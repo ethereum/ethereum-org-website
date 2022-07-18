@@ -406,7 +406,7 @@ Se calcula que las actualizaciones de escalabilidad podrán permitir que la red 
 
 [Vitalik Buterin sobre el potencial de las transacciones por segundo con la fragmentación](https://twitter.com/VitalikButerin/status/1312905884549300224)
 
-Como mínimo, fraccionar permitirá aumentar 64 veces la cantidad de transacciones, que en la actualidad se sitúa en alrededor de 15 transacciones. Esa es la cantidad de cadenas de fragmentación (datos y capacidad adicionales) que se están introduciendo. [Más información sobre las cadenas de fragmentación](/upgrades/shard-chains/)
+Como mínimo, fraccionar permitirá aumentar 64 veces la cantidad de transacciones, que en la actualidad se sitúa en alrededor de 15 transacciones. Esa es la cantidad de cadenas de fragmentación (datos y capacidad adicionales) que se están introduciendo. [Más información sobre las cadenas de fragmentación](/upgrades/sharding/)
 
 Eso significa que podemos estimar cuánto tiempo llevará procesar 100.000 transacciones para poder compararlo con el ejemplo anterior de Visa.
 
