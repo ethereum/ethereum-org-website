@@ -179,7 +179,7 @@ There are multiple consensus clients (previously known as 'Eth2' clients) to sup
 
 | Client                                                                                    | Language   | Operating systems     | Networks                              |
 | ----------------------------------------------------------------------------------------- | ---------- | --------------------- | ------------------------------------- |
-| [Teku]([https://pegasys.tech/teku](https://consensys.net/knowledge-base/ethereum-2/teku/) | Java       | Linux, Windows, macOS | Beacon Chain, Prater                  |
+| [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/)                             | Java       | Linux, Windows, macOS | Beacon Chain, Gnosis, Prater, Sepolia |
 | [Nimbus](https://nimbus.team/)                                                            | Nim        | Linux, Windows, macOS | Beacon Chain, Prater                  |
 | [Lighthouse](https://lighthouse.sigmaprime.io/)                                           | Rust       | Linux, Windows, macOS | Beacon Chain, Prater, Pyrmont         |
 | [Lodestar](https://lodestar.chainsafe.io/)                                                | TypeScript | Linux, Windows, macOS | Beacon Chain, Prater                  |
@@ -187,7 +187,11 @@ There are multiple consensus clients (previously known as 'Eth2' clients) to sup
 
 ### Teku
 
-Teku is a consensus client implementation written in Java under Apache-2.0 license.
+Teku is one of the original beacon chain genesis clients. Alongside the usual goals (security, robustness, stability, usability, performance) it specifically aims to comply fully with all the various consensus client standards.
+
+Teku offers very flexible deployment options. The beacon node and validator client can be run together as a single process, which is extremely convenient for solo stakers, or they can be run separately for sophisticated staking operations. In addition, Teku is fully interoperable with [Web3Signer](https://github.com/ConsenSys/web3signer/) for signing key security and slashing protection.
+
+Teku is written in Java and is Apache 2.0 licensed. It is developed by the Protocols team at ConsenSys that is also responsible for Besu and Web3Signer.
 
 ### Nimbus
 
