@@ -168,7 +168,7 @@ Muchas carteras de Ethereum ofrecen una protección de límites para evitar que 
 Los estafadores siempre están buscando maneras de quitarle sus fondos. Aunque es imposible detener completamente a los estafadores, sí podemos mermar sus intentos al conocer la mayoría de las técnicas utilizadas. Estas estafas se presentan de muchas formas, pero suelen seguir los mismos patrones de alto nivel. Si no puede hacer más, tenga esto presente:
 
 - actúe siempre con escepticismo,
-- nadie le va a regalar ETH,
+- nadie le va a dar ETH gratis o con descuento
 - nadie necesita tener acceso a sus claves privadas o su información personal.
 
 ### La estafa de los regalos {#giveaway}
@@ -179,7 +179,7 @@ Estas estafas de fraude suelen estipular un tiempo limitado para aprovechar la o
 
 #### Hacks en redes sociales {#social-media-hacks}
 
-Un ejemplo concreto de esto a gran escala ocurrió en julio de 2020, cuando las cuentas de Twitter de celebridades y organizaciones destacadas fueron hackeadas. El hacker publicó simultáneamente un Bitcoin como regalo en las cuentas hackeadas. Aunque los tweets engañosos se notaron y eliminaron rápidamente, los hackers todavía lograron hacerse con 11 bitcoin (o 500.000 $ en septiembre de 2021)
+Un ejemplo concreto de esto a gran escala ocurrió en julio de 2020, cuando las cuentas de Twitter de celebridades y organizaciones destacadas fueron hackeadas. El hacker publicó simultáneamente un Bitcoin como regalo en las cuentas hackeadas. Aunque los tweets engañosos se detectaron y eliminaron rápidamente, los hackers todavía lograron hacerse con 11 bitcoins (o 500.000 $ en septiembre de 2021).
 
 ![Una estafa en Twitter](./appleTwitterScam.png)
 
@@ -271,7 +271,7 @@ Las estafas de AirDrop implican una tentativa de estafa que emite un activo (NFT
 
 ### Seguridad de la Web {#reading-web-security}
 
-- [Esta es la razón por la que no deberías usar textos para la autenticación de dos factores](https://www.theverge.com/2017/9/18/16328172/sms-two-factor-authentication-hack-password-bitcoin) - _The Verge_
+- [Esta es la razón por la que no deberías usar textos para la autenticación de dos factores](https://www. theverge. com/2017/9/18/16328172/sms-two-factor-authentication-hack-password-bitcoin) - _The Verge_
 - [Hasta 3 millones de dispositivos infectados por complementos Chrome y Edge enlazados con malware](https://arstechnica.com/information-technology/2020/12/up-to-3-million-devices-infected-by-malware-laced-chrome-and-edge-add-ons/) - _Dan Goodin_
 - [Cómo crear una contraseña segura que no olvides](https://www.avg.com/en/signal/how-to-create-a-strong-password-that-you-wont-forget) - _AVG_
 - [¿Qué es una clave de seguridad?](https://help.coinbase.com/en/coinbase/getting-started/verify-my-account/security-keys-faq) - _Coinbase_

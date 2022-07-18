@@ -29,7 +29,7 @@ Como sucede con la prueba de trabajo, una entidad maliciosa requeriría al menos
 
 ## La fusión {#the-merge}
 
-Existe una cadena funcional basada en la prueba de participación llamada [cadena de baliza](/upgrades/beacon-chain/), que lleva ejecutándose desde diciembre de 2020 y ha demostrado la viabilidad del protocolo de la prueba de participación. La fusión hace referencia al momento en que Ethereum deja atrás la prueba de trabajo y adopta completamente la prueba de participación. Se espera que la fusión suceda durante el segundo trimestre de 2022. [Más información sobre la fusión](/upgrades/merge/).
+Existe una cadena funcional basada en la prueba de participación llamada [cadena de baliza](/upgrades/beacon-chain/), que lleva ejecutándose desde diciembre de 2020 y ha demostrado la viabilidad del protocolo de la prueba de participación. La fusión hace referencia al momento en que Ethereum deja atrás la prueba de trabajo y adopta completamente la prueba de participación. Se espera que la fusión suceda durante el tercer/cuarto trimestre de 2022. [Más información sobre la fusión](/upgrades/merge/).
 
 ## Gasto energético de la prueba de participación {#proof-of-stake-energy}
 
