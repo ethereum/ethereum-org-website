@@ -191,7 +191,9 @@ Teku is a consensus client implementation written in Java under Apache-2.0 licen
 
 ### Nimbus
 
-Nimbus is a consensus client implementation written in Nim under Apache-2.0 license.
+Nimbus is a consensus client implementation written in Nim under Apache-2.0 license. It is a production-ready client in use by solo-stakers and staking pools. It is designed for resource efficiency, making it easy to run Nimbus on resource-restricted devices and enterprise infrastructure with equal ease, without compromising stability or reward performance. A lighter resource footprint means the client has greater margin-of-safety when the network is under stress. 
+
+Documentation can be found in the Nimbus Guide: https://nimbus.guide/
 
 ### Lighthouse
 
