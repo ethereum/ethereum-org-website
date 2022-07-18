@@ -21,7 +21,7 @@ Qui parliamo del codice sorgente annotato. Se vuoi implementare ERC-20, [leggi q
 
 Lo scopo di uno standard come ERC-20 è quello di consentire molte implementazioni di token che siano interoperabili tra le varie applicazioni, quali wallet e scambi decentralizzati. A tale scopo, creiamo un'[interfaccia](https://www.geeksforgeeks.org/solidity-basics-of-interface/). Ogni codice che necessita di usare il contratto del token può avvalersi delle stesse definizioni nell'interfaccia ed essere compatibile con tutti i contratti del token che la usano, che si tratti di un portafoglio come MetaMask, una dApp come etherscan.io o un contratto diverso, come un pool di liquidità.
 
-![Illustrazione dell'interfaccia di ERC-20](./erc20_interface.png)
+![Illustrazione dell'interfaccia di ERC-20](erc20_interface.png)
 
 Se sei un programmatore esperto, probabilmente ricorderai di aver visto costrutti simili in [Java](https://www.w3schools.com/java/java_interface.asp) o persino nei [file d'intestazione in C](https://gcc.gnu.org/onlinedocs/cpp/Header-Files.html).
 
@@ -93,7 +93,7 @@ Come dice il nome, `balanceOf` restituisce il saldo di un conto. I conti di Ethe
      *
      * Returns a boolean value indicating whether the operation succeeded.
      *
-     * Emits a {Transfer} event.
+     * Emette un evento {Transfer}.
      */
     function transfer(address recipient, uint256 amount) external returns (bool);
 ```
@@ -521,7 +521,7 @@ Poi qualcosa cambia e il prezzo di Bill aumenta a dieci token. Alice, che è anc
 | approve(Bill, 10)    | 11             |                               |               | 10                 | 5                               |
 |                      |                | transferFrom(Alice, Bill, 10) | 10,124        | 0                  | 15                              |
 
-Per evitare questo problema, queste due funzioni (`increaseAllowance` e `decreaseAllowance`) ti consentono di modificare il margine di tolleranza di un importo specifico. Quindi, se Bill avesse già speso cinque token, potrà spenderne solo altri cinque. A seconda dei tempi, sono possibili due manovre diverse, ma che portano entrambe Bill ad avere solo dieci token:
+Per evitare questo problema, queste due funzioni (`increaseAllowance` e `decreaseAllowance`) ti consentono di modificare il margine di tolleranza di un importo specifico. Quindi, se Bill avesse già speso cinque token, potrà spenderne solo altri cinque. A seconda delle tempistiche, esistono due modi in cui questo può funzionare, entrambi terminano con Bill che riceve solo dieci token:
 
 A:
 
