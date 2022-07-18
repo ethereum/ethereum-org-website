@@ -7,7 +7,7 @@ sidebar: true
 tags:
   - "Solidity"
   - "erc-20"
-skill: principiante
+skill: beginner
 published: 2021-03-09
 ---
 
