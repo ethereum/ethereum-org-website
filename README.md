@@ -1306,6 +1306,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://linkedin.com/in/miragaya-ivan"><img src="https://avatars.githubusercontent.com/u/72365253?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Iván Miragaya</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=M-Ivan" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/smejak"><img src="https://avatars.githubusercontent.com/u/20759274?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Jakub Smékal</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=smejak" title="Documentation">📖</a></td>
     <td align="center"><a href="https://tokenpocket.pro"><img src="https://avatars.githubusercontent.com/u/2173383?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Tony Chen</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=chendatony31" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/metalc"><img src="https://avatars.githubusercontent.com/u/102876192?v=4?s=100" width="100px;" alt=""/><br /><sub><b>metalc</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=metalc" title="Documentation">📖</a></td>
   </tr>
 </table>
 
