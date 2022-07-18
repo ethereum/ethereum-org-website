@@ -362,5 +362,13 @@
   {
     "fromPath": "/*/contributing/translation-program/content-versions/",
     "toPath": "/:splat/contributing/translation-program/content-buckets/"
+  },
+  {
+    "fromPath": "/*/developers/docs/smart-contracts/source-code-verification/",
+    "toPath": "/:splat/developers/docs/smart-contracts/verifying/"
+  },
+  {
+    "fromPath": "/*/developers/docs/smart-contracts/upgrading-smart-contracts/",
+    "toPath": "/:splat/developers/docs/smart-contracts/upgrading/"
   }
 ]
