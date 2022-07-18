@@ -229,18 +229,6 @@ Multiple implementations of ZK-rollups exist that you can integrate into your da
 
 <RollupProductDevDoc rollupType="zk" />
 
-## Aztec Network
-
-- [Website](https://aztec.network/)
-- [Documentation](https://developers.aztec.network/)
-- [Technology and risk summary](https://l2beat.com/projects/aztec/)
-
-## Polygon Hermez
-
-- [Website](https://hermez.io/)
-- [Documentation](https://docs.hermez.io/)
-- [Technology and risk summary](https://l2beat.com/projects/hermez/)
-
 ## Who is working on a zkEVM? {#zkevm-projects}
 
 Projects working on zkEVMs include:
