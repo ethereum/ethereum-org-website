@@ -1,5 +1,5 @@
 ---
-title: Zero-Knowledge Rollups
+title: Zero-Knowledge rollups
 description: An introduction to zero-knowledge rollups—a scaling solution used by the Ethereum community.
 lang: en
 sidebar: true
@@ -21,7 +21,7 @@ There are no delays when moving funds from a ZK-rollup to Ethereum because exit 
 
 ZK-rollups write transactions to Ethereum as `calldata`. `calldata` is where data that is included in external calls to smart contract functions gets stored. Information in `calldata` is published on the blockchain, allowing anyone to reconstruct the rollup’s state independently. ZK-rollups use compression techniques to reduce transaction data—for example, accounts are represented by an index rather than an address, which saves 28 bytes of data. On-chain data publication is a significant cost for rollups, so data compression can reduce fees for users.
 
-## How do zk-rollups interact with Ethereum? {#zk-rollups-and-ethereum}
+## How do ZK-rollups interact with Ethereum? {#zk-rollups-and-ethereum}
 
 A ZK-rollup chain is an off-chain protocol that operates on top of the Ethereum blockchain and is managed by on-chain Ethereum smart contracts. ZK-rollups execute transactions outside of Mainnet, but periodically commit off-chain transaction batches to an on-chain rollup contract. This transaction record is immutable, much like the Ethereum blockchain, and forms the ZK-rollup chain.
 
@@ -53,7 +53,7 @@ Most ZK-rollups use a "supernode" (the operator) to execute transactions, produc
 
 As a security measure, ZK-rollups allow users to submit transactions directly to the rollup contract on Mainnet if they think they are being censored by the operator. This allows users to force an exit from the ZK-rollup to Ethereum without having to rely on the operator’s permission.
 
-## How do zk-rollups work? {#how-do-zk-rollups-work}
+## How do ZK-rollups work? {#how-do-zk-rollups-work}
 
 ### Transactions {#transactions}
 
@@ -205,7 +205,7 @@ Currently, validity proofs are generated on a block-by-block basis and submitted
 
 Recursive proofs, however, make it possible to finalize several blocks with one validity proof. This is because the proving circuit recursively aggregates multiple block proofs until one final proof is created. The L2 operator submits this recursive proof, and if the contract accepts it, all the relevant blocks will be finalized instantly. With recursive proofs, the number of ZK-rollup transactions that can be finalized on Ethereum at intervals increases.
 
-### Pros and cons of zk-rollups {#zk-rollups-pros-and-cons}
+### Pros and cons of ZK-rollups {#zk-rollups-pros-and-cons}
 
 | Pros                                                                                                                                                                                                   | Cons                                                                                                                                                                                               |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
