@@ -14,7 +14,9 @@ import Link from "../components/Link"
 import MarkdownTable from "../components/MarkdownTable"
 import PageMetadata from "../components/PageMetadata"
 import Pill from "../components/Pill"
-import TableOfContents from "../components/TableOfContents"
+import TableOfContents, {
+  Item as ItemTableOfContents,
+} from "../components/TableOfContents"
 import SectionNav from "../components/SectionNav"
 import CallToContribute from "../components/CallToContribute"
 import {
@@ -163,7 +165,7 @@ const TutorialPage = ({
   const isRightToLeft = isLangRightToLeft(mdx.frontmatter.lang as Lang)
   const showMergeBanner = !!mdx.frontmatter.preMergeBanner
 
-  const tocItems = mdx.tableOfContents?.items
+  const tocItems = mdx.tableOfContents?.items as Array<ItemTableOfContents>
 
   const { editContentUrl } = siteData.siteMetadata || {}
   const absoluteEditPath = `${editContentUrl}${relativePath}`
@@ -181,7 +183,7 @@ const TutorialPage = ({
           <TutorialMetadata tutorial={mdx} />
           <MobileTableOfContents
             items={tocItems}
-            maxDepth={mdx.frontmatter.sidebarDepth}
+            maxDepth={mdx.frontmatter.sidebarDepth!}
             editPath={absoluteEditPath}
             isMobile={true}
           />
@@ -197,7 +199,7 @@ const TutorialPage = ({
         {mdx.frontmatter.sidebar && tocItems && (
           <DesktopTableOfContents
             items={tocItems}
-            maxDepth={mdx.frontmatter.sidebarDepth}
+            maxDepth={mdx.frontmatter.sidebarDepth!}
             editPath={absoluteEditPath}
           />
         )}

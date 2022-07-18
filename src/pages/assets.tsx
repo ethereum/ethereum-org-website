@@ -3,7 +3,7 @@ import { useIntl } from "react-intl"
 import { ThemeContext } from "styled-components"
 import styled from "styled-components"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import { graphql } from "gatsby"
+import { graphql, PageProps } from "gatsby"
 
 import AssetDownload from "../components/AssetDownload"
 import Link from "../components/Link"
@@ -14,6 +14,7 @@ import FeedbackCard from "../components/FeedbackCard"
 
 import { translateMessageId } from "../utils/translations"
 import EthGlyphColoredSvg from "../assets/assets/eth-glyph-colored.svg"
+import { Context } from "../types"
 
 const Image = styled(GatsbyImage)`
   align-self: center;
@@ -75,7 +76,7 @@ const Header = styled.header`
   }
 `
 
-const AssetsPage = ({ data }) => {
+const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
   const intl = useIntl()
   const themeContext = useContext(ThemeContext)
   const isDarkTheme = themeContext.isDark

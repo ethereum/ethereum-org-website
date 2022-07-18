@@ -147,7 +147,7 @@ Proof-of-stake data availability committees are considerably more secure than re
 
 [More on proof-of-stake data availability committees.](https://blog.matter-labs.io/zkporter-a-breakthrough-in-l2-scaling-ed5e48842fbf)
 
-## Ethereum and the future of data availability {ethereum-and-the-future-of-data-availability}
+## Ethereum and the future of data availability {#ethereum-and-the-future-of-data-availability}
 
 Although rollups can scale throughput with off-chain computation, their capacity is limited by the data throughput of the underlying blockchain. If rollups are to use Ethereum as a data availability layer, it must increase its data storage and processing capabilities.
 
