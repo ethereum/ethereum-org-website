@@ -1593,7 +1593,7 @@ const walletData: WalletData[] = [
     macOS: true,
     firefox: false,
     chromium: true,
-    hardware: true,
+    hardware: false,
     open_source: false,
     repo_url: "",
     non_custodial: true,
