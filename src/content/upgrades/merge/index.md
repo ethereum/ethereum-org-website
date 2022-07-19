@@ -1,6 +1,6 @@
 ---
 title: The Merge
-description: Learn about The Merge - when Mainnet Ethereum adotped proof-of-stake.
+description: Learn about The Merge - when Mainnet Ethereum adopted proof-of-stake.
 lang: en
 template: upgrade
 sidebar: true
@@ -10,7 +10,6 @@ summaryPoint2: The transition from the original proof-of-work mechanism to proof
 summaryPoint3: The Merge refers to the original Ethereum Mainnet becoming part of a separate proof-of0-stake blockchain called the Beacon Chain.
 summaryPoint4: The Merge reduced Ethereum's energy consumption by ~99.95%.
 ---
-
 
 ## What was The Merge? {#what-is-the-merge}
 
@@ -42,7 +41,7 @@ This transition to proof-of-stake changed the way ether is issued. Learn more ab
 
 **The Merge did not change anything for holders/users.**
 
-_This bears repeating_: As a user or holder of ETH or any other digital asset on Ethereum, as well as non-node-operating stakers, **you do not need to do anything with your funds or wallet to account for The Merge.** ETH is just ETH. There is no such thing as "old ETH"/"new ETH" or "ETH1"/"ETH2" and wallets work exactly the same after The Merge as they did before - people tellign you otherwise are likely scammers. 
+_This bears repeating_: As a user or holder of ETH or any other digital asset on Ethereum, as well as non-node-operating stakers, **you do not need to do anything with your funds or wallet to account for The Merge.** ETH is just ETH. There is no such thing as "old ETH"/"new ETH" or "ETH1"/"ETH2" and wallets work exactly the same after The Merge as they did before - people tellign you otherwise are likely scammers.
 
 Despite swapping out proof-of-work, the entire history of Ethereum since genesis remained intact and unaltered by the transition to proof-of-stake. Any funds held in your wallet before The Merge will are still accessible after The Merge. **No action is required to upgrade on your part.**
 
@@ -103,7 +102,6 @@ For more information, check out this blog post by Tim Beiko on [How The Merge Im
 
 The Merge marked the end of proof-of-work for Ethereum and start the era of a more sustainable, eco-friendly Ethereum. Ethereum's energy consumption dropped by an estimated 99.95%, making Ethereum a green blockchain. Learn more about [Ethereum energy consumption](/energy-consumption/).
 
-
 ## The Merge and scaling {#merge-and-scaling}
 
 The Merge also set the stage for further scalability upgrades not possible under proof-of-work, bringing Ethereum one step closer to achieving the full scale, security and sustainability outlined in its [Ethereum vision](/upgrades/vision/).
@@ -112,7 +110,7 @@ The Merge also set the stage for further scalability upgrades not possible under
 
 <ExpandableCard
 title="Misconception: &quot;Running a node requires staking 32 ETH.&quot;"
-contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e. run a node). No ETH is required - nmt before The Merge, not after The Merge, not ever.">
+contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e. run a node). No ETH is required - not before The Merge, not after The Merge, not ever.">
 There are two types of Ethereum nodes: nodes that can propose blocks and nodes that don't.
 
 Nodes that propose blocks are only a small number of the total nodes on Ethereum. This category includes mining nodes under proof-of-work (PoW) and validator nodes under proof-of-stake (PoS). This category requires committing economic resources (such as GPU hash power in proof-of-work or staked ETH in proof-of-stake) in exchange for the ability to occasionally propose the next block and earn protocol rewards.
@@ -174,7 +172,7 @@ The APR is intentionally dynamic, allowing a market of stakers to balance how mu
 
 ## What happened to 'Eth2'? {#eth2}
 
-The term 'Eth2' has been deprecated. After merging 'Eth1' and 'Eth2' into a single chain, there is no longer any need to 
+The term 'Eth2' has been deprecated. After merging 'Eth1' and 'Eth2' into a single chain, there is no longer any need to
 distinguish between two Ethereum networks; there is just Ethereum.
 
 To limit confusion, the community has updated these terms:
