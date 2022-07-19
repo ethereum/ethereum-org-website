@@ -416,6 +416,20 @@ export const onCreatePage: GatsbyNode<any, Context>["onCreatePage"] = async ({
   }
 }
 
+export const onPostBootstrap: GatsbyNode["onPostBootstrap"] = ({ actions }) => {
+  const { createRedirect } = actions
+
+  supportedLanguages.forEach((lang) => {
+    createRedirect({
+      ...commonRedirectProps,
+      fromPath: `/${lang}/*`,
+      toPath: `/${lang}/404`,
+      statusCode: 404,
+      force: false,
+    })
+  })
+}
+
 export const createSchemaCustomization: GatsbyNode["createSchemaCustomization"] =
   ({ actions, schema }) => {
     const { createTypes } = actions
