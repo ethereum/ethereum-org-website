@@ -166,13 +166,6 @@ function processMarkdown(path) {
   //   console.warn(`White space in link found: ${path}:${lineNumber}`)
   // }
 
-  while ((brokenLinkMatch = BROKEN_LINK_REGEX.exec(markdownFile))) {
-    const lineNumber = getLineNumber(markdownFile, brokenLinkMatch.index)
-    console.warn(`Broken link found: ${path}:${lineNumber}`)
-
-    // if (!BROKEN_LINK_REGEX.global) break
-  }
-
   checkMarkdownSpellingMistakes(path, markdownFile, SPELLING_MISTAKES)
   // Turned this off for testing as there are lots of Github (instead of GitHub) and Metamask (instead of MetaMask).
   // checkMarkdownSpellingMistakes(path, markdownFile, CASE_SENSITVE_SPELLING_MISTAKES, true)
