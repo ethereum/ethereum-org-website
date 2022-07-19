@@ -224,9 +224,9 @@ Optimistic rollups use several techniques to achieve transaction data compressio
 
 Doing some rough calculations on these figures can help show the scalability improvements afforded by an optimistic rollup:
 
-1. The target size for every block is 15 million gas and it costs 16 gas to verify one byte of data; dividing the average block size by 16 gas (15,000,000/6) shows the average block can hold **937,500 bytes of data**.
-2. If a basic rollup transaction uses 12 bytes, then the average Ethereum block can process **78,125 rollup transactions** (937,5000/12) or **39 rollup batches** (if each batch holds an average of 2000 transactions).
-3. If a new block is produced on Ethereum every 15 seconds, then the rollup's processing speeds would amount to roughly **5,208 transactions per second**. This is done by dividing the number of basic rollup transactions an Ethereum block can hold (78,125) by the average block time (15 seconds).
+1. The target size for every block is 15 million gas and it costs 16 gas to verify one byte of data. Dividing the average block size by 16 gas (15,000,000/16) shows the average block can hold **937,500 bytes of data**.
+2. If a basic rollup transaction uses 12 bytes, then the average Ethereum block can process **78,125 rollup transactions** (937,5000/12) or **39 rollup batches** (if each batch holds an average of 2,000 transactions).
+3. If a new block is produced on Ethereum every 15 seconds, then the rollup's processing speeds would amount to roughly **5,208 transactions per second**. This is done by dividing the number of basic rollup transactions an Ethereum block can hold (**78,125**) by the average block time (**15 seconds**).
 
 This is a fairly optimistic estimate, given that optimistic rollup transactions cannot possibly comprise an entire block on Ethereum. However, it can give give a rough idea of how much scalability gains that optimistic rollups can afford Ethereum users (current implementations offer up to 2,000 TPS).
 
@@ -256,7 +256,7 @@ Multiple implementations of Optimistic rollups exist that you can integrate into
 
 <RollupProductDevDoc rollupType="optimistic" />
 
-**Optimistic rollups reading**
+## Further reading on optimistic rollups 
 
 - [Everything you need to know about Optimistic Rollup](https://research.paradigm.xyz/rollups)
 - [EthHub on optimistic rollups](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/optimistic_rollups/)
@@ -264,4 +264,4 @@ Multiple implementations of Optimistic rollups exist that you can integrate into
 - [How does Optimism's Rollup really work?](https://research.paradigm.xyz/optimism)
 - [OVM Deep Dive](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)
 - [What is the Optimistic Virtual Machine?](https://www.alchemy.com/overviews/optimistic-virtual-machine)
-- [More on layer 2](/layer-2/)
+- [How Do Optimistic Rollups Work? (The Complete Guide)](https://www.alchemy.com/overviews/optimistic-rollups)
