@@ -5,7 +5,7 @@ lang: en
 sidebar: true
 ---
 
-Ethereum was always intended to be a [proof-of-stake](/developers/docs/consensus-mechanisms/pos) network, but the research and development required to implement proof-of-stake safely, securely and performantly took several years. The network was therefore started with a different consensus mechanism called **[Proof-of-work (PoW)](https://wikipedia.org/wiki/Proof_of_work)**. This allowed the nodes of the Ethereum network to agree on the state of all information recorded on the Ethereum blockchain and prevents certain kinds of economic attacks.
+The Ethereum network started using a consensus mechanism called **[Proof-of-work (PoW)](/developers/docs/consensus-mechanisms/pow)**. This allowed the nodes of the Ethereum network to agree on the state of all information recorded on the Ethereum blockchain and prevents certain kinds of economic attacks. However, Ethereum switched off proof-of-work in 2022 and started using [proof-of-stake](/developers/docs/consensus-mechanisms/pos) instead.
 
 <InfoBanner emoji=":wave:">
     Proof-of-work has now been deprecated. Ethereum no longer uses proof-of-work as a consensus mechanism. Instead, it uses proof-of-stake. Read more on <a href="/developers/docs/consensus-mechanisms/pos/">proof-of-stake</a> and <a href="/staking/">staking</a>.    
