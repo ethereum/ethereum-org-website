@@ -94,7 +94,7 @@ Running your own node enables you to use Ethereum in a truly private, self-suffi
 - Your node verifies all the transactions and blocks against consensus rules by itself. This means you don’t have to rely on any other nodes in the network or fully trust them.
 - You can use an Ethereum wallet with your own node. You can use dapps more securely and privately because you won't have to leak your addresses and balances to random nodes. Everything can be checked with your own client. [MetaMask](https://metamask.io), [Frame](https://frame.sh/) and [many other wallets](/wallets/find-wallet/) can be easily pointed to your own local node. (Check wallets with `RPC importing` filter.)
 - You can run and self-host other services which depend on data from Ethereum. Most importantly for example Beacon Chain validator but also software like L2 infrastracture, block explorers, payment processors, etc. 
-- You can provide your own custom RPC endpoints. Publicly for the community or even privately hosted Ethereum endpoint enables people to use your node and avoid big centralized providers. 
+- You can provide your own custom [RPC endpoints](https://ethereum.org/en/developers/docs/apis/json-rpc/). Publicly for the community or even privately hosted Ethereum endpoint enables people to use your node and avoid big centralized providers. 
 - You can connect to your node using **Inter-process Communications (IPC)** or rewrite the node to load your program as a plugin. This grants low latency, which helps a lot, e.g. when processing a lot of data using web3 libraries or when you need to replace your transactions as fast as possible (i.e. frontrunning).
 - If you would to stake ETH for securing the proof-of-stake consensus and earning rewards, [solo staking](https://ethereum.org/en/staking/solo/) with your own node is the most impactful and secure approach. 
 
@@ -177,13 +177,14 @@ There are multiple consensus clients (previously known as 'Eth2' clients) to sup
 
 [View consensus clients](/upgrades/get-involved/#clients).
 
-| Client                                                                                    | Language   | Operating systems     | Networks                              |
-| ----------------------------------------------------------------------------------------- | ---------- | --------------------- | ------------------------------------- |
-| [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/)                             | Java       | Linux, Windows, macOS | Beacon Chain, Gnosis, Prater, Sepolia |
-| [Nimbus](https://nimbus.team/)                                                            | Nim        | Linux, Windows, macOS | Beacon Chain, Prater                  |
-| [Lighthouse](https://lighthouse.sigmaprime.io/)                                           | Rust       | Linux, Windows, macOS | Beacon Chain, Prater, Pyrmont         |
-| [Lodestar](https://lodestar.chainsafe.io/)                                                | TypeScript | Linux, Windows, macOS | Beacon Chain, Prater                  |
-| [Prysm](https://docs.prylabs.network/docs/getting-started/)                               | Go         | Linux, Windows, macOS | Beacon Chain, Gnosis, Prater, Pyrmont |
+
+| Client                                                        | Language   | Operating systems     | Networks                              |
+| ------------------------------------------------------------- | ---------- | --------------------- | ------------------------------------- |
+| [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/) | Java       | Linux, Windows, macOS | Beacon Chain, Gnosis, Prater, Sepolia |
+| [Nimbus](https://nimbus.team/)                                | Nim        | Linux, Windows, macOS | Beacon Chain, Prater                  |
+| [Lighthouse](https://lighthouse.sigmaprime.io/)               | Rust       | Linux, Windows, macOS | Beacon Chain, Prater, Pyrmont         |
+| [Lodestar](https://lodestar.chainsafe.io/)                    | TypeScript | Linux, Windows, macOS | Beacon Chain, Prater                  |
+| [Prysm](https://docs.prylabs.network/docs/getting-started/)   | Go         | Linux, Windows, macOS | Beacon Chain, Gnosis, Prater, Pyrmont |
 
 ### Teku
 
@@ -263,9 +264,9 @@ Implemented by Nethermind and Trinity. Works like fast sync but also downloads t
 
 [More on Beam](https://medium.com/@jason.carver/intro-to-beam-sync-a0fd168be14a)
 
-#### Optimistic sync
+#### Optimistic sync
 
-Optimistic sync is a post-merge synchronization strategy designed to be opt-in and backwards compatible, allowing execution nodes to sync via established methods. The execution engine can *optimistically* import beacon blocks without fully verifying them, find the latest head, and then start syncing the chain with the above methods. Then, after the execution client has caught up, it will inform the consensus client of the validity of the transactions in the Beacon Chain.
+Optimistic sync is a post-merge synchronization strategy designed to be opt-in and backwards compatible, allowing execution nodes to sync via established methods. The execution engine can *optimistically* import beacon blocks without fully verifying them, find the latest head, and then start syncing the chain with the above methods. Then, after the execution client has caught up, it will inform the consensus client of the validity of the transactions in the Beacon Chain.
 
 [More on Optimistic sync](https://github.com/ethereum/consensus-specs/blob/dev/sync/optimistic.md)
 
