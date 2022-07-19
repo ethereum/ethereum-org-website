@@ -1,11 +1,11 @@
 ---
 title: Optimistic Rollups
-description: An introduction to optimistic rollups as a scaling solution used by the Ethereum community.
+description: An introduction to optimistic rollups—a scaling solution used by the Ethereum community.
 lang: en
 sidebar: true
 ---
 
-Optimistic rollups are layer 2 (L2) protocols designed to extend throughput of Ethereum's base layer. They reduce computation on the main Ethereum chain by processing transactions off-chain, offering significant improvements in processing speeds. Unlike other scaling solutions, such as [sidechains](/developers/docs/scaling/sidechains/), optimistic rollups derive security from Mainnet by publishing transaction results on-chain.
+Optimistic rollups are layer 2 (L2) protocols designed to extend the throughput of Ethereum's base layer. They reduce computation on the main Ethereum chain by processing transactions off-chain, offering significant improvements in processing speeds. Unlike other scaling solutions, such as [sidechains](/developers/docs/scaling/sidechains/), optimistic rollups derive security from Mainnet by publishing transaction results on-chain, or [plasma chains](/developers/docs/scaling/plasma/), which also verify transactions on Ethereum with fraud proofs, but store transaction data elsewhere.
 
 As computation is the slow, expensive part of using Ethereum, optimistic rollups can offer up to 10-100x improvements in scalability. Optimistic rollups also write transactions to Ethereum as `calldata`, reducing gas costs for users.
 
@@ -256,7 +256,7 @@ Multiple implementations of Optimistic rollups exist that you can integrate into
 
 <RollupProductDevDoc rollupType="optimistic" />
 
-## Further reading on optimistic rollups 
+## Further reading on optimistic rollups
 
 - [Everything you need to know about Optimistic Rollup](https://research.paradigm.xyz/rollups)
 - [EthHub on optimistic rollups](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/optimistic_rollups/)
