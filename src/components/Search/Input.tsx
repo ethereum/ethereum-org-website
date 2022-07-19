@@ -1,4 +1,4 @@
-import React from "react"
+import React, { ChangeEvent, FormEvent } from "react"
 import { useIntl } from "react-intl"
 import styled from "styled-components"
 import { connectSearchBox } from "react-instantsearch-dom"
@@ -57,17 +57,31 @@ const SearchSlash = styled.p`
   }
 `
 
-const Input = ({ query, setQuery, refine, inputRef, ...rest }) => {
+interface IInputProps
+  extends React.ComponentPropsWithoutRef<typeof StyledInput> {
+  query: string
+  setQuery: (query: string) => void
+  refine: (query: string) => void
+  inputRef: React.MutableRefObject<HTMLInputElement>
+}
+
+const Input: React.FC<IInputProps> = ({
+  query,
+  setQuery,
+  refine,
+  inputRef,
+  ...rest
+}) => {
   const intl = useIntl()
   const searchString = translateMessageId("search", intl)
 
-  const handleInputChange = (event) => {
+  const handleInputChange = (event: ChangeEvent<HTMLInputElement>): void => {
     const value = event.target.value
     refine(value)
     setQuery(value)
   }
 
-  const handleSubmit = (event) => {
+  const handleSubmit = (event: FormEvent<HTMLFormElement>): void => {
     event.preventDefault()
   }
 
