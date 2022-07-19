@@ -179,7 +179,6 @@ There is currently a [client diversity](/developers/docs/nodes-and-clients/clien
 
 [See the latest network client usage](https://clientdiversity.org/) and learn more about [client diversity](/developers/docs/client-diversity). 
 
-
 ##### Verifying the software {#verifying-software}
 
 When downloading software from the internet, it's recommended to verify its integrity. This step is optional but especially with crucial infrastracture piece like the Ethereum client, it's important to be aware of potential attack vectors and avoid them. If you just downloaded a pre-built binary, you need to trust it and risk that an attacker could swap the executable for a malicious one. 
@@ -410,7 +409,6 @@ Each of the consensus clients has their own validator software that is described
 
 Running your own validator allows for [solo staking](https://ethereum.org/en/staking/solo/), the most impactful and trustless way. This requires deposit of 32ETH. For running a validator on your own node with a smaller amount, checkout decentralized pool with permissionless node operators, e.g. [Rocket Pool](https://rocketpool.net/node-operators).
 
-
 ### Using the node {#using-the-node}
 
 Execution clients offer [RPC API endpoints](/developers/docs/apis/json-rpc/) that you can use to submit transactions, interact with or deploy smart contracts on the Ethereum network in various ways:
@@ -477,11 +475,13 @@ As part of your monitoring, make sure to keep an eye on your machine's performan
 
 ## Further reading {#further-reading}
 
+- [Guide | How to setup a validator for Ethereum staking on mainnet](https://www.coincashew.com/coins/overview-eth/guide-or-how-to-setup-a-validator-on-eth2-mainnet) _– CoinCashew, updated regularly_
 - [Analyzing the hardware requirements to be an Ethereum full validated node](https://medium.com/coinmonks/analyzing-the-hardware-requirements-to-be-an-ethereum-full-validated-node-dc064f167902) _– Albert Palau, 24 September 2018_
 - [Running Ethereum Full Nodes: A Guide for the Barely Motivated](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _– Justin Leroux, 7 November 2019_
 - [Running an Ethereum Node](https://docs.ethhub.io/using-ethereum/running-an-ethereum-node/) _– ETHHub, updated often_
 - [Running a Hyperledger Besu Node on the Ethereum Mainnet: Benefits, Requirements, and Setup](https://pegasys.tech/running-a-hyperledger-besu-node-on-the-ethereum-mainnet-benefits-requirements-and-setup/) _– Felipe Faraggi, 7 May 2020_
 - [Deploying Nethermind Ethereum Client with Monitoring Stack](https://medium.com/nethermind-eth/deploying-nethermind-ethereum-client-with-monitoring-stack-55ce1622edbd) _– Nethermind.eth, 8 July 2020_
+
 
 ## Related topics {#related-topics}
 

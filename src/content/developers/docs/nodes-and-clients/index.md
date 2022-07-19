@@ -53,7 +53,8 @@ There are multiple trackers which offer a real-time overview of nodes in the Eth
 
 - [Map of nodes](https://etherscan.io/nodetracker) by Etherscan
 - [Ethernodes](https://ethernodes.org/) by Bitfly
-- [Ethereum Node Crawler](https://crawler.ethereum.org/), an [open project](https://github.com/ethereum/node-crawler)
+- [Ethereum Node Crawler](https://crawler.ethereum.org/) 
+- [Nodewatch](https://www.nodewatch.io/) by Chainsafe, crawling consensus nodes
 
 ## Node types {#node-types}
 
@@ -208,8 +209,9 @@ Documentation can be found in [Lighthouse Book](https://lighthouse-book.sigmapri
 
 ### Lodestar
 
-Lodestar is a consensus client implementation written in Typescript under LGPL-3.0 license 
+Lodestar is a production-ready consensus client implementation written in Typescript under the LGPL-3.0 license. It is maintained by ChainSafe Systems and is the newest of the consensus clients for solo-stakers, developers and researchers. Lodestar consists of a beacon node and validator client powered by JavaScript implementations of Ethereum protocols. We aim to improve Ethereum usability with light clients, expand accessibility to a larger group of developers and further contribute to ecosystem diversity.
 
+More information can be found on our [Lodestar website](https://lodestar.chainsafe.io/)
 ### Prysm
 
 Prysm is a full-featured, open source consensus client written in Go under the GPL-3.0 license. It features an optional webapp UI and prioritizes user experience, documentation, and configurability for both stake-at-home and institutional users.
