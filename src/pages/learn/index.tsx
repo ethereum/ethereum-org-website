@@ -1,23 +1,30 @@
+// Libraries
 import React from "react"
 import styled from "styled-components"
 import { graphql, PageProps } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { useIntl } from "react-intl"
 
-import StakingHomeTableOfContents from "../../components/Staking/StakingHomeTableOfContents"
+// Components
 import { CardGrid as OriginalCardGrid } from "../../components/SharedStyledComponents"
-import FeedbackCard from "../../components/FeedbackCard"
-import PageMetadata from "../../components/PageMetadata"
 import ButtonLink from "../../components/ButtonLink"
 import DocLink from "../../components/DocLink"
+import FeedbackCard from "../../components/FeedbackCard"
 import Link from "../../components/Link"
-import PageHero from "../../components/PageHero"
 import OriginalCard from "../../components/Card"
+import PageHero from "../../components/PageHero"
+import PageMetadata from "../../components/PageMetadata"
+import StakingHomeTableOfContents from "../../components/Staking/StakingHomeTableOfContents"
+import Translation from "../../components/Translation"
 
-import { isLangRightToLeft } from "../../utils/translations"
+// Utils
 import { Lang } from "../../utils/languages"
+import { translateMessageId, isLangRightToLeft } from "../../utils/translations"
+
+// Types
 import type { Context } from "../../types"
 
+// Styles
 const Container = styled.div`
   position: relative;
   width: 100%;
