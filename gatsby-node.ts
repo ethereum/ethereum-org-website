@@ -23,6 +23,12 @@ import redirects from "./redirects.json"
 
 const exec = util.promisify(child_process.exec)
 
+const commonRedirectProps = {
+  isPermanent: true,
+  ignoreCase: true,
+  force: true,
+}
+
 /**
  * Markdown isOutdated check
  * Parse header ids in markdown file (both translated and english) and compare their info structure.
@@ -190,13 +196,11 @@ export const createPages: GatsbyNode<any, Context>["createPages"] = async ({
 }) => {
   const { createPage, createRedirect } = actions
 
-  // server side redirects
+  // custom redirects defined in `redirects.json`
   redirects.forEach((redirect) => {
     createRedirect({
+      ...commonRedirectProps,
       ...redirect,
-      isPermanent: true,
-      ignoreCase: true,
-      force: true,
     })
   })
 
@@ -261,11 +265,9 @@ export const createPages: GatsbyNode<any, Context>["createPages"] = async ({
     // e.g. corresponding German file: "src/content/translations/de/community/index.md"
     if (language === defaultLanguage) {
       createRedirect({
+        ...commonRedirectProps,
         fromPath: slug.slice(3),
         toPath: slug,
-        isPermanent: true,
-        ignoreCase: true,
-        force: true,
       })
 
       for (const lang of supportedLanguages) {
@@ -326,11 +328,9 @@ export const createPages: GatsbyNode<any, Context>["createPages"] = async ({
     const originalPath = `/${page}/`
 
     createRedirect({
+      ...commonRedirectProps,
       fromPath: originalPath,
       toPath: `/${defaultLanguage}${originalPath}`,
-      isPermanent: true,
-      ignoreCase: true,
-      force: true,
     })
 
     supportedLanguages.forEach(async (lang) => {
@@ -382,11 +382,9 @@ export const onCreatePage: GatsbyNode<any, Context>["onCreatePage"] = async ({
     const path = page.path.slice(3)
 
     createRedirect({
+      ...commonRedirectProps,
       fromPath: path,
       toPath: page.path,
-      isPermanent: true,
-      ignoreCase: true,
-      force: true,
     })
 
     // create routes without the lang prefix e.g. `/{path}` as our i18n plugin
