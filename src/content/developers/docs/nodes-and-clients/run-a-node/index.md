@@ -71,7 +71,7 @@ Hardware requirements differ by client but generally are not that high since the
 
 Before installing any client, please ensure your computer has enough resources to run it. Minimum and recommended requirements can be found below. 
 
-The hardware bottleneck is mostly a disk. Syncing the Ethereum blockchain is very input/output intensive and requires a lot of space. It is best to have a solid-state drive (SSD) with hundreds of GBs of free space to spare even after the synchronization. To run an Ethereum client on an HDD, you will need at least 8GB of RAM to use as a cache.
+The hardware bottleneck is mostly a disk space. Syncing the Ethereum blockchain is very input/output intensive and requires a lot of space. It is best to have a solid-state drive (SSD) with hundreds of GBs of free space to spare even after the synchronization. To run an Ethereum client on an HDD, you will need at least 8GB of RAM to use as a cache.
 
 Size of the database and speed of the initial synchronization depends on chosen client, its configuration and [sync strategy](/developers/docs/nodes-and-clients/#sync-modes). 
 
