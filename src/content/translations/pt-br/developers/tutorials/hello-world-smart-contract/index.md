@@ -200,9 +200,9 @@ contract HelloWorld {
 
 Este é um contrato inteligente muito simples, que armazena uma mensagem ao ser criado e pode ser atualizado através da função `update`.
 
-## Passo 11: Vincule Metamask e Alchemy a seu projeto {#step-11}
+## Passo 11: Vincule MetaMask e Alchemy a seu projeto {#step-11}
 
-Nós já criamos uma carteira Metamask, uma conta Alchemy e já escrevemos nosso contrato inteligente. Agora é hora de vincularmos os três.
+Nós já criamos uma carteira MetaMask, uma conta Alchemy e já escrevemos nosso contrato inteligente. Agora é hora de vincularmos os três.
 
 Toda transação enviada da sua carteira virtual requer uma assinatura, usando sua chave privada única. Para fornecer essa permissão ao nosso programa, nós podemos armazenar com segurança nossa chave privada (e a chave Alchemy API) em um arquivo de ambiente.
 
@@ -214,7 +214,7 @@ Primeiro, instale o pacote dotenv na pasta do seu projeto:
 npm install dotenv --save
 ```
 
-Depois, crie um arquivo `.env` no diretório raiz do seu projeto e adicione sua chave Metamask privada e o URL da API HTTP Alchemy nele.
+Depois, crie um arquivo `.env` no diretório raiz do seu projeto e adicione sua chave MetaMask privada e o URL da API HTTP Alchemy nele.
 
 - Siga [estas instruções](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key) para exportar sua chave privada
 - Veja abaixo como obter o URL da API HTTP Alchemy
@@ -344,7 +344,7 @@ Se formos para a [etherscan Ropsten](https://ropsten.etherscan.io/) e procurarmo
 
 ![contrato etherscan](./etherscan-contract.png)
 
-O endereço `From` deve corresponder ao endereço da sua conta Metamask, e o endereço "Para" vai dizer "Criação de contrato", mas se clicarmos na transação veremos o endereço do nosso contrato no campo `To`:
+O endereço `From` deve corresponder ao endereço da sua conta MetaMask, e o endereço "Para" vai dizer "Criação de contrato", mas se clicarmos na transação veremos o endereço do nosso contrato no campo `To`:
 
 ![transação etherscan](./etherscan-transaction.png)
 

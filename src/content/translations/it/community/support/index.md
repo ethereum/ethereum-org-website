@@ -21,7 +21,7 @@ Comprendere la natura decentralizzata di Ethereum è fondamentale perché chiunq
   Impara i fondamenti di Ethereum
 </DocLink>
 
-Nonostante la mancanza di supporto ufficiale, molti gruppi, community e progetti nell'ecosistema di Ethereum sono lieti di prestare aiuto.
+Nonostante la mancanza di supporto ufficiale, molti gruppi, community e progetti nell'intero ecosistema di Ethereum sono lieti di aiutare e puoi trovare molte informazioni e risorse utili su questa pagina. Hai altre domande? Unisciti al [Discord di ethereum.org](/discord/) e faremo il possibile per aiutarti.
 
 ## Supporto portafoglio {#wallet-support}
 
@@ -107,4 +107,4 @@ Le transazioni su Ethereum a volte possono bloccarsi se hai inviato una commissi
 
 #### Come posso fare mining in Ethereum? {#mining-ethereum}
 
-Non consigliamo di acquistare attrezzature per mining se non si sta già facendo mining in Ethereum. Nel secondo trimestre del 2022 avverrà [la fusione](/upgrades/merge/) spostando Ethereum dal proof-of-work al proof-of-stake. Questo cambiamento significa che fare mining in Ethereum non sarà più possibile. Se sei ancora interessato a fare mining in Ethereum, puoi chiedere aiuto alle community per il mining, come [/r/EtherMining](https://www.reddit.com/r/EtherMining/).
+Non consigliamo di acquistare attrezzature per mining se non si sta già facendo mining in Ethereum. Circa tra il terzo e il quarto trimestre del 2022, avrà luogo [La Fusione](/upgrades/merge/), con il passaggio dal proof-of-work al proof-of-stake. Questo cambiamento significa che fare mining in Ethereum non sarà più possibile. Se sei ancora interessato a fare mining in Ethereum, puoi chiedere aiuto alle community per il mining, come [/r/EtherMining](https://www.reddit.com/r/EtherMining/).

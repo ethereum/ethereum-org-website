@@ -104,7 +104,7 @@ sidebarDepth: 2
 
 运行自己的节点可能很难，您不必总是运行自己的实例。 在这种情况下，您可以使用第三方 API 提供商，如 [Infura](https://infura.io)、[Alchemy](https://alchemyapi.io) 或 [QuikNode](https://www.quiknode.io)。 另外，[ArchiveNode](https://archivenode.io/) 是一个社区资助的归档节点，它希望将以太坊区块链上的归档数据带给无法负担它的独立开发者。 有关使用这些服务的概述，请查看[节点即服务](/developers/docs/nodes-and-clients/nodes-as-a-service/)。
 
-如果有人在您的社区运行一个包含公共应用程序接口的以太坊节点，您可以[通过自定义远程过程调用](https://metamask.zendesk.com/hc/en-us/articles/360015290012-Using-a-Local-Node)将您的轻量级钱包（如 Metamask）指向社区节点，并获得比一些随机受信任的第三方更强的隐私性。
+如果有人在您的社区运行一个包含公共应用程序接口的以太坊节点，您可以[通过自定义远程过程调用](https://metamask.zendesk.com/hc/en-us/articles/360015290012-Using-a-Local-Node)将您的轻量级钱包（如 MetaMask）指向社区节点，并获得比一些随机受信任的第三方更强的隐私性。
 
 另一方面，如果您运行一个客户端，则可以与可能需要它的朋友共享。
 
@@ -295,11 +295,11 @@ Erigon 以前称为 TurbohyGeth，是 Go Ethereum 的一个分叉，注重速度
 
 ![图表表明，归档同步所需的 GB 数正呈上升趋势。](./archive-sync.png)
 
-上面的图表显示存储要求的持续变化趋势。 关于 Geth 和 OpenEthereum 的最新数据，请参阅[完全同步数据](https://etherscan. io/chartsync/chaindefault)和[归档同步数据](https://etherscan. io/chartsync/chainarchive)。
+上面的图表显示存储要求的持续变化趋势。 关于 Geth 和 OpenEthereum 的最新数据，请参阅[完全同步数据](https://etherscan.io/chartsync/chaindefault)和[归档同步数据](https://etherscan.io/chartsync/chainarchive)。
 
 ### 在单板计算机上运行以太坊 {#ethereum-on-a-single-board-computer}
 
-运行以太坊节点最方便、最便宜的方法是使用具有 ARM 架构的单板计算机，如 Raspberry Pi。 [Ethereum on ARM](https://twitter. com/EthereumOnARM) 提供了 Geth、OpenEthereum、Nethermind 和 Besu 客户端的映像。 请学习关于[如何构建和设置 ARM 客户端](/developers/tutorials/run-node-raspberry-pi/)的简单教程。
+运行以太坊节点最方便、最便宜的方法是使用具有 ARM 架构的单板计算机，如 Raspberry Pi。 [Ethereum on ARM](https://twitter.com/EthereumOnARM) 提供了 Geth、OpenEthereum、Nethermind 和 Besu 客户端的映像。 请学习关于[如何构建和设置 ARM 客户端](/developers/tutorials/run-node-raspberry-pi/)的简单教程。
 
 诸如此类小型、实惠、高效的设备是在家里运行节点的理想选择。
 

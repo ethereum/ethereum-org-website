@@ -87,7 +87,7 @@ You will get one of the following error messages:
 - `PrivateERC20Mock.sol: TypeError: Overriding function is missing "override" specifier.`
 - `PrivateERC20.sol: TypeError: Trying to override non-virtual function. Did you forget to add "virtual"?.`
 
-Since we are using the new 0.6 Solidity version, we have to add the `virtual` keyword for functions that can be overriden and override for the overriding function. So let us add those to both `isPublic` functions.
+Since we are using the new 0.6 Solidity version, we have to add the `virtual` keyword for functions that can be overridden and override for the overriding function. So let us add those to both `isPublic` functions.
 
 Now in your unit tests, you can use `PrivateERC20Mock` instead. When you want to test the behaviour during the private usage time, use `setIsPublic(false)` and likewise `setIsPublic(true)` for testing the public usage time. Of course in our example, we could just use [time helpers](https://docs.openzeppelin.com/test-helpers/0.5/api#increase) to change the times accordingly as well. But the idea of mocking should be clear now and you can imagine scenarios where it is not as easy as simply advancing the time.
 

@@ -149,10 +149,6 @@ The Ethereum [scalability upgrades](/upgrades/) should ultimately address some o
 
 Layer 2 scaling is a primary initiative to greatly improve gas costs, user experience and scalability. [More on layer 2 scaling](/developers/docs/scaling/#layer-2-scaling).
 
-The new proof-of-stake model, introduced on the Beacon Chain, should reduce high power consumption and reliance on specialized hardware. This chain will allow the decentralized Ethereum network to agree and keep the network secure, while limiting energy consumption by instead requiring a financial commitment.
-
-Anyone with at least 32 ETH can stake them and become a validator responsible for processing transactions, validating blocks, and proposing new blocks to add to the chain. Users who have less than 32 ETH can join staking pools.
-
 ## Strategies for you to reduce gas costs {#strategies-for-you-to-reduce-gas-costs}
 
 If you are looking to reduce gas costs for your ETH, you can set a tip to indicate the priority level of your transaction. Miners will 'work on' and execute transactions that offer a higher tip per gas, as they get to keep the tips that you pay and will be less inclined to execute transactions with lower tips set.

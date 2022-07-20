@@ -82,10 +82,10 @@ Londra yükseltmesi, işlem ücreti marketini yeniden şekillendiren [EIP-1559](
 <ExpandableCard title="Londra EIP'leri" contentPreview="Official improvements included in this upgrade.">
 
 - [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) – _işlem ücreti piyasasını iyileştirir_
-- [EIP-3198](https://eips.ethereum.org/EIPS/eip- 3198) – _bir bloktan "BASEFEE" döndürür_
+- [EIP-3198](https://eips.ethereum.org/EIPS/eip-3198) – _bir bloktan "BASEFEE" döndürür_
 - [EIP-3529](https://eips.ethereum.org/EIPS/eip-3529) - _EVM işlemleri için gaz iadelerini azaltır_
-- [EIP-3541](https: //eips.ethereum.org/EIPS/eip-3541) - _"0xEF" ile başlayan sözleşmelerin dağıtımını engeller_
-- [EIP-3554](https://eips.ethereum.org/EIPS/eip-3554) – _ Buz Devrini Aralık 2021'e kadar erteler_
+- [EIP-3541](https://eips.ethereum.org/EIPS/eip-3541) - _"0xEF" ile başlayan sözleşmelerin dağıtımını engeller_
+- [EIP-3554](https://eips.ethereum.org/EIPS/eip-3554) – _Buz Devrini Aralık 2021'e kadar erteler_
 
 </ExpandableCard>
 
@@ -242,7 +242,7 @@ Bizans çatalı:
 <ExpandableCard title="Bizans EIP'leri" contentPreview="Official improvements included in this fork.">
 
 - [EIP-140](https://eips.ethereum.org/EIPS/eip-140) – _"REVERT" işlem kodunu ekler._
-- [EIP-658](https://eips.ethereum.org/EIPS/eip-658) – Başarılı veya başarısız olduğunu belirtmek için işlem makbuzlarına _status alanı eklendi._
+- [EIP-658](https://eips.ethereum.org/EIPS/eip-658) – _Başarılı veya başarısız olduğunu belirtmek için işlem makbuzlarına \_status alanı eklendi._
 - [EIP-196](https://eips.ethereum.org/EIPS/eip-196) – _[ZK-Snarks](/developers/docs/scaling/zk-rollups/) için eliptik eğri ve skaler çarpma ekler._
 - [EIP-197](https://eips.ethereum.org/EIPS/eip-197) – _[ZK-Snarks](/developers/docs/scaling/zk-rollups/) için eliptik eğri ve skaler çarpma ekler._
 - [EIP-198](https://eips.ethereum.org/EIPS/eip-198) – _RSA imza doğrulamasını etkinleştirir._
@@ -333,7 +333,7 @@ Geleceğe dönük Homestead çatalı. Birkaç protokol değişikliği ve Ethereu
 
 - [EIP-2](https://eips.ethereum.org/EIPS/eip-2) – _sözleşme oluşturma sürecinde düzenlemeler yapar._
 - [EIP-7](https://eips.ethereum.org/EIPS/eip-7) – _yeni işlem kodu ekler: "DELEGATECALL"_
-- [EIP-8](https://eips.ethereum.org/EIPS/eip-8) – \_devp2p ileri uyumluluk gereksinimlerini kullanıma sokar
+- [EIP-8](https://eips.ethereum.org/EIPS/eip-8) – _devp2p ileri uyumluluk gereksinimlerini kullanıma sokar_
 
 </ExpandableCard>
 

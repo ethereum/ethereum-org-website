@@ -48,7 +48,7 @@ DeSci is building the scientific toolset to onboard Web2 academia into the digit
 
 Science publishing is famously problematic because it is managed by publishing houses that rely upon free labor from scientists, reviewers, and editors to generate the papers but then charge exorbitant publishing fees. The public, who have usually indirectly paid for the work and the publication costs through taxation, can often not access that same work without paying the publisher again. The total fees for publishing individual science papers are often five figures ($USD), undermining the whole concept of scientific knowledge as a [public good](https://www.econlib.org/library/Enc/PublicGoods.html) while generating enormous profits for a small group of publishers.
 
-Free and open-access platforms exist in the form of pre-print servers, [such as ArXiv](https://arxiv.org/. However, these platforms lack quality control, [anti-sybil mechanisms](https://csrc.nist.gov/glossary/term/sybil_attack), and do not generally track article-level metrics, meaning they are usually only used to publicize work before submission to a traditional publisher. SciHub also makes published papers free to access, but not legally, and only after the publishers have already taken their payment and wrapped the work in strict copyright legislation. This leaves a critical gap for accessible science papers and data with an embedded legitimacy mechanism and incentive model. The tools for building such a system exist in Web3.
+Free and open-access platforms exist in the form of pre-print servers, [such as ArXiv](https://arxiv.org/). However, these platforms lack quality control, [anti-sybil mechanisms](https://csrc.nist.gov/glossary/term/sybil_attack), and do not generally track article-level metrics, meaning they are usually only used to publicize work before submission to a traditional publisher. SciHub also makes published papers free to access, but not legally, and only after the publishers have already taken their payment and wrapped the work in strict copyright legislation. This leaves a critical gap for accessible science papers and data with an embedded legitimacy mechanism and incentive model. The tools for building such a system exist in Web3.
 
 ### Reproducibility and replicability {#reproducibility-and-replicability}
 
@@ -73,7 +73,7 @@ Intellectual property (IP) is a big problem in traditional science: from being s
 
 In the same way that NFTs can pass revenue for future transactions back to the original creator, you can establish transparent value attribution chains to reward researchers, governing bodies (like DAOs), or even the subjects whose data is collected.
 
-IP-NFTs can also function as a key to a decentralized data repository of the research experiments being undertaken, and plug into NFT and [DeFi](/defi/) financialization (from fractionalization to lending pools and value appraisal). It also allows natively on-chain entities such as DAOs like [VitaDAO](https://www.vitadao.com/) to conduct research directly on-chain.
+[IP-NFTs](https://medium.com/molecule-blog/ip-nfts-for-researchers-a-new-biomedical-funding-paradigm-91312d8d92e6) can also function as a key to a decentralized data repository of the research experiments being undertaken, and plug into NFT and [DeFi](/defi/) financialization (from fractionalization to lending pools and value appraisal). It also allows natively on-chain entities such as DAOs like [VitaDAO](https://www.vitadao.com/) to conduct research directly on-chain.
 The advent of non-transferable ["soulbound" tokens](https://vitalik.ca/general/2022/01/26/soulbound.html) may also play an important role in DeSci by allowing individuals to prove their experience and credentials linked to their Ethereum address.
 
 ### Data storage, access and architecture {#data-storage}
@@ -99,6 +99,9 @@ Explore projects and join the DeSci community.
 - [Bio.xyz: get funded for your biotech DAO or desci project](https://www.molecule.to/)
 - [ResearchHub: post a scientific result and engage in a conversation with peers](https://www.researchhub.com/)
 - [VitaDAO: receive funding through sponsored research agreements for longevity research](https://www.vitadao.com/)
+- [Fleming Protocol: open-source data economy that fuels collaborative biomedical discovery](https://medium.com/@FlemingProtocol/a-data-economy-for-patient-driven-biomedical-innovation-9d56bf63d3dd)
+- [Active Inference Lab](https://www.activeinference.org/)
+- [Cherubs DAO: NFT funded and DAO governed impact fund for mental health & brain wellness](https://cherubsdao.com/)
 
 ## Further reading {#further-reading}
 
@@ -110,6 +113,8 @@ Explore projects and join the DeSci community.
 - [Molecule’s Biopharma IP-NFTs - A Technical Description](https://molecule.to/blog/molecules-biopharma-ip-nfts-a-technical-description)
 - [Building Trustless Systems of Science by Jon Starr](https://medium.com/@jringo/building-systems-of-trustless-science-1cd2d072f673)
 - [The Emergence of Biotech DAOs](https://molecule.to/blog/the-emergence-of-biotech-daos)
+- [Paul Kohlhaas - DeSci: The Future of Decentralized Science (podcast)](https://anchor.fm/andrew-steinwold/episodes/Paul-Kohlhaas---DeSci-The-Future-of-Decentralized-Science---Zima-Red-ep-117-e1h683a)
+- [An Active Inference Ontology for Decentralized Science: from Situated Sensemaking to the Epistemic Commons](https://zenodo.org/record/6320575)
 
 ### Videos {#videos}
 

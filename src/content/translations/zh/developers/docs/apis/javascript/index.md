@@ -23,16 +23,16 @@ sidebar: true
 
 ### 连接到以太坊节点 {#connect-to-ethereum-nodes}
 
-使用提供器，这些库允许您连接到以太坊并读取它的数据，不管是通过 JSON-RPC、INFURA、Etherscan、Alchemy 还是 Metamask。
+使用提供器，这些库允许您连接到以太坊并读取它的数据，不管是通过 JSON-RPC、INFURA、Etherscan、Alchemy 还是 MetaMask。
 
 **Ethers 示例**
 
 ```js
 // 一个 Web3Provider 包含了标准的 Web3 提供者(provider)，这个提供者
-//相当于将 Metamask 作为一个以太坊窗口注入到每个页面中。
+//相当于将 MetaMask 作为一个以太坊窗口注入到每个页面中。
 const provider = new ethers.providers.Web3Provider(window.ethereum)
 
-// Metamask 插件同时可以签署每一笔交易
+// MetaMask 插件同时可以签署每一笔交易
 // 从而更改区块链中的状态。
 // 为此，我们需要帐户签名者...
 const signer = provider.getSigner()

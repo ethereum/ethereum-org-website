@@ -9,7 +9,7 @@ sidebar: true
 
 Kullanıcıların katman 2 alanında güvenli ve kendinden emin bir şekilde gezinebilmeleri için mümkün olan en iyi kaynakları listelediğimizden emin olmak istiyoruz.
 
-Herkes ethereum.org'da bir katman 2 eklemeyi önermekte özgürdür. Kaçırdığımız bir katman 2 varsa,**[ lütfen önerin](https://github.com/ethereum/ethereum-org-website/issues/new?&template=suggest_layer2.md)!**
+Herkes ethereum.org'da bir katman 2 eklemeyi önermekte özgürdür. Kaçırdığımız bir katman 2 varsa, **[lütfen önerin](https://github.com/ethereum/ethereum-org-website/issues/new?&template=suggest_layer2.md)!**
 
 Şu anda aşağıdaki sayfalarda Katman 2'leri listeliyoruz:
 

@@ -17,6 +17,14 @@ const StyledIcon = styled(Icon)`
   padding-right: 0.75rem;
 `
 
+const ChildrenContainer = styled.div`
+  font-style: italic;
+
+  > a {
+    font-style: normal;
+  }
+`
+
 export interface IProps {
   socialIcon: string
 }
@@ -26,7 +34,7 @@ const SocialListItem: React.FC<IProps> = ({ children, socialIcon }) => {
       <div>
         <StyledIcon name={socialIcon} size={"2.5rem"} color={true} />
       </div>
-      <div>{children}</div>
+      <ChildrenContainer>{children}</ChildrenContainer>
     </Item>
   )
 }

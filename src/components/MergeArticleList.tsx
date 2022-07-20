@@ -13,6 +13,11 @@ const reads: Array<CardListItem> = [
     link: "https://ethmerge.com/",
   },
   {
+    title: "The Merge is Coming",
+    description: "Alchemy",
+    link: "https://www.alchemy.com/the-merge",
+  },
+  {
     title:
       "The State of The Merge: An Update on Ethereum’s Merge to Proof of Stake in 2022",
     description: "Consensys",

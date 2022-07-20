@@ -2,7 +2,7 @@ import React, { useRef, useState, useEffect } from "react"
 import styled from "styled-components"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { graphql, PageProps } from "gatsby"
-import { useIntl } from "gatsby-plugin-intl"
+import { useIntl } from "react-intl"
 
 import Translation from "../components/Translation"
 import Pill from "../components/Pill"
@@ -1150,12 +1150,12 @@ const DappsPage = ({
     buttons: [
       {
         content: translateMessageId("page-dapps-explore-dapps-title", intl),
-        path: "#explore",
+        to: "#explore",
       },
       {
         content: translateMessageId("page-dapps-what-are-dapps", intl),
-        path: "#what-are-dapps",
-        isSecondary: "isSecondary",
+        to: "#what-are-dapps",
+        isSecondary: true,
       },
     ],
   }

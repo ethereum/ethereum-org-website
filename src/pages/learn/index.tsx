@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { graphql, PageProps } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import { useIntl } from "gatsby-plugin-intl"
+import { useIntl } from "react-intl"
 
 import StakingHomeTableOfContents from "../../components/Staking/StakingHomeTableOfContents"
 import { CardGrid as OriginalCardGrid } from "../../components/SharedStyledComponents"
@@ -226,7 +226,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
     buttons: [
       {
         content: "Let's get started",
-        pathId: tocItems[0].id,
+        toId: tocItems[0].id,
       },
     ],
   }
