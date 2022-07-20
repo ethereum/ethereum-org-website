@@ -39,7 +39,7 @@ Multiple client implementations make the network stronger and more diverse. The 
 
 Learn more about [Client diversity](/developers/docs/client-diversity). 
 
-What these implementations have in common is they all follow a formal specification. Specifications dictate how the Ethereum network and blockchain functions. Every technical detail is defined and specifications can be found as: 
+What these implementations have in common is they all follow a single specification. Specifications dictate how the Ethereum network and blockchain functions. Every technical detail is defined and specifications can be found as: 
  
 - Originally, the [Ethereum Yellow Paper](https://ethereum.github.io/yellowpaper/paper.pdf)
 - [Execution specs](https://github.com/ethereum/execution-specs/)
