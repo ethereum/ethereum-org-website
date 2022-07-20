@@ -176,7 +176,7 @@ Now, we build such a trie with the following key/value pairs in the underlying D
     hashA:    [ <>, <>, <>, <>, hashB, <>, <>, <>, [ <20 6f 72 73 65>, 'stallion' ], <>, <>, <>, <>, <>, <>, <>, <> ]
     hashB:    [ <00 6f>, hashD ]
     hashD:    [ <>, <>, <>, <>, <>, <>, hashE, <>, <>, <>, <>, <>, <>, <>, <>, <>, 'verb' ]
-    hashE:    [ <17>, [ <>, <>, <>, <>, <>, <>, [ <35>, 'coin' ], <>, <>, <>, <>, <>, <>, <>, <>, <>, 'puppy' ] ]
+    hashE:    [ <17>, [ <>, <>, <>, <>, <>, <>, [ <65>, 'coin' ], <>, <>, <>, <>, <>, <>, <>, <>, <>, 'puppy' ] ]
 ```
 
 When one node is referenced inside another node, what is included is `H(rlp.encode(x))`, where `H(x) = keccak256(x) if len(x) >= 32 else x` and `rlp.encode` is the [RLP](/fundamentals/rlp) encoding function.
