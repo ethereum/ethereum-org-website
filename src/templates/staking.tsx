@@ -437,7 +437,7 @@ const StakingPage = ({
           {mdx.frontmatter.sidebar && tocItems && (
             <UpgradeTableOfContents
               items={tocItems}
-              maxDepth={mdx.frontmatter.sidebarDepth}
+              maxDepth={mdx.frontmatter.sidebarDepth!}
             />
           )}
         </InfoColumn>

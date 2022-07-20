@@ -280,6 +280,7 @@ const ItemsList: React.FC<IPropsItemsList> = ({
   if (depth > maxDepth || !items) {
     return null
   }
+
   return (
     <>
       {items.map((item, index) => (

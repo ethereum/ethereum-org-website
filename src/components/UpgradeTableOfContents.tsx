@@ -3,6 +3,8 @@ import { motion } from "framer-motion"
 import { Link } from "gatsby"
 import styled from "styled-components"
 
+import type { Item as ItemTableOfContents } from "./TableOfContents"
+
 const customIdRegEx = /^.+(\s*\{#([A-Za-z0-9\-_]+?)\}\s*)$/
 
 const Aside = styled.aside`
@@ -40,12 +42,10 @@ const StyledTableOfContentsLink = styled(Link)`
   margin-bottom: 0.5rem !important;
 `
 
-const slugify = (s) =>
+const slugify = (s: string): string =>
   encodeURIComponent(String(s).trim().toLowerCase().replace(/\s+/g, "-"))
 
-const getCustomId = (title) => {
-  // match .md headings
-  // ex. `## Why stake with a pool? {#why-stake-with-a-pool}`
+const getCustomId = (title: string): string => {
   const match = customIdRegEx.exec(title)
   if (match) {
     return match[2].toLowerCase()
@@ -54,19 +54,32 @@ const getCustomId = (title) => {
   return slugify(title)
 }
 
-const trimmedTitle = (title) => {
+const trimmedTitle = (title: string): string => {
   const match = customIdRegEx.exec(title)
   return match ? title.replace(match[1], "").trim() : title
 }
 
-const TableOfContentsLink = ({ depth, item }) => {
+export interface Item extends ItemTableOfContents {}
+
+interface IPropsTableOfContentsLink {
+  depth: number
+  item: Item
+}
+
+const TableOfContentsLink: React.FC<IPropsTableOfContentsLink> = ({
+  depth,
+  item,
+}: {
+  depth: number
+  item: Item
+}) => {
   const url = `#${getCustomId(item.title)}`
   let isActive = false
   if (typeof window !== `undefined`) {
     isActive = window.location.hash === url
   }
-  const isNested = depth === 2
-  let classes = ""
+  const isNested: boolean = depth === 2
+  let classes: string = ""
   if (isActive) {
     classes += " active"
   }
@@ -80,30 +93,61 @@ const TableOfContentsLink = ({ depth, item }) => {
   )
 }
 
-const ItemsList = ({ items, depth, maxDepth }) =>
-  depth <= maxDepth && !!items
-    ? items.map((item, index) => (
+interface IPropsItemsList {
+  items: Array<Item>
+  depth: number
+  maxDepth: number
+}
+
+const ItemsList: React.FC<IPropsItemsList> = ({
+  items,
+  depth,
+  maxDepth,
+}: {
+  items: Array<Item>
+  depth: number
+  maxDepth: number
+}) => {
+  if (depth > maxDepth || !items) {
+    return null
+  }
+
+  return (
+    <>
+      {items.map((item, index) => (
         <ListItem key={index}>
           <div>
             <TableOfContentsLink depth={depth} item={item} />
           </div>
         </ListItem>
-      ))
-    : null
+      ))}
+    </>
+  )
+}
 
-const UpgradeTableOfContents = ({ items, maxDepth, className }) => {
+export interface IProps {
+  items: Array<Item>
+  maxDepth?: number
+  className?: string
+}
+
+const UpgradeTableOfContents: React.FC<IProps> = ({
+  items,
+  maxDepth = 1,
+  className,
+}) => {
   if (!items) {
     return null
   }
   // Exclude <h1> from TOC
   if (items.length === 1) {
-    items = items[0].items
+    items = [items[0]]
   }
 
   return (
     <Aside className={className}>
       <OuterList>
-        <ItemsList items={items} depth={0} maxDepth={maxDepth ? maxDepth : 1} />
+        <ItemsList items={items} depth={0} maxDepth={maxDepth} />
       </OuterList>
     </Aside>
   )
