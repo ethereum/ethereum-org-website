@@ -254,7 +254,7 @@ The latest approach to syncing the client, pioneered by Geth. Using dynamic snap
 - Fastest sync strategy, currently default in Geth and Nethermind 
 - Saves a lot of disk usage and network bandwidth without sacrificing security.
 
-[More on Snap](https://github.com/ethereum/devp2p/blob/master/caps/snap.md)
+[More on Snap sync](https://github.com/ethereum/devp2p/blob/master/caps/snap.md)
 
 
 #### Beam sync
