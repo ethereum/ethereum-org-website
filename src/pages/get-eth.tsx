@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { useIntl } from "react-intl"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import { graphql } from "gatsby"
+import { graphql, PageProps } from "gatsby"
 
 import { translateMessageId, TranslationKey } from "../utils/translations"
 import Translation from "../components/Translation"
@@ -170,7 +170,7 @@ const StyledInfoBanner = styled(InfoBanner)<{
   margin-top: ${(props) => props.mt};
 `
 
-const GetETHPage = ({ data }) => {
+const GetETHPage = ({ data }: PageProps<Queries.GetEthPageQuery>) => {
   const intl = useIntl()
   const decentralizedExchanges: Array<CardListItem> = [
     {
