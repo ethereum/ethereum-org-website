@@ -104,7 +104,7 @@ The sync mode and client you choose will affect space requirements but we've est
 | Besu         | 800GB+                | 11TB+                    |
 | Erigon       | N/A                   | 2.5TB+                   |
 
-- Note: Erigon does not Fast Sync, but Full Pruning is possible (~500GB)
+- Note: Erigon does not offer snap sync, but Full Pruning is possible (~500GB)
 
 For consensus clients, space requirement also depends on client implementation and enabled features (e.g. validator slasher) but generally count with another 200GB needed for beacon data. With large number of validators, the bandwidth load grows as well. Details on conensus client requirements can be found in [this analysis](https://medium.com/@migalabs/analysis-of-ethereum-2-consensus-clients-dfede8e0145e). 
 
