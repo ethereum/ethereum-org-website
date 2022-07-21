@@ -37,7 +37,7 @@ import {
 } from "../components/SharedStyledComponents"
 import PreMergeBanner from "../components/PreMergeBanner"
 
-import { ZenModeContext } from "../contexts/ZenModeContext.js"
+import { ZenModeContext } from "../contexts/ZenModeContext"
 import { isLangRightToLeft } from "../utils/translations"
 import { Lang } from "../utils/languages"
 import { Context } from "../types"

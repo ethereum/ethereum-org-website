@@ -2,9 +2,9 @@ import React from "react"
 import styled from "styled-components"
 import { useIntl } from "react-intl"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import { graphql } from "gatsby"
+import { graphql, PageProps } from "gatsby"
 
-import { translateMessageId } from "../utils/translations"
+import { translateMessageId, TranslationKey } from "../utils/translations"
 import Translation from "../components/Translation"
 import CardList from "../components/CardList"
 import EthExchanges from "../components/EthExchanges"
@@ -24,8 +24,11 @@ import {
   TwoColumnContent,
 } from "../components/SharedStyledComponents"
 import FeedbackCard from "../components/FeedbackCard"
+import { CardListItem } from "../components/CardList"
 
-const Subtitle = styled.div`
+const Subtitle = styled.div<{
+  mb?: string
+}>`
   font-size: 1.25rem;
   line-height: 140%;
   max-width: 45ch;
@@ -161,9 +164,15 @@ const AllCapsTranslation = styled(Translation)`
   text-transform: uppercase;
 `
 
-const GetETHPage = ({ data }) => {
+const StyledInfoBanner = styled(InfoBanner)<{
+  mt: string
+}>`
+  margin-top: ${(props) => props.mt};
+`
+
+const GetETHPage = ({ data }: PageProps<Queries.GetEthPageQuery>) => {
   const intl = useIntl()
-  const decentralizedExchanges = [
+  const decentralizedExchanges: Array<CardListItem> = [
     {
       title: "Localcryptos.com",
       link: "https://localcryptos.com/",
@@ -171,7 +180,7 @@ const GetETHPage = ({ data }) => {
     },
   ].sort((a, b) => a.title.localeCompare(b.title))
 
-  const tokenSwaps = [
+  const tokenSwaps: Array<CardListItem> = [
     {
       title: "1inch",
       link: "https://1inch.exchange/#/",
@@ -204,7 +213,7 @@ const GetETHPage = ({ data }) => {
     },
   ].sort((a, b) => a.title.localeCompare(b.title))
 
-  const safetyArticles = [
+  const safetyArticles: Array<CardListItem> = [
     {
       title: translateMessageId(
         "page-get-eth-article-protecting-yourself",
@@ -296,12 +305,12 @@ const GetETHPage = ({ data }) => {
               </Link>
             </em>
           </p>
-          <InfoBanner emoji=":wave:" shouldCenter={true} mt={`2rem`}>
+          <StyledInfoBanner emoji=":wave:" shouldCenter={true} mt={`2rem`}>
             <Translation id="page-get-eth-new-to-eth" />{" "}
             <Link to="/eth/">
               <Translation id="page-get-eth-whats-eth-link" />
             </Link>
-          </InfoBanner>
+          </StyledInfoBanner>
         </Content>
       </CardContainer>
       <GradientContainer id="country-picker">
@@ -415,7 +424,7 @@ const GetETHPage = ({ data }) => {
         descriptionKey="page-get-eth-use-your-eth-dapps"
         image={getImage(data.dapps)}
         alt={translateMessageId(
-          "page-index-sections-individuals-image-alt",
+          "page-index-sections-individuals-image-alt" as TranslationKey,
           intl
         )}
         maxImageWidth={600}
