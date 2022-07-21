@@ -28,7 +28,7 @@ Read more on [how Ethereum implements proof-of-stake](/developers/docs/consensus
 
 ## Proof-of-stake energy expenditure {#proof-of-stake-energy}
 
-Estimates based on the current Beacon Chain suggest that The Merge to proof-of-stake could result in a 99.95% reduction in total energy use, with proof-of-stake being ~2000x more energy-efficient than proof-of-work. The energy expenditure of Ethereum will be roughly equal to the cost of running a modest laptop for each node on the network.
+Estimates he current Beacon Chain suggest that The Merge to proof-of-stake could result in a 99.95% reduction in total energy use, with proof-of-stake being ~2000x more energy-efficient than proof-of-work. The energy expenditure of Ethereum will be roughly equal to the cost of running a modest laptop for each node on the network.
 
 Many articles estimate "per-transaction" energy expenditure to compare blockchains to other industries. The benefit of this is that it is easy to understand, but the energy required to mine a block is independent of the number of transactions within it. A per transaction unit of energy expenditure implies that fewer transactions would lead to smaller energy expenditure and vice-versa, which is not the case. A per-transaction estimate is highly dependent upon how a blockchain's transaction throughput is defined, and tweaking this definition can be gamed to make the value seem larger or smaller.
 
