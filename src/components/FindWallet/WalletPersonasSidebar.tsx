@@ -89,6 +89,47 @@ const Persona = styled.div<{
 
   h3 {
     color: ${(props) => props.theme.colors.text};
+    position: relative;
+    padding-left: 2rem;
+    &:before {
+      content: "";
+      display: block;
+      border-radius: 100%;
+      width: 1.4rem;
+      height: 1.4rem;
+      left: 0;
+      top: 0.1rem;
+      transition: all 1.5s;
+      border: 1px solid;
+      position: absolute;
+      border-color: ${({ selected, isDark, theme }) =>
+        selected
+          ? isDark
+            ? theme.colors.primary
+            : theme.colors.primary
+          : isDark
+          ? theme.colors.white
+          : theme.colors.black400};
+    }
+    &:after {
+      content: "";
+      display: block;
+      border-radius: 100%;
+      width: 0.9rem;
+      height: 0.9rem;
+      left: 0.25rem;
+      top: 0.35rem;
+      transition: all 1.5s;
+      position: absolute;
+      background: ${({ selected, isDark, theme }) =>
+        selected
+          ? isDark
+            ? theme.colors.primary
+            : theme.colors.primary
+          : isDark
+          ? "rgba(0, 0, 0, 0)"
+          : "rgba(0, 0, 0, 0)"};
+    }
   }
 
   &:hover {
@@ -527,16 +568,6 @@ const WalletPersonasSidebar = ({
             }}
           >
             <Title>
-              <IconContainer
-                role="checkbox"
-                aria-label={`${persona.title} filter`}
-              >
-                <StyledIcon
-                  name="check"
-                  selected={selectedPersona === idx}
-                  size="2rem"
-                />
-              </IconContainer>
               <H3>{persona.title}</H3>
             </Title>
             <PersonaDescription selected={selectedPersona === idx}>
