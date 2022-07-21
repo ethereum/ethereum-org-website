@@ -381,17 +381,21 @@ export const onCreatePage: GatsbyNode<any, Context>["onCreatePage"] = async ({
   if (isDefaultLang) {
     const path = page.path.slice(3)
 
-    createRedirect({
-      ...commonRedirectProps,
-      fromPath: path,
-      toPath: page.path,
-    })
-
-    // create routes without the lang prefix e.g. `/{path}` as our i18n plugin
-    // only creates `/{lang}/{path}` routes. This is useful on dev env to avoid
-    // getting a 404 since we don't have server side redirects
     if (IS_DEV) {
+      // create routes without the lang prefix e.g. `/{path}` as our i18n plugin
+      // only creates `/{lang}/{path}` routes. This is useful on dev env to avoid
+      // getting a 404 since we don't have server side redirects
       createPage({ ...page, path })
+    }
+
+    if (!IS_DEV && !path.match(/^\/404(\/|.html)$/)) {
+      // on prod, indicate our servers to redirect the root paths to the
+      // `/{defaultLang}/{path}`
+      createRedirect({
+        ...commonRedirectProps,
+        fromPath: path,
+        toPath: page.path,
+      })
     }
   }
 
