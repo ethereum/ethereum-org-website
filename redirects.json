@@ -48,88 +48,12 @@
     "toPath": "/en/what-is-ethereum/"
   },
   {
-    "fromPath": "/",
-    "toPath": "/en/"
-  },
-  {
-    "fromPath": "/what-is-ethereum/",
-    "toPath": "/en/what-is-ethereum/"
-  },
-  {
-    "fromPath": "/eth/",
-    "toPath": "/en/eth/"
-  },
-  {
-    "fromPath": "/dapps/",
-    "toPath": "/en/dapps/"
-  },
-  {
-    "fromPath": "/wallets/",
-    "toPath": "/en/wallets/"
-  },
-  {
     "fromPath": "/eth2/",
     "toPath": "/en/upgrades/"
   },
   {
-    "fromPath": "/upgrades/",
-    "toPath": "/en/upgrades/"
-  },
-  {
-    "fromPath": "/staking/",
-    "toPath": "/en/staking/"
-  },
-  {
-    "fromPath": "/learn/",
-    "toPath": "/en/learn/"
-  },
-  {
-    "fromPath": "/community/",
-    "toPath": "/en/community/"
-  },
-  {
     "fromPath": "/build/",
     "toPath": "/en/developers/learning-tools/"
-  },
-  {
-    "fromPath": "/developers/",
-    "toPath": "/en/developers/"
-  },
-  {
-    "fromPath": "/enterprise/",
-    "toPath": "/en/enterprise/"
-  },
-  {
-    "fromPath": "/whitepaper/",
-    "toPath": "/en/whitepaper/"
-  },
-  {
-    "fromPath": "/foundation/",
-    "toPath": "/en/foundation/"
-  },
-  {
-    "fromPath": "/eips/",
-    "toPath": "/en/eips/"
-  },
-  {
-    "fromPath": "/about/",
-    "toPath": "/en/about/"
-  },
-  {
-    "fromPath": "/privacy-policy/",
-    "toPath": "/en/privacy-policy/"
-  },
-  {
-    "fromPath": "/terms-of-use/",
-    "toPath": "/en/terms-of-use/"
-  },
-  {
-    "fromPath": "/cookie-policy/",
-    "toPath": "/en/cookie-policy/"
-  },
-  {
-    "fromPath": "/languages/",
-    "toPath": "/en/languages/"
   },
   {
     "fromPath": "/enterprise/",
@@ -172,28 +96,8 @@
     "toPath": "/en/nft/"
   },
   {
-    "fromPath": "/nfts/",
-    "toPath": "/en/nft/"
-  },
-  {
-    "fromPath": "/dao/",
-    "toPath": "/en/dao/"
-  },
-  {
     "fromPath": "/daos/",
     "toPath": "/en/dao/"
-  },
-  {
-    "fromPath": "/defi/",
-    "toPath": "/en/defi/"
-  },
-  {
-    "fromPath": "/layer2/",
-    "toPath": "/en/layer-2/"
-  },
-  {
-    "fromPath": "/*/layer2/",
-    "toPath": "/:splat/layer-2/"
   },
   {
     "fromPath": "/grants/",

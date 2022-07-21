@@ -23,6 +23,12 @@ import redirects from "./redirects.json"
 
 const exec = util.promisify(child_process.exec)
 
+const commonRedirectProps = {
+  isPermanent: true,
+  ignoreCase: true,
+  force: true,
+}
+
 /**
  * Markdown isOutdated check
  * Parse header ids in markdown file (both translated and english) and compare their info structure.
@@ -190,13 +196,11 @@ export const createPages: GatsbyNode<any, Context>["createPages"] = async ({
 }) => {
   const { createPage, createRedirect } = actions
 
-  // server side redirects
+  // custom redirects defined in `redirects.json`
   redirects.forEach((redirect) => {
     createRedirect({
+      ...commonRedirectProps,
       ...redirect,
-      isPermanent: true,
-      ignoreCase: true,
-      force: true,
     })
   })
 
@@ -260,6 +264,12 @@ export const createPages: GatsbyNode<any, Context>["createPages"] = async ({
     // e.g. English file: "src/content/community/index.md"
     // e.g. corresponding German file: "src/content/translations/de/community/index.md"
     if (language === defaultLanguage) {
+      createRedirect({
+        ...commonRedirectProps,
+        fromPath: slug.slice(3),
+        toPath: slug,
+      })
+
       for (const lang of supportedLanguages) {
         const splitPath = relativePath.split("/")
         splitPath.splice(2, 0, `translations/${lang}`)
@@ -315,6 +325,14 @@ export const createPages: GatsbyNode<any, Context>["createPages"] = async ({
   // we can remove this logic and the `/pages-conditional/` directory.
   const outdatedMarkdown = [`eth`, `dapps`, `wallets`, `what-is-ethereum`]
   outdatedMarkdown.forEach((page) => {
+    const originalPath = `/${page}/`
+
+    createRedirect({
+      ...commonRedirectProps,
+      fromPath: originalPath,
+      toPath: `/${defaultLanguage}${originalPath}`,
+    })
+
     supportedLanguages.forEach(async (lang) => {
       const markdownPath = path.resolve(
         `src/content/translations/${lang}/${page}/index.md`
@@ -326,7 +344,7 @@ export const createPages: GatsbyNode<any, Context>["createPages"] = async ({
           page,
           lang
         )
-        const originalPath = `/${page}/`
+
         const slug = `/${lang}${originalPath}`
 
         createPage<Context>({
@@ -356,14 +374,29 @@ export const onCreatePage: GatsbyNode<any, Context>["onCreatePage"] = async ({
   page,
   actions,
 }) => {
-  const { createPage, deletePage } = actions
+  const { createPage, deletePage, createRedirect } = actions
 
-  // create routes without the lang prefix e.g. `/{path}` as our i18n plugin
-  // only creates `/{lang}/{path}` routes. This is useful on dev env to avoid
-  // getting a 404 since we don't have server side redirects
-  if (IS_DEV && page.path.startsWith(`/${defaultLanguage}`)) {
+  const isDefaultLang = page.path.startsWith(`/${defaultLanguage}`)
+
+  if (isDefaultLang) {
     const path = page.path.slice(3)
-    createPage({ ...page, path })
+
+    if (IS_DEV) {
+      // create routes without the lang prefix e.g. `/{path}` as our i18n plugin
+      // only creates `/{lang}/{path}` routes. This is useful on dev env to avoid
+      // getting a 404 since we don't have server side redirects
+      createPage({ ...page, path })
+    }
+
+    if (!IS_DEV && !path.match(/^\/404(\/|.html)$/)) {
+      // on prod, indicate our servers to redirect the root paths to the
+      // `/{defaultLang}/{path}`
+      createRedirect({
+        ...commonRedirectProps,
+        fromPath: path,
+        toPath: page.path,
+      })
+    }
   }
 
   const isTranslated = page.context.locale !== defaultLanguage
