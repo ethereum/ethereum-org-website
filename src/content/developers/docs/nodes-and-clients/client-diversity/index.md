@@ -68,6 +68,8 @@ Addressing client diversity requires more than individual users to choose minori
 
 [Erigon](https://github.com/ledgerwatch/erigon)
 
+[Akula](https://akula.app)
+
 [CoreGeth](https://core-geth.org/)
 
 ### Consensus clients {#consensus-clients}
