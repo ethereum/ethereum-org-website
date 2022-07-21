@@ -56,10 +56,6 @@
     "toPath": "/en/developers/learning-tools/"
   },
   {
-    "fromPath": "/enterprise/",
-    "toPath": "/en/enterprise/"
-  },
-  {
     "fromPath": "/java/",
     "toPath": "/en/developers/docs/programming-languages/java/"
   },
@@ -92,12 +88,20 @@
     "toPath": "/en/developers/docs/programming-languages/dart/"
   },
   {
-    "fromPath": "/nft/",
+    "fromPath": "/nfts/",
     "toPath": "/en/nft/"
   },
   {
     "fromPath": "/daos/",
     "toPath": "/en/dao/"
+  },
+  {
+    "fromPath": "/layer2/",
+    "toPath": "/en/layer-2/"
+  },
+  {
+    "fromPath": "/*/layer2/",
+    "toPath": "/:splat/layer-2/"
   },
   {
     "fromPath": "/grants/",
