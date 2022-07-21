@@ -75,6 +75,8 @@
               to: /developers/docs/consensus-mechanisms/pos/gasper/
             - id: docs-nav-weak-subjectivity
               to: /developers/docs/consensus-mechanisms/pos/weak-subjectivity/
+            - id: docs-nav-attestations
+              to: /developers/docs/consensus-mechanisms/pos/attestations
 - id: docs-nav-ethereum-stack
   path: /developers/docs/
   items:
