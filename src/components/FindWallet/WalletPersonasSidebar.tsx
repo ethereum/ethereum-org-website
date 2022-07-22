@@ -99,7 +99,7 @@ const Persona = styled.div<{
       height: 1.4rem;
       left: 0;
       top: 0.1rem;
-      transition: all 1.5s;
+      transition: all 0.5s;
       border: 1px solid;
       position: absolute;
       border-color: ${({ selected, isDark, theme }) =>
@@ -119,7 +119,7 @@ const Persona = styled.div<{
       height: 0.9rem;
       left: 0.25rem;
       top: 0.35rem;
-      transition: all 1.5s;
+      transition: all 0.5s;
       position: absolute;
       background: ${({ selected, isDark, theme }) =>
         selected
@@ -168,6 +168,12 @@ const Title = styled.div`
   gap: "1rem";
   margin-bottom: 0.6rem;
   padding: 0.5rem 0.5rem 0 0.5rem;
+`
+
+const Radio = styled.input`
+  display: none;
+  width: 1.4rem;
+  height: 1.4rem;
 `
 
 const H3 = styled.h3`
@@ -568,6 +574,7 @@ const WalletPersonasSidebar = ({
             }}
           >
             <Title>
+              <Radio type="radio" checked={selectedPersona === idx} />
               <H3>{persona.title}</H3>
             </Title>
             <PersonaDescription selected={selectedPersona === idx}>
