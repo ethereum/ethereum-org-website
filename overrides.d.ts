@@ -12,3 +12,8 @@ declare module "*.mp4" {
   const src: string
   export default src
 }
+
+declare module "raw-loader*" {
+  const contents: string
+  export = contents
+}
