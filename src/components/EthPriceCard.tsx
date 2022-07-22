@@ -88,11 +88,11 @@ const ChangeTime = styled.div`
 
 export interface IProps {
   className?: string
-  isLeftAlign: boolean
+  isLeftAlign?: boolean
 }
 
 // TODO add prop to left vs. center align
-const EthPriceCard: React.FC<IProps> = ({ className, isLeftAlign }) => {
+const EthPriceCard: React.FC<IProps> = ({ className, isLeftAlign = false }) => {
   const [state, setState] = useState({
     currentPriceUSD: "",
     percentChangeUSD: 0,

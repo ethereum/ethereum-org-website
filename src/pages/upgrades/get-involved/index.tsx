@@ -1,13 +1,13 @@
-import React, { useContext, useState, useEffect } from "react"
+import React, { useContext, useState, useEffect, ReactNode } from "react"
 import { ThemeContext } from "styled-components"
 import styled from "styled-components"
-import { graphql } from "gatsby"
+import { graphql, PageProps } from "gatsby"
 import { useIntl } from "react-intl"
 import { shuffle } from "lodash"
 import { getImage } from "gatsby-plugin-image"
-import { translateMessageId } from "../../../utils/translations"
+import { translateMessageId, TranslationKey } from "../../../utils/translations"
 import Card from "../../../components/Card"
-import Leaderboard from "../../../components/Leaderboard"
+import Leaderboard, { Person } from "../../../components/Leaderboard"
 import CalloutBanner from "../../../components/CalloutBanner"
 import Emoji from "../../../components/Emoji"
 import ProductCard from "../../../components/ProductCard"
@@ -163,20 +163,47 @@ const StyledCalloutBanner = styled(CalloutBanner)`
   }
 `
 
-const GetInvolvedPage = ({ data, location }) => {
+type Layer = "el" | "cl"
+
+type Client = {
+  name: string
+  background: string
+  description: ReactNode
+  alt: TranslationKey
+  url: string
+  image: (isDarkTheme?: boolean) => typeof getImage
+  githubUrl: string
+  isBeta?: boolean
+  children?: ReactNode
+}
+
+type Clients = {
+  [key in Layer]: Array<Client>
+}
+
+const GetInvolvedPage = ({
+  data,
+  location,
+}: PageProps<Queries.GetInvolvedPageQuery>) => {
   const intl = useIntl()
   const themeContext = useContext(ThemeContext)
   const isDarkTheme = themeContext.isDark
 
   // TODO sort query isn't working :(
-  const bountyHunters = data.bountyHunters.nodes.sort(
-    (a, b) => b.score - a.score
+  const bountyHunters: Array<Person> = [...data.bountyHunters.nodes].sort(
+    (a, b) => {
+      if (a.score && b.score) {
+        return b.score - a.score
+      }
+
+      return 0
+    }
   )
 
-  const [clients, setClients] = useState({ el: [], cl: [] })
+  const [clients, setClients] = useState<Clients>({ el: [], cl: [] })
 
   useEffect(() => {
-    const executionClients = [
+    const executionClients: Array<Client> = [
       {
         name: "Besu",
         background: "#546D78",
@@ -219,7 +246,7 @@ const GetInvolvedPage = ({ data, location }) => {
       },
     ]
 
-    const consensusClients = [
+    const consensusClients: Array<Client> = [
       {
         name: "Prysm",
         background: "#23292e",
@@ -337,7 +364,7 @@ const GetInvolvedPage = ({ data, location }) => {
     },
   ]
 
-  const getClientCards = (layer) => {
+  const getClientCards = (layer: Layer) => {
     if (!Object.keys(clients).includes(layer)) return
     return (
       <StyledCardGrid>
@@ -431,14 +458,8 @@ const GetInvolvedPage = ({ data, location }) => {
         <StyledCalloutBanner
           image={getImage(data.rhino)}
           alt={translateMessageId("page-staking-image-alt", intl)}
-          titleKey={translateMessageId(
-            "page-upgrades-get-involved-stake",
-            intl
-          )}
-          descriptionKey={translateMessageId(
-            "page-upgrades-get-involved-stake-desc",
-            intl
-          )}
+          titleKey={"page-upgrades-get-involved-stake"}
+          descriptionKey={"page-upgrades-get-involved-stake-desc"}
         >
           <div>
             <ButtonLink to="/staking/">

@@ -15,7 +15,7 @@ sidebar: true
 published: 2021-03-31
 ---
 
-Si es nuevo en el desarrollo de cadena de bloques y no sabe por dónde empezar, o si solo quiere entender cómo implementar e interactuar con contratos inteligentes, esta es su guía. Abordaremos cómo crear e implementar un contrato inteligente sencillo en la red de prueba Ropsten usando una billetera virtual ([Metamask](https://metamask.io/)), [Solidity](https://docs.soliditylang.org/en/v0.8.0/), [Hardhat](https://hardhat.org/) y [Alchemy](https://alchemyapi.io/eth) (no se preocupe si aún no entiende lo que significa todo esto, lo explicaremos).
+Si es nuevo en el desarrollo de cadena de bloques y no sabe por dónde empezar, o si solo quiere entender cómo implementar e interactuar con contratos inteligentes, esta es su guía. Abordaremos cómo crear e implementar un contrato inteligente sencillo en la red de prueba Ropsten usando una billetera virtual ([MetaMask](https://metamask.io/)), [Solidity](https://docs.soliditylang.org/en/v0.8.0/), [Hardhat](https://hardhat.org/) y [Alchemy](https://alchemyapi.io/eth) (no se preocupe si aún no entiende lo que significa todo esto, lo explicaremos).
 
 En la parte 2 de este tutorial veremos cómo interactuar con nuestro contrato inteligente una vez implementado y en la parte 3 trataremos cómo publicarlo en Etherscan.
 
@@ -41,19 +41,19 @@ Una vez que haya creado una cuenta de Alchemy, puede generar una clave de API cr
 
 ## Paso 3: Crear una cuenta Ethereum (dirección) {#step-3}
 
-Necesitamos tener una cuenta Ethereum para enviar y recibir transacciones. Para este tutorial, usaremos Metamask, una cartera virtual en el navegador usada para manejar la dirección de su cuenta Ethereum. Más información en [transacciones ](/developers/docs/transactions/).
+Necesitamos tener una cuenta Ethereum para enviar y recibir transacciones. Para este tutorial, usaremos MetaMask, una cartera virtual en el navegador usada para manejar la dirección de su cuenta Ethereum. Más información en [transacciones ](/developers/docs/transactions/).
 
-Puede descargar y crear una cuenta Metamask gratis [aquí](https://metamask.io/download.html). Cuando esté creando una cuenta, o ya tenga una, asegúrese de cambiar a la «Red de pruebas de Robsten» en la parte superior derecha ( para que no tratemos con dinero real).
+Puede descargar y crear una cuenta MetaMask gratis [aquí](https://metamask.io/download.html). Cuando esté creando una cuenta, o ya tenga una, asegúrese de cambiar a la «Red de pruebas de Robsten» en la parte superior derecha ( para que no tratemos con dinero real).
 
-![ejemplo de Metamask Ropsten](./metamask-ropsten-example.png)
+![ejemplo de MetaMask Ropsten](./metamask-ropsten-example.png)
 
 ## Paso 4: Agregar ether de un Faucet {#step-4}
 
-Para desarrollar nuestro contrato inteligente en la red de prueba, necesitaremos ETH de prueba. Para obtener sus ETH de prueba, puede ir a [Ropsten faucet](https://faucet.dimensions.network/) e introducir la dirección de su cuenta de Ropsten, y hacer click en «Enviar Ropsten ETH». Puede llevar algo de tiempo recibir su ETH de prueba debido a la congestión de la red. ¡Deberían aparecer los ETH en su cuenta de Metamask poco después!
+Para desarrollar nuestro contrato inteligente en la red de prueba, necesitaremos ETH de prueba. Para obtener sus ETH de prueba, puede ir a [Ropsten faucet](https://faucet.dimensions.network/) e introducir la dirección de su cuenta de Ropsten, y hacer click en «Enviar Ropsten ETH». Puede llevar algo de tiempo recibir su ETH de prueba debido a la congestión de la red. ¡Deberían aparecer los ETH en su cuenta de MetaMask poco después!
 
 ## Paso 5: Comprobar su balance {#step-5}
 
-Para comprobar que nuestro balance este ahí, hagamos una solicitud de [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance)usando [la herramienta de composición de Alchemy](https://composer.alchemyapi.io?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). Esto hará que aparezca la cantidad de ETH en nuestra billetera. Después de introducir la dirección de su cuenta de Metamask y hacer click en «Enviar Solicitud», debería ver una respuesta como esta:
+Para comprobar que nuestro balance este ahí, hagamos una solicitud de [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance)usando [la herramienta de composición de Alchemy](https://composer.alchemyapi.io?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). Esto hará que aparezca la cantidad de ETH en nuestra billetera. Después de introducir la dirección de su cuenta de MetaMask y hacer click en «Enviar Solicitud», debería ver una respuesta como esta:
 
 ```json
 { "jsonrpc": "2.0", "id": 0, "result": "0x2B5E3AF16B1880000" }
@@ -200,9 +200,9 @@ contract HelloWorld {
 
 Es un contrato inteligente muy sencillo que almacena un mensaje al momento de la creación y puede actualizarse con la función `update`.
 
-## Paso 11: Conectar Metamask & Alchemy a su proyecto {#step-11}
+## Paso 11: Conectar MetaMask & Alchemy a su proyecto {#step-11}
 
-Hemos creado una billetera de Metamask, una cuenta de Alchemy y escrito nuestro contrato inteligente, ahora es momento de conectarlos entre sí.
+Hemos creado una billetera de MetaMask, una cuenta de Alchemy y escrito nuestro contrato inteligente, ahora es momento de conectarlos entre sí.
 
 Cada transacción enviada desde su billetera virtual requiere una firma utilizando su clave privada única. Para proporcionar este permiso a nuestro programa, podemos almacenar de manera segura nuestra clave privada (y clave Alchemy API) en un archivo de entorno.
 
@@ -214,7 +214,7 @@ Primero, instale el paquete dotenv en su directorio de proyecto:
 npm install dotenv --save
 ```
 
-Después, cree un archivo `.env` en el directorio raíz de nuestro proyecto, y añádale la llave inteligente de Metamask y la API URL de HTTP Alchemy.
+Después, cree un archivo `.env` en el directorio raíz de nuestro proyecto, y añádale la llave inteligente de MetaMask y la API URL de HTTP Alchemy.
 
 - Siga [estas instrucciones](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key) para exportar su llave privada
 - Abajo se le indica cómo obtener la API URL de HTTP Alchemy
@@ -344,7 +344,7 @@ Si vamos a la dirección [Ropsten etherscan](https://ropsten.etherscan.io/) y bu
 
 ![contrato etherscan](./etherscan-contract.png)
 
-La dirección `From` debe coincidir con su cuenta de Metamask y la dirección de envío especificará «creación de contrato», pero al hacer click en la transacción veremos nuestra dirección en el campo `To`:
+La dirección `From` debe coincidir con su cuenta de MetaMask y la dirección de envío especificará «creación de contrato», pero al hacer click en la transacción veremos nuestra dirección en el campo `To`:
 
 ![transacción etherscan](./etherscan-transaction.png)
 

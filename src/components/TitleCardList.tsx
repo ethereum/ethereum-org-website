@@ -4,6 +4,7 @@ import { GatsbyImage } from "gatsby-plugin-image"
 import Icon from "./Icon"
 import Link from "./Link"
 import Translation from "./Translation"
+import { TranslationKey } from "../utils/translations"
 
 const Table = styled.div`
   background-color: ${(props) => props.theme.colors.background};
@@ -123,7 +124,26 @@ const CodeBoxHeader = styled.div`
   }
 `
 
-const TitleCardList = ({
+export interface ITitleCardItem {
+  title: string
+  description: string
+  caption?: string
+  link?: string
+  image?: string
+  alt?: string
+  id?: number
+}
+
+export interface IProps {
+  content: Array<ITitleCardItem>
+  className?: string
+  clickHandler: (idx: number) => void
+  headerKey: TranslationKey
+  icon: string
+  isCode: boolean
+}
+
+const TitleCardList: React.FC<IProps> = ({
   content,
   className,
   clickHandler,
@@ -131,7 +151,7 @@ const TitleCardList = ({
   icon,
   isCode,
 }) => (
-  <Table isCode={isCode} className={className}>
+  <Table className={className}>
     <TableHeader>
       {icon && <StyledIcon name={icon} />}
       <Translation id={headerKey} />

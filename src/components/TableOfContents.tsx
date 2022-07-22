@@ -210,10 +210,10 @@ const MobileIcon = styled(Icon)`
   }
 `
 
-const slugify = (s) =>
+const slugify = (s: string): string =>
   encodeURIComponent(String(s).trim().toLowerCase().replace(/\s+/g, "-"))
 
-const getCustomId = (title) => {
+const getCustomId = (title: string): string => {
   const match = customIdRegEx.exec(title)
   if (match) {
     return match[2].toLowerCase()
@@ -222,7 +222,7 @@ const getCustomId = (title) => {
   return slugify(title)
 }
 
-const trimmedTitle = (title) => {
+const trimmedTitle = (title: string): string => {
   const match = customIdRegEx.exec(title)
   const trimmedTitle = match ? title.replace(match[1], "").trim() : title
 
@@ -231,7 +231,22 @@ const trimmedTitle = (title) => {
   return emojiMatch ? trimmedTitle.replaceAll(emojiRegEx, "") : trimmedTitle
 }
 
-const TableOfContentsLink = ({ depth, item, activeHash }) => {
+export interface Item {
+  title: string
+  items?: Array<Item>
+}
+
+export interface IPropsTableOfContentsLink {
+  depth: number
+  item: Item
+  activeHash?: string
+}
+
+const TableOfContentsLink: React.FC<IPropsTableOfContentsLink> = ({
+  depth,
+  item,
+  activeHash,
+}) => {
   const url = `#${getCustomId(item.title)}`
   const isActive = activeHash === url
   const isNested = depth === 2
@@ -249,37 +264,64 @@ const TableOfContentsLink = ({ depth, item, activeHash }) => {
   )
 }
 
-const ItemsList = ({ items, depth, maxDepth, activeHash }) => {
+export interface IPropsItemsList {
+  items?: Array<Item>
+  depth: number
+  maxDepth: number
+  activeHash?: string
+}
+
+const ItemsList: React.FC<IPropsItemsList> = ({
+  items,
+  depth,
+  maxDepth,
+  activeHash,
+}) => {
   if (depth > maxDepth || !items) {
     return null
   }
-  return items.map((item, index) => (
-    <ListItem key={index}>
-      <div>
-        {item.title && (
-          <TableOfContentsLink
-            depth={depth}
-            item={item}
-            activeHash={activeHash}
-          />
-        )}
-        {item.items && (
-          <InnerList key={item.title}>
-            <ItemsList
-              items={item.items}
-              depth={depth + 1}
-              maxDepth={maxDepth}
-              activeHash={activeHash}
-            />
-          </InnerList>
-        )}
-      </div>
-    </ListItem>
-  ))
+
+  return (
+    <>
+      {items.map((item, index) => (
+        <ListItem key={index}>
+          <div>
+            {item.title && (
+              <TableOfContentsLink
+                depth={depth}
+                item={item}
+                activeHash={activeHash}
+              />
+            )}
+            {item.items && (
+              <InnerList key={item.title}>
+                <ItemsList
+                  items={item.items}
+                  depth={depth + 1}
+                  maxDepth={maxDepth}
+                  activeHash={activeHash}
+                />
+              </InnerList>
+            )}
+          </div>
+        </ListItem>
+      ))}
+    </>
+  )
 }
 
-const TableOfContentsMobile = ({ items, maxDepth, className }) => {
-  const [isOpen, setIsOpen] = useState(false)
+export interface IPropsTableOfContentsMobile {
+  items?: Array<Item>
+  maxDepth?: number
+  className?: string
+}
+
+const TableOfContentsMobile: React.FC<IPropsTableOfContentsMobile> = ({
+  items,
+  maxDepth,
+  className,
+}) => {
+  const [isOpen, setIsOpen] = useState<boolean>(false)
   if (!items) {
     return null
   }
@@ -322,9 +364,18 @@ const TableOfContentsMobile = ({ items, maxDepth, className }) => {
   )
 }
 
-const TableOfContents = ({
+export interface IProps {
+  items: Array<Item>
+  maxDepth?: number
+  className?: string
+  slug?: string
+  editPath?: string
+  isMobile?: boolean
+}
+
+const TableOfContents: React.FC<IProps> = ({
   items,
-  maxDepth,
+  maxDepth = 1,
   className,
   slug,
   editPath,
@@ -332,10 +383,10 @@ const TableOfContents = ({
 }) => {
   const { isZenMode, handleZenModeChange } = useContext(ZenModeContext)
 
-  const titleIds = []
+  const titleIds: Array<string> = []
 
   if (!isMobile) {
-    const getTitleIds = (items, depth) => {
+    const getTitleIds = (items: Array<Item>, depth: number): void => {
       if (depth > (maxDepth ? maxDepth : 1)) return
 
       items?.forEach((item) => {
@@ -358,7 +409,7 @@ const TableOfContents = ({
   }
   // Exclude <h1> from TOC
   if (items.length === 1) {
-    items = items[0].items
+    items = items[0].items!
   }
   if (isMobile) {
     return (

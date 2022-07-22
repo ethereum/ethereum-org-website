@@ -5,7 +5,7 @@ author: jdourlens
 tags:
   - "transazioni"
   - "frontend"
-  - "javascript"
+  - "JavaScript"
   - "web3.js"
 skill: beginner
 lang: it
@@ -99,7 +99,7 @@ Nella prossima parte chiameremo la funzione `balanceOf` per recuperare l'importo
 
 ## Call: lettura del valore da uno Smart Contract {#call-reading-value-from-a-smart-contract}
 
-Il primo esempio chiamerà un metodo di una "costante" e ne eseguirà il metodo dello Smart Contract nell'EVM senza inviare alcuna transazione. Per questo leggeremo il saldo di ERC20 di un indirizzo. [Leggi il nostro articolo sui token ERC20](/developers/tutorials/understand-the-erc20-token-smart-contract/).
+Il primo esempio chiamerà un metodo di una "costante" e ne eseguirà il metodo dello Smart Contract nell'EVM senza inviare alcuna transazione. Per questo leggeremo il saldo di ERC20 di un indirizzo. [Leggi il nostro articolo sui token ERC20](/developers/tutorials/understand-the-erc-20-token-smart-contract/).
 
 Puoi accedere ai metodi di uno smart contract istanziato per cui hai fornito l'ABI come segue: `yourContract.methods.methodname`. Usando la funzione `call` riceverai il risultato dell'esecuzione della funzione.
 
@@ -113,7 +113,7 @@ daiToken.methods.balanceOf(senderAddress).call(function (err, res) {
 })
 ```
 
-Ricorda che il ERC20 DAI ha 18 cifre decimali, che significa che devi rimuovere 18 zeri per ottenere l'importo corretto. I valori uint256 sono restituiti come stringhe poiché JavaScript non gestisce grandi valori numerici. Se non sai [come gestire i grandi numeri in JS consulta il nostro tutorial su bignumber.js](https://ethereumdev.io/how-to-deal-with-big-numbers-in-javascript/).
+Ricorda che il ERC20 DAI ha 18 cifre decimali, che significa che devi rimuovere 18 zeri per ottenere l'importo corretto. I valori uint256 sono restituiti come stringhe, poiché JavaScript non gestisce i grandi valori numerici. Se non sai [come gestire i grandi numeri in JS consulta il nostro tutorial su bignumber.js](https://ethereumdev.io/how-to-deal-with-big-numbers-in-javascript/).
 
 ## Send: invio di una transazione a una funzione di Smart Contract {#send-sending-a-transaction-to-a-smart-contract-function}
 

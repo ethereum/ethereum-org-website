@@ -16,7 +16,9 @@ import Link from "../components/Link"
 import MarkdownTable from "../components/MarkdownTable"
 import PageMetadata from "../components/PageMetadata"
 import Pill from "../components/Pill"
-import TableOfContents from "../components/TableOfContents"
+import TableOfContents, {
+  Item as ItemTableOfContents,
+} from "../components/TableOfContents"
 import SectionNav from "../components/SectionNav"
 import Translation from "../components/Translation"
 import Emoji from "../components/Emoji"
@@ -35,7 +37,7 @@ import {
 } from "../components/SharedStyledComponents"
 import PreMergeBanner from "../components/PreMergeBanner"
 
-import { ZenModeContext } from "../contexts/ZenModeContext.js"
+import { ZenModeContext } from "../contexts/ZenModeContext"
 import { isLangRightToLeft } from "../utils/translations"
 import { Lang } from "../utils/languages"
 import { Context } from "../types"
@@ -58,7 +60,9 @@ const ContentContainer = styled.div<{ isZenMode: boolean }>`
   background-color: ${(props) => props.theme.colors.ednBackground};
 `
 
-const DesktopTableOfContents = styled(TableOfContents)`
+const DesktopTableOfContents = styled(TableOfContents)<{
+  isPageIncomplete: boolean
+}>`
   padding-top: ${(props) => (props.isPageIncomplete ? `5rem` : `3rem`)};
 `
 
@@ -181,7 +185,7 @@ const DocsPage = ({
 
   const isRightToLeft = isLangRightToLeft(mdx.frontmatter.lang as Lang)
 
-  const tocItems = mdx.tableOfContents?.items
+  const tocItems = mdx.tableOfContents?.items as Array<ItemTableOfContents>
   const isPageIncomplete = !!mdx.frontmatter.incomplete
 
   const { editContentUrl } = siteData.siteMetadata || {}
@@ -219,7 +223,7 @@ const DocsPage = ({
             editPath={absoluteEditPath}
             items={tocItems}
             isMobile={true}
-            maxDepth={mdx.frontmatter.sidebarDepth}
+            maxDepth={mdx.frontmatter.sidebarDepth!}
           />
           <MDXProvider components={components}>
             <MDXRenderer>{mdx.body}</MDXRenderer>
@@ -239,7 +243,7 @@ const DocsPage = ({
             editPath={absoluteEditPath}
             items={tocItems}
             isPageIncomplete={isPageIncomplete}
-            maxDepth={mdx.frontmatter.sidebarDepth}
+            maxDepth={mdx.frontmatter.sidebarDepth!}
           />
         )}
       </ContentContainer>

@@ -1305,6 +1305,12 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/NachoRoizman"><img src="https://avatars.githubusercontent.com/u/107893772?v=4?s=100" width="100px;" alt=""/><br /><sub><b>NachoRoizman</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=NachoRoizman" title="Documentation">📖</a></td>
     <td align="center"><a href="https://linkedin.com/in/miragaya-ivan"><img src="https://avatars.githubusercontent.com/u/72365253?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Iván Miragaya</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=M-Ivan" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/smejak"><img src="https://avatars.githubusercontent.com/u/20759274?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Jakub Smékal</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=smejak" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://tokenpocket.pro"><img src="https://avatars.githubusercontent.com/u/2173383?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Tony Chen</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=chendatony31" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/metalc"><img src="https://avatars.githubusercontent.com/u/102876192?v=4?s=100" width="100px;" alt=""/><br /><sub><b>metalc</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=metalc" title="Documentation">📖</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/Tuongg2312"><img src="https://avatars.githubusercontent.com/u/107551539?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Tuongg2312</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=Tuongg2312" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/ErikSaunier"><img src="https://avatars.githubusercontent.com/u/1122363?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ξrik Saunier</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=ErikSaunier" title="Documentation">📖</a></td>
   </tr>
 </table>
 

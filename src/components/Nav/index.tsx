@@ -150,8 +150,8 @@ const Nav: React.FC<IProps> = ({ handleThemeChange, isDarkTheme, path }) => {
       ariaLabel: "use-ethereum-menu",
       items: [
         {
-          text: "ethereum-wallets",
-          to: "/wallets/",
+          text: "find-wallet",
+          to: "/wallets/find-wallet/",
         },
         {
           text: "get-eth",
@@ -429,7 +429,7 @@ const Nav: React.FC<IProps> = ({ handleThemeChange, isDarkTheme, path }) => {
               <Menu path={path} sections={linkSections} />
             </LeftItems>
             <RightItems>
-              <Search useKeyboardShortcuts />
+              <Search useKeyboardShortcut />
               <ThemeToggle
                 onClick={handleThemeChange}
                 aria-label={

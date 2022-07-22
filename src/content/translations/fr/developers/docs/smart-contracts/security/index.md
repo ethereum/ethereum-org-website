@@ -77,7 +77,7 @@ Pour permettre à un utilisateur de retirer l'ETH qu'il a précédemment stocké
 2. lui envoie le solde en ETH ;
 3. réinitialise le solde à 0, de sorte que l'utilisateur ne puisse pas retirer le solde de nouveau.
 
-Si elle est appelée à partir d'un compte normal (comme celui de votre propre compte Metamask), elle fonctionne comme prévu : msg.sender.call.value() envoie simplement l'ETH vers votre compte. Toutefois, les contrats intelligents peuvent également effectuer des appels. Si un contrat personnalisé et malveillant appelle la fonction `withdraw()`, msg.sender.call.value() n'enverra pas le montant d'ETH (via `amount`), mais appellera aussi implicitement le contrat pour commencer à exécuter du code. Imaginez le contrat malveillant suivant :
+Si elle est appelée à partir d'un compte normal (comme celui de votre propre compte MetaMask), elle fonctionne comme prévu : msg.sender.call.value() envoie simplement l'ETH vers votre compte. Toutefois, les contrats intelligents peuvent également effectuer des appels. Si un contrat personnalisé et malveillant appelle la fonction `withdraw()`, msg.sender.call.value() n'enverra pas le montant d'ETH (via `amount`), mais appellera aussi implicitement le contrat pour commencer à exécuter du code. Imaginez le contrat malveillant suivant :
 
 ```solidity
 contract Attacker {
