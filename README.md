@@ -158,14 +158,14 @@ In case you want to test them as if you were in a Netlify env, you can install t
 
 > The Proof of Attendance Protocol is a dapp that distributes badges in the form of ERC-721 tokens to prove you participated in an event. [More on POAPs](https://www.poap.xyz/).
 
-### ethereum.org 2021 Contributor POAP
+### ethereum.org 2022 Contributor POAP
 
-- If you have committed any changes in 2021 so far that were merged into our repo, you have a POAP waiting!
+- If you have committed any changes in 2022 so far that were merged into our repo, you have a POAP waiting!
 - This includes our dedicated translators on Crowdin
 
   [![Discord](https://img.shields.io/discord/714888181740339261?color=1C1CE1&label=Claim%20Your%20POAP!%20%7C%20Discord%20%F0%9F%91%8B%20&style=flat)](https://discord.gg/CetY6Y4)
 
-- 👆 To claim your Contributor POAP, join our Discord server and paste a link to your contribution in the #poaps-🏆 channel
+- 👆 To claim your Contributor POAP, join our Discord server and paste a link to your contribution in the `#🥇 | poaps` [channel](https://discord.com/channels/714888181740339261/804005643211898911)
 
 - A member of our team will verify the request and DM you with a personalized link to claim your own freshly minted POAP collectible!
 
