@@ -55,10 +55,10 @@ Başlamadan önce daha temel bir bilgiye mi ihtiyacınız var? [ethereum.org/lea
 - [py-evm](https://github.com/ethereum/py-evm) - _Ethereum Sanal Makinesinin uygulanması_
 - [eth-tester](https://github.com/ethereum/eth-tester) - _Ethereum tabanlı uygulamaları test etmek için araçlar_
 - [eth-utils](https://github.com/ethereum/eth-utils/) - _Ethereum ile ilgili kod tabanlarıyla çalışmak için yardımcı işlevler_
-- [ py-solc-x ](https://pypi.org/project/py-solc-x/) - _ 0.5.x desteği ile solc solidity derleyicisine yönelik Python paketleyici _
-- [ py-wasm ](https://github.com/ethereum/py-wasm) - _ Web assembly yorumlayıcısının Python uygulaması_
+- [py-solc-x](https://pypi.org/project/py-solc-x/) - _0.5.x desteği ile solc solidity derleyicisine yönelik Python paketleyici_
+- [py-wasm](https://github.com/ethereum/py-wasm) - _Web assembly yorumlayıcısının Python uygulaması_
 - [pydevp2p](https://github.com/ethereum/pydevp2p) - _Ethereum P2P yığınının uygulanması_
-- [ pymaker ](https://github.com/makerdao/pymaker) - _Maker sözleşmeleri için Python API_
+- [pymaker](https://github.com/makerdao/pymaker) - _Maker sözleşmeleri için Python API_
 - [siwe](https://github.com/spruceid/siwe-py) - _Python için Ethereum (siwe) ile oturum açın_
 - [Test için akıllı sözleşmeler](https://github.com/tradingstrategy-ai/smart-contracts-for-testing) - _Web3.py ile test yazmak için ERC-20, Uniswap ve diğer yaygın sözleşmelerle birlikte gelen bir Python paketi_
 

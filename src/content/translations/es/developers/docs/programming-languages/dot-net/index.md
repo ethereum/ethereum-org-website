@@ -67,7 +67,7 @@ Construye aplicaciones descentralizadas sobre Ethereum e interactúa con contrat
 
 - [Nethereum Playground:](http://playground.nethereum.com/) _Compila, crea y ejecuta fragmentos de código de Nethereum en el navegador_
 - [Nethereum Codegen Blazor:](https://github.com/Nethereum/Nethereum.CodeGen.Blazor) _Generador de código de Nethereum con IU en Blazor_
-- [Nethereum Blazor: ](https://github.com/Nethereum/NethereumBlazor)_Un explorador de blockchain ligero de .NET Wasm SPA y una cartera sencilla_
+- [Nethereum Blazor](https://github.com/Nethereum/NethereumBlazor): _Un explorador de blockchain ligero de .NET Wasm SPA y una cartera sencilla_
 - [Wonka Business Rules Engine:](https://docs.nethereum.com/en/latest/wonka/)_ Un motor de reglas de negocio (para ambas plataformas .NET y Ethereum) que está inherentemente impulsado por metadatos_
 - [Nethermind:](https://github.com/NethermindEth/nethermind) _Un cliente de .NET Core Ethereum para Linux, Windows, MacOs_
 - [eth-utils](https://github.com/ethereum/eth-utils/): _Funciones de utilidad para trabajar con bases de código relacionadas con Ethereum_

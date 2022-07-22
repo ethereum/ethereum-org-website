@@ -11,7 +11,7 @@ sidebar: true
 
 **多代币标准是什么？**
 
-它的目的很单纯，就是创建一个智能合约接口，可以代表和控制任何数量的同质化和非同质化代币类型。 这样一来，ERC-1155 代币就具有与 [ERC-20 ](/developers/docs/standards/tokens/erc-20/)和 [ERC-721](/developers/docs/standards/tokens/erc-721/) 代币相同的功能，甚至可以同时使用这两者的功能。 而最重要的是，它能改善这两种标准的功能，使其更有效率，并纠正 ERC-20 和 ERC-721 标准上明显的实施错误。
+它的目的很单纯，就是创建一个智能合约接口，可以代表和控制任何数量的同质化和非同质化代币类型。 这样一来，ERC-1155 代币就具有与 [ERC-20](/developers/docs/standards/tokens/erc-20/) 和 [ERC-721](/developers/docs/standards/tokens/erc-721/) 代币相同的功能，甚至可以同时使用这两者的功能。 而最重要的是，它能改善这两种标准的功能，使其更有效率，并纠正 ERC-20 和 ERC-721 标准上明显的实施错误。
 
 [EIP-1155](https://eips.ethereum.org/EIPS/eip-1155) 中对 ERC-1155 代币进行了全面的描述。
 

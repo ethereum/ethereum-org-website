@@ -35,7 +35,7 @@ lang: zh
 - [dYdX 资助计划](https://dydxgrants.com/) – _[dYdX](https://dydx.exchange/) 去中心化交易所_
 - [Lido 生态系统资助组织 (LEGO)](https://lego.lido.fi/) – _[Lido](https://lido.fi/) 金融生态系统_
 - [mStable 资助计划](https://docs.mstable.org/advanced/grants-program) - _[mStable](https://mstable.org/) 社区_
-- [The Graph](https://airtable.com/shrdfvnFvVch3IOVm) – _[The Graph ](https://thegraph.com/)生态系统_
+- [The Graph](https://airtable.com/shrdfvnFvVch3IOVm) – _[The Graph](https://thegraph.com/) 生态系统_
 - [Uniswap 资助计划](https://www.unigrants.org/) – _[Uniswap](https://uniswap.org/) 社区_
 
 ## 二次方融资 {#quadratic-funding}
