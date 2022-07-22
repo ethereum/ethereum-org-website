@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useMemo } from "react"
 import styled from "styled-components"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import { graphql } from "gatsby"
+import { graphql, PageProps } from "gatsby"
 import { useIntl } from "react-intl"
 
 import ButtonLink from "../components/ButtonLink"
@@ -270,8 +270,37 @@ const tooltipContent = (
   </div>
 )
 
-const StablecoinsPage = ({ data }) => {
-  const [state, setState] = useState({
+type EthereumDataResponse = Array<{
+  id: string
+  name: string
+  market_cap: number
+  image: string
+  symbol: string
+}>
+
+type StablecoinDataResponse = Array<{
+  id: string
+  name: string
+  market_cap: number
+  image: string
+  symbol: string
+}>
+
+interface Market {
+  name: string
+  marketCap: string
+  image: string
+  type: string
+  url: string
+}
+
+interface State {
+  markets: Array<Market>
+  marketsHasError: boolean
+}
+
+const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
+  const [state, setState] = useState<State>({
     markets: [],
     marketsHasError: false,
   })
@@ -323,11 +352,11 @@ const StablecoinsPage = ({ data }) => {
     ;(async () => {
       try {
         // Fetch token data in the Ethereum ecosystem
-        const ethereumData = await getData(
+        const ethereumData = await getData<EthereumDataResponse>(
           "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&category=ethereum-ecosystem&order=market_cap_desc&per_page=100&page=1&sparkline=false"
         )
         // Fetch token data for stablecoins
-        const stablecoinData = await getData(
+        const stablecoinData = await getData<StablecoinDataResponse>(
           "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&category=stablecoins&order=market_cap_desc&per_page=100&page=1&sparkline=false"
         )
 
@@ -557,7 +586,7 @@ const StablecoinsPage = ({ data }) => {
           intl
         ),
         path: "#how",
-        isSecondary: "isSecondary",
+        isSecondary: true,
       },
     ],
   }
@@ -615,7 +644,7 @@ const StablecoinsPage = ({ data }) => {
             ))}
           </LeftColumn>
           <StyledGhostCard>
-            <Emoji svg size={3} text=":pizza:" />
+            <Emoji size={3} text=":pizza:" />
             <h3>
               <Translation id="page-stablecoins-bitcoin-pizza" />
             </h3>
@@ -811,7 +840,6 @@ const StablecoinsPage = ({ data }) => {
               alt={dapp.alt}
               image={dapp.image}
               name={dapp.name}
-              data={dapp.data}
               description={dapp.description}
             />
           ))}
