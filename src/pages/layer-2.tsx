@@ -1,6 +1,6 @@
 // Libraries
 import React, { useEffect, useState } from "react"
-import { graphql } from "gatsby"
+import { graphql, PageProps } from "gatsby"
 import { getImage, GatsbyImage } from "gatsby-plugin-image"
 import styled from "styled-components"
 import { useIntl } from "react-intl"
@@ -32,10 +32,12 @@ import { getData } from "../utils/cache"
 import {
   translateMessageId,
   getLocaleForNumberFormat,
+  TranslationKey,
 } from "../utils/translations"
 
 // Constants
 import { GATSBY_FUNCTIONS_PATH } from "../constants"
+import { Lang } from "../utils/languages"
 
 // Styles
 
@@ -61,7 +63,7 @@ const LightGrayContent = styled(PaddedContent)`
   background: ${(props) => props.theme.colors.layer2ContentSecondary};
 `
 
-const FlexContainer = styled.div`
+const FlexContainer = styled.div<{ flexPercent: string | number }>`
   flex: ${(props) => props.flexPercent}%;
   @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
     flex: 100%;
@@ -184,18 +186,30 @@ const StatDivider = styled.div`
   }
 `
 
-const Layer2Page = ({ data }) => {
+interface L2DataResponse {
+  data: Array<[string, number, number]>
+}
+
+interface FeeDataResponse {
+  data: Array<{ id: string; results: { feeTransferEth: number } }>
+}
+
+const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
   const intl = useIntl()
   const [tvl, setTVL] = useState("loading...")
   const [percentChangeL2, setL2PercentChange] = useState("loading...")
   const [averageFee, setAverageFee] = useState("loading...")
 
   useEffect(() => {
-    const localeForStatsBoxNumbers = getLocaleForNumberFormat(intl.locale)
+    const localeForStatsBoxNumbers = getLocaleForNumberFormat(
+      intl.locale as Lang
+    )
 
-    const fetchL2Beat = async () => {
+    const fetchL2Beat = async (): Promise<void> => {
       try {
-        const l2BeatData = await getData(`${GATSBY_FUNCTIONS_PATH}/l2beat`)
+        const l2BeatData = await getData<L2DataResponse>(
+          `${GATSBY_FUNCTIONS_PATH}/l2beat`
+        )
         // formatted TVL from L2beat API formatted
         const TVL = new Intl.NumberFormat(localeForStatsBoxNumbers, {
           style: "currency",
@@ -206,14 +220,15 @@ const Layer2Page = ({ data }) => {
         }).format(l2BeatData.data[l2BeatData.data.length - 1][1])
         setTVL(`${TVL}`)
         // Calculate percent change ((new value - old value) / old value) *100)
-        const percentage = (
+        const percentage =
           ((l2BeatData.data[l2BeatData.data.length - 1][1] -
             l2BeatData.data[l2BeatData.data.length - 31][1]) /
             l2BeatData.data[l2BeatData.data.length - 31][1]) *
           100
-        ).toFixed(2)
         setL2PercentChange(
-          percentage > 0 ? `+${percentage}%` : `${percentage}%`
+          percentage > 0
+            ? `+${percentage.toFixed(2)}%`
+            : `${percentage.toFixed(2)}%`
         )
       } catch (error) {
         console.error(error)
@@ -223,15 +238,15 @@ const Layer2Page = ({ data }) => {
     }
     fetchL2Beat()
 
-    const fetchCryptoStats = async () => {
+    const fetchCryptoStats = async (): Promise<void> => {
       try {
         // Average eth transfer fee from L2's supported by cryptostats API
-        let feeData = await getData(
+        const feeDataResponse = await getData<FeeDataResponse>(
           "https://api.cryptostats.community/api/v1/l2-fees/feeTransferEth?metadata=false"
         )
 
         // Temporary, but filtering out L2's we arent listing
-        feeData = feeData.data.filter(
+        const feeData = feeDataResponse.data.filter(
           (l2) => l2.id !== "aztec-network" && l2.id !== "hermez"
         )
 
@@ -266,17 +281,17 @@ const Layer2Page = ({ data }) => {
     buttons: [
       {
         content: translateMessageId("layer-2-hero-button-1", intl),
-        pathId: "what-is-layer-2",
+        toId: "what-is-layer-2",
       },
       {
         content: translateMessageId("layer-2-hero-button-2", intl),
-        pathId: "use-layer-2",
-        isSecondary: "isSecondary",
+        toId: "use-layer-2",
+        isSecondary: true,
       },
       {
         content: translateMessageId("layer-2-hero-button-3", intl),
-        pathId: "how-to-get-onto-layer-2",
-        isSecondary: "isSecondary",
+        toId: "how-to-get-onto-layer-2",
+        isSecondary: true,
       },
     ],
   }
@@ -400,7 +415,10 @@ const Layer2Page = ({ data }) => {
 
   const layer2DataCombined = [...layer2Data.optimistic, ...layer2Data.zk]
 
-  const tooltipContent = (metric) => (
+  const tooltipContent = (metric: {
+    apiUrl: string
+    apiProvider: string
+  }): JSX.Element => (
     <div>
       <Translation id="data-provided-by" />{" "}
       <Link to={metric.apiUrl}>{metric.apiProvider}</Link>
@@ -636,7 +654,7 @@ const Layer2Page = ({ data }) => {
         <TwoColumnContent>
           {rollupCards.map(
             ({ image, title, description, childSentence, childLink }) => (
-              <RollupCard>
+              <RollupCard key={title}>
                 <GatsbyImage
                   image={image}
                   objectPosition="0"
@@ -697,9 +715,12 @@ const Layer2Page = ({ data }) => {
                   key={idx}
                   background={l2.background}
                   image={getImage(data[l2.imageKey])}
-                  description={translateMessageId(l2.descriptionKey, intl)}
+                  description={translateMessageId(
+                    l2.descriptionKey as TranslationKey,
+                    intl
+                  )}
                   url={l2.website}
-                  note={translateMessageId(l2.noteKey, intl)}
+                  note={translateMessageId(l2.noteKey as TranslationKey, intl)}
                   name={l2.name}
                   bridge={l2.bridge}
                   ecosystemPortal={l2.ecosystemPortal}
@@ -726,16 +747,19 @@ const Layer2Page = ({ data }) => {
                   key={idx}
                   background={l2.background}
                   image={getImage(data[l2.imageKey])}
-                  description={translateMessageId(l2.descriptionKey, intl)}
+                  description={translateMessageId(
+                    l2.descriptionKey as TranslationKey,
+                    intl
+                  )}
                   url={l2.website}
-                  note={translateMessageId(l2.noteKey, intl)}
+                  note={translateMessageId(l2.noteKey as TranslationKey, intl)}
                   name={l2.name}
                   bridge={l2.bridge}
                   ecosystemPortal={l2.ecosystemPortal}
                   tokenLists={l2.tokenLists}
                 >
-                  {l2.purpose.map((purpose) => (
-                    <Pill>{purpose}</Pill>
+                  {l2.purpose.map((purpose, index) => (
+                    <Pill key={index}>{purpose}</Pill>
                   ))}
                 </Layer2ProductCard>
               )
