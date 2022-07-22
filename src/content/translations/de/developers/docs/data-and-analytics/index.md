@@ -15,7 +15,7 @@ Wenn Sie dabei auf vorhandene Datenanbieter setzen, können Sie die Entwicklung 
 
 Sie sollten das Grundkonzept des [Block -Explorers](/developers/docs/data-and-analytics/block-explorers/) kennen, um dessen Einsatz im Kontext der Datenanalyse besser zu verstehen. Zusätzlich sollten Sie sich mit dem Konzept eines [Index](/glossary/#index) vertraut machen, um besser verstehen zu können, welche Vorteile sie für ein Systemdesign bedeuten.
 
-In puncto architektonische Grundlagen sollten Sie mit den Begriffen [API ](https://www.wikipedia.org/wiki/API) und [REST](https://www.wikipedia.org/wiki/Representational_state_transfer) vertraut sein, auch in der Theorie.
+In puncto architektonische Grundlagen sollten Sie mit den Begriffen [API](https://www.wikipedia.org/wiki/API) und [REST](https://www.wikipedia.org/wiki/Representational_state_transfer) vertraut sein, auch in der Theorie.
 
 ## The Graph {#the-graph}
 
