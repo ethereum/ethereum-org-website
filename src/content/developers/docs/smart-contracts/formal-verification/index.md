@@ -1,136 +1,263 @@
 ---
 title: Formal verification of smart contracts
-description: An overview of formal verification techniques for Ethereum smart contracts
+description: An overview of formal verification for Ethereum smart contracts
 lang: en
 sidebar: true
 ---
 
 [Smart contracts](/developers/docs/smart-contracts/) are making it possible to create decentralized, trustless, and robust applications that introduce new use-cases and unlock value for users. Because smart contracts handle large amounts of value, security is a critical consideration for developers.
 
-Reliability is a highly desired quality of smart contracts, and both users and developers want assurances that a smart contract will work as intended. This is important because code in the [Ethereum Virtual Machine (EVM)](/developers/docs/evm/) is immutable, which rules out the possibility of fixing bugs or retrieving funds lost to malicious attacks.
+Formal verification is one of the recommended techniques for improving [smart contract security](/developers/docs/smart-contracts/security/). Formal verification, which uses [formal methods](https://www.brookings.edu/techstream/formal-methods-as-a-path-toward-better-cybersecurity/) for specifying, designing, and verifying programs, has been used for years to ensure correctness of critical hardware and software systems. 
 
-Formal verification is one of the recommended techniques for [testing smart contracts](/developers/docs/smart-contracts/testing/) and improving [smart contract security](/developers/docs/smart-contracts/security/). Formal verification involves testing a program (a smart contract in this case) to ensure it behaves as expected during execution.
+When implemented in smart contracts, formal verification can prove that a contract's business logic meets a predefined specification. Compared to other methods for assessing the correctness of contract code, such as testing, formal verification gives stronger guarantees that a smart contract is functionally correct. 
 
 ## What is formal verification? {#what-is-formal-verification}
 
-Formal verification is used to evaluate the _correctness_ of software programs and confirm compliance with predefined specifications using formal methods of mathematics. [More on formal verification](https://en.wikipedia.org/wiki/Formal_verification).
+Formal verification refers to the process of evaluating the correctness of a system with respect to a formal specification. In simpler terms, formal verification allows us to check if the behavior of a system satisfies some requirements (i.e., it does what we want).
 
-In the context of Ethereum, formal verification usually attempts to prove that a smart contract has certain properties, often called invariants. If these properties are violated, attackers can cause harm to protocols and users.
+Expected behaviors of the system (a smart contract in this case) are described using formal modeling, while specification languages enable the creation of formal properties. Formal verification techniques can then verify that the implementation of a contract complies with its specification and derive mathematical proof of the former's correctness. When a contract satisfies its specification, it is described as “functionally correct”, “correct by design”, or “correct by construction”.
 
-### Why formal verification is necessary {#why-formal-verification-is-necessary}
+### What is a formal model? {#what-is-a-formal-model}
 
-While manual code audits are great, human auditors cannot possibly cover every possible vulnerability. Also, an audit may reveal bugs in contract code, but it cannot confirm the absence of vulnerabilities.
+In computer science, a [formal model](https://en.wikipedia.org/wiki/Model_of_computation) is a mathematical description of a computational process. Programs are abstracted into mathematical functions (equations), with the model describing how outputs to functions are computed given an input. 
 
-Formal verification is grounded in [formal methods](https://en.wikipedia.org/wiki/Formal_methods), which use mathematically rigorous methods for specifying, developing, and verifying software. Formal verification allows developers to mathematically model software programs and create formalized specifications, making testing more precise and robust.
+Formal models provide a level of abstraction over which analysis of a program's behavior can be evaluated. The existence of formal models allows for the creation of a *formal specification*, which describes desired properties of the model in question. 
 
-Specifications are a collection of properties used to describe the intended behavior of a smart contract. Formal verification can prove that a contract behaves exactly as described in the specification. Unlike testing based on informal assumptions, formal verification provides mathematical proof of a smart contract's correctness.
+Different techniques are used for modeling smart contracts for formal verification. For example, some models are used to reason about the high-level behavior of a smart contract. These modeling techniques apply a black-box view to smart contracts, viewing them as systems that accept inputs and execute computation based on those inputs. 
 
-Formal verification is critical for smart contracts because minor vulnerabilities can lead to massive losses. For example, the [Parity Multisig wallet hack](https://www.freecodecamp.org/news/a-hacker-stole-31m-of-ether-how-it-happened-and-what-it-means-for-ethereum-9e5dc29e33ce/amp/) was the result of an unintended function that allowed the hacker to override owner settings and drain the contract of up to $31 million in ETH. 
+High-level models focus on the relationship between smart contracts and external agents, such as externally owned accounts (EOAs), contract accounts, and the blockchain environment. Such models are useful for defining properties that specify how a contract should behave in response to certain user interactions. 
 
-## How does formal verification work? {#how-does-formal-verification-work}
+Conversely, other formal models focus on the low-level behavior of a smart contract. While high-level models can help with reasoning about a contract's functionality, they may fail capture details about the internal workings of the implementation. Low-level models apply a white-box view to program analysis and rely on lower-level representations of smart contract applications, such as program traces and [control flow graphs](https://en.wikipedia.org/wiki/Control-flow_graph), to reason about properties relevant to a contract's execution. 
 
-Formal verification of Ethereum smart contracts can either be executed at the language level or bytecode level or both. Here’s a quick overview of both approaches:
+Low-level models are considered ideal since they represent the actual execution of a smart contract in Ethereum's execution environment (i.e., the [EVM](/developers/docs/evm/)). Low-level modeling techniques are especially useful in establishing critical safety properties in smart contracts and detecting potential vulnerabilities. 
 
-### High-level verification {#high-level-verification}
+### What is a formal specification? {#what-is-a-formal-specification}
 
-Source code for Ethereum smart contracts is usually [written in high-level programming languages](/developers/docs/smart-contracts/languages/), such as Solidity, Vyper, or Yul. The source code defines the business logic, which determines how users can interact with the contract and how the contract should behave in response to certain inputs.
+A specification is simply a technical requirement that a particular system must satisfy. In programming, specifications represent general ideas about a program's execution (i.e., what the program should do).
+ 
+In the context of smart contracts, formal specifications refer to *properties*—formal descriptions of the requirements that a contract must satisfy. Such properties are described as "invariants" and represent logical assertions about a contract's execution that must remain true under every possible circumstance, without any exceptions.
 
-Formal verification can help verify the correctness of a contract's source code. This requires transforming the business logic into a set of formalized, high-level specifications. These specifications must adequately and comprehensively express the desired functionality of the smart contract.
+Thus, we can think of a formal specification as a collection of statements written in a formal language that describe the intended execution of a smart contract. Specifications cover a contract's properties and define how the contract should behave in different circumstances. The purpose of formal verification is to determine if a smart contract possesses these properties (invariants) and that these properties are not violated during execution. 
 
-The actual verification at this stage consists of checking the source code and confirming that it satisfies all specifications and requirements. Therefore, high-level verification gives developers a high degree of confidence that the source code has no bugs.
+Formal specifications are critical in developing secure implementations of smart contracts. Contracts that fail to implement invariants or have their properties violated during execution are prone to vulnerabilities that can harm functionality or cause malicious exploits. 
 
-### Low-level verification {#low-level-verification}
+## Types of formal specifications for smart contracts {formal-specifications-for-smart-contracts}
 
-Smart contracts written in high-level languages are compiled into **bytecode**—low-level machine instructions that the Ethereum Virtual Machine (EVM) understands. Source code may undergo subtle changes during compilation, which may cause the contract to execute operations not defined in high-level specifications.
+Formal specifications enable mathematical reasoning about the correctness of program execution. As with formal models, formal specifications can capture either high-level properties or the low-level behavior of a contract implementation. 
 
-Formal verification can help determine the correctness of a contract's compiled bytecode. This requires creating bytecode-based, low-level specifications that define how a smart contract should behave in the EVM environment.
+Formal specifications are derived using elements of [program logic](https://en.wikipedia.org/wiki/Logic_programming), which allow for formal reasoning about the properties of a program. A program logic has formal rules that express (in mathematical language) the expected behavior of a program. Various program logics are used in creating formal specifications, including reachability logic, temporal logic, and Hoare logic. 
 
-Low-level formal verification uses techniques like static analysis and fuzzing to ensure that contract bytecode satisfies all properties. This assures developers that the business logic specified in the source code is what will run in the context of the EVM.
+Formal specifications for smart contracts can be classified broadly as either **high-level** or **low-level** specifications. Regardless of what category a specification belongs to, it must adequately and unambiguously describe the property of the system under analysis.  
 
-## Advantages of formal verification {#advantages-of-formal-verification}
+### High-level specifications {#high-level-specifications}
 
-Formal verification is useful for the following reasons:
+As the name suggests, a high-level specification (also called a "model-oriented specification") describes the high-level behavior of a program. High-level specifications model a smart contract as a [finite state machine](https://en.wikipedia.org/wiki/Finite-state_machine) (FSM), which can transition between states by performing operations, with temporal logic used to define formal properties for the FSM model. 
 
-### 1. Comprehensiveness {#comprehensiveness}
+[Temporal logics](https://en.wikipedia.org/wiki/Temporal_logic) are "rules for reasoning about propositions qualified in terms of time (e.g., "I am *always* hungry" or "I will *eventually* be hungry")." When applied to formal verification, temporal logics are used to state assertions about the correct behavior of systems modeled as state-machines. Specifically, a temporal logic describes the future states a smart contract can be in and how it transitions between states.
 
-Formal verification uses automated tests, which can be run many times over. A formal verification assessment will likely cover the entire contract, reducing edge cases and hidden vulnerabilities.
+High-level specifications generally capture two critical temporal properties for smart contracts: **safety** and **liveness**. Safety properties represent the idea that “nothing bad ever happens” and usually express invariance. A safety property may define general software requirements, such as freedom from [deadlock](https://www.techtarget.com/whatis/definition/deadlock), or express domain-specific properties for contracts (e.g., invariants on access control for functions, admissible values of state variables, or conditions for token transfers).
 
-### 2. Rigorous testing {#rigorous-testing}
+Take for example this safety requirement which covers conditions for using the `transfer()` or `transferFrom()` in ERC-20 token contracts: *“A sender’s balance is never lower than requested amount of tokens to be sent.”*. This natural-language description of a contract invariant can be translated into a formal (mathematical) specification, which can then be rigorously checked for validity. 
 
-Although effective, manual audits have some elements of human error and uncertainty—which can have costly consequences in cases. Formal verification approaches contract auditing in a formal and systematic manner that reduces ambiguity to the barest minimum.
+Liveness properties assert that “something eventually good happens” and concern a contract’s ability to progress through different states. An example of a liveness property is “liquidity”, which refers to a contract's ability to transfer its balances to users on request. If this property is violated, users would be unable to withdraw assets stored in the contract, like what happened with the [Parity wallet incident](https://www.cnbc.com/2017/11/08/accidental-bug-may-have-frozen-280-worth-of-ether-on-parity-wallet.html).  
 
-Formal verification transforms informal specifications into properties grounded in formal logic. This makes it easier to test assertions and evaluate the correctness of smart contract programs.
+### Low-level specifications {#low-level-specifications}
 
-### 3. Faster development cycle {#faster-development-cycle}
+High-level specifications take as a starting point a finite-state model of a contract and define desired properties of this model. In contrast, low-level specifications (also called "property-oriented specifications") often model programs (smart contracts) as systems comprising a collection of mathematical functions and describe the correct behavior of such systems. 
 
-Automated formal verification can be more efficient than line-by-line analysis of smart contract code. Formal verification approaches cover a larger surface area in a short timeframe. This can speed up the testing and development cycle for developers.
+In simpler terms, low-level specifications analyze *program traces* and attempt to define properties of a smart contract over these traces. Traces refer to sequences of function executions that alter the state of a smart contract; hence, low-level specifications help specify requirements for a contract's internal execution. 
 
-## Disadvantages of formal verification {#disadvantages-of-formal-verification}
+Low-level formal specifications can be given as either Hoare-style properties or properties on execution paths. 
 
-Although formal verification is great for testing smart contracts, it has some disadvantages:
+### Hoare-style properties {#hoare-style-properties}
 
-### 1. Difficulty in creating formal specifications {#difficulty-in-creating-formal-specifications}
+[Hoare Logic](https://en.wikipedia.org/wiki/Hoare_logic) provides a set of formal rules for reasoning about the correctness of programs, including smart contracts. A Hoare-style property is represented by a Hoare triple {*P*}*c*{*Q*}, where *c* is a program and *P* and *Q* are predicates on the state of the *c* (i.e., the program), formally described as *preconditions* and *postconditions*, respectively. 
 
-A prerequisite for formal verification is creating formal specifications, which can take a lot of time and effort. This will likely be the most difficult part of using formal verification for smart contracts.
+A precondition is a predicate describing the conditions required for the correct execution of a function; users calling into the contract must satisfy this requirement. A postcondition is a predicate describing the condition that a function establishes if correctly executed; users can expect this condition to be true after calling into the function. An *invariant* in Hoare logic is a predicate that is preserved by execution of a function (i.e., it doesn't change). 
 
-### 2. False negatives {#false-negatives}
+Hoare-style specifications can guarantee either *partial correctness* or *total correctness*. The implementation of a contract function is "partially correct" if the precondition holds true before the function is executed, and if execution terminates, the postcondition is also true. Proof of total correctness is obtained if a precondition is true before the function executes, the execution is guaranteed to terminate and when it does, the postcondition holds true. 
 
-Formal verification can only check if the execution of the smart contract matches formal specifications. If specifications are poorly written, certain vulnerabilities cannot be detected by the formal verification audit. In this case, a developer might erroneously assume that the contract is bug-free.
+Obtaining proof of total correctness is difficult since some executions may delay before terminating, or never terminate at all. That said, the question of whether execution terminates is arguably a moot point since Ethereum's gas mechanism prevents infinite program loops (execution terminates either successfully or ends due to 'out-of-gas' error). 
 
-## Use formal verification tools {#use-formal-verification-tools}
+Smart contract specifications created using Hoare logic will have preconditions, postconditions, and invariants defined for the execution of functions and loops in a contract. Preconditions often include the possibility of erroneous inputs to a function, with postconditions describing the expected response to such inputs (e.g., throwing a specific exception). In this manner Hoare-style properties are effective for assuring correctness of contract implementtions. 
 
-### Creating formal specifications {#creating-formal-specifications}
+Many formal verification frameworks use Hoare-style specifications for proving semantic correctness of functions. It is also possible to add Hoare-style properties (as assertions) directly to contract code by using the `require` and `assert` statements in Solidity. 
 
-**Act - _High-level specification language for defining properties for EVM smart contracts._**
+`require` statements express a precondition or invariant, while `assert` captures a postcondition. For instance, proper access control for functions (an example of a safety property) can be achieved using `require` as a precondition check on the identity of the calling account. Similarly, an invariant on permissible values of state variables in a contract (e.g., total number of tokens in circulation) can be protected from violation by using `assert` to confirm the contract's state after function execution. 
+
+### Trace-level properties {#trace-level-properties}
+
+Trace-based specifications describe operations that transition a contract between different states and the relationships between these operations. As explained earlier, traces are sequences of operations that alter the state of a contract in a particular way. 
+
+This approach relies on model of smart contracts as state-transition systems with some predefined states (described by state variables) along with a set of predefined transitions (described by contract functions). Furthermore, a [control flow graph](https://www.geeksforgeeks.org/software-engineering-control-flow-graph-cfg/) (CFG), which is a graphical representation of a program's execution flow, is often used for describing operational semantics of a contract. Here, each trace represented as a path on the control flow graph. 
+
+Primarily, trace-level specifications are used to reason about patterns of internal execution in smart contracts. By creating trace-level specifications, we assert the admissible execution paths (i.e., state transitions) for a smart contract. Using techniques, such as symbolic execution, we can formally verify that execution never follows a path not defined in the formal model. 
+
+Let's use an example of a DAO contract that has some publicly accessible functions to describe trace-level properties. Here, we assume the DAO contract allows users to perform the following operations:
+
+- Deposit funds 
+
+- Vote on a proposal after depositing funds
+ 
+- Claim a refund if they don't vote on a proposal 
+
+Example trace-level properties could be *"users that do not deposit funds cannot vote on a proposal"* or *"users that do not vote on a proposal should always be able to claim a refund"*. Both properties assert preferred sequences of execution (voting cannot happen *before* depositing funds and claiming a refunds cannot happen *after* voting on a proposal). 
+
+## Techniques for formal verification of smart contracts {#formal-verification-techniques}
+
+### Model checking {#model-checking}
+
+Model checking is a formal verification technique in which an algorithm checks a formal model of a smart contract against its specification. In model checking smart contracts are often represented as state-transition systems, while properties on permissible contract states are defined using temporal logic. 
+
+Model checking requires creating an abstract mathematical representation of a system (i.e., a contract) and expressing properties of this system using formulas rooted in [propositional logic](https://www.baeldung.com/cs/propositional-logic). This simplifies the task of the model-checking algorithm, namely to prove that a mathematical model satisfies a given logical formula. 
+
+Model checking in formal verification is primarily used to evaluate temporal properties that describe the behavior of a contract over time. Temporal properties for smart contracts include *safety* and *liveness*, which we explained earlier. 
+
+For example, a security property related to access control (e.g., *Only the owner of the contract can call `selfdestruct`*) can be written in formal logic. Thereafter, the model-checking algorithm can verify if the contract satisfies this formal specification. 
+
+Model checking uses state space exploration, which involves constructing all possible states of a smart contract and attempting to find reachable states that result in property violations. However, this can lead to an infinite number of states (known as the "state explosion problem"), hence model checkers rely on abstraction techniques to make efficient analysis of smart contracts possible. 
+
+### Theorem proving {#theorem-proving}
+
+Theorem proving is a method of mathematically reasoning about the correctness of programs, including smart contracts. It involves transforming the model of a contract’s system and its specifications into mathematical formulas (logic statements). 
+
+The objective of theorem proving is to verify logical equivalence between these statements. “Logical equivalence” (also called “logical implication”) is a type of relationship between two statements in which statement A can only be true *if and only if* statement B is true. 
+
+The required relationship (logical equivalence) between statements about a contract’s model and its property is formulated as a provable statement (called a theorem). Using a formal system of inference, the automated theorem prover can verify the theorem’s validity. In other words, a theorem prover can conclusively prove a smart contract’s model precisely matches its specifications. 
+
+While model checking models contracts as transition systems with finite states, theorem proving can handle analysis of infinite-state systems. However, this means an automated theorem prover cannot always know if a logic problem is "decidable" or not. 
+
+As a result, human assistance is often required to guide the theorem prover in deriving correctness proofs. The use of human effort in theorem proving makes it more expensive to use than model checking, which is fully automated. 
+
+### Symbolic execution {#symbolic-execution}
+
+Symbolic execution involves executing a program (often statically) using *symbolic input values* instead of *concrete values*. Because symbolic values can represent multiple concrete values, it is possible to explore multiple execution paths of a smart contract without needing to go through them one by one. 
+
+In formal verification, symbolic execution is used to reason about the *trace-level properties* of smart contracts. As explained earlier, a trace refers to some path of execution taken by a smart contract whenever a user triggers its code to run. Thus, the goal of symbolic execution is to discover execution paths that violate a smart contract’s properties. 
+
+The idea behind symbolic execution is to represent each trace as a mathematical formula over symbolic input values that steer execution toward that path. A symbolic execution engine (sometimes called an [SMT solver](https://en.wikipedia.org/wiki/Satisfiability_modulo_theories)) is used to determine if a particular path is satisfiable or not. 
+
+If a path that violates property assertions is satisfiable, the SMT solver can be used to calculate the concrete input values (called *path constraints*) that steer execution towards a vulnerable code path. This makes symbolic execution useful for test-case generation. By solving path constraints with SMT solvers, users can derive specific input values that exercise all interesting behaviors of a contract (which is useful for unit testing). 
+
+Symbolic execution is also useful for detecting bugs in smart contracts. For example, some fuzzing techniques rely on symbolic execution for detecting property violations in contract code. But symbolic execution suffers from path explosion—forcing SMT solvers to bound the sequence of execution paths generated. 
+
+### Why use formal verification for smart contracts? {#benefits-of-formal-verification}
+
+#### Need for reliability {#need-for-reliability}
+
+Formal verification is used to assess the correctness of safety-critical systems whose failure can have devastating consequences, such as death, injury, or financial ruin. Smart contracts are high-value applications controlling enormous amounts of value, and simple errors in design can lead to [irrecoverable losses for users](https://www.freecodecamp.org/news/a-hacker-stole-31m-of-ether-how-it-happened-and-what-it-means-for-ethereum-9e5dc29e33ce/amp/). Formally verifying a contract before deployment, however, can increase guarantees that it will perform as expected once running on the blockchain. 
+
+Reliability is a highly desired quality in any smart contract, especially because code deployed in the Ethereum Virtual Machine (EVM) is typically immutable. With post-launch upgrades not readily accessible, the need to guarantee reliability of contracts makes formal verification necessary.
+
+#### Prove functional correctness {#prove-functional-correctness}
+
+Program testing is the most common method of proving that a smart contract satisfies some requirements. This involves executing a contract with a sample of the data it is expected to handle and analyzing its behavior. If the contract returns the expected results for the sample data, then developers have objective proof of its correctness. 
+
+However, this approach cannot prove correct execution for input values that are not part of the sample. Therefore, testing a contract may help detect bugs (i.e., if some code paths fail to return desired results during execution), but **it cannot conclusively prove the absence of bugs**. 
+
+Conversely, formal verification can formally prove that a smart contract satisfies requirements for an infinite range of executions *without* running the contract at all. This requires creating a formal specification that precisely describes correct contract behaviors and developing a formal (mathematical) model of the contract's system. Then we can follow a formal proof procedure to check for consistency between the contract's model and its specification. 
+
+With formal verification, the question of verifying if a contract's business logic satisfies requirements is a mathematical proposition that can be proved or disproved. By formally proving a proposition, we can verify an infinite number of test cases with a finite number of steps. In this manner formal verification has better prospects of proving a contract is functionally correct with respect to a specification. 
+
+#### Ideal verification targets {#ideal-verification-targets}
+
+A verification target describes the system to be formally verified. Formal verification is best used in "embedded systems" (small, simple pieces of software that form part of a larger system). They are also ideal for specialized domains that have few rules, as this makes it easier to modify tools for verifying domain-specific properties. 
+
+Smart contracts—at least, to some extent—fulfill both requirements. For example, the small size of Ethereum contracts makes them amenable to formal verification. Similarly, the EVM follows simple rules, which makes specifying and verifying semantic properties for programs running in the EVM easier. 
+
+### Faster development cycle {#faster-development-cycle}
+
+Formal verification techniques, such as model checking and symbolic execution, are generally more efficient than regular analysis of smart contract code (performed during testing or auditing). This is because formal verification relies on symbolic values to test assertions("what if a user tries to withdraw *n* ether?") unlike testing which uses concrete values ("what if a user tries to withdraw 5 ether?"). 
+
+Symbolic input variables can cover multiple classes of concrete values, so formal verification approaches promise more code coverage in a shorter time frame. When used effectively, formal verification can accelerate the development cycle for developers.
+
+Formal verification also improves the process of building decentralized applications (dapps) by reducing costly design errors. Upgrading contracts (where possible) to fix vulnerabilities requires extensive rewriting of codebases and more effort spent on development. Formal verification can detect many errors in contract implementations that may slip past testers and auditors and provides ample opportunity to fix those issues before deploying a contract. 
+
+## Drawbacks of formal verification {#drawbacks-of-formal-verification}
+
+### Cost of manual labor {#cost-of-manual-labor}
+
+Formal verification, especially semi-automated verification in which a human guides the prover to derive correctness proofs, requires considerable manual labor. Moreover, creating formal specification is a complex activity that demands a high level of skill.
+
+These factors (effort and skill) makes formal verification more demanding and expensive compared to the usual methods of assessing correctness in contracts, such as testing and audits. Nevertheless, paying the cost for a full verification audit is practical, given the cost of errors in smart contract implementations. 
+
+### False negatives {#false-negatives}
+
+Formal verification can only check if the execution of the smart contract matches the formal specification. As such, it is important to make sure the specification properly describes the expected behaviors of a smart contract. 
+
+If specifications are poorly written, violations of properties—which point to vulnerable executions—cannot be detected by the formal verification audit. In this case, a developer might erroneously assume that the contract is bug-free.
+
+### Performance issues {#performance-issues}
+
+Formal verification runs into a number of performance issues. For instance, state and path explosion problems encountered during model checking and symbolic checking, respectively, can affect verification procedures. Also, formal verification tools often use SMT solvers and other constraint solvers in their underlying layer, and these solvers rely on computationally intensive procedures. 
+
+Also, it is not always possible for program verifiers to determine if a property (described as a logical formula) can be satisfied or not (the "[decidability problem](https://en.wikipedia.org/wiki/Decision_problem)") because a program might never terminate. As such, it may be impossible to prove some properties for a contract even if it's well-specified. 
+
+## Formal verification tools for Ethereum smart contracts {#formal-verification-tools}
+
+### Specification languages {#specification-languages}
+
+**Act**: _*Act allows specification of storage updates, pre/post conditions and contract invariants. Its tool suite also has proof backends able to prove many properties via Coq, SMT solvers, or hevm.*_
 
 - [GitHub](https://github.com/ethereum/act)
 - [Documentation](https://ethereum.github.io/act/)
 
-**Scribble -** **_A specification language tool for translating high-level specifications into Solidity code._**
+**Scribble** - _*Scribble transforms code annotations in the Scribble specification language into concrete assertions that check the specification.*_
 
-- [Website](https://consensys.net/diligence/scribble/)
-- [Documentation](https://docs.scribble.codes/language/introduction)
+- [Documentation](https://docs.scribble.codes/)
 
-### Fuzzing smart contracts {#fuzzing-smart-contracts}
+**Dafny** - _*Dafny is a verification-ready programming language that relies on high-level annotations to reason about and prove correctness of code.*_
 
-**Echidna - _A fast contract fuzzer for detecting vulnerabilities in smart contracts through property-based testing._**
+- [GitHub](https://github.com/dafny-lang/dafny)
 
-- [GitHub](https://github.com/crytic/echidna/)
+**KEVM**: _*KEVM is a complete formalization of the semantics of the Ethereum Virtual Machine (EVM) in the K framework.*_
 
-**Harvey - _Automated fuzzing tool useful for detecting property violations in smart contract code._**
+- [GitHub](https://github.com/runtimeverification/evm-semantics)
+- [Documentation](https://jellopaper.org/)
 
-- [Website](https://consensys.net/diligence/fuzzing/)
+### Program verifiers {#program-verifiers}
 
-### Code analysis {#code-analysis}
+**Solidity SMTChecker**: _*Solidity’s SMTChecker is a built-in model checker based on SMT (Satisfiability Modulo Theories) and Horn solving. It confirms if a contract’s source code matches specifications during compilation and statically checks for violations of safety properties.*_
 
-**Oyente - _Static analysis tool for analyzing vulnerabilities in EVM bytecode with symbolic execution._**
+- [GitHub](https://github.com/ethereum/solidity)
 
-- [GitHub](https://github.com/melonproject/oyente)
+**solc-verify**: *solc-verify is an extended version of the Solidity compiler that can perform automated formal verification on Solidity code using annotations and modular program verification.*_
 
-**Mythril - _EVM bytecode assessment tool for detecting contract vulnerabilities using taint analysis, concolic analysis, and control flow checking._**
+- [GitHub](https://github.com/SRI-CSL/solidity)
 
-- [GitHub](https://github.com/ConsenSys/mythril-classic)
-- [Documentation](https://mythril-classic.readthedocs.io/en/master/about.html)
+**hevm**: *_hevm is a symbolic execution engine and equivalence checker for EVM bytecode.*_
 
-**Manticore _- A tool for analyzing EVM bytecode analysis tool based on symbolic execution._**
+- [GitHub](https://github.com/dapphub/dapptools/tree/master/src/hevm)
+
+**Manticore** - _ *A tool for analyzing EVM bytecode analysis tool based on symbolic execution._*
 
 - [GitHub](https://github.com/trailofbits/manticore)
 - [Documentation](https://github.com/trailofbits/manticore/wiki)
 
-**Securify** **_- A security analyzer for analyzing Solidity source code in Ethereum smart contracts and detecting property violations._**
+**Securify** - _*A security analyzer for analyzing Solidity source code in Ethereum smart contracts and detecting property violations.*_
+
 - [GitHub](https://github.com/eth-sri/securify2)
 
-### Formal verification projects in Ethereum {#formal-verification-projects-in-ethereum}
-**hevm - _An implementation of the Ethereum virtual machine (EVM) made specifically for symbolic execution, unit testing and debugging of smart contracts._**
-- [GitHub](https://github.com/dapphub/dapptools/tree/master/src/hevm)
+**Oyente** - _*Static analysis tool for analyzing vulnerabilities in EVM bytecode with symbolic execution.*_
 
-**KEVM - _A correct-by-construction implementation of the Ethereum Virtual Machine (EVM) specified in the K Framework for implementing formal verification._**
-- [GitHub](https://github.com/runtimeverification/evm-semantics)
-- [Documentation](https://jellopaper.org/)
+- [GitHub](https://github.com/melonproject/oyente)
+
+**Echidna** - _*Echidna is a fast contract fuzzer for detecting vulnerabilities in smart contracts through property-based testing.*_
+
+- [GitHub](https://github.com/crytic/echidna/)
+
+**Harvey** - _*Harvey is an automated fuzzing tool useful for detecting property violations in smart contract code.*_
+
+- [Website](https://consensys.net/diligence/fuzzing/)
 
 ## Further reading {#further-reading}
 
-- [How Formal Verification of Smart Contracts Works](https://runtimeverification.com/blog/how-formal-verification-of-smart-contracts-works/) by Brian Marick
-- [How Formal Verification Can Ensure Flawless Smart Contracts](https://media.consensys.net/how-formal-verification-can-ensure-flawless-smart-contracts-cbda8ad99bd1) by Bernhard Mueller
-- [Ethereum Formal Verification Overview](https://github.com/leonardoalt/ethereum_formal_verification_overview) by Leonardo Alt
-- [Formal Verification of Ethereum Contracts](https://github.com/pirapira/Ethereum-Formal-Verification-Overview) by Yoichi Hirai
+- [How Formal Verification of Smart Contracts Works](https://runtimeverification.com/blog/how-formal-verification-of-smart-contracts-works/) [How Formal Verification Can Ensure Flawless Smart Contracts](https://media.consensys.net/how-formal-verification-can-ensure-flawless-smart-contracts-cbda8ad99bd1)
+- [An Overview of Formal Verification Projects in the Ethereum Ecosystem](https://github.com/leonardoalt/ethereum_formal_verification_overview)
+- [An Introduction to Formal Verification of Ethereum Contracts](https://github.com/pirapira/Ethereum-Formal-Verification-Overview)
+- [A Survey of Smart Contract Formal Specification and
+Verification](https://arxiv.org/pdf/2008.02712.pdf)
+- [Formal Verification of the Ethereum 2.0 Beacon Chain](https://arxiv.org/abs/2110.12909)
+- [SMTChecker and Formal Verification](https://docs.soliditylang.org/en/v0.8.15/smtchecker.html)
+
+
