@@ -1,6 +1,6 @@
 // Libraries
-import React from "react"
-import { graphql } from "gatsby"
+import React, { ComponentType, SVGProps } from "react"
+import { graphql, PageProps } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { useIntl } from "react-intl"
 import styled from "styled-components"
@@ -40,7 +40,7 @@ import Icon from "../components/Icon"
 import NakedButton from "../components/NakedButton"
 
 // Utils
-import { translateMessageId } from "../utils/translations"
+import { translateMessageId, TranslationKey } from "../utils/translations"
 import { scrollIntoView } from "../utils/scrollIntoView"
 
 // Styles
@@ -127,7 +127,7 @@ const ResponsiveButtonLink = styled(ButtonLink)`
   }
 `
 
-const Highlight = styled(Content)`
+const Highlight = styled(Content)<{ backgroundColor: string }>`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -406,28 +406,36 @@ const StrongParagraph = styled.p`
   font-weight: 600;
 `
 
-const RunANodePage = ({ data }) => {
+interface RunANodeCard {
+  image: ComponentType<SVGProps<SVGElement>>
+  title: TranslationKey
+  preview: TranslationKey
+  body: Array<TranslationKey>
+  alt: TranslationKey
+}
+
+const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
   const intl = useIntl()
   const heroContent = {
-    title: <Translation id="page-run-a-node-title" />,
-    header: <Translation id="page-run-a-node-hero-header" />,
-    subtitle: <Translation id="page-run-a-node-hero-subtitle" />,
+    title: translateMessageId("page-run-a-node-title", intl),
+    header: translateMessageId("page-run-a-node-hero-header", intl),
+    subtitle: translateMessageId("page-run-a-node-hero-subtitle", intl),
     image: getImage(data.ethereumInside),
-    alt: <Translation id="page-run-a-node-hero-alt" />,
+    alt: translateMessageId("page-run-a-node-hero-alt", intl),
     buttons: [
       {
         content: <Translation id="page-run-a-node-hero-cta-1" />,
-        pathId: "what-is-a-node",
+        toId: "what-is-a-node",
       },
       {
         content: <Translation id="page-run-a-node-hero-cta-2" />,
-        pathId: "getting-started",
-        isSecondary: "isSecondary",
+        toId: "getting-started",
+        isSecondary: true,
       },
     ],
   }
 
-  const whyRunANodeCards = [
+  const whyRunANodeCards: Array<RunANodeCard> = [
     {
       image: PrivacyGlyph,
       title: "page-run-a-node-privacy-title",
@@ -562,6 +570,8 @@ const RunANodePage = ({ data }) => {
               <ExpandableCard
                 contentPreview={<Translation id={preview} />}
                 title={translateMessageId(title, intl)}
+                // TODO: make a11y svgs (using <title>)
+                // @ts-ignore
                 alt={translateMessageId(alt, intl)}
                 svg={image}
                 key={idx}
@@ -599,6 +609,8 @@ const RunANodePage = ({ data }) => {
             </ColumnFill>
             <ColumnNarrow>
               <Terminal
+                // TODO: make a11y svgs (using <title>)
+                // @ts-ignore
                 alt={translateMessageId(
                   "page-run-a-node-glyph-alt-terminal",
                   intl
@@ -615,6 +627,8 @@ const RunANodePage = ({ data }) => {
             </ColumnFill>
             <ColumnNarrow>
               <Dappnode
+                // TODO: make a11y svgs (using <title>)
+                // @ts-ignore
                 alt={translateMessageId(
                   "page-run-a-node-glyph-alt-dappnode",
                   intl
@@ -634,6 +648,8 @@ const RunANodePage = ({ data }) => {
             </ColumnFill>
             <ColumnNarrow>
               <Dapptap
+                // TODO: make a11y svgs (using <title>)
+                // @ts-ignore
                 alt={translateMessageId(
                   "page-run-a-node-glyph-alt-phone",
                   intl
@@ -711,7 +727,6 @@ const RunANodePage = ({ data }) => {
             </div>
             <ScrollButtonSecondary
               onClick={() => scrollIntoView("build-your-own")}
-              isSecondary
             >
               <Translation id="page-run-a-node-choose-your-adventure-build-start" />
             </ScrollButtonSecondary>
@@ -727,6 +742,8 @@ const RunANodePage = ({ data }) => {
         <BuildContainer>
           <SvgTitle>
             <HardwareGlyph
+              // TODO: make a11y svgs (using <title>)
+              // @ts-ignore
               alt={translateMessageId(
                 "page-run-a-node-glyph-alt-hardware",
                 intl
@@ -812,6 +829,8 @@ const RunANodePage = ({ data }) => {
         <BuildContainer>
           <SvgTitle>
             <DownloadGlyph
+              // TODO: make a11y svgs (using <title>)
+              // @ts-ignore
               alt={translateMessageId(
                 "page-run-a-node-glyph-alt-software",
                 intl

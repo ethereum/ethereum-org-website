@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { ReactNode, useState } from "react"
 import styled from "styled-components"
 import { motion } from "framer-motion"
 import { GatsbyImage } from "gatsby-plugin-image"
@@ -99,8 +99,8 @@ const ButtonContainer = styled(motion.div)`
 
 export interface IProps {
   image?: string
-  title: string
-  contentPreview: string
+  title: ReactNode
+  contentPreview: ReactNode
   background: string
   forceOpen: boolean
   className?: string
