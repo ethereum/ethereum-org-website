@@ -99,9 +99,9 @@ export interface IButton extends Partial<IButtonLinkProps> {
 
 export interface IContent {
   buttons?: Array<IButton>
-  title: string
-  header: string
-  subtitle: string
+  title: ReactNode
+  header: ReactNode
+  subtitle: ReactNode
   image: string
   alt: string
 }
@@ -109,7 +109,7 @@ export interface IContent {
 export interface IProps {
   content: IContent
   isReverse?: boolean
-  children?: React.ReactNode
+  children?: ReactNode
   className?: string
 }
 

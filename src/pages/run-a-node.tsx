@@ -417,9 +417,9 @@ interface RunANodeCard {
 const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
   const intl = useIntl()
   const heroContent = {
-    title: translateMessageId("page-run-a-node-title", intl),
-    header: translateMessageId("page-run-a-node-hero-header", intl),
-    subtitle: translateMessageId("page-run-a-node-hero-subtitle", intl),
+    title: <Translation id="page-run-a-node-title" />,
+    header: <Translation id="page-run-a-node-hero-header" />,
+    subtitle: <Translation id="page-run-a-node-hero-subtitle" />,
     image: getImage(data.ethereumInside),
     alt: translateMessageId("page-run-a-node-hero-alt", intl),
     buttons: [

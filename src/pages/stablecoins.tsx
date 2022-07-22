@@ -578,14 +578,14 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
     buttons: [
       {
         content: translateMessageId("page-stablecoins-hero-button", intl),
-        path: "#explore",
+        toId: "explore",
       },
       {
         content: translateMessageId(
           "page-stablecoins-how-they-work-button",
           intl
         ),
-        path: "#how",
+        toId: "how",
         isSecondary: true,
       },
     ],
