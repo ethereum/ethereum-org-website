@@ -212,15 +212,15 @@ Also, it is not always possible for program verifiers to determine if a property
 
 ### Program verifiers for checking correctness {#program-verifiers}
 
-**Solidity SMTChecker**: _*Solidity’s SMTChecker is a built-in model checker based on SMT (Satisfiability Modulo Theories) and Horn solving. It confirms if a contract’s source code matches specifications during compilation and statically checks for violations of safety properties.*_
+**Solidity SMTChecker** - *_Solidity’s SMTChecker is a built-in model checker based on SMT (Satisfiability Modulo Theories) and Horn solving. It confirms if a contract’s source code matches specifications during compilation and statically checks for violations of safety properties._*
 
 - [GitHub](https://github.com/ethereum/solidity)
 
-**solc-verify**: *solc-verify is an extended version of the Solidity compiler that can perform automated formal verification on Solidity code using annotations and modular program verification.*_
+**solc-verify** - *_solc-verify is an extended version of the Solidity compiler that can perform automated formal verification on Solidity code using annotations and modular program verification._*
 
 - [GitHub](https://github.com/SRI-CSL/solidity)
 
-**hevm**: *_hevm is a symbolic execution engine and equivalence checker for EVM bytecode.*_
+**hevm** - *_hevm is a symbolic execution engine and equivalence checker for EVM bytecode._*
 
 - [GitHub](https://github.com/dapphub/dapptools/tree/master/src/hevm)
 
@@ -231,7 +231,7 @@ Also, it is not always possible for program verifiers to determine if a property
 
 ### Symbolic execution-based tools for detecting vulnerable patterns in smart contracts {#symbolic-execution-tools}
 
-**Manticore** - _ *A tool for analyzing EVM bytecode analysis tool based on symbolic execution._*
+**Manticore** - *_A tool for analyzing EVM bytecode analysis tool based on symbolic execution_.*
 
 - [GitHub](https://github.com/trailofbits/manticore)
 - [Documentation](https://github.com/trailofbits/manticore/wiki)
@@ -240,15 +240,15 @@ Also, it is not always possible for program verifiers to determine if a property
 
 - [GitHub](https://github.com/eth-sri/securify2)
 
-**Oyente** - _*Static analysis tool for analyzing vulnerabilities in EVM bytecode with symbolic execution.*_
+**Oyente** - *_Static analysis tool for analyzing vulnerabilities in EVM bytecode with symbolic execution._*
 
 - [GitHub](https://github.com/melonproject/oyente)
 
-**Echidna** - _*Echidna is a fast contract fuzzer for detecting vulnerabilities in smart contracts through property-based testing.*_
+**Echidna** - *_Echidna is a fast contract fuzzer for detecting vulnerabilities in smart contracts through property-based testing._*
 
 - [GitHub](https://github.com/crytic/echidna/)
 
-**Harvey** - _*Harvey is an automated fuzzing tool useful for detecting property violations in smart contract code.*_
+**Harvey** - *_Harvey is an automated fuzzing tool useful for detecting property violations in smart contract code._*
 
 - [Website](https://consensys.net/diligence/fuzzing/)
 
