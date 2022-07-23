@@ -21,6 +21,10 @@ DeSci aims to create an ecosystem where scientists are incentivized to openly sh
 
 Decentralized science allows for more diverse funding sources (from [DAOs](/dao/), [quadratic donations](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531) to crowdfunding and more), more accessible access data and methods, and by providing incentives for reproducibility.
 
+### Juan Benet - DeSci, Independent Labs, & Large Scale Data Science
+<iframe width="560" height="315" src="https://www.youtube.com/embed/zkXM9H90g_E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
 ## How DeSci improves science {#desci-improves-science}
 
 An incomplete list of key problems in science and how decentralized science can help to address these issues
@@ -121,3 +125,4 @@ Explore projects and join the DeSci community.
 - [What's Decentralized Science? ](https://www.youtube.com/watch?v=-DeMklVWNdA)
 - [Conversation between Vitalik Buterin and the scientist Aubrey de Grey about the intersection of longevity research and crypto](https://www.youtube.com/watch?v=x9TSJK1widA)
 - [Scientific Publishing Is Broken. Can Web3 Fix It?](https://www.youtube.com/watch?v=WkvzYgCvWj8)
+- [Juan Benet - DeSci, Independent Labs, & Large Scale Data Science](https://www.youtube.com/watch?v=zkXM9H90g_E)
