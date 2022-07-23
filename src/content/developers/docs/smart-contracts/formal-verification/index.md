@@ -93,7 +93,7 @@ This approach relies on model of smart contracts as state-transition systems wit
 
 Primarily, trace-level specifications are used to reason about patterns of internal execution in smart contracts. By creating trace-level specifications, we assert the admissible execution paths (i.e., state transitions) for a smart contract. Using techniques, such as symbolic execution, we can formally verify that execution never follows a path not defined in the formal model. 
 
-Let's use an example of a DAO contract that has some publicly accessible functions to describe trace-level properties. Here, we assume the DAO contract allows users to perform the following operations:
+Let's use an example of a [DAO](/dao/) contract that has some publicly accessible functions to describe trace-level properties. Here, we assume the DAO contract allows users to perform the following operations:
 
 - Deposit funds 
 
@@ -135,11 +135,11 @@ Symbolic execution involves executing a program (often statically) using *symbol
 
 In formal verification, symbolic execution is used to reason about the *trace-level properties* of smart contracts. As explained earlier, a trace refers to some path of execution taken by a smart contract whenever a user triggers its code to run. Thus, the goal of symbolic execution is to discover execution paths that violate a smart contract’s properties. 
 
-The idea behind symbolic execution is to represent each trace as a mathematical formula over symbolic input values that steer execution toward that path. A symbolic execution engine (sometimes called an [SMT solver](https://en.wikipedia.org/wiki/Satisfiability_modulo_theories)) is used to determine if a particular path is satisfiable or not. 
+The idea behind symbolic execution is to represent each trace as a mathematical formula over symbolic input values that steer execution toward that path. A symbolic execution engine (sometimes called an [SMT solver](https://en.wikipedia.org/wiki/Satisfiability_modulo_theories)) is used to determine if a particular path is satisfiable or not. The SMT solver can also be combined with a model checking algorithm to improve the effectiveness of formal verification. 
 
 If a path that violates property assertions is satisfiable, the SMT solver can be used to calculate the concrete input values (called *path constraints*) that steer execution towards a vulnerable code path. This makes symbolic execution useful for test-case generation. By solving path constraints with SMT solvers, users can derive specific input values that exercise all interesting behaviors of a contract (which is useful for unit testing). 
 
-Symbolic execution is also useful for detecting bugs in smart contracts. For example, some fuzzing techniques rely on symbolic execution for detecting property violations in contract code. But symbolic execution suffers from path explosion—forcing SMT solvers to bound the sequence of execution paths generated. 
+SMT solvers can be combined with model-checking algorithms to determine correctness of smart contracts with respect to a specification. However, many formal verification tools based on symbolic execution are mostly used to detect vulnerable code paths by executing smart contracts statically or dynamically. For example, fuzzing techniques rely on symbolic execution for detecting input values to a smart contract program that can lead to property violations. 
 
 ### Why use formal verification for smart contracts? {#benefits-of-formal-verification}
 
@@ -147,7 +147,7 @@ Symbolic execution is also useful for detecting bugs in smart contracts. For exa
 
 Formal verification is used to assess the correctness of safety-critical systems whose failure can have devastating consequences, such as death, injury, or financial ruin. Smart contracts are high-value applications controlling enormous amounts of value, and simple errors in design can lead to [irrecoverable losses for users](https://www.freecodecamp.org/news/a-hacker-stole-31m-of-ether-how-it-happened-and-what-it-means-for-ethereum-9e5dc29e33ce/amp/). Formally verifying a contract before deployment, however, can increase guarantees that it will perform as expected once running on the blockchain. 
 
-Reliability is a highly desired quality in any smart contract, especially because code deployed in the Ethereum Virtual Machine (EVM) is typically immutable. With post-launch upgrades not readily accessible, the need to guarantee reliability of contracts makes formal verification necessary.
+Reliability is a highly desired quality in any smart contract, especially because code deployed in the Ethereum Virtual Machine (EVM) is typically immutable. With post-launch upgrades not readily accessible, the need to guarantee reliability of contracts makes formal verification necessary. Formal verification is able to detect tricky issues, such as integer underflows and overflow, re-entrancy, and poor gas optimizations, which may slip past auditors and testers. 
 
 #### Prove functional correctness {#prove-functional-correctness}
 
@@ -195,7 +195,7 @@ Also, it is not always possible for program verifiers to determine if a property
 
 ## Formal verification tools for Ethereum smart contracts {#formal-verification-tools}
 
-### Specification languages {#specification-languages}
+### Specification languages for creating formal specifications {#specification-languages}
 
 **Act**: _*Act allows specification of storage updates, pre/post conditions and contract invariants. Its tool suite also has proof backends able to prove many properties via Coq, SMT solvers, or hevm.*_
 
@@ -210,12 +210,7 @@ Also, it is not always possible for program verifiers to determine if a property
 
 - [GitHub](https://github.com/dafny-lang/dafny)
 
-**KEVM**: _*KEVM is a complete formalization of the semantics of the Ethereum Virtual Machine (EVM) in the K framework.*_
-
-- [GitHub](https://github.com/runtimeverification/evm-semantics)
-- [Documentation](https://jellopaper.org/)
-
-### Program verifiers {#program-verifiers}
+### Program verifiers for checking correctness {#program-verifiers}
 
 **Solidity SMTChecker**: _*Solidity’s SMTChecker is a built-in model checker based on SMT (Satisfiability Modulo Theories) and Horn solving. It confirms if a contract’s source code matches specifications during compilation and statically checks for violations of safety properties.*_
 
@@ -228,6 +223,13 @@ Also, it is not always possible for program verifiers to determine if a property
 **hevm**: *_hevm is a symbolic execution engine and equivalence checker for EVM bytecode.*_
 
 - [GitHub](https://github.com/dapphub/dapptools/tree/master/src/hevm)
+
+**KEVM**: _*KEVM is a formal semantics of the Ethereum Virtual Machine (EVM) written in the K framework. KEVM is executable and can prove certain property-related assertions using reachability logic.*_
+
+- [GitHub](https://github.com/runtimeverification/evm-semantics)
+- [Documentation](https://jellopaper.org/)
+
+### Symbolic execution-based tools for detecting vulnerable patterns in smart contracts {#symbolic-execution-tools}
 
 **Manticore** - _ *A tool for analyzing EVM bytecode analysis tool based on symbolic execution._*
 
@@ -252,12 +254,19 @@ Also, it is not always possible for program verifiers to determine if a property
 
 ## Further reading {#further-reading}
 
+### Articles {#articles}
+
 - [How Formal Verification of Smart Contracts Works](https://runtimeverification.com/blog/how-formal-verification-of-smart-contracts-works/) [How Formal Verification Can Ensure Flawless Smart Contracts](https://media.consensys.net/how-formal-verification-can-ensure-flawless-smart-contracts-cbda8ad99bd1)
 - [An Overview of Formal Verification Projects in the Ethereum Ecosystem](https://github.com/leonardoalt/ethereum_formal_verification_overview)
 - [An Introduction to Formal Verification of Ethereum Contracts](https://github.com/pirapira/Ethereum-Formal-Verification-Overview)
-- [A Survey of Smart Contract Formal Specification and
-Verification](https://arxiv.org/pdf/2008.02712.pdf)
-- [Formal Verification of the Ethereum 2.0 Beacon Chain](https://arxiv.org/abs/2110.12909)
 - [SMTChecker and Formal Verification](https://docs.soliditylang.org/en/v0.8.15/smtchecker.html)
+
+## Academic papers {#academic-papers}
+- [Towards Verifying Ethereum Smart Contract Bytecode in Isabelle/HOL](https://trustworthy.systems/publications/csiro_full_text/Amani_BBS_18.pdf)
+- [A Survey of Smart Contract Formal Specification and Verification](https://arxiv.org/pdf/2008.02712.pdf)
+- [Formal Verification of the Ethereum 2.0 Beacon Chain](https://arxiv.org/abs/2110.12909)
+- [A Formal Verification Tool for Ethereum VM Bytecode](https://fsl.cs.illinois.edu/publications/park-zhang-saxena-daian-rosu-2018-fse.pdf)
+- [Debugging Smart Contract’s Business Logic Using Symbolic Model Checking](https://arxiv.org/pdf/1812.00619.pdf)
+
 
 
