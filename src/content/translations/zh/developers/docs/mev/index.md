@@ -5,13 +5,13 @@ lang: zh
 sidebar: true
 ---
 
-最大可提取价值 (MEV) 是指通过包含、排除和更改一个区块中的交易顺序，可以从超过标准区块奖励和 gas 费用的区块生产中提取的最大值。
+最大可提取价值 (MEV) 是指通过在区块中添加和排除交易并更改区块中的交易顺序，可以从区块生产中提取的超过标准区块奖励和燃料费用的最大值。
 
-### 矿工的可抽取的价值
+### 矿工可提取价值
 
-这个概念最初是在 [工作量证明](/developers/docs/consensus-mechanisms/pow/) 的背景下应用的，最初称为“矿工的可抽取价值”。 这是因为在工作量证明中，矿工掌握了交易的包含、排除和顺序。 然而，在通过[The Merge](/updates/merge) 转换为权益证明之后，验证者将负责这些角色，并且挖矿将不再适用。 此处的值提取方法在此转换后仍将保留，因此需要更改名称。 为了在保持相同基本含义的同时保持相同的连续性首字母缩写词，现在使用“最大可提取价值”作为更具包容性的替代品。
+这一概念最先应用在[工作量证明](/developers/docs/consensus-mechanisms/pow/)的背景下，最初被称为“矿工可提取价值”。 这是因为在工作量证明中，矿工掌握了交易的包含、排除和顺序。 然而，在通过[合并](/upgrades/merge)过渡为权益证明后，验证者将负责这些角色，而挖矿将不再适用。 此处介绍的价值提取方法在这次过渡后仍将保留，因此需要更改名称。 为了继续使用相同的首字母缩写词以便确保延续性，同时保持相同基本含义，现在使用“最大可提取价值”作为更具包容性的替代词。
 
-## 前提条件 {#prerequisites}
+## 先决条件 {#prerequisites}
 
 请确保您熟悉 [交易](/developers/docs/transactions/), [区块](/developers/docs/blocks/), [gas](/developers/docs/gas/), 和 [挖矿](/developers/docs/consensus-mechanisms/pow/mining/) 熟悉 [dapps](/dapps/) 和 [DeFi](/defi/) 也很有帮助。
 
@@ -23,13 +23,13 @@ sidebar: true
 
 在这种情况下，对于一些高度竞争的 MEV 机会，例如 [DEX arbitrage](#mev-examples-dex-arbitrage), 搜索者可能必须向矿工支付 90% 甚至更多的 MEV 总收入，因为很多人同时想运行同样的套利交易。 这是因为，确保套利交易运行的唯一方法是提交最高 gas 费用的交易。
 
-### Gas 高尔夫 {#mev-extraction-gas-golfing}
+### 燃料高尔夫 {#mev-extraction-gas-golfing}
 
 这种动态使得 “gas 高尔夫”——编程交易——能够使用最少数量的 gas——这成为一种竞争优势。 因为它允许搜索人设置较高的 gas 价格，同时保持总 gas 费不变(因为使用 gas 费 = gas 价格\* gas 用量)。
 
 一些著名的 gas 高尔夫技术包括：使用用长串零开头的地址(如： [0x000000000000C521824EaFf97Eac7B73B084ef9306](https://etherscan.io/address/0x0000000000c521824eaff97eac7b73b084ef9306))，因为他们的需要的存储空间较少 (因而 gas 也减少)； 并留下很小 [ERC-20](/developers/docs/standards/tokens/erc-20/) 令牌余额在合约中， 因为相比于更新储存插槽，初始化存储槽需要更多的 gas (余额为 0 时)。 寻找如何更多的减少 gas 使用是搜索人在积极研究的一个领域。
 
-### 通用的领跑者 {#mev-extraction-generalized-frontrunners}
+### 通用领跑者 {#mev-extraction-generalized-frontrunners}
 
 一些搜索人并没有编写复杂的算法来检测盈利的 MEV 机会，而是运行通用的领跑者。 通用的领跑者是监控内存池以检测盈利交易的机器人。 领跑者将复制潜在的盈利交易代码，用领跑者的地址替换其地址。然后在本地执行交易，重复检查修改后的交易是否给领跑者地址带来利润。 如果交易确实有利可图，领跑者将以更替地址和更高的 gas 价格提交修改后的交易。 “领跑”原始交易并获取原始搜索人的 MEV。
 
@@ -43,7 +43,7 @@ Flashbots 是一个独立的项目，它将 go-ethereum 客户端扩展，提供
 
 MEV 以几种方式出现在区块链上。
 
-### DEX 套利 {#mev-examples-dex-arbitrage}
+### 去中心化交易所 (DEX) 套利 {#mev-examples-dex-arbitrage}
 
 [去中心化交易所](/glossary/#dex) (DEX) 套利是最简单和最著名的 MEV 机会。 因此，它也是最具竞争性的。
 
@@ -65,11 +65,11 @@ MEV 以几种方式出现在区块链上。
 
 夹心交易是另外一种 MEV 提取的常用方法。
 
-为了实现夹心交易，搜索人会监视内存池内 DEX 的大额交易。 例如，有人想要在 Uniswap 上使用 DAI 购买 10,000 UNI。 这种规模的交易将对 UNI/DAI 对产生有意义的影响，可能会显着提高 UNI 相对于 DAI 的价格。
+为了实现夹心交易，搜索人会监视内存池内 DEX 的大额交易。 例如，有人想要在 Uniswap 上使用 DAI 购买 10,000 UNI。 这类大额交易会对 UNI/DAI 对产生重大的影响，可能会显着提高 UNI 相对于 DAI 的价格。
 
-搜索者可以计算该大额交易对 UNI/DAI 对的大致价格影响，并在大额交易之前**立即执行最优买单，低价买入 UNI，然后执行 在大额交易之后**立即卖出一个卖单，以大额订单导致的更高价格卖出。
+搜索人可以计算该大额交易对 UNI/DAI 对的大致价格影响，并在大额交易*之前*立即执行最优买单，低价买入 UNI，然后在大额交易*之后*立即执行卖单，以大额订单造成的更高价格卖出。
 
-然后，夹心交易风险更高，因为它不是原子交易（不像上文所述的 DEX 套利），而且容易出现 [salmonella 攻击](https://github.com/Defi-Cartel/salmonella)
+然而，夹心交易风险很高，因为它不是原子交易（不像上文所述的 DEX 套利），而且容易受到 [salmonella 攻击](https://github.com/Defi-Cartel/salmonella)。
 
 ### NFT MEV {#mev-examples-nfts}
 

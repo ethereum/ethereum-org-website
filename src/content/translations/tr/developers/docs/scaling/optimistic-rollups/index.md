@@ -1,13 +1,13 @@
 ---
-title: İyimser Toplamalar
+title: İyimser toplamalar
 description: İyimser toplamalara giriş
 lang: tr
 sidebar: true
 ---
 
-## Ön Koşullar {#prerequisites}
+## Ön koşullar {#prerequisites}
 
-Tüm temel konuları iyi anlamalı ve [Ethereum ölçeklendirme](/developers/docs/scaling/) konusunda üst düzey bir bilgiye sahip olmalısınız. Toplamalar gibi ölçeklendirme çözümlerini yürürlüğe koymak teknoloji az test edildiği, araştırıldığı ve geliştirildiği için ileri seviye bir konudur.
+Temeli oluşturan tüm konuları iyi anlamalı ve [Ethereum ölçeklendirilmesi](/developers/docs/scaling/) konusunda ileri düzeyde bilgiye sahip olmalısınız. Toplamalar gibi ölçeklendirme çözümlerini uygulamak, teknoloji daha az savaşta test edildiğinden ve araştırılmaya ve geliştirilmeye devam ettiğinden ileri bir konudur.
 
 Yeni başlayanlar için daha uygun bir kaynak mı arıyorsunuz? [Katman 2'ye giriş](/layer-2/) makalemize bakın.
 
@@ -17,9 +17,9 @@ Yeni başlayanlar için daha uygun bir kaynak mı arıyorsunuz? [Katman 2'ye gir
 
 İyimser toplamalarla, işlemler ana Ethereum zincirine `calldata` olarak yazılır ve gaz maliyetini azaltarak daha da optimize edilir.
 
-Hesaplama, Ethereum kullanmanın yavaş ve pahalı kısmı olduğundan İyimser toplamalar, işleme bağlı olarak ölçeklenebilirlikte 10-100 kata kadar iyileştirme sunabilir. [Parça zincirlerin](/upgrades/shard-chains) kullanıma sunulmasıyla bu sayı daha da artacak çünkü bir işleme itiraz edildiğinde daha fazla veri mevcut olacak.
+Hesaplama, Ethereum kullanmanın yavaş ve pahalı kısmı olduğundan İyimser toplamalar, işleme bağlı olarak ölçeklenebilirlikte 10-100 kata kadar iyileştirme sunabilir. [Parça zincirlerin](/upgrades/sharding) kullanıma sunulmasıyla bu sayı daha da artacak çünkü bir işleme itiraz edildiğinde daha fazla veri mevcut olacak.
 
-### İşlemlere itiraz etme {#disputing-transactions}
+### İhtilaflı işlemler {#disputing-transactions}
 
 İyimser toplamalar işlemi hesaplamaz, bu nedenle işlemlerin meşru ve hileli olmadığından emin olmak için bir mekanizma olması gerekir. Dolandırıcılık kanıtları da bu noktada devreye girer. Birisi hileli bir işlem fark ederse toplama, bir dolandırıcılık kanıtı yürütür ve mevcut durum verilerini kullanarak işlemin hesaplamasını çalıştırır. Bu, işlem sorgulanabileceğinden, işlem onayı için bir ZK-toplamasından daha uzun bekleme sürelerine sahip olabileceğiniz anlamına gelir.
 
@@ -52,7 +52,7 @@ Dapp'lerinize entegre edebileceğiniz birden çok İyimser toplama uygulaması m
 
 **İyimser toplamalar hakkında bilgi**
 
-- [İyimser Toplama hakkında bilmeniz gereken her şey](https://research.paradigm.xyz/rollups)
+- [Optimistik Toplama hakkında bilmeniz gereken her şey](https://research.paradigm.xyz/rollups)
 - [EthHub'un iyimser toplamalar hakkındaki içerikleri](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/optimistic_rollups/)
 - [Temel Arbitrum Rehberi](https://newsletter.banklesshq.com/p/the-essential-guide-to-arbitrum)
 - [Optimism'in Toplaması aslında nasıl çalışıyor?](https://research.paradigm.xyz/optimism)

@@ -8,7 +8,7 @@ tags:
   - "Alchemy"
   - "Solidity"
   - "contractele inteligente"
-skill: începător
+skill: beginner
 lang: ro
 sidebar: true
 published: 2021-04-22
@@ -129,7 +129,7 @@ const nftContract = new web3.eth.Contract(contract.abi, contractAddress)
 
 ## Etapa 6: Actualizarea fișierului .env {#update-env}
 
-Mai departe, pentru a crea și a trimite tranzacții în lanțul Ethereum, vom folosi adresa publică a contului dvs. ethereum pentru a obține nonce-ul contului (vom explica mai jos).
+Mai departe, pentru a crea și a trimite tranzacții în lanțul Ethereum, vom folosi adresa publică a contului dvs. Ethereum pentru a obține nonce-ul contului (vom explica mai jos).
 
 Adăugați cheia dvs. publică la fișierul „.env” — dacă ați finalizat partea 1 a tutorialului, fișierul nostru „.env” ar trebui să arate acum așa:
 

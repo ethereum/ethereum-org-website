@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react"
 import styled from "styled-components"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import { useIntl } from "gatsby-plugin-intl"
+import { useIntl } from "react-intl"
 import { graphql, PageProps } from "gatsby"
 import { shuffle } from "lodash"
 
@@ -283,7 +283,7 @@ const WalletsPage = ({
     alt: translateMessageId("page-wallets-alt", intl),
     buttons: [
       {
-        path: "/wallets/find-wallet/",
+        to: "/wallets/find-wallet/",
         content: translateMessageId("page-wallets-find-wallet-link", intl),
       },
     ],

@@ -143,5 +143,5 @@ _Observaţie_: Toate funcțiile în loturi, inclusiv hook-ul, există şi în ve
 
 - [EIP-1155: Standard multi-token](https://eips.ethereum.org/EIPS/eip-1155)
 - [ERC-1155: Documentație Openzeppelin](https://docs.openzeppelin.com/contracts/3.x/erc1155)
-- [ERC-1155: Github Repo](https://github.com/enjin/erc-1155)
+- [ERC-1155: GitHub Repo](https://github.com/enjin/erc-1155)
 - [Alchemy NFT API](https://docs.alchemy.com/alchemy/enhanced-apis/nft-api)

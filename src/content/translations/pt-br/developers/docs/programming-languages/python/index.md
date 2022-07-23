@@ -53,7 +53,7 @@ Precisa de uma introdução geral? Confira [ethereum.org/learn](/learn/) ou [eth
 - [Brownie](https://github.com/eth-brownie/brownie) - _framework em Python para implantar, testar e interagir com smart contracts de Ethereum_
 - [Vyper](https://github.com/ethereum/vyper/) - _Linguagem de Contrato Inteligente em Python para a Máquina Virtual Ethereum_
 - [py-evm](https://github.com/ethereum/py-evm) - _Implementação de uma Máquina Virtual Ethereum_
-- [eth-tester](https://github. com/ethereum/eth-tester) - _ferramentas para testar aplicativos baseados na Ethereum_
+- [eth-tester](https://github.com/ethereum/eth-tester) - _ferramentas para testar aplicativos baseados na Ethereum_
 - [eth-utils](https://github.com/ethereum/eth-utils/) - _funções de utilidade para trabalhar com bases de código relacionadas com a Ethereum_
 - [py-solc-x](https://pypi.org/project/py-solc-x/) - _wrapper em Python em cima do compilador solc solidity com suporte à versão 0.5.x _
 - [py-wasm](https://github.com/ethereum/py-wasm) - _implementação em Python de um intérprete de montagem web _

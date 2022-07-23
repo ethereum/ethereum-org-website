@@ -25,7 +25,7 @@ Assista a Austin guiá-lo pelas blockchains:
 
 <YouTube id="zcX7OJ-L8XQ" />
 
-Se você quiser ver como a blockchain faz hash dos dados e como o bloco anterior faz referência a todos os blocos anteriores, confira [esta demonstração](https://andersbrownworth. com/blockchain/blockchain) de Anders Brownworth e assista ao vídeo correspondente abaixo.
+Se você quiser ver como a blockchain faz hash dos dados e como o bloco anterior faz referência a todos os blocos anteriores, confira [esta demonstração](https://andersbrownworth.com/blockchain/blockchain) de Anders Brownworth e assista ao vídeo correspondente abaixo.
 
 Assista a Anders explicando hashes em blockchains:
 

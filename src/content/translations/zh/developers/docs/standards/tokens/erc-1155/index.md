@@ -15,7 +15,7 @@ sidebar: true
 
 [EIP-1155](https://eips.ethereum.org/EIPS/eip-1155) 中对 ERC-1155 代币进行了全面的描述。
 
-## 前提条件 {#prerequisites}
+## 前体条件 {#prerequisites}
 
 为了更好地理解这一页面的内容，我们建议您先阅读[代币标准](/developers/docs/standards/tokens/)、[ERC-20](/developers/docs/standards/tokens/erc-20/) 和 [ERC-721](/developers/docs/standards/tokens/erc-721/)。
 
@@ -143,5 +143,5 @@ _注意_：包括钩子在内的所有批处理函数也均作为非批处理的
 
 - [EIP-1155：多代币标准](https://eips.ethereum.org/EIPS/eip-1155)
 - [ERC-1155：Openzepelin 文档](https://docs.openzeppelin.com/contracts/3.x/erc1155)
-- [ERC-1155：Github 代码库](https://github.com/enjin/erc-1155)
+- [ERC-1155：GitHub 代码库](https://github.com/enjin/erc-1155)
 - [Alchemy NFT API](https://docs.alchemy.com/alchemy/enhanced-apis/nft-api)

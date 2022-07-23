@@ -14,7 +14,9 @@ import Link from "../components/Link"
 import MarkdownTable from "../components/MarkdownTable"
 import PageMetadata from "../components/PageMetadata"
 import Pill from "../components/Pill"
-import TableOfContents from "../components/TableOfContents"
+import TableOfContents, {
+  Item as ItemTableOfContents,
+} from "../components/TableOfContents"
 import SectionNav from "../components/SectionNav"
 import CallToContribute from "../components/CallToContribute"
 import {
@@ -149,21 +151,23 @@ const Contributors = styled(FileContributors)`
 
 const TutorialPage = ({
   data: { siteData, pageData: mdx },
-  pageContext,
+  pageContext: { relativePath },
 }: PageProps<Queries.TutorialPageQuery, Context>) => {
-  if (!siteData || !mdx?.frontmatter) {
+  if (!siteData || !mdx?.frontmatter)
     throw new Error(
       "Tutorial page template query does not return expected values"
     )
-  }
+  if (!mdx?.frontmatter?.title)
+    throw new Error("Required `title` property missing for tutorial template")
+  if (!relativePath)
+    throw new Error("Required `relativePath` is missing on pageContext")
 
   const isRightToLeft = isLangRightToLeft(mdx.frontmatter.lang as Lang)
   const showMergeBanner = !!mdx.frontmatter.preMergeBanner
 
-  const tocItems = mdx.tableOfContents?.items
+  const tocItems = mdx.tableOfContents?.items as Array<ItemTableOfContents>
 
   const { editContentUrl } = siteData.siteMetadata || {}
-  const { relativePath } = pageContext
   const absoluteEditPath = `${editContentUrl}${relativePath}`
   return (
     <div>
@@ -179,7 +183,7 @@ const TutorialPage = ({
           <TutorialMetadata tutorial={mdx} />
           <MobileTableOfContents
             items={tocItems}
-            maxDepth={mdx.frontmatter.sidebarDepth}
+            maxDepth={mdx.frontmatter.sidebarDepth!}
             editPath={absoluteEditPath}
             isMobile={true}
           />
@@ -195,7 +199,7 @@ const TutorialPage = ({
         {mdx.frontmatter.sidebar && tocItems && (
           <DesktopTableOfContents
             items={tocItems}
-            maxDepth={mdx.frontmatter.sidebarDepth}
+            maxDepth={mdx.frontmatter.sidebarDepth!}
             editPath={absoluteEditPath}
           />
         )}

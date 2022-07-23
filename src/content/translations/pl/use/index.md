@@ -15,7 +15,7 @@ lang: pl
 
 </div>
 
-## 1. Korzystaj z aplikacji zbudowanych w oparciu o ethereum {#1-use-an-application-built-on-ethereum}
+## 1. Korzystaj z aplikacji zbudowanych w oparciu o Ethereum {#1-use-an-application-built-on-ethereum}
 
 Najlepszym sposobem na rozpoczęcie pracy z Ethereum jest po prostu wystartować! Obecnie istnieje wiele aplikacji opartych na Ethereum.
 

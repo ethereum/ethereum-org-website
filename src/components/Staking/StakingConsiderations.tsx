@@ -15,7 +15,7 @@ import SelfCustody from "../../assets/staking/self-custody.svg"
 import Economical from "../../assets/staking/economical.svg"
 import LiquidityToken from "../../assets/staking/liquidity-token.svg"
 // Component imports
-import ButtonDropdown from "../ButtonDropdown"
+import ButtonDropdown, { List as ButtonDropdownList } from "../ButtonDropdown"
 import Translation from "../Translation"
 import { EventOptions, trackCustomEvent } from "../../utils/matomo"
 import { TranslationKey } from "../../utils/translations"
@@ -459,8 +459,8 @@ const StakingConsiderations: React.FC<IProps> = ({ page }) => {
   const { title, description, valid, caution, warning, Svg } =
     pageData[activeIndex]
 
-  const dropdownLinks = {
-    text: "Staking Considerations",
+  const dropdownLinks: ButtonDropdownList = {
+    text: "Staking Considerations" as TranslationKey,
     ariaLabel: "Dropdown menu for staking considerations",
     items: pageData.map(({ title }) => ({
       text: title,

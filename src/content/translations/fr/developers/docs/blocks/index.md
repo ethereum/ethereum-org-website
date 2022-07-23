@@ -1,5 +1,5 @@
 ---
-title: Blocs
+title: Les blocs
 description: Présentation des blocs de la blockchain Ethereum, leur structure de données, pourquoi ils sont nécessaires et comment ils sont créés.
 lang: fr
 sidebar: true
@@ -57,7 +57,7 @@ Durée de blocage se réfère au temps mis pour miner un nouvel bloc. Dans l'Eth
 
 ## Taille des blocs {#block-size}
 
-Une dernière remarque importante : les blocs eux-mêmes ont une taille limitée. Chaque bloc vise une taille cible de 15 million carburant mais leur taille s'adapte aux exigences du réseau, jusqu'à la limite de 30 million carburant (deux fois le taille cible de bloc). La quantité totale de gaz dépensée par toutes les transactions dans le bloc doit être moins que la limite de carburant du bloc. C'est important car cela garantit que les blocs ne peuvent pas être arbitrairement grands. Si les blocs pouvaient être arbitrairement grands, les nœuds complets moins performants ne pourraient plus progressivement suivre le réseau en raison des exigences en matière d'espace et de vitesse.
+Une dernière remarque importante : les blocs eux-mêmes ont une taille limitée. Chaque bloc vise une taille cible de 15 millions de gaz, mais leur taille s'adapte aux exigences du réseau, jusqu'à la limite de 30 millions de gaz (deux fois la taille cible de bloc). La quantité totale de gaz dépensée par toutes les transactions dans le bloc doit être moins que la limite de gaz du bloc. C'est important car cela garantit que les blocs ne peuvent pas être arbitrairement grands. Si les blocs pouvaient être arbitrairement grands, les nœuds complets moins performants ne pourraient plus progressivement suivre le réseau en raison des exigences en matière d'espace et de vitesse.
 
 ## Complément d'information {#further-reading}
 

@@ -8,7 +8,7 @@ incomplete: true
 
 <div class="featured">学习如何使用并通过基于 Java 的项目及工具参与以太坊的开发</div>
 
-使用以太坊来创建去中心化应用程序 (或称“dapp”)，发挥加密货币和区块链技术的优势。 这些去中心化应用程序可以是值得信赖的，也即一旦被部署到以太坊上，它们将总是按程序运行。 这些应用程序可以控制数字资产，以便创造新的金融应用； 它们可以是去中心化的，也即没有任何单一实体或个人能够控制它们，而且它们几乎是不可能被审查的。
+使用以太坊来创建去中心化应用程序 (或称“dapp”)，发挥加密货币和区块链技术的优势。 这些 dapp 可以是值得信赖的，也即一旦被部署到以太坊上，它们将总是按程序运行。 这些应用程序可以控制数字资产，以便创造新的金融应用； 它们可以是去中心化的，也即没有任何单一实体或个人能够控制它们，而且它们几乎是不可能被审查的。
 
 ## 智能合约和 Solidity 语言入门 {#getting-started-with-smart-contracts-and-solidity}
 
@@ -23,7 +23,7 @@ incomplete: true
 
 ## 使用以太坊客户端 {#working-with-ethereum-clients}
 
-了解如何使用[ Web3J ](https://github.com/web3j/web3j)和 Hyperledger Besu 这两个领先的 Java 以太坊客户端。
+了解如何使用 [Web3J ](https://github.com/web3j/web3j)和 Hyperledger Besu 这两个领先的 Java 以太坊客户端。
 
 - [使用 Java 、Eclipse 和 Web3J 连接以太坊客户端](https://kauri.io/article/b9eb647c47a546bc95693acc0be72546/connecting-to-an-ethereum-client-with-java-eclipse-and-web3j)
 - [使用 Java 和 Web3j 管理以太坊帐户](https://kauri.io/article/925d923e12c543da9a0a3e617be963b4/manage-an-ethereum-account-with-java-and-web3j)

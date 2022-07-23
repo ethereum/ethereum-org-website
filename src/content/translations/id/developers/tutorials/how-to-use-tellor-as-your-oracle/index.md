@@ -9,7 +9,7 @@ tags:
   - "kontrak pintar"
   - "feed harga"
   - "oracle"
-skill: pemula
+skill: beginner
 published: 2021-06-29
 source: Dokumen Tellor
 sourceUrl: https://docs.tellor.io/tellor/

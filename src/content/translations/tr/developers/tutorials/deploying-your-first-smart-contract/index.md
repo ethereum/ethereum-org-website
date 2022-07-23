@@ -3,12 +3,12 @@ title: İlk akıllı sözleşmenizi dağıtın
 description: Ethereum test ağında ilk akıllı sözleşmenizi nasıl dağıtacağınızı öğrenin
 author: "jdourlens"
 tags:
-  - "akıllı sözleşmeler"
-  - "remix"
-  - "solidity"
+  - "akıllı kontratlar"
+  - "karışım"
+  - "katılık"
   - "başlarken"
   - "dağıtma"
-skill: acemi
+skill: beginner
 lang: tr
 sidebar: true
 published: 2020-04-03
@@ -80,7 +80,7 @@ Ardından "deploy and run transactions" ekranına gidin:
 
 ![Remix araç çubuğundaki yayınla simgesi](./remix-deploy.png)
 
-Bu ekranda öncelikle sözleşmeye verdiğimiz ismin göründüğünden emin olmalısınız. Sözleşme adını görüyorsanız Deploy butonuna tıklayın. Sayfanın üst kısmında görebileceğiniz gibi, mevcut ortam “Javascript VM”, yani bu daha hızlı ve herhangi bir ücret ödemeden test edebilmek için akıllı sözleşmemizi yerel bir test blok zincirinde dağıtıp etkileşime geçeceğimiz anlamına geliyor.
+Bu ekranda öncelikle sözleşmeye verdiğimiz ismin göründüğünden emin olmalısınız. Sözleşme adını görüyorsanız Deploy butonuna tıklayın. Sayfanın üst kısmında görebileceğiniz gibi, mevcut ortam “JavaScript VM”, yani bu daha hızlı ve herhangi bir ücret ödemeden test edebilmek için akıllı sözleşmemizi yerel bir test blok zincirinde dağıtıp etkileşime geçeceğimiz anlamına geliyor.
 
 ![Remix solidity derleyicisindeki deploy (dağıt) düğmesi](./remix-deploy-button.png)
 

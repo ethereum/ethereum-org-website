@@ -6,12 +6,12 @@ sidebar: true
 tags:
   - "solidity"
   - "uniswap"
-skill: 中级
+skill: intermediate
 published: 2021-05-01
 lang: zh
 ---
 
-## 简介 {#introduction}
+## 介绍 {#introduction}
 
 [Uniswap v2](https://uniswap.org/whitepaper.pdf) 可以在任何两个 ERC-20 代币之间创建一个兑换市场。 在这篇文章中， 我们将了解实现此协议的合约的源代码，看看为什么要 这样写代码。
 
@@ -25,7 +25,7 @@ lang: zh
 
 当流动资金提供者想要收回他们的代币资产时，他们可以消耗资金池代币并收回他们的代币， 其中包括他们在兑换过程中奖励的份额。
 
-[点击这里查看更完整的描述](https://docs.uniswap.org/protocol/V2/concepts/core-concepts/swaps/)。
+[点击这里查看更完整的描述](https://uniswap.org/docs/v2/core-concepts/swaps/)。
 
 ### 为什么选择 v2？ 而不是 v3？ {#why-v2}
 
@@ -186,14 +186,14 @@ contract UniswapV2Pair is IUniswapV2Pair, UniswapV2ERC20 {
 
 发生兑换的最后一个区块的时间戳，用来追踪一段时间内的汇率。
 
-以太坊合约的最大燃料费用之一是储存，储存的燃料消耗从合约的一个调用一直持续到另一个。 每个储存单元长度为 256 比特。 因此，reserve0、reserve1 和 blockTimestampLast 三个变量被分配在这样的 单个存储值可以包含所有三个 (112+112+32=256) 的方式。
+以太坊合约中燃料消耗量最大的一项是存储，这种燃料消耗从一次合约调用持续到 下一次调用。 每个存储单元长度为 256 位。 因此，reserve0、reserve1 和 blockTimestampLast 三个变量的分配方式让 单个存储值可以包含全部这三个变量 (112+112+32=256)。
 
 ```solidity
     uint public price0CumulativeLast;
     uint public price1CumulativeLast;
 ```
 
-这些变量包含了每个代币的累计成本（每个代币以另一个代币计算）。 可以用来计算 一段时间内的平均汇率。
+这些变量存放每种代币的累计成本（每种代币在另一种代币的基础上计算）。 可以用来计算 一段时间内的平均汇率。
 
 ```solidity
     uint public kLast; // reserve0 * reserve1, as of immediately after the most recent liquidity event
@@ -265,7 +265,7 @@ contract UniswapV2Pair is IUniswapV2Pair, UniswapV2ERC20 {
         (bool success, bytes memory data) = token.call(abi.encodeWithSelector(SELECTOR, to, value));
 ```
 
-此内部函数可以从交易所转账一定数额的 ERC20 代币给其他账户。 `SELECTOR` 指定 我们调用的函数是 `transfer(address,uint)` (见上面的定义)。
+此内部函数可以从交易所转账一定数额的 ERC20 代币给其他账户。 `SELECTOR` 指定 我们调用的函数是 `transfer(address,uint)`（参见上面的定义）。
 
 为了避免必须为代币函数导入接口，我们需要使用其中一个 [ABI 函数](https://docs.soliditylang.org/en/v0.8.3/units-and-global-variables.html#abi-encoding-and-decoding-functions) 来“手动”创建调用。
 
@@ -276,7 +276,7 @@ contract UniswapV2Pair is IUniswapV2Pair, UniswapV2ERC20 {
 
 ERC-20 的转移调用有两种方式可能失败：
 
-1. 回退 如果对外部合约的调用恢复，则布尔返回值为 `false`
+1. 回滚 如果对外部合约的调用回滚，则布尔返回值为 `false`
 2. 正常结束但报告失败。 在这种情况下，返回值的缓冲为非零长度，将其解码为布尔值时，其值为 `false`
 
 一旦出现这两种情况，转移调用就会回退。
@@ -347,7 +347,7 @@ ERC-20 的转移调用有两种方式可能失败：
         require(balance0 <= uint112(-1) && balance1 <= uint112(-1), 'UniswapV2: OVERFLOW');
 ```
 
-如果 balance0 或 balance1 (uint256) 高于 uint112(-1) (=2^112-1) (因此它溢出 & 在转换为 uint112 时返回 0) 拒绝 继续 \_update 以防止溢出。 一般的代币可以细分成 10^18 个单元，这意味着 代币每次的兑换限制金额大约为 5.1\*10^15。 迄今为止，这并不是一个问题。
+如果 balance0 或 balance1 (uint256) 高于 uint112(-1) (=2^112-1)（因此当转换为 uint112 时会溢出并返回 0) 拒绝 继续 \_update 以防止溢出。 一般的代币可以细分成 10^18 个单元，这意味着 代币每次的兑换限制大约为每个代币的 5.1\*10^15。 迄今为止，这并不是一个问题。
 
 ```solidity
         uint32 blockTimestamp = uint32(block.timestamp % 2**32);
@@ -643,7 +643,7 @@ ERC-20 的转移调用有两种方式可能失败：
             require(balance0Adjusted.mul(balance1Adjusted) >= uint(_reserve0).mul(_reserve1).mul(1000**2), 'UniswapV2: K');
 ```
 
-这是一项健全性检查，确保我们不会因兑换而损失代币。 在任何情况下交换都不应减少 `reserve0*reserve1`。 这也是我们确保在掉期中发送 0.3% 费用的地方； 在检查 K 值之前，我们将两个余额乘以 1000 减去金额乘以 3，这意味着在将其 K 值与当前值进行比较之前，从余额中扣除 0.3% (3/1000 = 0.003 = 0.3%) 储备 K 值。
+这是一项健全性检查，确保我们不会因兑换而损失代币。 在任何情况下交换都不应减少 `reserve0*reserve1`。 这也是我们确保为兑换发送 0.3% 费用的方式；在对 K 值进行完整性检查之前，我们将两个余额乘以 1000 减去 3 倍的金额，这意味着在将其 K 值与当前准备金 K 值进行比较之前，从余额中扣除 0.3% (3/1000 = 0.003 = 0.3%)。
 
 ```solidity
         }
@@ -655,7 +655,7 @@ ERC-20 的转移调用有两种方式可能失败：
 
 更新 `reserve0` 和 `reserve1` 的值，并在必要时更新价格累积值和时间戳并激发相应事件。
 
-##### 同步或跳过 {#sync-or-skim}
+##### 同步或提取 {#sync-or-skim}
 
 实际余额有可能与配对交易所认为的储备金余额没有同步。 没有合约的认同，就无法撤回代币，但存款却不同。 帐户 可以将代币转移到交易所，而无需调用 `mint` 或 `swap`。
 

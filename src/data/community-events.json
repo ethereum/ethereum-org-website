@@ -1,5 +1,14 @@
 [
   {
+    "title": "ETHVietnam",
+    "to": "https://www.eth-vietnam.com/",
+    "sponsor": null,
+    "location": "Ho Chi Minh City, Vietnam",
+    "description": "ETHVietnam is the biggest conference ever that brings all top experts in the industry to provide more value to the community.",
+    "startDate": "2022-09-09",
+    "endDate": "2022-09-11"
+  },
+  {
     "title": "ETHDenver",
     "to": "https://www.ethdenver.com/",
     "sponsor": null,
@@ -301,7 +310,7 @@
     "to": "https://zora.ethglobal.com/",
     "sponsor": null,
     "location": "Remote",
-    "description": "ETHGlobal is teaming up with Zora to create a virtual developer and creative focused hackathon! Join and create art, music, dApps, protocols and anything in between.",
+    "description": "ETHGlobal is teaming up with Zora to create a virtual developer and creative focused hackathon! Join and create art, music, dapps, protocols and anything in between.",
     "startDate": "2022-08-04",
     "endDate": "2022-08-10"
   },
@@ -457,5 +466,23 @@
     "description": "Welcome to the latest greatest ETH event happening in Africa!",
     "startDate": "2022-09-18",
     "endDate": "2022-09-25"
+  },
+  {
+    "title": "Web3Dubai",
+    "to": "https://www.web3dubai.org/",
+    "sponsor": null,
+    "location": "Dubai, UAE",
+    "description": "The Web3Dubai Conference will feature the latest innovations in Web3 technology and modular blockchains with a focus on builder and creator tools, techniques and APIs that help you scale your project and go from 0 to 1.",
+    "startDate": "2022-11-16",
+    "endDate": "2022-11-18"
+  },
+  {
+    "title": "ETHDubai",
+    "to": "https://www.ethdubaiconf.org",
+    "sponsor": null,
+    "location": "Dubai, UAE",
+    "description": "The Ethereum dev conference in Dubai on everything DeFi, NFTs, EVM scaling, layers 2 and more with a focus on decentralization and community projects.",
+    "startDate": "2023-03-14",
+    "endDate": "2023-03-16"
   }
 ]

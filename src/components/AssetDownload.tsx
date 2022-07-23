@@ -26,7 +26,7 @@ interface IPropsWithSVG extends IPropsBase {
 }
 interface IPropsWithImage extends IPropsBase {
   svg?: never
-  image: string
+  image: any
 }
 
 export type IProps = IPropsWithImage | IPropsWithSVG

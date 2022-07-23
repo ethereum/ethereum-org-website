@@ -12,7 +12,7 @@ tags:
   - "compound"
   - "uniswap"
   - "sablier"
-skill: acemi
+skill: beginner
 lang: tr
 sidebar: true
 published: 2020-04-27
@@ -32,7 +32,7 @@ cd my-eth-app
 yarn react-app:start
 ```
 
-Perde arkasında [create-react-app](https://github.com/facebook/create-react-app) kullanır. Uygulamanızı görmek için, `http://localhost:3000/` bağlantısını açın. Üretime dağıtmaya hazır olduğunuzda, yarn build ile küçültülmüş bir paket oluşturun. Bunu sunmanın kolay yollarından biri [Netlify](https://www.netlify.com/)'dır. Bir Github deposu oluşturmanız, Netlify'a eklemeniz ve build komutunu kurmanız yeterli olur! Uygulamanız barındırılacak ve herkes tarafından kullanılabilir olacak. Ve hepsi ücretsiz.
+Perde arkasında [create-react-app](https://github.com/facebook/create-react-app) kullanır. Uygulamanızı görmek için, `http://localhost:3000/` bağlantısını açın. Üretime dağıtmaya hazır olduğunuzda, yarn build ile küçültülmüş bir paket oluşturun. Bunu sunmanın kolay yollarından biri [Netlify](https://www.netlify.com/)'dır. Bir GitHub deposu oluşturmanız, Netlify'a eklemeniz ve build komutunu kurmanız yeterli olur! Uygulamanız barındırılacak ve herkes tarafından kullanılabilir olacak. Ve hepsi ücretsiz.
 
 ## Özellikler {#features}
 

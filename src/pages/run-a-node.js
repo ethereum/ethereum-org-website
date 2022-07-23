@@ -2,7 +2,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import { useIntl } from "gatsby-plugin-intl"
+import { useIntl } from "react-intl"
 import styled from "styled-components"
 
 // Assets
@@ -27,6 +27,8 @@ import {
   Divider,
   Page,
   InfoGrid,
+  Width60,
+  Width40,
 } from "../components/SharedStyledComponents"
 import ExpandableCard from "../components/ExpandableCard"
 import ExpandableInfo from "../components/ExpandableInfo"
@@ -198,23 +200,6 @@ const ColumnNarrow = styled.div`
   inset: auto;
   justify-content: center;
   align-items: center;
-  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
-    width: 100%;
-  }
-`
-
-const Width60 = styled.div`
-  flex: 3;
-  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
-    width: 100%;
-  }
-`
-
-const Width40 = styled.div`
-  flex: 2;
-  display: flex;
-  justify-content: center;
-  align-self: center;
   @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
     width: 100%;
   }
@@ -1022,7 +1007,7 @@ const RunANodePage = ({ data }) => {
 export default RunANodePage
 
 export const query = graphql`
-  query {
+  query RunANodePage {
     ethereumInside: file(
       relativePath: { eq: "run-a-node/ethereum-inside.png" }
     ) {

@@ -91,7 +91,7 @@ If you're more of a technical user, learn how to [spin up your own node](/develo
 
 ### Projects {#projects}
 
-[**Select a client and follow their instructions**](#clients)
+**Select a client and follow their instructions**
 
 **ethnode -** **_Run an Ethereum node (Geth or OpenEthereum) for local development._**
 
@@ -183,7 +183,7 @@ Synchronization modes represent different approaches to this process with variou
 
 General overview of synchronization approaches used in Mainnet ready clients:
 
-##### Full sync {#full-sync}
+##### Full sync
 
 Full sync downloads all blocks (including headers, transactions, and receipts) and generates the state of the blockchain incrementally by executing every block from genesis.
 

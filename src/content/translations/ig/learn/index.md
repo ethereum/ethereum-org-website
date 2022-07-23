@@ -61,7 +61,7 @@ Na mgbakwunye na ozi dị na peeji a, enwere ọtụtụ ihe enyere obodo aka kw
 
   ## Ndị ahịa na Ebe nzuko {#clients-and-nodes}
 
-  Ngwakọta Ethereum nwere ọtụtụ ebe nzuko, nke ọ bụla na-aru oru sọftụwia ndị ahịa jikotara onu. Enwere ndị ahịa abụọ ana-eji site na ọtụtụ ebe nzuko:[Geth](https://geth.ethereum.org/)(edere na ebe ana aga) na[ Nha nhata](https://www.parity.io/ethereum/) (e dere na Rust).
+  Ngwakọta Ethereum nwere ọtụtụ ebe nzuko, nke ọ bụla na-aru oru sọftụwia ndị ahịa jikotara onu. Enwere ndị ahịa abụọ ana-eji site na ọtụtụ ebe nzuko:[Geth](https://geth.ethereum.org/)(edere na ebe ana aga) na [Nha nhata](https://www.parity.io/ethereum/) (e dere na Rust).
 
   - I chọrọ ịmụ otu esi agba nodu nke gi? [ethereum.org/ig/developers](/ig/developers/#clients--running-your-own-node/)
   - [Ndeputa nile nke ndi Ethereum](https://github.com/ConsenSys/ethereum-developer-tools-list#ethereum-clients)

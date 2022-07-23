@@ -36,6 +36,7 @@
   "dark-mode": "Dark",
   "data-provided-by": "Data source:",
   "decentralized-applications-dapps": "Decentralized applications (dapps)",
+  "decentralized-science": "Decentralized science (DeSci)",
   "deposit-contract": "Deposit contract",
   "devcon": "Devcon",
   "developers": "Developers",
@@ -136,6 +137,7 @@
   "language-it": "Italian",
   "language-ja": "Japanese",
   "language-ka": "Georgian",
+  "language-kk": "Kazakh",
   "language-ko": "Korean",
   "language-lt": "Lithuanian",
   "language-ml": "Malayalam",
@@ -143,6 +145,7 @@
   "language-ms": "Malay",
   "language-nb": "Norwegian",
   "language-nl": "Dutch",
+  "language-ph": "Filipino",
   "language-pl": "Polish",
   "language-pt": "Portuguese",
   "language-pt-br": "Portuguese (Brazilian)",
@@ -219,6 +222,7 @@
   "security": "Security",
   "see-contributors": "See contributors",
   "set-up-local-env": "Set up local environment",
+  "sharding": "Sharding",
   "show-all": "Show all",
   "show-less": "Show less",
   "site-description": "Ethereum is a global, decentralized platform for money and new kinds of applications. On Ethereum, you can write code that controls money, and build applications accessible anywhere in the world.",
@@ -269,5 +273,6 @@
   "nft-page": "Non-fungible tokens (NFTs)",
   "decentralized-social-networks": "Decentralized social networks",
   "decentralized-identity": "Decentralized identity",
-  "yes": "Yes"
+  "yes": "Yes",
+  "zero-knowledge-proofs": "Zero-knowledge proofs"
 }
