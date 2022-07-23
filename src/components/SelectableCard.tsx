@@ -34,7 +34,7 @@ export interface IProps {
   className?: string
   onSelect: (val: string) => void
   value: string
-  isSelected: boolean
+  isSelected?: boolean
 }
 
 const Card: React.FC<IProps> = ({
@@ -45,7 +45,7 @@ const Card: React.FC<IProps> = ({
   className,
   onSelect,
   value,
-  isSelected,
+  isSelected = false,
 }) => {
   const handleSelect = () => {
     onSelect(value)
