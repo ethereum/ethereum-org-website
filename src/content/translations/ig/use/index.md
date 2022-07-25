@@ -53,14 +53,14 @@ Obere akpa ego bụ ngwa komputa nke na-eme ka ọ dị mfe ijide na izipu ETH, 
 
 Odoghi gi anya obere akpa ego iga eji? Bido na ntuziaka ndị a:
 
-- [Mwebata na Ethereum Akpa ego](https://docs.ethhub.io/using-ethereum/wallets/intro-to-ethereum-wallets/)_Emelitere ohuru otutu mgbe- EthHub _
-- [ Ibido ya MetaMask](https://metamask.zendesk.com/hc/en-us/articles/360015489531-Getting-Started-With-MetaMask-Part-1-)_Dec 4, 2018 - MetaMask_
-- [Etu esi emebe obere akpa ego ](https://support.mycrypto.com/how-to/getting-started/how-to-create-a-wallet)_Emelitere ohuru oge niile - MyCrypto_
+- [Mwebata na Ethereum Akpa ego](https://docs.ethhub.io/using-ethereum/wallets/intro-to-ethereum-wallets/) _Emelitere ohuru otutu mgbe- EthHub_
+- [Ibido ya MetaMask](https://metamask.zendesk.com/hc/en-us/articles/360015489531-Getting-Started-With-MetaMask-Part-1-) _Dec 4, 2018 - MetaMask_
+- [Etu esi emebe obere akpa ego](https://support.mycrypto.com/how-to/getting-started/how-to-create-a-wallet)_Emelitere ohuru oge niile - MyCrypto_
 - [Akpa ego Ethereum kachasị mma 2019: Ngwaoru komputa vs. Sọftụwia vs. Akwụkwọ](https://blockonomi.com/best-ethereum-wallets/)_Dec 15, 2018 - Blockonomi_
 
 Chọrọ ịmatakwu banyere ịchekwa ego ndebe na ijikwa igodo onwe?
 
-- [Ichegide Onwe Gị na Ego Gị](https://support.mycrypto.com/staying-safe/protecting-yourself-and-your-funds)_ Emelitere ohuru otutu mgbe- MyCrypto _
-- [ Uzo eji edebe crypto gị na nchekwa](https://blog.coinbase.com/the-keys-to-keeping-your-crypto-safe-96d497cce6cf)_ Jan 16, 2019 - Coinbase blog_
-- [ Etu esi echekwa akunuba dijitalụ na Ethereum](https://media.consensys.net/how-to-store-digital-assets-on-ethereum-a2bfdcf66bd0)_May 30, 2018 - ConsenSys_
-- [O di gi mkpa n'ezie i nweta obere akpa ego ngwaoru komputa?](https://medium.com/ledger-on-security-and-blockchain/ledger-101-part-1-do-you-really-need-a-hardware-wallet-7f5abbadd945)_Sep 24, 2018 - Ledger_
+- [Ichegide Onwe Gị na Ego Gị](https://support.mycrypto.com/staying-safe/protecting-yourself-and-your-funds) _Emelitere ohuru otutu mgbe - MyCrypto_
+- [Uzo eji edebe crypto gị na nchekwa](https://blog.coinbase.com/the-keys-to-keeping-your-crypto-safe-96d497cce6cf) _Jan 16, 2019 - Coinbase blog_
+- [Etu esi echekwa akunuba dijitalụ na Ethereum](https://media.consensys.net/how-to-store-digital-assets-on-ethereum-a2bfdcf66bd0) _May 30, 2018 - ConsenSys_
+- [O di gi mkpa n'ezie i nweta obere akpa ego ngwaoru komputa?](https://medium.com/ledger-on-security-and-blockchain/ledger-101-part-1-do-you-really-need-a-hardware-wallet-7f5abbadd945) _Sep 24, 2018 - Ledger_

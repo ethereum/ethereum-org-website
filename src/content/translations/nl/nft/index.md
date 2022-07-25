@@ -49,7 +49,7 @@ Dit is hoe het internet van NFT's in vergelijking met het internet dat de meeste
 De NFT-wereld is relatief nieuw. In theorie is het toepassingsgebied van de NFT's zaken die uniek zijn en waarneembaar eigendom vereisen. Hier zijn enkele voorbeelden van NFT's die vandaag de dag bestaan, zodat u een idee krijgt:
 
 - [Een uniek digitaal kunstwerk](https://foundation.app/artworks)
-- [Een unieke sneaker in een limited edition modelijn ](https://www.metagrail.co/auctions/91cf83fb-3477-4155-aae8-6dcb9b853397)
+- [Een unieke sneaker in een limited edition modelijn](https://www.metagrail.co/auctions/91cf83fb-3477-4155-aae8-6dcb9b853397)
 - [Een in-game item](https://market.decentraland.org/)
 - [Een essay](https://zora.co/0x517bab7661C315C63C6465EEd1b4248e6f7FE183/145)
 - [Een digitaal verzamelobject](https://www.larvalabs.com/cryptopunks/details/1)

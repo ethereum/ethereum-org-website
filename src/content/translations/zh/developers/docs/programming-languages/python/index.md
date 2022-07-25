@@ -49,7 +49,7 @@ incomplete: true
 ### 活跃： {#active}
 
 - [Web3.py](https://github.com/ethereum/web3.py) - _用于与以太坊交互的 Python 库_
-- [Ape ](https://github.com/ApeWorX/ape) - _面向 Pythonista、数据科学家和安全专业人员的智能合约开发工具_
+- [Ape](https://github.com/ApeWorX/ape) - _面向 Pythonista、数据科学家和安全专业人员的智能合约开发工具_
 - [Brownie](https://github.com/eth-brownie/brownie) - _一个用于部署、测试以太坊智能合约并与之交互的 Python 框架_
 - [Vyper](https://github.com/ethereum/vyper/) - _一种具有 Python 风格的以太坊虚拟机智能合约编程语言_
 - [py-evm](https://github.com/ethereum/py-evm) - _以太坊虚拟机的实现_

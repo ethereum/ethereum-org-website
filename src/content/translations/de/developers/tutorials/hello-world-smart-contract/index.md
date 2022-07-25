@@ -15,7 +15,7 @@ sidebar: true
 published: 2021-03-31
 ---
 
-Wenn Sie neu in der Blockchain-Entwicklung sind und nicht wissen, wo Sie anfangen sollen, oder wenn Sie einfach nur verstehen wollen, wie man Smart Contracts einsetzt und mit ihnen interagiert, ist dieser Leitfaden genau das Richtige für Sie. Wir werden die Erstellung und den Einsatz eines einfachen Smart Contracts auf dem Ropsten-Testnet unter Verwendung einer virtuellen Wallet erläutern ([Metamask](https://metamask.io/)), [Solidity](https://docs.soliditylang.org/en/v0.8.0/), [Hardhat](https://hardhat.org/) and [Alchemy](https://alchemyapi.io/eth) (Machen Sie sich keine Sorgen, wenn Sie noch nicht verstehen, was das alles bedeutet. Wir werden es Ihnen erklären).
+Wenn Sie neu in der Blockchain-Entwicklung sind und nicht wissen, wo Sie anfangen sollen, oder wenn Sie einfach nur verstehen wollen, wie man Smart Contracts einsetzt und mit ihnen interagiert, ist dieser Leitfaden genau das Richtige für Sie. Wir werden die Erstellung und den Einsatz eines einfachen Smart Contracts auf dem Ropsten-Testnet unter Verwendung einer virtuellen Wallet erläutern ([MetaMask](https://metamask.io/)), [Solidity](https://docs.soliditylang.org/en/v0.8.0/), [Hardhat](https://hardhat.org/) and [Alchemy](https://alchemyapi.io/eth) (Machen Sie sich keine Sorgen, wenn Sie noch nicht verstehen, was das alles bedeutet. Wir werden es Ihnen erklären).
 
 Im zweiten Teil dieses Tutorials werden wir erläutern, wie wir mit unserem Smart Contract interagieren können, sobald er bereitgestellt wurde. Im dritten Teil erläutern wir dann, wie er auf Etherscan veröffentlicht wird.
 
@@ -41,7 +41,7 @@ Sobald Sie ein Alchemy-Konto erstellt haben, können Sie einen API-Schlüssel ge
 
 ## Schritt 3: Ethereum-Konto (Adresse) erstellen {#step-3}
 
-Wir benötigen ein Ethereum-Konto, um Transaktionen zu senden und zu empfangen. In diesem Tutorial verwenden wir Metamask, eine virtuelle Wallet im Browser, mit der Sie Ihre Ethereum-Kontoadresse verwalten können. Weitere Informationen zu [Transaktionen](/developers/docs/transactions/).
+Wir benötigen ein Ethereum-Konto, um Transaktionen zu senden und zu empfangen. In diesem Tutorial verwenden wir MetaMask, eine virtuelle Wallet im Browser, mit der Sie Ihre Ethereum-Kontoadresse verwalten können. Weitere Informationen zu [Transaktionen](/developers/docs/transactions/).
 
 Sie können MetaMask [hier](https://metamask.io/download.html) kostenlos herunterladen und ein Konto erstellen. Wenn Sie ein Konto erstellen oder wenn Sie bereits ein Konto haben, stellen Sie sicher, dass Sie oben rechts zum "Ropsten-Testnet" wechseln (damit wir nicht mit echtem Geld arbeiten).
 
@@ -49,7 +49,7 @@ Sie können MetaMask [hier](https://metamask.io/download.html) kostenlos herunte
 
 ## Schritt 4: Ether von einem Faucet hinzufügen {#step-4}
 
-Um unseren Smart Contract im Testnet einzusetzen, benötigen wir einige Fake-ETH. Um ETH zu erhalten, können Sie auf den [Ropsten Faucet](https://faucet.dimensions.network/) gehen und Ihre Ropsten-Kontoadresse eingeben. Klicken Sie dann auf "Ropsten-ETH senden". Aufgrund des Netzwerkverkehrs kann es einige Zeit dauern, bis Sie Ihre Fake-ETH erhalten. Sie sollten kurz darauf ETH auf Ihrem Metamask-Konto sehen.
+Um unseren Smart Contract im Testnet einzusetzen, benötigen wir einige Fake-ETH. Um ETH zu erhalten, können Sie auf den [Ropsten Faucet](https://faucet.dimensions.network/) gehen und Ihre Ropsten-Kontoadresse eingeben. Klicken Sie dann auf "Ropsten-ETH senden". Aufgrund des Netzwerkverkehrs kann es einige Zeit dauern, bis Sie Ihre Fake-ETH erhalten. Sie sollten kurz darauf ETH auf Ihrem MetaMask-Konto sehen.
 
 ## Schritt 5: Guthaben prüfen {#step-5}
 

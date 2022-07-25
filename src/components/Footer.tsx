@@ -143,8 +143,8 @@ const Footer: React.FC<IProps> = () => {
       title: "use-ethereum",
       links: [
         {
-          to: `/wallets/`,
-          text: "ethereum-wallets",
+          text: "find-wallet",
+          to: "/wallets/find-wallet/",
         },
         {
           to: `/get-eth/`,
@@ -182,6 +182,10 @@ const Footer: React.FC<IProps> = () => {
         {
           to: `/eth/`,
           text: "what-is-ether",
+        },
+        {
+          to: `/wallets/`,
+          text: "ethereum-wallets",
         },
         {
           to: `/learn/`,

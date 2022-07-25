@@ -20,8 +20,8 @@ The ethereum.org website, like Ethereum more broadly, is an open-source project.
   _– Work we've identified that needs doing_
 - [Join the translation program](/contributing/translation-program/)
   _– Help us bring ethereum.org to new languages_
-- [Add community articles](/contributing/content-resources/)
-  _– Add a helpful article to a relevant page_
+- [Add community resources](/contributing/content-resources/)
+  _– Add a helpful article or resource to a relevant page_
 - [Add a product](/contributing/adding-products/)
   _– Add a dapp or wallet to a relevant page_
 - [Add developer tools](/contributing/adding-developer-tools/)

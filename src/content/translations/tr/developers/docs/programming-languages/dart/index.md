@@ -14,7 +14,7 @@ incomplete: true
   1.  [Truffle geliştirme paketini](https://www.trufflesuite.com/) yükleme
   2.  [Solidity](https://soliditylang.org/)'de akıllı sözleşme yazma
   3.  Dart'ta bir kullanıcı arayüzü yazma
-- [Flutter ile bir Mobil dApp oluşturmak ](https://medium.com/dash-community/building-a-mobile-dapp-with-flutter-be945c80315a) çok daha kısadır, temel bilgileri zaten biliyorsanız bu daha da iyi olabilir.
+- [Flutter ile bir Mobil dApp oluşturmak](https://medium.com/dash-community/building-a-mobile-dapp-with-flutter-be945c80315a) çok daha kısadır, temel bilgileri zaten biliyorsanız bu daha da iyi olabilir.
 - Video izleyerek öğrenmeyi tercih ediyorsanız yaklaşık bir saat uzunluğundaki [İlk Blok Zinciri Flutter Uygulamanızı Oluşturun](https://www.youtube.com/watch?v=3Eeh3pJ6PeA) videosunu izleyebilirsiniz
 - Sabırsızsanız, yaklaşık yirmi dakika uzunluğundaki [Flutter ve Dart ile Ethereum Üzerinde bir Blok Zinciri Merkeziyetsiz Uygulaması Oluşturma](https://www.youtube.com/watch?v=jaMFEOCq_1s) videosunu tercih edebilirsiniz
 - [MetaMask'i Flutter uygulamasına entegre etme](https://youtu.be/8qzVDje3IWk) - bu kısa video, MetaMask'i Flutter uygulamalarınıza entegre etme adımlarında size yol gösterir.

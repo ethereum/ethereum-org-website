@@ -108,7 +108,7 @@ Ethereum.org 翻译计划旨在通过将 Ethereum.org 和其他以太坊内容�
   请不要使用机器翻译来翻译项目。 所有译文在被添加到网站之前均会进行审核。 如果您提供的译文被发现是机器翻译的，译文将不会被应用，经常使用机器翻译的贡献者将被从项目中移除。
 </InfoBanner>
 
-还有其他问题？ 或者想与我们的团队和其他翻译人员合作？ 请在我们的 [ethereum.org Discord 服务器的 ](https://discord.gg/6WX7E97) #translations 频道中发布
+还有其他问题？ 或者想与我们的团队和其他翻译人员合作？ 请在我们的 [ethereum.org Discord 服务器的](https://discord.gg/6WX7E97) #translations 频道中发布
 
 您也可以通过向 translations@ethereum.org 发送邮件联系我们
 
@@ -146,7 +146,7 @@ Ethereum.org 翻译计划旨在通过将 Ethereum.org 和其他以太坊内容�
 ### 社区 {#communities}
 
 - [特定语言翻译组](https://discord.gg/6WX7E97)。 _- 让 ethereum.org 翻译者加入 Discord 翻译组的计划_。
-- [中文翻译组 ](https://www.notion.so/Ethereum-org-05375fe0a94c4214acaf90f42ba40171) _– 方便中文翻译人员之间协作的 Notion 页面_
+- [中文翻译组](https://www.notion.so/Ethereum-org-05375fe0a94c4214acaf90f42ba40171) _– 方便中文翻译人员之间协作的 Notion 页面_
 
 ### 内容存储桶概述 {#content-buckets-overview}
 

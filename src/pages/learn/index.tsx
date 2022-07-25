@@ -226,7 +226,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
     buttons: [
       {
         content: "Let's get started",
-        pathId: tocItems[0].id,
+        toId: tocItems[0].id,
       },
     ],
   }

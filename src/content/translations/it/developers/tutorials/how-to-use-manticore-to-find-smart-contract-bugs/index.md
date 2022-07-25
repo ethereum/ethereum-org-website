@@ -10,7 +10,7 @@ tags:
   - "sicurezza"
   - "test"
   - "verifica formale"
-skill: avanzato
+skill: advanced
 published: 2020-01-13
 source: Creare contratti sicuri
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore
@@ -84,7 +84,7 @@ Poiché `f()` contiene due percorsi, una DSE costruirà due diversi predicati di
 - Percorso 1: `a == 65`
 - Percorso 2: `Not (a == 65)`
 
-Ogni predicato di percorso è una formula matematica che può essere passata a un cosiddetto [risolutore SMT](https://github.com/trailofbits/building-secure-contracts/blob/master/program-analysis/determine-properties.md), che proverà a risolvere l'equazione. Per il `Percorso 1`, il risolutore dirà che il percorso può essere esplorato con `a = 65`. Per il `Percorso 2`, il risolutore può assegnare ad `a` tutti i valori diversi da 65, per esempio `a = 0`.
+Ogni predicato di percorso è una formula matematica che può essere passata a un cosiddetto [risolutore SMT](https://wikipedia.org/wiki/Satisfiability_modulo_theories), che proverà a risolvere l'equazione. Per il `Percorso 1`, il risolutore dirà che il percorso può essere esplorato con `a = 65`. Per il `Percorso 2`, il risolutore può assegnare ad `a` tutti i valori diversi da 65, per esempio `a = 0`.
 
 ### Verifica delle proprietà {#verifying-properties}
 
@@ -207,13 +207,13 @@ from manticore.ethereum import ManticoreEVM
 m = ManticoreEVM()
 ```
 
-Un account senza contratto viene creato usando [m.create_account](https://manticore.readthedocs.io/en/latest/api.html#manticore.ethereum.ManticoreEVM.create_account):
+Un account senza contratto viene creato usando [m.create_account](https://manticore.readthedocs.io/en/latest/evm.html?highlight=create_account#manticore.ethereum.ManticoreEVM.create_account):
 
 ```python
 user_account = m.create_account(balance=1000)
 ```
 
-Un contratto Solidity può essere distribuito usando [m.solidity_create_contract](https://manticore.readthedocs.io/en/latest/api.html#manticore.ethereum.ManticoreEVM.solidity_create_contract):
+Un contratto Solidity può essere distribuito usando [m.solidity_create_contract](https://manticore.readthedocs.io/en/latest/evm.html?highlight=solidity_create#manticore.ethereum.ManticoreEVM.create_contract):
 
 ```solidity
 source_code = '''
@@ -232,7 +232,7 @@ contract_account = m.solidity_create_contract(source_code, owner=user_account)
 
 #### Riepilogo {#summary}
 
-- Puoi creare account utente e di contratto con [m.create_account](https://manticore.readthedocs.io/en/latest/api.html#manticore.ethereum.ManticoreEVM.create_account) e [m.solidity_create_contract](https://manticore.readthedocs.io/en/latest/api.html#manticore.ethereum.ManticoreEVM.solidity_create_contract.
+- Puoi creare account utente e di contratto con [m.create_account](https://manticore.readthedocs.io/en/latest/evm.html?highlight=create_account#manticore.ethereum.ManticoreEVM.create_account) e [m.solidity_create_contract](https://manticore.readthedocs.io/en/latest/evm.html?highlight=solidity_create#manticore.ethereum.ManticoreEVM.create_contract).
 
 ### Esecuzione di transazioni {#executing-transactions}
 
@@ -243,7 +243,7 @@ Manticore supporta due tipi di transazione:
 
 #### Transazione grezza {#raw-transaction}
 
-Una transazione grezza viene eseguita usando [m.transaction](https://manticore.readthedocs.io/en/latest/api.html#manticore.ethereum.ManticoreEVM.transaction):
+Una transazione grezza viene eseguita usando [m.transaction](https://manticore.readthedocs.io/en/latest/evm.html?highlight=transaction#manticore.ethereum.ManticoreEVM.transaction):
 
 ```python
 m.transaction(caller=user_account,
@@ -254,8 +254,8 @@ m.transaction(caller=user_account,
 
 Il chiamante, l'indirizzo, i dati o il valore della transazione possono essere concreti o simbolici:
 
-- [m.make_symbolic_value](https://manticore.readthedocs.io/en/latest/api.html#manticore.ethereum.ManticoreEVM.make_symbolic_value) crea un valore simbolico.
-- [m.make_symbolic_buffer(size)](https://manticore.readthedocs.io/en/latest/api.html#manticore.ethereum.ManticoreEVM.make_symbolic_buffer) crea un array di byte simbolici.
+- [m.make_symbolic_value](https://manticore.readthedocs.io/en/latest/evm.html?highlight=make_symbolic_value#manticore.ethereum.ManticoreEVM.make_symbolic_value) crea un valore simbolico.
+- [m.make_symbolic_buffer(size)](https://manticore.readthedocs.io/en/latest/evm.html?highlight=make_symbolic_buffer#manticore.ethereum.ManticoreEVM.make_symbolic_buffer) crea un array di byte simbolici.
 
 Ad esempio:
 
@@ -297,7 +297,7 @@ print("Results are in {}".format(m.workspace))
 
 ### Chiusura dell'esplorazione {#terminate-the-exploration}
 
-Per interrompere l'esplorazione usa [m.finalize()](https://manticore.readthedocs.io/en/latest/api.html#manticore.ethereum.ManticoreEVM.finalize). Nessun'altra transazione dovrebbe essere inviata una volta chiamato questo metodo e dopo che Manticore ha generato test case per ognuno dei percorsi esplorati.
+Per interrompere l'esplorazione usa [m.finalize()](https://manticore.readthedocs.io/en/latest/evm.html?highlight=finalize#manticore.ethereum.ManticoreEVM.finalize). Nessun'altra transazione dovrebbe essere inviata una volta chiamato questo metodo e dopo che Manticore ha generato test case per ognuno dei percorsi esplorati.
 
 ### Riepilogo: esecuzione in Manticore {#summary-running-under-manticore}
 
@@ -366,7 +366,7 @@ data = ABI.deserialize("uint", data)
 
 ### Come generare test case {#how-to-generate-testcase}
 
-Usa [m.generate_testcase(state, name)](https://manticore.readthedocs.io/en/latest/api.html#manticore.ethereum.ManticoreEVM.generate_testcase) per generare test case:
+Usa [m.generate_testcase(state, name)](https://manticore.readthedocs.io/en/latest/evm.html?highlight=generate_testcase#manticore.ethereum.ManticoreEVM.generate_testcase) per generare test case:
 
 ```python
 m.generate_testcase(state, 'BugFound')
@@ -465,7 +465,7 @@ m.transaction(caller=user_account,
 
 #### Vincolo di stato {#state-constraint}
 
-Usa [state.constrain(constraint)](https://manticore.readthedocs.io/en/latest/api.html?highlight=operator#manticore.core.state.StateBase.constrain) per aggiungere un vincolo a uno stato specifico Può essere usato per vincolare lo stato dopo la sua esplorazione per verificarvi della proprietà.
+Usa [state.constrain(constraint)](https://manticore.readthedocs.io/en/latest/states.html?highlight=StateBase#manticore.core.state.StateBase.constrain) per aggiungere un vincolo a uno stato specifico Può essere usato per vincolare lo stato dopo la sua esplorazione per verificarvi della proprietà.
 
 ### Controllo di un vincolo {#checking-constraint}
 

@@ -20,7 +20,7 @@ Si eres nuevo en el tema de los nodos, te recomendamos primero revisar nuestra a
 
 Puedes observar la red de Ethereum en tiempo real accediendo este [mapa de nodos](https://etherscan.io/nodetracker).
 
-Existen varios [clientes de Ethereum ](/developers/docs/nodes-and-clients/#execution-clients), en una variedad de lenguajes de programación como Go, Rust, JavaScript, Typescript, Python, C# .NET, Nim y Java. Lo que estas implementaciones tienen en común es que todas siguen una especificación formal (originalmente, el [libro amarillo de Ethereum](https://ethereum.github.io/yellowpaper/paper.pdf)). Esta especificación determina cómo funcionan la red de Ethereum y las funciones de la blockchain.
+Existen varios [clientes de Ethereum](/developers/docs/nodes-and-clients/#execution-clients), en una variedad de lenguajes de programación como Go, Rust, JavaScript, Typescript, Python, C# .NET, Nim y Java. Lo que estas implementaciones tienen en común es que todas siguen una especificación formal (originalmente, el [libro amarillo de Ethereum](https://ethereum.github.io/yellowpaper/paper.pdf)). Esta especificación determina cómo funcionan la red de Ethereum y las funciones de la blockchain.
 
 ![Cliente de ejecución](./client-diagram.png) Diagrama simplificado de las características del cliente de Ethereum.
 
@@ -320,5 +320,5 @@ Existe mucha información acerca de los clientes de Ethereum en internet. Estos 
 
 ## Tutoriales relacionados {#related-tutorials}
 
-- [Ejecución de un nodo con Geth](/developers/tutorials/run-light-node-geth/)_: cómo descargar, instalar y ejecutar Geth. Covering syncmodes, the JavaScript console, and more._
-- [Convierta su Raspberry Pi 4 en un nodo validador con solo intercambiar su tarjeta MicroSD - Guía de instalación ](/developers/tutorials/run-node-raspberry-pi/) _ Intercambie su Raspberry Pi 4, conecte un cable ethernet, conecte el disco SSD y encienda el dispositivo para convertir el Raspberry Pi 4 en un nodo completo de Ethereum mediante la activación de la capa de ejecución (red principal) o la capa de consenso (cadena de baliza/validador)._
+- [Ejecución de un nodo con Geth](/developers/tutorials/run-light-node-geth/) _: cómo descargar, instalar y ejecutar Geth. Covering syncmodes, the JavaScript console, and more._
+- [Convierta su Raspberry Pi 4 en un nodo validador con solo intercambiar su tarjeta MicroSD - Guía de instalación](/developers/tutorials/run-node-raspberry-pi/) _Intercambie su Raspberry Pi 4, conecte un cable ethernet, conecte el disco SSD y encienda el dispositivo para convertir el Raspberry Pi 4 en un nodo completo de Ethereum mediante la activación de la capa de ejecución (red principal) o la capa de consenso (cadena de baliza/validador)._

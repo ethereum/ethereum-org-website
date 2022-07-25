@@ -1,5 +1,14 @@
 [
   {
+    "title": "ETHVietnam",
+    "to": "https://www.eth-vietnam.com/",
+    "sponsor": null,
+    "location": "Ho Chi Minh City, Vietnam",
+    "description": "ETHVietnam is the biggest conference ever that brings all top experts in the industry to provide more value to the community.",
+    "startDate": "2022-09-09",
+    "endDate": "2022-09-11"
+  },
+  {
     "title": "ETHDenver",
     "to": "https://www.ethdenver.com/",
     "sponsor": null,
