@@ -5,7 +5,7 @@ lang: en
 sidebar: true
 ---
 
-Proof-of-stake (PoS) is Ethereum's [consensus mechanism](/developers/docs/consensus-mechanisms/). Ethereum switched on its proof-of-stake mechanism in 2022 because it is more secure, less energy-intensive, and better for implementing new scaling solutions compared to the previous consensus mechanism, [proof-of-work](/developers/docs/consensus-mechanisms/pow).
+Proof-of-stake (PoS) underlies Ethereum's [consensus mechanism](/developers/docs/consensus-mechanisms/). Ethereum switched on its proof-of-stake mechanism in 2022 because it is more secure, less energy-intensive, and better for implementing new scaling solutions compared to the previous [proof-of-work](/developers/docs/consensus-mechanisms/pow) architecture.
 
 ## Prerequisites {#prerequisites}
 
@@ -13,7 +13,7 @@ To better understand this page, we recommend you first read up on [consensus mec
 
 ## What is proof-of-stake (PoS)? {#what-is-pos}
 
-Proof-of-stake is a type of [consensus mechanism](/developers/docs/consensus-mechanisms/) used by blockchains to achieve distributed consensus. In proof-of-work, miners prove they have capital at risk by expending energy. In proof-of-stake, validators explicitly stake capital in the form of ETH into a smart contract on Ethereum. This staked ETH then acts as collateral that can be destroyed if the validator behaves dishonestly or lazily. The validator is then responsible for checking that new blocks propagated over the network are valid and occasionally creating and propagating new blocks themselves.
+Proof-of-stake underlies certain [consensus mechanisms](/developers/docs/consensus-mechanisms/) used by blockchains to achieve distributed consensus. In proof-of-work, miners prove they have capital at risk by expending energy. Ethereum uses proof-of-stake, where validators explicitly stake capital in the form of ETH into a smart contract on Ethereum. This staked ETH then acts as collateral that can be destroyed if the validator behaves dishonestly or lazily. The validator is then responsible for checking that new blocks propagated over the network are valid and occasionally creating and propagating new blocks themselves.
 
 Proof-of-stake comes with a number of improvements to the now-deprecated proof-of-work system:
 
