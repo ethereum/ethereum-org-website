@@ -20,7 +20,7 @@ source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/create-eth-app
 ---
 
-Geçen sefer [Solidity'nin büyük resmine baktık ve ](https://soliditydeveloper.com/solidity-overview-2020) hâlihazırda [create-eth-app](https://github.com/PaulRBerg/create-eth-app)'den bahsettik. Şimdi onu nasıl kullanacağınızı, hangi özelliklerin entegre olduğunu ve nasıl genişleteceğinize dair ek fikirleri öğreneceksiniz. [Sablier](http://sablier.finance/)'in kurucusu Paul Razvan Berg tarafından başlatılan bu uygulama, ön uç geliştirmenizi başlatacak ve beraberinde aralarından seçim yapabileceğiniz çeşitli isteğe bağlı entegrasyonlar getiriyor.
+Geçen sefer [Solidity'nin büyük resmine baktık ve](https://soliditydeveloper.com/solidity-overview-2020) hâlihazırda [create-eth-app](https://github.com/PaulRBerg/create-eth-app)'den bahsettik. Şimdi onu nasıl kullanacağınızı, hangi özelliklerin entegre olduğunu ve nasıl genişleteceğinize dair ek fikirleri öğreneceksiniz. [Sablier](http://sablier.finance/)'in kurucusu Paul Razvan Berg tarafından başlatılan bu uygulama, ön uç geliştirmenizi başlatacak ve beraberinde aralarından seçim yapabileceğiniz çeşitli isteğe bağlı entegrasyonlar getiriyor.
 
 ## Kurulum {#installation}
 

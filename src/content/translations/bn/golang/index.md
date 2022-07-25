@@ -32,7 +32,7 @@ sidebar: true
 - [ইথেরিয়ামের সঙ্গে সংযুক্ত করার জন্য Golang ব্যবহার করা](https://www.youtube.com/watch?v=-7uChuO_VzM)
 - [Golang ব্যবহার করে ইথেরিয়াম স্মার্ট কন্ট্র্যাক্টস ডেপ্লয় করা](https://www.youtube.com/watch?v=pytGqQmDslE)
 - [গো-তে ইথেরিয়াম স্মার্ট কন্ট্র্যাক্টস টেস্ট ও ডেপ্লয় করার জন্য একটি ধাপে ধাপে নির্দেশিকা](https://hackernoon.com/a-step-by-step-guide-to-testing-and-deploying-ethereum-smart-contracts-in-go-9fc34b178d78)
-- [ইবুক: গো-এর সঙ্গে ইথেরিয়াম অ্যাপ্লিকেশন](https://goethereumbook.org/) - _ তৈরি করার জন্য গো-এর সঙ্গে ইথেরিয়াম ডেভেলপমেন্ট_
+- [ইবুক: গো-এর সঙ্গে ইথেরিয়াম অ্যাপ্লিকেশন](https://goethereumbook.org/) - _তৈরি করার জন্য গো-এর সঙ্গে ইথেরিয়াম ডেভেলপমেন্ট_
 
 ## মধ্যবর্তী প্রবন্ধ ও নথিপত্র {#intermediate-articles-and-docs}
 

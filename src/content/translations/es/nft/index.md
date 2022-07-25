@@ -398,7 +398,7 @@ Es una reducción de al menos 99,95% en el uso total de energía respecto a la e
 
 El costo de 100.000 transacciones de Visa es de 149 kwH – [Consumo de energía promedio de la red Bitcoin por transacción en comparación con la red VISA en 2020, Statista](https://www.statista.com/statistics/881541/bitcoin-energy-consumption-transaction-comparison-visa/)
 
-Hasta septiembre de 2020, procesaron 140.839.000.000 transacciones – [Informe financiero de Visa Q4 2020 ](https://s1.q4cdn.com/050606653/files/doc_financials/2020/q4/Visa-Inc.-Q4-2020-Operational-Performance-Data.pdf)
+Hasta septiembre de 2020, procesaron 140.839.000.000 transacciones – [Informe financiero de Visa Q4 2020](https://s1.q4cdn.com/050606653/files/doc_financials/2020/q4/Visa-Inc.-Q4-2020-Operational-Performance-Data.pdf)
 
 #### 3. Uso de energía para 100.000 transacciones en una red de prueba de participación fragmentada {#fn-3}
 

@@ -151,7 +151,7 @@ Uygulamanızı Katman 2 ölçeklenebilirlik çözümünün üzerine inşa etmek,
 ### Referanslar ve sertifikalar {#credentials}
 
 - [Utah Yerel Yönetimleri](http://www.utahcounty.gov/Dept/ClerkAud/DigitalCertCopy.html) _Ethereum'da dijital evlilik sertifikaları veriyor_
-- [İki İtalyan lisesi ](https://cointelegraph.com/news/two-italian-high-schools-to-issue-digital-diplomas-with-blockchain) _Ethereum Mainnet'te dijital diplomalar verdi_
+- [İki İtalyan lisesi](https://cointelegraph.com/news/two-italian-high-schools-to-issue-digital-diplomas-with-blockchain) _Ethereum Mainnet'te dijital diplomalar verdi_
 - [St. Gallen Üniversitesi](https://cointelegraph.com/news/swiss-university-fights-fake-diplomas-with-blockchain-technology) _bir İsviçre üniversitesinin diplomaları doğrulamaya yönelik pilot projesi_
 - [Malta](https://cointelegraph.com/news/malta-to-store-education-certificates-on-a-blockchain) _ tüm eğitim sertifikaları [Hyland](https://www.learningmachine.com/) tarafından Mainnet'te kaydedilir_
 - [Pohang Bilim ve Teknoloji Üniversitesi](https://www.theblockcrypto.com/linked/55176/south-korean-university-issues-blockchain-stored-diplomas-amid-the-spread-of-the-coronavirus) _Güney Kore üniversitesi yeni mezunlarına blok zincirinde saklanan diplomalar veriyor_

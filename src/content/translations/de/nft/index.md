@@ -361,7 +361,7 @@ Die meisten NFTs werden mit dem einheitlichen Standard [ERC-721](/developers/doc
 
 ## Weiterführende Informationen {#further-reading}
 
-- [Daten zu Krypto art-Kunst ](https://cryptoart.io/data) – Richard Chen, automatisch aktualisiert
+- [Daten zu Krypto art-Kunst](https://cryptoart.io/data) – Richard Chen, automatisch aktualisiert
 - [OpenSea: OpenSea: die NFT-Bibel](https://opensea.io/blog/guides/non-fungible-tokens/) – _Devin Fizner, 10. Januar 2020_
 - [NFT-Leitfaden für Einsteiger](https://linda.mirror.xyz/df649d61efb92c910464a4e74ae213c4cab150b9cbcc4b7fb6090fc77881a95d) – _Linda Xie, Januar 2020_
 - [Alles, was Sie über das Metaverse wissen müssen](https://foundation.app/blog/enter-the-metaverse) – _Foundation-Team, foundation.app_

@@ -82,7 +82,7 @@ incomplete: true
 
 - [什么是区块链共识算法？](https://academy.binance.com/en/articles/what-is-a-blockchain-consensus-algorithm)
 - [什么是 Nakamoto 共识？ 完整的初学者指南](https://blockonomi.com/nakamoto-consensus/)
-- [Casper 的工作原理 ](https://medium.com/unitychain/intro-to-casper-ffg-9ed944d98b2d)
+- [Casper 的工作原理](https://medium.com/unitychain/intro-to-casper-ffg-9ed944d98b2d)
 - [关于工作量证明区块链的安全性和性能](https://eprint.iacr.org/2016/555.pdf)
 
 _还有哪些社区资源对您有所帮助？ 请编辑本页面并添加！_

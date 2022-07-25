@@ -41,7 +41,7 @@ Una vez que haya creado una cuenta de Alchemy, puede generar una clave de API cr
 
 ## Paso 3: Crear una cuenta Ethereum (dirección) {#step-3}
 
-Necesitamos tener una cuenta Ethereum para enviar y recibir transacciones. Para este tutorial, usaremos MetaMask, una cartera virtual en el navegador usada para manejar la dirección de su cuenta Ethereum. Más información en [transacciones ](/developers/docs/transactions/).
+Necesitamos tener una cuenta Ethereum para enviar y recibir transacciones. Para este tutorial, usaremos MetaMask, una cartera virtual en el navegador usada para manejar la dirección de su cuenta Ethereum. Más información en [transacciones](/developers/docs/transactions/).
 
 Puede descargar y crear una cuenta MetaMask gratis [aquí](https://metamask.io/download.html). Cuando esté creando una cuenta, o ya tenga una, asegúrese de cambiar a la «Red de pruebas de Robsten» en la parte superior derecha ( para que no tratemos con dinero real).
 
