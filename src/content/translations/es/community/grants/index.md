@@ -33,8 +33,8 @@ Estos proyectos han creado sus propias subvenciones para proyectos con fines de 
 - [dYdX Programa de subvenciones](https://dydxgrants.com/): _[dYdX](https://dydx.exchange/) intercambio descentralizado_
 - [Lido Ecosystem Grants Organisation (LEGO)](https://lego.lido.fi/): _[ecosistema financiero](https://lido.fi/) Lido_
 - [Programa de subvenciones mStable](https://docs.mstable.org/advanced/grants-program) - _[comunidad](https://mstable.org/) mStable_
-- [TheGraph](https://airtable.com/shrdfvnFvVch3IOVm) - _[ecosistema The Graph](https://thegraph.com/)_
-- [Programa de subvenciones Uniswap](https://www.unigrants.org/): _[comunidad Uniswap_](https://uniswap.org/)\_
+- [TheGraph](https://airtable.com/shrdfvnFvVch3IOVm) - _[ecosistema](https://thegraph.com/) The Graph_
+- [Programa de subvenciones Uniswap](https://www.unigrants.org/): _[comunidad](https://uniswap.org/) Uniswap_
 
 ## Financiamiento cuadrático {#quadratic-funding}
 
