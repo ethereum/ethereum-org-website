@@ -108,7 +108,7 @@ Kama unazungumza lugha zaidi ya moja na ungependa kutusaidia kufikia watu wengi 
 
 - [Kundi la Tino](https://wiki.tino.org/ethereum-la-gi/) - muihstasari wa Ethereum, dApps, pochi na maulizo
 - [Bonyeza Chi Bitcoin](https://tapchibitcoin.io/tap-chi/tin-tuc-ethereum-eth) - jukwaa la mtandaoni likiwa na kurasa ndogo za elimu na taarifa juu ya Ethereum
-- [Coin68](https://coin68.com/ethereum-tieu-diem/) - lango la sarafu ya kripto likiwa na taarifa za Etherum na maudhui ya kuelimisha
+- [Coin68](https://coin68.com/ethereum-tieu-diem/) - lango la sarafu ya kripto likiwa na taarifa za Ethereum na maudhui ya kuelimisha
 
 ### Kijapani {#ja}
 

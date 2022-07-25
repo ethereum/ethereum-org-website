@@ -96,7 +96,7 @@ If you're more of a technical user, learn how to [spin up your own node](/develo
 ### منابع {#resources}
 
 - [اجرای گره‌های کامل اتریوم: راهنمایی کامل](https://medium.com/coinmonks/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _- جاستین لروکس، 7 نوامبر 2019_
-- [صفحه‌ی تقلب پیکربندی گره‌ها ](https://dev.to/5chdn/ethereum-node-configuration-modes-cheat-sheet-25l8) _5 ژانویه 2019 - آفری شودن_
+- [صفحه‌ی تقلب پیکربندی گره‌ها](https://dev.to/5chdn/ethereum-node-configuration-modes-cheat-sheet-25l8) _5 ژانویه 2019 - آفری شودن_
 - [چگونه یگ گره‌ی geth را نصب و اجرا کنیم](https://www.quiknode.io/guides/infrastructure/how-to-install-and-run-a-geth-node) _‏ 4 اکتبر 2020 - ساهیل سن_
 - [چگونه یک گره‌ی OpenEthereum (parity سابق)](https://www.quiknode.io/guides/infrastructure/how-to-run-a-openethereum-ex-parity-client-node) _‏22 سپتامبر 2020 - ساهیل سان_
 

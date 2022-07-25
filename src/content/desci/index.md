@@ -118,6 +118,6 @@ Explore projects and join the DeSci community.
 
 ### Videos {#videos}
 
-- [What's Decentralized Science? ](https://www.youtube.com/watch?v=-DeMklVWNdA)
+- [What's Decentralized Science?](https://www.youtube.com/watch?v=-DeMklVWNdA)
 - [Conversation between Vitalik Buterin and the scientist Aubrey de Grey about the intersection of longevity research and crypto](https://www.youtube.com/watch?v=x9TSJK1widA)
 - [Scientific Publishing Is Broken. Can Web3 Fix It?](https://www.youtube.com/watch?v=WkvzYgCvWj8)

@@ -20,7 +20,7 @@ If you're new to the topic of nodes, we recommend first checking out our user-fr
 
 Puteți vizualiza în timp real rețeaua Ethereum uitându-vă pe această [hartă a nodurilor](https://etherscan.io/nodetracker).
 
-Există numeroși [clienți Ethereum](/developers/docs/nodes-and-clients/#execution-clients), într-o varietate de limbaje de programare, cum ar fi Go, Rust, JavaScript, Typescript, Python, C# .NET, Nim și Java. Punctul comun al acestor implementări este că toate respectă o specificație formală (inițial denumită [Cartea galbenă Ethereum ](https://ethereum.github.io/yellowpaper/paper.pdf)). This specification dictates how the Ethereum network and blockchain functions.
+Există numeroși [clienți Ethereum](/developers/docs/nodes-and-clients/#execution-clients), într-o varietate de limbaje de programare, cum ar fi Go, Rust, JavaScript, Typescript, Python, C# .NET, Nim și Java. Punctul comun al acestor implementări este că toate respectă o specificație formală (inițial denumită [Cartea galbenă Ethereum](https://ethereum.github.io/yellowpaper/paper.pdf)). This specification dictates how the Ethereum network and blockchain functions.
 
 ![Execution client](./client-diagram.png) Diagramă simplificată a funcţionalităţilor clientului Ethereum.
 

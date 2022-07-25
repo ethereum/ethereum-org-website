@@ -11,7 +11,7 @@ tags:
 skill: intermedio
 lang: it
 sidebar: true
-published: 16-10-2020
+published: 2020-10-16
 ---
 
 In questo tutorial imparerai come:

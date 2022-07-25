@@ -15,7 +15,7 @@ Mtu yeyote ndani ya jumuiya ya Ethereum ana uwezo wa kuunda EIP. Miongozo ya kua
 
 ## Kwa nini EIPs ni muhimu? {#why-do-eips-matter}
 
-EIPs huchukua jukumu kuu katika mabadiliko yanavyotokea na kurekodiwa kwenye Ethereum. Ndio njia ya watu kupendekeza, kujadili na kupitsha mabadiliko. Kuna [aina tofauti za EIPs ](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1.md#eip-types)ikijumuisha EIP za msingi kwa ajili ya mabadiliko ya itifaki ya kiwango cha chini ambayo yanaathiri makubaliano na kuhitaji usasishaji wa mtandao pamoja na ERCs kwa viwango vya maombi. Kwa mfano, viwango vya kutengeneza tokeni, kama [ERC20](https://eips.ethereum.org/EIPS/eip-20)ama[ERC721](https://eips.ethereum.org/EIPS/eip-721) hurusu programu zinazoingiliana na hizi tokeni kushughulikia tokeni zotye kwa kutumia masharti yaleyale, ambayo hurahisisha uundaji wa programu zinazoingiliana.
+EIPs huchukua jukumu kuu katika mabadiliko yanavyotokea na kurekodiwa kwenye Ethereum. Ndio njia ya watu kupendekeza, kujadili na kupitsha mabadiliko. Kuna [aina tofauti za EIPs](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1.md#eip-types) ikijumuisha EIP za msingi kwa ajili ya mabadiliko ya itifaki ya kiwango cha chini ambayo yanaathiri makubaliano na kuhitaji usasishaji wa mtandao pamoja na ERCs kwa viwango vya maombi. Kwa mfano, viwango vya kutengeneza tokeni, kama [ERC20](https://eips.ethereum.org/EIPS/eip-20)ama[ERC721](https://eips.ethereum.org/EIPS/eip-721) hurusu programu zinazoingiliana na hizi tokeni kushughulikia tokeni zotye kwa kutumia masharti yaleyale, ambayo hurahisisha uundaji wa programu zinazoingiliana.
 
 Kila boresha/sasisho la mtandao hujumuisha na seti ya EIPs amabazo zinahitaji utekelezaji kwa kila [ mteja/programu ya Ethereum](/learn/#clients-and-nodes) ilioko kwenye mtandao. Hii inamaana kwamba ili kuwa na makubaliano na programu zingine juu ya Mtandao mkuu wa Ethereum, wasanidi programu wanatakiwa kuhakikisha kua wametekeleza EIPs zote zinazohitajika.
 
@@ -42,7 +42,7 @@ Mchakato kamili wa usanifishaji pamoja na chati umeelezewa ndani ya [EIP-1](http
 
 ## Jifunze zaidi {#learn-more}
 
-Kama ungependa kusoma zaidi juu ya EIPs, nenda kwenye [tovuti ya EIPs ](https://eips.ethereum.org/)unaweza kupata taarifa zaidi, pamoja na:
+Kama ungependa kusoma zaidi juu ya EIPs, nenda kwenye [tovuti ya EIPs](https://eips.ethereum.org/)unaweza kupata taarifa zaidi, pamoja na:
 
 - [Aina tofauti za EIPs](https://eips.ethereum.org/)
 - [Orodha ya kila EIPs iliyokwisha tengenezwa](https://eips.ethereum.org/all)
