@@ -17,8 +17,7 @@ interface IGitHubSlugger {
   slug: (headingText: string) => string
 }
 
-//FIXME: Find a better name for this variable
-const toc: Record<
+const headersToChange: Record<
   string,
   {
     text: string
@@ -94,7 +93,7 @@ const addHeaderID = (
     // const match = /^.+(\s*\{#([A-Za-z0-9\-_]+?)\}\s*)$/.exec(line);
     // slug = match ? match[2].toLowerCase() : slugger.slug(stripLinks(headingText));
     slug = slugger.slug(stripLinks(headingText))
-    toc[headerNumber] = {
+    headersToChange[headerNumber] = {
       text: headingText,
       slug,
     }
@@ -103,8 +102,8 @@ const addHeaderID = (
     // if (curLevel[1] > 0)
     // console.log(`  ${curLevel[1]}. [${title}](#${slug})`);
   } else {
-    if (headerNumber in toc) {
-      slug = toc[headerNumber].slug
+    if (headerNumber in headersToChange) {
+      slug = headersToChange[headerNumber].slug
       console.log("\twrite heading ID", headerNumber, headingText, "==>", slug)
       return `${headingLevel} ${headingText} {#${slug}}`
     } else {
@@ -170,7 +169,7 @@ const traverseHeaders: TraverseHeadersFunction = (
     }
   })
   if (!write) {
-    console.log(toc)
+    console.log(headersToChange)
   }
 }
 
