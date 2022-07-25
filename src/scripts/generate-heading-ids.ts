@@ -181,4 +181,8 @@ const addHeaderIDsForDir = (path: string) => {
 
 const [path] = process.argv.slice(2)
 
+if (!path) {
+  throw new Error("No Valid Path Provided")
+}
+
 addHeaderIDsForDir(path)
