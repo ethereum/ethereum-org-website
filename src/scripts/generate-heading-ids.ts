@@ -13,16 +13,24 @@ const GitHubSlugger = require("github-slugger")
 
 // TODO we should auto-run this script when new markdown files are added to the project
 
-const toc = {}
+//FIXME: Find a better name for this variable
+const toc: Record<
+  number,
+  {
+    text: string
+    slug: string
+  }
+> = {}
 
 let curLevel = [0, 0, 0]
 let curMaxLevel = 1
 
-const walk = (dir, doc) => {
-  let results = []
-  const list = fs.readdirSync(dir)
-  list.forEach(function (file) {
-    file = dir + "/" + file
+//TODO: Figure out what `doc` is and rename it to something better
+const walk = (directoryPath: string, doc: string | null) => {
+  let results: Array<string> = []
+  const directoryContents: Array<string> = fs.readdirSync(directoryPath)
+  directoryContents.forEach(function (file) {
+    file = directoryPath + "/" + file
     const stat = fs.statSync(file)
     if (stat && stat.isDirectory()) {
       // Recurse into a subdirectory
@@ -41,7 +49,7 @@ const walk = (dir, doc) => {
   return results
 }
 
-const stripLinks = (line) => {
+const stripLinks = (line): number => {
   return line.replace(/\[([^\]]+)\]\([^)]+\)/, (match, p1) => p1)
 }
 
@@ -72,7 +80,7 @@ const addHeaderID = (line, slugger, write = false) => {
     curLevel[l] = 0
   }
   curMaxLevel = 1
-  const headerNumber = curLevel.join(".")
+  const headerNumber: string = curLevel.join(".")
   let slug = null
   if (!write) {
     // const match = /^.+(\s*\{#([A-Za-z0-9\-_]+?)\}\s*)$/.exec(line);
@@ -126,7 +134,7 @@ const addHeaderIDs = (lines, write = false) => {
   return results
 }
 
-const traverseHeaders = (path, doc = "", write = false) => {
+const traverseHeaders = (path: string, doc = "", write = false) => {
   const files = walk(path, doc)
   files.forEach((file) => {
     if (!file.endsWith(".md")) {
