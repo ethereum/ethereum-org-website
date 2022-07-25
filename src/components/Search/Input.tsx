@@ -1,6 +1,6 @@
 import React, { ChangeEvent, FormEvent } from "react"
 import { useIntl } from "react-intl"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 import { connectSearchBox } from "react-instantsearch-dom"
 
 import Icon from "../Icon"

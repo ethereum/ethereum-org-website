@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react"
 import { ApolloProvider } from "@apollo/client"
-import { ThemeProvider } from "styled-components"
-import styled from "styled-components"
+import { ThemeProvider } from "@emotion/react"
+import styled from "@emotion/styled"
 import { IntlProvider } from "react-intl"
 import { LocaleProvider } from "gatsby-theme-i18n"
 
-import { lightTheme, darkTheme, GlobalStyle } from "../theme"
+import { lightTheme, darkTheme } from "../theme"
 
 import Footer from "./Footer"
 import VisuallyHidden from "./VisuallyHidden"
@@ -29,6 +29,7 @@ import type { Context } from "../types"
 
 import "../styles/layout.css"
 import client from "../apollo"
+import GlobalStyle from "./GlobalStyle"
 
 const ContentContainer = styled.div`
   position: relative;

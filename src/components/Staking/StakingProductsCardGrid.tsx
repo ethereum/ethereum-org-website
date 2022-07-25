@@ -5,7 +5,8 @@ import React, {
   useEffect,
   useState,
 } from "react"
-import styled, { ThemeContext } from "styled-components"
+import styled from "@emotion/styled"
+import { useTheme } from "@emotion/react"
 import { shuffle } from "lodash"
 // Data imports
 import stakingProducts from "../../data/staking-products.json"
@@ -344,9 +345,9 @@ export interface IProps {
 }
 
 const StakingProductCardGrid: React.FC<IProps> = ({ category }) => {
-  const themeContext = useContext(ThemeContext)
+  const theme = useTheme()
   const [rankedProducts, updateRankedProducts] = useState<Array<Product>>([])
-  const isDarkTheme = themeContext.isDark
+  const isDarkTheme = theme.isDark
 
   const [SAT, LUM] = isDarkTheme ? ["50%", "35%"] : ["75%", "60%"]
 

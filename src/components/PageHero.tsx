@@ -1,5 +1,5 @@
 import React from "react"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 import { GatsbyImage } from "gatsby-plugin-image"
 import ButtonLink, { IProps as IButtonLinkProps } from "./ButtonLink"
 import { Content } from "./SharedStyledComponents"

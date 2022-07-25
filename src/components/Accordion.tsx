@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from "@emotion/styled"
 // TODO add motion animation
 // import { motion } from "framer-motion"
 import { FakeLink } from "./SharedStyledComponents"

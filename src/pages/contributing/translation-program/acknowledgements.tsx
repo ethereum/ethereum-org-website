@@ -3,7 +3,8 @@ import React, { useContext } from "react"
 import { graphql, PageProps } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { useIntl } from "react-intl"
-import styled, { ThemeContext } from "styled-components"
+import styled from "@emotion/styled"
+import { useTheme } from "@emotion/react"
 import type { Context } from "../../../types"
 
 // Components
@@ -109,8 +110,8 @@ const TranslatorAcknowledgements = ({
   location,
 }: PageProps<Queries.TranslatorAcknowledgementsPageQuery, Context>) => {
   const intl = useIntl()
-  const themeContext = useContext(ThemeContext)
-  const isDarkTheme = themeContext.isDark
+  const theme = useTheme()
+  const isDarkTheme = theme.isDark
   const themedCertificateImage = isDarkTheme
     ? data.darkThemeCertificate
     : data.lightThemeCertificate

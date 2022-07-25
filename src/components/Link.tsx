@@ -3,7 +3,7 @@ import { Link as GatsbyLink, navigate as gatsbyNavigate } from "gatsby"
 import { LocalizedLink as IntlLink } from "gatsby-theme-i18n"
 import { NavigateOptions } from "@reach/router"
 import { IntlShape } from "react-intl"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 
 import Icon from "./Icon"
 

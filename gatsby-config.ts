@@ -185,7 +185,7 @@ const config: GatsbyConfig = {
       },
     },
     // CSS in JS
-    `gatsby-plugin-styled-components`,
+    `gatsby-plugin-emotion`,
     // Source assets
     {
       resolve: `gatsby-source-filesystem`,

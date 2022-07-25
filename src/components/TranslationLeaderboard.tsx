@@ -1,6 +1,6 @@
 // Libraries
 import React, { useState } from "react"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 import { reverse, sortBy } from "lodash"
 
 // Components

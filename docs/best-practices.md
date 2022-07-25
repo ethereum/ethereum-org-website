@@ -111,7 +111,7 @@ export default ComponentName
   ```tsx
   // Example of styling syntax using styled-components
 
-  import styled from "styled-components"
+  import styled from "@emotion/styled"
 
   const GenericButton = styled.div`
     width: 200px;
@@ -135,7 +135,7 @@ export default ComponentName
   ```tsx
   // Example of theme.ts usage
 
-  import styled from "styled-components"
+  import styled from "@emotion/styled"
 
   const Container = styled.div`
     background: ${(props) => props.theme.colors.background};

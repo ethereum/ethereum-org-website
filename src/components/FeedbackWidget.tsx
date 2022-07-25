@@ -1,7 +1,7 @@
 // Library imports
 import React, { useState, useEffect, useRef, useMemo } from "react"
 import { useIntl } from "react-intl"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 import FocusTrap from "focus-trap-react"
 // Component imports
 import { ButtonPrimary } from "./SharedStyledComponents"
