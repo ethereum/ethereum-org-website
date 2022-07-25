@@ -31,16 +31,16 @@ Calculating the total transaction fee works as follows:
 
 `Gas units (limit) * (Base fee + Tip)`
 
-Let's say Jordan has to pay Taylor 1 ETH. In the transaction, the gas limit is 21,000 units and the base fee is 100 gwei. Jordan includes a tip of 10 gwei.
+Let's say Jordan has to pay Taylor 1 ETH. In the transaction, the gas limit is 21,000 units and the base fee is 10 gwei. Jordan includes a tip of 2 gwei.
 
 Using the formula above we can calculate this as
 
-`21,000 * (100 + 10) = 2,310,000 gwei` or 0.00231 ETH.
+`21,000 * (10 + 2) = 252,000 gwei` or 0.000252 ETH.
 
-When Jordan sends the money, 1.00231 ETH will be deducted from Jordan's account.
+When Jordan sends the money, 1.000252 ETH will be deducted from Jordan's account.
 Taylor will be credited 1.0000 ETH.
-Validator receives the tip of 0.00021 ETH.
-Base fee of 0.0021 ETH is burned.
+Validator receives the tip of 0.000042 ETH.
+Base fee of 0.00021 ETH is burned.
 
 Additionally, Jordan can also set a max fee (`maxFeePerGas`) for the transaction. The difference between the max fee and the actual fee is refunded to Jordan, i.e. `refund = max fee - (base fee + priority fee)`. Jordan can set a maximum amount to pay for the transaction to execute and not worry about overpaying "beyond" the base fee when the transaction is executed.
 
