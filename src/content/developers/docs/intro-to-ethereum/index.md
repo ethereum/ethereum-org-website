@@ -16,7 +16,7 @@ A blockchain is a public database that is updated and shared across many compute
 
 Every computer in the network must agree upon each new block and the chain as a whole. These computers are known as "nodes". Nodes ensure everyone interacting with the blockchain has the same data. To accomplish this distributed agreement, blockchains need a consensus mechanism.
 
-Ethereum uses a proof-of-stake based consensus mechanism. This means that anyone who wants to add new blocks to the chain must stake at least 32 ETH into the deposit contract and run validator software. They then have a chance of being randomly selected to propose blocks that other validators check and add to the blockchain. In this model there is usually only one chain, but network latency and dishoinest behaviour can cause multiple blocks to exist at the same position near the head of the chain. To resolve this, a fork-choice algorithm selects one canonical set of blocks. The blocks selected are the ones that form the heaviest possible chain, where 'heavy' refers to the number of validators that have endorsed the blocks (weighted by the ETH they have staked). There is a system of rewards and penalties that strongly incentivize participants to be honest and online as much as possible.
+Ethereum uses a proof-of-stake based consensus mechanism. This means that anyone who wants to add new blocks to the chain must stake at least 32 ETH into the deposit contract and run validator software. They then have a chance of being randomly selected to propose blocks that other validators check and add to the blockchain. In this model there is usually only one chain, but network latency and dishonest behavior can cause multiple blocks to exist at the same position near the head of the chain. To resolve this, a fork-choice algorithm selects one canonical set of blocks. The blocks selected are the ones that form the heaviest possible chain, where 'heavy' refers to the number of validators that have endorsed the blocks (weighted by the ETH they have staked). There is a system of rewards and penalties that strongly incentivize participants to be honest and online as much as possible.
 
 More on [proof-of-stake](/developers/docs/consensus-mechanisms/pos).
 
@@ -28,7 +28,7 @@ Watch Anders explain hashes in blockchains:
 
 ## What is Ethereum? {#what-is-ethereum}
 
-Ethereum is a blockchain with a computer embedded in it. It serves as the foundation for building apps and organizations is a decentralized, permissionless, censorship resistant way.
+Ethereum is a blockchain with a computer embedded in it. It serves as the foundation for building apps and organizations in a decentralized, permissionless, censorship resistant way.
 
 In the Ethereum universe, there is a single, canonical computer (called the Ethereum Virtual Machine, or EVM) whose state everyone on the Ethereum network agrees on. Everyone who participates in the Ethereum network (every Ethereum node) keeps a copy of the state of this computer. Additionally, any participant can broadcast a request for this computer to perform arbitrary computation. Whenever such a request is broadcast, other participants on the network verify, validate, and carry out ("execute") the computation. This execution causes a state change in the EVM, which is committed and propagated throughout the entire network.
 
@@ -44,7 +44,7 @@ Any participant who broadcasts a transaction request must also offer some amount
 
 The amount of ETH paid corresponds to the time required to do the computation. These bounties also prevent malicious participants from intentionally clogging the network by requesting the execution of infinite computation or other resource-intensive scripts, as these participants must pay for computation time.
 
-ETH is also used to provide crypto-economic security to the network, in three main ways: 1) it is used as a means to reward validators who propose blocks or call out dishonest behaviour by other validators; 2) It is staked by validators, acting as collateral against dishionest behaviour - if validators attempt to misbehave their ETH can be destroyed; 3) it is used to weight 'votes' for newly proposed blocks, feeding into the fork-choice part of the consensus mechanism.
+ETH is also used to provide crypto-economic security to the network, in three main ways: 1) it is used as a means to reward validators who propose blocks or call out dishonest behavior by other validators; 2) It is staked by validators, acting as collateral against dishonest behavior—if validators attempt to misbehave their ETH can be destroyed; 3) it is used to weight 'votes' for newly proposed blocks, feeding into the fork-choice part of the consensus mechanism.
 
 ## What are smart contracts? {#what-are-smart-contracts}
 
