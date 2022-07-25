@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import Emoji from "../components/Emoji"
+import Emoji from "./Emoji"
 
 import Checkbox from "./Checkbox"
 
@@ -27,8 +27,17 @@ const Description = styled.p`
 const TopContent = styled.div`
   position: relative;
 `
+export interface IProps {
+  emoji: string
+  title: string
+  description: string
+  className?: string
+  onSelect: (val: string) => void
+  value: string
+  isSelected?: boolean
+}
 
-const Card = ({
+const Card: React.FC<IProps> = ({
   emoji,
   title,
   description,
@@ -36,18 +45,14 @@ const Card = ({
   className,
   onSelect,
   value,
-  isSelected,
+  isSelected = false,
 }) => {
   const handleSelect = () => {
     onSelect(value)
   }
 
   return (
-    <StyledCard
-      isSelected={isSelected}
-      className={className}
-      onClick={handleSelect}
-    >
+    <StyledCard className={className} onClick={handleSelect}>
       <TopContent>
         <Emoji text={emoji} size={3} mb={`1em`} />
         <StyledCheckbox checked={isSelected} aria-label={title} />
