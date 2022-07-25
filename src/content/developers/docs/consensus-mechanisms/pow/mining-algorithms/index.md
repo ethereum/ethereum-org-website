@@ -7,11 +7,11 @@ preMergeBanner: true
 ---
 
 <InfoBanner emoji=":wave:"> 
-   Proof-of-work is no longer Ethereum's consensus mechanism, meaning mining has been switched off. Instead, Ethereum is secured by validators who stake ETH. You can start staking your ETH today. Read more on <a href="/upgrades/merge/">The Merge</a>, <a href="/developers/docs/consensus-mechanisms/pos/">proof-of-stake</a> and <a href="/staking/">staking</a>. This page is for historical interest!  
+   Proof-of-work is no longer underlying Ethereum's consensus mechanism, meaning mining has been switched off. Instead, Ethereum is secured by validators who stake ETH. You can start staking your ETH today. Read more on <a href="/upgrades/merge/">The Merge</a>, <a href="/developers/docs/consensus-mechanisms/pos/">proof-of-stake</a> and <a href="/staking/">staking</a>. This page is for historical interest!  
 </InfoBanner>
  
  
-Ethereum mining used an algorithm known as Ethash. The fundamental idea of the algorithm is that a miner tries to find a nonce input using brute force computation so that the result is below a certain difficulty threshold. This difficulty threshold can be dynamically adjusted, allowing block production to happen at a regular interval.
+Ethereum mining used an algorithm known as Ethash. The fundamental idea of the algorithm is that a miner tries to find a nonce input using brute force computation so that the resulting hash is smaller than a threshold determined by the calculated difficulty. This difficulty level can be dynamically adjusted, allowing block production to happen at a regular interval.
 
 ## Prerequisites {#prerequisites}
 
@@ -31,7 +31,7 @@ More on [Dagger-Hashimoto](/developers/docs/consensus-mechanisms/pow/mining-algo
 
 ## Ethash {#ethash}
 
-Ethash the mining algorithm that was actually used on the real Ethereum Mainnet. Ethash was effectively a new name given to a specific version of Dagger-Hashimoto after the algorithm got significantly updated, whilst still inheriting the fundamental principles of its predecessor. Ethereum Mainnet only ever used Ethash - Dagger Hashimoto was an R&D version of the mining algorithm that was superseded before mining started on Ethereum mainnet.
+Ethash was the mining algorithm that was actually used on the real Ethereum Mainnet under the now deprecated proof-of-work architecture. Ethash was effectively a new name given to a specific version of Dagger-Hashimoto after the algorithm got significantly updated, whilst still inheriting the fundamental principles of its predecessor. Ethereum Mainnet only ever used Ethash - Dagger Hashimoto was an R&D version of the mining algorithm that was superseded before mining started on Ethereum mainnet.
 
 [More on Ethash](/developers/docs/consensus-mechanisms/pow/mining-algorithms/ethash).
 
