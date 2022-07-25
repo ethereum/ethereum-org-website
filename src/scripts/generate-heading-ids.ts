@@ -57,7 +57,11 @@ const stripLinks = (line: string): string => {
   return line.replace(/\[([^\]]+)\]\([^)]+\)/, (match, p1: string) => p1)
 }
 
-const addHeaderID = (line: string, slugger: IGitHubSlugger, write = false) => {
+const addHeaderID = (
+  line: string,
+  slugger: IGitHubSlugger,
+  write = false
+): string | undefined => {
   // check if we're a header at all
   if (!line.startsWith("#")) {
     return line
@@ -85,7 +89,7 @@ const addHeaderID = (line: string, slugger: IGitHubSlugger, write = false) => {
   }
   curMaxLevel = 1
   const headerNumber = curLevel.join(".")
-  let slug = null
+  let slug = ""
   if (!write) {
     // const match = /^.+(\s*\{#([A-Za-z0-9\-_]+?)\}\s*)$/.exec(line);
     // slug = match ? match[2].toLowerCase() : slugger.slug(stripLinks(headingText));
