@@ -116,11 +116,11 @@ const addHeaderID = (line: string, slugger: IGitHubSlugger, write = false) => {
   }
 }
 
-const addHeaderIDs = (lines, write = false) => {
+const addHeaderIDs = (lines: Array<string>, write = false): Array<string> => {
   // Sluggers should be per file
   const slugger: IGitHubSlugger = new GitHubSlugger()
   let inCode = false
-  const results = []
+  const results: Array<string> = []
   lines.forEach((line) => {
     // Ignore code blocks
     if (line.startsWith("```")) {
@@ -133,7 +133,10 @@ const addHeaderIDs = (lines, write = false) => {
       return
     }
 
-    results.push(addHeaderID(line, slugger, write))
+    const headerTextWithSlug = addHeaderID(line, slugger, write)
+    if (headerTextWithSlug) {
+      results.push(headerTextWithSlug)
+    }
   })
   return results
 }
@@ -147,8 +150,8 @@ const traverseHeaders = (path: string, doc = "", write = false) => {
 
     console.log(`>>> processing ${file}`)
     curLevel = [0, 0, 0]
-    const content = fs.readFileSync(file, "utf8")
-    const lines = content.split("\n")
+    const content: string = fs.readFileSync(file, "utf8")
+    const lines: Array<string> = content.split("\n")
     const updatedLines = addHeaderIDs(lines, write)
     if (write) {
       fs.writeFileSync(file, updatedLines.join("\n"))
