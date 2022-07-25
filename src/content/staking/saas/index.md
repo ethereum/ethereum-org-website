@@ -79,8 +79,6 @@ All of these keys can always be regenerated in a reproducible manner using your 
   When you stake 32 ETH with a SaaS provider, that ETH is still deposited to the official staking deposit contract. As such, SaaS stakers are currently limited by the same withdrawal restrictions as solo stakers. This means that staking your ETH is currently a one-way deposit. This will be the case until the Shanghai upgrade.
 </ExpandableCard>
 
-</ExpandableCard>
-
 <ExpandableCard title="What happens if I get slashed?" eventCategory="SaasStaking" eventName="clicked what happens if I get slashed">
 By using an SaaS provider, you are entrusting the operation of your node to someone else. This comes with the risk of poor node performance, which is not in your control. In the event your validator is slashed, your validator balance will be penalized and forcibly removed from the validator pool. These funds will be locked until withdrawals are enabled at the protocol level.
 

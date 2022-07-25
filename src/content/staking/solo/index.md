@@ -58,7 +58,7 @@ As much as we wish that solo staking was accessible and risk free to everyone, t
     <p style={{marginTop: "1rem"}}><a href="/security">Ethereum security and scam prevention</a></p>
   </ExpandableCard>
   <ExpandableCard title="No withdrawing (for now)" eventCategory="SoloStaking" eventName="clicked no withdrawing">
-    Withdrawing staked ETH or rewards from a validator balance is not yet supported. Support for withdrawals are planned for the Shanghai upgrade. You should anticipate your ETH being locked for at least one-to-two years. After the Shanghai upgrade you will be able to freely withdraw portions or all of your stake if you wish.
+    Withdrawing staked ETH or rewards from a validator balance is not yet supported. Support for withdrawals are planned for the upcoming Shanghai upgrade. You should anticipate your ETH being locked for at least one-to-two years. After the Shanghai upgrade you will be able to freely withdraw portions or all of your stake if you wish.
   </ExpandableCard>
   <ExpandableCard title="Maintenance" eventCategory="SoloStaking" eventName="clicked maintenance">
     Hardware occasionally fails, network connections error out, and client software occasionally needs upgrading. Node maintenance is inevitable and will occasionally require your attention. You'll want to be sure you stay aware of any anticipated network upgrades, or other critical client upgrades.

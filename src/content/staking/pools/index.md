@@ -69,7 +69,7 @@ Typically ERC-20 liquidity tokens are issued to stakers that represents the valu
 <ExpandableCard title="When can I withdraw my stake?">
 Currently, withdrawing funds from an Ethereum validator is not possible, which limits the ability to actually <em>redeem</em> your liquidity token for the ETH rewards locked in the consensus layer.
 
-Alternatively, pools that utilize an ERC-20 liquidity token allow users to trade this token in the open market, effectively allowing you to "withdraw" without actually removing ETH from the staking contract.
+Alternatively, pools that utilize an ERC-20 liquidity token allow users to trade this token in the open market, allowing you to sell your staking position, effectively "withdrawing" without actually removing ETH from the staking contract.
 </ExpandableCard>
 
 <ExpandableCard title="Is this different from staking with my exchange?">
