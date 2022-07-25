@@ -52,7 +52,7 @@ incomplete: true
 - [oasis_std](https://docs.rs/oasis-std/0.2.7/oasis_std/) - _OASIS 应用程序界面参考_
 - [Solaris](https://github.com/paritytech/sol-rs)
 - [SputnikVM](https://github.com/sorpaas/rust-evm) - _采用 Rust 实现以太坊虚拟机_
-- [rust-web3](https://github.com/tomusdrw/rust-web3) - _ Web3.js 库 Rust 语言实现_
+- [rust-web3](https://github.com/tomusdrw/rust-web3) - _Web3.js 库 Rust 语言实现_
 - [Wavelet](https://wavelet.perlin.net/docs/smart-contracts) - _Rust 语言的 Wavelet 智能合约_
 - [Foundry](https://github.com/gakonst/foundry) - _以太坊应用开发工具包_
 - [Ethers_rs](https://github.com/gakonst/ethers-rs)- _可实现以太坊库和钱包功能_

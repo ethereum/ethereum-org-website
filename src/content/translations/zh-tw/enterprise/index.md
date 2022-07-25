@@ -40,7 +40,7 @@ sidebar: true
 下列是提供企業級架構的區塊鏈服務：
 
 - [Blockapps](https://blockapps.net/) _透過 STRATO 平台實作企業版的 Ethereum 協定、模型和 API_
-- [Clearmatics](https://www.clearmatics.com/about) _區塊鏈研發公司，致力於協議以及點對點平台架構_
+- [ Clearmatics ](https://www.clearmatics.com/about) _區塊鏈研發公司，致力於協議以及點對點平台架構_
 - [PegaSys Plus](https://pegasys.tech/enterprise/) _提供與 HF Besu 相同的功能和特性的同時，額外提供聚焦於企業級應用的優點_
 - [Quorum](https://www.goquorum.com/) _開源區塊鏈平台，將公共以太坊社區的創新與增強功能相結合，以便滿足企業需求_
 
@@ -50,8 +50,8 @@ sidebar: true
 - [Hyperledger Burrow](https://www.hyperledger.org/projects/hyperledger-burrow) _模块化区块链客户端，带有经过许可的智能合约解释器，根据以太坊虚拟机（EVM）规范而开发_
 - [Infura](https://infura.io/) _對以太坊和 IPFS 網絡的可擴展 API 訪問_
 - [Kaleido](https://kaleido.io/) _用於構建和運行跨雲、混合式企業生態系統的全棧平台_
-- [Autonity](https://www.clearmatics.com/about/) _實現 p2p 協議並提供客戶端軟件和基礎結構的協議套件_
-- [Chainstack](https://chainstack.com/) _多雲和多協議平台即服務，使企業能夠快速構建、部署和管理去中心化網絡和服務_
+- [ Autonity](https://www.clearmatics.com/about/) _實現 p2p 協議並提供客戶端軟件和基礎結構的協議套件_
+- [ Chainstack ](https://chainstack.com/) _多雲和多協議平台即服務，使企業能夠快速構建、部署和管理去中心化網絡和服務_
 
 ## 企業版特色 {#enterprise-features}
 
