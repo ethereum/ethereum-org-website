@@ -7,7 +7,7 @@ sidebar: true
 
 # About ethereum.org {#about-ethereumorg}
 
-Test ethereum.org is a public, open-source resource for the Ethereum community that anyone can contribute to. We have a small team dedicated to maintaining and developing the site which is funded by the [Ethereum Foundation](/foundation/).
+Test test2 ethereum.org is a public, open-source resource for the Ethereum community that anyone can contribute to. We have a small team dedicated to maintaining and developing the site which is funded by the [Ethereum Foundation](/foundation/).
 
 ## Our vision {#our-vision}
 
