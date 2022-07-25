@@ -141,7 +141,15 @@ const addHeaderIDs = (lines: Array<string>, write = false): Array<string> => {
   return results
 }
 
-const traverseHeaders = (path: string, doc = "", write = false) => {
+type TraverseHeadersFunction = (
+  path: string,
+  config: { doc?: string; write?: boolean }
+) => void
+
+const traverseHeaders: TraverseHeadersFunction = (
+  path,
+  { doc = "", write = false }
+) => {
   const files = walk(path, doc)
   files.forEach((file) => {
     if (!file.endsWith(".md")) {
@@ -167,8 +175,8 @@ const addHeaderIDsForDir = (path: string) => {
     throw new Error(`Heading ID generation is intended for English files only.`)
   }
   const fullPath = `src/content/${path}`
-  traverseHeaders(fullPath, null, false)
-  traverseHeaders(fullPath, null, true)
+  traverseHeaders(fullPath, { write: false })
+  traverseHeaders(fullPath, { write: true })
 }
 
 const [path] = process.argv.slice(2)
