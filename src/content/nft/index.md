@@ -96,7 +96,7 @@ NFTs are different from ERC-20 tokens, such as DAI or LINK, in that each individ
   - Signatures
 - Lots and lots more options to get creative with!
 
-Ownership of NFTs is managed through the uniqueID and metadata that no other token can replicate. NFTs are minted through smart contracts that assign ownership and manage the transferability of the NFT's. When someone creates or mints an NFT, they execute code stored in smart contracts that conform to different standards, such as ERC-721. This information is added to the blockchain where the NFT is being managed. The minting process, from a high level, has the following steps that it goes through:
+Ownership of NFTs is managed through the unique ID and metadata that no other token can replicate. NFTs are minted through smart contracts that assign ownership and manage the transferability of the NFT's. When someone creates or mints an NFT, they execute code stored in smart contracts that conform to different standards, such as [ERC-721](/developers/docs/standards/tokens/erc-721/). This information is added to the blockchain where the NFT is being managed. The minting process, from a high level, has the following steps that it goes through:
 
 - Creating a new block
 - Validating information
@@ -304,7 +304,7 @@ Decentralized meaning you and everyone else can verify you own something. All wi
 
 Secure meaning no one can copy/paste your NFT or steal it.
 
-These qualities of Ethereum makes digitally owning unique items and getting a fair price for your content possible. Ethereum protects the assets using a decentralized consensus mechanism called ['proof-of-stake'](/developers/docs/consensus-mechanisms/pos). This is a low carbon consensus mechanism that is also considered more secure than the energy-intensive alternative, ['proof-of-work'](/developers/docs/consensus-mechanisms/pow). NFTs have been associated with high energy expenditure because Ethereum used to be secured using proof-of-work. This is no longer true.
+These qualities of Ethereum makes digitally owning unique items and getting a fair price for your content possible. Ethereum protects the assets using a decentralized consensus mechanism which involves ['proof-of-stake'](/developers/docs/consensus-mechanisms/pos). This is a low carbon method to determine who can add a block of transactions to the chain, and is considered more secure than the energy-intensive alternative, ['proof-of-work'](/developers/docs/consensus-mechanisms/pow). NFTs have been associated with high energy expenditure because Ethereum used to be secured using proof-of-work. This is no longer true.
 
 #### Minting NFTs {#minting-nfts}
 
@@ -312,8 +312,8 @@ When you mint an NFT, a few things have to happen:
 
 - It needs to be confirmed as an asset on the blockchain.
 - The owner's account balance must be updated to include that asset. This makes it possible for it to then be traded or verifiably "owned".
-- The transactions that confirm the above need to be added to a block and "immortalised" on the chain.
-- The block needs to be confirmed by everyone in the network as "correct". This consensus removes the need for intermediaries because the network agrees that your NFT exists and belongs to you. And it's on chain so anyone can check it. This is one of the ways Ethereum helps NFT creators to maximise their earnings.
+- The transactions that confirm the above need to be added to a block and "immortalized" on the chain.
+- The block needs to be confirmed by everyone in the network as "correct". This consensus removes the need for intermediaries because the network agrees that your NFT exists and belongs to you. And it's on chain so anyone can check it. This is one of the ways Ethereum helps NFT creators to maximize their earnings.
 
 All these tasks are done by block producers and validators. Block proposers add your NFT transaction to a block and broadcast it to the rest of the network. Validators check that the transaction is valid and then add it to their databases. There are lots of crypto-economic incentives in place to make sure validators are acting honestly. Otherwise, anyone could just claim that they own the NFT you just minted and fraudulently transfer ownership.
 
