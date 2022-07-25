@@ -13,9 +13,13 @@ const GitHubSlugger = require("github-slugger")
 
 // TODO we should auto-run this script when new markdown files are added to the project
 
+interface IGitHubSlugger {
+  slug: (headingText: string) => string
+}
+
 //FIXME: Find a better name for this variable
 const toc: Record<
-  number,
+  string,
   {
     text: string
     slug: string
@@ -49,11 +53,11 @@ const walk = (directoryPath: string, doc: string | null) => {
   return results
 }
 
-const stripLinks = (line): number => {
-  return line.replace(/\[([^\]]+)\]\([^)]+\)/, (match, p1) => p1)
+const stripLinks = (line: string): string => {
+  return line.replace(/\[([^\]]+)\]\([^)]+\)/, (match, p1: string) => p1)
 }
 
-const addHeaderID = (line, slugger, write = false) => {
+const addHeaderID = (line: string, slugger: IGitHubSlugger, write = false) => {
   // check if we're a header at all
   if (!line.startsWith("#")) {
     return line
@@ -80,7 +84,7 @@ const addHeaderID = (line, slugger, write = false) => {
     curLevel[l] = 0
   }
   curMaxLevel = 1
-  const headerNumber: string = curLevel.join(".")
+  const headerNumber = curLevel.join(".")
   let slug = null
   if (!write) {
     // const match = /^.+(\s*\{#([A-Za-z0-9\-_]+?)\}\s*)$/.exec(line);
@@ -114,7 +118,7 @@ const addHeaderID = (line, slugger, write = false) => {
 
 const addHeaderIDs = (lines, write = false) => {
   // Sluggers should be per file
-  const slugger = new GitHubSlugger()
+  const slugger: IGitHubSlugger = new GitHubSlugger()
   let inCode = false
   const results = []
   lines.forEach((line) => {
@@ -155,7 +159,7 @@ const traverseHeaders = (path: string, doc = "", write = false) => {
   }
 }
 
-const addHeaderIDsForDir = (path) => {
+const addHeaderIDsForDir = (path: string) => {
   if (path.includes("translations")) {
     throw new Error(`Heading ID generation is intended for English files only.`)
   }
