@@ -244,7 +244,7 @@ Projects working on zkEVMs include:
 ## Further reading on ZK-rollups reading {#further-reading-on-zk-rollups}
 
 - [What Are Zero-Knowledge Rollups?](https://coinmarketcap.com/alexandria/glossary/zero-knowledge-rollups)
-- [EthHub on zk-rollups](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/zk-rollups/)
+- [EthHub on ZK-rollups](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/zk-rollups/)
 - [STARKs vs SNARKs](https://consensys.net/blog/blockchain-explained/zero-knowledge-proofs-starks-vs-snarks/)
 - [What is a zkEVM?](https://www.alchemy.com/overviews/zkevm)
 - [Intro to zkEVM](https://hackmd.io/@yezhang/S1_KMMbGt)
