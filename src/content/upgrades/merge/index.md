@@ -134,8 +134,8 @@ With a [rollup-centric roadmap](https://ethereum-magicians.org/t/a-rollup-centri
 </ExpandableCard>
 
 <ExpandableCard
-title="Misconception: &quot;Transactions are noticeably faster after The Merge.&quot;"
-contentPreview="False. Though some slight changes exist, transaction speed is mostly remain the same on layer 1.">
+title="Misconception: &quot;Transactions were accelerated substantially by The Merge.&quot;"
+contentPreview="False. Though some slight changes exist, transaction speed is mostly the same on layer 1 now as it was before The Merge.">
 A transaction's "speed" can be measured in a few ways, including time to be included in a block and time to finalization. Both of these changes slightly, but not in a way that users will notice.
 
 Historically, on proof-of-work, the target was to have a new block every ~13.3 seconds. Under proof-of-stake, slots occur precisely every 12 seconds, each of which is an opportunity for a validator to publish a block. Most slots have blocks, but not necessarily all (i.e. a validator is offline). In proof-of-stake, blocks are produced ~10% more frequently than on proof-of-work. This was a fairly insignificant change and is unlikely to be noticed by users.
@@ -155,7 +155,7 @@ title="Misconception: &quot;Validators will not receive any liquid ETH rewards t
 contentPreview="False. Fee tips/MEV are credited to a non-staking account controlled by the validator, available immediately.">
 This may seem counterintuitive to the above note that withdrawals are not enabled til the Shanghai upgrade, but validators DO have immediate access to the fee rewards/MEV earned during block proposals.
 
-The protocol issues ETH as a reward to validators for contributing to consensus. The validator nominates an account to receive the newly issued ETH, where a validator has a unique address that holds its staked ETH and protocol rewards. This ETH is locked until Shanghai.
+The protocol issues ETH as a reward to validators for contributing to consensus. The consensus layer accounts for the newly issued ETH, where a validator has a unique address that holds its staked ETH and protocol rewards. This ETH is locked until Shanghai.
 
 ETH on the execution layer is accounted for separately from the consensus layer. When users execute transactions on Ethereum Mainnet, ETH must be paid to cover the gas, including a tip to the validator. This ETH is already on the execution layer, is NOT being newly issued by the protocol, and is available to the validator immediately (given a proper `fee recipient` address is provided to the client software).
 </ExpandableCard>
