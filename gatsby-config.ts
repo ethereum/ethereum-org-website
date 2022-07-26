@@ -185,7 +185,12 @@ const config: GatsbyConfig = {
       },
     },
     // CSS in JS
-    `gatsby-plugin-emotion`,
+    {
+      resolve: `gatsby-plugin-emotion`,
+      options: {
+        labelFormat: "[filename]--[local]",
+      },
+    },
     {
       resolve: "@chakra-ui/gatsby-plugin",
       options: {

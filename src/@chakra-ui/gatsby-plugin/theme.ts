@@ -1,9 +1,15 @@
-import { extendTheme } from "@chakra-ui/react"
+import { extendTheme, type ThemeConfig, type Theme } from "@chakra-ui/react"
 
-const theme = {
+const config: ThemeConfig = {
+  cssVarPrefix: "eth",
+  initialColorMode: "light",
+  useSystemColorMode: false,
+}
+
+const theme: Theme = {
   colors: {
     primary: "rebeccapurple",
   },
 }
 
-export default extendTheme(theme)
+export default extendTheme({ config, theme })
