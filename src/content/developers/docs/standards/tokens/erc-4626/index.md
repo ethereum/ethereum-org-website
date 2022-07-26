@@ -36,7 +36,7 @@ This function returns the address of the underlying token used for the vault for
 #### totalAssets {#totalassets}
 
 ```solidity
-function totalAssets() public view returns (uint256)
+function totalAssets() public view returns (uint256 _totalManagedAssets)
 ```
 
 This function returns the total amount of underlying assets held by the vault.
@@ -44,10 +44,10 @@ This function returns the total amount of underlying assets held by the vault.
 #### convertToShares {#convertoshares}
 
 ```solidity
-function convertToShares(uint256 assets) public view returns (uint256 _shares)
+function convertToShares(uint256 _assets) public view returns (uint256 _shares)
 ```
 
-This function returns the amount of `shares` that will be exchanged by the vault for the amount of `assets` provided.
+This function returns the amount of `_shares` that will be exchanged by the vault for the amount of `_assets` provided.
 
 #### deposit {#deposit}
 
