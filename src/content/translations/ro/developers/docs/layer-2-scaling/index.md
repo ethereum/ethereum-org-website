@@ -234,7 +234,7 @@ Combină cele mai bune părți ale mai multor tehnologii de nivel 2 și pot ofer
 
 **Rollup-uri ZK**
 
-- [EthHub despre zk-rollup-uri](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/zk-rollups/)
+- [EthHub despre ZK-rollup-uri](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/zk-rollups/)
 
 **Rollup-uri Optimistic**
 
