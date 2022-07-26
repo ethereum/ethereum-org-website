@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { graphql } from "gatsby"
+import { graphql, PageProps } from "gatsby"
 import { useIntl } from "react-intl"
 import { getImage } from "gatsby-plugin-image"
 
@@ -11,7 +11,9 @@ import ActionCard from "../../components/ActionCard"
 import Link from "../../components/Link"
 import Emoji from "../../components/Emoji"
 import Trilemma from "../../components/Trilemma"
-import PageHero from "../../components/PageHero"
+import PageHero, {
+  IContent as IPageHeroContent,
+} from "../../components/PageHero"
 import Breadcrumbs from "../../components/Breadcrumbs"
 import ButtonLink from "../../components/ButtonLink"
 import PageMetadata from "../../components/PageMetadata"
@@ -87,10 +89,13 @@ const paths = [
   },
 ]
 
-const VisionPage = ({ data, location }) => {
+const VisionPage = ({
+  data,
+  location,
+}: PageProps<Queries.UpgradesVisionPageQuery>) => {
   const intl = useIntl()
 
-  const heroContent = {
+  const heroContent: IPageHeroContent = {
     title: translateMessageId("page-upgrades-vision-title", intl),
     header: translateMessageId("page-upgrades-vision-future", intl),
     subtitle: translateMessageId("page-upgrades-vision-subtitle", intl),
@@ -297,7 +302,7 @@ const VisionPage = ({ data, location }) => {
           {upgrades.map((upgrade, idx) => (
             <ActionCard
               isRight
-              key={upgrade.title}
+              key={idx}
               image={upgrade.image}
               title={upgrade.title}
               description={upgrade.description}
