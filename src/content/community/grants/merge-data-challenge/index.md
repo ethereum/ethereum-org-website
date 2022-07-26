@@ -43,7 +43,7 @@ Anyone is free to submit, here's how:
 2.  Detail out your work in a blog post
 3.  Submit!
 
-<!-- TODOD LINK TO new submission form) -->
+<!-- TODO: link to new submission form -->
 
 <ButtonLink to="https://esp.ethereum.foundation/">Submit blog post</ButtonLink>
 
@@ -101,7 +101,7 @@ _Surprise us with your creativity! But here are some judging criteria considerat
 - Specs
   - [Consensus Layer specs](https://github.com/ethereum/consensus-specs)
   - [Execution Layer specs](https://github.com/ethereum/execution-specs)
-  - [EIP 3675]() & [EIP 4399](https://eips.ethereum.org/EIPS/eip-4399)
+  - [EIP 3675](https://eips.ethereum.org/EIPS/eip-3675) & [EIP 4399](https://eips.ethereum.org/EIPS/eip-4399)
   - [Engine API](https://github.com/ethereum/execution-apis/blob/main/src/engine/specification.md)
 - [Mega Merge Resource List](https://notes.ethereum.org/@MarioHavel/merge-resources)
 - [Ethereum Roadmap FAQ](https://github.com/timbeiko/eth-roadmap-faq)
