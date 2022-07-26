@@ -57,6 +57,14 @@ function convertToAssets(uint256 _shares) public view returns (uint256 _assets)
 
 This function returns the amount of `_assets` that will be exchanged by the vault for the amount of `_shares` provided.
 
+#### maxDeposit {#maxdeposit}
+
+```solidity
+function maxDeposit(address _receiver) public view returns (uint256 _maxAssets)
+```
+
+This function returns the amount of assets that can be deposited in a single [`deposit`](#deposit) call by the `_receiver`.
+
 #### deposit {#deposit}
 
 ```solidity
