@@ -63,7 +63,7 @@ This function returns the amount of `_assets` that will be exchanged by the vaul
 function maxDeposit(address _receiver) public view returns (uint256)
 ```
 
-This function returns the amount of assets that can be deposited in a single [`deposit`](#deposit) call by the `_receiver`.
+This function returns the maximum amount of assets that can be deposited in a single [`deposit`](#deposit) call by the `_receiver`.
 
 #### previewDeposit {#previewdeposit}
 
@@ -80,6 +80,30 @@ function deposit(uint256 _assets, address _receiver) public returns (uint256 _sh
 ```
 
 This function deposits the `_assets` tokens into the vault and grants ownership on the `_shares` to `_receiver`.
+
+#### maxMint {#maxmint}
+
+```solidity
+function maxMint(address _receiver) public view returns (uint256)
+```
+
+This function returns the maximum amount of shares that can be minted in a single [`mint`](#mint) call by the `_receiver`.
+
+#### previewMint {#previewmint}
+
+```solidity
+function previewMint(uint256 _shares) public view returns (uint256)
+```
+
+This function allows users to simulate the effects of their mint at the current block.
+
+#### mint {#mint}
+
+```solidity
+function mint(uint256 _shares, address _receiver) public returns (uint256 _assets)
+```
+
+This function mints `_shares` vault shares to `_receiver` by depositing `_assets` tokens.
 
 #### withdraw {#withdraw}
 
