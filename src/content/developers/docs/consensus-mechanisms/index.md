@@ -5,7 +5,7 @@ lang: en
 sidebar: true
 ---
 
-The term 'consensus mechanism' is often used colloquially to refer to 'proof-of-stake', 'proof-of-work' or 'proof-of-authority' protocols.However, these are just components in consensus mechanisms that protect against Sybil attacks. Consensus mechanisms are the complete stack of ideas, protocols and incentives that enable a distributed set of nodes to agree on the state of a blockchain.
+The term 'consensus mechanism' is often used colloquially to refer to 'proof-of-stake', 'proof-of-work' or 'proof-of-authority' protocols. However, these are just components in consensus mechanisms that protect against Sybil attacks. Consensus mechanisms are the complete stack of ideas, protocols and incentives that enable a distributed set of nodes to agree on the state of a blockchain.
 
 ## Prerequisites {#prerequisites}
 
@@ -13,7 +13,7 @@ To better understand this page, we recommend you first read our [introduction to
 
 ## What is consensus? {#what-is-consensus}
 
-By consensus, we mean that a general agreement has been reached. Consider a group of people going to the cinema. If there is no disagreement on a proposed choice of film, then a consensus is achieved. In the extreme case the group will eventually split.
+By consensus, we mean that a general agreement has been reached. Consider a group of people going to the cinema. If there is no disagreement on a proposed choice of film, then a consensus is achieved. If there is disagreement, the group must have a means to decide which film to see. In the extreme case the group will eventually split.
 
 In regards to the Ethereum blockchain, the process is formalized, and reaching consensus means that at least 66% of the nodes on the network agree on the global state of the network.
 
@@ -21,7 +21,7 @@ In regards to the Ethereum blockchain, the process is formalized, and reaching c
 
 The term consensus mechanism refers to the entire stack of protocols, incentives and ideas that allow a network of nodes to come to agreement about the state of a blockchain.
 
-Ethereum uses a proof-of-stake based consensus mechanism that derives its crypto-economic security from a set of rewards and penalties applied to capital staked by validators. This incentive structure encourages individual validators to act honestly, punishes those that don't, and also creates an extremely high cost to attack the network.
+Ethereum uses a proof-of-stake based consensus mechanism that derives its crypto-economic security from a set of rewards and penalties applied to capital locked by stakers. This incentive structure encourages individual stakers to operate honest validators, punishes those that don't, and also creates an extremely high cost to attack the network.
 
 Then, there is a protocol that governs how honest validators are selected to propose or validate blocks, process transactions and vote for their view of the head of the chain. In the rare situations where there are multiple blocks in the same position near the head of the chain, there is a fork-choice mechanism that selects blocks that make up the 'heaviest' chain, measured by the number of validators that voted for the blocks weighted by thier staked ether balance.
 
@@ -37,7 +37,7 @@ Like Bitcoin, Ethereum once used a **proof-of-work (PoW)** based consensus proto
 
 #### Block creation {#pow-block-creation}
 
-Proof-of-work is done by [miners](/developers/docs/consensus-mechanisms/pow/mining/), who compete to create new blocks full of processed transactions. The winner shares the new block with the rest of the network and earns some freshly minted ETH. The race is won by the computer which is able to solve a math puzzle fastest – this produces the cryptographic link between the current block and the block that went before. Solving this puzzle is the work in "proof-of-work". The true head of the chain is then determined byh a fork-choice rule that selects the set of blocks that have had the most work done to mine them.
+Proof-of-work is done by [miners](/developers/docs/consensus-mechanisms/pow/mining/), who compete to create new blocks full of processed transactions. The winner shares the new block with the rest of the network and earns some freshly minted ETH. The race is won by the computer which is able to solve a math puzzle fastest—this produces the cryptographic link between the current block and the block that went before. Solving this puzzle is the work in "proof-of-work". The true head of the chain is then determined by a fork-choice rule that selects the set of blocks that have had the most work done to mine them.
 
 #### Security {#pow-security}
 
@@ -47,7 +47,7 @@ More on [proof-of-work](/developers/docs/consensus-mechanisms/pow/)
 
 ### Proof-of-stake based {#proof-of-stake}
 
-Ethereum now uses a **proof-of-stake (PoS)** consensus protocol.
+Ethereum now uses a **proof-of-stake (PoS)** based consensus protocol.
 
 #### Block creation {#pos-block-creation}
 
@@ -55,7 +55,7 @@ Proof-of-stake is done by validators who have staked ETH to participate in the s
 
 #### Security {#pos-security}
 
-A proof-of-stake system is kept secure crypto-economically because a huge amount of ether must be destroyed by an attacker attempting to take control of the chain. A system of rewards an penalties incentivize individual miners to behave honestly.
+A proof-of-stake system is kept secure crypto-economically because a huge amount of ether must be destroyed by an attacker attempting to take control of the chain. A system of rewards incentivizes individual stakers to behave honestly, and penalties disincentivize stakers from acting maliciously.
 
 More on [proof-of-stake](/developers/docs/consensus-mechanisms/pos/)
 
@@ -67,13 +67,13 @@ Watch more on the different types of consensus mechanisms used on Ethereum:
 
 ### Sybil resistance & chain selection {#sybil-chain}
 
-As mentioned earlier, proof-of-work and proof-of-stake are not consensus protocols by themselves, but they are often referred to as such for simplicity. They are actually Sybil resistance mechanisms and block author selectors; they are a way to decide who is the author of the latest block. Another important component is the chain selection (a.k.a fork choice) algorithm that enables nodes to pick one single correct block at the head of the chain in scenarios where multiple blocks exist in the same position.
+As mentioned earlier, proof-of-work and proof-of-stake are not consensus protocols by themselves, but they are often referred to as such for simplicity. They are actually Sybil resistance mechanisms and block author selectors; they are a way to decide who is the author of the latest block. Another important component is the chain selection (aka fork choice) algorithm that enables nodes to pick one single correct block at the head of the chain in scenarios where multiple blocks exist in the same position.
 
 **Sybil resistance** measures how a protocol fares against a [Sybil attack](https://wikipedia.org/wiki/Sybil_attack). Sybil attacks are when one user or group pretends to be many users. Resistance to this type of attack is essential for a decentralized blockchain and enables miners and validators to be rewarded equally based on resources put in. Proof-of-work and proof-of-stake protect against this by making users expend a lot of energy or put up a lot of collateral. These protections are an economic deterrent to Sybil attacks.
 
 A **chain selection rule** is used to decide which chain is the "correct" chain. Bitcoin uses the "longest chain" rule, which means that whichever blockchain is the longest will be the one the rest of the nodes accept as valid and work with. For proof-of-work chains, the longest chain is determined by the chain's total cumulative proof-of-work difficulty. Ethereum used to use the longest chain rule too; however, now that Etheruem runs on proof-of-stake it adopted an updated fork-choice algorithm that measures the 'weight' of the chain. The weight is the accumulated sum of validator votes, weighted by validator staked-ether balances.
 
-Ethereum uses a consensus mechanism that combines [Casper FFG](https://arxiv.org/abs/1710.09437) proof-of-stake with the [GHOST](https://arxiv.org/abs/2003.03052) fork-choice rule.
+Ethereum uses a consensus mechanism known as [Gasper](/developers/docs/consensus-mechanisms/pos/gasper/) that combines [Casper FFG](https://arxiv.org/abs/1710.09437) proof-of-stake with the [GHOST](https://arxiv.org/abs/2003.03052) fork-choice rule.
 
 ## Further reading {#further-reading}
 
