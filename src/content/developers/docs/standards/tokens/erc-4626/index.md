@@ -49,6 +49,14 @@ function convertToShares(uint256 _assets) public view returns (uint256 _shares)
 
 This function returns the amount of `_shares` that will be exchanged by the vault for the amount of `_assets` provided.
 
+#### convertToAssets {#convertoassets}
+
+```solidity
+function convertToAssets(uint256 _shares) public view returns (uint256 _assets)
+```
+
+This function returns the amount of `_assets` that will be exchanged by the vault for the amount of `_shares` provided.
+
 #### deposit {#deposit}
 
 ```solidity
