@@ -105,6 +105,7 @@ export interface IProps {
   url: string
   background: string
   image: string
+  alt?: string
   name: string
   description?: string
   data?: Array<DataRow>
@@ -114,13 +115,14 @@ const DataProductCard: React.FC<IProps> = ({
   url,
   background,
   image,
+  alt,
   name,
   description,
   data,
 }) => (
   <Card hideArrow={true} to={url}>
     <ImageWrapper background={background}>
-      <Image image={image} alt={`${name} logo`} />
+      <Image image={image} alt={alt ? alt : `${name} logo`} />
     </ImageWrapper>
     <Content>
       <div>
