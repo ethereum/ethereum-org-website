@@ -1,6 +1,3 @@
-// This content is used as a code example in /src/pages/index.js
-// Kept here for easy formatting.
-
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.1;
 
