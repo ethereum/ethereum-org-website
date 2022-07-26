@@ -76,10 +76,10 @@ This function allows users to simulate the effects of their deposit at the curre
 #### deposit {#deposit}
 
 ```solidity
-function deposit(address _to, uint256 _value) public returns (uint256 _shares)
+function deposit(uint256 _assets, address _receiver) public returns (uint256 _shares)
 ```
 
-This function deposits the `_value` tokens into the vault and grants ownership to `_to`.
+This function deposits the `_assets` tokens into the vault and grants ownership on the `_shares` to `_receiver`.
 
 #### withdraw {#withdraw}
 
