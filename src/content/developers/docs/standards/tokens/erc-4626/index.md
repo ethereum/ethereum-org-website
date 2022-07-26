@@ -41,13 +41,13 @@ function withdraw(address _to, uint256 _value) public returns (uint256 _shares)
 
 This function withdraws `_value` token from the vault and transfers them to `_to`.
 
-#### totalHoldings {#totalholdings}
+#### totalAssets {#totalassets}
 
 ```solidity
-function totalHoldings() public view returns (uint256)
+function totalAssets() public view returns (uint256)
 ```
 
-This function returns the total amount of underlying tokens held by the vault.
+This function returns the total amount of underlying assets held by the vault.
 
 #### balanceOfUnderlying {#balanceofunderlying}
 
