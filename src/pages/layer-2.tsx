@@ -1071,6 +1071,16 @@ export const query = graphql`
         )
       }
     }
+    aztec: file(relativePath: { eq: "layer-2/aztec.png" }) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 200
+          layout: CONSTRAINED
+          placeholder: BLURRED
+          quality: 100
+        )
+      }
+    }
     boba: file(relativePath: { eq: "layer-2/boba.png" }) {
       childImageSharp {
         gatsbyImageData(
