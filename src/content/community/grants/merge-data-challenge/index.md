@@ -16,12 +16,12 @@ Calling all Ethereans, data scientists, data engineers, data visualizers, develo
 
 The [Merge](https://ethereum.org/en/upgrades/merge/) is coming, providing a more secure and sustainable home for Ethereum -- as well as more data, lots and lots of data. And **the Ethereum community needs your help to make sense of it all.**
 
-- *What new visualizations help provide insight into proof-of-stake Ethereum?*
-- *How do the Consensus-Layer and Execution-Layer interact? Are there differences across client pairs in communication patterns, efficiency, etc? Are their good places to optimise?*
-- *What, if anything, changed on the network at the point of the Merge -- block propagation times, p2p connections, transaction mempool performance, etc?*
-- *Did the Merge affect core Beacon Chain activity -- attestation performance, blocks missed, sync committees?*
-- *Did user activity noticeably change after the Merge? What about MEV?*
-- *What new tools can you build to collect and analyze data in the post-Merge network?*
+- _What new visualizations help provide insight into proof-of-stake Ethereum?_
+- _How do the Consensus-Layer and Execution-Layer interact? Are there differences across client pairs in communication patterns, efficiency, etc? Are their good places to optimise?_
+- _What, if anything, changed on the network at the point of the Merge -- block propagation times, p2p connections, transaction mempool performance, etc?_
+- _Did the Merge affect core Beacon Chain activity -- attestation performance, blocks missed, sync committees?_
+- _Did user activity noticeably change after the Merge? What about MEV?_
+- _What new tools can you build to collect and analyze data in the post-Merge network?_
 
 ## The challenge {#the-challenge}
 
@@ -29,7 +29,7 @@ The [Merge](https://ethereum.org/en/upgrades/merge/) is coming, providing a more
 
 The Ethereum Foundation is running this challenge because there's a lot to learn and discover from the Merge mainnet activity. Your findings will give the Ethereum community -- from beginners to researchers and client developers -- important insight into the Merge.
 
-Get started now if you want to gather date from both *before* and *after* the big event!
+Get started now if you want to gather date from both _before_ and _after_ the big event!
 
  <Emoji svg text=":rocket:" />
 
@@ -43,7 +43,8 @@ Anyone is free to submit, here's how:
 2.  Detail out your work in a blog post
 3.  Submit!
 
-<ButtonLink to=(LINK TO new submission form)>Submit blog post</ButtonLink>
+<!-- TODOD LINK TO new submission form) -->
+<!-- <ButtonLink to="">Submit blog post</ButtonLink> -->
 
 _You may submit more than one blog post! So long as each posts focuses on a different visualisation or piece of analysis_
 
@@ -93,12 +94,12 @@ _Surprise us with your creativity! But here are some judging criteria considerat
 
 ## Helpful resources {#helpful-resources}
 
-- [Merge Overview](https://ethereum.org/en/upgrades/merge/) 
+- [Merge Overview](https://ethereum.org/en/upgrades/merge/)
 - Specs
-    - [Consensus Layer specs](https://github.com/ethereum/consensus-specs)
-    - [Execution Layer specs](https://github.com/ethereum/execution-specs)
-    - [EIP 3675]() & [EIP 4399](https://eips.ethereum.org/EIPS/eip-4399)
-    - [Engine API](https://github.com/ethereum/execution-apis/blob/main/src/engine/specification.md)
+  - [Consensus Layer specs](https://github.com/ethereum/consensus-specs)
+  - [Execution Layer specs](https://github.com/ethereum/execution-specs)
+  - [EIP 3675]() & [EIP 4399](https://eips.ethereum.org/EIPS/eip-4399)
+  - [Engine API](https://github.com/ethereum/execution-apis/blob/main/src/engine/specification.md)
 - [Mega Merge Resource List](https://notes.ethereum.org/@MarioHavel/merge-resources)
 - [Ethereum Roadmap FAQ](https://github.com/timbeiko/eth-roadmap-faq)
 - [Ethereum Energy Consumption](https://ethereum.org/en/energy-consumption/)
