@@ -230,10 +230,8 @@ const Layer2Page = ({ data }) => {
           "https://api.cryptostats.community/api/v1/l2-fees/feeTransferEth?metadata=false"
         )
 
-        // Temporary, but filtering out L2's we arent listing
-        feeData = feeData.data.filter(
-          (l2) => l2.id !== "aztec-network" && l2.id !== "hermez"
-        )
+        // Filter out layer 2 networks not listed
+        feeData = feeData.data.filter((l2) => l2.id !== "hermez")
 
         const feeAverage =
           feeData.reduce(
@@ -1043,6 +1041,16 @@ export const query = graphql`
       childImageSharp {
         gatsbyImageData(
           width: 100
+          layout: CONSTRAINED
+          placeholder: BLURRED
+          quality: 100
+        )
+      }
+    }
+    aztec: file(relativePath: { eq: "layer-2/aztec.png" }) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 200
           layout: CONSTRAINED
           placeholder: BLURRED
           quality: 100

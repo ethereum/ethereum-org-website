@@ -128,6 +128,7 @@
   "loopring-description": "Loopring's zkRollup L2 solution aims to offer the same security guarantees as Ethereum mainnet, with a big scalability boost: throughput increased by 1000x, and cost reduced to just 0.1% of L1.",
   "zksync-description": "zkSync is a user-centric zk rollup platform from Matter Labs. It is a scaling solution for Ethereum, already live on Ethereum mainnet. It supports payments, token swaps and NFT minting.",
   "zkspace-description": "The ZKSpace platform consists of three main parts: a Layer 2 AMM DEX utilizing ZK-Rollups technology called ZKSwap, a payment service called ZKSquare, and an NFT marketplace called ZKSea.",
+  "aztec-description": "Aztec Network is the first private zk-rollup on Ethereum, enabling decentralized applications to access privacy and scale.",
   "layer-2-note": "Note:",
   "layer-2-ecosystem-portal": "Ecosystem Portal",
   "layer-2-token-lists": "Token Lists",
