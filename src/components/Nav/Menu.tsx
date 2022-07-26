@@ -33,7 +33,10 @@ const Menu: React.FC<IProps> = ({ path, sections }) => {
     <>
       <NavDropdown section={useEthereum} hasSubNav={shouldShowSubNav}>
         {useEthereum.items.map((item, index) => (
-          <NavDropdown.Item isLast={index === useEthereum.items.length - 1}>
+          <NavDropdown.Item
+            key={index}
+            isLast={index === useEthereum.items.length - 1}
+          >
             <NavDropdown.Link to={item.to} isPartiallyActive={false}>
               <Translation id={item.text} />
             </NavDropdown.Link>
@@ -44,23 +47,24 @@ const Menu: React.FC<IProps> = ({ path, sections }) => {
       <NavDropdown section={learn} hasSubNav={shouldShowSubNav}>
         <TwoColumns dir={direction}>
           <div>
-            {[start, basics].map((section) => (
-              <>
+            {[start, basics].map((section, index) => (
+              <React.Fragment key={index}>
                 <NavDropdown.Title>{section.text}</NavDropdown.Title>
-                {(section.items || []).map((item) => (
-                  <NavDropdown.Item>
+                {(section.items || []).map((item, index) => (
+                  <NavDropdown.Item key={index}>
                     <NavDropdown.Link to={item.to} isPartiallyActive={false}>
                       <Translation id={item.text} />
                     </NavDropdown.Link>
                   </NavDropdown.Item>
                 ))}
-              </>
+              </React.Fragment>
             ))}
           </div>
           <div>
             <NavDropdown.Title>{protocol.text}</NavDropdown.Title>
             {(protocol.items || []).map((item, index) => (
               <NavDropdown.Item
+                key={index}
                 isLast={index === (protocol.items || []).length - 1}
               >
                 <NavDropdown.Link to={item.to} isPartiallyActive={false}>
@@ -76,9 +80,16 @@ const Menu: React.FC<IProps> = ({ path, sections }) => {
         const section = restSections[sectionKey]
 
         return (
-          <NavDropdown section={section} hasSubNav={shouldShowSubNav}>
+          <NavDropdown
+            key={sectionKey}
+            section={section}
+            hasSubNav={shouldShowSubNav}
+          >
             {section.items.map((item, index) => (
-              <NavDropdown.Item isLast={index === section.items.length - 1}>
+              <NavDropdown.Item
+                key={index}
+                isLast={index === section.items.length - 1}
+              >
                 <NavDropdown.Link to={item.to} isPartiallyActive={false}>
                   <Translation id={item.text} />
                 </NavDropdown.Link>
