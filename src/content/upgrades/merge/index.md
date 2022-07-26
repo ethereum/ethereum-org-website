@@ -7,27 +7,27 @@ sidebar: true
 image: ../../../assets/upgrades/merge.png
 summaryPoint1: Ethereum Mainnet uses proof-of-stake, but this wasn't always the case.
 summaryPoint2: The transition from the original proof-of-work mechanism to proof-of-stake was called The Merge.
-summaryPoint3: The Merge refers to the original Ethereum Mainnet becoming part of a separate proof-of0-stake blockchain called the Beacon Chain.
+summaryPoint3: The Merge refers to the original Ethereum Mainnet becoming part of a separate proof-of-stake blockchain called the Beacon Chain, now existing as one chain.
 summaryPoint4: The Merge reduced Ethereum's energy consumption by ~99.95%.
 ---
 
 ## What was The Merge? {#what-is-the-merge}
 
-The Merge was the joining of the original execution layer of Ethereum (the Mainnet we use today) with its new proof-of-stake consensus layer, the Beacon Chain. It eliminated the need for energy-intensive mining and instead enabled the the network to be secured using staked ETH. It was a truly exciting step in realizing the Ethereum vision – more scalability, security, and sustainability.
+The Merge was the joining of the original execution layer of Ethereum (the Mainnet that has existed since [genesis](/history/#frontier)) with its new proof-of-stake consensus layer, the Beacon Chain. It eliminated the need for energy-intensive mining and instead enabled the the network to be secured using staked ETH. It was a truly exciting step in realizing the Ethereum vision—more scalability, security, and sustainability.
 
 <MergeInfographic />
 
 Initially, the [Beacon Chain](/upgrades/beacon-chain/) shipped separately from [Mainnet](/glossary/#mainnet). Ethereum Mainnet - with all it's accounts, balances, smart contracts, and blockchain state - continued to be secured by [proof-of-work](/developers/docs/consensus-mechanisms/pow/), even while the Beacon Chain ran in parallel using [proof-of-stake](/developers/docs/consensus-mechanisms/pos/). The Merge was when these two systems finally came together, and proof-of-work was permanently replaced by proof-of-stake.
 
-Imagine Ethereum is a spaceship that wasn't quite ready for an interstellar voyage. With the Beacon Chain, the community built a new engine and a hardened hull. After significant testing, it became time to hot-swap the new engine for the old one mid-flight. This merged the new, more efficient engine into the existing ship enabling it to put in some serious lightyears and take on the universe.
+Imagine Ethereum is a spaceship that launched before it was quite ready for an interstellar voyage. With the Beacon Chain, the community built a new engine and a hardened hull. After significant testing, it became time to hot-swap the new engine for the old one mid-flight. This merged the new, more efficient engine into the existing ship enabling it to put in some serious lightyears and take on the universe.
 
 ## Merging with Mainnet {#merging-with-mainnet}
 
-Proof-of-work secured Ethereum Mainnet from genesis until The Merge. This allowed the Ethereum blockchain we're all used to to come into existence in July 2015 with all its familiar features - transactions, smart contracts, accounts, etc.
+Proof-of-work secured Ethereum Mainnet from genesis until The Merge. This allowed the Ethereum blockchain we're all used to to come into existence in July 2015 with all its familiar features—transactions, smart contracts, accounts, etc.
 
-Throughout Ethereum's history, developers have prepared for an eventual transition away from proof-of-work to proof-of-stake. On December 1, 2020, the Beacon Chain was created as a separate blockchain to Mainnet, running in parallel.
+Throughout Ethereum's history, developers prepared for an eventual transition away from proof-of-work to proof-of-stake. On December 1, 2020, the Beacon Chain was created as a separate blockchain to Mainnet, running in parallel.
 
-The Beacon Chain was not processing Mainnet transactions. Instead, it was reaching consensus on its own state by agreeing on active validators and their account balances. After extensive testing, it became time for the Beacon Chain to reach consensus on real world data. After The Merge, the Beacon Chain became the consensus engine for all network data, including execution layer transactions and account balances.
+The Beacon Chain was not originally processing Mainnet transactions. Instead, it was reaching consensus on its own state by agreeing on active validators and their account balances. After extensive testing, it became time for the Beacon Chain to reach consensus on real world data. After The Merge, the Beacon Chain became the consensus engine for all network data, including execution layer transactions and account balances.
 
 The Merge represented the official switch to using the Beacon Chain as the engine of block production. Mining is no longer be the means of producing valid blocks. Instead, the proof-of-stake validators have adopted this role and are now responsible for processing the validity of all transactions and proposing blocks.
 
@@ -41,7 +41,7 @@ This transition to proof-of-stake changed the way ether is issued. Learn more ab
 
 **The Merge did not change anything for holders/users.**
 
-_This bears repeating_: As a user or holder of ETH or any other digital asset on Ethereum, as well as non-node-operating stakers, **you do not need to do anything with your funds or wallet to account for The Merge.** ETH is just ETH. There is no such thing as "old ETH"/"new ETH" or "ETH1"/"ETH2" and wallets work exactly the same after The Merge as they did before - people tellign you otherwise are likely scammers.
+_This bears repeating_: As a user or holder of ETH or any other digital asset on Ethereum, as well as non-node-operating stakers, **you do not need to do anything with your funds or wallet to account for The Merge.** ETH is just ETH. There is no such thing as "old ETH"/"new ETH" or "ETH1"/"ETH2" and wallets work exactly the same after The Merge as they did before—people telling you otherwise are likely scammers.
 
 Despite swapping out proof-of-work, the entire history of Ethereum since genesis remained intact and unaltered by the transition to proof-of-stake. Any funds held in your wallet before The Merge will are still accessible after The Merge. **No action is required to upgrade on your part.**
 
@@ -56,8 +56,8 @@ id="staking-node-operators">
 
 Key action items include:
 
-1. Run _both_ a consensus layer client and an execution layer client; third-party endpoints to obtain execution data no longer work since The Merge.
-2. Authenticate both execution layer and consensus layer clients with a shared JWT secret so they can securely communicate.
+1. Run _both_ a consensus client and an execution client; third-party endpoints to obtain execution data no longer work since The Merge.
+2. Authenticate both execution and consensus clients with a shared JWT secret so they can securely communicate.
 3. Set a `fee recipient` address to receive your earned transaction fee tips/MEV.
 
 Not completing the first two items above items will result in your node being seen as "offline" until both layers are synced and authenticated.
@@ -69,13 +69,13 @@ title="Non-validating node operators and infrastructure providers"
 contentPreview="If you're operating a non-validating Ethereum node, the most significant change that came with The Merge was the requirement to run clients for BOTH the execution layer AND the consensus layer."
 id="node-operators">
 
-Up until The Merge, an execution layer client was enough to receive, properly validate, and propagate blocks being gossiped by the network. _After The Merge_, the validity of transactions contained within an execution payload now also also depends on the validity of the "consensus block" it is contained within.
+Up until The Merge, an execution client (such as Geth, Erigon, Besu or Nethermind) was enough to receive, properly validate, and propagate blocks being gossiped by the network. _After The Merge_, the validity of transactions contained within an execution payload now also also depends on the validity of the "consensus block" it is contained within.
 
-As a result, a full Ethereum node now requires both an execution layer client and a consensus layer client. These two clients work together using a new Engine API. The Engine API requires authentication using a JWT secret, which is provided to both clients allowing secure communication.
+As a result, a full Ethereum node now requires both an execution client and a consensus client. These two clients work together using a new Engine API. The Engine API requires authentication using a JWT secret, which is provided to both clients allowing secure communication.
 
 Key action items include:
 
-- Install a consensus layer client in addition to an execution layer client
+- Install a consensus client in addition to an execution client
 - Authenticate execution and consensus clients with a shared JWT secret so they can securely communicate with one another.
 
 Not completing the above items will result in your node appearing to be "offline" until both layers are synced and authenticated.
@@ -110,7 +110,7 @@ The Merge also set the stage for further scalability upgrades not possible under
 
 <ExpandableCard
 title="Misconception: &quot;Running a node requires staking 32 ETH.&quot;"
-contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e. run a node). No ETH is required - not before The Merge, not after The Merge, not ever.">
+contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e. run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
 There are two types of Ethereum nodes: nodes that can propose blocks and nodes that don't.
 
 Nodes that propose blocks are only a small number of the total nodes on Ethereum. This category includes mining nodes under proof-of-work (PoW) and validator nodes under proof-of-stake (PoS). This category requires committing economic resources (such as GPU hash power in proof-of-work or staked ETH in proof-of-stake) in exchange for the ability to occasionally propose the next block and earn protocol rewards.
@@ -138,7 +138,7 @@ title="Misconception: &quot;Transactions are noticeably faster after The Merge.&
 contentPreview="False. Though some slight changes exist, transaction speed is mostly remain the same on layer 1.">
 A transaction's "speed" can be measured in a few ways, including time to be included in a block and time to finalization. Both of these changes slightly, but not in a way that users will notice.
 
-Historically, on proof-of-work, the target was to have a new block every ~13.3 seconds. Under proof-of-stake, slots occur precisely every 12 seconds, each of which is an opportunity for a validator to publish a block. Most slots have blocks, but not necessarily all (i.e. a validator is offline). In proof-of-stake blocks are be produced ~10% more frequently than on proof-of-work. This is a fairly insignificant change and is unlikely to be noticed by users.
+Historically, on proof-of-work, the target was to have a new block every ~13.3 seconds. Under proof-of-stake, slots occur precisely every 12 seconds, each of which is an opportunity for a validator to publish a block. Most slots have blocks, but not necessarily all (i.e. a validator is offline). In proof-of-stake, blocks are produced ~10% more frequently than on proof-of-work. This was a fairly insignificant change and is unlikely to be noticed by users.
 
 Proof-of-stake introduced the transaction finality concept that did not previously exist. In proof-of-work, the ability to reverse a block gets exponentially more difficult with every passing block mined on top of a transaction, but it never quite reaches zero. Under proof-of-stake, blocks are bundled into epochs (6.4 minute spans of time containing 32 chances for blocks) which validators vote on. When an epoch ends, validators vote on whether to consider the epoch 'justified'. If validators agree to justify the epoch, it gets finalized in the next epoch. Undoing finalized transactions is economically unviable as it would require obtaining and burning over one-third of the total staked ETH.
 
@@ -147,12 +147,12 @@ Proof-of-stake introduced the transaction finality concept that did not previous
 <ExpandableCard
 title="Misconception: &quot;The Merge enabled staking withdrawals.&quot;"
 contentPreview="False. Staking withdrawals are not yet enabled with The Merge. The following Shanghai upgrade will enable staking withdrawals.">
-Staked ETH and staking rewards continue to be locked without the ability to withdraw. Withdrawals are planned for the Shanghai upgrade.
+Staked ETH and staking rewards continue to be locked without the ability to withdraw. Withdrawals are planned for the upcoming Shanghai upgrade.
 </ExpandableCard>
 
 <ExpandableCard
 title="Misconception: &quot;Validators will not receive any liquid ETH rewards til the Shanghai upgrade when withdrawals are enabled.&quot;"
-contentPreview="False. Fee tips/MEV are credited to a Mainnet account controlled by the validator, available immediately.">
+contentPreview="False. Fee tips/MEV are credited to a non-staking account controlled by the validator, available immediately.">
 This may seem counterintuitive to the above note that withdrawals are not enabled til the Shanghai upgrade, but validators DO have immediate access to the fee rewards/MEV earned during block proposals.
 
 The protocol issues ETH as a reward to validators for contributing to consensus. The validator nominates an account to receive the newly issued ETH, where a validator has a unique address that holds its staked ETH and protocol rewards. This ETH is locked until Shanghai.
@@ -190,7 +190,7 @@ The Ethereum upgrades are all somewhat interrelated. So let’s recap how The Me
 
 ### The Merge and the Beacon Chain {#merge-and-beacon-chain}
 
-The Merge represents the formal adoption of the Beacon Chain as the new consensus layer to the original Mainnet execution layer. Since the Merge, validators are assigned to secure Ethereum Mainnet, and mining on [proof-of-work](/developers/docs/consensus-mechanisms/pow/) is no longer a valid means of block production.
+The Merge represents the formal adoption of the Beacon Chain as the new consensus layer to the original Mainnet execution layer. Since The Merge, validators are assigned to secure Ethereum Mainnet, and mining on [proof-of-work](/developers/docs/consensus-mechanisms/pow/) is no longer a valid means of block production.
 
 Blocks are instead proposed by validating nodes that have staked ETH in return for the right to participate in consensus. These upgrades set the stage for future scalability upgrades, including sharding.
 
