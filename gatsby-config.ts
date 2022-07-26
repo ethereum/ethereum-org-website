@@ -186,6 +186,13 @@ const config: GatsbyConfig = {
     },
     // CSS in JS
     `gatsby-plugin-emotion`,
+    {
+      resolve: "@chakra-ui/gatsby-plugin",
+      options: {
+        resetCSS: false,
+        isUsingColorMode: true,
+      },
+    },
     // Source assets
     {
       resolve: `gatsby-source-filesystem`,
