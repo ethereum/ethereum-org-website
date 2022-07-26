@@ -123,7 +123,7 @@ The decimal scalar for vault shares and operations involving `exchangeRate()`.
 event Deposit(address indexed sender, address indexed owner, uint256 assets, uint256 shares)
 ```
 
-Where `owner` is the user who exchanged `assets` for `shares`, and transferred those `shares` to `owner`.
+Where `sender` is the user who exchanged `assets` for `shares`, and transferred those `shares` to `owner`.
 
 #### Widthdraw Event
 
