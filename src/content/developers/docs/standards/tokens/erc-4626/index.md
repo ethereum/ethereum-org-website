@@ -31,7 +31,7 @@ To better understand this page, we recommend you first read about [token standar
 function asset() public view returns (address _assetTokenAddress)
 ```
 
-This function returns the address of the underlying token used for the vault.
+This function returns the address of the underlying token used for the vault for accounting, depositing, withdrawing.
 
 #### totalAssets {#totalassets}
 
@@ -40,6 +40,14 @@ function totalAssets() public view returns (uint256)
 ```
 
 This function returns the total amount of underlying assets held by the vault.
+
+#### convertToShares {#convertoshares}
+
+```solidity
+function convertToShares(uint256 assets) public view returns (uint256 _shares)
+```
+
+This function returns the amount of `shares` that will be exchanged by the vault for the amount of `assets` provided.
 
 #### deposit {#deposit}
 
