@@ -8,7 +8,7 @@ tags:
   - "solidity"
   - "pierwsze kroki"
   - "wdrożenie"
-skill: początkujący
+skill: beginner
 lang: pl
 sidebar: true
 published: 2020-04-03

@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react"
 import { graphql } from "gatsby"
 import { getImage, GatsbyImage } from "gatsby-plugin-image"
 import styled from "styled-components"
-import { useIntl } from "gatsby-plugin-intl"
+import { useIntl } from "react-intl"
 
 // Data
 import layer2Data from "../data/layer-2/layer-2.json"
@@ -230,10 +230,8 @@ const Layer2Page = ({ data }) => {
           "https://api.cryptostats.community/api/v1/l2-fees/feeTransferEth?metadata=false"
         )
 
-        // Temporary, but filtering out L2's we arent listing
-        feeData = feeData.data.filter(
-          (l2) => l2.id !== "aztec-network" && l2.id !== "hermez"
-        )
+        // Filter out layer 2 networks not listed
+        feeData = feeData.data.filter((l2) => l2.id !== "hermez")
 
         const feeAverage =
           feeData.reduce(
@@ -679,6 +677,9 @@ const Layer2Page = ({ data }) => {
         <p>
           <Translation id="layer-2-use-layer-2-1" />
         </p>
+        <p>
+          <Translation id="layer-2-contract-accounts" />
+        </p>
         <h3>
           <Translation id="layer-2-use-layer-2-generalized-title" />
         </h3>
@@ -753,7 +754,14 @@ const Layer2Page = ({ data }) => {
               <Translation id="layer-2-sidechains-2" />
             </p>
             <p>
-              <Translation id="layer-2-sidechains-3" />
+              <Link to="/developers/docs/scaling/sidechains/">
+                <Translation id="layer-2-more-on-sidechains" />
+              </Link>
+            </p>
+            <p>
+              <Link to="/developers/docs/scaling/validium/">
+                <Translation id="layer-2-more-on-validiums" />
+              </Link>
             </p>
           </Flex50>
           <Flex50>
@@ -771,6 +779,7 @@ const Layer2Page = ({ data }) => {
         <Layer2Onboard
           layer2DataCombined={layer2DataCombined}
           ethIcon={getImage(data.ethHome)}
+          ethIconAlt={translateMessageId("ethereum-logo", intl)}
         />
       </PaddedContent>
 
@@ -818,14 +827,26 @@ const Layer2Page = ({ data }) => {
             <Translation id="layer-2-faq-question-2-description-3" />
           </p>
           <p>
-            <Translation id="layer-2-faq-question-2-description-4" />
+            <Link to="/developers/docs/scaling/optimistic-rollups/">
+              <Translation id="layer-2-more-info-on-optimistic-rollups" />
+            </Link>
+          </p>
+          <p>
+            <Link to="/developers/docs/scaling/zk-rollups/">
+              <Translation id="layer-2-more-info-on-zk-rollups" />
+            </Link>
           </p>
         </ExpandableCard>
         <ExpandableCard
           title={`${translateMessageId("layer-2-faq-question-3-title", intl)}`}
         >
           <p>
-            <Translation id="layer-2-faq-question-3-description-1" />
+            <Translation id="layer-2-faq-question-3-description-1" />{" "}
+          </p>
+          <p>
+            <Link to="/upgrades/sharding/">
+              <Translation id="layer-2-more-on-sharding" />
+            </Link>
           </p>
         </ExpandableCard>
         <ExpandableCard
@@ -838,14 +859,22 @@ const Layer2Page = ({ data }) => {
             <Translation id="layer-2-faq-question-4-description-2" />
           </p>
           <p>
-            <Translation id="layer-2-faq-question-4-description-3" />
+            <Translation id="layer-2-faq-question-4-description-3" />{" "}
+          </p>
+          <p>
+            <Link to="/bridges/">
+              <Translation id="layer-2-more-on-bridges" />
+            </Link>
           </p>
         </ExpandableCard>
         <ExpandableCard
           title={`${translateMessageId("layer-2-faq-question-5-title", intl)}`}
         >
           <p>
-            <Translation id="layer-2-faq-question-5-description-1" />
+            <Translation id="layer-2-faq-question-5-description-1" />{" "}
+            <Link to="/contributing/adding-layer-2s/">
+              <Translation id="layer-2-faq-question-5-view-listing-policy" />
+            </Link>
           </p>
           <p>
             <Translation id="layer-2-faq-question-5-description-2" />
@@ -883,7 +912,7 @@ const Layer2Page = ({ data }) => {
             <i>- Finematics</i>
           </li>
           <li>
-            <Link to="/upgrades/shard-chains/">
+            <Link to="/upgrades/sharding/">
               <Translation id="scaling-layer-1-with-shard-chains" />
             </Link>
           </li>
@@ -905,7 +934,7 @@ const Layer2Page = ({ data }) => {
 export default Layer2Page
 
 export const query = graphql`
-  query {
+  query Layer2Page {
     dao: file(relativePath: { eq: "use-cases/dao-2.png" }) {
       childImageSharp {
         gatsbyImageData(
@@ -1012,6 +1041,16 @@ export const query = graphql`
       childImageSharp {
         gatsbyImageData(
           width: 100
+          layout: CONSTRAINED
+          placeholder: BLURRED
+          quality: 100
+        )
+      }
+    }
+    aztec: file(relativePath: { eq: "layer-2/aztec.png" }) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 200
           layout: CONSTRAINED
           placeholder: BLURRED
           quality: 100

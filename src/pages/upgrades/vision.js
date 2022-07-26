@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { graphql } from "gatsby"
-import { useIntl } from "gatsby-plugin-intl"
+import { useIntl } from "react-intl"
 import { getImage } from "gatsby-plugin-image"
 
 import { translateMessageId } from "../../utils/translations"
@@ -15,12 +15,14 @@ import PageHero from "../../components/PageHero"
 import Breadcrumbs from "../../components/Breadcrumbs"
 import ButtonLink from "../../components/ButtonLink"
 import PageMetadata from "../../components/PageMetadata"
+import InfoBanner from "../../components/InfoBanner"
 import {
   CardContainer,
   Content,
   Page,
   Divider,
 } from "../../components/SharedStyledComponents"
+import FeedbackCard from "../../components/FeedbackCard"
 
 const StyledCardContainer = styled(CardContainer)`
   margin-top: 2rem;
@@ -97,6 +99,7 @@ const VisionPage = ({ data, location }) => {
   }
 
   const upgrades = [
+    // TODO: Check/update string keys after affiliates pre-merge content changes are pulled in
     {
       image: getImage(data.beaconchain),
       title: <Translation id="page-upgrades-beacon-chain-title" />,
@@ -115,7 +118,7 @@ const VisionPage = ({ data, location }) => {
       image: getImage(data.shards),
       title: <Translation id="page-upgrades-shard-title" />,
       description: <Translation id="page-upgrades-shard-desc" />,
-      to: "/upgrades/shard-chains/",
+      to: "/upgrades/sharding/",
       date: <Translation id="page-upgrades-shard-estimate" />,
     },
   ]
@@ -144,6 +147,11 @@ const VisionPage = ({ data, location }) => {
             <Translation id="page-upgrades-vision-upgrade-needs-desc-3" />{" "}
           </p>
           <ul>
+            <li>
+              <Link to="https://members.delphidigital.io/reports/the-hitchhikers-guide-to-ethereum">
+                <Translation id="page-upgrades-vision-2022" />
+              </Link>
+            </li>
             <li>
               <Link to="https://trent.mirror.xyz/82eyq_NXZzzqFmCNXiKJgSdayf6omCW7BgDQIneyPoA">
                 <Translation id="page-upgrades-vision-2021-updates" />
@@ -206,13 +214,13 @@ const VisionPage = ({ data, location }) => {
             <Translation id="page-upgrades-vision-scalability-desc" />
           </p>
           <p>
-            <Translation id="page-upgrades-vision-scalability-desc-3" />{" "}
-            <Link to="/upgrades/shard-chains/">
-              <Translation id="page-upgrades-vision-shard-upgrade" />
-            </Link>{" "}
+            <Translation id="page-upgrades-vision-scalability-desc-3" />
           </p>
           <p>
-            <Translation id="page-upgrades-vision-scalability-desc-4" />
+            <Translation id="page-upgrades-vision-scalability-desc-4" />{" "}
+            <Link to="/upgrades/sharding/">
+              <Translation id="page-upgrades-vision-shard-upgrade" />
+            </Link>{" "}
           </p>
           <h3>
             <Translation id="page-upgrades-vision-security" />{" "}
@@ -237,13 +245,13 @@ const VisionPage = ({ data, location }) => {
             <Translation id="page-upgrades-vision-security-desc-8" />
           </p>
           <p>
-            <Translation id="page-upgrades-vision-security-desc-10" />{" "}
-            <Link to="/developers/docs/nodes-and-clients/">
-              <Translation id="page-upgrades-vision-ethereum-node" />
-            </Link>
+            <Translation id="page-upgrades-vision-security-desc-10" />
           </p>
           <p>
-            <Translation id="page-upgrades-vision-security-validator" />
+            <Translation id="page-upgrades-vision-security-validator" />{" "}
+            <Link to="/run-a-node/">
+              <Translation id="page-upgrades-vision-ethereum-node" />
+            </Link>
           </p>
           <ButtonLink to="/staking/">
             <Translation id="page-upgrades-vision-security-staking" />
@@ -268,11 +276,16 @@ const VisionPage = ({ data, location }) => {
             </Link>
           </p>
           <p>
-            <Translation id="page-upgrades-vision-sustainability-desc-3" />{" "}
+            <Translation id="page-upgrades-vision-sustainability-desc-3" />
           </p>
-          <p>
-            <Translation id="page-upgrades-vision-sustainability-desc-8" />{" "}
-          </p>
+          <InfoBanner>
+            <p>
+              <Translation id="page-upgrades-vision-sustainability-desc-8" />
+            </p>
+            <ButtonLink to="/upgrades/merge/">
+              <Translation id="page-upgrades-merge-btn" />
+            </ButtonLink>
+          </InfoBanner>
         </CentralContent>
       </Content>
       <Divider />
@@ -284,7 +297,7 @@ const VisionPage = ({ data, location }) => {
           {upgrades.map((upgrade, idx) => (
             <ActionCard
               isRight
-              key={idx}
+              key={upgrade.title}
               image={upgrade.image}
               title={upgrade.title}
               description={upgrade.description}
@@ -295,6 +308,7 @@ const VisionPage = ({ data, location }) => {
           ))}
         </StyledCardContainer>
       </Content>
+      <FeedbackCard />
     </Page>
   )
 }
@@ -302,7 +316,7 @@ const VisionPage = ({ data, location }) => {
 export default VisionPage
 
 export const query = graphql`
-  {
+  query UpgradesVisionPage {
     oldship: file(relativePath: { eq: "upgrades/oldship.png" }) {
       childImageSharp {
         gatsbyImageData(

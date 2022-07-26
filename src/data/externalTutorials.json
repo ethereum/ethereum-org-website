@@ -1,5 +1,31 @@
 [
   {
+    "url": "https://www.youtube.com/watch?v=veBu03A6ptw",
+    "title": "How to develop an NFT Smart Contract (ERC721) with Alchemy",
+    "description": "A tutorial showing how to develop your first NFT smart contract quickly using OpenZeppelin, Remix, Alchemy, and Opensea. The first lesson of Road to Web3, a series of community-focused weekly Web3 development projects!",
+    "author": "Vitto Rivabella",
+    "authorGithub": "https://github.com/alchemyplatform",
+    "tags": [
+      "solidity",
+      "remix",
+      "ethersjs",
+      "smart contracts",
+      "openzeppelin",
+      "alchemy",
+      "blockchain",
+      "video",
+      "NFT",
+      "ERC-721",
+      "alchemy",
+      "metamask",
+      "etherscan"
+    ],
+    "skillLevel": "beginner",
+    "timeToRead": "48",
+    "lang": "en",
+    "publishDate": "05/01/2022"
+  },
+  {
     "url": "https://www.youtube.com/watch?v=gyMwXuJrbJQ",
     "title": "Learn Blockchain, Solidity, and Full Stack Web3 Development with JavaScript ",
     "description": "This course will give you a full introduction to all of the core concepts related to blockchain, smart contracts, Solidity, ERC20s, full-stack Web3 dapps, DeFi, JavaScript, TypeScript, Chainlink, Ethereum, upgradable smart contracts, DAOs, the graph, Moralis, Aave, IPFS, and more. Follow along with the videos and you'll be a blockchain wizard in no time!",
@@ -107,7 +133,7 @@
     "publishDate": "02/11/2022"
   },
   {
-    "url": "https://www.youtube.com/watch?v=pdsYCkUWrgQ",
+    "url": "https://www.youtube.com/watch?v=AhJtmUqhAqg",
     "title": "How to build an on-chain DAO",
     "description": "Using Compound and Openzeppelin as a basis, we build a 100% on-chain DAO using an ERC20 governance token for votes.",
     "author": "Patrick Collins",
@@ -342,7 +368,7 @@
   {
     "url": "https://hardhat.org/tutorial/",
     "title": "Hardhat's tutorial for beginners",
-    "description": "Hardhat's beginners guide to Ethereum contracts and dApp development",
+    "description": "Hardhat's beginners guide to Ethereum contracts and dapp development",
     "author": "Hardhat",
     "authorGithub": "https://https://hardhat.org/",
     "tags": ["hardhat", "solidity", "testing", "smart-contracts"],
@@ -353,7 +379,7 @@
   {
     "url": "https://dev.to/dabit3/the-complete-guide-to-full-stack-ethereum-development-3j13",
     "title": "The Complete Guide to Full Stack Ethereum Development",
-    "description": "Building Full Stack dApps with React, Ethers.js, Solidity, and Hardhat",
+    "description": "Building Full Stack dapps with React, Ethers.js, Solidity, and Hardhat",
     "author": "Nader Dabit",
     "authorGithub": "https://github.com/dabit3",
     "tags": ["solidity", "hardhat", "ethers.js", "smart-contracts", "react"],

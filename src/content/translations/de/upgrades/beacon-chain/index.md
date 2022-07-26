@@ -17,7 +17,7 @@ summaryPoint4: Sie kennen das möglicherweise als „Phase 0“ in technischen D
 
 ## Welche Funktion hat die Beacon Chain? {#what-does-the-beacon-chain-do}
 
-Die Beacon Chain übernimmt die Koordination und Verknüpfung des Netzwerks der [Shards](/upgrades/shard-chains/) und [Staker](/staking/). Aber sie ist nicht mit dem [Ethereum-Mainnet](/glossary/#mainnet) von heute vergleichbar, da sie keine Konten oder Smart Contracts verarbeitet.
+Die Beacon Chain übernimmt die Koordination und Verknüpfung des Netzwerks der [Shards](/upgrades/sharding/) und [Staker](/staking/). Aber sie ist nicht mit dem [Ethereum-Mainnet](/glossary/#mainnet) von heute vergleichbar, da sie keine Konten oder Smart Contracts verarbeitet.
 
 Mit der Zeit können sich Aufgabe und Rolle der Beacon Chain zwar verändern, sie ist jedoch ein fundamentaler Baustein für das [sichere, nachhaltige und skalierbare Ethereum der Zukunft](/upgrades/vision/).
 
@@ -27,13 +27,13 @@ Mit der Zeit können sich Aufgabe und Rolle der Beacon Chain zwar verändern, si
 
 Die Beacon Chain wird [Proof-of-Stake](/developers/docs/consensus-mechanisms/pos/) für Ethereum einführen. Dies eröffnet neue Möglichkeiten für die Beteiligung an der Sicherheit des Ethereum-Netzwerks. Man kann es sich als frei verfügbares Gut vorstellen, das Ethereum vitaler macht und Ihnen dabei im Prozess einige ETH einbringt. In der Praxis bedeutet das, ETH einzusetzen, um die Validierungssoftware zu aktivieren. Als Validator verarbeiten Sie Transaktionen auf der Blockchain und beteiligen sich an der Erstellung neuer Blöcke.
 
-Das Staking als Validator ist einfacher, als das [Mining](/developers/docs/mining/) (wie das Netzwerk momentan gesichert wird). Langfristig besteht die Hoffnung darin, Ethereum durch Staking noch sicherer zu machen. Je mehr Leute sich aktiv am Netzwerk beteiligen, desto dezentraler und damit robuster und sicherer ist Ethereum gegen potentielle Angriffe.
+Das Staking als Validator ist einfacher, als das [Mining](/developers/docs/mining/) (wie das Netzwerk momentan gesichert wird). Langfristig besteht die Hoffnung darin, Ethereum durch Staking noch sicherer zu machen. Je mehr Leute sich aktiv am Netzwerk beteiligen, desto dezentraler und damit robuster und sicherer ist Ethereum gegen potenzielle Angriffe.
 
 <InfoBanner emoji=":money_bag:">
 Wenn Sie Interesse haben, die Beacon Chain als Validator sicherer zu machen, <a href="/staking/">können Sie hier mehr über das Staking</a> lernen.
 </InfoBanner>
 
-Das ist auch eine wichtige Änderung für ein anderes Upgrade: [Shard Chains](/upgrades/shard-chains/).
+Das ist auch eine wichtige Änderung für ein anderes Upgrade: [Shard Chains](/upgrades/sharding/).
 
 ### Vorbereitung für Shard Chains {#setting-up-for-shard-chains}
 
@@ -43,21 +43,21 @@ Letztlich wird die Beacon Chain durch ein Zufallsprinzip auch dafür sorgen, das
 
 ## Beziehung zwischen den Upgrades {#relationship-between-upgrades}
 
-Ethereum-Upgrades sind alle auf gewisse Weise miteinander verbunden. Zusammenfassend wirkt sich die Beacon Chain auf weitere Upgrades wie folgt aus:
+Die Ethereum-Upgrades sind alle auf eine Weise miteinander verbunden. Zusammenfassend wirkt sich die Beacon Chain auf weitere Upgrades wie folgt aus:
 
 ### Mainnet und die Beacon Chain {#mainnet-and-beacon-chain}
 
 Die Beacon Chain wird zunächst getrennt vom Ethereum-Mainnet existieren, welches wir derzeit nutzen. Letztlich werden jedoch beide verbunden sein. Der Plan ist, das Mainnet mit dem Proof-of-Stake-System zu "verschmelzen", das von der Beacon Chain kontrolliert und koordiniert wird.
 
 <ButtonLink to="/upgrades/merge/">
-    Die Fusion
+    Die Zusammenführung
 </ButtonLink>
 
 ### Shards und die Beacon Chain {#shards-and-beacon-chain}
 
 Shard Chains können nur dann sicher ins Ethereum-Netzwerk eingeführt werden, wenn ein funktionierender Proof-of-Stake-Konsensmechanismus bereits etabliert ist. Mit der Beacon Chain wird Staking eingeführt, wodurch der Weg für das Shard Chains-Upgrade geebnet wird.
 
-<ButtonLink to="/upgrades/shard-chains/">
+<ButtonLink to="/upgrades/sharding/">
     Shard Chains
 </ButtonLink>
 

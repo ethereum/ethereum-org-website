@@ -17,7 +17,7 @@ Vous devez comprendre les bases d'Ethereum avant de vous renseigner sur les diff
 
 Les réseaux publics sont accessibles à toute personne disposant d'une connexion Internet, partout dans le monde. N'importe qui peut lire ou créer des transactions sur une blockchain publique, et valider les transactions exécutées. L'accord sur les transactions et l'état du réseau est décidé par un consensus des pairs.
 
-### Réseau principal {#mainnet}
+### réseau principal {#mainnet}
 
 Le réseau principal Ethereum est la blockchain publique primaire de production, où des transactions de valeur réelle se produisent sur le registre distribué.
 
@@ -39,7 +39,7 @@ Un réseau de test pour [Arbitrum](https://arbitrum.io/).
 
 ##### Arbitrum Rinkeby faucets
 
-- [FaucETH](https://fauceth.komputing.org)(Robinet multi-chaînes fonctionnant sans besoin de compte social)
+- [FaucETH](https://fauceth.komputing.org)(Robinet multichaînes fonctionnant sans besoin d'un compte sur réseau social)
 - [Robinet Chainlink](https://faucets.chain.link/)
 - [Robinet Paradigm](https://faucet.paradigm.xyz/)
 
@@ -49,7 +49,7 @@ Réseau de test de preuve d'autorité qui fonctionne entre les clients.
 
 ##### Robinets Görli
 
-- [Robinet Görli](https://faucet.goerli.mudit.blog/)
+- [Robinet Görli](https://faucet.goerli.mudit.blog/)
 - [Robinet Chainlink](https://faucets.chain.link/)
 - [Alchemy Goerli Faucet](https://goerlifaucet.com/)
 
@@ -121,7 +121,7 @@ Si un réseau public Ethereum est comme l'Internet public, vous pouvez considér
 
 ## Outils connexes {#related-tools}
 
-- [Chainlist](https://chainlist.org/) _liste de réseaux EVM pour connecter les portefeuilles et les fournisseurs au ID de chaîne et ID de réseau appropriés_
+- [Liste de chaînes](https://chainlist.org/) _liste de réseaux EVM pour connecter les portefeuilles et les fournisseurs au ID de chaîne et ID de réseau appropriés_
 - [Chaînes basées sur EVM](https://github.com/ethereum-lists/chains) _répertoire GitHub des chaînes de métadonnées qui alimentent la liste de chaîne_
 
 ## Complément d'information {#further-reading}

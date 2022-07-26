@@ -15,26 +15,24 @@ lang: ru
 
 Эти программы поддерживают обширную экосистему Ethereum, предлагая гранты для широкого круга проектов. Они включают решения по масштабируемости, созданию сообществ, безопасности, конфиденциальности и не только. Эти гранты не относятся к какой-либо конкретной платформе Ethereum и являются хорошей отправной точкой, если вы не уверены в себе.
 
-- [Программа поддержки экосистемы Фонда Ethereum](https://esp.ethereum.foundation) — _финансирование проектов с открытым исходным кодом, которые приносят пользу Ethereum, с особым акцентом на универсальные инструменты, инфраструктуру, исследования и общественные блага_
-  - [Раунд академических грантов](/community/grants/academic-grants-round/) — _Фонд Ethereum спонсирует выдачи грантов для поддержки академической работы, связанной с Ethereum_
+- [Программа поддержки экосистемы EF](https://esp.ethereum.foundation) — _финансирование проектов с открытым исходным кодом, которые приносят пользу Ethereum, с особым акцентом на универсальные инструменты, инфраструктуру, исследования и общественные блага_
 - [Запросы предложений (RFP) Ethereum](https://github.com/ethereum/requests-for-proposals) — _запросы предложений Фондом Ethereum для работы и проектов в экосистеме Ethereum_
-- [MetaCartel](https://www.metacartel.org/grants/) — _разработка децентрализованных приложений, создание децентрализованной автономной организации (DAO)_  
-  Гранты в размере от 1000 до 8000 долл. США.
+- [MetaCartel](https://www.metacartel.org/grants/) — _разработка децентрализованных приложений, создание децентрализованной автономной организации (DAO)_ Гранты в размере от 1000 до 8000 долл. США.
 - [Децентрализованная автономная организация (DAO) Moloch](https://www.molochdao.com/) — _конфиденциальность, масштабирование второго уровня, безопасность клиентов и многое другое_
 - [Открытые гранты](https://opengrants.com/explore)
-- [DAO Grants](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) - _Google spreadsheet of organizations offering grants_
+- [Гранты DAO](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) — _таблица Google организаций, предлагающих гранты_
 
 ## Отдельные проекты {#project-specific}
 
 В рамках этих проектов созданы их собственные гранты, направленные на разработку и тестирование собственных технологий.
 
-- [Aave Grants Program](https://aavegrants.org/) – _[Aave](https://aave.com/) grants DAO_
-- [Balancer](https://forms.gle/c68e4fM7JHCQkPkN7) – _[Balancer](https://balancer.fi/) ecosystem fund_
-- [Compound Grants Program](https://compoundgrants.org/) – _[Compound](https://compound.finance/) finance ecosystem_
-- [Consensys Grants Program](https://consensys.net/grants/) – _[Consensys](https://consensys.net/) blockchain funding & Ethereum grants_
-- [dYdX Grants Program](https://dydxgrants.com/) – _[dYdX](https://dydx.exchange/) decentralized exchange_
-- [Lido Ecosystem Grants Organisation (LEGO)](https://lego.lido.fi/) – _[Lido](https://lido.fi/) finance ecosystem_
-- [mStable Grants Program](https://docs.mstable.org/advanced/grants-program) - _[mStable](https://mstable.org/) community_
+- [Программа грантов Aave](https://aavegrants.org/) — _гранты DAO от [Aave](https://aave.com/)_
+- [Balancer](https://forms.gle/c68e4fM7JHCQkPkN7) — _фонд экосистемы [Balancer](https://balancer.fi/)_
+- [Программа грантов Compound](https://compoundgrants.org/) — _финансовая экосистема [Compound](https://compound.finance/)_
+- [Программа грантов Consensys](https://consensys.net/grants/) — _гранты Ethereum и финансирование блокчейна [Consensys](https://consensys.net/)_
+- [Программа грантов dYdX](https://dydxgrants.com/) — _децентрализованная биржа [dYdX](https://dydx.exchange/)_
+- [Организация грантов Lido Ecosystem (LEGO)](https://lego.lido.fi/) — _финансовая экосистема [Lido](https://lido.fi/)_
+- [Программа грантов mStable](https://docs.mstable.org/advanced/grants-program) — _сообщество [mStable](https://mstable.org/)_
 - [The Graph](https://airtable.com/shrdfvnFvVch3IOVm) — _экосистема [The Graph](https://thegraph.com/)_
 - [Программа грантов Uniswap](https://www.unigrants.org/) — _сообщество [Uniswap](https://uniswap.org/)_
 

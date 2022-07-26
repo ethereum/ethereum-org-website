@@ -9,7 +9,7 @@ Transaktionen sind kryptographisch signierte Anweisungen von Konten. Ein Konto w
 
 ## Voraussetzungen {#prerequisites}
 
-Um dir zu helfen, diese Seite besser zu verstehen, empfehlen wir dir, zuerst [ Konten](/developers/docs/accounts/), [Transaktionen](/en/developers/docs/transactions/) und unsere [Einführung in Ethereum](/developers/docs/intro-to-ethereum/) zu lesen.
+Um dir zu helfen, diese Seite besser zu verstehen, empfehlen wir dir, zuerst [ Konten](/developers/docs/accounts/), [Transaktionen](/developers/docs/transactions/) und unsere [Einführung in Ethereum](/developers/docs/intro-to-ethereum/) zu lesen.
 
 ## Was ist eine Transaktion? {#whats-a-transaction}
 

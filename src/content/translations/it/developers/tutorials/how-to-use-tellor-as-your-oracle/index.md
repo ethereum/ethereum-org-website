@@ -9,13 +9,13 @@ tags:
   - "smart contract"
   - "feed di prezzo"
   - "oracoli"
-skill: principiante
+skill: beginner
 published: 2021-06-29
 source: Documentazione di Tellor
 sourceUrl: https://docs.tellor.io/tellor/
 ---
 
-Quiz: il tuo protocollo è appena terminato, ma ti serve un oracolo da collegare per far funzionare un feed di dati attivo esterno alla catena... Cosa fai?
+Quiz: il tuo protocollo è appena terminato, ma ti serve un oracolo per avere accesso ai dati esterni alla catena... Cosa fai?
 
 ## (Soft) Prerequisiti {#soft-prerequisites}
 
@@ -31,7 +31,7 @@ Tellor è un oracolo in diretta e open source pronto all'implementazione. Questa
 
 ## Panoramica {#overview}
 
-Tellor è un sistema di oracolo in cui le parti possono richiedere il valore di un punto di dati esterno alla catena (es. BTC/USD) e i miner competono per aggiungere questo valore a una banca dati esterna alla catena, accessibile da tutti gli smart contract di Ethereum. Gli input a questa banca dati sono protetti da una rete di miner di staking. Tellor usa meccanismi d'incentivazione di criptoeconomia, premiando gli invii di dati onesti dai miner e punendo gli attori malevoli tramite l'emissione di token di Tellor, Tributes (TRB) e un meccanismo per le dispute.
+Tellor è un sistema di oracolo in cui le parti possono richiedere il valore di un punto di dati esterno alla catena (es. BTC/USD) e i reporter competono per aggiungere questo valore a una banca dati esterna alla catena, accessibile da tutti gli smart contract di Ethereum. Gli input a questa banca dati sono protetti da una rete di reporter di staking. Tellor usa meccanismi d'incentivazione di criptoeconomia, premiando gli invii di dati onesti dai reporter e punendo gli attori malevoli tramite l'emissione di token di Tellor, Tributes (TRB) e un meccanismo per le dispute.
 
 In questo tutorial, esamineremo:
 
@@ -41,62 +41,61 @@ In questo tutorial, esamineremo:
 
 ## Usare Tellor {#usingtellor}
 
-La prima cosa che dovrai fare è installare gli strumenti di base necessari per usare Tellor come oracolo. Per testare l'implementazione di Tellor nei tuoi contratti usa [questo pacchetto](https://github.com/tellor-io/usingtellor) per installare i Contratti Utente di Tellor:
+La prima cosa che dovrai fare è installare gli strumenti di base necessari per usare Tellor come oracolo. Usa [questo pacchetto](https://github.com/tellor-io/usingtellor) per installare i Contratti Utente di Tellor:
 
 `npm install usingtellor`
 
 Una volta installato, i tuoi contratti potranno ereditare le funzioni dal contratto 'UsingTellor'.
 
-Ottimo! Ora che hai preparato gli strumenti, guardiamo un semplice esercizio in cui richiediamo il prezzo di Bitcoin:
+Ottimo! Ora che hai preparato gli strumenti, guardiamo un semplice esercizio in cui recuperiamo il prezzo Bitcoin:
 
 ### Esempio BTC/USD {#btcusd-example}
 
 Eredita il contratto UsingTellor, passando l'indirizzo di Tellor come argomento del costruttore:
 
-Ecco un esempio
+Ecco un esempio:
 
 ```solidity
 import "usingtellor/contracts/UsingTellor.sol";
 
 contract BtcPriceContract is UsingTellor {
 
-  //This contract now has access to all functions in UsingTellor
+  //This Contract now has access to all functions in UsingTellor
 
-  uint256 btcPrice;
-  uint256 btcRequestId = 2;
+  bytes btcPrice;
+  bytes32 btcQueryId = 0x0000000000000000000000000000000000000000000000000000000000000002;
 
-  // Input Tellor oracle address. Vedi di seguito gli indirizzi disponibili o
-  // deploy the TellorPlayground yourself
-  constructor(address payable _tellorAddress) UsingTellor(_tellorAddress) {}
+  constructor(address payable _tellorAddress) UsingTellor(_tellorAddress) public {}
 
   function setBtcPrice() public {
     bool _didGet;
-    uint _timestamp;
+    uint256 _timestamp;
 
-    (_didGet, btcPrice, _timestamp) = getCurrentValue(btcRequestId);
+    (_didGet, btcPrice, _timestamp) = getCurrentValue(btcQueryId);
   }
 }
-
 ```
 
-## Vuoi fare qualche test prima? Vedi nell'elenco seguente i nostri indirizzi di provanet attivi: {#looking-to-do-some-testing-first-see-the-list-below-for-our-active-testnet-addresses}
+**Vuoi provare un diverso feed di dati? Dai un'occhiata all'elenco di feed di dati supportati qui: [Feed di dati correnti](https://docs.tellor.io/tellor/integration/data-feed-ids)**
 
-#### Indirizzi: {#addresses}
+## Indirizzi: {#addresses}
 
-Rete principale: [`0x88df592f8eb5d7bd38bfef7deb0fbc02cf3778a0`](https://etherscan.io/address/0x88df592f8eb5d7bd38bfef7deb0fbc02cf3778a0)
+Rete principale: [`0x88df592f8eb5d7bd38bfef7deb0fbc02cf3778a0`](https://etherscan.io/address/0x88df592f8eb5d7bd38bfef7deb0fbc02cf3778a0#code)
 
-Rinkeby: [`0x88df592f8eb5d7bd38bfef7deb0fbc02cf3778a0`](https://rinkeby.etherscan.io/address/0x20374E579832859f180536A69093A126Db1c8aE9#code)
+#### Vuoi fare qualche test prima? Vedi nell'elenco seguente i nostri indirizzi di rete di prova attivi: {#looking-to-do-some-testing-first-see-the-list-below-for-our-active-testnet-addresses}
 
-Kovan: [`0x20374E579832859f180536A69093A126Db1c8aE9`](https://kovan.etherscan.io/address/0x20374E579832859f180536A69093A126Db1c8aE9#code)
+Rinkeby: [`0x88df592f8eb5d7bd38bfef7deb0fbc02cf3778a0`](https://rinkeby.etherscan.io/address/0x88df592f8eb5d7bd38bfef7deb0fbc02cf3778a0#code)
 
-Ropsten: [`0x20374E579832859f180536A69093A126Db1c8aE9`](https://ropsten.etherscan.io/address/0x20374E579832859f180536A69093A126Db1c8aE9#code)
+Kovan: [`0x3477EB82263dabb59AC0CAcE47a61292f28A2eA7`](https://kovan.etherscan.io/address/0x3477EB82263dabb59AC0CAcE47a61292f28A2eA7#code)
 
-Goerli: [`0x20374E579832859f180536A69093A126Db1c8aE9`](https://goerli.etherscan.io/address/0x20374E579832859f180536A69093A126Db1c8aE9#code)
+Ropsten: [`0x3477EB82263dabb59AC0CAcE47a61292f28A2eA7`](https://ropsten.etherscan.io/address/0x3477EB82263dabb59AC0CAcE47a61292f28A2eA7#code)
 
-#### Le seguenti reti usani la ['Fellowship'](https://github.com/tellor-io/fellowship) invece dei miner di POW:
+Goerli: [`0x3477EB82263dabb59AC0CAcE47a61292f28A2eA7`](https://goerli.etherscan.io/address/0x3477EB82263dabb59AC0CAcE47a61292f28A2eA7#code)
 
-BSC Testnet: [`0xbc2f9E092ac5CED686440E5062D11D6543202B24`](https://testnet.bscscan.com/address/0xbc2f9E092ac5CED686440E5062D11D6543202B24)
+Rete di prova di BSC: [`0x3477EB82263dabb59AC0CAcE47a61292f28A2eA7`](https://testnet.bscscan.com/address/0x3477EB82263dabb59AC0CAcE47a61292f28A2eA7#code)
 
-Polygon Mumbai Testnet: [`0xbc2f9E092ac5CED686440E5062D11D6543202B24`](https://explorer-mumbai.maticvigil.com/address/0xbc2f9E092ac5CED686440E5062D11D6543202B24/transactions)
+Rete di prova di Polygon Mumbai: [`0x3477EB82263dabb59AC0CAcE47a61292f28A2eA7`](https://mumbai.polygonscan.com/address/0x3477EB82263dabb59AC0CAcE47a61292f28A2eA7/contracts#code)
+
+Rete di prova Arbitrum: [`0x3477EB82263dabb59AC0CAcE47a61292f28A2eA7`](https://rinkeby-explorer.arbitrum.io/address/0x3477EB82263dabb59AC0CAcE47a61292f28A2eA7)
 
 #### Per un'implementazione più robusta dell'oracolo di Tellor, dai un'occhiata all'elenco completo di funzioni disponibili [qui](https://github.com/tellor-io/usingtellor/blob/master/README.md) {#for-a-more-robust-implementation-of-the-tellor-oracle-check-out-the-full-list-of-available-functions-here}

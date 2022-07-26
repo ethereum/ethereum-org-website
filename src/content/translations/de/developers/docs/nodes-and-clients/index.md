@@ -96,13 +96,13 @@ Wenn du eher ein technischer Benutzer bist, kannst du [einen eigenen Node](/deve
 ### Ressourcen {#resources}
 
 - [Running Ethereum Full Nodes: A Complete Guide](https://medium.com/coinmonks/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _Nov 7, 2019 - Justin Leroux_
-- [Node Configuration Cheat Sheet](https://dev. to/5chdn/ethereum-node-configuration-modes-cheat-sheet-25l8) _Jan 5, 2019 - Afri Schoedon_
+- [Node Configuration Cheat Sheet](https://dev.to/5chdn/ethereum-node-configuration-modes-cheat-sheet-25l8) _Jan 5, 2019 - Afri Schoedon_
 - [How To Install & Run a Geth Node](https://www.quiknode.io/guides/infrastructure/how-to-install-and-run-a-geth-node) _Oct 4, 2020 - Sahil Sen_
 - [How To Install & Run a OpenEthereum (fka. Parity) Node](https://www.quiknode.io/guides/infrastructure/how-to-run-a-openethereum-ex-parity-client-node) _Sept 22, 2020 - Sahil Sen_
 
 ## Alternativen {#alternatives}
 
-Der Betrieb eines eigenen Nodes kann schwierig sein und du musst nicht immer eine eigene Instanz betreiben. In diesem Fall kannst du einen Drittanbieter wie [Infura](https://infura.io), [Alchemy ](https://alchemyapi.io)oder [QuikNode](https://www.quiknode.io) verwenden. Alternativ dazu ist [ArchiveNode](https://archivenode.io/) ein von der Community finanzierter Archivknoten, der unabhängigen Entwicklern, die sich dies sonst nicht leisten könnten, Archivdaten auf der Ethereum-Blockchain zur Verfügung stellen soll. Einen Überblick über die Verwendung dieser Dienste findest du unter [Nodes als Dienst](/developers/docs/nodes-and-clients/nodes-as-a-service/).
+Der Betrieb eines eigenen Nodes kann schwierig sein und du musst nicht immer eine eigene Instanz betreiben. In diesem Fall kannst du einen Drittanbieter wie [Infura](https://infura.io), [Alchemy](https://alchemyapi.io) oder [QuikNode](https://www.quiknode.io) verwenden. Alternativ dazu ist [ArchiveNode](https://archivenode.io/) ein von der Community finanzierter Archivknoten, der unabhängigen Entwicklern, die sich dies sonst nicht leisten könnten, Archivdaten auf der Ethereum-Blockchain zur Verfügung stellen soll. Einen Überblick über die Verwendung dieser Dienste findest du unter [Nodes als Dienst](/developers/docs/nodes-and-clients/nodes-as-a-service/).
 
 Wenn jemand in deiner Community einen Ethereum-Node mit einer öffentlichen API betreibt, kannst du deine Light Wallets (wie MetaMask) auf einen Community-Node [via Custom RPC](https://metamask.zendesk.com/hc/en-us/articles/360015290012-Using-a-Local-Node) verweisen lassen und so mehr Privatsphäre erreichen als mit einer zufälligen vertrauenswürdigen Drittpartei.
 
@@ -162,7 +162,7 @@ Hyperledger Besu ist ein unternehmensorientierter Ethereum-Client für öffentli
 
 #### Erigon {#erigon}
 
-Erigon, früher bekannt als Turbo-Geth, ist eine Abspaltung von Go Ethereum, die auf Geschwindigkeit und Speicherplatzeffizienz ausgerichtet ist. Erigon ist eine komplett neu entwickelte Implementierung von Ethereum, die derzeit in Go geschrieben ist, aber auch in anderen Sprachen implementiert werden soll. Das Ziel von Erigon ist es, eine schnellere, modularere und optimierte Implementierung von Ethereum anzubieten. Es kann eine vollständige Synchronisierung des Archiv-Nodes mit weniger als 2 Tb Speicherplatz in weniger als 3 Tagen durchführen
+Erigon, früher bekannt als Erigon, ist eine Abspaltung von Go Ethereum, die auf Geschwindigkeit und Speicherplatzeffizienz ausgerichtet ist. Erigon ist eine komplett neu entwickelte Implementierung von Ethereum, die derzeit in Go geschrieben ist, aber auch in anderen Sprachen implementiert werden soll. Das Ziel von Erigon ist es, eine schnellere, modularere und optimierte Implementierung von Ethereum anzubieten. Es kann eine vollständige Synchronisierung des Archiv-Nodes mit weniger als 2 Tb Speicherplatz in weniger als 3 Tagen durchführen
 
 ### Synchronisationsmodi {#sync-modes}
 

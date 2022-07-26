@@ -4,11 +4,14 @@ description: An introduction to Ethereum's networking layer.
 lang: en
 sidebar: true
 sidebarDepth: 2
+preMergeBanner: true
 ---
 
 Ethereum is a peer-to-peer network with thousands of nodes that must be able to communicate with one another using standardized protocols. The "networking layer" is the stack of protocols that allow those nodes to find each other and exchange information. This includes "gossiping" information (one-to-many communication) over the network as well as swapping requests and responses between specific nodes (one-to-one communication). Each node must adhere to specific networking rules to ensure they are sending and receiving the correct information.
 
 After [The Merge](/upgrades/merge/), there will be two parts of client software (execution clients and consensus clients), each with its own distinct networking stack. As well as communicating with other Ethereum nodes, the execution and consensus clients have to communicate with each other. This page gives an introductory explanation of the protocols that enable this communication.
+
+**Note that after [The Merge](/upgrades/merge) execution clients will no longer be responsible for gossiping blocks, but they will still gossip transactions over the execution-layer peer-to-peer network. Transactions will be passed to consensus clients via a local RPC connection, where they will be packaged into Beacon blocks. Consensus clients will then gossip Beacon blocks across their p2p network.**
 
 ## Prerequisites {#prerequisites}
 
@@ -74,7 +77,7 @@ Once peers are connected and an RLPx session has been started, the wire protocol
 
 #### les (light ethereum subprotocol) {#les}
 
-This is a minimal protocol for syncing light clients. Traditionaly this protocol has rarely been used because full nodes are required to serve data to light clients without being incentivized. The default behaviour of execution clients is not to serve light client data over les. More information is available in the les [spec](https://github.com/ethereum/devp2p/blob/master/caps/les.md).
+This is a minimal protocol for syncing light clients. Traditionally this protocol has rarely been used because full nodes are required to serve data to light clients without being incentivized. The default behaviour of execution clients is not to serve light client data over les. More information is available in the les [spec](https://github.com/ethereum/devp2p/blob/master/caps/les.md).
 
 #### Snap {#snap}
 
@@ -124,7 +127,7 @@ SSZ stands for simple serialization. It uses fixed offsets that make it easy to 
 
 After the Merge, both consensus and execution clients will run in parallel. They need to be connected together so that the consensus client can provide instructions to the execution client and the execution client can pass bundles of transactions to the consensus client to include in Beacon blocks. This communication between the two clients can be achieved using a local RPC connection. An API known as the ['Engine-API'](https://github.com/ethereum/execution-apis/blob/main/src/engine/specification.md) defines the instructions sent between the two clients. Since both clients sit behind a single network identity, they share a ENR (Ethereum node record) which contains a separate key for each client (eth1 key and eth2 key).
 
-A summary of the control flow is shown beloiw, with the relevant networking stack in brackets.
+A summary of the control flow is shown below, with the relevant networking stack in brackets.
 
 ##### When consensus client is not block producer:
 
@@ -135,13 +138,13 @@ A summary of the control flow is shown beloiw, with the relevant networking stac
 - Execution layer passes validation data back to consensus layer, block now considered to be validated (local RPC connection)
 - Consensus layer adds block to head of its own blockchain and attests to it, broadcasting the attestation over the network (consensus p2p)
 
-##### When consensus client is block producer
+##### When consensus client is block producer:
 
 - Consensus client receives notice that it is the next block producer (consensus p2p)
 - Consensus layer calls `create block` method in execution client (local RPC)
 - Execution layer accesses the transaction mempool which has been populated by the transaction gossip protocol (execution p2p)
 - Execution client bundles transactions into a block, executes the transactions and generates a block hash
-- Consensus client grabs the transactions and block hash from the consensus client and adds them to the beacon block (local RPC)
+- Consensus client grabs the transactions and block hash from the execution client and adds them to the beacon block (local RPC)
 - Consensus client broadcasts the block over the block gossip protocol (consensus p2p)
 - Other clients receive the proposed block via the block gossip protocol and validate as described above (consensus p2p)
 

@@ -276,4 +276,4 @@ A continuación se muestra la ABI para el contrato de token ERC-20. Un ERC-20 es
 ## Temas relacionados {#related-topics}
 
 - [Bibliotecas de cliente de JavaScript](/developers/docs/apis/javascript/)
-- [Máquina virtual de Ehereum](/developers/docs/ethereum-virtual-machine/)
+- [Máquina virtual de Ehereum](/developers/docs/evm/)

@@ -47,7 +47,11 @@ Uaktualnienie London wprowadziło [EIP-1559](https://eips.ethereum.org/EIPS/eip-
 
 <ExpandableCard title="EIP London" contentPreview="Official improvements included in this upgrade.">
 
-- [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) – _wprowadza ulepszenia rynku opłat transakcyjnych_- [EIP-3198](https://eips.ethereum.org/EIPS/eip-3198) – _zwraca `BASEFEE` z bloku_- [EIP-3529](https://eips.ethereum.org/EIPS/eip-3529) - _ogranicza zwroty kosztów gazu przy operacjach EVM_- [EIP-3541](https://eips.ethereum.org/EIPS/eip-3541) - _zapobiega wdrażaniu kontraktów zaczynających się od `0xEF`_- [EIP-3554](https://eips.ethereum.org/EIPS/eip-3554) – _opóźnia Epokę Lodowcową do grudnia 2021_
+- [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) – _wprowadza ulepszenia rynku opłat transakcyjnych_
+- [EIP-3198](https://eips.ethereum.org/EIPS/eip-3198) – _zwraca `BASEFEE` z bloku_
+- [EIP-3529](https://eips.ethereum.org/EIPS/eip-3529) - _ogranicza zwroty kosztów gazu przy operacjach EVM_
+- [EIP-3541](https://eips.ethereum.org/EIPS/eip-3541) - _zapobiega wdrażaniu kontraktów zaczynających się od `0xEF`_
+- [EIP-3554](https://eips.ethereum.org/EIPS/eip-3554) – _opóźnia Epokę Lodowcową do grudnia 2021_
 
 </ExpandableCard>
 
@@ -66,7 +70,10 @@ Uaktualnienie Berlin optymalizuje koszt gazu przy pewnych działaniach EVM oraz 
 
 <ExpandableCard title="EIP Berlin" contentPreview="Official improvements included in this upgrade.">
 
-- [EIP-2565](https://eips.ethereum.org/EIPS/eip-2565) – _obniża koszt gazu ModExp_- [EIP-2718](https://eips.ethereum.org/EIPS/eip-2718) – _ułatwia wsparcie wielu typów transakcji_- [EIP-2929](https://eips.ethereum.org/EIPS/eip-2929) – _koszt gazu wzrasta dla kodów operacyjnych dostępu do stanu_- [EIP-2930](https://eips.ethereum.org/EIPS/eip-2930) – _dodaje opcjonalne listy dostępu_
+- [EIP-2565](https://eips.ethereum.org/EIPS/eip-2565) – _obniża koszt gazu ModExp_
+- [EIP-2718](https://eips.ethereum.org/EIPS/eip-2718) – _ułatwia wsparcie wielu typów transakcji_
+- [EIP-2929](https://eips.ethereum.org/EIPS/eip-2929) – _koszt gazu wzrasta dla kodów operacyjnych dostępu do stanu_
+- [EIP-2930](https://eips.ethereum.org/EIPS/eip-2930) – _dodaje opcjonalne listy dostępu_
 
 </ExpandableCard>
 
@@ -145,7 +152,12 @@ Fork Istanbul:
 
 <ExpandableCard title="EIP Istanbul" contentPreview="Official improvements included in this fork.">
 
-- [EIP-152](https://eips.ethereum.org/EIPS/eip-152) – _umożliwia Ethereum korzystanie z waluty chroniącej prywatność takiej jak Zcash._- [EIP-1108](https://eips.ethereum.org/EIPS/eip-1108) – _tańsza kryptografia w celu obniżenia kosztów [gas](/glossary/#gas)._- [EIP-1344](https://eips.ethereum.org/EIPS/eip-1344) – _chroni Ethereum przed atakami metodą powtórzenia dzięki dodaniu [opcode] `CHAINID` (/developers/docs/ethereum-stack/#ethereum-virtual-machine)._- [EIP-1884](https://eips.ethereum.org/EIPS/eip-1884) – _optymalizacja cen gazu dla kodów operacyjnych na podstawie zużycia._- [EIP-2028](https://eips.ethereum.org/EIPS/eip-2028) – _ograniczenie kosztów CallData w celu zwiększenia ilość danych w blokach – korzystne dla [skalowania warstwy 2](/developers/docs/scaling/#rollups)._- [EIP-2200](https://eips.ethereum.org/EIPS/eip-2200) – _inne zmiany dotyczące cen gazu dla kodów operacyjnych._
+- [EIP-152](https://eips.ethereum.org/EIPS/eip-152) – _umożliwia Ethereum korzystanie z waluty chroniącej prywatność takiej jak Zcash._
+- [EIP-1108](https://eips.ethereum.org/EIPS/eip-1108) – _tańsza kryptografia w celu obniżenia kosztów [gas](/glossary/#gas)._
+- [EIP-1344](https://eips.ethereum.org/EIPS/eip-1344) – _chroni Ethereum przed atakami metodą powtórzenia dzięki dodaniu [opcode] `CHAINID` (/developers/docs/ethereum-stack/#ethereum-virtual-machine)._
+- [EIP-1884](https://eips.ethereum.org/EIPS/eip-1884) – _optymalizacja cen gazu dla kodów operacyjnych na podstawie zużycia._
+- [EIP-2028](https://eips.ethereum.org/EIPS/eip-2028) – _ograniczenie kosztów CallData w celu zwiększenia ilość danych w blokach – korzystne dla [skalowania warstwy 2](/developers/docs/scaling/#rollups)._
+- [EIP-2200](https://eips.ethereum.org/EIPS/eip-2200) – _inne zmiany dotyczące cen gazu dla kodów operacyjnych._
 
 </ExpandableCard>
 
@@ -195,7 +207,15 @@ Fork Byzantium:
 
 <ExpandableCard title="EIP Byzantium" contentPreview="Official improvements included in this fork.">
 
-- [EIP-140](https://eips.ethereum.org/EIPS/eip-140) – _dodaje kod operacyjny `REVERT._- [EIP-658](https://eips.ethereum.org/EIPS/eip-658) – _do pokwitowań transakcji dodano pole statusu, aby wskazać powodzenie lub niepowodzenie._- [EIP-196](https://eips.ethereum.org/EIPS/eip-196) – _dodaje krzywą eliptyczną i mnożenie skalarne, aby zezwolić na [ZK-Snarks](/developers/docs/scaling/zk-rollups/)._- [EIP-197](https://eips.ethereum.org/EIPS/eip-197) – _dodaje krzywą eliptyczną i mnożenie skalarne, aby zezwolić na [ZK-Snarks](/developers/docs/scaling/zk-rollups/)._- [EIP-198](https://eips.ethereum.org/EIPS/eip-198) – _umożliwia weryfikację podpisu RSA._- [EIP-211](https://eips.ethereum.org/EIPS/eip-211) – _dodaje obsługę wartości zwracanych o różnych długościach._- [EIP-214](https://eips.ethereum.org/EIPS/eip-214) – _dodaje kod operacyjny `STATICCALL` umożliwiający wykonywanie niezmieniających stanu wywołań innych kontraktów._- [EIP-100](https://eips.ethereum.org/EIPS/eip-100) – _zmienia wzór dostosowywania trudności._- [EIP-649](https://eips.ethereum.org/EIPS/eip-649) – _opóźnia [bombę trudności](/glossary/#difficulty-bomb) o 1 rok i zmniejsza nagrody za blok z 5 do 3 ETH._
+- [EIP-140](https://eips.ethereum.org/EIPS/eip-140) – _dodaje kod operacyjny `REVERT._
+- [EIP-658](https://eips.ethereum.org/EIPS/eip-658) – _do pokwitowań transakcji dodano pole statusu, aby wskazać powodzenie lub niepowodzenie._
+- [EIP-196](https://eips.ethereum.org/EIPS/eip-196) – _dodaje krzywą eliptyczną i mnożenie skalarne, aby zezwolić na [ZK-Snarks](/developers/docs/scaling/zk-rollups/)._
+- [EIP-197](https://eips.ethereum.org/EIPS/eip-197) – _dodaje krzywą eliptyczną i mnożenie skalarne, aby zezwolić na [ZK-Snarks](/developers/docs/scaling/zk-rollups/)._
+- [EIP-198](https://eips.ethereum.org/EIPS/eip-198) – _umożliwia weryfikację podpisu RSA._
+- [EIP-211](https://eips.ethereum.org/EIPS/eip-211) – _dodaje obsługę wartości zwracanych o różnych długościach._
+- [EIP-214](https://eips.ethereum.org/EIPS/eip-214) – _dodaje kod operacyjny `STATICCALL` umożliwiający wykonywanie niezmieniających stanu wywołań innych kontraktów._
+- [EIP-100](https://eips.ethereum.org/EIPS/eip-100) – _zmienia wzór dostosowywania trudności._
+- [EIP-649](https://eips.ethereum.org/EIPS/eip-649) – _opóźnia [bombę trudności](/glossary/#difficulty-bomb) o 1 rok i zmniejsza nagrody za blok z 5 do 3 ETH._
 
 </ExpandableCard>
 
@@ -219,7 +239,10 @@ Fork Spurious Dragon był drugą odpowiedzią na ataki typu DoS (odmowa usługi)
 
 <ExpandableCard title="EIP Spurious Dragon" contentPreview="Official improvements included in this fork.">
 
-- [EIP-155](https://eips.ethereum.org/EIPS/eip-155) – _zapobiega ponownemu przesyłaniu transakcji z jednego łańcucha Ethereum do innego łańcucha, na przykład transakcji w sieci testowej do głównego łańcucha Ethereum._- [EIP-160](https://eips.ethereum.org/EIPS/eip-160) – _dostosowuje ceny kodu operacyjnego `EXP` — utrudnia spowolnienie sieci poprzez kosztowne obliczeniowo operacje na kontraktach._- [EIP-161](https://eips.ethereum.org/EIPS/eip-161) – _umożliwia usuwanie pustych kont dodanych za pośrednictwem ataku DOS._- [EIP-170](https://eips.ethereum.org/EIPS/eip-170) – _zmienia maksymalny dozwolony rozmiar kodu kontraktu w blockchainie na 24576 bajty._
+- [EIP-155](https://eips.ethereum.org/EIPS/eip-155) – _zapobiega ponownemu przesyłaniu transakcji z jednego łańcucha Ethereum do innego łańcucha, na przykład transakcji w sieci testowej do głównego łańcucha Ethereum._
+- [EIP-160](https://eips.ethereum.org/EIPS/eip-160) – _dostosowuje ceny kodu operacyjnego `EXP` — utrudnia spowolnienie sieci poprzez kosztowne obliczeniowo operacje na kontraktach._
+- [EIP-161](https://eips.ethereum.org/EIPS/eip-161) – _umożliwia usuwanie pustych kont dodanych za pośrednictwem ataku DOS._
+- [EIP-170](https://eips.ethereum.org/EIPS/eip-170) – _zmienia maksymalny dozwolony rozmiar kodu kontraktu w blockchainie na 24576 bajty._
 
 </ExpandableCard>
 

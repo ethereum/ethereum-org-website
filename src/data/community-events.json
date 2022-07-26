@@ -1,5 +1,14 @@
 [
   {
+    "title": "ETHVietnam",
+    "to": "https://www.eth-vietnam.com/",
+    "sponsor": null,
+    "location": "Ho Chi Minh City, Vietnam",
+    "description": "ETHVietnam is the biggest conference ever that brings all top experts in the industry to provide more value to the community.",
+    "startDate": "2022-09-09",
+    "endDate": "2022-09-11"
+  },
+  {
     "title": "ETHDenver",
     "to": "https://www.ethdenver.com/",
     "sponsor": null,
@@ -180,6 +189,15 @@
     "endDate": "2022-06-12"
   },
   {
+    "title": "MetaFest 2",
+    "to": "https://metafest.metagame.wtf/",
+    "sponsor": null,
+    "location": "Remote",
+    "description": "MetaFest is a two-week-long virtual event full of talks & workshops about everything from DAOs, NFTs, and ReFi to self-improvement, and social events like metaverse sightseeing and concerts.",
+    "startDate": "2022-06-09",
+    "endDate": "2022-06-23"
+  },
+  {
     "title": "HODLerCon",
     "to": "https://hodlercon.com",
     "sponsor": null,
@@ -292,13 +310,13 @@
     "to": "https://zora.ethglobal.com/",
     "sponsor": null,
     "location": "Remote",
-    "description": "ETHGlobal is teaming up with Zora to create a virtual developer and creative focused hackathon! Join and create art, music, dApps, protocols and anything in between.",
+    "description": "ETHGlobal is teaming up with Zora to create a virtual developer and creative focused hackathon! Join and create art, music, dapps, protocols and anything in between.",
     "startDate": "2022-08-04",
     "endDate": "2022-08-10"
   },
   {
     "title": "ETHLatam",
-    "to": "https://twitter.com/ethlatam",
+    "to": "http://ethlatam.org/",
     "sponsor": null,
     "location": "Buenos Aires, Argentina",
     "description": "A 4-day conference that builds upon the work of the local pioneers that laid the foundations for a vibrant community that made crypto mainstream in Argentina.",
@@ -405,6 +423,15 @@
     "endDate": "2022-11-06"
   },
   {
+    "title": "ETHGathering",
+    "to": "https://www.ethgathering.com/",
+    "sponsor": null,
+    "location": "Barcelona, Spain",
+    "description": "Hosted in one of the world's most vibrant and creative cities, ETH Gathering Barcelona 2022 is a two-day conference focused on the community building the decentralised future.",
+    "startDate": "2022-11-18",
+    "endDate": "2022-11-20"
+  },
+  {
     "title": "ETHIndia",
     "to": "https://airtable.com/shrZ89OEwQJRtXHPv/",
     "sponsor": null,
@@ -421,5 +448,41 @@
     "description": "Join Warsaw Web3 community in the first in-person conference and hackathon!",
     "startDate": "2022-09-01",
     "endDate": "2022-09-04"
+  },
+  {
+    "title": "ETHBerlin³",
+    "to": "https://ethberlin.ooo/",
+    "sponsor": null,
+    "location": "Berlin, Germany",
+    "description": "ETHBerlin, to the power of 3",
+    "startDate": "2022-09-16",
+    "endDate": "2022-09-18"
+  },
+  {
+    "title": "ETHSafari",
+    "to": "https://ethsafari.xyz/",
+    "sponsor": null,
+    "location": "Nairobi & Kilifi, Kenya",
+    "description": "Welcome to the latest greatest ETH event happening in Africa!",
+    "startDate": "2022-09-18",
+    "endDate": "2022-09-25"
+  },
+  {
+    "title": "Web3Dubai",
+    "to": "https://www.web3dubai.org/",
+    "sponsor": null,
+    "location": "Dubai, UAE",
+    "description": "The Web3Dubai Conference will feature the latest innovations in Web3 technology and modular blockchains with a focus on builder and creator tools, techniques and APIs that help you scale your project and go from 0 to 1.",
+    "startDate": "2022-11-16",
+    "endDate": "2022-11-18"
+  },
+  {
+    "title": "ETHDubai",
+    "to": "https://www.ethdubaiconf.org",
+    "sponsor": null,
+    "location": "Dubai, UAE",
+    "description": "The Ethereum dev conference in Dubai on everything DeFi, NFTs, EVM scaling, layers 2 and more with a focus on decentralization and community projects.",
+    "startDate": "2023-03-14",
+    "endDate": "2023-03-16"
   }
 ]

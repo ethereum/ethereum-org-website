@@ -24,7 +24,7 @@ Bunlar Ethereum'daki en popüler token standartlarından bazılarıdır:
 - [ERC-777](/developers/docs/standards/tokens/erc-777/) - ERC-777, gelişmiş işlem gizliliği için bir mikser sözleşmesi veya özel anahtarlarınızı kaybederseniz sizi kurtarmak için bir acil durum kurtarma işlevi gibi token'ların üzerine ek işlevler oluşturmasına olanak tanır.
 - [ERC-1155](/developers/docs/standards/tokens/erc-1155/) - ERC-1155, daha verimli alım satımlara ve işlemlerin gruplandırılmasına olanak tanır: Böylece maliyetlerden tasarruf sağlar. Bu token standardı, hem yardımcı token'ların ($BNB veya $BAT gibi) hem de CryptoPunks gibi Değiştirilemez Token'ların oluşturulmasına izin verir.
 
-## daha fazla okuma {#further-reading}
+## Daha fazla bilgi {#further-reading}
 
 _Size yardımcı olan bir topluluk kaynağı mı biliyorsunuz? Bu sayfayı düzenleyin ve onu ekleyin!_
 

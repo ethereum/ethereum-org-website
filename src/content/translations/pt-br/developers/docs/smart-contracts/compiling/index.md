@@ -10,7 +10,7 @@ Você precisa compilar seu contrato para que seu aplicativo web e a máquina vir
 
 ## Pré-requisitos {#prerequisites}
 
-Você pode achar útil ler nossa introdução a [ contratos inteligentes](/developers/docs/smart-contracts/) e a [ máquina virtual Ethereum ](/developers/docs/evm/) antes de ler sobre compilação.
+Você pode achar útil ler nossa introdução a [contratos inteligentes](/developers/docs/smart-contracts/) e a [máquina virtual Ethereum](/developers/docs/evm/) antes de ler sobre compilação.
 
 ## A EVM {#the-evm}
 
@@ -276,4 +276,4 @@ Abaixo está a ABI para o contrato de token ERC-20. Um ERC-20 é um token que vo
 ## Tópicos relacionados {#related-topics}
 
 - [JavaScript client libraries](/developers/docs/apis/javascript/)
-- [Máquina virtual Ethereum](/developers/docs/ethereum-virtual-machine/)
+- [Máquina virtual Ethereum](/developers/docs/evm/)

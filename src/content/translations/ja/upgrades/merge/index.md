@@ -1,5 +1,5 @@
 ---
-title: マージ
+title: 統合
 description: マージについて - イーサリアムメインネットがビーコンチェーンと統合し、プルーフ・オブ・ステークシステムの実現
 lang: ja
 template: upgrade
@@ -59,7 +59,7 @@ summaryPoint4: 旧称は「ドッキング」です。
 
 ただし、無限のスケーラビリティを可能にするために、複数のシャードチェーンの潜在的な必要性について、継続的な評価検証がコミュニティにより行われています。
 
-<ButtonLink to="/upgrades/shard-chains/">
+<ButtonLink to="/upgrades/sharding/">
   シャードチェーン
 </ButtonLink>
 

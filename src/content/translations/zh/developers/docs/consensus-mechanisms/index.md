@@ -10,7 +10,7 @@ incomplete: true
 
 虽然共识机制与建立 dapp 并无直接关系，但理解两者将有助于阐明与您和您的用户体验相关的概念，如 gas 价格和交易时间。
 
-## 前置要求 {#prerequisites}
+## 先决条件 {#prerequisites}
 
 为了让您更好地读懂本页面的内容，建议您先阅读：[以太坊（Ethereum）项目介绍](/developers/docs/intro-to-ethereum/)
 
@@ -46,7 +46,7 @@ incomplete: true
 
 关于[工作量证明 (PoW) ](/developers/docs/consensus-mechanisms/pow/)的更多信息
 
-### 权益证明 {#proof-of-stake}
+### 权益证明（PoS) {#proof-of-stake}
 
 以太坊已经计划升级使用**权益证明 (PoS)** 来作为共识协议。
 
@@ -82,7 +82,7 @@ incomplete: true
 
 - [什么是区块链共识算法？](https://academy.binance.com/en/articles/what-is-a-blockchain-consensus-algorithm)
 - [什么是 Nakamoto 共识？ 完整的初学者指南](https://blockonomi.com/nakamoto-consensus/)
-- [Casper 的工作原理 ](https://medium.com/unitychain/intro-to-casper-ffg-9ed944d98b2d)
+- [Casper 的工作原理](https://medium.com/unitychain/intro-to-casper-ffg-9ed944d98b2d)
 - [关于工作量证明区块链的安全性和性能](https://eprint.iacr.org/2016/555.pdf)
 
 _还有哪些社区资源对您有所帮助？ 请编辑本页面并添加！_
@@ -90,5 +90,5 @@ _还有哪些社区资源对您有所帮助？ 请编辑本页面并添加！_
 ## 相关主题 {#related-topics}
 
 - [工作量证明](/developers/docs/consensus-mechanisms/pow/)
-- [挖矿](/developers/docs/consensus-mechanisms/pow/mining/)
-- [权益证明](/developers/docs/consensus-mechanisms/pos/)
+- [矿工](/developers/docs/consensus-mechanisms/pow/mining/)
+- [权益证明（PoS)](/developers/docs/consensus-mechanisms/pos/)

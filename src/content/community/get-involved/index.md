@@ -63,7 +63,7 @@ By staking your ETH you can earn rewards whilst helping to secure the Ethereum n
 
 - [More on staking](/staking/)
 
-### Support projects {#suport-projects}
+### Support projects {#support-projects}
 
 The Ethereum ecosystem is on a mission to fund public goods and impactful projects. With very small donations you can show your support and allow important work to be realized.
 
@@ -106,7 +106,7 @@ The Ethereum ecosystem is on a mission to fund public goods and impactful projec
 - [DAOSquare](https://www.daosquare.io) [@DAOSquare](https://twitter.com/DAOSquare) - _Promote the DAO concept in non-tech field and help people create value through DAO_
 - [Developer DAO](https://www.developerdao.com/) [@developer_dao](https://twitter.com/developer_dao) - _Community of builders who believe in collective ownership of the internet_
 - [dOrg](https://dOrg.tech) [@dOrg_tech](https://twitter.com/dOrg_tech) - _Freelancer Web3 development collective working as a DAO_
-- [DXdao](https://DXdao.eth.link/) [@DXdao](https://twitter.com/DXdao_) - _Decentralized development & governance of dApps & protocols_
+- [DXdao](https://DXdao.eth.link/) [@DXdao](https://twitter.com/DXdao_) - _Decentralized development & governance of dapps & protocols_
 - [HausDAO](https://daohaus.club) [@nowdaoit](https://twitter.com/nowdaoit) - _Community governance of DAOhaus_
 - [Hero DAO](https://herodao.org/) [@hero_dao](https://twitter.com/hero_dao) - _Community owned superhero franchise_
 - [LexDAO](https://lexdao.coop) [@lex_DAO](https://twitter.com/lex_DAO) - _Legal engineering_

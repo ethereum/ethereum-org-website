@@ -48,92 +48,12 @@
     "toPath": "/en/what-is-ethereum/"
   },
   {
-    "fromPath": "/",
-    "toPath": "/en/"
-  },
-  {
-    "fromPath": "/what-is-ethereum/",
-    "toPath": "/en/what-is-ethereum/"
-  },
-  {
-    "fromPath": "/eth/",
-    "toPath": "/en/eth/"
-  },
-  {
-    "fromPath": "/dapps/",
-    "toPath": "/en/dapps/"
-  },
-  {
-    "fromPath": "/wallets/",
-    "toPath": "/en/wallets/"
-  },
-  {
     "fromPath": "/eth2/",
     "toPath": "/en/upgrades/"
   },
   {
-    "fromPath": "/upgrades/",
-    "toPath": "/en/upgrades/"
-  },
-  {
-    "fromPath": "/staking/",
-    "toPath": "/en/staking/"
-  },
-  {
-    "fromPath": "/learn/",
-    "toPath": "/en/learn/"
-  },
-  {
-    "fromPath": "/community/",
-    "toPath": "/en/community/"
-  },
-  {
     "fromPath": "/build/",
     "toPath": "/en/developers/learning-tools/"
-  },
-  {
-    "fromPath": "/developers/",
-    "toPath": "/en/developers/"
-  },
-  {
-    "fromPath": "/enterprise/",
-    "toPath": "/en/enterprise/"
-  },
-  {
-    "fromPath": "/whitepaper/",
-    "toPath": "/en/whitepaper/"
-  },
-  {
-    "fromPath": "/foundation/",
-    "toPath": "/en/foundation/"
-  },
-  {
-    "fromPath": "/eips/",
-    "toPath": "/en/eips/"
-  },
-  {
-    "fromPath": "/about/",
-    "toPath": "/en/about/"
-  },
-  {
-    "fromPath": "/privacy-policy/",
-    "toPath": "/en/privacy-policy/"
-  },
-  {
-    "fromPath": "/terms-of-use/",
-    "toPath": "/en/terms-of-use/"
-  },
-  {
-    "fromPath": "/cookie-policy/",
-    "toPath": "/en/cookie-policy/"
-  },
-  {
-    "fromPath": "/languages/",
-    "toPath": "/en/languages/"
-  },
-  {
-    "fromPath": "/enterprise/",
-    "toPath": "/en/enterprise/"
   },
   {
     "fromPath": "/java/",
@@ -168,24 +88,12 @@
     "toPath": "/en/developers/docs/programming-languages/dart/"
   },
   {
-    "fromPath": "/nft/",
-    "toPath": "/en/nft/"
-  },
-  {
     "fromPath": "/nfts/",
     "toPath": "/en/nft/"
   },
   {
-    "fromPath": "/dao/",
-    "toPath": "/en/dao/"
-  },
-  {
     "fromPath": "/daos/",
     "toPath": "/en/dao/"
-  },
-  {
-    "fromPath": "/defi/",
-    "toPath": "/en/defi/"
   },
   {
     "fromPath": "/layer2/",
@@ -289,7 +197,11 @@
   },
   {
     "fromPath": "/*/eth2/shard-chains/",
-    "toPath": "/:splat/upgrades/shard-chains/"
+    "toPath": "/:splat/upgrades/sharding/"
+  },
+  {
+    "fromPath": "/*/upgrades/shard-chains/",
+    "toPath": "/:splat/upgrades/sharding/"
   },
   {
     "fromPath": "/*/eth2/staking/",
@@ -358,5 +270,13 @@
   {
     "fromPath": "/*/contributing/translation-program/content-versions/",
     "toPath": "/:splat/contributing/translation-program/content-buckets/"
+  },
+  {
+    "fromPath": "/*/developers/docs/smart-contracts/source-code-verification/",
+    "toPath": "/:splat/developers/docs/smart-contracts/verifying/"
+  },
+  {
+    "fromPath": "/*/developers/docs/smart-contracts/upgrading-smart-contracts/",
+    "toPath": "/:splat/developers/docs/smart-contracts/upgrading/"
   }
 ]

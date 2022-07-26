@@ -5,7 +5,7 @@ lang: en
 sidebar: true
 ---
 
-Dagger-Hashimoto was the original research implementation and specification for Ethereum's mining algorithm. Dagger-Hashimoto was superseded by [Ethash](#ethash).
+Dagger-Hashimoto was the original research implementation and specification for Ethereum's mining algorithm. Dagger-Hashimoto was superseded by [Ethash](#ethash). Mining will be switched off completely after [The Merge](/updates/merge), at which point Ethereum will be secured using a [proof-of-stake](/developers/docs/consensus-mechanisms/pos) mechanism instead.
 
 ## Prerequisites {#prerequisites}
 
@@ -143,7 +143,7 @@ The algorithm used to generate the set of DAGs used to compute the work for a bl
 ```python
 def get_prevhash(n):
     from pyethereum.blocks import GENESIS_PREVHASH
-    from pyethreum import chain_manager
+    from pyethereum import chain_manager
     if num <= 0:
         return hash_to_int(GENESIS_PREVHASH)
     else:

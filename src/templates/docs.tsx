@@ -16,7 +16,9 @@ import Link from "../components/Link"
 import MarkdownTable from "../components/MarkdownTable"
 import PageMetadata from "../components/PageMetadata"
 import Pill from "../components/Pill"
-import TableOfContents from "../components/TableOfContents"
+import TableOfContents, {
+  Item as ItemTableOfContents,
+} from "../components/TableOfContents"
 import SectionNav from "../components/SectionNav"
 import Translation from "../components/Translation"
 import Emoji from "../components/Emoji"
@@ -33,8 +35,9 @@ import {
   Header4,
   ListItem,
 } from "../components/SharedStyledComponents"
+import PreMergeBanner from "../components/PreMergeBanner"
 
-import { ZenModeContext } from "../contexts/ZenModeContext.js"
+import { ZenModeContext } from "../contexts/ZenModeContext"
 import { isLangRightToLeft } from "../utils/translations"
 import { Lang } from "../utils/languages"
 import { Context } from "../types"
@@ -57,7 +60,9 @@ const ContentContainer = styled.div<{ isZenMode: boolean }>`
   background-color: ${(props) => props.theme.colors.ednBackground};
 `
 
-const DesktopTableOfContents = styled(TableOfContents)`
+const DesktopTableOfContents = styled(TableOfContents)<{
+  isPageIncomplete: boolean
+}>`
   padding-top: ${(props) => (props.isPageIncomplete ? `5rem` : `3rem`)};
 `
 
@@ -167,22 +172,26 @@ const Contributors = styled(FileContributors)`
 
 const DocsPage = ({
   data: { siteData, pageData: mdx },
-  pageContext,
+  pageContext: { relativePath, slug },
 }: PageProps<Queries.DocsPageQuery, Context>) => {
   const { isZenMode } = useContext(ZenModeContext)
 
-  if (!siteData || !mdx?.frontmatter) {
+  if (!siteData || !mdx?.frontmatter)
     throw new Error("Docs page template query does not return expected values")
-  }
+  if (!mdx?.frontmatter?.title)
+    throw new Error("Required `title` property missing for docs template")
+  if (!relativePath)
+    throw new Error("Required `relativePath` is missing on pageContext")
 
   const isRightToLeft = isLangRightToLeft(mdx.frontmatter.lang as Lang)
 
-  const tocItems = mdx.tableOfContents?.items
+  const tocItems = mdx.tableOfContents?.items as Array<ItemTableOfContents>
   const isPageIncomplete = !!mdx.frontmatter.incomplete
 
   const { editContentUrl } = siteData.siteMetadata || {}
-  const { relativePath, slug } = pageContext
   const absoluteEditPath = `${editContentUrl}${relativePath}`
+  const isDevelopersHome = relativePath.endsWith("/developers/docs/index.md")
+  const showMergeBanner = !!mdx.frontmatter.preMergeBanner || isDevelopersHome
 
   return (
     <Page dir={isRightToLeft ? "rtl" : "ltr"}>
@@ -190,10 +199,18 @@ const DocsPage = ({
         title={mdx.frontmatter.title}
         description={mdx.frontmatter.description}
       />
-      <BannerNotification shouldShow={isPageIncomplete}>
-        {/* TODO move to common.json */}
-        <Translation id="banner-page-incomplete" />
-      </BannerNotification>
+      {isPageIncomplete && (
+        <BannerNotification shouldShow={isPageIncomplete}>
+          <Translation id="banner-page-incomplete" />
+        </BannerNotification>
+      )}
+      {showMergeBanner && (
+        <PreMergeBanner announcementOnly={isDevelopersHome}>
+          {isDevelopersHome && (
+            <Translation id="page-upgrades-merge-banner-developers-landing" />
+          )}
+        </PreMergeBanner>
+      )}
       <ContentContainer isZenMode={isZenMode}>
         <Content>
           <H1 id="top">{mdx.frontmatter.title}</H1>
@@ -206,7 +223,7 @@ const DocsPage = ({
             editPath={absoluteEditPath}
             items={tocItems}
             isMobile={true}
-            maxDepth={mdx.frontmatter.sidebarDepth}
+            maxDepth={mdx.frontmatter.sidebarDepth!}
           />
           <MDXProvider components={components}>
             <MDXRenderer>{mdx.body}</MDXRenderer>
@@ -217,7 +234,7 @@ const DocsPage = ({
               <Translation id="back-to-top" /> ↑
             </a>
           </BackToTop>
-          <FeedbackCard />
+          <FeedbackCard isArticle />
           <DocsNav relativePath={relativePath}></DocsNav>
         </Content>
         {mdx.frontmatter.sidebar && tocItems && (
@@ -226,7 +243,7 @@ const DocsPage = ({
             editPath={absoluteEditPath}
             items={tocItems}
             isPageIncomplete={isPageIncomplete}
-            maxDepth={mdx.frontmatter.sidebarDepth}
+            maxDepth={mdx.frontmatter.sidebarDepth!}
           />
         )}
       </ContentContainer>
@@ -253,6 +270,7 @@ export const query = graphql`
         sidebar
         sidebarDepth
         isOutdated
+        preMergeBanner
       }
       body
       tableOfContents

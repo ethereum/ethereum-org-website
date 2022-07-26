@@ -102,7 +102,7 @@ _معمولاً برای سازمان‌های یکپارچه‌تر و انسا
 - [یک گروه تشکیل دهید](https://colony.io/)
 - [با DAOstack یک DAO بسازید](https://daostack.io/)
 
-## بیشتر بخوانید {#further-reading}
+## اطلاعات بیشتر {#further-reading}
 
 ### مقالات مرتبط با DAO {#dao-articles}
 

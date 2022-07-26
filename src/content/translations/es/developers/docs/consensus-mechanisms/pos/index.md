@@ -23,7 +23,7 @@ La Prueba de participación incluye una serie de mejoras para el sistema de Prue
 - Mejor eficiencia energética: no necesitas usar mucha energía para minar los bloques
 - Barreras de entrada más bajas, requisitos de hardware reducidos: no necesitas hardware de primer nivel para tener una oportunidad de crear nuevos bloques
 - Mayor inmunidad a la centralización: la Prueba de participación debería conducir a la existencia de más nodos en la red
-- mayor soporte para la [cadena de fragmentos](/upgrades/shard-chains/) – una mejora clave en la escala de la red Ethereum
+- mayor soporte para la [cadena de fragmentos](/upgrades/sharding/) – una mejora clave en la escala de la red Ethereum
 
 ## Prueba de participación, staking (apuestas) y validadores {#pos-staking-validators}
 
@@ -37,7 +37,7 @@ Si certificas bloques maliciosos, perderás tu apuesta.
 
 ### La cadena de baliza (blockchain) {#the-beacon-chain}
 
-Cuando en Ethereum se reemplaza la prueba de trabajo por la prueba de participación, se añade la complejidad de las [cadenas de fragmentos](/upgrades/shard-chains/). Se trata de cadenas de valores independientes que necesitarán validadores para procesar las transacciones y crear nuevos bloques. El plan es disponer de 64 cadenas fragmentadas y todos necesitan comprender cuál es el estado de la red. Como consecuencia, se necesita una coordinación adicional, la cual se realizará mediante [la cadena de baliza](/upgrades/beacon-chain/).
+Cuando en Ethereum se reemplaza la prueba de trabajo por la prueba de participación, se añade la complejidad de las [cadenas de fragmentos](/upgrades/sharding/). Se trata de cadenas de valores independientes que necesitarán validadores para procesar las transacciones y crear nuevos bloques. El plan es disponer de 64 cadenas fragmentadas y todos necesitan comprender cuál es el estado de la red. Como consecuencia, se necesita una coordinación adicional, la cual se realizará mediante [la cadena de baliza](/upgrades/beacon-chain/).
 
 La cadena de baliza recibe la información del estado de los fragmentos y la hace disponible para otros fragmentos para que, de este modo, la red pueda permanecer sincronizada. La cadena de baliza también gestionará a los validadores, desde el registro de los depósitos de sus apuestas hasta la emisión de sus recompensas y penalizaciones.
 
@@ -90,8 +90,8 @@ Existen los slashings de apuestas, expulsiones y otras penalizaciones (coordinad
 - [Qué es la prueba de participación y por qué es importante](https://bitcoinmagazine.com/culture/what-proof-of-stake-is-and-why-it-matters-1377531463) _Vitalik Buterin_
 - [Es necesario que lea primero la sección en la que se explica la cadena de baliza de Ethereum 2.0](https://ethos.dev/beacon-chain/) _Ethos.dev_
 - [Por qué se realiza la prueba de participación (nov. 2020)](https://vitalik.ca/general/2020/11/06/pos2020.html) _Vitalik Buterin_
-- [Prueba de participación: cómo aprendí a amar la subjetividad débil ](https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity/)_Vitalik Buterin_
-- [Filosofía de diseño de las pruebas de participación ](https://medium.com/@VitalikButerin/a-proof-of-stake-design-philosophy-506585978d51) _ Vitalik Buterin_
+- [Prueba de participación: cómo aprendí a amar la subjetividad débil](https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity/) _Vitalik Buterin_
+- [Filosofía de diseño de las pruebas de participación](https://medium.com/@VitalikButerin/a-proof-of-stake-design-philosophy-506585978d51) _Vitalik Buterin_
 
 ## Temas relacionados {#related-topics}
 

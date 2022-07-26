@@ -3,6 +3,7 @@ title: Intro to Ethereum
 description: A dapp developer's introduction to the core concepts of Ethereum.
 lang: en
 sidebar: true
+preMergeBanner: true
 ---
 
 ## What is a blockchain? {#what-is-a-blockchain}
@@ -118,4 +119,4 @@ _Know of a community resource that helped you? Edit this page and add it!_
 
 ## Related tutorials {#related-tutorials}
 
-- [A developer's guide to Ethereum, part 1 ](/developers/tutorials/a-developers-guide-to-ethereum-part-one/) _– A very beginner-friendly exploration of Ethereum using Python and web3.py_
+- [A developer's guide to Ethereum, part 1](/developers/tutorials/a-developers-guide-to-ethereum-part-one/) _– A very beginner-friendly exploration of Ethereum using Python and web3.py_

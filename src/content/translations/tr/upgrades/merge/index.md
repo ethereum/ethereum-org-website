@@ -23,7 +23,7 @@ Ethereum'un yıldızlararası bir yolculuk için pek de hazır olmayan bir uzay 
 
 ## Mainnet ile birleştirme {#docking-mainnet}
 
-Hazır olduğunda Ethereum Mainnet, İşaret Zinciri ile "birleşecek" ve [iş ispatı yerine hisse ispatı kullanan kendi parçasına dönüşecek. ](/developers/docs/consensus-mechanisms/pow/).
+Hazır olduğunda Ethereum Mainnet, İşaret Zinciri ile "birleşecek" ve [iş ispatı yerine hisse ispatı kullanan kendi parçasına dönüşecek](/developers/docs/consensus-mechanisms/pow/).
 
 Mainnet, tüm ETH sahipleri ve kullanıcıları için geçişin sorunsuz olmasını sağlamak için akıllı sözleşmeleri hisse kanıtı(proof-of-stake) sistemine ve ayrıca Ethereum'un tam geçmişine ve mevcut durumuna getirecek.
 
@@ -59,8 +59,8 @@ Başlangıçta plan, ölçeklenebilirliği ele almak için Birleştirmeden önce
 
 Bu, sonsuz ölçeklenebilirliğe izin vermek için potansiyel olarak birden fazla parça zinciri turuna duyulan ihtiyaç konusunda topluluk tarafından, devam eden bir değerlendirme olacaktır.
 
-<ButtonLink to="/upgrades/shard-chains/">
-  Shard zincirleri
+<ButtonLink to="/upgrades/sharding/">
+  Parça zincirleri
 </ButtonLink>
 
 ## Daha fazla okuyun {#read-more}

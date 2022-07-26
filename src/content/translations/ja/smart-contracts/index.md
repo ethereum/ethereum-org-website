@@ -86,7 +86,7 @@ Finematics によるスマートコントラクトの説明:
 
 <YouTube id="pWGLtjG-F5c" />
 
-## 参考文献 {#further-reading}
+## さらに学びたい方へ {#further-reading}
 
 - [スマートコントラクトが世界をどのように変えるか](https://www.youtube.com/watch?v=pA6CGuXEKtQ)
 - [スマートコントラクト: 弁護士を不要にするブロックチェーンテクノロジー](https://blockgeeks.com/guides/smart-contracts/)

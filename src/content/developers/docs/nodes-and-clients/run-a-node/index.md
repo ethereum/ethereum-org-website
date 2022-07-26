@@ -4,9 +4,12 @@ description: General introduction to running your own instance of an Ethereum cl
 lang: en
 sidebar: true
 sidebarDepth: 2
+preMergeBanner: true
 ---
 
 Running your own node provides you various benefits, opens new possibilities, and helps to support the ecosystem. This page will guide you through spinning up your own node and taking part in validating Ethereum transactions.
+
+Note that after [The Merge](/upgrades/merge) a minimum of two clients are required to run an Ethereum node. These are an execution client and a consensus client. This page will show how to install, configure and connect these two clients to form an Ethereum node.
 
 ## Prerequisites {#prerequisites}
 
@@ -17,13 +20,14 @@ If you're new to the topic of running a node, or looking for a less technical pa
 ## Choosing an approach {#choosing-approach}
 
 The first step in spinning up your node is choosing your approach. You have to choose the client (the software), the environment, and the parameters you want to start with.
-See all the available [Mainnet clients](/developers/docs/nodes-and-clients/#advantages-of-different-implementations).
+This includes the hardware (NUC, laptop, virtual machine, etc), operating system (Linux, Windows, macOS, etc), client implementation and configuration. Users will have their own individual preferences for each option.
 
 #### Client settings {#client-settings}
 
-Client implementations enable different sync modes and various other options. [Sync modes](/developers/docs/nodes-and-clients/#sync-modes) represent different methods of downloading and validating blockchain data. Before starting the node, you should decide what network and sync mode to use. The most important things to consider is the disk space and sync time client will need.
+Client implementations enable different sync modes and various other options. [Sync modes](/developers/docs/nodes-and-clients/#sync-modes) represent different methods of downloading and validating blockchain data. Before starting the node, you should decide what network and sync mode to use. The most important things to consider is the disk space and sync time client will need. Note that after [The Merge](/upgrades/merge) a light execution client will no longer work - a full node will be required.
 
-All features and options can be found in the client's documentation. Various client configurations can be set by executing the client with the corresponding flags. You can get more information on flags from [EthHub](https://docs.ethhub.io/using-ethereum/running-an-ethereum-node/#client-settings) or the client documentation.
+All features and options can be found in the client's documentation. Various client configurations can be set by executing the client with the corresponding flags. You can get more information on flags from the client documentation.
+
 For testing purposes, you might prefer running a client on one of testnet networks. [See overview of supported networks](/developers/docs/nodes-and-clients/#execution-clients).
 
 ### Environment and hardware {#environment-and-hardware}
@@ -46,7 +50,7 @@ To simplify, let's think about running a node on both a local physical machine a
 
 Both options have different advantages summed up above. If you are looking for a cloud solution, in addition to many traditional cloud computing providers, there are also services focused on deploying nodes. For example:
 
-- [QuikNode](https://www.quiknode.io/)
+- [QuickNode](https://www.quicknode.com/)
 - [Blockdaemon](https://blockdaemon.com)
 - [LunaNode](https://www.lunanode.com/)
 - [Alchemy](https://www.alchemy.com/)
@@ -70,9 +74,9 @@ All clients support major operating systems - Linux, MacOS, Windows. This means 
 
 ## Spinning up the node {#spinning-up-node}
 
-### Getting the client software {#getting-the-client}
+### Getting the execution client software {#getting-the-execution-client}
 
-First, download your preferred [client software](/developers/docs/nodes-and-clients/#execution-clients)
+First, download your preferred [execution client software](/developers/docs/nodes-and-clients/#execution-clients)
 
 You can simply download an executable application or installation package which suits your operating system and architecture. Always verify signatures and checksums of downloaded packages. Some clients also offer repositories for easier installation and updates.
 If you prefer, you can build from source. All of the clients are open source so you can build them from source code with the proper compiler.
@@ -85,9 +89,13 @@ Executable binaries for stable Mainnet client implementations can be downloaded 
 - [Besu](https://pegasys.tech/solutions/hyperledger-besu/)
 - [Erigon](https://github.com/ledgerwatch/erigon)
 
+It is also worth noting that client diversity is an [issue on the execution layer](https://clientdiversity.org/),
+with Geth being run on a supermajority (>66%) of all Ethereum nodes. It is recommended that readers on this page consider
+running a minority execution client.
+
 **Note that OpenEthereum [has been deprecated](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd) and is no longer being maintained.** Use it with caution and preferably switch to another client implementation.
 
-### Starting the client {#starting-the-client}
+### Starting the execution client {#starting-the-execution-client}
 
 Before starting Ethereum client software, perform a last check that your environment is ready. For example, make sure:
 
@@ -97,28 +105,70 @@ Before starting Ethereum client software, perform a last check that your environ
 - System has correct time and date.
 - Your router and firewall accept connections on listening ports. By default Ethereum clients use a listener (TCP) port and a discovery (UDP) port, both on 30303 by default.
 
-Run your client on a testnet first to help make sure everything is working correctly. [Running a Geth light node](/developers/tutorials/run-light-node-geth/) should help.
-You need to declare any client settings that aren't default at the start. You can use flags or the config file to declare your preferred configuration. Check out your client's documentation for the specifics
+Run your client on a testnet first to help make sure everything is working correctly. You need to declare any client settings that aren't default at the start.
+In order to connect to a consensus client the execution client must generate a `jwtsecret` at a known path. This path must be known by both clients as it is used
+to authenticate a local RPC connection between them. The execution client must also define a listening port for authenticated APIs.
+
+**Note that it is recommended to connect an execution and consensus client on a testnet only for now (e.g. Kiln) and await merge-ready client releases before replicating the process on Mainnet.**
+
+There are many ways to configure the execution client. You can use flags or the config file to declare your preferred configuration. Check out your client's documentation for the specific details.
+
 Client execution will initiate its core functions, chosen endpoints, and start looking for peers. After successfully discovering peers, the client starts synchronization. Current blockchain data will be available once the client is successfully synced to the current state.
 
-### Using the client {#using-the-client}
+### Getting the consensus client {#getting-the-consensus-client}
 
-Clients offer RPC API endpoints that you can use to control the client and interact with the Ethereum network in various ways:
+There are currently five consensus clients to choose from. These are:
+
+- [Lighthouse](https://lighthouse-book.sigmaprime.io/): written in Rust
+- [Nimbus](https://nimbus.team/): written in Nim
+- [Prysm](https://docs.prylabs.network/docs/getting-started/): written in Go
+- [Teku](https://pegasys.tech/teku): written in Java
+
+There is currently a [client diversity](/developers/docs/nodes-and-clients/client-diversity/) issue where a large dominance of Prysm clients poses a risk
+to the health of the network. In response to the initial drive to even out the client diversity many Prysm nodes switched
+to Lighthouse to the extent that it now also has a problematic market share. It is therefore recommended to consider choosing
+a minority client. [See the latest network client usage](https://clientdiversity.org/)
+
+There are several ways to download and install the consensus clients including prebuilt binaries, docker containers
+or building from source. Instructions for each client are provided in the documentation linked in the client list above.
+Users can choose the method that is right for them.
+
+### Starting the consensus client {#starting-the-consensus-client}
+
+The consensus client must be started with the right port configuration to establish a local RPC connection to the execution
+client. The consensus clients all have a command similar to `--http-webprovider` that takes the exposed execution
+client port as an argument.
+
+The consensus client also needs the path to the execution client's `jwt-secret` in order to authenticate the RPC
+connection between them. Each consensus client has a command similar to `--jwt-secret` that takes the file
+path as an argument. This must be consistent with the `jwtsecret` path provided to the execution client.
+
+**Note that we recommend waiting for merge-ready client releases before doing this on Ethereum Mainnet—for now just practice on a testnet such as Kiln**
+
+### Adding Validators {#adding-validators}
+
+Each of the consensus clients have their own validator software that is described in detail in their respective documentation. The easiest way to get started with
+staking and validator key generation is to use the [Prater Testnet Staking Launchpad](https://prater.launchpad.ethereum.org/), allowing you to test your setup. When you're ready for Mainnet, you can repeat these steps using the [Mainnet Staking Launchpad](https://launchpad.ethereum.org/).
+
+### Using the node {#using-the-node}
+
+Execution clients offer RPC API endpoints that you can use to submit transactions, interact with or deploy smart contracts on the Ethereum network in various ways:
 
 - Manually calling them with a suitable protocol (e.g. using `curl`)
 - Attaching a provided console (e.g. `geth attach`)
 - Implementing them in applications
 
-Different clients have different implementations of the RPC endpoints. But there is a standard JSON-RPC which you can use with every client. For an overview [read the JSON-RPC docs](https://eth.wiki/json-rpc/API).
-Applications that need information from the Ethereum network can use this RPC. For example, popular wallet MetaMask lets you [run a local blockchain instance and connect to it](https://metamask.zendesk.com/hc/en-us/articles/360015290012-Using-a-Local-Node).
+Different clients have different implementations of the RPC endpoints. But there is a standard JSON-RPC which you can use with every client. For an overview [read the JSON-RPC docs](https://eth.wiki/json-rpc/API). Applications that need information from the Ethereum network can use this RPC. For example, popular wallet MetaMask lets you [run a local blockchain instance and connect to it](https://metamask.zendesk.com/hc/en-us/articles/360015290012-Using-a-Local-Node).
+
+The consensus clients all expose a [Beacon API](https://ethereum.github.io/beacon-APIs) that can be used to check the status of the consensus client or download blocks and consensus data by sending requests using tools such as [Curl](https://curl.se). More information on this can be found in the documentation for each consensus client.
 
 #### Reaching RPC {#reaching-rpc}
 
-The default port of JSON-RPC is `8545` but you can modify the ports of local endpoints in the config file. By default, the RPC interface is only reachable on the localhost of your computer. To make it remotely accessible, you might want to expose it to the public by changing the address to `0.0.0.0`. This will make it reachable over local and public IP addresses. In most cases you'll also need to set up port forwarding on your router.
+The default port for the execution client JSON-RPC is `8545` but you can modify the ports of local endpoints in the config file. By default, the RPC interface is only reachable on the localhost of your computer. To make it remotely accessible, you might want to expose it to the public by changing the address to `0.0.0.0`. This will make it reachable over local and public IP addresses. In most cases you'll also need to set up port forwarding on your router.
 
 You should do this with caution as this will let anyone on the internet control your node. Malicious actors could access your node to bring down your system or steal your funds if you're using your client as a wallet.
 
-A way around this is to prevent potentially harmful RPC methods from being modifiable. For example, with `geth`, you can declare modifiable methods with a flag: `--http.api web3,eth,txpool`.
+A way around this is to prevent potentially harmful RPC methods from being modifiable. For example, with Geth, you can declare modifiable methods with a flag: `--http.api web3,eth,txpool`.
 
 You can also host access to your RPC interface by pointing service of web server, like Nginx, to your client's local address and port.
 
@@ -145,19 +195,19 @@ Your node doesn't have to be online nonstop but you should keep it online as muc
 
 _This doesn't apply on consensus layer validator nodes._ Taking your node offline will affect all services dependent on it. If you are running a node for _staking_ purposes you should try to minimize downtime as much as possible.
 
-#### Creating client service {#creating-client-service}
+#### Creating client services {#creating-client-services}
 
-Consider creating a service to run your client automatically on startup. For example on Linux servers, good practice would be creating a service that executes the client with proper config, under user with limited privileges and automatically restarts.
+Consider creating a service to run your clients automatically on startup. For example on Linux servers, good practice would be creating a service that executes the client with proper config, under user with limited privileges and automatically restarts.
 
-#### Updating client {#updating-client}
+#### Updating clients {#updating-clients}
 
-You need to keep your client software up-to-date with the latest security patches, features, and [EIPs](/eips/). Especially before [hard forks](/history/), make sure you are running the correct client version.
+You need to keep your client software up-to-date with the latest security patches, features, and [EIPs](/eips/). Especially before [hard forks](/history/), make sure you are running the correct client versions. Updating clients is very simple. Each client has specific instructions in their documentation but the process is generally just to stop the client, download the latest version and restart. The client should pick up where it left off but with the updates applied.
 
 Each client implementation has a human-readable version string used in the peer-to-peer protocol but is also accessible from the command line. This version string lets users check they are running the correct version and allows block explorers and other analytical tools interested in quantifying the distribution of specific clients over the network. Please refer to the individual client documentation for more information about version strings.
 
 #### Running additional services {#running-additional-services}
 
-Running your own node lets you use services that require direct access to Ethereum client RPC. These are services built on top of Ethereum like [layer 2 solutions](/developers/docs/scaling/#layer-2-scaling), [consensus clients](/upgrades/get-involved/#clients), and other Ethereum infrastructure.
+Running your own node lets you use services that require direct access to Ethereum client RPC. These are services built on top of Ethereum like [layer 2 solutions](/developers/docs/scaling/#layer-2-scaling) and other Ethereum infrastructure.
 
 #### Monitoring the node {#monitoring-the-node}
 

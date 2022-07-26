@@ -16,7 +16,7 @@ Le diramazioni si verificano quando è necessario apportare aggiornamenti o modi
 
 Quando sono necessari aggiornamenti in software tradizionali controllati centralmente, l'azienda pubblica una nuova versione per l'utente finale. Le blockchain funzionano diversamente perché non esiste una proprietà centrale. I [client Ethereum](/developers/docs/nodes-and-clients/) devono aggiornare il proprio software per implementare le nuove regole di diramazione. Inoltre i creatori dei blocchi (miner in contesto Proof of Work e validatori in contesto Proof of Stake) e i nodi devono creare blocchi e convalidarli in base alle nuove regole. [Maggiori informazioni sui meccanismi di consenso](/developers/docs/consensus-mechanisms/)
 
-Queste modifiche delle regole potrebbero creare una divisione temporanea nella rete. I nuovi blocchi potrebbero essere creati in base alle nuove regole o a quelle vecchie. Le diramazioni di solito sono concordate in anticipo in modo che i client adottino le modifiche all'unisono e la diramazione legata agli upgrade diventi la catena principale. Tuttavia, in rari casi, disaccordi sulle diramazioni possono causare una divisione permanente della rete, come è successo con la creazione di Ethereum Classic con la [diramazione OAD](#dao-fork).
+Queste modifiche delle regole potrebbero creare una divisione temporanea nella rete. I nuovi blocchi potrebbero essere creati in base alle nuove regole o a quelle vecchie. Le diramazioni di solito sono concordate in anticipo in modo che i client adottino le modifiche all'unisono e la diramazione legata agli upgrade diventi la catena principale. Tuttavia, in rari casi, disaccordi sulle diramazioni possono causare una divisione permanente della rete, come è successo con la creazione di Ethereum Classic con la [diramazione DAO](#dao-fork).
 
 </ExpandableCard>
 
@@ -75,11 +75,11 @@ Altair è stato il primo importante aggiornamento di rete che ha avuto un tempo 
 
 L'aggiornamento London ha introdotto l'[EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), che ha riformato il mercato delle commissioni di transazione, oltre a modificare le modalità di gestione dei rimborsi di carburante e la pianificazione dell'[Ice Age](/glossary/#ice-age).
 
-- [Sei uno sviluppatore di dApp? Assicurati di aggiornare le tue librerie e strumentazioni.](https://github.com/ethereum/eth1.0-specs/blob/master/network-upgrades/ecosystem-readiness.md)
+- [Sei uno sviluppatore di dApp? Assicurati di aggiornare le tue librerie e strumentazioni.](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/london-ecosystem-readiness.md)
 - [Leggi l'annuncio della Ethereum Foundation](https://blog.ethereum.org/2021/07/15/london-mainnet-announcement/)
 - [Leggi la spiegazione del Cat Herder di Ethereum](https://medium.com/ethereum-cat-herders/london-upgrade-overview-8eccb0041b41)
 
-<ExpandableCard title="EIP Londra" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="EIP di Londra" contentPreview="Official improvements included in this upgrade.">
 
 - [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) – _migliora il mercato delle commissioni di transazione_
 - [EIP-3198](https://eips.ethereum.org/EIPS/eip-3198) – _restituisce `BASEFEE` da un blocco_
@@ -126,7 +126,7 @@ La [Beacon Chain](/upgrades/beacon-chain/) necessita di 16384 depositi da 32 ETH
 [Leggi l'annuncio della Ethereum Foundation](https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21/)
 
 <DocLink to="/upgrades/beacon-chain/">
-  La beacon chain
+  La Beacon Chain
 </DocLink>
 
 ---
@@ -178,7 +178,7 @@ La diramazione Instanbul:
 
 - Ha ottimizzato i costi del [carburante](/glossary/#gas) di certe azioni nell'[EVM](/developers/docs/ethereum-stack/#ethereum-virtual-machine).
 - Ha migliorato la resilienza agli attacchi denial-of-service.
-- Ha reso più performanti le soluzioni di [scalabilità del Livello 2](/developers/docs/scaling/layer-2-rollups/) basate su SNARK e STARK.
+- Ha reso più performanti le soluzioni di [ridimensionamento di Livello 2](/developers/docs/scaling/#layer-2-scaling) basate su SNARK e STARK.
 - Ha reso possibile l'interazione tra Ethereum e Zcash.
 - Ha consentito ai contratti di introdurre funzioni più creative.
 
@@ -186,12 +186,12 @@ La diramazione Instanbul:
 
 <ExpandableCard title="EIP Istanbul" contentPreview="Official improvements included in this fork.">
 
-- [EIP-152](https://eips.ethereum.org/EIPS/eip-152) – _consente a Ethereum di operare con valute che preservano la privacy, come Zcash._
-- [EIP-1108](https://eips.ethereum.org/EIPS/eip-1108) – _crittografia più economica per migliorare i costi del [gas](/glossary/#gas)._
-- [EIP-1344](https://eips.ethereum.org/EIPS/eip-1344) – _protegge Ethereum dagli attacchi di riproduzione aggiungendo "CHAINID" [opcode](/developers/docs/ethereum-stack/#ethereum-virtual-machine)._
-- [EIP-1884](https://eips.ethereum.org/EIPS/eip-1884) – _ottimizzazione dei prezzi del gas dei codici operativi in base al consumo._
-- [EIP-2028](https://eips.ethereum.org/EIPS/eip-2028) – _riduce il costo di CallData per consentire più dati nei blocchi, il che è positivo per la [scalabilità del Livello 2](/developers/docs/scaling/layer-2-rollups/)._
-- [EIP-2200](https://eips.ethereum.org/EIPS/eip-2200) – _altre alterazioni del prezzo del carburante dei codici operativi._
+- [EIP-152](https://eips.ethereum.org/EIPS/eip-152) – _consente a Ethereum di funzionare con valuta che preserva la privacy come Zcash._
+- [EIP-1108](https://eips.ethereum.org/EIPS/eip-1108) – _crittografia più economica per migliorare i costi di [gas](/glossary/#gas)._
+- [EIP-1344](https://eips.ethereum.org/EIPS/eip-1344) – _protegge Ethereum dagli attacchi di riproduzione aggiungendo 'CHAINID' [opcode](/developers/docs/ethereum-stack/#ethereum-virtual-machine)._
+- [EIP-1884](https://eips.ethereum.org/EIPS/eip-1884) – _ottimizzazione dei prezzi del gas opcode in base ai consumi._
+- [EIP-2028](https://eips.ethereum.org/EIPS/eip-2028) – _riduce il costo di CallData per consentire più dati nei blocchi, utile per il [ridimensionamento di Layer 2](/developers/docs/scaling/#layer-2-scaling)._
+- [EIP-2200](https://eips.ethereum.org/EIPS/eip-2200) – _altre modifiche del prezzo del gas dell'opcode._
 
 </ExpandableCard>
 
@@ -205,7 +205,7 @@ La diramazione Instanbul:
 
 La diramazione Costantinopoli:
 
-- Ha assicurato che la blockchain non si bloccasse prima dell'[implementazione del Proof of Stake](#beacon-chain-genesis).
+- Ha assicurato che la blockchain non si bloccasse prima dell'[implementazione della Proof of Stake](#beacon-chain-genesis).
 - Ha ottimizzato i costi del [carburante](/glossary/#gas) di certe azioni nell'[EVM](/developers/docs/ethereum-stack/#ethereum-virtual-machine).
 - Ha aggiunto la capacità di interagire con gli indirizzi non ancora creati.
 
@@ -232,24 +232,24 @@ La diramazione Costantinopoli:
 
 La diramazione Byzantium:
 
-- Ha ridotto le ricompense del [mining](/developers/docs/consensus-mechanisms/pow/mining/) dei blocchi da 5 a 3 ETH.
+- Ridotte le ricompense del [mining](/developers/docs/consensus-mechanisms/pow/mining/) di blocchi da 5 a 3 ETH.
 - Ha ritardato di un anno la [bomba di difficoltà](/glossary/#difficulty-bomb).
 - Ha aggiunto la capacità di effettuare chiamate che non modificano lo stato ad altri contratti.
-- Ha aggiunto certi metodi crittografici per consentire la [scalabilità del livello 2](/developers/docs/scaling/layer-2-rollups/).
+- Ha aggiunto certi metodi crittografici per consentire il [ridimensionamento del livello 2](/developers/docs/scaling/#layer-2-scaling).
 
 [Leggi l'annuncio della Ethereum Foundation](https://blog.ethereum.org/2017/10/12/byzantium-hf-announcement/)
 
 <ExpandableCard title="EIP Byzantium" contentPreview="Official improvements included in this fork.">
 
-- [EIP-140](https://eips.ethereum.org/EIPS/eip-140) – _aggiunge il codice operativo "REVERT"._
-- [EIP-658](https://eips.ethereum.org/EIPS/eip-658) – _campo di stato aggiunto alle ricevute di transazione per indicare successo o fallimento._
-- [EIP-196](https://eips.ethereum.org/EIPS/eip-196) – _aggiunge la curva ellittica e la moltiplicazione scalare per consentire gli [ZK-Snarks](/developers/docs/scaling/layer-2-rollups/#zk-rollups)._
-- [EIP-197](https://eips.ethereum.org/EIPS/eip-197) – _aggiunge la curva ellittica e la moltiplicazione per consentire gli [ZK-Snarks](/developers/docs/scaling/layer-2-rollups/#zk-rollups)._
-- [EIP-198](https://eips.ethereum.org/EIPS/eip-198) – _consente la verifica della firma RSA._
-- [EIP-211](https://eips.ethereum.org/EIPS/eip-211) – _aggiunge supporto per i valori di restituzione di lunghezza variabile._
-- [EIP-214](https://eips.ethereum.org/EIPS/eip-214) – _aggiunge il codice operativo "STATICCALL", consentendo chiamate che non cambiano lo stato ad altri contratti._
+- [EIP-140](https://eips.ethereum.org/EIPS/eip-140) – _aggiunge l'opcode "REVERT"._
+- [EIP-658](https://eips.ethereum.org/EIPS/eip-658) – _campo di stato aggiunto alle ricevute di transazione per indicare l'esito positivo o negativo._
+- [EIP-196](https://eips.ethereum.org/EIPS/eip-196) – _aggiunge la curva ellittica e la moltiplicazione scalare per consentire [ZK-Snarks](/developers/docs/scaling/zk-rollups/)._
+- [EIP-197](https://eips.ethereum.org/EIPS/eip-197) – _aggiunge la curva ellittica e la moltiplicazione scalare per consentire [ZK-Snarks](/developers/docs/scaling/zk-rollups/)._
+- [EIP-198](https://eips.ethereum.org/EIPS/eip-198) – _abilita la verifica della firma RSA._
+- [EIP-211](https://eips.ethereum.org/EIPS/eip-211) – _aggiunge il supporto per i valori di ritorno di lunghezza variabile._
+- [EIP-214](https://eips.ethereum.org/EIPS/eip-214) – _aggiunge l'opcode 'STATICCALL', consentendo chiamate senza cambio di stato ad altri contratti._
 - [EIP-100](https://eips.ethereum.org/EIPS/eip-100) – _cambia la formula di regolazione della difficoltà._
-- [EIP-649](https://eips.ethereum.org/EIPS/eip-649) – ritarda la [bomba di difficoltà](/glossary/#difficulty-bomb) di 1 anno e riduce la ricompensa del blocco da 5 a 3 ETH.\_
+- [EIP-649](https://eips.ethereum.org/EIPS/eip-649) – _ritarda [difficulty bomb](/glossary/#difficulty-bomb) di 1 anno e riduce la ricompensa del blocco da 5 a 3 ETH._
 
 </ExpandableCard>
 
@@ -263,7 +263,7 @@ La diramazione Byzantium:
 
 #### Riepilogo {#spurious-dragon-summary}
 
-La diramazione Spurious Dragon è stata la seconda risposta agli attacchi denial of service (DoS) sulla rete (settembre/ottobre 2016) e ha reso possibile, tra l'altro:
+La biforcazione Spurious Dragon è stata la seconda risposta agli attacchi di denial of service (DoS) alla rete (settembre/ottobre 2016) e ha incluso:
 
 - ottimizzazione dei prezzi dell'opcode per impedire attacchi futuri alla rete.
 - abilitazione di "debloat" dello stato della blockchain.
@@ -303,7 +303,7 @@ La diramazione Tangerine Whistle è stata la prima risposta agli attacchi denial
 
 ---
 
-### Diramazione OAD {#dao-fork}
+### Diramazione DAO {#dao-fork}
 
 <Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Jul-20-2016 01:20:40 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Numero blocco: <a href="https://etherscan.io/block/1920000">1,920,000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Prezzo ETH: $12.54 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20160803215306/https://ethereum.org/">ethereum.org on waybackmachine</a>
 
@@ -347,7 +347,7 @@ La diramazione Homestead guardava al futuro. Comprendeva diverse modifiche al pr
 
 #### Riepilogo {#frontier-thawing-summary}
 
-La diramazione frontier thawing ha introdotto il limite di 5000 unità di [carburante](/glossary/#gas) per [blocco](/glossary/#block) e ha impostato il prezzo predefinito del carburante a 51 [gwei](/glossary/#gwei). In questo sono state rese possibili le transazioni. Le transazioni richiedono 21.000 unità di carburante.
+La biforcazione frontier thawing ha alzato il limite di 5000 di [gas](/glossary/#gas) per [blocco](/glossary/#block) e ha impostato il prezzo predefinito del gas a 51 [gwei](/glossary/#gwei). In questo sono state rese possibili le transazioni. Le transazioni richiedono 21.000 unità di carburante.
 
 [Leggi l'annuncio della Ethereum Foundation](https://blog.ethereum.org/2015/08/04/the-thawing-frontier/)
 
@@ -359,7 +359,7 @@ La diramazione frontier thawing ha introdotto il limite di 5000 unità di [carbu
 
 #### Riepilogo {#frontier-summary}
 
-Frontier era un'implementazione attiva ma a livello base del progetto di Ethereum. È seguita poi la positiva fase di test Olympic. Era destinata agli utenti tecnici, in particolare agli sviluppatori. I [blocchi](/glossary/#block) avevano un limite di 5.000 unità di [carburante](/glossary/#gas). Questo periodo di "disgelo" (dall'inglese thawing) ha consentito ai miner di iniziare la propria operatività e ai primi utilizzatori di installare i client senza fretta.
+Frontier era un'implementazione attiva ma a livello base del progetto di Ethereum. È seguita poi la positiva fase di test Olympic. Era intesa per gli utenti tecnici, in particolare gli sviluppatori. I [blocchi](/glossary/#block) avevano un limite di 5.000 unità di [carburante](/glossary/#gas). Questo periodo di "disgelo" (dall'inglese thawing) ha consentito ai miner di iniziare la propria operatività e ai primi utilizzatori di installare i client senza fretta.
 
 [Leggi l'annuncio della Ethereum Foundation](https://blog.ethereum.org/2015/07/22/frontier-is-coming-what-to-expect-and-how-to-prepare/)
 

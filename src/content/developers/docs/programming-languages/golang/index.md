@@ -34,11 +34,11 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 ## Intermediate articles and docs {#intermediate-articles-and-docs}
 
 - [Go Ethereum Documentation](https://geth.ethereum.org/docs/) - _The documentation for the official Ethereum Golang_
-- [Turbo-Geth Programmer's Guide](https://github.com/ledgerwatch/turbo-geth/blob/master/docs/programmers_guide/guide.md) - _Illustrated guide including the state tree, multi-proofs, and transaction processing_
-- [Turbo-Geth and Stateless Ethereum](https://youtu.be/3-Mn7OckSus?t=394) - _2020 Ethereum Community Conference (EthCC 3)_
-- [Turbo-Geth: optimising Ethereum clients](https://www.youtube.com/watch?v=CSpc1vZQW2Q) - _2018 Devcon 4_
+- [Erigon Programmer's Guide](https://github.com/ledgerwatch/erigon/blob/devel/docs/programmers_guide/guide.md) - _Illustrated guide including the state tree, multi-proofs, and transaction processing_
+- [Erigon and Stateless Ethereum](https://youtu.be/3-Mn7OckSus?t=394) - _2020 Ethereum Community Conference (EthCC 3)_
+- [Erigon: optimising Ethereum clients](https://www.youtube.com/watch?v=CSpc1vZQW2Q) - _2018 Devcon 4_
 - [Go Ethereum GoDoc](https://godoc.org/github.com/ethereum/go-ethereum)
-- [Creating a Dapp in Go with Geth](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/creating-a-dapp-in-go-with-geth/)
+- [Creating a dapp in Go with Geth](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/creating-a-dapp-in-go-with-geth/)
 - [Work with Ethereum Private Network with Golang and Geth](https://myhsts.org/tutorial-learn-how-to-work-with-ethereum-private-network-with-golang-with-geth.php)
 - [Unit testing Solidity contracts on Ethereum with Go](https://medium.com/coinmonks/unit-testing-solidity-contracts-on-ethereum-with-go-3cc924091281)
 - [Quick reference for using Geth as a library](https://medium.com/coinmonks/web3-go-part-1-31c68c68e20e)
@@ -49,13 +49,13 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 - [Blockchain-as-a-Service Apps Using Ethereum and Quorum](https://blockchain.dcwebmakers.com/blockchain-as-a-service-apps-using-ethereum-and-quorum.html)
 - [Distributed Storage IPFS and Swarm in Ethereum Blockchain Applications](https://blockchain.dcwebmakers.com/work-with-distributed-storage-ipfs-and-swarm-in-ethereum.html)
 - [Mobile Clients: Libraries and Inproc Ethereum Nodes](https://github.com/ethereum/go-ethereum/wiki/Mobile-Clients:-Libraries-and-Inproc-Ethereum-Nodes)
-- [Native DApps: Go bindings to Ethereum contracts](https://github.com/ethereum/go-ethereum/wiki/Native-DApps:-Go-bindings-to-Ethereum-contracts)
+- [Native dapps: Go bindings to Ethereum contracts](https://github.com/ethereum/go-ethereum/wiki/Native-DApps:-Go-bindings-to-Ethereum-contracts)
 
 ## Go projects and tools {#go-projects-and-tools}
 
 - [Geth / Go Ethereum](https://github.com/ethereum/go-ethereum) - _Official Go implementation of the Ethereum protocol_
 - [Go Ethereum Code Analysis](https://github.com/ZtesoftCS/go-ethereum-code-analysis) - _Review and analysis of Go Ethereum source code_
-- [Turbo-Geth](https://github.com/ledgerwatch/turbo-geth) - _Faster derivative of Go Ethereum_
+- [Erigon](https://github.com/ledgerwatch/erigon) - _Faster derivative of Go Ethereum, with a focus on archive nodes_
 - [Golem](https://github.com/golemfactory/golem) - _Golem is creating a global market for computing power_
 - [Quorum](https://github.com/jpmorganchase/quorum) - _A permissioned implementation of Ethereum supporting data privacy_
 - [Prysm](https://github.com/prysmaticlabs/prysm) - _Ethereum 'Serenity' 2.0 Go Implementation_
@@ -65,6 +65,7 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 - [Ethereum HD Wallet](https://github.com/miguelmota/go-ethereum-hdwallet) - _Ethereum HD Wallet derivations in Go_
 - [Multi Geth](https://github.com/multi-geth/multi-geth) - _Support for many species of Ethereum networks_
 - [Geth Light Client](https://github.com/zsfelfoldi/go-ethereum/wiki/Geth-Light-Client) - _Light Ethereum Subprotocol's Geth implementation_
+- [Ethereum Golang SDK](https://github.com/everFinance/goether) - _A simple Ethereum wallet implementation and utilities in Golang_
 
 Looking for more resources? Check out [ethereum.org/developers](/developers/)
 

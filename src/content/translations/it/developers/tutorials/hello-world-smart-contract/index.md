@@ -3,13 +3,13 @@ title: Smart Contract "Hello World" per principianti
 description: Tutorial introduttivo su come scrivere e distribuire un semplice smart contract su Ethereum.
 author: "elanh"
 tags:
-  - "Solidity"
+  - "solidity"
   - "hardhat"
   - "alchemy"
   - "smart contract"
   - "primi passi"
   - "distribuzione"
-skill: principiante
+skill: beginner
 lang: it
 sidebar: true
 published: 2021-03-31
@@ -83,21 +83,22 @@ Non è rilevante come rispondi alle domande d'installazione, ecco le nostre risp
 ```
 package name: (hello-world)
 version: (1.0.0)
-description: hello world smart contract
+description: contratto intelligente hello world
 entry point: (index.js)
 test command:
 git repository:
 keywords:
 author:
-license: (ISC)About to write to /Users/.../.../.../hello-world/package.json:
+license: (ISC)
+About to write to /Users/.../.../.../hello-world/package.json:
 
 {
   "name": "hello-world",
   "version": "1.0.0",
-  "description": "hello world smart contract",
+  "description": "contratto intelligente hello world",
   "main": "index.js",
   "scripts": {
-     "test": "echo \\"Error: no test specified\\" && exit 1"
+     "test": "echo \\"Errore: nessun test specificato\\" && exit 1"
   },
   "author": "",
   "license": "ISC"
@@ -179,7 +180,7 @@ pragma solidity ^0.7.0;
 contract HelloWorld {
 
    // Declares a state variable `message` of type `string`.
-   // Le variabili di stato sono variabili con valori memorizzati in modo permanente nello spazio di archiviazione (storage) del contratto. The keyword `public` makes variables accessible from outside a contract and creates a function that other contracts or clients can call to access the value.
+   // Le variabili di stato sono variabili con valori memorizzati in modo permanente nello spazio di archiviazione del contratto. The keyword `public` makes variables accessible from outside a contract and creates a function that other contracts or clients can call to access the value.
    string public message;
 
    // Similar to many class-based object-oriented languages, a constructor is a special function that is only executed upon contract creation.
@@ -230,6 +231,10 @@ PRIVATE_KEY = "your-metamask-private-key"
 ```
 
 Per connetterli realmente al nostro codice, faremo riferimento a queste variabili nel nostro file `hardhat.config.js` nella fase 13.
+
+<InfoBanner isWarning={true}>
+Non eseguire il commit di <code>.env</code>! Assicurati di non condividere o esporre mai il tuo file <code>.env</code> con nessuno, poiché così facendo comprometteresti i tuoi segreti. Se stai usando il controllo di versione, aggiungi il tuo <code>.env</code> a un file <a href="https://git-scm.com/docs/gitignore">gitignore</a>.
+</InfoBanner>
 
 ## Fase 12: installa Ethers.js {#step-12-install-ethersjs}
 

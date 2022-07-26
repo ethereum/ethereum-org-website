@@ -406,7 +406,7 @@ Diperkirakan bahwa peningkatan skalabilitas akan memungkinkan jaringan untuk mem
 
 [Vitalik Buterik membahas transaksi per detik yang potensial dengan sharding](https://twitter.com/VitalikButerin/status/1312905884549300224)
 
-Pada tingkat terendah, sharding akan memungkinkan 64 kali jumlah transaksi dari jumlah saat ini yang berada sekitar 15 transaksi. Itulah jumlah rantai shard (data dan kapasitas tambahan) yang akan dimasukkan. [Selengkapnya tentang rantai shard](/upgrades/shard-chains/)
+Pada tingkat terendah, sharding akan memungkinkan 64 kali jumlah transaksi dari jumlah saat ini yang berada sekitar 15 transaksi. Itulah jumlah rantai shard (data dan kapasitas tambahan) yang akan dimasukkan. [Selengkapnya tentang rantai shard](/upgrades/sharding/)
 
 Itu berarti kita dapat memperkirakan berapa lama waktu yang diperlukan untuk memroses 100.000 transaksi, sehingga kita dapat membandingkannya dengan contoh Visa di atas.
 

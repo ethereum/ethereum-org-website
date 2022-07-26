@@ -17,7 +17,7 @@ summaryPoint4: Anda mungkin mengenalnya sebagai "Fase 0" pada roadmap teknis.
 
 ## Apa yang dilakukan oleh Rantai Suar? {#what-does-the-beacon-chain-do}
 
-Rantai Suar akan mengadakan atau mengoordinasi jaringan yang sudah diperluas dari [shard](/upgrades/shard-chains/) dan [penaruh](/staking/). Tapi itu tidak akan sama seperti [Jaringan Utama Ethereum](/glossary/#mainnet) saat ini. Rantai suar tidak bisa menangani akun ataupun kontrak pintar.
+Rantai Suar akan mengadakan atau mengoordinasi jaringan yang sudah diperluas dari [shard](/upgrades/sharding/) dan [penaruh](/staking/). Tapi itu tidak akan sama seperti [Jaringan Utama Ethereum](/glossary/#mainnet) saat ini. Rantai suar tidak bisa menangani akun ataupun kontrak pintar.
 
 Peran Rantai Suar akan berubah seiring berjalannya waktu, namun rantai ini merupakan komponen dasar untuk [jaringan Ethereum yang aman, berkelanjutan, dan terukur yang sedang kami kerjakan](/upgrades/vision/).
 
@@ -33,7 +33,7 @@ Penaruhan dan menjadi validator lebih mudah daripada [menambang](/developers/doc
 Jika Anda tertarik untuk menjadi validator dan membantu mengamankan Rantai Suar, <a href="/staking/">pelajari selengkapnya tentang penaruhan</a>.
 </InfoBanner>
 
-Ini juga merupakan perubahan penting untuk peningkatan lainnya: [rantai shard](/upgrades/shard-chains/).
+Ini juga merupakan perubahan penting untuk peningkatan lainnya: [rantai shard](/upgrades/sharding/).
 
 ### Menyiapkan rantai shard {#setting-up-for-shard-chains}
 
@@ -57,7 +57,7 @@ Rantai Suar, pada awalnya, akan hadir terpisah dari Jaringan Utama Ethereum yang
 
 Rantai shard hanya dapat masuk dalam ekosistem Ethereum dengan mekanisme konsesus bukti taruhan. Rantai Suar akan memperkenalkan penaruhan, menyiapkan jalan bagi peningkatan rantai shard berikutnya.
 
-<ButtonLink to="/upgrades/shard-chains/">
+<ButtonLink to="/upgrades/sharding/">
     Rantai shard
 </ButtonLink>
 

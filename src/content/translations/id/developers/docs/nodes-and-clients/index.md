@@ -160,7 +160,7 @@ Hyperledger Besu adalah klien Ethereum standar perusahaan untuk jaringan publik 
 
 #### Erigon {#erigon}
 
-Erigon, yang sebelumnya dikenal sebagai Turbo-Geth, adalah sebuah fork Go Ethereum yang diarahkan untuk efisiensi kecepatan dan pemakaian ruangan cakram. Erigon adalah sebuah implementasi yang sepenuhnya di buat kembali di Ethereum, yang saat ini ditulis dalam Go dengan implementasi dalam bahasa pemograman lain yang direncanakan. Tujuan Erigon adalah menyediakan implementasi Ethereum yang lebih cepat, lebih modular, dan lebih teroptimisasi. Ia dapat melakukan sinkronisasi node arsip penuh dengan menggunakan kurang dari 2 TB ruangan cakram, dalam waktu kurang dari 3 hari
+Erigon, yang sebelumnya dikenal sebagai Erigon, adalah sebuah fork Go Ethereum yang diarahkan untuk efisiensi kecepatan dan pemakaian ruangan cakram. Erigon adalah sebuah implementasi yang sepenuhnya di buat kembali di Ethereum, yang saat ini ditulis dalam Go dengan implementasi dalam bahasa pemograman lain yang direncanakan. Tujuan Erigon adalah menyediakan implementasi Ethereum yang lebih cepat, lebih modular, dan lebih teroptimisasi. Ia dapat melakukan sinkronisasi node arsip penuh dengan menggunakan kurang dari 2 TB ruangan cakram, dalam waktu kurang dari 3 hari
 
 ### Mode sinkronisasi {#sync-modes}
 
@@ -293,7 +293,7 @@ Mode sinkronisasi yang Anda pilih akan mempengaruhi persyaratan ukuran ruangan c
 
 ![Sebuah bagan menunjukkan GB yang diperlukan untuk satu sinkronisasi arsip sedang populer](./archive-sync.png)
 
-Bagan ini menunjukkan bagaimana persyaratan kapasitas penyimpanan selalu berubah. Untuk data Geth dan Parity yang paling terbaru, lihat[ data sinkronisasi penuh](https://etherscan.io/chartsync/chaindefault) dan [ data sinkronisasi arsip](https://etherscan.io/chartsync/chainarchive).
+Bagan ini menunjukkan bagaimana persyaratan kapasitas penyimpanan selalu berubah. Untuk data Geth dan Parity yang paling terbaru, lihat [data sinkronisasi penuh](https://etherscan.io/chartsync/chaindefault) dan [ data sinkronisasi arsip](https://etherscan.io/chartsync/chainarchive).
 
 ### Ethereum pada komputer papan tunggal {#ethereum-on-a-single-board-computer}
 

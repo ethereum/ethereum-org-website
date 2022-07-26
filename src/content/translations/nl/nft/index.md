@@ -49,7 +49,7 @@ Dit is hoe het internet van NFT's in vergelijking met het internet dat de meeste
 De NFT-wereld is relatief nieuw. In theorie is het toepassingsgebied van de NFT's zaken die uniek zijn en waarneembaar eigendom vereisen. Hier zijn enkele voorbeelden van NFT's die vandaag de dag bestaan, zodat u een idee krijgt:
 
 - [Een uniek digitaal kunstwerk](https://foundation.app/artworks)
-- [Een unieke sneaker in een limited edition modelijn ](https://www.metagrail.co/auctions/91cf83fb-3477-4155-aae8-6dcb9b853397)
+- [Een unieke sneaker in een limited edition modelijn](https://www.metagrail.co/auctions/91cf83fb-3477-4155-aae8-6dcb9b853397)
 - [Een in-game item](https://market.decentraland.org/)
 - [Een essay](https://zora.co/0x517bab7661C315C63C6465EEd1b4248e6f7FE183/145)
 - [Een digitaal verzamelobject](https://www.larvalabs.com/cryptopunks/details/1)
@@ -406,7 +406,7 @@ Geschat wordt dat upgrades voor schaalbaarheid het netwerk toestaan om tussen de
 
 [Vitalik Buterin over het potentieel voor transacties per seconde met sharding](https://twitter.com/VitalikButerin/status/1312905884549300224)
 
-Minimaal zal sharding 64 keer de hoeveelheid transacties van vandaag de dag toestaan, die momenteel op ongeveer 15 transacties staat. Dat is de hoeveelheid shardketens (extra gegevens en capaciteit) die wordt geïntroduceerd. [Meer over shardketens](/upgrades/shard-chains/)
+Minimaal zal sharding 64 keer de hoeveelheid transacties van vandaag de dag toestaan, die momenteel op ongeveer 15 transacties staat. Dat is de hoeveelheid shardketens (extra gegevens en capaciteit) die wordt geïntroduceerd. [Meer over shardketens](/upgrades/sharding/)
 
 Dat betekent dat we kunnen inschatten hoelang het zal duren om 100.000 transacties te verwerken zodat we het kunnen vergelijken met het bovenstaande voorbeeld van Visa.
 

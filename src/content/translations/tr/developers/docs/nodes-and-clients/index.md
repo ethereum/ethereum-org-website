@@ -33,7 +33,7 @@ Go, Rust, JavaScript, Typescript, Python, C# .NET, Nim ve Java gibi çeşitli pr
 - Tam blok zinciri verilerini depolar.
 - Blok doğrulamaya katılır, tüm blokları ve durumları doğrular.
 - Tüm durumlar tam bir düğümden türetilebilir.
-- Ağa hizmet eder ve istek üzerine veri sağlar.
+- Ağa hizmet eder ve talep üzerine veri sağlar.
 
 ### Hafif düğüm {#light-node}
 
@@ -152,7 +152,7 @@ Nethermind, ARM dahil tüm büyük platformlarda çalışan C# .NET teknoloji y�
 
 - optimize edilmiş bir sanal makine
 - durum erişimi
-- prometheus/Grafana gösterge panoları, sıralı kurumsal kayıt desteği, JSON RPC izleme ve analiz eklentileri gibi ağ iletişimi ve zengin özellikler.
+- prometheus/Grafana gösterge panelleri, sıralı kurumsal kayıt desteği, JSON RPC izleme ve analiz eklentileri gibi ağ iletişimi ve zengin özellikler.
 
 Nethermind ayrıca premium kullanıcılar için [ayrıntılı belgeler](https://docs.nethermind.io), güçlü geliştirici desteği, çevrimiçi bir topluluk ve 7/24 desteğe sahiptir.
 
@@ -162,7 +162,7 @@ Hyperledger Besu, genel ve izin verilen ağlar için kurumsal düzeyde bir Ether
 
 #### Erigon {#erigon}
 
-Eskiden Turbo-Geth olarak bilinen Erigon, hız ve disk alanı verimliliğine yönelik bir Go Ethereum çatalıdır. Erigon, şu anda Go'da yazılmış, ancak diğer dillerde uygulanması planlanan Ethereum'un tamamen yeniden tasarlanmış bir uygulamasıdır. Erigon'un amacı, Ethereum'un daha hızlı, daha modüler ve daha optimize edilmiş bir uygulamasını sağlamaktır. 3 günden kısa bir sürede 2 Tb'den daha az disk alanı kullanarak tam bir arşiv düğümü senkronizasyonu gerçekleştirebilir
+Eskiden Erigon olarak bilinen Erigon, hız ve disk alanı verimliliğine yönelik bir Go Ethereum çatalıdır. Erigon, şu anda Go'da yazılmış, ancak diğer dillerde uygulanması planlanan Ethereum'un tamamen yeniden tasarlanmış bir uygulamasıdır. Erigon'un amacı, Ethereum'un daha hızlı, daha modüler ve daha optimize edilmiş bir uygulamasını sağlamaktır. 3 günden kısa bir sürede 2 Tb'den daha az disk alanı kullanarak tam bir arşiv düğümü senkronizasyonu gerçekleştirebilir
 
 ### Senkronizasyon modları {#sync-modes}
 

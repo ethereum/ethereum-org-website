@@ -59,7 +59,7 @@ Pada awalnya, rencananya adalah melanjutkan pengembangan rantai shard sebelum Pe
 
 Ini akan menjadi penilaian berkelanjutan dari komunitas seiring dengan kebutuhan akan potensi beberapa putaran rantai shard untuk memungkinkan skalabilitas yang tak terbatas.
 
-<ButtonLink to="/upgrades/shard-chains/">
+<ButtonLink to="/upgrades/sharding/">
   Pecahan rantai jaringan
 </ButtonLink>
 

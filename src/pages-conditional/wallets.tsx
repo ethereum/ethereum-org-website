@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react"
 import styled from "styled-components"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import { useIntl } from "gatsby-plugin-intl"
+import { useIntl } from "react-intl"
 import { graphql, PageProps } from "gatsby"
 import { shuffle } from "lodash"
 
@@ -26,6 +26,7 @@ import {
 
 import { translateMessageId } from "../utils/translations"
 import { Context } from "../types"
+import FeedbackCard from "../components/FeedbackCard"
 
 const StyledTwoColumnContent = styled(TwoColumnContent)`
   margin-bottom: -2rem;
@@ -217,29 +218,37 @@ const articles = [
   },
 ]
 
+type Wallet = {
+  title: string
+  description: string
+  link: string
+  image: string
+  alt: string
+} & Partial<Queries.WalletsCsv>
+
 const WalletsPage = ({
   data,
 }: PageProps<Queries.WalletsPageQuery, Context>) => {
   const intl = useIntl()
-  const [wallets, setWallets] = useState<Array<Partial<Queries.WalletsCsv>>>([])
+  const [wallets, setWallets] = useState<Array<Wallet>>([])
 
   useEffect(() => {
     const nodes = data.allWallets.nodes
 
     // Add fields for CardList
-    const cardWallets = nodes.map((node) => {
+    const cardWallets: Array<Wallet> = nodes.map((node) => {
       return {
         ...node,
         image: getImage(node.image),
         // @ts-ignore
         alt: translateMessageId(`page-find-wallet-${node.id}-logo-alt`, intl),
-        title: node.name,
+        title: node.name!,
         description: translateMessageId(
           // @ts-ignore
           `page-find-wallet-description-${node.id}`,
           intl
         ),
-        link: node.url,
+        link: node.url!,
       }
     })
 
@@ -274,7 +283,7 @@ const WalletsPage = ({
     alt: translateMessageId("page-wallets-alt", intl),
     buttons: [
       {
-        path: "/wallets/find-wallet/",
+        to: "/wallets/find-wallet/",
         content: translateMessageId("page-wallets-find-wallet-link", intl),
       },
     ],
@@ -367,7 +376,7 @@ const WalletsPage = ({
                 key={idx}
                 emoji={type.emoji}
                 description={type.description}
-                size={2.5}
+                emojiSize={2.5}
               />
             ))}
           </div>
@@ -532,6 +541,9 @@ const WalletsPage = ({
             </div>
           </StyledCallout>
         </CalloutCardContainer>
+      </Content>
+      <Content>
+        <FeedbackCard />
       </Content>
     </Page>
   )

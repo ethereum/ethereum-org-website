@@ -21,7 +21,7 @@ Cuando escribas contratos inteligentes, hay una gran posibilidad de que te encue
 
 Las bibliotecas de contratos inteligentes suelen proporcionar implementaciones reutilizables de estos comportamientos como [bibliotecas](https://solidity.readthedocs.io/en/v0.7.2/contracts.html#libraries) o a través de [herencia](https://solidity.readthedocs.io/en/v0.7.2/contracts.html#inheritance) en Solidity.
 
-Como ejemplo, a continuación se muestra una versión simplificada del [`contrato de propietario ` ](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.2.0/contracts/access/Ownable.sol) de la [biblioteca de contratos OpenZeppelin](https://github.com/OpenZeppelin/openzeppelin-contracts), que diseña una dirección como el propietario de un contrato y proporciona un modificador para restringir el acceso a un método únicamente a dicho propietario.
+Como ejemplo, a continuación se muestra una versión simplificada del contrato de [`Ownable`](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.2.0/contracts/access/Ownable.sol) de la [biblioteca de contratos OpenZeppelin](https://github.com/OpenZeppelin/openzeppelin-contracts), que diseña una dirección como el propietario de un contrato y proporciona un modificador para restringir el acceso a un método únicamente a dicho propietario.
 
 ```solidity
 contract Ownable {
@@ -88,18 +88,18 @@ Por último, al decidir si incluir o no una biblioteca, considera su uso general
 
 ## Herramientas relacionadas {#related-tools}
 
-**Contratos de OpenZeppelin: \*\***_La biblioteca más popular para el desarrollo seguro de contratos inteligentes._\*\*
+**Contratos de OpenZeppelin:** **_La biblioteca más popular para el desarrollo seguro de contratos inteligentes._**
 
 - [Documentación](https://docs.openzeppelin.com/contracts/)
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-contracts)
 - [Foro de la comunidad](https://forum.openzeppelin.com/c/general/16)
 
-**DappSys: \*\***_Bloques de creación simples, flexibles y seguros para contratos inteligentes. _\*\*
+**DappSys:** **_Bloques de creación simples, flexibles y seguros para contratos inteligentes. _**
 
 - [Documentación](https://dappsys.readthedocs.io/)
 - [GitHub](https://github.com/dapphub/dappsys)
 
-**HQ20: \*\***_Un proyecto de Solidity con contratos, bibliotecas y ejemplos para ayudarte a construir aplicaciones distribuidas con todas las características para el mundo real._\*\*
+**HQ20:** **_Un proyecto de Solidity con contratos, bibliotecas y ejemplos para ayudarte a construir aplicaciones distribuidas con todas las características para el mundo real._**
 
 - [GitHub](https://github.com/HQ20/contracts)
 

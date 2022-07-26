@@ -20,7 +20,7 @@ If you're new to the topic of nodes, we recommend first checking out our user-fr
 
 Puteți vizualiza în timp real rețeaua Ethereum uitându-vă pe această [hartă a nodurilor](https://etherscan.io/nodetracker).
 
-Există numeroși [clienți Ethereum](/developers/docs/nodes-and-clients/#execution-clients), într-o varietate de limbaje de programare, cum ar fi Go, Rust, JavaScript, Typescript, Python, C# .NET, Nim și Java. Punctul comun al acestor implementări este că toate respectă o specificație formală (inițial denumită [Cartea galbenă Ethereum ](https://ethereum.github.io/yellowpaper/paper.pdf)). This specification dictates how the Ethereum network and blockchain functions.
+Există numeroși [clienți Ethereum](/developers/docs/nodes-and-clients/#execution-clients), într-o varietate de limbaje de programare, cum ar fi Go, Rust, JavaScript, Typescript, Python, C# .NET, Nim și Java. Punctul comun al acestor implementări este că toate respectă o specificație formală (inițial denumită [Cartea galbenă Ethereum](https://ethereum.github.io/yellowpaper/paper.pdf)). This specification dictates how the Ethereum network and blockchain functions.
 
 ![Execution client](./client-diagram.png) Diagramă simplificată a funcţionalităţilor clientului Ethereum.
 
@@ -162,7 +162,7 @@ Hyperledger Besu este un client Ethereum de nivel de întreprindere pentru rețe
 
 #### Erigon {#erigon}
 
-Erigon, cunoscut anterior sub denumirea de Turbo-Geth, este un fork Go Ethereum ce vizează creşterea vitezei şi a eficienţei spaţiului pe disc. Erigon este o implementare complet reproiectată a lui Ethereum, actualmente scrisă în Go, dar care urmează să fie implementată și în alte limbaje. Scopul Erigon este de a oferi o implementare mai rapidă, mai modulară și mai optimizată a lui Ethereum. It can perform a full archive node sync using less than 2TB of disk space, in under 3 days
+Erigon, cunoscut anterior sub denumirea de Erigon, este un fork Go Ethereum ce vizează creşterea vitezei şi a eficienţei spaţiului pe disc. Erigon este o implementare complet reproiectată a lui Ethereum, actualmente scrisă în Go, dar care urmează să fie implementată și în alte limbaje. Scopul Erigon este de a oferi o implementare mai rapidă, mai modulară și mai optimizată a lui Ethereum. It can perform a full archive node sync using less than 2TB of disk space, in under 3 days
 
 ### Moduri de sincronizare {#sync-modes}
 

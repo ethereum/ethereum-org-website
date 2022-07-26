@@ -54,7 +54,7 @@ Perlu penjelasan yang lebih mendasar? Kunjungi [ethereum.org/learn](/id/learn/) 
 - [pymaker](https://github.com/makerdao/pymaker) - _API Python untuk contract Maker_
 - [Mamba](https://mamba.black) - _framework untuk menulis, compile, dan meluncurkan smart contracts yang ditulis dengan Vyper_
 - [Trinity](https://github.com/ethereum/trinity) - _Client Python Ethereum_
-- [Vyper](https://github.com/ethereum/vyper/) - _ Bahasa Smart Contract yang berbasis Python untuk EVM_
+- [Vyper](https://github.com/ethereum/vyper/) - _Bahasa Smart Contract yang berbasis Python untuk EVM_
 - [Web3.py](https://github.com/ethereum/web3.py) - _Library Python untuk berinteraksi dengan Ethereum_
 
 Ingin mencari informasi tambahan? Kunjungi [ethereum.org/developers.](/id/developers/)
