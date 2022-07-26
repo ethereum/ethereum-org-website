@@ -25,6 +25,22 @@ To better understand this page, we recommend you first read about [token standar
 
 ### Methods {#methods}
 
+#### asset {#asset}
+
+```solidity
+function asset() public view returns (address _assetTokenAddress)
+```
+
+This function returns the address of the underlying token used for the vault.
+
+#### totalAssets {#totalassets}
+
+```solidity
+function totalAssets() public view returns (uint256)
+```
+
+This function returns the total amount of underlying assets held by the vault.
+
 #### deposit {#deposit}
 
 ```solidity
@@ -40,14 +56,6 @@ function withdraw(address _to, uint256 _value) public returns (uint256 _shares)
 ```
 
 This function withdraws `_value` token from the vault and transfers them to `_to`.
-
-#### totalAssets {#totalassets}
-
-```solidity
-function totalAssets() public view returns (uint256)
-```
-
-This function returns the total amount of underlying assets held by the vault.
 
 #### balanceOfUnderlying {#balanceofunderlying}
 
@@ -117,7 +125,7 @@ The decimal scalar for vault shares and operations involving `exchangeRate()`.
 
 #### Deposit Event
 
-**MUST** be emitted when tokens are deposited into the Vault via the [`mint`](#mint) and [`deposit`](#deposit) methods
+**MUST** be emitted when tokens are deposited into the vault via the [`mint`](#mint) and [`deposit`](#deposit) methods
 
 ```solidity
 event Deposit(
@@ -132,7 +140,7 @@ Where `sender` is the user who exchanged `assets` for `shares`, and transferred 
 
 #### Widthdraw Event
 
-**MUST** be emitted when shares are withdrawn from the Vault by a depositor in the [`redeem`](#redeem) or [`withdraw`](#withdraw) methods.
+**MUST** be emitted when shares are withdrawn from the vault by a depositor in the [`redeem`](#redeem) or [`withdraw`](#withdraw) methods.
 
 ```solidity
 event Withdraw(
