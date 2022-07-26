@@ -12,6 +12,7 @@ import Emoji from "./Emoji"
 import Translation from "./Translation"
 import { StyledSelect as Select } from "./SharedStyledComponents"
 import { translateMessageId } from "../utils/translations"
+import { Lang } from "../utils/languages"
 
 const Container = styled.div`
   width: 100%;
@@ -133,15 +134,93 @@ export const cardListImage = graphql`
   }
 `
 
+type StringBoolean = "TRUE" | "FALSE"
+
+type ExchangeName =
+  | "binance"
+  | "binanceus"
+  | "bitbuy"
+  | "bitfinex"
+  | "bitflyer"
+  | "bitkub"
+  | "bitso"
+  | "bittrex"
+  | "bitvavo"
+  | "bybit"
+  | "coinbase"
+  | "coinmama"
+  | "coinspot"
+  | "cryptocom"
+  | "easycrypto"
+  | "ftx"
+  | "ftxus"
+  | "gateio"
+  | "gemini"
+  | "huobiglobal"
+  | "itezcom"
+  | "kraken"
+  | "kucoin"
+  | "mtpelerin"
+  | "okx"
+  | "rain"
+  | "wazirx"
+
+type WalletProviderName = "simplex" | "moonpay" | "wyre"
+
+type ExchangeByCountry = {
+  value: string
+  label: string
+  exchanges: { [key in ExchangeName]: StringBoolean }
+}
+
+interface Exchange {
+  name: string
+  url: string
+  image: string
+  usaExceptions: Array<string>
+}
+
+type Exchanges = Record<ExchangeName, Exchange>
+
+interface Wallet {
+  url: string
+  platform: string
+  image: string
+  isUsaOnly?: boolean
+}
+
+interface WalletProvider {
+  usaExceptions: Array<string>
+  wallets: {
+    [key: string]: Wallet
+  }
+}
+
+type WalletProviders = Record<WalletProviderName, WalletProvider>
+
+interface FilteredData {
+  title: string
+  description: string | null
+  link: string
+  image: string
+  alt: string
+}
+
+interface State {
+  selectedCountry?: ExchangeByCountry
+}
+
 // TODO move component into get-eth.js page?
 const EthExchanges = () => {
   const intl = useIntl()
+  const [state, setState] = useState<State>()
+
   const placeholderString = translateMessageId(
     "page-get-eth-exchanges-search",
     intl
   )
   const data = useStaticQuery(graphql`
-    query {
+    query EthExchanges {
       exchangesByCountry: allExchangesByCountryCsv {
         nodes {
           binance
@@ -290,7 +369,7 @@ const EthExchanges = () => {
     }
   `)
 
-  const exchanges = {
+  const exchanges: Exchanges = {
     binance: {
       name: "Binance",
       url: "https://www.binance.com/en",
@@ -455,7 +534,7 @@ const EthExchanges = () => {
     },
   }
 
-  const walletProviders = {
+  const walletProviders: WalletProviders = {
     wyre: {
       usaExceptions: ["CT", "HI", "NY", "NH", "TX", "VT", "VA"],
       wallets: {
@@ -516,48 +595,54 @@ const EthExchanges = () => {
   }
 
   const lastUpdated = getLocaleTimestamp(
-    intl.locale,
+    intl.locale as Lang,
     data.timestamp.parent.fields.gitLogLatestDate
   )
 
-  const [state, setState] = useState({ selectedCountry: {} })
-
-  const handleSelectChange = (selectedOption) => {
+  const handleSelectChange = (selectedOption: ExchangeByCountry) => {
     trackCustomEvent({
       eventCategory: `Country input`,
       eventAction: `Selected`,
-      eventName: selectedOption.country,
+      eventName: selectedOption.value,
     })
     setState({ selectedCountry: selectedOption })
   }
 
   // Add `value` & `label` for Select component
-  const exchangesByCountry = data.exchangesByCountry.nodes
-    .map((node) => {
-      node.value = node.country
-      node.label = node.country
-      return node
-    })
-    .sort((a, b) => a.country.localeCompare(b.country))
+  const exchangesByCountry: Array<ExchangeByCountry> =
+    data.exchangesByCountry.nodes
+      .map((node) => {
+        return {
+          value: node.country,
+          label: node.country,
+          exchanges: node,
+        }
+      })
+      .sort((a, b) => a.value.localeCompare(b.value))
 
-  const exchangesArray = Object.keys(exchanges)
-  const walletProvidersArray = Object.keys(walletProviders)
+  const exchangesArray = Object.keys(exchanges) as Array<ExchangeName>
+  const walletProvidersArray = Object.keys(
+    walletProviders
+  ) as Array<WalletProviderName>
+
   // Construct arrays for CardList
-  let filteredExchanges = []
-  let filteredWalletProviders = []
-  let filteredWallets = []
+  let filteredExchanges: Array<FilteredData> = []
+  let filteredWalletProviders: Array<WalletProviderName> = []
+  let filteredWallets: Array<FilteredData> = []
 
-  const hasSelectedCountry = !!state.selectedCountry.country
+  const hasSelectedCountry = !!state?.selectedCountry?.value
   if (hasSelectedCountry) {
     // Filter to exchanges that serve selected Country
     filteredExchanges = exchangesArray
-      .filter((exchange) => state.selectedCountry[exchange] === "TRUE")
+      .filter(
+        (exchange) => state?.selectedCountry?.exchanges[exchange] === "TRUE"
+      )
       // Format array for <CardList/>
       .map((exchange) => {
         // Add state exceptions if Country is USA
-        let description = null
+        let description: string | null = null
         if (
-          state.selectedCountry.country ===
+          state?.selectedCountry?.value ===
           translateMessageId("page-get-eth-exchanges-usa", intl)
         ) {
           const exceptions = exchanges[exchange].usaExceptions
@@ -573,29 +658,30 @@ const EthExchanges = () => {
           description,
           link: exchanges[exchange].url,
           image: getImage(exchanges[exchange].image),
+          alt: "",
         }
       })
       .sort((a, b) => a.title.localeCompare(b.title))
 
     // Filter to wallet providers that serve selected Country
     filteredWalletProviders = walletProvidersArray.filter(
-      (provider) => state.selectedCountry[provider] === "TRUE"
+      (provider) => state?.selectedCountry?.exchanges[provider] === "TRUE"
     )
   }
   if (filteredWalletProviders.length) {
     // Construct wallets based on the provider
     filteredWallets = filteredWalletProviders
-      .reduce((res, currentProvider) => {
+      .reduce<Array<FilteredData>>((res, currentProvider) => {
         const wallets = Object.keys(walletProviders[currentProvider].wallets)
-        // Flatten data into single array for <CardList/>
-        return res.concat(
-          wallets.reduce((result, currentWallet) => {
+
+        const flattenWallets = wallets.reduce<Array<FilteredData>>(
+          (result, currentWallet) => {
             const walletObject =
               walletProviders[currentProvider].wallets[currentWallet]
             // Add state exceptions if Country is USA
-            let description = null
+            let description: string | null = null
             if (
-              state.selectedCountry.country ===
+              state?.selectedCountry?.value ===
               translateMessageId("page-get-eth-exchanges-usa", intl)
             ) {
               const exceptions = walletProviders[currentProvider].usaExceptions
@@ -614,9 +700,13 @@ const EthExchanges = () => {
               description,
               link: walletObject.url,
               image: getImage(walletObject.image),
+              alt: "",
             })
-          }, [])
+          },
+          []
         )
+        // Flatten data into single array for <CardList/>
+        return res.concat(flattenWallets)
       }, [])
       .sort((a, b) => a.title.localeCompare(b.title))
   }

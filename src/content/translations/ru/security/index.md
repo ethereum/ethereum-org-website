@@ -267,7 +267,7 @@ _Примечание: существуют производные токены/
 - [Не стоит использовать тестовые сообщения для двухфакторной аутентификации, и вот почему](https://www.theverge.com/2017/9/18/16328172/sms-two-factor-authentication-hack-password-bitcoin) _The Verge_
 - [До 3 миллионов устройств заражено вредоносными дополнениями для Chrome и Edge](https://arstechnica.com/information-technology/2020/12/up-to-3-million-devices-infected-by-malware-laced-chrome-and-edge-add-ons/) _Ден Гудин_
 - [Как создать надежный пароль, который вы не забудете](https://www.avg.com/en/signal/how-to-create-a-strong-password-that-you-wont-forget) _AVG_
-- [Что такое ключ безопасности? ](https://help.coinbase.com/en/coinbase/getting-started/verify-my-account/security-keys-faq) _Coinbase_
+- [Что такое ключ безопасности?](https://help.coinbase.com/en/coinbase/getting-started/verify-my-account/security-keys-faq) _Coinbase_
 
 ### Безопасность криптовалюты {#reading-crypto-security}
 

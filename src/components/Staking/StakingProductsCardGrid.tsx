@@ -25,6 +25,7 @@ import Bloxstaking from "../../assets/staking/bloxstaking-glyph.svg"
 import Dappnode from "../../assets/staking/dappnode-glyph.svg"
 import DefaultOpenSource from "../../assets/staking/default-open-source-glyph.svg"
 import Docker from "../../assets/staking/docker-icon.svg"
+import Kiln from "../../assets/staking/kiln-glyph.svg"
 import Lido from "../../assets/staking/lido-glyph.svg"
 import RocketPool from "../../assets/staking/rocket-pool-glyph.svg"
 import Stafi from "../../assets/staking/stafi-glyph.svg"
@@ -173,6 +174,7 @@ const getSvgFromPath = (
     "dappnode-glyph.svg": Dappnode,
     "docker-icon.svg": Docker,
     "default-open-source-glyph.svg": DefaultOpenSource,
+    "kiln-glyph.svg": Kiln,
     "lido-glyph.svg": Lido,
     "rocket-pool-glyph.svg": RocketPool,
     "stafi-glyph.svg": Stafi,

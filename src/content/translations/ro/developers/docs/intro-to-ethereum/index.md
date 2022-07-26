@@ -118,4 +118,4 @@ _Cunoașteți o resursă a comunității care v-a ajutat? Editaţi această pagi
 
 ## Tutoriale corelate {#related-tutorials}
 
-- [Un ghid al dezvoltatorului pentru Ethereum, partea 1 ](/developers/tutorials/a-developers-guide-to-ethereum-part-one/) _– O explorare a lui Ethereum foarte uşor de utilizat de către începători, folosind Python și web3.py_
+- [Un ghid al dezvoltatorului pentru Ethereum, partea 1](/developers/tutorials/a-developers-guide-to-ethereum-part-one/) _– O explorare a lui Ethereum foarte uşor de utilizat de către începători, folosind Python și web3.py_

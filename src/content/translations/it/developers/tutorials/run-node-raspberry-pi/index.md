@@ -21,7 +21,7 @@ sourceUrl: https://www.reddit.com/r/ethereum/comments/gf3nhg/ethereum_on_arm_ras
 
 Prima di tutto, un po' di contesto. Come saprai, abbiamo qualche problema di memoria [[1]](/developers/tutorials/run-node-raspberry-pi/#references) con l'immagine di Raspberry Pi 4, perché Raspbian OS è ancora a 32 bit [[2]](/developers/tutorials/run-node-raspberry-pi/#references) (almeno lo userland). Anche se preferiamo attenerci al sistema operativo ufficiale, siamo arrivati alla conclusione che, per risolvere questi problemi, dobbiamo migrare a un sistema operativo nativo a 64 bit.
 
-Inoltre, i [client di consenso ](/upgrades/get-involved/#clients) non supportano i file binari a 32 bit, quindi usare Raspbian impedirebbe a Raspberry Pi 4 di eseguire un nodo del livello di consenso (e di fare staking).
+Inoltre, i [client di consenso](/upgrades/get-involved/#clients) non supportano i file binari a 32 bit, quindi usare Raspbian impedirebbe a Raspberry Pi 4 di eseguire un nodo del livello di consenso (e di fare staking).
 
 Quindi, dopo diversi test, stiamo ora rilasciando 2 immagini diverse basate su Ubuntu 20.04 a 64 bit [[3]](/developers/tutorials/run-node-raspberry-pi/#references): le versioni livello di esecuzione e livello di consenso.
 

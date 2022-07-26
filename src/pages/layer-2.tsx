@@ -245,10 +245,8 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
           "https://api.cryptostats.community/api/v1/l2-fees/feeTransferEth?metadata=false"
         )
 
-        // Temporary, but filtering out L2's we arent listing
-        const feeData = feeDataResponse.data.filter(
-          (l2) => l2.id !== "aztec-network" && l2.id !== "hermez"
-        )
+        // filtering out L2's we arent listing
+        const feeData = feeDataResponse.data.filter((l2) => l2.id !== "hermez")
 
         const feeAverage =
           feeData.reduce(

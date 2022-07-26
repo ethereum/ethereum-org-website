@@ -73,7 +73,7 @@ Se il tuo contributo viene inserito su ethereum.org, conieremo per te un POAP di
 ### Come richiederlo {#how-to-claim}
 
 1. Unisciti al nostro [server Discord](https://discord.gg/E8dET2ux8y).
-2. Incolla un link al tuo contributo nel canale `#🏆 | poaps`.
+2. Incolla un link al tuo contributo nel canale `#🥇 | poaps`.
 3. Attendi che un membro del nostro team ti invii un link al tuo POAP.
 4. Richiedi il tuo POAP!
 
