@@ -117,13 +117,13 @@ The decimal scalar for vault shares and operations involving `exchangeRate()`.
 
 #### Deposit Event
 
-**MUST** be emitted when tokens are deposited into the vault
+**MUST** be emitted when tokens are deposited into the Vault via the [`mint`](#mint) and [`deposit`](#deposit) methods
 
 ```solidity
-event Deposit(address indexed _from, address indexed _to, uint256 _value)
+event Deposit(address indexed sender, address indexed owner, uint256 assets, uint256 shares)
 ```
 
-Where `_from` is the user who triggered the deposit and approved `_value` underlying tokens to the vault, and `_to` is the user who can withdraw the deposited tokens.
+Where `owner` is the user who exchanged `assets` for `shares`, and transferred those `shares` to `owner`.
 
 #### Widthdraw Event
 
