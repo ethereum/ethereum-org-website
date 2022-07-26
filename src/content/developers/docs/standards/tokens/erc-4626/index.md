@@ -120,20 +120,31 @@ The decimal scalar for vault shares and operations involving `exchangeRate()`.
 **MUST** be emitted when tokens are deposited into the Vault via the [`mint`](#mint) and [`deposit`](#deposit) methods
 
 ```solidity
-event Deposit(address indexed sender, address indexed owner, uint256 assets, uint256 shares)
+event Deposit(
+    address indexed sender,
+    address indexed owner,
+    uint256 assets,
+    uint256 shares
+)
 ```
 
 Where `sender` is the user who exchanged `assets` for `shares`, and transferred those `shares` to `owner`.
 
 #### Widthdraw Event
 
-**MUST** be emitted when tokens are withdrawn from the vault by a depositor.
+**MUST** be emitted when shares are withdrawn from the Vault by a depositor in the [`redeem`](#redeem) or [`withdraw`](#withdraw) methods.
 
 ```solidity
-event Withdraw(address indexed _owner, address indexed _to, uint256 _value)
+event Withdraw(
+    address indexed sender,
+    address indexed receiver,
+    address indexed owner,
+    uint256 assets,
+    uint256 share
+)
 ```
 
-Where `_from` is the user who triggered the withdrawal and held `_value` underlying tokens in the vault, and `_to` is the user who received the withdrawn tokens.
+Where `sender` is the user who triggered the withdrawal and exchanged `shares`, owned by `owner`, for `assets`. `receiver` is the user who received the withdrawn `assets`.
 
 _Note_: All batch functions, including the hook, are also available in non-batch versions. This is done to save gas, as transferring just one asset will likely remain to be the most common method. For clarity in the explanations, we've left them out, including the safe transfer rules. Remove the 'Batch' and the names are identical.
 
