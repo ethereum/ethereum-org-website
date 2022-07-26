@@ -105,13 +105,29 @@ function mint(uint256 _shares, address _receiver) public returns (uint256 _asset
 
 This function mints `_shares` vault shares to `_receiver` by depositing `_assets` tokens.
 
+#### maxWithdraw {#maxwithdraw}
+
+```solidity
+function maxWithdraw(address _owner) public view returns (uint256)
+```
+
+This function returns the maximum amount of assets that can be withdrawn from the `_owner` balance with a single [`withdraw`](#withdraw).
+
+#### previewWithdraw {#previewwithdraw}
+
+```solidity
+function previewWithdraw(uint256 _assets) public view returns (uint256)
+```
+
+This function allows users to simulate the effects of their withdrawal at the current block.
+
 #### withdraw {#withdraw}
 
 ```solidity
-function withdraw(address _to, uint256 _value) public returns (uint256 _shares)
+function withdraw(uint256 _assets, address _receiver, address _owner) public returns (uint256 _shares)
 ```
 
-This function withdraws `_value` token from the vault and transfers them to `_to`.
+This function burns `_shares` from `_owner` and transfers `_assets` token from the vault to `_receiver`.
 
 #### balanceOfUnderlying {#balanceofunderlying}
 
