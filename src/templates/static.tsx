@@ -45,6 +45,7 @@ import UpcomingEventsList from "../components/UpcomingEventsList"
 import Icon from "../components/Icon"
 import SocialListItem from "../components/SocialListItem"
 import YouTube from "../components/YouTube"
+import NetworkUpgradeSummary from "../components/History/NetworkUpgradeSummary"
 
 import { getLocaleTimestamp } from "../utils/time"
 import { isLangRightToLeft } from "../utils/translations"
@@ -147,6 +148,7 @@ const components = {
   MatomoOptOut,
   Callout,
   YouTube,
+  NetworkUpgradeSummary,
 }
 
 const StaticPage = ({

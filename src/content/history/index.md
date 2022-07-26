@@ -73,10 +73,7 @@ The Arrow Glacier network upgrade pushed back the [difficulty bomb](/glossary/#d
 
 ### Altair {#altair}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /><code>Oct-27-2021 10:56:23 AM +UTC</code><br />
-<Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Epoch number: 74,240<br />
-<Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} />ETH price: $4024 USD<br />
-<Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20211026174951/https://ethereum.org/en/">ethereum.org on waybackmachine</a>
+<NetworkUpgradeSummary dateTimeAsString="Oct-27-2021 10:56:23 AM +UTC" epochNumber={74240} ethPriceInUSD={4024} waybackLink="https://web.archive.org/web/20211026174951/https://ethereum.org/en/" />
 
 #### Summary {#altair-summary}
 
@@ -121,10 +118,7 @@ The London upgrade introduced [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559
 
 ### Berlin {#berlin}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Apr-15-2021 10:07:03 AM +UTC</code><br />
-<Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Block number: <a href="https://etherscan.io/block/12244000">12,244,000</a><br />
-<Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> ETH price: $2454 USD<br />
-<Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20210415093618/https://ethereum.org/">ethereum.org on waybackmachine</a>
+<NetworkUpgradeSummary dateTimeAsString="Jun-30-2022 10:54:04 AM +UTC" blockNumber={12244000} ethPriceInUSD={2454} waybackLink="https://web.archive.org/web/20210415093618/https://ethereum.org/" />
 
 #### Summary {#berlin-summary}
 
@@ -148,10 +142,7 @@ The Berlin upgrade optimized gas cost for certain EVM actions, and increases sup
 
 ### Beacon Chain genesis {#beacon-chain-genesis}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Dec-01-2020 12:00:35 PM +UTC</code><br />
-<Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Beacon Chain block number: <a href="https://beaconscan.com/slot/1">1</a><br />
-<Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> ETH price: $586.23 USD<br />
-<Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20201207184633/https://www.ethereum.org/en/">ethereum.org on waybackmachine</a>
+<NetworkUpgradeSummary dateTimeAsString="Dec-01-2020 12:00:35 PM +UTC" slotNumber={1} ethPriceInUSD={586.23} waybackLink="https://web.archive.org/web/20201207184633/https://www.ethereum.org/en/" />
 
 #### Summary {#beacon-chain-genesis-summary}
 
