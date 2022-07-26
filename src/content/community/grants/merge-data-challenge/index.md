@@ -44,7 +44,8 @@ Anyone is free to submit, here's how:
 3.  Submit!
 
 <!-- TODOD LINK TO new submission form) -->
-<!-- <ButtonLink to="">Submit blog post</ButtonLink> -->
+
+<ButtonLink to="https://esp.ethereum.foundation/">Submit blog post</ButtonLink>
 
 _You may submit more than one blog post! So long as each posts focuses on a different visualisation or piece of analysis_
 
@@ -82,7 +83,9 @@ _Surprise us with your creativity! But here are some judging criteria considerat
 
 ## How to get started {#started}
 
-- Run / sync a [Mainnet client pair](LINK TO mainnet announcement) (or multiple clients).
+<!-- LINK TO mainnet announcement -->
+
+- Run / sync a [Mainnet client pair](https://blog.ethereum.org/) (or multiple clients).
 - Dig around a block explorer:
   - [Etherscan](https://etherscan.io/) / [`BeaconScan`](https://beaconscan.com/)
   - [`Beaconcha.in`](https://beaconcha.in/)
