@@ -60,10 +60,18 @@ This function returns the amount of `_assets` that will be exchanged by the vaul
 #### maxDeposit {#maxdeposit}
 
 ```solidity
-function maxDeposit(address _receiver) public view returns (uint256 _maxAssets)
+function maxDeposit(address _receiver) public view returns (uint256)
 ```
 
 This function returns the amount of assets that can be deposited in a single [`deposit`](#deposit) call by the `_receiver`.
+
+#### previewDeposit {#previewdeposit}
+
+```solidity
+function previewDeposit(uint256 _assets) public view returns (uint256)
+```
+
+This function allows users to simulate the effects of their deposit at the current block.
 
 #### deposit {#deposit}
 
