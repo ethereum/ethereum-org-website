@@ -13,7 +13,7 @@ declare module "*.mp4" {
   export default src
 }
 
-declare module "raw-loader*" {
+declare module "!!raw-loader!*" {
   const content: string
   export default content
 }

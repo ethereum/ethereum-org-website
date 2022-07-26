@@ -26,6 +26,11 @@ import {
 import { translateMessageId, isLangRightToLeft } from "../utils/translations"
 import PreMergeBanner from "../components/PreMergeBanner"
 
+import SimpleWalletContent from "!!raw-loader!../data/SimpleWallet.sol"
+import SimpleTokenContent from "!!raw-loader!../data/SimpleToken.sol"
+import CreateWalletContent from "!!raw-loader!../data/CreateWallet.js"
+import SimpleDomainRegistryContent from "!!raw-loader!../data/SimpleDomainRegistry.sol"
+
 const Hero = styled(GatsbyImage)`
   width: 100%;
   min-height: 380px;
@@ -403,11 +408,6 @@ const StyledCalloutBanner = styled(CalloutBanner)`
     padding: 2rem;
   }
 `
-
-import SimpleWalletContent from "raw-loader!../data/SimpleWallet.sol"
-import SimpleTokenContent from "raw-loader!../data/SimpleToken.sol"
-import CreateWalletContent from "raw-loader!../data/CreateWallet.js"
-import SimpleDomainRegistryContent from "raw-loader!../data/SimpleDomainRegistry.sol"
 
 const HomePage = ({
   data,
