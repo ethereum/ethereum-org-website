@@ -123,13 +123,13 @@ The Ethereum community maintains multiple open-source execution clients (previou
 
 This table summarizes the different clients. All of them pass [client tests](https://github.com/ethereum/tests) and are actively maintained to stay updated with network upgrades.
 
-| Client                                                                    | Language | Operating systems     | Networks                                   | Sync strategies     | State pruning   |
-| ------------------------------------------------------------------------- | -------- | --------------------- | ------------------------------------------ | ------------------- | --------------- |
-| [Geth](https://geth.ethereum.org/)                                        | Go       | Linux, Windows, macOS | Mainnet, Görli, Rinkeby, Ropsten           | Snap, Full          | Archive, Pruned |
-| [Nethermind](http://nethermind.io/)                                       | C#, .NET | Linux, Windows, macOS | Mainnet, Görli, Ropsten, Rinkeby, and more | Fast, Beam, Archive | Archive, Pruned |
-| [Besu](https://pegasys.tech/solutions/hyperledger-besu/)                  | Java     | Linux, Windows, macOS | Mainnet, Rinkeby, Ropsten, Görli, and more | Fast, Full          | Archive, Pruned |
-| [Erigon](https://github.com/ledgerwatch/erigon)                           | Go       | Linux, Windows, macOS | Mainnet, Görli, Rinkeby, Ropsten           | Full                | Archive, Pruned |
-| [Akula](https://akula.app)                                                | Rust     | Linux                 | Mainnet, Görli, Rinkeby, Ropsten, and more | Full                | Archive, Pruned |
+| Client                                          | Language | Operating systems     | Networks                                   | Sync strategies     | State pruning   |
+| ----------------------------------------------- | -------- | --------------------- | ------------------------------------------ | ------------------- | --------------- |
+| [Geth](https://geth.ethereum.org/)              | Go       | Linux, Windows, macOS | Mainnet, Görli, Rinkeby, Ropsten           | Snap, Full          | Archive, Pruned |
+| [Nethermind](http://nethermind.io/)             | C#, .NET | Linux, Windows, macOS | Mainnet, Görli, Ropsten, Rinkeby, and more | Fast, Beam, Archive | Archive, Pruned |
+| [Besu](https://besu.hyperledger.org/en/stable/) | Java     | Linux, Windows, macOS | Mainnet, Rinkeby, Ropsten, Görli, and more | Fast, Full          | Archive, Pruned |
+| [Erigon](https://github.com/ledgerwatch/erigon) | Go       | Linux, Windows, macOS | Mainnet, Görli, Rinkeby, Ropsten           | Full                | Archive, Pruned |
+| [Akula](https://akula.app)                      | Rust     | Linux                 | Mainnet, Görli, Rinkeby, Ropsten, and more | Full                | Archive, Pruned |
 
 **Note that OpenEthereum [has been deprecated](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd) and is no longer being maintained.** Use it with caution and preferably switch to another client implementation.
 

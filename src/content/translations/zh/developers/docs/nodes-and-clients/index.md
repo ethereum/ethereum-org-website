@@ -114,13 +114,13 @@ sidebarDepth: 2
 
 下表概括了不同的客户端。 这些客户端均已通过[客户端测试](https://github.com/ethereum/tests)，它们得到积极维护以保持与网络升级同步。
 
-| 客户端                                                                 | 语言      | 操作系统：            | 网络                                          | 同步策略                     | 状态缓冲        |
-| ---------------------------------------------------------------------- | --------- | --------------------- | --------------------------------------------- | ---------------------------- | --------------- |
-| [Geth](https://geth.ethereum.org/)                                     | Go      | Linux、Windows、macOS | Mainnet、Görli、Rinkeby、Ropsten              | Snap、Full 同步式模式        | Archive、Pruned |
-| [Nethermind](http://nethermind.io/)                                    | C#, .NET  | Linux、Windows、macOS | Mainnet、Gounderster、Ropsten、Rinkeby 及更多 | Fast、Beam、Archive 同步模式 | Archive、Pruned |
-| [Besu](https://pegasys.tech/solutions/hyperledger-besu/)               | Java      | Linux、Windows、macOS | Mainnet、Rinkeby、Ropsten、Görli 等           | 快速、完整                   | Archive、Pruned |
-| [Erigon](https://github.com/ledgerwatch/erigon)                        | Go      | Linux、Windows、macOS | Mainnet、Görli、Rinkeby、Ropsten              | Full 同步模式                | Archive、Pruned |
-| [OpenEthereum（已弃用）](https://github.com/openethereum/openethereum) | Rust | Linux、Windows、macOS | Mainnet、Kovan、Ropsten 及更多                | Warp，完整                   | Archive、Pruned |
+| 客户端                                                                 | 语言     | 操作系统：            | 网络                                          | 同步策略                     | 状态缓冲        |
+| ---------------------------------------------------------------------- | -------- | --------------------- | --------------------------------------------- | ---------------------------- | --------------- |
+| [Geth](https://geth.ethereum.org/)                                     | Go       | Linux、Windows、macOS | Mainnet、Görli、Rinkeby、Ropsten              | Snap、Full 同步式模式        | Archive、Pruned |
+| [Nethermind](http://nethermind.io/)                                    | C#, .NET | Linux、Windows、macOS | Mainnet、Gounderster、Ropsten、Rinkeby 及更多 | Fast、Beam、Archive 同步模式 | Archive、Pruned |
+| [Besu](https://besu.hyperledger.org/en/stable/)                        | Java     | Linux、Windows、macOS | Mainnet、Rinkeby、Ropsten、Görli 等           | 快速、完整                   | Archive、Pruned |
+| [Erigon](https://github.com/ledgerwatch/erigon)                        | Go       | Linux、Windows、macOS | Mainnet、Görli、Rinkeby、Ropsten              | Full 同步模式                | Archive、Pruned |
+| [OpenEthereum（已弃用）](https://github.com/openethereum/openethereum) | Rust     | Linux、Windows、macOS | Mainnet、Kovan、Ropsten 及更多                | Warp，完整                   | Archive、Pruned |
 
 **注意，OpenEthereum [已弃用](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd)并已停止维护。**请谨慎使用，并且最好切换至其他客户端实现。
 

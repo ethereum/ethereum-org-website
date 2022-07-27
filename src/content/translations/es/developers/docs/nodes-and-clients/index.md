@@ -118,7 +118,7 @@ En esta tabla se resumen los diferentes clientes. Todos ellos pasan [pruebas de 
 | ------------------------------------------------------------------------- | -------- | --------------------- | ------------------------------------------ | ----------------------------- | ------------------ |
 | [Geth](https://geth.ethereum.org/)                                        | Go       | Linux, Windows, macOS | Mainnet, Görli, Rinkeby, Ropsten           | Snap, Full                    | Archivo, podado    |
 | [Nethermind](http://nethermind.io/)                                       | C#, .NET | Linux, Windows, macOS | Mainnet, Görli, Ropsten, Rinkeby, etc.     | Fast, Beam, Archive           | Archivo, podado    |
-| [Besu](https://pegasys.tech/solutions/hyperledger-besu/)                  | Java     | Linux, Windows, macOS | Mainnet, Rinkeby, Ropsten, Görli, and more | Rápido, completo              | Archivo, podado    |
+| [Besu](https://besu.hyperledger.org/en/stable/)                           | Java     | Linux, Windows, macOS | Mainnet, Rinkeby, Ropsten, Görli, and more | Rápido, completo              | Archivo, podado    |
 | [Erigon](https://github.com/ledgerwatch/erigon)                           | Go       | Linux, Windows, macOS | Mainnet, Görli, Rinkeby, Ropsten           | Full                          | Archivo, podado    |
 | [OpenEthereum (Deprecated)](https://github.com/openethereum/openethereum) | Rust     | Linux, Windows, macOS | Mainnet, Kovan, Ropsten, etc.              | Warp, Completo                | Archivo, eliminado |
 
