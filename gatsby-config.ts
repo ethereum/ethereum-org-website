@@ -255,7 +255,7 @@ const config: GatsbyConfig = {
 if (!IS_PREVIEW) {
   config.plugins = [
     ...(config.plugins || []),
-    // Matomo analtyics
+    // Matomo analytics
     {
       resolve: "gatsby-plugin-matomo",
       options: {
