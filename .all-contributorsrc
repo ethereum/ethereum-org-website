@@ -8178,6 +8178,17 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "vorot93",
+      "name": "Artem Vorotnikov",
+      "avatar_url": "https://avatars.githubusercontent.com/u/240364?v=4",
+      "profile": "https://github.com/vorot93",
+      "contributions": [
+        "content",
+        "projectManagement",
+        "question"
+      ]
     }
   ],
   "contributorsPerLine": 7,
