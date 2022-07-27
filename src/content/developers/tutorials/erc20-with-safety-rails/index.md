@@ -72,9 +72,39 @@ We have to specify explicitly that we're [overriding](https://docs.soliditylang.
         super._beforeTokenTransfer(from, to, amount);
 ```
 
-This line calls the `_beforeTokenTransfer` function of the contract or contracts from which we inherited which have it. In this case, that is only `ERC20`, `Ownable` does not have this hook.
+This line calls the `_beforeTokenTransfer` function of the contract or contracts from which we inherited which have it. In this case, that is only `ERC20`, `Ownable` does not have this hook. Even though currently `ERC20._beforeTokenTransfer` doesn't do anything, we call it in case functionality is added in the future (and we then decide to redeploy the contract, because contracts don't change after deployment).
 
-    
+We want to add these requirements to the function:
+
+- The `to` address cannot equal `address(this)`, the address of the ERC-20 contract itself.  
+- The `to` address cannot be empty, it has to be either:
+  - An externally owned accounts (EOA). We can't check if an address is an EOA directly, but we can check an address's ETH balance. EOAs almost always have a balance, even if they are no longer used - it's difficult to clear them to the last wei.
+  - A smart contract. Testing if an address is a smart contract is a bit harder. There is an opcode that checks the external code length, called [`EXTCODESIZE`](https://www.evm.codes/#3b), but it is not available directly in Solidity. We have to use [Yul](https://docs.soliditylang.org/en/v0.8.15/yul.html), which is EVM assembly, for it. There are other values we could use from Solidity ([`<address>.code` and `<address>.codehash`](https://docs.soliditylang.org/en/v0.8.15/units-and-global-variables.html#members-of-address-types)), but they cost more.
+
+Lets go over the new code line by line:
+
+```solidity
+require(to != address(this), "Can't send tokens to the contract address");
+```
+
+This is the first requirement, check that `to` and `this(address)` are not the same thing. 
+
+```solidity 
+bool isToContract;
+assembly {
+   isToContract := gt(extcodesize(to), 0)              
+}
+```
+
+This is how we check if an address is a contract. We cannot receive output directly from Yul, so instead we define a variable to hold the result (`isToContract` in this case). The way Yul works every opcode is considered a function. So first we call [`EXTCODESIZE`](https://www.evm.codes/#3b) to get the contract size, and then use [`GT`](https://www.evm.codes/#11) to check it is not zero (we are dealing with unsigned integers, so of course it can't be negative). We then write the result to `isToContract`.
+
+```solidity
+require(to.balance != 0 || isToContract, "Can't send tokens to an empty address");
+```solidity
+
+And finally, we have the actual check.
+
+
 ## Conclusion
 
 Add extendability. 
