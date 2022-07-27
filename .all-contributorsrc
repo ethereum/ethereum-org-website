@@ -8208,6 +8208,15 @@
         "doc",
         "translation"
       ]
+    },
+    {
+      "login": "HiroyukiNaito",
+      "name": "Hiroyuki Naito",
+      "avatar_url": "https://avatars.githubusercontent.com/u/32320988?v=4",
+      "profile": "https://crowdin.com/profile/hiroyukinaito",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
