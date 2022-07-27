@@ -102,11 +102,13 @@ Explore projects and join the DeSci community.
 - [Fleming Protocol: open-source data economy that fuels collaborative biomedical discovery](https://medium.com/@FlemingProtocol/a-data-economy-for-patient-driven-biomedical-innovation-9d56bf63d3dd)
 - [Active Inference Lab](https://www.activeinference.org/)
 - [Cherubs DAO: NFT funded and DAO governed impact fund for mental health & brain wellness](https://cherubsdao.com/)
+- [SCINET, INC: decentralized life sciences ("DeSci") research and investment platform building dapps to speed up scientific research from lab to life](https://www.scinet.one/)
 
 ## Further reading {#further-reading}
 
 - [DeSci Wiki by Jocelynn Pearl and Ultrarare](https://docs.google.com/document/d/1aQC6zn-eXflSmpts0XGE7CawbUEHwnL6o-OFXO52PTc/edit#)
 - [A guide to decentralized biotech by Jocelynn Pearl for a16z future](https://future.a16z.com/a-guide-to-decentralized-biotech/)
+- [A Guide to DeSci, the Latest Web3 Movement, by Sarah Hamburg for a16z Future](https://future.com/what-is-decentralized-science-aka-desci/)
 - [The case for DeSci](https://gitcoin.co/blog/desci-the-case-for-decentralised-science/)
 - [Guide to DeSci](https://future.com/what-is-decentralized-science-aka-desci/)
 - [Decentralized science resources](https://www.vincentweisser.com/decentralized-science)
