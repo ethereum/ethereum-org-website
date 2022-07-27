@@ -28,7 +28,7 @@ To better understand this page, we recommend you first read about [token standar
 #### asset {#asset}
 
 ```solidity
-function asset() public view returns (address _assetTokenAddress)
+function asset() public view returns (address)
 ```
 
 This function returns the address of the underlying token used for the vault for accounting, depositing, withdrawing.
@@ -36,7 +36,7 @@ This function returns the address of the underlying token used for the vault for
 #### totalAssets {#totalassets}
 
 ```solidity
-function totalAssets() public view returns (uint256 _totalManagedAssets)
+function totalAssets() public view returns (uint256)
 ```
 
 This function returns the total amount of underlying assets held by the vault.
@@ -44,31 +44,31 @@ This function returns the total amount of underlying assets held by the vault.
 #### convertToShares {#convertoshares}
 
 ```solidity
-function convertToShares(uint256 _assets) public view returns (uint256 _shares)
+function convertToShares(uint256 assets) public view returns (uint256 shares)
 ```
 
-This function returns the amount of `_shares` that will be exchanged by the vault for the amount of `_assets` provided.
+This function returns the amount of `shares` that would be exchanged by the vault for the amount of `assets` provided.
 
 #### convertToAssets {#convertoassets}
 
 ```solidity
-function convertToAssets(uint256 _shares) public view returns (uint256 _assets)
+function convertToAssets(uint256 shares) public view returns (uint256 assets)
 ```
 
-This function returns the amount of `_assets` that will be exchanged by the vault for the amount of `_shares` provided.
+This function returns the amount of `assets` that would be exchanged by the vault for the amount of `shares` provided.
 
 #### maxDeposit {#maxdeposit}
 
 ```solidity
-function maxDeposit(address _receiver) public view returns (uint256)
+function maxDeposit(address receiver) public view returns (uint256)
 ```
 
-This function returns the maximum amount of assets that can be deposited in a single [`deposit`](#deposit) call by the `_receiver`.
+This function returns the maximum amount of underlying assets that can be deposited in a single [`deposit`](#deposit) call by the `receiver`.
 
 #### previewDeposit {#previewdeposit}
 
 ```solidity
-function previewDeposit(uint256 _assets) public view returns (uint256)
+function previewDeposit(uint256 assets) public view returns (uint256)
 ```
 
 This function allows users to simulate the effects of their deposit at the current block.
@@ -76,23 +76,23 @@ This function allows users to simulate the effects of their deposit at the curre
 #### deposit {#deposit}
 
 ```solidity
-function deposit(uint256 _assets, address _receiver) public returns (uint256 _shares)
+function deposit(uint256 assets, address receiver) public returns (uint256 shares)
 ```
 
-This function deposits the `_assets` tokens into the vault and grants ownership on the `_shares` to `_receiver`.
+This function deposits `assets` of underlying tokens into the vault and grants ownership of `shares` to `receiver`.
 
 #### maxMint {#maxmint}
 
 ```solidity
-function maxMint(address _receiver) public view returns (uint256)
+function maxMint(address receiver) public view returns (uint256)
 ```
 
-This function returns the maximum amount of shares that can be minted in a single [`mint`](#mint) call by the `_receiver`.
+This function returns the maximum amount of shares that can be minted in a single [`mint`](#mint) call by the `receiver`.
 
 #### previewMint {#previewmint}
 
 ```solidity
-function previewMint(uint256 _shares) public view returns (uint256)
+function previewMint(uint256 shares) public view returns (uint256)
 ```
 
 This function allows users to simulate the effects of their mint at the current block.
@@ -100,23 +100,23 @@ This function allows users to simulate the effects of their mint at the current 
 #### mint {#mint}
 
 ```solidity
-function mint(uint256 _shares, address _receiver) public returns (uint256 _assets)
+function mint(uint256 shares, address receiver) public returns (uint256 assets)
 ```
 
-This function mints `_shares` vault shares to `_receiver` by depositing `_assets` tokens.
+This function mints exactly `shares` vault shares to `receiver` by depositing `assets` of underlying tokens.
 
 #### maxWithdraw {#maxwithdraw}
 
 ```solidity
-function maxWithdraw(address _owner) public view returns (uint256)
+function maxWithdraw(address owner) public view returns (uint256)
 ```
 
-This function returns the maximum amount of assets that can be withdrawn from the `_owner` balance with a single [`withdraw`](#withdraw) call.
+This function returns the maximum amount of underlying assets that can be withdrawn from the `owner` balance with a single [`withdraw`](#withdraw) call.
 
 #### previewWithdraw {#previewwithdraw}
 
 ```solidity
-function previewWithdraw(uint256 _assets) public view returns (uint256)
+function previewWithdraw(uint256 assets) public view returns (uint256)
 ```
 
 This function allows users to simulate the effects of their withdrawal at the current block.
@@ -124,23 +124,23 @@ This function allows users to simulate the effects of their withdrawal at the cu
 #### withdraw {#withdraw}
 
 ```solidity
-function withdraw(uint256 _assets, address _receiver, address _owner) public returns (uint256 _shares)
+function withdraw(uint256 assets, address receiver, address owner) public returns (uint256 shares)
 ```
 
-This function burns `_shares` from `_owner` and send exactly `_assets` token from the vault to `_receiver`.
+This function burns `shares` from `owner` and send exactly `assets` token from the vault to `receiver`.
 
 #### maxRedeem {#maxredeem}
 
 ```solidity
-function maxRedeem(address _owner) public view returns (uint256)
+function maxRedeem(address owner) public view returns (uint256)
 ```
 
-This function returns the maximum amount of shares that can be redeem from the `_owner` balance through a [`redeem`](#redeem) call.
+This function returns the maximum amount of shares that can be redeem from the `owner` balance through a [`redeem`](#redeem) call.
 
 #### previewRedeem {#previewredeem}
 
 ```solidity
-function previewRedeem(uint256 _shares) public view returns (uint256)
+function previewRedeem(uint256 shares) public view returns (uint256)
 ```
 
 This function allows users to simulate the effects of their redeemption at the current block.
@@ -148,18 +148,10 @@ This function allows users to simulate the effects of their redeemption at the c
 #### redeem {#redeem}
 
 ```solidity
-function redeem(uint256 _shares, address _receiver, address _owner) public returns (uint256 _assets)
+function redeem(uint256 shares, address receiver, address owner) public returns (uint256 assets)
 ```
 
-This function redeems a specific number of `_shares` from `_owner` and send `_assets` token from the vault to `_receiver`.
-
-#### balanceOfUnderlying {#balanceofunderlying}
-
-```solidity
-function balanceOfUnderlying(address _owner) public view returns (uint256)
-```
-
-This function returns the total amount of underlying tokens held in the vault for `_owner`.
+This function redeems a specific number of `shares` from `owner` and send `assets` of underlying token from the vault to `receiver`.
 
 #### totalSupply {#totalsupply}
 
@@ -169,13 +161,21 @@ function totalSupply() public view returns (uint256)
 
 Returns the total number of unredeemed vault shares in circulation.
 
+#### balanceOfUnderlying {#balanceofunderlying}
+
+```solidity
+function balanceOfUnderlying(address owner) public view returns (uint256)
+```
+
+This function returns the total amount of underlying tokens held in the vault for `owner`.
+
 #### balanceOf {#balanceof}
 
 ```solidity
-function balanceOf(address _owner) public view returns (uint256)
+function balanceOf(address owner) public view returns (uint256)
 ```
 
-Returns the total amount of vault shares the `_owner` currently has.
+Returns the total amount of vault shares the `owner` currently has.
 
 #### exchangeRate {#exchangerate}
 
