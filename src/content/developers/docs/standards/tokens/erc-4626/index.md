@@ -111,7 +111,7 @@ This function mints `_shares` vault shares to `_receiver` by depositing `_assets
 function maxWithdraw(address _owner) public view returns (uint256)
 ```
 
-This function returns the maximum amount of assets that can be withdrawn from the `_owner` balance with a single [`withdraw`](#withdraw).
+This function returns the maximum amount of assets that can be withdrawn from the `_owner` balance with a single [`withdraw`](#withdraw) call.
 
 #### previewWithdraw {#previewwithdraw}
 
@@ -127,7 +127,31 @@ This function allows users to simulate the effects of their withdrawal at the cu
 function withdraw(uint256 _assets, address _receiver, address _owner) public returns (uint256 _shares)
 ```
 
-This function burns `_shares` from `_owner` and transfers `_assets` token from the vault to `_receiver`.
+This function burns `_shares` from `_owner` and send exactly `_assets` token from the vault to `_receiver`.
+
+#### maxRedeem {#maxredeem}
+
+```solidity
+function maxRedeem(address _owner) public view returns (uint256)
+```
+
+This function returns the maximum amount of shares that can be redeem from the `_owner` balance through a [`redeem`](#redeem) call.
+
+#### previewRedeem {#previewredeem}
+
+```solidity
+function previewRedeem(uint256 _shares) public view returns (uint256)
+```
+
+This function allows users to simulate the effects of their redeemption at the current block.
+
+#### redeem {#redeem}
+
+```solidity
+function redeem(uint256 _shares, address _receiver, address _owner) public returns (uint256 _assets)
+```
+
+This function redeems a specific number of `_shares` from `_owner` and send `_assets` token from the vault to `_receiver`.
 
 #### balanceOfUnderlying {#balanceofunderlying}
 
@@ -136,14 +160,6 @@ function balanceOfUnderlying(address _owner) public view returns (uint256)
 ```
 
 This function returns the total amount of underlying tokens held in the vault for `_owner`.
-
-#### underlying {#underlying}
-
-```solidity
-function underlying() public view returns (address)
-```
-
-Returns the address of the token the vault uses for accounting, depositing, and withdrawing.
 
 #### totalSupply {#totalsupply}
 
@@ -160,14 +176,6 @@ function balanceOf(address _owner) public view returns (uint256)
 ```
 
 Returns the total amount of vault shares the `_owner` currently has.
-
-#### redeem {#redeem}
-
-```solidity
-function redeem(address _to, uint256 _shares) public returns (uint256 _value)
-```
-
-Redeems a specific number of `_shares` for underlying tokens and transfers them to `_to`.
 
 #### exchangeRate {#exchangerate}
 
