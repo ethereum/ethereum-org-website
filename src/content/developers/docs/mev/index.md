@@ -10,11 +10,11 @@ Maximal extractable value (MEV) refers to the maximum value that can be extracte
 
 ### Miner extractable value
 
-This concept was first applied in the context of [proof-of-work](/developers/docs/consensus-mechanisms/pow/), and was initially referred to as "miner extractable value". This is because in proof-of-work, miners control transaction inclusion, exclusion, and ordering. However, since the transition to proof-of-stake via [The Merge](/upgrades/merge) validators have been responsible for these roles, and mining is no longer part of the Ethereum protocol. The value extraction methods still exist, though, so the term "Maximal extractable value" is now used instead.
+Maximal extractable value was first applied in the context of [proof-of-work](/developers/docs/consensus-mechanisms/pow/), and initially referred to as "miner extractable value". This is because in proof-of-work, miners control transaction inclusion, exclusion, and ordering. However, since the transition to proof-of-stake via [The Merge](/upgrades/merge) validators have been responsible for these roles, and mining is no longer part of the Ethereum protocol. The value extraction methods still exist, though, so the term "Maximal extractable value" is now used instead.
 
 ## Prerequisites {#prerequisites}
 
-Make sure you're familiar with [transactions](/developers/docs/transactions/), [blocks](/developers/docs/blocks/) and [gas](/developers/docs/gas/). Familiarity with [dapps](/dapps/) and [DeFi](/defi/) is helpful as well.
+Make sure you're familiar with [transactions](/developers/docs/transactions/), [blocks](/developers/docs/blocks/), [proof-of-stake](/developers/docs/consensus-mechanisms/pos) and [gas](/developers/docs/gas/). Familiarity with [dapps](/dapps/) and [DeFi](/defi/) is helpful as well.
 
 ## MEV extraction {#mev-extraction}
 
@@ -112,7 +112,7 @@ MEV extraction ballooned in early 2021, resulting in extremely high gas prices i
 
 While many searchers are still making good money from MEV, as opportunities become more well-known and more and more searchers compete for the same opportunity, validators will capture more and more total MEV revenue (because the same sort of gas auctions as originally described above also occur in Flashbots, albeit privately, and validators will capture the resulting gas revenue). MEV is also not unique to Ethereum, and as opportunities become more competitive on Ethereum, searchers are moving to alternate blockchains like Binance Smart Chain, where similar MEV opportunities as those on Ethereum exist with less competition.
 
-On the other hand, the transition from proof-of-work to proof-of-stake and the ongoing efforst to scale Ethereum using rollups and sharding all change the MEV landscape in ways that are still somewhat unclear. It is not yet well known how having guarantees block-proposers known slightly in advance changes the dynamics of MEV extraction compared to the probabilistic model in proof-of-work, or how this will be disrupted when [single secret leader election](https://ethresear.ch/t/secret-non-single-leader-election/11789) and [distributed validator technology](https://github.com/ethereum/distributed-validator-specs) get implemented. Similarly, it remains to be seen what MEV opportunities exist when most user-activity is ported away from Ethereum and onto its Layer-2 rollups and shards.
+On the other hand, the transition from proof-of-work to proof-of-stake and the ongoing effort to scale Ethereum using rollups and sharding all change the MEV landscape in ways that are still somewhat unclear. It is not yet well known how having guarantees block-proposers known slightly in advance changes the dynamics of MEV extraction compared to the probabilistic model in proof-of-work or how this will be disrupted when [single secret leader election](https://ethresear.ch/t/secret-non-single-leader-election/11789) and [distributed validator technology](https://github.com/ethereum/distributed-validator-specs) get implemented. Similarly, it remains to be seen what MEV opportunities exist when most user activity is ported away from Ethereum and onto its Layer-2 rollups and shards.
 
 ## Related resources {#related-resources}
 
