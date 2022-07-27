@@ -38,7 +38,7 @@ Before we can add the safety rail functionality we need an ERC-20 contract. In t
 
 ## Common mistakes {#commom-mistakes}
 
-### What are they? {#what-are-they}
+### The mistakes {#the-mistakes}
 
 Users sometimes send tokens to the wrong address. While we cannot read their minds to know what they meant to do, there are two error types that happen a lot and are easy to detect:
 
@@ -47,9 +47,11 @@ Users sometimes send tokens to the wrong address. While we cannot read their min
 2. Sending the tokens to an empty address, one that doesn't correspond to an [externally owned account](/developers/docs/accounts/#externally-owned-accounts-and-key-pairs) or a [smart contract](/developers/docs/smart-contracts). While I don't have statistics on how often this happens, [one incident could have cost 20,000,000 tokens](https://gov.optimism.io/t/message-to-optimism-community-from-wintermute/2595).
 
 
-### How do we prevent them? {#how-do-we-prevent-them}
+### Preventing transfers {#preventing-transfers}
 
-The OpenZeppelin ERC-20 contract includes [a hook, `_beforeTokenTransfer`](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol#L364-L368), that is called before a token is transferred. By default this hook does not do anything, but we can hang our own functionality on it. So we can add this function after the constructor:
+The OpenZeppelin ERC-20 contract includes [a hook, `_beforeTokenTransfer`](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol#L364-L368), that is called before a token is transferred. By default this hook does not do anything, but we can hang our own functionality on it, such as checks that revert if there's a problem. 
+
+To use the hook, add this function after the constructor:
 
 ```solidity
     function _beforeTokenTransfer(address from, address to, uint256 amount)
@@ -74,6 +76,8 @@ We have to specify explicitly that we're [overriding](https://docs.soliditylang.
 
 This line calls the `_beforeTokenTransfer` function of the contract or contracts from which we inherited which have it. In this case, that is only `ERC20`, `Ownable` does not have this hook. Even though currently `ERC20._beforeTokenTransfer` doesn't do anything, we call it in case functionality is added in the future (and we then decide to redeploy the contract, because contracts don't change after deployment).
 
+### Coding the requireemnts {#coding-the-requirements}
+
 We want to add these requirements to the function:
 
 - The `to` address cannot equal `address(this)`, the address of the ERC-20 contract itself.  
@@ -96,7 +100,7 @@ This is the first requirement, check that `to` and `this(address)` are not the s
         }
 ```
 
-This is how we check if an address is a contract. We cannot receive output directly from Yul, so instead we define a variable to hold the result (`isToContract` in this case). The way Yul works every opcode is considered a function. So first we call [`EXTCODESIZE`](https://www.evm.codes/#3b) to get the contract size, and then use [`GT`](https://www.evm.codes/#11) to check it is not zero (we are dealing with unsigned integers, so of course it can't be negative). We then write the result to `isToContract`.
+This is how we check if an address is a contract. We cannot receive output directly from Yul, so instead we define a variable to hold the result (`isToContract` in this case). The way Yul works is that every opcode is considered a function. So first we call [`EXTCODESIZE`](https://www.evm.codes/#3b) to get the contract size, and then use [`GT`](https://www.evm.codes/#11) to check it is not zero (we are dealing with unsigned integers, so of course it can't be negative). We then write the result to `isToContract`.
 
 ```solidity
         require(to.balance != 0 || isToContract, "Can't send tokens to an empty address");
@@ -105,7 +109,36 @@ This is how we check if an address is a contract. We cannot receive output direc
 And finally, we have the actual check for empty addresses.
 
 
-## Administrative access
+### The complete function {#the-complete-function}
+
+This is the complete function to check for common mistakes:
+
+```solidity
+
+    function _beforeTokenTransfer(address from, address to, uint256 amount)
+        internal
+        override(ERC20)
+    {
+        super._beforeTokenTransfer(from, to, amount);
+
+        bool isToContract;
+        require(to != address(this), "Can't send tokens to the contract address");
+        assembly {
+            isToContract := gt(extcodesize(to), 0)              
+        }
+
+        require(to.balance != 0 || isToContract, "Can't send tokens to an empty address");
+    }   // _beforeTokenTransfer
+
+```
+
+
+
+## Administrative access {#admin-access}
+
+Sometimes it is 
+
+## Reversible transactions {#reversible-transactions}
 
 It is sometimes useful to have account administrators that can modify or undo certain actions. 
 
