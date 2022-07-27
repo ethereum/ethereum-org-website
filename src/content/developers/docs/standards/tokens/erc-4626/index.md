@@ -177,30 +177,6 @@ function balanceOf(address owner) public view returns (uint256)
 
 Returns the total amount of vault shares the `owner` currently has.
 
-#### exchangeRate {#exchangerate}
-
-```solidity
-function exchangeRate() public view returns (uint256)
-```
-
-The amount of underlying tokens one `baseUnit` of vault shares is redeemable for. For example:
-
-```solidity
-_shares * exchangeRate() / baseUnit() = _value.
-```
-
-```solidity
-exchangeRate() * totalSupply() MUST equal totalHoldings().
-```
-
-#### baseUnit {#baseunit}
-
-```solidity
-function baseUnit() public view returns(uint256)
-```
-
-The decimal scalar for vault shares and operations involving `exchangeRate()`.
-
 ### Events {#events}
 
 #### Deposit Event
@@ -233,8 +209,6 @@ event Withdraw(
 ```
 
 Where `sender` is the user who triggered the withdrawal and exchanged `shares`, owned by `owner`, for `assets`. `receiver` is the user who received the withdrawn `assets`.
-
-_Note_: All batch functions, including the hook, are also available in non-batch versions. This is done to save gas, as transferring just one asset will likely remain to be the most common method. For clarity in the explanations, we've left them out, including the safe transfer rules. Remove the 'Batch' and the names are identical.
 
 ## Further reading {#further-reading}
 
