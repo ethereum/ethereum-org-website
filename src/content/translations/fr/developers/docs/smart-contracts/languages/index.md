@@ -245,7 +245,7 @@ Cet exemple simple implémente une fonction puissance. Il peut être compilé en
 }
 ```
 
-Si vous avez déjà une bonne expérience en développement de contrats intelligents, vous trouverez ici une [implémentation complète ERC20 dans Yul ](https://solidity.readthedocs.io/en/latest/yul.html#complete-erc20-example).
+Si vous avez déjà une bonne expérience en développement de contrats intelligents, vous trouverez ici une [implémentation complète ERC20 dans Yul](https://solidity.readthedocs.io/en/latest/yul.html#complete-erc20-example).
 
 ## Fe {#fe}
 

@@ -283,7 +283,7 @@ const WalletsPage = ({
     alt: translateMessageId("page-wallets-alt", intl),
     buttons: [
       {
-        path: "/wallets/find-wallet/",
+        to: "/wallets/find-wallet/",
         content: translateMessageId("page-wallets-find-wallet-link", intl),
       },
     ],

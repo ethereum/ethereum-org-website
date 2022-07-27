@@ -26,10 +26,10 @@ import PageMetadata from "../components/PageMetadata"
 import Pill from "../components/Pill"
 import RandomAppList from "../components/RandomAppList"
 import Roadmap from "../components/Roadmap"
-import UpgradeTableOfContents from "../components/UpgradeTableOfContents"
-import TableOfContents, {
+import UpgradeTableOfContents, {
   Item as ItemTableOfContents,
-} from "../components/TableOfContents"
+} from "../components/UpgradeTableOfContents"
+import TableOfContents from "../components/TableOfContents"
 import TranslationsInProgress from "../components/TranslationsInProgress"
 import Translation from "../components/Translation"
 import SectionNav from "../components/SectionNav"
@@ -421,7 +421,7 @@ const UseCasePage = ({
           {mdx.frontmatter.sidebar && tocItems && (
             <UpgradeTableOfContents
               items={tocItems}
-              maxDepth={mdx.frontmatter.sidebarDepth}
+              maxDepth={mdx.frontmatter.sidebarDepth!}
             />
           )}
         </InfoColumn>

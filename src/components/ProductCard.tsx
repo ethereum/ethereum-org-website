@@ -1,4 +1,4 @@
-import React from "react"
+import React, { ReactNode } from "react"
 import styled from "styled-components"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { useQuery, gql } from "@apollo/client"
@@ -144,7 +144,7 @@ export interface IProps {
   background: string
   image: string
   name: string
-  description?: string
+  description?: ReactNode
   note?: string
   alt?: string
   githubUrl?: string

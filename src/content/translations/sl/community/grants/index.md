@@ -16,9 +16,8 @@ Ta seznam je pripravila naša skupnost. Če na njem kaj manjka ali ni pravilno n
 Te programi podpirajo širok Ethereum ekosistem s tem, da ponujajo finančne spodbude širšemu naboru projektov. Mednje sodijo rešitve za nadgradljivost, grajenje skupnosti, varnost, zasebnost in še več. Te finančne spodbude niso specifične vezane na nobeno Ethereum platformo in so dobro mesto za začetek, če niste povsem prepričani.
 
 - [EF Program za podporo ekosistemu](https://esp.ethereum.foundation) - _Financira odprtokodne projekte, ki koristijo Ethereumu, s posebnim fokusom na univerzalna orodja, infrastrukturo, raziskave in javne dobrine_
-- [Ethereum RFPs](https://github.com/ethereum/requests-for-proposals) - _ Prošnje za predloge s strani Ethereum fundacije za delo in projekte v Ethereum ekosistemu_
-- [MetaCartel](https://www.metacartel.org/grants/) - _Dapp razvoj, Ustvarjanje DAO_  
-  Spodbude varirajo od 1.000 USD do 8.000 USD.
+- [Ethereum RFPs](https://github.com/ethereum/requests-for-proposals) - _Prošnje za predloge s strani Ethereum fundacije za delo in projekte v Ethereum ekosistemu_
+- [MetaCartel](https://www.metacartel.org/grants/) - _Dapp razvoj, Ustvarjanje DAO_
 - [Moloch DAO](https://www.molochdao.com/) - _Zasebnost, nadgradljivost z 2. plastmi, varnost in še več_
 - [Odprte spodbude](https://opengrants.com/explore)
 

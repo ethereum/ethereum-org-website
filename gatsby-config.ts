@@ -230,9 +230,19 @@ const config: GatsbyConfig = {
       },
     },
     // Needed for Gatsby Cloud redirect support
-    `gatsby-plugin-gatsby-cloud`,
+    {
+      resolve: `gatsby-plugin-gatsby-cloud`,
+      options: {
+        generateMatchPathRewrites: false,
+      },
+    },
     // Creates `_redirects` & `_headers` build files for Netlify
-    `gatsby-plugin-netlify`,
+    {
+      resolve: `gatsby-plugin-netlify`,
+      options: {
+        generateMatchPathRewrites: false,
+      },
+    },
   ],
   // https://www.gatsbyjs.com/docs/reference/release-notes/v2.28/#feature-flags-in-gatsby-configjs
   flags: {
@@ -245,7 +255,7 @@ const config: GatsbyConfig = {
 if (!IS_PREVIEW) {
   config.plugins = [
     ...(config.plugins || []),
-    // Matomo analtyics
+    // Matomo analytics
     {
       resolve: "gatsby-plugin-matomo",
       options: {

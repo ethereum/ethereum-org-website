@@ -19,7 +19,7 @@ sourceUrl: https://www.reddit.com/r/ethereum/comments/gf3nhg/ethereum_on_arm_ras
 
 [Más información acerca de las actualizaciones de Ethereum](/upgrades/)
 
-Primero, veamos un poco de contexto. Como saben, nos hemos encontrado con algunos problemas de memoria [ [1] ](/developers/tutorials/run-node-raspberry-pi/#references) con la imagen de Raspberry Pi 4 ya que Raspbian OS todavía está en 32 bits [ [2] ](/developers/tutorials/run-node-raspberry-pi/#references) (al menos a nivel de usuario). Si bien preferimos seguir con el sistema operativo oficial, llegamos a la conclusión de que, para resolver estos problemas, debemos migrar a un sistema operativo nativo de 64 bits
+Primero, veamos un poco de contexto. Como saben, nos hemos encontrado con algunos problemas de memoria [[1]](/developers/tutorials/run-node-raspberry-pi/#references) con la imagen de Raspberry Pi 4 ya que Raspbian OS todavía está en 32 bits [[2]](/developers/tutorials/run-node-raspberry-pi/#references) (al menos a nivel de usuario). Si bien preferimos seguir con el sistema operativo oficial, llegamos a la conclusión de que, para resolver estos problemas, debemos migrar a un sistema operativo nativo de 64 bits
 
 Además, [los clientes de consenso](/upgrades/get-involved/#clients) no admiten binarios de 32 bits, por lo que el uso de Raspbian excluiría a Raspberry Pi 4 de ejecutar un nodo de capa de consenso (y la posibilidad de apuesta).
 

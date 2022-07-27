@@ -402,7 +402,7 @@ Eylül 2020 yıl sonunda 140.839.000.000 işlem gerçekleştirdiler – [Visa ma
 
 #### 3. Parçalı bir hisse ispatı ağında 100.000 işlem için enerji kullanımı {#fn-3}
 
-Ölçeklenebilirlik yükseltmelerinin, ağın [ saniyede 25.000 ila şu anda teorik maksimum değer olan 100.000 işlem gerçekleştirmesine olanak sağlayacağı tahmin ediliyor. ](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698).
+Ölçeklenebilirlik yükseltmelerinin, ağın [saniyede 25.000 ila şu anda teorik maksimum değer olan 100.000 işlem gerçekleştirmesine olanak sağlayacağı tahmin ediliyor.](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698).
 
 [Vitalik Buterin'in parçalama ile saniye başına işlem potansiyeli hakkında düşünceleri](https://twitter.com/VitalikButerin/status/1312905884549300224)
 

@@ -20,7 +20,7 @@ source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/create-eth-app
 ---
 
-Geçen sefer [Solidity'nin büyük resmine baktık ve ](https://soliditydeveloper.com/solidity-overview-2020) hâlihazırda [create-eth-app](https://github.com/PaulRBerg/create-eth-app)'den bahsettik. Şimdi onu nasıl kullanacağınızı, hangi özelliklerin entegre olduğunu ve nasıl genişleteceğinize dair ek fikirleri öğreneceksiniz. [Sablier](http://sablier.finance/)'in kurucusu Paul Razvan Berg tarafından başlatılan bu uygulama, ön uç geliştirmenizi başlatacak ve beraberinde aralarından seçim yapabileceğiniz çeşitli isteğe bağlı entegrasyonlar getiriyor.
+Geçen sefer [Solidity'nin büyük resmine baktık ve](https://soliditydeveloper.com/solidity-overview-2020) hâlihazırda [create-eth-app](https://github.com/PaulRBerg/create-eth-app)'den bahsettik. Şimdi onu nasıl kullanacağınızı, hangi özelliklerin entegre olduğunu ve nasıl genişleteceğinize dair ek fikirleri öğreneceksiniz. [Sablier](http://sablier.finance/)'in kurucusu Paul Razvan Berg tarafından başlatılan bu uygulama, ön uç geliştirmenizi başlatacak ve beraberinde aralarından seçim yapabileceğiniz çeşitli isteğe bağlı entegrasyonlar getiriyor.
 
 ## Kurulum {#installation}
 
@@ -32,7 +32,7 @@ cd my-eth-app
 yarn react-app:start
 ```
 
-Perde arkasında [create-react-app](https://github.com/facebook/create-react-app) kullanır. Uygulamanızı görmek için, `http://localhost:3000/` bağlantısını açın. Üretime dağıtmaya hazır olduğunuzda, yarn build ile küçültülmüş bir paket oluşturun. Bunu sunmanın kolay yollarından biri [Netlify](https://www.netlify.com/)'dır. Bir Github deposu oluşturmanız, Netlify'a eklemeniz ve build komutunu kurmanız yeterli olur! Uygulamanız barındırılacak ve herkes tarafından kullanılabilir olacak. Ve hepsi ücretsiz.
+Perde arkasında [create-react-app](https://github.com/facebook/create-react-app) kullanır. Uygulamanızı görmek için, `http://localhost:3000/` bağlantısını açın. Üretime dağıtmaya hazır olduğunuzda, yarn build ile küçültülmüş bir paket oluşturun. Bunu sunmanın kolay yollarından biri [Netlify](https://www.netlify.com/)'dır. Bir GitHub deposu oluşturmanız, Netlify'a eklemeniz ve build komutunu kurmanız yeterli olur! Uygulamanız barındırılacak ve herkes tarafından kullanılabilir olacak. Ve hepsi ücretsiz.
 
 ## Özellikler {#features}
 

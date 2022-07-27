@@ -150,8 +150,8 @@ const Nav: React.FC<IProps> = ({ handleThemeChange, isDarkTheme, path }) => {
       ariaLabel: "use-ethereum-menu",
       items: [
         {
-          text: "ethereum-wallets",
-          to: "/wallets/",
+          text: "find-wallet",
+          to: "/wallets/find-wallet/",
         },
         {
           text: "get-eth",
