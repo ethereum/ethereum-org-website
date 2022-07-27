@@ -1315,6 +1315,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/liam0215"><img src="https://avatars.githubusercontent.com/u/8989334?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Liam Arzola</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Aliam0215" title="Bug reports">🐛</a></td>
     <td align="center"><a href="https://github.com/srt180"><img src="https://avatars.githubusercontent.com/u/30768686?v=4?s=100" width="100px;" alt=""/><br /><sub><b>shao</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=srt180" title="Documentation">📖</a> <a href="#translation-srt180" title="Translation">🌍</a></td>
     <td align="center"><a href="https://crowdin.com/profile/hiroyukinaito"><img src="https://avatars.githubusercontent.com/u/32320988?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Hiroyuki Naito</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=HiroyukiNaito" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/AlehNat"><img src="https://avatars.githubusercontent.com/u/3587775?v=4?s=100" width="100px;" alt=""/><br /><sub><b>AlehN</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=AlehNat" title="Documentation">📖</a></td>
   </tr>
 </table>
 
