@@ -63,6 +63,7 @@ Some collaborative efforts to make Ethereum enterprise friendly have been made b
 - [Hyperledger Besu](https://www.hyperledger.org/use/besu) _an enterprise focused open-source Ethereum client developed under the Apache 2.0 license and written in Java_
 - [Infura](https://infura.io/) _scalable API access to the Ethereum and IPFS networks_
 - [Provide](https://provide.services/) _infrastructure and APIs for Enterprise Web3 applications_
+- [QuickNode](https://www.quicknode.com/) _provides realiable and fast nodes with high level APIs like NFT API, Token API, etc. To help developers focus on BUIDL_
 - [Unibright](https://unibright.io/) _a team of blockchain specialists, architects, developers and consultants with 20+ years of experience in business processes and integration_
 
 ### Tooling and libraries {#tooling-and-libraries}
