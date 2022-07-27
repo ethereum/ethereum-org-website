@@ -102,7 +102,12 @@ This is how we check if an address is a contract. We cannot receive output direc
         require(to.balance != 0 || isToContract, "Can't send tokens to an empty address");
 ```
 
-And finally, we have the actual check.
+And finally, we have the actual check for empty addresses.
+
+
+## Administrative access
+
+It is sometimes useful to have account administrators that can modify or undo certain actions. 
 
 
 ## Conclusion
