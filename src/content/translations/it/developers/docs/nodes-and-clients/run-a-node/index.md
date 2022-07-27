@@ -71,7 +71,7 @@ I binari eseguibili per le implementazioni del client della rete principale stab
 - [Geth](https://geth.ethereum.org/downloads/),
 - [OpenEthereum,](https://github.com/openethereum/openethereum/releases),
 - [Nethermind](https://downloads.nethermind.io/),
-- [Besu](https://pegasys.tech/solutions/hyperledger-besu/),
+- [Besu](https://besu.hyperledger.org/en/stable/),
 - [Erigon](https://github.com/ledgerwatch/erigon).
 
 **Nota che OpenEthereum [è ormai obsoleto](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd) e non più mantenuto.** Usalo con cautela e preferibilmente passa all'implementazione con un altro client.
