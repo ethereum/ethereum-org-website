@@ -84,23 +84,23 @@ We want to add these requirements to the function:
 Lets go over the new code line by line:
 
 ```solidity
-require(to != address(this), "Can't send tokens to the contract address");
+        require(to != address(this), "Can't send tokens to the contract address");
 ```
 
 This is the first requirement, check that `to` and `this(address)` are not the same thing. 
 
 ```solidity 
-bool isToContract;
-assembly {
-   isToContract := gt(extcodesize(to), 0)              
-}
+        bool isToContract;
+        assembly {
+           isToContract := gt(extcodesize(to), 0)              
+        }
 ```
 
 This is how we check if an address is a contract. We cannot receive output directly from Yul, so instead we define a variable to hold the result (`isToContract` in this case). The way Yul works every opcode is considered a function. So first we call [`EXTCODESIZE`](https://www.evm.codes/#3b) to get the contract size, and then use [`GT`](https://www.evm.codes/#11) to check it is not zero (we are dealing with unsigned integers, so of course it can't be negative). We then write the result to `isToContract`.
 
 ```solidity
-require(to.balance != 0 || isToContract, "Can't send tokens to an empty address");
-```solidity
+        require(to.balance != 0 || isToContract, "Can't send tokens to an empty address");
+```
 
 And finally, we have the actual check.
 
