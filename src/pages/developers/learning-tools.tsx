@@ -18,6 +18,7 @@ import {
 } from "../../components/SharedStyledComponents"
 import FeedbackCard from "../../components/FeedbackCard"
 import { Context } from "../../types"
+import { Lang } from "../../utils/languages"
 
 const StyledPage = styled(Page)`
   margin-top: 4rem;
@@ -86,6 +87,7 @@ interface ILearningTool {
   alt: TranslationKey
   background: string
   subjects: Array<string>
+  locales?: Array<Lang>
 }
 
 const LearningToolsPage = ({
@@ -226,6 +228,40 @@ const LearningToolsPage = ({
     },
   ]
 
+  interface ILearningToolsCardGridProps {
+    category: Array<ILearningTool>
+  }
+
+  const LearningToolsCardGrid: React.FC<ILearningToolsCardGridProps> = ({
+    category,
+  }) => {
+    return (
+      <StyledCardGrid>
+        {category
+          .filter(
+            ({ locales }) =>
+              !locales?.length || locales.includes(intl.locale as Lang)
+          )
+          .sort(({ locales }) => (locales?.length ? -1 : 0))
+          .map(
+            ({ name, description, background, url, alt, image, subjects }) => (
+              <ProductCard
+                key={name}
+                background={background}
+                url={url}
+                alt={translateMessageId(alt, intl)}
+                image={image}
+                name={name}
+                subjects={subjects}
+              >
+                <Translation id={description} />
+              </ProductCard>
+            )
+          )}
+      </StyledCardGrid>
+    )
+  }
+
   return (
     <StyledPage>
       <PageMetadata
@@ -247,21 +283,7 @@ const LearningToolsPage = ({
         <p>
           <Translation id="page-learning-tools-sandbox-desc" />
         </p>
-        <StyledCardGrid>
-          {randomizedSandboxes.map((sandbox, idx) => (
-            <ProductCard
-              key={idx}
-              background={sandbox.background}
-              url={sandbox.url}
-              alt={translateMessageId(sandbox.alt, intl)}
-              image={sandbox.image}
-              name={sandbox.name}
-              subjects={sandbox.subjects}
-            >
-              <Translation id={sandbox.description} />
-            </ProductCard>
-          ))}
-        </StyledCardGrid>
+        <LearningToolsCardGrid category={randomizedSandboxes} />
         <InfoBanner emoji=":point_up:" shouldCenter={true}>
           <Translation id="page-learning-tools-remix-description-2" />
         </InfoBanner>
@@ -273,21 +295,7 @@ const LearningToolsPage = ({
         <p>
           <Translation id="page-learning-tools-game-tutorials-desc" />
         </p>
-        <StyledCardGrid>
-          {games.map((game, idx) => (
-            <ProductCard
-              key={idx}
-              background={game.background}
-              url={game.url}
-              alt={translateMessageId(game.alt, intl)}
-              image={game.image}
-              name={game.name}
-              subjects={game.subjects}
-            >
-              <Translation id={game.description} />
-            </ProductCard>
-          ))}
-        </StyledCardGrid>
+        <LearningToolsCardGrid category={games} />
       </StackContainer>
       <StackContainer>
         <SubtitleTwo>
@@ -296,21 +304,7 @@ const LearningToolsPage = ({
         <p>
           <Translation id="page-learning-tools-bootcamps-desc" />
         </p>
-        <StyledCardGrid>
-          {bootcamps.map((bootcamp, idx) => (
-            <ProductCard
-              key={idx}
-              url={bootcamp.url}
-              background={bootcamp.background}
-              alt={translateMessageId(bootcamp.alt, intl)}
-              image={bootcamp.image}
-              name={bootcamp.name}
-              subjects={bootcamp.subjects}
-            >
-              <Translation id={bootcamp.description} />
-            </ProductCard>
-          ))}
-        </StyledCardGrid>
+        <LearningToolsCardGrid category={bootcamps} />
       </StackContainer>
       <Content>
         <CalloutBanner
