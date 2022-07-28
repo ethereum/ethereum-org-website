@@ -34,6 +34,20 @@ Most testnets started by using a proof-of-authority consensus mechanism. This me
 
 ETH on testnets has no real value; therefore, there are no markets for testnet ETH. Since you need ETH to actually interact with Ethereum, most people get testnet ETH from faucets. Most faucets are webapps where you can input an address which you request ETH to be sent to.
 
+#### Goerli {#goerli}
+
+Goerli is a proof-of-stake testnet. It is expected to be maintained long-term as a stable testnet for application developers. Before its testnet merge, Goerli was a proof-of-authority testnet.
+
+- [Website](https://goerli.net/)
+- [GitHub](https://github.com/goerli/testnet)
+- [Etherscan](https://goerli.etherscan.io)
+
+##### Goerli faucets
+
+- [Goerli faucet](https://faucet.goerli.mudit.blog/)
+- [Chainlink faucet](https://faucets.chain.link/)
+- [Alchemy Goerli Faucet](https://goerlifaucet.com/)
+
 #### Sepolia {#sepolia}
 
 Sepolia is a proof-of-stake testnet. Although Sepolia is still running, it is not currently planned to be maintained long-term. Before undergoing The Merge in June 2022, Sepolia was a proof-of-work testnet.
@@ -48,19 +62,6 @@ Sepolia is a proof-of-stake testnet. Although Sepolia is still running, it is no
 - [Sepolia faucet](https://faucet.sepolia.dev/)
 - [FaucETH](https://fauceth.komputing.org)
 
-#### Goerli {#goerli}
-
-Goerli is a proof-of-stake testnet. It is expected to be maintained long-term as a stable testnet for application developers. Before its testnet merge, Goerli was a proof-of-authority testnet.
-
-- [Website](https://goerli.net/)
-- [GitHub](https://github.com/goerli/testnet)
-- [Etherscan](https://goerli.etherscan.io)
-
-##### Goerli faucets
-
-- [Goerli faucet](https://faucet.goerli.mudit.blog/)
-- [Chainlink faucet](https://faucets.chain.link/)
-- [Alchemy Goerli Faucet](https://goerlifaucet.com/)
 
 #### Ropsten _(deprecated)_ {#ropsten}
 
