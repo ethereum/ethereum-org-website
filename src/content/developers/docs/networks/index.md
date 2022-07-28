@@ -36,7 +36,7 @@ ETH on testnets has no real value; therefore, there are no markets for testnet E
 
 #### Sepolia {#sepolia}
 
-Originally a proof-of-work testnet, now proof-of-stake. Sepolia is still running but it might not be maintained long term.
+Sepolia is a proof-of-stake testnet. Although Sepolia is still running, it is not currently planned to be maintained long-term. Before undergoing The Merge in June 2022, Sepolia was a proof-of-work testnet.
 
 - [Website](https://sepolia.dev/)
 - [GitHub](https://github.com/goerli/sepolia)
@@ -50,7 +50,7 @@ Originally a proof-of-work testnet, now proof-of-stake. Sepolia is still running
 
 #### Goerli {#goerli}
 
-Originally a proof-of-authority testnet, now proof-of-stake. Goerli is expected to be maintained long term as a stable testnet for application developers.
+Goerli is a proof-of-stake testnet. It is expected to be maintained long-term as a stable testnet for application developers. Before its testnet merge, Goerli was a proof-of-authority testnet.
 
 - [Website](https://goerli.net/)
 - [GitHub](https://github.com/goerli/testnet)
@@ -66,7 +66,7 @@ Originally a proof-of-authority testnet, now proof-of-stake. Goerli is expected 
 
 _Note, [the Ropsten testnet is deprecated](https://github.com/ethereum/pm/issues/460) and will no longer receive protocol upgrades. Please consider migrating your applications to Sepolia or Goerli._
 
-Ropsten was a proof-of-work testnet that went through The Merge to proof-of-stake in May 2022. It is likely to deprecated soon.
+Ropsten is a proof-of-stake testnet. Ropsten will be deprecated in late 2022. Before undergoing The Merge in May 2022, Ropsten was a proof-of-work testnet.
 
 ##### Ropsten faucets
 
