@@ -8226,6 +8226,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "varunshenoy",
+      "name": "Varun Shenoy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/10859091?v=4",
+      "profile": "http://varunshenoy.com",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
