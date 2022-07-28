@@ -881,7 +881,14 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
         <h2>
           <Translation id="page-stablecoins-tools-title" />
         </h2>
-        <ProductList category="Dashboards & Education" content={toolsData} />
+        <TwoColumnContent>
+          <StyledLeftColumn>
+            <ProductList
+              category="Dashboards & Education"
+              content={toolsData}
+            />
+          </StyledLeftColumn>
+        </TwoColumnContent>
       </PaddedContent>
       <Content>
         <FeedbackCard />
