@@ -27,7 +27,7 @@ Programu hizi zinasaidia ikolojia ya Ethereum kwa kutoa fedha kwa miradi mingi. 
 Miradi hii imeunda misaada yao kwa miradi inayolenga kukuza na kujaribu teknolojia yao wenyewe.
 
 - [Mpango wa Ruzuku wa Aave](https://aavegrants.org/) - _[Aave](https://aave.com/) hutoa ruzuku za DAO_
-- [Balancer](https://forms.gle/c68e4fM7JHCQkPkN7) - _fedha za ikolojia ya [Balancer](https://balancer.fi/)_
+- [Balancer](https://balancergrants.notion.site/Balancer-Community-Grants-23e562c5bc4347cd8304637bff0058e6) - _fedha za ikolojia ya [Balancer](https://balancer.fi/)_
 - [Mpango wa Ruzuku za Compound](https://compoundgrants.org/) - _[Compaound](https://compound.finance/) hugharamia ikolojia_
 - [Mpango wa Ruzuku wa Consensys](https://consensys.net/grants/) - _[Consensys](https://consensys.net/) fedha za minyororo ya blocku & ruzuku za Ethereum_
 - [Programu ya Ruzuku ya dYdX](https://dydxgrants.com/) - _[dYdX](https://dydx.exchange/) masoko yaliogatuliwa_
