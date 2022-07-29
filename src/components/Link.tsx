@@ -10,7 +10,6 @@ import Icon from "./Icon"
 import { isLang, Lang } from "../utils/languages"
 import { trackCustomEvent, EventOptions } from "../utils/matomo"
 import { Direction } from "../types"
-import { propTypes } from "gatsby-plugin-image/dist/src/components/gatsby-image.server"
 
 const HASH_PATTERN = /^#.*/
 // const DOMAIN_PATTERN = /^(?:https?:)?[/]{2,}([^/]+)/
