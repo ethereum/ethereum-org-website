@@ -147,8 +147,23 @@ Sometimes it is useful to have an administrator that can undo mistakes. To reduc
 
 OpenZeppelin provides two mechanisms to enable administrative access:
 
-- [`Ownable`](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/access/Ownable.sol) contracts 
+- [`Ownable`](https://docs.openzeppelin.com/contracts/4.x/access-control#ownership-and-ownable) contracts have a single owner. Functions that have the `onlyOwner` [modifier](https://www.tutorialspoint.com/solidity/solidity_function_modifiers.htm) can only be called by that owner. Owners can transfer ownership to somebody else or renounce it completely. The rights of all other accounts are typically identical.
+- [`AccessControl`](https://docs.openzeppelin.com/contracts/4.x/access-control#role-based-access-control) contracts have [role based access control (RBAC)](https://en.wikipedia.org/wiki/Role-based_access_control). 
 
+For the sake of simplicity, in this article we use `Ownable`.
+
+
+### Freezing and thawing contracts {#freezing-and-thawing-contracts}
+
+Freezing and thawing contracts requires several changes: 
+
+- A [mapping](https://www.tutorialspoint.com/solidity/solidity_mappings.htm) from addresses to [booleans](https://en.wikipedia.org/wiki/Boolean_data_type) to keep track of which addresses are frozen. All values are initially zero, which for boolean values is interpreted as false. This is what we want because by default accounts are not frozen.
+
+  ```solidity
+      mapping(address => bool) public frozenAccounts;
+  ```
+
+- [Events](https://www.tutorialspoint.com/solidity/solidity_events.htm) to inform anybody interested when an account is frozen or thawed. 
 
 ## Reversible transactions {#reversible-transactions}
 
