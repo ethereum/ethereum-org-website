@@ -5,10 +5,7 @@ lang: en
 sidebar: true
 ---
 
-Ethereum secures user's assets using public-private key cryptography. The public key is used as the basis for an
-Ethereum address - that is, it is visible to the general public and used as a unique identifier. The private (or 'secret')
-key should only ever be accessible to an account owner. The private key is used to 'sign' transactions and data so
-that it can be cryptographically proven that some actionw as approved by the holder of a specific private key.
+Ethereum secures user's assets using public-private key cryptography. The public key is used as the basis for an Ethereum address - that is, it is visible to the general public and used as a unique identifier. The private (or 'secret') key should only ever be accessible to an account owner. The private key is used to 'sign' transactions and data so that it can be cryptographically proven that some actionw as approved by the holder of a specific private key.
 
 Ethereum's keys are generated using [elliptic-curve cryptography](https://en.wikipedia.org/wiki/Elliptic-curve_cryptography).
 
