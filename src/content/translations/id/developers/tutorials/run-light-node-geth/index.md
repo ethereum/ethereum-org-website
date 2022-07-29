@@ -1,12 +1,12 @@
 ---
 title: Cara menjalankan node ringan dengan Geth
 description: How to download, install and run a lightclient with Geth.
-authors: "Brain Gu"
+author: "Brain Gu"
 tags:
   - "klien"
   - "geth"
   - "node"
-skill: pemula
+skill: beginner
 lang: id
 sidebar: true
 published: 2022-03-04

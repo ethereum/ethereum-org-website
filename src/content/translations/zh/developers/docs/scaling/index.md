@@ -16,7 +16,7 @@ sidebarDepth: 3
 
 从概念上说，我们首先将扩容分为链上扩容和链外扩容两类。
 
-## 前提条件 {#prerequisites}
+## 前体条件 {#prerequisites}
 
 你应对所有基础性课题有很好的了解。 实施扩容解决方案是一项先进的任务，因为该技术没有经过多少实践检验，还在进一步研发中。
 
@@ -28,7 +28,7 @@ sidebarDepth: 3
 
 区块分片是一个横向分割数据库以扩展网络承载能力的过程。 在以太坊中，区块分片将通过创建新链（称为“分片”）来减少网络拥塞和增加每秒交易量。 这还可以减轻每位验证者的负担，因为他们不再需要处理整个网络的所有交易。
 
-详细了解[区块分片](/upgrades/shard-chains/)。
+详细了解[区块分片](/upgrades/sharding/)。
 
 ## 链下扩容 {#off-chain-scaling}
 
@@ -80,9 +80,9 @@ Plasma 是一条独立的区块链，锚定至以太坊主链，并使用欺诈�
 
 ### Validium {#validium}
 
-Validium 链使用诸如零知识汇总之类的有效性证明，但数据不存储在一层以太坊主链上。 这可以导致每条 Validium 链每秒处理 10k 事务，并且可以并行运行多个链。
+Validium 链使用诸如零知识卷叠之类的有效性证明，但数据未存储在第一层以太坊链上。 这会导致每条 Validium 链每秒处理 10000 笔交易，并且可以并行运行多条链。
 
-详细了解 [Validium](/developers/docs/scaling/validium/)。
+了解关于 [Validium](/developers/docs/scaling/validium/) 的更多信息。
 
 ## 为何需要如此多扩容解决方案？ {#why-do-we-need-these}
 
@@ -95,13 +95,13 @@ Validium 链使用诸如零知识汇总之类的有效性证明，但数据不�
 
 <YouTube id="BgCgauWVTs0" />
 
-_请注意，视频中使用“第二层”这一术语指代所有链下扩容解决方案。 而我们通常所说的“第二层”是指通过第一层主网共识获得安全性的链下解决方案。_
+_请注意，视频中的解释使用“第二层”这一术语指代所有链下扩容解决方案，而我们通常所说的“第二层”是指通过第一层主网共识获得安全性的链下解决方案。_
 
 <YouTube id="7pWxCklcNsU" />
 
 ## 延伸阅读 {#further-reading}
 
-- [以卷叠为中心的以太坊路线图](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698) _Vitalik Buterin_
+- [以 rollup 为中心的以太坊路线图](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698) _Vitalik Buterin_
 - [有关以太坊第二层扩容解决方案的最新分析](https://www.l2beat.com/)
 - [评估以太坊第二层扩容解决方案：一个比较框架](https://medium.com/matter-labs/evaluating-ethereum-l2-scaling-solutions-a-comparison-framework-b6b2f410f955)
 - [卷叠不完全指南](https://vitalik.ca/general/2021/01/05/rollup.html)
@@ -110,4 +110,4 @@ _请注意，视频中使用“第二层”这一术语指代所有链下扩容�
 - [零知识区块链的可扩展性](https://ethworks.io/assets/download/zero-knowledge-blockchain-scaling-ethworks.pdf)
 - [为什么卷叠 + 数据分片是高可扩展性的唯一可持续的解决办法](https://polynya.medium.com/why-rollups-data-shards-are-the-only-sustainable-solution-for-high-scalability-c9aabd6fbb48)
 
-_还有哪些社区资源对您有所帮助？ 请编辑本页面并添加！_
+_您还知道哪些社区资源对您有帮助？ 请编辑本页面并进行添加！_

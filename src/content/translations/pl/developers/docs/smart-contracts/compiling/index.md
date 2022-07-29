@@ -271,9 +271,9 @@ Poniżej znajduje się ABI dla kontraktu z tokenem ERC-20. ERC-20 to token, któ
 
 ## Dalsza lektura {#further-reading}
 
-- [Specyfikacja ABI ](https://solidity.readthedocs.io/en/v0.7.0/abi-spec.html) _— Solidity_
+- [Specyfikacja ABI](https://solidity.readthedocs.io/en/v0.7.0/abi-spec.html) _— Solidity_
 
 ## Powiązane tematy {#related-topics}
 
 - [Biblioteki JavaScript](/developers/docs/apis/javascript/)
-- [Maszyna Wirtualna Ethereum](/developers/docs/ethereum-virtual-machine/)
+- [Maszyna Wirtualna Ethereum](/developers/docs/evm/)

@@ -250,6 +250,20 @@ const lightColors = {
   stakingRedFill: "#f8fbf9",
   layer2Gradient:
     "linear-gradient(85.12deg, rgba(185, 185, 241, 0.2) 0%, rgba(84, 132, 234, 0.2) 56.29%, rgba(58, 142, 137, 0.2) 99.99%)",
+  feedbackGradient:
+    "linear-gradient(102.7deg, rgba(185, 185, 241, 0.2) 0%, rgba(84, 132, 234, 0.2) 51.56%, rgba(58, 142, 137, 0.2) 100%)",
+  bannerGridGradient:
+    "linear-gradient(90deg, rgba(127,127,213,0.2) 0%, rgba(132,145,221,0.2) 50%, rgba(145,234,228,0.2) 100%)",
+  slider: {
+    bg: "#F7F7F7",
+    border: "#ECECEC",
+    dot: "#A4A4A4",
+    dotActive: "#1C1DFF",
+    btnBg: "#A4A4A4",
+    btnColor: white,
+    btnBgDisabled: "#E7E7E7",
+    btnColorDisabled: "#737373",
+  },
 }
 
 // TODO replace random variables w/ baseColor variables
@@ -352,6 +366,20 @@ const darkColors = {
   stakingRedFill: "#313432",
   layer2Gradient:
     "linear-gradient(83.46deg, rgba(127, 127, 213, 0.2) 7.03%, rgba(138, 168, 231, 0.2) 52.42%, rgba(145, 234, 228, 0.2) 98.77%), #1E1E1E",
+  feedbackGradient:
+    "linear-gradient(83.46deg, #2C2C32 7.03%, #44404D 52.42%, #303038 98.77%)",
+  bannerGridGradient:
+    "linear-gradient(90deg, rgba(172, 182, 229, 0.08) 0%, rgba(134, 253, 232, 0.08) 100%)",
+  slider: {
+    bg: "#191919",
+    border: "#404040",
+    dot: "#A4A4A4",
+    dotActive: "#FF7324",
+    btnBg: "#404040",
+    btnColor: white,
+    btnBgDisabled: "#404040",
+    btnColorDisabled: "#737373",
+  },
 }
 
 const lightThemeColors = Object.assign({}, baseColors, lightColors)

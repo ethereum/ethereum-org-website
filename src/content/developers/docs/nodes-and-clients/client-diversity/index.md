@@ -4,6 +4,7 @@ description: A high level explanation of the importance of Ethereum client diver
 lang: en
 sidebar: true
 sidebarDepth: 2
+preMergeBanner: true
 ---
 
 The behavior of an Ethereum node is controlled by the client software it runs. There are several production-level Ethereum clients, each one developed and maintained in different languages by separate teams. The clients are built to a common spec that ensures the clients seamlessly communicate with each other and have the same functionality and provide an equivalent user experience. However, at the moment the distribution of clients across nodes is not equal enough to realize this network fortification to its full potential. Ideally, users divide roughly equally across the various clients to bring as much client diversity as possible to the network.
@@ -51,6 +52,10 @@ The execution layer data were obtained from [Ethernodes](https://ethernodes.org)
 
 Up to date client diversity data for the consensus layer is now available at https://clientdiversity.org/.
 
+## Execution layer {#execution-layer}
+
+Until now, the conversation around client diversity has focused mainly on the consensus layer. However, the execution client [Geth](https://geth.ethereum.org) currently accounts for around 85% of all nodes. This percentage is problematic for the same reasons as for consensus clients. For example, a bug in Geth affecting transaction handling or constructing execution payloads could lead to consensus clients finalizing problematic or bugged transactions. Therefore, Ethereum would be healthier with a more even distribution of execution clients, ideally with no client representing more than 33% of the network.
+
 ## Use a minority client {#use-minority-client}
 
 Addressing client diversity requires more than individual users to choose minority clients - it requires mining/validator pools and institutions like the major dapps and exchanges to switch clients too. However, all users can do their part in redressing the current imbalance and normalizing the use of all the available Ethereum software. After The Merge, all node operators will be required to run an execution client and a consensus client. Choosing combinations of the clients suggested below will help increase client diversity.
@@ -63,7 +68,9 @@ Addressing client diversity requires more than individual users to choose minori
 
 [Erigon](https://github.com/ledgerwatch/erigon)
 
-[CoreGeth](https://core-geth.org/)
+[Akula](https://akula.app)
+
+[Go-Ethereum](https://geth.ethereum.org/)
 
 ### Consensus clients {#consensus-clients}
 

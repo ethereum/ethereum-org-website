@@ -59,8 +59,8 @@ La plupart des IDE ont construit des plugins pour améliorer l'expérience de d�
 
 ## Plugins et extensions {#plugins-extensions}
 
-- [Solidity : ](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity)Ethereum Solidity Language for Visual Studio Code
-- [Prettier Solidity : ](https://github.com/prettier-solidity/prettier-plugin-solidity)Formateur de code utilisant prettier
+- [Solidity](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity) - Ethereum Solidity Language for Visual Studio Code
+- [Prettier Solidity](https://github.com/prettier-solidity/prettier-plugin-solidity) - Formateur de code utilisant prettier
 
 ## Complément d'information {#further-reading}
 

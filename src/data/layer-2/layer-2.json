@@ -10,7 +10,7 @@
       "blockExplorer": "https://explorer.arbitrum.io/",
       "ecosystemPortal": "https://portal.arbitrum.one/",
       "tokenLists": "https://arbucks.io/tokens/",
-      "noteKey": "",
+      "noteKey": "layer-2-arbitrum-note",
       "purpose": ["universal"],
       "descriptionKey": "arbitrum-description",
       "imageKey": "arbitrum",
@@ -142,6 +142,22 @@
       "descriptionKey": "zkspace-description",
       "imageKey": "zkspace",
       "background": "black"
+    },
+    {
+      "name": "Aztec",
+      "website": "https://aztec.network/",
+      "developerDocs": "https://developers.aztec.network/",
+      "l2beat": "https://l2beat.com/projects/aztec",
+      "bridge": "https://zk.money/",
+      "bridgeWallets": ["MetaMask", "WalletConnect"],
+      "blockExplorer": "https://explorer.aztec.network/",
+      "ecosystemPortal": "",
+      "tokenLists": "",
+      "noteKey": "",
+      "purpose": ["payments", "integrations"],
+      "descriptionKey": "aztec-description",
+      "imageKey": "aztec",
+      "background": "white"
     }
   ]
 }

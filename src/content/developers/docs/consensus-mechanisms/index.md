@@ -3,7 +3,6 @@ title: Consensus mechanisms
 description: An explanation of consensus protocols in distributed systems and the role they play in Ethereum.
 lang: en
 sidebar: true
-incomplete: true
 ---
 
 When it comes to blockchains like Ethereum, which are, in essence, distributed databases, the network's nodes must reach an agreement on the network's current state. This agreement is achieved using consensus mechanisms.
@@ -50,7 +49,7 @@ More on [proof-of-work](/developers/docs/consensus-mechanisms/pow/)
 
 ### Proof-of-stake {#proof-of-stake}
 
-Ethereum has plans to upgrade to a **proof-of-stake (PoS)** consensus protocol.
+Ethereum plans to upgrade to a **proof-of-stake (PoS)** consensus protocol.
 
 #### Block creation {#pos-block-creation}
 

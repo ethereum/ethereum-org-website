@@ -66,7 +66,7 @@ Grid could be seen as a successor to Mist, also a standalone, JavaScript-based d
 
 **Alternatives**
 
-[DappNode](https://dappnode.io/) is a platform for deploying and hosting DApps, P2P clients, and blockchain nodes.
+[DAppNode](https://dappnode.io/) is a platform for deploying and hosting dapps, P2P clients, and blockchain nodes.
 
 ### Ethereum Studio {#ethereum-studio}
 
@@ -88,7 +88,7 @@ Ethereum Studio was a web-based IDE which allowed users to create and test smart
 
 **History**
 
-Ethereum Studio was developed to provide users with an IDE that had a built-in Ethereum blockchain and Solidity compiler. In addition to this it provided the ability to live edit code and export full DApps without the need for a terminal.
+Ethereum Studio was developed to provide users with an IDE that had a built-in Ethereum blockchain and Solidity compiler. In addition to this it provided the ability to live edit code and export full dapps without the need for a terminal.
 
 **Alternatives**
 
@@ -234,7 +234,7 @@ Ethereum-H was an Ethereum client written in Haskell. It was deprecated around 2
 
 **Alternatives**
 
-[Geth](https://geth.ethereum.org/), [Nethermind](http://nethermind.io/), [Besu](https://pegasys.tech/solutions/hyperledger-besu/) and [Erigon](https://github.com/ledgerwatch/erigon) are viable alternative Ethereum clients - there is no current Haskell client.
+[Geth](https://geth.ethereum.org/), [Nethermind](http://nethermind.io/), [Besu](https://besu.hyperledger.org/en/stable/) and [Erigon](https://github.com/ledgerwatch/erigon) are viable alternative Ethereum clients - there is no current Haskell client.
 
 ### ruby-ethereum {#ruby-ethereum}
 
@@ -248,7 +248,7 @@ ruby-ethereum was an Ethereum client written in Ruby. It was deprecated around 2
 
 **Alternatives**
 
-[Geth](https://geth.ethereum.org/), [Nethermind](http://nethermind.io/), [Besu](https://pegasys.tech/solutions/hyperledger-besu/) and [Erigon](https://github.com/ledgerwatch/erigon) are viable alternative Ethereum clients. There is no current Ruby client.
+[Geth](https://geth.ethereum.org/), [Nethermind](http://nethermind.io/), [Besu](https://besu.hyperledger.org/en/stable/) and [Erigon](https://github.com/ledgerwatch/erigon) are viable alternative Ethereum clients. There is no current Ruby client.
 
 ### Parity {#parity}
 

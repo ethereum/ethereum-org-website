@@ -1,4 +1,5 @@
 import React from "react"
+import { useIntl } from "react-intl"
 import { graphql, PageProps } from "gatsby"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
@@ -6,7 +7,9 @@ import styled from "styled-components"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 import ButtonLink from "../components/ButtonLink"
-import ButtonDropdown from "../components/ButtonDropdown"
+import ButtonDropdown, {
+  List as ButtonDropdownList,
+} from "../components/ButtonDropdown"
 import BannerNotification from "../components/BannerNotification"
 import Card from "../components/Card"
 import ExpandableCard from "../components/ExpandableCard"
@@ -23,7 +26,9 @@ import PageMetadata from "../components/PageMetadata"
 import Pill from "../components/Pill"
 import RandomAppList from "../components/RandomAppList"
 import Roadmap from "../components/Roadmap"
-import UpgradeTableOfContents from "../components/UpgradeTableOfContents"
+import UpgradeTableOfContents, {
+  Item as ItemTableOfContents,
+} from "../components/UpgradeTableOfContents"
 import TableOfContents from "../components/TableOfContents"
 import TranslationsInProgress from "../components/TranslationsInProgress"
 import Translation from "../components/Translation"
@@ -33,9 +38,12 @@ import {
   Paragraph,
   Header1,
   Header4,
+  ListItem,
 } from "../components/SharedStyledComponents"
 import Emoji from "../components/Emoji"
 import YouTube from "../components/YouTube"
+import PreMergeBanner from "../components/PreMergeBanner"
+import FeedbackCard from "../components/FeedbackCard"
 
 import { isLangRightToLeft } from "../utils/translations"
 import { getSummaryPoints } from "../utils/getSummaryPoints"
@@ -120,7 +128,7 @@ const InfoTitle = styled.h2`
   margin-top: 0rem;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     text-align: left;
-    font-size: 2.5rem
+    font-size: 2.5rem;
     display: none;
   }
 `
@@ -145,6 +153,7 @@ const components = {
   h3: H3,
   h4: Header4,
   p: Paragraph,
+  li: ListItem,
   pre: Pre,
   table: MarkdownTable,
   MeetupList,
@@ -299,14 +308,17 @@ const UseCasePage = ({
   data: { siteData, pageData: mdx },
   pageContext,
 }: PageProps<Queries.UseCasePageQuery, Context>) => {
-  if (!siteData || !mdx?.frontmatter) {
+  const intl = useIntl()
+  if (!siteData || !mdx?.frontmatter)
     throw new Error(
       "UseCases page template query does not return expected values"
     )
-  }
+  if (!mdx?.frontmatter?.title)
+    throw new Error("Required `title` property missing for use-cases template")
 
   const isRightToLeft = isLangRightToLeft(mdx.frontmatter.lang as Lang)
-  const tocItems = mdx.tableOfContents?.items
+  const showMergeBanner = !!mdx.frontmatter.preMergeBanner
+  const tocItems = mdx.tableOfContents?.items as Array<ItemTableOfContents>
   const summaryPoints = getSummaryPoints(mdx.frontmatter)
 
   const { editContentUrl } = siteData.siteMetadata || {}
@@ -320,8 +332,16 @@ const UseCasePage = ({
   if (pageContext.slug.includes("nft")) {
     useCase = "nft"
   }
+  // Use the same styling as DeFi page for hero image
+  if (pageContext.slug.includes("social")) {
+    useCase = "defi"
+  }
+  // Use the same styling as DAOs page for hero image
+  if (pageContext.slug.includes("identity")) {
+    useCase = "dao"
+  }
 
-  const dropdownLinks = {
+  const dropdownLinks: ButtonDropdownList = {
     text: "template-usecase-dropdown",
     ariaLabel: "template-usecase-dropdown-aria",
     items: [
@@ -337,23 +357,35 @@ const UseCasePage = ({
         text: "template-usecase-dropdown-dao",
         to: "/dao/",
       },
+      {
+        text: "template-usecase-dropdown-social-networks",
+        to: "/social-networks/",
+      },
+      {
+        text: "template-usecase-dropdown-identity",
+        to: "/decentralized-identity/",
+      },
     ],
   }
 
   return (
     <Container>
-      <StyledBannerNotification shouldShow>
-        <StyledEmoji text=":pencil:" />
-        <div>
-          <Translation id="template-usecase-banner" />{" "}
-          <Link to={absoluteEditPath}>
-            <Translation id="template-usecase-edit-link" />
-          </Link>
-        </div>
-      </StyledBannerNotification>
+      {showMergeBanner ? (
+        <PreMergeBanner />
+      ) : (
+        <StyledBannerNotification shouldShow>
+          <StyledEmoji text=":pencil:" />
+          <div>
+            <Translation id="template-usecase-banner" />{" "}
+            <Link to={absoluteEditPath}>
+              <Translation id="template-usecase-edit-link" />
+            </Link>
+          </div>
+        </StyledBannerNotification>
+      )}
       <HeroContainer>
         <TitleCard>
-          <Emoji size={4} text={mdx.frontmatter.emoji} />
+          <Emoji size={4} text={mdx.frontmatter.emoji!} />
           <Title>{mdx.frontmatter.title}</Title>
           <SummaryBox>
             <ul>
@@ -364,7 +396,7 @@ const UseCasePage = ({
           </SummaryBox>
           <MobileTableOfContents
             items={tocItems}
-            maxDepth={mdx.frontmatter.sidebarDepth}
+            maxDepth={mdx.frontmatter.sidebarDepth!}
             isMobile={true}
           />
         </TitleCard>
@@ -389,7 +421,7 @@ const UseCasePage = ({
           {mdx.frontmatter.sidebar && tocItems && (
             <UpgradeTableOfContents
               items={tocItems}
-              maxDepth={mdx.frontmatter.sidebarDepth}
+              maxDepth={mdx.frontmatter.sidebarDepth!}
             />
           )}
         </InfoColumn>
@@ -397,6 +429,7 @@ const UseCasePage = ({
           <MDXProvider components={components}>
             <MDXRenderer>{mdx.body}</MDXRenderer>
           </MDXProvider>
+          <FeedbackCard />
         </ContentContainer>
         <MobileButton>
           <MobileButtonDropdown list={dropdownLinks} />
@@ -438,6 +471,7 @@ export const useCasePageQuery = graphql`
           }
         }
         isOutdated
+        preMergeBanner
       }
       body
       tableOfContents

@@ -8,7 +8,7 @@ tags:
   - "solidity"
   - "memulai"
   - "menyebarkan"
-skill: pemula
+skill: beginner
 lang: id
 sidebar: true
 published: 2020-04-03

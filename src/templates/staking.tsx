@@ -6,7 +6,9 @@ import { MDXProvider } from "@mdx-js/react"
 import styled from "styled-components"
 
 import ButtonLink from "../components/ButtonLink"
-import ButtonDropdown from "../components/ButtonDropdown"
+import ButtonDropdown, {
+  List as ButtonDropdownList,
+} from "../components/ButtonDropdown"
 import Card from "../components/Card"
 import ExpandableCard from "../components/ExpandableCard"
 import DocLink from "../components/DocLink"
@@ -22,7 +24,9 @@ import Pill from "../components/Pill"
 import RandomAppList from "../components/RandomAppList"
 import Roadmap from "../components/Roadmap"
 import UpgradeTableOfContents from "../components/UpgradeTableOfContents"
-import TableOfContents from "../components/TableOfContents"
+import TableOfContents, {
+  Item as ItemTableOfContents,
+} from "../components/TableOfContents"
 import TranslationsInProgress from "../components/TranslationsInProgress"
 import FeedbackCard from "../components/FeedbackCard"
 import SectionNav from "../components/SectionNav"
@@ -44,7 +48,7 @@ import StakingConsiderations from "../components/Staking/StakingConsiderations"
 import StakingCommunityCallout from "../components/Staking/StakingCommunityCallout"
 import StakingGuides from "../components/Staking/StakingGuides"
 
-import { isLangRightToLeft } from "../utils/translations"
+import { isLangRightToLeft, TranslationKey } from "../utils/translations"
 import { Context } from "../types"
 import { Lang } from "../utils/languages"
 
@@ -344,22 +348,23 @@ const StakingPage = ({
   data: { pageData: mdx },
   location,
 }: PageProps<Queries.StakingPageQuery, Context>) => {
-  if (!mdx?.frontmatter) {
+  if (!mdx?.frontmatter)
     throw new Error(
       "Staking page template query does not return expected values"
     )
-  }
+  if (!mdx?.frontmatter?.title)
+    throw new Error("Required `title` property missing for staking template")
 
   const isRightToLeft = isLangRightToLeft(mdx.frontmatter.lang as Lang)
-  const tocItems = mdx.tableOfContents?.items
+  const tocItems = mdx.tableOfContents?.items as Array<ItemTableOfContents>
   const { summaryPoints } = mdx.frontmatter
 
-  const dropdownLinks = {
-    text: "Staking Options",
+  const dropdownLinks: ButtonDropdownList = {
+    text: "Staking Options" as TranslationKey,
     ariaLabel: "Staking options dropdown menu",
     items: [
       {
-        text: "Staking home",
+        text: "Staking home" as TranslationKey,
         to: "/staking/",
         matomo: {
           eventCategory: `Staking dropdown`,
@@ -368,7 +373,7 @@ const StakingPage = ({
         },
       },
       {
-        text: "Solo staking",
+        text: "Solo staking" as TranslationKey,
         to: "/staking/solo/",
         matomo: {
           eventCategory: `Staking dropdown`,
@@ -377,7 +382,7 @@ const StakingPage = ({
         },
       },
       {
-        text: "Staking as a service",
+        text: "Staking as a service" as TranslationKey,
         to: "/staking/saas/",
         matomo: {
           eventCategory: `Staking dropdown`,
@@ -386,7 +391,7 @@ const StakingPage = ({
         },
       },
       {
-        text: "Pooled staking",
+        text: "Pooled staking" as TranslationKey,
         to: "/staking/pools/",
         matomo: {
           eventCategory: `Staking dropdown`,
@@ -410,7 +415,7 @@ const StakingPage = ({
           </ul>
           <MobileTableOfContents
             items={tocItems}
-            maxDepth={mdx.frontmatter.sidebarDepth}
+            maxDepth={mdx.frontmatter.sidebarDepth!}
             isMobile={true}
           />
         </TitleCard>
@@ -432,7 +437,7 @@ const StakingPage = ({
           {mdx.frontmatter.sidebar && tocItems && (
             <UpgradeTableOfContents
               items={tocItems}
-              maxDepth={mdx.frontmatter.sidebarDepth}
+              maxDepth={mdx.frontmatter.sidebarDepth!}
             />
           )}
         </InfoColumn>

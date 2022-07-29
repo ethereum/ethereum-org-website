@@ -9,9 +9,9 @@ sidebarDepth: 3
 
 通道允许参与者在链下进行`x`次交易，而在链上只能向网络提交两次交易。 这允许极高的交易吞吐量.
 
-## 前提条件 {#prerequisites}
+## 先决条件 {#prerequisites}
 
-您应该很好地了解所有基本主题，并且对[以太坊扩容](/developers/docs/scaling/)有高级别的理解。 实现诸如渠道之类的扩展解决方案是一个高级主题，因为该技术没有经过多少实战测试，而且还在继续研究和开发。
+您应对所有基础性课题有很好的了解，并且对[以太坊扩容](/developers/docs/scaling/)有深入的了解。 实现诸如渠道之类的扩展解决方案是一个高级主题，因为该技术没有经过多少实战测试，而且还在继续研究和开发。
 
 ## 通道 {#channels}
 
@@ -67,10 +67,10 @@ sidebarDepth: 3
 - [状态通道上的 EthHub](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/state-channels/)
 - [Making Sense of Ethereum’s Layer 2 Scaling Solutions: State Channels, Plasma, and Truebit（理解以太坊的第二层扩容解决方案：状态通道、Plasma 和 Truebit）](https://medium.com/l4-media/making-sense-of-ethereums-layer-2-scaling-solutions-state-channels-plasma-and-truebit-22cb40dcc2f4) _– Josh Stark, Feb 12 2018_
 - [State Channels - an explanation（状态通道）- 解释](https://www.jeffcoleman.ca/state-channels/) _Nov 6, 2015 - Jeff Coleman_
-- [ 状态通道的基础知识 ](https://education.district0x.io/general-topics/understanding-ethereum/basics-state-channels/) _District0x_
+- [状态通道的基础知识](https://education.district0x.io/general-topics/understanding-ethereum/basics-state-channels/) _District0x_
 
 **支付通道**
 
 - [支付通道的 EthHub](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/payment-channels/)
 
-_你知道有什么社区资源帮助过你吗？ 编辑并添加本页面！_
+_还有哪些社区资源对您有所帮助？ 请编辑本页面并添加！_

@@ -113,7 +113,7 @@ Questa tabella riepiloga i diversi client. Tutti superano i [test dei client](ht
 | [Geth](https://geth.ethereum.org/)                           | Go         | Linux, Windows, macOS | Mainnet, Görli, Rinkeby, Ropsten         | Fast, Full                    | Archive, Pruned           |
 | [OpenEthereum](https://github.com/openethereum/openethereum) | Rust       | Linux, Windows, macOS | Mainnet, Kovan, Ropsten e altre          | Warp, Full                    | Archive, Pruned           |
 | [Nethermind](http://nethermind.io/)                          | C#, .NET   | Linux, Windows, macOS | Mainnet, Görli, Ropsten, Rinkeby e altre | Fast, Full                    | Archive, Pruned           |
-| [Besu](https://pegasys.tech/solutions/hyperledger-besu/)     | Java       | Linux, Windows, macOS | Mainnet, Rinkeby, Ropsten e Görli        | Fast, Full                    | Archive, Pruned           |
+| [Besu](https://besu.hyperledger.org/en/stable/)              | Java       | Linux, Windows, macOS | Mainnet, Rinkeby, Ropsten e Görli        | Fast, Full                    | Archive, Pruned           |
 | [Erigon](https://github.com/ledgerwatch/erigon)              | Go         | Linux, Windows, macOS | Mainnet, Görli, Rinkeby, Ropsten         | Fast, Full                    | Archive, Pruned           |
 
 Per ulteriori informazioni sulle reti supportate, consulta [reti Ethereum](/developers/docs/networks/).
@@ -154,7 +154,7 @@ Hyperledger Besu è un client Ethereum di livello enterprise per reti pubbliche 
 
 #### Erigon {#erigon}
 
-Erigon, precedentemente noto come Turbo-Geth, è una diramazione di Go Ethereum orientata alla velocità e all'efficienza dello spazio su disco. Erigon è un'implementazione completamente riprogettata di Ethereum, correntemente scritta in Go ma con implementazioni pianificate in altri linguaggi. L'obiettivo di Erigon è fornire un'implementazione più veloce, modulare e ottimizzata di Ethereum. Può eseguire una sincronizzazione completa del nodo d'archivio usando meno di 2TB di spazio su disco, in meno di 3 giorni.
+Erigon, precedentemente noto come Erigon, è una diramazione di Go Ethereum orientata alla velocità e all'efficienza dello spazio su disco. Erigon è un'implementazione completamente riprogettata di Ethereum, correntemente scritta in Go ma con implementazioni pianificate in altri linguaggi. L'obiettivo di Erigon è fornire un'implementazione più veloce, modulare e ottimizzata di Ethereum. Può eseguire una sincronizzazione completa del nodo d'archivio usando meno di 2TB di spazio su disco, in meno di 3 giorni.
 
 ### Modalità di sincronizzazione {#sync-modes}
 

@@ -8,7 +8,7 @@ tags:
   - "optimism"
   - "bridge"
   - "lapisan 2"
-skill: tingkat menengah
+skill: intermediate
 published: 2022-03-30
 lang: id
 ---

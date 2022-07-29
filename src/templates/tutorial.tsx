@@ -14,7 +14,9 @@ import Link from "../components/Link"
 import MarkdownTable from "../components/MarkdownTable"
 import PageMetadata from "../components/PageMetadata"
 import Pill from "../components/Pill"
-import TableOfContents from "../components/TableOfContents"
+import TableOfContents, {
+  Item as ItemTableOfContents,
+} from "../components/TableOfContents"
 import SectionNav from "../components/SectionNav"
 import CallToContribute from "../components/CallToContribute"
 import {
@@ -29,6 +31,8 @@ import {
 } from "../components/SharedStyledComponents"
 import Emoji from "../components/Emoji"
 import YouTube from "../components/YouTube"
+import PreMergeBanner from "../components/PreMergeBanner"
+import FeedbackCard from "../components/FeedbackCard"
 
 import { isLangRightToLeft } from "../utils/translations"
 import { Lang } from "../utils/languages"
@@ -147,51 +151,60 @@ const Contributors = styled(FileContributors)`
 
 const TutorialPage = ({
   data: { siteData, pageData: mdx },
-  pageContext,
+  pageContext: { relativePath },
 }: PageProps<Queries.TutorialPageQuery, Context>) => {
-  if (!siteData || !mdx?.frontmatter) {
+  if (!siteData || !mdx?.frontmatter)
     throw new Error(
       "Tutorial page template query does not return expected values"
     )
-  }
+  if (!mdx?.frontmatter?.title)
+    throw new Error("Required `title` property missing for tutorial template")
+  if (!relativePath)
+    throw new Error("Required `relativePath` is missing on pageContext")
 
   const isRightToLeft = isLangRightToLeft(mdx.frontmatter.lang as Lang)
+  const showMergeBanner = !!mdx.frontmatter.preMergeBanner
 
-  const tocItems = mdx.tableOfContents?.items
+  const tocItems = mdx.tableOfContents?.items as Array<ItemTableOfContents>
 
   const { editContentUrl } = siteData.siteMetadata || {}
-  const { relativePath } = pageContext
   const absoluteEditPath = `${editContentUrl}${relativePath}`
-
   return (
-    <Page dir={isRightToLeft ? "rtl" : "ltr"}>
-      <PageMetadata
-        title={mdx.frontmatter.title}
-        description={mdx.frontmatter.description}
-        canonicalUrl={mdx.frontmatter.sourceUrl}
-      />
-      <ContentContainer>
-        <H1>{mdx.frontmatter.title}</H1>
-        <TutorialMetadata tutorial={mdx} />
-        <MobileTableOfContents
-          items={tocItems}
-          maxDepth={mdx.frontmatter.sidebarDepth}
-          editPath={absoluteEditPath}
-          isMobile={true}
+    <div>
+      {showMergeBanner && <PreMergeBanner />}
+      <Page dir={isRightToLeft ? "rtl" : "ltr"}>
+        <PageMetadata
+          title={mdx.frontmatter.title}
+          description={mdx.frontmatter.description}
+          canonicalUrl={mdx.frontmatter.sourceUrl}
         />
-        <MDXProvider components={components}>
-          <MDXRenderer>{mdx.body}</MDXRenderer>
-        </MDXProvider>
-        <Contributors relativePath={relativePath} editPath={absoluteEditPath} />
-      </ContentContainer>
-      {mdx.frontmatter.sidebar && tocItems && (
-        <DesktopTableOfContents
-          items={tocItems}
-          maxDepth={mdx.frontmatter.sidebarDepth}
-          editPath={absoluteEditPath}
-        />
-      )}
-    </Page>
+        <ContentContainer>
+          <H1>{mdx.frontmatter.title}</H1>
+          <TutorialMetadata tutorial={mdx} />
+          <MobileTableOfContents
+            items={tocItems}
+            maxDepth={mdx.frontmatter.sidebarDepth!}
+            editPath={absoluteEditPath}
+            isMobile={true}
+          />
+          <MDXProvider components={components}>
+            <MDXRenderer>{mdx.body}</MDXRenderer>
+          </MDXProvider>
+          <Contributors
+            relativePath={relativePath}
+            editPath={absoluteEditPath}
+          />
+          <FeedbackCard />
+        </ContentContainer>
+        {mdx.frontmatter.sidebar && tocItems && (
+          <DesktopTableOfContents
+            items={tocItems}
+            maxDepth={mdx.frontmatter.sidebarDepth!}
+            editPath={absoluteEditPath}
+          />
+        )}
+      </Page>
+    </div>
   )
 }
 
@@ -225,6 +238,7 @@ export const query = graphql`
         sidebarDepth
         address
         isOutdated
+        preMergeBanner
       }
       body
       tableOfContents

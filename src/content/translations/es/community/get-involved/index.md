@@ -61,7 +61,7 @@ Al apostar su ETH, puede ganar recompensas mientras ayuda a asegurar la red Ethe
 
 - [Más acerca de las apuestas (staking).](/staking/)
 
-### Apoye proyectos {#suport-projects}
+### Apoye proyectos {#support-projects}
 
 El ecosistema de Ethereum tiene la misión de financiar bienes públicos y proyectos con gran repercusión. A través de donaciones muy pequeñas puede mostrar su apoyo y permitir que se realice un trabajo importante.
 
@@ -86,32 +86,33 @@ El ecosistema de Ethereum tiene la misión de financiar bienes públicos y proye
 **¿Quiere trabajar en Ethereum?**
 
 - [ethereum.org vacantes de empleo](/about/#open-jobs)
-- [Ethereum Foundation job board (Lever)](https://jobs.lever.co/ethereumfoundation)
-- [Ethereum Foundation job board (BambooHR)](https://ethereum.bamboohr.com/jobs/)
-- [Vacantes de empleo en criptomonedas](https://cryptocurrencyjobs.co/ethereum/)
+- [Bolsa de trabajo de Ethereum Foundation (Lever)](https://jobs.lever.co/ethereumfoundation)
+- [Bolsa de trabajo de Ethereum Foundation (BambooHR)](https://ethereum.bamboohr.com/jobs/)
+- [Vacantes de empleo de criptomoneda](https://cryptocurrencyjobs.co/ethereum/)
 - [Crypto.jobs](https://crypto.jobs/)
 - [Empleo en ConsenSys](https://consensys.net/careers/)
-- [Lista de vacantes de cripto](https://cryptojobslist.com/ethereum-jobs)
-- [Bolsa de empleo Bankless](https://pallet.xyz/list/bankless/jobs)
-- [Empleo en useWeb3](https://www.useweb3.xyz/jobs)
-- [Vacantes en Web3](https://web3.career)
+- [Lista de empleos de cripto](https://cryptojobslist.com/ethereum-jobs)
+- [Bolsa de trabajo Bankless](https://pallet.xyz/list/bankless/jobs)
+- [Vacantes de empleo useWeb3](https://www.useweb3.xyz/jobs)
+- [Vacantes de empleo Web3](https://web3.career)
 - [Web3 Army](https://web3army.xyz/)
 
 ## Únase a una DAO {#decentralized-autonomous-organizations-daos}
 
 Las «DAO» son organizaciones autónomas descentralizadas. Estos grupos aprovechan la tecnología de Ethereum para facilitar la organización y la colaboración. Por ejemplo, para controlar una membresía, votar sobre propuestas o administrar activos mancomunados. Aunque las DAO aún están en fase experimental, ofrecen oportunidades para que encuentre grupos con los que se identifique, contacte con colaboradores y aumente su impacto en la comunidad Ethereum. [Más información sobre las DAO.](/dao/)
 
-- [LexDAO](https://lexdao.coop) [@lex_DAO](https://twitter.com/lex_DAO) - _Legal engineering_
-- [Machi X](https://machix.com) [@MachiXOfficial](https://twitter.com/MachiXOfficial) - _Art community_
-- [MetaCartel](https://metacartel.org) [@Meta_Cartel](https://twitter.com/Meta_Cartel) - _DAO incubator_
-- [MetaCartel Ventures](https://metacartel.xyz) [@VENTURE_DAO](https://twitter.com/VENTURE_DAO) - _Iniciativa de prelanzamiento de proyectos criptográficos_
-- [MetaGame](https://metagame.wtf) [@MetaFam](https://twitter.com/MetaFam) - _MMORPG Game Mechanics for Real Life_
-- [MetaFactory](https://metafactory.ai) [@TheMetaFactory](https://twitter.com/TheMetaFactory) - _Marcas de ropa «digifísicas»_
-- [MolochDAO](https://molochdao.com) [@MolochDAO](https://twitter.com/MolochDAO) - _Comunidad centrada en la financiación del desarrollo de Ethereum_
-- [ΜΓΔ](https://metagammadelta.com/) (Meta Gamma Delta) [@metagammadelta](https://twitter.com/metagammadelta) - _Proyectos dirigidos por mujeres_
-- [Raid Guild](https://raidguild.org) [@RaidGuild](https://twitter.com/RaidGuild) - _Colectivo de desarrolladores de Web3_
-- [DAOSquare](https://www.daosquare.io) [@DAOSquare](https://twitter.com/DAOSquare) - _Promueve el concepto de DAO en el campo no técnico y ayuda a las personas a crear valor a través de DAO._
-- [dOrg](https://dOrg.tech) [@dOrg_tech](https://twitter.com/dOrg_tech) - _Colectivo independiente de desarrollo de Web3 que funciona como una DAO._
-- [HausDAO](https://daohaus.club) [@nowdaoit](https://twitter.com/nowdaoit) - _Comunidad de gobernanza de DAOhaus_
-- [Developer DAO](https://www.developerdao.com/) [@developer_dao](https://twitter.com/developer_dao) - _Comunidad de desarrolladores que creen en la propiedad colectiva de internet_.
-- [DXdao](https://DXdao.eth.link/) [@DXdao](https://twitter.com/DXdao_) - _Decentralized development & governance of dApps & protocols_
+- [DAOSquare](https://www.daosquare.io) [@DAOSquare](https://twitter.com/DAOSquare) - _Fomente el concepto DAO en un terreno que no sea técnico y ayude a que la gente cree valor a través de las DAO_
+- [Developer DAO](https://www.developerdao.com/) [@developer_dao](https://twitter.com/developer_dao): _Comunidad de desarrolladores que creen en la propiedad colectiva de Internet_
+- [dOrg](https://dOrg.tech) [@dOrg_tech](https://twitter.com/dOrg_tech): _Colectivo independiente de desarrollo de Web3 que funciona como una DAO_
+- [DXdao](https://DXdao.eth.link/) [@DXdao](https://twitter.com/DXdao_): _Desarrollo descentralizado & gobernanza de dApps & protocolos_
+- [HausDAO](https://daohaus.club) [@nowdaoit](https://twitter.com/nowdaoit): _Comunidad de gobernanza de DAOhaus_
+- [Hero DAO](https://herodao.org/) [@hero_dao](https://twitter.com/hero_dao) - _Franquicia de imágenes superhero de propiedad comunitaria_
+- [LexDAO](https://lexdao.coop) [@lex_DAO](https://twitter.com/lex_DAO): _Ingeniería jurídica_
+- [Machi X](https://machix.com) [@MachiXOfficial](https://twitter.com/MachiXOfficial): _Comunidad artística_
+- [MetaCartel](https://metacartel.org) [@Meta_Cartel](https://twitter.com/Meta_Cartel): _Vivero de DAO_
+- [MetaCartel Ventures](https://metacartel.xyz) [@VENTURE_DAO](https://twitter.com/VENTURE_DAO): _Iniciativa de prelanzamiento de proyectos de criptomonedas_
+- [MetaGame](https://metagame.wtf) [@MetaFam](https://twitter.com/MetaFam): _Mecánica de juego MMORPG aplicada a la vida real_
+- [MetaFactory](https://metafactory.ai) [@TheMetaFactory](https://twitter.com/TheMetaFactory): _Marcas de ropa «digifísicas»_
+- [ΜΓΔ](https://metagammadelta.com/) (Meta Gamma Delta) [@metagammadelta](https://twitter.com/metagammadelta): _Proyectos dirigidos por mujeres_
+- [MolochDAO](https://molochdao.com) [@MolochDAO](https://twitter.com/MolochDAO): _Comunidad centrada en la financiación del desarrollo de Ethereum_
+- [Raid Guild](https://raidguild.org) [@RaidGuild](https://twitter.com/RaidGuild): _Colectivo de desarrolladores de Web3_

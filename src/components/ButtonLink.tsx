@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { margin } from "styled-system"
+import { margin, MarginProps } from "styled-system"
 
 import { scrollIntoView } from "../utils/scrollIntoView"
 
@@ -85,7 +85,7 @@ const SecondaryScrollLink = styled(StyledScrollButton)`
   }
 `
 
-interface IProps extends ILinkProps {
+export interface IProps extends ILinkProps, MarginProps {
   toId?: string
   isSecondary?: boolean
 }

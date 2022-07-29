@@ -3,7 +3,12 @@ title: Mining
 description: An explanation of how mining works in Ethereum and how it helps keep Ethereum secure and decentralized.
 lang: en
 sidebar: true
+preMergeBanner: true
 ---
+
+<InfoBanner emoji=":wave:">
+   Proof-of-stake will soon replace proof-of-work as Ethereum's consensus mechanism, meaning mining will be switched off. Instead, Ethereum will be secured by validators who stake ETH. You can start staking your ETH today. Read more on <a href="/upgrades/merge/">The Merge</a>, <a href="/developers/docs/consensus-mechanisms/pos/">proof-of-stake</a> and <a href="/staking/">staking</a>.    
+</InfoBanner>
 
 ## Prerequisites {#prerequisites}
 
@@ -18,10 +23,6 @@ The word mining originates in the context of the gold analogy for crypto currenc
 Mining ether = Securing the Network
 
 Ethereum, like Bitcoin, currently uses a [proof-of-work (PoW)](/developers/docs/consensus-mechanisms/pow/) consensus mechanism. Mining is the lifeblood of proof-of-work. Ethereum miners - computers running software - using their time and computation power to process transactions and produce blocks.
-
-<InfoBanner emoji=":wave:">
-   Proof-of-stake will replace mining and proof-of-work over the next year. You can start staking your ETH today. <a href="/staking/">More on staking</a>    
-</InfoBanner>
 
 ## Why do miners exist? {#why-do-miners-exist}
 

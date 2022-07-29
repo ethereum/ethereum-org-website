@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import { useIntl } from "gatsby-plugin-intl"
+import { useIntl } from "react-intl"
 import { graphql, PageProps } from "gatsby"
 
 import Translation from "../components/Translation"
@@ -30,6 +30,7 @@ import {
 
 import { translateMessageId } from "../utils/translations"
 import { Context } from "../types"
+import FeedbackCard from "../components/FeedbackCard"
 
 const Slogan = styled.p`
   font-style: normal;
@@ -294,7 +295,7 @@ const EthPage = (props: PageProps<Queries.EthPageQuery, Context>) => {
             <SubtitleTwo>
               <Translation id="page-eth-currency-for-apps" />
             </SubtitleTwo>
-            <StyledEthPriceCard />
+            <StyledEthPriceCard isLeftAlign={false} />
             <ButtonLink to="/get-eth/">
               <Translation id="page-eth-button-buy-eth" />
             </ButtonLink>
@@ -343,7 +344,7 @@ const EthPage = (props: PageProps<Queries.EthPageQuery, Context>) => {
           <p>
             <Translation id="page-eth-whats-unique-desc" />
           </p>
-          <EthVideo alt={translateMessageId("page-eth-video-alt", intl)} />
+          <EthVideo />
           <div>
             <H4>
               <Translation id="page-eth-fuels" />
@@ -359,10 +360,7 @@ const EthPage = (props: PageProps<Queries.EthPageQuery, Context>) => {
               <strong>
                 <Translation id="page-eth-powers-ethereum" />
               </strong>
-              .{" "}
-              <Link to="/developers/docs/consensus-mechanisms/pow/mining/">
-                <Translation id="page-eth-mining-link" />
-              </Link>
+              <Translation id="page-eth-period" />
             </p>
             <p>
               <Translation id="page-eth-fuels-staking" />{" "}
@@ -495,7 +493,7 @@ const EthPage = (props: PageProps<Queries.EthPageQuery, Context>) => {
           <h4>
             <Translation id="page-eth-more-on-tokens" />
           </h4>
-          <CardList id="tokens" content={tokenLinks} />
+          <CardList content={tokenLinks} />
         </LeftColumn>
         <RightColumn>
           <h3>
@@ -507,11 +505,14 @@ const EthPage = (props: PageProps<Queries.EthPageQuery, Context>) => {
               emoji={token.emoji}
               title={token.title}
               description={token.description}
-              size={5}
+              emojiSize={5}
             />
           ))}
         </RightColumn>
       </StyledTwoColumnContent>
+      <Content>
+        <FeedbackCard />
+      </Content>
     </Page>
   )
 }

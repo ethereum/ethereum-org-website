@@ -9,7 +9,7 @@ tags:
   - "węzły"
   - "zapytania"
   - "alchemy"
-skill: początkujący
+skill: beginner
 lang: pl
 sidebar: true
 published: 2020-10-30

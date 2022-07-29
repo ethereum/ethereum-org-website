@@ -17,7 +17,7 @@ summaryPoint4: To možete prepoznati kao „Fazu 0” na tehničkom planu.
 
 ## Što radi Beacon Chain? {#what-does-the-beacon-chain-do}
 
-Beacon Chain će dirigirati ili uskladiti proširenu mrežu [ djelića](/upgrades/shard-chains/) i [učesnika](/staking/). Ali neće biti kao današnja [glavna mreža Ethereum](/glossary/#mainnet). Ne podržava račune ili pametne ugovore.
+Beacon Chain će dirigirati ili uskladiti proširenu mrežu [ djelića](/upgrades/sharding/) i [učesnika](/staking/). Ali neće biti kao današnja [glavna mreža Ethereum](/glossary/#mainnet). Ne podržava račune ili pametne ugovore.
 
 Beacon Chain će tijekom vremena mijenjati ulogu, međutim to je temeljna komponenta za [siguran, održiv i nadogradiv Ethereum na kojem radimo](/upgrades/vision/).
 
@@ -27,13 +27,13 @@ Beacon Chain će tijekom vremena mijenjati ulogu, međutim to je temeljna kompon
 
 Beacon Chain će predstaviti [proof-of-stake](/developers/docs/consensus-mechanisms/pos/) Ethereumu. Ovo je novi način da pomognete održati Ethereum sigurnim. Shvatite to kao javno dobro koje će Ethereum učiniti zdravijim i zaraditi vam više ETH-a u procesu. U praksi, to će uključiti vaše ulaganje ETH-a kako biste aktivirali softver za validaciju. Kao validator, obrađivat ćete transakcije i stvarati nove blokove u lancu.
 
-Ulagati i postati validator, jednostavnije je od [ rudarenja ](/developers/docs/mining/) (kako je mreža trenutačno zaštićena). Postoji nada da će to dugoročno pomoći da Ethereum bude sigurniji. Što više ljudi sudjeluje u mreži, to će ona biti decentraliziranija i sigurnija od napada.
+Ulagati i postati validator, jednostavnije je od [rudarenja](/developers/docs/mining/) (kako je mreža trenutačno zaštićena). Postoji nada da će to dugoročno pomoći da Ethereum bude sigurniji. Što više ljudi sudjeluje u mreži, to će ona biti decentraliziranija i sigurnija od napada.
 
 <InfoBanner emoji=":money_bag:">
 Ako ste zainteresirani za validiranje i pomoć u osiguranju za Beacon Chain, <a href="/staking/"> saznajte više o sudjelovanju</a>.
 </InfoBanner>
 
-Ovo je također važna promjena za drugu nadogradnju Eth2: [lanci djelića](/upgrades/shard-chains/).
+Ovo je također važna promjena za drugu nadogradnju Eth2: [lanci djelića](/upgrades/sharding/).
 
 ### Postavljanje lanaca djelića {#setting-up-for-shard-chains}
 
@@ -55,7 +55,7 @@ Beacon Chain će u početku postojati odvojeno od glavne mreže Ethereum mreže 
 
 Lanci djelića mogu sigurno ući u Ethereumov ekosustav samo ako je uspostavljen mehanizam konsenzusa proof-of-stake. Beacon Chain predstavit će ulaganje, radeći put za nadogradnju lanca djelića.
 
-<ButtonLink to="/upgrades/shard-chains/">Lanci djelića</ButtonLink>
+<ButtonLink to="/upgrades/sharding/">Lanci djelića</ButtonLink>
 
 <Divider />
 

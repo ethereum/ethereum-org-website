@@ -17,7 +17,7 @@ summaryPoint4: Talvez você tenha visto isso sendo mencionado como "Fase 0" nos 
 
 ## O que a Beacon Chain faz? {#what-does-the-beacon-chain-do}
 
-A Beacon Chain conduzirá ou coordenará a rede estendida de [shards](/upgrades/shard-chains/) ("fragmentos") e [stakers](/staking/) ("participantes"). Mas não será como a [rede principal da Ethereum](/glossary/#mainnet) de hoje. Ela não será capaz de gerenciar contas ou contratos inteligentes.
+A Beacon Chain conduzirá ou coordenará a rede estendida de [shards](/upgrades/sharding/) ("fragmentos") e [stakers](/staking/) ("participantes"). Mas não será como a [rede principal da Ethereum](/glossary/#mainnet) de hoje. Ela não será capaz de gerenciar contas ou contratos inteligentes.
 
 O papel da Beacon Chain mudará com o tempo, mas é um componente fundamental para [o Ethereum seguro, sustentável e dimensionável rumo ao qual estamos trabalhando](/upgrades/vision/).
 
@@ -33,7 +33,7 @@ Participar e se tornar um validador é mais fácil do que [minerar](/developers/
 Se você estiver interessado em se tornar um validador e ajudar a manter a Beacon Chain segura, <a href="/staking/">veja mais informações sobre como participar</a>.
 </InfoBanner>
 
-Essa também é uma mudança importante para outra melhoria do Ethereum: [as cadeias de fragmentos (shard chains)](/upgrades/shard-chains/).
+Essa também é uma mudança importante para outra melhoria do Ethereum: [as cadeias de fragmentos (shard chains)](/upgrades/sharding/).
 
 ### Preparação para as cadeias de fragmentos {#setting-up-for-shard-chains}
 
@@ -57,7 +57,7 @@ A Beacon Chain existirá, a princípio, separada da rede principal Ethereum que 
 
 As cadeias de fragmentos (shard chains) somente podem ser introduzidas ao ecossistema Ethereum com um mecanismo de consenso de prova de participação em vigor. A Beacon Chain introduzirá a participação (staking), preparando assim o caminho para a implementação das cadeias de fragmentos na próxima atualização.
 
-<ButtonLink to="/upgrades/shard-chains/">
+<ButtonLink to="/upgrades/sharding/">
     Cadeias de fragmentos
 </ButtonLink>
 

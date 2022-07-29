@@ -1,5 +1,5 @@
 ---
-title: Finance Décentralisée (DeFi)
+title: Finance décentralisée (DeFi)
 description: Un aperçu de la DeFi sur Ethereum
 lang: fr
 template: use-cases
@@ -56,7 +56,7 @@ L'une des meilleures façons de voir le potentiel de la DeFi est de comprendre l
 
 Bitcoin à bien des égards a été la première application de la DeFi. Bitcoin vous permet de posséder et de contrôler la valeur et de l'envoyer partout dans le monde. Il le fait en fournissant un moyen à un grand nombre de personnes, qui ne se font pas confiance les unes aux autres, de se mettre d'accord sur un grand livre de comptes sans avoir besoin d'un intermédiaire de confiance. Le Bitcoin est ouvert à tout le monde et personne n'a l'autorité nécessaire pour modifier ses règles. Les règles du Bitcoin, comme sa rareté et son ouverture, sont inscrites dans la technologie. Ce n'est pas comme la finance traditionnelle où les gouvernements peuvent imprimer de l'argent qui déprécie vos épargnes et où les entreprises peuvent fermer les marchés.
 
-L'ethereum s'appuie sur cela. Comme le Bitcoin, les règles ne peuvent pas changer et tout le monde y a accès. Mais cela rend aussi cet argent numérique programmable, en utilisant [contrats intelligents](/glossary#smart-contract), vous pouvez donc aller au-delà du stockage et de la valeur d'envoi.
+L'Ethereum s'appuie sur cela. Comme le Bitcoin, les règles ne peuvent pas changer et tout le monde y a accès. Mais cela rend aussi cet argent numérique programmable, en utilisant [contrats intelligents](/glossary#smart-contract), vous pouvez donc aller au-delà du stockage et de la valeur d'envoi.
 
 <YouTube id="qFBYB4W2tqU" />
 
@@ -185,7 +185,7 @@ Vous pouvez gagner de l'intérêt sur votre cryptomonnaie en le prêtant et en v
 - Vous pouvez retirer un montant de Dai égal à votre solde aDai à tout moment.
 
 <ButtonLink to="/dapps/?category=finance">
-  Voir les prêts dapps
+  Voir les dApps de prêt
 </ButtonLink>
 
 #### Loteries sans risque {#no-loss-lotteries}
@@ -289,7 +289,7 @@ Les produits Ethereum, comme n'importe quel logiciel, peuvent souffrir de bugs e
 Avec tant de choses en cours, vous aurez besoin d'un moyen de suivre tous vos investissements, vos prêts et vos transactions. Il y a une foule de produits qui vous permettent de coordonner toutes vos activités de DeFi à partir d'un seul endroit. C'est la beauté de l'architecture ouverte de DeFi. Les équipes peuvent construire des interfaces où vous ne pouvez pas simplement voir vos balances entre produits mais également utiliser leurs fonctionnalités. Vous pourriez trouver cela utile en explorant plus à propos de la DeFi.
 
 <ButtonLink to="/dapps/?category=finance">
-  Voir le portefeuille dapps
+  Voir les dApps de portefeuille
 </ButtonLink>
 
 <Divider />
@@ -318,9 +318,9 @@ Ethereum est la fondation parfaite pour la DeFi pour plusieurs raisons:
 Vous pouvez voir la DeFi comme des couches :
 
 1. La Blockchain, Ethereum qui trace l'historique des transactions et les états de comptes.
-2. Les actifs [ ETH ](/eth/) et autres jetons (devises).
-3. Les protocoles, [ contrats intelligents ](/glossary/#smart-contract) qui offrent des fonctionnalités comme les prêts d'actifs décentralisés.
-4. [ Les applications ](/dapps/) les produits que vous utilisez pour accéder et gérer les protocoles.
+2. Les actifs [ETH](/eth/) et autres jetons (devises).
+3. Les protocoles, [contrats intelligents](/glossary/#smart-contract) qui offrent des fonctionnalités comme les prêts d'actifs décentralisés.
+4. [Les applications](/dapps/) les produits que vous utilisez pour accéder et gérer les protocoles.
 
 ## Fabriquer une DeFi {#build-defi}
 
@@ -340,13 +340,13 @@ DeFi est un mouvement open source. Les protocoles et applications DeFi sont ouve
 
 ### Articles DeFi {#defi-articles}
 
-- [ What is Decentralized Finance?](https://docs.ethhub.io/built-on-ethereum/open-finance/what-is-open-finance/) _ ETHHub, mis à jour régulièrement _
-- [A beginner's guide to DeFi](https://blog.coinbase.com/a-beginners-guide-to-decentralized-finance-defi-574c68ff43c4) _ Sid Coelho-Prabhu, 6 janvier 2020 _
+- [What is Decentralized Finance?](https://docs.ethhub.io/built-on-ethereum/open-finance/what-is-open-finance/) _ETHHub, mis à jour régulièrement_
+- [A beginner's guide to DeFi](https://blog.coinbase.com/a-beginners-guide-to-decentralized-finance-defi-574c68ff43c4) _Sid Coelho-Prabhu, 6 janvier 2020_
 
 ### Vidéos {#videos}
 
-- [Finematics - decentralized finance education](https://finematics.com/) _ vidéos de DeFi _
-- [ The Defiant ](https://www.youtube.com/playlist?list=PLaDcID4s1KronHMKojfjwiHL0DdQEPDcq) – _DeFi basics: Everything you need to know to get started in this occasionally baffling space_.
+- [Finematics - decentralized finance education](https://finematics.com/) _vidéos de DeFi_
+- [The Defiant](https://www.youtube.com/playlist?list=PLaDcID4s1KronHMKojfjwiHL0DdQEPDcq) – _DeFi basics: Everything you need to know to get started in this occasionally baffling space_.
 - [Whiteboard Crypto](https://youtu.be/17QRFlml4pA) _What is DeFi?_
 
 ### Communautés {#communities}

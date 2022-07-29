@@ -2,7 +2,7 @@ import React, { useRef, useState, useEffect } from "react"
 import styled from "styled-components"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { graphql, PageProps } from "gatsby"
-import { useIntl } from "gatsby-plugin-intl"
+import { useIntl } from "react-intl"
 
 import Translation from "../components/Translation"
 import Pill from "../components/Pill"
@@ -35,6 +35,7 @@ import {
 
 import { translateMessageId } from "../utils/translations"
 import { Context } from "../types"
+import FeedbackCard from "../components/FeedbackCard"
 
 const MagiciansImage = styled(GatsbyImage)`
   background-size: cover;
@@ -348,7 +349,7 @@ const DappsPage = ({
   const [selectedCategory, setCategory] = useState<CategoryType>(
     CategoryType.FINANCE
   )
-  const explore = useRef<HTMLElement>(null)
+  const explore = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     // Fetch category on load
@@ -962,6 +963,7 @@ const DappsPage = ({
       ),
       link: "https://async.art/",
       image: getImage(data.asyncart),
+      alt: translateMessageId("page-dapps-async-logo-alt", intl),
     },
   ]
 
@@ -1148,12 +1150,12 @@ const DappsPage = ({
     buttons: [
       {
         content: translateMessageId("page-dapps-explore-dapps-title", intl),
-        path: "#explore",
+        to: "#explore",
       },
       {
         content: translateMessageId("page-dapps-what-are-dapps", intl),
-        path: "#what-are-dapps",
-        isSecondary: "isSecondary",
+        to: "#what-are-dapps",
+        isSecondary: true,
       },
     ],
   }
@@ -1275,11 +1277,7 @@ const DappsPage = ({
               <Column>
                 <H2>
                   <Translation id="page-dapps-finance-title" />{" "}
-                  <Emoji
-                    size={"2rem"}
-                    ml={"0.5rem"}
-                    text=":money_with_wings:"
-                  />
+                  <Emoji size={2} ml={"0.5rem"} text=":money_with_wings:" />
                 </H2>
                 <Subtitle>
                   <Translation id="page-dapps-finance-description" />
@@ -1393,7 +1391,7 @@ const DappsPage = ({
               <Column>
                 <H2>
                   <Translation id="page-dapps-gaming-title" />{" "}
-                  <Emoji size={"2rem"} ml={"0.5rem"} text=":video_game:" />
+                  <Emoji size={2} ml={"0.5rem"} text=":video_game:" />
                 </H2>
                 <Subtitle>
                   <Translation id="page-dapps-gaming-description" />
@@ -1434,7 +1432,7 @@ const DappsPage = ({
               <Column>
                 <H2>
                   <Translation id="page-dapps-technology-title" />{" "}
-                  <Emoji size={"2rem"} ml={"0.5rem"} text=":keyboard:" />
+                  <Emoji size={2} ml={"0.5rem"} text=":keyboard:" />
                 </H2>
                 <Subtitle>
                   <Translation id="page-dapps-technology-description" />
@@ -1495,11 +1493,7 @@ const DappsPage = ({
               <Column>
                 <H2>
                   <Translation id="page-dapps-collectibles-title" />{" "}
-                  <Emoji
-                    size={"2rem"}
-                    ml={"0.5rem"}
-                    text=":frame_with_picture:"
-                  />
+                  <Emoji size={2} ml={"0.5rem"} text=":frame_with_picture:" />
                 </H2>
                 <Subtitle>
                   <Translation id="page-dapps-collectibles-description" />
@@ -1565,7 +1559,7 @@ const DappsPage = ({
             <About>
               <h2>
                 <Translation id="page-dapps-magic-title-1" />{" "}
-                <Emoji size={"1rem"} text=":sparkles:" />{" "}
+                <Emoji size={1} text=":sparkles:" />{" "}
                 <Translation id="page-dapps-magic-title-2" />{" "}
                 {categories[selectedCategory].benefitsTitle}
               </h2>
@@ -1686,6 +1680,9 @@ const DappsPage = ({
             </StyledCallout>
           </RightColumn>
         </Row>
+      </Content>
+      <Content>
+        <FeedbackCard />
       </Content>
     </Page>
   )

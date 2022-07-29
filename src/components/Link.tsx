@@ -1,13 +1,15 @@
 import React from "react"
-import { Link as GatsbyLink } from "gatsby"
-import { Link as IntlLink } from "gatsby-plugin-intl"
+import { Link as GatsbyLink, navigate as gatsbyNavigate } from "gatsby"
+import { LocalizedLink as IntlLink } from "gatsby-theme-i18n"
+import { NavigateOptions } from "@reach/router"
+import { IntlShape } from "react-intl"
 import styled from "styled-components"
 
 import Icon from "./Icon"
 
-import { languageMetadata } from "../utils/languages"
+import { isLang, Lang } from "../utils/languages"
 import { trackCustomEvent, EventOptions } from "../utils/matomo"
-import { StringValueNode } from "graphql"
+import { Direction } from "../types"
 
 const HASH_PATTERN = /^#.*/
 // const DOMAIN_PATTERN = /^(?:https?:)?[/]{2,}([^/]+)/
@@ -67,6 +69,7 @@ const GlossaryIcon = styled(Icon)`
 export interface IProps {
   to?: string
   href?: string
+  dir?: Direction
   hideArrow?: boolean
   className?: string
   isPartiallyActive?: boolean
@@ -77,6 +80,7 @@ export interface IProps {
 
 const Link: React.FC<IProps> = ({
   to,
+  dir = "ltr",
   href,
   children,
   hideArrow = false,
@@ -95,7 +99,7 @@ const Link: React.FC<IProps> = ({
 
   const isExternal = to.includes("http") || to.includes("mailto:")
   const isHash = isHashLink(to)
-  const isGlossary = to.includes("glossary")
+  const isGlossary = to.includes("glossary") && to.includes("#")
   const isStatic = to.includes("static")
   const isPdf = to.includes(".pdf")
 
@@ -104,7 +108,7 @@ const Link: React.FC<IProps> = ({
   // See https://github.com/gatsbyjs/gatsby/issues/21909
   if (isHash) {
     return (
-      <a className={className} href={to} aria-label={ariaLabel}>
+      <a dir={dir} className={className} href={to} aria-label={ariaLabel}>
         {children}
       </a>
     )
@@ -135,30 +139,34 @@ const Link: React.FC<IProps> = ({
   if (isExternal) {
     return hideArrow ? (
       <a
+        dir={dir}
         className={className}
         href={to}
         target="_blank"
         rel="noopener noreferrer"
-        onClick={() =>
+        onClick={(e) => {
+          e.stopPropagation()
           trackCustomEvent(
             customEventOptions ? customEventOptions : eventOptions
           )
-        }
+        }}
         aria-label={ariaLabel}
       >
         {children}
       </a>
     ) : (
       <ExternalLink
+        dir={dir}
         className={className}
         href={to}
         target="_blank"
         rel="noopener noreferrer"
-        onClick={() =>
+        onClick={(e) => {
+          e.stopPropagation()
           trackCustomEvent(
             customEventOptions ? customEventOptions : eventOptions
           )
-        }
+        }}
         aria-label={ariaLabel}
       >
         {children}
@@ -168,9 +176,10 @@ const Link: React.FC<IProps> = ({
 
   // If lang path has been explicitly set, use `gatsby` Link
   const langPath = to.split("/")[1]
-  if (Object.keys(languageMetadata).includes(langPath)) {
+  if (isLang(langPath)) {
     return (
       <ExplicitLangInternalLink
+        dir={dir}
         className={className}
         to={to}
         activeClassName="active"
@@ -186,6 +195,7 @@ const Link: React.FC<IProps> = ({
   if (isPdf && !isExternal) {
     return (
       <a
+        dir={dir}
         href={to}
         target="_blank"
         rel="noopener noreferrer"
@@ -196,9 +206,10 @@ const Link: React.FC<IProps> = ({
     )
   }
 
-  // Use `gatsby-plugin-intl` Link (which prepends lang path)
+  // Use `gatsby-theme-i18n` Link (which prepends lang path)
   return (
     <InternalLink
+      dir={dir}
       className={isGlossary ? `is-glossary ${className}` : className}
       to={to}
       activeClassName="active"
@@ -211,6 +222,19 @@ const Link: React.FC<IProps> = ({
       )}
     </InternalLink>
   )
+}
+
+export function navigate(
+  to: string,
+  intl: IntlShape,
+  options?: NavigateOptions<{}>
+) {
+  if (typeof window === "undefined") {
+    return
+  }
+
+  const link = `/${intl.locale as Lang}${to}`
+  gatsbyNavigate(link, options)
 }
 
 export default Link

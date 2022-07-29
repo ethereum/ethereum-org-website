@@ -61,7 +61,7 @@ Mizându-vă propriul ETH, puteți câștiga recompense, ajutând în același t
 
 - [Mai multe despre mizare](/staking/)
 
-### Finanțați proiecte {#suport-projects}
+### Finanțați proiecte {#support-projects}
 
 Ecosistemul Ethereum are ca misiune să finanțeze bunurile publice și proiectele cu impact. Cu donații foarte mici, vă puteți arăta sprijinul și permite realizarea unor lucrări foarte importante.
 

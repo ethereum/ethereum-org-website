@@ -24,6 +24,29 @@ Looking for future protocol upgrades? [Learn about upcoming upgrades to Ethereum
 
 <Divider />
 
+## 2022 {#2022}
+
+### Gray Glacier {#gray-glacier}
+
+<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /><code>Jun-30-2022 10:54:04 AM +UTC</code><br />
+<Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Block number: <a href="https://etherscan.io/block/15050000">15,050,000</a><br />
+<Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} />ETH price: $1,069 USD<br />
+<Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20220630094629/https://ethereum.org/en/">ethereum.org on waybackmachine</a>
+
+#### Summary {#gray-glacier-summary}
+
+The Gray Glacier network upgrade pushed back the [difficulty bomb](/glossary/#difficulty-bomb) by three months. This is the only change introduced in this upgrade, and is similar in nature to the [Arrow Glacier](#arrow-glacier) and [Muir Glacier](#muir-glacier) upgrades. Similar changes have been performed on the [Byzantium](#byzantium), [Constantinople](#constantinople) and [London](#london) network upgrades.
+
+- [EF Blog - Gray Glacier Upgrade Announcement](https://blog.ethereum.org/2022/06/16/gray-glacier-announcement/)
+
+<ExpandableCard title="Gray Glacier EIPs" contentPreview="Official improvements included in this upgrade.">
+
+- [EIP-5133](https://eips.ethereum.org/EIPS/eip-5133) – _delays the difficulty bomb until September 2022_
+
+</ExpandableCard>
+
+<Divider />
+
 ## 2021 {#2021}
 
 ### Arrow Glacier {#arrow-glacier}
@@ -45,10 +68,6 @@ The Arrow Glacier network upgrade pushed back the [difficulty bomb](/glossary/#d
 - [EIP-4345](https://eips.ethereum.org/EIPS/eip-4345) – _delays the difficulty bomb until June 2022_
 
 </ExpandableCard>
-
-#### <Emoji text=":police_car_light:" size={1} mr="0.5rem" />Node operators {#arrow-glacier-node-operators}
-
-Be sure to upgrade your client software to the latest version before December 5, 2021 to account for variable block times. This will help avoid having your client sync to a pre-fork chain, resulting in the inability to send funds or properly verify transactions.
 
 ---
 
@@ -84,7 +103,7 @@ Altair was the first major network upgrade that had an exact rollout time. Every
 
 The London upgrade introduced [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), which reformed the transaction fee market, along with changes to how gas refunds are handled and the [Ice Age](/glossary/#ice-age) schedule.
 
-- [Are you a dApp developer? Be sure to upgrade your libraries and tooling.](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/london-ecosystem-readiness.md)
+- [Are you a dapp developer? Be sure to upgrade your libraries and tooling.](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/london-ecosystem-readiness.md)
 - [Read the Ethereum Foundation announcement](https://blog.ethereum.org/2021/07/15/london-mainnet-announcement/)
 - [Read the Ethereum Cat Herder's explainer](https://medium.com/ethereum-cat-herders/london-upgrade-overview-8eccb0041b41)
 
@@ -392,9 +411,10 @@ The Homestead fork that looked to the future. It included several protocol chang
 
 #### Summary {#frontier-thawing-summary}
 
-The frontier thawing fork lifted the 5,000 [gas](/glossary/#gas) limit per [block](/glossary/#block) and set the default gas price to 51 [gwei](/glossary/#gwei). This allowed for transactions – transactions require 21,000 gas.
+The frontier thawing fork lifted the 5,000 [gas](/glossary/#gas) limit per [block](/glossary/#block) and set the default gas price to 51 [gwei](/glossary/#gwei). This allowed for transactions – transactions require 21,000 gas. The [difficulty bomb](/glossary/#difficulty-bomb) was introduced to ensure a future hard-fork to [proof-of-stake](/glossary/#pos).
 
-[Read the Ethereum Foundation announcement](https://blog.ethereum.org/2015/08/04/the-thawing-frontier/)
+- [Read the Ethereum Foundation announcement](https://blog.ethereum.org/2015/08/04/the-thawing-frontier/)
+- [Read the Ethereum Protocol Update 1](https://blog.ethereum.org/2015/08/04/ethereum-protocol-update-1/)
 
 ---
 
