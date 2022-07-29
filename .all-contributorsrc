@@ -8245,6 +8245,15 @@
         "doc",
         "bug"
       ]
+    },
+    {
+      "login": "johngrantuk",
+      "name": "John Grant",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4797222?v=4",
+      "profile": "https://medium.com/@johngrant",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
