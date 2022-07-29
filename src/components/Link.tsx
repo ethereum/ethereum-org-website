@@ -10,6 +10,7 @@ import Icon from "./Icon"
 import { isLang, Lang } from "../utils/languages"
 import { trackCustomEvent, EventOptions } from "../utils/matomo"
 import { Direction } from "../types"
+import { propTypes } from "gatsby-plugin-image/dist/src/components/gatsby-image.server"
 
 const HASH_PATTERN = /^#.*/
 // const DOMAIN_PATTERN = /^(?:https?:)?[/]{2,}([^/]+)/
@@ -24,6 +25,7 @@ const ExternalLink = styled.a`
     margin-right: 0.3em;
     display: inline;
     content: "↗";
+    content: ${(props) => (props.lang ? `"(${props.lang} ↗)"` : "↗")};
     transition: all 0.1s ease-in-out;
     font-style: normal;
   }
@@ -65,6 +67,20 @@ const GlossaryIcon = styled(Icon)`
     transform: scale(1.2);
   }
 `
+
+const nonEnglishMarkdownLinks = [
+  {
+    to: "https://www.france.fr/fr/",
+    lang: "fr",
+  },
+]
+
+const externalLinkLang = (to) => {
+  const index = nonEnglishMarkdownLinks.findIndex((links) => links.to === to)
+  const lang = index === -1 ? "en" : nonEnglishMarkdownLinks[index].lang
+
+  return lang
+}
 
 export interface IProps {
   to?: string
@@ -137,6 +153,8 @@ const Link: React.FC<IProps> = ({
   }
 
   if (isExternal) {
+    const lang = externalLinkLang(to)
+
     return hideArrow ? (
       <a
         dir={dir}
@@ -168,6 +186,7 @@ const Link: React.FC<IProps> = ({
           )
         }}
         aria-label={ariaLabel}
+        lang={lang}
       >
         {children}
       </ExternalLink>
