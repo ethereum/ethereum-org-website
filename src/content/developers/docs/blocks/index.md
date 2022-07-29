@@ -19,47 +19,61 @@ To ensure that all participants on the Ethereum network maintain a synchronized 
 ![A diagram showing transaction in a block causing state changes](./tx-block.png)
 _Diagram adapted from [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
-By spacing out commits, we give all network participants enough time to come to consensus: even though transaction requests occur dozens of times per second, blocks on Ethereum are committed approximately once every fifteen seconds.
+By spacing out commits, we give all network participants enough time to come to consensus: even though transaction requests occur dozens of times per second, blocks are only created and committed on Ethereum once every six seconds.
 
 ## How blocks work {#how-blocks-work}
 
 To preserve the transaction history, blocks are strictly ordered (every new block created contains a reference to its parent block), and transactions within blocks are strictly ordered as well. Except in rare cases, at any given time, all participants on the network are in agreement on the exact number and history of blocks, and are working to batch the current live transaction requests into the next block.
 
-Once a block is put together (mined) by some miner on the network, it is propagated to the rest of the network; all nodes add this block to the end of their blockchain, and mining continues. The exact block-assembly (mining) process and commitment/consensus process is currently specified by Ethereum’s “proof-of-work” protocol.
+Once a block is put together by some validator on the network, it is propagated to the rest of the network; all nodes add this block to the end of their blockchain, and a new validator is selected to create the next block. The exact block-assembly process and commitment/consensus process is currently specified by Ethereum’s “proof-of-stake” protocol.
 
-### A visual demo {#a-visual-demo}
+## Proof-of-stake protocol {#proof-of-work-protocol}
 
-<YouTube id="_160oMzblY8" />
+Proof-of-stake means the following:
 
-## Proof-of-work protocol {#proof-of-work-protocol}
+- Validating nodes have to stake at least 32 ETH into a deposit contract as collateral against bad behaviour. This helps protect the network because provably dishonet activity leads to some or all of that stake being destroyed.
+- In every slot (spaced 6 seconds apart) a validator is randomly selected to be the block proposer. They bundle transactions together, execute them and determine a new 'state'. They wrap this information int a block and pass it around to other validators.
+- Other validators who hear about a new block re-execute the transactions to ensure they agree with the proposed change to the global state. Assuming the block is valid they add it to their own database.
+- If a validator hears about two conflicting blocks for the same slot they use their fork-choice algorithm to pick the one supported by the most staked ETH.
 
-Proof-of-work means the following:
-
-- Mining nodes have to spend a variable but substantial amount of energy, time, and computational power to produce a “certificate of legitimacy” for a block they propose to the network. This helps protect the network from spam/denial-of-service attacks, among other things, since certificates are expensive to produce.
-- Other miners who hear about a new block with a valid certificate of legitimacy must accept the new block as the canonical next block on the blockchain.
-- The exact amount of time needed for any given miner to produce this certificate is a random variable with high variance. This ensures that it is unlikely that two miners produce validations for a proposed next block simultaneously; when a miner produces and propagates a certified new block, they can be almost certain that the block will be accepted by the network as the canonical next block on the blockchain, without conflict (though there is a protocol for dealing with conflicts as well in the case that two chains of certified blocks are produced almost simultaneously).
-
-[More on mining](/developers/docs/consensus-mechanisms/pow/mining/)
+[More on proof-of-stake](/developers/docs/consensus-mechanisms/pos)
 
 ## What's in a block? {#block-anatomy}
 
-- `timestamp` – the time when the block was mined.
-- `blockNumber` – the length of the blockchain in blocks.
-- `baseFeePerGas` - the minimum fee per gas required for a transaction to be included in the block.
-- `difficulty` – the effort required to mine the block.
-- `mixHash` – a unique identifier for that block.
-- `parentHash` – the unique identifier for the block that came before (this is how blocks are linked in a chain).
-- `transactions` – the transactions included in the block.
-- `stateRoot` – the entire state of the system: account balances, contract storage, contract code and account nonces are inside.
-- `nonce` – a hash that, when combined with the mixHash, proves that the block has gone through [proof-of-work](/developers/docs/consensus-mechanisms/pow/).
+There is a lot of information contained within a block. At the highest level a block contains the following fields:
+
+```
+slot: the slot the block belongs to
+proposer_index: the ID of the validator proposing the block
+parent_root: the hash of the preceding block
+state_root: the root hash of the state object
+body: an object containing several fields, as defined below
+```
+
+The block `body` contains several fields of its own:
+
+```
+randao_reveal: a value used to select the next blockl proposer
+eth1_data: information about the deposit contract
+graffiti: arbitrary data used to tag blocks
+proposer_slashings: list of validators to be slashed
+attester_slashings: list of validators to be slashed
+attestations: list of attestations in favour of the current block
+deposits: list of new deposits to the deposit contract
+voluntary_exits: list of validators exiting the network
+sync_aggregate: subset of validators used to serve light clients
+execution_payload: transactions passed from the execution client
+```
+
+Executing the transactions in the `execution_payload` updates the global state. All clients re-execute the transactions in the `execution_payload` to ensure the new state matches that in the new block `state_root` field. This is how clients can tell that a new block is valid and safe to add to their blockchain.
 
 ## Block time {#block-time}
 
-Block time refers to the time it takes to mine a new block. In Ethereum, the average block time is between 12 to 14 seconds and is evaluated after each block. The expected block time is set as a constant at the protocol level and is used to protect the network's security when the miners add more computational power. The average block time gets compared with the expected block time, and if the average block time is higher, then the difficulty is decreased in the block header. If the average block time is smaller, then the difficulty in the block header will be increased.
+Block time refers to the time separating blocks. In Ethereum, time is divided up into 6 second units called 'slots'. In each slot a single validator is selected to propose a block. Assuming all validators are online and fully functional there will be a block in every slot, meanign the block time is 6s. However, occasionally validators might be offline when called to propose a block, meaning slots can sometimes go empty. This is different to proof-of-work based systems where block times are probabilistic and tuned by the mining difficulty.
 
 ## Block size {#block-size}
 
-A final important note is that blocks themselves are bounded in size. Each block has a target size of 15 million gas but the size of blocks will increase or decrease in accordance with network demands, up until the block limit of 30 million gas (2x target block size). The total amount of gas expended by all transactions in the block must be less than the block gas limit. This is important because it ensures that blocks can’t be arbitrarily large. If blocks could be arbitrarily large, then less performant full nodes would gradually stop being able to keep up with the network due to space and speed requirements.
+A final important note is that blocks themselves are bounded in size. Each block has a target size of 15 million gas but the size of blocks will increase or decrease in accordance with network demands, up until the block limit of 30 million gas (2x target block size). The total amount of gas expended by all transactions in the block must be less than the block gas limit. This is important because it ensures that blocks can’t be arbitrarily large. If blocks could be arbitrarily large, then less performant full nodes would gradually stop being able to keep up with the network due to space and speed requirements. The larger the block, the greater the computing power required to process them in time for the next slot. This is a centralizing force, which is resisted by capping block sizes.
 
 ## Further reading {#further-reading}
 
@@ -67,6 +81,6 @@ _Know of a community resource that helped you? Edit this page and add it!_
 
 ## Related topics {#related-topics}
 
-- [Mining](/developers/docs/consensus-mechanisms/pow/mining/)
 - [Transactions](/developers/docs/transactions/)
 - [Gas](/developers/docs/gas/)
+- [proof-of-stake](/developers/docs/consensus-mechanisms/pos)
