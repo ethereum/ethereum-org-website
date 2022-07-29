@@ -8235,6 +8235,16 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "alebaffa",
+      "name": "Alessandro Baffa",
+      "avatar_url": "https://avatars.githubusercontent.com/u/465513?v=4",
+      "profile": "https://alebaffa.eth.link",
+      "contributions": [
+        "doc",
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
