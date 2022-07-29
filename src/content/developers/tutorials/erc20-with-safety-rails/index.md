@@ -161,7 +161,7 @@ Freezing and thawing contracts requires several changes:
   
   ```solidity
     {
-        require(frozenAccounts[addr], "Account already frozen");        
+        require(!frozenAccounts[addr], "Account already frozen");        
         frozenAccounts[addr] = true;        
         emit AccountFrozen(addr);        
     }  // freezeAccount
@@ -172,10 +172,17 @@ Freezing and thawing contracts requires several changes:
 - Change `_beforeTokenTransfer` to prevent money being moved from a frozen account. Note that money can still be transferred into the frozen account. 
 
    ```solidity
-        require(!frozenAccounts[from], "The account is frozen")   
+        require(!frozenAccounts[from], "The account is frozen");   
    ```
+   
+   
+### Asset cleanup {#asset-cleanup}
 
-## Reversible transactions {#reversible-transactions}
+
+
+
+
+## Delayed transactions {#delayed-transactions}
 
 It is sometimes useful to have account administrators that can modify or undo certain actions. 
 
