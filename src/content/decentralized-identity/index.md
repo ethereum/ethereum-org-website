@@ -182,4 +182,4 @@ There are many ambitious projects using Ethereum as a foundation for decentraliz
 
 - [ERC-725 Alliance on GitHub](https://github.com/erc725alliance) — _Supporters of the ERC725 standard for managing identity on the Ethereum blockchain_
 - [SpruceID Discord server](https://discord.com/invite/Sf9tSFzrnt) — _Community for enthusiasts and developers working on Sign-in with Ethereum_
-- [Veramo Labs]([https://discord.com/invite/Sf9tSFzrnt](https://discord.gg/sYBUXpACh4)) — _A community of developers contributing to build the framework for verifiable data for applications_
+- [Veramo Labs](https://discord.com/invite/Sf9tSFzrnt) — _A community of developers contributing to building a framework for verifiable data for applications_
