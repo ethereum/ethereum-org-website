@@ -12,6 +12,8 @@ _Up until four weeks after the Merge, the Ethereum Foundation is sponsoring a Me
 
 <Divider />
 
+![Two people holding hands in field with ethereum logo](./merge-data-challenge.jpg)
+
 Calling all Ethereans, data scientists, data engineers, data visualizers, developers, and anyone interested in digging into Ethereum data!
 
 The [Merge](https://ethereum.org/en/upgrades/merge/) is coming, providing a more secure and sustainable home for Ethereum -- as well as more data, lots and lots of data. And **the Ethereum community needs your help to make sense of it all.**
