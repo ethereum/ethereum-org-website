@@ -89,7 +89,7 @@ Decentralized tools without KYC:
 
 Most of these tools have their own version of a [consensus mechanism](/developers/docs/consensus-mechanisms/) but generally they are based on either [**proof-of-work (PoW)**](/developers/docs/consensus-mechanisms/pow/) or [**proof-of-stake (PoS)**](/developers/docs/consensus-mechanisms/pos/).
 
-PoW based:
+Proof-of-work based:
 
 - Skynet
 - Arweave
