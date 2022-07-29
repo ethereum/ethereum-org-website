@@ -109,30 +109,6 @@ This is how we check if an address is a contract. We cannot receive output direc
 And finally, we have the actual check for empty addresses.
 
 
-### The common mistakes function {#the-common-mistakes-function}
-
-This is the complete function to check for common mistakes:
-
-```solidity
-
-    function _beforeTokenTransfer(address from, address to, uint256 amount)
-        internal
-        override(ERC20)
-    {
-        super._beforeTokenTransfer(from, to, amount);
-
-        bool isToContract;
-        require(to != address(this), "Can't send tokens to the contract address");
-        assembly {
-            isToContract := gt(extcodesize(to), 0)              
-        }
-
-        require(to.balance != 0 || isToContract, "Can't send tokens to an empty address");
-    }   // _beforeTokenTransfer
-
-```
-
-
 
 ## Administrative access {#admin-access}
 
@@ -173,28 +149,31 @@ Freezing and thawing contracts requires several changes:
     event AccountThawed(address indexed _addr);   
   ```
   
-- Functions for freezing and thawing accounts:
+- Functions for freezing and thawing accounts. These two functions are nearly identical, so we'll only go over the freeze function.
 
   ```solidity
       function freezeAccount(address addr) 
         public
         onlyOwner
-    {
-        require(frozenAccounts[addr], "Account already frozen");
-        frozenAccounts[addr] = true;
-        emit AccountFrozen(addr);
-    }  // freezeAccount
-
-
-    function thawAccount(address addr) 
-        public
-        onlyOwner
-    {
-        require(!frozenAccounts[addr], "Account not frozen");
-        frozenAccounts[addr] = false;
-        emit AccountThawed(addr);
-    }  // thawAccount
   ```
+  
+  Functions marked [`public`](https://www.tutorialspoint.com/solidity/solidity_contracts.htm) can be called from other smart contracts or directly by a transaction.
+  
+  ```solidity
+    {
+        require(frozenAccounts[addr], "Account already frozen");        
+        frozenAccounts[addr] = true;        
+        emit AccountFrozen(addr);        
+    }  // freezeAccount
+  ```
+
+  If the account is already frozen, revert. Otherwise, freeze it and `emit` an event.
+
+- Change `_beforeTokenTransfer` to prevent money being moved from a frozen account. Note that money can still be transferred into the frozen account. 
+
+   ```solidity
+        require(!frozenAccounts[from], "The account is frozen")   
+   ```
 
 ## Reversible transactions {#reversible-transactions}
 
