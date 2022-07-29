@@ -1,5 +1,5 @@
 const fs = require("fs")
-const GitHubSlugger = require("github-slugger")
+const gitHubSlugger = require("github-slugger")
 
 // Given a directory (e.g. `pt`), this script adds custom heading IDs
 // within all markdown files of the directory (only if one does not exist).
@@ -12,10 +12,6 @@ const GitHubSlugger = require("github-slugger")
 // Learn more: https://github.com/ethereum/ethereum-org-website/issues/272
 
 // TODO we should auto-run this script when new markdown files are added to the project
-
-interface IGitHubSlugger {
-  slug: (headingText: string) => string
-}
 
 const headersToChange: Record<
   string,
@@ -58,7 +54,7 @@ const stripLinks = (line: string): string => {
 
 const addHeaderID = (
   line: string,
-  slugger: IGitHubSlugger,
+  slugger: typeof gitHubSlugger,
   write = false
 ): string | undefined => {
   // check if we're a header at all
@@ -121,7 +117,7 @@ const addHeaderID = (
 
 const addHeaderIDs = (lines: Array<string>, write = false): Array<string> => {
   // Sluggers should be per file
-  const slugger: IGitHubSlugger = new GitHubSlugger()
+  const slugger = new gitHubSlugger()
   let inCode = false
   const results: Array<string> = []
   lines.forEach((line) => {
