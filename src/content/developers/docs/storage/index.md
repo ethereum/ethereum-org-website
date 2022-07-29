@@ -94,7 +94,7 @@ PoW based:
 - Skynet
 - Arweave
 
-PoS based:
+Proof-of-stake based:
 
 - Ethereum
 - Filecoin
