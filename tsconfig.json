@@ -10,9 +10,7 @@
     "strict": true,
     "noImplicitAny": false,
     "skipLibCheck": true,
-    "resolveJsonModule": true,
-    "typeRoots": ["./node_modules/@types"],
-    "types": ["node"]
+    "resolveJsonModule": true
   },
   "include": [
     "./src/**/*",
