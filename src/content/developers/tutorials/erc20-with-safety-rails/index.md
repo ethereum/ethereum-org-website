@@ -199,7 +199,7 @@ This is the syntax to create an object for a contract when we receive the addres
     }
 ```
 
-
+This is a cleanup function, so presumably we don't want to leave any tokens. Instead of getting the balance from the user manually, we might as well automate the process.
 
 
 ## Delayed transactions {#delayed-transactions}
