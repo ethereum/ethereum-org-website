@@ -31,6 +31,9 @@ After preparing the environment, install the chosen clients either with [beginne
 
 When the node is running and syncing, you are ready to [use it](#using-the-node) but make sure to keep an eye on its [maintanance](#operating-the-node). 
 
+![Client setup](./diagram.png)
+
+
 ### Environment and hardware {#environment-and-hardware}
 
 #### Local or cloud {#local-vs-cloud}
@@ -164,8 +167,7 @@ Here are the release pages of clients where you can find their pre-built binarie
 - [Besu](https://github.com/hyperledger/besu/releases)
 - [Erigon](https://github.com/ledgerwatch/erigon#usage) (Doesn't provide a pre-built binary, has to be compiled)
 
-It is also worth noting that client diversity is an [issue on the execution layer](https://clientdiversity.org/),
-with Geth being run on a supermajority (>66%) of all Ethereum nodes. It is recommended that readers on this page consider running a minority execution client.
+It is also worth noting that client diversity is an [issue on the execution layer](/developers/docs/client-diversity/#execution-layer). It is recommended that readers consider running a minority execution client.
 
 ##### Consensus clients
 
@@ -175,7 +177,7 @@ with Geth being run on a supermajority (>66%) of all Ethereum nodes. It is recom
 - [Prysm](https://github.com/prysmaticlabs/prysm/releases/latest)
 - [Lodestar](https://chainsafe.github.io/lodestar/install/source/) (Doesn't provide a pre-built binary, only a Docker image or to be build from source)
 
-There is currently a [client diversity](/developers/docs/nodes-and-clients/client-diversity/) issue where a large dominance of Prysm clients poses a risk to the health of the network. In response to the initial drive to even out the client diversity many Prysm nodes switched to Lighthouse to the extent that it now also has a problematic market share. It is therefore recommended to consider choosing a minority client. 
+[Client diversity](/developers/docs/nodes-and-clients/client-diversity/) is critical for consensus nodes running validators. If majority of validators is running a single client implementation, network security is at risk. It is therefore recommended to consider choosing a minority client. 
 
 [See the latest network client usage](https://clientdiversity.org/) and learn more about [client diversity](/developers/docs/client-diversity). 
 
@@ -324,6 +326,8 @@ Execution client will initiate its core functions, chosen endpoints, and start l
 The consensus client must be started with the right port configuration to establish a local RPC connection to the execution client. The consensus clients have to be run with the exposed execution client port as configuration argument. 
 
 The consensus client also needs the path to the execution client's `jwt-secret` in order to authenticate the RPC connection between them. Similar to execution examples above, each consensus client has a configuration flag which takes the jwt token file path as an argument. This must be consistent with the `jwtsecret` path provided to the execution client.
+
+If you plan to run a validator, add fee recepient
 
 **Note that we recommend waiting for merge-ready client releases before doing this on Ethereum Mainnet—for now just practice on a testnet such as Kiln**
 
@@ -476,6 +480,7 @@ As part of your monitoring, make sure to keep an eye on your machine's performan
 ## Further reading {#further-reading}
 
 - [Guide | How to setup a validator for Ethereum staking on mainnet](https://www.coincashew.com/coins/overview-eth/guide-or-how-to-setup-a-validator-on-eth2-mainnet) _– CoinCashew, updated regularly_
+- [ETHStaker guides on running validators on testnets](https://github.com/remyroy/ethstaker#guides) – _ETHStaker, updated regularly_
 - [Analyzing the hardware requirements to be an Ethereum full validated node](https://medium.com/coinmonks/analyzing-the-hardware-requirements-to-be-an-ethereum-full-validated-node-dc064f167902) _– Albert Palau, 24 September 2018_
 - [Running Ethereum Full Nodes: A Guide for the Barely Motivated](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _– Justin Leroux, 7 November 2019_
 - [Running an Ethereum Node](https://docs.ethhub.io/using-ethereum/running-an-ethereum-node/) _– ETHHub, updated often_

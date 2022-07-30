@@ -21,9 +21,9 @@ If you're new to the topic of nodes, we recommend first checking out our user-fr
 
 "Node" refers to a running piece of client software. A client is an implementation of Ethereum that verifies all transactions in each block, keeping the network secure and the data accurate.
 
-An Ethereum node consists of two pieces of software: execution client and consensus client. 
-- The execution client, also known as the Execution Engine or formerly the Eth1 client, listens to new transactions broadcasted in the network, executes them in EVM and holds the latest state, and database of all current Ethereum data. 
-- The consensus client, also known as the Beacon Node or formerly the Eth2 client, implements the proof-of-stake consensus algorithm which enables network to achieve agreement based on validated data from the execution client. 
+Ethereum network consists of execution layer and consensus layer. These are presented by two pieces of software: execution client and consensus client. 
+- The execution client, also known as the Execution Engine, EL client or formerly the Eth1 client, listens to new transactions broadcasted in the network, executes them in EVM and holds the latest state, and database of all current Ethereum data. 
+- The consensus client, also known as the Beacon Node, CL client or formerly the Eth2 client, implements the proof-of-stake consensus algorithm which enables network to achieve agreement based on validated data from the execution client. 
 
 Before [The Merge](/upgrades/merge/), network only consisted of what are now execution clients. One client software provided both execution enviroment and consensus verification of blocks produced by miners. As the network transitions to proof-of-stake, consensus is separted into its own client implementation.
 Modular design with various pieces of software working together can be referred to as [encapusalted complexity](https://vitalik.ca/general/2022/02/28/complexity.html). This approach makes it easier to execute The Merge in a seamless way and also enables reuse of individual clients, for example in the L2 ecosystem. 
@@ -90,7 +90,7 @@ Running a node allows you to directly, trustlessly and privately use Ethereum wh
 
 ### Benefits to you {#benefits-to-you}
 
-Running your own node enables you to use Ethereum in a truly private, self-sufficient and trustless manner. You don't need to trust the network because you can verify the data yourself with your client. "Don't trust, verify" is a popular blockchain mantra.
+Running your own node enables you to use Ethereum in a private, self-sufficient and trustless manner. You don't need to trust the network because you can verify the data yourself with your client. "Don't trust, verify" is a popular blockchain mantra.
 
 - Your node verifies all the transactions and blocks against consensus rules by itself. This means you don’t have to rely on any other nodes in the network or fully trust them.
 - You can use an Ethereum wallet with your own node. You can use dapps more securely and privately because you won't have to leak your addresses and balances to random nodes. Everything can be checked with your own client. [MetaMask](https://metamask.io), [Frame](https://frame.sh/) and [many other wallets](/wallets/find-wallet/) can be easily pointed to your own local node. (Check wallets with `RPC importing` filter.)
@@ -141,6 +141,7 @@ This table summarizes the different clients. All of them are actively maintained
 | [Nethermind](http://nethermind.io/)                                       | C#, .NET | Linux, Windows, macOS | Mainnet, Görli, Ropsten, Rinkeby, and more | Snap, Fast, Beam | Archive, Pruned |
 | [Besu](https://pegasys.tech/solutions/hyperledger-besu/)                  | Java     | Linux, Windows, macOS | Mainnet, Rinkeby, Ropsten, Görli, and more | Fast, Full, Snap, Checkpoint | Archive, Pruned |
 | [Erigon](https://github.com/ledgerwatch/erigon)                           | Go       | Linux, Windows, macOS | Mainnet, Görli, Rinkeby, Ropsten           | Full, Snap               | Archive, Pruned |
+| [Akula](https://akula.app)                                                | Rust     | Linux                 | Mainnet, Görli, Rinkeby, Ropsten, and more | Full                | Archive, Pruned |
 
 For more on supported networks, read up on [Ethereum networks](/developers/docs/networks/).
 
@@ -212,6 +213,7 @@ Documentation can be found in [Lighthouse Book](https://lighthouse-book.sigmapri
 Lodestar is a production-ready consensus client implementation written in Typescript under the LGPL-3.0 license. It is maintained by ChainSafe Systems and is the newest of the consensus clients for solo-stakers, developers and researchers. Lodestar consists of a beacon node and validator client powered by JavaScript implementations of Ethereum protocols. We aim to improve Ethereum usability with light clients, expand accessibility to a larger group of developers and further contribute to ecosystem diversity.
 
 More information can be found on our [Lodestar website](https://lodestar.chainsafe.io/)
+
 ### Prysm
 
 Prysm is a full-featured, open source consensus client written in Go under the GPL-3.0 license. It features an optional webapp UI and prioritizes user experience, documentation, and configurability for both stake-at-home and institutional users.
@@ -223,6 +225,8 @@ Visit [Prysm docs](https://docs.prylabs.network/docs/getting-started/) to learn 
 To follow and verify current data in the network, the Ethereum client needs to sync with the latest network state. This is done by downloading data from peers, cryptographically verifying their integrity, and building a local blockchain database.
 
 Synchronization modes represent different approaches to this process with various trade-offs. Clients also vary in their implementation of sync algorithms. Always refer to the official documentation of your chosen client for specifics on implementation.
+
+#### Execution layer sync modes
 
 #### Full sync {#full-sync}
 
@@ -266,11 +270,15 @@ Implemented by Nethermind and Trinity. Works like fast sync but also downloads t
 
 [More on Beam](https://medium.com/@jason.carver/intro-to-beam-sync-a0fd168be14a)
 
+#### Consensus layer sync modes
+
 #### Optimistic sync
 
 Optimistic sync is a post-merge synchronization strategy designed to be opt-in and backwards compatible, allowing execution nodes to sync via established methods. The execution engine can *optimistically* import beacon blocks without fully verifying them, find the latest head, and then start syncing the chain with the above methods. Then, after the execution client has caught up, it will inform the consensus client of the validity of the transactions in the Beacon Chain.
 
 [More on Optimistic sync](https://github.com/ethereum/consensus-specs/blob/dev/sync/optimistic.md)
+
+#### Checkpoint sync
 
 ## Further reading {#further-reading}
 
