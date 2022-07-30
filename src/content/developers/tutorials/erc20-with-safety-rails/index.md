@@ -178,6 +178,26 @@ Freezing and thawing contracts requires several changes:
    
 ### Asset cleanup {#asset-cleanup}
 
+To release ERC-20 tokens held by this contract we need to call a function on the token contract to which they belong, either [`transfer`](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-20.md#transfer) or [`approve`](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-20.md#approve). There's no point wasting gas in this case on allowances, we might as well transfer directly.
+
+```solidity
+    function cleanupERC20(
+        address erc20,
+        address dest
+    )
+        public
+        onlyOwner
+    {
+        IERC20 token = IERC20(erc20);
+```
+
+This is the syntax to create an object for a contract when we receive the address. We can do this because we have the definition for ERC20 tokens as part of the source code (see line 4), and that file includes [the definition for IERC20](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol), the interface for an OpenZeppelin ERC-20 contract.
+
+```solidity
+        uint balance = token.balanceOf(address(this));
+        token.transfer(dest, balance);
+    }
+```
 
 
 
