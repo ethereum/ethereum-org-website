@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { ApolloProvider } from "@apollo/client"
+import { useColorMode } from "@chakra-ui/react"
 import { ThemeProvider } from "@emotion/react"
 import styled from "@emotion/styled"
 import { IntlProvider } from "react-intl"
@@ -87,24 +88,17 @@ const Layout: React.FC<IProps> = ({
   pageContext,
   children,
 }) => {
-  const [isDarkTheme, setIsDarkTheme] = useState<boolean>(false)
+  const { colorMode } = useColorMode()
   const [isZenMode, setIsZenMode] = useState<boolean>(false)
   const [shouldShowSideNav, setShouldShowSideNav] = useState<boolean>(false)
+
+  const isDarkTheme = colorMode === "dark"
 
   const locale = pageContext.locale
   const messages = require(`../intl/${locale}.json`)
 
   // Exit Zen Mode on 'esc' click
   useKeyPress(`Escape`, () => handleZenModeChange(false))
-
-  // set isDarkTheme based on browser/app user preferences
-  useEffect(() => {
-    if (localStorage && localStorage.getItem("dark-theme") !== null) {
-      setIsDarkTheme(localStorage.getItem("dark-theme") === "true")
-    } else {
-      setIsDarkTheme(window.matchMedia("(prefers-color-scheme: dark)").matches)
-    }
-  }, [])
 
   useEffect(() => {
     if (path.includes("/docs/")) {
@@ -125,13 +119,6 @@ const Layout: React.FC<IProps> = ({
     }
   }, [path, location])
 
-  const handleThemeChange = (): void => {
-    setIsDarkTheme(!isDarkTheme)
-    if (localStorage) {
-      localStorage.setItem("dark-theme", String(!isDarkTheme))
-    }
-  }
-
   const handleZenModeChange = (val?: boolean): void => {
     // Use 'val' param if provided. Otherwise toggle
     const newVal = val !== undefined ? val : !isZenMode
@@ -142,6 +129,7 @@ const Layout: React.FC<IProps> = ({
     }
   }
 
+  // TODO: tmp - for backward compatibility with old theme
   const theme = isDarkTheme ? darkTheme : lightTheme
 
   const isPageLanguageEnglish = pageContext.isDefaultLang
@@ -177,11 +165,7 @@ const Layout: React.FC<IProps> = ({
             />
             <ContentContainer>
               <VisuallyHidden isHidden={isZenMode}>
-                <Nav
-                  handleThemeChange={handleThemeChange}
-                  isDarkTheme={isDarkTheme}
-                  path={path}
-                />
+                <Nav path={path} />
                 {shouldShowSideNav && <SideNavMobile path={path} />}
               </VisuallyHidden>
               <SkipLinkAnchor id="main-content" />
