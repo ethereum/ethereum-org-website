@@ -6,12 +6,12 @@ lang: en
 sidebar: true
 tags: ["erc-20"]
 skill: beginner
-published: 2022-09-01
+published: 2022-08-15
 ---
 
 ## Introduction {#introduction}
 
-One of the great things about Ethereum is that there is no central authority that can modify or undo your transactions. One of the great problems with Ethereum is that ther is no central authority with the power to undo user mistakes or illicit transactions. In this article you learn about some of the common mistakes that users commit with [ERC-20](/developers/docs/standards/tokens/erc-20/) tokens, as well as how to create ERC-20 contracts that help users to avoid those mistakes, or that give a central authority some limited power to undo them.
+One of the great things about Ethereum is that there is no central authority that can modify or undo your transactions. One of the great problems with Ethereum is that ther is no central authority with the power to undo user mistakes or illicit transactions. In this article you learn about some of the common mistakes that users commit with [ERC-20](/developers/docs/standards/tokens/erc-20/) tokens, as well as how to create ERC-20 contracts that help users to avoid those mistakes, or that give a central authority some power (for example to freeze accounts).
 
 Note that while we will use the [OpenZeppelin ERC-20 token contract](https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master/contracts/token/ERC20), this article does not explain it in great details. You can find this information [here](/developers/tutorials/erc20-annotated-code).
 
@@ -55,7 +55,7 @@ To use the hook, add this function after the constructor:
 
 ```solidity
     function _beforeTokenTransfer(address from, address to, uint256 amount)
-        internal
+        internal virtual
         override(ERC20)
     {
         super._beforeTokenTransfer(from, to, amount);
@@ -63,6 +63,12 @@ To use the hook, add this function after the constructor:
 ```
 
 Some parts of this function may be new if you aren't very familiar with Solidity:
+
+```solidity
+        internal virtual
+```
+
+The `virtual` keyword means that just as we inherited functionality from `ERC20` and overrode this function, other contracts can inherit from us and override this function. 
 
 ```solidity
         override(ERC20)
@@ -202,11 +208,6 @@ This is the syntax to create an object for a contract when we receive the addres
 This is a cleanup function, so presumably we don't want to leave any tokens. Instead of getting the balance from the user manually, we might as well automate the process.
 
 
-## Delayed transactions {#delayed-transactions}
-
-It is sometimes useful to have account administrators that can modify or undo certain actions. 
-
-
 ## Conclusion
 
-Add extendability. 
+This is not a perfect solution, there is no perfect solution to the "user made a mistake" problem. However, using this kind of check can at least prevent some mistakes. The ability to freeze accounts, while dangerous, can be used to limit the damage of certain hacks by denying the hacker the stolen funds.
