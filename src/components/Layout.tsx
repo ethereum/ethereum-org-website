@@ -7,6 +7,7 @@ import { IntlProvider } from "react-intl"
 import { LocaleProvider } from "gatsby-theme-i18n"
 
 import { lightTheme, darkTheme } from "../theme"
+import GlobalStyle from "./GlobalStyle"
 
 import Footer from "./Footer"
 import VisuallyHidden from "./VisuallyHidden"
@@ -28,9 +29,7 @@ import { isMobile } from "../utils/isMobile"
 
 import type { Context } from "../types"
 
-import "../styles/layout.css"
 import client from "../apollo"
-import GlobalStyle from "./GlobalStyle"
 
 const ContentContainer = styled.div`
   position: relative;

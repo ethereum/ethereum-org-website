@@ -1,4 +1,14 @@
-import { extendTheme, type ThemeConfig, type Theme } from "@chakra-ui/react"
+import {
+  extendTheme,
+  type ThemeConfig,
+  type ThemeOverride,
+} from "@chakra-ui/react"
+
+// Global style overrides
+import styles from "./styles"
+
+// Foundational style overrides
+import foundations from "./foundations"
 
 const config: ThemeConfig = {
   cssVarPrefix: "eth",
@@ -6,10 +16,10 @@ const config: ThemeConfig = {
   useSystemColorMode: false,
 }
 
-const theme: Theme = {
-  colors: {
-    primary: "rebeccapurple",
-  },
+const theme: ThemeOverride = {
+  config,
+  styles,
+  ...foundations,
 }
 
-export default extendTheme({ config, theme })
+export default extendTheme(theme)
