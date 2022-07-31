@@ -84,7 +84,7 @@ We have to specify explicitly that we're [overriding](https://docs.soliditylang.
 
 This line calls the `_beforeTokenTransfer` function of the contract or contracts from which we inherited which have it. In this case, that is only `ERC20`, `Ownable` does not have this hook. Even though currently `ERC20._beforeTokenTransfer` doesn't do anything, we call it in case functionality is added in the future (and we then decide to redeploy the contract, because contracts don't change after deployment).
 
-### Coding the requireemnts {#coding-the-requirements}
+### Coding the requirements {#coding-the-requirements}
 
 We want to add these requirements to the function:
 
