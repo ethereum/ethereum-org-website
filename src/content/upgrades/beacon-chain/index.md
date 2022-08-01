@@ -33,7 +33,7 @@ The Beacon Chain was a foundational component for [the secure, environmentally f
 
 The Beacon Chain introduced [proof-of-stake](/developers/docs/consensus-mechanisms/pos/) to Ethereum. This keeps Ethereum secure and earns validators more ETH in the process. In practice, staking involves staking ETH in order to activate validator software. As a staker, you run the software that creates and validates new blocks in the chain.
 
-Staking serves a similar purpose that mining used to [mining](/developers/docs/mining/), but is different in many ways. Mining required large up-front expenditures in the form of powerful hardware and energy consumption, resulting in economies of scale, and promoting centralization. Mining also did not come with any requirement to lock up assets as collateral, limiting the protocol's ability to punish bad actors after an attack.
+Staking serves a similar purpose that [mining](/developers/docs/mining/) used to, but is different in many ways. Mining required large up-front expenditures in the form of powerful hardware and energy consumption, resulting in economies of scale, and promoting centralization. Mining also did not come with any requirement to lock up assets as collateral, limiting the protocol's ability to punish bad actors after an attack.
 
 The transition to proof-of-stake made Ethereum significantly more secure and decentralized by comparison to proof-of-work. The more people that participate in the network, the more decentralized and safe from attacks it becomes.
 
@@ -70,3 +70,8 @@ Sharding can only safely enter the Ethereum ecosystem with a proof-of-stake cons
 <ButtonLink to="/upgrades/sharding/">
   Shard chains
 </ButtonLink>
+
+## Further Reading
+
+[More on Ethereum's future upgrades](/upgrades/vision)
+[More of proof-of-stake](/develoeprs/docs/consensus-mechanisms/pos)
