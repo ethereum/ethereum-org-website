@@ -113,4 +113,4 @@ _Surprise us with your creativity! But here are some judging criteria considerat
 
 ## Support {#support}
 
-For any general support questions about your submission, please email datachallenge@ethereum.org.
+For any general support questions about your submission, please email [datachallenge@ethereum.org](mailto:datachallenge@ethereum.org).
