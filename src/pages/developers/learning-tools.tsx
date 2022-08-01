@@ -220,6 +220,7 @@ const LearningToolsPage = ({
       alt: "page-learning-tools-platzi-logo-alt",
       background: "#121f3d",
       subjects: ["Solidity", "web3"],
+      locales: ["es"],
     },
   ]
 
