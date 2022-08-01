@@ -1,25 +1,25 @@
+// Library imports
 import React, { useEffect, useState } from "react"
 import styled from "styled-components"
 import { graphql, PageProps } from "gatsby"
 import { getImage } from "gatsby-plugin-image"
 import { useIntl } from "react-intl"
 import { shuffle } from "lodash"
-import { translateMessageId, TranslationKey } from "../../utils/translations"
+// Component imports
 import PageMetadata from "../../components/PageMetadata"
 import Translation from "../../components/Translation"
 import ButtonLink from "../../components/ButtonLink"
-import ProductCard from "../../components/ProductCard"
 import InfoBanner from "../../components/InfoBanner"
 import CalloutBanner from "../../components/CalloutBanner"
-import {
-  Content,
-  CardGrid,
-  Page,
-} from "../../components/SharedStyledComponents"
+import { Content, Page } from "../../components/SharedStyledComponents"
 import FeedbackCard from "../../components/FeedbackCard"
-import { Context } from "../../types"
-import { Lang } from "../../utils/languages"
+import LearningToolsCardGrid from "../../components/LearningToolsCardGrid"
+// Util imports
+import { translateMessageId } from "../../utils/translations"
+// Type imports
+import { Context, LearningTool } from "../../types"
 
+// Styled components
 const StyledPage = styled(Page)`
   margin-top: 4rem;
 `
@@ -75,31 +75,17 @@ const StackContainer = styled(Content)`
   }
 `
 
-const StyledCardGrid = styled(CardGrid)`
-  margin-bottom: 2rem;
-`
-
-interface ILearningTool {
-  name: string
-  description: TranslationKey
-  url: string
-  image: string
-  alt: TranslationKey
-  background: string
-  subjects: Array<string>
-  locales?: Array<Lang>
-}
-
+// Page component
 const LearningToolsPage = ({
   data,
 }: PageProps<Queries.DevelopersLearningToolsPageQuery, Context>) => {
   const intl = useIntl()
   const [randomizedSandboxes, setRandomizedSandboxes] = useState<
-    Array<ILearningTool>
+    Array<LearningTool>
   >([])
 
   useEffect(() => {
-    const sandboxes: Array<ILearningTool> = [
+    const sandboxes: Array<LearningTool> = [
       {
         name: "Remix",
         description: "page-learning-tools-remix-description",
@@ -132,7 +118,7 @@ const LearningToolsPage = ({
     setRandomizedSandboxes(randomizedSandboxes)
   }, [data])
 
-  const games: Array<ILearningTool> = [
+  const games: Array<LearningTool> = [
     {
       name: "CryptoZombies",
       description: "page-learning-tools-cryptozombies-description",
@@ -162,7 +148,7 @@ const LearningToolsPage = ({
     },
   ]
 
-  const bootcamps: Array<ILearningTool> = [
+  const bootcamps: Array<LearningTool> = [
     {
       name: "ChainShot",
       description: "page-learning-tools-chainshot-description",
@@ -227,40 +213,6 @@ const LearningToolsPage = ({
       subjects: ["Solidity", "web3"],
     },
   ]
-
-  interface ILearningToolsCardGridProps {
-    category: Array<ILearningTool>
-  }
-
-  const LearningToolsCardGrid: React.FC<ILearningToolsCardGridProps> = ({
-    category,
-  }) => {
-    return (
-      <StyledCardGrid>
-        {category
-          .filter(
-            ({ locales }) =>
-              !locales?.length || locales.includes(intl.locale as Lang)
-          )
-          .sort(({ locales }) => (locales?.length ? -1 : 0))
-          .map(
-            ({ name, description, background, url, alt, image, subjects }) => (
-              <ProductCard
-                key={name}
-                background={background}
-                url={url}
-                alt={translateMessageId(alt, intl)}
-                image={image}
-                name={name}
-                subjects={subjects}
-              >
-                <Translation id={description} />
-              </ProductCard>
-            )
-          )}
-      </StyledCardGrid>
-    )
-  }
 
   return (
     <StyledPage>
