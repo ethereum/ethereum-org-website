@@ -70,7 +70,7 @@ _Entries must be considered sufficiently impactful/insightful by the community j
 - Blog post must be in English.
   - There are no length requirements.
 - Blog posts must be public and original.
-- Data analysis or visualization must concern [Merge](https://ethereum.org/en/upgrades/merge/) network data.
+- Data analysis or visualization must concern [Merge](/upgrades/merge/) network data.
 - Tools and scripts used (and created) must be free and open source and referenced in the blog post.
 
 ## Judging criteria {#judging-criteria}
