@@ -47,6 +47,16 @@ Read more about the [benefits of running your own node](/developers/docs/nodes-a
 
 Here is a list of some of the most popular Ethereum node providers, feel free to add any that are missing! Each node service offers different benefits and features in addition to free or paid tiers, you should investigate which ones best suit your needs prior to making a decision.
 
+- [**NOWNodes**](https://nownodes.io/)
+  - [Docs](https://documenter.getpostman.com/view/13630829/TVmFkLwy)
+  - Features
+    - Access to 50+ blockchain nodes
+    - Free API Key 
+    - Block Explorers
+    - API Response Time ⩽ 1 sec
+    - 24/7 Support Team
+    - Personal Account Manager 
+    - Shared, archive, backup and dedicated nodes
 - [**Alchemy**](https://alchemy.com/)
   - [Docs](https://docs.alchemyapi.io/)
   - Features
