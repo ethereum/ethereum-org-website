@@ -33,7 +33,7 @@ The Ethereum Foundation is running this challenge because there's a lot to learn
 
 Get started now if you want to gather date from both _before_ and _after_ the big event!
 
- <Emoji svg text=":rocket:" />
+ <Emoji text=":rocket:" size={1} />
 
 ### How to submit {#how-to-submit}
 
