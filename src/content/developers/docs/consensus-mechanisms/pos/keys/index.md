@@ -9,13 +9,13 @@ Ethereum secures user's assets using public-private key cryptography. The public
 
 Ethereum's keys are generated using [elliptic-curve cryptography](https://en.wikipedia.org/wiki/Elliptic-curve_cryptography).
 
-However, when Ethereum switched from [proof-of-work](/developers/docs/consensus-mechanisms/pow) to [proof-of-stake](/developers/docs/consensus-mechanisms/pos) a new type of key was added to Ethereum. The original keys still work exactly the same as before - there were no changes to the elliptic-curve based keys securing accounts. However, for users that wanted to participate in proof-of-stake by staking ETH and running validators, a new type of key was needed. This need arose from scalability challenges associated with many messages passign between large numbers of validators that required a cryptographic method that could easily be aggregated to reduce the amount of communication required for the network to come to consensus.
+However, when Ethereum switched from [proof-of-work](/developers/docs/consensus-mechanisms/pow) to [proof-of-stake](/developers/docs/consensus-mechanisms/pos) a new type of key was added to Ethereum. The original keys still work exactly the same as before - there were no changes to the elliptic-curve-based keys securing accounts. However, users needed a new type of key for participating in proof-of-stake by staking ETH and running validators. This need arose from scalability challenges associated with many messages passing between large numbers of validators that required a cryptographic method that could easily be aggregated to reduce the amount of communication required for the network to come to consensus.
 
-This new type of key uses the Boneh-Lyn-Shacham, [BLS](https://en.wikipedia.org/wiki/Boneh%E2%80%93Lynn%E2%80%93Shacham), signature scheme. This scheme enables very efficient aggregation of signatures but also allows reverse engineering of the individual validator keys that were aggregated - ideal for managing actions between validators.
+This new type of key uses the [Boneh-Lyn-Shacham (BLS) signature scheme](https://wikipedia.org/wiki/BLS_digital_signature). BLS enables a very efficient aggregation of signatures but also allows reverse engineering of aggregated individual validator keys and is ideal for managing actions between validators.
 
 ## The two types of validator key {#two-types-of-key}
 
-Before the switch to proof-of-stake, Ethereum users only had a single elliptic-curve based private key that they used to access their funds. With the introduction of proof-of-stake, users that wished to be solo stakers also required a **validator key** and a **withdrawal key**.
+Before the switch to proof-of-stake, Ethereum users only had a single elliptic-curve-based private key to access their funds. With the introduction of proof-of-stake, users that wished to be solo stakers also required a **validator key** and a **withdrawal key**.
 
 ### The validator key {#validator-key}
 
