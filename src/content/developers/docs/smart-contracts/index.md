@@ -29,7 +29,7 @@ money + snack selection = snack dispensed
 
 This logic is programmed into the vending machine.
 
-A smart contract, like a vending machine, has logic programmed into it. Here's a simple example of how this vending machine would look if it was a smart contract written in solidity:
+A smart contract, like a vending machine, has logic programmed into it. Here's a simple example of how this vending machine would look if it were a smart contract written in Solidity:
 
 ```solidity
 pragma solidity 0.8.7;
