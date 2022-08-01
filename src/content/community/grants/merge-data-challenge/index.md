@@ -59,7 +59,7 @@ A group of Ethereum community members will evaluate your submissions, and awards
 
 The deadline for submissions is **four weeks after the merge** (precise date TBD).
 
-<h2>Prizes <Emoji svg text=":money_with_wings:" /></h2>
+## Prizes <Emoji text=":money_with_wings:" size={1} /> {#prizes}
 
 Up to **USD $30,000**
 
