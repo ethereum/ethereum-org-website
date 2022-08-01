@@ -12,12 +12,12 @@ summaryPoint4: The consensus logic and block gossip protocol introduced by the B
 ---
 
 <UpgradeStatus isShipped dateKey="page-upgrades-beacon-date">
-  The Beacon Chain shipped on December 1, 2020. At the time it was a separate chain to Ethereum Mainnet. It ran proof-of-stake but did not handle any transactions. The Beacon Chain was merged with the original Ethereum Mainnet in 2022 to take over the consensus logic and block propagation for Ethereum. Since The Merge, there has only been one, single Ethereum chain.
+  The Beacon Chain shipped on December 1, 2020. At the time, it was a separate chain to Ethereum Mainnet. It ran proof-of-stake but did not handle any transactions. The Beacon Chain was merged with the original Ethereum Mainnet in 2022 to take over the consensus logic and block propagation for Ethereum. Since The Merge, there has only been one Ethereum chain.
 </UpgradeStatus>
 
 ## What was the Beacon Chain? {#what-is-the-beacon-chain}
 
-The Beacon Chain was the name given to the original proof-of-stake blockchain that was launched in 2020. It was created to ensure the proof-of-stake consensus logic was sound and sustainable before enabling it on Ethereum Mainnet. Therefore, it ran alongisde the original proof-of-work Ethereum. Switching off proof-of-work and switching on proof-of-stake on Ethereum required instructing the Beacon Chain to accept transactions from the original Ethereum chain, bundle them into blocks and then oprganize the blocks into a block chain using a proof-of-stake based consensus mechanism. At the same moment, the original Ethereum clients turned off their mining, block propagation and consensus logic, handing that all over to the Beacon Chain. This event was known as [The Merge](/upgrades/merge/). Once The Merge happened, there were no longer two blockchains, there was just one single proof-of-stake Ethereum.
+The Beacon Chain was the name of the original proof-of-stake blockchain that was launched in 2020. It was created to ensure the proof-of-stake consensus logic was sound and sustainable before enabling it on Ethereum Mainnet. Therefore, it ran alongside the original proof-of-work Ethereum. Switching off proof-of-work and switching on proof-of-stake on Ethereum required instructing the Beacon Chain to accept transactions from the original Ethereum chain, bundle them into blocks and then organize them into a blockchain using a proof-of-stake based consensus mechanism. At the same moment, the original Ethereum clients turned off their mining, block propagation and consensus logic, handing that all over to the Beacon Chain. This event was known as [The Merge](/upgrades/merge/). Once The Merge happened, there were no longer two blockchains; there was just one proof-of-stake Ethereum chain.
 
 ## What did the Beacon Chain do? {#what-does-the-beacon-chain-do}
 
@@ -57,7 +57,7 @@ The Ethereum upgrades are all somewhat interrelated. So let’s recap how the Be
 
 ### Beacon Chain and The Merge {#merge-and-beacon-chain}
 
-The Beacon Chain, at first, existed separately to Ethereum Mainnet but they were merged together in 2022.
+At first, The Beacon Chain existed separately from Ethereum Mainnet, but they were merged in 2022.
 
 <ButtonLink to="/upgrades/merge/">
   The Merge
