@@ -55,7 +55,7 @@ In addition to the prompt questions above, here's a [wishlist of data analysis a
 
 A group of Ethereum community members will evaluate your submissions, and awards will go to the top blog posts <Emoji text=":trophy:" size={1} />.
 
-<h2>Deadline <Emoji svg text=":alarm_clock:" /></h2>
+## Deadline <Emoji text=":alarm_clock:" size={1} /> {#deadline}
 
 The deadline for submissions is **four weeks after the merge** (precise date TBD).
 
