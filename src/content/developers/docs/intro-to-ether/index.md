@@ -34,7 +34,7 @@ It is [common](https://www.reuters.com/article/us-crypto-currencies-lending-insi
 
 Minting is the process in which new ether gets created on the Ethereum ledger. The underlying Ethereum protocol creates the new ether, and it is not possible for a user to create ether.
 
-Ether is minted as a reward for each block proposed, and also at every epoch checkpoint for other validator activity related to reaching consensus. The total amount issued depends on the number of validators and how much ether they have staked. This total issuance is divided equally among validators in the ideal case that all validators are honest and online, but in reality it varies based on validator performance. About 1/8 of the total issuance goes to the block proposer, the remainder is distributed across the other validators. Block proposers also receive tips from transaction fees and MEV related income but these come from recycled ether, not fresh issuance.
+Ether is minted as a reward for each block proposed and at every epoch checkpoint for other validator activity related to reaching consensus. The total amount issued depends on the number of validators and how much ether they have staked. This total issuance is divided equally among validators in the ideal case that all validators are honest and online, but in reality, it varies based on validator performance. About 1/8 of the total issuance goes to the block proposer; the remainder is distributed across the other validators. Block proposers also receive tips from transaction fees and MEV-related income, but these come from recycled ether, not new issuance.
 
 ## Burning ether {#burning-ether}
 
