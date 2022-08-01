@@ -19,7 +19,7 @@ Calling all Ethereans, data scientists, data engineers, data visualizers, develo
 [The Merge](https://ethereum.org/en/upgrades/merge/) is coming, providing a more secure and sustainable home for Ethereum -- as well as more data, lots and lots of data. And **the Ethereum community needs your help to make sense of it all.**
 
 - _What new visualizations help provide insight into proof-of-stake Ethereum?_
-- _How do the Consensus-Layer and Execution-Layer interact? Are there differences across client pairs in communication patterns, efficiency, etc? Are their good places to optimise?_
+- _How do the Consensus-Layer and Execution-Layer interact? Are there differences across client pairs in communication patterns, efficiency, etc? Are there good places to optimise?_
 - _What, if anything, changed on the network at the point of the Merge -- block propagation times, p2p connections, transaction mempool performance, etc?_
 - _Did the Merge affect core Beacon Chain activity -- attestation performance, blocks missed, sync committees?_
 - _Did user activity noticeably change after the Merge? What about MEV?_
