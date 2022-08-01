@@ -116,7 +116,7 @@ The Merge comes with changes to consensus, which also includes changes related t
 For more information, check out this blog post by Tim Beiko on [How The Merge Impacts Ethereum’s Application Layer](https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer/).
 </ExpandableCard>
 
-## When will The Merge happen? {#when-merge}
+## When will The Merge happen? {#wen-merge}
 
 The Merge date is expected to land within Q3/Q4 2022. The client developers are currently working to a soft deadline of 19th September 2022, but this could change depending upon the success of the final testnet merge (Goerli) in mid-August, continued client refinements and the hashrate of the existing miners continuing in a predictable manner. Everyone is working hard to deliver The Merge as soon as possible.
 
