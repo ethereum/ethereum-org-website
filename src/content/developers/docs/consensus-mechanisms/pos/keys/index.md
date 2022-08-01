@@ -83,8 +83,7 @@ Each branch is separated by a `/` so `m/2` means start with the master key and f
 
 ![validator key logic](multiple-keys.png)
 
-## Further Reading {#further-reading}
+## Further reading {#further-reading}
 
-[Ethereum Foundation blog post by Carl Beekhuizen](https://blog.ethereum.org/2020/05/21/keys/)
-
-[EIP-2333 BLS12-381 key generation](https://eips.ethereum.org/EIPS/eip-2333)
+- [Ethereum Foundation blog post by Carl Beekhuizen](https://blog.ethereum.org/2020/05/21/keys/)
+- [EIP-2333 BLS12-381 key generation](https://eips.ethereum.org/EIPS/eip-2333)

@@ -72,11 +72,11 @@
           to: /developers/docs/consensus-mechanisms/pos/
           items:
             - id: docs-nav-gasper
-              to: /developers/docs/consensus-mechanisms/pos/gasper
+              to: /developers/docs/consensus-mechanisms/pos/gasper/
             - id: docs-nav-weak-subjectivity
-              to: /developers/docs/consensus-mechanisms/pos/weak-subjectivity
+              to: /developers/docs/consensus-mechanisms/pos/weak-subjectivity/
             - id: docs-nav-keys
-              to: /developers/docs/consensus-mechanisms/pos/keys
+              to: /developers/docs/consensus-mechanisms/pos/keys/
 - id: docs-nav-ethereum-stack
   path: /developers/docs/
   items:
