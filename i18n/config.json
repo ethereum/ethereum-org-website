@@ -184,6 +184,14 @@
     "dateFormat": "MM/DD/YYYY"
   },
   {
+    "code": "kk",
+    "hrefLang": "kk",
+    "name": "Kazakh",
+    "localName": "қазақ",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY"
+  },
+  {
     "code": "ko",
     "hrefLang": "ko",
     "name": "Korean",
@@ -236,6 +244,14 @@
     "hrefLang": "nb",
     "name": "Norwegian",
     "localName": "Norsk",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY"
+  },
+  {
+    "code": "ph",
+    "hrefLang": "ph",
+    "name": "Filipino",
+    "localName": "Filipino",
     "langDir": "ltr",
     "dateFormat": "MM/DD/YYYY"
   },

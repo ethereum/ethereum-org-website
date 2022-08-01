@@ -212,6 +212,15 @@ const LearningToolsPage = ({
       background: "#171717",
       subjects: ["Solidity", "web3"],
     },
+    {
+      name: "Platzi",
+      description: "page-learning-tools-platzi-description",
+      url: "https://platzi.com/blockchain",
+      image: getImage(data.platzi),
+      alt: "page-learning-tools-platzi-logo-alt",
+      background: "#121f3d",
+      subjects: ["Solidity", "web3"],
+    },
   ]
 
   return (
@@ -335,6 +344,9 @@ export const query = graphql`
       ...learningToolImage
     }
     pointer: file(relativePath: { eq: "dev-tools/pointer.png" }) {
+      ...learningToolImage
+    }
+    platzi: file(relativePath: { eq: "dev-tools/platzi.png" }) {
       ...learningToolImage
     }
 

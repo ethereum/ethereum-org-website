@@ -21,6 +21,10 @@ DeSci aims to create an ecosystem where scientists are incentivized to openly sh
 
 Decentralized science allows for more diverse funding sources (from [DAOs](/dao/), [quadratic donations](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531) to crowdfunding and more), more accessible access data and methods, and by providing incentives for reproducibility.
 
+### Juan Benet - DeSci, Independent Labs, & Large Scale Data Science
+<iframe width="560" height="315" src="https://www.youtube.com/embed/zkXM9H90g_E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
 ## How DeSci improves science {#desci-improves-science}
 
 An incomplete list of key problems in science and how decentralized science can help to address these issues
@@ -80,7 +84,7 @@ The advent of non-transferable ["soulbound" tokens](https://vitalik.ca/general/2
 
 Scientific data can be made vastly more accessible using Web3 patterns, and distributed storage will enable research to survive cataclysmic events.
 
-The starting point must be a system accessible by any decentralized identity holding the proper verifiable credentials. This allows sensitive data to be securely replicated by trusted parties, enabling redundancy and censorship resistance, reproduction of results, and even the ability for multiple parties to collaborate and add new data to the dataset. Confidential computing methods like [compute-to-data](https://7wdata.be/predictive-analytics/compute-to-data-using-blockchain-to-decentralize-data-science-and-ai-with-the-ocean-protocol) provide alternative access mechanisms to raw data replication, creating Trusted Research Environments for the most sensitive data.
+The starting point must be a system accessible by any decentralized identity holding the proper verifiable credentials. This allows sensitive data to be securely replicated by trusted parties, enabling redundancy and censorship resistance, reproduction of results, and even the ability for multiple parties to collaborate and add new data to the dataset. Confidential computing methods like [compute-to-data](https://7wdata.be/predictive-analytics/compute-to-data-using-blockchain-to-decentralize-data-science-and-ai-with-the-ocean-protocol) provide alternative access mechanisms to raw data replication, creating Trusted Research Environments for the most sensitive data. Trusted Research Environments have been [cited by the NHS](https://medium.com/weavechain/whats-in-store-for-the-future-of-healthcare-data-b6398745fbbb) as a future-facing solution to data privacy and collaboration by creating an ecosystem where researchers can securely work with data on-site using standardized environments for sharing code and practices.
 
 Flexible Web3 data solutions support the scenarios above and provide the foundation for truly Open Science, where researchers can create public goods without access permissions or fees. Web3 public data solutions such as IPFS, Arweave and Filecoin are optimized for decentralization. dClimate, for example, provides universal access to climate and weather data, including from weather stations and predictive climate models.
 
@@ -121,3 +125,4 @@ Explore projects and join the DeSci community.
 - [What's Decentralized Science?](https://www.youtube.com/watch?v=-DeMklVWNdA)
 - [Conversation between Vitalik Buterin and the scientist Aubrey de Grey about the intersection of longevity research and crypto](https://www.youtube.com/watch?v=x9TSJK1widA)
 - [Scientific Publishing Is Broken. Can Web3 Fix It?](https://www.youtube.com/watch?v=WkvzYgCvWj8)
+- [Juan Benet - DeSci, Independent Labs, & Large Scale Data Science](https://www.youtube.com/watch?v=zkXM9H90g_E)

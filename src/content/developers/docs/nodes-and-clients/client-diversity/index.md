@@ -70,7 +70,7 @@ Addressing client diversity requires more than individual users to choose minori
 
 [Akula](https://akula.app)
 
-[CoreGeth](https://core-geth.org/)
+[Go-Ethereum](https://geth.ethereum.org/)
 
 ### Consensus clients {#consensus-clients}
 

@@ -8235,6 +8235,52 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "alebaffa",
+      "name": "Alessandro Baffa",
+      "avatar_url": "https://avatars.githubusercontent.com/u/465513?v=4",
+      "profile": "https://alebaffa.eth.link",
+      "contributions": [
+        "doc",
+        "bug"
+      ]
+    },
+    {
+      "login": "johngrantuk",
+      "name": "John Grant",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4797222?v=4",
+      "profile": "https://medium.com/@johngrant",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "gorondan",
+      "name": "gorondan",
+      "avatar_url": "https://avatars.githubusercontent.com/u/97026899?v=4",
+      "profile": "https://github.com/gorondan",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "pruthvirajjadhav1",
+      "name": "Pruthviraj Jadhav",
+      "avatar_url": "https://avatars.githubusercontent.com/u/73253354?v=4",
+      "profile": "https://github.com/pruthvirajjadhav1",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "gndx",
+      "name": "Oscar Barajas Tavares",
+      "avatar_url": "https://avatars.githubusercontent.com/u/10554486?v=4",
+      "profile": "https://gndx.io",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
