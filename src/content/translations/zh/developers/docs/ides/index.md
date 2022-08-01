@@ -35,7 +35,6 @@ sidebar: true
 **Visual Studio Code -** **_以太坊官方支持的专业跨平台集成开发环境。_**
 
 - [Visual Studio Code](https://code.visualstudio.com/)
-- [以太坊区块链开发工具包](https://marketplace.visualstudio.com/items?itemName=AzBlockchain.azure-blockchain)
 - [Azure 区块链工作台](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/microsoft-azure-blockchain.azure-blockchain-workbench?tab=Overview)
 - [代码示例](https://github.com/Azure-Samples/blockchain/blob/master/blockchain-workbench/application-and-smart-contract-samples/readme.md)
 - [GitHub](https://github.com/microsoft/vscode)
