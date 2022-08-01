@@ -9,7 +9,7 @@ image: ../../../assets/staking/leslie-solo.png
 alt: Leslie the rhino on her own computer chip.
 sidebarDepth: 2
 summaryPoints:
-  - Receive maximum rewards directly from the protocol (including unburnt fees after The Merge) for keeping your validator properly functioning and online
+  - Receive maximum rewards directly from the protocol for keeping your validator properly functioning and online
   - Run home hardware and personally add to the security and decentralization of the Ethereum network
   - Remove trust, and never give up control of the keys to your funds
 ---
@@ -58,7 +58,7 @@ As much as we wish that solo staking was accessible and risk free to everyone, t
     <p style={{marginTop: "1rem"}}><a href="/security">Ethereum security and scam prevention</a></p>
   </ExpandableCard>
   <ExpandableCard title="No withdrawing (for now)" eventCategory="SoloStaking" eventName="clicked no withdrawing">
-    Withdrawing staked ETH or rewards from a validator balance is not yet supported. Support for withdrawals are planned for the Shanghai upgrade following The Merge. You should anticipate your ETH being locked for at least one-to-two years. After the Shanghai upgrade you will be able to freely withdraw portions or all of your stake if you wish.
+    Withdrawing staked ETH or rewards from a validator balance is not yet supported. Support for withdrawals are planned for the upcoming Shanghai upgrade. You should anticipate your ETH being locked for at least one-to-two years. After the Shanghai upgrade you will be able to freely withdraw portions or all of your stake if you wish.
   </ExpandableCard>
   <ExpandableCard title="Maintenance" eventCategory="SoloStaking" eventName="clicked maintenance">
     Hardware occasionally fails, network connections error out, and client software occasionally needs upgrading. Node maintenance is inevitable and will occasionally require your attention. You'll want to be sure you stay aware of any anticipated network upgrades, or other critical client upgrades.
@@ -88,10 +88,6 @@ After Shanghai, users will be able to withdraw their rewards as well as their st
 The Staking Launchpad is an open source application that will help you become a staker. It will guide you through choosing your clients, generate your keys and depositing your ETH to the staking deposit contract. A checklist is provided to make sure you've covered everything to get your validator set up safely.
 
 <StakingLaunchpadWidget />
-
-<InfoBanner emoji=":panda:" isWarning>
-<strong>Note for existing stakers:</strong> The Merge is approaching, which brings a few changes since staking was launched. Make sure you're prepared with the <a href="https://launchpad.ethereum.org/en/merge-readiness">Merge readiness checklist</a> over on the Staking Launchpad.
-</InfoBanner>
 
 ## What to consider with node and client setup tools {#node-tool-considerations}
 
@@ -130,7 +126,9 @@ Have a suggestion for a staking tool we missed? Check out our [product listing p
 These are a few of the most common questions about staking that are worth knowing about.
 
 <ExpandableCard title="What is a validator?">
-A <em>validator</em> is a virtual entity that lives on the Beacon Chain and participates in the consensus of the Ethereum protocol. Validators are represented by a balance, public key, and other properties. A <em>validator client</em> is the software that acts on behalf of the validator by holding and using its private key. A single validator client can hold many key pairs, controlling many validators.
+
+A _validator_ is a virtual entity that lives on Ethereum and participates in the consensus of the Ethereum protocol. Validators are represented by a balance, public key, and other properties. A _validator client_ is the software that acts on behalf of the validator by holding and using its private key. A single validator client can hold many key pairs, controlling many validators.
+
 </ExpandableCard>
 
 <ExpandableCard title="Can I deposit more than 32 ETH?">
@@ -178,18 +176,6 @@ The more validator clients running on a single centralized cloud storage solutio
 Offline penalties are proportional to how many others are offline at the same time. Using a VPS greatly increases the risk that offline penalties will be more severe, and increases your risk of quadratic leaking or slashing in the event the outage is large enough. To minimize your own risk, and the risk to the network, users are strongly encouraged to obtain and operate their own hardware.
 
 <a href="https://consensys.net/blog/codefi/rewards-and-penalties-on-ethereum-20-phase-0/">More on rewards and penalties</a>
-</ExpandableCard>
-
-<ExpandableCard title="Do I need to do anything before The Merge?">
-Stakers currently running a consensus layer client (Beacon Chain) will also be required to run an execution layer client after The Merge. The new Engine API will be used to interface between the two layers, requiring a JWT secret. If you currently run a Beacon Chain without an execution layer client, you will need to sync the execution layer before The Merge to stay in sync with the network.
-
-The Merge will also bring unburnt transaction fees to validators. These fees do not accumulate in the balance associated with the validator keys but instead can be directed to a regular Ethereum address of your choice. To receive your tips (priority fees) from proposed blocks, you should update your client settings with the address you want your tips sent to.
-
-Links to individual client documentation and additional information can be found on the Merge readiness checklist over on the Launchpad.
-
-<ButtonLink to="https://launchpad.ethereum.org/merge-readiness/">
-Merge readiness checklist
-</ButtonLink>
 </ExpandableCard>
 
 ## Further reading {#further-reading}
