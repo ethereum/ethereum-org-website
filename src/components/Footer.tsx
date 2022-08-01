@@ -386,7 +386,7 @@ const Footer: React.FC<IProps> = () => {
                     to={link.to}
                     hideArrow={true}
                     key={idx}
-                    ariaLabel={link.ariaLabel}
+                    aria-label={link.ariaLabel}
                   >
                     <SocialIcon name={link.icon} size="36" />
                   </Link>
