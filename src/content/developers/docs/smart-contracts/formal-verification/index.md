@@ -41,11 +41,11 @@ Thus, we can think of a formal specification as a collection of statements writt
 
 Formal specifications are critical in developing secure implementations of smart contracts. Contracts that fail to implement invariants or have their properties violated during execution are prone to vulnerabilities that can harm functionality or cause malicious exploits. 
 
-## Types of formal specifications for smart contracts {formal-specifications-for-smart-contracts}
+## Types of formal specifications for smart contracts {#formal-specifications-for-smart-contracts}
 
 Formal specifications enable mathematical reasoning about the correctness of program execution. As with formal models, formal specifications can capture either high-level properties or the low-level behavior of a contract implementation. 
 
-Formal specifications are derived using elements of [program logic](https://en.wikipedia.org/wiki/Logic_programming), which allow for formal reasoning about the properties of a program. A program logic has formal rules that express (in mathematical language) the expected behavior of a program. Various program logics are used in creating formal specifications, including reachability logic, temporal logic, and Hoare logic. 
+Formal specifications are derived using elements of [program logic](https://en.wikipedia.org/wiki/Logic_programming), which allow for formal reasoning about the properties of a program. A program logic has formal rules that express (in mathematical language) the expected behavior of a program. Various program logics are used in creating formal specifications, including [reachability logic](https://en.wikipedia.org/wiki/Reachability_problem), temporal logic, and Hoare logic. 
 
 Formal specifications for smart contracts can be classified broadly as either **high-level** or **low-level** specifications. Regardless of what category a specification belongs to, it must adequately and unambiguously describe the property of the system under analysis.  
 
@@ -67,7 +67,7 @@ High-level specifications take as a starting point a finite-state model of a con
 
 In simpler terms, low-level specifications analyze *program traces* and attempt to define properties of a smart contract over these traces. Traces refer to sequences of function executions that alter the state of a smart contract; hence, low-level specifications help specify requirements for a contract's internal execution. 
 
-Low-level formal specifications can be given as either Hoare-style properties or properties on execution paths. 
+Low-level formal specifications can be given as either Hoare-style properties or invariants on execution paths. 
 
 ### Hoare-style properties {#hoare-style-properties}
 
@@ -83,7 +83,7 @@ Smart contract specifications created using Hoare logic will have preconditions,
 
 Many formal verification frameworks use Hoare-style specifications for proving semantic correctness of functions. It is also possible to add Hoare-style properties (as assertions) directly to contract code by using the `require` and `assert` statements in Solidity. 
 
-`require` statements express a precondition or invariant, while `assert` captures a postcondition. For instance, proper access control for functions (an example of a safety property) can be achieved using `require` as a precondition check on the identity of the calling account. Similarly, an invariant on permissible values of state variables in a contract (e.g., total number of tokens in circulation) can be protected from violation by using `assert` to confirm the contract's state after function execution. 
+`require` statements express a precondition or invariant and are often used to validate user inputs, while `assert` captures a postcondition necessary for safety. For instance, proper access control for functions (an example of a safety property) can be achieved using `require` as a precondition check on the identity of the calling account. Similarly, an invariant on permissible values of state variables in a contract (e.g., total number of tokens in circulation) can be protected from violation by using `assert` to confirm the contract's state after function execution. 
 
 ### Trace-level properties {#trace-level-properties}
 
@@ -220,14 +220,22 @@ Also, it is not always possible for program verifiers to determine if a property
 
 - [GitHub](https://github.com/SRI-CSL/solidity)
 
-**hevm** - *_hevm is a symbolic execution engine and equivalence checker for EVM bytecode._*
-
-- [GitHub](https://github.com/dapphub/dapptools/tree/master/src/hevm)
-
-**KEVM**: _*KEVM is a formal semantics of the Ethereum Virtual Machine (EVM) written in the K framework. KEVM is executable and can prove certain property-related assertions using reachability logic.*_
+**KEVM** - _*KEVM is a formal semantics of the Ethereum Virtual Machine (EVM) written in the K framework. KEVM is executable and can prove certain property-related assertions using reachability logic.*_
 
 - [GitHub](https://github.com/runtimeverification/evm-semantics)
 - [Documentation](https://jellopaper.org/)
+
+### Logical frameworks for theorem proving {#theorem-provers}
+
+**Isabelle** - _Isabelle/HOL is a proof assistant that allows mathematical formulas to be expressed in a formal language and provides tools for proving those formulas. The main application is the formalization of mathematical proofs and in particular formal verification, which includes proving the correctness of computer hardware or software and proving properties of computer languages and protocols._
+
+- [GitHub](https://github.com/isabelle-prover)
+- [Documentation](https://isabelle.in.tum.de/documentation.html) 
+
+**Coq** - _Coq is an interactive theorem prover that lets you define programs using theorems and interactively generate machine-checked proofs of correctness._
+
+- [GitHub](https://github.com/coq/coq)
+- [Documentation](https://coq.github.io/doc/v8.13/refman/index.html)
 
 ### Symbolic execution-based tools for detecting vulnerable patterns in smart contracts {#symbolic-execution-tools}
 
@@ -236,37 +244,17 @@ Also, it is not always possible for program verifiers to determine if a property
 - [GitHub](https://github.com/trailofbits/manticore)
 - [Documentation](https://github.com/trailofbits/manticore/wiki)
 
-**Securify** - _*A security analyzer for analyzing Solidity source code in Ethereum smart contracts and detecting property violations.*_
+**hevm** - *_hevm is a symbolic execution engine and equivalence checker for EVM bytecode._*
 
-- [GitHub](https://github.com/eth-sri/securify2)
-
-**Oyente** - *_Static analysis tool for analyzing vulnerabilities in EVM bytecode with symbolic execution._*
-
-- [GitHub](https://github.com/melonproject/oyente)
-
-**Echidna** - *_Echidna is a fast contract fuzzer for detecting vulnerabilities in smart contracts through property-based testing._*
-
-- [GitHub](https://github.com/crytic/echidna/)
-
-**Harvey** - *_Harvey is an automated fuzzing tool useful for detecting property violations in smart contract code._*
-
-- [Website](https://consensys.net/diligence/fuzzing/)
+- [GitHub](https://github.com/dapphub/dapptools/tree/master/src/hevm)
 
 ## Further reading {#further-reading}
 
-### Articles {#articles}
-
-- [How Formal Verification of Smart Contracts Works](https://runtimeverification.com/blog/how-formal-verification-of-smart-contracts-works/) [How Formal Verification Can Ensure Flawless Smart Contracts](https://media.consensys.net/how-formal-verification-can-ensure-flawless-smart-contracts-cbda8ad99bd1)
+- [How Formal Verification of Smart Contracts Works](https://runtimeverification.com/blog/how-formal-verification-of-smart-contracts-works/) 
+- [How Formal Verification Can Ensure Flawless Smart Contracts](https://media.consensys.net/how-formal-verification-can-ensure-flawless-smart-contracts-cbda8ad99bd1)
 - [An Overview of Formal Verification Projects in the Ethereum Ecosystem](https://github.com/leonardoalt/ethereum_formal_verification_overview)
-- [An Introduction to Formal Verification of Ethereum Contracts](https://github.com/pirapira/Ethereum-Formal-Verification-Overview)
+- [End-to-End Formal Verification of Ethereum 2.0 Deposit Smart Contract](https://runtimeverification.com/blog/end-to-end-formal-verification-of-ethereum-2-0-deposit-smart-contract/)
 - [SMTChecker and Formal Verification](https://docs.soliditylang.org/en/v0.8.15/smtchecker.html)
-
-## Academic papers {#academic-papers}
-- [Towards Verifying Ethereum Smart Contract Bytecode in Isabelle/HOL](https://trustworthy.systems/publications/csiro_full_text/Amani_BBS_18.pdf)
-- [A Survey of Smart Contract Formal Specification and Verification](https://arxiv.org/pdf/2008.02712.pdf)
-- [Formal Verification of the Ethereum 2.0 Beacon Chain](https://arxiv.org/abs/2110.12909)
-- [A Formal Verification Tool for Ethereum VM Bytecode](https://fsl.cs.illinois.edu/publications/park-zhang-saxena-daian-rosu-2018-fse.pdf)
-- [Debugging Smart Contract’s Business Logic Using Symbolic Model Checking](https://arxiv.org/pdf/1812.00619.pdf)
 
 
 
