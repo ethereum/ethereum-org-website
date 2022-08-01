@@ -53,7 +53,7 @@ _You may submit more than one blog post! So long as each posts focuses on a diff
 
 In addition to the prompt questions above, here's a [wishlist of data analysis avenues to explore](https://notes.ethereum.org/@djrtwo/merge-data-comp-wish).
 
-A group of Ethereum community members will evaluate your submissions and awards will go to the top blog posts <Emoji svg text=":trophy:" />
+A group of Ethereum community members will evaluate your submissions, and awards will go to the top blog posts <Emoji text=":trophy:" size={1} />.
 
 <h2>Deadline <Emoji svg text=":alarm_clock:" /></h2>
 
