@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "@emotion/styled"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import { graphql } from "gatsby"
+import { graphql, PageProps } from "gatsby"
 import { useIntl } from "react-intl"
 
 import ButtonLink from "../../components/ButtonLink"
@@ -16,7 +16,9 @@ import InfoBanner from "../../components/InfoBanner"
 import Link from "../../components/Link"
 import PageMetadata from "../../components/PageMetadata"
 import Translation from "../../components/Translation"
-import PageHero from "../../components/PageHero"
+import PageHero, {
+  IContent as IPageHeroContent,
+} from "../../components/PageHero"
 import {
   CardContainer,
   Content,
@@ -221,10 +223,10 @@ const paths = [
   },
 ]
 
-const Eth2IndexPage = ({ data }) => {
+const Eth2IndexPage = ({ data }: PageProps<Queries.UpgradesPageQuery>) => {
   const intl = useIntl()
 
-  const heroContent = {
+  const heroContent: IPageHeroContent = {
     title: translateMessageId("page-upgrades-upgrades", intl),
     header: translateMessageId("page-upgrades-upgrading", intl),
     subtitle: translateMessageId("page-upgrades-upgrade-desc", intl),
@@ -233,12 +235,12 @@ const Eth2IndexPage = ({ data }) => {
     buttons: [
       {
         content: translateMessageId("page-upgrades-explore-btn", intl),
-        path: "/upgrades/beacon-chain/",
+        to: "/upgrades/beacon-chain/",
       },
       {
         content: translateMessageId("page-upgrades-whats-ethereum", intl),
-        path: "/what-is-ethereum/",
-        isSecondary: "isSecondary",
+        to: "/what-is-ethereum/",
+        isSecondary: true,
       },
     ],
   }

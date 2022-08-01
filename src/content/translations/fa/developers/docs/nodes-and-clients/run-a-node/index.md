@@ -74,7 +74,7 @@ If you're new to the topic of running a node, or looking for a less technical pa
 - [Geth](https://geth.ethereum.org/downloads/)
 - [OpenEthereum,](https://github.com/openethereum/openethereum/releases)
 - [Nethermind](https://downloads.nethermind.io/)
-- [Besu](https://pegasys.tech/solutions/hyperledger-besu/)
+- [Besu](https://besu.hyperledger.org/en/stable/)
 - [Erigon](https://github.com/ledgerwatch/erigon)
 
 **دقت کنید که OpenEthereum‏[منسوخ شده است](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd) و دیگر نگهداری نمی‌شود.** با احتیاط از آن استفاده کنید و ترجیحاً به پیاده‌سازی کلاینت دیگری بروید.

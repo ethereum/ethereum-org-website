@@ -234,7 +234,7 @@ Ethereum-H was an Ethereum client written in Haskell. It was deprecated around 2
 
 **Alternatives**
 
-[Geth](https://geth.ethereum.org/), [Nethermind](http://nethermind.io/), [Besu](https://pegasys.tech/solutions/hyperledger-besu/) and [Erigon](https://github.com/ledgerwatch/erigon) are viable alternative Ethereum clients - there is no current Haskell client.
+[Geth](https://geth.ethereum.org/), [Nethermind](http://nethermind.io/), [Besu](https://besu.hyperledger.org/en/stable/) and [Erigon](https://github.com/ledgerwatch/erigon) are viable alternative Ethereum clients - there is no current Haskell client.
 
 ### ruby-ethereum {#ruby-ethereum}
 
@@ -248,7 +248,7 @@ ruby-ethereum was an Ethereum client written in Ruby. It was deprecated around 2
 
 **Alternatives**
 
-[Geth](https://geth.ethereum.org/), [Nethermind](http://nethermind.io/), [Besu](https://pegasys.tech/solutions/hyperledger-besu/) and [Erigon](https://github.com/ledgerwatch/erigon) are viable alternative Ethereum clients. There is no current Ruby client.
+[Geth](https://geth.ethereum.org/), [Nethermind](http://nethermind.io/), [Besu](https://besu.hyperledger.org/en/stable/) and [Erigon](https://github.com/ledgerwatch/erigon) are viable alternative Ethereum clients. There is no current Ruby client.
 
 ### Parity {#parity}
 

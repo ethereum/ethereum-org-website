@@ -118,7 +118,7 @@ Acest tabel prezintă o sinteză a diferiților clienți. Toţi aceştia trec ni
 | ------------------------------------------------------------------------- | -------- | --------------------- | ------------------------------------------ | ------------------------- | ---------------- |
 | [Geth](https://geth.ethereum.org/)                                        | Go       | Linux, Windows, macOS | Mainnet, Görli, Rinkeby, Ropsten           | Snap, Full                | Arhivă, Curățată |
 | [Nethermind](http://nethermind.io/)                                       | C#, .NET | Linux, Windows, macOS | Mainnet, Görli, Ropsten, Rinkeby și altele | Fast, Beam, Archive       | Arhivă, Curățată |
-| [Besu](https://pegasys.tech/solutions/hyperledger-besu/)                  | Java     | Linux, Windows, macOS | Mainnet, Rinkeby, Ropsten, Görli, and more | Rapidă, Completă          | Arhivă, Curățată |
+| [Besu](https://besu.hyperledger.org/en/stable/)                           | Java     | Linux, Windows, macOS | Mainnet, Rinkeby, Ropsten, Görli, and more | Rapidă, Completă          | Arhivă, Curățată |
 | [Erigon](https://github.com/ledgerwatch/erigon)                           | Începe   | Linux, Windows, macOS | Rețea principală, Görli, Rinkeby, Ropsten  | Full                      | Arhivă, Curățată |
 | [OpenEthereum (Deprecated)](https://github.com/openethereum/openethereum) | Rust     | Linux, Windows, macOS | Mainnet, Kovan, Ropsten și altele          | Warp, Completă            | Arhivă, Curățată |
 

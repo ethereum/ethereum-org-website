@@ -1,5 +1,5 @@
 // Libraries
-import React, { ComponentType, SVGProps, useState } from "react"
+import React, { ComponentType, ReactNode, SVGProps, useState } from "react"
 import styled from "@emotion/styled"
 import { motion } from "framer-motion"
 
@@ -90,8 +90,8 @@ const ButtonLink = styled.button`
 `
 
 export interface IProps {
-  contentPreview?: string
-  title: string
+  contentPreview?: ReactNode
+  title: ReactNode
   svg?: ComponentType<SVGProps<SVGElement>>
   eventCategory?: string
   eventName?: string

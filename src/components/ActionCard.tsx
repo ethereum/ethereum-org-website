@@ -1,4 +1,4 @@
-import React from "react"
+import React, { ReactNode } from "react"
 import styled from "@emotion/styled"
 import { GatsbyImage } from "gatsby-plugin-image"
 
@@ -69,8 +69,8 @@ export interface IProps {
   to: string
   alt?: string
   image: string
-  title: string
-  description?: string
+  title: ReactNode
+  description?: ReactNode
   className?: string
   isRight?: boolean
   isBottom?: boolean

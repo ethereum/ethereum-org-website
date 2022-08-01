@@ -118,7 +118,7 @@ export interface TableRow {
 }
 
 export interface IProps {
-  columns: Array<TranslationKey>
+  columns: Array<string>
   content: Array<TableRow>
   hasError: boolean
 }

@@ -430,5 +430,5 @@ Por decirlo de otra manera, si Visa manejó 140.839.000.000 transacciones a un c
 Ethereum en un solo año consume 5.256.000 kWh. Con un potencial de entre 788.940.000.000 y 3.153.600.00.000 de transacciones procesadas en ese tiempo.
 
 <InfoBanner emoji=":evergreen_tree:">
-  Si cree que estas estadísticas son incorrectas o pueden hacerse más exactas, cree un asunto o una solicitud de extracción. Estas son estimaciones realizadas por el equipo de ethereum.org utilizando informacción accesible, pública y el diseño planificado de Ethereum. No representa una promesa oficial de Ethereum Foundation. 
+  Si cree que estas estadísticas son incorrectas o pueden hacerse más exactas, cree un asunto o una solicitud de extracción. Estas son estimaciones realizadas por el equipo de ethereum.org utilizando informacción accesible, pública y el diseño planificado de Ethereum. No representa una promesa oficial de Ethereum Foundation.
 </InfoBanner>
