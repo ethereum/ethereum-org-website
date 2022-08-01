@@ -8,7 +8,7 @@ image: ../../../assets/upgrades/core.png
 summaryPoint1: The Beacon Chain doesn't change anything about the Ethereum we use today.
 summaryPoint2: It introduced proof-of-stake to the Ethereum ecosystem.
 summaryPoint3: It was merged with the original Ethereum proof-of-work chain in 2022.
-summaryPoint4: It is now handling all consensus logic and block gossip for Ethereum.
+summaryPoint4: The consensus logic and block gossip protocol introduced by the Beacon Chain now secures Ethereum.
 ---
 
 <UpgradeStatus isShipped dateKey="page-upgrades-beacon-date">
