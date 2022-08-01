@@ -11,7 +11,7 @@ Ethereum is a peer-to-peer network with thousands of nodes that must be able to 
 
 There are two parts to the client software (execution clients and consensus clients), each with its own distinct networking stack. As well as communicating with other Ethereum nodes, the execution and consensus clients have to communicate with each other. This page gives an introductory explanation of the protocols that enable this communication.
 
-Execution clients gossip transactions over the execution-layer peer-to-peer network. This requires encrypted communication between authenticated peers. When a validator is selected toi propose a block, transactions from the node's local transaction pool will be passed to consensus clients via a local RPC connection, where they will be packaged into Beacon blocks. Consensus clients will then gossip Beacon blocks across their p2p network. This requires two separate p2p networks - one connecting execution clients for transaction gossip and one connecting consensus clients for block gossip.
+Execution clients gossip transactions over the execution-layer peer-to-peer network. This requires encrypted communication between authenticated peers. When a validator is selected to propose a block, transactions from the node's local transaction pool will be passed to consensus clients via a local RPC connection, which will be packaged into Beacon blocks. Consensus clients will then gossip Beacon blocks across their p2p network. This requires two separate p2p networks: one connecting execution clients for transaction gossip and one connecting consensus clients for block gossip.
 
 ## Prerequisites {#prerequisites}
 
@@ -73,7 +73,7 @@ Along with the hello messages, the wire protocol can also send a "disconnect" me
 
 #### Wire protocol {#wire-protocol}
 
-Once peers are connected and an RLPx session has been started, the wire protocol defines how peers communicate. Originally there were three main tasks defined by the wire protocol: chain synchronization, block propagation and transaction exchange. However, once Ethereum switched to proof-of-stake, block propagation and chain synchronization became part of the consensus layer. Transaction exchange is still in the remit of the execution clients. Transaction exchange refers to exchanging pending transactions between nodes so that miners can select some of them for inclusion in the next block. Detailed information about these tasks is available [here](https://github.com/ethereum/devp2p/blob/master/caps/eth.md). Clients that support these sub-protocols expose them via the [JSON-RPC](/developers/docs/apis/json-rpc).
+Once peers are connected, and an RLPx session has been started, the wire protocol defines how peers communicate. Initially, the wire protocol defined three main tasks: chain synchronization, block propagation and transaction exchange. However, once Ethereum switched to proof-of-stake, block propagation and chain synchronization became part of the consensus layer. Transaction exchange is still in the remit of the execution clients. Transaction exchange refers to exchanging pending transactions between nodes so that miners can select some of them for inclusion in the next block. Detailed information about these tasks is available [here](https://github.com/ethereum/devp2p/blob/master/caps/eth.md). Clients that support these sub-protocols expose them via the [JSON-RPC](/developers/docs/apis/json-rpc/).
 
 #### les (light ethereum subprotocol) {#les}
 
@@ -121,7 +121,7 @@ SSZ stands for simple serialization. It uses fixed offsets that make it easy to 
 
 ## Connecting the execution and consensus clients {#connecting-clients}
 
-Both consensus and execution clients run in parallel. They need to be connected together so that the consensus client can provide instructions to the execution client and the execution client can pass bundles of transactions to the consensus client to include in Beacon blocks. This communication between the two clients can be achieved using a local RPC connection. An API known as the ['Engine-API'](https://github.com/ethereum/execution-apis/blob/main/src/engine/specification.md) defines the instructions sent between the two clients. Since both clients sit behind a single network identity, they share a ENR (Ethereum node record) which contains a separate key for each client (eth1 key and eth2 key).
+Both consensus and execution clients run in parallel. They need to be connected so that the consensus client can provide instructions to the execution client, and the execution client can pass bundles of transactions to the consensus client to include in Beacon blocks. The communication between the two clients can be achieved using a local RPC connection. An API known as the ['Engine-API'](https://github.com/ethereum/execution-apis/blob/main/src/engine/specification.md) defines the instructions sent between the two clients. Since both clients sit behind a single network identity, they share an ENR (Ethereum node record) which contains a separate key for each client (eth1 key and eth2 key).
 
 A summary of the control flow is shown below, with the relevant networking stack in brackets.
 
