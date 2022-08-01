@@ -8272,6 +8272,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "gndx",
+      "name": "Oscar Barajas Tavares",
+      "avatar_url": "https://avatars.githubusercontent.com/u/10554486?v=4",
+      "profile": "https://gndx.io",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,

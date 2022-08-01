@@ -1323,6 +1323,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://medium.com/@johngrant"><img src="https://avatars.githubusercontent.com/u/4797222?v=4?s=100" width="100px;" alt=""/><br /><sub><b>John Grant</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=johngrantuk" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/gorondan"><img src="https://avatars.githubusercontent.com/u/97026899?v=4?s=100" width="100px;" alt=""/><br /><sub><b>gorondan</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=gorondan" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/pruthvirajjadhav1"><img src="https://avatars.githubusercontent.com/u/73253354?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Pruthviraj Jadhav</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=pruthvirajjadhav1" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://gndx.io"><img src="https://avatars.githubusercontent.com/u/10554486?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Oscar Barajas Tavares</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=gndx" title="Documentation">📖</a></td>
   </tr>
 </table>
 
