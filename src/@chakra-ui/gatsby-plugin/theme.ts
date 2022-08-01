@@ -10,6 +10,9 @@ import styles from "./styles"
 // Foundational style overrides
 import foundations from "./foundations"
 
+// Component style overrides
+import Link from "./components/Link"
+
 import semanticTokens from "./semanticTokens"
 
 const config: ThemeConfig = {
@@ -23,6 +26,9 @@ const theme: ThemeOverride = {
   styles,
   ...foundations,
   semanticTokens,
+  components: {
+    Link,
+  },
 }
 
 export default extendTheme(theme)
