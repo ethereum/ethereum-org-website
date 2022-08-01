@@ -101,7 +101,7 @@ The contract address is usually given when a contract is deployed to the Ethereu
 
 There is also another type of key in Ethereum, introduced when Ethereum switched from proof-of-work to proof-of-stake based consensus. These are 'BLS' keys and they are used to identify validators. These keys can be efficiently aggregated to reduce the bandwidth required for the network to come to consensus. Without this key aggregation the minimum stake for a validator would be much higher.
 
-Read more about [validator keys](/developers/docs/consensus-mechanisms/pos/keys).
+[More on validator keys](/developers/docs/consensus-mechanisms/pos/keys/).
 
 ## A note on wallets {#a-note-on-wallets}
 
