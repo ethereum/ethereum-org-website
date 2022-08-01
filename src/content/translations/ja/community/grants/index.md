@@ -27,7 +27,7 @@ lang: ja
 下記は、独自のテクノロジーの開発とテストを目的とした、プロジェクトに特化した助成プログラムです。
 
 - [Aave Grants Program](https://aavegrants.org/) – _[Aave](https://aave.com/)の分散型自律組織(DAO)助成プログラム_
-- [Balancer](https://forms.gle/c68e4fM7JHCQkPkN7) – _[Balancer](https://balancer.fi/)エコシステムファンド_
+- [Balancer](https://balancergrants.notion.site/Balancer-Community-Grants-23e562c5bc4347cd8304637bff0058e6) – _[Balancer](https://balancer.fi/)エコシステムファンド_
 - [Compound 助成プログラム](https://compoundgrants.org/) – _[Compound](https://compound.finance/)金融エコシステム_
 - [Consensys 助成プログラム](https://consensys.net/grants/) – _[Consensys](https://consensys.net/)ブロックチェーン資金調達およびイーサリアム助成プログラム_
 - [dYdX 助成プログラム](https://dydxgrants.com/) – _[dYdX](https://dydx.exchange/)分散型取引所_
