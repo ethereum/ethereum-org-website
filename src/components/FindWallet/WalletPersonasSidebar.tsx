@@ -89,47 +89,6 @@ const Persona = styled.div<{
 
   h3 {
     color: ${(props) => props.theme.colors.text};
-    position: relative;
-    padding-left: 2rem;
-    &:before {
-      content: "";
-      display: block;
-      border-radius: 100%;
-      width: 1.4rem;
-      height: 1.4rem;
-      left: 0;
-      top: 0.1rem;
-      transition: all 0.5s;
-      border: 1px solid;
-      position: absolute;
-      border-color: ${({ selected, isDark, theme }) =>
-        selected
-          ? isDark
-            ? theme.colors.primary
-            : theme.colors.primary
-          : isDark
-          ? theme.colors.white
-          : theme.colors.black400};
-    }
-    &:after {
-      content: "";
-      display: block;
-      border-radius: 100%;
-      width: 0.9rem;
-      height: 0.9rem;
-      left: 0.25rem;
-      top: 0.35rem;
-      transition: all 0.5s;
-      position: absolute;
-      background: ${({ selected, isDark, theme }) =>
-        selected
-          ? isDark
-            ? theme.colors.primary
-            : theme.colors.primary
-          : isDark
-          ? "rgba(0, 0, 0, 0)"
-          : "rgba(0, 0, 0, 0)"};
-    }
   }
 
   &:hover {
@@ -170,12 +129,6 @@ const Title = styled.div`
   padding: 0.5rem 0.5rem 0 0.5rem;
 `
 
-const Radio = styled.input`
-  display: none;
-  width: 1.4rem;
-  height: 1.4rem;
-`
-
 const H3 = styled.h3`
   margin-left: 0.5rem;
   margin-top: 0;
@@ -209,21 +162,22 @@ const IconContainer = styled.div`
 `
 
 const StyledIcon = styled(Icon)<{ selected: boolean }>`
-  width: 1.3rem;
-  height: 1.3rem;
+  border-radius: 100%;
+  width: 1rem;
+  height: 1rem;
   margin: 0 0.25rem;
   fill: ${(props) =>
-    props.selected === true ? props.theme.colors.white : "rgba(0, 0, 0, 0)"};
+    props.selected === true ? props.theme.colors.primary : "rgba(0, 0, 0, 0)"};
   background: ${(props) =>
     props.selected === true
       ? props.theme.colors.primary
       : props.theme.colors.priceCardBackground};
-  border-radius: 4px;
-  border: 1px solid
+  outline: 1.5px solid
     ${(props) =>
       props.selected === true
         ? props.theme.colors.primary
         : props.theme.colors.text};
+  outline-offset: 3px;
 `
 
 // Types
@@ -574,7 +528,16 @@ const WalletPersonasSidebar = ({
             }}
           >
             <Title>
-              <Radio type="radio" checked={selectedPersona === idx} />
+              <IconContainer
+                role="checkbox"
+                aria-label={`${persona.title} filter`}
+              >
+                <StyledIcon
+                  name="circle"
+                  selected={selectedPersona === idx}
+                  size="2rem"
+                />
+              </IconContainer>
               <H3>{persona.title}</H3>
             </Title>
             <PersonaDescription selected={selectedPersona === idx}>
