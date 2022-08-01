@@ -187,6 +187,8 @@ const DocsPage = ({
   const absoluteEditPath = `${editContentUrl}${relativePath}`
   const isDevelopersHome = relativePath.endsWith("/developers/docs/index.md")
   const showMergeBanner = !!mdx.frontmatter.preMergeBanner || isDevelopersHome
+  const shouldShowEditButton =
+    mdx?.frontmatter?.hideEditButton !== true ? true : false
 
   return (
     <Page dir={isRightToLeft ? "rtl" : "ltr"}>
@@ -219,6 +221,7 @@ const DocsPage = ({
             items={tocItems}
             isMobile={true}
             maxDepth={mdx.frontmatter.sidebarDepth}
+            shouldShowEditButton={shouldShowEditButton}
           />
           <MDXProvider components={components}>
             <MDXRenderer>{mdx.body}</MDXRenderer>
@@ -232,13 +235,14 @@ const DocsPage = ({
           <FeedbackCard isArticle />
           <DocsNav relativePath={relativePath}></DocsNav>
         </Content>
-        {mdx.frontmatter.sidebar && tocItems && (
+        {tocItems && (
           <DesktopTableOfContents
             slug={slug}
             editPath={absoluteEditPath}
             items={tocItems}
             isPageIncomplete={isPageIncomplete}
             maxDepth={mdx.frontmatter.sidebarDepth}
+            shouldShowEditButton={shouldShowEditButton}
           />
         )}
       </ContentContainer>
@@ -262,8 +266,9 @@ export const query = graphql`
         description
         lang
         incomplete
-        sidebar
         sidebarDepth
+        hideEditButton
+        hideTableOfContents
         isOutdated
         preMergeBanner
       }

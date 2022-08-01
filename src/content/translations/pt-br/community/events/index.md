@@ -1,7 +1,7 @@
 ---
 title: Eventos Ethereum
 description: Como fazer parte da comunidade Ethereum.
-sidebar: false
+hideTableOfContents: true
 lang: pt-br
 ---
 

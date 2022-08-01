@@ -152,8 +152,11 @@ const StaticPage = ({
   pageContext,
 }: PageProps<Queries.StaticPageQuery, Context>) => {
   const intl = useIntl()
-  // Show sidebar unless 'sidebar: false' frontmatter is present
-  const shouldShowSidebar = mdx.frontmatter.sidebar !== false ? true : false
+  // Show table of contents unless 'hideTableOfContents: true' frontmatter is present
+  const shouldShowTableOfContents =
+    mdx?.frontmatter?.hideTableOfContents !== true ? true : false
+  const shouldShowEditButton =
+    mdx?.frontmatter?.hideEditButton !== true ? true : false
 
   if (!siteData || !mdx?.frontmatter || !mdx.parent)
     throw new Error(
@@ -173,11 +176,7 @@ const StaticPage = ({
   const tocItems = mdx.tableOfContents?.items
   const { editContentUrl } = siteData.siteMetadata || {}
   const { relativePath } = pageContext
-  const absoluteEditPath =
-    relativePath.split("/").includes("whitepaper") ||
-    relativePath.split("/").includes("events")
-      ? ""
-      : `${editContentUrl}${relativePath}`
+  const absoluteEditPath = `${editContentUrl}${relativePath}`
 
   const slug = mdx.fields?.slug || ""
 
@@ -200,17 +199,19 @@ const StaticPage = ({
           items={tocItems}
           isMobile={true}
           maxDepth={mdx.frontmatter.sidebarDepth}
+          shouldShowEditButton={shouldShowEditButton}
         />
         <MDXProvider components={components}>
           <MDXRenderer>{mdx.body}</MDXRenderer>
         </MDXProvider>
         <FeedbackCard isArticle />
       </ContentContainer>
-      {shouldShowSidebar && tocItems && (
+      {shouldShowTableOfContents && tocItems && (
         <TableOfContents
           editPath={absoluteEditPath}
           items={tocItems}
           maxDepth={mdx.frontmatter.sidebarDepth}
+          shouldShowEditButton={shouldShowEditButton}
         />
       )}
     </Page>
@@ -232,7 +233,8 @@ export const staticPageQuery = graphql`
         title
         description
         lang
-        sidebar
+        hideTableOfContents
+        hideEditButton
         sidebarDepth
         isOutdated
       }

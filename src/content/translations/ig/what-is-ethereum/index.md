@@ -1,7 +1,7 @@
 ---
 title: Ndi mbido
 lang: ig
-sidebar: false
+hideTableOfContents: true
 ---
 
 # Nnoo! {#what-is-ethereum}

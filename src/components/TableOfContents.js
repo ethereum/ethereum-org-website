@@ -328,6 +328,7 @@ const TableOfContents = ({
   className,
   slug,
   editPath,
+  shouldShowEditButton,
   isMobile = false,
 }) => {
   const { isZenMode, handleZenModeChange } = useContext(ZenModeContext)
@@ -371,12 +372,11 @@ const TableOfContents = ({
   }
 
   const shouldShowZenModeToggle = slug?.includes("/docs/")
-  const shouldShowEditButtom = !!editPath
 
   return (
     <Aside className={className}>
       <OuterList>
-        {shouldShowEditButtom && (
+        {shouldShowEditButton && (
           <ButtonContainer>
             <ButtonLink to={editPath} isSecondary={true} hideArrow mt={0}>
               <ButtonContent>

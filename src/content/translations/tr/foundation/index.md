@@ -1,7 +1,7 @@
 ---
 title: Ethereum Vakfı
 description: Ethereum ve ilgili teknolojileri desteklemeye adanmış, kâr amacı gütmeyen bir organizasyon olan Ethereum Vakfı (EF) hakkında bilgi edinin.
-sidebar: false
+hideTableOfContents: true
 lang: tr
 ---
 

@@ -160,6 +160,8 @@ const TutorialPage = ({
 
   const isRightToLeft = isLangRightToLeft(mdx.frontmatter.lang as Lang)
   const showMergeBanner = !!mdx.frontmatter.preMergeBanner
+  const shouldShowEditButton =
+    mdx?.frontmatter?.hideEditButton !== true ? true : false
 
   const tocItems = mdx.tableOfContents?.items
 
@@ -183,6 +185,7 @@ const TutorialPage = ({
             maxDepth={mdx.frontmatter.sidebarDepth}
             editPath={absoluteEditPath}
             isMobile={true}
+            shouldShowEditButton={shouldShowEditButton}
           />
           <MDXProvider components={components}>
             <MDXRenderer>{mdx.body}</MDXRenderer>
@@ -193,11 +196,12 @@ const TutorialPage = ({
           />
           <FeedbackCard />
         </ContentContainer>
-        {mdx.frontmatter.sidebar && tocItems && (
+        {tocItems && (
           <DesktopTableOfContents
             items={tocItems}
             maxDepth={mdx.frontmatter.sidebarDepth}
             editPath={absoluteEditPath}
+            shouldShowEditButton={shouldShowEditButton}
           />
         )}
       </Page>
@@ -231,7 +235,8 @@ export const query = graphql`
         sourceUrl
         skill
         published
-        sidebar
+        hideTableOfContents
+        hideEditButton
         sidebarDepth
         address
         isOutdated

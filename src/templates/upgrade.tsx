@@ -391,7 +391,7 @@ const UpgradePage = ({
           <StyledButtonDropdown list={dropdownLinks} />
           <H1>{mdx.frontmatter.title}</H1>
 
-          {mdx.frontmatter.sidebar && tocItems && (
+          {tocItems && (
             <UpgradeTableOfContents
               items={tocItems}
               maxDepth={mdx.frontmatter.sidebarDepth}
