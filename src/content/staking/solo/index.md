@@ -126,7 +126,9 @@ Have a suggestion for a staking tool we missed? Check out our [product listing p
 These are a few of the most common questions about staking that are worth knowing about.
 
 <ExpandableCard title="What is a validator?">
-A <em>validator</em> is a virtual entity that lives on Ethereum and participates in the consensus of the Ethereum protocol. Validators are represented by a balance, public key, and other properties. A <em>validator client</em> is the software that acts on behalf of the validator by holding and using its private key. A single validator client can hold many key pairs, controlling many validators.
+
+A _validator_ is a virtual entity that lives on Ethereum and participates in the consensus of the Ethereum protocol. Validators are represented by a balance, public key, and other properties. A _validator client_ is the software that acts on behalf of the validator by holding and using its private key. A single validator client can hold many key pairs, controlling many validators.
+
 </ExpandableCard>
 
 <ExpandableCard title="Can I deposit more than 32 ETH?">
