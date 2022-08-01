@@ -1765,7 +1765,7 @@ Used for submitting mining hashrate.
 
 **Parameters**
 
-1. `Hashrate`, a hexadecimal string representation (32 bytes) of the hash rate
+1. `Hashrate`, a hexadecimal string representation (32 bytes) of the hashrate
 2. `ID`, String - A random hexadecimal(32 bytes) ID identifying the client
 
 ```js
