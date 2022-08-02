@@ -7,13 +7,13 @@
   },
   {
     "name": "Crypto.com",
-    "supports_withdrawals": ["Arbitrum"],
-    "supports_deposits": ["Arbitrum"],
+    "supports_withdrawals": ["Arbitrum", "Optimism"],
+    "supports_deposits": ["Arbitrum", "Optimism"],
     "url": "https://crypto.com/"
   },
   {
     "name": "OKX",
-    "supports_withdrawals": ["Arbitrum"],
+    "supports_withdrawals": ["Arbitrum", "Optimism"],
     "supports_deposits": ["Arbitrum"],
     "url": "https://www.okx.com/"
   },
