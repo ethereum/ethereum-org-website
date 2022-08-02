@@ -127,7 +127,6 @@ As such, developers are encouraged to incorporate **formal verification** into t
 
 Formal verification is considered important for smart contracts because it helps developers formally test assumptions relating to smart contracts. This is done by creating formal specifications that describe a smart contract's properties and verifying that a formal model of the smart contract matches the specification. This approach increases confidence that a smart contract will only execute functions as defined in its business logic and nothing else.
 
-[More on formal verification for smart contracts](https://ethereumorgwebsitedev01-emmanuelawosikaethereumor06662.gtsb.io/en/developers/docs/smart-contracts/formal-verification). 
 
 ## Testing tools and libraries {#testing-tools-and-libraries}
 
