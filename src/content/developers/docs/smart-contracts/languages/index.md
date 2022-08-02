@@ -89,6 +89,7 @@ This example should give you a sense of what Solidity contract syntax is like. F
 - Pythonic programming language
 - Strong typing
 - Small and understandable compiler code
+- Efficient bytecode generation
 - Deliberately has less features than Solidity with the aim of making contracts more secure and easier to audit. Vyper does not support:
   - Modifiers
   - Inheritance
@@ -105,10 +106,14 @@ For more information, [read the Vyper rationale](https://vyper.readthedocs.io/en
 
 - [Documentation](https://vyper.readthedocs.io)
 - [Vyper by Example](https://vyper.readthedocs.io/en/latest/vyper-by-example.html)
+- [More Vyper by Example](https://vyper-by-example.org/)
 - [GitHub](https://github.com/vyperlang/vyper)
-- [Vyper Gitter Chatroom](https://gitter.im/vyperlang/community)
+- [Vyper commmunity Discord chat](https://discord.gg/SdvKC79cJk)
 - [Cheat Sheet](https://reference.auditless.com/cheatsheet)
+- [Smart contract development frameworks and tools for Vyper](/developers/docs/programming-languages/python/)
+- [VyperPunk - learn to secure and hack Vyper smart contracts](https://github.com/SupremacyTeam/VyperPunk)
 - [Update Jan 8, 2020](https://blog.ethereum.org/2020/01/08/update-on-the-vyper-compiler)
+
 
 ### Example {#example}
 
