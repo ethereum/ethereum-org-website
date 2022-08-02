@@ -57,7 +57,7 @@ Overall, proof-of-stake, as it is implemented on Ethereum, has been demonstrated
 | Staking makes it easier for individuals to participate in securing the network, promoting decentralization. validator node can be run on a normal laptop. Staking pools allow users to stake without having 32 ETH. | Proof-of-stake is younger and less battle-tested compared to proof-of-work              |
 | Staking is more decentralized. Economies of scale do not apply in the same way that they do for PoW mining.                                                                                                         | Proof-of-stake is more complex to implement than proof-of-work                          |
 | Proof-of-stake offers greater crypto-economic security than proof-of-work                                                                                                                                           | Users need to run three pieces of software to participate in Ethereum's proof-of-stake. |
-| Less issuance of new ether is required to incentivize network participants                                                                                                                                          |                                                                                         |
+| Less issuance of new ether is required to incentivize network participants                                                                                                                                          |   Validators with large holdings can have excessive influence on transaction verification |                                                                                      |
 
 ## Further reading {#further-reading}
 
@@ -68,6 +68,7 @@ Overall, proof-of-stake, as it is implemented on Ethereum, has been demonstrated
 - [Why Proof of Stake (Nov 2020)](https://vitalik.ca/general/2020/11/06/pos2020.html) _Vitalik Buterin_
 - [Proof of Stake: How I Learned to Love Weak Subjectivity](https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity/) _Vitalik Buterin_
 - [A Proof of Stake Design Philosophy](https://medium.com/@VitalikButerin/a-proof-of-stake-design-philosophy-506585978d51) _Vitalik Buterin_
+- [Proof of Stake — What is and how does it work?](https://medium.com/nerd-for-tech/proof-of-stake-what-is-and-how-does-it-work-1c8bd7f00303) _Henrique Centieiro_
 
 ## Related topics {#related-topics}
 
