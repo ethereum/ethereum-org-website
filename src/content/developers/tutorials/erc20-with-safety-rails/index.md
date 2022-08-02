@@ -38,7 +38,7 @@ Before we can add the safety rail functionality we need an ERC-20 contract. In t
 5. Compile, deploy, and play with the contract to see that it functions as an ERC-20 contract. If you need to learn how to use Remix, [use this tutorial](https://remix.ethereum.org/?#activate=udapp,solidity,LearnEth).
 
 
-## Common mistakes {#commom-mistakes}
+## Common mistakes {#common-mistakes}
 
 ### The mistakes {#the-mistakes}
 
