@@ -18,7 +18,7 @@ Note that while we will use the [OpenZeppelin ERC-20 token contract](https://git
 If you want to see the complete source code:
 
 1. Open the [Remix IDE](https://remix.ethereum.org/).
-2. Click the clone github icon (![clone github icon](icon-clone.png)
+2. Click the clone github icon (![clone github icon](icon-clone.png)).
 3. Clone the github repository `https://github.com/qbzzt/20220815-erc20-safety-rails`.
 4. Open **contracts > erc20-safety-rails.sol**.
 
