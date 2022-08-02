@@ -85,7 +85,8 @@ const SecondaryScrollLink = styled(StyledScrollButton)`
   }
 `
 
-export interface IProps extends ILinkProps, MarginProps {
+export interface IProps extends Omit<ILinkProps, "to"> {
+  to?: string
   toId?: string
   isSecondary?: boolean
 }

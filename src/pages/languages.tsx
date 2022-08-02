@@ -69,7 +69,7 @@ const ResetIcon = styled(Icon)`
 `
 
 interface TranslatedLanguage extends Language {
-  path?: string
+  path: string
 }
 
 const LanguagesPage = () => {
@@ -85,19 +85,19 @@ const LanguagesPage = () => {
   )
   let translationsCompleted: Array<TranslatedLanguage> = []
   for (const lang in languageMetadata) {
-    const langMetadata = languageMetadata[lang]
-    langMetadata["path"] = `/${lang}/`
-    langMetadata["name"] = translateMessageId(
-      `language-${lang}` as TranslationKey,
-      intl
-    )
-    const nativeLangTitle = langMetadata["localName"]
-    const englishLangTitle = langMetadata["name"]
+    const langMetadata = {
+      ...languageMetadata[lang],
+      path: `/${lang}/`,
+      name: translateMessageId(`language-${lang}` as TranslationKey, intl),
+    }
+
+    const nativeLangTitle = langMetadata.localName
+    const englishLangTitle = langMetadata.name
     if (
       englishLangTitle.toLowerCase().includes(keyword.toLowerCase()) ||
       nativeLangTitle.toLowerCase().includes(keyword.toLowerCase())
     ) {
-      translationsCompleted.push(languageMetadata[lang])
+      translationsCompleted.push(langMetadata)
     }
   }
   translationsCompleted.sort((a, b) => a["name"].localeCompare(b["name"]))

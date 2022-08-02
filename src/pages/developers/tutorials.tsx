@@ -230,7 +230,7 @@ interface IExternalTutorial {
 }
 
 interface ITutorial {
-  to?: string | null
+  to: string
   title: string
   description: string
   author: string
@@ -258,7 +258,7 @@ const TutorialsPage = ({
       to:
         tutorial?.fields?.slug?.substr(0, 3) === "/en"
           ? tutorial.fields.slug.substr(3)
-          : tutorial.fields?.slug,
+          : tutorial.fields?.slug || "/",
       title: tutorial?.frontmatter?.title || "",
       description: tutorial?.frontmatter?.description || "",
       author: tutorial?.frontmatter?.author || "",

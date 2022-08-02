@@ -399,7 +399,7 @@ const WhatIsEthereumPage = ({
   const tooltipContent = ({ apiUrl, apiProvider, ariaLabel }) => (
     <div>
       <Translation id="data-provided-by" />{" "}
-      <Link to={apiUrl} ariaLabel={ariaLabel}>
+      <Link to={apiUrl} aria-label={ariaLabel}>
         {apiProvider}
       </Link>
     </div>
