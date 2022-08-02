@@ -98,8 +98,6 @@ const LinkWrapper: React.FC<IProps> = ({
     <Link
       to={to}
       as={IntlLink}
-      activeClassName="active"
-      partiallyActive={isPartiallyActive}
       onClick={onClick}
       whiteSpace={isGlossary ? "nowrap" : "normal"}
       {...commonProps}
