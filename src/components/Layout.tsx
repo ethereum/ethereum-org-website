@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { ApolloProvider } from "@apollo/client"
-import { useColorMode } from "@chakra-ui/react"
+import { useColorModeValue } from "@chakra-ui/react"
 import { ThemeProvider } from "@emotion/react"
 import styled from "@emotion/styled"
 import { IntlProvider } from "react-intl"
@@ -87,11 +87,11 @@ const Layout: React.FC<IProps> = ({
   pageContext,
   children,
 }) => {
-  const { colorMode } = useColorMode()
+  // TODO: tmp - for backward compatibility with old theme
+  const theme = useColorModeValue(lightTheme, darkTheme)
+
   const [isZenMode, setIsZenMode] = useState<boolean>(false)
   const [shouldShowSideNav, setShouldShowSideNav] = useState<boolean>(false)
-
-  const isDarkTheme = colorMode === "dark"
 
   const locale = pageContext.locale
   const messages = require(`../intl/${locale}.json`)
@@ -127,9 +127,6 @@ const Layout: React.FC<IProps> = ({
       localStorage.setItem("zen-mode", String(newVal))
     }
   }
-
-  // TODO: tmp - for backward compatibility with old theme
-  const theme = isDarkTheme ? darkTheme : lightTheme
 
   const isPageLanguageEnglish = pageContext.isDefaultLang
   const isPageContentEnglish = !!pageContext.isContentEnglish
