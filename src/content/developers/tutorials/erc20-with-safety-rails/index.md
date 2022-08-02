@@ -15,7 +15,12 @@ One of the great things about Ethereum is that there is no central authority tha
 
 Note that while we will use the [OpenZeppelin ERC-20 token contract](https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master/contracts/token/ERC20), this article does not explain it in great details. You can find this information [here](/developers/tutorials/erc20-annotated-code).
 
-If you want the complete source code, you can get it [here](./ERC20-safety-rails-Remix.zip) as a [Remix workspace](https://remix.ethereum.org/).
+If you want to see the complete source code:
+
+1. Open the [Remix IDE](https://remix.ethereum.org/).
+2. Click the clone github icon (![clone github icon](icon-clone.png)
+3. Clone the github repository `https://github.com/qbzzt/20220815-erc20-safety-rails`.
+4. Open **contracts > erc20-safety-rails.sol**.
 
 ## Creating an ERC-20 contract {#creating-an-erc-20-contract}
 
