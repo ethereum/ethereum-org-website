@@ -131,7 +131,3 @@ Da boste na tekočem z napredkom prevajalskega programa, sledite [blogu Ethereum
 Naša prevajalska skupnost prav tako dela na [Launchpad za zastavljanje](https://launchpad.ethereum.org/en/). Ta je v pomoč vsem, ki želijo nastaviti Ethereum validator in pomagati pri zavarovanju Ethereum omrežja. Launchpad je trenutno na voljo v 17 jezikih.
 
 Če ste zainteresirani, [se pridružite prevajalskemu projektu Ethereum Launchpad za zastavljanje na Crowdinu](https://crowdin.com/project/ethereum-staking-launchpad). Lahko [ustvarite težavo](https://github.com/ethereum/staking-launchpad/issues/new) na GitHubu, da zaprosite dodajanje novega jezika, če vaš jezik na Crowdinu še ni na voljo.
-
-## Prevodi v delu {#in-progress}
-
-<TranslationsInProgress />

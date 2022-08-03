@@ -31,7 +31,6 @@ import UpgradeTableOfContents, {
   Item as ItemTableOfContents,
 } from "../components/UpgradeTableOfContents"
 import Translation from "../components/Translation"
-import TranslationsInProgress from "../components/TranslationsInProgress"
 import SectionNav from "../components/SectionNav"
 import ExpandableCard from "../components/ExpandableCard"
 import {
@@ -175,7 +174,6 @@ const components = {
   Divider,
   SectionNav,
   Pill,
-  TranslationsInProgress,
   Emoji,
   UpgradeStatus,
   BeaconChainActions,
