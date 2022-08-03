@@ -20,6 +20,10 @@ The ethereum.org Translation Program is open and anyone can contribute!
 - Before starting, please check out the [How to translate](/contributing/translation-program/how-to-translate/) guide to learn how to use Crowdin, and the [Translation Style Guide](/contributing/translation-program/translators-guide/) for tips and best practices.
 - Machine translations will not be approved.
 
+<ButtonLink to="https://crowdin.com/project/ethereum-org/invite">
+  Start translating
+</ButtonLink>
+
 <InfoBanner emoji=":tada:">
   Check out our <Link to="/contributing/translation-program/acknowledgements/">Translator Acknowledgements</Link> page, and{" "}
   claim your POAP token! If you translated ethereum.org in 2022, there's a unique POAP waiting for you.{" "}
