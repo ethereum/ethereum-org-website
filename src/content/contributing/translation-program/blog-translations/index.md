@@ -9,7 +9,7 @@ sidebar: true
 
 The [Ethereum Foundation blog](https://blog.ethereum.org/) is the primary publication tool for a lot of EF-supported teams. Several teams regularly use the blog to publish announcements, updates, reports, roundups, and other public communication.
 
-In line with some key values from the ethereum.org Translation Program mission and vision, [ethereum.org Translation Program mission and vision](/contributing/translation-program/mission-and-vision) - accessibility, inclusivity, empowerment, and building the global Ethereum community - we want to translate the Ethereum Foundation blog posts in as many languages as possible.
+In line with some key values from the [ethereum.org Translation Program mission and vision](/contributing/translation-program/mission-and-vision) - accessibility, inclusivity, empowerment, and building the global Ethereum community - we want to translate the Ethereum Foundation blog posts in as many languages as possible.
 
 The blog translation project is open and anyone can contribute.
 If you want to get involved and help translate blog posts into your language, read on to learn how to join the project in Crowdin and start translating.
