@@ -28,7 +28,7 @@ Bu programlar geniş bir proje yelpazesine hibeler sağlayarak geniş Ethereum e
 Bu projeler kendi teknolojilerini geliştirmeye ve deneyimlemeye yönelik olarak kendi hibelerini oluşturmuşlardır.
 
 - [Aave Hibe Programı](https://aavegrants.org/) – _[Aave](https://aave.com/) hibeleri DAO_
-- [Balancer](https://forms.gle/c68e4fM7JHCQkPkN7) – _[Balancer](https://balancer.fi/) Ekosistem Fonu_
+- [Balancer](https://balancergrants.notion.site/Balancer-Community-Grants-23e562c5bc4347cd8304637bff0058e6) – _[Balancer](https://balancer.fi/) Ekosistem Fonu_
 - [Compound Hibe Programı](https://compoundgrants.org/) – _[Compound](https://compound.finance/) finans ekosistemi_
 - [Consensys Hibe Programı](https://consensys.net/grants/) – _[Consensys](https://consensys.net/) blok zinciri fonlama & Ethereum hibeleri_
 - [dYdX Hibe Programı](https://dydxgrants.com/) – _[dYdX](https://dydx.exchange/) merkeziyetsiz borsa_
