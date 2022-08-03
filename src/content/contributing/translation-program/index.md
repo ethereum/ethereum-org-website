@@ -103,7 +103,3 @@ In line with our focus on translations, we want to help other Ethereum projects 
 For this reason, we have created a [Translation Program playbook](/contributing/translation-program/playbook/) that contains some tips and best practices we have picked up in the process of translating ethereum.org.
 
 Want to collaborate further or use some of our translation resources? Have any feedback on the playbook? We would love to hear from you at translations@ethereum.org.
-
-## In-progress translations {#in-progress}
-
-<TranslationsInProgress />
