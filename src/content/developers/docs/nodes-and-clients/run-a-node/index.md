@@ -285,7 +285,6 @@ This example starts Besu on mainnet, stores blockchain data in default format at
 besu --network=mainnet \
     --data-path=/data/ethereum \
     --rpc-http-enabled=true \
-    --Xmerge-support=true \
     --engine-rpc-enabled=true \
     --engine-host-allowlist="localhost" \
     --engine-jwt-enabled=true \
@@ -327,9 +326,11 @@ The consensus client must be started with the right port configuration to establ
 
 The consensus client also needs the path to the execution client's `jwt-secret` in order to authenticate the RPC connection between them. Similar to execution examples above, each consensus client has a configuration flag which takes the jwt token file path as an argument. This must be consistent with the `jwtsecret` path provided to the execution client.
 
-If you plan to run a validator, add fee recepient
+If you plan to run a validator, make sure to add a configuration flag which specifies Ethereum address of the fee recipient. This is where ether rewards for your validator accumulates. Each consensus client has an option e.g. `--suggested-fee-recipient=0xabcd1` that takes an Ethereum address as an argument.
 
-**Note that we recommend waiting for merge-ready client releases before doing this on Ethereum Mainnet—for now just practice on a testnet such as Kiln**
+**Note that we recommend waiting for merge-ready client releases before doing this on Ethereum Mainnet—for now just practice on a testnet such as Kiln or Goerli**
+
+When starting Beacon Node on testnet, you can save significantly save syncing time by using public endpoint for [Checkpoint sync](https://notes.ethereum.org/@launchpad/checkpoint-sync). 
 
 #### Running a consensus client 
 
@@ -341,11 +342,10 @@ Before running Lighthouse, learn more on how to install and configure it in [Lig
 lighthouse beacon_node
     --network mainnet \
     --datadir /data/ethereum \
-    --eth1 \
+    --eth1-endpoints http://127.0.0.1:8545
     --http \
     --http-allow-sync-stalled \
-    --merge \
-    --execution-endpoints http://127.0.0.1:8551 \
+    --execution-endpoint http://127.0.0.1:8551 \
     --jwt-secrets="/path/to/jwtsecret" \
 ```
 </details>
@@ -405,13 +405,16 @@ lodestar beacon \
 ```
 </details>
 
-Consensus client connects to the execution client to read the deposit contract and identify validators. It also connects to other Beacon Node peers and syncs consensus slots from genesis. When it reaches the current epoch, the Beacon API becomes usable for your validators. 
+Consensus client connects to the execution client to read the deposit contract and identify validators. It also connects to other Beacon Node peers and syncs consensus slots from genesis. When it reaches the current epoch, the Beacon API becomes usable for your validators. Learn more about [Beacon Node APIs](https://eth2docs.vercel.app/). 
 
 ### Adding Validators {#adding-validators}
 
-Each of the consensus clients has their own validator software that is described in detail in their respective documentation. The easiest way to get started with staking and validator key generation is to use the [Prater Testnet Staking Launchpad](https://prater.launchpad.ethereum.org/), which allows you to test your setup. When you're ready for Mainnet, you can repeat these steps using the [Mainnet Staking Launchpad](https://launchpad.ethereum.org/).
+Consensus client serves as a Beacon Node to which validator client connects. Each of the consensus clients has their own validator software that is described in detail in their respective documentation.
 
 Running your own validator allows for [solo staking](https://ethereum.org/en/staking/solo/), the most impactful and trustless way. This requires deposit of 32ETH. For running a validator on your own node with a smaller amount, checkout decentralized pool with permissionless node operators, e.g. [Rocket Pool](https://rocketpool.net/node-operators).
+
+The easiest way to get started with staking and validator key generation is to use the [Prater Testnet Staking Launchpad](https://prater.launchpad.ethereum.org/), which allows you to test your setup by [running nodes on Goerli](https://notes.ethereum.org/@launchpad/goerli). When you're ready for Mainnet, you can repeat these steps using the [Mainnet Staking Launchpad](https://launchpad.ethereum.org/). Make sure to check [Mainnet readiness checklist](https://launchpad.ethereum.org/en/merge-readiness) to smoothly run your validator through the Merge. 
+
 
 ### Using the node {#using-the-node}
 
@@ -427,7 +430,7 @@ The consensus clients all expose a [Beacon API](https://ethereum.github.io/beaco
 
 #### Reaching RPC {#reaching-rpc}
 
-The default port for the execution client JSON-RPC is `8545` but you can modify the ports of local endpoints in the configuration. By default, the RPC interface is only reachable on the localhost of your computer. To make it remotely accessible, you might want to expose it to the public by changing the address to `0.0.0.0`. This will make it reachable over local and public IP addresses. In most cases you'll also need to set up port forwarding on your router.
+The default port for the execution client JSON-RPC is `8545` but you can modify the ports of local endpoints in the configuration. By default, the RPC interface is only reachable on the localhost of your computer. To make it remotely accessible, you might want to expose it to the public by changing the address to `0.0.0.0`. This will make it reachable over local network and public IP addresses. In most cases you'll also need to set up port forwarding on your router.
 
 You should do this with caution as this will let anyone on the internet control your node. Malicious actors could access your node to bring down your system or steal your funds if you're using your client as a wallet.
 
@@ -481,6 +484,7 @@ As part of your monitoring, make sure to keep an eye on your machine's performan
 
 - [Guide | How to setup a validator for Ethereum staking on mainnet](https://www.coincashew.com/coins/overview-eth/guide-or-how-to-setup-a-validator-on-eth2-mainnet) _– CoinCashew, updated regularly_
 - [ETHStaker guides on running validators on testnets](https://github.com/remyroy/ethstaker#guides) – _ETHStaker, updated regularly_
+- [The Merge FAQ for node operators](https://notes.ethereum.org/@launchpad/node-faq-merge) - _July 2022_
 - [Analyzing the hardware requirements to be an Ethereum full validated node](https://medium.com/coinmonks/analyzing-the-hardware-requirements-to-be-an-ethereum-full-validated-node-dc064f167902) _– Albert Palau, 24 September 2018_
 - [Running Ethereum Full Nodes: A Guide for the Barely Motivated](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _– Justin Leroux, 7 November 2019_
 - [Running an Ethereum Node](https://docs.ethhub.io/using-ethereum/running-an-ethereum-node/) _– ETHHub, updated often_

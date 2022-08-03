@@ -21,11 +21,15 @@ If you're new to the topic of nodes, we recommend first checking out our user-fr
 
 "Node" refers to a running piece of client software. A client is an implementation of Ethereum that verifies all transactions in each block, keeping the network secure and the data accurate.
 
-Ethereum network consists of execution layer and consensus layer. These are presented by two pieces of software: execution client and consensus client. 
+Ethereum consists of two networks known as execution layer and consensus layer. Both networks are run by different a client software. In this documentation, we will refer to them as execution client and consensus client. 
 - The execution client, also known as the Execution Engine, EL client or formerly the Eth1 client, listens to new transactions broadcasted in the network, executes them in EVM and holds the latest state, and database of all current Ethereum data. 
 - The consensus client, also known as the Beacon Node, CL client or formerly the Eth2 client, implements the proof-of-stake consensus algorithm which enables network to achieve agreement based on validated data from the execution client. 
 
-Before [The Merge](/upgrades/merge/), network only consisted of what are now execution clients. One client software provided both execution enviroment and consensus verification of blocks produced by miners. As the network transitions to proof-of-stake, consensus is separted into its own client implementation.
+Before [The Merge](/upgrades/merge/), consensus and execution layer networks were separeted. All transactions and user activity on Ethereum network was happening at what is now the execution layer. One client software provided both execution enviroment and consensus verification of blocks produced by miners. 
+The consensus layer, [the Beacon Chain](/upgrades/beacon-chain/), was running separetly since December 2020. It introduced proof-of-stake and coordinated the network of validators based on data from the Ethereum network. 
+
+With the Merge, Ethereum network transitions to proof-of-stake by connecting these networks. This where the name Merge comes from. 
+
 Modular design with various pieces of software working together can be referred to as [encapusalted complexity](https://vitalik.ca/general/2022/02/28/complexity.html). This approach makes it easier to execute The Merge in a seamless way and also enables reuse of individual clients, for example in the L2 ecosystem. 
 
 ![Coupled execution and consensus clients](./eth1eth2client.png)
@@ -97,7 +101,7 @@ Running your own node enables you to use Ethereum in a private, self-sufficient 
 - You can run and self-host other services which depend on data from Ethereum. Most importantly for example Beacon Chain validator but also software like L2 infrastracture, block explorers, payment processors, etc. 
 - You can provide your own custom [RPC endpoints](https://ethereum.org/en/developers/docs/apis/json-rpc/). Publicly for the community or even privately hosted Ethereum endpoint enables people to use your node and avoid big centralized providers. 
 - You can connect to your node using **Inter-process Communications (IPC)** or rewrite the node to load your program as a plugin. This grants low latency, which helps a lot, e.g. when processing a lot of data using web3 libraries or when you need to replace your transactions as fast as possible (i.e. frontrunning).
-- If you would to stake ETH for securing the proof-of-stake consensus and earning rewards, [solo staking](https://ethereum.org/en/staking/solo/) with your own node is the most impactful and secure approach. 
+- You can directly stake ETH to secure the network and earn rewards. See [solo staking](https://ethereum.org/en/staking/solo/) to get started. 
 
 ![How you access Ethereum via your application and nodes](./nodes.png)
 
@@ -133,19 +137,30 @@ On the other hand, if you run a client, you can share it with your friends who m
 
 The Ethereum community maintains multiple open-source execution clients (previously known as 'Eth1 clients', or just 'Ethereum clients'), developed by different teams using different programming languages. This makes the network stronger and more diverse. The ideal goal is to achieve diversity without any client dominating to reduce any single points of failure.
 
-This table summarizes the different clients. All of them are actively maintained to stay updated with network upgrades, follow current specifications and pass [client tests](https://github.com/ethereum/tests). 
+This table summarizes the different clients in alphabetical order. All of them are actively maintained to stay updated with network upgrades, follow current specifications and pass [client tests](https://github.com/ethereum/tests). 
 
-| Client                                                                    | Language | Operating systems     | Networks                                   | Sync strategies     | State pruning   |
-| ------------------------------------------------------------------------- | -------- | --------------------- | ------------------------------------------ | ------------------- | --------------- |
-| [Geth](https://geth.ethereum.org/)                                        | Go       | Linux, Windows, macOS | Mainnet, Görli, Rinkeby, Ropsten           | Snap, Full          | Archive, Pruned |
-| [Nethermind](http://nethermind.io/)                                       | C#, .NET | Linux, Windows, macOS | Mainnet, Görli, Ropsten, Rinkeby, and more | Snap, Fast, Beam | Archive, Pruned |
-| [Besu](https://pegasys.tech/solutions/hyperledger-besu/)                  | Java     | Linux, Windows, macOS | Mainnet, Rinkeby, Ropsten, Görli, and more | Fast, Full, Snap, Checkpoint | Archive, Pruned |
-| [Erigon](https://github.com/ledgerwatch/erigon)                           | Go       | Linux, Windows, macOS | Mainnet, Görli, Rinkeby, Ropsten           | Full, Snap               | Archive, Pruned |
-| [Akula](https://akula.app)                                                | Rust     | Linux                 | Mainnet, Görli, Rinkeby, Ropsten, and more | Full                | Archive, Pruned |
+
+| Client                                                   | Language | Operating systems     | Networks                                   | Sync strategies              | State pruning   |
+| -------------------------------------------------------- | -------- | --------------------- | ------------------------------------------ | ---------------------------- | --------------- |
+| [Akula](https://akula.app)                               | Rust     | Linux                 | Mainnet, Görli, Rinkeby, Ropsten, and more | Full                         | Archive, Pruned |
+| [Besu](https://pegasys.tech/solutions/hyperledger-besu/) | Java     | Linux, Windows, macOS | Mainnet, Rinkeby, Ropsten, Görli, and more | Fast, Full, Snap, Checkpoint | Archive, Pruned |
+| [Erigon](https://github.com/ledgerwatch/erigon)          | Go       | Linux, Windows, macOS | Mainnet, Görli, Rinkeby, Ropsten           | Full, Snap                   | Archive, Pruned |
+| [Geth](https://geth.ethereum.org/)                       | Go       | Linux, Windows, macOS | Mainnet, Görli, Rinkeby, Ropsten           | Snap, Full                   | Archive, Pruned |
+| [Nethermind](http://nethermind.io/)                      | C#, .NET | Linux, Windows, macOS | Mainnet, Görli, Ropsten, Rinkeby, and more | Snap, Fast, Beam             | Archive, Pruned |
 
 For more on supported networks, read up on [Ethereum networks](/developers/docs/networks/).
 
 Each client has unique use cases and advantages, so you should choose one based on your own preferences. Diversity allows implementations to be focused on different features and user audiences. You may want to choose a client based on features, support, programming language, or licences.
+
+#### Besu {#besu}
+
+Hyperledger Besu is an enterprise-grade Ethereum client for public and permissioned networks. It runs all of the Ethereum Mainnet features, from tracing to GraphQL, has extensive monitoring and is supported by ConsenSys, both in open community channels and through commercial SLAs for enterprises. It is written in Java and is Apache 2.0 licensed.
+
+Besu's extensive [documentation](https://besu.hyperledger.org/en/stable/) will guide you trough all details on its features and setups. 
+
+#### Erigon {#erigon}
+
+Erigon, formerly known as Turbo‐Geth, started as a fork of Go Ethereum oriented toward speed and disk‐space efficiency. Erigon is a completely re-architected implementation of Ethereum, currently written in Go but with implementations in other languages in work, e.g. [Akula](https://medium.com/@vorot93/meet-akula-the-fastest-ethereum-implementation-ever-built-58eaca244c39). Erigon's goal is to provide a faster, more modular, and more optimized implementation of Ethereum. It can perform a full archive node sync using around 2TB of disk space, in under 3 days. 
 
 #### Go Ethereum {#geth}
 
@@ -163,44 +178,19 @@ Nethermind is an Ethereum implementation created with the C# .NET tech stack, li
 
 Nethermind also has [detailed documentation](https://docs.nethermind.io), strong dev support, an online community and 24/7 support available for premium users.
 
-#### Besu {#besu}
-
-Hyperledger Besu is an enterprise-grade Ethereum client for public and permissioned networks. It runs all of the Ethereum Mainnet features, from tracing to GraphQL, has extensive monitoring and is supported by ConsenSys, both in open community channels and through commercial SLAs for enterprises. It is written in Java and is Apache 2.0 licensed.
-
-Besu's extensive [documentation](https://besu.hyperledger.org/en/stable/) will guide you trough all details on its features and setups. 
-
-#### Erigon {#erigon}
-
-Erigon, formerly known as Turbo‐Geth, started as a fork of Go Ethereum oriented toward speed and disk‐space efficiency. Erigon is a completely re-architected implementation of Ethereum, currently written in Go but with implementations in other languages in work, e.g. [Akula](https://medium.com/@vorot93/meet-akula-the-fastest-ethereum-implementation-ever-built-58eaca244c39). Erigon's goal is to provide a faster, more modular, and more optimized implementation of Ethereum. It can perform a full archive node sync using around 2TB of disk space, in under 3 days. 
-
 ## Consensus clients (formerly 'Eth2' clients) {#consensus-clients}
 
 There are multiple consensus clients (previously known as 'Eth2' clients) to support the [consensus upgrades](/upgrades/beacon-chain/). They are running the Beacon Chain and will provide a proof-of-stake consensus mechanism to execution clients after [The Merge](/upgrades/merge/).
 
 [View consensus clients](/upgrades/get-involved/#clients).
 
-
 | Client                                                        | Language   | Operating systems     | Networks                              |
 | ------------------------------------------------------------- | ---------- | --------------------- | ------------------------------------- |
-| [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/) | Java       | Linux, Windows, macOS | Beacon Chain, Gnosis, Prater, Sepolia |
-| [Nimbus](https://nimbus.team/)                                | Nim        | Linux, Windows, macOS | Beacon Chain, Prater                  |
 | [Lighthouse](https://lighthouse.sigmaprime.io/)               | Rust       | Linux, Windows, macOS | Beacon Chain, Prater, Pyrmont         |
 | [Lodestar](https://lodestar.chainsafe.io/)                    | TypeScript | Linux, Windows, macOS | Beacon Chain, Prater                  |
+| [Nimbus](https://nimbus.team/)                                | Nim        | Linux, Windows, macOS | Beacon Chain, Prater                  |
 | [Prysm](https://docs.prylabs.network/docs/getting-started/)   | Go         | Linux, Windows, macOS | Beacon Chain, Gnosis, Prater, Pyrmont |
-
-### Teku
-
-Teku is one of the original beacon chain genesis clients. Alongside the usual goals (security, robustness, stability, usability, performance) it specifically aims to comply fully with all the various consensus client standards.
-
-Teku offers very flexible deployment options. The beacon node and validator client can be run together as a single process, which is extremely convenient for solo stakers, or they can be run separately for sophisticated staking operations. In addition, Teku is fully interoperable with [Web3Signer](https://github.com/ConsenSys/web3signer/) for signing key security and slashing protection.
-
-Teku is written in Java and is Apache 2.0 licensed. It is developed by the Protocols team at ConsenSys that is also responsible for Besu and Web3Signer.
-
-### Nimbus
-
-Nimbus is a consensus client implementation written in Nim under Apache-2.0 license. It is a production-ready client in use by solo-stakers and staking pools. It is designed for resource efficiency, making it easy to run Nimbus on resource-restricted devices and enterprise infrastructure with equal ease, without compromising stability or reward performance. A lighter resource footprint means the client has greater margin-of-safety when the network is under stress. 
-
-Documentation can be found in the Nimbus Guide: https://nimbus.guide/
+| [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/) | Java       | Linux, Windows, macOS | Beacon Chain, Gnosis, Prater, Sepolia |
 
 ### Lighthouse
 
@@ -214,21 +204,35 @@ Lodestar is a production-ready consensus client implementation written in Typesc
 
 More information can be found on our [Lodestar website](https://lodestar.chainsafe.io/)
 
+### Nimbus
+
+Nimbus is a consensus client implementation written in Nim under Apache-2.0 license. It is a production-ready client in use by solo-stakers and staking pools. It is designed for resource efficiency, making it easy to run Nimbus on resource-restricted devices and enterprise infrastructure with equal ease, without compromising stability or reward performance. A lighter resource footprint means the client has greater margin-of-safety when the network is under stress. 
+
+Documentation can be found in the [Nimbus Guide](https://nimbus.guide/).
+
 ### Prysm
 
 Prysm is a full-featured, open source consensus client written in Go under the GPL-3.0 license. It features an optional webapp UI and prioritizes user experience, documentation, and configurability for both stake-at-home and institutional users.
 
 Visit [Prysm docs](https://docs.prylabs.network/docs/getting-started/) to learn more. 
 
+### Teku
+
+Teku is one of the original beacon chain genesis clients. Alongside the usual goals (security, robustness, stability, usability, performance) it specifically aims to comply fully with all the various consensus client standards.
+
+Teku offers very flexible deployment options. The beacon node and validator client can be run together as a single process, which is extremely convenient for solo stakers, or they can be run separately for sophisticated staking operations. In addition, Teku is fully interoperable with [Web3Signer](https://github.com/ConsenSys/web3signer/) for signing key security and slashing protection.
+
+Teku is written in Java and is Apache 2.0 licensed. It is developed by the Protocols team at ConsenSys that is also responsible for Besu and Web3Signer. Learn more in [Teku docs](https://docs.teku.consensys.net/en/latest/). 
+
 ### Synchronization modes {#sync-modes}
 
 To follow and verify current data in the network, the Ethereum client needs to sync with the latest network state. This is done by downloading data from peers, cryptographically verifying their integrity, and building a local blockchain database.
 
-Synchronization modes represent different approaches to this process with various trade-offs. Clients also vary in their implementation of sync algorithms. Always refer to the official documentation of your chosen client for specifics on implementation.
+Synchronization modes represent different approaches to this process with various trade-offs. Clients also vary in their implementation of sync algorithms. Always refer to the official documentation of your chosen client for specifics on implementation. 
 
 #### Execution layer sync modes
 
-#### Full sync {#full-sync}
+#### Full sync 
 
 Full sync downloads all blocks (including headers, transactions, and receipts) and generates the state of the blockchain incrementally by executing every block from genesis.
 
@@ -255,20 +259,10 @@ Light client mode downloads all block headers, block data, and verifies some ran
 
 The latest approach to syncing the client, pioneered by Geth. Using dynamic snapshots served by peers retrieves all the account and storage data without downloading intermediate trie nodes and then reconstructs the Merkle trie locally.
 
-- Fastest sync strategy, currently default in Geth and Nethermind 
-- Saves a lot of disk usage and network bandwidth without sacrificing security.
+- Fastest sync strategy, currently default in Ethereum mainnet 
+- Saves a lot of disk usage and network bandwidth without sacrificing security
 
 [More on Snap sync](https://github.com/ethereum/devp2p/blob/master/caps/snap.md)
-
-
-#### Beam sync
-
-Implemented by Nethermind and Trinity. Works like fast sync but also downloads the data needed to execute latest blocks, which allows you to query the chain within the first few minutes from starting.
-
-- Syncs state first and enables you to query RPC in a few minutes.
-- Still in development and not fully reliable, background sync is slowed down and RPC responses might fail.
-
-[More on Beam](https://medium.com/@jason.carver/intro-to-beam-sync-a0fd168be14a)
 
 #### Consensus layer sync modes
 
@@ -279,6 +273,12 @@ Optimistic sync is a post-merge synchronization strategy designed to be opt-in a
 [More on Optimistic sync](https://github.com/ethereum/consensus-specs/blob/dev/sync/optimistic.md)
 
 #### Checkpoint sync
+
+Also called weak subjectivity sync, this strategy creates a superior user experience for syncing Beacon Node. It's based on assumptions of [weak subjectivity](/developers/docs/consensus-mechanisms/pos/weak-subjectivity/) which enables syncing Beacon Chain from a recent weak subjectivity checkpoint instead of genesis. This makes the initial sync time significantly faster with similiar trust assumptions as syncing from genesis. 
+
+In practice, this means your node connects to a remote service to download recent finalized states and continues verifying data from that point. Third party providing the data is trusted and should be picked carefully. 
+
+More on [Checkpoint sync](https://notes.ethereum.org/@djrtwo/ws-sync-in-practice)
 
 ## Further reading {#further-reading}
 
