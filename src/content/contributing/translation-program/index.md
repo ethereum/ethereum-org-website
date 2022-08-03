@@ -50,28 +50,28 @@ If you want to get involved and help us grow the global Ethereum community by tr
 
 ### What we're working on {#our-projects}
 
-The Translation Program is mainly dedicated to translating ethereum.org, however, our community of contributors is also actively translating other high-impact websites and resources for the global Ethereum community.
+Our community of contributors is actively translating multiple high-impact websites and resources for the global Ethereum community.
 
-#### Ethereum.org
+#### Ethereum.org {#ethereumorg}
 
-[Ethereum.org](/)
+[Ethereum.org](/) is a key educational resource for the Ethereum community and is the primary focus of the Translation Program. Given the size, scope, and reach of the website, it's the most impactful site to translate and we recommend starting here!
 
 Get involved:
 
 - Join the [ethereum.org translations project in Crowdin](https://crowdin.com/project/ethereum-org/invite)
 
-#### Ethereum Staking Launchpad
+#### Ethereum Staking Launchpad {#ethereum-staking-launchpad}
 
-[Ethereum Staking Launchpad](https://launchpad.ethereum.org/en/)
+The [Ethereum Staking Launchpad](https://launchpad.ethereum.org/en/) enables Ethereum users to become validators and help secure the future of Ethereum by staking ETH.
 
 Get involved:
 
 - Visit the [Launchpad translations page](/contributing/translation-program/launchpad-translations/)
 - Join the [Launchpad translations project in Crowdin](https://crowdin.com/project/ethereum-staking-launchpad)
 
-#### Ethereum Foundation blog
+#### Ethereum Foundation blog {#ethereum-foundation-blog}
 
-[Ethereum Foundation blog](https://blog.ethereum.org/)
+The [Ethereum Foundation blog](https://blog.ethereum.org/) is the primary publication tool for many EF-supported teams and is the source of announcements, updates, reports, roundups, and other public communication for the Ethereum community.
 
 Get involved:
 

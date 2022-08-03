@@ -5,7 +5,7 @@ description: Useful resources for ethereum.org translators
 sidebar: true
 ---
 
-# Resources
+# Resources {#resources}
 
 You can find some useful guides and tools for ethereum.org translators, as well as translation communities and updates below.
 
