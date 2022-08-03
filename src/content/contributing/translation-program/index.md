@@ -3,6 +3,7 @@ title: Translation Program
 lang: en
 description: Information about the ethereum.org Translation Program
 sidebar: true
+sidebarDepth: 3
 ---
 
 # Translation Program {#translation-program}
@@ -11,7 +12,7 @@ The Translation Program is a collaborative effort to translate ethereum.org into
 
 ![Enterprise ETH](./enterprise-eth.png)
 
-## Contributing {#contributing}
+## Start contributing {#contributing}
 
 The ethereum.org Translation Program is open and anyone can contribute!
 
@@ -49,23 +50,31 @@ If you want to get involved and help us grow the global Ethereum community by tr
 
 ### What we're working on {#our-projects}
 
-The Translation Program is mainly dedicated to translating ethereum.org.
+The Translation Program is mainly dedicated to translating ethereum.org, however, our community of contributors is also actively translating other high-impact websites and resources for the global Ethereum community.
 
-However, our community of contributors is also actively translating other high-impact websites and resources for the global Ethereum community.
+#### Ethereum.org
 
-**Ethereum Staking Launchpad**
+[Ethereum.org](/)
+
+Get involved:
+
+- Join the [ethereum.org translations project in Crowdin](https://crowdin.com/project/ethereum-org/invite)
+
+#### Ethereum Staking Launchpad
 
 [Ethereum Staking Launchpad](https://launchpad.ethereum.org/en/)
 
 Get involved:
+
 - Visit the [Launchpad translations page](/contributing/translation-program/launchpad-translations/)
 - Join the [Launchpad translations project in Crowdin](https://crowdin.com/project/ethereum-staking-launchpad)
 
-**Ethereum Foundation blog**
+#### Ethereum Foundation blog
 
 [Ethereum Foundation blog](https://blog.ethereum.org/)
 
 Get involved:
+
 - Visit the [Blog translations page](/contributing/translation-program/blog-translations/)
 - Join the [Blog translations project in Crowdin](https://crowdin.com/project/ethereum-foundation-blog)
 
