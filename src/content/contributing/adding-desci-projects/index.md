@@ -16,11 +16,11 @@ Anyone is free to suggest a project to list on the DeSci page on ethereum.org. E
 ### Criteria for inclusion: the must-haves {#the-must-haves}
 
 - **Open source code/data** - Openness of code and data is a core DeSci principle, so DeSci projects must not be closed source. The codebase should be accessible and ideally open to PRs.
-- **DeSci projects should be demonstrably decentralized** - This may be by being governed by a DAO, or by building using a decentralized tech stack including non-custodial wallets. It probably involves auditable smart contracts at publicly-known Ethereum addresses.
+- **DeSci projects should be demonstrably decentralized** - This include being governed by a DAO, or by building with decentralized tech stack including non-custodial wallets. It probably involves auditable smart contracts at publicly-known Ethereum addresses.
 - **Honest and accurate listing information** - it is expected that any suggested listings from projects come with honest and accurate information. Products that falsify listing information, such as declaring your product is “open source” when it is not, will be removed.
 - **Demonstrable commitment to widening access to science** - A DeSci project should be able to articulate how they widen participation in science to the general public, not just to token/NFT holders.
 - **Point of contact** - A point of contact for the project (this might be by a representative from a DAO or community) will greatly help us get accurate information when changes are made. This will keep updating ethereum.org manageable when gathering future information.
-- **Globally accessible** - your wallet doesn’t have geographic limitations or KYC requirements that exclude certain people from accessing your service.
+- **Globally accessible** - your project doesn’t have geographic limitations or KYC requirements that exclude certain people from accessing your service.
 - **Informative website and documentation** - it is important that visitors to the project website can understand what the project actually does, how it contributes to decentralization of science infrastructure and how to participate.
 
 ### Nice-to-haves
