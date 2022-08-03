@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import styled from "styled-components"
 import { motion } from "framer-motion"
-import { useIntl } from "gatsby-plugin-intl"
+import { useIntl } from "react-intl"
 
 import { translateMessageId } from "../utils/translations"
 import Translation from "./Translation"

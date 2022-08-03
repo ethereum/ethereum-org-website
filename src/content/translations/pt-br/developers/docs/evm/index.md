@@ -66,7 +66,7 @@ Todos os [clientes Ethereum](/developers/docs/nodes-and-clients/#execution-clien
 - [ethereumjs-vm](https://github.com/ethereumjs/ethereumjs-vm) - _JavaScript_
 - [eEVM](https://github.com/microsoft/eevm) - _C++_
 - [Hyperledger Burrow](https://github.com/hyperledger/burrow) - _Go_
-- [hevm](https://github. com/dapphub/dapptools/tree/master/src/hevm) - _Haskell_
+- [hevm](https://github.com/dapphub/dapptools/tree/master/src/hevm) - _Haskell_
 
 ## Leitura adicional {#further-reading}
 

@@ -1,7 +1,7 @@
 import React, { useState } from "react"
-import { useIntl } from "gatsby-plugin-intl"
 import styled from "styled-components"
 import { cloneDeep } from "lodash"
+import { useIntl } from "react-intl"
 
 import Menu from "./Menu"
 import MobileNavMenu from "./Mobile"
@@ -150,8 +150,8 @@ const Nav: React.FC<IProps> = ({ handleThemeChange, isDarkTheme, path }) => {
       ariaLabel: "use-ethereum-menu",
       items: [
         {
-          text: "ethereum-wallets",
-          to: "/wallets/",
+          text: "find-wallet",
+          to: "/wallets/find-wallet/",
         },
         {
           text: "get-eth",
@@ -283,6 +283,10 @@ const Nav: React.FC<IProps> = ({ handleThemeChange, isDarkTheme, path }) => {
             {
               text: "bridges",
               to: "/bridges/",
+            },
+            {
+              text: "zero-knowledge-proofs",
+              to: "/zero-knowledge-proofs/",
             },
           ],
         },
@@ -425,7 +429,7 @@ const Nav: React.FC<IProps> = ({ handleThemeChange, isDarkTheme, path }) => {
               <Menu path={path} sections={linkSections} />
             </LeftItems>
             <RightItems>
-              <Search useKeyboardShortcuts />
+              <Search useKeyboardShortcut />
               <ThemeToggle
                 onClick={handleThemeChange}
                 aria-label={

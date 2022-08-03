@@ -88,7 +88,7 @@ Zestaw abstrakcyjnych instrukcji przeznaczony do skutecznego wykonywania przez p
 
 ### Fork Byzantium {#byzantium-fork}
 
-Pierwszy z dwóch [hard forków](#hard-fork) na etapie rozwoju [Metropolis](#metropolis). Obejmował on EIP-649: opóźnienie [bomby trudności](#difficulty-bomb) w Metropolis i zmniejszenie nagród za blok, gdzie [Epoka Lodowcowa ](#ice-age) została opóźniona o 1 rok, a nagroda za blok została zmniejszona z 5 do 3 ETH.
+Pierwszy z dwóch [hard forków](#hard-fork) na etapie rozwoju [Metropolis](#metropolis). Obejmował on EIP-649: opóźnienie [bomby trudności](#difficulty-bomb) w Metropolis i zmniejszenie nagród za blok, gdzie [Epoka Lodowcowa](#ice-age) została opóźniona o 1 rok, a nagroda za blok została zmniejszona z 5 do 3 ETH.
 
 <Divider />
 
@@ -104,7 +104,7 @@ Konwertowanie kodu napisanego w wysokopoziomowym języku programowania (np. [Sol
 
 ### komitet {#committee}
 
-Grupa co najmniej 128 [walidatorów](#validator) przypisana losowo do bloków śledzących i odłamkowych przez [łańcuch śledzący ](#beacon-chain).
+Grupa co najmniej 128 [walidatorów](#validator) przypisana losowo do bloków śledzących i odłamkowych przez [łańcuch śledzący](#beacon-chain).
 
 ### konsensus {#consensus}
 

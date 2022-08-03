@@ -24,7 +24,9 @@ import Pill from "../components/Pill"
 import RandomAppList from "../components/RandomAppList"
 import Roadmap from "../components/Roadmap"
 import UpgradeTableOfContents from "../components/UpgradeTableOfContents"
-import TableOfContents from "../components/TableOfContents"
+import TableOfContents, {
+  Item as ItemTableOfContents,
+} from "../components/TableOfContents"
 import TranslationsInProgress from "../components/TranslationsInProgress"
 import FeedbackCard from "../components/FeedbackCard"
 import SectionNav from "../components/SectionNav"
@@ -354,7 +356,7 @@ const StakingPage = ({
     throw new Error("Required `title` property missing for staking template")
 
   const isRightToLeft = isLangRightToLeft(mdx.frontmatter.lang as Lang)
-  const tocItems = mdx.tableOfContents?.items
+  const tocItems = mdx.tableOfContents?.items as Array<ItemTableOfContents>
   const { summaryPoints } = mdx.frontmatter
 
   const dropdownLinks: ButtonDropdownList = {
@@ -413,7 +415,7 @@ const StakingPage = ({
           </ul>
           <MobileTableOfContents
             items={tocItems}
-            maxDepth={mdx.frontmatter.sidebarDepth}
+            maxDepth={mdx.frontmatter.sidebarDepth!}
             isMobile={true}
           />
         </TitleCard>
@@ -435,7 +437,7 @@ const StakingPage = ({
           {mdx.frontmatter.sidebar && tocItems && (
             <UpgradeTableOfContents
               items={tocItems}
-              maxDepth={mdx.frontmatter.sidebarDepth}
+              maxDepth={mdx.frontmatter.sidebarDepth!}
             />
           )}
         </InfoColumn>

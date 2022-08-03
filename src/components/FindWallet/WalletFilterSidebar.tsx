@@ -451,6 +451,13 @@ const WalletFilterSidebar = ({
                             }
                           : () => {
                               setShowOptions(idx, itemidx, !item.showOptions)
+                              trackCustomEvent({
+                                eventCategory: "WalletFilterSidebar",
+                                eventAction: `${filterOption.title}`,
+                                eventName: `Toggle ${
+                                  item.title
+                                } ${!item.showOptions}`,
+                              })
                             }
                       }
                     >
@@ -506,6 +513,13 @@ const WalletFilterSidebar = ({
                             }
                           : () => {
                               setShowOptions(idx, itemidx, !item.showOptions)
+                              trackCustomEvent({
+                                eventCategory: "WalletFilterSidebar",
+                                eventAction: `${filterOption.title}`,
+                                eventName: `Toggle ${
+                                  item.title
+                                } ${!item.showOptions}`,
+                              })
                             }
                       }
                     >

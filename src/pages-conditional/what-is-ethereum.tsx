@@ -2,7 +2,7 @@ import React from "react"
 import styled, { useTheme } from "styled-components"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { graphql, PageProps } from "gatsby"
-import { useIntl } from "gatsby-plugin-intl"
+import { useIntl } from "react-intl"
 
 import Translation from "../components/Translation"
 import Callout from "../components/Callout"
@@ -47,6 +47,8 @@ import useFetchStat, {
 } from "../hooks/useFetchStat"
 import { GATSBY_FUNCTIONS_PATH } from "../constants"
 import { Context } from "../types"
+import StatErrorMessage from "../components/StatErrorMessage"
+import StatLoadingMessage from "../components/StatLoadingMessage"
 
 const Slogan = styled.p`
   font-style: normal;
@@ -218,29 +220,13 @@ const ButtonRow = styled.div`
   }
 `
 
-const IndicatorSpan = styled.span`
-  font-size: 1rem;
-`
-
-const ErrorMessage = () => (
-  <IndicatorSpan>
-    <Translation id="loading-error-refresh" />
-  </IndicatorSpan>
-)
-
-const LoadingMessage = () => (
-  <IndicatorSpan>
-    <Translation id="loading" />
-  </IndicatorSpan>
-)
-
 const Stat: React.FC<{ stat: IFetchStat }> = ({ stat }) => {
   const isLoading = !stat.value
 
   return stat.hasError ? (
-    <ErrorMessage />
+    <StatErrorMessage fontSize="1rem" />
   ) : isLoading ? (
-    <LoadingMessage />
+    <StatLoadingMessage fontSize="1rem" />
   ) : (
     <>{stat.formattedValue}</>
   )
@@ -306,14 +292,18 @@ const WhatIsEthereumPage = ({
     {
       emoji: ":shopping_bags:",
       title: translateMessageId("page-what-is-ethereum-commerce-card", intl),
-      description:
-        "Customers have a secure, built-in guarantee that funds will only change hands if you provide what was agreed. Likewise, developers can have certainty that the rules won't change on them.",
+      description: translateMessageId(
+        "page-what-is-ethereum-commerce-card-desc",
+        intl
+      ),
     },
     {
       emoji: ":handshake:",
-      title: "All products are composable",
-      description:
-        "Since all apps are built on the same blockchain with a shared global state, they can build off each other (like legos). This allows for better products and experiences being built all the time.",
+      title: translateMessageId("page-what-is-ethereum-composable-card", intl),
+      description: translateMessageId(
+        "page-what-is-ethereum-composable-card-desc",
+        intl
+      ),
     },
   ]
 
@@ -365,30 +355,26 @@ const WhatIsEthereumPage = ({
 
   const tabs = [
     {
-      title: "What is a blockchain?",
+      title: translateMessageId(
+        "page-what-is-ethereum-blockchain-tab-title",
+        intl
+      ),
       eventName: "Blockchain tab",
       content: (
         <TabContent>
-          <b>A blockchain is a database of transactions</b> that is updated and
-          shared across many computers in a network. Every time a new set of
-          transactions is added, its called a “block” - hence the name
-          blockchain. Most blockchains are public, and you can only add data,
-          not remove. If someone wanted to alter any of the information or cheat
-          the system, they’d need to do so on the majority of computers on the
-          network. That is a lot! This makes established blockchains like
-          Ethereum highly secure.
+          <Translation id="page-what-is-ethereum-blockchain-tab-content" />
         </TabContent>
       ),
     },
     {
-      title: "Why is it called cryptocurrency?",
+      title: translateMessageId(
+        "page-what-is-ethereum-cryptocurrency-tab-title",
+        intl
+      ),
       eventName: "Cryptocurrency tab",
       content: (
         <TabContent>
-          Blockchains use cryptographic techniques to ensure that your funds are
-          safe. Similar techniques have been used in the banking industries to
-          ensure the security of monetary transactions for years. So you could
-          say cryptocurencies have a bank level of security.
+          <Translation id="page-what-is-ethereum-cryptocurrency-tab-content" />
         </TabContent>
       ),
     },
@@ -438,12 +424,12 @@ const WhatIsEthereumPage = ({
               <Translation id="page-what-is-ethereum-desc" />
             </Slogan>
             <Subtitle>
-              A complete beginner's guide to how Ethereum works, the benefits it
-              brings and how it's being used by millions of people around the
-              world.
+              <Translation id="page-what-is-ethereum-subtitle" />
             </Subtitle>
             <ButtonRow>
-              <ButtonLink toId="summary">Let’s start</ButtonLink>
+              <ButtonLink toId="summary">
+                <Translation id="page-what-is-ethereum-button-lets-start" />
+              </ButtonLink>
             </ButtonRow>
           </Header>
           <Hero
@@ -461,17 +447,15 @@ const WhatIsEthereumPage = ({
           <TwoColumnContent id="summary">
             <Width60>
               <Summary>
-                <h2>Summary</h2>
+                <h2>
+                  <Translation id="page-what-is-ethereum-summary-title" />
+                </h2>
                 <p>
-                  Ethereum is a technology for building apps and organizations,
-                  holding assets, transacting and communicating without being
-                  controlled by a central authority. There is no need to hand
-                  over all your personal details to use Ethereum - you keep
-                  control of your own data and what is being shared. Ethereum
-                  has its own cryptocurrency, Ether, which is used to pay for
-                  certain activities on the Ethereum network.
+                  <Translation id="page-what-is-ethereum-summary-desc-1" />
                 </p>
-                <p>Still confused? Let's explain everything step-by-step.</p>
+                <p>
+                  <Translation id="page-what-is-ethereum-summary-desc-2" />
+                </p>
               </Summary>
             </Width60>
             <Width40 />
@@ -485,37 +469,23 @@ const WhatIsEthereumPage = ({
                 />
               </Width40>
               <Width60>
-                <h2>What is a cryptocurrency?</h2>
+                <h2>
+                  <Translation id="page-what-is-ethereum-what-is-crypto-title" />
+                </h2>
                 <p>
-                  <b>
-                    Crypto (short for cryptocurrency) is a new form of digital
-                    money powered by cryptography.
-                  </b>
+                  <Translation id="page-what-is-ethereum-what-is-crypto-desc-1" />
                 </p>
                 <p>
-                  It all started in 2008 with Bitcoin. You could use it to send
-                  funds to anyone anywhere globally. What made crypto different
-                  from normal bank transfers or other financial services like
-                  Paypal or Alipay is that there was no middle man for the first
-                  time.
-                </p>
-                <p>Wait, what is a middle man?</p>
-                <p>
-                  A middle-man is a central authority like a bank or government
-                  that intervenes in a transaction between the sender and
-                  recipient. They have the power to surveill, censor or revert
-                  transactions and they can share the sensitive data they
-                  collect about you with third parties. They also often dictate
-                  which financial services you have access to.
+                  <Translation id="page-what-is-ethereum-what-is-crypto-desc-2" />
                 </p>
                 <p>
-                  Things are different with crypto.{" "}
-                  <b>Transactions directly connect sender and recipient</b>{" "}
-                  without having to deal with any central authority. Nobody else
-                  will have access to your funds and{" "}
-                  <b>nobody can tell you what services you can use</b>. This is
-                  possible because of the blockchain technology upon which
-                  cryptocurrencies operate.
+                  <Translation id="page-what-is-ethereum-what-is-crypto-desc-3" />
+                </p>
+                <p>
+                  <Translation id="page-what-is-ethereum-what-is-crypto-desc-4" />
+                </p>
+                <p>
+                  <Translation id="page-what-is-ethereum-what-is-crypto-desc-5" />
                 </p>
               </Width60>
             </TwoColumnContent>
@@ -543,35 +513,29 @@ const WhatIsEthereumPage = ({
               <GatsbyImage image={getImage(data.diffEthAndBtc)} alt="" />
             </Width40>
             <Width60>
-              <h2>What is the difference between Ethereum and Bitcoin?</h2>
+              <h2>
+                <Translation id="page-what-is-ethereum-btc-eth-diff-title" />
+              </h2>
               <p>
-                Launched in 2015, Ethereum builds on Bitcoin's innovation, with
-                some big differences.
+                <Translation id="page-what-is-ethereum-btc-eth-diff-1" />
               </p>
               <p>
-                Both let you use digital money without payment providers or
-                banks. But <b>Ethereum is programmable</b>, so you can also
-                build and deploy decentralized applications on its network.
+                <Translation id="page-what-is-ethereum-btc-eth-diff-2" />
               </p>
               <p>
-                Ethereum being programmable means that you can build apps that
-                use the blockchain to store data or control what your app can
-                do. This results in a general purpose blockchain that can be
-                programmed to do anything. As there is no limit to what Ethereum
-                can do, it allows for great innovation to happen on the Ethereum
-                network.
+                <Translation id="page-what-is-ethereum-btc-eth-diff-3" />
               </p>
               <p>
-                While Bitcoin is only a payment network, Ethereum is more like a
-                marketplace of financial services, games, social networks and
-                other apps that respect your privacy and cannot censor you.
+                <Translation id="page-what-is-ethereum-btc-eth-diff-4" />
               </p>
             </Width60>
           </TwoColumnContent>
         </Section>
 
         <Section>
-          <h2>What can Ethereum do?</h2>
+          <h2>
+            <Translation id="page-what-is-ethereum-what-can-eth-do-title" />
+          </h2>
           <CardContainer>
             {cards.map((card, idx) => (
               <StyledCard
@@ -587,7 +551,9 @@ const WhatIsEthereumPage = ({
         <Section>
           <Banner>
             <BannerBody>
-              <h2>Ethereum in numbers</h2>
+              <h2>
+                <Translation id="page-what-is-ethereum-ethereum-in-numbers-title" />
+              </h2>
               <BannerGrid>
                 <BannerGridCell>
                   <StatPrimary>2970</StatPrimary>
@@ -718,19 +684,14 @@ const WhatIsEthereumPage = ({
         <Section>
           <TwoColumnContent>
             <Width60>
-              <h2>Why would I use Ethereum?</h2>
+              <h2>
+                <Translation id="page-what-is-ethereum-why-would-i-use-ethereum-title" />
+              </h2>
               <p>
-                If you’ve ever sent money overseas (or plan to), or had to worry
-                about the future of your assets due to external forces outside
-                of your control where you live, or been fed up by the numerous
-                restrictions and fees imposed by traditional financial
-                institutions for everyday transactions, you might be interested
-                in what cryptocurrencies have to offer.
+                <Translation id="page-what-is-ethereum-why-would-i-use-ethereum-1" />
               </p>
               <p>
-                Bear in mind that Ethereum is a story that is still being
-                written, and many more reasons to use it are being uncovered as
-                it evolves and develops over time.
+                <Translation id="page-what-is-ethereum-why-would-i-use-ethereum-2" />
               </p>
 
               <Slider
@@ -743,126 +704,44 @@ const WhatIsEthereumPage = ({
                 }}
               >
                 <EmblaSlide>
-                  <h3>Cheaper and Faster Crossborder Payments</h3>
+                  <h3>
+                    <Translation id="page-what-is-ethereum-slide-1-title" />
+                  </h3>
                   <p>
-                    <b>Stablecoins</b> are a novel type of cryptocurrency that
-                    relies on a more stable asset as the basis for its value.
-                    Most of them are linked to the United States dollar and
-                    therefore maintain the value of that currency. These allow
-                    for a very cheap and stable global payment system. Many
-                    current stablecoins are built on the Ethereum network.
+                    <Translation id="page-what-is-ethereum-slide-1-desc-1" />
                   </p>
                   <p>
-                    Ethereum and stablecoins simplify the process of sending
-                    money overseas. It often takes only few minutes to move
-                    funds across the globe, as opposed to the several business
-                    days or even weeks that it may take your average bank, and
-                    for a fraction of the price. Additionally, there is no extra
-                    fee for making a high value transaction, and there are zero
-                    restrictions on where or why you are sending your money.
+                    <Translation id="page-what-is-ethereum-slide-1-desc-2" />
                   </p>
                 </EmblaSlide>
                 <EmblaSlide>
-                  <h3>The Quickest Help in Times of Crisis</h3>
+                  <h3>
+                    <Translation id="page-what-is-ethereum-slide-2-title" />
+                  </h3>
                   <p>
-                    If you are lucky enough to have multiple banking options
-                    through trusted institutions where you live, you may take
-                    for granted the financial freedom, security and stability
-                    that they offer. But for many people around the world facing
-                    political repression or economic hardship, financial
-                    institutions may not provide the protection or services they
-                    need.
+                    <Translation id="page-what-is-ethereum-slide-2-desc-1" />
                   </p>
                   <p>
-                    When war, economic catastrophes or crackdowns on civil
-                    liberties struck the residents of{" "}
-                    <Link
-                      to="https://time.com/5486673/bitcoin-venezuela-authoritarian/"
-                      hideArrow
-                    >
-                      Venezuela
-                    </Link>
-                    ,{" "}
-                    <Link
-                      to="https://www.economist.com/the-americas/2021/10/30/cubas-communist-regime-is-trying-to-control-crypto"
-                      hideArrow
-                    >
-                      Cuba
-                    </Link>
-                    ,{" "}
-                    <Link
-                      to="https://www.aljazeera.com/news/2022/3/21/crypto-provides-fix-for-some-in-crisis-hit-afghanistan"
-                      hideArrow
-                    >
-                      Afghanistan
-                    </Link>
-                    ,{" "}
-                    <Link
-                      to="https://qz.com/africa/1922466/how-bitcoin-powered-nigerias-endsars-protests/"
-                      hideArrow
-                    >
-                      Nigeria
-                    </Link>
-                    ,{" "}
-                    <Link
-                      to="https://www.euronews.com/my-europe/2021/12/22/meet-the-ngo-turning-to-cryptocurrencies-to-help-desperate-belarusians"
-                      hideArrow
-                    >
-                      Belarus
-                    </Link>
-                    , and{" "}
-                    <Link
-                      to="https://internationalbanker.com/finance/cryptocurrencies-filling-crucial-role-in-the-russia-ukraine-conflict/"
-                      hideArrow
-                    >
-                      Ukraine
-                    </Link>
-                    , cryptocurrencies constituted the quickest and often the
-                    only option to retain financial agency.
-                    <sup>
-                      <Link to="https://www.financialinclusion.tech/" hideArrow>
-                        1
-                      </Link>
-                    </sup>{" "}
-                    As seen in these examples, cryptocurrencies like Ethereum
-                    can provide unfettered access to the global economy when
-                    people are cut off from the outside world. Additionally,
-                    stablecoins offer a store of value when local currencies are
-                    collapsing due to superinflation.
+                    <Translation id="page-what-is-ethereum-slide-2-desc-2" />
                   </p>
                 </EmblaSlide>
                 <EmblaSlide>
-                  <h3>Empowering Creators</h3>
+                  <h3>
+                    <Translation id="page-what-is-ethereum-slide-3-title" />
+                  </h3>
                   <p>
-                    In 2021 alone, artists, musicians, writers, and other
-                    creators used Ethereum to earn around $3.5 billion
-                    collectively. This makes Ethereum one of the largest global
-                    platforms for creators, alongside Spotify, YouTube, and
-                    Etsy.{" "}
-                    <Link
-                      to="https://stark.mirror.xyz/q3OnsK7mvfGtTQ72nfoxLyEV5lfYOqUfJIoKBx7BG1I"
-                      hideArrow
-                    >
-                      Learn more
-                    </Link>
+                    <Translation id="page-what-is-ethereum-slide-3-desc-1" />
                   </p>
                 </EmblaSlide>
                 <EmblaSlide>
-                  <h3>Empowering Gamers</h3>
+                  <h3>
+                    <Translation id="page-what-is-ethereum-slide-4-title" />
+                  </h3>
                   <p>
-                    Play to earn games (where players are actually rewarded for
-                    playing the games) have recently emerged and are
-                    transforming the gaming industry. Traditionally, it is often
-                    prohibited to trade or transfer in-game assets to other
-                    players for real money. This forces players to use black
-                    market websites that are often a security risk. Blockchain
-                    gaming embraces the in-game economy and promotes such
-                    behavior in a trusted manner.
+                    <Translation id="page-what-is-ethereum-slide-4-desc-1" />
                   </p>
                   <p>
-                    Moreover, players are incentivized by being able to trade
-                    in-game tokens for real money and thus being truly rewarded
-                    for their play time.
+                    <Translation id="page-what-is-ethereum-slide-4-desc-2" />
                   </p>
                 </EmblaSlide>
               </Slider>
@@ -879,26 +758,22 @@ const WhatIsEthereumPage = ({
               <GatsbyImage image={getImage(data.ethCoin)} alt="" />
             </Width40>
             <Width60>
-              <h2>Meet ether, Ethereum’s cryptocurrency</h2>
+              <h2>
+                <Translation id="page-what-is-ethereum-meet-ether-title" />
+              </h2>
               <p>
-                Ethereum has a native cryptocurrency called ether (ETH). It is
-                purely digital, and you can send it to anyone anywhere in the
-                world instantly. The supply of ETH isn’t controlled by any
-                government or company - it is decentralized and completely
-                transparent. New coins (also commonly called tokens) are created
-                only by miners and stakers who maintain the network.
+                <Translation id="page-what-is-ethereum-meet-ether-desc-1" />
               </p>
               <p>
-                Every action on the Ethereum network requires a certain amount
-                of computational power. This fee is paid in the form of ether.
-                This means you need at least a small amount of ETH to use the
-                network.
+                <Translation id="page-what-is-ethereum-meet-ether-desc-2" />
               </p>
               <p>
                 <ButtonRow>
-                  <ButtonLink to="/eth/">What is ether?</ButtonLink>
+                  <ButtonLink to="/eth/">
+                    <Translation id="page-what-is-ethereum-what-is-ether" />
+                  </ButtonLink>
                   <ButtonLink to="/get-eth/" isSecondary>
-                    Get ETH
+                    <Translation id="page-what-is-ethereum-get-eth" />
                   </ButtonLink>
                 </ButtonRow>
               </p>
@@ -912,20 +787,19 @@ const WhatIsEthereumPage = ({
               <GatsbyImage image={getImage(data.meetEth)} alt="" />
             </Width40>
             <Width60>
-              <h2>What can I do with ETH coins?</h2>
+              <h2>
+                <Translation id="page-what-is-ethereum-what-can-i-do-title" />
+              </h2>
               <p>
-                Turns out: a lot of things! One of the most prominent usages of
-                the Ethereum technology is decentralized finance (DeFi) that
-                opens entire areas of banking services to anybody with an
-                internet connection. You can use your ether as a collateral to
-                take out loans or provide liquidity to earn interest on your
-                funds.
+                <Translation id="page-what-is-ethereum-what-can-i-do-desc-1" />
               </p>
               <p>
                 <ButtonRow>
-                  <ButtonLink to="/dapps/">Explore applications</ButtonLink>
+                  <ButtonLink to="/dapps/">
+                    <Translation id="page-what-is-ethereum-explore-applications" />
+                  </ButtonLink>
                   <ButtonLink to="/defi/" isSecondary>
-                    Learn about DeFi
+                    <Translation id="page-what-is-ethereum-learn-defi" />
                   </ButtonLink>
                 </ButtonRow>
               </p>
@@ -939,30 +813,20 @@ const WhatIsEthereumPage = ({
               <GatsbyImage image={getImage(data.whoRunsEthereum)} alt="" />
             </Width40>
             <Width60>
-              <h2>Who runs Ethereum?</h2>
+              <h2>
+                <Translation id="page-what-is-ethereum-who-runs-ethereum-title" />
+              </h2>
               <p>
-                Ethereum is not controlled by any one entity. It exists solely
-                through the decentralized participation and cooperation of the
-                community. Ethereum makes use of nodes (a computer with a copy
-                of the Ethereum blockchain data) run by volunteers to replace
-                individual server and cloud systems owned by major internet
-                providers and services.
+                <Translation id="page-what-is-ethereum-who-runs-ethereum-desc-1" />
               </p>
               <p>
-                These distributed nodes, run by individuals and businesses all
-                over the world, provide resiliency to the Ethereum network
-                infrastructure. It is therefore much less vulnerable to hacks or
-                shutdowns.{" "}
-                <b>
-                  Since its launch in 2015, Ethereum has never suffered downtime
-                </b>
-                . There are thousands of individual nodes running Ethereum
-                network. This makes Ethereum one of the most decentralized
-                cryptocurrencies out there, second only to bitcoin.
+                <Translation id="page-what-is-ethereum-who-runs-ethereum-desc-2" />
               </p>
               <p>
                 <ButtonRow>
-                  <ButtonLink to="/run-a-node/">Run a node</ButtonLink>
+                  <ButtonLink to="/run-a-node/">
+                    <Translation id="page-what-is-ethereum-run-a-node" />
+                  </ButtonLink>
                 </ButtonRow>
               </p>
             </Width60>
@@ -978,38 +842,25 @@ const WhatIsEthereumPage = ({
               />
             </Width40>
             <Width60>
-              <h2>What are smart contracts?</h2>
+              <h2>
+                <Translation id="page-what-is-ethereum-smart-contract-title" />
+              </h2>
               <p>
-                <b>Smart contracts are simply computer programs</b> living on
-                the Ethereum blockchain. They only{" "}
-                <b>
-                  execute when triggered by a transaction from a user (or
-                  another contract)
-                </b>
-                . They make Ethereum very flexible in what it can do and
-                distinguish it from other cryptocurrencies. These programs are
-                what we now call decentralized apps, or dapps.
+                <Translation id="page-what-is-ethereum-smart-contract-desc-1" />
               </p>
               <p>
-                Have you ever used a product that changed its terms of service?
-                Or removed a feature you found useful? Once a smart contract is
-                published to Ethereum, it will be online and operational for as
-                long as Ethereum exists. Not even the author can take it down.
-                Since smart contracts are automated, they do not discriminate
-                against any user and are always ready to use.
+                <Translation id="page-what-is-ethereum-smart-contract-desc-2" />
               </p>
               <p>
-                Popular examples of smart contracts are lending apps,
-                decentralized trading exchanges, insurance, crowdfunding apps -
-                basically anything you can think of.
+                <Translation id="page-what-is-ethereum-smart-contract-desc-3" />
               </p>
               <p>
                 <ButtonRow>
                   <ButtonLink to="/smart-contracts/">
-                    More on Smart contracts
+                    <Translation id="page-what-is-ethereum-more-on-smart-contracts" />
                   </ButtonLink>
                   <ButtonLink to="/dapps/" isSecondary>
-                    Explore dapps
+                    <Translation id="page-what-is-ethereum-explore-dapps" />
                   </ButtonLink>
                 </ButtonRow>
               </p>
@@ -1025,29 +876,17 @@ const WhatIsEthereumPage = ({
           </Width40>
           <Width60>
             <h2>
-              I heard crypto is being used as a tool for criminal activity. Is
-              this true?
+              <Translation id="page-what-is-ethereum-criminal-activity-title" />
             </h2>
             <p>
-              Like any form of money, some of it will be misused. However,
-              because all Ethereum transactions happen on an open blockchain,
-              it’s often easier for authorities to track illicit activity than
-              it would be in the traditional financial system, arguably making
-              Ethereum a less appealing choice for those who would rather go
-              undetected.
+              <Translation id="page-what-is-ethereum-criminal-activity-desc-1" />
             </p>
             <p>
-              Crypto is used much less than fiat currencies for criminal
-              purposes according to the key findings of a recent report by
-              Europol, the European Union Agency for Law Enforcement
-              Cooperation:
+              <Translation id="page-what-is-ethereum-criminal-activity-desc-2" />
             </p>
             <p>
               <em>
-                “The use of cryptocurrencies for illicit activities seems to
-                comprise only a small part of the overall cryptocurrency
-                economy, and it appears to be comparatively smaller than the
-                amount of illicit funds involved in traditional finance.”
+                <Translation id="page-what-is-ethereum-criminal-activity-desc-3" />
               </em>
             </p>
             <ul>
@@ -1078,28 +917,22 @@ const WhatIsEthereumPage = ({
             />
           </Width40>
           <Width60>
-            <h2>What about Ethereum’s energy consumption?</h2>
+            <h2>
+              <Translation id="page-what-is-ethereum-energy-title" />
+            </h2>
             <p>
-              Ethereum is currently using proof-of-work mechanism that consumes
-              a large amount of energy. In the coming months (Q3/Q4 2022)
-              Ethereum will undergo its biggest update yet and will switch to
-              proof of stake mechanism which will{" "}
-              <b>greatly reduce the enviromental impact</b> it has.
+              <Translation id="page-what-is-ethereum-energy-desc-1" />
             </p>
             <p>
-              This update will reduce the energy required to secure Ethereum by
-              about <b>99.95%</b>, creating a{" "}
-              <b>more secure network for a much smaller carbon cost</b>. This
-              will make Ethereum a truly low-carbon blockchain while boosting
-              its security and scalability.
+              <Translation id="page-what-is-ethereum-energy-desc-2" />
             </p>
             <p>
               <ButtonRow>
                 <ButtonLink to="/energy-consumption/">
-                  More on energy consumption
+                  <Translation id="page-what-is-ethereum-more-on-energy-consumption" />
                 </ButtonLink>
                 <ButtonLink to="/upgrades/merge/" isSecondary>
-                  The Merge update
+                  <Translation id="page-what-is-ethereum-the-merge-update" />
                 </ButtonLink>
               </ButtonRow>
             </p>
@@ -1108,24 +941,26 @@ const WhatIsEthereumPage = ({
       </Section>
 
       <Content>
-        <h2>Additional reading</h2>
+        <h2>
+          <Translation id="page-what-is-ethereum-additional-reading" />
+        </h2>
         <p>
           <Link to="https://weekinethereumnews.com/">
-            Week in Ethereum News
+            <Translation id="page-what-is-ethereum-week-in-ethereum" />
           </Link>{" "}
-          - A weekly newsletter covering key developments across the ecosystem.
+          <Translation id="page-what-is-ethereum-week-in-ethereum-desc" />
         </p>
         <p>
           <Link to="https://stark.mirror.xyz/q3OnsK7mvfGtTQ72nfoxLyEV5lfYOqUfJIoKBx7BG1I">
-            The Year in Ethereum 2021
+            <Translation id="page-what-is-ethereum-the-year-in-ethereum-2021" />
           </Link>{" "}
-          Jan 17, 2022 - Josh Stark and Evan Van Ness
+          <Translation id="page-what-is-ethereum-the-year-in-ethereum-2021-desc" />
         </p>
         <p>
           <Link to="https://stark.mirror.xyz/n2UpRqwdf7yjuiPKVICPpGoUNeDhlWxGqjulrlpyYi0">
-            Atoms, Institutions, Blockchains
+            <Translation id="page-what-is-ethereum-atoms-institutions-blockchains" />
           </Link>{" "}
-          - Why blockchains matter?
+          <Translation id="page-what-is-ethereum-atoms-institutions-blockchains-desc" />
         </p>
       </Content>
 

@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { useIntl } from "gatsby-plugin-intl"
+import { useIntl } from "react-intl"
 import { motion } from "framer-motion"
 
 import Emoji from "../Emoji"
@@ -332,7 +332,7 @@ const MobileNavMenu: React.FC<IProps> = ({
                 <SectionItems>
                   {section.items.map((item, idx) =>
                     item.items ? (
-                      <>
+                      <React.Fragment key={idx}>
                         <SectionSubtitle>{item.text}</SectionSubtitle>
                         {item.items.map((item, idx) => (
                           <SectionItem key={idx} onClick={handleClick}>
@@ -344,7 +344,7 @@ const MobileNavMenu: React.FC<IProps> = ({
                             </StyledNavLink>
                           </SectionItem>
                         ))}
-                      </>
+                      </React.Fragment>
                     ) : (
                       <SectionItem key={idx} onClick={handleClick}>
                         <StyledNavLink

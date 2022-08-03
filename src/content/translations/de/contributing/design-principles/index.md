@@ -37,10 +37,10 @@ Wenn wir Entscheidungen in puncto Design oder Werbetexte tätigen, ziehen wir de
 
 ### 1. Inspirierend {#1-inspirational}
 
-Die Seite sollte Nutzer dazu anregen, sich vorzustellen, welche Veränderungen Ethreum für die Welt brignen könnte. Menschen sollen sich motiviert fühlen, die Tools des Ethereum-Ökösystems zu erkunden, damit zu experimentieren und zu basteln.
+Die Seite sollte Nutzer dazu anregen, sich vorzustellen, welche Veränderungen Ethereum für die Welt brignen könnte. Menschen sollen sich motiviert fühlen, die Tools des Ethereum-Ökösystems zu erkunden, damit zu experimentieren und zu basteln.
 
 - **Fundamental:** Die Seite sollte vermitteln, wie Ethereum ambitioniert versucht, die Welt zu verändern. Es sollte klar werden, dass Ethereum nicht nur eine weitere technische Errungenschaft ist, sondern eine transformative Technologie.
-- **Fördern durch Bildung:** Die Informationen sollten so gestaltet sein, dass Besucher das Potenzial von Ethreum verstehen, einen Platz im Ökösystem finden und sich befähigt fühlen, sich zu beteiligen.
+- **Fördern durch Bildung:** Die Informationen sollten so gestaltet sein, dass Besucher das Potenzial von Ethereum verstehen, einen Platz im Ökösystem finden und sich befähigt fühlen, sich zu beteiligen.
 
 Visuelle Ausrichtung • Inhalt
 

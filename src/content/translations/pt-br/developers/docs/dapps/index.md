@@ -5,7 +5,7 @@ lang: pt-br
 sidebar: true
 ---
 
-Um aplicativo descentralizado (dapp) é um aplicativo construído em uma rede descentralizada que combina um [ contrato inteligente ](/developers/docs/smart-contracts/) e uma interface de usuário de front-end. Observe que no Ethereum os contratos inteligentes são acessíveis e transparentes – como APIs abertas — então, seu dapp pode até incluir um contrato inteligente que outra pessoa escreveu.
+Um aplicativo descentralizado (dapp) é um aplicativo construído em uma rede descentralizada que combina um [contrato inteligente](/developers/docs/smart-contracts/) e uma interface de usuário de front-end. Observe que no Ethereum os contratos inteligentes são acessíveis e transparentes – como APIs abertas — então, seu dapp pode até incluir um contrato inteligente que outra pessoa escreveu.
 
 ## Pré-requisitos {#prerequisites}
 
@@ -72,7 +72,7 @@ Um contrato inteligente é um código presente na blockchain Ethereum e funciona
 ## Leitura adicional {#further-reading}
 
 - [A arquitetura de um aplicativo web 3.0](https://www.preethikasireddy.com/post/the-architecture-of-a-web-3-0-application) - _Preethi Kasireddy_
-- [Um guia de 2021 para aplicativos descentralizados](https://limechain. tech/blog/what-are-dapps-the-2021-guide/) - _LimeChain_
+- [Um guia de 2021 para aplicativos descentralizados](https://limechain.tech/blog/what-are-dapps-the-2021-guide/) - _LimeChain_
 - [O que são aplicativos descentralizados?](https://www.gemini.com/cryptopedia/decentralized-applications-defi-dapps) - _Gemini_
 
 _Conhece um recurso da comunidade que o ajudou? Edite esta página e adicione-o!_

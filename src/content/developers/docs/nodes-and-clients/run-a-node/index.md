@@ -86,7 +86,7 @@ Executable binaries for stable Mainnet client implementations can be downloaded 
 - [Geth](https://geth.ethereum.org/downloads/)
 - [OpenEthereum,](https://github.com/openethereum/openethereum/releases)
 - [Nethermind](https://downloads.nethermind.io/)
-- [Besu](https://pegasys.tech/solutions/hyperledger-besu/)
+- [Besu](https://besu.hyperledger.org/en/stable/)
 - [Erigon](https://github.com/ledgerwatch/erigon)
 
 It is also worth noting that client diversity is an [issue on the execution layer](https://clientdiversity.org/),

@@ -53,7 +53,7 @@ Afin de déployer notre contrat intelligent sur le serveur test, nous aurons bes
 
 ## Étape 5 : Vérifiez votre solde {#step-5}
 
-Pour vérifier notre solde, faisons une requête [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) en utilisant [l'outil composeur d'Alchemy](https://composer.alchemyapi.io?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). Cela va retourner la quantité d'ETH présente dans notre portefeuille. Après avoir entré l'adresse de votre compte Metamask et cliqué sur « Send Request », vous devriez voir une réponse comme celle-ci :
+Pour vérifier notre solde, faisons une requête [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) en utilisant [l'outil composeur d'Alchemy](https://composer.alchemyapi.io?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). Cela va retourner la quantité d'ETH présente dans notre portefeuille. Après avoir entré l'adresse de votre compte MetaMask et cliqué sur « Send Request », vous devriez voir une réponse comme celle-ci :
 
 ```json
 { "jsonrpc": "2.0", "id": 0, "result": "0x2B5E3AF16B1880000" }
@@ -202,7 +202,7 @@ Il s'agit d'un contrat intelligent très simple qui stocke un message lors de la
 
 ## Étape 11 : Connectez MetaMask & Alchemy à votre projet {#step-11}
 
-Maintenant que nous avons créé un portefeuille Metamask, un compte Alchemy et écrit notre contrat intelligent, il est temps de connecter les trois.
+Maintenant que nous avons créé un portefeuille MetaMask, un compte Alchemy et écrit notre contrat intelligent, il est temps de connecter les trois.
 
 Chaque transaction envoyée depuis votre portefeuille virtuel nécessite une signature en utilisant votre clé privée unique. Pour donner cette permission à notre programme, nous pouvons stocker en toute sécurité notre clé privée (et la clé API Alchemy) dans un fichier d'environnement.
 
@@ -344,7 +344,7 @@ Si nous allons sur [Ropsten etherscan](https://ropsten.etherscan.io/) et que nou
 
 ![contrat etherscan](./etherscan-contract.png)
 
-L'adresse `From` devrait correspondre à votre adresse de compte Metamask et l'adresse To retournera « Contract Creation », mais si nous cliquons dans la transaction, nous verrons notre adresse de contrat dans le champ `To` :
+L'adresse `From` devrait correspondre à votre adresse de compte MetaMask et l'adresse To retournera « Contract Creation », mais si nous cliquons dans la transaction, nous verrons notre adresse de contrat dans le champ `To` :
 
 ![transaction etherscan](./etherscan-transaction.png)
 

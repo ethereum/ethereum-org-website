@@ -107,7 +107,7 @@ _通常用于联系更紧密、以人为中心的组织，例如慈善机构、�
 ### 去中心化自治组织相关文章 {#dao-articles}
 
 - [什么是去中心化自治组织？](https://aragon.org/dao)– [Aragon](https://aragon.org/)
-- [去中心化自治组织之家 ](https://wiki.metagame.wtf/docs/great-houses/house-of-daos)– [Metagame](https://wiki.metagame.wtf/)
+- [去中心化自治组织之家](https://wiki.metagame.wtf/docs/great-houses/house-of-daos)– [Metagame](https://wiki.metagame.wtf/)
 - [去中心化自治组织及其目的分别是什么？](https://daohaus.substack.com/p/-what-is-a-dao-and-what-is-it-for)– [DAOhaus](https://daohaus.club/)
 - [如何创立由去中心化自治组织提供支持的数字社区](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) – [DAOhaus](https://daohaus.club/)
 - [什么是去中心化自治组织？](https://coinmarketcap.com/alexandria/article/what-is-a-dao)– [Coinmarketcap](https://coinmarketcap.com)

@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql, PageProps } from "gatsby"
-import { useIntl } from "gatsby-plugin-intl"
+import { useIntl } from "react-intl"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import styled from "styled-components"
@@ -21,7 +21,9 @@ import Pill from "../components/Pill"
 import RandomAppList from "../components/RandomAppList"
 import ExpandableCard from "../components/ExpandableCard"
 import Roadmap from "../components/Roadmap"
-import TableOfContents from "../components/TableOfContents"
+import TableOfContents, {
+  Item as ItemTableOfContents,
+} from "../components/TableOfContents"
 import Translation from "../components/Translation"
 import TranslationsInProgress from "../components/TranslationsInProgress"
 import SectionNav from "../components/SectionNav"
@@ -149,7 +151,7 @@ const components = {
 
 const StaticPage = ({
   data: { siteData, pageData: mdx },
-  pageContext,
+  pageContext: { relativePath },
 }: PageProps<Queries.StaticPageQuery, Context>) => {
   const intl = useIntl()
 
@@ -159,6 +161,8 @@ const StaticPage = ({
     )
   if (!mdx?.frontmatter?.title)
     throw new Error("Required `title` property missing for static template")
+  if (!relativePath)
+    throw new Error("Required `relativePath` is missing on pageContext")
 
   const isRightToLeft = isLangRightToLeft(mdx.frontmatter.lang as Lang)
 
@@ -168,9 +172,8 @@ const StaticPage = ({
     ? parent.fields.gitLogLatestDate
     : parent.mtime
 
-  const tocItems = mdx.tableOfContents?.items
+  const tocItems = mdx.tableOfContents?.items as Array<ItemTableOfContents>
   const { editContentUrl } = siteData.siteMetadata || {}
-  const { relativePath } = pageContext
   const absoluteEditPath =
     relativePath.split("/").includes("whitepaper") ||
     relativePath.split("/").includes("events")
@@ -197,7 +200,7 @@ const StaticPage = ({
           editPath={absoluteEditPath}
           items={tocItems}
           isMobile={true}
-          maxDepth={mdx.frontmatter.sidebarDepth}
+          maxDepth={mdx.frontmatter.sidebarDepth!}
         />
         <MDXProvider components={components}>
           <MDXRenderer>{mdx.body}</MDXRenderer>
@@ -208,7 +211,7 @@ const StaticPage = ({
         <TableOfContents
           editPath={absoluteEditPath}
           items={tocItems}
-          maxDepth={mdx.frontmatter.sidebarDepth}
+          maxDepth={mdx.frontmatter.sidebarDepth!}
         />
       )}
     </Page>

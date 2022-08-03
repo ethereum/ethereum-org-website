@@ -141,7 +141,7 @@ _Opomba_: Vse paketne funkcije vključno s kavlji prav tako obstajajo kot verzij
 
 ## Nadaljnje branje {#further-reading}
 
-- [EIP-1155: standard za multižetone ](https://eips.ethereum.org/EIPS/eip-1155)
+- [EIP-1155: standard za multižetone](https://eips.ethereum.org/EIPS/eip-1155)
 - [ERC-1155: dokumenti Openzeppelin](https://docs.openzeppelin.com/contracts/3.x/erc1155)
-- [ERC-1155: repozitorij Github](https://github.com/enjin/erc-1155)
+- [ERC-1155: repozitorij GitHub](https://github.com/enjin/erc-1155)
 - [Alchemy NFT API](https://docs.alchemy.com/alchemy/enhanced-apis/nft-api)

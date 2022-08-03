@@ -398,11 +398,11 @@ Bu, Digiconomist'in Ethereum madencilerinin hâlihazırda tükettiği yıllık 4
 
 100.000 Visa işleminin maliyeti 149 kwH'dir - [2020 itibarıyla Bitcoin ağı işlem başına ortalama enerji tüketiminin VISA ağıyla karşılaştırılması, Statista](https://www.statista.com/statistics/881541/bitcoin-energy-consumption-transaction-comparison-visa/)
 
-Eylül 2020 yıl sonunda 140.839.000.000 işlem gerçekleştirdiler – [Visa mali raporu 2020 4. Çeyrek](https://s1.q4cdn.com/050606653/files/doc_financials/2020/q4/Visa-Inc.-Q4-2020-Operational-Performance-Data. pdf)
+Eylül 2020 yıl sonunda 140.839.000.000 işlem gerçekleştirdiler – [Visa mali raporu 2020 4. Çeyrek](https://s1.q4cdn.com/050606653/files/doc_financials/2020/q4/Visa-Inc.-Q4-2020-Operational-Performance-Data.pdf)
 
 #### 3. Parçalı bir hisse ispatı ağında 100.000 işlem için enerji kullanımı {#fn-3}
 
-Ölçeklenebilirlik yükseltmelerinin, ağın [ saniyede 25.000 ila şu anda teorik maksimum değer olan 100.000 işlem gerçekleştirmesine olanak sağlayacağı tahmin ediliyor. ](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698).
+Ölçeklenebilirlik yükseltmelerinin, ağın [saniyede 25.000 ila şu anda teorik maksimum değer olan 100.000 işlem gerçekleştirmesine olanak sağlayacağı tahmin ediliyor.](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698).
 
 [Vitalik Buterin'in parçalama ile saniye başına işlem potansiyeli hakkında düşünceleri](https://twitter.com/VitalikButerin/status/1312905884549300224)
 

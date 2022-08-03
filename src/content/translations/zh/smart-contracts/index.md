@@ -9,7 +9,7 @@ sidebar: true
 
 智能合约是[以太坊应用程序](/dapps/)的基石。 它们是存储在区块链上的计算机程序，让我们能够将传统合约转换成对应的数字化合约。 智能合约完全符合逻辑 — 遵循 IFTTT 逻辑结构。 这意味着它们完全按照程序设定执行并且不能更改。
 
-Nick Szabo 创造了“智能合约”这一术语。 1994 年，他撰写了[概念简介](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart.contracts.html)，1996 年又撰写了[探索智能合约的功能](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best。 vwh.net/smart_contracts_2.html)。
+Nick Szabo 创造了“智能合约”这一术语。 1994 年，他撰写了[概念简介](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart.contracts.html)，1996 年又撰写了[探索智能合约的功能](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart_contracts_2.html)。
 
 Nick Szabo 设想了一个建立在这些自动化、加密安全流程上的数字化市场。 在这种数字化市场中，交易和业务功能可以在无需信任的情况下进行，无需中间人。 以太坊上的智能合约将这一设想付诸实践。
 

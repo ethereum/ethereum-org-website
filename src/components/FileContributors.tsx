@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { useIntl } from "gatsby-plugin-intl"
+import { useIntl } from "react-intl"
 import styled, { css } from "styled-components"
 import { useQuery, gql } from "@apollo/client"
 
