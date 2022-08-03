@@ -167,7 +167,7 @@ Smart contracts—at least, to some extent—fulfill both requirements. For exam
 
 ### Faster development cycle {#faster-development-cycle}
 
-Formal verification techniques, such as model checking and symbolic execution, are generally more efficient than regular analysis of smart contract code (performed during testing or auditing). This is because formal verification relies on symbolic values to test assertions("what if a user tries to withdraw *n* ether?") unlike testing which uses concrete values ("what if a user tries to withdraw 5 ether?"). 
+Formal verification techniques, such as model checking and symbolic execution, are generally more efficient than regular analysis of smart contract code (performed during testing or auditing). This is because formal verification relies on symbolic values to test assertions ("what if a user tries to withdraw *n* ether?") unlike testing which uses concrete values ("what if a user tries to withdraw 5 ether?"). 
 
 Symbolic input variables can cover multiple classes of concrete values, so formal verification approaches promise more code coverage in a shorter time frame. When used effectively, formal verification can accelerate the development cycle for developers.
 
