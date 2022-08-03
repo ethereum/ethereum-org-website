@@ -24,12 +24,6 @@ The ethereum.org Translation Program is open and anyone can contribute!
   Start translating
 </ButtonLink>
 
-<InfoBanner emoji=":tada:">
-  Check out our <Link to="/contributing/translation-program/acknowledgements/">Translator Acknowledgements</Link> page, and{" "}
-  claim your POAP token! If you translated ethereum.org in 2022, there's a unique POAP waiting for you.{" "}
-  <Link to="/contributing/translation-program/acknowledgements/#poap">More on POAPs</Link>
-</InfoBanner>
-
 ## About the Translation Program {#about-us}
 
 The Ethereum community aims to be global and inclusive, yet much of its content only caters to English speakers, leaving out the world's 6 billion non-English speakers. For ethereum.org to act as the portal into Ethereum for the worldwide community, we believe providing non-English speakers with Ethereum content in their native languages is essential.
@@ -46,6 +40,12 @@ Read more about the ethereum.org Translation Program [mission and vision](/contr
 - [**1.9 million** words translated in 2022 so far](/contributing/translation-program/acknowledgements/)
 
 If you want to get involved and help us grow the global Ethereum community by translating the website into your language, follow the steps below!
+
+<InfoBanner emoji=":tada:">
+  Check out our <Link to="/contributing/translation-program/acknowledgements/">Translator Acknowledgements</Link> page, and{" "}
+  claim your POAP token! If you translated ethereum.org in 2022, there's a unique POAP waiting for you.{" "}
+  <Link to="/contributing/translation-program/acknowledgements/#poap">More on POAPs</Link>
+</InfoBanner>
 
 ### What we're working on {#our-projects}
 
