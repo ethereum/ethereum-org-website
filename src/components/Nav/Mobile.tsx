@@ -332,7 +332,7 @@ const MobileNavMenu: React.FC<IProps> = ({
                 <SectionItems>
                   {section.items.map((item, idx) =>
                     item.items ? (
-                      <>
+                      <React.Fragment key={idx}>
                         <SectionSubtitle>{item.text}</SectionSubtitle>
                         {item.items.map((item, idx) => (
                           <SectionItem key={idx} onClick={handleClick}>
@@ -344,7 +344,7 @@ const MobileNavMenu: React.FC<IProps> = ({
                             </StyledNavLink>
                           </SectionItem>
                         ))}
-                      </>
+                      </React.Fragment>
                     ) : (
                       <SectionItem key={idx} onClick={handleClick}>
                         <StyledNavLink

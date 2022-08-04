@@ -116,7 +116,7 @@ Tabel ini meringkaskan berbagai jenis klien. Semuanya telah lulus [pengujian kli
 | ------------------------------------------------------------------------- | -------- | --------------------- | -------------------------------------------------------- | --------------------- | ---------------- |
 | [Geth](https://geth.ethereum.org/)                                        | Go       | Linux, Windows, macOS | Jaringan Utama, Görli, Rinkeby, Ropsten                  | Snap, Full            | Arsip, Dipotong  |
 | [Nethermind](http://nethermind.io/)                                       | C#, .NET | Linux, Windows, macOS | Jaringan Utama, Görli, Ropsten, Rinkeby, dan banyak lagi | Fast, Beam, Archive   | Arsip, Dipotong  |
-| [Besu](https://pegasys.tech/solutions/hyperledger-besu/)                  | Java     | Linux, Windows, macOS | Mainnet, Rinkeby, Ropsten, Görli, and more               | Cepat, Penuh          | Arsip, Dipotong  |
+| [Besu](https://besu.hyperledger.org/en/stable/)                           | Java     | Linux, Windows, macOS | Mainnet, Rinkeby, Ropsten, Görli, and more               | Cepat, Penuh          | Arsip, Dipotong  |
 | [Erigon](https://github.com/ledgerwatch/erigon)                           | Go       | Linux, Windows, macOS | Jaringan Utama, Görli, Rinkeby, Ropsten                  | Full                  | Arsip, Dipotong  |
 | [OpenEthereum (Deprecated)](https://github.com/openethereum/openethereum) | Rust     | Linux, Windows, macOS | Jaringan Utama, Kovan, Ropsten, dan banyak lagi          | Warp, Penuh           | Arsip, Dipotong  |
 

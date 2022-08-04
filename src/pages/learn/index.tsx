@@ -1,23 +1,30 @@
+// Libraries
 import React from "react"
 import styled from "styled-components"
 import { graphql, PageProps } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { useIntl } from "react-intl"
 
-import StakingHomeTableOfContents from "../../components/Staking/StakingHomeTableOfContents"
+// Components
 import { CardGrid as OriginalCardGrid } from "../../components/SharedStyledComponents"
-import FeedbackCard from "../../components/FeedbackCard"
-import PageMetadata from "../../components/PageMetadata"
 import ButtonLink from "../../components/ButtonLink"
 import DocLink from "../../components/DocLink"
+import FeedbackCard from "../../components/FeedbackCard"
 import Link from "../../components/Link"
-import PageHero from "../../components/PageHero"
 import OriginalCard from "../../components/Card"
+import PageHero from "../../components/PageHero"
+import PageMetadata from "../../components/PageMetadata"
+import StakingHomeTableOfContents from "../../components/Staking/StakingHomeTableOfContents"
+import Translation from "../../components/Translation"
 
-import { isLangRightToLeft } from "../../utils/translations"
+// Utils
 import { Lang } from "../../utils/languages"
+import { translateMessageId, isLangRightToLeft } from "../../utils/translations"
+
+// Types
 import type { Context } from "../../types"
 
+// Styles
 const Container = styled.div`
   position: relative;
   width: 100%;
@@ -188,44 +195,43 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
   const tocItems = [
     {
       id: "what-is-crypto-ethereum",
-      title: "What is crypto and Ethereum?",
+      title: translateMessageId("toc-what-is-crypto-ethereum", intl),
     },
     {
       id: "how-do-i-use-ethereum",
-      title: "How do I use Ethereum?",
+      title: translateMessageId("toc-how-do-i-use-ethereum", intl),
     },
     {
       id: "what-is-ethereum-used-for",
-      title: "What is Ethereum used for?",
+      title: translateMessageId("toc-what-is-ethereum-used-for", intl),
     },
     {
       id: "strengthen-the-ethereum-network",
-      title: "Strengthen the Ethereum network",
+      title: translateMessageId("toc-strengthen-the-ethereum-network", intl),
     },
     {
-      id: "learn-about-ethereum-the-protocol",
-      title: "Learn about Ethereum the protocol",
+      id: "learn-about-the-ethereum-protocol",
+      title: translateMessageId("toc-learn-about-the-ethereum-protocol", intl),
     },
     {
       id: "learn-about-the-ethereum-community",
-      title: "Learn about the Ethereum community",
+      title: translateMessageId("toc-learn-about-the-ethereum-community", intl),
     },
     {
       id: "books-and-podcasts",
-      title: "Books and podcasts",
+      title: translateMessageId("toc-books-and-podcasts", intl),
     },
   ]
 
   const heroContent = {
-    title: "Learn Hub",
-    header: "Learn about Ethereum",
-    subtitle:
-      "Your educational guide to the world of Ethereum. Learn how Ethereum works and how to connect to it. This page includes technical and non-technical articles, guides, and resources.",
+    title: translateMessageId("hero-title", intl),
+    header: translateMessageId("hero-header", intl),
+    subtitle: translateMessageId("hero-subtitle", intl),
     image: getImage(data.heroImage),
     alt: "",
     buttons: [
       {
-        content: "Let's get started",
+        content: translateMessageId("hero-button-lets-get-started", intl),
         toId: tocItems[0].id,
       },
     ],
@@ -233,7 +239,10 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
 
   return (
     <Container>
-      <PageMetadata title={"Learn hub"} description={""} />
+      <PageMetadata
+        title={translateMessageId("hero-title", intl)}
+        description={""}
+      />
 
       <HeroBackground>
         <HeroContainer>
@@ -243,7 +252,9 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
 
       <Page dir={isRightToLeft ? "rtl" : "ltr"}>
         <InfoColumn>
-          <InfoTitle>Learn hub</InfoTitle>
+          <InfoTitle>
+            <Translation id="toc-learn-hub" />
+          </InfoTitle>
           <StakingHomeTableOfContents items={tocItems} />
         </InfoColumn>
 
@@ -251,74 +262,92 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
           <Section>
             <h2 id={tocItems[0].id}>{tocItems[0].title}</h2>
             <p>
-              You have probably heard a thing or two about cryptocurrencies,
-              Bitcoin, and blockchain, but do you know what those actually are
-              and how they relate to Ethereum?{" "}
-              <Link to="/what-is-ethereum/">And what is Ethereum anyway?</Link>
+              <Translation id="what-is-crypto-1" />{" "}
+              <Link to="/what-is-ethereum/">
+                <Translation id="what-is-crypto-link-1" />
+              </Link>
             </p>
             <p>
-              Not only can Ethereum do what Bitcoin does (transfer money
-              globally), it’s capable of much more – anyone can deploy code onto
-              the network. And because it’s so flexible, any computer program
-              can run on Ethereum.
+              <Translation id="what-is-crypto-2" />
             </p>
             <CardGrid>
               <Card
-                title="What is Ethereum?"
-                description="If you are new, start here to learn the basics of crypto and why Ethereum matters."
+                title={translateMessageId("what-is-ethereum-card-title", intl)}
+                description={translateMessageId(
+                  "what-is-ethereum-card-description",
+                  intl
+                )}
               >
                 <>
                   <CardImage>
                     <GatsbyImage
                       image={getImage(data.whatIsEth)}
-                      alt="Illustration of a person peering into a bazaar, meant to represent Ethereum.1"
+                      alt={translateMessageId(
+                        "what-is-ethereum-card-image-alt",
+                        intl
+                      )}
                     />
                   </CardImage>
                   <ButtonLink to="/what-is-ethereum/">
-                    What is Ethereum?
+                    <Translation id="what-is-ethereum-card-title" />
                   </ButtonLink>
                 </>
               </Card>
               <Card
-                title="What is ETH?"
-                description="Ether (ETH) is the currency powering the Ethereum network and apps."
+                title={translateMessageId("what-is-eth-card-title", intl)}
+                description={translateMessageId(
+                  "what-is-eth-description",
+                  intl
+                )}
               >
                 <>
                   <CardImage>
                     <GatsbyImage image={getImage(data.eth)} alt="" />
                   </CardImage>
-                  <ButtonLink to="/eth/">What is ETH?</ButtonLink>
+                  <ButtonLink to="/eth/">
+                    <Translation id="what-is-eth-card-title" />
+                  </ButtonLink>
                 </>
               </Card>
               <Card
-                title="Where can I get ETH?"
-                description="There are many ways to get ETH, depending on your location."
+                title={translateMessageId(
+                  "where-can-i-get-eth-card-title",
+                  intl
+                )}
+                description={translateMessageId(
+                  "where-can-i-get-eth-card-description",
+                  intl
+                )}
               >
                 <>
                   <CardImage>
                     <GatsbyImage image={getImage(data.impact)} alt="" />
                   </CardImage>
-                  <ButtonLink to="/get-eth/">Where can I get ETH?</ButtonLink>
+                  <ButtonLink to="/get-eth/">
+                    <Translation id="where-can-i-get-eth-card-title" />
+                  </ButtonLink>
                 </>
               </Card>
             </CardGrid>
 
             <AdditionalReadingHeader>
-              More on Ethereum basics
+              <Translation id="additional-reading-more-on-ethereum-basics" />
             </AdditionalReadingHeader>
             <DocsContainer>
               <DocLink to="/smart-contracts/">
-                What are smart contracts?
+                <Translation id="additional-reading-what-are-smart-contracts" />
               </DocLink>
               <DocLink to="/developers/docs/intro-to-ethereum/">
-                A developers' introduction to Ethereum
+                <Translation id="additional-reading-a-developers-intro" />
               </DocLink>
-              <DocLink to="/web3/">What is web3?</DocLink>
+              <DocLink to="/web3/">
+                <Translation id="additional-reading-what-is-web3" />
+              </DocLink>
               <DocLink
                 to="https://www.youtube.com/watch?v=WSN5BaCzsbo"
                 isExternal
               >
-                Decentralizing everything
+                <Translation id="additional-reading-decentralize-everything" />
               </DocLink>
             </DocsContainer>
           </Section>
@@ -326,29 +355,37 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
           <Section>
             <h2 id={tocItems[1].id}>{tocItems[1].title}</h2>
             <p>
-              Using Ethereum is relatively straightforward once you get the hang
-              of it. First, you need to download a "wallet". A wallet is an app
-              that helps you store your crypto and interact with applications on
-              Ethereum.
+              <Translation id="how-do-i-use-ethereum-1" />
             </p>
             <CardGrid>
               <Card
-                title="What is a wallet?"
-                description="Wallets let you manage your ETH and Ethereum applications."
+                title={translateMessageId("what-is-a-wallet-card-title", intl)}
+                description={translateMessageId(
+                  "what-is-a-wallet-card-description",
+                  intl
+                )}
               >
                 <>
                   <CardImage>
                     <GatsbyImage
                       image={getImage(data.wallet)}
-                      alt="Illustration of a robot."
+                      alt={translateMessageId(
+                        "what-is-a-wallet-card-alt",
+                        intl
+                      )}
                     />
                   </CardImage>
-                  <ButtonLink to="/wallets/">What is a wallet?</ButtonLink>
+                  <ButtonLink to="/wallets/">
+                    <Translation id="what-is-a-wallet-card-title" />
+                  </ButtonLink>
                 </>
               </Card>
               <Card
-                title="Find a wallet"
-                description="We'll help you find the best wallet based on the features that matter to you."
+                title={translateMessageId("find-a-wallet-card-title", intl)}
+                description={translateMessageId(
+                  "find-a-wallet-card-description",
+                  intl
+                )}
               >
                 <>
                   <CardImage>
@@ -358,36 +395,46 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                     />
                   </CardImage>
                   <ButtonLink to="/wallets/find-wallet/">
-                    List of wallets
+                    <Translation id="find-a-wallet-button" />
                   </ButtonLink>
                 </>
               </Card>
               <Card
-                title="Crypto security basics"
-                description="Learn how to identify scams and how to avoid the most common tricks."
+                title={translateMessageId(
+                  "crypto-security-basics-card-title",
+                  intl
+                )}
+                description={translateMessageId(
+                  "crypto-security-basics-card-description",
+                  intl
+                )}
               >
                 <>
                   <CardImage>
                     <GatsbyImage image={getImage(data.dogeComputer)} alt="" />
                   </CardImage>
-                  <ButtonLink to="/security/">Stay secure</ButtonLink>
+                  <ButtonLink to="/security/">
+                    <Translation id="crypto-security-basics-card-button" />
+                  </ButtonLink>
                 </>
               </Card>
             </CardGrid>
 
             <Banner>
               <BannerBody>
-                <h3>Things to consider when using Ethereum</h3>
+                <h3>
+                  <Translation id="things-to-consider-banner-title" />
+                </h3>
                 <ul>
                   <li>
-                    Each Ethereum transaction requires a fee in the form of ETH,
-                    even if you need to move different tokens built on Ethereum
-                    like the stablecoins USDC or DAI.
+                    <Translation id="things-to-consider-banner-1" />
                   </li>
                   <li>
-                    Fees can be high depending on the number of people trying to
-                    use Ethereum, so we recommend using{" "}
-                    <Link to="/layer-2/">Layer 2s</Link>.
+                    <Translation id="things-to-consider-banner-2" />{" "}
+                    <Link to="/layer-2/">
+                      <Translation id="things-to-consider-banner-layer-2" />
+                    </Link>
+                    .
                   </li>
                 </ul>
               </BannerBody>
@@ -397,14 +444,14 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
             </Banner>
 
             <AdditionalReadingHeader>
-              More on using Ethereum
+              <Translation id="additional-reading-more-on-using-ethereum" />
             </AdditionalReadingHeader>
             <DocsContainer>
               <DocLink to="/community/support/">
-                Support for Ethereum and wallets
+                <Translation id="additional-reading-support-for-ethereum-and-wallets" />
               </DocLink>
               <DocLink to="/layer-2/">
-                Layer 2: reducing transaction fees
+                <Translation id="additional-reading-layer-2" />
               </DocLink>
             </DocsContainer>
           </Section>
@@ -412,14 +459,12 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
           <Section>
             <h2 id={tocItems[2].id}>{tocItems[2].title}</h2>
             <p>
-              Ethereum has led to the creation of new products and services that
-              can improve different areas of our lives. We're still in the early
-              stages but there's a lot to be excited about.
+              <Translation id="what-is-ethereum-used-for-1" />
             </p>
             <CardGrid>
               <Card
-                title="Decentralized finance (DeFi)"
-                description="Explore an alternative financial system that is built without banks and is open to anyone."
+                title={translateMessageId("defi-card-title", intl)}
+                description={translateMessageId("defi-card-description", intl)}
               >
                 <>
                   <CardImage>
@@ -428,25 +473,30 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                       alt=""
                     />
                   </CardImage>
-                  <ButtonLink to="/defi/">What is DeFi?</ButtonLink>
+                  <ButtonLink to="/defi/">
+                    <Translation id="defi-card-button" />
+                  </ButtonLink>
                 </>
               </Card>
               <Card
-                title="Stablecoins"
-                description="Stablecoins are cryptocurrencies designed to stay at a fixed value of a dollar."
+                title={translateMessageId("stablecoins-card-title", intl)}
+                description={translateMessageId(
+                  "stablecoins-card-description",
+                  intl
+                )}
               >
                 <>
                   <CardImage>
                     <GatsbyImage image={getImage(data.stablecoins)} alt="" />
                   </CardImage>
                   <ButtonLink to="/stablecoins/">
-                    What are stablecoins?
+                    <Translation id="stablecoins-card-button" />
                   </ButtonLink>
                 </>
               </Card>
               <Card
-                title="Non-fungible tokens (NFTs)"
-                description="Non-fungible tokens represent ownership of unique items."
+                title={translateMessageId("nft-card-title", intl)}
+                description={translateMessageId("nft-card-description", intl)}
               >
                 <>
                   <CardImage>
@@ -455,23 +505,27 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                       alt=""
                     />
                   </CardImage>
-                  <ButtonLink to="/nft/">What are NFTs?</ButtonLink>
+                  <ButtonLink to="/nft/">
+                    <Translation id="nft-card-button" />
+                  </ButtonLink>
                 </>
               </Card>
               <Card
-                title="Decentralized autonomous organizations (DAOs)"
-                description="DAOs run without the need for coordination by a central entity."
+                title={translateMessageId("dao-card-title", intl)}
+                description={translateMessageId("dao-card-description", intl)}
               >
                 <>
                   <CardImage>
                     <GatsbyImage image={getImage(data.dao)} alt="" />
                   </CardImage>
-                  <ButtonLink to="/dao/">What are DAOs?</ButtonLink>
+                  <ButtonLink to="/dao/">
+                    <Translation id="dao-card-button" />
+                  </ButtonLink>
                 </>
               </Card>
               <Card
-                title="Decentralized applications (dapps)"
-                description="Dapps are creating a new digital economy of peer-to-peer services."
+                title={translateMessageId("dapp-card-title", intl)}
+                description={translateMessageId("dapp-card-description", intl)}
               >
                 <>
                   <CardImage>
@@ -480,42 +534,47 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                       alt=""
                     />
                   </CardImage>
-                  <ButtonLink to="/dapps/">Explore dapps</ButtonLink>
+                  <ButtonLink to="/dapps/">
+                    <Translation id="dapp-card-button" />
+                  </ButtonLink>
                 </>
               </Card>
               <CardGradient
-                title="Emerging use cases"
-                description="There are also other prominent industries being disrupted by blockchain:"
+                title={translateMessageId("emerging-use-cases-title", intl)}
+                description={translateMessageId(
+                  "emerging-use-cases-description",
+                  intl
+                )}
               >
                 <ul>
                   <li>
                     <Link to="/decentralized-identity/">
-                      Decentralized identity
+                      <Translation id="decentralized-identity" />
                     </Link>
                   </li>
                   <li>
                     <Link to="/social-networks/">
-                      Decentralized social networks
+                      <Translation id="decentralized-social-networks" />
                     </Link>
                   </li>
                   <li>
                     <Link to="https://future.com/what-is-decentralized-science-aka-desci/">
-                      Decentralized Science (DeSci)
+                      <Translation id="decentralized-science" />
                     </Link>
                   </li>
                   <li>
                     <Link to="https://decrypt.co/resources/what-are-play-to-earn-games-how-players-are-making-a-living-with-nfts">
-                      Play-to-earn games (P2E)
+                      <Translation id="play-to-earn" />
                     </Link>
                   </li>
                   <li>
                     <Link to="https://woodstockfund.medium.com/quadratic-funding-better-way-to-fund-public-goods-76f1679b2ba2">
-                      Fundraising through Quadratic Funding
+                      <Translation id="fundraising-through-quadratic-funding" />
                     </Link>
                   </li>
                   <li>
                     <Link to="https://hbr.org/2022/01/how-walmart-canada-uses-blockchain-to-solve-supply-chain-challenges">
-                      Supply chain management
+                      <Translation id="supply-chain-management" />
                     </Link>
                   </li>
                 </ul>
@@ -523,14 +582,14 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
             </CardGrid>
 
             <AdditionalReadingHeader>
-              More on Ethereum use cases
+              <Translation id="more-on-ethereum-use-cases" />
             </AdditionalReadingHeader>
             <DocsContainer>
               <DocLink
                 to="http://governance40.com/wp-content/uploads/2019/06/Blockchain-in-Developing-Countries.pdf"
                 isExternal
               >
-                Blockchain in developing countries
+                <Translation id="more-on-ethereum-use-cases-link" />
               </DocLink>
             </DocsContainer>
           </Section>
@@ -538,31 +597,39 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
           <Section>
             <h2 id={tocItems[3].id}>{tocItems[3].title}</h2>
             <p>
-              You can help secure Ethereum and earn rewards at the same time on
-              your ETH by staking it. There are different options for staking
-              depending on your technical knowledge and how much ETH you have.
+              <Translation id="strengthening-the-ethereum-network-description" />
             </p>
             <CardGrid>
               <Card
-                title="Staking Ethereum"
-                description="Learn how to start staking your ETH."
+                title={translateMessageId("staking-ethereum-card-title", intl)}
+                description={translateMessageId(
+                  "staking-ethereum-card-description",
+                  intl
+                )}
               >
                 <>
                   <CardImage>
                     <GatsbyImage image={getImage(data.rhino)} alt="" />
                   </CardImage>
-                  <ButtonLink to="/staking/">Start staking</ButtonLink>
+                  <ButtonLink to="/staking/">
+                    <Translation id="staking-ethereum-card-button" />
+                  </ButtonLink>
                 </>
               </Card>
               <Card
-                title="Run a node"
-                description="Play a critical role in the Ethereum network by running a node."
+                title={translateMessageId("run-a-node-card-title", intl)}
+                description={translateMessageId(
+                  "run-a-node-card-description",
+                  intl
+                )}
               >
                 <>
                   <CardImage>
                     <GatsbyImage image={getImage(data.ethereumInside)} alt="" />
                   </CardImage>
-                  <ButtonLink to="/run-a-node/">Run a node</ButtonLink>
+                  <ButtonLink to="/run-a-node/">
+                    <Translation id="run-a-node-card-title" />
+                  </ButtonLink>
                 </>
               </Card>
             </CardGrid>
@@ -571,37 +638,53 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
           <Section>
             <h2 id={tocItems[4].id}>{tocItems[4].title}</h2>
             <p>
-              For users most interested in the technical part of the Ethereum
-              network.
+              <Translation id="learn-about-ethereum-protocol-description" />
             </p>
             <CardGrid>
               <Card
-                title="Energy consumption"
-                description="How much energy does Ethereum use?"
+                title={translateMessageId(
+                  "energy-consumption-card-title",
+                  intl
+                )}
+                description={translateMessageId(
+                  "energy-consumption-card-description",
+                  intl
+                )}
               >
                 <>
                   <CardImage>
                     <GatsbyImage image={getImage(data.hackathon)} alt="" />
                   </CardImage>
                   <ButtonLink to="/energy-consumption/">
-                    Is Ethereum green?
+                    <Translation id="energy-consumption-card-button" />
                   </ButtonLink>
                 </>
               </Card>
               <Card
-                title="Ethereum upgrades"
-                description="Ethereum upgrades make it more scalable, secure, and sustainable."
+                title={translateMessageId("ethereum-upgrades-card-title", intl)}
+                description={translateMessageId(
+                  "ethereum-upgrades-card-description",
+                  intl
+                )}
               >
                 <>
                   <CardImage>
                     <GatsbyImage image={getImage(data.merge)} alt="" />
                   </CardImage>
-                  <ButtonLink to="/upgrades/">Explore upgrades</ButtonLink>
+                  <ButtonLink to="/upgrades/">
+                    <Translation id="ethereum-upgrades-card-button" />
+                  </ButtonLink>
                 </>
               </Card>
               <Card
-                title="Ethereum Whitepaper"
-                description="The original Ethereum proposal written by Vitalik Buterin in 2014."
+                title={translateMessageId(
+                  "ethereum-whitepaper-card-title",
+                  intl
+                )}
+                description={translateMessageId(
+                  "ethereum-whitepaper-card-description",
+                  intl
+                )}
               >
                 <>
                   <CardImage>
@@ -610,22 +693,34 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                       alt=""
                     />
                   </CardImage>
-                  <ButtonLink to="/whitepaper/">Read whitepaper</ButtonLink>
+                  <ButtonLink to="/whitepaper/">
+                    <Translation id="ethereum-whitepaper-card-button" />
+                  </ButtonLink>
                 </>
               </Card>
             </CardGrid>
 
             <AdditionalReadingHeader>
-              More on the Ethereum protocol
+              <Translation id="more-on-ethereum-protocol-title" />
             </AdditionalReadingHeader>
             <DocsContainer>
-              <DocLink to="/developers/">Ethereum for developers</DocLink>
-              <DocLink to="/eips/">Ethereum Improvement Proposals</DocLink>
-              <DocLink to="/history/">Ethereum History</DocLink>
-              <DocLink to="/governance/">Governance</DocLink>
-              <DocLink to="/bridges/">Bridges</DocLink>
+              <DocLink to="/developers/">
+                <Translation id="more-on-ethereum-protocol-ethereum-for-developers" />
+              </DocLink>
+              <DocLink to="/eips/">
+                <Translation id="more-on-ethereum-protocol-eips" />
+              </DocLink>
+              <DocLink to="/history/">
+                <Translation id="more-on-ethereum-protocol-history" />
+              </DocLink>
+              <DocLink to="/governance/">
+                <Translation id="more-on-ethereum-protocol-governance" />
+              </DocLink>
+              <DocLink to="/bridges/">
+                <Translation id="more-on-ethereum-protocol-bridges" />
+              </DocLink>
               <DocLink to="https://weekinethereumnews.com/" isExternal>
-                Week in Ethereum News
+                <Translation id="more-on-ethereum-protocol-week-in-ethereum" />
               </DocLink>
             </DocsContainer>
           </Section>
@@ -633,48 +728,60 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
           <Section>
             <h2 id={tocItems[5].id}>{tocItems[5].title}</h2>
             <p>
-              The success of Ethereum is thanks to its incredibly dedicated
-              community. Thousands of inspiring and driven people help push
-              Ethereum’s vision forward. Come and join us!
+              <Translation id="ethereum-community-description" />
             </p>
             <CardGrid>
               <Card
-                title="Community hub"
-                description="Our community includes people from all backgrounds."
+                title={translateMessageId("community-hub-card-title", intl)}
+                description={translateMessageId(
+                  "community-hub-card-description",
+                  intl
+                )}
               >
                 <>
                   <CardImage>
                     <GatsbyImage
                       image={getImage(data.enterprise)}
-                      alt="Illustration of a group of builders working together."
+                      alt={translateMessageId("community-hub-card-alt", intl)}
                     />
                   </CardImage>
-                  <ButtonLink to="/community/">Explore more</ButtonLink>
+                  <ButtonLink to="/community/">
+                    <Translation id="community-hub-card-button" />
+                  </ButtonLink>
                 </>
               </Card>
               <Card
-                title="How can I get involved?"
-                description="You don't need to be technical to get involved in the Ethereum community."
+                title={translateMessageId("get-involved-card-title", intl)}
+                description={translateMessageId(
+                  "get-involved-card-description",
+                  intl
+                )}
               >
                 <>
                   <CardImage>
                     <GatsbyImage image={getImage(data.dogeComputer)} alt="" />
                   </CardImage>
                   <ButtonLink to="/community/get-involved/">
-                    How can I get Involved?
+                    <Translation id="get-involved-card-title" />
                   </ButtonLink>
                 </>
               </Card>
               <Card
-                title="Online communities"
-                description="Online communities provide a great opportunity to ask more specific questions or get involved."
+                title={translateMessageId(
+                  "online-communities-card-title",
+                  intl
+                )}
+                description={translateMessageId(
+                  "online-communities-card-description",
+                  intl
+                )}
               >
                 <>
                   <CardImage>
                     <GatsbyImage image={getImage(data.impact)} alt="" />
                   </CardImage>
                   <ButtonLink to="/community/online/">
-                    Explore communities
+                    <Translation id="online-communities-card-button" />
                   </ButtonLink>
                 </>
               </Card>
@@ -684,107 +791,124 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
           <Section>
             <h2 id={tocItems[6].id}>{tocItems[6].title}</h2>
             <div>
-              <h3>Books about Ethereum and Cryptocurrencies</h3>
+              <h3>
+                <Translation id="books-about-ethereum" />
+              </h3>
               <ul>
                 <li>
                   <Link to="https://www.goodreads.com/book/show/57356067-the-cryptopians">
                     The Cryptopians
                   </Link>{" "}
-                  <i>February 22, 2022 - Laura Shin</i>
+                  <i>
+                    <Translation id="cryptopians-description" />
+                  </i>
                 </li>
                 <li>
                   <Link to="https://www.goodreads.com/book/show/55360267-out-of-the-ether">
                     Out of the Ether
                   </Link>{" "}
-                  <i>September 29, 2020 - Matthew Leising</i>
+                  <i>
+                    <Translation id="out-of-the-ether-description" />
+                  </i>
                 </li>
                 <li>
                   <Link to="https://www.goodreads.com/en/book/show/50175330-the-infinite-machine">
                     The Infinite Machine
                   </Link>{" "}
-                  <i>July 14, 2020 - Camila Russo</i>
+                  <i>
+                    <Translation id="the-infinite-machine-description" />
+                  </i>
                 </li>
                 <li>
                   <Link to="https://www.goodreads.com/en/book/show/22174460-the-age-of-cryptocurrency">
                     The Age of Cryptocurrency
                   </Link>{" "}
-                  <i>January 12, 2016 - Paul Vigna, Michael J. Casey</i>
+                  <i>
+                    <Translation id="the-age-of-cryptocurrency-description" />
+                  </i>
                 </li>
                 <li>
                   <Link to="https://www.goodreads.com/en/book/show/34964890-the-truth-machine">
                     The Truth Machine
                   </Link>{" "}
-                  <i>February 27, 2018 - Paul Vigna, Michael J. Casey</i>
+                  <i>
+                    <Translation id="the-truth-machine-description" />
+                  </i>
                 </li>
                 <li>
                   <Link to="https://www.goodreads.com/book/show/23546676-digital-gold">
                     Digital Gold
                   </Link>{" "}
-                  <i>May 24, 2021 - Nathaniel Popper</i>
+                  <i>
+                    <Translation id="digital-gold-description" />
+                  </i>
                 </li>
                 <li>
                   <Link to="https://www.goodreads.com/en/book/show/56274031-kings-of-crypto">
                     Kings of Crypto
                   </Link>{" "}
-                  <i>December 15, 2020 - Jeff John Roberts</i>
+                  <i>
+                    <Translation id="kings-of-crypto-description" />
+                  </i>
                 </li>
                 <li>
                   <Link to="https://github.com/ethereumbook/ethereumbook">
                     Mastering Ethereum
                   </Link>{" "}
                   <i>
-                    December 23, 2018 – Andreas M. Antonopoulos, Gavin Wood
-                    Ph.D.{" "}
+                    <Translation id="mastering-ethereum-description" />{" "}
                   </i>
                 </li>
               </ul>
-              <h3>Podcasts about Ethereum and Cryptocurrencies</h3>
+              <h3>
+                <Translation id="podcasts-about-ethereum" />
+              </h3>
               <ul>
                 <li>
                   <Link to="https://podcast.ethhub.io/">Into the Ether</Link>{" "}
-                  <i>A podcast focusing on all things Ethereum and DeFi</i>
+                  <i>
+                    <Translation id="ethhub-description" />
+                  </i>
                 </li>
                 <li>
                   <Link to="http://podcast.banklesshq.com/">Bankless</Link>{" "}
-                  <i>A guide to Crypto finance</i>
+                  <i>
+                    <Translation id="bankless-description" />
+                  </i>
                 </li>
                 <li>
                   <Link to="https://uncommoncore.co/podcast/">
                     Uncommon Core
                   </Link>{" "}
                   <i>
-                    Explores the transformative nature of trust-minimized
-                    currency and financial services
+                    <Translation id="uncommon-core-description" />
                   </i>
                 </li>
                 <li>
                   <Link to="https://www.zeroknowledge.fm/">Zero Knowledge</Link>{" "}
                   <i>
-                    Goes deep into the tech that will power the emerging
-                    decentralized web and the community building this
+                    <Translation id="zeroknowledge-description" />
                   </i>
                 </li>
                 <li>
                   <Link to="https://epicenter.tv/">Epicenter</Link>{" "}
                   <i>
-                    Explores the technical, economic, and social implications of
-                    the Crypto industry
+                    <Translation id="epicenter-description" />
                   </i>
                 </li>
                 <li>
                   <Link to="https://unchainedpodcast.com/">Unchained</Link>{" "}
                   <i>
-                    Dives deep into the people building the decentralized
-                    internet, the details of this technology that could underpin
-                    our future, and some of the thorniest topics in crypto, such
-                    as regulation, security and privacy
+                    <Translation id="unchained-description" />
                   </i>
                 </li>
                 <li>
                   <Link to="https://www.intothebytecode.xyz/">
                     Into the Bytecode
                   </Link>{" "}
-                  <i>A podcast about the ideas shaping crypto</i>
+                  <i>
+                    <Translation id="into-the-bytecode-description" />
+                  </i>
                 </li>
               </ul>
             </div>
