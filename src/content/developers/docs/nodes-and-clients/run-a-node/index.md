@@ -84,12 +84,12 @@ Also make sure your internet connection is not limited by a [bandwidth cap](http
 
 All clients support major operating systems - Linux, MacOS, Windows. This means you can run nodes on regular desktop or server machines with the operating system (OS) that suits you the best. Make sure your OS is up to date to avoid potential issues and security vulnerabilities.
 
-##### Minimum requirements {#recommended-specifications}
+##### Minimum requirements {#minimum-requirements}
 
 - CPU with 2+ cores
-- 4 GB RAM or 8GB with HDD 
-- 500GB disk space, SSD prefered 
-- 8 MBit/s bandwidth
+- 8 GB RAM 
+- 700GB free disk space
+- 10+ MBit/s bandwidth
 
 ##### Recommended specifications {#recommended-hardware}
 
@@ -102,14 +102,14 @@ The sync mode and client you choose will affect space requirements but we've est
 
 | Client       | Disk size (snap sync) | Disk size (full archive) |
 | ------------ | --------------------- | ------------------------ |
-| Geth         | 400GB+                | 11TB+                    |
-| Nethermind   | 400GB+                | 11TB+                    |
-| Besu         | 800GB+                | 11TB+                    |
+| Geth         | 400GB+                | 12TB+                    |
+| Nethermind   | 400GB+                | 12TB+                    |
+| Besu         | 800GB+                | 12TB+                    |
 | Erigon       | N/A                   | 2.5TB+                   |
 
 - Note: Erigon does not offer snap sync, but Full Pruning is possible (~500GB)
 
-For consensus clients, space requirement also depends on client implementation and enabled features (e.g. validator slasher) but generally count with another 200GB needed for beacon data. With large number of validators, the bandwidth load grows as well. Details on conensus client requirements can be found in [this analysis](https://medium.com/@migalabs/analysis-of-ethereum-2-consensus-clients-dfede8e0145e). 
+For consensus clients, space requirement also depends on client implementation and enabled features (e.g. validator slasher) but generally count with another 200GB needed for beacon data. With large number of validators, the bandwidth load grows as well. Details on consensus client requirements can be found in [this analysis](https://medium.com/@migalabs/analysis-of-ethereum-2-consensus-clients-dfede8e0145e). 
 
 #### Plug-and-play solutions {#plug-and-play}
 
@@ -162,20 +162,20 @@ Here are the release pages of clients where you can find their pre-built binarie
 
 ##### Execution clients
 
-- [Geth](https://geth.ethereum.org/downloads/)
-- [Nethermind](https://downloads.nethermind.io/)
 - [Besu](https://github.com/hyperledger/besu/releases)
 - [Erigon](https://github.com/ledgerwatch/erigon#usage) (Doesn't provide a pre-built binary, has to be compiled)
+- [Geth](https://geth.ethereum.org/downloads/)
+- [Nethermind](https://downloads.nethermind.io/)
 
 It is also worth noting that client diversity is an [issue on the execution layer](/developers/docs/client-diversity/#execution-layer). It is recommended that readers consider running a minority execution client.
 
 ##### Consensus clients
 
 - [Lighthouse](https://github.com/sigp/lighthouse/releases/latest)
-- [Teku](https://github.com/ConsenSys/teku/releases)
+- [Lodestar](https://chainsafe.github.io/lodestar/install/source/) (Doesn't provide a pre-built binary, only a Docker image or to be build from source)
 - [Nimbus](https://github.com/status-im/nimbus-eth2/releases/latest)
 - [Prysm](https://github.com/prysmaticlabs/prysm/releases/latest)
-- [Lodestar](https://chainsafe.github.io/lodestar/install/source/) (Doesn't provide a pre-built binary, only a Docker image or to be build from source)
+- [Teku](https://github.com/ConsenSys/teku/releases)
 
 [Client diversity](/developers/docs/nodes-and-clients/client-diversity/) is critical for consensus nodes running validators. If majority of validators is running a single client implementation, network security is at risk. It is therefore recommended to consider choosing a minority client. 
 
@@ -248,6 +248,47 @@ Please keep in mind that this is just a basic example, all other settings will b
 > Note that backslashes `\` in examples are only for formatting purposes; config flags can be defined in a single line. 
 
 <details>
+  <summary>Running Besu</summary>
+
+This example starts Besu on mainnet, stores blockchain data in default format at `/data/ethereum`, enables JSON RPC and Engine RPC for connecting consensus client. Engine API is authenticated with token `jwtsecret` and only calls from `localhost` are allowed. 
+
+```
+besu --network=mainnet \
+    --data-path=/data/ethereum \
+    --rpc-http-enabled=true \
+    --engine-rpc-enabled=true \
+    --engine-host-allowlist="localhost" \
+    --engine-jwt-enabled=true \
+    --engine-jwt-secret=/path/to/jwtsecret
+```
+
+Besu also comes with a launcher option which will ask a series of questions and generate the config file. Run the interactive launcher using:
+
+```
+besu --Xlauncher
+```
+
+Besu's [documentation](https://besu.hyperledger.org/en/latest/HowTo/Get-Started/Starting-node/) contains additional options and configuration details.
+
+</details>
+
+<details>
+  <summary>Running Erigon</summary>
+
+This example starts Erigon on mainnet, stores blockchain data at `/data/ethereum`, enables JSON RPC, defines which namespaces are allowed and enables authentication for connecting the consensus client which is defined by the `jwtsecret` path.
+
+```
+erigon --chain mainnet \
+    --datadir /data/ethereum  \
+    --http --http.api=engine,eth,web3,net \
+    --authrpc.jwtsecret=/path/to/jwtsecret 
+```
+
+Erigon by default perfoor 8GB with HDD rms a full sync which will result in more than 2TB of archive data. Make sure `datadir` is pointing to disk with enough free space or look into `--prune` flag which can trim different kinds of data. Check the Erigon's `--help` to learn more. 
+
+</details>
+
+<details>
   <summary>Running Geth</summary>
 
 This example starts Geth on mainnet, stores blockchain data at `/data/ethereum`, enables JSON RPC and defines which namespaces are allowed. It also enables authentication for connecting consensus client which requires path to `jwtsecret` and also option defining which connections are allowed, in our example only from `localhost`. 
@@ -275,48 +316,6 @@ Nethermind.Runner --config mainnet \
 Nethermind docs offer a [complete guide](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/running-nethermind-post-merge) on running Nethermind with consensus client. 
 </details>
 
-
-<details>
-  <summary>Running Besu</summary>
-
-This example starts Besu on mainnet, stores blockchain data in default format at `/data/ethereum`, enables JSON RPC and Engine RPC for connecting consensus client. Engine API is authenticated with token `jwtsecret` and only calls from `localhost` are allowed. 
-
-```
-besu --network=mainnet \
-    --data-path=/data/ethereum \
-    --rpc-http-enabled=true \
-    --engine-rpc-enabled=true \
-    --engine-host-allowlist="localhost" \
-    --engine-jwt-enabled=true \
-    --engine-jwt-secret=/path/to/jwtsecret
-```
-
-Besu also comes with a launcher option which will ask a series of questions and generate the config file. Run the interactive launcher using:
-
-```
-besu --Xlauncher
-```
-
-Besu's [documentation](https://besu.hyperledger.org/en/latest/HowTo/Get-Started/Starting-node/) contains additional options and configuration details.
-
-</details>
-
-
-<details>
-  <summary>Running Erigon</summary>
-
-This example starts Erigon on mainnet, stores blockchain data at `/data/ethereum`, enables JSON RPC, defines which namespaces are allowed and enables authentication for connecting the consensus client which is defined by the `jwtsecret` path.
-
-```
-erigon --chain mainnet \
-    --datadir /data/ethereum  \
-    --http --http.api=engine,eth,web3,net \
-    --authrpc.jwtsecret=/path/to/jwtsecret 
-```
-
-Erigon by default performs a full sync which will result in more than 2TB of archive data. Make sure `datadir` is pointing to disk with enough free space or look into `--prune` flag which can trim different kinds of data. Check the Erigon's `--help` to learn more. 
-
-</details>
 
 Execution client will initiate its core functions, chosen endpoints, and start looking for peers. After successfully discovering peers, the client starts synchronization. After the Merge, it awaits the connection from consensus client. Current blockchain data will be available once the client is successfully synced to the current state.
 
@@ -351,6 +350,36 @@ lighthouse beacon_node
 </details>
 
 <details>
+  <summary>Running Lodestar</summary>
+
+Prepare Lodestar software via compiling it or downloading the Docker image. Learn more in [docs](https://chainsafe.github.io/lodestar/) and more comprehensive [setup guide](https://hackmd.io/@philknows/rk5cDvKmK).  
+
+```
+lodestar beacon \
+    --rootDir="/data/ethereum" \
+    --network=mainnet \
+    --eth1.enabled=true \
+    --execution.urls="http://127.0.0.1:8551" \
+    --jwt-secret="/path/to/jwtsecret"
+```
+</details>
+
+<details>
+  <summary>Running Nimbus</summary>
+
+Nimbus comes with both consensus and execution clients. It can be run on various devices even with very modest computing power. 
+After [installing dependencies and Nimbus itself](https://nimbus.guide/quick-start.html), you can run its consensus client:
+
+```
+nimbus_beacon_node \
+    --network=mainnet \
+    --web3-url=http://127.0.0.1:8551 \
+    --rest \
+    --jwt-secret="/path/to/jwtsecret"
+```
+</details>
+
+<details>
   <summary>Running Prysm</summary>
 
 Prysm comes with script which allows easy automatic installation. Details can be found in the [Prysm docs](https://docs.prylabs.network/docs/install/install-with-script). 
@@ -375,43 +404,13 @@ teku --network mainnet \
 ```
 </details>
 
-<details>
-  <summary>Running Nimbus</summary>
-
-Nimbus comes with both consensus and execution clients. It can be run on various devices even with very modest computing power. 
-After [installing dependencies and Nimbus itself](https://nimbus.guide/quick-start.html), you can run its consensus client:
-
-```
-nimbus_beacon_node \
-    --network=mainnet \
-    --web3-url=http://127.0.0.1:8551 \
-    --rest \
-    --jwt-secret="/path/to/jwtsecret"
-```
-</details>
-
-<details>
-  <summary>Running Lodestar</summary>
-
-Prepare Lodestar software via compiling it or downloading the Docker image. Learn more in [docs](https://chainsafe.github.io/lodestar/) and more comprehensive [setup guide](https://hackmd.io/@philknows/rk5cDvKmK).  
-
-```
-lodestar beacon \
-    --rootDir="/data/ethereum" \
-    --network=mainnet \
-    --eth1.enabled=true \
-    --execution.urls="http://127.0.0.1:8551" \
-    --jwt-secret="/path/to/jwtsecret"
-```
-</details>
-
 Consensus client connects to the execution client to read the deposit contract and identify validators. It also connects to other Beacon Node peers and syncs consensus slots from genesis. When it reaches the current epoch, the Beacon API becomes usable for your validators. Learn more about [Beacon Node APIs](https://eth2docs.vercel.app/). 
 
 ### Adding Validators {#adding-validators}
 
 Consensus client serves as a Beacon Node to which validator client connects. Each of the consensus clients has their own validator software that is described in detail in their respective documentation.
 
-Running your own validator allows for [solo staking](https://ethereum.org/en/staking/solo/), the most impactful and trustless way. This requires deposit of 32ETH. For running a validator on your own node with a smaller amount, checkout decentralized pool with permissionless node operators, e.g. [Rocket Pool](https://rocketpool.net/node-operators).
+Running your own validator allows for [solo staking](https://ethereum.org/en/staking/solo/), the most impactful and trustless way. This requires deposit of 32ETH. For running a validator on your own node with a smaller amount, checkout decentralized pool with permissionless node operators, e.g. [Rocket Pool](https://rocketpool.net/node-operators). 
 
 The easiest way to get started with staking and validator key generation is to use the [Prater Testnet Staking Launchpad](https://prater.launchpad.ethereum.org/), which allows you to test your setup by [running nodes on Goerli](https://notes.ethereum.org/@launchpad/goerli). When you're ready for Mainnet, you can repeat these steps using the [Mainnet Staking Launchpad](https://launchpad.ethereum.org/). Make sure to check [Mainnet readiness checklist](https://launchpad.ethereum.org/en/merge-readiness) to smoothly run your validator through the Merge. 
 
