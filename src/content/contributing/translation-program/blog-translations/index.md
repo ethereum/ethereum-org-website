@@ -21,8 +21,12 @@ If you want to get involved and help translate blog posts into your language, re
   {" "}<Link to="/contributing/translation-program/translators-guide/">View the Translation Style Guide</Link>
 </InfoBanner>
 
-1. **[Join the blog translations project on Crowdin](https://crowdin.com/project/ethereum-foundation-blog)**  
+1. **Join the blog translations project in Crowdin**  
    You will need to log in to your Crowdin account or sign up if you don’t already have one. All that is required to sign up is an e-mail account and password.
+
+<ButtonLink to="https://crowdin.com/project/ethereum-foundation-blog/invite">
+  Start translating
+</ButtonLink>
 
 2. **Open the language you want to translate and find a blog post to work on**  
    Each blog post is uploaded to Crowdin as an individual file. The files are named after the blog post title, so finding a specific post that you want to translate should be fairly straightforward. You can check the progress of each document on the right – if translation progress is below 100%, please contribute!

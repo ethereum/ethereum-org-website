@@ -18,8 +18,12 @@ With the aim of making staking more accessible and diverse, and make it easier f
   {" "}<Link to="/contributing/translation-program/translators-guide/">View the Translation Style Guide</Link>
 </InfoBanner>
 
-1. **[Join the Launchpad translations project on Crowdin](https://crowdin.com/project/ethereum-staking-launchpad)**  
+1. **Join the Launchpad translations project in Crowdin**  
    You will need to log in to your Crowdin account or sign up if you don’t already have one. All that is required to sign up is an e-mail account and password.
+
+<ButtonLink to="https://crowdin.com/project/ethereum-staking-launchpad/invite">
+  Start translating
+</ButtonLink>
 
 2. **Open the language you want to translate and click ''Translate All''**  
    The Launchpad contains 7 source files, all of which should be translated. You can check the progress of each document on the right – if translation progress is below 100%, please contribute!

@@ -12,14 +12,14 @@ The Translation Program is a collaborative effort to translate ethereum.org into
 
 ![Enterprise ETH](./enterprise-eth.png)
 
-## Start contributing {#contributing}
+## Help us translate {#help-us-translate}
 
 The ethereum.org Translation Program is open and anyone can contribute!
 
-- You will need to log in to your Crowdin account or sign up.
-- Select the language you want to contribute to.
-- Before starting, please check out the [How to translate](/contributing/translation-program/how-to-translate/) guide to learn how to use Crowdin, and the [Translation Style Guide](/contributing/translation-program/translators-guide/) for tips and best practices.
-- Machine translations will not be approved.
+1. You will need to log in to your Crowdin account or sign up.
+2. Select the language you want to contribute to.
+3. Before starting, please check out the [How to translate](/contributing/translation-program/how-to-translate/) guide to learn how to use Crowdin, and the [Translation Style Guide](/contributing/translation-program/translators-guide/) for tips and best practices.
+4. Machine translations will not be approved.
 
 <ButtonLink to="https://crowdin.com/project/ethereum-org/invite">
   Start translating
