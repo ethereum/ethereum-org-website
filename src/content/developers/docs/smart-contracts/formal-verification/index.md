@@ -45,7 +45,7 @@ Formal specifications are critical in developing secure implementations of smart
 
 Formal specifications enable mathematical reasoning about the correctness of program execution. As with formal models, formal specifications can capture either high-level properties or the low-level behavior of a contract implementation. 
 
-Formal specifications are derived using elements of [program logic](https://en.wikipedia.org/wiki/Logic_programming), which allow for formal reasoning about the properties of a program. A program logic has formal rules that express (in mathematical language) the expected behavior of a program. Various program logics are used in creating formal specifications, including [reachability logic](https://en.wikipedia.org/wiki/Reachability_problem), temporal logic, and Hoare logic. 
+Formal specifications are derived using elements of [program logic](https://en.wikipedia.org/wiki/Logic_programming), which allow for formal reasoning about the properties of a program. A program logic has formal rules that express (in mathematical language) the expected behavior of a program. Various program logics are used in creating formal specifications, including [reachability logic](https://en.wikipedia.org/wiki/Reachability_problem), [temporal logic](https://en.wikipedia.org/wiki/Temporal_logic), and [Hoare logic](https://en.wikipedia.org/wiki/Hoare_logic). 
 
 Formal specifications for smart contracts can be classified broadly as either **high-level** or **low-level** specifications. Regardless of what category a specification belongs to, it must adequately and unambiguously describe the property of the system under analysis.  
 
