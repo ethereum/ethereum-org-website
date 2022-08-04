@@ -649,6 +649,10 @@ const GlobalStyle: React.FC = () => {
           background-color: ${theme.colors.background};
           color: ${theme.colors.text};
         }
+        a {
+          color: ${theme.colors.primary};
+          text-decoration: underline;
+        }
         mark {
           background: ${theme.colors.markBackground};
           box-shadow: inset 0 -2px 0 0 rgba(69, 142, 225, 0.8);
