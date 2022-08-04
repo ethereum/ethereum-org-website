@@ -1329,6 +1329,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="https://odair.dev"><img src="https://avatars.githubusercontent.com/u/45074733?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Odair Augusto Trujillo Orozco</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=OdairTrujillo" title="Documentation">📖</a> <a href="#ideas-OdairTrujillo" title="Ideas, Planning, & Feedback">🤔</a></td>
     <td align="center"><a href="https://github.com/Unforkable"><img src="https://avatars.githubusercontent.com/u/86481149?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Unforkable</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=Unforkable" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/Rodrigolvc"><img src="https://avatars.githubusercontent.com/u/108540208?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Rodrigo vasquez</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=Rodrigolvc" title="Documentation">📖</a> <a href="#ideas-Rodrigolvc" title="Ideas, Planning, & Feedback">🤔</a></td>
   </tr>
 </table>
 
