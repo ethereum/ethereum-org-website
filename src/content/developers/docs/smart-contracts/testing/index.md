@@ -103,12 +103,6 @@ Like any program, smart contracts rely on inputs provided by users to execute fu
 
 In some cases, sending incorrect input values to a smart contract can cause resource leaks, crashes, or worse, lead to unintended code execution. Fuzzing campaigns identify such problems beforehand, allowing you to eliminate the vulnerability.
 
-### 3. Formal verification {#formal-verification}
-
-Formal verification is considered a robust technique for testing Ethereum smart contracts and asserting the correctness of code. Formal verification uses [formal methods](https://www.brookings.edu/techstream/formal-methods-as-a-path-toward-better-cybersecurity/)—mathematically rigorous techniques for specifying and verifying software.
-
-Formal verification is considered important for smart contracts because it helps developers formally test assumptions relating to smart contracts. For instance, you can create specifications—fomalized properties describing expected results—and see if the contract's behavior matches the specifications. This approach increases confidence that a smart contract will only execute predefined functions and nothing else.
-
 ## Manual testing for smart contracts {#manual-testing-for-smart-contracts}
 
 ### 1. Code audits {#code-audits}
@@ -124,6 +118,15 @@ You can also commission a security audit to give users higher assurances of smar
 A bug bounty is a financial reward given to an individual who discovers a vulnerability or bug in a program's code and reports to developers. Bug bounties are similar to audits since it involves asking others to help find defects in smart contracts. The major difference is that bug bounty programs are open to the wider developer/hacker community.
 
 Bug bounty programs often attract a broad class of ethical hackers and independent security professionals with unique skills and experience. This may be an advantage over smart contract audits that mainly rely on teams who may possess limited or narrow expertise.
+
+## Testing vs. formal verification {#testing-vs-formal-verification}
+
+While testing helps confirm that a contract returns the expected results for some data inputs, it cannot conclusively prove the same for inputs not used during tests. Testing a smart contract cannot guarantee "functional correctness", meaning it cannot show that a program behaves as required for *all* sets of input values and conditions.  
+
+As such, developers are encouraged to incorporate **formal verification** into their approach for assessing the correctness of smart contracts. Formal verification uses [formal methods](https://www.brookings.edu/techstream/formal-methods-as-a-path-toward-better-cybersecurity/)—mathematically rigorous techniques for specifying and verifying software.
+
+Formal verification is considered important for smart contracts because it helps developers formally test assumptions relating to smart contracts. This is done by creating formal specifications that describe a smart contract's properties and verifying that a formal model of the smart contract matches the specification. This approach increases confidence that a smart contract will only execute functions as defined in its business logic and nothing else.
+
 
 ## Testing tools and libraries {#testing-tools-and-libraries}
 
