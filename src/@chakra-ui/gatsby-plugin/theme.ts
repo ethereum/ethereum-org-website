@@ -13,7 +13,7 @@ import foundations from "./foundations"
 const config: ThemeConfig = {
   cssVarPrefix: "eth",
   initialColorMode: "light",
-  useSystemColorMode: false,
+  useSystemColorMode: true,
 }
 
 const theme: ThemeOverride = {
