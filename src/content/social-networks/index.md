@@ -18,7 +18,7 @@ Social networks play a massive role in our daily communications and interactions
 
 Decentralized social networks are blockchain-based platforms that allow users to exchange information as well as publish and distribute content to audiences. Because these applications run on the blockchain, they are capable of being decentralized and resistant to censorship and undue control.
 
-Many decentralized social networks exist as alternatives to established social media services, such as Facebook, LinkedIn, Twitter, and Medium. But blockchain-powered social networks have a number of features that put them ahead of traditional social platforms.
+Many decentralized social networks exist as alternatives to established social media services, such as Facebook, LinkedIn, Twitter and Medium. But blockchain-powered social networks have a number of features that put them ahead of traditional social platforms.
 
 ### How do decentralized social networks work? {#decentralized-social-networks-overview}
 
