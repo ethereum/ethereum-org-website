@@ -1,9 +1,19 @@
 import React from "react"
 import { Global, css, useTheme } from "@emotion/react"
 
-// TODO: remove these legacy global styles as we adopt the new Design System
+/**
+ * These are legacy global styles. Global styles that were created when
+ * `styled-components` were used. We have merged all of those old global
+ * styles in one place, this component.
+ *
+ * As we transition from our old theme `src/theme.ts` to our new theme
+ * `src/@chakra-ui/gatsby-plugin/theme.ts`, we need to keep these
+ * styles.
+ *
+ * TODO: remove this file when all of our components use the new theme
+ */
 
-// legacy global styles from `src/styles/layout.css`
+// legacy global styles from the old `src/styles/layout.css`
 const oldLayoutCSS = css`
   html {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
