@@ -29,12 +29,15 @@ If you want to get involved and help translate blog posts into your language, re
 </ButtonLink>
 
 2. **Open the language you want to translate and find a blog post to work on**  
-   Each blog post is uploaded to Crowdin as an individual file. The files are named after the blog post title, so finding a specific post that you want to translate should be fairly straightforward. You can check the progress of each document on the right – if translation progress is below 100%, please contribute!
+   Each post is uploaded to Crowdin as an individual file. The files are named after the blog post title, so if you're looking for a specific post to translate, it should be fairly straightforward. 
+   Blog posts are prioritized based on their date of publication. Please follow the numerical order when translating, to ensure that recently published posts get translated first (1 → 2 → 3 → ⋯).
 
    ![Translated and untranslated files in Crowdin](./blog-posts.png)
 
 3. **Translate**  
    After selecting the file you want to translate, it will open in the online editor. If you have never used Crowdin before, you can use this quick guide to go over the basics.
+
+_To ensure that the blog posts being translated are still relevant, the Crowdin project mostly contains new and recently published posts. If you would like to suggest a blog post that should be translated, please send us an email at translations@ethereum.org._
 
 For a more in-depth guide to using Crowdin, please visit the [How to translate](/contributing/translation-program/how-to-translate) section.
 
