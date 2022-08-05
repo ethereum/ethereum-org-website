@@ -83,11 +83,11 @@ Di seguito puoi trovare alcuni esempi di come queste stringhe appaiono ai tradut
 
 ### Avvisi di Crowdin {#crowdin-warnings}
 
-Crowdin offre una funzionalità integrata che avvisa i traduttori quando stanno per commettere un errore. Se digiti una traduzione ma dimentichi di includere un tag del testo sorgente, oppure traduci elementi che non vanno tradotti, aggiungi spazi multipli consecutivi, dimentichi la punteggiatura finale, ecc., Crowdin ti avvisa automaticamente prima di salvare la tua traduzione. Se visualizzi un avviso simile a questo, ti invitiamo a tornare indietro e ricontrollare la traduzione inserita.
+Crowdin offre una funzionalità integrata che avvisa i traduttori quando stanno per commettere un errore. Crowdin ti avviserà automaticamente di questo prima di salvare la tua traduzione se dimentichi di includere un tag dal testo sorgente, se traduci elementi che non dovrebbero essere tradotti, se inserisci più spazi consecutivi, dimentichi la punteggiatura finale, ecc. Se visualizzi un avviso simile a questo, ti invitiamo a tornare indietro e ricontrollare la traduzione inserita.
 
 **Non ignorare mai questi avvisi, poiché solitamente significano che c'è qualcosa che non va o che manca una parte fondamentale del testo di partenza.**
 
-Un esempio di avviso di Crowdin quando dimentichi di aggiungere un tag nella tua traduzione: ![Esempio di avviso di Crowdin.png](./crowdin-warning-example.png)
+Un esempio di avviso di Crowdin quando dimentichi di aggiungere un tag nella tua traduzione: ![Esempio di avviso di Crowdin](./crowdin-warning-example.png)
 
 ### Gestire tag e frammenti di codice {#dealing-with-tags}
 
@@ -97,7 +97,7 @@ Molti dei contenuti di origine contengono tag e variabili, evidenziati in giallo
 
 Potresti notare link completi a pagine su ethereum.org o altri siti web.
 
-Dovrebbero essere identici a quelli originali e non essere modificati o tradotti. Se traduci un link o lo modifichi in qualche modo, anche solo rimuovendone una parte, come un backslash (/), lo renderai corrotto o inutilizzabile.
+Dovrebbero essere identici a quelli originali e non essere modificati o tradotti. Se traduci un link o lo modifichi in qualche modo, anche solo rimuovendone una parte, come un backslash (/), ciò condurra a link corrotti o inutilizzabili.
 
 Il modo migliore per gestire i collegamenti è copiarli direttamente dal testo di partenza, facendo clic su di essi o utilizzando il pulsante "Copy Source" (Alt+C).
 
@@ -199,28 +199,28 @@ Alcuni esempi di aspetti a cui prestare particolare attenzione:
 
 **Maiuscole/minuscole**
 
-- Ci sono vaste differenze nella capitalizzazione nelle diverse lingue.
+- Esistono notevoli differenze nell'uso delle maiuscole/minuscole nelle varie lingue.
 - In inglese, è comune usare la maiuscola per tutte le parole di titoli e nomi, mesi e giorni, nomi di lingue, festività, ecc. In molte altre lingue, questo è sbagliato dal punto di vista grammaticale, in quanto vigono regole diverse sull'uso delle maiuscole/minuscole.
 - Alcune lingue hanno anche regole sull'uso della maiuscola per pronomi personali, sostantivi e alcuni aggettivi, che in inglese vengono scritti con l'iniziale minuscola.
 
 **Spaziatura**
 
-- Le regole ortografiche definiscono l'uso degli spazi per ogni lingua. Poiché gli spazi sono usati ovunque, queste regole sono alcune delle più distinte e gli spazi sono alcuni degli elementi più tradotti in modo errato.
+- Le regole ortografiche definiscono l'uso degli spazi per ogni lingua. Poiché gli spazi sono usati ovunque, queste regole sono alcune delle più distinte e gli spazi sono alcuni degli elementi maggiormente tradotti in modo improprio.
 - Alcune differenze comuni nella spaziatura tra l'inglese e altre lingue:
-  - Spazio prima dell'unità di misura e delle valute (es., USD, EUR, kB, MB)
+  - Spazio prima dell'unità di misura e delle valute (es. USD, EUR, kB, MB)
   - Spazio prima dei segni di grado (es. °C, ℉)
   - Spazio prima di certi segni di punteggiatura, specialmente i puntini di sospensione (…)
   - Spazio prima e dopo le barre (/)
 
 **Elenchi**
 
-- Ogni lingua ha una diversa e complessa serie di regole per la scrittura di elenchi. Questi possono esser significativamente differenti dall'inglese.
+- Ogni lingua ha una diversa e complessa serie di regole per la redazione di elenchi. Questi possono differire significativamente rispetto all'inglese.
 - In alcune lingue, la prima parola di ogni nuova riga deve essere maiuscola, mentre in altre le nuove righe devono iniziare con lettere minuscole. Molte lingue hanno anche regole differenti sull'uso delle maiuscole/minuscole negli elenchi, a seconda della lunghezza di ogni riga.
 - Lo stesso si applica alla punteggiatura dei vari punti dell'elenco. La punteggiatura finale negli elenchi può essere un punto (**.**), una virgola (**,**) o un punto e virgola (**;**), a seconda della lingua.
 
 **Virgolette**
 
-- Le lingue usano molte virgolette differenti. Copiare semplicemente le virgolette inglesi dalla fonte è spesso errato.
+- Le varie lingue usano tipi diversi di virgolette. Copiare semplicemente le virgolette inglesi dal segmento originale spesso è sbagliato.
 - Tra i tipi più comuni di virgolette troviamo:
   - „testo di esempio“
   - ‚testo di esempio’
@@ -231,14 +231,14 @@ Alcuni esempi di aspetti a cui prestare particolare attenzione:
 
 **Trattini lunghi e corti**
 
-- In inglese, un meno (-) è usato per unire parole o differenti parti di una parola, mentre un trattino (–) è usato per indicare un intervallo o una pausa.
+- In inglese si utilizza un trattino corto (-) per unire parole o parti diverse di una parola e un trattino lungo (–) per indicare un intervallo o una pausa.
 - Molte lingue hanno regole diverse per l'uso di trattini corti e lunghi, che dovrebbero essere osservate.
 
 ### Formati {#formats}
 
 **Numeri**
 
-- La differenza principale nella scrittura dei numeri in diverse lingue è il separatore usato per decimali e migliaia. Per le migliaia, può essere un punto, una virgola o uno spazio. Similmente, alcune lingue usano un punteo decimale, mentre altre usano una virgola decimale.
+- La differenza principale nella scrittura dei numeri nelle varie lingue riguarda il separatore usato per decimali e migliaia. Per le migliaia, può essere un punto, una virgola o uno spazio. Analogamente, alcune lingue usano un punto decimale, mentre altre usano una virgola.
   - Alcuni esempi di grandi numeri:
     - Inglese – **1,000.50**
     - Spagnolo – **1.000,50**
@@ -250,8 +250,8 @@ Alcuni esempi di aspetti a cui prestare particolare attenzione:
 
 - Per la traduzione delle date, occorre tenere conto di una serie di considerazioni e differenze basate sulla lingua, tra cui il formato della data, il separatore, l'uso delle maiuscole/minuscole e gli zeri iniziali. Esistono anche differenze tra le date scritte per esteso e le date numeriche.
   - Alcuni esempi di formati di data diversi:
-    - English UK (mm/dd/yyyy) – 1st January, 2022
-    - Inglese USA (gg/mm/aaaa) – January 1, 2022
+    - English UK (dd/mm/yyyy) – 1st January, 2022
+    - English US (mm/dd/yyyy) – January 1st, 2022
     - Cinese (aaaa-mm-gg) – 2022 年 1 月 1 日
     - Francese (gg/mm/aaaa) – 1er janvier 2022
     - Italiano (gg/mm/aaaa) – 1º gennaio 2022
@@ -259,7 +259,7 @@ Alcuni esempi di aspetti a cui prestare particolare attenzione:
 
 **Valute**
 
-- Tradurre le valute può esser impegnativo, a causa dei diversi formati, convenzioni e conversioni. Come regola generale, sei pregato di mantenere le valute come dalla fonte. Puoi aggiungere la tua valuta locale e conversione tra parentesi, a beneficio del lettore.
+- Tradurre le valute può essere complicato, a causa dei diversi formati, convenzioni e conversioni. Come regola generale, consigliamo di lasciare la valuta riportata nel testo originale. Puoi aggiungere la tua valuta locale e la conversione tra parentesi, per comodità del lettore.
 - Le principali differenze nella scrittura delle valute nelle varie lingue riguardano il posizionamento dei simboli, l'uso di virgole o punti decimali, la spaziatura e l'uso di abbreviazioni o simboli.
   - Posizionamento del simbolo: $100 o 100$
   - Virgole vs. punti decimali: 100,50$ o 100.50$
@@ -268,7 +268,7 @@ Alcuni esempi di aspetti a cui prestare particolare attenzione:
 
 **Unità di misura**
 
-- Come regola generale, sei pregato di mantenere le unità di misura come per la sorgente. Se il tuo paese usa un sistema differente, puoi includere la conversione tra parentesi.
+- Come regola generale, consigliamo di lasciare le unità di misura come appaiono nel testo originale. Se il tuo paese usa un sistema differente, puoi includere la conversione tra parentesi.
 - Oltre alla localizzazione delle unità di misura, è importante notare anche il diverso trattamento di tali unità nelle varie lingue. La differenza principale riguarda la spaziatura tra numero e unità, che può variare in base alla lingua. Ed esempio: 100kB o 100 kB, 50°F o 50 °F.
 
 ### Conclusioni {#conclusion}
