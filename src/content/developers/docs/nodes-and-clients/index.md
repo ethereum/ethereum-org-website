@@ -123,13 +123,13 @@ The Ethereum community maintains multiple open-source execution clients (previou
 
 This table summarizes the different clients. All of them pass [client tests](https://github.com/ethereum/tests) and are actively maintained to stay updated with network upgrades.
 
-| Client                                          | Language | Operating systems     | Networks                                   | Sync strategies     | State pruning   |
-| ----------------------------------------------- | -------- | --------------------- | ------------------------------------------ | ------------------- | --------------- |
-| [Geth](https://geth.ethereum.org/)              | Go       | Linux, Windows, macOS | Mainnet, Görli, Rinkeby, Ropsten           | Snap, Full          | Archive, Pruned |
-| [Nethermind](http://nethermind.io/)             | C#, .NET | Linux, Windows, macOS | Mainnet, Görli, Ropsten, Rinkeby, and more | Fast, Beam, Archive | Archive, Pruned |
-| [Besu](https://besu.hyperledger.org/en/stable/) | Java     | Linux, Windows, macOS | Mainnet, Rinkeby, Ropsten, Görli, and more | Fast, Full          | Archive, Pruned |
-| [Erigon](https://github.com/ledgerwatch/erigon) | Go       | Linux, Windows, macOS | Mainnet, Görli, Rinkeby, Ropsten           | Full                | Archive, Pruned |
-| [Akula](https://akula.app)                      | Rust     | Linux                 | Mainnet, Görli, Rinkeby, Ropsten, and more | Full                | Archive, Pruned |
+| Client                                          | Language | Operating systems     | Networks                                   | Sync strategies                   | State pruning   |
+| ----------------------------------------------- | -------- | --------------------- | ------------------------------------------ | ----------------------------------| --------------- |
+| [Geth](https://geth.ethereum.org/)              | Go       | Linux, Windows, macOS | Mainnet, Görli, Rinkeby, Ropsten           | Snap, Full                        | Archive, Pruned |
+| [Nethermind](http://nethermind.io/)             | C#, .NET | Linux, Windows, macOS | Mainnet, Görli, Ropsten, Rinkeby, and more | Snap(without serving), Fast, Full | Archive, Pruned |
+| [Besu](https://besu.hyperledger.org/en/stable/) | Java     | Linux, Windows, macOS | Mainnet, Rinkeby, Ropsten, Görli, and more | Fast, Full                        | Archive, Pruned |
+| [Erigon](https://github.com/ledgerwatch/erigon) | Go       | Linux, Windows, macOS | Mainnet, Görli, Rinkeby, Ropsten           | Full                              | Archive, Pruned |
+| [Akula](https://akula.app)                      | Rust     | Linux                 | Mainnet, Görli, Rinkeby, Ropsten, and more | Full                              | Archive, Pruned |
 
 **Note that OpenEthereum [has been deprecated](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd) and is no longer being maintained.** Use it with caution and preferably switch to another client implementation.
 
@@ -208,9 +208,10 @@ Light client mode downloads all block headers, block data, and verifies some ran
 
 ##### Snap sync
 
-Implemented by Geth. Using dynamic snapshots served by peers retrieves all the account and storage data without downloading intermediate trie nodes and then reconstructs the Merkle trie locally.
+Implemented by Geth and Nethermind. Using dynamic snapshots served by peers retrieves all the account and storage data without downloading intermediate trie nodes and then reconstructs the Merkle trie locally.
 
-- Fastest sync strategy developed by Geth, currently its default
+- Fastest sync strategy developed by Geth, currently its default.
+- Nethermind only implemented the consuming part till now. They working on enabling serving other nodes soon.
 - Saves a lot of disk usage and network bandwidth without sacrificing security.
 
 [More on Snap](https://github.com/ethereum/devp2p/blob/master/caps/snap.md)
@@ -226,7 +227,7 @@ Implemented by OpenEthereum. Nodes regularly generate a consensus-critical state
 
 ##### Beam sync
 
-Implemented by Nethermind and Trinity. Works like fast sync but also downloads the data needed to execute latest blocks, which allows you to query the chain within the first few minutes from starting.
+Implemented by Trinity. Works like fast sync but also downloads the data needed to execute latest blocks, which allows you to query the chain within the first few minutes from starting.
 
 - Syncs state first and enables you to query RPC in a few minutes.
 - Still in development and not fully reliable, background sync is slowed down and RPC responses might fail.
@@ -294,7 +295,7 @@ The sync mode you choose will affect space requirements but we've estimated the 
 | ------------ | --------------------- | ------------------------ |
 | Geth         | 400GB+                | 6TB+                     |
 | OpenEthereum | 280GB+                | 6TB+                     |
-| Nethermind   | 200GB+                | 5TB+                     |
+| Nethermind   | 400GB+                | 12TB+                    |
 | Besu         | 750GB+                | 5TB+                     |
 | Erigon       | N/A                   | 1TB+                     |
 
