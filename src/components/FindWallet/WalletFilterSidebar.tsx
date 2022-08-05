@@ -350,7 +350,7 @@ const WalletFilterSidebar = ({
       ],
     },
     {
-      title: "Onboard / offboard",
+      title: "On ramp / Off ramp",
       open: true,
       items: [
         {

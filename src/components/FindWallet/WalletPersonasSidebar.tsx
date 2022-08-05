@@ -268,11 +268,11 @@ const filterLabels = {
     icon: <ENSSupport />,
   },
   buy_crypto: {
-    label: "Buy crypto",
+    label: "On ramp to crypto",
     icon: <BuyCrypto />,
   },
   withdraw_crypto: {
-    label: "Withdraw crypto",
+    label: "Off ramp to fiat",
     icon: <WithdrawCrypto />,
   },
   multisig: {
