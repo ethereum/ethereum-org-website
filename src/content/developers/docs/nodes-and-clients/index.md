@@ -295,7 +295,7 @@ The sync mode you choose will affect space requirements but we've estimated the 
 | ------------ | --------------------- | ------------------------ |
 | Geth         | 400GB+                | 6TB+                     |
 | OpenEthereum | 280GB+                | 6TB+                     |
-| Nethermind   | 400GB+                | 12TB+                    |
+| Nethermind   | 500GB+                | 12TB+                    |
 | Besu         | 750GB+                | 5TB+                     |
 | Erigon       | N/A                   | 1TB+                     |
 
