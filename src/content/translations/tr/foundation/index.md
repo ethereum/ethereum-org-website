@@ -1,5 +1,5 @@
 ---
-title: Ethereum Vakfı
+title: Ethereum Kuruluşu
 description: Ethereum ve ilgili teknolojileri desteklemeye adanmış, kâr amacı gütmeyen bir organizasyon olan Ethereum Vakfı (EF) hakkında bilgi edinin.
 sidebar: false
 lang: tr
@@ -31,11 +31,9 @@ Başlangıcından bu yana her yılın konferans sunumlarının video içeriğine
 
 ### Burs Programı {#fellowship-program}
 
-[Ethereum Vakfı Burs Programı](https://fellowship.ethereum.foundation/), gelişmekte olan ekonomilerde fırsatlar aramaya odaklanan bir pilot projedir. Bugün gelişmekte olan ülkeler dünya nüfusunun %80'inden fazlasını oluşturmaktadır. Dünyada her gün doğan yaklaşık 400.000 bebeğin 360.000'inden fazlası gelişmekte olan ülkelerde doğuyor. Gelişmekte olan ülkelerdeki insanlar, yalnızca bir halk olarak geleceğimizi değil, aynı zamanda bir sonraki milyarlarca aktif Ethereum kullanıcısını da temsil edebilirler.
+[Ethereum Vakfı Burs Programı](https://fellowship.ethereum.foundation/); kültürler, uyruklar ve ekonomik sınıflar arasındaki uçurumun giderilmesi için olan bir girişimdir. Fellowship Programı, Ethereum'un alaka düzeyini sağlamaya yardımcı olan benzersiz ve yetenekli bireyleri belirleyerek ve destekleyerek ve Web3'ün geleceği olacak, yeterince temsil edilmeyen insanlar ve topluluklar için giriş engellerini ortadan kaldırarak bu boşlukları kapatmakla ilgilidir.
 
-Burs Programı, Ethereum Vakfı'na, Ethereum kullanarak gelişmekte olan ekonomilerde etki yaratma potansiyeli yüksek olan, değişim yaratanlarla çalışma fırsatı sunar. Program; mentorluk, uzmanlık ve Ethereum ekosistemindeki liderlere erişimi içeren benzersiz bir deneyim sunuyor.
-
-[fellowship.ethereum.foundation](https://fellowship.ethereum.foundation/) adresinden daha fazla bilgi edinin veya [Burs Programı'nda yakın zamanda yayınlanan blog gönderisine](https://blog.ethereum.org/2021/05/07/ethereum-for-the-next-billion/) göz atın.
+[Daha fazla bilgi için fellowship.ethereum.foundation adresini ziyaret edin](https://fellowship.ethereum.foundation/).
 
 <br/>
 
