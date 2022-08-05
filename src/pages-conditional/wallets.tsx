@@ -188,6 +188,10 @@ const types = [
     description: <Translation id="page-wallets-web-browser" />,
   },
   {
+    emoji: ":globe_with_meridians:",
+    description: <Translation id="page-wallets-web-browser-extension" />,
+  },
+  {
     emoji: ":desktop_computer:",
     description: <Translation id="page-wallets-desktop" />,
   },
@@ -319,6 +323,9 @@ const WalletsPage = ({
           <H2>
             <Translation id="page-wallets-types" />
           </H2>
+          <p>
+            <Translation id="page-wallets-types-desc" />
+          </p>
           <div>
             {types.map((type, idx) => (
               <WalletType
