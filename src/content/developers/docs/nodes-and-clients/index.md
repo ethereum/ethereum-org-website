@@ -211,7 +211,7 @@ Light client mode downloads all block headers, block data, and verifies some ran
 Implemented by Geth and Nethermind. Using dynamic snapshots served by peers retrieves all the account and storage data without downloading intermediate trie nodes and then reconstructs the Merkle trie locally.
 
 - Fastest sync strategy developed by Geth, currently its default.
-- Nethermind only implemented the consuming part till now. They working on enabling serving other nodes soon.
+- Nethermind only implemented the consuming part until now. They are working on enabling serving other nodes soon.
 - Saves a lot of disk usage and network bandwidth without sacrificing security.
 
 [More on Snap](https://github.com/ethereum/devp2p/blob/master/caps/snap.md)
