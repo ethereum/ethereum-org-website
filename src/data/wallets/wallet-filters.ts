@@ -131,8 +131,9 @@ const walletFilterData: { [key: string]: WalletFilter } = {
     filterKey: "erc_20_support",
   },
   eip_1559_support: {
-    title: "EIP-1559 support",
-    description: "Lower gas fees with type-2 transactions",
+    title: "Fee optimization",
+    description:
+      "Support type 2 transactions for optimized gas fees, and fee refunds for unused gas",
     filterKey: "eip_1559_support",
   },
   buy_crypto: {

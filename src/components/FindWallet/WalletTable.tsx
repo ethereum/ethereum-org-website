@@ -525,8 +525,8 @@ const featureDropdownItems = [
     icon: <ERC20Support />,
   },
   {
-    label: "EIP-1559 support",
-    value: "EIP-1559 support",
+    label: "Fee optimization",
+    value: "Fee optimization",
     filterKey: "eip_1559_support",
     category: "feature",
     icon: <Eip1559 />,
