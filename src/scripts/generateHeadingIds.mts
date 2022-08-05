@@ -1,5 +1,5 @@
-const fs = require("fs")
-const gitHubSlugger = require("github-slugger")
+import fs from "fs"
+import BananaSlug from "github-slugger"
 
 // Given a directory (e.g. `pt`), this script adds custom heading IDs
 // within all markdown files of the directory (only if one does not exist).
@@ -54,7 +54,7 @@ const stripLinks = (line: string): string => {
 
 const addHeaderID = (
   line: string,
-  slugger: typeof gitHubSlugger,
+  slugger: BananaSlug,
   write = false
 ): string | undefined => {
   // check if we're a header at all
@@ -117,7 +117,7 @@ const addHeaderID = (
 
 const addHeaderIDs = (lines: Array<string>, write = false): Array<string> => {
   // Sluggers should be per file
-  const slugger = new gitHubSlugger()
+  const slugger = new BananaSlug()
   let inCode = false
   const results: Array<string> = []
   lines.forEach((line) => {

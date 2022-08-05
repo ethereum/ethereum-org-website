@@ -102,7 +102,7 @@
     "crowdin-clean": "rm -rf .crowdin && mkdir .crowdin",
     "crowdin-import": "ts-node src/scripts/crowdin-import.ts",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "generate-heading-ids": "ts-node --esm src/scripts/generate-heading-ids.mts",
+    "generate-heading-ids": "ts-node --esm src/scripts/generateHeadingIds.mts",
     "start": "gatsby develop",
     "start:lambda": "netlify-lambda serve src/lambda",
     "start:static": "gatsby build && gatsby serve",
