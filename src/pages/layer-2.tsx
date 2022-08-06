@@ -1111,16 +1111,7 @@ export const query = graphql`
         )
       }
     }
-    dydx: file(relativePath: { eq: "layer-2/dydx.png" }) {
-      childImageSharp {
-        gatsbyImageData(
-          width: 100
-          layout: CONSTRAINED
-          placeholder: BLURRED
-          quality: 100
-        )
-      }
-    }
+
     l2beat: file(relativePath: { eq: "layer-2/l2beat.jpg" }) {
       childImageSharp {
         gatsbyImageData(
