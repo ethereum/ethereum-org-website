@@ -23,9 +23,19 @@ Typically standards are introduced as [Ethereum Improvement Proposals](/eips/) (
 
 ## Types of standards {#types-of-standards}
 
-Certain EIPs relate to application-level standards (e.g. a standard smart-contract format), which are introduced as [Ethereum Requests for Comment (ERC)](https://eips.ethereum.org/erc). Many ERCs are critical standards used widely across the Ethereum ecosystem.
+There are 3 types of EIPs:
+- [Standard Track](https://eips.ethereum.org/)
+- [Meta Track](https://eips.ethereum.org/meta)
+- [Informational Track](https://eips.ethereum.org/informational)
 
-- [List of ERCs](https://eips.ethereum.org/erc)
+Further, the Standard Track is sub-divided into 4 categories:
+
+- [Core](https://eips.ethereum.org/core)
+- [Networking](https://eips.ethereum.org/networking)
+- [Interface](https://eips.ethereum.org/interface)
+- [ERC](https://eips.ethereum.org/erc)
+
+The main difference in the above categories of Standards Track EIP is where it's deployed. For instance, ERCs are deployed at the application level and therefore don't need to be adopted by all participants. However, Core Track EIP is deployed at the protocol level and requires a broader consensus in the community as all core EIPs must be widely adopted (i.e. all the nodes must upgrade to remain part of the network)
 
 ### Token standards {#token-standards}
 
