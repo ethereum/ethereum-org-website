@@ -67,7 +67,7 @@ Watch Austin walk you through mining and the proof-of-work blockchain.
 
 Ethereum Mainnet only ever used one mining algorithm - ['Ethash'](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash). This was a successor to an original R&D algorithm known as ['Dagger-Hashamoto'](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashamoto).
 
-More information on these mining algorithms is available at our [mining algorithms page](/developers/docs/consensus-mechanisms/pow/mining-algorithms/).
+[More on mining algorithms](/developers/docs/consensus-mechanisms/pow/mining-algorithms/).
 
 ## Further reading {#further-reading}
 
