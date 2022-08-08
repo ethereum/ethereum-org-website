@@ -107,4 +107,4 @@ Les transaccions en Ethereum, de vegades, poden restar bloquejades si heu enviat
 
 #### Com puc minar Ethereum? {#mining-ethereum}
 
-No recomanem comprar equipament per a la mineria si no esteu minant Ethereum actualment. Durant el segon trimestre de 2022 tindrà lloc [la fusió](/upgrades/merge/): canviarem Ethereum de la prova de treball a la prova de participació. Aquest canvi significa que minar Ethereum ja no serà possible. Si encara us interessa minar Ethereum, podeu buscar ajuda en les comunitats mineres, com ara [/r/EtherMining](https://www.reddit.com/r/EtherMining/).
+No recomanem comprar equipament per a la mineria si no esteu minant Ethereum actualment. Durant el segon trimestre de 2022 tindrà lloc [la fusió](/upgrades/merge/): canviarem Ethereum de la prova de treball a la prova de participació. Aquest canvi significa que minar Ethereum ja no serà possible.

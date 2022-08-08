@@ -107,4 +107,4 @@ Transaksi di Ethereum dapat terkadang mengalami kemacetan jika Anda telah mengir
 
 #### Bagaimana cara menambang Ethereum? {#mining-ethereum}
 
-Kami tidak menyarankan membeli peralatan menambang jika Anda belum menambang Ethereum. Di ~Q3/Q4 2022, [penggabungan](/upgrades/merge/) akan terjadi, yang mengalihkan Ethereum dari bukti kerja ke bukti taruhan. Perubahan ini berarti menambang Ethereum tidak akan mungkin lagi. Jika Anda masih tertarik dengan menambang Ethereum, Anda dapat mencari bantuan dari komunitas menambang, seperti [/r/EtherMining](https://www.reddit.com/r/EtherMining/).
+Kami tidak menyarankan membeli peralatan menambang jika Anda belum menambang Ethereum. Di ~Q3/Q4 2022, [penggabungan](/upgrades/merge/) akan terjadi, yang mengalihkan Ethereum dari bukti kerja ke bukti taruhan. Perubahan ini berarti menambang Ethereum tidak akan mungkin lagi.
