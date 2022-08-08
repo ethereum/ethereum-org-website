@@ -8319,6 +8319,15 @@
         "doc",
         "ideas"
       ]
+    },
+    {
+      "login": "michaelmccallam",
+      "name": "Michael McCallam",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3510607?v=4",
+      "profile": "https://github.com/michaelmccallam",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
