@@ -7,7 +7,7 @@ sidebar: true
 
 # Introducción a la gobernanza de Ethereum {#introduction}
 
-_Si Ethereum no le pertenece a nadie, ¿cómo se tomaron las decisiones sobre los cambios pasados y cómo se tomarán las de los cambios futuros? La gobernanza de Ethereum se refiere al proceso por el cual se toman tales decisiones_
+_Si Ethereum no le pertenece a nadie, ¿cómo se tomaron las decisiones sobre los cambios pasados y cómo se tomarán las de los cambios futuros? La gobernanza de Ethereum se refiere al proceso por el cual se toman tales decisiones._
 
 <Divider />
 

@@ -107,4 +107,4 @@ Transacties op Ethereum kunnen soms vast komen te zitten als u een lagere transa
 
 #### Hoe kan ik Ethereum minen? {#mining-ethereum}
 
-We raden u niet aan om mining-uitrusting te kopen als u Ethereum nog niet aan het minen bent. In het tweede kwartaal van 2022 zal [de merge](/upgrades/merge/) plaatsvinden die Ethereum van proof-of-work naar proof-of-stake overschakelt. Deze wijziging betekent dat het minen van Ethereum niet langer mogelijk zal zijn. Als u nog steeds geïnteresseerd bent in het minen van Ethereum, kunt u hulp vragen aan mining-gemeenschappen zoals [/r/EtherMining](https://www.reddit.com/r/EtherMining/).
+We raden u niet aan om mining-uitrusting te kopen als u Ethereum nog niet aan het minen bent. In het tweede kwartaal van 2022 zal [de merge](/upgrades/merge/) plaatsvinden die Ethereum van proof-of-work naar proof-of-stake overschakelt. Deze wijziging betekent dat het minen van Ethereum niet langer mogelijk zal zijn.

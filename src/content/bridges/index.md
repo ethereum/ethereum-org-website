@@ -7,7 +7,7 @@ sidebar: true
 
 # Blockchain bridges {#prerequisites}
 
-_Web3 has evolved into an ecosystem of L1 blockchains and L2 scaling solutions, each designed with unique capabilities and trade-offs. As the number of blockchains protocols increases, so does [the demand to move assets across chains](<https://dune.xyz/eliasimos/Bridge-Away-(from-Ethereum)>) To fulfill this demand, we need bridges._
+_Web3 has evolved into an ecosystem of L1 blockchains and L2 scaling solutions, each designed with unique capabilities and trade-offs. As the number of blockchains protocols increases, so does [the demand to move assets across chains](<https://dune.xyz/eliasimos/Bridge-Away-(from-Ethereum)>). To fulfill this demand, we need bridges._
 
 <Divider />
 
@@ -17,9 +17,9 @@ Blockchain bridges work just like the bridges we know in the physical world. Jus
 
 Let's consider an example:
 
-You're from the USA and are planning a trip to Europe. You have USD, but you need euros to spend. To exchange your USD for euros you can use a currency exchange for a small fee.
+You're from the USA and are planning a trip to Europe. You have USD, but you need EUR to spend. To exchange your USD for EUR you can use a currency exchange for a small fee.
 
-But, what do you do if you want to make a similar exchange to use a different blockchain? Let's say you want to exchange ETH on Ethereum Mainnet for ETH on [Arbitrum](https://arbitrum.io/). Like the currency exchange we made for euros, we need a mechanism to move our ETH from Ethereum to Arbitrum. Bridges make such a transaction possible. In this case, [Arbitrum has a native bridge](https://bridge.arbitrum.io/) that can transfer ETH from Mainnet onto Arbitrum.
+But, what do you do if you want to make a similar exchange to use a different blockchain? Let's say you want to exchange ETH on Ethereum Mainnet for ETH on [Arbitrum](https://arbitrum.io/). Like the currency exchange we made for EUR, we need a mechanism to move our ETH from Ethereum to Arbitrum. Bridges make such a transaction possible. In this case, [Arbitrum has a native bridge](https://bridge.arbitrum.io/) that can transfer ETH from Mainnet onto Arbitrum.
 
 ## Why do we need bridges? {#why-do-we-need-bridges}
 
@@ -123,6 +123,7 @@ Bridges are crucial to onboarding users onto Ethereum L2s, and even for users wh
 ## Further reading {#further-reading}
 
 - [What Are Blockchain Bridges And How Can We Classify Them?](https://blog.li.finance/what-are-blockchain-bridges-and-how-can-we-classify-them-560dc6ec05fa) _Feb 18, 2021 - Arjun Chand_
+- [What Are Cross-Chain Bridges?](https://www.alchemy.com/overviews/cross-chain-bridges) _May 10, 2022 - Alchemy_
 - [Blockchain Bridges: Building Networks of Cryptonetworks](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8) _Sep 8, 2021 - Dmitriy Berenzon_
 - [Bridges in Crypto-Space](https://medium.com/chainsafe-systems/bridges-in-crypto-space-12e158f5fd1e) _Aug 23, 2021 - Ben Adar Hyman_
 - [The Interoperability Trilemma](https://medium.com/connext/the-interoperability-trilemma-657c2cf69f17) _Oct 1, 2021 - Arjun Bhuptani_

@@ -183,6 +183,7 @@
   "pros": "Avantaje",
   "read-more": "Aflați mai multe",
   "refresh": "Vă rugăm să actualizați pagina.",
+  "run-a-node": "Rulează un nod",
   "review-progress": "Cât s-a revizuit",
   "search": "Căutare",
   "search-box-blank-state-text": "Începeți căutarea!",
@@ -226,11 +227,14 @@
   "use-ethereum-menu": "Meniul pentru utilizarea Ethereum",
   "vision": "Viziune",
   "wallets": "Portofele",
+  "we-couldnt-find-that-page": "Pagina nu a putut fi gasită",
+  "web3": "Ce este Web3?",
   "website-last-updated": "Site-ul a fost actualizat pe",
   "what-is-ether": "Ce este ether-ul (ETH)?",
   "what-is-ethereum": "Ce este Ethereum?",
   "whitepaper": "Cartea albă",
   "defi-page": "Finanțele descentralizate (DeFi)",
   "dao-page": "Organizațiile autonome descentralizate (DAO)",
-  "nft-page": "Jetoanele nefungibile (NFT)"
+  "nft-page": "Jetoanele nefungibile (NFT)",
+  "yes": "Da"
 }

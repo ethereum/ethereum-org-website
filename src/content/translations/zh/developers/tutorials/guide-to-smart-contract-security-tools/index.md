@@ -16,7 +16,7 @@ sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/progr
 
 我们将使用三种独特的测试和程序分析技术：
 
-- **使用 [ Slither ](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/) 进行静态分析**。通过不同的程序演示（例如控制流程图），同时对程序的所有路径进行模拟和分析。
+- **使用 [Slither](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/) 进行静态分析**。通过不同的程序演示（例如控制流程图），同时对程序的所有路径进行模拟和分析。
 - **使用 [Echidna](/developers/tutorials/how-to-use-echidna-to-test-smart-contracts/) 进行模糊测试。** 代码是通过伪随机生成的交易来执行的， 模糊器将尝试找到一个违反某个给定的合约特性的交易序列。
 - **使用 [Manticore](/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/) 进行符号执行。** 一种正式的验证技术，它将每个路径转换为数学公式，在此基础上可对最重要的约束加以检查。
 

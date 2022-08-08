@@ -5,11 +5,11 @@ lang: en
 sidebar: true
 ---
 
-In order for a software application to interact with the Ethereum blockchain (by reading blockchain data and/or sending transactions to the network), it must connect to an Ethereum node.
+In order for a software application to interact with the Ethereum blockchain - either by reading blockchain data or sending transactions to the network - it must connect to an Ethereum node.
 
-For this purpose, every [Ethereum client](/developers/docs/nodes-and-clients/#execution-clients) implements a [JSON-RPC specification](http://www.jsonrpc.org/specification), so there are a uniform set of methods that applications can rely on.
+For this purpose, every [Ethereum client](/developers/docs/nodes-and-clients/#execution-clients) implements a [JSON-RPC specification](https://github.com/ethereum/execution-apis), so there are a uniform set of methods that applications can rely on regardless of the specific node or client implementation.
 
-JSON-RPC is a stateless, light-weight remote procedure call (RPC) protocol. It defines several data structures and the rules around their processing. It is transport agnostic in that the concepts can be used within the same process, over sockets, over HTTP, or in many various message passing environments. It uses JSON (RFC 4627) as data format.
+[JSON-RPC](https://www.jsonrpc.org/specification) is a stateless, light-weight remote procedure call (RPC) protocol. It defines several data structures and the rules around their processing. It is transport agnostic in that the concepts can be used within the same process, over sockets, over HTTP, or in many various message passing environments. It uses JSON (RFC 4627) as data format.
 
 ## Client implementations {#client-implementations}
 
@@ -194,7 +194,7 @@ None
 
 `String` - The current network id.
 
-The full list of current network IDs is available at [chainlist.org](https://chainlist.org). Sopme common ones are:
+The full list of current network IDs is available at [chainlist.org](https://chainlist.org). Some common ones are:
 `1`: Ethereum Mainnet
 `2`: Morden testnet (now deprecated)
 `3`: Ropsten testnet
@@ -1765,7 +1765,7 @@ Used for submitting mining hashrate.
 
 **Parameters**
 
-1. `Hashrate`, a hexadecimal string representation (32 bytes) of the hash rate
+1. `Hashrate`, a hexadecimal string representation (32 bytes) of the hashrate
 2. `ID`, String - A random hexadecimal(32 bytes) ID identifying the client
 
 ```js
