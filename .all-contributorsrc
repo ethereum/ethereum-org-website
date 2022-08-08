@@ -8347,6 +8347,33 @@
         "doc",
         "bug"
       ]
+    },
+    {
+      "login": "vrinek",
+      "name": "Kostas",
+      "avatar_url": "https://avatars.githubusercontent.com/u/81346?v=4",
+      "profile": "https://github.com/vrinek",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "rogueassasin1729",
+      "name": "rogueassasin1729",
+      "avatar_url": "https://avatars.githubusercontent.com/u/92800000?v=4",
+      "profile": "https://github.com/rogueassasin1729",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "Pandapip1",
+      "name": "Pandapip1",
+      "avatar_url": "https://avatars.githubusercontent.com/u/45835846?v=4",
+      "profile": "https://pandapip1.com/",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,

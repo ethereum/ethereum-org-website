@@ -107,4 +107,4 @@ Les transactions sur Ethereum peuvent parfois se bloquer si vous avez soumis des
 
 #### Comment miner de l'Ethereum ? {#mining-ethereum}
 
-Nous ne vous recommandons pas d'investir dans de l'équipement de minage si vous n'êtes pas déjà en train de miner de l'Ethereum. Pendant le deuxième trimestre de 2022, [la fusion](/upgrades/merge/) aura lieu, ce qui aura pour conséquence de faire passer Ethereum de la preuve de travail à la preuve d'enjeu. Ce changement signifie que miner de l'Ethereum ne sera plus possible. Si le minage d'Ethereum vous intéresse quand-même, vous pouvez demander de l'aide auprès de communautés spécialisées, telles que [/r/EtherMining](https://www.reddit.com/r/EtherMining/).
+Nous ne vous recommandons pas d'investir dans de l'équipement de minage si vous n'êtes pas déjà en train de miner de l'Ethereum. Pendant le deuxième trimestre de 2022, [la fusion](/upgrades/merge/) aura lieu, ce qui aura pour conséquence de faire passer Ethereum de la preuve de travail à la preuve d'enjeu. Ce changement signifie que miner de l'Ethereum ne sera plus possible.

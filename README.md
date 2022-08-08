@@ -1333,6 +1333,11 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/michaelmccallam"><img src="https://avatars.githubusercontent.com/u/3510607?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Michael McCallam</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=michaelmccallam" title="Documentation">📖</a></td>
     <td align="center"><a href="https://nownodes.io/"><img src="https://avatars.githubusercontent.com/u/110098268?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Polina G.</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=PolinaShanti" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/Cerebro92"><img src="https://avatars.githubusercontent.com/u/13215478?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Neeraj Gahlot</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=Cerebro92" title="Documentation">📖</a> <a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3ACerebro92" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="https://github.com/vrinek"><img src="https://avatars.githubusercontent.com/u/81346?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Kostas</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=vrinek" title="Documentation">📖</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/rogueassasin1729"><img src="https://avatars.githubusercontent.com/u/92800000?v=4?s=100" width="100px;" alt=""/><br /><sub><b>rogueassasin1729</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=rogueassasin1729" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://pandapip1.com/"><img src="https://avatars.githubusercontent.com/u/45835846?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Pandapip1</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=Pandapip1" title="Documentation">📖</a></td>
   </tr>
 </table>
 

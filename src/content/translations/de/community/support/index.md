@@ -107,4 +107,4 @@ Transaktionen auf Ethereum können manchmal stecken bleiben, wenn Sie eine niedr
 
 #### Wie kann ich Ethereum minen? {#mining-ethereum}
 
-Wir raten davon ab, Mining-Ausrüstung zu kaufen, wenn Sie nicht bereits schon Ethereum minen. Vorraussichtlich im 3./4. Quartal 2022 wird [Die Zusammenführung](/upgrades/merge/) vonstattengehen, wodurch Ethereum von Proof-of-Work zu Proof-of-Stake wechselt. Diese Änderung bedeutet, dass das Mining von Ethereum nicht mehr möglich sein wird. Wenn Sie weiterhin daran interessiert sind, Ethereum zu schürfen, können Sie in Mining-Communitys wie [/r/EtherMining](https://www.reddit.com/r/EtherMining/) Hilfe suchen.
+Wir raten davon ab, Mining-Ausrüstung zu kaufen, wenn Sie nicht bereits schon Ethereum minen. Vorraussichtlich im 3./4. Quartal 2022 wird [Die Zusammenführung](/upgrades/merge/) vonstattengehen, wodurch Ethereum von Proof-of-Work zu Proof-of-Stake wechselt. Diese Änderung bedeutet, dass das Mining von Ethereum nicht mehr möglich sein wird.
