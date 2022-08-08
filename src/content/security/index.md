@@ -218,7 +218,7 @@ As a general rule, staff will never communicate with you through private, unoffi
 
 In the run up to [The Merge](/upgrades/merge/), scammers took advantage of the confusion around the term 'Eth2' to try and get users to redeem their ETH for an 'ETH2' token. There is no 'ETH2' and no other legitimate token was introduced with The Merge. The ETH that you owned before The Merge is the same ETH now, there is **no need to take any action related to your ETH to account for the switch from proof-of-work to proof-of-stake**.
 
-Scammers may appear in the form of "support" telling you if you deposit your ETH you will receive back 'ETH2'. There is no [official Ethereum support](/community/support/), and there is no new token. Never share your wallet seed phrase with anyone.
+Scammers may appear as "support", telling you that if you deposit your ETH, you will receive back 'ETH2'. There is no [official Ethereum support](/community/support/), and there is no new token. Never share your wallet seed phrase with anyone.
 
 _Note: There are derivative tokens/tickers that may represent staked ETH (ie. rETH from Rocket Pool, stETH from Lido, ETH2 from Coinbase), but these are not something you need to "migrate to."_
 
