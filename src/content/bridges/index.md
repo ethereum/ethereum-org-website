@@ -22,7 +22,6 @@ You're from the USA and are planning a trip to Europe. You have USD, but you nee
 But, what do you do if you want to make a similar exchange to use a different blockchain? Let's say you want to exchange ETH on Ethereum Mainnet for ETH on [Arbitrum](https://arbitrum.io/). Like the currency exchange we made for euros, we need a mechanism to move our ETH from Ethereum to Arbitrum. Bridges make such a transaction possible. In this case, [Arbitrum has a native bridge](https://bridge.arbitrum.io/) that can transfer ETH from Mainnet onto Arbitrum.
 
 
-
 ## Why do we need bridges? {#why-do-we-need-bridges}
 
 All blockchains have their limitations. For Ethereum to scale and keep up with demand, it has required rollups. Alternatively, L1s like Solana and Avalanche are designed differently to enable higher throughput but at the cost of decentralization.
