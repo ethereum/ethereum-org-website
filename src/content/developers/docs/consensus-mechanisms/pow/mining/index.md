@@ -1,6 +1,6 @@
 ---
 title: Mining
-description: An explanation of how mining works in Ethereum and how it helps keep Ethereum secure and decentralized.
+description: An explanation of how mining worked on Ethereum.
 lang: en
 sidebar: true
 ---
