@@ -8347,6 +8347,15 @@
         "doc",
         "bug"
       ]
+    },
+    {
+      "login": "vrinek",
+      "name": "Kostas",
+      "avatar_url": "https://avatars.githubusercontent.com/u/81346?v=4",
+      "profile": "https://github.com/vrinek",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
