@@ -167,11 +167,11 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
   - [Docs](https://documenter.getpostman.com/view/13630829/TVmFkLwy)
   - Features
     - Access to 50+ blockchain nodes
-    - Free API Key 
+    - Free API Key
     - Block Explorers
     - API Response Time ⩽ 1 sec
     - 24/7 Support Team
-    - Personal Account Manager 
+    - Personal Account Manager
     - Shared, archive, backup and dedicated nodes
 - [**Pocket Network**](https://www.pokt.network/)
   - [Docs](https://docs.pokt.network/home/)

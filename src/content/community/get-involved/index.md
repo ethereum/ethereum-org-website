@@ -100,7 +100,6 @@ The Ethereum ecosystem is on a mission to fund public goods and impactful projec
 - [Web3 Army](https://web3army.xyz/)
 - [Crypto Valley Jobs](https://cryptovalley.jobs/)
 
-
 ## Join a DAO {#decentralized-autonomous-organizations-daos}
 
 "DAOs" are decentralized autonomous organizations. These groups leverage Ethereum technology to facilitate organization and collaboration. For instance, for controlling membership, voting on proposals, or managing pooled assets. While DAOs are still experimental, they offer opportunities for you to find groups that you identify with, find collaborators, and grow your impact on the Ethereum community. [More on DAOs](/dao/)
