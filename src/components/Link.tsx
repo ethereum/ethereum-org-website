@@ -208,6 +208,8 @@ const Link: React.FC<IProps> = ({
 
   // Use `gatsby-theme-i18n` Link (which prepends lang path)
   return (
+    // @ts-ignore: IntlLink is requiring a `language` prop but that prop should
+    // be optional. Opened issue: https://github.com/gatsbyjs/themes/issues/171
     <InternalLink
       dir={dir}
       className={isGlossary ? `is-glossary ${className}` : className}

@@ -62,7 +62,7 @@ interface IInputProps
   query: string
   setQuery: (query: string) => void
   refine: (query: string) => void
-  inputRef: React.MutableRefObject<HTMLInputElement>
+  inputRef: React.RefObject<HTMLInputElement>
 }
 
 const Input: React.FC<IInputProps> = ({
