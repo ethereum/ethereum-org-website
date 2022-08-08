@@ -116,6 +116,84 @@ While many searchers are still making good money from MEV, as opportunities beco
 
 As DeFi grows and increases in popularity, MEV may soon significantly outweigh the base Ethereum block reward. With that comes a growing possibility of selfish block remining and consensus instability. Some consider this to be an existential threat to Ethereum, and disincentivizing selfish mining is an active area of research in Ethereum protocol theory. One solution currently being explored is [MEV reward smoothing](https://ethresear.ch/t/committee-driven-mev-smoothing/10408).
 
+## MEV after The Merge {#mev-after-the-merge} 
+
+As explained, MEV has negative implications for overall user experience and consensus-layer security. But Ethereum’s transition to a proof-of-stake consensus (dubbed “The Merge”) potentially introduces new MEV-related risks: 
+
+### Validator centralization {#validator-centralization}
+
+In post-Merge Ethereum, validators (having made security deposits of 32 ETH) come to consensus on the validity of blocks added to the Beacon Chain. Since 32 ETH may be out of the reach of many, [joining a staking pool](/staking/pools/) may be a more feasible option. Nevertheless, a healthy distribution of [solo stakers](/staking/solo/) is ideal, as it mitigates the centralization of validators and improves Ethereum’s security.  
+
+However, MEV extraction is believed to be capable of accelerating validator centralization. This is partly because, as validators [earn less for proposing blocks](/upgrades/merge/issuance/#how-the-merge-impacts-ETH-supply) than miners currently do, MEV extraction may greatly [influence validator earnings](https://github.com/flashbots/eth2-research/blob/main/notebooks/mev-in-eth2/eth2-mev-calc.ipynb) after The Merge. 
+
+Larger staking pools will likely have more resources to invest in necessary optimizations to capture MEV opportunities. The more MEV these pools extract, the more resources they have to improve their MEV-extraction capabilities (and increase overall revenue), essentially creating [economies of scale](https://www.investopedia.com/terms/e/economiesofscale.asp#). 
+
+With fewer resources at their disposal, solo stakers may be unable to profit from MEV opportunities. This may increase the pressure on independent validators to join powerful staking pools to boost their earnings, reducing decentralization in Ethereum. 
+
+### Permissioned mempools {#permissioned-mempools}
+
+In response to sandwiching and frontrunning attacks, traders may start conducting off-chain deals with validators for transaction privacy. Instead of sending a potential MEV transaction to the public mempool, the trader sends it directly to the validator, who includes it in a block and splits profits with the trader. 
+
+“Dark pools” are a larger version of this arrangement and function as permissioned, access-only mempools open to users willing to pay certain fees. This trend would diminish Ethereum’s permissionlessness and trustlessness and potentially transform the blockchain into a “pay-to-play” mechanism that favors the highest bidder. 
+
+Permissioned mempools would also accelerate the centralization risks described in the previous section. Large pools running multiple validators will likely benefit from offering transaction privacy to traders and users, increasing their MEV revenues. 
+
+Combating these MEV-related problems in post-Merge Ethereum is a core area of research. To date, two solutions proposed to reduce the negative impact of MEV on Ethereum’s decentralization and security after The Merge are **Proposer-Builder Separation (PBS)** and **MEV Boost**. 
+
+### Proposer-Builder Separation {#proposer-builder-separation}
+
+In both proof-of-work and proof-of-stake, a node that builds a block proposes it for addition to the chain to other nodes participating in consensus. A new block becomes part of the canonical chain after another miner builds on top of it (in PoW) or it receives attestations from the majority of validators (in Pos).
+
+The combination of block producer and block proposer roles is what introduces most of the MEV-related problems described previously. For example, consensus nodes are incentivized to trigger chain reorganizations in time-bandit attacks to maximize MEV earnings. 
+
+[Proposer-builder separation](https://ethresear.ch/t/proposer-block-builder-separation-friendly-fee-market-designs/9725) (PBS) is designed to mitigate the impact of MEV, especially at the consensus layer. PBS’ major feature is the separation of block producer and block proposer rules. Validators are still responsible for proposing and voting on blocks, but a new class of specialized entities, called **block builders**, are tasked with ordering transactions and building blocks. 
+
+Under PBS, a block builder creates a transaction bundle and places a bid for its inclusion in a Beacon Chain block (as the “execution payload”). The validator selected to propose the next block then checks the different bids and chooses the bundle with the highest fee. PBS essentially creates an auction market, where builders negotiate with validators selling blockspace. 
+
+Current PBS designs use a [commit-reveal scheme](https://gitcoin.co/blog/commit-reveal-scheme-on-ethereum/) in which builders only publish a cryptographic commitment to a block’s contents (block header) along with their bids. After accepting the winning bid, the proposer creates a signed block proposal that includes the block header. 
+
+The block builder is expected to publish the full block body after seeing the signed block proposal. It must also receive receive enough [attestations](/glossary/#attestation) from validators before it is finalized. 
+
+#### How does proposer-builder separation mitigate MEV’s impact? {#how-does-pbs-curb-mev-impact}
+
+In-protocol proposer-builder separation reduces MEV’s effect on consensus by removing MEV extraction from the purview of validators. Instead, block builders running specialized hardware will capture MEV opportunities going forward. 
+
+This doesn’t exclude validators totally from MEV-related income, though, as builders must bid high to get their blocks accepted by validators. Nevertheless, with validators no longer directly focused on optimizing MEV income, the threat of time-bandit attacks reduces. 
+
+Proposer-builder separation also reduces MEV’s centralization risks. For instance, the use of a commit-reveal scheme removes the need for builders to trust validators not to steal the MEV opportunity or expose it to other builders. This lowers the barrier for solo stakers to benefit from MEV, otherwise, builders would trend towards favoring large pools with off-chain reputation and conducting off-chain deals with them. 
+
+Similarly, validators don’t have to trust builders not to withhold block bodies or publish invalid blocks because payment is unconditional. The validator’s fee still processes even if the proposed block is unavailable or declared invalid by other validators. In the latter case, the block is simply discarded, forcing the block builder to lose all transaction fees and MEV revenue. 
+
+### MEV Boost {#mev-boost}
+
+[MEV Boost](https://github.com/flashbots/mev-boost) is an improvement on the Flashbots auction mechanism designed to curb the negative externalities of MEV on Ethereum. Flashbots auction allows miners in proof-of-work to outsource the work of building profitable blocks to specialized parties called **searchers**. 
+
+Searchers look for lucrative MEV opportunities and send transaction bundles to miners along with a [sealed-price bid](https://en.wikipedia.org/wiki/First-price_sealed-bid_auction) for inclusion in the block. The miner running mev-geth, a forked version of the go-ethereum (Geth) client only has to choose the bundle with the most profit and mine it as part of the new block. To protect miners from spam and invalid transactions, transaction bundles pass through **relayers** for validation before getting to miners. 
+
+MEV Boost retains the same workings of the original Flashbots auction, albeit with new features designed for Ethereum’s switch to proof-of-stake. Searchers still find profitable MEV transactions for inclusion in blocks, but a new class of specialized parties, called **builders**, are responsible for aggregating transactions and bundles into blocks. A builder accepts sealed-price bids from searchers and runs optimizations to find the most profitable ordering. 
+
+The relayer is still responsible for validating transaction bundles before passing them to the proposer. However, MEV Boost introduces **escrows** responsible for providing [data availability](/developers/docs/data-availability/) by storing block bodies sent by builders and block headers sent by validators. 
+
+MEV Boost is best seen as a precursor to in-protocol proposer-builder separation, as it implements the necessary logic to separate block building and proposing. Specifically, it uses a [modified version](https://github.com/ethereum/builder-specs) of the [Engine API](https://github.com/ethereum/execution-apis/blob/main/src/engine/specification.md) (which connects a consensus client proposing a new Beacon Chain block and an execution client building execution payloads) to facilitate interaction between validators and builders. 
+
+A validator connected to a relay asks for available execution payloads and uses MEV Boost’s ordering algorithm to select the payload header with the highest bid + MEV tips. The validator then attests to the execution payload by signing a proposal containing the header with their public key. Afterward, the builder will publish the full block body for attestation by other Beacon Chain validators. 
+
+#### How does MEV Boost mitigate MEV’s impact? {#how-does-mev-boost-curb-mev-impact}
+
+Like the earlier Flashbots auction, MEV Boost is primarily designed to democratize access to MEV opportunities. By using commit-reveal schemes, MEV Boost eliminates trust assumptions and reduces entry barriers for validators seeking to benefit from MEV. This would reduce the need for solo stakers to integrate with large staking pools to boost MEV profits. 
+
+Additionally, MEV Boost potentially encourages greater competition among block builders, which increases censorship resistance. As validators accept bids from multiple builders, a censoring builder must outbid all other non-censoring builders to be successful. This dramatically increases the cost of censoring users and discourages the practice. 
+
+MEV Boost also provides a private communication channel between users (e.g., traders) trying to avoid frontrunning/sandwiching attacks and block builders. However, this is different from the permissioned mempools described earlier for the following reasons:
+
+1. The existence of multiple builders on the market makes censoring impractical, which benefits users. In contrast, the existence of centralized and trust-based dark pools would concentrate power in the hands of a few builders and increase the possibility of censoring. 
+
+2. There’s little to no penalty for permissioned mempool operators that fail to protect transactions from frontrunning or sandwich attacks, which imposes trust requirements on users. MEV Boost eliminates such trust assumptions by preventing validators from accessing the content of a block until it has been published. While relays can potentially steal MEV transactions from searchers, both validators and builders can connect to more than one relay, which disincentivizes relayers to act maliciously.
+
+3. MEV Boost uses open-source software, permitting anyone to offer block-builder services. As such, users aren’t forced into using any particular block builder, improving Ethereum’s neutrality and permissionlessness. It also means MEV-seeking traders are not inadvertently contributing to centralization by using private transaction channels. 
+
+Perhaps the greatest importance of MEV Boost is that it sets the stage for proposer-builder separation. Implementing PBS at Ethereum’s consensus layer would require complex changes, including an update to the Beacon Chain’s [fork choice rule](/developers/docs/consensus-mechanisms/pos/gasper/#fork-choice). MEV Boost provides a ready implementation of proposer-builder separation and can help guide ongoing research and development of in-protocol PBS. 
+
 ## Related resources {#related-resources}
 
 - [Flashbots GitHub](https://github.com/flashbots/pm)
@@ -129,3 +207,6 @@ As DeFi grows and increases in popularity, MEV may soon significantly outweigh t
 - [Escaping the Dark Forest](https://samczsun.com/escaping-the-dark-forest/)
 - [Flashbots: Frontrunning the MEV Crisis](https://medium.com/flashbots/frontrunning-the-mev-crisis-40629a613752)
 - [@bertcmiller's MEV Threads](https://twitter.com/bertcmiller/status/1402665992422047747)
+- [MEV-Boost: Merge ready Flashbots Architecture](https://ethresear.ch/t/mev-boost-merge-ready-flashbots-architecture/11177)
+- [What Is MEV Boost](https://www.alchemy.com/overviews/mev-boost)
+- [Why run mev-boost?](https://writings.flashbots.net/writings/why-run-mevboost/)
