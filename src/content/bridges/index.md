@@ -38,8 +38,6 @@ Bridges enable:
 - users to access new platforms and leverage the benefits of different chains.
 - developers from different blockchain ecosystems to collaborate and build new platforms for the users.
 
-For instance, for a company like Socket, [bridging is essential](https://www.alchemy.com/blog/alchemy-powering-socket-the-bridging-aggregator) to building a multi-chain ecosystem and faciliating value exchange between L1s like Ethereum to other L1 and L2 protocols.
-
 <Divider />
 
 ## Bridge use cases {#bridge-use-cases}
