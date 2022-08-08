@@ -1,6 +1,6 @@
 ---
 title: Attestations
-description: A description of attestations on PoS Ethereum.
+description: A description of attestations on proof-of-stake Ethereum.
 lang: en
 sidebar: true
 ---
@@ -29,7 +29,7 @@ Once the `data` is built, the validator can flip the bit in `aggregation_bits` c
 
 Finally, the validator signs the attestation and broadcasts it to the network.
 
-### Aggregated Attestation {#aggregated-attestation}
+### Aggregated attestation {#aggregated-attestation}
 
 There is a substantial overhead associated with passing this data around the network for every validator. Therefore, the attestations from individual validators are aggregated within subnets before being broadcast more widely. This includes aggregating signatures together so that an attestation that gets broadcast includes the consensus `data` and a single signature formed by combining the signatures of all the validators that agree with that `data`. This can be checked using `aggregation_bits` because this provides the index of each validator in their committee (whose ID is provided in `data`) which can be used to query individual signatures.
 
@@ -37,7 +37,7 @@ In each epoch a validator in each subnet is selected to be the `aggregator`. The
 
 When a validator is selected to be a block proposer they package aggregate attestations from the subnets up to the latest slot in the new block.
 
-### Attestation Inclusion Lifecycle {#attestation-inclusion-lifecycle}
+### Attestation inclusion lifecycle {#attestation-inclusion-lifecycle}
 
 1. Generation
 2. Propagation
