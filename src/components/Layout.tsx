@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react"
 import { ApolloProvider } from "@apollo/client"
+import { useColorModeValue } from "@chakra-ui/react"
 import { ThemeProvider } from "@emotion/react"
 import styled from "@emotion/styled"
 import { IntlProvider } from "react-intl"
 import { LocaleProvider } from "gatsby-theme-i18n"
 
 import { lightTheme, darkTheme } from "../theme"
+import GlobalStyle from "./GlobalStyle"
 
 import Footer from "./Footer"
 import VisuallyHidden from "./VisuallyHidden"
@@ -27,9 +29,7 @@ import { isMobile } from "../utils/isMobile"
 
 import type { Context } from "../types"
 
-import "../styles/layout.css"
 import client from "../apollo"
-import GlobalStyle from "./GlobalStyle"
 
 const ContentContainer = styled.div`
   position: relative;
@@ -87,7 +87,9 @@ const Layout: React.FC<IProps> = ({
   pageContext,
   children,
 }) => {
-  const [isDarkTheme, setIsDarkTheme] = useState<boolean>(false)
+  // TODO: tmp - for backward compatibility with old theme
+  const theme = useColorModeValue(lightTheme, darkTheme)
+
   const [isZenMode, setIsZenMode] = useState<boolean>(false)
   const [shouldShowSideNav, setShouldShowSideNav] = useState<boolean>(false)
 
@@ -96,15 +98,6 @@ const Layout: React.FC<IProps> = ({
 
   // Exit Zen Mode on 'esc' click
   useKeyPress(`Escape`, () => handleZenModeChange(false))
-
-  // set isDarkTheme based on browser/app user preferences
-  useEffect(() => {
-    if (localStorage && localStorage.getItem("dark-theme") !== null) {
-      setIsDarkTheme(localStorage.getItem("dark-theme") === "true")
-    } else {
-      setIsDarkTheme(window.matchMedia("(prefers-color-scheme: dark)").matches)
-    }
-  }, [])
 
   useEffect(() => {
     if (path.includes("/docs/")) {
@@ -125,13 +118,6 @@ const Layout: React.FC<IProps> = ({
     }
   }, [path, location])
 
-  const handleThemeChange = (): void => {
-    setIsDarkTheme(!isDarkTheme)
-    if (localStorage) {
-      localStorage.setItem("dark-theme", String(!isDarkTheme))
-    }
-  }
-
   const handleZenModeChange = (val?: boolean): void => {
     // Use 'val' param if provided. Otherwise toggle
     const newVal = val !== undefined ? val : !isZenMode
@@ -141,8 +127,6 @@ const Layout: React.FC<IProps> = ({
       localStorage.setItem("zen-mode", String(newVal))
     }
   }
-
-  const theme = isDarkTheme ? darkTheme : lightTheme
 
   const isPageLanguageEnglish = pageContext.isDefaultLang
   const isPageContentEnglish = !!pageContext.isContentEnglish
@@ -177,11 +161,7 @@ const Layout: React.FC<IProps> = ({
             />
             <ContentContainer>
               <VisuallyHidden isHidden={isZenMode}>
-                <Nav
-                  handleThemeChange={handleThemeChange}
-                  isDarkTheme={isDarkTheme}
-                  path={path}
-                />
+                <Nav path={path} />
                 {shouldShowSideNav && <SideNavMobile path={path} />}
               </VisuallyHidden>
               <SkipLinkAnchor id="main-content" />
