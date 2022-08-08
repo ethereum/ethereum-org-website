@@ -8337,6 +8337,16 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "Cerebro92",
+      "name": "Neeraj Gahlot",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13215478?v=4",
+      "profile": "https://github.com/Cerebro92",
+      "contributions": [
+        "doc",
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
