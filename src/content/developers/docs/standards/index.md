@@ -24,18 +24,19 @@ Typically standards are introduced as [Ethereum Improvement Proposals](/eips/) (
 ## Types of standards {#types-of-standards}
 
 There are 3 types of EIPs:
+
 - [Standard Track](https://eips.ethereum.org/)
 - [Meta Track](https://eips.ethereum.org/meta)
 - [Informational Track](https://eips.ethereum.org/informational)
 
-Further, the Standard Track is sub-divided into 4 categories:
+Furthermore, the Standard Track is subdivided into 4 categories:
 
-- [Core](https://eips.ethereum.org/core)
-- [Networking](https://eips.ethereum.org/networking)
-- [Interface](https://eips.ethereum.org/interface)
-- [ERC](https://eips.ethereum.org/erc)
+- [Core](https://eips.ethereum.org/core): improvements requiring a consensus fork
+- [Networking](https://eips.ethereum.org/networking): improvements around devp2p and Light Ethereum Subprotocol, as well as proposed improvements to network protocol specifications of whisper and swarm.
+- [Interface](https://eips.ethereum.org/interface): improvements around client API/RPC specifications and standards, and certain language-level standards like method names and contract ABIs.
+- [ERC](https://eips.ethereum.org/erc): application-level standards and conventions
 
-The main difference in the above categories of Standards Track EIP is where it's deployed. For instance, ERCs are deployed at the application level and therefore don't need to be adopted by all participants. However, Core Track EIP is deployed at the protocol level and requires a broader consensus in the community as all core EIPs must be widely adopted (i.e. all the nodes must upgrade to remain part of the network)
+More detailed information on these different types and categories can be found in [EIP-1](https://eips.ethereum.org/EIPS/eip-1#eip-types)
 
 ### Token standards {#token-standards}
 
