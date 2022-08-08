@@ -67,8 +67,6 @@ Watch Austin walk you through mining and the proof-of-work blockchain.
 
 Ethereum Mainnet only ever used one mining algorithm - ['Ethash'](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash). This was a successor to an original R&D algorithm known as ['Dagger-Hashamoto'](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashamoto).
 
-The algorithm is based around the provision of a large, transient, randomly generated dataset which forms a [Directed Acyclic Graph](https://en.wikipedia.org/wiki/Directed_acyclic_graph) (the Dagger part), with miners attempting to solve a particular constraint on it, partly determined through a block’s header-hash. This has high memory-access bandwidth requirements but could be run using a modest processor, making it GPU-friendly but resistant to the type of ASIC-driven hardware arms race that could pose a centralization risk (more on [problems with ASICS](https://www.investopedia.com/investing/why-centralized-crypto-mining-growing-problem/)). ASICs for Ethereum mining were eventually developed, but the majority of mining on Ethereum was nevertheless done using GPUs.
-
 More information on these mining algorithms is available at our [mining algorithms page](/developers/docs/consensus-mechanisms/pow/mining-algorithms/).
 
 ## Further reading {#further-reading}
