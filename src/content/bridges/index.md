@@ -122,8 +122,8 @@ Bridges are crucial to onboarding users onto Ethereum L2s, and even for users wh
 
 ## Further reading {#further-reading}
 
-- [What Are Cross-Chain Bridges?](https://www.alchemy.com/overviews/cross-chain-bridges) _May 10, 2022 - Alchemy_
 - [What Are Blockchain Bridges And How Can We Classify Them?](https://blog.li.finance/what-are-blockchain-bridges-and-how-can-we-classify-them-560dc6ec05fa) _Feb 18, 2021 - Arjun Chand_
+- [What Are Cross-Chain Bridges?](https://www.alchemy.com/overviews/cross-chain-bridges) _May 10, 2022 - Alchemy_
 - [Blockchain Bridges: Building Networks of Cryptonetworks](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8) _Sep 8, 2021 - Dmitriy Berenzon_
 - [Bridges in Crypto-Space](https://medium.com/chainsafe-systems/bridges-in-crypto-space-12e158f5fd1e) _Aug 23, 2021 - Ben Adar Hyman_
 - [The Interoperability Trilemma](https://medium.com/connext/the-interoperability-trilemma-657c2cf69f17) _Oct 1, 2021 - Arjun Bhuptani_
