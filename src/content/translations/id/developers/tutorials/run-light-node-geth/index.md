@@ -6,7 +6,7 @@ tags:
   - "klien"
   - "geth"
   - "node"
-skill: pemula
+skill: beginner
 lang: id
 sidebar: true
 published: 2022-03-04

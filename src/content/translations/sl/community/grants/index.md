@@ -16,9 +16,8 @@ Ta seznam je pripravila naša skupnost. Če na njem kaj manjka ali ni pravilno n
 Te programi podpirajo širok Ethereum ekosistem s tem, da ponujajo finančne spodbude širšemu naboru projektov. Mednje sodijo rešitve za nadgradljivost, grajenje skupnosti, varnost, zasebnost in še več. Te finančne spodbude niso specifične vezane na nobeno Ethereum platformo in so dobro mesto za začetek, če niste povsem prepričani.
 
 - [EF Program za podporo ekosistemu](https://esp.ethereum.foundation) - _Financira odprtokodne projekte, ki koristijo Ethereumu, s posebnim fokusom na univerzalna orodja, infrastrukturo, raziskave in javne dobrine_
-- [Ethereum RFPs](https://github.com/ethereum/requests-for-proposals) - _ Prošnje za predloge s strani Ethereum fundacije za delo in projekte v Ethereum ekosistemu_
-- [MetaCartel](https://www.metacartel.org/grants/) - _Dapp razvoj, Ustvarjanje DAO_  
-  Spodbude varirajo od 1.000 USD do 8.000 USD.
+- [Ethereum RFPs](https://github.com/ethereum/requests-for-proposals) - _Prošnje za predloge s strani Ethereum fundacije za delo in projekte v Ethereum ekosistemu_
+- [MetaCartel](https://www.metacartel.org/grants/) - _Dapp razvoj, Ustvarjanje DAO_
 - [Moloch DAO](https://www.molochdao.com/) - _Zasebnost, nadgradljivost z 2. plastmi, varnost in še več_
 - [Odprte spodbude](https://opengrants.com/explore)
 
@@ -28,7 +27,7 @@ Te projekti so ustvarili svoje finančne spodbude za projekte, ki merijo proti r
 
 - [The Graph](https://airtable.com/shrdfvnFvVch3IOVm) – _[The Graph](https://thegraph.com/) ekosistem_
 - [Uniswap](https://www.unigrants.org/) – _[Uniswap](https://uniswap.org/) skupnost_
-- [Balancer](https://forms.gle/c68e4fM7JHCQkPkN7) – _[Balancer](https://balancer.fi/) sklad ekosistema_
+- [Balancer](https://balancergrants.notion.site/Balancer-Community-Grants-23e562c5bc4347cd8304637bff0058e6) – _[Balancer](https://balancer.fi/) sklad ekosistema_
 - [mStable](https://docs.mstable.org/advanced/grants-program) - _[mStable](https://mstable.org/) skupnost_
 
 ### Kvadratično financiranje {#quadratic-funding}

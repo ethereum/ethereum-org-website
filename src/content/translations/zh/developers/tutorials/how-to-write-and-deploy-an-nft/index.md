@@ -8,7 +8,7 @@ tags:
   - "Alchemy"
   - "Solidity"
   - "智能合约"
-skill: 入门
+skill: beginner
 lang: zh
 sidebar: true
 published: 2021-04-22
@@ -58,7 +58,7 @@ Alchemy 非常自豪能够推动非同质化代币领域的一些巨头，包括
 
 ## 步骤 5：查看账户余额 {#check-balance}
 
-为了核实我们的余额，可以使用 [Alchemy 的创作者工具](https://composer.alchemyapi.io?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D)发出 [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) 请求。 这将返回我们钱包中的以太币金额。 输入您的 Metamask 帐户地址并单击“发送请求”后，您应该会看到这样的响应：
+为了核实我们的余额，可以使用 [Alchemy 的创作者工具](https://composer.alchemyapi.io?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D)发出 [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) 请求。 这将返回我们钱包中的以太币金额。 输入您的 MetaMask 帐户地址并单击“发送请求”后，您应该会看到这样的响应：
 
     `{"jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000"}`
 
@@ -214,9 +214,9 @@ Alchemy 非常自豪能够推动非同质化代币领域的一些巨头，包括
 
 `mintNFT` 调用了继承的 ERC-721 库中的一些方法，最终返回一个数字，代表新铸造非同质化代币的 ID。
 
-## 步骤 11：将 Metamask 和 Alchemy 连接至您的项目 {#connect-metamask-and-alchemy}
+## 步骤 11：将 MetaMask 和 Alchemy 连接至您的项目 {#connect-metamask-and-alchemy}
 
-现在，我们创建了 Metamask 钱包、Alchemy 帐户，并且编写了一个智能合约，现在是将这三者连起来的时候了。
+现在，我们创建了 MetaMask 钱包、Alchemy 帐户，并且编写了一个智能合约，现在是将这三者连起来的时候了。
 
 从虚拟钱包发送的每笔交易都需要使用您独有的私钥签名。 为了给程序提供此项许可，我们可以安全地将私钥（和 Alchemy 应用程序接口密钥）存储在一个环境文件中。
 
@@ -226,7 +226,7 @@ Alchemy 非常自豪能够推动非同质化代币领域的一些巨头，包括
 
     npm install dotenv --save
 
-然后，在项目的根目录中创建 `.env` 文件，并将您的 Metamask 私钥和超文本传输协议 Alchemy 应用程序接口网址添加到其中。
+然后，在项目的根目录中创建 `.env` 文件，并将您的 MetaMask 私钥和超文本传输协议 Alchemy 应用程序接口网址添加到其中。
 
 - 遵循[这些说明](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key)，从 MetaMask 导出您的私钥
 

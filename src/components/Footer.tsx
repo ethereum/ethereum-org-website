@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { useIntl } from "gatsby-plugin-intl"
+import { useIntl } from "react-intl"
 import { StaticQuery, graphql } from "gatsby"
 
 import { getLocaleTimestamp } from "../utils/time"
@@ -143,8 +143,8 @@ const Footer: React.FC<IProps> = () => {
       title: "use-ethereum",
       links: [
         {
-          to: `/wallets/`,
-          text: "ethereum-wallets",
+          text: "find-wallet",
+          to: "/wallets/find-wallet/",
         },
         {
           to: `/get-eth/`,
@@ -184,6 +184,10 @@ const Footer: React.FC<IProps> = () => {
           text: "what-is-ether",
         },
         {
+          to: `/wallets/`,
+          text: "ethereum-wallets",
+        },
+        {
           to: `/learn/`,
           text: "guides-and-resources",
         },
@@ -214,6 +218,10 @@ const Footer: React.FC<IProps> = () => {
         {
           text: "bridges",
           to: "/bridges/",
+        },
+        {
+          text: "zero-knowledge-proofs",
+          to: "/zero-knowledge-proofs/",
         },
         {
           text: "energy-consumption",

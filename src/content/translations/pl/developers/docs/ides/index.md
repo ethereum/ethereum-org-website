@@ -27,7 +27,6 @@ Większość utworzonych IDE ma wbudowane wtyczki, aby poprawić jakość pracy 
 **Visual Studio Code —** **_profesjonalne wieloplatformowe środowisko IDE z oficjalną obsługą Ethereum._**
 
 - [Visual Studio Code](https://code.visualstudio.com/)
-- [Blockchain Development Kit for Ethereum](https://marketplace.visualstudio.com/items?itemName=AzBlockchain.azure-blockchain)
 - [Azure Blockchain Workbench](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/microsoft-azure-blockchain.azure-blockchain-workbench?tab=Overview)
 - [Przykłady kodu](https://github.com/Azure-Samples/blockchain/blob/master/blockchain-workbench/application-and-smart-contract-samples/readme.md)
 - [GitHub](https://github.com/microsoft/vscode)

@@ -1,4 +1,4 @@
-import { IntlShape } from "gatsby-plugin-intl"
+import { IntlShape } from "react-intl"
 
 import type { Lang } from "./languages"
 import type { Direction } from "../types"

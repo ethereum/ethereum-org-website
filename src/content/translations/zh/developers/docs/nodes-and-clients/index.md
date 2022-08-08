@@ -104,7 +104,7 @@ sidebarDepth: 2
 
 运行自己的节点可能很难，您不必总是运行自己的实例。 在这种情况下，您可以使用第三方 API 提供商，如 [Infura](https://infura.io)、[Alchemy](https://alchemyapi.io) 或 [QuikNode](https://www.quiknode.io)。 另外，[ArchiveNode](https://archivenode.io/) 是一个社区资助的归档节点，它希望将以太坊区块链上的归档数据带给无法负担它的独立开发者。 有关使用这些服务的概述，请查看[节点即服务](/developers/docs/nodes-and-clients/nodes-as-a-service/)。
 
-如果有人在您的社区运行一个包含公共应用程序接口的以太坊节点，您可以[通过自定义远程过程调用](https://metamask.zendesk.com/hc/en-us/articles/360015290012-Using-a-Local-Node)将您的轻量级钱包（如 Metamask）指向社区节点，并获得比一些随机受信任的第三方更强的隐私性。
+如果有人在您的社区运行一个包含公共应用程序接口的以太坊节点，您可以[通过自定义远程过程调用](https://metamask.zendesk.com/hc/en-us/articles/360015290012-Using-a-Local-Node)将您的轻量级钱包（如 MetaMask）指向社区节点，并获得比一些随机受信任的第三方更强的隐私性。
 
 另一方面，如果您运行一个客户端，则可以与可能需要它的朋友共享。
 
@@ -114,13 +114,13 @@ sidebarDepth: 2
 
 下表概括了不同的客户端。 这些客户端均已通过[客户端测试](https://github.com/ethereum/tests)，它们得到积极维护以保持与网络升级同步。
 
-| 客户端                                                                 | 语言      | 操作系统：            | 网络                                          | 同步策略                     | 状态缓冲        |
-| ---------------------------------------------------------------------- | --------- | --------------------- | --------------------------------------------- | ---------------------------- | --------------- |
-| [Geth](https://geth.ethereum.org/)                                     | 前往      | Linux、Windows、macOS | Mainnet、Görli、Rinkeby、Ropsten              | Snap、Full 同步式模式        | Archive、Pruned |
-| [Nethermind](http://nethermind.io/)                                    | C#, .NET  | Linux、Windows、macOS | Mainnet、Gounderster、Ropsten、Rinkeby 及更多 | Fast、Beam、Archive 同步模式 | Archive、Pruned |
-| [Besu](https://pegasys.tech/solutions/hyperledger-besu/)               | Java      | Linux、Windows、macOS | Mainnet、Rinkeby、Ropsten、Görli 等           | 快速、完整                   | Archive、Pruned |
-| [Erigon](https://github.com/ledgerwatch/erigon)                        | 前往      | Linux、Windows、macOS | Mainnet、Görli、Rinkeby、Ropsten              | Full 同步模式                | Archive、Pruned |
-| [OpenEthereum（已弃用）](https://github.com/openethereum/openethereum) | Rust 语言 | Linux、Windows、macOS | Mainnet、Kovan、Ropsten 及更多                | Warp，完整                   | Archive、Pruned |
+| 客户端                                                                 | 语言     | 操作系统：            | 网络                                          | 同步策略                     | 状态缓冲        |
+| ---------------------------------------------------------------------- | -------- | --------------------- | --------------------------------------------- | ---------------------------- | --------------- |
+| [Geth](https://geth.ethereum.org/)                                     | Go       | Linux、Windows、macOS | Mainnet、Görli、Rinkeby、Ropsten              | Snap、Full 同步式模式        | Archive、Pruned |
+| [Nethermind](http://nethermind.io/)                                    | C#, .NET | Linux、Windows、macOS | Mainnet、Gounderster、Ropsten、Rinkeby 及更多 | Fast、Beam、Archive 同步模式 | Archive、Pruned |
+| [Besu](https://besu.hyperledger.org/en/stable/)                        | Java     | Linux、Windows、macOS | Mainnet、Rinkeby、Ropsten、Görli 等           | 快速、完整                   | Archive、Pruned |
+| [Erigon](https://github.com/ledgerwatch/erigon)                        | Go       | Linux、Windows、macOS | Mainnet、Görli、Rinkeby、Ropsten              | Full 同步模式                | Archive、Pruned |
+| [OpenEthereum（已弃用）](https://github.com/openethereum/openethereum) | Rust     | Linux、Windows、macOS | Mainnet、Kovan、Ropsten 及更多                | Warp，完整                   | Archive、Pruned |
 
 **注意，OpenEthereum [已弃用](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd)并已停止维护。**请谨慎使用，并且最好切换至其他客户端实现。
 
@@ -208,7 +208,7 @@ Erigon 以前称为 TurbohyGeth，是 Go Ethereum 的一个分叉，注重速度
 
 ##### 压缩同步
 
-由 OpenEtherum 执行。 节点定期生成一个共识关键状态快照，任何对等节点都可以通过网络提取这些快照，从而能够从这个节点快速同步。
+由 OpenEthereum 执行。 节点定期生成一个共识关键状态快照，任何对等节点都可以通过网络提取这些快照，从而能够从这个节点快速同步。
 
 - OpenEthereum 的最快和默认同步模式依赖于节点提供的静态快照。
 - 它和快照同步的策略类似，但没有确定的安全效益。
@@ -295,11 +295,11 @@ Erigon 以前称为 TurbohyGeth，是 Go Ethereum 的一个分叉，注重速度
 
 ![图表表明，归档同步所需的 GB 数正呈上升趋势。](./archive-sync.png)
 
-上面的图表显示存储要求的持续变化趋势。 关于 Geth 和 OpenEthereum 的最新数据，请参阅[完全同步数据](https://etherscan. io/chartsync/chaindefault)和[归档同步数据](https://etherscan. io/chartsync/chainarchive)。
+上面的图表显示存储要求的持续变化趋势。 关于 Geth 和 OpenEthereum 的最新数据，请参阅[完全同步数据](https://etherscan.io/chartsync/chaindefault)和[归档同步数据](https://etherscan.io/chartsync/chainarchive)。
 
 ### 在单板计算机上运行以太坊 {#ethereum-on-a-single-board-computer}
 
-运行以太坊节点最方便、最便宜的方法是使用具有 ARM 架构的单板计算机，如 Raspberry Pi。 [Ethereum on ARM](https://twitter. com/EthereumOnARM) 提供了 Geth、OpenEthereum、Nethermind 和 Besu 客户端的映像。 请学习关于[如何构建和设置 ARM 客户端](/developers/tutorials/run-node-raspberry-pi/)的简单教程。
+运行以太坊节点最方便、最便宜的方法是使用具有 ARM 架构的单板计算机，如 Raspberry Pi。 [Ethereum on ARM](https://twitter.com/EthereumOnARM) 提供了 Geth、OpenEthereum、Nethermind 和 Besu 客户端的映像。 请学习关于[如何构建和设置 ARM 客户端](/developers/tutorials/run-node-raspberry-pi/)的简单教程。
 
 诸如此类小型、实惠、高效的设备是在家里运行节点的理想选择。
 

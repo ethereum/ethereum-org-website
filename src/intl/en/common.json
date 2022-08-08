@@ -137,6 +137,7 @@
   "language-it": "Italian",
   "language-ja": "Japanese",
   "language-ka": "Georgian",
+  "language-kk": "Kazakh",
   "language-ko": "Korean",
   "language-lt": "Lithuanian",
   "language-ml": "Malayalam",
@@ -144,6 +145,7 @@
   "language-ms": "Malay",
   "language-nb": "Norwegian",
   "language-nl": "Dutch",
+  "language-ph": "Filipino",
   "language-pl": "Polish",
   "language-pt": "Portuguese",
   "language-pt-br": "Portuguese (Brazilian)",
@@ -271,5 +273,6 @@
   "nft-page": "Non-fungible tokens (NFTs)",
   "decentralized-social-networks": "Decentralized social networks",
   "decentralized-identity": "Decentralized identity",
-  "yes": "Yes"
+  "yes": "Yes",
+  "zero-knowledge-proofs": "Zero-knowledge proofs"
 }

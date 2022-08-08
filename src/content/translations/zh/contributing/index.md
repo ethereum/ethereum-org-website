@@ -1,6 +1,6 @@
 ---
-title: 参与贡献
-description: 了解您可以为 etherum.org 做出贡献的几种方式
+title: 贡献力量
+description: 了解您可以为 ethereum.org 做出贡献的几种方式
 lang: zh
 sidebar: true
 ---
@@ -10,7 +10,7 @@ sidebar: true
 Ethereum.org 网站，像开放的以太坊一样，也是一个开源项目。 如果您想帮助改进[我们介绍以太坊的门户网站](/about/)，您可以通过以下方式提供帮助。
 
 <InfoBanner shouldCenter emoji=":tada:">
-  领取您的出席证明协议代币！ 如果您在 2022 年为 ethereum.org 做出了贡献，我们会给您发放一个独特的 POAP 徽章。{" "}
+  领取您的 POAP 代币！ 如果您在 2022 年为 ethereum.org 做出了贡献，我们会给您发放一个独特的 POAP 徽章。{" "}
 <a href="#poap">有关 POAP 徽章的更多信息</a>
 </InfoBanner>
 
@@ -26,16 +26,17 @@ Ethereum.org 网站，像开放的以太坊一样，也是一个开源项目。 
 - [请求功能](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.md&title=) _– 让我们知道您对新功能或设计的任何想法_
 - [添加词汇表术语](/contributing/adding-glossary-terms) _– 帮助我们继续扩展以太坊[术语](/glossary/)_
 - [创建/编辑内容](/contributing/#how-to-update-content) _– 建议新页面或调整这里已经存在的内容_
-- [添加第二层](/contributing/adding-layer-2) _- 将第二层添加到相关页面_
-- [添加质押产品或服务](/contributing/adding-staking-product/) - _添加有助于促进单独质押、联合质押或质押即服务的项目_
+- [添加二层网络](/contributing/adding-layer-2s/) _- 将二层网络添加到相关页面_
+- [添加质押产品或服务](/contributing/adding-staking-products/) - _添加有助于促进单独质押、联合质押或质押即服务的项目_
+- [添加钱包](/contributing/adding-wallets/) _- 为[查找钱包页面](/wallets/find-wallet/)添加钱包。_
 
 *有任何问题？*🤔 请访问我们的 [Discord 服务器](https://discord.gg/CetY6Y4)
 
-## 如何在 etherum.org 上工作 {#how-to-update-content}
+## 如何在 ethereum.org 上工作 {#how-to-update-content}
 
 无论您是向网站添加内容、创建内容还是处理未解决的问题，您都需要一个 [GitHub](https://github.com) 帐户。
 
-所有更新都是通过 GitHub 拉取请求流程进行的。 这意味着您要在网站上创建本地副本，做出您的更改，以及请求合并您的更改。 如果您以前从未这样做过，请按照我们 [GitHub 存储库](https://github. com/ethereum/ethereum-org-website)底部的说明进行操作。
+所有更新都是通过 GitHub 拉取请求流程进行的。 这意味着您要在网站上创建本地副本，做出您的更改，以及请求合并您的更改。 如果您以前从未这样做过，请按照我们 [GitHub 存储库](https://github.com/ethereum/ethereum-org-website)底部的说明进行操作。
 
 您不需要权限来处理任何事情，但是最好让我们知道您打算做什么。 您可以这样做：
 
@@ -73,7 +74,7 @@ Ethereum.org 网站，像开放的以太坊一样，也是一个开源项目。 
 ### 如何领取 {#how-to-claim}
 
 1. 加入我们的 [Discord 服务器](https://discord.gg/E8dET2ux8y)。
-2. 在 `#🏆 | Poaps` 频道粘贴指向您的贡献内容的链接。
+2. 在 `#🥇 | poaps` 频道粘贴指向您的贡献内容的链接。
 3. 等待我们的团队成员向您发送 POAP 徽章领取链接。
 4. 领取您的 POAP 徽章！
 

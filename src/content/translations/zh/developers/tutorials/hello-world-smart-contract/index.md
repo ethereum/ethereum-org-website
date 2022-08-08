@@ -9,7 +9,7 @@ tags:
   - "智能合约"
   - "入门指南"
   - "部署"
-skill: 入门
+skill: beginner
 lang: zh
 sidebar: true
 published: 2021-03-31
@@ -53,7 +53,7 @@ published: 2021-03-31
 
 ## 步骤 5：查看账户余额 {#step-5}
 
-为了核实我们的余额，可以使用 [Alchemy 的创作者工具](https://composer.alchemyapi.io?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D)发出 [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) 请求。 这将返回我们钱包中的以太币金额。 输入您的 Metamask 帐户地址并单击“发送请求”后，您应该会看到这样的响应：
+为了核实我们的余额，可以使用 [Alchemy 的创作者工具](https://composer.alchemyapi.io?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D)发出 [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) 请求。 这将返回我们钱包中的以太币金额。 输入您的 MetaMask 帐户地址并单击“发送请求”后，您应该会看到这样的响应：
 
 ```json
 { "jsonrpc": "2.0", "id": 0, "result": "0x2B5E3AF16B1880000" }
@@ -201,7 +201,7 @@ contract HelloWorld {
 
 这是一个非常简单的智能合约，创建时存储了一条消息，而且可以通过调用 `update` 功能来更新消息。
 
-## 步骤 11：将 Metamask 和 Alchemy 连接至您的项目 {#step-11}
+## 步骤 11：将 MetaMask 和 Alchemy 连接至您的项目 {#step-11}
 
 我们创建了 MetaMask 钱包、Alchemy 帐户，并且编写了一个智能合约，现在是将这三者连起来的时候了。
 
@@ -215,7 +215,7 @@ contract HelloWorld {
 npm install dotenv --save
 ```
 
-然后，在项目的根目录中创建 `.env` 文件，并将您的 Metamask 私钥和超文本传输协议 Alchemy 应用程序接口网址添加到其中。
+然后，在项目的根目录中创建 `.env` 文件，并将您的 MetaMask 私钥和超文本传输协议 Alchemy 应用程序接口网址添加到其中。
 
 - 遵循[这些说明](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key)导出您的私钥
 - 请从下方获取超文本传输协议 Alchemy 应用程序接口网址

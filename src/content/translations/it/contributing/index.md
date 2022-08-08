@@ -1,5 +1,5 @@
 ---
-title: Contributi
+title: Contribuire
 description: Scopri i vari modi in cui puoi contribuire a ethereum.org
 lang: it
 sidebar: true
@@ -26,8 +26,9 @@ Il sito web di ethereum.org e, più in generale, Ethereum, è un progetto open-s
 - [Richiedi una funzionalità](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.md&title=) _– Condividi con noi le tue idee per nuove funzionalità o design_
 - [Aggiungi un termine del glossario](/contributing/adding-glossary-terms) _– Aiutaci a continuare a espandere il [glossario](/glossary/) di Ethereum_
 - [Crea/modifica contenuti](/contributing/#how-to-update-content) _– Suggerisci nuove pagine o apporta modifiche a quelle già esistenti_
-- [Aggiungi un livello 2](/contributing/adding-layer-2) _- Aggiungi un livello 2 a una pagina rilevante_
-- [Aggiungi un prodotto o servizio di staking](/contributing/adding-staking-product/) - _Aggiungi un progetto che aiuti a facilitare lo staking in solo, in pool o lo staking come un servizio_
+- [Aggiungi un livello 2](/contributing/adding-layer-2s/) _- Aggiungi un livello 2 a una pagina pertinente_
+- [Aggiungi un prodotto o servizio di staking](/contributing/adding-staking-products/) - _Aggiungi un progetto che aiuti a facilitare lo staking in solo, in pool o lo staking come servizio_
+- [Aggiungi un portafoglio](/contributing/adding-wallets/) _- Aggiungi un portafoglio per la [pagina trova portafogli](/wallets/find-wallet/)._
 
 _Hai domande?_ 🤔 Consulta il nostro [server Discord](https://discord.gg/CetY6Y4)
 
@@ -73,7 +74,7 @@ Se il tuo contributo viene inserito su ethereum.org, conieremo per te un POAP di
 ### Come richiederlo {#how-to-claim}
 
 1. Unisciti al nostro [server Discord](https://discord.gg/E8dET2ux8y).
-2. Incolla un link al tuo contributo nel canale `#🏆 | poaps`.
+2. Incolla un link al tuo contributo nel canale `#🥇 | poaps`.
 3. Attendi che un membro del nostro team ti invii un link al tuo POAP.
 4. Richiedi il tuo POAP!
 

@@ -12,7 +12,7 @@ tags:
 skill: beginner
 lang: es
 sidebar: true
-published: 22/04/2021
+published: 2021-04-22
 ---
 
 Este tutorial es la parte 3/3 en la serie de tutoriales NFT, donde vemos nuestros NFT recién acuñados. Sin embargo, puede utilizar el tutorial general para cualquier token ERC-721 usando MetaMask, incluso en la red principal o cualquier red de prueba. Si quiere aprender a acuñar su propio NFT en Ethereum, debería revisar la [parte 1 en Cómo escribir & desplegar un contrato inteligente NFT](/developers/tutorials/how-to-write-and-deploy-an-nft)!

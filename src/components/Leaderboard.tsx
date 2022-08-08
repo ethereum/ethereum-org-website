@@ -64,7 +64,7 @@ const githubUrl = `https://github.com/`
 
 export interface Person {
   name: string
-  username: string
+  username?: string | null
   score: number
 }
 

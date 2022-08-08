@@ -10,7 +10,7 @@ Você precisa compilar seu contrato para que seu aplicativo web e a máquina vir
 
 ## Pré-requisitos {#prerequisites}
 
-Você pode achar útil ler nossa introdução a [ contratos inteligentes](/developers/docs/smart-contracts/) e a [ máquina virtual Ethereum ](/developers/docs/evm/) antes de ler sobre compilação.
+Você pode achar útil ler nossa introdução a [contratos inteligentes](/developers/docs/smart-contracts/) e a [máquina virtual Ethereum](/developers/docs/evm/) antes de ler sobre compilação.
 
 ## A EVM {#the-evm}
 

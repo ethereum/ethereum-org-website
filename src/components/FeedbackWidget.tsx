@@ -1,6 +1,6 @@
 // Library imports
 import React, { useState, useEffect, useRef, useMemo } from "react"
-import { useIntl } from "gatsby-plugin-intl"
+import { useIntl } from "react-intl"
 import styled from "styled-components"
 import FocusTrap from "focus-trap-react"
 // Component imports
@@ -18,7 +18,9 @@ import { useOnClickOutside } from "../hooks/useOnClickOutside"
 import { useKeyPress } from "../hooks/useKeyPress"
 import { useSurvey } from "../hooks/useSurvey"
 
-const FixedDot = styled(NakedButton)`
+const FixedDot = styled(NakedButton)<{
+  bottomOffset: number
+}>`
   width: 3rem;
   aspect-ratio: 1;
   border-radius: 50%;

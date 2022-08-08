@@ -1,7 +1,7 @@
 ---
 title: 翻译计划常见问题 (FAQ)
 lang: zh
-description: 关于 etherum.org 翻译计划的常见问题
+description: 关于 ethereum.org 翻译计划的常见问题
 sidebar: true
 ---
 
@@ -9,11 +9,11 @@ sidebar: true
 
 如果您是翻译计划的新手，而且不知道从何下手，这里的一些常见问题会有所帮助。 使用本指南来寻找常见问题的答案。
 
-## 我是否可以通过翻译 etherum.org 而获得补偿？ {#compensation}
+## 我是否可以通过翻译 ethereum.org 而获得补偿？ {#compensation}
 
-etherum.org 是一个开放源代码的网站，这意味着任何人都可以参与并作出贡献。
+ethereum.org 是一个开放源代码的网站，这意味着任何人都可以参与并作出贡献。
 
-etherum.org 翻译计划是这种做法的延伸，其组织方式考虑到了类似的理念。
+ethereum.org 翻译计划是这种做法的延伸，其组织方式考虑到了类似的理念。
 
 翻译计划的目标是使人人都能访问以太坊的内容，而不论他们使用哪种语言。 它使得任何双语人员都能够参与以太坊生态系统，并以方便的方式作出贡献。
 
@@ -32,7 +32,7 @@ etherum.org 翻译计划是这种做法的延伸，其组织方式考虑到了�
 
 您可以在语句中移动标签的位置，使其在句子中更加自然 – 但请确保移动整个标签。
 
-更多关于处理标签和代码片段的详细信息，请参阅 [etherum.org 翻译风格指南](/contributing/translation-program/translators-guide/#dealing-with-tags)。
+更多关于处理标签和代码片段的详细信息，请参阅 [《ethereum.org 翻译风格指南》](/contributing/translation-program/translators-guide/#dealing-with-tags)。
 
 ## 上下文在哪里？ {#strings}
 

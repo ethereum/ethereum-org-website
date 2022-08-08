@@ -110,7 +110,7 @@ W tabeli przedstawiono podsumowanie poszczególnych klientów. Wszystkie z nich 
 | [Geth](https://geth.ethereum.org/)                           | Go       | Linux, Windows, macOS | Mainnet, Görli, Rinkeby, Ropsten          | Szybka, pełna                  | Archive, Pruned |
 | [OpenEthereum](https://github.com/openethereum/openethereum) | Rust     | Linux, Windows, macOS | Mainnet, Kovan, Ropsten i więcej          | Warp, pełna                    | Archive, Pruned |
 | [Nethermind](http://nethermind.io/)                          | C#, .NET | Linux, Windows, macOS | Mainnet, Görli, Ropsten, Rinkeby I więcej | Szybka, pełna                  | Archive, Pruned |
-| [Besu](https://pegasys.tech/solutions/hyperledger-besu/)     | Java     | Linux, Windows, macOS | Mainnet, Rinkeby, Ropsten, i Görli        | Szybka, pełna                  | Archive, Pruned |
+| [Besu](https://besu.hyperledger.org/en/stable/)              | Java     | Linux, Windows, macOS | Mainnet, Rinkeby, Ropsten, i Görli        | Szybka, pełna                  | Archive, Pruned |
 | [Trinity](https://trinity.ethereum.org/)                     | Python   | Linux, macOS          | Mainnet, Görli, Ropsten, Rinkeby i więcej | Pełna, wiązka, szybka/nagłówek | Archive         |
 
 Więcej informacji o obsługiwanych sieciach znajdziesz w rozdziale [Sieci Ethereum](/developers/docs/networks/).
@@ -153,7 +153,7 @@ Hyperledger Besu to klient Ethereum klasy korporacyjnej dla sieci publicznych i 
 - Szybka (domyślna) – pobiera wszystkie bloki (w tym nagłówki, transakcje i paragony), weryfikuje wszystkie nagłówki i pobiera stan i weryfikuje go w nagłówkach.
 - Lekki – pobiera wszystkie nagłówki bloków, dane bloków i weryfikuje niektóre losowo.
 - Synchronizacja warp – co 5000 bloków, węzły wykonają migawkę o krytycznym znaczeniu dla konsensusu. Każdy węzeł może pobrać te zrzuty w sieci, umożliwiając szybką synchronizację. [Więcej o warp](https://openethereum.github.io/wiki/Warp-Sync-Snapshot-Format)
-- Synchronizacja beam – tryb synchronizacji, który umożliwia szybsze działanie. Nie wymaga długich oczekiwań na synchronizację, zamiast tego wypełnia dane z upływem czasu. [Więcej o beam ](https://medium.com/@jason.carver/intro-to-beam-sync-a0fd168be14a)
+- Synchronizacja beam – tryb synchronizacji, który umożliwia szybsze działanie. Nie wymaga długich oczekiwań na synchronizację, zamiast tego wypełnia dane z upływem czasu. [Więcej o beam](https://medium.com/@jason.carver/intro-to-beam-sync-a0fd168be14a)
 - Synchronizacja nagłówka – możesz użyć zaufanego punktu kontrolnego, aby rozpocząć synchronizację od nowszego nagłówka, a następnie pozostawić to procesowi w tle, aby ostatecznie wypełnić luki
 
 Typ synchronizacji określasz podczas konfiguracji, na przykład:

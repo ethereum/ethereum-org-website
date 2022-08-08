@@ -124,7 +124,7 @@ Mit dem Wachstum und der zunehmenden Beliebtheit von DeFi könnte MEV schon bald
 
 - [Was ist Miner-Extractable Value (MEV)?](https://blog.chain.link/what-is-miner-extractable-value-mev/)
 - [MEV und ich](https://research.paradigm.xyz/MEV)
-- [Etherum ist ein dunkler Wald](https://www.paradigm.xyz/2020/08/ethereum-is-a-dark-forest/)
+- [Ethereum ist ein dunkler Wald](https://www.paradigm.xyz/2020/08/ethereum-is-a-dark-forest/)
 - [Flucht aus dem dunklen Wald](https://samczsun.com/escaping-the-dark-forest/)
 - [Flashbots: Vorläufer in der MEV-Krise](https://medium.com/flashbots/frontrunning-the-mev-crisis-40629a613752)
 - [@bertcmillers MEV-Themen](https://twitter.com/bertcmiller/status/1402665992422047747)

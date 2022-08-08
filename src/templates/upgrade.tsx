@@ -1,13 +1,15 @@
 import React from "react"
 import { graphql, PageProps } from "gatsby"
-import { useIntl } from "gatsby-plugin-intl"
+import { useIntl } from "react-intl"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import styled from "styled-components"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 import ButtonLink from "../components/ButtonLink"
-import ButtonDropdown from "../components/ButtonDropdown"
+import ButtonDropdown, {
+  List as ButtonDropdownList,
+} from "../components/ButtonDropdown"
 import Breadcrumbs from "../components/Breadcrumbs"
 import Card from "../components/Card"
 import Icon from "../components/Icon"
@@ -25,7 +27,9 @@ import PageMetadata from "../components/PageMetadata"
 import Pill from "../components/Pill"
 import RandomAppList from "../components/RandomAppList"
 import Roadmap from "../components/Roadmap"
-import UpgradeTableOfContents from "../components/UpgradeTableOfContents"
+import UpgradeTableOfContents, {
+  Item as ItemTableOfContents,
+} from "../components/UpgradeTableOfContents"
 import Translation from "../components/Translation"
 import TranslationsInProgress from "../components/TranslationsInProgress"
 import SectionNav from "../components/SectionNav"
@@ -42,7 +46,7 @@ import MergeInfographic from "../components/MergeInfographic"
 import FeedbackCard from "../components/FeedbackCard"
 
 import { getLocaleTimestamp } from "../utils/time"
-import { isLangRightToLeft, translateMessageId } from "../utils/translations"
+import { isLangRightToLeft } from "../utils/translations"
 import { getSummaryPoints } from "../utils/getSummaryPoints"
 import { Lang } from "../utils/languages"
 import { Context } from "../types"
@@ -307,7 +311,7 @@ const TitleCard = styled.div`
   }
 `
 
-const dropdownLinks = {
+const dropdownLinks: ButtonDropdownList = {
   text: "page-upgrades-upgrades-guide",
   ariaLabel: "page-upgrades-upgrades-aria-label",
   items: [
@@ -339,7 +343,7 @@ const UpgradePage = ({
     throw new Error("Required `title` property missing for upgrade template")
 
   const isRightToLeft = isLangRightToLeft(mdx.frontmatter.lang as Lang)
-  const tocItems = mdx.tableOfContents?.items
+  const tocItems = mdx.tableOfContents?.items as Array<ItemTableOfContents>
 
   // FIXME: remove this any, currently not sure how to fix the ts error
   const parent: any = mdx.parent
@@ -388,7 +392,7 @@ const UpgradePage = ({
           {mdx.frontmatter.sidebar && tocItems && (
             <UpgradeTableOfContents
               items={tocItems}
-              maxDepth={mdx.frontmatter.sidebarDepth}
+              maxDepth={mdx.frontmatter.sidebarDepth!}
             />
           )}
         </InfoColumn>

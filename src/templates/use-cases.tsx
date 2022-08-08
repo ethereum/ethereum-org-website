@@ -1,5 +1,5 @@
 import React from "react"
-import { useIntl } from "gatsby-plugin-intl"
+import { useIntl } from "react-intl"
 import { graphql, PageProps } from "gatsby"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
@@ -7,7 +7,9 @@ import styled from "styled-components"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 import ButtonLink from "../components/ButtonLink"
-import ButtonDropdown from "../components/ButtonDropdown"
+import ButtonDropdown, {
+  List as ButtonDropdownList,
+} from "../components/ButtonDropdown"
 import BannerNotification from "../components/BannerNotification"
 import Card from "../components/Card"
 import ExpandableCard from "../components/ExpandableCard"
@@ -24,7 +26,9 @@ import PageMetadata from "../components/PageMetadata"
 import Pill from "../components/Pill"
 import RandomAppList from "../components/RandomAppList"
 import Roadmap from "../components/Roadmap"
-import UpgradeTableOfContents from "../components/UpgradeTableOfContents"
+import UpgradeTableOfContents, {
+  Item as ItemTableOfContents,
+} from "../components/UpgradeTableOfContents"
 import TableOfContents from "../components/TableOfContents"
 import TranslationsInProgress from "../components/TranslationsInProgress"
 import Translation from "../components/Translation"
@@ -41,7 +45,7 @@ import YouTube from "../components/YouTube"
 import PreMergeBanner from "../components/PreMergeBanner"
 import FeedbackCard from "../components/FeedbackCard"
 
-import { isLangRightToLeft, translateMessageId } from "../utils/translations"
+import { isLangRightToLeft } from "../utils/translations"
 import { getSummaryPoints } from "../utils/getSummaryPoints"
 import { Lang } from "../utils/languages"
 import { Context } from "../types"
@@ -314,7 +318,7 @@ const UseCasePage = ({
 
   const isRightToLeft = isLangRightToLeft(mdx.frontmatter.lang as Lang)
   const showMergeBanner = !!mdx.frontmatter.preMergeBanner
-  const tocItems = mdx.tableOfContents?.items
+  const tocItems = mdx.tableOfContents?.items as Array<ItemTableOfContents>
   const summaryPoints = getSummaryPoints(mdx.frontmatter)
 
   const { editContentUrl } = siteData.siteMetadata || {}
@@ -337,7 +341,7 @@ const UseCasePage = ({
     useCase = "dao"
   }
 
-  const dropdownLinks = {
+  const dropdownLinks: ButtonDropdownList = {
     text: "template-usecase-dropdown",
     ariaLabel: "template-usecase-dropdown-aria",
     items: [
@@ -392,7 +396,7 @@ const UseCasePage = ({
           </SummaryBox>
           <MobileTableOfContents
             items={tocItems}
-            maxDepth={mdx.frontmatter.sidebarDepth}
+            maxDepth={mdx.frontmatter.sidebarDepth!}
             isMobile={true}
           />
         </TitleCard>
@@ -417,7 +421,7 @@ const UseCasePage = ({
           {mdx.frontmatter.sidebar && tocItems && (
             <UpgradeTableOfContents
               items={tocItems}
-              maxDepth={mdx.frontmatter.sidebarDepth}
+              maxDepth={mdx.frontmatter.sidebarDepth!}
             />
           )}
         </InfoColumn>

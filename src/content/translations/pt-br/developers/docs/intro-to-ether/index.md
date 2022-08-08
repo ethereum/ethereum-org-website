@@ -7,7 +7,7 @@ sidebar: true
 
 ## Pré-requisitos {#prerequisites}
 
-Para ajudá-lo a entender melhor esta página, recomendamos que você leia primeiro [ Introdução ao Ethereum ](/developers/docs/intro-to-ethereum/)
+Para ajudá-lo a entender melhor esta página, recomendamos que você leia primeiro [Introdução ao Ethereum](/developers/docs/intro-to-ethereum/).
 
 ## O que é criptomoeda? {#what-is-a-cryptocurrency}
 

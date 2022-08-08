@@ -8,7 +8,7 @@ tags:
   - "Alchemy"
   - "Solidity"
   - "smart contract"
-skill: principiante
+skill: beginner
 lang: it
 sidebar: true
 published: 2021-04-22
@@ -91,16 +91,16 @@ Nella tua cartella di root, crea un nuovo file chiamato nft-metadata.json e aggi
 {
   "attributes": [
     {
-      "trait_type": "Breed",
+      "trait_type": "Razza",
       "value": "Maltipoo"
     },
     {
-      "trait_type": "Eye color",
+      "trait_type": "Colore occhio",
       "value": "Mocha"
     }
   ],
-  "description": "The world's most adorable and sensitive pup.",
-  "image": "https://gateway.pinata.cloud/ipfs/QmWmvTJmJU3pozR9ZHFmQC2DNDwi2XJtf3QGyYiiagFSWb",
+  "description": "Il cucciolo più adorabile e sensibile al mondo.",
+  "image": "ipfs://QmWmvTJmJU3pozR9ZHFmQC2DNDwi2XJtf3QGyYiiagFSWb",
   "name": "Ramses"
 }
 ```
@@ -192,7 +192,7 @@ Il tuo file mint-nft.js dovrebbe somigliare a questo ora:
 
 Ora che abbiamo creato la nostra transazione, dobbiamo firmarla per inviarla. Ecco dove useremo la nostra chiave privata.
 
-`web3.eth.endSignedTransaction` ci darà l'hash della transazione, che possiamo usare per assicurarci che la nostra transazione sia stata minata e non sia stata eliminata dalla rete. Noterai nella sezione di firma della transazione che abbiamo aggiunto dei controlli degli errori, per poter sapere se la nostra transazione è passata correttamente.
+`web3.eth. endSignedTransaction` ci darà l'hash della transazione, che possiamo usare per assicurarci che la nostra transazione sia stata minata e non sia stata eliminata dalla rete. Noterai nella sezione di firma della transazione che abbiamo aggiunto dei controlli degli errori, per poter sapere se la nostra transazione è passata correttamente.
 
 ```js
 require("dotenv").config()
@@ -246,7 +246,7 @@ async function mintNFT(tokenURI) {
 }
 ```
 
-## Fase 9: chiamare mintNFT ed eseguire il nodo contract-interact.js {#call-mintnft-fn}
+## Fase 9: chiamare mintNFT ed eseguire il nodo mint-nft.js {#call-mintnft-fn}
 
 Ricordi il metadata.json che hai caricato su Pinata? Ottieni il suo hashcode da Pinata e passa il seguente come un parametro alla funzione mintNFT `https://gateway.pinata.cloud/ipfs/<metadata-hash-code>`
 
@@ -299,7 +299,7 @@ async function mintNFT(tokenURI) {
             )
           } else {
             console.log(
-              "Something went wrong when submitting your transaction:",
+              "Qualcosa è andato storto inviando la tua transazione:",
               err
             )
           }
@@ -307,13 +307,11 @@ async function mintNFT(tokenURI) {
       )
     })
     .catch((err) => {
-      console.log("Promise failed:", err)
+      console.log("Promessa fallita:", err)
     })
 }
 
-mintNFT(
-  "https://gateway.pinata.cloud/ipfs/QmYueiuRNmL4MiA2GwtVMm6ZagknXnSpQnB3z2gWbz36hP"
-)
+mintNFT("ipfs://QmYueiuRNmL4MiA2GwtVMm6ZagknXnSpQnB3z2gWbz36hP")
 ```
 
 Ora, esegui `scripts/mint-nft.js` per distribuire il tuo NFT. Dopo qualche secondo, dovresti vedere una risposta come questa nel tuo terminale:

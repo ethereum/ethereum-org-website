@@ -8,7 +8,7 @@ tags:
   - "Alchemy"
   - "Solidity"
   - "smart contract"
-skill: principiante
+skill: beginner
 lang: it
 sidebar: true
 published: 2021-04-22
@@ -18,17 +18,17 @@ Ora che gli NFT rendono nota la blockchain al grande pubblico, si presenta un'ec
 
 Alchemy è estremamente orgogliosa di supportare i più grandi nomi nello spazio degli NFT, tra cui Makersplace (ha recentemente toccato un record nella vendita di opere d'arte digitali a Christie, per $69 milioni), Dapper Labs (creatori di NBA Top Shot e Crypto Kitties), OpenSea (il più grande mercato di NFT al mondo), Zora, Super Rare, NFTfi, Foundation, Enjin, Origin Protocol, Immutable e altri.
 
-In questo tutorial, ti guideremo verso la creazione e distribuzione di uno smart contract ERC-721 sulla rete di prova di Ropsten usando [MetaMask](https://metamask.io/), [Solidity](https://docs.soliditylang.org/en/v0.8.0/), [Hardhat](https://hardhat.org/), [Pinata](https://pinata.cloud/) e [Alchemy](https://dashboard.alchemyapi.io/signup) (non preoccuparti se ancora non capisci che significa; te lo spiegheremo!).
+In questo tutorial, ti guideremo verso la creazione e distribuzione di uno smart contract ERC-721 sulla rete di prova di Ropsten usando [MetaMask](https://metamask.io/), [Solidity](https://docs.soliditylang.org/en/v0.8.0/), [Hardhat](https://hardhat.org/), [Pinata](https://pinata.cloud/) e [Alchemy](https://alchemy.com/signup/eth) (non preoccuparti se ancora non capisci che significa; te lo spiegheremo!).
 
 Nella Parte 2 di questo tutorial affronteremo come possiamo usare il nostro smart contract per coniare un NFT e nella Parte 3 spiegheremo come visualizzare il tuo NFT su MetaMask.
 
-E, ovviamente, se in qualsiasi momento hai domande, non esitare a contattarci nel [Discord di Alchemy](https://discord.gg/gWuC7zB)!
+E, ovviamente, se in qualsiasi momento hai domande, non esitare a contattarci nel [Discord di Alchemy](https://discord.gg/gWuC7zB) o consulta [la documentazione sulle NFT API di Alchemy](https://docs.alchemy.com/alchemy/enhanced-apis/nft-api)!!
 
 ## Fase 1: connettersi alla rete di Ethereum {#connect-to-ethereum}
 
-Ci sono molti modi per effettuare richieste alla Blockchain di Ethereum, ma per rendere le cose facili, useremo un profilo gratuito su [Alchemy](https://dashboard.alchemyapi.io/signup), una piattaforma per sviluppatori della blockchain e API che ci consente di comunicare con la chain di Ethereum senza dover eseguire dei nodi nostri.
+Ci sono molti modi per effettuare richieste alla Blockchain di Ethereum, ma per rendere le cose facili, useremo un profilo gratuito su [Alchemy](https://alchemy.com/signup/eth), una piattaforma per sviluppatori della blockchain e API che ci consente di comunicare con la chain di Ethereum senza dover eseguire dei nodi nostri.
 
-In questo tutorial, approfitteremo anche degli strumenti per monitoraggio e analisi per sviluppatori messi a disposizione da Alchemy per comprendere cosa succede dietro le quinte quando distribuiamo il nostro smart contract. Se non hai già un profilo di Alchemy, puoi iscriverti gratuitamente [qui](https://dashboard.alchemyapi.io/signup).
+In questo tutorial, approfitteremo anche degli strumenti per monitoraggio e analisi per sviluppatori messi a disposizione da Alchemy per comprendere cosa succede dietro le quinte quando distribuiamo il nostro smart contract. Se non hai già un profilo di Alchemy, puoi iscriverti gratuitamente [qui](https://alchemy.com/signup/eth).
 
 ## Fase 2: crea la tua app (e chiave API) {#make-api-key}
 
@@ -54,13 +54,13 @@ Puoi scaricare e creare gratuitamente un account MetaMask [qui](https://metamask
 
 ## Fase 4: aggiungi ether da un Faucet {#step-4-add-ether-from-a-faucet}
 
-Per poter distribuire il nostro smart contract alla rete di prova, avremo bisogno di di ETH finti. Per ottenere ETH puoi andare al [faucet di Ropsten](https://faucet.ropsten.be/) e inserire l'indirizzo del tuo profilo di Ropsten, poi clicca su “Invia ETH a Ropsten.” Subito dopo dovresti vedere gli ETH nel tuo account MetaMask!
+Per poter distribuire il nostro smart contract alla rete di prova, avremo bisogno di di ETH finti. Per ottenere ETH, puoi andare all'indirizzo [FaucETH](https://fauceth.komputing.org) e inserire l'indirizzo del tuo account Ropsten, cliccare su "Richiedi fondi", poi selezionare "Ethereum Testnet Ropsten" nel menu a tendina e, infine, cliccare nuovamente il pulsante "Richiedi fondi". Subito dopo dovresti vedere gli ETH nel tuo account MetaMask!
 
 ## Fase 5: controlla il saldo {#check-balance}
 
 Per ricontrollare che ci sia il saldo, facciamo una richiesta [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) usando lo [strumento compositore di Alchemy](https://composer.alchemyapi.io?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). Questo restituirà l'importo di ETH nel nostro portafoglio. Dopo aver inserito l'indirizzo del tuo account di MetaMask e aver cliccato “Invia richiesta”, dovresti vedere una risposta come questa:
 
-    {"jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000"}
+    `{"jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000"}`
 
 **NOTA:** Questo risultato è in wei non in ETH. Wei è usato come taglio più piccolo dell'ether. La conversione da wei a ETH è: 1 eth = 10<sup>18</sup> wei. Quindi se convertiamo 0xde0b6b3a7640000 in decimali, otteniamo 1\*10<sup>18</sup> wei, pari a 1 ETH.
 
@@ -131,7 +131,7 @@ Dovresti poi vedere un messaggio di benvenuto e l'opzione per selezionare cosa d
     888    888 888  888 888    Y88b 888 888  888 888  888 Y88b.
     888    888 "Y888888 888     "Y88888 888  888 "Y888888  "Y888
     👷 Welcome to Hardhat v2.0.11 👷‍
-    ? What do you want to do? …
+    ? Cosa vuoi fare? …
     Create a sample project
     ❯ Create an empty hardhat.config.js
     Quit
@@ -160,7 +160,7 @@ Apri il progetto my-nft nel tuo editor preferito (a noi piace [VSCode](https://c
 2. Segue il codice dello smart contract del nostro NFT, che abbiamo basato sull'implementazione ERC-721 della libreria di [OpenZeppelin](https://docs.openzeppelin.com/contracts/3.x/erc721). Copia e incolla i seguenti contenuti nel tuo file MyNFT.sol.
 
    ```solidity
-   //Contract based on [https://docs.openzeppelin.com/contracts/3.x/erc721](https://docs.openzeppelin.com/contracts/3.x/erc721)
+   //Contratto basato su [https://docs.openzeppelin.com/contracts/3.x/erc721](https://docs.openzeppelin.com/contracts/3.x/erc721)
    // SPDX-License-Identifier: MIT
    pragma solidity ^0.8.0;
 
@@ -173,7 +173,7 @@ Apri il progetto my-nft nel tuo editor preferito (a noi piace [VSCode](https://c
        using Counters for Counters.Counter;
        Counters.Counter private _tokenIds;
 
-       constructor() public ERC721("MyNFT", "NFT") {}
+       constructor() ERC721("MyNFT", "NFT") {}
 
        function mintNFT(address recipient, string memory tokenURI)
            public onlyOwner
@@ -206,7 +206,7 @@ Dopo le nostre dichiarazioni d'importazione, abbiamo il nostro smart contract NF
 
 Nel nostro costruttore ERC-721, noterai che passiamo 2 stringhe, “MyNFT” e “NFT.” La prima variabile è il nome dello smart contract mentre la seconda è il suo simbolo. Puoi assegnare a ciascuna di queste variabili il nome che desideri!
 
-Infine, abbiamo la nostra funzione `mintNFT(address recipient, string memory uri)` che ci consente di coniare un NFT! Noterai che questa funzione usa due variabili:
+Infine, abbiamo la nostra funzione `mintNFT(address recipient, string tokenURI)` che ci consente di coniare un NFT! Noterai che questa funzione usa due variabili:
 
 - `address recipient` specifica l'indirizzo che riceverà il tuo NFT appena coniato
 
@@ -226,7 +226,7 @@ Prima, installa il pacchetto dotenv nella cartella del tuo progetto:
 
     npm install dotenv --save
 
-Poi, crea un file .env nella cartella di root del nostro progetto e aggiungi la tua chiave privata di MetaMask e l'URL API di Alchemy HTTP.
+Poi, crea un file `.env` nella cartella di root del nostro progetto e aggiungi la tua chiave privata di MetaMask e l'URL API di Alchemy HTTP.
 
 - Segui [queste istruzioni](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key) per esportare la tua chiave privata da MetaMask
 
@@ -234,12 +234,16 @@ Poi, crea un file .env nella cartella di root del nostro progetto e aggiungi la 
 
 ![Copia l'URL dell'API di Alchemy](./copy-alchemy-api-url.gif)
 
-Il codice dovrebbe ora somigliare a questo:
+Il tuo `.env` dovrebbe somigliare a questo:
 
     API_URL="https://eth-ropsten.alchemyapi.io/v2/your-api-key"
     PRIVATE_KEY="your-metamask-private-key"
 
 Per connetterli realmente al nostro codice, faremo riferimento a queste variabili nel nostro file hardhat.config.js nella fase 13.
+
+<InfoBanner isWarning={true}>
+Non eseguire il commit di <code>.env</code>! Assicurati di non condividere o esporre mai il tuo file <code>.env</code> con nessuno, poiché così facendo comprometteresti i tuoi segreti. Se stai usando il controllo di versione, aggiungi il tuo <code>.env</code> a un file <a href="https://git-scm.com/docs/gitignore">gitignore</a>.
+</InfoBanner>
 
 ## Fase 12: installa Ethers.js {#install-ethers}
 
@@ -266,7 +270,7 @@ Aggiorna il tuo hardhat.config.js affinché somigli a questo:
     require("@nomiclabs/hardhat-ethers");
     const { API_URL, PRIVATE_KEY } = process.env;
     module.exports = {
-       solidity: "0.8.0",
+       solidity: "0.8.1",
        defaultNetwork: "ropsten",
        networks: {
           hardhat: {},
@@ -331,7 +335,7 @@ Vorrai poi vedere qualcosa del genere:
 
     Contract deployed to address: 0x81c587EB0fE773404c42c1d2666b5f557C470eED
 
-Se andiamo a [Ropsten etherscan](https://ropsten.etherscan.io/) e cerchiamo l'indirizzo del nostro contratto, dovremmo poter vedere che è stato distribuito correttamente. La transazione somiglierà a questa:
+Se andiamo a [Ropsten etherscan](https://ropsten.etherscan.io/) e cerchiamo l'indirizzo del nostro contratto, dovremmo poter vedere che è stato distribuito correttamente. Se non riesci a vederlo immediatamente, attendi un po', poiché potrebbe essere necessario un po' di tempo. La transazione somiglierà a questa:
 
 ![Visualizza l'indirizzo della tua transazione su Etherscan](./etherscan-transaction.png)
 

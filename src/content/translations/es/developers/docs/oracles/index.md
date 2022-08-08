@@ -431,8 +431,8 @@ _Nos encantaría tener más documentación sobre la creación de un contrato int
 - [¿Qué es un oráculo de cadena de bloques?](https://betterprogramming.pub/what-is-a-blockchain-oracle-f5ccab8dbd72) - _Patrick Collins_
 - [Oráculos descentralizados: descripción completa](https://medium.com/fabric-ventures/decentralised-oracles-a-comprehensive-overview-d3168b9a8841) – _Julien Thevenard_
 - [Implementación de un oráculo de cadena de bloques en Ethereum](https://medium.com/@pedrodc/implementing-a-blockchain-oracle-on-ethereum-cedc7e26b49e) – _Pedro Costa_
-- [¿Por qué los contratos inteligentes no pueden hacer llamadas a API?](https://ethereum. stackexchange. com/questions/301/why-cant-contracts-make-api-calls) - _StackExchange_
-- [¿Por qué necesitamos oráculos descentralizados ](https://newsletter.banklesshq.com/p/why-we-need-decentralized-oracles) - _Bankless_
+- [¿Por qué los contratos inteligentes no pueden hacer llamadas a API?](https://ethereum.stackexchange.com/questions/301/why-cant-contracts-make-api-calls) - _StackExchange_
+- [¿Por qué necesitamos oráculos descentralizados](https://newsletter.banklesshq.com/p/why-we-need-decentralized-oracles) - _Bankless_
 - [Así que quiere usar un oráculo de precios](https://samczsun.com/so-you-want-to-use-a-price-oracle/) - _samczsun_
 
 **Videos**

@@ -97,9 +97,16 @@
           to: /developers/docs/smart-contracts/compiling/
         - id: docs-nav-deploying-smart-contracts
           to: /developers/docs/smart-contracts/deploying/
+        - id: docs-nav-verifying-smart-contracts
+          to: /developers/docs/smart-contracts/verifying/
+        - id: docs-nav-upgrading-smart-contracts
+          to: /developers/docs/smart-contracts/upgrading/
         - id: docs-nav-smart-contract-security
           to: /developers/docs/smart-contracts/security/
           description: docs-nav-smart-contract-security-description
+        - id: docs-nav-smart-contract-formal-verification
+          to: /developers/docs/smart-contracts/formal-verification/
+          description: docs-nav-smart-contract-formal-verification-description
         - id: docs-nav-composability
           to: /developers/docs/smart-contracts/composability/
     - id: docs-nav-development-networks
@@ -196,6 +203,9 @@
           to: /developers/docs/scaling/plasma/
         - id: docs-nav-scaling-validium
           to: /developers/docs/scaling/validium/
+    - id: docs-nav-data-availability
+      to: /developers/docs/data-availability/
+      description: docs-nav-data-availability-description
     - id: docs-nav-networking-layer
       to: /developers/docs/networking-layer/
       description: docs-nav-networking-layer-description
