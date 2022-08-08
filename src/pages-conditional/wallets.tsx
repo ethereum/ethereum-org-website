@@ -245,7 +245,7 @@ const WalletsPage = ({
         description={translateMessageId("page-wallets-meta-description", intl)}
         image={getImage(data.ogImage)?.images.fallback.src}
       />
-      <PageHero content={heroContent} />
+      <PageHero content={heroContent} isReverse />
       <StyledGrayContainer>
         <Intro>
           <H2>

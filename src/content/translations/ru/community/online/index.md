@@ -15,7 +15,6 @@ lang: ru
 <SocialListItem socialIcon="reddit"><Link to="https://www.reddit.com/r/ethfinance/">r/ethfinance</Link> — финансовая сторона Ethereum, включая децентрализованные финансы (DeFi)</SocialListItem>
 <SocialListItem socialIcon="reddit"><Link to="https://www.reddit.com/r/ethdev/">r/ethdev</Link> — главным образом, развитие Ethereum</SocialListItem>
 <SocialListItem socialIcon="reddit"><Link to="https://www.reddit.com/r/ethtrader/">r/ethtrader</Link> — анализ рынка и тенденций</SocialListItem>
-<SocialListItem socialIcon="reddit"><Link to="https://www.reddit.com/r/EtherMining/">r/EtherMining</Link> — главным образом, обеспечение безопасности сети Ethereum (майнинг)</SocialListItem>
 <SocialListItem socialIcon="reddit"><Link to="https://www.reddit.com/r/ethstaker/">r/ethstaker</Link> — введение для всех заинтересованных в стейкинге в Ethereum</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://ethereum-magicians.org">Fellowship of Ethereum Magicians</Link> — сообщество, обсуждающее технические стандарты Ethereum</SocialListItem>
 <SocialListItem socialIcon="stackExchange"><Link to="https://ethereum.stackexchange.com">Ethereum Stackexchange</Link> — обсуждения и помощь разработчикам Ethereum</SocialListItem>

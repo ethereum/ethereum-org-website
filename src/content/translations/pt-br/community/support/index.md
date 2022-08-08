@@ -107,4 +107,4 @@ Transações em Ethereum podem algumas vezes ficar bloqueadas se você tiver env
 
 #### Como minero Ethereum? {#mining-ethereum}
 
-Não recomendamos comprar equipamentos de mineração, se você ainda não está minerando Ethereum. A [fusão](/upgrades/merge/) que ocorrerá cerca do 2º trimestre de 2022 fará a transição do Ethereum da prova de trabalho para a prova de participação. Esta mudança significa que a mineração de Ethereum não será mais possível. Se você ainda está interessado em minerar o Ethereum, poderá procurar ajuda em comunidades de mineração, como [/r/EtherMining](https://www.reddit.com/r/EtherMining/).
+Não recomendamos comprar equipamentos de mineração, se você ainda não está minerando Ethereum. A [fusão](/upgrades/merge/) que ocorrerá cerca do 2º trimestre de 2022 fará a transição do Ethereum da prova de trabalho para a prova de participação. Esta mudança significa que a mineração de Ethereum não será mais possível.

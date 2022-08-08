@@ -15,7 +15,6 @@ lang: ja
 <SocialListItem socialIcon="reddit"><Link to="https://www.reddit.com/r/ethfinance/">r/ethfinance</Link> - 分散型金融(DeFi)などイーサリアムの金融面</SocialListItem>
 <SocialListItem socialIcon="reddit"><Link to="https://www.reddit.com/r/ethdev/">r/ethdev</Link> - イーサリアム開発</SocialListItem>
 <SocialListItem socialIcon="reddit"><Link to="https://www.reddit.com/r/ethtrader/">r/ethtrader</Link> - トレンドと市場分析</SocialListItem>
-<SocialListItem socialIcon="reddit"><Link to="https://www.reddit.com/r/EtherMining/">r/EtherMining</Link> - イーサリアムネットワーク(マイニング)のセキュリティ</SocialListItem>
 <SocialListItem socialIcon="reddit"><Link to="https://www.reddit.com/r/ethstaker/">r/ethstaker</Link> - イーサリアムのステーキングに関心のある方向け</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://ethereum-magicians.org">Fellowship of Ethereum Magicians</Link> - イーサリアムの技術規格に関するコミュニティ</SocialListItem>
 <SocialListItem socialIcon="stackExchange"><Link to="https://ethereum.stackexchange.com">Ethereum Stackexchange</Link> - イーサリアム開発者向けの議論とサポート</SocialListItem>
