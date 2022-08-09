@@ -36,8 +36,8 @@ Read more about the ethereum.org Translation Program [mission and vision](/contr
 
 ### Our progress so far {#our-progress}
 
-- [**3,700 +** translators](/contributing/translation-program/contributors/)
-- [**46** languages live on site](/languages/)
+- [**3,800 +** translators](/contributing/translation-program/contributors/)
+- [**48** languages live on site](/languages/)
 - [**2.9 million** words translated in 2021](/contributing/translation-program/acknowledgements/)
 - [**1.9 million** words translated in 2022 so far](/contributing/translation-program/acknowledgements/)
 
@@ -55,7 +55,7 @@ Our community of contributors is actively translating multiple high-impact websi
 
 #### Ethereum.org {#ethereumorg}
 
-![Ethereum.org homepage](./ethereum-org-screenshot.png)
+![](./ethereum-org-screenshot.png)
 
 [Ethereum.org](/) is a key educational resource for the Ethereum community and is the primary focus of the Translation Program. Given the size, scope, and reach of the website, it's the most impactful site to translate and we recommend starting here!
 
@@ -67,7 +67,7 @@ Get involved:
 
 ![Staking Launchpad homepage](./launchpad-screenshot.png)
 
-The [Ethereum Staking Launchpad](https://launchpad.ethereum.org/en/) enables Ethereum users to become validators and help secure the future of Ethereum by staking ETH.
+The [](https://launchpad.ethereum.org/en/) enables Ethereum users to become validators and help secure the future of Ethereum by staking ETH.
 
 Get involved:
 
@@ -76,7 +76,7 @@ Get involved:
 
 #### Ethereum Foundation blog {#ethereum-foundation-blog}
 
-![Ethereum Foundation blog homepage](./blog-screenshot.png)
+![](./blog-screenshot.png)
 
 The [Ethereum Foundation blog](https://blog.ethereum.org/) is the primary publication tool for many EF-supported teams and is the source of announcements, updates, reports, roundups, and other public communication for the Ethereum community.
 
