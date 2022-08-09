@@ -59,10 +59,10 @@ Some consensus clients have built-in tools for spinning up local Beacon chains f
 
 ### Public Beacon Test-chains {#public-beacon-testchains}
 
-There are also public test implementations of the Beacon Chain. The recommended testnet with long-term support is Goerli (which will merge with the Prater chain in August 2022). The Ropsten Chain was recently merged with its own Beacon Chain and is currently still available for testing consensus client implementations and post-merge application development.
+There are also public test implementations of the Beacon Chain. The recommended testnet with long-term support is Prater (which will eventually merge with the Goerli chain). The Ropsten Chain was recently merged with its own Beacon Chain and is currently still available for testing consensus client implementations and post-merge application development.
 
-- [Goerli Staking Launchpad](https://goerli.launchpad.ethereum.org/)
-- [Ropsten Staking Launchpad](https://ropsten.launchpad.ethereum.org/)
+- [Prater Staking Launchpad](https://prater.launchpad.ethereum.org/en/)
+- [Ropsten Staking Launchpad](https://ropsten.launchpad.ethereum.org/en/)
 
 ## Further reading {#further-reading}
 

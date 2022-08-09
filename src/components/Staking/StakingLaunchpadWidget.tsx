@@ -64,7 +64,7 @@ const StakingLaunchpadWidget: React.FC<IProps> = () => {
   const data = {
     testnet: {
       label: "Goerli/Prater testnet",
-      url: "https://goerli.launchpad.ethereum.org",
+      url: "https://prater.launchpad.ethereum.org",
     },
     mainnet: {
       label: "Mainnet",
