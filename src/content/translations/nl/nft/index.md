@@ -11,7 +11,7 @@ alt: Een Eth-logo dat via een hologram wordt weergegeven.
 summaryPoint1: Een manier om iets unieks te vertegenwoordigen als een op Ethereum gebaseerd activum.
 summaryPoint2: NFT's geven meer macht aan contentmakers dan ooit tevoren.
 summaryPoint3: Mogelijk gemaakt door slimme contracten op de Ethereum-blockchain.
-preMergeBanner: waar
+preMergeBanner: true
 ---
 
 NFT's veroveren momenteel de wereld van digitale kunst en verzamelobjecten. Digitale kunstenaars zien hun leven veranderen dankzij de enorme verkoop aan nieuw crypto-publiek. Beroemdheden doen ook mee omdat ze een nieuwe kans zien om in contact te komen met fans. Maar digitale kunst is slechts één manier om NFT's te gebruiken. Eigenlijk kunnen ze worden gebruikt om eigendom van unieke activa te vertegenwoordigen, zoals een eigendomsbewijs voor een item in het digitale of fysieke domein.
