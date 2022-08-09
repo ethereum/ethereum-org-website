@@ -62,7 +62,7 @@
   "page-stablecoins-bank-apy-source": "由美國聯邦政府所擔保的銀行定存基礎平均利率。",
   "page-stablecoins-bank-apy-source-link": "來源",
   "page-stablecoins-bitcoin-pizza": "惡名昭彰的比特幣披薩",
-  "page-stablecoins-bitcoin-pizza-body": "2010 年，有人以 10000 比特幣購入 2 片披薩。當時這筆金額大約為 $41 美金，在今天價值上百萬美金。以太坊歷史上也有許多類似不堪回首的交易。穩定幣解決了這個問題，在您享用披薩的同時並保有您的以太幣。",
+  "page-stablecoins-bitcoin-pizza-body": "2010 年，有人以 10,000 比特幣購入 2 片披薩。當時這筆金額大約為 $41 美金，在今天價值上百萬美金。以太坊歷史上也有許多類似不堪回首的交易。穩定幣解決了這個問題，在您享用披薩的同時並保有您的以太幣。",
   "page-stablecoins-coin-price-change": "價格變化 (過去 30 天)",
   "page-stablecoins-crypto-backed": "由加密貨幣擔保",
   "page-stablecoins-crypto-backed-con-1": "與法定貨幣擔保穩定幣相比較為不安定。",
@@ -134,7 +134,7 @@
   "page-stablecoins-top-coins-intro": "市值為",
   "page-stablecoins-top-coins-intro-code": "存在的代幣總額乘上每枚代幣的價值。此列表是動態的，列於此的專案未必由 ethereum.org 團隊背書。",
   "page-stablecoins-types-of-stablecoin": "運作方式：穩定幣類型",
-  "page-stablecoins-usdc-banner-body": "USDC 可能是最受歡迎的法定貨幣擔保穩定幣，價值約 $1 美金，由 Circle 和 Coinbase 擔保。",
+  "page-stablecoins-usdc-banner-body": "USDC 代幣可能是最受歡迎的法定貨幣擔保穩定幣，價值約 $1 美元，由 Circle 和 Coinbase 擔保。",
   "page-stablecoins-usdc-banner-learn-button": "了解關於 USDC",
   "page-stablecoins-usdc-banner-swap-button": "以太幣換成 USDC",
   "page-stablecoins-usdc-banner-title": "USDC",
@@ -142,5 +142,5 @@
   "page-stablecoins-why-stablecoins": "為何選擇穩定幣？",
   "page-stablecoins-how-they-work-button": "運作原理",
   "page-stablecoins-why-stablecoins-body": "以太幣如同比特幣，因為是一種新科技，價格容易變動。所以您可能不會想要經常花費以太幣，穩定幣具傳統貨幣的穩定性，讓您有可以在以太坊使用的穩定金錢。",
-  "page-stablecoins-more-defi-button": "更多關於去中心化金融 (Defi)"
+  "page-stablecoins-more-defi-button": "更多關於去中心化金融 (DeFi)"
 }
