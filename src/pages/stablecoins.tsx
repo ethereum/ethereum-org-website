@@ -331,7 +331,7 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
     () => ({
       USDT: { type: FIAT, url: "https://tether.to/" },
       USDC: { type: FIAT, url: "https://www.coinbase.com/usdc" },
-      DAI: { type: CRYPTO, url: "https://oasis.app/dai" },
+      DAI: { type: CRYPTO, url: "https://kb.oasis.app/help/what-is-dai" },
       BUSD: { type: FIAT, url: "https://www.binance.com/en/busd" },
       PAX: { type: FIAT, url: "https://www.paxos.com/pax/" },
       TUSD: { type: FIAT, url: "https://www.trusttoken.com/trueusd" },
@@ -722,7 +722,10 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
                       </ButtonLink>
                     </div>
                     <div>
-                      <ButtonLink isSecondary to="https://oasis.app/dai">
+                      <ButtonLink
+                        isSecondary
+                        to="https://kb.oasis.app/help/what-is-dai"
+                      >
                         <Translation id="page-stablecoins-dai-banner-learn-button" />
                       </ButtonLink>
                     </div>
