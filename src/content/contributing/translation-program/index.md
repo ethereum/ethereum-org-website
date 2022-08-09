@@ -20,6 +20,7 @@ The ethereum.org Translation Program is open and anyone can contribute!
 2. Select the language you want to contribute to.
 3. Before starting, please check out the [How to translate](/contributing/translation-program/how-to-translate/) guide to learn how to use Crowdin, and the [Translation Style Guide](/contributing/translation-program/translators-guide/) for tips and best practices.
 4. Machine translations will not be approved.
+5. All translations are reviewed before being added to the site, so there will be a short delay before your translations go live.
 
 <ButtonLink to="https://crowdin.com/project/ethereum-org/invite">
   Start translating
@@ -54,6 +55,8 @@ Our community of contributors is actively translating multiple high-impact websi
 
 #### Ethereum.org {#ethereumorg}
 
+![Ethereum.org homepage](./ethereum-org-screenshot.png)
+
 [Ethereum.org](/) is a key educational resource for the Ethereum community and is the primary focus of the Translation Program. Given the size, scope, and reach of the website, it's the most impactful site to translate and we recommend starting here!
 
 Get involved:
@@ -61,6 +64,8 @@ Get involved:
 - Join the [ethereum.org translations project in Crowdin](https://crowdin.com/project/ethereum-org/invite)
 
 #### Ethereum Staking Launchpad {#ethereum-staking-launchpad}
+
+![Staking Launchpad homepage](./launchpad-screenshot.png)
 
 The [Ethereum Staking Launchpad](https://launchpad.ethereum.org/en/) enables Ethereum users to become validators and help secure the future of Ethereum by staking ETH.
 
@@ -70,6 +75,8 @@ Get involved:
 - Join the [Launchpad translations project in Crowdin](https://crowdin.com/project/ethereum-staking-launchpad)
 
 #### Ethereum Foundation blog {#ethereum-foundation-blog}
+
+![Ethereum Foundation blog homepage](./blog-screenshot.png)
 
 The [Ethereum Foundation blog](https://blog.ethereum.org/) is the primary publication tool for many EF-supported teams and is the source of announcements, updates, reports, roundups, and other public communication for the Ethereum community.
 
