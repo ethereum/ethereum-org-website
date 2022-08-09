@@ -25,7 +25,7 @@ Typically standards are introduced as [Ethereum Improvement Proposals](/eips/) (
 
 There are 3 types of EIPs:
 
-- [Standards Track](https://eips.ethereum.org/): describes any change that affects most or all Ethereum implementations
+- Standards Track: describes any change that affects most or all Ethereum implementations
 - [Meta Track](https://eips.ethereum.org/meta): describes a process surrounding Ethereum or proposes a change to a process
 - [Informational Track](https://eips.ethereum.org/informational): describes an Ethereum design issue or provides general guidelines or information to the Ethereum community
 
