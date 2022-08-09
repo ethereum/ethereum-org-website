@@ -1,5 +1,5 @@
 ---
-title: Finance décentralisée (DeFi)
+title: Finance Décentralisée (DeFi)
 description: Un aperçu de la DeFi sur Ethereum
 lang: fr
 template: use-cases
@@ -346,7 +346,7 @@ DeFi est un mouvement open source. Les protocoles et applications DeFi sont ouve
 ### Vidéos {#videos}
 
 - [Finematics - decentralized finance education](https://finematics.com/) _vidéos de DeFi_
-- [The Defiant](https://www.youtube.com/playlist?list=PLaDcID4s1KronHMKojfjwiHL0DdQEPDcq) – _DeFi basics: Everything you need to know to get started in this occasionally baffling space_.
+- [The Defiant](https://www.youtube.com/playlist?list=PLaDcID4s1KronHMKojfjwiHL0DdQEPDcq) – _DeFi basics: Everything you need to know to get started in this occasionally baffling space_
 - [Whiteboard Crypto](https://youtu.be/17QRFlml4pA) _What is DeFi?_
 
 ### Communautés {#communities}
