@@ -11,6 +11,7 @@ alt: Hologram aracılığıyla görüntülenen bir Eth logosu.
 summaryPoint1: Benzersiz bir şeyi Ethereum tabanlı bir varlık olarak göstermenin yolu.
 summaryPoint2: NFT'ler içerik oluşturuculara her zamankinden daha fazla güç veriyor.
 summaryPoint3: Ethereum blok zincirindeki akıllı sözleşmelerle desteklenmektedir.
+preMergeBanner: doğru
 ---
 
 NFT'ler şu anda dijital sanat ve koleksiyon dünyasını kasıp kavuruyor. Yeni bir kripto kitlesine yapılan büyük satışlar sayesinde dijital sanatçıların hayatları değişiyor. Ve hayranlarla bağlantı kurmak için yeni bir fırsat bulan ünlüler de katılıyor. Ancak dijital sanat, NFT'leri kullanmanın yollarından sadece biridir. Aslında dijital veya fiziksel dünyadaki bir öğenin tapusu gibi, herhangi bir benzersiz varlığın sahipliğini temsil etmek için kullanılabilirler.
@@ -33,7 +34,7 @@ NFT'ler ve Ethereum, bugün internette var olan bazı sorunları çözüyor. Her
 
 Bugün çoğumuzun kullandığı internete kıyasla NFT'lerin interneti şu şekilde görünüyor...
 
-### Bir karşılaştırma {#nft-comparison}
+### Karşılaştırma {#nft-comparison}
 
 | NFT interneti                                                                                                                                                                                                     | Günümüz interneti                                                                                                                                                                            |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -55,6 +56,12 @@ NFT dünyası nispeten yenidir. Teoride, NFT'lerin kapsamı, kanıtlanabilir sah
 - [Dijital bir koleksiyon parçası](https://www.larvalabs.com/cryptopunks/details/1)
 - [Bir alan adı](https://app.ens.domains/name/ethereum.eth)
 - [Bir etkinliğe veya kupona erişmenizi sağlayan bir bilet](https://www.yellowheart.io/)
+- [Gerçek dünya ürünleri satın alın](https://www.tangible.store/)
+- [Bölümlere ayrılmış gayrimenkul](https://realt.co/)
+- [Eğitim Derecesi Bildiren Belgeler](https://www.degreecert.com/)
+- [NFT'ler aracılığıyla müzik telif ücretleri](https://opulous.org/)
+- [Kazanmak için hareket edin](https://yeticoineth.com/about.html)
+- [Dijital kimlik](https://photochromic.io/)
 
 ### ethereum.org örnekleri {#ethereum-org-examples}
 
@@ -260,6 +267,12 @@ Bahsettiğimiz gibi, bu gelişmekte olan bir alan. NFT'ler, DAO'lar ve kesirli t
 
 [DAO'lar hakkında daha fazla bilgi](/dao/)
 
+### Gerçeklik sertifikaları {#certificates}
+
+Üniversite diplomaları için sahte sertifikalar sunan şirketlerin, NFT'lerin mücadeleye yardımcı olabileceği milyar dolarlık bir endüstri olduğu bildiriliyor. NFT'ler, şahısların diploma kimlik bilgilerini doğrulamak için hızlı ve güvenli bir yol olabilir.
+
+[Güney Kore'de bir üniversite, NFT'lerin](https://forkast.news/headlines/south-korea-nfts-graduates-hoseo/) idari hizmetlere erişimi iyileştireceği ve sahteciliği veya diplomanın değiştirilmesini önleyeceği umuduyla halihazırda NFT olarak diplomalar vermektedir. [İrlanda'daki Trinity İşletme Okulu (TBS) da 2023'ten itibaren NFT'ler sunmayı planlıyor](https://trinitynews.ie/2022/04/business-school-to-offer-degree-nfts/).
+
 <Divider />
 
 ## Ethereum ve NFT'ler {#ethereum-and-nfts}
@@ -274,7 +287,7 @@ Ethereum, birkaç nedenden dolayı NFT'lerin çalışmasını mümkün kılıyor
 
 ## NFT'lerin çevreye etkisi {#environmental-impact-nfts}
 
-NFT'lerin popülaritesinin gittikçe artması, özellikle karbon ayak izi olmak üzere daha yoğun şekilde incelendikleri anlamına geliyor.
+NFT'lerin popülaritesi artıyor, bu da özellikle karbon ayak izleri üzerinde daha fazla incelemeye tabi tutuldukları anlamına geliyor.
 
 Birkaç şeyi açıklığa kavuşturmak için:
 
@@ -282,17 +295,17 @@ Birkaç şeyi açıklığa kavuşturmak için:
 - Ethereum'un fonlarınızı ve varlıklarınızı güvende tutma şekli şu anda yoğun enerji harcasa da bu durum düzelmek üzere.
 - İyileştirildikten sonra, Ethereum'un karbon ayak izi %99,95 daha iyi olacak ve bu da onu mevcut birçok endüstriden daha enerji verimli hâle getirecek.
 
-Bu konuyu biraz daha detaylandırmak için müsaadenizle biraz teknik konulara gireceğiz...
+Daha fazla açıklamak için biraz daha teknik bilgi almamız gerekecek, bu yüzden bize katlanın...
 
 ### NFT'leri suçlamayın {#nft-qualities}
 
-Tüm NFT ekosistemi, Ethereum'un merkeziyetsiz ve güvenli olması sayesinde çalışır.
+Tüm NFT ekosistemi Ethereum'un merkeziyetsiz ve güvenli olması sayesinde çalışır.
 
-Merkeziyetsiz, siz ve diğer herkesin bir şeye sahip olduğunuzu doğrulayabildiği anlamına gelir. Hepsi, kendi kurallarını istediği zaman empoze edebilen üçüncü bir tarafa güvenmeden veya velayet vermeden yapılabilir. Bu ayrıca NFT'nizin birçok farklı ürün ve pazarda taşınabilir olduğu anlamına gelir.
+Merkeziyetsiz, yani siz ve diğer herkes bir şeye sahip olduğunuzu doğrulayabilir. Hepsi, kendi kurallarını istediği zaman empoze edebilen üçüncü bir şahsa güvenmeden veya velayet vermeden yapılır. Ayrıca NFT'nizin birçok farklı üründe ve pazarda taşınabilir olduğu anlamına gelir.
 
-Güvenli olması, hiç kimsenin NFT'nizi kopyalayıp yapıştıramayacağı veya çalamayacağı anlamına gelir.
+Güvenlidir, yani hiç kimse NFT'nizi kopyalayamaz/yapıştıramaz veya çalamaz.
 
-Ethereum'un bu nitelikleri, dijital olarak benzersiz öğelere sahip olmayı ve içeriğiniz için adil bir fiyat almayı mümkün kılar. Ama bunun bir bedeli var. Bitcoin ve Ethereum gibi blok zincirleri şu anda bu nitelikleri korumak çok yoğun enerji harcıyorlar. NFT'leri veya kripto parayı çalmak için Ethereum'un geçmişini yeniden yazmak kolay olsaydı, sistem çökerdi.
+Ethereum'un bu nitelikleri, dijital olarak benzersiz öğelere sahip olmayı ve içeriğiniz için adil bir fiyat almayı mümkün kılar. Ama bir bedeli var. Bitcoin ve Ethereum gibi blok zincirleri şu anda yoğun enerji harcıyor çünkü bu nitelikleri korumak çok fazla enerji gerektiriyor. NFT'leri veya kripto para birimini çalmak için Ethereum'un geçmişini yeniden yazmak kolay olsaydı sistem çökerdi.
 
 #### NFT'nizi basarken yapılan iş {#minting-nfts}
 
@@ -303,53 +316,53 @@ Bir NFT bastığınızda, birkaç şeyin olması gerekir:
 - Yukarıdakileri doğrulayan işlemlerin bir bloğa eklenmesi ve zincir üzerinde "ölümsüzleştirilmesi" gerekir.
 - Blok, ağdaki herkes tarafından "doğru" olarak onaylanmalıdır. Bu mutabakat, aracılara olan ihtiyacı ortadan kaldırır çünkü ağ, NFT'nizin var olduğunu ve size ait olduğunu kabul eder. Ve zincir üzerinde olduğu için herkes kontrol edebilir. Bu, Ethereum'un NFT yaratıcılarının kazançlarını en üst düzeye çıkarmasına yardımcı olmasının yollarından biridir.
 
-Tüm bu görevler madenciler tarafından yapılır. Ve ağın geri kalanının NFT'niz ve ona kimin sahip olduğu hakkında bilgi sahibi olmasını sağlarlar. Bu, madenciliğin yeterince zor olması gerektiği anlamına gelir, aksi takdirde herkes, az önce bastığınız NFT'ye sahip olduğunu iddia edebilir ve sahipliği hileli bir şekilde devredebilir. Madencilerin dürüst davrandığından emin olmak için pek çok teşvik var.
+Tüm bu görevler madenciler tarafından yapılır. Ağın geri kalanının, NFT'niz ve ona kimin sahip olduğu hakkında bilgi sahibi olmasını sağlarlar. Bu, madenciliğin yeterince zor olması gerektiği anlamına gelir, aksi takdirde herkes, az önce bastığınız NFT'ye sahip olduğunu iddia edebilir ve mülkiyeti hileli bir şekilde devredebilir. Madencilerin dürüst davrandığından emin olmak için pek çok teşvik var.
 
 [Madencilik hakkında daha fazlası](/developers/docs/consensus-mechanisms/pow/)
 
 #### NFT'nizi madencilikle güvence altına alma {#securing-nfts}
 
-Madenciliğin zorluğu, zincirde yeni bloklar oluşturmak için çok fazla bilgi işlem gücü gerektirmesinden kaynaklanmaktadır. Daha da önemlisi, bloklar yalnızca ihtiyaç duyulduklarında değil, tutarlı bir şekilde oluşturulur. Ortalama her 12 saniyede bir oluşturulurlar.
+Madenciliğin zorluğu, zincirde yeni bloklar oluşturmak için çok fazla bilgi işlem gücü gerektirmesinden kaynaklanmaktadır. Daha da önemlisi, bloklar yalnızca ihtiyaç duyulduklarında değil, tutarlı bir şekilde oluşturulur. Her 12 saniyede bir oluşturulurlar.
 
-Bu, NFT'leri mümkün kılan niteliklerden biri olan Ethereum'u kurcalamaya karşı korumalı hâle getirmek için önemlidir. Ne kadar çok blok varsa zincir o kadar güvenli olur. NFT'niz 600 numaralı blokta oluşturulduysa ve bir hacker NFT'nizi verilerini değiştirerek çalmaya çalışırsa sonraki tüm blokların dijital parmak izi değişecektir. Bu, Ethereum yazılımını çalıştıran herkesin bunu anında tespit edip önleyebileceği anlamına gelir.
+Bu, NFT'leri mümkün kılan niteliklerden biri olan Ethereum'u kurcalamaya karşı korumalı hâle getirmek için önemlidir. Ne kadar çok blok olursa zincir de o kadar güvenli olur. NFT'niz 600 numaralı blokta oluşturulduysa ve bir bilgisayar korsanı NFT'nizi verilerini değiştirerek çalmaya çalışacaksa, sonraki tüm blokların dijital parmak izi değişecektir. Bu, Ethereum yazılımını çalıştıran herkesin bunu anında tespit edip önleyebileceği anlamına gelir.
 
-Ancak bu, bilgi işlem gücünün sürekli kullanılması gerektiği anlamına gelir. Ayrıca, 0 NFT işlemi içeren bir bloğun kabaca aynı karbon ayak izine sahip olacağı anlamına gelir, çünkü onu oluşturmak için bilgi işlem gücü yine de tüketilecektir. Diğer NFT dışı işlemler blokları dolduracaktır.
+Ancak bu, bilgi işlem gücünün sürekli kullanılması gerektiği anlamına gelir. Ayrıca, hiç NFT işlemi içermeyen bir bloğun, kabaca aynı karbon ayak izine sahip olacağı anlamına gelir, çünkü onu oluşturmak için bilgi işlem gücü hala tüketilecektir. Diğer NFT dışı işlemler blokları dolduracaktır.
 
 #### Blok zincirleri şu anda yoğun enerji harcarlar {#blockchains-intensive}
 
-Yani evet, madencilikle blok oluşturmayla ilişkili bir karbon ayak izi var ve bu, Bitcoin gibi zincirler için de bir sorun teşkil ediyor ancak bu doğrudan NFT'lerin hatası değil.
+Yani evet, madencilikle blok oluşturmayla ilişkili bir karbon ayak izi var – ve bu Bitcoin gibi zincirler için de bir sorun – ancak bu doğrudan NFT'lerin hatası değil.
 
-Pek çok madencilik, yenilenebilir enerji kaynakları veya uzak yerlerdeki kullanılmayan enerji türlerini kullanır. NFT'lerin ve kripto para birimlerinin bozduğu endüstrilerin de büyük karbon ayak izlerine sahip olduğu yönünde bir argüman da var. Ancak mevcut endüstrilerin kötü olması, daha iyi olmak için çabalamamamız gerektiği anlamına gelmez.
+Pek çok madencilik, uzak yerlerdeki yenilenebilir enerji kaynaklarını veya kullanılmamış enerjileri kullanır. NFT'lerin ve kripto para birimlerinin bozduğu endüstrilerin de büyük karbon ayak izlerine sahip olduğu argümanı var. Ancak mevcut endüstrilerin kötü olması, daha iyi olmak için çabalamamamız gerektiği anlamına gelmez.
 
-Ve biz de çabalıyoruz. Ethereum, Ethereum'u (ve dolayısıyla NFT'leri) daha enerji verimli hâle getirmek için gelişiyor. Ve bu her zaman planlanan bir şey olmuştur.
+Biz çabalıyoruz. Ethereum, Ethereum kullanımını (ve dolayısıyla NFT'leri) daha enerji verimli hâle getirmek için gelişiyor. En başından beri planlanan zaten buydu.
 
-Amacımız madenciliğin çevresel ayak izini savunmak değil, bunun yerine işlerin nasıl daha iyiye doğru değiştiğini açıklamak istiyoruz.
+Madenciliğin çevresel ayak izini savunmuyoruz, bunun yerine işlerin nasıl daha iyiye doğru değiştiğini açıklamak istiyoruz.
 
 ### Daha yeşil bir gelecek... {#a-greener-future}
 
-Ethereum'un var olduğu süre boyunca, madenciliğin enerji tüketimi; geliştiriciler ve araştırmacılar için büyük bir odak noktası olmuştur. Ve vizyon, her zaman mümkün olan en kısa sürede bunu değiştirmek olmuştur. [Ethereum'un vizyonu hakkında daha fazla bilgi](/upgrades/vision/)
+Ethereum ortaya çıktığından beri madenciliğin enerji tüketimi, geliştiriciler ve araştırmacılar için büyük bir odak alanı olmuştur. Ve vizyon en başından beri bunu mümkün olan en kısa sürede başka bir şeyle değiştirmek olmuştur. [Ethereum'un vizyonu hakkında daha fazla bilgi](/upgrades/vision/)
 
 Bu vizyon şu anda yerine getiriliyor.
 
 #### Daha yeşil bir Ethereum {#greener-ethereum}
 
-Ethereum şu anda madenciliği [stake etme](/staking/) ile değiştirecek bir dizi güncellemeden geçiyor. Bu, bir güvenlik mekanizması olarak bilgi işlem gücünü ortadan kaldıracak ve Ethereum'un karbon ayak izini yaklaşık %99,95<sup>[^1]</sup> azaltacaktır. Bu dünyada, stake edenler ağı güvence altına almak için bilgi işlem gücü yerine fon taahhüt eder.
+Ethereum şu anda madenciliği, [stake etme](/staking/) ile değiştirecek bir dizi güncellemeden geçiyor. Bu, bir güvenlik mekanizması olarak bilgi işlem gücünü ortadan kaldıracak ve Ethereum'un karbon ayak izini yaklaşık %99,95<sup>[^1]</sup> azaltacaktır. Bu dünyada, stake edenler ağı güvence altına almak için bilgi işlem gücü yerine fon taahhüt eder.
 
 Ethereum'un enerji maliyeti, ağdaki düğüm sayısı ile çarpılan bir ev bilgisayarı çalıştırma maliyeti olacaktır. Ağda 10.000 düğüm olduğunu ve bir ev bilgisayarını çalıştırmanın maliyetinin yılda yaklaşık 525 kWh olduğunu varsayalım. Bu, tüm ağ için yılda 5.250.000 kWh<sup>[^1]</sup> eder.
 
-Bunu, Ethereum'un geleceğini Visa gibi küresel bir hizmetle karşılaştırmak için kullanabiliriz. 100.000 Visa işlemi 149 kWh enerji kullanır<sup>[^2]</sup>. Hisse ispatı Ethereum'unda, aynı sayıda işlem 17,4 kWh veya toplam enerjinin yaklaşık %11'ine mal olacaktır<sup>[^3]</sup>. Bu, [toplamalar](/glossary/#rollups) gibi mutabakat katmanı ve parça zincirlerinde paralel olarak yürütülen optimizasyon çalışmaları hesaba katılmamış hâlidir. Bu değer, 100.000 işlem için 0,16666666667 kWh enerji kadar az olabilir.
+Bunu, Ethereum'un geleceğini Visa gibi küresel bir hizmetle karşılaştırmak için kullanabiliriz. 100.000 Visa işlemi, 149 kWh enerji kullanır<sup>[^2]</sup>. Hisse ispatı Ethereum'unda, aynı sayıda işlem 17,4 kWh veya toplam enerjinin yaklaşık %11'ine mal olacaktır<sup>[^3]</sup>. Bu, [toplamalar](/glossary/#rollups) gibi konsensus katmanı ve parça zincirlerinde paralel olarak yürütülen optimizasyon çalışmaları hesaba katılmamış hâlidir. Bu değer, 100.000 işlem için 0,16666666667 kWh enerji kadar az olabilir.
 
-Daha da önemlisi bu, Ethereum'un merkeziyetsizliğini ve güvenliğini korurken enerji verimliliğini artırır. Diğer birçok blok zinciri zaten bir tür stake yöntemi kullanıyor olabilir ancak bu blok zincirleri, Ethereum'un sahip olacağı binlerce stake den kişi ile değil, seçilmiş kişi tarafından güvence altına alınırlar. Ne kadar merkeziyetsizlik olursa sistem o kadar güvenli olur.
+Daha da önemlisi bu, Ethereum'un merkeziyetsizliğini ve güvenliğini korurken enerji verimliliğini artırır. Diğer birçok blok zinciri zaten bir tür stake yöntemi kullanıyor olabilir, ancak Ethereum'un sahip olacağı binlerce değil, seçilmiş birkaç staker tarafından güvence altına alınırlar. Ne kadar merkeziyetsizlik olursa sistem o kadar güvenli olur.
 
 [Enerji tahminleri hakkında daha fazla bilgi](#footnotes-and-sources)
 
-_Hisse ispatı Ethereum enerji tüketimi anlayışınızı tanıdık bir isimle temellendirmek için Visa ile basit karşılaştırma yaptık. Ancak pratikte işlem sayısına göre karşılaştırma yapmak pek doğru değil. Ethereum'un enerji çıkışı zamana dayalıdır. Ethereum dakika dakika daha fazla veya daha az işlem yaptıysa enerji çıkışı aynı kalırdı._
+_Hisse ispatı Ethereum enerji tüketimi anlayışınızı tanıdık bir isimle temellendirmek için Visa ile basit bir karşılaştırma yaptık. Ancak pratikte işlem sayısına göre karşılaştırma yapmak pek doğru değil. Ethereum'un enerji çıkışı zamana dayalıdır. Ethereum bir dakikadan diğerine daha fazla veya daha az işlem yaptıysa enerji çıkışı aynı kalacaktı._
 
-_Ethereum'un finansal işlemlerden daha fazlasını yaptığını; uygulamalar için bir platform olduğunu hatırlamak da önemlidir, bu nedenle Visa, AWS ve daha fazlası dahil olmak üzere birçok şirket/sektörle daha adil bir karşılaştırma yapılabilir!_
+_Ethereum'ın sadece finansal işlemlerden daha fazlasını yaptığını, uygulamalar için bir platform olduğunu hatırlamak da önemlidir, bu nedenle Visa, AWS ve daha fazlası dâhil olmak üzere birçok şirket/sektör ile daha adil bir karşılaştırma yapılabilir!_
 
 #### Zaman Çizelgeleri {#timelines}
 
-Süreç çoktan başladı. İlk yükseltme olan [İşaret Zinciri](/upgrades/beacon-chain/), Aralık 2020'de gönderildi. Bu, stake edenlerin sisteme katılmasına izin vererek stake etme için temel sağlar. Enerji verimliliği ile ilgili bir sonraki adım, madencilerin güvence altına aldığı mevcut zinciri, madenciliğin gerekli olmadığı İşaret Zinciri ile birleştirmektir. Zaman çizelgeleri şu aşamada kesin olmasa da bunun 2022'de gerçekleşeceği tahmin ediliyor. Bu işlem Birleştirme olarak bilinir [eskiden "kenetleme" (docking) olarak anılırdı]. [Birleştirme hakkında daha fazla bilgi](/upgrades/merge/).
+Süreç çoktan başladı. İlk yükseltme olan [İşaret Zinciri](/upgrades/beacon-chain/), Aralık 2020'de gönderildi. Bu, stake edenlerin sisteme katılmasına izin vererek stake için temel sağlar. Enerji verimliliği ile ilgili bir sonraki adım, madencilerin güvence altına aldığı mevcut zinciri, madenciliğin gerekli olmadığı Beacon Zinciri ile birleştirmektir. Zaman çizelgeleri şu aşamada kesin olmasa da bunun 2022'de gerçekleşeceği tahmin ediliyor. Bu işlem Birleştirme olarak bilinir [eskiden "kenetleme" (docking) olarak anılırdı]. [Birleştirme hakkında daha fazla bilgi](/upgrades/merge/).
 
 <ButtonLink to="/upgrades/">
   Ethereum yükseltmeleri hakkında daha fazla bilgi
@@ -357,7 +370,7 @@ Süreç çoktan başladı. İlk yükseltme olan [İşaret Zinciri](/upgrades/bea
 
 ## NFT'ler ile oluşturun {#build-with-nfts}
 
-Çoğu NFT, [ERC-721](/developers/docs/standards/tokens/erc-721/) olarak bilinen tutarlı bir standart kullanılarak oluşturulur. Ancak, incelemek isteyebileceğiniz başka standartlar da var. [ERC-1155](https://blog.enjincoin.io/erc-1155-the-crypto-item-standard-ac9cf1c5a226) standardı, özellikle oyun alanında faydalı olan yarı değiştirilebilir token'lara izin verir. Ve daha yakın zamanda, NFT'lerin basımını çok daha verimli hâle getirmek için [EIP-2309](https://eips.ethereum.org/EIPS/eip-2309) önerildi. Bu standart, tek bir işlemde istediğiniz kadar basmanıza olanak tanır!
+Çoğu NFT, [ERC-721](/developers/docs/standards/tokens/erc-721/) olarak bilinen tutarlı bir standart kullanılarak oluşturulur. Ancak incelemek isteyebileceğiniz başka standartlar da var. [ERC-1155](https://blog.enjincoin.io/erc-1155-the-crypto-item-standard-ac9cf1c5a226) standardı, özellikle oyun alanında faydalı olan yarı değiştirilebilir token'lara izin verir. Ve daha yakın zamanda, NFT'lerin basımını çok daha verimli hâle getirmek için [EIP-2309](https://eips.ethereum.org/EIPS/eip-2309) önerildi. Bu standart, tek bir işlemde istediğiniz kadar basmanıza olanak tanır!
 
 ## Daha fazla bilgi {#further-reading}
 
@@ -386,13 +399,13 @@ Yazım sırasında, 16.405 benzersiz adreste 140.592 doğrulayıcı bulunuyor. B
 
 Evden stake eden ortalama bir kişinin, ortalama 5,4 doğrulayıcı istemciyi çalıştırmak için 100 watt'lık bir masaüstü kişisel bilgisayar kurulumu kullandığı varsayılmaktadır.
 
-Evden çalışan 87.897 doğrulayıcı, yaklaşık 1.64 megawatt enerji tüketen 16.300 kullanıcı ediyor.
+Evden çalışan 87.897 doğrulayıcı, yaklaşık 1,64 megawatt enerji tüketen 16.300 kullanıcı ediyor.
 
-Doğrulayıcıların geri kalanı, borsalar ve stake hizmetleri gibi gözetimsiz stake ediciler tarafından yürütülür. Her 5,5 doğrulayıcı için 100w kullandıkları varsayılabilir. Bu, isabetli bir sayıya ulaşmak için gereğinden fazla yüksek bir tahmin.
+Doğrulayıcıların geri kalanı, borsalar ve stake hizmetleri gibi gözetimsiz stake ediciler tarafından yürütülür. Her 5,5 doğrulayıcı için 100 w kullandıkları varsayılabilir. Bu, isabetli bir sayıya ulaşmak için gereğinden fazla yüksek bir tahmin.
 
 Bu nedenle, Ethereum hisse ispatı toplamda 2,62 megawatt civarında bir enerji tüketir, bu da küçük bir ABD kasabası ile hemen hemen aynıdır.
 
-Bu, Digiconomist'in Ethereum madencilerinin hâlihazırda tükettiği yıllık 44,94 TWh tahmininden toplam enerji kullanımında en az %99,95'lik bir azalmadır.
+Bu, Digiconomist'in Ethereum madencilerinin halihazırda tükettiği yıllık 44,94 TWh tahmininden toplam enerji kullanımında en az %99,95'lik bir azalmadır.
 
 #### 2. Visa enerji tüketimi {#fn-2}
 
@@ -404,7 +417,7 @@ Eylül 2020 yıl sonunda 140.839.000.000 işlem gerçekleştirdiler – [Visa ma
 
 Ölçeklenebilirlik yükseltmelerinin, ağın [saniyede 25.000 ila şu anda teorik maksimum değer olan 100.000 işlem gerçekleştirmesine olanak sağlayacağı tahmin ediliyor.](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698).
 
-[Vitalik Buterin'in parçalama ile saniye başına işlem potansiyeli hakkında düşünceleri](https://twitter.com/VitalikButerin/status/1312905884549300224)
+[Vitalik Buterin'in, parçalama ile saniye başına işlem potansiyeli hakkında düşünceleri](https://twitter.com/VitalikButerin/status/1312905884549300224)
 
 Parçalama, bugün yaklaşık 15 işlem olan işlem miktarının en az 64 katını mümkün kılacaktır. Bu, kullanıma giren parça zincirlerinin (ekstra veri ve kapasite) miktarıdır. [Parça zincirleri hakkında daha fazla bilgi](/upgrades/sharding/)
 
@@ -413,13 +426,13 @@ Bu, yukarıdaki Visa örneğiyle karşılaştırabilmemiz için 100.000 işlemin
 - Saniyede `15 * 64 = 960` işlem.
 - 100.000 işlemi işlemek için `100,000 / 960 = 104.2` saniye.
 
-104,2 saniyede, Ethereum ağı aşağıdaki miktarda enerji kullanacaktır:
+Ethereum ağı 104,2 saniyede şu kadar enerji kullanacaktır:
 
-Günlük `1.44kWh daily usage * 10,000 network nodes = 14,400kWh`.
+`1,44 kWh günlük kullanım * 10.000 ağ düğümü = 14.400 kWh`.
 
-Bir günde 86.400 saniye bulunmaktadır, yani saniye başına `14,400 / 86,400 = 0.1666666667kWh` eder.
+Bir günde 86.400 saniye bulunmaktadır, yani saniye başına `14.400 / 86.400 = 0,1666666667 kWh` eder.
 
-Eğer bunu 100.000 işlemi gerçekleştirmenin aldığı süreyle çarparsak: `0.1666666667 * 104.2 = 17.3666666701 kWh`.
+Eğer bunu 100.000 işlemi gerçekleştirmenin aldığı süreyle çarparsak: `0,1666666667 * 104,2 = 17,3666666701 kWh`.
 
 Bu, Visa'da aynı miktarda işlem tarafından tüketilen enerjinin **%11,6554809866**'sıdır.
 
