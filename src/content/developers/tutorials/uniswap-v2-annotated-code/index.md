@@ -500,7 +500,7 @@ Calculate the protocol fees to collect, if any, and mint liquidity tokens accord
            _mint(address(0), MINIMUM_LIQUIDITY); // permanently lock the first MINIMUM_LIQUIDITY tokens
 ```
 
-If this is the first deposit, create `MINIMUM_LIQUIDITY` tokens and send them to address zero to lock them. They can never to redeemed, which means the pool will never be emptied completely (this saves us from division by zero in some places). The value of `MINIMUM_LIQUIDITY` is a thousand, which considering most ERC-20 are subdivided into units of 10^-18'th of a token, as ETH is divided into wei, is 10^-15 to the value of a single token. Not a high cost.
+If this is the first deposit, create `MINIMUM_LIQUIDITY` tokens and send them to address zero to lock them. They can never be redeemed, which means the pool will never be emptied completely (this saves us from division by zero in some places). The value of `MINIMUM_LIQUIDITY` is a thousand, which considering most ERC-20 are subdivided into units of 10^-18'th of a token, as ETH is divided into wei, is 10^-15 to the value of a single token. Not a high cost.
 
 In the time of the first deposit we don't know the relative value of the two tokens, so we just multiply the amounts and take a square root, assuming that the deposit provides us with equal value in both tokens.
 
@@ -816,7 +816,7 @@ These two functions allow `feeSetter` to control the fee recipient (if any), and
 
 ### UniswapV2ERC20.sol {#UniswapV2ERC20}
 
-[This contract](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2ERC20.sol) implements the ERC-20 liquidity token. It is similar to the [OpenWhisk ERC-20 contract](/developers/tutorials/erc20-annotated-code), so I will only explain the part that is different, the `permit` functionality.
+[This contract](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2ERC20.sol) implements the ERC-20 liquidity token. It is similar to the [OpenZeppelin ERC-20 contract](/developers/tutorials/erc20-annotated-code), so I will only explain the part that is different, the `permit` functionality.
 
 Transactions on Ethereum cost ether (ETH), which is equivalent to real money. If you have ERC-20 tokens but not ETH, you can't send transactions, so you can't do anything with them. One solution to avoid this problem is [meta-transactions](https://docs.uniswap.org/protocol/V2/guides/smart-contract-integration/supporting-meta-transactions/).
 The owner of the tokens signs a transaction that allows somebody else to withdraw tokens off chain and sends it using the Internet to the recipient. The recipient, which does have ETH, then submits the permit on behalf of the owner.
