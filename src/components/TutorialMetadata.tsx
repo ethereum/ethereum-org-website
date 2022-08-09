@@ -1,5 +1,5 @@
 import React from "react"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 import { useIntl } from "react-intl"
 import CopyToClipboard from "./CopyToClipboard"
 import Pill from "./Pill"

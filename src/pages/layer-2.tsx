@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react"
 import { graphql, PageProps } from "gatsby"
 import { getImage, GatsbyImage } from "gatsby-plugin-image"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 import { useIntl } from "react-intl"
 
 // Data

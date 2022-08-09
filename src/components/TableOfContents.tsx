@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react"
 import { motion } from "framer-motion"
 import { Link } from "gatsby"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 
 import ButtonLink from "./ButtonLink"
 import Icon from "./Icon"

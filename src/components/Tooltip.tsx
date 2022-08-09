@@ -1,5 +1,5 @@
 import React, { MouseEventHandler, ReactNode, useState } from "react"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 import * as utils from "../utils/isMobile"
 
 const Container = styled.div`

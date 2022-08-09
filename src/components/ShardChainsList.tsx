@@ -1,5 +1,5 @@
 import React from "react"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 import CardList, { CardListItem } from "./CardList"
 import { useIntl } from "react-intl"
 

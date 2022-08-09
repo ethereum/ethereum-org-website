@@ -1,5 +1,6 @@
 import React, { useState, useContext } from "react"
-import styled, { ThemeContext } from "styled-components"
+import styled from "@emotion/styled"
+import { useTheme } from "@emotion/react"
 import Highlight, {
   defaultProps,
   Language,
@@ -283,8 +284,8 @@ const Codeblock: React.FC<IProps> = ({
   )
   const shouldShowLineNumbers = language !== "bash"
   const totalLines = codeText.split("\n").length
-  const themeContext = useContext(ThemeContext)
-  const theme = themeContext.isDark ? codeTheme.dark : codeTheme.light
+  const theme = useTheme()
+  const selectedTheme = theme.isDark ? codeTheme.dark : codeTheme.light
   return (
     <Container>
       <HightlightContainer
@@ -295,7 +296,7 @@ const Codeblock: React.FC<IProps> = ({
           {...defaultProps}
           code={codeText}
           language={language as Language}
-          theme={theme as PrismTheme}
+          theme={selectedTheme as PrismTheme}
         >
           {({ className, style, tokens, getLineProps, getTokenProps }) => (
             <StyledPre

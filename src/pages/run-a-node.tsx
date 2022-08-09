@@ -3,7 +3,7 @@ import React, { ComponentType, SVGProps } from "react"
 import { graphql, PageProps } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { useIntl } from "react-intl"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 
 // Assets
 import Dappnode from "../assets/run-a-node/dappnode.svg"

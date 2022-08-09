@@ -1,5 +1,5 @@
 import React, { useState, createRef, useContext } from "react"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 import { useIntl } from "react-intl"
 import { motion } from "framer-motion"
 

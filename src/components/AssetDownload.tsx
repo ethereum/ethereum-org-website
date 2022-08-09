@@ -1,5 +1,5 @@
 import React from "react"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 import { GatsbyImage, getImage, getSrc } from "gatsby-plugin-image"
 
 import Translation from "../components/Translation"

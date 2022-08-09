@@ -104,14 +104,14 @@ export default ComponentName
 ## Styling
 
 - `src/theme.ts` - Declares site color themes, breakpoints and other constants (try to utilize these colors first)
-- We use [styled-components](https://styled-components.com/)
+- We use [emotion](https://emotion.sh/)
 
   - Tagged template literals are used to style custom components
 
   ```tsx
-  // Example of styling syntax using styled-components
+  // Example of styling syntax using emotion
 
-  import styled from "styled-components"
+  import styled from "@emotion/styled"
 
   const GenericButton = styled.div`
     width: 200px;
@@ -128,14 +128,12 @@ export default ComponentName
   // ie: <PrimaryButton>Text</PrimaryButton>
   ```
 
-  - Recommended VS Code Plugin: `vscode-styled-components` <br>To install: Open VS Code > `Ctrl+P` / `Cmd+P` > Run: <br>`ext install vscode-styled-components`
-
 - Values from `src/theme.ts` are automatically passed as a prop object to styled components
 
   ```tsx
   // Example of theme.ts usage
 
-  import styled from "styled-components"
+  import styled from "@emotion/styled"
 
   const Container = styled.div`
     background: ${(props) => props.theme.colors.background};
