@@ -65,9 +65,9 @@ Get involved:
 
 #### Ethereum Staking Launchpad {#ethereum-staking-launchpad}
 
-![Staking Launchpad homepage](./launchpad-screenshot.png)
+![](./launchpad-screenshot.png)
 
-The [](https://launchpad.ethereum.org/en/) enables Ethereum users to become validators and help secure the future of Ethereum by staking ETH.
+The [Staking Launchpad](https://launchpad.ethereum.org/en/) enables Ethereum users to become validators and help secure the future of Ethereum by staking ETH.
 
 Get involved:
 
