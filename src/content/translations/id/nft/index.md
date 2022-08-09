@@ -11,6 +11,7 @@ alt: Logo Eth yang ditampilkan melalui hologram.
 summaryPoint1: Cara untuk mewakili apa pun yang unik sebagai aset berbasis Ethereum.
 summaryPoint2: NFT memberi lebih banyak pemberdayaan terhadap para pembuat konten daripada sebelumnya.
 summaryPoint3: Digerakkan oleh kontrak pintar di blockchain Ethereum.
+preMergeBanner: true
 ---
 
 NFT saat ini mengambil alih dunia seni digital dan barang koleksi dengan cepat. Seniman digital melihat kehidupan mereka berubah berkat penjualan yang besar kepada audiens kripto baru. Dan para selebriti bergabung saat mereka melihat kesempatan baru untuk terhubung dengan para penggemar. Tapi seni digital hanyalah salah satu cara untuk menggunakan NFT. Benar-benar dapat digunakan untuk menggambarkan kepemilikan aset unik apa pun, seperti akta untuk sebuah barang di dunia digital atau fisik.
@@ -55,6 +56,12 @@ Dunia NFT itu relatif baru. Secara teori, ruang lingkup untuk NFT adalah segala 
 - [Sebuah barang koleksi digital](https://www.larvalabs.com/cryptopunks/details/1)
 - [Sebuah nama domain](https://app.ens.domains/name/ethereum.eth)
 - [Sebuah tiket yang dapat memberi Anda akses ke sebuah acara atau kupon](https://www.yellowheart.io/)
+- [Beli barang dunia nyata](https://www.tangible.store/)
+- [Lahan yayasan yang difraksionalisasi](https://realt.co/)
+- [Sertifikat Gelar](https://www.degreecert.com/)
+- [Royalti musik melalui NFT](https://opulous.org/)
+- [Move 2 earn](https://yeticoineth.com/about.html)
+- [Identitas digital](https://photochromic.io/)
 
 ### Contoh ethereum.org {#ethereum-org-examples}
 
@@ -260,11 +267,17 @@ Seperti yang kami sebutkan, ini adalah ruang yang sedang berkembang. NFT, DAO, t
 
 [Selengkapnya tentang DAOs](/dao/)
 
+### Sertifikat keaslian {#certificates}
+
+Perusahaan yang menawarkan sertifikat palsu untuk gelar universitas dilaporkan merupakan industri bernilai miliaran dolar yang bisa dilawan dengan bantuan NFT. NFT bisa menjadi cara yang aman dan cepat untuk memverifikasi kredensial gelar seseorang.
+
+[Di Korea Selatan, sebuah universitas sudah mengeluarkan sertifikat gelar sebagai NFT](https://forkast.news/headlines/south-korea-nfts-graduates-hoseo/), dengan harapan bahwa NFT akan meningkatkan akses ke layanan administratif dan mencegah pemalsuan atau perubahan gelar. [Trinity Business School (TBS) di Irlandia juga berencana menawarkan NFT mulai tahun 2023](https://trinitynews.ie/2022/04/business-school-to-offer-degree-nfts/).
+
 <Divider />
 
 ## Ethereum dan NFT {#ethereum-and-nfts}
 
-Ethereum memungkinkan NFT beroperasi dikarenakan sejumlah alasan:
+Ethereum memungkinkan NFT untuk beroperasi dikarenakan sejumlah alasan:
 
 - Riwayat transaksi dan metadata token dapat diverifikasi secara publik – riwayat kepemilikannya mudah untuk dibuktikan.
 - Setelah sebuah transaksi dikonfirmasi, hampir mustahil untuk memanipulasi data tersebut untuk "mencuri" kepemilikan.
@@ -288,11 +301,11 @@ Untuk menjelaskan lebih jauh, kita akan membahas sesuatu yang lebih teknis, jadi
 
 Keseluruhan ekosistem NFT beroperasi karena Ethereum terdesentralisasi dan aman.
 
-Terdesentralisasi berarti Anda dan semua orang lainnya dapat memverifikasi kepemilikan Anda atas sesuatu. Semuanya terjadi tanpa mempercayai atau memberikan wewenang kepada pihak ketiga yang dapat memaksakan aturan mereka sendiri sesuai keinginannya. Itu juga berarti NFT Anda dapat dipindah ke berbagai produk dan pasar.
+Terdesentralisasi berarti Anda dan semua orang lainnya dapat memverifikasi kepemilikan Anda atas sesuatu. Semuanya terjadi tanpa mempercayai atau memberikan wewenang kepada pihak ketiga yang dapat memaksakan aturan mereka sendiri sesuai keinginannya. Itu juga berarti NFT Anda dapat dipindahkan ke berbagai produk dan pasar berbeda.
 
 Aman berarti tidak seorang pun dapat menyalin/menempelkan NFT Anda atau mencurinya.
 
-Kualitas Ethereum ini membuat kepemilikan barang unik secara digital dan memungkinkan mendapatkan harga yang sesuai untuk konten Anda. Tetapi, ini memerlukan harga. Blockchain seperti Bitcoin dan Ethereum saat ini sangat boros energi karena memerlukan banyak energi untuk menjaga kualitas ini. Jika menulis ulang riwayat Ethereum untuk mencuri NFT atau mata uang kripto mudah dilakukan, sistemnya akan runtuh.
+Kualitas Ethereum ini membuat kepemilikan barang unik secara digital dan memungkinkan mendapatkan harga yang sesuai untuk konten Anda. Tetapi, ini memerlukan harga. Rantai Blok seperti Bitcoin dan Ethereum saat ini sangat boros energi karena memerlukan banyak energi untuk mempertahankan kualitas ini. Jika menulis ulang riwayat Ethereum untuk mencuri NFT atau mata uang kripto mudah dilakukan, sistemnya akan roboh.
 
 #### Proses dalam mencetak NFT Anda {#minting-nfts}
 
@@ -303,43 +316,43 @@ Ketika Anda mencetak NFT, beberapa hal harus dilakukan:
 - Transaksi yang mengonfirmasi hal di atas perlu ditambahkan ke sebuah blok dan "diabadikan" di rantai.
 - Blok perlu dikonfirmasi oleh semua orang di jaringan sebagai blok yang "benar". Konsensus ini menghilangkan kebutuhan menggunakan jasa pengantara karena jaringan sepakat bahwa NFT Anda ada dan milik Anda. Dan NFT ada di rantai sehingga siapa pun dapat memeriksanya. Ini merupakan salah satu cara Ethereum untuk membantu kreator NFT memaksimalkan pendapatan mereka.
 
-Semua tugas ini dikerjakan oleh para penambang. Dan mereka memungkinkan keseluruhan jaringan mengetahui tentang NFT Anda dan siapa yang memilikinya. Ini berarti penambangan harus cukup sulit, jika tidak siapa pun dapat mengklaim bahwa mereka pemilik NFT yang baru saja Anda cetak dan dengan curang memindahkan kepemilikan. Ada banyak insentif yang ada untuk memastikan para penambang bertindak dengan jujur.
+Semua tugas ini dikerjakan oleh para penambang. Dan mereka memungkinkan keseluruhan jaringan mengetahui tentang NFT Anda dan siapa yang memilikinya. Ini berarti menambang harus cukup sulit, jika tidak siapa pun dapat mengklaim bahwa mereka pemilik NFT yang baru saja Anda cetak dan dengan curang memindahkan kepemilikan. Ada banyak insentif yang ada untuk memastikan para penambang bertindak dengan jujur.
 
-[Selengkapnya tentang penambangan](/developers/docs/consensus-mechanisms/pow/)
+[Selengkapnya tentang menambang](/developers/docs/consensus-mechanisms/pow/)
 
 #### Mengamankan NFT Anda dengan penambangan {#securing-nfts}
 
-Tingkat kesulitan penambangan berasal dari fakta bahwa dibutuhkan banyak daya komputasi untuk membuat blok baru di rantai. Penting untuk dicatat bahwa blok dibuat dengan konsisten, bukan hanya ketika dibutuhkan. Blok dibuat setiap 12 detik atau lebih.
+Tingkat kesulitan menambang berasal dari fakta bahwa dibutuhkan banyak daya komputasi untuk membuat blok baru di rantai. Penting untuk dicatat bahwa blok dibuat secara terus menerus, bukan hanya ketika dibutuhkan. Blok dibuat setiap 12 detik atau lebih.
 
-Ini penting untuk membuat Ethereum tahan perubahan, salah satu kualitas yang memungkinkan keberadaan NFT. Semakin banyak blok, semakin aman rantainya. Jika NFT Anda dibuat di blok #600 dan seorang peretas mencoba dan mencuri NFT Anda dengan memodifikasi data, sidik jari digital dari blok berikutnya akan berubah. Itu berarti siapa pun yang menjalankan perangkat lunak Ethereum akan bisa segera mendeteksi dan mencegahnya terjadi.
+Ini penting untuk membuat Ethereum tahan terhadap perubahan, salah satu kualitas yang membuat keberadaan NFT menjadi mungkin. Semakin banyak blok, semakin aman rantainya. Jika NFT Anda dibuat di blok #600 dan seorang peretas mencoba dan mencuri NFT Anda dengan memodifikasi data, sidik jari digital dari blok berikutnya akan berubah. Itu berarti siapa pun yang menjalankan perangkat lunak Ethereum akan bisa segera mendeteksi dan mencegahnya terjadi.
 
 Namun, ini berarti bahwa daya komputasi harus dipakai secara konstan. Ini juga berarti bahwa sebuah blok yang berisi 0 transaksi NFT masih tetap memiliki jejak karbon yang sama, karena daya komputasi masih akan dipakai untuk membuatnya. Transaksi non-NFT lainnya akan mengisi blok tersebut.
 
 #### Untuk saat ini blockchain sangat boros energ {#blockchains-intensive}
 
-Jadi ya, ada jejak karbon yang dikaitkan dengan pembuatan blok melalui penambangan – dan ini adalah masalah untuk rantai-rantai seperti Bitcoin juga – tetapi tidak secara langsung merupakan kesalahan NFT.
+Jadi ya, ada jejak karbon yang dikaitkan dengan pembuatan blok melalui menambang – dan ini adalah masalah untuk rantai-rantai seperti Bitcoin juga – tetapi tidak secara langsung merupakan kesalahan NFT.
 
-Banyak penambangan menggunakan sumber daya yang terbarukan atau energi yang belum dimanfaatkan di lokasi terpencil. Dan ada juga argumen bahwa industri yang diganggu oleh NFT dan mata uang kripto memiliki jejak karbon sangat besar juga. Tetapi hanya karena industri yang ada buruk, tidak berarti kita tidak berusaha menjadi lebih baik.
+Banyak menambang menggunakan sumber daya yang terbarukan atau energi yang belum dimanfaatkan di lokasi terpencil. Dan ada juga argumen bahwa industri yang diganggu oleh NFT dan mata uang kripto memiliki jejak karbon sangat besar juga. Tetapi hanya karena industri yang ada buruk, tidak berarti kita seharusnya tidak berusaha menjadi lebih baik.
 
 Dan kita melakukannya. Ethereum sedang berkembang untuk membuat penggunaan Ethereum (dan berdasarkan kegunaan, NFT) lebih efisien dalam pemakaian energi. Dan itu selalu merupakan rencananya.
 
-Kami di sini bukan untuk membela jejak penambangan pada lingkungan, tetapi kami ingin menjelaskan bagaimana berbagai hal berubah agar menjadi lebih baik.
+Kami di sini bukan untuk membela jejak menambang pada lingkungan, tetapi kami ingin menjelaskan bagaimana berbagai hal berubah agar menjadi lebih baik.
 
 ### Sebuah masa depan yang lebih hijau... {#a-greener-future}
 
-Selama Ethereum ada, pemakaian energi penambangan telah menjadi area fokus yang sangat besar bagi para pengembang dan peneliti. Dan visinya selalu untuk menggantinya sesegera mungkin. [Lebih lanjut tentang visi Ethereum](/upgrades/vision/)
+Selama Ethereum ada, pemakaian energi menambang telah menjadi area fokus yang sangat besar bagi para pengembang dan peneliti. Dan visinya selalu untuk menggantinya sesegera mungkin. [Lebih lanjut tentang visi Ethereum](/upgrades/vision/)
 
 Visi ini sedang diwujudkan sekarang.
 
 #### Ethereum yang lebih ramah lingkungan {#greener-ethereum}
 
-Ethereum saat ini sedang menjalani serangkaian peningkatan yang akan menggantikan penambangan dengan [penaruhan](/staking/). Ini akan menghilangkan daya komputasi sebagai mekanisme keamanan, dan mengurangi jejak karbon Ethereum sebanyak ~99,95%<sup>[^1]</sup>. Dalam dunia ini, para penaruh/staker menyerahkan dana ketimbang daya komputasi untuk mengamankan jaringan.
+Ethereum saat ini sedang menjalani serangkaian peningkatan yang akan menggantikan menambang dengan [penaruhan](/staking/). Ini akan menghilangkan daya komputasi sebagai mekanisme keamanan, dan mengurangi jejak karbon Ethereum sebanyak ~99,95%<sup>[^1]</sup>. Dalam dunia ini, para penaruh menyerahkan dana ketimbang daya komputasi untuk mengamankan jaringan.
 
-Pemakaian energi Ethereum akan menjadi sebesar biaya menjalankan sebuah komputer rumah yang dikalikan dengan jumlah node di jaringan. Jika ada 10.000 node di jaringan dan biaya menjalankan sebuah komputer rumah kasarnya sebesar 525kWh per tahun. Itu sama dengan 5.250.000kWh<sup>[^1]</sup> per tahun untuk seluruh jaringan.
+Pemakaian energi Ethereum akan menjadi sebesar biaya menjalankan sebuah komputer rumah yang dikalikan dengan jumlah simpul di jaringan. Jika ada 10.000 simpul di jaringan dan biaya menjalankan sebuah komputer rumah kasarnya sebesar 525kWh per tahun. Itu sama dengan 5.250.000kWh<sup>[^1]</sup> per tahun untuk seluruh jaringan.
 
-Kita dapat menggunakan ini untuk membandingkan masa depan Ethereum dengan layanan global seperti Visa. 100.000 transaksi Visa menggunakan 149kWh energi<sup>[^2]</sup>. Dalam Ethereum bukti taruhan, jumlah transaksi yang sama tersebut akan memakai 17,4kWh energi atau ~11% dari total energi<sup>[^3]</sup>. Itu masih belum memperhitungkan banyaknya optimisasi yang sedang dikerjakan secara paralel dengan lapisan konsensus dan rantai shard, seperti [rollups](/glossary/#rollups). Paling sedikit bisa menjadi 0,1666666667kWh energi untuk 100.000 transaksi.
+Kita dapat menggunakan ini untuk membandingkan masa depan Ethereum dengan layanan global seperti Visa. 100.000 transaksi Visa menggunakan 149kWh energi<sup>[^2]</sup>. Dalam Ethereum bukti taruhan, jumlah transaksi yang sama tersebut akan memakai 17,4kWh energi atau ~11% dari total energi<sup>[^3]</sup>. Itu masih belum memperhitungkan banyaknya optimisasi yang sedang dikerjakan secara paralel dengan lapisan konsensus dan rantai pecahan, seperti [rollup](/glossary/#rollups). Paling sedikit bisa menjadi 0,1666666667kWh energi untuk 100.000 transaksi.
 
-Penting untuk dicatat, ini meningkatkan efisiensi energi sembari mempertahankan desentralisasi dan keamanan Ethereum. Banyak rantai blok lain di luar sana mungkin telah menggunakan beberapa bentuk penaruhan, tetapi yang diamankan dengan memilih beberapa penaruh, bukan ribuan penaruh yang akan dimiliki oleh Ethereum. Semakin terdesentralisasi, semakin aman sistemnya.
+Penting untuk dicatat, ini meningkatkan efisiensi energi sementara mempertahankan desentralisasi dan keamanan Ethereum. Banyak rantai blok lain di luar sana mungkin telah menggunakan beberapa bentuk penaruhan, tetapi yang diamankan dengan memilih beberapa penaruh, bukan ribuan penaruh yang akan dimiliki oleh Ethereum. Semakin terdesentralisasi, semakin aman sistemnya.
 
 [Selengkapnya tentang perkiraan energi](#footnotes-and-sources)
 
@@ -349,7 +362,7 @@ _Juga penting untuk diingat bahwa Ethereum melakukan lebih dari sekadar transaks
 
 #### Linimasa {#timelines}
 
-Prosesnya telah berlangsung. [Rantai Suar](/upgrades/beacon-chain/), peningkatan pertamanya, diluncurkan pada Desember 2020. Ini menyediakan fondasi untuk penaruhan dengan memungkinkan para penaruh untuk bergabung dengan sistem. Langkah berikutnya yang relevan dengan efisiensi energi adalah menggabungkan rantai saat ini, yang diamankan oleh para penambang, ke dalam Rantai Suar di mana penambangan tidak diperlukan. Linimasanya tidak dapat dipastikan pada tahap ini, tetapi diperkirakan akan terjadi dalam suatu waktu di tahun 2022. Proses ini dikenal sebagai penggabungan (yang sebelumnya disebut sebagai docking). [Selengkapnya tentang penggabungan](/upgrades/merge/).
+Prosesnya telah berlangsung. [Rantai Suar](/upgrades/beacon-chain/), peningkatan pertamanya, diluncurkan pada bulan Desember 2020. Ini menyediakan fondasi untuk penaruhan dengan memungkinkan para penaruh untuk bergabung dengan sistem. Langkah berikutnya yang relevan dengan efisiensi energi adalah menggabungkan rantai saat ini, yang diamankan oleh penambang, ke dalam Rantai Suar di mana penambang tidak diperlukan. Linimasanya tidak dapat dipastikan pada tahap ini, tetapi diperkirakan akan terjadi dalam suatu waktu di tahun 2022. Proses ini dikenal sebagai Penggabungan (yang sebelumnya disebut sebagai docking). [Selengkapnya tentang Penggabungan](/upgrades/merge/).
 
 <ButtonLink to="/upgrades/">
   Selengkapnya tentang peningkatan Ethereum
@@ -376,17 +389,17 @@ Ini menjelaskan bagaimana kami sampai pada kesimpulan perkiraan energi di atas. 
 
 #### 1. 99,95% pengurangan energi dari penambangan {#fn-1}
 
-Pengurangan 99,95% dalam pemakaian energi dari sebuah sistem yang diamankan oleh penambangan ke sistem yang diamankan oleh penaruhan dihitung dengan menggunakan sumber data berikut ini:
+Pengurangan 99,95% dalam pemakaian energi dari sebuah sistem yang diamankan oleh menambang ke sistem yang diamankan oleh penaruhan dihitung dengan menggunakan sumber data berikut ini:
 
 - 44,49 TWh dari energi listrik tahunan dipakai oleh penambangan Ethereum - [Digiconomist](https://digiconomist.net/ethereum-energy-consumption)
 
 - Komputer desktop umumnya, satu-satunya yang dibutuhkan untuk menjalankan Bukti Taruhan, menggunakan 0,06kWh energi per jam – [Bagan perkiraan Silicon Valley](https://www.siliconvalleypower.com/residents/save-energy/appliance-energy-use-chart) (Beberapa perkiraan sedikit lebih tinggi yakni 0,15kWh)
 
-Pada saat penulisan ini, ada 140.592 validator dari 16.405 alamat unik. Dari jumlah tersebut, 87.897 validator dianggap melakukan penaruhan dari rumah.
+Pada saat penulisan ini, ada 140 592 validator dari 16 405 alamat unik. Dari jumlah tersebut, 87 897 validator dianggap melakukan penaruhan dari beranda.
 
-Dianggap rata-rata orang yang melakukan penaruhan dari rumah menggunakan rangkaian komputer pribadi desktop 100 watt untuk menjalankan rata-rata 5,4 klien validator.
+Dianggap rata-rata orang yang melakukan penaruhan dari beranda menggunakan rangkaian komputer pribadi desktop 100 watt untuk menjalankan rata-rata 5,4 klien validator.
 
-87.897 validator yang menjalankan dari rumah memberi kita 16.300 pengguna yang memakai energi sebesar ~1,64 megawatt.
+87 897 validator yang menjalankan dari beranda memberi kita 16 300 pengguna yang memakai energi sebesar ~1,64 megawatt.
 
 Validator lainnya dijalankan oleh penaruh perwalian seperti bursa dan layanan penaruhan. Dapat dianggap bahwa mereka menggunakan 100w per 5,5 validator. Ini merupakan sebuah perkiraan kotor untuk menghindari kesalahan penghitungan.
 
@@ -396,7 +409,7 @@ Ini merupakan pengurangan setidaknya 99,95% dalam pemakaian energi dari perkiraa
 
 #### 2. Pemakaian energi Visa {#fn-2}
 
-Pemakaian energi dari 100.000 trasaksi Visa adalah sebesar 149 kWh - [Pemakaian energi rata-rata jaringan Bitcoin per transaksi dibandingkan dengan jaringan VISA pada tahun, Statista](https://www.statista.com/statistics/881541/bitcoin-energy-consumption-transaction-comparison-visa/)
+Pemakaian energi dari 100.000 trasaksi Visa adalah sebesar 149 kWh - [Pemakaian energi rata-rata jaringan Bitcoin per transaksi dibandingkan dengan jaringan VISA pada tahun 2020, Statista](https://www.statista.com/statistics/881541/bitcoin-energy-consumption-transaction-comparison-visa/)
 
 Perhitungan tahunan pada akhir September 2020, mereka telah memroses 140.839.000.000 transaksi – [Laporan Keuangan Visa Q4 2020](https://s1.q4cdn.com/050606653/files/doc_financials/2020/q4/Visa-Inc.-Q4-2020-Operational-Performance-Data.pdf)
 
@@ -404,18 +417,18 @@ Perhitungan tahunan pada akhir September 2020, mereka telah memroses 140.839.000
 
 Diperkirakan bahwa peningkatan skalabilitas akan memungkinkan jaringan untuk memroses antara 25.000 dan 100.000 transaksi per detik, dengan [100.000 sebagai nilai maksimum teoritis saat ini](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698).
 
-[Vitalik Buterik membahas transaksi per detik yang potensial dengan sharding](https://twitter.com/VitalikButerin/status/1312905884549300224)
+[Vitalik Buterik membahas transaksi per detik yang potensial dengan pecahan](https://twitter.com/VitalikButerin/status/1312905884549300224)
 
-Pada tingkat terendah, sharding akan memungkinkan 64 kali jumlah transaksi dari jumlah saat ini yang berada sekitar 15 transaksi. Itulah jumlah rantai shard (data dan kapasitas tambahan) yang akan dimasukkan. [Selengkapnya tentang rantai shard](/upgrades/sharding/)
+Pada tingkat terendah, pecahan akan memungkinkan 64 kali jumlah transaksi dari jumlah saat ini yang berada sekitar 15 transaksi. Itulah jumlah rantai pecahan (data dan kapasitas tambahan) yang akan dimasukkan. [Selengkapnya tentang rantai pecahan](/upgrades/sharding/)
 
-Itu berarti kita dapat memperkirakan berapa lama waktu yang diperlukan untuk memroses 100.000 transaksi, sehingga kita dapat membandingkannya dengan contoh Visa di atas.
+Maksudnya, kita dapat memperkirakan berapa lama waktu yang diperlukan untuk memroses 100.000 transaksi, sehingga kita dapat membandingkannya dengan contoh Visa di atas.
 
 - `15 * 64 = 960` transaksi per detik.
 - `100.000 / 960 = 104,2` detik untuk memproses 100.000 transaksi.
 
 Dalam 104,2 detik, jaringan Ethereum akan menggunakan jumlah energi berikut ini:
 
-`pemakaian harian 1,44kWh * 10.000 node jaringan = 14.400kWh` per hari.
+`pemakaian harian 1,44kWh * 10.000 simpul jaringan = 14.400kWh` per hari.
 
 Ada 86.400 detik dalam satu hari, sehingga `14.400 / 86.400 = 0,1666666667kWh` per detik.
 
@@ -430,5 +443,5 @@ Dengan kata lain, jika Visa menangani 140.839.000.000 transaksi dengan pemakaian
 Ethereum dalam satu tahun memakai 5.256.000 kWh. Dengan potensi 788.940.000.000 - 3.153.600.000.000 transaksi yang diproses dalam waktu itu.
 
 <InfoBanner emoji=":evergreen_tree:">
-  Jika Anda menganggap status ini tidak benar atau dapat dibuat lebih akurat lagi, silhkan mengajukan masalah atau PR. Ini merupakan perkiraan oleh tim ethereum.org yang dibuat menggunakan informasi yang dapat diakses secara publik dan rancangan Ethereum saat ini. Ini tidak mewakili janji resmi dari Yayasan Ethereum. 
+  Jika Anda menganggap status ini tidak benar atau dapat dibuat lebih akurat lagi, silhkan mengajukan masalah atau PR. Ini merupakan perkiraan oleh tim ethereum.org yang dibuat menggunakan informasi yang dapat diakses secara publik dan rancangan Ethereum saat ini. Ini tidak mewakili janji resmi dari Yayasan Ethereum.
 </InfoBanner>
