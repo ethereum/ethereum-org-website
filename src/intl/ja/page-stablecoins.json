@@ -134,7 +134,7 @@
   "page-stablecoins-top-coins-intro": "時価総額は",
   "page-stablecoins-top-coins-intro-code": "存在するトークンの合計数にトークンあたりの価値を掛けたものです。この一覧は動的で、ここにリストされているプロジェクトは必ずしもethereum.orgチームによって承認されていません。",
   "page-stablecoins-types-of-stablecoin": "動作の仕組み: ステーブルコインの種類",
-  "page-stablecoins-usdc-banner-body": "USDcはおそらく最も有名な不換紙幣担保型のステーブルコインです。その価値はおよそ1ドルで、Circle と Coinbaseによって裏付けされています。",
+  "page-stablecoins-usdc-banner-body": "USDCは、おそらく最も有名なフィアット型のステーブルコインです。価値はおよそ1ドルで、CircleとCoinbaseにより発行されています。",
   "page-stablecoins-usdc-banner-learn-button": "USDCについて学ぶ",
   "page-stablecoins-usdc-banner-swap-button": "ETHをUSDCに交換する",
   "page-stablecoins-usdc-banner-title": "USDC",
