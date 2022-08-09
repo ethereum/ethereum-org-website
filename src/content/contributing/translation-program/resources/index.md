@@ -11,7 +11,7 @@ You can find some useful guides and tools for ethereum.org translators, as well 
 
 ## Guides {#guides}
 
-- [Translation Style Guide](/contributing/translation-program/translators-guide/) _– instructions and tips for ethereum.org translators_
+- [Translation style guide](/contributing/translation-program/translators-guide/) _– instructions and tips for ethereum.org translators_
 - [Translation FAQs](/contributing/translation-program/faq/) _– frequently asked questions and answers about the ethereum.org Translation Program_
 - [Crowdin online editor guide](https://support.crowdin.com/online-editor/) _– an in-depth guide to using the Crowdin online editor and some of Crowdin's advanced features_
 - [Content buckets](/contributing/translation-program/content-buckets/) _– which pages are included in each content bucket of ethereum.org_
@@ -47,7 +47,7 @@ To keep up-to-date with the latest Translation Program progress, you can follow 
 
 We have office hours for translators on the second Wednesday of every month. These are held in the #office-hours voice channel on the [ethereum.org Discord](https://discord.gg/geKhWjtF), where you can also find the exact times and additional details.
 
-The purpose of office hours is to allow our translators to ask questions about the translation process, provide feedback on the program, share their ideas, or just have a chat with us.
+Office hours allow our translators to ask questions about the translation process, provide feedback on the program, share their ideas, or just chat with the core ethereum.org team.
 Participants can also learn more about the Translation Program and get some information on becoming an ethereum.org translator.
 Finally, we want to use these calls to communicate recent developments with the Translation Program and share key tips and instructions with our contributors.
 

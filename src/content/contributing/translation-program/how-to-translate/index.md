@@ -7,13 +7,13 @@ sidebar: true
 
 # How to translate {#how-to-translate}
 
-### Visual guide {#visual-guide}
+## Visual guide {#visual-guide}
 
 For more visual learners, watch Luka walk through getting set up with Crowdin. Alternatively, you can find the same steps in a written format in the next section.
 
 <YouTube id="Ii7bYhanLs4" />
 
-### Written guide {#written-guide}
+## Written guide {#written-guide}
 
 1. **[Join our project on Crowdin](https://crowdin.com/project/ethereum-org/invite)**  
    You will need to log in to your Crowdin account or sign up if you don’t already have one. All that is required to sign up is an e-mail account and password.
