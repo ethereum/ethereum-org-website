@@ -107,4 +107,4 @@ Transactions on Ethereum can sometimes get stuck if you have submitted a lower t
 
 #### How do I mine Ethereum? {#mining-ethereum}
 
-We do not recommend buying mining equipment if you are not already mining Ethereum. In ~Q3/Q4 2022, [The Merge](/upgrades/merge/) will happen, switching Ethereum from proof-of-work to proof-of-stake. This change means mining Ethereum will no longer be possible. If you are still interested in mining Ethereum, you can seek help from mining communities, such as [/r/EtherMining](https://www.reddit.com/r/EtherMining/).
+We do not recommend buying mining equipment if you are not already mining Ethereum. In ~Q3/Q4 2022, [The Merge](/upgrades/merge/) will happen, switching Ethereum from proof-of-work to proof-of-stake. This change means mining Ethereum will no longer be possible.

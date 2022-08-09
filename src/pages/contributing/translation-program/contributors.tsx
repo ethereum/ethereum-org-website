@@ -1,6 +1,6 @@
 // Libraries
 import React from "react"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 import { useIntl } from "react-intl"
 import { graphql, PageProps } from "gatsby"
 import type { Context } from "../../../types"

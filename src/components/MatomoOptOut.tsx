@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 import { MATOMO_LS_KEY } from "../utils/matomo"
 
 const Container = styled.div`

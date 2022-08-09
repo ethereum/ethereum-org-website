@@ -8319,6 +8319,61 @@
         "doc",
         "ideas"
       ]
+    },
+    {
+      "login": "michaelmccallam",
+      "name": "Michael McCallam",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3510607?v=4",
+      "profile": "https://github.com/michaelmccallam",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "PolinaShanti",
+      "name": "Polina G.",
+      "avatar_url": "https://avatars.githubusercontent.com/u/110098268?v=4",
+      "profile": "https://nownodes.io/",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "Cerebro92",
+      "name": "Neeraj Gahlot",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13215478?v=4",
+      "profile": "https://github.com/Cerebro92",
+      "contributions": [
+        "doc",
+        "bug"
+      ]
+    },
+    {
+      "login": "vrinek",
+      "name": "Kostas",
+      "avatar_url": "https://avatars.githubusercontent.com/u/81346?v=4",
+      "profile": "https://github.com/vrinek",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "rogueassasin1729",
+      "name": "rogueassasin1729",
+      "avatar_url": "https://avatars.githubusercontent.com/u/92800000?v=4",
+      "profile": "https://github.com/rogueassasin1729",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "Pandapip1",
+      "name": "Pandapip1",
+      "avatar_url": "https://avatars.githubusercontent.com/u/45835846?v=4",
+      "profile": "https://pandapip1.com/",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,

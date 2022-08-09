@@ -1,7 +1,7 @@
 // Libraries
 import React, { useEffect, useState } from "react"
 import Countdown, { zeroPad } from "react-countdown"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 
 // Components
 import BannerNotification from "./BannerNotification"

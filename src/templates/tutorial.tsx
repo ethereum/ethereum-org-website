@@ -2,7 +2,7 @@ import React from "react"
 import { graphql, PageProps } from "gatsby"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 
 import ButtonLink from "../components/ButtonLink"
 import Card from "../components/Card"

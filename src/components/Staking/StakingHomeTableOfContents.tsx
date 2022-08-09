@@ -1,7 +1,7 @@
 import React from "react"
 import { motion } from "framer-motion"
 import { Link } from "gatsby"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 
 const StyledTableOfContentsLink = styled(Link)`
   position: relative;

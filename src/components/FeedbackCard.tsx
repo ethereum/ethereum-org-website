@@ -1,6 +1,6 @@
 // Library imports
 import React, { ReactNode, useState } from "react"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 // Component imports
 import { ButtonPrimary, ButtonSecondary } from "./SharedStyledComponents"
 import Translation from "./Translation"

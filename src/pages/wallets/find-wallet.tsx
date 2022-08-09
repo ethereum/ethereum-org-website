@@ -3,7 +3,7 @@ import React, { useState } from "react"
 import { graphql } from "gatsby"
 import { getImage, GatsbyImage } from "gatsby-plugin-image"
 import { useIntl } from "react-intl"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 import { shuffle } from "lodash"
 
 // Components

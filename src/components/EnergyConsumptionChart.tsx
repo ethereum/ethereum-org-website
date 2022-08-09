@@ -1,5 +1,6 @@
 import React, { useMemo } from "react"
-import styled, { useTheme } from "styled-components"
+import { useTheme } from "@emotion/react"
+import styled from "@emotion/styled"
 import {
   BarChart,
   Bar,
@@ -20,6 +21,7 @@ const Container = styled.div`
   border-radius: 0.3rem;
 `
 
+// @ts-ignore
 const StyledText = styled(Text)`
   font-size: 10px;
 

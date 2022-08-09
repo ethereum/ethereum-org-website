@@ -1,5 +1,5 @@
-import React, { useContext } from "react"
-import { ThemeContext } from "styled-components"
+import React from "react"
+import { useTheme } from "@emotion/react"
 
 import darkVideo from "../assets/ethereum-hero-dark.mp4"
 import lightVideo from "../assets/ethereum-hero-light.mp4"
@@ -10,8 +10,8 @@ export interface IProps {
 }
 
 const EthVideo: React.FC<IProps> = ({ className, videoSrc }) => {
-  const themeContext = useContext(ThemeContext)
-  const isDarkTheme = themeContext.isDark
+  const theme = useTheme()
+  const isDarkTheme = theme.isDark
 
   const src = videoSrc ? videoSrc : isDarkTheme ? darkVideo : lightVideo
 

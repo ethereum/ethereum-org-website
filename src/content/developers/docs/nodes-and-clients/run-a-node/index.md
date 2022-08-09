@@ -148,7 +148,7 @@ path as an argument. This must be consistent with the `jwtsecret` path provided 
 ### Adding Validators {#adding-validators}
 
 Each of the consensus clients have their own validator software that is described in detail in their respective documentation. The easiest way to get started with
-staking and validator key generation is to use the [Prater Testnet Staking Launchpad](https://prater.launchpad.ethereum.org/), allowing you to test your setup. When you're ready for Mainnet, you can repeat these steps using the [Mainnet Staking Launchpad](https://launchpad.ethereum.org/).
+staking and validator key generation is to use the [Goerli Testnet Staking Launchpad](https://goerli.launchpad.ethereum.org/), allowing you to test your setup. When you're ready for Mainnet, you can repeat these steps using the [Mainnet Staking Launchpad](https://launchpad.ethereum.org/).
 
 ### Using the node {#using-the-node}
 

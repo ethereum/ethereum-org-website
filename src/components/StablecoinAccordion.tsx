@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { getImage } from "gatsby-plugin-image"
 import { useIntl } from "react-intl"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 // TODO add motion animation
 // import { motion } from "framer-motion"
 import ButtonLink from "./ButtonLink"
