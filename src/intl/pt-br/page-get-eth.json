@@ -1,4 +1,7 @@
 {
+  "page-get-eth-article-keeping-crypto-safe": "As chaves para manter seus cripto seguros",
+  "page-get-eth-article-protecting-yourself": "Protegendo a si mesmo e seus fundos",
+  "page-get-eth-article-store-digital-assets": "Como armazenar ativos digitais no Ethereum",
   "page-get-eth-cex": "Corretoras centralizadas",
   "page-get-eth-cex-desc": "Corretoras são negócios que permitem que você compre criptomoedas usando moedas tradicionais. Elas têm custódia sobre qualquer ETH que você comprar até que você a envie para uma carteira que você controla.",
   "page-get-eth-checkout-dapps-btn": "Confira os dapps",
@@ -21,6 +24,7 @@
   "page-get-eth-exchanges-no-exchanges": "Desculpe, não conhecemos nenhum exchange que permita que você compre ETH neste país. Caso você conheça alguma, nos informe em",
   "page-get-eth-exchanges-no-exchanges-or-wallets": "Desculpe, não conhecemos nenhum exchange ou carteira que permita que você compre ETH neste país. Caso você conheça alguma, nos informe em",
   "page-get-eth-exchanges-no-wallets": "Desculpe, não conhecemos nenhuma carteira que permita que você compre ETH neste país. Caso você conheça alguma, nos informe em",
+  "page-get-eth-exchanges-search": "Digite onde você mora...",
   "page-get-eth-exchanges-success-exchange": "Pode demorar vários dias para se inscrever em uma exchange devido aos controles jurídicos.",
   "page-get-eth-exchanges-success-wallet-link": "carteiras",
   "page-get-eth-exchanges-success-wallet-paragraph": "Onde você mora, é possível comprar ETH diretamente destas carteiras. Saiba mais",
