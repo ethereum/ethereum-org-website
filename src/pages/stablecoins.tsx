@@ -269,6 +269,15 @@ const PaddedContent = styled(Content)`
   padding-bottom: 3rem;
 `
 
+const StyledButtonLink = styled(ButtonLink)<{
+  mb?: string
+  mr?: string
+}>`
+  margin-bottom: ${(props) => props.mb};
+  margin-right: ${(props) => props.mr};
+  width: 50%;
+`
+
 const tooltipContent = (
   <div>
     <Translation id="data-provided-by" />{" "}
@@ -713,21 +722,21 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
                   </DaiSubtitle>
                   <ButtonColumn>
                     <div>
-                      <ButtonLink
-                        mb={"1rem"}
-                        mr={"1rem"}
+                      <StyledButtonLink
+                        mb={"0.5rem"}
+                        mr={"0.5rem"}
                         to="https://1inch.exchange"
                       >
                         <Translation id="page-stablecoins-dai-banner-swap-button" />
-                      </ButtonLink>
+                      </StyledButtonLink>
                     </div>
                     <div>
-                      <ButtonLink
+                      <StyledButtonLink
                         isSecondary
                         to="https://kb.oasis.app/help/what-is-dai"
                       >
                         <Translation id="page-stablecoins-dai-banner-learn-button" />
-                      </ButtonLink>
+                      </StyledButtonLink>
                     </div>
                   </ButtonColumn>
                 </div>
