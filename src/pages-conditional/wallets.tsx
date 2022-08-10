@@ -211,14 +211,6 @@ const articles = [
   },
 ]
 
-type Wallet = {
-  title: string
-  description: string
-  link: string
-  image: string
-  alt: string
-} & Partial<Queries.WalletsCsv>
-
 const WalletsPage = ({
   data,
 }: PageProps<Queries.WalletsPageQuery, Context>) => {
