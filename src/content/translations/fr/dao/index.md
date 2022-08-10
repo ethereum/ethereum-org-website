@@ -69,6 +69,16 @@ _Habituellement utilisé pour des organisations plus proches et axées sur l’h
 
 [MolochDAO](http://molochdao.com/) – MolochDAO se concentre sur le financement de projets Ethereum. Ils requièrent une proposition d’adhésion afin que le groupe puisse évaluer si vous avez l’expertise et le capital nécessaires pour émettre des jugements éclairés sur les bénéfices potentiels. Vous ne pouvez pas vous contenter d'acheter l'accès à la DAO sur le marché ouvert.
 
+### Adhésion basée sur la réputation {#reputation-based-membership}
+
+Ici, la réputation représente une preuve de participation et accorde le droit de vote dans la DAO. Contrairement à une adhésion basée sur des jetons ou sur les actions, les DAO basées sur la réputation ne transfèrent pas la propriété aux contributeurs. En effet, la réputation ne peut pas être achetée, transférée ou déléguée ; les membres de la DAO doivent gagner leur réputation par la participation. Le vote sur la chaîne est sans permission, les membres potentiels peuvent librement soumettre des propositions pour rejoindre la DAO et demander à recevoir de la réputation et des jetons en guise de récompense en échange de leurs contributions.
+
+_Habituellement utilisée pour le développement décentralisé et la gouvernance de protocoles et de DApps, cette méthode est également adaptée à divers autres types d'organisations, comme les organismes caritatifs, les collectifs de travailleurs, les clubs d'investissement, etc._
+
+#### Un exemple célèbre {#reputation-example}
+
+[DXdao](https://DXdao.eth.link) – DXdao est une construction collective mondiale souveraine et régit les protocoles et applications décentralisés depuis 2019. Il tire parti de la gouvernance basée sur la réputation et du consensus holographique pour coordonner et gérer les fonds, ce qui signifie que personne ne peut acheter son entrée pour influencer son avenir.
+
 ## Comment fonctionnent les DAO ? {#how-daos-work}
 
 La colonne vertébrale d'une DAO est son contrat intelligent. Le contrat définit les règles de l'organisation et détient la trésorerie du groupe. Une fois que le contrat est en vigueur sur Ethereum, personne ne peut modifier les règles autrement que par un vote. Si quelqu'un essaie de faire quelque chose qui n'est pas couvert par les règles et la logique dans le code, il échouera. Et, comme la trésorerie est également définie par le contrat intelligent, personne ne peut dépenser l'argent sans l'approbation du groupe. Cela signifie que les DAO n'ont pas besoin d'une autorité centrale. Au lieu de cela, le groupe prend des décisions collectives et les paiements sont autorisés automatiquement lorsque les votes sont passés.
@@ -81,7 +91,7 @@ Ceci est possible parce que les contrats intelligents sont étanches à toute in
 
 ## Ethereum et DAO {#ethereum-and-daos}
 
-Ethereum est une base parfaite pour les DAO pour plusieurs raisons :
+Ethereum est une base parfaite pour les DAOs pour plusieurs raisons :
 
 - Le consensus propre à Ethereum est suffisamment distribué et établi pour que les organisations fassent confiance au réseau.
 - Le code du contrat intelligent ne peut pas être modifié une fois en direct, même par ses propriétaires. Cela permet à la DAO de fonctionner selon les règles avec lesquelles elle a été programmée.
@@ -100,7 +110,7 @@ Ethereum est une base parfaite pour les DAO pour plusieurs raisons :
 - [Invoquer une DAO avec DAOHaus](https://app.daohaus.club/summon)
 - [Créer une DAO propulsée par Aragon](https://aragon.org/product)
 - [Lancer une colonie](https://colony.io/)
-- [Construire une DAO avec DAOstack](https://daostack.io/)
+- [Créer une DAO avec le consensus holographique de DAOstack](https://alchemy.daostack.io/daos/create)
 
 ## Complément d'information {#further-reading}
 
@@ -111,6 +121,7 @@ Ethereum est une base parfaite pour les DAO pour plusieurs raisons :
 - [What is a DAO and what is it for?](https://daohaus.substack.com/p/-what-is-a-dao-and-what-is-it-for) – [DAOhaus](https://daohaus.club/)
 - [How to Start a DAO-Powered Digital Community](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) – [DAOhaus](https://daohaus.club/)
 - [What is a DAO?](https://coinmarketcap.com/alexandria/article/what-is-a-dao) – [Coinmarketcap](https://coinmarketcap.com)
+- [Qu'est-ce que le Consensus Holographique ?](https://medium.com/daostack/holographic-consensus-part-1-116a73ba1e1c) - [DAOstack](https://daostack.io/)
 
 ### Vidéos {#videos}
 
