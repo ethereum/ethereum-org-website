@@ -26,42 +26,17 @@ const Paragraph = styled.p`
 
 ## Theme colors
 
-So far, we only have the `primary` color defined in the new theme. Update it like this:
+All the previous colors defined in the old theme `src/theme.ts` were ported into the new theme as well. Use the same color variables.
 
 ```tsx
 // before
 const Text = styled.p`
 	color: ${({ theme }) => theme.colors.primary};
+	background-color: ${({ theme }) => theme.colors.background};
 `
 
 // now
-<Text color="primary" />
-```
-
-For the rest of colors, hardcode them by using `[useColorModeValue](https://chakra-ui.com/docs/styled-system/color-mode#usecolormodevalue)`
-
-```tsx
-// before
-const Container = styled.div`
-  border-color: ${({ theme }) => theme.colors.lightBorder};
-`
-const Text = styled.p`
-  color: ${({ theme }) => theme.colors.text};
-`
-
-// now
-import { useColorModeValue } from "@chakra-ui/react"
-
-function Component() {
-  const textColor = useColorModeValue("#333333", "#f2f2f2")
-  const borderColor = useColorModeValue("#404040", "#ececec")
-
-  return (
-    <Box borderColor={borderColor}>
-      <Text color={textColor} />
-    </Box>
-  )
-}
+<Text color="primary" bg="background" />
 ```
 
 <aside>
