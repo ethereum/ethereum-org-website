@@ -37,9 +37,9 @@ const semanticTokens = {
     bodyLight: { _light: "grey.500", _dark: "grey.100" },
     disabled: { _light: "grey.300", _dark: "grey.500" },
     background: { _light: "white", _dark: "black" },
-    success: { default: "green.500" },
-    error: { _light: "red.600" },
-    attention: { _light: "yellow.200" },
+    success: "green.500",
+    error: "red.600",
+    attention: "yellow.200",
   },
 }
 
