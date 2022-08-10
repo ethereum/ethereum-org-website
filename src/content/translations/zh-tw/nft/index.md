@@ -6,7 +6,7 @@ template: use-cases
 emoji: ":frame_with_picture:"
 sidebar: true
 sidebarDepth: 2
-image: ../../assets/infrastructure_transparent.png
+image: ../../../../assets/infrastructure_transparent.png
 alt: 全息投影顯示的以太幣標誌。
 summaryPoint1: 一種用以太坊資產來呈現任何獨特事物的方式。
 summaryPoint2: 非同質化代幣賦予了內容創作者前所未有的強大力量。
