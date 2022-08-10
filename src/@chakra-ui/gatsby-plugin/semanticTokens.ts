@@ -12,6 +12,10 @@ const oldColors = Object.keys(oldLightThemeColors).reduce((colors, color) => {
   const lightColor = oldLightThemeColors[color]
   const darkColor = oldDarkThemeColors[color]
 
+  if (typeof lightColor !== "string" || typeof darkColor !== "string") {
+    return colors
+  }
+
   return {
     ...colors,
     [color]: { _light: lightColor, _dark: darkColor },
