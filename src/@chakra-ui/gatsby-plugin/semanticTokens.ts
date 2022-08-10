@@ -32,10 +32,14 @@ const semanticTokens = {
     // Design System colors
     primary: { _light: "blue.500", _dark: "orange.500" },
     primaryDark: { _light: "blue.700", _dark: "orange.800" },
-    body: { _light: "grey.800", _dark: "grey.200" },
-    bodyLight: { _light: "grey.500", _dark: "grey.200" },
+    primaryHover: { _light: "blue.300", _dark: "orange.300" },
+    body: { _light: "grey.700", _dark: "grey.100" },
+    bodyLight: { _light: "grey.500", _dark: "grey.100" },
     disabled: { _light: "grey.300", _dark: "grey.500" },
-    bg: { _light: "white", _dark: "black" },
+    background: { _light: "white", _dark: "black" },
+    success: { default: "green.500" },
+    error: { _light: "red.600" },
+    attention: { _light: "yellow.200" },
   },
 }
 
