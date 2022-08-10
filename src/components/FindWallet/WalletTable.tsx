@@ -274,10 +274,10 @@ const FlexInfoCenter = styled(FlexInfo)`
   cursor: pointer;
   height: 100%;
   display: flex;
-  animation: ${fadeIn} 0.5s;
+  animation: ${fadeIn} 0.25s;
 
   &.fade {
-    animation: ${fadeOut} 0.5s;
+    animation: ${fadeOut} 0.25s;
   }
 `
 
