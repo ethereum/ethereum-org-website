@@ -28,7 +28,7 @@ Post-Merge Ethereum consists of two networks: the execution layer and the consen
 Before [The Merge](/upgrades/merge/), consensus and execution layer networks were separate, with all transactions and user activity on the Ethereum network happening at what is now the execution layer. One client software provided both execution environment and consensus verification of blocks produced by miners.
 The consensus layer, [the Beacon Chain](/upgrades/beacon-chain/), has been running separately since December 2020. It introduced proof-of-stake and coordinated the network of validators based on data from the Ethereum network. 
 
-With the Merge, Ethereum network transitions to proof-of-stake by connecting these networks. Execution and consensus client work together to verify blockchain state. 
+With the Merge, Ethereum transitions to proof-of-stake by connecting these networks. Execution and consensus clients work together to verify Ethereum's state. 
 
 Modular design with various software pieces working together is called [encapusalted complexity](https://vitalik.ca/general/2022/02/28/complexity.html). This approach makes it easier to execute The Merge seamlessly and enables the reuse of individual clients, for example, in the [layer 2 ecosystem](/layer-2/). 
 
