@@ -162,6 +162,7 @@ const StepBox = styled(Link)`
   width: 100%;
   margin-top: -1px;
   &:hover {
+    text-decoration: none;
     background: ${(props) => props.theme.colors.ednBackground};
     transition: transform 0.2s;
     transform: scale(1.05);

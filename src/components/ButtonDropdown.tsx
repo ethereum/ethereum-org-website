@@ -98,6 +98,7 @@ const NavLink = styled(Link)`
   padding: 0.5rem;
   color: ${(props) => props.theme.colors.text};
   &:hover {
+    text-decoration: none;
     color: ${(props) => props.theme.colors.primary};
   }
 `

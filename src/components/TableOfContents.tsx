@@ -79,6 +79,7 @@ const StyledTableOfContentsLink = styled(Link)`
   margin-bottom: 0.5rem !important;
   /* Add left border bullet on hover */
   &:hover {
+    text-decoration: none;
     color: ${(props) => props.theme.colors.primary};
     &:after {
       content: "";

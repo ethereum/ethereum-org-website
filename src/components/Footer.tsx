@@ -76,6 +76,7 @@ const FooterLink = styled(Link)`
     color: ${(props) => props.theme.colors.text200};
   }
   &:hover {
+    text-decoration: none;
     color: ${(props) => props.theme.colors.primary};
     &:after {
       color: ${(props) => props.theme.colors.primary};
