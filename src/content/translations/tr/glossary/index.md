@@ -643,7 +643,7 @@ Her bloğun madenciliği ile etherde bir ödül karşılığında Ethereum blok 
 
 ### madenci {#miner}
 
-Tekrarlanan geçiş karma işlemiyle yeni bloklar için geçerli [iş kanıtı](#pow) bulan bir ağ [düğümü](#node) (bkz. ="#ethash">Ethash</a>).
+Tekrarlanan geçiş karma işlemiyle yeni bloklar için geçerli [iş kanıtı](#pow) bulan bir ağ [düğümü](#node) (bkz. [Ethash](#ethash)).
 
 <DocLink to="/developers/docs/consensus-mechanisms/pow/mining/">
   Madencilik
