@@ -61,7 +61,7 @@ Smart contracts are also useful for audits and tracking. Since Ethereum smart co
 
 ### Privacy protection {#privacy-protection}
 
-Smart contracts can also protect privacy. Since Ethereum is a pseudonymous network (your transactions are tied publicly to a unique cryptographic address, not your identity), you can protect your privacy from observers.
+Smart contracts can also protect your privacy. Since Ethereum is a pseudonymous network (your transactions are tied publicly to a unique cryptographic address, not your identity), you can protect your privacy from observers.
 
 ### Visible terms {#visible-terms}
 
