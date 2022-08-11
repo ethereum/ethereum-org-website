@@ -8375,6 +8375,16 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "Aldizh",
+      "name": "Aldi Zhupani",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2282120?v=4",
+      "profile": "http://aldizh.github.io/",
+      "contributions": [
+        "bug",
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
