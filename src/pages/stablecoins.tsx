@@ -275,10 +275,7 @@ const StyledButtonLink = styled(ButtonLink)<{
 }>`
   margin-bottom: ${(props) => props.mb};
   margin-right: ${(props) => props.mr};
-  width: 70%;
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    width: 100%;
-  }
+  width: 100%;
 `
 
 const tooltipContent = (
