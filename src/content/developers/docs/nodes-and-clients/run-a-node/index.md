@@ -66,7 +66,7 @@ However, a censorship-resistant, decentralized network should not rely on cloud 
 
 Depending on your needs and wants, Ethereum clients can run on your computer, laptop, server or single-board computer. While it is possible to run clients on your personal computer, having a dedicated machine just for your node can greatly enhance its performance and security while minimizing the impact on your primary computer.
 
-Using your own hardware can be very easy and escalates from simple to more advanced options. Let's look into the requirements and means for running Ethereum clients on your own machine. 
+Using your own hardware can be very easy, there are number of simple and also more advanced options. Let's look into the requirements and means for running Ethereum clients on your own machine. 
 
 #### Requirements {#requirements}
 
@@ -74,7 +74,7 @@ Hardware requirements differ by client but generally are not that high since the
 
 Before installing any client, please ensure your computer has enough resources to run it. Minimum and recommended requirements can be found below. 
 
-The hardware bottleneck is mostly a disk space. Syncing the Ethereum blockchain is very input/output intensive and requires a lot of space. It is best to have a solid-state drive (SSD) with hundreds of GBs of free space to spare even after the synchronization. To run an Ethereum client on an HDD, you will need at least 8GB of RAM to use as a cache.
+The hardware bottleneck is mostly a disk space. Syncing the Ethereum blockchain is very input/output intensive and requires a lot of space. It is best to have a solid-state drive (SSD) with hundreds of GBs of free space to spare even after the synchronization. 
 
 Size of the database and speed of the initial synchronization depends on chosen client, its configuration and [sync strategy](/developers/docs/nodes-and-clients/#sync-modes). 
 
@@ -120,7 +120,7 @@ The easiest option for running a node with your own hardware is using plug-and-p
 
 #### Ethereum on a single-board computer {#ethereum-on-a-single-board-computer}
 
-Easy and cheap way of running an Ethereum node is to use a single board computer, even with an ARM architecture like the Raspberry Pi. [Ethereum on ARM](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/) provides easy to run images for Raspberry and other boards with multiple execution and consensus client. 
+Easy and cheap way of running an Ethereum node is to use a single board computer, even with an ARM architecture like the Raspberry Pi. [Ethereum on ARM](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/) provides easy to run images of multiple execution and consensus client for Raspberry Pi and other ARM boards.
 
 Small, affordable and efficient devices like these are ideal for running a node at home but keep in mind their limited performence.
 
@@ -138,11 +138,11 @@ Here are few projects which can help you install and control clients just with a
 - [Stereum](https://stereum.net/ethereum-node-setup/)
     - Launcher for installing clients on a remote server via SSH connection with a GUI setup guide, control center and many features, e.g. app for monitoring nodes from your phone. 
 - [NiceNode](https://www.nicenode.xyz/)
-    - Launcher with the easiest user experience, choose clients and start them with a few clicks. Still in development. 
+    - Launcher with the easiest user experience to run a node on your computre. Just choose clients and start them with a few clicks. Still in development. 
 - [DappNode](https://docs.dappnode.io/get-started/installation/custom-hardware/installation/overview/)
     - DappNode doesn't come only with a machine from a vendor. The software, the actual node launcher and control center with many features can be used on arbitrary hardware. 
 - [eth-docker](https://eth-docker.net/docs/About/Overview/)
-    - Automatized setup using Docker focused on easy and secure staking. It requires basic terminal and docker knowledge, recommended for a bit more advanced users. 
+    - Automatized setup using Docker focused on easy and secure staking. It requires basic terminal and Docker knowledge, recommended for a bit more advanced users. 
 
 ### Manual clients setup {#manual-setup}
 
@@ -154,7 +154,7 @@ As explained before, setting up your own Ethereum node will require running a pa
 
 First, you need to obtain your preferred [execution client](/developers/docs/nodes-and-clients/#execution-clients) and [consensus client](developers/docs/nodes-and-clients/#consensus-clients) software. 
 
-You can simply download an executable application or installation package that suits your operating system and architecture. Always verify the signatures and checksums of downloaded packages. Some clients also offer repositories or Docker images for easier installation and updates.All of the clients are open source, so you can also build them from source. This is a more advanced method, but in some cases, it might be required. 
+You can simply download an executable application or installation package that suits your operating system and architecture. Always verify the signatures and checksums of downloaded packages. Some clients also offer repositories or Docker images for easier installation and updates. All of the clients are open source, so you can also build them from source. This is a more advanced method, but in some cases, it might be required. 
 
 Instructions for installing each client are provided in the documentation linked in the client lists above. 
 
@@ -183,18 +183,18 @@ It is also worth noting that client diversity is an [issue on the execution laye
 
 ##### Verifying the software {#verifying-software}
 
-When downloading software from the internet, it's recommended to verify its integrity. This step is optional but especially with crucial infrastracture piece like the Ethereum client, it's important to be aware of potential attack vectors and avoid them. If you just downloaded a pre-built binary, you need to trust it and risk that an attacker could swap the executable for a malicious one. 
+When downloading software from the internet, it's recommended to verify its integrity. This step is optional but especially with crucial infrastracture piece like the Ethereum client, it's important to be aware of potential attack vectors and avoid them. If you downloaded a pre-built binary, you need to trust it and risk that an attacker could swap the executable for a malicious one. 
 
 Developers sign released binaries with their PGP keys so you can cryptographically verify you are running exactly the software they created. You just need to obtain public keys used by developers, which can be found on client release pages or in documentation. After downloading the client release and its signature, you can use a PGP implementation, e.g. [GnuPG](https://gnupg.org/download/index.html) to easily verify them. Check out a tutorial on veryifing open-source software using `gpg` on [linux](https://www.tecmint.com/verify-pgp-signature-downloaded-software/) or [Windows/MacOS](https://freedom.press/training/verifying-open-source-software/). 
 
-Another form of verification is making sure that the hash, a unique cryptographic fingerprint, of the software you downloaded matches the one provided by the developers. This is even easier than using PGP, and some clients offer only this option. Just run the hash function on the downloaded software and compare it to the one from the release page. For example: 
+Another form of verification is to make sure that the hash, a unique cryptographic fingerprint, of the software you downloaded matches the one provided by developers. This is even easier than using PGP, and some clients offer only this option. Just run the hash function on the downloaded software and compare it to the one from the release page. For example: 
 ```
 sha256sum teku-22.6.1.tar.gz
 
 9b2f8c1f8d4dab0404ce70ea314ff4b3c77e9d27aff9d1e4c1933a5439767dde
 ```
 
-#### Setup in client {#client-setup}
+#### Client setup {#client-setup}
 
 After installing, downloading, or compiling the client software, you are ready to run it. This only means it has to be executed with the proper configuration. Clients offer rich configuration options, which can enable various features.
 
@@ -225,7 +225,7 @@ Execution and consensus clients communicate via an authenticated endpoint specif
 
 This token is generated automatically by the client software but in some cases, e.g. during pre-Merge testing, you might need to do it by yourself. You can generate it by running:
 ```
-openssl rand -hex 32
+openssl rand -hex 32 > jwtsecret
 ```
 
 **Note that it is recommended to connect an execution and consensus client on a testnet only for now (e.g. Kiln) and await merge-ready client releases before replicating the process on Mainnet.**
@@ -341,19 +341,16 @@ Before running Lighthouse, learn more on how to install and configure it in [Lig
 lighthouse beacon_node
     --network mainnet \
     --datadir /data/ethereum \
-    --eth1-endpoints http://127.0.0.1:8545
     --http \
-    --http-allow-sync-stalled \
-    --execution-endpoint http://127.0.0.1:8551 \
-    --jwt-secrets="/path/to/jwtsecret" \
+    --execution.urls http://127.0.0.1:8551 \
+    --jwt-secret="/path/to/jwtsecret" \
 ```
 </details>
 
 <details>
   <summary>Running Lodestar</summary>
 
-Prepare Lodestar software via compiling it or downloading the Docker image. Learn more in [docs](https://chainsafe.github.io/lodestar/) and more comprehensive [setup guide](https://hackmd.io/@philknows/rk5cDvKmK).  
-
+Install Lodestar software by compiling it or downloading the Docker image. Learn more in [docs](https://chainsafe.github.io/lodestar/) and more comprehensive [setup guide](https://hackmd.io/@philknows/rk5cDvKmK).  
 ```
 lodestar beacon \
     --rootDir="/data/ethereum" \
@@ -402,6 +399,7 @@ teku --network mainnet \
     --ee-endpoint http://localhost:8551 \
     --ee-jwt-secret-file "/path/to/jwtsecret" \
 ```
+Learn more about running Merge ready setup with Teku in [its documentation](https://docs.teku.consensys.net/en/22.8.0/HowTo/Prepare-for-The-Merge/). 
 </details>
 
 Consensus client connects to the execution client to read the deposit contract and identify validators. It also connects to other Beacon Node peers and syncs consensus slots from genesis. When it reaches the current epoch, the Beacon API becomes usable for your validators. Learn more about [Beacon Node APIs](https://eth2docs.vercel.app/). 
