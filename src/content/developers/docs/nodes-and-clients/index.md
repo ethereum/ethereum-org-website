@@ -37,11 +37,11 @@ Simplified diagram of a coupled execution and consensus client.
 
 ### Client diversity {#client-diversity}
 
-Both [Execution clients](/developers/docs/nodes-and-clients/#consensus-clients) and [Conesnsus clients](/developers/docs/nodes-and-clients/#execution-clients) exist, in a variety of programming languages such as Go, Rust, JavaScript, Typescript, Python, C# .NET, Nim and Java. 
+Both [execution clients](/developers/docs/nodes-and-clients/#consensus-clients) and [consensus clients](/developers/docs/nodes-and-clients/#execution-clients) exist, in a variety of programming languages such as Go, Rust, JavaScript, Typescript, Python, C# .NET, Nim and Java. 
 
 Multiple client implementations make the network stronger and more diverse. The ideal goal is to achieve diversity without any client dominating, thereby reducing any single points of failure. The variety of languages also invites a broader developer community and allows them to create integrations in their preferred language.
 
-Learn more about [Client diversity](/developers/docs/client-diversity). 
+Learn more about [client diversity](/developers/docs/client-diversity). 
 
 What these implementations have in common is they all follow a single specification. Specifications dictate how the Ethereum network and blockchain functions. Every technical detail is defined and specifications can be found as: 
  
@@ -49,7 +49,6 @@ What these implementations have in common is they all follow a single specificat
 - [Execution specs](https://github.com/ethereum/execution-specs/)
 - [Consensus specs](https://github.com/ethereum/consensus-specs)
 - [EIPs](https://eips.ethereum.org/) implemented in various [network upgrades](/history/)
-
 
 ### Tracking nodes in the network {#network-overview}
 
@@ -62,7 +61,7 @@ There are multiple trackers which offer a real-time overview of nodes in the Eth
 
 ## Node types {#node-types}
 
-If you want to [run your own node](/developers/docs/nodes-and-clients/run-a-node/), you should understand that there are different types of node that consume data differently. In fact, clients can run 3 different types of node - light, full and archive. There are also options of different sync strategies which enable faster synchronization time. Synchronization refers to how quickly it can get the most up-to-date information on Ethereum's state.
+If you want to [run your own node](/developers/docs/nodes-and-clients/run-a-node/), you should understand that there are different types of node that consume data differently. In fact, clients can run three different types of node—light, full and archive. There are also options of different sync strategies which enable faster synchronization time. Synchronization refers to how quickly it can get the most up-to-date information on Ethereum's state.
 
 ### Full node {#full-node}
 
@@ -200,7 +199,7 @@ Documentation can be found in [Lighthouse Book](https://lighthouse-book.sigmapri
 
 ### Lodestar
 
-Lodestar is a production-ready consensus client implementation written in Typescript under the LGPL-3.0 license. It is maintained by ChainSafe Systems and is the newest of the consensus clients for solo-stakers, developers and researchers. Lodestar consists of a beacon node and validator client powered by JavaScript implementations of Ethereum protocols. We aim to improve Ethereum usability with light clients, expand accessibility to a larger group of developers and further contribute to ecosystem diversity.
+Lodestar is a production-ready consensus client implementation written in Typescript under the LGPL-3.0 license. It is maintained by ChainSafe Systems and is the newest of the consensus clients for solo-stakers, developers and researchers. Lodestar consists of a beacon node and validator client powered by JavaScript implementations of Ethereum protocols. Lodestar aims to improve Ethereum usability with light clients, expand accessibility to a larger group of developers and further contribute to ecosystem diversity.
 
 More information can be found on our [Lodestar website](https://lodestar.chainsafe.io/)
 
@@ -218,7 +217,7 @@ Visit [Prysm docs](https://docs.prylabs.network/docs/getting-started/) to learn 
 
 ### Teku
 
-Teku is one of the original beacon chain genesis clients. Alongside the usual goals (security, robustness, stability, usability, performance) it specifically aims to comply fully with all the various consensus client standards.
+Teku is one of the original Beacon Chain genesis clients. Alongside the usual goals (security, robustness, stability, usability, performance) it specifically aims to comply fully with all the various consensus client standards.
 
 Teku offers very flexible deployment options. The beacon node and validator client can be run together as a single process, which is extremely convenient for solo stakers, or they can be run separately for sophisticated staking operations. In addition, Teku is fully interoperable with [Web3Signer](https://github.com/ConsenSys/web3signer/) for signing key security and slashing protection.
 
@@ -262,7 +261,7 @@ The latest approach to syncing the client, pioneered by Geth. Using dynamic snap
 - Fastest sync strategy, currently default in Ethereum mainnet 
 - Saves a lot of disk usage and network bandwidth without sacrificing security
 
-[More on Snap sync](https://github.com/ethereum/devp2p/blob/master/caps/snap.md)
+[More on snap sync](https://github.com/ethereum/devp2p/blob/master/caps/snap.md)
 
 #### Consensus layer sync modes
 
@@ -270,7 +269,7 @@ The latest approach to syncing the client, pioneered by Geth. Using dynamic snap
 
 Optimistic sync is a post-merge synchronization strategy designed to be opt-in and backwards compatible, allowing execution nodes to sync via established methods. The execution engine can *optimistically* import beacon blocks without fully verifying them, find the latest head, and then start syncing the chain with the above methods. Then, after the execution client has caught up, it will inform the consensus client of the validity of the transactions in the Beacon Chain.
 
-[More on Optimistic sync](https://github.com/ethereum/consensus-specs/blob/dev/sync/optimistic.md)
+[More on optimistic sync](https://github.com/ethereum/consensus-specs/blob/dev/sync/optimistic.md)
 
 #### Checkpoint sync
 
@@ -278,7 +277,7 @@ Also called weak subjectivity sync, this strategy creates a superior user experi
 
 In practice, this means your node connects to a remote service to download recent finalized states and continues verifying data from that point. Third party providing the data is trusted and should be picked carefully. 
 
-More on [Checkpoint sync](https://notes.ethereum.org/@djrtwo/ws-sync-in-practice)
+More on [checkpoint sync](https://notes.ethereum.org/@djrtwo/ws-sync-in-practice)
 
 ## Further reading {#further-reading}
 
