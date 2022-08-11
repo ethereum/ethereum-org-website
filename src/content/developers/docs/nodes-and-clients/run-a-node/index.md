@@ -296,11 +296,11 @@ This example starts Geth on mainnet, stores blockchain data at `/data/ethereum`,
 ```
 geth --mainnet \
     --datadir "/data/ethereum" \
-    --http --http.api="engine,eth,web3,net" \
+    --http --http.api="eth,web3,net" \
     --authrpc.vhosts="localhost" \
     --authrpc.jwtsecret=/path/to/jwtsecret 
 ```
-Check [docs for all possible options](https://geth.ethereum.org/docs/interface/command-line-options) to run Geth with. 
+Check [docs for all configuration options](https://geth.ethereum.org/docs/interface/command-line-options) and learn more about [running Geth with a consensus client](https://geth.ethereum.org/docs/interface/consensus-clients). 
 
 </details>
 
