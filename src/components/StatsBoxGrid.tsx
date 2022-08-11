@@ -459,10 +459,10 @@ const StatsBoxGrid: React.FC<IProps> = () => {
 
     const fetchTxCount = async (): Promise<void> => {
       try {
-        const { result } = await getData<Array<IFetchTxResponse>>(
+        const response = await getData<Array<IFetchTxResponse>>(
           `${process.env.GATSBY_FUNCTIONS_PATH}/txs`
         )
-        const data = result
+        const data = response
           .map(({ unixTimeStamp, transactionCount }) => ({
             timestamp: parseInt(unixTimeStamp) * 1000, // unix milliseconds
             value: transactionCount,
