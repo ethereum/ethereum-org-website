@@ -620,7 +620,7 @@ Short for "main network," this is the main public Ethereum [blockchain](#blockch
 
 ### memory-hard {#memory-hard}
 
-Memory hard functions are processes that experience a drastic decrease in speed or feasibility when the amount of available memory even slightly decreases. An example id the Ethereum mining algorithm [Ethash](#ethash).
+Memory hard functions are processes that experience a drastic decrease in speed or feasibility when the amount of available memory even slightly decreases. An example is the Ethereum mining algorithm [Ethash](#ethash).
 
 ### Merkle Patricia trie {#merkle-patricia-tree}
 

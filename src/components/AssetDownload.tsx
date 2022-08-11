@@ -105,7 +105,7 @@ const AssetDownload: React.FC<IProps> = ({
         {children && <ImageContainer>{children}</ImageContainer>}
         {!children && (
           <ImageContainer>
-            {!!Svg ? (
+            {Svg ? (
               <Svg alt={alt} />
             ) : (
               <Image image={getImage(image)} alt={alt} />
