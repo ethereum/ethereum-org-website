@@ -1,6 +1,7 @@
 // Libraries
-import React, { useContext } from "react"
-import styled, { ThemeContext } from "styled-components"
+import React from "react"
+import { useTheme } from "@emotion/react"
+import styled from "@emotion/styled"
 
 // Components
 import Icon from "../Icon"
@@ -299,7 +300,7 @@ const WalletPersonasSidebar = ({
   selectedPersona,
   setSelectedPersona,
 }) => {
-  const themeContext = useContext(ThemeContext)
+  const theme = useTheme()
   const personas: Personas[] = [
     {
       title: "New to crypto",
@@ -505,7 +506,7 @@ const WalletPersonasSidebar = ({
       {personas.map((persona, idx) => {
         return (
           <Persona
-            isDark={themeContext.isDark}
+            isDark={theme.isDark}
             selected={selectedPersona === idx}
             onClick={() => {
               if (idx === selectedPersona) {

@@ -1,12 +1,12 @@
 import React from "react"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 
 const CheckboxContainer = styled.div`
   display: inline-block;
   vertical-align: middle;
 `
 
-const HiddenCheckbox = styled.input.attrs({ type: "checkbox" })`
+const HiddenCheckbox = styled.input`
   border: 0;
   clip: rect(0 0 0 0);
   height: 1px;
@@ -76,7 +76,7 @@ const Checkbox: React.FC<IProps> = ({
   }
   return (
     <CheckboxContainer className={className} onClick={handleClick}>
-      <HiddenCheckbox checked={checked} readOnly {...rest} />
+      <HiddenCheckbox type="checkbox" checked={checked} readOnly {...rest} />
       <StyledCheckbox
         aria-hidden="true"
         checked={checked}

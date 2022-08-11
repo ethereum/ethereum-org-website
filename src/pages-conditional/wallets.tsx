@@ -1,5 +1,5 @@
 import React from "react"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { useIntl } from "react-intl"
 import { graphql, PageProps } from "gatsby"
@@ -210,14 +210,6 @@ const articles = [
     link: "https://media.consensys.net/how-to-store-digital-assets-on-ethereum-a2bfdcf66bd0",
   },
 ]
-
-type Wallet = {
-  title: string
-  description: string
-  link: string
-  image: string
-  alt: string
-} & Partial<Queries.WalletsCsv>
 
 const WalletsPage = ({
   data,

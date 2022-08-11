@@ -7767,7 +7767,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/98348072?v=4",
       "profile": "https://www.linkedin.com/in/lcalixxto/",
       "contributions": [
-        "doc"
+        "doc",
+        "content"
       ]
     },
     {
@@ -8288,7 +8289,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/39565075?v=4",
       "profile": "http://www.samuelakinosho.com",
       "contributions": [
-        "doc"
+        "doc",
+        "code"
       ]
     },
     {
@@ -8371,6 +8373,25 @@
       "name": "Pandapip1",
       "avatar_url": "https://avatars.githubusercontent.com/u/45835846?v=4",
       "profile": "https://pandapip1.com/",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "Aldizh",
+      "name": "Aldi Zhupani",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2282120?v=4",
+      "profile": "http://aldizh.github.io/",
+      "contributions": [
+        "bug",
+        "code"
+      ]
+    },
+    {
+      "login": "linhuatan",
+      "name": "linhuatan",
+      "avatar_url": "https://avatars.githubusercontent.com/u/94831627?v=4",
+      "profile": "https://github.com/linhuatan",
       "contributions": [
         "doc"
       ]

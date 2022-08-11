@@ -3,7 +3,7 @@ import { graphql, PageProps } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { MDXProvider } from "@mdx-js/react"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 
 import ButtonLink from "../components/ButtonLink"
 import ButtonDropdown, {

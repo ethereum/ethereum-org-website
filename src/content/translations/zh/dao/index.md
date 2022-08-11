@@ -69,9 +69,19 @@ _通常用于联系更紧密、以人为中心的组织，例如慈善机构、�
 
 [MolochDAO](http://molochdao.com/) - MolochDAO 致力于为以太坊项目募集资金。 他们需要成员资格提案，以便小组可以评估您是否具有必要的专业知识和资本来对潜在资助方做出明智判断。 您无法通过直接购买代币来加入去中心化自治组织。
 
+### 基于信誉的成员资格 {#reputation-based-membership}
+
+信誉代表参加选举的证明，并授予去中心化自治组织中的选举权。 不同于代币或共享成员资格，基于信誉体系的去中心化自治组织不会将所有权转让给贡献者。 信誉积分不能被购买、转移或授权；去中心化自治组织成员必须通过参与获得信誉积分。 链上投票是没有许可的，未来的成员可以自由提交加入去中心化自治组织的建议书，并要求获得信誉积分和代币，作为奖励换取他们的贡献。
+
+_通常用于协议和去中心化应用的分布式开发和治理，但也非常适合各种组织，如慈善机构、工人团体、投资俱乐部等。_
+
+#### 知名案例 {#reputation-example}
+
+[DXdao](https://DXdao.eth.link) -- DXdao 是一个全球主权集体，自 2019 年以来致力于构建和管理去中心化协议和应用。 它利用以信誉为基础的治理和全息共识来协调和管理资金，这意味着任何人都不能对它的未来施加影响。
+
 ## 去中心化自治组织如何运作？ {#how-daos-work}
 
-智能合约是去中心化自治组织的核心。 合约界定了组织的规则，管理组织金库。 一旦在以太链上启用合约，除非表决通过，否则任何人都不能修改规则， 任何违背代码规则和逻辑的行为都将失败。 由于资金库由智能合约定义，任何人都不能未经组织批准而挪用资金。 这意味着去中心化自治组织不需要集中管理机构。 相反，组织共同作出决定，而付款会在投票通过后自动获批。
+智能合约是去中心化自治组织的核心。 合约界定了组织的规则，并持有组织资金库。 一旦在以太坊上启用合约，除非表决通过，否则任何人都不能修改规则。 任何违背代码规则和逻辑的行为都将失败。 由于资金库由智能合约定义，任何人都不能未经组织批准而挪用资金。 这意味着去中心化自治组织不需要集中管理机构。 相反，组织集体作出决定，而付款会在表决通过后自动获批。
 
 之所以能够做到这一点，是因为智能合约一旦在以太坊中生效，就无法被篡改。 一切都是公开的，只要修改代码（去中心化自治组织的规则）就会被发现。
 
@@ -100,7 +110,7 @@ _通常用于联系更紧密、以人为中心的组织，例如慈善机构、�
 - [使用 DAOHaus 创立去中心化自治组织](https://app.daohaus.club/summon)
 - [创立 Aragon 支持的去中心化自治组织](https://aragon.org/product)
 - [创立 colony](https://colony.io/)
-- [使用 DAOstack 创立去中心化自治组织](https://daostack.io/)
+- [使用 DAOstack 全息共识创建去中心化自治组织](https://alchemy.daostack.io/daos/create)
 
 ## 延伸阅读 {#further-reading}
 
@@ -111,7 +121,8 @@ _通常用于联系更紧密、以人为中心的组织，例如慈善机构、�
 - [去中心化自治组织及其目的分别是什么？](https://daohaus.substack.com/p/-what-is-a-dao-and-what-is-it-for)– [DAOhaus](https://daohaus.club/)
 - [如何创立由去中心化自治组织提供支持的数字社区](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) – [DAOhaus](https://daohaus.club/)
 - [什么是去中心化自治组织？](https://coinmarketcap.com/alexandria/article/what-is-a-dao)– [Coinmarketcap](https://coinmarketcap.com)
+- [什么是全息共识？](https://medium.com/daostack/holographic-consensus-part-1-116a73ba1e1c)- [DAOstack](https://daostack.io/)
 
-### 相关视频 {#videos}
+### 视频 {#videos}
 
 - [什么是加密货币中的去中心化自治组织？](https://youtu.be/KHm0uUPqmVE)

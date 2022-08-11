@@ -1,7 +1,7 @@
 // Libraries
 import React, { useState } from "react"
 import { getImage, GatsbyImage } from "gatsby-plugin-image"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 
 // Components
 import ButtonLink from "../ButtonLink"
