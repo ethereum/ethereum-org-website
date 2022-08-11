@@ -17,7 +17,7 @@ Lisez-les avant de [contribuer à ethereum.org](/contributing/).
 
 Ne vous inquiétez pas, ils sont assez simples ! **Les principes de conception** sont un ensemble de lignes directrices auxquelles nous nous référons lors de la conception (c'est-à-dire la création, la maintenance ou la mise à jour) de quelque chose.
 
-Dans le contexte d'ethereum.org, ces principes de conception sont la base de ce que nous voulons que le site web représente et projette au monde. Ils sont à la fois ambitieux <strong x-id = « 1"> et</strong> fonctionnels. Il ne s'agit pas seulement de l'_apparence_ du site, mais également de son _fonctionnement_, et même de ce qu'une personne _ressent_ en le parcourant. Tout, des couleurs aux mises en page en passant par la façon dont nous parlons d'Ethereum sur le site web, doit s'appuyer sur ces principes.
+Dans le contexte d'ethereum.org, ces principes de conception sont la base de ce que nous voulons que le site web représente et projette au monde. Ils sont à la fois ambitieux et fonctionnels. Il ne s'agit pas seulement de l'_apparence_ du site, mais également de son _fonctionnement_, et même de ce qu'une personne _ressent_ en le parcourant. Tout, des couleurs aux mises en page en passant par la façon dont nous parlons d'Ethereum sur le site web, doit s'appuyer sur ces principes.
 
 ## Les principes en pratique {#how-decisions-about-the-site-are-made}
 
