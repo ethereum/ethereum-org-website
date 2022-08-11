@@ -23,7 +23,7 @@ If you're new to the topic of nodes, we recommend first checking out our user-fr
 
 Post-Merge Ethereum consists of two networks: the execution layer and the consensus layer. Both networks are run by different client software. On this page, we'll refer to them as the execution client and consensus client. 
 - The execution client, also known as the Execution Engine, EL client or formerly the Eth1 client, listens to new transactions broadcasted in the network, executes them in EVM and holds the latest state, and database of all current Ethereum data. 
-- The consensus client, also known as the Beacon Node, CL client or formerly the Eth2 client, implements the proof-of-stake consensus algorithm which enables network to achieve agreement based on validated data from the execution client. 
+- The consensus client (also known as the Beacon Node, CL client or formerly the Eth2 client) implements the proof-of-stake consensus algorithm, which enables the network to achieve agreement based on validated data from the execution client.
 
 Before [The Merge](/upgrades/merge/), consensus and execution layer networks were separeted. All transactions and user activity on Ethereum network was happening at what is now the execution layer. One client software provided both execution enviroment and consensus verification of blocks produced by miners. 
 The consensus layer, [the Beacon Chain](/upgrades/beacon-chain/), was running separetly since December 2020. It introduced proof-of-stake and coordinated the network of validators based on data from the Ethereum network. 
