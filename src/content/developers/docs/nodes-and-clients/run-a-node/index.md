@@ -257,7 +257,7 @@ besu --network=mainnet \
     --data-path=/data/ethereum \
     --rpc-http-enabled=true \
     --engine-rpc-enabled=true \
-    --engine-host-allowlist="localhost" \
+    --engine-host-allowlist="*" \
     --engine-jwt-enabled=true \
     --engine-jwt-secret=/path/to/jwtsecret
 ```
@@ -307,7 +307,7 @@ Check [docs for all possible options](https://geth.ethereum.org/docs/interface/c
 <details>
   <summary>Running Nethermind</summary>
 
-Nethermind package includes various binaries, including a Launcher with guided setup, which will help you to create the configuration interactively. Alternativally, you find Runner which is the executable itself and you can just run it with config glags. JSON RPC is enabled by default. 
+Nethermind offers various [installation options](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/getting-started). The package come with various binaries, including a Launcher with guided setup, which will help you to create the configuration interactively. Alternativally, you find Runner which is the executable itself and you can just run it with config glags. JSON RPC is enabled by default. 
 ```
 Nethermind.Runner --config mainnet \
     --datadir /data/ethereum \
