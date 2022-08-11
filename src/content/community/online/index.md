@@ -30,6 +30,9 @@ Hundreds of thousands of Ethereum enthusiasts gather in these online forums to s
 <SocialListItem socialIcon="discord"><Link to="https://discord.gg/ZH5aXDgWEU">Web3 University</Link> - community focused on learning web3 development </SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://gitter.im/ethereum/solidity/">Solidity Gitter</Link> - chat for solidity development (Gitter)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://matrix.to/#/#ethereum_solidity:gitter.im">Solidity Matrix</Link> - chat for solidity development (Matrix)</SocialListItem>
+<SocialListItem socialIcon="discord"><Link to="https://discord.gg/G4vVhQu3">Matos Discord</Link> - web3 creators community where builders, industrial figureheads, and Ethereum enthusiasts hang out. we're passioned about web3 development, design, and culture. come build with us.</SocialListItem>
+
+
 
 ## YouTube and Twitter {#youtube-and-twitter}
 
