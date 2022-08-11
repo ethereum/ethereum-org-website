@@ -275,7 +275,10 @@ const StyledButtonLink = styled(ButtonLink)<{
 }>`
   margin-bottom: ${(props) => props.mb};
   margin-right: ${(props) => props.mr};
-  width: 50%;
+  width: 70%;
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    width: 100%;
+  }
 `
 
 const tooltipContent = (
@@ -757,21 +760,21 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
                   </DaiSubtitle>
                   <ButtonColumn>
                     <div>
-                      <ButtonLink
-                        mb={"1rem"}
-                        mr={"1rem"}
+                      <StyledButtonLink
+                        mb={"0.5rem"}
+                        mr={"0.5rem"}
                         to="https://matcha.xyz/markets/ETH/USDC"
                       >
                         <Translation id="page-stablecoins-usdc-banner-swap-button" />
-                      </ButtonLink>
+                      </StyledButtonLink>
                     </div>
                     <div>
-                      <ButtonLink
+                      <StyledButtonLink
                         isSecondary
                         to="https://www.coinbase.com/usdc"
                       >
                         <Translation id="page-stablecoins-usdc-banner-learn-button" />
-                      </ButtonLink>
+                      </StyledButtonLink>
                     </div>
                   </ButtonColumn>
                 </div>
