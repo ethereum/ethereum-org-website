@@ -48,8 +48,8 @@ Wallets are rapidly changing in Ethereum. We've tried to create a fair framework
 - **ENS support** - your wallet allows users to send transactions to ENS names.
 - **ERC-20 support** - your wallet allows users to import ERC-20 token contracts, or automatically queries and displays ERC-20 tokens.
 - **EIP-1559 (type 2) transactions** - your wallet supports EIP-1559 (type 2) transactions.
-- **On ramp crypto** - your wallet supports users directly purchasing and onboarding to crypto.
-- **Off ramp crypto** - your wallet supports users selling and withdrawing to fiat directly to card or a bank account.
+- **Buy crypto** - your wallet supports users directly purchasing and onboarding to crypto.
+- **Sell for fiat** - your wallet supports users selling and withdrawing to fiat directly to card or a bank account.
 - **Multisig** - your wallet supports multiple signatures to sign a transaction.
 - **Social recovery** - your wallet supports guardians and a user can recover their wallet if they lose their seed phrase using these guardians.
 - **Dedicated support team** - your wallet has a dedicated support team where users can go to when experiencing issues.

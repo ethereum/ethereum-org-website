@@ -136,13 +136,13 @@ const walletFilterData: { [key: string]: WalletFilter } = {
     filterKey: "eip_1559_support",
   },
   buy_crypto: {
-    title: "On ramp to crypto",
+    title: "Buy crypto",
     description:
       "Buy crypto with fiat directly in the wallet \n *Note: buying crypto may be region specific",
     filterKey: "buy_crypto",
   },
   withdraw_crypto: {
-    title: "Off ramp to fiat",
+    title: "Sell for fiat",
     description:
       "Sell crypto to fiat directly in the wallet \n *Note: withdrawing crypto may be region specific",
     filterKey: "withdraw_crypto",

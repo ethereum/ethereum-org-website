@@ -350,7 +350,7 @@ const WalletFilterSidebar = ({
       ],
     },
     {
-      title: "On ramp / Off ramp",
+      title: "Buy crypto / Sell for fiat",
       open: true,
       items: [
         {

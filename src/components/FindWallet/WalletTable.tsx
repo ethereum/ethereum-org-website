@@ -532,15 +532,15 @@ const featureDropdownItems = [
     icon: <Eip1559 />,
   },
   {
-    label: "On ramp to crypto",
-    value: "On ramp to crypto",
+    label: "Buy crypto",
+    value: "Buy crypto",
     filterKey: "buy_crypto",
     category: "trade_and_buy",
     icon: <BuyCrypto />,
   },
   {
-    label: "Off ramp to fiat",
-    value: "Off ramp to fiat",
+    label: "Sell for fiat",
+    value: "Sell for fiat",
     filterKey: "withdraw_crypto",
     category: "trade_and_buy",
     icon: <WithdrawCrypto />,
@@ -970,7 +970,7 @@ const WalletMoreInfo = ({ wallet, filters, idx }) => {
             </Features>
           </WalletMoreInfoCategory>
           <WalletMoreInfoCategory>
-            <h4>On ramp and off ramp</h4>
+            <h4>Buy crypto / Sell for fiat</h4>
             <Features>
               {orderedFeatureDropdownItems.map((feature) => {
                 if (feature.category === "trade_and_buy")
