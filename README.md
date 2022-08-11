@@ -1338,6 +1338,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="https://github.com/rogueassasin1729"><img src="https://avatars.githubusercontent.com/u/92800000?v=4?s=100" width="100px;" alt=""/><br /><sub><b>rogueassasin1729</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=rogueassasin1729" title="Documentation">📖</a></td>
     <td align="center"><a href="https://pandapip1.com/"><img src="https://avatars.githubusercontent.com/u/45835846?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Pandapip1</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=Pandapip1" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://aldizh.github.io/"><img src="https://avatars.githubusercontent.com/u/2282120?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Aldi Zhupani</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3AAldizh" title="Bug reports">🐛</a> <a href="https://github.com/ethereum/ethereum-org-website/commits?author=Aldizh" title="Code">💻</a></td>
   </tr>
 </table>
 
