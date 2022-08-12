@@ -539,8 +539,8 @@ const featureDropdownItems = [
     icon: <BuyCrypto />,
   },
   {
-    label: "Withdraw crypto",
-    value: "Withdraw crypto",
+    label: "Sell for fiat",
+    value: "Sell for fiat",
     filterKey: "withdraw_crypto",
     category: "trade_and_buy",
     icon: <WithdrawCrypto />,
@@ -970,7 +970,7 @@ const WalletMoreInfo = ({ wallet, filters, idx }) => {
             </Features>
           </WalletMoreInfoCategory>
           <WalletMoreInfoCategory>
-            <h4>Trade & buy</h4>
+            <h4>Buy crypto / Sell for fiat</h4>
             <Features>
               {orderedFeatureDropdownItems.map((feature) => {
                 if (feature.category === "trade_and_buy")

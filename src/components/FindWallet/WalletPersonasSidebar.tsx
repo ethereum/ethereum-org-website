@@ -273,7 +273,7 @@ const filterLabels = {
     icon: <BuyCrypto />,
   },
   withdraw_crypto: {
-    label: "Withdraw crypto",
+    label: "Sell for fiat",
     icon: <WithdrawCrypto />,
   },
   multisig: {

@@ -350,7 +350,7 @@ const WalletFilterSidebar = ({
       ],
     },
     {
-      title: "Onboard / offboard",
+      title: "Buy crypto / Sell for fiat",
       open: true,
       items: [
         {
