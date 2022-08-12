@@ -188,6 +188,18 @@ Minimal was a modular implementation of the Ethereum blockchain written in Go.
 
 Minimal was replaced by [polgon-sdk](https://github.com/0xPolygon/polygon-edge)
 
+### Hyperledger Burrow {#hyperledger-burrow}
+
+Deprecated in 2022.
+
+**Summary** 
+
+Hyperledger Burrow is a permissioned Ethereum smart-contract blockchain node. It executes Ethereum EVM and WASM smart contract code on permissioned virtual machines.
+
+**Archives**
+
+[Archived GitHub repo](https://github.com/hyperledger/burrow)
+
 ### Mana-Ethereum {#mana-ethereum}
 
 **Summary**
