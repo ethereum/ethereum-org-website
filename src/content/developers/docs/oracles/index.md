@@ -80,6 +80,120 @@ The oracle contract is the on-chain component for the oracle service: it listens
 
 The oracle contract exposes some functions which client contracts call when making a data request. Upon receiving a new query, the smart contract will emit a [log event](/developers/docs/smart-contracts/anatomy/#events-and-logs) with details of the data request. This notifies off-chain nodes subscribed to the log (usually using something like the JSON-RPC `eth_subscribe` command), who proceed to retrieve data defined in the log event. 
 
+Below is an [example oracle contract](https://medium.com/@pedrodc/implementing-a-blockchain-oracle-on-ethereum-cedc7e26b49e) by Pedro Costa. This is a simple oracle service that can query off-chain APIs upon request by other smart contracts and store the requsted information on the blockchain: 
+
+```solidity
+pragma solidity >=0.4.21 <0.6.0;
+
+contract Oracle {
+  Request[] requests; //list of requests made to the contract
+  uint currentId = 0; //increasing request id
+  uint minQuorum = 2; //minimum number of responses to receive before declaring final result
+  uint totalOracleCount = 3; // Hardcoded oracle count
+
+  // defines a general api request
+  struct Request {
+    uint id;                            //request id
+    string urlToQuery;                  //API url
+    string attributeToFetch;            //json attribute (key) to retrieve in the response
+    string agreedValue;                 //value from key
+    mapping(uint => string) anwers;     //answers provided by the oracles
+    mapping(address => uint) quorum;    //oracles which will query the answer (1=oracle hasn't voted, 2=oracle has voted)
+  }
+
+  //event that triggers oracle outside of the blockchain
+  event NewRequest (
+    uint id,
+    string urlToQuery,
+    string attributeToFetch
+  );
+
+  //triggered when there's a consensus on the final result
+  event UpdatedRequest (
+    uint id,
+    string urlToQuery,
+    string attributeToFetch,
+    string agreedValue
+  );
+
+  function createRequest (
+    string memory _urlToQuery,
+    string memory _attributeToFetch
+  )
+  public
+  {
+    uint lenght = requests.push(Request(currentId, _urlToQuery, _attributeToFetch, ""));
+    Request storage r = requests[lenght-1];
+
+    // Hardcoded oracles address
+    r.quorum[address(0x6c2339b46F41a06f09CA0051ddAD54D1e582bA77)] = 1;
+    r.quorum[address(0xb5346CF224c02186606e5f89EACC21eC25398077)] = 1;
+    r.quorum[address(0xa2997F1CA363D11a0a35bB1Ac0Ff7849bc13e914)] = 1;
+
+    // launch an event to be detected by oracle outside of blockchain
+    emit NewRequest (
+      currentId,
+      _urlToQuery,
+      _attributeToFetch
+    );
+
+    // increase request id
+    currentId++;
+  }
+
+  //called by the oracle to record its answer
+  function updateRequest (
+    uint _id,
+    string memory _valueRetrieved
+  ) public {
+
+    Request storage currRequest = requests[_id];
+
+    //check if oracle is in the list of trusted oracles
+    //and if the oracle hasn't voted yet
+    if(currRequest.quorum[address(msg.sender)] == 1){
+
+      //marking that this address has voted
+      currRequest.quorum[msg.sender] = 2;
+
+      //iterate through "array" of answers until a position if free and save the retrieved value
+      uint tmpI = 0;
+      bool found = false;
+      while(!found) {
+        //find first empty slot
+        if(bytes(currRequest.anwers[tmpI]).length == 0){
+          found = true;
+          currRequest.anwers[tmpI] = _valueRetrieved;
+        }
+        tmpI++;
+      }
+
+      uint currentQuorum = 0;
+
+      //iterate through oracle list and check if enough oracles(minimum quorum)
+      //have voted the same answer has the current one
+      for(uint i = 0; i < totalOracleCount; i++){
+        bytes memory a = bytes(currRequest.anwers[i]);
+        bytes memory b = bytes(_valueRetrieved);
+
+        if(keccak256(a) == keccak256(b)){
+          currentQuorum++;
+          if(currentQuorum >= minQuorum){
+            currRequest.agreedValue = _valueRetrieved;
+            emit UpdatedRequest (
+              currRequest.id,
+              currRequest.urlToQuery,
+              currRequest.attributeToFetch,
+              currRequest.agreedValue
+            );
+          }
+        }
+      }
+    }
+  }
+}
+```
+
 ### Oracle nodes {#oracle-nodes} 
 
 The oracle node is the off-chain component of the oracle service: it extracts information from external sources, such as APIs hosted on third-party servers, and puts it on-chain for consumption by smart contracts. Oracle nodes listen for events from the on-chain oracle contract and proceed to complete the task described in the log.
@@ -203,6 +317,42 @@ The following are common use-cases for oracles in Ethereum:
 If you plan to build a DeFi lending protocol, for example, you’ll need to query current market prices for assets (e.g., ETH) deposited as collateral. This is so your smart contract can determine the value of collateral assets and determine how much they can borrow from the system. 
 
 Popular “price oracles” (as they are often called) in DeFi include Chainlink Price Feeds, Compound Protocol’s [Open Price Feed](https://compound.finance/docs/prices), Uniswap’s [Time-Weighted Average Prices (TWAPs)](https://docs.uniswap.org/protocol/V2/concepts/core-concepts/oracles), and Maker Oracles. It is advisable to understand the caveats that come with these price oracles before integrating them into your project. This [article](https://blog.openzeppelin.com/secure-smart-contract-guidelines-the-dangers-of-price-oracles/) provides a detailed analysis of what to consider when planning to use any of the price oracles mentioned. 
+
+Below is an example of how you can retrieve the latest ETH price in your smart contract using a Chainlink price feed:
+
+```solidity
+pragma solidity ^0.6.7;
+
+import "@chainlink/contracts/src/v0.6/interfaces/AggregatorV3Interface.sol";
+
+contract PriceConsumerV3 {
+
+    AggregatorV3Interface internal priceFeed;
+
+    /**
+     * Network: Kovan
+     * Aggregator: ETH/USD
+     * Address: 0x9326BFA02ADD2366b30bacB125260Af641031331
+     */
+    constructor() public {
+        priceFeed = AggregatorV3Interface(0x9326BFA02ADD2366b30bacB125260Af641031331);
+    }
+
+    /**
+     * Returns the latest price
+     */
+    function getLatestPrice() public view returns (int) {
+        (
+            uint80 roundID,
+            int price,
+            uint startedAt,
+            uint timeStamp,
+            uint80 answeredInRound
+        ) = priceFeed.latestRoundData();
+        return price;
+    }
+}
+```
 
 ### Generating verifiable randomness {#generating-verifiable-randomness}
 
