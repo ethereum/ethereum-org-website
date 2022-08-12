@@ -19,13 +19,13 @@ If you're new to the topic of nodes, we recommend first checking out our user-fr
 
 ## What are nodes and clients? {#what-are-nodes-and-clients}
 
-"Node" refers to a running piece of client software. A client is an implementation of Ethereum that verifies all transactions in each block, keeping the network secure and the data accurate.
+ A "node" is any instance of Ethereum client software that is connected to other computers also running Ethereum software, forming a network.  A client is an implementation of Ethereum that verifies data against the protocol rules and keeps the network secure.
 
-Post-Merge Ethereum consists of two networks: the execution layer and the consensus layer. Both networks are run by different client software. On this page, we'll refer to them as the execution client and consensus client. 
+Post-Merge Ethereum consists of two parts: the execution layer and the consensus layer. Both layers are run by different client software. On this page, we'll refer to them as the execution client and consensus client. 
 - The execution client (also known as the Execution Engine, EL client or formerly the Eth1 client) listens to new transactions broadcasted in the network, executes them in EVM, and holds the latest state and database of all current Ethereum data.
 - The consensus client (also known as the Beacon Node, CL client or formerly the Eth2 client) implements the proof-of-stake consensus algorithm, which enables the network to achieve agreement based on validated data from the execution client.
 
-Before [The Merge](/upgrades/merge/), consensus and execution layer networks were separate, with all transactions and user activity on the Ethereum network happening at what is now the execution layer. One client software provided both execution environment and consensus verification of blocks produced by miners.
+Before [The Merge](/upgrades/merge/), consensus and execution layer were separate networks, with all transactions and user activity on the Ethereum happening at what is now the execution layer. One client software provided both execution environment and consensus verification of blocks produced by miners.
 The consensus layer, [the Beacon Chain](/upgrades/beacon-chain/), has been running separately since December 2020. It introduced proof-of-stake and coordinated the network of validators based on data from the Ethereum network. 
 
 With the Merge, Ethereum transitions to proof-of-stake by connecting these networks. Execution and consensus clients work together to verify Ethereum's state. 
@@ -37,9 +37,9 @@ Simplified diagram of a coupled execution and consensus client.
 
 ### Client diversity {#client-diversity}
 
-Both [execution clients](/developers/docs/nodes-and-clients/#consensus-clients) and [consensus clients](/developers/docs/nodes-and-clients/#execution-clients) exist, in a variety of programming languages such as Go, Rust, JavaScript, Typescript, Python, C# .NET, Nim and Java. 
+Both [execution clients](/developers/docs/nodes-and-clients/#consensus-clients) and [consensus clients](/developers/docs/nodes-and-clients/#execution-clients) exist in a variety of programming languages developed by different teams. 
 
-Multiple client implementations make the network stronger and more diverse. The ideal goal is to achieve diversity without any client dominating, thereby reducing any single points of failure. The variety of languages also invites a broader developer community and allows them to create integrations in their preferred language.
+Multiple client implementations make the network stronger and more diverse rather than relying on a single client. The ideal goal is to achieve diversity without any client dominating, thereby reducing any single points of failure. The variety of languages also invites a broader developer community and allows them to create integrations in their preferred language.
 
 Learn more about [client diversity](/developers/docs/client-diversity). 
 
