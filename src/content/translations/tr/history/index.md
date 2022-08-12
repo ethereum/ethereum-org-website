@@ -54,7 +54,7 @@ Gray Glacier ağ yükseltmesi, [zorluk bombasını](/glossary/#difficulty-bomb) 
 
 The Arrow Glacier ağ yükseltmesi [zorluk bombasını](/glossary/#difficulty-bomb) bir kaç ay ertelendi. Bu yükseltmede sunulan tek değişiklik budur ve doğası gereği [Muir Glacier](#muir-glacier) yükseltmesine benzer. [Bizans](#byzantium), [Konstantinopolis](#constantinople) ve
 
-Londra</ağ yükseltmelerinde de benzer değişiklikler yapıldı. >.</p>
+Londra ağ yükseltmelerinde de benzer değişiklikler yapıldı.
 
 - [EF Blog - Arrow Glacier Yükseltme Duyurusu](https://blog.ethereum.org/2021/11/10/arrow-glacier-announcement/)
 - [Ethereum Cat Herders - Ethereum Arrow Glacier Yükseltmesi](https://medium.com/ethereum-cat-herders/ethereum-arrow-glacier-upgrade-e8d20fa4c002)

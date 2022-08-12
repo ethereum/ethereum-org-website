@@ -300,7 +300,7 @@ Kriptografi bağlamında, öngörülebilirlik eksikliği veya rastgelelik düzey
 
 ### dönem {#epoch}
 
-[İşaret Zinciri](#beacon-chain)-koordineli sistemde 32 [yuvalık](#slot) (6,4 dakika) bir periyot. [Doğrulayıcı](#validator) [komiteler](#committee), her dönem, güvenlik nedenleriyle karıştırılır. Zincirin [sonlandırılması](#finality) için her çağda bir fırsat vardır. Terim ayrıca [yürütme katmanında](#execution-layer) kullanılır ve <a href= iş kanıtı algoritması [Ethash](#Ethash) tarafından tohum olarak kullanılan veritabanının her yenilenmesi arasındaki aralık anlamına gelir. Dönem, 30000 blok olarak belirtilmiştir.
+[İşaret Zinciri](#beacon-chain)-koordineli sistemde 32 [yuvalık](#slot) (6,4 dakika) bir periyot. [Doğrulayıcı](#validator) [komiteler](#committee), her dönem, güvenlik nedenleriyle karıştırılır. Zincirin [sonlandırılması](#finality) için her çağda bir fırsat vardır. Terim ayrıca [yürütme katmanında](#execution-layer) kullanılır ve iş kanıtı algoritması [Ethash](#Ethash) tarafından tohum olarak kullanılan veritabanının her yenilenmesi arasındaki aralık anlamına gelir. Dönem, 30000 blok olarak belirtilmiştir.
 
 <DocLink to="/developers/docs/consensus-mechanisms/pos/#how-does-validation-work">
   Hisse ispatı
