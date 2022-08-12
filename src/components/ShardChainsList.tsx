@@ -49,6 +49,14 @@ const ShardChainsList: React.FC<IProps> = () => {
       ),
       link: "https://blog.ethereum.org/2020/03/27/sharding-consensus/",
     },
+    {
+      title: translateMessageId(
+        "page-upgrade-article-title-hitchhikers-guide-to-ethereum",
+        intl
+      ),
+      description: "Delphi Digital",
+      link: "https://members.delphidigital.io/reports/the-hitchhikers-guide-to-ethereum",
+    }
   ]
 
   return (
