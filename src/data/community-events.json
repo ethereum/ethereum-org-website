@@ -450,6 +450,15 @@
     "endDate": "2022-09-04"
   },
   {
+    "title": "ETHEREUMZurich",
+    "to": "https://www.ethzrh.ch/",
+    "sponsor": null,
+    "location": "Zürich, Switzerland",
+    "description": "UX Hackathon, ETHEREUMZurich is a UX-Workshop exploring innovative ways of implementing the HOPR protocol into the Metamask wallet.",
+    "startDate": "2022-09-16",
+    "endDate": "2022-09-16"
+  },
+  {
     "title": "ETHBerlin³",
     "to": "https://ethberlin.ooo/",
     "sponsor": null,
@@ -466,6 +475,15 @@
     "description": "Welcome to the latest greatest ETH event happening in Africa!",
     "startDate": "2022-09-18",
     "endDate": "2022-09-25"
+  },
+  {
+    "title": "LEADING PRIVACY ALLIANCE CONFERENCE",
+    "to": "https://www.leadingprivacy.com/devcon",
+    "sponsor": null,
+    "location": "Bogotá, Colombia",
+    "description": "This event will bring together the brightest minds of Privacy during DevCon in Bogota.",
+    "startDate": "2022-10-09",
+    "endDate": "2022-10-09"
   },
   {
     "title": "Web3Dubai",
