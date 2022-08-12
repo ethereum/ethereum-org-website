@@ -9,7 +9,7 @@ preMergeBanner: true
 
 Running your own node provides you various benefits, opens new possibilities, and helps to support the ecosystem. This page will guide you through spinning up your own node and taking part in validating Ethereum transactions.
 
-Note that after [The Merge](/upgrades/merge), two clients are required to run an Ethereum node. These are an execution client and a consensus client. This page will show how to install, configure and connect these two clients to form an Ethereum node.
+Note that after [The Merge](/upgrades/merge), two clients are required to run an Ethereum node; an **execution layer (EL)** client and a **consensus layer (CL)** client. This page will show how to install, configure and connect these two clients to run an Ethereum node.
 
 ## Prerequisites {#prerequisites}
 
