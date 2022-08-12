@@ -95,8 +95,6 @@ If you're more of a technical user, learn how to [spin up your own node](/develo
 
 ### Projects {#projects}
 
-**Select a client and follow their instructions**
-
 **ethnode -** **_Run an Ethereum node (Geth or OpenEthereum) for local development._**
 
 - [GitHub](https://github.com/vrde/ethnode)
