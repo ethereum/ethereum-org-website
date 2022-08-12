@@ -29,8 +29,8 @@ You can find some useful guides and tools for ethereum.org translators, as well 
 
 ## Communities {#communities}
 
-- [Language-specific Discord translation groups](https://discord.gg/6WX7E97)
-  _– an initiative to connect ethereum.org translators into Translation Groups_
+- [Language-specific Discord translation groups](/discord/)
+  _– an initiative to connect ethereum.org translators to Translation Groups_
 - [Chinese translators group](https://www.notion.so/Ethereum-org-05375fe0a94c4214acaf90f42ba40171)
   _– Notion page for easier coordination between Chinese translators_
 
