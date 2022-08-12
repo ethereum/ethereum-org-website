@@ -289,7 +289,7 @@ const filterLabels = {
     icon: <ERC20Support />,
   },
   eip_1559_support: {
-    label: "EIP-1559 support",
+    label: "Fee optimization",
     icon: <Eip1559 />,
   },
 }
