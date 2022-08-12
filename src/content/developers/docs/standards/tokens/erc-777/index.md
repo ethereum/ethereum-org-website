@@ -5,6 +5,10 @@ lang: en
 sidebar: true
 ---
 
+## Deprecation Notice {#deprecation-notice}
+
+**ERC-777 is deprecated. It is recommended to use [ERC-20](/developers/docs/standards/tokens/erc-20/) instead.** This page remains as a historical archive.
+
 ## Introduction? {#introduction}
 
 ERC-777 is a fungible token standard improving the existing [ERC-20](/developers/docs/standards/tokens/erc-20/) standard.
