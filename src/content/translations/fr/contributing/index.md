@@ -62,7 +62,7 @@ Utilisez uniquement votre travail original ou le contenu que vous avez l'autoris
 
 ## Nouveau dans l'open source ? {#new-to-open-source}
 
-Dans notre environnement de dépôt GitHub, nous avons une catégorie de tickets spécialement conçue pour les développeurs qui sont nouveaux dans l'open source. Ces tickets de difficulté moindre sont étiquetés « <a href = « https://github.com/ethereum/ethereum-org-website/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22">good first issue</a> » (bon choix pour un premier ticket).
+Dans notre environnement de dépôt GitHub, nous avons une catégorie de tickets spécialement conçue pour les développeurs qui sont nouveaux dans l'open source. Ces tickets de difficulté moindre sont étiquetés « [good first issue](https://github.com/ethereum/ethereum-org-website/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22) » (bon choix pour un premier ticket).
 
 ## Réclamez votre POAP de contribution {#poap}
 
