@@ -35,7 +35,7 @@ You'll need to log in to your Crowdin account or sign up if you don’t already 
 
 Each post is uploaded to Crowdin as an individual file. The files are named after the blog post title, so it should be fairly straightforward if you're looking for a specific post to translate.
  
-   Blog posts are prioritized based on their date of publication. Please follow the numerical order when translating, to ensure that recently published posts get translated first (1 → 2 → 3 → ⋯).
+Blog posts are prioritized based on their date of publication. Please follow the numerical order when translating to ensure that recently published posts get translated first (1 → 2 → 3 → ⋯).
 
 ![Screenshot showing how blog posts are numbered in the Crowdin user interface](./blog-posts.png)
 
