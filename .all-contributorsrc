@@ -8395,6 +8395,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "hughcrt",
+      "name": "Hugh",
+      "avatar_url": "https://avatars.githubusercontent.com/u/24587702?v=4",
+      "profile": "http://hugh.sh",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,

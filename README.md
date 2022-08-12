@@ -1340,6 +1340,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://pandapip1.com/"><img src="https://avatars.githubusercontent.com/u/45835846?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Pandapip1</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=Pandapip1" title="Documentation">📖</a></td>
     <td align="center"><a href="http://aldizh.github.io/"><img src="https://avatars.githubusercontent.com/u/2282120?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Aldi Zhupani</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3AAldizh" title="Bug reports">🐛</a> <a href="https://github.com/ethereum/ethereum-org-website/commits?author=Aldizh" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/linhuatan"><img src="https://avatars.githubusercontent.com/u/94831627?v=4?s=100" width="100px;" alt=""/><br /><sub><b>linhuatan</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=linhuatan" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://hugh.sh"><img src="https://avatars.githubusercontent.com/u/24587702?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Hugh</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=hughcrt" title="Documentation">📖</a></td>
   </tr>
 </table>
 
