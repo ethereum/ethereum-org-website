@@ -23,7 +23,7 @@ A "node" is a computer running Ethereum client software. A client is an implemen
 
 You can see a real-time view of the Ethereum network by looking at this [map of nodes](https://etherscan.io/nodetracker).
 
-Many [Ethereum execution clients](/developers/docs/nodes-and-clients/#execution-clients) and [consensus clients](/developers/docs/nodes-and-clients/#consensus-clients) exist, in a variety of programming languages such as Go, Rust, JavaScript, Typescript, Python, C# .NET, Nim and Java. What these implementations have in common is they all follow a formal specification. These specifications dictate how the Ethereum network and blockchain functions.
+Many Ethereum [execution clients](/developers/docs/nodes-and-clients/#execution-clients) and [consensus clients](/developers/docs/nodes-and-clients/#consensus-clients) exist, in a variety of programming languages such as Go, Rust, JavaScript, Typescript, Python, C# .NET, Nim and Java. What these implementations have in common is they  comply with the specifications for their client type. ([Execution specifications](https://github.com/ethereum/execution-specs) and [consensus specifications](https://github.com/ethereum/consensus-specs) These specifications dictate how clients operate with the Ethereum network.
 
 ![Coupled execution and consensus clients](./eth1eth2client.png)
 Simplified diagram of a coupled execution and consensus client.
@@ -41,9 +41,13 @@ If you want to [run your own node](/developers/docs/nodes-and-clients/run-a-node
 
 ### Light node {#light-node}
 
-Instead of downloading every block, light nodes download block headers. These headers only contain summary information about the contents of the blocks. Any other information required by the light node gets requested from a full node. The light node can then independently verify the data they receive against the state roots in the block headers. Light nodes enable users to participate in the Ethereum network without the powerful hardware or high bandwidth required to run full nodes. Eventually, light nodes might run on mobile phones or embedded devices. The light nodes do not participate in consensus (i.e. they cannot be miners/validators), but they can access the Ethereum blockchain with the same functionality as a full node.
+- Stores just the headers of each block. (These headers only contain summary information about the contents of the block)
+- Requests any other information it requires from a full node.
+- Can independently verify the data it receives from full nodes against the state roots in the block headers it stores.
+- Enables users to participate in the Ethereum network without the powerful hardware or high bandwidth required to run full nodes.
+- Does not participate in consensus (i.e. they cannot be miners/validators), but they can access the Ethereum blockchain with the same functionality as a full node.
 
-The execution client Geth includes a [light sync](https://github.com/ethereum/devp2p/blob/master/caps/les.md) option. However, a light Geth node relies upon full nodes serving light node data. Few full nodes opt to serve light node data, meaning light nodes often fail to find peers. There are currently no production-ready light clients on the consensus layer; however, several are in development.
+Eventually, light nodes might run on mobile phones or embedded devices. The execution client Geth includes a [light sync](https://github.com/ethereum/devp2p/blob/master/caps/les.md) option. However, a light Geth node relies upon full nodes serving light node data. Few full nodes opt to serve light node data, meaning light nodes often fail to find peers. There are currently no production-ready light clients on the consensus layer; however, several are in development.
 
 There are also potential routes to providing light client data over the [gossip network](https://www.ethportal.net/). This is advantageous because the gossip network could support a network of light nodes without requiring full nodes to serve requests.
 
@@ -77,7 +81,7 @@ Running your own node enables you to use Ethereum in a truly private, self-suffi
 A diverse set of nodes is important for Ethereum’s health, security and operational resiliency.
 
 - They provide access to blockchain data for lightweight clients that depend on it. In high peaks of usage, there need to be enough full nodes to help light nodes sync. Light nodes don't store the whole blockchain, instead they verify data via the [state roots in block headers](/developers/docs/blocks/#block-anatomy). They can request more information from blocks if they need it.
-- Full nodes enforce the proof-of-work consensus rules so they can’t be tricked into accepting blocks that don't follow them. This provides extra security in the network because if all the nodes were light nodes, which don't do full verification, block producers could attack the network and, for example, create blocks with higher rewards.
+- Full nodes enforce the consensus rules so they won't accepting blocks that don't follow them. This provides extra security in the network because if all the nodes were light nodes, which don't do full verification, block producers could attack the network and, for example, create blocks with higher rewards.
 
 If you run a full node, the whole Ethereum network benefits from it.
 
@@ -103,8 +107,8 @@ If you're more of a technical user, learn how to [spin up your own node](/develo
 
 ### Resources {#resources}
 
-- [Running Ethereum Full Nodes: A Complete Guide](https://www.coindesk.com/learn/ethereum-nodes-and-clients-a-complete-guide/)
 - [Running your own Ethereum node](/developers/docs/nodes-and-clients/run-a-node)
+- [Running Ethereum Full Nodes: A Complete Guide](https://www.coindesk.com/learn/ethereum-nodes-and-clients-a-complete-guide/)
 - [Geth documentation](https://geth.ethereum.org/)
 - [How To Install & Run a Lighthouse Node](https://hackernoon.com/how-to-run-an-eth-20-beacon-node-using-the-lighthouse-macos-client-7t2u3wtv)
 - [Nimbus node quick-start guide](https://nimbus.guide/quick-start.html)
@@ -119,7 +123,7 @@ On the other hand, if you run a client, you can share it with your friends who m
 
 ## Execution clients (formerly 'Eth1 clients') {#execution-clients}
 
-The Ethereum community maintains multiple open-source execution clients (previously known as 'Eth1 clients', or just 'Ethereum clients'), developed by different teams using different programming languages. This makes the network stronger and more diverse. The ideal goal is to achieve diversity without any client dominating to reduce any single points of failure.
+The Ethereum community maintains multiple open-source execution clients (previously known as 'Eth1 clients', or just 'Ethereum clients'), developed by different teams using different programming languages. This makes the network stronger and more [diverse](/developers/docs/nodes-and-clients/client-diversity/). The ideal goal is to achieve diversity without any client dominating to reduce any single points of failure.
 
 This table summarizes the different clients. All of them pass [client tests](https://github.com/ethereum/tests) and are actively maintained to stay updated with network upgrades.
 
