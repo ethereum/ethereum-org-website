@@ -194,7 +194,7 @@ Deprecated in 2022.
 
 **Summary** 
 
-Hyperledger Burrow is a permissioned Ethereum smart-contract blockchain node. It executes Ethereum EVM and WASM smart contract code on permissioned virtual machines.
+Hyperledger Burrow was a permissioned Ethereum smart-contract blockchain node. It executed Ethereum EVM and WASM smart contract code on permissioned virtual machines.
 
 **Archives**
 
