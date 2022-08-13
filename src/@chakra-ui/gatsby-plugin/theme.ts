@@ -4,6 +4,8 @@ import {
   type ThemeOverride,
 } from "@chakra-ui/react"
 
+import { cssVarPrefix } from "./constants"
+
 // Global style overrides
 import styles from "./styles"
 
@@ -11,12 +13,12 @@ import styles from "./styles"
 import foundations from "./foundations"
 
 // Component style overrides
-import Link from "./components/Link"
+import * as components from "./components"
 
 import semanticTokens from "./semanticTokens"
 
-const config: ThemeConfig = {
-  cssVarPrefix: "eth",
+export const config: ThemeConfig = {
+  cssVarPrefix,
   initialColorMode: "light",
   useSystemColorMode: true,
 }
@@ -26,9 +28,7 @@ const theme: ThemeOverride = {
   styles,
   ...foundations,
   semanticTokens,
-  components: {
-    Link,
-  },
+  components,
 }
 
 export default extendTheme(theme)

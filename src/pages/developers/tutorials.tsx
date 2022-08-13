@@ -415,7 +415,7 @@ const TutorialsPage = ({
               <Translation id="page-tutorial-new-github-desc" />
             </p>
             <GithubButton
-              isSecondary
+              variant="outline"
               to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=suggest_tutorial.md&title="
             >
               <GithubIcon name="github" />{" "}
@@ -437,7 +437,7 @@ const TutorialsPage = ({
               <Translation id="page-tutorial-pull-request-desc-3" />
             </p>
             <GithubButton
-              isSecondary
+              variant="outline"
               to="https://github.com/ethereum/ethereum-org-website/new/dev/src/content/developers/tutorials"
             >
               <GithubIcon name="github" />{" "}

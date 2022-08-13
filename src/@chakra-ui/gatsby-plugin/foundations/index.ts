@@ -1,4 +1,5 @@
 import colors from "./colors"
+import shadows from "./shadows"
 
 const foundations = {
   // breakpoints,
@@ -8,7 +9,7 @@ const foundations = {
   colors,
   // ...typography,
   // sizes,
-  // shadows,
+  shadows,
   // space: spacing,
   // borders,
   // transition,

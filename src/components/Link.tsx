@@ -1,5 +1,5 @@
 import React from "react"
-import { Icon, Link, LinkProps } from "@chakra-ui/react"
+import { Icon, Link, LinkProps, useTheme } from "@chakra-ui/react"
 import { navigate as gatsbyNavigate } from "gatsby"
 import { LocalizedLink as IntlLink } from "gatsby-theme-i18n"
 import { NavigateOptions } from "@reach/router"
@@ -16,7 +16,8 @@ const HASH_PATTERN = /^#.*/
 const isHashLink = (to: string): boolean => HASH_PATTERN.test(to)
 
 export interface IProps extends LinkProps {
-  to: string
+  to?: string
+  href?: string
   dir?: Direction
   hideArrow?: boolean
   isPartiallyActive?: boolean
@@ -26,14 +27,19 @@ export interface IProps extends LinkProps {
 
 const LinkWrapper: React.FC<IProps> = ({
   dir = "ltr",
-  to,
+  to: toProp,
+  href,
   children,
   hideArrow = false,
   isPartiallyActive = true,
   customEventOptions,
-  onClick = () => {},
   ...restProps
 }) => {
+  const theme = useTheme()
+
+  // TODO: in the next PR we are going to deprecate `to` prop and just use `href`
+  const to = (toProp || href)!
+
   const isExternal = to.includes("http") || to.includes("mailto:")
   const isHash = isHashLink(to)
   const isGlossary = to.includes("glossary") && to.includes("#")
@@ -71,7 +77,7 @@ const LinkWrapper: React.FC<IProps> = ({
         href={to}
         isExternal
         _after={{
-          content: '"↗"',
+          content: !hideArrow ? '"↗"' : undefined,
         }}
         onClick={(e) => {
           // only track events on external links
@@ -98,7 +104,8 @@ const LinkWrapper: React.FC<IProps> = ({
     <Link
       to={to}
       as={IntlLink}
-      onClick={onClick}
+      isPartiallyActive={isPartiallyActive}
+      activeStyle={{ color: theme.colors.primary }}
       whiteSpace={isGlossary ? "nowrap" : "normal"}
       {...commonProps}
     >

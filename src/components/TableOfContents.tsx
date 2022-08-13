@@ -430,7 +430,7 @@ const TableOfContents: React.FC<IProps> = ({
       <OuterList>
         {shouldShowEditButtom && (
           <ButtonContainer>
-            <ButtonLink to={editPath} isSecondary={true} hideArrow mt={0}>
+            <ButtonLink to={editPath} variant="outline" hideArrow mt={0}>
               <ButtonContent>
                 <GithubIcon name="github" />{" "}
                 <span>

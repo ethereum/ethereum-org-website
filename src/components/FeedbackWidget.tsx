@@ -4,8 +4,8 @@ import { useIntl } from "react-intl"
 import styled from "@emotion/styled"
 import FocusTrap from "focus-trap-react"
 // Component imports
-import { ButtonPrimary } from "./SharedStyledComponents"
 import Translation from "./Translation"
+import Button from "./Button"
 import Icon from "./Icon"
 import NakedButton from "./NakedButton"
 // SVG imports
@@ -257,7 +257,10 @@ const FeedbackWidget: React.FC<IProps> = ({ className }) => {
               )}
               <ButtonContainer>
                 {feedbackSubmitted ? (
-                  <ButtonPrimary
+                  <Button
+                    variant="outline"
+                    color="primary"
+                    borderColor="primary"
                     onClick={handleSurveyOpen}
                     aria-label={translateMessageId(
                       "feedback-widget-thank-you-cta",
@@ -265,21 +268,27 @@ const FeedbackWidget: React.FC<IProps> = ({ className }) => {
                     )}
                   >
                     <Translation id="feedback-widget-thank-you-cta" />
-                  </ButtonPrimary>
+                  </Button>
                 ) : (
                   <>
-                    <ButtonPrimary
+                    <Button
+                      variant="outline"
+                      color="primary"
+                      borderColor="primary"
                       onClick={() => handleSubmit(true)}
                       aria-label={translateMessageId("yes", intl)}
                     >
                       <Translation id="yes" />
-                    </ButtonPrimary>
-                    <ButtonPrimary
+                    </Button>
+                    <Button
+                      variant="outline"
+                      color="primary"
+                      borderColor="primary"
                       onClick={() => handleSubmit(false)}
                       aria-label={translateMessageId("no", intl)}
                     >
                       <Translation id="no" />
-                    </ButtonPrimary>
+                    </Button>
                   </>
                 )}
               </ButtonContainer>
