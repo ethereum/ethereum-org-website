@@ -167,11 +167,11 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
   - [Docs](https://documenter.getpostman.com/view/13630829/TVmFkLwy)
   - Features
     - Access to 50+ blockchain nodes
-    - Free API Key 
+    - Free API Key
     - Block Explorers
     - API Response Time ⩽ 1 sec
     - 24/7 Support Team
-    - Personal Account Manager 
+    - Personal Account Manager
     - Shared, archive, backup and dedicated nodes
 - [**Pocket Network**](https://www.pokt.network/)
   - [Docs](https://docs.pokt.network/home/)
@@ -209,13 +209,16 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Suitable for Developers to Enterprises
 - [**Rivet**](https://rivet.cloud/)
   - [Docs](https://rivet.readthedocs.io/en/latest/)
-  - Features - Free tier option - Scale as you go -[**SenseiNode**](https://senseinode.com)
+  - Features
+    - Free tier option
+    - Scale as you go
+- [**SenseiNode**](https://senseinode.com)
   - [Docs](https://docs.senseinode.com/)
   - Features
-  - Dedicated and Share nodes
-  - Dashboard
-  - Hosting off AWS on multiple hosting providers accross different locations in Latin America
-  - Prysm and Lighthouse clients
+    - Dedicated and Share nodes
+    - Dashboard
+    - Hosting off AWS on multiple hosting providers accross different locations in Latin America
+    - Prysm and Lighthouse clients
 - [**SettleMint**](https://console.settlemint.com/)
   - [Docs](https://docs.settlemint.com/)
   - Features

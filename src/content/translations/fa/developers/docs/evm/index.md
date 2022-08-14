@@ -65,8 +65,6 @@ EVM به صورت یک [ماشین پشته‌ای](https://wikipedia.org/wiki/S
 - [evmone](https://github.com/ethereum/evmone) - _سی‌پلاس‌پلاس_
 - [ethereumjs-vm](https://github.com/ethereumjs/ethereumjs-vm) - _جاوا اسکریپت_
 - [eEVM](https://github.com/microsoft/eevm) - _سی‌پلاس‌پلاس_
-- [Hyperledger Burrow](https://github.com/hyperledger/burrow) - _گو_
-- [hevm](https://github.com/dapphub/dapptools/tree/master/src/hevm) - _هسکل_
 
 ## اطلاعات بیشتر {#further-reading}
 

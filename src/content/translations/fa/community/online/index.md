@@ -15,7 +15,6 @@ lang: fa
 <SocialListItem socialIcon="reddit"><Link to="https://www.reddit.com/r/ethfinance/">r/ethfinance</Link> _- جنبه مالی اتریوم، از جمله DeFi_</SocialListItem>
 <SocialListItem socialIcon="reddit"><Link to="https://www.reddit.com/r/ethdev/">r/ethdev</Link> _- متمرکز بر توسعه اتریوم_</SocialListItem>
 <SocialListItem socialIcon="reddit"><Link to="https://www.reddit.com/r/ethtrader/">r/ethtrader</Link> _- روندها و تحلیل بازار_</SocialListItem>
-<SocialListItem socialIcon="reddit"><Link to="https://www.reddit.com/r/EtherMining/">r/EtherMining</Link> _- متمرکز بر ایمن‌سازی شبکه اتریوم (استخراج)_</SocialListItem>
 <SocialListItem socialIcon="reddit"><Link to="https://www.reddit.com/r/ethstaker/">r/ethstaker</Link> _- به همه علاقمندان به سهام‌گذاری در اتریوم خوش آمدید_</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://ethereum-magicians.org">انجمن شعبده بازان اتریوم</Link> _- جامعه گرا حول استانداردهای فنی در اتریوم_</SocialListItem>
 <SocialListItem socialIcon="stackExchange"><Link to="https://ethereum.stackexchange.com">Ethereum Stackexchange</Link> _- بحث و کمک برای توسعه دهندگان اتریوم_</SocialListItem>

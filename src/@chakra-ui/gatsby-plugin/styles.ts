@@ -1,7 +1,7 @@
 const styles = {
   global: (_props) => ({
     /**
-     * Current scenario: we have 2 palces where global styles are defined.
+     * Current scenario: we have 2 places where global styles are defined.
      * - Our legacy global styles under `src/components/GlobalStyle.ts`
      * - Chakra also defines its own global styles. Check them here:
      *  https://github.com/chakra-ui/chakra-ui/blob/main/packages/theme/src/styles.ts
