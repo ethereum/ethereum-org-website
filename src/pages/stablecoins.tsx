@@ -269,12 +269,9 @@ const PaddedContent = styled(Content)`
   padding-bottom: 3rem;
 `
 
-const StyledButtonLink = styled(ButtonLink)<{
-  mb?: string
-  mr?: string
-}>`
-  margin-bottom: ${(props) => props.mb};
-  margin-right: ${(props) => props.mr};
+const StyledButtonLink = styled(ButtonLink)`
+  margin-bottom: 0.5rem;
+  margin-right: 0.5rem;
   width: 100%;
 `
 
@@ -722,11 +719,7 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
                   </DaiSubtitle>
                   <ButtonColumn>
                     <div>
-                      <StyledButtonLink
-                        mb={"0.5rem"}
-                        mr={"0.5rem"}
-                        to="https://1inch.exchange"
-                      >
+                      <StyledButtonLink to="https://1inch.exchange">
                         <Translation id="page-stablecoins-dai-banner-swap-button" />
                       </StyledButtonLink>
                     </div>
@@ -757,11 +750,7 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
                   </DaiSubtitle>
                   <ButtonColumn>
                     <div>
-                      <StyledButtonLink
-                        mb={"0.5rem"}
-                        mr={"0.5rem"}
-                        to="https://matcha.xyz/markets/ETH/USDC"
-                      >
+                      <StyledButtonLink to="https://matcha.xyz/markets/ETH/USDC">
                         <Translation id="page-stablecoins-usdc-banner-swap-button" />
                       </StyledButtonLink>
                     </div>
