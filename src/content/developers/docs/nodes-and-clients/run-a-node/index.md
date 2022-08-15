@@ -244,8 +244,7 @@ Please keep in mind that this is just a basic example, all other settings will b
 
 > Note that backslashes `\` in examples are only for formatting purposes; config flags can be defined in a single line.
 
-<details>
-  <summary>Running Besu</summary>
+##### Running Besu
 
 This example starts Besu on mainnet, stores blockchain data in default format at `/data/ethereum`, enables JSON RPC and Engine RPC for connecting consensus client. Engine API is authenticated with token `jwtsecret` and only calls from `localhost` are allowed.
 
@@ -267,10 +266,7 @@ besu --Xlauncher
 
 Besu's [documentation](https://besu.hyperledger.org/en/latest/HowTo/Get-Started/Starting-node/) contains additional options and configuration details.
 
-</details>
-
-<details>
-  <summary>Running Erigon</summary>
+##### Running Erigon
 
 This example starts Erigon on mainnet, stores blockchain data at `/data/ethereum`, enables JSON RPC, defines which namespaces are allowed and enables authentication for connecting the consensus client which is defined by the `jwtsecret` path.
 
@@ -283,10 +279,7 @@ erigon --chain mainnet \
 
 Erigon by default perfoor 8GB with HDD rms a full sync which will result in more than 2TB of archive data. Make sure `datadir` is pointing to disk with enough free space or look into `--prune` flag which can trim different kinds of data. Check the Erigon's `--help` to learn more.
 
-</details>
-
-<details>
-  <summary>Running Geth</summary>
+##### Running Geth
 
 This example starts Geth on mainnet, stores blockchain data at `/data/ethereum`, enables JSON RPC and defines which namespaces are allowed. It also enables authentication for connecting consensus client which requires path to `jwtsecret` and also option defining which connections are allowed, in our example only from `localhost`.
 
@@ -300,10 +293,7 @@ geth --mainnet \
 
 Check [docs for all configuration options](https://geth.ethereum.org/docs/interface/command-line-options) and learn more about [running Geth with a consensus client](https://geth.ethereum.org/docs/interface/consensus-clients).
 
-</details>
-
-<details>
-  <summary>Running Nethermind</summary>
+##### Running Nethermind
 
 Nethermind offers various [installation options](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/getting-started). The package come with various binaries, including a Launcher with guided setup, which will help you to create the configuration interactively. Alternativally, you find Runner which is the executable itself and you can just run it with config glags. JSON RPC is enabled by default.
 
@@ -314,8 +304,6 @@ Nethermind.Runner --config mainnet \
 ```
 
 Nethermind docs offer a [complete guide](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/running-nethermind-post-merge) on running Nethermind with consensus client.
-
-</details>
 
 Execution client will initiate its core functions, chosen endpoints, and start looking for peers. After successfully discovering peers, the client starts synchronization. After the Merge, it awaits the connection from consensus client. Current blockchain data will be available once the client is successfully synced to the current state.
 
@@ -333,8 +321,7 @@ When starting Beacon Node on testnet, you can save significantly save syncing ti
 
 #### Running a consensus client
 
-<details>
-  <summary>Running Lighthouse</summary>
+##### Running Lighthouse
 
 Before running Lighthouse, learn more on how to install and configure it in [Lighthouse Book](https://lighthouse-book.sigmaprime.io/installation.html).
 
@@ -347,10 +334,7 @@ lighthouse beacon_node
     --jwt-secret="/path/to/jwtsecret" \
 ```
 
-</details>
-
-<details>
-  <summary>Running Lodestar</summary>
+##### Running Lodestar
 
 Install Lodestar software by compiling it or downloading the Docker image. Learn more in [docs](https://chainsafe.github.io/lodestar/) and more comprehensive [setup guide](https://hackmd.io/@philknows/rk5cDvKmK).
 
@@ -363,10 +347,7 @@ lodestar beacon \
     --jwt-secret="/path/to/jwtsecret"
 ```
 
-</details>
-
-<details>
-  <summary>Running Nimbus</summary>
+##### Running Nimbus
 
 Nimbus comes with both consensus and execution clients. It can be run on various devices even with very modest computing power.
 After [installing dependencies and Nimbus itself](https://nimbus.guide/quick-start.html), you can run its consensus client:
@@ -379,10 +360,7 @@ nimbus_beacon_node \
     --jwt-secret="/path/to/jwtsecret"
 ```
 
-</details>
-
-<details>
-  <summary>Running Prysm</summary>
+##### Running Prysm
 
 Prysm comes with script which allows easy automatic installation. Details can be found in the [Prysm docs](https://docs.prylabs.network/docs/install/install-with-script).
 
@@ -394,10 +372,7 @@ Prysm comes with script which allows easy automatic installation. Details can be
     --jwt-secret=/path/to/jwtsecret
 ```
 
-</details>
-
-<details>
-  <summary>Running Teku</summary>
+##### Running Teku
 
 ```
 teku --network mainnet \
@@ -407,8 +382,6 @@ teku --network mainnet \
 ```
 
 Learn more about running Merge ready setup with Teku in [its documentation](https://docs.teku.consensys.net/en/22.8.0/HowTo/Prepare-for-The-Merge/).
-
-</details>
 
 Consensus client connects to the execution client to read the deposit contract and identify validators. It also connects to other Beacon Node peers and syncs consensus slots from genesis. When it reaches the current epoch, the Beacon API becomes usable for your validators. Learn more about [Beacon Node APIs](https://eth2docs.vercel.app/).
 
