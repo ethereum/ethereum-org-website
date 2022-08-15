@@ -40,7 +40,8 @@ Simplified diagram of a coupled execution and consensus client.
 
 Both [execution clients](/developers/docs/nodes-and-clients/#consensus-clients) and [consensus clients](/developers/docs/nodes-and-clients/#execution-clients) exist in a variety of programming languages developed by different teams.
 
-Multiple client implementations make the network stronger and more diverse rather than relying on a single client. The ideal goal is to achieve diversity without any client dominating, thereby reducing any single points of failure. The variety of languages also invites a broader developer community and allows them to create integrations in their preferred language.
+Multiple client implementations can make the network stronger by reducing its dependency on a single codebase. The ideal goal is to achieve diversity without any client dominating the network, thereby eliminating a potential single point of failure. 
+The variety of languages also invites a broader developer community and allows them to create integrations in their preferred language.
 
 Learn more about [client diversity](/developers/docs/client-diversity).
 
