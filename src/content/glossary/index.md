@@ -59,6 +59,10 @@ In [Solidity](#solidity), `assert(false)` compiles to `0xfe`, an invalid opcode,
 
 A validator vote for a [Beacon Chain](#beacon-chain) or [shard](#shard) [block](#block). Validators must attest to blocks, signaling that they agree with the state proposed by the block.
 
+<DocLink to="/developers/docs/consensus-mechanisms/pos/attestations/">
+  Attestations
+</DocLink>
+
 <Divider />
 
 ## B {#section-b}
