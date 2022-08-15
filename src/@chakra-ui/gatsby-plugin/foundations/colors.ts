@@ -1,6 +1,5 @@
 export type Colors = typeof colors
 
-// TODO: use new Design System colors
 const colors = {
   grey: {
     100: "#f7f7f7",

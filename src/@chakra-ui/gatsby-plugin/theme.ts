@@ -17,7 +17,7 @@ import * as components from "./components"
 
 import semanticTokens from "./semanticTokens"
 
-export const config: ThemeConfig = {
+const config: ThemeConfig = {
   cssVarPrefix,
   initialColorMode: "light",
   useSystemColorMode: true,
