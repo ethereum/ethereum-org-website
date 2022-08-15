@@ -23,16 +23,15 @@ The first step in spinning up your node is choosing your approach. Based on requ
 
 This page will guide you through these decisions and help you find the most suitable way to run your Ethereum instance.
 
-To choose from client implementations, see all the available Mainnet ready [execution clients](/developers/docs/nodes-and-clients/#execution-clients), [consensus clients](/developers/docs/nodes-and-clients/#consensus-clients) and learn about [client diversity](/developers/docs/client-diversity). 
+To choose from client implementations, see all the available Mainnet ready [execution clients](/developers/docs/nodes-and-clients/#execution-clients), [consensus clients](/developers/docs/nodes-and-clients/#consensus-clients) and learn about [client diversity](/developers/docs/client-diversity).
 
-Decide whether to run the software on your own [hardware or in the cloud](#local-vs-cloud), considering clients' [requirements](#requirements). 
+Decide whether to run the software on your own [hardware or in the cloud](#local-vs-cloud), considering clients' [requirements](#requirements).
 
 After preparing the environment, install the chosen clients either with [beginner-friendly interface](#automatized-setup) or [manually](#manual-setup) using a terminal with advanced options.
 
 When the node is running and syncing, you are ready to [use it](#using-the-node), but make sure to keep an eye on its [maintanance](#operating-the-node).
 
 ![Client setup](./diagram.png)
-
 
 ### Environment and hardware {#environment-and-hardware}
 
@@ -58,7 +57,7 @@ Both options have different advantages summed up above. If you are looking for a
 - [Blockdaemon](https://blockdaemon.com)
 - [Alchemy](https://www.alchemy.com/)
 
-Check out also [nodes as a service](/developers/docs/nodes-and-clients/nodes-as-a-service/) for more options on hosted nodes. 
+Check out also [nodes as a service](/developers/docs/nodes-and-clients/nodes-as-a-service/) for more options on hosted nodes.
 
 #### Hardware {#hardware}
 
@@ -66,11 +65,11 @@ However, a censorship-resistant, decentralized network should not rely on cloud 
 
 Ethereum clients can run on your computer, laptop, server, or even a single-board computer. While running clients on your personal computer is possible, having a dedicated machine just for your node can significantly enhance its performance and security while minimizing the impact on your primary computer.
 
-Using your own hardware can be very easy. There are many simple options as well as advanced setups for more technical people. So let's look into the requirements and means for running Ethereum clients on your machine. 
+Using your own hardware can be very easy. There are many simple options as well as advanced setups for more technical people. So let's look into the requirements and means for running Ethereum clients on your machine.
 
 #### Requirements {#requirements}
 
-Hardware requirements differ by client but generally are not that high since the node just needs to stay synced. Don't confuse it with mining, which requires much more computing power. Sync time and performance do improve with more powerful hardware however. 
+Hardware requirements differ by client but generally are not that high since the node just needs to stay synced. Don't confuse it with mining, which requires much more computing power. Sync time and performance do improve with more powerful hardware however.
 
 Before installing any client, please ensure your computer has enough resources to run it. You can find the minimum and recommended requirements below.
 
@@ -87,7 +86,7 @@ All clients support major operating systems - Linux, MacOS, Windows. This means 
 ##### Minimum requirements {#minimum-requirements}
 
 - CPU with 2+ cores
-- 8 GB RAM 
+- 8 GB RAM
 - 700GB free disk space
 - 10+ MBit/s bandwidth
 
@@ -100,12 +99,12 @@ All clients support major operating systems - Linux, MacOS, Windows. This means 
 
 The sync mode and client you choose will affect space requirements, but we've estimated the disk space you'll need for each client below.
 
-| Client       | Disk size (snap sync) | Disk size (full archive) |
-| ------------ | --------------------- | ------------------------ |
-| Geth         | 400GB+                | 12TB+                    |
-| Nethermind   | 400GB+                | 12TB+                    |
-| Besu         | 800GB+                | 12TB+                    |
-| Erigon       | N/A                   | 2.5TB+                   |
+| Client     | Disk size (snap sync) | Disk size (full archive) |
+| ---------- | --------------------- | ------------------------ |
+| Geth       | 400GB+                | 12TB+                    |
+| Nethermind | 400GB+                | 12TB+                    |
+| Besu       | 800GB+                | 12TB+                    |
+| Erigon     | N/A                   | 2.5TB+                   |
 
 - Note: Erigon does not offer snap sync, but Full Pruning is possible (~500GB)
 
@@ -126,18 +125,18 @@ Small, affordable and efficient devices like these are ideal for running a node 
 
 ## Spinning up the node {#spinning-up-node}
 
-The actual client setup can be done either with automated launchers or manually, setting up client software directly. 
+The actual client setup can be done either with automated launchers or manually, setting up client software directly.
 
 For less advanced users, the recommended approach is to use a launcher, software that guides you through the installation and automates the client setup process. However, if you have some experience of using a terminal, the steps for manual setup should be simple to follow.
 
 ### Guided setup {#automatized-setup}
 
 Multiple user-friendly projects aim to improve the experience of setting up a client. These launchers provide automatic client installation and configuration, with some even offering a graphical interface for guided setup and monitoring of clients.
- 
-Below are a few projects which can help you install and control clients just with a few clicks: 
 
-- [DappNode](https://docs.dappnode.io/get-started/installation/custom-hardware/installation/overview/) - DappNode doesn't come only with a machine from a vendor. The software, the actual node launcher and control center with many features can be used on arbitrary hardware. 
-- [eth-docker](https://eth-docker.net/docs/About/Overview/) - Automatized setup using Docker focused on easy and secure staking, requires basic terminal and Docker knowledge, recommended for a bit more advanced users. 
+Below are a few projects which can help you install and control clients just with a few clicks:
+
+- [DappNode](https://docs.dappnode.io/get-started/installation/custom-hardware/installation/overview/) - DappNode doesn't come only with a machine from a vendor. The software, the actual node launcher and control center with many features can be used on arbitrary hardware.
+- [eth-docker](https://eth-docker.net/docs/About/Overview/) - Automatized setup using Docker focused on easy and secure staking, requires basic terminal and Docker knowledge, recommended for a bit more advanced users.
 - [Stereum](https://stereum.net/ethereum-node-setup/) - Launcher for installing clients on a remote server via SSH connection with a GUI setup guide, control center, and many other features.
 - [NiceNode](https://www.nicenode.xyz/) - Launcher with a straightforward user experience to run a node on your computer. Just choose clients and start them with a few clicks. Still in development.
 
@@ -145,17 +144,17 @@ Below are a few projects which can help you install and control clients just wit
 
 The other option is to download, verify, and configure the client software manually. Even if some clients offer a graphical interface, a manual setup still requires basic skills with the terminal but offers much more versatility.
 
-As explained before, setting up your own Ethereum node will require running a pair of consensus and execution clients. Some clients might include a light client of the other kind and sync without any other software needed. However, full trustless verification requires both implementations. 
+As explained before, setting up your own Ethereum node will require running a pair of consensus and execution clients. Some clients might include a light client of the other kind and sync without any other software needed. However, full trustless verification requires both implementations.
 
 #### Getting the client software {#getting-the-client}
 
-First, you need to obtain your preferred [execution client](/developers/docs/nodes-and-clients/#execution-clients) and [consensus client](developers/docs/nodes-and-clients/#consensus-clients) software. 
+First, you need to obtain your preferred [execution client](/developers/docs/nodes-and-clients/#execution-clients) and [consensus client](developers/docs/nodes-and-clients/#consensus-clients) software.
 
-You can simply download an executable application or installation package that suits your operating system and architecture. Always verify the signatures and checksums of downloaded packages. Some clients also offer repositories or Docker images for easier installation and updates. All of the clients are open source, so you can also build them from source. This is a more advanced method, but in some cases, it might be required. 
+You can simply download an executable application or installation package that suits your operating system and architecture. Always verify the signatures and checksums of downloaded packages. Some clients also offer repositories or Docker images for easier installation and updates. All of the clients are open source, so you can also build them from source. This is a more advanced method, but in some cases, it might be required.
 
-Instructions for installing each client are provided in the documentation linked in the client lists above. 
+Instructions for installing each client are provided in the documentation linked in the client lists above.
 
-Here are the release pages of clients where you can find their pre-built binaries or instructions on installation: 
+Here are the release pages of clients where you can find their pre-built binaries or instructions on installation:
 
 ##### Execution clients
 
@@ -174,17 +173,18 @@ It is also worth noting that client diversity is an [issue on the execution laye
 - [Prysm](https://github.com/prysmaticlabs/prysm/releases/latest)
 - [Teku](https://github.com/ConsenSys/teku/releases)
 
-[Client diversity](/developers/docs/nodes-and-clients/client-diversity/) is critical for consensus nodes running validators. If majority of validators is running a single client implementation, network security is at risk. It is therefore recommended to consider choosing a minority client. 
+[Client diversity](/developers/docs/nodes-and-clients/client-diversity/) is critical for consensus nodes running validators. If majority of validators is running a single client implementation, network security is at risk. It is therefore recommended to consider choosing a minority client.
 
-[See the latest network client usage](https://clientdiversity.org/) and learn more about [client diversity](/developers/docs/client-diversity). 
+[See the latest network client usage](https://clientdiversity.org/) and learn more about [client diversity](/developers/docs/client-diversity).
 
 ##### Verifying the software
 
-When downloading software from the internet, it's recommended to verify its integrity. This step is optional but especially with crucial infrastracture piece like the Ethereum client, it's important to be aware of potential attack vectors and avoid them. If you downloaded a pre-built binary, you need to trust it and risk that an attacker could swap the executable for a malicious one. 
+When downloading software from the internet, it's recommended to verify its integrity. This step is optional but especially with crucial infrastracture piece like the Ethereum client, it's important to be aware of potential attack vectors and avoid them. If you downloaded a pre-built binary, you need to trust it and risk that an attacker could swap the executable for a malicious one.
 
-Developers sign released binaries with their PGP keys so you can cryptographically verify you are running exactly the software they created. You just need to obtain public keys used by developers, which can be found on client release pages or in documentation. After downloading the client release and its signature, you can use a PGP implementation, e.g. [GnuPG](https://gnupg.org/download/index.html) to easily verify them. Check out a tutorial on veryifing open-source software using `gpg` on [linux](https://www.tecmint.com/verify-pgp-signature-downloaded-software/) or [Windows/MacOS](https://freedom.press/training/verifying-open-source-software/). 
+Developers sign released binaries with their PGP keys so you can cryptographically verify you are running exactly the software they created. You just need to obtain public keys used by developers, which can be found on client release pages or in documentation. After downloading the client release and its signature, you can use a PGP implementation, e.g. [GnuPG](https://gnupg.org/download/index.html) to easily verify them. Check out a tutorial on veryifing open-source software using `gpg` on [linux](https://www.tecmint.com/verify-pgp-signature-downloaded-software/) or [Windows/MacOS](https://freedom.press/training/verifying-open-source-software/).
 
-Another form of verification is to make sure that the hash, a unique cryptographic fingerprint, of the software you downloaded matches the one provided by developers. This is even easier than using PGP, and some clients offer only this option. Just run the hash function on the downloaded software and compare it to the one from the release page. For example: 
+Another form of verification is to make sure that the hash, a unique cryptographic fingerprint, of the software you downloaded matches the one provided by developers. This is even easier than using PGP, and some clients offer only this option. Just run the hash function on the downloaded software and compare it to the one from the release page. For example:
+
 ```
 sha256sum teku-22.6.1.tar.gz
 
@@ -197,11 +197,11 @@ After installing, downloading, or compiling the client software, you are ready t
 
 Let's start with options that can significantly influence client performance and data usage. [Sync modes](/developers/docs/nodes-and-clients/#sync-modes) represent different methods of downloading and validating blockchain data. Before starting the node, you should decide what network and sync mode to use. The most important things to consider are the disk space, and sync time the client will need. Pay attention to the client's docs to determine which sync mode is the default. If that doesn't suit you, pick another one based on the level of security, available data, and cost. Apart from the synchronization algorithm, you can also set pruning of different kinds of old data. Pruning enables deleting outdated data, e.g. removing state trie nodes that are unreachable from recent blocks.
 
-Other basic configuration options are, e.g. choosing a network - Mainnet or testnets, enabling HTTP endpoint for RPC or WebSockets, etc. You can find all features and options in the client's documentation. Various client configurations can be set by executing the client with the corresponding flags directly in the CLI or config file. Each client is a bit different; please always refer to its official documentation or help page for details on config options. 
+Other basic configuration options are, e.g. choosing a network - Mainnet or testnets, enabling HTTP endpoint for RPC or WebSockets, etc. You can find all features and options in the client's documentation. Various client configurations can be set by executing the client with the corresponding flags directly in the CLI or config file. Each client is a bit different; please always refer to its official documentation or help page for details on config options.
 
 For testing purposes, you might prefer to run a client on one of the testnet networks. [See overview of supported networks](/developers/docs/nodes-and-clients/#execution-clients).
 
-Examples of running execution clients with basic configuration can be found in next section. 
+Examples of running execution clients with basic configuration can be found in next section.
 
 #### Starting the execution client {#starting-the-execution-client}
 
@@ -215,19 +215,19 @@ Before starting the Ethereum client software, perform a last check that your env
 
 Run your client on a testnet first to help make sure everything is working correctly. [Running a Geth light node](/developers/tutorials/run-light-node-geth/) should help.
 
-You need to declare any client settings that aren't default at the start. You can use flags or the config file to declare your preferred configuration. Set of features and config syntax of each client differs. Check out your client's documentation for the specifics. 
+You need to declare any client settings that aren't default at the start. You can use flags or the config file to declare your preferred configuration. Set of features and config syntax of each client differs. Check out your client's documentation for the specifics.
 
-Execution and consensus clients communicate via an authenticated endpoint specified in [Engine API](https://github.com/ethereum/execution-apis/tree/main/src/engine). In order to connect to a consensus client, the execution client must generate a [`jwtsecret`](https://jwt.io/
-) at a known path. For security and stability reasons, clients should run on the same machine, and both clients must know this path as it is used to authenticate a local RPC connection between them. The execution client must also define a listening port for authenticated APIs.
+Execution and consensus clients communicate via an authenticated endpoint specified in [Engine API](https://github.com/ethereum/execution-apis/tree/main/src/engine). In order to connect to a consensus client, the execution client must generate a [`jwtsecret`](https://jwt.io/) at a known path. For security and stability reasons, clients should run on the same machine, and both clients must know this path as it is used to authenticate a local RPC connection between them. The execution client must also define a listening port for authenticated APIs.
 
 This token is generated automatically by the client software, but in some cases, e.g. during pre-Merge testing, you might need to do it yourself. You can generate it by running:
+
 ```
 openssl rand -hex 32 > jwtsecret
 ```
 
 **Note that it is recommended to connect an execution and consensus client on a testnet only for now (e.g. Kiln) and await merge-ready client releases before replicating the process on Mainnet.**
 
-#### Running an execution client
+#### Running an execution client {#running-an-execution-client}
 
 This section will guide you through starting execution clients. It only serves as an example of a basic configuration, which will start the client with these settings:
 
@@ -240,14 +240,14 @@ This section will guide you through starting execution clients. It only serves a
 - Defines path to `jwtsecret` for authenticated API
   - Make sure to substitute the example path with a real one which can be accessed by clients, e.g. `/tmp/jwtsecret`
 
-Please keep in mind that this is just a basic example, all other settings will be set to default. Pay attention to the documentation of each client to learn about default values, settings, and features. For more features, for example for running validators, monitoring, etc., please refer to the documentation of the specific client. 
+Please keep in mind that this is just a basic example, all other settings will be set to default. Pay attention to the documentation of each client to learn about default values, settings, and features. For more features, for example for running validators, monitoring, etc., please refer to the documentation of the specific client.
 
-> Note that backslashes `\` in examples are only for formatting purposes; config flags can be defined in a single line. 
+> Note that backslashes `\` in examples are only for formatting purposes; config flags can be defined in a single line.
 
 <details>
   <summary>Running Besu</summary>
 
-This example starts Besu on mainnet, stores blockchain data in default format at `/data/ethereum`, enables JSON RPC and Engine RPC for connecting consensus client. Engine API is authenticated with token `jwtsecret` and only calls from `localhost` are allowed. 
+This example starts Besu on mainnet, stores blockchain data in default format at `/data/ethereum`, enables JSON RPC and Engine RPC for connecting consensus client. Engine API is authenticated with token `jwtsecret` and only calls from `localhost` are allowed.
 
 ```
 besu --network=mainnet \
@@ -278,47 +278,50 @@ This example starts Erigon on mainnet, stores blockchain data at `/data/ethereum
 erigon --chain mainnet \
     --datadir /data/ethereum  \
     --http --http.api=engine,eth,web3,net \
-    --authrpc.jwtsecret=/path/to/jwtsecret 
+    --authrpc.jwtsecret=/path/to/jwtsecret
 ```
 
-Erigon by default perfoor 8GB with HDD rms a full sync which will result in more than 2TB of archive data. Make sure `datadir` is pointing to disk with enough free space or look into `--prune` flag which can trim different kinds of data. Check the Erigon's `--help` to learn more. 
+Erigon by default perfoor 8GB with HDD rms a full sync which will result in more than 2TB of archive data. Make sure `datadir` is pointing to disk with enough free space or look into `--prune` flag which can trim different kinds of data. Check the Erigon's `--help` to learn more.
 
 </details>
 
 <details>
   <summary>Running Geth</summary>
 
-This example starts Geth on mainnet, stores blockchain data at `/data/ethereum`, enables JSON RPC and defines which namespaces are allowed. It also enables authentication for connecting consensus client which requires path to `jwtsecret` and also option defining which connections are allowed, in our example only from `localhost`. 
+This example starts Geth on mainnet, stores blockchain data at `/data/ethereum`, enables JSON RPC and defines which namespaces are allowed. It also enables authentication for connecting consensus client which requires path to `jwtsecret` and also option defining which connections are allowed, in our example only from `localhost`.
 
 ```
 geth --mainnet \
     --datadir "/data/ethereum" \
     --http --http.api="eth,web3,net" \
     --authrpc.vhosts="localhost" \
-    --authrpc.jwtsecret=/path/to/jwtsecret 
+    --authrpc.jwtsecret=/path/to/jwtsecret
 ```
-Check [docs for all configuration options](https://geth.ethereum.org/docs/interface/command-line-options) and learn more about [running Geth with a consensus client](https://geth.ethereum.org/docs/interface/consensus-clients). 
+
+Check [docs for all configuration options](https://geth.ethereum.org/docs/interface/command-line-options) and learn more about [running Geth with a consensus client](https://geth.ethereum.org/docs/interface/consensus-clients).
 
 </details>
 
 <details>
   <summary>Running Nethermind</summary>
 
-Nethermind offers various [installation options](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/getting-started). The package come with various binaries, including a Launcher with guided setup, which will help you to create the configuration interactively. Alternativally, you find Runner which is the executable itself and you can just run it with config glags. JSON RPC is enabled by default. 
+Nethermind offers various [installation options](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/getting-started). The package come with various binaries, including a Launcher with guided setup, which will help you to create the configuration interactively. Alternativally, you find Runner which is the executable itself and you can just run it with config glags. JSON RPC is enabled by default.
+
 ```
 Nethermind.Runner --config mainnet \
     --datadir /data/ethereum \
     --JsonRpc.JwtSecretFile=/path/to/jwtsecret
 ```
-Nethermind docs offer a [complete guide](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/running-nethermind-post-merge) on running Nethermind with consensus client. 
-</details>
 
+Nethermind docs offer a [complete guide](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/running-nethermind-post-merge) on running Nethermind with consensus client.
+
+</details>
 
 Execution client will initiate its core functions, chosen endpoints, and start looking for peers. After successfully discovering peers, the client starts synchronization. After the Merge, it awaits the connection from consensus client. Current blockchain data will be available once the client is successfully synced to the current state.
 
 #### Starting the consensus client {#starting-the-consensus-client}
 
-The consensus client must be started with the right port configuration to establish a local RPC connection to the execution client. The consensus clients have to be run with the exposed execution client port as configuration argument. 
+The consensus client must be started with the right port configuration to establish a local RPC connection to the execution client. The consensus clients have to be run with the exposed execution client port as configuration argument.
 
 The consensus client also needs the path to the execution client's `jwt-secret` in order to authenticate the RPC connection between them. Similar to execution examples above, each consensus client has a configuration flag which takes the jwt token file path as an argument. This must be consistent with the `jwtsecret` path provided to the execution client.
 
@@ -326,14 +329,15 @@ If you plan to run a validator, make sure to add a configuration flag which spec
 
 **Note that we recommend waiting for merge-ready client releases before doing this on Ethereum Mainnet—for now just practice on a testnet such as Kiln or Goerli**
 
-When starting Beacon Node on testnet, you can save significantly save syncing time by using public endpoint for [Checkpoint sync](https://notes.ethereum.org/@launchpad/checkpoint-sync). 
+When starting Beacon Node on testnet, you can save significantly save syncing time by using public endpoint for [Checkpoint sync](https://notes.ethereum.org/@launchpad/checkpoint-sync).
 
-#### Running a consensus client 
+#### Running a consensus client
 
 <details>
   <summary>Running Lighthouse</summary>
 
-Before running Lighthouse, learn more on how to install and configure it in [Lighthouse Book](https://lighthouse-book.sigmaprime.io/installation.html). 
+Before running Lighthouse, learn more on how to install and configure it in [Lighthouse Book](https://lighthouse-book.sigmaprime.io/installation.html).
+
 ```
 lighthouse beacon_node
     --network mainnet \
@@ -342,12 +346,14 @@ lighthouse beacon_node
     --execution.urls http://127.0.0.1:8551 \
     --jwt-secret="/path/to/jwtsecret" \
 ```
+
 </details>
 
 <details>
   <summary>Running Lodestar</summary>
 
-Install Lodestar software by compiling it or downloading the Docker image. Learn more in [docs](https://chainsafe.github.io/lodestar/) and more comprehensive [setup guide](https://hackmd.io/@philknows/rk5cDvKmK).  
+Install Lodestar software by compiling it or downloading the Docker image. Learn more in [docs](https://chainsafe.github.io/lodestar/) and more comprehensive [setup guide](https://hackmd.io/@philknows/rk5cDvKmK).
+
 ```
 lodestar beacon \
     --rootDir="/data/ethereum" \
@@ -356,12 +362,13 @@ lodestar beacon \
     --execution.urls="http://127.0.0.1:8551" \
     --jwt-secret="/path/to/jwtsecret"
 ```
+
 </details>
 
 <details>
   <summary>Running Nimbus</summary>
 
-Nimbus comes with both consensus and execution clients. It can be run on various devices even with very modest computing power. 
+Nimbus comes with both consensus and execution clients. It can be run on various devices even with very modest computing power.
 After [installing dependencies and Nimbus itself](https://nimbus.guide/quick-start.html), you can run its consensus client:
 
 ```
@@ -371,12 +378,13 @@ nimbus_beacon_node \
     --rest \
     --jwt-secret="/path/to/jwtsecret"
 ```
+
 </details>
 
 <details>
   <summary>Running Prysm</summary>
 
-Prysm comes with script which allows easy automatic installation. Details can be found in the [Prysm docs](https://docs.prylabs.network/docs/install/install-with-script). 
+Prysm comes with script which allows easy automatic installation. Details can be found in the [Prysm docs](https://docs.prylabs.network/docs/install/install-with-script).
 
 ```
 ./prysm.sh beacon-chain \
@@ -385,6 +393,7 @@ Prysm comes with script which allows easy automatic installation. Details can be
     --http-web3provider=http://localhost:8551  \
     --jwt-secret=/path/to/jwtsecret
 ```
+
 </details>
 
 <details>
@@ -396,10 +405,12 @@ teku --network mainnet \
     --ee-endpoint http://localhost:8551 \
     --ee-jwt-secret-file "/path/to/jwtsecret" \
 ```
-Learn more about running Merge ready setup with Teku in [its documentation](https://docs.teku.consensys.net/en/22.8.0/HowTo/Prepare-for-The-Merge/). 
+
+Learn more about running Merge ready setup with Teku in [its documentation](https://docs.teku.consensys.net/en/22.8.0/HowTo/Prepare-for-The-Merge/).
+
 </details>
 
-Consensus client connects to the execution client to read the deposit contract and identify validators. It also connects to other Beacon Node peers and syncs consensus slots from genesis. When it reaches the current epoch, the Beacon API becomes usable for your validators. Learn more about [Beacon Node APIs](https://eth2docs.vercel.app/). 
+Consensus client connects to the execution client to read the deposit contract and identify validators. It also connects to other Beacon Node peers and syncs consensus slots from genesis. When it reaches the current epoch, the Beacon API becomes usable for your validators. Learn more about [Beacon Node APIs](https://eth2docs.vercel.app/).
 
 ### Adding Validators {#adding-validators}
 
@@ -407,7 +418,7 @@ Consensus client serves as a Beacon Node to which validator client connects. Eac
 
 Running your own validator allows for [solo staking](https://ethereum.org/en/staking/solo/), the most impactful and trustless way. This requires a deposit of 32 ETH. For running a validator on your own node with a smaller amount, a decentralized pool with permissionless node operators, such as [Rocket Pool](https://rocketpool.net/node-operators), might interest you.
 
-The easiest way to get started with staking and validator key generation is to use the [Prater Testnet Staking Launchpad](https://prater.launchpad.ethereum.org/), which allows you to test your setup by [running nodes on Goerli](https://notes.ethereum.org/@launchpad/goerli). When you're ready for Mainnet, you can repeat these steps using the [Mainnet Staking Launchpad](https://launchpad.ethereum.org/). Make sure to check [Mainnet readiness checklist](https://launchpad.ethereum.org/en/merge-readiness) to smoothly run your validator through the Merge. 
+The easiest way to get started with staking and validator key generation is to use the [Prater Testnet Staking Launchpad](https://prater.launchpad.ethereum.org/), which allows you to test your setup by [running nodes on Goerli](https://notes.ethereum.org/@launchpad/goerli). When you're ready for Mainnet, you can repeat these steps using the [Mainnet Staking Launchpad](https://launchpad.ethereum.org/). Make sure to check [Mainnet readiness checklist](https://launchpad.ethereum.org/en/merge-readiness) to smoothly run your validator through the Merge.
 
 ### Using the node {#using-the-node}
 
@@ -429,11 +440,11 @@ You should do this with caution as this will let anyone on the internet control 
 
 A way around this is to prevent potentially harmful RPC methods from being modifiable. For example, with Geth, you can declare modifiable methods with a flag: `--http.api web3,eth,txpool`.
 
-You can also host access to your RPC interface by pointing the service of a web server, like Nginx, to your client's local address and port. This also enables you to setup a certificate for a secure `https` connection to your own RPC. 
+You can also host access to your RPC interface by pointing the service of a web server, like Nginx, to your client's local address and port. This also enables you to setup a certificate for a secure `https` connection to your own RPC.
 
-The most privacy-preserving and also very simple way to set up a publicly reachable endpoint, you can host it on your own [Tor](https://www.torproject.org/) onion service. This will let you reach the RPC outside your local network without a static public IP address or opened ports. However, keep in mind the RPC is accessible only via the Tor network which is not supported by all the applications and might result in connection issues. 
+The most privacy-preserving and also very simple way to set up a publicly reachable endpoint, you can host it on your own [Tor](https://www.torproject.org/) onion service. This will let you reach the RPC outside your local network without a static public IP address or opened ports. However, keep in mind the RPC is accessible only via the Tor network which is not supported by all the applications and might result in connection issues.
 
-To do this, you have to create your own [onion service](https://community.torproject.org/onion-services/). Checkout [the documentation](https://community.torproject.org/onion-services/setup/) on onion service setup to host your own. You can point it to a web server with proxy to the RPC port or just directly to the RPC. 
+To do this, you have to create your own [onion service](https://community.torproject.org/onion-services/). Checkout [the documentation](https://community.torproject.org/onion-services/setup/) on onion service setup to host your own. You can point it to a web server with proxy to the RPC port or just directly to the RPC.
 
 ### Operating the node {#operating-the-node}
 
@@ -451,13 +462,13 @@ _This doesn't apply on consensus layer validator nodes._ Taking your node offlin
 
 #### Creating client services {#creating-client-services}
 
-Consider creating a service to run your clients automatically on startup. For example, on Linux servers, good practice would be to create a service, e.g. with `systemd`, that executes the client with proper config, under a user with limited privileges and automatically restarts. 
+Consider creating a service to run your clients automatically on startup. For example, on Linux servers, good practice would be to create a service, e.g. with `systemd`, that executes the client with proper config, under a user with limited privileges and automatically restarts.
 
 #### Updating clients {#updating-clients}
 
 You need to keep your client software up-to-date with the latest security patches, features, and [EIPs](/eips/). Especially before [hard forks](/history/), make sure you are running the correct client versions.
 
-> Before important network updates, EF publishes a post on its [blog](blog.ethereum.org). You can [subscribe to these announcements](https://groups.google.com/a/ethereum.org/g/announcements) to get a notification to your mail when your node needs an update. 
+> Before important network updates, EF publishes a post on its [blog](blog.ethereum.org). You can [subscribe to these announcements](https://groups.google.com/a/ethereum.org/g/announcements) to get a notification to your mail when your node needs an update.
 
 Updating clients is very simple. Each client has specific instructions in their documentation, but the process is generally just to download the latest version and restart the client with the new executable. The client should pick up where it left off, but with the updates applied.
 
@@ -469,7 +480,7 @@ Running your own node lets you use services that require direct access to Ethere
 
 #### Monitoring the node {#monitoring-the-node}
 
-To properly monitor your node, consider collecting metrics. Clients provide metrics endpoints so you can get comprehensive data about your node. Use tools like [InfluxDB](https://www.influxdata.com/get-influxdb/) or [Prometheus](https://prometheus.io/) to create databases which you can turn into visualizations and charts in software like [Grafana](https://grafana.com/). There are many setups for using this software and different Grafana dashboards for you to visualise your node and the network as a whole. For example, check out [tutorial on monitoring Geth](/developers/tutorials/monitoring-geth-with-influxdb-and-grafana/). 
+To properly monitor your node, consider collecting metrics. Clients provide metrics endpoints so you can get comprehensive data about your node. Use tools like [InfluxDB](https://www.influxdata.com/get-influxdb/) or [Prometheus](https://prometheus.io/) to create databases which you can turn into visualizations and charts in software like [Grafana](https://grafana.com/). There are many setups for using this software and different Grafana dashboards for you to visualise your node and the network as a whole. For example, check out [tutorial on monitoring Geth](/developers/tutorials/monitoring-geth-with-influxdb-and-grafana/).
 
 As part of your monitoring, make sure to keep an eye on your machine's performance. During your node's initial sync, the client software may be very heavy on CPU and RAM. In addition to Grafana, you can use the tools your OS offers like `htop` or `uptime` to do this.
 
@@ -483,7 +494,6 @@ As part of your monitoring, make sure to keep an eye on your machine's performan
 - [Running an Ethereum Node](https://docs.ethhub.io/using-ethereum/running-an-ethereum-node/) _– ETHHub, updated often_
 - [Running a Hyperledger Besu Node on the Ethereum Mainnet: Benefits, Requirements, and Setup](https://pegasys.tech/running-a-hyperledger-besu-node-on-the-ethereum-mainnet-benefits-requirements-and-setup/) _– Felipe Faraggi, 7 May 2020_
 - [Deploying Nethermind Ethereum Client with Monitoring Stack](https://medium.com/nethermind-eth/deploying-nethermind-ethereum-client-with-monitoring-stack-55ce1622edbd) _– Nethermind.eth, 8 July 2020_
-
 
 ## Related topics {#related-topics}
 
