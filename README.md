@@ -1342,6 +1342,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/linhuatan"><img src="https://avatars.githubusercontent.com/u/94831627?v=4?s=100" width="100px;" alt=""/><br /><sub><b>linhuatan</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=linhuatan" title="Documentation">📖</a></td>
     <td align="center"><a href="http://hugh.sh"><img src="https://avatars.githubusercontent.com/u/24587702?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Hugh</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=hughcrt" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/z3zzz"><img src="https://avatars.githubusercontent.com/u/91174156?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Kim Kwangtae</b></sub></a><br /><a href="#content-z3zzz" title="Content">🖋</a></td>
+    <td align="center"><a href="https://github.com/tobi4021"><img src="https://avatars.githubusercontent.com/u/84390698?v=4?s=100" width="100px;" alt=""/><br /><sub><b>tobi4021</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=tobi4021" title="Documentation">📖</a></td>
   </tr>
 </table>
 
