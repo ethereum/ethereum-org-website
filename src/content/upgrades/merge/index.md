@@ -29,7 +29,7 @@ Throughout Ethereum's history, developers prepared for an eventual transition aw
 
 The Beacon Chain was not originally processing Mainnet transactions. Instead, it was reaching consensus on its own state by agreeing on active validators and their account balances. After extensive testing, it became time for the Beacon Chain to reach consensus on real world data. After The Merge, the Beacon Chain became the consensus engine for all network data, including execution layer transactions and account balances.
 
-The Merge represented the official switch to using the Beacon Chain as the engine of block production. Mining is no longer be the means of producing valid blocks. Instead, the proof-of-stake validators have adopted this role and are now responsible for processing the validity of all transactions and proposing blocks.
+The Merge represented the official switch to using the Beacon Chain as the engine of block production. Mining is no longer the means of producing valid blocks. Instead, the proof-of-stake validators have adopted this role and are now responsible for processing the validity of all transactions and proposing blocks.
 
 No history was lost in The Merge. As Mainnet merged with the Beacon Chain, it also merged the entire transactional history of Ethereum.
 
@@ -69,7 +69,7 @@ title="Non-validating node operators and infrastructure providers"
 contentPreview="If you're operating a non-validating Ethereum node, the most significant change that came with The Merge was the requirement to run clients for BOTH the execution layer AND the consensus layer."
 id="node-operators">
 
-Up until The Merge, an execution client (such as Geth, Erigon, Besu or Nethermind) was enough to receive, properly validate, and propagate blocks being gossiped by the network. _After The Merge_, the validity of transactions contained within an execution payload now also also depends on the validity of the "consensus block" it is contained within.
+Up until The Merge, an execution client (such as Geth, Erigon, Besu or Nethermind) was enough to receive, properly validate, and propagate blocks being gossiped by the network. _After The Merge_, the validity of transactions contained within an execution payload now also depends on the validity of the "consensus block" it is contained within.
 
 As a result, a full Ethereum node now requires both an execution client and a consensus client. These two clients work together using a new Engine API. The Engine API requires authentication using a JWT secret, which is provided to both clients allowing secure communication.
 
