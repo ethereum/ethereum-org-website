@@ -434,7 +434,7 @@ const StakingPage = ({
           <StyledButtonDropdown list={dropdownLinks} />
           <InfoTitle>{mdx.frontmatter.title}</InfoTitle>
 
-          {mdx.frontmatter.sidebar && tocItems && (
+          {tocItems && (
             <UpgradeTableOfContents
               items={tocItems}
               maxDepth={mdx.frontmatter.sidebarDepth!}
@@ -466,7 +466,6 @@ export const stakingPageQuery = graphql`
         title
         description
         lang
-        sidebar
         emoji
         sidebarDepth
         summaryPoints

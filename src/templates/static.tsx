@@ -201,17 +201,19 @@ const StaticPage = ({
           items={tocItems}
           isMobile={true}
           maxDepth={mdx.frontmatter.sidebarDepth!}
+          hideEditButton={!!mdx.frontmatter.hideEditButton}
         />
         <MDXProvider components={components}>
           <MDXRenderer>{mdx.body}</MDXRenderer>
         </MDXProvider>
         <FeedbackCard isArticle />
       </ContentContainer>
-      {mdx.frontmatter.sidebar && tocItems && (
+      {tocItems && (
         <TableOfContents
           editPath={absoluteEditPath}
           items={tocItems}
           maxDepth={mdx.frontmatter.sidebarDepth!}
+          hideEditButton={!!mdx.frontmatter.hideEditButton}
         />
       )}
     </Page>
@@ -233,9 +235,9 @@ export const staticPageQuery = graphql`
         title
         description
         lang
-        sidebar
         sidebarDepth
         isOutdated
+        hideEditButton
       }
       body
       tableOfContents

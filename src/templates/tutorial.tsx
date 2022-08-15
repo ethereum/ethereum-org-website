@@ -168,6 +168,7 @@ const TutorialPage = ({
   const tocItems = mdx.tableOfContents?.items as Array<ItemTableOfContents>
 
   const { editContentUrl } = siteData.siteMetadata || {}
+  const hideEditButton = !!mdx.frontmatter.hideEditButton
   const absoluteEditPath = `${editContentUrl}${relativePath}`
   return (
     <div>
@@ -196,11 +197,12 @@ const TutorialPage = ({
           />
           <FeedbackCard />
         </ContentContainer>
-        {mdx.frontmatter.sidebar && tocItems && (
+        {tocItems && (
           <DesktopTableOfContents
             items={tocItems}
             maxDepth={mdx.frontmatter.sidebarDepth!}
             editPath={absoluteEditPath}
+            hideEditButton={hideEditButton}
           />
         )}
       </Page>
@@ -234,11 +236,11 @@ export const query = graphql`
         sourceUrl
         skill
         published
-        sidebar
         sidebarDepth
         address
         isOutdated
         preMergeBanner
+        hideEditButton
       }
       body
       tableOfContents

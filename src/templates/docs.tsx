@@ -224,6 +224,7 @@ const DocsPage = ({
             items={tocItems}
             isMobile={true}
             maxDepth={mdx.frontmatter.sidebarDepth!}
+            hideEditButton={!!mdx.frontmatter.hideEditButton}
           />
           <MDXProvider components={components}>
             <MDXRenderer>{mdx.body}</MDXRenderer>
@@ -237,13 +238,14 @@ const DocsPage = ({
           <FeedbackCard isArticle />
           <DocsNav relativePath={relativePath}></DocsNav>
         </Content>
-        {mdx.frontmatter.sidebar && tocItems && (
+        {tocItems && (
           <DesktopTableOfContents
             slug={slug}
             editPath={absoluteEditPath}
             items={tocItems}
             isPageIncomplete={isPageIncomplete}
             maxDepth={mdx.frontmatter.sidebarDepth!}
+            hideEditButton={!!mdx.frontmatter.hideEditButton}
           />
         )}
       </ContentContainer>
@@ -267,10 +269,10 @@ export const query = graphql`
         description
         lang
         incomplete
-        sidebar
         sidebarDepth
         isOutdated
         preMergeBanner
+        hideEditButton
       }
       body
       tableOfContents
