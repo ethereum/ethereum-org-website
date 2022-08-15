@@ -25,10 +25,6 @@ const LearningToolsCardGrid: React.FC<LearningToolsCardGridProps> = ({
   return (
     <StyledCardGrid>
       {category
-        .filter(
-          ({ locales }) =>
-            !locales?.length || locales.includes(intl.locale as Lang)
-        )
         .sort(({ locales }) => (locales?.length ? -1 : 0))
         .map(({ name, description, background, url, alt, image, subjects }) => (
           <ProductCard
