@@ -52,7 +52,7 @@ What these implementations have in common is they all follow a single specificat
 
 ### Tracking nodes in the network {#network-overview}
 
-There are multiple trackers which offer a real-time overview of nodes in the Ethereum network. Note that due to the nature of decentralized networks, these crawlers can only offer a limited view of the network and might report different results. 
+Multiple trackers offer a real-time overview of nodes in the Ethereum network. Note that due to the nature of decentralized networks, these crawlers can only provide a limited view of the network and might report different results. 
 
 - [Map of nodes](https://etherscan.io/nodetracker) by Etherscan
 - [Ethernodes](https://ethernodes.org/) by Bitfly
@@ -96,8 +96,8 @@ Running a node allows you to directly, trustlessly and privately use Ethereum wh
 Running your own node enables you to use Ethereum in a private, self-sufficient and trustless manner. You don't need to trust the network because you can verify the data yourself with your client. "Don't trust, verify" is a popular blockchain mantra.
 
 - Your node verifies all the transactions and blocks against consensus rules by itself. This means you don’t have to rely on any other nodes in the network or fully trust them.
-- You can use an Ethereum wallet with your own node. You can use dapps more securely and privately because you won't have to leak your addresses and balances to random nodes. Everything can be checked with your own client. [MetaMask](https://metamask.io), [Frame](https://frame.sh/) and [many other wallets](/wallets/find-wallet/) can be easily pointed to your own local node. (Check wallets with `RPC importing` filter.)
-- You can run and self-host other services which depend on data from Ethereum. Most importantly for example Beacon Chain validator but also software like L2 infrastracture, block explorers, payment processors, etc. 
+- You can use an Ethereum wallet with your own node. You can use dapps more securely and privately because you won't have to leak your addresses and balances to random nodes. Everything can be checked with your own client. [MetaMask](https://metamask.io), [Frame](https://frame.sh/), and [many other wallets](/wallets/find-wallet/) offer RPC-importing, allowing them to use your node.
+- You can run and self-host other services which depend on data from Ethereum. For example, this might be a Beacon Chain validator, software like layer 2, infrastructure, block explorers, payment processors, etc.  
 - You can provide your own custom [RPC endpoints](https://ethereum.org/en/developers/docs/apis/json-rpc/). Publicly for the community or even privately hosted Ethereum endpoint enables people to use your node and avoid big centralized providers. 
 - You can connect to your node using **Inter-process Communications (IPC)** or rewrite the node to load your program as a plugin. This grants low latency, which helps a lot, e.g. when processing a lot of data using web3 libraries or when you need to replace your transactions as fast as possible (i.e. frontrunning).
 - You can directly stake ETH to secure the network and earn rewards. See [solo staking](https://ethereum.org/en/staking/solo/) to get started. 
@@ -110,7 +110,7 @@ A diverse set of nodes is important for Ethereum’s health, security and operat
 
 - Full nodes enforce the consensus rules so they can’t be tricked into accepting blocks that don't follow them. This provides extra security in the network because if all the nodes were light nodes, which don't do full verification, validators could attack the network. 
 - In case of an attack which overcomes the crypto-economic defenses of [proof-of-stake](/developers/docs/consensus-mechanisms/pos/#what-is-pos), a social recovery can be performed by full nodes choosing to follow the honest chain.
-- More nodes in the network result in a more diverse and robust network. This is the ultimate goal of decentralization, which enables censorship resistant and reliable system.
+- More nodes in the network result in a more diverse and robust network, the ultimate goal of decentralization, which enables a censorship-resistant and reliable system.
 - They provide access to blockchain data for lightweight clients that depend on it. In high peaks of usage, there need to be enough full nodes to help light nodes sync. Light nodes don't store the whole blockchain, instead they verify data via the [state roots in block headers](/developers/docs/blocks/#block-anatomy). They can request more information from blocks if they need it.
 
 If you run a full node, the whole Ethereum network benefits from it.
@@ -185,15 +185,15 @@ There are multiple consensus clients (previously known as 'Eth2' clients) to sup
 
 | Client                                                        | Language   | Operating systems     | Networks                              |
 | ------------------------------------------------------------- | ---------- | --------------------- | ------------------------------------- |
-| [Lighthouse](https://lighthouse.sigmaprime.io/)               | Rust       | Linux, Windows, macOS | Beacon Chain, Prater, Pyrmont         |
-| [Lodestar](https://lodestar.chainsafe.io/)                    | TypeScript | Linux, Windows, macOS | Beacon Chain, Prater                  |
-| [Nimbus](https://nimbus.team/)                                | Nim        | Linux, Windows, macOS | Beacon Chain, Prater                  |
-| [Prysm](https://docs.prylabs.network/docs/getting-started/)   | Go         | Linux, Windows, macOS | Beacon Chain, Gnosis, Prater, Pyrmont |
-| [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/) | Java       | Linux, Windows, macOS | Beacon Chain, Gnosis, Prater, Sepolia |
+| [Lighthouse](https://lighthouse.sigmaprime.io/)               | Rust       | Linux, Windows, macOS | Beacon Chain, Goerli, Pyrmont         |
+| [Lodestar](https://lodestar.chainsafe.io/)                    | TypeScript | Linux, Windows, macOS | Beacon Chain, Goerli                  |
+| [Nimbus](https://nimbus.team/)                                | Nim        | Linux, Windows, macOS | Beacon Chain, Goerli                  |
+| [Prysm](https://docs.prylabs.network/docs/getting-started/)   | Go         | Linux, Windows, macOS | Beacon Chain, Gnosis, Goerli, Pyrmont |
+| [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/) | Java       | Linux, Windows, macOS | Beacon Chain, Gnosis, Goerli, Sepolia |
 
 ### Lighthouse
 
-Lighthouse is a consensus client implementation written in Rust under the Apache-2.0 license. It is maintained by Sigma Prime and has been stable and production-ready since Beacon Chain genesis. It is relied upon by a wide variety of enterprises, staking pools and individuals. It aims to be secure, performant and interoperable in a wide range of environments from desktop PCs through to sophisticated automated deployments.
+Lighthouse is a consensus client implementation written in Rust under the Apache-2.0 license. It is maintained by Sigma Prime and has been stable and production-ready since Beacon Chain genesis. It is relied upon by various enterprises, staking pools and individuals. It aims to be secure, performant and interoperable in a wide range of environments, from desktop PCs to sophisticated automated deployments.
 
 Documentation can be found in [Lighthouse Book](https://lighthouse-book.sigmaprime.io/).
 
@@ -205,7 +205,7 @@ More information can be found on our [Lodestar website](https://lodestar.chainsa
 
 ### Nimbus
 
-Nimbus is a consensus client implementation written in Nim under Apache-2.0 license. It is a production-ready client in use by solo-stakers and staking pools. It is designed for resource efficiency, making it easy to run Nimbus on resource-restricted devices and enterprise infrastructure with equal ease, without compromising stability or reward performance. A lighter resource footprint means the client has greater margin-of-safety when the network is under stress. 
+Nimbus is a consensus client implementation written in Nim under the Apache-2.0 license. It is a production-ready client in use by solo-stakers and staking pools. Nimbus is designed for resource efficiency, making it easy to run on resource-restricted devices and enterprise infrastructure with equal ease, without compromising stability or reward performance. A lighter resource footprint means the client has a greater margin of safety when the network is under stress.
 
 Documentation can be found in the [Nimbus Guide](https://nimbus.guide/).
 
@@ -217,9 +217,9 @@ Visit [Prysm docs](https://docs.prylabs.network/docs/getting-started/) to learn 
 
 ### Teku
 
-Teku is one of the original Beacon Chain genesis clients. Alongside the usual goals (security, robustness, stability, usability, performance) it specifically aims to comply fully with all the various consensus client standards.
+Teku is one of the original Beacon Chain genesis clients. Alongside the usual goals (security, robustness, stability, usability, performance), Teku specifically aims to comply fully with all the various consensus client standards.
 
-Teku offers very flexible deployment options. The beacon node and validator client can be run together as a single process, which is extremely convenient for solo stakers, or they can be run separately for sophisticated staking operations. In addition, Teku is fully interoperable with [Web3Signer](https://github.com/ConsenSys/web3signer/) for signing key security and slashing protection.
+Teku offers very flexible deployment options. The beacon node and validator client can be run together as a single process, which is extremely convenient for solo stakers, or nodes can be run separately for sophisticated staking operations. In addition, Teku is fully interoperable with [Web3Signer](https://github.com/ConsenSys/web3signer/) for signing key security and slashing protection.
 
 Teku is written in Java and is Apache 2.0 licensed. It is developed by the Protocols team at ConsenSys that is also responsible for Besu and Web3Signer. Learn more in [Teku docs](https://docs.teku.consensys.net/en/latest/). 
 
@@ -256,7 +256,7 @@ Light client mode downloads all block headers, block data, and verifies some ran
 
 #### Snap sync
 
-The latest approach to syncing the client, pioneered by Geth. Using dynamic snapshots served by peers retrieves all the account and storage data without downloading intermediate trie nodes and then reconstructs the Merkle trie locally.
+Snap sync is the latest approach to syncing a client, pioneered by the Geth team. Using dynamic snapshots served by peers retrieves all the account and storage data without downloading intermediate trie nodes and then reconstructs the Merkle trie locally.
 
 - Fastest sync strategy, currently default in Ethereum mainnet 
 - Saves a lot of disk usage and network bandwidth without sacrificing security
@@ -273,7 +273,7 @@ Optimistic sync is a post-merge synchronization strategy designed to be opt-in a
 
 #### Checkpoint sync
 
-Also called weak subjectivity sync, this strategy creates a superior user experience for syncing Beacon Node. It's based on assumptions of [weak subjectivity](/developers/docs/consensus-mechanisms/pos/weak-subjectivity/) which enables syncing Beacon Chain from a recent weak subjectivity checkpoint instead of genesis. This makes the initial sync time significantly faster with similiar trust assumptions as syncing from genesis. 
+Checkpoint sync, also known as weak subjectivity sync, creates a superior user experience for syncing Beacon Node. It's based on assumptions of [weak subjectivity](/developers/docs/consensus-mechanisms/pos/weak-subjectivity/) which enables syncing Beacon Chain from a recent weak subjectivity checkpoint instead of genesis. Checkpoint sync makes the initial sync time significantly faster with similar trust assumptions as syncing from [genesis](/glossary/#genesis-block).
 
 In practice, this means your node connects to a remote service to download recent finalized states and continues verifying data from that point. Third party providing the data is trusted and should be picked carefully. 
 

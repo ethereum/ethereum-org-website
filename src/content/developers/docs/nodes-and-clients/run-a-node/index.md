@@ -19,17 +19,17 @@ If you're new to the topic of running a node, or looking for a less technical pa
 
 ## Choosing an approach {#choosing-approach}
 
-The first step in spinning up your node is choosing your approach. Based on requirements and various possibilities, you have to choose the client implementation (of both execution and consensus clients), the environment (hardware, system), and the parameters for client settings.
+The first step in spinning up your node is choosing your approach. Based on requirements and various possibilities, you must select the client implementation (of both execution and consensus clients), the environment (hardware, system), and the parameters for client settings.
 
-This page will guide you through these decisions and help you to find the most suitable way for running your own Ethereum instance. 
+This page will guide you through these decisions and help you find the most suitable way to run your Ethereum instance.
 
 To choose from client implementations, see all the available Mainnet ready [execution clients](/developers/docs/nodes-and-clients/#execution-clients), [consensus clients](/developers/docs/nodes-and-clients/#consensus-clients) and learn about [client diversity](/developers/docs/client-diversity). 
 
 Decide whether to run the software on your own [hardware or in the cloud](#local-vs-cloud), considering clients' [requirements](#requirements). 
 
-After preparing the environment, install the chosen clients either with [beginner friendly interface](#automatized-setup) or [manually](#manual-setup) using a terminal with advanced options. 
+After preparing the environment, install the chosen clients either with [beginner-friendly interface](#automatized-setup) or [manually](#manual-setup) using a terminal with advanced options.
 
-When the node is running and syncing, you are ready to [use it](#using-the-node) but make sure to keep an eye on its [maintanance](#operating-the-node). 
+When the node is running and syncing, you are ready to [use it](#using-the-node), but make sure to keep an eye on its [maintanance](#operating-the-node).
 
 ![Client setup](./diagram.png)
 
@@ -62,21 +62,21 @@ Check out also [nodes as a service](/developers/docs/nodes-and-clients/nodes-as-
 
 #### Hardware {#hardware}
 
-However, a censorship-resistant, decentralized network should not rely on cloud providers. It's healthier for the ecosystem if you run your own node on your local hardware. [Estimations](https://www.ethernodes.org/networkType/Hosting) show a large share of nodes are running on cloud, which could become a single point of failure. 
+However, a censorship-resistant, decentralized network should not rely on cloud providers. Instead, running your node on your own local hardware is healthier for the ecosystem. [Estimations](https://www.ethernodes.org/networkType/Hosting) show a large share of nodes run on the cloud, which could become a single point of failure.
 
-Depending on your needs and wants, Ethereum clients can run on your computer, laptop, server or single-board computer. While it is possible to run clients on your personal computer, having a dedicated machine just for your node can greatly enhance its performance and security while minimizing the impact on your primary computer.
+Ethereum clients can run on your computer, laptop, server, or even a single-board computer. While running clients on your personal computer is possible, having a dedicated machine just for your node can significantly enhance its performance and security while minimizing the impact on your primary computer.
 
-Using your own hardware can be very easy, there are number of simple and also more advanced options. Let's look into the requirements and means for running Ethereum clients on your own machine. 
+Using your own hardware can be very easy. There are many simple options as well as advanced setups for more technical people. So let's look into the requirements and means for running Ethereum clients on your machine. 
 
 #### Requirements {#requirements}
 
 Hardware requirements differ by client but generally are not that high since the node just needs to stay synced. Don't confuse it with mining, which requires much more computing power. Sync time and performance do improve with more powerful hardware however. 
 
-Before installing any client, please ensure your computer has enough resources to run it. Minimum and recommended requirements can be found below. 
+Before installing any client, please ensure your computer has enough resources to run it. You can find the minimum and recommended requirements below.
 
-The hardware bottleneck is mostly a disk space. Syncing the Ethereum blockchain is very input/output intensive and requires a lot of space. It is best to have a solid-state drive (SSD) with hundreds of GBs of free space to spare even after the synchronization. 
+The bottleneck for your hardware is mostly disk space. Syncing the Ethereum blockchain is very input/output intensive and requires a lot of space. It is best to have a **solid-state drive (SSD)** with hundreds of GBs of free space to spare even after the synchronization.
 
-Size of the database and speed of the initial synchronization depends on chosen client, its configuration and [sync strategy](/developers/docs/nodes-and-clients/#sync-modes). 
+The size of the database and speed of the initial synchronization depends on the chosen client, its configuration and [sync strategy](/developers/docs/nodes-and-clients/#sync-modes).
 
 Also make sure your internet connection is not limited by a [bandwidth cap](https://wikipedia.org/wiki/Data_cap). It's recommended to use an unmetered connection since initial sync and data broadcasted to the network could exceed your limit.
 
@@ -98,7 +98,7 @@ All clients support major operating systems - Linux, MacOS, Windows. This means 
 - Fast SSD with 1+TB
 - 25+ MBit/s bandwidth
 
-The sync mode and client you choose will affect space requirements but we've estimated the disk space you'll need for each client below. 
+The sync mode and client you choose will affect space requirements, but we've estimated the disk space you'll need for each client below.
 
 | Client       | Disk size (snap sync) | Disk size (full archive) |
 | ------------ | --------------------- | ------------------------ |
@@ -109,18 +109,18 @@ The sync mode and client you choose will affect space requirements but we've est
 
 - Note: Erigon does not offer snap sync, but Full Pruning is possible (~500GB)
 
-For consensus clients, space requirement also depends on client implementation and enabled features (e.g. validator slasher) but generally count with another 200GB needed for beacon data. With large number of validators, the bandwidth load grows as well. Details on consensus client requirements can be found in [this analysis](https://medium.com/@migalabs/analysis-of-ethereum-2-consensus-clients-dfede8e0145e). 
+For consensus clients, space requirement also depends on client implementation and enabled features (e.g. validator slasher) but generally count with another 200GB needed for beacon data. With a large number of validators, the bandwidth load grows as well. You can find [details on consensus client requirements in this analysis](https://medium.com/@migalabs/analysis-of-ethereum-2-consensus-clients-dfede8e0145e).
 
 #### Plug-and-play solutions {#plug-and-play}
 
-The easiest option for running a node with your own hardware is using plug-and-play boxes. Preconfigured machines from vendors offer the simplest user experience. Just order the machine and connect it at home. Everything is preconfigured and runs automatically with an intuitive guide and dashboard for monitoring and controlling the software. 
+The easiest option for running a node with your own hardware is using plug-and-play boxes. Preconfigured machines from vendors offer the most straightforward experience: order, connect, run. Everything is preconfigured and runs automatically with an intuitive guide and dashboard for monitoring and controlling the software.
 
 - [DappNode](https://dappnode.io/)
 - [Avado](https://ava.do/)
 
 #### Ethereum on a single-board computer {#ethereum-on-a-single-board-computer}
 
-Easy and cheap way of running an Ethereum node is to use a single board computer, even with an ARM architecture like the Raspberry Pi. [Ethereum on ARM](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/) provides easy to run images of multiple execution and consensus client for Raspberry Pi and other ARM boards.
+An easy and cheap way of running an Ethereum node is to use a single board computer, even with an ARM architecture like the Raspberry Pi. [Ethereum on ARM](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/) provides easy-to-run images of multiple execution and consensus client for Raspberry Pi and other ARM boards.
 
 Small, affordable and efficient devices like these are ideal for running a node at home but keep in mind their limited performence.
 
@@ -128,25 +128,22 @@ Small, affordable and efficient devices like these are ideal for running a node 
 
 The actual client setup can be done either with automated launchers or manually, setting up client software directly. 
 
-For less advanced users, the recommended approach is to use a launcher, which is software that guides you through the whole installation and automates the client setup process. However, if you are not afraid of using a terminal, the steps for manual setup should be easy to follow. 
+For less advanced users, the recommended approach is to use a launcher, software that guides you through the installation and automates the client setup process. However, if you have some experience of using a terminal, the steps for manual setup should be simple to follow.
 
 ### Guided setup {#automatized-setup}
 
-There are multiple user friendly projects which aim to improve the experience of clients setup. These launchers provides automatic client installation and configuration, some even offer a graphical interface for guided setup and monitoring of clients. 
-Here are few projects which can help you install and control clients just with a few clicks: 
+Multiple user-friendly projects aim to improve the experience of setting up a client. These launchers provide automatic client installation and configuration, with some even offering a graphical interface for guided setup and monitoring of clients.
+ 
+Below are a few projects which can help you install and control clients just with a few clicks: 
 
-- [Stereum](https://stereum.net/ethereum-node-setup/)
-    - Launcher for installing clients on a remote server via SSH connection with a GUI setup guide, control center and many features, e.g. app for monitoring nodes from your phone. 
-- [NiceNode](https://www.nicenode.xyz/)
-    - Launcher with the easiest user experience to run a node on your computre. Just choose clients and start them with a few clicks. Still in development. 
-- [DappNode](https://docs.dappnode.io/get-started/installation/custom-hardware/installation/overview/)
-    - DappNode doesn't come only with a machine from a vendor. The software, the actual node launcher and control center with many features can be used on arbitrary hardware. 
-- [eth-docker](https://eth-docker.net/docs/About/Overview/)
-    - Automatized setup using Docker focused on easy and secure staking. It requires basic terminal and Docker knowledge, recommended for a bit more advanced users. 
+- [DappNode](https://docs.dappnode.io/get-started/installation/custom-hardware/installation/overview/) - DappNode doesn't come only with a machine from a vendor. The software, the actual node launcher and control center with many features can be used on arbitrary hardware. 
+- [eth-docker](https://eth-docker.net/docs/About/Overview/) - Automatized setup using Docker focused on easy and secure staking, requires basic terminal and Docker knowledge, recommended for a bit more advanced users. 
+- [Stereum](https://stereum.net/ethereum-node-setup/) - Launcher for installing clients on a remote server via SSH connection with a GUI setup guide, control center, and many other features.
+- [NiceNode](https://www.nicenode.xyz/) - Launcher with a straightforward user experience to run a node on your computer. Just choose clients and start them with a few clicks. Still in development.
 
 ### Manual clients setup {#manual-setup}
 
-The other option is to manually download, verify, and configure the client software. Even if some clients might offer a graphical interface, manual setup still requires basic skills with the terminal but offers much more versatility.
+The other option is to download, verify, and configure the client software manually. Even if some clients offer a graphical interface, a manual setup still requires basic skills with the terminal but offers much more versatility.
 
 As explained before, setting up your own Ethereum node will require running a pair of consensus and execution clients. Some clients might include a light client of the other kind and sync without any other software needed. However, full trustless verification requires both implementations. 
 
@@ -181,7 +178,7 @@ It is also worth noting that client diversity is an [issue on the execution laye
 
 [See the latest network client usage](https://clientdiversity.org/) and learn more about [client diversity](/developers/docs/client-diversity). 
 
-##### Verifying the software {#verifying-software}
+##### Verifying the software
 
 When downloading software from the internet, it's recommended to verify its integrity. This step is optional but especially with crucial infrastracture piece like the Ethereum client, it's important to be aware of potential attack vectors and avoid them. If you downloaded a pre-built binary, you need to trust it and risk that an attacker could swap the executable for a malicious one. 
 
@@ -198,9 +195,9 @@ sha256sum teku-22.6.1.tar.gz
 
 After installing, downloading, or compiling the client software, you are ready to run it. This only means it has to be executed with the proper configuration. Clients offer rich configuration options, which can enable various features.
 
-Let's start with options which can influence the client performance and data usage significantly. [Sync modes](/developers/docs/nodes-and-clients/#sync-modes) represent different methods of downloading and validating blockchain data. Before starting the node, you should decide what network and sync mode to use. The most important things to consider are the disk space and sync time client will need. Pay attention to the client's docs to find out which sync mode is the default. If that doesn't suit you, pick another one based on the level of security, available data, and cost. Apart from the synchronization algorithm, you can also set pruning of different kinds of old data. Pruning enables deleting outdated data, e.g. removing state trie nodes that are unreachable from recent blocks.
+Let's start with options that can significantly influence client performance and data usage. [Sync modes](/developers/docs/nodes-and-clients/#sync-modes) represent different methods of downloading and validating blockchain data. Before starting the node, you should decide what network and sync mode to use. The most important things to consider are the disk space, and sync time the client will need. Pay attention to the client's docs to determine which sync mode is the default. If that doesn't suit you, pick another one based on the level of security, available data, and cost. Apart from the synchronization algorithm, you can also set pruning of different kinds of old data. Pruning enables deleting outdated data, e.g. removing state trie nodes that are unreachable from recent blocks.
 
-Other basic configuration options are, e.g. choosing a network - mainnet or testnets, enabling HTTP endpoint for RPC or WebSockets, etc. All features and options can be found in the client's documentation. Various client configurations can be set by executing the client with the corresponding flags directly in the cli or in the config file. Each client is a bit different, please always refer to its official documentation or help page for details on config options. 
+Other basic configuration options are, e.g. choosing a network - Mainnet or testnets, enabling HTTP endpoint for RPC or WebSockets, etc. You can find all features and options in the client's documentation. Various client configurations can be set by executing the client with the corresponding flags directly in the CLI or config file. Each client is a bit different; please always refer to its official documentation or help page for details on config options. 
 
 For testing purposes, you might prefer to run a client on one of the testnet networks. [See overview of supported networks](/developers/docs/nodes-and-clients/#execution-clients).
 
@@ -221,9 +218,9 @@ Run your client on a testnet first to help make sure everything is working corre
 You need to declare any client settings that aren't default at the start. You can use flags or the config file to declare your preferred configuration. Set of features and config syntax of each client differs. Check out your client's documentation for the specifics. 
 
 Execution and consensus clients communicate via an authenticated endpoint specified in [Engine API](https://github.com/ethereum/execution-apis/tree/main/src/engine). In order to connect to a consensus client, the execution client must generate a [`jwtsecret`](https://jwt.io/
-) at a known path. For security and stability reasons, clients should run on the same machine and this path must be known by both clients as it is used to authenticate a local RPC connection between them. The execution client must also define a listening port for authenticated APIs.
+) at a known path. For security and stability reasons, clients should run on the same machine, and both clients must know this path as it is used to authenticate a local RPC connection between them. The execution client must also define a listening port for authenticated APIs.
 
-This token is generated automatically by the client software but in some cases, e.g. during pre-Merge testing, you might need to do it by yourself. You can generate it by running:
+This token is generated automatically by the client software, but in some cases, e.g. during pre-Merge testing, you might need to do it yourself. You can generate it by running:
 ```
 openssl rand -hex 32 > jwtsecret
 ```
@@ -406,9 +403,9 @@ Consensus client connects to the execution client to read the deposit contract a
 
 ### Adding Validators {#adding-validators}
 
-Consensus client serves as a Beacon Node to which validator client connects. Each of the consensus clients has their own validator software that is described in detail in their respective documentation.
+Consensus client serves as a Beacon Node to which validator client connects. Each consensus client has its own validator software described in detail in its respective documentation.
 
-Running your own validator allows for [solo staking](https://ethereum.org/en/staking/solo/), the most impactful and trustless way. This requires deposit of 32ETH. For running a validator on your own node with a smaller amount, checkout decentralized pool with permissionless node operators, e.g. [Rocket Pool](https://rocketpool.net/node-operators). 
+Running your own validator allows for [solo staking](https://ethereum.org/en/staking/solo/), the most impactful and trustless way. This requires a deposit of 32 ETH. For running a validator on your own node with a smaller amount, a decentralized pool with permissionless node operators, such as [Rocket Pool](https://rocketpool.net/node-operators), might interest you.
 
 The easiest way to get started with staking and validator key generation is to use the [Prater Testnet Staking Launchpad](https://prater.launchpad.ethereum.org/), which allows you to test your setup by [running nodes on Goerli](https://notes.ethereum.org/@launchpad/goerli). When you're ready for Mainnet, you can repeat these steps using the [Mainnet Staking Launchpad](https://launchpad.ethereum.org/). Make sure to check [Mainnet readiness checklist](https://launchpad.ethereum.org/en/merge-readiness) to smoothly run your validator through the Merge. 
 
