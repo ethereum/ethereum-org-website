@@ -4,7 +4,6 @@ description: Eine Übersicht über DAOs auf Ethereum
 lang: de
 template: use-cases
 emoji: ":handshake:"
-sidebar: true
 sidebarDepth: 2
 image: ../../../../assets/use-cases/dao-2.png
 alt: Darstellung, wie eine DAO über einen Vorschlag abstimmt

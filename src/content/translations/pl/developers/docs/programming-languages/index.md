@@ -2,7 +2,6 @@
 title: Języki programowania
 description:
 lang: pl
-sidebar: true
 ---
 
 Powszechnym błędnym pomysłem jest to, że deweloperzy muszą pisać inteligentne kontrakty, aby tworzyć w Ethereum. To nieprawda. Jedną z pięknych cech sieci Ethereum i jej społeczności jest to, że możesz [uczestniczyć](/community/) w niej, znając praktycznie dowolny język programowania.

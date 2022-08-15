@@ -2,7 +2,6 @@
 title: Networks
 description: An overview of Ethereum's networks and where to get testnet ether (ETH) for testing your application.
 lang: en
-sidebar: true
 preMergeBanner: true
 ---
 

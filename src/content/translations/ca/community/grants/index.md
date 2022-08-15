@@ -1,7 +1,6 @@
 ---
 title: Fundació Ethereum y programes comunitaris de subvencions
 description: Llistat dels programes de subvencions a través de l'ecosistema Ethereum.
-sidebar: true
 lang: ca
 ---
 

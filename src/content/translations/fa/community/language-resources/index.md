@@ -1,7 +1,6 @@
 ---
 title: منابع زبانی
 description: منابع غیرانگلیسی برای یادگیری در مورد اتریوم
-sidebar: true
 lang: fa
 ---
 

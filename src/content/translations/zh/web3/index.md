@@ -2,7 +2,6 @@
 title: 什么是 Web3 以及它为何很重要？
 description: 下一代互联网 - Web3简介及其重要性
 lang: zh
-sidebar: true
 ---
 
 # Web3 简介 {#introduction}

@@ -2,7 +2,6 @@
 title: 智能合约的可组合性
 description:
 lang: zh
-sidebar: true
 incomplete: true
 ---
 

@@ -5,7 +5,6 @@ author: Vladislav Starostenko
 tags: ["waffle", "smart contracts", "solidity", "testing", "erc-20"]
 skill: intermediate
 lang: en
-sidebar: true
 published: 2020-10-16
 ---
 

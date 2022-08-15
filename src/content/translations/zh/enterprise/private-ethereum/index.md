@@ -2,7 +2,6 @@
 title: 企业级私有以太坊
 description: 在私有以太坊区块链上开发企业级应用的资源
 lang: zh
-sidebar: true
 ---
 
 # 企业级私有以太坊 {#private-ethereum-for-enterprise}

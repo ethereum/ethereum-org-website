@@ -1,7 +1,6 @@
 ---
 title: Community online
 description: Un elenco dei programmi di sovvenzione di tutto l'ecosistema Ethereum.
-sidebar: true
 lang: it
 ---
 

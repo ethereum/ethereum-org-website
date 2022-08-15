@@ -3,7 +3,6 @@ title: La Beacon Chain
 description: Informati rigurado alla Beacon Chain - l'aggiornamento che ha introdotto la prova-di-interesse Ethereum.
 lang: it
 template: upgrade
-sidebar: true
 image: ../../../../../assets/upgrades/core.png
 summaryPoint1: La Beacon Chain non apporta modifiche all'Ethereum che stiamo utilizzando.
 summaryPoint2: Coordinerebbe il network, fungendo da livello di consenso.

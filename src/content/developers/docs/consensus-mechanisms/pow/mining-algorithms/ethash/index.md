@@ -2,7 +2,6 @@
 title: Ethash
 description: A detailed look at the Ethash algorithm.
 lang: en
-sidebar: true
 ---
 
 **Note that Ethash is Ethereum's proof-of-work mining algorithm. Proof-of-work mining will be switched off completely at [The Merge](/upgrades/merge) at which point Ethereum will be secured using a [proof-of-stake](/developers/docs/consensus-mechanisms/pos) mechanism instead.**

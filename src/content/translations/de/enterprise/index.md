@@ -2,7 +2,6 @@
 title: Enterprise auf Ethereum Mainnet
 description: Anleitungen, Artikel und Tools zu Unternehmensanwendungen in der öffentlichen Ethereum-Blockchain
 lang: de
-sidebar: true
 ---
 
 # Ethereum Mainnet für Unternehmen {#ethereum-for-enterprise}

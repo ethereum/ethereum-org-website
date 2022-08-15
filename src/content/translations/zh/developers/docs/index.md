@@ -2,7 +2,6 @@
 title: 以太坊开发文档
 description: ethereum.org 开发者文档简介。
 lang: zh
-sidebar: true
 ---
 
 本文档旨在帮助您构建以太坊。 它从概念层面，解释了以太坊的技术堆栈，并记录了以太坊更复杂的应用和使用案例。

@@ -2,7 +2,6 @@
 title: 权益证明机制(PoS)
 description: 权益证明共识算法以及其在以太坊中作用的解释。
 lang: zh
-sidebar: true
 incomplete: true
 ---
 

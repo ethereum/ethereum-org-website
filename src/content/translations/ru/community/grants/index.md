@@ -1,7 +1,6 @@
 ---
 title: Фонд Ethereum и программы грантов сообщества
 description: Список программ грантов в рамках экосистемы Ethereum.
-sidebar: true
 lang: ru
 ---
 

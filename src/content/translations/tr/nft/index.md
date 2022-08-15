@@ -4,7 +4,6 @@ description: Ethereum'daki NFT'lere genel bakış
 lang: tr
 template: use-cases
 emoji: ":frame_with_picture:"
-sidebar: true
 sidebarDepth: 2
 image: ../../../../assets/infrastructure_transparent.png
 alt: Hologram aracılığıyla görüntülenen bir Eth logosu.

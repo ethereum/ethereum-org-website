@@ -2,7 +2,6 @@
 title: Programming languages
 description:
 lang: en
-sidebar: true
 ---
 
 A common misconception is that developers must write [smart contracts](/developers/docs/smart-contracts/) in order to build on Ethereum. This is false.

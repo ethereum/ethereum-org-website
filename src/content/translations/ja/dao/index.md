@@ -4,7 +4,6 @@ description: イーサリアムにおける分散型自律組織(DAO)の概要
 lang: ja
 template: use-cases
 emoji: ":handshake:"
-sidebar: true
 sidebarDepth: 2
 image: ../../../../assets/use-cases/dao-2.png
 alt: 提案に対する分散型自律組織(DAO)投票

@@ -2,7 +2,6 @@
 title: 翻訳プログラム
 lang: ja
 description: ethereum.orgサイトの翻訳プログラムに貢献する方法
-sidebar: true
 ---
 
 # 翻訳プログラム {#translation-program}

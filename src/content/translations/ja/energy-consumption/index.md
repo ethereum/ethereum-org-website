@@ -2,7 +2,6 @@
 title: イーサリアムのエネルギー消費
 description: イーサリアムのエネルギー消費を理解するために必要な基本的な情報
 lang: ja
-sidebar: true
 ---
 
 # イーサリアムのエネルギー消費 {#introduction}

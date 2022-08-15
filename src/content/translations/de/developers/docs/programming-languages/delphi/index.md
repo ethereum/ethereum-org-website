@@ -2,7 +2,6 @@
 title: Ethereum für Delphi-Entwickler
 description: Lernen, mit der Programmiersprache Delphi für Ethereum zu entwickeln
 lang: de
-sidebar: true
 incomplete: true
 ---
 

@@ -2,7 +2,6 @@
 title: Ajouter des échanges
 description: La politique que nous appliquons pour ajouter des échanges sur ethereum.org
 lang: fr
-sidebar: true
 ---
 
 # Ajouter des échanges Ethereum {#adding-ethereum-exchanges}

@@ -2,7 +2,6 @@
 title: Aggiungere prodotti
 description: La politica che usiamo per l'aggiunta di portafogli e dapp su ethereum.org
 lang: it
-sidebar: true
 ---
 
 _Una nota sull'aggiunta di portafogli: nell'ambito della [nostra tabella di marcia relativa al prodotto per il T1](https://github.com/ethereum/ethereum-org-website/issues/5105), stiamo perfezionando la pagina dei portafogli. Sarà incluso il perfezionamento dei criteri di inserimento per la pagina dei portafogli. Finché non avremo ricercato, stabilito e pubblicato i criteri di inserimento rivisti, non aggiungeremo attivamente alcun nuovo portafoglio al sito web._

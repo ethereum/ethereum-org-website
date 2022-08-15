@@ -2,7 +2,6 @@
 title: Ethereum'un Tarihi ve Çatalları
 description: Önemli kilometre taşları, sürümler ve çatallar dahil olmak üzere Ethereum blok zincirinin geçmişi.
 lang: tr
-sidebar: true
 sidebarDepth: 1
 ---
 

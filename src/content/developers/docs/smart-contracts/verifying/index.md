@@ -2,7 +2,6 @@
 title: Verifying smart contracts
 description: An overview of source code verification for Ethereum smart contracts
 lang: en
-sidebar: true
 ---
 
 [Smart contracts](/developers/docs/smart-contracts/) are designed to be “trustless”, meaning users shouldn’t have to trust third parties (e.g., developers and companies) before interacting with a contract. As a requisite for trustlessness, users and other developers must be able to verify a smart contract’s source code. Source code verification assures users and developers that the published contract code is the same code running at the contract address on the Ethereum blockchain.

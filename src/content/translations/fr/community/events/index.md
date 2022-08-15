@@ -1,7 +1,6 @@
 ---
 title: Évènements Ethereum
 description: Comment s'impliquer dans la communauté Ethereum.
-sidebar: true
 lang: fr
 ---
 

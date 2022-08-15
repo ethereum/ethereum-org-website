@@ -2,7 +2,6 @@
 title: Node dan klien
 description: Gambaran umum tentang perangkat lunak node dan klien Ethereum, juga cara menyiapkan node dan mengapa Anda harus melakukannya.
 lang: id
-sidebar: true
 sidebarDepth: 2
 ---
 

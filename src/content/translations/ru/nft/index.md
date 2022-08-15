@@ -4,7 +4,6 @@ description: Обзор NFT на Ethereum
 lang: ru
 template: use-cases
 emoji: ":frame_with_picture:"
-sidebar: true
 sidebarDepth: 2
 image: ../../../../assets/infrastructure_transparent.png
 alt: Логотип Eth отображается с помощью голограммы.

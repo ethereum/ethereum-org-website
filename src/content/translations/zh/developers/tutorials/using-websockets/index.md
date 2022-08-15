@@ -3,7 +3,6 @@ title: 使用WebSocket
 description: 有关使用WebSocket和Alchemy进行JSON-RPC请求并订阅事件的指南。
 author: "Elan Halpern"
 lang: zh
-sidebar: true
 tags:
   - "alchemy"
   - "websockets"

@@ -1,7 +1,6 @@
 ---
 title: Risorse linguistiche
 description: Risorse non in inglese per conoscere Ethereum
-sidebar: true
 lang: it
 ---
 

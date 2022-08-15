@@ -2,7 +2,6 @@
 title: 贡献力量
 description: 了解您可以为 ethereum.org 做出贡献的几种方式
 lang: zh
-sidebar: true
 ---
 
 # 为 ethereum.org 贡献力量 🦄 {#contributing-to-ethereumorg}

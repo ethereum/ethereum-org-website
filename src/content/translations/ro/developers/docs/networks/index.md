@@ -2,7 +2,6 @@
 title: Rețele
 description: O prezentare generală a rețelelor Ethereum și de unde să obţineţi ether (ETH) de testnet pentru a vă testa aplicaţia.
 lang: ro
-sidebar: true
 ---
 
 Întrucât Ethereum este un protocol, aceasta înseamnă că pot exista mai multe „rețele” independente care se conformează acestui protocol şi care nu interacționează între ele.

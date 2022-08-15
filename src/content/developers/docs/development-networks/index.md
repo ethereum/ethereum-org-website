@@ -2,7 +2,6 @@
 title: Development Networks
 description: An overview of development networks and the tools available to help build Ethereum applications.
 lang: en
-sidebar: true
 preMergeBanner: true
 ---
 

@@ -2,7 +2,6 @@
 title: 运行您自己的以太坊节点
 description: 如何运行自己的以太坊客户端简介
 lang: zh
-sidebar: true
 sidebarDepth: 2
 ---
 

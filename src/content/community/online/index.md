@@ -1,7 +1,6 @@
 ---
 title: Online communities
 description: A listing of the grant programs throughout the Ethereum ecosystem.
-sidebar: true
 lang: en
 ---
 

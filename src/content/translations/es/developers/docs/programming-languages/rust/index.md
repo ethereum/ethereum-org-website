@@ -2,7 +2,6 @@
 title: Ethereum para desarrolladores de Rust
 description: Aprende cómo desarrollar para Ethereum mediante proyectos y herramientas basados en Rust
 lang: es
-sidebar: true
 incomplete: true
 ---
 

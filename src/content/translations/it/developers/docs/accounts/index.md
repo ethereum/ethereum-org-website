@@ -2,7 +2,6 @@
 title: Conti di Ethereum
 description: "Informazioni sugli account Ethereum: struttura dei dati e rapporto con la crittografia con coppie di chiavi."
 lang: it
-sidebar: true
 ---
 
 Un account Ethereum è un'entità con un saldo in ether (ETH) che può inviare transazioni su Ethereum. I conti sono controllabili da utenti o distribuibili come Contratti Intelligenti.

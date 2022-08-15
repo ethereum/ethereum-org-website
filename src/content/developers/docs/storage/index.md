@@ -2,7 +2,6 @@
 title: Decentralized Storage
 description: Overview of what decentralized storage is and the available tools to integrate it into a dapp.
 lang: en
-sidebar: true
 ---
 
 Unlike a centralized server operated by a single company or organization, decentralized storage systems consist of a peer-to-peer network of user-operators who hold a portion of the overall data, creating a resilient file storage sharing system. These can be in a blockchain-based application or any peer-to-peer-based network.

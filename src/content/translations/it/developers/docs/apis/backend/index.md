@@ -2,7 +2,6 @@
 title: Librerie API di backend
 description: Introduzione alle API client di Ethereum che permettono l'interazione tra un'applicazione con la blockchain.
 lang: it
-sidebar: true
 ---
 
 Per interagire con la blockchain Ethereum (ad esempio leggere i dati della blockchain e/o inviare transazioni alla rete), un'applicazione software deve connettersi a un nodo Ethereum.

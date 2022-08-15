@@ -4,7 +4,6 @@ description: 以太坊生態系非同質化代幣概要
 lang: zh-tw
 template: use-cases
 emoji: ":frame_with_picture:"
-sidebar: true
 sidebarDepth: 2
 image: ../../../../assets/infrastructure_transparent.png
 alt: 全息投影顯示的以太幣標誌。

@@ -4,7 +4,6 @@ description: An overview of decentralized social networks on Ethereum
 lang: en
 template: use-cases
 emoji: ":mega:"
-sidebar: true
 sidebarDepth: 2
 image: ../../assets/ethereum-learn.png
 summaryPoint1: Blockchain-based platforms for social interaction and content creation and distribution.

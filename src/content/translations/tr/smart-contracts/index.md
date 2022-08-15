@@ -2,7 +2,6 @@
 title: Akıllı sözleşmeler
 description: Akıllı sözleşmelere teknik olmayan bir giriş
 lang: tr
-sidebar: true
 ---
 
 # Akıllı sözleşmelere giriş {#introduction-to-smart-contracts}

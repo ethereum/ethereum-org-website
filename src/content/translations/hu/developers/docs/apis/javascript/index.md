@@ -2,7 +2,6 @@
 title: JavaScript API könyvtárak
 description: Bevezetés az JavaScript kliens könyvtárakba, melyek lehetővé teszik, hogy interakcióba lépj a blokklánccal az alkalmazásodban.
 lang: hu
-sidebar: true
 ---
 
 Ahhoz, hogy egy web alkalmazás interakcióba lépjen az Ethereum blokklánccal (vagyis képes legyen blokklánc adatok olvasására és/vagy tranzakció küldésre a hálózatra), rá kell csatlakoznia egy Ethereum csomópontra.

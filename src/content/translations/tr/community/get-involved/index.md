@@ -1,7 +1,6 @@
 ---
 title: Nasıl dahil olabilirim?
 description: Ethereum topluluğuna nasıl dahil olunur?
-sidebar: true
 lang: tr
 ---
 

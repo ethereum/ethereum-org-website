@@ -1,7 +1,6 @@
 ---
 title: Ethereum-stichting & -gemeenschapssubsidieprogramma's
 description: Een overzicht van de subsidieprogramma's in het Ethereum-ecosysteem.
-sidebar: true
 lang: nl
 ---
 

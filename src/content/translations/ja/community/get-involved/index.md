@@ -1,7 +1,6 @@
 ---
 title: 参加方法
 description: イーサリアムコミュニティへの参加方法
-sidebar: true
 lang: ja
 ---
 

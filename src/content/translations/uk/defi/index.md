@@ -4,7 +4,6 @@ description: Огляд DeFi на Ethereum
 lang: uk
 template: use-cases
 emoji: ":money_with_wings:"
-sidebar: true
 image: ../../../../assets/use-cases/defi.png
 alt: Логотип Eth із блоків Lego.
 sidebarDepth: 2

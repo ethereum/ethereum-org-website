@@ -2,7 +2,6 @@
 title: Blocks
 description: An overview of blocks in the Ethereum blockchain – their data structure, why they're needed, and how they're made.
 lang: en
-sidebar: true
 preMergeBanner: true
 ---
 

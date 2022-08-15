@@ -2,7 +2,6 @@
 title: Ethereum accounts
 description: An explanation of Ethereum accounts – their data structures and their relationship with key pair cryptography.
 lang: en
-sidebar: true
 ---
 
 An Ethereum account is an entity with an ether (ETH) balance that can send transactions on Ethereum. Accounts can be user-controlled or deployed as smart contracts.

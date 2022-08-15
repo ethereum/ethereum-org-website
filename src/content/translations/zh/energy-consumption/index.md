@@ -2,7 +2,6 @@
 title: 以太坊能源消耗
 description: 了解以太坊能源消耗所需的基本信息。
 lang: zh
-sidebar: true
 ---
 
 # 以太坊能源消耗 {#introduction}

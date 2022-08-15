@@ -2,7 +2,6 @@
 title: Mining
 description: Spiegazione del funzionamento del mining in Ethereum e di come contribuisce a mantenere la rete Ethereum sicura e decentralizzata.
 lang: it
-sidebar: true
 incomplete: true
 ---
 

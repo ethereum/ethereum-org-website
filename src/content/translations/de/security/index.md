@@ -2,7 +2,6 @@
 title: Ethereum – Sicherheits- und Betrugsvorbeugung
 description: Ethereum sicher nutzen
 lang: de
-sidebar: true
 ---
 
 # Ethereum – Sicherheits- und Betrugsvorbeugung {#introduction}

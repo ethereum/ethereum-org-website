@@ -2,7 +2,6 @@
 title: Maximal extractable value (MEV)
 description: An introduction to maximal extractable value (MEV)
 lang: en
-sidebar: true
 preMergeBanner: true
 ---
 

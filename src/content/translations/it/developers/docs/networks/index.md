@@ -2,7 +2,6 @@
 title: Reti
 description: Panoramica delle reti Ethereum e indicazioni su dove ottenere ether (ETH) per le reti di test per testare le applicazioni.
 lang: it
-sidebar: true
 ---
 
 Ethereum è un protocollo, pertanto ci possono essere diverse reti indipendenti conformi a questo protocollo che non interagiscono tra di loro.

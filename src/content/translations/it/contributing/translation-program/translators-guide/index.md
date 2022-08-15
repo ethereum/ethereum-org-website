@@ -2,7 +2,6 @@
 title: Guida per i traduttori
 lang: it
 description: Istruzioni e suggerimenti per i traduttori di ethereum.org
-sidebar: true
 ---
 
 # Guida di stile per la traduzione di ethereum.org {#style-guide}

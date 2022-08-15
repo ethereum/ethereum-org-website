@@ -2,7 +2,6 @@
 title: Adding glossary terms
 lang: en
 description: Our criteria for adding new terms to the ethereum.org glossary
-sidebar: true
 ---
 
 # Adding glossary terms {#contributing-to-ethereumorg-}

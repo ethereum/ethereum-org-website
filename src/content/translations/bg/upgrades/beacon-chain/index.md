@@ -3,7 +3,6 @@ title: Сигналната верига
 description: Научете какво е сигналната верига – първата голяма надстройка на Eth2 на Етереум.
 lang: bg
 template: upgrade
-sidebar: true
 image: ../../../../../assets/upgrades/core.png
 summaryPoint1: Сигналната верига не променя нищо за Етереум, който използваме днес.
 summaryPoint2: Тя ще координира мрежата.

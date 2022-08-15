@@ -1,7 +1,6 @@
 ---
 title: Msingi wa Ethereum na mipango ya ruzuku ya jamii
 description: Orodha ya mipango ya ruzuku katika mazingira yote ya Ethereum.
-sidebar: true
 lang: sw
 ---
 

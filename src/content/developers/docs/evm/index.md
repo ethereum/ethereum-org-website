@@ -2,7 +2,6 @@
 title: Ethereum Virtual Machine (EVM)
 description: An introduction to the Ethereum virtual machine and how it relates to state, transactions, and smart contracts.
 lang: en
-sidebar: true
 ---
 
 The EVM’s physical instantiation can’t be described in the same way that one might point to a cloud or an ocean wave, but it does _exist_ as one single entity maintained by thousands of connected computers running an Ethereum client.

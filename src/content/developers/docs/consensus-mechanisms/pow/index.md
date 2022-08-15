@@ -2,7 +2,6 @@
 title: Proof-of-work (PoW)
 description: An explanation of the proof-of-work consensus protocol and its role in Ethereum.
 lang: en
-sidebar: true
 incomplete: true
 ---
 

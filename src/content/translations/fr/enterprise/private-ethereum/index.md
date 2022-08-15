@@ -2,7 +2,6 @@
 title: Blockchains privées Ethereum pour les entreprises
 description: Ressources pour les applications d'entreprise sur les blockchains privées Ethereum.
 lang: fr
-sidebar: true
 ---
 
 # Blockchains privées Ethereum pour les entreprises {#private-ethereum-for-enterprise}

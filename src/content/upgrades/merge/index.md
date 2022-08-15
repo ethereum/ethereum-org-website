@@ -3,7 +3,6 @@ title: The Merge
 description: Learn about The Merge - when Mainnet Ethereum joins the Beacon Chain coordinated proof-of-stake system.
 lang: en
 template: upgrade
-sidebar: true
 image: ../../../assets/upgrades/merge.png
 summaryPoint1: Soon, the current Ethereum Mainnet will merge with the Beacon Chain proof-of-stake system.
 summaryPoint2: This will mark the end of proof-of-work for Ethereum, and the full transition to proof-of-stake.

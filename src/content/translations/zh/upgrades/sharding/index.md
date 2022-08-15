@@ -3,7 +3,6 @@ title: 分片链
 description: 了解分片链 - 网络的分区可以让以太坊拥有更强的交易能力并使其更容易运行。
 lang: zh
 template: upgrade
-sidebar: true
 image: ../../../../../assets/upgrades/newrings.png
 summaryPoint1: 分片是一个多阶段升级，以提高以太坊的可扩容性和容量。
 summaryPoint2: 分片链为应用程序和卷叠提供更便宜的额外存储层来存储数据。

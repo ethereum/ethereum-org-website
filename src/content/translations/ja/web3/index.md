@@ -2,7 +2,6 @@
 title: Web3とは、およびWeb3が重要である背景
 description: 次世代インターネットであるWeb3、およびその重要性
 lang: ja
-sidebar: true
 ---
 
 # Web3 入門 {#introduction}

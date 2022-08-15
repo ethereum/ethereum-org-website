@@ -2,7 +2,6 @@
 title: イーサリアムのセキュリティと詐欺対策
 description: イーサリアムを安全に利用するために
 lang: ja
-sidebar: true
 ---
 
 # イーサリアムのセキュリティと詐欺対策 {#introduction}

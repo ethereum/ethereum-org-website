@@ -2,7 +2,6 @@
 title: 部署智能合约
 description:
 lang: zh
-sidebar: true
 ---
 
 需要部署智能合约才能提供给以太坊网络的用户使用。

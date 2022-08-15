@@ -2,7 +2,6 @@
 title: Chi siamo
 description: Informazioni sul team, la community e la mission di ethereum.org
 lang: it
-sidebar: true
 ---
 
 # Informazioni su ethereum.org {#about-ethereumorg}

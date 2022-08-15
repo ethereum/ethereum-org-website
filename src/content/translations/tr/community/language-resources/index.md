@@ -1,7 +1,6 @@
 ---
 title: Dil kaynakları
 description: Ethereum hakkında bilgi edinmek için İngilizce olmayan kaynaklar
-sidebar: true
 lang: tr
 ---
 

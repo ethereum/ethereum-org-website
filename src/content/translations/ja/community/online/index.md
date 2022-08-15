@@ -1,7 +1,6 @@
 ---
 title: オンラインコミュニティ
 description: イーサリアムエコシステムの助成プログラムリスト
-sidebar: true
 lang: ja
 ---
 

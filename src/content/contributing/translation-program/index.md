@@ -2,7 +2,6 @@
 title: Translation Program
 lang: en
 description: How to contribute to ethereum.org's Translation Program
-sidebar: true
 ---
 
 # Translation Program {#translation-program}

@@ -2,7 +2,6 @@
 title: 共识机制
 description: 解释分布式系统中的协商一致协议及其在以太坊中扮演的角色。
 lang: zh
-sidebar: true
 incomplete: true
 ---
 

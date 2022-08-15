@@ -2,7 +2,6 @@
 title: 智能合约简介
 description: 智能合约概述，重点介绍其独特的特征和局限性。
 lang: zh
-sidebar: true
 ---
 
 ## 什么是智能合约？ {#what-is-a-smart-contract}

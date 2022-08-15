@@ -2,7 +2,6 @@
 title: 设计原则
 lang: zh
 description: Ethereum.org 设计和内容决策背后的原则
-sidebar: true
 ---
 
 # 我们的设计原则 {#contributing-to-ethereumorg-}

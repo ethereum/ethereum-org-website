@@ -3,7 +3,6 @@ title: "Downsizing contracts to fight the contract size limit"
 description: What can you do to prevent your smart contracts from getting too large?
 author: Markus Waas
 lang: en
-sidebar: true
 tags: ["solidity", "smart contracts", "storage", "truffle"]
 skill: intermediate
 published: 2020-06-26

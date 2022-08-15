@@ -2,7 +2,6 @@
 title: Ethereum Sözlüğü
 description: Ethereum ile ilgili teknik ve teknik olmayan, tamamlanmamış bir sözlük
 lang: tr
-sidebar: true
 sidebarDepth: 2
 ---
 

@@ -18,7 +18,6 @@ tags:
   ]
 skill: beginner
 lang: en
-sidebar: true
 published: 2021-10-25
 ---
 

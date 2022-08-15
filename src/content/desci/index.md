@@ -4,7 +4,6 @@ description: An overview of decentralized science on Ethereum
 lang: en
 template: use-cases
 emoji: ":microscope:"
-sidebar: true
 sidebarDepth: 2
 image: ../../assets/future_transparent.png
 alt: ""
