@@ -3,9 +3,15 @@ import type { ComponentStyleConfig } from "@chakra-ui/theme"
 export const Button: ComponentStyleConfig = {
   baseStyle: {
     fontWeight: "normal",
+    borderRadius: "base",
     _hover: {
       textDecoration: "none",
       boxShadow: "primary",
+    },
+  },
+  sizes: {
+    md: {
+      h: 42,
     },
   },
   variants: {
@@ -13,16 +19,15 @@ export const Button: ComponentStyleConfig = {
     solid: {
       color: "buttonColor",
       bg: "primary",
-      border: "1px",
-      borderColor: "transparent",
+      border: 0,
       _hover: {
-        bg: "primaryHover",
+        bg: "primary",
+        opacity: 0.8,
       },
       _active: {
         bg: "primaryActive",
       },
     },
-    // custom secondary variant
     outline: {
       color: "text",
       bg: "transparent",

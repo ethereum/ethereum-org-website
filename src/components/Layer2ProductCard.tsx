@@ -141,7 +141,7 @@ const Layer2ProductCard: React.FC<IProps> = ({
         )}
       </Content>
       <div>
-        <StyledButtonLink to={url}>
+        <StyledButtonLink to={url} d="flex">
           {translateMessageId("layer-2-explore", intl)} {name}
         </StyledButtonLink>
       </div>
