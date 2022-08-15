@@ -31,7 +31,7 @@ Der gegenteilige Ansatz ist die Off-Chain-Governance. Dabei werden Entscheidunge
 
 **Ethereum-Governance erfolgt off-chain**. Am Prozess beteiligt ist dabei eine Vielzahl von Interessenvertertern.
 
-_Governance auf Protokollebene erfolgt bei Ethereum off-Chain, doch bei Anwendungsfällen, die auf Ethereum aufbauende, wie zum Beispiel DAOs, greift das System der On-Chain-Governance._
+_Governance auf Protokollebene erfolgt bei Ethereum off-Chain, doch bei Anwendungsfällen, die auf Ethereum aufbauen, wie zum Beispiel DAOs, greift das System der On-Chain-Governance._
 
 <ButtonLink to="/dao/">
   Mehr über DAOs
@@ -55,7 +55,7 @@ _Hinweis: Jede Person kann Teil von mehreren dieser Gruppen sein (z. B. ein Prot
 
 <Divider />
 
-## Was ist ein IEO? {#what-is-an-eip}
+## Was ist ein EIP? {#what-is-an-eip}
 
 Ein wichtiger Prozess, der für die Ethereum-Governance zum Tragen kommt, ist die Anregung von **Ethereum-Verbesserungsvorschlägen (EIPs)**. EIPs sind Standards, über die potenzielle neue Funktionen oder Prozesse für Ethereum spezifiziert werden. Alle Personen in der Ethereum-Community haben die Möglichkeit, einen EIP zu erstellen. So hat beispielsweise keiner der Autoren von EIP-721, dem EIP, das NFTs standardisiert hat, direkt an der Entwicklung des Ethereum-Protokolls gearbeitet.
 

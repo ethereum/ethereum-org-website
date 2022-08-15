@@ -7767,7 +7767,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/98348072?v=4",
       "profile": "https://www.linkedin.com/in/lcalixxto/",
       "contributions": [
-        "doc"
+        "doc",
+        "content"
       ]
     },
     {
@@ -8288,7 +8289,158 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/39565075?v=4",
       "profile": "http://www.samuelakinosho.com",
       "contributions": [
+        "doc",
+        "code"
+      ]
+    },
+    {
+      "login": "OdairTrujillo",
+      "name": "Odair Augusto Trujillo Orozco",
+      "avatar_url": "https://avatars.githubusercontent.com/u/45074733?v=4",
+      "profile": "https://odair.dev",
+      "contributions": [
+        "doc",
+        "ideas"
+      ]
+    },
+    {
+      "login": "Unforkable",
+      "name": "Unforkable",
+      "avatar_url": "https://avatars.githubusercontent.com/u/86481149?v=4",
+      "profile": "https://github.com/Unforkable",
+      "contributions": [
         "doc"
+      ]
+    },
+    {
+      "login": "Rodrigolvc",
+      "name": "Rodrigo vasquez",
+      "avatar_url": "https://avatars.githubusercontent.com/u/108540208?v=4",
+      "profile": "https://github.com/Rodrigolvc",
+      "contributions": [
+        "doc",
+        "ideas"
+      ]
+    },
+    {
+      "login": "michaelmccallam",
+      "name": "Michael McCallam",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3510607?v=4",
+      "profile": "https://github.com/michaelmccallam",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "PolinaShanti",
+      "name": "Polina G.",
+      "avatar_url": "https://avatars.githubusercontent.com/u/110098268?v=4",
+      "profile": "https://nownodes.io/",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "Cerebro92",
+      "name": "Neeraj Gahlot",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13215478?v=4",
+      "profile": "https://github.com/Cerebro92",
+      "contributions": [
+        "doc",
+        "bug"
+      ]
+    },
+    {
+      "login": "vrinek",
+      "name": "Kostas",
+      "avatar_url": "https://avatars.githubusercontent.com/u/81346?v=4",
+      "profile": "https://github.com/vrinek",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "rogueassasin1729",
+      "name": "rogueassasin1729",
+      "avatar_url": "https://avatars.githubusercontent.com/u/92800000?v=4",
+      "profile": "https://github.com/rogueassasin1729",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "Pandapip1",
+      "name": "Pandapip1",
+      "avatar_url": "https://avatars.githubusercontent.com/u/45835846?v=4",
+      "profile": "https://pandapip1.com/",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "Aldizh",
+      "name": "Aldi Zhupani",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2282120?v=4",
+      "profile": "http://aldizh.github.io/",
+      "contributions": [
+        "bug",
+        "code"
+      ]
+    },
+    {
+      "login": "linhuatan",
+      "name": "linhuatan",
+      "avatar_url": "https://avatars.githubusercontent.com/u/94831627?v=4",
+      "profile": "https://github.com/linhuatan",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "hughcrt",
+      "name": "Hugh",
+      "avatar_url": "https://avatars.githubusercontent.com/u/24587702?v=4",
+      "profile": "http://hugh.sh",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "z3zzz",
+      "name": "Kim Kwangtae",
+      "avatar_url": "https://avatars.githubusercontent.com/u/91174156?v=4",
+      "profile": "https://github.com/z3zzz",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "tobi4021",
+      "name": "tobi4021",
+      "avatar_url": "https://avatars.githubusercontent.com/u/84390698?v=4",
+      "profile": "https://github.com/tobi4021",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "lonelyotter",
+      "name": "Haochen Song",
+      "avatar_url": "https://avatars.githubusercontent.com/u/57280827?v=4",
+      "profile": "https://github.com/lonelyotter",
+      "contributions": [
+        "doc",
+        "translation"
+      ]
+    },
+    {
+      "login": "opensourcex123",
+      "name": "N Fx",
+      "avatar_url": "https://avatars.githubusercontent.com/u/73230562?v=4",
+      "profile": "https://github.com/opensourcex123",
+      "contributions": [
+        "doc",
+        "translation"
       ]
     }
   ],

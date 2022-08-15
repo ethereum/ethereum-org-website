@@ -1,6 +1,6 @@
 import React, { ReactNode, useContext } from "react"
-import { ThemeContext } from "styled-components"
-import styled from "styled-components"
+import { useTheme } from "@emotion/react"
+import styled from "@emotion/styled"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { graphql, PageProps } from "gatsby"
 import { useIntl } from "react-intl"
@@ -265,8 +265,8 @@ const BugBountiesPage = ({
   location,
 }: PageProps<Queries.BugBountyPageQuery, Context>) => {
   const intl = useIntl()
-  const themeContext = useContext(ThemeContext)
-  const isDarkTheme = themeContext.isDark
+  const theme = useTheme()
+  const isDarkTheme = theme.isDark
 
   // TODO sort query isn't working :(
   const consensusBountyHuntersNodes = data.consensusBountyHunters

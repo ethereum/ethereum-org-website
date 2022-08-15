@@ -194,7 +194,7 @@ None
 
 `String` - The current network id.
 
-The full list of current network IDs is available at [chainlist.org](https://chainlist.org). Sopme common ones are:
+The full list of current network IDs is available at [chainlist.org](https://chainlist.org). Some common ones are:
 `1`: Ethereum Mainnet
 `2`: Morden testnet (now deprecated)
 `3`: Ropsten testnet

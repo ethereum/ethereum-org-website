@@ -11,16 +11,17 @@ sidebar: true
 
 我们迄今取得的进展：
 
-- [超过 **3,200** 名翻译人员参与](/contributing/translation-program/acknowledgements/)
-- [网站支持 **43** 种语言](/languages/)
+- [超过 **3,600** 名翻译者参与](/contributing/translation-program/contributors/)
+- [网站支持 **46** 种语言](/languages/)
 - [2021 年翻译了超过 **290** 万字](/contributing/translation-program/acknowledgements/)
+- [2022 年到目前为止已翻译 **150 万**单词](/contributing/translation-program/acknowledgements/)
 
 如果您想参与其中并帮助我们通过将网站翻译成您的语言来发展全球以太坊社区，请遵循下面的步骤！
 
 <InfoBanner emoji=":tada:">
   查看我们的<Link to="/contributing/translation-program/acknowledgements/">致谢翻译人员</Link>页面，{" "}
-然后领取您的 POAP 代币。 如果您在 2021 年翻译了 ethereum.org，我们会给您发放一个独特的 POAP 徽章。{" "}
-<Link to="/contributing/translation-program/acknowledgements/#poap">有关 POAP 徽章的更多信息</Link>
+然后领取您的 POAP 代币。 如果您在 2022 年翻译了 ethereum.org，我们会给您发放一枚独特的 POAP 徽章。{" "}
+<Link to="/contributing/translation-program/acknowledgements/#poap">有关 POAP 徽章的详细信息</Link>
 </InfoBanner>
 
 ## 使命和愿景 {#mission-and-vision}
@@ -46,7 +47,7 @@ Ethereum.org 翻译计划旨在通过将 Ethereum.org 和其他以太坊内容�
 ## 如何翻译 {#how-to-translate}
 
 <InfoBanner shouldCenter emoji=":light_bulb:">
-  我们鼓励您查看ethereum.org 翻译风格指南。 该指南包含一些最重要的准则、说明和翻译技巧，帮助翻译人员对网站进行本地化。
+  我们建议您查看一下《ethereum.org 翻译风格指南》。 该指南包含一些最重要的准则、说明和翻译技巧，帮助翻译人员对网站进行本地化。
   {" "}<Link to="/contributing/translation-program/translators-guide/">查看翻译风格指南</Link>
 </InfoBanner>
 
@@ -134,18 +135,18 @@ Ethereum.org 翻译计划旨在通过将 Ethereum.org 和其他以太坊内容�
 - [翻译风格指南](/contributing/translation-program/translators-guide/) _– 适用于 ethereum.org 翻译者的说明和技巧_
 - [翻译常见问题](/contributing/translation-program/faq/) _– 有关 ethereum.org 翻译计划的一些常见问题_
 - [Crowdin 在线编辑指南](https://support.crowdin.com/online-editor/) _- 使用 Crowdin 在线编辑器和 Crowdin 一些高级功能的深入指南_
-- [内容存储桶](/contributing/translation-program/content-buckets/) _– ethereum.org 的每个内容存储桶中所包含的页面_
+- [内容存储桶](/contributing/translation-program/content-buckets/) _– ethereum.org 的每个内容存储桶中包含哪些页面_
 
 ### 工具 {#tools}
 
-- [Microsoft 语言门户](https://www.microsoft.com/en-us/language) _- 用于查找和检查技术术语的标准翻译_
+- [Microsoft 语言门户](https://www.microsoft.com/en-us/language) _- 对于查找和核对技术术语标准翻译非常有用_
 - [Linguee](https://www.linguee.com/)。 _– 翻译和字典搜索引擎，可按词或短语搜索_
 - [Proz 术语搜索](https://www.proz.com/search/)。 _– 专业术语的翻译字典和词汇表数据库_。
 - [Eurotermbank](https://www.eurotermbank.com/) _ – 42 种语言的欧洲术语集_
 
 ### 社区 {#communities}
 
-- [特定语言翻译组](https://discord.gg/6WX7E97)。 _- 让 ethereum.org 翻译者加入 Discord 翻译组的计划_。
+- [特定语言的 Discord 翻译组](https://discord.gg/6WX7E97)。 _- 让 ethereum.org 翻译人员与 Discord 翻译组建立联系的举措_
 - [中文翻译组](https://www.notion.so/Ethereum-org-05375fe0a94c4214acaf90f42ba40171) _– 方便中文翻译人员之间协作的 Notion 页面_
 
 ### 内容存储桶概述 {#content-buckets-overview}
@@ -156,7 +157,7 @@ Ethereum.org 翻译计划旨在通过将 Ethereum.org 和其他以太坊内容�
 
 要了解翻译计划的最新进展，您可以关注[以太坊基金会博客](https://blog.ethereum.org/)：
 
-- [2021 年 12 月里程碑更新](https://blog.ethereum.org/2021/10/04/translation-program-update/)
+- [2021 年 10 月里程碑更新](https://blog.ethereum.org/2021/10/04/translation-program-update/)
 - [2020 年 12 月里程碑更新](https://blog.ethereum.org/2020/12/21/translation-program-milestones-updates-20/)
 - [2020 年 7 月里程碑更新](https://blog.ethereum.org/2020/07/29/ethdotorg-translation-milestone/)
 - [2019 年 8 月翻译计划启动](https://blog.ethereum.org/2019/08/20/translating-ethereum-for-our-global-community/)

@@ -1,5 +1,5 @@
 import React from "react"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { useIntl } from "react-intl"
 import { graphql, PageProps } from "gatsby"
@@ -188,6 +188,10 @@ const types = [
     description: <Translation id="page-wallets-web-browser" />,
   },
   {
+    emoji: ":globe_with_meridians:",
+    description: <Translation id="page-wallets-web-browser-extension" />,
+  },
+  {
     emoji: ":desktop_computer:",
     description: <Translation id="page-wallets-desktop" />,
   },
@@ -210,14 +214,6 @@ const articles = [
     link: "https://media.consensys.net/how-to-store-digital-assets-on-ethereum-a2bfdcf66bd0",
   },
 ]
-
-type Wallet = {
-  title: string
-  description: string
-  link: string
-  image: string
-  alt: string
-} & Partial<Queries.WalletsCsv>
 
 const WalletsPage = ({
   data,
@@ -245,7 +241,7 @@ const WalletsPage = ({
         description={translateMessageId("page-wallets-meta-description", intl)}
         image={getImage(data.ogImage)?.images.fallback.src}
       />
-      <PageHero content={heroContent} />
+      <PageHero content={heroContent} isReverse />
       <StyledGrayContainer>
         <Intro>
           <H2>
@@ -319,6 +315,9 @@ const WalletsPage = ({
           <H2>
             <Translation id="page-wallets-types" />
           </H2>
+          <p>
+            <Translation id="page-wallets-types-desc" />
+          </p>
           <div>
             {types.map((type, idx) => (
               <WalletType

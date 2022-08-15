@@ -1,5 +1,5 @@
 import React from "react"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 import CardList, { CardListItem } from "./CardList"
 import { useIntl } from "react-intl"
 
@@ -48,6 +48,14 @@ const ShardChainsList: React.FC<IProps> = () => {
         intl
       ),
       link: "https://blog.ethereum.org/2020/03/27/sharding-consensus/",
+    },
+    {
+      title: translateMessageId(
+        "page-upgrade-article-title-hitchhikers-guide-to-ethereum",
+        intl
+      ),
+      description: "Delphi Digital",
+      link: "https://members.delphidigital.io/reports/the-hitchhikers-guide-to-ethereum",
     },
   ]
 
