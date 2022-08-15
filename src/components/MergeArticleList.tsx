@@ -43,6 +43,11 @@ const reads: Array<CardListItem> = [
     description: "Ethereum Foundation",
     link: "https://github.com/ethereum/execution-apis/tree/main/src/engine",
   },
+  {
+    title: "The Hitchhikers Guide To Ethereum",
+    description: "Delphi Digital",
+    link: "https://members.delphidigital.io/reports/the-hitchhikers-guide-to-ethereum",
+  }
 ]
 
 export interface IProps {}

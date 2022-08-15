@@ -131,3 +131,4 @@ As DeFi grows and increases in popularity, MEV may soon significantly outweigh t
 - [Escaping the Dark Forest](https://samczsun.com/escaping-the-dark-forest/)
 - [Flashbots: Frontrunning the MEV Crisis](https://medium.com/flashbots/frontrunning-the-mev-crisis-40629a613752)
 - [@bertcmiller's MEV Threads](https://twitter.com/bertcmiller/status/1402665992422047747)
+- [The Hitchhikers Guide To Ethereum](https://members.delphidigital.io/reports/the-hitchhikers-guide-to-ethereum)
