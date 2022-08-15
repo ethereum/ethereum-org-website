@@ -66,7 +66,7 @@ summaryPoint3: オープンソース技術に基づき、誰でもプログラ�
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>イーサリアムを初めて使う方にお勧めの分散型金融(DeFi)アプリケーション</div>
-  <ButtonLink to="/dapps/?category=finance">
+  <ButtonLink style="white-space: nowrap;" to="/dapps/?category=finance">
     分散型金融(DeFi)アプリを探す
   </ButtonLink>
 </InfoBanner>

@@ -66,7 +66,7 @@ Bu kulağa tuhaf geliyor... "Neden paramı programlamak isteyeyim ki"? Bununla b
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Ethereum'da yeniyseniz denemek için DeFi uygulamalarına yönelik önerilerimizi keşfedin.</div>
-  <ButtonLink to="/dapps/?category=finance">
+  <ButtonLink style="white-space: nowrap;" to="/dapps/?category=finance">
     DeFi uygulamalarını keşfet
   </ButtonLink>
 </InfoBanner>

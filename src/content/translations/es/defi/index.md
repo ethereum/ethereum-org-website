@@ -66,7 +66,7 @@ Esto puede sonar extraño... ¿por qué querría programar mi dinero? Sin embarg
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Si es nuevo en Ethereum, explore y pruebe algunas de nuestras sugerencias de aplicaciones DeFi.</div>
-  <ButtonLink to="/dapps/?category=finance">
+  <ButtonLink style="white-space: nowrap;" to="/dapps/?category=finance">
     Explorar las aplicaciones DeFi
   </ButtonLink>
 </InfoBanner>

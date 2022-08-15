@@ -66,7 +66,7 @@ Cela semble étrange... « pourquoi je voudrais programmer mon argent » ? Cepen
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Explorez nos suggestions pour les applications de la DeFi pour essayer si vous êtes nouveau sur Ethereum.</div>
-  <ButtonLink to="/dapps/?category=finance">
+  <ButtonLink style="white-space: nowrap;" to="/dapps/?category=finance">
     Explorer la DeFi
   </ButtonLink>
 </InfoBanner>

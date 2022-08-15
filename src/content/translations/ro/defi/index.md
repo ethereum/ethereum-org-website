@@ -66,7 +66,7 @@ Asta sună ciudat... „De ce aș vrea să-mi programez banii”? Cu toate acest
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Explorați sugestiile noastre de aplicațiile DeFi pe care să le testaţi dacă nu aţi mai folosit Ethereum.</div>
-  <ButtonLink to="/dapps/?category=finance">
+  <ButtonLink style="white-space: nowrap;" to="/dapps/?category=finance">
     Explorați aplicațiile DeFi
   </ButtonLink>
 </InfoBanner>

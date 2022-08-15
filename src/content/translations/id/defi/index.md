@@ -66,7 +66,7 @@ Ini terdengar aneh... "mengapa saya ingin memrogram uang saya"? Namun, ini lebih
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Jelajahi saran kami untuk aplikasi DeFi yang dapat dicoba jika Anda baru mengenal Ethereum.</div>
-  <ButtonLink to="/dapps/?category=finance">
+  <ButtonLink style="white-space: nowrap;" to="/dapps/?category=finance">
     Jelajahi aplikasi DeFi
   </ButtonLink>
 </InfoBanner>

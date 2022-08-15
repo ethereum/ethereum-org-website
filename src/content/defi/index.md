@@ -66,7 +66,7 @@ This sounds odd... "why would I want to program my money"? However, this is more
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Explore our suggestions for DeFi applications to try out if you're new to Ethereum.</div>
-  <ButtonLink to="/dapps/?category=finance">
+  <ButtonLink style="white-space: nowrap;" to="/dapps/?category=finance">
     Explore DeFi apps
   </ButtonLink>
 </InfoBanner>

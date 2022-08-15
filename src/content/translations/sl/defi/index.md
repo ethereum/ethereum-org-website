@@ -64,7 +64,7 @@ To zveni čudno... "zakaj bi želel programirati svoj denar"? Kakorkoli, to je v
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Raziščite naše predloge za DeFi aplikacije, ki jih lahko preizkusite, če ste novi v Ethereumu.</div>
-  <ButtonLink to="/dapps/?category=finance">Raziščite DeFi Aplikacije</ButtonLink>
+  <ButtonLink style="white-space: nowrap;" to="/dapps/?category=finance">Raziščite DeFi Aplikacije</ButtonLink>
 </InfoBanner>
 
 ## Kaj lahko počnete z DeFi? {#defi-use-cases}

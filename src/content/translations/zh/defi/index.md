@@ -66,7 +66,7 @@ summaryPoint3: 基于任何人都可以用来编程的开源技术。
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>如果您不熟悉以太坊，请尝试我们推荐的去中心化金融应用程序。</div>
-  <ButtonLink to="/dapps/?category=finance">
+  <ButtonLink style="white-space: nowrap;" to="/dapps/?category=finance">
     探索去中心化金融应用程序
   </ButtonLink>
 </InfoBanner>

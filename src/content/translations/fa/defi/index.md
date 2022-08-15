@@ -66,7 +66,7 @@ DeFi یک واژه‌ی کلی برای محصولات و خدمات مالی د
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>اگر تازه پا به جهان اتریوم گذاشته‌اید، نگاهی به پیشنهاد‌های ما برای برنامه‌های DeFi جهت استفاده بیاندازید.</div>
-  <ButtonLink to="/dapps/?category=finance">
+  <ButtonLink style="white-space: nowrap;" to="/dapps/?category=finance">
     مشاهده‌ی برنامه‌های DeFi
   </ButtonLink>
 </InfoBanner>

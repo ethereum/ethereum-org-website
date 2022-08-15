@@ -66,7 +66,7 @@ Ethereum построен на этом. Как и в Bitcoin, правила н
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Изучите наши предложения по приложениям DeFi, если вы только осваиваетесь в Ethereum.</div>
-  <ButtonLink to="/dapps/?category=finance">
+  <ButtonLink style="white-space: nowrap;" to="/dapps/?category=finance">
     Взглянуть на приложения DeFi
   </ButtonLink>
 </InfoBanner>

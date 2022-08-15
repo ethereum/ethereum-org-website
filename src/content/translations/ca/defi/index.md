@@ -66,7 +66,7 @@ Sona estrany... «per què he de voler programar els meus diners»? En tot cas, 
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Exploreu els nostres suggeriments d'aplicacions DeFi per provar-les, si sou novells a Ethereum.</div>
-  <ButtonLink to="/dapps/?category=finance">
+  <ButtonLink style="white-space: nowrap;" to="/dapps/?category=finance">
     Exploreu aplicacions DeFi
   </ButtonLink>
 </InfoBanner>
