@@ -42,5 +42,19 @@ export const Button: ComponentStyleConfig = {
         bg: "secondaryButtonBackgroundActive",
       },
     },
+    "outline-color": {
+      color: "primary",
+      bg: "transparent",
+      borderColor: "primary",
+      _hover: {
+        color: "primary",
+        bg: "transparent",
+        border: "1px",
+        borderColor: "primary",
+      },
+      _active: {
+        bg: "secondaryButtonBackgroundActive",
+      },
+    },
   },
 }

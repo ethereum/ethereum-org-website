@@ -258,9 +258,7 @@ const FeedbackWidget: React.FC<IProps> = ({ className }) => {
               <ButtonContainer>
                 {feedbackSubmitted ? (
                   <Button
-                    variant="outline"
-                    color="primary"
-                    borderColor="primary"
+                    variant="outline-color"
                     onClick={handleSurveyOpen}
                     aria-label={translateMessageId(
                       "feedback-widget-thank-you-cta",
@@ -272,18 +270,14 @@ const FeedbackWidget: React.FC<IProps> = ({ className }) => {
                 ) : (
                   <>
                     <Button
-                      variant="outline"
-                      color="primary"
-                      borderColor="primary"
+                      variant="outline-color"
                       onClick={() => handleSubmit(true)}
                       aria-label={translateMessageId("yes", intl)}
                     >
                       <Translation id="yes" />
                     </Button>
                     <Button
-                      variant="outline"
-                      color="primary"
-                      borderColor="primary"
+                      variant="outline-color"
                       onClick={() => handleSubmit(false)}
                       aria-label={translateMessageId("no", intl)}
                     >
