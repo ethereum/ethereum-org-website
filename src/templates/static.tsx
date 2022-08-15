@@ -174,11 +174,7 @@ const StaticPage = ({
 
   const tocItems = mdx.tableOfContents?.items as Array<ItemTableOfContents>
   const { editContentUrl } = siteData.siteMetadata || {}
-  const absoluteEditPath =
-    relativePath.split("/").includes("whitepaper") ||
-    relativePath.split("/").includes("events")
-      ? ""
-      : `${editContentUrl}${relativePath}`
+  const absoluteEditPath = `${editContentUrl}${relativePath}`
 
   const slug = mdx.fields?.slug || ""
 
