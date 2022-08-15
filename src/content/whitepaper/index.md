@@ -3,6 +3,7 @@ title: Ethereum Whitepaper
 description: An introductory paper to Ethereum, published in 2013 before its launch.
 lang: en
 sidebarDepth: 2
+hideEditButton: true
 ---
 
 # Ethereum Whitepaper {#ethereum-whitepaper}

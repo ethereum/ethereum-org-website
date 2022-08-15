@@ -2,6 +2,7 @@
 title: Ethereum events
 description: How to get involved in the Ethereum community.
 lang: en
+hideEditButton: true
 ---
 
 ## Upcoming events {#events}
