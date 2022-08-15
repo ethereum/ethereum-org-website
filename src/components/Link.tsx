@@ -9,6 +9,7 @@ import { BsQuestionSquareFill } from "react-icons/bs"
 
 import { Lang } from "../utils/languages"
 import { trackCustomEvent, EventOptions } from "../utils/matomo"
+import { Direction } from "../types"
 
 const HASH_PATTERN = /^#.*/
 
@@ -22,11 +23,14 @@ export interface IBaseProps {
   customEventOptions?: EventOptions
 }
 
-export interface IProps extends IBaseProps, LinkProps {}
+export interface IProps extends IBaseProps, LinkProps {
+  dir?: Direction // TODO: remove this prop once we use the native Chakra RTL support
+}
 
 const LinkWrapper: React.FC<IProps> = ({
   to: toProp,
   href,
+  dir = "ltr",
   children,
   hideArrow = false,
   isPartiallyActive = true,
@@ -50,12 +54,17 @@ const LinkWrapper: React.FC<IProps> = ({
     eventName: to,
   }
 
+  const commonProps = {
+    dir,
+    ...restProps,
+  }
+
   // Must use <a> tags for anchor links
   // Otherwise <Link> functionality will navigate to homepage
   // See https://github.com/gatsbyjs/gatsby/issues/21909
   if (isHash) {
     return (
-      <Link href={to} {...restProps}>
+      <Link href={to} {...commonProps}>
         {children}
       </Link>
     )
@@ -83,7 +92,7 @@ const LinkWrapper: React.FC<IProps> = ({
             customEventOptions ? customEventOptions : eventOptions
           )
         }}
-        {...restProps}
+        {...commonProps}
       >
         {children}
       </Link>
@@ -100,7 +109,7 @@ const LinkWrapper: React.FC<IProps> = ({
       isPartiallyActive={isPartiallyActive}
       activeStyle={{ color: theme.colors.primary }}
       whiteSpace={isGlossary ? "nowrap" : "normal"}
-      {...restProps}
+      {...commonProps}
     >
       {children}
       {isGlossary && (
