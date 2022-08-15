@@ -244,7 +244,7 @@ Please keep in mind that this is just a basic example, all other settings will b
 
 > Note that backslashes `\` in examples are only for formatting purposes; config flags can be defined in a single line.
 
-##### Running Besu
+##### Running Besu
 
 This example starts Besu on mainnet, stores blockchain data in default format at `/data/ethereum`, enables JSON RPC and Engine RPC for connecting consensus client. Engine API is authenticated with token `jwtsecret` and only calls from `localhost` are allowed.
 
