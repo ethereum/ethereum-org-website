@@ -8422,6 +8422,16 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "lonelyotter",
+      "name": "Haochen Song",
+      "avatar_url": "https://avatars.githubusercontent.com/u/57280827?v=4",
+      "profile": "https://github.com/lonelyotter",
+      "contributions": [
+        "doc",
+        "translation"
+      ]
     }
   ],
   "contributorsPerLine": 7,
