@@ -56,7 +56,7 @@ const ShardChainsList: React.FC<IProps> = () => {
       ),
       description: "Delphi Digital",
       link: "https://members.delphidigital.io/reports/the-hitchhikers-guide-to-ethereum",
-    }
+    },
   ]
 
   return (

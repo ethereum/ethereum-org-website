@@ -192,7 +192,7 @@ Minimal was replaced by [polgon-sdk](https://github.com/0xPolygon/polygon-edge)
 
 Deprecated in 2022.
 
-**Summary** 
+**Summary**
 
 Hyperledger Burrow was a permissioned Ethereum smart-contract blockchain node. It executed Ethereum EVM and WASM smart contract code on permissioned virtual machines.
 

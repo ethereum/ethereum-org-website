@@ -47,7 +47,7 @@ const reads: Array<CardListItem> = [
     title: "The Hitchhikers Guide To Ethereum",
     description: "Delphi Digital",
     link: "https://members.delphidigital.io/reports/the-hitchhikers-guide-to-ethereum",
-  }
+  },
 ]
 
 export interface IProps {}

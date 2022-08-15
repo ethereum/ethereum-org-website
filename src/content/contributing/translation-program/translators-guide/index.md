@@ -96,6 +96,23 @@ An example of a Crowdin warning when you forget to add a tag to your translation
 
 A lot of the source content contains tags and variables, which are highlighted in yellow in the Crowdin editor. These serve different functions and should be approached correctly.
 
+**Crowdin settings**
+
+To make it easier to manage tags and copy them directly from the source, we recommend changing your settings in the Crowdin editor.
+
+1. Open settings
+![How to open settings in the editor](./editor-settings.png)
+
+2. Scroll down to the 'HTML tags displaying' section
+
+3. Select 'Hide'
+![Please select 'Hide'](./hide-tags.png)
+
+4. Click 'Save'
+
+By selecting this option, the full tag text will no longer be shown, and will be replaced by a number.
+When translating, clicking on this tag will automatically copy the exact tag to the translation field.
+
 **Links**
 
 You may notice full links to pages on ethereum.org or other websites.

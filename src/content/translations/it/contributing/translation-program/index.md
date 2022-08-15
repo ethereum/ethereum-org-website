@@ -174,7 +174,3 @@ Ci impegnamo per tradurre i contenuti di Ethereum in quante più lingue possibil
 Per questo motivo, abbiamo creato un [manuale del Programma di Traduzione](/contributing/translation-program/playbook/), contenente alcuni consigli e buone pratiche scelte nel processo di traduzione di ethereum.org.
 
 Vuoi collaborare ulteriormente o usare alcune delle nostre risorse di traduzione? Hai qualche commento sul manuale? Ci farebbe molto piacere ricevere il tuo parere su translations@ethereum.org.
-
-## Traduzioni in corso {#in-progress}
-
-<TranslationsInProgress />
