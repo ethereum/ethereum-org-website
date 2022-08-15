@@ -57,9 +57,9 @@ const MergeArticleList: React.FC<IProps> = () => {
   ]
 
   return (
-      <Container>
-        <CardList content={reads} />
-      </Container>
+    <Container>
+      <CardList content={reads} />
+    </Container>
   )
 }
 
