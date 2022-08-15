@@ -225,7 +225,7 @@ This token is generated automatically by the client software, but in some cases,
 openssl rand -hex 32 > jwtsecret
 ```
 
-**Note that it is recommended to connect an execution and consensus client on a testnet only for now (e.g. Kiln) and await merge-ready client releases before replicating the process on Mainnet.**
+**Note that it is recommended to connect an execution and consensus client on a testnet only for now (e.g. Kiln, Ropsten, Sepolia, Goerli) and await merge-ready client releases before replicating the process on Mainnet.**
 
 #### Running an execution client {#running-an-execution-client}
 
