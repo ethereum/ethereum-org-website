@@ -16,10 +16,9 @@ Anyone can contribute to translating the EF blog. If you want to get involved, k
 ## How to translate {#how-to-translate}
 
 <InfoBanner shouldCenter emoji=":light_bulb:">
-
-We encourage you to check out the ethereum.org translation style guide. It contains some of the most important guidelines, instructions, and tips for translators to help translate the blog. While initially written for ethereum.org translators, most of the style guide is also relevant to blog translations.
-  
-<Link to="/contributing/translation-program/translators-guide/">View the translation style guide</Link>
+  We encourage you to check out the ethereum.org translation style guide. It contains some of the most important guidelines, instructions, and tips for translators to help translate the blog. While initially written for ethereum.org translators, most of the style guide is also relevant to blog translations.
+    
+  <Link to="/contributing/translation-program/translators-guide/">View the translation style guide</Link>
 
 </InfoBanner>
 

@@ -14,10 +14,9 @@ With the aim of making staking more accessible and diverse, and make it easier f
 ## How to translate {#how-to-translate}
 
 <InfoBanner shouldCenter emoji=":light_bulb:">
+  We encourage you to check out the ethereum.org Translation style guide. It contains some of the most important guidelines, instructions, and tips for translators to help localize the blog. While originally written for ethereum.org translators, most of the style guide is relevant to blog translations as well.
 
-We encourage you to check out the ethereum.org Translation style guide. It contains some of the most important guidelines, instructions, and tips for translators to help localize the blog. While originally written for ethereum.org translators, most of the style guide is relevant to blog translations as well.
-
-<Link to="/contributing/translation-program/translators-guide/">View the Translation Style Guide</Link>
+  <Link to="/contributing/translation-program/translators-guide/">View the Translation Style Guide</Link>
 
 </InfoBanner>
 
