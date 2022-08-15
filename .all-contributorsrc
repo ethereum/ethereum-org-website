@@ -8432,6 +8432,15 @@
         "doc",
         "translation"
       ]
+    },
+    {
+      "login": "opensourcex123",
+      "name": "N Fx",
+      "avatar_url": "https://avatars.githubusercontent.com/u/73230562?v=4",
+      "profile": "https://github.com/opensourcex123",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
