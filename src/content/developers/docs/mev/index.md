@@ -56,7 +56,7 @@ It works like this: if two DEXes are offering a token at two different prices, s
 
 Lending protocol liquidations present another well-known MEV opportunity.
 
-Lending protocols like Maker and Aave function by requiring users to deposit some sort of collateral (e.g. ETH). This deposited collateral is then used to then lend out to other users.
+Lending protocols like Maker and Aave require users to deposit some collateral (e.g. ETH). This deposited collateral is then used to then lend out to other users.
 
 Users can then borrow assets and tokens from others depending on what they need (for example, they may borrow MKR if they want to vote on a MakerDAO governance proposal or SUSHI if they want to earn a portion of trading fees on Sushiswap) up to a certain amount of their deposited collateral — for instance, 30% (ex. a user who deposits 100 DAI into the protocol is able to borrow up to 30 DAI worth of another asset). The exact borrowing power percentage is determined by the protocol.
 
