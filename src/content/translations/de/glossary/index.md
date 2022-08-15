@@ -20,7 +20,7 @@ Eine Art von Angriff auf ein dezentralisiertes [Netzwerk](#network), mit welchem
 
 ### Account (Konto) {#account}
 
-Ein Objekt mit einer [Adresse](#address), einem Saldo, einer [Nonce](#nonce), optionalem Speicher und Code. Ein Konto kann ein [Vertragskonto](#contract-account) oder ein[ externes Konto (Externally owned Account, EOA)](#eoa) sein.
+Ein Objekt mit einer [Adresse](#address), einem Saldo, einer [Nonce](#nonce), optionalem Speicher und Code. Ein Konto kann ein [Vertragskonto](#contract-account) oder ein [externes Konto (Externally owned Account, EOA)](#eoa) sein.
 
 <DocLink to="/developers/docs/accounts">
   Ethereum-Konten

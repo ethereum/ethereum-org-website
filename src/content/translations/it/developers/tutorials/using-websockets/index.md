@@ -174,7 +174,7 @@ Quando avviene la riorganizzazione della catena, i registri che fanno parte dei 
 Parametri
 
 1. Un oggetto con i seguenti campi:
-   - `adddress` (facoltativo): una stringa rappresentante un indirizzo o un array di stringhe analoghe.
+   - `address` (facoltativo): una stringa rappresentante un indirizzo o un array di stringhe analoghe.
      - Saranno emessi solo i registri creati da uno di questi indirizzi.
    - `topics`: array di specificatori di argomento.
      - Ogni specificatore di argomento è `null`, una stringa rappresentante un argomento o un array di stringhe.

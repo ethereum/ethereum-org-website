@@ -43,7 +43,7 @@ Se você quer [executar o seu próprio nó](/developers/docs/nodes-and-clients/r
 
 ### Nó Archive {#archive-node}
 
-- Armazena tudo no nó inteiro e cria um arquivo de estados históricos. Necessário se você quiser consultar algo como um saldo de conta no bloco #4.000.000 ou simplesmente [testar de maneira simples e confiável suas próprias transações definidas sem minerá-las usando OpenEthereum](https://openethereum. github. io/Jsonrpc-trace-module#trace_callmany).
+- Armazena tudo no nó inteiro e cria um arquivo de estados históricos. Necessário se você quiser consultar algo como um saldo de conta no bloco #4.000.000 ou simplesmente [testar de maneira simples e confiável suas próprias transações definidas sem minerá-las usando OpenEthereum](https://openethereum.github.io/Jsonrpc-trace-module#trace_callmany).
 - Esses dados representam unidades de terabytes que tornam os nós de arquivo menos atrativos para usuários médios, mas podem ser úteis para serviços como exploradores de blocos, fornecedores de carteiras e análises de cadeia.
 
 Sincronizar clientes em qualquer modo que não seja o de arquivo resultará na remoção de dados da blockchain. Isso significa que não há arquivo de todo o estado histórico, mas o nó completo é capaz de criá-lo sob demanda.
@@ -118,7 +118,7 @@ Esta tabela resume os diferentes clientes. Todos eles passam em [testes de clien
 | ------------------------------------------------------------------------- | ------------------------ | --------------------- | ------------------------------------------------ | ---------------------------- | ----------------- |
 | [Geth](https://geth.ethereum.org/)                                        | Go                       | Linux, Windows, macOS | Rede principal, Görli, Rinkeby, Ropsten          | Snap, Full                   | Archive, Pruned   |
 | [Nethermind](http://nethermind.io/)                                       | C#, .NET                 | Linux, Windows, macOS | Rede principal, Görli, Ropsten, Rinkeby e outras | Fast, Beam, Archive          | Archive, Pruned   |
-| [Besu](https://pegasys.tech/solutions/hyperledger-besu/)                  | Java                     | Linux, Windows, macOS | Mainnet, Rinkeby, Ropsten, Görli, and more       | Fast, Full                   | Archive, Pruned   |
+| [Besu](https://besu.hyperledger.org/en/stable/)                           | Java                     | Linux, Windows, macOS | Mainnet, Rinkeby, Ropsten, Görli, and more       | Fast, Full                   | Archive, Pruned   |
 | [Erigon](https://github.com/ledgerwatch/erigon)                           | Go                       | Linux, Windows, macOS | Rede principal, Görli, Rinkeby, Ropsten          | Full                         | Archive, Pruned   |
 | [OpenEthereum (Deprecated)](https://github.com/openethereum/openethereum) | Rust                     | Linux, Windows, macOS | Rede principal, Kovan, Ropsten e outros          | Warp, completo               | Archive, Pruned   |
 

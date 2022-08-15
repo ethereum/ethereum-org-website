@@ -11,7 +11,7 @@ Istnieją jednak podstawowe technologie Ethereum, które pomagają stworzyć mod
 
 ## Warstwa 1: Wirtualna Maszyna Ethereum {#ethereum-virtual-machine}
 
-Wirtualna Maszyna Ethereum ([ Ethereum Virtual Machine, EVM](/developers/docs/evm/)) jest środowiskiem uruchomieniowym inteligentnych kontraktów w Ethereum. Wszystkie inteligentne kontrakty i zmiany stanu w blockchain Ethereum są wykonywane przez [transakcje](/developers/docs/transactions/). EVM obsługuje cały proces przetwarzania transakcji w sieci Ethereum.
+Wirtualna Maszyna Ethereum ([Ethereum Virtual Machine, EVM](/developers/docs/evm/)) jest środowiskiem uruchomieniowym inteligentnych kontraktów w Ethereum. Wszystkie inteligentne kontrakty i zmiany stanu w blockchain Ethereum są wykonywane przez [transakcje](/developers/docs/transactions/). EVM obsługuje cały proces przetwarzania transakcji w sieci Ethereum.
 
 Podobnie jak w przypadku dowolnej maszyny wirtualnej, EVM tworzy poziom abstrakcji pomiędzy kodem wykonującym a maszyną wykonującą (węzeł Ethereum). Obecnie EVM działa w tysiącach węzłów rozmieszczonych na całym świecie.
 

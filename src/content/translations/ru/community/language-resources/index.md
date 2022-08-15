@@ -1,5 +1,5 @@
 ---
-title: Языковые материалы
+title: Языковые ресурсы
 description: Не англоязычные ресурсы для изучения Ethereum
 sidebar: true
 lang: ru
@@ -17,7 +17,7 @@ lang: ru
 
 ## Ресурсы Ethereum.org {#ethereum-org}
 
-Ethereum.org переведен на более чем 40 языков, которые вы можете найти на нашей [странице языков](/languages).
+Проект Ethereum.org переведен носителями на более чем 40 языков, список которых вы найдете на нашей [странице языков](/languages).
 
 Если вы говорите на двух языках и хотите помочь нам привлечь больше людей, вы также можете принять участие в [программе перевода ethereum.org](/contributing/translation-program/#translation-program) и помочь нам с переводом сайта.
 
@@ -30,7 +30,7 @@ Ethereum.org переведен на более чем 40 языков, кото
 - [BeInCrypto](http://www.beincrypto.com.br) — новости и статьи о криптовалютах, включая список бирж, доступных в Бразилии
 - [Cointelegraph](http://cointelegraph.com.br/category/analysis) — бразильская версия Cointelegraph, крупного новостного портала о криптовалютах
 - [Livecoins](http://www.livecoins.com.br/ethereum) — криптовалютные новости и инструменты
-- [Seudinheiro](http://www.seudinheiro.com/criptomoedas/) – новости и отчеты о криптовалютах
+- [Seudinheiro](http://www.seudinheiro.com/criptomoedas/) — новости и отчеты о криптовалютах
 
 **Обучение**
 
@@ -46,7 +46,7 @@ Ethereum.org переведен на более чем 40 языков, кото
 **Основные ресурсы**
 
 - [Ethereum.cn](https://www.ethereum.cn/) — контент, поддерживаемый сообществом, охватывающий обновление уровня консенсуса, все заметки с собраний основных разработчиков, уровень 2 и т. д.
-- [EthFans](https://ethfans.org/) — изучите все, от основ до продвинутых тем Ethereum
+- [EthFans](https://github.com/editor-Ajian/EthFans.org-annual-collected-works/) — изучите все, от основ до вопросов продвинутого использования Ethereum
 - [Unitimes](https://mp.weixin.qq.com/s/tvloZSDBSOQN9zDQj_91kA) — контент, поддерживаемый сообществом, охватывающий знания, связанные с Ethereum, децентрализованными финансами (DeFi), невзаимозаменяемыми токенами (NFT) и Web3
 - [123ETH](https://123eth.org/) — портал в экосистему Ethereum
 - [Zhen Xiao](http://zhenxiao.com/blockchain/) — бесплатные онлайн-курсы по криптовалюте и ее применению

@@ -236,7 +236,7 @@ Un periodo de 32 [ranuras](#slot) (6,4 minutos) en el sistema coordinado de [cad
 
 ### Eth2 {#eth2}
 
-«Eth2» es un término que hace referencia a un conjunto de actualizaciones del protocolo de Ethreum, incluyendo la transición de Ethereum a prueba de participación. Desde entonces, este término ha quedado obsoleto a favor de la «capa de consenso». [Conozca más acerca de este cambio de nombre](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/).
+«Eth2» es un término que hace referencia a un conjunto de actualizaciones del protocolo de Ethereum, incluyendo la transición de Ethereum a prueba de participación. Desde entonces, este término ha quedado obsoleto a favor de la «capa de consenso». [Conozca más acerca de este cambio de nombre](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/).
 
 <DocLink to="/upgrades/">
   Más sobre las actualizaciones de Ethereum
@@ -503,7 +503,7 @@ Un tipo especial de [contrato](#smart-contract) sin funciones pagaderas, sin fun
 
 ### cliente ligero {#lightweight-client}
 
-Un cliente de Ethreum que no almacena una copia local de la [cadena de bloques](#blockchain), o bien valida bloques y [transacciones](#transaction). Ofrece las funciones de una [cartera](#wallet) y puede crear y transmitir transacciones.
+Un cliente de Ethereum que no almacena una copia local de la [cadena de bloques](#blockchain), o bien valida bloques y [transacciones](#transaction). Ofrece las funciones de una [cartera](#wallet) y puede crear y transmitir transacciones.
 
 <Divider />
 

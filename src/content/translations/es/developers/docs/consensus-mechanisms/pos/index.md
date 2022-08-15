@@ -90,8 +90,8 @@ Existen los slashings de apuestas, expulsiones y otras penalizaciones (coordinad
 - [Qué es la prueba de participación y por qué es importante](https://bitcoinmagazine.com/culture/what-proof-of-stake-is-and-why-it-matters-1377531463) _Vitalik Buterin_
 - [Es necesario que lea primero la sección en la que se explica la cadena de baliza de Ethereum 2.0](https://ethos.dev/beacon-chain/) _Ethos.dev_
 - [Por qué se realiza la prueba de participación (nov. 2020)](https://vitalik.ca/general/2020/11/06/pos2020.html) _Vitalik Buterin_
-- [Prueba de participación: cómo aprendí a amar la subjetividad débil ](https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity/)_Vitalik Buterin_
-- [Filosofía de diseño de las pruebas de participación ](https://medium.com/@VitalikButerin/a-proof-of-stake-design-philosophy-506585978d51) _ Vitalik Buterin_
+- [Prueba de participación: cómo aprendí a amar la subjetividad débil](https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity/) _Vitalik Buterin_
+- [Filosofía de diseño de las pruebas de participación](https://medium.com/@VitalikButerin/a-proof-of-stake-design-philosophy-506585978d51) _Vitalik Buterin_
 
 ## Temas relacionados {#related-topics}
 

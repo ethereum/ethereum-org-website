@@ -78,3 +78,6 @@ src/data/contributors.json
 src/intl/*.json
 # Auto generated code when gatsby build the site
 src/gatsby-types.d.ts
+
+# Exported Crowdin files
+.crowdin

@@ -27,22 +27,25 @@ The [Ethereum Improvement Proposals (EIPs) GitHub repository](https://github.com
 
 EIP editors are tasked with process of reviewing EIPs for technical soundness, correct spelling/grammar, and code style. Martin Becze, Vitalik Buterin, Gavin Wood, and a few others were the original EIP editors from 2015 to late 2016.
 
-The current EIP editors are:
+The current EIP editors are
 
 - Alex Beregszaszi (@axic)
-- Matt Garnett (@lightclient)
-- Micah Zoltu (@MicahZoltu)
+- Gavin John (@Pandapip1)
 - Greg Colvin (@gcolvin)
+- Matt Garnett (@lightclient)
 - Sam Wilson (@SamWilsn)
 
-Retired EIP editors are:
+Emeritus EIP editors are
 
 - Casey Detrio (@cdetrio)
-- Nick Johnson (@arachnid)
-- Vitalik Buterin (@vbuterin)
 - Hudson Jameson (@Souptacular)
-- Nick Savers (@nicksavers)
 - Martin Becze (@wanderer)
+- Micah Zoltu (@MicahZoltu)
+- Nick Johnson (@arachnid)
+- Nick Savers (@nicksavers)
+- Vitalik Buterin (@vbuterin)
+
+If you would like to become an EIP editor, please check [EIP-5069](https://eips.ethereum.org/EIPS/eip-5069).
 
 EIP editors alongside with community members of [Ethereum Cat Herders](https://ethereumcatherders.com/) and [Ethereum Magicians](https://ethereum-magicians.org/) are deciding which EIP gets implemented, are responsible for facilitation of EIPs as well as moving the EIPs to "Final" or "Withdrawn" stage.
 

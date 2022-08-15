@@ -1,6 +1,6 @@
 // Libraries
 import React, { useState } from "react"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 
 // Components
 import Checkbox from "../Checkbox"
@@ -350,7 +350,7 @@ const WalletFilterSidebar = ({
       ],
     },
     {
-      title: "Onboard / offboard",
+      title: "Buy crypto / Sell for fiat",
       open: true,
       items: [
         {
@@ -451,6 +451,13 @@ const WalletFilterSidebar = ({
                             }
                           : () => {
                               setShowOptions(idx, itemidx, !item.showOptions)
+                              trackCustomEvent({
+                                eventCategory: "WalletFilterSidebar",
+                                eventAction: `${filterOption.title}`,
+                                eventName: `Toggle ${
+                                  item.title
+                                } ${!item.showOptions}`,
+                              })
                             }
                       }
                     >
@@ -506,6 +513,13 @@ const WalletFilterSidebar = ({
                             }
                           : () => {
                               setShowOptions(idx, itemidx, !item.showOptions)
+                              trackCustomEvent({
+                                eventCategory: "WalletFilterSidebar",
+                                eventAction: `${filterOption.title}`,
+                                eventName: `Toggle ${
+                                  item.title
+                                } ${!item.showOptions}`,
+                              })
                             }
                       }
                     >

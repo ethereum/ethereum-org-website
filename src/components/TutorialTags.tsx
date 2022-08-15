@@ -1,5 +1,5 @@
 import React from "react"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 
 import Pill from "./Pill"
 
@@ -25,12 +25,12 @@ const colors = [
   "tagYellow",
   "tagMint",
   "tagPink",
-]
+] as const
 
 const TagPill = styled(Pill)`
   margin-right: 0.5rem;
   margin-bottom: 0.5rem;
-  background-color: ${(props) => props.theme.colors[props.color]};
+  background-color: ${(props) => props.theme.colors[props.color!]};
 `
 
 export interface IProps {

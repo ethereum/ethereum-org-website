@@ -1,11 +1,12 @@
 // Libraries
 import { GatsbyImage } from "gatsby-plugin-image"
 import React, { useState } from "react"
-import styled from "styled-components"
-import { useIntl } from "gatsby-plugin-intl"
+import styled from "@emotion/styled"
+import { useIntl } from "react-intl"
 
 // Components
 import ButtonLink from "../ButtonLink"
+import Link from "../Link"
 import Translation from "../Translation"
 import { StyledSelect as Select } from "../SharedStyledComponents"
 
@@ -164,8 +165,6 @@ const RightSelected = styled.div`
 `
 
 interface Exchange {
-  label?: string
-  value?: string
   name: string
   supports_deposits: Array<string>
   supports_withdrawals: Array<string>
@@ -173,11 +172,22 @@ interface Exchange {
 }
 
 interface Layer2 {
-  label: string
   name: string
-  value: string
   bridgeWallets: Array<string>
   bridge: string
+}
+
+interface Option {
+  value: string
+  label: string
+}
+
+interface Layer2Option extends Option {
+  l2: Layer2
+}
+
+interface ExchangeOption extends Option {
+  cex: Exchange
 }
 
 export interface IProps {
@@ -195,6 +205,24 @@ const Layer2Onboard: React.FC<IProps> = ({
 
   const [selectedExchange, setSelectedExchange] = useState<Exchange>()
   const [selectedL2, setSelectedL2] = useState<Layer2>()
+
+  const layer2Options: Array<Layer2Option> = layer2DataCombined.map((l2) => {
+    return {
+      label: l2.name,
+      value: l2.name,
+      l2,
+    }
+  })
+
+  const cexSupportOptions: Array<ExchangeOption> = cexSupport.map(
+    (cex: Exchange) => {
+      return {
+        label: cex.name,
+        value: cex.name,
+        cex,
+      }
+    }
+  )
 
   return (
     <Content>
@@ -214,24 +242,25 @@ const Layer2Onboard: React.FC<IProps> = ({
           <p>
             <Translation id="layer-2-onboard-wallet-1" />
           </p>
+          <p>
+            <Link to="/bridges/">
+              <Translation id="layer-2-more-on-bridges" />
+            </Link>
+          </p>
         </LeftDescription>
         <LeftSelect>
           <StyledSelect
             className="react-select-container"
             classNamePrefix="react-select"
-            options={layer2DataCombined.map((l2) => {
-              l2.label = l2.name
-              l2.value = l2.name
-              return l2
-            })}
-            onChange={(selectedOption: Layer2) => {
+            options={layer2Options}
+            onChange={(selectedOption: Layer2Option) => {
               trackCustomEvent({
                 eventCategory: `Selected layer 2 to bridge to`,
                 eventAction: `Clicked`,
-                eventName: `${selectedOption.name} bridge selected`,
-                eventValue: `${selectedOption.name}`,
+                eventName: `${selectedOption.l2.name} bridge selected`,
+                eventValue: `${selectedOption.l2.name}`,
               })
-              setSelectedL2(selectedOption)
+              setSelectedL2(selectedOption.l2)
             }}
             placeholder={translateMessageId(
               "layer-2-onboard-wallet-input-placeholder",
@@ -269,26 +298,25 @@ const Layer2Onboard: React.FC<IProps> = ({
             <Translation id="layer-2-onboard-exchange-1" />
           </p>
           <p>
-            <Translation id="layer-2-onboard-exchange-2" />
+            <Translation id="layer-2-onboard-exchange-2" />{" "}
+            <Link to="/wallets/find-wallet/">
+              <Translation id="layer-2-onboard-find-a-wallet" />
+            </Link>
           </p>
         </RightDescription>
         <RightSelect>
           <StyledSelect
             className="react-select-container"
             classNamePrefix="react-select"
-            options={cexSupport.map((cex: Exchange) => {
-              cex.label = cex.name
-              cex.value = cex.name
-              return cex
-            })}
-            onChange={(selectedOption: Exchange) => {
+            options={cexSupportOptions}
+            onChange={(selectedOption: ExchangeOption) => {
               trackCustomEvent({
                 eventCategory: `Selected cex to onboard`,
                 eventAction: `Clicked`,
-                eventName: `${selectedOption.name} selected`,
-                eventValue: `${selectedOption.name}`,
+                eventName: `${selectedOption.cex.name} selected`,
+                eventValue: `${selectedOption.cex.name}`,
               })
-              setSelectedExchange(selectedOption)
+              setSelectedExchange(selectedOption.cex)
             }}
             placeholder={translateMessageId(
               "layer-2-onboard-exchange-input-placeholder",
@@ -309,7 +337,7 @@ const Layer2Onboard: React.FC<IProps> = ({
                   </H3>
                   <ul>
                     {selectedExchange.supports_deposits.map((l2) => (
-                      <li>{l2}</li>
+                      <li key={l2}>{l2}</li>
                     ))}
                   </ul>
                 </Flex50>
@@ -319,7 +347,7 @@ const Layer2Onboard: React.FC<IProps> = ({
                   </H3>
                   <ul>
                     {selectedExchange.supports_withdrawals.map((l2) => (
-                      <li>{l2}</li>
+                      <li key={l2}>{l2}</li>
                     ))}
                   </ul>
                 </Flex50>

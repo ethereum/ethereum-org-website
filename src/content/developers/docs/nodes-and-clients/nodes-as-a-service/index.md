@@ -163,6 +163,16 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Unique Ethereum SDK
     - Unique API endpoints
     - Direct, technical support
+- [**NOWNodes**](https://nownodes.io/)
+  - [Docs](https://documenter.getpostman.com/view/13630829/TVmFkLwy)
+  - Features
+    - Access to 50+ blockchain nodes
+    - Free API Key
+    - Block Explorers
+    - API Response Time ⩽ 1 sec
+    - 24/7 Support Team
+    - Personal Account Manager
+    - Shared, archive, backup and dedicated nodes
 - [**Pocket Network**](https://www.pokt.network/)
   - [Docs](https://docs.pokt.network/home/)
   - Features
@@ -202,6 +212,13 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
   - Features
     - Free tier option
     - Scale as you go
+- [**SenseiNode**](https://senseinode.com)
+  - [Docs](https://docs.senseinode.com/)
+  - Features
+    - Dedicated and Share nodes
+    - Dashboard
+    - Hosting off AWS on multiple hosting providers accross different locations in Latin America
+    - Prysm and Lighthouse clients
 - [**SettleMint**](https://console.settlemint.com/)
   - [Docs](https://docs.settlemint.com/)
   - Features

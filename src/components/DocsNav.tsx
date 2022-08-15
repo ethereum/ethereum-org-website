@@ -1,11 +1,12 @@
 import React from "react"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 
 import Link from "./Link"
 import Emoji from "./Emoji"
 import Translation from "./Translation"
 
-import docLinks, { DeveloperDocsLink } from "../data/developer-docs-links.yaml"
+import docLinks from "../data/developer-docs-links.yaml"
+import { DeveloperDocsLink } from "../types"
 import { TranslationKey } from "../utils/translations"
 
 const Container = styled.div`

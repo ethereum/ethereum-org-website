@@ -1,6 +1,6 @@
 import React, { useState } from "react"
-import styled from "styled-components"
-import { useIntl } from "gatsby-plugin-intl"
+import styled from "@emotion/styled"
+import { useIntl } from "react-intl"
 
 import { StyledSelect as Select } from "../SharedStyledComponents"
 import ButtonLink from "../ButtonLink"
@@ -64,7 +64,7 @@ const StakingLaunchpadWidget: React.FC<IProps> = () => {
   const data = {
     testnet: {
       label: "Goerli/Prater testnet",
-      url: "https://prater.launchpad.ethereum.org",
+      url: "https://goerli.launchpad.ethereum.org",
     },
     mainnet: {
       label: "Mainnet",

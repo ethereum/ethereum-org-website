@@ -2,14 +2,12 @@ import React from "react"
 import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
-import { useIntl } from "gatsby-plugin-intl"
+import { useIntl } from "react-intl"
 import { Location } from "@reach/router"
 import { getSrc } from "gatsby-plugin-image"
 
-import { languageMetadata } from "../utils/languages"
+import { isLang } from "../utils/languages"
 import { translateMessageId } from "../utils/translations"
-
-const supportedLanguages = Object.keys(languageMetadata)
 
 type NameMeta = {
   name: string
@@ -114,7 +112,7 @@ const PageMetadata: React.FC<IProps> = ({
         const { pathname } = location
         let canonicalPath = pathname
         const firstDirectory = canonicalPath.split("/")[1]
-        if (!supportedLanguages.includes(firstDirectory)) {
+        if (!isLang(firstDirectory)) {
           canonicalPath = `/en${pathname}`
         }
         const canonical =

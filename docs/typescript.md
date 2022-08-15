@@ -9,6 +9,24 @@ When we reach the moment where the entire codebase is in TS, we will enable `noI
 
 This is just starting, any suggestion is always welcomed and appreciated.
 
+## Declaring types for variables
+
+When declaring types for variables, you should only declare a type when it isn't obvious and the type can't be inferred.
+
+```
+// Do not use
+const someVar: string = 'string'
+
+// Use
+const someVar = 'string'
+```
+
+Do declare a type for an unassigned variable when a type can not be inferred.
+
+```
+const someVar: string
+```
+
 ## Migration guide & contribution opportunity 🎉
 
 We'd love your help in migrating our codebase!
@@ -97,3 +115,6 @@ With the release of Gatsby v4.15.0, [the config option `graphqlTypegen` has been
 - [Official Typescript website](https://www.typescriptlang.org/)
 - [GraphQL Typegen](https://www.gatsbyjs.com/docs/how-to/local-development/graphql-typegen/)
 - [Typescript Challenges](https://github.com/type-challenges/type-challenges)
+- [React TS Cheatsheet](https://react-typescript-cheatsheet.netlify.app/)
+- [Typescript Deep Dive](https://basarat.gitbook.io/typescript/)
+- [Typescript errors](https://typescript.tv/errors/)

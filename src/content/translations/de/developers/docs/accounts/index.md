@@ -84,7 +84,7 @@ Repeat passphrase:
 
 Es ist möglich, neue öffentliche Schlüssel von deinem privaten Schlüssel abzuleiten, aber nicht, einen privaten Schlüssel von öffentlichen Schlüsseln abzuleiten. Dies bedeutet, dass es unerlässlich ist, einen privaten Schlüssel sicher und, wie der Name schon sagt, **PRIVAT** aufzubewahren.
 
-Du benötigst einen privaten Schlüssel, um Nachrichten und Transaktionen zu signieren, die eine Signatur nach außen anzeigen. Andere können dann die Unterschrift verwenden, um deinen öffentlichen Schlüssel abzuleiten und den Autor der Nachricht zu verifizieren. In deiner App kannst du eine Javascript-Bibliothek verwenden, um Transaktionen ins Netzwerk zu senden.
+Du benötigst einen privaten Schlüssel, um Nachrichten und Transaktionen zu signieren, die eine Signatur nach außen anzeigen. Andere können dann die Unterschrift verwenden, um deinen öffentlichen Schlüssel abzuleiten und den Autor der Nachricht zu verifizieren. In deiner App kannst du eine JavaScript-Bibliothek verwenden, um Transaktionen ins Netzwerk zu senden.
 
 ## Vertragskonten {#contract-accounts}
 

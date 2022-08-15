@@ -2,8 +2,8 @@
 import React, { useState } from "react"
 import { graphql } from "gatsby"
 import { getImage, GatsbyImage } from "gatsby-plugin-image"
-import { useIntl } from "gatsby-plugin-intl"
-import styled from "styled-components"
+import { useIntl } from "react-intl"
+import styled from "@emotion/styled"
 import { shuffle } from "lodash"
 
 // Components
@@ -471,7 +471,14 @@ const FindWalletPage = ({ data, location }) => {
           <ResetContainer
             role="button"
             aria-labelledby="reset-filter"
-            onClick={resetFilters}
+            onClick={() => {
+              resetFilters()
+              trackCustomEvent({
+                eventCategory: "WalletFilterReset",
+                eventAction: `WalletFilterReset clicked`,
+                eventName: `reset filters`,
+              })
+            }}
           >
             <ResetIcon
               aria-hidden="true"

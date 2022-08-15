@@ -1,6 +1,7 @@
 import React, { useState } from "react"
-import { useIntl } from "gatsby-plugin-intl"
-import styled, { css } from "styled-components"
+import { useIntl } from "react-intl"
+import { css, Theme } from "@emotion/react"
+import styled from "@emotion/styled"
 import { useQuery, gql } from "@apollo/client"
 
 import ButtonLink from "./ButtonLink"
@@ -12,10 +13,14 @@ import { ButtonSecondary } from "./SharedStyledComponents"
 import { getLocaleTimestamp } from "../utils/time"
 import { Lang } from "../utils/languages"
 
-const loadingStyles = css`
+const loadingStyles = (theme: Theme) => css`
   font-size: 0;
-  background: ${({ theme }) =>
-    `linear-gradient(-90deg, ${theme.colors.lightBorder} 0%, ${theme.colors.searchBackgroundEmpty} 50%, ${theme.colors.lightBorder} 100%)`};
+  background: linear-gradient(
+    -90deg,
+    ${theme.colors.lightBorder} 0%,
+    ${theme.colors.searchBackgroundEmpty} 50%,
+    ${theme.colors.lightBorder} 100%
+  );
   background-size: 400% 400%;
   animation: pulse 1.2s ease-in-out infinite;
 
@@ -100,7 +105,7 @@ const SkeletonAvatar = styled.div`
   width: 40px;
   margin-right: 0.5rem;
   border-radius: 50%;
-  ${loadingStyles}
+  ${({ theme }) => loadingStyles(theme)}
 `
 
 const Info = styled.div`
@@ -109,7 +114,7 @@ const Info = styled.div`
 `
 
 const SkeletonInfo = styled(Info)`
-  ${loadingStyles}
+  ${({ theme }) => loadingStyles(theme)}
   height: 40px;
   flex: 1;
   border-radius: 3px;
@@ -122,7 +127,7 @@ const ButtonContainer = styled.div`
 `
 
 const SkeletonButtonContainer = styled(ButtonContainer)`
-  ${loadingStyles}
+  ${({ theme }) => loadingStyles(theme)}
   width: 145px;
   border-radius: 3px;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {

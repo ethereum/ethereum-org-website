@@ -143,7 +143,7 @@ The algorithm used to generate the set of DAGs used to compute the work for a bl
 ```python
 def get_prevhash(n):
     from pyethereum.blocks import GENESIS_PREVHASH
-    from pyethreum import chain_manager
+    from pyethereum import chain_manager
     if num <= 0:
         return hash_to_int(GENESIS_PREVHASH)
     else:

@@ -61,7 +61,7 @@ Door het staken van uw ETH kunt u beloningen verdienen terwijl u het Ethereum-ne
 
 - [Meer over staking](/staking/)
 
-### Ondersteun projecten {#suport-projects}
+### Ondersteun projecten {#support-projects}
 
 Het Ethereum-ecosysteem is op een missie om publieke goederen te financieren en waardevolle projecten te beïnvloeden. Met zeer kleine donaties kunt u uw steun tonen en toestaan dat belangrijk werk wordt uitgevoerd.
 
@@ -92,7 +92,7 @@ Het Ethereum-ecosysteem is op een missie om publieke goederen te financieren en 
 - [Crypto-banen](https://crypto.jobs/)
 - [Carrières bij ConsenSys](https://consensys.net/careers/)
 - [Lijst met crypto-banen](https://cryptojobslist.com/ethereum-jobs)
-- [Jobboard van Bankless ](https://pallet.xyz/list/bankless/jobs)
+- [Jobboard van Bankless](https://pallet.xyz/list/bankless/jobs)
 - [Banen bij useWeb3](https://www.useweb3.xyz/jobs)
 - [Banen bij Web3](https://web3.career)
 - [Web3 Army](https://web3army.xyz/)

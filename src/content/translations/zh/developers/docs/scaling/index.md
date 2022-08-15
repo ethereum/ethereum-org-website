@@ -101,7 +101,7 @@ _请注意，视频中的解释使用“第二层”这一术语指代所有链�
 
 ## 延伸阅读 {#further-reading}
 
-- [以 rollup 为中心的以太坊路线图](https://ethereum-magicians. org/t/a-rollup-centric-ethereum-roadmap/4698) _Vitalik Buterin_
+- [以 rollup 为中心的以太坊路线图](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698) _Vitalik Buterin_
 - [有关以太坊第二层扩容解决方案的最新分析](https://www.l2beat.com/)
 - [评估以太坊第二层扩容解决方案：一个比较框架](https://medium.com/matter-labs/evaluating-ethereum-l2-scaling-solutions-a-comparison-framework-b6b2f410f955)
 - [卷叠不完全指南](https://vitalik.ca/general/2021/01/05/rollup.html)

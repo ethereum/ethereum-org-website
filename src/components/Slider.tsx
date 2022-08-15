@@ -1,5 +1,6 @@
 import React, { useCallback, useEffect, useState } from "react"
-import styled, { useTheme } from "styled-components"
+import { useTheme } from "@emotion/react"
+import styled from "@emotion/styled"
 import useEmblaCarousel from "embla-carousel-react"
 
 import Icon from "./Icon"

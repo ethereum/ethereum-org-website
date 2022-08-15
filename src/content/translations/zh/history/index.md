@@ -213,10 +213,10 @@ sidebarDepth: 1
 
 <ExpandableCard title="君士坦丁堡升级以太坊改进提案" contentPreview="Official improvements included in this fork.">
 
-- [EIP-145](https://eips.ethereum.org/EIPS/eip-145) – 优化某些链上操作的成本。\_
-- [EIP-1014](https://eips.ethereum.org/EIPS/eip-1014) – 使您能与尚未创建的地址交互。\_
-- [EIP-1052](https://eips.ethereum.org/EIPS/eip-1052) – 优化某些链上操作的成本。\_
-- [EIP-1234](https://eips.ethereum.org/EIPS/eip-1234) – 确保区块链在权益证明前不会冻结。\_
+- [EIP-145](https://eips.ethereum.org/EIPS/eip-145) – _优化某些链上操作的成本。_
+- [EIP-1014](https://eips.ethereum.org/EIPS/eip-1014) – _使您能与尚未创建的地址交互。_
+- [EIP-1052](https://eips.ethereum.org/EIPS/eip-1052) – _优化某些链上操作的成本。_
+- [EIP-1234](https://eips.ethereum.org/EIPS/eip-1234) – _确保区块链在权益证明前不会冻结。_
 
 </ExpandableCard>
 

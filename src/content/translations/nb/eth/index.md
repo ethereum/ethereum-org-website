@@ -14,7 +14,7 @@ lang: nb
 
 ## Hva er ETH, og hvordan får jeg tak i det? {#what-is-eth-and-how-do-i-get-it}
 
-Ether, eller ETH, er Ethereums egen valuta. Det er "digitale penger" som kan sendes over Internett umiddelbart og rimelig, og kan også brukes i mange[ Ethereum-baserte applikasjoner](/dapps/).
+Ether, eller ETH, er Ethereums egen valuta. Det er "digitale penger" som kan sendes over Internett umiddelbart og rimelig, og kan også brukes i mange [Ethereum-baserte applikasjoner](/dapps/).
 
 Den enkleste måten å få tak i ETH på er å kjøpe noen. Det finnes mange kryptovaluta-børser som lar deg kjøpe ETH, men hvilken du bør velge, avhenger av hvor du bor og hvordan du vil betale.
 

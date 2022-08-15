@@ -111,7 +111,7 @@ sidebar: true
 
 要开发以太坊应用程序，您需要在私有网络上运行它以了解它的工作方式，然后再部署。 与在计算机上创建本地服务器以便进行 Web 开发的方法类似，您可以创建本地区块链实例来测试您的去中心化应用程序。 这样，迭代将比公共测试网快很多。
 
-有一些项目和工具专门协助这方面的工作。 了解关于[开发网络](/developers/docs/development networks/)的更多信息。
+有一些项目和工具专门协助这方面的工作。 了解关于[开发网络](/developers/docs/development-networks/)的更多信息。
 
 ### 联盟网络 {#consortium-networks}
 

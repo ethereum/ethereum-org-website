@@ -1,11 +1,11 @@
 ---
-title: Risorsa linguistica
+title: Risorse linguistiche
 description: Risorse non in inglese per conoscere Ethereum
 sidebar: true
 lang: it
 ---
 
-# Risorsa linguistica {#language-resources}
+# Risorse linguistiche {#language-resources}
 
 La community Ethereum è globale e composta da milioni di persone che non parlano inglese.
 
@@ -17,7 +17,7 @@ Conosci una risorsa formativa nella tua lingua? [Apri una segnalazione](https://
 
 ## Risorse di Ethereum.org {#ethereum-org}
 
-Ethereum.org è tradotto in modo nativo in oltre 40 lingue che puoi trovare nella nostra pagina [lingue](/languages).
+Ethereum.org è tradotto in modo nativo in oltre 40 lingue che puoi trovare nella nostra [pagina dedicata alle lingue](/languages).
 
 Se sei bilingue e vuoi aiutarci a raggiungere più persone, puoi anche essere coinvolto nel [Programma di Traduzione ethereum.org](/contributing/translation-program/#translation-program) e aiutarci a tradurre il sito web.
 
@@ -29,10 +29,12 @@ Se sei bilingue e vuoi aiutarci a raggiungere più persone, puoi anche essere co
 
 - [BeInCrypto](http://www.beincrypto.com.br) - notizie e articoli di criptovalute, tra cui un elenco di piattaforme di scambio, disponibili in Brasile
 - [Cointelegraph](http://cointelegraph.com.br/category/analysis) - Versione brasiliana di Cointelegraph, un importante outlet di notizie sulle criptovalute
+- [Livecoins](http://www.livecoins.com.br/ethereum) - notizie e strumenti sulle criptovalute
 - [Seudinheiro](http://www.seudinheiro.com/criptomoedas/) - notizie e relazioni sulle criptovalute
 
 **Educazione**
 
+- [web3dev](https://www.web3dev.com.br/) - Hub di contenuti e community Discord per sviluppatori web 3.
 - [Web3Brasil](https://github.com/web3brasil/web3brasil) - risorse per imparare Web3 e DeFi
 - [CriptoFacil](http://www.criptofacil.com/ultimas-noticias/) - notizie e formazione sulle criptovalute, tra cui 'Ethereum per principianti' e 'DeFi' per principianti
 - [CriptoAtivos](http://www.criptoativos.wiki.br/) - informazioni sullo spazio delle criptovalute, istruzione e blog
@@ -44,7 +46,7 @@ Se sei bilingue e vuoi aiutarci a raggiungere più persone, puoi anche essere co
 **Risorse generali**
 
 - [Ethereum.cn](https://www.ethereum.cn/) - contenuti mantenuti dalla community, che coprono l'aggiornamento del livello del consenso, tutte le note principali dell'incontro degli sviluppatori, livello 2, ecc.
-- [EthFans](https://github.com/editor-Ajian/EthFans.org-annual-collected-works/) - impara tutto, dalle basi agli argomenti avanzati di Ethereum
+- [EthFans](https://github.com/editor-Ajian/EthFans.org-annual-collected-works/) - impara qualsiasi cosa, dalle basi agli argomenti avanzati di Ethereum
 - [Unitimes](https://mp.weixin.qq.com/s/tvloZSDBSOQN9zDQj_91kA) - contenuti mantenuti dalla community, su Ethereum, DeFi, NFT, conoscenza correlata a Web3
 - [123ETH](https://123eth.org/) - un Portale per l'ecosistema di Ethereum
 - [Zhen Xiao](http://zhenxiao.com/blockchain/) - corsi online gratuiti sulle criptovalute e loro applicazioni
@@ -100,9 +102,18 @@ Se sei bilingue e vuoi aiutarci a raggiungere più persone, puoi anche essere co
 ### Turco {#tr}
 
 - [BTK Akademi](https://www.btkakademi.gov.tr/portal/course/blokzincir-ve-kripto-paralar-10569#!/about) - corso incentrato su blockchain e criptovalute
+- [The great renaming: what happened to Eth2?](https://miningturkiye.org/konu/ethereum-madenciligi-bitiyor-mu-onemli-gelisme.655/) - Traduzione turca del grande post del blog di rinominazione, che spiega il cambiamento rispetto alla terminologia di “Eth2”
 
 ### Vietnamita {#vi}
 
 - [Tino Group](https://wiki.tino.org/ethereum-la-gi/) - panoramica di Ethereum, dApps, portafogli e FAQ
 - [Tocca Chi Bitcoin](https://tapchibitcoin.io/tap-chi/tin-tuc-ethereum-eth) - piattaforma web con sottopagine per notizie e formazione di Ethereum
 - [Coin68](https://coin68.com/ethereum-tieu-diem/) - portale di criptovalute con notizie e contenuti educativi di Ethereum
+
+### Giapponese {#ja}
+
+- [Japan Virtual and Crypto assets Exchange Association](https://jvcea.or.jp/)
+- [Japan Cryptoasset Business Association](https://cryptocurrency-association.org/)
+- [Get started with blockchain development - Learn | Microsoft Docs](https://docs.microsoft.com/ja-jp/learn/paths/ethereum-blockchain-development/) - - Questo percorso d'apprendimento introduce alla blockchain e allo sviluppo sulla piattaforma di Ethereum
+- [Mastering Ethereum](https://www.oreilly.co.jp/books/9784873118963/) - Padroneggiare Ethereum in giapponese
+- [Hands-On Smart Contract Development with Solidity and Ethereum](https://www.oreilly.co.jp/books/9784873119342/) - Sviluppo pratico di smart contract con solidity ed Ethereum in giapponese

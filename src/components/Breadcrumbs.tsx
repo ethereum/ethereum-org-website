@@ -1,6 +1,6 @@
 import React from "react"
-import styled from "styled-components"
-import { useIntl } from "gatsby-plugin-intl"
+import styled from "@emotion/styled"
+import { useIntl } from "react-intl"
 
 import Link from "./Link"
 import { isLang, supportedLanguages } from "../utils/languages"
@@ -77,12 +77,11 @@ const Breadcrumbs: React.FC<IProps> = ({
 
   const crumbs = sliced.map((path, idx) => {
     // If homepage (e.g. "en"), set text to "home" translation
-    const text =
-      isLang(path) && supportedLanguages.includes(path)
-        ? translateMessageId("page-index-meta-title", intl)
-        : isTranslationKey(path)
-        ? translateMessageId(path, intl)
-        : ""
+    const text = isLang(path)
+      ? translateMessageId("page-index-meta-title", intl)
+      : isTranslationKey(path)
+      ? translateMessageId(path, intl)
+      : ""
 
     return {
       fullPath: slugChunk.slice(0, idx + 2 + startDepth).join("/") + "/",

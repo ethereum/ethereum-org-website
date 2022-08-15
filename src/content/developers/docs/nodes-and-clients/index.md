@@ -138,7 +138,6 @@ The Ethereum community maintains multiple open-source execution clients (previou
 
 This table summarizes the different clients in alphabetical order. All of them are actively maintained to stay updated with network upgrades, follow current specifications and pass [client tests](https://github.com/ethereum/tests). 
 
-
 | Client                                                   | Language | Operating systems     | Networks                                   | Sync strategies              | State pruning   |
 | -------------------------------------------------------- | -------- | --------------------- | ------------------------------------------ | ---------------------------- | --------------- |
 | [Akula](https://akula.app)                               | Rust     | Linux                 | Mainnet, Görli, Rinkeby, Ropsten, and more | Full                         | Archive, Pruned |

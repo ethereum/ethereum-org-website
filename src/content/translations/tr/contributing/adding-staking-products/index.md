@@ -9,7 +9,7 @@ sidebar: true
 
 Kullanıcıları güvende ve kendinden emin tutarken mümkün olan en iyi kaynakları listelediğimizden emin olmak istiyoruz.
 
-Herkes ethereum.org'da bir stake ürünü veya hizmeti eklemeyi önermekte özgürdür. Kaçırdığımız bir şey varsa,**[ lütfen önerin](https://github.com/ethereum/ethereum-org-website/issues/new?&template=suggest_staking_product.md)!**
+Herkes ethereum.org'da bir stake ürünü veya hizmeti eklemeyi önermekte özgürdür. Kaçırdığımız bir şey varsa, **[lütfen önerin](https://github.com/ethereum/ethereum-org-website/issues/new?&template=suggest_staking_product.md)!**
 
 Şu anda stake ürün ve hizmetlerini aşağıdaki sayfalarda listeliyoruz:
 

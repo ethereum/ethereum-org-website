@@ -18,6 +18,7 @@ The Ethereum community includes people of many different backgrounds and skillse
 - Watch or participate in the [Core Dev calls](https://www.youtube.com/playlist?list=PLaM7G4Llrb7zfMXCZVEXEABT8OSnd4-7w)
 - [Ecosystem Support Program's wishlist](https://esp.ethereum.foundation/wishlist/) - tooling, documentation, and infrastructure areas where the Ethereum Ecosystem Support Program is actively seeking grant applications
 - [Web3Bridge](https://www.web3bridge.com/) - join the aspiring web3 community in their initiative to identify, train, and support hundreds of developers and community members throughout Africa
+- Join the [Ethereum Cat Herders Discord](https://discord.io/EthCatHerders)
 
 ## Researchers & Academics <Emoji text=":mag:" size={1} />‍ {#researchers-and-academics}
 
@@ -63,7 +64,7 @@ By staking your ETH you can earn rewards whilst helping to secure the Ethereum n
 
 - [More on staking](/staking/)
 
-### Support projects {#suport-projects}
+### Support projects {#support-projects}
 
 The Ethereum ecosystem is on a mission to fund public goods and impactful projects. With very small donations you can show your support and allow important work to be realized.
 
@@ -98,6 +99,7 @@ The Ethereum ecosystem is on a mission to fund public goods and impactful projec
 - [useWeb3 Jobs](https://www.useweb3.xyz/jobs)
 - [Web3 Jobs](https://web3.career)
 - [Web3 Army](https://web3army.xyz/)
+- [Crypto Valley Jobs](https://cryptovalley.jobs/)
 
 ## Join a DAO {#decentralized-autonomous-organizations-daos}
 

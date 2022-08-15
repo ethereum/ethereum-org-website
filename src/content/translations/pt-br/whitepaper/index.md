@@ -383,7 +383,7 @@ No entanto, há vários desvios importantes dessas suposições:
 3. A distribuição do poder de mineração pode acabar sendo radicalmente desigual na prática.
 4. Especuladores, inimigos políticos e vândalos que se prestam a causar danos à rede existem, e eles podem estabelecer contratos onde o custo é muito menor do que o custo pago por outros nós de verificação.
 
-(1) fornece uma tendência para o minerador incluir menos transações, e (2) aumenta `NC`. Portanto, esses dois efeitos pelo menos parcialmente cancelam um ao outro.<sup>[Como?](https://github. om/ethereum/wiki/issues/447#issuecomment-316972260)</sup> (3) e (4) são o grande problema. Para resolvê-lo, simplesmente instituímos um limite flutuante: nenhum bloco pode ter mais operações do que `BLK_LIMIT_FACTOR` vezes a média móvel exponencial de longo prazo. Especificamente:
+(1) fornece uma tendência para o minerador incluir menos transações, e (2) aumenta `NC`. Portanto, esses dois efeitos pelo menos parcialmente cancelam um ao outro.<sup>[Como?](https://github.com/ethereum/wiki/issues/447#issuecomment-316972260)</sup> (3) e (4) são o grande problema. Para resolvê-lo, simplesmente instituímos um limite flutuante: nenhum bloco pode ter mais operações do que `BLK_LIMIT_FACTOR` vezes a média móvel exponencial de longo prazo. Especificamente:
 
 ```js
 blk.oplimit = floor((blk.parent.oplimit \* (EMAFACTOR - 1) +

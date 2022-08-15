@@ -61,7 +61,7 @@ Wenn Sie Ihre eigenen ETH staken, können Sie Belohnungen verdienen und gleichze
 
 - [Mehr zum Staking](/staking/)
 
-### Projekte unterstützen {#suport-projects}
+### Projekte unterstützen {#support-projects}
 
 Das Ethereum-Ökosystem hat es sich zur Aufgabe gemacht, das Allgemeinwohl und wirkungsvolle Projekte zu finanzieren. Mit sehr kleinen Spenden können Sie Ihre Unterstützung zeigen und wichtige Arbeiten ermöglichen.
 

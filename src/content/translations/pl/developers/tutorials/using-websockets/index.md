@@ -14,6 +14,7 @@ tags:
 skill: beginner
 source: Dokumentacja Alchemy
 sourceUrl: https://docs.alchemyapi.io/guides/using-websockets
+published: 2020-12-01
 ---
 
 Jest to przewodnik na poziomie podstawowym do korzystania z WebSockets i Alchemy do wykonywania żądań do blockchainu Ethereum.

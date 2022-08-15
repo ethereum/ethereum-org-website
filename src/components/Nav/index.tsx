@@ -1,7 +1,8 @@
 import React, { useState } from "react"
-import { useIntl } from "gatsby-plugin-intl"
-import styled from "styled-components"
+import { useColorMode } from "@chakra-ui/react"
+import styled from "@emotion/styled"
 import { cloneDeep } from "lodash"
+import { useIntl } from "react-intl"
 
 import Menu from "./Menu"
 import MobileNavMenu from "./Mobile"
@@ -107,6 +108,7 @@ const HomeLogoNavLink = styled(Link)`
 
 const HomeLogo = styled(HomeIcon)`
   width: 22px;
+  height: 35px;
   opacity: 0.85;
   &:hover {
     opacity: 1;
@@ -133,16 +135,17 @@ const NavIcon = styled(Icon)`
 `
 
 export interface IProps {
-  handleThemeChange: () => void
-  isDarkTheme: boolean
   path: string
 }
 
 // TODO display page title on mobile
-const Nav: React.FC<IProps> = ({ handleThemeChange, isDarkTheme, path }) => {
+const Nav: React.FC<IProps> = ({ path }) => {
+  const { colorMode, toggleColorMode } = useColorMode()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isSearchOpen, setIsSearchOpen] = useState(false)
   const intl = useIntl()
+
+  const isDarkTheme = colorMode === "dark"
 
   const linkSections: ISections = {
     useEthereum: {
@@ -150,8 +153,8 @@ const Nav: React.FC<IProps> = ({ handleThemeChange, isDarkTheme, path }) => {
       ariaLabel: "use-ethereum-menu",
       items: [
         {
-          text: "ethereum-wallets",
-          to: "/wallets/",
+          text: "find-wallet",
+          to: "/wallets/find-wallet/",
         },
         {
           text: "get-eth",
@@ -283,6 +286,10 @@ const Nav: React.FC<IProps> = ({ handleThemeChange, isDarkTheme, path }) => {
             {
               text: "bridges",
               to: "/bridges/",
+            },
+            {
+              text: "zero-knowledge-proofs",
+              to: "/zero-knowledge-proofs/",
             },
           ],
         },
@@ -425,9 +432,9 @@ const Nav: React.FC<IProps> = ({ handleThemeChange, isDarkTheme, path }) => {
               <Menu path={path} sections={linkSections} />
             </LeftItems>
             <RightItems>
-              <Search useKeyboardShortcuts />
+              <Search useKeyboardShortcut />
               <ThemeToggle
-                onClick={handleThemeChange}
+                onClick={toggleColorMode}
                 aria-label={
                   isDarkTheme ? "Switch to Light Theme" : "Switch to Dark Theme"
                 }
@@ -448,7 +455,7 @@ const Nav: React.FC<IProps> = ({ handleThemeChange, isDarkTheme, path }) => {
             isSearchOpen={isSearchOpen}
             isDarkTheme={isDarkTheme}
             toggleMenu={handleMenuToggle}
-            toggleTheme={handleThemeChange}
+            toggleTheme={toggleColorMode}
             linkSections={mobileLinkSections}
           />
         </NavContent>

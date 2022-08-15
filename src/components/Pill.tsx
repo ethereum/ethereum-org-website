@@ -1,7 +1,7 @@
 import React from "react"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 
-const Primary = styled.div`
+const Primary = styled.div<{ color?: string }>`
   display: flex;
   background: ${(props) =>
     props.color
@@ -30,7 +30,7 @@ const Secondary = styled.div`
 export interface IProps {
   className?: string
   isSecondary?: boolean
-  color: string
+  color?: string
 }
 
 const Pill: React.FC<IProps> = ({

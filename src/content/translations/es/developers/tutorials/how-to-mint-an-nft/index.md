@@ -18,7 +18,7 @@ published: 2021-04-22
 
 Todos ellos acuñaron sus NFT usando la poderosa API de Alchemy. En este tutorial, le enseñaremos a hacer lo mismo en < 10 minutos.
 
-«Acuñar un NFT» es el acto de publicar una instancia única de su token ERC-721 en la cadena de bloques. Usando nuestro contrato inteligente de la[ parte 1 de esta serie de tutoriales NFT](/developers/tutorials/how-to-write-and-deploy-an-nft/), hagamos flexibles nuestras habilidades Web3 y acuñemos un NFT. Al finalizar este tutorial, será capaz de localizar tantos NFT como se le antojen (¡o su billetera alcance!).
+«Acuñar un NFT» es el acto de publicar una instancia única de su token ERC-721 en la cadena de bloques. Usando nuestro contrato inteligente de la [parte 1 de esta serie de tutoriales NFT](/developers/tutorials/how-to-write-and-deploy-an-nft/), hagamos flexibles nuestras habilidades Web3 y acuñemos un NFT. Al finalizar este tutorial, será capaz de localizar tantos NFT como se le antojen (¡o su billetera alcance!).
 
 ¡Comencemos!
 
@@ -77,7 +77,7 @@ Una vez que haya creado una cuenta:
 
 - Subir una imagen a Pinata: esta será la imagen del activo para su NFT. Dele a su activo el nombre que desee.
 
-- Una vez subido, verá la info dentro de la tabla en la página ''Files''. También verá una columna CID. Puede copiar el CID haciendo clic en el botón copiar junto a él. Puede ver el activo subido en `https://gateway.pinata.cloud/ipfs/<CID>`. Para ejemplo, puede ver la imagen que usamos en IPFS[ aquí](https://gateway.pinata.cloud/ipfs/QmarPqdEuzh5RsWpyH2hZ3qSXBCzC5RyK3ZHnFkAsk7u2f).
+- Una vez subido, verá la info dentro de la tabla en la página ''Files''. También verá una columna CID. Puede copiar el CID haciendo clic en el botón copiar junto a él. Puede ver el activo subido en `https://gateway.pinata.cloud/ipfs/<CID>`. Para ejemplo, puede ver la imagen que usamos en IPFS [aquí](https://gateway.pinata.cloud/ipfs/QmarPqdEuzh5RsWpyH2hZ3qSXBCzC5RyK3ZHnFkAsk7u2f).
 
 He aquí un resumen de los pasos descritos anteriormente para aquellos que tienen memoria visual:
 

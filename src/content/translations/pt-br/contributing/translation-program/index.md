@@ -130,7 +130,7 @@ Se você é um tradutor da ethereum.org ou deseja vir a ser, fique à vontade pa
 
 - [Portal de idiomas da Microsoft](https://www.microsoft.com/en-us/language) _: útil para encontrar e verificar as traduções padrão de termos técnicos_
 - [Linguee](https://www.linguee.com/) _: mecanismo de busca para traduções e dicionário que permite a pesquisa por palavra ou frase_
-- [ Proz ](https://www.proz.com/search/) _: banco de dados de traduções, dicionários e glossários para termos especializados_
+- [Proz](https://www.proz.com/search/) _: banco de dados de traduções, dicionários e glossários para termos especializados_
 - [Eurotermbank](https://www.eurotermbank.com/) _: coleções de terminologia europeia em 42 idiomas_
 
 ### Comunidades {#communities}

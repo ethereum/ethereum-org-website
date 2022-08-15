@@ -23,16 +23,16 @@ sidebar: true
 
 ### 连接到以太坊节点 {#connect-to-ethereum-nodes}
 
-使用提供器，这些库允许您连接到以太坊并读取它的数据，不管是通过 JSON-RPC、INFURA、Etherscan、Alchemy 还是 Metamask。
+使用提供器，这些库允许您连接到以太坊并读取它的数据，不管是通过 JSON-RPC、INFURA、Etherscan、Alchemy 还是 MetaMask。
 
 **Ethers 示例**
 
 ```js
 // 一个 Web3Provider 包含了标准的 Web3 提供者(provider)，这个提供者
-//相当于将 Metamask 作为一个以太坊窗口注入到每个页面中。
+//相当于将 MetaMask 作为一个以太坊窗口注入到每个页面中。
 const provider = new ethers.providers.Web3Provider(window.ethereum)
 
-// Metamask 插件同时可以签署每一笔交易
+// MetaMask 插件同时可以签署每一笔交易
 // 从而更改区块链中的状态。
 // 为此，我们需要帐户签名者...
 const signer = provider.getSigner()
@@ -284,5 +284,5 @@ _还有哪些社区资源对您有所帮助？ 请编辑本页面并添加它！
 ## 相关教程 {#related-tutorials}
 
 - [设置 Web3js 以在 JavaScript 中使用以太坊区块链](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– 在项目中设置 web3.js 的说明。_
-- [在 JavaScript 中调用智能合约 ](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– 使用稳定币 DAI 代币，了解如何使用 JavaScript 调用合约函数。_
-- [使用 Web3 和 Alchemy 发送交易](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) _ – 从后端发送交易分步指南。_
+- [在 JavaScript 中调用智能合约](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– 使用稳定币 DAI 代币，了解如何使用 JavaScript 调用合约函数。_
+- [使用 Web3 和 Alchemy 发送交易](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) _– 从后端发送交易分步指南。_

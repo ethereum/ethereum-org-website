@@ -34,7 +34,7 @@ incomplete: true
 - [ERC-777](/developers/docs/standards/tokens/erc-777/) - 关于 ERC-20 的代币标准改进。
 - [ERC-1155](/developers/docs/standards/tokens/erc-1155/) - 一个能包括同质化和非同质化资产的代币标准。
 
-了解更多关于[ 代币标准](/developers/docs/standards/tokens/)的信息。
+了解更多关于 [代币标准](/developers/docs/standards/tokens/)的信息。
 
 ## 延伸阅读 {#further-reading}
 

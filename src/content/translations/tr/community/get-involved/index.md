@@ -61,7 +61,7 @@ ETH'nizi stake ederek, Ethereum ağının güvenliğini sağlamaya yardımcı ol
 
 - [Stake etme hakkında daha fazla bilgi](/staking/)
 
-### Projeleri destekleyin {#suport-projects}
+### Projeleri destekleyin {#support-projects}
 
 Ethereum ekosistemi, kamu mallarını ve etkili projeleri finanse etmeyi hedefler. Çok küçük bağışlarla desteğinizi gösterebilir ve önemli işlerin gerçekleşmesine olanak sağlayabilirsiniz.
 
