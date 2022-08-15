@@ -763,6 +763,7 @@ const GlobalStyle: React.FC = () => {
           vertical-align: middle;
 
           svg {
+            display: inline;
             fill: ${theme.colors.primary};
             visibility: hidden;
           }
