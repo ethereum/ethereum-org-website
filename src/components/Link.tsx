@@ -9,24 +9,22 @@ import { BsQuestionSquareFill } from "react-icons/bs"
 
 import { Lang } from "../utils/languages"
 import { trackCustomEvent, EventOptions } from "../utils/matomo"
-import { Direction } from "../types"
 
 const HASH_PATTERN = /^#.*/
 
 const isHashLink = (to: string): boolean => HASH_PATTERN.test(to)
 
-export interface IProps extends LinkProps {
+export interface IBaseProps {
   to?: string
   href?: string
-  dir?: Direction
   hideArrow?: boolean
   isPartiallyActive?: boolean
   customEventOptions?: EventOptions
-  onClick?: () => void
 }
 
+export interface IProps extends IBaseProps, LinkProps {}
+
 const LinkWrapper: React.FC<IProps> = ({
-  dir = "ltr",
   to: toProp,
   href,
   children,
@@ -46,11 +44,6 @@ const LinkWrapper: React.FC<IProps> = ({
   const isStatic = to.includes("static")
   const isPdf = to.includes(".pdf")
 
-  const commonProps = {
-    dir,
-    ...restProps,
-  }
-
   const eventOptions: EventOptions = {
     eventCategory: `External link`,
     eventAction: `Clicked`,
@@ -62,7 +55,7 @@ const LinkWrapper: React.FC<IProps> = ({
   // See https://github.com/gatsbyjs/gatsby/issues/21909
   if (isHash) {
     return (
-      <Link href={to} {...commonProps}>
+      <Link href={to} {...restProps}>
         {children}
       </Link>
     )
@@ -90,7 +83,7 @@ const LinkWrapper: React.FC<IProps> = ({
             customEventOptions ? customEventOptions : eventOptions
           )
         }}
-        {...commonProps}
+        {...restProps}
       >
         {children}
       </Link>
@@ -107,7 +100,7 @@ const LinkWrapper: React.FC<IProps> = ({
       isPartiallyActive={isPartiallyActive}
       activeStyle={{ color: theme.colors.primary }}
       whiteSpace={isGlossary ? "nowrap" : "normal"}
-      {...commonProps}
+      {...restProps}
     >
       {children}
       {isGlossary && (

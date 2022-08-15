@@ -1,9 +1,9 @@
 import React from "react"
-import { Button, useColorModeValue } from "@chakra-ui/react"
+import { Button, ButtonProps } from "@chakra-ui/react"
 
-import Link, { IProps as ILinkProps } from "./Link"
+import Link, { IBaseProps as ILinkProps } from "./Link"
 
-export interface IProps extends ILinkProps {}
+export interface IProps extends ILinkProps, ButtonProps {}
 
 const ButtonLink: React.FC<IProps> = ({ children, ...props }) => {
   return (

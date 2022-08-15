@@ -5,7 +5,7 @@ import { Wrap, WrapItem } from "@chakra-ui/react"
 
 import { Content } from "./SharedStyledComponents"
 import ButtonLink, { IProps as IButtonLinkProps } from "./ButtonLink"
-import Button from "./Button"
+import Button, { IProps as IButtonProps } from "./Button"
 
 export interface IIsReverse {
   isReverse: boolean
@@ -81,12 +81,16 @@ const Subtitle = styled.div`
   }
 `
 
-export interface IButton extends Partial<IButtonLinkProps> {
+export interface IButtonLink extends IButtonLinkProps {
+  content: ReactNode
+}
+
+export interface IButton extends IButtonProps {
   content: ReactNode
 }
 
 export interface IContent {
-  buttons?: Array<IButton>
+  buttons?: Array<IButtonLink | IButton>
   title: ReactNode
   header: ReactNode
   subtitle: ReactNode
@@ -99,6 +103,10 @@ export interface IProps {
   isReverse?: boolean
   children?: ReactNode
   className?: string
+}
+
+function isButtonLink(button: IButton | IButtonLink): button is IButtonLink {
+  return (button as IButtonLink).to !== undefined
 }
 
 const PageHero: React.FC<IProps> = ({
@@ -118,7 +126,7 @@ const PageHero: React.FC<IProps> = ({
           {buttons && (
             <Wrap spacing={2}>
               {buttons.map((button, idx) => {
-                if (button.to) {
+                if (isButtonLink(button)) {
                   return (
                     <WrapItem>
                       <ButtonLink
