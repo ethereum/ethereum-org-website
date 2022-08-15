@@ -8,6 +8,9 @@ export const Button: ComponentStyleConfig = {
       textDecoration: "none",
       boxShadow: "primary",
     },
+    _focus: {
+      boxShadow: "outline",
+    },
   },
   sizes: {
     md: {
@@ -25,35 +28,53 @@ export const Button: ComponentStyleConfig = {
         opacity: 0.8,
       },
       _active: {
-        bg: "primaryActive",
+        bg: "primaryHover",
+      },
+      _disabled: {
+        bg: "disabled",
+        opacity: 1,
       },
     },
     outline: {
+      border: "1px",
       color: "text",
       bg: "transparent",
       borderColor: "text",
       _hover: {
         color: "primary",
         bg: "transparent",
-        border: "1px",
         borderColor: "primary",
       },
       _active: {
-        bg: "secondaryButtonBackgroundActive",
+        color: "primary",
+        bg: "primaryLight",
+        borderColor: "primary",
+      },
+      _disabled: {
+        color: "disabled",
+        borderColor: "disabled",
+        opacity: 1,
       },
     },
     "outline-color": {
+      border: "1px",
       color: "primary",
       bg: "transparent",
       borderColor: "primary",
       _hover: {
         color: "primary",
         bg: "transparent",
-        border: "1px",
         borderColor: "primary",
       },
       _active: {
-        bg: "secondaryButtonBackgroundActive",
+        color: "primary",
+        bg: "primaryLight",
+        borderColor: "primary",
+      },
+      _disabled: {
+        color: "disabled",
+        borderColor: "disabled",
+        opacity: 1,
       },
     },
   },
