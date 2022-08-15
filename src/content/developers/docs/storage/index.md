@@ -47,6 +47,7 @@ Platforms with contract-based persistence:
 - [Skynet](https://siasky.net/)
 - [Storj](https://storj.io/)
 - [0Chain](https://0chain.net/)
+- [Crust Network](https://crust.network/)
 
 ### Additional considerations {#additional-consideration}
 
@@ -82,6 +83,7 @@ Decentralized tools without KYC:
 - Skynet
 - Arweave
 - Filecoin
+- Crust Network
 - IPFS
 - Ethereum
 
@@ -99,6 +101,7 @@ PoS based:
 
 - [The Beacon Chain](/upgrades/beacon-chain/)
 - Filecoin
+- Crust Network
 - 0Chain
 
 ## Related tools {#related-tools}
@@ -125,6 +128,12 @@ PoS based:
 - [Filecoin.io](https://filecoin.io/)
 - [Documentation](https://docs.filecoin.io/)
 - [GitHub](https://github.com/filecoin-project/)
+
+**Crust Network - _Crust Network provides on-chain storage services on top of the IPFS protocol._**
+
+- [Crust.network](https://crust.network/)
+- [Documentation](https://wiki.crust.network/en)
+- [GitHub](https://github.com/crustio/)
 
 **Arweave - _Arweave is a dStorage platform for storing data._**
 
