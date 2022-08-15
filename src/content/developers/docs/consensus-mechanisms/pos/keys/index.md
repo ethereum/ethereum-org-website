@@ -5,15 +5,15 @@ lang: en
 sidebar: true
 ---
 
-Ethereum secures user's assets using public-private key cryptography. The public key is used as the basis for an Ethereum address - that is, it is visible to the general public and used as a unique identifier. The private (or 'secret') key should only ever be accessible to an account owner. The private key is used to 'sign' transactions and data so that cryptography can prove that the holder approves some action of a specific private key.
+Ethereum secures user's assets using public-private key cryptography. The public key is used as the basis for an Ethereum address—that is, it is visible to the general public and used as a unique identifier. The private (or 'secret') key should only ever be accessible to an account owner. The private key is used to 'sign' transactions and data so that cryptography can prove that the holder approves some action of a specific private key.
 
 Ethereum's keys are generated using [elliptic-curve cryptography](https://en.wikipedia.org/wiki/Elliptic-curve_cryptography).
 
-However, when Ethereum switched from [proof-of-work](/developers/docs/consensus-mechanisms/pow) to [proof-of-stake](/developers/docs/consensus-mechanisms/pos) a new type of key was added to Ethereum. The original keys still work exactly the same as before - there were no changes to the elliptic-curve-based keys securing accounts. However, users needed a new type of key for participating in proof-of-stake by staking ETH and running validators. This need arose from scalability challenges associated with many messages passing between large numbers of validators that required a cryptographic method that could easily be aggregated to reduce the amount of communication required for the network to come to consensus.
+However, when Ethereum switched from [proof-of-work](/developers/docs/consensus-mechanisms/pow) to [proof-of-stake](/developers/docs/consensus-mechanisms/pos) a new type of key was added to Ethereum. The original keys still work exactly the same as before—there were no changes to the elliptic-curve-based keys securing accounts. However, users needed a new type of key for participating in proof-of-stake by staking ETH and running validators. This need arose from scalability challenges associated with many messages passing between large numbers of validators that required a cryptographic method that could easily be aggregated to reduce the amount of communication required for the network to come to consensus.
 
 This new type of key uses the [Boneh-Lyn-Shacham (BLS) signature scheme](https://wikipedia.org/wiki/BLS_digital_signature). BLS enables a very efficient aggregation of signatures but also allows reverse engineering of aggregated individual validator keys and is ideal for managing actions between validators.
 
-## The two types of validator key {#two-types-of-key}
+## The two types of validator keys {#two-types-of-keys}
 
 Before the switch to proof-of-stake, Ethereum users only had a single elliptic-curve-based private key to access their funds. With the introduction of proof-of-stake, users that wished to be solo stakers also required a **validator key** and a **withdrawal key**.
 
@@ -26,15 +26,15 @@ The validator signing key consists of two elements:
 
 The purpose of the validator private key is to actively sign on-chain operations such as block proposals and attestations. Therefore these keys have to be held in a hot wallet.
 
-This flexibility has the advantage to move validator signing keys very quickly from one device to another, however, if they have gotten lost or stolen, a thief may be able to **act maliciously** in the following ways:
+This flexibility has the advantage of moving validator signing keys very quickly from one device to another, however, if they have gotten lost or stolen, a thief may be able to **act maliciously** in a few ways:
 
-- Get the validator slashed) by:
+- Get the validator slashed by:
   - Being a proposer and signing two different beacon blocks for the same slot
-  - Being an attester and signing an attestation that "surrounds" another one.
-  - Being an attester and signing two different attestations having the same target.
-- Force a voluntary exit, which stops the validator from staking, and grants access to its ETH balance to the withdrawal key owner.
+  - Being an attester and signing an attestation that "surrounds" another one
+  - Being an attester and signing two different attestations having the same target
+- Force a voluntary exit, which stops the validator from staking, and grants access to its ETH balance to the withdrawal key owner
 
-The **validator public key** is included in the _deposit data_ which allows Ethereum to identify the validator.
+The **validator public key** is included in the transaction data when a user deposits ETH to the staking deposit contract. This is known as the _deposit data_ and it allows Ethereum to identify the validator.
 
 ### The withdrawal key {#withdrawal-key}
 
@@ -43,13 +43,13 @@ The withdrawal key will be required to move the validator balance after this is 
 - Withdrawal **private** key
 - Withdrawal **public** key
 
-Losing this key means losing access to the validator balance. However, the validator can still sign attestations and blocks since these actions require the validator private key, but there is little to no incentive to do so if the keys are lost.
+Losing this key means losing access to the validator balance. However, the validator can still sign attestations and blocks since these actions require the validator's private key, but there is little to no incentive if the withdrawal keys are lost.
 
-Separating out the validator keys from the Ethereum account keys enables multiple validators to be run by a single user.
+Separating the validator keys from the Ethereum account keys enables multiple validators to be run by a single user.
 
 ![validator key schematic](validator-key-schematic.png)
 
-## Deriving keys from other keys {#deriving-keys-from-keys}
+## Deriving keys from a seed phrase {#deriving-keys-from-seed}
 
 If every 32 ETH staked required a new set of 2 completely independent keys to be created, key management would quickly become unwieldy especially for users running multiple validators. To get around this problem, multiple validator keys can be derived from a single common secret. Storing that single secret allows access to multiple validator keys.
 
