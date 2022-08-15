@@ -150,23 +150,23 @@ For more on supported networks, read up on [Ethereum networks](/developers/docs/
 
 Each client has unique use cases and advantages, so you should choose one based on your own preferences. Diversity allows implementations to be focused on different features and user audiences. You may want to choose a client based on features, support, programming language, or licences.
 
-#### Besu {#besu}
+### Besu {#besu}
 
 Hyperledger Besu is an enterprise-grade Ethereum client for public and permissioned networks. It runs all of the Ethereum Mainnet features, from tracing to GraphQL, has extensive monitoring and is supported by ConsenSys, both in open community channels and through commercial SLAs for enterprises. It is written in Java and is Apache 2.0 licensed.
 
 Besu's extensive [documentation](https://besu.hyperledger.org/en/stable/) will guide you trough all details on its features and setups.
 
-#### Erigon {#erigon}
+### Erigon {#erigon}
 
 Erigon, formerly known as Turbo‐Geth, started as a fork of Go Ethereum oriented toward speed and disk‐space efficiency. Erigon is a completely re-architected implementation of Ethereum, currently written in Go but with implementations in other languages in work, e.g. [Akula](https://medium.com/@vorot93/meet-akula-the-fastest-ethereum-implementation-ever-built-58eaca244c39). Erigon's goal is to provide a faster, more modular, and more optimized implementation of Ethereum. It can perform a full archive node sync using around 2TB of disk space, in under 3 days.
 
-#### Go Ethereum {#geth}
+### Go Ethereum {#geth}
 
 Go Ethereum (Geth for short) is one of the original implementations of the Ethereum protocol. Currently, it is the most widespread client with the biggest user base and variety of tooling for users and developers. It is written in Go, fully open source and licensed under the GNU LGPL v3.
 
 Learn more about Geth in its [documentation](https://geth.ethereum.org/docs/).
 
-#### Nethermind {#nethermind}
+### Nethermind {#nethermind}
 
 Nethermind is an Ethereum implementation created with the C# .NET tech stack, licensed with LGPL-3.0, running on all major platforms including ARM. It offers great performance with:
 
@@ -190,31 +190,31 @@ There are multiple consensus clients (previously known as 'Eth2' clients) to sup
 | [Prysm](https://docs.prylabs.network/docs/getting-started/)   | Go         | Linux, Windows, macOS | Beacon Chain, Gnosis, Goerli, Pyrmont |
 | [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/) | Java       | Linux, Windows, macOS | Beacon Chain, Gnosis, Goerli, Sepolia |
 
-### Lighthouse
+### Lighthouse {#lighthouse}
 
 Lighthouse is a consensus client implementation written in Rust under the Apache-2.0 license. It is maintained by Sigma Prime and has been stable and production-ready since Beacon Chain genesis. It is relied upon by various enterprises, staking pools and individuals. It aims to be secure, performant and interoperable in a wide range of environments, from desktop PCs to sophisticated automated deployments.
 
 Documentation can be found in [Lighthouse Book](https://lighthouse-book.sigmaprime.io/).
 
-### Lodestar
+### Lodestar {#lodestar}
 
 Lodestar is a production-ready consensus client implementation written in Typescript under the LGPL-3.0 license. It is maintained by ChainSafe Systems and is the newest of the consensus clients for solo-stakers, developers and researchers. Lodestar consists of a beacon node and validator client powered by JavaScript implementations of Ethereum protocols. Lodestar aims to improve Ethereum usability with light clients, expand accessibility to a larger group of developers and further contribute to ecosystem diversity.
 
 More information can be found on our [Lodestar website](https://lodestar.chainsafe.io/)
 
-### Nimbus
+### Nimbus {#nimbus}
 
 Nimbus is a consensus client implementation written in Nim under the Apache-2.0 license. It is a production-ready client in use by solo-stakers and staking pools. Nimbus is designed for resource efficiency, making it easy to run on resource-restricted devices and enterprise infrastructure with equal ease, without compromising stability or reward performance. A lighter resource footprint means the client has a greater margin of safety when the network is under stress.
 
 Documentation can be found in the [Nimbus Guide](https://nimbus.guide/).
 
-### Prysm
+### Prysm {#prysm}
 
 Prysm is a full-featured, open source consensus client written in Go under the GPL-3.0 license. It features an optional webapp UI and prioritizes user experience, documentation, and configurability for both stake-at-home and institutional users.
 
 Visit [Prysm docs](https://docs.prylabs.network/docs/getting-started/) to learn more.
 
-### Teku
+### Teku {#teku}
 
 Teku is one of the original Beacon Chain genesis clients. Alongside the usual goals (security, robustness, stability, usability, performance), Teku specifically aims to comply fully with all the various consensus client standards.
 
@@ -222,29 +222,29 @@ Teku offers very flexible deployment options. The beacon node and validator clie
 
 Teku is written in Java and is Apache 2.0 licensed. It is developed by the Protocols team at ConsenSys that is also responsible for Besu and Web3Signer. Learn more in [Teku docs](https://docs.teku.consensys.net/en/latest/).
 
-### Synchronization modes {#sync-modes}
+## Synchronization modes {#sync-modes}
 
 To follow and verify current data in the network, the Ethereum client needs to sync with the latest network state. This is done by downloading data from peers, cryptographically verifying their integrity, and building a local blockchain database.
 
 Synchronization modes represent different approaches to this process with various trade-offs. Clients also vary in their implementation of sync algorithms. Always refer to the official documentation of your chosen client for specifics on implementation.
 
-#### Execution layer sync modes
+### Execution layer sync modes {#execution-layer-sync-modes}
 
-#### Full sync
+#### Full sync {#full-sync}
 
 Full sync downloads all blocks (including headers, transactions, and receipts) and generates the state of the blockchain incrementally by executing every block from genesis.
 
 - Minimizes trust and offers the highest security by verifying every transaction.
 - With an increasing number of transactions, it can take days to weeks to process all transactions.
 
-#### Fast sync
+#### Fast sync {#fast-sync}
 
 Fast sync downloads all blocks (including headers, transactions, and receipts), verifies all headers, downloads the state and verifies it against the headers.
 
 - Relies on the security of the consensus mechanism.
 - Synchronization takes only a few hours.
 
-#### Light sync
+#### Light sync {#light-sync}
 
 Light client mode downloads all block headers, block data, and verifies some randomly. Only syncs tip of the chain from the trusted checkpoint.
 
@@ -253,7 +253,7 @@ Light client mode downloads all block headers, block data, and verifies some ran
 
 [More on Light clients](https://www.parity.io/blog/what-is-a-light-client/)
 
-#### Snap sync
+#### Snap sync {#snap-sync}
 
 Snap sync is the latest approach to syncing a client, pioneered by the Geth team. Using dynamic snapshots served by peers retrieves all the account and storage data without downloading intermediate trie nodes and then reconstructs the Merkle trie locally.
 
@@ -262,7 +262,7 @@ Snap sync is the latest approach to syncing a client, pioneered by the Geth team
 
 [More on snap sync](https://github.com/ethereum/devp2p/blob/master/caps/snap.md)
 
-#### Consensus layer sync modes
+### Consensus layer sync modes {#consensus-layer-sync-modes}
 
 #### Optimistic sync {#optimistic-sync}
 
@@ -270,7 +270,7 @@ Optimistic sync is a post-merge synchronization strategy designed to be opt-in a
 
 [More on optimistic sync](https://github.com/ethereum/consensus-specs/blob/dev/sync/optimistic.md)
 
-#### Checkpoint sync
+#### Checkpoint sync {#checkpoint-sync}
 
 Checkpoint sync, also known as weak subjectivity sync, creates a superior user experience for syncing Beacon Node. It's based on assumptions of [weak subjectivity](/developers/docs/consensus-mechanisms/pos/weak-subjectivity/) which enables syncing Beacon Chain from a recent weak subjectivity checkpoint instead of genesis. Checkpoint sync makes the initial sync time significantly faster with similar trust assumptions as syncing from [genesis](/glossary/#genesis-block).
 

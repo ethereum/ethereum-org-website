@@ -156,7 +156,7 @@ Instructions for installing each client are provided in the documentation linked
 
 Here are the release pages of clients where you can find their pre-built binaries or instructions on installation:
 
-##### Execution clients
+##### Execution clients {#execution-clients}
 
 - [Besu](https://github.com/hyperledger/besu/releases)
 - [Erigon](https://github.com/ledgerwatch/erigon#usage) (Doesn't provide a pre-built binary, has to be compiled)
@@ -165,7 +165,7 @@ Here are the release pages of clients where you can find their pre-built binarie
 
 It is also worth noting that client diversity is an [issue on the execution layer](/developers/docs/client-diversity/#execution-layer). It is recommended that readers consider running a minority execution client.
 
-##### Consensus clients
+##### Consensus clients {#consensus-clients}
 
 - [Lighthouse](https://github.com/sigp/lighthouse/releases/latest)
 - [Lodestar](https://chainsafe.github.io/lodestar/install/source/) (Doesn't provide a pre-built binary, only a Docker image or to be build from source)
@@ -177,7 +177,7 @@ It is also worth noting that client diversity is an [issue on the execution laye
 
 [See the latest network client usage](https://clientdiversity.org/) and learn more about [client diversity](/developers/docs/client-diversity).
 
-##### Verifying the software
+##### Verifying the software {#verifying-the-software}
 
 When downloading software from the internet, it's recommended to verify its integrity. This step is optional but especially with crucial infrastracture piece like the Ethereum client, it's important to be aware of potential attack vectors and avoid them. If you downloaded a pre-built binary, you need to trust it and risk that an attacker could swap the executable for a malicious one.
 
