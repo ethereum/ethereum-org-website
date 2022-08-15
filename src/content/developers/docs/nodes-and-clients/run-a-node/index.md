@@ -317,7 +317,7 @@ If you plan to run a validator, make sure to add a configuration flag which spec
 
 **Note that we recommend waiting for merge-ready client releases before doing this on Ethereum Mainnet—for now just practice on a testnet such as Kiln or Goerli**
 
-When starting Beacon Node on testnet, you can save significantly save syncing time by using public endpoint for [Checkpoint sync](https://notes.ethereum.org/@launchpad/checkpoint-sync).
+When starting Beacon Node on testnet, you can significantly save syncing time by using public endpoint for [Checkpoint sync](https://notes.ethereum.org/@launchpad/checkpoint-sync).
 
 #### Running a consensus client
 
