@@ -163,21 +163,22 @@ const IconContainer = styled.div`
 `
 
 const StyledIcon = styled(Icon)<{ selected: boolean }>`
-  width: 1.3rem;
-  height: 1.3rem;
+  border-radius: 100%;
+  width: 1rem;
+  height: 1rem;
   margin: 0 0.25rem;
   fill: ${(props) =>
-    props.selected === true ? props.theme.colors.white : "rgba(0, 0, 0, 0)"};
+    props.selected === true ? props.theme.colors.primary : "rgba(0, 0, 0, 0)"};
   background: ${(props) =>
     props.selected === true
       ? props.theme.colors.primary
       : props.theme.colors.priceCardBackground};
-  border-radius: 4px;
-  border: 1px solid
+  outline: 1.5px solid
     ${(props) =>
       props.selected === true
         ? props.theme.colors.primary
         : props.theme.colors.text};
+  outline-offset: 3px;
 `
 
 // Types
@@ -533,7 +534,7 @@ const WalletPersonasSidebar = ({
                 aria-label={`${persona.title} filter`}
               >
                 <StyledIcon
-                  name="check"
+                  name="circle"
                   selected={selectedPersona === idx}
                   size="2rem"
                 />
