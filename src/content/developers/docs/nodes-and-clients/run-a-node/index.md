@@ -315,7 +315,7 @@ The consensus client also needs the path to the execution client's `jwt-secret` 
 
 If you plan to run a validator, make sure to add a configuration flag which specifies Ethereum address of the fee recipient. This is where ether rewards for your validator accumulates. Each consensus client has an option e.g. `--suggested-fee-recipient=0xabcd1` that takes an Ethereum address as an argument.
 
-**Note that we recommend waiting for merge-ready client releases before doing this on Ethereum Mainnet—for now just practice on a testnet such as Kiln or Goerli**
+**Note that we recommend waiting for merge-ready client releases before doing this on Ethereum Mainnet—for now just practice on a testnet such as Kiln, Ropsten, Sepolia or Goerli**
 
 When starting Beacon Node on testnet, you can significantly save syncing time by using public endpoint for [Checkpoint sync](https://notes.ethereum.org/@launchpad/checkpoint-sync).
 
