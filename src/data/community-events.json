@@ -502,5 +502,14 @@
     "description": "The Ethereum dev conference in Dubai on everything DeFi, NFTs, EVM scaling, layers 2 and more with a focus on decentralization and community projects.",
     "startDate": "2023-03-14",
     "endDate": "2023-03-16"
+  },
+  {
+    "title": "ETH PRIVACY",
+    "to": "http://www.ethprivacy.net/",
+    "sponsor": null,
+    "location": "Turkey, Istanbul",
+    "description": "The First Hackathon around Privacy",
+    "startDate": "2023-04-29",
+    "endDate": "2023-04-30"
   }
 ]
