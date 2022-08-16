@@ -18,6 +18,7 @@ const isHashLink = (to: string): boolean => HASH_PATTERN.test(to)
 export interface IBaseProps {
   to?: string
   href?: string
+  language?: Lang
   hideArrow?: boolean
   isPartiallyActive?: boolean
   customEventOptions?: EventOptions
@@ -27,9 +28,25 @@ export interface IProps extends IBaseProps, LinkProps {
   dir?: Direction // TODO: remove this prop once we use the native Chakra RTL support
 }
 
+/**
+ * Link wrapper which handles:
+ *
+ * - Hashed links
+ * e.g. <Link href="/page-2/#specific-section">
+ *
+ * - External links
+ * e.g. <Link href="https://example.com/">
+ *
+ * - PDFs & static files (which open in a new tab)
+ * e.g. <Link href="/eth-whitepaper.pdf">
+ *
+ * - Intl links
+ * e.g. <Link href="/page-2/" language="de">
+ */
 const LinkWrapper: React.FC<IProps> = ({
   to: toProp,
   href,
+  language,
   dir = "ltr",
   children,
   hideArrow = false,
@@ -39,7 +56,8 @@ const LinkWrapper: React.FC<IProps> = ({
 }) => {
   const theme = useTheme()
 
-  // TODO: in the next PR we are going to deprecate `to` prop and just use `href`
+  // TODO: in the next PR we are going to deprecate the `to` prop and just use `href`
+  // this is to support the ButtonLink component which uses the `to` prop
   const to = (toProp || href)!
 
   const isExternal = to.includes("http") || to.includes("mailto:")
@@ -101,11 +119,10 @@ const LinkWrapper: React.FC<IProps> = ({
 
   // Use `gatsby-theme-i18n` Link (which prepends lang path)
   return (
-    // @ts-ignore: IntlLink is requiring a `language` prop but that prop should
-    // be optional. Opened issue: https://github.com/gatsbyjs/themes/issues/171
     <Link
       to={to}
       as={IntlLink}
+      language={language}
       isPartiallyActive={isPartiallyActive}
       activeStyle={{ color: theme.colors.primary }}
       whiteSpace={isGlossary ? "nowrap" : "normal"}

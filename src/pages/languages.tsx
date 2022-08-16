@@ -7,7 +7,7 @@ import Translation from "../components/Translation"
 import Link from "../components/Link"
 import { Page, Content } from "../components/SharedStyledComponents"
 
-import { Language, languageMetadata } from "../utils/languages"
+import { Lang, Language, languageMetadata } from "../utils/languages"
 import { translateMessageId, TranslationKey } from "../utils/translations"
 import { CardItem as LangItem } from "../components/SharedStyledComponents"
 import Icon from "../components/Icon"
@@ -87,7 +87,7 @@ const LanguagesPage = () => {
   for (const lang in languageMetadata) {
     const langMetadata = {
       ...languageMetadata[lang],
-      path: `/${lang}/`,
+      path: "/",
       name: translateMessageId(`language-${lang}` as TranslationKey, intl),
     }
 
@@ -147,7 +147,7 @@ const LanguagesPage = () => {
           </Form>
           <LangContainer>
             {translationsCompleted.map((lang) => (
-              <LangItem to={lang.path} key={lang["name"]}>
+              <LangItem to={lang.path} language={lang.code} key={lang["name"]}>
                 <LangTitle>{lang["name"]}</LangTitle>
                 <h4>{lang.localName}</h4>
               </LangItem>
