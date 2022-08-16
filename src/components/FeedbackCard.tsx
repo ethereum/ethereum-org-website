@@ -99,18 +99,14 @@ const FeedbackCard: React.FC<IProps> = ({
           {!feedbackSubmitted ? (
             <>
               <Button
-                variant="outline"
-                color="primary"
-                borderColor="primary"
+                variant="outline-color"
                 leftIcon={<ThumbsUp />}
                 onClick={() => handleSubmit(true)}
               >
                 <Translation id="yes" />
               </Button>
               <Button
-                variant="outline"
-                color="primary"
-                borderColor="primary"
+                variant="outline-color"
                 leftIcon={<ThumbsUp className="flip" />}
                 onClick={() => handleSubmit(false)}
               >
@@ -118,12 +114,7 @@ const FeedbackCard: React.FC<IProps> = ({
               </Button>
             </>
           ) : (
-            <Button
-              variant="outline"
-              color="primary"
-              borderColor="primary"
-              onClick={handleSurveyOpen}
-            >
+            <Button variant="outline-color" onClick={handleSurveyOpen}>
               <Translation id="feedback-widget-thank-you-cta" />
             </Button>
           )}
