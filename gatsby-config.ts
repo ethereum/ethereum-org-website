@@ -245,6 +245,7 @@ const config: GatsbyConfig = {
     {
       resolve: `gatsby-plugin-gatsby-cloud`,
       options: {
+        mergeLinkHeaders: false,
         generateMatchPathRewrites: false,
       },
     },
@@ -252,6 +253,7 @@ const config: GatsbyConfig = {
     {
       resolve: `gatsby-plugin-netlify`,
       options: {
+        mergeLinkHeaders: false,
         generateMatchPathRewrites: false,
       },
     },
