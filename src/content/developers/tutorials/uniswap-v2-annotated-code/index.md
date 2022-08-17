@@ -27,12 +27,11 @@ When liquidity providers want their assets back they can burn the pool tokens an
 
 ### Why v2? Why not v3? {#why-v2}
 
-As I'm writing this, [Uniswap v3](https://uniswap.org/whitepaper-v3.pdf) is almost ready. However, it is an upgrade that is much more complicated than the original. It is easier to first learn v2 and then go to v3.
+[Uniswap v3](https://uniswap.org/whitepaper-v3.pdf) is an upgrade that is much more complicated than the v2. It is easier to first learn v2 and then go to v3.
 
 ### Core Contracts vs Periphery Contracts {#contract-types}
 
-Uniswap v2 is divided into two components, a core and a periphery. This division allows the core contracts, which hold the assets and therefore _have_ to be secure, to be simpler and easier to audit.
-All the extra functionality required by traders can then be provided by periphery contracts.
+Uniswap v2 is divided into two components, a core and a periphery. This division allows the core contracts, which hold the assets and therefore _have_ to be secure, to be simpler and easier to audit. All the extra functionality required by traders can then be provided by periphery contracts.
 
 ## Data and Control Flows {#flows}
 
@@ -1011,7 +1010,7 @@ For example, imagine a case where the exchange rate is one to one and the liquid
 
 As long as the exchange rate stays between 0.9 and 1.25, the transaction takes place. If the exchange rate gets out of that range, the transaction gets cancelled.
 
-The reason for this precaution is that transactions are not immediate, you submit them and eventually a miner is going to include them in a block (unless your gas price is very low, in which case you'll need to submit another transaction with the same nonce and a higher gas price to overwrite it). You cannot control what happens during the interval between submission and inclusion.
+The reason for this precaution is that transactions are not immediate, you submit them and eventually a validator is going to include them in a block (unless your gas price is very low, in which case you'll need to submit another transaction with the same nonce and a higher gas price to overwrite it). You cannot control what happens during the interval between submission and inclusion.
 
 ```solidity
     ) internal virtual returns (uint amountA, uint amountB) {
