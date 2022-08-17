@@ -251,7 +251,6 @@ _Know of a community resource that helped you? Edit this page and add it!_
 
 ## Related topics {#related-topics}
 
-- [Mining](/developers/docs/consensus-mechanisms/pow/mining/)
 - [Transactions](/developers/docs/transactions/)
 - [Accounts](/developers/docs/accounts/)
 - [Networks](/developers/docs/networks/)
