@@ -1,5 +1,6 @@
 import React, { useContext } from "react"
-import styled, { ThemeContext } from "styled-components"
+import styled from "@emotion/styled"
+import { useTheme } from "@emotion/react"
 
 import Link from "../Link"
 import Translation from "../Translation"
@@ -82,8 +83,8 @@ export interface IProps {
 }
 
 const StakingComparison: React.FC<IProps> = ({ page, className }) => {
-  const themeContext = useContext(ThemeContext)
-  const { stakingGold, stakingGreen, stakingBlue } = themeContext.colors
+  const theme = useTheme()
+  const { stakingGold, stakingGreen, stakingBlue } = theme.colors
 
   const solo: DataType = {
     title: "page-staking-dropdown-solo",

@@ -1,14 +1,12 @@
-import React, { useEffect, useState } from "react"
-import styled from "styled-components"
+import React from "react"
+import styled from "@emotion/styled"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { useIntl } from "react-intl"
 import { graphql, PageProps } from "gatsby"
-import { shuffle } from "lodash"
 
 import PageHero from "../components/PageHero"
 import Translation from "../components/Translation"
 import Callout from "../components/Callout"
-import Card from "../components/Card"
 import Link from "../components/Link"
 import ButtonLink from "../components/ButtonLink"
 import PageMetadata from "../components/PageMetadata"
@@ -111,11 +109,6 @@ const GradientContainer = styled(GrayContainer)`
   width: 100%;
 `
 
-const ContainerCard = styled(Card)`
-  height: 100%;
-  justify-content: flex-start;
-`
-
 const CodeBox = styled.div`
   background: #000000;
   padding: 0.5rem;
@@ -195,6 +188,10 @@ const types = [
     description: <Translation id="page-wallets-web-browser" />,
   },
   {
+    emoji: ":globe_with_meridians:",
+    description: <Translation id="page-wallets-web-browser-extension" />,
+  },
+  {
     emoji: ":desktop_computer:",
     description: <Translation id="page-wallets-desktop" />,
   },
@@ -218,62 +215,10 @@ const articles = [
   },
 ]
 
-type Wallet = {
-  title: string
-  description: string
-  link: string
-  image: string
-  alt: string
-} & Partial<Queries.WalletsCsv>
-
 const WalletsPage = ({
   data,
 }: PageProps<Queries.WalletsPageQuery, Context>) => {
   const intl = useIntl()
-  const [wallets, setWallets] = useState<Array<Wallet>>([])
-
-  useEffect(() => {
-    const nodes = data.allWallets.nodes
-
-    // Add fields for CardList
-    const cardWallets: Array<Wallet> = nodes.map((node) => {
-      return {
-        ...node,
-        image: getImage(node.image),
-        // @ts-ignore
-        alt: translateMessageId(`page-find-wallet-${node.id}-logo-alt`, intl),
-        title: node.name!,
-        description: translateMessageId(
-          // @ts-ignore
-          `page-find-wallet-description-${node.id}`,
-          intl
-        ),
-        link: node.url!,
-      }
-    })
-
-    const randomWallets = shuffle(cardWallets)
-
-    setWallets(randomWallets)
-  }, [data, intl])
-
-  const cryptoCurious = wallets
-    .filter(
-      (wallet) =>
-        (wallet.has_card_deposits === "TRUE" ||
-          wallet.has_explore_dapps === "TRUE") &&
-        wallet.has_hardware !== "TRUE"
-    )
-    .slice(0, 4)
-
-  const cryptoConverted = wallets
-    .filter(
-      (wallet) =>
-        wallet.has_hardware === "TRUE" ||
-        wallet.has_high_volume_purchases === "TRUE" ||
-        wallet.has_limits_protection === "TRUE"
-    )
-    .slice(0, 4)
 
   const heroContent = {
     title: translateMessageId("page-wallets-title", intl),
@@ -296,7 +241,7 @@ const WalletsPage = ({
         description={translateMessageId("page-wallets-meta-description", intl)}
         image={getImage(data.ogImage)?.images.fallback.src}
       />
-      <PageHero content={heroContent} />
+      <PageHero content={heroContent} isReverse />
       <StyledGrayContainer>
         <Intro>
           <H2>
@@ -370,6 +315,9 @@ const WalletsPage = ({
           <H2>
             <Translation id="page-wallets-types" />
           </H2>
+          <p>
+            <Translation id="page-wallets-types-desc" />
+          </p>
           <div>
             {types.map((type, idx) => (
               <WalletType
@@ -384,47 +332,7 @@ const WalletsPage = ({
       </StyledTwoColumnContent>
       <GradientContainer>
         <Content>
-          <H2>
-            <Translation id="page-wallets-get-wallet" />
-          </H2>
-          <p>
-            <Translation id="page-wallets-get-wallet-desc" />
-          </p>
-          <p>
-            <em>
-              <Translation id="page-wallets-get-wallet-desc-2" />
-            </em>
-          </p>
-        </Content>
-        <TwoColumnContent>
-          <LeftColumn>
-            <ContainerCard
-              emoji=":thinking_face:"
-              title={translateMessageId("page-wallets-curious", intl)}
-              description={translateMessageId(
-                "page-wallets-curious-desc",
-                intl
-              )}
-            >
-              <CardList content={cryptoCurious} />
-            </ContainerCard>
-          </LeftColumn>
-          <RightColumn>
-            <ContainerCard
-              emoji=":whale:"
-              title={translateMessageId("page-wallets-converted", intl)}
-              description={translateMessageId(
-                "page-wallets-converted-desc",
-                intl
-              )}
-            >
-              <CardList content={cryptoConverted} />
-            </ContainerCard>
-          </RightColumn>
-        </TwoColumnContent>
-        <Content>
           <CentralColumn>
-            <Divider />
             <H2>
               <Translation id="page-wallets-features-title" />
             </H2>
@@ -609,40 +517,6 @@ export const query = graphql`
     }
     dapps: file(relativePath: { eq: "doge-computer.png" }) {
       ...calloutImage
-    }
-    allWallets: allWalletsCsv {
-      nodes {
-        id
-        name
-        url
-        brand_color
-        has_mobile
-        has_desktop
-        has_web
-        has_hardware
-        has_card_deposits
-        has_explore_dapps
-        has_defi_integrations
-        has_bank_withdrawals
-        has_limits_protection
-        has_high_volume_purchases
-        has_dex_integrations
-        has_multisig
-        image {
-          ...listImage
-        }
-      }
-    }
-    timestamp: walletsCsv {
-      parent {
-        ... on File {
-          id
-          name
-          fields {
-            gitLogLatestDate
-          }
-        }
-      }
     }
   }
 `

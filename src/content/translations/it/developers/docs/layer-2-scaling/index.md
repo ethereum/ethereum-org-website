@@ -234,7 +234,7 @@ Combinano le parti migliori di diverse tecnologie di livello 2 e possono offrire
 
 **ZK rollup**
 
-- [EthHub on zk-rollups](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/zk-rollups/)
+- [EthHub on ZK-rollups](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/zk-rollups/)
 
 **Optimistic rollup**
 

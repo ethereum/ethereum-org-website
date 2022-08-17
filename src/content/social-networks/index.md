@@ -42,9 +42,9 @@ Many blockchain-based social platforms have native tokens that power monetizatio
 
 4. As dapps running on the Ethereum network, which is sustained by a global, peer-to-peer network of nodes, decentralized social networks are less susceptible to server downtime and outages.
 
-5. Decentralized social platforms offer an improved monetization framework for content creators via non-fungible tokens (NFTs) NFTs, in-app crypto payments, and more.
+5. Decentralized social platforms offer an improved monetization framework for content creators via non-fungible tokens (NFTs), in-app crypto payments, and more.
 
-6. Decentralized social networks afford users a high level of privacy and anyonymity. For instance, an individual can sign in to an Ethereum-based social network using an ENS profile or wallet—without having to share personally identifiable information (PII), such as names, email addresses, etc.
+6. Decentralized social networks afford users a high level of privacy and anonymity. For instance, an individual can sign in to an Ethereum-based social network using an ENS profile or wallet—without having to share personally identifiable information (PII), such as names, email addresses, etc.
 
 7. Decentralized social networks rely on decentralized storage, not centralized databases, which are considerably better for safeguarding user data.
 

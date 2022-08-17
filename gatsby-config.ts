@@ -185,7 +185,19 @@ const config: GatsbyConfig = {
       },
     },
     // CSS in JS
-    `gatsby-plugin-styled-components`,
+    {
+      resolve: `gatsby-plugin-emotion`,
+      options: {
+        labelFormat: "[filename]--[local]",
+      },
+    },
+    {
+      resolve: "@chakra-ui/gatsby-plugin",
+      options: {
+        resetCSS: false,
+        isUsingColorMode: true,
+      },
+    },
     // Source assets
     {
       resolve: `gatsby-source-filesystem`,
@@ -255,7 +267,7 @@ const config: GatsbyConfig = {
 if (!IS_PREVIEW) {
   config.plugins = [
     ...(config.plugins || []),
-    // Matomo analtyics
+    // Matomo analytics
     {
       resolve: "gatsby-plugin-matomo",
       options: {

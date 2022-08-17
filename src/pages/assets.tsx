@@ -1,7 +1,7 @@
 import React, { useContext } from "react"
 import { useIntl } from "react-intl"
-import { ThemeContext } from "styled-components"
-import styled from "styled-components"
+import { useTheme } from "@emotion/react"
+import styled from "@emotion/styled"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { graphql, PageProps } from "gatsby"
 
@@ -78,8 +78,8 @@ const Header = styled.header`
 
 const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
   const intl = useIntl()
-  const themeContext = useContext(ThemeContext)
-  const isDarkTheme = themeContext.isDark
+  const theme = useTheme()
+  const isDarkTheme = theme.isDark
   const assetPageHeroImage = isDarkTheme
     ? data.ethDiamondPurpleHero
     : data.ethDiamondBlackHero

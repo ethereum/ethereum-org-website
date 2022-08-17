@@ -5,7 +5,7 @@ description: 在 ethereum.org 上上架内容资源的标准
 sidebar: true
 ---
 
-# 添加內容資源 {#adding-content-resources}
+# 添加内容资源 {#adding-content-resources}
 
 我们不能涵盖关于以太坊的所有内容，所以我们试着展示一些由社群创造的精彩文章、教程、简报、工作展示板和其他内容资源。 这些资源常为用户可能感兴趣的问题提供更深入的信息。
 
@@ -29,5 +29,5 @@ sidebar: true
 如果您想要将内容资源添加到 ethereum.org，并且该内容资源符合标准，请在 GitHub 上创建一个提议。
 
 <ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.md&title=">
-  创建一个议题
+  创建一个提议
 </ButtonLink>

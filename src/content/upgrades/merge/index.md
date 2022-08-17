@@ -116,6 +116,10 @@ The Merge comes with changes to consensus, which also includes changes related t
 For more information, check out this blog post by Tim Beiko on [How The Merge Impacts Ethereum’s Application Layer](https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer/).
 </ExpandableCard>
 
+## What date is The Merge? {#wen-merge}
+
+The Merge is expected to land within Q3/Q4 2022. The client developers are currently working to a soft deadline of 19th September 2022, but this could change depending upon the success of the final testnet merge (Goerli) in mid-August, continued client refinements and the hashrate of the existing miners continuing in a predictable manner. Everyone is working hard to deliver The Merge as soon as possible.
+
 ## After The Merge {#after-the-merge}
 
 This will signal the end of proof-of-work for Ethereum and start the era of a more sustainable, eco-friendly Ethereum. Learn more about [Ethereum energy consumption](/energy-consumption/).
@@ -182,7 +186,7 @@ ETH on the execution layer (Ethereum Mainnet as we know it today) is accounted f
 <ExpandableCard
 title="Misconception: &quot;When withdrawals are enabled, stakers will all exit at once.&quot;"
 contentPreview="False. Validator exits are rate limited for security reasons.">
-After the Shanghai upgrade enabled withdrawals, all validators will be incentivized to withdraw their staking balance above 32 ETH, as these funds do not add to yield and are otherwise locked. Depending on the APR (determined by total ETH staked), they may be incentivized to exit their validator(s) to reclaim their entire balance or potentially stake even more using their rewards to earn more yield.
+After the Shanghai upgrade enables withdrawals, all validators will be incentivized to withdraw their staking balance above 32 ETH, as these funds do not add to yield and are otherwise locked. Depending on the APR (determined by total ETH staked), they may be incentivized to exit their validator(s) to reclaim their entire balance or potentially stake even more using their rewards to earn more yield.
 
 An important caveat here, full validator exits are rate limited by the protocol, so only six validators may exit per epoch (every 6.4 minutes, so 1350 per day, or only ~43,200 ETH per day out of over 10 million ETH staked). This rate limit adjusts depending on the total ETH staked and prevents a mass exodus of funds. Furthermore, it prevents a potential attacker from using their stake to commit a slashable offense and exiting their entire staking balance in the same epoch before the protocol can enforce the slashing penalty.
 

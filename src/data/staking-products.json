@@ -336,7 +336,7 @@
       "hasBugBounty": false,
       "isTrustless": false,
       "isPermissionless": false,
-      "pctMajorityClient": null,
+      "pctMajorityClient": 43.8,
       "isSelfCustody": true,
       "platforms": ["Linux", "macOS", "Windows"],
       "ui": ["GUI"],

@@ -1,5 +1,6 @@
 import React, { useState } from "react"
-import styled from "styled-components"
+import { useColorMode } from "@chakra-ui/react"
+import styled from "@emotion/styled"
 import { cloneDeep } from "lodash"
 import { useIntl } from "react-intl"
 
@@ -107,6 +108,7 @@ const HomeLogoNavLink = styled(Link)`
 
 const HomeLogo = styled(HomeIcon)`
   width: 22px;
+  height: 35px;
   opacity: 0.85;
   &:hover {
     opacity: 1;
@@ -133,16 +135,17 @@ const NavIcon = styled(Icon)`
 `
 
 export interface IProps {
-  handleThemeChange: () => void
-  isDarkTheme: boolean
   path: string
 }
 
 // TODO display page title on mobile
-const Nav: React.FC<IProps> = ({ handleThemeChange, isDarkTheme, path }) => {
+const Nav: React.FC<IProps> = ({ path }) => {
+  const { colorMode, toggleColorMode } = useColorMode()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isSearchOpen, setIsSearchOpen] = useState(false)
   const intl = useIntl()
+
+  const isDarkTheme = colorMode === "dark"
 
   const linkSections: ISections = {
     useEthereum: {
@@ -431,7 +434,7 @@ const Nav: React.FC<IProps> = ({ handleThemeChange, isDarkTheme, path }) => {
             <RightItems>
               <Search useKeyboardShortcut />
               <ThemeToggle
-                onClick={handleThemeChange}
+                onClick={toggleColorMode}
                 aria-label={
                   isDarkTheme ? "Switch to Light Theme" : "Switch to Dark Theme"
                 }
@@ -452,7 +455,7 @@ const Nav: React.FC<IProps> = ({ handleThemeChange, isDarkTheme, path }) => {
             isSearchOpen={isSearchOpen}
             isDarkTheme={isDarkTheme}
             toggleMenu={handleMenuToggle}
-            toggleTheme={handleThemeChange}
+            toggleTheme={toggleColorMode}
             linkSections={mobileLinkSections}
           />
         </NavContent>

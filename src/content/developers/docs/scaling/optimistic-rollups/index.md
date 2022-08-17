@@ -258,7 +258,7 @@ Multiple implementations of Optimistic rollups exist that you can integrate into
 
 ## Further reading on optimistic rollups
 
-- [How do optimistic rollups work (The complete guide)](https://www.alchemy.com/overviews/optimistic-rollups) 
+- [How do optimistic rollups work (The complete guide)](https://www.alchemy.com/overviews/optimistic-rollups)
 - [Everything you need to know about Optimistic Rollup](https://research.paradigm.xyz/rollups)
 - [EthHub on optimistic rollups](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/optimistic_rollups/)
 - [The Essential Guide to Arbitrum](https://newsletter.banklesshq.com/p/the-essential-guide-to-arbitrum)

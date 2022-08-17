@@ -134,7 +134,7 @@
   "page-stablecoins-top-coins-intro": "Piyasa değeri",
   "page-stablecoins-top-coins-intro-code": "var olan toplam token sayısının token başına değerle çarpılmasıdır. Bu liste dinamiktir ve burada listelenen projeler ethereum.org ekibi tarafından mutlak olarak desteklenmemektedir.",
   "page-stablecoins-types-of-stablecoin": "Nasıl çalışır: sabit para türleri",
-  "page-stablecoins-usdc-banner-body": "USDc muhtemelen fiat destekli en ünlü sabit paradır. Değeri kabaca bir dolardır ve Circle ve Coinbase tarafından desteklenir.",
+  "page-stablecoins-usdc-banner-body": "USDC muhtemelen fiat destekli en ünlü sabit paradır. Değeri kabaca bir dolardır ve Circle ve Coinbase tarafından desteklenir.",
   "page-stablecoins-usdc-banner-learn-button": "USDC hakkında bilgi alın",
   "page-stablecoins-usdc-banner-swap-button": "USDC karşılığında ETH takas edin",
   "page-stablecoins-usdc-banner-title": "USDC",

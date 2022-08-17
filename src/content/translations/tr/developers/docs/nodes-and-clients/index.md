@@ -118,7 +118,7 @@ Bu tablo, farklı istemcileri özetlemektedir. Hepsi [istemci testlerini](https:
 | ------------------------------------------------------------------------------------- | -------- | --------------------- | ------------------------------------------ | --------------------------- | --------------- |
 | [Geth](https://geth.ethereum.org/)                                                    | Go       | Linux, Windows, macOS | Mainnet, Görli, Rinkeby, Ropsten           | Snap, Full                  | Archive, Pruned |
 | [Nethermind](http://nethermind.io/)                                                   | C#, .NET | Linux, Windows, macOS | Mainnet, Görli, Ropsten, Rinkeby ve dahası | Fast, Beam, Archive         | Archive, Pruned |
-| [Besu](https://pegasys.tech/solutions/hyperledger-besu/)                              | Java     | Linux, Windows, macOS | Mainnet, Rinkeby, Ropsten, Görli ve dahası | Fast, Full                  | Archive, Pruned |
+| [Besu](https://besu.hyperledger.org/en/stable/)                                       | Java     | Linux, Windows, macOS | Mainnet, Rinkeby, Ropsten, Görli ve dahası | Fast, Full                  | Archive, Pruned |
 | [Erigon](https://github.com/ledgerwatch/erigon)                                       | Go       | Linux, Windows, macOS | Mainnet, Görli, Rinkeby, Ropsten           | Full                        | Archive, Pruned |
 | [OpenEthereum (Kullanımdan kaldırıldı)](https://github.com/openethereum/openethereum) | Rust     | Linux, Windows, macOS | Mainnet, Kovan, Ropsten ve dahası          | Warp, Full                  | Archive, Pruned |
 

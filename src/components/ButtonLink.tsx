@@ -1,5 +1,5 @@
 import React from "react"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 import { margin, MarginProps } from "styled-system"
 
 import { scrollIntoView } from "../utils/scrollIntoView"

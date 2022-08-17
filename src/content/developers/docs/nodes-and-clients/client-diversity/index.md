@@ -68,7 +68,9 @@ Addressing client diversity requires more than individual users to choose minori
 
 [Erigon](https://github.com/ledgerwatch/erigon)
 
-[CoreGeth](https://core-geth.org/)
+[Akula](https://akula.app)
+
+[Go-Ethereum](https://geth.ethereum.org/)
 
 ### Consensus clients {#consensus-clients}
 

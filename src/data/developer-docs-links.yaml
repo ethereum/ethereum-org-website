@@ -75,6 +75,8 @@
               to: /developers/docs/consensus-mechanisms/pos/gasper/
             - id: docs-nav-weak-subjectivity
               to: /developers/docs/consensus-mechanisms/pos/weak-subjectivity/
+            - id: docs-nav-attestations
+              to: /developers/docs/consensus-mechanisms/pos/attestations
 - id: docs-nav-ethereum-stack
   path: /developers/docs/
   items:
@@ -104,6 +106,9 @@
         - id: docs-nav-smart-contract-security
           to: /developers/docs/smart-contracts/security/
           description: docs-nav-smart-contract-security-description
+        - id: docs-nav-smart-contract-formal-verification
+          to: /developers/docs/smart-contracts/formal-verification/
+          description: docs-nav-smart-contract-formal-verification-description
         - id: docs-nav-composability
           to: /developers/docs/smart-contracts/composability/
     - id: docs-nav-development-networks

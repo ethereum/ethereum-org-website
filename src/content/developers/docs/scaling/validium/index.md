@@ -122,7 +122,7 @@ Some teams, however, are attempting to optimize existing EVM opcodes for zk-prov
 
 ### 1. Off-chain data storage {#off-chain-data-storage}
 
-Layer 2 scaling projects, such as optimistic rollups and zk-rollups, trade the infinite scalability of pure off-chain scaling protocols (e.g., [Plasma](/developers/docs/scaling/plasma/)) for security by publishing some transaction data on L1. But this means the scalability properties of rollups is limited by data bandwith on Ethereum Mainnet ([data sharding](/upgrades/sharding/) proposes to improve Ethereum's data storage capacity for this reason).
+Layer 2 scaling projects, such as optimistic rollups and ZK-rollups, trade the infinite scalability of pure off-chain scaling protocols (e.g., [Plasma](/developers/docs/scaling/plasma/)) for security by publishing some transaction data on L1. But this means the scalability properties of rollups is limited by data bandwith on Ethereum Mainnet ([data sharding](/upgrades/sharding/) proposes to improve Ethereum's data storage capacity for this reason).
 
 Validiums achieve scalability by keeping all transaction data off-chain and only post state commitments (and validity proofs) when relaying state updates to the main Ethereum chain. The existence of validity proofs, however, gives validiums higher security guarantees than other pure off-chain scaling solutions, including Plasma and [sidechains](/developers/docs/scaling/sidechains/). By reducing the amount of data Ethereum has to process before validating off-chain transactions, validium designs greatly extend throughput on Mainnet.
 
