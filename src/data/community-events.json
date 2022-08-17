@@ -477,7 +477,7 @@
     "endDate": "2022-09-25"
   },
   {
-    "title": "LEADING PRIVACY ALLIANCE CONFERENCE",
+    "title": "Leading Privacy Alliance Conference",
     "to": "https://www.leadingprivacy.com/devcon",
     "sponsor": null,
     "location": "Bogotá, Colombia",
@@ -504,11 +504,11 @@
     "endDate": "2023-03-16"
   },
   {
-    "title": "ETH PRIVACY",
+    "title": "The First Hackathon around #Privacy",
     "to": "https://www.leadingprivacy.com/istanbul",
     "sponsor": null,
     "location": "Turkey, Istanbul",
-    "description": "The First Hackathon around Privacy",
+    "description": "We will celebrate #Privacy and discuss latest findings & development, as well as must haves and upcoming opportunities o the Ethereum Ecosystem.",
     "startDate": "2023-04-29",
     "endDate": "2023-04-30"
   }
