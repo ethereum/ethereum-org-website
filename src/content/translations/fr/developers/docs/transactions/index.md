@@ -5,7 +5,7 @@ lang: fr
 sidebar: true
 ---
 
-Les transactions sont des instructions signées cryptographiquement depuis des comptes. Un compte va initier une transaction pour mettre à jour l'état du réseau Ethereum. La transaction la plus simple consiste à transférer de l'ETH d'un compte à un autre.
+Les transactions sont des instructions signées cryptographiquement provenant des comptes. Un compte va initier une transaction pour mettre à jour l'état du réseau Ethereum. La transaction la plus simple consiste à transférer de l'ETH d'un compte à un autre.
 
 ## Prérequis {#prerequisites}
 
@@ -40,10 +40,10 @@ L'objet de transaction ressemblera un peu à ceci :
   from: "0xEA674fdDe714fd979de3EdF0F56AA9716B898ec8",
   to: "0xac03bb73b6a9e108530aff4df5077c2b3d481e5a",
   gasLimit: "21000",
-  maxFeePerGas: "300"
-  maxPriorityFeePerGas: "10"
+  maxFeePerGas: "300",
+  maxPriorityFeePerGas: "10",
   nonce: "0",
-  value: "10000000000",
+  value: "10000000000"
 }
 ```
 
@@ -154,9 +154,9 @@ Le mineur garde le pourboire **+0.000210 ETH**
 
 Du gaz est également requis pour toute interaction avec un contrat intelligent.
 
-![Diagramme montrant comment le carburant non utilisé est remboursé](./gas-tx.png) _Schéma adapté à partir du document [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![Diagramme montrant comment le gaz non utilisé est remboursé](./gas-tx.png) _Schéma adapté à partir du document [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
-Tout carburant non utilisé dans une transaction est remboursé sur le compte de l'utilisateur.
+Tout gaz non utilisé dans une transaction est remboursé sur le compte de l'utilisateur.
 
 ## Cycle de vie des transactions {#transaction-lifecycle}
 
@@ -172,13 +172,13 @@ Voici ce qui se passe une fois qu'une transaction a été soumise :
 
 ## Démonstration visuelle {#a-visual-demo}
 
-Regardez Austin vous guider à travers les transactions, le carburant et le minage.
+Regardez Austin vous guider à travers les transactions, le gaz et le minage.
 
 <YouTube id="er-0ihqFQB0" />
 
 ## Enveloppe de transaction saisie {#typed-transaction-envelope}
 
-Ethereum avait à l'origine un unique format pour les transactions. Chaque transaction contenait une nonce, le prix du carburant, la limite de carburant, l'adresse de destination, la valeur, les données, v, r et s. Ces champs sont encodés en RLP, pour ressembler à ceci :
+Ethereum avait à l'origine un unique format pour les transactions. Chaque transaction contenait une nonce, le prix du gaz, la limite de gaz, l'adresse de destination, la valeur, les données, v, r et s. Ces champs sont encodés en RLP, pour ressembler à ceci :
 
 `RLP([nonce, gasPrice, gasLimit, to, value, data, v, r, s])`
 
@@ -205,5 +205,5 @@ _Une ressource communautaire vous a aidé ? Modifiez cette page et ajoutez-la !_
 
 - [Comptes](/developers/docs/accounts/)
 - [Machine Virtuelle d'Ethereum (EVM)](/developers/docs/evm/)
-- [Carburant](/developers/docs/gas/)
+- [Gaz](/developers/docs/gas/)
 - [Minage](/developers/docs/consensus-mechanisms/pow/mining/)

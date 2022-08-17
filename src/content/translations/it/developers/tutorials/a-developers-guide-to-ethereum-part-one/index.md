@@ -9,7 +9,7 @@ tags:
   - "python"
   - "blockchain"
   - "web3.py"
-skill: principiante
+skill: beginner
 published: 2020-09-08
 source: Snake charmers
 sourceUrl: https://snakecharmers.ethereum.org/a-developers-guide-to-ethereum-pt-1/
@@ -45,7 +45,7 @@ Ci sono molti modi per descrivere Ethereum, ma il suo fulcro è costituito dalla
 
 Ogni [blocco](/developers/docs/blocks/) contiene un riferimento al blocco precedente; il `parentHash` è semplicemente l'hash del blocco precedente.
 
-<div class="featured">Nota: Ethereum fa uso regolare delle <a href="https://en.wikipedia.org/wiki/Hash_function">funzioni di hash</a> per produrre valori di dimensioni fisse ("hash"). Gli hash giocano un ruolo importante in Ethereum, ma per il momento puoi tranquillamente vederli come ID unici.</div>
+<div class="featured">Nota: Ethereum fa uso regolare delle <a href="https://wikipedia.org/wiki/Hash_function">funzioni di hash</a> per produrre valori di dimensioni fisse ("hash"). Gli hash giocano un ruolo importante in Ethereum, ma per il momento puoi tranquillamente vederli come ID unici.</div>
 
 ![Un diagramma raffigurante una blockchain che include i dati in ogni blocco](./blockchain-diagram.png)
 
@@ -63,7 +63,7 @@ Gli sviluppatori di Python che desiderano interagire con Ethereum, probabilmente
 
 <div class="featured">Nota: "nodo di Ethereum" e "client di Ethereum" sono usati in modo intercambiabile. Ad ogni modo, ci riferiamo al software eseguito da un partecipante alla rete di Ethereum. Questo software può leggere i dati del blocco, ricevere aggiornamenti quando vengono aggiunti blocchi alla catena ("minati"), trasmettere nuove transazioni e altro.</div>
 
-I [client di Ethereum](/developers/docs/nodes-and-clients/) sono configurabili per esser raggiungibili da [IPC](https://en.wikipedia.org/wiki/Inter-process_communication), HTTP, o Websocket, quindi Web3.py dovrà rispecchiare tale configurazione. Web3.py si riferisce a queste opzioni di connessione come **provider**. Occorre scegliere uno dei tre provider per collegare l'istanza di Web3.py al tuo nodo.
+I [client di Ethereum](/developers/docs/nodes-and-clients/) sono configurabili per esser raggiungibili da [IPC](https://wikipedia.org/wiki/Inter-process_communication), HTTP, o Websocket, quindi Web3.py dovrà rispecchiare tale configurazione. Web3.py si riferisce a queste opzioni di connessione come **provider**. Occorre scegliere uno dei tre provider per collegare l'istanza di Web3.py al tuo nodo.
 
 ![Un diagramma che mostra come web3.py usa IPC per connettere la tua applicazione a un nodo di Ethereum](./web3py-and-nodes.png)
 
@@ -73,10 +73,10 @@ Una volta configurato correttamente Web3.py, puoi iniziare a interagire con la b
 
 ```python
 # read block data:
-w3.eth.getBlock('latest')
+w3.eth.get_block('latest')
 
 # send a transaction:
-w3.eth.sendTransaction({'from': ..., 'to': ..., 'value': ...})
+w3.eth.send_transaction({'from': ..., 'to': ..., 'value': ...})
 ```
 
 ## Installazione {#installation}
@@ -119,7 +119,7 @@ Questo produrrà una serie di informazioni sulle versioni di Python e IPython in
 In [1]:
 ```
 
-Ciò che vedi ora è una shell interattiva di Python. Essenzialmente, è una sandbox in cui giocare. Se sei arrivato fin qui, è il momento di importare Web.py:
+Ciò che vedi ora è una shell interattiva di Python. Essenzialmente, è una sandbox in cui giocare. Se sei arrivato fin qui, è il momento di importare Web3.py:
 
 ```python
 In [1]: from web3 import Web3
@@ -142,7 +142,7 @@ Uno schema simile è usato per gestire le transazioni in <b>ether</b>. Tuttavia,
 
 </div>
 
-Prova a convertire dei valori da e verso wei. Nota che [esistono nomi per molte delle denominazioni ](https://web3py.readthedocs.io/en/stable/examples.html#converting-currency-denominations) tra ether e wei. Una delle più note è **gwei**, spesso utilizzata per rappresentare le commissioni di transazione.
+Prova a convertire dei valori da e verso wei. Nota che [esistono nomi per molte delle denominazioni](https://web3py.readthedocs.io/en/stable/examples.html#converting-currency-denominations) tra ether e wei. Una delle più note è **gwei**, spesso utilizzata per rappresentare le commissioni di transazione.
 
 ```python
 In [2]: Web3.toWei(1, 'ether')
@@ -208,7 +208,7 @@ Se esegui questo comando, vedrai un elenco di dieci stringhe che iniziano per `0
 Come menzionato, il provider di prova ha precaricato ognuno di questi conti con ether di prova. Scopriamo quanto c'è nel primo conto:
 
 ```python
-In [7]: w3.eth.getBalance(w3.eth.accounts[0])
+In [7]: w3.eth.get_balance(w3.eth.accounts[0])
 Out[7]: 1000000000000000000000000
 ```
 
@@ -226,7 +226,7 @@ Un milione di ether di prova, comunque una cifra di tutto rispetto.
 Diamo una sbirciatina allo stato di questa blockchain simulata:
 
 ```python
-In [9]: w3.eth.getBlock('latest')
+In [9]: w3.eth.get_block('latest')
 Out[9]: AttributeDict({
    'number': 0,
    'hash': HexBytes('0x9469878...'),
@@ -247,23 +247,24 @@ Vengono restituite molte informazioni su un blocco, ma qui vale la pena di sotto
 Siamo fermi al blocco zero finché non si verifica una transazione da minare, allora creiamone una. Invia qualche ether di prova da un conto all'altro:
 
 ```python
-In [10]: tx_hash = w3.eth.sendTransaction({
+In [10]: tx_hash = w3.eth.send_transaction({
    'from': w3.eth.accounts[0],
    'to': w3.eth.accounts[1],
-   'value': w3.toWei(3, 'ether')
+   'value': w3.toWei(3, 'ether'),
+   'gas': 21000
 })
 ```
 
 Questo è tipicamente il punto in cui devi aspettare vari secondi affinché la transazione venga minata in un nuovo blocco. L'intero processo va più o meno come indicato sotto:
 
-1. Invia una transazione e mantieni l'hash della transazione. Finché non è minata, la transazione è "in sospeso". `tx_hash = w3.eth.sendTransaction({ … })`
-2. Attendi che la transazione sia minata: `w3.eth.waitForTransactionReceipt(tx_hash)`
-3. Prosegui la logica dell'applicazione. Per visualizzare la transazione riuscita: `w3.eth.getTransaction(tx_hash)`
+1. Invia una transazione e mantieni l'hash della transazione. Finché non è minata, la transazione è "in sospeso". `tx_hash = w3.eth.send_transaction({ … })`
+2. Attendi che la transazione sia minata: `w3.eth.wait_for_transaction_receipt(tx_hash)`
+3. Prosegui la logica dell'applicazione. Per visualizzare la transazione riuscita: `w3.eth.get_transaction(tx_hash)`
 
 Il nostro ambiente simulato aggiungerà la transazione in un nuovo blocco istantaneamente, quindi possiamo visualizzare immediatamente la transazione:
 
 ```python
-In [11]: w3.eth.getTransaction(tx_hash)
+In [11]: w3.eth.get_transaction(tx_hash)
 Out[11]: AttributeDict({
    'hash': HexBytes('0x15e9fb95dc39...'),
    'blockNumber': 1,
@@ -275,19 +276,19 @@ Out[11]: AttributeDict({
 })
 ```
 
-Vedrai qualche dettaglio familiare qui: i campi `from`, `to` e `value` dovrebbero corrispondere agli input della tua chiamata `sendTransaction`. L'altra parte rassicurante è che questa transazione è stata inclusa come prima transazione (`'transactionIndex': 0`) nel blocco numero 1.
+Vedrai qualche dettaglio familiare qui: i campi `from`, `to` e `value` dovrebbero corrispondere agli input della tua chiamata `send_transaction`. L'altra parte rassicurante è che questa transazione è stata inclusa come prima transazione (`'transactionIndex': 0`) nel blocco numero 1.
 
 Possiamo anche verificare facilmente il successo di questa transazione controllando i saldi dei due conti coinvolti. Tre ether dovrebbero essersi spostati dal primo al secondo.
 
 ```python
-In [12]: w3.eth.getBalance(w3.eth.accounts[0])
-Out[12]: 999996999999999999979000
+In [12]: w3.eth.get_balance(w3.eth.accounts[0])
+Out[12]: 999996999999999999969000
 
-In [13]: w3.eth.getBalance(w3.eth.accounts[1])
+In [13]: w3.eth.get_balance(w3.eth.accounts[1])
 Out[13]: 1000003000000000000000000
 ```
 
-Quest'ultima parte sembra a posto! Il saldo è passato da 1.000.000 a 1.000.003 ether. Ma cos'è successo al primo conto? Sembra aver perso lievemente di più di tre ether. Ahimè, niente nella vita è gratis e per usare la rete pubblica di Ethereum occorre compensare i tuoi pari per il loro ruolo di supporto. Una piccola commissione di transazione è stata detratta dal conto, rendendo la transazione pari a un importo di 21.000 wei.
+Quest'ultima parte sembra a posto! Il saldo è passato da 1.000.000 a 1.000.003 ether. Ma cos'è successo al primo conto? Sembra aver perso lievemente di più di tre ether. Ahimè, niente nella vita è gratis e per usare la rete pubblica di Ethereum occorre compensare i tuoi pari per il loro ruolo di supporto. Una piccola commissione di transazione è stata detratta dal conto, rendendo la transazione pari a un importo di 31000 wei.
 
 <div class="featured">Nota: Sulla rete pubblica, le commissioni di transazione sono variabili in base alla domanda della rete ella rapidità con cui vorresti che una transazione fosse elaborata. Se sei interessato a una ripartizione di come sono calcolate le commissioni, vedi il mio post precedente su <a href="https://medium.com/ethereum-grid/ethereum-101-how-are-transactions-included-in-a-block-9ae5f491853f">come sono incluse le transazioni in un blocco</a>.</div>
 

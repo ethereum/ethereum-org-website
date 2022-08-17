@@ -1,12 +1,12 @@
 ---
 title: Geth ile bir hafif (light) düğüm nasıl çalıştırılır
 description: Geth ile bir lightclient nasıl indirilir, kurulur ve çalıştırılır.
-authors: "Brian Gu"
+author: "Brian Gu"
 tags:
   - "istemciler"
   - "geth"
   - "düğümler"
-skill: acemi
+skill: beginner
 lang: tr
 sidebar: true
 published: 2022-03-04
@@ -100,7 +100,7 @@ INFO [11-18|14:04:47] Allocated cache and file handles         database=/Users/b
 
 Bu noktada, buranın blok zincirinin en düşük seviyede yaşadığı yer olduğunu vurgulamakta fayda var. Blok zincirinin tam içeriği ve EVM durumu, Ethereum ağındaki her tam düğümde, bilgisayarınızdakine çok benzeyen dizinlerde depolanır.
 
-## Daha fazla bilgi {#further-reading}
+## Daha fazla okuma {#further-reading}
 
-- [Farklı ağlar hakkında daha fazla bilgi](/developers/docs/networks/).
+- [Farklı ağlar hakkında öğrenin](/developers/docs/networks/).
 - [Tam bir düğüm çalıştırın](/run-a-node/)

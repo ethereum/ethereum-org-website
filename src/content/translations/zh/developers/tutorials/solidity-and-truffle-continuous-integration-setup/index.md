@@ -11,7 +11,7 @@ tags:
   - "truffle"
   - "持续集成"
   - "ganache"
-skill: 中等难度
+skill: intermediate
 published: 2020-06-05
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/continuous-integration
@@ -143,7 +143,7 @@ checks:
 ### 第 5 步：创建一个 Codechecks 帐户 {#step-5-create-a-codechecks-account}
 
 - 使用 [Codechecks](http://codechecks.io/) 创建一个帐户。
-- 将 Github repo 添加到其中。
+- 将 GitHub repo 添加到其中。
 - 复制密钥并将 `CC_SECRET=COPIED SECRET` 添加到您的 CI（ [Travis](https://docs.travis-ci.com/user/environment-variables/) 参见这里，[CircleCi](https://circleci.com/docs/2.0/env-vars/#setting-an-environment-variable-in-a-project) 参见这里）。
 - 现在继续创建拉取请求。
 
@@ -184,7 +184,7 @@ Solidity coverage 启动了它自己的 ganache-cli，所以我们不必担心�
 ### 第 4 步：将 repository 添加到 Coveralls {#step-4-add-repository-to-coveralls}
 
 - 使用 [Coveralls](https://coveralls.io/) 创建一个帐户
-- 添加 Github repo 到 Coverall
+- 添加 GitHub repo 到 Coverall
 - 创建拉取请求
 
 ![Coverall 示例](../../../../../developers/tutorials/solidity-and-truffle-continuous-integration-setup/coverall.png)

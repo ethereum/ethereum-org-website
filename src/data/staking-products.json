@@ -254,6 +254,37 @@
   ],
   "saas": [
     {
+      "name": "Kiln",
+      "svgPath": "kiln-glyph.svg",
+      "hue": 20,
+      "launchDate": "2021-03-01",
+      "url": "https://www.kiln.fi/",
+      "audits": [],
+      "minEth": 32,
+      "additionalStake": null,
+      "additionalStakeUnit": null,
+      "monthlyFee": 8,
+      "monthlyFeeUnit": "%",
+      "isFoss": false,
+      "hasBugBounty": false,
+      "isTrustless": false,
+      "isPermissionless": false,
+      "pctMajorityClient": null,
+      "isSelfCustody": false,
+      "platforms": ["Browser"],
+      "ui": ["GUI"],
+      "socials": {
+        "linkedin": "https://www.linkedin.com/company/28150174",
+        "twitter": "https://twitter.com/Kiln_finance",
+        "github": "https://github.com/kilnfi/"
+      },
+      "matomo": {
+        "eventCategory": "StakingProductCard",
+        "eventAction": "Clicked",
+        "eventName": "Clicked Kiln (saas) go to link"
+      }
+    },
+    {
       "name": "Allnodes",
       "svgPath": "allnodes-glyph.svg",
       "hue": 248,
@@ -305,7 +336,7 @@
       "hasBugBounty": false,
       "isTrustless": false,
       "isPermissionless": false,
-      "pctMajorityClient": null,
+      "pctMajorityClient": 43.8,
       "isSelfCustody": true,
       "platforms": ["Linux", "macOS", "Windows"],
       "ui": ["GUI"],

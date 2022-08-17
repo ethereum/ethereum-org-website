@@ -170,7 +170,7 @@ Chainlink Keepers'ı kullanmak için, bir akıllı sözleşme [KeeperCompatibleI
 - `checkUpkeep` - Sözleşmede iş yapılmasının gerekip gerekmediğini kontrol eder.
 - `performUpkeep` - checkUpkeep tarafından emir verilirse işi sözleşme üzerinde gerçekleştirir.
 
-Aşağıdaki örnek basit bir karşı sözleşmedir. `counter` değişkeni, `performUpkeep` öğesine yapılan her çağrıda birer birer artırılır. [Sıradaki kodu Remix kullanarak deneyebilirsiniz](https://remix.ethereum.org/#url=https://docs.chain.link/samples/Keepers/KeepersCounter.sol)
+Aşağıdaki örnek basit bir sayaç sözleşmesidir. `counter` değişkeni, `performUpkeep` öğesine yapılan her çağrıda birer birer artırılır. [Sıradaki kodu Remix kullanarak deneyebilirsiniz](https://remix.ethereum.org/#url=https://docs.chain.link/samples/Keepers/KeepersCounter.sol)
 
 ```javascript
 // SPDX-License-Identifier: MIT

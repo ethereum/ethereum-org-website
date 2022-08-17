@@ -48,7 +48,7 @@ ethereum.org 是一个为以太坊社区打造的公共且开源的网站，任�
 
 ## 设计原则 {#design-principles}
 
-我们使用一组[设计原则](/contributing/design-principles/)来帮助我们做关于内容和设计网站上的决定。
+我们使用一组[设计原则](/contributing/design-principles/)来帮助我们做出关于网站内容和设计的决定。
 
 ## 风格指南 {#style-guide}
 
@@ -56,7 +56,7 @@ ethereum.org 是一个为以太坊社区打造的公共且开源的网站，任�
 
 我们欢迎大家对设计原则和风格指南提出反馈意见。 请记住，ethereum.org 来自社区，服务社区。
 
-如果您想要[对官网做贡献](/contributing/)，请先阅读[我们的宗旨](/contributing/design-principles/) ，以及[我们的风格指南](/contributing/style-guide/)。
+如果您想要[对官网做贡献](/contributing/)，请先阅读[我们的宗旨](/contributing/design-principles/)，以及[我们的风格指南](/contributing/style-guide/)。
 
 ## 愿景与计划 {#roadmap}
 
@@ -66,6 +66,6 @@ ethereum.org 是一个为以太坊社区打造的公共且开源的网站，任�
 
 虽然这个网站是开源的，任何人都可以在上面协作，但我们确实有一个团队专门负责 ethereum.org 和其他以太坊基金会的项目。
 
-我们会在这里发布空缺的职位。 如果你在这里看不到适合你的角色，请加入[Discord](https://discord.gg/CetY6Y4)，并让我们知道你想如何与我们合作！
+我们会在这里发布空缺的职位。 如果您在这里看不到适合您的角色，请加入 [Discord](https://discord.gg/CetY6Y4)，并让我们知道您想如何与我们合作！
 
 您想找除了 ethereum.org 以外的工作？ [查看其他与以太坊相关的工作](/community/get-involved/#ethereum-jobs/)。

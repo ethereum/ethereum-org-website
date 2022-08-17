@@ -1,5 +1,5 @@
 ---
-title: 以太坊活动
+title: 以太坊事件
 description: 如何加入以太坊社区。
 sidebar: true
 lang: zh

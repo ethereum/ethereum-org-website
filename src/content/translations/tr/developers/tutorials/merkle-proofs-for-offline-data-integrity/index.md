@@ -6,7 +6,7 @@ tags:
   - "merkle"
   - "bütünlük"
   - "depolama"
-skill: gelişmiş
+skill: advanced
 lang: tr
 sidebar: true
 published: 2021-12-30
@@ -38,7 +38,7 @@ Sadece kök hash değerinin ağ üzerinde depolanmış olması gerekmektedir. Bi
 
 ### Zincir dışı kod {#off-chain-code}
 
-Bu makalede zincir dışı işlemler için Javascript kullanıyoruz. Çoğu merkeziyetsiz uygulama Javascript'te zincir dışı bileşenlere sahiptir.
+Bu makalede zincir dışı işlemler için JavaScript kullanıyoruz. Çoğu merkeziyetsiz uygulama JavaScript'te zincir dışı bileşenlere sahiptir.
 
 #### Merkle kökünü oluşturma {#creating-the-merkle-root}
 
@@ -204,7 +204,7 @@ Merkle kökünü ayarlamak ve getirmek için fonksiyonlar. Bir üretim sistemind
     }
 ```
 
-Bu fonksiyon bir eş hash değeri oluşturur. Bu yalnızca Javascript'teki `pairHash` kodunun Solidity'e uyarlamasıdır.
+Bu fonksiyon bir eş hash değeri oluşturur. Bu yalnızca JavaScript'teki `pairHash` kodunun Solidity'e uyarlamasıdır.
 
 **Not:** Burada da okunabilirlik için optimizasyon yapılmıştır. [Fonksiyon tanımına](https://www.tutorialspoint.com/solidity/solidity_cryptographic_functions.htm) dayanarak; [`bytes32`](https://docs.soliditylang.org/en/v0.5.3/types.html#fixed-size-byte-arrays) olarak veriyi depolamak ve dönüşümleri önlemek mümkün olabilir.
 

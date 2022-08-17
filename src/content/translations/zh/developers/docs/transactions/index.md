@@ -5,9 +5,9 @@ lang: zh
 sidebar: true
 ---
 
-交易是由帐户发出，带密码学签名的指令。 帐户将发起交易以更新以太坊网络的状态。 最简单的交易是将 ETH 从一个账户转到另一个帐户。
+交易是来自帐户的密码学签名指令。 帐户将发起交易以更新以太坊网络的状态。 最简单的交易是将 ETH 从一个账户转到另一个帐户。
 
-## 前置要求 {#prerequisites}
+## 先决条件 {#prerequisites}
 
 为了帮助您更好地理解这个页面，我们建议您先阅读[账户](/developers/docs/accounts/)和我们的[以太坊简介](/developers/docs/intro-to-ethereum/)。
 
@@ -40,10 +40,10 @@ Gas 是指矿工处理交易所需的算力。 用户必须为此计算支付费
   from: "0xEA674fdDe714fd979de3EdF0F56AA9716B898ec8",
   to: "0xac03bb73b6a9e108530aff4df5077c2b3d481e5a",
   gasLimit: "21000",
-  maxFeePerGas: "300"
-  maxPriorityFeePerGas: "10"
+  maxFeePerGas: "300",
+  maxPriorityFeePerGas: "10",
   nonce: "0",
-  value: "10000000000",
+  value: "10000000000"
 }
 ```
 
@@ -103,42 +103,64 @@ Geth 这样的以太坊客户端将处理此签名过程。
 
 如有签名哈希，可通过加密技术证明交易来自发送者并提交网络。
 
+### 数据字段 {#the-data-field}
+
+绝大多数交易从外部所有的帐户访问合约。 大多数合约用 Solidity 语言编写，并根据[应用程序二进制接口 (ABI)](/glossary/#abi应用应用应用/) 解释其数据字段。
+
+前四个字节使用函数名称和参数的哈希指定要调用的函数。 有时可以使用[本数据库](https://www.4byte.directory/signatures/)根据选择器识别函数。
+
+调用数据的其余部分是参数，[按照应用程序二进制接口规范中的规定进行编码](https://docs.soliditylang.org/en/latest/abi-spec.html#formal-specification-of-the-encoding)。
+
+例如，我们来看一下[这笔交易](https://etherscan.io/tx/0xd0dcbe007569fcfa1902dae0ab8b4e078efe42e231786312289b1eee5590f6a1)。 使用 **Click to see More（单击查看更多）**查看调用数据。
+
+函数选择器是 `0xa9059cbb`。 有几个[具有此签名的已知函数](https://www.4byte.directory/signatures/?bytes4_signature=0xa9059cbb)。 本例中[合约源代码](https://etherscan.io/address/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48#code)已经上传到 Etherscan，所以我们知道该函数是 `transfer(address, uint256)`。
+
+其余数据如下：
+
+```
+0000000000000000000000004f6742badb049791cd9a37ea913f2bac38d01279
+000000000000000000000000000000000000000000000000000000003b0559f4
+```
+
+根据应用程序二进制接口规范，整型值（例如地址，它是 20 字节整型）在应用程序二进制接口中显示为 32 字节的字，前面用零填充。 所以我们知道 `to` 地址是 [`4f6742badb049791cd9a37ea913f2bac38d01279`](https://etherscan.io/address/0x4f6742badb049791cd9a37ea913f2bac38d01279)。 `value` 是 0x3b0559f4 = 990206452。
+
 ## 交易类型 {#types-of-transactions}
 
 以太坊有几种不同类型的交易：
 
 - 常规交易：从一个钱包到另一个钱包的交易。
 - 合约部署交易：没有“to”地址的交易，数据字段用于合约代码。
+- 执行合约：与已部署的智能合约进行交互的交易。 在这种情况下，“to”地址是智能合约地址。
 
-### 关于 Gas {#on-gas}
+### 关于燃料 {#on-gas}
 
-如上所述，执行交易需要花费 [Gas](/developers/docs/gas/)。 简单的转让交易需要 21000 个 Gas。
+如上所述，执行交易需要耗费[燃料](/developers/docs/gas/)。 简单的转账交易需要 21000 单位燃料。
 
-假设 Bob 要向 Alice 发送 1 ETH，需支付 190 gwei 的 `baseFeePergas` 和 10 gwei 的 `maxPriorityFeePerGas`，那么 Bob 需要支付以下费用：
+因此，如果 Bob 要在 `baseFeePerGas` 为 190 Gwei 且 `maxPriorityFeePerGas` 为 10 Gwei 时给 Alice 发送一个以太币，Bob 需要支付以下费用：
 
 ```
 (190 + 10) * 21000 = 4,200,000 gwei
---or--
+--或--
 0.0042 ETH
 ```
 
-Bob 的账户将会减少 **1.0042 ETH**
+Bob 的帐户将会减少 **-1.0042 ETH**
 
-Alice 的账户将会增加 **+1.0 ETH**
+Alice 的帐户将会增加 **+1.0 ETH**
 
-扣掉 **0.00399 ETH** 的基本费用
+基础费将会燃烧 **-0.00399 ETH**
 
-矿工保留小费 **+0.000210 ETH**
+矿工获得 **+0.000210 ETH** 的小费
 
-任何智能合约交互也需要 Gas。
+任何智能合约交互也需要燃料。
 
-![未使用 Gas 退款情况图](./gas-tx.png) _图表来自 [Ethereum EVM 插图](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![未使用燃料退还示意图](./gas-tx.png) _示意图节选自[以太坊虚拟机图解](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
-任何未用于交易的 gas 都退还至用户账户。
+任何未用于交易的燃料都会退还给用户帐户。
 
 ## 交易生命周期 {#transaction-lifecycle}
 
-一旦提交交易，就会发生以下情况：
+交易提交后，就会发生以下情况：
 
 1. 一旦您发送交易，加密法生成交易哈希： `0x97d99bc7729211111a21b12c933c949d4f31684f1d6954ff477d0477538ff017`
 2. 然后将该交易转播到网络，并且与大量其他交易一起包含在一个集合中。
@@ -150,25 +172,25 @@ Alice 的账户将会增加 **+1.0 ETH**
 
 ## 直观演示 {#a-visual-demo}
 
-观看 Austin 引导您了解交易、Gas 和挖矿。
+跟随 Austin 了解交易、燃料和挖矿。
 
 <YouTube id="er-0ihqFQB0" />
 
 ## Typed Transaction Envelope 交易 {#typed-transaction-envelope}
 
-以太坊最初有一个交易格式。 每笔交易都包含一个随机数、gas 价格、gas 限额、发送地址、价值、数据、v、r 和 s。 这些字段采用 RLP 编码，如下所示：
+以太坊最初有一种交易形式。 每笔交易都包含 Nonce、燃料价格、燃料限制、目的地地址、价值、数据、v、r 和 s。 这些字段采用 RLP 编码，如下所示：
 
 `RLP([nonce, gasPrice, gasLimit, to, value, data, v, r, s])`
 
-以太坊经过演变，现已支持多种类型的交易，能够在不影响传统交易格式的情况下实现接入列表和 [EIP-1559](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md) 等新功能。
+以太坊经过演变，已经支持多种类型的交易，从而能够在不影响传统交易形式的情况下实现访问列表和 [EIP-1559](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md) 等新功能。
 
-[EIP-2718：Typed Transaction Envelope](https://eips.ethereum.org/EIPS/eip-2718) 定义了交易类型，是未来交易类型的“信封”。
+[EIP-2718：类型化交易封套](https://eips.ethereum.org/EIPS/eip-2718)定义了交易类型，是未来交易类型的”封套“。
 
-EIP-2718 是用于类型化交易的新通用信封。 在新的标准中，交易被理解为：
+EIP-2718 是用于类型化交易的新通用封套。 在新标准中，交易被解释为：
 
 `TransactionType || TransactionPayload`
 
-字段定义为：
+其中，字段定义如下：
 
 - `TransactionType` - 一个在 0 到 0x7f 之间的数字，总共为 128 种可能的交易类型。
 - `TransactionPayload` - 由交易类型定义的任意字节数组。
@@ -177,11 +199,11 @@ EIP-2718 是用于类型化交易的新通用信封。 在新的标准中，交�
 
 - [EIP-2718：Typed Transaction Envelope](https://eips.ethereum.org/EIPS/eip-2718)
 
-_还有哪些社区资源对您有所帮助？ 请编辑本页面并添加！_
+_还有哪些社区资源对您有所帮助？ 请编辑本页面并添加它！_
 
 ## 相关主题 {#related-topics}
 
 - [帐户](/developers/docs/accounts/)
 - [以太坊虚拟机 (EVM)](/developers/docs/evm/)
 - [Gas](/developers/docs/gas/)
-- [挖矿](/developers/docs/consensus-mechanisms/pow/mining/)
+- [矿工](/developers/docs/consensus-mechanisms/pow/mining/)

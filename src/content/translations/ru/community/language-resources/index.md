@@ -17,7 +17,7 @@ lang: ru
 
 ## Ресурсы Ethereum.org {#ethereum-org}
 
-Ethereum.org переведен на более чем 40 языков, которые вы можете найти на нашей [странице языков](/languages).
+Проект Ethereum.org переведен носителями на более чем 40 языков, список которых вы найдете на нашей [странице языков](/languages).
 
 Если вы говорите на двух языках и хотите помочь нам привлечь больше людей, вы также можете принять участие в [программе перевода ethereum.org](/contributing/translation-program/#translation-program) и помочь нам с переводом сайта.
 
@@ -46,7 +46,7 @@ Ethereum.org переведен на более чем 40 языков, кото
 **Основные ресурсы**
 
 - [Ethereum.cn](https://www.ethereum.cn/) — контент, поддерживаемый сообществом, охватывающий обновление уровня консенсуса, все заметки с собраний основных разработчиков, уровень 2 и т. д.
-- [EthFans](https://github.com/editor-Ajian/EthFans.org-annual-collected-works/) — изучите все, от основ до продвинутых тем Ethereum
+- [EthFans](https://github.com/editor-Ajian/EthFans.org-annual-collected-works/) — изучите все, от основ до вопросов продвинутого использования Ethereum
 - [Unitimes](https://mp.weixin.qq.com/s/tvloZSDBSOQN9zDQj_91kA) — контент, поддерживаемый сообществом, охватывающий знания, связанные с Ethereum, децентрализованными финансами (DeFi), невзаимозаменяемыми токенами (NFT) и Web3
 - [123ETH](https://123eth.org/) — портал в экосистему Ethereum
 - [Zhen Xiao](http://zhenxiao.com/blockchain/) — бесплатные онлайн-курсы по криптовалюте и ее применению
@@ -112,8 +112,8 @@ Ethereum.org переведен на более чем 40 языков, кото
 
 ### Японский {#ja}
 
-- [Japan Virtual and Crypto assets Exchange Association](https://jvcea.or.jp/)
-- [Japan Cryptoasset Business Association](https://cryptocurrency-association.org/)
-- [Get started with blockchain development - Learn | Microsoft Docs](https://docs.microsoft.com/ja-jp/learn/paths/ethereum-blockchain-development/) - This learning path introduces you to blockchain and development on the Ethereum platform
-- [Mastering Ethereum](https://www.oreilly.co.jp/books/9784873118963/) - Mastering Ethereum in Japanese
-- [Hands-On Smart Contract Development with Solidity and Ethereum](https://www.oreilly.co.jp/books/9784873119342/) - Hands-On Smart Contract Development with Solidity and Ethereum in Japanese
+- [Японская ассоциация обмена виртуальными и криптовалютными активами](https://jvcea.or.jp/)
+- [Японская бизнес-ассоциация криптовалютных активов](https://cryptocurrency-association.org/)
+- [Начало блокчейн-разработки — обучение | Microsoft Docs](https://docs.microsoft.com/ja-jp/learn/paths/ethereum-blockchain-development/) — данный учебный материал знакомит вас с блокчейном и разработкой на платформе Ethereum
+- [Mastering Ethereum](https://www.oreilly.co.jp/books/9784873118963/) — Mastering Ethereum на японском языке
+- [Hands-On Smart Contract Development with Solidity and Ethereum](https://www.oreilly.co.jp/books/9784873119342/) — практическая разработка умных контрактов с Solidity и Ethereum на японском языке

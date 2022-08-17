@@ -23,7 +23,7 @@ Type d'attaque mené sur un [réseau](#network) décentralisé où un groupe pre
 Objet contenant une [adresse](#address), un solde, un [nonce](#nonce), ainsi qu'un stockage et un code facultatifs. Il peut s'agir d'un [compte de contrat](#contract-account) ou d'un [compte externe (EOA)](#eoa).
 
 <DocLink to="/developers/docs/accounts">
-  Comptes Ethereum
+  comptes Ethereum
 </DocLink>
 
 ### Adresse {#address}
@@ -74,7 +74,7 @@ Une mise à niveau du réseau qui a introduit une nouvelle couche de consensus, 
   Chaîne phare
 </DocLink>
 
-### Gros-boutisme (big-endian) {#big-endian}
+### Big-endian {#big-endian}
 
 Représentation de nombre positionnel où le chiffre le plus important est le premier en mémoire. Contraire du petit-boutisme (little-endian), où le chiffre le moins significatif arrive en premier.
 
@@ -335,7 +335,7 @@ Service effectué via un [contrat intelligent](#smart-contract), qui distribue d
 La finalisation garantit qu'un ensemble de transactions réalisées avant un instant donné ne changera pas et ne pourra pas être annulé.
 
 <DocLink to="/developers/docs/consensus-mechanisms/pow/#finality">
-  Finalisation de la preuve de travail
+  Finalité de la preuve de travail
 </DocLink>
 <DocLink to="/developers/docs/consensus-mechanisms/pos/#finality">
   Finalisation de la preuve d'enjeu
@@ -562,7 +562,7 @@ Lorsque cela fait référence au réseau Ethereum, réseau P2P qui propage les t
 Aussi connu sous le nom de « deed », il s'agit d'une norme de jeton introduite par la proposition ERC-721. Les NFT peuvent être suivis et échangés, mais chaque jeton est unique et distinct. Ils ne sont pas interchangeables comme les [jetons ERC-20](#token-standard). Les NFT peuvent représenter la propriété des actifs numériques ou physiques.
 
 <DocLink to="/nft/">
-  Jetons non fongibles (NFT)
+  Jeton non fongible (NFT)
 </DocLink>
 <DocLink to="/developers/docs/standards/tokens/erc-721/">
   Norme de jeton non fongible ERC-721
@@ -696,7 +696,7 @@ Famille de fonctions de hachage cryptographique publiées par le National Instit
 
 Une chaîne par [preuve d'enjeu](#pos) coordonnée par la [chaîne phare](#beacon-chain) et sécurisée par les [validateurs](#validator). 64 ajouts au réseau seront réalisés dans le cadre de la mise à niveau des chaînes de fragments. Les chaînes de fragments offriront un débit de transaction accru pour Ethereum en fournissant des données supplémentaires aux solutions de [couche 2](#layer-2) comme les [rollups optimistes](#optimistic-rollups) et les [rollups ZK](#zk-rollups).
 
-<DocLink to="/upgrades/shard-chains">
+<DocLink to="/upgrades/sharding">
   Chaînes de fragments
 </DocLink>
 
@@ -808,7 +808,7 @@ Unité de l'[ether](#ether). 1 szabo = 10<sup>12</sup> [wei](#wei), 10<sup>6</su
 
 Aussi appelé « testnet » (de l'anglais « test network »), il s'agit d'un réseau utilisé pour simuler le comportement du réseau principal Ethereum (voir [réseau principal](#mainnet)).
 
-<DocLink to="/developers/docs/networks/#ethereum-testnets">
+<DocLink to="/developers/docs/networks/#testnets">
   Réseaux de test
 </DocLink>
 
@@ -849,7 +849,7 @@ Concept nommé d'après le mathématicien et informaticien anglais Alan Turing. 
 Dans un système de [preuve d'enjeu](#pos), [nœud](#node) responsable du stockage des données, du traitement des transactions et de l'ajout de nouveaux blocs à la blockchain. Pour activer le logiciel validateur, vous devez pouvoir [mettre en jeu](#staking) 32 ETH.
 
 <DocLink to="/developers/docs/consensus-mechanisms/pos">
-  Preuve d'enjeu
+  preuve d'enjeu
 </DocLink>
 <DocLink to="/staking/">
   Mise en jeu sur Ethereum

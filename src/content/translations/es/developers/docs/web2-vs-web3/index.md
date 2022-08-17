@@ -30,14 +30,14 @@ Esto no significa que todos los servicios deban ser convertidos en una dapp. Est
 
 Web3 tiene algunas limitaciones ahora mismo:
 
-- Escalabilidad: Las transacciones son más lentas en web3 porque son descentralizadas. Los cambios a estado, como un pago, deben ser procesados por un minero y propagados a través de la red.
+- Escalabilidad: Las transacciones son más lentas en web3 porque son descentralizadas. Los cambios de estado, como un pago, deben ser procesados por un minero y propagados a través de la red.
 - UX: Interactuar con aplicaciones web3 puede requerir pasos adicionales, software y formación. Esto puede ser un obstáculo para su implantación.
 - Accesibilidad: la falta de integración en los navegadores web modernos hace que web3 sea menos accesible para la mayoría de los usuarios.
 - Coste: las dapps más exitosas introducen partes muy pequeñas de su código en la cadena de bloques, ya que resulta costoso.
 
 ## Centralización vs descentralización {#centralization-vs-decentralization}
 
-En siguiente la tabla, enumeramos algunas de las ventajas y desventajas de las redes digitales centralizadas y descentralizadas.
+En la siguiente tabla, enumeramos algunas de las ventajas y desventajas de las redes digitales centralizadas y descentralizadas.
 
 | Sistemas centralizados                                                                                                                                                                                                                                                | Sistemas descentralizados                                                                                                                                                                                                                                                |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -55,6 +55,6 @@ Ten en cuenta que estos son patrones generales que pueden no mantenerse auténti
 
 - [What is Web3?](/web3/) - _ethereum.org_
 - [La arquitectura de una aplicación Web 3.0](https://www.preethikasireddy.com/post/the-architecture-of-a-web-3-0-application) - _Preethi Kasireddy_
-- [El significado de la descentralización ](https://medium.com/@VitalikButerin/the-meaning-of-decentralization-a0c92b76a274) _ 6 de Febrero de 2017 - Vitalik Buterin_
+- [El significado de la descentralización](https://medium.com/@VitalikButerin/the-meaning-of-decentralization-a0c92b76a274) _6 de Febrero de 2017 - Vitalik Buterin_
 - [Por qué la descentralización importa](https://medium.com/s/story/why-decentralization-matters-5e3f79f7638e) _18 de Febrero de 2018, Chris Dixon_
 - [¿Qué es Web 3.0 y por qué importa?](https://medium.com/fabric-ventures/what-is-web-3-0-why-it-matters-934eb07f3d2b) _31 de diciembre de 2019 - Max Mersch y Richard Muirhead_

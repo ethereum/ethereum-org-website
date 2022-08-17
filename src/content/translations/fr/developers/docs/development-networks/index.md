@@ -54,5 +54,5 @@ _Une ressource communautaire vous a aidé ? Modifiez cette page et ajoutez-la !_
 
 ## Sujets connexes {#related-topics}
 
-- [Frameworks de développement](/developers/docs/frameworks/)
+- [Infrastructures de développement](/developers/docs/frameworks/)
 - [Configurer un environnement de développement local](/developers/local-environment/)

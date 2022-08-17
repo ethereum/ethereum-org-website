@@ -25,45 +25,133 @@ To better understand this page, we recommend you first read about [token standar
 
 ### Methods {#methods}
 
+#### asset {#asset}
+
+```solidity
+function asset() public view returns (address)
+```
+
+This function returns the address of the underlying token used for the vault for accounting, depositing, withdrawing.
+
+#### totalAssets {#totalassets}
+
+```solidity
+function totalAssets() public view returns (uint256)
+```
+
+This function returns the total amount of underlying assets held by the vault.
+
+#### convertToShares {#convertoshares}
+
+```solidity
+function convertToShares(uint256 assets) public view returns (uint256 shares)
+```
+
+This function returns the amount of `shares` that would be exchanged by the vault for the amount of `assets` provided.
+
+#### convertToAssets {#convertoassets}
+
+```solidity
+function convertToAssets(uint256 shares) public view returns (uint256 assets)
+```
+
+This function returns the amount of `assets` that would be exchanged by the vault for the amount of `shares` provided.
+
+#### maxDeposit {#maxdeposit}
+
+```solidity
+function maxDeposit(address receiver) public view returns (uint256)
+```
+
+This function returns the maximum amount of underlying assets that can be deposited in a single [`deposit`](#deposit) call by the `receiver`.
+
+#### previewDeposit {#previewdeposit}
+
+```solidity
+function previewDeposit(uint256 assets) public view returns (uint256)
+```
+
+This function allows users to simulate the effects of their deposit at the current block.
+
 #### deposit {#deposit}
 
 ```solidity
-function deposit(address _to, uint256 _value) public returns (uint256 _shares)
+function deposit(uint256 assets, address receiver) public returns (uint256 shares)
 ```
 
-This function deposits the `_value` tokens into the vault and grants ownership to `_to`.
+This function deposits `assets` of underlying tokens into the vault and grants ownership of `shares` to `receiver`.
+
+#### maxMint {#maxmint}
+
+```solidity
+function maxMint(address receiver) public view returns (uint256)
+```
+
+This function returns the maximum amount of shares that can be minted in a single [`mint`](#mint) call by the `receiver`.
+
+#### previewMint {#previewmint}
+
+```solidity
+function previewMint(uint256 shares) public view returns (uint256)
+```
+
+This function allows users to simulate the effects of their mint at the current block.
+
+#### mint {#mint}
+
+```solidity
+function mint(uint256 shares, address receiver) public returns (uint256 assets)
+```
+
+This function mints exactly `shares` vault shares to `receiver` by depositing `assets` of underlying tokens.
+
+#### maxWithdraw {#maxwithdraw}
+
+```solidity
+function maxWithdraw(address owner) public view returns (uint256)
+```
+
+This function returns the maximum amount of underlying assets that can be withdrawn from the `owner` balance with a single [`withdraw`](#withdraw) call.
+
+#### previewWithdraw {#previewwithdraw}
+
+```solidity
+function previewWithdraw(uint256 assets) public view returns (uint256)
+```
+
+This function allows users to simulate the effects of their withdrawal at the current block.
 
 #### withdraw {#withdraw}
 
 ```solidity
-function withdraw(address _to, uint256 _value) public returns (uint256 _shares)
+function withdraw(uint256 assets, address receiver, address owner) public returns (uint256 shares)
 ```
 
-This function withdraws `_value` token from the vault and transfers them to `_to`.
+This function burns `shares` from `owner` and send exactly `assets` token from the vault to `receiver`.
 
-#### totalHoldings {#totalholdings}
+#### maxRedeem {#maxredeem}
 
 ```solidity
-function totalHoldings() public view returns (uint256)
+function maxRedeem(address owner) public view returns (uint256)
 ```
 
-This function returns the total amount of underlying tokens held by the vault.
+This function returns the maximum amount of shares that can be redeem from the `owner` balance through a [`redeem`](#redeem) call.
 
-#### balanceOfUnderlying {#balanceofunderlying}
+#### previewRedeem {#previewredeem}
 
 ```solidity
-function balanceOfUnderlying(address _owner) public view returns (uint256)
+function previewRedeem(uint256 shares) public view returns (uint256)
 ```
 
-This function returns the total amount of underlying tokens held in the vault for `_owner`.
+This function allows users to simulate the effects of their redeemption at the current block.
 
-#### underlying {#underlying}
+#### redeem {#redeem}
 
 ```solidity
-function underlying() public view returns (address)
+function redeem(uint256 shares, address receiver, address owner) public returns (uint256 assets)
 ```
 
-Returns the address of the token the vault uses for accounting, depositing, and withdrawing.
+This function redeems a specific number of `shares` from `owner` and send `assets` of underlying token from the vault to `receiver`.
 
 #### totalSupply {#totalsupply}
 
@@ -73,69 +161,54 @@ function totalSupply() public view returns (uint256)
 
 Returns the total number of unredeemed vault shares in circulation.
 
+#### balanceOfUnderlying {#balanceofunderlying}
+
+```solidity
+function balanceOfUnderlying(address owner) public view returns (uint256)
+```
+
+This function returns the total amount of underlying tokens held in the vault for `owner`.
+
 #### balanceOf {#balanceof}
 
 ```solidity
-function balanceOf(address _owner) public view returns (uint256)
+function balanceOf(address owner) public view returns (uint256)
 ```
 
-Returns the total amount of vault shares the `_owner` currently has.
-
-#### redeem {#redeem}
-
-```solidity
-function redeem(address _to, uint256 _shares) public returns (uint256 _value)
-```
-
-Redeems a specific number of `_shares` for underlying tokens and transfers them to `_to`.
-
-#### exchangeRate {#exchangerate}
-
-```solidity
-function exchangeRate() public view returns (uint256)
-```
-
-The amount of underlying tokens one `baseUnit` of vault shares is redeemable for. For example:
-
-```solidity
-_shares * exchangeRate() / baseUnit() = _value.
-```
-
-```solidity
-exchangeRate() * totalSupply() MUST equal totalHoldings().
-```
-
-#### baseUnit {#baseunit}
-
-```solidity
-function baseUnit() public view returns(uint256)
-```
-
-The decimal scalar for vault shares and operations involving `exchangeRate()`.
+Returns the total amount of vault shares the `owner` currently has.
 
 ### Events {#events}
 
 #### Deposit Event
 
-**MUST** be emitted when tokens are deposited into the vault
+**MUST** be emitted when tokens are deposited into the vault via the [`mint`](#mint) and [`deposit`](#deposit) methods
 
 ```solidity
-event Deposit(address indexed _from, address indexed _to, uint256 _value)
+event Deposit(
+    address indexed sender,
+    address indexed owner,
+    uint256 assets,
+    uint256 shares
+)
 ```
 
-Where `_from` is the user who triggered the deposit and approved `_value` underlying tokens to the vault, and `_to` is the user who can withdraw the deposited tokens.
+Where `sender` is the user who exchanged `assets` for `shares`, and transferred those `shares` to `owner`.
 
 #### Widthdraw Event
 
-**MUST** be emitted when tokens are withdrawn from the vault by a depositor.
+**MUST** be emitted when shares are withdrawn from the vault by a depositor in the [`redeem`](#redeem) or [`withdraw`](#withdraw) methods.
 
 ```solidity
-event Withdraw(address indexed _owner, address indexed _to, uint256 _value)
+event Withdraw(
+    address indexed sender,
+    address indexed receiver,
+    address indexed owner,
+    uint256 assets,
+    uint256 share
+)
 ```
 
-Where `_from` is the user who triggered the withdrawal and held `_value` underlying tokens in the vault, and `_to` is the user who received the withdrawn tokens.
-
-_Note_: All batch functions, including the hook, are also available in non-batch versions. This is done to save gas, as transferring just one asset will likely remain to be the most common method. For clarity in the explanations, we've left them out, including the safe transfer rules. Remove the 'Batch' and the names are identical.
+Where `sender` is the user who triggered the withdrawal and exchanged `shares`, owned by `owner`, for `assets`. `receiver` is the user who received the withdrawn `assets`.
 
 ## Further reading {#further-reading}
 

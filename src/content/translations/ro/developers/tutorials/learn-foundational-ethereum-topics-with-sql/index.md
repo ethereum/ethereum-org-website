@@ -11,7 +11,7 @@ tags:
   - "Blocuri"
   - "Tranzacții"
   - "Gaz"
-skill: începător
+skill: beginner
 lang: ro
 sidebar: true
 published: 2021-05-11

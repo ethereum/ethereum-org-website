@@ -19,7 +19,7 @@ source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/thegraph
 ---
 
-This time we will take a closer look at The Graph which essentially became part of the standard stack for developing Dapps in the last year. Let's first see how we would do things the traditional way...
+This time we will take a closer look at The Graph which essentially became part of the standard stack for developing dapps in the last year. Let's first see how we would do things the traditional way...
 
 ## Without The Graph... {#without-the-graph}
 
@@ -49,7 +49,7 @@ contract Game {
 }
 ```
 
-Now let's say in our Dapp, we want to display total bets, the total games lost/won and also update it whenever someone plays again. The approach would be:
+Now let's say in our dapp, we want to display total bets, the total games lost/won and also update it whenever someone plays again. The approach would be:
 
 1. Fetch `totalGamesPlayerWon`.
 2. Fetch `totalGamesPlayerLost`.
@@ -72,7 +72,7 @@ GameContract.events.BetPlaced({
 });
 ```
 
-Now this is still somewhat fine for our simple example. But let's say we want to now display the amounts of bets lost/won only for the current player. Well we're out of luck, you better deploy a new contract that stores those values and fetch them. And now imagine a much more complicated smart contract and Dapp, things can get messy quickly.
+Now this is still somewhat fine for our simple example. But let's say we want to now display the amounts of bets lost/won only for the current player. Well we're out of luck, you better deploy a new contract that stores those values and fetch them. And now imagine a much more complicated smart contract and dapp, things can get messy quickly.
 
 ![One Does Not Simply Query](./one-does-not-simply-query.jpg)
 
@@ -243,7 +243,7 @@ export function handleNewBet(event: PlacedBet): void {
 
 ## Using it in the Frontend {#using-it-in-the-frontend}
 
-Using something like Apollo Boost, you can easily integrate The Graph in your React Dapp (or Apollo-Vue). Especially when using React hooks and Apollo, fetching data is as simple as writing a single GraphQl query in your component. A typical setup might look like this:
+Using something like Apollo Boost, you can easily integrate The Graph in your React dapp (or Apollo-Vue). Especially when using React hooks and Apollo, fetching data is as simple as writing a single GraphQl query in your component. A typical setup might look like this:
 
 ```javascript
 // See all subgraphs: https://thegraph.com/explorer/

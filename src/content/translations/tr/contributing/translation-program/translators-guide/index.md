@@ -199,7 +199,7 @@ Dilinizin kurallarını bilmeli ve buna göre çeviri yapmalısınız. Yardıma 
 
 **Büyük/Küçük Harf**
 
-- Farklı dillerde büyük/küçük harf kullanımında büyük farklılıklar bulunur.
+- Farklı dillerde büyük harf kullanımında büyük farklılıklar vardır.
 - İngilizce'de; başlıklarda ve adlarda, aylarda ve günlerde, dil adlarında, tatillerde vb. tüm sözcüklerin büyük harfle yazılması yaygındır. Diğer birçok dilde, farklı büyük harf kullanım kurallarına sahip oldukları için bu durum dil bilgisi açısından yanlıştır.
 - Bazı dillerde, İngilizce'de büyük harfle yazılmayan şahıs zamirlerinin, isimlerin ve belirli sıfatların büyük harfle yazılmasıyla ilgili kurallar da vardır.
 
@@ -250,7 +250,7 @@ Dilinizin kurallarını bilmeli ve buna göre çeviri yapmalısınız. Yardıma 
 
 - Tarihleri çevirirken, dile bağlı olarak bir takım hususlar ve farklılıklar vardır. Bunlara tarih biçimi, ayırıcı, büyük harf kullanımı ve baştaki sıfırlar dahildir. Tam uzunluktaki ve sayısal tarihler arasında da farklılıklar vardır.
   - Farklı tarih biçimlerine bazı örnekler:
-    - İngilizce Birleşik Krallık (gg/aa/yyyy) – 1st January, 2022
+    - İngilizce Birleşik Krallık (aa/gg/yyyy) – 1st January, 2022
     - İngilizce ABD (aa/gg/yyyy) – January 1, 2022
     - Çince (yyyy-aa-gg) – 2022 年 1 月 1 日
     - French (gg/aa/yyyy) – 1er janvier 2022
@@ -268,7 +268,7 @@ Dilinizin kurallarını bilmeli ve buna göre çeviri yapmalısınız. Yardıma 
 
 **Ölçü birimleri**
 
-- Genel bir kural olarak, lütfen ölçü birimlerini kaynağa uygun şekilde koruyun. Ülkeniz farklı bir sistem kullanıyorsa, dönüştürmeyi parantez içinde ekleyebilirsiniz.
+- Genel bir kural olarak, lütfen ölçü birimlerini kaynağa göre saklayın. Ülkeniz farklı bir sistem kullanıyorsa, dönüştürmeyi parantez içinde ekleyebilirsiniz.
 - Ölçü birimlerinin yerelleştirilmesinin yanı sıra, dillerin bu birimlere yaklaşımlarındaki farklılıkları da not etmek önemlidir. Temel fark, dile bağlı olarak farklı olabilen sayı ve birim arasındaki boşluktur. Bunun örnekleri arasında 100 kB'ye karşı 100 kB veya 50ºF'ye karşı 50 ºF yer alır.
 
 ### Sonuç {#conclusion}

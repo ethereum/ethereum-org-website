@@ -9,7 +9,7 @@ tags:
   - "contractele inteligente"
   - "noțiuni de bază"
   - "implementare"
-skill: începător
+skill: beginner
 lang: ro
 sidebar: true
 published: 2021-03-31

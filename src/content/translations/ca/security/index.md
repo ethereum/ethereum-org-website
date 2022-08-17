@@ -274,7 +274,7 @@ Les estafes d'enviament involucren que un projecte d'estafa enviï un actiu (NFT
 - [Per aquesta raó no hauríeu d'utilitzar textos per a l'autenticació de doble factor](https://www.theverge.com/2017/9/18/16328172/sms-two-factor-authentication-hack-password-bitcoin) - _The Verge_
 - [Fins a 3 milions de dispositius infectats per complements de Chrome i Edge enllaçats a malware"](https://arstechnica.com/information-technology/2020/12/up-to-3-million-devices-infected-by-malware-laced-chrome-and-edge-add-ons/) - _Dan Goodin_
 - [Com crear una contrasenya forta, que no pugueu oblidar](https://www.avg.com/en/signal/how-to-create-a-strong-password-that-you-wont-forget) - _AVG_
-- [Què és una clau de seguretat? ](https://help.coinbase.com/en/coinbase/getting-started/verify-my-account/security-keys-faq) - _Coinbase_
+- [Què és una clau de seguretat?](https://help.coinbase.com/en/coinbase/getting-started/verify-my-account/security-keys-faq) - _Coinbase_
 
 ### Criptoseguretat {#reading-crypto-security}
 

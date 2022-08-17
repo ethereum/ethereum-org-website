@@ -8,7 +8,7 @@ incomplete: true
 
 ## Testando ferramentas e bibliotecas {#testing-tools-and-libraries}
 
-**Waffle -\*\***_Uma infraestrutura para desenvolvimento avançado de contratos inteligentes e testes (baseado em ethers.js)._\*\*
+**Waffle -** **_Uma infraestrutura para desenvolvimento avançado de contratos inteligentes e testes (baseado em ethers.js)._**
 
 - [getwaffle.io](https://getwaffle.io/)
 - [GitHub](https://github.com/EthWorks/Waffle)

@@ -1,5 +1,5 @@
 ---
-title: Web2 与 Web3 的对比
+title: Web2 与 Web3 对比
 description:
 lang: zh
 sidebar: true
@@ -7,9 +7,11 @@ sidebar: true
 
 Web2 指的是我们如今众所周知的互联网版本。 一个在互联网公司掌控下提供服务来交换个人数据的互联网。 就以太坊而言，Web3 指的是在区块链上运行的去中心化应用。 任何用户都可以参与以太坊上的这些应用，个人数据却不会被出卖。
 
+在寻找更适合初学者的资源？ 请参阅我们的 [Web3 简介](/web3/)。
+
 ## Web3 的优势 {#web3-benefits}
 
-许多 Web3 开发者由于以太坊的内在去中心化而选择构建去中心化应用程序：
+许多 Web3 开发者由于以太坊与生俱来的去中心化而选择构建去中心化应用程序：
 
 - 网络上的任何人都有使用服务的权限 — — 换言之，不需要许可。
 - 没有人可以屏蔽您或拒绝您访问该服务。
@@ -24,11 +26,11 @@ Web2 指的是我们如今众所周知的互联网版本。 一个在互联网�
 | 支付服务可能决定不允许对某些类型的工作进行支付 | Web3 付款应用程序不需要个人数据，也不能阻止付款                                             |
 | 零工经济应用的服务器可能会停用并影响劳动者收入 | Web3 服务器不会下线——他们使用以太坊，一个由数以千计的计算机组成的去中心化网络作为他们的后端 |
 
-这并不意味着所有服务都需要变成 dapp。 这些例子说明了 Web2 和 Web3 服务之间的主要差异。
+这并不意味着所有服务都需要转变成去中心化应用程序。 这些示例说明了 Web2 和 Web3 服务之间的主要差异。
 
-## Web3 局限性 {#web3-limitations}
+## Web3 的局限性 {#web3-limitations}
 
-Web3 现在有一些局限：
+Web3 现在有一些局限性：
 
 - 可扩展性——交易在 web3 上进度较慢，因为它们是去中心化的。 更改状态像付款一样，需要由矿工处理并在整个网络中传播。
 - UX — 与 web3 应用程序互动可能需要额外的步骤、软件和学习。 这可能是应用的一个障碍。
@@ -37,7 +39,7 @@ Web3 现在有一些局限：
 
 ## 中心化与去中心化 {#centralization-vs-decentralization}
 
-在下表中，我们粗略列举了中心化和去中心化数字网络的优缺点。
+在下表中，我们大致列举了中心化和去中心化数字网络的一些优缺点。
 
 | 中心化系统                                                                                                  | 去中心化系统                                                                                                                              |
 | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
@@ -49,11 +51,12 @@ Web3 现在有一些局限：
 | 中心化组织可以审查数据，可能会切断网络的某些部分与网络其他部分的交互。                                      | 审查制度要困难得多，因为信息有多种途径在网络上传播。                                                                                      |
 | 网络准入由中心化组织控制。                                                                                  | 任何人都可以加入网络；没有“守门人”。 理想的情况是，参与费用非常低。                                                                       |
 
-请注意，这些是一般模式，可能不适用于每一个网络。 此外，在现实情况下，网络集中/分散的程度取决于一系列因素；没有一个网络完全中心化或完全去中心化。
+请注意，这些是一般概况，可能不适用于每一个网络。 此外，在现实情况下，网络中心化/去中心化程度取决于一系列因素；没有一个网络完全中心化或完全去中心化。
 
 ## 延伸阅读 {#further-reading}
 
-- [The Architecture of a Web 3.0 application](https://www.preethikasireddy.com/post/the-architecture-of-a-web-3-0-application) - _Preethi Kasireddy_
-- [The Meaning of Decentralization](https://medium.com/@VitalikButerin/the-meaning-of-decentralization-a0c92b76a274) _Feb 6, 2017 - Vitalik Buterin_
-- [Why Decentralization Matters](https://medium.com/s/story/why-decentralization-matters-5e3f79f7638e) _Feb 18, 2018 - Chris Dixon_
-- [What Is Web 3.0 & Why It Matters](https://medium.com/fabric-ventures/what-is-web-3-0-why-it-matters-934eb07f3d2b) _Dec 31, 2019 - Max Mersch and Richard Muirhead_
+- [什么是 Web3？](/web3/) - _ethereum.org_
+- [Web 3.0 应用程序架构](https://www.preethikasireddy.com/post/the-architecture-of-a-web-3-0-application) - _Preethi Kasireddy_
+- [去中心化的含义](https://medium.com/@VitalikButerin/the-meaning-of-decentralization-a0c92b76a274) _2017 年 2 月 6 日 - Vitalik Buterin_
+- [去中心化缘何如此重要](https://medium.com/s/story/why-decentralization-matters-5e3f79f7638e) _2018 年 2 月 18 日- Chris Dixon_
+- [什么是 Web 3.0 以及为何它很重要](https://medium.com/fabric-ventures/what-is-web-3-0-why-it-matters-934eb07f3d2b) _2019 年 12 月 31 日 - Max Mersch 与 Richard Muirhead_

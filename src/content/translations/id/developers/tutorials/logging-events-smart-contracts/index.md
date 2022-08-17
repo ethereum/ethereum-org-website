@@ -7,7 +7,7 @@ tags:
   - "remix"
   - "solidity"
   - "aksi"
-skill: tingkat menengah
+skill: intermediate
 lang: id
 sidebar: true
 published: 2020-04-03

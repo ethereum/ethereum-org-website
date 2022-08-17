@@ -102,7 +102,7 @@ Ethereum, birkaç nedenden dolayı DAO'lar için mükemmel bir temeldir:
 - [Bir koloni başlatma](https://colony.io/)
 - [DAOStack ile bir DAO oluşturma](https://daostack.io/)
 
-## Daha fazla bilgi {#further-reading}
+## Daha fazla okuma {#further-reading}
 
 ### DAO Makaleleri {#dao-articles}
 

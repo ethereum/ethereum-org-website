@@ -92,7 +92,7 @@ Son olarak, bir kütüphaneyi dahil edip etmeyeceğinize karar verirken, onun ge
 
 - [Belgeler](https://docs.openzeppelin.com/contracts/)
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-contracts)
-- [Topluluk Forumu](https://forum.openzeppelin.com/c/general/16)
+- [Topluluk Forumları](https://forum.openzeppelin.com/c/general/16)
 
 **DappSys -** **_Akıllı sözleşmeler için güvenli, basit ve esnek yapılı yapı taşlarıdır._**
 
@@ -103,11 +103,11 @@ Son olarak, bir kütüphaneyi dahil edip etmeyeceğinize karar verirken, onun ge
 
 - [GitHub](https://github.com/HQ20/contracts)
 
-## İlgili eğitimler {#related-tutorials}
+## İlgili öğreticiler {#related-tutorials}
 
 - [Ethereum geliştiricileri için güvenlik değerlendirmeleri](/developers/docs/smart-contracts/security/) _– Akıllı sözleşme yapımı esnasında kütüphane kullanımı dahil güvenlik değerlendirmelerine giriş._
 - [ERC-20 token akıllı sözleşmesini anlamak](/developers/tutorials/understand-the-erc-20-token-smart-contract/) _-Birden fazla kütüphane tarafından sağlanan, ERC20 standartına bir giriş._
 
-## Daha fazla bilgi {#further-reading}
+## Daha fazla okuma {#further-reading}
 
 _Size yardımcı olan bir topluluk kaynağı mı biliyorsunuz? Bu sayfayı düzenleyin ve onu ekleyin!_

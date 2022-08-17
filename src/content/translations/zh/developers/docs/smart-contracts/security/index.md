@@ -5,13 +5,13 @@ lang: zh
 sidebar: true
 ---
 
-以太坊智能合约是极为灵活的。它能够存储超过非常大量的虚拟货币（超过十亿美元），并且根据先前部署的智能合约运行不可修改的代码。 虽然这创造了一个充满活力和创造性的生态系统，但其中包含的无信任、相互关联的智能合约，也吸引了攻击者利用智能合约中的漏洞和以太坊中的未知错误来赚取利润。 智能合约代码*通常*无法修改来修复安全漏洞，因此从智能合约中被盗窃的资产是无法收回的，且被盗资产极难追踪。 由于智能合约问题而被盗或丢失的价值总额很容易超过 $1B。 一些因为智能合约代码编写错误导致较大经济损失的例子：
+以太坊智能合约是极为灵活的。它能够存储超过非常大量的虚拟货币（超过十亿美元），并且根据先前部署的智能合约运行不可修改的代码。 虽然这创造了一个充满活力和创造性的生态系统，但其中包含的无信任、相互关联的智能合约，也吸引了攻击者利用智能合约中的漏洞和以太坊中的未知错误来赚取利润。 智能合约代码*通常*无法修改来修复安全漏洞，因此从智能合约中被盗窃的资产是无法收回的，且被盗资产极难追踪。 由于智能合约问题而被盗取或丢失的价值总额很容易超过 10 亿美元。 一些因为智能合约代码编写错误导致较大经济损失的例子：
 
 - [钱包问题 #1 - 3000 万美金损失](https://www.coindesk.com/30-million-ether-reported-stolen-parity-wallet-breach)
 - [钱包问题 #2 - 3 亿美金锁定](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether)
 - [去中心化自治组织被黑，360 万以太币被盗！ 目前价值超过 10 亿美元](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/)
 
-## 前置要求 {#prerequisites}
+## 先决条件 {#prerequisites}
 
 这个章节将介绍智能合约安全问题，以确保您在处理安全问题之前熟悉[智能合约](/developers/docs/smart-contracts/)。
 
@@ -77,7 +77,7 @@ contract Victim {
 2. 发送用户的余额
 3. 将余额重置为 0，因此它们不能再次提取余额。
 
-如果从普通账户（例如您自己的 MetaMask 账户）调用，这将按预期运行：msg.sender.call.value() 只是向您的账户发送 ETH。 但是，智能合约也能调用其他合约。 如果一个自制的恶意合约调用 `withdraw()`，msg.sender.call.value() 会不仅发送 `amount` 个以太币，还会暗中调用合约来开始执行代码。 想象这个恶意合约：
+如果从普通账户（例如您自己的 MetaMask 帐户）调用，此函数将按预期运行：msg.sender.call.value() 只是向您的帐户发送以太币。 但是，智能合约也能调用其他合约。 如果一个自制的恶意合约调用 `withdraw()`，msg.sender.call.value() 会不仅发送 `amount` 个以太币，还会暗中调用合约来开始执行代码。 想象这个恶意合约：
 
 ```solidity
 contract Attacker {
@@ -217,7 +217,7 @@ contract NoLongerAVictim {
 
 延伸阅读:
 
-- [共识智能合约已知攻击](https://consensys.github.io/smart-contract-best-practices/attacks/) - 对最重要弱点的可读解释，有很多样本代码。
+- [Consensys 智能合约已知攻击](https://consensys.github.io/smart-contract-best-practices/attacks/) - 对最重要的漏洞进行深入浅出解释，并提供很多样本代码。
 - [SWC 注册](https://swcregistry.io/docs/SWC-128) - 适用于以太坊和智能合约的 CWE 的管理列表
 
 ## 安全工具 {#security-tools}
@@ -259,14 +259,14 @@ contract NoLongerAVictim {
 
 **有关形式验证的信息**
 
-- [智能合约的形式验证如何工作](https://runtimeverification.com/blog/how-formal-verification-of-smart-contracts-works/) _2018 年 7 月 20 日 - Brian Marick_
+- [智能合约的形式验证如何工作](https://runtimeverification.com/blog/how-formal-verification-of-smart-contracts-works/) _July 20, 2018 - Brian Marick_
 - [形式验证如何确保智能合约无懈可击](https://media.consensys.net/how-formal-verification-can-ensure-flawless-smart-contracts-cbda8ad99bd1) _2018 年 1 月 29 日 - Bernard Mueller_
 
 ### 使用工具 {#using-tools}
 
 智能合约安全分析最受欢迎的两个工具是：
 
-- [Slither](https://github.com/crytic/slither) 来自 [Trail of Bits](https://www.trailofbits.com/)（托管版本：[Crytic](https://crytic.io/)）
+- [Slither](https://github.com/crytic/slither) by [Trail of Bits](https://www.trailofbits.com/)（托管版本：[Crytic](https://crytic.io/)）
 - [Mythril](https://github.com/ConsenSys/mythril) 来自 [ConsenSys](https://consensys.net/)（托管版本：[MythX](https://mythx.io/)）
 
 两者都是分析代码和报告问题的实用工具。 每个人都有一个 [commercial] 托管版本，但也可以免费在本地运行。 下面是如何运行 Slither 的一个快速示例，这个示例是在方便的 Docker 映像 `trailofbits/eth-security-toolbox` 中提供的。 如果您还没有安装 ，您将需要 [安装 Docker](https://docs.docker.com/get-docker/)。

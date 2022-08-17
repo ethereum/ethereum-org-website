@@ -11,14 +11,14 @@ Die unten aufgelisteten Programme bieten eine Vielzahl von Finanzierungshilfen f
 
 Diese Liste wird von unserer Community verwaltet. Wenn Informationen fehlen oder falsch sind, bearbeiten Sie diese Seite gerne.
 
-## Das weitere Ethereum-Ökosystem {#broad-ethereum-ecosystem}
+## Allgemeines Ethereum-Ökosystem {#broad-ethereum-ecosystem}
 
 Diese Programme unterstützen das breit gefächerte Ethereum-Ökosystem, indem sie Finanzierungen für zahlreiche Projekte bereitstellen. Dazu gehören unter anderem Lösungen zu Skalierbarkeit, Community-Aufbau, Sicherheit und Privatsphäre. Diese Fördermaßnahmen sind nicht spezifisch für eine bestimmte Ethereum-Plattform und sind ein guter Ausgangspunkt, wenn Sie unsicher sind.
 
-- [EF Ecosystem-Supportprogramm](https://esp.ethereum.foundation) – _Finanzierung von Open-Source-Projekten, die Ethereum zugute kommen, mit besonderem Fokus auf universelle Tools, Infrastruktur, Forschung und Allgemeinwohl_
+- [EF Ecosystem Support Program](https://esp.ethereum.foundation) - _Finanzierung von Open-Source-Projekten, die Ethereum zugute kommen, mit besonderem Fokus auf universelle Tools, Infrastruktur, Forschung und öffentliche Güter_
   - [Akademische Stipendienrunde](/community/grants/academic-grants-round/) – _Die Ethereum Foundation sponsert eine Reihe von Stipendien zur Unterstützung akademischer Arbeiten im Zusammenhang mit Ethereum_
 - [Ethereum RFPs](https://github.com/ethereum/requests-for-proposals) – _Ausschreibungen der Ethereum Foundation für Arbeiten und Projekte im Ethereum-Ökosystem_
-- [MetaCartel](https://www.metacartel.org/grants/) – _dApp-Entwicklung, DAO-Erstellung_  
+- [MetaCartel](https://www.metacartel.org/grants/) – _DApp-Entwicklung, DAO-Erstellung_  
   Zuschüsse zwischen 1.000 - 8.000 USD.
 - [Moloch DAO](https://www.molochdao.com/) – _Datenschutz, Layer-2-Skalierung, Client-Sicherheit und mehr_
 - [Offene Zuschüsse](https://opengrants.com/explore)
@@ -29,7 +29,7 @@ Diese Programme unterstützen das breit gefächerte Ethereum-Ökosystem, indem s
 Diese Projekte haben ihre eigenen Zuschüsse für Projektvorhaben zur Entwicklung und Erprobung ihrer eigenen Technologie geschaffen.
 
 - [Aave-Zuschussprogramm](https://aavegrants.org/) – _[Aave](https://aave.com/) Grants DAO_
-- [Balancer](https://forms.gle/c68e4fM7JHCQkPkN7) – _[Balancer](https://balancer.fi/)-Ökosystemfonds_
+- [Balancer](https://balancergrants.notion.site/Balancer-Community-Grants-23e562c5bc4347cd8304637bff0058e6) – _[Balancer](https://balancer.fi/)-Ökosystemfonds_
 - [Programm für Verbundzuschüsse](https://compoundgrants.org/) – _[Verbund](https://compound.finance/)-Finanzökosystem_
 - [Consensys-Zuschussprogram](https://consensys.net/grants/) – _[Consensys](https://consensys.net/)-Blockchain-Finanzierung und Ethereum-Zuschüsse_
 - [dYdX-Zuschussprogram](https://dydxgrants.com/) – _[dYdX](https://dydx.exchange/) dezentralisierte Börse_

@@ -8,11 +8,11 @@ tags:
   - "solidity"
   - "入门指南"
   - "部署"
-skill: 初学者
+skill: beginner
 lang: zh
 sidebar: true
 published: 2020-04-03
-source: 以太坊开发团队
+source: EthereumDev
 sourceUrl: https://ethereumdev.io/deploying-your-first-smart-contract/
 address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 ---
@@ -74,13 +74,13 @@ contract Counter {
 
 ![Remix solidity编译器的编译按钮](./remix-compile.png)
 
-您可以选择“自动编译”选项，以便在您将内容保存到文本编辑器时始终编译合约。
+您可以选择“Auto compile”选项，这样在将合约内容保存到文本编辑器时合约也随之编译。
 
 然后切换到部署和运行交易屏幕：
 
 ![Remix工具栏的部署图标](./remix-deploy.png)
 
-在“部署和运行交易”屏幕上，仔细检查显示的合约名称并点击“部署”。 正如您在页面顶部看到的那样，当前环境是“JavaScript VM”，这意味着我们将在本地测试区块链上部署我们的智能合约并与之交互，以便能够更快地进行测试并且无需任何费用。
+在“部署和运行交易”屏幕上，仔细检查显示的合约名称并点击“部署”。 正如您在页面顶部所见，当前环境是“JavaScript 虚拟机”，这意味着我们将在本地测试区块链上部署我们的智能合约并与之交互，以便能够更快地进行测试且无须支付任何费用。
 
 ![Remix solidity编译器的部署按钮](./remix-deploy-button.png)
 

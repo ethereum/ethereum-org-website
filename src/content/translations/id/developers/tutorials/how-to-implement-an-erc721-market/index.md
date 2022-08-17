@@ -7,7 +7,7 @@ tags:
   - "erc-721"
   - "solidity"
   - "token"
-skill: tingkat menengah
+skill: intermediate
 lang: id
 sidebar: true
 published: 2020-03-19

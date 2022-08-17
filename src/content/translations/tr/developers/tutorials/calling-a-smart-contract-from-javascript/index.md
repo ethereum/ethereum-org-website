@@ -7,7 +7,7 @@ tags:
   - "ön uç"
   - "JavaScript"
   - "web3.js"
-skill: acemi
+skill: beginner
 lang: tr
 sidebar: true
 published: 2020-04-19

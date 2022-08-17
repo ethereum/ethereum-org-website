@@ -8,7 +8,7 @@ tags:
   - "solidity"
   - "noțiuni de bază"
   - "erc-20"
-skill: intermediar
+skill: intermediate
 lang: ro
 sidebar: true
 published: 2020-04-07

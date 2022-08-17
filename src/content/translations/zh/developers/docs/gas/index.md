@@ -7,7 +7,7 @@ sidebar: true
 
 Gas 对以太坊网络至关重要。 正是这种燃料使它能够运行，正如车辆需要汽油一样。
 
-## 前置要求 {#prerequisites}
+## 先决条件 {#prerequisites}
 
 为了更好地理解此页面，推荐先阅读[交易](/developers/docs/transactions/)和 [EVM](/developers/docs/evm/)。
 
@@ -118,7 +118,7 @@ Gas 是指在以太坊网络上执行特定操作所需的计算工作量。
 
 尽管交易中包含费用限制，但交易中未使用的 gas 将退还给用户（如：返还`最高费用 -（基本费用 + 小费）`）。
 
-![未使用 Gas 退款情况图](../../../../../developers/docs/transactions/gas-tx.png) _图表来自 [Ethereum EVM 插图](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![未使用 Gas 退款情况图](../transactions/gas-tx.png) _图表来自 [Ethereum EVM 插图](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 ## 什么是 gas 限额？ {#what-is-gas-limit}
 
@@ -136,7 +136,7 @@ Gas 费高是由于以太坊广受欢迎。 在以太坊进行任何操作都需
 
 以太坊[性能扩展的升级](/upgrades/)将会最终解决一些燃料成本问题，也会为以太坊平台处理每秒上千次的交易和全面升级做好准备。
 
-第二层扩容是一项主要举措，可大大优化 gas 成本、用户体验和可扩展性。 [关于第二层扩容的更多信息](/developers/docs/scaling/layer-2-rollups/)。
+第二层扩容是一项主要举措，可大大优化 gas 成本、用户体验和可扩展性。 [关于第二层扩容的更多信息](/developers/docs/scaling/#layer-2-scaling)。
 
 在信标链上引入的新验证模式应能降低高耗电量，减少对专门硬件的依赖。 这个链将使去中心化的以太坊网络能够达成共识并保持网络安全。同时通过代替要求财务承诺来限制能源消耗。
 
@@ -152,6 +152,7 @@ Gas 费高是由于以太坊广受欢迎。 在以太坊进行任何操作都需
 - [Blocknative ETH Gas Estimator](https://chrome.google.com/webstore/detail/blocknative-eth-gas-estim/ablbagjepecncofimgjmdpnhnfjiecfm) _支持类型 0 传统交易和类型 2 EIP-1559 交易的 gas 估算 Chrome 插件。_
 
 - [ETH Gas Station](https://ethgasstation.info/) _以太坊 gas 市场面向消费者的指标_
+- [Cryptoneur 燃料费计算器](https://www.cryptoneur.xyz/gas-fees-calculator) _按照您当地货币计算主网、Arbitrum 和 Polygon 上进行的各类交易的燃料费。_
 
 ## 相关工具 {#related-tools}
 

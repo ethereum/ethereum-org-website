@@ -11,7 +11,7 @@ tags:
   - "入门指南"
   - "订阅"
   - "javascript"
-skill: 初学者
+skill: beginner
 source: Alchemy文档
 sourceUrl: https://docs.alchemyapi.io/guides/using-websockets
 published: 2020-12-01

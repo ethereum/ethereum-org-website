@@ -24,7 +24,7 @@ Ethereum, comme Bitcoin, utilise actuellement un mécanisme de consensus appelé
 
 Dans les systèmes décentralisés comme Ethereum, nous devons nous assurer que tout le monde s'accorde sur l'ordre des transactions. Les mineurs aident à cela en résolvant des casse-têtes complexes sur le plan informatique afin de produire des blocs, qui constituent un moyen de sécuriser le réseau des attaques.
 
-[Plus d'infos sur la preuve de travail](/developers/docs/consensus-mechanisms/pow/)
+[En savoir plus sur la preuve de travail](/developers/docs/consensus-mechanisms/pow/)
 
 ## Qui peut devenir mineur sur Ethereum ? {#who-can-become-a-miner}
 

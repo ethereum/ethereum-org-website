@@ -11,23 +11,25 @@ sidebar: true
 
 智能合约也是一个[以太坊帐户](/developers/docs/accounts/)，我们称之为合约帐户。 这意味着他们有余额，他们可以通过网络进行交易。 但是，他们无法被人操控，他们是被部署在网络上作为程序运行着。 个人用户可以通过提交交易执行智能合约的某一个函数来与智能合约进行交互。 智能合约能像常规合约一样定义规则，并通过代码自动强制执行。 默认情况下，您无法删除智能合约，与它们的交互是不可逆的。
 
-## 前置要求 {#prerequisites}
+## 前体条件 {#prerequisites}
 
-确保在您已了解有关[帐户](/developers/docs/accounts/)、[交易](/developers/docs/transactions/)和[以太坊虚拟机](/developers/docs/evm/)后再进入智能合约。
+如果您刚刚入门或寻找技术含量较低的介绍，我们推荐我们的[智能合约简介](/smart-contracts/)。
+
+确保在您已深入了解[帐户](/developers/docs/accounts/)、[交易](/developers/docs/transactions/)和[以太坊虚拟机](/developers/docs/evm/)，然后再开始学习智能合约。
 
 ## 数字自动售货机 {#a-digital-vending-machine}
 
-正如 [Nick Szabo](https://unenumerated. blogspot. com/) 所述，对智能合约的最佳比喻也许就是一台售货机。 有了正确的投入，就能保证一定的产出。
+也许对于智能合约最恰当的比喻是自动售货机，就像 [Nick Szabo](https://unenumerated.blogspot.com/) 描述的那样。 有了正确的投入，就保证了某些产出。
 
-从售货机中获取快餐：
+要从售货机中获取零食：
 
 ```
 money + snack selection = snack dispensed
 ```
 
-这种逻辑已在自动售货机中设定好。
+这种逻辑以程序的形式写入自动售货机。
 
-一个智能合约，就像自动售货机一样，逻辑已设定好。 以下示例简单展示了智能合约会如何看起来像自动售货机：
+像自动售货机一样，智能合约也有逻辑编程到其中。 下面的简单示例展示了自动售货机如何看上去如同智能合约一样：
 
 ```solidity
 pragma solidity 0.8.7;
@@ -62,44 +64,44 @@ contract VendingMachine {
 }
 ```
 
-就像自动售货机消除了对供应商雇员的需求一样，智能合约可以在许多行业中取代中介机构。
+就像自动售货机让厂商不再需要员工一样，智能合约可以在许多行业中取代中间人。
 
 ## 无需准入性 {#permissionless}
 
-任何人都可以编写智能合约，并将其部署到网络上。 您只需要学习如何用[智能合约语言](/developers/docs/smart-contracts/languages/)编码，并有足够的以太币来部署您的合约。 在技术上，部署智能合约是一项交易，所以您需要支付[气体](/developers/docs/gas/)，就像您需要为简单的以太币转账支付气体一样。 然而，部署合约需要支付的气体成本要高得多。
+任何人都可以编写智能合约并将其部署到区块链网络上。 您只需要学习如何用[智能合约语言编码](/developers/docs/smart-contracts/languages/)，并有足够的以太币来部署您的合约。 在技术层面上，部署智能合约是一项交易，所以您需要支付[燃料](/developers/docs/gas/)费用，就像您需要为简单的以太坊转账支付燃料一样。 然而，部署合约需要支付的燃料费用更高。
 
-以太坊为编写智能合约提供的语言对开发者比较友好：
+以太坊提供了对开发者友好的智能合约编程语言：
 
 - Solidity
 - Vyper
 
 [关于语言的更多信息](/developers/docs/smart-contracts/languages/)
 
-然而，它们必须要先编译才能部署，以便以太坊虚拟机可以解释并储存合约。 [关于编译的更多信息](/developers/docs/smart-contracts/compiling/)
+然而，智能合约必须要先编译才能部署，以便以太坊虚拟机可以解释并存储它们。 [关于编译的更多信息](/developers/docs/smart-contracts/compiling/)
 
 ## 可组合性 {#composability}
 
-智能合约在以太坊上是公开的，可视为开放式应用程序接口。 这意味着您可以在自己的智能合约中调用其他智能合约，极大地扩展了可以执行的操作范围。 合约甚至可以部署其他合约。
+智能合约在以太坊上公开，并且可以看成开放应用程序接口。 这意味着您可以在自己的智能合约中调用其他智能合约，以便显著扩展可能性。 合约甚至可以部署其他合约。
 
 了解关于[智能合约可组合性](/developers/docs/smart-contracts/composability/)的更多信息。
 
 ## 局限性 {#limitations}
 
-智能合约本身无法获取关于”真实世界“的事件信息，因为它们无法发送超文本传输协议请求。 这是由设计决定的。 依赖外部信息可能会危及共识，这一点对安全性和去中心化而言十分重要。
+智能合约本身无法获取关于”真实世界“事件的信息，因为它们无法发送 HTTP 请求。 这是设计使然。 因为依赖外部信息可能会影响共识，而共识对安全性和去中心化而言十分重要。
 
-这可以使用[预言机](/developers/docs/oracles/)通过多种方法来规避。
+这可以通过[预言机](/developers/docs/oracles/)来规避。
 
-智能合约的另一个限制是最大合约大小。 智能合约最大可为 24KB，否则会消气体耗完气体。 可以使用[钻石模式](https://eips.ethereum.org/EIPS/eip-2535)来规避这一问题。
+智能合约的另一个限制是最大合约大小。 智能合约最大可达 24 KB，否则会消耗完燃料。 可以使用[钻石模式](https://eips.ethereum.org/EIPS/eip-2535)来规避它。
 
 ## 智能合约资源 {#smart-contract-resources}
 
-**OpenZeppelin 合约——\*\***_安全智能合约开发的库。_\*\*
+**OpenZeppelin 合约 - _安全智能合约开发库。_**
 
 - [openzeppelin.com/contracts/](https://openzeppelin.com/contracts/)
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-contracts)
 - [社区论坛](https://forum.openzeppelin.com/c/general/16)
 
-**DappSys - \*\***_安全、简单、灵活的智能合约构建块。_\*\*
+**DappSys - _安全、简单、灵活的智能合约基石。_**
 
 - [DappSys](https://dappsys.readthedocs.io/)
 - [GitHub](https://github.com/dapphub/dappsys)

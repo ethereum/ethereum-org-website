@@ -12,7 +12,7 @@ tags:
   - "compound"
   - "uniswap"
   - "sablier"
-skill: începător
+skill: beginner
 lang: ro
 sidebar: true
 published: 2020-04-27

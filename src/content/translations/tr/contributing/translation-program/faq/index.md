@@ -19,7 +19,7 @@ Ethereum.org Çeviri Programı, bunun bir uzantısıdır ve benzer bir felsefe g
 
 Bu nedenle Çeviri Programı açık ve gönüllü olup katılım ücrete tabi değildir. Çevirmenlere çevirdikleri kelime sayısı kadar ücret verseydik, sadece yeterli çeviri tecrübesi olanları (profesyonel çevirmenleri) Çeviri Programına davet edebilirdik. Bu, Çeviri Programını dışlayıcı hâle getirir ve belirtilen hedeflere, özellikle de herkesin katılmasına ve ekosisteme dahil olmasına izin vermemize engel olacaktır.
 
-Katkıda bulunanların Ethereum ekosisteminde başarılı olmalarını sağlamak için her türlü çabayı gösteriyoruz; [POAP'ler sunmak](/contributing/translation-program/acknowledgements/#poap), [çevirmen sertifikası](/contributing/translation-program/acknowledgements/#certificate) ve ayrıca [Çeviri Lider Tabloları](/contributing/translation-program/acknowledgements/) ve [sitede tüm çevirmenlerimizin listelenmesi](/contributing/translation- program/katkıda bulunanlar/) gibi pek çok parasal olmayan teşvik mevcuttur.
+Katkıda bulunanların Ethereum ekosisteminde başarılı olmalarını sağlamak için her türlü çabayı gösteriyoruz; [POAP'ler sunmak](/contributing/translation-program/acknowledgements/#poap), [çevirmen sertifikası](/contributing/translation-program/acknowledgements/#certificate) ve ayrıca [Çeviri Lider Tabloları](/contributing/translation-program/acknowledgements/) ve [sitede tüm çevirmenlerimizin listelenmesi](/contributing/translation-program/contributors/) gibi pek çok parasal olmayan teşvik mevcuttur.
 
 ## `<HTML tags>` bulunan dizgileri nasıl çevirebilirim? {#tags}
 

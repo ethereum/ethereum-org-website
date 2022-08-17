@@ -1,5 +1,5 @@
 ---
-title: 集成开发环境
+title: 集成开发环境 (IDE)
 description:
 lang: zh
 sidebar: true
@@ -35,7 +35,6 @@ sidebar: true
 **Visual Studio Code -** **_以太坊官方支持的专业跨平台集成开发环境。_**
 
 - [Visual Studio Code](https://code.visualstudio.com/)
-- [以太坊区块链开发工具包](https://marketplace.visualstudio.com/items?itemName=AzBlockchain.azure-blockchain)
 - [Azure 区块链工作台](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/microsoft-azure-blockchain.azure-blockchain-workbench?tab=Overview)
 - [代码示例](https://github.com/Azure-Samples/blockchain/blob/master/blockchain-workbench/application-and-smart-contract-samples/readme.md)
 - [GitHub](https://github.com/microsoft/vscode)
@@ -59,7 +58,7 @@ sidebar: true
 
 ## 插件与扩展 {#plugins-extensions}
 
-- [solidity](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity) - 以太坊 Visual Studio Code 中的 Solidity 语言
+- [solidity](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity) - 以太坊中的 Visual Studio Code Solidity 语言
 - [Prettier Solidity](https://github.com/prettier-solidity/prettier-plugin-solidity) - 使用 prettier 的代码格式化工具
 
 ## 延伸阅读 {#further-reading}

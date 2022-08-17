@@ -5,7 +5,7 @@ lang: zh
 sidebar: true
 ---
 
-## 介绍 {#introduction}
+## 简介 {#introduction}
 
 **什么是非同质化代币？**
 
@@ -17,7 +17,7 @@ ERC-721 为 NFT 引入了一个标准，换言之， 这种类型的代币是独
 
 是的。 所有 NFTs 都有一个 `uint256` 变量，名为 `tokenId`，所以对于任何 ERC-721 合约，这对值`contract address, tokenId` 必须是全局唯一的。 也就是说，dApp 可以有一个“转换器”，该转换器使用 `tokenId` 输入和输出一些非常有趣的事物的图像， 例如僵尸、武器、技能或非常可爱的猫咪！
 
-## 前置要求 {#prerequisites}
+## 前体条件 {#prerequisites}
 
 - [帐户](/developers/docs/accounts/)
 - [智能合约](/developers/docs/smart-contracts/)
@@ -31,7 +31,7 @@ ERC-721（Ethereum Request for Comments 721），由 William Entriken、Dieter S
 
 如果一个智能合约实现了下列方法和事件，它就可以被称为 ERC-721 非同质化代币合约。 一旦被部署，它将负责跟踪在以太坊上创建的代币。
 
-来自[ EIP-721 ](https://eips.ethereum.org/EIPS/eip-721)：
+来自 [EIP-721](https://eips.ethereum.org/EIPS/eip-721)：
 
 #### 方法 {#methods}
 
@@ -57,11 +57,11 @@ ERC-721（Ethereum Request for Comments 721），由 William Entriken、Dieter S
 
 ### 示例 {#web3py-example}
 
-让我们看看一个标准是多么重要，它使我们能够简单地在以太坊上检查任何 ERC-721 代币合约。 我们只需要合约的应用程序二进制接口（ABI）就可以创造任何 ERC-721 代币的接口。 你可以在下面看到，我们将使用简化的 ABI，来做一个低难度的例子。
+让我们看看一个标准是多么重要，它使我们能够简单地在以太坊上检查任何 ERC-721 代币合约。 我们只需要合约的应用程序二进制接口（ABI）就可以创造任何 ERC-721 代币的接口。 下面我们将使用一个简化的应用程序二进制接口，使其成为一个简单易用的例子。
 
 #### Web3.py 示例 {#web3py-example}
 
-首先，请确保您已安装 [Web3.py](https://web3py.readthedocs.io/en/stable/quickstart.html#installation) Python 库：
+首先，确认已经安装了 [Web3.py](https://web3py.readthedocs.io/en/stable/quickstart.html#installation)Python 库。
 
 ```
 $ pip install web3

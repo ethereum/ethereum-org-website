@@ -7,7 +7,7 @@ sidebar: true
 
 # Consommation énergétique d'Ethereum {#introduction}
 
-Les dépenses énergétiques de la "[preuve de travail](/developers/docs/consensus-mechanisms/#proof-of-work)" d'Ethereum sont trop élevées et ne peuvent pas être durables. Résoudre les préoccupations en matière de dépenses énergétiques sans sacrifier la sécurité et la décentralisation est un défi technique important qui a été au centre de la recherche et du développement pendant des années. Examinons pourquoi la construction d'Ethereum a eu un impact environnemental élevé et comment la prochaine mise à niveau du réseau vers la [preuve d'enjeu](/developers/docs/consensus-mechanisms/pos) changera radicalement la donne.
+Les dépenses énergétiques de la « [preuve de travail](/developers/docs/consensus-mechanisms/#proof-of-work) » d'Ethereum sont trop élevées et ne peuvent pas être durables. Résoudre les préoccupations en matière de dépenses énergétiques sans sacrifier la sécurité et la décentralisation est un défi technique important qui a été au centre de la recherche et du développement pendant des années. Examinons pourquoi la construction d'Ethereum a eu un impact environnemental élevé et comment la prochaine mise à niveau du réseau vers la [preuve d'enjeu](/developers/docs/consensus-mechanisms/pos) changera radicalement la donne.
 
 ## L'énergie sécurise le réseau {#energy-secures-the-network}
 
@@ -27,9 +27,9 @@ Un avenir plus vert pour Ethereum est déjà en cours de construction sous la fo
 
 De la même manière que la preuve de travail, une entité malveillante nécessiterait au moins 51 % du total des ETH mis en jeu dans le réseau pour exécuter une [attaque à 51 %](/glossary/#51-attack). Cependant, contrairement à la preuve de travail, où la perte potentielle d'une attaque échouée n'est que le coût de la génération de la puissance de calcul nécessaire pour miner, pour la preuve de l'enjeu, la perte possible d'une attaque est la quantité totale d'ETH utilisée comme garantie. Cette structure dissuasive permet de sécuriser le réseau avec preuve d'enjeu, tout en éliminant le besoin de dépenser de l'énergie pour des calculs arbitraires. Des explications détaillées de la sécurité du réseau par preuve d'enjeu peuvent être trouvées [ici](/developers/docs/consensus-mechanisms/pos/) et [ici](https://vitalik.ca/general/2017/12/31/pos_faq.html).
 
-## La fusion {#the-merge}
+## La Fusion {#the-merge}
 
-Il y a une chaîne fonctionnelle de preuve de mise en jeu appelée [chaîne phare](/upgrades/beacon-chain/) qui fonctionne depuis décembre 2020 et qui démontre la viabilité du protocole de preuve d'enjeu. La fusion fait référence au moment où Ethereum laisse la preuve de travail derrière lui et adopte pleinement la preuve d'enjeu. La fusion devrait avoir lieu au T2 2022. [En savoir plus sur la fusion](/upgrades/merge/).
+Il y a une chaîne fonctionnelle de preuve de mise en jeu appelée [chaîne phare](/upgrades/beacon-chain/) qui fonctionne depuis décembre 2020 et qui démontre la viabilité du protocole de preuve d'enjeu. La fusion fait référence au moment où Ethereum laisse la preuve de travail derrière lui et adopte pleinement la preuve d'enjeu. La Fusion devrait avoir lieu entre le troisième et quatrième trimestre 2022. [En savoir plus sur la fusion.](/upgrades/merge/).
 
 ## Dépenses énergétiques de la preuve d'enjeu {#proof-of-stake-energy}
 
@@ -66,9 +66,10 @@ Alors que la consommation d'énergie d'Ethereum a historiquement été considér
   Si vous pensez que ces statistiques sont incorrectes ou peuvent être rendues plus précises, veuillez soulever un problème ou RP. Ce sont des estimations faites par l'équipe d'ethereum.org, en utilisant des informations accessibles au public et la feuille de route actuelle d'Ethereum. Ces déclarations ne représentent pas une promesse officielle de la Fondation Ethereum. 
 </InfoBanner>
 
-## Complément d'informations {#further-reading}
+## Complément d'information {#further-reading}
 
 - [A country's worth of power, no more](https://blog.ethereum.org/2021/05/18/country-power-no-more/) – _Carl Beekhuizen, 18 Mai 2021_
+- [Consommation énergétique d'Ethereum](https://mirror.xyz/jmcook.eth/ODpCLtO4Kq7SCVFbU4He8o8kXs418ZZDTj0lpYlZkR8)
 - [Ethereum Emissions: A Bottom-up Estimate](https://kylemcdonald.github.io/ethereum-emissions/) – Kyle McDonald\_
 - [Ethereum Energy Consumption Index](https://digiconomist.net/ethereum-energy-consumption/) – _Digiconomist_
 - [ETHMerge.com](https://ethmerge.com/) — _[@InsideTheSim](https://twitter.com/InsideTheSim)_
@@ -77,7 +78,7 @@ Alors que la consommation d'énergie d'Ethereum a historiquement été considér
 
 - [La vision d'Ethereum](/upgrades/vision/)
 - [La chaîne phare](/upgrades/beacon-chain)
-- [La fusion](/upgrades/merge/)
+- [La Fusion](/upgrades/merge/)
 - [La fragmentation](/upgrades/beacon-chain/)
 
 ### Notes de bas de page et sources {#footnotes-and-sources}

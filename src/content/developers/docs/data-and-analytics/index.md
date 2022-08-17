@@ -7,7 +7,7 @@ sidebar: true
 
 ## Introduction {#Introduction}
 
-As utilization of the network continues to grow, an increasing amount of valuable information will exist in the on-chain data. As the volume of data rapidly increases, calculating and aggregating this information to report upon or drive a dApp can become a time and process heavy endeavor.
+As utilization of the network continues to grow, an increasing amount of valuable information will exist in the on-chain data. As the volume of data rapidly increases, calculating and aggregating this information to report upon or drive a dapp can become a time and process heavy endeavor.
 
 Leveraging existing data providers can expedite development, produce more accurate results, and reduce ongoing maintenance efforts. This will enable a team to concentrate on the core functionality their project is trying to provide.
 
@@ -21,7 +21,7 @@ In terms of architectural fundamentals, understanding what an [API](https://www.
 
 The [Graph Network](https://thegraph.com/) is a decentralized indexing protocol for organizing blockchain data. Instead of building and managing off-chain and centralized data stores to aggregate on-chain data, with The Graph, developers can build serverless applications that run entirely on public infrastructure.
 
-Using [GraphQL](https://graphql.org/), developers can query any of the curated open APIs, known as sub-graphs, to acquire the necessary information they need to drive their dApp. By querying these indexed sub-graphs, Reports and dApps not only get performance and scalability benefits but also the built in accuracy provided by network consensus. As new improvements and/or sub-graphs are added to the network, your projects can rapidly iterate to take advantage of these enhancements.
+Using [GraphQL](https://graphql.org/), developers can query any of the curated open APIs, known as sub-graphs, to acquire the necessary information they need to drive their dapp. By querying these indexed sub-graphs, Reports and dapps not only get performance and scalability benefits but also the built in accuracy provided by network consensus. As new improvements and/or sub-graphs are added to the network, your projects can rapidly iterate to take advantage of these enhancements.
 
 ## Block explorers {#block-explorers}
 

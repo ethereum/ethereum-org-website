@@ -109,7 +109,7 @@ sidebar: true
 - [相关文档](https://docs.ipfs.io/)
 - [GitHub](https://github.com/ipfs/ipfs)
 
-**Storj DCS - _安全、私有、与 S3 兼容的去中心化云对象存储，供开发者使用_**
+**Storj DCS - _安全、私有、与 S3 兼容的去中心化云对象存储，供开发者使用。_**
 
 - [Storj.io](https://storj.io/)
 - [相关文档](https://docs.storj.io/)
@@ -132,7 +132,7 @@ sidebar: true
 - [相关文档](https://docs.arweave.org/info/)
 - [Arweave](https://github.com/ArweaveTeam/arweave/)
 
-**0chain - _0Chain 是一个具有区块分片和 blobbers 的基于权益证明的去中心化存储平台_**
+**0chain - _0Chain 是一个具有区块分片和 blobbers 的基于权益证明的去中心化存储平台。_**
 
 - [0Chain.net](https://0chain.net/)
 - [相关文档](https://docs.0chain.net/0chain/)
@@ -156,13 +156,13 @@ sidebar: true
 - [相关文档](https://aleph.im/#/developers/)
 - [GitHub](https://github.com/aleph-im/)
 
-**Ceramic - _用户控制的星际文件系统数据库存储，用于数据丰富和吸引人的应用程序_**
+**Ceramic - _用户控制的星际文件系统数据库存储，用于数据丰富和吸引人的应用程序。_**
 
 - [Ceramic.network](https://ceramic.network/)
 - [相关文档](https://developers.ceramic.network/learn/welcome/)
 - [GitHub](https://github.com/ceramicnetwork/js-ceramic/)
 
-**Filebase - _第一个兼容 S3 的对象存储平台，允许您跨多个去中心化存储网络存储数据，包括 IPFS、Sia、Skynet 和 Storj。_**
+**Filebase - _第一个兼容 S3 的对象存储平台，允许您跨多个去中心化存储网络存储数据，包括星际文件系统、Sia、Skynet 和 Storj。_**
 
 - [Filebase.com](https://filebase.com/)
 - [相关文档](https://docs.filebase.com/)
@@ -170,10 +170,10 @@ sidebar: true
 
 ## 延伸阅读 {#further-reading}
 
-- [什么是去中心化存储？](https://coinmarketcap. com/alexandria/article/what-is-decentralized-storage-a-deep-dive-by-filecoin)- _CoinMarketCAp_
-- [五个关于去中心化存储的常见错误观念](https://www.storj.io/blog/busting-five-common-myths-about-decentralized-storage) - _Storj_
+- [什么是去中心化存储？](https://coinmarketcap.com/alexandria/article/what-is-decentralized-storage-a-deep-dive-by-filecoin)- _CoinMarketCAp_
+- [击破关于去中心化存储的五种谣传](https://www.storj.io/blog/busting-five-common-myths-about-decentralized-storage) - _Storj_
 
-_还有哪些社区资源对您有所帮助？ 请编辑本页面并添加！_
+_还有哪些社区资源对您有所帮助？ 请编辑本页面并添加它！_
 
 ## 相关主题 {#related-topics}
 

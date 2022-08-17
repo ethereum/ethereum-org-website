@@ -1,5 +1,5 @@
 ---
-title: 如何加入？
+title: 如何参与其中？
 description: 如何加入以太坊社区。
 sidebar: true
 lang: zh
@@ -24,7 +24,7 @@ lang: zh
 您是否有数学、加密或经济学方面的背景？ 您可能会对以太坊生态系统中正在进行的一些前沿工作感兴趣
 
 - [Challenges.ethereum.org](https://challenges.ethereum.org/) - 一系列高额研究奖金，您可以从中赚取 >100,000 美元
-- [ethrear.ch](https://ethresear.ch) - 以太坊的主要研究论坛，也是世界上最具影响力的加密经济学论坛
+- [Ethresear.ch](https://ethresear.ch) - 以太坊的主要研究论坛，也是世界上最具影响力的加密经济学论坛
 - [生态系统支持计划的愿望清单](https://esp.ethereum.foundation/wishlist/) - 适用于多个研究领域，以太坊生态系统支持计划正在积极寻求这些研究领域的资助申请
 
 ## 非技术技能组合 <Emoji text=":briefcase:" size={1} />‍ {#non-technical}
@@ -61,7 +61,7 @@ lang: zh
 
 - [关于权益质押的更多信息](/staking/)
 
-### 资助项目 {#suport-projects}
+### 资助项目 {#support-projects}
 
 以太坊生态系统的使命是资助公共物品和有影响力的项目。 只需很少的捐款，您就可以表达您的支持，并让重要的工作得以实现。
 
@@ -86,13 +86,13 @@ lang: zh
 **想在以太坊找到一份工作吗？**
 
 - [ethereum.org 招聘职位](/about/#open-jobs)
-- [以太坊基金会工作委员会 (Lever)](https://jobs.lever.co/ethereumfoundation)
-- [以太坊基金会工作委员会 (BambooHR)](https://ethereum.bamboohr.com/jobs/)
+- [以太坊基金会职位公告栏 (Lever)](https://jobs.lever.co/ethereumfoundation)
+- [以太坊基金会职位公告栏 (BambooHR)](https://ethereum.bamboohr.com/jobs/)
 - [Cryptocurrency 招聘职位](https://cryptocurrencyjobs.co/ethereum/)
-- [Crypto.招聘职位](https://crypto.jobs/)
-- [ConsenSys 招聘职位](https://consensys.net/careers/)
+- [Crypto.jobs](https://crypto.jobs/)
+- [ConsenSys 职业机会](https://consensys.net/careers/)
 - [Crypto 招聘职位列表](https://cryptojobslist.com/ethereum-jobs)
-- [Bankless 招聘平台](https://pallet.xyz/list/bankless/jobs)
+- [Bankless 职位公告栏](https://pallet.xyz/list/bankless/jobs)
 - [useWeb3 招聘职位](https://www.useweb3.xyz/jobs)
 - [Web3 招聘职位](https://web3.career)
 - [Web3 Army](https://web3army.xyz/)
@@ -114,4 +114,4 @@ lang: zh
 - [dOrg](https://dOrg.tech) [@dOrg_tech](https://twitter.com/dOrg_tech) - _以去中心化自治组织形式运行的自由职业者 Web3 开发团队_
 - [HausDAO](https://daohaus.club) [@nowdaoit](https://twitter.com/nowdaoit) - _DAOhaus 社区治理_
 - [Developer DAO](https://www.developerdao.com/) [@developer_dao](https://twitter.com/developer_dao) - _相信互联网为集体所有的构建者社区_
-- [DXdao](https://DXdao.eth.link/) [@DXdao](https://twitter.com/DXdao_) - _去中心化开发& dApps & 的治理 协议_
+- [DXdao](https://DXdao.eth.link/) [@DXdao](https://twitter.com/DXdao_) - _去中心化开发与去中心化应用程序及协议的治理_

@@ -6,7 +6,7 @@ tags:
   - "ETHERS.JS"
   - "ERC-20"
   - "TOKEN"
-skill: pemula
+skill: beginner
 lang: id
 sidebar: true
 published: 2021-04-06

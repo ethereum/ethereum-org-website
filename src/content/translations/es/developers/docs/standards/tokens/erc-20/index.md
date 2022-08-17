@@ -25,17 +25,22 @@ Una característica tan poderosa de Ethereum debe ser manejada con un estándar 
 
 El ERC-20 introduce un estándar para los tokens funcionales, es decir, tienen una propiedad que hace que cada token sea exactamente igual (en tipo y valor) que otro token. Por ejemplo, un token ERC-20 actúa igual que ETH, es decir, 1 token es y siempre será igual a todos los demás tokens.
 
-## Requisitos previos {#prerequisites}
+## Prerrequisitos {#prerequisites}
 
 - [Cuentas](/developers/docs/accounts)
 - [Contratos inteligentes](/developers/docs/smart-contracts/)
-- [Estándares de token](/developers/docs/standards/tokens/)
+- [Estándares de tókenes](/developers/docs/standards/tokens/)
 
 ## Cuerpo {#body}
 
 El ERC-20 (Ethereum Request for Comments 20), propuesto por Fabian Vogelsteller en Noviembre 2015, es un estándar de token que implementa una API para tokens dentro de contratos inteligentes.
 
-Proporciona funcionalidades como transferir tokens de una cuenta a otra, para obtener el saldo actual del token de una cuenta y también el suministro total del token disponible en la red. Además de estos también tiene otras funcionalidades como aprobar que una cantidad de token de una cuenta puede ser gastada por una cuenta de terceros.
+Ejemplos de funcionalidades que proporciona ERC-20:
+
+- transferir tokens de una cuenta a otra
+- obtener el saldo actual de tokens de una cuenta
+- obtener el siministro total del token disponible en la red
+- aprobar si una cantidad de tokens de una cuenta puede gastarse con una cuenta de terceros
 
 Si un contrato inteligente implementa los siguientes métodos y eventos, se puede llamar un contrato de token ERC-20, y una vez implementado, será el responsable de llevar un seguimiento de los tokens creados en Ethereum.
 
@@ -80,13 +85,13 @@ from web3 import Web3
 
 w3 = Web3(Web3.HTTPProvider("https://cloudflare-eth.com"))
 
-dai_token_addr = "0x6B175474E89094C44Da98b954EedeAC495271d0F" # DAI
-weth_token_addr = "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2" # Ether envuelto (WETH)
+dai_token_addr = "0x6B175474E89094C44Da98b954EedeAC495271d0F"     # DAI
+weth_token_addr = "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"    # Wrapped ether (WETH)
 
-acc_address = "0xA478c2975Ab1Ea89e8196811F51A7B7Ade33eB11" # Uniswap V2: DAI 2
+acc_address = "0xA478c2975Ab1Ea89e8196811F51A7B7Ade33eB11"        # Uniswap V2: DAI 2
 
-# Esta es una interfaz binaria simplificada de la aplicación de contratos (ABI) de un contrato de token ERC.
-# Solo expondrá los métodos: balanceOf(address), decimals(), symbol() and totalSupply()
+# This is a simplified Contract Application Binary Interface (ABI) of an ERC-20 Token Contract.
+# It will expose only the methods: balanceOf(address), decimals(), symbol() and totalSupply()
 simplified_abi = [
     {
         'inputs': [{'internalType': 'address', 'name': 'account', 'type': 'address'}],
@@ -137,15 +142,8 @@ print("Total Supply:", totalSupply)
 print("Addr Balance:", addr_balance)
 ```
 
-## Leer más {#further-reading}
+## Más información {#further-reading}
 
 - [EIP-20: Estándar de token ERC-20](https://eips.ethereum.org/EIPS/eip-20)
 - [Tokens de OpenZeppelin](https://docs.openzeppelin.com/contracts/3.x/tokens#ERC20)
 - [OpenZeppelin: Implementación de ERC-20](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)
-- [ConsenSys: Implementación de ERC-20](https://github.com/ConsenSys/Tokens/blob/master/contracts/eip20/EIP20.sol)
-
-## Temas relacionados {#related-topics}
-
-- [ERC-721](/developers/docs/standards/tokens/erc-721/)
-- [ERC-777](/developers/docs/standards/tokens/erc-777/)
-- [ERC-1155](/developers/docs/standards/tokens/erc-1155/)

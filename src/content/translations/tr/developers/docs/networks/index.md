@@ -17,7 +17,7 @@ Farklı ağları okumadan önce Ethereum'un temellerini anlamalısınız, çünk
 
 Genel ağlara, internet bağlantısı olan herkes dünyanın her yerinde erişebilir. Herkes halka açık bir blok zincirinde işlemleri okuyabilir veya oluşturabilir ve yürütülen işlemleri doğrulayabilir. İşlemler ve ağın durumu üzerindeki anlaşma, eşlerin mutabakatı ile kararlaştırılır.
 
-### Mainnet {#mainnet}
+### Ana Ağ {#mainnet}
 
 Mainnet, dağıtılmış defterde gerçek değer işlemlerinin gerçekleştiği birincil halka açık Ethereum üretim blok zinciridir.
 
@@ -49,7 +49,7 @@ Test ağlarındaki ETH'nin gerçek bir değeri yoktur; bu nedenle, test ağı ET
 
 ##### Görli muslukları
 
-- [Görli musluğu](https://faucet.goerli.mudit.blog/)
+- [Görli musluk](https://faucet.goerli.mudit.blog/)
 - [Chainlink musluğu](https://faucets.chain.link/)
 - [Alchemy Goerli Musluğu](https://goerlifaucet.com/)
 
@@ -121,7 +121,7 @@ Genel bir Ethereum ağının genel internete benzediğini varsayarsak, bir konso
 
 ## İlgili araçlar {#related-tools}
 
-- [Chainlist](https://chainlist.org/) _Cüzdanları ve sağlayıcıları uygun Zincir ve Ağ Kimliklerine bağlamak için bir EVM ağı listesi_
+- [Chainlist](https://chainlist.org/) _Cüzdanları ve sağlayıcıları uygun Zincir ve Ağ ID'lerine bağlamak için bir EVM ağı listesi_
 - [EVM tabanlı Zincirler](https://github.com/ethereum-lists/chains) _Chainlist'i destekleyen zincir üstverisinin GitHub deposu_
 
 ## Daha fazla bilgi {#further-reading}

@@ -12,7 +12,7 @@ _This introductory paper was originally published in 2014 by Vitalik Buterin, th
 
 _While several years old, we maintain this paper because it continues to serve as a useful reference and an accurate representation of Ethereum and its vision. To learn about the latest developments of Ethereum, and how changes to the protocol are made, we recommend [this guide](/learn/)._
 
-[Open the Ethereum Whitepaper as a PDF](./whitepaper-pdf/Ethereum_Whitepaper_-_Buterin_2014.pdf)
+[Researchers and academics seeking a historical or canonical version of the whitepaper [from December 2014] should use this PDF.](./whitepaper-pdf/Ethereum_Whitepaper_-_Buterin_2014.pdf)
 
 ## A Next-Generation Smart Contract and Decentralized Application Platform {#a-next-generation-smart-contract-and-decentralized-application-platform}
 

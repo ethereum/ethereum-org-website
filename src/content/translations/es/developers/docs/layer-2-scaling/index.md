@@ -85,7 +85,7 @@ Los Optimistic Rollups utilizan una cadena lateral que se establece en paralelo 
 
 Con los Optimistic Rollups, las transacciones se escriben en la cadena principal de Ethereum como datos de llamada, optimizándolos todavía más y reduciendo el coste del gas.
 
-Como el cálculo es la parte lenta y costosa del uso de Ethereum, los Optimistic Rollups pueden ofrecer resultados de 10 a 100 veces mejores en lo que respecta a la escalabilidad en función de la transacción. Este número aumentará aún más con la introducción de la mejora de Eth2: [Las cadenas de fragmentos](/upgrades/shard-chains). Esto se debe a que habrá más datos disponibles en el caso de que una transacción sea disputada.
+Como el cálculo es la parte lenta y costosa del uso de Ethereum, los Optimistic Rollups pueden ofrecer resultados de 10 a 100 veces mejores en lo que respecta a la escalabilidad en función de la transacción. Este número aumentará aún más con la introducción de la mejora de Eth2: [Las cadenas de fragmentos](/upgrades/sharding). Esto se debe a que habrá más datos disponibles en el caso de que una transacción sea disputada.
 
 #### Disputar transacciones {#disputing-transactions}
 

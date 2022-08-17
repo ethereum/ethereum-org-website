@@ -8,7 +8,7 @@ tags:
   - "Alchemy"
   - "Solidity"
   - "kontrak pintar"
-skill: pemula
+skill: beginner
 lang: id
 sidebar: true
 published: 2021-04-22

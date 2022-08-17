@@ -1,8 +1,8 @@
 import React, { useRef, useState, useEffect } from "react"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { graphql, PageProps } from "gatsby"
-import { useIntl } from "gatsby-plugin-intl"
+import { useIntl } from "react-intl"
 
 import Translation from "../components/Translation"
 import Pill from "../components/Pill"
@@ -35,6 +35,7 @@ import {
 
 import { translateMessageId } from "../utils/translations"
 import { Context } from "../types"
+import FeedbackCard from "../components/FeedbackCard"
 
 const MagiciansImage = styled(GatsbyImage)`
   background-size: cover;
@@ -348,7 +349,7 @@ const DappsPage = ({
   const [selectedCategory, setCategory] = useState<CategoryType>(
     CategoryType.FINANCE
   )
-  const explore = useRef<HTMLElement>(null)
+  const explore = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     // Fetch category on load
@@ -962,6 +963,7 @@ const DappsPage = ({
       ),
       link: "https://async.art/",
       image: getImage(data.asyncart),
+      alt: translateMessageId("page-dapps-async-logo-alt", intl),
     },
   ]
 
@@ -1148,12 +1150,12 @@ const DappsPage = ({
     buttons: [
       {
         content: translateMessageId("page-dapps-explore-dapps-title", intl),
-        path: "#explore",
+        to: "#explore",
       },
       {
         content: translateMessageId("page-dapps-what-are-dapps", intl),
-        path: "#what-are-dapps",
-        isSecondary: "isSecondary",
+        to: "#what-are-dapps",
+        isSecondary: true,
       },
     ],
   }
@@ -1678,6 +1680,9 @@ const DappsPage = ({
             </StyledCallout>
           </RightColumn>
         </Row>
+      </Content>
+      <Content>
+        <FeedbackCard />
       </Content>
     </Page>
   )

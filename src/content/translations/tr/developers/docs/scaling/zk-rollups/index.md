@@ -5,9 +5,9 @@ lang: tr
 sidebar: true
 ---
 
-## Ön Koşullar {#prerequisites}
+## Ön koşullar {#prerequisites}
 
-Tüm temel konuları iyi anlamalı ve [Ethereum ölçeklendirme](/developers/docs/scaling/) konusunda üst düzey bir bilgiye sahip olmalısınız. Toplamalar gibi ölçeklendirme çözümlerini yürürlüğe koymak teknoloji az test edildiği, araştırıldığı ve geliştirildiği için ileri seviye bir konudur.
+Temeli oluşturan tüm konuları iyi anlamalı ve [Ethereum ölçeklendirilmesi](/developers/docs/scaling/) konusunda ileri düzeyde bilgiye sahip olmalısınız. Toplamalar gibi ölçeklendirme çözümlerini uygulamak, teknoloji daha az savaşta test edildiğinden ve araştırılmaya ve geliştirilmeye devam ettiğinden ileri bir konudur.
 
 Yeni başlayanlar için daha uygun bir kaynak mı arıyorsunuz? [Katman 2'ye giriş](/layer-2/) makalemize bakın.
 
@@ -23,11 +23,11 @@ Katman 2'de bulunan ZK-toplamaları, işlem boyutunu daha da azaltmak için opti
 
 ### Artıları ve eksileri {#zk-pros-and-cons}
 
-| Artıları                                                                                                                 | Eksileri                                                                                                                       |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
-| Kanıtlar ana zincire gönderildikten sonra durum anında doğrulandığından daha hızlı kesinlik süresi.                      | Bazılarının EVM desteği yoktur.                                                                                                |
-| [İyimser toplamaların](#optimistic-pros-and-cons) savunmasız olabileceği ekonomik saldırılara karşı savunmasız değildir. | Doğruluk ispatlarının hesaplanması yoğun enerji harcar: Zincir üzerinde etkinliği az olan uygulamalar için bu enerjiye değmez. |
-| Durumu kurtarmak için gereken veriler katman 1 zincirinde depolandığı için güvenli ve merkeziyetsizdir.                  | Bir operatör, işlem sırasını etkileyebilir                                                                                     |
+| Artıları                                                                                                                             | Eksileri                                                                                                                       |
+| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
+| Kanıtlar ana zincire gönderildikten sonra durum anında doğrulandığından daha hızlı kesinlik süresi.                                  | Bazılarının EVM desteği yoktur.                                                                                                |
+| [İyimser toplamalar](#optimistic-pros-and-cons)ın karşısında savunmasız olabileceği ekonomik saldırılara karşı, savunmasız değildir. | Doğruluk ispatlarının hesaplanması yoğun enerji harcar: Zincir üzerinde etkinliği az olan uygulamalar için bu enerjiye değmez. |
+| Güvenli ve merkeziyetsiz, çünkü durumu kurtarmak için gereken veriler katman 1 zincirinde depolanır.                                 | Bir operatör, işlem sırasını etkileyebilir                                                                                     |
 
 ### ZK-toplamalarının görsel açıklaması {#zk-video}
 
@@ -43,6 +43,6 @@ Dapp'lerinize entegre edebileceğiniz birden fazla ZK-toplaması uygulaması mev
 
 **ZK-toplamaları hakkında bilgiler**
 
-- [Sıfır-Bilgi Toplamaları nedir?](https://coinmarketcap.com/alexandria/glossary/zero-knowledge-rollups)
+- [Sıfır-Bilgi Toplamaları Nelerdir?](https://coinmarketcap.com/alexandria/glossary/zero-knowledge-rollups)
 - [EthHub'un zk-toplamaları hakkındaki içerikleri](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/zk-rollups/)
-- \[STARK'lar ve SNARK'lar\] (https://consensys.net/blog/blockchain-explained/zero-knowledge-proofs-starks-vs-snarks/)
+- [STARK'lar ve SNARK'lar](https://consensys.net/blog/blockchain-explained/zero-knowledge-proofs-starks-vs-snarks/)

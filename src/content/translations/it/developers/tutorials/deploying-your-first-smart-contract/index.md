@@ -8,7 +8,7 @@ tags:
   - "solidity"
   - "primi passi"
   - "distribuzione"
-skill: principiante
+skill: beginner
 lang: it
 sidebar: true
 published: 2020-04-03
@@ -80,7 +80,7 @@ Poi passa alla schermata per la distribuzione e l'esecuzione delle transazioni:
 
 ![L'icona deploy nella toolbar di Remix](./remix-deploy.png)
 
-Una volta sulla schermata di distribuzione ed esecuzione, controlla bene che appaia il nome del tuo contratto e fai clic su Deploy. Come puoi vedere in alto nella pagina, l'ambiente corrente è "JavaScript VM", che significa che distribuiremo il nostro Smart Contract e vi interagiremo su una blockchain di test locale per poter effettuare test in modo più veloce e senza commissioni.
+Una volta sulla schermata di distribuzione ed esecuzione, controlla bene che appaia il nome del tuo contratto e fai clic su Deploy. Come puoi vedere in alto nella pagina, l'ambiente corrente è "JavaScript VM", che significa che distribuiremo il nostro Smart Contract e interagiremo con esso su una blockchain di test locale per poter effettuare test in modo più veloce e senza commissioni.
 
 ![Il pulsante deploy nel compilatore Solidity di Remix](./remix-deploy-button.png)
 

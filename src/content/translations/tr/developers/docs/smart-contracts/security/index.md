@@ -305,7 +305,7 @@ Slither, bu konuda yeniden giriş için bir potansiyel tespit ederek sorunun ger
 
 Böylece kodunuzla ilgili potansiyel sıkıntıları hızlıca öğrenebilmenizi sağladı. Tüm otomatikleştirilmiş test araçları gibi, Slither mükemmel değildir ve aşırı rapor etmeye meyillidir. Suistimal edilebilir bir zaafiyet olmadığında bile sizi potansiyel bir yeniden giriş hakkında uyarabilir. Genelde kod değişiklikleri arasında Slither çıktısındaki FARKLARI incelemek aşırı derecede aydınlatıcıdır: Projenizin kodu tamamlanıncaya kadar beklemektense ortaya çıkan zaafiyetleri çok daha erken keşfetmeye yardımcı olur.
 
-## Daha Fazla Okuyun {#further-reading}
+## Daha fazla bilgi {#further-reading}
 
 **Akıllı sözleşme güvenliği için en iyi yöntemlere dair kılavuzlar**
 

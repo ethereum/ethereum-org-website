@@ -55,8 +55,8 @@ L'étape suivante pourrait être de disposer d'un réseau de ces nœuds faisant 
 
 En utilisant des services comme Chainlink, vous pouvez référencer des données décentralisées sur la chaîne qui ont déjà été tirées du monde réel et agrégées. Un peu comme des bien publics partagés, mais pour les données décentralisées. Vous pouvez également construire vos propres réseaux d'oracles modulaires pour obtenir tout type de données personnalisées dont vous avez besoin. En outre, vous pouvez faire du calcul hors chaîne et envoyer des informations dans le monde réel. Chainlink a l'infrastructure en place pour :
 
-- [Obtenir des flux de prix de cryptomonnaies dans votre contrat ](https://chain.link/solutions/defi)
-- [Générer des nombres aléatoires vérifiables (utile pour les jeux) ](https://chain.link/solutions/chainlink-vrf)
+- [Obtenir des flux de prix de cryptomonnaies dans votre contrat](https://chain.link/solutions/defi)
+- [Générer des nombres aléatoires vérifiables (utile pour les jeux)](https://chain.link/solutions/chainlink-vrf)
 - [Appeler des API externes](https://docs.chain.link/docs/request-and-receive-data) - une nouvelle utilisation de ceci est [la vérification des réserves WBTC](https://cointelegraph.com/news/1b-in-wrapped-bitcoin-now-being-audited-using-chainlink-s-proof-of-reserve)
 
 Voici un exemple pour obtenir le dernier prix de l'ETH dans votre contrat intelligent en utilisant un flux de prix Chainlink :
@@ -425,7 +425,7 @@ Xpath: /pre[2]/code
 
 _Nous aimerions avoir plus de documentation sur la création d'un contrat intelligent oracle. Si vous pouvez nous aider, créez une PR !_
 
-## Complément d'information {#further-reading}
+## En lire plus {#further-reading}
 
 **Articles**
 

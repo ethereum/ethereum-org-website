@@ -15,7 +15,7 @@ Non è un'azienda, né una no-profit tradizionale. Il suo ruolo non è quello di
 
 ## Iniziative dell'Ethereum Foundation {#ethereum-foundation-initiatives}
 
-### Programma di supporto dell'ecosistema {#ecosystem-support-program}
+### Programma di Supporto dell'Ecosistema {#ecosystem-support-program}
 
 Il [programma di supporto dell'ecosistema](https://esp.ethereum.foundation/) esiste per dare sostegno sia finanziario che non a progetti ed entità all'interno di tutta la community Ethereum, con lo scopo di accelerare la crescita dell'ecosistema. È un'espansione dell'originario Ethereum Grants Program, che si concentrava soprattutto sul supporto finanziario.
 

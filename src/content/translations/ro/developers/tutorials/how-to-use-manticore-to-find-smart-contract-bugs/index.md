@@ -10,7 +10,7 @@ tags:
   - "securitate"
   - "testare"
   - "verificare formală"
-skill: avansat
+skill: advanced
 published: 2020-01-13
 source: Construirea de contracte sigure
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore

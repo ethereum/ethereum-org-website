@@ -74,7 +74,7 @@ Les binaires exécutables pour les implémentations de clients stables du résea
 - [Geth](https://geth.ethereum.org/downloads/)
 - [OpenEthereum,](https://github.com/openethereum/openethereum/releases)
 - [Nethermind](https://downloads.nethermind.io/)
-- [Besu](https://pegasys.tech/solutions/hyperledger-besu/)
+- [Besu](https://besu.hyperledger.org/en/stable/)
 - [Erigon](https://github.com/ledgerwatch/erigon)
 
 **Notez que OpenEthereum [a été déprécié](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd) et n'est plus entretenu.** Utilisez-le avec prudence et de préférence passez à une autre implémentation client.
@@ -93,13 +93,13 @@ Exécutez d'abord votre client sur un réseau test pour vous assurer que tout fo
 
 ### Utiliser le client {#using-the-client}
 
-Les clients proposent des points de terminaison API RPC que vous pouvez utiliser pour contrôler le client et interagir avec le réseau Ethereum de différentes manières :
+Les clients proposent des points de terminaison d'API RPC que vous pouvez utiliser pour contrôler le client et interagir avec le réseau Ethereum de différentes manières :
 
 - Appel manuel avec un protocole approprié (par exemple en utilisant `curl`)
 - Attachement d'une console fournie (par exemple `geth attach`)
 - Implémentation dans les applications
 
-Chaque client dispose de sa propre implémentation des points de terminaison RPC. Mais il existe un standard JSON-RPC que vous pouvez utiliser avec chaque client. Pour un aperçu [lisez la documentation JSON-RPC](https://eth.wiki/json-rpc/API). Les applications ayant besoin d'informations du réseau Ethereum peuvent utiliser ce RPC. Par exemple, le portefeuille populaire MetaMask vous permet [d'exécuter une instance locale de blockchain et de vous y connecter](https://metamask.zendesk.com/hc/en-us/articles/360015290012-Using-a-Local-Node).
+Chaque client dispose d'une implémentation différente des points de terminaison RPC. Mais il existe un standard JSON-RPC que vous pouvez utiliser avec chaque client. Pour un aperçu [lisez la documentation JSON-RPC](https://eth.wiki/json-rpc/API). Les applications ayant besoin d'informations du réseau Ethereum peuvent utiliser ce RPC. Par exemple, le portefeuille populaire MetaMask vous permet [d'exécuter une instance locale de blockchain et de vous y connecter](https://metamask.zendesk.com/hc/en-us/articles/360015290012-Using-a-Local-Node).
 
 #### Atteindre le RPC {#reaching-rpc}
 

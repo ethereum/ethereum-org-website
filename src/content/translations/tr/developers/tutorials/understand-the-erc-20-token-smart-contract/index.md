@@ -8,7 +8,7 @@ tags:
   - "solidity"
   - "başlarken"
   - "erc-20"
-skill: acemi
+skill: beginner
 lang: tr
 sidebar: true
 published: 2020-04-05

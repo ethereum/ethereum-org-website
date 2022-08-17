@@ -11,7 +11,7 @@ tags:
   - "truffle"
   - "integrare continuă"
   - "ganache"
-skill: intermediar
+skill: intermediate
 published: 2020-06-05
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/continuous-integration

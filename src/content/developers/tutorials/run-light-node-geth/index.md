@@ -1,7 +1,7 @@
 ---
 title: How to run a light node with Geth
 description: How to download, install and run a lightclient with Geth.
-authors: "Brian Gu"
+author: "Brian Gu"
 tags: ["clients", "geth", "nodes"]
 skill: beginner
 lang: en

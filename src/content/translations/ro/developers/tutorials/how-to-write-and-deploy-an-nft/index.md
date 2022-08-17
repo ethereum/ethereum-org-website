@@ -8,7 +8,7 @@ tags:
   - "Alchemy"
   - "Solidity"
   - "contractele inteligente"
-skill: începător
+skill: beginner
 lang: ro
 sidebar: true
 published: 2021-04-22
@@ -345,6 +345,6 @@ Pentru a înțelege ce se întâmplă în culise, să navigăm la fila Explorer 
 
 ![Vizualizați apelurile efectuate „în culise” cu Tabloul de bord al exploratorului Alchemy](./alchemy-explorer.png)
 
-Aici veți vedea o serie de apeluri JSON-RPC pe care Hardhat/Ethers le-a făcut în culise pentru noi atunci când am apelat funcția .deploy(). Este important de menţionat două dintre acestea aici: [eth_sendRawTransaction, care este solicitarea de a scrie efectiv contractul nostru în lanțul Ropsten, și ](/developers/docs/apis/json-rpc/#eth_sendrawtransaction)eth_getTransactionByHash[](/developers/docs/apis/json-rpc/#eth_gettransactionbyhash), care este o solicitare de a citi informații despre tranzacția noastră având în vedere hash-ul (un model tipic în cazul tranzacțiilor). Dacă doriți să aflați mai multe despre trimiterea de tranzacții, consultați acest tutorial despre [trimiterea de tranzacții utilizând Web3](/developers/tutorials/sending-transactions-using-web3-and-alchemy/).
+Aici veți vedea o serie de apeluri JSON-RPC pe care Hardhat/Ethers le-a făcut în culise pentru noi atunci când am apelat funcția .deploy(). Este important de menţionat două dintre acestea aici: [eth_sendRawTransaction](/developers/docs/apis/json-rpc/#eth_sendrawtransaction), care este solicitarea de a scrie efectiv contractul nostru în lanțul Ropsten, și [eth_getTransactionByHash](/developers/docs/apis/json-rpc/#eth_gettransactionbyhash), care este o solicitare de a citi informații despre tranzacția noastră având în vedere hash-ul (un model tipic în cazul tranzacțiilor). Dacă doriți să aflați mai multe despre trimiterea de tranzacții, consultați acest tutorial despre [trimiterea de tranzacții utilizând Web3](/developers/tutorials/sending-transactions-using-web3-and-alchemy/).
 
 Asta e tot pentru partea 1 a acestui tutorial. În [Partea a 2-a vom interacționa efectiv cu contractul nostru inteligent prin emiterea unui NFT](/developers/tutorials/how-to-mint-an-nft/), iar în [Partea a 3-a vă vom arăta cum să vă vizualizați NFT-ul în portofelul Ethereum](/developers/tutorials/how-to-view-nft-in-metamask/)!

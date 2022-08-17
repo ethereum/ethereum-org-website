@@ -12,8 +12,8 @@ Ethereum topluluğu, projelerin ([Ethereum istemcileri](/developers/docs/nodes-a
 
 Genellikle standartlar, bir [standart süreci](https://eips.ethereum.org/EIPS/eip-1) aracılığıyla topluluk üyeleri tarafından tartışılan [Ethereum İyileştirme Önerileri](/eips/) (EIP'ler) olarak sunulur.
 
-- [EIP'lere giriş](/eips/)
-- [EIP listesi](https://eips.ethereum.org/)
+- [EIPs'e giriş](/eips/)
+- [EIP'lerin listesi](https://eips.ethereum.org/)
 - [EIP GitHub deposu](https://github.com/ethereum/EIPs)
 - [EIP tartışma panosu](https://ethereum-magicians.org/c/eips)
 - [Ethereum Yönetişimine Giriş](/governance/)

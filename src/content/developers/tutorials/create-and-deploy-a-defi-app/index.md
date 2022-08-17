@@ -146,7 +146,7 @@ The address used to deploy our contracts is the first one from the list of addre
 
 To verify that 1 million MyToken tokens have been sent to the deployer address, we can use the Truffle Console to interact with our deployed smart contract.
 
-> [Truffle Console is a a basic interactive console connecting to any Ethereum client.](https://www.trufflesuite.com/docs/truffle/getting-started/using-truffle-develop-and-the-console)
+> [Truffle Console is a basic interactive console connecting to any Ethereum client.](https://www.trufflesuite.com/docs/truffle/getting-started/using-truffle-develop-and-the-console)
 
 In order to interact with our smart contract, run the following command:
 

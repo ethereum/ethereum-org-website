@@ -12,7 +12,7 @@ tags:
   - "compound"
   - "uniswap"
   - "sablier"
-skill: 初学者
+skill: beginner
 lang: zh
 sidebar: true
 published: 2020-04-27
@@ -32,7 +32,7 @@ cd my-eth-app
 yarn react-app:start
 ```
 
-这是正后台使用 [create-react-app](https://github.com/facebook/create-react-app)。 要查看您的应用程序，请打开 `http://localhost:3000/`。 当您准备好部署到生产环境中时，使用 yarn build 创建一个缩小的捆绑包。 一个简单的托管它的方法是使用 [ Netlify](https://www.netlify.com/)。 您可以创建一个 GitHub 存储库，将其添加到 Netlify，设置构建命令，您就完成了！ 您的应用程序将被托管并可供所有人使用。 所有这些都是免费的。
+这是正后台使用 [create-react-app](https://github.com/facebook/create-react-app)。 要查看您的应用程序，请打开 `http://localhost:3000/`。 当您准备好部署到生产环境中时，使用 yarn build 创建一个缩小的捆绑包。 一个简单的托管它的方法是使用 [ Netlify](https://www.netlify.com/)。 您可以创建一个 GitHub 存储库，将其添加到 Netlify，设置构建命令，这样就完成了！ 您的应用程序将被托管并可供所有人使用。 所有这些都是免费的。
 
 ## 功能 {#features}
 
@@ -55,13 +55,13 @@ yarn react-app:start
 
 ### ethers.js {#ethersjs}
 
-虽然 [Web3](https://web3js.readthedocs.io/en/v1.2.7/) 仍被广泛使用，但 [ethers.js](https://docs.ethers.io/) 作为一种替代方案，在过去一年中获得了更多的关注，并且成为集成到 _create-eth-app_ 的一员。 您可以使用这个操作，将它更改为 Web3，或者考虑升级为 [ethers.js v5](https://docs-beta.ethers.io/) ，该版本即将完成测试阶段。
+虽然 [Web3](https://web3js.readthedocs.io/en/v1.2.7/) 仍被广泛使用，但 [ethers.js](https://docs.ethers.io/) 作为一种替代方案，在过去一年中获得了更多的关注，并且已集成到 _create-eth-app_ 中。 您可以使用这个操作，将它更改为 Web3，或者考虑升级为 [ethers.js v5](https://docs-beta.ethers.io/) ，该版本即将完成测试阶段。
 
 ### 图表 {#the-graph}
 
 与 [Restful API](https://restfulapi.net/) 相比，[GraphQL](https://graphql.org/) 是处理数据的另一种方式。 与 Resful Api 相比 它们有几个优势，特别是对于去中心化的区块链数据来说更是如此。 如果您对这背后的原因感兴趣，可以看看 [GraphQL 将为去中心化网络提供动力](https://medium.com/graphprotocol/graphql-will-power-the-decentralized-web-d7443a69c69a)。
 
-通常您会直接从您的智能合约中获取数据。 想要读取上次交易的时间吗？ 只需调用 `MyContract.methods.latestTradeTime().call()`，它可以从以太坊的节点获取数据到您的 Dapp 中。 但如果您需要数百个不同的数据点，该怎么办？ 这将导致数以百计的数据被提取到节点，每次都需要一个 [RTT](https://wikipedia.org/wiki/Round-trip_delay_time)，使您的 Dapp 变得缓慢而低效。 一个变通的办法是在您的合约中设置一个取数器调用函数，一次性返回多个数据。 但这并不总是理想的。
+通常您会直接从您的智能合约中获取数据。 想要读取上次交易的时间吗？ 只需调用 `MyContract.methods.latestTradeTime().call()`，它可以从以太坊的节点获取数据到您的 Dapp 中。 但如果您需要数百个不同的数据点，该怎么办？ 这将导致数百次从节点提取数据这样的操作，每次都需要 [往返时间](https://wikipedia.org/wiki/Round-trip_delay_time)，使您的去中心化应用程序缓慢而低效。 一个变通的办法是在您的合约中设置一个取数器调用函数，一次性返回多个数据。 但这并不总是理想的。
 
 然后您可能对历史数据也感兴趣。 您不仅想知道上次交易的时间，还想知道自己做过的所有交易的时间。 使用 _create-eth-app_ 子图包，阅读[文档](https://thegraph.com/docs/define-a-subgraph)并使其适合您自己的合约。 如果您正在寻找受欢迎的智能合约，甚至可能已经有了一个子图。 可以查看[子图浏览器](https://thegraph.com/explorer/)。
 
@@ -87,11 +87,11 @@ React.useEffect(() => {
 
 ### Aave {#aave}
 
-[Aave](https://aave.com/) 是一个去中心化的货币借贷市场。 存款人向市场提供流动性以赚取被动收入，而借款人则可以利用抵押物进行借贷。 Aave 的一个独特功能是那些 [闪电贷](https://docs.aave.com/developers/guides/flash-loans) 允许您在没有任何抵押品的情况下借钱， 只要您在一次交易中返还贷款。 例如，这对于在套利交易中为您提供额外的现金很有用。
+[Aave](https://aave.com/) 是一个去中心化的货币借贷市场。 存款人向市场提供流动性以赚取被动收入，而借款人则可以利用抵押物进行借贷。 Aave 的一个独特功能是那些[闪电贷](https://docs.aave.com/developers/guides/flash-loans)，让您可以在没有任何抵押品的情况下借钱，只要您在一次交易中返还贷款即可。 例如，这对于在套利交易中为您提供额外的现金很有用。
 
 为您赢得利益的交易代币被称为 _aTokens_。
 
-当您选择将 Aave 与 _create-eth-app_ 集成时，您将获得[子图集成](https://docs.aave.com/developers/getting-started/using-graphql)。 Aave 使用 The Graph，并且已经在 [Ropsten](https://thegraph.com/explorer/subgraph/aave/protocol-ropsten) and [Mainnet](https://thegraph.com/explorer/subgraph/aave/protocol) in [raw](https://thegraph.com/explorer/subgraph/aave/protocol-raw) or [formatted](https://thegraph.com/explorer/subgraph/aave/protocol) form。
+当您选择将 Aave 与 _create-eth-app_ 集成时，您将获得[子图集成](https://docs.aave.com/developers/getting-started/using-graphql)。 Aave 使用 The Graph，并且已经在 [Ropsten](https://thegraph.com/explorer/subgraph/aave/protocol-ropsten) 和 [Mainnet](https://thegraph.com/explorer/subgraph/aave/protocol) 上以[原始](https://thegraph.com/explorer/subgraph/aave/protocol-raw)或[格式化](https://thegraph.com/explorer/subgraph/aave/protocol)形式为您提供了几个现成的子图。
 
 ![Aave 闪电贷备忘录 – “是啊，如果我的闪电贷可以保留超过 1 笔交易，那就太好了”](./flashloan-meme.png)
 

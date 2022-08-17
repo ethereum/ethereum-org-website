@@ -29,7 +29,7 @@ Ethereum için daha yeşil bir gelecek, şu anda zaten bir [**hisse ispatı (PoS
 
 ## Birleştirme {#the-merge}
 
-Hisse ispatı protokolünün uygulanabilirliğini gösteren [İşaret Zinciri](/upgrades/beacon-chain/) isimli fonksiyonel hisse ispatı zinciri, Aralık 2020'den beri çalışmaktadır. Birleştirme, Ethereum'un iş ispatını geride bıraktığı ve hisse ispatını tamamen benimsediği zamandır. Birleştirmenin 2022'nin ikinci çeyreğinde gerçekleşmesi beklenmektedir. [Birleştirme hakkında daha fazla bilgi](/upgrades/merge/).
+Hisse ispatı protokolünün uygulanabilirliğini gösteren [İşaret Zinciri](/upgrades/beacon-chain/) isimli fonksiyonel hisse ispatı zinciri, Aralık 2020'den beri çalışmaktadır. Birleştirme, Ethereum'un iş ispatını geride bıraktığı ve hisse ispatını tamamen benimsediği zamandır. Birleşmenin 2022'nin üçüncü veya dördüncü çeyreğinde gerçekleşmesi bekleniyor. [Birleştirme hakkında daha fazla bilgi](/upgrades/merge/).
 
 ## Hisse ispatı enerji harcaması {#proof-of-stake-energy}
 
@@ -66,7 +66,7 @@ Ethereum'un enerji tüketimi tarihsel olarak önemli olsa da, enerjiye aç bir b
   Eğer bu istatistiklerin yanlış olduğunu veya daha isabetli olabileceğini düşünüyorsanız, lütfen bir PR veya konu açın. Bunlar, ethereum.org ekibi tarafından herkese açık bilgiler ve mevcut Ethereum yol haritası kullanılarak yapılan tahminlerdir. Bu ifadeler, Ethereum Vakfı'nın resmi bir vaadini temsil etmiyor. 
 </InfoBanner>
 
-## Daha fazla bilgi {#further-reading}
+## Daha fazla okuma {#further-reading}
 
 - [Artık bir ülkeyle eş güç harcanmıyor](https://blog.ethereum.org/2021/05/18/country-power-no-more/) – _Carl Beekhuizen, 18 Mayıs 2021_
 - [Ethereum'un enerji tüketimi](https://mirror.xyz/jmcook.eth/ODpCLtO4Kq7SCVFbU4He8o8kXs418ZZDTj0lpYlZkR8)

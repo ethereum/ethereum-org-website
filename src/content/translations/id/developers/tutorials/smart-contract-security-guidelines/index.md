@@ -6,7 +6,7 @@ tags:
   - "solidity"
   - "kontrak pintar"
   - "keamanan"
-skill: tingkat menengah
+skill: intermediate
 lang: id
 sidebar: true
 published: 2020-09-06

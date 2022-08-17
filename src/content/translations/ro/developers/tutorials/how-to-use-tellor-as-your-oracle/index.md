@@ -9,7 +9,7 @@ tags:
   - "contracte inteligente"
   - "fluxuri de prețuri"
   - "oracole"
-skill: începător
+skill: beginner
 published: 2021-06-29
 source: Documentație Tellor
 sourceUrl: https://docs.tellor.io/tellor/

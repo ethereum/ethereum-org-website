@@ -9,7 +9,7 @@ tags:
   - "pabrik"
   - "menyebarkan"
   - "komposabilitas"
-skill: tingkat lanjut
+skill: advanced
 lang: id
 sidebar: true
 published: 2020-04-05

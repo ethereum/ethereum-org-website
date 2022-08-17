@@ -1,6 +1,6 @@
 ---
 title: Ethereum pour les développeurs .NET
-description: Apprendre à développer pour Ethereum avec des projets et des outils basés sur .NET
+description: Apprendre à développer sur Ethereum avec des projets et des outils basés sur .NET
 lang: fr
 sidebar: true
 incomplete: true
@@ -8,7 +8,7 @@ incomplete: true
 
 <div class="featured">Apprendre à développer pour Ethereum avec des projets et des outils basés sur .NET</div>
 
-Utilisez Ethereum pour créer des applications décentralisées (ou « dApps ») qui tirent parti de la technologie de la blockchain et des cryptomonnaies. Ces dApps sont dignes de confiance, ce qui signifie que dès qu'elles sont déployées sur Ethereum, elles fonctionnent toujours comme prévu. Elles peuvent contrôler les actifs numériques afin de créer de nouveaux types d'applications financières. Elles peuvent être décentralisées, ce qui signifie qu'aucune personne ni entité ne les contrôle et qu'il est pratiquement impossible de les censurer.
+Utilisez Ethereum pour créer des applications décentralisées (ou «&nbsp;dapps&nbsp;») qui bénéficient des avantages des crypto-monnaies et de la technologie blockchain. Ces dapps sont dignes de confiance, ce qui signifie que dès qu'elles sont déployées sur Ethereum, elles fonctionnent toujours comme prévu. Elles peuvent contrôler les actifs numériques afin de créer de nouveaux types d'applications financières. Elles peuvent être décentralisées, ce qui signifie qu'aucune entité ou personne ne les contrôle et qu'il est pratiquement impossible de les censurer.
 
 Construisez des applications décentralisées sur Ethereum et interagissez avec des contrats intelligents en utilisant les outils et les langages de la pile technologique Microsoft, qui prend en charge C#, # Visual Basic .NET, F# dans des environnements comme VSCode et Visual Studio sur .NET Framework/.NET Core/.NET Standard. Déployez une blockchain Ethereum sur Azure en quelques minutes en utilisant Microsoft Azure Blockchain. Continuez votre histoire d'amour avec .NET sur Ethereum !
 
@@ -19,7 +19,7 @@ Construisez des applications décentralisées sur Ethereum et interagissez avec 
 Besoin d’une approche plus élémentaire ? Jetez un oeil à [ethereum.org/learn](/learn/) ou [ethereum.org/developers](/developers/).
 
 - [Explication de la blockchain](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
-- [Comprendre les contrats intelligents](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
+- [Comprendre les contrats autonomes](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
 - [Écrire votre premier contrat intelligent](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
 - [Apprendre à compiler et à déployer avec Solidity](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 
@@ -44,7 +44,7 @@ Besoin d’une approche plus élémentaire ? Jetez un oeil à [ethereum.org/lea
   - Transférer de l'ether sur un compte [C#](http://playground.nethereum.com/csharp/id/1003) [VB.NET](http://playground.nethereum.com/vb/id/2003)
   - ... Et bien plus encore !
 
-## Articles intermédiaires {#intermediate-articles}
+## Articles de niveau intermédiaire {#intermediate-articles}
 
 - [Classeur/liste d'échantillons de Nethereum](http://docs.nethereum.com/en/latest/Nethereum.Workbooks/docs/)
 - [Déployer vos propres chaînes de test de développement](https://github.com/Nethereum/Testchains)
@@ -77,7 +77,7 @@ Vous cherchez davantage de ressources ? Consultez [ethereum.org/developers.](/d
 
 ## Contributeurs de la Communauté .NET {#dot-net-community-contributors}
 
-Chez Nethereum, on se retrouve principalement sur [Gitter](https://gitter.im/Nethereum/Nethereum), où tout le monde est le bienvenu pour poser des questions et y répondre, obtenir de l'aide ou tout simplement se détendre. N'hésitez pas à créer une PR ou à ouvrir un ticket sur le dépôt [GitHub Nethereum](https://github.com/Nethereum), ou simplement à parcourir les nombreux projets/échantillons disponibles. Vous pouvez également nous trouver sur [Discord](https://discord.gg/jQPrR58FxX) !
+Chez Nethereum, on se retrouve principalement sur [Gitter](https://gitter.im/Nethereum/Nethereum), où tout le monde est le bienvenu pour poser des questions et y répondre, obtenir de l'aide ou tout simplement se détendre. N'hésitez pas à faire une PR ou à ouvrir un ticket sur le dépôt [GitHub Nethereum](https://github.com/Nethereum), ou simplement à parcourir les nombreux projets/échantillons disponibles. Vous pouvez également nous trouver sur [Discord](https://discord.gg/jQPrR58FxX) !
 
 Retrouvez Nethermind sur [Gitter](https://gitter.im/nethermindeth/nethermind). Pour tout problème ou PR, consultez le dépôt [GitHub Nethermind](https://github.com/NethermindEth/nethermind).
 

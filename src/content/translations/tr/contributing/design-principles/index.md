@@ -11,7 +11,7 @@ sidebar: true
 
 İlkelerimiz, sitenin görünümünü ve verdiği hissi ve sitedeki içeriği bilgilendirir.
 
-[etereum.org'a katkıda bulunmadan](/contributing/) önce bunları okumalısınız.
+[ethereum.org'a katkıda bulunmadan](/contributing/) önce bunları okumalısınız.
 
 ## Tasarım ilkelerimiz neler? {#ways-to-contribute}
 
@@ -91,4 +91,4 @@ Tasarım ilkelerimizi [sitemizde](/) faaliyet hâlinde görebilirsiniz.
 
 Bu ilkeler ethereum.org web sitesine odaklanmış olsa da, birçoğunun genel olarak Ethereum ekosisteminin değerlerini temsil ettiğini umuyoruz (örn. [Ethereum Teknik Raporunun ilkelerinin](https://github.com/ethereum/wiki/wiki/White-Paper#philosophy) etkilerini görebilmeniz). Bazılarını kendi projenize dahil etmek bile isteyebilirsiniz!
 
-Düşüncelerinizi [Discord sunucusunda](https://discord.gg/CetY6Y4) veya [bir konu yaratarak ](<(https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.md&title=)>) bize bildirin.
+Düşüncelerinizi [Discord sunucusunda](https://discord.gg/CetY6Y4) veya [bir konu yaratarak](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.md&title=) bize bildirin.

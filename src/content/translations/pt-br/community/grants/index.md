@@ -28,7 +28,7 @@ Estes projetos criaram seus próprios programas de recompensas destinados a dese
 
 - [TheGraph](https://airtable.com/shrdfvnFvVch3IOVm) – _O ecossistema [The Graph](https://thegraph.com/)_
 - [Programa de fundos Uniswap](https://www.unigrants.org/) – _[Uniswap](https://uniswap.org/) comunidade_
-- [Balancer](https://forms.gle/c68e4fM7JHCQkPkN7) – _[Balancer](https://balancer.fi/) Fundo do ecossistema_
+- [Balancer](https://balancergrants.notion.site/Balancer-Community-Grants-23e562c5bc4347cd8304637bff0058e6) – _[Balancer](https://balancer.fi/) Fundo do ecossistema_
 - [mStable](https://docs.mstable.org/advanced/grants-program) - _[mStable](https://mstable.org/) comunidade_
 
 ## Financiamento quadrático {#quadratic-funding}

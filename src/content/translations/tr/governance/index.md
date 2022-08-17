@@ -7,7 +7,7 @@ sidebar: true
 
 # Ethereum yönetişimine giriş {#introduction}
 
-_Hiç kimse Ethereum'un sahibi değilse, Ethereum'a dair geçmişteki ve gelecekteki değişikliklere nasıl karar veriliyor? Ethereum yönetişimi, bu tür kararların alınmasına izin veren süreci ifade eder_
+_Hiç kimse Ethereum'un sahibi değilse, Ethereum'a dair geçmişteki ve gelecekteki değişikliklere nasıl karar veriliyor? Ethereum yönetişimi, bu tür kararların alınmasını sağlayan süreci ifade eder._
 
 <Divider />
 
@@ -91,7 +91,7 @@ Bu akış, çok basitleştirilmiş olsa da, Ethereum'da bir protokol değişikli
 
 ### Geçmişteki çalışmaları anlamak {#prior-work}
 
-EIP Öncüleri, Ethereum Mainnet'te dağıtım için ciddi olarak düşünülebilecek bir EIP oluşturmadan önce önceki çalışmalara ve tekliflere aşina olmalıdır. Bu şekilde, EIP'nin daha önce reddedilmemiş yeni bir şey sunması umulur. Bunu araştırmak için üç ana yer şunlardır: [EIP deposu](https://github.com/ethereum/eips), [Ethereum Magicians](https://ethereum-magicians.org/) ve [ethresear.ch ](https://ethresear.ch/).
+EIP Öncüleri, Ethereum Mainnet'te dağıtım için ciddi olarak düşünülebilecek bir EIP oluşturmadan önce önceki çalışmalara ve tekliflere aşina olmalıdır. Bu şekilde, EIP'nin daha önce reddedilmemiş yeni bir şey sunması umulur. Bunu araştırmak için üç ana yer şunlardır: [EIP deposu](https://github.com/ethereum/eips), [Ethereum Magicians](https://ethereum-magicians.org/) ve [ethresear.ch](https://ethresear.ch/).
 
 ### Çalışma grupları {#working-groups}
 

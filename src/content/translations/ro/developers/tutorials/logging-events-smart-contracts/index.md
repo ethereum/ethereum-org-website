@@ -7,7 +7,7 @@ tags:
   - "remix"
   - "solidity"
   - "evenimente"
-skill: intermediar
+skill: intermediate
 lang: ro
 sidebar: true
 published: 2020-04-03

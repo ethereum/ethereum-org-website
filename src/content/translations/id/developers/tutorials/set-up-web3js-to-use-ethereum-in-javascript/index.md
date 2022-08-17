@@ -5,7 +5,7 @@ author: "jdourlens"
 tags:
   - "web3.js"
   - "javascript"
-skill: pemula
+skill: beginner
 lang: id
 sidebar: true
 published: 2020-04-11

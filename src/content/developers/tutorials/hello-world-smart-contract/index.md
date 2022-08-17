@@ -111,7 +111,7 @@ Approve the package.json and we’re good to go!
 
 ## Step 7: Download [Hardhat](https://hardhat.org/getting-started/#overview){#step-7}
 
-Hardhat is a development environment to compile, deploy, test, and debug your Ethereum software. It helps developers when building smart contracts and dApps locally before deploying to the live chain.
+Hardhat is a development environment to compile, deploy, test, and debug your Ethereum software. It helps developers when building smart contracts and dapps locally before deploying to the live chain.
 
 Inside our `hello-world` project run:
 

@@ -640,7 +640,7 @@ contract CryptoPizza is IERC721, ERC165 {
 }
 ```
 
-## Complément d'information {#further-reading}
+## En lire plus {#further-reading}
 
 Consultez la documentation Solidity et Vyper pour une vue d'ensemble plus complète des contrats intelligents :
 

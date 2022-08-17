@@ -16,7 +16,7 @@ Utilize Ethereum para criar aplicações descentralizadas ("dapps") que utilizam
 
 Precisa de uma introdução geral? Confira [ethereum.org/learn](/learn/) ou [ethereum.org/developers](/developers/).
 
-- [Cadeia de blocos explicada ](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
+- [Cadeia de blocos explicada](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
 - [Entendendo contratos inteligentes](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
 - [Escreva seu primeiro contrato inteligente](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
 - [Aprenda como Compilar e Implantar em Solidity](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
@@ -53,7 +53,7 @@ Precisa de uma introdução geral? Confira [ethereum.org/learn](/learn/) ou [eth
 - [Brownie](https://github.com/eth-brownie/brownie) - _framework em Python para implantar, testar e interagir com smart contracts de Ethereum_
 - [Vyper](https://github.com/ethereum/vyper/) - _Linguagem de Contrato Inteligente em Python para a Máquina Virtual Ethereum_
 - [py-evm](https://github.com/ethereum/py-evm) - _Implementação de uma Máquina Virtual Ethereum_
-- [eth-tester](https://github. com/ethereum/eth-tester) - _ferramentas para testar aplicativos baseados na Ethereum_
+- [eth-tester](https://github.com/ethereum/eth-tester) - _ferramentas para testar aplicativos baseados na Ethereum_
 - [eth-utils](https://github.com/ethereum/eth-utils/) - _funções de utilidade para trabalhar com bases de código relacionadas com a Ethereum_
 - [py-solc-x](https://pypi.org/project/py-solc-x/) - _wrapper em Python em cima do compilador solc solidity com suporte à versão 0.5.x _
 - [py-wasm](https://github.com/ethereum/py-wasm) - _implementação em Python de um intérprete de montagem web _

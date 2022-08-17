@@ -101,7 +101,7 @@ Approve the package.json, and we’re good to go!
 
 ## Step 7: Install [Hardhat](https://hardhat.org/getting-started/#overview) {#install-hardhat}
 
-Hardhat is a development environment to compile, deploy, test, and debug your Ethereum software. It helps developers when building smart contracts and dApps locally before deploying to the live chain.
+Hardhat is a development environment to compile, deploy, test, and debug your Ethereum software. It helps developers when building smart contracts and dapps locally before deploying to the live chain.
 
 Inside our my-nft project run:
 
@@ -340,7 +340,7 @@ The From address should match your MetaMask account address and the To address w
 
 Yasssss! You just deployed your NFT smart contract to the Ethereum chain!
 
-To understand what’s going on under the hood, let’s navigate to the Explorer tab in our [Alchemy dashboard ](https://dashboard.alchemyapi.io/explorer). If you have multiple Alchemy apps make sure to filter by app and select “MyNFT”.
+To understand what’s going on under the hood, let’s navigate to the Explorer tab in our [Alchemy dashboard](https://dashboard.alchemyapi.io/explorer). If you have multiple Alchemy apps make sure to filter by app and select “MyNFT”.
 
 ![View calls made “under the hood” with Alchemy’s Explorer Dashboard](./alchemy-explorer.png)
 

@@ -63,7 +63,7 @@ Have a suggestion for a staking tool we missed? Check out our [product listing p
 ## FAQ {#faq}
 
 <ExpandableCard title="How do I earn rewards?">
-Typically ERC-20 liquidity tokens are issued to stakers that represents the value of their staked ETH plus rewards. Keep in mine that different pools will distribute staking rewards to their users via slightly different methods, but this is the common theme.
+Typically ERC-20 liquidity tokens are issued to stakers that represents the value of their staked ETH plus rewards. Keep in mind that different pools will distribute staking rewards to their users via slightly different methods, but this is the common theme.
 </ExpandableCard>
 
 <ExpandableCard title="When can I withdraw my stake?">

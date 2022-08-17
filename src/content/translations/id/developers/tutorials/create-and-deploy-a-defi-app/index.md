@@ -9,7 +9,7 @@ tags:
   - "truffle"
   - "ganache"
   - "kontrak pintar"
-skill: tingkat menengah
+skill: intermediate
 lang: id
 sidebar: true
 published: 2020-12-31

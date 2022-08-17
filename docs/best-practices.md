@@ -52,7 +52,7 @@ Markdown will be translated as whole pages of content, so no specific action is 
 
   - _tl;dr Each individual JSON entry should be a complete phrase by itself_
 
-- This is done using the `Translation` component. However there is an alternative method for regular JS: `gatsby-plugin-intl` with `/src/utils/translations.ts`
+- This is done using the `Translation` component. However there is an alternative method for regular JS: `gatsby-theme-i18n` with `/src/utils/translations.ts`
 
   - **Method one: `<Translation />` component (preferred if only needed in JSX)**
 
@@ -66,7 +66,7 @@ Markdown will be translated as whole pages of content, so no specific action is 
   - **Method two: `translateMessageId()`**
 
     ```tsx
-    import { useIntl } from "gatsby-plugin-intl"
+    import { useIntl } from "react-intl"
     import { translateMessageId } from "src/utils/translations"
 
     // Utilize anywhere in JS using
@@ -104,14 +104,14 @@ export default ComponentName
 ## Styling
 
 - `src/theme.ts` - Declares site color themes, breakpoints and other constants (try to utilize these colors first)
-- We use [styled-components](https://styled-components.com/)
+- We use [emotion](https://emotion.sh/)
 
   - Tagged template literals are used to style custom components
 
   ```tsx
-  // Example of styling syntax using styled-components
+  // Example of styling syntax using emotion
 
-  import styled from "styled-components"
+  import styled from "@emotion/styled"
 
   const GenericButton = styled.div`
     width: 200px;
@@ -128,14 +128,12 @@ export default ComponentName
   // ie: <PrimaryButton>Text</PrimaryButton>
   ```
 
-  - Recommended VS Code Plugin: `vscode-styled-components` <br>To install: Open VS Code > `Ctrl+P` / `Cmd+P` > Run: <br>`ext install vscode-styled-components`
-
 - Values from `src/theme.ts` are automatically passed as a prop object to styled components
 
   ```tsx
   // Example of theme.ts usage
 
-  import styled from "styled-components"
+  import styled from "@emotion/styled"
 
   const Container = styled.div`
     background: ${(props) => props.theme.colors.background};

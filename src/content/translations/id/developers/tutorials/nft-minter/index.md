@@ -12,7 +12,7 @@ tags:
   - "UI"
   - "wallet"
   - "Pinata"
-skill: tingkat menengah
+skill: intermediate
 lang: id
 sidebar: true
 published: 2021-10-06
@@ -613,7 +613,7 @@ REACT_APP_PINATA_SECRET = <pinata-secret>
 REACT_APP_ALCHEMY_KEY = https://eth-ropsten.alchemyapi.io/v2/<alchemy-key>
 ```
 
-Now that we have our contract ABI and our Alchemy API key, we're ready to load our smart contract using[ Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3).
+Now that we have our contract ABI and our Alchemy API key, we're ready to load our smart contract using [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3).
 
 ### Set up your Alchemy Web3 endpoint and contract {#setup-alchemy-endpoint}
 

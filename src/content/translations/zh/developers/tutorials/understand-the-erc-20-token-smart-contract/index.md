@@ -8,7 +8,7 @@ tags:
   - "solidity"
   - "入门指南"
   - "erc-20"
-skill: 初学者
+skill: beginner
 lang: zh
 sidebar: true
 published: 2020-04-05
@@ -92,7 +92,7 @@ event Transfer(address indexed from, address indexed to, uint256 value);
 
 将通证（值）的数量从`from`地址发送到`to`地址时会发出此事件。
 
-在铸造新代币的情况下，转账通常是`from` 0x00..0000 地址，而在销毁代币的情况下，转账是`to` 0x00..0000。
+在铸造新代币时，转账通常会在 `from` 0x00..0000 地址进行，而在销毁代币时，转账会在 `to` 0x00..0000 地址进行。
 
 ```solidity
 event Approval(address indexed owner, address indexed spender, uint256 value);
@@ -180,4 +180,4 @@ contract ERC20Basic is IERC20 {
 }
 ```
 
-ERC-20 通证标准的另一个优秀实现是[OpenZepelin ERC-20 实现](https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master/contracts/token/ERC20)。
+ERC-20 代币标准的另一个优秀实现是 [OpenZepelin ERC-20 实现](https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master/contracts/token/ERC20)。

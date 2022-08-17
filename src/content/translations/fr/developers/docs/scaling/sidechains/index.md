@@ -1,5 +1,5 @@
 ---
-title: Chaines latérales
+title: Chaines latérales ou sidechains
 description: Une introduction aux chaînes latérales en tant que solution de mise à l'échelle actuellement utilisée par la communauté Ethereum.
 lang: fr
 sidebar: true
@@ -33,7 +33,7 @@ Plusieurs projets fournissent des implémentations de chaînes latérales que vo
 
 ## Complément d'information {#further-reading}
 
-- [EthHub sur les chaînes latérales](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/sidechains/)
+- [EthHub sur les canaux d'état](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/sidechains/)
 - [Scaling Ethereum DApps through Sidechains](https://medium.com/loom-network/dappchains-scaling-ethereum-dapps-through-sidechains-f99e51fff447) _- Georgios Konstantopoulos, 8 février 2018_
 
 _Une ressource communautaire vous a aidé ? Modifiez cette page et ajoutez-la !_

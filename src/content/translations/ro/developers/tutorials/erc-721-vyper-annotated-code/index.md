@@ -8,7 +8,7 @@ tags:
   - "vyper"
   - "erc-721"
   - "python"
-skill: începător
+skill: beginner
 published: 2021-04-01
 ---
 

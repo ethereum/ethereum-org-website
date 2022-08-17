@@ -25,7 +25,7 @@ Assista a Austin guiá-lo pelas blockchains:
 
 <YouTube id="zcX7OJ-L8XQ" />
 
-Se você quiser ver como a blockchain faz hash dos dados e como o bloco anterior faz referência a todos os blocos anteriores, confira [esta demonstração](https://andersbrownworth. com/blockchain/blockchain) de Anders Brownworth e assista ao vídeo correspondente abaixo.
+Se você quiser ver como a blockchain faz hash dos dados e como o bloco anterior faz referência a todos os blocos anteriores, confira [esta demonstração](https://andersbrownworth.com/blockchain/blockchain) de Anders Brownworth e assista ao vídeo correspondente abaixo.
 
 Assista a Anders explicando hashes em blockchains:
 
@@ -118,4 +118,4 @@ _Conhece algum recurso da comunidade que o ajudou? Edite esta página e adicione
 
 ## Tutoriais relacionados {#related-tutorials}
 
-- [Um guia do desenvolvedor para Ethereum, parte 1 ](/developers/tutorials/a-developers-guide-to-ethereum-part-one/) _: uma exploração muito amigável para iniciantes do Ethereum usando Python e web3.py_
+- [Um guia do desenvolvedor para Ethereum, parte 1](/developers/tutorials/a-developers-guide-to-ethereum-part-one/) _: uma exploração muito amigável para iniciantes do Ethereum usando Python e web3.py_

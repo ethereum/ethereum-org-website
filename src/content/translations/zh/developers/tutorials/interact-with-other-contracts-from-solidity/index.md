@@ -9,11 +9,11 @@ tags:
   - "工厂"
   - "部署"
   - "可组合性"
-skill: 高级
+skill: advanced
 lang: zh
 sidebar: true
 published: 2020-04-05
-source: 以太坊开发团队
+source: EthereumDev
 sourceUrl: https://ethereumdev.io/interact-with-other-contracts-from-solidity/
 address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 ---

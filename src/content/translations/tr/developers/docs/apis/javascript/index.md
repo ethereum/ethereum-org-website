@@ -15,9 +15,9 @@ Eğer bir Ethereum düğümüne bağlanmak için JavaScript kullanmak istiyorsan
 
 JavaScript'i anlamanın yanı sıra, [Ethereum Yığını](/developers/docs/ethereum-stack/) ve [Ethereum istemcilerini](/developers/docs/nodes-and-clients/) anlamak faydalı olabilir.
 
-## Neden bir kitaplık kullanılır? {#why-use-a-library}
+## Neden bir kütüphane kullanılır? {#why-use-a-library}
 
-Bu kütüphaneler, bir Ethereum düğümü ile doğrudan etkileşim kurmanın karmaşıklığının çoğunu ortadan kaldırır. Ayrıca, bir geliştirici olarak Ethereum istemcilerinin karmaşıklıkları ile daha az zaman harcayabilmeniz ve uygulamanızın benzersiz işlevselliğine daha fazla zaman ayırabilmeniz için yardımcı işlevler (örneğin, ETH'yi Gwei'ye dönüştürmek) sağlarlar.
+Bu kütüphaneler, bir Ethereum düğümü ile doğrudan etkileşim kurmanın karmaşıklığının çoğunu ortadan kaldırır. Ayrıca, bir geliştirici olarak Ethereum istemcilerinin karmaşıklıkları ile daha az zaman harcayarak ve uygulamanızın benzersiz işlevselliğine daha fazla zaman ayırabilmeniz için yardımcı işlevler (örneğin, ETH'yi Gwei'ye dönüştürmek) sağlarlar.
 
 ## Kütüphane özellikleri {#library-features}
 
@@ -152,7 +152,7 @@ Kurulumdan sonra şunları yapabileceksiniz:
 
 ### Akıllı sözleşme fonksiyonlarıyla etkileşim kurmak {#interact-with-smart-contract-functions}
 
-Javascript istemci kütüphaneleri, derlenmiş bir sözleşmenin Uygulama İkili Arabirimini (ABI) okuyarak uygulamanızın akıllı sözleşme fonksiyonlarını çağırmasına olanak tanır.
+JavaScript istemci kütüphaneleri, derlenmiş bir sözleşmenin Uygulama İkili Arabirimini (ABI) okuyarak uygulamanızın akıllı sözleşme fonksiyonlarını çağırmasına olanak tanır.
 
 ABI, esasen sözleşmenin fonksiyonlarını bir JSON formatında açıklar ve onu normal bir JavaScript nesnesi gibi kullanmanıza izin verir.
 

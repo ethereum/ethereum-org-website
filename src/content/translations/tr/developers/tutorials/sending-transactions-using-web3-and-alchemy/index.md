@@ -1,12 +1,12 @@
 ---
 title: Web3 Kullanarak İşlem Gönderme
-description: "Bu, web3 kullanarak Ethereum işlemlerini göndermek için yeni başlayanlara uygun bir rehberdir. Ethereum blok zincirine bir işlem göndermek için üç ana adım vardır: oluşturma, imzalama ve yayınlama. Üçünden de bahsedeceğiz."
+description: "Bu, Web3 kullanarak Ethereum işlemlerini göndermek için yeni başlayanlara uygun bir rehberdir. Ethereum blok zincirine bir işlem göndermek için üç ana adım vardır: oluşturma, imzalama ve yayınlama. Üçünden de bahsedeceğiz."
 author: "Elan Halpern"
 tags:
-  - "işlemler"
+  - "İşlemler"
   - "web3.js"
   - "alchemy"
-skill: acemi
+skill: beginner
 lang: tr
 sidebar: true
 published: 2020-11-04
@@ -14,7 +14,7 @@ source: Alchemy belgeleri
 sourceUrl: https://docs.alchemy.com/alchemy/tutorials/sending-txs
 ---
 
-Bu, web3 kullanarak Ethereum işlemlerini göndermek için yeni başlayanlara uygun bir rehberdir. Ethereum blok zincirine bir işlem göndermek için üç ana adım vardır: oluşturma, imzalama ve yayınlama. Üçünü de gözden geçirerek aklınızdaki soruları cevaplamayı umuyoruz! Bu öğreticide, işlemlerimizi Ethereum zincirine göndermek için [Alchemy](https://www.alchemy.com/) kullanacağız. [Buradan ücretsiz bir Alchemy hesabı oluşturabilirsiniz](https://dashboard.alchemyapi.io/signup/).
+Bu, Web3 kullanarak Ethereum işlemlerini göndermek için yeni başlayanlara uygun bir rehberdir. Ethereum blok zincirine bir işlem göndermek için üç ana adım vardır: oluşturma, imzalama ve yayınlama. Üçünü de gözden geçirerek aklınızdaki soruları cevaplamayı umuyoruz! Bu öğreticide, işlemlerimizi Ethereum zincirine göndermek için [Alchemy](https://www.alchemy.com/) kullanacağız. [Buradan ücretsiz bir Alchemy hesabı oluşturabilirsiniz](https://dashboard.alchemyapi.io/signup/).
 
 **NOT:** Bu kılavuz, uygulamanızın _arka ucunda_ işlem imzalamak içindir. İşlemlerinizi imzalamayı ön uca entegre etmek istiyorsanız [Web3'ü bir tarayıcı sağlayıcısı](https://docs.alchemyapi.io/documentation/alchemy-web3#with-a-browser-provider) ile entegre etmeye göz atın.
 
@@ -30,7 +30,7 @@ Bu, web3 kullanarak Ethereum işlemlerini göndermek için yeni başlayanlara uy
 ### 2\. Bir "imzalayıcı" nedir? {#what-is-a-signer}
 
 - İmzalayıcılar, özel anahtarınızı kullanarak işlemleri sizin için imzalar. Bu öğreticide, işlemimizi imzalamak için [Alchemy web3](https://docs.alchemyapi.io/alchemy/documentation/alchemy-web3)'ü kullanacağız, ancak başka herhangi bir web3 kitaplığını da kullanabilirsiniz.
-- Ön uçta, sizin adınıza işlemleri imzalayıp gönderen [metamask](https://metamask.io/), imzalayıcılar için iyi bir örnektir.
+- Ön uçta, sizin adınıza işlemleri imzalayıp gönderen [MetaMask](https://metamask.io/), imzalayıcılar için iyi bir örnektir.
 
 ### 3\. İşlemlerimi neden imzalamam gerekiyor? {#why-do-i-need-to-sign-my-transactions}
 
@@ -39,7 +39,7 @@ Bu, web3 kullanarak Ethereum işlemlerini göndermek için yeni başlayanlara uy
 
 ### 4\. Özel anahtarımı nasıl korurum? {#how-do-i-protect-my-private-key}
 
-- Özel anahtarınızı korumanın ve işlemleri göndermek için kullanmanın birçok yolu vardır. Bu öğreticide bir .env dosyası kullanıyor olacağız. Ancak, özel anahtarları depolayan, bir anahtar deposu dosyası kullanan veya diğer seçenekleri kullanan ayrı bir sağlayıcı da kullanabilirsiniz.
+- Özel anahtarınızı korumanın ve işlemleri göndermek için kullanmanın birçok yolu vardır. Bu öğreticide bir `.env` dosyası kullanıyor olacağız. Ancak, özel anahtarları depolayan, bir anahtar deposu dosyası kullanan veya diğer seçenekleri kullanan ayrı bir sağlayıcı da kullanabilirsiniz.
 
 ### 5\. `eth_sendTransaction` ve `eth_sendRawTransaction` arasındaki fark nedir? {#difference-between-send-and-send-raw}
 
@@ -94,13 +94,13 @@ npm install @alch/alchemy-web3
 
 ### 5\. Dotenv kurun {#install-dotenv}
 
-API anahtarımızı ve özel anahtarımızı güvenli bir şekilde saklamak için bir .env dosyası kullanacağız.
+API anahtarımızı ve özel anahtarımızı güvenli bir şekilde saklamak için bir `.env` dosyası kullanacağız.
 
 ```
 npm install dotenv --save
 ```
 
-### 6\. .env dosyasını oluşturun {#create-the-dotenv-file}
+### 6\. `.env` dosyası oluşturun {#create-the-dotenv-file}
 
 Proje dizininizde bir `.env` dosyası oluşturun ve şunu ekleyin ("`api-url`" ve "`your-private-key` yerine" ")
 
@@ -118,7 +118,7 @@ PRIVATE_KEY = "your-private-key"
 
 ### 7\. `sendTx.js` dosyası oluşturun {#create-sendtx-js}
 
-Harika, artık hassas verilerimizi bir .env dosyasında koruduğumuza göre kodlamaya başlayalım. Gönderme işlemi örneğimiz için ETH'yi Rinkeby musluğuna geri göndereceğiz.
+Harika, artık hassas verilerimizi bir `.env` dosyasında koruduğumuza göre kodlamaya başlayalım. Gönderme işlemi örneğimiz için ETH'yi Rinkeby musluğuna geri göndereceğiz.
 
 Örnek işlemimizi yapılandırıp göndereceğimiz bir `sendTx.js` dosyası oluşturun ve buna aşağıdaki kod satırlarını ekleyin:
 
@@ -161,7 +161,7 @@ main();
 - `nonce`: nonce değeri şartnamesi, adresinizden gönderilen işlemlerin sayısını takip etmek için kullanılır. Güvenlik amaçlı ve [tekrar saldırılarını](https://docs.alchemyapi.io/resources/blockchain-glossary#account-nonce) önlemek için buna ihtiyacımız var. Adresinizden gönderilmiş işlem sayısını almak için [getTransactionCount](https://docs.alchemyapi.io/documentation/alchemy-api-reference/json-rpc#eth_gettransactioncount) kullanırız.
 - `transaction`: İşlem nesnesinin belirtmemiz gereken birkaç yönü var
   - `to`: Bu, ETH göndermek istediğimiz adrestir. Bu durumda, ETH'yi başlangıçta talep ettiğimiz [Rinkeby musluğuna](https://faucet.rinkeby.io/) geri gönderiyoruz.
-  - `value`: Bu, 10^18 wei = 1 ETH olmak üzere wei'de belirtilen, göndermek istediğimiz miktardır
+  - `value`: Bu, 10^18 Wei = 1 ETH olmak üzere Wei'de belirtilen, göndermek istediğimiz miktardır
   - `gas`: İşleminize dahil edilecek doğru gaz miktarını belirlemenin birçok yolu vardır. Alchemy, benzin fiyatı belirli bir eşiğe düştüğünde sizi bilgilendirmek için bir [gaz fiyatı web kancasına](https://docs.alchemyapi.io/guides/alchemy-notify#address-activity-1) bile sahiptir. Mainnet işlemlerinde, dahil edilecek doğru gaz miktarını belirlemek için [ETH Gas Station](https://ethgasstation.info/) gibi bir gaz tahmincisini kontrol etmek iyi bir uygulamadır. 21000, Ethereum'da bir işlemin kullanacağı minimum gaz miktarıdır, bu nedenle işlemimizin gerçekleştirilmesini sağlamak için buraya 30000 koyduk.
   - `nonce`: yukarıdaki nonce tanımına bakın. Nonce değeri, saymaya sıfırdan başlar.
   - [OPTIONAL] veri: Transferinizle birlikte ek bilgi göndermek veya akıllı sözleşme aramak için kullanılır, bakiye transferleri için gerekli değildir, aşağıdaki nota bakın.
@@ -170,8 +170,8 @@ main();
 
 **Veriler hakkında bir not** Ethereum'da gönderilebilecek iki ana işlem türü vardır.
 
-- Bakiye transferi: Eth'i bir adresten diğerine gönderin. Herhangi bir veri alanı gerekli değildir, ancak işleminizin yanında ek bilgiler göndermek isterseniz, bu bilgileri bu alana HEX formatında ekleyebilirsiniz.
-  - Örneğin, değişmez bir zaman damgası vermek için bir IPFS belgesinin hash değerini ethereum zincirine yazmak istediğimizi varsayalım. Veri alanımız daha sonra veri gibi görünmelidir: web3.utils.toHex(‘IPFS hash‘). Artık herkes zinciri sorgulayabilir ve bu belgenin ne zaman eklendiğini görebilir.
+- Bakiye transferi: ETH'i bir adresten diğerine gönderin. Herhangi bir veri alanı gerekli değildir, ancak işleminizin yanında ek bilgiler göndermek isterseniz, bu bilgileri bu alana HEX formatında ekleyebilirsiniz.
+  - Örneğin, değişmez bir zaman damgası vermek için bir IPFS belgesinin hash değerini Ethereum zincirine yazmak istediğimizi varsayalım. Veri alanımız daha sonra veri gibi görünmelidir: `web3.utils.toHex(‘IPFS hash‘)`. Artık herkes zinciri sorgulayabilir ve bu belgenin ne zaman eklendiğini görebilir.
 - Akıllı sözleşme işlemi: Zincirde bazı akıllı sözleşme kodlarını yürütün. Bu durumda veri alanı, herhangi bir parametrenin yanında yürütmek istediğiniz akıllı fonksiyonu içermelidir.
   - Pratik bir örnek için, şu [Merhaba Dünya Öğreticindeki](https://docs.alchemyapi.io/alchemy/tutorials/hello-world-smart-contract#step-8-create-the-transaction) 8. Adıma bakın.
 

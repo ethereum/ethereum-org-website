@@ -96,13 +96,13 @@ Wenn du eher ein technischer Benutzer bist, kannst du [einen eigenen Node](/deve
 ### Ressourcen {#resources}
 
 - [Running Ethereum Full Nodes: A Complete Guide](https://medium.com/coinmonks/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _Nov 7, 2019 - Justin Leroux_
-- [Node Configuration Cheat Sheet](https://dev. to/5chdn/ethereum-node-configuration-modes-cheat-sheet-25l8) _Jan 5, 2019 - Afri Schoedon_
+- [Node Configuration Cheat Sheet](https://dev.to/5chdn/ethereum-node-configuration-modes-cheat-sheet-25l8) _Jan 5, 2019 - Afri Schoedon_
 - [How To Install & Run a Geth Node](https://www.quiknode.io/guides/infrastructure/how-to-install-and-run-a-geth-node) _Oct 4, 2020 - Sahil Sen_
 - [How To Install & Run a OpenEthereum (fka. Parity) Node](https://www.quiknode.io/guides/infrastructure/how-to-run-a-openethereum-ex-parity-client-node) _Sept 22, 2020 - Sahil Sen_
 
 ## Alternativen {#alternatives}
 
-Der Betrieb eines eigenen Nodes kann schwierig sein und du musst nicht immer eine eigene Instanz betreiben. In diesem Fall kannst du einen Drittanbieter wie [Infura](https://infura.io), [Alchemy ](https://alchemyapi.io)oder [QuikNode](https://www.quiknode.io) verwenden. Alternativ dazu ist [ArchiveNode](https://archivenode.io/) ein von der Community finanzierter Archivknoten, der unabhängigen Entwicklern, die sich dies sonst nicht leisten könnten, Archivdaten auf der Ethereum-Blockchain zur Verfügung stellen soll. Einen Überblick über die Verwendung dieser Dienste findest du unter [Nodes als Dienst](/developers/docs/nodes-and-clients/nodes-as-a-service/).
+Der Betrieb eines eigenen Nodes kann schwierig sein und du musst nicht immer eine eigene Instanz betreiben. In diesem Fall kannst du einen Drittanbieter wie [Infura](https://infura.io), [Alchemy](https://alchemyapi.io) oder [QuikNode](https://www.quiknode.io) verwenden. Alternativ dazu ist [ArchiveNode](https://archivenode.io/) ein von der Community finanzierter Archivknoten, der unabhängigen Entwicklern, die sich dies sonst nicht leisten könnten, Archivdaten auf der Ethereum-Blockchain zur Verfügung stellen soll. Einen Überblick über die Verwendung dieser Dienste findest du unter [Nodes als Dienst](/developers/docs/nodes-and-clients/nodes-as-a-service/).
 
 Wenn jemand in deiner Community einen Ethereum-Node mit einer öffentlichen API betreibt, kannst du deine Light Wallets (wie MetaMask) auf einen Community-Node [via Custom RPC](https://metamask.zendesk.com/hc/en-us/articles/360015290012-Using-a-Local-Node) verweisen lassen und so mehr Privatsphäre erreichen als mit einer zufälligen vertrauenswürdigen Drittpartei.
 
@@ -118,7 +118,7 @@ Diese Tabelle gibt einen Überblick über die verschiedenen Clients. Sie alle be
 | ----------------------------------------------------------------------- | -------- | --------------------- | -------------------------------------------- | ------------------- | ------------------- |
 | [Geth](https://geth.ethereum.org/)                                      | Go       | Linux, Windows, MacOS | Mainnet, Görli, Rinkeby, Ropsten             | Snap, Full          | Archive, Pruned     |
 | [Nethermind](http://nethermind.io/)                                     | C#, .NET | Linux, Windows, MacOS | Mainnet, Görli, Ropsten, Rinkeby und weitere | Fast, Beam, Archive | Archive, Pruned     |
-| [Besu](https://pegasys.tech/solutions/hyperledger-besu/)                | Java     | Linux, Windows, MacOS | Mainnet, Rinkeby, Ropsten, Görli und weitere | Fast, Full          | Archive, Pruned     |
+| [Besu](https://besu.hyperledger.org/en/stable/)                         | Java     | Linux, Windows, MacOS | Mainnet, Rinkeby, Ropsten, Görli und weitere | Fast, Full          | Archive, Pruned     |
 | [Erigon](https://github.com/ledgerwatch/erigon)                         | Los      | Linux, Windows, MacOS | Mainnet, Görli, Rinkeby, Ropsten             | Full                | Archive, Pruned     |
 | [OpenEthereum (veraltet)](https://github.com/openethereum/openethereum) | Rust     | Linux, Windows, MacOS | Mainnet, Kovan, Ropsten und weitere          | Warp, Full          | Archive, Pruned     |
 

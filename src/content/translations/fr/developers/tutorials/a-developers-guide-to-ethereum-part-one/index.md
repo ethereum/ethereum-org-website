@@ -1,6 +1,6 @@
 ---
 title: Introduction à Ethereum pour développeurs Python, partie 1
-description: Une introduction au développement Ethereum, particulièrement utile pour ceux disposant de connaissances en langage de programmation Python
+description: Une introduction au développement Ethereum, particulièrement utile aux personnes disposant de connaissances en langage de programmation Python
 author: Marc Garreau
 lang: fr
 sidebar: true
@@ -9,24 +9,24 @@ tags:
   - "python"
   - "blockchain"
   - "web3.py"
-skill: débutant
+skill: beginner
 published: 2020-09-08
 source: Snake charmers
 sourceUrl: https://snakecharmers.ethereum.org/a-developers-guide-to-ethereum-pt-1/
 ---
 
-Ainsi vous avez entendu parler d'Ethereum et êtes prêts à vous aventurer dans le terrier du lapin ? Cet article couvrira rapidement certaines fonctionnalités de base propres aux blockchains, puis vous permettra d'interagir avec une simulation de nœud Ethereum - lecture des données de blocs, vérification des soldes de comptes et envoi de transactions. En cours de route, nous soulignerons les différences entre les méthodes traditionnelles de création d'application et ce nouveau paradigme décentralisé.
+Vous avez donc entendu parler d'Ethereum et êtes prêts à passer de l'autre côté du miroir ? Cet article couvrira rapidement certaines fonctionnalités de base propres aux blockchains, puis vous permettra d'interagir avec une simulation de nœud Ethereum - lecture des données de blocs, vérification des soldes de comptes et envoi de transactions. En cours de route, nous soulignerons les différences entre les méthodes classiques de création d'application et ce nouveau paradigme décentralisé.
 
 ## Prérequis (simple) {#soft-prerequisites}
 
 Ce post se veut accessible à une large catégorie de développeurs. L'emploi d'[outils Python](/developers/docs/programming-languages/python/) sera réalisé, mais ils ne serviront qu'à véhiculer les idées – Ne vous inquiétez pas si vous n'êtes pas développeur Python. Toutefois, je vais faire quelques hypothèses sur ce que vous savez déjà, afin que nous puissions rapidement passer aux sujets spécifiques à Ethereum.
 
-Hypothèses :
+Hypothèses:
 
 - vous savez utiliser un terminal,
 - vous avez déjà écrit quelques lignes de code Python,
 - La version 3.6 ou supérieure de Python est installée sur votre machine (l'utilisation d'un environnement virtuel [](https://realpython.com/effective-python-environment/#virtual-environments) est fortement recommandée), et
-- vous avez déjà utilisé `pip`, l'installateur de paquets de Python. Encore une fois, si l'un de ces éléments n'est pas vrai, ou si vous ne prévoyez pas de reproduire le code de cet article, vous resterez capable de comprendre son contenu sans grande difficulté.
+- vous avez déjà utilisé `pip`, l'installateur de paquets de Python. Encore une fois, si l'un de ces éléments est incorrect ou si vous ne prévoyez pas de reproduire l'exact code de cet article, il vous restera possible de comprendre son contenu sans grande difficulté.
 
 ## Blockchains, en bref {#blockchains-briefly}
 

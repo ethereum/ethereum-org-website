@@ -10,7 +10,7 @@ tags:
   - "ochrona"
   - "testing"
   - "weryfikacja formalna"
-skill: zaawansowane
+skill: advanced
 published: 2020-01-13
 source: Tworzenie bezpiecznych kontraktów
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore

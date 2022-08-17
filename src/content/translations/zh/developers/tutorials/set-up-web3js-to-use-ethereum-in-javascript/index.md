@@ -5,7 +5,7 @@ author: "jdourlens"
 tags:
   - "web3.js"
   - "javascript"
-skill: 初学者
+skill: beginner
 lang: zh
 sidebar: true
 published: 2020-04-11

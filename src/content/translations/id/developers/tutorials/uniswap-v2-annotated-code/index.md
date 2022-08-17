@@ -6,7 +6,7 @@ sidebar: true
 tags:
   - "solidity"
   - "uniswap"
-skill: tingkat menengah
+skill: intermediate
 published: 2021-05-01
 lang: id
 ---

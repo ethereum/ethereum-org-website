@@ -8,7 +8,7 @@ tags:
   - "vyper"
   - "erc-721"
   - "python"
-skill: pemula
+skill: beginner
 published: 2021-04-01
 ---
 

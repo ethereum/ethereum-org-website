@@ -8,7 +8,7 @@ tags:
   - "solidity"
   - "testowanie"
   - "tworzenie atrap"
-skill: średnie
+skill: intermediate
 lang: pl
 sidebar: true
 published: 2020-11-14

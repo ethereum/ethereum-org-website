@@ -44,13 +44,13 @@ Antes de sumergirte en los frameworks, te recomendamos que leas nuestra introduc
 - [hardhat.org](https://hardhat.org)
 - [GitHub](https://github.com/nomiclabs/hardhat)
 
-**OpenZeppelin SDK: \*\***_El kit definitivo de herramientas para contratos inteligentes; una serie de herramientas para ayudarte a desarrollar, compilar, actualizar, implementar e interactuar con contratos inteligentes._\*\*
+**OpenZeppelin SDK:** **_El kit definitivo de herramientas para contratos inteligentes; una serie de herramientas para ayudarte a desarrollar, compilar, actualizar, implementar e interactuar con contratos inteligentes._**
 
 - [SDK de OpenZeppelin](https://openzeppelin.com/sdk/)
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-sdk)
 - [Foro de la comunidad](https://forum.openzeppelin.com/c/support/17)
 
-**Brownie: \*\***_Un entorno de desarrollo basado en Python y un framework de pruebas._\*\*
+**Brownie:** **_Un entorno de desarrollo basado en Python y un framework de pruebas._**
 
 - [Documentación](https://eth-brownie.readthedocs.io/en/latest/)
 - [GitHub](https://github.com/eth-brownie/brownie)
@@ -64,7 +64,7 @@ Antes de sumergirte en los frameworks, te recomendamos que leas nuestra introduc
 
 - [GitHub](https://github.com/austintgriffith/scaffold-eth)
 
-**The Graph:\*\***_El gráfico para realizar consultas sobre datos de la blockchain de manera eficiente_\*\*.
+**The Graph:** **_El gráfico para realizar consultas sobre datos de la blockchain de manera eficiente_**.
 
 - [Sitio web](https://thegraph.com/)
 - [Tutorial](/developers/tutorials/the-graph-fixing-web3-data-querying/)

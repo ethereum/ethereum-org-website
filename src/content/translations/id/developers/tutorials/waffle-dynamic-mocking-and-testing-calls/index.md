@@ -8,7 +8,7 @@ tags:
   - "solidity"
   - "pengujian"
   - "mocking"
-skill: tingkat menengah
+skill: intermediate
 lang: id
 sidebar: true
 published: 2020-11-14

@@ -3,11 +3,11 @@ import ClipboardJS from "clipboard"
 
 export interface IProps {
   text: string
-  children: (boolean: boolean) => React.ReactNode
+  children: (isCopied: boolean) => React.ReactNode
 }
 
 const CopyToClipboard: React.FC<IProps> = ({ children, text }) => {
-  const [isCopied, setIsCopied] = useState(false)
+  const [isCopied, setIsCopied] = useState<boolean>(false)
   const targetEl = useRef<HTMLDivElement>(null)
   const timer = useRef(0)
 

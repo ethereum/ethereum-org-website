@@ -9,7 +9,7 @@ tags:
   - "noduri"
   - "interogarea"
   - "alchemy"
-skill: începător
+skill: beginner
 lang: ro
 sidebar: true
 published: 2020-10-30

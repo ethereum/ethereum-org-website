@@ -14,7 +14,7 @@ incomplete: true
   1.  Installing the [Truffle development suite](https://www.trufflesuite.com/)
   2.  Writing a smart contract in [Solidity](https://soliditylang.org/)
   3.  Writing a user interface in Dart
-- [Building a Mobile dApp with Flutter](https://medium.com/dash-community/building-a-mobile-dapp-with-flutter-be945c80315a) is a lot shorter, which might be better
+- [Building a Mobile dapp with Flutter](https://medium.com/dash-community/building-a-mobile-dapp-with-flutter-be945c80315a) is a lot shorter, which might be better
   if you already know the basics
 - If you prefer the learn by watching a video, you can watch [Build Your First Blockchain Flutter App](https://www.youtube.com/watch?v=3Eeh3pJ6PeA), which is about an hour long
 - If you are impatient, you might prefer [Building a Blockchain Decentralized-app with Flutter and Dart on Ethereum](https://www.youtube.com/watch?v=jaMFEOCq_1s), which is only about twenty minutes

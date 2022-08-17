@@ -17,7 +17,7 @@ Token können praktisch alles in Ethereum darstellen:
 - Vermögenswerte wie Anteile an einer Firma
 - Eine Fiat-Währung wie der US-Dollar
 - Eine Goldunze
-- und mehr...
+- und weitere...
 
 Diese mächtigen Eigenschaften von Ethereum sollten in einem stabilen Standard bereitgestellt werden, oder? Und genau das ist der Punkt, an dem ERC-20 ins Spiel kommt! Dieser Standard ermöglicht es Entwicklern, Token zu erstellen, die mit anderen Produkten und Services interagieren können.
 
@@ -69,11 +69,11 @@ event Approval(address indexed _owner, address indexed _spender, uint256 _value)
 
 ### Beispiele {#web3py-example}
 
-Sehen wir uns an, wie wichtig ein Standard ist, um uns die Überprüfung jedes ERC-20-Token-Vertrags auf Ethereum zu erleichtern. Wir benötigen lediglich das Contract Application Binary Interface (ABI), um eine Schnittstelle zu einem beliebigen ERC-20-Token zu erstellen. Wie Sie unten sehen können, verwenden wir ein vereinfachtes ABI, um es zu einem Beispiel mit geringer Reibung zu machen.
+Sehen wir uns an, wie wichtig ein Standard ist, um uns die Überprüfung jedes ERC-20-Token-Vertrags auf Ethereum zu erleichtern. Wir benötigen lediglich das Contract Application Binary Interface (ABI), um eine Schnittstelle zu einem beliebigen ERC-20-Token zu erstellen. Wie Sie unten sehen können, werden wir ein vereinfachtes ABI verwenden, um es zu einem Beispiel mit geringer Reibung zu machen.
 
-#### Web3.py-Beispiel {#web3py-example}
+#### Web3.py Beispiel {#web3py-example}
 
-Stellen Sie zunächst sicher, dass Sie die Python-Bibliothek [Web3.py](https://web3py.readthedocs.io/en/stable/quickstart.html#installation) installiert haben:
+Stellen Sie zuerst sicher, dass Sie [Web3.py](https://web3py.readthedocs.io/en/stable/quickstart.html#installation) Python-Bibliothek installiert haben:
 
 ```
 $ pip install web3
@@ -144,6 +144,6 @@ print("Addr Balance:", addr_balance)
 
 ## Weiterführende Informationen {#further-reading}
 
-- [EIP-20: ERC-20 Token-Standard](https://eips.ethereum.org/EIPS/eip-20)
+- [EIP-20: ERC-20 Token Standard](https://eips.ethereum.org/EIPS/eip-20)
 - [OpenZeppelin - Token](https://docs.openzeppelin.com/contracts/3.x/tokens#ERC20)
 - [OpenZeppelin - ERC-20 Implementierung](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)

@@ -7,7 +7,7 @@ tags:
   - "erc-721"
   - "solidity"
   - "tokenuri"
-skill: intermediar
+skill: intermediate
 lang: ro
 sidebar: true
 published: 2020-03-19

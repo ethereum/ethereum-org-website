@@ -15,7 +15,7 @@ L'idée est simple et cherche à créer une interface de contrat intelligent qui
 
 Le jeton ERC-1155 est décrit dans les détails dans [EIP-1155](https://eips.ethereum.org/EIPS/eip-1155).
 
-## Prérequis {#prerequisites}
+## Pré-requis {#prerequisites}
 
 Pour mieux comprendre cette page, nous vous recommandons de commencer par lire celles concernant [les normes de jeton](/developers/docs/standards/tokens/), [ERC-20](/developers/docs/standards/tokens/erc-20/), et [ERC-721](/developers/docs/standards/tokens/erc-721/).
 

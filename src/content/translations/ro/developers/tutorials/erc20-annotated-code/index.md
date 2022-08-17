@@ -7,7 +7,7 @@ sidebar: true
 tags:
   - "solidity"
   - "erc-20"
-skill: începător
+skill: beginner
 published: 2021-03-09
 ---
 
@@ -298,7 +298,7 @@ Așa cum sugerează și numele, această variabilă ține evidența stocului tot
 
 Aceste trei variabile sunt utilizate pentru îmbunătățirea lizibilității. Primele două se explică de la sine, dar `_decimals` nu.
 
-Pe de-o parte, ethereum nu are variabile în virgulă mobilă sau fracționare. Pe de altă parte, oamenilor le place să poată împărți tokenurile. Un motiv pentru care oamenii au ales aurul ca monedă a fost pentru că era greu de făcut rost de mărunţiş când cineva voia să cumpere o raţă, dar avea numai valoarea pentru o vacă.
+Pe de-o parte, Ethereum nu are variabile în virgulă mobilă sau fracționare. Pe de altă parte, oamenilor le place să poată împărți tokenurile. Un motiv pentru care oamenii au ales aurul ca monedă a fost pentru că era greu de făcut rost de mărunţiş când cineva voia să cumpere o raţă, dar avea numai valoarea pentru o vacă.
 
 Soluția este de a ține evidența valorilor întregi, dar la numărătoare, în loc de a lua în considerare tokenul real, să considerăm un token fracționar, care aproape că nu are valoare. În cazul ether-ului, tokenul fracționar se numește wei, iar 10^18 wei sunt echivalenţi cu un ETH. În momentul scrierii, 10.000.000.000.000.000.000 de wei echivalau cu circa un cent american sau un eurocent.
 

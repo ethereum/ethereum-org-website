@@ -18,7 +18,7 @@ En se penchant sur la question des options de stockage décentralisé (dStorage)
 - Décentralisé
 - Consensus
 
-## Mécanisme de persistance / structure incitative {#persistence-mechanism}
+## Mécanisme de persistance / structure d'incitation {#persistence-mechanism}
 
 ### Orientation blockchain {#blockchain-based}
 

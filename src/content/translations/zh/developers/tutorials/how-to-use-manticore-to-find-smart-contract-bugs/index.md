@@ -10,7 +10,7 @@ tags:
   - "安全性"
   - "测试"
   - "形式化验证"
-skill: 高级
+skill: advanced
 published: 2020-01-13
 source: 构建安全合约
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore
@@ -231,7 +231,7 @@ contract_account = m.solidity_create_contract(source_code, owner=user_account)
 
 #### 概览 {#summary}
 
-- 您可以通过[m.create_account](https://manticore.readthedocs.io/en/latest/evm.html?highlight=create_account#manticore.ethereum.ManticoreEVM.create_account)和[m.solidity_create_contract](https://manticore.readthedocs.io/enura/api.html#manticore.eferum.ManticoreEVM.solidity_create_contract)创建用户和合约帐户。
+- 您可以通过[m.create_account](https://manticore.readthedocs.io/en/latest/evm.html?highlight=create_account#manticore.ethereum.ManticoreEVM.create_account)和[m.solidity_create_contract](https://manticore.readthedocs.io/enura/api.html#manticore.ethereum.ManticoreEVM.solidity_create_contract)创建用户和合约帐户。
 
 ### 执行交易 {#executing-transactions}
 

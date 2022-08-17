@@ -43,12 +43,13 @@ Wallets are rapidly changing in Ethereum. We've tried to create a fair framework
 - **Staking** - users are able to stake directly through the wallet.
 - **Swaps** - users are able to swap tokens through the wallet.
 - **Multichain networks** - your wallet supports users accessing multiple blockchain networks by default.
+- **Layer 2 networks** - your wallet supports users accessing layer 2 networks by default.
 - **Customize gas fees** - your wallet allows users to customize their transaction gas fees (base fee, priority fee, max fee).
 - **ENS support** - your wallet allows users to send transactions to ENS names.
 - **ERC-20 support** - your wallet allows users to import ERC-20 token contracts, or automatically queries and displays ERC-20 tokens.
 - **EIP-1559 (type 2) transactions** - your wallet supports EIP-1559 (type 2) transactions.
 - **Buy crypto** - your wallet supports users directly purchasing and onboarding to crypto.
-- **Withdraw crypto** - your wallet supports users withdrawing directly to card or a bank account.
+- **Sell for fiat** - your wallet supports users selling and withdrawing to fiat directly to card or a bank account.
 - **Multisig** - your wallet supports multiple signatures to sign a transaction.
 - **Social recovery** - your wallet supports guardians and a user can recover their wallet if they lose their seed phrase using these guardians.
 - **Dedicated support team** - your wallet has a dedicated support team where users can go to when experiencing issues.

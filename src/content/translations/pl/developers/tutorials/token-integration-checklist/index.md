@@ -9,7 +9,7 @@ tags:
   - "inteligentne kontrakty"
   - "ochrona"
   - "tokeny"
-skill: średnie
+skill: intermediate
 published: 2020-08-13
 source: Tworzenie bezpiecznych kontraktów
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/token_integration.md

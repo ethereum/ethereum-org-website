@@ -63,6 +63,7 @@ Some collaborative efforts to make Ethereum enterprise friendly have been made b
 - [Hyperledger Besu](https://www.hyperledger.org/use/besu) _an enterprise focused open-source Ethereum client developed under the Apache 2.0 license and written in Java_
 - [Infura](https://infura.io/) _scalable API access to the Ethereum and IPFS networks_
 - [Provide](https://provide.services/) _infrastructure and APIs for Enterprise Web3 applications_
+- [QuickNode](https://www.quicknode.com/) _provides reliable and fast nodes with high-level APIs like NFT API, Token API, etc., while delivering a unified product suite and enterprise-grade solutions_
 - [Unibright](https://unibright.io/) _a team of blockchain specialists, architects, developers and consultants with 20+ years of experience in business processes and integration_
 
 ### Tooling and libraries {#tooling-and-libraries}
@@ -71,7 +72,7 @@ Some collaborative efforts to make Ethereum enterprise friendly have been made b
 - [Epirus](https://www.web3labs.com/epirus) _a platform for developing, deploying and monitoring blockchain applications by Web3 Labs_
 - [Ernst & Young's ‘Nightfall'](https://github.com/EYBlockchain/nightfall) _a toolkit for private transactions_
 - [EthSigner](https://github.com/ConsenSys/ethsigner) _a transaction signing application to be used with a web3 provider_
-- [Tenderly](https://tenderly.co/) _a Data Platform providing real-time analytics, alerting and monitoring with support for private networks._
+- [Tenderly](https://tenderly.co/) _a Data Platform providing real-time analytics, alerting and monitoring with support for private networks_
 - [Truffle Suite](https://trufflesuite.com) _blockchain development suite (Truffle, Ganache, Drizzle)_
 
 ### Scalability solutions {#scalability-solutions}
@@ -116,8 +117,8 @@ Here are some of the enterprise applications that have been deployed to the publ
 
 ### Payments {#payments}
 
-- [Brave Browser](https://basicattentiontoken.org/) _pays users for their attention to advertisements and users can pay publishers to support them, via the Basic Attention Token._
-- [hCaptcha](https://www.hcaptcha.com/) _Bot prevention CAPTCHA system which pays web site operators for the work done by users to label data for machine learning. Now deployed by Cloudflare._
+- [Brave Browser](https://basicattentiontoken.org/) _pays users for their attention to advertisements and users can pay publishers to support them, via the Basic Attention Token_
+- [hCaptcha](https://www.hcaptcha.com/) _Bot prevention CAPTCHA system which pays web site operators for the work done by users to label data for machine learning. Now deployed by Cloudflare_
 - [Audius](https://audius.co/) _a streaming service that connects music fans directly with artists, and allows artists to be paid in full by their fans, directly and instantly for every stream_
 - [EthereumAds](https://ethereumads.com/) _lets web site operators sell advertising space and get paid via Ethereum_
 

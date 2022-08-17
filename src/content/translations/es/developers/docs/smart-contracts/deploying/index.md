@@ -37,7 +37,7 @@ Una vez desplegado, tu contrato tendrá una dirección de Ethereum como otras [c
 
 - [Remezcla](https://remix.ethereum.org)
 
-**Tenderly: \*\***_Una plataforma para supervisar los contratos inteligentes de manera sencilla, con seguimiento de errores, alertas, métricas de rendimiento y análisis detallados de contratos._\*\*
+**Tenderly:** **_Una plataforma para supervisar los contratos inteligentes de manera sencilla, con seguimiento de errores, alertas, métricas de rendimiento y análisis detallados de contratos._**
 
 - [tenderly.co](https://tenderly.co/)
 - [GitHub](https://github.com/Tenderly)

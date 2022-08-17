@@ -226,11 +226,11 @@ Aunque no hay sustituto para entender los conceptos básicos de seguridad de Eth
 
 ### Seguridad de contratos inteligentes {#smart-contract-security}
 
-**Slither: \*\***_Entorno de trabajo de análisis estático de Solidity escrito en Python 3._\*\*
+**Slither:** **_Entorno de trabajo de análisis estático de Solidity escrito en Python 3._**
 
 - [GitHub](https://github.com/crytic/slither)
 
-**MythX: \*\***_API de análisis de seguridad para contratos inteligentes de Ethereum._\*\*
+**MythX:** **_API de análisis de seguridad para contratos inteligentes de Ethereum._**
 
 - [mythx.io](https://mythx.io/)
 - [Documentación](https://docs.mythx.io/en/latest/)

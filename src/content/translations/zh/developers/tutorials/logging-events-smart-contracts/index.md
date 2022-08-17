@@ -7,7 +7,7 @@ tags:
   - "remix"
   - "solidity"
   - "事件"
-skill: 中级
+skill: intermediate
 lang: zh
 sidebar: true
 published: 2020-04-03

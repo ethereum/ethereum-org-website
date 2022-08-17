@@ -91,7 +91,7 @@ Hay maneras de eludir esto con ayuda de [oráculos](/developers/docs/oracles/).
 
 ## Recursos de contrato inteligente {#smart-contract-resources}
 
-**Contratos de OpenZeppelin: \*\***_Bibliotecas para el desarrollo seguro de contratos inteligentes._\*\*
+**Contratos de OpenZeppelin:** **_Bibliotecas para el desarrollo seguro de contratos inteligentes._**
 
 - [openzeppelin.com/contracts/](https://openzeppelin.com/contracts/)
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-contracts)

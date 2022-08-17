@@ -7,7 +7,7 @@ sidebar: true
 
 ## Voraussetzungen {#prerequisites}
 
-Sie sollten ein gutes Verständnis für alle grundlegenden Themen und ein umfassendes Verständnis für [Ethereum-Skalierung](/developers/docs/scaling/) haben. Die Implementierung von Skalierungslösungen wie Rollups ist ein fortgeschrittenes Thema, da die Technologie weniger erprobt ist und weiter erforscht und entwickelt wird.
+Sie sollten ein gutes Verständnis aller grundlegenden Themen und ein umfassendes Verständnis für [Ethereum-Skalierung](/developers/docs/scaling/) haben. Die Implementierung von Skalierungslösungen wie Rollups ist ein fortgeschrittenes Thema, da die Technologie weniger erprobt ist und weiter erforscht und entwickelt wird.
 
 Suchen Sie nach einer anfängerfreundlicheren Einführung? Siehe unsere [Einführung in Layer 2](/layer-2/).
 
@@ -17,9 +17,9 @@ Optimistische Rollups laufen parallel zur Ethereum-Hauptkette auf Layer 2. Sie b
 
 Mit optimistischen Rollups werden Transaktionen als `Calldata` in die Ethereum-Hauptkette geschrieben, wodurch sie weiter optimiert werden, indem die Gaskosten reduziert werden.
 
-Da die Berechnung der langsame und teure Teil der Verwendung von Ethereum ist, können optimistische Rollups die Skalierbarkeit je nach Transaktion bis zu 10-100x verbessern. Diese Zahl wird mit der Einführung von [Shard-Chains](/upgrades/shard-chains) noch weiter steigen, da mehr Daten verfügbar sein werden, wenn eine Transaktion angefochten wird.
+Da die Berechnung der langsame und teure Teil der Verwendung von Ethereum ist, können optimistische Rollups die Skalierbarkeit je nach Transaktion bis zu 10-100x verbessern. Diese Zahl wird mit der Einführung von [Shard-Chains](/upgrades/sharding) noch weiter steigen, da mehr Daten verfügbar sein werden, wenn eine Transaktion angefochten wird.
 
-### Transaktionen anfechten {#disputing-transactions}
+### Transaktionen bestreiten {#disputing-transactions}
 
 Optimistische Rollups berechnen die Transaktion nicht, so dass es einen Mechanismus geben muss, der sicherstellt, dass die Transaktionen rechtmäßig und nicht betrügerisch sind. Hier kommen Betrugsbeweise ins Spiel. Wenn jemand eine betrügerische Transaktion bemerkt, führt der Rollup die Berechnung eines Betrugsbeweises durch und nutzt die verfügbaren Zustandsdaten. Dies bedeutet, dass Sie möglicherweise längere Wartezeiten für die Transaktionsbestätigung haben als bei einem ZK-Rollup, da die Transaktion angefochten werden könnte.
 
@@ -33,7 +33,7 @@ Sie sehen also die Anreize: Die Teilnehmer werden für die Durchführung von Bet
 
 ### Vor- und Nachteile {#optimistic-pros-and-cons}
 
-| Vorteile                                                                                                                                   | Nachteile                                                                        |
+| Vorteile                                                                                                                                   | Kontra                                                                           |
 | ------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------- |
 | Alles, was Sie mit Ethereum Layer 1 tun können, ist auch mit optimistischen Rollups umsetzbar, da es mit EVM und Solidität kompatibel ist. | Lange Wartezeiten für On-Chain-Transaktionen aufgrund möglicher Betrugsprobleme. |
 | Alle Transaktionsdaten werden in der Layer-1-Kette gespeichert, was bedeutet, dass sie sicher und dezentralisiert sind.                    | Ein Betreiber kann die Reihenfolge der Transaktionen beeinflussen.               |
@@ -52,7 +52,7 @@ Es gibt mehrere Implementierungen von optimistischen Rollups, die Sie in Ihre dA
 
 **Optimistische Rollups verstehen**
 
-- [Alles, was Sie über optimistische Rollups wissen müssen](https://research.paradigm.xyz/rollups)
+- [Alles, was Sie über Optimistic Rollup wissen müssen](https://research.paradigm.xyz/rollups)
 - [EthHub zu optimistischen Rollups](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/optimistic_rollups/)
 - [Der Leitfaden zu Arbitrum](https://newsletter.banklesshq.com/p/the-essential-guide-to-arbitrum)
 - [Wie funktioniert das Rollup von Optimismus wirklich?](https://research.paradigm.xyz/optimism)

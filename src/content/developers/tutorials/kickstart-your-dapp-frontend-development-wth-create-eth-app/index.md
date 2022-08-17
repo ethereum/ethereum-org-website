@@ -63,15 +63,15 @@ While [Web3](https://web3js.readthedocs.io/en/v1.2.7/) is still mostly used, [et
 
 [GraphQL](https://graphql.org/) is an alternative way for handling data compared to a [Restful API](https://restfulapi.net/). They have several advantages over Restful Apis, especially for decentralized blockchain data. If you are interested in the reasoning behind this, have a look at [GraphQL Will Power the Decentralized Web](https://medium.com/graphprotocol/graphql-will-power-the-decentralized-web-d7443a69c69a).
 
-Usually you would fetch data from your smart contract directly. Want to read the time of the latest trade? Just call `MyContract.methods.latestTradeTime().call()` which fetches the data from an Ethereum node like Infura into your Dapp. But what if you need hundreds of different data points? That would result in hundreds of data fetches to the node, each time requiring an [RTT](https://wikipedia.org/wiki/Round-trip_delay_time) making your Dapp slow and inefficient. One workaround might be a fetcher call function inside your contract that returns multiple data at once. This is not always ideal though.
+Usually you would fetch data from your smart contract directly. Want to read the time of the latest trade? Just call `MyContract.methods.latestTradeTime().call()` which fetches the data from an Ethereum node like Infura into your dapp. But what if you need hundreds of different data points? That would result in hundreds of data fetches to the node, each time requiring an [RTT](https://wikipedia.org/wiki/Round-trip_delay_time) making your dapp slow and inefficient. One workaround might be a fetcher call function inside your contract that returns multiple data at once. This is not always ideal though.
 
 And then you might be interested in historical data as well. You want to know not only the last trade time, but the times for all trades that you ever did yourself. Use the _create-eth-app_ subgraph package, read the [documentation](https://thegraph.com/docs/define-a-subgraph) and adapt it to your own contracts. If you are looking for popular smart contracts, there may even already be a subgraph. Check out the [subgraph explorer](https://thegraph.com/explorer/).
 
-Once you have a subgraph, it allows you to write one simple query in your Dapp that retrieves all the important blockchain data including historical ones that you need, only one fetch required.
+Once you have a subgraph, it allows you to write one simple query in your dapp that retrieves all the important blockchain data including historical ones that you need, only one fetch required.
 
 ### Apollo {#apollo}
 
-Thanks to the [Apollo Boost](https://www.apollographql.com/docs/react/get-started/) integration you can easily integrate the graph in your React Dapp. Especially when using [React hooks and Apollo](https://www.apollographql.com/blog/apollo-client-now-with-react-hooks-676d116eeae2), fetching data is as simple as writing a single GraphQl query in your component:
+Thanks to the [Apollo Boost](https://www.apollographql.com/docs/react/get-started/) integration you can easily integrate the graph in your React dapp. Especially when using [React hooks and Apollo](https://www.apollographql.com/blog/apollo-client-now-with-react-hooks-676d116eeae2), fetching data is as simple as writing a single GraphQl query in your component:
 
 ```js
 const { loading, error, data } = useQuery(myGraphQlQuery)
@@ -103,7 +103,7 @@ When you choose to integrate Aave with _create-eth-app_, you will get a [subgrap
 
 ### Uniswap {#uniswap}
 
-[Uniswap](https://uniswap.exchange/) is a decentralized exchange (DEX). Liquidity providers can earn fees by providing the required tokens or ether for both sides of a trade. It is widely used and therefore has one of the highest liquidities for a very wide range of tokens. You can easily integrate it in your Dapp to, for example, allow users to swap their ETH for DAI.
+[Uniswap](https://uniswap.exchange/) is a decentralized exchange (DEX). Liquidity providers can earn fees by providing the required tokens or ether for both sides of a trade. It is widely used and therefore has one of the highest liquidities for a very wide range of tokens. You can easily integrate it in your dapp to, for example, allow users to swap their ETH for DAI.
 
 Unfortunately, at the time of this writing the integration is only for Uniswap v1 and not the [just released v2](https://uniswap.org/blog/uniswap-v2/).
 

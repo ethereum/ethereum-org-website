@@ -8,7 +8,7 @@ tags:
   - "solidity"
   - "pierwsze kroki"
   - "erc-20"
-skill: początkujący
+skill: beginner
 lang: pl
 sidebar: true
 published: 2020-04-05

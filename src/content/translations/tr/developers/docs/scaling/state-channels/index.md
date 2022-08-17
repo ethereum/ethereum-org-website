@@ -9,9 +9,9 @@ sidebarDepth: 3
 
 Durum kanalları, katılımcıların Ethereum ağına yalnızca iki zincir üstü işlem gönderirken zincir dışı `x` sayıda işlem yapmasına izin verir. Bu, son derece yüksek işlem hacmine izin verir.
 
-## Ön Koşullar {#prerequisites}
+## Ön koşullar {#prerequisites}
 
-Tüm temel konuları iyi anlamalı ve [Ethereum ölçeklendirme](/developers/docs/scaling/) konusunda üst düzey bir anlayışa sahip olmalısınız. Kanallar gibi ölçeklendirme çözümlerini uygulamak, teknoloji henüz pek kullanılmadığı için ve araştırılmaya ve geliştirilmeye devam edildiğinden ileri seviye bilgi gerektirir.
+Temeli oluşturan tüm konuları iyi anlamalı ve [Ethereum ölçeklendirilmesi](/developers/docs/scaling/) konusunda ileri düzeyde bilgiye sahip olmalısınız. Kanallar gibi ölçeklendirme çözümlerini uygulamak, teknoloji henüz pek kullanılmadığı için ve araştırılmaya ve geliştirilmeye devam edildiğinden ileri seviye bilgi gerektirir.
 
 ## Kanallar {#channels}
 
@@ -60,7 +60,7 @@ Birden çok proje, dapp'lerinize entegre edebileceğiniz durum kanallarının uy
 - [Raiden](https://raiden.network/)
 - [Statechannels.org](https://statechannels.org/)
 
-## Daha fazla bilgi {#further-reading}
+## Daha fazla okuma {#further-reading}
 
 **Durum kanalları**
 

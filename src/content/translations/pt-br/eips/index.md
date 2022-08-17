@@ -23,7 +23,7 @@ Além de fornecer uma especificação técnica para mudanças, as EIPs são a un
 
 ## Histórico de EIPs {#history-of-eips}
 
-O repositório Github [Propostas de Melhorias do Ethereum (EIPs)](https://github.com/ethereum/EIPs) foi criado em outubro de 2015. O processo EIP é baseado no processo de [Propostas de Melhorias do Bitcoin (BIPs)](https://github.com/bitcoin/bips) que, por sua vez, é baseado no processo [Propostas de Melhorias do Python (PEPs)](https://www.python.org/dev/peps/).
+O repositório GitHub [Propostas de Melhorias do Ethereum (EIPs)](https://github.com/ethereum/EIPs) foi criado em outubro de 2015. O processo EIP é baseado no processo de [Propostas de Melhorias do Bitcoin (BIPs)](https://github.com/bitcoin/bips) que, por sua vez, é baseado no processo [Propostas de Melhorias do Python (PEPs)](https://www.python.org/dev/peps/).
 
 Os editores da EIP têm a tarefa de analisar EIPs por coerência técnica, ortografia/gramática corretas e estilo de código. Martin Becze, Vitalik Buterin, Gavin Wood e alguns outros foram os editores originais de EIP de 2015 até o final de 2016. Os editores atuais de EIP são:
 
@@ -50,7 +50,7 @@ Se estiver interessado em ler mais sobre EIPs, confira o [site das EIPs](https:/
 
 ## Participar {#participate}
 
-Qualquer pessoa pode criar EIP ou ERC, embora você deva ler [EIP-1](https://eips. ethereum. org/EIPS/eip-1), que descreve o processo EIP, o que é EIP, tipos de EIPs, o que o documento EIP deve conter, formato EIP e modelo, lista de editores EIP e tudo o que você precisa saber sobre EIPs antes de criar uma. Sua nova EIP deve definir uma nova funcionalidade que não seja muito complexa nem muito específica, e que possa ser usada por projetos no ecossistema Ethereum. A parte mais difícil é a facilitação. Como autor, você precisa ajudar as pessoas a entender sua EIP, coletar feedback, escrever artigos descrevendo problemas que sua EIP resolve e colaborar com projetos para implementá-la.
+Qualquer pessoa pode criar EIP ou ERC, embora você deva ler [EIP-1](https://eips.ethereum.org/EIPS/eip-1), que descreve o processo EIP, o que é EIP, tipos de EIPs, o que o documento EIP deve conter, formato EIP e modelo, lista de editores EIP e tudo o que você precisa saber sobre EIPs antes de criar uma. Sua nova EIP deve definir uma nova funcionalidade que não seja muito complexa nem muito específica, e que possa ser usada por projetos no ecossistema Ethereum. A parte mais difícil é a facilitação. Como autor, você precisa ajudar as pessoas a entender sua EIP, coletar feedback, escrever artigos descrevendo problemas que sua EIP resolve e colaborar com projetos para implementá-la.
 
 Se estiver interessado em acompanhar ou compartilhar sua opinião sobre EIPs, confira o [fórum do Ethereum Magicians](https://ethereum-magicians.org/), onde as EIPs são discutidas com a comunidade.
 

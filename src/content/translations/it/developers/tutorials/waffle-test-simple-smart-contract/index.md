@@ -7,7 +7,7 @@ tags:
   - "Smart Contract"
   - "Solidity"
   - "test"
-skill: intermedio
+skill: intermediate
 lang: it
 sidebar: true
 published: 2020-10-16

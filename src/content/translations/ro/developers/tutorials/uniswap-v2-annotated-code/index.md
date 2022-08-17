@@ -6,7 +6,7 @@ sidebar: true
 tags:
   - "solidity"
   - "uniswap"
-skill: intermediar
+skill: intermediate
 published: 2021-05-01
 lang: ro
 ---

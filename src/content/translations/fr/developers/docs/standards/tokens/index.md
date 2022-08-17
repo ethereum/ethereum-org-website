@@ -10,7 +10,7 @@ incomplete: true
 
 L'une des nombreuses normes de développement Ethereum est axée sur les interfaces de jetons. Ces normes aident à garantir que les contrats intelligents restent composables, afin que, par exemple, lorsqu'un nouveau projet émet un jeton, celui-ci reste compatible avec les échanges décentralisés existants.
 
-## Prérequis {#prerequisites}
+## Pré-requis {#prerequisites}
 
 - [Normes de développement Ethereum](/developers/docs/standards/)
 - [Contrats intelligents](/developers/docs/smart-contracts/)

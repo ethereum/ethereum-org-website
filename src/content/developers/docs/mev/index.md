@@ -10,7 +10,7 @@ Maximal extractable value (MEV) refers to the maximum value that can be extracte
 
 ### Miner extractable value
 
-This concept was first applied under the context of [proof-of-work](/developers/docs/consensus-mechanisms/pow/), and was initially referred to as "miner extractable value". This is because in proof-of-work, miners control transaction inclusion, exclusion, and ordering. However, after the transition to proof-of-stake via [The Merge](/upgrades/merge) validators will be responsible for these roles, and mining will no longer be applicable. The value extraction methods here will still persist after this transition, and thus a name change was needed. To keep the same acronym for continuity while maintaining the same fundamental meaning, "maximal extractable value" is now used as a more inclusive replacement.
+This concept was first applied in the context of [proof-of-work](/developers/docs/consensus-mechanisms/pow/), and was initially referred to as "miner extractable value". This is because in proof-of-work, miners control transaction inclusion, exclusion, and ordering. However, after the transition to proof-of-stake via [The Merge](/upgrades/merge) validators will be responsible for these roles, and mining will no longer be applicable. The value extraction methods here will still persist after this transition, and thus the term "miner extractable value" is no longer valid. "Maximal extractable value" is now used as a more inclusive replacement.
 
 ## Prerequisites {#prerequisites}
 
@@ -18,11 +18,11 @@ Make sure you're familiar with [transactions](/developers/docs/transactions/), [
 
 ## MEV extraction {#mev-extraction}
 
-In theory MEV accrues entirely to miners because miners are the only party that can guarantee the execution of a profitable MEV opportunity (at least on the current proof-of-work chain — this will change after [The Merge](/upgrades/merge/)). In practice, however, a large portion of MEV is extracted by independent network participants referred to as "searchers." Searchers run complex algorithms on blockchain data to detect profitable MEV opportunities and have bots to automatically submit those profitable transactions to the network.
+In theory MEV accrues entirely to miners/validators because they are the only party that can guarantee the execution of a profitable MEV opportunity. In practice, however, a large portion of MEV is extracted by independent network participants referred to as "searchers." Searchers run complex algorithms on blockchain data to detect profitable MEV opportunities and have bots to automatically submit those profitable transactions to the network.
 
-Miners do get a portion of the full MEV amount anyway because searchers are willing to pay high gas fees (which go to the miner) in exchange for higher likelihood of inclusion of their profitable transactions in a block. Assuming searchers are economically rational, the gas fee that a searcher is willing to pay will be an amount up to 100% of the searcher's MEV (because if the gas fee was higher, the searcher would lose money).
+Miners/validators do get a portion of the full MEV amount anyway because searchers are willing to pay high gas fees (which go to the miner/validator) in exchange for higher likelihood of inclusion of their profitable transactions in a block. Assuming searchers are economically rational, the gas fee that a searcher is willing to pay will be an amount up to 100% of the searcher's MEV (because if the gas fee was higher, the searcher would lose money).
 
-With that, for some highly competitive MEV opportunities, such as [DEX arbitrage](#mev-examples-dex-arbitrage), searchers may have to pay 90% or even more of their total MEV revenue in gas fees to the miner because so many people want to run the same profitable arbitrage trade. This is because the only way to guarantee that their arbitrage transaction runs is if they submit the transaction with the highest gas price.
+With that, for some highly competitive MEV opportunities, such as [DEX arbitrage](#mev-examples-dex-arbitrage), searchers may have to pay 90% or even more of their total MEV revenue in gas fees to the miner/validator because so many people want to run the same profitable arbitrage trade. This is because the only way to guarantee that their arbitrage transaction runs is if they submit the transaction with the highest gas price.
 
 ### Gas golfing {#mev-extraction-gas-golfing}
 
@@ -56,7 +56,9 @@ It works like this: if two DEXes are offering a token at two different prices, s
 
 Lending protocol liquidations present another well-known MEV opportunity.
 
-Lending protocols like Maker and Aave function by requiring users to deposit some sort of collateral (e.g. ETH). Users can then borrow different assets and tokens from others depending on what they need (for example, they may borrow MKR if they want to vote on a MakerDAO governance proposal or SUSHI if they want to earn a portion of trading fees on Sushiswap) up to a certain amount of their deposited collateral — for instance, 30% (the exact borrowing power percentage is determined by the protocol). The users they borrow the other tokens from function as lenders in this case.
+Lending protocols like Maker and Aave require users to deposit some collateral (e.g. ETH). This deposited collateral is then used to then lend out to other users.
+
+Users can then borrow assets and tokens from others depending on what they need (e.g. you might borrow MKR if you want to vote in a MakerDAO governance proposal) up to a certain percentage of their deposited collateral. For example, if the borrowing amount is a maximum of 30%, a user who deposits 100 DAI into the protocol can borrow up to 30 DAI worth of another asset. The protocol determines the exact borrowing power percentage.
 
 As the value of a borrower's collateral fluctuates, so too does their borrowing power. If, due to market fluctuations, the value of borrowed assets exceeds say, 30% of the value of their collateral (again, the exact percentage is determined by the protocol), the protocol typically allows anyone to liquidate the collateral, instantly paying off the lenders (this is similar to how [margin calls](https://www.investopedia.com/terms/m/margincall.asp) work in traditional finance). If liquidated, the borrower usually has to pay a hefty liquidation fee, some of which goes to the liquidator — which is where the MEV opportunity comes in.
 
@@ -112,7 +114,7 @@ This possibility of blockchain re-organization has been [previously explored on 
 
 MEV extraction ballooned in early 2021, resulting in extremely high gas prices in the first few months of the year. The emergence of Flashbots's MEV relay has reduced the effectiveness of generalized frontrunners and has taken gas price auctions off-chain, lowering gas prices for ordinary users.
 
-While many searchers are still making good money from MEV, as opportunities become more well-known and more and more searchers compete for the same opportunity, miners will capture more and more total MEV revenue (because the same sort of gas auctions as originally described above also occur in Flashbots, albeit privately, and miners will capture the resulting gas revenue). MEV is also not unique to Ethereum, and as opportunities become more competitive on Ethereum, searchers are moving to alternate blockchains like Binance Smart Chain, where similar MEV opportunities as those on Ethereum exist with less competition.
+While many searchers are still making good money from MEV, as opportunities become more well-known and more and more searchers compete for the same opportunity, miners/validators will capture more and more total MEV revenue (because the same sort of gas auctions as originally described above also occur in Flashbots, albeit privately, and miners will capture the resulting gas revenue). MEV is also not unique to Ethereum, and as opportunities become more competitive on Ethereum, searchers are moving to alternate blockchains like Binance Smart Chain, where similar MEV opportunities as those on Ethereum exist with less competition.
 
 As DeFi grows and increases in popularity, MEV may soon significantly outweigh the base Ethereum block reward. With that comes a growing possibility of selfish block remining and consensus instability. Some consider this to be an existential threat to Ethereum, and disincentivizing selfish mining is an active area of research in Ethereum protocol theory. One solution currently being explored is [MEV reward smoothing](https://ethresear.ch/t/committee-driven-mev-smoothing/10408).
 
@@ -129,3 +131,4 @@ As DeFi grows and increases in popularity, MEV may soon significantly outweigh t
 - [Escaping the Dark Forest](https://samczsun.com/escaping-the-dark-forest/)
 - [Flashbots: Frontrunning the MEV Crisis](https://medium.com/flashbots/frontrunning-the-mev-crisis-40629a613752)
 - [@bertcmiller's MEV Threads](https://twitter.com/bertcmiller/status/1402665992422047747)
+- [The Hitchhikers Guide To Ethereum](https://members.delphidigital.io/reports/the-hitchhikers-guide-to-ethereum)

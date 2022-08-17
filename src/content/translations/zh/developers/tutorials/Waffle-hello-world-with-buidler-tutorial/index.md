@@ -9,7 +9,7 @@ tags:
   - "测试"
   - "hardhat"
   - "ethers.js"
-skill: 入门级
+skill: beginner
 lang: zh
 sidebar: true
 published: 2020-10-16

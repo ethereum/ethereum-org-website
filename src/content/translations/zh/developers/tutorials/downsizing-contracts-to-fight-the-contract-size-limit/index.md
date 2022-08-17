@@ -9,7 +9,7 @@ tags:
   - "智能合约"
   - "存储"
   - "truffle"
-skill: 中级难度
+skill: intermediate
 published: 2020-06-26
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/max-contract-size

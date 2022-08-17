@@ -3,6 +3,7 @@ title: 面向 Dart 开发者的以太坊资源
 description: 学习如何使用 Dart 语言进行以太坊开发
 lang: zh
 sidebar: true
+incomplete: true
 ---
 
 ## 智能合约和 Solidity 语言入门 {#getting-started-with-smart-contracts-and-solidity}

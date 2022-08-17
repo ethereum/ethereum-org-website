@@ -10,7 +10,7 @@ incomplete: true
 
 在接下来一年，工作量证明将被逐步淘汰，这有利于**[权益证明 (PoS)](/developers/docs/consensus-mechanisms/pos)** 的发展。 向权益证明 (PoS) 的过渡也将从以太坊逐步淘汰挖矿机制。 [关于合并的更多信息](/upgrades/merge/)。
 
-## 前置要求 {#prerequisites}
+## 先决条件 {#prerequisites}
 
 为了更好地了解此页面，推荐先阅读[交易](/developers/docs/transactions/)、[区块](/developers/docs/blocks/)和[共识机制](/developers/docs/consensus-mechanisms/)。
 
@@ -56,7 +56,7 @@ incomplete: true
 
 工作量证明还负责在系统中发行新币，并鼓励矿工参与这项工作。
 
-将为成功创建区块的矿工奖励 2 个新铸造的 ETH 和这个区块内所有的交易费用。 矿工通过计算叔块也可以获得 1.75 个 ETH。 叔块是矿工在另一个矿工出块的同时创建的有效块。 叔块通常由于网络延迟导致。
+成功创建区块的矿工将获得两个新铸造的以太币奖励，但不再收到全部交易费，这是因为基础费已消耗掉，而小费和区块奖励则归矿工所有。 矿工通过计算叔块也可以获得 1.75 个 ETH。 叔块是矿工在另一个矿工出块的同时创建的有效块。 叔块通常由于网络延迟导致。
 
 ## 终局性 {#finality}
 
@@ -108,5 +108,5 @@ incomplete: true
 
 ## 相关主题 {#related-topics}
 
-- [采矿](/developers/docs/consensus-mechanisms/pow/mining/)
-- [权益证明](/developers/docs/consensus-mechanisms/pos/)
+- [矿工](/developers/docs/consensus-mechanisms/pow/mining/)
+- [权益证明（PoS)](/developers/docs/consensus-mechanisms/pos/)

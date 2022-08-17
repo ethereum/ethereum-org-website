@@ -3,12 +3,12 @@ title: Comment frapper un NFT (Partie 2/3 du tutoriel NFT)
 description: Ce tutoriel explique comment frapper un NFT sur la blockchain Ethereum grâce à notre contrat intelligent et à Web3.
 author: "Sumi Mudgil"
 tags:
-  - "NFT"
+  - "NFTs"
   - "ERC-721"
-  - "Alchemy"
-  - "Solidity"
+  - "alchemy"
+  - "solidité"
   - "contrats intelligents"
-skill: débutant
+skill: beginner
 lang: fr
 sidebar: true
 published: 2021-04-22
@@ -32,9 +32,9 @@ Dans le répertoire d'accueil de votre projet, exécutez :
 npm install @alch/alchemy-web3
 ```
 
-## Étape 2 : Créer un fichier mint-nft.js {#create-mintnftjs}
+## Étape 2 : Créer un fichier `mint-nft.js` {#create-mintnftjs}
 
-À l'intérieur de votre répertoire de scripts, créez un fichier mint-nft.js et ajoutez les lignes de code suivantes :
+À l'intérieur de votre répertoire de scripts, créez un fichier `mint-nft.js` et ajoutez les lignes de code suivantes :
 
 ```js
 require("dotenv").config()
@@ -45,7 +45,7 @@ const web3 = createAlchemyWeb3(API_URL)
 
 ## Étape 3 : Récupérer l'ABI de votre contrat {#contract-abi}
 
-L'ABI (Application Binary Interface) de notre contrat est l’interface permettant d'interagir avec notre contrat intelligent. Vous en apprendrez plus sur les ABI de contrats [ici](https://docs.alchemyapi.io/alchemy/guides/eth_getlogs#what-are-ab-is). Hardhat nous génère automatiquement une ABI et l'enregistre dans le fichier MyNFT.json. Pour l'utiliser, nous devrons analyser les contenus en ajoutant les lignes de code suivantes à notre fichier mint-nft.js :
+L'ABI (Application Binary Interface) de notre contrat est l’interface permettant d'interagir avec notre contrat intelligent. Vous en apprendrez plus sur les ABI de contrats [ici](https://docs.alchemyapi.io/alchemy/guides/eth_getlogs#what-are-ab-is). Hardhat nous génère automatiquement une ABI et l'enregistre dans le fichier `MyNFT.json`. Pour l'utiliser, nous devrons analyser les contenus en ajoutant les lignes de code suivantes à notre fichier `mint-nft.js` :
 
 ```js
 const contract = require("../artifacts/contracts/MyNFT.sol/MyNFT.json")
@@ -57,7 +57,7 @@ Si vous voulez lire l'ABI, vous pouvez l'afficher dans votre console :
 console.log(JSON.stringify(contract.abi))
 ```
 
-Pour exécuter mint-nft.js et voir votre ABI affichée dans la console, naviguez vers votre terminal et exécutez
+Pour exécuter `mint-nft.js` et voir votre ABI affichée dans la console, naviguez vers votre terminal et exécutez:
 
 ```js
 node scripts/mint-nft.js
@@ -65,7 +65,7 @@ node scripts/mint-nft.js
 
 ## Étape 4 : Configurer les métadonnées de votre NFT en utilisant IPFS {#config-meta}
 
-Si vous vous rappelez de la première partie du tutoriel, notre fonction de contrat intelligent mintNFT accepte un paramètre tokenURI qui doit se résoudre en un document JSON décrivant les métadonnées du NFT - ce qui donne vraiment vie au NFT, en lui permettant d'avoir des propriétés configurables, comme un nom, une description ou encore une image, entre autres.
+Si vous vous rappelez de la première partie du tutoriel, notre fonction de contrat intelligent `mintNFT` accepte un paramètre tokenURI qui doit se résoudre en un document JSON décrivant les métadonnées du NFT - ce qui donne vraiment vie au NFT, en lui permettant d'avoir des propriétés configurables, comme un nom, une description ou encore une image, entre autres.
 
 > _IPFS (système de fichiers interplanétaire) est un protocole décentralisé et un réseau pair-à-pair permettant de stocker et de partager des données au sein d'un système de fichiers distribué._
 
@@ -85,7 +85,7 @@ Pour les apprenants plus visuels, les étapes ci-dessus sont résumées ici :
 
 Maintenant, nous allons vouloir télécharger un document de plus sur Pinata. Mais avant de le faire, nous devons le créer !
 
-Dans votre répertoire racine, créez un nouveau fichier appelé nft-metadata.json et ajoutez le code json suivant :
+Dans votre répertoire racine, créez un nouveau fichier appelé `nft-metadata.json` et ajoutez le code json suivant :
 
 ```json
 {
@@ -119,7 +119,7 @@ Une fois que vous avez fini de modifier le fichier JSON, enregistrez les modific
 
 Dans l'exemple ci-dessus, notre adresse de contrat est 0x81c587EB0fE773404c42c1d2666b5f557C470eED.
 
-Ensuite, nous utiliserons la [méthode pour contrat](https://web3js.readthedocs.io/en/v1.2.0/web3-eth-contract.html?highlight=constructor#web3-eth-contract) Web3 pour créer notre contrat en utilisant l'ABI et l'adresse. Dans votre fichier mint-nft.js, ajoutez ce qui suit :
+Ensuite, nous utiliserons la [méthode pour contrat](https://web3js.readthedocs.io/en/v1.2.0/web3-eth-contract.html?highlight=constructor#web3-eth-contract) Web3 pour créer notre contrat en utilisant l'ABI et l'adresse. Ajoutez ce qui suit dans le fichier `mint-nft.js`:
 
 ```js
 const contractAddress = "0x81c587EB0fE773404c42c1d2666b5f557C470eED"
@@ -127,11 +127,11 @@ const contractAddress = "0x81c587EB0fE773404c42c1d2666b5f557C470eED"
 const nftContract = new web3.eth.Contract(contract.abi, contractAddress)
 ```
 
-## Étape 6 : Mettre à jour le fichier .env {#update-env}
+## Étape 6 : Mettre à jour le fichier `.env` {#update-env}
 
-Maintenant, pour créer et envoyer des transactions sur la chaîne Ethereum, nous utiliserons votre adresse publique de compte ethereum pour obtenir le nonce du compte (explication à suivre ci-dessous).
+Maintenant, pour créer et envoyer des transactions sur la chaîne Ethereum, nous utiliserons votre adresse publique de compte Ethereum pour obtenir le nonce du compte (explication à suivre ci-dessous).
 
-Ajoutez votre clé publique à votre fichier .env — si vous avez terminé la première partie du tutoriel, notre fichier .env devrait maintenant ressembler à ceci :
+Ajoutez votre clé publique à votre fichier `.env` — si vous avez terminé la première partie du tutoriel, notre fichier `.env` devrait maintenant ressembler à ceci :
 
 ```js
 API_URL = "https://eth-ropsten.alchemyapi.io/v2/your-api-key"
@@ -159,7 +159,7 @@ En premier lieu, définissons une fonction nommée `mintNFT(tokenData)` et créo
 
 - `'data': nftContract.methods.mintNFT(PUBLIC_KEY, md).encodeABI()` — Le calcul que nous souhaitons effectuer dans cette transaction — qui, dans le cas présent, est le fait de frapper un NFT
 
-Votre fichier mint-nft.js devrait maintenant ressembler à ça :
+Votre `mint-nft.js` devrait ressembler à ceci :
 
 ```js
    require('dotenv').config();
@@ -246,9 +246,9 @@ async function mintNFT(tokenURI) {
 }
 ```
 
-## Étape 9 : Appeler mintNFT et exécuter node mint-nft.js {#call-mintnft-fn}
+## Étape 9 : Appeler `mintNFT` et exécuter node `mint-nft.js` {#call-mintnft-fn}
 
-Vous vous souvenez du metadata.json que vous avez téléchargé sur Pinata ? Récupérez son code de hachage et passez-le comme paramètre à la fonction `mintNFT` `https://gateway.pinata.cloud/ipfs/<metadata-hash-code>`
+Vous vous souvenez du `metadata.json` que vous avez téléchargé sur Pinata ? Récupérez son code de hachage et passez-le comme paramètre à la fonction `mintNFT` `https://gateway.pinata.cloud/ipfs/<metadata-hash-code>`
 
 Voici comment obtenir le code de hachage :
 
@@ -326,6 +326,6 @@ Ensuite, consultez votre [Alchemy mempool](https://dashboard.alchemyapi.io/mempo
 
 Et voilà ! Vous avez maintenant déployé ET frappé un NFT sur la blockchain Ethereum. <Emoji text=":money_mouth_face:" size={1} />
 
-En utilisant mint-nft.js vous pouvez frapper autant de NFT que vous (ou votre portefeuille) désirez ! Assurez-vous juste de passer une nouvelle URI de jeton décrivant les métadonnées du NFT (sinon, vous ne réaliserez qu'une multitude de métadonnées identiques avec différents identifiants).
+En utilisant `mint-nft.js` vous pouvez frapper autant de NFT que vous (ou votre portefeuille) désirez ! Assurez-vous juste de passer une nouvelle URI de jeton décrivant les métadonnées du NFT (sinon, vous ne réaliserez qu'une multitude de métadonnées identiques avec différents identifiants).
 
 Sans doute, vous souhaiteriez pouvoir afficher votre NFT dans votre portefeuille — alors n’oubliez pas de consulter la [Partie 3 : Comment voir votre NFT dans votre portefeuille](/developers/tutorials/how-to-view-nft-in-metamask/) !

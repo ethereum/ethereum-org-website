@@ -77,7 +77,7 @@ Once peers are connected and an RLPx session has been started, the wire protocol
 
 #### les (light ethereum subprotocol) {#les}
 
-This is a minimal protocol for syncing light clients. Traditionaly this protocol has rarely been used because full nodes are required to serve data to light clients without being incentivized. The default behaviour of execution clients is not to serve light client data over les. More information is available in the les [spec](https://github.com/ethereum/devp2p/blob/master/caps/les.md).
+This is a minimal protocol for syncing light clients. Traditionally this protocol has rarely been used because full nodes are required to serve data to light clients without being incentivized. The default behaviour of execution clients is not to serve light client data over les. More information is available in the les [spec](https://github.com/ethereum/devp2p/blob/master/caps/les.md).
 
 #### Snap {#snap}
 
@@ -144,7 +144,7 @@ A summary of the control flow is shown below, with the relevant networking stack
 - Consensus layer calls `create block` method in execution client (local RPC)
 - Execution layer accesses the transaction mempool which has been populated by the transaction gossip protocol (execution p2p)
 - Execution client bundles transactions into a block, executes the transactions and generates a block hash
-- Consensus client grabs the transactions and block hash from the consensus client and adds them to the beacon block (local RPC)
+- Consensus client grabs the transactions and block hash from the execution client and adds them to the beacon block (local RPC)
 - Consensus client broadcasts the block over the block gossip protocol (consensus p2p)
 - Other clients receive the proposed block via the block gossip protocol and validate as described above (consensus p2p)
 

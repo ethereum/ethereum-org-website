@@ -8,7 +8,7 @@ tags:
   - "solidity"
   - "premiers pas"
   - "erc-20"
-skill: intermédiaire
+skill: intermediate
 lang: fr
 sidebar: true
 published: 2020-04-07
@@ -96,7 +96,7 @@ contract ERC20Basic is IERC20 {
         require(numTokens <= allowed[owner][msg.sender]);
 
         balances[owner] = balances[owner]-numTokens;
-        allowed[owner][msg.sender] = allowed[owner][msg.sender]-numTokens;
+        allowed[owner][msg.sender] = allowed[owner][msg.sender]+numTokens;
         balances[buyer] = balances[buyer]+numTokens;
         emit Transfer(owner, buyer, numTokens);
         return true;
@@ -278,7 +278,7 @@ contract ERC20Basic is IERC20 {
         require(numTokens <= allowed[owner][msg.sender]);
 
         balances[owner] = balances[owner]-numTokens;
-        allowed[owner][msg.sender] = allowed[owner][msg.sender]-numTokens;
+        allowed[owner][msg.sender] = allowed[owner][msg.sender]+numTokens;
         balances[buyer] = balances[buyer]+numTokens;
         emit Transfer(owner, buyer, numTokens);
         return true;

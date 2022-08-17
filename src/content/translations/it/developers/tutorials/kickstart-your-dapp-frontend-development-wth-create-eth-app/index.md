@@ -12,7 +12,7 @@ tags:
   - "compound"
   - "uniswap"
   - "sablier"
-skill: principiante
+skill: beginner
 lang: it
 sidebar: true
 published: 2020-04-27
@@ -55,13 +55,13 @@ _create-eth-app_ in particolare, fa uso dei nuovi [effetti hook](https://reactjs
 
 ### ethers.js {#ethersjs}
 
-Mentre [Web3](https://web3js.readthedocs.io/en/v1.2.7/) è ancora molto usato, nell'ultimo anno [ethers.js](https://docs.ethers.io/ethers.js/html/) ha riscosso molto successo come strumento alternativo ed è integrato in _create-eth-app_. Puoi lavorare con questo strumento, passare a Web3 o considerare di aggiornare a [ethers.js v5](https://docs-beta.ethers.io/), che ha quasi terminato la fase beta.
+Mentre [Web3](https://web3js.readthedocs.io/en/v1.2.7/) è ancora molto usato, nell'ultimo anno [ethers.js](https://docs.ethers.io/) ha riscosso molto successo come strumento alternativo ed è integrato in _create-eth-app_. Puoi lavorare con questo strumento, passare a Web3 o considerare di aggiornare a [ethers.js v5](https://docs-beta.ethers.io/), che ha quasi terminato la fase beta.
 
 ### Graph {#the-graph}
 
 [GraphQL](https://graphql.org/) è un metodo alternativo per gestire i dati rispetto a un'[API di Restful](https://restfulapi.net/). Ha diversi vantaggi rispetto alle Api di Restful, specialmente per i dati della blockchain decentralizzata. Se sei interessato al ragionamento dietro questo metodo, dai un'occhiata a [GraphQL Will Power the Decentralized Web](https://medium.com/graphprotocol/graphql-will-power-the-decentralized-web-d7443a69c69a).
 
-Solitamente recupereresti i dati direttamente dal tuo smart contract. Vuoi leggere l'ora dell'ultima operazione? Basta chiamare `MyContract.methods.latestTradeTime().call()` per recuperare i dati da un nodo di Ethereum come Infura nella tua Dapp. E se ci fossero centinaia di punti di dati diversi? Ne deriverebbero centinaia di recuperi di dati al nodo, richiedendo ogni volta un [RTT](https://en.wikipedia.org/wiki/Round-trip_delay_time) e rendendo lenta e inefficiente la tua Dapp. Una scappatoia potrebbe essere una funzione di chiamata del recuperatore nel tuo contratto, in modo da restituire più dati in una volta. Questa soluzione però non è sempre ideale.
+Solitamente recupereresti i dati direttamente dal tuo smart contract. Vuoi leggere l'ora dell'ultima operazione? Basta chiamare `MyContract.methods.latestTradeTime().call()` per recuperare i dati da un nodo di Ethereum come Infura nella tua Dapp. E se ci fossero centinaia di punti di dati diversi? Ne deriverebbero centinaia di recuperi di dati al nodo, richiedendo ogni volta un [RTT](https://wikipedia.org/wiki/Round-trip_delay_time) e rendendo lenta e inefficiente la tua Dapp. Una scappatoia potrebbe essere una funzione di chiamata del recuperatore nel tuo contratto, in modo da restituire più dati in una volta. Questa soluzione però non è sempre ideale.
 
 E poi potresti essere interessato anche ai dati storici. Vuoi sapere non solo l'orario dell'ultima operazione, ma gli orari per tutte le operazioni che tu stesso hai mai eseguito? Usa il pacchetto subgraph _create-eth-app_, leggi la [documentazione](https://thegraph.com/docs/define-a-subgraph) e adattalo ai tuoi contratti. Se stai cercando degli smart contract popolari, potrebbe anche esistere già un subgraph. Dai un'occhiata al [subgraph explorer](https://thegraph.com/explorer/).
 
@@ -87,11 +87,11 @@ Inoltre, puoi scegliere tra diversi modelli. Finora puoi usare un'integrazione d
 
 ### Aave {#aave}
 
-[Aave](https://aave.com/) è un mercato per il prestito di denaro decentralizzato. I depositanti forniscono liquidità al mercato per guadagnare un reddito passivo, mentre i debitori possono prendere in prestito usando garanzie. Una funzionalità unica di Aave sono quei [prestiti flash](https://docs.aave.com/developers/tutorials/performing-a-flash-loan) che ti consentono di prendere in prestito denaro senza alcuna garanzia, finché restituisci il prestito entro una transazione. Questo può essere utile, ad esempio, per fornirti denaro extra sul trading d'arbitraggio.
+[Aave](https://aave.com/) è un mercato per il prestito di denaro decentralizzato. I depositanti forniscono liquidità al mercato per guadagnare un reddito passivo, mentre i debitori possono prendere in prestito usando garanzie. Una funzionalità unica di Aave sono quei [prestiti flash](https://docs.aave.com/developers/guides/flash-loans) che ti consentono di prendere in prestito denaro senza alcuna garanzia, finché restituisci il prestito entro una transazione. Questo può essere utile, ad esempio, per fornirti denaro extra sul trading d'arbitraggio.
 
 I token scambiati che ti fanno guadagnare interessi si chiamano _aTokens_.
 
-Quando scegli di integrare Aave con _create-eth-app_, otterrai un'[integrazione del subgraph](https://docs.aave.com/developers/integrating-aave/analysing-data-from-aave/using-graphql). Aave usa [The Graph](https://medium.com/aave/decentralized-data-queries-how-aave-uses-the-graph-998a55027e1d) e ti fornisce già diversi subgraph pronti all'uso su [Ropsten](https://thegraph.com/explorer/subgraph/aave/protocol-ropsten) e sulla [rete principale](https://thegraph.com/explorer/subgraph/aave/protocol) in forma [grezza](https://thegraph.com/explorer/subgraph/aave/protocol-raw) o [formattata](https://thegraph.com/explorer/subgraph/aave/protocol).
+Quando scegli di integrare Aave con _create-eth-app_, otterrai un'[integrazione del subgraph](https://docs.aave.com/developers/getting-started/using-graphql). Aave usa The Graph e ti fornisce già diversi subgraph pronti all'uso su [Ropsten](https://thegraph.com/explorer/subgraph/aave/protocol-ropsten) e sulla [rete principale](https://thegraph.com/explorer/subgraph/aave/protocol) in forma [grezza](https://thegraph.com/explorer/subgraph/aave/protocol-raw) o [formattata](https://thegraph.com/explorer/subgraph/aave/protocol).
 
 ![Meme sui Prestiti Flash di Aave – "Eh già... se potessi mantenere il mio prestito flash per più di una transazione, sarebbe fantastico"](./flashloan-meme.png)
 

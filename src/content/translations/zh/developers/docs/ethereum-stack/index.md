@@ -1,5 +1,5 @@
 ---
-title: 以太坊堆栈简介
+title: 以太坊技术栈简介
 description: 一次从不同层面对以太坊堆栈原理的浏览，并且了解如何让不同的以太坊堆栈融为一体。
 lang: zh
 sidebar: true
@@ -11,7 +11,7 @@ sidebar: true
 
 ## 级别 1：以太坊虚拟机 {#ethereum-virtual-machine}
 
-[以太坊虚拟机 (EVM)](/developers/docs/evm/) 是以太坊智能合约的运行环境。 以太坊区块链上所有智能合约的状态都通过执行[交易](/developers/docs/transactions/)来改变。
+[以太空虚拟机 (EVM)](/developers/docs/evm/) 是用于智能合约的运行环境。 以太坊区块链上的所有智能合约和状态更改都由[交易](/developers/docs/transactions/)执行。 以太坊虚拟机处理以在太坊网络上执行的所有交易。
 
 与任何虚拟机一样，以太坊虚拟机在执行代码和执行机器（以太坊节点）之间创建一个抽象级别。 目前，在世界各地散布着成千上万的正在执行的以太坊虚拟机节点。
 
@@ -43,7 +43,7 @@ sidebar: true
 
 如果您的面向用户应用程序是一个 web 应用程序，您可以直接选择在您的前端使用 `npm 安装`一个 [JavaScript 应用程序接口](/developers/docs/apis/javascript/)。 或许您会选择使用 [Python](/developers/docs/programming-languages/python/) 或 [Java](/developers/docs/programming-languages/java/) 的应用程序接口在后端实现此功能。
 
-虽然这些应用程序接口不是栈必须的一部分，但它们抽象并消减了与以太坊节点直接互动的大部分复杂性。 它们还提供好用的函数（例如：将 ETH 转化为 Gwei），而作为开发者，您可以花费更少的时间处理以太坊客户端的复杂问题，从而将更多的时间集中于处理您的应用程序的独特功能。
+虽然这些应用程序接口不是栈必须的一部分，但它们抽象并消减了与以太坊节点直接互动的大部分复杂性。 它们还提供实用的函数（例如：将 ETH 转化为 Gwei），而作为开发者，您可以花费更少的时间来处理以太坊客户端的复杂问题，从而将更多的时间集中于处理您的应用程序的独特功能。
 
 ## 级别 5：终端用户应用程序 {#end-user-applications}
 

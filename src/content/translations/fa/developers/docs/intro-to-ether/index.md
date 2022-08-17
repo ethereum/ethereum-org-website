@@ -19,7 +19,7 @@ sidebar: true
 
 ## اتر چیست؟ {#what-is-ether}
 
-**اتر (ETH)** ارز رمزنگاری‌شده‌ای است که برای بسیاری چیزها در شبکه‌ی اتریوم استفاده می‌شود. Fundamentally, it is the only acceptable form of payment for transaction fees, and after [The Merge](/upgrades/merge), ether will be required to validate and propose blocks on Mainnet. اتر همچنین به‌عنوان شکل اصلی وثیقه در بازارهای وام‌دهی [دیفای](/defi)، به‌عنوان واحد حساب در بازارهای NFT، به‌عنوان پرداخت کسب‌شده برای انجام خدمات یا فروش کالاهای واقعی و موارد دیگر استفاده می‌شود.
+**اتر (ETH)** ارز رمزنگاری‌شده‌ای است که برای بسیاری چیزها در شبکه‌ی اتریوم استفاده می‌شود. به طور ویژه اتر برای پرداخت هزینه تراکنش ها استفاده می شود و همچنین [بعد از ادغام] (upgrades/merge/)، اتر برای صحت سنجی و پیشنهاد بلاک جدید در شبکه اصلی استفاده می شود. اتر همچنین به‌عنوان شکل اصلی وثیقه در بازارهای وام‌دهی [دیفای](/defi)، به‌عنوان واحد حساب در بازارهای NFT، به‌عنوان پرداخت کسب‌شده برای انجام خدمات یا فروش کالاهای واقعی و موارد دیگر استفاده می‌شود.
 
 اتریوم به توسعه‌دهندگان اجازه می‌دهد [**برنامه‌های غیرمتمرکز (dappها)**](/developers/docs/dapps) ایجاد کنند که همگی دارای قدرت محاسباتی مشترک هستند. این استخر مشترک محدود است، بنابراین اتریوم به مکانیزمی برای تعیین اینکه چه کسی می‌تواند از آن استفاده کند نیاز دارد. در غیر این صورت، یک dapp می‌تواند به‌طور تصادفی یا به‌طور مخرب تمام منابع شبکه را مصرف کند، که باعث می‌شود دسترسی دیگران به آن مسدود شود.
 
@@ -39,9 +39,9 @@ sidebar: true
 
 علاوه بر ایجاد اتر از طریق پاداش‌های بلوک، اتر می‌تواند توسط فرایندی به نام «سوزاندن» از بین برود. وقتی اتر می‌سوزد، برای همیشه از چرخه‌ی زنجیره خارج می‌شود.
 
-سوختن اتر در تمام تراکنش‌ها روی اتریوم رخ می‌دهد. When users pay for their transactions, a base gas fee, set by the network according to transactional demand, gets destroyed. This, coupled with variable block sizes and a maximum gas fee, simplifies transaction fee estimation on Ethereum. When network demand is high, [blocks](https://etherscan.io/block/12965263) can burn more ether than they mint, effectively offsetting ether issuance.
+سوختن اتر در تمام تراکنش‌ها روی اتریوم رخ می‌دهد. وقتی هزینه تراکنش کاربران پرداخت می شود، یک هزینه پایه با توجه به تقاضای شبکه ثبت شده و از چرخه خارج می شود که به همراه حداکثر کارمزد گاز و اندازه متغیر [بلوک] (https://etherscan.io/block/12965263)، کارمزد نهایی تراکنش را مشخص می کند. وقتی تقاضای شبکه زیاد باشد، میزان اتر سوزانده شده از آنچه که استخراج می شود بیشتر شده و از تولید مقدار زیاد آن جلوگیری می گند.
 
-Burning the base fee prevents various ways the miners could manipulate it otherwise. For example, if miners got the base fee, they could include their own transactions for free and raise the base fee for everyone else. Alternatively, they could refund the base fee to some users off-chain, leading to a more opaque and complex transaction fee market.
+سوزاندن کارمزد پایه از راه‌های مختلفی که ماینرها می‌توانند از آن برای دستکاری شبکه استفاده کنند، جلوگیری می‌کند. برای مثال اگر ماینرها کارمزد پایه را دریافت می کردند، می توانستند تراکنش های خود را به صورت رایگان درج کنند و کارمزد پایه را برای بقیه افزایش دهند. از طرف دیگر، آنها می توانند کارمزد پایه را به برخی از کاربران خارج از زنجیره بازپرداخت کنند، که منجر به بازار کارمزد تراکنش مبهم و پیچیده تر می شود.
 
 ## واحدهای خرد اتر {#denominations}
 

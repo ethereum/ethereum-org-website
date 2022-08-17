@@ -1,12 +1,12 @@
 ---
-title: 采矿
+title: 挖矿
 description: 关于挖矿在以太坊中如何工作以及如何帮助保持以太坊安全和去中心化的解释。
 lang: zh
 sidebar: true
 incomplete: true
 ---
 
-## 前置要求 {#prerequisites}
+## 先决条件 {#prerequisites}
 
 为了更好地了解此页面，推荐先阅读 [交易](/developers/docs/transactions/)、[区块](/developers/docs/blocks/)和[工作量证明](/developers/docs/consensus-mechanisms/pow/)。
 
@@ -24,7 +24,7 @@ incomplete: true
 
 像以太坊这样的去中心化系统，我们需要确保每个人同意交易的顺序。 矿工通过解决计算难题来解决这一问题，以产生区块，从而使网络免受攻击，从而帮助实现了这一目标。
 
-[工作量证明的更多信息](/developers/docs/consensus-mechanisms/pow/)
+[关于工作量证明的更多信息](/developers/docs/consensus-mechanisms/pow/)
 
 ## 谁可以成为以太坊上的矿工？ {#who-can-become-a-miner}
 
@@ -66,12 +66,12 @@ incomplete: true
 
 ## 相关工具 {#related-tools}
 
-- [顶级以太坊矿工](https://etherscan.io/stat/miner?range=7&blocktype=blocks)
+- [领先以太坊矿工](https://etherscan.io/stat/miner?range=7&blocktype=blocks)
 - [Etherscan 挖矿收益计算器](https://etherscan.io/ether-mining-calculator)
-- [Minerstar 挖矿收益计算器](https://minerstat.com/coin/ETH)
+- [Minerstat 挖矿收益计算器](https://minerstat.com/coin/ETH)
 
 ## 相关主题 {#related-topics}
 
-- [Gas](/developers/docs/gas/)
+- [燃料](/developers/docs/gas/)
 - [EVM](/developers/docs/evm/)
 - [工作量证明](/developers/docs/consensus-mechanisms/pow/)

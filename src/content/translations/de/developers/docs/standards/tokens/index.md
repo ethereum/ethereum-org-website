@@ -19,7 +19,7 @@ Einer der vielen Entwicklungsstandards von Ethereum konzentriert sich auf Token-
 
 Hier sind einige der beliebtesten Token-Standards auf Ethereum:
 
-- [ERC-20](/developers/docs/standards/tokens/erc-20/) - Eine Standardschnittstelle für fungible (austauschbare) Token, wie Stimm-Token, Staking-Token oder virtuelle Währungen.
+- [ERC-20](/developers/docs/standards/tokens/erc-20/) - Eine Standardschnittstelle für fungible (austauschbare) Token, wie z. B. Voting-Token, Staking-Token oder virtuelle Währungen.
 - [ERC-721](/developers/docs/standards/tokens/erc-721/) - Eine Standardschnittstelle für nicht-fungible Token, wie eine Urkunde für ein Kunstwerk oder ein Song.
 - [ERC-777](/developers/docs/standards/tokens/erc-777/) - ERC-777 ermöglicht es, zusätzliche Funktionen auf Token aufzusetzen, wie z. B. einen Mixer-Vertrag zur Verbesserung des Transaktionsschutzes oder eine Notfall-Wiederherstellungsfunktion für den Fall, dass Sie Ihre privaten Schlüssel verlieren.
 - [ERC-1155](/developers/docs/standards/tokens/erc-1155/) - ERC-1155 ermöglicht einen effizienteren Handel und die Bündelung von Transaktionen und spart damit Kosten. Dieser Token-Standard ermöglicht die Erstellung sowohl von Utility-Token (wie $BNB oder $BAT) als auch von nicht-fungiblen Token wie CryptoPunks.

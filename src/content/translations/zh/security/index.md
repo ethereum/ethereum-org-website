@@ -38,7 +38,7 @@ sidebar: true
 
 ### 使用独立的密码 {#use-unique-passwords}
 
-如果密码数据被泄露，强密码也无法提供足够的保护。 网站  [Have I Been Pwned](https://haveibeenpwned.com)  允许您检查您的账户是否参与了存储在其数据库中的任何数据入侵。 如果有，**您应该立刻更改泄露的密码**。  为每个帐户设置独立的密码可以降低当你的一个密码被破解时黑客进入你所有账户的风险。
+如果密码数据被泄露，强密码也无法提供足够的保护。 网站[我被攻破了吗](https://haveibeenpwned.com)允许您检查您的账户是否参与了存储在其数据库中的任何数据入侵。 如果有，**您应该立刻更改泄露的密码**。  为每个帐户设置独立的密码可以降低当你的一个密码被破解时黑客进入你所有账户的风险。
 
 ### 使用密码管理器 {#use-password-manager}
 
@@ -50,7 +50,7 @@ sidebar: true
 
 记住为每个账户设置的唯一强密码并不现实。 密码管理器为您的所有密码提供了一个安全、加密的存储空间，您可以通过一个强主密码进行访问。 他们还在注册新服务时生成建议使用的强密码，这样你就不必自行创建密码了。 许多密码管理器也会告诉你是否涉及数据泄露，让你在任何恶意攻击之前更改密码。
 
-![使用密码管理器的示例](./passwordManager.png)
+![密码管理器使用示例](./passwordManager.png)
 
 #### 尝试一个密码管理器： {#try-password-manager}
 
@@ -109,14 +109,14 @@ Chrome 扩展程序或 Firefox 插件等浏览器扩展程序可以增强浏览�
 
 ### 提升您的知识水平 {#level-up-your-knowledge}
 
-人们在网络中被骗的主要原因之一通常是缺乏了解。 例如，如果您不了解以太坊网络是去中心化的，不为任何人所拥有，您就很容易上当受骗。有人假装成客户服务人员，承诺用您的私钥找回您丢失的 ETH。 了解以太坊如何运作是一项值得的投资。
+人们在网络中被骗的主要原因之一通常是缺乏了解。 例如，如果您不了解以太坊网络是去中心化的，不为任何人所拥有，您就很容易上当受骗。有人假装成客户服务人员，承诺用您的私钥找回您丢失的以太币。 了解以太坊如何运作是一项值得的投资。
 
 <DocLink to="/what-is-ethereum/">
   以太坊简介
 </DocLink>
 
 <DocLink to="/eth/">
-  什么是以太币 (ETH)？
+  什么是以太币？
 </DocLink>
 <Divider />
 
@@ -165,23 +165,23 @@ Chrome 扩展程序或 Firefox 插件等浏览器扩展程序可以增强浏览�
 
 ## 常见的骗术 {#common-scams}
 
-骗子总是想方设法从您身上骗走您的资金。 完全阻止骗子是不可能的，但我们可以通过了解所使用的大多数技术来降低他们的成功率。 虽然骗术层出不穷，但是他们的本质相同。 不出意外，请记住：
+骗子总是想方设法从您身上骗走您的资金。 完全阻止骗子是不可能的，但我们可以通过了解所使用的大多数技术来降低他们的成功率。 虽然骗术层出不穷，但是他们的本质相同。 如果不出意外，请记住：
 
 - 始终保持怀疑态度
-- 没有人会给您免费或打折 ETH！
+- 没有人会给您免费或打折的以太币
 - 没有人需要获取您的私钥或个人信息
 
 ### 赠品诈骗 {#giveaway}
 
 加密货币中最常见的骗局之一是赠品诈骗。 赠品诈骗有多种形式，但一般前提是，如果您将 ETH 发送到所提供的钱包地址，您将会收到双倍的 ETH。 *因此，它也称为“买一送一”诈骗。*
 
-这些骗局通常规定在有限时间内索取赠品，以鼓励人们做出错误的决定，并制造一种虚假的紧迫感。
+这些骗局往往规定赠品领取时间有限，促使您做出错误决定并制造出一种虚假的紧迫感。
 
 #### 社交媒体黑客攻击 {#social-media-hacks}
 
 最出名的一次发生在 2020 年 7 月，当时很多知名人士和组织的 Twitter 账户被黑。 黑客使用被盗的账户发布了一个比特币赠送活动。 尽管这些欺骗性的推文很快就被发现并删除，但黑客们还是成功骗走了 11 个比特币（截止 2021 年 9 月，这些比特币价值 50 万美元）。
 
-![Twitter 上的一个诈骗案例](./appleTwitterScam.png)
+![Twitter 上的诈骗案例](./appleTwitterScam.png)
 
 #### 名人的赠品 {#celebrity-giveaway}
 
@@ -191,15 +191,15 @@ Chrome 扩展程序或 Firefox 插件等浏览器扩展程序可以增强浏览�
 
 **赠品活动通常是骗局。 如果您把钱转到这些账户，您将永远失去它们。**
 
-![YouTube 上的一个诈骗案例](./youtubeScam.png)
+![YouTube 上的诈骗案例](./youtubeScam.png)
 
 ### 技术支持诈骗 {#support-scams}
 
-加密货币是一种相对年轻且常被误解的技术。 利用这一点的一种常见的骗局是技术支持诈骗 (Support scams)，骗子会冒充受欢迎的加密货币钱包、交易所或区块链的支持人员。
+加密货币是一种相对年轻且常被误解的技术。 利用这一点的一种常见的骗局是技术支持诈骗，骗子会冒充受欢迎的加密货币钱包、交易所或区块链的支持人员。
 
 很多关于以太坊的讨论都发生在 Discord 上。 骗子通常会通过在公开的 Discord 频道中搜索寻求支持的问题，然后冒充支持人员向询问者发送私人信息以找到他们的目标。 通过建立信任，骗子试图诱使您透露您的私钥或将您的资金发送到他们的钱包。
 
-![Discord 上的一个技术支持诈骗案例](./discordScam.png)
+![Discord 上的技术支持诈骗案例](./discordScam.png)
 
 一般来说，员工永远不会通过私人的非官方渠道与您交流。 在处理支持问题时，要牢记一些简单的事情：
 
@@ -257,9 +257,11 @@ Chrome 扩展程序或 Firefox 插件等浏览器扩展程序可以增强浏览�
 
 骗子们可能会以“技术支持”的面貌出现，告诉您需要把手中的 ETH 存到指定地址，这样你就可以得到“ETH2”。 实际上，并没有官方的[以太坊技术支持](/community/support/)，也没有新代币。 永远不要把您钱包的助记词和陌生人分享。
 
+_注意：有一些衍生的代币/ 票据可能代表了被质押的以太币（比如：Rocket Pool 的 rETH，Lido 的 stETH，Coinbase 的 ETH2），但这些都不需要“迁移过去”。_
+
 ### 空投骗局 {#airdrop-scams}
 
-空投骗局通常是先构建一个诈骗项目，并向您的钱包空投一种资产（NFT，代币），然后把诈骗的网站发给您，让您去获取这些空投的资产。 当您试图获取资产时，网站会要求您使用自己的以太坊钱包登录，并“批准”一笔交易。 实际上，这个交易会将您账户的公私密钥都发给骗子。 这种骗局的另一种方式是让您确认一笔可以把资金转移到骗子账户的交易。
+空投骗局通常是先构建一个诈骗项目，并向您的钱包空投一种资产（非同质化代币），然后把诈骗的网站发给您，让您去获取这些空投的资产。 当您试图获取资产时，网站会要求您使用自己的以太坊钱包登录，并“批准”一笔交易。 实际上，这个交易会将您账户的公私密钥都发给骗子。 这种骗局的另一种方式是让您确认一笔可以把资金转移到骗子账户的交易。
 
 [关于空投骗局的更多信息](https://www.youtube.com/watch?v=LLL_nQp1lGk)
 
@@ -269,19 +271,19 @@ Chrome 扩展程序或 Firefox 插件等浏览器扩展程序可以增强浏览�
 
 ### 网络安全 {#reading-web-security}
 
-- [This is why you shouldn’t use texts for two-factor authentication](https://www.theverge.com/2017/9/18/16328172/sms-two-factor-authentication-hack-password-bitcoin) - _The Verge_
-- [Up to 3 million devices infected by malware-laced Chrome and Edge add-ons](https://arstechnica.com/information-technology/2020/12/up-to-3-million-devices-infected-by-malware-laced-chrome-and-edge-add-ons/) - _Dan Goodin_
-- [How to Create a Strong Password — That You Won’t Forget](https://www.avg.com/en/signal/how-to-create-a-strong-password-that-you-wont-forget) - _AVG_
-- [What is a security key?](https://help.coinbase.com/en/coinbase/getting-started/verify-my-account/security-keys-faq) - _Coinbase_
+- [为何不应使用文本进行双重身份验证](https://www.theverge.com/2017/9/18/16328172/sms-two-factor-authentication-hack-password-bitcoin) - _The Verge_
+- [多达 300 万台设备被带有恶意软件的 Chrome 和 Edge 插件感染](https://arstechnica.com/information-technology/2020/12/up-to-3-million-devices-infected-by-malware-laced-chrome-and-edge-add-ons/) - _Dan Goodin_
+- [如何创建一个不会忘记的强密码](https://www.avg.com/en/signal/how-to-create-a-strong-password-that-you-wont-forget) - _AVG_
+- [什么是安全密钥？](https://help.coinbase.com/en/coinbase/getting-started/verify-my-account/security-keys-faq) - _Coinbase_
 
 ### 加密货币安全 {#reading-crypto-security}
 
-- [Protecting Yourself and Your Funds](https://support.mycrypto.com/staying-safe/protecting-yourself-and-your-funds) - _MyCrypto_
-- [4 Ways to Stay Safe in Crypto](https://www.coindesk.com/tech/2021/04/20/4-ways-to-stay-safe-in-crypto/) - _CoinDesk_
-- [Security Guide For Dummies And Smart People Too](https://medium.com/mycrypto/mycryptos-security-guide-for-dummies-and-smart-people-too-ab178299c82e) - _MyCrypto_
-- [Crypto Security: Passwords and Authentication](https://www.youtube.com/watch?v=m8jlnZuV1i4) - _Andreas M. Antonopoulos_
+- [保护自己和资金](https://support.mycrypto.com/staying-safe/protecting-yourself-and-your-funds) - _MyCrypto_
+- [保持加密货币安全的 4 种方法](https://www.coindesk.com/tech/2021/04/20/4-ways-to-stay-safe-in-crypto/) - _CoinDesk_
+- [任何人都适用的安全指南](https://medium.com/mycrypto/mycryptos-security-guide-for-dummies-and-smart-people-too-ab178299c82e) - _MyCrypto_
+- [加密货币安全：密码和身份验证](https://www.youtube.com/watch?v=m8jlnZuV1i4) - _Andreas M. Antonopoulos_
 
 ### 防诈骗指南 {#reading-scam-education}
 
-- [Staying Safe: Common Scams](https://support.mycrypto.com/staying-safe/common-scams) - _MyCrypto_
-- [Avoiding Scams](https://bitcoin.org/en/scams) _Bitcoin.org_
+- [保持安全: 常见的诈骗手段](https://support.mycrypto.com/staying-safe/common-scams) - _MyCrypto_
+- [避开骗局](https://bitcoin.org/en/scams) _Bitcoin.org_

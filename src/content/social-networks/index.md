@@ -22,7 +22,7 @@ Many decentralized social networks exist as alternatives to established social m
 
 ### How do decentralized social networks work? {#decentralized-social-networks-overview}
 
-Decentralized social networks are a class of [decentralized applications (dApps)](/dapps/)—applications powered by [smart contracts](/developers/docs/smart-contracts/) deployed on the blockchain. The contract code serves as the backend for these apps and defines their business logic.
+Decentralized social networks are a class of [decentralized applications (dapps)](/dapps/)—applications powered by [smart contracts](/developers/docs/smart-contracts/) deployed on the blockchain. The contract code serves as the backend for these apps and defines their business logic.
 
 Traditional social media platforms rely on databases to store user information, program code, and other forms of data. But this creates single points-of-failure and introduces significant risk. For instance, Facebook's servers infamously [went offline for hours](https://www.npr.org/2021/10/05/1043211171/facebook-instagram-whatsapp-outage-business-impact) last year, cutting off users from the platform.
 
@@ -42,9 +42,9 @@ Many blockchain-based social platforms have native tokens that power monetizatio
 
 4. As dapps running on the Ethereum network, which is sustained by a global, peer-to-peer network of nodes, decentralized social networks are less susceptible to server downtime and outages.
 
-5. Decentralized social platforms offer an improved monetization framework for content creators via non-fungible tokens (NFTs) NFTs, in-app crypto payments, and more.
+5. Decentralized social platforms offer an improved monetization framework for content creators via non-fungible tokens (NFTs), in-app crypto payments, and more.
 
-6. Decentralized social networks afford users a high level of privacy and anyonymity. For instance, an individual can sign in to an Ethereum-based social network using an ENS profile or wallet—without having to share personally identifiable information (PII), such as names, email addresses, etc.
+6. Decentralized social networks afford users a high level of privacy and anonymity. For instance, an individual can sign in to an Ethereum-based social network using an ENS profile or wallet—without having to share personally identifiable information (PII), such as names, email addresses, etc.
 
 7. Decentralized social networks rely on decentralized storage, not centralized databases, which are considerably better for safeguarding user data.
 

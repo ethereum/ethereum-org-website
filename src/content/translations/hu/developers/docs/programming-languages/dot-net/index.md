@@ -52,7 +52,7 @@ Szükséged van egy még kezdetlegesebb alapozóra? Tekintsd meg az [ethereum.or
 - [Unity és Ethereum: Miért és hogyan](https://www.raywenderlich.com/5509-unity-and-ethereum-why-and-how)
 - [Készíts ASP.NET Core Web API-t Ethereum dappokra](https://tech-mint.com/blockchain/create-asp-net-core-web-api-for-ethereum-dapps/)
 - [A Nethereum Web3 használata egy ellátási lánc nyomon követési rendszer implementálására](http://blog.pomiager.com/post/using-nethereum-web3-to-implement-a-supply-chain-traking-system4)
-- [Nethereum blokk feldolgozás](https://nethereum.readthedocs.io/en/latest/nethereum-block-processing-detail/), egy[ C# Playground mintával](http://playground.nethereum.com/csharp/id/1025)
+- [Nethereum blokk feldolgozás](https://nethereum.readthedocs.io/en/latest/nethereum-block-processing-detail/), egy [C# Playground mintával](http://playground.nethereum.com/csharp/id/1025)
 - [Nethereum Websocket Streaming](https://nethereum.readthedocs.io/en/latest/nethereum-subscriptions-streaming/)
 - [Kaleido és Nethereum](https://kaleido.io/kaleido-and-nethereum/)
 - [Quorum és Nethereum](https://github.com/Nethereum/Nethereum/blob/master/src/Nethereum.Quorum/README.md)
