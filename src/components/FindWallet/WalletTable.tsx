@@ -274,10 +274,10 @@ const FlexInfoCenter = styled(FlexInfo)`
   cursor: pointer;
   height: 100%;
   display: flex;
-  animation: ${fadeIn} 0.25s;
+  animation: ${fadeIn} 0.375s;
 
   &.fade {
-    animation: ${fadeOut} 0.25s;
+    animation: ${fadeOut} 0.375s;
   }
 `
 
@@ -739,7 +739,7 @@ const WalletTable = ({ data, filters, walletData }) => {
       for (let item of domItems) {
         item.classList.remove("fade")
       }
-    }, 500)
+    }, 375)
 
     trackCustomEvent({
       eventCategory: "WalletFeatureCompare",
