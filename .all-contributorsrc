@@ -8453,6 +8453,15 @@
         "bug",
         "translation"
       ]
+    },
+    {
+      "login": "greefea",
+      "name": "greefea",
+      "avatar_url": "https://avatars.githubusercontent.com/u/106492500?v=4",
+      "profile": "https://github.com/greefea",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
