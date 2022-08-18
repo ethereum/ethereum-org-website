@@ -40,7 +40,7 @@ import {
 } from "../components/SharedStyledComponents"
 import Emoji from "../components/Emoji"
 import YouTube from "../components/YouTube"
-import PreMergeBanner from "../components/PreMergeBanner"
+import PreMergeBanner from "../components/Banners/PreMergeBanner"
 import FeedbackCard from "../components/FeedbackCard"
 
 import { isLangRightToLeft, translateMessageId } from "../utils/translations"

@@ -24,7 +24,7 @@ import {
   LeftColumn,
 } from "../components/SharedStyledComponents"
 import { translateMessageId, isLangRightToLeft } from "../utils/translations"
-import PreMergeBanner from "../components/PreMergeBanner"
+import PreMergeBanner from "../components/Banners/PreMergeBanner"
 
 const Hero = styled(GatsbyImage)`
   width: 100%;

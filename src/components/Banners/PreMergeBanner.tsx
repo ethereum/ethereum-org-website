@@ -1,8 +1,8 @@
 import React from "react"
 import styled from "styled-components"
-import BannerNotification from "./BannerNotification"
-import Link from "./Link"
-import Translation from "./Translation"
+import BannerNotification from "../BannerNotification"
+import Link from "../Link"
+import Translation from "../Translation"
 
 const StyledBannerNotification = styled(BannerNotification)`
   display: flex;

@@ -29,7 +29,8 @@ import {
 } from "../components/SharedStyledComponents"
 import Emoji from "../components/Emoji"
 import YouTube from "../components/YouTube"
-import PreMergeBanner from "../components/PreMergeBanner"
+import PreMergeBanner from "../components/Banners/PreMergeBanner"
+import PostMergeBanner from "../components/Banners/PostMergeBanner"
 import FeedbackCard from "../components/FeedbackCard"
 
 import { isLangRightToLeft } from "../utils/translations"
@@ -162,6 +163,7 @@ const TutorialPage = ({
 
   const isRightToLeft = isLangRightToLeft(mdx.frontmatter.lang as Lang)
   const showMergeBanner = !!mdx.frontmatter.preMergeBanner
+  const showPostMergeBanner = !!mdx.frontmatter.postMergeBanner
 
   const tocItems = mdx.tableOfContents?.items
 
@@ -170,6 +172,7 @@ const TutorialPage = ({
   return (
     <div>
       {showMergeBanner && <PreMergeBanner />}
+      {showPostMergeBanner && <PostMergeBanner />}
       <Page dir={isRightToLeft ? "rtl" : "ltr"}>
         <PageMetadata
           title={mdx.frontmatter.title}

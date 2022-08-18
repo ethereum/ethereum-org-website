@@ -33,7 +33,8 @@ import {
   Header4,
   ListItem,
 } from "../components/SharedStyledComponents"
-import PreMergeBanner from "../components/PreMergeBanner"
+import PreMergeBanner from "../components/Banners/PreMergeBanner"
+import PostMergeBanner from "../components/Banners/PostMergeBanner"
 
 import { ZenModeContext } from "../contexts/ZenModeContext.js"
 import { isLangRightToLeft } from "../utils/translations"
@@ -188,6 +189,7 @@ const DocsPage = ({
   const absoluteEditPath = `${editContentUrl}${relativePath}`
   const isDevelopersHome = relativePath.endsWith("/developers/docs/index.md")
   const showMergeBanner = !!mdx.frontmatter.preMergeBanner || isDevelopersHome
+  const showPostMergeBanner = !!mdx.frontmatter.postMergeBanner
 
   return (
     <Page dir={isRightToLeft ? "rtl" : "ltr"}>
@@ -207,6 +209,7 @@ const DocsPage = ({
           )}
         </PreMergeBanner>
       )}
+      {showPostMergeBanner && <PostMergeBanner />}
       <ContentContainer isZenMode={isZenMode}>
         <Content>
           <H1 id="top">{mdx.frontmatter.title}</H1>

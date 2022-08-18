@@ -9,7 +9,7 @@ import Card from "../../components/Card"
 import Callout from "../../components/Callout"
 import Link from "../../components/Link"
 import Translation from "../../components/Translation"
-import PreMergeBanner from "../../components/PreMergeBanner"
+import PreMergeBanner from "../../components/Banners/PreMergeBanner"
 import ButtonLink from "../../components/ButtonLink"
 import PageMetadata from "../../components/PageMetadata"
 import {
