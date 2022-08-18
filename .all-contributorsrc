@@ -8442,6 +8442,17 @@
         "doc",
         "translation"
       ]
+    },
+    {
+      "login": "srhinee",
+      "name": "samsara",
+      "avatar_url": "https://avatars.githubusercontent.com/u/29331203?v=4",
+      "profile": "https://github.com/srhinee",
+      "contributions": [
+        "doc",
+        "bug",
+        "translation"
+      ]
     }
   ],
   "contributorsPerLine": 7,

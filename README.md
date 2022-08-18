@@ -1347,6 +1347,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="https://github.com/lonelyotter"><img src="https://avatars.githubusercontent.com/u/57280827?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Haochen Song</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=lonelyotter" title="Documentation">📖</a> <a href="#translation-lonelyotter" title="Translation">🌍</a></td>
     <td align="center"><a href="https://github.com/opensourcex123"><img src="https://avatars.githubusercontent.com/u/73230562?v=4?s=100" width="100px;" alt=""/><br /><sub><b>N Fx</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=opensourcex123" title="Documentation">📖</a> <a href="#translation-opensourcex123" title="Translation">🌍</a></td>
+    <td align="center"><a href="https://github.com/srhinee"><img src="https://avatars.githubusercontent.com/u/29331203?v=4?s=100" width="100px;" alt=""/><br /><sub><b>samsara</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=srhinee" title="Documentation">📖</a> <a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Asrhinee" title="Bug reports">🐛</a> <a href="#translation-srhinee" title="Translation">🌍</a></td>
   </tr>
 </table>
 
