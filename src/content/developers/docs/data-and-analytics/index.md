@@ -25,12 +25,23 @@ Using [GraphQL](https://graphql.org/), developers can query any of the curated o
 
 ## Block explorers {#block-explorers}
 
-Many [Block Explorers](/developers/docs/data-and-analytics/block-explorers/) offer [RESTful](https://www.wikipedia.org/wiki/Representational_state_transfer) [API](https://www.wikipedia.org/wiki/API) gateways that will provide developers visibility into real-time data on blocks, transactions, miners, accounts, and other on-chain activity.
+Many [Block Explorers](/developers/docs/data-and-analytics/block-explorers/) offer [RESTful](https://www.wikipedia.org/wiki/Representational_state_transfer) [API](https://www.wikipedia.org/wiki/API) gateways that will provide developers visibility into real-time data on blocks, transactions, validators, accounts, and other on-chain activity.
 
 Developers can then process and transform this data to give their users unique insights and interactions with the [blockchain](/glossary/#blockchain).
+
+For example, [Etherscan](etherscan.io) provides execution and consensus data for every 6s slot.
+
+## Client diversity
+
+Client diversity is important for the overall health of the Ethereum network because it provides resilience to bugs and exploits. There are now several cl;eint diversity dashboards including [clientdiversity.org](https://clientdiversity.org/), [rated.network](rated.network), [pool.invis.cloud](pool.invis.cloud), [slashed.info](slahed.info) and [Ethernodes](https://ethernodes.org/).
+
+## Dune analytics
+
+[Dune analytics](https://docs.dune.com/) aggregates blockchain data into SQL databases that can be queried and used to create visualizations and dashboards.
 
 ## Further Reading {#further-reading}
 
 - [Graph Network Overview](https://thegraph.com/docs/en/about/network/)
 - [Graph Query Playground](https://thegraph.com/explorer/subgraph/graphprotocol/graph-network-mainnet?version=current)
 - [API code examples on EtherScan](https://etherscan.io/apis#contracts)
+- [Beaconcha.in beacon chaion explorer](beaconcha.in)
