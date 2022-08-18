@@ -12,6 +12,10 @@ This is a list of key Ethereum-related projects and resources which have been de
 
 This list is curated by our community. If there's something missing or incorrect, please edit this page!
 
+## Proof-of-work {#pow}
+
+[Proof of work](/developers/docs/consensus-mechanisms/pow) is a consensus engine that was implemented in Ethereum until September 2022. It was deprecated when Ethereum swapped to a [proof-of-stake](/developers/docs/consensus-mechanisms/pos) based consensus mechanism. This was achieved by deprecating the parts of the client software related to proof-of-work mining, including [Ethhash](/developers/docs/consensus-mechanisms/pow/mining-algorithms/ethhash) (the mining algorithm) and all the consensus logic and block gossiping functionality that was originally built in to execution clients. The clients themselves were not deprecated but several of their core components were. The concept of proof-of-work was deprecated as the total effect of removing the related components of the client software.
+
 ## Software {#software}
 
 This section is for software for the desktop, command line, or server which has been deprecated. The main types are wallets, integrated development environments, languages, and Ethereum clients. Definitely be careful to not install deprecated software unless you are certain it is from the original source, e.g. a repo hosted under https://github.com/ethereum.
