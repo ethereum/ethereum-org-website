@@ -43,7 +43,7 @@ Both [execution clients](/developers/docs/nodes-and-clients/#execution-clients) 
 Multiple client implementations can make the network stronger by reducing its dependency on a single codebase. The ideal goal is to achieve diversity without any client dominating the network, thereby eliminating a potential single point of failure. 
 The variety of languages also invites a broader developer community and allows them to create integrations in their preferred language.
 
-Learn more about [client diversity](/developers/docs/client-diversity).
+Learn more about [client diversity](/developers/docs/nodes-and-clients/client-diversity/).
 
 What these implementations have in common is they all follow a single specification. Specifications dictate how the Ethereum network and blockchain functions. Every technical detail is defined and specifications can be found as:
 
