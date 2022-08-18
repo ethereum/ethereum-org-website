@@ -108,6 +108,7 @@ const HomeLogoNavLink = styled(Link)`
 
 const HomeLogo = styled(HomeIcon)`
   width: 22px;
+  height: 35px;
   opacity: 0.85;
   &:hover {
     opacity: 1;

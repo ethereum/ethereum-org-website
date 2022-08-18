@@ -7767,7 +7767,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/98348072?v=4",
       "profile": "https://www.linkedin.com/in/lcalixxto/",
       "contributions": [
-        "doc"
+        "doc",
+        "content"
       ]
     },
     {
@@ -8288,7 +8289,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/39565075?v=4",
       "profile": "http://www.samuelakinosho.com",
       "contributions": [
-        "doc"
+        "doc",
+        "code"
       ]
     },
     {
@@ -8371,6 +8373,92 @@
       "name": "Pandapip1",
       "avatar_url": "https://avatars.githubusercontent.com/u/45835846?v=4",
       "profile": "https://pandapip1.com/",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "Aldizh",
+      "name": "Aldi Zhupani",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2282120?v=4",
+      "profile": "http://aldizh.github.io/",
+      "contributions": [
+        "bug",
+        "code"
+      ]
+    },
+    {
+      "login": "linhuatan",
+      "name": "linhuatan",
+      "avatar_url": "https://avatars.githubusercontent.com/u/94831627?v=4",
+      "profile": "https://github.com/linhuatan",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "hughcrt",
+      "name": "Hugh",
+      "avatar_url": "https://avatars.githubusercontent.com/u/24587702?v=4",
+      "profile": "http://hugh.sh",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "z3zzz",
+      "name": "Kim Kwangtae",
+      "avatar_url": "https://avatars.githubusercontent.com/u/91174156?v=4",
+      "profile": "https://github.com/z3zzz",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "tobi4021",
+      "name": "tobi4021",
+      "avatar_url": "https://avatars.githubusercontent.com/u/84390698?v=4",
+      "profile": "https://github.com/tobi4021",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "lonelyotter",
+      "name": "Haochen Song",
+      "avatar_url": "https://avatars.githubusercontent.com/u/57280827?v=4",
+      "profile": "https://github.com/lonelyotter",
+      "contributions": [
+        "doc",
+        "translation"
+      ]
+    },
+    {
+      "login": "opensourcex123",
+      "name": "N Fx",
+      "avatar_url": "https://avatars.githubusercontent.com/u/73230562?v=4",
+      "profile": "https://github.com/opensourcex123",
+      "contributions": [
+        "doc",
+        "translation"
+      ]
+    },
+    {
+      "login": "srhinee",
+      "name": "samsara",
+      "avatar_url": "https://avatars.githubusercontent.com/u/29331203?v=4",
+      "profile": "https://github.com/srhinee",
+      "contributions": [
+        "doc",
+        "bug",
+        "translation"
+      ]
+    },
+    {
+      "login": "greefea",
+      "name": "greefea",
+      "avatar_url": "https://avatars.githubusercontent.com/u/106492500?v=4",
+      "profile": "https://github.com/greefea",
       "contributions": [
         "doc"
       ]

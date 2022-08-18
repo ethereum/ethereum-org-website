@@ -50,10 +50,12 @@
   "page-developers-learn-tutorials-cta": "查看教程",
   "page-developers-learn-tutorials-desc": "已经做过以太坊开发的构建者一步一步地引导您学习以太坊开发。",
   "page-developers-meta-desc": "本页为以太坊开发者提供相关文档、教程以及工具。",
-  "page-developers-mev-desc": "矿工可提取价值 (MEV) 简介",
-  "page-developers-mev-link": "矿工可提取价值 (MEV)",
+  "page-developers-mev-desc": "最大可提取价值 (MEV) 简介",
+  "page-developers-mev-link": "最大可提取价值 (MEV)",
   "page-developers-mining-desc": "如何创建新块并达成协商一致意见",
   "page-developers-mining-link": "挖矿",
+  "page-developers-mining-algorithms-desc": "关于以太坊挖矿算法的信息",
+  "page-developers-mining-algorithms-link": "挖矿算法",
   "page-developers-networks-desc": "主网和测试网络的概览",
   "page-developers-networks-link": "网络",
   "page-developers-node-clients-desc": "如何在网络中验证块和交易",
@@ -84,5 +86,11 @@
   "page-developers-transactions-desc": "以太坊状态的变化方式",
   "page-developers-transactions-link": "交易",
   "page-developers-web3-desc": "Web3 开发世界的不同之处",
-  "page-developers-web3-link": "Web2 与 Web3 对比"
+  "page-developers-web3-link": "Web2 与 Web3 对比",
+  "page-developers-networking-layer": "网络层",
+  "page-developers-networking-layer-link": "网络层",
+  "page-developers-networking-layer-desc": "以太坊网络层的简介",
+  "page-developers-data-structures-and-encoding": "数据结构和编码",
+  "page-developers-data-structures-and-encoding-link": "数据结构和编码",
+  "page-developers-data-structures-and-encoding-desc": "以太坊堆栈中使用的数据结构和编码方案简介"
 }
