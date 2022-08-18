@@ -31,9 +31,7 @@ Using [GraphQL](https://graphql.org/), developers can query any of the curated o
 
 ## Dune Analytics {#dune-analytics}
 
-[Dune Analytics](https://dune.com/) pre-processes blockchain data into relational database (PostgreSQL and DatabricksSQL) tables, allows users to query blockchain data using SQL and build dashboards based on query results. On-chain data are organized into 4 raw tables: `blocks`, `transactions`, (event)  `logs` and (call) `traces`. Popular contracts and protocols have been decoded and each have their own set of event and call tables. Those event and call tables are processed further and organized into abstraction tables by the type of protocols, for example, dex, lending, stablecoins, etc.
-
-Besides the Ethereum Mainnet, Dune support Arbitrum, Avalanche, BNB Chain, xDAI, Optimism, and Polygon. Solana support is provided by the new Dune v2 query engine. Dune users can create public queries and dashboard free of charge; besides creating private queries and dashboards, paid users can download query results in CSV format. Dune doesn't yet provide API access.
+[Dune Analytics](https://dune.com/) pre-processes blockchain data into relational database (PostgreSQL and DatabricksSQL) tables, allows users to query blockchain data using SQL and build dashboards based on query results. On-chain data are organized into 4 raw tables: `blocks`, `transactions`, (event)  `logs` and (call) `traces`. Popular contracts and protocols have been decoded, and each has its own set of event and call tables. Those event and call tables are processed further and organized into abstraction tables by the type of protocols, for example, dex, lending, stablecoins, etc.
 
 ## Further Reading {#further-reading}
 
