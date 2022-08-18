@@ -104,6 +104,15 @@ const config: GatsbyConfig = {
         },
       },
     },
+    // robots.txt creation
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        host: "https://ethereum.org/",
+        sitemap: "https://ethereum.org/sitemap/sitemap-index.xml",
+        policy: [{ userAgent: "*", allow: "/" }],
+      },
+    },
     // Ability to set custom IDs for headings (for translations)
     // i.e. https://www.markdownguide.org/extended-syntax/#heading-ids
     `gatsby-remark-autolink-headers`,
