@@ -562,7 +562,6 @@ export const query = graphql`
           skill
           published
           lang
-          preMergeBanner
         }
       }
     }

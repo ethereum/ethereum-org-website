@@ -29,7 +29,6 @@ import {
 } from "../components/SharedStyledComponents"
 import Emoji from "../components/Emoji"
 import YouTube from "../components/YouTube"
-import PreMergeBanner from "../components/Banners/PreMergeBanner"
 import PostMergeBanner from "../components/Banners/PostMergeBanner"
 import FeedbackCard from "../components/FeedbackCard"
 
@@ -162,7 +161,6 @@ const TutorialPage = ({
     throw new Error("Required `relativePath` is missing on pageContext")
 
   const isRightToLeft = isLangRightToLeft(mdx.frontmatter.lang as Lang)
-  const showMergeBanner = !!mdx.frontmatter.preMergeBanner
   const showPostMergeBanner = !!mdx.frontmatter.postMergeBanner
 
   const tocItems = mdx.tableOfContents?.items
@@ -171,7 +169,6 @@ const TutorialPage = ({
   const absoluteEditPath = `${editContentUrl}${relativePath}`
   return (
     <div>
-      {showMergeBanner && <PreMergeBanner />}
       {showPostMergeBanner && <PostMergeBanner />}
       <Page dir={isRightToLeft ? "rtl" : "ltr"}>
         <PageMetadata
@@ -239,7 +236,6 @@ export const query = graphql`
         sidebarDepth
         address
         isOutdated
-        preMergeBanner
       }
       body
       tableOfContents
