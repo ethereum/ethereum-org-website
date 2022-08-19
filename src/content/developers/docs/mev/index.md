@@ -36,7 +36,7 @@ Rather than programming complex algorithms to detect profitable MEV opportunitie
 
 ### Flashbots {#mev-extraction-flashbots}
 
-Flashbots is an independent project which extends the go-ethereum client with a service that allows searchers to submit MEV transactions to validators without revealing them to the public mempool. This prevents transactions from being frontrun by generalized frontrunners.
+Flashbots is an independent project which extends execution clients with a service that allows searchers to submit MEV transactions to validators without revealing them to the public mempool. This prevents transactions from being frontrun by generalized frontrunners.
 
 ## MEV examples {#mev-examples}
 
@@ -102,7 +102,7 @@ At the application layer, some forms of MEV, like sandwich trading, result in an
 
 At the network layer, generalized frontrunners and the gas-price auctions they often engage in (when two or more frontrunners compete for their transaction to be included in the next block by progressively raising their own transactions' gas price) result in network congestion and high gas prices for everyone else trying to run regular transactions.
 
-Beyond what's happening _within_ blocks, MEV can have deleterious effects _between_ blocks. If the MEV available in a block significantly exceeds the standard block reward, validators may be incentivized to remine blocks and capture the MEV for themselves, causing blockchain re-organization and consensus instability.
+Beyond what's happening _within_ blocks, MEV can have deleterious effects _between_ blocks. If the MEV available in a block significantly exceeds the standard block reward, validators may be incentivized to reorg blocks and capture the MEV for themselves, causing blockchain re-organization and consensus instability.
 
 This possibility of blockchain re-organization has been [previously explored on the Bitcoin blockchain](https://dl.acm.org/doi/10.1145/2976749.2978408). As Bitcoin's block reward halves and transaction fees make up a greater and greater portion of the block reward, situations arise where it becomes economically rational for miners to give up the next block's reward and instead remine past blocks with higher fees. With the growth of MEV, the same sort of situation could occur in Ethereum, threatening the integrity of the blockchain.
 
@@ -116,6 +116,7 @@ On the other hand, the transition from proof-of-work to proof-of-stake and the o
 
 ## Related resources {#related-resources}
 
+- [Flashbots docs](https://docs.flashbots.net/)
 - [Flashbots GitHub](https://github.com/flashbots/pm)
 - [MEV-Explore](https://explore.flashbots.net/) _Dashboard and live transaction explorer for MEV transactions_
 
