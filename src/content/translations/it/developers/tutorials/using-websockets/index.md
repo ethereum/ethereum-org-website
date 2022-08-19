@@ -31,7 +31,7 @@ Come avviene con ogni connessione di rete, non presupporre che un WebSocket rima
 
 Il modo più facile per testare i WebSocket è installare uno strumento da riga di comando per eseguire richieste WebSocket come [wscat](https://github.com/websockets/wscat). Usando wscat, è possibile inviare richieste come di seguito:
 
-_Nota: se hai un account Alchemy, puoi sostituire `demo` con la tua chiave API. [Registrati qui per avere un account Alchemy gratuito!](https://dashboard.alchemyapi.io/signup/)_
+_Nota: se hai un account Alchemy, puoi sostituire `demo` con la tua chiave API. [Registrati qui per avere un account Alchemy gratuito!](https://auth.alchemyapi.io/signup)_
 
 ```
 $ wscat -c wss://eth-mainnet.ws.alchemyapi.io/ws/demo
@@ -251,4 +251,4 @@ curl https://eth-mainnet.alchemyapi.io/v2/your-api-key
 
 ---
 
-[Registrati ad Alchemy](https://dashboard.alchemyapi.io/signup/) gratis, dai un'occhiata alla [nostra documentazione](https://docs.alchemyapi.io/) e, per le ultime novità, seguici su [Twitter](https://twitter.com/AlchemyPlatform).
+[Registrati ad Alchemy](https://auth.alchemyapi.io/signup) gratis, dai un'occhiata alla [nostra documentazione](https://docs.alchemyapi.io/) e, per le ultime novità, seguici su [Twitter](https://twitter.com/AlchemyPlatform).

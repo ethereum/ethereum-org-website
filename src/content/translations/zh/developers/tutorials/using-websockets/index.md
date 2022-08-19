@@ -31,7 +31,7 @@ published: 2020-12-01
 
 测试 WebSocket 最简单的方式是安装命令行工具来进行 WebSocket 请求，例如[wscat](https://github.com/websockets/wscat)。 使用 wscat，您可以发送如下请求：
 
-_注意：如果您有 Alchemy 帐户，则可以将`demo`替换成自己的 API 密钥。 [在此处注册免费的 Alchemy 帐户！](https://dashboard.alchemyapi.io/signup/)_
+_注意：如果您有 Alchemy 帐户，则可以将`demo`替换成自己的 API 密钥。 [在此处注册免费的 Alchemy 帐户！](https://auth.alchemyapi.io/signup)_
 
 ```
 $ wscat -c wss://eth-mainnet.ws.alchemyapi.io/ws/demo
@@ -251,4 +251,4 @@ curl https://eth-mainnet.alchemyapi.io/v2/your-api-key
 
 ---
 
-免费[注册 Alchemy](https://dashboard.alchemyapi.io/signup/)，查看[我们的文档](https://docs.alchemyapi.io/)，如需了解最新消息，请在[Twitter](https://twitter.com/AlchemyPlatform)上关注我们。
+免费[注册 Alchemy](https://auth.alchemyapi.io/signup)，查看[我们的文档](https://docs.alchemyapi.io/)，如需了解最新消息，请在[Twitter](https://twitter.com/AlchemyPlatform)上关注我们。

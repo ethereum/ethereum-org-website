@@ -31,7 +31,7 @@ Ca și în cazul oricărei conexiuni la rețea, nu ar trebui să presupunem că 
 
 Cel mai simplu mod de a testa WebSockets este de a instala un instrument de linie de comandă pentru a face cereri WebSocket, cum ar fi [wscat](https://github.com/websockets/wscat). Folosind wscat, puteți trimite cereri după cum urmează:
 
-_Observație: dacă aveți un cont Alchemy, puteți înlocui `demo` cu propria dvs. cheie API. [Înscrieți-vă pentru un cont gratuit Alchemy aici!](https://dashboard.alchemyapi.io/signup/)_
+_Observație: dacă aveți un cont Alchemy, puteți înlocui `demo` cu propria dvs. cheie API. [Înscrieți-vă pentru un cont gratuit Alchemy aici!](https://auth.alchemyapi.io/signup)_
 
 ```
 $ wscat -c wss://eth-mainnet.ws.alchemyapi.io/ws/demo
@@ -251,4 +251,4 @@ curl https://eth-mainnet.alchemyapi.io/v2/your-api-key
 
 ---
 
-[nregistrează-te la Alchemy](https://dashboard.alchemyapi.io/signup/) gratis, consultă [documentația noastră](https://docs.alchemyapi.io/) și pentru cele mai recente știri, urmărește-ne pe [Twitter](https://twitter.com/AlchemyPlatform).
+[nregistrează-te la Alchemy](https://auth.alchemyapi.io/signup) gratis, consultă [documentația noastră](https://docs.alchemyapi.io/) și pentru cele mai recente știri, urmărește-ne pe [Twitter](https://twitter.com/AlchemyPlatform).

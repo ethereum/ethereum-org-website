@@ -14,7 +14,7 @@ source: Alchemy 文档
 sourceUrl: https://docs.alchemy.com/alchemy/tutorials/sending-txs
 ---
 
-本文为初学者提供易于理解的使用 Web3 发送以太坊交易的指南。 要向以太坊区块链发送交易，主要有三个步骤：创建、签署和广播。 我们将对这三个方面进行讨论，希望能回答您可能遇到的所有问题！ 在本教程中，我们将使用 [Alchemy](https://www.alchemy.com/) 将我们的交易发送到以太坊链。 您可以[在此处创建一个免费 Alchemy 帐户](https://dashboard.alchemyapi.io/signup/)。
+本文为初学者提供易于理解的使用 Web3 发送以太坊交易的指南。 要向以太坊区块链发送交易，主要有三个步骤：创建、签署和广播。 我们将对这三个方面进行讨论，希望能回答您可能遇到的所有问题！ 在本教程中，我们将使用 [Alchemy](https://www.alchemy.com/) 将我们的交易发送到以太坊链。 您可以[在此处创建一个免费 Alchemy 帐户](https://auth.alchemyapi.io/signup)。
 
 **注意：**本指南适用于在应用程序*后端*签署交易。 如果您想将交易签署集成到前端，请查看将 [Web3 与浏览器提供程序](https://docs.alchemyapi.io/documentation/alchemy-web3#with-a-browser-provider)集成。
 
@@ -61,7 +61,7 @@ sourceUrl: https://docs.alchemy.com/alchemy/tutorials/sending-txs
 
 **注意：**本指南需要使用 Alchemy 帐户、以太坊地址或安装 MetaMask 钱包、NodeJs 和 npm。 如果没有，按以下步骤操作：
 
-1.  [创建一个免费的 Alchemy 帐户](https://dashboard.alchemyapi.io/signup/)
+1.  [创建一个免费的 Alchemy 帐户](https://auth.alchemyapi.io/signup)
 2.  [创建 MetaMask 帐户](https://metamask.io/)（或获取以太坊地址）
 3.  [按照这些步骤安装 NodeJs 和 NPM](https://docs.alchemy.com/alchemy/guides/alchemy-for-macs)
 
