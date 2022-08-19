@@ -8442,6 +8442,35 @@
         "doc",
         "translation"
       ]
+    },
+    {
+      "login": "srhinee",
+      "name": "samsara",
+      "avatar_url": "https://avatars.githubusercontent.com/u/29331203?v=4",
+      "profile": "https://github.com/srhinee",
+      "contributions": [
+        "doc",
+        "bug",
+        "translation"
+      ]
+    },
+    {
+      "login": "greefea",
+      "name": "greefea",
+      "avatar_url": "https://avatars.githubusercontent.com/u/106492500?v=4",
+      "profile": "https://github.com/greefea",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "parotax",
+      "name": "parotax",
+      "avatar_url": "https://avatars.githubusercontent.com/u/86522055?v=4",
+      "profile": "https://github.com/parotax",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
