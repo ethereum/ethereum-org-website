@@ -1,6 +1,6 @@
 ---
 title: Keys in proof-of-stake Ethereum
-description: An explanation of keys used in Ethereum since the transition to proof-of-stake.
+description: An explanation of keys used in Ethereum's proof-of-stake consensus mechanism
 lang: en
 sidebar: true
 ---
@@ -51,11 +51,11 @@ Separating the validator keys from the Ethereum account keys enables multiple va
 
 ## Deriving keys from a seed phrase {#deriving-keys-from-seed}
 
-If every 32 ETH staked required a new set of 2 completely independent keys to be created, key management would quickly become unwieldy especially for users running multiple validators. To get around this problem, multiple validator keys can be derived from a single common secret. Storing that single secret allows access to multiple validator keys.
+If every 32 ETH staked required a new set of 2 completely independent keys, key management would quickly become unwieldy, especially for users running multiple validators. Instead, multiple validator keys can be derived from a single common secret and storing that single secret allows access to multiple validator keys.
 
 [Mnemonics](https://en.bitcoinwiki.org/wiki/Mnemonic_phrase) and paths are a well-known feature that users often encounter when [they access](https://ethereum.stackexchange.com/questions/19055/what-is-the-difference-between-m-44-60-0-0-and-m-44-60-0) their hardware wallets. The mnemonic is a sequence of words that act as an initial seed for a private key. When combined with additional data, the mnemonic is used to generate a hash known as the 'master key'. This can be thought of as the root of a tree. Branches from this root can then be drived using a heirarchical path, so that child nodes can exist as combinations of their parent node's hash and their index in the tree.
 
-These paths have the following structure which will be familiar to users who have interacted with hardware wallets:
+These paths have the following structure, which will be familiar to users who have interacted with hardware wallets:
 
 ```
 m/44'/60'/0'/0`
@@ -67,7 +67,7 @@ The slashes in this path separate components of the private key as follows:
 master_key / purpose / coin_type / account / change / address_index
 ```
 
-This logic enables a user to attach as many validators to a single **withdrawal key** as they want, because the root of the tree can be common and differentiation can happen at the branches. The user can **derive any number of keys** from the Mnemonic phrase.
+This logic enables users to attach as many validators as possible to a single **mnemonic phrase** because the tree root can be common, and differentiation can happen at the branches. The user can **derive any number of keys** from the mnemonic phrase.
 
 ```
       [m / 0]
