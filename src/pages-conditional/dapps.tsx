@@ -750,7 +750,7 @@ const DappsPage = ({
         "page-dapps-dapp-description-tornado-cash",
         intl
       ),
-      link: "https://tornado.cash/",
+      link: "https://tornadocash.eth.link/",
       image: getImage(data.tornado),
       alt: translateMessageId("page-dapps-tornado-cash-logo-alt", intl),
     },
