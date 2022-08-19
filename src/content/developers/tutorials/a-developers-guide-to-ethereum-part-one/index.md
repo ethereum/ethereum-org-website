@@ -57,7 +57,7 @@ This new decentralized tech stack has spawned new developer tools. Such tools ex
 
 Python developers that want to interact with Ethereum are likely to reach for [Web3.py](https://web3py.readthedocs.io/). Web3.py is a library that greatly simplifies the way you connect to an Ethereum node, then send and receive data from it.
 
-<div class="featured">Note: “Ethereum node” and “Ethereum client” are used interchangeably. In either case, it refers to the software that a participant in the Ethereum network runs. This software can read block data, receive updates when new blocks are added to the chain, broadcast new transactions, and more. Technically, the client is the software, the node is the computer running the software</div>
+<div class="featured">Note: “Ethereum node” and “Ethereum client” are used interchangeably. In either case, it refers to the software that a participant in the Ethereum network runs. This software can read block data, receive updates when new blocks are added to the chain, broadcast new transactions, and more. Technically, the client is the software, the node is the computer running the software.</div>
 
 [Ethereum clients](/developers/docs/nodes-and-clients/) can be configured to be reachable by [IPC](https://wikipedia.org/wiki/Inter-process_communication), HTTP, or Websockets, so Web3.py will need to mirror this configuration. Web3.py refers to these connection options as **providers**. You’ll want to choose one of the three providers to link the Web3.py instance with your node.
 
