@@ -257,7 +257,7 @@ Therefore we can understand gas prices as a function of demand for Ethereum bloc
 
 Finally, we may want to query average daily gas prices for the Ethereum chain, however, doing so will result in an especially long query time, so we’ll filter our query to the average amount of gas paid per transaction by the Ethereum Foundation.
 
-![ef_daily_gas](./ef_daily_gas.png)
+![](./ef_daily_gas.png)
 
 We can see gas prices paid for all transactions made to the Ethereum Foundation address over the years. Here is the query:
 
