@@ -76,7 +76,7 @@ Users use the platform's native ERC-20 token $MIND to pay for items. Users can a
 
 ### Reddit {#reddit}
 
-Reddit has [touted Community Points](https://cointelegraph.com/news/reddit-to-reportedly-tokenize-karma-points-and-onboard-500m-new-users), which are [ERC-20 tokens](/developers/docs/standards/tokens/erc-20/) that users can earn by posting quality content and contributing to online communites (subreddits). You can redeem these tokens to [gain exclusive privileges and perks](https://www.reddit.com/community-points/) within a subreddit. For this project, Reddit is working with Arbitrum, a [layer 2](/layer-2/) rollup designed to scale Ethereum transactions.
+Reddit has [touted Community Points](https://cointelegraph.com/news/reddit-to-reportedly-tokenize-karma-points-and-onboard-500m-new-users), which are [ERC-20 tokens](/developers/docs/standards/tokens/erc-20/) that users can earn by posting quality content and contributing to online communities (subreddits). You can redeem these tokens within a subreddit to [get exclusive privileges and perks](https://www.reddit.com/community-points/). For this project, Reddit is working with Arbitrum, a [layer 2](/layer-2/) rollup designed to scale Ethereum transactions.
 
 The program is already live, with the r/CryptoCurrency subreddit [running its version of Community Points called "Moons"](https://www.reddit.com/r/CryptoCurrency/wiki/moons_wiki). Per the official description, Moons "reward posters, commenters, and moderators for their contributions to the subreddit." Because these tokens are on the blockchain (users receive them in wallets), they are independent of Reddit and cannot be taken away. 
 
