@@ -184,7 +184,7 @@ export const InfoGrid = styled.div`
   grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr));
   gap: 2rem;
   & > div {
-    height: fit-content;
+    height: auto;
     margin: 0;
     &:hover {
       transition: 0.1s;
