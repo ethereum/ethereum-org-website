@@ -33,9 +33,9 @@ For example, [Etherscan](etherscan.io) provides execution and consensus data for
 
 ## Client diversity
 
-Client diversity is important for the overall health of the Ethereum network because it provides resilience to bugs and exploits. There are now several cl;eint diversity dashboards including [clientdiversity.org](https://clientdiversity.org/), [rated.network](rated.network), [pool.invis.cloud](pool.invis.cloud), [slashed.info](slahed.info) and [Ethernodes](https://ethernodes.org/).
+[Client diversity](/developers/docs/nodes-and-clients/client-diversity/) is important for the overall health of the Ethereum network because it provides resilience to bugs and exploits. There are now several client diversity dashboards including [clientdiversity.org](https://clientdiversity.org/), [rated.network](rated.network), [pool.invis.cloud](pool.invis.cloud), [slashed.info](slahed.info) and [Ethernodes](https://ethernodes.org/).
 
-## Dune analytics
+## Dune analytics {#dune-analytics}
 
 [Dune analytics](https://docs.dune.com/) aggregates blockchain data into SQL databases that can be queried and used to create visualizations and dashboards.
 
@@ -44,4 +44,4 @@ Client diversity is important for the overall health of the Ethereum network bec
 - [Graph Network Overview](https://thegraph.com/docs/en/about/network/)
 - [Graph Query Playground](https://thegraph.com/explorer/subgraph/graphprotocol/graph-network-mainnet?version=current)
 - [API code examples on EtherScan](https://etherscan.io/apis#contracts)
-- [Beaconcha.in beacon chaion explorer](beaconcha.in)
+- [Beaconcha.in beacon chain explorer](beaconcha.in)
