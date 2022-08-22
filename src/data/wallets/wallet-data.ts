@@ -973,7 +973,7 @@ const walletData: WalletData[] = [
     rpc_importing: false,
     nft_support: true,
     connect_to_dapps: true,
-    staking: true,
+    staking: false,
     swaps: true,
     layer_2: true,
     gas_fee_customization: true,
