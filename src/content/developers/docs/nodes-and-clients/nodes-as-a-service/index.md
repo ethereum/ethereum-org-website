@@ -15,11 +15,11 @@ Running your own [Ethereum node](/developers/docs/nodes-and-clients/#what-are-no
 
 If you don't already have an understanding of what nodes and clients are, check out [Nodes and clients](/developers/docs/nodes-and-clients/).
 
-## Stakers
+## Stakers {#stakoooooooooooooors}
 
-Solo stakers are required torun their own infrastructure rather than relying on third party providers. This means running an execution client coupled to a consensus client. Before [The Merge](/upgrades/merge) it was possible to run a consensus client only and use a centralized provider for execution data. This is no longer possible - a solo staker must run both clients. There are services available to ease this process.
+Solo stakers must run their own infrastructure rather than relying on third-party providers. This means running an execution client coupled with a consensus client. Before [The Merge](/upgrades/merge), it was possible to run a consensus client only and use a centralized provider for execution data; this is no longer possible - a solo staker must run both clients. However, there are services available to ease this process.
 
-Read more about [running a node](/developers/docs/nodes-and-clients/run-a-node/index.md).
+[Read more on running a node](/developers/docs/nodes-and-clients/run-a-node/).
 
 The node services described on this page generally offer non-staking node functionality.
 
@@ -205,7 +205,8 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Suitable for Developers to Enterprises
 - [**Rivet**](https://rivet.cloud/)
   - [Docs](https://rivet.readthedocs.io/en/latest/)
-  - Features - Free tier option - Scale as you go -[**SenseiNode**](https://senseinode.com)
+  - Features - Free tier option - Scale as you go 
+-[**SenseiNode**](https://senseinode.com)
   - [Docs](https://docs.senseinode.com/)
   - Features
   - Dedicated and Share nodes
