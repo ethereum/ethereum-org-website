@@ -1802,7 +1802,7 @@ const walletData: WalletData[] = [
     macOS: true,
     firefox: false,
     chromium: false,
-    hardware: false,
+    hardware: true,
     open_source: true,
     repo_url: "https://github.com/trezor",
     non_custodial: true,
