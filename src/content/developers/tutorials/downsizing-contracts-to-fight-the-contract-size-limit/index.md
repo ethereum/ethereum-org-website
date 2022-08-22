@@ -19,7 +19,7 @@ On [November 22, 2016](https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spuri
 
 This limit was introduced to prevent denial-of-service (DOS) attacks. Any call to a contract is relatively cheap gas-wise. However, the impact of a contract call for Ethereum nodes increases disproportionately depending on the called contract code's size (reading the code from disk, pre-processing the code, adding data to the Merkle proof). Whenever you have such a situation where the attacker requires few resources to cause a lot of work for others, you get the potential for DOS attacks.
 
-Originally this was less of a problem, because one natural contract size limit is the block gas limit. Obviously a contract needs to be deployed within a transaction that holds all of the contract's bytecode. If you then include only that one transaction into a block, you can use up all of that gas, but it's not infinite. Since EIP-1559 the block gas limit has been able to vary between 12.5M and 25M units depending on network demand.
+Originally this was less of a problem because one natural contract size limit is the block gas limit. Obviously, a contract must be deployed within a transaction that holds all of the contract's bytecode. If you include only that one transaction into a block, you can use up all that gas, but it's not infinite. Since EIP-1559, the block gas limit has been able to vary between 15M and 30M units depending on network demand.
 
 ## Taking on the fight {#taking-on-the-fight}
 
