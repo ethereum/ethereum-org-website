@@ -8480,6 +8480,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "north-vanhooser",
+      "name": "north-vanhooser",
+      "avatar_url": "https://avatars.githubusercontent.com/u/86130010?v=4",
+      "profile": "https://github.com/north-vanhooser",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
