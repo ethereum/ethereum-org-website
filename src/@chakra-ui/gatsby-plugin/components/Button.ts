@@ -1,5 +1,31 @@
 import type { ComponentStyleConfig } from "@chakra-ui/theme"
 
+const commonOutline = {
+  border: "1px",
+  color: "text",
+  bg: "background",
+  borderColor: "text",
+  _hover: {
+    color: "primary",
+    bg: "background",
+    borderColor: "primary",
+  },
+  _active: {
+    color: "primary",
+    bg: "primaryLight",
+    borderColor: "primary",
+  },
+  _focus: {
+    color: "primary",
+    borderColor: "background",
+  },
+  _disabled: {
+    color: "disabled",
+    borderColor: "disabled",
+    opacity: 1,
+  },
+}
+
 export const Button: ComponentStyleConfig = {
   baseStyle: {
     fontWeight: "normal",
@@ -36,46 +62,12 @@ export const Button: ComponentStyleConfig = {
       },
     },
     outline: {
-      border: "1px",
-      color: "text",
-      bg: "transparent",
-      borderColor: "text",
-      _hover: {
-        color: "primary",
-        bg: "transparent",
-        borderColor: "primary",
-      },
-      _active: {
-        color: "primary",
-        bg: "primaryLight",
-        borderColor: "primary",
-      },
-      _disabled: {
-        color: "disabled",
-        borderColor: "disabled",
-        opacity: 1,
-      },
+      ...commonOutline,
     },
     "outline-color": {
-      border: "1px",
+      ...commonOutline,
       color: "primary",
-      bg: "transparent",
       borderColor: "primary",
-      _hover: {
-        color: "primary",
-        bg: "transparent",
-        borderColor: "primary",
-      },
-      _active: {
-        color: "primary",
-        bg: "primaryLight",
-        borderColor: "primary",
-      },
-      _disabled: {
-        color: "disabled",
-        borderColor: "disabled",
-        opacity: 1,
-      },
     },
   },
 }
