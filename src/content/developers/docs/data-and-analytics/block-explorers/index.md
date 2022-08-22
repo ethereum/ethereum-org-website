@@ -30,20 +30,20 @@ Here's a summary of the types of data you can get from a block explorer.
 
 ### Execution data {#execution-data}
 
-New blocks are added to Ethereum every 12 seconds (unless a block proposer misses its cue) so there's a near-constant stream of data that gets added to block explorers. Blocks contain a lot of important data that you may find useful:
+New blocks are added to Ethereum every 12 seconds (unless a block proposer misses its turn), so a near-constant stream of data gets added to block explorers. Blocks contain a lot of important data that you may find useful:
 
 **Standard data**
 
 - Block height – The block number and length of the blockchain (in blocks) on creation of the current block.
 - Timestamp – The time at which a miner mined the block.
 - Transactions – The number of transactions included within the block.
-- Fee recipient – The address that received gas fee tips from transactions
+- Fee recipient – The address that received gas fee tips from transactions.
 - Block Reward – The amount of ETH awarded to the validator who proposed the block.
 - Size – The size of the data within the block (measured in bytes).
 - Gas used – The total units of gas used by the transactions in the block.
 - Gas limit – The total gas limits set by the transactions in the block.
-- Base fee per gas - minimum multiplier required for a transaction to be included in a block
-- Burnt fees - how much ether is burned in the block
+- Base fee per gas - The minimum multiplier required for a transaction to be included in a block.
+- Burnt fees - How much ETH is burned in the block.
 - Extra data – Any extra data the miner has included in the block.
 
 **Advanced data**
@@ -126,7 +126,7 @@ Tokens are a type of contract so they'll have similar data to a smart contract. 
 
 ### Network {#network}
 
-Of course there's some data that speaks to the health of the network.
+Some block data is concerned about the health of Ethereum more holistically.
 
 - Total transactions – The number of transactions since Ethereum was created.
 - Transactions per second – The number of transactions processable within a second.
@@ -138,7 +138,7 @@ Of course there's some data that speaks to the health of the network.
 
 ### Epoch {#epoch}
 
-Randomized committees of validators are created at the end of every epoch (every 6.4 minutes) for security reasons. Epoch data includes:
+For security reasons, randomized committees of validators are created at the end of every epoch (every 6.4 minutes). Epoch data includes:
 
 - Epoch number.
 - Finalized status – Whether the epoch has been finalized (Yes/No).
