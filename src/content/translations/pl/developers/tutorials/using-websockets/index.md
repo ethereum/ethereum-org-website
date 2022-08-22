@@ -25,7 +25,7 @@ W odróżnieniu od HTTP, z WebSockets, nie musisz ciągle wysyłać żądań, gd
 
 Podobnie jak w przypadku jakiegokolwiek połączenia sieciowego, nie należy zakładać, że WebSocket pozostanie otwarty na zawsze bez przerwy, ale właściwa obsługa zerwanego połączenia i ponowne nawiązanie połączenie może zapewnić ciągłość jego prawidłowego działania. Następną niedogodnością WebSocketów jest to, że nie otrzymujesz kodów statusu HTTP w odpowiedzi, ale tylko komunikat o błędzie.
 
-​[Alchemy Web3](https://docs.alchemyapi.io/documentation/alchemy-web3) automatycznie dodaje obsługę awarii WebSocket i ponawiania prób bez konieczności konfiguracji.
+​[Alchemy Web3](https://docs.alchemy.com/reference/api-overview) automatycznie dodaje obsługę awarii WebSocket i ponawiania prób bez konieczności konfiguracji.
 
 ## Wypróbuj {#try-it-out}
 

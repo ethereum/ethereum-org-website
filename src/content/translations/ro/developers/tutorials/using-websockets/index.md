@@ -25,7 +25,7 @@ Spre deosebire de HTTP, cu WebSockets nu este nevoie să faceți încontinuu cer
 
 Ca și în cazul oricărei conexiuni la rețea, nu ar trebui să presupunem că un WebSocket va rămâne deschis pentru totdeauna fără întrerupere, dar manipularea corectă a conexiunilor pierdute și reconectarea manuală de o manieră corectă poate fi o provocare. Un alt dezavantaj al WebSocket-urilor este că nu obții codurile de stare HTTP ca răspuns, ci numai mesajul de eroare.
 
-[Alchemy Web3](https://docs.alchemyapi.io/documentation/alchemy-web3) adaugă automat manipularea pentru eșecuri WebSocket și reîncercări fără nici o configurație necesară.
+[Alchemy Web3](https://docs.alchemy.com/reference/api-overview) adaugă automat manipularea pentru eșecuri WebSocket și reîncercări fără nici o configurație necesară.
 
 ## Încearcă-l {#try-it-out}
 

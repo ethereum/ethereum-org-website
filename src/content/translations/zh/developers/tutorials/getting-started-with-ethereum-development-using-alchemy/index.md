@@ -79,7 +79,7 @@ _**注：**将 [https://eth-mainnet.alchemyapi.io/v2/demo](https://eth-mainnet.a
 
 **_注意：_**下面的脚本需要在一个**节点环境**中运行或**保存到一个文件运行**，而不是通过命令行运行。 如果您尚未安装节点或 npm ，请查看此[适用于 mac 的快速设置指南](https://app.gitbook.com/@alchemyapi/s/alchemy/guides/alchemy-for-macs)。
 
-有大量可与与 Alchemy 集成的[Web3 库](https://docs.alchemyapi.io/guides/getting-started#other-web3-libraries)。但是，我们建议使用[Alchemy Web3](https://docs.alchemyapi.io/documentation/alchemy-web3)，它是 web3.js 的替代插件，可以与 Alchemy 无缝配合工作。 这个库有很多优点，例如自动重试和可靠的 WebSocket 支持。
+有大量可与与 Alchemy 集成的[Web3 库](https://docs.alchemyapi.io/guides/getting-started#other-web3-libraries)。但是，我们建议使用[Alchemy Web3](https://docs.alchemy.com/reference/api-overview)，它是 web3.js 的替代插件，可以与 Alchemy 无缝配合工作。 这个库有很多优点，例如自动重试和可靠的 WebSocket 支持。
 
 要安装 AlchemyWeb3.js，请**导航到项目目录**并运行：
 

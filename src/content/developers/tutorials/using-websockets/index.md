@@ -27,7 +27,7 @@ Unlike HTTP, with WebSockets, you don't need to continuously make requests when 
 
 As with any network connection, you should not assume that a WebSocket will remain open forever without interruption, but correctly handling dropped connections and reconnection by hand can be challenging to get right. Another downside of WebSockets is that you do not get HTTP status codes in the response, but only the error message.
 
-​[Alchemy Web3](https://docs.alchemyapi.io/documentation/alchemy-web3) automatically adds handling for WebSocket failures and retries with no configuration necessary.
+​[Alchemy Web3](https://docs.alchemy.com/reference/api-overview) automatically adds handling for WebSocket failures and retries with no configuration necessary.
 
 ## Try it out {#try-it-out}
 

@@ -16,7 +16,7 @@ sourceUrl: https://docs.alchemy.com/alchemy/tutorials/sending-txs
 
 本文为初学者提供易于理解的使用 Web3 发送以太坊交易的指南。 要向以太坊区块链发送交易，主要有三个步骤：创建、签署和广播。 我们将对这三个方面进行讨论，希望能回答您可能遇到的所有问题！ 在本教程中，我们将使用 [Alchemy](https://www.alchemy.com/) 将我们的交易发送到以太坊链。 您可以[在此处创建一个免费 Alchemy 帐户](https://auth.alchemyapi.io/signup)。
 
-**注意：**本指南适用于在应用程序*后端*签署交易。 如果您想将交易签署集成到前端，请查看将 [Web3 与浏览器提供程序](https://docs.alchemyapi.io/documentation/alchemy-web3#with-a-browser-provider)集成。
+**注意：**本指南适用于在应用程序*后端*签署交易。 如果您想将交易签署集成到前端，请查看将 [Web3 与浏览器提供程序](https://docs.alchemy.com/reference/api-overview#with-a-browser-provider)集成。
 
 ## 基本概念 {#the-basics}
 
@@ -55,7 +55,7 @@ sourceUrl: https://docs.alchemy.com/alchemy/tutorials/sending-txs
 ### 6. Web3 库是什么？ {#what-is-the-web3-library}
 
 - Web3.js 是一个围绕标准 JSON-RPC 调用的封装库，在以太坊开发中使用相当普遍。
-- 有许多针对不同语言的 web3 库。 在本教程中，我们将使用 [Alchemy Web3](https://docs.alchemyapi.io/documentation/alchemy-web3)，它是用 JavaScript 编写的。 您可以在[这里](https://docs.alchemyapi.io/guides/getting-started#other-web3-libraries)查看其他选项 。
+- 有许多针对不同语言的 web3 库。 在本教程中，我们将使用 [Alchemy Web3](https://docs.alchemy.com/reference/api-overview)，它是用 JavaScript 编写的。 您可以在[这里](https://docs.alchemyapi.io/guides/getting-started#other-web3-libraries)查看其他选项 。
 
 好了，现在我们把这些问题都解决了，让我们继续学习教程。 请随时在 Alchemy [discord](https://discord.gg/gWuC7zB) 中提问！
 
@@ -86,7 +86,7 @@ cd sendtx-example
 
 ### 4. 安装 Alchemy Web3（或任何 web3 库）。 {#install-alchemy-web3}
 
-在您的项目目录中运行以下命令，以安装 [Alchemy Web3](https://docs.alchemyapi.io/documentation/alchemy-web3)。
+在您的项目目录中运行以下命令，以安装 [Alchemy Web3](https://docs.alchemy.com/reference/api-overview)。
 
 ```
 npm install @alch/alchemy-web3

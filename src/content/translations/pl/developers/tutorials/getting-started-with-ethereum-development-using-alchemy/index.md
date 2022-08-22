@@ -79,7 +79,7 @@ curl [https://eth-mainnet.alchemyapi.io/v2/demo](https://eth-mainnet.alchemyapi.
 
 **_UWAGA:_** Skrypty poniżej muszą być uruchomione w **kontekście węzłów** lub **zapisane w pliku**, nie uruchamiaj z wiersza poleceń. Jeśli nie masz jeszcze zainstalowanego węzła lub npm, sprawdź ten [przewodnik konfiguracji macs](https://app.gitbook.com/@alchemyapi/s/alchemy/guides/alchemy-for-macs).
 
-Istnieją tony [bibliotek Web3](https://docs.alchemyapi.io/guides/getting-started#other-web3-libraries) które możesz zintegrować z alchemy. zalecamy użycie [Alchemy Web3](https://docs.alchemyapi.io/documentation/alchemy-web3), upuszczonego zamiennika dla web3., zbudowany i skonfigurowany do bezproblemowej pracy z Alchemy. Zapewnia to wiele zalet, takich jak automatyczne próby i solidne wsparcie WebSocket.
+Istnieją tony [bibliotek Web3](https://docs.alchemyapi.io/guides/getting-started#other-web3-libraries) które możesz zintegrować z alchemy. zalecamy użycie [Alchemy Web3](https://docs.alchemy.com/reference/api-overview), upuszczonego zamiennika dla web3., zbudowany i skonfigurowany do bezproblemowej pracy z Alchemy. Zapewnia to wiele zalet, takich jak automatyczne próby i solidne wsparcie WebSocket.
 
 Aby zainstalować AlchemyWeb3.js, **przejdź do katalogu projektu** i uruchom:
 

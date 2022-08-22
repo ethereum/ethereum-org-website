@@ -25,7 +25,7 @@ published: 2020-12-01
 
 与任何网络连接一样，您不应该假设 WebSocket 将永远保持打开状态而不会中断，但是正确地手动处理丢弃的连接和重新连接可能很难做到正确。 WebSocket 的另一个缺点是，您在响应中不会得到 HTTP 状态码，而只会得到错误消息。
 
-[Alchemy Web3](https://docs.alchemyapi.io/documentation/alchemy-web3)自动添加对 WebSocket 失败的处理并重试，而无需进行配置。
+[Alchemy Web3](https://docs.alchemy.com/reference/api-overview)自动添加对 WebSocket 失败的处理并重试，而无需进行配置。
 
 ## 试试看 {#try-it-out}
 

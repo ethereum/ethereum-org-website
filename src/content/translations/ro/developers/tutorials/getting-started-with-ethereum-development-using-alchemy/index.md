@@ -79,7 +79,7 @@ _**NOTE:** Replace [https://eth-mainnet.alchemyapi.io/v2/demo](https://eth-mainn
 
 **_NOTĂ:_** Script-urile de mai jos trebuie să fie rulate într-un **context nod** sau **salvate într-un fișier**, nu rulează de la linia de comandă. Dacă nu ai instalat deja Node sau npm, consultă acest [ghid de configurare pentru mac](https://app.gitbook.com/@alchemyapi/s/alchemy/guides/alchemy-for-macs)-uri.
 
-Există tone de [biblioteci Web3](https://docs.alchemyapi.io/guides/getting-started#other-web3-libraries) pe care le poți integra cu Alchemy, totuși, îți recomandăm să folosești [Alchemy Web3](https://docs.alchemyapi.io/documentation/alchemy-web3), un înlocuitor treptat pentru web3.js, construit și configurat pentru a funcționa perfect cu Alchemy. Acesta oferă mai multe avantaje, cum ar fi reîncercări automate și suport robust WebSocket.
+Există tone de [biblioteci Web3](https://docs.alchemyapi.io/guides/getting-started#other-web3-libraries) pe care le poți integra cu Alchemy, totuși, îți recomandăm să folosești [Alchemy Web3](https://docs.alchemy.com/reference/api-overview), un înlocuitor treptat pentru web3.js, construit și configurat pentru a funcționa perfect cu Alchemy. Acesta oferă mai multe avantaje, cum ar fi reîncercări automate și suport robust WebSocket.
 
 Pentru a instala AlchemyWeb3.js, **navigă la directorul proiectului tău** și rulează:
 

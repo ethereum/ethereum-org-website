@@ -25,7 +25,7 @@ A differenza di HTTP, con i WebSocket non serve fare continuamente richieste qua
 
 Come avviene con ogni connessione di rete, non presupporre che un WebSocket rimanga aperto per sempre senza interruzioni; gestire correttamente a mano la caduta di connessione e la riconnessione può essere complicato. Un altro lato negativo dei WebSocket è che non si ottengono codici di stato HTTP come risposta ma solo il messaggio di errore.
 
-​[Alchemy Web3](https://docs.alchemyapi.io/documentation/alchemy-web3) aggiunge automaticamente la gestione degli errori WebSocket e i nuovi tentativi senza necessità di configurazione.
+​[Alchemy Web3](https://docs.alchemy.com/reference/api-overview) aggiunge automaticamente la gestione degli errori WebSocket e i nuovi tentativi senza necessità di configurazione.
 
 ## Facciamo una prova {#try-it-out}
 

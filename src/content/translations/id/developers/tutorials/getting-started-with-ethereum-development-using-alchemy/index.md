@@ -79,7 +79,7 @@ _**NOTE:** Replace [https://eth-mainnet.alchemyapi.io/v2/demo](https://eth-mainn
 
 **_CATATAN:_** Skrip di bawah harus dijalankan pada **konteks node** atau **disimpan dalam file**, jangan menjalankannya di baris perintah. Jika Anda tidak memiliki Node atau npm yang terinstal, simak [panduan pengaturan untuk mac](https://app.gitbook.com/@alchemyapi/s/alchemy/guides/alchemy-for-macs) singkat ini.
 
-Ada banyak sekali [pustaka Web3](https://docs.alchemyapi.io/guides/getting-started#other-web3-libraries) yang bisa Anda integrasikan dengan Alchemy, namun, kami merekomendasikan menggunakan [Web3 Alchemy](https://docs.alchemyapi.io/documentation/alchemy-web3), pengganti web3.js, yang dibuat dan dikonfigurasi agar bekerja dengan mulus dengan Alchemy. Ini menyediakan banyak keuntungan seperti percobaan ulang otomatis dan dukungan WebSocket yang kuat.
+Ada banyak sekali [pustaka Web3](https://docs.alchemyapi.io/guides/getting-started#other-web3-libraries) yang bisa Anda integrasikan dengan Alchemy, namun, kami merekomendasikan menggunakan [Web3 Alchemy](https://docs.alchemy.com/reference/api-overview), pengganti web3.js, yang dibuat dan dikonfigurasi agar bekerja dengan mulus dengan Alchemy. Ini menyediakan banyak keuntungan seperti percobaan ulang otomatis dan dukungan WebSocket yang kuat.
 
 Untuk menginstal AlchemyWeb3.js, **arahkan kursor ke direktori proyek Anda** dan jalankan:
 

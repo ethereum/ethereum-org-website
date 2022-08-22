@@ -25,7 +25,7 @@ Tidak seperti HTTP, dengan WebSocket, Anda tidak perlu secara berulang membuat p
 
 Seperti koneksi jaringan mana pun, Anda tidak boleh menganggap bahwa WebSocket akan tetap terbuka selamanya tanpa gangguan, tetapi menangani koneksi dan penyambungan kembali koneksi yang turun dengan benar secara manual bisa sulit untuk dilakukan. Kekurangan lainnya dari WebSocket adalah Anda tidak mendapatkan kode status HTTP dalam tanggapannya, tapi hanya pesan kesalahan.
 
-​[Web3 Alchemy](https://docs.alchemyapi.io/documentation/alchemy-web3) secara otomatis menambah penanganan untuk kegagalan WebSocket dan mencoba kembali tanpa perlu adanya konfigurasi.
+​[Web3 Alchemy](https://docs.alchemy.com/reference/api-overview) secara otomatis menambah penanganan untuk kegagalan WebSocket dan mencoba kembali tanpa perlu adanya konfigurasi.
 
 ## Cobalah {#try-it-out}
 

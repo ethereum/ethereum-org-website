@@ -74,7 +74,7 @@ _**NOTE:** Replace [https://eth-mainnet.alchemyapi.io/v2/demo](https://eth-mainn
 
 **_NOTE:_** The scripts below need to be run in a **node context** or **saved in a file**, not run from the command line. If you don’t already have Node or npm installed, check out this quick [set-up guide for macs](https://app.gitbook.com/@alchemyapi/s/alchemy/guides/alchemy-for-macs).
 
-There are tons of [Web3 libraries](https://docs.alchemyapi.io/guides/getting-started#other-web3-libraries) you can integrate with Alchemy, however, we recommend using [Alchemy Web3](https://docs.alchemyapi.io/documentation/alchemy-web3), a drop-in replacement for web3.js, built and configured to work seamlessly with Alchemy. This provides multiple advantages such as automatic retries and robust WebSocket support.
+There are tons of [Web3 libraries](https://docs.alchemyapi.io/guides/getting-started#other-web3-libraries) you can integrate with Alchemy, however, we recommend using [Alchemy Web3](https://docs.alchemy.com/reference/api-overview), a drop-in replacement for web3.js, built and configured to work seamlessly with Alchemy. This provides multiple advantages such as automatic retries and robust WebSocket support.
 
 To install AlchemyWeb3.js, **navigate to your project directory** and run:
 
