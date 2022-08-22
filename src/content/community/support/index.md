@@ -107,8 +107,8 @@ Transactions on Ethereum can sometimes get stuck if you have submitted a lower t
 
 #### How do I mine Ethereum? {#mining-ethereum}
 
-Ethereum mining is no longer possible. Ethereum mining was switched off when the network moved from proof-of-work to proof-of-stake. Now, instead of miners, Ethereum has validators. Validators stake ether and receive staking rewards for securing the network.
+Ethereum mining is no longer possible. Mining was switched off when Ethereum moved from proof-of-work to proof-of-stake. Now, instead of miners, Ethereum has validators. Validators stake ETH and receive staking rewards for securing the network.
 
-#### How do I become a staker/validator?
+#### How do I become a staker/validator? {#become-validator}
 
-To become a validator you are required to stake 32 ETH in the Ethereum deposit contract and set up a validator node. More information is available on our [staking pages](/staking) and at the staking [launchpad](https://launchpad.ethereum.org/).
+To become a validator, you must stake 32 ETH in the Ethereum deposit contract and set up a validator node. More information is available on our [staking pages](/staking) and at [the staking launchpad](https://launchpad.ethereum.org/).
