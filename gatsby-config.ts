@@ -66,7 +66,7 @@ const config: GatsbyConfig = {
         icon: `src/assets/favicon.png`,
       },
     },
-    // Sitemap generator (ethereum.org/sitemap.xml)
+    // Sitemap generator (ethereum.org/sitemap/sitemap-index.xml)
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {
@@ -108,8 +108,8 @@ const config: GatsbyConfig = {
     {
       resolve: "gatsby-plugin-robots-txt",
       options: {
-        host: "https://ethereum.org/",
-        sitemap: "https://ethereum.org/sitemap/sitemap-index.xml",
+        host: siteUrl,
+        sitemap: `${siteUrl}/sitemap/sitemap-index.xml`,
         policy: [{ userAgent: "*", allow: "/" }],
       },
     },
