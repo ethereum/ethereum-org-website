@@ -14,7 +14,7 @@ source: Dokumen Alchemy
 sourceUrl: https://docs.alchemy.com/alchemy/tutorials/sending-txs
 ---
 
-This is a beginner friendly guide to sending Ethereum transactions using web3. Ada tiga langkah utama untuk mengirim transaksi ke blockchain ethereum: buat, tandatangani, dan siarkan. Kita akan membahas ketiganya, dengan harapan menjawab pertanyaan apa pun yang Anda miliki! In this tutorial, we'll be using [Alchemy](https://www.alchemy.com/) to send our transactions to the Ethereum chain. You can [create a free Alchemy account here](https://dashboard.alchemyapi.io/signup/).
+This is a beginner friendly guide to sending Ethereum transactions using web3. Ada tiga langkah utama untuk mengirim transaksi ke blockchain ethereum: buat, tandatangani, dan siarkan. Kita akan membahas ketiganya, dengan harapan menjawab pertanyaan apa pun yang Anda miliki! In this tutorial, we'll be using [Alchemy](https://www.alchemy.com/) to send our transactions to the Ethereum chain. You can [create a free Alchemy account here](https://auth.alchemyapi.io/signup).
 
 **NOTE:** This guide is for signing your transactions on the _backend_ for your app, if you want to integrate signing your transactions on the frontend, check out integrating [Web3 with a browser provider](https://docs.alchemyapi.io/documentation/alchemy-web3#with-a-browser-provider).
 
@@ -61,7 +61,7 @@ Baiklah, karena kita telah menjawab beberapa pertanyaan, mari kita teruskan ke b
 
 **NOTE:** This guide requires an Alchemy account, an Ethereum address or MetaMask wallet, NodeJs, and npm installed. Jika tidak, ikuti langkah-langkah ini:
 
-1.  [Buat akun Alchemy gratis](https://dashboard.alchemyapi.io/signup/)
+1.  [Buat akun Alchemy gratis](https://auth.alchemyapi.io/signup)
 2.  [Create MetaMask account](https://metamask.io/) (or get an Ethereum address)
 3.  [Ikuti langkah-langkah ini untuk menginstal NodeJs dan NPM](https://docs.alchemy.com/alchemy/guides/alchemy-for-macs)
 

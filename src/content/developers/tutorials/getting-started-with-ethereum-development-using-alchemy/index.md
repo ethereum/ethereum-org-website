@@ -20,7 +20,7 @@ We’ll take you from signing up with Alchemy to writing your first web3 script!
 
 ## 1. Sign Up for a Free Alchemy Account {#sign-up-for-a-free-alchemy-account}
 
-Creating an account with Alchemy is easy, [sign up for free here](https://dashboard.alchemyapi.io/signup/).
+Creating an account with Alchemy is easy, [sign up for free here](https://auth.alchemyapi.io/signup).
 
 ## 2. Create an Alchemy App {#create-an-alchemy-app}
 
@@ -148,4 +148,4 @@ The latest block number is 11043912
 
 Not sure what to do next? Try deploying your first smart contract and get your hands dirty with some solidity programming in our [Hello World Smart Contract Guide](https://docs.alchemyapi.io/tutorials/hello-world-smart-contract), or test your dashboard knowledge with the [Dashboard Demo App](https://docs.alchemyapi.io/tutorials/demo-app)!
 
-_[Sign up with Alchemy for free](https://dashboard.alchemyapi.io/signup/), check out our [documentation](https://docs.alchemyapi.io/), and for the latest news, follow us on [Twitter](https://twitter.com/AlchemyPlatform)_.
+_[Sign up with Alchemy for free](https://auth.alchemyapi.io/signup), check out our [documentation](https://docs.alchemyapi.io/), and for the latest news, follow us on [Twitter](https://twitter.com/AlchemyPlatform)_.

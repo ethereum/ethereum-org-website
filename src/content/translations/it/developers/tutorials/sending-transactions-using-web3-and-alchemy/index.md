@@ -14,7 +14,7 @@ source: Documentazione di Alchemy
 sourceUrl: https://docs.alchemy.com/alchemy/introduction/getting-started/sending-txs
 ---
 
-Questa è una guida per principianti per inviare transazioni di Ethereum usando web3. Ci sono tre fasi principali per inviare una transazione alla blockchain di Ethereum: creare, firmare e trasmettere. Le vedremo tutte e tre, sperando di rispondere a tutte le domande che potreste avere! In questo tutorial, useremo [Alchemy](https://www.alchemy.com/) per inviare le nostre transazioni alla catena di Ethereum. Puoi [creare qui un profilo di Alchemy gratuito](https://dashboard.alchemyapi.io/signup/).
+Questa è una guida per principianti per inviare transazioni di Ethereum usando web3. Ci sono tre fasi principali per inviare una transazione alla blockchain di Ethereum: creare, firmare e trasmettere. Le vedremo tutte e tre, sperando di rispondere a tutte le domande che potreste avere! In questo tutorial, useremo [Alchemy](https://www.alchemy.com/) per inviare le nostre transazioni alla catena di Ethereum. Puoi [creare qui un profilo di Alchemy gratuito](https://auth.alchemyapi.io/signup).
 
 **NOTA:** Questa guida riguarda la firma delle transazioni sul _backend_ per la tua app; se desideri integrare la firma delle transazioni sul frontend, dai un'occhiata all'integrazione di [ Web3 con un fornitore del browser](https://docs.alchemyapi.io/documentation/alchemy-web3#with-a-browser-provider).
 
@@ -61,7 +61,7 @@ Okay, ora che ci siamo tolti alcune di queste domande, passiamo al tutorial. Sen
 
 **NOTA:** Questa guida richiede un profilo di Alchemy, un indirizzo di Ethereum o portafoglio di Metamask, NodeJS e npm installato. Altrimenti, segui questi passaggi:
 
-1.  [Crea un profilo di Alchemy](https://dashboard.alchemyapi.io/signup/)
+1.  [Crea un profilo di Alchemy](https://auth.alchemyapi.io/signup)
 2.  [Crea un account di MetaMask](https://metamask.io/) (od ottieni un indirizzo di Ethereum)
 3.  [Segui questi passaggi per installare NodeJs e NPM](https://docs.alchemy.com/alchemy/guides/alchemy-for-macs)
 

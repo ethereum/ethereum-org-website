@@ -31,7 +31,7 @@ Podobnie jak w przypadku jakiegokolwiek połączenia sieciowego, nie należy zak
 
 Najprostszym sposobem na przetestowanie WebSockets jest zainstalowanie narzędzia wiersza poleceń do tworzenia żądań WebSocket, takich jak [wscat](https://github.com/websockets/wscat). Używając wscat, możesz wysyłać następujące żądania:
 
-_Uwaga: jeśli posiadasz konto Alchemy, możesz zastąpić `demo` własnym kluczem API. [Sign up for a free Alchemy account here!](https://dashboard.alchemyapi.io/signup/)_
+_Uwaga: jeśli posiadasz konto Alchemy, możesz zastąpić `demo` własnym kluczem API. [Sign up for a free Alchemy account here!](https://auth.alchemyapi.io/signup)_
 
 ```
 $ wscat -c wss://eth-mainnet.ws.alchemyapi.io/ws/demo
@@ -249,4 +249,4 @@ curl https://eth-mainnet.alchemyapi.io/v2/your-api-key
 
 ---
 
-[Zarejestruj się w Alchemy](https://dashboard.alchemyapi.io/signup/) za darmo, sprawdź [naszą dokumentację](https://docs.alchemyapi.io/) aby uzyskać najnowsze wiadomości, obserwuj nas na [Twitterze](https://twitter.com/AlchemyPlatform).
+[Zarejestruj się w Alchemy](https://auth.alchemyapi.io/signup) za darmo, sprawdź [naszą dokumentację](https://docs.alchemyapi.io/) aby uzyskać najnowsze wiadomości, obserwuj nas na [Twitterze](https://twitter.com/AlchemyPlatform).

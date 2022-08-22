@@ -31,7 +31,7 @@ Seperti koneksi jaringan mana pun, Anda tidak boleh menganggap bahwa WebSocket a
 
 Cara termudah untuk menguji WebSocket adalah menginstal peralatan baris perintah untuk membuat permintaan WebSocket, seperti [wscat](https://github.com/websockets/wscat). Dengan wscat, Anda bisa mengirim permintaan seperti berikut ini:
 
-_Catatan: jika Anda memiliki akun Alchemy, Anda bisa menggantikan `demo` dengan kunci API Anda sendiri. [Daftar akun Alchemy secara gratis di sini!](https://dashboard.alchemyapi.io/signup/)_
+_Catatan: jika Anda memiliki akun Alchemy, Anda bisa menggantikan `demo` dengan kunci API Anda sendiri. [Daftar akun Alchemy secara gratis di sini!](https://auth.alchemyapi.io/signup)_
 
 ```
 $ wscat -c wss://eth-mainnet.ws.alchemyapi.io/ws/demo
@@ -251,4 +251,4 @@ curl https://eth-mainnet.alchemyapi.io/v2/your-api-key
 
 ---
 
-[Daftar Alchemy](https://dashboard.alchemyapi.io/signup/) secara gratis, lihat [dokumentasi kami](https://docs.alchemyapi.io/), dan untuk berita terkini, ikuti kami di [Twitter](https://twitter.com/AlchemyPlatform).
+[Daftar Alchemy](https://auth.alchemyapi.io/signup) secara gratis, lihat [dokumentasi kami](https://docs.alchemyapi.io/), dan untuk berita terkini, ikuti kami di [Twitter](https://twitter.com/AlchemyPlatform).

@@ -14,7 +14,7 @@ source: Alchemy belgeleri
 sourceUrl: https://docs.alchemy.com/alchemy/tutorials/sending-txs
 ---
 
-Bu, Web3 kullanarak Ethereum işlemlerini göndermek için yeni başlayanlara uygun bir rehberdir. Ethereum blok zincirine bir işlem göndermek için üç ana adım vardır: oluşturma, imzalama ve yayınlama. Üçünü de gözden geçirerek aklınızdaki soruları cevaplamayı umuyoruz! Bu öğreticide, işlemlerimizi Ethereum zincirine göndermek için [Alchemy](https://www.alchemy.com/) kullanacağız. [Buradan ücretsiz bir Alchemy hesabı oluşturabilirsiniz](https://dashboard.alchemyapi.io/signup/).
+Bu, Web3 kullanarak Ethereum işlemlerini göndermek için yeni başlayanlara uygun bir rehberdir. Ethereum blok zincirine bir işlem göndermek için üç ana adım vardır: oluşturma, imzalama ve yayınlama. Üçünü de gözden geçirerek aklınızdaki soruları cevaplamayı umuyoruz! Bu öğreticide, işlemlerimizi Ethereum zincirine göndermek için [Alchemy](https://www.alchemy.com/) kullanacağız. [Buradan ücretsiz bir Alchemy hesabı oluşturabilirsiniz](https://auth.alchemyapi.io/signup).
 
 **NOT:** Bu kılavuz, uygulamanızın _arka ucunda_ işlem imzalamak içindir. İşlemlerinizi imzalamayı ön uca entegre etmek istiyorsanız [Web3'ü bir tarayıcı sağlayıcısı](https://docs.alchemyapi.io/documentation/alchemy-web3#with-a-browser-provider) ile entegre etmeye göz atın.
 
@@ -61,7 +61,7 @@ Pekala, şimdi bu sorulardan birkaçını aradan çıkardığımıza göre, öğ
 
 **NOT:** Bu kılavuz bir Alchemy hesabı, bir Ethereum adresi veya MetaMask cüzdanı, NodeJ'ler ve npm'nin kurulu olmasını gerektirir. Kurulu değilse şu adımları takip edin:
 
-1.  [Ücretsiz bir Alchemy hesabı oluşturun](https://dashboard.alchemyapi.io/signup/)
+1.  [Ücretsiz bir Alchemy hesabı oluşturun](https://auth.alchemyapi.io/signup)
 2.  [MetaMask hesabı oluşturun](https://metamask.io/) (veya bir Ethereum adresi alın)
 3.  [NodeJ'leri ve NPM'yi yüklemek için bu adımları izleyin](https://docs.alchemy.com/alchemy/guides/alchemy-for-macs)
 

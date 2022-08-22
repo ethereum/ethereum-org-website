@@ -25,7 +25,7 @@ Kami akan memandu Anda mulai dari mendaftar di Alchemy hingga menulis skrip web3
 
 ## 1. Mendaftar Akun Alchemy Secara Gratis {#sign-up-for-a-free-alchemy-account}
 
-Membuat akun Alchemy itu mudah, [daftar secara gratis di sini](https://dashboard.alchemyapi.io/signup/).
+Membuat akun Alchemy itu mudah, [daftar secara gratis di sini](https://auth.alchemyapi.io/signup).
 
 ## 2. Membuat Aplikasi Alchemy {#create-an-alchemy-app}
 
@@ -153,4 +153,4 @@ The latest block number is 11043912
 
 Not sure what to do next? Try deploying your first smart contract and get your hands dirty with some solidity programming in our [Hello World Smart Contract Guide](https://docs.alchemyapi.io/tutorials/hello-world-smart-contract), or test your dashboard knowledge with the [Dashboard Demo App](https://docs.alchemyapi.io/tutorials/demo-app)!
 
-_[Daftar Alchemy secara gratis](https://dashboard.alchemyapi.io/signup/), lihat [dokumentasi](https://docs.alchemyapi.io/) kami, dan untuk berita terbaru, ikuti kami di [Twitter](https://twitter.com/AlchemyPlatform)_.
+_[Daftar Alchemy secara gratis](https://auth.alchemyapi.io/signup), lihat [dokumentasi](https://docs.alchemyapi.io/) kami, dan untuk berita terbaru, ikuti kami di [Twitter](https://twitter.com/AlchemyPlatform)_.

@@ -14,7 +14,7 @@ source: Documentație Alchemy
 sourceUrl: https://docs.alchemy.com/alchemy/tutorials/sending-txs
 ---
 
-This is a beginner friendly guide to sending Ethereum transactions using web3. Există trei etape principale pentru a trimite o tranzacție în blockchain-ul Ethereum: crearea, semnarea și difuzarea. Le vom parcurge pe toate trei, în speranța că vom răspunde tuturor întrebărilor pe care le puteți avea! In this tutorial, we'll be using [Alchemy](https://www.alchemy.com/) to send our transactions to the Ethereum chain. You can [create a free Alchemy account here](https://dashboard.alchemyapi.io/signup/).
+This is a beginner friendly guide to sending Ethereum transactions using web3. Există trei etape principale pentru a trimite o tranzacție în blockchain-ul Ethereum: crearea, semnarea și difuzarea. Le vom parcurge pe toate trei, în speranța că vom răspunde tuturor întrebărilor pe care le puteți avea! In this tutorial, we'll be using [Alchemy](https://www.alchemy.com/) to send our transactions to the Ethereum chain. You can [create a free Alchemy account here](https://auth.alchemyapi.io/signup).
 
 **NOTE:** This guide is for signing your transactions on the _backend_ for your app, if you want to integrate signing your transactions on the frontend, check out integrating [Web3 with a browser provider](https://docs.alchemyapi.io/documentation/alchemy-web3#with-a-browser-provider).
 
@@ -61,7 +61,7 @@ This is what we will be using in this tutorial.
 
 **NOTE:** This guide requires an Alchemy account, an Ethereum address or MetaMask wallet, NodeJs, and npm installed. Daca nu, urmați acești pași:
 
-1.  [Creați un cont gratuit Alchemy](https://dashboard.alchemyapi.io/signup/)
+1.  [Creați un cont gratuit Alchemy](https://auth.alchemyapi.io/signup)
 2.  [Create MetaMask account](https://metamask.io/) (or get an Ethereum address)
 3.  [Urmați aceste etape pentru a instala „NodeJs” și „NPM”](https://docs.alchemy.com/alchemy/guides/alchemy-for-macs)
 

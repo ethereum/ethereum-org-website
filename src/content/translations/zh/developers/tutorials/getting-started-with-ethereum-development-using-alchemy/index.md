@@ -25,7 +25,7 @@ sourceUrl: https://medium.com/alchemy-api/getting-started-with-ethereum-developm
 
 ## 1. 注册免费 Alchemy 帐户 {#sign-up-for-a-free-alchemy-account}
 
-创建一个 Alchemy 帐户很容易。[在此免费注册](https://dashboard.alchemyapi.io/signup/)。
+创建一个 Alchemy 帐户很容易。[在此免费注册](https://auth.alchemyapi.io/signup)。
 
 ## 2. 创建一个 Alchemy 应用程序 {#create-an-alchemy-app}
 
@@ -153,4 +153,4 @@ The latest block number is 11043912
 
 不知道下一步怎么办？ 尝试部署您的第一个智能合约，并在我们的 [Hello World 智能合约指南](https://docs.alchemyapi.io/tutorials/hello-world-smart-contract)中用 solidity 编程，或者用 [Dashboard Demo App](https://docs.alchemyapi.io/tutorials/demo-app) 测试您的仪表盘知识！
 
-[免费注册 Alchemy](https://dashboard.alchemyapi.io/signup/)，查看我们的[文档](https://docs.alchemyapi.io/)，关注我们的[Twitter](https://twitter.com/AlchemyPlatform)获取最新消息。
+[免费注册 Alchemy](https://auth.alchemyapi.io/signup)，查看我们的[文档](https://docs.alchemyapi.io/)，关注我们的[Twitter](https://twitter.com/AlchemyPlatform)获取最新消息。
