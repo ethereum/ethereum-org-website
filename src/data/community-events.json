@@ -386,6 +386,15 @@
     "startDate": "2022-09-09",
     "endDate": "2022-09-11"
   },
+    {
+    "title": "Arab Blockchain Week 2022",
+    "to": "https://www.arabblockchainweek.com/",
+    "sponsor": null,
+    "location": "Hybrid",
+    "description": "ABW22 is a week-long online and in-person gathering that will feature all blockchain events targeting Arab regions. The decentralized community-organized initiative aspires to support the growth of blockchain and crypto adoption across the Arab region",
+    "startDate": "2022-10-01",
+    "endDate": "2022-10-08"
+  },
   {
     "title": "ETHBogotá",
     "to": "https://bogota.ethglobal.com",
