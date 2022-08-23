@@ -1,8 +1,9 @@
 import React from "react"
 import styled from "styled-components"
 import BannerNotification from "../BannerNotification"
-import Link from "../Link"
 import Translation from "../Translation"
+
+import { TranslationKey } from "../../utils/translations"
 
 const StyledBannerNotification = styled(BannerNotification)`
   display: flex;
@@ -19,10 +20,14 @@ const StyledBannerNotification = styled(BannerNotification)`
   text-align: center;
 `
 
-const PostMergeBanner: React.FC = () => (
-  <StyledBannerNotification shouldShow>
+export interface IProps {
+  translationString: TranslationKey
+}
+
+const PostMergeBanner: React.FC<IProps> = ({ translationString }) => (
+  <StyledBannerNotification>
     <p>
-      <Translation id="page-upgrades-post-merge-banner" />
+      <Translation id={translationString} />
     </p>
   </StyledBannerNotification>
 )
