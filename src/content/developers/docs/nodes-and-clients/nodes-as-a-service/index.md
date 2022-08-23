@@ -11,11 +11,17 @@ preMergeBanner: true
 
 Running your own [Ethereum node](/developers/docs/nodes-and-clients/#what-are-nodes-and-clients) can be challenging, especially when getting started or while scaling fast. There are a [number of services](#popular-node-services) that run optimized node infrastructures for you, so you can focus on developing your application or product instead. We'll explain how node services work, the pros and cons for using them and list providers if you are interested in getting started.
 
-**Note: it has been common for users to run consensus clients locally and use a node-as-a-service provider in place of a local execution client. This will not be possible at The Merge - users will be required to run BOTH clients locally. Users relying on node-as-a-service providers for their consensus clients will not merge correctly and will not be able to follow the Ethereum chain. Now is the time to install a local execution client!**
-
 ## Prerequisites {#prerequisites}
 
 If you don't already have an understanding of what nodes and clients are, check out [Nodes and clients](/developers/docs/nodes-and-clients/).
+
+## Stakers {#stakoooooooooooooors}
+
+Solo stakers must run their own infrastructure rather than relying on third-party providers. This means running an execution client coupled with a consensus client. Before [The Merge](/upgrades/merge), it was possible to run a consensus client only and use a centralized provider for execution data; this is no longer possible - a solo staker must run both clients. However, there are services available to ease this process.
+
+[Read more on running a node](/developers/docs/nodes-and-clients/run-a-node/).
+
+The services described on this page are for non-staking nodes.
 
 ## How do node services work? {#how-do-node-services-work}
 
@@ -199,16 +205,14 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Suitable for Developers to Enterprises
 - [**Rivet**](https://rivet.cloud/)
   - [Docs](https://rivet.readthedocs.io/en/latest/)
-  - Features
-    - Free tier option
-    - Scale as you go
+  - Features - Free tier option - Scale as you go 
 -[**SenseiNode**](https://senseinode.com)
   - [Docs](https://docs.senseinode.com/)
-  -  Features
-    - Dedicated and Share nodes
-    - Dashboard
-    - Hosting off AWS on multiple hosting providers accross different locations in Latin America
-    - Prysm and Lighthouse clients
+  - Features
+  - Dedicated and Share nodes
+  - Dashboard
+  - Hosting off AWS on multiple hosting providers accross different locations in Latin America
+  - Prysm and Lighthouse clients
 - [**SettleMint**](https://console.settlemint.com/)
   - [Docs](https://docs.settlemint.com/)
   - Features
