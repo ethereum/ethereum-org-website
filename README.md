@@ -1353,6 +1353,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://linkedin.com/in/vinhloc30796"><img src="https://avatars.githubusercontent.com/u/19675202?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Loc Nguyen</b></sub></a><br /><a href="#content-vinhloc30796" title="Content">🖋</a></td>
     <td align="center"><a href="https://github.com/north-vanhooser"><img src="https://avatars.githubusercontent.com/u/86130010?v=4?s=100" width="100px;" alt=""/><br /><sub><b>north-vanhooser</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=north-vanhooser" title="Documentation">📖</a></td>
   </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/othaime-en"><img src="https://avatars.githubusercontent.com/u/61498231?v=4?s=100" width="100px;" alt=""/><br /><sub><b>othaime-en</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=othaime-en" title="Code">💻</a></td>
+  </tr>
 </table>
 
 <!-- markdownlint-restore -->
