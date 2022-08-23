@@ -27,13 +27,13 @@ Unlike HTTP, with WebSockets, you don't need to continuously make requests when 
 
 As with any network connection, you should not assume that a WebSocket will remain open forever without interruption, but correctly handling dropped connections and reconnection by hand can be challenging to get right. Another downside of WebSockets is that you do not get HTTP status codes in the response, but only the error message.
 
-​[Alchemy Web3](https://docs.alchemyapi.io/documentation/alchemy-web3) automatically adds handling for WebSocket failures and retries with no configuration necessary.
+​[Alchemy Web3](https://docs.alchemy.com/reference/api-overview) automatically adds handling for WebSocket failures and retries with no configuration necessary.
 
 ## Try it out {#try-it-out}
 
 The easiest way to test out WebSockets is to install a command line tool for making WebSocket requests such as [wscat](https://github.com/websockets/wscat). Using wscat, you can send requests as follows:
 
-_Note: if you have an Alchemy account you can replace `demo` with your own API key. [Sign up for a free Alchemy account here!](https://dashboard.alchemyapi.io/signup/)_
+_Note: if you have an Alchemy account you can replace `demo` with your own API key. [Sign up for a free Alchemy account here!](https://auth.alchemyapi.io/signup)_
 
 ```
 $ wscat -c wss://eth-mainnet.ws.alchemyapi.io/ws/demo
@@ -253,4 +253,4 @@ curl https://eth-mainnet.alchemyapi.io/v2/your-api-key
 
 ---
 
-[Sign up with Alchemy](https://dashboard.alchemyapi.io/signup/) for free, check out [our documentation](https://docs.alchemyapi.io/), and for the latest news, follow us on [Twitter](https://twitter.com/AlchemyPlatform).
+[Sign up with Alchemy](https://auth.alchemyapi.io/signup) for free, check out [our documentation](https://docs.alchemyapi.io/), and for the latest news, follow us on [Twitter](https://twitter.com/AlchemyPlatform).
