@@ -23,7 +23,7 @@ Ces bibliothèques suppriment une grande partie de la complexité d'une interact
 
 ### Se connecter à des nœud Ethereum {#connect-to-ethereum-nodes}
 
-En utilisant des fournisseurs, les bibliothèques vous permettent de vous connecter à Ethereum et de lire ses données, que ce soit sur JSON-RPC, INFURA, Etherscan, Alchemy ou Metamask.
+En utilisant des fournisseurs, les bibliothèques vous permettent de vous connecter à Ethereum et de lire ses données, que ce soit sur JSON-RPC, INFURA, Etherscan, Alchemy ou MetaMask.
 
 **Exemple Ether**
 
@@ -265,7 +265,7 @@ ethers.utils.formatEther(balance)
 
 **Alchemyweb3 -** **_Enveloppe autour de Web3.js avec nouvelles tentatives automatiques et API améliorées._**
 
-- [Documentation](https://docs.alchemyapi.io/documentation/alchemy-web3)
+- [Documentation](https://docs.alchemy.com/reference/api-overview)
 - [GitHub](https://github.com/alchemyplatform/alchemy-web3)
 
 **Alchemy NFT API -** **_API pour récupérer les données NFT, y compris la détention, les attributs de métadonnées et plus encore._**

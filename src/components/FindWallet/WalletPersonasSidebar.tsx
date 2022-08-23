@@ -1,6 +1,7 @@
 // Libraries
-import React, { useContext } from "react"
-import styled, { ThemeContext } from "styled-components"
+import React from "react"
+import { useTheme } from "@emotion/react"
+import styled from "@emotion/styled"
 
 // Components
 import Icon from "../Icon"
@@ -162,21 +163,22 @@ const IconContainer = styled.div`
 `
 
 const StyledIcon = styled(Icon)<{ selected: boolean }>`
-  width: 1.3rem;
-  height: 1.3rem;
+  border-radius: 100%;
+  width: 1rem;
+  height: 1rem;
   margin: 0 0.25rem;
   fill: ${(props) =>
-    props.selected === true ? props.theme.colors.white : "rgba(0, 0, 0, 0)"};
+    props.selected === true ? props.theme.colors.primary : "rgba(0, 0, 0, 0)"};
   background: ${(props) =>
     props.selected === true
       ? props.theme.colors.primary
       : props.theme.colors.priceCardBackground};
-  border-radius: 4px;
-  border: 1px solid
+  outline: 1.5px solid
     ${(props) =>
       props.selected === true
         ? props.theme.colors.primary
         : props.theme.colors.text};
+  outline-offset: 3px;
 `
 
 // Types
@@ -272,7 +274,7 @@ const filterLabels = {
     icon: <BuyCrypto />,
   },
   withdraw_crypto: {
-    label: "Withdraw crypto",
+    label: "Sell for fiat",
     icon: <WithdrawCrypto />,
   },
   multisig: {
@@ -288,7 +290,7 @@ const filterLabels = {
     icon: <ERC20Support />,
   },
   eip_1559_support: {
-    label: "EIP-1559 support",
+    label: "Fee optimization",
     icon: <Eip1559 />,
   },
 }
@@ -299,7 +301,7 @@ const WalletPersonasSidebar = ({
   selectedPersona,
   setSelectedPersona,
 }) => {
-  const themeContext = useContext(ThemeContext)
+  const theme = useTheme()
   const personas: Personas[] = [
     {
       title: "New to crypto",
@@ -505,7 +507,7 @@ const WalletPersonasSidebar = ({
       {personas.map((persona, idx) => {
         return (
           <Persona
-            isDark={themeContext.isDark}
+            isDark={theme.isDark}
             selected={selectedPersona === idx}
             onClick={() => {
               if (idx === selectedPersona) {
@@ -532,7 +534,7 @@ const WalletPersonasSidebar = ({
                 aria-label={`${persona.title} filter`}
               >
                 <StyledIcon
-                  name="check"
+                  name="circle"
                   selected={selectedPersona === idx}
                   size="2rem"
                 />

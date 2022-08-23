@@ -1,6 +1,6 @@
 import React from "react"
 import { Twemoji } from "react-emoji-render"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 import { margin, MarginProps } from "styled-system"
 
 export interface IProps extends MarginProps {

@@ -73,6 +73,6 @@ Les utilisateurs peuvent interroger le solde en ether de n'importe quel [compte]
 ## Complément d'information {#further-reading}
 
 - [Définition d'Ether et d'Ethereum](https://www.cmegroup.com/education/courses/introduction-to-ether/defining-ether-and-ethereum.html) – _Groupe CME_
-- [Livre blanc Ethereum ](/whitepaper/): La proposition originale pour Ethereum. Ce document contient une description de l'ether et les motivations de sa création.
+- [Livre blanc Ethereum](/whitepaper/): La proposition originale pour Ethereum. Ce document contient une description de l'ether et les motivations de sa création.
 
 _Une ressource communautaire vous a aidé ? Modifiez cette page et ajoutez-la !_

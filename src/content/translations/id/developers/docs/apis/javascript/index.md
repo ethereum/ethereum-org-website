@@ -265,7 +265,7 @@ ethers.utils.formatEther(balance)
 
 **Alchemyweb3 -** **_Wrapper Web3.js dengan percobaan ulang otomatis dan api yang ditingkatkan._**
 
-- [Dokumentasi](https://docs.alchemyapi.io/documentation/alchemy-web3)
+- [Dokumentasi](https://docs.alchemy.com/reference/api-overview)
 - [GitHub](https://github.com/alchemyplatform/alchemy-web3)
 
 ## Bacaan lebih lanjut {#further-reading}

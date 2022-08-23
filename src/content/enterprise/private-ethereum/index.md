@@ -18,7 +18,7 @@ Some collaborative efforts to make Ethereum enterprise friendly have been put to
 - [Enterprise Ethereum Alliance](https://entethalliance.org/)
   The EEA enables organizations to adopt and use Ethereum technology in their daily business operations. We empower the Ethereum ecosystem to develop new business opportunities, drive industry adoption, and learn and collaborate with one another.
 - [Hyperledger](https://hyperledger.org)
-  _Hyperledger is an open source collaborative effort created to advance cross-industry blockchain technologies. It is a global collaboration, hosted by The Linux Foundation, including leaders in finance, banking, Internet of Things, supply chains, manufacturing and Technology. The foundation has some projects in it that work with the Ethereum stack:, including [Besu](https://www.hyperledger.org/use/besu) and [Burrow](https://www.hyperledger.org/projects/hyperledger-burrow)._
+  _Hyperledger is an open source collaborative effort created to advance cross-industry blockchain technologies. It is a global collaboration, hosted by The Linux Foundation, including leaders in finance, banking, Internet of Things, supply chains, manufacturing and Technology. The foundation has some projects in it that work with the Ethereum stack, including [Besu](https://www.hyperledger.org/use/besu) and [Burrow](https://www.hyperledger.org/projects/hyperledger-burrow)._
 
 ### Protocol and infrastructure {#protocol-and-infrastructure}
 

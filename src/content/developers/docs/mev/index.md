@@ -56,7 +56,9 @@ It works like this: if two DEXes are offering a token at two different prices, s
 
 Lending protocol liquidations present another well-known MEV opportunity.
 
-Lending protocols like Maker and Aave function by requiring users to deposit some sort of collateral (e.g. ETH). Users can then borrow different assets and tokens from others depending on what they need (for example, they may borrow MKR if they want to vote on a MakerDAO governance proposal or SUSHI if they want to earn a portion of trading fees on Sushiswap) up to a certain amount of their deposited collateral — for instance, 30% (the exact borrowing power percentage is determined by the protocol). The users they borrow the other tokens from function as lenders in this case.
+Lending protocols like Maker and Aave require users to deposit some collateral (e.g. ETH). This deposited collateral is then used to then lend out to other users.
+
+Users can then borrow assets and tokens from others depending on what they need (e.g. you might borrow MKR if you want to vote in a MakerDAO governance proposal) up to a certain percentage of their deposited collateral. For example, if the borrowing amount is a maximum of 30%, a user who deposits 100 DAI into the protocol can borrow up to 30 DAI worth of another asset. The protocol determines the exact borrowing power percentage.
 
 As the value of a borrower's collateral fluctuates, so too does their borrowing power. If, due to market fluctuations, the value of borrowed assets exceeds say, 30% of the value of their collateral (again, the exact percentage is determined by the protocol), the protocol typically allows anyone to liquidate the collateral, instantly paying off the lenders (this is similar to how [margin calls](https://www.investopedia.com/terms/m/margincall.asp) work in traditional finance). If liquidated, the borrower usually has to pay a hefty liquidation fee, some of which goes to the liquidator — which is where the MEV opportunity comes in.
 
@@ -129,3 +131,4 @@ As DeFi grows and increases in popularity, MEV may soon significantly outweigh t
 - [Escaping the Dark Forest](https://samczsun.com/escaping-the-dark-forest/)
 - [Flashbots: Frontrunning the MEV Crisis](https://medium.com/flashbots/frontrunning-the-mev-crisis-40629a613752)
 - [@bertcmiller's MEV Threads](https://twitter.com/bertcmiller/status/1402665992422047747)
+- [The Hitchhikers Guide To Ethereum](https://members.delphidigital.io/reports/the-hitchhikers-guide-to-ethereum)

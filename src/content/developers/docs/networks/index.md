@@ -62,7 +62,6 @@ Sepolia is a proof-of-stake testnet. Although Sepolia is still running, it is no
 - [Sepolia faucet](https://faucet.sepolia.dev/)
 - [FaucETH](https://fauceth.komputing.org)
 
-
 #### Ropsten _(deprecated)_ {#ropsten}
 
 _Note, [the Ropsten testnet is deprecated](https://github.com/ethereum/pm/issues/460) and will no longer receive protocol upgrades. Please consider migrating your applications to Sepolia or Goerli._
@@ -146,4 +145,4 @@ If a public Ethereum network is like the public internet, a consortium network i
 
 ## Further reading {#further-reading}
 
-_Know of a community resource that helped you? Edit this page and add it!_
+- [The Evolution of Ethereum Testnets](https://etherworld.co/2022/08/19/the-evolution-of-ethereum-testnet/)

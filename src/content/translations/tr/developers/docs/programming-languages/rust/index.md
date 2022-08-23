@@ -39,7 +39,7 @@ Başlamadan önce daha temel bir bilgiye mi ihtiyacınız var? [ethereum.org/lea
 
 - [Ethereum benzeri ağ ile etkileşim kurmak için pwasm_ethereum externs kütüphanesi](https://github.com/openethereum/pwasm-ethereum)
 - [JavaScript ve Rust Kullanarak Merkezsiz Bir Sohbet Oluşturun](https://medium.com/perlin-network/build-a-decentralized-chat-using-javascript-rust-webassembly-c775f8484b52)
-- [Vue.js ve Rust kullanarak Merkezietsiz bir Yapılacaklar Listesi Uygulaması oluşturun ](https://medium.com/@jjmace01/build-a-decentralized-todo-app-using-vue-js-rust-webassembly-5381a1895beb)
+- [Vue.js ve Rust kullanarak Merkezietsiz bir Yapılacaklar Listesi Uygulaması oluşturun](https://medium.com/@jjmace01/build-a-decentralized-todo-app-using-vue-js-rust-webassembly-5381a1895beb)
 - [Enigma'ya Başlarken - Rust Programlama Dilinde](https://blog.enigma.co/getting-started-with-discovery-the-rust-programming-language-4d1e0b06de15)
 - [Gizli Sözleşmelere Giriş](https://blog.enigma.co/getting-started-with-enigma-an-intro-to-secret-contracts-cdba4fe501c2)
 - [Oasis üzerinde Solidity Sözleşmeleri Dağıtma (Bileşik)](https://docs.oasis.dev/tutorials/deploy-solidity.html#deploy-using-truffle)

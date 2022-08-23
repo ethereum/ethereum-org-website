@@ -156,7 +156,7 @@ First, let’s define a function named `mintNFT(tokenData)` and create our trans
 
 - `'data': nftContract.methods.mintNFT(PUBLIC_KEY, md).encodeABI()` — The computation we wish to perform in this transaction — which in this case is minting a NFT
 
-Your <code>mint-nft.js</code> file should look like this now:
+Your `mint-nft.js` file should look like this now:
 
 ```js
    require('dotenv').config();

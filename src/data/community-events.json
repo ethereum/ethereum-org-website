@@ -1,5 +1,14 @@
 [
   {
+    "title": "ETHVietnam",
+    "to": "https://www.eth-vietnam.com/",
+    "sponsor": null,
+    "location": "Ho Chi Minh City, Vietnam",
+    "description": "ETHVietnam is the biggest conference ever that brings all top experts in the industry to provide more value to the community.",
+    "startDate": "2022-11-25",
+    "endDate": "2022-11-27"
+  },
+  {
     "title": "ETHDenver",
     "to": "https://www.ethdenver.com/",
     "sponsor": null,
@@ -373,9 +382,18 @@
     "to": "https://www.ethereumbrasil.com/",
     "sponsor": null,
     "location": "São Paulo, Brazil",
-    "description": "A event dedicated to support the construction of the brazilian web3 builder community.",
-    "startDate": "2022-09-27",
-    "endDate": "2022-09-29"
+    "description": "We are building both a hub for regional projects with big ambitions; and, a gateway for local and international brands to connect with the Ethereum Brasil builder community.",
+    "startDate": "2022-09-09",
+    "endDate": "2022-09-11"
+  },
+  {
+    "title": "Arab Blockchain Week 2022",
+    "to": "https://www.arabblockchainweek.com/",
+    "sponsor": null,
+    "location": "Hybrid",
+    "description": "ABW22 is a week-long online and in-person gathering that will feature all blockchain events targeting Arab regions. The decentralized community-organized initiative aspires to support the growth of blockchain and crypto adoption across the Arab region",
+    "startDate": "2022-10-01",
+    "endDate": "2022-10-08"
   },
   {
     "title": "ETHBogotá",

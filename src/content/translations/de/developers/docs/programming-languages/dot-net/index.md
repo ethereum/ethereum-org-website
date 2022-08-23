@@ -77,7 +77,7 @@ Sind Sie an weiteren Informationen interessiert? Sehen Sie sich [ethereum.org/de
 
 ## .NET-Community-Mitwirkende {#dot-net-community-contributors}
 
-Bei Nethereum halten wir uns meistens bei [Gitter](https://gitter.im/Nethereum/Nethereum) auf, wo jeder gerne Fragen stellen oder beantworten, Hilfe bekommen oder einfach nur beobachten kann. Fühlen Sie sich frei, eine PR zu erstellen oder ein neues Issue im [Nethereum Github Repository](https://github.com/Nethereum) zu eröffnen oder einfach nur die vielen Seiten/Beispielprojekte zu durchstöbern, die wir haben. Sie können uns auch auf [Discord](https://discord.gg/jQPrR58FxX) finden.
+Bei Nethereum halten wir uns meistens bei [Gitter](https://gitter.im/Nethereum/Nethereum) auf, wo jeder gerne Fragen stellen oder beantworten, Hilfe bekommen oder einfach nur beobachten kann. Fühlen Sie sich frei, eine PR zu erstellen oder ein neues Issue im [Nethereum GitHub Repository](https://github.com/Nethereum) zu eröffnen oder einfach nur die vielen Seiten/Beispielprojekte zu durchstöbern, die wir haben. Sie können uns auch auf [Discord](https://discord.gg/jQPrR58FxX) finden.
 
 Bei Nethermind nutzen wir [Gitter](https://gitter.im/nethermindeth/nethermind) um in Kontakt zu treten. Für PRs oder Probleme können Sie im [Nethermind Repository](https://github.com/NethermindEth/nethermind) fündig werden.
 

@@ -49,7 +49,7 @@ EVM 作为一个[堆栈机](https://wikipedia.org/wiki/Stack_machine)运行，�
 
 然而，合约确实包含一个 Merkle Patricia _存储_ trie（作为可字寻址的字数组），该 trie 与帐户和部分全局状态关联。
 
-已编译的智能合约字节码作为许多 EVM [ opcodes ](/developers/docs/evm/opcodes)执行，它们执行标准的堆栈操作，例如 ` XOR`、` AND`、` ADD`、`SUB`等。 EVM 还实现了一些区块链特定的堆栈操作，如 `ADDRESS`、`BALANCE`、`BLOCKHASH` 等。
+已编译的智能合约字节码作为许多 EVM [opcodes](/developers/docs/evm/opcodes)执行，它们执行标准的堆栈操作，例如 ` XOR`、`AND`、`ADD`、`SUB` 等。 EVM 还实现了一些区块链特定的堆栈操作，如 `ADDRESS`、`BALANCE`、`BLOCKHASH` 等。
 
 ![表明 EVM 操作需要 Gas 的图表](../gas/gas.png) _图表改编自[以太坊 EVM 说明](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
@@ -65,7 +65,6 @@ EVM 的所有实现都必须遵守以太坊黄皮书中描述的规范。
 - [evmone](https://github.com/ethereum/evmone) - _C++_
 - [ethereumjs-vm](https://github.com/ethereumjs/ethereumjs-vm) - _JavaScript_
 - [eEVM](https://github.com/microsoft/eevm) - _C++_
-- [Hyperledger Burrow](https://github.com/hyperledger/burrow) - _Go_
 
 ## 延伸阅读 {#further-reading}
 

@@ -3,7 +3,7 @@ import { graphql, PageProps } from "gatsby"
 import { useIntl } from "react-intl"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 
 import ButtonLink from "../components/ButtonLink"
 import Breadcrumbs from "../components/Breadcrumbs"
@@ -21,9 +21,10 @@ import Pill from "../components/Pill"
 import RandomAppList from "../components/RandomAppList"
 import ExpandableCard from "../components/ExpandableCard"
 import Roadmap from "../components/Roadmap"
-import TableOfContents from "../components/TableOfContents"
+import TableOfContents, {
+  Item as ItemTableOfContents,
+} from "../components/TableOfContents"
 import Translation from "../components/Translation"
-import TranslationsInProgress from "../components/TranslationsInProgress"
 import SectionNav from "../components/SectionNav"
 import DocLink from "../components/DocLink"
 import GhostCard from "../components/GhostCard"
@@ -133,7 +134,6 @@ const components = {
   Divider,
   SectionNav,
   Pill,
-  TranslationsInProgress,
   Emoji,
   DocLink,
   ExpandableCard,
@@ -170,7 +170,7 @@ const StaticPage = ({
     ? parent.fields.gitLogLatestDate
     : parent.mtime
 
-  const tocItems = mdx.tableOfContents?.items
+  const tocItems = mdx.tableOfContents?.items as Array<ItemTableOfContents>
   const { editContentUrl } = siteData.siteMetadata || {}
   const absoluteEditPath =
     relativePath.split("/").includes("whitepaper") ||
@@ -198,7 +198,7 @@ const StaticPage = ({
           editPath={absoluteEditPath}
           items={tocItems}
           isMobile={true}
-          maxDepth={mdx.frontmatter.sidebarDepth}
+          maxDepth={mdx.frontmatter.sidebarDepth!}
         />
         <MDXProvider components={components}>
           <MDXRenderer>{mdx.body}</MDXRenderer>
@@ -209,7 +209,7 @@ const StaticPage = ({
         <TableOfContents
           editPath={absoluteEditPath}
           items={tocItems}
-          maxDepth={mdx.frontmatter.sidebarDepth}
+          maxDepth={mdx.frontmatter.sidebarDepth!}
         />
       )}
     </Page>

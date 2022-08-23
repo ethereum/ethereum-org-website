@@ -23,7 +23,7 @@ Além de fornecer uma especificação técnica para mudanças, as EIPs são a un
 
 ## Histórico de EIPs {#history-of-eips}
 
-O repositório Github [Propostas de Melhorias do Ethereum (EIPs)](https://github.com/ethereum/EIPs) foi criado em outubro de 2015. O processo EIP é baseado no processo de [Propostas de Melhorias do Bitcoin (BIPs)](https://github.com/bitcoin/bips) que, por sua vez, é baseado no processo [Propostas de Melhorias do Python (PEPs)](https://www.python.org/dev/peps/).
+O repositório GitHub [Propostas de Melhorias do Ethereum (EIPs)](https://github.com/ethereum/EIPs) foi criado em outubro de 2015. O processo EIP é baseado no processo de [Propostas de Melhorias do Bitcoin (BIPs)](https://github.com/bitcoin/bips) que, por sua vez, é baseado no processo [Propostas de Melhorias do Python (PEPs)](https://www.python.org/dev/peps/).
 
 Os editores da EIP têm a tarefa de analisar EIPs por coerência técnica, ortografia/gramática corretas e estilo de código. Martin Becze, Vitalik Buterin, Gavin Wood e alguns outros foram os editores originais de EIP de 2015 até o final de 2016. Os editores atuais de EIP são:
 

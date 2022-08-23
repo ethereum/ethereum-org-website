@@ -91,7 +91,7 @@ Há uma alternativa descentralizada para a maioria dos serviços financeiros. Ma
 
 ### Envie dinheiro ao redor do mundo rapidamente {#send-money}
 
-Como um blockchain, o Ethereum é projetado para o envio de transações de forma segura e de modo global. Assim como o Bitcoin, o Ethereum torna o envio de dinheiro ao redor do mundo tão fácil quanto enviar um e-mail. Basta digitar o nome do seu beneficiário [nome ENS ](/nft/#nft-domains) (como bob.eth) ou o endereço de conta da respectiva carteira e seu pagamento será enviado em minutos (normalmente). Para enviar ou receber pagamentos, você precisará de uma [carteira](/wallets/).
+Como um blockchain, o Ethereum é projetado para o envio de transações de forma segura e de modo global. Assim como o Bitcoin, o Ethereum torna o envio de dinheiro ao redor do mundo tão fácil quanto enviar um e-mail. Basta digitar o nome do seu beneficiário [nome ENS](/nft/#nft-domains) (como bob.eth) ou o endereço de conta da respectiva carteira e seu pagamento será enviado em minutos (normalmente). Para enviar ou receber pagamentos, você precisará de uma [carteira](/wallets/).
 
 <ButtonLink to="/dapps/?category=finance">
   Ver dapps de pagamento

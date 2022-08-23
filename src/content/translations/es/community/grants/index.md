@@ -27,14 +27,14 @@ Estos programas apoyan al ecosistema Ethereum ofreciendo subvenciones para una a
 Estos proyectos han creado sus propias subvenciones para proyectos con fines de desarrollo y experimentación de su propia tecnología.
 
 - [Programa de Subvenciones Aave](https://aavegrants.org/) – _[Aave](https://aave.com/) subvenciones DAO_
-- [Balancer](https://forms.gle/c68e4fM7JHCQkPkN7): _[fondo de ecosistemas](https://balancer.fi/) Balancer_
+- [Balancer](https://balancergrants.notion.site/Balancer-Community-Grants-23e562c5bc4347cd8304637bff0058e6): _[fondo de ecosistemas](https://balancer.fi/) Balancer_
 - [Programa de subvenciones Compound](https://compoundgrants.org/): _[ecosistema financiero](https://compound.finance/) Compound_
 - [Programa de subvenciones Consensys](https://consensys.net/grants/): _[Consensys:](https://consensys.net/) financiación de cadena de bloques & subvenciones de Ethereum_
 - [dYdX Programa de subvenciones](https://dydxgrants.com/): _[dYdX](https://dydx.exchange/) intercambio descentralizado_
 - [Lido Ecosystem Grants Organisation (LEGO)](https://lego.lido.fi/): _[ecosistema financiero](https://lido.fi/) Lido_
 - [Programa de subvenciones mStable](https://docs.mstable.org/advanced/grants-program) - _[comunidad](https://mstable.org/) mStable_
-- [TheGraph](https://airtable.com/shrdfvnFvVch3IOVm) - _[ecosistema ](https://thegraph.com/)The Graph_
-- [Programa de subvenciones Uniswap](https://www.unigrants.org/): _[comunidad ](https://uniswap.org/)Uniswap_
+- [TheGraph](https://airtable.com/shrdfvnFvVch3IOVm) - _[ecosistema](https://thegraph.com/) The Graph_
+- [Programa de subvenciones Uniswap](https://www.unigrants.org/): _[comunidad](https://uniswap.org/) Uniswap_
 
 ## Financiamiento cuadrático {#quadratic-funding}
 

@@ -22,7 +22,7 @@ Crie aplicações descentralizadas sobre o Ethereum e interaja com contratos int
 
 Precisa de uma introdução geral? Confira [ethereum.org/learn](/learn/) ou [ethereum.org/developers](/developers/).
 
-- [Cadeia de blocos explicada ](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
+- [Cadeia de blocos explicada](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
 - [Entendendo os contratos inteligentes](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
 - [Escreva seu primeiro contrato inteligente](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
 - [Aprenda como Compilar e Implantar em Solidity](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)

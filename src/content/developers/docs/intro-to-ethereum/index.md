@@ -18,7 +18,6 @@ Every computer in the network must agree upon each new block and the chain as a 
 
 Ethereum uses a [proof-of-stake-based consensus mechanism](/developers/docs/consensus-mechanisms/pos/). Anyone who wants to add new blocks to the chain must stake at least 32 ETH into the deposit contract and run validator software. They then can be randomly selected to propose blocks that other validators check and add to the blockchain. In this model, there is usually only one chain, but network latency and dishonest behavior can cause multiple blocks to exist at the same position near the head of the chain. To resolve this, a fork-choice algorithm selects one canonical set of blocks. The blocks selected are the ones that form the heaviest possible chain, where 'heavy' refers to the number of validators that have endorsed the blocks (weighted by the ETH they have staked). There is a system of rewards and penalties that strongly incentivize participants to be honest and online as much as possible.
 
-
 If you want to see how blockchain hashes data and then the previous block references all the past blocks, be sure to check out [this demo](https://andersbrownworth.com/blockchain/blockchain) by Anders Brownworth and watch the accompanying video below.
 
 Watch Anders explain hashes in blockchains:
@@ -116,4 +115,4 @@ _Know of a community resource that helped you? Edit this page and add it!_
 
 ## Related tutorials {#related-tutorials}
 
-- [A developer's guide to Ethereum, part 1 ](/developers/tutorials/a-developers-guide-to-ethereum-part-one/) _– A very beginner-friendly exploration of Ethereum using Python and web3.py_
+- [A developer's guide to Ethereum, part 1](/developers/tutorials/a-developers-guide-to-ethereum-part-one/) _– A very beginner-friendly exploration of Ethereum using Python and web3.py_

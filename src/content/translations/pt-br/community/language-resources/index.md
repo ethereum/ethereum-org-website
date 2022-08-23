@@ -93,7 +93,7 @@ Se você for bilíngue e deseja nos ajudar a alcançar mais pessoas, também pod
 - [Ethereum Madrid](https://ethereummadrid.com/): blockchain, DeFi e cursos, eventos e blog sobre governança
 - [Cointelegraph](https://es.cointelegraph.com/ethereum-for-beginners): guia sobre Ethereum em espanhol para iniciantes
 - [Tutoriais online](https://tutoriales.online/curso/solidity): aprenda Solidity e programação em Ethereum
-- [Curso de introdução ao desenvolvimento de Ethereum ](https://youtube.com/playlist?list=PLTqiwJDd_R8y9pfUBjhkVa1IDMwyQz-fU): fundamentos, testes e implantação em Solidity do seu primeiro contrato inteligente
+- [Curso de introdução ao desenvolvimento de Ethereum](https://youtube.com/playlist?list=PLTqiwJDd_R8y9pfUBjhkVa1IDMwyQz-fU): fundamentos, testes e implantação em Solidity do seu primeiro contrato inteligente
 - [Curso de introdução à segurança e hacking na Ethereum](https://youtube.com/playlist?list=PLTqiwJDd_R8yHOvteko_DmUxUTMHnlfci): entendendo as vulnerabilidades comuns e os problemas de segurança em contratos inteligentes reais
 - [Curso de introdução ao desenvolvimento em DeFi](https://youtube.com/playlist?list=PLTqiwJDd_R8zZiP9_jNdaPqA3HqoW2lrS): aprendendo como funcionam os contratos inteligentes de DeFi em Solidity e criando seu próprio Automated Market Maker
 

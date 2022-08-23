@@ -1,6 +1,6 @@
 import React, { useContext } from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import { ThemeContext } from "styled-components"
+import { useTheme } from "@emotion/react"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { useIntl } from "react-intl"
 import { translateMessageId } from "../utils/translations"
@@ -9,8 +9,8 @@ export interface IProps {}
 
 const Logo: React.FC<IProps> = () => {
   const intl = useIntl()
-  const themeContext = useContext(ThemeContext)
-  const isDarkTheme = themeContext.isDark
+  const theme = useTheme()
+  const isDarkTheme = theme.isDark
   const data = useStaticQuery(graphql`
     {
       dark: file(relativePath: { eq: "ef-logo.png" }) {

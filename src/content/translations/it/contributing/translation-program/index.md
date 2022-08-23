@@ -11,14 +11,15 @@ Il Programma di Traduzione è uno sforzo collaborativo per tradurre ethereum.org
 
 I nostri progressi finora:
 
-- [**Oltre 3.200** traduttori](/contributing/translation-program/acknowledgements/)
-- [**43** lingue attive sul sito](/languages/)
+- [**Oltre 3,600** traduttori](/contributing/translation-program/contributors/)
+- [**46** lingue attive sul sito](/languages/)
 - [**2,9 milioni** di parole tradotte nel 2021](/contributing/translation-program/acknowledgements/)
+- [**1,5 milioni** di parole tradotte nel 2022 finora](/contributing/translation-program/acknowledgements/)
 
 Se vuoi essere coinvolto e aiutarci a far crescere la comunità globale di Ethereum traducendo il sito nella tua lingua, segui i passaggi seguenti!
 
 <InfoBanner emoji=":tada:">
-  Dai un'occhiata alla nostra pagina <Link to="/contributing/translation-program/acknowledgements/">Riconoscimenti per i Traduttori</Link> e{" "} rivendica il tuo token POAP! Se hai tradotto ethereum.org nel 2021, c'è un POAP unico che ti aspetta.{" "}
+  Dai un'occhiata alla nostra pagina <Link to="/contributing/translation-program/acknowledgements/">Riconoscimenti per i Traduttori</Link> e{" "} rivendica il tuo token POAP! Se hai tradotto ethereum.org nel 2022, c'è un POAP unico che ti aspetta.{" "}
   <Link to="/contributing/translation-program/acknowledgements/#poap">Maggiori informazioni sui POAP</Link>
 </InfoBanner>
 
@@ -144,7 +145,7 @@ Se sei un traduttore di ethereum.org o vuoi diventarlo, sentiti libero di unirti
 
 ### Community {#communities}
 
-- [Gruppi di Traduzione specifici per lingua](https://discord.gg/6WX7E97) _– un'iniziativa per connettere i traduttori di ethereum.org in Gruppi di Traduzione_
+- [Gruppi di Traduzione Discord specifici per lingua](https://discord.gg/6WX7E97) _– un'iniziativa per connettere i traduttori di ethereum.org in Gruppi di Traduzione_
 - [Gruppo di traduttori di cinese](https://www.notion.so/Ethereum-org-05375fe0a94c4214acaf90f42ba40171) _– Pagina di nozioni per una più facile coordinazione tra i traduttori di lingua cinese_
 
 ### Panoramica delle categorie di contenuti {#content-buckets-overview}
@@ -173,7 +174,3 @@ Ci impegnamo per tradurre i contenuti di Ethereum in quante più lingue possibil
 Per questo motivo, abbiamo creato un [manuale del Programma di Traduzione](/contributing/translation-program/playbook/), contenente alcuni consigli e buone pratiche scelte nel processo di traduzione di ethereum.org.
 
 Vuoi collaborare ulteriormente o usare alcune delle nostre risorse di traduzione? Hai qualche commento sul manuale? Ci farebbe molto piacere ricevere il tuo parere su translations@ethereum.org.
-
-## Traduzioni in corso {#in-progress}
-
-<TranslationsInProgress />

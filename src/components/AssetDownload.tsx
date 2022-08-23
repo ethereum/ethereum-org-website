@@ -1,5 +1,5 @@
 import React from "react"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 import { GatsbyImage, getImage, getSrc } from "gatsby-plugin-image"
 
 import Translation from "../components/Translation"
@@ -26,7 +26,7 @@ interface IPropsWithSVG extends IPropsBase {
 }
 interface IPropsWithImage extends IPropsBase {
   svg?: never
-  image: string
+  image: any
 }
 
 export type IProps = IPropsWithImage | IPropsWithSVG
@@ -105,7 +105,7 @@ const AssetDownload: React.FC<IProps> = ({
         {children && <ImageContainer>{children}</ImageContainer>}
         {!children && (
           <ImageContainer>
-            {!!Svg ? (
+            {Svg ? (
               <Svg alt={alt} />
             ) : (
               <Image image={getImage(image)} alt={alt} />
