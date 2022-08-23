@@ -264,7 +264,7 @@ ethers.utils.formatEther(balance)
 
 **Alchemyweb3 -** **_用于包裹 Web3.js 的库，带自动重试和增强应用程序接口。_**
 
-- [相关文档](https://docs.alchemyapi.io/documentation/alchemy-web3)
+- [相关文档](https://docs.alchemy.com/reference/api-overview)
 - [GitHub](https://github.com/alchemyplatform/alchemy-web3)
 
 **Alchemy NFT API -** **_ 用于提取非同质化代币数据的应用程序接口，包括所有权、元数据属性等数据。_**

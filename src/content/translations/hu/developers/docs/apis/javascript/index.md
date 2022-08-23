@@ -265,7 +265,7 @@ ethers.utils.formatEther(balance)
 
 **Alchemyweb3 -** **_Egy Web3.js wrapper automatikus újrapróbálkozásokkal és fejlesztett API-okkal._**
 
-- [Dokumentáció](https://docs.alchemyapi.io/documentation/alchemy-web3)
+- [Dokumentáció](https://docs.alchemy.com/reference/api-overview)
 - [GitHub](https://github.com/alchemyplatform/alchemy-web3)
 
 ## További olvasnivaló {#further-reading}
