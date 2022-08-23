@@ -21,7 +21,7 @@ Solo stakers must run their own infrastructure rather than relying on third-part
 
 [Read more on running a node](/developers/docs/nodes-and-clients/run-a-node/).
 
-The node services described on this page generally offer non-staking node functionality.
+The services described on this page are for non-staking nodes.
 
 ## How do node services work? {#how-do-node-services-work}
 
