@@ -63,6 +63,7 @@ Key action items include:
 Not completing the first two items above items will result in your node being seen as "offline" until both layers are synced and authenticated.
 
 Not setting a `fee recipient` will still allow your validator to behave as usual, but you will miss out on unburnt fee tips and any MEV you would have otherwise earned in blocks your validator proposes.
+</ExpandableCard>
 
 <ExpandableCard
 title="Non-validating node operators and infrastructure providers"
