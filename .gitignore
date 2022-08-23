@@ -81,3 +81,6 @@ src/gatsby-types.d.ts
 
 # Exported Crowdin files
 .crowdin
+
+# vscode workplace configuration
+.vscode
