@@ -415,21 +415,23 @@ A way around this is to prevent potentially harmful RPC methods from being modif
 
 You can also host access to your RPC interface by pointing the service of a web server, like Nginx, to your client's local address and port. This also enables you to setup a certificate for a secure `https` connection to your own RPC.
 
-The most privacy-preserving and also very simple way to set up a publicly reachable endpoint, you can host it on your own [Tor](https://www.torproject.org/) onion service. This will let you reach the RPC outside your local network without a static public IP address or opened ports. However, keep in mind the RPC is accessible only via the Tor network which is not supported by all the applications and might result in connection issues.
+Setting up a web server, a proxy, or external facing Rest API is not the only way to provide access to the RPC endpoint of your node. Another privacy-preserving way to set up a publicly reachable endpoint is to host the node on your own [Tor](https://www.torproject.org/) onion service. This will let you reach the RPC outside your local network without a static public IP address or opened ports. However, using this configuration may only allow the RPC endpoint to be accessible via the Tor network which is not supported by all the applications and might result in connection issues.
 
 To do this, you have to create your own [onion service](https://community.torproject.org/onion-services/). Checkout [the documentation](https://community.torproject.org/onion-services/setup/) on onion service setup to host your own. You can point it to a web server with proxy to the RPC port or just directly to the RPC.
+
+Lastly, and one of the most popular ways to provide access to internal networks is through a VPN connection. Depending on your use case and the quantity of users needing access to your node, a secure VPN connection might be an option. [OpenVPN](https://openvpn.net/) is a full-featured SSL VPN which implements OSI layer 2 or 3 secure network extension using the industry standard SSL/TLS protocol, supports flexible client authentication methods based on certificates, smart cards, and/or username/password credentials, and allows user or group-specific access control policies using firewall rules applied to the VPN virtual interface.
 
 ### Operating the node {#operating-the-node}
 
 You should regularly monitor your node to make sure it's running properly. You may need to do occasional maintenance.
 
-#### Keeping node online {#keeping-node-online}
+#### Keeping a node online {#keeping-node-online}
 
-Your node doesn't have to be online nonstop, but you should keep it online as much as possible to keep it in sync with the network. You can shut it down to restart it, but keep in mind that:
+Your node doesn't have to be online all the time, but you should keep it online as much as possible to keep it in sync with the network. You can shut it down to restart it, but keep in mind that:
 
-- Shutting down can take up to a few minutes if the recent state is still being written on disk.
-- Forced shut downs can damage the database.
-- Your client will go out of sync with the network and will need to resync when you restart it. This takes depending on how long it has been offline.
+- Shutting down can take a few minutes if the recent state is still being written on disk.
+- Forced shut downs can damage the database requiring you to resync the entire node. 
+- Your client will go out of sync with the network and will need to resync when you restart it. While the node can begin syncing from were it was last shutdown, the process can take time depending on how long it has been offline.
 
 _This doesn't apply on consensus layer validator nodes._ Taking your node offline will affect all services dependent on it. If you are running a node for _staking_ purposes you should try to minimize downtime as much as possible.
 
