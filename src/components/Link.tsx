@@ -77,8 +77,8 @@ const LinkWrapper: React.FC<IProps> = ({
     ...restProps,
   }
 
-  // Must use <a> tags for anchor links
-  // Otherwise <Link> functionality will navigate to homepage
+  // Must use Chakra's native <Link> for anchor links
+  // Otherwise the Gatsby <Link> functionality will navigate to homepage
   // See https://github.com/gatsbyjs/gatsby/issues/21909
   if (isHash) {
     return (
@@ -88,9 +88,8 @@ const LinkWrapper: React.FC<IProps> = ({
     )
   }
 
-  // Download link for internally hosted PDF's (ex: whitepaper)
-  // Links to static image assets must use <a> to avoid
-  // <Link> redirection. Opens in separate window.
+  // Download link for internally hosted PDF's & static files (ex: whitepaper)
+  // Opens in separate window.
   if (isExternal || isPdf || isStatic) {
     return (
       <Link
