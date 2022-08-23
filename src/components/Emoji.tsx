@@ -1,32 +1,18 @@
 import React from "react"
-import { Twemoji } from "react-emoji-render"
 import styled from "@emotion/styled"
-import { margin, MarginProps } from "styled-system"
+import { Box, HTMLChakraProps } from "@chakra-ui/react"
+import { Twemoji, Props } from "react-emoji-render"
 
-export interface IProps extends MarginProps {
-  size?: number
-  text: string
-}
+export interface IProps extends HTMLChakraProps<"span">, Props {}
 
-const StyledEmoji = styled(Twemoji)<{ size: number }>`
+const StyledEmoji = styled(Twemoji)`
   & > img {
-    width: ${(props) => props.size}em !important;
-    height: ${(props) => props.size}em !important;
     margin: 0 !important;
   }
-  display: inline-block; /* respect top & bottom margins */
-  ${margin}
 `
 
-const Emoji: React.FC<IProps> = ({ size = 1.5, text, ...props }) => {
-  return <StyledEmoji size={size} text={text} svg {...props} />
-}
-
-Emoji.defaultProps = {
-  mt: 0,
-  mr: 0,
-  mb: 0,
-  ml: 0,
+const Emoji = (props: IProps) => {
+  return <Box as={StyledEmoji} svg d="inline-block" {...props} />
 }
 
 export default Emoji

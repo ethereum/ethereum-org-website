@@ -4,7 +4,7 @@ import styled from "@emotion/styled"
 import { FakeLink } from "./SharedStyledComponents"
 
 import React, { useState } from "react"
-import Emoji from "./Emoji"
+import Emoji from "./OldEmoji"
 
 const Card = styled.div`
   border: 1px solid ${(props) => props.theme.colors.border};
