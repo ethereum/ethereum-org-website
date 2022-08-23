@@ -54,8 +54,8 @@ Per testare e verificare efficacemente il tuo codice, devi identificare le aree 
 - [Valutazione rapida del rischio](https://infosec.mozilla.org/guidelines/risk/rapid_risk_assessment.html) (il nostro approccio preferito quando c'è poco tempo a disposizione)
 - [Guide to Data-Centric System Threat Modeling](https://csrc.nist.gov/publications/detail/sp/800-154/draft) (o NIST 800-154)
 - [Modellazione delle minacce Shostack](https://www.amazon.com/Threat-Modeling-Designing-Adam-Shostack/dp/1118809998)
-- [STRIDE](<https://en.wikipedia.org/wiki/STRIDE_(security)>) / [DREAD](<https://en.wikipedia.org/wiki/DREAD_(risk_assessment_model)>)
-- [PASTA](https://en.wikipedia.org/wiki/Threat_model#P.A.S.T.A.)
+- [STRIDE](<https://wikipedia.org/wiki/STRIDE_(security)>) / [DREAD](<https://wikipedia.org/wiki/DREAD_(risk_assessment_model)>)
+- [PASTA](https://wikipedia.org/wiki/Threat_model#P.A.S.T.A.)
 - [Uso delle asserzioni](https://blog.regehr.org/archives/1091)
 
 ### Componenti {#components}
@@ -89,14 +89,14 @@ Tra le grandi aree spesso pertinenti per gli smart contract troviamo:
 
 ### Tabella riepilogativa per la selezione degli strumenti {#tool-selection-cheatsheet}
 
-| Componente               | Strumenti                   | Esempi                                                                                                                                                                                                                                                                          |
-| ------------------------ | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Macchina di stato        | Echidna, Manticore          |                                                                                                                                                                                                                                                                                 |
-| Controllo d'accesso      | Slither, Echidna, Manticore | [Esercizio di Slither 2](https://github.com/trailofbits/building-secure-contracts/blob/master/program-analysis/slither/exercise2.md), [Esercizio di Echidna 2](https://github.com/trailofbits/building-secure-contracts/blob/master/program-analysis/echidna/Exercise-2.md)     |
-| Operazioni aritmetiche   | Manticore, Echidna          | [Esercizio di Echidna 1](https://github.com/trailofbits/building-secure-contracts/blob/master/program-analysis/echidna/Exercise-1.md), [Esercizi di Manticore 1 - 3](https://github.com/trailofbits/building-secure-contracts/tree/master/program-analysis/manticore/exercises) |
-| Correttezza d'eredità    | Slither                     | [Esercizio di Slither 1](https://github.com/trailofbits/building-secure-contracts/blob/master/program-analysis/slither/exercise1.md)                                                                                                                                            |
-| Interazioni esterne      | Manticore, Echidna          |                                                                                                                                                                                                                                                                                 |
-| Conformità agli standard | Slither, Echidna, Manticore | [`slither-erc`](https://github.com/crytic/slither/wiki/ERC-Conformance)                                                                                                                                                                                                         |
+| Componente               | Strumenti                   | Esempi                                                                                                                                                                                                                                                                |
+| ------------------------ | --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Macchina di stato        | Echidna, Manticore          |                                                                                                                                                                                                                                                                       |
+| Controllo d'accesso      | Slither, Echidna, Manticore | [Esercizio di Slither 2](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/slither/exercise2.md), [Esercizio di Echidna 2](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/echidna/Exercise-2.md)     |
+| Operazioni aritmetiche   | Manticore, Echidna          | [Esercizio di Echidna 1](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/echidna/Exercise-1.md), [Esercizi di Manticore 1 - 3](https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore/exercises) |
+| Correttezza d'eredità    | Slither                     | [Esercizio di Slither 1](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/slither/exercise1.md)                                                                                                                                       |
+| Interazioni esterne      | Manticore, Echidna          |                                                                                                                                                                                                                                                                       |
+| Conformità agli standard | Slither, Echidna, Manticore | [`slither-erc`](https://github.com/crytic/slither/wiki/ERC-Conformance)                                                                                                                                                                                               |
 
 Occorrerà controllare altri aspetti a seconda degli obiettivi, ma queste macro aree di attenzione sono un buon inizio per qualunque sistema di smart contract.
 

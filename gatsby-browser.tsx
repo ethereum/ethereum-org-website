@@ -22,6 +22,7 @@ import {
   defaultLanguage,
   isLang,
 } from "./src/utils/languages"
+import { IS_DEV } from "./src/utils/env"
 import { Context } from "./src/types"
 
 // Default languages included:
@@ -42,7 +43,7 @@ export const wrapPageElement: GatsbyBrowser<
 
   // client side redirect on paths that don't have a locale in them. Most useful
   // on dev env where we don't have server redirects
-  if (!isLang(pathLocale)) {
+  if (IS_DEV && !isLang(pathLocale)) {
     let detected =
       window.localStorage.getItem("eth-org-language") ||
       browserLang({

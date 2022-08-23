@@ -51,23 +51,25 @@ export type Lang =
   | "zh"
   | "zh-tw"
 
+export interface Language {
+  code: string
+  hrefLang: string
+  name: string
+  localName: string
+  langDir: Direction
+  dateFormat: string
+}
+
 export type Languages = {
-  [lang in Lang]: {
-    code: string
-    hrefLang: string
-    name: string
-    localName: string
-    langDir: Direction
-    dateFormat: string
-  }
+  [lang in Lang]: Language
 }
 
 export const defaultLanguage: Lang = "en"
 
 // same data as in the `config.json` but indexed by language code
-const languages: Languages | {} = i18nConfigs.reduce((result, config) => {
+const languages: Languages = i18nConfigs.reduce((result, config) => {
   return { ...result, [config.code as Lang]: config }
-}, {})
+}, {} as Languages)
 
 const buildLangs = (process.env.GATSBY_BUILD_LANGS || "")
   .split(",")
@@ -75,7 +77,9 @@ const buildLangs = (process.env.GATSBY_BUILD_LANGS || "")
 
 // will take the same shape as `languages`. Only thing we are doing
 // here is filtering the desired langs to be built
-export const languageMetadata = Object.fromEntries(
+export const languageMetadata: {
+  [lang: string]: Language
+} = Object.fromEntries(
   Object.entries(languages).filter(([lang]) => {
     // BUILD_LANGS === empty means to build all the langs
     if (!buildLangs.length) {

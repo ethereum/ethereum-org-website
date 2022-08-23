@@ -18,7 +18,7 @@ Crie aplicativos descentralizados sobre a Ethereum e interaja com contratos inte
 
 Precisa de uma introdução geral? Confira [ethereum.org/learn](/learn/) ou [ethereum.org/developers](/developers/).
 
-- [Cadeia de blocos explicada ](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
+- [Cadeia de blocos explicada](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
 - [Entendendo os contratos inteligentes](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
 - [Escreva seu primeiro contrato inteligente](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
 - [Aprenda como Compilar e Implantar Solidity](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
@@ -77,9 +77,9 @@ Procurando por mais recursos? Confira [ethereum.org/developers](/developers/).
 
 ## Colaboradores Comunitários.NET {#dot-net-community-contributors}
 
-Na Nethereum, nós geralmente nos encontramos no [Gitter](https://gitter.im/Nethereum/Nethereum) onde todos são bem vindos para fazer e responder perguntas, obter ajuda ou simplesmente relaxar. Sinta-se à vontade para fazer um PR ou abrir uma questão no [repositório da Nethereum no Github](https://github.com/Nethereum), ou apenas para navegar pelos vários projetos paralelos e exemplos que temos. Você também pode nos encontrar em [Discord](https://discord.gg/jQPrR58FxX)!
+Na Nethereum, nós geralmente nos encontramos no [Gitter](https://gitter.im/Nethereum/Nethereum) onde todos são bem vindos para fazer e responder perguntas, obter ajuda ou simplesmente relaxar. Sinta-se à vontade para fazer um PR ou abrir uma questão no [repositório da Nethereum no GitHub](https://github.com/Nethereum), ou apenas para navegar pelos vários projetos paralelos e exemplos que temos. Você também pode nos encontrar em [Discord](https://discord.gg/jQPrR58FxX)!
 
-Na Nethermind, vamos entrar em contato pelo [Gitter](https://gitter.im/nethermindeth/nethermind). Para PRs ou questões, confira o [repositório do Github da Nethermind](https://github.com/NethermindEth/nethermind).
+Na Nethermind, vamos entrar em contato pelo [Gitter](https://gitter.im/nethermindeth/nethermind). Para PRs ou questões, confira o [repositório do GitHub da Nethermind](https://github.com/NethermindEth/nethermind).
 
 ## Outras listas agregadas {#other-aggregated-lists}
 

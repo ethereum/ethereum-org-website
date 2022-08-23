@@ -63,6 +63,7 @@ Key action items include:
 Not completing the first two items above items will result in your node being seen as "offline" until both layers are synced and authenticated.
 
 Not setting a `fee recipient` will still allow your validator to behave as usual, but you will miss out on unburnt fee tips and any MEV you would have otherwise earned in blocks your validator proposes.
+</ExpandableCard>
 
 <ExpandableCard
 title="Non-validating node operators and infrastructure providers"
@@ -163,7 +164,7 @@ ETH on the execution layer is accounted for separately from the consensus layer.
 <ExpandableCard
 title="Misconception: &quot;When withdrawals are enabled, stakers will all exit at once.&quot;"
 contentPreview="False. Validator exits are rate limited for security reasons.">
-After the Shanghai upgrade enabled withdrawals, all validators will be incentivized to withdraw their staking balance above 32 ETH, as these funds do not add to yield and are otherwise locked. Depending on the APR (determined by total ETH staked), they may be incentivized to exit their validator(s) to reclaim their entire balance or potentially stake even more using their rewards to earn more yield.
+After the Shanghai upgrade enables withdrawals, all validators will be incentivized to withdraw their staking balance above 32 ETH, as these funds do not add to yield and are otherwise locked. Depending on the APR (determined by total ETH staked), they may be incentivized to exit their validator(s) to reclaim their entire balance or potentially stake even more using their rewards to earn more yield.
 
 An important caveat here, full validator exits are rate limited by the protocol, so only six validators may exit per epoch (every 6.4 minutes, so 1350 per day, or only ~43,200 ETH per day out of over 10 million ETH staked). This rate limit adjusts depending on the total ETH staked and prevents a mass exodus of funds. Furthermore, it prevents a potential attacker from using their stake to commit a slashable offense and exiting their entire staking balance in the same epoch before the protocol can enforce the slashing penalty.
 

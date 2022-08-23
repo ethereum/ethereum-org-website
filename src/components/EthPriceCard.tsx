@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 import axios from "axios"
 
 import Translation from "./Translation"
@@ -88,11 +88,11 @@ const ChangeTime = styled.div`
 
 export interface IProps {
   className?: string
-  isLeftAlign: boolean
+  isLeftAlign?: boolean
 }
 
 // TODO add prop to left vs. center align
-const EthPriceCard: React.FC<IProps> = ({ className, isLeftAlign }) => {
+const EthPriceCard: React.FC<IProps> = ({ className, isLeftAlign = false }) => {
   const [state, setState] = useState({
     currentPriceUSD: "",
     percentChangeUSD: 0,

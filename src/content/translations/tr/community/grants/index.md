@@ -16,10 +16,9 @@ Bu liste topluluğumuz tarafından hazırlanmıştır. Eksik veya yanlış bir �
 Bu programlar geniş bir proje yelpazesine hibeler sağlayarak geniş Ethereum ekosistemini desteklerler. Bunlar ölçeklenebilirlik, topluluk kurma, güvenlik, gizlilik gibi birçoğu için çözümleri kapsar. Bu hibeler herhangi bir Ethereum platformuna özel değildir ve emin değilseniz başlamak için iyi yerlerdir.
 
 - [EF Ekosistem Destek Programı](https://esp.ethereum.foundation) - _Temel odağı evrensel araçlar, altyapı, araştırma ve kamu yararı olmak üzere; Ethereum'a katkı sağlayan açık kaynak projeleri finanse eder_
-  - [Akademik Hibeler Turu](/community/grants/academic-grants-round/) - _ Ethereum Vakfı, Ethereum ile ilgili akademik çalışmaları desteklemek için bir hibe dalgasına sponsor oluyor_
+  - [Akademik Hibeler Turu](/community/grants/academic-grants-round/) - _Ethereum Vakfı, Ethereum ile ilgili akademik çalışmaları desteklemek için bir hibe dalgasına sponsor oluyor_
 - [Ethereum RFP'leri](https://github.com/ethereum/requests-for-proposals) - _Ethereum Vakfı tarafından Ethereum ekosisteminin içerisindeki iş ve projeler için teklif talebi_
-- [MetaCartel](https://www.metacartel.org/grants/) - _Merkeziyetsiz uygulama geliştirme, DAO yaratımı_  
-  Hibeler 1.000 dolardan 8.000 dolara kadar değişir.
+- [MetaCartel](https://www.metacartel.org/grants/) - _Merkeziyetsiz uygulama geliştirme, DAO yaratımı_
 - [Moloch DAO](https://www.molochdao.com/) - _Gizlilik, katman 2 ölçekleme, istemci güvenliği ve dahası_
 - [Açık Hibeler](https://opengrants.com/explore)
 - [DAO Hibeleri](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) - _Hibe sunan organizasyonların Google tablosu_
@@ -29,7 +28,7 @@ Bu programlar geniş bir proje yelpazesine hibeler sağlayarak geniş Ethereum e
 Bu projeler kendi teknolojilerini geliştirmeye ve deneyimlemeye yönelik olarak kendi hibelerini oluşturmuşlardır.
 
 - [Aave Hibe Programı](https://aavegrants.org/) – _[Aave](https://aave.com/) hibeleri DAO_
-- [Balancer](https://forms.gle/c68e4fM7JHCQkPkN7) – _[Balancer](https://balancer.fi/) Ekosistem Fonu_
+- [Balancer](https://balancergrants.notion.site/Balancer-Community-Grants-23e562c5bc4347cd8304637bff0058e6) – _[Balancer](https://balancer.fi/) Ekosistem Fonu_
 - [Compound Hibe Programı](https://compoundgrants.org/) – _[Compound](https://compound.finance/) finans ekosistemi_
 - [Consensys Hibe Programı](https://consensys.net/grants/) – _[Consensys](https://consensys.net/) blok zinciri fonlama & Ethereum hibeleri_
 - [dYdX Hibe Programı](https://dydxgrants.com/) – _[dYdX](https://dydx.exchange/) merkeziyetsiz borsa_

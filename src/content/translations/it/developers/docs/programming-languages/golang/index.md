@@ -34,7 +34,7 @@ Hai prima bisogno di nozioni di base? Dai un'occhiata a [ethereum.org/learn](/le
 ## Articoli e documentazione di livello intermedio {#intermediate-articles-and-docs}
 
 - [Go Ethereum Documentation](https://geth.ethereum.org/docs/) - _La documentazione per il Golang ufficiale di Ethereum_
-- [Erigon Programmer's Guide](https://github.com/ledgerwatch/erigon/blob/devel/docs/programmers_guide/guide.md) - _ Guida illustrata che tratta gli alberi di stato, prove multiple ed elaborazioni delle transazioni_
+- [Erigon Programmer's Guide](https://github.com/ledgerwatch/erigon/blob/devel/docs/programmers_guide/guide.md) - _Guida illustrata che tratta gli alberi di stato, prove multiple ed elaborazioni delle transazioni_
 - [Erigon and Stateless Ethereum](https://youtu.be/3-Mn7OckSus?t=394) - _Conferenza della Community di Ethereum 2020 (EthCC 3)_
 - [Erigon: optimising Ethereum clients](https://www.youtube.com/watch?v=CSpc1vZQW2Q) - _2018 Devcon 4_
 - [Go Ethereum GoDoc](https://godoc.org/github.com/ethereum/go-ethereum)

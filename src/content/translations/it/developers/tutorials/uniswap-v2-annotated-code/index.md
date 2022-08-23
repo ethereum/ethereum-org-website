@@ -25,7 +25,7 @@ I _trader_ inviano un tipo di token al pool e ricevono l'altro (ad esempio, invi
 
 Quando i fornitori di liquidità rivogliono indietro le loro risorse, possono bruciare i token del pool e ricevere i token, compresa la quota di ricompense.
 
-[Clicca qui per una descrizione completa](https://docs.uniswap.org/protocol/V2/concepts/core-concepts/swaps/).
+[Clicca qui per una descrizione completa](https://uniswap.org/docs/v2/core-concepts/swaps/).
 
 ### Perché v2? Perché non v3? {#why-v2}
 
@@ -186,14 +186,14 @@ Le riserve che il pool ha per ogni tipo di token. Supponiamo che i due rappresen
 
 La marca oraria dall'ultimo blocco in cui si è verificato uno scambio, usata per tracciare i tassi di cambio nel tempo.
 
+Una delle più grandi spese di gas dei contratti di Ethereum è la memoria, che persiste da una chiamata del contratto alla successiva. Ogni cella di memoria è lunga 256 bit. Tre variabili, reserve0, reserve1 e blockTimestampLast, sono quindi allocate in modo che un solo valore di memoria possa comprenderle tutte e tre (112+112+32=256).
+
 ```solidity
     uint public price0CumulativeLast;
     uint public price1CumulativeLast;
 ```
 
 Queste variabili contengono i costi cumulativi per ogni token (ognuna nel termine dell'altra). Sono utilizzabili per calcolare il tasso di cambio medio su un periodo di tempo.
-
-Una delle più grandi spese di carburante dei contratti di Ethereum è la conservazione, che persiste da una chiamata del contratto a quella successiva. Ogni cella di memoria è lunga 256 bit. Quindi, tale variabile e il `kLast` sottostante sono allocati in modo che un singolo valore di memoria possa includerli tutti e tre (112+112+32=256).
 
 ```solidity
     uint public kLast; // reserve0 * reserve1, as of immediately after the most recent liquidity event
@@ -276,7 +276,7 @@ Per evitare di dover importare un'interfaccia per la funzione del token, creiamo
 
 Esistono due modi in cui una chiamata di trasferimento ERC-20 può segnalare il fallimento:
 
-1. Ripristina. Se una chiamata a un contratto esterno si ripristina, allora il valore di restituzione booleano è `false`
+1. Ripristina. Se una chiamata a un contratto esterno si annulla, allora il valore di restituzione booleano è `false`
 2. Termina normalmente ma segnala un guasto. In quel caso il buffer del valore restituito ha una lunghezza diversa da zero e, quando viene codificato come valore booleano, è `false`
 
 Se una di queste condizioni si verifica, ripristina.
@@ -347,7 +347,7 @@ Questa funzione è chiamata ogni volta che i token vengono depositati o prelevat
         require(balance0 <= uint112(-1) && balance1 <= uint112(-1), 'UniswapV2: OVERFLOW');
 ```
 
-Se l'aggiornamento rende il saldo superiore a 2^111 (in modo tale che venga interpretato come un numero negativo), rifiutati di procedere per evitare sovraflussi. Con un token normale suddivisibile in 10^18 unità, ciò significa che ogni scambio è limitato a circa 2,5\*10^15 di ciascun token. Finora non è stato un problema.
+Se balance0 o balance1 (uint256) è maggiore di uint112(-1) (=2^112-1) (quindi va in overflow e torna a 0 quando viene convertita in uint112), rifiuta di continuare \_update per prevenire l'overflow. Con un token normale suddivisibile in 10^18 unità, questo significa che ogni scambio è limitato a circa 5,1\*10^15 di ogni token. Finora non è stato un problema.
 
 ```solidity
         uint32 blockTimestamp = uint32(block.timestamp % 2**32);
@@ -643,7 +643,7 @@ Ottieni i saldi correnti. Il contratto periferico ci invia i token prima di chia
             require(balance0Adjusted.mul(balance1Adjusted) >= uint(_reserve0).mul(_reserve1).mul(1000**2), 'UniswapV2: K');
 ```
 
-Questo è un controllo di sicurezza, per assicurarsi di non perdere in seguito allo scambio. Non esiste alcuna circostanza in cui uno scambio dovrebbe ridurre `reserve0*reserve1`.
+Questo è un controllo di sicurezza, per assicurarsi di non perdere in seguito allo scambio. Non esiste alcuna circostanza in cui uno scambio dovrebbe ridurre `reserve0*reserve1`. Questo è anche il punto in cui garantiamo che una commissione dello 0,3% è inviata allo scambio; prima di verificare lo stato di salute di K, moltiplichiamo entrambi i saldi per 1000 meno gli importi moltiplicati per 3, questo significa che lo 0,3% (3/1000 = 0,003 = 0,3%) viene dedotto dal saldo prima di confrontare il suo valore K con il valore K delle riserve correnti.
 
 ```solidity
         }
@@ -655,7 +655,7 @@ Questo è un controllo di sicurezza, per assicurarsi di non perdere in seguito a
 
 Aggiorna `reserve0` e `reserve1` e, se necessario, gli accumulatori di prezzo e la marca oraria ed emetti un evento.
 
-##### Sync o Skip
+##### Sincronizzazione o Skim {#sync-or-skim}
 
 È possibile che i saldi reali si desincronizzino rispetto alle riserve considerate dallo scambio in pari. Non c'è modo di prelevare i token senza il consenso del contratto, ma i depositi sono una questione diversa. Un conto può trasferire i token allo scambio senza chiamare `mint` o `swap`.
 
@@ -892,11 +892,11 @@ I contratti periferici sono l'API (interfaccia del programma applicativo) per Un
 
 ### UniswapV2Router01.sol {#UniswapV2Router01}
 
-[Questo contratto](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router01.sol) è problematico e [non dovrebbe essere più usato](https://docs.uniswap.org/protocol/V2/reference/smart-contracts/router-01/). Fortunatamente, i contratti periferici sono privi di stato e non detengono alcuna risorsa, quindi è facile deprecarli e suggerire alle persone di usare una soluzione alternativa, ad esempio `UniswapV2Router02`.
+[Questo contratto](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router01.sol) è problematico e [non dovrebbe essere più usato](https://uniswap.org/docs/v2/smart-contracts/router01/). Fortunatamente, i contratti periferici sono privi di stato e non detengono alcuna risorsa, quindi è facile deprecarli e suggerire alle persone di usare una soluzione alternativa, ad esempio `UniswapV2Router02`.
 
 ### UniswapV2Router02.sol {#UniswapV2Router02}
 
-In gran parte dei casi puoi usare Uniswap tramite [questo contratto](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router02.sol). Puoi vedere come usarlo [qui](https://docs.uniswap.org/protocol/V2/reference/smart-contracts/router-02/).
+In gran parte dei casi puoi usare Uniswap tramite [questo contratto](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router02.sol). Puoi vedere come usarlo [qui](https://uniswap.org/docs/v2/smart-contracts/router02/).
 
 ```solidity
 pragma solidity =0.6.6;
@@ -1052,7 +1052,7 @@ Se l'importo ottimale di B è superiore all'importo di B desiderato, significa c
 
 Mettendo tutto insieme otteniamo questo grafico. Supponiamo che stai cercando di depositare mille token A (riga blu) e mille token B (linea rossa). L'asse delle x è il tasso di cambio, A/B. Se x=1, significa che hanno pari valore e depositi mille unità di ciascuno. Se x=2, A è il doppio del valore di B (ottieni due token B per ogni token A), quindi depositi mille token B, ma solo 500 token A. Se x=0,5, la situazione è invertita, mille token A e cinquecento token B.
 
-![Grafico](./liquidityProviderDeposit.png)
+![Grafico](liquidityProviderDeposit.png)
 
 ```solidity
             }
@@ -1736,7 +1736,7 @@ library UQ112x112 {
     }
 ```
 
-Poiché y è `uint112`, il valore massimo possibile è 2^112-1. Quel numero è ancora codificabile come un `UQ112x112`.
+Poiché y è `uint112`, il suo valore massimo può essere 2^112-1. Quel numero è ancora codificabile come un `UQ112x112`.
 
 ```solidity
     // divide a UQ112x112 by a uint112, returning a UQ112x112

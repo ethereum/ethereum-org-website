@@ -29,9 +29,9 @@ Razdjeljivanje je dobar način za skaliranje ako želite da stvari ne budu centr
 
 ### Više mrežnog sudjelovanja {#more-network-participation}
 
-Razdjeljivanje će vam na kraju omogućiti pokretanje Ethereuma na osobnom prijenosnom računalu ili telefonu. Tako bi više ljudi trebalo biti u mogućnosti sudjelovati ili pokretati [ klijente ](/developers/docs/nodes-and-clients/) u razdijeljenom Ethereumu. To će povećati sigurnost, jer što je više mreža decentralizirana, to je manja površina napada.
+Razdjeljivanje će vam na kraju omogućiti pokretanje Ethereuma na osobnom prijenosnom računalu ili telefonu. Tako bi više ljudi trebalo biti u mogućnosti sudjelovati ili pokretati [klijente](/developers/docs/nodes-and-clients/) u razdijeljenom Ethereumu. To će povećati sigurnost, jer što je više mreža decentralizirana, to je manja površina napada.
 
-S nižim hardverskim zahtjevima, razdjeljivanje će olakšati samostalno pokretanje [ klijenata ](/developers/docs/nodes-and-clients/), bez oslanjanja na bilo kakve posredničke usluge. A ako možete, razmislite o pokretanju više klijenata. To može pomoći zdravlju mreže daljnjim smanjenjem točaka kvara. [ Pokretanje Eth2 klijenta](/upgrades/get-involved/)
+S nižim hardverskim zahtjevima, razdjeljivanje će olakšati samostalno pokretanje [klijenata](/developers/docs/nodes-and-clients/), bez oslanjanja na bilo kakve posredničke usluge. A ako možete, razmislite o pokretanju više klijenata. To može pomoći zdravlju mreže daljnjim smanjenjem točaka kvara. [ Pokretanje Eth2 klijenta](/upgrades/get-involved/)
 
 <br />
 
@@ -49,7 +49,7 @@ Rollup je tehnologija „sloja 2” koja postoji danas. Omogućuju aplikacijama 
 
 ## Lanci djelića, verzija 2: izvršavanje koda {#code-execution}
 
-Plan je uvijek bio dodati dodatnu funkcionalnost djelićima, kako bi postali sličniji današnjoj [ glavnoj mreži Ethereum ](/glossary/#mainnet). To bi omogućilo pohranu i izvršavanje pametnih ugovora i upravljanje računima. No, s obzirom na pojačanje u broju transakcija u sekundi koje pružaju djelići verzije 1, je li to potrebno? O tome se još uvijek raspravlja u zajednici i čini se da postoji nekoliko mogućnosti.
+Plan je uvijek bio dodati dodatnu funkcionalnost djelićima, kako bi postali sličniji današnjoj [glavnoj mreži Ethereum](/glossary/#mainnet). To bi omogućilo pohranu i izvršavanje pametnih ugovora i upravljanje računima. No, s obzirom na pojačanje u broju transakcija u sekundi koje pružaju djelići verzije 1, je li to potrebno? O tome se još uvijek raspravlja u zajednici i čini se da postoji nekoliko mogućnosti.
 
 ### Trebaju li djelići izvršenje koda? {#do-shards-need-code-execution}
 

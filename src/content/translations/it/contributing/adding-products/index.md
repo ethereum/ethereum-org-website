@@ -108,6 +108,6 @@ _Stiamo anche studiando altre opzioni per votare, in modo tale che la community 
 
 Se desideri aggiungere a ethereum.org un portafoglio o una dapp che soddisfa i criteri, crea un ticket su GitHub.
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.md&title=">
+<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new/choose">
   Crea un ticket
 </ButtonLink>

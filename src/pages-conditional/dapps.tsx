@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect } from "react"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { graphql, PageProps } from "gatsby"
 import { useIntl } from "react-intl"
@@ -1150,12 +1150,12 @@ const DappsPage = ({
     buttons: [
       {
         content: translateMessageId("page-dapps-explore-dapps-title", intl),
-        path: "#explore",
+        to: "#explore",
       },
       {
         content: translateMessageId("page-dapps-what-are-dapps", intl),
-        path: "#what-are-dapps",
-        isSecondary: "isSecondary",
+        to: "#what-are-dapps",
+        isSecondary: true,
       },
     ],
   }

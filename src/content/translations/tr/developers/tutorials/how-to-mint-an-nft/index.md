@@ -113,7 +113,7 @@ Json dosyasını düzenlemeyi bitirdikten sonra, görüntüyü yüklemek için y
 
 ## Adım 5: Sözleşmenizin bir örneğini oluşturun {#instance-contract}
 
-Şimdi, sözleşmemizle etkileşime geçmek için, kodumuzda onun bir örneğini oluşturmalıyız. Bunu yapmak için dağıtımdan veya [Etherscan ](https://ropsten.etherscan.io/)dan sözleşmeyi dağıtmak için kullandığınız adresi arayarak alabileceğimiz sözleşme adresimize ihtiyacımız olacak.
+Şimdi, sözleşmemizle etkileşime geçmek için, kodumuzda onun bir örneğini oluşturmalıyız. Bunu yapmak için dağıtımdan veya [Etherscan](https://ropsten.etherscan.io/)dan sözleşmeyi dağıtmak için kullandığınız adresi arayarak alabileceğimiz sözleşme adresimize ihtiyacımız olacak.
 
 ![Etherscan'da sözleşme adresinizi görüntüleyin](./viewContractEtherscan.png)
 

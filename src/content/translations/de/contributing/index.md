@@ -72,7 +72,7 @@ Wenn Ihr Beitrag in ethereum.org eingebunden wird, prägen wir Ihnen einen einzi
 ### So werden sie beansprucht {#how-to-claim}
 
 1. Treten Sie unserem [Discord-Server](https://discord.gg/E8dET2ux8y) bei.
-2. Kopieren Sie einen Link zu Ihrem Beitrag in den Kanal `#🏆 | Poaps`.
+2. Kopieren Sie einen Link zu Ihrem Beitrag in den Kanal `#🥇 | poaps`.
 3. Warten Sie, bis ein Mitglied unseres Teams Ihnen einen Link zu Ihrem POAP schickt.
 4. Beanspruchen Sie Ihren POAP.
 

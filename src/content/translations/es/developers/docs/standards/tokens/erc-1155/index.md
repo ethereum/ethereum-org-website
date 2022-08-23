@@ -143,5 +143,5 @@ _Nota_: Todas las funciones de lote, incluyendo hook, también existen como vers
 
 - [EIP-1155: estándar multitoken](https://eips.ethereum.org/EIPS/eip-1155)
 - [ERC-1155: Documentos de Openzeppelin](https://docs.openzeppelin.com/contracts/3.x/erc1155)
-- [ERC-1155: repositorio de Github](https://github.com/enjin/erc-1155)
+- [ERC-1155: repositorio de GitHub](https://github.com/enjin/erc-1155)
 - [API de NFT de Alchemy](https://docs.alchemy.com/alchemy/enhanced-apis/nft-api)

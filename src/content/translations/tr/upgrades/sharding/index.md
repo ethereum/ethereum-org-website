@@ -79,7 +79,7 @@ Son olarak, bu tartışmayı ZK SNARK'ları sağlamlaştırıldığında tekrar 
 
 İşte aynı türden birkaç düşünce daha:
 
-- [Birinci Aşama Tamamlandı: Eth2 veri kullanılabilirliği motoru olarak ](https://ethresear.ch/t/phase-one-and-done-eth2-as-a-data-availability-engine/5269/8)-_cdetrio,ethrear.ch_
+- [Birinci Aşama Tamamlandı: Eth2 veri kullanılabilirliği motoru olarak](https://ethresear.ch/t/phase-one-and-done-eth2-as-a-data-availability-engine/5269/8) - _cdetrio,ethrear.ch_
 
 Bu hâlâ aktif bir tartışma noktasıdır. Daha fazlasını öğrendikten sonra bu sayfaları güncelleyeceğiz.
 

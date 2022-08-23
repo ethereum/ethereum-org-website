@@ -133,4 +133,4 @@ daiToken.methods
 
 A função de chamada retorna o hash da transação que será minerada no blockchain. No Ethereum, hashes de transação são previsívei. É assim que podemos obter o hash da transação antes de ela ser executada ([saiba aqui como os hashes são calculados](https://ethereum.stackexchange.com/questions/45648/how-to-calculate-the-assigned-txhash-of-a-transaction)).
 
-Como função só envia a transação para a blockchain, não podemos ver o resultado até sabermos quando ela é minerada e incluída na blockchain. No próximo tutorial, aprenderemos [como aguardar por uma transação que será executada na blockchain com base no hash dela ](https://ethereumdev.io/waiting-for-a-transaction-to-be-mined-on-ethereum-with-js/).
+Como função só envia a transação para a blockchain, não podemos ver o resultado até sabermos quando ela é minerada e incluída na blockchain. No próximo tutorial, aprenderemos [como aguardar por uma transação que será executada na blockchain com base no hash dela](https://ethereumdev.io/waiting-for-a-transaction-to-be-mined-on-ethereum-with-js/).

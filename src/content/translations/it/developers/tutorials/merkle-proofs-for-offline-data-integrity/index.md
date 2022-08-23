@@ -6,7 +6,7 @@ tags:
   - "merkle"
   - "integrità"
   - "archiviazione"
-skill: avanzato
+skill: advanced
 lang: it
 sidebar: true
 published: 2021-12-30
@@ -16,7 +16,7 @@ published: 2021-12-30
 
 Idealmente, vorremmo poter salvare qualsiasi cosa nella memoria di Ethereum, che è conservata su migliaia di computer e presenta un'altissima disponibilità (i dati non sono censurabili) ma anche integrità (i dati non sono modificabili in modo non autorizzato), ma occorre ricordare che memorizzare una parola di 32 byte costa solitamente 20.000 unità di carburante. Mentre scriviamo il presente articolo, tale costo equivale a 6,60 dollari. Ne consegue che 21 centesimi per byte sia un costo impraticabile per molti utilizzi.
 
-Per risolvere questo problema, l'ecosistema di Ethereum ha sviluppato [molti metodi alternativi per memorizzare dati in modo decentralizzato](/developers/docs/storage/). Solitamente occorre raggiungere un compromesso tra disponibilità e prezzo, mentre l'integrità è generalmente garantita.
+Per risolvere questo problema l'ecosistema di Ethereum ha sviluppato [molti metodi alternativi per memorizzare dati in modo decentralizzato](/developers/docs/storage/). Solitamente occorre raggiungere un compromesso tra disponibilità e prezzo, mentre l'integrità è generalmente garantita.
 
 In questo articolo imparerai **come** garantire l'integrità dei dati senza memorizzare i dati sulla blockchain, usando le [prove di Merkle](https://computersciencewiki.org/index.php/Merkle_proof).
 
@@ -26,11 +26,11 @@ In teoria, potremmo semplicemente memorizzare l'hash dei dati sulla catena e inv
 
 La soluzione consiste nel procedere ripetutamente all'hashing di diverse sottoserie di dati, quindi per i dati che non devono essere inviati è sufficiente inviare un hash. A tale scopo puoi utilizzare un albero di Merkle, una struttura di dati ad albero in cui ogni nodo rappresenta un hash dei nodi sottostanti:
 
-![Albero di Merkle](./tree.png)
+![Albero di Merkle](tree.png)
 
 L'hash principale è l'unica parte che deve essere memorizzata sulla catena. Per provare un dato valore, occorre fornire tutti gli hash che devono essere combinati con esso per ottenere il root. Ad esempio, per provare `C`, occorre fornire `D`, `H(A-B)` e `H(E-H)`.
 
-![Prova del valore di C](./proof-c.png)
+![Prova del valore di C](proof-c.png)
 
 ## Implementazione {#implementation}
 
@@ -63,7 +63,7 @@ const dataArray = [
 Codificando ogni voce in un unico numero intero da 256 bit si ottiene un codice meno leggibile rispetto, ad esempio, all'utilizzo di JSON. Tuttavia, significa anche che occorre molta meno elaborazione per recuperare i dati nel contratto, quindi costi molto inferiori in termini di carburante. [JSON può essere letto sulla catena](https://github.com/chrisdotn/jsmnSol), ma è una cattiva idea, quindi se possibile consigliamo di evitarlo.
 
 ```javascript
-// The array of hash values, as BigInts
+// L'insieme di valori di hash, come BigInts
 const hashArray = dataArray
 ```
 
@@ -86,17 +86,17 @@ const empty = 0n
 
 Quando il numero di valori non è una potenza intera di due, dobbiamo gestire i rami vuoti. A tale scopo, questo progamma inserisce zero come segnaposto.
 
-![Albero di Merkle con rami mancanti](./merkle-empty-hash.png)
+![Albero di Merkle con rami mancanti](merkle-empty-hash.png)
 
 ```javascript
-// Calculate one level up the tree of a hash array by taking the hash of
-// each pair in sequence
+// Calcola un livello superiore dell'albero di un insieme di hash prendendo l'hash di
+// ogni coppia in sequenza
 const oneLevelUp = (inputArray) => {
   var result = []
-  var inp = [...inputArray] // To avoid over writing the input
+  var inp = [...inputArray] // Per evitare di scrivere eccessivamente l'input
 
-  // Add an empty value if necessary (we need all the leaves to be
-  // paired)
+  // Aggiungi un valore vuoto se necessario (ci serve che ogni foglia sia
+  // accoppiata)
   if (inp.length % 2 === 1) inp.push(empty)
 
   for (var i = 0; i < inp.length; i += 2)
@@ -114,13 +114,13 @@ const getMerkleRoot = (inputArray) => {
 
   result = [...inputArray]
 
-  // Climb up the tree until there is only one value, that is the
-  // root.
+  // Scala l'albero finché non c'è un solo valore, ovvero la
+  // radice.
   //
-  // If a layer has an odd number of entries the
-  // code in oneLevelUp adds an empty value, so if we have, for example,
-  // 10 leaves we'll have 5 branches in the second layer, 3
-  // branches in the third, 2 in the fourth and the root is the fifth
+  // Se un livello ha un numero dispari di voci, il
+  // codice in oneLevelUp aggiunge un valore vuoto, quindi se abbiamo, ad esempio,
+  // 10 foglie, avremo 5 rami nel secondo livello, 3
+  // nel terzo, 2 nel quarto e la radice sarà la quinta
   while (result.length > 1) result = oneLevelUp(result)
 
   return result[0]
@@ -134,22 +134,22 @@ Per ottenere il root, scala finché non resta solo un valore.
 Una prova di Merkle è data dai valori da sottoporre all'hash insieme al valore dimostrato in modo da ottenere nuovamente il root del Merkle. Il valore da provare spesso è ricavabile da altri dati, quindi preferisco fornirlo separatamente anziché come parte del codice.
 
 ```javascript
-// A merkle proof consists of the value of the list of entries to
-// hash with. Because we use a symmetrical hash function, we don't
-// need the item's location to verify the proof, only to create it
+// Una prova di merkle consiste nel valore dell'elenco di voci con
+// cui eseguire l'hash. Poiché usiamo una funzione di hash, non ci
+// serve la posizione dell'elemento per verificare la prova, solo per crearla
 const getMerkleProof = (inputArray, n) => {
     var result = [], currentLayer = [...inputArray], currentN = n
 
-    // Until we reach the top
+    // Finché non raggiungiamo la cima
     while (currentLayer.length > 1) {
-        // No odd length layers
+        // Nessun livello di lunghezza dispari
         if (currentLayer.length % 2)
             currentLayer.push(empty)
 
         result.push(currentN % 2
-               // If currentN is odd, add with the value before it to the proof
+               // Se currentN è dispari, aggiungi il valore prima di esso alla prova
             ? currentLayer[currentN-1]
-               // If it is even, add the value after it
+               // Se è pari, aggiungi il valore successivo
             : currentLayer[currentN+1])
 
 ```
@@ -196,7 +196,7 @@ contract MerkleProof {
     }   // setRoot
 ```
 
-Imposta e ottieni le funzioni per il root di Merkle. Fare aggiornare a tutti il root di Merkle è un'_idea asolutamente pessima_ in un sistema di produzione. Qui lo faccio per la semplicità del codice campione. **Sconsiglio di farlo su un sistema in cui l'integrità dei dati è importante**.
+Imposta e ottieni le funzioni per il root di Merkle. Far aggiornare a tutti il root di Merkle è un'_idea estremamente pessima_ in un sistema di produzione. Qui lo faccio per la semplicità del codice campione. **Sconsiglio di farlo su un sistema in cui l'integrità dei dati è importante**.
 
 ```solidity
     function pairHash(uint _a, uint _b) internal pure returns(uint) {
@@ -209,7 +209,7 @@ Questa funzione genera l'hash di una coppia. È solo la traduzione in Solidity d
 **Nota:** Questo è un altro caso d'ottimizzazione per migliorare la leggibilità. In base alla [definizione della funzione](https://www.tutorialspoint.com/solidity/solidity_cryptographic_functions.htm), potrebbe essere possibile memorizzare i dati come valore [`bytes32`](https://docs.soliditylang.org/en/v0.5.3/types.html#fixed-size-byte-arrays) ed evitare le conversioni.
 
 ```solidity
-    // Verify a Merkle proof
+    // Verifica una prova di Merkle
     function verifyProof(uint _value, uint[] calldata _proof)
         public view returns (bool) {
       uint temp = _value;
@@ -229,7 +229,7 @@ Nella notazione matematica, la verifica della prova di Merkle somiglia a questa:
 
 ## Prove di Merkle e rollup non si mescolano {#merkle-proofs-and-rollups}
 
-Le prove di Merkle non funzionano bene con i [rollup](/developers/docs/scaling/layer-2-rollups/). Il motivo è che i rollup scrivono tutti i dati della transazione su L1, ma elaborano su L2. Il costo per inviare una prova di Merkle con una transazione è in media di 638 unità di carburante per livello (attualmente un byte in dati di chiamata costa 16 unità di carburante se non è zero e 4 se è zero). Se abbiamo 1.024 parole di dati, una prova di Merkle richiede 10 livelli, o un totale di 6.380 unità di carburante.
+Le prove di Merkle non funzionano bene con i [rollup](/developers/docs/scaling/#rollups). Il motivo è che i rollup scrivono tutti i dati della transazione su L1, ma elaborano su L2. Il costo per inviare una prova di Merkle con una transazione è in media di 638 unità di carburante per livello (attualmente un byte in dati di chiamata costa 16 unità di carburante se non è zero e 4 se è zero). Se abbiamo 1.024 parole di dati, una prova di Merkle richiede 10 livelli, o un totale di 6.380 unità di carburante.
 
 Guardando ad esempio [Optimism](https://public-grafana.optimism.io/d/9hkhMxn7z/public-dashboard?orgId=1&refresh=5m)., se scriviamo L1, il gas costa circa 100 gwei e L2 costa 0,001 gwei di gas (questo è il prezzo normale, che può aumentare in caso di congestione). Quindi per il costo di un gas di L1, possiamo spendere centinaia di migliaia di unitàù di acrburante per l'elaborazione su L2. Supponendo che non sovrascriviamo la memoria, significa che possiamo scrivere circa 5 parole in memoria su L2 al prezzo di un gas di L1. Per una sola prova di Merkle possiamo scrivere tutte le 1.024 parole in memoria (presumendo innanzi tutto che siano calcolabili sulla catena, anziché fornite in una transazione) e avremo ancora gran parte del gas rimanente.
 
@@ -237,4 +237,4 @@ Guardando ad esempio [Optimism](https://public-grafana.optimism.io/d/9hkhMxn7z/p
 
 Nella vita reale potresti non implementare mai gli alberi di Merkle per conto tuo. Esistono librerie ben note e controllate che puoi usare e, in generale, è meglio non implementare primitivi crittografici autonomamente. Ma spero che ora tu abbia compreso meglio le prove di Merkle e possa decidere quando vale la pena usarle.
 
-Nota che, mentre le prove di Merkle preservano l'_integrità_, non preservano la _disponibilità_. Sapendo che nessun altro può prendere le tue risorse è una piccola consolazione se la memoria dati decide di non consentire l'accesso e risulta impossibile decostruire un albero di Merkle per accedervi. Quindi gli alberi di Merkle funzionano meglio con qualche tipo di memoria decentralizzata, come IPFS.
+Nota che mentre le prove di Merkle preservano l'_integrità_, non preservano la _disponibilità_. Sapendo che nessun altro può prendere le tue risorse è una piccola consolazione se la memoria dati decide di non consentire l'accesso e risulta impossibile decostruire un albero di Merkle per accedervi. Quindi gli alberi di Merkle funzionano meglio con qualche tipo di memoria decentralizzata, come IPFS.

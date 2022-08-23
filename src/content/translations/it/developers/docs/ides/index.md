@@ -35,7 +35,6 @@ Gli IDE più diffusi hanno plugin integrati che migliorano l'esperienza di svilu
 **Visual Studio Code:** **_IDE professionale multi piattaforma con supporto ufficiale per Ethereum_**
 
 - [Visual Studio Code](https://code.visualstudio.com/)
-- [Blockchain Development Kit per Ethereum](https://marketplace.visualstudio.com/items?itemName=AzBlockchain.azure-blockchain)
 - [Azure Blockchain Workbench](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/microsoft-azure-blockchain.azure-blockchain-workbench?tab=Overview)
 - [Esempi di codice](https://github.com/Azure-Samples/blockchain/blob/master/blockchain-workbench/application-and-smart-contract-samples/readme.md)
 - [GitHub](https://github.com/microsoft/vscode)

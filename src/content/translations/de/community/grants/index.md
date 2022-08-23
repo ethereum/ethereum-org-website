@@ -29,7 +29,7 @@ Diese Programme unterstützen das breit gefächerte Ethereum-Ökosystem, indem s
 Diese Projekte haben ihre eigenen Zuschüsse für Projektvorhaben zur Entwicklung und Erprobung ihrer eigenen Technologie geschaffen.
 
 - [Aave-Zuschussprogramm](https://aavegrants.org/) – _[Aave](https://aave.com/) Grants DAO_
-- [Balancer](https://forms.gle/c68e4fM7JHCQkPkN7) – _[Balancer](https://balancer.fi/)-Ökosystemfonds_
+- [Balancer](https://balancergrants.notion.site/Balancer-Community-Grants-23e562c5bc4347cd8304637bff0058e6) – _[Balancer](https://balancer.fi/)-Ökosystemfonds_
 - [Programm für Verbundzuschüsse](https://compoundgrants.org/) – _[Verbund](https://compound.finance/)-Finanzökosystem_
 - [Consensys-Zuschussprogram](https://consensys.net/grants/) – _[Consensys](https://consensys.net/)-Blockchain-Finanzierung und Ethereum-Zuschüsse_
 - [dYdX-Zuschussprogram](https://dydxgrants.com/) – _[dYdX](https://dydx.exchange/) dezentralisierte Börse_

@@ -71,7 +71,7 @@ Ces bibliothèques suppriment une grande partie de la complexité d'une interact
 **Python Tooling -** **_Diverses bibliothèques pour interagir avec Ethereum via Python_**
 
 - [py.ethereum.org](http://python.ethereum.org/)
-- [Github web3.py](https://github.com/ethereum/web3.py)
+- [GitHub web3.py](https://github.com/ethereum/web3.py)
 - [Chat web3.py](https://gitter.im/ethereum/web3.py)
 
 **web3j -** **_Bibliothèque d'intégration Java/Android/Kotlin/Scala pour Ethereum_**
