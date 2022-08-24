@@ -29,6 +29,11 @@ const config: ThemeConfig = {
  */
 const theme: ThemeOverride = {
   config,
+  fonts: {
+    heading:
+      "system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif",
+    body: "system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif",
+  },
   styles,
   ...foundations,
   semanticTokens,
