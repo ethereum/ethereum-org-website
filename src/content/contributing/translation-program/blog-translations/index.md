@@ -22,7 +22,7 @@ Anyone can contribute to translating the EF blog. If you want to get involved, k
 
 </InfoBanner>
 
-### Join the blog translations project in Crowdin {#join-crowdin}
+### Join the blog translations project in Crowdin {#join-crowdin}
 
 You'll need to log in to your Crowdin account or sign up if you don’t already have one. All that is required to sign up is an e-mail account and password.
 
