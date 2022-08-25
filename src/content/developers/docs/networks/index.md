@@ -147,4 +147,4 @@ If a public Ethereum network is like the public internet, a consortium network i
 
 ## Further reading {#further-reading}
 
-_Know of a community resource that helped you? Edit this page and add it!_
+- [The Evolution of Ethereum Testnets](https://etherworld.co/2022/08/19/the-evolution-of-ethereum-testnet/)
