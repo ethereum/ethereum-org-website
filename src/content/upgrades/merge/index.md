@@ -75,7 +75,6 @@ Key action items include:
 Not completing the first two items above items will result in your node being seen as "offline" after The Merge until both layers are synced and authenticated.
 
 Not setting a `fee recipient` will still allow your validator to behave as usual, but you will miss out on unburnt fee tips and any MEV you would have otherwise earned in blocks your validator proposes.
-</ExpandableCard>
 
 For more detailed information and a summary of links to client resources, stakers are encouraged to check out the [Merge Readiness Checklist](https://launchpad.ethereum.org/en/merge-readiness/) over on the Staking Launchpad to make sure you're fully prepared for The Merge.
 
