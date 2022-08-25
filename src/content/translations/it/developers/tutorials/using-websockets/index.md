@@ -25,13 +25,13 @@ A differenza di HTTP, con i WebSocket non serve fare continuamente richieste qua
 
 Come avviene con ogni connessione di rete, non presupporre che un WebSocket rimanga aperto per sempre senza interruzioni; gestire correttamente a mano la caduta di connessione e la riconnessione può essere complicato. Un altro lato negativo dei WebSocket è che non si ottengono codici di stato HTTP come risposta ma solo il messaggio di errore.
 
-​[Alchemy Web3](https://docs.alchemyapi.io/documentation/alchemy-web3) aggiunge automaticamente la gestione degli errori WebSocket e i nuovi tentativi senza necessità di configurazione.
+​[Alchemy Web3](https://docs.alchemy.com/reference/api-overview) aggiunge automaticamente la gestione degli errori WebSocket e i nuovi tentativi senza necessità di configurazione.
 
 ## Facciamo una prova {#try-it-out}
 
 Il modo più facile per testare i WebSocket è installare uno strumento da riga di comando per eseguire richieste WebSocket come [wscat](https://github.com/websockets/wscat). Usando wscat, è possibile inviare richieste come di seguito:
 
-_Nota: se hai un account Alchemy, puoi sostituire `demo` con la tua chiave API. [Registrati qui per avere un account Alchemy gratuito!](https://dashboard.alchemyapi.io/signup/)_
+_Nota: se hai un account Alchemy, puoi sostituire `demo` con la tua chiave API. [Registrati qui per avere un account Alchemy gratuito!](https://auth.alchemyapi.io/signup)_
 
 ```
 $ wscat -c wss://eth-mainnet.ws.alchemyapi.io/ws/demo
@@ -251,4 +251,4 @@ curl https://eth-mainnet.alchemyapi.io/v2/your-api-key
 
 ---
 
-[Registrati ad Alchemy](https://dashboard.alchemyapi.io/signup/) gratis, dai un'occhiata alla [nostra documentazione](https://docs.alchemyapi.io/) e, per le ultime novità, seguici su [Twitter](https://twitter.com/AlchemyPlatform).
+[Registrati ad Alchemy](https://auth.alchemyapi.io/signup) gratis, dai un'occhiata alla [nostra documentazione](https://docs.alchemyapi.io/) e, per le ultime novità, seguici su [Twitter](https://twitter.com/AlchemyPlatform).

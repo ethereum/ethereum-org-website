@@ -14,9 +14,9 @@ source: Alchemy belgeleri
 sourceUrl: https://docs.alchemy.com/alchemy/tutorials/sending-txs
 ---
 
-Bu, Web3 kullanarak Ethereum işlemlerini göndermek için yeni başlayanlara uygun bir rehberdir. Ethereum blok zincirine bir işlem göndermek için üç ana adım vardır: oluşturma, imzalama ve yayınlama. Üçünü de gözden geçirerek aklınızdaki soruları cevaplamayı umuyoruz! Bu öğreticide, işlemlerimizi Ethereum zincirine göndermek için [Alchemy](https://www.alchemy.com/) kullanacağız. [Buradan ücretsiz bir Alchemy hesabı oluşturabilirsiniz](https://dashboard.alchemyapi.io/signup/).
+Bu, Web3 kullanarak Ethereum işlemlerini göndermek için yeni başlayanlara uygun bir rehberdir. Ethereum blok zincirine bir işlem göndermek için üç ana adım vardır: oluşturma, imzalama ve yayınlama. Üçünü de gözden geçirerek aklınızdaki soruları cevaplamayı umuyoruz! Bu öğreticide, işlemlerimizi Ethereum zincirine göndermek için [Alchemy](https://www.alchemy.com/) kullanacağız. [Buradan ücretsiz bir Alchemy hesabı oluşturabilirsiniz](https://auth.alchemyapi.io/signup).
 
-**NOT:** Bu kılavuz, uygulamanızın _arka ucunda_ işlem imzalamak içindir. İşlemlerinizi imzalamayı ön uca entegre etmek istiyorsanız [Web3'ü bir tarayıcı sağlayıcısı](https://docs.alchemyapi.io/documentation/alchemy-web3#with-a-browser-provider) ile entegre etmeye göz atın.
+**NOT:** Bu kılavuz, uygulamanızın _arka ucunda_ işlem imzalamak içindir. İşlemlerinizi imzalamayı ön uca entegre etmek istiyorsanız [Web3'ü bir tarayıcı sağlayıcısı](https://docs.alchemy.com/reference/api-overview#with-a-browser-provider) ile entegre etmeye göz atın.
 
 ## Temel Bilgiler {#the-basics}
 
@@ -55,13 +55,13 @@ Bu öğreticide kullanacağımız şey budur.
 ### 6\. Web3 kütüphanesi nedir? {#what-is-the-web3-library}
 
 - Web3.js, Ethereum geliştirmede kullanımı oldukça yaygın olan standart JSON-RPC çağrıları etrafında bir paketleyici kütüphanedir.
-- Farklı diller için birçok web3 kütüphanesi bulunur vardır. Bu öğreticide JavaScript ile yazılmış olan [Alchemy Web3](https://docs.alchemyapi.io/documentation/alchemy-web3)'ü kullanacağız. Diğer seçeneklere [buradan](https://docs.alchemyapi.io/guides/getting-started#other-web3-libraries) ulaşabilirsiniz.
+- Farklı diller için birçok web3 kütüphanesi bulunur vardır. Bu öğreticide JavaScript ile yazılmış olan [Alchemy Web3](https://docs.alchemy.com/reference/api-overview)'ü kullanacağız. Diğer seçeneklere [buradan](https://docs.alchemyapi.io/guides/getting-started#other-web3-libraries) ulaşabilirsiniz.
 
 Pekala, şimdi bu sorulardan birkaçını aradan çıkardığımıza göre, öğreticiye geçelim. Alchemy ile ilgili sorularınızı herhangi bir zaman [discord](https://discord.gg/gWuC7zB)'umuzda sormaktan çekinmeyin!
 
 **NOT:** Bu kılavuz bir Alchemy hesabı, bir Ethereum adresi veya MetaMask cüzdanı, NodeJ'ler ve npm'nin kurulu olmasını gerektirir. Kurulu değilse şu adımları takip edin:
 
-1.  [Ücretsiz bir Alchemy hesabı oluşturun](https://dashboard.alchemyapi.io/signup/)
+1.  [Ücretsiz bir Alchemy hesabı oluşturun](https://auth.alchemyapi.io/signup)
 2.  [MetaMask hesabı oluşturun](https://metamask.io/) (veya bir Ethereum adresi alın)
 3.  [NodeJ'leri ve NPM'yi yüklemek için bu adımları izleyin](https://docs.alchemy.com/alchemy/guides/alchemy-for-macs)
 
@@ -86,7 +86,7 @@ cd sendtx-example
 
 ### 4\. Alchemy Web3'ü kurun (veya herhangi bir web3 kütüphanesi) {#install-alchemy-web3}
 
-[Alchemy Web3](https://docs.alchemyapi.io/documentation/alchemy-web3) indirmek için proje klasörünüzde şu komutu çalıştırın:
+[Alchemy Web3](https://docs.alchemy.com/reference/api-overview) indirmek için proje klasörünüzde şu komutu çalıştırın:
 
 ```
 npm install @alch/alchemy-web3
