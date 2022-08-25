@@ -8509,6 +8509,15 @@
         "doc",
         "translation"
       ]
+    },
+    {
+      "login": "MicahZoltu",
+      "name": "Micah Zoltu",
+      "avatar_url": "https://avatars.githubusercontent.com/u/886059?v=4",
+      "profile": "https://github.com/MicahZoltu",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
