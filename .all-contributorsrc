@@ -8499,6 +8499,16 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "fleischi-svr",
+      "name": "Cronos",
+      "avatar_url": "https://avatars.githubusercontent.com/u/79516944?v=4",
+      "profile": "https://github.com/fleischi-svr",
+      "contributions": [
+        "doc",
+        "translation"
+      ]
     }
   ],
   "contributorsPerLine": 7,

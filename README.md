@@ -1355,6 +1355,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   </tr>
   <tr>
     <td align="center"><a href="https://github.com/othaime-en"><img src="https://avatars.githubusercontent.com/u/61498231?v=4?s=100" width="100px;" alt=""/><br /><sub><b>othaime-en</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=othaime-en" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/fleischi-svr"><img src="https://avatars.githubusercontent.com/u/79516944?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Cronos</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=fleischi-svr" title="Documentation">📖</a> <a href="#translation-fleischi-svr" title="Translation">🌍</a></td>
   </tr>
 </table>
 
