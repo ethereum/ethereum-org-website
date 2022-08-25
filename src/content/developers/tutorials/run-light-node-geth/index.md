@@ -16,7 +16,7 @@ preMergeBanner: true
 
 You may be interested in running an [Ethereum node](/developers/docs/nodes-and-clients/). One of the easiest ways to do so is by downloading, installing, and running [Geth](https://geth.ethereum.org). With Geth, we can have a light node up and running in minutes.
 
-A light client requires less than 400MB of storage whilst still allowing full interactivity with the Ethereum state. Light clients retrieve data from remote peers, so some queries may take longer to respond to than other sync modes.
+A light client requires less than 400GB of storage whilst still allowing full interactivity with the Ethereum state. Light clients retrieve data from remote peers, so some queries may take longer to respond to than other sync modes.
 
 For an explanation of the differences between the different sync modes, read our [nodes and clients developer docs](/developers/docs/nodes-and-clients/#node-types).
 
