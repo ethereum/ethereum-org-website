@@ -35,7 +35,7 @@ New blocks are added to Ethereum every 12 seconds (unless a block proposer misse
 **Standard data**
 
 - Block height – The block number and length of the blockchain (in blocks) on creation of the current block.
-- Timestamp – The time at which a miner mined the block.
+- Timestamp – The time at which a block was proposed.
 - Transactions – The number of transactions included within the block.
 - Fee recipient – The address that received gas fee tips from transactions.
 - Block Reward – The amount of ETH awarded to the validator who proposed the block.
