@@ -19,7 +19,7 @@ To ensure that all participants on the Ethereum network maintain a synchronized 
 ![A diagram showing transaction in a block causing state changes](./tx-block.png)
 _Diagram adapted from [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
-By spacing out commits, we give all network participants enough time to come to consensus: even though transaction requests occur dozens of times per second, blocks are only created and committed on Ethereum once every six seconds.
+By spacing out commits, we give all network participants enough time to come to consensus: even though transaction requests occur dozens of times per second, blocks are only created and committed on Ethereum once every twelve seconds.
 
 ## How blocks work {#how-blocks-work}
 
@@ -31,8 +31,8 @@ Once a block is put together by some validator on the network, it is propagated 
 
 Proof-of-stake means the following:
 
-- Validating nodes have to stake at least 32 ETH into a deposit contract as collateral against bad behaviour. This helps protect the network because provably dishonet activity leads to some or all of that stake being destroyed.
-- In every slot (spaced 6 seconds apart) a validator is randomly selected to be the block proposer. They bundle transactions together, execute them and determine a new 'state'. They wrap this information int a block and pass it around to other validators.
+- Validating nodes have to stake 32 ETH into a deposit contract as collateral against bad behavior. This helps protect the network because provably dishonest activity leads to some or all of that stake being destroyed.
+- In every slot (spaced twelve seconds apart) a validator is randomly selected to be the block proposer. They bundle transactions together, execute them and determine a new 'state'. They wrap this information into a block and pass it around to other validators.
 - Other validators who hear about a new block re-execute the transactions to ensure they agree with the proposed change to the global state. Assuming the block is valid they add it to their own database.
 - If a validator hears about two conflicting blocks for the same slot they use their fork-choice algorithm to pick the one supported by the most staked ETH.
 
@@ -53,12 +53,12 @@ body: an object containing several fields, as defined below
 The block `body` contains several fields of its own:
 
 ```
-randao_reveal: a value used to select the next blockl proposer
+randao_reveal: a value used to select the next block proposer
 eth1_data: information about the deposit contract
 graffiti: arbitrary data used to tag blocks
 proposer_slashings: list of validators to be slashed
 attester_slashings: list of validators to be slashed
-attestations: list of attestations in favour of the current block
+attestations: list of attestations in favor of the current block
 deposits: list of new deposits to the deposit contract
 voluntary_exits: list of validators exiting the network
 sync_aggregate: subset of validators used to serve light clients
@@ -69,7 +69,7 @@ Executing the transactions in the `execution_payload` updates the global state. 
 
 ## Block time {#block-time}
 
-Block time refers to the time separating blocks. In Ethereum, time is divided up into 6 second units called 'slots'. In each slot a single validator is selected to propose a block. Assuming all validators are online and fully functional there will be a block in every slot, meanign the block time is 6s. However, occasionally validators might be offline when called to propose a block, meaning slots can sometimes go empty. This is different to proof-of-work based systems where block times are probabilistic and tuned by the mining difficulty.
+Block time refers to the time separating blocks. In Ethereum, time is divided up into twelve second units called 'slots'. In each slot a single validator is selected to propose a block. Assuming all validators are online and fully functional there will be a block in every slot, meaning the block time is 12s. However, occasionally validators might be offline when called to propose a block, meaning slots can sometimes go empty. This is different to proof-of-work based systems where block times are probabilistic and tuned by the mining difficulty.
 
 ## Block size {#block-size}
 
@@ -83,4 +83,4 @@ _Know of a community resource that helped you? Edit this page and add it!_
 
 - [Transactions](/developers/docs/transactions/)
 - [Gas](/developers/docs/gas/)
-- [proof-of-stake](/developers/docs/consensus-mechanisms/pos)
+- [Proof-of-stake](/developers/docs/consensus-mechanisms/pos)
