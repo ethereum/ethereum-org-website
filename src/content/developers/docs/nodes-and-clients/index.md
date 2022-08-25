@@ -31,7 +31,7 @@ The consensus layer, [the Beacon Chain](/upgrades/beacon-chain/), has been runni
 
 With the Merge, Ethereum transitions to proof-of-stake by connecting these networks. Execution and consensus clients work together to verify Ethereum's state.
 
-Modular design with various software pieces working together is called [encapusalted complexity](https://vitalik.ca/general/2022/02/28/complexity.html). This approach makes it easier to execute The Merge seamlessly and enables the reuse of individual clients, for example, in the [layer 2 ecosystem](/layer-2/).
+Modular design with various software pieces working together is called [encapsulated complexity](https://vitalik.ca/general/2022/02/28/complexity.html). This approach makes it easier to execute The Merge seamlessly and enables the reuse of individual clients, for example, in the [layer 2 ecosystem](/layer-2/).
 
 ![Coupled execution and consensus clients](./eth1eth2client.png)
 Simplified diagram of a coupled execution and consensus client.
@@ -40,7 +40,7 @@ Simplified diagram of a coupled execution and consensus client.
 
 Both [execution clients](/developers/docs/nodes-and-clients/#execution-clients) and [consensus clients](/developers/docs/nodes-and-clients/#consensus-clients) exist in a variety of programming languages developed by different teams.
 
-Multiple client implementations can make the network stronger by reducing its dependency on a single codebase. The ideal goal is to achieve diversity without any client dominating the network, thereby eliminating a potential single point of failure. 
+Multiple client implementations can make the network stronger by reducing its dependency on a single codebase. The ideal goal is to achieve diversity without any client dominating the network, thereby eliminating a potential single point of failure.
 The variety of languages also invites a broader developer community and allows them to create integrations in their preferred language.
 
 Learn more about [client diversity](/developers/docs/nodes-and-clients/client-diversity/).
@@ -159,7 +159,7 @@ Besu's extensive [documentation](https://besu.hyperledger.org/en/stable/) will g
 
 ### Erigon {#erigon}
 
-Erigon, formerly known as Turbo‐Geth, started as a fork of Go Ethereum oriented toward speed and disk‐space efficiency. Erigon is a completely re-architected implementation of Ethereum, currently written in Go but with implementations in other languages in work, e.g. [Akula](https://medium.com/@vorot93/meet-akula-the-fastest-ethereum-implementation-ever-built-58eaca244c39). Erigon's goal is to provide a faster, more modular, and more optimized implementation of Ethereum. It can perform a full archive node sync using around 2TB of disk space, in under 3 days.
+Erigon, formerly known as Turbo‐Geth, started as a fork of Go Ethereum oriented toward speed and disk‐space efficiency. Erigon is a completely re-architected implementation of Ethereum, currently written in Go but with implementations in other languages under development, e.g. [Akula](https://medium.com/@vorot93/meet-akula-the-fastest-ethereum-implementation-ever-built-58eaca244c39). Erigon's goal is to provide a faster, more modular, and more optimized implementation of Ethereum. It can perform a full archive node sync using around 2TB of disk space, in under 3 days.
 
 ### Go Ethereum {#geth}
 
