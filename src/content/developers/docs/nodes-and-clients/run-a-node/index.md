@@ -264,7 +264,7 @@ Besu also comes with a launcher option which will ask a series of questions and 
 besu --Xlauncher
 ```
 
-Besu's [documentation](https://besu.hyperledger.org/en/latest/HowTo/Get-Started/Starting-node/) contains additional options and configuration details including guide for [The Merge](https://besu.hyperledger.org/en/latest/public-networks/how-to/prepare-for-the-merge/). 
+[Besu's documentation](https://besu.hyperledger.org/en/latest/HowTo/Get-Started/Starting-node/) contains additional options and configuration details including [a guide on preparing for The Merge](https://besu.hyperledger.org/en/latest/public-networks/how-to/prepare-for-the-merge/).
 
 ##### Running Erigon
 
