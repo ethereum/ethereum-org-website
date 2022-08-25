@@ -65,7 +65,45 @@ sync_aggregate: subset of validators used to serve light clients
 execution_payload: transactions passed from the execution client
 ```
 
-Executing the transactions in the `execution_payload` updates the global state. All clients re-execute the transactions in the `execution_payload` to ensure the new state matches that in the new block `state_root` field. This is how clients can tell that a new block is valid and safe to add to their blockchain.
+Executing the transactions in the `execution_payload` updates the global state. All clients re-execute the transactions in the `execution_payload` to ensure the new state matches that in the new block `state_root` field. This is how clients can tell that a new block is valid and safe to add to their blockchain. The `execution payload` itself is an object with several fields. There is also an `execution_payload_header` that contains important summary information about the execution data. These data structures are organized as follows:
+
+The `execution_payload_header` contains the following fields:
+
+```
+parent_hash: hash of the parent block
+fee_recipient: account address for paying transaction fees to
+state_root: root hash for the global state after applying changes in this block
+receipts_root: hash of the transaction receipts trie
+logs_bloom: data structure containign event logs
+prev_randao: value used in random validator selection
+block_number: the number of the current block
+gas_limit: maximum gas allowed in this block
+gas_used: the actual amount of gas used in this block
+timestamp: the block time
+extra_data: arbitrary additional data as raw bytes
+base_fee_per_gas: the base fee value 
+block_hash: Hash of execution block
+transactions_root: root hash of the transactions in the payload
+```
+
+The `execution_payload` itself contains the following (notice this is idential to the header except that instead of the root hash of the transactions it includes the actual list of transactions:
+
+```
+parent_hash: hash of the parent block
+fee_recipient: account address for paying transaction fees to
+state_root: root hash for the global state after applying changes in this block
+receipts_root: hash of the transaction receipts trie
+logs_bloom: data structure containign event logs
+prev_randao: value used in random validator selection
+block_number: the number of the current block
+gas_limit: maximum gas allowed in this block
+gas_used: the actual amount of gas used in this block
+timestamp: the block time
+extra_data: arbitrary additional data as raw bytes
+base_fee_per_gas: the base fee value 
+block_hash: Hash of execution block
+transactions: list of transactions to be executed
+```
 
 ## Block time {#block-time}
 
