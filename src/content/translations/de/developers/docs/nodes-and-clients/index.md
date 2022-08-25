@@ -119,7 +119,7 @@ Diese Tabelle gibt einen Überblick über die verschiedenen Clients. Sie alle be
 | [Geth](https://geth.ethereum.org/)                                      | Go       | Linux, Windows, MacOS | Mainnet, Görli, Rinkeby, Ropsten             | Snap, Full          | Archive, Pruned     |
 | [Nethermind](http://nethermind.io/)                                     | C#, .NET | Linux, Windows, MacOS | Mainnet, Görli, Ropsten, Rinkeby und weitere | Fast, Beam, Archive | Archive, Pruned     |
 | [Besu](https://besu.hyperledger.org/en/stable/)                         | Java     | Linux, Windows, MacOS | Mainnet, Rinkeby, Ropsten, Görli und weitere | Fast, Full          | Archive, Pruned     |
-| [Erigon](https://github.com/ledgerwatch/erigon)                         | Los      | Linux, Windows, MacOS | Mainnet, Görli, Rinkeby, Ropsten             | Full                | Archive, Pruned     |
+| [Erigon](https://github.com/ledgerwatch/erigon)                         | Go      | Linux, Windows, MacOS | Mainnet, Görli, Rinkeby, Ropsten             | Full                | Archive, Pruned     |
 | [OpenEthereum (veraltet)](https://github.com/openethereum/openethereum) | Rust     | Linux, Windows, MacOS | Mainnet, Kovan, Ropsten und weitere          | Warp, Full          | Archive, Pruned     |
 
 **Beachte, dass OpenEthereum [veraltet](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd) ist und nicht mehr gewartet wird.** Verwende es mit Vorsicht und wechsle lieber zu einer anderen Client-Implementierung.
