@@ -71,6 +71,10 @@ Studies have shown that grant review panels do a poor job of selecting high-qual
 
 Web3 has the potential to disrupt this broken funding model by experimenting with different incentive models developed by DAOs and Web3 broadly. [Retroactive public goods funding](https://medium.com/ethereum-optimism/retroactive-public-goods-funding-33c9b7d00f0c), [quadratic funding](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531), [DAO governance](https://www.antler.co/blog/daos-and-web3-governance) and [tokenized incentive structures](https://cdixon.org/2017/05/27/crypto-tokens-a-breakthrough-in-open-network-design) are some of the Web3 tools that could revolutionize science funding.
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/qB4Tc3FcVbM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
 ### IP ownership and development {#ip-ownership}
 
 Intellectual property (IP) is a big problem in traditional science: from being stuck in universities or unused in biotechs, to being notoriously hard to value. However, ownership of digital assets (such as scientific data or articles) is something Web3 does exceptionally well using [non-fungible tokens (NFTs)](/nft/).
@@ -127,3 +131,4 @@ Explore projects and join the DeSci community.
 - [Conversation between Vitalik Buterin and the scientist Aubrey de Grey about the intersection of longevity research and crypto](https://www.youtube.com/watch?v=x9TSJK1widA)
 - [Scientific Publishing Is Broken. Can Web3 Fix It?](https://www.youtube.com/watch?v=WkvzYgCvWj8)
 - [Juan Benet - DeSci, Independent Labs, & Large Scale Data Science](https://www.youtube.com/watch?v=zkXM9H90g_E)
+- [Sebastian Brunemeier - How DeSci Can Transform Biomedical Research & Venture Capital](https://www.youtube.com/watch?v=qB4Tc3FcVbM)
