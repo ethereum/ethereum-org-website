@@ -1,5 +1,5 @@
 ---
-title: ERC-721 非同质化代币标准
+title: ERC-721 非同质化通证标准
 description:
 lang: zh
 sidebar: true
@@ -7,29 +7,29 @@ sidebar: true
 
 ## 简介 {#introduction}
 
-**什么是非同质化代币？**
+**什么是非同质化通证？**
 
-非同质化代币（NFT）用于以唯一的方式标识某人或者某物。 此类型的代币可以被完美地用于出售下列物品的平台：收藏品、密钥、彩票、音乐会座位编号、体育比赛等。 这种类型的代币有着惊人的潜力，因此它需要一个适当的标准。ERC-721 就是为解决这个问题而来！
+非同质化通证（NFT）用于以唯一的方式标识某人或者某物。 此类型的通证可以被完美地用于出售下列物品的平台：收藏品、密钥、彩票、音乐会座位编号、体育比赛等。 这种类型的通证有着惊人的潜力，因此它需要一个适当的标准。ERC-721 就是为解决这个问题而来！
 
 **ERC-721 是什么？**
 
-ERC-721 为 NFT 引入了一个标准，换言之， 这种类型的代币是独一无二的，并且可能与来自同一智能合约的另一代币有不同的价值，也许是因为它的年份、稀有性、甚至是它的观感。 稍等，看起来怎么样呢？
+ERC-721 为 NFT 引入了一个标准，换言之， 这种类型的通证是独一无二的，并且可能与来自同一智能合约的另一通证有不同的价值，也许是因为它的年份、稀有性、甚至是它的观感。 稍等，看起来怎么样呢？
 
-是的。 所有 NFTs 都有一个 `uint256` 变量，名为 `tokenId`，所以对于任何 ERC-721 合约，这对值`contract address, tokenId` 必须是全局唯一的。 也就是说，dApp 可以有一个“转换器”，该转换器使用 `tokenId` 输入和输出一些非常有趣的事物的图像， 例如僵尸、武器、技能或非常可爱的猫咪！
+是的。 所有 NFTs 都有一个名为 `tokenId` 的 `uint256` 变量，，所以对于任何 ERC-721 合约，`contract address, tokenId` 这对值必须是全局唯一的。 也就是说，dApp 可以有一个“转换器”，该转换器使用 `tokenId` 输入和输出一些非常有趣的事物的图像， 例如僵尸、武器、技能或非常可爱的猫咪！
 
-## 前体条件 {#prerequisites}
+## 必备知识 {#prerequisites}
 
 - [帐户](/developers/docs/accounts/)
 - [智能合约](/developers/docs/smart-contracts/)
-- [代币标准](/developers/docs/standards/tokens/)
+- [通证标准](/developers/docs/standards/tokens/)
 
 ## 正文 {#body}
 
-ERC-721（Ethereum Request for Comments 721），由 William Entriken、Dieter Shirley、Jacob Evans、Nastassia Sachs 在 2018 年 1 月提出，是一个在智能合约中实现代币 API 的非同质化代币标准。
+ERC-721（Ethereum Request for Comments 721），由 William Entriken、Dieter Shirley、Jacob Evans、Nastassia Sachs 在 2018 年 1 月提出，是一个在智能合约中实现实现一个 API 接口的非同质化通证标准。
 
-它提供了一些功能，例如将代币从一个帐户转移到另一个帐户，获取帐户的当前代币余额，获取代币的所有者，以及整个网络的可用代币总供应量。 除此之外，它还具有其他功能，例如批准帐户中一定数量的代币可以被第三方帐户转移。
+它提供了一些功能，例如将通证从一个帐户转移到另一个帐户，获取帐户的当前通证余额，获取通证的所有者，以及整个网络的可用通证总供应量。 除此之外，它还具有其他功能，例如批准帐户中一定数量的通证可以被第三方帐户转移。
 
-如果一个智能合约实现了下列方法和事件，它就可以被称为 ERC-721 非同质化代币合约。 一旦被部署，它将负责跟踪在以太坊上创建的代币。
+如果一个智能合约实现了下列方法和事件，它就可以被称为 ERC-721 非同质化通证合约。 一旦被部署，它将负责跟踪在以太坊上创建的通证。
 
 来自 [EIP-721](https://eips.ethereum.org/EIPS/eip-721)：
 
@@ -57,7 +57,7 @@ ERC-721（Ethereum Request for Comments 721），由 William Entriken、Dieter S
 
 ### 示例 {#web3py-example}
 
-让我们看看一个标准是多么重要，它使我们能够简单地在以太坊上检查任何 ERC-721 代币合约。 我们只需要合约的应用程序二进制接口（ABI）就可以创造任何 ERC-721 代币的接口。 下面我们将使用一个简化的应用程序二进制接口，使其成为一个简单易用的例子。
+让我们看看一个标准是多么重要，它使我们能够简单地在以太坊上检查任何 ERC-721 通证合约。 我们只需要合约的应用程序二进制接口（ABI）就可以创造任何 ERC-721 通证的接口。 下面我们将使用一个简化的应用程序二进制接口，使其成为一个简单易用的例子。
 
 #### Web3.py 示例 {#web3py-example}
 
@@ -238,7 +238,7 @@ recent_births = [get_event_data(w3.codec, ck_extra_events_abi[1], log)["args"] f
 
 ## 延伸阅读 {#further-reading}
 
-- [EIP-721：ERC-721 非同质化代币标准](https://eips.ethereum.org/EIPS/eip-721)
+- [EIP-721：ERC-721 非同质化通证标准](https://eips.ethereum.org/EIPS/eip-721)
 - [OpenZeppelin - ERC-721 文档](https://docs.openzeppelin.com/contracts/3.x/erc721)
 - [OpenZeppelin - ERC-721 实施](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/ERC721.sol)
 - [Alchemy NFT API](https://docs.alchemy.com/alchemy/enhanced-apis/nft-api)
