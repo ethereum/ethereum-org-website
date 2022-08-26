@@ -745,16 +745,6 @@ const DappsPage = ({
 
   const payments = [
     {
-      title: "Tornado cash",
-      description: translateMessageId(
-        "page-dapps-dapp-description-tornado-cash",
-        intl
-      ),
-      link: "https://tornado.cash/",
-      image: getImage(data.tornado),
-      alt: translateMessageId("page-dapps-tornado-cash-logo-alt", intl),
-    },
-    {
       title: "Sablier",
       description: translateMessageId(
         "page-dapps-dapp-description-sablier",
