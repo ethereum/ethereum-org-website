@@ -65,6 +65,24 @@ sync_aggregate: subset of validators used to serve light clients
 execution_payload: transactions passed from the execution client
 ```
 
+The `attestations` field contains a list of all the attestations in the block. Attestations have their own data type that contains several pieces of data. Each attestation contains:
+
+```
+aggregation_bits: a list of which validators participated in this attestation
+data: a container with multiple subfields
+signature: aggregate signature of all attesting validators
+```
+
+The `data` field in the `attestation` contains the following:
+
+```
+slot: the slot the attestation relates to
+index: indices for attesting validators
+beacon_block_root: the root hash of the Beacon block containing this object
+source: the last justified checkpoint
+target: the latest epoch boundary block
+```
+
 Executing the transactions in the `execution_payload` updates the global state. All clients re-execute the transactions in the `execution_payload` to ensure the new state matches that in the new block `state_root` field. This is how clients can tell that a new block is valid and safe to add to their blockchain. The `execution payload` itself is an object with several fields. There is also an `execution_payload_header` that contains important summary information about the execution data. These data structures are organized as follows:
 
 The `execution_payload_header` contains the following fields:
