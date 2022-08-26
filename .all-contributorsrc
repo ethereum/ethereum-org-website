@@ -8499,6 +8499,44 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "fleischi-svr",
+      "name": "Cronos",
+      "avatar_url": "https://avatars.githubusercontent.com/u/79516944?v=4",
+      "profile": "https://github.com/fleischi-svr",
+      "contributions": [
+        "doc",
+        "translation"
+      ]
+    },
+    {
+      "login": "MicahZoltu",
+      "name": "Micah Zoltu",
+      "avatar_url": "https://avatars.githubusercontent.com/u/886059?v=4",
+      "profile": "https://github.com/MicahZoltu",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "Aracki",
+      "name": "Ivan Aracki",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6129986?v=4",
+      "profile": "https://www.aracki.me",
+      "contributions": [
+        "ideas"
+      ]
+    },
+    {
+      "login": "always0e0w",
+      "name": "屠虫少年",
+      "avatar_url": "https://avatars.githubusercontent.com/u/64178062?v=4",
+      "profile": "https://alphabeta.top/",
+      "contributions": [
+        "doc",
+        "translation"
+      ]
     }
   ],
   "contributorsPerLine": 7,
