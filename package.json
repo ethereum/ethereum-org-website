@@ -34,7 +34,7 @@
     "gatsby-plugin-image": "^2.21.0",
     "gatsby-plugin-manifest": "^4.10.1",
     "gatsby-plugin-matomo": "^0.9.0",
-    "gatsby-plugin-mdx": "^2.14.1",
+    "gatsby-plugin-mdx": "^3.0.0",
     "gatsby-plugin-netlify": "^5.0.1",
     "gatsby-plugin-react-helmet": "^5.0.0",
     "gatsby-plugin-react-helmet-canonical-urls": "^1.4.0",
