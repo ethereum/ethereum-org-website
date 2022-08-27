@@ -18,7 +18,7 @@ Every computer in the network must agree upon each new block and the chain as a 
 
 Ethereum currently uses a [proof-of-work](/developers/docs/consensus-mechanisms/pow/) consensus mechanism. This means that anyone who wants to add new blocks to the chain must solve a difficult puzzle that requires a lot of computing power. Solving the puzzle "proves" that you have done the "work" by using computational resources. Doing this is known as [mining](/developers/docs/consensus-mechanisms/pow/mining/). Mining is typically brute force trial and error, but successfully adding a block is rewarded in ETH.
 
-New blocks are broadcast to the nodes in the network, checked and verified, thus updating the state of the blockchain for everyone.
+New blocks are broadcasted to the nodes in the network, checked and verified, thus updating the state of the blockchain for everyone.
 
 So to summarize, when you send ETH to someone, the transaction must be added to the block which will get mined. The updated state is then shared with the entire network.
 
