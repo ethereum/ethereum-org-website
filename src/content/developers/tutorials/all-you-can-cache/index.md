@@ -405,8 +405,6 @@ Read a 256 bit word from a `bytes memory` buffer. This utility function lets us 
 
 Yul does not support data structures beyond `uint256`, so when you refer to a more sophisticated data structure, such as the memory buffer `_bytes`, you get the address of that structure. Solidity stores `bytes memory` values as a 32 byte word that contains the length, followed by the actual bytes, so to get byte number `_start` we need to calculate `_bytes+32+_start`.
 
-TODO TODO TODO
-
 ```solidity        
 
         return tempUint;
@@ -421,47 +419,85 @@ TODO TODO TODO
     uint256 constant VAL_B =     0xBEEF;
     uint256 constant VAL_C =     0x600D;
     uint256 constant VAL_D = 0x600D60A7;
+```
 
+Some constants we need for testing.
+
+```solidity
     function testReadParam() public {
+```
+
+Call `fourParams()`, a function that uses `readParams`, to test we can read parameters correctly.
+
+```solidity
         address _cacheAddr = address(cache);
         bool _success;
         bytes memory _callInput;
         bytes memory _callOutput;
+```
 
+We can't use the normal ABI mechanism to call a function using the cache, so we need to use the low level [`<address>.call()`](https://docs.soliditylang.org/en/v0.8.16/types.html#members-of-addresses) mechanism. That mechanism takes a `bytes memory` as input, and returns that (as well as a Boolean value) as output.
+
+```solidity
         // First call, the cache is empty
         _callInput = bytes.concat(
             FOUR_PARAMS,
+```
 
+It is useful for the same contract to support both cached functions (for calls directly from transactions) and non-cached functions (for calls from other smart contracts). To do that we need to continue to rely on the Solidity mechanism to call the correct function, instead of putting everything in [a `fallback` function](https://docs.soliditylang.org/en/v0.8.16/contracts.html#fallback-function). Doing this makes composability a lot easier. A single byte would be enough to identify the function in most cases, so we are wasting three bytes (16*3=48 gas). However, as I'm writing this those 48 gas cost 0.07 cents, which is a reasonable cost of simpler, less bug prone, code.
+
+```solidity            
             // First value, add it to the cache 
             cache.INTO_CACHE(),   
             bytes32(VAL_A),
+```
 
-            // Second value, don't add it to the cache
-            cache.DONT_CACHE(),
-            bytes32(VAL_B),
+The first value: A flag saying it's a full value that needs to be written to the cache, followed by the 32 bytes of the value. The other three values are similar, except that `VAL_B` isn't written to the cache and `VAL_C` is both the third parameter and the fourth one.
 
-            // Third and fourth values, same value
-            cache.INTO_CACHE(),
-            bytes32(VAL_C),
-            cache.INTO_CACHE(),
-            bytes32(VAL_C)
+```solidity
+             .
+             .
+             .
         );
         (_success, _callOutput) = _cacheAddr.call(_callInput);
+```
+
+This is where we actually call the `Cache` contract. 
+
+```solidity
         assertEq(_success, true);
+```
+
+We expect the call to be successful.
+
+```solidity
         assertEq(cache.cacheRead(1), VAL_A);
         assertEq(cache.cacheRead(2), VAL_C); 
+```
+
+We start with an empty cache and then add `VAL_A` followed by `VAL_C`. We'd expect the first one to have the key 1, and the second one to have 2.
+
+```
         assertEq(toUint256(_callOutput,0), VAL_A);
         assertEq(toUint256(_callOutput,32), VAL_B);
         assertEq(toUint256(_callOutput,64), VAL_C);
         assertEq(toUint256(_callOutput,96), VAL_C);
+```
 
+The output is the four parameters. Here we verify it is correct.
+
+```solidity
         // Second call, we can use the cache
         _callInput = bytes.concat(
             FOUR_PARAMS,
 
             // First value in the Cache
             bytes1(0x01),   
+```solidity
 
+Cache keys below 16 are just one byte.
+
+```solidity
             // Second value, don't add it to the cache
             cache.DONT_CACHE(),
             bytes32(VAL_B),
@@ -470,24 +506,24 @@ TODO TODO TODO
             bytes1(0x02),
             bytes1(0x02)
         );
-        (_success, _callOutput) = _cacheAddr.call(_callInput);
-        assertEq(_success, true);
-        assertEq(toUint256(_callOutput,0), VAL_A);
-        assertEq(toUint256(_callOutput,32), VAL_B);
-        assertEq(toUint256(_callOutput,64), VAL_C);
-        assertEq(toUint256(_callOutput,96), VAL_C);
-
+        .
+        .
+        .
     }   // testReadParam
+```solidity
 
+The tests after the call are identical to those after the first call.
 
+```solidity
     function testEncodeVal() public {
-        address _cacheAddr = address(cache);
-        bool _success;
-        bytes memory _callInput;
-        bytes memory _callOutput;
+```
 
-        // First call, the cache is empty
-        // Second call, we can use the cache
+This function is similar to `testReadParam`, except that instead of writing the parameters explicitly we use `encodeVal()`.
+
+```solidity
+        .
+        .
+        .
         _callInput = bytes.concat(
             FOUR_PARAMS,
             cache.encodeVal(VAL_A),
@@ -495,32 +531,16 @@ TODO TODO TODO
             cache.encodeVal(VAL_C),
             cache.encodeVal(VAL_D)
         );                        
-        (_success, _callOutput) = _cacheAddr.call(_callInput);
-        assertEq(_success, true);
-        assertEq(toUint256(_callOutput,0), VAL_A);
-        assertEq(toUint256(_callOutput,32), VAL_B);
-        assertEq(toUint256(_callOutput,64), VAL_C);
-        assertEq(toUint256(_callOutput,96), VAL_D);
-        assertEq(_callInput.length, 4+33*4);
-
-        // Second call, we can use the cache
-        _callInput = bytes.concat(
-            FOUR_PARAMS,
-            cache.encodeVal(VAL_A),
-            cache.encodeVal(VAL_B),
-            cache.encodeVal(VAL_C),
-            cache.encodeVal(VAL_D)
-        );                        
-        (_success, _callOutput) = _cacheAddr.call(_callInput);
-        assertEq(_success, true);
-        assertEq(toUint256(_callOutput,0), VAL_A);
-        assertEq(toUint256(_callOutput,32), VAL_B);
-        assertEq(toUint256(_callOutput,64), VAL_C);
-        assertEq(toUint256(_callOutput,96), VAL_D);
+        .
+        .
+        .
         assertEq(_callInput.length, 4+1*4);
     }   // testEncodeVal
+```
 
+The only additional test in `testEncodeVal()` is to verify that the length of `_callInput` is correct. For the first call it is 4+33*4. For the second, where every value is already in the cache, it is 4+1*4.
 
+```solidity
     // Test encodeVal when the key is more than a single byte
     // Maximum three bytes because filling the cache to four bytes takes
     // too long.
