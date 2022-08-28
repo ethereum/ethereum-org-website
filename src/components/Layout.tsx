@@ -66,6 +66,7 @@ const Main = styled.main`
 `
 
 export interface IProps {
+  children?: React.ReactNode
   data?: {
     pageData?: {
       frontmatter?: {

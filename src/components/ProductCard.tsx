@@ -140,6 +140,7 @@ const REPO_DATA = gql`
 `
 
 export interface IProps {
+  children?: React.ReactNode
   url: string
   background: string
   image: string

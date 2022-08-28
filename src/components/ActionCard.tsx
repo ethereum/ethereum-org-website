@@ -66,6 +66,7 @@ const Card = styled(Link)`
 `
 
 export interface IProps {
+  children?: React.ReactNode
   to: string
   alt?: string
   image: string

@@ -55,6 +55,7 @@ const ModalReturn = styled.div`
 
 export interface IProps {
   content: ReactNode
+  children?: React.ReactNode
 }
 
 // TODO add `position` prop

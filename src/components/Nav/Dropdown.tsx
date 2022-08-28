@@ -128,6 +128,7 @@ interface IDropdownContext {
 const DropdownContext = React.createContext<IDropdownContext | null>(null)
 
 export interface IProps {
+  children?: React.ReactNode
   section: ISection
   hasSubNav: boolean
 }
@@ -199,6 +200,7 @@ const NavDropdown: React.FC<IProps> & {
 }
 
 interface IItemProp {
+  children?: React.ReactNode
   isLast?: boolean
 }
 
@@ -216,7 +218,9 @@ const Item: React.FC<IItemProp> = ({ children, isLast = false, ...rest }) => {
   )
 }
 
-interface ITitleProps {}
+interface ITitleProps {
+  children?: React.ReactNode
+}
 
 const Title: React.FC<ITitleProps> = ({ children }) => {
   return <H2>{children}</H2>
