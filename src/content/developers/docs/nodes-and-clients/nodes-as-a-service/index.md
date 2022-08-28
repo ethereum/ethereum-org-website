@@ -259,6 +259,7 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - 24/7 monitoring, management, updates
     - Unlimited transactions
     - Hardware specs sized to your requirements
+    - Optional high-availability
     - German & English support
 
 ## Further reading {#further-reading}

@@ -211,6 +211,7 @@ Hier ist eine Liste der beliebtesten Ethereum-Nodeanbieter. Du bist eingeladen, 
     - 24/7 Überwachung, Betrieb, Sicherheitsupdates
     - Unlimitierte Transaktionen
     - Hardwarespezifikationen entsprechend der Kundenanforderungen
+    - Optionale Hochverfügbarkeit
     - Deutscher und Englischer Support
 
 ## Weiterführende Informationen {#further-reading}
