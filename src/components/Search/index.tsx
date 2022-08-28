@@ -168,10 +168,9 @@ const isValidAddress = (address: string): boolean => {
 const Results: React.FC<StateResultsProvided> = ({
   searchState: state,
   searchResults: res,
-  children,
 }) => {
   if (res && res.nbHits > 0) {
-    return <>{children}</>
+    return null
   }
   if (state.query && isValidAddress(state.query)) {
     return (
