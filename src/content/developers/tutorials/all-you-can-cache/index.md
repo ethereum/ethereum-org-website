@@ -214,7 +214,7 @@ We could get the number of parameters we have from the calldata itself, but the 
 
         // Parameters start at byte 4, before that it's the function signature
         uint _atByte = 4;
-s
+
         for(uint i=0; i<_paramNum; i++) {
             (_atByte, params[i]) = _readParam(_atByte);
         }
@@ -272,6 +272,7 @@ Single bytes are the easiest. We just use [`bytes.concat`](https://docs.solidity
 
 When we have a key that is less than 16<sup>3</sup>, we can express it in two bytes. We first convert `_key`, which is a 256 bit value, to a 16 bit value and use logical or to add the number of extra bytes to the first byte. Then we just it into a `bytes2` value, which can be converted to `bytes`.
 
+```solidity
         // There is probably a clever way to do the following lines as a loop,
         // but it's a view function so I'm optimizing for programmer time and
         // simplicity.
