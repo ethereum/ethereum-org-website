@@ -538,7 +538,7 @@ This function is similar to `testReadParam`, except that instead of writing the 
     }   // testEncodeVal
 ```
 
-The only additional test in `testEncodeVal()` is to verify that the length of `_callInput` is correct. For the first call it is 4+33*4. For the second, where every value is already in the cache, it is 4+1*4.
+The only additional test in `testEncodeVal()` is to verify that the length of `_callInput` is correct. For the first call it is 4+33\*4. For the second, where every value is already in the cache, it is 4+1\*4.
 
 ```solidity
     // Test encodeVal when the key is more than a single byte
@@ -550,11 +550,16 @@ The only additional test in `testEncodeVal()` is to verify that the length of `_
         for(uint i=1; i<0x1FFF; i++) {
             cache.cacheWrite(i);
         }        
+```
 
-        address _cacheAddr = address(cache);
-        bool _success;
-        bytes memory _callInput;
-        bytes memory _callOutput;
+The `testEncodeVal` function above only writes four values into the cache, so [the part of the function that deals with multi-byte values](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/src/Cache.sol#L144-L171) is not checked. But that code is complicated and error-prone.
+
+The first part of this function is a loop that writes all the values from 1 to 0x1FFF to the cache is order, so we'll be able to encode those values and know where they are going.
+
+```solidity
+        .
+        .
+        .
 
         _callInput = bytes.concat(
             FOUR_PARAMS,
@@ -563,51 +568,41 @@ The only additional test in `testEncodeVal()` is to verify that the length of `_
             cache.encodeVal(0x0100),   // Two bytes     0x1100
             cache.encodeVal(0x1000)    // Three bytes 0x201000 
         );    
-        (_success, _callOutput) = _cacheAddr.call(_callInput);
-        assertEq(_success, true);
-        assertEq(toUint256(_callOutput,0),  0x000F);
-        assertEq(toUint256(_callOutput,32), 0x0010);
-        assertEq(toUint256(_callOutput,64), 0x0100);
-        assertEq(toUint256(_callOutput,96), 0x1000);
-        assertEq(_callInput.length, 4+1+2+2+3);
+````
 
+Test one byte, two byte, and three byte values. We don't test beyond that because it would take too long to write enough stack entries (at least 0x10000000, approximately a quarter of a billion).
+
+```solidity
+        .
+        .
+        .
+        .
     }    // testEncodeValBig
 
 
     // Test what with an excessively small buffer we get a revert
     function testShortCalldata() public {
-        address _cacheAddr = address(cache);
-        bool _success;
-        bytes memory _callInput;
-        bytes memory _callOutput;
+```
 
-        // First call, the cache is empty
-        _callInput = bytes.concat(
-            FOUR_PARAMS,
+Test what happens in the abnormal case where there aren't enough parameters.
 
-            // First value, add it to the cache 
-            cache.INTO_CACHE(),   
-            bytes32(VAL_A),
-
-            // Second value, don't add it to the cache
-            cache.DONT_CACHE(),
-            bytes32(VAL_B)
-
-            // We should send four parameters, but we only sent two
-        );
+```solidity
+        .
+        .
+        .
         (_success, _callOutput) = _cacheAddr.call(_callInput);
         assertEq(_success, false);
     }   // testShortCalldata
+```
 
+Since it reverts, the result we should get is `false`.
 
+```
     // Call with cache keys that aren't there
     function testNoCacheKey() public {
-        address _cacheAddr = address(cache);
-        bool _success;
-        bytes memory _callInput;
-        bytes memory _callOutput;
-
-        // First call, the cache is empty
+        .
+        .
+        .
         _callInput = bytes.concat(
             FOUR_PARAMS,
 
@@ -618,13 +613,16 @@ The only additional test in `testEncodeVal()` is to verify that the length of `_
             // Second value
             bytes1(0x0F),
             bytes2(0x1234),
-            bytes11(0xA00102030405060708090A)
+            bytes11(0xA10102030405060708090A)
         );
-        (_success, _callOutput) = _cacheAddr.call(_callInput);
-        assertEq(_success, false);
-    }   // testNoCacheKey
+```
 
+This function gets four perfectly legitimate parameters, except that the cache is empty so there are no values there to read.
 
+```solidity
+        .
+        .
+        .
     // Test what with an excessively long buffer everything works file
     function testLongCalldata() public {
         address _cacheAddr = address(cache);
@@ -651,12 +649,16 @@ The only additional test in `testEncodeVal()` is to verify that the length of `_
             // And another value for "good luck"
             bytes4(0x31112233)
         );
+```
+
+This function sends five values. We know that the fifth value is ignored because it is not a valid cache entry.
+
+```solidity
         (_success, _callOutput) = _cacheAddr.call(_callInput);
         assertEq(_success, true);
-        assertEq(toUint256(_callOutput,0),  VAL_A);
-        assertEq(toUint256(_callOutput,32), VAL_B);
-        assertEq(toUint256(_callOutput,64), VAL_C);
-        assertEq(toUint256(_callOutput,96), VAL_D);        
+        .
+        .
+        .        
     }   // testLongCalldata
 
 }        // CacheTest
