@@ -203,6 +203,15 @@ Hier ist eine Liste der beliebtesten Ethereum-Nodeanbieter. Du bist eingeladen, 
     - Unterstützung für unterschiedliche Nodes
     - Ressourcenskalierung
     - Hohe Verarbeitungsgeschwindigkeit
+- [**Zero Services GmbH**](https://www.zeroservices.eu/)
+  - Eigenschaften
+    - Dedizierte Etherum-Validatoren als rundum sorglos Dienst
+    - Mehrere europäische und asiatische Lokationen zur Auswahl
+    - Eigene Lokationen, kein Reselling von Cloudanbietern
+    - 24/7 Überwachung, Betrieb, Sicherheitsupdates
+    - Unlimitierte Transaktionen
+    - Hardwarespezifikationen entsprechend der Kundenanforderungen
+    - Deutscher und Englischer Support
 
 ## Weiterführende Informationen {#further-reading}
 
