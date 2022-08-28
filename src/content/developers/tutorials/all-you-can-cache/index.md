@@ -405,7 +405,7 @@ Read a 256 bit word from a `bytes memory` buffer. This utility function lets us 
 
 Yul does not support data structures beyond `uint256`, so when you refer to a more sophisticated data structure, such as the memory buffer `_bytes`, you get the address of that structure. Solidity stores `bytes memory` values as a 32 byte word that contains the length, followed by the actual bytes, so to get byte number `_start` we need to calculate `_bytes+32+_start`.
 
-
+TODO TODO TODO
 
 ```solidity        
 
