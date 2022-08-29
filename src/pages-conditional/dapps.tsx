@@ -721,13 +721,6 @@ const DappsPage = ({
       image: getImage(data.loopring),
       alt: translateMessageId("page-dapps-loopring-logo-alt", intl),
     },
-    {
-      title: "dYdX",
-      description: translateMessageId("page-dapps-dapp-description-dydx", intl),
-      link: "https://dydx.exchange/",
-      image: getImage(data.dydx),
-      alt: "page-dapps-dydx-logo-alt",
-    },
   ]
 
   const lottery = [
@@ -1870,9 +1863,6 @@ export const query = graphql`
       ...dappImage
     }
     oneinch: file(relativePath: { eq: "exchanges/1inch.png" }) {
-      ...dappImage
-    }
-    dydx: file(relativePath: { eq: "exchanges/dydx.png" }) {
       ...dappImage
     }
     augur: file(relativePath: { eq: "dapps/augur.png" }) {
