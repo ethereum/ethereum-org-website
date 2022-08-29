@@ -97,6 +97,8 @@ const LinkWrapper: React.FC<IProps> = ({
         isExternal
         _after={{
           content: !hideArrow ? '"↗"' : undefined,
+          ml: 0.5,
+          mr: 1.5,
         }}
         onClick={(e) => {
           // only track events on external links
