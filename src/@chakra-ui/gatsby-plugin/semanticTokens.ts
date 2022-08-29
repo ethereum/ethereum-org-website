@@ -39,7 +39,7 @@ const semanticTokens = {
     disabled: { _light: "grey.400", _dark: "grey.500" },
     background: { _light: "white", _dark: "grey.700" },
     success: "green.500",
-    error: "red.600",
+    error: "red.500",
     attention: "yellow.200",
   },
 }
