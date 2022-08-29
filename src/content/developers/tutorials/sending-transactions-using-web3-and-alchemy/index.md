@@ -11,9 +11,9 @@ source: Alchemy docs
 sourceUrl: https://docs.alchemy.com/alchemy/tutorials/sending-txs
 ---
 
-This is a beginner friendly guide to sending Ethereum transactions using Web3. There are three main steps in order to send a transaction to the Ethereum blockchain: create, sign, and broadcast. We’ll go through all three, hopefully answering any questions you might have! In this tutorial, we'll be using [Alchemy](https://www.alchemy.com/) to send our transactions to the Ethereum chain. You can [create a free Alchemy account here](https://dashboard.alchemyapi.io/signup/).
+This is a beginner friendly guide to sending Ethereum transactions using Web3. There are three main steps in order to send a transaction to the Ethereum blockchain: create, sign, and broadcast. We’ll go through all three, hopefully answering any questions you might have! In this tutorial, we'll be using [Alchemy](https://www.alchemy.com/) to send our transactions to the Ethereum chain. You can [create a free Alchemy account here](https://auth.alchemyapi.io/signup).
 
-**NOTE:** This guide is for signing your transactions on the _backend_ for your app. If you want to integrate signing your transactions on the frontend, check out integrating [Web3 with a browser provider](https://docs.alchemyapi.io/documentation/alchemy-web3#with-a-browser-provider).
+**NOTE:** This guide is for signing your transactions on the _backend_ for your app. If you want to integrate signing your transactions on the frontend, check out integrating [Web3 with a browser provider](https://docs.alchemy.com/reference/api-overview#with-a-browser-provider).
 
 ## The Basics {#the-basics}
 
@@ -52,13 +52,13 @@ This is what we will be using in this tutorial.
 ### 6\. What is the web3 library? {#what-is-the-web3-library}
 
 - Web3.js is a wrapper library around the standard JSON-RPC calls that is quite common to use in Ethereum development.
-- There are many web3 libraries for different languages. In this tutorial we’ll be using [Alchemy Web3](https://docs.alchemyapi.io/documentation/alchemy-web3) which is written in JavaScript. You can check out other options [here](https://docs.alchemyapi.io/guides/getting-started#other-web3-libraries).
+- There are many web3 libraries for different languages. In this tutorial we’ll be using [Alchemy Web3](https://docs.alchemy.com/reference/api-overview) which is written in JavaScript. You can check out other options [here](https://docs.alchemyapi.io/guides/getting-started#other-web3-libraries).
 
 Okay, now that we have a few of these questions out of the way, let’s move on to the tutorial. Feel free to ask questions anytime in the Alchemy [discord](https://discord.gg/gWuC7zB)!
 
 **NOTE:** This guide requires an Alchemy account, an Ethereum address or MetaMask wallet, NodeJs, and npm installed. If not, follow these steps:
 
-1.  [Create a free Alchemy account](https://dashboard.alchemyapi.io/signup/)
+1.  [Create a free Alchemy account](https://auth.alchemyapi.io/signup)
 2.  [Create MetaMask account](https://metamask.io/) (or get an Ethereum address)
 3.  [Follow these steps to install NodeJs and NPM](https://docs.alchemy.com/alchemy/guides/alchemy-for-macs)
 
@@ -83,7 +83,7 @@ cd sendtx-example
 
 ### 4\. Install Alchemy Web3 (or any web3 library) {#install-alchemy-web3}
 
-Run the following command in your project directory to install [Alchemy Web3](https://docs.alchemyapi.io/documentation/alchemy-web3):
+Run the following command in your project directory to install [Alchemy Web3](https://docs.alchemy.com/reference/api-overview):
 
 ```
 npm install @alch/alchemy-web3

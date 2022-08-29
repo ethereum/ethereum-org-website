@@ -233,6 +233,15 @@ const LearningToolsPage = ({
       background: "#121f3d",
       subjects: ["Solidity", "web3"],
     },
+    {
+      name: "Speed Run Ethereum",
+      description: "page-learning-tools-speed-run-ethereum-description",
+      url: "https://speedrunethereum.com/",
+      image: getImage(data.speedRunEthereum),
+      alt: "page-learning-tools-speed-run-ethereum-logo-alt",
+      background: "#ffffff",
+      subjects: ["Solidity", "web3"],
+    },
   ]
 
   return (
@@ -389,6 +398,11 @@ export const query = graphql`
       ...learningToolImage
     }
     replit: file(relativePath: { eq: "dev-tools/replit.png" }) {
+      ...learningToolImage
+    }
+    speedRunEthereum: file(
+      relativePath: { eq: "dev-tools/speed-run-ethereum.png" }
+    ) {
       ...learningToolImage
     }
     ethdotbuild: file(relativePath: { eq: "dev-tools/eth-dot-build.png" }) {
