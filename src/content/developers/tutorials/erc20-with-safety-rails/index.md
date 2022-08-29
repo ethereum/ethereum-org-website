@@ -215,6 +215,6 @@ This is the syntax to create an object for a contract when we receive the addres
 This is a cleanup function, so presumably we don't want to leave any tokens. Instead of getting the balance from the user manually, we might as well automate the process.
 
 
-## Conclusion
+## Conclusion {#conclusion}
 
 This is not a perfect solution, there is no perfect solution to the "user made a mistake" problem. However, using this kind of check can at least prevent some mistakes. The ability to freeze accounts, while dangerous, can be used to limit the damage of certain hacks by denying the hacker the stolen funds.
