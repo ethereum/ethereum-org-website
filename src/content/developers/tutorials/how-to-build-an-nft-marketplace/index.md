@@ -22,6 +22,8 @@ sidebar: true
 published: 2022-08-18
 ---
 
+_This article is written by Alchemy and uses an affiliate link for signup_
+
 Whether you sort by number of users or by volumes, NFT marketplaces are some of the biggest companies in Web3. For instance:
 
 - In Jan 2022, **Opensea**, Ethereum's largest NFT Marketplace sold \~2.5 million NFTs and traded $5 billion in volume.
