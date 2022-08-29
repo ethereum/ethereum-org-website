@@ -27,6 +27,7 @@ import {
   SloganGradient,
 } from "../components/SharedStyledComponents"
 import FeedbackCard from "../components/FeedbackCard"
+import BugBountyBanner from "../components/Banners/BugBountyBanner"
 import { Context } from "../types"
 
 const HeroCard = styled.div`
@@ -398,6 +399,8 @@ const BugBountiesPage = ({
           intl
         )}
       />
+      {/* TODO: Remove September 8 */}
+      <BugBountyBanner />
       <Content>
         <HeroCard>
           <HeroContainer>

@@ -1359,6 +1359,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/MicahZoltu"><img src="https://avatars.githubusercontent.com/u/886059?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Micah Zoltu</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=MicahZoltu" title="Documentation">📖</a></td>
     <td align="center"><a href="https://www.aracki.me"><img src="https://avatars.githubusercontent.com/u/6129986?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ivan Aracki</b></sub></a><br /><a href="#ideas-Aracki" title="Ideas, Planning, & Feedback">🤔</a></td>
     <td align="center"><a href="https://alphabeta.top/"><img src="https://avatars.githubusercontent.com/u/64178062?v=4?s=100" width="100px;" alt=""/><br /><sub><b>屠虫少年</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=always0e0w" title="Documentation">📖</a> <a href="#translation-always0e0w" title="Translation">🌍</a></td>
+    <td align="center"><a href="http://stackoverflow.com/users/5062825/ramansb"><img src="https://avatars.githubusercontent.com/u/13969478?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ramandeep</b></sub></a><br /><a href="#ideas-RamanSB" title="Ideas, Planning, & Feedback">🤔</a></td>
   </tr>
 </table>
 
