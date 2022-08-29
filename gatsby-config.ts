@@ -258,8 +258,7 @@ const config: GatsbyConfig = {
   ],
   // https://www.gatsbyjs.com/docs/reference/release-notes/v2.28/#feature-flags-in-gatsby-configjs
   flags: {
-    // FAST_DEV: true, // DEV_SSR, QUERY_ON_DEMAND & LAZY_IMAGES
-    // DEV_SSR: true,
+    FAST_DEV: true, // DEV_SSR, QUERY_ON_DEMAND & LAZY_IMAGES
   },
 }
 
