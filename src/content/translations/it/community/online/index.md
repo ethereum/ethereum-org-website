@@ -15,7 +15,6 @@ Centinaia di migliaia di appassionati di Ethereum si riuniscono in questi forum 
 <SocialListItem socialIcon="reddit"><Link to="https://www.reddit.com/r/ethfinance/">r/ethfinance</Link> - il lato finanziario di Ethereum, inclusa la DeFi</SocialListItem>
 <SocialListItem socialIcon="reddit"><Link to="https://www.reddit.com/r/ethdev/">r/ethdev</Link> - focalizzato sullo sviluppo di Ethereum</SocialListItem>
 <SocialListItem socialIcon="reddit"><Link to="https://www.reddit.com/r/ethtrader/">r/ethtrader</Link> - tendenze e analisi di mercato</SocialListItem>
-<SocialListItem socialIcon="reddit"><Link to="https://www.reddit.com/r/EtherMining/">r/EtherMining</Link> - focalizzato sulla protezione della rete Ethereum (mining)</SocialListItem>
 <SocialListItem socialIcon="reddit"><Link to="https://www.reddit.com/r/ethstaker/">r/ethstaker</Link> - benvenuti a tutti gli interessati a fare staking su Ethereum</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://ethereum-magicians.org">Fellowship of Ethereum Magicians</Link> - community orientata intorno a standard tecnici in Ethereum</SocialListItem>
 <SocialListItem socialIcon="stackExchange"><Link to="https://ethereum.stackexchange.com">Ethereum Stackexchange</Link> - discussioni e aiuto per gli sviluppatori di Ethereum</SocialListItem>

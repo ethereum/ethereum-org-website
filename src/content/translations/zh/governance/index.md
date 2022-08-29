@@ -34,7 +34,7 @@ _如果没有人拥有以太坊，那么关于以太坊过去和未来变化的�
 _虽然在协议层上，以太坊的治理在链下进行，但许多基于以太坊构建的使用案例（例如 DAO）采用链上治理。_
 
 <ButtonLink to="/dao/">
-  关于 DAO 的更多信息
+  关于去中心化自治组织的更多信息
 </ButtonLink>
 
 <Divider />
@@ -51,7 +51,7 @@ _虽然在协议层上，以太坊的治理在链下进行，但许多基于以�
 - **矿工/验证者**：这些人运行可以向以太坊区块链添加新区块的节点。
 - **协议开发者**（又名 “核心开发者”）：这些人需要维护各种以太坊实现（例如执行层的 go-ethereum、Nethermind、Besu、Erigon，或共识层的 Prysm、Lighthouse、Nimbus、Teku、Lodestar)。 [关于以太坊客户端的更多信息](/developers/docs/nodes-and-clients/)。
 
-_注：任何个人都可以属于多个组（如：协议开发者可以支持以太坊改进提议，运行信标链验证器，并使用去中心化金融应用程序）。 不过为了明确概念，这样最容易区分。_
+_注：任何个人都可以属于多个组（如：协议开发者可以支持以太坊改进提议，运行信标链验证者，并使用去中心化金融应用程序）。 不过为了明确概念，这样最容易区分。_
 
 <Divider />
 
@@ -91,7 +91,7 @@ _注：任何个人都可以属于多个组（如：协议开发者可以支持�
 
 ### 了解先前的工作 {#prior-work}
 
-以太坊改进提议倡导者应首先熟悉先前的工作和建议，然后认真考虑创建一个可部署到以太坊主网上的以太坊改进提议。 这样，该提议很有可能带入一些以前没有被拒绝过的新事物。 研究此问题的三个主要地方是 [以太坊改进提议存储库](https://github.com/ethereum/eips)、[Ethereum Magicans](https://ethereum-magicians.org/) 和 [ethresear.ch](https://ethresear.ch/)。
+以太坊改进提议倡导者应首先熟悉先前的工作和建议，然后认真考虑创建一个可部署到以太坊主网上的以太坊改进提议。 这样，该提议很有可能带入一些以前没有被拒绝过的新事物。 研究此问题的三个主要地方是 [以太坊改进提议存储库](https://github.com/ethereum/eips)、[Ethereum Magicians](https://ethereum-magicians.org/) 和 [ethresear.ch](https://ethresear.ch/)。
 
 ### 工作组 {#working-groups}
 
@@ -103,7 +103,7 @@ _注：任何个人都可以属于多个组（如：协议开发者可以支持�
 
 在如何处理争议性建议方面没有明确的指导手册。 因为协议开发者无法强制人们执行网络升级，如果以太坊改进提议的争议性超出对更广泛社区的好处，他们一般会避免执行该提议。
 
-以太坊改进提议倡导者应征求所有相关利益相关方的反馈意见。 如果您发现自己是一个有争议的的以太坊改进提议倡导者，你应该尝试解决反对方的问题，以便围绕该提议建立共识。 考虑到以太坊社区的规模和多样性，无法使用固定形式（如：投币选举）来达成社区共识，并且提议倡导者将适应他们提案的情况。
+以太坊改进提议倡导者应征求所有相关利益相关方的反馈意见。 如果您发现自己是一个有争议的以太坊改进提议倡导者，你应该尝试解决反对方的问题，以便围绕该提议建立共识。 考虑到以太坊社区的规模和多样性，无法使用固定形式（如：投币选举）来达成社区共识，并且提议倡导者将适应他们提案的情况。
 
 除了以太坊网络的安全性外，协议开发者历来对应用程序/工具开发者和应用程序用户的价值给予了高度重视，因为正是因为他们使用和发展以太坊，才使以太坊生态系统对其他利益相关方形成吸引力。 此外，以太坊改进提议需要在所有客户实端实施执行，这些项目由不同的团队管理。 在这个过程中，通常意味着让多个协议开发者团队相信，某个特定的改变有价值，它有助于最终用户或解决安全问题。
 
@@ -119,7 +119,7 @@ _注：任何个人都可以属于多个组（如：协议开发者可以支持�
 
 分叉是指需要对网络进行重大技术升级或改变，并改变协议“规则”。 [以太坊客户端](/developers/docs/nodes-and-clients/)必须更新他们的软件以执行新的分叉规则。
 
-去中心化自治组织分叉是为了解决 [2016 年去中心化自治组织遭受攻击](https://www.coindesk.com/understanding-dao-hack-journalists)。当时，一份不安全的[去中心化自治组织](/glossary/#dao)合约导致黑客盗走了超过三百万个以太币。 分叉将资金从错误合约转移到新合约，允许在黑客攻击中丢失资金的任何人收回这些资金。
+去中心化自治组织分叉是为了回应 [2016 年去中心化自治组织遭受攻击的事件](https://www.coindesk.com/understanding-dao-hack-journalists)。当时，一份不安全的[去中心化自治组织](/glossary/#dao)合约导致黑客盗走了超过 360 万个以太币。 分叉将资金从错误合约转移到新合约，允许在黑客攻击中丢失资金的任何人收回这些资金。
 
 这一行为由以太坊社区投票决定。 任何以太币持有人都能够通过在[投票平台](http://v1.carbonvote.com/)上交易来进行投票。 分叉的决定获得了 85% 以上的票数。
 
@@ -173,12 +173,12 @@ _注：任何个人都可以属于多个组（如：协议开发者可以支持�
 
 ## 延伸阅读 {#further-reading}
 
-以太坊的治理并没有严格定义。 各社区参与者对此有着不同的看法。 以下是其中一部分：
+以太坊的治理并没有严格定义。 各社区参与者对此有着不同的看法。 例如：
 
 - [关于区块链管理的说明](https://vitalik.ca/general/2017/12/17/voting.html) - _Vitalik Buterin_
 - [以太坊上的治理](https://docs.ethhub.io/ethereum-basics/governance/) -- _ETHHub_
-- [How does Ethereum Governance work?](https://cryptotesters.com/blog/ethereum-governance) – _Cryptotesters_
-- [How Ethereum governance works](https://medium.com/coinmonks/how-ethereum-governance-works-71856426b63a) – _Micah Zoltu_
-- [What is an Ethereum core developer?](https://hudsonjameson.com/2020-06-22-what-is-an-ethereum-core-developer/) - _Hudson Jameson_
-- [Governance, Part 2: Plutocracy Is Still Bad](https://vitalik.ca/general/2018/03/28/plutocracy.html) - _Vitalik Buterin_
-- [Moving beyond coin voting governance](https://vitalik.ca/general/2021/08/16/voting3.html) - _Vitalik Buterin_
+- [如何治理以太坊？](https://cryptotesters.com/blog/ethereum-governance) – _Cryptotesters_
+- [如何治理以太坊](https://medium.com/coinmonks/how-ethereum-governance-works-71856426b63a) – _Micah Zoltu_
+- [什么是以太坊核心开发者？](https://hudsonjameson.com/2020-06-22-what-is-an-ethereum-core-developer/) - _Hudson Jameson_
+- [治理，第 2 部分：财阀统治仍非好事](https://vitalik.ca/general/2018/03/28/plutocracy.html) - _Vitalik Buterin_
+- [超越代币投票的治理方式](https://vitalik.ca/general/2021/08/16/voting3.html) - _Vitalik Buterin_

@@ -59,6 +59,10 @@ In [Solidity](#solidity), `assert(false)` compiles to `0xfe`, an invalid opcode,
 
 A validator vote for a [Beacon Chain](#beacon-chain) or [shard](#shard) [block](#block). Validators must attest to blocks, signaling that they agree with the state proposed by the block.
 
+<DocLink to="/developers/docs/consensus-mechanisms/pos/attestations/">
+  Attestations
+</DocLink>
+
 <Divider />
 
 ## B {#section-b}
@@ -620,7 +624,7 @@ Short for "main network," this is the main public Ethereum [blockchain](#blockch
 
 ### memory-hard {#memory-hard}
 
-Memory hard functions are processes that experience a drastic decrease in speed or feasibility when the amount of available memory even slightly decreases. An example id the Ethereum mining algorithm [Ethash](#ethash).
+Memory hard functions are processes that experience a drastic decrease in speed or feasibility when the amount of available memory even slightly decreases. An example is the Ethereum mining algorithm [Ethash](#ethash).
 
 ### Merkle Patricia trie {#merkle-patricia-tree}
 

@@ -1,5 +1,5 @@
 import React from "react"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 import CardList, { CardListItem } from "./CardList"
 
 const Container = styled.div`
@@ -42,6 +42,11 @@ const reads: Array<CardListItem> = [
     title: "Engine API specs",
     description: "Ethereum Foundation",
     link: "https://github.com/ethereum/execution-apis/tree/main/src/engine",
+  },
+  {
+    title: "The Hitchhikers Guide To Ethereum",
+    description: "Delphi Digital",
+    link: "https://members.delphidigital.io/reports/the-hitchhikers-guide-to-ethereum",
   },
 ]
 

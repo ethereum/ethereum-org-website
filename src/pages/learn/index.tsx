@@ -1,6 +1,6 @@
 // Libraries
 import React from "react"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 import { graphql, PageProps } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { useIntl } from "react-intl"
@@ -558,7 +558,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                     </Link>
                   </li>
                   <li>
-                    <Link to="https://future.com/what-is-decentralized-science-aka-desci/">
+                    <Link to="/desci/">
                       <Translation id="decentralized-science" />
                     </Link>
                   </li>

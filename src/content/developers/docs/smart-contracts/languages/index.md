@@ -108,13 +108,14 @@ For more information, [read the Vyper rationale](https://vyper.readthedocs.io/en
 - [Vyper by Example](https://vyper.readthedocs.io/en/latest/vyper-by-example.html)
 - [More Vyper by Example](https://vyper-by-example.org/)
 - [GitHub](https://github.com/vyperlang/vyper)
-- [Vyper commmunity Discord chat](https://discord.gg/SdvKC79cJk)
+- [Vyper community Discord chat](https://discord.gg/SdvKC79cJk)
 - [Cheat Sheet](https://reference.auditless.com/cheatsheet)
 - [Smart contract development frameworks and tools for Vyper](/developers/docs/programming-languages/python/)
 - [VyperPunk - learn to secure and hack Vyper smart contracts](https://github.com/SupremacyTeam/VyperPunk)
 - [VyperExamples - Vyper vulnerability examples](https://www.vyperexamples.com/reentrancy)
-- [Update Jan 8, 2020](https://blog.ethereum.org/2020/01/08/update-on-the-vyper-compiler)
-
+- [Vyper Hub for development](https://github.com/zcor/vyper-dev)
+- [Vyper greatest hits smart contract examples](https://github.com/pynchmeister/vyper-greatest-hits/tree/main/contracts)
+- [Awesome Vyper curated resources](https://github.com/spadebuilders/awesome-vyper)
 
 ### Example {#example}
 

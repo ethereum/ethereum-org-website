@@ -21,6 +21,7 @@ These programs support the broad Ethereum ecosystem by offering grants to a wide
 - [Moloch DAO](https://www.molochdao.com/) - _Privacy, layer 2 scaling, client security, and more_
 - [Open Grants](https://opengrants.com/explore)
 - [DAO Grants](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) - _Google spreadsheet of organizations offering grants_
+- [Merge Data Challenge](https://esp.ethereum.foundation/merge-data-challenge) - _Calling all Ethereans, data scientists, data engineers, data visualizers, developers, and anyone interested in digging into Ethereum data!_
 
 ## Project specific {#project-specific}
 

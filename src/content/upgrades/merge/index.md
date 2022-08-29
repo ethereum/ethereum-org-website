@@ -19,6 +19,8 @@ This process is in its final stages, with plans to undergo The Merge on a few pu
 
 ## What is The Merge? {#what-is-the-merge}
 
+<YouTube id="EEuPmA8w0Kc" />
+
 The Merge represents the joining of the existing execution layer of Ethereum (the Mainnet we use today) with its new proof-of-stake consensus layer, the Beacon Chain. It eliminates the need for energy-intensive mining and instead secures the network using staked ETH. A truly exciting step in realizing the Ethereum vision – more scalability, security, and sustainability.
 
 <MergeInfographic />
@@ -186,7 +188,7 @@ ETH on the execution layer (Ethereum Mainnet as we know it today) is accounted f
 <ExpandableCard
 title="Misconception: &quot;When withdrawals are enabled, stakers will all exit at once.&quot;"
 contentPreview="False. Validator exits are rate limited for security reasons.">
-After the Shanghai upgrade enabled withdrawals, all validators will be incentivized to withdraw their staking balance above 32 ETH, as these funds do not add to yield and are otherwise locked. Depending on the APR (determined by total ETH staked), they may be incentivized to exit their validator(s) to reclaim their entire balance or potentially stake even more using their rewards to earn more yield.
+After the Shanghai upgrade enables withdrawals, all validators will be incentivized to withdraw their staking balance above 32 ETH, as these funds do not add to yield and are otherwise locked. Depending on the APR (determined by total ETH staked), they may be incentivized to exit their validator(s) to reclaim their entire balance or potentially stake even more using their rewards to earn more yield.
 
 An important caveat here, full validator exits are rate limited by the protocol, so only six validators may exit per epoch (every 6.4 minutes, so 1350 per day, or only ~43,200 ETH per day out of over 10 million ETH staked). This rate limit adjusts depending on the total ETH staked and prevents a mass exodus of funds. Furthermore, it prevents a potential attacker from using their stake to commit a slashable offense and exiting their entire staking balance in the same epoch before the protocol can enforce the slashing penalty.
 

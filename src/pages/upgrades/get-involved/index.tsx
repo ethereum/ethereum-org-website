@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect, ReactNode } from "react"
-import { ThemeContext } from "styled-components"
-import styled from "styled-components"
+import { useTheme } from "@emotion/react"
+import styled from "@emotion/styled"
 import { graphql, PageProps } from "gatsby"
 import { useIntl } from "react-intl"
 import { shuffle } from "lodash"
@@ -186,8 +186,8 @@ const GetInvolvedPage = ({
   location,
 }: PageProps<Queries.GetInvolvedPageQuery>) => {
   const intl = useIntl()
-  const themeContext = useContext(ThemeContext)
-  const isDarkTheme = themeContext.isDark
+  const theme = useTheme()
+  const isDarkTheme = theme.isDark
 
   // TODO sort query isn't working :(
   const bountyHunters: Array<Person> = [...data.bountyHunters.nodes].sort(

@@ -15,7 +15,6 @@ Mamia ya maelfu ya wapenzi wa Ethereum hukusanyika kwenye majukwaa haya ya mtand
 <SocialListItem socialIcon="reddit"><Link to="https://www.reddit.com/r/ethfinance/">r/ethfinance</Link> - upande wa fedha kuhusu Ethereum, ikiwemo DeFi</SocialListItem>
 <SocialListItem socialIcon="reddit"><Link to="https://www.reddit.com/r/ethdev/">r/ethdev</Link> - kulenga maboresho ya </SocialListItem>
 <SocialListItem socialIcon="reddit"><Link to="https://www.reddit.com/r/ethtrader/">r/ethtrader</Link> - mitindo na uchanganuzi wa soko</SocialListItem>
-<SocialListItem socialIcon="reddit"><Link to="https://www.reddit.com/r/EtherMining/">r/EtherMining</Link> - kulenga kulinga Mtandao wa Ethereum (uchimbaji)</SocialListItem>
 <SocialListItem socialIcon="reddit"><Link to="https://www.reddit.com/r/ethstaker/">r/ethstaker</Link> - karibuni nyote mnaotaka kuweka hisa kwenye </SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://ethereum-magicians.org">Ushirika wa Ethereum Magicians</Link> - jamii iliyozama kwenye viwango vya kiufundi katika </SocialListItem>
 <SocialListItem socialIcon="stackExchange"><Link to="https://ethereum.stackexchange.com">Ethereum Stackexchange</Link> - majadiliano na usaidizi wa wasanidi programu wa </SocialListItem>
