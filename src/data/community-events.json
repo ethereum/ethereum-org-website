@@ -396,12 +396,30 @@
     "endDate": "2022-10-08"
   },
   {
+    "title": "Ethereum Zurich",
+    "to": "https://www.ethree.ch/ethereumzurich/",
+    "sponsor": null,
+    "location": "Zurich, Switzerland",
+    "description": "UX Hackathon, Ethereum Zurich is a wallet UX hackathon exploring innovative ways of implementing the HOPR protocol into the MetaMask wallet.",
+    "startDate": "2022-09-16",
+    "endDate": "2022-09-16"
+  },
+  {
     "title": "ETHBogotá",
     "to": "https://bogota.ethglobal.com",
     "sponsor": null,
     "location": "Bogotá, Colombia",
     "description": "Join for ETHGlobal's return to South America and kick off Devcon in the perfect way, by building.",
     "startDate": "2022-10-07",
+    "endDate": "2022-10-09"
+  },
+  {
+    "title": "Leading Privacy Alliance Conference",
+    "to": "https://www.leadingprivacy.com/devcon",
+    "sponsor": null,
+    "location": "Bogotá, Colombia",
+    "description": "This event will bring together the brightest minds of privacy during DevCon in Bogota.",
+    "startDate": "2022-10-09",
     "endDate": "2022-10-09"
   },
   {
@@ -493,5 +511,14 @@
     "description": "The Ethereum dev conference in Dubai on everything DeFi, NFTs, EVM scaling, layers 2 and more with a focus on decentralization and community projects.",
     "startDate": "2023-03-14",
     "endDate": "2023-03-16"
+  },
+  {
+    "title": "The First Hackathon around Privacy",
+    "to": "https://www.leadingprivacy.com/istanbul",
+    "sponsor": null,
+    "location": "Turkey, Istanbul",
+    "description": "We will celebrate privacy and discuss latest findings & development, as well as must haves and upcoming opportunities of the Ethereum Ecosystem.",
+    "startDate": "2023-04-29",
+    "endDate": "2023-04-30"
   }
 ]
