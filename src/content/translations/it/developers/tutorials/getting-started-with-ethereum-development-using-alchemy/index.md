@@ -25,7 +25,7 @@ Inizieremo dalla registrazione ad Alchemy e passeremo alla scrittura del tuo pri
 
 ## 1. Crea un profilo Alchemy gratuito {#sign-up-for-a-free-alchemy-account}
 
-Creare un account Alchemy è facile. [Registrati gratuitamente qui](https://dashboard.alchemyapi.io/signup/).
+Creare un account Alchemy è facile. [Registrati gratuitamente qui](https://auth.alchemyapi.io/signup).
 
 ## 2. Crea un'app con Alchemy {#create-an-alchemy-app}
 
@@ -79,7 +79,7 @@ _**NOTA:** Sostituisci [https://eth-mainnet.alchemyapi.io/v2/demo](https://eth-m
 
 **_NOTA:_** gli script qui sotto devono essere eseguiti in un **contesto node** o **salvati in un file**, non devono essere eseguiti dalla riga di comando. Se non hai installato Node o npm, dai un'occhiata a questa [guida di configurazione per Mac](https://app.gitbook.com/@alchemyapi/s/alchemy/guides/alchemy-for-macs).
 
-Ci sono tantissime [librerie Web3](https://docs.alchemyapi.io/guides/getting-started#other-web3-libraries) che possono essere integrate con Alchemy, ma consigliamo di usare [Alchemy Web3](https://docs.alchemyapi.io/documentation/alchemy-web3), un sostituto di web3.js, creato e configurato per funzionare perfettamente con Alchemy. Fornisce diversi vantaggi, come tentativi automatici e supporto affidabile per WebSocket.
+Ci sono tantissime [librerie Web3](https://docs.alchemyapi.io/guides/getting-started#other-web3-libraries) che possono essere integrate con Alchemy, ma consigliamo di usare [Alchemy Web3](https://docs.alchemy.com/reference/api-overview), un sostituto di web3.js, creato e configurato per funzionare perfettamente con Alchemy. Fornisce diversi vantaggi, come tentativi automatici e supporto affidabile per WebSocket.
 
 Per installare AlchemyWeb3.js, **passa alla directory del tuo progetto** ed esegui:
 
@@ -153,4 +153,4 @@ The latest block number is 11043912
 
 Non sai come proseguire? Prova a distribuire il tuo primo smart contract e fai qualche prova pratica di programmazione in Solidity nella nostra [Guida agli smart contract Hello World](https://docs.alchemyapi.io/tutorials/hello-world-smart-contract) o testa la tua conoscenza della Dashboard con l'[_App Demo della Dashboard_](https://docs.alchemyapi.io/tutorials/demo-app)!
 
-_[Iscriviti gratis ad Alchemy](https://dashboard.alchemyapi.io/signup/), dai un'occhiata alla nostra [documentazione](https://docs.alchemyapi.io/) e, per le ultime notizie, seguici su [Twitter](https://twitter.com/AlchemyPlatform)_.
+_[Iscriviti gratis ad Alchemy](https://auth.alchemyapi.io/signup), dai un'occhiata alla nostra [documentazione](https://docs.alchemyapi.io/) e, per le ultime notizie, seguici su [Twitter](https://twitter.com/AlchemyPlatform)_.

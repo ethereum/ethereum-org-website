@@ -93,7 +93,7 @@
       "hasBugBounty": false,
       "isTrustless": true,
       "isPermissionless": true,
-      "multiClient": false,
+      "multiClient": true,
       "easyClientSwitching": false,
       "platforms": ["Browser"],
       "ui": ["GUI"],
