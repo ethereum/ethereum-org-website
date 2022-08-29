@@ -8537,6 +8537,15 @@
         "doc",
         "translation"
       ]
+    },
+    {
+      "login": "RamanSB",
+      "name": "Ramandeep",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13969478?v=4",
+      "profile": "http://stackoverflow.com/users/5062825/ramansb",
+      "contributions": [
+        "ideas"
+      ]
     }
   ],
   "contributorsPerLine": 7,
