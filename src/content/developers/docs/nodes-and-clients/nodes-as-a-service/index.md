@@ -254,8 +254,8 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
 - [**Zero Services GmbH**](https://www.zeroservices.eu/)
   - Features
     - Dedicated Ethereum validators as a fully managed, care-free service
-    - multiple European & Asian locations
-    - own locations, no re-selling or cloud providers
+    - Multiple European & Asian locations
+    - Own locations, no re-selling or cloud providers
     - 24/7 monitoring, management, updates
     - Unlimited transactions
     - Hardware specs sized to your requirements
