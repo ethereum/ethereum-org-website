@@ -98,6 +98,7 @@ const DotButton = styled.button<{ selected: boolean }>`
 `
 
 export interface IProps {
+  children?: React.ReactNode
   onSlideChange?: (slideIndex: number) => void
 }
 

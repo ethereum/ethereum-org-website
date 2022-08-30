@@ -81,6 +81,7 @@ const Children = styled.div`
 `
 
 export interface IProps {
+  children?: React.ReactNode
   url?: string
   background: string
   image: string

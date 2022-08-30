@@ -25,13 +25,13 @@ Tidak seperti HTTP, dengan WebSocket, Anda tidak perlu secara berulang membuat p
 
 Seperti koneksi jaringan mana pun, Anda tidak boleh menganggap bahwa WebSocket akan tetap terbuka selamanya tanpa gangguan, tetapi menangani koneksi dan penyambungan kembali koneksi yang turun dengan benar secara manual bisa sulit untuk dilakukan. Kekurangan lainnya dari WebSocket adalah Anda tidak mendapatkan kode status HTTP dalam tanggapannya, tapi hanya pesan kesalahan.
 
-​[Web3 Alchemy](https://docs.alchemyapi.io/documentation/alchemy-web3) secara otomatis menambah penanganan untuk kegagalan WebSocket dan mencoba kembali tanpa perlu adanya konfigurasi.
+​[Web3 Alchemy](https://docs.alchemy.com/reference/api-overview) secara otomatis menambah penanganan untuk kegagalan WebSocket dan mencoba kembali tanpa perlu adanya konfigurasi.
 
 ## Cobalah {#try-it-out}
 
 Cara termudah untuk menguji WebSocket adalah menginstal peralatan baris perintah untuk membuat permintaan WebSocket, seperti [wscat](https://github.com/websockets/wscat). Dengan wscat, Anda bisa mengirim permintaan seperti berikut ini:
 
-_Catatan: jika Anda memiliki akun Alchemy, Anda bisa menggantikan `demo` dengan kunci API Anda sendiri. [Daftar akun Alchemy secara gratis di sini!](https://dashboard.alchemyapi.io/signup/)_
+_Catatan: jika Anda memiliki akun Alchemy, Anda bisa menggantikan `demo` dengan kunci API Anda sendiri. [Daftar akun Alchemy secara gratis di sini!](https://auth.alchemyapi.io/signup)_
 
 ```
 $ wscat -c wss://eth-mainnet.ws.alchemyapi.io/ws/demo
@@ -251,4 +251,4 @@ curl https://eth-mainnet.alchemyapi.io/v2/your-api-key
 
 ---
 
-[Daftar Alchemy](https://dashboard.alchemyapi.io/signup/) secara gratis, lihat [dokumentasi kami](https://docs.alchemyapi.io/), dan untuk berita terkini, ikuti kami di [Twitter](https://twitter.com/AlchemyPlatform).
+[Daftar Alchemy](https://auth.alchemyapi.io/signup) secara gratis, lihat [dokumentasi kami](https://docs.alchemyapi.io/), dan untuk berita terkini, ikuti kami di [Twitter](https://twitter.com/AlchemyPlatform).
